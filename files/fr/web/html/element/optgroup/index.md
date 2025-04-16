@@ -1,121 +1,121 @@
 ---
-title: <optgroup>
-slug: Web/HTML/Element/optgroup
+titwe: <optgwoup>
+swug: web/htmw/ewement/optgwoup
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<optgroup>`**, utilisé dans un formulaire, permet de créer un groupe d'options parmi lesquelles on peut choisir dans un élément {{HTMLElement("select")}}.
+w-w'éwément h-htmw **`<optgwoup>`**, mya u-utiwisé d-dans un fowmuwaiwe, (˘ω˘) p-pewmet d-de cwéew un gwoupe d-d'options p-pawmi wesquewwes on peut choisiw dans un éwément {{htmwewement("sewect")}}. >_<
 
-{{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;optgwoup&gt;", -.- "tabbed-standawd")}}
 
-```html interactive-example
-<label for="dino-select">Choose a dinosaur:</label>
-<select id="dino-select">
-  <optgroup label="Theropods">
-    <option>Tyrannosaurus</option>
-    <option>Velociraptor</option>
-    <option>Deinonychus</option>
-  </optgroup>
-  <optgroup label="Sauropods">
-    <option>Diplodocus</option>
-    <option>Saltasaurus</option>
-    <option>Apatosaurus</option>
-  </optgroup>
-</select>
+```htmw intewactive-exampwe
+<wabew f-fow="dino-sewect">choose a dinosauw:</wabew>
+<sewect id="dino-sewect">
+  <optgwoup wabew="thewopods">
+    <option>tywannosauwus</option>
+    <option>vewociwaptow</option>
+    <option>deinonychus</option>
+  </optgwoup>
+  <optgwoup w-wabew="sauwopods">
+    <option>dipwodocus</option>
+    <option>sawtasauwus</option>
+    <option>apatosauwus</option>
+  </optgwoup>
+</sewect>
 ```
 
-```css interactive-example
-label {
-  display: block;
-  margin-bottom: 10px;
+```css intewactive-exampwe
+wabew {
+  d-dispway: bwock;
+  mawgin-bottom: 10px;
 }
 ```
 
-> [!NOTE]
-> Il n'est pas possible d'imbriquer plusieurs éléments `<optgroup>` entre eux.
+> [!note]
+> iw ny'est pas possibwe d'imbwiquew p-pwusieuws éwéments `<optgwoup>` entwe eux. 🥺
 
-## Attributs
+## a-attwibuts
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-comme tous wes autwes éwéments htmw, (U ﹏ U) cet éwément incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). >w<
 
-- `disabled`
-  - : Si cet attribut booléen est défini et aucun élément du groupe d'options ne peut être sélectionné. Cet élément ne recevra pas les évènements de navigation (tels que les clics ou les changements de focus). Les navigateurs affichent ces éléments en les grisant.
-- `label`
-  - : Le nom du groupe d'options qui peut être affiché par le navigateur. Cet attribut est obligatoire.
+- `disabwed`
+  - : s-si cet attwibut boowéen est défini et aucun éwément du gwoupe d'options nye p-peut êtwe séwectionné. mya cet éwément n-nye wecevwa p-pas wes évènements d-de nyavigation (tews q-que wes cwics ou wes changements de focus). >w< wes n-nyavigateuws affichent ces éwéments en wes gwisant. nyaa~~
+- `wabew`
+  - : w-we nyom du gwoupe d'options qui peut êtwe affiché paw we nyavigateuw. (✿oωo) cet attwibut est o-obwigatoiwe. ʘwʘ
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<select>
-  <optgroup label="Groupe 1">
-    <option>Option 1.1</option>
-  </optgroup>
-  <optgroup label="Groupe 2">
-    <option>Option 2.1</option>
-    <option>Option 2.2</option>
-  </optgroup>
-  <optgroup label="Groupe 3" disabled>
-    <option>Option 3.1</option>
-    <option>Option 3.2</option>
-    <option>Option 3.3</option>
-  </optgroup>
-</select>
+```htmw
+<sewect>
+  <optgwoup w-wabew="gwoupe 1">
+    <option>option 1.1</option>
+  </optgwoup>
+  <optgwoup w-wabew="gwoupe 2">
+    <option>option 2.1</option>
+    <option>option 2.2</option>
+  </optgwoup>
+  <optgwoup w-wabew="gwoupe 3" disabwed>
+    <option>option 3.1</option>
+    <option>option 3.2</option>
+    <option>option 3.3</option>
+  </optgwoup>
+</sewect>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de c-contenu</a
         >
       </th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>Zéro ou plusieurs éléments {{HTMLElement("option")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
+      <td>zéwo o-ou pwusieuws éwéments {{htmwewement("option")}}.</td>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
       <td>
-        La balise de début est obligatoire, la balise de fin est optionnelle si
-        l'élément est immédiatement suivi par un autre élément &#x3C;optgroup>
-        ou si l'élément parent n'a pas d'autre contenu.
+        w-wa bawise de début est obwigatoiwe, (ˆ ﻌ ˆ)♡ wa bawise d-de fin est optionnewwe si
+        w-w'éwément est immédiatement s-suivi paw u-un autwe éwément &#x3c;optgwoup>
+        ou si w'éwément pawent ny'a pas d'autwe contenu. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>Un élément {{HTMLElement("select")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLOptGroupElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
+      <td>un éwément {{htmwewement("sewect")}}.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes a-awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwoptgwoupewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- wes autwes éwéments w-wewatifs aux fowmuwaiwes : {{htmwewement("fowm")}}, :3 {{htmwewement("wegend")}}, OwO {{htmwewement("wabew")}}, (U ﹏ U) {{htmwewement("button")}}, >w< {{htmwewement("sewect")}}, (U ﹏ U) {{htmwewement("datawist")}}, 😳 {{htmwewement("option")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("fiewdset")}}, 😳😳😳 {{htmwewement("textawea")}}, (U ﹏ U) {{htmwewement("input")}}, (///ˬ///✿) {{htmwewement("output")}}, 😳 {{htmwewement("pwogwess")}} et {{htmwewement("metew")}}. 😳

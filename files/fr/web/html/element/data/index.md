@@ -1,129 +1,129 @@
 ---
-title: "<data> : l'élément de données"
-slug: Web/HTML/Element/data
+titwe: "<data> : w'éwément d-de données"
+swug: w-web/htmw/ewement/data
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<data>`** relie un contenu à une version de ce contenu interprétable par un ordinateur. Si le contenu possède une composante temporelle, l'élément [`<time>`](/fr/docs/Web/HTML/Element/time) doit être utilisé.
+w'éwément h-htmw **`<data>`** w-wewie u-un contenu à u-une vewsion de c-ce contenu intewpwétabwe p-paw un owdinateuw. >_< si we contenu possède une composante tempowewwe, -.- w'éwément [`<time>`](/fw/docs/web/htmw/ewement/time) d-doit êtwe utiwisé. 🥺
 
-{{InteractiveExample("HTML Demo: &lt;data&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;data&gt;", (U ﹏ U) "tabbed-showtew")}}
 
-```html interactive-example
-<p>New Products:</p>
-<ul>
-  <li><data value="398">Mini Ketchup</data></li>
-  <li><data value="399">Jumbo Ketchup</data></li>
-  <li><data value="400">Mega Jumbo Ketchup</data></li>
-</ul>
+```htmw i-intewactive-exampwe
+<p>new pwoducts:</p>
+<uw>
+  <wi><data v-vawue="398">mini ketchup</data></wi>
+  <wi><data vawue="399">jumbo ketchup</data></wi>
+  <wi><data v-vawue="400">mega jumbo ketchup</data></wi>
+</uw>
 ```
 
-```css interactive-example
-data:hover::after {
-  content: " (ID " attr(value) ")";
+```css i-intewactive-exampwe
+d-data:hovew::aftew {
+  content: " (id " attw(vawue) ")";
   font-size: 0.7em;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >, >w<
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
+        >, mya
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu t-tangibwe</a
+        >. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Contenu phrasé</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
+        >. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        aucune, (✿oωo) wa bawise d-d'ouvewtuwe et wa bawise de fewmetuwe sont
+        obwigatoiwes. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Éléments parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">Éwéments pawents autowisés</th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >.
+        tout éwément a-acceptant du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu p-phwasé</a
+        >. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia i-impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas de wôwe cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes a-awia autowisés</th>
+      <td>tous wes w-wôwes.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLDataElement"
-          ><code>HTMLDataElement</code></a
+        <a h-hwef="/fw/docs/web/api/htmwdataewement"
+          ><code>htmwdataewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Comme pour tous les autres éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur `<data>`.
+c-comme pouw tous wes autwes éwéments, 😳😳😳 on p-peut utiwisew [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes) suw `<data>`. :3
 
-- `value`
-  - : Cet attribut définit la version du contenu qui doit être interprétée par une machine.
+- `vawue`
+  - : c-cet attwibut définit w-wa vewsion du c-contenu qui doit êtwe intewpwétée paw une machine.
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, on affiche des noms de produits avec des codes correspondants :
+dans w'exempwe suivant, OwO on affiche des nyoms d-de pwoduits avec d-des codes cowwespondants :
 
-```html
-<p>Nouveaux produits</p>
-<ul>
-  <li><data value="3251546">Mini voiture</data></li>
-  <li><data value="5867654">Grande voiture</data></li>
-  <li><data value="9887635">Énorme voiture</data></li>
-</ul>
+```htmw
+<p>nouveaux pwoduits</p>
+<uw>
+  <wi><data v-vawue="3251546">mini v-voituwe</data></wi>
+  <wi><data v-vawue="5867654">gwande voituwe</data></wi>
+  <wi><data vawue="9887635">Énowme voituwe</data></wi>
+</uw>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('',640,160)}}
+{{embedwivesampwe('',640,160)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément [`<time>`](/fr/docs/Web/HTML/Element/time).
+- w'éwément [`<time>`](/fw/docs/web/htmw/ewement/time). (U ﹏ U)

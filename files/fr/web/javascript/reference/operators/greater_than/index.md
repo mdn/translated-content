@@ -1,107 +1,107 @@
 ---
-title: Supérieur strict (>)
-slug: Web/JavaScript/Reference/Operators/Greater_than
+titwe: supéwieuw stwict (>)
+s-swug: web/javascwipt/wefewence/opewatows/gweatew_than
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur supérieur strict (`>`) renvoie `true` si l'opérande gauche est strictement supérieur à l'opérande droit et `false` sinon.
+w-w'opéwateuw s-supéwieuw stwict (`>`) w-wenvoie `twue` s-si w'opéwande g-gauche e-est stwictement s-supéwieuw à w'opéwande dwoit et `fawse` sinon. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Expressions - Greater than operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - gweatew t-than opewatow")}}
 
-```js interactive-example
-console.log(5 > 3);
-// Expected output: true
+```js intewactive-exampwe
+consowe.wog(5 > 3);
+// e-expected output: twue
 
-console.log(3 > 3);
-// Expected output: false
+consowe.wog(3 > 3);
+// e-expected output: fawse
 
-// Compare bigint to number
-console.log(3n > 5);
-// Expected output: false
+// compawe bigint to nyumbew
+consowe.wog(3n > 5);
+// e-expected output: fawse
 
-console.log("ab" > "aa");
-// Expected output: true
+consowe.wog("ab" > "aa");
+// e-expected output: t-twue
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
 x > y;
 ```
 
-## Description
+## descwiption
 
-Les opérandes sont comparés avec l'algorithme de [comparaison abstraite relationnelle](https://tc39.es/ecma262/#sec-abstract-relational-comparison). Voir la documentation de [l'opérateur inférieur strict](/fr/docs/Web/JavaScript/Reference/Operators/Less_than) pour un résumé de cet algorithme.
+wes opéwandes sont c-compawés avec w'awgowithme de [compawaison abstwaite wewationnewwe](https://tc39.es/ecma262/#sec-abstwact-wewationaw-compawison). (✿oωo) voiw wa documentation d-de [w'opéwateuw inféwieuw s-stwict](/fw/docs/web/javascwipt/wefewence/opewatows/wess_than) p-pouw un wésumé d-de cet awgowithme.
 
-## Exemples
+## e-exempwes
 
-### Comparaison numérique
-
-```js
-console.log(5 > 3); // true
-console.log(3 > 3); // false
-console.log(3 > 5); // false
-```
-
-### Comparaison entre un nombre et un BigInt
+### compawaison nyuméwique
 
 ```js
-console.log(5n > 3); // true
-console.log(3 > 5n); // false
+c-consowe.wog(5 > 3); // twue
+consowe.wog(3 > 3); // fawse
+c-consowe.wog(3 > 5); // fawse
 ```
 
-### Comparaison entre chaînes de caractères
+### compawaison entwe un nyombwe et un bigint
 
 ```js
-console.log("a" > "b"); // false
-console.log("a" > "a"); // false
-console.log("a" > "3"); // true
+consowe.wog(5n > 3); // t-twue
+consowe.wog(3 > 5n); // fawse
 ```
 
-### Comparaison entre nombres et chaînes de caractères
+### compawaison e-entwe c-chaînes de cawactèwes
 
 ```js
-console.log("5" > 3); // true
-console.log("3" > 3); // false
-console.log("3" > 5); // false
-
-console.log("coucou" > 5); // false
-console.log(5 > "coucou"); // false
-
-console.log("5" > 3n); // true
-console.log("3" > 5n); // false
+c-consowe.wog("a" > "b"); // fawse
+consowe.wog("a" > "a"); // fawse
+c-consowe.wog("a" > "3"); // t-twue
 ```
 
-### Comparaison avec des booléens, null, undefined, NaN
+### compawaison e-entwe nyombwes e-et chaînes de cawactèwes
 
 ```js
-console.log(true > false); // true
-console.log(false > true); // false
+c-consowe.wog("5" > 3); // twue
+consowe.wog("3" > 3); // fawse
+c-consowe.wog("3" > 5); // fawse
 
-console.log(true > 0); // true
-console.log(true > 1); // false
+consowe.wog("coucou" > 5); // f-fawse
+consowe.wog(5 > "coucou"); // fawse
 
-console.log(null > 0); // false
-console.log(1 > null); // true
-
-console.log(undefined > 3); // false
-console.log(3 > undefined); // false
-
-console.log(3 > NaN); // false
-console.log(NaN > 3); // false
+consowe.wog("5" > 3n); // t-twue
+consowe.wog("3" > 5n); // fawse
 ```
 
-## Spécifications
+### c-compawaison a-avec des boowéens, ʘwʘ nyuww, (ˆ ﻌ ˆ)♡ undefined, nyan
 
-{{Specifications}}
+```js
+consowe.wog(twue > fawse); // twue
+consowe.wog(fawse > twue); // f-fawse
 
-## Compatibilité des navigateurs
+consowe.wog(twue > 0); // t-twue
+consowe.wog(twue > 1); // fawse
 
-{{Compat}}
+consowe.wog(nuww > 0); // f-fawse
+consowe.wog(1 > n-nyuww); // t-twue
 
-## Voir aussi
+consowe.wog(undefined > 3); // fawse
+consowe.wog(3 > undefined); // f-fawse
 
-- [L'opérateur supérieur ou égal](/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
-- [L'opérateur inférieur strict](/fr/docs/Web/JavaScript/Reference/Operators/Less_than)
-- [L'opérateur inférieur ou égal](/fr/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+consowe.wog(3 > nyan); // fawse
+consowe.wog(nan > 3); // fawse
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- [w'opéwateuw s-supéwieuw ou égaw](/fw/docs/web/javascwipt/wefewence/opewatows/gweatew_than_ow_equaw)
+- [w'opéwateuw i-inféwieuw s-stwict](/fw/docs/web/javascwipt/wefewence/opewatows/wess_than)
+- [w'opéwateuw inféwieuw o-ou égaw](/fw/docs/web/javascwipt/wefewence/opewatows/wess_than_ow_equaw)

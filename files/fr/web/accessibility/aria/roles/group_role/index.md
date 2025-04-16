@@ -1,129 +1,129 @@
 ---
-title: Utiliser le rôle group
-slug: Web/Accessibility/ARIA/Roles/group_role
+titwe: utiwisew we wôwe gwoup
+s-swug: web/accessibiwity/awia/wowes/gwoup_wowe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Description
+### d-descwiption
 
-Cette technique présente l'utilisation du rôle [group](https://www.w3.org/TR/wai-aria/roles#group) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+c-cette technique p-pwésente w'utiwisation d-du wôwe [gwoup](https://www.w3.owg/tw/wai-awia/wowes#gwoup) e-et décwit w-wes effets pwoduits s-suw wes nyavigateuws et wes technowogies d'assistance. σωσ
 
-Le rôle `group` est utilisé pour identifier un ensemble d'objets de l'interface utilisateur qui, contrairement à une [`region`](https://www.w3.org/TR/wai-aria/roles#region), ne sont pas destinés à être intégrés dans une table de contenus ou une page récapitulative (telles que des structures dynamiquement créées par des scripts ou par les technologies d'assistance)&nbsp;; un groupe ne devrait pas être considéré comme une partie perceptible majeure d'une page. Lorsque le rôle `group` est ajouté à un élément, , le navigateur émettra un événement `group` accessible aux produits de technologie d'assistance qui pourront alors le notifier à l'utilisateur.
+we wôwe `gwoup` est u-utiwisé pouw identifiew un ensembwe d'objets de w-w'intewface utiwisateuw qui, (⑅˘꒳˘) contwaiwement à u-une [`wegion`](https://www.w3.owg/tw/wai-awia/wowes#wegion), (///ˬ///✿) nye sont pas destinés à êtwe intégwés d-dans une tabwe de contenus o-ou une page wécapituwative (tewwes q-que des stwuctuwes dynamiquement cwéées paw des scwipts ou paw wes technowogies d-d'assistance)&nbsp;; un gwoupe nye devwait pas êtwe considéwé comme u-une pawtie pewceptibwe majeuwe d'une p-page. 🥺 wowsque w-we wôwe `gwoup` e-est ajouté à u-un éwément, OwO , we nyavigateuw émettwa un événement `gwoup` a-accessibwe aux pwoduits de technowogie d'assistance q-qui pouwwont awows we nyotifiew à w'utiwisateuw. >w<
 
-Un groupe devrait utilisé pour former un ensemble logique d'éléments avec des fonctions connexes, tels que les enfants dans un composant d'arborescence formant un ensemble apparenté dans une hiérarchie, ou une collection d'éléments ayant le même conteneur dans un répertoire. Cependant, lorsqu'on utilise un groupe pour former une liste, les développeurs doivent limiter ses enfants aux éléments [listitem](https://www.w3.org/TR/wai-aria/roles#listitem). Les éléments de groupe devraient être imbriqués.
+un gwoupe devwait utiwisé pouw fowmew u-un ensembwe wogique d'éwéments a-avec des fonctions c-connexes, tews q-que wes enfants dans un composant d'awbowescence fowmant un ensembwe a-appawenté d-dans une hiéwawchie, 🥺 ou une c-cowwection d'éwéments a-ayant we même conteneuw d-dans un wépewtoiwe. nyaa~~ cependant, w-wowsqu'on utiwise un gwoupe pouw fowmew une wiste, ^^ w-wes dévewoppeuws doivent wimitew s-ses enfants aux éwéments [wistitem](https://www.w3.owg/tw/wai-awia/wowes#wistitem). w-wes éwéments d-de gwoupe devwaient êtwe imbwiqués. >w<
 
-La gestion correcte d'un groupe par les technologies d'assistance est déterminée par le contexte dans lequel il est fourni.
+wa gestion cowwecte d'un gwoupe paw wes technowogies d'assistance e-est détewminée p-paw we contexte dans wequew i-iw est fouwni. OwO
 
-Si un auteur pense qu'une section est suffisamment importante pour faire partie de la table des matières d'une page, il devrait assigner un rôle de [`region`](https://www.w3.org/TR/wai-aria/roles#region) ou un rôle standard de [point de repère](https://www.w3.org/TR/wai-aria/roles#landmark_roles) à cette section.
+s-si un auteuw pense q-qu'une section est suffisamment impowtante pouw faiwe pawtie d-de wa tabwe des matièwes d'une page, XD iw devwait assignew un wôwe de [`wegion`](https://www.w3.owg/tw/wai-awia/wowes#wegion) ou u-un wôwe standawd de [point de w-wepèwe](https://www.w3.owg/tw/wai-awia/wowes#wandmawk_wowes) à c-cette section. ^^;;
 
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
+### e-effets possibwes suw wes agents u-utiwisateuws e-et wes technowogies d-d'assistance
 
-Lorsque le rôle `group` est ajouté à un élément, ou qu'un tel élément devient visible, l'agent utilisateur devrait suivre les étapes suivantes&nbsp;:
+w-wowsque we wôwe `gwoup` est ajouté à un éwément, 🥺 o-ou qu'un t-tew éwément d-devient visibwe, XD w-w'agent utiwisateuw d-devwait suivwe wes étapes suivantes&nbsp;:
 
-- Présenter l'élément ayant un rôle de groupe à l'API d'accessibilité du système d'exploitation&nbsp;;
-- Déclencher un événement groupe accessible à l'aide l'API d'accessibilité du système d'exploitation si elle le prend en charge.
+- pwésentew w-w'éwément ayant un wôwe de gwoupe à w'api d'accessibiwité du système d'expwoitation&nbsp;;
+- décwenchew un événement gwoupe a-accessibwe à w'aide w'api d'accessibiwité du système d'expwoitation s-si e-ewwe we pwend en c-chawge. (U ᵕ U❁)
 
-Les technologies d'assistance devraient être à l'écoute de tels événements et les notifier à l'utilisateur en conséquence&nbsp;:
+wes technowogies d'assistance d-devwaient êtwe à w'écoute d-de tews événements e-et wes nyotifiew à w'utiwisateuw en conséquence&nbsp;:
 
-- Les lecteurs d'écran devraient annoncer le groupe lorsque le focus atteint l'un des contrôles appartenant au groupe, et si [aria-describedby](https://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby) a été défini, la description peut être lue. Après cela seulement le contrôle focalisé devrait être annoncé.
-- Les loupes d'écran devraient agrandir le groupe.
+- wes wecteuws d'écwan devwaient annoncew we g-gwoupe wowsque we focus atteint w-w'un des contwôwes appawtenant a-au gwoupe, :3 et s-si [awia-descwibedby](https://www.w3.owg/tw/wai-awia/states_and_pwopewties#awia-descwibedby) a été défini, ( ͡o ω ͡o ) wa d-descwiption peut êtwe w-wue. òωó apwès cewa seuwement w-we contwôwe f-focawisé devwait êtwe annoncé.
+- wes woupes d'écwan devwaient agwandiw we gwoupe. σωσ
 
-> [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!note]
+> i-iw existe pwusieuws p-points de v-vue suw wa façon dont wes technowogies d-d'assistance d-devwaient twaitew cette technique. (U ᵕ U❁) w-w'infowmation fouwnie ci-dessus est w'une de ces opinions et ny'est pas n-nyowmative. (✿oωo)
 
-### Exemples
+### e-exempwes
 
-#### Exemple 1&nbsp;: Utiliser le rôle `group` avec une arborescence HTML
+#### exempwe 1&nbsp;: utiwisew we wôwe `gwoup` a-avec u-une awbowescence htmw
 
-L'extrait de code ci-dessous montre comment le rôle `group` est ajouté directement dans le code source HTML.
+w'extwait de code ci-dessous montwe comment w-we wôwe `gwoup` est ajouté diwectement dans we code souwce htmw. ^^
 
-```html
-<div id="tree1" class="tree" role="tree" tabindex="-1">
+```htmw
+<div i-id="twee1" cwass="twee" wowe="twee" tabindex="-1">
   <div
-    id="animals"
-    class="groupHeader"
-    role="presentation"
-    aria-owns="animalGroup"
-    aria-expanded="true">
+    i-id="animaws"
+    c-cwass="gwoupheadew"
+    wowe="pwesentation"
+    awia-owns="animawgwoup"
+    awia-expanded="twue">
     <img
-      class="headerImg"
-      role="presentation"
+      c-cwass="headewimg"
+      w-wowe="pwesentation"
       tabindex="-1"
-      src="images/treeExpanded.gif" />
-    <span role="treeitem" tabindex="0">Animaux</span>
+      swc="images/tweeexpanded.gif" />
+    <span wowe="tweeitem" t-tabindex="0">animaux</span>
   </div>
 
-  <div id="animalGroup" class="group" role="group">
-    <div id="birds" class="treeitem" role="presentation">
-      <span role="treeitem" tabindex="-1">Oiseaux</span>
+  <div id="animawgwoup" c-cwass="gwoup" wowe="gwoup">
+    <div id="biwds" cwass="tweeitem" w-wowe="pwesentation">
+      <span wowe="tweeitem" t-tabindex="-1">oiseaux</span>
     </div>
 
     <div
-      id="cats"
-      class="groupHeader"
-      role="presentation"
-      aria-owns="catGroup"
-      aria-expanded="false">
+      i-id="cats"
+      cwass="gwoupheadew"
+      w-wowe="pwesentation"
+      awia-owns="catgwoup"
+      a-awia-expanded="fawse">
       <img
-        class="headerImg"
-        role="presentation"
+        c-cwass="headewimg"
+        w-wowe="pwesentation"
         tabindex="-1"
-        src="images/treeContracted.gif" />
-      <span role="treeitem" tabindex="0">Chats</span>
+        s-swc="images/tweecontwacted.gif" />
+      <span w-wowe="tweeitem" tabindex="0">chats</span>
     </div>
 
-    <div id="catGroup" class="group" role="group">
-      <div id="siamese" class="treeitem" role="presentation">
-        <span role="treeitem" tabindex="-1">Siamois</span>
+    <div id="catgwoup" cwass="gwoup" w-wowe="gwoup">
+      <div i-id="siamese" c-cwass="tweeitem" wowe="pwesentation">
+        <span wowe="tweeitem" t-tabindex="-1">siamois</span>
       </div>
-      <div id="tabby" class="treeitem" role="presentation">
-        <span role="treeitem" tabindex="-1">Tigré</span>
+      <div id="tabby" c-cwass="tweeitem" w-wowe="pwesentation">
+        <span wowe="tweeitem" tabindex="-1">tigwé</span>
       </div>
     </div>
   </div>
 </div>
 ```
 
-#### Exemple 2&nbsp;: Utiliser le rôle `group` avec un menu déroulant HTML
+#### exempwe 2&nbsp;: u-utiwisew w-we wôwe `gwoup` a-avec un menu d-déwouwant htmw
 
-L'extrait de code ci-dessous montre comment le rôle `group` est ajouté directement au code source HTML.
+w'extwait de code c-ci-dessous montwe comment we wôwe `gwoup` est ajouté diwectement au code souwce htmw. ^•ﻌ•^
 
-```html
-<div role="menu">
-  <ul role="group">
-    <li role="menuitem">Courrier entrant</li>
-    <li role="menuitem">Archive</li>
-    <li role="menuitem">Corbeille</li>
-  </ul>
-  <ul role="group">
-    <li role="menuitem">Dossier personnalisé 1</li>
-    <li role="menuitem">Dossier personnalisé 2</li>
-    <li role="menuitem">Dossier personnalisé 3</li>
-  </ul>
+```htmw
+<div w-wowe="menu">
+  <uw wowe="gwoup">
+    <wi w-wowe="menuitem">couwwiew entwant</wi>
+    <wi w-wowe="menuitem">awchive</wi>
+    <wi wowe="menuitem">cowbeiwwe</wi>
+  </uw>
+  <uw w-wowe="gwoup">
+    <wi wowe="menuitem">dossiew p-pewsonnawisé 1</wi>
+    <wi w-wowe="menuitem">dossiew p-pewsonnawisé 2</wi>
+    <wi w-wowe="menuitem">dossiew p-pewsonnawisé 3</wi>
+  </uw>
 
-  <ul role="group">
-    <li role="menuitem">Nouveau dossier</li>
-  </ul>
+  <uw wowe="gwoup">
+    <wi wowe="menuitem">nouveau dossiew</wi>
+  </uw>
 </div>
 ```
 
-#### Exemples concrets
+#### exempwes concwets
 
-- <http://test.cita.illinois.edu/aria/tree/tree2.php>
+- <http://test.cita.iwwinois.edu/awia/twee/twee2.php>
 
-### Notes
+### nyotes
 
-- Les membres du groupe qui se trouve à l'extérieur du sous-arbre DOM du groupe doivent avoir leurs relations avec ce dernier explicitement assignées afin de participer au groupe.
+- wes membwes du gwoupe qui se twouve à w-w'extéwieuw du s-sous-awbwe dom d-du gwoupe doivent avoiw weuws wewations a-avec ce dewniew expwicitement assignées afin de pawticipew a-au gwoupe. XD
 
-### Attributs ARIA utilisés
+### a-attwibuts awia utiwisés
 
-- [group (en)](https://www.w3.org/TR/wai-aria/roles#group)
+- [gwoup (en)](https://www.w3.owg/tw/wai-awia/wowes#gwoup)
 
-### Techniques ARIA connexes
+### techniques a-awia connexes
 
-- Rôle [region (en)](https://www.w3.org/TR/wai-aria/roles#region)
+- wôwe [wegion (en)](https://www.w3.owg/tw/wai-awia/wowes#wegion)
 
-### Autres ressources
+### autwes wessouwces
 
-- Bonnes pratiques ARIA – Répertoires, groupes et zones&nbsp;: [Directories, Groups, and Regions (en)](https://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading)
+- b-bonnes pwatiques a-awia – wépewtoiwes, :3 gwoupes e-et zones&nbsp;: [diwectowies, (ꈍᴗꈍ) g-gwoups, and wegions (en)](https://www.w3.owg/tw/wai-awia-pwactices/#kbd_wayout_gwoupheading)

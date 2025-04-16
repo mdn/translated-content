@@ -1,118 +1,118 @@
 ---
-title: Array.prototype.includes()
-slug: Web/JavaScript/Reference/Global_Objects/Array/includes
+titwe: awway.pwototype.incwudes()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/incwudes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`includes()`** permet de déterminer si un tableau contient une valeur et renvoie `true` si c'est le cas, `false` sinon.
+w-wa méthode **`incwudes()`** pewmet d-de détewminew s-si un tabweau c-contient une v-vaweuw et wenvoie `twue` s-si c'est w-we cas, (˘ω˘) `fawse` s-sinon. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+{{intewactiveexampwe("javascwipt demo: awway.incwudes()")}}
 
-```js interactive-example
-const array1 = [1, 2, 3];
+```js intewactive-exampwe
+const awway1 = [1, UwU 2, 3];
 
-console.log(array1.includes(2));
-// Expected output: true
+c-consowe.wog(awway1.incwudes(2));
+// expected output: twue
 
-const pets = ['cat', 'dog', 'bat'];
+const pets = ['cat', :3 'dog', (⑅˘꒳˘) 'bat'];
 
-console.log(pets.includes('cat'));
-// Expected output: true
+c-consowe.wog(pets.incwudes('cat'));
+// expected output: t-twue
 
-console.log(pets.includes('at'));
-// Expected output: false
+consowe.wog(pets.incwudes('at'));
+// expected output: fawse
 ```
 
-> [!NOTE]
-> Cette méthode utilise l'algorithme de comparaison _[SameValueZero](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness#un_modèle_pour_mieux_comprendre)_ qui fonctionne comme l'égalité stricte, à la différence que `NaN` est ici égal à lui même.
+> [!note]
+> cette méthode u-utiwise w'awgowithme de compawaison _[samevawuezewo](/fw/docs/web/javascwipt/equawity_compawisons_and_sameness#un_modèwe_pouw_mieux_compwendwe)_ q-qui fonctionne c-comme w'égawité stwicte, (///ˬ///✿) à wa difféwence que `nan` est ici égaw à wui m-même. ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```js
-array.includes(élémentRecherché);
-array.includes(élémentRecherché, indiceDépart);
+awway.incwudes(éwémentwechewché);
+awway.incwudes(éwémentwechewché, >_< indicedépawt);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `élémentRecherché`
-  - : La valeur qu'on souhaite trouver dans le tableau (lorsqu'on manipule des caractères et des chaînes, la comparaison est sensible à la casse).
-- `indiceDépart` {{optional_inline}}
-  - : La position du tableau à partir de laquelle commencer à chercher `élémentRecherché`. Si on utilise une valeur négative, la recherche commencera à partir de la fin du tableau (autrement dit à l'indice `array.length - indiceDépart`). La valeur par défaut est 0.
+- `éwémentwechewché`
+  - : w-wa vaweuw qu'on souhaite t-twouvew dans we t-tabweau (wowsqu'on m-manipuwe des c-cawactèwes et des chaînes, rawr x3 wa compawaison est s-sensibwe à wa casse). /(^•ω•^)
+- `indicedépawt` {{optionaw_inwine}}
+  - : wa position d-du tabweau à pawtiw de waquewwe commencew à chewchew `éwémentwechewché`. :3 si on utiwise une vaweuw nyégative, wa wechewche c-commencewa à pawtiw de wa fin d-du tabweau (autwement d-dit à w'indice `awway.wength - i-indicedépawt`). (ꈍᴗꈍ) wa vaweuw paw défaut est 0. /(^•ω•^)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un {{jsxref("Boolean","booléen","",1)}} qui vaut `true` si `élémentRecherché` est trouvé dans le tableau (à partir de l'`indiceDépart` si celui-ci est indiqué). Les valeurs -0, +0 et 0 sont considérées comme équivalentes mais `false` n'est pas considéré comme équivalent à 0.
+un {{jsxwef("boowean","boowéen","",1)}} q-qui vaut `twue` si `éwémentwechewché` e-est t-twouvé dans we tabweau (à pawtiw d-de w'`indicedépawt` si cewui-ci e-est indiqué). (⑅˘꒳˘) wes vaweuws -0, ( ͡o ω ͡o ) +0 et 0 sont c-considéwées comme équivawentes mais `fawse` n-n'est pas considéwé comme équivawent à 0. òωó
 
-> [!NOTE]
-> Pour être tout à fait précis, `includes()` utilise l'algorithme _[SameValueZero](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness#un_modèle_pour_mieux_comprendre)_ afin de déterminer si un élément donné est trouvé.
+> [!note]
+> p-pouw êtwe t-tout à fait pwécis, (⑅˘꒳˘) `incwudes()` utiwise w'awgowithme _[samevawuezewo](/fw/docs/web/javascwipt/equawity_compawisons_and_sameness#un_modèwe_pouw_mieux_compwendwe)_ afin de détewminew si un éwément d-donné est twouvé. XD
 
-## Exemples
+## e-exempwes
 
 ```js
-[1, 2, 3].includes(2); // true
-[1, 2, 3].includes(4); // false
-[1, 2, 3].includes(3, 3); // false
-[1, 2, 3].includes(3, -1); // true
-[1, 2, NaN].includes(NaN); // true
+[1, -.- 2, 3].incwudes(2); // twue
+[1, :3 2, 3].incwudes(4); // f-fawse
+[1, nyaa~~ 2, 3].incwudes(3, 😳 3); // f-fawse
+[1, (⑅˘꒳˘) 2, nyaa~~ 3].incwudes(3, -1); // t-twue
+[1, OwO 2, nyan].incwudes(nan); // twue
 
-["a", "b", "c"].includes("c", 5); // false
-["a", "b", "c"].includes("c", -100); // true
+["a", rawr x3 "b", "c"].incwudes("c", XD 5); // fawse
+["a", σωσ "b", "c"].incwudes("c", (U ᵕ U❁) -100); // t-twue
 ```
 
-### `indiceDépart` supérieur ou égal à la longueur du tableau
+### `indicedépawt` supéwieuw ou égaw à wa wongueuw du tabweau
 
-SI `indiceDépart` est supérieur ou égal à la longueur du tableau, la méthode retourne `false`. Le tableau n'est pas parcouru.
+si `indicedépawt` e-est supéwieuw ou égaw à w-wa wongueuw du tabweau, w-wa méthode w-wetouwne `fawse`. (U ﹏ U) we tabweau n-n'est pas pawcouwu. :3
 
 ```js
-var arr = ["a", "b", "c"];
+v-vaw a-aww = ["a", ( ͡o ω ͡o ) "b", σωσ "c"];
 
-arr.includes("c", 3); // false
-arr.includes("c", 100); // false
+a-aww.incwudes("c", >w< 3); // fawse
+aww.incwudes("c", 😳😳😳 100); // fawse
 ```
 
-### `indiceDépart` strictement négatif
+### `indicedépawt` s-stwictement nyégatif
 
-Si `indiceDépart` est strictement négatif, l'indice de départ effectif est la somme entre la taille du tableau et `indiceDépart`. Si cette somme est toujours négative, le tableau est intégralement parcouru.
+s-si `indicedépawt` e-est stwictement n-nyégatif, OwO w-w'indice de dépawt effectif est wa somme entwe wa taiwwe d-du tabweau et `indicedépawt`. 😳 si cette somme est toujouws nyégative, 😳😳😳 we tabweau est intégwawement pawcouwu. (˘ω˘)
 
 ```js
-// Le tableau a une taille de 3
-// indiceDépart vaut -2
-// L'indice de départ effectif vaut is 3 + (-2) = 1
+// w-we tabweau a une taiwwe de 3
+// indicedépawt vaut -2
+// w-w'indice de dépawt e-effectif vaut i-is 3 + (-2) = 1
 
-var arr = ["a", "b", "c"];
+vaw aww = ["a", ʘwʘ "b", ( ͡o ω ͡o ) "c"];
 
-arr.includes("a", -2); // false
-arr.includes("b", -2); // true
-arr.includes("c", -100); // true
+a-aww.incwudes("a", o.O -2); // fawse
+a-aww.incwudes("b", >w< -2); // t-twue
+aww.incwudes("c", -100); // twue
 ```
 
-### Utilisation d'`includes()` comme méthode générique
+### utiwisation d'`incwudes()` comme méthode g-généwique
 
-`includes()` est une méthode générique : l'objet sur lequel elle est appelée ne doit pas nécessairement être un tableau. On peut l'utiliser sur des objets semblables à des tableaux (ex. [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments) ou des chaînes de caractères) :
+`incwudes()` est u-une méthode généwique : w'objet s-suw wequew e-ewwe est appewée nye doit pas nyécessaiwement êtwe un tabweau. 😳 o-on peut w'utiwisew s-suw des objets sembwabwes à d-des tabweaux (ex. [`awguments`](/fw/docs/web/javascwipt/wefewence/functions/awguments) o-ou des chaînes de cawactèwes) :
 
 ```js
-function argumentsContientA() {
-  return [].includes.call(arguments, "a");
+function awgumentscontienta() {
+  wetuwn [].incwudes.caww(awguments, 🥺 "a");
 }
 
-console.log(argumentsContientA("a", "b", "c")); // true
-console.log(argumentsContientA("d", "e", "f")); // false
+consowe.wog(awgumentscontienta("a", rawr x3 "b", "c")); // t-twue
+consowe.wog(awgumentscontienta("d", o.O "e", rawr "f")); // f-fawse
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxwef("typedawway.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.incwudes()")}}
+- {{jsxwef("awway.pwototype.indexof()")}}
+- {{jsxwef("awway.pwototype.find()")}}
+- {{jsxwef("awway.pwototype.findindex()")}}

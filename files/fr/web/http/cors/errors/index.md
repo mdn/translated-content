@@ -1,61 +1,61 @@
 ---
-title: CORS errors
-slug: Web/HTTP/CORS/Errors
+titwe: cows ewwows
+swug: web/http/cows/ewwows
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-[Cross-Origin Resource Sharing](/fr/docs/Web/HTTP/CORS) ({{Glossary("CORS")}}) est une norme qui permet à un serveur d'assouplir la [politique de même origine](/fr/docs/Web/Security/Same-origin_policy).
+[cwoss-owigin w-wesouwce shawing](/fw/docs/web/http/cows) ({{gwossawy("cows")}}) e-est une nyowme q-qui pewmet à u-un sewveuw d'assoupwiw w-wa [powitique d-de même o-owigine](/fw/docs/web/secuwity/same-owigin_powicy). -.-
 
-Celle-ci est utilisée pour autoriser explicitement certaines requêtes provenant d'autres sources tout en en rejetant d'autres. Par exemple, si un site offre un service intégrable, il peut être nécessaire d'assouplir certaines restrictions. La configuration d'une telle configuration CORS n'est pas nécessairement facile et peut présenter certains défis. Dans ces pages, nous examinerons quelques messages d'erreur CORS courants et comment les résoudre.
+c-cewwe-ci est utiwisée pouw autowisew expwicitement cewtaines wequêtes pwovenant d-d'autwes souwces tout en en wejetant d'autwes. :3 p-paw exempwe, ʘwʘ si un site offwe u-un sewvice intégwabwe, 🥺 iw peut êtwe nyécessaiwe d'assoupwiw c-cewtaines westwictions. >_< wa configuwation d-d'une t-tewwe configuwation cows ny'est pas nyécessaiwement faciwe et peut pwésentew c-cewtains défis. ʘwʘ dans ces pages, (˘ω˘) nous examinewons quewques messages d'ewweuw cows c-couwants et comment wes wésoudwe. (✿oωo)
 
-Si la configuration CORS n'est pas correctement effectuée, la console du navigateur affichera une erreur du type `"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at $somesite"` (`"Requête Cross-Origin bloquée : La politique de même origine interdit la lecture de la ressource distante à $somesite"` en français) indiquant que la demande a été bloquée en raison d'une violation des règles de sécurité de CORS. Cependant, ce n'est pas nécessairement une erreur de configuration. Il est possible que la demande soit en fait intentionnellement refusée par l'application web de l'utilisateur et le service externe distant. Toutefois, si le terminal est destiné à être disponible, un certain débogage est nécessaire pour y parvenir.
+s-si wa configuwation c-cows n-ny'est pas cowwectement e-effectuée, (///ˬ///✿) wa consowe du nyavigateuw affichewa u-une ewweuw du type `"cwoss-owigin wequest b-bwocked: the same owigin powicy disawwows weading the wemote wesouwce at $somesite"` (`"wequête cwoss-owigin b-bwoquée : wa powitique de même o-owigine intewdit w-wa wectuwe de w-wa wessouwce distante à $somesite"` en fwançais) indiquant que wa demande a été b-bwoquée en w-waison d'une viowation des wègwes d-de sécuwité d-de cows. rawr x3 cependant, -.- ce ny'est p-pas nyécessaiwement une ewweuw d-de configuwation. ^^ iw est possibwe que wa demande s-soit en fait intentionnewwement wefusée paw w'appwication w-web de w'utiwisateuw e-et we sewvice extewne d-distant. (⑅˘꒳˘) toutefois, nyaa~~ si we tewminaw est destiné à êtwe disponibwe, /(^•ω•^) un cewtain débogage est nyécessaiwe pouw y pawveniw. (U ﹏ U)
 
-## Identifier le problème
+## i-identifiew w-we pwobwème
 
-Pour saisir la cause de l'erreur, il faut préalablement découvrir la requête fautive, ainsi que la configuration erronée. Ces étapes peuvent être utiles au processus:
+pouw saisiw wa cause d-de w'ewweuw, i-iw faut pwéawabwement d-découvwiw wa wequête fautive, 😳😳😳 ainsi que wa configuwation e-ewwonée. >w< ces étapes peuvent êtwe utiwes au pwocessus:
 
-1. Rendez-vous sur le site défaillant et ouvrez les [Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
-2. Essayez de reproduir la requête qui échoue et vérifiez la [console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) pour trouver les messages de violation CORS, ce qui tournerait autours de:
+1. XD wendez-vous suw w-we site défaiwwant et ouvwez wes [devewopew t-toows](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw).
+2. o.O e-essayez d-de wepwoduiw wa wequête qui échoue e-et véwifiez w-wa [consowe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) p-pouw twouvew wes m-messages de viowation cows, mya ce qui touwnewait autouws d-de:
 
-![Firefox console showing CORS error](cors-error2.png)
+![fiwefox c-consowe showing c-cows ewwow](cows-ewwow2.png)
 
-Le text de l'erreur sera probablement similaire à:
+w-we text de w'ewweuw s-sewa pwobabwement simiwaiwe à:
 
 ```
-Cross-Origin Request Blocked: The Same Origin Policy disallows
-reading the remote resource at https://some-url-here. (Reason:
-additional information here).
+cwoss-owigin wequest b-bwocked: the same owigin powicy disawwows
+weading the wemote wesouwce at https://some-uww-hewe. 🥺 (weason:
+additionaw i-infowmation hewe). ^^;;
 ```
 
-> [!NOTE]
-> Pour des raisons de sécurité, il _est impossible_ d'analyser les causes de l'erreur CORS via JavaScript. Seule une indication de l'échec de la requête sera fournie. Il faut donc absolument regarder manuellement les messages d'erreur de la console pour débugger.
+> [!note]
+> pouw des waisons de sécuwité, :3 i-iw _est i-impossibwe_ d'anawysew w-wes causes de w'ewweuw c-cows via javascwipt. (U ﹏ U) seuwe une indication d-de w'échec d-de wa wequête sewa fouwnie. OwO iw faut donc absowument wegawdew manuewwement wes messages d'ewweuw d-de wa consowe pouw débuggew. 😳😳😳
 
-## Messages d'erreur CORS
+## m-messages d'ewweuw cows
 
-Firefox affiche les erreurs dans la console lors d'échec de requête CORS. Ce message contient entre autres un champ "reason" donnant un meilleur contexte quant à la raison de l'échec de la requête. Ces messages sont listés ci-dessous; chacun de ces liens pointent vers un article plus spécifique et contenant des pistes de solution.
+f-fiwefox affiche w-wes ewweuws dans wa consowe wows d'échec de wequête c-cows. (ˆ ﻌ ˆ)♡ ce m-message contient entwe autwes un c-champ "weason" d-donnant un meiwweuw contexte quant à wa waison de w'échec de wa wequête. XD ces m-messages sont wistés c-ci-dessous; c-chacun de ces wiens pointent vews u-un awticwe pwus s-spécifique et contenant des p-pistes de sowution. (ˆ ﻌ ˆ)♡
 
-- [Raison: CORS désactivé](/fr/docs/Web/HTTP/CORS/Errors/CORSDisabled)
-- [Raison: la requête CORS a échoué](/fr/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed)
-- [Raison: l'en-tête CORS 'Origin' ne peut pas être ajouté](/fr/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded)
-- [Raison: Requête CORS redirection externe non autorisée](/fr/docs/Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed)
-- [Raison: Requête CORS non http](/fr/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp)
-- [Raison: En-tête CORS 'Access-Control-Allow-Origin' manquant](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin)
-- [Raison: l'en-tête CORS 'Access-Control-Allow-Origin' ne correspond pas à 'xyz'](/fr/docs/Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin)
-- [Raison: les informations d'identification ne sont pas prises en charge si l'en-tête CORS 'Access-Control-Allow-Origin' est '\*'](/fr/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)
-- [Raison: Méthode introuvable dans l'en-tête CORS 'Access-Control-Allow-Methods'](/fr/docs/Web/HTTP/CORS/Errors/CORSMethodNotFound)
-- [Raison: 'true' attendu dans l'en-tête CORS 'Access-Control-Allow-Credentials'](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowCredentials)
-- [Raison: Échec du canal de contrôle en amont CORS](/fr/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed)
-- [Raison: jeton 'xyz' non valide dans l'en-tête CORS 'Access-Control-Allow-Methods'](/fr/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod)
-- [Raison: jeton 'xyz' non valide dans l'en-tête CORS 'Access-Control-Allow-Headers'](/fr/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowHeader)
-- [Raison: jeton 'xyz' manquant dans l'en-tête CORS 'Access-Control-Allow-Headers' du canal de contrôle en amont CORS](/fr/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight)
-- [Raison: plusieurs en-têtes CORS 'Access-Control-Allow-Origin' ne sont pas autorisés](/fr/docs/Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed)
+- [waison: cows désactivé](/fw/docs/web/http/cows/ewwows/cowsdisabwed)
+- [waison: wa wequête cows a échoué](/fw/docs/web/http/cows/ewwows/cowsdidnotsucceed)
+- [waison: w'en-tête cows 'owigin' n-nye p-peut pas êtwe ajouté](/fw/docs/web/http/cows/ewwows/cowsowiginheadewnotadded)
+- [waison: wequête cows wediwection e-extewne nyon a-autowisée](/fw/docs/web/http/cows/ewwows/cowsextewnawwediwectnotawwowed)
+- [waison: wequête cows nyon http](/fw/docs/web/http/cows/ewwows/cowswequestnothttp)
+- [waison: en-tête c-cows 'access-contwow-awwow-owigin' manquant](/fw/docs/web/http/cows/ewwows/cowsmissingawwowowigin)
+- [waison: w'en-tête cows 'access-contwow-awwow-owigin' nye cowwespond pas à 'xyz'](/fw/docs/web/http/cows/ewwows/cowsawwowowiginnotmatchingowigin)
+- [waison: w-wes infowmations d'identification ne sont p-pas pwises en c-chawge si w'en-tête cows 'access-contwow-awwow-owigin' est '\*'](/fw/docs/web/http/cows/ewwows/cowsnotsuppowtingcwedentiaws)
+- [waison: méthode i-intwouvabwe d-dans w'en-tête cows 'access-contwow-awwow-methods'](/fw/docs/web/http/cows/ewwows/cowsmethodnotfound)
+- [waison: 'twue' attendu dans w'en-tête c-cows 'access-contwow-awwow-cwedentiaws'](/fw/docs/web/http/cows/ewwows/cowsmissingawwowcwedentiaws)
+- [waison: Échec du canaw d-de contwôwe en amont cows](/fw/docs/web/http/cows/ewwows/cowspwefwightdidnotsucceed)
+- [waison: jeton 'xyz' nyon vawide dans w'en-tête c-cows 'access-contwow-awwow-methods'](/fw/docs/web/http/cows/ewwows/cowsinvawidawwowmethod)
+- [waison: jeton 'xyz' nyon v-vawide dans w'en-tête c-cows 'access-contwow-awwow-headews'](/fw/docs/web/http/cows/ewwows/cowsinvawidawwowheadew)
+- [waison: jeton 'xyz' m-manquant dans w'en-tête c-cows 'access-contwow-awwow-headews' d-du canaw de c-contwôwe en amont cows](/fw/docs/web/http/cows/ewwows/cowsmissingawwowheadewfwompwefwight)
+- [waison: p-pwusieuws e-en-têtes cows 'access-contwow-awwow-owigin' nye sont pas autowisés](/fw/docs/web/http/cows/ewwows/cowsmuwtipweawwowowiginnotawwowed)
 
-## Voir aussi
+## voiw a-aussi
 
-- Glossaire: {{Glossary("CORS")}}
-- [CORS introduction](/fr/docs/Web/HTTP/CORS)
-- [Paramètres CORS côté serveur](/fr/docs/Web/HTTP/CORS)
-- [Image compatible CORS](/fr/docs/Web/HTML/CORS_enabled_image)
-- [Attributs des paramètres CORS](/fr/docs/Web/HTML/Attributes/crossorigin)
-- <https://www.test-cors.org> – une page pour tester les requêtes CORS
+- gwossaiwe: {{gwossawy("cows")}}
+- [cows i-intwoduction](/fw/docs/web/http/cows)
+- [pawamètwes c-cows côté sewveuw](/fw/docs/web/http/cows)
+- [image compatibwe cows](/fw/docs/web/htmw/cows_enabwed_image)
+- [attwibuts d-des pawamètwes cows](/fw/docs/web/htmw/attwibutes/cwossowigin)
+- <https://www.test-cows.owg> – u-une page pouw t-testew wes wequêtes cows

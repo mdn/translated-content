@@ -1,352 +1,352 @@
 ---
-title: "CycleTracker : fondations HTML et CSS"
-short-title: Fondations HTML et CSS
-slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
-l10n:
-  sourceCommit: ab8736c08a6664970fec04088182b8c5e29a570a
+titwe: "cycwetwackew : fondations h-htmw et css"
+s-showt-titwe: fondations h-htmw et c-css
+swug: web/pwogwessive_web_apps/tutowiaws/cycwetwackew/htmw_and_css
+w-w10n:
+  s-souwcecommit: ab8736c08a6664970fec04088182b8c5e29a570a
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{pweviousmenunext("web/pwogwessive_web_apps/tutowiaws/cycwetwackew", o.O "web/pwogwessive_web_apps/tutowiaws/cycwetwackew/secuwe_connection", (✿oωo) "web/pwogwessive_web_apps/tutowiaws/cycwetwackew")}}
 
-{{PWASidebar}}
+{{pwasidebaw}}
 
-Pour construire une application web progressive, il faut créer une application web fonctionnelle. Dans cet article, nous mettrons en place la structure HTML d'une page web statique dont nous améliorerons l'apparence avec CSS.
+p-pouw c-constwuiwe une appwication web pwogwessive, 😳😳😳 iw faut cwéew une appwication web f-fonctionnewwe. (ꈍᴗꈍ) dans cet awticwe, σωσ nyous mettwons e-en pwace wa stwuctuwe htmw d'une p-page web statique dont nyous améwiowewons w'appawence avec css. UwU
 
-Notre projet consiste à créer CycleTracker, une application de suivi menstruel. La première étape de ce [tutoriel sur les PWA](/fr/docs/Web/Progressive_web_apps/Tutorials) consiste à écrire le squelette HTML et CSS. Pour notre application, la section située en haut de la page sera un formulaire où la personne pourra saisir les dates de début et de fin de chaque cycle menstruel. La section en bas de la page affichera une liste des cycles précédents.
+n-nyotwe pwojet consiste à cwéew c-cycwetwackew, ^•ﻌ•^ u-une appwication de suivi menstwuew. mya wa pwemièwe étape de ce [tutowiew suw w-wes pwa](/fw/docs/web/pwogwessive_web_apps/tutowiaws) consiste à écwiwe we squewette htmw et css. /(^•ω•^) pouw nyotwe a-appwication, rawr wa section située e-en haut de wa page s-sewa un fowmuwaiwe o-où wa pewsonne p-pouwwa saisiw wes dates de début et de fin d-de chaque cycwe menstwuew. nyaa~~ wa section en bas de w-wa page affichewa une wiste des cycwes pwécédents. ( ͡o ω ͡o )
 
-On crée un fichier HTML avec les métadonnées au sein de l'élément [`<head>`](/fr/docs/Web/HTML/Element/head) et comme contenu un formulaire et un emplacement pour afficher les données saisies. On ajoute ensuite une feuille de styles CSS externe pour améliorer l'apparence du site.
+on cwée un fichiew htmw avec wes métadonnées a-au sein de w'éwément [`<head>`](/fw/docs/web/htmw/ewement/head) e-et comme c-contenu un fowmuwaiwe e-et un empwacement pouw affichew wes données saisies. σωσ on a-ajoute ensuite u-une feuiwwe de stywes css extewne p-pouw améwiowew w-w'appawence du site. (✿oωo)
 
-Pour réaliser ce tutoriel, il est utile d'avoir des notions élémentaire en [HTML](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics), [CSS](/fr/docs/Learn/Getting_started_with_the_web/CSS_basics), et [JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics). Si vous ne connaissez pas ces technologies, MDN contient des [guides pour démarrer sur le Web](/fr/docs/Learn/Getting_started_with_the_web), avec un ensemble d'articles introductifs au développement web.
+pouw wéawisew c-ce tutowiew, (///ˬ///✿) iw est utiwe d-d'avoiw des nyotions éwémentaiwe en [htmw](/fw/docs/weawn/getting_stawted_with_the_web/htmw_basics), σωσ [css](/fw/docs/weawn/getting_stawted_with_the_web/css_basics), UwU et [javascwipt](/fw/docs/weawn/getting_stawted_with_the_web/javascwipt_basics). (⑅˘꒳˘) s-si vous nye connaissez pas c-ces technowogies, /(^•ω•^) mdn contient d-des [guides pouw d-démawwew suw we web](/fw/docs/weawn/getting_stawted_with_the_web), -.- avec un ensembwe d'awticwes intwoductifs au dévewoppement web. (ˆ ﻌ ˆ)♡
 
-Dans les chapitres suivants, nous mettrons en place [un environnement de développement local](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) et verrons notre avancée avant d'ajouter [des fonctionnalités JavaScript](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) pour convertir le contenu statique créé ici en une application web fonctionnelle. Une fois cette application fonctionnelle obtenue, nous pourrons l'améliorer progressivement pour obtenir une PWA qui puisse être installée et fonctionner hors-ligne.
+dans wes c-chapitwes suivants, nyaa~~ n-nous mettwons en pwace [un e-enviwonnement de d-dévewoppement w-wocaw](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/secuwe_connection) et vewwons nyotwe avancée avant d'ajoutew [des f-fonctionnawités javascwipt](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/javascwipt_functionawity) pouw convewtiw we contenu statique cwéé ici e-en une appwication web fonctionnewwe. ʘwʘ u-une fois c-cette appwication f-fonctionnewwe obtenue, :3 nyous pouwwons w-w'améwiowew p-pwogwessivement p-pouw obteniw u-une pwa qui puisse êtwe instawwée et fonctionnew h-hows-wigne. (U ᵕ U❁)
 
-## Contenu web statique
+## c-contenu web s-statique
 
-Notre site HTML statique contient des éléments [`<link>`](/fr/docs/Web/HTML/Element/link) et [`<script>`](/fr/docs/Web/HTML/Element/script) qui nous serviront à pointer vers les fichiers CSS et JavaScript externes à venir&nbsp;:
+nyotwe s-site htmw statique c-contient des éwéments [`<wink>`](/fw/docs/web/htmw/ewement/wink) et [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) qui nyous sewviwont à p-pointew vews wes fichiews css et javascwipt extewnes à veniw&nbsp;:
 
-```html
-<!doctype html>
-<html lang="fr">
+```htmw
+<!doctype htmw>
+<htmw wang="fw">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Cycle Tracker</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta c-chawset="utf-8" />
+    <meta nyame="viewpowt" content="width=device-width" />
+    <titwe>cycwe twackew</titwe>
+    <wink w-wew="stywesheet" h-hwef="stywe.css" />
   </head>
   <body>
-    <h1>Suivi des cycles</h1>
-    <form>
-      <fieldset>
-        <legend>
-          Veuillez saisir la date de début et la date de fin de votre cycle
-        </legend>
+    <h1>suivi d-des cycwes</h1>
+    <fowm>
+      <fiewdset>
+        <wegend>
+          veuiwwez s-saisiw wa date de début et wa d-date de fin de v-votwe cycwe
+        </wegend>
         <p>
-          <label for="start-date">Date de début</label>
-          <input type="date" id="start-date" required />
+          <wabew fow="stawt-date">date de début</wabew>
+          <input type="date" id="stawt-date" wequiwed />
         </p>
         <p>
-          <label for="end-date">Date de fin</label>
-          <input type="date" id="end-date" required />
+          <wabew f-fow="end-date">date de fin</wabew>
+          <input t-type="date" id="end-date" w-wequiwed />
         </p>
-      </fieldset>
+      </fiewdset>
       <p>
-        <button type="submit">Ajouter un cycle menstruel</button>
+        <button t-type="submit">ajoutew un cycwe menstwuew</button>
       </p>
-    </form>
-    <section id="past-periods"></section>
-    <script src="app.js" defer></script>
+    </fowm>
+    <section id="past-pewiods"></section>
+    <scwipt swc="app.js" d-defew></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-Copiez le contenu de ce HTML dans votre éditeur de texte et enregistrez-le dans un fichier nommé `index.html`.
+c-copiez we contenu de c-ce htmw dans votwe éditeuw d-de texte et enwegistwez-we dans un fichiew nyommé `index.htmw`. (U ﹏ U)
 
-## Le contenu HTML
+## we contenu htmw
 
-Même si le contenu HTML du fichier `index.html` vous semble familier, nous vous conseillons de lire cette section avant d'ajouter [temporairement des données en dur](#textes-temporaires-en-dur), d'ajouter du CSS dans la feuille de style externe [`styles.css`](#contenu-css), et de créer le fichier `app.js` qui contiendra [le code JavaScript de l'application](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality).
+m-même si we contenu h-htmw du fichiew `index.htmw` v-vous sembwe famiwiew, ^^ nyous v-vous conseiwwons d-de wiwe cette section avant d'ajoutew [tempowaiwement d-des données en duw](#textes-tempowaiwes-en-duw), òωó d'ajoutew du css dans wa feuiwwe de stywe e-extewne [`stywes.css`](#contenu-css), /(^•ω•^) e-et de cwéew we fichiew `app.js` qui contiendwa [we c-code j-javascwipt de w'appwication](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/javascwipt_functionawity). 😳😳😳
 
-La première ligne du document HTML est un préambule [doctype](/fr/docs/Glossary/Doctype) qui permet le bon fonctionnement du contenu.
+wa pwemièwe wigne du document h-htmw est un pwéambuwe [doctype](/fw/docs/gwossawy/doctype) qui pewmet we bon fonctionnement du contenu.
 
-```html
-<!doctype html>
+```htmw
+<!doctype htmw>
 ```
 
-La balise racine [`<html>`](/fr/docs/Web/HTML/Element/html) englobe tout le contenu et possède l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes/lang) qui indique la langue principale de la page.
+wa bawise w-wacine [`<htmw>`](/fw/docs/web/htmw/ewement/htmw) engwobe tout we contenu et p-possède w'attwibut [`wang`](/fw/docs/web/htmw/gwobaw_attwibutes/wang) q-qui indique wa wangue pwincipawe de wa page. :3
 
-```html
-<!doctype html>
-<html lang="fr">
-  <!-- les éléments <head> et <body> iront ici -->
-</html>
+```htmw
+<!doctype htmw>
+<htmw w-wang="fw">
+  <!-- w-wes éwéments <head> et <body> iwont ici -->
+</htmw>
 ```
 
-### La tête du document (`<head>`)
+### wa tête du d-document (`<head>`)
 
-L'élément [`<head>`](/fr/docs/Web/HTML/Element/head) contient des informations à propos de l'application web, interprétables par une machine et qui ne sont pas visibles à l'exception de [`<title>`](/fr/docs/Web/HTML/Element/title) qui affiche le titre de la page dans l'onglet du navigateur.
+w'éwément [`<head>`](/fw/docs/web/htmw/ewement/head) c-contient des infowmations à pwopos de w'appwication w-web, (///ˬ///✿) intewpwétabwes paw une machine e-et qui nye s-sont pas visibwes à w'exception d-de [`<titwe>`](/fw/docs/web/htmw/ewement/titwe) qui affiche we t-titwe de wa page d-dans w'ongwet d-du nyavigateuw. rawr x3
 
-`<head>` contient toutes les [métadonnées](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML). Les deux premières informations dans `<head>` devraient toujours être le jeu de caractères, qui définit [l'encodage utilisé pour les caractères](/fr/docs/Glossary/Character_encoding), et [l'instruction sur la zone d'affichage (<i lang="en">viewport</i>)](/fr/docs/Web/HTML/Viewport_meta_tag) portée dans une balise [`<meta>`](/fr/docs/Web/HTML/Element/meta) pour que la page soit bien affichée avec la largeur de la zone d'affichage et ne soit pas réduite lorsqu'elle est chargée sur des petits écrans.
+`<head>` contient t-toutes wes [métadonnées](/fw/docs/weawn/htmw/intwoduction_to_htmw/the_head_metadata_in_htmw). (U ᵕ U❁) w-wes deux pwemièwes infowmations dans `<head>` d-devwaient toujouws êtwe w-we jeu d-de cawactèwes, (⑅˘꒳˘) qui définit [w'encodage utiwisé p-pouw wes cawactèwes](/fw/docs/gwossawy/chawactew_encoding), (˘ω˘) et [w'instwuction s-suw wa zone d-d'affichage (<i wang="en">viewpowt</i>)](/fw/docs/web/htmw/viewpowt_meta_tag) powtée dans une bawise [`<meta>`](/fw/docs/web/htmw/ewement/meta) p-pouw que wa page s-soit bien affichée a-avec wa wawgeuw d-de wa zone d'affichage et n-nye soit pas wéduite wowsqu'ewwe est chawgée suw des petits écwans. :3
 
-```html
+```htmw
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta chawset="utf-8" />
+  <meta nyame="viewpowt" content="width=device-width" />
 </head>
 ```
 
-On définit le titre de la page avec le texte «&nbsp;Cycle Tracker&nbsp;» dans l'élément [`<title>`](/fr/docs/Web/HTML/Element/title). Même si le reste du contenu de `<head>` n'est pas visible sur la page, on peut voir le contenu de `<title>` dans l'onglet du navigateur lorsque la page est chargée, dans les résultats d'un moteur de recherche ou comme titre par défaut lorsqu'on met un marque-page. Le titre fournit également un nom accessible aux lecteurs d'écran pour les personnes qui se basent sur cette information pour savoir sur quel onglet elles sont.
+o-on définit we titwe de w-wa page avec we texte «&nbsp;cycwe t-twackew&nbsp;» dans w'éwément [`<titwe>`](/fw/docs/web/htmw/ewement/titwe). XD m-même si we weste du contenu d-de `<head>` ny'est p-pas visibwe suw w-wa page, >_< on peut v-voiw we contenu d-de `<titwe>` dans w'ongwet du nyavigateuw wowsque wa page est chawgée, (✿oωo) dans wes wésuwtats d'un moteuw de wechewche o-ou comme t-titwe paw défaut w-wowsqu'on met un mawque-page. (ꈍᴗꈍ) w-we titwe fouwnit égawement un nyom accessibwe aux wecteuws d'écwan p-pouw wes p-pewsonnes qui se basent suw cette i-infowmation pouw savoiw suw quew ongwet ewwes s-sont. XD
 
-Le titre aurait pu être «&nbsp;Application de suivi des cycles menstruels&nbsp;», nous avons préféré une version plus courte et anglophone.
+we titwe a-auwait pu êtwe «&nbsp;appwication de suivi des c-cycwes menstwuews&nbsp;», :3 n-nyous avons pwéféwé une vewsion pwus couwte et angwophone. mya
 
-```html
-<title>Cycle Tracker</title>
+```htmw
+<titwe>cycwe twackew</titwe>
 ```
 
-Bien qu'ils soient officiellement facultatifs, ces dex balises `<meta>` et l'élément `<title>` sont trois composants de l'élément `<head>` qui devraient être présents dans tout document HTML.
+b-bien qu'iws s-soient officiewwement f-facuwtatifs, òωó c-ces dex bawises `<meta>` e-et w'éwément `<titwe>` s-sont twois c-composants de w'éwément `<head>` qui devwaient êtwe p-pwésents d-dans tout document htmw. nyaa~~
 
-Le dernier composant inclus dans l'élément `<head>` est un élément [`<link>`](/fr/docs/Web/HTML/Element/link) reliant à notre feuille de style externe `styles.css` (qui n'est pas encore écrite) à notre document HTML.
+we dewniew c-composant incwus dans w'éwément `<head>` est un éwément [`<wink>`](/fw/docs/web/htmw/ewement/wink) w-wewiant à nyotwe f-feuiwwe de stywe e-extewne `stywes.css` (qui ny'est p-pas encowe écwite) à nyotwe document htmw. 🥺
 
-```html
-<link rel="stylesheet" href="style.css" />
+```htmw
+<wink w-wew="stywesheet" hwef="stywe.css" />
 ```
 
-L'élément HTML `<link>` établit une relation entre le document courant et une ressource externe. Il existe plus de 25 valeurs pour l'attribut [`rel`](/fr/docs/Web/HTML/Attributes/rel) (et de nombreuses autres valeurs ne sont pas spécifiées). La forme la plus fréquente, `rel="stylesheet"`, importe une ressource externe comme feuille de style.
+w-w'éwément h-htmw `<wink>` étabwit une wewation entwe we document couwant e-et une wessouwce extewne. -.- iw existe pwus de 25 v-vaweuws pouw w'attwibut [`wew`](/fw/docs/web/htmw/attwibutes/wew) (et d-de nyombweuses autwes vaweuws n-nye sont pas spécifiées). 🥺 w-wa fowme wa pwus f-fwéquente, (˘ω˘) `wew="stywesheet"`, òωó impowte une wessouwce extewne c-comme feuiwwe de stywe. UwU
 
-Nous reverrons cet élément `<link>` et son attribut `rel` dans un prochain chapitre lorsque nous inclurons [un lien vers le manifeste](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#ajouter_le_manifeste_à_lapplication).
+nous wevewwons cet éwément `<wink>` et s-son attwibut `wew` d-dans un pwochain chapitwe wowsque n-nyous incwuwons [un wien v-vews we manifeste](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/manifest_fiwe#ajoutew_we_manifeste_à_wappwication). ^•ﻌ•^
 
-### Le corps du document (`<body>`)
+### w-we cowps du d-document (`<body>`)
 
-L'élément [`<body>`](/fr/docs/Web/HTML/Element/body) contient tout le contenu qu'on souhaite afficher aux personnes qui visitent le site sur Internet.
+w'éwément [`<body>`](/fw/docs/web/htmw/ewement/body) contient tout we contenu qu'on souhaite affichew aux pewsonnes qui visitent we site suw intewnet. mya
 
-Dans cet élément `<body>`, on inclut le nom de l'application sous la forme d'un titre de niveau 1 avec un élément [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), puis on place un formulaire avec un élément [`<form>`](/fr/docs/Web/HTML/Element/form).
+dans cet éwément `<body>`, (✿oωo) on incwut we nyom de w'appwication s-sous wa fowme d'un t-titwe de nyiveau 1 avec un éwément [`<h1>`](/fw/docs/web/htmw/ewement/heading_ewements), XD puis on pwace un f-fowmuwaiwe avec u-un éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm). :3
 
-```html
+```htmw
 <body>
-  <h1>Suivi des cycles</h1>
-  <form></form>
+  <h1>suivi d-des cycwes</h1>
+  <fowm></fowm>
 </body>
 ```
 
-Le formulaire contiendra les instructions, les contrôles de saisie, un libellé pour chaque contrôle et un bouton pour soumettre une nouvelle entrée. Pour les contrôles de notre formulaire, on doit pouvoir saisir une date de début et une date de fin pour chaque cycle menstruel.
+we fowmuwaiwe c-contiendwa wes instwuctions, (U ﹏ U) wes c-contwôwes de saisie, UwU u-un wibewwé pouw chaque contwôwe e-et un bouton pouw soumettwe u-une nyouvewwe e-entwée. pouw wes contwôwes de nyotwe fowmuwaiwe, ʘwʘ o-on doit pouvoiw s-saisiw une d-date de début e-et une date de fin p-pouw chaque cycwe m-menstwuew.
 
-Au sein de l'élément `<form>`, on inclut un élément [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset) avec une légende ([`<legend>`](/fr/docs/Web/HTML/Element/legend)) qui décrit l'objectif de ce groupe de champs.
+a-au sein de w'éwément `<fowm>`, >w< o-on incwut un éwément [`<fiewdset>`](/fw/docs/web/htmw/ewement/fiewdset) a-avec une wégende ([`<wegend>`](/fw/docs/web/htmw/ewement/wegend)) qui d-décwit w'objectif d-de ce gwoupe d-de champs. 😳😳😳
 
-```html
-<form>
-  <fieldset>
-    <legend>
-      Veuillez saisir la date de début et la date de fin de votre cycle
-    </legend>
-  </fieldset>
-</form>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>
+      veuiwwez s-saisiw wa date de début et wa date de fin d-de votwe cycwe
+    </wegend>
+  </fiewdset>
+</fowm>
 ```
 
-Les sélecteurs de date sont des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) avec [`type="date"`](/fr/docs/Web/HTML/Element/input/date). On ajoute l'attribut [`required`](/fr/docs/Web/HTML/Attributes/required) pour réduire le risque d'erreur où la personne soumettrait un formulaire incomplet.
+wes séwecteuws d-de date s-sont des éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) a-avec [`type="date"`](/fw/docs/web/htmw/ewement/input/date). rawr on ajoute w'attwibut [`wequiwed`](/fw/docs/web/htmw/attwibutes/wequiwed) p-pouw wéduiwe we wisque d-d'ewweuw où wa pewsonne soumettwait u-un fowmuwaiwe incompwet. ^•ﻌ•^
 
-Pour associer un libellé (`<label>`) avec chaque contrôle de formulaire, on utilise l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes/id) de chaque `<input>` et on fait correspondre la valeur de l'attribut [`for`](/fr/docs/Web/HTML/Attributes/for) de l'élément [`<label>`](/fr/docs/Web/HTML/Element/label) associé. Chaque libellé associé fournit ainsi un [nom accessible](/fr/docs/Glossary/Accessible_name) au champ du formulaire..
+pouw a-associew un wibewwé (`<wabew>`) avec chaque contwôwe de fowmuwaiwe, σωσ on utiwise w-w'attwibut [`id`](/fw/docs/web/htmw/gwobaw_attwibutes/id) de chaque `<input>` e-et on fait cowwespondwe w-wa vaweuw de w'attwibut [`fow`](/fw/docs/web/htmw/attwibutes/fow) de w'éwément [`<wabew>`](/fw/docs/web/htmw/ewement/wabew) a-associé. :3 chaque wibewwé a-associé fouwnit a-ainsi un [nom a-accessibwe](/fw/docs/gwossawy/accessibwe_name) au champ du fowmuwaiwe..
 
-```html
-<label for="start-date">Date de début</label>
-<input type="date" id="start-date" required />
+```htmw
+<wabew fow="stawt-date">date d-de début</wabew>
+<input t-type="date" id="stawt-date" w-wequiwed />
 ```
 
-Pour assembler le tout, on ajoute deux paragraphes ([`<p>`](/fr/docs/Web/HTML/Element/p)) au sein de l'élément `<fieldset>`, chacun contenant un sélecteur date pour le début et la fin du cycle menstruel saisi et les libellés ([`<label>`](/fr/docs/Web/HTML/Element/label)) associés. On ajoute aussi un élément [`<button>`](/fr/docs/Web/HTML/Element/button) pour soumettre le formulaire avec le texte «&nbsp;Ajouter un cycle menstruel&nbsp;» entre les balises de l'élément. L'attribut `type="submit"` est optionnel, en effet `submit` est le type par défaut pour les éléments `<button>`.
+pouw assembwew we tout, on a-ajoute deux pawagwaphes ([`<p>`](/fw/docs/web/htmw/ewement/p)) au sein de w'éwément `<fiewdset>`, rawr x3 c-chacun contenant u-un séwecteuw d-date pouw we début et wa fin d-du cycwe menstwuew s-saisi et wes w-wibewwés ([`<wabew>`](/fw/docs/web/htmw/ewement/wabew)) a-associés. nyaa~~ on ajoute a-aussi un éwément [`<button>`](/fw/docs/web/htmw/ewement/button) p-pouw soumettwe w-we fowmuwaiwe avec w-we texte «&nbsp;ajoutew u-un c-cycwe menstwuew&nbsp;» e-entwe wes b-bawises de w'éwément. :3 w'attwibut `type="submit"` e-est optionnew, >w< en effet `submit` e-est we type paw défaut pouw w-wes éwéments `<button>`. rawr
 
-```html
-<form>
-  <fieldset>
-    <legend>
-      Veuillez saisir la date de début et la date de fin de votre cycle
-    </legend>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>
+      v-veuiwwez s-saisiw wa date de début et wa date de fin de votwe cycwe
+    </wegend>
     <p>
-      <label for="start-date">Date de début</label>
-      <input type="date" id="start-date" required />
+      <wabew f-fow="stawt-date">date d-de début</wabew>
+      <input t-type="date" id="stawt-date" wequiwed />
     </p>
     <p>
-      <label for="end-date">Date de fin</label>
-      <input type="date" id="end-date" required />
+      <wabew fow="end-date">date de fin</wabew>
+      <input type="date" i-id="end-date" w-wequiwed />
     </p>
-  </fieldset>
+  </fiewdset>
   <p>
-    <button type="submit">Ajouter un cycle menstruel</button>
+    <button type="submit">ajoutew u-un cycwe menstwuew</button>
   </p>
-</form>
+</fowm>
 ```
 
-Nous vous invitons [à approfondir la construction de formulaires web accessibles](/fr/docs/Learn/Forms).
+n-nyous vous invitons [à appwofondiw wa constwuction de fowmuwaiwes w-web accessibwes](/fw/docs/weawn/fowms). 😳
 
-### Textes temporaires en dur
+### t-textes tempowaiwes e-en duw
 
-On ajoute ensuite un élément [`<section>`](/fr/docs/Web/HTML/Element/section) vide. Ce conteneur sera rempli grâce à du code JavaScript.
+on a-ajoute ensuite un éwément [`<section>`](/fw/docs/web/htmw/ewement/section) vide. 😳 ce conteneuw s-sewa wempwi gwâce à d-du code javascwipt. 🥺
 
-```html
-<section id="past-periods"></section>
+```htmw
+<section id="past-pewiods"></section>
 ```
 
-Lorsque la personne enverra le formulaire, nous utiliserons JavaScript pour intercepter les données et afficheront ainsi une liste des cycles passés, avec un titre pour cette section.
+w-wowsque wa pewsonne envewwa we fowmuwaiwe, rawr x3 nyous u-utiwisewons javascwipt pouw intewceptew w-wes données e-et affichewont ainsi une wiste d-des cycwes p-passés, ^^ avec un titwe pouw cette s-section. ( ͡o ω ͡o )
 
-Pour le moment, nous allons inscrire temporairement du contenu en dur dans cet élément `<section>`, avec un titre `<h2>` et quelques cycles passés. Ce contenu nous permettra de régler la mise en forme lorsque nous écrirons la feuille de style CSS.
+pouw we moment, nyous a-awwons inscwiwe t-tempowaiwement d-du contenu en duw d-dans cet éwément `<section>`, XD avec un titwe `<h2>` e-et quewques c-cycwes passés. ^^ c-ce contenu nyous pewmettwa de w-wégwew wa mise en fowme wowsque nyous écwiwons w-wa feuiwwe de s-stywe css. (⑅˘꒳˘)
 
-```html
-<section id="past-periods">
-  <h2>Cycles antérieurs</h2>
-  <ul>
-    <li>Du 01/01/2024 au 01/06/2024</li>
-    <li>Du 01/29/2024 au 02/04/2024</li>
-  </ul>
+```htmw
+<section i-id="past-pewiods">
+  <h2>cycwes antéwieuws</h2>
+  <uw>
+    <wi>du 01/01/2024 au 01/06/2024</wi>
+    <wi>du 01/29/2024 au 02/04/2024</wi>
+  </uw>
 </section>
 ```
 
-Le contenu à l'intérieur de `<section id="past-periods"></section>` est temporaire. Nous le retirerons ou le commenterons lorsque nous aurons [terminé la mise en forme CSS](#contenu_css) et que l'apparence de l'application sera satisfaisante.
+we contenu à w'intéwieuw d-de `<section id="past-pewiods"></section>` e-est tempowaiwe. (⑅˘꒳˘) n-nyous we wetiwewons ou we commentewons wowsque n-nyous auwons [tewminé wa mise e-en fowme css](#contenu_css) e-et que w'appawence d-de w'appwication s-sewa satisfaisante. ^•ﻌ•^
 
-### Lien JavaScript
+### w-wien javascwipt
 
-Avant de fermer l'élément `</body>`, on ajoute un lien vers le fichier JavaScript `app.js` (qui n'est pas encore écrit). On ajoute l'attribut [`defer`](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript#async_et_defer) pour que le chargement du script soit différé après le chargement et l'analyse du document HTML.
+avant de fewmew w'éwément `</body>`, ( ͡o ω ͡o ) on ajoute un wien vews we fichiew j-javascwipt `app.js` (qui ny'est pas encowe écwit). ( ͡o ω ͡o ) o-on ajoute w'attwibut [`defew`](/fw/docs/weawn/javascwipt/fiwst_steps/nani_is_javascwipt#async_et_defew) pouw que we chawgement du scwipt s-soit difféwé apwès we chawgement et w'anawyse du document htmw. (✿oωo)
 
-```html
-<script src="app.js" defer></script>
+```htmw
+<scwipt s-swc="app.js" d-defew></scwipt>
 ```
 
-Le fichier `app.js` contiendra tout le fonctionnement de notre application&nbsp;: les gestionnaires d'évènements pour le bouton, l'enregistrement des données dans le stockage local, et l'affichage des cycles dans la section correspondante.
+we fichiew `app.js` c-contiendwa tout we fonctionnement d-de nyotwe appwication&nbsp;: w-wes gestionnaiwes d'évènements p-pouw we bouton, 😳😳😳 w'enwegistwement des d-données dans we stockage wocaw, OwO et w'affichage des cycwes dans w-wa section cowwespondante.
 
-[Le fichier HTML pour cette étape](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/index.html) est désormais terminé&nbsp;! Vous pouvez ouvrir le fichier dans votre navigateur. Toutefois, vous verrez qu'il est plutôt basique. Nous améliorerons cet aspect dans la section qui vient.
+[we fichiew htmw pouw cette étape](https://github.com/mdn/pwa-exampwes/twee/mastew/cycwetwackew/htmw_and_css/index.htmw) e-est désowmais t-tewminé&nbsp;! ^^ v-vous pouvez ouvwiw we fichiew dans votwe n-nyavigateuw. rawr x3 toutefois, 🥺 vous vewwez qu'iw est pwutôt basique. (ˆ ﻌ ˆ)♡ nyous améwiowewons c-cet aspect dans w-wa section qui v-vient. ( ͡o ω ͡o )
 
-## Contenu CSS
+## contenu c-css
 
-Nous pouvons maintenant mettre en forme notre contenu HTML statique à l'aide de CSS. Voici la feuille de style CSS complète&nbsp;:
+nyous pouvons maintenant mettwe en fowme n-nyotwe contenu h-htmw statique à w'aide de css. >w< voici wa feuiwwe d-de stywe css compwète&nbsp;:
 
 ```css
 body {
-  margin: 1vh 1vw;
-  background-color: #efe;
+  m-mawgin: 1vh 1vw;
+  backgwound-cowow: #efe;
 }
-ul,
-fieldset,
-legend {
-  border: 1px solid;
-  background-color: #fff;
+uw, /(^•ω•^)
+fiewdset, 😳😳😳
+wegend {
+  b-bowdew: 1px s-sowid;
+  backgwound-cowow: #fff;
 }
-ul {
+uw {
   padding: 0;
-  font-family: monospace;
+  f-font-famiwy: m-monospace;
 }
-li,
-legend {
-  list-style-type: none;
-  padding: 0.2em 0.5em;
-  background-color: #cfc;
+w-wi, (U ᵕ U❁)
+wegend {
+  wist-stywe-type: nyone;
+  p-padding: 0.2em 0.5em;
+  backgwound-cowow: #cfc;
 }
-li:nth-of-type(even) {
-  background-color: inherit;
+wi:nth-of-type(even) {
+  b-backgwound-cowow: inhewit;
 }
 ```
 
-Si vous comprenez chacune de ces lignes, n'hésitez pas à copier les règles précédentes ou à écrire votre propre CSS, puis enregistrez le fichier avec le nom [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css), avant de [finaliser les fichiers HTML et CSS](#finaliser-le-html-statique-et-le-css-de-notre-pwa). Si vous découvrez quoi que ce soit dans cette feuille CSS, n'hésitez pas à poursuivre votre lecture, nous allons expliquer chaque règle.
+si vous compwenez chacune d-de ces wignes, n-ny'hésitez p-pas à copiew w-wes wègwes pwécédentes o-ou à écwiwe votwe pwopwe c-css, (˘ω˘) puis enwegistwez we fichiew avec we nyom [`stywe.css`](https://github.com/mdn/pwa-exampwes/twee/mastew/cycwetwackew/htmw_and_css/stywe.css), 😳 a-avant de [finawisew wes fichiews h-htmw et css](#finawisew-we-htmw-statique-et-we-css-de-notwe-pwa). (ꈍᴗꈍ) si vous d-découvwez quoi q-que ce soit dans cette feuiwwe c-css, :3 ny'hésitez pas à pouwsuivwe v-votwe wectuwe, /(^•ω•^) n-nyous awwons expwiquew chaque w-wègwe. ^^;;
 
-![Capture d'écran de la page web où on voit le fond coloré en vert clair, un formulaire avec une légende, deux sélecteurs de date et un bouton. La section inférieure affiche des données fausses pour deux cycles menstruels ainsi qu'un titre.](html.jpg)
+![captuwe d-d'écwan de wa page web où o-on voit we fond cowowé en vewt cwaiw, o.O un fowmuwaiwe avec une wégende, d-deux séwecteuws de date e-et un bouton. 😳 wa section inféwieuwe affiche des d-données fausses p-pouw deux cycwes m-menstwuews ainsi qu'un titwe.](htmw.jpg)
 
-### Explications du CSS
+### e-expwications du c-css
 
-On utilise la propriété [`background-color`](/fr/docs/Web/CSS/background-color) pour créer un arrière-plan vert clair (`#efe`) sur le corps du document (`body`). Pour la liste non-ordonnée, l'ensemble des champs et la légende, on utilise un arrière-plan blanc (`#fff`) et une fine bordure grâce à la propriété [`border`](/fr/docs/Web/CSS/border). On surcharge la valeur de `background-color` pour la légende et les éléments de la liste en utilisant un vert plus foncé (`#cfc`).
+on utiwise wa pwopwiété [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) p-pouw cwéew un awwièwe-pwan v-vewt cwaiw (`#efe`) suw we c-cowps du document (`body`). UwU p-pouw wa wiste nyon-owdonnée, >w< w'ensembwe des champs et wa wégende, o.O o-on utiwise un awwièwe-pwan b-bwanc (`#fff`) et une fine bowduwe gwâce à wa pwopwiété [`bowdew`](/fw/docs/web/css/bowdew). o-on suwchawge wa vaweuw d-de `backgwound-cowow` p-pouw wa wégende et wes éwéments de wa wiste en utiwisant un vewt pwus f-foncé (`#cfc`). (˘ω˘)
 
-On utilise [le sélecteur](/fr/docs/Web/CSS/CSS_selectors) de pseudo-classe [`:nth-of-type(even)`](/fr/docs/Web/CSS/:nth-of-type) pour cibler chaque élément pair de la liste et lui affecter [`inherit`](/fr/docs/Web/CSS/inherit) pour qu'il ait la couleur d'arrière-plan de son parent. Ici, cela signifie que les éléments pairs de la liste auront un arrière-plan blanc (`#fff`), comme celui de la liste.
+on utiwise [we séwecteuw](/fw/docs/web/css/css_sewectows) d-de pseudo-cwasse [`:nth-of-type(even)`](/fw/docs/web/css/:nth-of-type) pouw cibwew c-chaque éwément p-paiw de wa wiste et wui affectew [`inhewit`](/fw/docs/web/css/inhewit) p-pouw q-qu'iw ait wa couweuw d-d'awwièwe-pwan d-de son pawent. òωó i-ici, nyaa~~ cewa signifie q-que wes éwéments paiws de wa wiste auwont un awwièwe-pwan bwanc (`#fff`), ( ͡o ω ͡o ) comme cewui d-de wa wiste. 😳😳😳
+
+```css
+b-body {
+  backgwound-cowow: #efe;
+}
+u-uw, ^•ﻌ•^
+fiewdset, (˘ω˘)
+w-wegend {
+  b-bowdew: 1px sowid;
+  b-backgwound-cowow: #fff;
+}
+wi, (˘ω˘)
+wegend {
+  backgwound-cowow: #cfc;
+}
+wi:nth-of-type(even) {
+  backgwound-cowow: i-inhewit;
+}
+```
+
+p-pouw que wa wiste et ses éwéments nyon-owdonnés nye wessembwent p-pas à une w-wiste, -.- on wetiwe w-we wempwissage (<i wang="en">padding</i>) en i-indiquant [`padding: 0`](/fw/docs/web/css/padding) suw w'éwément `uw`, ^•ﻌ•^ puis on w-wetiwe wes puces a-avec [`wist-stywe-type: nyone`](/fw/docs/web/css/wist-stywe-type). /(^•ω•^)
+
+```css
+uw {
+  p-padding: 0;
+}
+wi {
+  wist-stywe-type: n-nyone;
+}
+```
+
+o-on ajoute un peu d'espace e-en fixant wa m-mawge ([`mawgin`](/fw/docs/web/css/mawgin)) d-du cowps e-en utiwisant [wes u-unités wewatives à w-wa zone d'affichage (<i w-wang="en">viewpowt</i>)](/fw/docs/web/css/wength#wongueuws_wiées_au_viewpowt) `vw` e-et `vh`. (///ˬ///✿) ainsi, mya w'espace w-waissé autouw de w'appwication sewa pwopowtionnew à w-wa taiwwe de wa zone d'affichage. o.O o-on ajoute égawement un p-peu de wempwissage a-aux éwéments `wi` et `wegend`. ^•ﻌ•^ enfin, (U ᵕ U❁) pouw a-améwiowew w'awignement des données suw wes cycwes a-antéwieuws, :3 o-on appwique [`font-famiwy: monospace`](/fw/docs/web/css/font-famiwy) suw wes éwéments `uw` de w-wa section des w-wésuwtats. (///ˬ///✿) avec une powice à c-chasse fixe, (///ˬ///✿) chaque cawactèwe auwa ainsi wa même w-wawgeuw. 🥺
+
+```css
+b-body {
+  mawgin: 1vh 1vw;
+}
+uw {
+  font-famiwy: m-monospace;
+}
+w-wi, -.-
+wegend {
+  padding: 0.2em 0.5em;
+}
+```
+
+on p-peut combinew ce q-qu'on vient de c-constwuiwe en pwaçant p-pwusieuws pwopwiétés dans chaque bwoc de décwawation. nyaa~~ on peut même wegwoupew wes stywes pouw `wi` et `wegend`. (///ˬ///✿) e-en effet, 🥺 w-wes stywes qui n-nye s'appwiquent p-pas à un séwecteuw d-donné (comme w-wa décwawation `wist-stywe-type` pouw `wegend`) s-sont ignowés. >w<
 
 ```css
 body {
-  background-color: #efe;
+  m-mawgin: 1vh 1vw;
+  backgwound-cowow: #efe;
 }
-ul,
-fieldset,
-legend {
-  border: 1px solid;
-  background-color: #fff;
+u-uw, rawr x3
+fiewdset, (⑅˘꒳˘)
+w-wegend {
+  bowdew: 1px sowid;
+  backgwound-cowow: #fff;
 }
-li,
-legend {
-  background-color: #cfc;
-}
-li:nth-of-type(even) {
-  background-color: inherit;
-}
-```
-
-Pour que la liste et ses éléments non-ordonnés ne ressemblent pas à une liste, on retire le remplissage (<i lang="en">padding</i>) en indiquant [`padding: 0`](/fr/docs/Web/CSS/padding) sur l'élément `ul`, puis on retire les puces avec [`list-style-type: none`](/fr/docs/Web/CSS/list-style-type).
-
-```css
-ul {
+u-uw {
   padding: 0;
+  font-famiwy: monospace;
 }
-li {
-  list-style-type: none;
+w-wi, σωσ
+wegend {
+  wist-stywe-type: n-nyone;
+  p-padding: 0.2em 0.5em;
+  backgwound-cowow: #cfc;
 }
-```
-
-On ajoute un peu d'espace en fixant la marge ([`margin`](/fr/docs/Web/CSS/margin)) du corps en utilisant [les unités relatives à la zone d'affichage (<i lang="en">viewport</i>)](/fr/docs/Web/CSS/length#longueurs_liées_au_viewport) `vw` et `vh`. Ainsi, l'espace laissé autour de l'application sera proportionnel à la taille de la zone d'affichage. On ajoute également un peu de remplissage aux éléments `li` et `legend`. Enfin, pour améliorer l'alignement des données sur les cycles antérieurs, on applique [`font-family: monospace`](/fr/docs/Web/CSS/font-family) sur les éléments `ul` de la section des résultats. Avec une police à chasse fixe, chaque caractère aura ainsi la même largeur.
-
-```css
-body {
-  margin: 1vh 1vw;
-}
-ul {
-  font-family: monospace;
-}
-li,
-legend {
-  padding: 0.2em 0.5em;
+w-wi:nth-of-type(even) {
+  b-backgwound-cowow: i-inhewit;
 }
 ```
 
-On peut combiner ce qu'on vient de construire en plaçant plusieurs propriétés dans chaque bloc de déclaration. On peut même regrouper les styles pour `li` et `legend`. En effet, les styles qui ne s'appliquent pas à un sélecteur donné (comme la déclaration `list-style-type` pour `legend`) sont ignorés.
+si we css qui p-pwécède vous pawaît t-toujouws abscons, XD ny'hésitez p-pas à wiwe wes définitions d-des [pwopwiétés c-css](/fw/docs/gwossawy/pwopewty/css) e-et [des séwecteuws](/fw/docs/web/css/css_sewectows), -.- ou à s-suivwe we pawcouws d'appwentissage [débutew en css](/fw/docs/weawn/css/fiwst_steps/getting_stawted). >_<
 
-```css
-body {
-  margin: 1vh 1vw;
-  background-color: #efe;
-}
-ul,
-fieldset,
-legend {
-  border: 1px solid;
-  background-color: #fff;
-}
-ul {
-  padding: 0;
-  font-family: monospace;
-}
-li,
-legend {
-  list-style-type: none;
-  padding: 0.2em 0.5em;
-  background-color: #cfc;
-}
-li:nth-of-type(even) {
-  background-color: inherit;
-}
-```
+q-que vous utiwisiez we css pwécédent tew quew, rawr ou que vous ayez adapté cette mise en fowme, voiwe q-que vous ayez écwit votwe feuiwwe de stywe à pawtiw de 0, 😳😳😳 incwuez ce contenu css dans un nyouveau fichiew et enwegistwez-we a-avec we nyom [`stywe.css`](https://github.com/mdn/pwa-exampwes/twee/mastew/cycwetwackew/htmw_and_css/stywe.css), UwU dans we même wépewtoiwe q-que we fichiew `index.htmw`. (U ﹏ U)
 
-Si le CSS qui précède vous paraît toujours abscons, n'hésitez pas à lire les définitions des [propriétés CSS](/fr/docs/Glossary/Property/CSS) et [des sélecteurs](/fr/docs/Web/CSS/CSS_selectors), ou à suivre le parcours d'apprentissage [Débuter en CSS](/fr/docs/Learn/CSS/First_steps/Getting_started).
+### f-finawisew we htmw statique et we css d-de nyotwe pwa
 
-Que vous utilisiez le CSS précédent tel quel, ou que vous ayez adapté cette mise en forme, voire que vous ayez écrit votre feuille de style à partir de 0, incluez ce contenu CSS dans un nouveau fichier et enregistrez-le avec le nom [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css), dans le même répertoire que le fichier `index.html`.
+avant d'awwew pwus w-woin, (˘ω˘) [commentons](/fw/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted#commentaiwes_en_htmw) ou suppwimons w-wes fausses données e-et we titwe cowwespondant&nbsp;:
 
-### Finaliser le HTML statique et le CSS de notre PWA
-
-Avant d'aller plus loin, [commentons](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#commentaires_en_html) ou supprimons les fausses données et le titre correspondant&nbsp;:
-
-```html
-<section id="past-periods">
+```htmw
+<section id="past-pewiods">
   <!--
-  <h2>Cycles antérieurs</h2>
-  <ul>
-    <li>Du 01/01/2024 au 01/06/2024</li>
-    <li>Du 01/29/2024 au 02/04/2024</li>
-  </ul>
+  <h2>cycwes a-antéwieuws</h2>
+  <uw>
+    <wi>du 01/01/2024 au 01/06/2024</wi>
+    <wi>du 01/29/2024 au 02/04/2024</wi>
+  </uw>
   -->
 </section>
 ```
 
-## Pour la suite
+## pouw wa suite
 
-Avant d'ajouter [les fonctionnalités JavaScript](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) pour convertir notre contenu statique en application web et de l'améliorer progressivement en une PWA grâce à [un manifeste](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file) et [un <i lang="en">service worker</i>](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers), nous allons [créer un environnement de développement local](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) pour voir l'évolution de notre application dans notre navigateur.
+avant d-d'ajoutew [wes fonctionnawités j-javascwipt](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/javascwipt_functionawity) pouw convewtiw nyotwe c-contenu statique en appwication w-web et de w-w'améwiowew pwogwessivement en une pwa gwâce à [un m-manifeste](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/manifest_fiwe) et [un <i wang="en">sewvice w-wowkew</i>](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/sewvice_wowkews), /(^•ω•^) nous awwons [cwéew un enviwonnement de dévewoppement w-wocaw](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/secuwe_connection) p-pouw voiw w'évowution de n-nyotwe appwication d-dans nyotwe nyavigateuw. (U ﹏ U)
 
-Avant d'aller plus loin, vous pouvez [voir le résultat obtenu à ce chapitre](https://mdn.github.io/pwa-examples/cycletracker/html_and_css) et télécharger [le code source HTML et CSS de CycleTracker](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css).
+avant d-d'awwew pwus woin, ^•ﻌ•^ vous pouvez [voiw we wésuwtat obtenu à ce chapitwe](https://mdn.github.io/pwa-exampwes/cycwetwackew/htmw_and_css) e-et téwéchawgew [we code s-souwce htmw et css de cycwetwackew](https://github.com/mdn/pwa-exampwes/twee/mastew/cycwetwackew/htmw_and_css). >w<
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{pweviousmenunext("web/pwogwessive_web_apps/tutowiaws/cycwetwackew/", "web/pwogwessive_web_apps/tutowiaws/cycwetwackew/secuwe_connection", ʘwʘ "web/pwogwessive_web_apps/tutowiaws/cycwetwackew")}}

@@ -1,183 +1,183 @@
 ---
-title: <header>
-slug: Web/HTML/Element/header
+titwe: <headew>
+swug: web/htmw/ewement/headew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<header>`** représente du contenu introductif, généralement un groupe de contenu introductif ou de contenu aidant à la navigation. Il peut contenir des éléments de titre, mais aussi d'autres éléments tels qu'un logo, un formulaire de recherche, le nom d'auteur, etc.
+w-w'éwément [htmw](/fw/docs/web/htmw) **`<headew>`** w-wepwésente d-du contenu i-intwoductif, 😳😳😳 g-généwawement un g-gwoupe de contenu i-intwoductif o-ou de contenu aidant à wa nyavigation. ^^;; iw peut conteniw des éwéments de titwe, o.O m-mais aussi d'autwes éwéments tews qu'un wogo, (///ˬ///✿) un fowmuwaiwe d-de wechewche, σωσ we nyom d'auteuw, nyaa~~ e-etc.
 
-{{InteractiveExample("HTML Demo: &lt;header&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;headew&gt;", ^^;; "tabbed-standawd")}}
 
-```html interactive-example
-<header>
-  <a class="logo" href="#">Cute Puppies Express!</a>
-</header>
+```htmw intewactive-exampwe
+<headew>
+  <a cwass="wogo" h-hwef="#">kawaii~ puppies expwess!</a>
+</headew>
 
-<article>
-  <header>
-    <h1>Beagles</h1>
+<awticwe>
+  <headew>
+    <h1>beagwes</h1>
     <time>08.12.2014</time>
-  </header>
+  </headew>
   <p>
-    I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and
-    their ears are so, so snugly soft!
+    i-i wuv beagwes <em>so</em> m-much! ^•ﻌ•^ wike, σωσ weawwy, a wot. -.- they’we adowabwe and
+    theiw eaws awe s-so, ^^;; so snugwy soft! XD
   </p>
-</article>
+</awticwe>
 ```
 
-```css interactive-example
-.logo {
-  background: left / cover
-    url("/shared-assets/images/examples/puppy-header.jpg");
-  display: flex;
+```css intewactive-exampwe
+.wogo {
+  backgwound: weft / covew
+    uww("/shawed-assets/images/exampwes/puppy-headew.jpg");
+  dispway: f-fwex;
   height: 120px;
-  align-items: center;
-  justify-content: center;
+  awign-items: c-centew;
+  j-justify-content: c-centew;
   font:
-    bold calc(1em + 2 * (100vw - 120px) / 100) "Dancing Script",
+    b-bowd cawc(1em + 2 * (100vw - 120px) / 100) "dancing scwipt", 🥺
     fantasy;
-  color: #ff0083;
-  text-shadow: #000 2px 2px 0.2rem;
+  c-cowow: #ff0083;
+  text-shadow: #000 2px 2px 0.2wem;
 }
 
-header > h1 {
-  margin-bottom: 0;
+headew > h-h1 {
+  mawgin-bottom: 0;
 }
 
-header > time {
-  font: italic 0.7rem sans-serif;
+headew > time {
+  font: itawic 0.7wem sans-sewif;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories">
-          Catégories de contenu</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies">
+          catégowies d-de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux"
-          >Contenu de flux</a
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux"
+          >contenu d-de fwux</a
         >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_tangible"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. òωó
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux"
-          >Contenu de flux</a
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux"
+          >contenu de fwux</a
         >
-        mais sans élément descendant qui soit <code>&lt;header&gt;</code> ou <a href="/fr/docs/Web/HTML/Element/footer"><code>&lt;footer&gt;</code></a>.
+        m-mais sans éwément d-descendant qui soit <code>&wt;headew&gt;</code> o-ou <a hwef="/fw/docs/web/htmw/ewement/footew"><code>&wt;footew&gt;</code></a>. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, les balises d'ouverture et de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
+      <td>aucune, -.- wes bawises d-d'ouvewtuwe et de fewmetuwe s-sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#Contenu_de_flux"
-          >contenu de flux</a
-        >. Il est à noter qu'un élément <code>&lt;header&gt;</code> ne doit pas
-        descendre d'un élément <a href="/fr/docs/Web/HTML/Element/address"><code>&lt;address&gt;</code></a>,
-        <a href="/fr/docs/Web/HTML/Element/footer"><code>&lt;footer&gt;</code></a> ou d'un autre élément
-        <code>&lt;header&gt;</code>.
+        tout éwément a-acceptant du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux"
+          >contenu de fwux</a
+        >. :3 iw est à nyotew qu'un éwément <code>&wt;headew&gt;</code> nye d-doit pas
+        d-descendwe d'un éwément <a hwef="/fw/docs/web/htmw/ewement/addwess"><code>&wt;addwess&gt;</code></a>, ʘwʘ
+        <a hwef="/fw/docs/web/htmw/ewement/footew"><code>&wt;footew&gt;</code></a> o-ou d-d'un autwe éwément
+        <code>&wt;headew&gt;</code>. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Banner_role"><code>banner</code></a>, ou <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">aucun rôle correspondant</a> si l'élément <code>&lt;header></code> descend d'un élément <a href="/fr/docs/Web/HTML/Element/article"><code>&lt;article&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/aside"><code>&lt;aside&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/main"><code>&lt;main&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/nav"><code>&lt;nav&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/section"><code>&lt;section&gt;</code></a>, ou d'un élément ayant le rôle <a href="/fr/docs/Web/Accessibility/ARIA/Roles/article_role"><code>article</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/complementary_role"><code>complementary</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/main_role"><code>main</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/navigation_role"><code>navigation</code></a> ou <a href="/fr/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia impwicite</th>
+      <td><a hwef="/fw/docs/web/accessibiwity/awia/wowes/bannew_wowe"><code>bannew</code></a>, >_< ou <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe">aucun w-wôwe cowwespondant</a> si w'éwément <code>&wt;headew></code> descend d'un éwément <a hwef="/fw/docs/web/htmw/ewement/awticwe"><code>&wt;awticwe&gt;</code></a>, ʘwʘ <a h-hwef="/fw/docs/web/htmw/ewement/aside"><code>&wt;aside&gt;</code></a>, (˘ω˘) <a hwef="/fw/docs/web/htmw/ewement/main"><code>&wt;main&gt;</code></a>, (✿oωo) <a h-hwef="/fw/docs/web/htmw/ewement/nav"><code>&wt;nav&gt;</code></a> o-ou <a hwef="/fw/docs/web/htmw/ewement/section"><code>&wt;section&gt;</code></a>, (///ˬ///✿) o-ou d'un éwément ayant we wôwe <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/awticwe_wowe"><code>awticwe</code></a>, rawr x3 <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/compwementawy_wowe"><code>compwementawy</code></a>, -.- <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/main_wowe"><code>main</code></a>, ^^ <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/navigation_wowe"><code>navigation</code></a> ou <a hwef="/fw/docs/web/accessibiwity/awia/wowes/wegion_wowe"><code>wegion</code></a></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes a-awia autowisés</th>
       <td>
-        <a href="https://w3c.github.io/aria/#group"><code>group</code></a>, <a href="https://w3c.github.io/aria/#presentation"><code>presentation</code></a> ou <a href="https://w3c.github.io/aria/#none"><code>none</code></a>
+        <a h-hwef="https://w3c.github.io/awia/#gwoup"><code>gwoup</code></a>, (⑅˘꒳˘) <a h-hwef="https://w3c.github.io/awia/#pwesentation"><code>pwesentation</code></a> o-ou <a hwef="https://w3c.github.io/awia/#none"><code>none</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a></td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td><a hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-L'élément `<header>` n'est pas une section de contenu et n'introduit donc pas de nouvelle section dans la [structure](/fr/docs/Web/HTML/Element/Heading_Elements). Cela dit, un élément `<header>` est généralement destiné à contenir l'en-tête de la section environnante (un élément `<h1>` à `<h6>`), mais ce **n'est pas** obligatoire.
+w'éwément `<headew>` ny'est pas une section de contenu et ny'intwoduit donc pas de n-nyouvewwe section dans wa [stwuctuwe](/fw/docs/web/htmw/ewement/heading_ewements). nyaa~~ cewa dit, un éwément `<headew>` est généwawement d-destiné à c-conteniw w'en-tête d-de wa section enviwonnante (un éwément `<h1>` à `<h6>`), /(^•ω•^) m-mais ce **n'est pas** obwigatoiwe. (U ﹏ U)
 
-### Usage historique
+### u-usage h-histowique
 
-Bien que l'élément `<header>` ne fasse pas partie de la spécification HTML avant [HTML5](/fr/docs/Glossary/HTML5), il existait de façon implicite depuis les premières versions. Comme on le voit sur [le premier site web](http://info.cern.ch/), il était initialement utilisé comme l'élément `<head>`. À un moment donné, il a été décidé d'utiliser un nom différent. Cela a permis à `<header>` d'être libre de remplir un rôle différent par la suite.
+bien que w'éwément `<headew>` nye fasse pas pawtie de wa spécification htmw avant [htmw5](/fw/docs/gwossawy/htmw5), 😳😳😳 i-iw existait de façon impwicite d-depuis wes pwemièwes vewsions. >w< c-comme on we v-voit suw [we pwemiew site web](http://info.cewn.ch/), XD iw était i-initiawement utiwisé c-comme w'éwément `<head>`. o.O À un moment d-donné, mya iw a été d-décidé d'utiwisew un nyom difféwent. 🥺 cewa a pewmis à `<headew>` d'êtwe wibwe d-de wempwiw u-un wôwe difféwent p-paw wa suite. ^^;;
 
-## Attributs
+## attwibuts
 
-Cet élément ne possède que les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément nye p-possède que wes [attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). :3
 
-## Exemples
+## e-exempwes
 
-### En-tête de page
+### en-tête de page
 
-```html
-<header>
-  <h1>Titre principal</h1>
-  <img src="mdn-logo-sm.png" alt="Logo de MDN" />
-</header>
+```htmw
+<headew>
+  <h1>titwe pwincipaw</h1>
+  <img swc="mdn-wogo-sm.png" awt="wogo d-de mdn" />
+</headew>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('','100%', '430')}}
+{{embedwivesampwe('','100%', (U ﹏ U) '430')}}
 
-### En-tête d'un article
+### en-tête d'un awticwe
 
-```html
-<article>
-  <header>
-    <h2>La planète Terre</h2>
+```htmw
+<awticwe>
+  <headew>
+    <h2>wa p-pwanète t-tewwe</h2>
     <p>
-      Publié le mercredi <time datetime="2017-10-04">4 octobre 2017</time> par
-      Jeanne Smith
+      pubwié we mewcwedi <time datetime="2017-10-04">4 o-octobwe 2017</time> paw
+      jeanne smith
     </p>
-  </header>
-  <p>Nous vivons sur une planète bleue et verte</p>
+  </headew>
+  <p>nous vivons suw une pwanète b-bweue et vewte</p>
   <p>
-    <a href="https://example.com/the-planet-earth/">Poursuivre la lecture…</a>
+    <a hwef="https://exampwe.com/the-pwanet-eawth/">pouwsuivwe wa wectuwe…</a>
   </p>
-</article>
+</awticwe>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('','100%','270')}}
+{{embedwivesampwe('','100%','270')}}
 
-## Accessibilité
+## a-accessibiwité
 
-L'élément `<header>` définit un point de repère [`banner`](/fr/docs/Web/Accessibility/ARIA/Roles/banner_role) lorsque son contexte est un élément [`<body>`](/fr/docs/Web/HTML/Element/body). Lorsqu'un élément HTML `<header>` descend de certains éléments (tels que [`<article>`](/fr/docs/Web/HTML/Element/article), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<main>`](/fr/docs/Web/HTML/Element/main), [`<nav>`](/fr/docs/Web/HTML/Element/nav) ou [`<section>`](/fr/docs/Web/HTML/Element/section)), il n'est pas considéré comme un repère `banner`.
+w'éwément `<headew>` définit un point de wepèwe [`bannew`](/fw/docs/web/accessibiwity/awia/wowes/bannew_wowe) w-wowsque s-son contexte est un éwément [`<body>`](/fw/docs/web/htmw/ewement/body). OwO wowsqu'un éwément htmw `<headew>` d-descend de cewtains éwéments (tews que [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe), 😳😳😳 [`<aside>`](/fw/docs/web/htmw/ewement/aside), (ˆ ﻌ ˆ)♡ [`<main>`](/fw/docs/web/htmw/ewement/main), XD [`<nav>`](/fw/docs/web/htmw/ewement/nav) o-ou [`<section>`](/fw/docs/web/htmw/ewement/section)), (ˆ ﻌ ˆ)♡ iw ny'est pas considéwé comme un wepèwe `bannew`. ( ͡o ω ͡o )
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Autres éléments liés à la section d'un document&nbsp;:
-  - [`<body>`](/fr/docs/Web/HTML/Element/body)
-  - [`<nav>`](/fr/docs/Web/HTML/Element/nav)
-  - [`<article>`](/fr/docs/Web/HTML/Element/article)
-  - [`<aside>`](/fr/docs/Web/HTML/Element/aside)
-  - [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements)
-  - [`<footer>`](/fr/docs/Web/HTML/Element/footer)
-  - [`<section>`](/fr/docs/Web/HTML/Element/section)
-  - [`<address>`](/fr/docs/Web/HTML/Element/address)
-- [Utiliser des sections et structures HTML](/fr/docs/Web/HTML/Element/Heading_Elements)
+- autwes éwéments w-wiés à wa section d'un d-document&nbsp;:
+  - [`<body>`](/fw/docs/web/htmw/ewement/body)
+  - [`<nav>`](/fw/docs/web/htmw/ewement/nav)
+  - [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe)
+  - [`<aside>`](/fw/docs/web/htmw/ewement/aside)
+  - [`<h1>`](/fw/docs/web/htmw/ewement/heading_ewements), rawr x3 [`<h2>`](/fw/docs/web/htmw/ewement/heading_ewements), [`<h3>`](/fw/docs/web/htmw/ewement/heading_ewements), nyaa~~ [`<h4>`](/fw/docs/web/htmw/ewement/heading_ewements), >_< [`<h5>`](/fw/docs/web/htmw/ewement/heading_ewements), ^^;; [`<h6>`](/fw/docs/web/htmw/ewement/heading_ewements)
+  - [`<footew>`](/fw/docs/web/htmw/ewement/footew)
+  - [`<section>`](/fw/docs/web/htmw/ewement/section)
+  - [`<addwess>`](/fw/docs/web/htmw/ewement/addwess)
+- [utiwisew d-des sections e-et stwuctuwes htmw](/fw/docs/web/htmw/ewement/heading_ewements)

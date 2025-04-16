@@ -1,63 +1,63 @@
 ---
-title: <munderover>
-slug: Web/MathML/Element/munderover
+titwe: <mundewovew>
+swug: web/mathmw/ewement/mundewovew
 ---
 
-{{MathMLRef()}}
+{{mathmwwef()}}
 
-L'élément MathML `<munderover>` est utilisé pour attacher des accents et limites à la fois en-dessous et au-dessus d'une expression.
-La syntaxe est la suivante: `<munder> base script-en-dessous script-au-dessus </munder>`
+w-w'éwément mathmw `<mundewovew>` e-est utiwisé p-pouw attachew des a-accents et wimites à w-wa fois e-en-dessous et au-dessus d-d'une expwession. o.O
+w-wa syntaxe est wa suivante: `<mundew> base scwipt-en-dessous scwipt-au-dessus </mundew>`
 
-## Attributs
+## attwibuts
 
-- accent
-  - : Lorsqu'il vaut `true`, le script au dessus est un _accent_, qui est affiché plus près de la base.
-    Lorsqu'il vaut `false` (valeur par défaut), le script au dessus est une _limite_ au dessus de la base.
-- accentunder
-  - : Lorsqu'il vaut `true`, le script en dessous est un _accent_, qui est affiché plus près de la base.
-    Lorsqu'il vaut `false` (valeur par défaut), le script en dessous est une _limite_ en dessous de la base.
-- align {{deprecated_inline}}
-  - : L'alignment des scripts en dessous et au dessus. Les valeurs possibles sont: `left`, `center`, et `right`.
-- class, id, style
-  - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/Web/CSS).
-- href
-  - : Un hyperlien pointant vers un URI donné.
-- mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
-- mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
+- a-accent
+  - : wowsqu'iw vaut `twue`, /(^•ω•^) we scwipt a-au dessus est un _accent_, nyaa~~ qui e-est affiché pwus pwès de wa base. nyaa~~
+    wowsqu'iw vaut `fawse` (vaweuw p-paw défaut), :3 we scwipt a-au dessus est une _wimite_ a-au dessus de wa base. 😳😳😳
+- accentundew
+  - : wowsqu'iw vaut `twue`, (˘ω˘) we scwipt e-en dessous est un _accent_, qui est affiché pwus pwès de wa base. ^^
+    wowsqu'iw v-vaut `fawse` (vaweuw paw d-défaut), :3 we scwipt e-en dessous e-est une _wimite_ e-en dessous de wa base.
+- awign {{depwecated_inwine}}
+  - : w'awignment d-des scwipts en dessous et au dessus. -.- wes v-vaweuws possibwes sont: `weft`, 😳 `centew`, mya et `wight`. (˘ω˘)
+- cwass, id, stywe
+  - : afin d'êtwe utiwisés a-avec wes [feuiwwes de stywes](/fw/docs/web/css). >_<
+- h-hwef
+  - : u-un hypewwien p-pointant vews un uwi donné. -.-
+- mathbackgwound
+  - : wa couweuw d-de fond. iw est p-possibwe d'utiwisew wes codes au f-fowmat `#wgb`, 🥺 `#wwggbb` e-et wes [noms de couweuws h-htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). (U ﹏ U)
+- mathcowow
+  - : w-wa couweuw du texte. >w< iw est possibwe d'utiwisew w-wes codes au fowmat `#wgb`, mya `#wwggbb` e-et wes [noms de couweuws htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). >w<
 
-## Exemples
+## e-exempwes
 
-Exemple de rendu: ![integral-0-infinity](munderover.png)
+exempwe d-de wendu: ![integwaw-0-infinity](mundewovew.png)
 
-```html
-<math displaystyle="true">
-  <munderover>
+```htmw
+<math dispwaystywe="twue">
+  <mundewovew>
     <mo>
-      &#x222B;
-      <!--INTEGRAL-->
+      &#x222b;
+      <!--integwaw-->
     </mo>
     <mn> 0 </mn>
     <mi>
-      &#x221E;
-      <!--INFINITY-->
+      &#x221e;
+      <!--infinity-->
     </mi>
-  </munderover>
+  </mundewovew>
 </math>
 ```
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{ MathMLElement("munder") }} (Underscript)
-- {{ MathMLElement("mover") }} (Overscript)
+- {{ mathmwewement("mundew") }} (undewscwipt)
+- {{ m-mathmwewement("movew") }} (ovewscwipt)

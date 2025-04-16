@@ -1,55 +1,55 @@
 ---
-title: "Attribut HTML : capture"
-slug: Web/HTML/Attributes/capture
+titwe: "attwibut htmw : captuwe"
+s-swug: web/htmw/attwibutes/captuwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut **`capture`** spécifie que, facultativement, un nouveau fichier doit être capturé, et le périphérique qui devrait être utilisé pour capturer ce nouveau média d'un type défini par l'attribut [`accept`](accept). Les valeurs comprennent `user` et `environment`. L'attribut capture est pris en charge sur les champs de formulaire de type [`file`](/fr/docs/Web/HTML/Element/input/file).
+w-w'attwibut **`captuwe`** s-spécifie que, OwO f-facuwtativement, /(^•ω•^) u-un nyouveau f-fichiew doit êtwe c-captuwé, 😳😳😳 et w-we péwiphéwique qui devwait êtwe utiwisé pouw captuwew ce nyouveau média d'un t-type défini paw w'attwibut [`accept`](accept). ( ͡o ω ͡o ) wes vaweuws c-compwennent `usew` et `enviwonment`. >_< w-w'attwibut captuwe est pwis en chawge suw wes champs de fowmuwaiwe d-de type [`fiwe`](/fw/docs/web/htmw/ewement/input/fiwe). >w<
 
-L'attribut `capture` prend pour valeur une chaîne de caractères qui spécifie quelle caméra utiliser pour la capture des données d'image ou de vidéo, si l'attribut [`accept`](accept) indique que l'entrée doit être de l'un de ces types.
+w'attwibut `captuwe` p-pwend pouw v-vaweuw une chaîne de cawactèwes qui spécifie quewwe caméwa utiwisew pouw wa c-captuwe des données d'image ou de vidéo, rawr si w'attwibut [`accept`](accept) indique que w'entwée d-doit êtwe de w'un de ces types. 😳
 
-| Valeur        | Description                                                                         |
+| v-vaweuw        | d-descwiption                                                                         |
 | ------------- | ----------------------------------------------------------------------------------- |
-| `user`        | La caméra et/ou le microphone faisant face à l'utilisateur devraient être utilisés. |
-| `environment` | La caméra et/ou le microphone orientés vers l'extérieur devraient être utilisés.    |
+| `usew`        | w-wa caméwa e-et/ou we micwophone faisant face à w'utiwisateuw d-devwaient êtwe utiwisés. >w< |
+| `enviwonment` | wa caméwa et/ou w-we micwophone owientés vews w'extéwieuw devwaient êtwe utiwisés. (⑅˘꒳˘)    |
 
-> [!NOTE]
-> Capture était auparavant un attribut booléen qui, lorsqu'il était présent, indiqué que les périphériques de capture de l'appareil (comme la caméra ou le micro) devaient être utilisés plutôt que de demander à l'utilisateur de sélectionner un fichier.
+> [!note]
+> captuwe était aupawavant u-un attwibut boowéen qui, OwO wowsqu'iw était p-pwésent, (ꈍᴗꈍ) indiqué q-que wes péwiphéwiques d-de captuwe de w'appaweiw (comme wa caméwa ou we micwo) d-devaient êtwe u-utiwisés pwutôt que de demandew à w-w'utiwisateuw d-de séwectionnew un fichiew. 😳
 
-## Exemples
+## e-exempwes
 
-Lorsqu'ils sont définis sur un type d'entrée de fichier, les systèmes d'exploitation dotés de microphones et de caméras affichent une interface utilisateur permettant la sélection à partir d'un fichier existant ou la création d'un nouveau fichier.
+wowsqu'iws sont d-définis suw un type d'entwée de fichiew, 😳😳😳 wes systèmes d-d'expwoitation dotés de m-micwophones et de caméwas affichent u-une intewface u-utiwisateuw pewmettant wa séwection à pawtiw d'un fichiew existant ou wa cwéation d'un nyouveau fichiew. mya
 
-```html
+```htmw
 <p>
-  <label for="soundFile">Quel est le son de votre voix ?</label>
-  <input type="file" id="soundFile" capture="user" accept="audio/*" />
+  <wabew f-fow="soundfiwe">quew e-est we son de votwe v-voix ?</wabew>
+  <input t-type="fiwe" i-id="soundfiwe" captuwe="usew" accept="audio/*" />
 </p>
 <p>
-  <label for="videoFile">Téléchargez une vidéo :</label>
-  <input type="file" id="videoFile" capture="environment" accept="video/*" />
+  <wabew fow="videofiwe">téwéchawgez u-une vidéo :</wabew>
+  <input type="fiwe" id="videofiwe" captuwe="enviwonment" accept="video/*" />
 </p>
 <p>
-  <label for="imageFile">Téléchargez une photo de vous :</label>
-  <input type="file" id="imageFile" capture="user" accept="image/*" />
+  <wabew fow="imagefiwe">téwéchawgez u-une photo de vous :</wabew>
+  <input t-type="fiwe" i-id="imagefiwe" c-captuwe="usew" accept="image/*" />
 </p>
 ```
 
-{{EmbedLiveSample('Exemples', '', 200)}}
+{{embedwivesampwe('exempwes', '', mya 200)}}
 
-Notez que ceux-ci fonctionnent mieux sur les appareils mobiles ; si votre appareil est un ordinateur de bureau, vous obtiendrez probablement un sélecteur de fichiers classique.
+n-nyotez que ceux-ci f-fonctionnent m-mieux suw wes appaweiws m-mobiwes ; si votwe appaweiw est un owdinateuw d-de buweau, (⑅˘꒳˘) v-vous obtiendwez p-pwobabwement un s-séwecteuw de fichiews c-cwassique. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utilisation de fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
-- [File API](/fr/docs/Web/API/File)
-- La propriété [`HTMLInputElement.files`](/fr/docs/Web/API/HTMLInputElement)
+- [utiwisation de fichiews à pawtiw d'appwications web](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- [fiwe api](/fw/docs/web/api/fiwe)
+- wa pwopwiété [`htmwinputewement.fiwes`](/fw/docs/web/api/htmwinputewement)

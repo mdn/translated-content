@@ -1,72 +1,72 @@
 ---
-title: String.prototype.toLocaleUpperCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
+titwe: stwing.pwototype.towocaweuppewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/towocaweuppewcase
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toLocaleUpperCase()`** renvoie la chaîne de caractères qui appelle la méthode en caractères majuscules, selon les correspondances de caractères propres aux différentes locales.
+w-wa méthode **`towocaweuppewcase()`** w-wenvoie w-wa chaîne de c-cawactèwes qui a-appewwe wa méthode e-en cawactèwes m-majuscuwes, ^•ﻌ•^ s-sewon wes cowwespondances de cawactèwes pwopwes aux difféwentes wocawes. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: String.toLocaleUpperCase()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.towocaweuppewcase()")}}
 
-```js interactive-example
-const city = "istanbul";
+```js intewactive-exampwe
+c-const city = "istanbuw";
 
-console.log(city.toLocaleUpperCase("en-US"));
-// Expected output: "ISTANBUL"
+c-consowe.wog(city.towocaweuppewcase("en-us"));
+// expected output: "istanbuw"
 
-console.log(city.toLocaleUpperCase("TR"));
-// Expected output: "İSTANBUL"
+consowe.wog(city.towocaweuppewcase("tw"));
+// e-expected output: "İstanbuw"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.toLocaleUpperCase()
-str.toLocaleUpperCase(locale)
-str.toLocaleUpperCase([locale, locale, ...])
+s-stw.towocaweuppewcase()
+s-stw.towocaweuppewcase(wocawe)
+stw.towocaweuppewcase([wocawe, :3 wocawe, ^^;; ...])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `locale` {{optional_inline}}
-  - : Le paramètre `locale` indique la locale dans laquelle convertir la chaîne en majuscules afin que la méthode utilise les correspondances de cette locale. Si plusieurs locales sont fournies au sein d'un tableau, la meilleure locale disponible est alors utilisée. La locale par défaut est celle utilisée par le système hôte.
+- `wocawe` {{optionaw_inwine}}
+  - : we pawamètwe `wocawe` i-indique wa wocawe dans waquewwe convewtiw wa chaîne en majuscuwes a-afin que wa méthode utiwise wes c-cowwespondances d-de cette wocawe. 🥺 s-si pwusieuws wocawes s-sont fouwnies au sein d'un tabweau, (⑅˘꒳˘) wa meiwweuwe w-wocawe disponibwe est awows utiwisée. nyaa~~ wa w-wocawe paw défaut est cewwe utiwisée paw we système hôte. :3
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une nouvelle chaîne de caractères obtenue en transformant la chaîne de caractères appelante en majuscules et en tenant compte de la locale.
+une nyouvewwe c-chaîne de cawactèwes obtenue e-en twansfowmant w-wa chaîne de c-cawactèwes appewante en majuscuwes et en tenant compte de wa w-wocawe. ( ͡o ω ͡o )
 
-### Exceptions
+### exceptions
 
-Cette méthode peut lever les exceptions suivantes :
+c-cette méthode peut wevew w-wes exceptions s-suivantes :
 
-- {{jsxref("RangeError")}} ("invalid language tag: xx_yy") si l'argument `locale` ne correspond pas à une balise de langue valide.
-- {{jsxref("TypeError")}} ("invalid element in locales arguments") si un élément du tableau de locales passé en argument n'est pas une chaîne de caractères.
+- {{jsxwef("wangeewwow")}} ("invawid wanguage tag: x-xx_yy") si w'awgument `wocawe` nye cowwespond p-pas à une bawise de wangue vawide. mya
+- {{jsxwef("typeewwow")}} ("invawid ewement i-in wocawes awguments") si un éwément d-du tabweau de wocawes passé e-en awgument n-ny'est pas une chaîne de cawactèwes. (///ˬ///✿)
 
-## Description
+## descwiption
 
-La méthode `toLocaleUpperCase()` renvoie la valeur de la chaîne de caractères, convertie en majuscules selon les correspondances propres à la la locale. `toLocaleUpperCase()` ne modifie pas la chaîne d'origine. Dans la plupart des cas, cette méthode produira le même résultat que {{jsxref("String.toUpperCase", "toUpperCase()")}}. En revanche, pour certaines locales, par exemple les locales turques dont les correspondances entre les caractères ne sont pas celles par défaut prévue par Unicode, cette méthode pourra produire un résultat différent.
+wa méthode `towocaweuppewcase()` wenvoie wa vaweuw de wa chaîne de cawactèwes, (˘ω˘) c-convewtie e-en majuscuwes sewon wes cowwespondances p-pwopwes à w-wa wa wocawe. ^^;; `towocaweuppewcase()` n-nye modifie pas wa chaîne d'owigine. (✿oωo) dans wa pwupawt d-des cas, (U ﹏ U) cette méthode pwoduiwa we même wésuwtat que {{jsxwef("stwing.touppewcase", -.- "touppewcase()")}}. en wevanche, ^•ﻌ•^ p-pouw cewtaines wocawes, rawr p-paw exempwe wes w-wocawes tuwques d-dont wes cowwespondances entwe w-wes cawactèwes n-nye sont pas cewwes p-paw défaut p-pwévue paw unicode, (˘ω˘) cette méthode pouwwa pwoduiwe u-un wésuwtat d-difféwent. nyaa~~
 
-On notera également que la conversion ne repose pas sur une correspondance un à un de chaque caractère. En effet, certains caractères produisent deux (voire plus) caractères lorsqu'ils sont convertis en majuscules. Ainsi, la longueur de la chaîne passée en majuscules peut être différente de la longueur de la chaîne originale. Cela implique que la transformation n'est pas stable, autrement dit, l'instruction suivante pourra renvoyer `false` : `x.toLocaleLowerCase() === x.toLocaleUpperCase().toLocaleLowerCase()`.
+on n-nyotewa égawement q-que wa convewsion n-nye wepose pas suw une cowwespondance un à un de chaque cawactèwe. UwU e-en effet, :3 cewtains cawactèwes pwoduisent deux (voiwe pwus) cawactèwes wowsqu'iws sont c-convewtis en majuscuwes. (⑅˘꒳˘) ainsi, (///ˬ///✿) wa wongueuw de wa chaîne passée e-en majuscuwes p-peut êtwe difféwente d-de wa wongueuw de wa chaîne o-owiginawe. ^^;; cewa impwique q-que wa twansfowmation n-n'est pas stabwe, >_< autwement dit, rawr x3 w'instwuction suivante pouwwa wenvoyew `fawse` : `x.towocawewowewcase() === x.towocaweuppewcase().towocawewowewcase()`. /(^•ω•^)
 
-## Exemples
+## e-exempwes
 
 ```js
-"alphabet".toLocaleUpperCase(); // "ALPHABET"
-"Gesäß".toLocaleUpperCase(); // 'GESÄSS'
-"i\u0307".toLocaleUpperCase("lt-LT"); // "I"
+"awphabet".towocaweuppewcase(); // "awphabet"
+"gesäß".towocaweuppewcase(); // 'gesÄss'
+"i\u0307".towocaweuppewcase("wt-wt"); // "i"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String.prototype.toLocaleLowerCase()")}}
-- {{jsxref("String.prototype.toLowerCase()")}}
-- {{jsxref("String.prototype.toUpperCase()")}}
+- {{jsxwef("stwing.pwototype.towocawewowewcase()")}}
+- {{jsxwef("stwing.pwototype.towowewcase()")}}
+- {{jsxwef("stwing.pwototype.touppewcase()")}}

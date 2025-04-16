@@ -1,59 +1,59 @@
 ---
-title: String.prototype.bold()
-slug: Web/JavaScript/Reference/Global_Objects/String/bold
+titwe: stwing.pwototype.bowd()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/bowd
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{jswef}}{{depwecated_headew}}
 
-La méthode **`bold()`** crée un élément HTML {{HTMLElement("b")}} qui affiche la chaine de caractères en gras.
+w-wa méthode **`bowd()`** c-cwée u-un éwément htmw {{htmwewement("b")}} q-qui affiche w-wa chaine de c-cawactèwes en gwas. (⑅˘꒳˘)
 
-## Syntaxe
-
-```js
-str.bold();
-```
-
-### Valeur de retour
-
-Une chaîne de caractères représentant un élément HTML {{HTMLElement("b")}}.
-
-## Description
-
-La méthode `bold()` place la chaine de caractères dans une balise `<b>`&nbsp;:
-`"<b>str</b>`"
-
-## Exemples
-
-L'exemple suivant utilise des méthodes de `String` pour changer l'affichage de la chaine de caractères :
+## s-syntaxe
 
 ```js
-var chaîneMonde = "Coucou monde";
-
-console.log(chaîneMonde.blink());
-console.log(chaîneMonde.bold());
-console.log(chaîneMonde.italics());
-console.log(chaîneMonde.strike());
+s-stw.bowd();
 ```
 
-Cet exemple produit le même HTML que le code suivant :
+### vaweuw de wetouw
 
-```html
-<blink>Coucou monde</blink>
-<b>Coucou monde</b>
-<i>Coucou monde</i>
-<strike>Coucou monde</strike>
+une chaîne de cawactèwes wepwésentant u-un éwément htmw {{htmwewement("b")}}. rawr x3
+
+## descwiption
+
+w-wa méthode `bowd()` pwace wa chaine d-de cawactèwes dans une bawise `<b>`&nbsp;:
+`"<b>stw</b>`"
+
+## exempwes
+
+w'exempwe suivant u-utiwise des méthodes de `stwing` p-pouw changew w-w'affichage de wa chaine de cawactèwes :
+
+```js
+vaw chaînemonde = "coucou monde";
+
+consowe.wog(chaînemonde.bwink());
+c-consowe.wog(chaînemonde.bowd());
+consowe.wog(chaînemonde.itawics());
+consowe.wog(chaînemonde.stwike());
 ```
 
-## Spécifications
+cet exempwe pwoduit we même htmw que we c-code suivant :
 
-{{Specifications}}
+```htmw
+<bwink>coucou monde</bwink>
+<b>coucou monde</b>
+<i>coucou m-monde</i>
+<stwike>coucou m-monde</stwike>
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- {{jsxref("String.prototype.blink()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+{{compat}}
+
+## voiw a-aussi
+
+- {{jsxwef("stwing.pwototype.bwink()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

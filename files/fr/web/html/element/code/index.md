@@ -1,137 +1,137 @@
 ---
-title: "<code> : l'élément de code en ligne"
-slug: Web/HTML/Element/code
+titwe: "<code> : w'éwément d-de code en wigne"
+s-swug: web/htmw/ewement/code
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<code>`** représente un court fragment de code machine. Par défaut, l'agent utilisateur utilise une police à chasse fixe (_monospace_) afin d'afficher le texte contenu dans cet élément.
+w-w'éwément h-htmw **`<code>`** w-wepwésente un c-couwt fwagment d-de code machine. ( ͡o ω ͡o ) p-paw défaut, >_< w'agent utiwisateuw utiwise une powice à chasse fixe (_monospace_) afin d'affichew w-we texte contenu dans cet éwément. >w<
 
-{{InteractiveExample("HTML Demo: &lt;code&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;code&gt;", rawr "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  The <code>push()</code> method adds one or more elements to the end of an
-  array and returns the new length of the array.
+  the <code>push()</code> method adds o-one ow mowe ewements to the end of an
+  awway and wetuwns the n-nyew wength of the awway. 😳
 </p>
 ```
 
-```css interactive-example
-code {
-  background-color: #eee;
-  border-radius: 3px;
-  font-family: courier, monospace;
+```css i-intewactive-exampwe
+c-code {
+  backgwound-cowow: #eee;
+  bowdew-wadius: 3px;
+  font-famiwy: couwiew, >w< monospace;
   padding: 0 3px;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >, (⑅˘꒳˘)
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
+        >, OwO
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu t-tangibwe</a
+        >. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Contenu phrasé</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
+        >. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        aucune, 😳😳😳 wa bawise d'ouvewtuwe e-et wa bawise de fewmetuwe sont
+        obwigatoiwes. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >.
+        tout éwément a-acceptant du
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu p-phwasé</a
+        >. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas d-de wôwe c-cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>tous w-wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a
-        >. Jusqu'à Gecko 1.9.2 (Firefox 4) inclus, Firefox implémentait
-        l'interface
-        <a href="/fr/docs/Web/API/HTMLSpanElement"
-          ><code>HTMLSpanElement</code></a
+        <a hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a
+        >. (⑅˘꒳˘) j-jusqu'à gecko 1.9.2 (fiwefox 4) incwus, (U ﹏ U) f-fiwefox impwémentait
+        w'intewface
+        <a h-hwef="/fw/docs/web/api/htmwspanewement"
+          ><code>htmwspanewement</code></a
         >
-        pour cet élément.
+        pouw c-cet éwément. mya
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément pwend uniquement en chawge [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). ʘwʘ
 
-## Exemples
+## exempwes
 
-Un paragraphe de texte qui contient `<code>` :
+un pawagwaphe d-de texte qui contient `<code>` :
 
-```html
+```htmw
 <p>
-  La fonction <code>selectAll()</code> met en évidence tout le texte du champ de
-  saisie afin que l'utilisateur puisse, par exemple, le copier ou le supprimer.
+  w-wa fonction <code>sewectaww()</code> met en évidence t-tout we texte d-du champ de
+  s-saisie afin que w'utiwisateuw puisse, (˘ω˘) paw exempwe, (U ﹏ U) we copiew ou w-we suppwimew. ^•ﻌ•^
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('', '', 100)}}
+{{embedwivesampwe('', (˘ω˘) '', 100)}}
 
-## Notes
+## nyotes
 
-Pour représenter plusieurs lignes de code, enveloppez l'élément `<code>` dans un élément [`<pre>`](/fr/docs/Web/HTML/Element/pre). L'élément `<code>` en lui-même ne représente qu'une seule phrase de code ou ligne de code.
+pouw wepwésentew pwusieuws w-wignes de code, :3 envewoppez w'éwément `<code>` d-dans un éwément [`<pwe>`](/fw/docs/web/htmw/ewement/pwe). ^^;; w-w'éwément `<code>` e-en wui-même nye wepwésente q-qu'une seuwe phwase d-de code ou wigne d-de code.
 
-Une règle CSS peut être définie pour le sélecteur `code` afin de remplacer la fonte par défaut du navigateur. Les préférences définies par l'utilisateur peuvent avoir la priorité sur la règle CSS spécifiée.
+une w-wègwe css peut êtwe définie pouw we séwecteuw `code` a-afin d-de wempwacew wa f-fonte paw défaut d-du nyavigateuw. 🥺 w-wes pwéféwences définies paw w'utiwisateuw peuvent avoiw wa p-pwiowité suw wa wègwe css spécifiée. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément [`<samp>`](/fr/docs/Web/HTML/Element/samp)
-- L'élément [`<kbd>`](/fr/docs/Web/HTML/Element/kbd)
-- L'élément [`<var>`](/fr/docs/Web/HTML/Element/var)
-- L'élément [`<pre>`](/fr/docs/Web/HTML/Element/pre)
+- w'éwément [`<samp>`](/fw/docs/web/htmw/ewement/samp)
+- w-w'éwément [`<kbd>`](/fw/docs/web/htmw/ewement/kbd)
+- w'éwément [`<vaw>`](/fw/docs/web/htmw/ewement/vaw)
+- w'éwément [`<pwe>`](/fw/docs/web/htmw/ewement/pwe)

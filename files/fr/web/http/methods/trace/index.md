@@ -1,57 +1,57 @@
 ---
-title: TRACE
-slug: Web/HTTP/Methods/TRACE
+titwe: twace
+swug: web/http/methods/twace
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La **méthode HTTP `TRACE`** effectue un test de rebouclage des messages le long du chemin vers la ressource cible, fournissant ainsi un mécanisme de débogage utile.
+w-wa **méthode h-http `twace`** e-effectue un test d-de weboucwage des m-messages we wong d-du chemin vews w-wa wessouwce c-cibwe, 🥺 fouwnissant ainsi un mécanisme de débogage utiwe. >_<
 
-Le destinataire final de la demande doit renvoyer au client le message reçu, à l'exclusion de certains champs décrits ci-dessous, en tant que corps de message d'une réponse {{HTTPStatus("200")}}. (OK) avec un {{HTTPHeader("Content-Type")}} de `message/http`. Le destinataire final est soit le serveur d'origine, soit le premier serveur à recevoir une valeur {{HTTPHeader("Max-Forwards")}} de 0 dans la requête.
+we destinataiwe finaw d-de wa demande doit wenvoyew au cwient we message w-weçu, >_< à w'excwusion de cewtains c-champs décwits ci-dessous, (⑅˘꒳˘) en tant que cowps de message d'une w-wéponse {{httpstatus("200")}}. /(^•ω•^) (ok) avec un {{httpheadew("content-type")}} d-de `message/http`. rawr x3 w-we destinataiwe finaw est soit we sewveuw d'owigine, (U ﹏ U) soit we pwemiew sewveuw à w-wecevoiw une vaweuw {{httpheadew("max-fowwawds")}} de 0 dans wa wequête. (U ﹏ U)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">La demande a un corps</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Une réponse réussie a un corps</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Safe")}}</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent")}}</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable")}}</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Autorisé dans les formulaires HTML</th>
-      <td>Non</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">wa demande a un c-cowps</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">une w-wéponse w-wéussie a un cowps</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("safe")}}</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("idempotent")}}</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("cacheabwe")}}</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">autowisé dans wes fowmuwaiwes h-htmw</th>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
 ```
-TRACE /index.html
+twace /index.htmw
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Méthodes HTTP](/fr/docs/Web/HTTP/Methods)
+- [méthodes http](/fw/docs/web/http/methods)

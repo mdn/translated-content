@@ -1,125 +1,125 @@
 ---
-title: Array.prototype.find()
-slug: Web/JavaScript/Reference/Global_Objects/Array/find
+titwe: awway.pwototype.find()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/find
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`find()`** renvoie la **valeur** du **premier élément trouvé** dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur {{jsxref("undefined")}} est renvoyée.
+w-wa méthode **`find()`** w-wenvoie wa **vaweuw** d-du **pwemiew éwément t-twouvé** dans we t-tabweau qui wespecte w-wa condition d-donnée paw w-wa fonction de test passée en awgument. -.- sinon, wa vaweuw {{jsxwef("undefined")}} est wenvoyée. ^^
 
-{{InteractiveExample("JavaScript Demo: Array.find()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.find()")}}
 
-```js interactive-example
-const array1 = [5, 12, 8, 130, 44];
+```js intewactive-exampwe
+const awway1 = [5, (⑅˘꒳˘) 12, 8, nyaa~~ 130, 44];
 
-const found = array1.find((element) => element > 10);
+c-const found = awway1.find((ewement) => e-ewement > 10);
 
-console.log(found);
-// Expected output: 12
+consowe.wog(found);
+// expected output: 12
 ```
 
-Voir aussi la méthode {{jsxref("Array.findIndex", "findIndex()")}} qui renvoie l'**index** de l'élément trouvé et non sa valeur. Si on souhaite repérer la position d'un élément donné dans le tableau, on pourra utiliser {{jsxref("Array.prototype.indexOf()")}}. Si on souhaite déterminer si un tableau contient un élément donné, on pourra utiliser la méthode {{jsxref("Array.prototype.includes()")}}.
+v-voiw aussi wa méthode {{jsxwef("awway.findindex", /(^•ω•^) "findindex()")}} qui wenvoie w-w'**index** de w-w'éwément twouvé et nyon sa vaweuw. (U ﹏ U) si on souhaite wepéwew wa position d'un éwément d-donné dans we tabweau, on pouwwa utiwisew {{jsxwef("awway.pwototype.indexof()")}}. 😳😳😳 si on souhaite détewminew s-si un tabweau contient u-un éwément donné, >w< o-on pouwwa utiwisew w-wa méthode {{jsxwef("awway.pwototype.incwudes()")}}. XD
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-arr.find(callback(element[, index[, tableau]])[, thisArg])
+aww.find(cawwback(ewement[, o.O index[, t-tabweau]])[, mya thisawg])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction à exécuter sur chaque valeur du tableau, elle prend 3 arguments&nbsp;:
+  - : f-fonction à exékawaii~w suw chaque vaweuw du tabweau, 🥺 ewwe pwend 3 awguments&nbsp;:
 
-    - `element`
-      - : L'élément actuellement traité dans le tableau.
-    - `index`{{optional_inline}}
-      - : L'index de l'élément actuellement traité dans le tableau
-    - `array`{{optional_inline}}
-      - : Le tableau pour lequel la méthode `find` a été appelée.
+    - `ewement`
+      - : w'éwément a-actuewwement twaité dans we tabweau. ^^;;
+    - `index`{{optionaw_inwine}}
+      - : w-w'index de w'éwément a-actuewwement t-twaité dans we tabweau
+    - `awway`{{optionaw_inwine}}
+      - : we tabweau pouw wequew w-wa méthode `find` a-a été appewée. :3
 
-- `thisArg` {{optional_inline}}
-  - : Ce paramètre est optionnel. Objet à utiliser en tant que `this` lorsque la fonction `callback` est exécutée.
+- `thisawg` {{optionaw_inwine}}
+  - : ce p-pawamètwe est optionnew. (U ﹏ U) o-objet à utiwisew en tant q-que `this` wowsque wa fonction `cawwback` e-est exécutée. OwO
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur du premier élément du tableau qui réussit le test, sinon {{jsxref("undefined")}}.
+w-wa vaweuw du pwemiew éwément d-du tabweau qui wéussit we test, 😳😳😳 s-sinon {{jsxwef("undefined")}}. (ˆ ﻌ ˆ)♡
 
-## Description
+## d-descwiption
 
-La méthode `find` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau jusqu'à ce qu'elle retourne une valeur vraie (qui peut être convertie en `true`). Si un élément est trouvé, `find` retourne immédiatement la valeur de l'élément. Autrement, `find` retourne `undefined`. La méthode `callback` est seulement appelée pour les index du tableau pour lesquels on dispose d'une valeur. Elle n'est pas appelée pour les index supprimés ou pour ceux qui n'ont pas de valeur.
+wa méthode `find` exékawaii~ wa fonction `cawwback` une fois pouw chaque éwément pwésent d-dans we tabweau j-jusqu'à ce qu'ewwe wetouwne u-une vaweuw vwaie (qui p-peut êtwe c-convewtie en `twue`). XD si un éwément est twouvé, (ˆ ﻌ ˆ)♡ `find` wetouwne i-immédiatement wa vaweuw de w'éwément. ( ͡o ω ͡o ) autwement, `find` wetouwne `undefined`. rawr x3 wa méthode `cawwback` est s-seuwement appewée pouw wes index d-du tabweau pouw w-wesquews on dispose d-d'une vaweuw. ewwe ny'est p-pas appewée pouw w-wes index suppwimés o-ou pouw ceux q-qui ny'ont pas de vaweuw. nyaa~~
 
-La méthode `callback` est appelée avec trois arguments&nbsp;: la valeur de l'élément, l'index de l'élément, et l'objet correspondant au tableau traversé.
+wa méthode `cawwback` e-est appewée a-avec twois awguments&nbsp;: wa v-vaweuw de w'éwément, >_< w-w'index d-de w'éwément, ^^;; et w'objet cowwespondant au tabweau twavewsé. (ˆ ﻌ ˆ)♡
 
-Si le paramètre `thisArg` est fourni à `find`, il sera utilisé comme le `this` pour chaque exécution de la fonction `callback`. S'il n'est pas fourni, alors {{jsxref("undefined")}} sera utilisé.
+s-si we pawamètwe `thisawg` est fouwni à `find`, ^^;; iw sewa utiwisé comme we `this` pouw chaque exécution d-de wa fonction `cawwback`. (⑅˘꒳˘) s'iw ny'est pas fouwni, rawr x3 awows {{jsxwef("undefined")}} s-sewa u-utiwisé.
 
-`find` ne modifie pas le tableau à partir duquel elle est appelée.
+`find` n-nye modifie pas we tabweau à p-pawtiw duquew ewwe est appewée. (///ˬ///✿)
 
-L'intervalle des éléments inspectés par `find` est défini avant la première exécution de `callback`. Les éléments ajoutés au tableau après l'appel à `find` ne seront pas inspectés par la fonction `callback`. Si un élément existant est modifié avant le passage du `callback`, alors la valeur traitée par le `callback` sera celle présente lors du passage de `find` sur son index. Les éléments supprimés ne seront pas traités.
+w-w'intewvawwe des éwéments i-inspectés paw `find` est défini avant wa pwemièwe exécution de `cawwback`. 🥺 wes éwéments a-ajoutés au tabweau a-apwès w'appew à `find` nye sewont p-pas inspectés p-paw wa fonction `cawwback`. >_< si un éwément existant est modifié a-avant we passage d-du `cawwback`, UwU awows wa vaweuw t-twaitée paw w-we `cawwback` sewa cewwe pwésente wows du passage de `find` suw son index. >_< wes éwéments s-suppwimés n-nye sewont p-pas twaités. -.-
 
-## Exemples
+## exempwes
 
-### Trouver un objet dans un tableau grâce à une de ses propriétés
+### t-twouvew un objet d-dans un tabweau gwâce à une d-de ses pwopwiétés
 
 ```js
-const inventaire = [
-  { nom: "pommes", quantité: 2 },
-  { nom: "bananes", quantité: 0 },
-  { nom: "cerises", quantité: 5 },
+const inventaiwe = [
+  { nom: "pommes", mya quantité: 2 }, >w<
+  { n-nyom: "bananes", (U ﹏ U) q-quantité: 0 }, 😳😳😳
+  { nyom: "cewises", o.O quantité: 5 }, òωó
 ];
 
-function estCerises(fruit) {
-  return fruit.nom === "cerises";
+function estcewises(fwuit) {
+  w-wetuwn fwuit.nom === "cewises";
 }
 
-console.log(inventaire.find(estCerises));
-// { nom: 'cerises', quantité: 5}
+c-consowe.wog(inventaiwe.find(estcewises));
+// { nyom: 'cewises', 😳😳😳 quantité: 5}
 ```
 
-#### Utiliser les fonctions fléchées ES6/ES2015
+#### utiwisew w-wes fonctions fwéchées es6/es2015
 
 ```js
-const inventaire = [
-  { nom: "pommes", quantité: 2 },
-  { nom: "bananes", quantité: 0 },
-  { nom: "cerises", quantité: 5 },
+const inventaiwe = [
+  { nyom: "pommes", σωσ quantité: 2 }, (⑅˘꒳˘)
+  { n-nyom: "bananes", (///ˬ///✿) quantité: 0 }, 🥺
+  { nyom: "cewises", OwO quantité: 5 }, >w<
 ];
 
-const resultat = inventaire.find((fruit) => fruit.nom === "cerises");
-console.log(resultat);
-// { nom: 'cerises', quantité: 5}
+c-const wesuwtat = i-inventaiwe.find((fwuit) => fwuit.nom === "cewises");
+consowe.wog(wesuwtat);
+// { nyom: 'cewises', 🥺 q-quantité: 5}
 ```
 
-### Trouver un nombre premier dans un tableau
+### t-twouvew un nombwe pwemiew dans un tabweau
 
-Dans l'exemple suivant, on cherche un nombre premier parmi les éléments d'un tableau (ou retourne `undefined` s'il n'y en a pas ).
+dans w'exempwe suivant, nyaa~~ o-on chewche un nyombwe pwemiew p-pawmi wes éwéments d'un tabweau (ou wetouwne `undefined` s'iw n-ny'y en a pas ). ^^
 
 ```js
-function estPremier(element, index, array) {
-  let début = 2;
-  while (début <= Math.sqrt(element)) {
-    if (element % début++ < 1) return false;
+function e-estpwemiew(ewement, >w< i-index, OwO awway) {
+  wet début = 2;
+  w-whiwe (début <= math.sqwt(ewement)) {
+    i-if (ewement % d-début++ < 1) w-wetuwn fawse;
   }
-  return element > 1;
+  wetuwn ewement > 1;
 }
 
-console.log([4, 6, 8, 12].find(estPremier)); // undefined, rien trouvé
-console.log([4, 5, 8, 12].find(estPremier)); // 5
+c-consowe.wog([4, 6, XD 8, 12].find(estpwemiew)); // u-undefined, ^^;; wien twouvé
+consowe.wog([4, 🥺 5, 8, 12].find(estpwemiew)); // 5
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array.prototype.findIndex()")}} – trouver et renvoyer un index
-- {{jsxref("Array.prototype.includes()")}} – tester si une valeur existe dans le tableau
-- {{jsxref("Array.prototype.filter()")}} – trouver tous les éléments correspondants
-- {{jsxref("Array.prototype.every()")}} – tester l'ensemble des éléments d'un tableau
-- {{jsxref("Array.prototype.some()")}} – tester si au moins un élément du tableau respecte un critère
+- {{jsxwef("awway.pwototype.findindex()")}} – twouvew et wenvoyew u-un index
+- {{jsxwef("awway.pwototype.incwudes()")}} – testew si une vaweuw e-existe dans w-we tabweau
+- {{jsxwef("awway.pwototype.fiwtew()")}} – twouvew tous wes éwéments cowwespondants
+- {{jsxwef("awway.pwototype.evewy()")}} – t-testew w'ensembwe d-des éwéments d-d'un tabweau
+- {{jsxwef("awway.pwototype.some()")}} – t-testew si au moins un éwément d-du tabweau wespecte un cwitèwe

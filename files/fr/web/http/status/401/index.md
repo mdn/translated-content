@@ -1,43 +1,43 @@
 ---
-title: 401 Unauthorized
-slug: Web/HTTP/Status/401
+titwe: 401 unauthowized
+swug: w-web/http/status/401
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`401 Unauthorized`** indique que la requête n'a pas été effectuée, car il manque des informations d'authentification valides pour la ressource visée.
+w-we code d-de statut de w-wéponse http **`401 u-unauthowized`** i-indique que w-wa wequête ny'a p-pas été effectuée, (˘ω˘) caw iw manque des infowmations d'authentification vawides p-pouw wa wessouwce visée. (⑅˘꒳˘)
 
-Ce statut est envoyé avec un en-tête de réponse [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate) qui décrit la méthode pour s'authentifier correctement.
+ce statut est envoyé a-avec un en-tête de wéponse [`www-authenticate`](/fw/docs/web/http/headews/www-authenticate) q-qui décwit wa méthode pouw s'authentifiew cowwectement. (///ˬ///✿)
 
-Ce statut est similaire à [`403`](/fr/docs/Web/HTTP/Status/403) mais, dans ce cas, une authentification est possible pour accéder à la ressource.
+ce statut e-est simiwaiwe à [`403`](/fw/docs/web/http/status/403) mais, 😳😳😳 d-dans ce cas, 🥺 u-une authentification est possibwe pouw accédew à wa wessouwce. mya
 
-## Statut
-
-```
-401 Unauthorized
-```
-
-## Exemple de réponse
+## statut
 
 ```
-HTTP/1.1 401 Unauthorized
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-WWW-Authenticate: Basic realm="Access to staging site"
+401 u-unauthowized
 ```
 
-## Spécifications
+## exempwe de wéponse
 
-{{Specifications}}
+```
+http/1.1 401 unauthowized
+date: w-wed, 🥺 21 oct 2015 07:28:00 gmt
+w-www-authenticate: b-basic weawm="access t-to staging s-site"
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité d-des nyavigateuws
 
-- [La gestion de l'authentification en HTTP](/fr/docs/Web/HTTP/Authentication)
-- [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate)
-- [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization)
-- [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization)
-- [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate)
-- [`403`](/fr/docs/Web/HTTP/Status/403), [`407`](/fr/docs/Web/HTTP/Status/407)
+{{compat}}
+
+## voiw aussi
+
+- [wa gestion d-de w'authentification en http](/fw/docs/web/http/authentication)
+- [`www-authenticate`](/fw/docs/web/http/headews/www-authenticate)
+- [`authowization`](/fw/docs/web/http/headews/authowization)
+- [`pwoxy-authowization`](/fw/docs/web/http/headews/pwoxy-authowization)
+- [`pwoxy-authenticate`](/fw/docs/web/http/headews/pwoxy-authenticate)
+- [`403`](/fw/docs/web/http/status/403), >_< [`407`](/fw/docs/web/http/status/407)

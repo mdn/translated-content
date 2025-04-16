@@ -1,162 +1,162 @@
 ---
-title: <time>
-slug: Web/HTML/Element/time
+titwe: <time>
+swug: web/htmw/ewement/time
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<time>`** permet de représenter une période donnée. Cet élément permet d'utiliser l'attribut `datetime` afin de traduire la date ou l'instant dans un format informatique (permettant aux moteurs de recherche d'exploiter ces données ou de créer des rappels).
+w-w'éwément htmw **`<time>`** p-pewmet de wepwésentew u-une péwiode d-donnée. ʘwʘ cet éwément p-pewmet d-d'utiwisew w'attwibut `datetime` a-afin de twaduiwe w-wa date ou w'instant dans un fowmat infowmatique (pewmettant aux moteuws de wechewche d'expwoitew c-ces données ou de cwéew des wappews). 🥺
 
-Cet élément permet de représenter :
+c-cet éwément pewmet de wepwésentew :
 
-- une heure
-- une date du [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_grégorien) (en précisant éventuellement l'heure et les informations de fuseau horaire).
-- [une durée valide](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string).
+- u-une heuwe
+- une date du [cawendwiew gwégowien](https://fw.wikipedia.owg/wiki/cawendwiew_gwégowien) (en pwécisant éventuewwement w-w'heuwe et wes infowmations d-de fuseau h-howaiwe). >_<
+- [une duwée vawide](https://www.w3.owg/tw/2014/wec-htmw5-20141028/infwastwuctuwe.htmw#vawid-duwation-stwing). ʘwʘ
 
-{{InteractiveExample("HTML Demo: &lt;time&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;time&gt;", (˘ω˘) "tabbed-showtew")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  The Cure will be celebrating their 40th anniversary on
-  <time datetime="2018-07-07">July 7</time> in London's Hyde Park.
+  the cuwe wiww b-be cewebwating theiw 40th annivewsawy on
+  <time datetime="2018-07-07">juwy 7</time> in wondon's h-hyde pawk.
 </p>
 
 <p>
-  The concert starts at <time datetime="20:00">20:00</time> and you'll be able
-  to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.
+  the c-concewt stawts at <time d-datetime="20:00">20:00</time> a-and you'ww b-be abwe
+  to enjoy the band fow at weast <time d-datetime="pt2h30m">2h 30m</time>. (✿oωo)
 </p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 time {
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme tous wes autwes éwéments htmw, (///ˬ///✿) cet éwément incwut [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). rawr x3
 
 - `datetime`
-  - : Cet attribut indique l'heure et la date associées à l'élément. La valeur de cet attribut doit être une chaîne de caractères décrivant [une date valide avec un fragment optionnel pour décrire l'heure](https://www.w3.org/TR/html51/infrastructure.html#dates-and-times) (cf. ci-après). Si la valeur ne peut pas être analysée comme une date/heure, le contenu de l'élément n'aura pas d'indication temporelle associée.
+  - : c-cet attwibut i-indique w'heuwe e-et wa date associées à w'éwément. wa vaweuw de cet attwibut d-doit êtwe u-une chaîne de cawactèwes décwivant [une d-date v-vawide avec un fwagment optionnew p-pouw décwiwe w'heuwe](https://www.w3.owg/tw/htmw51/infwastwuctuwe.htmw#dates-and-times) (cf. -.- c-ci-apwès). ^^ si wa vaweuw nye peut pas êtwe anawysée c-comme une date/heuwe, (⑅˘꒳˘) we c-contenu de w'éwément ny'auwa pas d-d'indication t-tempowewwe associée. nyaa~~
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-Cet élément est conçu pour présenter des dates et des heures au sein d'un document. Elles sont écrites dans un format compréhensible par un programme, ce qui peut s'avérer utile pour les agents utilisateur qui offrent des fonctionnalités de gestion de calendrier/agenda.
+cet éwément est conçu pouw pwésentew des dates et des heuwes a-au sein d'un document. /(^•ω•^) e-ewwes sont écwites dans u-un fowmat compwéhensibwe p-paw un p-pwogwamme, (U ﹏ U) ce qui peut s'avéwew utiwe pouw wes agents utiwisateuw q-qui offwent des fonctionnawités de gestion de cawendwiew/agenda. 😳😳😳
 
-Cet élément n'est pas approprié pour les dates antérieures à l'introduction du calendrier grégorien (en raison des complications de calcul pour ces dates).
+cet éwément n-ny'est pas appwopwié pouw w-wes dates antéwieuwes à w-w'intwoduction d-du cawendwiew gwégowien (en w-waison des c-compwications d-de cawcuw pouw ces d-dates). >w<
 
-La valeur exploitable informatiquement est la valeur de l'attribut `datetime` de l'élément. Cette valeur doit être dans un format correct pour être analysé. Si l'élément ne possède pas d'attribut `datetime`, il ne doit pas avoir d'éléments fils et la valeur de l'heure est le contenu (textuel) de l'élément.
+wa vaweuw expwoitabwe infowmatiquement e-est wa vaweuw d-de w'attwibut `datetime` d-de w'éwément. XD c-cette v-vaweuw doit êtwe dans un fowmat cowwect pouw êtwe anawysé. o.O si w-w'éwément nye possède pas d'attwibut `datetime`, mya iw nye doit pas avoiw d'éwéments fiws et wa vaweuw de w'heuwe e-est we contenu (textuew) de w'éwément.
 
-### Valeurs valides
+### vaweuws vawides
 
-- Une chaîne de caractères représentant une année
-  - : `2011` ou `0001`
-- Une chaîne de caractères représentant une année et un mois
+- u-une chaîne d-de cawactèwes w-wepwésentant une année
+  - : `2011` o-ou `0001`
+- une chaîne de c-cawactèwes wepwésentant u-une année et un mois
   - : `2011-11`
-- Une chaîne de caractères représentant une date
+- une chaîne de cawactèwes wepwésentant une date
   - : `2011-11-18`
-- Une chaîne de caractères représentant une date sans l'année
+- u-une chaîne de cawactèwes w-wepwésentant une date sans w-w'année
   - : `11-18`
-- Une chaîne de caractères représentant une semaine
-  - : `2011-W47`
-- Une chaîne de caractères représentant une heure
+- u-une chaîne de cawactèwes wepwésentant u-une semaine
+  - : `2011-w47`
+- u-une chaîne de cawactèwes wepwésentant u-une h-heuwe
   - : `14:54` ou `14:54:39` ou `14:54:39.929`
-- Une chaîne de caractères représentant une date et une heure locale
-  - : `2011-11-18T14:54:39.929` ou `2011-11-18 14:54:39.929`
-- Une chaîne de caractères représentant une date et une heure universelle
-  - : `2011-11-18T14:54:39.929Z` ou `2011-11-18T14:54:39.929-0400` ou `2011-11-18T14:54:39.929-04:00` ou `2011-11-18 14:54:39.929Z` ou `2011-11-18 14:54:39.929-0400` ou `2011-11-18 14:54:39.929-04:00`
-- Une chaîne de caractères représentant une durée
-  - : `PT4H18M3S`
+- une chaîne de cawactèwes w-wepwésentant une d-date et une heuwe w-wocawe
+  - : `2011-11-18t14:54:39.929` ou `2011-11-18 14:54:39.929`
+- u-une chaîne d-de cawactèwes wepwésentant u-une date et une heuwe univewsewwe
+  - : `2011-11-18t14:54:39.929z` ou `2011-11-18t14:54:39.929-0400` ou `2011-11-18t14:54:39.929-04:00` ou `2011-11-18 14:54:39.929z` o-ou `2011-11-18 14:54:39.929-0400` o-ou `2011-11-18 14:54:39.929-04:00`
+- une chaîne de cawactèwes wepwésentant u-une duwée
+  - : `pt4h18m3s`
 
-## Exemples
+## e-exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-#### HTML
+#### htmw
 
-```html
-<p>Le concert commence à <time datetime="2018-07-07T20:00:00">20h00</time>.</p>
+```htmw
+<p>we concewt commence à <time d-datetime="2018-07-07t20:00:00">20h00</time>.</p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemple_simple', 250, 60)}}
+{{embedwivesampwe('exempwe_simpwe', 🥺 250, 60)}}
 
-### Exemple avec `datetime`
+### exempwe avec `datetime`
 
-#### HTML
+#### htmw
 
-```html
-<p>Le concert a lieu <time datetime="2001-05-15T19:00">le 15 mai</time>.</p>
+```htmw
+<p>we concewt a-a wieu <time datetime="2001-05-15t19:00">we 15 mai</time>.</p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemple_avec_datetime', 250, 60)}}
+{{embedwivesampwe('exempwe_avec_datetime', ^^;; 250, 60)}}
 
-## Résumé technique
+## wésumé t-technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >, :3
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >, (U ﹏ U)
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu t-tangibwe</a
+        >. OwO
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >Contenu phrasé</a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
+      <td>aucune, (ˆ ﻌ ˆ)♡ w-wa bawise d'ouvewtuwe e-et wa bawise de f-fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+        t-tout éwément q-qui accepte d-du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLTimeElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
+      <td>tous wes wôwes s-sont autowisés</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwtimeewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- L'élément {{HTMLElement("data")}} qui permet de représenter des valeurs différentes.
+- w'éwément {{htmwewement("data")}} qui pewmet de wepwésentew des vaweuws difféwentes. (ˆ ﻌ ˆ)♡

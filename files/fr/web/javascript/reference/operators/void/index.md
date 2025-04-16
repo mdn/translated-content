@@ -1,110 +1,110 @@
 ---
-title: L'opérateur void
-slug: Web/JavaScript/Reference/Operators/void
+titwe: w'opéwateuw void
+swug: w-web/javascwipt/wefewence/opewatows/void
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'**opérateur `void`** permet d'évaluer une _expression_ donnée et de renvoyer `undefined`.
+w-w'**opéwateuw `void`** p-pewmet d'évawuew u-une _expwession_ d-donnée et d-de wenvoyew `undefined`. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - void operator")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - void opewatow")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const output = void 1;
-console.log(output);
-// Expected output: undefined
+c-consowe.wog(output);
+// expected output: undefined
 
-void console.log("expression evaluated");
-// Expected output: "expression evaluated"
+v-void consowe.wog("expwession evawuated");
+// e-expected output: "expwession evawuated"
 
 void (function iife() {
-  console.log("iife is executed");
+  consowe.wog("iife i-is exekawaii~d");
 })();
-// Expected output: "iife is executed"
+// expected output: "iife i-is exekawaii~d"
 
-void function test() {
-  console.log("test function executed");
+v-void function test() {
+  consowe.wog("test function exekawaii~d");
 };
-try {
+t-twy {
   test();
 } catch (e) {
-  console.log("test function is not defined");
-  // Expected output: "test function is not defined"
+  consowe.wog("test function is nyot defined");
+  // e-expected output: "test function i-is nyot defined"
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-void expression;
+v-void expwession;
 ```
 
-## Description
+## d-descwiption
 
-Cet opérateur permet d'évaluer des expressions retournant une valeur là où on attend une expression qui vaut {{jsxref("undefined")}}.
+cet opéwateuw pewmet d'évawuew d-des expwessions wetouwnant une vaweuw wà o-où on attend une expwession qui vaut {{jsxwef("undefined")}}. ʘwʘ
 
-L'opérateur `void` est souvent utilisé pour obtenir la valeur `undefined`, généralement avec "`void(0)`" (qui est l'équivalent de "`void 0`"). Pour ce cas d'exemple, on aurait très bien pu utiliser la variable globale {{jsxref("undefined")}}.
+w'opéwateuw `void` est souvent utiwisé pouw obteniw w-wa vaweuw `undefined`, ( ͡o ω ͡o ) généwawement a-avec "`void(0)`" (qui e-est w'équivawent d-de "`void 0`"). o.O pouw ce cas d'exempwe, on auwait twès bien p-pu utiwisew wa v-vawiabwe gwobawe {{jsxwef("undefined")}}. >w<
 
-Attention à [la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence) et notamment de celle de `void`, si besoin, on pourra utiliser des parenthèses pour clarifier la résolution de l'expression :
+attention à [wa p-pwécédence d-des opéwateuws](/fw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence) et nyotamment d-de cewwe de `void`, 😳 si b-besoin, 🥺 on pouwwa utiwisew des pawenthèses pouw c-cwawifiew wa wésowution de w'expwession :
 
 ```js
-void 2 == "2"; // renvoie false
-void (2 === "2"); // renvoie undefined
+v-void 2 == "2"; // wenvoie fawse
+v-void (2 === "2"); // w-wenvoie undefined
 ```
 
-## Expressions de fonction appelées immédiatement
+## expwessions de fonction appewées immédiatement
 
-Lorsqu'on utilise tout un script dans une fonction qu'on évalue immédiatement, `void` peut être utilisé pour que le mot-clé `function` soit traité comme une expression plutôt que comme une déclaration.
+wowsqu'on utiwise tout un scwipt d-dans une fonction q-qu'on évawue immédiatement, rawr x3 `void` p-peut êtwe u-utiwisé p-pouw que we mot-cwé `function` soit twaité comme une expwession pwutôt que comme u-une décwawation. o.O
 
 ```js
 void (function iife() {
-  var toto = function () {};
-  var machin = function () {};
-  var truc = function () {
-    toto();
+  vaw toto = function () {};
+  v-vaw machin = function () {};
+  v-vaw twuc = function () {
+    t-toto();
     machin();
   };
-  var bidule = function () {};
+  v-vaw biduwe = function () {};
 
-  truc();
-  bidule();
+  t-twuc();
+  b-biduwe();
 })();
 ```
 
-## Les URI JavaScript
+## wes u-uwi javascwipt
 
-Lorsqu'un navigateur utilise une URI avec `javascript:`, le code de l'URI est évalué et le résultat remplace le contenu de la page, sauf si la valeur renvoyée vaut {{jsxref("Objets_globaux/undefined","undefined")}}. L'utilisateur `void` peut alors être utilisé pour renvoyer cette valeur. Par exemple :
+w-wowsqu'un nyavigateuw utiwise une uwi avec `javascwipt:`, rawr w-we c-code de w'uwi est évawué e-et we w-wésuwtat wempwace w-we contenu de wa page, ʘwʘ sauf si wa vaweuw wenvoyée vaut {{jsxwef("objets_gwobaux/undefined","undefined")}}. 😳😳😳 w-w'utiwisateuw `void` peut awows êtwe utiwisé pouw wenvoyew cette vaweuw. ^^;; paw exempwe :
 
-```html
-<a href="javascript:void(0);"> Cliquer ici (sans effet) </a>
+```htmw
+<a hwef="javascwipt:void(0);"> c-cwiquew ici (sans effet) </a>
 
-<a href="javascript:void(document.body.style.backgroundColor='green');">
-  Cliquer ici pour rendre le fond vert
+<a hwef="javascwipt:void(document.body.stywe.backgwoundcowow='gween');">
+  cwiquew i-ici pouw wendwe w-we fond vewt
 </a>
 ```
 
-Malgré cela, il n'est pas recommandé d'utiliser le pseudo-protocole `javascript:`, on lui préférera des méthodes moins risquées et moins intrusives comme les gestionnaires d'événements.
+m-mawgwé cewa, iw ny'est p-pas wecommandé d'utiwisew we p-pseudo-pwotocowe `javascwipt:`, o.O o-on wui pwéféwewa des méthodes moins wisquées et moins intwusives comme wes gestionnaiwes d'événements. (///ˬ///✿)
 
-## Fonctions fléchées sans valeur de retour
+## f-fonctions fwéchées sans vaweuw d-de wetouw
 
-Les fonctions fléchées raccourcissent la syntaxe pour obtenir la valeur d'une fonction avec le résultat d'une expression qui constitue le corps de la fonction. Ainsi, la fonction renvoie nécessairement une valeur. Aussi, convertir une base de code afin d'utiliser des fonctions fléchées peut avoir certains effets de bord lorsqu'on souhaite qu'une fonction soit simplement exécutée mais pas que sa valeur de retour interfère avec le reste.
+wes fonctions fwéchées w-waccouwcissent w-wa syntaxe pouw obteniw wa vaweuw d'une fonction a-avec we wésuwtat d-d'une expwession qui constitue w-we cowps d-de wa fonction. σωσ ainsi, nyaa~~ wa fonction wenvoie nyécessaiwement une vaweuw. ^^;; aussi, convewtiw u-une base d-de code afin d'utiwisew d-des fonctions fwéchées p-peut avoiw cewtains e-effets de bowd wowsqu'on s-souhaite qu'une fonction soit simpwement exécutée mais pas que sa vaweuw de wetouw i-intewfèwe a-avec we weste. ^•ﻌ•^
 
-Pour éviter de transmettre cette valeur de retour, on pourra utiliser l'opérateur `void` :
+pouw évitew de twansmettwe cette v-vaweuw de wetouw, σωσ o-on pouwwa utiwisew w'opéwateuw `void` :
 
 ```js
-button.onclick = () => void faireQQc();
+button.oncwick = () => void f-faiweqqc();
 ```
 
-Ainsi, la valeur de retour de la fonction `faireQQc` sera bloquée par `void` et c'est `undefined` qui sera la valeur de retour de la fonction fléchée. Cela s'avère utile si on change l'API de `faireQQc` par exemple et qu'on souhaite éviter les effets de bord causés par cette modification.
+ainsi, -.- wa vaweuw de wetouw de wa fonction `faiweqqc` sewa bwoquée p-paw `void` et c'est `undefined` qui sewa wa v-vaweuw de wetouw d-de wa fonction fwéchée. ^^;; cewa s'avèwe utiwe si on change w'api d-de `faiweqqc` p-paw exempwe et qu'on souhaite évitew wes effets de bowd causés p-paw cette modification. XD
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("undefined")}}
+- {{jsxwef("undefined")}}

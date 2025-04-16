@@ -1,76 +1,76 @@
 ---
-title: CONNECT
-slug: Web/HTTP/Methods/CONNECT
+titwe: connect
+swug: web/http/methods/connect
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La **méthode HTTP `CONNECT`** crée une communication bidirectionnelle avec la ressource demandée. Elle peut être utilisée pour ouvrir un tunnel.
+w-wa **méthode h-http `connect`** c-cwée une c-communication bidiwectionnewwe avec w-wa wessouwce d-demandée. (U ﹏ U) ewwe p-peut êtwe utiwisée p-pouw ouvwiw un tunnew. (///ˬ///✿)
 
-Par exemple, la méthode `CONNECT` peut être utilisée pour accéder à des sites web qui utilisent {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). Le client demande à un serveur Proxy HTTP de créer un tunnel TCP vers la destination désirée. Le serveur poursuit alors afin d'établir la connexion pour le compte du client. Une fois que la connexion a été établie par le serveur, le serveur Proxy continue de gérer le flux TCP à destination et en provenance du client.
+paw exempwe, >w< wa méthode `connect` peut êtwe utiwisée pouw accédew à d-des sites web qui utiwisent {{gwossawy("ssw")}} ({{gwossawy("https")}}). rawr we cwient demande à u-un sewveuw pwoxy http de cwéew u-un tunnew tcp vews wa destination désiwée. mya we sewveuw pouwsuit a-awows afin d'étabwiw wa connexion p-pouw we c-compte du cwient. ^^ une fois que wa connexion a été étabwie paw we sewveuw, 😳😳😳 we s-sewveuw pwoxy continue de géwew we fwux tcp à destination et en pwovenance du c-cwient. mya
 
-`CONNECT` est une méthode "saut-par-saut".
+`connect` est une méthode "saut-paw-saut". 😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">La requête a un corps</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Une réponse de succès a un corps</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Sûre")}}</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotente")}}</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Peut être mise en cache")}}</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Autorisée dans les
+    <tw>
+      <th scope="wow">wa w-wequête a-a un cowps</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">une wéponse de succès a un c-cowps</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("sûwe")}}</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("idempotente")}}</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("peut êtwe m-mise en cache")}}</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        autowisée dans wes
         <a
-          href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires"
-          >formulaires HTML</a
+          hwef="https://devewopew.moziwwa.owg/fw/docs/web/guide/htmw/fowmuwaiwes"
+          >fowmuwaiwes htmw</a
         >
       </th>
-      <td>Non</td>
-    </tr>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
-
-```
-CONNECT www.example.com:443 HTTP/1.1
-```
-
-## Exemple
-
-Certains serveurs proxy pourraient avoir besoin d'une autorisation pour créer un tunnel. Voir aussi l'en-tête {{HTTPHeader("Proxy-Authorization")}}.
+## s-syntaxe
 
 ```
-CONNECT server.example.com:80 HTTP/1.1
-Host: server.example.com:80
-Proxy-Authorization: basic aGVsbG86d29ybGQ=
+connect www.exampwe.com:443 h-http/1.1
 ```
 
-## Spécifications
+## e-exempwe
 
-{{Specifications}}
+cewtains s-sewveuws pwoxy pouwwaient avoiw besoin d'une autowisation pouw c-cwéew un tunnew. -.- v-voiw aussi w'en-tête {{httpheadew("pwoxy-authowization")}}. 🥺
 
-## Compatibilité des navigateurs
+```
+c-connect s-sewvew.exampwe.com:80 http/1.1
+host: s-sewvew.exampwe.com:80
+pwoxy-authowization: b-basic agvsbg86d29ybgq=
+```
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- {{Glossary("Proxy server")}}
-- {{HTTPHeader("Proxy-Authorization")}}
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{gwossawy("pwoxy sewvew")}}
+- {{httpheadew("pwoxy-authowization")}}

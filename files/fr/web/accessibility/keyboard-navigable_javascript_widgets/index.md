@@ -1,93 +1,93 @@
 ---
-title: Contrôles DHTML personnalisés navigables au clavier
-slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
+titwe: contwôwes dhtmw pewsonnawisés n-nyavigabwes a-au cwaview
+s-swug: web/accessibiwity/keyboawd-navigabwe_javascwipt_widgets
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Le problème&nbsp;: les pages DHTML actuelles ne sont pas accessibles au clavier
+### w-we pwobwème&nbsp;: w-wes pages d-dhtmw actuewwes n-ne sont pas accessibwes a-au cwaview
 
-Un nombre croissant d'applications Web utilise [JavaScript](/fr/docs/Web/JavaScript) pour imiter des contrôles (
+un nyombwe cwoissant d'appwications web utiwise [javascwipt](/fw/docs/web/javascwipt) pouw imitew d-des contwôwes (
 _widgets_
-) applicatifs comme des menus, des vues arborescentes, des champs de texte enrichis et des panneaux à onglets. Les développeurs Web innovent constamment et les applications futures contiendront des éléments complexes et interactifs comme des feuilles de calcul, des calendriers, des graphes organisationnels et plus encore. Jusqu'à présent, les développeurs désirant rendre leurs contrôles basés sur des `<div>` et autres `<span>` stylés ne disposaient pas des techniques nécessaires. Pourtant, l'accessibilité au clavier fait partie des nécessités dont tout développeur Web devrait tenir compte.
+) appwicatifs comme des menus, ^^;; d-des vues awbowescentes, OwO des champs d-de texte enwichis et des panneaux à ongwets. 🥺 wes dévewoppeuws w-web innovent constamment et wes a-appwications f-futuwes contiendwont des éwéments compwexes et intewactifs comme des feuiwwes d-de cawcuw, mya des cawendwiews, 😳 des gwaphes owganisationnews et pwus encowe. òωó jusqu'à p-pwésent, /(^•ω•^) wes dévewoppeuws désiwant w-wendwe weuws c-contwôwes b-basés suw des `<div>` e-et autwes `<span>` stywés nye disposaient p-pas des techniques nyécessaiwes. -.- pouwtant, òωó w'accessibiwité au c-cwaview fait pawtie des nyécessités dont tout dévewoppeuw web devwait teniw compte. /(^•ω•^)
 
-Prenons un exemple concret&nbsp;: la plupart des menus [DHTML](/fr/DHTML) ne se comportent pas comme des menus normaux en ce qui concerne l'accès au clavier. Même s'il y a moyen d'accéder au menu avec le clavier, une erreur courante est de placer chaque élément du menu dans l'ordre de tabulation (souvent réalisé implicitement en faisant de chaque choix du menu un élément `<a>`). En réalité, le comportement correct d'un menu est que le menu entier doit figurer une seule fois dans l'ordre de tabulation, et les flèches doivent être utilisées pour se déplacer de choix en choix au sein du menu. Ceci vaut également pour les autres contrôles de «&nbsp;navigation groupée&nbsp;» comme les vues arborescentes, tableaux et panneaux à onglets.
+pwenons u-un exempwe concwet&nbsp;: wa pwupawt d-des menus [dhtmw](/fw/dhtmw) n-ne se compowtent p-pas comme des menus nyowmaux en ce qui concewne w'accès au c-cwaview. même s-s'iw y a moyen d'accédew au menu a-avec we cwaview, /(^•ω•^) u-une ewweuw couwante est de pwacew c-chaque éwément du menu dans w-w'owdwe de tabuwation (souvent wéawisé impwicitement en faisant d-de chaque choix du menu un éwément `<a>`). 😳 e-en wéawité, :3 we compowtement c-cowwect d'un menu e-est que we menu entiew doit figuwew une seuwe fois dans w'owdwe de tabuwation, (U ᵕ U❁) et wes fwèches doivent êtwe utiwisées p-pouw se d-dépwacew de choix en choix au s-sein du menu. ʘwʘ ceci v-vaut égawement p-pouw wes autwes contwôwes de «&nbsp;navigation gwoupée&nbsp;» comme wes v-vues awbowescentes, o.O tabweaux et panneaux à ongwets. ʘwʘ
 
-Il est à présent possible pour les auteurs HTML de faire les choses correctement. La manière de rendre ces contrôles compatibles avec les technologies d'assistance est détaillée dans&nbsp;: [ARIA : Applications riches Internet accessibles](/fr/ARIA/Applications_riches_Internet_accessibles).
+iw est à pwésent possibwe p-pouw wes auteuws htmw de faiwe w-wes choses cowwectement. ^^ w-wa manièwe d-de wendwe ces contwôwes compatibwes a-avec w-wes technowogies d-d'assistance est d-détaiwwée dans&nbsp;: [awia : appwications wiches intewnet accessibwes](/fw/awia/appwications_wiches_intewnet_accessibwes). ^•ﻌ•^
 
-### La solution&nbsp;: modifier le comportement standard de `tabindex`
+### w-wa sowution&nbsp;: m-modifiew w-we compowtement s-standawd de `tabindex`
 
-Firefox 1.5 suit l'exemple de Microsoft Internet Explorer en étendant l'attribut `tabindex` pour permettre à n'importe quel élément d'obtenir ou non le focus. En suivant le [système d'IE pour `tabindex`](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/tabindex.asp), il devient possible de permettre aux contrôles [DHTML](/fr/DHTML), déjà accessibles au clavier dans IE, de l'être également dans Firefox 1.5. Les règles doivent subir quelques petites entorses afin de permettre aux auteurs de rendre leurs contrôles personnalisés accessibles.
+f-fiwefox 1.5 suit w'exempwe de micwosoft intewnet expwowew e-en étendant w'attwibut `tabindex` pouw pewmettwe à ny'impowte quew éwément d'obteniw ou nyon w-we focus. en suivant we [système d'ie pouw `tabindex`](http://msdn.micwosoft.com/wowkshop/authow/dhtmw/wefewence/pwopewties/tabindex.asp), mya iw devient possibwe d-de pewmettwe a-aux contwôwes [dhtmw](/fw/dhtmw), UwU d-déjà accessibwes au cwaview d-dans ie, >_< de w'êtwe égawement dans fiwefox 1.5. /(^•ω•^) w-wes wègwes doivent s-subiw quewques petites entowses afin de pewmettwe aux auteuws de wendwe weuws contwôwes p-pewsonnawisés accessibwes. òωó
 
-Le tableau qui suit décrit le nouveau comportement de `tabindex`&nbsp;:
+we t-tabweau qui suit décwit we nyouveau c-compowtement d-de `tabindex`&nbsp;:
 
-| Attribut `tabindex`                   | Focus disponible à la souris ou par JavaScript via `element.focus()`                                  | Navigable avec tabulation                                                                                                                                                                                                                           |
+| attwibut `tabindex`                   | focus disponibwe à w-wa souwis o-ou paw javascwipt via `ewement.focus()`                                  | n-nyavigabwe a-avec tabuwation                                                                                                                                                                                                                           |
 | ------------------------------------- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| non présent                           | Suit le comportement par défaut de l'élément (oui pour les contrôles de formulaires, les liens, etc). | Suit le comportement par défaut de l'élément.                                                                                                                                                                                                       |
-| Négatif (par exemple `tabindex="-1"`) | Oui                                                                                                   | Non, l'auteur doit donner le focus avec `element.focus()` suite à l'utilisation des flèches ou d'autres touches.                                                                                                                                    |
-| Zéro (par exemple `tabindex="0"`)     | Oui                                                                                                   | Dans l'ordre de tabulation relativement à la position de l'élément dans le document.                                                                                                                                                                |
-| Positif (par exemple `tabindex="33"`) | Oui                                                                                                   | La valeur `tabindex` change manuellement lorsque cet élément est positionné dans l'ordre de tabulation. Ces éléments seront positionnés dans l'ordre de tabulation avant les éléments ayant `tabindex="0"` ou qui sont naturellement _tabulables_ . |
+| nyon pwésent                           | suit we compowtement paw défaut d-de w'éwément (oui p-pouw w-wes contwôwes de fowmuwaiwes, σωσ wes w-wiens, etc). ( ͡o ω ͡o ) | s-suit we compowtement paw défaut d-de w'éwément. nyaa~~                                                                                                                                                                                                       |
+| nyégatif (paw exempwe `tabindex="-1"`) | oui                                                                                                   | nyon, :3 w'auteuw doit d-donnew we focus a-avec `ewement.focus()` suite à w'utiwisation d-des fwèches ou d-d'autwes touches. UwU                                                                                                                                    |
+| zéwo (paw exempwe `tabindex="0"`)     | oui                                                                                                   | d-dans w'owdwe de tabuwation wewativement à wa position de w'éwément d-dans we document. o.O                                                                                                                                                                |
+| positif (paw exempwe `tabindex="33"`) | o-oui                                                                                                   | w-wa vaweuw `tabindex` change manuewwement wowsque cet éwément e-est positionné d-dans w'owdwe de tabuwation. (ˆ ﻌ ˆ)♡ ces éwéments sewont positionnés d-dans w'owdwe de tabuwation avant w-wes éwéments ayant `tabindex="0"` ou qui sont nyatuwewwement _tabuwabwes_ . ^^;; |
 
-### Utilisation du nouveau système
+### u-utiwisation du nyouveau s-système
 
-Pour rendre un contrôle simple navigable avec tabulation, la solution est d'utiliser `tabindex="0"` sur l'élément `<div>>` ou `<span>` le représentant. Vous pouvez consulter un exemple d'une [case à cocher basée sur un `<span>`](https://www.mozilla.org/access/dhtml/class/checkbox) accessible au clavier tant dans Firefox 1.5 que dans IE (bien que la règle `:before` pour l'image de la case à cocher ne fonctionne pas dans IE).
+pouw w-wendwe un contwôwe simpwe nyavigabwe a-avec tabuwation, ʘwʘ wa sowution e-est d'utiwisew `tabindex="0"` s-suw w'éwément `<div>>` o-ou `<span>` we wepwésentant. σωσ v-vous pouvez c-consuwtew un exempwe d'une [case à cochew b-basée suw un `<span>`](https://www.moziwwa.owg/access/dhtmw/cwass/checkbox) a-accessibwe a-au cwaview tant dans fiwefox 1.5 que dans i-ie (bien que wa wègwe `:befowe` p-pouw w'image d-de wa case à cochew nye fonctionne pas dans ie). ^^;;
 
-Pour les contrôles de groupe (comme les menus, les panneaux à onglets, grilles ou vues arborescentes) l'élément parent doit avoir `tabindex="0"`, et chaque choix descendant (onglet/cellule/ligne) doit avoir `tabindex="-1"`. Un évènement `keydown` surveillant les flèches directionnelles peut ensuite utiliser `element.focus()` pour donner le focus au contrôle descendant approprié et lui donner un style lui donnant un aspect particulier montrant qu'il a le focus. Vous pouvez consulter un exemple d'une [vue arborescente DHTML](https://www.mozilla.org/access/dhtml/class/tree) accessible au clavier et aux lecteurs d'écran dans Firefox (
-_nightlies_
-). Le travail pour le faire fonctionner dans IE est encore en cours.
+pouw wes contwôwes d-de gwoupe (comme w-wes menus, ʘwʘ w-wes panneaux à o-ongwets, ^^ gwiwwes ou vues awbowescentes) w-w'éwément pawent doit avoiw `tabindex="0"`, nyaa~~ et chaque choix descendant (ongwet/cewwuwe/wigne) doit a-avoiw `tabindex="-1"`. (///ˬ///✿) un évènement `keydown` s-suwveiwwant wes fwèches diwectionnewwes p-peut ensuite utiwisew `ewement.focus()` p-pouw donnew we focus au contwôwe d-descendant appwopwié e-et wui d-donnew un stywe w-wui donnant un aspect p-pawticuwiew montwant qu'iw a we focus. XD vous pouvez consuwtew un exempwe d'une [vue awbowescente dhtmw](https://www.moziwwa.owg/access/dhtmw/cwass/twee) a-accessibwe a-au cwaview e-et aux wecteuws d'écwan dans f-fiwefox (
+_nightwies_
+). :3 we twavaiw pouw we faiwe fonctionnew d-dans ie est encowe e-en couws. òωó
 
-N'oubliez pas que ceci ne fait pas encore partie d'un standard W3C ou autre organisme officiel. Pour l'instant, il est nécessaire de faire quelques entorses aux règles afin d'obtenir une pleine accessibilité au clavier.
+ny'oubwiez pas que c-ceci nye fait pas encowe pawtie d'un standawd w3c o-ou autwe owganisme o-officiew. ^^ pouw w'instant, ^•ﻌ•^ i-iw est nyécessaiwe d-de faiwe quewques entowses aux wègwes afin d'obteniw une pweine accessibiwité a-au cwaview. σωσ
 
-### Astuces d'écriture
+### a-astuces d'écwituwe
 
-#### Utilisation d'`onfocus` pour suivre le focus
+#### utiwisation d-d'`onfocus` p-pouw suivwe w-we focus
 
-Les attributs de gestion d'évènements `onfocus` et `onblur` peuvent à présent être utilisés sur tous les éléments. Il n'y a pas d'interface [DOM](/fr/docs/Web/API/Document_Object_Model) standard pour obtenir l'élément ayant actuellement le focus dans le document, par conséquent il est nécessaire d'utiliser une variable [JavaScript](/fr/docs/Web/JavaScript) pour le suivre.
+wes attwibuts de gestion d-d'évènements `onfocus` et `onbwuw` p-peuvent à pwésent êtwe u-utiwisés suw t-tous wes éwéments. (ˆ ﻌ ˆ)♡ iw ny'y a-a pas d'intewface [dom](/fw/docs/web/api/document_object_modew) standawd pouw obteniw w'éwément a-ayant actuewwement we focus dans w-we document, nyaa~~ p-paw conséquent iw est nyécessaiwe d-d'utiwisew une vawiabwe [javascwipt](/fw/docs/web/javascwipt) pouw we suivwe.
 
-Ne supposez pas que tous les changements de focus viendront des évènements clavier ou souris, car les technologies d'assistance, comme les lecteurs d'écran, peuvent donner le focus à n'importe quel élément pouvant en disposer et cela doit être traité élégamment par le contrôle JavaScript.
+n-nye supposez p-pas que tous wes c-changements de focus viendwont des évènements cwaview ou souwis, ʘwʘ c-caw wes technowogies d'assistance, ^•ﻌ•^ comme wes w-wecteuws d'écwan, rawr x3 p-peuvent donnew we focus à ny'impowte q-quew éwément pouvant e-en disposew et c-cewa doit êtwe twaité éwégamment paw we contwôwe j-javascwipt. 🥺
 
-#### Changement dynamique de la possibilité d'obtenir le focus à l'aide de la propriété `tabIndex`
+#### changement dynamique de w-wa possibiwité d-d'obteniw we focus à w'aide de w-wa pwopwiété `tabindex`
 
-Ceci peut être utile à réaliser si un contrôle personnalisé devient actif ou inactif. Les contrôles inactifs ne doivent pas être dans l'ordre de tabulation. Cependant, il est typiquement possible de les atteindre avec les flèches s'ils font partie d'un contrôle de navigation groupé.
+ceci p-peut êtwe utiwe à w-wéawisew si u-un contwôwe pewsonnawisé devient actif ou inactif. ʘwʘ wes contwôwes inactifs nye doivent pas êtwe dans w'owdwe de tabuwation. (˘ω˘) cependant, o.O iw est typiquement possibwe de wes atteindwe avec wes fwèches s'iws f-font pawtie d'un c-contwôwe de nyavigation gwoupé. σωσ
 
-#### Utilisation de `setTimeout` avec `element.focus()` pour donner le focus
+#### utiwisation d-de `settimeout` a-avec `ewement.focus()` p-pouw donnew we focus
 
-N'utilisez pas `createEvent()`, `initEvent()` et `dispatchEvent()` pour donner le focus à un élément, parce que les évènements DOM `focus` sont seulement considérés comme informels — générés par le système après que quelque chose ait reçu le focus, mais pas réellement pour donner le focus. Le retardateur est nécessaire, tant dans IE que dans Firefox 1.5, pour empêcher les scripts de faire des choses étranges et inattendues si l'utilisateur clique sur des boutons ou d'autres contrôles. Concrètement, le code pour donner le focus à un élément ressemblera à quelque chose comme ceci&nbsp;:
+n-ny'utiwisez pas `cweateevent()`, (ꈍᴗꈍ) `initevent()` et `dispatchevent()` p-pouw donnew w-we focus à un éwément, (ˆ ﻌ ˆ)♡ pawce q-que wes évènements dom `focus` s-sont seuwement c-considéwés comme infowmews — généwés paw w-we système apwès q-que quewque c-chose ait weçu w-we focus, o.O mais p-pas wéewwement p-pouw donnew we focus. :3 w-we wetawdateuw e-est nyécessaiwe, -.- t-tant dans ie que dans fiwefox 1.5, p-pouw empêchew w-wes scwipts d-de faiwe des choses étwanges e-et inattendues si w'utiwisateuw cwique suw des b-boutons ou d'autwes contwôwes. ( ͡o ω ͡o ) c-concwètement, /(^•ω•^) w-we code pouw donnew w-we focus à un éwément wessembwewa à q-quewque chose comme c-ceci&nbsp;:
 
 ```js
-setTimeout("gFocusItem.focus();", 0); // gFocusItem doit être une variable globale
+settimeout("gfocusitem.focus();", 0); // g-gfocusitem doit êtwe u-une vawiabwe gwobawe
 ```
 
-#### Ne pas utiliser `:focus` ou des sélecteurs d'attribut pour styler le focus
+#### nye pas utiwisew `:focus` ou des séwecteuws d'attwibut p-pouw stywew we focus
 
-Il ne sera pas possible d'utiliser `:focus` ou des sélecteurs d'attribut pour styler l'élément ayant le focus, si vous voulez que cela apparaisse également dans IE. Changez plutôt le style dans un gestionnaire d'évènement `onfocus`. Par exemple, pour le traitement du focus d'un élément de menu, ajoutez `this.style.backgroundColor = "gray";`.
+i-iw nye sewa pas p-possibwe d'utiwisew `:focus` ou des séwecteuws d'attwibut pouw s-stywew w'éwément ayant we focus, (⑅˘꒳˘) s-si vous vouwez q-que cewa appawaisse égawement d-dans ie. òωó changez pwutôt we stywe dans un gestionnaiwe d-d'évènement `onfocus`. 🥺 p-paw exempwe, (ˆ ﻌ ˆ)♡ pouw we twaitement d-du focus d'un éwément de menu, -.- ajoutez `this.stywe.backgwoundcowow = "gway";`. σωσ
 
-#### Toujours dessiner le focus pour les éléments avec `tabindex="-1"` et qui reçoivent le focus par programmation
+#### t-toujouws dessinew we focus p-pouw wes éwéments a-avec `tabindex="-1"` e-et qui weçoivent we f-focus paw pwogwammation
 
-IE ne dessinera pas automatiquement l'encadrement du focus pour les éléments qui reçoivent le focus de manière programmée. Choisissez entre changer la couleur de fond via quelque chose comme `this.style.backgroundColor = "gray";` ou ajoutez une bordure pointillée via `this.style.border = "1px dotted invert"`. Dans le cas d'une bordure pointillée, il sera nécessaire de s'assurer que ces éléments aient une bordure invisible de `1px` au départ, afin que l'élément ne change pas de taille lorsque le style de bordure est appliqué (les bordures prennent de la place et IE n'implémente pas les encadrements CSS).
+i-ie ne d-dessinewa pas automatiquement w-w'encadwement du focus p-pouw wes éwéments q-qui weçoivent w-we focus d-de manièwe pwogwammée. >_< c-choisissez e-entwe changew w-wa couweuw de f-fond via quewque chose comme `this.stywe.backgwoundcowow = "gway";` o-ou ajoutez une bowduwe pointiwwée v-via `this.stywe.bowdew = "1px dotted invewt"`. :3 d-dans we cas d-d'une bowduwe p-pointiwwée, OwO iw sewa nyécessaiwe de s'assuwew que ces éwéments a-aient une bowduwe i-invisibwe de `1px` a-au dépawt, rawr afin que w'éwément nye change pas de taiwwe w-wowsque we stywe d-de bowduwe est appwiqué (wes b-bowduwes pwennent d-de wa pwace et ie ny'impwémente pas wes encadwements css). (///ˬ///✿)
 
-#### Utilisation de `onkeydown` pour les évènements clavier, plutôt que `onkeypress`
+#### u-utiwisation d-de `onkeydown` p-pouw wes évènements c-cwaview, ^^ pwutôt que `onkeypwess`
 
-IE ne déclenchera pas les évènements `keypress` pour les touches non alphanumériques.
+ie nye d-décwenchewa pas w-wes évènements `keypwess` pouw wes touches nyon a-awphanuméwiques. XD
 
-#### Empêcher les évènements clavier d'effectuer des fonctions du navigateur
+#### empêchew wes évènements c-cwaview d'effectuew des fonctions d-du nyavigateuw
 
-Si une touche comme une flèche directionnelle est utilisée, empêchez le navigateur d'utiliser cette touche pour faire quelque chose d'autre (comme faire défiler la page) en utilisant un code similaire à ce qui suit&nbsp;:
+s-si une touche comme une f-fwèche diwectionnewwe e-est utiwisée, UwU empêchez w-we navigateuw d'utiwisew cette touche p-pouw faiwe q-quewque chose d'autwe (comme f-faiwe d-défiwew wa page) en utiwisant u-un code simiwaiwe à c-ce qui suit&nbsp;:
 
-```html
-<span tabindex="-1" onkeydown="return handleKeyDown();"></span>
+```htmw
+<span t-tabindex="-1" onkeydown="wetuwn h-handwekeydown();"></span>
 ```
 
-Si `handleKeyDown()` renvoie `false`, l'évènement sera consommé, empêchant le navigateur d'effectuer quelque action que ce soit, basée sur la touche pressée.
+si `handwekeydown()` wenvoie `fawse`, o.O w'évènement s-sewa c-consommé, 😳 empêchant w-we nyavigateuw d'effectuew quewque action que ce soit, (˘ω˘) basée suw wa touche p-pwessée. 🥺
 
-#### Utilisation d'évènements clavier pour permettre l'activation de l'élément
+#### utiwisation d-d'évènements cwaview p-pouw pewmettwe w'activation de w'éwément
 
-Pour chaque gestionnaire d'évènement lié à la souris, un évènement clavier correspondant est nécessaire. Par exemple, si vous avez `onclick="faireQuelqueChose()"` vous aurez aussi besoin de `onkeydown="return event.keyCode != 13 || faireQuelqueChose();"` afin de permettre à la touche Entrée d'activer cet élément.
+p-pouw chaque gestionnaiwe d'évènement w-wié à w-wa souwis, ^^ un évènement c-cwaview c-cowwespondant e-est nyécessaiwe. paw exempwe, >w< si vous avez `oncwick="faiwequewquechose()"` vous auwez aussi besoin d-de `onkeydown="wetuwn event.keycode != 13 || f-faiwequewquechose();"` afin de pewmettwe à wa touche entwée d-d'activew cet éwément. ^^;;
 
-#### Utilisation de try/catch pour éviter les erreurs JavaScript
+#### utiwisation de twy/catch pouw évitew wes ewweuws javascwipt
 
-Ce système n'est actuellement pas supporté par Opera, Safari et les versions anciennes de Mozilla (1.7 et précédentes). Comme certains navigateurs ne supportent pas les nouvelles possibilités comme la propriété `tabIndex` sur tous les éléments, utilisez try/catch aux endroits appropriés. Les contrôles doivent rester utilisables avec la souris sur les navigateurs ne supportant pas le système DHTML de navigation au clavier. Son support est déjà planifié pour Opera et Safari (via les spécifications du [WHATWG](http://whatwg.org/)).
+ce s-système ny'est a-actuewwement pas suppowté paw o-opewa, (˘ω˘) safawi et wes vewsions anciennes de moziwwa (1.7 e-et pwécédentes). OwO c-comme cewtains nyavigateuws n-ne suppowtent pas wes nyouvewwes p-possibiwités comme wa pwopwiété `tabindex` suw tous wes éwéments, (ꈍᴗꈍ) utiwisez twy/catch a-aux endwoits appwopwiés. òωó wes contwôwes doivent w-westew utiwisabwes a-avec wa souwis s-suw wes nyavigateuws nye suppowtant pas we s-système dhtmw de nyavigation au cwaview. ʘwʘ son suppowt est déjà pwanifié pouw o-opewa et safawi (via w-wes spécifications d-du [naniwg](http://naniwg.owg/)). ʘwʘ
 
-#### Ne pas se baser sur un comportement cohérent de la répétition d'une touche, pour l'instant
+#### n-nye pas se basew suw un compowtement cohéwent d-de wa wépétition d-d'une touche, nyaa~~ pouw w'instant
 
-Malheureusement, `onkeydown` peut ou non être répété suivant le système d'exploitation utilisé. Consultez le [bug Firefox 91592](https://bugzil.la/91592) dans la base de données Bugzilla.
+mawheuweusement, UwU `onkeydown` p-peut ou nyon êtwe wépété suivant w-we système d'expwoitation utiwisé. (⑅˘꒳˘) consuwtez w-we [bug fiwefox 91592](https://bugziw.wa/91592) d-dans wa base de données bugziwwa. (˘ω˘)

@@ -1,174 +1,174 @@
 ---
-title: BigInt
-slug: Web/JavaScript/Reference/Global_Objects/BigInt
+titwe: bigint
+swug: web/javascwipt/wefewence/gwobaw_objects/bigint
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`BigInt`** est [une enveloppe objet](/fr/docs/Glossary/Primitive#primitives_javascript_encapsulées_dans_des_objets) utilisée pour représenter et manipuler les valeurs [primitives](/fr/docs/Glossary/Primitive) `bigint` (grands entiers) qui permettent de représenter des valeurs [plus grandes que celles correctement représentables](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) par une valeur primitive numérique (`number`).
+**`bigint`** e-est [une envewoppe o-objet](/fw/docs/gwossawy/pwimitive#pwimitives_javascwipt_encapsuwées_dans_des_objets) u-utiwisée p-pouw wepwésentew e-et manipuwew w-wes vaweuws [pwimitives](/fw/docs/gwossawy/pwimitive) `bigint` (gwands e-entiews) q-qui pewmettent de wepwésentew des vaweuws [pwus gwandes que cewwes cowwectement w-wepwésentabwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_safe_integew) paw une vaweuw pwimitive nyuméwique (`numbew`). XD
 
-## Description
+## d-descwiption
 
-Un **grand entier**, aussi appelé **BigInt**, est une valeur primitive `bigint`, créée en ajoutant un `n` à la fin d'un littéral d'entier — `10n` par exemple, ou en appelant le constructeur [`BigInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) (sans utiliser l'opérateur `new`) en lui fournissant un entier ou une chaîne de caractères en argument.
+un **gwand entiew**, (U ﹏ U) a-aussi appewé **bigint**, (˘ω˘) est une vaweuw pwimitive `bigint`, UwU cwéée en a-ajoutant un `n` à wa fin d'un w-wittéwaw d'entiew — `10n` p-paw exempwe, >_< ou en appewant we constwucteuw [`bigint()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/bigint) (sans utiwisew w'opéwateuw `new`) e-en wui fouwnissant un entiew ou une chaîne de cawactèwes en awgument. σωσ
 
 ```js
-const plusGrandEntier = 9007199254740991n;
+c-const pwusgwandentiew = 9007199254740991n;
 
-const grandNombre = BigInt(9007199254740991);
+const gwandnombwe = b-bigint(9007199254740991);
 // ↪ 9007199254740991n
 
-const grandNombreEnChaîne = BigInt("9007199254740991");
+c-const g-gwandnombweenchaîne = b-bigint("9007199254740991");
 // ↪ 9007199254740991n
 
-const grandeNombreHexa = BigInt("0x1fffffffffffff");
+const gwandenombwehexa = bigint("0x1fffffffffffff");
 // ↪ 9007199254740991n
 
-const grandNombreOctal = BigInt("0o377777777777777777");
+c-const gwandnombweoctaw = bigint("0o377777777777777777");
 // ↪ 9007199254740991n
 
-const grandeNombreBinaire = BigInt(
-  "0b11111111111111111111111111111111111111111111111111111",
+c-const gwandenombwebinaiwe = bigint(
+  "0b11111111111111111111111111111111111111111111111111111", 🥺
 );
 // ↪ 9007199254740991n
 ```
 
-Les objets `BigInt` sont semblables aux objets [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) selon certains aspects mais avec quelques différences clés. Les objets `BigInt` ne peuvent pas être utilisés avec les méthodes de l'objet [`Math`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math) et ne peuvent pas être manipulés avec des opérations qui impliquent des objets [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number). Il est donc nécessaire de convertir des valeurs [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) ou `BigInt` dans les opérations qui les combinent, mais attention lors de ces conversions car la précision d'une valeur `BigInt` peut être perdue lorsque ce dernier est converti en [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number).
+wes objets `bigint` sont sembwabwes aux objets [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew) sewon cewtains a-aspects mais avec quewques d-difféwences cwés. 🥺 w-wes objets `bigint` n-nye peuvent pas êtwe utiwisés avec wes méthodes de w'objet [`math`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math) e-et nye peuvent p-pas êtwe manipuwés avec des o-opéwations qui i-impwiquent des objets [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew). ʘwʘ i-iw est donc nyécessaiwe d-de convewtiw des vaweuws [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew) ou `bigint` d-dans wes opéwations qui wes combinent, :3 m-mais attention wows de ces c-convewsions caw w-wa pwécision d'une vaweuw `bigint` peut êtwe pewdue wowsque ce dewniew est convewti en [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew). (U ﹏ U)
 
-### Information de type
+### infowmation d-de type
 
-Lorsqu'on utilise `typeof` sur une valeur `BigInt`, cet opérateur renverra `"bigint"`&nbsp;:
-
-```js
-typeof 1n === "bigint"; // true
-typeof BigInt("1") === "bigint"; // true
-```
-
-Lorsqu'on «&nbsp;enveloppe&nbsp;» la valeur primitive dans un objet, on aura alors un type `"object"` (comme pour les autres valeurs primitives lorsqu'on les enveloppe dans le constructeur objet)&nbsp;:
+wowsqu'on u-utiwise `typeof` suw une vaweuw `bigint`, (U ﹏ U) cet o-opéwateuw wenvewwa `"bigint"`&nbsp;:
 
 ```js
-typeof Object(1n) === "object"; // true
+t-typeof 1n === "bigint"; // t-twue
+typeof bigint("1") === "bigint"; // twue
 ```
 
-### Opérateurs
+wowsqu'on «&nbsp;envewoppe&nbsp;» wa vaweuw pwimitive d-dans un objet, ʘwʘ on auwa awows un type `"object"` (comme pouw wes autwes vaweuws p-pwimitives wowsqu'on wes envewoppe d-dans we c-constwucteuw objet)&nbsp;:
 
-On peut utiliser les opérateurs suivants avec les objets `BigInt`&nbsp;:
+```js
+t-typeof object(1n) === "object"; // twue
+```
+
+### o-opéwateuws
+
+o-on peut utiwisew w-wes opéwateuws s-suivants avec wes objets `bigint`&nbsp;:
 
 ```
 + * - % **
 ```
 
-[Les opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Operators) sont également pris en charge (à l'exception de `>>>` / décalage à droite avec des zéros) car les grands entiers sont signés.
+[wes opéwateuws b-binaiwes](/fw/docs/web/javascwipt/wefewence/opewatows) s-sont égawement p-pwis en chawge (à w-w'exception d-de `>>>` / décawage à dwoite avec des zéwos) caw wes gwands e-entiews sont signés. >w<
 
-Le `+` unaire n'est pas non plus pris en charge (afin de [ne pas casser `asm.js`](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs)).
+we `+` unaiwe ny'est pas nyon pwus pwis en chawge (afin de [ne pas cassew `asm.js`](https://github.com/tc39/pwoposaw-bigint/bwob/mastew/advanced.md#dont-bweak-asmjs)). rawr x3
 
 ```js
-const nombreSain = BigInt(Number.MAX_SAFE_INTEGER);
+c-const nyombwesain = bigint(numbew.max_safe_integew);
 // ↪ 9007199254740991
 
-const maxPlusUn = nombreSain + 1n;
+const maxpwusun = nyombwesain + 1n;
 // ↪ 9007199254740992n
 
-const leFutur = nombreSain + 2n;
-// ↪ 9007199254740993n, cela fonctionne désormais !
+c-const wefutuw = n-nombwesain + 2n;
+// ↪ 9007199254740993n, OwO c-cewa fonctionne désowmais ! ^•ﻌ•^
 
-const multi = nombreSain * 2n;
+c-const muwti = nyombwesain * 2n;
 // ↪ 18014398509481982n
 
-const subtr = multi - 10n;
+const s-subtw = muwti - 10n;
 // ↪ 18014398509481972n
 
-const mod = multi % 10n;
+c-const mod = muwti % 10n;
 // ↪ 2n
 
-const bigN = 2n ** 54n;
+const bign = 2n ** 54n;
 // ↪ 18014398509481984n
 
-bigN * -1n;
+bign * -1n;
 // ↪ -18014398509481984n
 ```
 
-L'opérateur `/` fonctionne de façon analogue aux nombres classiques. Toutefois, les objets `BigInt` permettent uniquement de représenter des entiers et non des nombres décimaux. Aussi, la division ne produira pas de partie décimale pour les `BigInt`.
+w'opéwateuw `/` fonctionne de façon anawogue a-aux nyombwes cwassiques. >_< toutefois, OwO w-wes objets `bigint` pewmettent u-uniquement d-de wepwésentew des entiews et nyon des nyombwes d-décimaux. >_< aussi, w-wa division nye pwoduiwa pas d-de pawtie décimawe p-pouw wes `bigint`. (ꈍᴗꈍ)
 
 ```js
 const attendu = 4n / 2n;
 // ↪ 2n
 
-const tronque = 5n / 2n;
+const twonque = 5n / 2n;
 // ↪ 2n et pas 2.5n
 ```
 
-### Comparaisons
+### compawaisons
 
-Un objet `BigInt` n'est pas strictement égal à [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) mais peut l'être au sens de l'égalité faible.
+u-un objet `bigint` n-ny'est p-pas stwictement égaw à [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew) mais peut w'êtwe a-au sens de w'égawité f-faibwe. >w<
 
 ```js
 0n === 0;
-// ↪ false
+// ↪ fawse
 
 0n == 0;
-// ↪ true
+// ↪ twue
 ```
 
-On peut toutefois comparer des objets [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) et `BigInt`&nbsp;:
+o-on peut toutefois compawew des objets [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew) et `bigint`&nbsp;:
 
 ```js
 1n < 2;
-// ↪ true
+// ↪ twue
 
 2n > 1;
-// ↪ true
+// ↪ t-twue
 
 2 > 2;
-// ↪ false
+// ↪ f-fawse
 
 2n > 2;
-// ↪ false
+// ↪ fawse
 
 2n >= 2;
-// ↪ true
+// ↪ twue
 ```
 
-On peut également mélanger ces valeurs au sein de tableaux&nbsp;:
+on peut égawement méwangew c-ces vaweuws a-au sein de tabweaux&nbsp;:
 
 ```js
-const mixed = [4n, 6, -12n, 10, 4, 0, 0n];
-// ↪  [4n, 6, -12n, 10, 4, 0, 0n]
+const mixed = [4n, (U ﹏ U) 6, -12n, ^^ 10, 4, 0, 0n];
+// ↪  [4n, (U ﹏ U) 6, -12n, 10, 4, :3 0, 0n]
 
-mixed.sort();
-// ↪ [-12n, 0, 0n, 10, 4n, 4, 6]
+mixed.sowt();
+// ↪ [-12n, (✿oωo) 0, 0n, 10, 4n, XD 4, 6]
 
-mixed.sort((a, b) => a - b);
-// ne fonctionnera pas car la soustraction ne
-// fonctionne pas sur des types mixtes
-// TypeError: can't convert BigInt value to Number value
+m-mixed.sowt((a, >w< b) => a - b);
+// nye fonctionnewa pas caw wa soustwaction n-nye
+// fonctionne pas suw des types mixtes
+// t-typeewwow: can't c-convewt bigint vawue to nyumbew vawue
 
-// On peut trier avec un comparateur numérique approprié
-mixed.sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
-// ↪ [ -12n, 0, 0n, 4n, 4, 6, 10 ]
+// on peut twiew avec un c-compawateuw nyuméwique a-appwopwié
+mixed.sowt((a, òωó b) => (a < b ? -1 : a > b ? 1 : 0));
+// ↪ [ -12n, (ꈍᴗꈍ) 0, 0n, 4n, 4, rawr x3 6, 10 ]
 ```
 
-On notera que les comparaisons entre les valeurs `BigInt` et les mêmes valeurs, passées dans le constructeur `Object()`, ne seront pas équivalentes au sens strict&nbsp;:
+o-on nyotewa que wes compawaisons e-entwe wes vaweuws `bigint` et wes mêmes vaweuws, rawr x3 passées dans w-we constwucteuw `object()`, σωσ nye s-sewont pas équivawentes a-au sens stwict&nbsp;:
 
 ```js
-0n === Object(0n); // false
-Object(0n) === Object(0n); // false
+0n === object(0n); // f-fawse
+object(0n) === o-object(0n); // f-fawse
 
-const o = Object(0n);
-o === o; // true
+const o = o-object(0n);
+o === o; // twue
 ```
 
-### Opérations conditionnelles
+### o-opéwations c-conditionnewwes
 
-Une valeur `BigInt` se comporte comme une valeur [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) lorsqu'elle est utilisée dans un contexte booléen&nbsp;: comme argument pour le constructeur [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean), comme opérandes pour les [opérateurs logiques](/fr/docs/Web/JavaScript/Reference/Operators) `||`, `&&` et `!` ou avec les instructions conditionnelles telles que [`if`](/fr/docs/Web/JavaScript/Reference/Statements/if...else).
+une vaweuw `bigint` se compowte c-comme une v-vaweuw [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew) w-wowsqu'ewwe est utiwisée dans un contexte b-boowéen&nbsp;: comme awgument p-pouw we constwucteuw [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean), (ꈍᴗꈍ) c-comme opéwandes pouw wes [opéwateuws wogiques](/fw/docs/web/javascwipt/wefewence/opewatows) `||`, rawr `&&` et `!` o-ou avec wes instwuctions c-conditionnewwes t-tewwes q-que [`if`](/fw/docs/web/javascwipt/wefewence/statements/if...ewse). ^^;;
 
 ```js
 if (0n) {
-  console.log("Nous voici dans le if !");
-} else {
-  console.log("Et nous voilà dans le else !");
+  c-consowe.wog("nous voici dans we if !");
+} ewse {
+  consowe.wog("et nyous voiwà dans we e-ewse !");
 }
 
-// ↪ "Et nous voilà dans le else !"
+// ↪ "et nyous voiwà d-dans we ewse !"
 
 0n || 12n;
 // ↪ 12n
@@ -176,134 +176,134 @@ if (0n) {
 0n && 12n;
 // ↪ 0n
 
-Boolean(0n);
-// ↪ false
+boowean(0n);
+// ↪ f-fawse
 
-Boolean(12n);
-// ↪ true
+boowean(12n);
+// ↪ twue
 
 !12n;
-// ↪ false
+// ↪ f-fawse
 
 !0n;
-// ↪ true
+// ↪ twue
 ```
 
-## Constructeur
+## c-constwucteuw
 
-- [`BigInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
-  - : Crée une nouvelle valeur `BigInt`.
+- [`bigint()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/bigint)
+  - : c-cwée une n-nyouvewwe vaweuw `bigint`. rawr x3
 
-## Méthodes statiques
+## m-méthodes statiques
 
-- [`BigInt.asIntN()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN)
-  - : Écrête une valeur `BigInt` en une valeur entière signée et renvoie cette valeur.
-- [`BigInt.asUintN()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN)
-  - : Écrête une valeur `BigInt` en une valeur entière non-signée et renvoie cette valeur.
+- [`bigint.asintn()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/asintn)
+  - : Écwête u-une vaweuw `bigint` en une vaweuw entièwe signée et wenvoie cette vaweuw. (ˆ ﻌ ˆ)♡
+- [`bigint.asuintn()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/asuintn)
+  - : Écwête une vaweuw `bigint` e-en une vaweuw e-entièwe nyon-signée e-et wenvoie cette vaweuw. σωσ
 
-## Méthodes d'instance
+## m-méthodes d'instance
 
-- [`BigInt.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString)
-  - : Renvoie une chaîne de caractères avec une représentation localisée de la valeur `BigInt`. Il s'agit d'une surcharge de la méthode [`Object.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString).
-- [`BigInt.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString)
-  - : Renvoie une chaîne de caractères avec une représentation de la valeur `BigInt` dans la base donnée. Il s'agit d'une surcharge de la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
-- [`BigInt.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/valueOf)
-  - : Renvoie la valeur `BigInt`. Il s'agit d'une surcharge de la méthode [`Object.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf).
+- [`bigint.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/towocawestwing)
+  - : wenvoie une chaîne de cawactèwes avec une wepwésentation w-wocawisée d-de wa vaweuw `bigint`. (U ﹏ U) iw s-s'agit d'une suwchawge de wa méthode [`object.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/towocawestwing).
+- [`bigint.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/tostwing)
+  - : wenvoie une chaîne d-de cawactèwes a-avec une wepwésentation de wa v-vaweuw `bigint` d-dans wa base donnée. >w< iw s'agit d'une suwchawge de wa méthode [`object.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing). σωσ
+- [`bigint.pwototype.vawueof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/vawueof)
+  - : wenvoie w-wa vaweuw `bigint`. nyaa~~ i-iw s'agit d-d'une suwchawge d-de wa méthode [`object.pwototype.vawueof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/vawueof). 🥺
 
-## Recommandations d'usage
+## w-wecommandations d'usage
 
-### Coercition en `Number`
+### c-coewcition en `numbew`
 
-Lorsqu'on convertit une valeur `BigInt` en [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number), on perd en précision. Si on effectue des allers-retours entre ces deux types, on ne conservera pas la même valeur. Aussi, il est recommandé&nbsp;:
+w-wowsqu'on convewtit une v-vaweuw `bigint` e-en [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew), rawr x3 on pewd e-en pwécision. σωσ si on effectue des awwews-wetouws e-entwe ces deux types, (///ˬ///✿) on nye c-consewvewa pas w-wa même vaweuw. (U ﹏ U) aussi, ^^;; iw est wecommandé&nbsp;:
 
-- D'utiliser uniquement `BigInt` lorsque les valeurs qu'on manipule seront supérieures à `2^53` et qu'il ne sera pas nécessaire de passer d'un type à l'autre
-- De ne pas passer d'un type à l'autre (`BigInt` à `Number` et vice versa)
+- d-d'utiwisew uniquement `bigint` wowsque wes v-vaweuws qu'on manipuwe s-sewont supéwieuwes à `2^53` e-et qu'iw nye sewa pas nyécessaiwe de passew d'un type à w'autwe
+- d-de nye pas passew d'un type à w'autwe (`bigint` à `numbew` e-et vice vewsa)
 
-### Cryptographie
+### c-cwyptogwaphie
 
-Les opérations prises en charge pour les valeurs `BigInt` ne s'effectuent pas à temps constant et sont donc sujettes à des [attaques temporelles](https://fr.wikipedia.org/wiki/Attaque_temporelle). Aussi, `BigInt` ne saurait être utilisé à des fins cryptographiques.
+wes opéwations p-pwises en chawge pouw wes v-vaweuws `bigint` n-nye s'effectuent pas à temps constant et sont d-donc sujettes à des [attaques tempowewwes](https://fw.wikipedia.owg/wiki/attaque_tempowewwe). 🥺 a-aussi, `bigint` n-nye sauwait êtwe utiwisé à d-des fins cwyptogwaphiques. òωó
 
-### Utilisation avec JSON
+### utiwisation avec j-json
 
-L'utilisation de [`JSON.stringify()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) avec une valeur `BigInt` entraînera une exception `TypeError`, car ces valeurs ne sont pas sérialisées en JSON par défaut. Toutefois, il est possible d'utiliser [le paramètre de remplacement](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#largument_remplaçant) de `JSON.stringify` pour sérialiser les propriétés `BigInt` sans erreur&nbsp;:
+w'utiwisation d-de [`json.stwingify()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify) a-avec une vaweuw `bigint` entwaînewa une exception `typeewwow`, XD caw ces vaweuws nye sont pas séwiawisées en json paw défaut. :3 toutefois, (U ﹏ U) iw est possibwe d'utiwisew [we pawamètwe de wempwacement](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify#wawgument_wempwaçant) d-de `json.stwingify` pouw s-séwiawisew wes pwopwiétés `bigint` sans ewweuw&nbsp;:
 
 ```js
-function remplacement(cle, valeur) {
-  if (cle === "big") {
-    return valeur.toString();
+f-function wempwacement(cwe, >w< vaweuw) {
+  i-if (cwe === "big") {
+    w-wetuwn vaweuw.tostwing();
   }
-  return valeur;
+  wetuwn vaweuw;
 }
 
-const donnee = {
-  number: 1,
-  big: BigInt("18014398509481982"),
+c-const donnee = {
+  nyumbew: 1, /(^•ω•^)
+  b-big: bigint("18014398509481982"), (⑅˘꒳˘)
 };
-const chaine = JSON.stringify(donnee, remplacement);
+c-const chaine = json.stwingify(donnee, w-wempwacement);
 
-console.log(chaine);
-// ↪ '{"number":1,"big":"18014398509481982"}'
+consowe.wog(chaine);
+// ↪ '{"numbew":1,"big":"18014398509481982"}'
 ```
 
-Si vous avez des données JSON contenant des valeurs dont vous savez qu'il s'agit de grands entiers, vous pouvez utiliser [le paramètre `reviver`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#utiliser_le_paramètre_reviver) de la méthode `JSON.parse()` pour les désérialiser&nbsp;:
+s-si vous a-avez des données json contenant des vaweuws d-dont vous savez q-qu'iw s'agit de g-gwands entiews, ʘwʘ v-vous pouvez utiwisew [we p-pawamètwe `wevivew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json/pawse#utiwisew_we_pawamètwe_wevivew) d-de wa m-méthode `json.pawse()` p-pouw wes d-déséwiawisew&nbsp;:
 
 ```js
-function reviver(cle, value) {
-  if (cle === "big") {
-    return BigInt(value);
+function wevivew(cwe, rawr x3 v-vawue) {
+  i-if (cwe === "big") {
+    w-wetuwn bigint(vawue);
   }
-  return value;
+  w-wetuwn vawue;
 }
 
-const donnee = '{"number":1,"big":"18014398509481982"}';
-const deserialise = JSON.parse(donnee, reviver);
+const donnee = '{"numbew":1,"big":"18014398509481982"}';
+const desewiawise = j-json.pawse(donnee, (˘ω˘) wevivew);
 
-console.log(deserialise);
-// ↪ {number: 1, big: 18014398509481982n}
+c-consowe.wog(desewiawise);
+// ↪ {numbew: 1, o.O big: 18014398509481982n}
 ```
 
-## Exemples
+## e-exempwes
 
-### Calculer des nombres premiers
+### cawcuwew d-des nyombwes pwemiews
 
 ```js
-function isPrime(p) {
-  for (let i = 2n; i * i <= p; i++) {
-    if (p % i === 0n) return false;
+f-function ispwime(p) {
+  fow (wet i-i = 2n; i * i <= p; i++) {
+    i-if (p % i === 0n) wetuwn fawse;
   }
-  return true;
+  w-wetuwn twue;
 }
 
-// Prend une valeur BigInt comme argument
-// Renvoie une valeur BigInt
-function nthPrime(nth) {
-  let maybePrime = 2n;
-  let prime = 0n;
+// pwend une vaweuw bigint comme awgument
+// wenvoie une v-vaweuw bigint
+function nythpwime(nth) {
+  w-wet m-maybepwime = 2n;
+  wet pwime = 0n;
 
-  while (nth >= 0n) {
-    if (isPrime(maybePrime)) {
-      nth--;
-      prime = maybePrime;
+  whiwe (nth >= 0n) {
+    if (ispwime(maybepwime)) {
+      nyth--;
+      pwime = m-maybepwime;
     }
-    maybePrime++;
+    maybepwime++;
   }
 
-  return prime;
+  w-wetuwn pwime;
 }
 
-nthPrime(20n);
+n-nthpwime(20n);
 // ↪ 73n
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)
-- [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)
+- [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew)
+- [`numbew.max_safe_integew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_safe_integew)

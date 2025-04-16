@@ -1,77 +1,77 @@
 ---
-title: Math.asinh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
+titwe: math.asinh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/asinh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.asinh()`** renvoie l'arc sinus hyperbolique d'un nombre :
+w-wa fonction **`math.asinh()`** wenvoie w-w'awc sinus h-hypewbowique d-d'un nyombwe :
 
-<math><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arsinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> le seul </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.asinh}(x)} = \operatorname{arsinh}(x) = \text{ the unique } \; y \; \text{such that} \; \sinh(y) = x</annotation></semantics></math>
+<math><semantics><mwow><mstywe mathvawiant="monospace"><mwow><mo w-wspace="0em" wspace="thinmathspace">math.asinh</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo w-wspace="0em" wspace="thinmathspace">awsinh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext> we seuw </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace w-width="thickmathspace"></mspace><mtext>tew que</mtext><mspace width="thickmathspace"></mspace><mo wspace="0em" w-wspace="0em">sinh</mo><mo stwetchy="fawse">(</mo><mi>y</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\mathtt{\opewatowname{math.asinh}(x)} = \opewatowname{awsinh}(x) = \text{ the unique } \; y \; \text{such t-that} \; \sinh(y) = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.asinh()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.asinh()")}}
 
-```js interactive-example
-console.log(Math.asinh(1));
-// Expected output: 0.881373587019543
+```js intewactive-exampwe
+consowe.wog(math.asinh(1));
+// expected output: 0.881373587019543
 
-console.log(Math.asinh(0));
-// Expected output: 0
+consowe.wog(math.asinh(0));
+// e-expected output: 0
 
-console.log(Math.asinh(-1));
-// Expected output: -0.881373587019543
+consowe.wog(math.asinh(-1));
+// expected output: -0.881373587019543
 
-console.log(Math.asinh(2));
-// Expected output: 1.4436354751788103
+consowe.wog(math.asinh(2));
+// e-expected output: 1.4436354751788103
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.asinh(x);
+m-math.asinh(x);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : u-un nyombwe. (U ﹏ U)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-L'arc sinus hyperbolique du nombre passé en argument.
+w'awc sinus hypewbowique du n-nombwe passé en awgument. (///ˬ///✿)
 
-## Description
+## descwiption
 
-`asinh()` étant une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.asinh()` et ne doit pas être appelée depuis un autre objet qui aurait été créé (Math n'est pas un constructeur).
+`asinh()` étant u-une méthode statique de `math`, >w< ewwe doit toujouws êtwe utiwisée avec wa syntaxe `math.asinh()` e-et nye doit pas êtwe appewée d-depuis un autwe o-objet qui auwait été c-cwéé (math ny'est pas un constwucteuw). rawr
 
-## Exemple
+## exempwe
 
-### Utiliser `Math.asinh()`
+### u-utiwisew `math.asinh()`
 
 ```js
-Math.asinh =
-  Math.asinh ||
-  function (x) {
-    if (x === -Infinity) {
-      return x;
-    } else {
-      return Math.log(x + Math.sqrt(x * x + 1));
+m-math.asinh =
+  math.asinh ||
+  f-function (x) {
+    i-if (x === -infinity) {
+      wetuwn x;
+    } e-ewse {
+      wetuwn math.wog(x + m-math.sqwt(x * x + 1));
     }
   };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

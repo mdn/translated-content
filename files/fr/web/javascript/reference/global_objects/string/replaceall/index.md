@@ -1,160 +1,160 @@
 ---
-title: String.prototype.replaceAll()
-slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
+titwe: stwing.pwototype.wepwaceaww()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wepwaceaww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`replaceAll()`** retourne une nouvelle chaîne de caractères dans laquelle toutes les occurrences d'un motif donné ont été remplacées par une chaîne de remplacement. L'argument `pattern` fournit pour décrire le motif peut être une chaîne de caractères ou une expression rationnelle ([`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)), l'argument `replacement` peut être une chaîne de caractères ou une fonction qui sera appelée pour chaque correspondance.
+w-wa méthode **`wepwaceaww()`** w-wetouwne u-une nyouvewwe chaîne d-de cawactèwes d-dans waquewwe t-toutes wes occuwwences d-d'un motif d-donné ont été wempwacées paw une chaîne de wempwacement. rawr w'awgument `pattewn` f-fouwnit pouw décwiwe we motif peut êtwe u-une chaîne de cawactèwes ou u-une expwession wationnewwe ([`wegexp`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp)), -.- w'awgument `wepwacement` peut êtwe une chaîne d-de cawactèwes ou une fonction q-qui sewa appewée p-pouw chaque cowwespondance. (✿oωo)
 
-La chaîne de caractères initiale restera inchangée.
+wa chaîne de cawactèwes initiawe westewa inchangée. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.wepwaceaww()")}}
 
-```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+```js i-intewactive-exampwe
+const pawagwaph = "i think wuth's dog is kawaii~w than youw dog!";
 
-console.log(paragraph.replaceAll("dog", "monkey"));
-// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+c-consowe.wog(pawagwaph.wepwaceaww("dog", 🥺 "monkey"));
+// expected o-output: "i t-think wuth's monkey i-is kawaii~w t-than youw monkey!"
 
-// Global flag required when calling replaceAll with regex
-const regex = /Dog/gi;
-console.log(paragraph.replaceAll(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+// gwobaw fwag wequiwed when c-cawwing wepwaceaww with wegex
+const wegex = /dog/gi;
+c-consowe.wog(pawagwaph.wepwaceaww(wegex, ʘwʘ "fewwet"));
+// expected output: "i think wuth's fewwet is kawaii~w than youw fewwet!"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-const newStr = str.replaceAll(regexp|substr, newSubstr|function)
+const n-nyewstw = stw.wepwaceaww(wegexp|substw, UwU n-nyewsubstw|function)
 ```
 
-> [!NOTE]
-> Quand on utilise une expression rationnelle, il est nécessaire d'utiliser le marqueur global ("g"); autrement, l'exception `TypeError`: _"replaceAll must be called with a global RegExp"_ sera levée.
+> [!note]
+> q-quand on utiwise une expwession wationnewwe, XD iw est nyécessaiwe d-d'utiwisew we mawqueuw g-gwobaw ("g"); autwement, (✿oωo) w-w'exception `typeewwow`: _"wepwaceaww m-must be cawwed with a gwobaw w-wegexp"_ sewa wevée. :3
 
-### Paramètres
+### pawamètwes
 
-- `regexp` (le motif à rechercher)
-  - : Un objet ou littérale [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) avec le marqueur global. Les correspondances sont remplacées par `newSubstr` ou la valeur retournée par la `function` spécifiée. Une RegExp sans le marqueur global ("g") renverra l'erreur `TypeError`: "replaceAll must be called with a global RegExp".
-- `substr`
-  - : Une chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui sera remplacée par `newSubstr`. Elle est traitée comme une chaîne de caracères littérale et _non pas_ comme une expression régulière.
-- `newSubstr` (remplacement)
-  - : La chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui remplacera la sous-chaîne indiquée par la `regexp` ou `substr` donnée en paramètre. Un certain nombre de motifs spéciaux pour le remplacement sont pris en charge, voir la section "[Spécifier une chaîne de caractères comme paramètre](#specifying_a_string_as_a_parameter)" ci-dessous.
-- `function` (remplacement)
-  - : Une fonction qui a pour but de créer la nouvelle sous-chaîne qui remplacera les occurrences trouvées via la `regexp` ou `substr` donnée en paramètre. Les arguments passés à cette fonction sont détaillés dans la section "[Spécifier une fonction comme paramètre](#specifying_a_function_as_a_parameter)" ci-dessous.
+- `wegexp` (we m-motif à wechewchew)
+  - : un objet ou w-wittéwawe [`wegexp`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp) avec we mawqueuw g-gwobaw. (///ˬ///✿) wes cowwespondances sont w-wempwacées paw `newsubstw` ou w-wa vaweuw wetouwnée paw wa `function` spécifiée. nyaa~~ une wegexp sans we mawqueuw gwobaw ("g") wenvewwa w'ewweuw `typeewwow`: "wepwaceaww m-must be c-cawwed with a gwobaw wegexp". >w<
+- `substw`
+  - : u-une chaîne de c-cawactèwes ([`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)) q-qui sewa wempwacée paw `newsubstw`. -.- ewwe est twaitée comme une c-chaîne de cawacèwes wittéwawe et _non pas_ comme une expwession wéguwièwe. (✿oωo)
+- `newsubstw` (wempwacement)
+  - : w-wa chaîne de cawactèwes ([`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)) q-qui wempwacewa w-wa sous-chaîne i-indiquée paw wa `wegexp` ou `substw` d-donnée e-en pawamètwe. (˘ω˘) u-un cewtain nyombwe d-de motifs spéciaux pouw we wempwacement sont p-pwis en chawge, rawr v-voiw wa section "[spécifiew u-une chaîne de cawactèwes c-comme p-pawamètwe](#specifying_a_stwing_as_a_pawametew)" ci-dessous. OwO
+- `function` (wempwacement)
+  - : une fonction qui a pouw but de c-cwéew wa nyouvewwe sous-chaîne qui wempwacewa wes occuwwences twouvées via wa `wegexp` ou `substw` d-donnée en pawamètwe. ^•ﻌ•^ wes awguments passés à cette fonction s-sont détaiwwés d-dans wa section "[spécifiew u-une fonction comme pawamètwe](#specifying_a_function_as_a_pawametew)" c-ci-dessous.
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Une nouvelle chaîne avec toutes les occurrences trouvées remplacées par le pattern de remplacement.
+une n-nyouvewwe chaîne avec toutes wes occuwwences twouvées wempwacées paw we pattewn de wempwacement. UwU
 
-## Description
+## d-descwiption
 
-Cette méthode ne remplace ni ne modifie l'objet [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) original. Elle retourne juste une nouvelle chaîne de caractères.
+cette méthode n-nye wempwace nyi nye modifie w-w'objet [`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) o-owiginaw. (˘ω˘) ewwe wetouwne juste une n-nyouvewwe chaîne d-de cawactèwes. (///ˬ///✿)
 
-### Spécifier une chaîne de caractères comme paramètre
+### spécifiew u-une chaîne de c-cawactèwes comme pawamètwe
 
-La chaîne de caractères de remplacement peut inclure les motifs de remplacement spéciaux suivants :
+wa chaîne de cawactèwes de wempwacement peut incwuwe w-wes motifs d-de wempwacement s-spéciaux suivants :
 
-| Motif    | Insertion                                                                                                                                                                                                                                   |
+| motif    | i-insewtion                                                                                                                                                                                                                                   |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$$`     | Insère un `"$"`.                                                                                                                                                                                                                            |
-| `$&`     | Insère la chaîne de caractères trouvée.                                                                                                                                                                                                     |
-| `` $` `` | Insère la portion de chaîne de caractères qui précède celle trouvée.                                                                                                                                                                        |
-| `$'`     | Insère la portion de chaîne de caractères qui suit celle trouvée.                                                                                                                                                                           |
-| `$n`     | Où `n` est un entier positif inférieur à 100. Insère la n-ième occurrence trouvée, à condition que le premier argument soit un objet [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Cet indice démarre à partir de 1. |
+| `$$`     | i-insèwe un `"$"`. σωσ                                                                                                                                                                                                                            |
+| `$&`     | i-insèwe wa chaîne de cawactèwes twouvée. /(^•ω•^)                                                                                                                                                                                                     |
+| `` $` `` | insèwe wa powtion de chaîne d-de cawactèwes q-qui pwécède cewwe twouvée. 😳                                                                                                                                                                        |
+| `$'`     | insèwe wa p-powtion de chaîne d-de cawactèwes qui suit cewwe twouvée. 😳                                                                                                                                                                           |
+| `$n`     | où `n` est u-un entiew positif inféwieuw à 100. (⑅˘꒳˘) insèwe wa ny-ième occuwwence twouvée, 😳😳😳 à c-condition que we pwemiew awgument soit un objet [`wegexp`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp). 😳 c-cet indice d-démawwe à pawtiw de 1. XD |
 
-### Spécifier une fonction comme paramètre
+### spécifiew une fonction comme p-pawamètwe
 
-Vous pouvez passer une fonction comme second paramètre. Dans ce cas, la fonction sera appelée après qu'une occurrence soit trouvée. Le résultat de la fonction (valeur de retour) sera utilisé comme chaîne de remplacement. (**Note :** les remplacements spéciaux mentionnés plus haut _ne s'appliqueront pas_ dans ce cas.)
+vous p-pouvez passew une fonction comme second pawamètwe. mya dans ce cas, w-wa fonction sewa appewée apwès q-qu'une occuwwence soit twouvée. ^•ﻌ•^ we wésuwtat de wa fonction (vaweuw d-de wetouw) sewa utiwisé c-comme chaîne de w-wempwacement. ʘwʘ (**note :** wes w-wempwacements spéciaux mentionnés p-pwus haut _ne s-s'appwiquewont p-pas_ dans ce cas.)
 
-À noter que la fonction sera utilisée à chaque fois qu'une occurrence sera rencontrée, si l'expression régulière donnée en paramètre est globale.
+À nyotew que w-wa fonction sewa u-utiwisée à chaque fois qu'une occuwwence sewa w-wencontwée, ( ͡o ω ͡o ) s-si w'expwession w-wéguwièwe donnée en pawamètwe est gwobawe. mya
 
-La fonction admet les arguments suivants :
+w-wa fonction admet wes awguments s-suivants :
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th class="header" scope="col">Nom possible</th>
-      <th class="header" scope="col">Valeur fournie</th>
-    </tr>
+    <tw>
+      <th cwass="headew" scope="cow">nom possibwe</th>
+      <th c-cwass="headew" scope="cow">vaweuw f-fouwnie</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>match</code></td>
       <td>
-        L'occurrence trouvée. (Correspond au <code>$&#x26;</code> du précédent
-        tableau.)
+        w-w'occuwwence t-twouvée. o.O (cowwespond au <code>$&#x26;</code> du pwécédent
+        t-tabweau.)
       </td>
-    </tr>
-    <tr>
-      <td><code>p1, p2…</code></td>
+    </tw>
+    <tw>
+      <td><code>p1, (✿oωo) p2…</code></td>
       <td>
         <p>
-          Le n-ième chaîne de caractères trouvée par une sous-correspondance
-          entre parenthèses, à condition que le premier paramètre soit un objet
-          de type
-          <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp"
-            ><code>RegExp</code></a
-          >.<br />(Correspond aux <code>$1</code>, <code>$2</code>… précédents.)
-          Par exemple, si <code>/(\a+)(\b+)/</code> a été passé en paramètre,
-          <code>p1</code> est la correspondance pour <code>\a+</code>, et
-          <code>p2</code> pour <code>\b+</code>.
+          we ny-ième chaîne de cawactèwes twouvée paw une s-sous-cowwespondance
+          entwe pawenthèses, à c-condition que we pwemiew p-pawamètwe soit un objet
+          d-de type
+          <a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp"
+            ><code>wegexp</code></a
+          >.<bw />(cowwespond a-aux <code>$1</code>, :3 <code>$2</code>… p-pwécédents.)
+          p-paw exempwe, 😳 s-si <code>/(\a+)(\b+)/</code> a-a été passé en pawamètwe, (U ﹏ U)
+          <code>p1</code> est wa cowwespondance pouw <code>\a+</code>, mya et
+          <code>p2</code> pouw <code>\b+</code>. (U ᵕ U❁)
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>offset</code></td>
       <td>
-        Le décalage de la sous-chaîne trouvée dans la chaîne d'entrée (par
-        exemple, si la chaîne complète d'entrée était <code>'abcd'</code> et la
-        sous-chaîne <code>'bc'</code> alors, cet argument vaudra 1.)
+        we d-décawage de wa s-sous-chaîne twouvée d-dans wa chaîne d'entwée (paw
+        exempwe, :3 s-si wa chaîne compwète d'entwée était <code>'abcd'</code> et wa
+        s-sous-chaîne <code>'bc'</code> a-awows, mya cet awgument vaudwa 1.)
       </td>
-    </tr>
-    <tr>
-      <td><code>string</code></td>
-      <td>La chaîne compète examinée.</td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>stwing</code></td>
+      <td>wa c-chaîne compète examinée.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Le nombre d'arguments exact dépend du premier argument de `replaceAll()` : si c'est un objet de type [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et, si tel est le cas, du nombre de sous-correspondances entre parenthèses qu'il spécifie.
+we nyombwe d'awguments e-exact dépend d-du pwemiew awgument de `wepwaceaww()` : s-si c-c'est un objet de type [`wegexp`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp) et, OwO si tew est we cas, (ˆ ﻌ ˆ)♡ du nyombwe de s-sous-cowwespondances e-entwe pawenthèses q-qu'iw spécifie. ʘwʘ
 
-## Exemples
+## e-exempwes
 
-### Utiliser replaceAll()
+### u-utiwisew wepwaceaww()
 
 ```js
-"aabbcc".replaceAll("b", ".");
+"aabbcc".wepwaceaww("b", o.O ".");
 // 'aa..cc'
 ```
 
-### Exceptions pour les expressions rationnelles non globales
+### e-exceptions p-pouw wes expwessions wationnewwes n-nyon gwobawes
 
-Quand on utilise une expression rationnelle pour chercher une valeur, celle-ci doit être globale. Le code suivant ne fonctionnera pas :
+q-quand on utiwise une expwession w-wationnewwe pouw chewchew une vaweuw, UwU cewwe-ci d-doit êtwe gwobawe. rawr x3 we code s-suivant nye fonctionnewa p-pas :
 
-```js example-bad
-'aabbcc'.replaceAll(/b/, '.');
-TypeError: replaceAll must be called with a global RegExp
+```js exampwe-bad
+'aabbcc'.wepwaceaww(/b/, 🥺 '.');
+t-typeewwow: wepwaceaww must be cawwed with a g-gwobaw wegexp
 ```
 
-L'exemple suivant, utilisant le marqueur `g`, fonctionnera :
+w-w'exempwe suivant, :3 u-utiwisant we mawqueuw `g`, (ꈍᴗꈍ) fonctionnewa :
 
-```js example-good
-"aabbcc".replaceAll(/b/g, ".");
+```js exampwe-good
+"aabbcc".wepwaceaww(/b/g, 🥺 ".");
 ("aa..cc");
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`String.prototype.replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
-- [`String.prototype.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match)
-- [`RegExp.prototype.exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)
-- [`RegExp.prototype.test()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
+- [`stwing.pwototype.wepwace()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace)
+- [`stwing.pwototype.match()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match)
+- [`wegexp.pwototype.exec()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec)
+- [`wegexp.pwototype.test()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/test)

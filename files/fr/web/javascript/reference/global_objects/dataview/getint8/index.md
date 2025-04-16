@@ -1,68 +1,68 @@
 ---
-title: DataView.prototype.getInt8()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
+titwe: dataview.pwototype.getint8()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/getint8
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getInt8()`** permet de lire un entier signé sur 8 bits à l'octet donné par rapport au début de {{jsxref("DataView")}}.
+w-wa méthode **`getint8()`** p-pewmet de wiwe u-un entiew signé s-suw 8 bits à w-w'octet donné paw w-wappowt au début d-de {{jsxwef("dataview")}}. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: DataView.getInt8()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.getint8()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// cweate an awwaybuffew with a size in b-bytes
+const buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setInt8(1, 127); // Max signed 8-bit integer
+const v-view = nyew dataview(buffew);
+v-view.setint8(1, (⑅˘꒳˘) 127); // max signed 8-bit integew
 
-console.log(view.getInt8(1));
-// Expected output: 127
+consowe.wog(view.getint8(1));
+// e-expected output: 127
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dataview.getInt8(positionOctet);
+d-dataview.getint8(positionoctet);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `positionOctet`
-  - : La position, exprimée en nombre d'octets depuis le début de la vue, à laquelle lire les données.
+- `positionoctet`
+  - : wa position, òωó expwimée en nyombwe d'octets depuis we début de w-wa vue, ʘwʘ à waquewwe wiwe wes données. /(^•ω•^)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un entier signé sur 8 bits.
+un entiew signé suw 8 b-bits. ʘwʘ
 
-### Erreurs renvoyées
+### ewweuws wenvoyées
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel qu'il est en dehors de la vue.
+- {{jsxwef("wangeewwow")}}
+  - : w-wenvoyée si `positionoctet` e-est tew qu'iw e-est en dehows de w-wa vue. σωσ
 
-## Description
+## descwiption
 
-Il n'y a pas de contrainte d'alignement, les valeurs codées sur plusieurs octets peuvent être obtenues depuis n'importe quelle position.
+iw ny'y a pas de contwainte d-d'awignement, OwO wes vaweuws codées suw pwusieuws o-octets peuvent êtwe obtenues depuis ny'impowte quewwe position. 😳😳😳
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode `getInt8`
+### utiwisation d-de wa méthode `getint8`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getInt8(1); // 0
+vaw buffew = n-nyew awwaybuffew(8);
+v-vaw dataview = n-nyew dataview(buffew);
+dataview.getint8(1); // 0
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

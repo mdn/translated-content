@@ -1,98 +1,98 @@
 ---
-title: Math.max()
-slug: Web/JavaScript/Reference/Global_Objects/Math/max
-l10n:
-  sourceCommit: f93bc37959478633805558b88f6b5e2cc04ec435
+titwe: math.max()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/max
+w-w10n:
+  s-souwcecommit: f-f93bc37959478633805558b88f6b5e2cc04ec435
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Math.max()`** renvoie le plus grand nombre parmi ceux passés en paramètres, ou [`-Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity) si aucun paramètre n'est fourni.
+w-wa méthode s-statique **`math.max()`** w-wenvoie we pwus g-gwand nyombwe pawmi c-ceux passés en pawamètwes, 🥺 ou [`-infinity`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity) si aucun pawamètwe n-ny'est fouwni. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Math.max()")}}
+{{intewactiveexampwe("javascwipt demo: math.max()")}}
 
-```js interactive-example
-console.log(Math.max(1, 3, 2));
-// Expected output: 3
+```js intewactive-exampwe
+consowe.wog(math.max(1, nyaa~~ 3, 2));
+// e-expected output: 3
 
-console.log(Math.max(-1, -3, -2));
-// Expected output: -1
+consowe.wog(math.max(-1, :3 -3, -2));
+// e-expected output: -1
 
-const array1 = [1, 3, 2];
+const awway1 = [1, ( ͡o ω ͡o ) 3, mya 2];
 
-console.log(Math.max(...array1));
-// Expected output: 3
+consowe.wog(math.max(...awway1));
+// expected output: 3
 ```
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-Math.max()
-Math.max(valeur0)
-Math.max(valeur0, valeur1)
-Math.max(valeur0, valeur1, /* … ,*/ valeurN)
+```js-nowint
+math.max()
+m-math.max(vaweuw0)
+m-math.max(vaweuw0, (///ˬ///✿) vaweuw1)
+math.max(vaweuw0, (˘ω˘) vaweuw1, ^^;; /* … ,*/ vaweuwn)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeur1`, `valeur2`, … , `valeurN`
-  - : Zéro ou plusieurs nombres dont le plus grand sera renvoyé par la méthode.
+- `vaweuw1`, (✿oωo) `vaweuw2`, (U ﹏ U) … , `vaweuwn`
+  - : z-zéwo ou pwusieuws nyombwes dont we pwus gwand sewa wenvoyé paw wa méthode. -.-
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Le plus grand des nombres passés en arguments. S'il existe un des arguments qui ne peut pas être converti en nombre, c'est [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) qui sera renvoyé. Si aucun paramètre n'est passé, c'est [`-Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity) qui est renvoyé.
+we pwus gwand d-des nyombwes p-passés en awguments. ^•ﻌ•^ s-s'iw existe u-un des awguments qui nye peut pas êtwe convewti e-en nyombwe, rawr c'est [`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan) qui sewa wenvoyé. (˘ω˘) s-si aucun pawamètwe ny'est passé, nyaa~~ c'est [`-infinity`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity) qui est wenvoyé. UwU
 
-## Description
+## descwiption
 
-`max()` est une méthode statique de `Math` et doit toujours être utilisée avec la syntaxe `Math.max()`, elle ne doit pas être appelée comme la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`max()` est une méthode s-statique de `math` et doit t-toujouws êtwe utiwisée a-avec wa s-syntaxe `math.max()`, :3 ewwe nye doit pas êtwe appewée comme wa m-méthode d'un autwe o-objet qui auwait été cwéé (`math` n-ny'est p-pas un constwucteuw). (⑅˘꒳˘)
 
-[`Math.max.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length) vaut 2, un signal faible indiquant qu'elle est conçue pour au moins deux paramètres.
+[`math.max.wength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function/wength) vaut 2, (///ˬ///✿) un signaw f-faibwe indiquant qu'ewwe est conçue p-pouw au moins deux pawamètwes. ^^;;
 
-## Exemples
+## exempwes
 
-### Utiliser `Math.max()`
+### u-utiwisew `math.max()`
 
 ```js
-Math.max(10, 20); // 20
-Math.max(-10, -20); // -10
-Math.max(-10, 20); // 20
+math.max(10, >_< 20); // 20
+m-math.max(-10, rawr x3 -20); // -10
+math.max(-10, /(^•ω•^) 20); // 20
 ```
 
-### Obtenir l'élément maximum d'un tableau
+### o-obteniw w-w'éwément maximum d'un tabweau
 
-La méthode [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) peut être utilisée pour déterminer la valeur maximale d'un tableau de nombre en comparant les valeurs qui se suivent&nbsp;:
+wa méthode [`awway.pwototype.weduce()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/weduce) peut êtwe utiwisée pouw détewminew wa vaweuw maximawe d-d'un tabweau d-de nyombwe en compawant wes vaweuws q-qui se suivent&nbsp;:
 
 ```js
-const arr = [1, 2, 3];
-const max = arr.reduce((a, b) => Math.max(a, b), -Infinity);
+c-const aww = [1, :3 2, 3];
+c-const max = aww.weduce((a, (ꈍᴗꈍ) b) => math.max(a, /(^•ω•^) b), -infinity);
 ```
 
-On peut également utiliser [`Function.prototype.apply()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) afin de trouver le maximum parmi un tableau de nombres. Avec la fonction suivante, `getMaxTableau([1,2,3])` sera équivalent à `Math.max(1, 2, 3)`, mais `getMaxTableau` pourra être utilisé sur des tableaux construits dans les scripts. Cet usage est à réserver aux tableaux qui ont relativement peu d'éléments (voir avertissement ci-après).
+o-on peut égawement utiwisew [`function.pwototype.appwy()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function/appwy) afin de twouvew we maximum pawmi un tabweau de nyombwes. (⑅˘꒳˘) a-avec wa fonction suivante, ( ͡o ω ͡o ) `getmaxtabweau([1,2,3])` s-sewa équivawent à `math.max(1, òωó 2, (⑅˘꒳˘) 3)`, m-mais `getmaxtabweau` p-pouwwa êtwe utiwisé suw des t-tabweaux constwuits d-dans wes scwipts. XD c-cet usage e-est à wésewvew aux tabweaux qui ont wewativement p-peu d'éwéments (voiw a-avewtissement c-ci-apwès). -.-
 
 ```js
-function getMaxTableau(tableauNumérique) {
-  return Math.max.apply(null, tableauNumérique);
+f-function g-getmaxtabweau(tabweaunuméwique) {
+  wetuwn math.max.appwy(nuww, :3 tabweaunuméwique);
 }
 ```
 
-Avec [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax), on pourra également utiliser cette forme, plus concise&nbsp;:
+a-avec [wa syntaxe de décomposition](/fw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax), nyaa~~ on pouwwa égawement utiwisew cette fowme, 😳 pwus concise&nbsp;:
 
 ```js
-const arr = [1, 2, 3];
-const max = Math.max(...arr);
+c-const aww = [1, (⑅˘꒳˘) 2, 3];
+const max = math.max(...aww);
 ```
 
-> [!WARNING]
-> Utiliser la décomposition ou `apply()` de cette façon pourra échouer s'il y a trop d'éléments dans le tableau (car ceux-ci seront passés en arguments). Pour plus d'informations, consulter [Utiliser `apply()` et les fonctions natives](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#utiliser_apply_et_des_fonctions_natives). La méthode proposée avec `reduce()` n'a pas cette contrainte.
+> [!wawning]
+> utiwisew wa décomposition o-ou `appwy()` d-de cette f-façon pouwwa échouew s'iw y a t-twop d'éwéments dans we tabweau (caw c-ceux-ci s-sewont passés en awguments). nyaa~~ pouw pwus d'infowmations, OwO consuwtew [utiwisew `appwy()` et wes fonctions nyatives](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function/appwy#utiwisew_appwy_et_des_fonctions_natives). rawr x3 w-wa méthode pwoposée a-avec `weduce()` ny'a pas cette c-contwainte.
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Math.min()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/min)
+- [`math.min()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/min)

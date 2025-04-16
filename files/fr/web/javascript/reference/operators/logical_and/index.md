@@ -1,152 +1,152 @@
 ---
-title: ET logique (&&)
-slug: Web/JavaScript/Reference/Operators/Logical_AND
+titwe: et wogique (&&)
+swug: w-web/javascwipt/wefewence/opewatows/wogicaw_and
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur ET logique (`&&`) (conjonction logique) renvoie vrai si et uniquement si ses deux opérandes sont `true` ou équivalents à `true`. Il est généralement utilisé avec des valeurs booléennes et, quand c'est le cas, il renvoie une valeur booléenne. Toutefois, l'opérateur `&&` renvoie en fait la valeur d'un de ses opérandes et, si cet opérateur est utilisé avec des valeurs non-booléennes, il renverra une valeur non-booléenne.
+w-w'opéwateuw et w-wogique (`&&`) (conjonction w-wogique) w-wenvoie vwai s-si et uniquement s-si ses deux opéwandes s-sont `twue` ou équivawents à `twue`. rawr x3 iw est généwawement utiwisé avec des vaweuws b-boowéennes et, nyaa~~ quand c'est we cas, >_< iw wenvoie u-une vaweuw boowéenne. ^^;; toutefois, (ˆ ﻌ ˆ)♡ w-w'opéwateuw `&&` wenvoie en fait wa vaweuw d'un de ses opéwandes e-et, ^^;; si cet opéwateuw est utiwisé a-avec des v-vaweuws nyon-boowéennes, (⑅˘꒳˘) iw wenvewwa une vaweuw nyon-boowéenne. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - w-wogicaw and", (///ˬ///✿) "showtew")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const a = 3;
 const b = -2;
 
-console.log(a > 0 && b > 0);
-// Expected output: false
+consowe.wog(a > 0 && b-b > 0);
+// expected output: fawse
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-expr1 && expr2;
+e-expw1 && e-expw2;
 ```
 
-## Description
+## d-descwiption
 
-Si `expr1` peut être converti en `true`, le résultat sera `expr2` ; sinon, ce sera `expr1`.
+si `expw1` peut êtwe convewti en `twue`, w-we wésuwtat sewa `expw2` ; sinon, 🥺 ce sewa `expw1`. >_<
 
-Si une valeur peut être convertie en `true`, elle peut être qualifiée de [_truthy_](/fr/docs/Glossary/Truthy). Si une valeur peut être convertie en `false`, on la qualifiera alors de [_falsy_](/fr/docs/Glossary/Falsy).
+s-si une vaweuw peut êtwe convewtie en `twue`, UwU ewwe peut êtwe quawifiée de [_twuthy_](/fw/docs/gwossawy/twuthy). >_< si u-une vaweuw peut êtwe convewtie e-en `fawse`, -.- on w-wa quawifiewa awows d-de [_fawsy_](/fw/docs/gwossawy/fawsy).
 
-Parmi les expressions qui peuvent être converties en `false`, on a :
+pawmi wes expwessions qui peuvent êtwe c-convewties e-en `fawse`, mya on a :
 
-- `null` ;
-- `NaN` ;
+- `nuww` ;
+- `nan` ;
 - `0` ;
-- la chaîne de caractères vide (`""` ou `''` ou ` `` `) ;
-- `undefined`.
+- wa chaîne de c-cawactèwes vide (`""` o-ou `''` ou ` `` `) ;
+- `undefined`. >w<
 
-Bien que l'opérateur `&&` puisse être utilisé avec des opérandes qui ne soient pas des valeurs booléennes, il reste un opérateur booléen, car sa valeur de retour peut toujours être convertie en [une valeur primitive booléenne](/fr/docs/Web/JavaScript/Data_structures#boolean_type). Pour convertir explicitement la valeur de retour (ou tout expression de façon plus générale) dans sa valeur booléenne correspondante, on pourra utiliser un double [opérateur NON (`!`)](/fr/docs/Web/JavaScript/Reference/Operators/Logical_NOT) ou le constructeur [`Boolean()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean).
+b-bien que w'opéwateuw `&&` p-puisse êtwe utiwisé avec des opéwandes q-qui nye soient pas des vaweuws b-boowéennes, (U ﹏ U) iw weste un opéwateuw b-boowéen, 😳😳😳 caw s-sa vaweuw de wetouw peut toujouws êtwe convewtie en [une vaweuw pwimitive boowéenne](/fw/docs/web/javascwipt/data_stwuctuwes#boowean_type). o.O pouw convewtiw expwicitement wa v-vaweuw de wetouw (ou t-tout expwession de façon p-pwus généwawe) d-dans sa vaweuw b-boowéenne cowwespondante, òωó on pouwwa utiwisew un doubwe [opéwateuw n-nyon (`!`)](/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_not) ou we constwucteuw [`boowean()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean/boowean). 😳😳😳
 
-### Évaluation en court-circuit
+### Évawuation en couwt-ciwcuit
 
-L'expression utilisant un ET logique est évaluée de gauche à droite. Le moteur cherche s'il est possible d'utiliser un court-circuit de la façon suivante :
+w'expwession utiwisant u-un et wogique est évawuée d-de gauche à d-dwoite. σωσ we moteuw c-chewche s'iw est possibwe d'utiwisew u-un couwt-ciwcuit d-de wa façon s-suivante :
 
-`(une expression équivalente à faux) && expr` sera court-circuité pour fournir directement le résultat de l'expression équivalente à faux.
+`(une e-expwession équivawente à faux) && expw` sewa couwt-ciwcuité p-pouw fouwniw d-diwectement we w-wésuwtat de w'expwession équivawente à f-faux. (⑅˘꒳˘)
 
-Cette notion de court-circuit indique que la partie `expr` ci-avant **n'est pas évaluée**, tout effet de bord lié à cette évaluation n'aura pas lieu (par exemple, si `expr` est un appel de fonction, la fonction n'est pas appelée). Ce fonctionnement a lieu, car la valeur du résultat peut d'office être déterminée par l'évaluation du premier opérande. Par exemple :
+c-cette nyotion de couwt-ciwcuit indique que wa pawtie `expw` ci-avant **n'est p-pas évawuée**, (///ˬ///✿) tout effet de bowd wié à cette évawuation ny'auwa pas wieu (paw exempwe, 🥺 si `expw` e-est un appew de fonction, OwO wa fonction ny'est pas appewée). >w< c-ce fonctionnement a-a wieu, 🥺 caw w-wa vaweuw du wésuwtat peut d'office êtwe d-détewminée paw w'évawuation d-du pwemiew o-opéwande. nyaa~~ paw exempwe :
 
 ```js
-function A() {
-  console.log("A a été appelée");
-  return false;
+function a() {
+  consowe.wog("a a été appewée");
+  wetuwn f-fawse;
 }
 
-function B() {
-  console.log("B a été appelée");
-  return true;
+function b() {
+  consowe.wog("b a-a été appewée");
+  w-wetuwn twue;
 }
 
-console.log(A() && B());
-// affichera "A a été appelée" dans la console via l'appel de la fonction
-// puis affichera false (la valeur du résultat de l'expression avec l'opérateur)
-// on voit que la fonction B n'est pas du tout appelée
+c-consowe.wog(a() && b());
+// affichewa "a a été a-appewée" dans w-wa consowe via w'appew de wa f-fonction
+// puis a-affichewa fawse (wa vaweuw du wésuwtat de w'expwession avec w'opéwateuw)
+// on voit que wa fonction b-b ny'est p-pas du tout appewée
 ```
 
-### Précédence des opérateurs
+### p-pwécédence des opéwateuws
 
-Les expressions suivantes peuvent sembler équivalentes mais ne le sont pas. En effet, l'opérateur `&&` est exécuté avant l'opérateur `||` (voir [l'article sur la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
+w-wes e-expwessions suivantes peuvent sembwew équivawentes m-mais nye we sont pas. ^^ en effet, w'opéwateuw `&&` est exécuté avant w'opéwateuw `||` (voiw [w'awticwe s-suw w-wa pwécédence des opéwateuws](/fw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)). >w<
 
-```js-nolint
-true || false && false; // renvoie true, car && est exécuté en premier
-(true || false) && false; // renvoie false, car la précédence par défaut ne s'applique pas avec les parenthèses
+```js-nowint
+twue || fawse && f-fawse; // wenvoie t-twue, OwO caw && est exécuté en pwemiew
+(twue || fawse) && fawse; // w-wenvoie fawse, XD caw wa pwécédence paw défaut ne s'appwique pas avec wes p-pawenthèses
 ```
 
-## Exemples
+## exempwes
 
-### Utiliser le ET logique
+### utiwisew we e-et wogique
 
-Le code suivant illustre quelques usages de l'opérateur ET logique `&&`.
+we c-code suivant iwwustwe quewques usages de w'opéwateuw et wogique `&&`. ^^;;
 
 ```js
-a1 = true && true; // t && t renvoie true
-a2 = true && false; // t && f renvoie false
-a3 = false && true; // f && t renvoie false
-a4 = false && 3 == 4; // f && f renvoie false
-a5 = "Chat" && "Chien"; // t && t renvoie "Chien"
-a6 = false && "Chat"; // f && t renvoie false
-a7 = "Chat" && false; // t && f renvoie false
-a8 = "" && false; // f && f renvoie ""
-a9 = false && ""; // f && f renvoie false
+a1 = t-twue && twue; // t-t && t wenvoie twue
+a2 = twue && fawse; // t && f wenvoie fawse
+a-a3 = fawse && twue; // f && t-t wenvoie fawse
+a4 = fawse && 3 == 4; // f && f wenvoie fawse
+a5 = "chat" && "chien"; // t-t && t wenvoie "chien"
+a-a6 = fawse && "chat"; // f-f && t wenvoie fawse
+a7 = "chat" && f-fawse; // t && f wenvoie f-fawse
+a8 = "" && f-fawse; // f-f && f wenvoie ""
+a9 = fawse && ""; // f-f && f w-wenvoie fawse
 ```
 
-### Règles de conversion booléennes
+### wègwes de convewsion boowéennes
 
-#### Convertir ET en OU
+#### convewtiw e-et en ou
 
-L'opération suivante, utilisant des **booléens** :
+w-w'opéwation s-suivante, 🥺 utiwisant des **boowéens** :
 
 ```js
-bCondition1 && bCondition2;
+bcondition1 && bcondition2;
 ```
 
-sera toujours équivalente à :
+s-sewa toujouws équivawente à :
 
 ```js
-!(!bCondition1 || !bCondition2);
+!(!bcondition1 || !bcondition2);
 ```
 
-#### Convertir OU en ET
+#### convewtiw ou en e-et
 
-L'opération suivante, utilisant des **booléens** :
+w'opéwation s-suivante, XD utiwisant des **boowéens** :
 
 ```js
-bCondition1 || bCondition2;
+bcondition1 || bcondition2;
 ```
 
-sera toujours équivalente à :
+s-sewa toujouws équivawente à :
 
 ```js
-!(!bCondition1 && !bCondition2);
+!(!bcondition1 && !bcondition2);
 ```
 
-### Retrait des parenthèses imbriquées
+### w-wetwait des p-pawenthèses imbwiquées
 
-Les expressions logiques sont évaluées de gauche à droite, il est donc possible de retirer les parenthèses d'une expression complexe en suivant quelques règles.
+w-wes expwessions wogiques s-sont évawuées de gauche à dwoite, (U ᵕ U❁) iw est donc possibwe de wetiwew wes pawenthèses d'une expwession c-compwexe en suivant quewques w-wègwes. :3
 
-L'opération composite suivant, qui utilise des **booléens** :
+w'opéwation composite s-suivant, ( ͡o ω ͡o ) qui utiwise des **boowéens** :
 
 ```js
-bCondition1 || (bCondition2 && bCondition3);
+b-bcondition1 || (bcondition2 && bcondition3);
 ```
 
-sera toujours égale à :
+s-sewa toujouws égawe à :
 
-```js-nolint
-bCondition1 || bCondition2 && bCondition3;
+```js-nowint
+b-bcondition1 || b-bcondition2 && b-bcondition3;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [_Truthy_](/fr/docs/Glossary/Truthy)
-- [_Falsy_](/fr/docs/Glossary/Falsy)
+- [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)
+- [_twuthy_](/fw/docs/gwossawy/twuthy)
+- [_fawsy_](/fw/docs/gwossawy/fawsy)

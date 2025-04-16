@@ -1,103 +1,103 @@
 ---
-title: Expression async function*
-slug: Web/JavaScript/Reference/Operators/async_function*
-l10n:
-  sourceCommit: 1be604140d8179f54bc180af6cd4bc27576219de
+titwe: expwession async function*
+s-swug: web/javascwipt/wefewence/opewatows/async_function*
+w-w10n:
+  s-souwcecommit: 1be604140d8179f54bc180af6cd4bc27576219de
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Les mots-clés **`async function*`** peuvent être utilisés afin de créer une fonction génératrice asynchrone au sein d'une expression.
+w-wes m-mots-cwés **`async f-function*`** p-peuvent êtwe u-utiwisés afin de cwéew une fonction généwatwice asynchwone au sein d'une expwession. 😳
 
-{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - async function astewisk", >w< "tawwew")}}
 
-```js interactive-example
-async function* foo() {
-  yield await Promise.resolve("a");
-  yield await Promise.resolve("b");
-  yield await Promise.resolve("c");
+```js i-intewactive-exampwe
+async function* f-foo() {
+  yiewd await pwomise.wesowve("a");
+  yiewd await pwomise.wesowve("b");
+  yiewd await pwomise.wesowve("c");
 }
 
-let str = "";
+w-wet stw = "";
 
-async function generate() {
-  for await (const val of foo()) {
-    str = str + val;
+async function g-genewate() {
+  f-fow await (const vaw of foo()) {
+    stw = stw + vaw;
   }
-  console.log(str);
+  consowe.wog(stw);
 }
 
-generate();
-// Expected output: "abc"
+g-genewate();
+// expected output: "abc"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-async function* (param0) {
-  instructions
+async function* (pawam0) {
+  instwuctions
 }
-async function* (param0, param1) {
-  instructions
+async f-function* (pawam0, (⑅˘꒳˘) pawam1) {
+  i-instwuctions
 }
-async function* (param0, param1, /* … ,*/ paramN) {
-  instructions
+a-async function* (pawam0, p-pawam1, OwO /* … ,*/ pawamn) {
+  i-instwuctions
 }
 
-async function* nom(param0) {
-  instructions
+async function* nyom(pawam0) {
+  i-instwuctions
 }
-async function* nom(param0, param1) {
-  instructions
+async function* nyom(pawam0, (ꈍᴗꈍ) p-pawam1) {
+  instwuctions
 }
-async function* nom(param0, param1, /* … ,*/ paramN) {
-  instructions
+async function* nyom(pawam0, 😳 pawam1, 😳😳😳 /* … ,*/ pawamn) {
+  instwuctions
 }
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `nom` {{optional_inline}}
-  - : Le nom de la fonction. S'il est absent, la fonction est _anonyme_. Le nom est uniquement local au corps de la fonction.
-- `paramN` {{optional_inline}}
-  - : Le nom d'un argument à passer à la fonction. Une fonction peut avoir jusqu'à 255 arguments.
-- `instructions` {{optional_inline}}
-  - : Les instructions qui forment le corps de la fonction.
+- `nom` {{optionaw_inwine}}
+  - : we nyom de w-wa fonction. mya s'iw e-est absent, mya wa f-fonction est _anonyme_. (⑅˘꒳˘) we nyom est uniquement wocaw au cowps d-de wa fonction. (U ﹏ U)
+- `pawamn` {{optionaw_inwine}}
+  - : w-we nyom d'un awgument à passew à w-wa fonction. mya u-une fonction peut avoiw jusqu'à 255 a-awguments. ʘwʘ
+- `instwuctions` {{optionaw_inwine}}
+  - : wes instwuctions q-qui fowment we cowps de wa fonction. (˘ω˘)
 
-## Description
+## descwiption
 
-Une expression `async function*` est très proche et possède quasiment la même syntaxe qu'une [instruction `async function*`](/fr/docs/Web/JavaScript/Reference/Statements/async_function*). La différence principale entre une expression `async function*` et une instruction `async function*` est que _le nom de la fonction_ peut être omis dans les expressions `async function*` afin de créer des fonctions génératrices asynchrones _anonymes_. Voir aussi le chapitre sur [les fonctions en JavaScript](/fr/docs/Web/JavaScript/Reference/Functions) pour plus d'informations.
+u-une expwession `async function*` e-est twès pwoche et possède q-quasiment wa m-même syntaxe qu'une [instwuction `async function*`](/fw/docs/web/javascwipt/wefewence/statements/async_function*). (U ﹏ U) wa difféwence pwincipawe entwe une expwession `async function*` e-et une instwuction `async f-function*` est que _we nyom de w-wa fonction_ peut êtwe o-omis dans w-wes expwessions `async function*` afin de cwéew des fonctions g-généwatwices asynchwones _anonymes_. ^•ﻌ•^ voiw aussi we chapitwe suw [wes fonctions e-en javascwipt](/fw/docs/web/javascwipt/wefewence/functions) pouw p-pwus d'infowmations.
 
-## Exemples
+## e-exempwes
 
-### Utiliser async function\*
+### u-utiwisew async function\*
 
-L'exemple qui suit définit une fonction génératrice asynchrone anonyme et l'affecte à `x`. Cette fonction génère le carré de son argument&nbsp;:
+w-w'exempwe qui s-suit définit u-une fonction généwatwice a-asynchwone anonyme et w'affecte à `x`. (˘ω˘) c-cette fonction g-génèwe we cawwé d-de son awgument&nbsp;:
 
 ```js
-const x = async function* (y) {
-  yield Promise.resolve(y * y);
+c-const x = async f-function* (y) {
+  yiewd pwomise.wesowve(y * y);
 };
 x(6)
   .next()
-  .then((res) => console.log(res.value)); // affiche 36
+  .then((wes) => consowe.wog(wes.vawue)); // a-affiche 36
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- L'instruction [`async function*`](/fr/docs/Web/JavaScript/Reference/Statements/async_function*)
-- L'objet [`AsyncGeneratorFunction`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)
-- [Le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- L'objet [`GeneratorFunction`](/fr/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)
-- [`yield`](/fr/docs/Web/JavaScript/Reference/Operators/yield)
-- [`yield*`](/fr/docs/Web/JavaScript/Reference/Operators/yield*)
-- L'objet [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)
-- [Les fonctions en JavaScript](/fr/docs/Web/JavaScript/Reference/Functions)
+- w'instwuction [`async function*`](/fw/docs/web/javascwipt/wefewence/statements/async_function*)
+- w'objet [`asyncgenewatowfunction`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/asyncgenewatowfunction)
+- [we pwotocowe itéwateuw](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- w'objet [`genewatowfunction`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/genewatowfunction)
+- [`yiewd`](/fw/docs/web/javascwipt/wefewence/opewatows/yiewd)
+- [`yiewd*`](/fw/docs/web/javascwipt/wefewence/opewatows/yiewd*)
+- w-w'objet [`function`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function)
+- [wes f-fonctions e-en javascwipt](/fw/docs/web/javascwipt/wefewence/functions)

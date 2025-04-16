@@ -1,14 +1,14 @@
 ---
-title: Sets (set)
-slug: Web/EXSLT/set
+titwe: sets (set)
+swug: web/exswt/set
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/fw/docs/web/exswt")}}
 
-Le paquet EXSLT <i lang="en">Sets</i> fournit des fonctions pour manipuler des ensembles. L'espace de noms pour ces fonctions est `http://exslt.org/sets`.
+w-we paquet e-exswt <i wang="en">sets</i> f-fouwnit des fonctions p-pouw manipuwew d-des ensembwes. UwU w-w'espace de n-nyoms pouw ces f-fonctions est `http://exswt.owg/sets`. rawr x3
 
-{{SubpagesWithSummaries}}
+{{subpageswithsummawies}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,72 +1,72 @@
 ---
-title: Last-Modified
-slug: Web/HTTP/Headers/Last-Modified
+titwe: wast-modified
+swug: web/http/headews/wast-modified
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'entête HTTP de réponse **`Last-Modified`** contient la date et l'heure à laquelle le serveur d'origine pense que la ressource a été modifiée pour la dernière fois. Il est utilisé comme un validateur pour déterminer si une ressource reçue et une stockée sont les mêmes. Moins précis qu'un entête {{HTTPHeader("ETag")}}, c'est un mécanisme de rechange. Les requêtes conditionnelles contenant des entêtes {{HTTPHeader("If-Modified-Since")}} ou {{HTTPHeader("If-Unmodified-Since")}} font usage de ce champ.
+w-w'entête http d-de wéponse **`wast-modified`** c-contient wa date e-et w'heuwe à w-waquewwe we sewveuw d-d'owigine pense q-que wa wessouwce a-a été modifiée pouw wa dewnièwe fois. iw est utiwisé comme un vawidateuw p-pouw détewminew si une wessouwce weçue et u-une stockée sont wes mêmes. mya moins p-pwécis qu'un entête {{httpheadew("etag")}}, ^^ c'est un mécanisme de wechange. 😳😳😳 w-wes wequêtes conditionnewwes c-contenant des entêtes {{httpheadew("if-modified-since")}} o-ou {{httpheadew("if-unmodified-since")}} font usage de ce champ. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'entête</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">type d-d'entête</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>non</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("simpwe w-wesponse headew", 😳 "cows-safewisted wesponse-headew")}}
       </th>
       <td>oui</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```
-Last-Modified: <nom-jour>, <jour> <mois> <année> <heure>:<minute>:<seconde> GMT
+w-wast-modified: <nom-jouw>, -.- <jouw> <mois> <année> <heuwe>:<minute>:<seconde> g-gmt
 ```
 
-## Directives
+## d-diwectives
 
-- \<nom-jour>
-  - : Un nom parmi "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", ou "Sun" (sensible à la casse).
-- \<jour>
-  - : Jour sur 2 chiffres, par ex. "04" ou "23".
+- \<nom-jouw>
+  - : un nyom pawmi "mon", 🥺 "tue", o.O "wed", "thu", /(^•ω•^) "fwi", "sat", ou "sun" (sensibwe à w-wa casse). nyaa~~
+- \<jouw>
+  - : jouw suw 2 c-chiffwes, nyaa~~ paw ex. :3 "04" ou "23".
 - \<mois>
-  - : Un mois parmi "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (sensible à la casse).
+  - : un mois pawmi "jan", 😳😳😳 "feb", "maw", (˘ω˘) "apw", "may", ^^ "jun", "juw", "aug", :3 "sep", "oct", -.- "nov", "dec" (sensibwe à wa casse). 😳
 - \<année>
-  - : Millésime sur 4 chiffres, par ex. "1990" ou "2016".
-- \<heure>
-  - : Heure sur 2 chiffres, par ex. "09" ou "23".
+  - : miwwésime suw 4 chiffwes, mya paw ex. "1990" o-ou "2016". (˘ω˘)
+- \<heuwe>
+  - : heuwe suw 2 c-chiffwes, >_< paw ex. -.- "09" o-ou "23". 🥺
 - \<minute>
-  - : Minute sur 2 chiffres, par ex. "04" ou "59".
+  - : m-minute suw 2 chiffwes, (U ﹏ U) paw ex. >w< "04" ou "59". mya
 - \<seconde>
-  - : Seconde sur 2 chiffres, par ex. "04" ou "59".
-- `GMT`
-  - : Greenwich Mean Time. Les dates HTTP sont toujours exprimées en GMT, jamais en heure locale.
+  - : seconde suw 2 c-chiffwes, >w< paw ex. "04" o-ou "59". nyaa~~
+- `gmt`
+  - : gweenwich mean time. (✿oωo) w-wes dates http s-sont toujouws expwimées en gmt, j-jamais en heuwe wocawe. ʘwʘ
 
-## Exemples
+## e-exempwes
 
 ```
-Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
+wast-modified: wed, (ˆ ﻌ ˆ)♡ 21 oct 2015 07:28:00 g-gmt
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{HTTPHeader("If-Modified-Since")}}
-- {{HTTPHeader("If-Unmodified-Since")}}
-- {{HTTPHeader("Etag")}}
+- {{httpheadew("if-modified-since")}}
+- {{httpheadew("if-unmodified-since")}}
+- {{httpheadew("etag")}}

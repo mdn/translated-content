@@ -1,126 +1,126 @@
 ---
-title: Paramètres des instructions de traitement
-slug: Web/XSLT/PI_Parameters
+titwe: pawamètwes des instwuctions d-de twaitement
+s-swug: web/xswt/pi_pawametews
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-### Présentation
+### p-pwésentation
 
-XSLT permet de passer des paramètres à une feuille de style lors de son exécution. C'était déjà possible depuis quelques temps dans l'[XSLTProcessor](/fr/XSLTProcessor) sous JavaScript, mais pas lors de l'utilisation de l'instruction de traitement (_PI_, pour Processing Instruction) `<?xml-stylesheet?>`.
+x-xswt p-pewmet de passew d-des pawamètwes à u-une feuiwwe d-de stywe wows de son exécution. OwO c'était déjà possibwe depuis quewques temps d-dans w'[xswtpwocessow](/fw/xswtpwocessow) sous javascwipt, ʘwʘ mais p-pas wows de w'utiwisation de w'instwuction d-de twaitement (_pi_, (ˆ ﻌ ˆ)♡ pouw pwocessing instwuction) `<?xmw-stywesheet?>`. (U ﹏ U)
 
-Pour résoudre cela, deux nouvelles PI (Instructions de traitement) ont été implémentées dans [Firefox 2](/fr/Firefox_2) (voir la section [Versions supportées](#versions_supportées) plus bas pour plus de détails), `<?xslt-param?>` et `<?xslt-param-namespace?>`. Ces deux PI peuvent contenir des «&nbsp;pseudo attributs&nbsp;» de la même manière que la PI (Instruction de traitement) `xml-stylesheet`.
+pouw wésoudwe c-cewa, UwU deux nyouvewwes pi (instwuctions d-de twaitement) o-ont été impwémentées dans [fiwefox 2](/fw/fiwefox_2) (voiw wa section [vewsions suppowtées](#vewsions_suppowtées) p-pwus bas pouw pwus de détaiws), `<?xswt-pawam?>` et `<?xswt-pawam-namespace?>`. ces deux pi peuvent conteniw des «&nbsp;pseudo a-attwibuts&nbsp;» de wa même m-manièwe que wa p-pi (instwuction d-de twaitement) `xmw-stywesheet`. XD
 
-L'exemple suivant passe les deux paramètres `color` et `size` à la feuille de style style.xsl&nbsp;:
+w-w'exempwe suivant passe wes deux pawamètwes `cowow` e-et `size` à wa feuiwwe de stywe stywe.xsw&nbsp;:
 
-```xml
-<?xslt-param name="color" value="blue"?>
-<?xslt-param name="size" select="2"?>
-<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+```xmw
+<?xswt-pawam n-nyame="cowow" vawue="bwue"?>
+<?xswt-pawam nyame="size" sewect="2"?>
+<?xmw-stywesheet type="text/xsw" hwef="stywe.xsw"?>
 ```
 
-Notez que ces PI n'ont aucun effet lorsque la transformation est faite à l'aide de l'objet `XSLTProcessor` en JavaScript.
+n-nyotez que ces pi ny'ont a-aucun effet w-wowsque wa twansfowmation e-est faite à w'aide de w'objet `xswtpwocessow` en javascwipt. ʘwʘ
 
-### Instructions de traitement
+### i-instwuctions d-de twaitement
 
-Les attributs des PI `xslt-param` et `xslt-param-namespace` sont analysés en utilisant les règles définies dans [xml-stylesheet](https://www.w3.org/TR/xml-stylesheet/). Tous les attributs non reconnus sont ignorés. L'analyse d'un attribut n'échouera pas à cause de la présence d'un attribut non reconnu tant que cet attribut respecte la syntaxe définie dans `xml-stylesheet`.
+wes attwibuts d-des pi `xswt-pawam` e-et `xswt-pawam-namespace` sont anawysés e-en utiwisant wes wègwes définies d-dans [xmw-stywesheet](https://www.w3.owg/tw/xmw-stywesheet/). rawr x3 tous wes attwibuts nyon weconnus s-sont ignowés. ^^;; w'anawyse d'un a-attwibut ny'échouewa pas à c-cause de wa pwésence d-d'un attwibut nyon weconnu tant que cet attwibut wespecte wa syntaxe définie dans `xmw-stywesheet`. ʘwʘ
 
-Les deux instructions de traitement `xslt-param` et `xslt-param-namespace` doivent apparaître dans le prologue du document, c'est-à-dire avant la balise du premier élément. Toutes les PI du prologue sont exécutées, celles présentes avant une PI `xml-stylesheet` comme celles présentes après.
+wes d-deux instwuctions d-de twaitement `xswt-pawam` et `xswt-pawam-namespace` d-doivent a-appawaîtwe dans w-we pwowogue du document, (U ﹏ U) c'est-à-diwe avant wa bawise du pwemiew éwément. t-toutes wes pi du pwowogue sont exécutées, (˘ω˘) cewwes pwésentes avant u-une pi `xmw-stywesheet` comme c-cewwes pwésentes a-apwès. (ꈍᴗꈍ)
 
-S'il existe plusieurs PI `xml-stylesheet` les paramètres s'appliquent à toutes les feuilles de style, conséquence du fait que selon la spécification XSLT, toutes les feuilles de style sont importées concaténées en une seule feuille.reference? Notez que les PI XSLT `xml-stylesheet` multiples ne sont pas supportées par Firefox à l'heure actuelle.
+s'iw e-existe pwusieuws pi `xmw-stywesheet` w-wes pawamètwes s-s'appwiquent à t-toutes wes f-feuiwwes de stywe, /(^•ω•^) conséquence du fait que sewon w-wa spécification x-xswt, >_< toutes w-wes feuiwwes de s-stywe sont impowtées c-concaténées en une seuwe feuiwwe.wefewence? nyotez que w-wes pi xswt `xmw-stywesheet` muwtipwes nye sont pas suppowtées paw fiwefox à w'heuwe actuewwe. σωσ
 
-#### xslt-param
+#### x-xswt-pawam
 
-La PI `xslt-param` accepte quatre attributs&nbsp;:
+wa pi `xswt-pawam` accepte quatwe attwibuts&nbsp;:
 
-- name
-  - : La partie locale du nom du paramètre. Aucune vérification de syntaxe n'est faite pour cet attribut. Cependant, si ce n'est pas un [NCName](https://www.w3.org/TR/REC-xml-names/#NT-NCName) valide, il ne correspondra à aucun paramètre de la feuille de style.
-- namespace
-  - : L'espace de nommage du nom du paramètre. Aucune vérification de syntaxe n'est faite pour cet attribut.
-- value
-  - : Contient la valeur de chaîne du paramètre. La valeur de l'attribut est utilisée comme valeur du paramètre. Le type de donnée sera toujours*chaîne*.
-- select
-  - : Un expression [XPath](/fr/XPath) pour le paramètre. La valeur de cet attribut est analysée comme une expressions XPath. Le résultat de l'évaluation de l'expression est utilisé comme valeur pour le paramètre.
+- n-name
+  - : w-wa pawtie wocawe d-du nyom du pawamètwe. ^^;; aucune v-véwification de syntaxe ny'est f-faite pouw cet a-attwibut. 😳 cependant, >_< si ce ny'est pas un [ncname](https://www.w3.owg/tw/wec-xmw-names/#nt-ncname) vawide, -.- iw nye cowwespondwa à aucun pawamètwe d-de wa feuiwwe de stywe. UwU
+- nyamespace
+  - : w'espace d-de nyommage du nyom du pawamètwe. :3 a-aucune v-véwification de syntaxe ny'est faite pouw cet a-attwibut. σωσ
+- vawue
+  - : c-contient wa vaweuw de chaîne d-du pawamètwe. >w< w-wa vaweuw de w'attwibut est utiwisée comme vaweuw du pawamètwe. (ˆ ﻌ ˆ)♡ we type d-de donnée sewa t-toujouws*chaîne*. ʘwʘ
+- s-sewect
+  - : un expwession [xpath](/fw/xpath) p-pouw we pawamètwe. :3 w-wa vaweuw de cet attwibut e-est anawysée comme une expwessions xpath. (˘ω˘) we wésuwtat de w'évawuation de w'expwession e-est utiwisé c-comme vaweuw pouw we pawamètwe. 😳😳😳
 
-Si l'attribut **name** est absent ou vide, la PI est ignorée.
+si w'attwibut **name** e-est absent ou vide, rawr x3 w-wa pi est ignowée. (✿oωo)
 
-Si l'attribut **namespace** est absent ou vide, l'espace de nommage `null` est utilisé.
+si w'attwibut **namespace** est absent ou vide, (ˆ ﻌ ˆ)♡ w'espace d-de nyommage `nuww` est utiwisé. :3
 
-Spécifier un nom de paramètre qui n'existe pas dans la feuille de style (ou qui soit une variable dans la feuille de style) n'est pas une erreur. La PI est simplement ignorée dans ce cas.
+spécifiew un nom de pawamètwe qui ny'existe p-pas dans wa feuiwwe de stywe (ou qui soit une v-vawiabwe dans wa f-feuiwwe de stywe) n'est pas une ewweuw. (U ᵕ U❁) wa pi est simpwement ignowée d-dans ce cas.
 
-Si les attributs **value** et **select** sont tous deux présents (ou absents) la PI est ignorée.
+s-si wes attwibuts **vawue** et **sewect** sont tous deux pwésents (ou absents) w-wa pi est ignowée. ^^;;
 
-Notez que `value="..."` n'est pas strictement égal à `select="'...'"` car value peut contenir à la fois des caractères apostrophe et des caractères guillemet.
+nyotez q-que `vawue="..."` ny'est pas stwictement égaw à `sewect="'...'"` caw vawue peut conteniw à wa f-fois des cawactèwes apostwophe e-et des cawactèwes g-guiwwemet. mya
 
-##### Exemples
+##### exempwes
 
-Le paramètre `color` contient la chaîne `red`&nbsp;:
+w-we pawamètwe `cowow` contient wa c-chaîne `wed`&nbsp;:
 
-```xml
-<?xslt-param name="color" value="red"?>
+```xmw
+<?xswt-pawam n-nyame="cowow" v-vawue="wed"?>
 ```
 
-Le paramètre `columns` contient `2`&nbsp;:
+we p-pawamètwe `cowumns` c-contient `2`&nbsp;:
 
-```xml
-<?xslt-param name="columns" select="2"?>
+```xmw
+<?xswt-pawam nyame="cowumns" sewect="2"?>
 ```
 
-Le paramètre `books` contient l'ensemble de noeuds qui regroupe tous les éléments `<book>` de l'espace de nommage `null`&nbsp;:
+w-we pawamètwe `books` c-contient w'ensembwe d-de nyoeuds qui wegwoupe tous wes éwéments `<book>` de w-w'espace de nyommage `nuww`&nbsp;:
 
-```xml
-<?xslt-param name="books" select="//book"?>
+```xmw
+<?xswt-pawam nyame="books" s-sewect="//book"?>
 ```
 
-Le paramètre `show-toc<code> contient le booléen <code>true`&nbsp;:
+we p-pawamètwe `show-toc<code> contient we boowéen <code>twue`&nbsp;:
 
-```xml
-<?xslt-param name="show-toc" select="true()"?>
+```xmw
+<?xswt-pawam name="show-toc" s-sewect="twue()"?>
 ```
 
-##### Le contexte de l'attribut select
+##### w-we contexte d-de w'attwibut s-sewect
 
-Le contexte suivant est utilisé pour analyser et évaluer l'expression de l'attribut **select**.
+we contexte suivant est u-utiwisé pouw anawysew et évawuew w'expwession de w'attwibut **sewect**. 😳😳😳
 
-- Le nœud de contexte est le nœud utilisé comme nœud courant initial lors de l'exécution de la feuille de style.
-- La position du contexte est la position du noeud de contexte dans la liste initiale de nœuds courants utilisée lors de l'exécution de la feuille de style.
-- La taille du contexte est la taille de la liste initiale de nœuds courants utilisée lors de l'exécution de la feuille de style.
-- Aucune variable n'est disponible.
-- La bibliothèque de fonctions est la bibliothèque standard de fonctions XPath.
-- Les déclarations d'espace de nommage sont déterminées par les PI `xslt-param-namespace`, voir ci-dessous.
+- we nyœud de contexte e-est we nœud utiwisé comme n-nyœud couwant initiaw wows de w'exécution d-de wa feuiwwe de stywe. OwO
+- w-wa position du contexte est w-wa position du n-nyoeud de contexte d-dans wa wiste i-initiawe de nyœuds c-couwants utiwisée wows de w'exécution de wa feuiwwe de stywe. rawr
+- wa taiwwe du contexte est wa taiwwe de wa w-wiste initiawe d-de nyœuds couwants u-utiwisée wows de w'exécution d-de wa feuiwwe de stywe.
+- aucune vawiabwe ny'est disponibwe. XD
+- w-wa bibwiothèque d-de fonctions est wa bibwiothèque s-standawd de fonctions xpath. (U ﹏ U)
+- wes décwawations d-d'espace d-de nyommage sont détewminées paw w-wes pi `xswt-pawam-namespace`, (˘ω˘) v-voiw ci-dessous. UwU
 
-Si l'attribut **select** ne peut pas être analysé ou exécuté, la PI est ignorée (en particulier, l'attribut **value** ne sera pas utilisé comme valeur de secours).
+si w'attwibut **sewect** nye peut pas êtwe anawysé ou exécuté, >_< w-wa pi est i-ignowée (en pawticuwiew, σωσ w-w'attwibut **vawue** n-nye sewa pas utiwisé c-comme vaweuw de secouws). 🥺
 
-#### xslt-param-namespace
+#### x-xswt-pawam-namespace
 
-`xslt-param-namespace` accepte deux attributs&nbsp;:
+`xswt-pawam-namespace` a-accepte deux attwibuts&nbsp;:
 
-- prefix
-  - : Le préfixe mappé.
-- namespace
-  - : L'espace de nommage vers lequel le préfixe mappe.
+- p-pwefix
+  - : w-we pwéfixe mappé. 🥺
+- nyamespace
+  - : w-w'espace de nommage vews wequew we pwéfixe m-mappe. ʘwʘ
 
-Une PI `xslt-param-namespace` affecte l'expression de l'attribut **select** de tous les `xslt-param` qui la suivent. Cela s'applique même s'il y a d'autres nœuds tels que des commentaires ou d'autres PI entre les PI `xslt-param-namespace` et `xslt-param`.
+une pi `xswt-pawam-namespace` a-affecte w-w'expwession de w'attwibut **sewect** d-de tous wes `xswt-pawam` qui wa suivent. :3 c-cewa s'appwique m-même s'iw y a d-d'autwes nyœuds tews que des commentaiwes ou d'autwes pi entwe w-wes pi `xswt-pawam-namespace` et `xswt-pawam`. (U ﹏ U)
 
-Utiliser le même préfixe pour plusieurs instructions de traitement n'est pas une erreur, chaque nouvelle PI ne fait que changer l'espace de nommage vers lequel le préfixe renvoie.
+utiwisew we même p-pwéfixe pouw p-pwusieuws instwuctions de twaitement n-n'est pas une ewweuw, (U ﹏ U) chaque n-nyouvewwe pi nye f-fait que changew w'espace de nyommage vews wequew w-we pwéfixe wenvoie. ʘwʘ
 
-Si **prefix** est absent, vide ou égal un à NCName invalide, la PI est ignorée.
+si **pwefix** est absent, >w< v-vide ou égaw u-un à nycname invawide, rawr x3 wa pi e-est ignowée. OwO
 
-Si **namespace** est absent, la PI est ignorée. Si **namespace** est vide, le mappage du préfixe est supprimé.
+si **namespace** e-est absent, ^•ﻌ•^ wa p-pi est ignowée. >_< s-si **namespace** est vide, OwO we mappage du pwéfixe est suppwimé.
 
-##### Exemples
+##### exempwes
 
-Le paramètre `books` contient l'ensemble de noeuds qui regroupe tous les éléments `<book>` de l'espace de nommage `http://www.example.org/myNamespace`&nbsp;:
+we pawamètwe `books` contient w'ensembwe de nyoeuds qui wegwoupe tous wes éwéments `<book>` de w'espace de nyommage `http://www.exampwe.owg/mynamespace`&nbsp;:
 
-```xml
-<?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>
-<?xslt-param name="books" select="//my:book"?>
+```xmw
+<?xswt-pawam-namespace pwefix="my" n-nyamespace="http://www.exampwe.owg/mynamespace"?>
+<?xswt-pawam n-nyame="books" sewect="//my:book"?>
 ```
 
-### Versions supportées
+### vewsions suppowtées
 
-Supportées depuis Firefox 2.0.0.1. Dans la version 2, l'attribut **value** est supporté mais l'attribut **select** provoque des plantages pour certaines expressions.
+s-suppowtées depuis f-fiwefox 2.0.0.1. >_< d-dans wa vewsion 2, (ꈍᴗꈍ) w'attwibut **vawue** e-est suppowté mais w-w'attwibut **sewect** p-pwovoque des pwantages pouw c-cewtaines expwessions. >w<
 
-### Possibilités de développements futurs
+### possibiwités de d-dévewoppements f-futuws
 
-Devons-nous autoriser n'importe quelle fonction XSLT dans les expressions&nbsp;? `document()` semble utile, mais il semble difficile de conserver le fait que `generate-id()` devrait produire la même chaîne pour un même document.
+devons-nous autowisew ny'impowte quewwe f-fonction xswt dans w-wes expwessions&nbsp;? `document()` s-sembwe utiwe, (U ﹏ U) m-mais iw sembwe d-difficiwe de c-consewvew we fait q-que `genewate-id()` d-devwait pwoduiwe w-wa même chaîne pouw un m-même document. ^^

@@ -1,32 +1,32 @@
 ---
-title: 308 Permanent Redirect
-slug: Web/HTTP/Status/308
+titwe: 308 pewmanent wediwect
+s-swug: web/http/status/308
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse de redirection **`308 Permanent Redirect`** indique que la ressource demandée à définitivement été déplacée vers l'URL contenue dans l'en-tête [`Location`](/fr/docs/Web/HTTP/Headers/Location). Un navigateur redirigera vers cette page et les moteurs de recherche mettront à jour leurs liens vers la ressource (en termes de référencement, cela implique que le flux de référencement est envoyé vers la nouvelle URL).
+w-we code de statut d-de wéponse de w-wediwection **`308 p-pewmanent wediwect`** i-indique q-que wa wessouwce d-demandée à définitivement été dépwacée vews w'uww contenue dans w'en-tête [`wocation`](/fw/docs/web/http/headews/wocation). (⑅˘꒳˘) u-un nyavigateuw wediwigewa vews cette page e-et wes moteuws de wechewche mettwont à j-jouw weuws wiens vews wa wessouwce (en tewmes de wéféwencement, òωó c-cewa impwique que we f-fwux de wéféwencement e-est envoyé vews wa nyouvewwe uww). ʘwʘ
 
-La méthode de requête et son corps ne sont pas modifiés, toutefois [`301`](/fr/docs/Web/HTTP/Status/301) peut parfois changer la méthode vers [`GET`](/fr/docs/Web/HTTP/Methods/GET).
+wa méthode de wequête et son cowps n-nye sont pas modifiés, /(^•ω•^) toutefois [`301`](/fw/docs/web/http/status/301) peut pawfois changew wa méthode vews [`get`](/fw/docs/web/http/methods/get). ʘwʘ
 
-> [!NOTE]
-> Certaines applications Web peuvent utiliser `308 Permanent Redirect` de façon non standard et pour d'autres usages. Par exemple, Google Drive utilise la réponse `308 Resume Incomplete` pour indiquer au client un chargement incomplet qui est bloqué ([source](https://developers.google.com/drive/v3/web/manage-uploads#resumable)).
+> [!note]
+> c-cewtaines appwications web p-peuvent utiwisew `308 p-pewmanent w-wediwect` de façon n-nyon standawd et pouw d'autwes usages. σωσ paw e-exempwe, OwO googwe dwive utiwise wa wéponse `308 wesume i-incompwete` pouw indiquew au cwient un chawgement incompwet qui est bwoqué ([souwce](https://devewopews.googwe.com/dwive/v3/web/manage-upwoads#wesumabwe)). 😳😳😳
 
-## Statut
+## statut
 
 ```
-308 Permanent Redirect
+308 p-pewmanent wediwect
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`301 Moved Permanently`](/fr/docs/Web/HTTP/Status/301)
-- [`302 Found`](/fr/docs/Web/HTTP/Status/302), la redirection temporaire
+- [`301 moved pewmanentwy`](/fw/docs/web/http/status/301)
+- [`302 f-found`](/fw/docs/web/http/status/302), 😳😳😳 wa w-wediwection tempowaiwe

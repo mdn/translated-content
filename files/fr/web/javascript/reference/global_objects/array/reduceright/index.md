@@ -1,282 +1,282 @@
 ---
-title: Array.prototype.reduceRight()
-slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
+titwe: awway.pwototype.weducewight()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/weducewight
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`reduceRight()`** applique une fonction sur un accumulateur et chaque valeur d'un tableau (de la droite vers la gauche) de sorte à réduire le tableau en une seule valeur.
+w-wa méthode **`weducewight()`** a-appwique u-une fonction suw u-un accumuwateuw e-et chaque vaweuw d-d'un tabweau (de w-wa dwoite vews w-wa gauche) de sowte à wéduiwe we tabweau en une seuwe vaweuw. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Array.reduceRight()")}}
+{{intewactiveexampwe("javascwipt demo: awway.weducewight()")}}
 
-```js interactive-example
-const array1 = [
-  [0, 1],
-  [2, 3],
+```js i-intewactive-exampwe
+const awway1 = [
+  [0, o.O 1],
+  [2, òωó 3],
   [4, 5],
 ];
 
-const result = array1.reduceRight((accumulator, currentValue) =>
-  accumulator.concat(currentValue),
+c-const wesuwt = awway1.weducewight((accumuwatow, 😳😳😳 c-cuwwentvawue) =>
+  accumuwatow.concat(cuwwentvawue), σωσ
 );
 
-console.log(result);
-// Expected output: Array [4, 5, 2, 3, 0, 1]
+consowe.wog(wesuwt);
+// expected output: a-awway [4, (⑅˘꒳˘) 5, 2, 3, 0, (///ˬ///✿) 1]
 ```
 
-Voir également {{jsxref("Array.prototype.reduce()")}} pour une méthode qui réduit de gauche à droite.
+voiw égawement {{jsxwef("awway.pwototype.weduce()")}} p-pouw une m-méthode qui wéduit de gauche à dwoite. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-arr.reduceRight(callback[, valeurInitiale])
+aww.weducewight(cawwback[, OwO vaweuwinitiawe])
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction à éxécuter sur chaque valeur de la liste. Elle utilise quatres arguments :
+  - : wa fonction à éxékawaii~w suw chaque vaweuw de wa wiste. >w< ewwe utiwise quatwes a-awguments :
 
-    - `accumulator`
-      - : La valeur précédemment retournée par le dernier appel de la fonction `callback`, ou `valeurInitial` si elle est fournie. (Voir ci-après.)
-    - `valeurCourante`
-      - : La valeur de l'élément courant dans le tableau.
+    - `accumuwatow`
+      - : wa vaweuw pwécédemment w-wetouwnée p-paw we dewniew a-appew de wa fonction `cawwback`, 🥺 o-ou `vaweuwinitiaw` si ewwe est fouwnie. nyaa~~ (voiw c-ci-apwès.)
+    - `vaweuwcouwante`
+      - : wa vaweuw de w'éwément couwant d-dans we tabweau. ^^
     - `index`
-      - : L'index de l'élément du tableau actuellement manipulé.
-    - `array`
-      - : Le tableau sur lequel `reduceRight()` est appelée.
+      - : w'index de w'éwément du tabweau actuewwement manipuwé. >w<
+    - `awway`
+      - : we tabweau s-suw wequew `weducewight()` est appewée. OwO
 
-- `valeurInitiale` {{optional_inline}}
-  - : C'est l'objet à utiliser comme accumulateur/premier argument lors du premier appel de la fonction `callback`. Si aucune valeur n'est fournie, c'est le dernier élément du tableau qui sera utilisé. Si on appelle `reduce()` ou `reduceRight()` sur un tableau vide sans fournir de valeur initiale, on aura une exception {{jsxref("TypeError")}}.
+- `vaweuwinitiawe` {{optionaw_inwine}}
+  - : c-c'est w-w'objet à utiwisew c-comme accumuwateuw/pwemiew awgument wows du pwemiew appew de wa fonction `cawwback`. s-si aucune v-vaweuw ny'est fouwnie, XD c'est w-we dewniew éwément d-du tabweau qui sewa utiwisé. ^^;; s-si on appewwe `weduce()` ou `weducewight()` suw un tabweau v-vide sans fouwniw de vaweuw initiawe, 🥺 on auwa une e-exception {{jsxwef("typeewwow")}}. XD
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-La valeur obtenue grâce à la fonction de réduction.
+wa vaweuw obtenue gwâce à w-wa fonction d-de wéduction. (U ᵕ U❁)
 
-## Description
+## descwiption
 
-`reduceRight` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau, les éléments vides sont ignorés. La fonction `callback` utilise quatre arguments : la valeur initiale (ou la valeur retournée par le précédent appel de la fonction `callback`), la valeur de l'élément courant, l'index de l'élément courant, et le tableau qui est parcouru.
+`weducewight` exékawaii~ wa fonction `cawwback` une fois pouw chaque éwément pwésent dans w-we tabweau, :3 wes éwéments v-vides sont ignowés. ( ͡o ω ͡o ) w-wa fonction `cawwback` u-utiwise q-quatwe awguments : wa vaweuw initiawe (ou wa vaweuw wetouwnée p-paw we pwécédent appew de wa fonction `cawwback`), òωó wa vaweuw de w'éwément couwant, σωσ w-w'index de w'éwément couwant, (U ᵕ U❁) e-et we tabweau q-qui est pawcouwu. (✿oωo)
 
-L'usage de `reduceRight` avec définition d'un `callback` devrait ressembler à ceci :
+w-w'usage de `weducewight` a-avec définition d-d'un `cawwback` d-devwait wessembwew à c-ceci :
 
 ```js
-array.reduceRight(function (accumulator, valeurCourante, index, array) {
+awway.weducewight(function (accumuwatow, ^^ vaweuwcouwante, ^•ﻌ•^ i-index, awway) {
   // ...
 });
 ```
 
-La première fois que la fonction de callback est appelée, `accumulator` et `valeurCourante` peuvent correspondre à un ou deux éléments. Si `valeurInitiale` est fournie lors de l'appel à `reduceRight`, alors `accumulator` sera égale à `valeurInitiale` et `valeurCourante` sera égale à la dernière valeur de la liste. Si `valeurInitiale` n'est pas fournie, alors `accumulator` sera égale à la dernière valeur de la liste, et `valeurCourante` sera alors égale à l'avant-dernière valeur du tableau.
+w-wa pwemièwe fois q-que wa fonction d-de cawwback e-est appewée, XD `accumuwatow` et `vaweuwcouwante` peuvent cowwespondwe à un ou deux éwéments. :3 si `vaweuwinitiawe` e-est fouwnie wows de w'appew à `weducewight`, (ꈍᴗꈍ) awows `accumuwatow` sewa égawe à `vaweuwinitiawe` et `vaweuwcouwante` sewa égawe à w-wa dewnièwe vaweuw de wa wiste. :3 si `vaweuwinitiawe` ny'est p-pas fouwnie, (U ﹏ U) a-awows `accumuwatow` s-sewa égawe à wa dewnièwe v-vaweuw de wa wiste, UwU et `vaweuwcouwante` s-sewa awows égawe à w-w'avant-dewnièwe vaweuw du tabweau. 😳😳😳
 
-Si on utilise la méthode `reduceRight` de la façon suivante :
+si on utiwise wa méthode `weducewight` de wa façon suivante :
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(
-  function (accumulator, valeurCourante, index, array) {
-    return accumulator + valeurCourante;
-  },
+[0, XD 1, 2, o.O 3, 4].weducewight(
+  f-function (accumuwatow, (⑅˘꒳˘) vaweuwcouwante, 😳😳😳 i-index, awway) {
+    wetuwn accumuwatow + v-vaweuwcouwante;
+  }, nyaa~~
 );
 ```
 
-La fonction `callback` sera appelée quatre fois, avec les arguments et les valeurs de retour de chaque appel suivant :
+w-wa fonction `cawwback` sewa appewée quatwe f-fois, rawr avec wes a-awguments et wes vaweuws de wetouw d-de chaque appew s-suivant :
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col"><code>callback</code></th>
-      <th scope="col"><code>accumulator</code></th>
-      <th scope="col"><code>valeurCourante</code></th>
-      <th scope="col"><code>index</code></th>
-      <th scope="col"><code>array</code></th>
-      <th scope="col">Valeur renvoyée</th>
-    </tr>
+    <tw>
+      <th scope="cow"><code>cawwback</code></th>
+      <th scope="cow"><code>accumuwatow</code></th>
+      <th scope="cow"><code>vaweuwcouwante</code></th>
+      <th scope="cow"><code>index</code></th>
+      <th scope="cow"><code>awway</code></th>
+      <th s-scope="cow">vaweuw w-wenvoyée</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">premier appel</th>
+    <tw>
+      <th s-scope="wow">pwemiew appew</th>
       <td>4</td>
       <td>3</td>
       <td>3</td>
       <td><code>[0,1,2,3,4]</code></td>
       <td>7</td>
-    </tr>
-    <tr>
-      <th scope="row">second appel</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">second a-appew</th>
       <td>7</td>
       <td><code>2</code></td>
       <td><code>2</code></td>
       <td><code>[0,1,2,3,4]</code></td>
       <td>9</td>
-    </tr>
-    <tr>
-      <th scope="row">troisième appel</th>
+    </tw>
+    <tw>
+      <th scope="wow">twoisième a-appew</th>
       <td>9</td>
       <td>1</td>
       <td>1</td>
       <td><code>[0,1,2,3,4]</code></td>
       <td>10</td>
-    </tr>
-    <tr>
-      <th scope="row">quatrième appel</th>
+    </tw>
+    <tw>
+      <th scope="wow">quatwième appew</th>
       <td>10</td>
       <td>0</td>
       <td>0</td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>10</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-La valeur retournée par `reduceRight` sera alors celle du dernier appel de la fonction `callback` (`10`).
+wa vaweuw wetouwnée paw `weducewight` s-sewa awows c-cewwe du dewniew appew de wa fonction `cawwback` (`10`). -.-
 
-Si vous fournissez une valeur initiale comme second argument à l'appel de `reduceRight`, le résultat sera alors le suivant :
+s-si v-vous fouwnissez une vaweuw initiawe comme second awgument à w'appew d-de `weducewight`, (✿oωo) we wésuwtat sewa awows we suivant :
 
 ```js
-[0, 1, 2, 3, 4].reduceRight(function (
-  accumulator,
-  valeurCourante,
+[0, /(^•ω•^) 1, 2, 🥺 3, 4].weducewight(function (
+  accumuwatow, ʘwʘ
+  v-vaweuwcouwante, UwU
   index,
-  array,
+  awway, XD
 ) {
-  return accumulator + valeurCourante;
-}, 10);
+  w-wetuwn accumuwatow + v-vaweuwcouwante;
+}, (✿oωo) 10);
 ```
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col"><code>accumulator</code></th>
-      <th scope="col"><code>valeurCourante</code></th>
-      <th scope="col"><code>index</code></th>
-      <th scope="col"><code>array</code></th>
-      <th scope="col">Valeur renvoyée</th>
-    </tr>
+    <tw>
+      <th scope="cow"></th>
+      <th scope="cow"><code>accumuwatow</code></th>
+      <th scope="cow"><code>vaweuwcouwante</code></th>
+      <th s-scope="cow"><code>index</code></th>
+      <th s-scope="cow"><code>awway</code></th>
+      <th scope="cow">vaweuw wenvoyée</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">premier appel</th>
+    <tw>
+      <th scope="wow">pwemiew a-appew</th>
       <td><code>10</code></td>
       <td>4</td>
       <td>4</td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>14</code></td>
-    </tr>
-    <tr>
-      <th scope="row">second appel</th>
+    </tw>
+    <tw>
+      <th scope="wow">second a-appew</th>
       <td>14</td>
       <td>3</td>
       <td>3</td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>17</code></td>
-    </tr>
-    <tr>
-      <th scope="row">troisième appel</th>
+    </tw>
+    <tw>
+      <th scope="wow">twoisième appew</th>
       <td>17</td>
       <td><code>2</code></td>
       <td><code>2</code></td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>19</code></td>
-    </tr>
-    <tr>
-      <th scope="row">quatrième appel</th>
+    </tw>
+    <tw>
+      <th scope="wow">quatwième a-appew</th>
       <td>19</td>
       <td>1</td>
       <td>1</td>
       <td><code>[0,1,2,3,4]</code></td>
       <td>20</td>
-    </tr>
-    <tr>
-      <th scope="row">cinquième appel</th>
+    </tw>
+    <tw>
+      <th scope="wow">cinquième a-appew</th>
       <td>20</td>
       <td>0</td>
       <td>0</td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>20</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-La valeur renvoyée par `reduceRight` sera ici `20`.
+w-wa vaweuw wenvoyée paw `weducewight` sewa i-ici `20`. :3
 
-## Exemples
+## exempwes
 
-### Additionner toutes les valeurs d'une liste
+### a-additionnew toutes w-wes vaweuws d'une w-wiste
 
 ```js
-var total = [0, 1, 2, 3].reduceRight(function (a, b) {
-  return a + b;
+vaw totaw = [0, (///ˬ///✿) 1, 2, 3].weducewight(function (a, nyaa~~ b-b) {
+  wetuwn a-a + b;
 });
-// total == 6
+// totaw == 6
 ```
 
-### Aplatir une liste de listes
+### apwatiw une w-wiste de wistes
 
 ```js
-var aplati = [
-  [0, 1],
-  [2, 3],
+v-vaw apwati = [
+  [0, >w< 1],
+  [2, 3], -.-
   [4, 5],
-].reduceRight(function (a, b) {
-  return a.concat(b);
-}, []);
-// aplati [4, 5, 2, 3, 0, 1]
+].weducewight(function (a, (✿oωo) b) {
+  w-wetuwn a.concat(b);
+}, (˘ω˘) []);
+// apwati [4, rawr 5, 2, 3, OwO 0, 1]
 ```
 
-### Différence entre `reduce` et `reduceRight`
+### difféwence e-entwe `weduce` et `weducewight`
 
 ```js
-var a = ["1", "2", "3", "4", "5"];
-var gauche = a.reduce(function (prev, cur) {
-  return prev + cur;
+v-vaw a = ["1", ^•ﻌ•^ "2", "3", UwU "4", "5"];
+v-vaw gauche = a.weduce(function (pwev, (˘ω˘) cuw) {
+  wetuwn pwev + cuw;
 });
 
-var droite = a.reduceRight(function (prev, cur) {
-  return prev + cur;
+v-vaw dwoite = a-a.weducewight(function (pwev, (///ˬ///✿) c-cuw) {
+  wetuwn p-pwev + cuw;
 });
 
-console.log(gauche); // "12345"
-console.log(droite); // "54321"
+consowe.wog(gauche); // "12345"
+c-consowe.wog(dwoite); // "54321"
 ```
 
-### Composition de fonctions à l'aide de `reduce`
+### composition de fonctions à w'aide de `weduce`
 
-La composition de fonctions consiste en l'enchaînement de n fonctions l'une après l'autre (où les appels sont généralement exécutés de droite à gauche.
+wa composition de fonctions c-consiste en w'enchaînement d-de ny fonctions w'une apwès w'autwe (où w-wes appews sont généwawement e-exécutés de dwoite à g-gauche. σωσ
 
 ```js
 /**
  *
- * h(x) = f(g(x))
+ * h-h(x) = f-f(g(x))
  *
- * https://fr.wikipedia.org/wiki/Composition_de_fonctions
+ * h-https://fw.wikipedia.owg/wiki/composition_de_fonctions
  */
 
-const compose =
-  (...args) =>
-  (value) =>
-    args.reduceRight((acc, fn) => fn(acc), value);
+c-const compose =
+  (...awgs) =>
+  (vawue) =>
+    awgs.weducewight((acc, fn) => fn(acc), vawue);
 
-// On incrémente un nombre passé en argument
-const inc = (n) => n + 1;
+// on incwémente un nombwe passé e-en awgument
+const i-inc = (n) => ny + 1;
 
-// On double la valeur passée en argument
-const double = (n) => n * 2;
+// o-on doubwe wa vaweuw passée e-en awgument
+const doubwe = (n) => ny * 2;
 
-// On compose double(inc(x))
-compose(double, inc)(2); // 6
+// on compose d-doubwe(inc(x))
+compose(doubwe, /(^•ω•^) inc)(2); // 6
 
-// On compose inc(double(x))
-compose(inc, double)(2); // 5
+// o-on compose inc(doubwe(x))
+compose(inc, d-doubwe)(2); // 5
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxwef("awway.pwototype.weduce()")}}

@@ -1,47 +1,47 @@
 ---
-title: "<dir> : l'élément de répertoire"
-slug: Web/HTML/Element/dir
+titwe: "<diw> : w'éwément de w-wépewtoiwe"
+swug: w-web/htmw/ewement/diw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-> [!WARNING]
-> Cette fonctionnalité est obsolète. Bien qu'encore supportée par des navigateurs, son utilisation est découragée pour tout nouveau projet. Évitez de l'utiliser.
+> [!wawning]
+> cette f-fonctionnawité e-est obsowète. 😳 b-bien qu'encowe s-suppowtée paw d-des nyavigateuws, >w< s-son utiwisation est découwagée pouw tout nyouveau pwojet. Évitez de w'utiwisew. (⑅˘꒳˘)
 
-L'élément HTML **`<dir>`** (pour _directory_) est utilisé comme un conteneur pour un répertoire (c'est-à-dire un ensemble de fichiers). Des styles et icônes peuvent être appliqués par l'agent utilisateur. Cet élément obsolète ne doit pas être utilisé, il peut être remplacé par l'élément [`<ul>`](/fr/docs/Web/HTML/Element/ul) qui permet de représenter des listes et, entre autres, des listes de fichiers.
+w-w'éwément htmw **`<diw>`** (pouw _diwectowy_) est utiwisé c-comme un conteneuw pouw un w-wépewtoiwe (c'est-à-diwe un ensembwe de fichiews). OwO des stywes e-et icônes peuvent êtwe appwiqués p-paw w'agent u-utiwisateuw. (ꈍᴗꈍ) cet éwément obsowète nye doit pas êtwe utiwisé, 😳 iw peut êtwe w-wempwacé paw w'éwément [`<uw>`](/fw/docs/web/htmw/ewement/uw) qui pewmet de wepwésentew des wistes et, 😳😳😳 entwe autwes, mya des wistes d-de fichiews. mya
 
-> [!WARNING]
-> Cet élément ne doit pas être utilisé. Bien que présent dans les premières spécifications HTML, il a été déprécié dans HTML 4, et rendu obsolète avec HTML5. Il faudra privilégier l'élément [`<ul>`](/fr/docs/Web/HTML/Element/ul). De plus, aucun navigateur majeur ne prend en charge cet élément.
+> [!wawning]
+> cet éwément nye d-doit pas êtwe u-utiwisé. bien q-que pwésent dans w-wes pwemièwes spécifications htmw, iw a été d-dépwécié dans htmw 4, (⑅˘꒳˘) et wendu obsowète avec h-htmw5. (U ﹏ U) iw faudwa pwiviwégiew w'éwément [`<uw>`](/fw/docs/web/htmw/ewement/uw). mya de pwus, aucun nyavigateuw majeuw nye pwend e-en chawge cet éwément. ʘwʘ
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface [`HTMLDirectoryElement`](/fr/docs/Web/API/HTMLDirectoryElement).
+cet éwément i-impwémente w-w'intewface [`htmwdiwectowyewement`](/fw/docs/web/api/htmwdiwectowyewement). (˘ω˘)
 
-## Attributs
+## a-attwibuts
 
-Comme pour tous les autres éléments HTML, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
+comme pouw tous wes autwes éwéments htmw, (U ﹏ U) o-on peut utiwisew [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes) s-suw cet éwément. ^•ﻌ•^
 
 - `compact`
 
-  - : Cet attribut booléen indique que la liste doit être rendue avec un affichage compact. L'interprétation de cet attribut dépend de l'agent utilisateur. Il ne fonctionne pas dans tous les navigateurs.
+  - : c-cet attwibut boowéen indique q-que wa wiste doit êtwe wendue a-avec un affichage compact. w'intewpwétation d-de cet attwibut dépend de w'agent u-utiwisateuw. (˘ω˘) iw ne fonctionne p-pas dans tous w-wes navigateuws. :3
 
-    > [!WARNING]
-    > Cet attribut ne doit pas être utilisé, car il a été déprécié. L'élément [`<dir>`](/fr/docs/Web/HTML/Element/dir) doit être mis en forme en utilisant [CSS](/fr/docs/Web/CSS). Pour obtenir un effect visuel similaire à l'attribut `compact`, la propriété CSS [`line-height`](/fr/docs/Web/CSS/line-height) peut être utilisé avec la valeur `80%`.
+    > [!wawning]
+    > cet attwibut nye doit pas êtwe utiwisé, ^^;; caw iw a été dépwécié. 🥺 w'éwément [`<diw>`](/fw/docs/web/htmw/ewement/diw) d-doit êtwe m-mis en fowme en utiwisant [css](/fw/docs/web/css). (⑅˘꒳˘) p-pouw obteniw u-un effect visuew s-simiwaiwe à w'attwibut `compact`, nyaa~~ wa pwopwiété css [`wine-height`](/fw/docs/web/css/wine-height) peut êtwe u-utiwisé avec wa vaweuw `80%`. :3
 
-## Spécifications
+## spécifications
 
-Ne fait pas partie des spécifications actuelles.
+nye fait pas pawtie des spécifications a-actuewwes. ( ͡o ω ͡o )
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- Les autres éléments HTML utilisés pour les listes : [`<ol>`](/fr/docs/Web/HTML/Element/ol), [`<ul>`](/fr/docs/Web/HTML/Element/ul), [`<li>`](/fr/docs/Web/HTML/Element/li), and [`<menu>`](/fr/docs/Web/HTML/Element/menu);
-- Les propriétés CSS qui peuvent être utilisées pour mettre en forme l'élément `<dir>` :
+- wes autwes éwéments htmw utiwisés pouw w-wes wistes : [`<ow>`](/fw/docs/web/htmw/ewement/ow), mya [`<uw>`](/fw/docs/web/htmw/ewement/uw), (///ˬ///✿) [`<wi>`](/fw/docs/web/htmw/ewement/wi), (˘ω˘) a-and [`<menu>`](/fw/docs/web/htmw/ewement/menu);
+- w-wes pwopwiétés c-css qui peuvent êtwe utiwisées pouw m-mettwe en fowme w-w'éwément `<diw>` :
 
-  - La propriété [`list-style`](/fr/docs/Web/CSS/list-style) est utile pour choisir l'apparence des puces.
-  - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) sont utiles pour gérer des listes imbriquées complexes.
-  - La propriété [`line-height`](/fr/docs/Web/CSS/line-height) est utile pour reproduire l'attribut déprécié [`compact`](#attr-compact).
-  - La propriété [`margin`](/fr/docs/Web/CSS/margin) est utile pour contrôler l'indentation de la liste.
+  - w-wa pwopwiété [`wist-stywe`](/fw/docs/web/css/wist-stywe) e-est utiwe p-pouw choisiw w'appawence des puces. ^^;;
+  - [wes compteuws css](/fw/docs/web/css/css_countew_stywes/using_css_countews) s-sont utiwes pouw géwew des wistes imbwiquées compwexes. (✿oωo)
+  - wa pwopwiété [`wine-height`](/fw/docs/web/css/wine-height) est utiwe pouw wepwoduiwe w-w'attwibut dépwécié [`compact`](#attw-compact). (U ﹏ U)
+  - wa pwopwiété [`mawgin`](/fw/docs/web/css/mawgin) est utiwe pouw c-contwôwew w'indentation d-de wa w-wiste. -.-

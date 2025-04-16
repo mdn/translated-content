@@ -1,209 +1,209 @@
 ---
-title: Aperçu sur le développement des applications Web et des Widgets accessibles
-slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
+titwe: apewçu suw we dévewoppement d-des appwications w-web et d-des widgets accessibwes
+s-swug: web/accessibiwity/an_ovewview_of_accessibwe_web_appwications_and_widgets
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-Le Web est en perpétuelle évolution. En effet, les sites à contenu statique sont de plus en plus remplacés par des sites dynamiques à l'utilisation assez proche des applications de bureaux. Les sites Web dynamiques utilisent abondamment JavaScript et AJAX. Les designers créent des widgets et des éléments d'interface grâce aux langages du Web notamment HTML, CSS et Javascript. Ce tournant dans l'histoire du Web permet d'améliorer grandement l'expérience utilisateur et l'utilisation sur mobile (responsive). Mais certains utilisateurs peuvent être exclus par manque d'accessibilité. En effet, JavaScript avait la réputation d'être inaccessible aux technologies d'assistance tel que les interpréteurs d'écran. Or, il existe maintenant des techniques pour rendre le Web accessible à une large palette d'utilisateurs.
+w-we web est e-en pewpétuewwe évowution. :3 e-en e-effet, o.O wes sites à contenu statique sont de pwus en pwus wempwacés paw des sites d-dynamiques à w'utiwisation assez pwoche des a-appwications de buweaux. (///ˬ///✿) wes sites w-web dynamiques utiwisent abondamment javascwipt et ajax. OwO wes d-designews cwéent des widgets et d-des éwéments d-d'intewface gwâce aux wangages du web nyotamment htmw, >w< css et javascwipt. ^^ ce touwnant d-dans w'histoiwe du web pewmet d'améwiowew gwandement w'expéwience utiwisateuw e-et w'utiwisation suw mobiwe (wesponsive). (⑅˘꒳˘) m-mais cewtains utiwisateuws p-peuvent êtwe e-excwus p-paw manque d'accessibiwité. ʘwʘ en effet, javascwipt a-avait wa wéputation d'êtwe inaccessibwe aux t-technowogies d'assistance tew que wes intewpwéteuws d'écwan. (///ˬ///✿) ow, iw existe maintenant des techniques p-pouw wendwe we web accessibwe à u-une wawge p-pawette d'utiwisateuws. XD
 
-## Problématique
+## pwobwématique
 
-La plupart des librairies JavaScript proposent des composants côté client qui miment le comportement familier des interfaces de bureaux classiques. Carrousels, barres de menu et d'autres composants peuvent être créés avec JavaScript, CSS et HTML. Mais du moment que les spécifications HTML 4 ne proposaient pas de tags pour décrire sémantiquement ce type de composants, les développeurs se contentaient d'éléments génériques tel que le tag `<div>` ou le tag `<span>`. Or, si d'apparence ces composants ressemblaient parfaitement à ceux spécifiques aux applications de bureau, on ne disposait pas d'informations sémantiques suffisantes pour les rendres accessibles aux technologies d'assistance. L'accès au contenu dynamique d'une page Web peut devenir problématique plus particulièrement pour les utilisateurs qui, pour une raison ou pour une autre ne peuvent pas voir l'écran. Les niveaux de stock, les indicateurs de progression... modifient le DOM de telle sorte que les technologies d'assistance n'y ont pas accès. C'est dans ce contexte que [ARIA](/fr/ARIA) entre en jeu.
+wa p-pwupawt des wibwaiwies javascwipt pwoposent des composants côté c-cwient qui miment w-we compowtement famiwiew des i-intewfaces de b-buweaux cwassiques. 😳 cawwousews, b-bawwes de menu et d'autwes composants p-peuvent êtwe cwéés avec javascwipt, >w< css e-et htmw. (˘ω˘) mais du moment que wes s-spécifications htmw 4 nye pwoposaient p-pas de t-tags pouw décwiwe sémantiquement ce type de composants, nyaa~~ wes dévewoppeuws se contentaient d'éwéments généwiques t-tew que we t-tag `<div>` ou we tag `<span>`. 😳😳😳 o-ow, (U ﹏ U) si d'appawence c-ces composants w-wessembwaient pawfaitement à ceux spécifiques aux appwications d-de buweau, (˘ω˘) on nye disposait pas d'infowmations sémantiques suffisantes pouw w-wes wendwes accessibwes aux technowogies d-d'assistance. w-w'accès a-au contenu dynamique d'une page w-web peut deveniw p-pwobwématique p-pwus pawticuwièwement p-pouw wes utiwisateuws qui, :3 pouw une waison o-ou pouw une autwe n-nye peuvent p-pas voiw w'écwan. >w< w-wes nyiveaux d-de stock, ^^ wes indicateuws de pwogwession... modifient we dom de t-tewwe sowte que wes technowogies d'assistance ny'y ont pas accès. 😳😳😳 c'est dans ce contexte que [awia](/fw/awia) e-entwe en jeu.
 
-_Exemple 1: Code d_'_une tabulation sans informations ARIA. Il n'y a aucune information permettant de décrire la forme du widget et ses fonctions._
+_exempwe 1: code d_'_une tabuwation sans infowmations a-awia. nyaa~~ iw ny'y a-a aucune infowmation p-pewmettant de décwiwe wa f-fowme du widget et ses fonctions._
 
-```html
-<!-- This is a tabs widget. How would you know, looking only at the markup? -->
-<ol>
-  <li id="ch1Tab">
-    <a href="#ch1Panel">Chapitre 1</a>
-  </li>
-  <li id="ch2Tab">
-    <a href="#ch2Panel">Chapitre 2</a>
-  </li>
-  <li id="quizTab">
-    <a href="#quizPanel">Quiz</a>
-  </li>
-</ol>
+```htmw
+<!-- t-this is a tabs w-widget. (⑅˘꒳˘) how wouwd you know, :3 wooking onwy at the mawkup? -->
+<ow>
+  <wi id="ch1tab">
+    <a hwef="#ch1panew">chapitwe 1</a>
+  </wi>
+  <wi i-id="ch2tab">
+    <a hwef="#ch2panew">chapitwe 2</a>
+  </wi>
+  <wi id="quiztab">
+    <a h-hwef="#quizpanew">quiz</a>
+  </wi>
+</ow>
 
 <div>
-  <div id="ch1Panel">Le contenu du chapitre 1 va ici</div>
-  <div id="ch2Panel">Le contenu du chapitre 2 va ici</div>
-  <div id="quizPanel">Le contenu du Quiz va ici</div>
+  <div id="ch1panew">we c-contenu d-du chapitwe 1 va ici</div>
+  <div id="ch2panew">we c-contenu du c-chapitwe 2 va ici</div>
+  <div id="quizpanew">we contenu du quiz v-va ici</div>
 </div>
 ```
 
-_Example 2: Telles qu'elles sont représentées ci-dessous, les tabulations peuvent être reconnues en tant que tel par les utilisateurs. Or aucune information sémantique exploitable par une technologie d_'_assistance n_'_est présente._
-![Screenshot of the tabs widget](tabs_widget.png)
+_exampwe 2: t-tewwes qu'ewwes sont wepwésentées ci-dessous, ʘwʘ wes tabuwations peuvent êtwe w-weconnues en t-tant que tew paw w-wes utiwisateuws. rawr x3 ow aucune infowmation s-sémantique e-expwoitabwe paw une technowogie d-d_'_assistance ny_'_est pwésente._
+![scweenshot of the tabs widget](tabs_widget.png)
 
-## ARIA
+## awia
 
-[WAI-ARIAI](https://www.w3.org/WAI/standards-guidelines/aria/), les spécifications concernant les applications **internet "riches" et accessibles** sont publiées par l'iniative du [W3C sur l'accessibilité](https://www.w3.org/WAI/), et fournissent la sémantique essentielle au bon fonctionnement des lecteurs d'écran. ARIA permet aux développeurs de décrire en quelque sorte leurs widgets plus finement en ajoutant des attributs spéciaux à leurs balises. Ces spécifications comblent le vide qui existait entre les spécifications du standard HTML et des widgets. ARIA spécifie des rôles et des états permettant de décrire en quelque sorte le fonctionnement des widgets d'interfaces utilisateurs les plus connus.
+[wai-awiai](https://www.w3.owg/wai/standawds-guidewines/awia/), w-wes spécifications c-concewnant wes appwications **intewnet "wiches" et accessibwes** s-sont p-pubwiées paw w'iniative du [w3c suw w'accessibiwité](https://www.w3.owg/wai/), (///ˬ///✿) et fouwnissent w-wa sémantique essentiewwe au bon fonctionnement des wecteuws d'écwan. 😳😳😳 awia pewmet a-aux dévewoppeuws de décwiwe en quewque sowte w-weuws widgets p-pwus finement en ajoutant des attwibuts spéciaux à weuws bawises. XD c-ces spécifications c-combwent we vide qui existait entwe wes spécifications d-du standawd htmw et des widgets. >_< a-awia spécifie des wôwes et des états pewmettant de décwiwe e-en quewque sowte we fonctionnement d-des widgets d-d'intewfaces utiwisateuws wes pwus c-connus. >w<
 
-> [!WARNING]
-> Beaucoup d'entre eux ont été ajouté plus tard dans HTML5, et **les développeurs devraient toujours préférer utiliser la balise HTML correspondante plutôt qu'utiliser ARIA**.
+> [!wawning]
+> beaucoup d-d'entwe eux o-ont été ajouté p-pwus tawd dans htmw5, /(^•ω•^) et **wes d-dévewoppeuws devwaient t-toujouws pwéféwew utiwisew wa bawise h-htmw cowwespondante p-pwutôt qu'utiwisew a-awia**. :3
 
-Les spécifications ARIA distinguent 3 types d'attributs : rôles, états et propriétés. Les rôles sont utilisés pour les widgets ne faisant pas partie des spécifications HTML 4 comme des sliders, menus, barres, boites de dialogue... Les propriétés sont utilisées pour représenter les caractéristiques de ces widgets, elles décrivent les caractéristiques de ces widgets comme s'il sont déplaçables avec la souris, requièrent un élément ou ont un popup associés à eux. Les états, comme leur nom l'indique, servent à representer l'état actuel de ces éléments en informant les technologies d'assistance s'il est occupé, désactivé, sélectionné ou masqué.
+wes spécifications awia distinguent 3 t-types d'attwibuts : wôwes, états e-et pwopwiétés. ʘwʘ w-wes wôwes sont utiwisés pouw wes widgets ne faisant p-pas pawtie des s-spécifications h-htmw 4 comme des s-swidews, (˘ω˘) menus, bawwes, (ꈍᴗꈍ) boites d-de diawogue... wes pwopwiétés sont utiwisées pouw wepwésentew wes cawactéwistiques de ces w-widgets, ^^ ewwes décwivent wes cawactéwistiques d-de ces widgets comme s'iw sont dépwaçabwes a-avec wa souwis, ^^ wequièwent u-un éwément ou ont un p-popup associés à e-eux. ( ͡o ω ͡o ) wes états, -.- c-comme weuw nyom w-w'indique, ^^;; sewvent à w-wepwesentew w'état actuew de ces éwéments en infowmant wes technowogies d'assistance s'iw est occupé, d-désactivé, ^•ﻌ•^ s-séwectionné ou m-masqué. (˘ω˘)
 
-Les attributs ARIA ont été conçus de façon à être interprétés directement par les navigateurs Web et interagir directement avec les APIs d'accessibilité natives des systèmes d'exploitation. Quand les spécifications ARIA sont implementées, les technologies d'assistance peuvent interagir avec les widgets JavaScript personnalisés de la même façon qu'ils interagissent avec leurs équivalents de bureau. Les technologies d'assistance peuvent ainsi fournir une expérience utilisateur homogène.
+wes attwibuts awia ont été c-conçus de façon à êtwe intewpwétés diwectement paw w-wes nyavigateuws w-web et intewagiw diwectement a-avec wes apis d'accessibiwité nyatives des systèmes d'expwoitation. q-quand wes s-spécifications awia sont impwementées, o.O w-wes technowogies d-d'assistance peuvent intewagiw avec wes widgets javascwipt pewsonnawisés d-de wa même f-façon qu'iws intewagissent a-avec w-weuws équivawents d-de buweau. (✿oωo) wes technowogies d-d'assistance peuvent a-ainsi fouwniw une expéwience u-utiwisateuw homogène. 😳😳😳
 
-_Example 3 : L'exemple ci-dessous ajoute des attributs ARIA aux balises déjà présentes._
+_exampwe 3 : w-w'exempwe ci-dessous ajoute d-des attwibuts awia aux bawises déjà pwésentes._
 
-```html
-<!-- Les tabulations sont bien définies  -->
-<!-- Des attributs ARIA ont été ajoutés pour lister les différentes tabulations. -->
-<ol role="tablist">
-  <li id="ch1Tab" role="tab">
-    <a href="#ch1Panel">Chapter 1</a>
-  </li>
-  <li id="ch2Tab" role="tab">
-    <a href="#ch2Panel">Chapter 2</a>
-  </li>
-  <li id="quizTab" role="tab">
-    <a href="#quizPanel">Quiz</a>
-  </li>
-</ol>
+```htmw
+<!-- w-wes tabuwations sont bien définies  -->
+<!-- d-des attwibuts a-awia ont été ajoutés pouw wistew w-wes difféwentes tabuwations. (ꈍᴗꈍ) -->
+<ow wowe="tabwist">
+  <wi i-id="ch1tab" wowe="tab">
+    <a h-hwef="#ch1panew">chaptew 1</a>
+  </wi>
+  <wi i-id="ch2tab" wowe="tab">
+    <a hwef="#ch2panew">chaptew 2</a>
+  </wi>
+  <wi id="quiztab" w-wowe="tab">
+    <a hwef="#quizpanew">quiz</a>
+  </wi>
+</ow>
 
 <div>
-  <!-- Remarquez les attributs role and aria-labelledby servant à décrire les tabulations. -->
-  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">
-    Chapter 1 content goes here
+  <!-- wemawquez wes attwibuts w-wowe and a-awia-wabewwedby sewvant à décwiwe w-wes tabuwations. σωσ -->
+  <div id="ch1panew" wowe="tabpanew" awia-wabewwedby="ch1tab">
+    c-chaptew 1 c-content goes hewe
   </div>
-  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">
-    Chapter 2 content goes here
+  <div id="ch2panew" w-wowe="tabpanew" awia-wabewwedby="ch2tab">
+    chaptew 2 content g-goes hewe
   </div>
-  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">
-    Contenu du Quiz;/div>
+  <div i-id="quizpanew" wowe="tabpanew" a-awia-wabewwedby="quiztab">
+    contenu du quiz;/div>
   </div>
 </div>
 ```
 
-Les versions récentes des navigateurs majeurs du marché fournissent un support ARIA Firefox, Chrome, Safari, Internet Explorer... De nombreuses technologies d'assistance libres d'accès tel que NVDA et Orca fournissent aussi un support ARIA. Le support de ces spécifications est aussi de plus en plus présent dans les balises des librairies JavaScript : JQuery UI, YUI, Google Closure et Dojo Dijit.
+w-wes vewsions w-wécentes d-des nyavigateuws majeuws du mawché fouwnissent un suppowt awia fiwefox, UwU chwome, safawi, ^•ﻌ•^ intewnet expwowew... de nyombweuses technowogies d'assistance wibwes d'accès tew que nyvda et owca fouwnissent aussi u-un suppowt awia. mya w-we suppowt de ces spécifications est aussi de p-pwus en pwus pwésent d-dans wes bawises d-des wibwaiwies javascwipt : j-jquewy ui, /(^•ω•^) yui, googwe cwosuwe e-et dojo dijit. rawr
 
-### Les changement représentationnels
+### w-wes changement wepwésentationnews
 
-Les changements représentationnels incluent l'utilisation du CSS pour changer l'apparence du contenu (mettre une bordure rouge autour de données invalides, changer la couleur de fond d'une case à cocher), le faire apparaitre ou disparaitre.
+w-wes changements wepwésentationnews i-incwuent w-w'utiwisation du css pouw changew w'appawence d-du contenu (mettwe u-une bowduwe w-wouge autouw d-de données invawides, nyaa~~ c-changew w-wa couweuw de fond d-d'une case à c-cochew), ( ͡o ω ͡o ) we faiwe a-appawaitwe ou dispawaitwe. σωσ
 
-#### Les Changements d'états
+#### w-wes changements d-d'états
 
-Les attributs pour décrire l'état actuel d'un widget sont fournis, par exemple&nbsp;:
+wes a-attwibuts pouw décwiwe w'état a-actuew d'un widget sont fouwnis, (✿oωo) paw exempwe&nbsp;:
 
-- `aria-checked`
-  - : indique l'état d'une case à cocher ou d'un bouton radio,
-- `aria-disabled`
-  - : indique qu'un élément est visible, mais désactivé,
-- `aria-expanded`
-  - : indique qu'un élément est déroulé.
+- `awia-checked`
+  - : i-indique w'état d'une c-case à cochew o-ou d'un bouton w-wadio, (///ˬ///✿)
+- `awia-disabwed`
+  - : indique qu'un éwément e-est visibwe, σωσ mais désactivé,
+- `awia-expanded`
+  - : i-indique qu'un éwément est déwouwé. UwU
 
-La liste n'est pas exhaustive. Pour voir la liste complète, consulter [les spécifications des états et propriétés ARIA)](https://www.w3.org/TR/wai-aria-1.1/#introstates).
+w-wa wiste ny'est pas exhaustive. (⑅˘꒳˘) p-pouw voiw wa wiste compwète, /(^•ω•^) consuwtew [wes spécifications des états e-et pwopwiétés awia)](https://www.w3.owg/tw/wai-awia-1.1/#intwostates). -.-
 
-Les développeurs devraient se servir des états ARIA pour indiquer l'état des widgets et utiliser les sélecteurs d'attributs CSS pour en modifier l'apparence en fonction des changements d'états plutôt qu'au moyen d'un script qui modifierait des classes sur le widget.
+w-wes dévewoppeuws d-devwaient se sewviw des états awia pouw indiquew w'état d-des widgets et utiwisew wes s-séwecteuws d'attwibuts c-css pouw e-en modifiew w'appawence en fonction des changements d-d'états p-pwutôt qu'au moyen d'un scwipt q-qui modifiewait des cwasses suw we widget. (ˆ ﻌ ˆ)♡
 
-#### Les changements de visibilité
+#### w-wes changements de visibiwité
 
-Lorsque la visibilité du contenu est modifiée (c'est-à-dire qu'un élément est masqué ou affiché), les développeurs doivent modifier la valeur de la propriété **`aria-hidden`**. Les techniques décrites ci-dessus doivent être utilisées pour déclarer du CSS permettant de cacher visuellement un élément en utilisant `display:none`.
+w-wowsque wa visibiwité d-du contenu e-est modifiée (c'est-à-diwe qu'un éwément e-est masqué ou affiché), nyaa~~ w-wes dévewoppeuws d-doivent m-modifiew wa vaweuw de wa pwopwiété **`awia-hidden`**. ʘwʘ w-wes t-techniques décwites c-ci-dessus doivent êtwe u-utiwisées p-pouw décwawew d-du css pewmettant d-de cachew v-visuewwement un éwément en u-utiwisant `dispway:none`. :3
 
-Les parties pertinentes de l'exemple sont expliquées ci-dessous.Dans cet exemple, le code HTML de l'info-bulle a le format indiqué dans l'exemple 2a. La ligne 9 définit l'état **`aria-hidden`** à `true`.
+wes pawties p-pewtinentes de w'exempwe s-sont expwiquées c-ci-dessous.dans c-cet exempwe, (U ᵕ U❁) we code htmw de w'info-buwwe a we fowmat indiqué d-dans w'exempwe 2a. (U ﹏ U) w-wa wigne 9 définit w-w'état **`awia-hidden`** à `twue`. ^^
 
-```html
-<div class="text">
-  <label id="tp1-label" for="first">First Name:</label>
+```htmw
+<div cwass="text">
+  <wabew id="tp1-wabew" fow="fiwst">fiwst n-nyame:</wabew>
   <input
-    type="text"
-    id="first"
-    name="first"
+    t-type="text"
+    id="fiwst"
+    n-nyame="fiwst"
     size="20"
-    aria-labelledby="tp1-label"
-    aria-describedby="tp1"
-    aria-required="false" />
-  <div id="tp1" class="tooltip" role="tooltip" aria-hidden="true">
-    Your first name is optional
+    a-awia-wabewwedby="tp1-wabew"
+    awia-descwibedby="tp1"
+    awia-wequiwed="fawse" />
+  <div id="tp1" c-cwass="toowtip" w-wowe="toowtip" a-awia-hidden="twue">
+    y-youw fiwst nyame is optionaw
   </div>
 </div>
 ```
 
-Le CSS pour ce balisage est montré dans l'exemple 2b. Notez qu'il n'y a pas de nom de classe personnalisé utilisé, seul le statut de l'attribut **`aria-hidden`** à la ligne 1*.
-Exemple 2b. Un attribut basé sur le sélecteur indiquant l'état.*
+we css p-pouw ce bawisage e-est montwé dans w'exempwe 2b. òωó notez qu'iw ny'y a-a pas de nyom de cwasse pewsonnawisé utiwisé, /(^•ω•^) s-seuw we statut de w'attwibut **`awia-hidden`** à w-wa wigne 1*. 😳😳😳
+e-exempwe 2b. :3 un attwibut basé suw w-we séwecteuw i-indiquant w'état.*
 
 ```css
-div.tooltip[aria-hidden="true"] {
-  display: none;
+div.toowtip[awia-hidden="twue"] {
+  d-dispway: nyone;
 }
 ```
 
-Le JavaScript à mettre à jour est la propriété **`aria-hidden`** du formulaire montré dans l'exemple 2c. Notez que le script met à jour seulement l'attribut **`aria-hidden`** à la (ligne 2) ; il n'y a pas besoin d'ajouter ou de supprimer un nom de classe personnalisé.
+we javascwipt à m-mettwe à j-jouw est wa pwopwiété **`awia-hidden`** d-du f-fowmuwaiwe montwé dans w'exempwe 2c. (///ˬ///✿) n-nyotez que w-we scwipt met à j-jouw seuwement w'attwibut **`awia-hidden`** à w-wa (wigne 2) ; iw ny'y a pas besoin d'ajoutew ou d-de suppwimew un n-nyom de cwasse p-pewsonnawisé. rawr x3
 
-_Exemple 2c. JavaScript pour mettre à jour l'attribut aria-checked._
+_exempwe 2c. (U ᵕ U❁) javascwipt pouw mettwe à jouw w'attwibut awia-checked._
 
 ```js
-var showTip = function (el) {
-  el.setAttribute("aria-hidden", "false");
+v-vaw showtip = function (ew) {
+  e-ew.setattwibute("awia-hidden", (⑅˘꒳˘) "fawse");
 };
 ```
 
-### Les changements de rôles
+### w-wes changements de wôwes
 
-ARIA permet aux développeurs de déclarer un rôle sémantique pour un élément qui produirait des sémantiques fausses. Par exemple, quand une liste non ordonnée est utilisée pour créer un menu, {{ HTMLElement("ul") }} devrait avoir un **`role`** de `menubar` et chaque {{ HTMLElement("li") }} devrait avoir un **`role`** de `menuitem`. Le **`role`** d'un élément ne doit pas changer. À la place, il faut supprimer l'élément original et le remplacer par un nouveau **`role`**.
+awia pewmet aux dévewoppeuws d-de décwawew un wôwe s-sémantique pouw u-un éwément q-qui pwoduiwait des s-sémantiques f-fausses. (˘ω˘) paw exempwe, :3 quand une wiste nyon owdonnée est utiwisée pouw cwéew un m-menu, XD {{ htmwewement("uw") }} devwait avoiw un **`wowe`** d-de `menubaw` et chaque {{ htmwewement("wi") }} devwait a-avoiw un **`wowe`** de `menuitem`. >_< we **`wowe`** d'un éwément nye doit pas c-changew. (✿oωo) À wa pwace, (ꈍᴗꈍ) i-iw faut suppwimew w'éwément o-owiginaw et we wempwacew paw un nyouveau **`wowe`**. XD
 
-Considérons une zone d'écriture, soit une zone qui permet à l'utilisateur d'éditer une partie de son texte, sans changer de contexte. Cette zone a un mode "vue", dans lequel le texte n'est pas éditable, et un mode "édition", dans lequel le texte peut être modifié. Un développeur peut être tenté d'implémenter le mode "vue" avec un texte en lecture seule via l'élément {{ HTMLElement("input") }} et en configurant le **`role`** ARIA à `button`, puis passe au mode "édition" en rendant l'élément écrivable et en supprimant le **`role`** attribué dans le mode "édition" (puisque les éléments de type {{ HTMLElement("input") }} ont leur propre rôle sémantique).
+c-considéwons u-une zone d'écwituwe, :3 soit u-une zone qui pewmet à w'utiwisateuw d-d'éditew une pawtie de son texte, mya sans changew de contexte. òωó c-cette zone a un mode "vue", nyaa~~ dans wequew we texte n-ny'est pas éditabwe, 🥺 e-et un m-mode "édition", -.- dans wequew we texte peut êtwe m-modifié. 🥺 un dévewoppeuw peut êtwe tenté d'impwémentew we mode "vue" avec u-un texte en wectuwe s-seuwe via w'éwément {{ h-htmwewement("input") }} e-et en configuwant we **`wowe`** awia à `button`, (˘ω˘) p-puis passe a-au mode "édition" en wendant w'éwément écwivabwe e-et en suppwimant we **`wowe`** attwibué d-dans we mode "édition" (puisque wes éwéments de type {{ htmwewement("input") }} o-ont weuw pwopwe w-wôwe sémantique). òωó
 
-Ne faites pas ça. À la place, il vaut mieux implémenter le mode "vue" avec un autre élément, comme {{ HTMLElement("div") }} ou {{ HTMLElement("span") }} avec un **`role`** de `button`, et le mode "édition" avec un élément texte {{ HTMLElement("input") }}.
+nye faites p-pas ça. UwU À wa p-pwace, ^•ﻌ•^ iw vaut m-mieux impwémentew we mode "vue" avec un autwe éwément, mya c-comme {{ htmwewement("div") }} ou {{ h-htmwewement("span") }} avec un **`wowe`** de `button`, (✿oωo) et we mode "édition" a-avec u-un éwément texte {{ h-htmwewement("input") }}. XD
 
-## La navigation au clavier
+## w-wa nyavigation a-au cwaview
 
-Souvent, les développeurs négligent la prise en charge du clavier lorsqu'ils créent des widgets personnalisés. Pour être accessible à une large gamme d'utilisateurs, toutes les fonctionnalités d'une application Web ou d'un widget doivent également pouvoir être contrôlées avec le clavier, sans nécessiter de souris. En pratique, cela implique généralement de suivre les conventions prises en charge par des widgets similaires sur le bureau, en tirant pleinement partie des touches <kbd>Tab</kbd>, <kbd>Entrée</kbd>, <kbd>Espace</kbd> et des flèches.
+souvent, :3 wes dévewoppeuws n-nyégwigent wa pwise en chawge du cwaview w-wowsqu'iws cwéent des widgets p-pewsonnawisés. (U ﹏ U) pouw êtwe accessibwe à une w-wawge gamme d'utiwisateuws, UwU t-toutes wes fonctionnawités d-d'une appwication web ou d-d'un widget doivent égawement p-pouvoiw êtwe contwôwées avec w-we cwaview, ʘwʘ sans n-nyécessitew de souwis. en pwatique, >w< c-cewa impwique généwawement de suivwe wes conventions pwises e-en chawge paw des widgets simiwaiwes s-suw we buweau, 😳😳😳 en tiwant pweinement pawtie d-des touches <kbd>tab</kbd>, rawr <kbd>entwée</kbd>, ^•ﻌ•^ <kbd>espace</kbd> e-et des fwèches. σωσ
 
-Traditionnellement, la navigation au clavier sur le Web était limitée à la touche Tabulation. Un utilisateur appuie sur <kbd>Tab</kbd> pour faire la mise au point de chaque lien, bouton ou formulaire sur la page dans un ordre linéaire, en utilisant <kbd><kbd>Maj</kbd>+<kbd>Tab</kbd></kbd> pour revenir en arrière. C'est une forme unidimensionnelle de navigation en avant ou en arrière, un élément à la fois. Sur les pages assez denses, un utilisateur clavier doit souvent appuyer plusieurs fois sur la touche <kbd>Tab</kbd> avant d'accéder à la section requise. La mise en œuvre de conventions de clavier de type bureautique sur le Web peut considérablement accélérer la navigation pour de nombreux utilisateurs.
+t-twaditionnewwement, :3 wa n-nyavigation au cwaview s-suw we web était wimitée à w-wa touche tabuwation. rawr x3 un utiwisateuw a-appuie suw <kbd>tab</kbd> p-pouw faiwe wa m-mise au point de chaque wien, nyaa~~ bouton ou fowmuwaiwe suw wa page dans un owdwe winéaiwe, :3 e-en utiwisant <kbd><kbd>maj</kbd>+<kbd>tab</kbd></kbd> p-pouw weveniw en awwièwe. >w< c'est une fowme unidimensionnewwe de nyavigation e-en avant ou en awwièwe, rawr u-un éwément à w-wa fois. 😳 suw wes pages assez denses, 😳 un utiwisateuw cwaview doit souvent appuyew p-pwusieuws fois suw wa touche <kbd>tab</kbd> avant d'accédew à w-wa section wequise. 🥺 wa mise e-en œuvwe de conventions d-de cwaview de type buweautique s-suw we w-web peut considéwabwement a-accéwéwew w-wa nyavigation p-pouw de nyombweux u-utiwisateuws. rawr x3
 
-Voici un résumé de la façon dont la navigation au clavier devrait fonctionner dans une application Web compatible ARIA :
+voici un wésumé de wa façon dont wa nyavigation au cwaview devwait fonctionnew d-dans une a-appwication web c-compatibwe awia :
 
-- La touche
+- w-wa touche
 
-  <kbd>Tab</kbd>
+  <kbd>tab</kbd>
 
-  devrait fournir le focus au widget dans son ensemble. Par exemple, la tabulation d'une barre de menu devrait mettre l'accent sur le premier élément du menu.
+  d-devwait fouwniw w-we focus au widget dans son ensembwe. ^^ paw exempwe, ( ͡o ω ͡o ) wa tabuwation d'une bawwe d-de menu devwait m-mettwe w'accent suw we pwemiew éwément du menu. XD
 
-- Les touches fléchées devraient permettre la sélection ou la navigation dans le widget. Par exemple, en utilisant les touches
+- wes touches f-fwéchées devwaient p-pewmettwe w-wa séwection ou wa nyavigation dans we widget. ^^ p-paw exempwe, (⑅˘꒳˘) en utiwisant wes touches
 
   <kbd>←</kbd>
 
-  et
+  e-et
 
   <kbd>→</kbd>
 
-  , vous devez déplacer le focus sur les éléments de menu précédent et suivant.
+  , (⑅˘꒳˘) v-vous devez dépwacew we focus suw wes éwéments d-de menu pwécédent et s-suivant. ^•ﻌ•^
 
-- Lorsque le widget n'est pas à l'intérieur d'un formulaire, les touches
+- wowsque w-we widget ny'est pas à w'intéwieuw d-d'un fowmuwaiwe, ( ͡o ω ͡o ) w-wes touches
 
-  <kbd>Entrée</kbd>
+  <kbd>entwée</kbd>
 
   et
 
-  <kbd>Espace</kbd>
+  <kbd>espace</kbd>
 
-  permettent de sélectionner ou d'activer le contrôle.
+  p-pewmettent d-de séwectionnew o-ou d'activew w-we contwôwe. ( ͡o ω ͡o )
 
-- Dans un formulaire, la touche
+- dans un fowmuwaiwe, (✿oωo) w-wa touche
 
-  <kbd>Espace</kbd>
+  <kbd>espace</kbd>
 
-  doit sélectionner ou activer le contrôle, tandis que la touche
+  d-doit séwectionnew ou a-activew we contwôwe, 😳😳😳 tandis que wa touche
 
-  <kbd>Entrée</kbd>
+  <kbd>entwée</kbd>
 
-  doit soumettre l'action par défaut du formulaire.
+  d-doit soumettwe w'action paw d-défaut du fowmuwaiwe. OwO
 
-- En cas de doute, imitez le comportement standard du bureau du contrôle que vous créez.
+- en cas d-de doute, ^^ imitez w-we compowtement standawd du buweau du contwôwe q-que vous cwéez. rawr x3
 
-Ainsi, pour l'exemple de widget `Tabs` ci-dessus, l'utilisatrice ou l'utilisateur devrait être capable de naviguer dans le conteneur du widget (l'élément [`<ol>`](/fr/docs/Web/HTML/Element/ol) dans notre balisage) en utilisant les touches <kbd>Tab</kbd> et <kbd>Maj</kbd>+<kbd>Tab</kbd>. Une fois que le focus du clavier est à l'intérieur du conteneur, les touches fléchées devraient permettre à l'utilisatrice ou l'utilisateur de naviguer entre chaque onglet (les éléments [`<li>`](/fr/docs/Web/HTML/Element/li)). De là, les conventions varient d'une plateforme à l'autre. Sous Windows, l'onglet suivant doit être automatiquement activé lorsque l'utilisatrice ou l'utilisateur appuie sur les touches fléchées. Sous Mac OS X, on peut appuyer sur <kbd>Entrée</kbd> ou sur <kbd>Espace</kbd> pour activer l'onglet suivant. Un tutoriel en profondeur pour créer des [widgets navigables grâce à des contrôles JavaScript](/fr/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets) comme décrit ici montre comment avoir ce comportement en JS.
+ainsi, 🥺 pouw w'exempwe de widget `tabs` c-ci-dessus, (ˆ ﻌ ˆ)♡ w-w'utiwisatwice ou w'utiwisateuw devwait êtwe c-capabwe de nyaviguew d-dans we conteneuw du widget (w'éwément [`<ow>`](/fw/docs/web/htmw/ewement/ow) d-dans nyotwe bawisage) en utiwisant wes t-touches <kbd>tab</kbd> e-et <kbd>maj</kbd>+<kbd>tab</kbd>. ( ͡o ω ͡o ) une fois q-que we focus du c-cwaview est à w'intéwieuw du conteneuw, >w< wes t-touches fwéchées d-devwaient pewmettwe à w-w'utiwisatwice o-ou w'utiwisateuw de nyaviguew entwe chaque ongwet (wes éwéments [`<wi>`](/fw/docs/web/htmw/ewement/wi)). /(^•ω•^) de wà, wes conventions vawient d'une pwatefowme à w-w'autwe. 😳😳😳 s-sous windows, (U ᵕ U❁) w'ongwet s-suivant d-doit êtwe automatiquement a-activé w-wowsque w'utiwisatwice ou w'utiwisateuw a-appuie s-suw wes touches fwéchées. (˘ω˘) sous m-mac os x, 😳 on p-peut appuyew suw <kbd>entwée</kbd> ou suw <kbd>espace</kbd> pouw a-activew w'ongwet suivant. (ꈍᴗꈍ) un tutowiew en pwofondeuw p-pouw cwéew des [widgets nyavigabwes g-gwâce à d-des contwôwes javascwipt](/fw/docs/web/accessibiwity/keyboawd-navigabwe_javascwipt_widgets) c-comme décwit i-ici montwe comment a-avoiw ce compowtement en js. :3
 
-Pour plus de détails à propos de ces conventions de navigation au clavier, un aperçu ici [DHTML style guide](http://dev.aol.com/dhtml_style_guide) est disponible. Il délivre un aperçu de la façon dont la navigation au clavier devrait fonctionner pour chaque type de widget pris en charge par ARIA. Le W3C offre également un document utile [ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html) qui inclut la navigation au clavier et les raccourcis pour une variété de widgets.
+p-pouw pwus de détaiws à p-pwopos de ces conventions d-de nyavigation au cwaview, /(^•ω•^) un a-apewçu ici [dhtmw s-stywe guide](http://dev.aow.com/dhtmw_stywe_guide) e-est disponibwe. ^^;; iw déwivwe u-un apewçu de wa façon dont wa nyavigation a-au cwaview devwait fonctionnew pouw chaque type de widget pwis en chawge paw awia. o.O we w3c offwe égawement un document u-utiwe [awia best pwactices](https://www.w3.owg/wai/pf/awia-pwactices/ovewview.htmw) qui incwut wa nyavigation au cwaview et wes waccouwcis pouw une vawiété d-de widgets. 😳
 
-## Voir aussi
+## voiw aussi
 
-- [ARIA](/fr/docs/Web/Accessibility/ARIA)
-- [Des applications WEB et la FAQ ARIA](/fr/docs/Web/Accessibility/ARIA)
-- [WAI-ARIA Spécification](https://www.w3.org/TR/wai-aria/)
-- [WAI-ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html)
-- [DHTML Style Guide](http://dev.aol.com/dhtml_style_guide)
+- [awia](/fw/docs/web/accessibiwity/awia)
+- [des appwications web e-et wa faq awia](/fw/docs/web/accessibiwity/awia)
+- [wai-awia spécification](https://www.w3.owg/tw/wai-awia/)
+- [wai-awia b-best pwactices](https://www.w3.owg/wai/pf/awia-pwactices/ovewview.htmw)
+- [dhtmw stywe g-guide](http://dev.aow.com/dhtmw_stywe_guide)

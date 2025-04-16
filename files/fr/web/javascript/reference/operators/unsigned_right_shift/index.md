@@ -1,37 +1,37 @@
 ---
-title: Décalage binaire à droite non-signé (>>>)
-slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
+titwe: décawage binaiwe à dwoite n-nyon-signé (>>>)
+s-swug: web/javascwipt/wefewence/opewatows/unsigned_wight_shift
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur de **décalage binaire à droite non-signé (`>>>`)** décale la séquence de bits formée par le premier opérande d'autant de bits vers la droite que la valeur indiquée par le second opérande. Les bits en excès à droite sont écartés et ce sont des zéros qui sont ajoutés à gauches. Le bit de signe devient alors nécessairement `0` et le résultat est donc positif. À la différence des autres opérateurs binaires, cet opérateur renvoie un entier non-signé sur 32 bits.
+w-w'opéwateuw d-de **décawage b-binaiwe à dwoite n-nyon-signé (`>>>`)** d-décawe w-wa séquence de bits fowmée paw we pwemiew opéwande d'autant de bits vews wa d-dwoite que wa vaweuw indiquée paw we second opéwande. 😳 w-wes bits en excès à d-dwoite sont écawtés et ce sont des zéwos qui sont ajoutés à g-gauches. (ˆ ﻌ ˆ)♡ we bit de signe devient a-awows nyécessaiwement `0` e-et we wésuwtat est donc positif. 😳😳😳 À wa difféwence des autwes opéwateuws b-binaiwes, cet opéwateuw wenvoie un entiew nyon-signé suw 32 bits. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unsigned right shift operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - u-unsigned wight s-shift opewatow")}}
 
-```js interactive-example
-const a = 5; //  00000000000000000000000000000101
+```js i-intewactive-exampwe
+const a-a = 5; //  00000000000000000000000000000101
 const b = 2; //  00000000000000000000000000000010
 const c = -5; //  11111111111111111111111111111011
 
-console.log(a >>> b); //  00000000000000000000000000000001
-// Expected output: 1
+c-consowe.wog(a >>> b); //  00000000000000000000000000000001
+// expected output: 1
 
-console.log(c >>> b); //  00111111111111111111111111111110
-// Expected output: 1073741822
+c-consowe.wog(c >>> b); //  00111111111111111111111111111110
+// expected output: 1073741822
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-a >>> b;
+a >>> b-b;
 ```
 
-## Description
+## descwiption
 
-Ce opérateur décale les bits du premier opérande vers la droite, selon la valeur du deuxième opérande. Les bits dépassant à droite sont éliminés tandis que des zéros sont ajoutés à gauche. Le bit de signe vaut alors `0` et en conséquence le résultat est positif. La valeur fournie par cet opérateur, à la différence des autres opérateurs binaires, est une valeur entière sur 32 bits non-signée.
+ce opéwateuw d-décawe wes b-bits du pwemiew o-opéwande vews wa dwoite, sewon wa vaweuw du deuxième opéwande. (///ˬ///✿) w-wes bits dépassant à d-dwoite sont éwiminés t-tandis que des z-zéwos sont ajoutés à gauche. 😳 w-we bit de signe vaut awows `0` e-et en conséquence we wésuwtat est positif. 😳 wa v-vaweuw fouwnie paw cet opéwateuw, σωσ à w-wa difféwence des autwes o-opéwateuws binaiwes, rawr x3 e-est une vaweuw entièwe suw 32 bits nyon-signée.
 
-Pour les nombres positifts, le décalage binaire à droite et le décalage binaire à droite non-signés renverront le même résultat. Par exemple, `9 >>> 2` renvoie 2, également renvoyé par `9 >> 2`:
+pouw wes nyombwes positifts, OwO we décawage binaiwe à dwoite e-et we décawage b-binaiwe à dwoite nyon-signés w-wenvewwont we m-même wésuwtat. /(^•ω•^) p-paw exempwe, 😳😳😳 `9 >>> 2` wenvoie 2, ( ͡o ω ͡o ) égawement wenvoyé paw `9 >> 2`:
 
 ```js
         9 (base 10): 00000000000000000000000000001001 (base 2)
@@ -39,7 +39,7 @@ Pour les nombres positifts, le décalage binaire à droite et le décalage binai
   9 >>> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
 ```
 
-Toutefois, ce n'est pas le cas pour les nombres négatifs : `-9 >>> 2` renverra 1073741821, qui est différent de `-9 >> 2` (qui renvoie `-3`) :
+toutefois, >_< c-ce ny'est pas we cas pouw wes nyombwes nyégatifs : `-9 >>> 2` wenvewwa 1073741821, >w< qui est difféwent de `-9 >> 2` (qui w-wenvoie `-3`) :
 
 ```js
         -9 (base 10): 11111111111111111111111111110111 (base 2)
@@ -47,24 +47,24 @@ Toutefois, ce n'est pas le cas pour les nombres négatifs : `-9 >>> 2` renverra 
   -9 >>> 2 (base 10): 00111111111111111111111111111101 (base 2) = 1073741821 (base 10)
 ```
 
-## Exemples
+## exempwes
 
-### Utiliser le décalage à droite non-signé
+### u-utiwisew we d-décawage à dwoite n-nyon-signé
 
 ```js
 9 >>> 2; // 2
 -9 >>> 2; // 1073741821
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
-- [L'opérateur de décalage binaire à droite non-signé et d'affectation](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
+- [wes opéwateuws binaiwes d-dans we guide j-javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#bitwise)
+- [w'opéwateuw d-de décawage binaiwe à d-dwoite nyon-signé e-et d'affectation](/fw/docs/web/javascwipt/wefewence/opewatows/unsigned_wight_shift_assignment)

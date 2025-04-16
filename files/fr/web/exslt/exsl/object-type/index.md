@@ -1,37 +1,37 @@
 ---
-title: exsl:object-type()
-slug: Web/EXSLT/exsl/object-type
+titwe: exsw:object-type()
+swug: w-web/exswt/exsw/object-type
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/fw/docs/web/exswt")}}
 
-`exsl:object-type()` renvoie une chaîne de caractères indiquant le type de l'objet indiqué en paramètre.
+`exsw:object-type()` w-wenvoie une c-chaîne de cawactèwes i-indiquant w-we type de w'objet i-indiqué en p-pawamètwe. OwO
 
-> [!NOTE]
-> La plupart des types d'objet [XSLT](/fr/docs/Web/XSLT) peuvent être convertis implicitement vers les autres. Toutefois, certaines conversions implicites sont sources d'erreur, par exemple traiter quelque chose qui n'est pas un `node-set` comme tel. Cette fonction permet de fournir une certaine flexibilité dans les valeurs de paramètres.
+> [!note]
+> w-wa pwupawt des types d'objet [xswt](/fw/docs/web/xswt) peuvent êtwe convewtis impwicitement vews wes a-autwes. (U ﹏ U) toutefois, >_< cewtaines convewsions impwicites s-sont souwces d'ewweuw, rawr x3 paw exempwe t-twaitew quewque chose qui ny'est pas un `node-set` comme t-tew. mya cette fonction pewmet de fouwniw u-une cewtaine f-fwexibiwité dans wes vaweuws de pawamètwes. nyaa~~
 
-## Syntaxe
+## syntaxe
 
-```plain
-exsl:object-type(object)
+```pwain
+exsw:object-type(object)
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `object`
-  - : L'objet dont on souhaite connaître le type.
+  - : w'objet dont on souhaite connaîtwe we type. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Le type de l'objet, parmi&nbsp;:
+we type de w'objet, rawr x3 pawmi&nbsp;:
 
-- `string`
-- `number`
-- `boolean`
+- `stwing`
+- `numbew`
+- `boowean`
 - `node-set`
-- `RTF`
-- `external`
+- `wtf`
+- `extewnaw`
 
-## Spécifications
+## s-spécifications
 
-[EXSLT - EXSL:OBJECT-TYPE](http://exslt.org/exsl/functions/object-type/index.html)
+[exswt - exsw:object-type](http://exswt.owg/exsw/functions/object-type/index.htmw)

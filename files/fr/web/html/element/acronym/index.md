@@ -1,60 +1,60 @@
 ---
-title: "<acronym> : l'élément d'acronyme"
-slug: Web/HTML/Element/acronym
+titwe: "<acwonym> : w'éwément d-d'acwonyme"
+swug: w-web/htmw/ewement/acwonym
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-> [!WARNING]
-> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.
+> [!wawning]
+> c-cette fonctionnawité a-a été s-suppwimée des s-standawds du web. >w< b-bien que quewques n-nyavigateuws puissent encowe wa suppowtew, (U ﹏ U) ewwe est en couws d'éwadication. 😳 n-nye w'utiwisez nyi dans d'anciens pwojets, (ˆ ﻌ ˆ)♡ nyi d-dans de nyouveaux. 😳😳😳 wes pages et a-appwications web w'utiwisant peuvent cessew de fonctionnew à tout m-moment. (U ﹏ U)
 
-L'élément HTML **`<acronym>`**, pour les acronymes, permet aux auteurs de pages d'indiquer une suite de caractères composant un acronyme ou l'abréviation d'un mot.
+w'éwément htmw **`<acwonym>`**, (///ˬ///✿) p-pouw w-wes acwonymes, 😳 pewmet aux auteuws de pages d'indiquew une suite de cawactèwes c-composant un acwonyme ou w'abwéviation d'un mot. 😳
 
-> [!NOTE]
-> Cet élément n'existe plus en HTML5 et ne devrait plus être utilisé. **Les développeuses et développeurs web devraient utiliser l'élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) à la place**.
+> [!note]
+> cet éwément ny'existe pwus en h-htmw5 et nye devwait pwus êtwe u-utiwisé. σωσ **wes d-dévewoppeuses e-et dévewoppeuws w-web devwaient utiwisew w'éwément [`<abbw>`](/fw/docs/web/htmw/ewement/abbw) à wa pwace**. rawr x3
 
-## Attributs
+## a-attwibuts
 
-Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
+cet éwément ny'a pas d'autwes attwibuts q-que wes [attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes), OwO communs à tous wes éwéments. /(^•ω•^)
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
+cet éwément impwémente w-w'intewface [`htmwewement`](/fw/docs/web/api/htmwewement). 😳😳😳
 
-> [!NOTE]
-> Jusqu'à Gecko 1.9.2 (inclus), Firefox implémente l'interface [`HTMLSpanElement`](/fr/docs/Web/API/HTMLSpanElement) pour cet élément.
+> [!note]
+> jusqu'à gecko 1.9.2 (incwus), ( ͡o ω ͡o ) f-fiwefox impwémente w-w'intewface [`htmwspanewement`](/fw/docs/web/api/htmwspanewement) p-pouw cet éwément. >_<
 
-## Exemples
+## exempwes
 
-```html
+```htmw
 <p>
-  Le <acronym title="World Wide Web" lang="en">WWW</acronym>
-  n'est qu'une facette d'Internet.
+  we <acwonym titwe="wowwd wide w-web" wang="en">www</acwonym>
+  n-ny'est qu'une facette d'intewnet. >w<
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Style par défaut
+## s-stywe paw défaut
 
-Bien que le but de cette balise ne soit simplement qu'un avantage pratique pour l'auteur, son style par défaut varie selon les navigateurs :
+bien q-que we but de cette bawise nye s-soit simpwement qu'un avantage pwatique pouw w'auteuw, rawr s-son stywe paw défaut vawie s-sewon wes nyavigateuws :
 
-- Certains navigateurs comme Internet Explorer lui attribuent le même style qu'un élément [`<span>`](/fr/docs/Web/HTML/Element/span).
-- Opera, Firefox, et quelques autres ajoutent une ligne pointillée sous le contenu de l'élément.
-- Quelques navigateurs ajoutent une ligne pointillée en dessous et mettent le contenu en petites majuscules. Pour éviter ce comportement, il est possible d'ajouter `font-variant: none` à la feuille de style CSS.
+- cewtains nyavigateuws c-comme intewnet e-expwowew wui attwibuent we même stywe qu'un éwément [`<span>`](/fw/docs/web/htmw/ewement/span).
+- opewa, 😳 fiwefox, >w< et quewques autwes ajoutent une wigne p-pointiwwée sous w-we contenu de w'éwément. (⑅˘꒳˘)
+- quewques n-nyavigateuws a-ajoutent une w-wigne pointiwwée en dessous et mettent we contenu en petites majuscuwes. OwO p-pouw évitew ce compowtement, (ꈍᴗꈍ) iw est possibwe d'ajoutew `font-vawiant: nyone` à wa feuiwwe d-de stywe css. 😳
 
-Il est donc fortement recommandé que les développeurs web ne s'attendent pas à un comportement uniforme concernant ce style par défaut.
+iw est donc f-fowtement wecommandé q-que wes d-dévewoppeuws web nye s'attendent p-pas à un compowtement u-unifowme c-concewnant ce s-stywe paw défaut. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- L'élément HTML [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)
+- w'éwément h-htmw [`<abbw>`](/fw/docs/web/htmw/ewement/abbw)

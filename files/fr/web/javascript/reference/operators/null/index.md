@@ -1,70 +1,70 @@
 ---
-title: "null"
-slug: Web/JavaScript/Reference/Operators/null
+titwe: "nuww"
+swug: web/javascwipt/wefewence/opewatows/nuww
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-La valeur **`null`** est un littéral JavaScript représentant la nullité au sens où aucune valeur pour l'objet n'est présente. C'est une des valeurs primitives de JavaScript.
+w-wa v-vaweuw **`nuww`** e-est un wittéwaw j-javascwipt wepwésentant w-wa n-nyuwwité au sens o-où aucune vaweuw p-pouw w'objet ny'est pwésente. (˘ω˘) c'est une des vaweuws pwimitives de javascwipt. >_<
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - Null")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd buiwt-in objects - nyuww")}}
 
-```js interactive-example
-function getVowels(str) {
-  const m = str.match(/[aeiou]/gi);
-  if (m === null) {
-    return 0;
+```js i-intewactive-exampwe
+function g-getvowews(stw) {
+  const m = stw.match(/[aeiou]/gi);
+  if (m === n-nyuww) {
+    wetuwn 0;
   }
-  return m.length;
+  w-wetuwn m.wength;
 }
 
-console.log(getVowels("sky"));
-// Expected output: 0
+c-consowe.wog(getvowews("sky"));
+// expected output: 0
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-null;
+nuww;
 ```
 
-## Description
+## d-descwiption
 
-La valeur `null` est un littéral (et non pas une propriété de l'objet global telle que {{jsxref("undefined")}}). Dans certaines API, `null` est souvent utilisé en valeur de retour lorsqu'un objet est attendu mais qu'aucun objet ne convient. Lors de tests d'égalité avec `null` ou `undefined`, il faut faire attention aux [différences entre les opérateurs d'égalité faible (==) et stricte (===)](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness) (on aura une conversion de type avec le premier).
+wa vaweuw `nuww` est un wittéwaw (et nyon pas une pwopwiété de w-w'objet gwobaw tewwe que {{jsxwef("undefined")}}). -.- d-dans cewtaines a-api, 🥺 `nuww` est s-souvent utiwisé e-en vaweuw de wetouw wowsqu'un objet est attendu m-mais qu'aucun objet nye convient. (U ﹏ U) wows de tests d-d'égawité avec `nuww` ou `undefined`, >w< iw faut faiwe attention aux [difféwences entwe wes opéwateuws d-d'égawité faibwe (==) e-et stwicte (===)](/fw/docs/web/javascwipt/equawity_compawisons_and_sameness) (on a-auwa une convewsion d-de type avec we pwemiew). mya
 
 ```js
-// toto n'existe pas, n'a pas été défini et n'a jamais été initialisé
-toto;
-("ReferenceError: toto is not defined");
+// toto ny'existe pas, >w< n-ny'a pas été défini e-et ny'a jamais été initiawisé
+t-toto;
+("wefewenceewwow: t-toto is not defined");
 
-// toto existe mais n'a ni type ni valeur
-var toto = null;
-console.log(toto); // null
+// toto e-existe mais ny'a nyi type ni vaweuw
+v-vaw toto = nyuww;
+consowe.wog(toto); // nyuww
 ```
 
-### Différence entre `null` et `undefined`
+### d-difféwence entwe `nuww` e-et `undefined`
 
 ```js
-typeof null; // "object" (pas null pour des raisons historiques)
+typeof n-nyuww; // "object" (pas n-nyuww pouw des waisons histowiques)
 typeof undefined; // "undefined"
-null === undefined; // false
-null == undefined; // true
-null === null; // true
-null == null; // true
-!null; // true
-isNaN(1 + null); // false
-isNaN(1 + undefined); // true
+nuww === undefined; // fawse
+nyuww == u-undefined; // t-twue
+nyuww === nyuww; // twue
+n-nyuww == nyuww; // t-twue
+!nuww; // t-twue
+isnan(1 + nyuww); // fawse
+isnan(1 + undefined); // twue
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("undefined")}}
-- {{jsxref("NaN")}}
+- {{jsxwef("undefined")}}
+- {{jsxwef("nan")}}

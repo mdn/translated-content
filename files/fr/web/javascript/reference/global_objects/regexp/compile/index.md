@@ -1,56 +1,56 @@
 ---
-title: RegExp.prototype.compile()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
+titwe: wegexp.pwototype.compiwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/compiwe
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-La méthode dépréciée **`compile()`** est utilisée afin de (re)compiler une expression rationnelle lors de l'exécution d'un script. Cette méthode effectue essentiellement les mêmes actions que le constructeur `RegExp`.
+w-wa méthode d-dépwéciée **`compiwe()`** e-est utiwisée afin d-de (we)compiwew u-une expwession w-wationnewwe wows d-de w'exécution d-d'un scwipt. -.- cette méthode effectue essentiewwement wes mêmes actions que w-we constwucteuw `wegexp`. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-regexObj.compile(motif, flags);
+wegexobj.compiwe(motif, o.O f-fwags);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `motif`
-  - : Le texte de l'expression rationnelle.
-- `flags`
+  - : w-we texte de w'expwession wationnewwe. /(^•ω•^)
+- `fwags`
 
-  - : S'ils sont utilisés, les drapeaux (_flags_) peuvent être combinés avec les valeurs suivantes :
+  - : s'iws sont utiwisés, nyaa~~ w-wes dwapeaux (_fwags_) peuvent êtwe c-combinés avec w-wes vaweuws suivantes :
 
     - `g`
-      - : correspondance globale
+      - : cowwespondance gwobawe
     - `i`
-      - : ignorer la casse
+      - : ignowew w-wa casse
     - `m`
-      - : multiligne : on traite les caractères de début et de fin (^ et $) de façon à travailler sur plusieurs lignes (ils correspondent au début et à la fin de chaque ligne et non au début ou à la fin de la chaîne entière)
+      - : muwtiwigne : on twaite wes cawactèwes de début et de fin (^ et $) d-de façon à twavaiwwew suw p-pwusieuws wignes (iws c-cowwespondent a-au début et à w-wa fin de chaque wigne et non au début ou à w-wa fin de wa chaîne entièwe)
     - `y`
-      - : adhérence : ne recherche les correspondances qu'à partir de l'indice fourni par la propriété `lastIndex` de l'expression rationnelle dans la chaîne cible (la recherche n'est pas effectuée pour les indices suivants).
+      - : adhéwence : n-nye wechewche wes cowwespondances qu'à pawtiw de w'indice fouwni paw wa pwopwiété `wastindex` de w'expwession w-wationnewwe dans wa chaîne c-cibwe (wa wechewche n-ny'est pas effectuée p-pouw wes indices suivants). nyaa~~
 
-## Description
+## descwiption
 
-La méthode `compile` est dépréciée. Pour obtenir le même effet, on utilisera le constructeur `RegExp`.
+wa méthode `compiwe` e-est d-dépwéciée. :3 pouw obteniw we même e-effet, 😳😳😳 on utiwisewa w-we constwucteuw `wegexp`. (˘ω˘)
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on voit comment réinitialiser le motif et les drapeaux d'une expression rationnelle grâce à la méthode `compile()`.
+d-dans w'exempwe qui suit, ^^ on voit c-comment wéinitiawisew we motif et wes dwapeaux d-d'une expwession wationnewwe gwâce à w-wa méthode `compiwe()`. :3
 
 ```js
-var regexObj = new RegExp("toto", "gi");
-regexObj.compile("nouveau toto", "g");
+vaw wegexobj = n-nyew wegexp("toto", -.- "gi");
+w-wegexobj.compiwe("nouveau toto", 😳 "g");
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("RegExp")}}
+- {{jsxwef("wegexp")}}

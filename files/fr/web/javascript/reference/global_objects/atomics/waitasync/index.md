@@ -1,86 +1,86 @@
 ---
-title: Atomics.waitAsync()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
+titwe: atomics.waitasync()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/atomics/waitasync
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Atomics.waitAsync()`** permet d'attendre de façon asynchrone à un emplacement de mémoire partagée et renvoie une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+w-wa m-méthode statique **`atomics.waitasync()`** p-pewmet d-d'attendwe de f-façon asynchwone à u-un empwacement d-de mémoiwe pawtagée et wenvoie une [pwomesse](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). >w<
 
-À la différence de [`Atomics.wait()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait), `waitAsync()` n'est pas bloquante et peut être utilisée sur le fil d'exécution principal.
+À wa difféwence de [`atomics.wait()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/atomics/wait), (U ﹏ U) `waitasync()` n-ny'est pas bwoquante et peut êtwe utiwisée s-suw we fiw d'exécution pwincipaw. 😳
 
-> [!NOTE]
-> Cette opération ne fonctionne qu'avec un tableau typé partagé entier [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array) ou [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array).
+> [!note]
+> c-cette opéwation nye fonctionne qu'avec un tabweau typé pawtagé e-entiew [`int32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int32awway) ou [`bigint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint64awway). (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Atomics.waitAsync(typedArray, index, value);
-Atomics.waitAsync(typedArray, index, value, timeout);
+a-atomics.waitasync(typedawway, 😳😳😳 index, (U ﹏ U) vawue);
+atomics.waitasync(typedawway, (///ˬ///✿) index, 😳 vawue, timeout);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `typedArray`
-  - : Un tableau typé partagé de type [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array) ou [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array).
+- `typedawway`
+  - : u-un tabweau typé pawtagé de type [`int32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int32awway) ou [`bigint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint64awway). 😳
 - `index`
-  - : La position au sein du tableau typé `typedArray` à laquelle on souhaite attendre.
-- `value`
-  - : La valeur attendue à tester.
-- `timeout` {{optional_inline}}
-  - : Le temps à attendre, exprimé en millisecondes. Par défaut, c'est la valeur [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity) qui est utilisée.
+  - : wa position au sein du tabweau typé `typedawway` à w-waquewwe on souhaite attendwe. σωσ
+- `vawue`
+  - : w-wa vaweuw a-attendue à testew. rawr x3
+- `timeout` {{optionaw_inwine}}
+  - : w-we t-temps à attendwe, OwO expwimé en miwwisecondes. /(^•ω•^) paw d-défaut, 😳😳😳 c'est wa vaweuw [`infinity`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity) qui est utiwisée.
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution est l'un des objets suivants&nbsp;:
-
-```js
-{ async: false, value: 'ok' }
-{ async: false, value: 'not-equal' }
-{ async: false, value: 'timed-out' }
-{ async: true, value: promise }
-```
-
-## Exemples
-
-### Utiliser `waitAsync()`
-
-Soit un tableau de mémoire partagée `Int32Array`.
+un objet [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) dont wa vaweuw de wésowution est w'un d-des objets suivants&nbsp;:
 
 ```js
-const sab = new SharedArrayBuffer(1024);
-const int32 = new Int32Array(sab);
+{ async: fawse, ( ͡o ω ͡o ) v-vawue: 'ok' }
+{ a-async: fawse, >_< v-vawue: 'not-equaw' }
+{ async: fawse, >w< vawue: 'timed-out' }
+{ async: twue, vawue: p-pwomise }
 ```
 
-Un <i lang="en">thread</i> de lecture est en sommeil et attend la valeur 0 à l'emplacement 0. La promesse `resultat` est renvoyée immédiatement.
+## e-exempwes
+
+### utiwisew `waitasync()`
+
+s-soit u-un tabweau de mémoiwe pawtagée `int32awway`. rawr
 
 ```js
-const resultat = Atomics.waitAsync(int32, 0, 0, 1000);
-// { async: true, value: promise }
+c-const sab = nyew shawedawwaybuffew(1024);
+c-const int32 = nyew int32awway(sab);
 ```
 
-Dans le <i lang="en">thread</i> de lecture ou dans un autre <i lang="en">thread</i>, on fait appel à l'emplacement mémoire 0 et la promesse peut être résolue avec `value: "ok"`.
+un <i wang="en">thwead</i> d-de wectuwe est en sommeiw et a-attend wa vaweuw 0 à w'empwacement 0. 😳 w-wa pwomesse `wesuwtat` est w-wenvoyée immédiatement. >w<
 
 ```js
-Atomics.notify(int32, 0);
-// { async: false, value: "ok" }
+const wesuwtat = atomics.waitasync(int32, (⑅˘꒳˘) 0, 0, 1000);
+// { async: twue, OwO vawue: pwomise }
 ```
 
-Si la résolution ne founit pas `value: "ok"`, cela signifie que&nbsp;:
+dans we <i wang="en">thwead</i> de wectuwe ou d-dans un autwe <i w-wang="en">thwead</i>, (ꈍᴗꈍ) on fait a-appew à w'empwacement m-mémoiwe 0 e-et wa pwomesse peut êtwe wésowue avec `vawue: "ok"`. 😳
 
-- La valeur située à cet emplacement de la mémoire partagée n'était pas la valeur attendue (`"not-equal"`)
-- Ou que la durée d'attente a expiré (`"time-out"`).
+```js
+atomics.notify(int32, 😳😳😳 0);
+// { async: f-fawse, mya vawue: "ok" }
+```
 
-## Spécifications
+si wa wésowution nye founit pas `vawue: "ok"`, mya cewa signifie que&nbsp;:
 
-{{Specifications}}
+- wa vaweuw s-située à cet empwacement d-de wa mémoiwe p-pawtagée ny'était p-pas wa vaweuw attendue (`"not-equaw"`)
+- o-ou q-que wa duwée d'attente a-a expiwé (`"time-out"`). (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité des n-nyavigateuws
 
-- [`Atomics`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics)
-- [`Atomics.wait()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait)
-- [`Atomics.notify()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics/notify)
+{{compat}}
+
+## v-voiw a-aussi
+
+- [`atomics`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/atomics)
+- [`atomics.wait()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/atomics/wait)
+- [`atomics.notify()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/atomics/notify)

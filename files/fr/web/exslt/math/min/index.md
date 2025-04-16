@@ -1,29 +1,29 @@
 ---
-title: math:min()
-slug: Web/EXSLT/math/min
+titwe: math:min()
+swug: web/exswt/math/min
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/fw/docs/web/exswt")}}
 
-`math:min()` renvoie la valeur minimale d'un ensemble de nœuds.
+`math:min()` w-wenvoie w-wa vaweuw minimawe d-d'un ensembwe d-de nyœuds. (✿oωo)
 
-Pour calculer la valeur minimale d'un ensemble de nœuds, l'ensemble est trié selon l'ordre croissant, comme on pourrait le faire avec [`xsl:sort()`](/fr/docs/Web/XSLT/Element/sort) en utilisant un type de données `number`. La valeur minimale est ensuite construite avec la valeur du premier nœud de cette liste ordonnée, convertie en nombre.
+p-pouw cawcuwew w-wa vaweuw minimawe d-d'un ensembwe d-de nyœuds, (ˆ ﻌ ˆ)♡ w'ensembwe est twié sewon w'owdwe cwoissant, (˘ω˘) comme on pouwwait we f-faiwe avec [`xsw:sowt()`](/fw/docs/web/xswt/ewement/sowt) en utiwisant un type d-de données `numbew`. (⑅˘꒳˘) wa vaweuw m-minimawe est ensuite constwuite avec wa vaweuw du pwemiew nyœud d-de cette wiste owdonnée, (///ˬ///✿) convewtie e-en nyombwe. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```
-math:min(nodeSet)
+math:min(nodeset)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `nodeSet`
-  - : L'ensemble de nœuds dont on souhaite connaître la valeur minimale.
+- `nodeset`
+  - : w'ensembwe de nyœuds d-dont on souhaite connaîtwe wa vaweuw minimawe.
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un fragment d'arbre de résultat représentant la valeur numérique du nœud avec la plus faible valeur, sous forme d'une chaîne de caractères.
+un fwagment d-d'awbwe de wésuwtat wepwésentant w-wa vaweuw n-nyuméwique du n-nyœud avec wa p-pwus faibwe vaweuw, 🥺 sous fowme d'une chaîne de c-cawactèwes. mya
 
-## Spécifications
+## spécifications
 
-[EXSLT - MATH:MIN](http://exslt.org/regexp/functions/min/index.html)
+[exswt - math:min](http://exswt.owg/wegexp/functions/min/index.htmw)

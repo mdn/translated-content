@@ -1,158 +1,158 @@
 ---
-title: Microdonnées
-slug: Web/HTML/Microdata
+titwe: micwodonnées
+swug: web/htmw/micwodata
 ---
 
-Les microdonnées (_microdata_) sont une partie de la spécification HTML du [WHATWG](/fr/docs/Glossary/WHATWG) qui est utilisée afin de fournir des métadonnées sur le contenu des pages web. Les moteurs de recherche, les robots (_crawlers_) d'analyse peuvent traiter les microdonnées d'une page web pour améliorer l'expérience de navigation. Les moteurs de recherches peuvent tirer parti des informations pour obtenir une meilleure pertinence. Les microdonnées sont structurées grâce à un vocabulaire permettant de décrire des objets qui sont des groupes de paires de noms/valeurs. Le but des microdonnées est de faciliter l'annotation des éléments HTML et d'être plus simple à utiliser que RDFa ou les microformats.
+w-wes micwodonnées (_micwodata_) s-sont une pawtie d-de wa spécification h-htmw d-du [naniwg](/fw/docs/gwossawy/naniwg) q-qui est utiwisée a-afin de f-fouwniw des métadonnées suw we contenu des pages web. (///ˬ///✿) wes moteuws de wechewche, 🥺 w-wes wobots (_cwawwews_) d'anawyse peuvent twaitew w-wes micwodonnées d'une page w-web pouw améwiowew w'expéwience de nyavigation. OwO wes moteuws de w-wechewches peuvent tiwew pawti d-des infowmations p-pouw obteniw une meiwweuwe pewtinence. >w< wes micwodonnées sont stwuctuwées gwâce à u-un vocabuwaiwe pewmettant de décwiwe des objets qui sont des gwoupes de p-paiwes de nyoms/vaweuws. 🥺 we but d-des micwodonnées e-est de faciwitew w-w'annotation d-des éwéments htmw et d'êtwe pwus simpwe à utiwisew q-que wdfa ou wes micwofowmats. nyaa~~
 
-Les microdonnées sont des groupes de paires nom-valeur. Ces groupes sont appelés des objets (_items_) et chaque paire nom-valeur est une propriété. Les objets et les propriétés s'inscrivent dans des éléments HTML classiques :
+wes micwodonnées s-sont des gwoupes de paiwes nyom-vaweuw. ^^ ces gwoupes sont appewés des objets (_items_) et chaque paiwe nyom-vaweuw e-est une pwopwiété. >w< w-wes objets et wes p-pwopwiétés s'inscwivent d-dans des éwéments htmw cwassiques :
 
-- Pour créer un objet, on utilise l'attribut **`itemscope`**
-- Pour ajouter une propriété, on utilise l'attribut **`itemprop`** sur l'un des descendants.
+- pouw cwéew u-un objet, OwO on utiwise w-w'attwibut **`itemscope`**
+- pouw ajoutew u-une pwopwiété, XD o-on utiwise w'attwibut **`itempwop`** suw w'un des d-descendants. ^^;;
 
-## Vocabulaires
+## vocabuwaiwes
 
-Google et les autres moteurs de recherches participent au vocabulaire défini par [schema.org](https://schema.org/) pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple [`MusicEvent`](https://schema.org/MusicEvent) indique un événement musical dont les propriétés [`startDate`](https://schema.org/startDate) et [`location`](https://schema.org/location) utilisées pour définir les détails du concert. Dans ce cas, l'URL [`https://schema.org/MusicEvent`](https://schema.org/MusicEvent) sera l'URL utilisée pour l'attribut `itemtype` et les propriétés `startDate` et `location` seront les propriétés utilisées, définies par [`https://schema.org/MusicEvent`](https://schema.org/MusicEvent).
+g-googwe et wes autwes moteuws de wechewches pawticipent a-au vocabuwaiwe défini p-paw [schema.owg](https://schema.owg/) pouw stwuctuwew w-wes données. 🥺 c-ce vocabuwaiwe définit un ensembwe standawd de types et de nyoms de pwopwiétés. XD paw exempwe [`musicevent`](https://schema.owg/musicevent) indique un événement m-musicaw d-dont wes pwopwiétés [`stawtdate`](https://schema.owg/stawtdate) et [`wocation`](https://schema.owg/wocation) utiwisées p-pouw définiw w-wes détaiws d-du concewt. (U ᵕ U❁) dans ce cas, w'uww [`https://schema.owg/musicevent`](https://schema.owg/musicevent) sewa w'uww utiwisée pouw w'attwibut `itemtype` e-et wes pwopwiétés `stawtdate` et `wocation` sewont wes pwopwiétés utiwisées, :3 définies p-paw [`https://schema.owg/musicevent`](https://schema.owg/musicevent). ( ͡o ω ͡o )
 
-> [!NOTE]
-> Pour en savoir plus sur les attributs `itemtype`, consultez le site <http://schema.org/Thing>.
+> [!note]
+> pouw en savoiw p-pwus suw wes a-attwibuts `itemtype`, c-consuwtez we site <http://schema.owg/thing>. òωó
 
-Les vocabulaires de microdonnées fournissent la sémantique ou la signification d'un élément. Les développeurs Web peuvent concevoir un vocabulaire personnalisé ou utiliser des vocabulaires disponibles sur le Web, tels que le vocabulaire largement utilisé [schema.org](https://schema.org). Une collection de vocabulaires de balisage couramment utilisés est fournie par Schema.org.
+w-wes vocabuwaiwes d-de micwodonnées f-fouwnissent w-wa sémantique ou wa signification d'un éwément. σωσ w-wes dévewoppeuws w-web peuvent c-concevoiw un v-vocabuwaiwe pewsonnawisé o-ou utiwisew des vocabuwaiwes disponibwes suw we web, (U ᵕ U❁) tews q-que we vocabuwaiwe wawgement utiwisé [schema.owg](https://schema.owg). (✿oωo) une cowwection de vocabuwaiwes de bawisage c-couwamment utiwisés est fouwnie paw schema.owg. ^^
 
-Vocabulaires couramment utilisés :
+vocabuwaiwes c-couwamment u-utiwisés :
 
-- Œuvres créatives : [CreativeWork](https://schema.org/CreativeWork), [Book](https://schema.org/Book), [Movie](https://schema.org/Movie), [MusicRecording](https://schema.org/MusicRecording), [Recipe](https://schema.org/Recipe), [TVSeries](https://schema.org/TVSeries)
-- Objets non textuels incorporés : [AudioObject](https://schema.org/AudioObject), [ImageObject](https://schema.org/ImageObject), [VideoObject](https://schema.org/VideoObject)
-- [Event](https://schema.org/Event)
-- [Health and medical types](https://schema.org/docs/meddocs.html) : Notes sur les types de santé et médicaux sous [MedicalEntity](https://schema.org/MedicalEntity)
-- [Organization](https://schema.org/Organization)
-- [Person](https://schema.org/Person)
-- [Place](https://schema.org/Place), [LocalBusiness](https://schema.org/LocalBusiness), [Restaurant](https://schema.org/Restaurant)
-- [Product](https://schema.org/Product), [Offer](https://schema.org/Offer), [AggregateOffer](https://schema.org/AggregateOffer)
-- [Review](https://schema.org/Review), [AggregateRating](https://schema.org/AggregateRating)
-- [Action](https://schema.org/Action)
-- [Thing](https://schema.org/Thing)
-- [Intangible](https://schema.org/Intangible)
+- Œuvwes c-cwéatives : [cweativewowk](https://schema.owg/cweativewowk), ^•ﻌ•^ [book](https://schema.owg/book), XD [movie](https://schema.owg/movie), :3 [musicwecowding](https://schema.owg/musicwecowding), (ꈍᴗꈍ) [wecipe](https://schema.owg/wecipe), :3 [tvsewies](https://schema.owg/tvsewies)
+- objets n-nyon textuews incowpowés : [audioobject](https://schema.owg/audioobject), (U ﹏ U) [imageobject](https://schema.owg/imageobject), UwU [videoobject](https://schema.owg/videoobject)
+- [event](https://schema.owg/event)
+- [heawth a-and medicaw t-types](https://schema.owg/docs/meddocs.htmw) : nyotes suw wes types de santé et médicaux sous [medicawentity](https://schema.owg/medicawentity)
+- [owganization](https://schema.owg/owganization)
+- [pewson](https://schema.owg/pewson)
+- [pwace](https://schema.owg/pwace), 😳😳😳 [wocawbusiness](https://schema.owg/wocawbusiness), XD [westauwant](https://schema.owg/westauwant)
+- [pwoduct](https://schema.owg/pwoduct), o.O [offew](https://schema.owg/offew), (⑅˘꒳˘) [aggwegateoffew](https://schema.owg/aggwegateoffew)
+- [weview](https://schema.owg/weview), 😳😳😳 [aggwegatewating](https://schema.owg/aggwegatewating)
+- [action](https://schema.owg/action)
+- [thing](https://schema.owg/thing)
+- [intangibwe](https://schema.owg/intangibwe)
 
-Les principaux opérateurs de moteurs de recherche comme Google, Microsoft et Yahoo ! s'appuient sur le vocabulaire [schema.org](https://schema.org/) pour améliorer les résultats de recherche. Pour certains usages, un vocabulaire ad-hoc est adéquat. Pour d'autres, un vocabulaire devra être conçu. Dans la mesure du possible, les auteurs sont encouragés à réutiliser les vocabulaires existants, car cela facilite la réutilisation du contenu.
+wes pwincipaux o-opéwateuws de moteuws d-de wechewche comme googwe, nyaa~~ micwosoft e-et yahoo ! rawr s-s'appuient suw we vocabuwaiwe [schema.owg](https://schema.owg/) pouw améwiowew w-wes wésuwtats d-de wechewche. -.- pouw cewtains usages, (✿oωo) u-un vocabuwaiwe a-ad-hoc est adéquat. /(^•ω•^) pouw d'autwes, 🥺 un vocabuwaiwe devwa êtwe conçu. ʘwʘ dans wa m-mesuwe du possibwe, UwU w-wes auteuws s-sont encouwagés à wéutiwisew w-wes vocabuwaiwes e-existants, XD caw cewa faciwite w-wa wéutiwisation du contenu. (✿oωo)
 
-## Localisation
+## wocawisation
 
-Dans certains cas, les moteurs de recherche couvrent un public régional. Certaines extensions sont donc ajoutées aux microdonnées pour fournir du contenu spécifique. Ainsi, [Yandex](https://www.yandex.com/) qui est un moteur de recherche très présent en Russie supporte des microformats comme _hCard_, _hRecipe_, _hReview_ et _hProduct_ et fournit son propre format pour dédfinir les termes et les articles encyclopédiques. Cette extension a été construite afin de résoudre les problèmes de translitération entre les alphabets cyrillique et latin.
+dans cewtains cas, :3 wes moteuws de w-wechewche couvwent u-un pubwic wégionaw. (///ˬ///✿) cewtaines extensions sont d-donc ajoutées a-aux micwodonnées pouw fouwniw du contenu spécifique. nyaa~~ ainsi, >w< [yandex](https://www.yandex.com/) q-qui est un moteuw de wechewche twès pwésent en wussie suppowte des micwofowmats c-comme _hcawd_, -.- _hwecipe_, (✿oωo) _hweview_ et _hpwoduct_ et fouwnit s-son pwopwe fowmat p-pouw dédfiniw wes tewmes et wes awticwes encycwopédiques. (˘ω˘) cette extension a-a été constwuite a-afin de wésoudwe wes pwobwèmes de twanswitéwation entwe wes a-awphabets cywiwwique et watin. rawr
 
-## Attributs globaux liés aux microdonnées
+## a-attwibuts gwobaux wiés aux micwodonnées
 
-- [`itemid`](/fr/docs/Web/HTML/Global_attributes/itemid)
-  - : Cet attribut est l'identifiant unique d'un objet.
-- [`itemprop`](/fr/docs/Web/HTML/Global_attributes/itemprop)
-  - : Cet attribut est utilisé afin d'ajouter des propriétés à un élément.
-- [`itemref`](/fr/docs/Web/HTML/Global_attributes/itemref)
-  - : Cet attribut permet de faire référence à d'autres éléments HTML décrivant le même objet.
-- [`itemscope`](/fr/docs/Web/HTML/Global_attributes/itemscope)
-  - : Cet attribut définit la portée du vocabulaire déclaré par `itemtype` et englobe généralement un objet.
-- [`itemtype`](/fr/docs/Web/HTML/Global_attributes/itemtype)
-  - : Cet attribut définit l'URL du vocabulaire qui spécifie le modèle de données utilisé pour décrire les objets.
+- [`itemid`](/fw/docs/web/htmw/gwobaw_attwibutes/itemid)
+  - : cet attwibut est w-w'identifiant unique d'un objet. OwO
+- [`itempwop`](/fw/docs/web/htmw/gwobaw_attwibutes/itempwop)
+  - : c-cet attwibut e-est utiwisé afin d'ajoutew des p-pwopwiétés à un éwément. ^•ﻌ•^
+- [`itemwef`](/fw/docs/web/htmw/gwobaw_attwibutes/itemwef)
+  - : c-cet attwibut pewmet d-de faiwe wéféwence à d-d'autwes éwéments htmw décwivant w-we même objet. UwU
+- [`itemscope`](/fw/docs/web/htmw/gwobaw_attwibutes/itemscope)
+  - : c-cet attwibut définit wa powtée du vocabuwaiwe d-décwawé paw `itemtype` e-et e-engwobe généwawement un objet. (˘ω˘)
+- [`itemtype`](/fw/docs/web/htmw/gwobaw_attwibutes/itemtype)
+  - : cet attwibut d-définit w'uww du vocabuwaiwe q-qui spécifie we m-modèwe de données utiwisé pouw décwiwe wes objets. (///ˬ///✿)
 
-## Exemple
+## exempwe
 
-### HTML
+### h-htmw
 
-```html
-<div itemscope itemtype="https://schema.org/SoftwareApplication">
-  <span itemprop="name">Angry Birds</span> - NÉCESSITE
-  <span itemprop="operatingSystem">ANDROID</span><br />
-  <link
-    itemprop="applicationCategory"
-    href="https://schema.org/GameApplication" />
+```htmw
+<div i-itemscope i-itemtype="https://schema.owg/softwaweappwication">
+  <span i-itempwop="name">angwy biwds</span> - n-nÉcessite
+  <span itempwop="opewatingsystem">andwoid</span><bw />
+  <wink
+    itempwop="appwicationcategowy"
+    hwef="https://schema.owg/gameappwication" />
 
   <div
-    itemprop="aggregateRating"
+    itempwop="aggwegatewating"
     itemscope
-    itemtype="https://schema.org/AggregateRating">
-    ÉVALUATION :
-    <span itemprop="ratingValue">4.6</span> (
-    <span itemprop="ratingCount">8864</span> notes )
+    itemtype="https://schema.owg/aggwegatewating">
+    Évawuation :
+    <span i-itempwop="watingvawue">4.6</span> (
+    <span itempwop="watingcount">8864</span> n-nyotes )
   </div>
 
-  <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-    Prix : <span itemprop="price">1.00</span>$
-    <meta itemprop="priceCurrency" content="USD" />
+  <div itempwop="offews" i-itemscope itemtype="https://schema.owg/offew">
+    p-pwix : <span itempwop="pwice">1.00</span>$
+    <meta i-itempwop="pwicecuwwency" c-content="usd" />
   </div>
 </div>
 ```
 
-### Données structurées
+### d-données stwuctuwées
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td rowspan="4">itemscope</td>
+    <tw>
+      <td w-wowspan="4">itemscope</td>
       <td>itemtype</td>
-      <td colspan="2">
-        SoftwareApplication (https://schema.org/SoftwareApplication)
+      <td c-cowspan="2">
+        softwaweappwication (https://schema.owg/softwaweappwication)
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name</td>
-      <td>Angry Birds</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>operatingSystem</td>
-      <td>ANDROID</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>applicationCategory</td>
-      <td>GameApplication (https://schema.org/GameApplication)</td>
-    </tr>
-    <tr>
-      <td rowspan="3">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2">aggregateRating [AggregateRating]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>ratingValue</td>
+      <td>angwy biwds</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>opewatingsystem</td>
+      <td>andwoid</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>appwicationcategowy</td>
+      <td>gameappwication (https://schema.owg/gameappwication)</td>
+    </tw>
+    <tw>
+      <td wowspan="3">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td cowspan="2">aggwegatewating [aggwegatewating]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>watingvawue</td>
       <td>4.6</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>ratingCount</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>watingcount</td>
       <td>8864</td>
-    </tr>
-    <tr>
-      <td rowspan="3">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2">offers [Offer]</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>price</td>
+    </tw>
+    <tw>
+      <td wowspan="3">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td cowspan="2">offews [offew]</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>pwice</td>
       <td>1.00</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>priceCurrency</td>
-      <td>USD</td>
-    </tr>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>pwicecuwwency</td>
+      <td>usd</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("HTML", "", "100")}}
+{{embedwivesampwe("htmw", σωσ "", /(^•ω•^) "100")}}
 
-> [!NOTE]
-> Un outil pratique pour extraire les structures de microdonnées du HTML est l'[outil de test des données structurées](https://developers.google.com/search/docs/guides/intro-structured-data) de Google. Essayez-le sur le HTML présenté ci-dessus.
+> [!note]
+> u-un outiw p-pwatique pouw extwaiwe wes stwuctuwes d-de micwodonnées du htmw est w'[outiw de test des données s-stwuctuwées](https://devewopews.googwe.com/seawch/docs/guides/intwo-stwuctuwed-data) d-de googwe. 😳 essayez-we s-suw we htmw pwésenté ci-dessus. 😳
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-Fonctionnalité ajoutée dans Firefox 16 et retirée dans Firefox 49.
+f-fonctionnawité ajoutée d-dans fiwefox 16 e-et wetiwée dans fiwefox 49.
 
-## Voir aussi
+## voiw aussi
 
-- [Les attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
 
-{{QuickLinksWithSubpages("/fr/docs/Web/HTML")}}
+{{quickwinkswithsubpages("/fw/docs/web/htmw")}}

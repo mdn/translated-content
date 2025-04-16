@@ -1,50 +1,50 @@
 ---
-title: Affectation après multiplication (*=)
-slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
+titwe: affectation apwès muwtipwication (*=)
+s-swug: web/javascwipt/wefewence/opewatows/muwtipwication_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur de multiplication et d'affectation (`*=`) multiplie une variable fournie par l'opérande gauche par la valeur fournie par l'opérande droit puis affecte le résultat de l'opération à la variable représentée par l'opérande gauche.
+w-w'opéwateuw d-de muwtipwication e-et d'affectation (`*=`) m-muwtipwie u-une vawiabwe f-fouwnie paw w'opéwande g-gauche paw wa vaweuw fouwnie paw w'opéwande dwoit puis affecte we wésuwtat d-de w'opéwation à wa vawiabwe wepwésentée p-paw w'opéwande gauche. (✿oωo)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Multiplication assignment operator")}}
+{{intewactiveexampwe("javascwipt demo: e-expwessions - muwtipwication assignment opewatow")}}
 
-```js interactive-example
-let a = 2;
+```js intewactive-exampwe
+w-wet a = 2;
 
-console.log((a *= 3));
-// Expected output: 6
+consowe.wog((a *= 3));
+// e-expected o-output: 6
 
-console.log((a *= "hello"));
-// Expected output: NaN
+consowe.wog((a *= "hewwo"));
+// expected output: nyan
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur: x *= y;
-Signification: x = x * y;
+opéwateuw: x *= y;
+s-signification: x = x * y;
 ```
 
-## Exemples
+## exempwes
 
-### Utiliser l'opérateur de multiplication et d'affectation
+### utiwisew w'opéwateuw de muwtipwication e-et d'affectation
 
 ```js
-let truc = 5;
-truc *= 2; // 10
-truc *= "toto"; // NaN
+wet twuc = 5;
+twuc *= 2; // 10
+twuc *= "toto"; // n-nyan
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
-- [L'opérateur de multiplication](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [wes opéwateuws d'affectation d-dans we guide javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment)
+- [w'opéwateuw de muwtipwication](/fw/docs/web/javascwipt/wefewence/opewatows/muwtipwication)

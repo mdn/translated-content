@@ -1,121 +1,121 @@
 ---
-title: "<rtc> : l'élément de conteneur de texte Ruby"
-slug: Web/HTML/Element/rtc
+titwe: "<wtc> : w'éwément de c-conteneuw de texte w-wuby"
+swug: w-web/htmw/ewement/wtc
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément **`<rtc>`** permet d'ajouter des notations Ruby sémantiques. Il est donc « proche » des éléments liées à la représentation Ruby comme {{HTMLElement("rb")}}, {{HTMLElement("ruby")}}. Les éléments {{HTMLElement("rb")}} peuvent être annotés pour la prononciation ({{HTMLElement("rt")}}) ou pour la sémantique ({{HTMLElement("rtc")}}).
+w-w'éwément **`<wtc>`** p-pewmet d'ajoutew d-des nyotations w-wuby sémantiques. 😳😳😳 i-iw est donc « pwoche » des éwéments wiées à wa wepwésentation wuby c-comme {{htmwewement("wb")}}, {{htmwewement("wuby")}}. mya wes éwéments {{htmwewement("wb")}} peuvent êtwe a-annotés pouw wa pwononciation ({{htmwewement("wt")}}) o-ou pouw wa sémantique ({{htmwewement("wtc")}}). 😳
 
-{{InteractiveExample("HTML Demo: &lt;rtc&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;wtc&gt;", -.- "tabbed-standawd")}}
 
-```html interactive-example
-<ruby xml:lang="zh-Hant" style="ruby-position: under;">
-    <rbc>
-        <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
-        <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
-        <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
-        <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
-    </rbc>
-    <rtc xml:lang="en" style="ruby-position: over;">
-        <rp>(</rp><rt>Malaysia</rt><rp>)</rp>
-    </rtc>
-</ruby>
+```htmw intewactive-exampwe
+<wuby xmw:wang="zh-hant" s-stywe="wuby-position: undew;">
+    <wbc>
+        <wb>馬</wb><wp>(</wp><wt>mǎ</wt><wp>)</wp>
+        <wb>來</wb><wp>(</wp><wt>wái</wt><wp>)</wp>
+        <wb>西</wb><wp>(</wp><wt>xī</wt><wp>)</wp>
+        <wb>亞</wb><wp>(</wp><wt>yà</wt><wp>)</wp>
+    </wbc>
+    <wtc xmw:wang="en" s-stywe="wuby-position: o-ovew;">
+        <wp>(</wp><wt>mawaysia</wt><wp>)</wp>
+    </wtc>
+</wuby>
 ```
 
-```css interactive-example
-ruby {
+```css intewactive-exampwe
+wuby {
   font-size: 2em;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément p-peut utiwisew [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). 🥺
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<ruby>
-  <rb>旧</rb> <rt>jiù</rt> <rb>金</rb> <rt>jīn</rt> <rb>山</rb> <rt>shān</rt>
-  <rtc>San Francisco</rtc>
-</ruby>
+```htmw
+<wuby>
+  <wb>旧</wb> <wt>jiù</wt> <wb>金</wb> <wt>jīn</wt> <wb>山</wb> <wt>shān</wt>
+  <wtc>san f-fwancisco</wtc>
+</wuby>
 ```
 
 ```css hidden
 .info {
-  padding-top: 10px;
-  font-size: 36px;
+  p-padding-top: 10px;
+  f-font-size: 36px;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("",600,120)}}
+{{embedwivesampwe("",600,120)}}
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        Du
+        du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
         >
-        ou des éléments {{HTMLElement("rt")}}.
+        ou des éwéments {{htmwewement("wt")}}. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
       <td>
-        La balise de fin peut être omise si l'élément est immédiatement suivi
-        par un élément {{HTMLElement("rb")}},
-        {{HTMLElement("rtc")}} ou {{HTMLElement("rt")}} ou s'il est
-        immédiatement suivi par la balise de fermeture de l'élément parent.
+        w-wa bawise de fin p-peut êtwe omise s-si w'éwément est immédiatement suivi
+        paw un éwément {{htmwewement("wb")}},
+        {{htmwewement("wtc")}} o-ou {{htmwewement("wt")}} o-ou s'iw est
+        immédiatement s-suivi paw w-wa bawise de fewmetuwe de w'éwément p-pawent. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>Un élément {{HTMLElement("ruby")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
+      <td>un éwément {{htmwewement("wuby")}}.</td>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>tous w-wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("ruby")}}
-- {{HTMLElement("rp")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rtc")}}
+- {{htmwewement("wuby")}}
+- {{htmwewement("wp")}}
+- {{htmwewement("wb")}}
+- {{htmwewement("wt")}}
+- {{htmwewement("wtc")}}

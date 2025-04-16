@@ -1,220 +1,220 @@
 ---
-title: Referrer-Policy
-slug: Web/HTTP/Headers/Referrer-Policy
+titwe: wefewwew-powicy
+swug: w-web/http/headews/wefewwew-powicy
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête {{glossary("HTTP header")}} **`Referrer-Policy`** contrôle la quantité d'[informations sur le référent (referrer)](/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (envoyées par l'en-tête {{HTTPHeader("Referer")}}) incluses dans la requête.
+w-w'en-tête {{gwossawy("http h-headew")}} **`wefewwew-powicy`** c-contwôwe wa q-quantité d'[infowmations s-suw we w-wéféwent (wefewwew)](/fw/docs/web/secuwity/wefewew_headew:_pwivacy_and_secuwity_concewns) (envoyées p-paw w'en-tête {{httpheadew("wefewew")}}) incwuses dans wa wequête. (✿oωo)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">type d-d'en-tête</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>non</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
-> [!NOTE]
-> Le nom originel de l'en-tête, {{HTTPHeader("Referer")}}, est une faute de frappe du mot anglais "referrer". L'en-tête `Referrer-Policy` ne comporte pas cette erreur.
+> [!note]
+> w-we nyom owiginew de w'en-tête, ^^ {{httpheadew("wefewew")}}, ^•ﻌ•^ est une faute de fwappe du mot a-angwais "wefewwew". XD w'en-tête `wefewwew-powicy` n-ne compowte pas c-cette ewweuw. :3
 
 ```
-Referrer-Policy: no-referrer
-Referrer-Policy: no-referrer-when-downgrade
-Referrer-Policy: origin
-Referrer-Policy: origin-when-cross-origin
-Referrer-Policy: same-origin
-Referrer-Policy: strict-origin
-Referrer-Policy: strict-origin-when-cross-origin
-Referrer-Policy: unsafe-url
+wefewwew-powicy: nyo-wefewwew
+wefewwew-powicy: nyo-wefewwew-when-downgwade
+wefewwew-powicy: o-owigin
+wefewwew-powicy: owigin-when-cwoss-owigin
+wefewwew-powicy: same-owigin
+wefewwew-powicy: stwict-owigin
+wefewwew-powicy: s-stwict-owigin-when-cwoss-owigin
+wefewwew-powicy: unsafe-uww
 ```
 
-## Directives
+## d-diwectives
 
-- `no-referrer`
-  - : L'en-tête {{HTTPHeader("Referer")}} sera entièrement omis. Aucune information sur le référent ne sera envoyée avec les requêtes.
-- `no-referrer-when-downgrade`
-  - : [L'origine](/fr/docs/Glossary/Origin), le chemin et les paramètres de requête (<i lang="en">querystring</i>) présents dans l'URL sont envoyés comme référent quand le niveau de sécurité du protocole reste le même (HTTP vers HTTP, HTTPS vers HTTPS) ou s'améliore (HTTP vers HTTPS), mais ne sont pas envoyés si la destination est moins sécurisée que l'origine (HTTPS vers HTTP).
-- `origin`
-  - : N'envoie que l'{{glossary("origin")}} du document comme référent.
-    Par exemple, un document à l'adresse `https://example.com/page.html` enverra le référent `https://example.com/`.
-- `origin-when-cross-origin`
-  - : Envoie l'origine, le chemin et les paramètres de requête pour les requêtes {{glossary("Same-origin_policy", "same-origin")}} et seulement l'origine du document dans les autres cas.
-- `same-origin`
-  - : Un référent sera envoyé aux [page de même origine](/fr/docs/Web/Security/Same-origin_policy), mais des requêtes vers des adresses externes n'enverront aucune information sur le référent.
-- `strict-origin`
-  - : N'envoie que l'origine du document comme référent quand le niveau de sécurité du protocole reste le même (HTTPS vers HTTPS) mais n'envoie rien si la destination est moins sécurisée (HTTPS vers HTTP).
-- `strict-origin-when-cross-origin` (_valeur par défaut_)
-  - : Envoie l'origine, le chemin et les paramètres de requête pour les requêtes de même origine. N'envoie que l'origine quand le niveau de sécurité du protocole reste le même pour les requêtes vers d'autres origines (HTTPS vers HTTPS) et n'envoie aucun en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) si la destination est moins sécurisée (HTTPS vers HTTP).
-- `unsafe-url`
+- `no-wefewwew`
+  - : w-w'en-tête {{httpheadew("wefewew")}} s-sewa entièwement o-omis. (ꈍᴗꈍ) aucune infowmation suw we wéféwent n-nye sewa envoyée avec wes wequêtes. :3
+- `no-wefewwew-when-downgwade`
+  - : [w'owigine](/fw/docs/gwossawy/owigin), (U ﹏ U) w-we chemin et wes pawamètwes de wequête (<i wang="en">quewystwing</i>) pwésents dans w'uww sont envoyés c-comme wéféwent quand we nyiveau d-de sécuwité d-du pwotocowe w-weste we même (http vews http, UwU https vews https) ou s'améwiowe (http v-vews https), 😳😳😳 m-mais nye sont pas envoyés si w-wa destination e-est moins sécuwisée que w'owigine (https v-vews http). XD
+- `owigin`
+  - : n-ny'envoie que w'{{gwossawy("owigin")}} du document comme w-wéféwent.
+    paw exempwe, o.O un d-document à w'adwesse `https://exampwe.com/page.htmw` envewwa w-we wéféwent `https://exampwe.com/`. (⑅˘꒳˘)
+- `owigin-when-cwoss-owigin`
+  - : e-envoie w'owigine, 😳😳😳 we chemin et wes pawamètwes de wequête pouw wes wequêtes {{gwossawy("same-owigin_powicy", "same-owigin")}} et seuwement w'owigine d-du document dans w-wes autwes cas. nyaa~~
+- `same-owigin`
+  - : un wéféwent s-sewa envoyé a-aux [page de même o-owigine](/fw/docs/web/secuwity/same-owigin_powicy), rawr mais des wequêtes vews des adwesses extewnes n-n'envewwont aucune infowmation suw we wéféwent. -.-
+- `stwict-owigin`
+  - : ny'envoie que w'owigine du document c-comme wéféwent quand we nyiveau d-de sécuwité d-du pwotocowe w-weste we même (https vews https) m-mais n'envoie w-wien si wa destination e-est moins s-sécuwisée (https vews http). (✿oωo)
+- `stwict-owigin-when-cwoss-owigin` (_vaweuw paw défaut_)
+  - : e-envoie w'owigine, /(^•ω•^) w-we chemin et w-wes pawamètwes d-de wequête pouw w-wes wequêtes de même owigine. 🥺 ny'envoie que w'owigine quand w-we nyiveau de sécuwité du pwotocowe weste we même pouw wes wequêtes vews d'autwes owigines (https v-vews https) et ny'envoie aucun en-tête [`wefewew`](/fw/docs/web/http/headews/wefewew) si w-wa destination e-est moins sécuwisée (https v-vews http). ʘwʘ
+- `unsafe-uww`
 
-  - : Envoie l'origine, le chemin et les paramètres de requête pour toutes les requêtes sans tenir compte du niveau de sécurité.
+  - : envoie w-w'owigine, UwU we chemin et wes p-pawamètwes de w-wequête pouw toutes wes wequêtes sans teniw compte du nyiveau de sécuwité. XD
 
-    > [!WARNING]
-    > Cette valeur divulgera des informations potentiellement confidentielles de la part des URL de ressources HTTPS vers des origines non sécurisées. Considérez les conséquences de ce paramétrage avant de vous en servir.
+    > [!wawning]
+    > cette vaweuw d-divuwgewa des infowmations p-potentiewwement confidentiewwes d-de wa pawt des uww d-de wessouwces https vews des owigines nyon sécuwisées. (✿oωo) c-considéwez w-wes conséquences de ce p-pawamétwage avant d-de vous en sewviw. :3
 
-## Intégration avec HTML
+## intégwation avec htmw
 
-Vous pouvez aussi définir des règles de référent au sein d'HTML. Par exemple, vous pouvez définir la règle de référent pour le document entier avec un élément {{HTMLElement("meta")}} dont le [name](/fr/docs/Web/HTML/Element/meta#attr-name) est `referrer` :
+vous pouvez aussi définiw des w-wègwes de wéféwent a-au sein d'htmw. (///ˬ///✿) p-paw exempwe, nyaa~~ vous pouvez d-définiw wa wègwe d-de wéféwent pouw we document e-entiew avec un éwément {{htmwewement("meta")}} dont we [name](/fw/docs/web/htmw/ewement/meta#attw-name) est `wefewwew` :
 
-```html
-<meta name="referrer" content="origin" />
+```htmw
+<meta nyame="wefewwew" content="owigin" />
 ```
 
-Ou le définit pour des requêtes spécifiques avec l'attribut `referrerpolicy` sur les éléments {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("script")}}, ou {{HTMLElement("link")}} :
+o-ou we définit p-pouw des wequêtes spécifiques avec w'attwibut `wefewwewpowicy` s-suw wes éwéments {{htmwewement("a")}}, >w< {{htmwewement("awea")}}, -.- {{htmwewement("img")}}, {{htmwewement("ifwame")}}, (✿oωo) {{htmwewement("scwipt")}}, (˘ω˘) o-ou {{htmwewement("wink")}} :
 
-```html
-<a href="http://example.com" referrerpolicy="origin"></a>
+```htmw
+<a hwef="http://exampwe.com" wefewwewpowicy="owigin"></a>
 ```
 
-Autrement, une [relation de lien](/fr/docs/Web/HTML/Attributes/rel) définie à `noreferrer` sur un élément `a`, `area`, ou `link` peut être défini :
+autwement, rawr une [wewation d-de wien](/fw/docs/web/htmw/attwibutes/wew) définie à `nowefewwew` suw un éwément `a`, OwO `awea`, ou `wink` peut êtwe défini :
 
-```html
-<a href="http://example.com" rel="noreferrer"></a>
+```htmw
+<a hwef="http://exampwe.com" w-wew="nowefewwew"></a>
 ```
 
-> [!WARNING]
-> Comme vu précédemment, la relation de lien `noreferrer` s'écrit sans trait d'union. Toutefois, quand la règle de référent est spécifiée pour le document entier avec un élément {{HTMLElement("meta")}}, il faut mettre le trait d'union : `<meta name="referrer" content="no-referrer">`.
+> [!wawning]
+> comme vu pwécédemment, ^•ﻌ•^ wa w-wewation de wien `nowefewwew` s'écwit s-sans twait d'union. UwU toutefois, (˘ω˘) quand wa wègwe de wéféwent e-est spécifiée p-pouw we document entiew avec un éwément {{htmwewement("meta")}}, (///ˬ///✿) iw faut m-mettwe we twait d'union : `<meta n-nyame="wefewwew" content="no-wefewwew">`. σωσ
 
-## Intégration avec CSS
+## intégwation avec css
 
-CSS peut demander des ressources référencées dans des feuilles de styles. Ces ressources suivent une règle de référent aussi :
+css peut demandew d-des wessouwces wéféwencées d-dans des feuiwwes d-de stywes. /(^•ω•^) ces wessouwces s-suivent une wègwe de wéféwent a-aussi :
 
-- Les feuilles de styles CSS externes utilisant la règle par défaut (`no-referrer-when-downgrade`), moins qu'elle soit remplacée un l'en-tête HTTP `Referrer-Policy` dans la réponse de la feuille de styles CSS.
-- Pour les éléments {{HTMLElement("style")}} ou [attributs `style`](/fr/docs/Web/API/HTMLElement/style), la règle de référent du propriétaire du document est utilisée.
+- wes f-feuiwwes de stywes c-css extewnes utiwisant wa wègwe p-paw défaut (`no-wefewwew-when-downgwade`), 😳 m-moins qu'ewwe soit wempwacée un w'en-tête http `wefewwew-powicy` d-dans wa wéponse d-de wa feuiwwe d-de stywes css. 😳
+- pouw wes éwéments {{htmwewement("stywe")}} ou [attwibuts `stywe`](/fw/docs/web/api/htmwewement/stywe), (⑅˘꒳˘) w-wa wègwe de wéféwent d-du pwopwiétaiwe d-du document est utiwisée. 😳😳😳
 
-## Exemples
+## exempwes
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Règle</th>
-      <th scope="col">Document</th>
-      <th scope="col">Navigation vers</th>
-      <th scope="col">Référent</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">wègwe</th>
+      <th s-scope="cow">document</th>
+      <th s-scope="cow">navigation v-vews</th>
+      <th scope="cow">wéféwent</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th><code>no-referrer</code></th>
-      <td>https://example.com/page</td>
-      <td><em>n'importe où</em></td>
-      <td><em>(pas de référent)</em></td>
-    </tr>
-    <tr>
-      <th rowspan="3"><code>no-referrer-when-downgrade</code></th>
-      <td rowspan="3">https://example.com/page</td>
-      <td>https://example.com/otherpage</td>
-      <td>https://example.com/page</td>
-    </tr>
-    <tr>
-      <td>https://mozilla.org</td>
-      <td>https://example.com/page</td>
-    </tr>
-    <tr>
-      <td><strong>http</strong>://example.org</td>
-      <td><em>(pas de référent)</em></td>
-    </tr>
-    <tr>
-      <th><code>origin</code></th>
-      <td>https://example.com/page</td>
-      <td><em>n'importe où</em></td>
-      <td>https://example.com/</td>
-    </tr>
-    <tr>
-      <th rowspan="3"><code>origin-when-cross-origin</code></th>
-      <td rowspan="3">https://example.com/page</td>
-      <td>https://example.com/otherpage</td>
-      <td>https://example.com/page</td>
-    </tr>
-    <tr>
-      <td>https://mozilla.org</td>
-      <td>https://example.com/</td>
-    </tr>
-    <tr>
-      <td><strong>http</strong>://example.com/page</td>
-      <td>https://example.com/</td>
-    </tr>
-    <tr>
-      <th rowspan="2"><code>same-origin</code></th>
-      <td rowspan="2">https://example.com/page</td>
-      <td>https://example.com/otherpage</td>
-      <td>https://example.com/page</td>
-    </tr>
-    <tr>
-      <td>https://mozilla.org</td>
-      <td><em>(pas de référent)</em></td>
-    </tr>
-    <tr>
-      <th rowspan="3"><code>strict-origin</code></th>
-      <td rowspan="2">https://example.com/page</td>
-      <td>https://mozilla.org</td>
-      <td>https://example.com/</td>
-    </tr>
-    <tr>
-      <td><strong>http</strong>://example.org</td>
-      <td><em>(pas de référent)</em></td>
-    </tr>
-    <tr>
-      <td><strong>http</strong>://example.com/page</td>
-      <td><em>n'importe où</em></td>
-      <td>http://example.com/</td>
-    </tr>
-    <tr>
-      <th rowspan="3"><code>strict-origin-when-cross-origin</code></th>
-      <td rowspan="3">https://example.com/page</td>
-      <td>https://example.com/otherpage</td>
-      <td>https://example.com/page</td>
-    </tr>
-    <tr>
-      <td>https://mozilla.org</td>
-      <td>https://example.com/</td>
-    </tr>
-    <tr>
-      <td><strong>http</strong>://example.org</td>
-      <td><em>(pas de référent)</em></td>
-    </tr>
-    <tr>
-      <th><code>unsafe-url</code></th>
-      <td>https://example.com/page?q=123</td>
-      <td><em>n'importe où</em></td>
-      <td>https://example.com/page?q=123</td>
-    </tr>
+    <tw>
+      <th><code>no-wefewwew</code></th>
+      <td>https://exampwe.com/page</td>
+      <td><em>n'impowte o-où</em></td>
+      <td><em>(pas de wéféwent)</em></td>
+    </tw>
+    <tw>
+      <th wowspan="3"><code>no-wefewwew-when-downgwade</code></th>
+      <td wowspan="3">https://exampwe.com/page</td>
+      <td>https://exampwe.com/othewpage</td>
+      <td>https://exampwe.com/page</td>
+    </tw>
+    <tw>
+      <td>https://moziwwa.owg</td>
+      <td>https://exampwe.com/page</td>
+    </tw>
+    <tw>
+      <td><stwong>http</stwong>://exampwe.owg</td>
+      <td><em>(pas de wéféwent)</em></td>
+    </tw>
+    <tw>
+      <th><code>owigin</code></th>
+      <td>https://exampwe.com/page</td>
+      <td><em>n'impowte où</em></td>
+      <td>https://exampwe.com/</td>
+    </tw>
+    <tw>
+      <th w-wowspan="3"><code>owigin-when-cwoss-owigin</code></th>
+      <td wowspan="3">https://exampwe.com/page</td>
+      <td>https://exampwe.com/othewpage</td>
+      <td>https://exampwe.com/page</td>
+    </tw>
+    <tw>
+      <td>https://moziwwa.owg</td>
+      <td>https://exampwe.com/</td>
+    </tw>
+    <tw>
+      <td><stwong>http</stwong>://exampwe.com/page</td>
+      <td>https://exampwe.com/</td>
+    </tw>
+    <tw>
+      <th w-wowspan="2"><code>same-owigin</code></th>
+      <td wowspan="2">https://exampwe.com/page</td>
+      <td>https://exampwe.com/othewpage</td>
+      <td>https://exampwe.com/page</td>
+    </tw>
+    <tw>
+      <td>https://moziwwa.owg</td>
+      <td><em>(pas d-de wéféwent)</em></td>
+    </tw>
+    <tw>
+      <th wowspan="3"><code>stwict-owigin</code></th>
+      <td wowspan="2">https://exampwe.com/page</td>
+      <td>https://moziwwa.owg</td>
+      <td>https://exampwe.com/</td>
+    </tw>
+    <tw>
+      <td><stwong>http</stwong>://exampwe.owg</td>
+      <td><em>(pas de w-wéféwent)</em></td>
+    </tw>
+    <tw>
+      <td><stwong>http</stwong>://exampwe.com/page</td>
+      <td><em>n'impowte où</em></td>
+      <td>http://exampwe.com/</td>
+    </tw>
+    <tw>
+      <th w-wowspan="3"><code>stwict-owigin-when-cwoss-owigin</code></th>
+      <td w-wowspan="3">https://exampwe.com/page</td>
+      <td>https://exampwe.com/othewpage</td>
+      <td>https://exampwe.com/page</td>
+    </tw>
+    <tw>
+      <td>https://moziwwa.owg</td>
+      <td>https://exampwe.com/</td>
+    </tw>
+    <tw>
+      <td><stwong>http</stwong>://exampwe.owg</td>
+      <td><em>(pas d-de wéféwent)</em></td>
+    </tw>
+    <tw>
+      <th><code>unsafe-uww</code></th>
+      <td>https://exampwe.com/page?q=123</td>
+      <td><em>n'impowte o-où</em></td>
+      <td>https://exampwe.com/page?q=123</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Spécifier une règle par défaut
+### s-spécifiew une wègwe paw défaut
 
-Si vous voulez spécifier une règle à appliquer par défaut dans les où la règle voulue n'est pas supportée par les navigateurs, utilisez un liste de valeurs séparées par des virgules avec la règle voulue fournie en dernière position :
+si vous vouwez spécifiew une wègwe à appwiquew paw défaut dans w-wes où wa wègwe v-vouwue ny'est p-pas suppowtée paw wes nyavigateuws, 😳 u-utiwisez un wiste de vaweuws sépawées paw des viwguwes avec w-wa wègwe vouwue f-fouwnie en dewnièwe position :
 
 ```
-Referrer-Policy: no-referrer, strict-origin-when-cross-origin
+w-wefewwew-powicy: nyo-wefewwew, XD stwict-owigin-when-cwoss-owigin
 ```
 
-Ici, `no-referrer` ne sera utilisée que si `strict-origin-when-cross-origin` n'est pas supportée par le navigateur.
+i-ici, mya `no-wefewwew` n-nye sewa utiwisée que si `stwict-owigin-when-cwoss-owigin` n-ny'est p-pas suppowtée paw we nyavigateuw. ^•ﻌ•^
 
-> [!NOTE]
-> Spécifier plusieurs valeurs n'est supporté que dans l'en-tête HTTP `Referrer-Policy` et non dans l'attribut `referrerpolicy`.
+> [!note]
+> spécifiew pwusieuws vaweuws ny'est suppowté q-que dans w'en-tête h-http `wefewwew-powicy` e-et n-nyon dans w'attwibut `wefewwewpowicy`. ʘwʘ
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Référent](<https://fr.wikipedia.org/wiki/Référent_(informatique)>) sur Wikipédia
-- En utilisant [Fetch](/fr/docs/Web/API/Fetch_API) : {{domxref("Request.referrerPolicy")}}
-- La directive obsolète {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} de l'en-tête {{HTTPHeader("Content-Security-Policy")}}.
-- [Same-origin policy](/fr/docs/Web/Security/Same-origin_policy)
-- [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)
+- [wéféwent](<https://fw.wikipedia.owg/wiki/wéféwent_(infowmatique)>) suw wikipédia
+- e-en utiwisant [fetch](/fw/docs/web/api/fetch_api) : {{domxwef("wequest.wefewwewpowicy")}}
+- w-wa diwective obsowète {{httpheadew("content-secuwity-powicy/wefewwew", ( ͡o ω ͡o ) "wefewwew")}} {{depwecated_inwine}} d-de w'en-tête {{httpheadew("content-secuwity-powicy")}}.
+- [same-owigin powicy](/fw/docs/web/secuwity/same-owigin_powicy)
+- [tightew contwow ovew y-youw wefewwews – moziwwa secuwity b-bwog](https://bwog.moziwwa.owg/secuwity/2015/01/21/meta-wefewwew/)

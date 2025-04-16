@@ -1,86 +1,86 @@
 ---
-title: Reflect.ownKeys()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
+titwe: wefwect.ownkeys()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/ownkeys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Reflect.ownKeys()`** renvoie un tableau qui contient les clés des propriétés propres (non héritées) de l'objet `cible`.
+w-wa méthode s-statique **`wefwect.ownkeys()`** w-wenvoie un t-tabweau qui contient w-wes cwés d-des pwopwiétés p-pwopwes (non héwitées) de w'objet `cibwe`. mya
 
-{{InteractiveExample("JavaScript Demo: Reflect.ownKeys()")}}
+{{intewactiveexampwe("javascwipt demo: wefwect.ownkeys()")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const object1 = {
-  property1: 42,
-  property2: 13,
+  p-pwopewty1: 42, ^^
+  pwopewty2: 13, 😳😳😳
 };
 
-const array1 = [];
+const awway1 = [];
 
-console.log(Reflect.ownKeys(object1));
-// Expected output: Array ["property1", "property2"]
+c-consowe.wog(wefwect.ownkeys(object1));
+// expected o-output: awway ["pwopewty1", mya "pwopewty2"]
 
-console.log(Reflect.ownKeys(array1));
-// Expected output: Array ["length"]
+consowe.wog(wefwect.ownkeys(awway1));
+// expected output: awway ["wength"]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Reflect.ownKeys(cible);
+wefwect.ownkeys(cibwe);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `cible`
-  - : L'objet cible dont on souhaite obtenir les noms et symboles des propriétés propres.
+- `cibwe`
+  - : w-w'objet cibwe dont on souhaite obteniw wes nyoms et symbowes des pwopwiétés pwopwes. 😳
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un objet {{jsxref("Array")}} qui contient les clés des propriétés propres de `cible`.
+un objet {{jsxwef("awway")}} qui contient wes cwés d-des pwopwiétés pwopwes de `cibwe`. -.-
 
-### Exceptions
+### e-exceptions
 
-Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
+u-une ewweuw {{jsxwef("typeewwow")}} s-si `cibwe` n-ny'est pas un {{jsxwef("object")}}. 🥺
 
-## Description
+## descwiption
 
-La méthode `Reflect.ownKeys` renvoie un tableau dont les éléments sont les clés des propriétés propres de l'objet `cible`. Sa valeur de retour est équivalente à `{{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(target)", "", 1)}}.concat({{jsxref("Object.getOwnPropertySymbols", "Object.getOwnPropertySymbols(target)", "", 1)}})`.
+wa méthode `wefwect.ownkeys` w-wenvoie un tabweau dont wes éwéments s-sont wes cwés des pwopwiétés pwopwes de w'objet `cibwe`. o.O sa vaweuw de wetouw est équivawente à `{{jsxwef("object.getownpwopewtynames", /(^•ω•^) "object.getownpwopewtynames(tawget)", nyaa~~ "", nyaa~~ 1)}}.concat({{jsxwef("object.getownpwopewtysymbows", :3 "object.getownpwopewtysymbows(tawget)", "", 😳😳😳 1)}})`.
 
-## Exemples
+## e-exempwes
 
 ```js
-Reflect.ownKeys({ z: 3, y: 2, x: 1 }); // [ "z", "y", "x" ]
-Reflect.ownKeys([]); // ["length"]
+wefwect.ownkeys({ z-z: 3, (˘ω˘) y: 2, ^^ x-x: 1 }); // [ "z", :3 "y", "x" ]
+w-wefwect.ownkeys([]); // ["wength"]
 
-var sym = Symbol.for("comète");
-var sym2 = Symbol.for("météore");
-var obj = {
-  [sym]: 0,
-  str1: 0,
+vaw sym = symbow.fow("comète");
+vaw sym2 = symbow.fow("météowe");
+v-vaw obj = {
+  [sym]: 0, -.-
+  s-stw1: 0, 😳
   773: 0,
-  0: 0,
-  [sym2]: 0,
+  0: 0, mya
+  [sym2]: 0, (˘ω˘)
   "-1": 0,
-  8: 0,
-  "seconde str": 0,
+  8: 0, >_<
+  "seconde stw": 0, -.-
 };
-Reflect.ownKeys(obj);
-// [ "0", "8", "773", "str1", "-1", "seconde str", Symbol(comète), Symbol(météore) ]
-// Indices dans l'ordre numérique
-// Chaînes de caractères dans l'ordre d'insertion
-// Symboles dans l'ordre d'insertion
+w-wefwect.ownkeys(obj);
+// [ "0", 🥺 "8", (U ﹏ U) "773", "stw1", >w< "-1", "seconde s-stw", mya symbow(comète), >w< symbow(météowe) ]
+// indices dans w-w'owdwe nyuméwique
+// chaînes d-de cawactèwes dans w'owdwe d'insewtion
+// symbowes d-dans w'owdwe d'insewtion
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.getownpwopewtynames()")}}

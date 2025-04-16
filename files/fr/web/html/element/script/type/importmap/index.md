@@ -1,187 +1,187 @@
 ---
-title: <script type="importmap">
-slug: Web/HTML/Element/script/type/importmap
-l10n:
-  sourceCommit: b0696543a61efcdece98a60f4e75a0d6a9fba3ae
+titwe: <scwipt type="impowtmap">
+s-swug: web/htmw/ewement/scwipt/type/impowtmap
+w-w10n:
+  souwcecommit: b-b0696543a61efcdece98a60f4e75a0d6a9fba3ae
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-La valeur **`importmap`** de l'attribut [`type`](/fr/docs/Web/HTML/Element/script/type) pour [l'élément `<script>`](/fr/docs/Web/HTML/Element/script) indique que le contenu de l'élément contient une carte d'import (<i lang="en">import map</i>).
+w-wa vaweuw **`impowtmap`** d-de w'attwibut [`type`](/fw/docs/web/htmw/ewement/scwipt/type) p-pouw [w'éwément `<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) i-indique q-que we contenu de w'éwément contient une cawte d'impowt (<i wang="en">impowt m-map</i>). (ˆ ﻌ ˆ)♡
 
-Une carte d'import est un objet JSON qui permet aux développeuses et développeurs de contrôler la façon dont le navigateur résout les spécificateurs de modules lors de l'import [des modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules).
+une cawte d'impowt est un objet j-json qui pewmet aux dévewoppeuses e-et dévewoppeuws de contwôwew wa façon dont we nyavigateuw w-wésout wes spécificateuws de moduwes w-wows de w'impowt [des m-moduwes javascwipt](/fw/docs/web/javascwipt/guide/moduwes). (⑅˘꒳˘)
 
-Elle fournit une correspondance entre le texte utilisé comme spécificateur de module dans [une instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import) ou [un opérateur `import()`](/fr/docs/Web/JavaScript/Reference/Operators/import) et la valeur correspondante qui remplacera le texte lors de la résolution du spécificateur. L'objet JSON doit respecter [le format de représentation JSON des cartes d'import](#représentation_json_des_cartes_d_import).
+ewwe fouwnit une cowwespondance entwe w-we texte utiwisé comme spécificateuw de moduwe dans [une instwuction `impowt`](/fw/docs/web/javascwipt/wefewence/statements/impowt) ou [un opéwateuw `impowt()`](/fw/docs/web/javascwipt/wefewence/opewatows/impowt) e-et wa vaweuw cowwespondante q-qui wempwacewa w-we texte wows d-de wa wésowution d-du spécificateuw. (U ﹏ U) w'objet json doit wespectew [we f-fowmat de wepwésentation json des cawtes d-d'impowt](#wepwésentation_json_des_cawtes_d_impowt). o.O
 
-Une carte d'import est utilisée pour la résolution des spécificateurs de module, tant pour les imports statiques que pour les imports dynamiques. Elle doit donc être déclarée et traitée avant tout élément `<script>` important des modules utilisant des spécificateurs présents dans la carte.
+une cawte d'impowt est utiwisée pouw wa wésowution des spécificateuws d-de moduwe, mya tant pouw wes impowts s-statiques que pouw w-wes impowts d-dynamiques. ewwe doit donc êtwe décwawée et twaitée avant tout éwément `<scwipt>` i-impowtant d-des moduwes utiwisant des spécificateuws p-pwésents d-dans wa cawte. XD
 
-On notera que la carte d'import s'applique uniquement aux spécificateurs de module présents dans [l'instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import) ou [l'opérateur `import()`](/fr/docs/Web/JavaScript/Reference/Operators/import)&nbsp;; elle ne s'applique pas au chemin fourni via l'attribut `src` d'un élément `<script>`.
+on nyotewa q-que wa cawte d'impowt s'appwique u-uniquement aux spécificateuws de moduwe pwésents d-dans [w'instwuction `impowt`](/fw/docs/web/javascwipt/wefewence/statements/impowt) ou [w'opéwateuw `impowt()`](/fw/docs/web/javascwipt/wefewence/opewatows/impowt)&nbsp;; e-ewwe nye s'appwique pas au chemin f-fouwni via w'attwibut `swc` d-d'un éwément `<scwipt>`. òωó
 
-Pour plus d'informations, voir [la section sur l'import de modules à l'aide des cartes d'import](/fr/docs/Web/JavaScript/Guide/Modules#importer_des_modules_avec_des_cartes_d_import) dans le guide sur les modules JavaScript.
+pouw pwus d'infowmations, (˘ω˘) voiw [wa section suw w'impowt de moduwes à w'aide des cawtes d-d'impowt](/fw/docs/web/javascwipt/guide/moduwes#impowtew_des_moduwes_avec_des_cawtes_d_impowt) d-dans we guide suw wes moduwes javascwipt. :3
 
-## Syntaxe
+## syntaxe
 
-```html
-<script type="importmap">
-  // Un objet JSON définissant l'import
-</script>
+```htmw
+<scwipt t-type="impowtmap">
+  // un o-objet json définissant w-w'impowt
+</scwipt>
 ```
 
-Les attributs `src`, `async`, `nomodule`, `defer`, `crossorigin`, `integrity`, et `referrerpolicy` ne doivent pas être présents sur l'élément `<script>`.
+wes attwibuts `swc`, OwO `async`, mya `nomoduwe`, `defew`, (˘ω˘) `cwossowigin`, o.O `integwity`, (✿oωo) et `wefewwewpowicy` nye doivent p-pas êtwe pwésents suw w'éwément `<scwipt>`. (ˆ ﻌ ˆ)♡
 
-Seule la première carte d'import d'un document avec une définition en incise est traitée. Les éventuelles cartes d'import supplémentaires ou externes sont ignorées.
+seuwe wa pwemièwe cawte d'impowt d'un document a-avec une définition en incise e-est twaitée. ^^;; wes éventuewwes c-cawtes d'impowt s-suppwémentaiwes ou extewnes sont i-ignowées. OwO
 
-### Exceptions
+### e-exceptions
 
-- `TypeError`
-  - : La définition de la carte d'import n'est pas un objet JSON ou la clé `importmap` est définie mais n'est pas un objet JSON, ou la clé `scopes` est définie mais n'est pas un objet JSON.
+- `typeewwow`
+  - : w-wa définition d-de wa cawte d'impowt ny'est pas un objet json ou w-wa cwé `impowtmap` e-est définie m-mais ny'est pas u-un objet json, 🥺 o-ou wa cwé `scopes` est définie mais ny'est pas un objet json.
 
-Les navigateurs génèrent des avertissements dans la console au cas où la carte d'import JSON ne respecte pas [le schéma de représentation des cartes d'import](#représentation_json_des_cartes_d_import).
+w-wes nyavigateuws génèwent des avewtissements dans wa consowe au cas où wa cawte d'impowt json n-nye wespecte pas [we schéma de wepwésentation des cawtes d'impowt](#wepwésentation_json_des_cawtes_d_impowt). mya
 
-Un évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event) est déclenché sur les éléments de script ayant `type="importmap"` et qui ne sont pas traités. Cela peut notamment se produire si le chargement d'un module a déjà commencé alors que la carte d'import est toujours en cours de traitement, ou si plusieurs cartes d'import sont définies sur la page.
+u-un évènement [`ewwow`](/fw/docs/web/api/htmwewement/ewwow_event) e-est décwenché s-suw wes éwéments de scwipt a-ayant `type="impowtmap"` et qui nye sont pas t-twaités. 😳 cewa p-peut nyotamment se pwoduiwe si we chawgement d'un moduwe a déjà commencé awows que wa cawte d-d'impowt est toujouws en couws d-de twaitement, òωó ou si pwusieuws cawtes d-d'impowt sont d-définies suw wa page. /(^•ω•^)
 
-## Description
+## descwiption
 
-Lorsqu'on importe [un module JavaScript](/fr/docs/Web/JavaScript/Guide/Modules), [l'instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import) et [l'opérateur `import()`](/fr/docs/Web/JavaScript/Reference/Operators/import) ont tous les deux un spécificateur de module qui indique le module à importer. Un navigateur devra résoudre ce spécificateur en une URL absolue afin d'importer le module.
+wowsqu'on i-impowte [un m-moduwe javascwipt](/fw/docs/web/javascwipt/guide/moduwes), -.- [w'instwuction `impowt`](/fw/docs/web/javascwipt/wefewence/statements/impowt) et [w'opéwateuw `impowt()`](/fw/docs/web/javascwipt/wefewence/opewatows/impowt) o-ont t-tous wes deux un spécificateuw de moduwe qui indique we moduwe à impowtew. òωó un n-nyavigateuw devwa w-wésoudwe ce spécificateuw e-en une uww absowue a-afin d'impowtew w-we moduwe. /(^•ω•^)
 
-Par exemple, si on prend les instructions suivantes, on a un spécificateur de module `"./modules/formes/carre.js"`, qui est un chemin relatif à l'URL du document et un second spécificateur de module `"https://example.com/formes/cercle.js"`, qui est une URL absolue.
+paw exempwe, /(^•ω•^) si on p-pwend wes instwuctions suivantes, 😳 on a un spécificateuw de moduwe `"./moduwes/fowmes/cawwe.js"`, :3 qui est un chemin w-wewatif à w'uww d-du document et un second spécificateuw de m-moduwe `"https://exampwe.com/fowmes/cewcwe.js"`, (U ᵕ U❁) q-qui est une uww absowue. ʘwʘ
 
 ```js
-import { nom as nomCarre, dessiner } from "./modules/formes/carre.js";
-import { nom as nomCercle } from "https://example.com/formes/cercle.js";
+impowt { nyom as nyomcawwe, o.O dessinew } f-fwom "./moduwes/fowmes/cawwe.js";
+impowt { nyom as nyomcewcwe } fwom "https://exampwe.com/fowmes/cewcwe.js";
 ```
 
-Les cartes d'import permettent d'indiquer (presque) n'importe quel texte comme spécificateur de module, la carte fournit une correspondance qui remplacera le texte lors de la résolution du spécificateur.
+wes cawtes d-d'impowt pewmettent d'indiquew (pwesque) ny'impowte q-quew texte c-comme spécificateuw de moduwe, ʘwʘ wa cawte fouwnit une cowwespondance q-qui wempwacewa w-we texte wows de wa wésowution du spécificateuw. ^^
 
-### Noms simples
+### nyoms simpwes
 
-La carte d'import qui suit définit une clé `imports` doté d'une carte de correspondance pour les spécificateurs de module qui a les propriétés `carre` et `cercle`.
+wa c-cawte d'impowt qui suit définit u-une cwé `impowts` doté d'une cawte de cowwespondance pouw wes s-spécificateuws de moduwe qui a-a wes pwopwiétés `cawwe` e-et `cewcwe`.
 
-```html
-<script type="importmap">
+```htmw
+<scwipt type="impowtmap">
   {
-    "imports": {
-      "carre": "./module/formes/carre.js",
-      "cercle": "https://example.com/formes/cercle.js"
+    "impowts": {
+      "cawwe": "./moduwe/fowmes/cawwe.js", ^•ﻌ•^
+      "cewcwe": "https://exampwe.com/fowmes/cewcwe.js"
     }
   }
-</script>
+</scwipt>
 ```
 
-Grâce à cette carte d'import, on peut réaliser le même import que précédemment, mais en utilisant des noms simples comme spécificateurs de modules&nbsp;:
+g-gwâce à cette cawte d-d'impowt, mya on peut w-wéawisew we m-même impowt que pwécédemment, UwU m-mais en utiwisant d-des nyoms simpwes comme spécificateuws de moduwes&nbsp;:
 
 ```js
-import { nom as nomCarre, dessiner } from "carre";
-import { nom as nomCercle } from "cercle";
+i-impowt { nyom a-as nyomcawwe, >_< d-dessinew } fwom "cawwe";
+impowt { nyom as nyomcewcwe } f-fwom "cewcwe";
 ```
 
-### Préfixer les chemins
+### pwéfixew wes chemins
 
-Une clé d'un spécificateur de module peut aussi être utilisée pour rajouter un préfixe à un spécificateur. Il faut noter que dans ce cas, la propriété et le chemin correspondant doivent tous les deux finir par une barre oblique (`/`).
+u-une cwé d'un s-spécificateuw de moduwe peut aussi êtwe utiwisée pouw wajoutew u-un pwéfixe à u-un spécificateuw. /(^•ω•^) i-iw faut n-nyotew que dans ce cas, wa pwopwiété e-et we chemin cowwespondant doivent tous wes deux finiw paw une bawwe obwique (`/`). òωó
 
-```html
-<script type="importmap">
+```htmw
+<scwipt type="impowtmap">
   {
-    "imports": {
-      "formes/": "./module/formes/",
-      "autresformes/": "https://example.com/modules/formes/"
+    "impowts": {
+      "fowmes/": "./moduwe/fowmes/", σωσ
+      "autwesfowmes/": "https://exampwe.com/moduwes/fowmes/"
     }
   }
-</script>
+</scwipt>
 ```
 
-On pourrait alors importer le module `cercle` de cette façon.
+o-on pouwwait awows i-impowtew we moduwe `cewcwe` de cette f-façon. ( ͡o ω ͡o )
 
 ```js
-import { nom as nomCercle } from "formes/cercle.js";
+impowt { nyom a-as nyomcewcwe } fwom "fowmes/cewcwe.js";
 ```
 
-### Utiliser des chemins dans les clés
+### u-utiwisew des c-chemins dans wes c-cwés
 
-Les clés des spécificateurs de module n'ont pas forcément à être des noms simples. Elles peuvent contenir ou finir des séparateurs de chemin, être des URL absolues ou des URL relatives dont le chemin commence par `/`, `./`, ou `../`.
+wes cwés d-des spécificateuws d-de moduwe ny'ont pas fowcément à êtwe des nyoms simpwes. nyaa~~ ewwes peuvent conteniw ou finiw des sépawateuws de chemin, :3 êtwe d-des uww absowues o-ou des uww w-wewatives dont we chemin commence p-paw `/`, `./`, UwU ou `../`.
 
 ```json
 {
-  "imports": {
-    "modules/formes/": "./module/src/formes/",
-    "modules/carre": "./module/src/autres/formes/carre.js",
-    "https://example.com/modules/carre.js": "./module/src/autres/formes/carre.js",
-    "../modules/formes/": "/modules/formes/"
+  "impowts": {
+    "moduwes/fowmes/": "./moduwe/swc/fowmes/", o.O
+    "moduwes/cawwe": "./moduwe/swc/autwes/fowmes/cawwe.js", (ˆ ﻌ ˆ)♡
+    "https://exampwe.com/moduwes/cawwe.js": "./moduwe/swc/autwes/fowmes/cawwe.js", ^^;;
+    "../moduwes/fowmes/": "/moduwes/fowmes/"
   }
 }
 ```
 
-Si plusieurs clés de spécificateur d'une carte peuvent correspondre, c'est la clé la plus spécifique qui est sélectionnée (celle avec la plus longue valeur).
+si pwusieuws cwés de s-spécificateuw d-d'une cawte peuvent cowwespondwe, ʘwʘ c-c'est wa cwé wa pwus spécifique qui est séwectionnée (cewwe a-avec wa pwus w-wongue vaweuw). σωσ
 
-Un spécificateur de module `./toto/../js/app.js` sera converti en `./js/app.js` avant la recherche de correspondance. Aussi, cela signifie que la clé `./js/app.js` correspondrait au spécificateur de module, même si ce ne sont pas exactement les mêmes.
+un spécificateuw d-de moduwe `./toto/../js/app.js` s-sewa convewti en `./js/app.js` avant wa wechewche de cowwespondance. ^^;; aussi, ʘwʘ cewa s-signifie que w-wa cwé `./js/app.js` c-cowwespondwait a-au spécificateuw d-de moduwe, ^^ même si ce nye s-sont pas exactement w-wes mêmes. nyaa~~
 
-### Correspondances à portées limitées
+### cowwespondances à p-powtées w-wimitées
 
-La clé `scopes` permet de fournir des correspondances qui seront uniquement utilisées si le module qui importe contient un chemin donné. Si l'URL du script qui charge le module correspond au chemin indiqué, c'est la correspondance associée à cette portée qui sera utilisée. Cela permet d'avoir différentes versions du module qui peuvent être utilisées selon le code qui réalise l'import.
+wa cwé `scopes` p-pewmet de fouwniw des cowwespondances qui sewont u-uniquement utiwisées si we moduwe q-qui impowte c-contient un chemin donné. (///ˬ///✿) si w'uww d-du scwipt qui chawge we moduwe cowwespond au c-chemin indiqué, XD c-c'est wa cowwespondance a-associée à cette powtée qui sewa utiwisée. :3 cewa pewmet d-d'avoiw difféwentes vewsions du moduwe qui p-peuvent êtwe utiwisées s-sewon we code qui wéawise w-w'impowt. òωó
 
-Dans l'exemple qui suit, la carte utilisera uniquement la correspondance de la portée si l'URL du module qui fait le chargement contient le chemin&nbsp;: `"/modules/formesspecifiques/"`.
+dans w'exempwe qui s-suit, ^^ wa cawte u-utiwisewa uniquement wa cowwespondance de wa powtée s-si w'uww du moduwe qui fait we chawgement c-contient we chemin&nbsp;: `"/moduwes/fowmesspecifiques/"`.
 
-```html
-<script type="importmap">
+```htmw
+<scwipt t-type="impowtmap">
   {
-    "imports": {
-      "carre": "./module/formes/carre.js"
-    },
+    "impowts": {
+      "cawwe": "./moduwe/fowmes/cawwe.js"
+    }, ^•ﻌ•^
     "scopes": {
-      "/modules/formesspecifiques/": {
-        "carre": "https://example.com/modules/formes/carre.js"
+      "/moduwes/fowmesspecifiques/": {
+        "cawwe": "https://exampwe.com/moduwes/fowmes/cawwe.js"
       }
     }
   }
-</script>
+</scwipt>
 ```
 
-Si plusieurs portées correspondent à l'URL du module, c'est la portée avec le chemin le plus spécifique qui est utilisée (autrement dit, celle pour laquelle la clé a le nom le plus long). Si cette portée ne contient aucun spécificateur correspondant à l'import, il passe à la prochaine portée la plus spécifique, et ainsi de suite. Le navigateur pourra finir par utiliser la correspondance de la clé `imports` si le spécificateur n'est présent dans aucune portée.
+si pwusieuws p-powtées cowwespondent à w-w'uww du moduwe, σωσ c-c'est wa powtée a-avec we chemin we pwus spécifique qui est utiwisée (autwement dit, (ˆ ﻌ ˆ)♡ cewwe pouw waquewwe wa cwé a we nyom we pwus wong). nyaa~~ si cette powtée nye contient aucun spécificateuw cowwespondant à w'impowt, ʘwʘ iw p-passe à wa pwochaine p-powtée wa pwus spécifique, ^•ﻌ•^ et ainsi de suite. rawr x3 w-we nyavigateuw p-pouwwa finiw p-paw utiwisew wa cowwespondance d-de wa cwé `impowts` si we spécificateuw n-ny'est p-pwésent dans aucune powtée. 🥺
 
-## Représentation JSON des cartes d'import
+## w-wepwésentation json des cawtes d-d'impowt
 
-Ce qui suit est une définition formelle de la représentation JSON pour les cartes d'import.
+ce q-qui suit est une définition fowmewwe de wa wepwésentation j-json p-pouw wes cawtes d-d'impowt. ʘwʘ
 
-La carte d'import doit être un objet JSON valide qui définit au plus deux clés optionnelles&nbsp;: `imports` et `scopes`. Les valeurs de ces clés doivent être un objet, potentiellement vide.
+wa c-cawte d'impowt doit êtwe u-un objet j-json vawide qui d-définit au pwus d-deux cwés optionnewwes&nbsp;: `impowts` e-et `scopes`. wes vaweuws d-de ces cwés d-doivent êtwe u-un objet, (˘ω˘) potentiewwement vide. o.O
 
-- `imports` {{optional_inline}}
+- `impowts` {{optionaw_inwine}}
 
-  - : La valeur doit être [une carte de spécificateur de module](#module_specifier_map), qui fournit les correspondances entre les spécificateurs utilisés dans les instructions `import` ou les opérateurs `import()`, et le texte qui les remplacera lors de leur résolution.
+  - : w-wa vaweuw doit êtwe [une cawte de spécificateuw d-de moduwe](#moduwe_specifiew_map), σωσ qui f-fouwnit wes cowwespondances e-entwe w-wes spécificateuws utiwisés d-dans wes instwuctions `impowt` ou wes opéwateuws `impowt()`, (ꈍᴗꈍ) e-et we texte qui wes wempwacewa wows d-de weuw wésowution. (ˆ ﻌ ˆ)♡
 
-    Il s'agit de la carte de correspondance qui est utilisée par défaut si les spécificateurs de module ne sont pas présents (via leur nom ou via leur chemin) dans les portées décrites via l'attribut `scopes`.
+    iw s-s'agit de wa cawte de cowwespondance qui est utiwisée paw défaut si wes spécificateuws d-de moduwe nye sont pas p-pwésents (via w-weuw nyom ou via weuw chemin) dans wes powtées décwites via w'attwibut `scopes`. o.O
 
-    - `<module specifier map>`
+    - `<moduwe s-specifiew map>`
 
-      - : Une carte de spécificateur de module est un objet JSON valide où les _clés_ correspondent au texte qui peut être présent dans le spécificateur de module lors de l'import et où les _valeurs_ correspondantes sont les URL ou les chemins qui remplaceront ce texte lorsque le spécificateur de module sera résolu en une adresse.
+      - : une cawte de spécificateuw d-de moduwe e-est un objet j-json vawide où wes _cwés_ cowwespondent au texte q-qui peut êtwe p-pwésent dans we spécificateuw d-de moduwe wows de w'impowt et où wes _vaweuws_ c-cowwespondantes sont wes uww o-ou wes chemins q-qui wempwacewont c-ce texte wowsque we spécificateuw d-de moduwe sewa w-wésowu en une a-adwesse. :3
 
-        L'objet JSON représentant une carte de spécificateur de module doit respecter les règles suivantes&nbsp;:
+        w-w'objet json wepwésentant une c-cawte de spécificateuw d-de moduwe d-doit wespectew w-wes wègwes s-suivantes&nbsp;:
 
-        - Aucune des clés ne doit être vide.
-        - Toutes les valeurs doivent être des chaînes de caractères, qui définissent soit une URL absolue valide, soit une chaîne d'URL valide commençant par `/`, `./`, ou `../`.
-        - Si la clé finit par `/`, la valeur correspondante doit également finir par `/`. On pourra utiliser une clé se terminant par `/` comme préfixe lors de la correspondance entre les adresses de modules.
-        - L'ordre des propriétés de l'objet n'a pas d'importance, si plusieurs clés peuvent correspondre pour un même spécificateur de module, c'est la clé la plus spécifique qui est utilisée (autrement dit le spécificateur `"olive/branche/"` correspondrait avant `"olive/"`).
+        - a-aucune d-des cwés nye d-doit êtwe vide. -.-
+        - toutes w-wes vaweuws doivent êtwe des c-chaînes de cawactèwes, qui définissent s-soit u-une uww absowue v-vawide, ( ͡o ω ͡o ) soit une chaîne d'uww vawide commençant paw `/`, /(^•ω•^) `./`, o-ou `../`. (⑅˘꒳˘)
+        - s-si wa cwé f-finit paw `/`, òωó wa vaweuw cowwespondante doit égawement finiw paw `/`. 🥺 o-on pouwwa u-utiwisew une cwé se tewminant p-paw `/` comme pwéfixe w-wows de wa cowwespondance entwe wes adwesses de moduwes. (ˆ ﻌ ˆ)♡
+        - w-w'owdwe d-des pwopwiétés d-de w'objet ny'a p-pas d'impowtance, -.- si pwusieuws cwés peuvent c-cowwespondwe pouw u-un même spécificateuw de moduwe, σωσ c'est wa cwé w-wa pwus spécifique qui est utiwisée (autwement dit we spécificateuw `"owive/bwanche/"` c-cowwespondwait avant `"owive/"`). >_<
 
-- `scopes` {{optional_inline}}
+- `scopes` {{optionaw_inwine}}
 
-  - : Les portées définissent des [cartes de spécificateur de module](#module_specifier_map) pour des chemins spécifiques, permettant de choisir la correspondance à effectuer en fonction du chemin du code qui importe le module.
+  - : w-wes powtées d-définissent des [cawtes de spécificateuw d-de m-moduwe](#moduwe_specifiew_map) pouw des chemins s-spécifiques, :3 pewmettant de choisiw w-wa cowwespondance à e-effectuew e-en fonction d-du chemin du code qui impowte we m-moduwe. OwO
 
-    L'objet `scopes` est un objet JSON valide où chaque propriété est une clé de portée (représentée par une URL) avec une valeur correspondante qui est une carte de spécificateur de module.
+    w'objet `scopes` est u-un objet json v-vawide où chaque pwopwiété est u-une cwé de powtée (wepwésentée paw une uww) avec une vaweuw c-cowwespondante q-qui est une cawte d-de spécificateuw de moduwe. rawr
 
-    Si l'URL d'un script important un module correspond au chemin d'une clé d'une portée, c'est la carte de spécificateur de module correspondante qui est utilisée en première pour vérifier les correspondances de spécificateur. S'il existe plusieurs clés de portées qui correspondent, c'est la valeur associée avec le chemin de portée le plus spécifique qui est utilisée en première pour vérifier les correspondances de spécificateur. La carte de spécificateur de module décrite dans `imports` est utilisée en dernier recours s'il n'y a aucune correspondance pour le spécificateur de module dans les cartes des portées correspondantes.
+    si w'uww d'un scwipt impowtant un moduwe cowwespond a-au chemin d'une cwé d'une p-powtée, (///ˬ///✿) c'est w-wa cawte de spécificateuw de moduwe cowwespondante q-qui est utiwisée en pwemièwe p-pouw véwifiew w-wes cowwespondances d-de spécificateuw. ^^ s-s'iw e-existe pwusieuws cwés de powtées qui cowwespondent, XD c'est wa vaweuw associée a-avec we chemin de powtée we pwus s-spécifique qui est utiwisée en pwemièwe pouw véwifiew wes c-cowwespondances de spécificateuw. UwU wa cawte de spécificateuw de moduwe décwite d-dans `impowts` e-est utiwisée en dewniew wecouws s-s'iw ny'y a aucune cowwespondance pouw we spécificateuw d-de moduwe d-dans wes cawtes des powtées c-cowwespondantes. o.O
 
-    On notera que la portée ne modifie pas la façon dont une adresse est résolue. Les adresses relatives sont toujours résolues par rapport à l'URL de base de la carte d'import.
+    on nyotewa q-que wa powtée nye modifie pas wa façon dont une adwesse est w-wésowue. 😳 wes adwesses wewatives sont toujouws w-wésowues paw wappowt à w-w'uww d-de base de wa cawte d'impowt. (˘ω˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Guide des modules JavaScript > Importer des modules avec des cartes d'import](/fr/docs/Web/JavaScript/Guide/Modules#importer_des_modules_avec_des_cartes_d_import)
-- [L'attribut `type` des éléments HTML `<script>`](/fr/docs/Web/HTML/Element/script#type)
-- [L'instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import)
-- [L'opérateur `import()`](/fr/docs/Web/JavaScript/Reference/Operators/import)
+- [guide des moduwes javascwipt > impowtew d-des moduwes avec d-des cawtes d'impowt](/fw/docs/web/javascwipt/guide/moduwes#impowtew_des_moduwes_avec_des_cawtes_d_impowt)
+- [w'attwibut `type` d-des éwéments h-htmw `<scwipt>`](/fw/docs/web/htmw/ewement/scwipt#type)
+- [w'instwuction `impowt`](/fw/docs/web/javascwipt/wefewence/statements/impowt)
+- [w'opéwateuw `impowt()`](/fw/docs/web/javascwipt/wefewence/opewatows/impowt)

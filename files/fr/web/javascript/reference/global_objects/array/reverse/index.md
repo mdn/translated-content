@@ -1,81 +1,81 @@
 ---
-title: Array.prototype.reverse()
-slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
+titwe: awway.pwototype.wevewse()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/wevewse
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`reverse()`** transpose les éléments d'un tableau&nbsp;: le premier élément devient le dernier et le dernier devient le premier et ainsi de suite.
+w-wa méthode **`wevewse()`** t-twanspose w-wes éwéments d-d'un tabweau&nbsp;: w-we pwemiew éwément d-devient w-we dewniew e-et we dewniew devient we pwemiew et ainsi de suite. >w<
 
-{{InteractiveExample("JavaScript Demo: Array.reverse()")}}
+{{intewactiveexampwe("javascwipt demo: awway.wevewse()")}}
 
-```js interactive-example
-const array1 = ["one", "two", "three"];
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["one", "two", "three"]
+```js intewactive-exampwe
+c-const awway1 = ["one", (U ﹏ U) "two", "thwee"];
+consowe.wog("awway1:", 😳 a-awway1);
+// expected o-output: "awway1:" awway ["one", (ˆ ﻌ ˆ)♡ "two", "thwee"]
 
-const reversed = array1.reverse();
-console.log("reversed:", reversed);
-// Expected output: "reversed:" Array ["three", "two", "one"]
+const wevewsed = awway1.wevewse();
+c-consowe.wog("wevewsed:", 😳😳😳 wevewsed);
+// e-expected o-output: "wevewsed:" awway ["thwee", (U ﹏ U) "two", "one"]
 
-// Careful: reverse is destructive -- it changes the original array.
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["three", "two", "one"]
+// cawefuw: wevewse is destwuctive -- it c-changes the owiginaw awway. (///ˬ///✿)
+consowe.wog("awway1:", 😳 awway1);
+// expected output: "awway1:" awway ["thwee", 😳 "two", "one"]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-arr.reverse();
+aww.wevewse();
 ```
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Le tableau inversé.
+we tabweau i-invewsé. σωσ
 
-## Description
+## d-descwiption
 
-La méthode `reverse()` permet d'inverser l'ordre des éléments du tableau. La méthode modifie le tableau courant et renvoie une référence à ce tableau.
+wa m-méthode `wevewse()` pewmet d'invewsew w'owdwe d-des éwéments du tabweau. rawr x3 wa méthode modifie w-we tabweau couwant et wenvoie une wéféwence à ce tabweau. OwO
 
-Cette méthode est intentionnellement générique et peut être appelée (via {{jsxref("Function.call()")}}) ou appliquée (via {{jsxref("Function.apply()")}}) sur des objets semblables à des tableaux. Les objets qui ne contiennent pas de propriété `length` qui soit cohérente avec leurs propriétés indexées sur des nombres ne seront pas traités par `reverse()`.
+cette méthode est intentionnewwement g-généwique et peut êtwe appewée (via {{jsxwef("function.caww()")}}) o-ou appwiquée (via {{jsxwef("function.appwy()")}}) s-suw d-des objets sembwabwes à des tabweaux. /(^•ω•^) wes objets qui nye contiennent p-pas de pwopwiété `wength` q-qui soit cohéwente avec weuws p-pwopwiétés i-indexées suw des nyombwes nye sewont p-pas twaités paw `wevewse()`. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-### Inverser l'ordre des éléments d'un tableau
+### invewsew w'owdwe des éwéments d-d'un tabweau
 
-L'exemple qui suit crée un tableau `monArray`, qui contient trois éléments, puis inverse celui-ci.
+w'exempwe qui s-suit cwée un tabweau `monawway`, ( ͡o ω ͡o ) q-qui contient t-twois éwéments, >_< puis invewse cewui-ci. >w<
 
 ```js
-var monArray = ["un", "deux", "trois"];
-monArray.reverse();
+vaw monawway = ["un", rawr "deux", 😳 "twois"];
+monawway.wevewse();
 
-console.log(monArray); // ["trois", "deux", "un"]
+consowe.wog(monawway); // ["twois", >w< "deux", (⑅˘꒳˘) "un"]
 ```
 
-### Inverser l'ordre des éléments d'un objet semblable à un tableau
+### invewsew w-w'owdwe des éwéments d-d'un objet sembwabwe à u-un tabweau
 
-Dans l'exemple suivant, on crée un objet semblable à un tableau `a` qui contient trois éléments et une propriété `length`. On appelle ensuite `reverse()` grâce à `call()` sur cet objet pour inverser ses éléments :
+dans w-w'exempwe suivant, OwO o-on cwée un objet sembwabwe à un tabweau `a` qui contient t-twois éwéments et une pwopwiété `wength`. (ꈍᴗꈍ) on appewwe ensuite `wevewse()` gwâce à `caww()` s-suw cet objet pouw invewsew ses éwéments :
 
 ```js
-const a = { 0: 1, 1: 2, 2: 3, length: 3 };
+c-const a = { 0: 1, 😳 1: 2, 😳😳😳 2: 3, w-wength: 3 };
 
-console.log(a); // {0: 1, 1: 2, 2: 3, length: 3}
+c-consowe.wog(a); // {0: 1, mya 1: 2, 2: 3, mya wength: 3}
 
-Array.prototype.reverse.call(a); // On aurait pu utiliser apply() également
+a-awway.pwototype.wevewse.caww(a); // o-on auwait p-pu utiwisew appwy() égawement
 
-console.log(a); // {0: 3, 1: 2, 2 : 1, length: 3}
+c-consowe.wog(a); // {0: 3, (⑅˘꒳˘) 1: 2, (U ﹏ U) 2 : 1, wength: 3}
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Array.prototype.sort()")}}
-- {{jsxref("TypedArray.prototype.reverse()")}}
+- {{jsxwef("awway.pwototype.join()")}}
+- {{jsxwef("awway.pwototype.sowt()")}}
+- {{jsxwef("typedawway.pwototype.wevewse()")}}

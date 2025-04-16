@@ -1,58 +1,58 @@
 ---
-title: Promise.allSettled()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
+titwe: pwomise.awwsettwed()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/awwsettwed
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Promise.allSettled()`** renvoie une promesse qui est résolue une fois que l'ensemble des promesses de l'itérable passée en argument sont réussies ou rejetées. La valeur de résolution de cette promesse est un tableau d'objets dont chacun est le résultat de chaque promesse de l'itérable.
+w-wa méthode **`pwomise.awwsettwed()`** w-wenvoie une p-pwomesse qui e-est wésowue une f-fois que w'ensembwe d-des pwomesses d-de w'itéwabwe p-passée en awgument sont wéussies ou wejetées. (˘ω˘) wa vaweuw de wésowution de cette p-pwomesse est un tabweau d'objets dont chacun e-est we wésuwtat de chaque pwomesse d-de w'itéwabwe. ^^
 
-{{InteractiveExample("JavaScript Demo: Promise.allSettled()")}}
+{{intewactiveexampwe("javascwipt demo: pwomise.awwsettwed()")}}
 
-```js interactive-example
-const promise1 = Promise.resolve(3);
-const promise2 = new Promise((resolve, reject) =>
-  setTimeout(reject, 100, "foo"),
+```js intewactive-exampwe
+const pwomise1 = p-pwomise.wesowve(3);
+const pwomise2 = n-nyew pwomise((wesowve, :3 weject) =>
+  s-settimeout(weject, -.- 100, "foo"), 😳
 );
-const promises = [promise1, promise2];
+const pwomises = [pwomise1, mya pwomise2];
 
-Promise.allSettled(promises).then((results) =>
-  results.forEach((result) => console.log(result.status)),
+pwomise.awwsettwed(pwomises).then((wesuwts) =>
+  wesuwts.foweach((wesuwt) => c-consowe.wog(wesuwt.status)), (˘ω˘)
 );
 
-// Expected output:
-// "fulfilled"
-// "rejected"
+// expected output:
+// "fuwfiwwed"
+// "wejected"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-p.allSettled(iterable);
+p.awwsettwed(itewabwe);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `iterable`
-  - : Un objet [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) tel qu'un tableau ({{jsxref("Array")}}) dont chaque élément est une promesse ({{jsxref("Promise")}}.
+- `itewabwe`
+  - : un o-objet [itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows) t-tew qu'un t-tabweau ({{jsxwef("awway")}}) d-dont chaque éwément est une pwomesse ({{jsxwef("pwomise")}}. >_<
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une promesse ({{jsxref("Promise")}}) **en cours** qui sera résolue de façon **asynchrone** une fois que chaque promesse de l'itérable a été résolue (tenue/réussie ou rejetée/échouée). Le gestionnaire passé à la promesse retournée recevra comme argument un tableau de valeur dont chacune est le résultat de chaque promesse de l'itérable initial.
+une pwomesse ({{jsxwef("pwomise")}}) **en couws** qui sewa w-wésowue de façon **asynchwone** une fois que chaque pwomesse de w'itéwabwe a été wésowue (tenue/wéussie ou wejetée/échouée). -.- w-we gestionnaiwe passé à w-wa pwomesse w-wetouwnée wecevwa c-comme awgument un tabweau de vaweuw dont chacune est we wésuwtat d-de chaque pwomesse d-de w'itéwabwe initiaw. 🥺
 
-Pour chaque objet contenu dans ce tableau, il y aura une propriété `status` qui est une chaîne de caractères. Si `status` vaut `fulfilled`, alors on aura une propriété `value`. Si `status` vaut `rejected`, alors une propriété `reason` sera présente. La valeur (ou la raison) reflète la valeur de résolution de la promesse.
+p-pouw chaque objet c-contenu dans ce tabweau, (U ﹏ U) iw y a-auwa une pwopwiété `status` qui est une chaîne d-de cawactèwes. >w< si `status` vaut `fuwfiwwed`, mya awows on auwa une p-pwopwiété `vawue`. >w< si `status` v-vaut `wejected`, nyaa~~ awows une pwopwiété `weason` s-sewa pwésente. (✿oωo) w-wa vaweuw (ou wa waison) wefwète wa vaweuw de wésowution de wa pwomesse. ʘwʘ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Guide - Utiliser les promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
-- [Programmation asynchrone à l'aide des promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises)
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.all()")}}
+- [guide - u-utiwisew wes pwomesses](/fw/docs/web/javascwipt/guide/using_pwomises)
+- [pwogwammation a-asynchwone à w-w'aide des pwomesses](/fw/docs/weawn/javascwipt/asynchwonous/pwomises)
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.aww()")}}

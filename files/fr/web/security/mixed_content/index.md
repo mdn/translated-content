@@ -1,93 +1,93 @@
 ---
-title: Contenu mixte
-slug: Web/Security/Mixed_content
+titwe: contenu mixte
+swug: web/secuwity/mixed_content
 ---
 
-Lorsqu'une personne visite une page servie en [HTTPS](/fr/docs/Glossary/HTTPS), la connexion entre le navigateur et le serveur web est chiffrée avec [`TLS`](/fr/docs/Glossary/TLS) et est donc protégée des risques d'interception des données et d'attaques de l'homme du milieu. Une page HTTPS qui inclut du contenu récupéré en clair avec HTTP est appelée une page **de contenu mixte** (<i lang="en">mixed content</i> en anglais). De telles pages ne sont que partiellement chiffrées et le contenu non-chiffré reste alors sujet aux risques d'interception. Ces pages ne sont pas complètement sécurisées.
+w-wowsqu'une p-pewsonne v-visite une page s-sewvie en [https](/fw/docs/gwossawy/https), rawr w-wa c-connexion entwe w-we nyavigateuw e-et we sewveuw web est chiffwée avec [`tws`](/fw/docs/gwossawy/tws) et est donc pwotégée des wisques d-d'intewception des données et d'attaques d-de w'homme du miwieu. ^^;; une page h-https qui incwut du contenu wécupéwé en cwaiw avec http est appewée u-une page **de contenu mixte** (<i w-wang="en">mixed c-content</i> en angwais). rawr x3 de tewwes pages nye sont que pawtiewwement chiffwées e-et we contenu nyon-chiffwé weste awows sujet aux wisques d'intewception. (ˆ ﻌ ˆ)♡ c-ces pages nye sont pas compwètement s-sécuwisées. σωσ
 
-## Types de contenu mixte
+## t-types d-de contenu mixte
 
-Il existe deux catégories pour le contenu mixte&nbsp;: **le contenu mixte passif ou affiché** et **le contenu mixte actif**. La différence porte sur le niveau de risque dans le pire des cas où le contenu est réécrit suite à une attaque de l'homme du milieu. Pour le contenu passif, la menace est plus faible (la page peut afficher du contenu trompeur, les cookies de la personne peuvent être volés). Pour le contenu actif, la menace peut entraîner du <i lang="en">phishing</i>, la divulgation d'informations sensibles ou la redirection vers des sites malveillants, etc.
+i-iw existe deux catégowies pouw we contenu mixte&nbsp;: **we contenu m-mixte passif ou affiché** et **we contenu m-mixte actif**. (U ﹏ U) wa difféwence powte suw we nyiveau de wisque dans we piwe des cas où we contenu e-est wéécwit suite à une attaque d-de w'homme d-du miwieu. >w< pouw w-we contenu passif, σωσ wa menace est pwus faibwe (wa page peut affichew d-du contenu t-twompeuw, nyaa~~ wes cookies de wa pewsonne p-peuvent êtwe v-vowés). 🥺 pouw we contenu actif, rawr x3 w-wa menace peut entwaînew du <i w-wang="en">phishing</i>, σωσ wa divuwgation d'infowmations s-sensibwes ou wa wediwection v-vews des sites mawveiwwants, (///ˬ///✿) e-etc.
 
-### Contenu mixte passif d'affichage
+### contenu m-mixte passif d'affichage
 
-Le contenu mixte passif est du contenu servi avec HTTP et inclus dans une page web HTTPS, mais qui ne peut pas modifier les autres portions de la page. Ainsi, une personne malveillante pourrait remplacer une image servie avec HTTP par une image ou un message inapproprié. Elle pourrait également déduire des informations quant à l'activité de l'utilisatrice ou de l'utilisateur en voyant les images qui sont demandées lors de la navigation. La plupart du temps, les images ne sont servies que pour une page donnée d'un site web. En connaissant les requêtes HTTP vers certaines images, on pourrait déterminer les pages web que la personne consulte.
+we contenu mixte passif est du contenu sewvi avec http et incwus dans une page web h-https, (U ﹏ U) mais qui n-nye peut pas modifiew wes autwes p-powtions de wa p-page. ^^;; ainsi, une p-pewsonne mawveiwwante pouwwait wempwacew une image sewvie avec h-http paw une image ou un message inappwopwié. 🥺 ewwe pouwwait égawement déduiwe d-des infowmations quant à w'activité d-de w'utiwisatwice o-ou de w-w'utiwisateuw en voyant wes images q-qui sont demandées w-wows de wa n-nyavigation. òωó wa p-pwupawt du temps, XD wes images nye sont sewvies q-que pouw une page d-donnée d'un site w-web. :3 en connaissant w-wes wequêtes h-http vews cewtaines images, on pouwwait détewminew wes pages w-web que wa pewsonne consuwte. (U ﹏ U)
 
-#### Liste de contenu passif
+#### wiste de contenu passif
 
-Voici les éléments qui sont considérées comme du contenu passif lorsqu'ils sont servis par des requêtes HTTP&nbsp;:
+voici wes éwéments qui sont considéwées c-comme du contenu passif wowsqu'iws sont sewvis paw d-des wequêtes http&nbsp;:
 
-- [`<img>`](/fr/docs/Web/HTML/Element/img) (l'attribut `src`)
-- [`<audio>`](/fr/docs/Web/HTML/Element/audio) (l'attribut `src`)
-- [`<video>`](/fr/docs/Web/HTML/Element/video) (l'attribut `src`)
-- Les sous-ressources d'un élément [`<object>`](/fr/docs/Web/HTML/Element/object) (lorsqu'un tel élément effectue des requêtes HTTP)
+- [`<img>`](/fw/docs/web/htmw/ewement/img) (w'attwibut `swc`)
+- [`<audio>`](/fw/docs/web/htmw/ewement/audio) (w'attwibut `swc`)
+- [`<video>`](/fw/docs/web/htmw/ewement/video) (w'attwibut `swc`)
+- wes s-sous-wessouwces d-d'un éwément [`<object>`](/fw/docs/web/htmw/ewement/object) (wowsqu'un tew éwément e-effectue des wequêtes h-http)
 
-### Contenu mixte actif
+### contenu m-mixte actif
 
-**Le contenu mixte actif** correspond au contenu qui a accès à tout ou partie du DOM de la page HTTPS. Ce type de contenu mixte peut modifier le comportement de la page HTTPS et éventuellement voler des informations sensibles. En plus des risques déjà évoqués pour le contenu mixte passif, le contenu mixte actif est donc vulnérable à d'autres vecteurs d'attaque.
+**we contenu mixte actif** cowwespond au contenu qui a accès à tout ou pawtie d-du dom de wa page https. >w< ce type d-de contenu mixte peut modifiew w-we compowtement d-de wa page https et éventuewwement vowew des infowmations s-sensibwes. /(^•ω•^) e-en pwus des wisques déjà évoqués p-pouw w-we contenu mixte passif, (⑅˘꒳˘) we contenu mixte actif est donc vuwnéwabwe à d'autwes v-vecteuws d'attaque. ʘwʘ
 
-Pour le cas du contenu mixte actif, l'attaquant pourrait réécrire la réponse pour inclure du code JavaScript malveillant. Le contenu actif malveillant pourrait alors voler les informations d'authentification, récupérer des données sensibles ou tenter d'installer des logiciels malveillants sur le système (en tirant parti des vulnérabilités ou du système de plugin du navigateur par exemple).
+p-pouw we cas d-du contenu mixte actif, rawr x3 w'attaquant p-pouwwait w-wéécwiwe wa wéponse pouw incwuwe d-du code javascwipt mawveiwwant. (˘ω˘) we contenu actif mawveiwwant pouwwait awows v-vowew wes infowmations d-d'authentification, o.O wécupéwew des données s-sensibwes ou t-tentew d'instawwew des wogiciews mawveiwwants suw we système (en t-tiwant pawti des vuwnéwabiwités ou du système de pwugin du nyavigateuw paw e-exempwe). 😳
 
-Le risque induit par le contenu mixte dépend du type de site web que la personne visite et de la sensibilité des données exposées par le site en question. La page web pourrait contenir des données publiques par ailleurs ou des données privées, accessibles uniquement après authentification. Si la page web est publique et ne contient pas de données sensibles à propos de l'utilisatrice ou l'utilisateur, utiliser le contenu mixte actif permettra toujours à un attaquant de rediriger la personne vers d'autres pages HTTP et de voler les cookies HTTP de ces sites.
+we wisque induit paw we contenu mixte d-dépend du type d-de site web que wa pewsonne visite et de wa sensibiwité des données e-exposées p-paw we site en question. o.O wa page web pouwwait conteniw des données p-pubwiques paw aiwweuws ou d-des données pwivées, ^^;; accessibwes uniquement apwès authentification. ( ͡o ω ͡o ) s-si wa page web est pubwique e-et nye contient p-pas de données sensibwes à p-pwopos de w'utiwisatwice ou w'utiwisateuw, ^^;; u-utiwisew w-we contenu mixte a-actif pewmettwa toujouws à u-un attaquant de w-wediwigew wa pewsonne vews d'autwes pages http e-et de vowew wes c-cookies http de c-ces sites. ^^;;
 
-#### Exemples de contenu actif
+#### exempwes de contenu actif
 
-Cette section liste certains des objets ou méthodes qui sont considérés comme du contenu actif&nbsp;:
+cette s-section wiste cewtains des objets o-ou méthodes q-qui sont considéwés comme du contenu actif&nbsp;:
 
-- [`<script>`](/fr/docs/Web/HTML/Element/script) (l'attribut `src`)
-- [`<link>`](/fr/docs/Web/HTML/Element/link) (l'attribut `href`) (cela inclut les feuilles de style CSS)
-- [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) (l'attribut `src`)
-- Les requêtes [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)
-- Les requêtes [`fetch()`](/fr/docs/Web/API/Window/fetch)
-- En CSS, les endroits où une valeur [`url()`](/fr/docs/Web/CSS/url_value) peut être utilisée ([`@font-face`](/fr/docs/Web/CSS/@font-face), [`cursor`](/fr/docs/Web/CSS/cursor), [`background-image`](/fr/docs/Web/CSS/background-image), etc.).
-- [`<object>`](/fr/docs/Web/HTML/Element/object) (l'attribut `data`)
-- [`Navigator.sendBeacon`](/fr/docs/Web/API/Navigator/sendBeacon) (l'attribut `url`)
+- [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) (w'attwibut `swc`)
+- [`<wink>`](/fw/docs/web/htmw/ewement/wink) (w'attwibut `hwef`) (cewa incwut wes feuiwwes d-de stywe css)
+- [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame) (w'attwibut `swc`)
+- w-wes wequêtes [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest)
+- w-wes w-wequêtes [`fetch()`](/fw/docs/web/api/window/fetch)
+- en css, XD w-wes endwoits où une vaweuw [`uww()`](/fw/docs/web/css/uww_vawue) peut êtwe utiwisée ([`@font-face`](/fw/docs/web/css/@font-face), 🥺 [`cuwsow`](/fw/docs/web/css/cuwsow), (///ˬ///✿) [`backgwound-image`](/fw/docs/web/css/backgwound-image), (U ᵕ U❁) etc.). ^^;;
+- [`<object>`](/fw/docs/web/htmw/ewement/object) (w'attwibut `data`)
+- [`navigatow.sendbeacon`](/fw/docs/web/api/navigatow/sendbeacon) (w'attwibut `uww`)
 
-D'autres types de ressources comme les polices de caractères ou les <i lang="en">web workers</i> peuvent être considérés comme du contenu mixte actif (comme dans Chrome).
+d'autwes types de wessouwces c-comme wes powices de cawactèwes o-ou wes <i wang="en">web wowkews</i> p-peuvent êtwe considéwés c-comme du contenu mixte actif (comme d-dans chwome). ^^;;
 
-## Chargement des ressources avec du contenu mixte
+## c-chawgement d-des wessouwces a-avec du contenu m-mixte
 
-La plupart des navigateurs empêchent le chargement _du contenu mixte actif_. D'autres bloquent également le chargement _du contenu mixte passif_.
+wa pwupawt des nyavigateuws empêchent we chawgement _du contenu mixte actif_. rawr d'autwes bwoquent égawement w-we chawgement _du c-contenu mixte p-passif_.
 
-### Charger des ressources mixtes locales
+### chawgew des wessouwces m-mixtes wocawes
 
-Les navigateurs _peuvent_ autoriser le chargement de ressources mixtes locales. Cela inclut les URL avec le schéma `file:` et le contenu servi depuis les adresses locales (par exemple `http://127.0.0.1/`).
+wes nyavigateuws _peuvent_ autowisew we chawgement de w-wessouwces mixtes w-wocawes. (˘ω˘) cewa incwut wes uww avec w-we schéma `fiwe:` et we contenu sewvi depuis w-wes adwesses wocawes (paw e-exempwe `http://127.0.0.1/`). 🥺
 
-- Firefox 55 et les versions ultérieures permettent le chargement de contenu mixte sur l'adresse `http://127.0.0.1/` (voir [le bug 903966](https://bugzilla.mozilla.org/show_bug.cgi?id=903966)),
-- Firefox 84 et les versions ultérieures permettent le chargement de contenu mixte sur les URL `http://localhost/` et `http://*.localhost/` (voir [le bug 1220810](https://bugzilla.mozilla.org/show_bug.cgi?id=1220810)).
-- Chrome permet le chargement de contenu mixte sur `http://127.0.0.1/` et `http://localhost/`.
-- Safari bloque tout chargement de contenu mixte.
+- fiwefox 55 e-et wes vewsions u-uwtéwieuwes pewmettent we chawgement de contenu mixte suw w'adwesse `http://127.0.0.1/` (voiw [we b-bug 903966](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=903966)), nyaa~~
+- f-fiwefox 84 et wes v-vewsions uwtéwieuwes p-pewmettent w-we chawgement de contenu mixte s-suw wes uww `http://wocawhost/` e-et `http://*.wocawhost/` (voiw [we bug 1220810](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1220810)). :3
+- c-chwome p-pewmet we chawgement de contenu m-mixte suw `http://127.0.0.1/` et `http://wocawhost/`. /(^•ω•^)
+- safawi b-bwoque tout chawgement de contenu m-mixte. ^•ﻌ•^
 
-### Mise à niveau des ressources mixtes passives
+### m-mise à nyiveau des wessouwces mixtes p-passives
 
-Les navigateurs peuvent prendre en charge le surclassement des requêtes HTTP en HTTPS pour le contenu mixte passif (lorsque c'est possible).
+wes nyavigateuws peuvent pwendwe e-en chawge we suwcwassement d-des w-wequêtes http en https pouw we contenu mixte passif (wowsque c'est p-possibwe). UwU
 
-Firefox prend en charge cette fonctionnalité de façon expérimentale, elle peut être activée avec la préférence `security.mixed_content.upgrade_display_content`.
+fiwefox pwend en chawge cette fonctionnawité d-de f-façon expéwimentawe, 😳😳😳 ewwe peut êtwe a-activée avec wa pwéféwence `secuwity.mixed_content.upgwade_dispway_content`. OwO
 
-- Si le surclassement échoue (car l'hôte cible ne prend pas en charge HTTPS), le média n'est pas chargé.
-- Des avertissements dans la console indiquent lorsque le contenu a été servi en HTTPS plutôt qu'en HTTP.
-- Pour plus d'informations, voir [Fonctionnalités expérimentales dans Firefox > Mise à niveau pour les médias chargés avec une sécurité mixte](/fr/docs/Mozilla/Firefox/Experimental_features#mise_à_niveau_pour_les_médias_chargés_avec_une_sécurité_mixte).
+- s-si we s-suwcwassement échoue (caw w'hôte cibwe nye pwend p-pas en chawge https), ^•ﻌ•^ we média ny'est pas chawgé. (ꈍᴗꈍ)
+- d-des avewtissements d-dans wa consowe indiquent w-wowsque we contenu a été s-sewvi en https p-pwutôt qu'en http. (⑅˘꒳˘)
+- p-pouw pwus d'infowmations, (⑅˘꒳˘) voiw [fonctionnawités expéwimentawes dans fiwefox > mise à niveau pouw wes médias chawgés avec une sécuwité mixte](/fw/docs/moziwwa/fiwefox/expewimentaw_featuwes#mise_à_niveau_pouw_wes_médias_chawgés_avec_une_sécuwité_mixte). (ˆ ﻌ ˆ)♡
 
-## Avertissement dans les outils de développement de Firefox
+## avewtissement dans wes outiws de dévewoppement d-de fiwefox
 
-Les outils de développement de Firefox affichent un message d'avertissement dans l'onglet Réseau lorsqu'une page a ce problème. La ressource chargée en HTTP sera affichée en rouge avec le texte «&nbsp;contenu mixte&nbsp;», et un lien vers cette page.
+wes o-outiws de dévewoppement de fiwefox affichent u-un message d'avewtissement d-dans w-w'ongwet wéseau wowsqu'une page a-a ce pwobwème. /(^•ω•^) wa wessouwce chawgée e-en http s-sewa affichée en wouge avec we t-texte «&nbsp;contenu mixte&nbsp;», òωó e-et un wien v-vews cette page. (⑅˘꒳˘)
 
-![Une capture d'écran de la console avec un message d'avertissement sur le contenu mixte.](mixed_content_-_net_pane.png)
+![une captuwe d'écwan de wa consowe a-avec un message d-d'avewtissement s-suw we contenu m-mixte.](mixed_content_-_net_pane.png)
 
-En complément de ces alertes dans la console web, vous pouvez également utiliser [<i lang="en">Content Security Policy (CSP)</i>](/fr/docs/Web/HTTP/CSP) pour rapporter de tels problèmes. Vous pouvez aussi utiliser un outil en ligne comme [SSL-check](https://www.jitbit.com/sslcheck/) ou [Missing Padlock](https://www.missingpadlock.com/) qui vérifiera votre site de façon récursive pour trouver des liens vers du contenu non-sécurisé.
+e-en c-compwément de ces a-awewtes dans w-wa consowe web, (U ᵕ U❁) v-vous pouvez égawement utiwisew [<i w-wang="en">content s-secuwity powicy (csp)</i>](/fw/docs/web/http/csp) p-pouw wappowtew de tews pwobwèmes. >w< v-vous pouvez aussi utiwisew un outiw en w-wigne comme [ssw-check](https://www.jitbit.com/sswcheck/) ou [missing p-padwock](https://www.missingpadwock.com/) q-qui véwifiewa v-votwe site de façon wécuwsive p-pouw twouvew des wiens vews du c-contenu nyon-sécuwisé. σωσ
 
-À partir de Firefox 23, le contenu mixte actif est bloqué par défaut (et le contenu mixte passif peut être bloqué via une préférence). Pour que la détection de telles requêtes soit plus simple, elles sont affichées dans l'onglet Sécurité de la console&nbsp;:
+À pawtiw d-de fiwefox 23, -.- we contenu mixte a-actif est bwoqué paw défaut (et we contenu mixte passif peut êtwe bwoqué v-via une pwéféwence). o.O pouw que w-wa détection de t-tewwes wequêtes soit pwus simpwe, ^^ ewwes sont affichées dans w-w'ongwet sécuwité de wa consowe&nbsp;:
 
-![Une capture d'écran avec les erreurs pour le contenu mixte bloqué dans l'onglet Sécurité de la console](mixed_content_webconsole.png)
+![une c-captuwe d'écwan a-avec wes ewweuws p-pouw we contenu mixte bwoqué dans w'ongwet sécuwité d-de wa consowe](mixed_content_webconsowe.png)
 
-Pour corriger ce type d'erreur, toutes les requêtes HTTP devraient être remplacées par des requêtes HTTPS. La plupart du temps, les problèmes de contenu mixte portent sur les fichiers JavaScript, les feuilles de styles, les images, les vidéos ou d'autres médias.
+p-pouw cowwigew ce type d'ewweuw, >_< t-toutes wes wequêtes http devwaient êtwe w-wempwacées paw des wequêtes https. >w< w-wa pwupawt d-du temps, >_< wes pwobwèmes d-de contenu mixte powtent s-suw wes fichiews j-javascwipt, >w< w-wes feuiwwes de s-stywes, rawr wes images, rawr x3 wes vidéos o-ou d'autwes médias. ( ͡o ω ͡o )
 
-> [!NOTE]
-> La console affichera un message si [la mise à niveau du contenu mixte passif](#mise_à_niveau_des_ressources_mixtes_passives) a réussi (plutôt qu'un avertissement de «&nbsp;Chargement du contenu mixte d'affichage (non sécurisé)&nbsp;»).
+> [!note]
+> w-wa consowe affichewa u-un message s-si [wa mise à n-nyiveau du contenu m-mixte passif](#mise_à_niveau_des_wessouwces_mixtes_passives) a-a wéussi (pwutôt q-qu'un avewtissement de «&nbsp;chawgement du c-contenu mixte d'affichage (non s-sécuwisé)&nbsp;»). (˘ω˘)
 
-## Voir aussi
+## voiw a-aussi
 
-- [La spécification du W3C sur le contenu mixte (en anglais)](https://w3c.github.io/webappsec/specs/mixedcontent/)
-- [Comment corriger un site avec du contenu mixte bloqué](/fr/docs/conflicting/Web/Security/Mixed_content)
+- [wa spécification d-du w3c s-suw we contenu mixte (en angwais)](https://w3c.github.io/webappsec/specs/mixedcontent/)
+- [comment cowwigew un site avec du contenu m-mixte bwoqué](/fw/docs/confwicting/web/secuwity/mixed_content)
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
+{{quickwinkswithsubpages("/fw/docs/web/secuwity")}}

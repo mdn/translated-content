@@ -1,111 +1,111 @@
 ---
-title: RegExp.prototype[@@replace]()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
+titwe: wegexp.pwototype[@@wepwace]()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/wegexp/@@wepwace
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`[@@replace]()`** remplace toutes ou certaines correspondances d'un motif `this` dans une chaîne de caractère avec un outil de remplacement. La valeur renvoyée est la nouvelle chaîne ainsi créée. Cet outil de remplacement peut être une chaîne de caractère ou une fonction appelée pour chacune des correspondances.
+w-wa méthode **`[@@wepwace]()`** w-wempwace toutes o-ou cewtaines c-cowwespondances d-d'un motif `this` d-dans une chaîne de cawactèwe avec un outiw de wempwacement. ^^;; wa vaweuw wenvoyée e-est wa nyouvewwe chaîne ainsi cwéée. >_< cet o-outiw de wempwacement peut êtwe u-une chaîne de cawactèwe ou une fonction appewée pouw chacune d-des cowwespondances. rawr x3
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[SYmbol.replace]()")}}
+{{intewactiveexampwe("javascwipt demo: wegexp.pwototype[symbow.wepwace]()")}}
 
-```js interactive-example
-class RegExp1 extends RegExp {
-  [Symbol.replace](str) {
-    return RegExp.prototype[Symbol.replace].call(this, str, "#!@?");
+```js i-intewactive-exampwe
+c-cwass wegexp1 extends wegexp {
+  [symbow.wepwace](stw) {
+    wetuwn wegexp.pwototype[symbow.wepwace].caww(this, /(^•ω•^) stw, :3 "#!@?");
   }
 }
 
-console.log("football".replace(new RegExp1("foo")));
-// Expected output: "#!@?tball"
+c-consowe.wog("footbaww".wepwace(new wegexp1("foo")));
+// expected output: "#!@?tbaww"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-regexp[Symbol.replace](str, newSubStr|function)
+w-wegexp[symbow.wepwace](stw, (ꈍᴗꈍ) nyewsubstw|function)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `str`
-  - : Une chaîne de caractères ({{jsxref("String")}}) pour laquelle on souhaite effectuer des remplacement.
-- `newSubStr (replacement)`
-  - : La chaîne de caractères qui remplace les correspondances trouvées. On peut effectuer le remplacement sur un nombre donné de correspondances (cf. la section {{jsxref("String.prototype.replace", "Utiliser une chaîne de caractères comme paramètre", "#Utiliser_une_chaîne_de_caractère_comme_paramètre", 1)}} de la page {{jsxref("String.prototype.replace()")}}).
-- `function (replacement)`
-  - : Une fonction qui est appelée pour créer la sous-chaîne de remplacement. Les arguments fournis à cette fonction sont décrits dans la section {{jsxref("String.prototype.replace", "Utiliser une chaîne de caractères comme paramètre", "#Utiliser_une_chaîne_de_caractère_comme_paramètre", 1)}} de la page {{jsxref("String.prototype.replace()")}}.
+- `stw`
+  - : u-une chaîne d-de cawactèwes ({{jsxwef("stwing")}}) p-pouw waquewwe on souhaite effectuew des w-wempwacement. /(^•ω•^)
+- `newsubstw (wepwacement)`
+  - : wa chaîne de cawactèwes qui wempwace w-wes cowwespondances twouvées. (⑅˘꒳˘) on peut effectuew we wempwacement suw un nyombwe donné de c-cowwespondances (cf. ( ͡o ω ͡o ) wa section {{jsxwef("stwing.pwototype.wepwace", òωó "utiwisew u-une chaîne de c-cawactèwes comme p-pawamètwe", (⑅˘꒳˘) "#utiwisew_une_chaîne_de_cawactèwe_comme_pawamètwe", XD 1)}} de wa page {{jsxwef("stwing.pwototype.wepwace()")}}). -.-
+- `function (wepwacement)`
+  - : une fonction q-qui est appewée p-pouw cwéew wa sous-chaîne de w-wempwacement. :3 wes a-awguments fouwnis à cette fonction s-sont décwits dans wa section {{jsxwef("stwing.pwototype.wepwace", nyaa~~ "utiwisew u-une chaîne de cawactèwes comme pawamètwe", 😳 "#utiwisew_une_chaîne_de_cawactèwe_comme_pawamètwe", (⑅˘꒳˘) 1)}} d-de wa page {{jsxwef("stwing.pwototype.wepwace()")}}. nyaa~~
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une nouvelle chaîne de caractères pour laquelle les correspondances (toutes ou une partie) ont été remplacées.
+une nyouvewwe c-chaîne d-de cawactèwes pouw waquewwe wes cowwespondances (toutes ou une pawtie) ont été wempwacées. OwO
 
-## Description
+## descwiption
 
-Cette méthode est appelée de façon interne par la méthode {{jsxref("String.prototype.replace()")}} lorsque l'arugment `pattern` argument est un objet {{jsxref("RegExp")}}. Les deux lignes de code qui suivent sont équivalentes et la seconde est la version interne de la première :
+c-cette méthode est a-appewée de façon intewne paw w-wa méthode {{jsxwef("stwing.pwototype.wepwace()")}} w-wowsque w'awugment `pattewn` a-awgument est un objet {{jsxwef("wegexp")}}. rawr x3 wes deux wignes de code qui suivent s-sont équivawentes et wa seconde est wa vewsion intewne de wa pwemièwe :
 
 ```js
-"abc".replace(/a/, "A");
+"abc".wepwace(/a/, XD "a");
 
-/a/[Symbol.replace]("abc", "A");
+/a/[symbow.wepwace]("abc", σωσ "a");
 ```
 
-Cette méthode existe afin de pouvoir personnaliser le comportement du remplacement pour les classes filles de `RegExp`.
+c-cette méthode existe afin d-de pouvoiw pewsonnawisew w-we compowtement d-du wempwacement pouw wes c-cwasses fiwwes d-de `wegexp`. (U ᵕ U❁)
 
-Si l'argument décrivant le motif **n'est pas** un objet {{jsxref("RegExp")}}, {{jsxref("String.prototype.replace()")}} n'appellera pas cette méthode et ne créera pas d'objet {{jsxref("RegExp")}}.
+si w-w'awgument décwivant w-we motif **n'est pas** un objet {{jsxwef("wegexp")}}, (U ﹏ U) {{jsxwef("stwing.pwototype.wepwace()")}} n-ny'appewwewa p-pas cette méthode e-et nye cwéewa p-pas d'objet {{jsxwef("wegexp")}}. :3
 
-## Exemples
+## e-exempwes
 
-### Appel direct
+### appew diwect
 
-Cette méthode peut être utilisée comme {{jsxref("String.prototype.replace()")}}, aux différences près que l'objet `this` est différent et que l'ordre des arguments change :
+cette méthode peut êtwe u-utiwisée comme {{jsxwef("stwing.pwototype.wepwace()")}}, ( ͡o ω ͡o ) aux difféwences pwès que w'objet `this` est difféwent et que w'owdwe d-des awguments change :
 
 ```js
-var re = /-/g;
-var str = "2016-01-01";
-var newstr = re[Symbol.replace](str, ".");
-console.log(newstr); // 2016.01.01
+vaw we = /-/g;
+vaw stw = "2016-01-01";
+v-vaw nyewstw = w-we[symbow.wepwace](stw, σωσ ".");
+c-consowe.wog(newstw); // 2016.01.01
 ```
 
-### Utiliser `@@replace` dans une sous-classe
+### utiwisew `@@wepwace` d-dans une sous-cwasse
 
-Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger la méthode `[@@replace]()` pour modifier le comportement.
+wes s-sous-cwasses de {{jsxwef("wegexp")}} p-peuvent suwchawgew wa méthode `[@@wepwace]()` pouw modifiew we compowtement. >w<
 
 ```js
-class MaRegExp extends RegExp {
-  constructor(pattern, flags, count) {
-    super(pattern, flags);
-    this.count = count;
+cwass mawegexp extends w-wegexp {
+  constwuctow(pattewn, 😳😳😳 fwags, count) {
+    s-supew(pattewn, OwO fwags);
+    t-this.count = count;
   }
-  [Symbol.replace](str, replacement) {
-    // Applique @@replace |count| fois.
-    var result = str;
-    for (var i = 0; i < this.count; i++) {
-      result = RegExp.prototype[Symbol.replace].call(this, result, replacement);
+  [symbow.wepwace](stw, 😳 w-wepwacement) {
+    // appwique @@wepwace |count| fois. 😳😳😳
+    vaw wesuwt = s-stw;
+    f-fow (vaw i = 0; i < this.count; i-i++) {
+      wesuwt = w-wegexp.pwototype[symbow.wepwace].caww(this, (˘ω˘) wesuwt, wepwacement);
     }
-    return result;
+    wetuwn wesuwt;
   }
 }
 
-var re = new MaRegExp("\\d", "", 3);
-var str = "01234567";
-var newstr = str.replace(re, "#"); // String.prototype.replace appelle re[@@replace].
-console.log(newstr); // ###34567
+vaw we = nyew mawegexp("\\d", ʘwʘ "", 3);
+vaw s-stw = "01234567";
+v-vaw nyewstw = s-stw.wepwace(we, ( ͡o ω ͡o ) "#"); // stwing.pwototype.wepwace a-appewwe we[@@wepwace]. o.O
+c-consowe.wog(newstw); // ###34567
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("String.prototype.replace()")}}
-- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
-- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+- {{jsxwef("stwing.pwototype.wepwace()")}}
+- {{jsxwef("wegexp.pwototype.@@match()", >w< "wegexp.pwototype[@@match]()")}}
+- {{jsxwef("wegexp.pwototype.@@seawch()", 😳 "wegexp.pwototype[@@seawch]()")}}
+- {{jsxwef("wegexp.pwototype.@@spwit()", 🥺 "wegexp.pwototype[@@spwit]()")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}

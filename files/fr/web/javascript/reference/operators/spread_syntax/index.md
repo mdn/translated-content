@@ -1,259 +1,259 @@
 ---
-title: Syntaxe de décomposition
-slug: Web/JavaScript/Reference/Operators/Spread_syntax
+titwe: syntaxe de décomposition
+s-swug: web/javascwipt/wefewence/opewatows/spwead_syntax
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-La **syntaxe de décomposition** permet d'étendre un itérable (par exemple une expression de tableau ou une chaîne de caractères) en lieu et place de plusieurs arguments (pour les appels de fonctions) ou de plusieurs éléments (pour les littéraux de tableaux) ou de paires clés-valeurs (pour les littéraux d'objets).
+w-wa **syntaxe d-de décomposition** p-pewmet d-d'étendwe un i-itéwabwe (paw e-exempwe une expwession d-de tabweau ou une chaîne de cawactèwes) en wieu et pwace de pwusieuws a-awguments (pouw wes appews de fonctions) ou de pwusieuws éwéments (pouw w-wes wittéwaux de tabweaux) o-ou de paiwes cwés-vaweuws (pouw wes wittéwaux d'objets). (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Expressions - Spread syntax")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - spwead syntax")}}
 
-```js interactive-example
-function sum(x, y, z) {
-  return x + y + z;
+```js i-intewactive-exampwe
+f-function sum(x, y, σωσ z) {
+  wetuwn x + y + z;
 }
 
-const numbers = [1, 2, 3];
+const nyumbews = [1, (U ﹏ U) 2, 3];
 
-console.log(sum(...numbers));
-// Expected output: 6
+consowe.wog(sum(...numbews));
+// e-expected output: 6
 
-console.log(sum.apply(null, numbers));
-// Expected output: 6
+consowe.wog(sum.appwy(nuww, >w< nyumbews));
+// expected output: 6
 ```
 
-## Syntaxe
+## syntaxe
 
-Pour l'utilisation de la décomposition dans les appels de fonction :
+p-pouw w'utiwisation de wa décomposition d-dans w-wes appews de fonction :
 
 ```js
-f(...objetIterable);
+f-f(...objetitewabwe);
 ```
 
-Pour les littéraux de tableaux :
+p-pouw wes wittéwaux de tabweaux :
 
 ```js
-[...objetIterable, 4, 5, 6];
+[...objetitewabwe, σωσ 4, nyaa~~ 5, 6];
 ```
 
-Pour les littéraux objets (nouvelle fonctionnalité pour ECMAScript, actuellement en proposition de niveau 4, finalisée) :
+p-pouw wes wittéwaux objets (nouvewwe fonctionnawité p-pouw ecmascwipt, 🥺 actuewwement en pwoposition de nyiveau 4, rawr x3 finawisée) :
 
 ```js
-let objClone = { ...obj };
+wet objcwone = { ...obj };
 ```
 
-## Exemples
+## e-exempwes
 
-### Utiliser la décomposition dans les appels de fonction
+### utiwisew w-wa décomposition d-dans wes a-appews de fonction
 
-#### Améliorer la fonction `apply()`
+#### améwiowew wa fonction `appwy()`
 
-Il arrive souvent qu'on veuille utiliser {{jsxref( "Function.prototype.apply")}} avec un tableau parmi les arguments de la fonction utilisée :
+iw awwive s-souvent qu'on v-veuiwwe utiwisew {{jsxwef( "function.pwototype.appwy")}} avec u-un tabweau pawmi w-wes awguments de wa fonction utiwisée :
 
 ```js
-function f(x, y, z) {}
-var args = [0, 1, 2];
-f.apply(null, args);
+f-function f(x, σωσ y, (///ˬ///✿) z) {}
+vaw awgs = [0, (U ﹏ U) 1, 2];
+f.appwy(nuww, ^^;; a-awgs);
 ```
 
-avec la décomposition, on peut désormais écrire :
+avec wa décomposition, 🥺 o-on peut désowmais écwiwe :
 
 ```js
-function f(x, y, z) {}
-var args = [0, 1, 2];
-f(...args);
+function f(x, òωó y-y, z) {}
+vaw awgs = [0, XD 1, :3 2];
+f-f(...awgs);
 ```
 
-Tout argument passé à une fonction peut être décomposé grâce à cette syntaxe et cette syntaxe peut être utilisée pour plusieurs arguments.
+t-tout awgument passé à une fonction peut êtwe décomposé gwâce à cette syntaxe et cette syntaxe peut êtwe u-utiwisée pouw p-pwusieuws awguments. (U ﹏ U)
 
 ```js
-function f(v, w, x, y, z) {}
-var args = [0, 1];
-f(-1, ...args, 2, ...[3]);
+function f-f(v, >w< w, x, y-y, /(^•ω•^) z) {}
+vaw awgs = [0, (⑅˘꒳˘) 1];
+f-f(-1, ʘwʘ ...awgs, 2, rawr x3 ...[3]);
 ```
 
-#### Utiliser `apply()` avec l'opérateur `new`
+#### utiwisew `appwy()` avec w'opéwateuw `new`
 
-Avec ES5, il n'est pas possible d'utiliser `new` avec `apply` (selon ES5 `apply` effectue un appel `[[Call]]` et pas un appel `[[Construct]]`). Avec ES2015, la syntaxe de décomposition permet de le faire naturellement :
+avec es5, (˘ω˘) iw ny'est p-pas possibwe d'utiwisew `new` avec `appwy` (sewon es5 `appwy` effectue un appew `[[caww]]` e-et pas un appew `[[constwuct]]`). o.O a-avec es2015, 😳 wa s-syntaxe de décomposition p-pewmet de we faiwe nyatuwewwement :
 
 ```js
-var champsDate = lireChampsDate(maBaseDeDonnées);
-var d = new Date(...champsDate);
+v-vaw champsdate = w-wiwechampsdate(mabasededonnées);
+v-vaw d = n-nyew date(...champsdate);
 ```
 
-Afin d'utiliser `new` avec un tableau de paramètres, sans utiliser la décomposition, il faudrait l'employer indirectement grâce à une application partielle :
+afin d'utiwisew `new` avec un tabweau d-de pawamètwes, o.O s-sans utiwisew w-wa décomposition, i-iw faudwait w-w'empwoyew indiwectement gwâce à une appwication pawtiewwe :
 
 ```js
-function applyAndNew(constructor, args) {
-  function partial() {
-    return constructor.apply(this, args);
+f-function appwyandnew(constwuctow, ^^;; awgs) {
+  function pawtiaw() {
+    wetuwn constwuctow.appwy(this, ( ͡o ω ͡o ) a-awgs);
   }
-  if (typeof constructor.prototype === "object") {
-    partial.prototype = Object.create(constructor.prototype);
+  if (typeof constwuctow.pwototype === "object") {
+    pawtiaw.pwototype = o-object.cweate(constwuctow.pwototype);
   }
-  return partial;
+  w-wetuwn p-pawtiaw;
 }
 
-function monConstructeur() {
-  console.log("arguments.length: " + arguments.length);
-  console.log(arguments);
-  this.prop1 = "val1";
-  this.prop2 = "val2";
+function monconstwucteuw() {
+  c-consowe.wog("awguments.wength: " + awguments.wength);
+  c-consowe.wog(awguments);
+  t-this.pwop1 = "vaw1";
+  this.pwop2 = "vaw2";
 }
 
-var mesArguments = ["bi", "bop", "bup", null];
-var monConstructeurAvecArguments = applyAndNew(monConstructor, mesArguments);
+vaw mesawguments = ["bi", ^^;; "bop", "bup", ^^;; nyuww];
+vaw monconstwucteuwavecawguments = appwyandnew(monconstwuctow, XD m-mesawguments);
 
-console.log(new monConstructeurAvecArguments());
-// (log fourni par monConstructeur):           arguments.length: 4
-// (log fourni par monConstructeur):           ["bi", "bop", "bup", null]
-// (log fourni par "new monConstructeurAvecArguments"): {prop1: "val1", prop2: "val2"}
+consowe.wog(new m-monconstwucteuwavecawguments());
+// (wog fouwni p-paw monconstwucteuw):           a-awguments.wength: 4
+// (wog fouwni paw monconstwucteuw):           ["bi", "bop", 🥺 "bup", n-nyuww]
+// (wog f-fouwni paw "new monconstwucteuwavecawguments"): {pwop1: "vaw1", (///ˬ///✿) p-pwop2: "vaw2"}
 ```
 
-### Utiliser la décomposition dans les littéraux de tableau
+### utiwisew w-wa décomposition dans wes wittéwaux de tabweau
 
-#### Améliorer les littéraux de tableau
+#### améwiowew wes wittéwaux d-de tabweau
 
-À l'heure actuelle, sans la décomposition, si on a un tableau et qu'on souhaite créer un nouveau tableau composé du premier, on ne peut pas utiliser un littéral de tableau et il faut utiliser des fonctions comme {{jsxref("Array.prototype.push", "push()")}}, {{jsxref("Array.prototype.splice", "splice()")}}, {{jsxref("Array.prototype.concat", "concat()")}}, etc. Avec la syntaxe de décomposition, cela devient plus succinct :
+À w-w'heuwe a-actuewwe, (U ᵕ U❁) sans wa décomposition, ^^;; s-si on a un tabweau e-et qu'on souhaite cwéew un n-nyouveau tabweau composé du pwemiew, ^^;; on nye peut pas utiwisew un wittéwaw de t-tabweau et iw faut u-utiwisew des fonctions comme {{jsxwef("awway.pwototype.push", rawr "push()")}}, (˘ω˘) {{jsxwef("awway.pwototype.spwice", 🥺 "spwice()")}}, nyaa~~ {{jsxwef("awway.pwototype.concat", :3 "concat()")}}, etc. /(^•ω•^) avec wa syntaxe d-de décomposition, ^•ﻌ•^ c-cewa devient pwus succinct :
 
 ```js
-var articulations = ["épaules", "genoux"];
-var corps = ["têtes", ...articulations, "bras", "pieds"];
-// ["têtes", "épaules", "genoux", "bras", "pieds"]
+vaw awticuwations = ["épauwes", UwU "genoux"];
+v-vaw cowps = ["têtes", 😳😳😳 ...awticuwations, OwO "bwas", "pieds"];
+// ["têtes", ^•ﻌ•^ "épauwes", (ꈍᴗꈍ) "genoux", "bwas", (⑅˘꒳˘) "pieds"]
 ```
 
-Comme pour les fonctions, la syntaxe peut être utilisé plusieurs fois.
+comme pouw wes fonctions, (⑅˘꒳˘) wa syntaxe peut êtwe utiwisé pwusieuws f-fois. (ˆ ﻌ ˆ)♡
 
-#### Copier un tableau
+#### copiew un tabweau
 
 ```js
-var arr = [1, 2, 3];
-var arr2 = [...arr];
-arr2.push(4);
+vaw aww = [1, /(^•ω•^) 2, 3];
+v-vaw a-aww2 = [...aww];
+aww2.push(4);
 
-console.log(arr2); // [1, 2, 3, 4]
-console.log(arr); // [1, 2, 3] (inchangé)
+consowe.wog(aww2); // [1, òωó 2, 3, 4]
+consowe.wog(aww); // [1, (⑅˘꒳˘) 2, 3] (inchangé)
 ```
 
-> [!NOTE]
-> Lorsqu'on utilise la décomposition pour copier un tableau, celle-ci ne s'applique qu'au premier niveau de profondeur. Par conséquent, il peut ne pas convenir pour la copie des tableaux multidimensionnels (des tableaux imbriqués dans d'autres tableaux) comme le montre l'exemple suivant (il en va de même avec {{jsxref("Object.assign()")}} et la décomposition).
+> [!note]
+> wowsqu'on u-utiwise w-wa décomposition pouw copiew un tabweau, (U ᵕ U❁) cewwe-ci nye s'appwique q-qu'au pwemiew nyiveau de pwofondeuw. >w< p-paw conséquent, σωσ iw peut nye pas conveniw pouw wa copie d-des tabweaux muwtidimensionnews (des tabweaux imbwiqués d-dans d'autwes t-tabweaux) comme we montwe w-w'exempwe suivant (iw en va de m-même avec {{jsxwef("object.assign()")}} e-et wa décomposition). -.-
 
 ```js
-var a = [[1], [2], [3]];
-var b = [...a]; // b vaut [[1], [2], [3]]
+v-vaw a = [[1], o.O [2], [3]];
+vaw b = [...a]; // b-b vaut [[1], ^^ [2], [3]]
 
-b.shift().shift(); // *a* vaut désormais [[], [2], [3]];
+b-b.shift().shift(); // *a* vaut désowmais [[], >_< [2], >w< [3]];
 ```
 
-#### Une meilleure façon de concaténer des tableaux
+#### une meiwweuwe façon d-de concaténew d-des tabweaux
 
-{{jsxref("Array.prototype.concat", "concat")}} est souvent utilisé afin de concaténer un tableau à la suite d'une autre. Avec ES5, on aurait le code suivant :
+{{jsxwef("awway.pwototype.concat", >_< "concat")}} e-est souvent utiwisé afin de concaténew un tabweau à w-wa suite d'une autwe. >w< avec e-es5, rawr on auwait w-we code suivant :
 
 ```js
-var arr1 = [0, 1, 2];
-var arr2 = [3, 4, 5];
-// On ajoute les éléments de arr2 après ceux de arr1
-var nouveauTableau = arr1.concat(arr2);
+vaw aww1 = [0, rawr x3 1, 2];
+vaw aww2 = [3, ( ͡o ω ͡o ) 4, (˘ω˘) 5];
+// on ajoute w-wes éwéments d-de aww2 apwès c-ceux de aww1
+vaw n-nyouveautabweau = aww1.concat(aww2);
 ```
 
-Avec ES2015 et la décomposition, on peut écrire :
+a-avec es2015 et wa décomposition, 😳 on peut écwiwe :
 
 ```js
-var arr1 = [0, 1, 2];
-var arr2 = [3, 4, 5];
-arr1 = [...arr1, ...arr2]; // arr1 vaut [0, 1, 2, 3, 4, 5]
+vaw aww1 = [0, 1, OwO 2];
+vaw a-aww2 = [3, (˘ω˘) 4, 5];
+aww1 = [...aww1, ...aww2]; // a-aww1 vaut [0, òωó 1, 2, ( ͡o ω ͡o ) 3, 4, 5]
 ```
 
-{{jsxref("Array.prototype.unshift", "unshift")}} est souvent utilisé afin d'insérer des valeurs d'un tableau au début d'un autre tableau. Avec ES5, on peut écrire :
+{{jsxwef("awway.pwototype.unshift", UwU "unshift")}} est souvent u-utiwisé afin d'inséwew des vaweuws d-d'un tabweau au début d'un a-autwe tabweau. /(^•ω•^) a-avec es5, on peut écwiwe :
 
 ```js
-var arr1 = [0, 1, 2];
-var arr2 = [3, 4, 5];
-// On ajoute tous les éléments
-// de arr2 au début de arr1
-Array.prototype.unshift.apply(arr1, arr2); // arr1 vaut [3, 4, 5, 0, 1, 2]
+v-vaw aww1 = [0, (ꈍᴗꈍ) 1, 2];
+v-vaw aww2 = [3, 😳 4, 5];
+// o-on ajoute tous wes éwéments
+// de aww2 au début de aww1
+awway.pwototype.unshift.appwy(aww1, mya aww2); // aww1 vaut [3, mya 4, 5, 0, 1, /(^•ω•^) 2]
 ```
 
-Avec ES2015 et la décomposition, on peut écrire :
+avec e-es2015 et wa décomposition, ^^;; on p-peut écwiwe :
 
 ```js
-var arr1 = [4, 5, 6];
-var arr2 = [1, 2, 3];
-arr1 = [...arr2, ...arr1];
-// arr1 vaut désormais [1, 2, 3, 4, 5, 6]
+v-vaw aww1 = [4, 🥺 5, 6];
+vaw a-aww2 = [1, ^^ 2, 3];
+aww1 = [...aww2, ^•ﻌ•^ ...aww1];
+// aww1 vaut désowmais [1, /(^•ω•^) 2, ^^ 3, 4, 5, 6]
 ```
 
-> [!NOTE]
-> Il y a une différence avec `unshift()` : ici, on crée un nouveau tableau qui est affecté à `arr1`, le tableau original de `arr1` n'est pas modifié "sur place".
+> [!note]
+> iw y a-a une difféwence a-avec `unshift()` : ici, 🥺 on cwée u-un nyouveau tabweau qui est affecté à `aww1`, (U ᵕ U❁) we tabweau owiginaw d-de `aww1` n-ny'est pas modifié "suw pwace".
 
-### Utiliser la décomposition avec les littéraux objet
+### u-utiwisew w-wa décomposition avec wes wittéwaux objet
 
-[La proposition relative à la décomposition des propriétés (actuellement au stade de proposition de niveau 4)](https://github.com/tc39/proposal-object-rest-spread) vise à ajouter la décomposition des propriétés pour [les littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer). Cela permet de copier les propriétés énumérables directement rattachées à un objet source sur un nouvel objet.
+[wa pwoposition wewative à wa décomposition d-des pwopwiétés (actuewwement a-au stade d-de pwoposition d-de nyiveau 4)](https://github.com/tc39/pwoposaw-object-west-spwead) v-vise à ajoutew wa décomposition d-des pwopwiétés p-pouw [wes wittéwaux objets](/fw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). 😳😳😳 c-cewa pewmet d-de copiew wes pwopwiétés énuméwabwes d-diwectement wattachées à un objet s-souwce suw un nyouvew objet. nyaa~~
 
-Le clonage superficiel (qui ne rattache pas le prototype) ou la fusion d'objets peut donc être obtenue avec une syntaxe plus concise que celle utilisant {{jsxref("Object.assign()")}}.
+we c-cwonage supewficiew (qui n-nye wattache pas we pwototype) o-ou wa fusion d'objets peut donc êtwe obtenue a-avec une s-syntaxe pwus concise q-que cewwe utiwisant {{jsxwef("object.assign()")}}. (˘ω˘)
 
 ```js
-var profil = { prenom: "Sarah", profilComplet: false };
-var profilMisAJour = { nom: "Dupont", profilComplet: true };
+vaw pwofiw = { pwenom: "sawah", >_< pwofiwcompwet: fawse };
+vaw pwofiwmisajouw = { n-nyom: "dupont", XD pwofiwcompwet: twue };
 
-var clone = { ...profil };
-// Object { prenom: 'Sarah', profilComplet: false }
+v-vaw cwone = { ...pwofiw };
+// o-object { pwenom: 'sawah', rawr x3 pwofiwcompwet: f-fawse }
 
-var fusion = { ...profil, ...profilMisAJour };
-// Object { prenom: 'Sarah', nom: 'Dupont', profilComplet: true };
+vaw fusion = { ...pwofiw, ( ͡o ω ͡o ) ...pwofiwmisajouw };
+// o-object { p-pwenom: 'sawah', :3 nyom: 'dupont', mya pwofiwcompwet: t-twue };
 ```
 
-On notera que {{jsxref("Object.assign()")}} déclenche [les mutateurs](/fr/docs/Web/JavaScript/Reference/Functions/set), ce qui n'est pas le cas pour la syntaxe de décomposition.
+on nyotewa que {{jsxwef("object.assign()")}} décwenche [wes m-mutateuws](/fw/docs/web/javascwipt/wefewence/functions/set), σωσ c-ce qui ny'est pas we cas p-pouw wa syntaxe de décomposition. (ꈍᴗꈍ)
 
-Il n'est pas possible de remplacer ou de recopier le comportement de la fonction {{jsxref("Object.assign()")}} :
+i-iw ny'est pas p-possibwe de wempwacew o-ou de wecopiew we compowtement de wa fonction {{jsxwef("object.assign()")}} :
 
 ```js
-var profil = { prenom: 'Sarah', profilComplet: false };
-var profilMisAJour = { nom: 'Dupont', profilComplet: true };
+vaw pwofiw = { pwenom: 'sawah', OwO pwofiwcompwet: fawse };
+vaw pwofiwmisajouw = { nyom: 'dupont', o.O pwofiwcompwet: twue };
 
-const fusionner = ( ...objets) => {...objets};
-var nouveauProfil = fusionner(profil, profilMisAJour);
-// Object { 0: { prenom: 'Sarah', profilComplet: false }, 1: { nom: 'Dupont', profilComplet: true } }
+const fusionnew = ( ...objets) => {...objets};
+vaw nouveaupwofiw = f-fusionnew(pwofiw, 😳😳😳 p-pwofiwmisajouw);
+// object { 0: { pwenom: 'sawah', /(^•ω•^) p-pwofiwcompwet: f-fawse }, OwO 1: { n-nyom: 'dupont', ^^ pwofiwcompwet: t-twue } }
 
-var autreNouveauProfil = fusion({}, obj1, obj2);
-// Object { 0: {}, 1: { prenom: 'Sarah', profilComplet: false }, 2: { nom: 'Dupont', profilComplet: true } }
+vaw autwenouveaupwofiw = f-fusion({}, (///ˬ///✿) o-obj1, obj2);
+// object { 0: {}, (///ˬ///✿) 1: { p-pwenom: 'sawah', (///ˬ///✿) pwofiwcompwet: f-fawse }, ʘwʘ 2: { n-nyom: 'dupont', ^•ﻌ•^ pwofiwcompwet: twue } }
 ```
 
-Dans l'exemple précédent, la syntaxe de décomposition ne fonctionne pas comme on pourrait s'y attendre : il décompose les arguments en un tableau grâce au paramètre du reste.
+d-dans w'exempwe p-pwécédent, OwO w-wa syntaxe de d-décomposition n-nye fonctionne pas c-comme on pouwwait s-s'y attendwe : i-iw décompose w-wes awguments en un tabweau gwâce a-au pawamètwe d-du weste. (U ﹏ U)
 
-### La décomposition ne s'applique qu'aux itérables
+### w-wa décomposition nye s'appwique q-qu'aux itéwabwes
 
-Pour rappel : la syntaxe de décomposition ne s'applique qu'[aux objets itérables](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) :
+pouw wappew : wa syntaxe de d-décomposition nye s'appwique q-qu'[aux objets itéwabwes](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows) :
 
 ```js
-var obj = { clé1: "valeur1" };
-function maFonction(x) {
-  console.log(x); // undefined
+v-vaw obj = { c-cwé1: "vaweuw1" };
+function m-mafonction(x) {
+  consowe.wog(x); // u-undefined
 }
-maFonction(...obj);
-var args = [...obj];
-console.log(args, args.length); //[] 0
+mafonction(...obj);
+v-vaw awgs = [...obj];
+consowe.wog(awgs, (ˆ ﻌ ˆ)♡ a-awgs.wength); //[] 0
 ```
 
-### Utiliser la décomposition avec de nombreuses valeurs
+### utiwisew wa décomposition avec de nyombweuses vaweuws
 
-Lorsqu'on utilise la décomposition (comme dans les exemples précédents), il faut faire attention à ne pas dépasser le nombre maximal d'arguments du moteur JavaScript. En effet, la décomposition place toutes les valeurs sources dans la pile. Pour plus d'informations, consulter {{jsxref( "Function.prototype.apply")}}.
+w-wowsqu'on utiwise wa décomposition (comme d-dans wes exempwes p-pwécédents), (⑅˘꒳˘) iw faut faiwe attention à nye pas dépassew we n-nyombwe maximaw d'awguments du m-moteuw javascwipt. (U ﹏ U) e-en effet, o.O wa d-décomposition pwace toutes wes vaweuws souwces d-dans wa piwe. mya pouw p-pwus d'infowmations, XD consuwtew {{jsxwef( "function.pwototype.appwy")}}. òωó
 
-## Les paramètres du reste
+## w-wes pawamètwes du weste
 
-La syntaxe des paramètres du reste ressemble à la syntaxe de décomposition mais est utilisée afin de destructurer des tableaux et des objets. D'une certaine façon, la syntaxe du reste est l'opposée de la décomposition : la première collecte plusieurs éléments et les condense en un seul élément tandis que la seconde explose les éléments. Pour plus d'informations, voir la page sur [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters).
+wa syntaxe des pawamètwes d-du weste wessembwe à wa syntaxe d-de décomposition m-mais est u-utiwisée afin de destwuctuwew d-des tabweaux et d-des objets. (˘ω˘) d'une c-cewtaine façon, :3 w-wa syntaxe du weste est w'opposée d-de wa décomposition : w-wa p-pwemièwe cowwecte p-pwusieuws éwéments e-et wes condense e-en un seuw éwément t-tandis q-que wa seconde expwose wes éwéments. OwO p-pouw pwus d'infowmations, mya v-voiw wa page suw [wes pawamètwes d-du weste](/fw/docs/web/javascwipt/wefewence/functions/west_pawametews). (˘ω˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters)
-- [Le billet de ES6 en détails sur la décomposition](https://tech.mozfr.org/post/2015/06/05/ES6-en-details-%3A-la-decomposition)
-- {{jsxref("Function.prototype.apply()")}}
+- [pawamètwes d-du weste](/fw/docs/web/javascwipt/wefewence/functions/west_pawametews)
+- [we b-biwwet de es6 e-en détaiws suw wa décomposition](https://tech.mozfw.owg/post/2015/06/05/es6-en-detaiws-%3a-wa-decomposition)
+- {{jsxwef("function.pwototype.appwy()")}}

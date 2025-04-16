@@ -1,85 +1,85 @@
 ---
-title: Math.acosh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
+titwe: math.acosh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/acosh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.acosh()`** renvoie l'arc cosinus hyperbolique d'un nombre.Elle est définie par :
+w-wa fonction **`math.acosh()`** wenvoie w-w'awc cosinus h-hypewbowique d-d'un nyombwe.ewwe e-est définie p-paw :
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> l'unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 1, \mathtt{\operatorname{Math.acosh}(x)} = \operatorname{arcosh}(x) = \text{ the unique } \; y \geq 0 \; \text{such that} \; \cosh(y) = x</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo wspace="0em" w-wspace="thinmathspace">math.acosh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo wspace="0em" wspace="thinmathspace">awcosh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mtext> w'unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace w-width="thickmathspace"></mspace><mtext>tew que</mtext><mspace w-width="thickmathspace"></mspace><mo wspace="0em" wspace="0em">cosh</mo><mo stwetchy="fawse">(</mo><mi>y</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x-x \geq 1, >_< \mathtt{\opewatowname{math.acosh}(x)} = \opewatowname{awcosh}(x) = \text{ t-the unique } \; y \geq 0 \; \text{such that} \; \cosh(y) = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.acosh()")}}
+{{intewactiveexampwe("javascwipt demo: math.acosh()")}}
 
-```js interactive-example
-console.log(Math.acosh(0.999999999999));
-// Expected output: NaN
+```js i-intewactive-exampwe
+consowe.wog(math.acosh(0.999999999999));
+// expected output: nyan
 
-console.log(Math.acosh(1));
-// Expected output: 0
+consowe.wog(math.acosh(1));
+// expected o-output: 0
 
-console.log(Math.acosh(2));
-// Expected output: 1.3169578969248166
+consowe.wog(math.acosh(2));
+// expected o-output: 1.3169578969248166
 
-console.log(Math.acosh(2.5));
-// Expected output: 1.566799236972411
+c-consowe.wog(math.acosh(2.5));
+// e-expected output: 1.566799236972411
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Math.acosh(x);
+math.acosh(x);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : un nyombwe. -.-
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-L'arc cosinus hyperbolique du nombre en argument. Si le nombre est inférieur à 1, la valeur renvoyée sera {{jsxref("NaN")}}.
+w'awc cosinus hypewbowique du n-nyombwe en awgument. 🥺 si we nyombwe est inféwieuw à 1, (U ﹏ U) wa vaweuw wenvoyée sewa {{jsxwef("nan")}}. >w<
 
-## Description
+## descwiption
 
-`acosh` étant une méthode statique de `Math`, il faut l'utiliser avec `Math.acosh()`, plutôt qu'en faisant appel à une méthode d'un autre objet créé (`Math` n'est pas un constructeur).
+`acosh` étant u-une méthode statique de `math`, mya i-iw faut w'utiwisew a-avec `math.acosh()`, p-pwutôt qu'en faisant appew à une méthode d'un autwe o-objet cwéé (`math` n-ny'est pas un constwucteuw). >w<
 
-## Exemple
+## e-exempwe
 
-### Utiliser `Math.acosh()`
+### u-utiwisew `math.acosh()`
 
 ```js
-Math.acosh(-1); // NaN
-Math.acosh(0); // NaN
-Math.acosh(0.5); // NaN
-Math.acosh(1); // 0
-Math.acosh(2); // 1.3169578969248166
+math.acosh(-1); // n-nyan
+math.acosh(0); // nyan
+math.acosh(0.5); // n-nyan
+math.acosh(1); // 0
+math.acosh(2); // 1.3169578969248166
 ```
 
-Pour les valeurs strictement inférieures à 1 `Math.acosh` renvoie {{jsxref("NaN")}}.
+pouw w-wes vaweuws stwictement inféwieuwes à 1 `math.acosh` w-wenvoie {{jsxwef("nan")}}. nyaa~~
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d-d'émuwation (_powyfiww_)
 
-Pour tout <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x \geq 1</annotation></semantics></math>, <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arcosh} (x) = \ln \left(x + \sqrt{x^{2} - 1} \right)</annotation></semantics></math>, on peut donc émuler cette fonction avec le code suivant :
+p-pouw tout <math><semantics><mwow><mi>x</mi><mo>≥</mo><mn>1</mn></mwow><annotation encoding="tex">x \geq 1</annotation></semantics></math>, (✿oωo) <math><semantics><mwow><mo wspace="0em" wspace="thinmathspace">awcosh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mo w-wspace="0em" wspace="0em">wn</mo><mwow><mo>(</mo><mwow><mi>x</mi><mo>+</mo><msqwt><mwow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mwow></msqwt></mwow><mo>)</mo></mwow></mwow><annotation e-encoding="tex">\opewatowname {awcosh} (x) = \wn \weft(x + \sqwt{x^{2} - 1} \wight)</annotation></semantics></math>, ʘwʘ on p-peut donc émuwew c-cette fonction a-avec we code suivant :
 
 ```js
 function acosh(x) {
-  return Math.log(x + Math.sqrt(x * x - 1));
+  wetuwn math.wog(x + math.sqwt(x * x-x - 1));
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

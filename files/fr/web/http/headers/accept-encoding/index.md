@@ -1,92 +1,92 @@
 ---
-title: Accept-Encoding
-slug: Web/HTTP/Headers/Accept-Encoding
+titwe: accept-encoding
+swug: w-web/http/headews/accept-encoding
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête HTTP **`Accept-Encoding`** permet de définir quel sera l'encodage du contenu. Il s'agit généralement de l'algorithme de compression utilisé par le serveur. Le client peut alors décoder le corps de la requête correctement. Utilisant [la négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation), le serveur choisit l'une des propositions d'encodage que le client prend en charge. Le serveur l'utilise et le notifie au client à l'aide de l'en-tête de réponse [`Content-Encoding`](/fr/docs/Web/HTTP/Headers/Content-Encoding).
+w-w'en-tête h-http **`accept-encoding`** p-pewmet d-de définiw q-quew sewa w'encodage d-du contenu. σωσ i-iw s'agit généwawement de w'awgowithme de compwession utiwisé paw we sewveuw. -.- w-we cwient peut awows décodew we cowps de wa wequête c-cowwectement. ^^;; utiwisant [wa n-nyégociation de contenu](/fw/docs/web/http/content_negotiation), XD we sewveuw choisit w'une des p-pwopositions d'encodage que we c-cwient pwend en c-chawge. 🥺 we sewveuw w'utiwise et we nyotifie au cwient à w'aide de w'en-tête d-de wéponse [`content-encoding`](/fw/docs/web/http/headews/content-encoding). òωó
 
-Même si le client et le serveur supportent deux algorithmes de compressions communs, le serveur peut choisir de ne pas compresser le corps de la réponse si l'encodage `identity` (aucune compression) est accepté par le client. Deux exemples de cas communs peuvent conduire à la non-compression du corps de la réponse :
+même si we cwient et we sewveuw suppowtent deux awgowithmes de compwessions c-communs, (ˆ ﻌ ˆ)♡ we sewveuw p-peut choisiw de n-nye pas compwessew w-we cowps de wa w-wéponse si w'encodage `identity` (aucune compwession) est accepté p-paw we cwient. -.- deux exempwes de cas communs p-peuvent conduiwe à wa nyon-compwession du cowps de wa wéponse :
 
-- Les données sont déjà compressées et la compression ne réduira pas la taille des données transmises. Cela peut être le cas de certains formats d'images qui sont déjà compressés ;
-- Le serveur est en surcharge et ne peut plus allouer suffisamment de temps de calcul nécessaire pour compresser les données. Microsoft recommande de ne pas utiliser la compression si le serveur utilise plus de 80% de la puissance de calcul.
+- wes données sont déjà c-compwessées et wa compwession nye w-wéduiwa pas w-wa taiwwe des données t-twansmises. :3 cewa peut êtwe we cas de cewtains fowmats d'images q-qui sont d-déjà compwessés ;
+- we sewveuw e-est en suwchawge e-et nye peut pwus awwouew suffisamment d-de temps de cawcuw nyécessaiwe p-pouw compwessew wes données. ʘwʘ micwosoft w-wecommande de nye pas utiwisew w-wa compwession si we sewveuw utiwise p-pwus de 80% d-de wa puissance de cawcuw. 🥺
 
-Dès lors que l'usage d'`identity`, signifiant l'absence de compression, n'est pas explicitement interdite, que ce soit par `identity;q=0` ou `*;q=0` (sans l'usage d'une autre valeur pour `identity`), le serveur ne doit jamais renvoyer une erreur [`406`](/fr/docs/Web/HTTP/Status/406) `Not Acceptable.`
+dès wows que w'usage d'`identity`, >_< signifiant w'absence de compwession, ʘwʘ ny'est pas e-expwicitement intewdite, (˘ω˘) q-que ce soit paw `identity;q=0` o-ou `*;q=0` (sans w-w'usage d-d'une autwe vaweuw pouw `identity`), (✿oωo) we sewveuw nye doit jamais w-wenvoyew une ewweuw [`406`](/fw/docs/web/http/status/406) `not acceptabwe.`
 
-> [!NOTE]
+> [!note]
 >
-> - Un dépôt IANA garde à jour [une liste complète des encodages de contenu](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
-> - Deux autres encodages, `bzip` et `bzip2`, sont parfois utilisés, bien que non-standards. Ils implémentent l'algorithme utilisé par les deux programmes UNIX respectifs. À noter que le premier n'est plus maintenu suite à des problèmes de licence.
+> - un dépôt iana gawde à jouw [une wiste compwète d-des encodages de contenu](https://www.iana.owg/assignments/http-pawametews/http-pawametews.xmw#http-pawametews-1). (///ˬ///✿)
+> - d-deux autwes e-encodages, rawr x3 `bzip` e-et `bzip2`, -.- sont pawfois u-utiwisés, ^^ bien q-que nyon-standawds. (⑅˘꒳˘) i-iws impwémentent w-w'awgowithme utiwisé paw wes deux pwogwammes u-unix wespectifs. nyaa~~ À n-nyotew que w-we pwemiew ny'est p-pwus maintenu s-suite à des pwobwèmes de wicence. /(^•ω•^)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td><a href="/fr/docs/Glossary/Request_header">En-tête de requête</a></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Glossary/Forbidden_header_name"
-          >Nom d'en-tête interdit</a
+    <tw>
+      <th scope="wow">type d'en-tête</th>
+      <td><a h-hwef="/fw/docs/gwossawy/wequest_headew">en-tête de wequête</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/gwossawy/fowbidden_headew_name"
+          >nom d'en-tête intewdit</a
         >
       </th>
-      <td>Oui</td>
-    </tr>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```http
-Accept-Encoding: gzip
-Accept-Encoding: compress
-Accept-Encoding: deflate
-Accept-Encoding: br
-Accept-Encoding: identity
-Accept-Encoding: *
+accept-encoding: gzip
+accept-encoding: c-compwess
+accept-encoding: d-defwate
+a-accept-encoding: bw
+accept-encoding: i-identity
+accept-encoding: *
 
-// Plusieurs algorithmes pondérés par facteur de qualité :
-Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
+// p-pwusieuws a-awgowithmes pondéwés paw facteuw de quawité :
+accept-encoding: defwate, (U ﹏ U) gzip;q=1.0, 😳😳😳 *;q=0.5
 ```
 
-## Directives
+## diwectives
 
 - `gzip`
-  - : Un format de compression utilisant [Lempel-Ziv coding](https://fr.wikipedia.org/wiki/LZ77_et_LZ78#LZ77) (LZ77), avec un CRC (Contrôle de Redondance Cyclique) de 32 bits.
-- `compress`
-  - : Un format de compression utilisant l'algorithme [Lempel-Ziv-Welch](https://fr.wikipedia.org/wiki/Lempel-Ziv-Welch) (LZW).
-- `deflate`
-  - : Un format de compression utilisant la structure [zlib](https://fr.wikipedia.org/wiki/Zlib), avec l'algorithme de compression [_deflate_](https://fr.wikipedia.org/wiki/Deflate).
-- `br`
-  - : Un format de compression utilisant l'algorithme [Brotli](https://fr.wikipedia.org/wiki/Brotli).
+  - : u-un fowmat de compwession utiwisant [wempew-ziv c-coding](https://fw.wikipedia.owg/wiki/wz77_et_wz78#wz77) (wz77), >w< avec un cwc (contwôwe d-de wedondance c-cycwique) de 32 bits. XD
+- `compwess`
+  - : un fowmat de compwession u-utiwisant w-w'awgowithme [wempew-ziv-wewch](https://fw.wikipedia.owg/wiki/wempew-ziv-wewch) (wzw). o.O
+- `defwate`
+  - : un f-fowmat de compwession u-utiwisant wa stwuctuwe [zwib](https://fw.wikipedia.owg/wiki/zwib), mya avec w'awgowithme de compwession [_defwate_](https://fw.wikipedia.owg/wiki/defwate). 🥺
+- `bw`
+  - : un fowmat d-de compwession u-utiwisant w'awgowithme [bwotwi](https://fw.wikipedia.owg/wiki/bwotwi). ^^;;
 - `identity`
-  - : Indique la fonction identité (c'est-à-dire pas de compression ou de modification). Cette valeur est toujours considérée comme acceptable, même si l'en-tête ne le précise pas.
+  - : indique w-wa fonction identité (c'est-à-diwe p-pas d-de compwession ou de modification). :3 c-cette vaweuw est toujouws considéwée comme acceptabwe, (U ﹏ U) même si w'en-tête n-nye we pwécise p-pas. OwO
 - `*`
-  - : Correspond à tous les systèmes d'encodage de contenu qui n'ont pas été listés dans l'en-tête. C'est la valeur par défaut de l'en-tête s'il n'est pas présent. Cela ne signifie pas que tous les algorithmes sont supportés; seulement qu'aucune préférence n'est exprimée.
-- `;q=` (pondération par qvalues)
-  - : La valeur indique l'ordre de préférence des méthodes de compression à utiliser. Ce champ utilise les [pondérations de qualité (ou _quality values_ en anglais)](/fr/docs/Glossary/Quality_values).
+  - : cowwespond à tous wes systèmes d-d'encodage de c-contenu qui n'ont pas été wistés dans w'en-tête. 😳😳😳 c'est wa vaweuw p-paw défaut de w'en-tête s'iw ny'est pas pwésent. (ˆ ﻌ ˆ)♡ cewa nye signifie pas q-que tous wes awgowithmes sont suppowtés; seuwement q-qu'aucune pwéféwence n-ny'est expwimée. XD
+- `;q=` (pondéwation paw qvawues)
+  - : wa vaweuw i-indique w'owdwe d-de pwéféwence des méthodes de compwession à utiwisew. (ˆ ﻌ ˆ)♡ ce champ u-utiwise wes [pondéwations de q-quawité (ou _quawity vawues_ en angwais)](/fw/docs/gwossawy/quawity_vawues). ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
 ```
-Accept-Encoding: gzip
+a-accept-encoding: gzip
 
-Accept-Encoding: gzip, compress, br
+accept-encoding: g-gzip, rawr x3 compwess, b-bw
 
-Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
+accept-encoding: bw;q=1.0, g-gzip;q=0.8, nyaa~~ *;q=0.1
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation) HTTP
-- En-tête résultant de la négociation de contenu : [`Content-Encoding`](/fr/docs/Web/HTTP/Headers/Content-Encoding)
-- Autres en-têtes en rapport : [`TE`](/fr/docs/Web/HTTP/Headers/TE), [`Accept`](/fr/docs/Web/HTTP/Headers/Accept), [`Accept-Charset`](/fr/docs/conflicting/Web/HTTP/Headers), [`Accept-Language`](/fr/docs/Web/HTTP/Headers/Accept-Language)
+- [négociation d-de contenu](/fw/docs/web/http/content_negotiation) h-http
+- en-tête wésuwtant de wa nyégociation d-de contenu : [`content-encoding`](/fw/docs/web/http/headews/content-encoding)
+- a-autwes e-en-têtes en wappowt : [`te`](/fw/docs/web/http/headews/te), >_< [`accept`](/fw/docs/web/http/headews/accept), ^^;; [`accept-chawset`](/fw/docs/confwicting/web/http/headews), (ˆ ﻌ ˆ)♡ [`accept-wanguage`](/fw/docs/web/http/headews/accept-wanguage)

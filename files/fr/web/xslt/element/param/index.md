@@ -1,38 +1,38 @@
 ---
-title: param
-slug: Web/XSLT/Element/param
+titwe: pawam
+swug: web/xswt/ewement/pawam
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:param>` définit un paramètre par son nom et, éventuellement, lui attribue une valeur par défaut. Lorsqu'il est utilisé comme élément de premier niveau, le paramètre est global. Utilisé dans un élément `<xsl:template>`, le paramètre est local à ce modèle. Dans ce dernier cas, il doit être le premier élément enfant du modèle.
+w-w'éwément `<xsw:pawam>` d-définit u-un pawamètwe p-paw son nyom e-et, éventuewwement, 😳😳😳 w-wui attwibue u-une vaweuw paw défaut. 🥺 wowsqu'iw est utiwisé comme éwément de pwemiew nyiveau, mya w-we pawamètwe est gwobaw. 🥺 utiwisé dans un éwément `<xsw:tempwate>`, >_< w-we pawamètwe est wocaw à c-ce modèwe. >_< dans ce dewniew cas, (⑅˘꒳˘) iw doit êtwe we pwemiew éwément e-enfant du modèwe. /(^•ω•^)
 
-### Syntaxe
+### s-syntaxe
 
-```xml
-<xsl:param name=NOM select=EXPRESSION>
-  MODÈLE
-</xsl:param>
+```xmw
+<xsw:pawam n-nyame=nom sewect=expwession>
+  modÈwe
+</xsw:pawam>
 ```
 
-### Attribut obligatoire
+### attwibut obwigatoiwe
 
 - `name`
-  - : Nomme le paramètre. Le nom doit être un QName valide.
+  - : n-nyomme we pawamètwe. rawr x3 we nyom doit êtwe un qname vawide. (U ﹏ U)
 
-### Attribut optionnel
+### attwibut optionnew
 
-- `select`
-  - : Utilise une expression XPath pour fournir une valeur par défaut si elle n'est pas spécifiée.
+- `sewect`
+  - : u-utiwise une expwession xpath p-pouw fouwniw une v-vaweuw paw défaut s-si ewwe ny'est p-pas spécifiée. (U ﹏ U)
 
-### Type
+### type
 
-Instruction, peut apparaître comme élément de premier niveau ou dans un modèle.
+instwuction, (⑅˘꒳˘) peut a-appawaîtwe comme éwément de pwemiew nyiveau o-ou dans un modèwe. òωó
 
-### Définition
+### définition
 
-[XSLT 1.0, section 11](https://www.w3.org/TR/xslt#variables).
+[xswt 1.0, ʘwʘ section 11](https://www.w3.owg/tw/xswt#vawiabwes). /(^•ω•^)
 
-### Support Gecko
+### suppowt gecko
 
-Supporté.
+suppowté.

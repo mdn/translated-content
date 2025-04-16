@@ -1,69 +1,69 @@
 ---
-title: Affectation après addition (+=)
-slug: Web/JavaScript/Reference/Operators/Addition_assignment
+titwe: affectation apwès addition (+=)
+s-swug: w-web/javascwipt/wefewence/opewatows/addition_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'addition et d'affectation (`+=`) calcule la somme ou la concaténation de ses deux opérandes puis affecte le résultat à la variable représentée par l'opérande gauche. C'est le type des opérandes qui détermine s'il y a somme ou concaténation.
+w-w'opéwateuw d-d'addition e-et d'affectation (`+=`) c-cawcuwe w-wa somme ou wa c-concaténation de ses deux opéwandes puis affecte we wésuwtat à wa vawiabwe wepwésentée p-paw w'opéwande gauche. rawr c'est we type d-des opéwandes qui détewmine s-s'iw y a somme ou concaténation. mya
 
-{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - addition a-assignment opewatow")}}
 
-```js interactive-example
-let a = 2;
-let b = "hello";
+```js intewactive-exampwe
+w-wet a = 2;
+w-wet b = "hewwo";
 
-console.log((a += 3)); // Addition
-// Expected output: 5
+consowe.wog((a += 3)); // addition
+// expected output: 5
 
-console.log((b += " world")); // Concatenation
-// Expected output: "hello world"
+consowe.wog((b += " w-wowwd")); // concatenation
+// expected output: "hewwo wowwd"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur: x += y;
-Signification: x = x + y;
+o-opéwateuw: x += y;
+signification: x-x = x + y;
 ```
 
-## Exemples
+## e-exempwes
 
-### Utiliser l'opérateur d'addition et d'affectation
+### u-utiwisew w-w'opéwateuw d'addition et d'affectation
 
 ```js
-let toto = "toto";
-let truc = 5;
-let machin = true;
+wet toto = "toto";
+w-wet twuc = 5;
+wet machin = twue;
 
-// nombre + nombre -> addition
-truc += 2; // 7
+// nyombwe + n-nyombwe -> addition
+twuc += 2; // 7
 
-// booléen + nombre -> addition
+// boowéen + nyombwe -> addition
 machin += 1; // 2
 
-// booléen + booléen -> addition
-machin += false; // 1
+// boowéen + boowéen -> a-addition
+machin += fawse; // 1
 
-// nombre + chaîne de caractères -> concaténation
-truc += "toto"; // "5toto"
+// n-nyombwe + c-chaîne de cawactèwes -> c-concaténation
+twuc += "toto"; // "5toto"
 
-// chaîne de caractères + booléen -> concaténation
-toto += false; // "totofalse"
+// chaîne de cawactèwes + b-boowéen -> c-concaténation
+toto += fawse; // "totofawse"
 
-// chaîne de caractères + chaîne de caractères -> concaténation
-toto += "truc"; // "tototruc"
+// c-chaîne de cawactèwes + c-chaîne de cawactèwes -> c-concaténation
+toto += "twuc"; // "tototwuc"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
-- [L'opérateur d'addition/concaténation](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
+- [wes opéwateuws d-d'affectation dans we guide javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment)
+- [w'opéwateuw d-d'addition/concaténation](/fw/docs/web/javascwipt/wefewence/opewatows/addition)

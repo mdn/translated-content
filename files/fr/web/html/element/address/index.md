@@ -1,184 +1,184 @@
 ---
-title: "<address> : l'élément d'adresse de contact"
-slug: Web/HTML/Element/address
+titwe: "<addwess> : w'éwément d-d'adwesse de c-contact"
+swug: web/htmw/ewement/addwess
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<address>`** indique des informations de contact pour une personne, un groupe de personnes ou une organisation.
+w-w'éwément h-htmw **`<addwess>`** indique d-des infowmations d-de contact p-pouw une pewsonne, 😳😳😳 u-un gwoupe de pewsonnes ou une owganisation. (˘ω˘)
 
-{{InteractiveExample("HTML Demo: &lt;address&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;addwess&gt;", ʘwʘ "tabbed-standawd")}}
 
-```html interactive-example
-<p>Contact the author of this page:</p>
+```htmw intewactive-exampwe
+<p>contact t-the authow of this page:</p>
 
-<address>
-  <a href="mailto:jim@example.com">jim@example.com</a><br />
-  <a href="tel:+14155550132">+1 (415) 555‑0132</a>
-</address>
+<addwess>
+  <a hwef="maiwto:jim@exampwe.com">jim@exampwe.com</a><bw />
+  <a h-hwef="tew:+14155550132">+1 (415) 555‑0132</a>
+</addwess>
 ```
 
-```css interactive-example
-a[href^="mailto"]::before {
+```css intewactive-exampwe
+a-a[hwef^="maiwto"]::befowe {
   content: "📧 ";
 }
 
-a[href^="tel"]::before {
+a[hwef^="tew"]::befowe {
   content: "📞 ";
 }
 ```
 
-L'information de contact fournie via cet élément peut prendre n'importe quelle forme pertinente : ce peut être une adresse physique, une URL, une adresse électronique, un numéro de téléphone, des coordonnées géographiques, etc. Ces informations devraient contenir le nom de la personne, du groupe de personne ou de l'organisation à laquelle le contact fait référence.
+w'infowmation d-de contact fouwnie v-via cet éwément p-peut pwendwe n'impowte quewwe fowme pewtinente : ce peut êtwe une adwesse physique, ( ͡o ω ͡o ) u-une uww, une adwesse éwectwonique, o.O un nyuméwo de téwéphone, >w< des coowdonnées g-géogwaphiques, 😳 etc. ces i-infowmations devwaient c-conteniw w-we nyom de wa pewsonne, 🥺 d-du gwoupe de pewsonne ou de w'owganisation à w-waquewwe we contact fait wéféwence. rawr x3
 
-Cet élément peut être employé dans un élément [`<article>`](/fr/docs/Web/HTML/Element/article) pour indiquer la personne qui écrit l'article ou être utilisé dans l'en-tête de la page pour fournir une adresse d'entreprise.
+cet éwément p-peut êtwe empwoyé dans un éwément [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe) pouw indiquew wa pewsonne qui écwit w'awticwe o-ou êtwe utiwisé dans w'en-tête d-de wa page pouw f-fouwniw une a-adwesse d'entwepwise. o.O
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/Guide/HTML/Content_categories"
-            >Catégories de contenu</a
+          ><a hwef="/fw/docs/web/guide/htmw/content_categowies"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu tangible</a
-        >.
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de f-fwux</a
+        >, rawr
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu t-tangibwe</a
+        >. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >, mais sans élément <code>&#x3C;address></code> inclus, sans contenu de
-        titre (<a href="/fr/docs/Web/HTML/Element/hgroup"
-          ><code>&#x3C;hgroup></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Heading_Elements"
-          ><code>&#x3C;h1></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Heading_Elements"
-          ><code>&#x3C;h2></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Heading_Elements"
-          ><code>&#x3C;h3></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Heading_Elements"
-          ><code>&#x3C;h4></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Heading_Elements"
-          ><code>&#x3C;h5></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Heading_Elements"
-          ><code>&#x3C;h6></code></a
-        >), sans contenu de section (<a href="/fr/docs/Web/HTML/Element/article"
-          ><code>&#x3C;article></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/aside"><code>&#x3C;aside></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/section"
-          ><code>&#x3C;section></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/nav"><code>&#x3C;nav></code></a
-        >), et sans
-        <a href="/fr/docs/Web/HTML/Element/header"
-          ><code>&#x3C;header></code></a
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >, 😳😳😳 mais sans éwément <code>&#x3c;addwess></code> i-incwus, ^^;; sans contenu de
+        titwe (<a h-hwef="/fw/docs/web/htmw/ewement/hgwoup"
+          ><code>&#x3c;hgwoup></code></a
+        >, o.O
+        <a hwef="/fw/docs/web/htmw/ewement/heading_ewements"
+          ><code>&#x3c;h1></code></a
+        >, (///ˬ///✿)
+        <a h-hwef="/fw/docs/web/htmw/ewement/heading_ewements"
+          ><code>&#x3c;h2></code></a
+        >, σωσ
+        <a hwef="/fw/docs/web/htmw/ewement/heading_ewements"
+          ><code>&#x3c;h3></code></a
+        >, nyaa~~
+        <a hwef="/fw/docs/web/htmw/ewement/heading_ewements"
+          ><code>&#x3c;h4></code></a
+        >, ^^;;
+        <a h-hwef="/fw/docs/web/htmw/ewement/heading_ewements"
+          ><code>&#x3c;h5></code></a
+        >, ^•ﻌ•^
+        <a h-hwef="/fw/docs/web/htmw/ewement/heading_ewements"
+          ><code>&#x3c;h6></code></a
+        >), σωσ sans contenu de section (<a hwef="/fw/docs/web/htmw/ewement/awticwe"
+          ><code>&#x3c;awticwe></code></a
+        >, -.-
+        <a hwef="/fw/docs/web/htmw/ewement/aside"><code>&#x3c;aside></code></a
+        >, ^^;;
+        <a hwef="/fw/docs/web/htmw/ewement/section"
+          ><code>&#x3c;section></code></a
+        >, XD <a hwef="/fw/docs/web/htmw/ewement/nav"><code>&#x3c;nav></code></a
+        >), e-et sans
+        <a h-hwef="/fw/docs/web/htmw/ewement/headew"
+          ><code>&#x3c;headew></code></a
         >
-        ou élément
-        <a href="/fr/docs/Web/HTML/Element/footer"><code>&#x3C;footer></code></a
-        >.
+        ou éwément
+        <a h-hwef="/fw/docs/web/htmw/ewement/footew"><code>&#x3c;footew></code></a
+        >. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission d-de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        aucune, òωó wa bawise d'ouvewtuwe et wa bawise d-de fewmetuwe sont
+        obwigatoiwes. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte un
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux"
-          >contenu de flux</a
+        tout éwément q-qui accepte un
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux"
+          >contenu d-de fwux</a
         >
-        mais pas d'éléments <code>&#x3C;address></code>.
+        m-mais pas d'éwéments <code>&#x3c;addwess></code>. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe a-awia impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Aucun rôle correspondant</a
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >aucun w-wôwe cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a
-        >. Avant Gecko 2.0 (Firefox 4), Gecko implémentait cet élément en
-        utilisant l'interface
-        <a href="/fr/docs/Web/API/HTMLSpanElement"
-          ><code>HTMLSpanElement</code></a
-        >.
+        <a h-hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a
+        >. a-avant gecko 2.0 (fiwefox 4), :3 g-gecko impwémentait cet éwément en
+        utiwisant w'intewface
+        <a h-hwef="/fw/docs/web/api/htmwspanewement"
+          ><code>htmwspanewement</code></a
+        >. ʘwʘ
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
+cet éwément ny'a pas d'autwes attwibuts que wes [attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes), 🥺 communs à tous wes éwéments. >_<
 
-## Notes d'utilisation
+## nyotes d-d'utiwisation
 
-- Pour représenter une adresse arbitraire, qui n'est pas relative à l'information de contact, on utilisera l'élément [`<p>`](/fr/docs/Web/HTML/Element/p) plutôt que l'élément `<address>`.
-- Cet élément ne doit pas contenir plus d'informations que l'information de contact, par exemple une date de publication (qui appartiendrait à l'élément [`<time>`](/fr/docs/Web/HTML/Element/time)).
-- Typiquement un élément `<address>` peut être placé dans l'élément [`<footer>`](/fr/docs/Web/HTML/Element/footer) de la section courante, s'il y en a une.
+- p-pouw wepwésentew u-une adwesse awbitwaiwe, ʘwʘ qui n-ny'est pas wewative à w'infowmation d-de contact, (˘ω˘) o-on utiwisewa w'éwément [`<p>`](/fw/docs/web/htmw/ewement/p) pwutôt que w'éwément `<addwess>`. (✿oωo)
+- cet éwément nye doit pas conteniw pwus d'infowmations que w-w'infowmation de contact, (///ˬ///✿) paw e-exempwe une date de pubwication (qui a-appawtiendwait à w-w'éwément [`<time>`](/fw/docs/web/htmw/ewement/time)). rawr x3
+- typiquement un éwément `<addwess>` peut êtwe p-pwacé dans w'éwément [`<footew>`](/fw/docs/web/htmw/ewement/footew) d-de wa section couwante, -.- s-s'iw y en a une. ^^
 
-## Exemples
+## e-exempwes
 
-```html
-<address>
-  Vous pouvez contacter l'auteur à l'adresse
-  <a href="http://www.undomaine.com/contact">www.undomaine.com</a>.<br />
-  Si vous relevez quelques bogues que ce soient, merci de contacter
-  <a href="mailto:webmaster@somedomain.com">le webmaster</a>.<br />
-  Vous pouvez aussi venir nous voir :<br />
-  Mozilla Foundation<br />
-  1981 Landings Drive<br />
-  Building K<br />
-  Mountain View, CA 94043-0801<br />
-  USA
-</address>
+```htmw
+<addwess>
+  vous pouvez contactew w'auteuw à w'adwesse
+  <a hwef="http://www.undomaine.com/contact">www.undomaine.com</a>.<bw />
+  s-si v-vous wewevez quewques b-bogues que ce soient, mewci d-de contactew
+  <a h-hwef="maiwto:webmastew@somedomain.com">we webmastew</a>.<bw />
+  v-vous pouvez aussi veniw nyous voiw :<bw />
+  moziwwa foundation<bw />
+  1981 wandings dwive<bw />
+  b-buiwding k-k<bw />
+  mountain view, (⑅˘꒳˘) ca 94043-0801<bw />
+  usa
+</addwess>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", 190)}}
+{{embedwivesampwe("exempwes", nyaa~~ "100%", 190)}}
 
-Bien que le rendu par défaut du texte de l'élément `<address>` utilise le même style par défaut que les éléments [`<i>`](/fr/docs/Web/HTML/Element/i) ou [`<em>`](/fr/docs/Web/HTML/Element/em), il est plus approprié d'utiliser cet élément lorsque l'on traite d'informations de contact, étant donné qu'il apporte des informations sémantiques supplémentaires.
+b-bien que we wendu paw défaut du texte de w'éwément `<addwess>` utiwise we même s-stywe paw défaut que wes éwéments [`<i>`](/fw/docs/web/htmw/ewement/i) ou [`<em>`](/fw/docs/web/htmw/ewement/em), /(^•ω•^) iw est pwus appwopwié d'utiwisew cet éwément w-wowsque w'on twaite d'infowmations de c-contact, (U ﹏ U) étant d-donné qu'iw appowte des infowmations sémantiques suppwémentaiwes. 😳😳😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les autres éléments liés aux sections d'un document : [`<body>`](/fr/docs/Web/HTML/Element/body), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup), [`<footer>`](/fr/docs/Web/HTML/Element/footer), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<header>`](/fr/docs/Web/HTML/Element/header) ;
-- [Sections et titres d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)
+- wes autwes éwéments w-wiés aux sections d'un document : [`<body>`](/fw/docs/web/htmw/ewement/body), >w< [`<nav>`](/fw/docs/web/htmw/ewement/nav), XD [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe), [`<aside>`](/fw/docs/web/htmw/ewement/aside), o.O [`<h1>`](/fw/docs/web/htmw/ewement/heading_ewements), mya [`<h2>`](/fw/docs/web/htmw/ewement/heading_ewements), 🥺 [`<h3>`](/fw/docs/web/htmw/ewement/heading_ewements), [`<h4>`](/fw/docs/web/htmw/ewement/heading_ewements), ^^;; [`<h5>`](/fw/docs/web/htmw/ewement/heading_ewements), :3 [`<h6>`](/fw/docs/web/htmw/ewement/heading_ewements), (U ﹏ U) [`<hgwoup>`](/fw/docs/web/htmw/ewement/hgwoup), OwO [`<footew>`](/fw/docs/web/htmw/ewement/footew), 😳😳😳 [`<section>`](/fw/docs/web/htmw/ewement/section), (ˆ ﻌ ˆ)♡ [`<headew>`](/fw/docs/web/htmw/ewement/headew) ;
+- [sections e-et titwes d'un document htmw5](/fw/docs/web/htmw/ewement/heading_ewements)

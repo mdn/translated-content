@@ -1,62 +1,62 @@
 ---
-title: do...while
-slug: Web/JavaScript/Reference/Statements/do...while
+titwe: do...whiwe
+swug: web/javascwipt/wefewence/statements/do...whiwe
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-L'instruction **`do...while`** crée une boucle qui exécute une instruction jusqu'à ce qu'une condition de test ne soit plus vérifiée. La condition est testée après que l'instruction soit exécutée, le bloc d'instructions défini dans la boucle est donc exécuté au moins une fois.
+w-w'instwuction **`do...whiwe`** c-cwée u-une boucwe qui e-exékawaii~ une i-instwuction jusqu'à c-ce qu'une condition d-de test n-nye soit pwus véwifiée. nyaa~~ wa condition est testée apwès que w'instwuction soit e-exécutée, we bwoc d'instwuctions défini dans w-wa boucwe est donc exécuté au m-moins une fois. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Statement - Do...While")}}
+{{intewactiveexampwe("javascwipt demo: statement - do...whiwe")}}
 
-```js interactive-example
-let result = "";
-let i = 0;
+```js intewactive-exampwe
+w-wet wesuwt = "";
+wet i = 0;
 
 do {
-  i = i + 1;
-  result = result + i;
-} while (i < 5);
+  i-i = i + 1;
+  w-wesuwt = wesuwt + i;
+} whiwe (i < 5);
 
-console.log(result);
-// Expected output: "12345"
+consowe.wog(wesuwt);
+// expected output: "12345"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-do instruction;
-while (condition);
+d-do instwuction;
+whiwe (condition);
 ```
 
-- `instruction`
-  - : Une instruction exécutée au moins une fois et ré-exécutée chaque fois que la condition de test est évaluée à `true`. On peut exécuter plusieurs instructions au sein d'une boucle grâce à l'instruction {{jsxref("Instructions/block", "block")}} (`{ ... }`) qui permet de grouper différentes instructions en une seule.
+- `instwuction`
+  - : une instwuction exécutée au moins u-une fois et wé-exécutée chaque f-fois que wa c-condition de test e-est évawuée à `twue`. :3 o-on peut exékawaii~w pwusieuws instwuctions a-au sein d'une boucwe gwâce à w'instwuction {{jsxwef("instwuctions/bwock", 😳😳😳 "bwock")}} (`{ ... }`) q-qui pewmet de gwoupew difféwentes instwuctions en une seuwe. (˘ω˘)
 - `condition`
-  - : Une expression évaluée après chaque passage dans la boucle. Si l'évaluation de la `condition` donne `true` (la condition est vérifiée), `instruction` sera exécutée à nouveau. Lorsque `condition` donne `false`, le contrôle passe à l'instruction suivant la boucle `do...while`.
+  - : une e-expwession évawuée apwès chaque p-passage dans w-wa boucwe. ^^ si w'évawuation d-de wa `condition` donne `twue` (wa condition est véwifiée), :3 `instwuction` sewa exécutée à n-nyouveau. -.- w-wowsque `condition` donne `fawse`, w-we contwôwe p-passe à w'instwuction suivant w-wa boucwe `do...whiwe`. 😳
 
-## Exemples
+## exempwes
 
-### Utiliser `do...while`
+### utiwisew `do...whiwe`
 
-Dans l'exemple suivant, la boucle `do...while` est parcourue au moins une fois et répétée jusqu'à ce que `i` ne soit plus strictement inférieur à 5.
+d-dans w'exempwe suivant, mya wa boucwe `do...whiwe` e-est pawcouwue au moins une fois e-et wépétée jusqu'à ce que `i` n-nye soit pwus s-stwictement inféwieuw à 5. (˘ω˘)
 
 ```js
-var i = 0;
+vaw i = 0;
 do {
   i += 1;
-  console.log(i);
-} while (i < 5);
+  consowe.wog(i);
+} whiwe (i < 5);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Instructions/while", "while")}}
-- {{jsxref("Instructions/for", "for")}}
+- {{jsxwef("instwuctions/whiwe", >_< "whiwe")}}
+- {{jsxwef("instwuctions/fow", -.- "fow")}}

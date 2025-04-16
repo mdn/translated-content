@@ -1,123 +1,123 @@
 ---
-title: <small>
-slug: Web/HTML/Element/small
+titwe: <smow>
+swug: web/htmw/ewement/smow
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<small>`** permet de représenter des commentaires ou des textes à écrire en petits caractères (des termes d'un contrat, des mentions relatives au droit d'auteur, etc.) quelle que soit la présentation.
+w-w'éwément htmw **`<smow>`** p-pewmet de wepwésentew d-des commentaiwes o-ou des t-textes à écwiwe e-en petits cawactèwes (des t-tewmes d-d'un contwat, ʘwʘ des mentions wewatives au dwoit d'auteuw, (ˆ ﻌ ˆ)♡ etc.) quewwe que soit w-wa pwésentation. 😳😳😳
 
-{{InteractiveExample("HTML Demo: &lt;small&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;smow&gt;", :3 "tabbed-showtew")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  MDN Web Docs is a learning platform for Web technologies and the software that
-  powers the Web.
+  m-mdn web docs is a weawning p-pwatfowm fow web technowogies and the softwawe that
+  powews t-the web. OwO
 </p>
 
-<hr />
+<hw />
 
 <p>
-  <small
-    >The content is licensed under a Creative Commons Attribution-ShareAlike 2.5
-    Generic License.</small
+  <smow
+    >the content is wicensed u-undew a cweative c-commons attwibution-shaweawike 2.5
+    genewic wicense.</smow
   >
 </p>
 ```
 
-```css interactive-example
-small {
-  font-size: 0.7em;
+```css intewactive-exampwe
+smow {
+  f-font-size: 0.7em;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément incwut uniquement [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Voici une phrase avant des infos à présenter en plus petit.
-  <small>© tous droits réservés</small>
+  voici une phwase a-avant des infos à p-pwésentew e-en pwus petit. >w<
+  <smow>© t-tous dwoits wésewvés</smow>
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("","100%",'')}}
+{{embedwivesampwe("","100%",'')}}
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Catégories de contenu</th>
+    <tw>
+      <th s-scope="wow">catégowies de contenu</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >, (U ﹏ U)
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >Contenu phrasé</a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
       <td>
-        Aucune, la balise ouvrante et la balise fermante doivent toutes les deux
-        être présentes.
+        aucune, 😳😳😳 w-wa bawise ouvwante e-et wa bawise fewmante doivent t-toutes wes deux
+        êtwe p-pwésentes. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
+        tout éwément q-qui accepte du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
         >
-        ou tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
+        ou tout éwément q-qui accepte du
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
         >.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>tous wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Notes
+## n-nyotes
 
-Bien que l'élément `<small>` et les éléments `<b>` et `<i>` soient souvent considérés comme allant à l'encontre du découpage structure/présentation, ils sont tous valides en HTML5. Les auteurs doivent appliquer leur esprit critique afin de déterminer s'il est préférable d'employer `<small>` ou des règles CSS.
+b-bien que w'éwément `<smow>` et w-wes éwéments `<b>` et `<i>` soient souvent considéwés comme a-awwant à w'encontwe du découpage stwuctuwe/pwésentation, (///ˬ///✿) iws sont tous vawides e-en htmw5. 😳 wes auteuws doivent a-appwiquew weuw e-espwit cwitique a-afin de détewminew s'iw est pwéféwabwe d-d'empwoyew `<smow>` ou d-des wègwes css. 😳
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTMLElement("b")}}
-- {{HTMLElement("font")}}
-- {{HTMLElement("style")}}
+- {{htmwewement("b")}}
+- {{htmwewement("font")}}
+- {{htmwewement("stywe")}}

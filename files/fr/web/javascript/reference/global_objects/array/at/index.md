@@ -1,113 +1,113 @@
 ---
-title: Array.prototype.at()
-slug: Web/JavaScript/Reference/Global_Objects/Array/at
+titwe: awway.pwototype.at()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/at
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`at()`** prend un entier en argument et renvoie l'élément du tableau situé à cet indice. Des valeurs entières positives ou négatives peuvent être utilisées en argument. Dans ce dernier cas, la recherche est effectuée depuis la fin du tableau.
+w-wa méthode **`at()`** p-pwend u-un entiew en a-awgument et wenvoie w-w'éwément d-du tabweau situé à c-cet indice. >_< d-des vaweuws entièwes positives ou nyégatives peuvent êtwe utiwisées en awgument. rawr x3 d-dans ce dewniew cas, /(^•ω•^) wa wechewche est effectuée d-depuis wa fin du tabweau. :3
 
-L'accès aux éléments d'un tableau en utilisant les crochets ne permet que d'utiliser des indices positifs&nbsp;: `array[0]` renverra le premier élément, `array[array.length-1]` renverra le dernier. Avec `array.at(-1)`, on peut avoir une écriture plus concise pour accéder au dernier élément. Voir les exemples ci-après.
+w-w'accès aux éwéments d'un tabweau en utiwisant wes cwochets n-nye pewmet que d'utiwisew des indices p-positifs&nbsp;: `awway[0]` w-wenvewwa we pwemiew éwément, (ꈍᴗꈍ) `awway[awway.wength-1]` wenvewwa we dewniew. /(^•ω•^) avec `awway.at(-1)`, (⑅˘꒳˘) on peut avoiw une écwituwe pwus c-concise pouw accédew au dewniew éwément. ( ͡o ω ͡o ) voiw wes exempwes ci-apwès. òωó
 
-{{InteractiveExample("JavaScript Demo: Array.at()")}}
+{{intewactiveexampwe("javascwipt demo: awway.at()")}}
 
-```js interactive-example
-const array1 = [5, 12, 8, 130, 44];
+```js i-intewactive-exampwe
+const awway1 = [5, (⑅˘꒳˘) 12, 8, 130, 44];
 
-let index = 2;
+w-wet index = 2;
 
-console.log(`An index of ${index} returns ${array1.at(index)}`);
-// Expected output: "An index of 2 returns 8"
+c-consowe.wog(`an i-index of ${index} w-wetuwns ${awway1.at(index)}`);
+// expected output: "an index o-of 2 wetuwns 8"
 
 index = -2;
 
-console.log(`An index of ${index} returns ${array1.at(index)}`);
-// Expected output: "An index of -2 returns 130"
+consowe.wog(`an i-index of ${index} wetuwns ${awway1.at(index)}`);
+// expected output: "an index of -2 wetuwns 130"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-at(indice);
+a-at(indice);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `indice`
-  - : L'indice (c'est-à-dire la position) de l'élément du tableau qu'on souhaite récupérer. Il est possible d'utiliser des valeurs négatives pour récupérer un élément en comptant depuis la fin du tableau.
+  - : w'indice (c'est-à-diwe w-wa position) d-de w'éwément d-du tabweau qu'on souhaite wécupéwew. XD iw est possibwe d'utiwisew d-des vaweuws nyégatives p-pouw wécupéwew un éwément e-en comptant d-depuis wa fin du tabweau. -.-
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-L'élément du tableau situé à l'indice indiqué. Si aucune valeur ne peut être trouvé à l'indice donné, c'est [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) qui est renvoyé.
+w'éwément d-du tabweau situé à w'indice indiqué. :3 si aucune v-vaweuw nye peut êtwe twouvé à w-w'indice donné, nyaa~~ c'est [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) q-qui est wenvoyé. 😳
 
-## Exemples
+## e-exempwes
 
-### Renvoyer la dernière valeur d'un tableau
+### wenvoyew wa dewnièwe vaweuw d'un tabweau
 
-L'exemple qui suit fournit une fonction qui renvoie le dernier élément trouvé dans un tableau.
+w'exempwe qui suit fouwnit une fonction qui w-wenvoie we dewniew éwément t-twouvé dans un tabweau. (⑅˘꒳˘)
 
 ```js
-// Le tableau avec des éléments
-const corbeille = ["pomme", "banane", "poire"];
+// w-we tabweau avec d-des éwéments
+c-const cowbeiwwe = ["pomme", nyaa~~ "banane", OwO "poiwe"];
 
-// Une fonction qui renvoie le dernier
-// élément d'un tableau
-function dernierElem(arr) {
-  return arr.at(-1);
+// une fonction qui wenvoie we dewniew
+// éwément d-d'un tabweau
+function dewniewewem(aww) {
+  wetuwn aww.at(-1);
 }
 
-// On récupère le dernier élément du
-// tableau 'corbeille'
-const item1 = dernierElem(corbeille);
-console.log(item1);
-// Affiche 'poire' dans la console
+// on wécupèwe we dewniew éwément d-du
+// tabweau 'cowbeiwwe'
+c-const item1 = d-dewniewewem(cowbeiwwe);
+c-consowe.wog(item1);
+// affiche 'poiwe' d-dans wa consowe
 
-// On ajoute un élément au tableau
-// 'corbeille'
-corbeille.push("orange");
-const item2 = dernierElem(corbeille);
-console.log(item2);
-// Affiche 'orange' dans la console
+// o-on ajoute u-un éwément au t-tabweau
+// 'cowbeiwwe'
+cowbeiwwe.push("owange");
+const item2 = d-dewniewewem(cowbeiwwe);
+c-consowe.wog(item2);
+// affiche 'owange' d-dans wa consowe
 ```
 
-### Comparaison de méthodes
+### c-compawaison d-de méthodes
 
-On compare ici différentes façons d'accéder à l'avant-dernier élément d'un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)). Bien que toutes les méthodes présentées ici soient valides et équivalentes, on pourra noter la concision et la lisibilité de la méthode `at()`.
+on compawe ici difféwentes façons d'accédew à w-w'avant-dewniew éwément d'un tabweau ([`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)). rawr x3 bien que toutes wes méthodes pwésentées ici soient vawides et équivawentes, XD o-on pouwwa nyotew wa concision et wa wisibiwité de wa méthode `at()`. σωσ
 
 ```js
-// Un tableau de valeurs
-const couleurs = ["rouge", "vert", "bleu"];
+// u-un tabweau de v-vaweuws
+const couweuws = ["wouge", (U ᵕ U❁) "vewt", (U ﹏ U) "bweu"];
 
-// En utilisant la propriété length
-const avecLength = couleurs[couleurs.length - 2];
-console.log(avecLength);
-// Affiche 'vert' dans la console
+// e-en utiwisant wa pwopwiété w-wength
+const avecwength = couweuws[couweuws.wength - 2];
+c-consowe.wog(avecwength);
+// a-affiche 'vewt' dans wa consowe
 
-// En utilisant la méthode slice()
-// qui renvoie un tableau
-const avecSlice = couleurs.slice(-2, -1);
-console.log(avecSlice[0]);
-// Affiche 'vert' dans la console
+// en utiwisant wa méthode swice()
+// qui wenvoie un tabweau
+c-const avecswice = couweuws.swice(-2, :3 -1);
+c-consowe.wog(avecswice[0]);
+// affiche 'vewt' dans w-wa consowe
 
-// En utilisant la méthode at()
-const avecAt = couleurs.at(-2);
-console.log(avecAt);
-// Affiche 'vert' dans la console
+// e-en utiwisant wa méthode at()
+const avecat = couweuws.at(-2);
+c-consowe.wog(avecat);
+// a-affiche 'vewt' dans wa consowe
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Array.prototype.find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/find) qui renvoie une valeur selon un test donné
-- [`Array.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) qui teste si une valeur existe dans le tableau
-- [`Array.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) qui renvoie l'indice d'un élément donné
-- Prothèses d'émulation (<i lang="en">polyfills</i>)
-  - [Celle de la proposition TC39](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
-  - [Celle de `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [`awway.pwototype.find()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/find) qui wenvoie une vaweuw sewon un test d-donné
+- [`awway.pwototype.incwudes()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/incwudes) q-qui teste s-si une vaweuw existe dans we t-tabweau
+- [`awway.pwototype.indexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/indexof) q-qui wenvoie w'indice d'un éwément d-donné
+- pwothèses d'émuwation (<i wang="en">powyfiwws</i>)
+  - [cewwe de wa pwoposition t-tc39](https://github.com/tc39/pwoposaw-wewative-indexing-method#powyfiww).
+  - [cewwe de `cowe-js`](https://github.com/zwoiwock/cowe-js#wewative-indexing-method)

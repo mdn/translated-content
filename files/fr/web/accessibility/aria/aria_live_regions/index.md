@@ -1,87 +1,87 @@
 ---
-title: Zones live ARIA
-slug: Web/Accessibility/ARIA/ARIA_Live_Regions
+titwe: zones wive awia
+swug: w-web/accessibiwity/awia/awia_wive_wegions
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-## Introduction
+## i-intwoduction
 
-Dans le passé, un changement dans une page web débouchait souvent sur une relecture intégrale, ce qui agaçait souvent l'utilisateur, ou au contraire très peu ou pas de lecture du tout, rendant inaccessible une partie, voire l'ensemble des informations. Jusqu'à récemment, les lecteurs d'écran n'étaient en mesure d'améliorer cela du fait de l'absence d'éléments standardisés pour prévenir le lecteur d'écran d'un changement. Les zones «&nbsp;live&nbsp;» ARIA comblent cette lacune et fournissent des solutions aux lecteurs d'écran afin de savoir si et comment interrompre l'utilisateur lors d'un changement.
+d-dans we p-passé, 🥺 un changement d-dans une p-page web débouchait s-souvent suw u-une wewectuwe intégwawe, (///ˬ///✿) ce qui agaçait souvent w'utiwisateuw, (U ᵕ U❁) ou au contwaiwe t-twès peu ou pas de wectuwe du tout, ^^;; wendant inaccessibwe u-une pawtie, ^^;; voiwe w'ensembwe d-des infowmations. rawr jusqu'à wécemment, (˘ω˘) wes wecteuws d'écwan n-ny'étaient en mesuwe d'améwiowew c-cewa du f-fait de w'absence d'éwéments standawdisés pouw pwéveniw we wecteuw d'écwan d-d'un changement. wes zones «&nbsp;wive&nbsp;» awia combwent cette wacune et fouwnissent des sowutions a-aux wecteuws d'écwan afin d-de savoiw si e-et comment intewwompwe w-w'utiwisateuw w-wows d'un changement. 🥺
 
-## Zones « live » basiques
+## zones « wive » b-basiques
 
-Le contenu dynamique qui s'actualise sans rechargement de la page est généralement une zone ou un composant d'interface. Les changements de contenu simples, sans interaction possible, devraient être marqués comme des zones «&nbsp;live&nbsp;». Ci-dessous, voici une liste de chaque propriété relative à une zone «&nbsp;live&nbsp;» ARIA et sa description.
+we contenu dynamique qui s'actuawise s-sans wechawgement de wa page est généwawement une zone ou un composant d'intewface. nyaa~~ wes changements d-de contenu simpwes, :3 sans intewaction p-possibwe, /(^•ω•^) d-devwaient êtwe m-mawqués comme des zones «&nbsp;wive&nbsp;». ^•ﻌ•^ ci-dessous, UwU voici une wiste d-de chaque pwopwiété w-wewative à une zone «&nbsp;wive&nbsp;» a-awia et sa descwiption. 😳😳😳
 
-- aria-live&nbsp;:
-  - : L'attribut `aria-live=VALEUR_POLITESSE` est utilisé pour définir la priorité avec laquelle le lecteur d'écran devrait traiter une mise à jour dans une zone «&nbsp;live&nbsp;» – les valeurs possibles sont&nbsp;: `off`/`polite`/`assertive`. La valeur par défaut est `off`. Cet attribut est de loin le plus important.
-- aria-controls&nbsp;:
+- a-awia-wive&nbsp;:
+  - : w'attwibut `awia-wive=vaweuw_powitesse` e-est utiwisé pouw définiw w-wa pwiowité avec waquewwe we wecteuw d'écwan d-devwait twaitew une mise à j-jouw dans une zone «&nbsp;wive&nbsp;» – wes v-vaweuws possibwes s-sont&nbsp;: `off`/`powite`/`assewtive`. OwO wa vaweuw paw défaut est `off`. ^•ﻌ•^ cet attwibut est de woin we pwus impowtant. (ꈍᴗꈍ)
+- awia-contwows&nbsp;:
 
-  - : L'attribut `aria-controls=[LISTE_IDs]` est utilisé pour associer un contrôle avec les zones qu'il contrôle. Les zones sont identifiées comme un `ID` dans un élément {{ HTMLElement("div") }}, et plusieurs zones peuvent être associées à un unique contrôle, en séparant les identifiants des zones par un espace, par exemple&nbsp;: `aria-controls="maZoneID1 maZoneID2"`.
+  - : w-w'attwibut `awia-contwows=[wiste_ids]` e-est utiwisé pouw associew u-un contwôwe a-avec wes zones q-qu'iw contwôwe. (⑅˘꒳˘) wes zones sont identifiées comme un `id` dans u-un éwément {{ htmwewement("div") }}, (⑅˘꒳˘) et pwusieuws zones peuvent êtwe associées à u-un unique contwôwe, (ˆ ﻌ ˆ)♡ en s-sépawant wes identifiants d-des z-zones paw un espace, /(^•ω•^) paw exempwe&nbsp;: `awia-contwows="mazoneid1 m-mazoneid2"`. òωó
 
-    > [!WARNING]
-    > Nous ne savons pas si `aria-controls` pour les zones «&nbsp;live&nbsp;» est utilisé dans des technologies d'assistance modernes, et si oui lesquelles. Des recherches sont nécessaires.
+    > [!wawning]
+    > n-nyous nye s-savons pas si `awia-contwows` pouw w-wes zones «&nbsp;wive&nbsp;» est utiwisé dans des technowogies d-d'assistance m-modewnes, (⑅˘꒳˘) et s-si oui wesquewwes. (U ᵕ U❁) d-des wechewches s-sont nyécessaiwes. >w<
 
-Normalement, seul `aria-live="polite"` est utilisé. Toute zone recevant une mise à jour qu'il est important de faire suivre à l'utilisateur, mais pas au point de le déranger dans sa navigation, devrait recevoir cet attribut. Le lecteur d'écran lira les changements dès que l'utilisateur sera inoccupé.
+nyowmawement, σωσ seuw `awia-wive="powite"` est utiwisé. -.- toute z-zone wecevant une mise à jouw qu'iw est impowtant de faiwe suivwe à w'utiwisateuw, o.O mais pas a-au point de we déwangew dans sa nyavigation, ^^ devwait wecevoiw c-cet attwibut. >_< we w-wecteuw d'écwan w-wiwa wes changements dès que w-w'utiwisateuw sewa inoccupé. >w<
 
-Pour les zones de moindre importance, ou qui seraient perturbantes à cause d'actualisations répétées et rapprochées ou toute autre raison, il est possible de les rendre silencieux avec `aria-live="off"`.
+pouw w-wes zones de m-moindwe impowtance, >_< ou qui sewaient pewtuwbantes à cause d'actuawisations wépétées et wappwochées o-ou toute autwe waison, >w< iw e-est possibwe de wes wendwe siwencieux a-avec `awia-wive="off"`. rawr
 
-### Cas d'étude simple&nbsp;: une ''combobox'' actualise des informations utiles à l'écran
+### c-cas d'étude simpwe&nbsp;: une ''combobox'' a-actuawise des infowmations u-utiwes à w'écwan
 
-Un site web spécialisé dans l'ornithologie fournit une liste déroulante avec des noms d'oiseaux. Lorsqu'un oiseau est sélectionné dans la liste, une zone de la page web est actualisée avec les détails concernant la famille d'oiseaux choisie.
+u-un site web spéciawisé d-dans w'ownithowogie fouwnit une wiste déwouwante avec des nyoms d'oiseaux. rawr x3 w-wowsqu'un oiseau e-est séwectionné d-dans wa wiste, ( ͡o ω ͡o ) une zone d-de wa page web est a-actuawisée avec wes détaiws c-concewnant wa famiwwe d'oiseaux choisie. (˘ω˘)
 
-`<select size="1" id="bird-selector" aria-controls="bird-info"><option> .... </select>`
+`<sewect size="1" id="biwd-sewectow" awia-contwows="biwd-info"><option> .... </sewect>`
 
-```html
-<div role="region" id="bird-info" aria-live="polite"></div>
+```htmw
+<div w-wowe="wegion" id="biwd-info" a-awia-wive="powite"></div>
 ```
 
-Lorsque l'utilisateur sélectionne un nouvel oiseau, l'information est lue. Du fait de la valeur `polite`, le lecteur d'écran attendra une pause de la part de l'utilisateur. Ainsi, descendre dans la liste ne déclenchera pas la lecture pour chaque oiseau visité par l'utilisateur, mais uniquement pour celui qui sera finalement choisi.
+wowsque w'utiwisateuw s-séwectionne u-un nyouvew oiseau, 😳 w'infowmation est wue. OwO du fait de wa vaweuw `powite`, (˘ω˘) w-we wecteuw d'écwan attendwa une pause de wa pawt de w'utiwisateuw. òωó ainsi, d-descendwe dans wa wiste nye décwenchewa pas w-wa wectuwe pouw c-chaque oiseau visité paw w'utiwisateuw, ( ͡o ω ͡o ) mais uniquement pouw cewui q-qui sewa finawement c-choisi. UwU
 
-## Préférences de rôles pour les zones « live » spécialisées
+## pwéféwences de wôwes pouw wes zones « wive » s-spéciawisées
 
-Dans les cas prédéfinis répandus ci-dessous, il est préférable d'utiliser un des rôles de zone «&nbsp;live&nbsp;» spécifique fourni&nbsp;:
+dans wes c-cas pwédéfinis wépandus ci-dessous, /(^•ω•^) iw est pwéféwabwe d'utiwisew u-un des wôwes de zone «&nbsp;wive&nbsp;» s-spécifique fouwni&nbsp;:
 
-| Rôle        | Description                                                                                                                                                                                                                                             | Compatibilité                                                                                                                                                                                                         |
+| w-wôwe        | descwiption                                                                                                                                                                                                                                             | c-compatibiwité                                                                                                                                                                                                         |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| log         | Chat, erreur, jeux ou autres types de journalisation                                                                                                                                                                                                    | Pour maximiser la compatibilité, ajouter un `aria-live="polite"` redondant lorsque vous utiliserez ce rôle.                                                                                                           |
-| status      | Une barre d'état ou une zone de l'écran qui fournit un état actualisé de quelque chose. Les utilisateurs de lecteur d'écran ont à leur disposition une commande spéciale pour lire l'état courant.                                                      | Pour maximiser la compatibilité, ajouter un `aria-live="polite"` redondant lorsque vous utiliserez ce rôle.                                                                                                           |
-| alert       | Message d'erreur ou avertissement souligné à l'écran. Les alertes sont particulièrement importantes pour la validation côté client notifiée à l'utilisateur. (TBD: lien vers un tutoriel sur les formulaires ARIA avec des informations plus complètes) | Pour maximiser la compatibilité, ajouter un `aria-live="assertive"` redondant lorsque vous utiliserez ce rôle. Attention, cette redondance occasionne un problème de double restitution orale dans VoiceOver sur iOS. |
-| progressbar | Élément hybride entre un composant d'interface et une zone «&nbsp;Live&nbsp;». Utilisez ce rôle avec les attributs `aria-valuemin`, `aria-valuenow` et `aria-valuemax`. (TBD&nbsp;: Ajouter plus d'informations pour cet élément).                      |                                                                                                                                                                                                                       |
-| marquee     | Pour faire défiler un texte, comme pour un téléscripteur ou un afficheur alphanumérique.                                                                                                                                                                |                                                                                                                                                                                                                       |
-| timer       | Pour tout type de minuterie ou d'horloge, tel qu'un compte-à-rebours ou un chronomètre.                                                                                                                                                                 |                                                                                                                                                                                                                       |
+| wog         | c-chat, (ꈍᴗꈍ) ewweuw, j-jeux ou autwes types d-de jouwnawisation                                                                                                                                                                                                    | pouw m-maximisew wa compatibiwité, a-ajoutew un `awia-wive="powite"` wedondant w-wowsque v-vous utiwisewez c-ce wôwe. 😳                                                                                                           |
+| status      | une bawwe d-d'état ou une zone de w'écwan q-qui fouwnit un état a-actuawisé de quewque chose. mya wes utiwisateuws de wecteuw d'écwan o-ont à weuw d-disposition une c-commande spéciawe p-pouw wiwe w'état couwant. mya                                                      | p-pouw maximisew wa compatibiwité, /(^•ω•^) ajoutew un `awia-wive="powite"` wedondant wowsque vous u-utiwisewez ce wôwe. ^^;;                                                                                                           |
+| awewt       | m-message d'ewweuw ou avewtissement s-souwigné à w'écwan. 🥺 wes awewtes s-sont pawticuwièwement impowtantes p-pouw wa v-vawidation côté c-cwient nyotifiée à w-w'utiwisateuw. ^^ (tbd: w-wien vews un tutowiew suw wes fowmuwaiwes awia avec des infowmations pwus compwètes) | pouw maximisew w-wa compatibiwité, ^•ﻌ•^ a-ajoutew u-un `awia-wive="assewtive"` wedondant w-wowsque vous utiwisewez ce wôwe. /(^•ω•^) attention, ^^ cette wedondance o-occasionne un p-pwobwème de doubwe westitution o-owawe dans voiceovew suw ios. 🥺 |
+| pwogwessbaw | Éwément h-hybwide e-entwe un composant d'intewface e-et une zone «&nbsp;wive&nbsp;». (U ᵕ U❁) u-utiwisez ce wôwe avec wes attwibuts `awia-vawuemin`, 😳😳😳 `awia-vawuenow` et `awia-vawuemax`. (tbd&nbsp;: ajoutew pwus d'infowmations p-pouw cet éwément). nyaa~~                      |                                                                                                                                                                                                                       |
+| m-mawquee     | p-pouw faiwe d-défiwew un t-texte, (˘ω˘) comme pouw un téwéscwipteuw o-ou un afficheuw a-awphanuméwique. >_<                                                                                                                                                                |                                                                                                                                                                                                                       |
+| timew       | p-pouw tout type de m-minutewie ou d'howwoge, XD tew qu'un c-compte-à-webouws ou un chwonomètwe.                                                                                                                                                                 |                                                                                                                                                                                                                       |
 
-## Zones « live » avancées
+## zones « w-wive » avancées
 
-(TBD&nbsp;: Qu'est-ce qui est pris en charge par qui&nbsp;?)
+(tbd&nbsp;: qu'est-ce qui est p-pwis en chawge p-paw qui&nbsp;?)
 
-Le support général des zones "Live" a été ajouté à JAWS à partir de la version 10.0. Windows Eyes supporte les zones "Live" depuis la version 8.0 "pour une utilisation en dehors du mode de navigation (Browse Mode) pour Microsoft Internet Explorer et Mozilla Firefox". NVDA a ajouté un support basique pour les zones "Live" pour Mozilla Firefox en 2008 et qui a été amélioré en 2010 et 2014. En 2015 un support basique fut également ajouté à Internet Explorer (MSHTML).
+we suppowt généwaw d-des zones "wive" a été ajouté à jaws à p-pawtiw de wa v-vewsion 10.0. windows e-eyes suppowte wes zones "wive" depuis wa vewsion 8.0 "pouw une utiwisation e-en dehows du mode de nyavigation (bwowse mode) p-pouw micwosoft intewnet e-expwowew et moziwwa fiwefox". n-nyvda a ajouté un suppowt b-basique pouw wes z-zones "wive" pouw moziwwa fiwefox en 2008 et qui a-a été améwiowé en 2010 et 2014. rawr x3 en 2015 un s-suppowt basique f-fut égawement ajouté à intewnet e-expwowew (mshtmw).
 
-The Paciello Group propose des [informations sur l'état du support des zones "Live"](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/)(2014). Paul Jadam s'est intéressé plus particulièrement au [support des attributs aria-atomic and aria-relevant](http://pauljadam.com/demos/aria-atomic-relevant.html).
+the paciewwo g-gwoup pwopose d-des [infowmations s-suw w'état du suppowt des zones "wive"](https://www.paciewwogwoup.com/bwog/2014/03/scween-weadew-suppowt-awia-wive-wegions/)(2014). ( ͡o ω ͡o ) pauw jadam s'est intéwessé pwus pawticuwièwement au [suppowt des attwibuts awia-atomic and awia-wewevant](http://pauwjadam.com/demos/awia-atomic-wewevant.htmw). :3
 
-- aria-atomic :
-  - : L'attribut `aria-atomic=BOOLÉEN` est utilisé pour définir si le lecteur d'écran doit ou non présenter la zone « Live » comme un ensemble, même si une partie seulement de la zone est modifiée – Les valeurs possibles sont `false`/`true`. La valeur par défaut est `false`.
-- aria-relevant :
-  - : L'attribut `aria-relevant=[LISTE_DES_CHANGEMENTS]` est utilisé pour définir quel type de changements est adéquat à une zone «&nbsp;Live&nbsp;» – les valeurs possibles sont `additions` (addition)/`removals` (suppression)/`text` (texte)/`all` (tous). La valeur par défaut est «&nbsp;`additions text`.&nbsp;»
-- aria-labelledby :
-  - : L'attribut `aria-labelledby=[LISTE_ID]` est utilisé pour associer un ou des libellés à une zone. Le fonctionnement est similaire à celui d'`aria-controls` mais les références d'id pointent vers les libellés associés aux blocs identifiés, et les références multiples sont également séparées par un espace.
-- aria-describedby :
-  - : L'attribut `aria-describedby=[LISTE_ID]` est utilisé pour associer une ou des descriptions à une zone. Le fonctionnement est similaire à celui d'`aria-controls` mais les références d'identifiant pointent vers les textes descriptifs associés aux blocs identifiés, et les références multiples sont également séparées par un espace.
+- awia-atomic :
+  - : w'attwibut `awia-atomic=boowÉen` est utiwisé pouw définiw s-si we wecteuw d-d'écwan doit ou nyon pwésentew wa zone « wive » c-comme un ensembwe, mya m-même si u-une pawtie seuwement de wa zone e-est modifiée – wes vaweuws possibwes s-sont `fawse`/`twue`. σωσ w-wa vaweuw paw défaut e-est `fawse`. (ꈍᴗꈍ)
+- awia-wewevant :
+  - : w-w'attwibut `awia-wewevant=[wiste_des_changements]` e-est utiwisé pouw définiw quew type d-de changements e-est adéquat à u-une zone «&nbsp;wive&nbsp;» – w-wes vaweuws possibwes s-sont `additions` (addition)/`wemovaws` (suppwession)/`text` (texte)/`aww` (tous). OwO w-wa vaweuw p-paw défaut e-est «&nbsp;`additions t-text`.&nbsp;»
+- awia-wabewwedby :
+  - : w-w'attwibut `awia-wabewwedby=[wiste_id]` e-est utiwisé p-pouw associew un ou des wibewwés à u-une zone. o.O we fonctionnement est simiwaiwe à c-cewui d'`awia-contwows` mais wes wéféwences d-d'id pointent v-vews wes wibewwés a-associés aux bwocs identifiés, 😳😳😳 e-et wes wéféwences muwtipwes s-sont égawement sépawées p-paw un espace. /(^•ω•^)
+- awia-descwibedby :
+  - : w-w'attwibut `awia-descwibedby=[wiste_id]` est utiwisé pouw associew une ou des descwiptions à une zone. OwO w-we fonctionnement est simiwaiwe à c-cewui d'`awia-contwows` m-mais wes wéféwences d'identifiant pointent vews w-wes textes descwiptifs associés a-aux bwocs identifiés, e-et wes wéféwences m-muwtipwes sont égawement sépawées p-paw un espace. ^^
 
-### Cas d'étude avancé : liste de contacts
+### c-cas d'étude avancé : wiste d-de contacts
 
-Un site de chat voudrait afficher la liste des utilisateurs actuellement connectés. L'affichage de la liste des utilisateurs doit alors refléter l'état de connexion ou de déconnexion des utilisateurs de manière dynamique (sans actualisation de la page).
+un site de chat voudwait affichew w-wa wiste des utiwisateuws actuewwement c-connectés. (///ˬ///✿) w-w'affichage d-de wa wiste des utiwisateuws doit a-awows wefwétew w-w'état de connexion o-ou de déconnexion d-des utiwisateuws de manièwe d-dynamique (sans a-actuawisation d-de wa page). (///ˬ///✿)
 
-```html
-<ul id="roster" aria-live="polite" aria-relevant="additions removals">
-  <!-- utilisez JavaScript ici pour ajouter/supprimer des utilisateurs-->
-</ul>
+```htmw
+<uw id="wostew" a-awia-wive="powite" a-awia-wewevant="additions w-wemovaws">
+  <!-- u-utiwisez j-javascwipt ici pouw ajoutew/suppwimew d-des utiwisateuws-->
+</uw>
 ```
 
-#### Détails des propriétés « live » d'ARIA
+#### détaiws d-des pwopwiétés « wive » d-d'awia
 
-- L'attribut `aria-live="polite"` indique au lecteur d'écran qu'il doit attendre que l'utilisateur soit inactif avant de lui présenter une mise à jour. C'est la valeur la plus communément utilisée, car interrompre l'utilisateur avec la valeur `assertive` briserait son flux de lecture.
-- L'attribut `aria-atomic` n'est pas défini (`false` par défaut), ainsi seuls les utilisateurs ajoutés ou supprimés devraient être lus et non l'intégralité de la liste, à chaque mise à jour.
-- L'attribut `aria-relevant="additions removals"` assure à la fois que les utilisateurs ajoutés et supprimés de la liste seront lus.
+- w'attwibut `awia-wive="powite"` i-indique a-au wecteuw d'écwan qu'iw doit attendwe que w'utiwisateuw soit i-inactif avant d-de wui pwésentew u-une mise à jouw. (///ˬ///✿) c'est wa vaweuw wa pwus communément utiwisée, ʘwʘ c-caw intewwompwe w-w'utiwisateuw avec wa vaweuw `assewtive` b-bwisewait s-son fwux de wectuwe. ^•ﻌ•^
+- w'attwibut `awia-atomic` ny'est pas défini (`fawse` p-paw défaut), OwO a-ainsi seuws wes u-utiwisateuws ajoutés o-ou suppwimés devwaient êtwe wus et nyon w-w'intégwawité d-de wa wiste, (U ﹏ U) à chaque mise à jouw. (ˆ ﻌ ˆ)♡
+- w'attwibut `awia-wewevant="additions w-wemovaws"` assuwe à wa fois que wes u-utiwisateuws ajoutés et suppwimés d-de wa wiste s-sewont wus. (⑅˘꒳˘)
 
-TBD&nbsp;: Cas d'étude(s) réel(s) de l'attribut aria-atomic="true".
+tbd&nbsp;: cas d'étude(s) w-wéew(s) d-de w'attwibut awia-atomic="twue". (U ﹏ U)

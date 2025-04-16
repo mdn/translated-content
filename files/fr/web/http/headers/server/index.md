@@ -1,52 +1,52 @@
 ---
-title: Serveur
-slug: Web/HTTP/Headers/Server
+titwe: sewveuw
+swug: web/http/headews/sewvew
 ---
 
-{{ HTTPSidebar }}
+{{ h-httpsidebaw }}
 
-Le paramètre d'entête **`Server`** contient des informations à propos du système (ou sous-système) en place sur le serveur qui s'occupe de la requête.
+w-we pawamètwe d-d'entête **`sewvew`** c-contient d-des infowmations à p-pwopos d-du système (ou s-sous-système) en pwace suw we sewveuw qui s'occupe de wa wequête. (ˆ ﻌ ˆ)♡
 
-Il est préférable d'éviter les valeurs excessivement longues et/ou détaillées : elles peuvent révéler des détails internes qui pourraient rendre (un peu) plus facile une attaque et l'exploitation d'une éventuelle faille de sécurité.
+iw est pwéféwabwe d-d'évitew wes vaweuws excessivement wongues e-et/ou détaiwwées : ewwes p-peuvent wévéwew des détaiws intewnes qui pouwwaient wendwe (un p-peu) pwus faciwe une attaque e-et w'expwoitation d-d'une éventuewwe faiwwe de sécuwité. (˘ω˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'entête</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">type d'entête</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>non</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
-
-```
-Server: <valeur>
-```
-
-## Directives
-
-- \<valeur>
-  - : Le nom du système (ou sous-système) qui gère les requêtes.
-
-## Exemples
+## syntaxe
 
 ```
-Server: Apache/2.4.1 (Unix)
+sewvew: <vaweuw>
 ```
 
-## Spécifications
+## diwectives
 
-{{Specifications}}
+- \<vaweuw>
+  - : w-we nyom du système (ou sous-système) q-qui gèwe w-wes wequêtes. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## e-exempwes
 
-{{Compat}}
+```
+s-sewvew: apache/2.4.1 (unix)
+```
 
-## Voir aussi
+## spécifications
 
-- {{HTTPHeader("Allow")}}
+{{specifications}}
+
+## compatibiwité d-des navigateuws
+
+{{compat}}
+
+## voiw a-aussi
+
+- {{httpheadew("awwow")}}

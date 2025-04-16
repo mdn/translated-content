@@ -1,84 +1,84 @@
 ---
-title: Utiliser le rôle listbox
-slug: Web/Accessibility/ARIA/Roles/listbox_role
+titwe: utiwisew we wôwe wistbox
+s-swug: web/accessibiwity/awia/wowes/wistbox_wowe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Description
+### d-descwiption
 
-Cette technique présente l'utilisation du rôle [listbox](https://www.w3.org/TR/wai-aria/roles#listbox) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+c-cette technique p-pwésente w'utiwisation d-du wôwe [wistbox](https://www.w3.owg/tw/wai-awia/wowes#wistbox) e-et d-décwit wes effets p-pwoduits suw wes nyavigateuws et wes technowogies d'assistance. (˘ω˘)
 
-Le rôle `listbox` est utilisé pour identifier un élément qui crée une liste à partir de laquelle un utilisateur peut sélectionner un ou plusieurs éléments statiques et peut contenir des images, contrairement à l'élément HTML {{ HTMLElement("select") }}. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement accessible `listbox` aux produits de technologie d'assistance qui pourront alors le notifier à l'utilisateur.
+we wôwe `wistbox` e-est utiwisé pouw identifiew un éwément q-qui cwée une wiste à pawtiw de w-waquewwe un utiwisateuw peut séwectionnew un ou pwusieuws éwéments s-statiques et peut conteniw d-des images, rawr contwaiwement à w-w'éwément htmw {{ htmwewement("sewect") }}. OwO wowsque ce wôwe est ajouté à un éwément, ^•ﻌ•^ w-we nyavigateuw émettwa un événement accessibwe `wistbox` aux pwoduits de technowogie d-d'assistance qui pouwwont awows w-we nyotifiew à w-w'utiwisateuw. UwU
 
-Chaque entrée de la boîte liste devrait avoir un rôle d'[option](https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option) et devrait être une descendante de la boîte liste dans l'arbre DOM. Si une ou plusieurs entrées ne sont pas des descendantes de la boîte liste dans le DOM, référez-vous aux [Bonnes pratiques ARIA](https://www.w3.org/TR/wai-aria-practices/#listbox_div) pour obtenir plus de détails sur les propriétés additionnelles qui doivent être définies.
+c-chaque entwée d-de wa boîte wiste devwait avoiw un wôwe d'[option](https://www.w3.owg/tw/2010/wd-wai-awia-20100916/wowes#option) e-et devwait êtwe une descendante de wa boîte w-wiste dans w'awbwe dom. (˘ω˘) si une ou pwusieuws entwées nye sont pas des descendantes de wa boîte w-wiste dans we dom, (///ˬ///✿) wéféwez-vous a-aux [bonnes p-pwatiques awia](https://www.w3.owg/tw/wai-awia-pwactices/#wistbox_div) p-pouw obteniw pwus de détaiws suw wes pwopwiétés additionnewwes q-qui doivent êtwe d-définies.
 
-Lorsqu'on navigue entre les différents éléments d'une liste, le premier élément de la liste sera sélectionné par défaut en l'absence de sélection existante. Les flèches haut et bas permettent de naviguer dans la liste, et appuyer sur <kbd>Maj+Flèche haut/bas</kbd> déplacera et développera la sélection. Saisir un ou plusieurs lettres permet de naviguer dans la liste des éléments (une seule et même lettre positionnera la sélection sur chacun des éléments qui commence par elle, plusieurs lettres placeront la sélection sur le premier élément commençant par la chaîne). Si l'élément courant est associé à un menu contextuel, <kbd>Maj+F10</kbd> affichera ce menu. Si les éléments de la liste peuvent être cochés, <kbd>Espace</kbd> peut être utilisée pour basculer l'état de la [checkboxes](https://www.w3.org/TR/wai-aria-practices/#checkbox). Pour les éléments de liste sélectionnables, <kbd>Espace</kbd> bascule l'état de sélection, <kbd>Maj+Espace</kbd> peut être utilisé pour sélection des éléments contigus, <kbd>Ctrl+Flèche</kbd> déplace le curseur sans sélectionner d'élément, et <kbd>Ctrl+Espace</kbd> peut être utilisé pour sélectionner des éléments non-contigus. Il est recommandé d'utiliser une case à cocher, un lien ou tout autre méthode pour permettre la sélection de tous les éléments, et <kbd>Ctrl+A</kbd> peut être utilisé comme raccourci pour cela.
+wowsqu'on n-navigue entwe w-wes difféwents éwéments d'une w-wiste, σωσ we pwemiew éwément de w-wa wiste sewa séwectionné paw défaut en w'absence d-de séwection existante. /(^•ω•^) wes f-fwèches haut et bas pewmettent d-de nyaviguew d-dans wa wiste, 😳 et appuyew suw <kbd>maj+fwèche haut/bas</kbd> dépwacewa et dévewoppewa wa séwection. saisiw un ou pwusieuws wettwes p-pewmet de n-nyaviguew dans wa wiste des éwéments (une s-seuwe e-et même wettwe p-positionnewa wa séwection suw chacun des éwéments qui commence p-paw ewwe, 😳 pwusieuws wettwes pwacewont wa séwection suw we pwemiew éwément c-commençant paw wa chaîne). (⑅˘꒳˘) si w-w'éwément couwant e-est associé à u-un menu contextuew, 😳😳😳 <kbd>maj+f10</kbd> affichewa c-ce menu. 😳 s-si wes éwéments d-de wa wiste peuvent êtwe c-cochés, XD <kbd>espace</kbd> peut êtwe utiwisée pouw b-bascuwew w'état d-de wa [checkboxes](https://www.w3.owg/tw/wai-awia-pwactices/#checkbox). mya p-pouw wes éwéments d-de w-wiste séwectionnabwes, ^•ﻌ•^ <kbd>espace</kbd> bascuwe w'état de séwection, ʘwʘ <kbd>maj+espace</kbd> peut êtwe utiwisé p-pouw séwection des éwéments contigus, ( ͡o ω ͡o ) <kbd>ctww+fwèche</kbd> dépwace we cuwseuw sans séwectionnew d'éwément, mya e-et <kbd>ctww+espace</kbd> peut êtwe utiwisé pouw séwectionnew des éwéments n-nyon-contigus. o.O i-iw est wecommandé d-d'utiwisew une case à c-cochew, (✿oωo) un wien ou tout autwe m-méthode pouw pewmettwe w-wa séwection de tous wes éwéments, :3 et <kbd>ctww+a</kbd> peut êtwe utiwisé comme waccouwci pouw cewa.
 
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
+### e-effets possibwes suw wes a-agents utiwisateuws et wes technowogies d-d'assistance
 
-Lorsque le rôle `listbox` est ajouté à un élément, ou qu'un tel élément devient visible, l'agent utilisateur devrait suivre les étapes suivantes&nbsp;:
+w-wowsque we wôwe `wistbox` est ajouté à u-un éwément, 😳 ou q-qu'un tew éwément devient visibwe, w-w'agent utiwisateuw d-devwait suivwe wes étapes suivantes&nbsp;:
 
-- Présenter l'élément comme ayant un rôle d'alerte à l'API d'accessibilité du système d'exploitation. Alternativement, s'il est un enfant de ou s'il appartient à une boîte combinée [combobox](https://www.w3.org/TR/wai-aria/roles#combobox), présenter l'élément comme un [menu](https://www.w3.org/TR/wai-aria/roles#menu)&nbsp;;
-- Déclencher un événement liste (ou dans les cas spéciaux, un événement menu) accessible à l'aide l'API d'accessibilité du système d'exploitation si elle le prend en charge.
+- pwésentew w'éwément c-comme ayant un wôwe d-d'awewte à w-w'api d'accessibiwité du système d-d'expwoitation. (U ﹏ U) a-awtewnativement, mya s'iw est un e-enfant de ou s'iw appawtient à une boîte combinée [combobox](https://www.w3.owg/tw/wai-awia/wowes#combobox), (U ᵕ U❁) pwésentew w'éwément comme un [menu](https://www.w3.owg/tw/wai-awia/wowes#menu)&nbsp;;
+- d-décwenchew u-un événement wiste (ou dans wes cas spéciaux, :3 u-un événement m-menu) accessibwe à w'aide w'api d'accessibiwité du système d-d'expwoitation si ewwe we pwend en chawge. mya
 
-Les technologies d'assistance devraient être à l'écoute de tels événements et les notifier à l'utilisateur en conséquence&nbsp;:
+wes technowogies d'assistance d-devwaient êtwe à w'écoute de tews événements e-et wes nyotifiew à w-w'utiwisateuw en conséquence&nbsp;:
 
-- Les lecteurs d'écran devraient annoncer le label et le rôle de la boîte liste lorsqu'elle obtient le focus. Si un élément de la liste obtient le focus, il devrait être annoncé après, suivi par une indication de la position de l'élément dans la liste si le lecteur d'écran prend en charge cette fonction. Lorsque le focus se déplace dans la liste, le lecteur d'écran devrait annoncer les éléments de la liste appropriés.
-- Les loupes d'écran devraient agrandir la boîte liste.
+- wes wecteuws d'écwan d-devwaient annoncew w-we wabew et we wôwe de wa boîte wiste wowsqu'ewwe obtient w-we focus. OwO si un éwément de w-wa wiste obtient we focus, (ˆ ﻌ ˆ)♡ iw devwait êtwe annoncé apwès, ʘwʘ suivi p-paw une indication de wa position d-de w'éwément d-dans wa wiste si we wecteuw d-d'écwan pwend en chawge cette fonction. o.O w-wowsque w-we focus se dépwace d-dans wa wiste, UwU we wecteuw d-d'écwan devwait a-annoncew wes éwéments de wa wiste appwopwiés. rawr x3
+- w-wes woupes d'écwan d-devwaient a-agwandiw wa boîte wiste. 🥺
 
-> [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!note]
+> iw existe p-pwusieuws points de vue suw wa f-façon dont wes t-technowogies d'assistance devwaient twaitew cette technique. :3 w'infowmation f-fouwnie c-ci-dessus est w-w'une de ces o-opinions et ny'est pas nyowmative. (ꈍᴗꈍ)
 
-### Exemples
+### e-exempwes
 
-#### Exemple 1&nbsp;: une liste de sélection simple qui utilise l'attribut `aria-activedescendant`
+#### exempwe 1&nbsp;: une wiste de séwection simpwe qui utiwise w'attwibut `awia-activedescendant`
 
-L'extrait de code ci-dessous montre comment le rôle `listbox` est ajouté directement dans le code source HTML&nbsp;:
+w-w'extwait de code ci-dessous m-montwe comment we wôwe `wistbox` e-est ajouté diwectement dans w-we code souwce htmw&nbsp;:
 
-```html
+```htmw
 <div
-  role="listbox"
+  w-wowe="wistbox"
   tabindex="0"
-  id="listbox1"
-  onclick="return listItemClick(event);"
-  onkeydown="return listItemKeyEvent(event);"
-  onkeypress="return listItemKeyEvent(event);"
-  onfocus="this.className='focus';"
-  onblur="this.className='blur';"
-  aria-activedescendant="listbox1-1">
-  <div role="option" id="listbox1-1" class="selected">Vert</div>
-  <div role="option" id="listbox1-2">Orange</div>
-  <div role="option" id="listbox1-3">Rouge</div>
-  <div role="option" id="listbox1-4">Bleu</div>
-  <div role="option" id="listbox1-5">Violet</div>
-  <div role="option" id="listbox1-6">Pervenche</div>
+  i-id="wistbox1"
+  o-oncwick="wetuwn w-wistitemcwick(event);"
+  o-onkeydown="wetuwn wistitemkeyevent(event);"
+  onkeypwess="wetuwn wistitemkeyevent(event);"
+  onfocus="this.cwassname='focus';"
+  onbwuw="this.cwassname='bwuw';"
+  awia-activedescendant="wistbox1-1">
+  <div w-wowe="option" i-id="wistbox1-1" c-cwass="sewected">vewt</div>
+  <div wowe="option" i-id="wistbox1-2">owange</div>
+  <div wowe="option" id="wistbox1-3">wouge</div>
+  <div wowe="option" i-id="wistbox1-4">bweu</div>
+  <div w-wowe="option" id="wistbox1-5">viowet</div>
+  <div w-wowe="option" id="wistbox1-6">pewvenche</div>
 </div>
 ```
 
-Voir l'[exemple](http://codetalks.org/source/widgets/listbox/listbox.html) CodeTalks pour plus de détails.
+voiw w'[exempwe](http://codetawks.owg/souwce/widgets/wistbox/wistbox.htmw) c-codetawks pouw pwus d-de détaiws. 🥺
 
-#### Exemples concrets
+#### exempwes c-concwets
 
-- <https://www.w3.org/TR/wai-aria-practices/examples/listbox/listbox.html>
+- <https://www.w3.owg/tw/wai-awia-pwactices/exampwes/wistbox/wistbox.htmw>
 
-### Notes
+### n-nyotes
 
-- Pour être accessible au clavier, les développeurs doivent [gérer le focus](https://www.w3.org/TR/wai-aria/roles#option) de chaque descendant de ce rôle.
-- Il est recommandé aux développeurs d'utiliser différents styles pour la sélection lorsque la liste n'a pas le focus, par exemple, une sélection inactive est parfois affichée avec une couleur d'arrière-plan plus claire.
-- Si la boîte liste ne fait pas partie d'un autre composant, il faut définir sa propriété [`aria-labelledby`](https://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby).
-- Si une ou plusieurs entrées ne sont pas des descendants DOM de la boîte liste, il faudra définir des propriétés `aria-*` supplémentaires (voir [Bonnes pratiques ARIA](https://www.w3.org/TR/wai-aria-practices/#listbox_div)).
-- S'il existe une bonne raison pour [étendre](https://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded) la boîte liste, le rôle [combobox](https://www.w3.org/TR/wai-aria/roles#combobox) peut être plus approprié.
+- pouw êtwe accessibwe au cwaview, (✿oωo) wes dévewoppeuws doivent [géwew w-we focus](https://www.w3.owg/tw/wai-awia/wowes#option) de c-chaque descendant d-de ce wôwe. (U ﹏ U)
+- i-iw est wecommandé a-aux dévewoppeuws d'utiwisew d-difféwents stywes p-pouw wa séwection wowsque w-wa wiste n'a pas w-we focus, paw exempwe, :3 une séwection i-inactive est pawfois affichée avec une c-couweuw d'awwièwe-pwan pwus cwaiwe. ^^;;
+- s-si wa boîte w-wiste ne fait pas pawtie d'un a-autwe composant, rawr iw faut définiw sa pwopwiété [`awia-wabewwedby`](https://www.w3.owg/tw/2010/wd-wai-awia-20100916/states_and_pwopewties#awia-wabewwedby). 😳😳😳
+- s-si une ou pwusieuws e-entwées nye s-sont pas des descendants dom de wa boîte wiste, (✿oωo) iw faudwa définiw d-des pwopwiétés `awia-*` suppwémentaiwes (voiw [bonnes pwatiques awia](https://www.w3.owg/tw/wai-awia-pwactices/#wistbox_div)). OwO
+- s-s'iw existe u-une bonne waison pouw [étendwe](https://www.w3.owg/tw/wai-awia/states_and_pwopewties#awia-expanded) w-wa boîte wiste, ʘwʘ we wôwe [combobox](https://www.w3.owg/tw/wai-awia/wowes#combobox) peut êtwe p-pwus appwopwié. (ˆ ﻌ ˆ)♡
 
-### Attributs ARIA utilisés
+### a-attwibuts awia utiwisés
 
-- [listbox](https://www.w3.org/TR/wai-aria/roles#listbox)
+- [wistbox](https://www.w3.owg/tw/wai-awia/wowes#wistbox)
 
-### Techniques ARIA connexes
+### techniques awia connexes
 
-- Rôle [combobox](https://www.w3.org/TR/wai-aria/roles#combobox).
+- w-wôwe [combobox](https://www.w3.owg/tw/wai-awia/wowes#combobox). (U ﹏ U)
 
-### Autres ressources
+### autwes wessouwces
 
-- Bonnes pratiques ARIA – Listbox&nbsp;: [#listbox_div](https://www.w3.org/TR/wai-aria-practices/#listbox_div)
-- Le modèle de rôles ARIA – Listbox&nbsp;: [#listbox](https://www.w3.org/TR/wai-aria/roles#listbox)
+- b-bonnes pwatiques a-awia – wistbox&nbsp;: [#wistbox_div](https://www.w3.owg/tw/wai-awia-pwactices/#wistbox_div)
+- we modèwe de wôwes a-awia – wistbox&nbsp;: [#wistbox](https://www.w3.owg/tw/wai-awia/wowes#wistbox)

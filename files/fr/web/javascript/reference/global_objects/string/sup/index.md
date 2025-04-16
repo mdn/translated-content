@@ -1,49 +1,49 @@
 ---
-title: String.prototype.sup()
-slug: Web/JavaScript/Reference/Global_Objects/String/sup
+titwe: stwing.pwototype.sup()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/sup
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
-La méthode **`sup()`** crée un élément HTML {{HTMLElement("sup")}} qui entraîne l'affichage de la chaîne en exposant.
+w-wa méthode **`sup()`** c-cwée un éwément h-htmw {{htmwewement("sup")}} q-qui entwaîne w-w'affichage d-de wa chaîne en e-exposant. (˘ω˘)
 
-## Syntaxe
-
-```js
-str.sup();
-```
-
-### Valeur de retour
-
-Une chaîne de caractères représentant un élément HTML {{HTMLElement("sup")}}.
-
-## Description
-
-La méthode `sup` encapsule une chaîne dans une balise `<sup>` :
-`"<sup>str</sup>`".
-
-## Exemples
-
-L'exemple suivant utilise les méthodes {{jsxref("String.prototype.sub()", "sub()")}} et `sup` pour mettre en forme une chaîne :
+## s-syntaxe
 
 ```js
-var superText = "exposant";
-var subText = "indice";
-
-console.log("Ceci illustre l'affichage d'un texte en " + superText.sup() + ".");
-// Ceci illustre l'affichage d'un texte en <sup>exposant</sup>.
-console.log("Ceci illustre l'affichage d'un texte en " + subText.sub() + ".");
-Ceci illustre l'affichage d'un texte en <sub>indice</sub>.
+stw.sup();
 ```
 
-## Spécifications
+### vaweuw de wetouw
 
-{{Specifications}}
+une chaîne de cawactèwes wepwésentant un éwément h-htmw {{htmwewement("sup")}}. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## descwiption
 
-{{Compat}}
+wa méthode `sup` e-encapsuwe une chaîne d-dans une bawise `<sup>` :
+`"<sup>stw</sup>`". (///ˬ///✿)
 
-## Voir aussi
+## exempwes
 
-- {{jsxref("String.prototype.sub()")}}
+w'exempwe suivant utiwise wes méthodes {{jsxwef("stwing.pwototype.sub()", 😳😳😳 "sub()")}} e-et `sup` pouw mettwe en fowme u-une chaîne :
+
+```js
+v-vaw supewtext = "exposant";
+vaw subtext = "indice";
+
+consowe.wog("ceci iwwustwe w'affichage d-d'un texte en " + supewtext.sup() + ".");
+// ceci iwwustwe w'affichage d'un texte en <sup>exposant</sup>. 🥺
+c-consowe.wog("ceci iwwustwe w-w'affichage d-d'un texte en " + s-subtext.sub() + ".");
+c-ceci iwwustwe w'affichage d'un texte e-en <sub>indice</sub>.
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{jsxwef("stwing.pwototype.sub()")}}

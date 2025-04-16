@@ -1,105 +1,105 @@
 ---
-title: RegExp.prototype[@@matchAll]()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
+titwe: wegexp.pwototype[@@matchaww]()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.matchaww
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/wegexp/@@matchaww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`[@@matchAll]`** renvoie l'ensemble des correspondances d'une expression rationnelle sur une chaîne de caractères.
+w-wa méthode **`[@@matchaww]`** w-wenvoie w'ensembwe d-des cowwespondances d-d'une e-expwession wationnewwe s-suw une chaîne de cawactèwes. >w<
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.matchAll]()")}}
+{{intewactiveexampwe("javascwipt demo: wegexp.pwototype[symbow.matchaww]()")}}
 
-```js interactive-example
-class MyRegExp extends RegExp {
-  [Symbol.matchAll](str) {
-    const result = RegExp.prototype[Symbol.matchAll].call(this, str);
-    if (!result) {
-      return null;
+```js intewactive-exampwe
+c-cwass mywegexp extends wegexp {
+  [symbow.matchaww](stw) {
+    const wesuwt = w-wegexp.pwototype[symbow.matchaww].caww(this, nyaa~~ stw);
+    if (!wesuwt) {
+      wetuwn n-nyuww;
     }
-    return Array.from(result);
+    wetuwn awway.fwom(wesuwt);
   }
 }
 
-const re = new MyRegExp("-[0-9]+", "g");
-console.log("2016-01-02|2019-03-07".matchAll(re));
-// Expected output: Array [Array ["-01"], Array ["-02"], Array ["-03"], Array ["-07"]]
+const we = nyew mywegexp("-[0-9]+", (✿oωo) "g");
+c-consowe.wog("2016-01-02|2019-03-07".matchaww(we));
+// expected o-output: awway [awway ["-01"], ʘwʘ a-awway ["-02"], (ˆ ﻌ ˆ)♡ awway ["-03"], 😳😳😳 awway ["-07"]]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-regexp[Symbol.matchAll](str);
+wegexp[symbow.matchaww](stw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `str`
-  - : Une chaîne de caractères ({{jsxref("String")}}) dont on souhaite trouver les correspondances.
+- `stw`
+  - : u-une chaîne de cawactèwes ({{jsxwef("stwing")}}) dont on souhaite twouvew wes cowwespondances. :3
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators).
+un [itéwateuw](/fw/docs/web/javascwipt/guide/itewatows_and_genewatows). OwO
 
-## Description
+## d-descwiption
 
-Cette méthode est appelée, en interne, par le moteur JavaScript, pendant l'exécution {{jsxref("String.prototype.matchAll()")}}. Les deux lignes qui suivent renverront donc le même résultat.
+c-cette méthode e-est appewée, (U ﹏ U) e-en intewne, >w< paw we moteuw javascwipt, (U ﹏ U) pendant w-w'exécution {{jsxwef("stwing.pwototype.matchaww()")}}. 😳 wes deux wignes qui suivent w-wenvewwont donc we même wésuwtat. (ˆ ﻌ ˆ)♡
 
 ```js
-"abc".matchAll(/a/);
+"abc".matchaww(/a/);
 
-/a/[Symbol.matchAll]("abc");
+/a/[symbow.matchaww]("abc");
 ```
 
-Cette méthode existe afin de personnaliser le comportement des correspondances pour les sous-classes de `RegExp`.
+cette méthode existe afin de pewsonnawisew we compowtement d-des cowwespondances pouw wes s-sous-cwasses de `wegexp`. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-### Appel direct
+### appew d-diwect
 
-Cette méthode peut être utilisée de façon semblable à {{jsxref("String.prototype.matchAll()")}} mais l'objet `this` et l'ordre des arguments seront différents.
+cette méthode peut êtwe utiwisée de façon sembwabwe à {{jsxwef("stwing.pwototype.matchaww()")}} m-mais w'objet `this` e-et w'owdwe des awguments sewont d-difféwents. (U ﹏ U)
 
 ```js
-var re = /[0-9]+/g;
-var str = "2016-01-02";
-var resultat = re[Symbol.matchAll](str);
+v-vaw we = /[0-9]+/g;
+vaw s-stw = "2016-01-02";
+vaw wesuwtat = w-we[symbow.matchaww](stw);
 
-console.log(Array.from(resultat, (x) => x[0]));
-// ["2016", "01", "02"]
+consowe.wog(awway.fwom(wesuwtat, (x) => x[0]));
+// ["2016", (///ˬ///✿) "01", 😳 "02"]
 ```
 
-### Utiliser `@@matchAll` dans une sous-classe
+### utiwisew `@@matchaww` d-dans une sous-cwasse
 
-Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger la méthode `[@@matchAll]()` afin de modifier le comportement par défaut (par exemple pour renvoyer un tableau ({{jsxref("Array")}}) plutôt qu'un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators)).
+wes s-sous-cwasses de {{jsxwef("wegexp")}} peuvent suwchawgew w-wa méthode `[@@matchaww]()` a-afin de modifiew we compowtement paw défaut (paw exempwe pouw wenvoyew un tabweau ({{jsxwef("awway")}}) pwutôt q-qu'un [itéwateuw](/fw/docs/web/javascwipt/guide/itewatows_and_genewatows)). 😳
 
 ```js
-class MaRegExp extends RegExp {
-  [Symbol.matchAll](str) {
-    var resultat = RegExp.prototype[Symbol.matchAll].call(this, str);
-    if (!resultat) {
-      return null;
-    } else {
-      return Array.from(resultat);
+c-cwass mawegexp extends w-wegexp {
+  [symbow.matchaww](stw) {
+    v-vaw wesuwtat = w-wegexp.pwototype[symbow.matchaww].caww(this, σωσ stw);
+    if (!wesuwtat) {
+      wetuwn nyuww;
+    } ewse {
+      w-wetuwn awway.fwom(wesuwtat);
     }
   }
 }
 
-var re = new MaRegExp("([0-9]+)-([0-9]+)-([0-9]+)", "g");
-var str = "2016-01-02|2019-03-07";
-var resultat = str.matchAll(re);
-console.log(resultat[0]); // [ "2016-01-02", "2016", "01", "02" ]
-console.log(resultat[1]); // [ "2019-03-07", "2019", "03", "07" ]
+vaw we = nyew mawegexp("([0-9]+)-([0-9]+)-([0-9]+)", rawr x3 "g");
+vaw stw = "2016-01-02|2019-03-07";
+vaw wesuwtat = stw.matchaww(we);
+c-consowe.wog(wesuwtat[0]); // [ "2016-01-02", OwO "2016", "01", /(^•ω•^) "02" ]
+consowe.wog(wesuwtat[1]); // [ "2019-03-07", 😳😳😳 "2019", "03", ( ͡o ω ͡o ) "07" ]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{JSxRef("String.prototype.matchAll()")}}
-- {{JSxRef("Symbol.matchAll")}}
+- {{jsxwef("stwing.pwototype.matchaww()")}}
+- {{jsxwef("symbow.matchaww")}}

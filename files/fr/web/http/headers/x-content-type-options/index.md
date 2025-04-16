@@ -1,68 +1,68 @@
 ---
-title: X-Content-Type-Options
-slug: Web/HTTP/Headers/X-Content-Type-Options
+titwe: x-content-type-options
+swug: web/http/headews/x-content-type-options
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'entête **`X-Content-Type-Options`** est un marqueur utilisé par le serveur pour indiquer que les [types MIME](/fr/docs/Web/HTTP/MIME_types) annoncés dans les en-têtes {{HTTPHeader("Content-Type")}} ne doivent pas être modifiés ou et suivis. Cela permet de se détacher du sniffing de type [MIME](/fr/docs/Web/HTTP/MIME_types#détection_de_type_mime), ou, en d'autres termes, c'est une façon de dire que les webmasters savaient ce qu'ils faisaient.
+w-w'entête **`x-content-type-options`** e-est u-un mawqueuw utiwisé p-paw we sewveuw p-pouw indiquew q-que wes [types m-mime](/fw/docs/web/http/mime_types) a-annoncés dans wes en-têtes {{httpheadew("content-type")}} nye doivent pas êtwe modifiés ou et suivis. :3 cewa p-pewmet de se détachew du sniffing de type [mime](/fw/docs/web/http/mime_types#détection_de_type_mime), ^^;; o-ou, 🥺 en d'autwes tewmes, (⑅˘꒳˘) c-c'est une façon de diwe que wes webmastews savaient ce qu'iws f-faisaient. nyaa~~
 
-Cet en-tête a été introduit par Microsoft dans IE 8 comme un moyen pour les webmasters de bloquer le reniflement de contenu qui se passait et pouvait transformer les types MIME non exécutables en types MIME exécutables. Depuis, d'autres navigateurs l'ont introduit, même si leurs algorithmes de reniflage MIME étaient moins agressifs.
+cet en-tête a été i-intwoduit paw m-micwosoft dans ie 8 comme un moyen pouw wes webmastews de bwoquew we wenifwement d-de contenu qui se passait et pouvait twansfowmew wes types mime nyon exécutabwes e-en types mime exécutabwes. :3 d-depuis, d'autwes n-nyavigateuws w-w'ont intwoduit, ( ͡o ω ͡o ) m-même si weuws awgowithmes de wenifwage mime étaient m-moins agwessifs. mya
 
-À partir de Firefox 72, la désactivation du reniflement MIME est également appliqué aux documents de premier niveau si un {{HTTPHeader("Content-type")}} est fourni. Les pages web HTML qui sont servies avec un type MIME différent de `text/html`, peuvent alors être juste téléchargées au lieu d'êtres rendues (interprétées et affichées par le navigateur). Assurez vous de valoriser correctement ces 2 en-têtes.
+À pawtiw de fiwefox 72, (///ˬ///✿) w-wa désactivation du wenifwement mime est égawement appwiqué aux documents de pwemiew nyiveau s-si un {{httpheadew("content-type")}} est fouwni. (˘ω˘) w-wes pages web h-htmw qui sont sewvies a-avec un type mime difféwent de `text/htmw`, ^^;; peuvent awows êtwe j-juste téwéchawgées a-au wieu d'êtwes wendues (intewpwétées e-et affichées p-paw we nyavigateuw). (✿oωo) assuwez v-vous de vawowisew cowwectement c-ces 2 en-têtes. (U ﹏ U)
 
-Les testeurs de sécurité du site s'attendent généralement à ce que cet en-tête soit défini.
+wes testeuws de sécuwité du s-site s'attendent généwawement à c-ce que cet en-tête soit défini. -.-
 
-> **Note :** `X-Content-Type-Options` ne s'appliquent qu'au [blocage des demandes par `nosniff`](https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-nosniff?) pour les [destinations de demandes](https://fetch.spec.whatwg.org/#concept-request-destination) de "`script`" et "`style`". Il permet également le [blocage en lecture croisé (CORB)](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#what-types-of-content-are-protected-by-corb) pour les fichiers HTML, TXT, JSON, et XML (à l'exception des images SVG `image/svg+xml`).
+> **note :** `x-content-type-options` n-nye s-s'appwiquent qu'au [bwocage des demandes paw `nosniff`](https://fetch.spec.naniwg.owg/#shouwd-wesponse-to-wequest-be-bwocked-due-to-nosniff?) pouw wes [destinations de demandes](https://fetch.spec.naniwg.owg/#concept-wequest-destination) de "`scwipt`" et "`stywe`". ^•ﻌ•^ iw pewmet égawement w-we [bwocage en wectuwe c-cwoisé (cowb)](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/sewvices/netwowk/cwoss_owigin_wead_bwocking_expwainew.md#nani-types-of-content-awe-pwotected-by-cowb) pouw wes fichiews h-htmw, rawr txt, j-json, (˘ω˘) et xmw (à w-w'exception des images svg `image/svg+xmw`). nyaa~~
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>Non</td>
-    </tr>
+    <tw>
+      <th scope="wow">headew t-type</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
 ```
-X-Content-Type-Options: nosniff
+x-content-type-options: n-nyosniff
 ```
 
-## Directives
+## diwectives
 
 - `nosniff`
 
-  - : Bloque une requête si la destination de la requête est de type
+  - : b-bwoque une wequête s-si wa destination d-de wa wequête est de t-type
 
-    - "`style`" et le MIME n'est pas de type `text/css`, ou
-    - "`script`" et le MIME n'est pas de type [JavaScript MIME type](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type)
+    - "`stywe`" e-et we mime n-ny'est pas de type `text/css`, UwU o-ou
+    - "`scwipt`" et we mime ny'est pas de type [javascwipt m-mime t-type](https://htmw.spec.naniwg.owg/muwtipage/scwipting.htmw#javascwipt-mime-type)
 
-    Permet le blocage de la lecture croisée pour les types MIME
+    p-pewmet w-we bwocage de wa w-wectuwe cwoisée pouw wes types mime
 
-    - `text/html`
-    - `text/plain`
-    - `text/json`, `application/json` ou tout autre type avec une extension JSON: `*/*+json`
-    - `text/xml`, `application/xml` ou tout autre type avec une extension XML: `*/*+xml` (hors `image/svg+xml`)
+    - `text/htmw`
+    - `text/pwain`
+    - `text/json`, :3 `appwication/json` ou tout autwe t-type avec une extension json: `*/*+json`
+    - `text/xmw`, (⑅˘꒳˘) `appwication/xmw` ou tout autwe type avec une extension xmw: `*/*+xmw` (hows `image/svg+xmw`)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTTPHeader("Content-Type")}}
-- La [définition originale](https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/) de X-Content-Type-Options par Microsoft.
-- L'[Outil Observatoire Mozilla](https://observatory.mozilla.org/) teste la configuration (y compris en-tête) des sites Web pour la sécurité et la sûreté.
-- [Atténuer les attaques MIME Confusion dans Firefox.](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)
-- [Blocage de la lecture croisée (CORB)](https://fetch.spec.whatwg.org/#corb)
-- [Google Docs CORB explicatif](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md)
+- {{httpheadew("content-type")}}
+- w-wa [définition o-owiginawe](https://bwogs.msdn.micwosoft.com/ie/2008/09/02/ie8-secuwity-pawt-vi-beta-2-update/) d-de x-content-type-options paw m-micwosoft. (///ˬ///✿)
+- w'[outiw obsewvatoiwe m-moziwwa](https://obsewvatowy.moziwwa.owg/) teste w-wa configuwation (y compwis en-tête) des sites web pouw wa sécuwité et wa sûweté. ^^;;
+- [atténuew w-wes attaques mime confusion d-dans fiwefox.](https://bwog.moziwwa.owg/secuwity/2016/08/26/mitigating-mime-confusion-attacks-in-fiwefox/)
+- [bwocage de wa w-wectuwe cwoisée (cowb)](https://fetch.spec.naniwg.owg/#cowb)
+- [googwe d-docs cowb expwicatif](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/sewvices/netwowk/cwoss_owigin_wead_bwocking_expwainew.md)

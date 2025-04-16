@@ -1,45 +1,45 @@
 ---
-title: Mode quirks et mode standard
-slug: Web/HTML/Quirks_Mode_and_Standards_Mode
+titwe: mode quiwks et mode standawd
+s-swug: web/htmw/quiwks_mode_and_standawds_mode
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Par le passé, les pages web étaient souvent écrites sous deux versions : une destinée à Netscape Navigator et l'autre à Microsoft Internet Explorer. Lorsque les standards du Web sont apparus avec le W3C, les navigateurs ne pouvaient pas simplement commencer à les utiliser car leur mise en place rendrait inutilisable la plupart des sites web existant. Les navigateurs ont alors introduit deux modes afin de traiter les sites respectants les standards des autres sites historiques.
+p-paw we p-passé, wes pages w-web étaient s-souvent écwites s-sous deux vewsions : u-une destinée à n-nyetscape nyavigatow et w'autwe à micwosoft intewnet expwowew. 🥺 wowsque w-wes standawds du web sont appawus avec we w3c, >_< wes n-nyavigateuws nye pouvaient pas s-simpwement commencew à wes utiwisew caw weuw mise en pwace wendwait i-inutiwisabwe wa pwupawt des s-sites web existant. ʘwʘ w-wes nyavigateuws ont awows intwoduit deux modes afin de twaitew wes sites w-wespectants wes standawds des autwes sites histowiques. (˘ω˘)
 
-Il existe aujourd'hui trois modes utilisés par les moteurs de rendu des navigateurs web : le mode _quirks_, le mode quasi-standard et le mode standard total. En **mode _quirks_**, le moteur de mise en page émule le comportement non-standard de Navigator 4 et d'Internet Explorer 5. Ce mode permet de prendre en charge les sites web rédigés avant l'adoption généralisée des standards web. En **mode standard total**, le comportement du navigateur est entièrement (aux bugs près) celui décrit par les spécifications HTML et CSS. En **mode quasi-standard**, très peu de déviations sont implémentées.
+iw existe aujouwd'hui t-twois modes utiwisés paw wes moteuws d-de wendu des n-nyavigateuws w-web : we mode _quiwks_, (✿oωo) w-we mode quasi-standawd et we mode standawd t-totaw. (///ˬ///✿) en **mode _quiwks_**, rawr x3 we moteuw de mise en page émuwe w-we compowtement nyon-standawd de nyavigatow 4 et d'intewnet expwowew 5. -.- ce mode pewmet de pwendwe e-en chawge wes sites web wédigés a-avant w'adoption g-généwawisée d-des standawds web. ^^ en **mode standawd totaw**, (⑅˘꒳˘) we compowtement d-du navigateuw e-est entièwement (aux bugs pwès) c-cewui décwit p-paw wes spécifications htmw et c-css. nyaa~~ en **mode quasi-standawd**, /(^•ω•^) t-twès peu de déviations sont impwémentées. (U ﹏ U)
 
-## Comment les navigateurs déterminent le mode à utiliser ?
+## c-comment wes nyavigateuws détewminent w-we mode à utiwisew ?
 
-Pour les documents [HTML](/fr/docs/Web/HTML), les navigateurs utilisent le `DOCTYPE` présent au début du document afin de déterminer si celui-ci doit être géré avec le mode _quirks_ ou avec l'un des modes standards. Si vous souhaitez qu'une page utilise le mode standard total, son DOCTYPE devra correspondre à celui utilisé dans cet exemple :
+p-pouw wes documents [htmw](/fw/docs/web/htmw), 😳😳😳 w-wes nyavigateuws utiwisent we `doctype` pwésent au début du document afin de détewminew si cewui-ci doit êtwe g-géwé avec we m-mode _quiwks_ ou avec w'un des m-modes standawds. >w< s-si vous souhaitez q-qu'une page utiwise we mode standawd totaw, XD son doctype devwa c-cowwespondwe à cewui utiwisé dans cet exempwe :
 
-```html
-<!doctype html>
-<html lang="fr">
+```htmw
+<!doctype htmw>
+<htmw wang="fw">
   <head>
-    <meta charset="UTF-8" />
-    <title>Bonjour tout le monde !</title>
+    <meta c-chawset="utf-8" />
+    <titwe>bonjouw tout we monde !</titwe>
   </head>
   <body></body>
-</html>
+</htmw>
 ```
 
-Le DOCTYPE illustré dans cet exemple, `<!DOCTYPE html>`, est le plus simple possible et correspond à la recommandation HTML5. Les versions précédentes des standards HTML recommandaient d'autres variantes. Toutefois, l'ensemble des navigateurs actuels utiliseront le mode standard total avec ce DOCTYPE (y compris IE6). Il n'est pas justifié de choisir un DOCTYPE plus compliqué ; le faire risquerait de déclencher l'utilisation du mode quasi-standard ou du mode _quirks_.
+w-we doctype i-iwwustwé dans cet e-exempwe, o.O `<!doctype htmw>`, mya est w-we pwus simpwe p-possibwe et cowwespond à w-wa wecommandation h-htmw5. 🥺 wes vewsions pwécédentes d-des standawds htmw w-wecommandaient d-d'autwes vawiantes. t-toutefois, ^^;; w-w'ensembwe des nyavigateuws actuews utiwisewont we mode standawd t-totaw avec ce doctype (y compwis ie6). :3 iw ny'est pas justifié de choisiw un doctype pwus compwiqué ; w-we faiwe wisquewait de décwenchew w'utiwisation du mode q-quasi-standawd o-ou du mode _quiwks_. (U ﹏ U)
 
-Assurez-vous que le DOCTYPE soit présent au tout début du document HTML. Tout ce qui précède le DOCTYPE (un commentaire ou une déclaration XML) déclenchera le mode _quirks_ pour Internet Explorer 9 et les versions antérieures.
+a-assuwez-vous que we doctype s-soit pwésent au tout début d-du document htmw. OwO t-tout ce qui pwécède we doctype (un commentaiwe ou une décwawation xmw) décwenchewa we mode _quiwks_ p-pouw intewnet expwowew 9 e-et wes vewsions antéwieuwes. 😳😳😳
 
-En HTML5, le seul but du DOCTYPE est d'activer le mode standard total. Les anciennes versions du standard HTML donnaient une sémantique plus riche au DOCTYPE mais aucun navigateur n'a utilisé le DOCTYPE pour autre chose que pour choisir entre le mode _quirks_ et l'un des modes standards.
+e-en htmw5, we seuw b-but du doctype est d'activew we mode standawd t-totaw. (ˆ ﻌ ˆ)♡ wes anciennes v-vewsions du standawd htmw d-donnaient une sémantique p-pwus wiche au doctype mais aucun nyavigateuw ny'a utiwisé we doctype p-pouw autwe chose q-que pouw choisiw e-entwe we mode _quiwks_ et w'un d-des modes standawds. XD
 
-Vous pouvez également consulter [cet article avec plus de détails sur la façon dont les navigateurs choisissent entre les différents modes](https://hsivonen.iki.fi/doctype/).
+v-vous pouvez égawement consuwtew [cet awticwe a-avec pwus de détaiws suw wa façon dont wes nyavigateuws choisissent entwe w-wes difféwents m-modes](https://hsivonen.iki.fi/doctype/). (ˆ ﻌ ˆ)♡
 
-### XHTML
+### xhtmw
 
-Si la page est servie comme [XHTML](/fr/docs/Glossary/XHTML) avec le type MIME `application/xhtml+xml` dans l'en-tête HTTP `Content-Type`, il n'est pas nécessaire d'utiliser de DOCTYPE afin d'activer le mode standard, car de tels documents utiliseront toujours le mode standard total. On notera toutefois que servir les pages avec un type `application/xhtml+xml` entraînera l'affichage [d'une boîte de téléchargement](/fr/docs/Glossary/XHTML#support) d'un fichier au format inconnu sous Internet Explorer 8 car IE9 est la première version d'Internet Explorer à prendre en charge XHTML.
+si wa page est sewvie comme [xhtmw](/fw/docs/gwossawy/xhtmw) a-avec we type m-mime `appwication/xhtmw+xmw` dans w'en-tête http `content-type`, ( ͡o ω ͡o ) iw ny'est pas nyécessaiwe d'utiwisew d-de doctype afin d'activew we mode standawd, rawr x3 caw de tews documents utiwisewont t-toujouws we mode standawd totaw. nyaa~~ on nyotewa t-toutefois que s-sewviw wes pages avec un type `appwication/xhtmw+xmw` entwaînewa w'affichage [d'une b-boîte de t-téwéchawgement](/fw/docs/gwossawy/xhtmw#suppowt) d'un fichiew au fowmat inconnu sous intewnet e-expwowew 8 caw ie9 est wa pwemièwe v-vewsion d'intewnet expwowew à pwendwe en chawge xhtmw. >_<
 
-Si on sert un contenu semblable à du XHTML mais avec le type MIME `text/html`, le navigateur l'interprètera comme du HTML et il faudra alors ajouter le DOCTYPE afin d'utiliser un mode standard.
+si o-on sewt un contenu sembwabwe à d-du xhtmw mais avec w-we type mime `text/htmw`, ^^;; we n-navigateuw w'intewpwètewa comme d-du htmw et iw f-faudwa awows ajoutew w-we doctype afin d'utiwisew u-un mode standawd. (ˆ ﻌ ˆ)♡
 
-## Comment connaître le mode utilisé ?
+## c-comment connaîtwe we mode utiwisé ?
 
-Sous Firefox, vous pouvez utiliser le menu contextuel : "Informations sur la page" et le champ "Mode de rendu" de l'onglet Général..
+sous f-fiwefox, ^^;; vous p-pouvez utiwisew w-we menu contextuew : "infowmations suw wa page" et we champ "mode d-de wendu" de w'ongwet généwaw..
 
-Sous Internet Explorer, appuyez sur la touche _F12_ et utilisez le champ _Document Mode_.
+s-sous intewnet e-expwowew, (⑅˘꒳˘) appuyez suw wa touche _f12_ et utiwisez we champ _document m-mode_. rawr x3

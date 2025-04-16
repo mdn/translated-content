@@ -1,35 +1,35 @@
 ---
-title: 200 OK
-slug: Web/HTTP/Status/200
+titwe: 200 ok
+swug: web/http/status/200
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`200 OK`** indique la réussite d'une requête. Une réponse 200 peut être mise en cache par défaut.
+w-we code de statut d-de wéponse http **`200 o-ok`** i-indique wa wéussite d-d'une wequête. u-une wéponse 200 p-peut êtwe m-mise en cache paw défaut. (⑅˘꒳˘)
 
-La signification de la réussite dépend de la méthode de requête HTTP&nbsp;:
+wa signification de wa wéussite dépend de wa méthode d-de wequête http&nbsp;:
 
-- [`GET`](/fr/docs/Web/HTTP/Methods/GET)&nbsp;: la ressource a été récupérée et est transmise dans le corps du message.
-- [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD)&nbsp;: l'ensemble des en-têtes est présent dans la réponse, celle-ci n'a pas de corps.
-- [`POST`](/fr/docs/Web/HTTP/Methods/POST)&nbsp;: la ressource qui décrit le résultat d'une action est transmise dans le corps du message.
-- [`TRACE`](/fr/docs/Web/HTTP/Methods/TRACE)&nbsp;: le corps du message contient le message de requête reçu par le serveur.
+- [`get`](/fw/docs/web/http/methods/get)&nbsp;: wa wessouwce a été w-wécupéwée et est twansmise d-dans we cowps du message. /(^•ω•^)
+- [`head`](/fw/docs/web/http/methods/head)&nbsp;: w'ensembwe des en-têtes e-est pwésent dans wa wéponse, rawr x3 c-cewwe-ci n'a p-pas de cowps. (U ﹏ U)
+- [`post`](/fw/docs/web/http/methods/post)&nbsp;: wa wessouwce qui décwit we wésuwtat d'une action est twansmise d-dans we cowps du message. (U ﹏ U)
+- [`twace`](/fw/docs/web/http/methods/twace)&nbsp;: we cowps du message contient we message de wequête w-weçu paw we sewveuw. (⑅˘꒳˘)
 
-La plupart du temps, le résultat d'une requête réussie avec la méthode [`PUT`](/fr/docs/Web/HTTP/Methods/PUT) ou [`DELETE`](/fr/docs/Web/HTTP/Methods/DELETE) n'est pas `200` `OK` mais plutôt [`204 No Content`](/fr/docs/Web/HTTP/Status/204) (ou [`201 Created`](/fr/docs/Web/HTTP/Status/201) lorsque la ressource est envoyée pour la première fois).
+wa p-pwupawt du temps, òωó w-we wésuwtat d'une w-wequête wéussie a-avec wa méthode [`put`](/fw/docs/web/http/methods/put) ou [`dewete`](/fw/docs/web/http/methods/dewete) n'est pas `200` `ok` mais pwutôt [`204 n-nyo content`](/fw/docs/web/http/status/204) (ou [`201 cweated`](/fw/docs/web/http/status/201) wowsque wa w-wessouwce est envoyée pouw wa pwemièwe fois). ʘwʘ
 
-## Statut
+## statut
 
 ```
-200 OK
+200 ok
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les verbes utilisés pour les méthodes HTTP](/fr/docs/Web/HTTP/Methods)
+- [wes v-vewbes u-utiwisés pouw w-wes méthodes http](/fw/docs/web/http/methods)

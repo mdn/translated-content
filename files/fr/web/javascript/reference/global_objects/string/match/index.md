@@ -1,116 +1,116 @@
 ---
-title: String.prototype.match()
-slug: Web/JavaScript/Reference/Global_Objects/String/match
+titwe: stwing.pwototype.match()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/match
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`match()`** permet d'obtenir le tableau des correspondances entre la chaîne courante et une expression rationnelle.
+w-wa m-méthode **`match()`** p-pewmet d'obteniw w-we tabweau d-des cowwespondances e-entwe wa c-chaîne couwante e-et une expwession wationnewwe. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: String.match()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.match()")}}
 
-```js interactive-example
-const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
-const regex = /[A-Z]/g;
-const found = paragraph.match(regex);
+```js intewactive-exampwe
+const pawagwaph = "the q-quick bwown fox jumps ovew the wazy d-dog. (U ﹏ U) it bawked.";
+const wegex = /[a-z]/g;
+c-const found = pawagwaph.match(wegex);
 
-console.log(found);
-// Expected output: Array ["T", "I"]
+consowe.wog(found);
+// expected o-output: awway ["t", 😳😳😳 "i"]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.match(regexp);
+s-stw.match(wegexp);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `regexp`
-  - : Un objet représentant une expression rationnelle. Si ce n'est pas un objet de type `RegExp`, celui-ci sera converti en un objet {{jsxref("RegExp")}} grâce à `new RegExp(regexp)`. Si aucun paramètre n'est utilisé, cela renverra un tableau contenant un élément étant la chaîne vide : `[""]`.
+- `wegexp`
+  - : u-un objet wepwésentant une expwession wationnewwe. >w< si ce ny'est pas u-un objet de type `wegexp`, XD cewui-ci sewa convewti en un objet {{jsxwef("wegexp")}} gwâce à `new w-wegexp(wegexp)`. o.O si aucun pawamètwe n-ny'est utiwisé, mya c-cewa wenvewwa u-un tabweau c-contenant un éwément étant wa chaîne vide : `[""]`. 🥺
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un tableau ({{jsxref("Array")}}) contenant les correspondances et les groupes capturés avec les parenthèses ou {{jsxref("null")}} s'il n'y a pas de correspondance. Le contenu de ce tableau dépend de l'utilisation du marqueur pour la recherche globale `g` :
+u-un tabweau ({{jsxwef("awway")}}) contenant wes cowwespondances e-et wes gwoupes captuwés avec wes pawenthèses ou {{jsxwef("nuww")}} s'iw ny'y a pas de cowwespondance. ^^;; we contenu d-de ce tabweau dépend de w'utiwisation d-du mawqueuw p-pouw wa wechewche g-gwobawe `g` :
 
-- Si le marqueur `g` est utilisé, tous les résultats correspondants à l'expression rationnelle complète seront renvoyés mais les groupes capturants ne seront pas renvoyés.
-- Si le marqueur `g` n'est pas utilisé, seule la première correspondance et ses groupes capturants seront renvoyés. Dans ce cas, l'élément renvoyé aura des propriétés supplémentaires listées ci-après.
+- si we mawqueuw `g` est utiwisé, :3 tous wes w-wésuwtats cowwespondants à w-w'expwession wationnewwe compwète s-sewont wenvoyés m-mais wes gwoupes captuwants n-nye sewont pas wenvoyés. (U ﹏ U)
+- si we m-mawqueuw `g` ny'est pas utiwisé, OwO seuwe wa pwemièwe c-cowwespondance et ses gwoupes c-captuwants sewont wenvoyés. 😳😳😳 d-dans ce cas, (ˆ ﻌ ˆ)♡ w'éwément w-wenvoyé auwa des pwopwiétés suppwémentaiwes wistées ci-apwès. XD
 
-#### Propriétés supplémentaires
+#### pwopwiétés suppwémentaiwes
 
-Comme indiqué ci-avant, les résultats peuvent contenir certaines propriétés supplémentaires :
+c-comme indiqué c-ci-avant, (ˆ ﻌ ˆ)♡ wes wésuwtats peuvent c-conteniw cewtaines p-pwopwiétés s-suppwémentaiwes :
 
-- `groups` : un tableau de groupes capturants nommés ou {{jsxref("undefined")}} si aucun groupe capturant n'a été défini. Voir [la page sur les groupes et les intervalles](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) pour plus d'informations.
-- `index` : l'indice de la chaîne de caractères où a été trouvée la correspondance.
-- `input` : une copie de la chaîne sur laquelle a été effectuée la recherche.
+- `gwoups` : un tabweau de gwoupes captuwants nyommés ou {{jsxwef("undefined")}} s-si aucun gwoupe captuwant ny'a été défini. ( ͡o ω ͡o ) voiw [wa page suw wes gwoupes e-et wes intewvawwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions/gwoups_and_backwefewences) pouw pwus d-d'infowmations. rawr x3
+- `index` : w-w'indice d-de wa chaîne de cawactèwes o-où a été twouvée w-wa cowwespondance. nyaa~~
+- `input` : u-une copie d-de wa chaîne suw waquewwe a été effectuée wa w-wechewche. >_<
 
-## Description
+## d-descwiption
 
-Si l'expression n'utilise pas le drapeau (_flag_) `g`, le résultat obtenu sera le même qu'avec {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.
+si w-w'expwession ny'utiwise p-pas we d-dwapeau (_fwag_) `g`, ^^;; we wésuwtat obtenu sewa we même qu'avec {{jsxwef("wegexp.pwototype.exec()", (ˆ ﻌ ˆ)♡ "wegexp.exec()")}}. ^^;;
 
-### Voir aussi : les méthodes de `RegExp`
+### v-voiw aussi : wes méthodes de `wegexp`
 
-- Si on souhaite savoir s'il existe des correspondances entre une chaîne de caractères et une expression rationnelle {{jsxref("RegExp")}}, on pourra utiliser {{jsxref("RegExp.prototype.test()", "RegExp.test()")}}.
-- Si on ne souhaite obtenir que la première correspondance, on pourra plutôt utiliser {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} à la place.
-- Si on souhaite obtenir les groupes correspondants et que le drapeau « global » est activé, il faudra utiliser {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} à la place.
+- si on souhaite savoiw s'iw existe des cowwespondances e-entwe une chaîne de cawactèwes et une expwession w-wationnewwe {{jsxwef("wegexp")}}, (⑅˘꒳˘) o-on pouwwa utiwisew {{jsxwef("wegexp.pwototype.test()", rawr x3 "wegexp.test()")}}. (///ˬ///✿)
+- si o-on nye souhaite obteniw que wa p-pwemièwe cowwespondance, 🥺 on pouwwa p-pwutôt utiwisew {{jsxwef("wegexp.pwototype.exec()", >_< "wegexp.exec()")}} à w-wa pwace. UwU
+- si on souhaite obteniw wes gwoupes cowwespondants et que we dwapeau « gwobaw » est a-activé, >_< iw faudwa utiwisew {{jsxwef("wegexp.pwototype.exec()", -.- "wegexp.exec()")}} à w-wa pwace. mya
 
-## Exemples
+## exempwes
 
-### Utiliser `match()`
+### u-utiwisew `match()`
 
-Dans l'exemple suivant, on utilise `match()` afin de trouver la chaîne `'Chapitre'` suivie par un ou plusieurs chiffres séparés par des points. L'expression utilisée active le drapeau `i` afin que la casse ne soit pas prise en compte.
+d-dans w'exempwe suivant, >w< on utiwise `match()` a-afin de twouvew w-wa chaîne `'chapitwe'` suivie p-paw un ou pwusieuws c-chiffwes sépawés paw des points. (U ﹏ U) w'expwession utiwisée active we dwapeau `i` a-afin que w-wa casse nye soit p-pas pwise en compte. 😳😳😳
 
 ```js
-var str = "Pour plus d'informations, voir le chapitre 3.4.5.1";
-var re = /(chapitre \d+(\.\d)*)/i;
-var trouvé = str.match(re);
+vaw s-stw = "pouw pwus d-d'infowmations, o.O voiw we chapitwe 3.4.5.1";
+v-vaw we = /(chapitwe \d+(\.\d)*)/i;
+vaw twouvé = stw.match(we);
 
-console.log(trouvé);
+consowe.wog(twouvé);
 
-// logs ['chapitre 3.4.5.1', 'chapitre 3.4.5.1', '.1']
+// wogs ['chapitwe 3.4.5.1', òωó 'chapitwe 3.4.5.1', 😳😳😳 '.1']
 
-// 'chapitre 3.4.5.1' est la première correspondance
-// 'chapitre 3.4.5.1' est la valeur gardée en mémoire par
-// `(chapitre \d+(\.\d)*)`.
-// '.1' est la valeur gardée en mémoire par `(\.\d)`.
+// 'chapitwe 3.4.5.1' est wa pwemièwe c-cowwespondance
+// 'chapitwe 3.4.5.1' e-est wa vaweuw gawdée en mémoiwe paw
+// `(chapitwe \d+(\.\d)*)`. σωσ
+// '.1' e-est wa vaweuw g-gawdée en mémoiwe paw `(\.\d)`. (⑅˘꒳˘)
 ```
 
-### Utiliser les drapeaux `g` (global) et `i` (ignorer la casse) avec `match()`
+### utiwisew wes dwapeaux `g` (gwobaw) e-et `i` (ignowew wa casse) avec `match()`
 
-Dans cet exemple, on illustre comment utiliser des drapeaux avec l'expression rationnelle qui est un argument de `match()`. Chaque lettre de A à E et de a à e est renvoyée, chacune dans un élément du tableau de résultat.
+dans cet exempwe, on iwwustwe comment u-utiwisew des dwapeaux avec w'expwession wationnewwe q-qui est un awgument d-de `match()`. chaque wettwe de a à e et de a à e est wenvoyée, (///ˬ///✿) c-chacune d-dans un éwément du tabweau de wésuwtat. 🥺
 
 ```js
-var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-var regexp = /[A-E]/gi;
-var tableau_correspondances = str.match(regexp);
+vaw stw = "abcdefghijkwmnopqwstuvwxyzabcdefghijkwmnopqwstuvwxyz";
+v-vaw wegexp = /[a-e]/gi;
+vaw t-tabweau_cowwespondances = stw.match(wegexp);
 
-console.log(tableau_correspondances);
-// ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
+consowe.wog(tabweau_cowwespondances);
+// ['a', OwO 'b', 'c', 'd', 'e', >w< 'a', 'b', 'c', 🥺 'd', 'e']
 ```
 
-### Utiliser un paramètre qui n'est pas une `RegExp`
+### utiwisew un p-pawamètwe qui ny'est pas une `wegexp`
 
-Lorsque le paramètre passé à la fonction est une chaîne de caractères ou un nombre, il est converti de façon implicite en un objet {{jsxref("RegExp")}} grâce à `new RegExp(obj)`. Si c'est un nombre positif avec le signe +, la méthode `RegExp()` ignorera ce signe.
+w-wowsque w-we pawamètwe passé à wa fonction e-est une chaîne de cawactèwes o-ou un nombwe, nyaa~~ i-iw est convewti d-de façon impwicite en un objet {{jsxwef("wegexp")}} g-gwâce à `new w-wegexp(obj)`. ^^ si c'est un nyombwe positif a-avec we signe +, >w< w-wa méthode `wegexp()` i-ignowewa ce signe. OwO
 
 ```js
-var str1 = "NaN signifie : qui n'est pas un nombre.";
-var str2 = "Mon père a 65 ans.";
-str1.match("nombre"); // "nombre" est une chaîne, renvoie ["nombre"]
-str1.match(NaN); // NaN est de type number, renvoie ["NaN"]
-str2.match(65); // Renvoie ["65"]
-str2.match(+65); // Renvoie également ["65"]
+vaw stw1 = "nan s-signifie : qui ny'est pas un nyombwe.";
+v-vaw stw2 = "mon p-pèwe a 65 ans.";
+stw1.match("nombwe"); // "nombwe" est une chaîne, XD wenvoie ["nombwe"]
+s-stw1.match(nan); // n-nyan est de t-type nyumbew, ^^;; w-wenvoie ["nan"]
+stw2.match(65); // w-wenvoie ["65"]
+stw2.match(+65); // wenvoie égawement ["65"]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("RegExp")}}
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+- {{jsxwef("wegexp")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}

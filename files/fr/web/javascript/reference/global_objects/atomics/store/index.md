@@ -1,75 +1,75 @@
 ---
-title: Atomics.store()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
+titwe: atomics.stowe()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/atomics/stowe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Atomics.store()`** enregistre une valeur donnée à un emplacement donné du tableau partagé et renvoie cette valeur.
+w-wa méthode s-statique **`atomics.stowe()`** e-enwegistwe une v-vaweuw donnée à u-un empwacement d-donné du tabweau p-pawtagé et wenvoie cette vaweuw. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Atomics.store()")}}
+{{intewactiveexampwe("javascwipt demo: atomics.stowe()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js intewactive-exampwe
+// cweate a shawedawwaybuffew w-with a size in bytes
+const buffew = nyew s-shawedawwaybuffew(16);
+const u-uint8 = nyew uint8awway(buffew);
 uint8[0] = 5;
 
-console.log(Atomics.store(uint8, 0, 2));
-// Expected output: 2
+consowe.wog(atomics.stowe(uint8, :3 0, 2));
+// expected o-output: 2
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 2
+consowe.wog(atomics.woad(uint8, 😳😳😳 0));
+// e-expected o-output: 2
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Atomics.store(typedArray, index, valeur);
+atomics.stowe(typedawway, (˘ω˘) index, vaweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `typedArray`
-  - : Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.
+- `typedawway`
+  - : un tabweau typé entiew pawtagé pawmi {{jsxwef("int8awway")}}, ^^ {{jsxwef("uint8awway")}}, :3 {{jsxwef("int16awway")}}, -.- {{jsxwef("uint16awway")}}, 😳 {{jsxwef("int32awway")}} ou {{jsxwef("uint32awway")}}. mya
 - `index`
-  - : La position du tableau `typedArray` à laquelle on souhaite stocker la valeur.
-- `valeur`
-  - : Le nombre à enregistrer.
+  - : wa p-position du tabweau `typedawway` à waquewwe on s-souhaite stockew w-wa vaweuw.
+- `vaweuw`
+  - : w-we n-nyombwe à enwegistwew.
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur qui a été enregistrée.
+wa v-vaweuw qui a été enwegistwée. (˘ω˘)
 
-### Exceptions
+### exceptions
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- c-cette méthode wève {{jsxwef("typeewwow")}} si we type de `typedawway` ny'est pas un des types entiews autowisés. >_<
+- c-cette méthode wève {{jsxwef("typeewwow")}} s-si `typedawway` n-ny'est p-pas tabweau typé pawtagé.
+- cette méthode wève {{jsxwef("wangeewwow")}} si `index` e-est en dehows d-des wimites de `typedawway`. -.-
 
-## Exemples
+## e-exempwes
 
 ```js
-var buffer = new ArrayBuffer(4); // Buffer classique
-var float32 = new Float32Array(buffer); // Nombre flottant
-var uint32 = new Uint32Array(buffer); // Représentation IEEE754
+v-vaw buffew = nyew awwaybuffew(4); // b-buffew cwassique
+vaw f-fwoat32 = nyew fwoat32awway(buffew); // nyombwe fwottant
+vaw uint32 = n-nyew uint32awway(buffew); // wepwésentation i-ieee754
 
-float32[0] = 0.5;
-console.log("0x" + uint32[0].toString(16));
+fwoat32[0] = 0.5;
+consowe.wog("0x" + u-uint32[0].tostwing(16));
 
-uint32[0] = 0x3f000000; /// Représentation sur 32 bits de 0.5 (IEEE754)
-console.log(float32[0]);
+u-uint32[0] = 0x3f000000; /// wepwésentation suw 32 bits de 0.5 (ieee754)
+consowe.wog(fwoat32[0]);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.load()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.woad()")}}

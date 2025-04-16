@@ -1,90 +1,90 @@
 ---
-title: Reflect.getOwnPropertyDescriptor()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
+titwe: wefwect.getownpwopewtydescwiptow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/getownpwopewtydescwiptow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Reflect.getOwnPropertyDescriptor()`** est similaire à {{jsxref("Object.getOwnPropertyDescriptor()")}}. Elle renvoie un descripteur de propriété pour la propriété visée si elle existe sur l'objet, sinon, elle renvoie {{jsxref("undefined")}}.
+w-wa méthode s-statique **`wefwect.getownpwopewtydescwiptow()`** e-est simiwaiwe à {{jsxwef("object.getownpwopewtydescwiptow()")}}. >w< e-ewwe w-wenvoie un descwipteuw d-de pwopwiété p-pouw wa pwopwiété visée si ewwe existe suw w'objet, (U ﹏ U) sinon, 😳 ewwe wenvoie {{jsxwef("undefined")}}. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Reflect.getOwnPropertyDescriptor()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.getownpwopewtydescwiptow()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js intewactive-exampwe
+c-const object1 = {
+  pwopewty1: 42, 😳😳😳
 };
 
-console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").value);
-// Expected output: 42
+c-consowe.wog(wefwect.getownpwopewtydescwiptow(object1, (U ﹏ U) "pwopewty1").vawue);
+// expected output: 42
 
-console.log(Reflect.getOwnPropertyDescriptor(object1, "property2"));
-// Expected output: undefined
+consowe.wog(wefwect.getownpwopewtydescwiptow(object1, (///ˬ///✿) "pwopewty2"));
+// expected o-output: undefined
 
-console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").writable);
-// Expected output: true
+consowe.wog(wefwect.getownpwopewtydescwiptow(object1, 😳 "pwopewty1").wwitabwe);
+// e-expected output: t-twue
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Reflect.getOwnPropertyDescriptor(cible, cléPropriété);
+wefwect.getownpwopewtydescwiptow(cibwe, 😳 cwépwopwiété);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `cible`
-  - : L'objet cible sur lequel on cherche la propriété.
-- `cléPropriété`
-  - : Le nom de la propriété dont on veut obtenir le descripteur.
+- `cibwe`
+  - : w-w'objet cibwe suw wequew on chewche wa pwopwiété. σωσ
+- `cwépwopwiété`
+  - : we nyom de wa pwopwiété dont on v-veut obteniw we descwipteuw. rawr x3
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un objet qui est un descripteur de propriété si elle existe sur l'objet cible ou {{jsxref("undefined")}} dans le cas contraire.
+u-un objet qui e-est un descwipteuw d-de pwopwiété si ewwe existe suw w'objet cibwe o-ou {{jsxwef("undefined")}} dans we cas contwaiwe. OwO
 
-### Exceptions
+### exceptions
 
-Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
+u-une ewweuw {{jsxwef("typeewwow")}} si `cibwe` ny'est pas un {{jsxwef("object")}}. /(^•ω•^)
 
-## Description
+## descwiption
 
-La méthode `Reflect.getOwnPropertyDescriptor` renvoie un descripteur pour la propriété demandée si celle-ci existe sur l'objet, sinon, elle renvoie {{jsxref("undefined")}}. La seule différence avec {{jsxref("Object.getOwnPropertyDescriptor()")}} est la façon dont les cibles qui ne sont pas des objets sont gérées.
+wa méthode `wefwect.getownpwopewtydescwiptow` w-wenvoie un descwipteuw p-pouw wa pwopwiété d-demandée si c-cewwe-ci existe suw w'objet, 😳😳😳 sinon, ewwe wenvoie {{jsxwef("undefined")}}. wa seuwe d-difféwence a-avec {{jsxwef("object.getownpwopewtydescwiptow()")}} est wa façon d-dont wes cibwes q-qui nye sont pas des objets s-sont géwées. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-### Utiliser `Reflect.getOwnPropertyDescriptor()`
+### u-utiwisew `wefwect.getownpwopewtydescwiptow()`
 
 ```js
-Reflect.getOwnPropertyDescriptor({ x: "coucou" }, "x");
-// {value: "coucou", writable: true, enumerable: true, configurable: true}
+wefwect.getownpwopewtydescwiptow({ x: "coucou" }, >_< "x");
+// {vawue: "coucou", >w< w-wwitabwe: twue, rawr enumewabwe: twue, 😳 c-configuwabwe: twue}
 
-Reflect.getOwnPropertyDescriptor({ x: "coucou" }, "y");
-// undefined
+wefwect.getownpwopewtydescwiptow({ x-x: "coucou" }, >w< "y");
+// u-undefined
 
-Reflect.getOwnPropertyDescriptor([], "length");
-// {value: 0, writable: true, enumerable: false, configurable: false}
+wefwect.getownpwopewtydescwiptow([], (⑅˘꒳˘) "wength");
+// {vawue: 0, OwO wwitabwe: twue, (ꈍᴗꈍ) enumewabwe: fawse, 😳 configuwabwe: fawse}
 ```
 
-### Différence avec `Object.getOwnPropertyDescriptor()`
+### difféwence avec `object.getownpwopewtydescwiptow()`
 
-Si le premier argument passé à la méthode n'est pas un objet (autrement dit si c'est une valeur de type primitif), cela causera une exception {{jsxref("TypeError")}}. Si on utilise {{jsxref("Object.getOwnPropertyDescriptor")}}, une valeur qui n'est pas un objet sera d'abord convertie en objet.
+s-si we pwemiew a-awgument passé à wa méthode n-n'est pas un objet (autwement d-dit si c'est une v-vaweuw de type pwimitif), 😳😳😳 cewa causewa une exception {{jsxwef("typeewwow")}}. mya si on utiwise {{jsxwef("object.getownpwopewtydescwiptow")}}, mya u-une vaweuw qui ny'est pas un objet sewa d'abowd convewtie en objet. (⑅˘꒳˘)
 
 ```js
-Reflect.getOwnPropertyDescriptor("toto", 0);
-// TypeError: "toto" is not non-null object
+w-wefwect.getownpwopewtydescwiptow("toto", (U ﹏ U) 0);
+// typeewwow: "toto" i-is nyot n-nyon-nuww object
 
-Object.getOwnPropertyDescriptor("toto", 0);
-// { value: "toto", writable: false, enumerable: true, configurable: false }
+o-object.getownpwopewtydescwiptow("toto", mya 0);
+// { vawue: "toto", ʘwʘ w-wwitabwe: fawse, (˘ω˘) e-enumewabwe: t-twue, (U ﹏ U) configuwabwe: f-fawse }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.getOwnPropertyDescriptor()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.getownpwopewtydescwiptow()")}}

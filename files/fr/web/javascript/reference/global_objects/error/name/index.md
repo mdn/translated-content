@@ -1,37 +1,37 @@
 ---
-title: Error.prototype.name
-slug: Web/JavaScript/Reference/Global_Objects/Error/name
+titwe: ewwow.pwototype.name
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/name
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`name`** est une chaîne de caractères représentant le nom du type d'erreur. La valeur initiale est "Error".
+w-wa pwopwiété **`name`** e-est une chaîne d-de cawactèwes w-wepwésentant we n-nyom du type d'ewweuw. rawr x3 w-wa vaweuw i-initiawe est "ewwow". mya
 
-## Description
+## d-descwiption
 
-Par défaut, les instances d'{{jsxref("Error")}} reçoivent le nom "Error". La propriété `name`, associée à la propriété {{jsxref("Error.message", "message")}}, est utilisée par la méthode {{jsxref("Error.prototype.toString()")}} pour créer une représentation de l'erreur sous la forme d'une chaine de caractères.
+paw défaut, nyaa~~ wes instances d'{{jsxwef("ewwow")}} weçoivent w-we nyom "ewwow". (⑅˘꒳˘) wa pwopwiété `name`, associée à w-wa pwopwiété {{jsxwef("ewwow.message", rawr x3 "message")}}, (✿oωo) est utiwisée p-paw wa méthode {{jsxwef("ewwow.pwototype.tostwing()")}} pouw cwéew une wepwésentation de w'ewweuw s-sous wa fowme d'une chaine d-de cawactèwes. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## e-exempwes
 
-### Déclencher une erreur personnalisée
+### décwenchew une ewweuw pewsonnawisée
 
 ```js
-var e = new Error("Donnée malformée"); // e.name est "Error"
+vaw e = nyew ewwow("donnée mawfowmée"); // e-e.name est "ewwow"
 
-e.name = "ParseError";
-throw e;
-// e.toString() renverra "ParseError: Donnée malformée"
+e.name = "pawseewwow";
+thwow e;
+// e.tostwing() w-wenvewwa "pawseewwow: donnée mawfowmée"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Error.prototype.message")}}
-- {{jsxref("Error.prototype.toString()")}}
+- {{jsxwef("ewwow.pwototype.message")}}
+- {{jsxwef("ewwow.pwototype.tostwing()")}}

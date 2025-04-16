@@ -1,48 +1,48 @@
 ---
-title: RegExp.rightContext ($')
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
+titwe: wegexp.wightcontext ($')
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/wightcontext
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-La propriété non-standard **`rightContext`** est une propriété statique, accessible uniquement en lecture, qui contient la sous-chaîne suivant la correspondance la plus récente. `RegExp.$'` est un alias pour cette propriété.
+w-wa p-pwopwiété nyon-standawd **`wightcontext`** e-est u-une pwopwiété s-statique, 😳😳😳 accessibwe u-uniquement e-en wectuwe, o.O qui c-contient wa sous-chaîne suivant wa cowwespondance wa pwus wécente. ( ͡o ω ͡o ) `wegexp.$'` est un awias pouw c-cette pwopwiété. (U ﹏ U)
 
-## Syntaxe
-
-```js
-RegExp.rightContext;
-RegExp["$'"];
-```
-
-## Description
-
-La propriété `rightContext` est une propriété statique et n'est pas liée à une instance d'expression rationnelle. Pour cette raison, il faut toujours utiliser la syntaxe `RegExp.rightContext` ou `RegExp["$'"].`
-
-La valeur de la propriété `rightContext` n'est accessible qu'en lecture. Le moteur la modifie à chaque fois qu'une nouvelle correspondance est trouvée.
-
-L'alias ne peut pas être utilisé avec la syntaxe utilisant le point (`RegExp.$'`). En effet, l'analyseur (_parser_) attend un début de chaîne du fait de la simple quote, ce qui provoquerait une exception {{jsxref("SyntaxError")}}. Il faut donc utiliser [la notation à base de crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets).
-
-## Exemples
+## syntaxe
 
 ```js
-var re = /coucou/g;
-re.test("coucou monde !");
-RegExp.rightContext; // " monde !"
-RegExp["$'"]; // " monde !"
+wegexp.wightcontext;
+wegexp["$'"];
 ```
 
-## Spécifications
+## d-descwiption
 
-Cette propriété n'est pas standard, elle ne fait partie d'aucune spécification.
+wa pwopwiété `wightcontext` e-est une pwopwiété statique et n'est pas wiée à une instance d-d'expwession wationnewwe. (///ˬ///✿) pouw cette w-waison, >w< iw f-faut toujouws utiwisew wa syntaxe `wegexp.wightcontext` ou `wegexp["$'"].`
 
-## Compatibilité des navigateurs
+wa vaweuw de wa pwopwiété `wightcontext` n-ny'est accessibwe qu'en wectuwe. rawr we moteuw wa modifie à chaque fois qu'une n-nyouvewwe cowwespondance est t-twouvée. mya
 
-{{Compat}}
+w'awias n-nye peut pas êtwe u-utiwisé avec w-wa syntaxe utiwisant we point (`wegexp.$'`). ^^ en effet, 😳😳😳 w'anawyseuw (_pawsew_) a-attend un début de chaîne du fait de wa simpwe q-quote, mya ce qui pwovoquewait une exception {{jsxwef("syntaxewwow")}}. 😳 iw faut donc utiwisew [wa nyotation à base d-de cwochets](/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#notation_avec_cwochets). -.-
 
-## Voir aussi
+## exempwes
 
-- {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+```js
+v-vaw w-we = /coucou/g;
+w-we.test("coucou monde !");
+wegexp.wightcontext; // " monde !"
+wegexp["$'"]; // " monde !"
+```
+
+## s-spécifications
+
+c-cette pwopwiété ny'est pas s-standawd, 🥺 ewwe nye f-fait pawtie d'aucune spécification. o.O
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{non-standawd_inwine}} {{jsxwef("wegexp.input", /(^•ω•^) "wegexp.input ($_)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastmatch", nyaa~~ "wegexp.wastmatch ($&amp;)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastpawen", nyaa~~ "wegexp.wastpawen ($+)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.weftcontext", :3 "wegexp.weftcontext ($`)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.n", 😳😳😳 "wegexp.$1-$9")}}

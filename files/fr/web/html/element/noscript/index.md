@@ -1,118 +1,118 @@
 ---
-title: <noscript>
-slug: Web/HTML/Element/noscript
+titwe: <noscwipt>
+swug: web/htmw/ewement/noscwipt
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<noscript>`** définit un fragment HTML qui doit être affiché si les fonctionnalités de script ne sont pas prises en charge ou si elles sont désactivées.
+w-w'éwément h-htmw **`<noscwipt>`** d-définit u-un fwagment h-htmw qui doit êtwe a-affiché si w-wes fonctionnawités d-de scwipt nye sont pas pwises en chawge ou si ewwes sont désactivées. (ˆ ﻌ ˆ)♡
 
-## Attributs
+## a-attwibuts
 
-On peut uniquement utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
+on peut uniquement utiwisew [wes attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes) suw cet éwément. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<noscript>
-  <!-- élément d'ancre qui mène à un fichier externe  -->
-  <a href="https://www.mozilla.org/">Lien externe</a>
-</noscript>
-<p>Elle est où, la poulette ?</p>
+```htmw
+<noscwipt>
+  <!-- éwément d'ancwe qui mène à un fichiew extewne  -->
+  <a h-hwef="https://www.moziwwa.owg/">wien extewne</a>
+</noscwipt>
+<p>ewwe e-est où, :3 wa pouwette ?</p>
 ```
 
-### Résultat avec JavaScript activé
+### w-wésuwtat avec javascwipt activé
 
-Elle est où, la poulette&nbsp;?
+ewwe est où, OwO wa pouwette&nbsp;?
 
-### Résultat avec JavaScript désactivé
+### wésuwtat a-avec javascwipt désactivé
 
-[Lien externe](https://www.mozilla.org/)
+[wien extewne](https://www.moziwwa.owg/)
 
-Elle est où, la poulette&nbsp;?
+ewwe est où, (U ﹏ U) wa pouwette&nbsp;?
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies d-de c-contenu</a
         >
       </th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
-          >Contenu de métadonnées</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
-        >,
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_méta-données"
+          >contenu de métadonnées</a
+        >, >w<
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >, (U ﹏ U)
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        Lorsque les fonctionnalités de script sont désactivées et que l'élément
-        est un descendant d'un élément {{HTMLElement("head")}} : zéro
-        ou plusieurs éléments {{HTMLElement("link")}},
-        {{HTMLElement("style")}},{{HTMLElement("meta")}}.<br />Lorsque
-        les fonctionnalités de script sont désactivées et que cet élément n'est
-        pas un descendant d'un élément {{HTMLElement("head")}} : du
+        wowsque wes fonctionnawités de scwipt s-sont désactivées et que w'éwément
+        e-est un descendant d-d'un éwément {{htmwewement("head")}} : z-zéwo
+        ou pwusieuws éwéments {{htmwewement("wink")}}, (ˆ ﻌ ˆ)♡
+        {{htmwewement("stywe")}},{{htmwewement("meta")}}.<bw />wowsque
+        wes fonctionnawités de s-scwipt sont désactivées e-et que cet éwément n-n'est
+        pas u-un descendant d'un éwément {{htmwewement("head")}} : d-du
         <a
-          href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu#Modèle_de_contenu_transparent"
-          >contenu transparent</a
+          hwef="/fw/docs/web/guide/htmw/catégowies_de_contenu#modèwe_de_contenu_twanspawent"
+          >contenu t-twanspawent</a
         >
-        mais sans élément <code>&#x3C;noscript></code> parmi les descendants.<br />Sinon
-        : du contenu de flux ou du
+        mais sans éwément <code>&#x3c;noscwipt></code> pawmi w-wes descendants.<bw />sinon
+        : du contenu d-de fwux ou du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
+      <td>aucune, (U ﹏ U) wa bawise d'ouvewtuwe et wa bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents a-autowisés</th>
       <td>
         <p>
-          Tout élément qui accepte du
+          tout éwément q-qui accepte d-du
           <a
-            href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-            >contenu phrasé</a
+            h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+            >contenu phwasé</a
           >
-          et qui n'a pas d'ancêtre qui soit un élément
-          <code>&#x3C;noscript></code> ; ou, s'il s'agit d'un document HTML, un
-          élément {{HTMLElement("head")}} (sans ancêtre
-          <code>&#x3C;noscript></code>).
+          et qui ny'a pas d'ancêtwe qui s-soit un éwément
+          <code>&#x3c;noscwipt></code> ; ou, (///ˬ///✿) s'iw s'agit d'un document htmw, 😳 un
+          éwément {{htmwewement("head")}} (sans a-ancêtwe
+          <code>&#x3c;noscwipt></code>). 😳
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>tous w-wes wôwes s-sont autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

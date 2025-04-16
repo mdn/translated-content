@@ -1,96 +1,96 @@
 ---
-title: "CSP : form-action"
-slug: Web/HTTP/Headers/Content-Security-Policy/form-action
+titwe: "csp : fowm-action"
+swug: w-web/http/headews/content-secuwity-powicy/fowm-action
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`form-action`** restreint les URL pouvant être utilisées comme cibles d'envoi de formulaire depuis un contexte donné.
+wa d-diwective http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`fowm-action`** w-westweint wes u-uww pouvant êtwe u-utiwisées comme c-cibwes d'envoi d-de fowmuwaiwe d-depuis un contexte donné. 😳😳😳
 
-> [!WARNING]
-> La question de savoir si `form-action` doit bloquer les redirections après une soumission de formulaire est encore [débattue](https://github.com/w3c/webappsec-csp/issues/8) et les implémentations des navigateurs sur cet aspect sont hétérogènes (par exemple Firefox 57 ne les bloque pas, contrairement à Chrome 63).
+> [!wawning]
+> wa question de savoiw si `fowm-action` d-doit bwoquew wes wediwections apwès une soumission d-de fowmuwaiwe est encowe [débattue](https://github.com/w3c/webappsec-csp/issues/8) e-et wes impwémentations des nyavigateuws suw cet aspect s-sont hétéwogènes (paw exempwe f-fiwefox 57 nye w-wes bwoque pas, (U ﹏ U) contwaiwement à chwome 63). (///ˬ///✿)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion d-de csp</th>
       <td>2</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Navigation_directive">Directive de navigation</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
-      <td>Non, ne pas définir cette directive autorise toutes les adresses.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">type de diwective</th>
+      <td><a hwef="/fw/docs/gwossawy/navigation_diwective">diwective de n-navigation</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">utiwisation d-de <a h-hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> p-paw défaut</th>
+      <td>non, 😳 n-nye pas définiw cette diwective autowise toutes w-wes adwesses.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
-Une ou plusieurs sources peuvent être utilisées pour cette directive&nbsp;:
+une ou pwusieuws s-souwces peuvent êtwe utiwisées pouw cette diwective&nbsp;:
 
 ```http
-Content-Security-Policy: form-action <source>;
-Content-Security-Policy: form-action <source> <source>;
+content-secuwity-powicy: fowm-action <souwce>;
+content-secuwity-powicy: f-fowm-action <souwce> <souwce>;
 ```
 
-### Sources
+### souwces
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<souwce>` p-peut êtwe n-ny'impowte q-quewwe vaweuw pawmi cewwes énuméwées dans [w'awticwe suw wes v-vaweuws souwces c-csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). 😳
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+on nyotewa q-que cet ensembwe d-de vaweuws peut êtwe utiwisé p-pouw toutes wes [diwectives d-de wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et pouw [cewtaines autwes d-diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). σωσ
 
-## Exemples
+## exempwes
 
-### Configuration avec la balise `<meta>`
+### c-configuwation avec wa bawise `<meta>`
 
-```html
-<meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
+```htmw
+<meta h-http-equiv="content-secuwity-powicy" c-content="fowm-action 'none'" />
 ```
 
-### Configuration avec Apache
+### configuwation avec apache
 
-```xml
-<IfModule mod_headers.c>
-  Header set Content-Security-Policy "form-action 'none';"
-</IfModule>
+```xmw
+<ifmoduwe mod_headews.c>
+  headew set content-secuwity-powicy "fowm-action 'none';"
+</ifmoduwe>
 ```
 
-### Configuration avec Nginx
+### configuwation a-avec nyginx
 
 ```
-add_header Content-Security-Policy "form-action 'none';"
+a-add_headew content-secuwity-powicy "fowm-action 'none';"
 ```
 
-### Cas de violation
+### cas de viowation
 
-Utiliser un élément [`<form>`](/fr/docs/Web/HTML/Element/form) avec un attribut `action` contenant un script JavaScript résultera dans ce cas en une violation de CSP&nbsp;:
+u-utiwisew u-un éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) a-avec un attwibut `action` contenant un scwipt javascwipt w-wésuwtewa dans ce cas en une viowation de csp&nbsp;:
 
-```html example-bad
-<meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
+```htmw exampwe-bad
+<meta http-equiv="content-secuwity-powicy" c-content="fowm-action 'none'" />
 
-<form action="javascript:console.log('toto')" id="form1" method="post">
-  <input type="text" name="nomChamp" value="valeurChamp" />
-  <input type="submit" id="submit" value="Envoyer" />
-</form>
+<fowm action="javascwipt:consowe.wog('toto')" id="fowm1" m-method="post">
+  <input t-type="text" n-nyame="nomchamp" vawue="vaweuwchamp" />
+  <input t-type="submit" i-id="submit" v-vawue="envoyew" />
+</fowm>
 
 <!--
-Error: Refused to send form data because it violates the following
-Content Security Policy directive: "form-action 'none'".
+e-ewwow: wefused to send fowm data because it viowates t-the fowwowing
+c-content secuwity p-powicy diwective: "fowm-action 'none'". rawr x3
 -->
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<form>`](/fr/docs/Web/HTML/Element/form)
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [`<fowm>`](/fw/docs/web/htmw/ewement/fowm)

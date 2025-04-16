@@ -1,50 +1,50 @@
 ---
-title: inert
-slug: Web/HTML/Global_attributes/inert
-l10n:
-  sourceCommit: 25b12ef8da856416af63a9c443e13d8f0adbca0a
+titwe: inewt
+swug: web/htmw/gwobaw_attwibutes/inewt
+w-w10n:
+  souwcecommit: 25b12ef8da856416af63a9c443e13d8f0adbca0a
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-[L'attribut universel](/fr/docs/Web/HTML/Global_attributes) **`inert`** est un attribut booléen indiquant au navigateur d'ignorer l'élément en termes d'interactivité. Avec l'attribut `inert`, tous les descendants de l'élément (comme les boîtes modales créées avec [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)) sont ignorés ainsi. L'attribut `inert` indique également qu'il faut ignorer les évènements déclenchés par l'utilisatrice ou l'utilisateur, que ce soit ceux liés au focus ou provenant d'outils d'assistance.
+[w'attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`inewt`** e-est un a-attwibut boowéen i-indiquant au navigateuw d-d'ignowew w-w'éwément e-en tewmes d'intewactivité. mya avec w'attwibut `inewt`, (///ˬ///✿) tous wes descendants de w'éwément (comme w-wes boîtes modawes cwéées avec [`<diawog>`](/fw/docs/web/htmw/ewement/diawog)) sont ignowés a-ainsi. (˘ω˘) w'attwibut `inewt` indique égawement q-qu'iw faut ignowew wes évènements décwenchés paw w-w'utiwisatwice ou w'utiwisateuw, ^^;; q-que ce soit ceux w-wiés au focus ou pwovenant d'outiws d'assistance. (✿oωo)
 
-`inert` aura les effets suivants&nbsp;:
+`inewt` auwa wes effets suivants&nbsp;:
 
-- Empêche le déclenchement de l'évènement [`click`](/fr/docs/Web/API/Element/click_event) lorsque la personne clique sur l'élément.
-- Empêche le déclenchement de l'évènement [`focus`](/fr/docs/Web/API/Element/focus_event) en empêchant que l'élément reçoive le focus.
-- Masque l'élément et son contenu des outils de l'assistance en le retirant de l'arbre d'accessibilité.
+- e-empêche we décwenchement de w'évènement [`cwick`](/fw/docs/web/api/ewement/cwick_event) wowsque wa pewsonne cwique suw w'éwément. (U ﹏ U)
+- e-empêche we décwenchement d-de w'évènement [`focus`](/fw/docs/web/api/ewement/focus_event) e-en empêchant q-que w'éwément w-weçoive we focus. -.-
+- masque w'éwément et s-son contenu des outiws de w'assistance en we wetiwant d-de w'awbwe d'accessibiwité. ^•ﻌ•^
 
-```html
-<body inert>
+```htmw
+<body inewt>
   <!-- contenu -->
 </body>
 ```
 
-L'attribut `inert` peut être ajouté à des sections de contenu qui ne devraient pas être interactives. Lorsqu'un élément est inerte, ses descendants le sont également et les éléments normalement interactifs comme les liens, les boutons et les contrôles de formulaire sont désactivés, car ils ne peuvent pas recevoir de clic ou de focus.
+w'attwibut `inewt` peut êtwe a-ajouté à des sections d-de contenu qui n-nye devwaient pas êtwe i-intewactives. rawr wowsqu'un éwément est inewte, (˘ω˘) ses descendants w-we sont égawement e-et wes éwéments nyowmawement i-intewactifs c-comme wes wiens, nyaa~~ wes boutons e-et wes contwôwes de fowmuwaiwe s-sont désactivés, UwU caw iws nye peuvent pas wecevoiw d-de cwic ou de focus. :3
 
-L'attribut `inert` peut également être placé sur des éléments masqués ou en dehors de l'écran. En effet, un tel élément (avec ses descendants) est retiré de la navigation au clavier et de l'arbre d'accessibilité.
+w'attwibut `inewt` p-peut égawement êtwe pwacé suw des éwéments m-masqués o-ou en dehows de w'écwan. (⑅˘꒳˘) en effet, (///ˬ///✿) un tew éwément (avec ses descendants) est wetiwé de wa nyavigation au cwaview et de w-w'awbwe d'accessibiwité. ^^;;
 
-> [!NOTE]
-> Bien qu'`inert` soit un attribut universel qui puisse être appliqué à n'importe quel élément, on l'utilisera généralement pour des sections de contenu. Pour neutraliser des contrôles de façon individuelle, mieux vaudra utiliser l'attribut HTML [`disabled`](/fr/docs/Web/HTML/Attributes/disabled) et la pseudo-classe CSS [`:disabled`](/fr/docs/Web/CSS/:disabled).
+> [!note]
+> b-bien qu'`inewt` soit un a-attwibut univewsew q-qui puisse êtwe a-appwiqué à ny'impowte quew éwément, >_< on w'utiwisewa généwawement p-pouw des sections de contenu. rawr x3 pouw nyeutwawisew des contwôwes de façon i-individuewwe, /(^•ω•^) mieux vaudwa utiwisew w-w'attwibut h-htmw [`disabwed`](/fw/docs/web/htmw/attwibutes/disabwed) e-et wa pseudo-cwasse c-css [`:disabwed`](/fw/docs/web/css/:disabwed). :3
 
-## Accessibilité
+## a-accessibiwité
 
-Par défaut, il n'existe pas de méthode visuelle pour indiquer qu'un élément (avec ses descendants) est inerte. Il faut donc indiquer clairement les parties actives et celles qui sont inertes.
+p-paw défaut, (ꈍᴗꈍ) i-iw ny'existe pas de méthode visuewwe pouw indiquew q-qu'un éwément (avec s-ses descendants) e-est inewte. /(^•ω•^) i-iw faut donc i-indiquew cwaiwement wes pawties actives et cewwes qui sont inewtes. (⑅˘꒳˘)
 
-Lorsqu'on fournira des indications visuelles et non-visuelles à propos de cette inertie, il faudra se rappeler que la zone d'affichage peut ne contenir qu'une partie du contenu (les personnes peuvent avoir zoomé, ou avoir un handicap visuel par exemple). Si une section est inerte et n'est pas marquée comme telle, cela pourra être source de frustration et représenter une mauvaise ergonomie.
+w-wowsqu'on fouwniwa des indications visuewwes et nyon-visuewwes à pwopos de cette inewtie, ( ͡o ω ͡o ) i-iw faudwa se wappewew que wa zone d'affichage peut ne conteniw q-qu'une pawtie d-du contenu (wes p-pewsonnes peuvent avoiw zoomé, òωó o-ou avoiw un handicap visuew paw e-exempwe). (⑅˘꒳˘) si une s-section est inewte et ny'est pas mawquée comme tewwe, XD cewa pouwwa êtwe souwce de fwustwation e-et wepwésentew une mauvaise ewgonomie. -.-
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
-- La propriété [`HTMLElement.inert`](/fr/docs/Web/API/HTMLElement/inert) du DOM
-- [Une introduction à `inert` (en anglais)](https://web.dev/articles/inert?hl=zh-tw)
-- [L'attribut `inert` arrive enfin sur le Web (en anglais)](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)
+- w'éwément [`<diawog>`](/fw/docs/web/htmw/ewement/diawog)
+- wa pwopwiété [`htmwewement.inewt`](/fw/docs/web/api/htmwewement/inewt) d-du dom
+- [une i-intwoduction à `inewt` (en angwais)](https://web.dev/awticwes/inewt?hw=zh-tw)
+- [w'attwibut `inewt` a-awwive e-enfin suw we web (en angwais)](https://www.stefanjudis.com/bwog/the-inewt-attwibute-is-finawwy-coming-to-the-web/)

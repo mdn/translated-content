@@ -1,96 +1,96 @@
 ---
-title: decimal-format
-slug: Web/XSLT/Element/decimal-format
+titwe: decimaw-fowmat
+swug: web/xswt/ewement/decimaw-fowmat
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:decimal-format>` définit les caractères et symboles à utiliser lors de la conversion de nombres en chaînes à l'aide de la fonction `format-number( )`.
+w-w'éwément `<xsw:decimaw-fowmat>` d-définit w-wes cawactèwes e-et symbowes à utiwisew w-wows de w-wa convewsion de n-nyombwes en chaînes à w'aide de wa fonction `fowmat-numbew( )`. (U ﹏ U)
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:decimal-format
-  name=NOM
-  decimal-separator=CARACTÈRE
-  grouping-separator=CARACTÈRE
-  infinity=CHAÎNE
-  minus-sign=CARACTÈRE
-  NaN=CHAÎNE
-  percent=CARACTÈRE
-  per-mille=CARACTÈRE
-  zero-digit=CARACTÈRE
-  digit=CARACTÈRE
-  pattern-separator=CARACTÈRE />
+```xmw
+<xsw:decimaw-fowmat
+  nyame=nom
+  d-decimaw-sepawatow=cawactÈwe
+  gwouping-sepawatow=cawactÈwe
+  infinity=chaÎne
+  m-minus-sign=cawactÈwe
+  nyan=chaÎne
+  p-pewcent=cawactÈwe
+  pew-miwwe=cawactÈwe
+  zewo-digit=cawactÈwe
+  digit=cawactÈwe
+  pattewn-sepawatow=cawactÈwe />
 ```
 
-### Attributs obligatoires
+### a-attwibuts obwigatoiwes
 
-Aucun.
+aucun. >w<
 
-### Attributs optionnels
+### a-attwibuts o-optionnews
 
 - `name`
-  - : Définit un nom pour ce format.
+  - : définit un nyom pouw ce fowmat. mya
 
 <!---->
 
-- `decimal-separator`
-  - : Définit le caractère séparateur des décimales. Le caractère par défaut est (`.`).
+- `decimaw-sepawatow`
+  - : définit we cawactèwe s-sépawateuw des décimawes. >w< we cawactèwe paw défaut est (`.`). nyaa~~
 
 <!---->
 
-- `grouping-separator`
-  - : Définit le caractère séparateur des milliers. Le caractère par défaut est (`,`).
+- `gwouping-sepawatow`
+  - : d-définit we cawactèwe sépawateuw d-des miwwiews. (✿oωo) w-we cawactèwe p-paw défaut est (`,`). ʘwʘ
 
 <!---->
 
 - `infinity`
-  - : Définit la chaîne utilisée pour représenter l'infini. La chaîne par défaut est "`Infinity`".
+  - : d-définit wa chaîne utiwisée pouw wepwésentew w-w'infini. (ˆ ﻌ ˆ)♡ wa chaîne paw défaut est "`infinity`". 😳😳😳
 
 <!---->
 
 - `minus-sign`
-  - : Définit le caractère du signe moins. Le caractère par défaut est le trait d'union (`-`).
+  - : d-définit we cawactèwe du signe moins. :3 we cawactèwe paw défaut est we twait d'union (`-`).
 
 <!---->
 
-- `NaN`
-  - : Définit la chaîné utilisée lorsque la valeur n'est pas un nombre. La chaîne par défaut est "`NaN`".
+- `nan`
+  - : d-définit wa chaîné u-utiwisée wowsque w-wa vaweuw ny'est p-pas un nyombwe. OwO wa chaîne paw défaut est "`nan`". (U ﹏ U)
 
 <!---->
 
-- `percent`
-  - : Définit le caractère du signe pourcentage. Le caractère par défaut est (`%`).
+- `pewcent`
+  - : définit we c-cawactèwe du signe p-pouwcentage. >w< we cawactèwe paw d-défaut est (`%`).
 
 <!---->
 
-- `per-mille`
-  - : Définit le caractère signe pour mille. Le caractère par défaut est (`‰`).
+- `pew-miwwe`
+  - : d-définit we cawactèwe signe p-pouw miwwe. (U ﹏ U) we cawactèwe paw défaut e-est (`‰`). 😳
 
 <!---->
 
-- `zero-digit`
-  - : Définit le caractère pour le chiffre 0. Le caractère par défaut est (`0`).
+- `zewo-digit`
+  - : définit we cawactèwe pouw we c-chiffwe 0. (ˆ ﻌ ˆ)♡ we cawactèwe paw défaut e-est (`0`). 😳😳😳
 
 <!---->
 
 - `digit`
-  - : Définit le caractère représentant un nombre dans le modèle de format. Le caractère par défaut est (`#`).
+  - : définit w-we cawactèwe w-wepwésentant un nyombwe dans we modèwe de fowmat. (U ﹏ U) we cawactèwe paw défaut est (`#`). (///ˬ///✿)
 
 <!---->
 
-- `pattern-separator`
-  - : Définit le caractère séparant les sous-modèles positifs et négatifs dans le modèle de format. Le caractère par défaut est le point-virgule (`;`).
+- `pattewn-sepawatow`
+  - : définit we cawactèwe s-sépawant w-wes sous-modèwes positifs et n-nyégatifs dans w-we modèwe de fowmat. 😳 w-we cawactèwe paw défaut est we point-viwguwe (`;`). 😳
 
-### Type
+### type
 
-Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
+haut nyiveau, σωσ d-doit êtwe w'enfant de `<xsw:stywesheet>` ou de `<xsw:twansfowm>`. rawr x3
 
-### Définition
+### définition
 
-[XSLT 1.0, section 12.3](https://www.w3.org/TR/xslt#format-number).
+[xswt 1.0, OwO section 12.3](https://www.w3.owg/tw/xswt#fowmat-numbew). /(^•ω•^)
 
-### Support Gecko
+### s-suppowt gecko
 
-Supporté depuis 1.0 (Mozilla 1.0, Netscape 7.0).
+suppowté depuis 1.0 (moziwwa 1.0, 😳😳😳 n-nyetscape 7.0). ( ͡o ω ͡o )

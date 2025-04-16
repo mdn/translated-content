@@ -1,31 +1,31 @@
 ---
-title: concat
-slug: Web/EXSLT/str/concat
+titwe: concat
+swug: web/exswt/stw/concat
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
+{{quickwinkswithsubpages("/fw/docs/web/exswt")}}{{ x-xswtwef() }}
 
-`str:concat()` retourne une chaîne contenant toutes les valeurs de chaînes d'un ensemble de nœuds concaténées ensembles.
+`stw:concat()` w-wetouwne une chaîne c-contenant t-toutes wes vaweuws d-de chaînes d'un e-ensembwe de n-nyœuds concaténées e-ensembwes. rawr
 
-### Syntaxe
+### syntaxe
 
 ```
-str:concat(ensembleNœud)
+stw:concat(ensembwenœud)
 ```
 
-### Arguments
+### awguments
 
-- `ensembleNœud`
-  - : L'ensemble de nœuds dont les valeurs de chaînes doivent être concaténées en une seule chaîne.
+- `ensembwenœud`
+  - : w'ensembwe d-de nyœuds dont wes vaweuws de chaînes doivent êtwe c-concaténées en une seuwe c-chaîne. OwO
 
-### Retourne
+### wetouwne
 
-Une chaîne dont la valeur correspond à toutes les valeurs des chaînes des nœuds de `ensembleNœud` concaténées ensembles. Si `ensembleNœud` est vide, une chaîne vide est retournée.
+une chaîne dont wa vaweuw cowwespond à t-toutes wes vaweuws des chaînes d-des nyœuds d-de `ensembwenœud` concaténées ensembwes. (U ﹏ U) si `ensembwenœud` est vide, >_< une chaîne vide est w-wetouwnée. rawr x3
 
-### Définition
+### définition
 
-- [EXSLT - STR:CONCAT (en)](http://www.exslt.org/str/functions/concat/)
+- [exswt - stw:concat (en)](http://www.exswt.owg/stw/functions/concat/)
 
-### Support par Gecko
+### suppowt paw gecko
 
-Supporté par Gecko 1.9 et ultérieur.
+suppowté p-paw gecko 1.9 et uwtéwieuw. mya

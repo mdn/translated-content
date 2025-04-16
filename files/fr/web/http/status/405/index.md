@@ -1,31 +1,31 @@
 ---
-title: 405 Method Not Allowed
-slug: Web/HTTP/Status/405
+titwe: 405 method nyot awwowed
+s-swug: web/http/status/405
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`405 Method Not Allowed`** indique que la méthode utilisée pour la requête est connue du serveur mais qu'elle n'est pas supportée par la ressource ciblée.
+w-we code de statut d-de wéponse h-http **`405 method n-nyot awwowed`** i-indique que wa m-méthode utiwisée p-pouw wa wequête est connue du sewveuw mais qu'ewwe ny'est pas suppowtée paw w-wa wessouwce cibwée. rawr
 
-Le serveur doit générer un en-tête **`Allow`** en cas de réponse 405, contenant la liste des méthodes supportées par la ressource ciblée.
+we sewveuw doit généwew u-un en-tête **`awwow`** en cas d-de wéponse 405, OwO contenant wa wiste des méthodes suppowtées p-paw wa wessouwce cibwée. (U ﹏ U)
 
-## Statut
+## statut
 
 ```
-405 Method Not Allowed
+405 method n-nyot awwowed
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Allow`](/fr/docs/Web/HTTP/Headers/Allow)
-- [HTTP/1.1&nbsp;: Définitions des codes de statut (en anglais)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
-- [Comment corriger l'erreur `405 Method Not Allowed`](https://kinsta.com/fr/blog/erreur-405-method-not-allowed/)
-- [Résoudre l'erreur HTTP 405](https://docs.microsoft.com/fr-fr/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)
+- [`awwow`](/fw/docs/web/http/headews/awwow)
+- [http/1.1&nbsp;: définitions des c-codes de statut (en angwais)](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec10.htmw)
+- [comment cowwigew w'ewweuw `405 method nyot awwowed`](https://kinsta.com/fw/bwog/ewweuw-405-method-not-awwowed/)
+- [wésoudwe w-w'ewweuw http 405](https://docs.micwosoft.com/fw-fw/aspnet/web-api/ovewview/testing-and-debugging/twoubweshooting-http-405-ewwows-aftew-pubwishing-web-api-appwications)

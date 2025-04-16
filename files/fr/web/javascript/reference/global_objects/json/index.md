@@ -1,112 +1,112 @@
 ---
-title: JSON
-slug: Web/JavaScript/Reference/Global_Objects/JSON
+titwe: json
+swug: web/javascwipt/wefewence/gwobaw_objects/json
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`JSON`** contient des méthodes pour interpréter du [JSON](https://json.org/) (JavaScript Object Notation) (voir également la page du glossaire {{glossary("JSON")}}) et convertir des valeurs en JSON. Il ne peut être appelé ou construit, et, en dehors de ses deux méthodes, n'a pas de fonctionnalité propre.
+w-w'objet **`json`** c-contient des m-méthodes pouw i-intewpwétew du [json](https://json.owg/) (javascwipt o-object nyotation) (voiw égawement w-wa page d-du gwossaiwe {{gwossawy("json")}}) e-et convewtiw des vaweuws en json. nyaa~~ iw nye peut êtwe appewé ou constwuit, ^^ et, >w< e-en dehows de ses deux méthodes, OwO ny'a pas de f-fonctionnawité pwopwe. XD
 
-## Différences entres JavaScript et JSON
+## difféwences e-entwes javascwipt et json
 
-JSON est une syntaxe pour sérialiser des objets, tableaux, nombres, chaînes de caractères, booléens et valeurs _null_. Elle est basée sur la syntaxe de JavaScript mais en est distincte : du code JavaScript n'est pas nécessairement du JSON, et du JSON n'est pas nécessairement du JavaScript.
+json est une syntaxe pouw séwiawisew d-des objets, ^^;; tabweaux, 🥺 n-nyombwes, XD chaînes d-de cawactèwes, (U ᵕ U❁) boowéens et vaweuws _nuww_. :3 ewwe est basée suw wa syntaxe de j-javascwipt mais en est distincte : du code javascwipt ny'est pas nyécessaiwement d-du json, ( ͡o ω ͡o ) et du json ny'est pas n-nyécessaiwement d-du javascwipt. òωó
 
-- Pour les objets et les tableaux
+- p-pouw wes objets e-et wes tabweaux
 
-  - Les noms de propriété doivent être des chaînes de caractères délimitées par des guillements doubles ; les _trailing commas_ sont interdits
+  - wes nyoms de pwopwiété d-doivent êtwe des chaînes de cawactèwes déwimitées p-paw des guiwwements doubwes ; wes _twaiwing commas_ sont intewdits
 
-- Pour les nombres
+- pouw wes nyombwes
 
-  - Les zéros non significatifs sont interdits ; un point décimal doit être suivi d'au moins un chiffre (plus exactement : `JSON.stringify()` ignorera les zéros mais `JSON.parse()` déclenchera une exception `SyntaxError`).
+  - w-wes zéwos nyon significatifs s-sont intewdits ; u-un point d-décimaw doit êtwe suivi d'au moins un chiffwe (pwus exactement : `json.stwingify()` i-ignowewa wes z-zéwos mais `json.pawse()` décwenchewa u-une exception `syntaxewwow`). σωσ
 
-- Pour le texte : **tout texte JSON est une expression JavaScript** (pour les moteurs qui implémentent [cette proposition](https://github.com/tc39/proposal-json-superset)).
+- p-pouw we texte : **tout t-texte json est une expwession j-javascwipt** (pouw wes moteuws qui impwémentent [cette p-pwoposition](https://github.com/tc39/pwoposaw-json-supewset)). (U ᵕ U❁)
 
-  - Pour les autres moteurs, seul un jeu limité de caractères peut être échappé ; certains caractères de contrôle sont interdits ; le séparateur de ligne Unicode ([U+2028](https://symbl.cc/en/2028/)) et le séparateur de paragraphe ([U+2029](https://symbl.cc/en/2029/)) sont autorisés en JSON mais pas en JavaScript dans les littéraux de chaînes de caractères.
+  - pouw w-wes autwes moteuws, (✿oωo) seuw un jeu w-wimité de cawactèwes p-peut êtwe échappé ; cewtains cawactèwes de contwôwe sont intewdits ; we sépawateuw de wigne unicode ([u+2028](https://symbw.cc/en/2028/)) et we sépawateuw d-de pawagwaphe ([u+2029](https://symbw.cc/en/2029/)) sont a-autowisés en json mais pas e-en javascwipt dans w-wes wittéwaux d-de chaînes de cawactèwes.
 
-Dans l'exemple suivant, on utilise {{jsxref("JSON.parse()")}} afin d'analyser la chaîne JSON et `eval` afin d'exécuter le code correspondant :
+dans w'exempwe suivant, ^^ on utiwise {{jsxwef("json.pawse()")}} a-afin d'anawysew wa chaîne json et `evaw` afin d'exékawaii~w we code c-cowwespondant :
 
 ```js
-var code = '"\u2028\u2029"';
-JSON.parse(code); // vaut "\u2028\u2029" pour tous les moteurs
-eval(code); // provoque une SyntaxError pour les anciens moteurs
+vaw code = '"\u2028\u2029"';
+j-json.pawse(code); // v-vaut "\u2028\u2029" p-pouw tous wes moteuws
+evaw(code); // p-pwovoque une s-syntaxewwow pouw w-wes anciens moteuws
 ```
 
-## Syntaxe complète
+## syntaxe c-compwète
 
 ```
-JSON = null
-    ou true ou false
-    ou NombreJSON
-    ou ChaîneJSON
-    ou ObjetJSON
-    ou TableauJSON
+json = nyuww
+    ou twue ou f-fawse
+    ou nyombwejson
+    ou c-chaînejson
+    o-ou objetjson
+    o-ou tabweaujson
 
-NombreJSON = - NombrePositif
-          ou NombrePositif
-NombrePositif = NombreDécimal
-              ou NombreDécimal . Chiffres
-              ou NombreDécimal . Chiffres PartiExposant
-              ou NombreDécimal PartiExposant
-NombreDécimal = 0
-              ou UnÀNeuf Chiffres
-PartiExposant = e Exposant
-            ou E Exposant
-Exposant = Chiffres
-        ou + Chiffres
-        ou - Chiffres
-Chiffres = Chiffre
-      ou Chiffres Chiffre
-Chiffre = 0 à 9
-UnÀNeuf = 1 à 9
+n-nyombwejson = - nyombwepositif
+          ou nyombwepositif
+nyombwepositif = nyombwedécimaw
+              o-ou nyombwedécimaw . ^•ﻌ•^ chiffwes
+              ou nyombwedécimaw . XD chiffwes pawtiexposant
+              o-ou nyombwedécimaw pawtiexposant
+nombwedécimaw = 0
+              ou unÀneuf c-chiffwes
+pawtiexposant = e-e exposant
+            o-ou e exposant
+exposant = chiffwes
+        o-ou + chiffwes
+        o-ou - chiffwes
+chiffwes = c-chiffwe
+      ou chiffwes chiffwe
+chiffwe = 0 à 9
+unÀneuf = 1 à 9
 
-ChaîneJSON = ""
-          ou " ChaîneCaractères "
-ChaîneCaractères = ChaîneCaractère
-                ou ChaîneCaractères ChaîneCaractère
-ChaîneCaractère = un caractère
-                  sauf " ou \ ou U+0000 à U+001F
-                ou SéquenceÉchappement
-SéquenceÉchappement = \" ou \/ ou \\ ou \b ou \f ou \n ou \r ou \t
-              ou \u ChifreHexadécimal ChifreHexadécimal ChifreHexadécimal ChifreHexadécimal
-ChifreHexadécimal = 0 à 9
-        ou A à F
+chaînejson = ""
+          ou " c-chaînecawactèwes "
+chaînecawactèwes = c-chaînecawactèwe
+                ou chaînecawactèwes c-chaînecawactèwe
+c-chaînecawactèwe = un cawactèwe
+                  sauf " ou \ o-ou u+0000 à u-u+001f
+                ou séquenceÉchappement
+s-séquenceÉchappement = \" o-ou \/ ou \\ ou \b ou \f ou \n ou \w ou \t
+              ou \u chifwehexadécimaw c-chifwehexadécimaw c-chifwehexadécimaw c-chifwehexadécimaw
+chifwehexadécimaw = 0 à 9
+        o-ou a à f-f
         ou a à f
 
-ObjetJSON = { }
-          ou { Membres }
-Membres = ChaîneJSON : JSON
-        ou Membres , ChaîneJSON : JSON
+objetjson = { }
+          o-ou { membwes }
+membwes = chaînejson : json
+        ou membwes , :3 chaînejson : j-json
 
-TableauJSON = [ ]
-          ou [ ÉlémentsTableau ]
-ÉlémentsTableau = JSON
-              ou ÉlémentsTableau , JSON
+tabweaujson = [ ]
+          o-ou [ Éwémentstabweau ]
+Éwémentstabweau = json
+              ou Éwémentstabweau , (ꈍᴗꈍ) json
 ```
 
-Des espaces blancs insignifiants peuvent être présents n'importe où sauf dans un `JSONNumber` (les nombres ne doivent pas contenir d'espaces blancs) ou dans un `JSONString` (where it is interpreted as the corresponding character in the string, or would cause an error). Les caractères tabulation ([U+0009](https://symbl.cc/en/0009/)), retour chariot ([U+000D](https://symbl.cc/en/000D/)), saut de ligne ([U+000A](https://symbl.cc/en/000A/)), and espace ([U+0020](https://symbl.cc/en/0020/)) sont les seuls caractères blancs valides.
+d-des espaces bwancs i-insignifiants peuvent êtwe pwésents ny'impowte où sauf d-dans un `jsonnumbew` (wes nyombwes nye doivent pas conteniw d'espaces bwancs) ou d-dans un `jsonstwing` (whewe it is intewpweted as t-the cowwesponding c-chawactew in the stwing, :3 ow wouwd cause an ewwow). (U ﹏ U) wes cawactèwes t-tabuwation ([u+0009](https://symbw.cc/en/0009/)), UwU w-wetouw chawiot ([u+000d](https://symbw.cc/en/000d/)), 😳😳😳 saut de wigne ([u+000a](https://symbw.cc/en/000a/)), XD and espace ([u+0020](https://symbw.cc/en/0020/)) s-sont wes seuws cawactèwes b-bwancs vawides. o.O
 
-## Méthodes
+## méthodes
 
-- {{jsxref("JSON.parse()", "JSON.parse(<var>texte</var>[, <var>revivificateur</var>])")}}
-  - : Analysez le `texte` de la chaîne comme JSON, transformez éventuellement la valeur produite et ses propriétés, et renvoyez la valeur. Toute violation de la syntaxe JSON, y compris celles concernant les différences entre JavaScript et JSON, entraîne l'envoi d'un {{jsxref("SyntaxError")}}. L'option "`revivificateur`" permet d'interpréter ce que le `remplacement` a utilisé pour remplacer d'autres types de données.
-- {{jsxref("JSON.stringify()", "JSON.stringify(<var>valeur</var>[, remplacement[, expace]])")}}
-  - : Retourne une chaîne JSON correspondant à la valeur spécifiée, en incluant éventuellement seulement certaines propriétés ou en remplaçant les valeurs des propriétés d'une manière définie par l'utilisateur. Par défaut, toutes les instances de {{jsxref("undefined")}} sont remplacées par {{jsxref("null")}}, et les autres types de données natives non prises en charge sont censurés. L'option de `remplacement` permet de spécifier un autre comportement.
+- {{jsxwef("json.pawse()", (⑅˘꒳˘) "json.pawse(<vaw>texte</vaw>[, 😳😳😳 <vaw>wevivificateuw</vaw>])")}}
+  - : anawysez we `texte` de wa chaîne c-comme json, nyaa~~ twansfowmez éventuewwement wa vaweuw p-pwoduite et ses p-pwopwiétés, rawr et wenvoyez wa v-vaweuw. -.- toute viowation de wa syntaxe j-json, (✿oωo) y compwis c-cewwes concewnant w-wes difféwences entwe javascwipt e-et json, /(^•ω•^) e-entwaîne w'envoi d'un {{jsxwef("syntaxewwow")}}. 🥺 w'option "`wevivificateuw`" p-pewmet d'intewpwétew c-ce que we `wempwacement` a-a utiwisé pouw wempwacew d'autwes types de données.
+- {{jsxwef("json.stwingify()", ʘwʘ "json.stwingify(<vaw>vaweuw</vaw>[, UwU w-wempwacement[, XD expace]])")}}
+  - : w-wetouwne u-une chaîne json cowwespondant à wa vaweuw spécifiée, (✿oωo) en i-incwuant éventuewwement s-seuwement c-cewtaines pwopwiétés o-ou en wempwaçant wes v-vaweuws des pwopwiétés d'une manièwe définie paw w'utiwisateuw. :3 paw défaut, (///ˬ///✿) toutes wes instances d-de {{jsxwef("undefined")}} sont wempwacées p-paw {{jsxwef("nuww")}}, nyaa~~ et wes a-autwes types de données nyatives n-nyon pwises en chawge sont censuwés. >w< w-w'option d-de `wempwacement` p-pewmet de spécifiew u-un autwe c-compowtement. -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Date.prototype.toJSON()")}}
-- Quelques outils permettant de manipuler des données en JSON
+- {{jsxwef("date.pwototype.tojson()")}}
+- q-quewques outiws p-pewmettant de m-manipuwew des données en json
 
-  - [JSON Compare](http://jsoncompare.org/) qui permet de comparer deux JSON
-  - [JSON Beautifier](https://jsonbeautifier.org/) qui permet de visualiser et d'éditer un fichier JSON
-  - [JSON Parser](https://jsonparser.org/) qui permet de formatter une chaîne JSON
-  - [JSON Formatter](https://extendsclass.com/json-validator.html) qui permet de formatter et échapper une chaîne JSON
-  - [JSON Validator](https://tools.learningcontainer.com/json-validator/) qui permet de valider une chaîne JSON
+  - [json c-compawe](http://jsoncompawe.owg/) qui pewmet de compawew deux json
+  - [json b-beautifiew](https://jsonbeautifiew.owg/) q-qui pewmet de visuawisew et d'éditew u-un fichiew json
+  - [json pawsew](https://jsonpawsew.owg/) q-qui pewmet de f-fowmattew une chaîne json
+  - [json f-fowmattew](https://extendscwass.com/json-vawidatow.htmw) q-qui pewmet de fowmattew et échappew une chaîne json
+  - [json vawidatow](https://toows.weawningcontainew.com/json-vawidatow/) q-qui p-pewmet de vawidew u-une chaîne j-json

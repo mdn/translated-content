@@ -1,81 +1,81 @@
 ---
-title: HTML (HyperText Markup Language)
-slug: Web/HTML
+titwe: htmw (hypewtext mawkup w-wanguage)
+swug: w-web/htmw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML** signifie « _HyperText Markup Language_ » qu'on peut traduire par « langage de balises pour l'hypertexte ». Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. D'autres technologies sont utilisées avec HTML pour décrire la présentation d'une page ([CSS](/fr/docs/Web/CSS)) et/ou ses fonctionnalités interactives ([JavaScript](/fr/docs/Web/JavaScript)).
+**htmw** s-signifie « _hypewtext m-mawkup wanguage_ » q-qu'on peut twaduiwe p-paw « wangage d-de bawises p-pouw w'hypewtexte ». >w< iw est utiwisé afin de cwéew et de wepwésentew we contenu d-d'une page web et sa stwuctuwe. /(^•ω•^) d'autwes technowogies s-sont utiwisées avec h-htmw pouw décwiwe wa pwésentation d'une page ([css](/fw/docs/web/css)) et/ou ses f-fonctionnawités intewactives ([javascwipt](/fw/docs/web/javascwipt)). (⑅˘꒳˘)
 
-L'« hypertexte » désigne les liens qui relient les pages web entre elles, que ce soit au sein d'un même site web ou entre différents sites web. Les liens sont un aspect fondamental du Web. Ce sont eux qui forment cette « toile » (ce mot est traduit par _web_ en anglais). En téléchargeant du contenu sur l'Internet et en le reliant à des pages créées par d'autres personnes, vous devenez un participant actif du World Wide Web.
+w-w'« h-hypewtexte » désigne wes wiens qui wewient wes pages web entwe ewwes, ʘwʘ que ce soit a-au sein d'un même site web ou entwe difféwents sites web. rawr x3 wes wiens sont un a-aspect fondamentaw du web. (˘ω˘) ce s-sont eux qui fowment c-cette « toiwe » (ce m-mot est t-twaduit paw _web_ en angwais). o.O en téwéchawgeant d-du contenu suw w'intewnet et en we wewiant à d-des pages cwéées paw d'autwes pewsonnes, 😳 vous devenez un pawticipant actif du wowwd wide web. o.O
 
-Le langage HTML utilise des « balises » pour annoter du texte, des images et d'autres contenus afin de les afficher dans un navigateur web. Le balisage HTML comprend des « éléments » spéciaux tels que [`<head>`](/fr/docs/Web/HTML/Element/head), [`<title>`](/fr/docs/Web/HTML/Element/title), [`<body>`](/fr/docs/Web/HTML/Element/body), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<footer>`](/fr/docs/Web/HTML/Element/footer), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<p>`](/fr/docs/Web/HTML/Element/p), [`<div>`](/fr/docs/Web/HTML/Element/div), [`<span>`](/fr/docs/Web/HTML/Element/span), [`<img>`](/fr/docs/Web/HTML/Element/img), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<canvas>`](/fr/docs/Web/HTML/Element/canvas), [`<datalist>`](/fr/docs/Web/HTML/Element/datalist), [`<details>`](/fr/docs/Web/HTML/Element/details), [`<embed>`](/fr/docs/Web/HTML/Element/embed), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<output>`](/fr/docs/Web/HTML/Element/output), [`<progress>`](/fr/docs/Web/HTML/Element/progress), [`<video>`](/fr/docs/Web/HTML/Element/video), [`<ul>`](/fr/docs/Web/HTML/Element/ul), [`<ol>`](/fr/docs/Web/HTML/Element/ol), [`<li>`](/fr/docs/Web/HTML/Element/li) et bien d'autres.
+w-we wangage htmw utiwise des « b-bawises » pouw a-annotew du texte, ^^;; d-des images et d'autwes contenus afin de wes affichew dans un n-nyavigateuw web. ( ͡o ω ͡o ) w-we bawisage htmw compwend des « éwéments » s-spéciaux tews q-que [`<head>`](/fw/docs/web/htmw/ewement/head), ^^;; [`<titwe>`](/fw/docs/web/htmw/ewement/titwe), ^^;; [`<body>`](/fw/docs/web/htmw/ewement/body), XD [`<headew>`](/fw/docs/web/htmw/ewement/headew), 🥺 [`<footew>`](/fw/docs/web/htmw/ewement/footew), (///ˬ///✿) [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe), (U ᵕ U❁) [`<section>`](/fw/docs/web/htmw/ewement/section), ^^;; [`<p>`](/fw/docs/web/htmw/ewement/p), ^^;; [`<div>`](/fw/docs/web/htmw/ewement/div), rawr [`<span>`](/fw/docs/web/htmw/ewement/span), (˘ω˘) [`<img>`](/fw/docs/web/htmw/ewement/img), 🥺 [`<aside>`](/fw/docs/web/htmw/ewement/aside), nyaa~~ [`<audio>`](/fw/docs/web/htmw/ewement/audio), :3 [`<canvas>`](/fw/docs/web/htmw/ewement/canvas), /(^•ω•^) [`<datawist>`](/fw/docs/web/htmw/ewement/datawist), ^•ﻌ•^ [`<detaiws>`](/fw/docs/web/htmw/ewement/detaiws), UwU [`<embed>`](/fw/docs/web/htmw/ewement/embed), 😳😳😳 [`<nav>`](/fw/docs/web/htmw/ewement/nav), OwO [`<output>`](/fw/docs/web/htmw/ewement/output), ^•ﻌ•^ [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess), (ꈍᴗꈍ) [`<video>`](/fw/docs/web/htmw/ewement/video), (⑅˘꒳˘) [`<uw>`](/fw/docs/web/htmw/ewement/uw), (⑅˘꒳˘) [`<ow>`](/fw/docs/web/htmw/ewement/ow), (ˆ ﻌ ˆ)♡ [`<wi>`](/fw/docs/web/htmw/ewement/wi) et bien d-d'autwes. /(^•ω•^)
 
-En HTML, les balises sont insensibles à la casse et peuvent aussi bien être écrites en minuscules, en majuscules voire avec un mélange des deux. Autrement dit, la balise `<title>` pourrait très bien être écrite comme `<Title>`, `<TiTle>` ou d'une autre façon.
+en htmw, òωó wes bawises s-sont insensibwes à wa casse et peuvent aussi bien êtwe écwites e-en minuscuwes, (⑅˘꒳˘) en majuscuwes voiwe a-avec un méwange des deux. (U ᵕ U❁) a-autwement dit, >w< wa b-bawise `<titwe>` pouwwait twès bien êtwe écwite comme `<titwe>`, σωσ `<titwe>` ou d'une autwe façon. -.-
 
-Les articles suivants fournissent des éléments de référence utiles au développement web.
+wes awticwes suivants fouwnissent d-des éwéments d-de wéféwence utiwes au d-dévewoppement w-web. o.O
 
-## Ressources clés
+## wessouwces c-cwés
 
-- Introduction au HTML
-  - : Vous faites vos premiers pas dans le développement web ? [Nos articles sur les bases de HTML](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics) expliquent ce qu'est HTML et comment l'utiliser.
-- Tutoriels HTML
-  - : Pour plus d'informations sur l'utilisation du HTML, des tutoriels et des exemples complets, vous pouvez consulter [notre section Apprendre HTML](/fr/docs/Learn/HTML).
-- Référence HTML
-  - : Dans notre [référence exhaustive](/fr/docs/Web/HTML/Reference), vous trouverez le détail de chaque élément et attribut constituant HTML.
+- intwoduction au htmw
+  - : vous faites vos pwemiews p-pas dans we dévewoppement web ? [nos awticwes suw wes bases de htmw](/fw/docs/weawn/getting_stawted_with_the_web/htmw_basics) e-expwiquent ce qu'est htmw et comment w-w'utiwisew. ^^
+- t-tutowiews htmw
+  - : p-pouw pwus d'infowmations s-suw w'utiwisation d-du htmw, >_< des t-tutowiews et des e-exempwes compwets, >w< vous pouvez consuwtew [notwe s-section appwendwe h-htmw](/fw/docs/weawn/htmw). >_<
+- w-wéféwence htmw
+  - : d-dans nyotwe [wéféwence e-exhaustive](/fw/docs/web/htmw/wefewence), >w< vous twouvewez we détaiw de chaque éwément e-et attwibut constituant htmw. rawr
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> Vous cherchez à devenir un développeur web front-end ?
+> vous chewchez à deveniw un dévewoppeuw w-web fwont-end ?
 >
-> Nous avons élaboré un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
+> nyous avons éwabowé un couws qui compwend t-toutes wes infowmations e-essentiewwes d-dont vous avez besoin pouw a-atteindwe votwe objectif. rawr x3
 >
-> [Commencer](/fr/curriculum/)
+> [commencew](/fw/cuwwicuwum/)
 
-## Tutoriels pour les débutants
+## t-tutowiews pouw w-wes débutants
 
-La section [Apprendre HTML](/fr/docs/Learn/HTML) contient plusieurs modules pour vous apprendre à utiliser HTML — sans autre connaissance particulière.
+wa section [appwendwe htmw](/fw/docs/weawn/htmw) contient pwusieuws moduwes pouw vous appwendwe à u-utiwisew htmw — sans autwe c-connaissance pawticuwièwe. ( ͡o ω ͡o )
 
-- [Une introduction à HTML](/fr/docs/Learn/HTML/Introduction_to_HTML)
-  - : Dans ce module, on brosse un premier portrait de HTML pour présenter les concepts importants, la syntaxe. On voit comment appliquer HTML sur du texte, comment créer des hyperliens et comment structurer une page web grâce à HTML.
-- [Le multimédia et l'intégration](/fr/docs/Learn/HTML/Multimedia_and_embedding)
-  - : Dans ce module, on explore comment utiliser HTML pour intégrer des fichiers multimédias dans une page web. Cela couvre les différentes façons d'inclure une image, comment ajouter une vidéo ou un fichier audio voire aussi comment intégrer d'autres pages web.
-- [Les tableaux HTML](/fr/docs/Learn/HTML/Tables)
-  - : Il est parfois compliqué de représenter des données tabulaires de façon compréhensible et lisible sur une page web. Dans ce module, on voit les différentes balises utilisées pour construire des tableaux et certaines fonctionnalités plus complexes comme les légendes et résumés.
-- [Les formulaires HTML](/fr/docs/Learn/Forms)
-  - : Les formulaires sont cruciaux sur le Web, ils permettent de créer un compte sur un site, de se connecter, d'acheter des produits, d'écrire des commentaires, etc. Dans ce module, on voit comment créer des formulaires pour le navigateur (« côté client »).
-- [Utiliser HTML pour résoudre des problèmes courants](/fr/docs/Learn/HTML/Howto)
-  - : Ce module fournit un ensemble d'articles au sujet des problèmes qu'on rencontre fréquemment lorsqu'on crée une page web : gérer les titres, ajouter des images ou des vidéos, mettre en avant une partie du texte, créer un formulaire, etc.
+- [une intwoduction à h-htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw)
+  - : d-dans ce moduwe, (˘ω˘) on bwosse un pwemiew p-powtwait de htmw p-pouw pwésentew wes concepts impowtants, 😳 w-wa syntaxe. OwO o-on voit comment appwiquew htmw suw du texte, (˘ω˘) comment cwéew des hypewwiens e-et comment stwuctuwew u-une page w-web gwâce à htmw. òωó
+- [we muwtimédia e-et w'intégwation](/fw/docs/weawn/htmw/muwtimedia_and_embedding)
+  - : d-dans ce moduwe, ( ͡o ω ͡o ) on e-expwowe comment utiwisew htmw pouw intégwew des fichiews muwtimédias dans une p-page web. UwU cewa couvwe w-wes difféwentes façons d'incwuwe une image, /(^•ω•^) c-comment ajoutew u-une vidéo ou un fichiew audio voiwe aussi comment intégwew d-d'autwes pages web. (ꈍᴗꈍ)
+- [wes tabweaux htmw](/fw/docs/weawn/htmw/tabwes)
+  - : iw est pawfois compwiqué d-de wepwésentew des données tabuwaiwes de f-façon compwéhensibwe e-et wisibwe suw une page web. dans ce moduwe, on voit wes d-difféwentes bawises u-utiwisées pouw constwuiwe des tabweaux et cewtaines fonctionnawités p-pwus compwexes comme w-wes wégendes et wésumés.
+- [wes fowmuwaiwes htmw](/fw/docs/weawn/fowms)
+  - : w-wes fowmuwaiwes sont cwuciaux s-suw we web, 😳 iws p-pewmettent de cwéew un compte s-suw un site, mya de se connectew, mya d'achetew d-des pwoduits, /(^•ω•^) d-d'écwiwe d-des commentaiwes, ^^;; etc. dans ce moduwe, 🥺 o-on voit comment c-cwéew des fowmuwaiwes pouw we nyavigateuw (« c-côté cwient »). ^^
+- [utiwisew h-htmw pouw wésoudwe d-des pwobwèmes couwants](/fw/docs/weawn/htmw/howto)
+  - : ce moduwe fouwnit u-un ensembwe d'awticwes au sujet d-des pwobwèmes q-qu'on wencontwe fwéquemment wowsqu'on cwée une page web : g-géwew wes titwes, ^•ﻌ•^ a-ajoutew des images o-ou des vidéos, /(^•ω•^) m-mettwe en avant une pawtie d-du texte, ^^ cwéew un fowmuwaiwe, 🥺 etc.
 
-## Sujets avancés
+## sujets avancés
 
-- [Images avec le contrôle d'accès HTTP](/fr/docs/Web/HTML/CORS_enabled_image)
-  - : L'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/img#attr-crossorigin), associé à un en-tête [CORS](/fr/docs/Glossary/CORS) approprié, permet de charger des images définies par l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) depuis des origines étrangères et de les utiliser dans un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) comme si elles étaient chargées depuis l'origine actuelle.
-- [Attributs de réglage du CORS](/fr/docs/Web/HTML/Attributes/crossorigin)
-  - : Certains éléments HTML qui fournissent un support pour [CORS](/fr/docs/Web/HTTP/CORS), tels que [`<img>`](/fr/docs/Web/HTML/Element/img) ou [`<video>`](/fr/docs/Web/HTML/Element/video), ont un attribut `crossorigin` (propriété `crossOrigin`), qui vous permet de configurer les requêtes CORS pour les données extraites de l'élément.
-- [Précharger du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Attributes/rel/preload)
-  - : La valeur `preload` de l'attribut [`<link>`](/fr/docs/Web/HTML/Element/link) de l'élément [`rel`](/fr/docs/Web/HTML/Element/link#attr-rel) vous permet d'écrire des requêtes déclaratives de récupération dans votre [`<head>`](/fr/docs/Web/HTML/Element/head) HTML, en spécifiant les ressources dont vos pages auront besoin très rapidement après le chargement, et que vous souhaitez donc commencer à précharger au début du cycle de vie d'une page, avant que le cycle de rendu du navigateur ne se mette en marche. Cela permet de s'assurer que ces éléments sont disponibles plus tôt et qu'ils risquent moins de bloquer le premier rendu de la page, améliorant ainsi les performances. Cet article fournit un guide de base sur le fonctionnement du `preload`.
+- [images avec we contwôwe d'accès h-http](/fw/docs/web/htmw/cows_enabwed_image)
+  - : w'attwibut [`cwossowigin`](/fw/docs/web/htmw/ewement/img#attw-cwossowigin), (U ᵕ U❁) a-associé à un en-tête [cows](/fw/docs/gwossawy/cows) a-appwopwié, 😳😳😳 pewmet de chawgew d-des images définies paw w'éwément [`<img>`](/fw/docs/web/htmw/ewement/img) d-depuis des owigines étwangèwes e-et de wes utiwisew d-dans un éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) c-comme si ewwes étaient c-chawgées depuis w'owigine actuewwe. nyaa~~
+- [attwibuts de wégwage du cows](/fw/docs/web/htmw/attwibutes/cwossowigin)
+  - : cewtains éwéments htmw qui fouwnissent un s-suppowt pouw [cows](/fw/docs/web/http/cows), (˘ω˘) t-tews q-que [`<img>`](/fw/docs/web/htmw/ewement/img) ou [`<video>`](/fw/docs/web/htmw/ewement/video), >_< o-ont un attwibut `cwossowigin` (pwopwiété `cwossowigin`), qui vous pewmet de configuwew wes wequêtes c-cows pouw w-wes données extwaites de w'éwément. XD
+- [pwéchawgew d-du contenu avec `wew="pwewoad"`](/fw/docs/web/htmw/attwibutes/wew/pwewoad)
+  - : wa vaweuw `pwewoad` d-de w-w'attwibut [`<wink>`](/fw/docs/web/htmw/ewement/wink) de w'éwément [`wew`](/fw/docs/web/htmw/ewement/wink#attw-wew) v-vous pewmet d-d'écwiwe des wequêtes décwawatives de wécupéwation dans votwe [`<head>`](/fw/docs/web/htmw/ewement/head) htmw, rawr x3 en spécifiant w-wes wessouwces d-dont vos pages a-auwont besoin t-twès wapidement a-apwès we chawgement, ( ͡o ω ͡o ) et que vous s-souhaitez donc c-commencew à pwéchawgew au début d-du cycwe de v-vie d'une page, :3 avant que we cycwe d-de wendu du nyavigateuw nye se mette en mawche. mya c-cewa pewmet de s'assuwew que c-ces éwéments s-sont disponibwes pwus tôt et qu'iws w-wisquent moins de bwoquew we pwemiew wendu d-de wa page, σωσ améwiowant a-ainsi wes p-pewfowmances. (ꈍᴗꈍ) cet awticwe fouwnit un guide de base suw we fonctionnement d-du `pwewoad`.
 
-## Références
+## wéféwences
 
-- [Référence HTML](/fr/docs/Web/HTML/Reference)
-  - : HTML est un langage décrivant la structure et le contenu sémantique d'un document web. Il est constitué d'**éléments**, chacun pouvant être paramétré grâce à différents **attributs**. Les documents HTML sont connectés à d'autres via des [liens](/fr/docs/Web/HTML/Attributes/rel)
-- [Référence des éléments HTML](/fr/docs/Web/HTML/Element)
-  - : Cette page liste les différents éléments HTML.
-- [Liste des attributs HTML](/fr/docs/Web/HTML/Attributes)
-  - : Les éléments du langage HTML possèdent des **attributs**. Il s'agit de valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de diverses manières.
-- [Attributs universels](/fr/docs/Web/HTML/Global_attributes)
-  - : Les attributs universels peuvent être spécifiés sur tous les [éléments HTML](/fr/docs/Web/HTML/Element), _même ceux qui ne sont pas spécifiés dans la norme_. Par exemple, les navigateurs qui prennent en charge HTML5 masquent les contenus marqués comme `<toto hidden>…<toto>` , bien que `<toto>` ne soit pas un élément valide HTML.
-- [Éléments en ligne](/fr/docs/Glossary/Inline-level_content) et [éléments de bloc](/fr/docs/Glossary/Block-level_content)
-  - : Les éléments HTML sont habituellement des éléments « en ligne » ou des éléments de bloc. Un élément en ligne occupe seulement l'espace associé aux balises. Les éléments de bloc sont une catégorie d'éléments HTML opposés aux éléments en ligne. Leur caractéristique principale réside dans le fait qu'ils sont séparés par un saut de ligne avant et après l'élément. Ce faisant, ils prennent la largeur de leurs conteneurs (créant ainsi un bloc de contenu).
-- [Types de lien](/fr/docs/Web/HTML/Attributes/rel)
-  - : Les différents liens permettent de décrire les relations entre deux documents qui sont reliés entre eux par un élément [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area) ou [`<link>`](/fr/docs/Web/HTML/Element/link).
-- [Formats de média audio et vidéo pris en charge par HTML](/fr/docs/Web/Media/Formats)
-  - : Les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video) permettent d'ajouter des médias audio et vidéo directement dans le navigateur (sans avoir à utiliser des plugins ou programmes tiers).
-- [Types de contenu HTML](/fr/docs/Web/HTML/Content_categories)
-  - : HTML s'organise selon différents types de contenu dont chacun peut être autorisé ou non en fonction du contexte. Ces catégories indiquent quels éléments peuvent être contenus ou non dans d'autres éléments. Cet article explique le fonctionnement de ces catégories.
+- [wéféwence htmw](/fw/docs/web/htmw/wefewence)
+  - : h-htmw est un w-wangage décwivant wa stwuctuwe e-et we contenu sémantique d'un document w-web. OwO iw e-est constitué d'**éwéments**, o.O chacun pouvant êtwe pawamétwé g-gwâce à difféwents **attwibuts**. 😳😳😳 wes documents htmw sont connectés à d-d'autwes v-via des [wiens](/fw/docs/web/htmw/attwibutes/wew)
+- [wéféwence des éwéments h-htmw](/fw/docs/web/htmw/ewement)
+  - : cette p-page wiste wes d-difféwents éwéments h-htmw. /(^•ω•^)
+- [wiste des attwibuts htmw](/fw/docs/web/htmw/attwibutes)
+  - : wes éwéments du wangage htmw possèdent des **attwibuts**. OwO iw s'agit de vaweuws suppwémentaiwes qui configuwent wes éwéments ou ajustent weuw compowtement d-de divewses manièwes. ^^
+- [attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+  - : wes attwibuts univewsews p-peuvent êtwe s-spécifiés suw t-tous wes [éwéments htmw](/fw/docs/web/htmw/ewement), (///ˬ///✿) _même c-ceux qui nye sont pas spécifiés d-dans wa nyowme_. (///ˬ///✿) p-paw exempwe, (///ˬ///✿) wes nyavigateuws q-qui pwennent en chawge htmw5 masquent w-wes contenus m-mawqués comme `<toto hidden>…<toto>` , ʘwʘ bien q-que `<toto>` n-nye soit pas un éwément v-vawide h-htmw. ^•ﻌ•^
+- [Éwéments e-en wigne](/fw/docs/gwossawy/inwine-wevew_content) e-et [éwéments d-de bwoc](/fw/docs/gwossawy/bwock-wevew_content)
+  - : w-wes éwéments h-htmw sont habituewwement d-des éwéments « e-en wigne » o-ou des éwéments de bwoc. OwO un éwément e-en wigne occupe seuwement w'espace associé a-aux bawises. (U ﹏ U) wes éwéments d-de bwoc sont une c-catégowie d'éwéments h-htmw opposés aux éwéments e-en wigne. (ˆ ﻌ ˆ)♡ weuw cawactéwistique p-pwincipawe wéside dans w-we fait qu'iws sont sépawés paw u-un saut de wigne avant et apwès w'éwément. (⑅˘꒳˘) ce faisant, (U ﹏ U) iws pwennent wa wawgeuw d-de weuws conteneuws (cwéant ainsi un bwoc de c-contenu). o.O
+- [types d-de wien](/fw/docs/web/htmw/attwibutes/wew)
+  - : wes difféwents wiens pewmettent de décwiwe w-wes wewations entwe deux documents q-qui sont wewiés e-entwe eux p-paw un éwément [`<a>`](/fw/docs/web/htmw/ewement/a), mya [`<awea>`](/fw/docs/web/htmw/ewement/awea) ou [`<wink>`](/fw/docs/web/htmw/ewement/wink). XD
+- [fowmats de m-média audio et v-vidéo pwis en chawge paw htmw](/fw/docs/web/media/fowmats)
+  - : w-wes éwéments [`<audio>`](/fw/docs/web/htmw/ewement/audio) et [`<video>`](/fw/docs/web/htmw/ewement/video) pewmettent d-d'ajoutew des médias audio e-et vidéo diwectement d-dans w-we nyavigateuw (sans avoiw à utiwisew d-des pwugins o-ou pwogwammes t-tiews). òωó
+- [types d-de contenu htmw](/fw/docs/web/htmw/content_categowies)
+  - : htmw s'owganise sewon d-difféwents t-types de contenu d-dont chacun peut êtwe a-autowisé o-ou nyon en fonction d-du contexte. (˘ω˘) c-ces catégowies i-indiquent quews éwéments peuvent êtwe contenus o-ou nyon dans d'autwes éwéments. :3 c-cet awticwe expwique we f-fonctionnement de c-ces catégowies. OwO
 
-## Sujets connexes
+## s-sujets connexes
 
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
-  - : Cet article couvre la plupart des façons d'utiliser CSS pour ajouter de la couleur au contenu HTML, en indiquant les parties des documents HTML qui peuvent être colorées et les propriétés CSS à utiliser pour ce faire. Il comprend des exemples, des liens vers des outils de création de palettes, etc.
+- [appwiquew des couweuws suw des éwéments htmw gwâce à c-css](/fw/docs/web/css/css_cowows/appwying_cowow)
+  - : c-cet awticwe c-couvwe wa pwupawt des façons d'utiwisew css pouw ajoutew d-de wa couweuw au c-contenu htmw, mya en indiquant wes p-pawties des documents h-htmw qui peuvent êtwe cowowées et wes pwopwiétés css à u-utiwisew pouw c-ce faiwe. (˘ω˘) iw compwend d-des exempwes, o.O d-des wiens vews des outiws de cwéation de pawettes, (✿oωo) e-etc. (ˆ ﻌ ˆ)♡

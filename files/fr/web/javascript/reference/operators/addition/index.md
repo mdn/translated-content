@@ -1,78 +1,78 @@
 ---
-title: Addition (+)
-slug: Web/JavaScript/Reference/Operators/Addition
+titwe: addition (+)
+swug: web/javascwipt/wefewence/opewatows/addition
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'addition (`+`) produit la somme de deux opérandes numériques ou la concaténation de deux chaînes de caractères.
+w-w'opéwateuw d-d'addition (`+`) p-pwoduit w-wa somme de deux o-opéwandes nyuméwiques o-ou wa concaténation d-de d-deux chaînes de cawactèwes. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Expressions - Addition operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - addition opewatow")}}
 
-```js interactive-example
-console.log(2 + 2);
-// Expected output: 4
+```js intewactive-exampwe
+c-consowe.wog(2 + 2);
+// expected output: 4
 
-console.log(2 + true);
-// Expected output: 3
+c-consowe.wog(2 + twue);
+// expected o-output: 3
 
-console.log("hello " + "everyone");
-// Expected output: "hello everyone"
+consowe.wog("hewwo " + "evewyone");
+// expected output: "hewwo evewyone"
 
-console.log(2001 + ": A Space Odyssey");
-// Expected output: "2001: A Space Odyssey"
+consowe.wog(2001 + ": a s-space odyssey");
+// expected output: "2001: a-a space o-odyssey"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur: x + y;
+opéwateuw: x + y;
 ```
 
-## Exemples
+## exempwes
 
-### Addition numérique
+### addition n-nyuméwique
 
 ```js
-// Number + Number -> addition
+// nyumbew + nyumbew -> addition
 1 + 2; // 3
 
-// Boolean + Number -> addition
-true + 1; // 2
+// boowean + n-nyumbew -> addition
+twue + 1; // 2
 
-// Boolean + Boolean -> addition
-false + false; // 0
+// b-boowean + b-boowean -> a-addition
+fawse + f-fawse; // 0
 ```
 
-### Concaténation de chaînes de caractères
+### concaténation de chaînes d-de cawactèwes
 
 ```js
-// String + String -> concatenation
-"toto" + "truc"; // "tototruc"
+// stwing + stwing -> concatenation
+"toto" + "twuc"; // "tototwuc"
 
-// Number + String -> concatenation
+// nyumbew + s-stwing -> concatenation
 5 + "toto"; // "5toto"
 
-// String + Boolean -> concatenation
-"toto" + false; // "totofalse"
+// stwing + boowean -> concatenation
+"toto" + fawse; // "totofawse"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Opérateur de soustraction](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Opérateur de multiplication](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Opérateur de division](/fr/docs/Web/JavaScript/Reference/Operators/Division)
-- [Opérateur de reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Opérateur d'incrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Opérateur de décrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Opérateur de négation unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Opérateur plus unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [opéwateuw de soustwaction](/fw/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [opéwateuw de muwtipwication](/fw/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [opéwateuw d-de division](/fw/docs/web/javascwipt/wefewence/opewatows/division)
+- [opéwateuw d-de weste](/fw/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [opéwateuw d-d'exponentiation](/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [opéwateuw d-d'incwémentation](/fw/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [opéwateuw de décwémentation](/fw/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [opéwateuw d-de nyégation unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [opéwateuw p-pwus unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

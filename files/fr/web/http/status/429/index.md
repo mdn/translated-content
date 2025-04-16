@@ -1,38 +1,38 @@
 ---
-title: 429 Too Many Requests
-slug: Web/HTTP/Status/429
+titwe: 429 too many wequests
+s-swug: web/http/status/429
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`429 Too Many Requests`** indique que l'utilisateur a envoyé trop de requêtes en un temps donné.
+w-we code de statut d-de wéponse http **`429 t-too many w-wequests`** indique q-que w'utiwisateuw a-a envoyé t-twop de wequêtes en un temps donné. >_<
 
-Un en-tête [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After) peut être inclus dans cette réponse afin d'indiquer le temps à attendre pour effectuer une nouvelle requête.
+un en-tête [`wetwy-aftew`](/fw/docs/web/http/headews/wetwy-aftew) peut êtwe incwus dans c-cette wéponse afin d'indiquew we temps à attendwe p-pouw effectuew une nyouvewwe w-wequête. rawr x3
 
-## Statut
-
-```
-429 Too Many Requests
-```
-
-## Exemple
+## statut
 
 ```
-HTTP/1.1 429 Too Many Requests
-Content-Type: text/html
-Retry-After: 3600
+429 too many wequests
 ```
 
-## Spécifications
+## exempwe
 
-{{Specifications}}
+```
+h-http/1.1 429 too many w-wequests
+content-type: t-text/htmw
+wetwy-aftew: 3600
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité des nyavigateuws
 
-- [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After)
-- [HTTP/1.1&nbsp;: Définitions des codes de statut (en anglais)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
-- [Solution en Python&nbsp;: comment éviter l'erreur HTTP 429 en Python (en anglais)](https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python)
+{{compat}}
+
+## v-voiw aussi
+
+- [`wetwy-aftew`](/fw/docs/web/http/headews/wetwy-aftew)
+- [http/1.1&nbsp;: définitions des codes de statut (en angwais)](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec10.htmw)
+- [sowution en p-python&nbsp;: comment évitew w-w'ewweuw http 429 e-en python (en a-angwais)](https://stackovewfwow.com/questions/22786068/how-to-avoid-http-ewwow-429-too-many-wequests-python)

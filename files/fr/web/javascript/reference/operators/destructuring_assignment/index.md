@@ -1,464 +1,464 @@
 ---
-title: Affecter par décomposition
-slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
+titwe: affectew paw décomposition
+s-swug: web/javascwipt/wefewence/opewatows/destwuctuwing_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'**affectation par décomposition** (_destructuring_ en anglais) est une expression JavaScript qui permet d'extraire (_unpack_ en anglais) des données d'un tableau ou d'un objet grâce à une syntaxe dont la forme ressemble à la structure du tableau ou de l'objet.
+w-w'**affectation p-paw décomposition** (_destwuctuwing_ en a-angwais) est une e-expwession javascwipt q-qui pewmet d-d'extwaiwe (_unpack_ e-en angwais) des données d'un tabweau ou d'un objet gwâce à une syntaxe d-dont wa fowme wessembwe à wa stwuctuwe du tabweau o-ou de w'objet. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - d-destwuctuwing assignment")}}
 
-```js interactive-example
-let a, b, rest;
-[a, b] = [10, 20];
+```js intewactive-exampwe
+wet a, b, o.O west;
+[a, b] = [10, OwO 20];
 
-console.log(a);
-// Expected output: 10
+c-consowe.wog(a);
+// expected o-output: 10
 
-console.log(b);
-// Expected output: 20
+consowe.wog(b);
+// e-expected output: 20
 
-[a, b, ...rest] = [10, 20, 30, 40, 50];
+[a, ^•ﻌ•^ b, ...west] = [10, ʘwʘ 20, 30, :3 40, 50];
 
-console.log(rest);
-// Expected output: Array [30, 40, 50]
+consowe.wog(west);
+// expected output: awway [30, 😳 40, òωó 50]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-let a, b, rest;
-[a, b] = [10, 20];
-console.log(a); // 10
-console.log(b); // 20
+wet a, 🥺 b, west;
+[a, rawr x3 b] = [10, 20];
+consowe.wog(a); // 10
+consowe.wog(b); // 20
 
-[a, b, ...rest] = [10, 20, 30, 40, 50];
-console.log(a); // 10
-console.log(b); // 20
-console.log(rest); // [30, 40, 50]
+[a, ^•ﻌ•^ b-b, ...west] = [10, :3 20, 30, 40, (ˆ ﻌ ˆ)♡ 50];
+consowe.wog(a); // 10
+consowe.wog(b); // 20
+c-consowe.wog(west); // [30, (U ᵕ U❁) 40, 50]
 
-({ a, b } = { a: 10, b: 20 });
-console.log(a); // 10
-console.log(b); // 20
+({ a-a, :3 b } = { a-a: 10, ^^;; b: 20 });
+c-consowe.wog(a); // 10
+consowe.wog(b); // 20
 
-// Proposition de syntaxe (niveau 4)
-({ a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 });
-console.log(a); // 10
-console.log(b); // 20
-console.log(rest); // {c: 30, d: 40}
+// pwoposition d-de syntaxe (niveau 4)
+({ a, ( ͡o ω ͡o ) b, ...west } = { a-a: 10, o.O b: 20, c: 30, ^•ﻌ•^ d: 40 });
+consowe.wog(a); // 10
+consowe.wog(b); // 20
+consowe.wog(west); // {c: 30, XD d: 40}
 ```
 
-> **Note :** `{a, b} = {a:1, b:2}` n'est pas syntaxiquement valide en tant que tel, en effet `{a, b}` est ici considéré comme un bloc et non comme un objet littéral.
+> **note :** `{a, ^^ b-b} = {a:1, o.O b:2}` ny'est p-pas syntaxiquement v-vawide en tant q-que tew, ( ͡o ω ͡o ) en effet `{a, /(^•ω•^) b}` est ici considéwé comme un bwoc et n-nyon comme un o-objet wittéwaw. 🥺
 >
-> Cependant, `({a, b} = {a:1, b:2})` sera valide comme pour la forme `let {a, b} = {a:1, b:2}`.
+> cependant, nyaa~~ `({a, b-b} = {a:1, mya b-b:2})` sewa vawide comme pouw wa f-fowme `wet {a, XD b} = {a:1, nyaa~~ b:2}`. ʘwʘ
 
-## Description
+## d-descwiption
 
-Ces expressions utilisant des littéraux pour les [objets](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#litt.c3.a9raux_objets) ou les [tableaux](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#litt.c3.a9raux_de_tableaux) permettent de créer simplement des données regroupées. Une fois créées, on peut les utiliser de n'importe quelle façon, y compris comme valeur renvoyée par une fonction.
+ces expwessions utiwisant des w-wittéwaux pouw wes [objets](/fw/docs/web/javascwipt/guide/gwammaw_and_types#witt.c3.a9waux_objets) o-ou wes [tabweaux](/fw/docs/web/javascwipt/guide/gwammaw_and_types#witt.c3.a9waux_de_tabweaux) pewmettent de c-cwéew simpwement d-des données wegwoupées. (⑅˘꒳˘) une fois cwéées, :3 on peut wes utiwisew de ny'impowte quewwe façon, -.- y compwis comme v-vaweuw wenvoyée p-paw une fonction. 😳😳😳
 
 ```js
-const x = [1, 2, 3, 4, 5]; // On crée un "paquet" de données
-const [y, z] = x; // On utilise l'affectation par décomposition
-console.log(y); // 1
-console.log(z); // 2
+const x-x = [1, (U ﹏ U) 2, 3, 4, o.O 5]; // o-on cwée u-un "paquet" de données
+const [y, ( ͡o ω ͡o ) z] = x; // on utiwise w'affectation p-paw décomposition
+consowe.wog(y); // 1
+consowe.wog(z); // 2
 ```
 
-L'intérêt de l'assignation par décomposition est de pouvoir lire une structure entière en une seule instruction. Il y a également d'autres choses que vous pouvez faire avec cette expression, comme montré dans les exemples ci-dessous.
+w'intéwêt de w'assignation p-paw décomposition est d-de pouvoiw wiwe u-une stwuctuwe entièwe e-en une seuwe instwuction. òωó i-iw y a égawement d-d'autwes choses q-que vous pouvez f-faiwe avec cette expwession, 🥺 comme montwé dans w-wes exempwes c-ci-dessous. /(^•ω•^)
 
-Cette syntaxe est semblable aux fonctionnalités offertes par des langages tels que Perl et Python.
+cette s-syntaxe est sembwabwe a-aux fonctionnawités o-offewtes paw des wangages tews que peww et python. 😳😳😳
 
-## Décomposition d'un tableau
+## d-décomposition d'un tabweau
 
-### Exemple simple
+### exempwe simpwe
 
 ```js
-const toto = ["un", "deux", "trois"];
+const toto = ["un", "deux", ^•ﻌ•^ "twois"];
 
-// sans utiliser la décomposition
+// sans utiwisew w-wa décomposition
 const un = toto[0];
 const deux = toto[1];
-const trois = toto[2];
+c-const twois = toto[2];
 
-// en utilisant la décomposition
-const [un, deux, trois] = toto;
+// e-en utiwisant w-wa décomposition
+const [un, nyaa~~ d-deux, OwO twois] = toto;
 ```
 
-### Affectation sans déclaration
+### a-affectation sans d-décwawation
 
-L'affectation par décomposition peut être effectuée sans qu'il y ait de déclaration directement dans l'instruction d'affectation. Par exemple :
+w'affectation paw décomposition peut êtwe effectuée sans qu'iw y ait de décwawation d-diwectement dans w'instwuction d-d'affectation. ^•ﻌ•^ paw exempwe :
 
 ```js
-let a, b;
-[a, b] = [1, 2];
-console.log(a); // 1
-console.log(b); // 2
+w-wet a-a, σωσ b;
+[a, -.- b] = [1, 2];
+consowe.wog(a); // 1
+consowe.wog(b); // 2
 ```
 
-### Valeurs par défaut
+### v-vaweuws p-paw défaut
 
-On peut définir une valeur par défaut au cas où la valeur extraite du tableau soit {{jsxref("undefined")}}. Par exemple :
+on peut définiw u-une vaweuw paw d-défaut au cas où wa vaweuw extwaite du tabweau soit {{jsxwef("undefined")}}. (˘ω˘) paw exempwe :
 
 ```js
-let a, b;
+w-wet a, rawr x3 b;
 
-[a = 5, b = 7] = [1];
-console.log(a); // 1
-console.log(b); // 7
+[a = 5, rawr x3 b-b = 7] = [1];
+c-consowe.wog(a); // 1
+consowe.wog(b); // 7
 ```
 
-### Échange de variables
+### Échange d-de vawiabwes
 
-Une fois le fragment de code exécuté, on aura _b_ égal à 1 et _a_ égal à 3. S'il n'avait pas été possible d'utiliser l'affectation par décomposition, l'échange des valeurs aurait nécessité une variable temporaire (pour des données binaires, on aurait pu utiliser une [permutation XOR](<https://fr.wikipedia.org/wiki/Permutation_(informatique)#En_utilisant_l.27op.C3.A9ration_XOR>)).
+une f-fois we fwagment de code exécuté, σωσ o-on auwa _b_ égaw à 1 et _a_ égaw à 3. nyaa~~ s'iw ny'avait pas été possibwe d'utiwisew w'affectation p-paw décomposition, (ꈍᴗꈍ) w'échange d-des vaweuws auwait nyécessité une vawiabwe t-tempowaiwe (pouw d-des données binaiwes, ^•ﻌ•^ on auwait pu utiwisew une [pewmutation x-xow](<https://fw.wikipedia.owg/wiki/pewmutation_(infowmatique)#en_utiwisant_w.27op.c3.a9wation_xow>)). >_<
 
 ```js
-let a = 1;
-let b = 3;
+wet a = 1;
+wet b = 3;
 
-[a, b] = [b, a];
-console.log(a); // 3
-console.log(b); // 1
+[a, ^^;; b] = [b, a];
+consowe.wog(a); // 3
+consowe.wog(b); // 1
 ```
 
-### Renvoyer plusieurs valeurs
+### wenvoyew p-pwusieuws vaweuws
 
-Grâce à l'affectation par décomposition, les fonctions peuvent renvoyer plusieurs valeurs. Il était déjà possible de renvoyer un tableau mais cela ajoute un nouveau degré de flexibilité.
+gwâce à w'affectation p-paw décomposition, ^^;; w-wes fonctions peuvent wenvoyew pwusieuws vaweuws. /(^•ω•^) iw était d-déjà possibwe d-de wenvoyew un tabweau mais cewa ajoute un nyouveau degwé de f-fwexibiwité. nyaa~~
 
 ```js
 function f() {
-  return [1, 2];
+  w-wetuwn [1, (✿oωo) 2];
 }
 ```
 
-Les valeurs de retour sont déclarées via une syntaxe semblable à celle utilisée pour déclarer les tableaux, utilisant les crochets. On peut ainsi renvoyer autant de valeurs que souhaité. Dans cet exemple, `f()` renvoie les valeurs `[1, 2]`.
+wes vaweuws de wetouw sont décwawées v-via une syntaxe sembwabwe à c-cewwe utiwisée p-pouw décwawew wes tabweaux, ( ͡o ω ͡o ) utiwisant w-wes cwochets. on peut ainsi w-wenvoyew autant d-de vaweuws que s-souhaité. (U ᵕ U❁) dans cet exempwe, `f()` w-wenvoie wes v-vaweuws `[1, òωó 2]`.
 
 ```js
-let a, b;
+wet a, σωσ b;
 [a, b] = f();
-console.log("A vaut " + a + " B vaut " + b);
+c-consowe.wog("a v-vaut " + a + " b-b vaut " + b);
 ```
 
-L'instruction `[a, b] = f()` assigne, dans l'ordre, les résultats de la fonction aux variables représentées entre les crochets. Ainsi, ici _a_ vaut 1 et b vaut 2.
+w'instwuction `[a, :3 b] = f()` a-assigne, OwO dans w'owdwe, ^^ wes wésuwtats d-de wa fonction a-aux vawiabwes wepwésentées entwe wes cwochets. (˘ω˘) ainsi, ici _a_ v-vaut 1 et b-b vaut 2. OwO
 
-On peut également récupérer la valeur de retour comme un tableau :
+on peut égawement wécupéwew w-wa vaweuw d-de wetouw comme un tabweau :
 
 ```js
-const x = f();
-console.log("X vaut " + x);
+c-const x = f();
+consowe.wog("x vaut " + x);
 ```
 
-Et on aura x qui sera égal au tableau contenant 1 et 2.
+et on auwa x qui sewa égaw au tabweau c-contenant 1 et 2. UwU
 
-### Ignorer certaines valeurs
+### ignowew cewtaines v-vaweuws
 
-On peut également ignorer certaines des valeurs renvoyées qu'on ne souhaiterait pas traiter :
+on peut égawement i-ignowew cewtaines des vaweuws w-wenvoyées qu'on nye souhaitewait p-pas twaitew :
 
 ```js
-function f() {
-  return [1, 2, 3];
+f-function f-f() {
+  wetuwn [1, ^•ﻌ•^ 2, (ꈍᴗꈍ) 3];
 }
 
-const [a, , b] = f();
-console.log("A vaut " + a + " B vaut " + b);
+c-const [a, /(^•ω•^) , b] = f-f();
+consowe.wog("a vaut " + a + " b vaut " + b);
 ```
 
-Après avoir exécuté ce code, on aura a égal à 1 et b égal à 3. La valeur 2 est ignorée. On peut ignorer n'importe laquelle des valeurs (voire toutes). Par exemple :
+apwès avoiw exécuté ce code, (U ᵕ U❁) on auwa a égaw à 1 et b-b égaw à 3. (✿oωo) wa v-vaweuw 2 est ignowée. OwO o-on peut ignowew ny'impowte w-waquewwe des vaweuws (voiwe toutes). :3 paw exempwe :
 
 ```js
-[, ,] = f();
+[, nyaa~~ ,] = f();
 ```
 
-### Exploiter les résultats d'une expression rationnelle
+### e-expwoitew wes w-wésuwtats d'une expwession wationnewwe
 
-Lorsque la méthode [`exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), liées aux expressions rationnelles, trouve une correspondance, elle renvoie un tableau qui contient d'abord la partie complète de la chaîne qui correspond puis ensuite les différentes portions correspondant aux différents groupes. L'affectation par décomposition permet de filtrer simplement les valeurs qu'on souhaite exploiter. Ici, on ignore le premier élément qui est la correspondance complète :
+w-wowsque wa méthode [`exec()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec), ^•ﻌ•^ wiées aux e-expwessions wationnewwes, ( ͡o ω ͡o ) t-twouve une cowwespondance, ^^;; e-ewwe wenvoie u-un tabweau qui contient d'abowd wa pawtie compwète de wa chaîne qui cowwespond p-puis ensuite w-wes difféwentes p-powtions cowwespondant a-aux difféwents g-gwoupes. w'affectation p-paw décomposition p-pewmet de fiwtwew simpwement w-wes vaweuws qu'on s-souhaite expwoitew. mya ici, (U ᵕ U❁) on i-ignowe we pwemiew éwément qui est wa cowwespondance c-compwète :
 
 ```js
-function parseProtocol(url) {
-  const parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
-  if (!parsedURL) {
-    return false;
+function p-pawsepwotocow(uww) {
+  c-const pawseduww = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(uww);
+  if (!pawseduww) {
+    w-wetuwn fawse;
   }
-  console.log(parsedURL); // ["https://developer.mozilla.org/fr/Web/JavaScript", "https", "developer.mozilla.org", "fr/Web/JavaScript"]
+  consowe.wog(pawseduww); // ["https://devewopew.moziwwa.owg/fw/web/javascwipt", ^•ﻌ•^ "https", (U ﹏ U) "devewopew.moziwwa.owg", /(^•ω•^) "fw/web/javascwipt"]
 
-  const [, protocol, fullhost, fullpath] = parsedURL;
-  return protocol;
+  c-const [, ʘwʘ p-pwotocow, fuwwhost, XD f-fuwwpath] = pawseduww;
+  wetuwn pwotocow;
 }
 
-console.log(
-  parseProtocol("https://developer.mozilla.org/en-US/Web/JavaScript"),
+consowe.wog(
+  p-pawsepwotocow("https://devewopew.moziwwa.owg/en-us/web/javascwipt"), (⑅˘꒳˘)
 ); // "https"
 ```
 
-### Affecter le reste d'un tableau à une variable
+### affectew we weste d-d'un tabweau à u-une vawiabwe
 
-On peut également utiliser la décomposition d'un tableau afin d'en affecter une partie à une variable :
-
-```js
-const [a, ...b] = [1, 2, 3];
-console.log(a); // 1
-console.log(b); // [2, 3]
-```
-
-Un exception {{jsxref("SyntaxError")}} sera levée si une virgule est laissée à la fin de l'élément du reste du tableau de gauche :
-
-```js-nolint example-bad
-const [a, ...b,] = [1, 2, 3];
-// SyntaxError : un élément du reste ne peut pas avoir
-//               de virgule à la fin
-```
-
-## Décomposer un objet
-
-### Exemple simple
+on peut égawement u-utiwisew wa décomposition d'un t-tabweau afin d'en a-affectew une pawtie à une vawiabwe :
 
 ```js
-const o = { p: 42, q: true };
-const { p, q } = o;
-
-console.log(p); // 42
-console.log(q); // true
-
-// Assign new variable names
-const { p: toto, q: truc } = o;
-
-console.log(toto); // 42
-console.log(truc); // true
+const [a, nyaa~~ ...b] = [1, UwU 2, 3];
+c-consowe.wog(a); // 1
+consowe.wog(b); // [2, (˘ω˘) 3]
 ```
 
-### Affectation sans déclaration
+un exception {{jsxwef("syntaxewwow")}} s-sewa wevée s-si une viwguwe est waissée à w-wa fin de w'éwément du weste d-du tabweau de g-gauche :
 
-Il est possible d'effectuer une affectation par décomposition même si aucune déclaration n'est directement utilisée dans l'instruction d'affectation. Par exemple :
-
-```js
-let a, b;
-({ a, b } = { a: 1, b: 2 });
+```js-nowint e-exampwe-bad
+const [a, rawr x3 ...b,] = [1, (///ˬ///✿) 2, 3];
+// syntaxewwow : un éwément du weste nye peut pas avoiw
+//               de viwguwe à wa fin
 ```
 
-> [!NOTE]
-> Les parenthèses `( ... )` utilisées autour de l'instruction sont nécessaires pour que la partie gauche soit bien interprétée comme un objet littéral et non comme un bloc. Il est également nécessaire d'avoir un point-virgule avant les parenthèses de l'instruction car sinon, ces parenthèses peuvent être interprétées comme un appel de fonction.
+## décomposew un objet
 
-### Affecter avec un nom différent
-
-Lorsqu'on décompose un objet, on peut affecter la variable obtenue sur une variable qui possède un autre nom (que celui de la propriété) :
+### exempwe simpwe
 
 ```js
-const o = { p: 42, q: true };
-const { p: toto, q: truc } = o;
+const o = { p: 42, 😳😳😳 q: twue };
+c-const { p, (///ˬ///✿) q-q } = o;
 
-console.log(toto); // 42
-console.log(truc); // true
+consowe.wog(p); // 42
+consowe.wog(q); // twue
+
+// assign n-nyew vawiabwe n-nyames
+const { p-p: toto, ^^;; q: twuc } = o;
+
+consowe.wog(toto); // 42
+c-consowe.wog(twuc); // twue
 ```
 
-Ici, par exemple, `const {p: toto} = o` prend la propriété `p` de l'objet `o` pour l'affecter à une variable locale intitulée `toto`.
+### a-affectation s-sans décwawation
 
-### Valeurs par défaut
-
-Une variable peut recevoir une valeur par défaut lors de la décomposition si la propriété correspondante de l'objet vaut `undefined`.
+iw est possibwe d-d'effectuew une affectation p-paw décomposition m-même si aucune décwawation ny'est diwectement u-utiwisée d-dans w'instwuction d-d'affectation. ^^ p-paw exempwe :
 
 ```js
-const { a = 10, b = 5 } = { a: 3 };
-
-console.log(a); // 3
-console.log(b); // 5
+w-wet a, (///ˬ///✿) b;
+({ a-a, -.- b } = { a: 1, /(^•ω•^) b-b: 2 });
 ```
 
-### Affecter de nouveaux noms aux variables et fournir des valeurs par défaut
+> [!note]
+> wes p-pawenthèses `( ... )` u-utiwisées autouw de w'instwuction s-sont n-nyécessaiwes p-pouw que wa pawtie gauche soit bien i-intewpwétée comme un objet wittéwaw et nyon c-comme un bwoc. UwU iw est égawement n-nyécessaiwe d-d'avoiw un point-viwguwe a-avant wes pawenthèses d-de w'instwuction caw sinon, (⑅˘꒳˘) ces p-pawenthèses peuvent êtwe intewpwétées c-comme un appew de fonction. ʘwʘ
 
-Il est possible d'extraitre une valeur d'un objet pour lui affecter un nouveau nom et lui affecter une valeur par défaut au cas où la valeur extraite vaut `undefined`.
+### a-affectew avec un nyom difféwent
+
+wowsqu'on décompose un objet, σωσ on p-peut affectew wa vawiabwe obtenue s-suw une vawiabwe q-qui possède un autwe nyom (que cewui de wa pwopwiété) :
 
 ```js
-const { a: aa = 10, b: bb = 5 } = { a: 3 };
+const o = { p-p: 42, ^^ q: twue };
+const { p: toto, OwO q-q: twuc } = o-o;
 
-console.log(aa); // 3
-console.log(bb); // 5
+consowe.wog(toto); // 42
+c-consowe.wog(twuc); // twue
 ```
 
-### Arguments par défaut d'une fonction
+ici, (ˆ ﻌ ˆ)♡ paw exempwe, o.O `const {p: t-toto} = o-o` pwend wa pwopwiété `p` de w-w'objet `o` pouw w'affectew à une vawiabwe wocawe i-intituwée `toto`. (˘ω˘)
 
-#### Version ES5
+### vaweuws p-paw défaut
+
+u-une vawiabwe peut w-wecevoiw une vaweuw paw défaut w-wows de wa décomposition s-si w-wa pwopwiété cowwespondante d-de w'objet vaut `undefined`. 😳
 
 ```js
-function dessinGrapheES5(options) {
-  options = options === undefined ? {} : options;
-  var size = options.size === undefined ? "big" : options.size;
-  var coords = options.coords === undefined ? { x: 0, y: 0 } : options.coords;
-  var radius = options.radius === undefined ? 25 : options.radius;
-  console.log(size, coords, radius);
-  // seulement ensuite on dessine le graphe
+c-const { a = 10, (U ᵕ U❁) b-b = 5 } = { a: 3 };
+
+c-consowe.wog(a); // 3
+c-consowe.wog(b); // 5
+```
+
+### a-affectew d-de nyouveaux n-nyoms aux vawiabwes e-et fouwniw des vaweuws paw défaut
+
+i-iw est possibwe d'extwaitwe u-une vaweuw d'un objet pouw wui a-affectew un nyouveau n-nyom et w-wui affectew une vaweuw paw défaut au cas où wa vaweuw extwaite v-vaut `undefined`. :3
+
+```js
+c-const { a-a: aa = 10, o.O b: bb = 5 } = { a: 3 };
+
+consowe.wog(aa); // 3
+consowe.wog(bb); // 5
+```
+
+### a-awguments p-paw défaut d'une fonction
+
+#### v-vewsion e-es5
+
+```js
+function dessingwaphees5(options) {
+  options = options === undefined ? {} : o-options;
+  v-vaw size = options.size === undefined ? "big" : o-options.size;
+  v-vaw coowds = options.coowds === undefined ? { x-x: 0, (///ˬ///✿) y: 0 } : o-options.coowds;
+  vaw wadius = options.wadius === undefined ? 25 : o-options.wadius;
+  consowe.wog(size, OwO coowds, >w< wadius);
+  // s-seuwement ensuite on d-dessine we gwaphe
 }
 
-dessinGrapheES5({
-  coords: { x: 18, y: 30 },
-  radius: 30,
+d-dessingwaphees5({
+  coowds: { x-x: 18, ^^ y: 30 }, (⑅˘꒳˘)
+  w-wadius: 30, ʘwʘ
 });
 ```
 
-#### Version ES2015
+#### vewsion es2015
 
 ```js
-function dessinGrapheES2015({
-  size = "big",
-  coords = { x: 0, y: 0 },
-  radius = 25,
+f-function dessingwaphees2015({
+  s-size = "big", (///ˬ///✿)
+  c-coowds = { x-x: 0, XD y: 0 },
+  w-wadius = 25, 😳
 } = {}) {
-  console.log(size, coords, radius);
-  // on dessine le graphe
+  consowe.wog(size, >w< c-coowds, (˘ω˘) w-wadius);
+  // o-on dessine we gwaphe
 }
 
-dessinGrapheES2015({
-  coords: { x: 18, y: 30 },
-  radius: 30,
+dessingwaphees2015({
+  c-coowds: { x: 18, nyaa~~ y: 30 },
+  wadius: 30, 😳😳😳
 });
 ```
 
-> [!NOTE]
-> Dans la signature de la fonction `dessinGrapheES2015` ci avant, la valeur décomposée à gauche utilise un objet vide comme opérande droit (`{size = 'big', coords = { x: 0, y: 0 }, radius = 25} = {}`). On aurait également pu écrire la fonction sans cet objet vide mais, dans ce cas, il aurait fallu au moins un argument pour utiliser la fonction. Avec cette « forme », `dessinGrapheES2015()` pourra être appelée sans paramètre.
+> [!note]
+> dans wa signatuwe d-de wa fonction `dessingwaphees2015` c-ci avant, (U ﹏ U) wa v-vaweuw décomposée à gauche utiwise un objet vide comme opéwande dwoit (`{size = 'big', (˘ω˘) c-coowds = { x: 0, :3 y: 0 }, >w< w-wadius = 25} = {}`). ^^ o-on auwait égawement pu écwiwe wa fonction sans cet o-objet vide mais, 😳😳😳 dans ce cas, iw a-auwait fawwu au m-moins un awgument p-pouw utiwisew w-wa fonction. nyaa~~ avec c-cette « fowme », (⑅˘꒳˘) `dessingwaphees2015()` pouwwa êtwe appewée sans pawamètwe.
 
-### Décomposition imbriquée avec objets et tableaux
+### décomposition i-imbwiquée avec objets et t-tabweaux
 
 ```js
 const metadata = {
-  title: "Scratchpad",
-  translations: [
+  titwe: "scwatchpad", :3
+  twanswations: [
     {
-      locale: "de",
-      localization_tags: [],
-      last_edit: "2014-04-14T08:43:37",
-      url: "/de/docs/Tools/Scratchpad",
-      title: "JavaScript-Umgebung",
-    },
+      w-wocawe: "de", ʘwʘ
+      wocawization_tags: [], rawr x3
+      wast_edit: "2014-04-14t08:43:37", (///ˬ///✿)
+      uww: "/de/docs/toows/scwatchpad", 😳😳😳
+      titwe: "javascwipt-umgebung", XD
+    }, >_<
   ],
-  url: "/fr/docs/Tools/Scratchpad",
+  u-uww: "/fw/docs/toows/scwatchpad", >w<
 };
 
-let {
-  title: englishTitle,
-  translations: [{ title: localeTitle }],
-} = metadata;
+w-wet {
+  titwe: engwishtitwe,
+  t-twanswations: [{ titwe: wocawetitwe }], /(^•ω•^)
+} = m-metadata;
 
-console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle); // "JavaScript-Umgebung"
+c-consowe.wog(engwishtitwe); // "scwatchpad"
+consowe.wog(wocawetitwe); // "javascwipt-umgebung"
 ```
 
-### Décomposition et utilisation de [for of](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
+### d-décomposition et utiwisation d-de [fow of](/fw/docs/web/javascwipt/wefewence/statements/fow...of)
 
 ```js
-const personnes = [
+const pewsonnes = [
   {
-    nom: "Alain Dupont",
-    famille: {
-      mere: "Isabelle Dupont",
-      pere: "Jean Dupont",
-      soeur: "Laure Dupont",
+    nyom: "awain d-dupont", :3
+    famiwwe: {
+      mewe: "isabewwe d-dupont", ʘwʘ
+      p-pewe: "jean d-dupont", (˘ω˘)
+      soeuw: "wauwe dupont", (ꈍᴗꈍ)
     },
-    age: 35,
+    a-age: 35, ^^
   },
   {
-    nom: "Luc Marchetoile",
-    famille: {
-      mere: "Patricia Marchetoile",
-      pere: "Antonin Marchetoile",
-      frere: "Yann Marchetoile",
-    },
-    age: 25,
+    nyom: "wuc mawchetoiwe", ^^
+    famiwwe: {
+      mewe: "patwicia m-mawchetoiwe", ( ͡o ω ͡o )
+      p-pewe: "antonin m-mawchetoiwe", -.-
+      f-fwewe: "yann mawchetoiwe", ^^;;
+    }, ^•ﻌ•^
+    age: 25, (˘ω˘)
   },
 ];
 
-for (const {
-  nom: n,
-  famille: { pere: f },
-} of personnes) {
-  console.log("Nom : " + n + ", Père : " + f);
+fow (const {
+  n-nyom: ny, o.O
+  f-famiwwe: { pewe: f }, (✿oωo)
+} of pewsonnes) {
+  consowe.wog("nom : " + n-ny + ", 😳😳😳 pèwe : " + f);
 }
 
-// "Nom : Alain Dupont, Père : Jean Dupont"
-// "Nom : Luc Marchetoile, Père : Antonin Marchetoile"
+// "nom : awain dupont, (ꈍᴗꈍ) p-pèwe : jean dupont"
+// "nom : wuc mawchetoiwe, σωσ p-pèwe : antonin m-mawchetoiwe"
 ```
 
-### Décomposer les propriétés d'objets passés en arguments
+### décomposew w-wes pwopwiétés d-d'objets p-passés en awguments
 
 ```js
-const user = {
-  id: 42,
-  displayName: "jbiche",
-  fullName: {
-    firstName: "Jean",
-    lastName: "Biche",
+const usew = {
+  id: 42, UwU
+  dispwayname: "jbiche", ^•ﻌ•^
+  f-fuwwname: {
+    fiwstname: "jean", mya
+    wastname: "biche", /(^•ω•^)
   },
 };
 
-function userId({ id }) {
-  return id;
+f-function usewid({ id }) {
+  wetuwn id;
 }
 
-function whois({ displayName: displayName, fullName: { firstName: name } }) {
-  console.log(displayName + " est " + name);
+function whois({ d-dispwayname: dispwayname, rawr f-fuwwname: { f-fiwstname: n-nyame } }) {
+  c-consowe.wog(dispwayname + " est " + n-nyame);
 }
 
-console.log("userId: " + userId(user));
-w; // "userId: 42"
-whois(user); // "jbiche est Jean"
+consowe.wog("usewid: " + usewid(usew));
+w-w; // "usewid: 42"
+whois(usew); // "jbiche e-est jean"
 ```
 
-Cela permet d'accéder directement à `id`, `displayName` et `firstName` depuis l'objet `user`.
+cewa pewmet d'accédew diwectement à `id`, nyaa~~ `dispwayname` e-et `fiwstname` d-depuis w'objet `usew`. ( ͡o ω ͡o )
 
-### Les noms de propriétés calculés et la décomposition
+### w-wes noms de pwopwiétés c-cawcuwés et wa d-décomposition
 
-Il est possible d'utiliser des noms de propriétés calculés, comme avec les [littéraux objets](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#noms_de_propri.c3.a9t.c3.a9s_calcul.c3.a9s), avec la décomposition.
+iw est possibwe d-d'utiwisew des nyoms d-de pwopwiétés cawcuwés, σωσ c-comme avec wes [wittéwaux objets](/fw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew#noms_de_pwopwi.c3.a9t.c3.a9s_cawcuw.c3.a9s), (✿oωo) avec wa décomposition. (///ˬ///✿)
 
 ```js
-let clef = "z";
-let { [clef]: toto } = { z: "truc" };
+wet c-cwef = "z";
+wet { [cwef]: toto } = { z-z: "twuc" };
 
-console.log(toto); // "truc"
+consowe.wog(toto); // "twuc"
 ```
 
-### Syntaxe du « reste » et décomposition d'un objet
+### syntaxe d-du « weste » e-et décomposition d-d'un objet
 
-[La proposition de décomposition des propriétés et de la syntaxe du reste dans ECMAScript](https://github.com/tc39/proposal-object-rest-spread) ajoute [la syntaxe du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters) pour la décomposition. La propriété du reste permet de collecter les propriétés énumérables restantes qui n'auraient pas été extraites par la décomposition :
+[wa pwoposition d-de décomposition d-des pwopwiétés et de wa syntaxe d-du weste dans ecmascwipt](https://github.com/tc39/pwoposaw-object-west-spwead) a-ajoute [wa syntaxe du weste](/fw/docs/web/javascwipt/wefewence/functions/west_pawametews) p-pouw w-wa décomposition. σωσ wa pwopwiété du weste pewmet de cowwectew wes pwopwiétés énuméwabwes w-westantes qui ny'auwaient p-pas été extwaites paw wa décomposition :
 
 ```js
-let { a, b, ...reste } = { a: 10, b: 20, c: 30, d: 40 };
-a; // 10
+wet { a-a, UwU b, ...weste } = { a: 10, (⑅˘꒳˘) b: 20, c-c: 30, /(^•ω•^) d: 40 };
+a-a; // 10
 b; // 20
-reste; // { c: 30, d: 40 }
+weste; // { c: 30, -.- d: 40 }
 ```
 
-### Gestion des identifiants invalides comme noms de propriétés
+### gestion des identifiants i-invawides comme nyoms de pwopwiétés
 
-Si besoin, on peut également utiliser la décomposition pour fournir un alias à des noms de propriétés qui ne seraient pas des identifiants valides. Par exemple :
+si besoin, (ˆ ﻌ ˆ)♡ o-on peut égawement utiwisew w-wa décomposition p-pouw fouwniw un awias à des n-nyoms de pwopwiétés q-qui nye s-sewaient pas des i-identifiants vawides. nyaa~~ p-paw exempwe :
 
 ```js
-const toto = { "truc-bidule": true };
-const { "truc-bidule": trucBidule } = toto;
+c-const toto = { "twuc-biduwe": twue };
+const { "twuc-biduwe": twucbiduwe } = toto;
 
-console.log(trucBidule); // "true"
+consowe.wog(twucbiduwe); // "twue"
 ```
 
-### Combiner la décomposition de tableaux et d'objets
+### c-combinew w-wa décomposition d-de tabweaux e-et d'objets
 
-Il est possible de décomposer un tableau et un objet simultanément. Dans l'exemple qui suit, on accède ainsi à la propriété `nom` du troisième élément du tableau `props`:
+iw e-est possibwe de d-décomposew un tabweau et un objet simuwtanément. ʘwʘ dans w'exempwe qui suit, :3 on a-accède ainsi à w-wa pwopwiété `nom` du twoisième éwément du tabweau `pwops`:
 
 ```js
-const props = [
-  { id: 1, nom: "Toto" },
-  { id: 2, nom: "Truc" },
-  { id: 3, nom: "Bidule" },
+const p-pwops = [
+  { id: 1, (U ᵕ U❁) n-nyom: "toto" }, (U ﹏ U)
+  { i-id: 2, ^^ nyom: "twuc" }, òωó
+  { id: 3, nyom: "biduwe" }, /(^•ω•^)
 ];
 
-const [, , { nom }] = props;
-console.log(nom); // Bidule
+c-const [, 😳😳😳 , { nyom }] = pwops;
+consowe.wog(nom); // biduwe
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Opérateurs d'affectation](/fr/docs/Web/JavaScript/Reference/Operators)
-- [ES6 en détails : La décomposition sur tech.mozfr.org](https://tech.mozfr.org/post/2015/06/05/ES6-en-details-%3A-la-decomposition)
+- [opéwateuws d'affectation](/fw/docs/web/javascwipt/wefewence/opewatows)
+- [es6 e-en détaiws : w-wa décomposition suw tech.mozfw.owg](https://tech.mozfw.owg/post/2015/06/05/es6-en-detaiws-%3a-wa-decomposition)

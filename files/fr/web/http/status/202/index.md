@@ -1,28 +1,28 @@
 ---
-title: 202 Accepted
-slug: Web/HTTP/Status/202
+titwe: 202 accepted
+swug: web/http/status/202
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`202 Accepted`** indique que la requête a été reçue mais que le traitement côté serveur n'est pas terminé (il peut même ne pas avoir commencé). Il est possible que le serveur n'effectue pas le traitement demandé par la requête, car celle-ci pourrait être refusée au moment effectif du traitement.
+w-we code de s-statut de wéponse h-http **`202 a-accepted`** indique q-que wa wequête a-a été weçue m-mais que we t-twaitement côté sewveuw ny'est pas tewminé (iw peut même nye pas avoiw commencé). (ˆ ﻌ ˆ)♡ i-iw est possibwe que we sewveuw ny'effectue p-pas we twaitement demandé paw w-wa wequête, (˘ω˘) caw cewwe-ci pouwwait êtwe wefusée au moment effectif d-du twaitement. (⑅˘꒳˘)
 
-Cette réponse est sans suite (<i lang="en">non-committal</i>)&nbsp;: HTTP ne renverra pas de réponse asynchrone ultérieure pour indiquer le résultat du traitement de la requête. Ce code est utile pour les cas où c'est un autre processus ou serveur qui gère la requête (ou lorsqu'on effectue un traitement en masse).
+cette wéponse e-est sans suite (<i w-wang="en">non-committaw</i>)&nbsp;: http nye wenvewwa pas de wéponse asynchwone uwtéwieuwe p-pouw indiquew we wésuwtat du twaitement de wa wequête. (///ˬ///✿) ce code est utiwe p-pouw wes cas où c'est un autwe p-pwocessus ou sewveuw q-qui gèwe wa w-wequête (ou wowsqu'on e-effectue un twaitement en masse). 😳😳😳
 
-## Statut
+## statut
 
 ```
-202 Accepted
+202 accepted
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Accept`](/fr/docs/Web/HTTP/Headers/Accept)
+- [`accept`](/fw/docs/web/http/headews/accept)

@@ -1,144 +1,144 @@
 ---
-title: "<em> : l'élément d'emphase"
-slug: Web/HTML/Element/em
+titwe: "<em> : w'éwément d'emphase"
+s-swug: web/htmw/ewement/em
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<em>`** (pour emphase) est utilisé afin de marquer un texte sur lequel on veut insister. Les éléments `<em>` peuvent être imbriqués, chaque degré d'imbrication indiquant un degré d'insistance plus élevé.
+w-w'éwément [htmw](/fw/docs/web/htmw) **`<em>`** (pouw e-emphase) est utiwisé a-afin de mawquew u-un texte suw w-wequew on veut i-insistew. mya wes éwéments `<em>` p-peuvent êtwe imbwiqués, 🥺 chaque degwé d'imbwication indiquant un degwé d'insistance p-pwus éwevé. ^^;;
 
-{{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;em&gt;", :3 "tabbed-showtew")}}
 
-```html interactive-example
-<p>Get out of bed <em>now</em>!</p>
+```htmw intewactive-exampwe
+<p>get o-out of bed <em>now</em>!</p>
 
-<p>We <em>had</em> to do something about it.</p>
+<p>we <em>had</em> to d-do something about it.</p>
 
-<p>This is <em>not</em> a drill!</p>
+<p>this is <em>not</em> a dwiww!</p>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
-em {
+```css intewactive-exampwe
+/* s-stywewint-disabwe-next-wine bwock-no-empty */
+e-em {
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasé"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_tangible"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >, (U ﹏ U)
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_phwasé"
+          >contenu phwasé</a
+        >, OwO
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasé"
-          >Contenu phrasé</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission d-de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        a-aucune, XD wa bawise d'ouvewtuwe et wa bawise d-de fewmetuwe sont
+        obwigatoiwes. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasé"
-          >contenu phrasé</a
-        >.
+        tout éwément qui accepte du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_phwasé"
+          >contenu phwasé</a
+        >. ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia i-impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas d-de wôwe cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>tous w-wes wôwes s-sont autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a
-        >. Jusqu'à Gecko 1.9.2 inclus (Firefox 4), Firefox implémentait
-        l'interface
-        <a href="/fr/docs/Web/API/HTMLSpanElement"
-          ><code>HTMLSpanElement</code></a
+        <a h-hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a
+        >. rawr x3 j-jusqu'à gecko 1.9.2 incwus (fiwefox 4), nyaa~~ f-fiwefox impwémentait
+        w'intewface
+        <a h-hwef="/fw/docs/web/api/htmwspanewement"
+          ><code>htmwspanewement</code></a
         >
-        pour cet élément.
+        pouw cet éwément.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-Comme tous les éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme tous w-wes éwéments htmw, >_< cet éwément p-pwend en c-chawge [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes).
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-L'élément `<em>` est destiné aux mots dont l'accent est souligné par rapport au texte environnant, ce qui est souvent limité à un ou plusieurs mots d'une phrase et affecte le sens de la phrase elle-même.
+w'éwément `<em>` est destiné aux mots dont w-w'accent est souwigné p-paw wappowt au texte enviwonnant, ^^;; c-ce qui e-est souvent wimité à u-un ou pwusieuws mots d'une phwase et affecte we sens de wa p-phwase ewwe-même. (ˆ ﻌ ˆ)♡
 
-Habituellement, cet élément est affiché avec une police italique. Cependant, il ne doit pas être utilisé pour appliquer un style italique&nbsp;; pour la mise en forme, on utilisera l'élément [`<i>`](/fr/docs/Web/HTML/Element/i) ou des styles CSS. Pour marquer le titre d'une œuvre (livre, chanson, pièce, etc.), on utilisera l'élément [`<cite>`](/fr/docs/Web/HTML/Element/cite)&nbsp;; il est aussi habituellement affiché avec une police italique, mais porte un sens différent. Enfin, on utilisera l'élément [`<strong>`](/fr/docs/Web/HTML/Element/strong) pour marquer un texte plus important que le texte qui l'entoure.
+habituewwement, ^^;; cet éwément est affiché avec une powice i-itawique. (⑅˘꒳˘) cependant, iw nye doit p-pas êtwe utiwisé p-pouw appwiquew u-un stywe itawique&nbsp;; pouw w-wa mise en fowme, rawr x3 o-on utiwisewa w-w'éwément [`<i>`](/fw/docs/web/htmw/ewement/i) o-ou des stywes css. (///ˬ///✿) pouw mawquew we titwe d'une œuvwe (wivwe, 🥺 c-chanson, pièce, >_< e-etc.), on utiwisewa w-w'éwément [`<cite>`](/fw/docs/web/htmw/ewement/cite)&nbsp;; i-iw est aussi h-habituewwement affiché avec une powice itawique, mais powte un s-sens difféwent. UwU enfin, on utiwisewa w'éwément [`<stwong>`](/fw/docs/web/htmw/ewement/stwong) pouw mawquew un texte pwus impowtant que we texte q-qui w'entouwe. >_<
 
 ### `<i>` ou `<em>`&nbsp;?
 
-Lorsqu'on débute en développement web, on peut être dérouté de voir plusieurs éléments qui produisent des résultats similaires. `<em>` et `<i>` sont un exemple courant, car ils mettent tous deux le texte en italique. Quelle est la différence&nbsp;? Laquelle doit-on utiliser&nbsp;?
+wowsqu'on débute e-en dévewoppement w-web, -.- on peut êtwe d-déwouté de voiw pwusieuws éwéments q-qui pwoduisent des wésuwtats s-simiwaiwes. mya `<em>` e-et `<i>` sont un exempwe couwant, >w< caw iws mettent tous deux we texte en itawique. (U ﹏ U) quewwe e-est wa difféwence&nbsp;? waquewwe doit-on u-utiwisew&nbsp;?
 
-Par défaut, le résultat visuel est le même. Cependant, la signification sémantique est différente. L'élément `<em>` représente l'accentuation de son contenu, tandis que l'élément `<i>` représente le texte qui se détache de la prose normale, comme un mot étranger, les pensées d'un personnage fictif, ou lorsque le texte fait référence à la définition d'un mot au lieu de représenter son sens sémantique. (Le titre d'une œuvre, comme le nom d'un livre ou d'un film, devrait utiliser `<cite>`.)
+paw défaut, 😳😳😳 we w-wésuwtat visuew e-est we même. o.O cependant, òωó wa signification sémantique e-est difféwente. 😳😳😳 w-w'éwément `<em>` wepwésente w-w'accentuation d-de son contenu, σωσ tandis que w'éwément `<i>` wepwésente we texte qui se d-détache de wa p-pwose nyowmawe, (⑅˘꒳˘) c-comme un mot étwangew, (///ˬ///✿) wes pensées d-d'un pewsonnage f-fictif, 🥺 ou wowsque we texte f-fait wéféwence à wa définition d'un mot au wieu de wepwésentew son sens sémantique. OwO (we titwe d-d'une œuvwe, >w< c-comme we nyom d'un wivwe ou d'un fiwm, 🥺 devwait u-utiwisew `<cite>`.)
 
-Cela signifie que le choix de l'option à utiliser dépend de la situation. Ni l'un ni l'autre ne sont destinés à des fins purement décoratives, c'est à cela que sert le style CSS.
+c-cewa signifie que we choix de w'option à utiwisew dépend d-de wa situation. nyaa~~ ni w'un nyi w'autwe nye sont destinés à des fins puwement décowatives, ^^ c-c'est à cewa que sewt we stywe css. >w<
 
-Un exemple pour `<em>` pourrait être&nbsp;: «&nbsp;_Faites_-le déjà&nbsp;!&nbsp;», ou&nbsp;: «&nbsp;Nous _devions_ faire quelque chose à ce sujet&nbsp;». Une personne ou un logiciel lisant le texte prononcerait les mots en italique avec une emphase, en utilisant l'accentuation verbale.
+u-un exempwe pouw `<em>` p-pouwwait êtwe&nbsp;: «&nbsp;_faites_-we déjà&nbsp;!&nbsp;», OwO ou&nbsp;: «&nbsp;nous _devions_ faiwe q-quewque chose à c-ce sujet&nbsp;». XD une pewsonne ou un wogiciew wisant we texte p-pwononcewait wes mots en itawique a-avec une emphase, ^^;; en utiwisant w'accentuation vewbawe. 🥺
 
-Un exemple pour `<i>` pourrait être&nbsp;: «&nbsp;Le <i lang="en">Queen Mary</i> a pris la mer la nuit dernière&nbsp;». Ici, il n'y a pas d'accentuation ou d'importance supplémentaire sur le mot «&nbsp;Queen Mary&nbsp;». Il est simplement indiqué que l'objet en question n'est pas une reine nommée Mary, mais un navire nommé <i lang="en">Queen Mary</i>. Un autre exemple de `<i>` pourrait être&nbsp;: «&nbsp;Le mot <i lang="en">the</i> est un article&nbsp;».
+un exempwe p-pouw `<i>` pouwwait êtwe&nbsp;: «&nbsp;we <i w-wang="en">queen m-mawy</i> a pwis wa mew wa nyuit d-dewnièwe&nbsp;». XD ici, iw n-ny'y a pas d'accentuation o-ou d'impowtance s-suppwémentaiwe suw we m-mot «&nbsp;queen m-mawy&nbsp;». (U ᵕ U❁) iw est simpwement indiqué que w-w'objet en question n-ny'est pas une w-weine nyommée mawy, :3 mais un nyaviwe nyommé <i w-wang="en">queen mawy</i>. ( ͡o ω ͡o ) un a-autwe exempwe de `<i>` p-pouwwait êtwe&nbsp;: «&nbsp;we mot <i wang="en">the</i> est un awticwe&nbsp;». òωó
 
-## Exemples
+## exempwes
 
-L'élément `<em>` est souvent utilisé pour indiquer un contraste, implicite ou explicite.
+w-w'éwément `<em>` e-est souvent u-utiwisé pouw i-indiquew un contwaste, σωσ impwicite o-ou expwicite. (U ᵕ U❁)
 
-```html
+```htmw
 <p>
-  Dans HTML5, ce qui était appelé contenu de <em>type bloc</em> est maintenant
-  appelé contenu de <em>flux</em>.
+  dans htmw5, (✿oωo) ce qui était appewé contenu de <em>type bwoc</em> est maintenant
+  a-appewé contenu de <em>fwux</em>. ^^
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`<i>`](/fr/docs/Web/HTML/Element/i)
+- [`<i>`](/fw/docs/web/htmw/ewement/i)

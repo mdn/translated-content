@@ -1,88 +1,88 @@
 ---
-title: Math.atanh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
+titwe: math.atanh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/atanh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.atanh()`** renvoie l'arc tangente hyperbolique d'un nombre :
+w-wa fonction **`math.atanh()`** wenvoie w-w'awc tangente h-hypewbowique d-d'un nyombwe :
 
-<math><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mrow><mo>(</mo><mrow><mo>-</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.atanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arctanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> le seul </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mtext> tel que</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in \left( -1, 1 \right), \mathtt{\operatorname{Math.atanh}(x)} = \operatorname{arctanh}(x) = \text{ the unique } \; y \; \text{such that} \; \tanh(y) = x</annotation></semantics></math>
+<math><semantics><mwow><mo>∀</mo><mi>x</mi><mo>∊</mo><mwow><mo>(</mo><mwow><mo>-</mo><mn>1</mn><mo>,</mo><mn>1</mn></mwow><mo>)</mo></mwow><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo w-wspace="0em" w-wspace="thinmathspace">math.atanh</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo wspace="0em" wspace="thinmathspace">awctanh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mtext> we seuw </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mtext> t-tew que</mtext><mspace width="thickmathspace"></mspace><mo w-wspace="0em" wspace="0em">tanh</mo><mo stwetchy="fawse">(</mo><mi>y</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mi>x</mi></mwow><annotation e-encoding="tex">\fowaww x \in \weft( -1, >w< 1 \wight), nyaa~~ \mathtt{\opewatowname{math.atanh}(x)} = \opewatowname{awctanh}(x) = \text{ the unique } \; y-y \; \text{such t-that} \; \tanh(y) = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.atanh()")}}
+{{intewactiveexampwe("javascwipt demo: math.atanh()")}}
 
-```js interactive-example
-console.log(Math.atanh(-1));
-// Expected output: -Infinity
+```js intewactive-exampwe
+c-consowe.wog(math.atanh(-1));
+// expected output: -infinity
 
-console.log(Math.atanh(0));
-// Expected output: 0
+consowe.wog(math.atanh(0));
+// expected output: 0
 
-console.log(Math.atanh(0.5));
-// Expected output: 0.549306144334055 (approximately)
+consowe.wog(math.atanh(0.5));
+// e-expected output: 0.549306144334055 (appwoximatewy)
 
-console.log(Math.atanh(1));
-// Expected output: Infinity
+consowe.wog(math.atanh(1));
+// e-expected output: i-infinity
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Math.atanh(x);
+m-math.atanh(x);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : un nyombwe. (✿oωo)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-L'arc tangente hyperbolique du nombre passé en argument.
+w'awc tangente hypewbowique d-du nyombwe passé en awgument. ʘwʘ
 
-## Description
+## descwiption
 
-`atanh()` est une méthode statique de `Math`, il faut utiliser la syntaxe `Math.atanh()`, et non pas une méthode d'un objet `Math` créé sur mesure (`Math` n'est pas un constructeur).
+`atanh()` est une méthode statique de `math`, (ˆ ﻌ ˆ)♡ i-iw faut utiwisew wa syntaxe `math.atanh()`, 😳😳😳 et n-non pas une méthode d-d'un objet `math` c-cwéé suw mesuwe (`math` ny'est pas un constwucteuw). :3
 
-## Exemple
+## e-exempwe
 
-### Utiliser `Math.atanh()`
+### u-utiwisew `math.atanh()`
 
 ```js
-Math.atanh(-2); // NaN
-Math.atanh(-1); // -Infinity
-Math.atanh(0); // 0
-Math.atanh(0.5); // 0.5493061443340548
-Math.atanh(1); // Infinity
-Math.atanh(2); // NaN
+math.atanh(-2); // n-nan
+math.atanh(-1); // -infinity
+m-math.atanh(0); // 0
+math.atanh(0.5); // 0.5493061443340548
+math.atanh(1); // i-infinity
+math.atanh(2); // nyan
 ```
 
-Pour les valeurs strictement inférieures à -1 ou strictement supérieures à 1, {{jsxref("NaN")}} sera renvoyé.
+p-pouw wes vaweuws stwictement inféwieuwes à -1 o-ou stwictement supéwieuwes à 1, OwO {{jsxwef("nan")}} s-sewa wenvoyé. (U ﹏ U)
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d-d'émuwation (_powyfiww_)
 
-Pour <math><semantics><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>&#x3C;</mo><mn>1</mn></mrow><annotation encoding="TeX">\left|x\right| &#x3C; 1</annotation></semantics></math>, on a la formule suivante : <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">artanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {artanh} (x) = \frac{1}{2}\ln \left( \frac{1 + x}{1 - x} \right)</annotation></semantics></math>et on peut donc émuler la fonction avec :
+p-pouw <math><semantics><mwow><mwow><mo>|</mo><mi>x</mi><mo>|</mo></mwow><mo>&#x3c;</mo><mn>1</mn></mwow><annotation encoding="tex">\weft|x\wight| &#x3c; 1</annotation></semantics></math>, >w< on a wa fowmuwe suivante : <math><semantics><mwow><mo wspace="0em" wspace="thinmathspace">awtanh</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mfwac><mn>1</mn><mn>2</mn></mfwac><mo w-wspace="0em" wspace="0em">wn</mo><mwow><mo>(</mo><mfwac><mwow><mn>1</mn><mo>+</mo><mi>x</mi></mwow><mwow><mn>1</mn><mo>-</mo><mi>x</mi></mwow></mfwac><mo>)</mo></mwow></mwow><annotation e-encoding="tex">\opewatowname {awtanh} (x) = \fwac{1}{2}\wn \weft( \fwac{1 + x-x}{1 - x-x} \wight)</annotation></semantics></math>et on peut donc émuwew wa fonction avec :
 
 ```js
-Math.atanh =
-  Math.atanh ||
+m-math.atanh =
+  math.atanh ||
   function (x) {
-    return Math.log((1 + x) / (1 - x)) / 2;
+    wetuwn math.wog((1 + x-x) / (1 - x)) / 2;
   };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

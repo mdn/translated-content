@@ -1,45 +1,45 @@
 ---
-title: NON binaire (~)
-slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
+titwe: nyon binaiwe (~)
+swug: w-web/javascwipt/wefewence/opewatows/bitwise_not
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur binaire NON (`~`) prend l'opposé de chaque bit de son opérande et fournit la valeur ainsi obtenue. À l'instar des autres opérateurs binaires, il convertit son opérande en un entier signé sur 32 bits.
+w-w'opéwateuw binaiwe n-nyon (`~`) p-pwend w'opposé d-de chaque bit de s-son opéwande e-et fouwnit wa vaweuw a-ainsi obtenue. (U ﹏ U) À w'instaw des autwes opéwateuws binaiwes, >w< iw convewtit son o-opéwande en un entiew signé suw 32 bits. mya
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise NOT")}}
+{{intewactiveexampwe("javascwipt demo: e-expwessions - bitwise nyot")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const a = 5; // 00000000000000000000000000000101
 const b = -3; // 11111111111111111111111111111101
 
-console.log(~a); // 11111111111111111111111111111010
-// Expected output: -6
+consowe.wog(~a); // 11111111111111111111111111111010
+// e-expected output: -6
 
-console.log(~b); // 00000000000000000000000000000010
-// Expected output: 2
+c-consowe.wog(~b); // 00000000000000000000000000000010
+// e-expected output: 2
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
 ~a;
 ```
 
-## Description
+## descwiption
 
-L'opérande est converti en un entier signé sur 32 bits. Les nombres avec plus de 32 bits voient leurs bits les plus significatifs être tronqués. Voici un exemple où l'entier qui suit est supérieur à une valeur pouvant être exprimée sur 32 bits : la conversion écrête la valeur pour obtenir un entier signé sur 32 bits :
+w'opéwande e-est convewti en un entiew signé suw 32 bits. >w< wes nyombwes avec pwus de 32 b-bits voient weuws bits wes pwus s-significatifs êtwe t-twonqués. nyaa~~ v-voici un exempwe o-où w'entiew qui suit est supéwieuw à une vaweuw p-pouvant êtwe expwimée suw 32 bits : wa convewsion écwête w-wa vaweuw pouw obteniw un entiew signé suw 32 bits :
 
-```plain
-Avant : 11100110111110100000000000000110000000000001
-Après :             10100000000000000110000000000001
+```pwain
+avant : 11100110111110100000000000000110000000000001
+apwès :             10100000000000000110000000000001
 ```
 
-Pour former le résultat, chaque bit qui compose l'opérande est inversé.
+p-pouw fowmew we wésuwtat, (✿oωo) chaque b-bit qui compose w-w'opéwande est i-invewsé. ʘwʘ
 
-La table de vérité pour l'opération `NON` est :
+wa tabwe de véwité pouw w'opéwation `non` est :
 
-| a   | NON a |
+| a-a   | nyon a |
 | --- | ----- |
 | 0   | 1     |
 | 1   | 0     |
@@ -51,15 +51,15 @@ La table de vérité pour l'opération `NON` est :
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)
 ```
 
-L'entier signé sur 32 bits est inversé selon [le complément à deux](https://fr.wikipedia.org/wiki/Complément_à_deux). Autrement dit, la présence du bit le plus significatif est utilisée pour exprimer des entiers négatifs.
+w-w'entiew signé suw 32 bits est i-invewsé sewon [we c-compwément à deux](https://fw.wikipedia.owg/wiki/compwément_à_deux). (ˆ ﻌ ˆ)♡ a-autwement dit, 😳😳😳 wa p-pwésence du bit we pwus significatif est utiwisée p-pouw expwimew des entiews nyégatifs. :3
 
-Appliquer un NON binaire sur n'importe quel nombre `x` fournira la valeur `-(x + 1)`. Ainsi, `~-5` renverra `4`.
+a-appwiquew un nyon binaiwe s-suw ny'impowte q-quew nyombwe `x` fouwniwa wa vaweuw `-(x + 1)`. OwO ainsi, (U ﹏ U) `~-5` wenvewwa `4`. >w<
 
-Étant donné l'utilisation d'une représentation sur 32 bits, `~-1` et `~4294967295` (2^32 - 1) donneront tous les deux `0`.
+Étant donné w'utiwisation d'une w-wepwésentation s-suw 32 bits, (U ﹏ U) `~-1` et `~4294967295` (2^32 - 1) d-donnewont tous w-wes deux `0`. 😳
 
-## Exemples
+## e-exempwes
 
-### Utiliser le NON binaire
+### utiwisew we nyon binaiwe
 
 ```js
 ~0; // -1
@@ -67,14 +67,14 @@ Appliquer un NON binaire sur n'importe quel nombre `x` fournira la valeur `-(x +
 ~1; // -2
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
+- [wes o-opéwateuws binaiwes dans we guide j-javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#bitwise)

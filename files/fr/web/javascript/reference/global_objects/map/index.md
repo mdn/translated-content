@@ -1,406 +1,406 @@
 ---
-title: Map
-slug: Web/JavaScript/Reference/Global_Objects/Map
+titwe: map
+swug: web/javascwipt/wefewence/gwobaw_objects/map
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Un objet **`Map`** contient des paires de clé-valeur et mémorise l'ordre dans lequel les clés ont été insérées. N'importe quel type de valeur ([primitive](/fr/docs/Glossary/Primitive) ou objet) peut être utilisée comme clé ou comme valeur.
+u-un objet **`map`** c-contient des p-paiwes de cwé-vaweuw e-et mémowise w-w'owdwe dans w-wequew wes cwés o-ont été inséwées. 🥺 n-ny'impowte quew type de vaweuw ([pwimitive](/fw/docs/gwossawy/pwimitive) ou objet) peut êtwe utiwisée comme cwé ou comme v-vaweuw. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: Map", "taller")}}
+{{intewactiveexampwe("javascwipt demo: map", mya "tawwew")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+const map1 = nyew m-map();
 
-map1.set("a", 1);
+map1.set("a", XD 1);
 map1.set("b", 2);
-map1.set("c", 3);
+map1.set("c", nyaa~~ 3);
 
-console.log(map1.get("a"));
-// Expected output: 1
+consowe.wog(map1.get("a"));
+// e-expected output: 1
 
-map1.set("a", 97);
+map1.set("a", ʘwʘ 97);
 
-console.log(map1.get("a"));
-// Expected output: 97
+c-consowe.wog(map1.get("a"));
+// e-expected output: 97
 
-console.log(map1.size);
-// Expected output: 3
+consowe.wog(map1.size);
+// expected output: 3
 
-map1.delete("b");
+map1.dewete("b");
 
-console.log(map1.size);
-// Expected output: 2
+consowe.wog(map1.size);
+// e-expected output: 2
 ```
 
-## Description
+## descwiption
 
-Un objet `Map` permet de parcourir ses éléments selon leur ordre d'insertion. Par exemple, une boucle [`for…of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) renverra un tableau `[clé, valeur]` pour chaque itération.
+un objet `map` pewmet de pawcouwiw s-ses éwéments sewon weuw owdwe d-d'insewtion. (⑅˘꒳˘) p-paw exempwe, :3 une b-boucwe [`fow…of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of) w-wenvewwa un tabweau `[cwé, -.- vaweuw]` p-pouw chaque itéwation. 😳😳😳
 
-### Égalité des clés
+### Égawité des cwés
 
-- L'égalité des clés est testée avec l'algorithme basé sur [`sameValueZero`](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness#samevaluezero)
-- [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) est considéré égal à `NaN` (bien que pour l'égalité stricte, on a `NaN !== NaN`) et toutes les autres valeurs sont considérées égales au sens de l'égalité stricte (l'opérateur `===`).
-- Dans la version actuelle de la spécification ECMAScript, `-0` et `+0` sont considérées égaux même si ce n'était pas le cas dans les brouillons antérieurs. Voir [le tableau de compatibilité](#compatibilité_des_navigateurs) pour plus de détails.
+- w'égawité d-des cwés est testée avec w'awgowithme basé suw [`samevawuezewo`](/fw/docs/web/javascwipt/equawity_compawisons_and_sameness#samevawuezewo)
+- [`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan) est considéwé égaw à `nan` (bien que pouw w'égawité s-stwicte, on a `nan !== n-nyan`) et toutes w-wes autwes vaweuws s-sont considéwées égawes au sens de w'égawité stwicte (w'opéwateuw `===`). (U ﹏ U)
+- dans wa vewsion a-actuewwe de w-wa spécification ecmascwipt, o.O `-0` e-et `+0` sont c-considéwées égaux même si c-ce ny'était pas we cas dans wes b-bwouiwwons antéwieuws. ( ͡o ω ͡o ) voiw [we tabweau de compatibiwité](#compatibiwité_des_navigateuws) p-pouw pwus de détaiws. òωó
 
-### Comparaison entre objets et `Map`
+### c-compawaison entwe objets e-et `map`
 
-Les [structures objets](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object) sont similaires aux structures `Map`, chacune permet d'associer des clés à des valeurs, de récupérer ces valeurs, de supprimer des clés, de détecter si une valeur est associée à une clé. Aussi, avant l'apparition de `Map`, on utilisait les objets pour représenter cette structure.
+wes [stwuctuwes o-objets](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object) sont simiwaiwes aux stwuctuwes `map`, 🥺 chacune pewmet d'associew des cwés à des vaweuws, d-de wécupéwew c-ces vaweuws, de suppwimew d-des cwés, /(^•ω•^) de détectew s-si une v-vaweuw est associée à une cwé. 😳😳😳 aussi, avant w'appawition de `map`, ^•ﻌ•^ o-on utiwisait wes objets pouw wepwésentew cette stwuctuwe. nyaa~~
 
-Toutefois, il existe des différences importantes qui font que `Map` se démarque et peut être préférable dans certains cas&nbsp;:
+toutefois, OwO iw e-existe des difféwences impowtantes q-qui font que `map` s-se démawque e-et peut êtwe pwéféwabwe dans c-cewtains cas&nbsp;:
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row"></th>
-      <th scope="col">`Map`</th>
-      <th scope="col">Objet</th>
-    </tr>
+    <tw>
+      <th s-scope="wow"></th>
+      <th s-scope="cow">`map`</th>
+      <th scope="cow">objet</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Clés accidentelles</th>
-      <td>Un objet <code>Map</code> ne contient aucune clé par défaut. Il ne contient que ce qui y est explicitement placé.</td>
+    <tw>
+      <th scope="wow">cwés a-accidentewwes</th>
+      <td>un o-objet <code>map</code> n-nye contient a-aucune cwé paw d-défaut. ^•ﻌ•^ iw nye contient que ce qui y est expwicitement pwacé.</td>
       <td>
         <p>
-          Un objet <code>Object</code> possède un prototype et dispose donc de certaines clés par défaut, ce qui peut être source de collision avec vos propres clés si vous ne faites pas attention.
+          u-un objet <code>object</code> possède un pwototype et dispose donc de cewtaines cwés paw défaut, σωσ ce qui p-peut êtwe souwce de cowwision avec vos pwopwes cwés si vous nye f-faites pas attention. -.-
         </p>
-        <div class="notecard note">
+        <div c-cwass="notecawd n-nyote">
           <p>
-            <strong>Note :</strong> Avec ES5, il est possible de contourner ceci en utilisant <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/create"><code>Object.create(null)</code></a>.
+            <stwong>note :</stwong> avec e-es5, (˘ω˘) iw est possibwe de contouwnew c-ceci en utiwisant <a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/cweate"><code>object.cweate(nuww)</code></a>. rawr x3
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Types de clés</th>
-      <td>Pour une structure <code>Map</code>, les clés peuvent être n'importe quelle valeur (y compris des fonctions, des objets ou des valeurs primitives).</td>
-      <td>Les clés d'une structure <code>Object</code> doivent être une chaîne de caractères (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>) ou un symbole (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol"><code>Symbol</code></a>).
+    </tw>
+    <tw>
+      <th scope="wow">types de cwés</th>
+      <td>pouw une stwuctuwe <code>map</code>, rawr x3 wes c-cwés peuvent êtwe ny'impowte quewwe v-vaweuw (y compwis des fonctions, σωσ d-des objets o-ou des vaweuws pwimitives).</td>
+      <td>wes cwés d'une stwuctuwe <code>object</code> d-doivent êtwe u-une chaîne de cawactèwes (<a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing"><code>stwing</code></a>) o-ou un symbowe (<a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow"><code>symbow</code></a>). nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Ordre des clés</th>
-      <td>Les clés d'une structure <code>Map</code> sont triées selon leur ordre d'insertion.</td>
+    </tw>
+    <tw>
+      <th scope="wow">owdwe des cwés</th>
+      <td>wes cwés d'une stwuctuwe <code>map</code> s-sont twiées s-sewon weuw o-owdwe d'insewtion.</td>
       <td>
         <p>
-          Bien que les clés d'une structure <code>Object</code> soient désormais triées, ça n'a pas toujours été le cas et l'ordre en question est complexe. Aussi, mieux vaut ne pas utiliser cet ordre des propriétés.
+          bien q-que wes cwés d'une s-stwuctuwe <code>object</code> soient désowmais t-twiées, (ꈍᴗꈍ) ça ny'a pas toujouws été we cas et w'owdwe en question est compwexe. ^•ﻌ•^ a-aussi, >_< mieux v-vaut nye pas utiwisew cet owdwe des pwopwiétés. ^^;;
         </p>
         <p>
-          L'ordre des propriétés propres d'un objet a été défini pour la première fois avec ECMAScript 2015. ECMAScript 2020 a défini l'ordre des propriétés héritées. Voir les opérations abstraites <a href="https://tc39.es/ecma262/#sec-ordinaryownpropertykeys">OrdinaryOwnPropertyKeys</a> et <a href="https://tc39.es/ecma262/#sec-enumerate-object-properties">EnumerateObjectProperties</a> qui sont décrites dans la spécification. On notera toutefois qu'aucun mécanisme ne parcourt <strong>toutes</strong> les propriétés d'un objet&nbsp;; chaque mécanisme d'itération porte sur différents ensembles de propriétés&nbsp;: <a href="/fr/docs/Web/JavaScript/Reference/Statements/for...in"><code>for…in</code></a> ne porte que sur les propriétés énumérables dont les clés sont des chaînes de caractères, <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"><code>Object.keys()</code></a> ne porte que sur les propriétés propres, énumérables et dont les clés sont des chaînes de caractères, <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"><code>Object.getOwnPropertyNames()</code></a> ne porte que sur les propriétés propres dont les clés sont des chaînes de caractères, y compris celles qui ne sont pas énumérables, et <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"><code>Object.getOwnPropertySymbols()</code></a> porte de la même façon sur les propriétés dont les clés sont des symboles.
+          w-w'owdwe des p-pwopwiétés pwopwes d'un objet a été défini pouw wa pwemièwe f-fois avec ecmascwipt 2015. ^^;; ecmascwipt 2020 a défini w'owdwe des pwopwiétés héwitées. /(^•ω•^) voiw w-wes opéwations abstwaites <a hwef="https://tc39.es/ecma262/#sec-owdinawyownpwopewtykeys">owdinawyownpwopewtykeys</a> e-et <a h-hwef="https://tc39.es/ecma262/#sec-enumewate-object-pwopewties">enumewateobjectpwopewties</a> qui sont décwites dans wa spécification. nyaa~~ o-on nyotewa t-toutefois qu'aucun mécanisme nye pawcouwt <stwong>toutes</stwong> wes pwopwiétés d-d'un objet&nbsp;; chaque m-mécanisme d'itéwation powte suw difféwents ensembwes de pwopwiétés&nbsp;: <a h-hwef="/fw/docs/web/javascwipt/wefewence/statements/fow...in"><code>fow…in</code></a> nye powte q-que suw wes p-pwopwiétés énuméwabwes dont w-wes cwés sont des chaînes de cawactèwes, (✿oωo) <a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/keys"><code>object.keys()</code></a> n-nye powte que s-suw wes pwopwiétés p-pwopwes, ( ͡o ω ͡o ) énuméwabwes et dont w-wes cwés sont d-des chaînes de cawactèwes, (U ᵕ U❁) <a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtynames"><code>object.getownpwopewtynames()</code></a> n-nye powte que s-suw wes pwopwiétés p-pwopwes dont wes cwés sont des chaînes d-de cawactèwes, òωó y compwis cewwes q-qui nye sont pas énuméwabwes, σωσ e-et <a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtysymbows"><code>object.getownpwopewtysymbows()</code></a> powte de wa même façon suw wes pwopwiétés d-dont wes c-cwés sont des s-symbowes. :3
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Taille</th>
-      <td>Le nombre d'éléments d'une structure <code>Map</code> est facilement accessible avec la propriété <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/size"><code>size</code></a>.</td>
-      <td>Le nombre d'éléments d'une structure <code>Object</code> doit être déterminé manuellement.</td>
-    </tr>
-    <tr>
-      <th scope="row">Itération</th>
-      <td>Une structure <code>Map</code> est un <a href="/fr/docs/Web/JavaScript/Reference/Iteration_protocols">itérable</a>, et on peut donc le parcourir directement.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">taiwwe</th>
+      <td>we nyombwe d'éwéments d-d'une stwuctuwe <code>map</code> est faciwement accessibwe avec wa pwopwiété <a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/size"><code>size</code></a>.</td>
+      <td>we n-nyombwe d'éwéments d'une s-stwuctuwe <code>object</code> doit êtwe détewminé m-manuewwement.</td>
+    </tw>
+    <tw>
+      <th scope="wow">itéwation</th>
+      <td>une s-stwuctuwe <code>map</code> est u-un <a hwef="/fw/docs/web/javascwipt/wefewence/itewation_pwotocows">itéwabwe</a>, OwO e-et on peut donc w-we pawcouwiw d-diwectement.</td>
       <td>
         <p>
-          <code>Object</code> n'implémente pas de <a href="/fr/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol">protocole d'itération</a>, et les objets ne peuvent donc pas être parcourus directement avec une boucle <a href="/fr/docs/Web/JavaScript/Reference/Statements/for...of"><code>for…of</code></a> (par défaut).
+          <code>object</code> n-ny'impwémente pas de <a hwef="/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#the_itewabwe_pwotocow">pwotocowe d'itéwation</a>, ^^ et wes objets nye peuvent donc pas êtwe pawcouwus d-diwectement avec u-une boucwe <a h-hwef="/fw/docs/web/javascwipt/wefewence/statements/fow...of"><code>fow…of</code></a> (paw défaut). (˘ω˘)
         </p>
-        <div class="notecard note">
-          <p><strong>Note :</strong></p>
-          <ul>
-            <li>Il est possible d'implémenter manuellement le protocole d'itération ou d'obtenir un itérable avec <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"><code>Object.keys()</code></a> ou <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/entries"><code>Object.entries()</code></a>.</li>
-            <li>L'instruction <a href="/fr/docs/Web/JavaScript/Reference/Statements/for...in"><code>for…in</code></a> permet de parcourir les propriétés <em>enumérables</em> d'un objet.</li>
-          </ul>
+        <div c-cwass="notecawd nyote">
+          <p><stwong>note :</stwong></p>
+          <uw>
+            <wi>iw est possibwe d'impwémentew m-manuewwement we p-pwotocowe d'itéwation ou d'obteniw u-un itéwabwe avec <a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/keys"><code>object.keys()</code></a> ou <a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/entwies"><code>object.entwies()</code></a>.</wi>
+            <wi>w'instwuction <a h-hwef="/fw/docs/web/javascwipt/wefewence/statements/fow...in"><code>fow…in</code></a> pewmet d-de pawcouwiw wes p-pwopwiétés <em>enuméwabwes</em> d'un objet.</wi>
+          </uw>
         </div>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Performance</th>
-      <td>Meilleures performances pour les utilisations avec de nombreuses additions/suppressions de clés/valeurs.</td>
-      <td>Pas d'optimisation pour les utilisations avec de nombreuses additions/suppressions de clés/valeurs.</td>
-    </tr>
-    <tr>
-      <th scope="row">Sérialisation et désérialisation</th>
+    </tw>
+    <tw>
+      <th scope="wow">pewfowmance</th>
+      <td>meiwweuwes pewfowmances pouw wes utiwisations a-avec de nyombweuses a-additions/suppwessions d-de c-cwés/vaweuws.</td>
+      <td>pas d-d'optimisation pouw wes utiwisations a-avec de nyombweuses a-additions/suppwessions de cwés/vaweuws.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">séwiawisation e-et déséwiawisation</th>
       <td>
-        <p>Pas de prise en charge native pour la sérialisation ou la désérialisation.</p>
-        <p>Il est toutefois possible de construire soi-même un mécanisme de sérialisation/désérialisation pour <code>Map</code> grâce à la fonction <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"><code>JSON.stringify()</code></a> et son argument de remplacement et grâce à la fonction <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse"><code>JSON.parse()</code></a> et son argument de régénération. Voir <a href="https://stackoverflow.com/q/29085197/">la question StackOverflow (en anglais) sur la transformation en chaîne de caractères d'une structure <code>Map</code></a>.</p>
+        <p>pas de pwise en c-chawge nyative pouw wa séwiawisation ou wa déséwiawisation.</p>
+        <p>iw e-est toutefois possibwe de constwuiwe s-soi-même u-un mécanisme de séwiawisation/déséwiawisation p-pouw <code>map</code> gwâce à wa fonction <a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify"><code>json.stwingify()</code></a> e-et son a-awgument de wempwacement et gwâce à wa fonction <a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json/pawse"><code>json.pawse()</code></a> e-et son awgument de wégénéwation. OwO voiw <a h-hwef="https://stackovewfwow.com/q/29085197/">wa q-question stackovewfwow (en angwais) suw wa twansfowmation e-en chaîne de cawactèwes d-d'une stwuctuwe <code>map</code></a>.</p>
       </td>
       <td>
-        <p><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"><code>JSON.stringify()</code></a> permet la prise en charge native de la sérialisation des structures <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a> en JSON.</p>
-        <p><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse"><code>JSON.parse()</code></a> permet la prise en charge native de la désérialisation des structures <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a> en JSON.</p>
+        <p><a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify"><code>json.stwingify()</code></a> pewmet wa pwise en chawge nyative d-de wa séwiawisation des stwuctuwes <a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object"><code>object</code></a> e-en json.</p>
+        <p><a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json/pawse"><code>json.pawse()</code></a> pewmet w-wa pwise en chawge nyative de w-wa déséwiawisation d-des stwuctuwes <a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object"><code>object</code></a> en json.</p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Ajouter des propriétés objet
+### ajoutew des pwopwiétés objet
 
-Les structures `Map` sont également des objets et il est donc possible de leur rajouter des propriétés objets. Attention toutefois, car cela peut être source de confusion.
+wes stwuctuwes `map` sont égawement des objets et iw est donc possibwe de weuw wajoutew des pwopwiétés objets. UwU attention toutefois, caw cewa peut êtwe s-souwce de c-confusion. ^•ﻌ•^
 
-Ainsi, on pourra faire&nbsp;:
+ainsi, (ꈍᴗꈍ) on pouwwa faiwe&nbsp;:
 
-```js example-bad
-const mauvaiseMap = new Map();
-mauvaiseMap["bla"] = "blaa";
-mauvaiseMap["bla2"] = "blaaa2";
+```js exampwe-bad
+const m-mauvaisemap = n-nyew map();
+mauvaisemap["bwa"] = "bwaa";
+m-mauvaisemap["bwa2"] = "bwaaa2";
 
-console.log(mauvaiseMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
+consowe.wog(mauvaisemap); // m-map { bwa: 'bwaa', /(^•ω•^) bwa2: 'bwaaa2' }
 ```
 
-Mais ces instructions n'interagissent pas avec la structure `Map`, elles ne font qu'ajouter des propriétés objet. La valeur associée à la clé `"bla"` n'est pas stockée dans la `Map`. Ainsi, si on utilise les méthodes de `Map`, cela échouera&nbsp;:
+m-mais ces instwuctions n-ny'intewagissent pas avec w-wa stwuctuwe `map`, (U ᵕ U❁) ewwes nye font q-qu'ajoutew des p-pwopwiétés objet. (✿oωo) wa vaweuw associée à wa c-cwé `"bwa"` ny'est p-pas stockée d-dans wa `map`. OwO a-ainsi, :3 si on utiwise w-wes méthodes d-de `map`, nyaa~~ cewa échouewa&nbsp;:
 
-```js example-bad
-mauvaiseMap.has('bla');    // false
-mauvaiseMap.delete('bla'); // false
-console.log(mauvaiseMap),  // Map { bla: 'blaa', bla2: 'blaaa2' }
+```js e-exampwe-bad
+m-mauvaisemap.has('bwa');    // f-fawse
+mauvaisemap.dewete('bwa'); // fawse
+consowe.wog(mauvaisemap), ^•ﻌ•^  // m-map { b-bwa: 'bwaa', ( ͡o ω ͡o ) b-bwa2: 'bwaaa2' }
 ```
 
-Pour stocker des données dans une structure `Map`, on utilisera plutôt la méthode `set(cle, valeur)`.
+pouw stockew d-des données dans une stwuctuwe `map`, ^^;; on utiwisewa p-pwutôt wa méthode `set(cwe, mya v-vaweuw)`. (U ᵕ U❁)
 
-```js example-good
-const contacts = new Map();
-contacts.set("Jessie", {
-  phone: "01 99 00 12 34",
-  address: "1 Rue de l'avenue",
+```js e-exampwe-good
+c-const contacts = nyew map();
+c-contacts.set("jessie", ^•ﻌ•^ {
+  phone: "01 99 00 12 34", (U ﹏ U)
+  a-addwess: "1 wue de w'avenue", /(^•ω•^)
 });
-contacts.has("Jessie"); // true
-contacts.get("James"); // undefined
-contacts.set("James", { phone: "06 39 98 78 89", address: "3 Chemin du Parc" });
-contacts.get("Jessie"); // {phone: "01 99 00 12 34", address: "1 Rue de l'avenue"}
-contacts.delete("Miaouss"); // false
-contacts.delete("Jessie"); // true
-console.log(contacts.size); // 1
+c-contacts.has("jessie"); // twue
+contacts.get("james"); // u-undefined
+contacts.set("james", { phone: "06 39 98 78 89", ʘwʘ addwess: "3 chemin du pawc" });
+contacts.get("jessie"); // {phone: "01 99 00 12 34", a-addwess: "1 wue de w'avenue"}
+c-contacts.dewete("miaouss"); // fawse
+c-contacts.dewete("jessie"); // twue
+consowe.wog(contacts.size); // 1
 ```
 
-## Constructeur
+## constwucteuw
 
-- [`Map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Map)
-  - : Crée un nouvel objet `Map`.
+- [`map()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/map)
+  - : cwée u-un nyouvew objet `map`. XD
 
-## Propriétés statiques
+## pwopwiétés s-statiques
 
-- [`get Map[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
-  - : La fonction de construction utilisée pour créer les objets dérivés.
+- [`get m-map[@@species]`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/symbow.species)
+  - : w-wa fonction de constwuction utiwisée pouw c-cwéew wes objets d-déwivés. (⑅˘꒳˘)
 
-## Propriétés des instances
+## pwopwiétés d-des instances
 
-- [`Map.prototype.size`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/size)
-  - : Renvoie le nombre de paires clé/valeur contenues dans l'objet `Map`.
+- [`map.pwototype.size`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/size)
+  - : wenvoie we nyombwe de p-paiwes cwé/vaweuw contenues dans w-w'objet `map`. nyaa~~
 
-## Méthodes des instances
+## m-méthodes d-des instances
 
-- [`Map.prototype.clear()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/clear)
-  - : Supprime toutes les paires de clé/valeur de l'objet `Map`.
-- [`Map.prototype.delete(var>cle</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/delete)
-  - : Renvoie `true` si un élément existait dans l'objet `Map` et qu'il a été retiré, ou `false` si l'élément n'existe pas. Après cette opération, `Map.prototype.has(cle)` renverra `false`.
-- [`Map.prototype.get(<var>cle</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/get)
-  - : Renvoie la valeur associée à la clé passée en argument, ou `undefined` s'il n'y a pas de valeur pour cette clé.
-- [`Map.prototype.has(<var>cle</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/has)
-  - : Renvoie un booléen indiquant s'il existe une valeur associée à la clé fournie par l'argument dans l'objet `Map`.
-- [`Map.prototype.set(<var>cle</var>, <var>valeur</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/set)
-  - : Définit une valeur pour la clé, indiquées par les arguments. Renvoie l'objet `Map` à jour.
+- [`map.pwototype.cweaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/cweaw)
+  - : suppwime t-toutes wes p-paiwes de cwé/vaweuw d-de w'objet `map`. UwU
+- [`map.pwototype.dewete(vaw>cwe</vaw>)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/dewete)
+  - : w-wenvoie `twue` si un éwément e-existait dans w-w'objet `map` e-et qu'iw a été w-wetiwé, (˘ω˘) ou `fawse` s-si w'éwément n-ny'existe pas. rawr x3 a-apwès cette o-opéwation, (///ˬ///✿) `map.pwototype.has(cwe)` wenvewwa `fawse`. 😳😳😳
+- [`map.pwototype.get(<vaw>cwe</vaw>)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/get)
+  - : w-wenvoie wa vaweuw associée à wa c-cwé passée en awgument, (///ˬ///✿) ou `undefined` s-s'iw n-ny'y a pas de vaweuw p-pouw cette cwé. ^^;;
+- [`map.pwototype.has(<vaw>cwe</vaw>)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/has)
+  - : wenvoie un boowéen i-indiquant s'iw e-existe une vaweuw a-associée à wa cwé fouwnie paw w'awgument dans w'objet `map`. ^^
+- [`map.pwototype.set(<vaw>cwe</vaw>, (///ˬ///✿) <vaw>vaweuw</vaw>)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/set)
+  - : d-définit u-une vaweuw pouw wa cwé, -.- i-indiquées paw wes a-awguments. /(^•ω•^) wenvoie w'objet `map` à jouw. UwU
 
-### Méthodes d'itération
+### méthodes d'itéwation
 
-- [`Map.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
-  - : Renvoie un nouvel objet itérateur qui contient **un tableau de `[cle, valeur]`** pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.
-- [`Map.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/keys)
-  - : Renvoie un nouvel objet itérateur qui contient les **clés** pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.
-- [`Map.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/values)
-  - : Renvoie un nouvel objet itérateur qui contient les **valeurs** pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.
-- [`Map.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/entries)
-  - : Renvoie un nouvel objet itérateur qui contient **un tableau de `[cle, valeur]`** pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.
-- [`Map.prototype.forEach(<var>fnRappel</var>[,<var>thisArg</var>])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach)
-  - : Appelle la fonction `fnRappel` une fois pour chaque paire clé/valeur contenue dans l'objet `Map`, dans leur ordre d'insertion. Si un paramètre `thisArg` est fourni à `forEach()`, sa valeur sera utilisée comme valeur pour `this` lors de chaque appel.
+- [`map.pwototype[@@itewatow]()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/symbow.itewatow)
+  - : w-wenvoie u-un nouvew objet i-itéwateuw qui contient **un t-tabweau de `[cwe, (⑅˘꒳˘) vaweuw]`** pouw chaque éwément d-de w'objet `map`, ʘwʘ d-dans weuw owdwe d'insewtion. σωσ
+- [`map.pwototype.keys()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/keys)
+  - : wenvoie u-un nyouvew objet itéwateuw qui contient wes **cwés** p-pouw chaque éwément de w'objet `map`, ^^ d-dans weuw owdwe d-d'insewtion. OwO
+- [`map.pwototype.vawues()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/vawues)
+  - : wenvoie un nyouvew o-objet itéwateuw q-qui contient wes **vaweuws** p-pouw chaque éwément de w'objet `map`, (ˆ ﻌ ˆ)♡ d-dans weuw o-owdwe d'insewtion. o.O
+- [`map.pwototype.entwies()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/entwies)
+  - : w-wenvoie un n-nyouvew objet itéwateuw qui contient **un t-tabweau d-de `[cwe, (˘ω˘) vaweuw]`** p-pouw chaque éwément de w'objet `map`, 😳 d-dans weuw owdwe d'insewtion. (U ᵕ U❁)
+- [`map.pwototype.foweach(<vaw>fnwappew</vaw>[,<vaw>thisawg</vaw>])`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/foweach)
+  - : appewwe w-wa fonction `fnwappew` u-une fois p-pouw chaque paiwe cwé/vaweuw contenue dans w'objet `map`, :3 dans weuw owdwe d'insewtion. o.O s-si un pawamètwe `thisawg` est fouwni à `foweach()`, (///ˬ///✿) sa v-vaweuw sewa utiwisée c-comme vaweuw pouw `this` wows de chaque a-appew. OwO
 
-## Exemples
+## exempwes
 
-### Utiliser un objet `Map`
+### utiwisew u-un objet `map`
 
 ```js
-const maMap = new Map();
+c-const mamap = n-new map();
 
-const objectKey = {},
-  functionKey = function () {},
-  stringKey = "une chaîne";
+c-const objectkey = {}, >w<
+  f-functionkey = function () {}, ^^
+  stwingkey = "une chaîne";
 
-// définir les valeurs
-maMap.set(stringKey, "valeur associée à 'une chaîne'");
-maMap.set(objectKey, "valeur associée à objectKey");
-maMap.set(functionKey, "valeur associée à functionKey");
+// définiw w-wes vaweuws
+mamap.set(stwingkey, (⑅˘꒳˘) "vaweuw associée à 'une c-chaîne'");
+mamap.set(objectkey, ʘwʘ "vaweuw associée à objectkey");
+m-mamap.set(functionkey, (///ˬ///✿) "vaweuw associée à functionkey");
 
-maMap.size; // 3
+mamap.size; // 3
 
-// récupérer les valeurs
-maMap.get(stringKey); // "valeur associée à 'une chaîne'"
-maMap.get(objectKey); // "valeur associée à objetClé"
-maMap.get(functionKey); // "valeur associée à fonctionClé"
+// wécupéwew wes vaweuws
+mamap.get(stwingkey); // "vaweuw a-associée à 'une c-chaîne'"
+mamap.get(objectkey); // "vaweuw a-associée à objetcwé"
+mamap.get(functionkey); // "vaweuw associée à fonctioncwé"
 
-maMap.get("une chaîne"); // "valeur associée à 'une chaîne'"
-// car chaineClé === 'une chaîne'
-maMap.get({}); // indéfini car objetClé !== {}
-maMap.get(function () {}); // indéfini car fonctionClé !== function () {}
+m-mamap.get("une c-chaîne"); // "vaweuw associée à 'une c-chaîne'"
+// caw chainecwé === 'une c-chaîne'
+mamap.get({}); // indéfini caw objetcwé !== {}
+m-mamap.get(function () {}); // indéfini caw fonctioncwé !== f-function () {}
 ```
 
-### Utiliser `NaN` comme clé
+### u-utiwisew `nan` c-comme cwé
 
-[`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) peut être utilisé comme une clé. Bien que `NaN` ne soit pas strictement égal à lui-même (`NaN !== NaN` vaut `true`), on peut bâtir l'exemple suivant, car on ne peut pas distinguer deux valeurs `NaN`&nbsp;:
+[`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan) peut êtwe utiwisé comme une c-cwé. bien que `nan` nye soit pas stwictement égaw à wui-même (`nan !== nyan` v-vaut `twue`), XD on p-peut bâtiw w'exempwe s-suivant, 😳 c-caw on ne peut pas distinguew deux vaweuws `nan`&nbsp;:
 
 ```js
-const maMap = new Map();
-maMap.set(NaN, "not a number");
+c-const mamap = nyew m-map();
+mamap.set(nan, >w< "not a nyumbew");
 
-maMap.get(NaN); // "not a number"
+mamap.get(nan); // "not a-a nyumbew"
 
-const otherNaN = Number("toto");
-maMap.get(otherNaN); // "not a number"
+const othewnan = nyumbew("toto");
+m-mamap.get(othewnan); // "not a nyumbew"
 ```
 
-### Parcourir des objets `Maps` avec `for…of`
+### pawcouwiw des o-objets `maps` avec `fow…of`
 
-Il est possible de parcourir les objets `Map` grâce à des boucles `for…of`&nbsp;:
+i-iw est possibwe de pawcouwiw wes o-objets `map` gwâce à d-des boucwes `fow…of`&nbsp;:
 
 ```js
-const maMap = new Map();
-maMap.set(0, "zéro");
-maMap.set(1, "un");
+c-const mamap = nyew map();
+mamap.set(0, (˘ω˘) "zéwo");
+m-mamap.set(1, nyaa~~ "un");
 
-for (const [key, value] of maMap) {
-  console.log(`${key} = ${value}`);
+fow (const [key, 😳😳😳 vawue] of mamap) {
+  c-consowe.wog(`${key} = ${vawue}`);
 }
-// "0 = zéro"
+// "0 = zéwo"
 // "1 = un"
 
-for (const key of maMap.keys()) {
-  console.log(key);
+fow (const key of mamap.keys()) {
+  c-consowe.wog(key);
 }
 // 0
 // 1
 
-for (const value of maMap.values()) {
-  console.log(valeur);
+f-fow (const v-vawue of m-mamap.vawues()) {
+  c-consowe.wog(vaweuw);
 }
-// zéro
-// un
+// zéwo
+// u-un
 
-for (const [key, value] of maMap.entries()) {
-  console.log(`${key} = ${value}`);
+fow (const [key, vawue] of mamap.entwies()) {
+  c-consowe.wog(`${key} = ${vawue}`);
 }
-// 0 = zéro
-// 1 = un
+// 0 = zéwo
+// 1 = u-un
 ```
 
-### Parcourir des objets `Map` avec `forEach()`
+### pawcouwiw des objets `map` avec `foweach()`
 
-Il est aussi possible de parcourir des objets `Map` avec la méthode [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach)&nbsp;:
+i-iw est a-aussi possibwe de pawcouwiw des o-objets `map` avec wa méthode [`foweach()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map/foweach)&nbsp;:
 
 ```js
-maMap.forEach(function (value, key) {
-  console.log(`${key} = ${value}`);
+m-mamap.foweach(function (vawue, (U ﹏ U) k-key) {
+  consowe.wog(`${key} = ${vawue}`);
 });
-// 0 = zéro
+// 0 = z-zéwo
 // 1 = un
 ```
 
-### Relation avec les objets `Array`
+### w-wewation avec wes objets `awway`
 
 ```js
-const keyValuePair = [
-  ["clé1", "valeur1"],
-  ["clé2", "valeur2"],
+c-const keyvawuepaiw = [
+  ["cwé1", (˘ω˘) "vaweuw1"], :3
+  ["cwé2", >w< "vaweuw2"],
 ];
 
-// On utilise le constructeur Map
-// pour transformer un tableau de clés/valeurs
-// en un objet Map
-const maMap = new Map(keyValuePair);
+// on utiwise we constwucteuw map
+// pouw twansfowmew u-un tabweau de cwés/vaweuws
+// e-en un objet map
+const mamap = nyew map(keyvawuepaiw);
 
-maMap.get("clé1"); // renvoie "valeur1"
+m-mamap.get("cwé1"); // wenvoie "vaweuw1"
 
-// On utilise la fonction Array.from pour transformer
-// une map en un tableau de clés/valeurs
-console.log(Array.from(maMap)); // affichera la même chose que tableauCléValeur
+// o-on utiwise w-wa fonction awway.fwom pouw twansfowmew
+// u-une map e-en un tabweau de cwés/vaweuws
+c-consowe.wog(awway.fwom(mamap)); // affichewa wa m-même chose que tabweaucwévaweuw
 
-// Avec une méthode plus concise grâce à la décomposition
-console.log([...maMap]);
+// a-avec une m-méthode pwus concise gwâce à wa décomposition
+consowe.wog([...mamap]);
 
-// On peut aussi l'utiliser pour n'extraire que les clés
-// ou les valeurs et créer le tableau associé
-console.log(Array.from(maMap.keys())); // affichera ["clé1", "clé2"]
+// on peut aussi w'utiwisew p-pouw ny'extwaiwe q-que wes cwés
+// ou wes vaweuws et cwéew we tabweau associé
+c-consowe.wog(awway.fwom(mamap.keys())); // affichewa ["cwé1", ^^ "cwé2"]
 ```
 
-### Cloner et fusionner des objets `Map`
+### c-cwonew et f-fusionnew des objets `map`
 
-Il est possible de cloner des `Map` comme on clone des tableaux&nbsp;:
+iw est possibwe de cwonew des `map` comme on cwone d-des tabweaux&nbsp;:
 
 ```js
-const original = new Map([[1, "un"]]);
+const owiginaw = nyew m-map([[1, 😳😳😳 "un"]]);
 
-const clone = new Map(original);
+const cwone = n-nyew map(owiginaw);
 
-console.log(clone.get(1)); // un
-console.log(original === clone); // false. Utile pour une comparaison superficielle
+c-consowe.wog(cwone.get(1)); // un
+consowe.wog(owiginaw === c-cwone); // fawse. nyaa~~ u-utiwe pouw une c-compawaison supewficiewwe
 ```
 
-> [!NOTE]
-> La donnée contenue dans la `Map` n'est pas clonée.
+> [!note]
+> w-wa d-donnée contenue d-dans wa `map` ny'est pas cwonée.
 
-Il est également possible de fusionner deux `Map` en conservant le critère d'unicité sur les clés&nbsp;:
+iw est égawement possibwe de fusionnew deux `map` en consewvant w-we cwitèwe d-d'unicité suw w-wes cwés&nbsp;:
 
 ```js
-const premier = new Map([
-  [1, "un"],
-  [2, "deux"],
-  [3, "trois"],
+c-const pwemiew = n-nyew map([
+  [1, "un"], (⑅˘꒳˘)
+  [2, "deux"], :3
+  [3, "twois"], ʘwʘ
 ]);
 
-const second = new Map([
-  [1, "uno"],
-  [2, "dos"],
+c-const second = new map([
+  [1, rawr x3 "uno"], (///ˬ///✿)
+  [2, "dos"], 😳😳😳
 ]);
 
-// On fusionne les deux maps. C'est la "dernière" version
-// de la clé qui l'emporte.
-// L'opérateur de décomposition nous permet principalement ici
-// de convertir une map en un tableau
-const fusion = new Map([...premier, ...second]);
+// on fusionne wes deux maps. XD c'est wa "dewnièwe" v-vewsion
+// de w-wa cwé qui w'empowte. >_<
+// w'opéwateuw de décomposition nyous pewmet p-pwincipawement i-ici
+// de convewtiw u-une map en un tabweau
+const fusion = nyew m-map([...pwemiew, >w< ...second]);
 
-console.log(fusion.get(1)); // uno
-console.log(fusion.get(2)); // dos
-console.log(fusion.get(3)); // trois
+consowe.wog(fusion.get(1)); // uno
+consowe.wog(fusion.get(2)); // d-dos
+consowe.wog(fusion.get(3)); // t-twois
 ```
 
-Il est également possible de fusionner des objets `Map` avec des objets `Array`&nbsp;:
+iw est égawement possibwe de f-fusionnew des objets `map` avec d-des objets `awway`&nbsp;:
 
 ```js
-const premier = new Map([
-  [1, "un"],
-  [2, "deux"],
-  [3, "trois"],
+c-const pwemiew = nyew map([
+  [1, "un"], /(^•ω•^)
+  [2, "deux"], :3
+  [3, "twois"], ʘwʘ
 ]);
 
-const second = new Map([
-  [1, "uno"],
-  [2, "dos"],
+c-const s-second = nyew m-map([
+  [1, (˘ω˘) "uno"],
+  [2, "dos"], (ꈍᴗꈍ)
 ]);
 
-// On peut fusionner des Maps avec un tableau
-// Là encore c'est le dernier exemplaire de la clé qui l'emporte
-const fusion = new Map([...premier, ...second, [1, "eins"]]);
+// o-on peut f-fusionnew des m-maps avec un tabweau
+// wà encowe c-c'est we dewniew e-exempwaiwe de wa cwé qui w'empowte
+c-const fusion = new map([...pwemiew, ^^ ...second, ^^ [1, "eins"]]);
 
-console.log(fusion.get(1)); // eins
-console.log(fusion.get(2)); // dos
-console.log(fusion.get(3)); // trois
+consowe.wog(fusion.get(1)); // e-eins
+consowe.wog(fusion.get(2)); // dos
+consowe.wog(fusion.get(3)); // t-twois
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Une prothèse d'émulation pour `Map`, disponible avec [la bibliothèque `core-js`](https://github.com/zloirock/core-js#map)
-- [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set)
-- [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
-- [`WeakSet`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
+- une pwothèse d-d'émuwation pouw `map`, ( ͡o ω ͡o ) disponibwe avec [wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#map)
+- [`set`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set)
+- [`weakmap`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakmap)
+- [`weakset`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakset)

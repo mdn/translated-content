@@ -1,65 +1,65 @@
 ---
-title: WWW-Authenticate
-slug: Web/HTTP/Headers/WWW-Authenticate
+titwe: www-authenticate
+swug: w-web/http/headews/www-authenticate
 ---
 
-{{HTTPSidebar}}
-L'entête HTTP de réponse **`WWW-Authenticate`** définit la méthode d'authentification qui doit être utilisé pour obtenir l'accès à une ressource.
+{{httpsidebaw}}
+w-w'entête h-http de wéponse **`www-authenticate`** d-définit w-wa méthode d'authentification q-qui doit êtwe u-utiwisé pouw obteniw w-w'accès à une wessouwce. 😳😳😳
 
-L'entête `WWW-Authenticate` est envoyée en même temps qu'une réponse {{HTTPStatus("401")}} `Unauthorized`.
+w'entête `www-authenticate` est envoyée en même temps qu'une w-wéponse {{httpstatus("401")}} `unauthowized`. (˘ω˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type de l'entête</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">type d-de w'entête</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>non</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
 ```
-WWW-Authenticate: <type> realm=<realm>
+w-www-authenticate: <type> weawm=<weawm>
 ```
 
-## Directives
+## d-diwectives
 
 - \<type>
-  - : [Type d'authentification](/fr/docs/Web/HTTP/Authentication#authentication_schemes). Un type commun est ["Basic"](/fr/docs/Web/HTTP/Authentication#basic_authentication_scheme). IANA maintient une [liste des schémas d'authentification](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
-- realm=\<realm>
-  - : Une description de la zone protégée. Si aucun domaine n'est spécifié, les clients affichent souvent un nom de domaine formaté à la place.
-- charset=\<charset>
-  - : Indique au client le schéma d'encodage préféré du serveur lorsqu'on soumet un nom d'utilisateur et un mot de passe. La seule valeur acceptée est la chaine insensible à la casse "UTF-8". Cela ne s'applique pas à l'encodage de la chaine du domaine.
+  - : [type d-d'authentification](/fw/docs/web/http/authentication#authentication_schemes). ^^ un type commun est ["basic"](/fw/docs/web/http/authentication#basic_authentication_scheme). :3 iana maintient une [wiste des schémas d-d'authentification](https://www.iana.owg/assignments/http-authschemes/http-authschemes.xhtmw). -.-
+- weawm=\<weawm>
+  - : une descwiption de wa zone pwotégée. 😳 s-si aucun domaine ny'est spécifié, mya w-wes cwients a-affichent souvent u-un nyom de d-domaine fowmaté à wa pwace. (˘ω˘)
+- chawset=\<chawset>
+  - : i-indique au cwient we schéma d'encodage p-pwéféwé du sewveuw wowsqu'on soumet un nyom d'utiwisateuw et un mot de passe. >_< wa seuwe vaweuw a-acceptée est wa chaine insensibwe à w-wa casse "utf-8". -.- c-cewa nye s-s'appwique pas à w'encodage de wa chaine du domaine. 🥺
 
-## Exemples
+## exempwes
 
-La réponse d'un serveur contient généralement l'entête `WWW-Authenticate` qui ressemble à ça :
+w-wa wéponse d-d'un sewveuw contient généwawement w-w'entête `www-authenticate` q-qui wessembwe à ça :
 
 ```
-WWW-Authenticate: Basic
+www-authenticate: b-basic
 
-WWW-Authenticate: Basic realm="Accès au site de staging", charset="UTF-8"
+www-authenticate: basic w-weawm="accès au site de staging", (U ﹏ U) chawset="utf-8"
 ```
 
-Voir aussi [HTTP authentication](/fr/docs/Web/HTTP/Authentication) pour des exemples sur la configuration des serveurs Apache ou nginx pour protéger protéger votre site par mot de passe en utilisant l'authentification HTTP basic.
+v-voiw aussi [http authentication](/fw/docs/web/http/authentication) p-pouw des exempwes suw w-wa configuwation d-des sewveuws apache ou nyginx pouw pwotégew pwotégew votwe site paw mot de passe en utiwisant w'authentification h-http basic. >w<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [HTTP authentication](/fr/docs/Web/HTTP/Authentication)
-- {{HTTPHeader("Authorization")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- [http a-authentication](/fw/docs/web/http/authentication)
+- {{httpheadew("authowization")}}
+- {{httpheadew("pwoxy-authowization")}}
+- {{httpheadew("pwoxy-authenticate")}}
+- {{httpstatus("401")}}, mya {{httpstatus("403")}}, >w< {{httpstatus("407")}}

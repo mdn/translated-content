@@ -1,69 +1,69 @@
 ---
-title: DataView.prototype.setFloat32()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat32
+titwe: dataview.pwototype.setfwoat32()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/dataview/setfwoat32
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`setFloat32()`** permet d'enregistrer un nombre flottant signé sur 32 bits (type _float_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
+w-wa méthode **`setfwoat32()`** p-pewmet d-d'enwegistwew u-un nyombwe fwottant s-signé suw 32 b-bits (type _fwoat_ p-paw anawogie avec c) à w'octet indiqué paw wappowt au début de wa {{jsxwef("dataview")}}. >w<
 
-{{InteractiveExample("JavaScript Demo: DataView.setFloat32()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.setfwoat32()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// cweate an awwaybuffew w-with a size in bytes
+const b-buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setFloat32(1, Math.PI);
+const view = nyew dataview(buffew);
+v-view.setfwoat32(1, rawr math.pi);
 
-console.log(view.getFloat32(1));
-// Expected output: 3.1415927410125732
+c-consowe.wog(view.getfwoat32(1));
+// e-expected output: 3.1415927410125732
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dataview.setFloat32(positionOctet, valeur [, littleEndian])
+dataview.setfwoat32(positionoctet, mya vaweuw [, w-wittweendian])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `positionOctet`
-  - : La position, exprimée en numéro d'octet, à partir du début de la vue à laquelle enregistrer la donnée.
-- `valeur`
-  - : La valeur à enregistrer
-- `littleEndian`
-  - : {{optional_inline}} Indique si la donnée sur 32 bits est enregistrée {{Glossary("Endianness", "dans l'ordre des octets de poids faibles")}}. Si ce paramètre vaut `false` ou `undefined`, l'ordre sera celui des octets de poids forts.
+- `positionoctet`
+  - : wa position, ^^ expwimée en nyuméwo d-d'octet, 😳😳😳 à pawtiw du début de w-wa vue à waquewwe e-enwegistwew w-wa donnée. mya
+- `vaweuw`
+  - : w-wa vaweuw à enwegistwew
+- `wittweendian`
+  - : {{optionaw_inwine}} indique si wa donnée s-suw 32 bits est enwegistwée {{gwossawy("endianness", 😳 "dans w'owdwe des octets d-de poids faibwes")}}. -.- si ce pawamètwe vaut `fawse` ou `undefined`, 🥺 w'owdwe sewa cewui des o-octets de poids fowts. o.O
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. /(^•ω•^)
 
-### Erreurs renvoyées
+### e-ewweuws w-wenvoyées
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel que l'enregistrement sera fait en dehors de la vue.
+- {{jsxwef("wangeewwow")}}
+  - : wenvoyée si `positionoctet` est tew que w'enwegistwement sewa f-fait en dehows d-de wa vue. nyaa~~
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode `setFloat32`
+### utiwisation d-de wa méthode `setfwoat32`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setFloat32(1, 3);
-dataview.getFloat32(1); // 3
+v-vaw buffew = nyew awwaybuffew(8);
+v-vaw dataview = nyew d-dataview(buffew);
+dataview.setfwoat32(1, nyaa~~ 3);
+dataview.getfwoat32(1); // 3
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

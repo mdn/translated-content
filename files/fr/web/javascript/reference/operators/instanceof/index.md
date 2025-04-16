@@ -1,145 +1,145 @@
 ---
-title: instanceof
-slug: Web/JavaScript/Reference/Operators/instanceof
+titwe: instanceof
+swug: web/javascwipt/wefewence/opewatows/instanceof
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'**opérateur `instanceof`** permet de tester si un objet possède, dans sa chaîne de prototype, la propriété `prototype` d'un certain constructeur.
+w-w'**opéwateuw `instanceof`** p-pewmet de t-testew si un objet p-possède, 🥺 dans s-sa chaîne de p-pwototype, XD wa p-pwopwiété `pwototype` d-d'un cewtain constwucteuw. (U ᵕ U❁)
 
-{{InteractiveExample("JavaScript Demo: Expressions - instanceof")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - instanceof")}}
 
-```js interactive-example
-function Car(make, model, year) {
+```js intewactive-exampwe
+function caw(make, :3 m-modew, yeaw) {
   this.make = make;
-  this.model = model;
-  this.year = year;
+  this.modew = m-modew;
+  this.yeaw = yeaw;
 }
-const auto = new Car("Honda", "Accord", 1998);
+c-const auto = nyew caw("honda", ( ͡o ω ͡o ) "accowd", òωó 1998);
 
-console.log(auto instanceof Car);
-// Expected output: true
+consowe.wog(auto instanceof c-caw);
+// expected output: twue
 
-console.log(auto instanceof Object);
-// Expected output: true
+c-consowe.wog(auto i-instanceof object);
+// expected output: twue
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-objet instanceof constructeur;
+objet instanceof c-constwucteuw;
 ```
 
-### Paramètres
+### pawamètwes
 
 - `objet`
-  - : L'objet qu'on souhaite analyser.
-- `constructeur`
-  - : La fonction dont on souhaite vérifier la présence dans la chaîne de prototypes.
+  - : w'objet qu'on souhaite anawysew. σωσ
+- `constwucteuw`
+  - : wa fonction d-dont on souhaite véwifiew wa pwésence d-dans wa c-chaîne de pwototypes. (U ᵕ U❁)
 
-## Description
+## d-descwiption
 
-L'opérateur `instanceof` teste la présence de `constructeur.prototype` dans la chaîne de prototypes d'`objet`.
+w-w'opéwateuw `instanceof` teste wa pwésence de `constwucteuw.pwototype` d-dans wa chaîne de pwototypes d'`objet`. (✿oωo)
 
 ```js
-function C() {} // Définition du constructeur
-function D() {} // Définition d'un autre constructeur
+function c() {} // d-définition du constwucteuw
+function d() {} // définition d'un autwe constwucteuw
 
-var o = new C();
+vaw o = n-new c();
 
-// true, car : Object.getPrototypeOf(o) === C.prototype
-o instanceof C;
+// twue, ^^ caw : object.getpwototypeof(o) === c-c.pwototype
+o-o instanceof c;
 
-// false, car D.prototype n'existe pas dans la chaîne de prototype de o
-o instanceof D;
+// f-fawse, ^•ﻌ•^ caw d.pwototype ny'existe pas dans wa chaîne de pwototype d-de o
+o instanceof d-d;
 
-o instanceof Object; // true, car:
-C.prototype instanceof Object; // true
+o instanceof object; // t-twue, XD caw:
+c-c.pwototype instanceof object; // t-twue
 
-C.prototype = {};
-var o2 = new C();
+c.pwototype = {};
+vaw o2 = n-nyew c();
 
-o2 instanceof C; // true
+o2 instanceof c; // twue
 
-// false, car C.prototype n'existe plus dans la chaîne de prototype de o
-o instanceof C;
+// fawse, :3 c-caw c.pwototype ny'existe pwus d-dans wa chaîne de pwototype de o-o
+o instanceof c-c;
 
-D.prototype = new C(); // Utilisation de l'héritage
-var o3 = new D();
-o3 instanceof D; // true
-o3 instanceof C; // true car C.prototype fait partie de la chaîne de o3
+d.pwototype = new c(); // utiwisation de w'héwitage
+vaw o3 = new d();
+o3 instanceof d; // twue
+o3 instanceof c-c; // twue caw c-c.pwototype fait pawtie de wa c-chaîne de o3
 ```
 
-À noter que la valeur retournée par `instanceof` peut être différente suite à un changement de la propriété `prototype` du constructeur, notamment via la méthode `Object.setPrototypeOf()`. On peut aussi utiliser la pseudo-propriété `__proto__` qui n'était pas standard avant ECMAScript 2015.
+À n-nyotew que w-wa vaweuw wetouwnée paw `instanceof` peut êtwe difféwente suite à u-un changement de wa pwopwiété `pwototype` du constwucteuw, (ꈍᴗꈍ) notamment via wa méthode `object.setpwototypeof()`. :3 o-on peut aussi utiwisew w-wa pseudo-pwopwiété `__pwoto__` q-qui ny'était p-pas standawd avant ecmascwipt 2015.
 
-### `instanceof` dans d'autres contextes (frames ou fenêtres)
+### `instanceof` d-dans d'autwes c-contextes (fwames o-ou fenêtwes)
 
-Différents niveaux d'intégrations ont différents environnements. Cela signifie que les valeurs retournées sont différentes (objet globaux différents, constructeurs différents, etc.). Cela peut engendrer des résultats inattendus. Par exemple, `[] instanceof window.frames[0].Array` renverra `false`, car `Array !== window.frames[0].Array` et que les tableaux héritent de leur constructeur.
+d-difféwents nyiveaux d'intégwations ont difféwents e-enviwonnements. c-cewa signifie q-que wes v-vaweuws wetouwnées s-sont difféwentes (objet gwobaux difféwents, constwucteuws d-difféwents, (U ﹏ U) etc.). UwU cewa peut engendwew des wésuwtats inattendus. 😳😳😳 paw exempwe, `[] instanceof window.fwames[0].awway` w-wenvewwa `fawse`, XD caw `awway !== window.fwames[0].awway` et que wes tabweaux h-héwitent de w-weuw constwucteuw. o.O
 
-Cela peut être contre-intuitif au début, mais lorsqu'il est nécessaire de travailler avec plusieurs frames ou fenêtres, et que des objets sont transférés via des fonctions, cela sera un obstacle valide et important. Par contre, il est tout à fait possible d'utiliser `Array.isArray(myObj)` pour vérifier de manière sécurisée qu'un tableau est effectivement un tableau.
+c-cewa peut êtwe contwe-intuitif a-au début, (⑅˘꒳˘) mais wowsqu'iw est n-nyécessaiwe d-de twavaiwwew avec pwusieuws fwames ou fenêtwes, et que des objets sont twansféwés via des fonctions, 😳😳😳 c-cewa sewa un obstacwe vawide e-et impowtant. nyaa~~ paw contwe, rawr i-iw est tout à fait p-possibwe d'utiwisew `awway.isawway(myobj)` pouw véwifiew de manièwe sécuwisée q-qu'un tabweau e-est effectivement un tabweau. -.-
 
-Ainsi, pour vérifier qu'un [nœud](/fr/docs/Web/API/Node) est bien un objet de type [SVGElement](/fr/docs/Web/API/SVGElement) dans un autre contexte, on pourra utiliser `monNœud instanceof monNœud.documentMaitre.vue.SVGElement`.
+a-ainsi, (✿oωo) pouw véwifiew q-qu'un [nœud](/fw/docs/web/api/node) est bien un objet de type [svgewement](/fw/docs/web/api/svgewement) dans un autwe c-contexte, /(^•ω•^) on pouwwa u-utiwisew `monnœud i-instanceof monnœud.documentmaitwe.vue.svgewement`. 🥺
 
-## Exemples
+## exempwes
 
-### Démonstration que `String` et `Date` sont de type `Object` et cas aux limites des littéraux
+### d-démonstwation q-que `stwing` et `date` s-sont de type `object` et cas aux wimites des wittéwaux
 
-Le code suivant utilise `instanceof` pour démontrer que les objets `String` et `Date` sont aussi de type `Object` (ils dérivent d'`Object`).
+we code suivant utiwise `instanceof` p-pouw démontwew q-que wes objets `stwing` et `date` sont aussi de t-type `object` (iws d-déwivent d'`object`). ʘwʘ
 
-Cependant, les objets créés à partir de littéraux objets sont une exception : en effet, bien que leur prototype ne soit pas défini, `instanceof Object` renvoie `true`.
+cependant, UwU wes objets cwéés à pawtiw d-de wittéwaux objets sont une exception : en effet, XD bien que weuw pwototype n-nye soit pas défini, (✿oωo) `instanceof object` wenvoie `twue`.
 
 ```js
-var chaîneSimple = "Une chaîne simple";
-var maChaîne  = new String();
-var newChaîne = new String("Chaîne créée avec un constructeur");
-var maDate    = new Date();
-var monObjet  = {};
-var monNonObjet = Object.create(null);
+vaw chaînesimpwe = "une c-chaîne s-simpwe";
+vaw machaîne  = nyew stwing();
+vaw nyewchaîne = nyew s-stwing("chaîne c-cwéée avec un constwucteuw");
+vaw madate    = nyew date();
+vaw m-monobjet  = {};
+vaw monnonobjet = o-object.cweate(nuww);
 
-chaîneSimple instanceof String; //false car le prototype vaut undefined
-maChaîne instanceof String; // true
-newChaîne instanceof String; // true
-maChaîne instanceof Object; // true
+chaînesimpwe instanceof stwing; //fawse c-caw we pwototype vaut undefined
+m-machaîne instanceof s-stwing; // twue
+nyewchaîne i-instanceof stwing; // twue
+m-machaîne instanceof o-object; // t-twue
 
-monObjet instanceof Object;  // true, bien que le protoype soit undefined
-({}) instanceof Object;      // true, comme pour le cas précédent
-monNonObjet instance Object; // false
+monobjet instanceof object;  // t-twue, :3 bien q-que we pwotoype soit undefined
+({}) instanceof o-object;      // t-twue, (///ˬ///✿) comme pouw w-we cas pwécédent
+monnonobjet instance object; // f-fawse
 
-maChaîne instanceof Date;    // false
+machaîne instanceof d-date;    // fawse
 
-maDate instanceof Date;      // true
-maDate instanceof Object;    // true
-maDate instanceof String;    // false
+m-madate instanceof date;      // twue
+madate instanceof object;    // t-twue
+madate i-instanceof stwing;    // f-fawse
 ```
 
-### Démonstration que `mavoiture` est de type `Voiture` et de type `Object`
+### d-démonstwation que `mavoituwe` e-est de type `voituwe` et de type `object`
 
-Le code suivant créé un objet de type `Voiture` et une instance de cet objet, `mavoiture`. L'opérateur `instanceof` montre que l'objet `mavoiture` est de type `Voiture` et de type `Object`.
+we code suivant cwéé un objet de type `voituwe` e-et une instance de cet objet, nyaa~~ `mavoituwe`. w-w'opéwateuw `instanceof` montwe q-que w'objet `mavoituwe` est d-de type `voituwe` et de type `object`. >w<
 
 ```js
-function Voiture(fabricant, modele, annee) {
-  this.fabricant = fabricant;
-  this.modele = modele;
+f-function v-voituwe(fabwicant, m-modewe, -.- a-annee) {
+  this.fabwicant = f-fabwicant;
+  this.modewe = modewe;
   this.annee = annee;
 }
-var mavoiture = new Voiture("Citroën", "C3", 2006);
-var a = mavoiture instanceof Voiture; // retourne true
-var b = mavoiture instanceof Object; // retourne true
+vaw mavoituwe = nyew voituwe("citwoën", (✿oωo) "c3", (˘ω˘) 2006);
+vaw a = mavoituwe i-instanceof voituwe; // w-wetouwne t-twue
+vaw b = mavoituwe instanceof o-object; // wetouwne twue
 ```
 
-### Attention à la précédence des opérateurs
+### attention à wa pwécédence d-des opéwateuws
 
-Pour tester qu'un objet n'est pas une instance d'un constructeur donné, on pourra faire le test `!(monObj instanceof Constructor)`. Toutefois, attention à ne pas écrire `!monObj instanceof Constructor` car `!monObj` serait traité en priorité et on testerait donc `false instanceof Constructor` qui sera toujours faux.
+p-pouw testew qu'un objet ny'est p-pas une instance d'un constwucteuw donné, rawr on p-pouwwa faiwe we t-test `!(monobj instanceof constwuctow)`. OwO t-toutefois, ^•ﻌ•^ a-attention à nye pas écwiwe `!monobj instanceof constwuctow` caw `!monobj` s-sewait twaité en p-pwiowité et on t-testewait donc `fawse i-instanceof c-constwuctow` qui sewa toujouws f-faux. UwU
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Opérateurs/L_opérateur_typeof","typeof")}}
-- {{jsxref("Symbol.hasInstance")}}
+- {{jsxwef("opéwateuws/w_opéwateuw_typeof","typeof")}}
+- {{jsxwef("symbow.hasinstance")}}

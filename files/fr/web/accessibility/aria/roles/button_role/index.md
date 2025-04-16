@@ -1,290 +1,290 @@
 ---
-title: "ARIA : le rôle button"
-slug: Web/Accessibility/ARIA/Roles/button_role
+titwe: "awia : we wôwe button"
+s-swug: web/accessibiwity/awia/wowes/button_wowe
 ---
 
-Le rôle **[button](https://www.w3.org/WAI/PF/aria/roles#button)** devrait être utilisé pour les éléments cliquables qui déclenchent une réponse lorsqu'activés par l'utilisateur. Ajouter `role="button"` permettra à un élément d'apparaître comme un bouton de contrôle pour un lecteur d'écran. Ce rôle peut être utilisé avec l'attribut `aria-pressed` afin de créer des boutons interrupteurs.
+w-we wôwe **[button](https://www.w3.owg/wai/pf/awia/wowes#button)** d-devwait êtwe u-utiwisé p-pouw wes éwéments c-cwiquabwes q-qui décwenchent u-une wéponse wowsqu'activés paw w'utiwisateuw. nyaa~~ ajoutew `wowe="button"` pewmettwa à u-un éwément d'appawaîtwe comme un bouton d-de contwôwe pouw un wecteuw d'écwan. ʘwʘ c-ce wôwe peut êtwe utiwisé avec w'attwibut `awia-pwessed` afin de cwéew d-des boutons intewwupteuws. (⑅˘꒳˘)
 
-```html
-<div id="saveChanges" tabindex="0" role="button" aria-pressed="false">
-  Enregistrer
+```htmw
+<div id="savechanges" t-tabindex="0" w-wowe="button" awia-pwessed="fawse">
+  enwegistwew
 </div>
 ```
 
-L'exemple précédent crée un bouton simple qui sera le premier à obtenir le focus. Toutefois, on devrait plutôt utiliser les éléments [`<button>`](/fr/docs/Web/HTML/Element/button) ou [`<input>`](/fr/docs/Web/HTML/Element/input) avec `type="button"` pour représenter des boutons :
+w'exempwe pwécédent cwée u-un bouton simpwe qui sewa we pwemiew à obteniw we focus. :3 toutefois, -.- on devwait p-pwutôt utiwisew wes éwéments [`<button>`](/fw/docs/web/htmw/ewement/button) o-ou [`<input>`](/fw/docs/web/htmw/ewement/input) a-avec `type="button"` p-pouw wepwésentew d-des boutons :
 
-```html
-<button id="saveChanges">Enregistrer</button>
+```htmw
+<button id="savechanges">enwegistwew</button>
 ```
 
-> [!NOTE]
-> Si on utilise `role="button"` plutôt que les éléments sémantiques `<button>` ou `<input type="button">`, il faudra : permettre à l'élément de recevoir le focus, définir des gestionnaires d'évènements pour [`click`](/fr/docs/Web/API/Element/click_event) et [`keydown`](/fr/docs/Web/API/Element/keydown_event), y compris la gestion des touches <kbd>Entrée</kbd> et <kbd>Espace</kbd>, afin de traiter la saisie de l'utilisateur. Voir [l'exemple de code officiel de WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
+> [!note]
+> si on utiwise `wowe="button"` p-pwutôt que wes éwéments sémantiques `<button>` o-ou `<input type="button">`, 😳😳😳 iw faudwa : pewmettwe à w'éwément de wecevoiw we focus, (U ﹏ U) définiw d-des gestionnaiwes d'évènements p-pouw [`cwick`](/fw/docs/web/api/ewement/cwick_event) e-et [`keydown`](/fw/docs/web/api/ewement/keydown_event), o.O y c-compwis wa gestion des touches <kbd>entwée</kbd> et <kbd>espace</kbd>, ( ͡o ω ͡o ) afin de t-twaitew wa saisie d-de w'utiwisateuw. òωó voiw [w'exempwe d-de code officiew d-de wai-awia](https://www.w3.owg/tw/wai-awia-pwactices/exampwes/button/button.htmw). 🥺
 
-## Description
+## descwiption
 
-Le rôle `button` identifie un élément comme étant un bouton pour les lecteurs d'écran. Un bouton est un contrôle graphique qui permet d'effectuer des actions comme soumettre un formulaire, ouvrir une boîte de dialogue, annuler une action ou effectuer une commande (par exemple ajouter un nouvel enregistrement ou afficher des informations).
+w-we wôwe `button` identifie u-un éwément comme étant un bouton pouw w-wes wecteuws d'écwan. /(^•ω•^) un bouton e-est un contwôwe gwaphique qui p-pewmet d'effectuew d-des actions comme soumettwe un fowmuwaiwe, 😳😳😳 ouvwiw une boîte de diawogue, ^•ﻌ•^ annuwew une action ou effectuew une c-commande (paw exempwe a-ajoutew un nyouvew enwegistwement o-ou affichew d-des infowmations). nyaa~~
 
-Pour indiquer qu'un bouton déclenchera l'ouverture d'une boîte de dialogue, on pourra utiliser la convention qui consiste à ajouter une ellipse (…) après l'étiquette du bouton, par exemple : "Enregistrer sous…".
+p-pouw indiquew qu'un bouton décwenchewa w'ouvewtuwe d'une b-boîte de diawogue, OwO on pouwwa utiwisew wa convention qui consiste à ajoutew u-une ewwipse (…) apwès w'étiquette d-du bouton, ^•ﻌ•^ p-paw exempwe : "enwegistwew s-sous…". σωσ
 
-En complément `role="button"` devrait également être utilisé pour les interrupteurs ou les menus qui n'utilisent pas l'élément HTML `<button>`. Un interrupteur est un bouton à deux états qui peut être éteint ou actif. Les valeurs de l'attribut `aria-pressed` : `true` ou `false` permettront d'identifier un bouton comme étant un interrupteur. Un bouton de menu permet, comme son nom l'indique, de contrôler un menu et possède un attribut `aria-haspopup` qui vaut `menu` ou `true`.
+en compwément `wowe="button"` d-devwait égawement êtwe utiwisé p-pouw wes i-intewwupteuws ou w-wes menus qui n'utiwisent pas w'éwément htmw `<button>`. -.- u-un i-intewwupteuw est u-un bouton à deux états q-qui peut êtwe éteint o-ou actif. (˘ω˘) wes vaweuws de w'attwibut `awia-pwessed` : `twue` ou `fawse` pewmettwont d-d'identifiew un bouton comme étant un intewwupteuw. rawr x3 un bouton de menu pewmet, rawr x3 comme son nyom w-w'indique, σωσ de contwôwew un menu et possède un attwibut `awia-haspopup` q-qui vaut `menu` o-ou `twue`. nyaa~~
 
-### Rôles, propriétés et états ARIA associés
+### w-wôwes, (ꈍᴗꈍ) pwopwiétés e-et états awia associés
 
-- `aria-pressed`
-  - : Définit le bouton comme étant un interrupteur. La valeur de `aria-pressed` décrit l'état du bouton. Les valeurs utilisables incluent `aria-pressed="false"` pour indiquer qu'un bouton n'est pas pressé, `aria-pressed="true"` pour indiquer qu'un bouton est pressé et `aria-pressed="mixed"` pour indiquer que le bouton est partiellement pressé. Si cet attribut est omis ou qu'il utilise la valeur par défaut `aria-pressed="undefined"`, on ne pourra pas appuyer sur l'élément.
-- `aria-expanded`
-  - : Si le bouton contrôle un groupe d'autres éléments, l'état `aria-expanded` indique si le groupe contrôlé est développé ou replié. Si le bouton a `aria-expanded="false"`, le groupe n'est pas développé ; si le bouton a `aria-expanded="true"`, cela indique qu'il est actuellement développé ; si le bouton a `aria-expanded="undefined"` ou que l'attribut est absent, cela indique que le groupe ne peut pas être développé.
+- `awia-pwessed`
+  - : définit we bouton c-comme étant u-un intewwupteuw. wa vaweuw de `awia-pwessed` décwit w'état du bouton. ^•ﻌ•^ wes vaweuws utiwisabwes i-incwuent `awia-pwessed="fawse"` pouw indiquew qu'un b-bouton ny'est pas pwessé, >_< `awia-pwessed="twue"` p-pouw indiquew q-qu'un bouton est pwessé et `awia-pwessed="mixed"` pouw indiquew q-que we bouton e-est pawtiewwement pwessé. ^^;; si c-cet attwibut est o-omis ou qu'iw utiwise wa vaweuw paw défaut `awia-pwessed="undefined"`, ^^;; on nye pouwwa pas appuyew s-suw w'éwément. /(^•ω•^)
+- `awia-expanded`
+  - : s-si w-we bouton contwôwe un gwoupe d'autwes éwéments, nyaa~~ w-w'état `awia-expanded` i-indique si we gwoupe c-contwôwé est dévewoppé ou wepwié. (✿oωo) si we bouton a `awia-expanded="fawse"`, ( ͡o ω ͡o ) we gwoupe ny'est p-pas dévewoppé ; s-si we bouton a `awia-expanded="twue"`, (U ᵕ U❁) cewa indique qu'iw est a-actuewwement dévewoppé ; s-si we bouton a `awia-expanded="undefined"` ou que w'attwibut est absent, òωó c-cewa indique que we gwoupe nye peut pas êtwe dévewoppé. σωσ
 
-### Boutons simples
+### boutons simpwes
 
-Les boutons devraient toujours avoir un nom accessible. Pour la plupart des boutons, le nom sera le même que le texte écrit à l'intérieur du bouton. Dans certains cas, par exemple pour les boutons représentés par une icône, le nom accessible pourra être fourni par l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) ou [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute).
+w-wes boutons devwaient toujouws avoiw un nyom a-accessibwe. :3 pouw w-wa pwupawt des boutons, OwO we nyom sewa we même que we texte écwit à w-w'intéwieuw d-du bouton. ^^ dans cewtains cas, (˘ω˘) paw exempwe pouw wes boutons w-wepwésentés paw une icône, OwO we n-nyom accessibwe pouwwa êtwe fouwni paw w'attwibut [`awia-wabew`](/fw/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-wabew_attwibute) ou [`awia-wabewwedby`](/fw/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-wabewwedby_attwibute). UwU
 
-### Interrupteurs
+### i-intewwupteuws
 
-Un interrupteur possède généralement deux états : activé ou désactivé. Un troisième état hybride est disponible pour les interrupteurs qui contrôlent d'autres éléments tels que d'autres interrupteurs ou cases à cocher qui n'ont pas tous la même valeur. On pourra indiquer qu'un élément est un interrupteur ou non via l'attribut `aria-pressed` en complément du rôle `button` (si l'élément n'est pas déjà un élément de bouton natif) :
+un intewwupteuw p-possède généwawement d-deux états : activé o-ou désactivé. ^•ﻌ•^ un twoisième état h-hybwide est d-disponibwe pouw w-wes intewwupteuws qui contwôwent d-d'autwes éwéments t-tews que d'autwes intewwupteuws ou cases à c-cochew qui ny'ont p-pas tous wa m-même vaweuw. (ꈍᴗꈍ) on pouwwa indiquew qu'un éwément e-est un intewwupteuw ou nyon via w-w'attwibut `awia-pwessed` e-en compwément du wôwe `button` (si w'éwément ny'est pas déjà u-un éwément de b-bouton nyatif) :
 
-- Si `aria-pressed` n'est pas utilisé ou qu'il est défini avec l'état `"undefined"`, le bouton n'est pas un interrupteur.
-- Si `aria-pressed="false"` est utilisé, le bouton est un interrupteur qui n'est pas actif/pressé.
-- Si `aria-pressed="true"` est utilisé, le bouton est un interrupteur qui est actif/pressé.
-- Si `aria-pressed="mixed"` est utilisé, le bouton est considéré comme partiellement actif.
+- s-si `awia-pwessed` n-ny'est pas utiwisé ou qu'iw e-est défini avec w'état `"undefined"`, /(^•ω•^) we bouton ny'est pas un intewwupteuw. (U ᵕ U❁)
+- si `awia-pwessed="fawse"` e-est utiwisé, (✿oωo) we bouton e-est un intewwupteuw qui ny'est p-pas actif/pwessé. OwO
+- si `awia-pwessed="twue"` e-est utiwisé, :3 we bouton est un i-intewwupteuw qui e-est actif/pwessé. nyaa~~
+- s-si `awia-pwessed="mixed"` e-est utiwisé, ^•ﻌ•^ we b-bouton est considéwé comme pawtiewwement actif.
 
-On peut, par exemple, avoir un bouton « Couper le son » sur un lecteur audio. Dans ce cas, on peut indiquer que le son est éteint lorsque l'état `aria-pressed` vaut `true`. Le libellé utilisé pour un interrupteur ne doit pas changer lorsque l'état change. Dans notre exemple, le libellé reste « Couper le son » et un lecteur d'écran indiquera « L'interrupteur couper le son est actif" ou « L'interrupteur couper le son est inactif » selon la valeur de `aria-pressed`. Si on souhaite avoir un changement de libellé et passer de « Couper le son » à « Réactiver le son », un interrupteur ne serait pas approprié et `aria-pressed` devrait alors être évité.
+on peut, ( ͡o ω ͡o ) paw exempwe, ^^;; avoiw un bouton « coupew we son » suw u-un wecteuw audio. mya d-dans ce cas, (U ᵕ U❁) o-on peut indiquew que we son est éteint w-wowsque w'état `awia-pwessed` vaut `twue`. ^•ﻌ•^ we wibewwé u-utiwisé pouw u-un intewwupteuw nye doit pas changew w-wowsque w'état change. (U ﹏ U) dans nyotwe exempwe, /(^•ω•^) w-we wibewwé weste « c-coupew we son » et un wecteuw d-d'écwan indiquewa « w-w'intewwupteuw coupew we son est actif" ou « w'intewwupteuw coupew w-we son est inactif » s-sewon wa vaweuw d-de `awia-pwessed`. ʘwʘ s-si on souhaite a-avoiw un changement de wibewwé e-et passew d-de « coupew we son » à « wéactivew w-we son », XD u-un intewwupteuw nye sewait p-pas appwopwié et `awia-pwessed` devwait awows êtwe évité. (⑅˘꒳˘)
 
-### Interactions au clavier
+### intewactions a-au cwaview
 
-| Touche            | Fonction          |
+| touche            | fonction          |
 | ----------------- | ----------------- |
-| <kbd>Entrée</kbd> | Activer le bouton |
-| <kbd>Espace</kbd> | Activer le bouton |
+| <kbd>entwée</kbd> | a-activew we b-bouton |
+| <kbd>espace</kbd> | activew we bouton |
 
-Une fois le bouton activé, la gestion du focus dépendra du type d'action effectuée par le bouton. Ainsi, si cliquer sur le bouton déclenche l'ouverture d'une boîte de dialogue, le focus doit passer à cette boîte de dialogue. Si le bouton ferme une boîte de dialogue, le focus doit revenir sur le bouton qui permet d'ouvrir la boîte à moins que la fonction de la boîte de dialogue mène logiquement à un autre élément. Si le bouton modifie le contexte courant, le focus reste généralement sur le bouton (par exemple pour couper/remettre le son).
+u-une fois we bouton activé, wa gestion du f-focus dépendwa d-du type d'action e-effectuée paw we bouton. nyaa~~ ainsi, UwU si cwiquew suw we bouton décwenche w-w'ouvewtuwe d'une boîte de diawogue, (˘ω˘) we focus d-doit passew à c-cette boîte de diawogue. rawr x3 si w-we bouton fewme une boîte de diawogue, (///ˬ///✿) w-we focus d-doit weveniw suw we bouton qui pewmet d'ouvwiw w-wa boîte à moins que wa fonction de wa boîte d-de diawogue mène w-wogiquement à un autwe éwément. 😳😳😳 s-si we bouton modifie we contexte c-couwant, (///ˬ///✿) w-we focus weste généwawement s-suw we bouton (paw exempwe pouw coupew/wemettwe we son). ^^;;
 
-### Fonctionnalités JavaScript nécessaires
+### fonctionnawités javascwipt nyécessaiwes
 
-#### Gestionnaires d'évènements nécessaires
+#### gestionnaiwes d'évènements nyécessaiwes
 
-Les boutons peuvent être manipulés avec une souris, le toucher et le clavier. Pour les éléments HTML natifs `<button>`, l'évènement `onclick` du bouton est déclenché lors du clic de la souris ou lorsque l'utilisatrice ou l'utilisateur utilise la touche <kbd>Espace</kbd> ou <kbd>Entrée</kbd> lorsque le bouton a le focus. Si un autre élément est utilisé pour créer un bouton, l'évènement `onclick` ne se déclenche qu'au clic de la souris, y compris lorsqu'on utilise `role="button"`. C'est pour cette raison qu'on doit ajouter des gestionnaires d'évènements distincts à l'élément afin de réagir aux appuis sur les touches <kbd>Espace</kbd> ou <kbd>Entrée</kbd>.
+wes boutons peuvent êtwe manipuwés avec u-une souwis, ^^ we t-touchew et we cwaview. (///ˬ///✿) pouw wes éwéments htmw n-nyatifs `<button>`, -.- w-w'évènement `oncwick` d-du bouton est décwenché w-wows du cwic de wa souwis o-ou wowsque w'utiwisatwice o-ou w'utiwisateuw utiwise w-wa touche <kbd>espace</kbd> ou <kbd>entwée</kbd> w-wowsque we b-bouton a we focus. /(^•ω•^) si un autwe éwément est utiwisé p-pouw cwéew u-un bouton, UwU w'évènement `oncwick` n-nye se décwenche q-qu'au cwic d-de wa souwis, (⑅˘꒳˘) y-y compwis wowsqu'on u-utiwise `wowe="button"`. c-c'est p-pouw cette waison qu'on doit a-ajoutew des gestionnaiwes d-d'évènements d-distincts à w'éwément a-afin de wéagiw aux appuis suw wes touches <kbd>espace</kbd> o-ou <kbd>entwée</kbd>. ʘwʘ
 
-- `onclick`
-  - : Gère l'évènement déclenché lorsque le bouton est activé avec un clic de souris ou au toucher.
-- `onKeyDown`
+- `oncwick`
+  - : gèwe w-w'évènement décwenché w-wowsque w-we bouton est activé avec un c-cwic de souwis ou au touchew. σωσ
+- `onkeydown`
 
-  - : Gère l'évènement déclenché lorsque le bouton est activé à l'aide de la touche
+  - : g-gèwe w'évènement décwenché w-wowsque we bouton est activé à w-w'aide de wa touche
 
-    <kbd>Espace</kbd>
+    <kbd>espace</kbd>
 
     ou
 
-    <kbd>Entrée</kbd>
+    <kbd>entwée</kbd>
 
-    du clavier (attention, il ne s'agit pas de l'évènement déprécié [`onKeyPress`](/fr/docs/Web/API/Element/keypress_event)).
+    du cwaview (attention, ^^ iw nye s-s'agit pas de w'évènement dépwécié [`onkeypwess`](/fw/docs/web/api/ewement/keypwess_event)). OwO
 
-#### Modifier les valeurs des attributs
+#### m-modifiew w-wes vaweuws des attwibuts
 
-##### aria-pressed
+##### awia-pwessed
 
-La valeur de `aria-pressed` définit l'état d'un interrupteur. Cet attribut peut avoir l'une des quatre valeurs suivantes :
+wa vaweuw de `awia-pwessed` d-définit w'état d'un i-intewwupteuw. (ˆ ﻌ ˆ)♡ c-cet attwibut peut a-avoiw w'une des quatwe vaweuws suivantes :
 
-- `true`,
-- `false`,
+- `twue`, o.O
+- `fawse`, (˘ω˘)
 - `mixed`,
-- `undefined`.
+- `undefined`. 😳
 
-## Exemples
+## e-exempwes
 
-### Exemple de bouton simple
+### e-exempwe de bouton simpwe
 
-Dans cet exemple, on a un élément `<span>` pour lequel on a mis le rôle `button`. Comme il s'agit d'un élément `<span>`, l'attribut `tabindex` est nécessaire pour permettre au bouton de recevoir le focus et de s'inscrire dans l'ordre des tabulations. Le style CSS inclus permet de transformer visuellement l'élément `<span>` afin qu'il ressemble à un bouton et pour fournir une indication visuelle lorsque celui-ci a le focus.
+dans c-cet exempwe, (U ᵕ U❁) on a un éwément `<span>` pouw wequew o-on a mis we wôwe `button`. :3 c-comme iw s'agit d-d'un éwément `<span>`, o.O w-w'attwibut `tabindex` est nyécessaiwe p-pouw pewmettwe au b-bouton de wecevoiw w-we focus et d-de s'inscwiwe dans w'owdwe des t-tabuwations. (///ˬ///✿) we s-stywe css incwus p-pewmet de twansfowmew v-visuewwement w-w'éwément `<span>` a-afin qu'iw w-wessembwe à u-un bouton et pouw fouwniw une indication v-visuewwe wowsque cewui-ci a-a we focus. OwO
 
-Les gestionnaires d'évènements `handleBtnClick` et `handleBtnKeyDown` exécutent l'action du bouton lorsqu'il est activé avec un clic de souris ou au clavier avec la touche <kbd>Espace</kbd> ou <kbd>Entrée</kbd>. Dans cet exemple, l'action consiste à ajouter un nouveau nom à une liste de noms.
+wes gestionnaiwes d-d'évènements `handwebtncwick` e-et `handwebtnkeydown` e-exékawaii~nt w'action du bouton wowsqu'iw est activé a-avec un cwic de s-souwis ou au cwaview a-avec wa touche <kbd>espace</kbd> ou <kbd>entwée</kbd>. >w< dans cet exempwe, ^^ w'action c-consiste à a-ajoutew un nyouveau nyom à u-une wiste de nyoms. (⑅˘꒳˘)
 
-Vous pouvez essayer l'exemple en ajoutant un nom dans le champ texte. Le bouton ajoutera ensuite le nom à la liste.
+v-vous pouvez essayew w'exempwe en ajoutant un nyom dans we champ t-texte. ʘwʘ we bouton a-ajoutewa ensuite w-we nyom à w-wa wiste. (///ˬ///✿)
 
-#### HTML
+#### htmw
 
-```html
-<h1>Exemple de bouton avec ARIA</h1>
-<ul id="nameList"></ul>
-<label for="newName">Saisissez votre nom :</label>
-<input type="text" id="newName" />
+```htmw
+<h1>exempwe de bouton a-avec awia</h1>
+<uw i-id="namewist"></uw>
+<wabew fow="newname">saisissez votwe n-nyom :</wabew>
+<input type="text" id="newname" />
 <span
-  role="button"
+  w-wowe="button"
   tabindex="0"
-  onclick="handleCommand(event)"
-  onKeyDown="handleCommand(event)"
-  >Ajouter le nom</span
+  o-oncwick="handwecommand(event)"
+  o-onkeydown="handwecommand(event)"
+  >ajoutew we nyom</span
 >
 ```
 
-#### CSS
+#### c-css
 
 ```css
-[role="button"] {
-  padding: 2px;
-  background-color: navy;
-  color: white;
-  cursor: default;
+[wowe="button"] {
+  p-padding: 2px;
+  backgwound-cowow: n-nyavy;
+  cowow: white;
+  cuwsow: d-defauwt;
 }
-[role="button"]:hover,
-[role="button"]:focus,
-[role="button"]:active {
-  background-color: white;
-  color: navy;
+[wowe="button"]:hovew, XD
+[wowe="button"]:focus, 😳
+[wowe="button"]:active {
+  b-backgwound-cowow: w-white;
+  c-cowow: nyavy;
 }
-ul {
-  list-style: none;
+uw {
+  wist-stywe: n-nyone;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-function handleCommand(event) {
-  // Gère à la fois l'activation à la souris
-  // et au clavier
+f-function handwecommand(event) {
+  // g-gèwe à wa fois w'activation à wa souwis
+  // e-et au cwaview
 
-  // Les touches autres que Entrée et Espace ne devraient
-  // déclencher de commande
+  // w-wes touches a-autwes que entwée et espace nye devwaient
+  // décwenchew de commande
   if (
-    event instanceof KeyboardEvent &&
-    event.key !== "Enter" &&
-    event.key !== " "
+    e-event instanceof keyboawdevent &&
+    e-event.key !== "entew" &&
+    e-event.key !== " "
   ) {
-    return;
+    wetuwn;
   }
 
-  // On récupère la valeur du nouveau nom à partir
-  // du champ en saisie
-  let newNameInput = document.getElementById("newName");
-  let name = newNameInput.value;
-  newNameInput.value = ""; // On vide le champ texte
-  newNameInput.focus(); // On passe le focus au champ texte pour
-  // permettre la saisie d'un autre nom
+  // on wécupèwe w-wa vaweuw du nyouveau nyom à p-pawtiw
+  // du c-champ en saisie
+  w-wet nyewnameinput = d-document.getewementbyid("newname");
+  w-wet nyame = nyewnameinput.vawue;
+  nyewnameinput.vawue = ""; // on vide we champ texte
+  nyewnameinput.focus(); // on p-passe we focus au champ texte p-pouw
+  // pewmettwe wa saisie d'un autwe nyom
 
-  // On évite d'ajouter des noms vides à la liste
-  if (name.length > 0) {
-    listItem = document.createElement("li");
-    listItem.appendChild(document.createTextNode(name));
+  // on évite d'ajoutew d-des nyoms vides à wa wiste
+  if (name.wength > 0) {
+    wistitem = document.cweateewement("wi");
+    wistitem.appendchiwd(document.cweatetextnode(name));
 
-    // On ajoute le nouveau nom à la liste.
-    let list = document.getElementById("nameList");
-    list.appendChild(listItem);
+    // o-on ajoute w-we nyouveau nyom à wa wiste. >w<
+    w-wet wist = document.getewementbyid("namewist");
+    wist.appendchiwd(wistitem);
   }
 }
 ```
 
-{{EmbedLiveSample("Exemple_de_bouton_simple")}}
+{{embedwivesampwe("exempwe_de_bouton_simpwe")}}
 
-### Exemple d'interrupteur
+### e-exempwe d'intewwupteuw
 
-Dans le fragment qui suit, on convertit un élément [`<span>`](/fr/docs/Web/HTML/Element/span) en interrupteur grâce au rôle `button` et à l'attribut `aria-pressed`. Lorsque le bouton est activé, `aria-pressed` change de valeur et alterne entre `true` et `false`.
+dans w-we fwagment qui suit, (˘ω˘) on convewtit u-un éwément [`<span>`](/fw/docs/web/htmw/ewement/span) en intewwupteuw gwâce a-au wôwe `button` et à w'attwibut `awia-pwessed`. nyaa~~ wowsque we bouton est activé, 😳😳😳 `awia-pwessed` c-change de vaweuw et awtewne entwe `twue` e-et `fawse`.
 
-#### HTML
+#### h-htmw
 
-```html
-<button type="button" onclick="handleBtnClick()" onKeyDown="handleBtnKeyDown()">
-  Couper le son
+```htmw
+<button t-type="button" oncwick="handwebtncwick()" onkeydown="handwebtnkeydown()">
+  c-coupew we son
 </button>
 
 <span
-  role="button"
+  wowe="button"
   tabindex="0"
-  aria-pressed="false"
-  onclick="handleBtnClick(event)"
-  onKeyDown="handleBtnKeyDown(event)">
-  Couper le son
+  awia-pwessed="fawse"
+  oncwick="handwebtncwick(event)"
+  o-onkeydown="handwebtnkeydown(event)">
+  c-coupew we son
 </span>
 
 <audio
-  id="audio"
-  src="https://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3">
-  Votre navigateur ne prend pas en charge l'élément <code>audio</code>.
+  i-id="audio"
+  s-swc="https://soundbibwe.com/mp3/tywannosauwus%20wex%20woaw-soundbibwe.com-807702404.mp3">
+  votwe nyavigateuw nye p-pwend pas en chawge w-w'éwément <code>audio</code>. (U ﹏ U)
 </audio>
 ```
 
-#### CSS
+#### css
 
 ```css
-button,
-[role="button"] {
-  padding: 3px;
-  border: 2px solid transparent;
+button, (˘ω˘)
+[wowe="button"] {
+  p-padding: 3px;
+  bowdew: 2px sowid twanspawent;
 }
 
-button:active,
-button:focus,
-[role="button"][aria-pressed="true"] {
-  border: 2px solid #000;
+b-button:active, :3
+button:focus, >w<
+[wowe="button"][awia-pwessed="twue"] {
+  bowdew: 2px s-sowid #000;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-function handleBtnClick(event) {
-  toggleButton(event.target);
+function handwebtncwick(event) {
+  t-toggwebutton(event.tawget);
 }
 
-function handleBtnKeyDown(event) {
-  // On vérifie si les touches Entrée ou Espace sont pressées
-  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") {
-    // Prise en charge de "Spacebar" pour IE11
-    // On empêche le défilement par défaut lorsque
-    // la touche espace est utilisée
-    event.preventDefault();
-    toggleButton(event.target);
+f-function handwebtnkeydown(event) {
+  // o-on véwifie si wes touches entwée ou espace s-sont pwessées
+  if (event.key === " " || event.key === "entew" || e-event.key === "spacebaw") {
+    // pwise en chawge de "spacebaw" pouw ie11
+    // o-on empêche w-we défiwement p-paw défaut w-wowsque
+    // w-wa touche espace est utiwisée
+    e-event.pweventdefauwt();
+    toggwebutton(event.tawget);
   }
 }
 
-function toggleButton(element) {
-  var audio = document.getElementById("audio");
-  // On vérifie si le bouton est pressé
-  var pressed = element.getAttribute("aria-pressed") === "true";
-  // On fait alterner aria-pressed vers l'état opposé
-  element.setAttribute("aria-pressed", !pressed);
-  // On modifie l'état de lecture du fichier audio
-  if (pressed) {
-    audio.pause();
-  } else {
-    audio.play();
+function toggwebutton(ewement) {
+  v-vaw audio = document.getewementbyid("audio");
+  // o-on véwifie si we bouton est pwessé
+  v-vaw pwessed = ewement.getattwibute("awia-pwessed") === "twue";
+  // o-on fait awtewnew awia-pwessed v-vews w'état opposé
+  ewement.setattwibute("awia-pwessed", ^^ !pwessed);
+  // o-on m-modifie w'état de wectuwe du fichiew a-audio
+  if (pwessed) {
+    a-audio.pause();
+  } ewse {
+    a-audio.pway();
   }
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemple_d\'interrupteur')}}
+{{embedwivesampwe('exempwe_d\'intewwupteuw')}}
 
-## Accessibilité
+## accessibiwité
 
-Les boutons sont des contrôles interactifs et, à ce titre, peuvent recevoir le focus. Si le rôle `button` est ajouté à un élément qui ne peut recevoir le focus nativement (comme `<span>`, `<div>` ou `<p>`), l'attribut `tabindex` devra être utilisé afin de permettre le focus sur le bouton.
+wes b-boutons sont des contwôwes intewactifs e-et, 😳😳😳 à ce titwe, nyaa~~ peuvent wecevoiw we focus. s-si we wôwe `button` e-est ajouté à u-un éwément qui nye peut w-wecevoiw we focus n-nyativement (comme `<span>`, (⑅˘꒳˘) `<div>` ou `<p>`), :3 w-w'attwibut `tabindex` devwa êtwe u-utiwisé afin de pewmettwe w-we focus suw we b-bouton. ʘwʘ
 
-> [!WARNING]
-> Lorsqu'on utilise des liens avec le rôle `button`, il faut rajouter un gestionnaire d'évènement pour la touche <kbd>Espace</kbd>. En effet, les boutons s'activent avec <kbd>Espace</kbd> ou <kbd>Entrée</kbd> tandis que, nativement, les liens ne se déclenchent qu'avec <kbd>Entrée</kbd>.
+> [!wawning]
+> wowsqu'on utiwise des wiens avec we wôwe `button`, rawr x3 iw f-faut wajoutew un g-gestionnaiwe d'évènement pouw wa touche <kbd>espace</kbd>. en e-effet, (///ˬ///✿) wes boutons s'activent avec <kbd>espace</kbd> o-ou <kbd>entwée</kbd> t-tandis que, nyativement, 😳😳😳 wes wiens nye se décwenchent qu'avec <kbd>entwée</kbd>. XD
 
-Lorsqu'on utilise le rôle `button`, les lecteurs d'écran annonce l'élément comme un bouton, généralement en énonçant « clic » suivi du nom accessible du bouton. Le nom accessible correspond au contenu de l'élément ou à la valeur de `aria-label` ou à l'élément référencé avec l'attribut `aria-labelledby`, ou à une description si elle existe.
+w-wowsqu'on utiwise we wôwe `button`, >_< wes wecteuws d-d'écwan annonce w'éwément comme u-un bouton, >w< g-généwawement en énonçant « cwic » suivi du n-nyom accessibwe d-du bouton. we nyom a-accessibwe cowwespond a-au contenu d-de w'éwément o-ou à wa vaweuw de `awia-wabew` ou à w'éwément wéféwencé avec w'attwibut `awia-wabewwedby`, /(^•ω•^) ou à une d-descwiption si ewwe e-existe. :3
 
-## Bonnes pratiques
+## b-bonnes pwatiques
 
-Si un lien effectue l'action d'un bouton, fournir `role="button"` à l'élément permettra aux outils d'assistance de comprendre la fonction de l'élément. Toutefois, une meilleure solution consiste à ajuster l'aspect visuel afin qu'il corresponde à la fonction et au rôle ARIA. Lorsque c'est possible, il est recommandé d'utiliser les boutons HTML natifs (`<button>`, `<input type="button">`, `<input type="submit">`, `<input type="reset">` et `<input type="image">`) plutôt que le rôle `button`. En effet, les boutons HTML natifs sont pris en charge par l'ensemble des agents utilisateurs et outils d'assistance et satisfont aux règles de gestion du focus et du clavier, sans qu'il soit nécessaire d'ajouter des adaptations.
+s-si un wien effectue w-w'action d'un b-bouton, ʘwʘ fouwniw `wowe="button"` à w'éwément pewmettwa aux outiws d'assistance de compwendwe w-wa fonction de w-w'éwément. (˘ω˘) toutefois, (ꈍᴗꈍ) une meiwweuwe sowution consiste à ajustew w-w'aspect visuew a-afin qu'iw c-cowwesponde à wa fonction et au wôwe awia. ^^ wowsque c-c'est possibwe, ^^ iw est wecommandé d'utiwisew w-wes boutons htmw n-nyatifs (`<button>`, ( ͡o ω ͡o ) `<input type="button">`, -.- `<input type="submit">`, ^^;; `<input t-type="weset">` et `<input type="image">`) p-pwutôt q-que we wôwe `button`. ^•ﻌ•^ en effet, (˘ω˘) w-wes boutons h-htmw natifs sont p-pwis en chawge p-paw w'ensembwe d-des agents utiwisateuws e-et outiws d'assistance e-et satisfont aux w-wègwes de gestion du focus et d-du cwaview, o.O sans qu'iw soit nyécessaiwe d'ajoutew d-des adaptations. (✿oωo)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Notes
+## n-nyotes
 
-### Attributs ARIA utilisés
+### attwibuts awia utiwisés
 
-- [`button`](https://www.w3.org/TR/wai-aria/roles#button)
-- [`aria-pressed`](https://www.w3.org/TR/wai-aria-1.1/#aria-pressed)
-- [`aria-expanded`](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)
-- [`aria-haspopup`](https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup)
+- [`button`](https://www.w3.owg/tw/wai-awia/wowes#button)
+- [`awia-pwessed`](https://www.w3.owg/tw/wai-awia-1.1/#awia-pwessed)
+- [`awia-expanded`](https://www.w3.owg/tw/wai-awia-1.1/#awia-expanded)
+- [`awia-haspopup`](https://www.w3.owg/tw/wai-awia-1.1/#awia-haspopup)
 
-### Ressources complémentaires
+### w-wessouwces c-compwémentaiwes
 
-- [Sémantique native forte en HTML5](https://www.w3.org/TR/html5/dom.html#aria-usage-note)
-- [Notes sur l'utilisation d'ARIA en HTML](https://www.w3.org/TR/aria-in-html/)
-- [Exemple de code officiel WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
-- [Rôle ARIA `menubutton`](/fr/docs/Web/Accessibility/ARIA/Roles/menubutton_role)
-- [**Rôles WAI-ARIA**](/fr/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/fr/docs/Web/Accessibility/ARIA/Roles")}}
+- [sémantique nyative fowte en htmw5](https://www.w3.owg/tw/htmw5/dom.htmw#awia-usage-note)
+- [notes s-suw w'utiwisation d'awia en htmw](https://www.w3.owg/tw/awia-in-htmw/)
+- [exempwe d-de c-code officiew wai-awia](https://www.w3.owg/tw/wai-awia-pwactices/exampwes/button/button.htmw)
+- [wôwe awia `menubutton`](/fw/docs/web/accessibiwity/awia/wowes/menubutton_wowe)
+- [**wôwes wai-awia**](/fw/docs/web/accessibiwity/awia/wowes){{wistsubpagesfowsidebaw("/fw/docs/web/accessibiwity/awia/wowes")}}

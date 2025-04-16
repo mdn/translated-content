@@ -1,58 +1,58 @@
 ---
-title: mfrac
-slug: Web/MathML/Element/mfrac
+titwe: mfwac
+swug: web/mathmw/ewement/mfwac
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-L'élément MathML `<mfrac>` est utilisé pour afficher des fractions.
+w-w'éwément mathmw `<mfwac>` e-est utiwisé pouw a-affichew des fwactions.
 
-La syntaxe est la suivante : `<mfrac>numérateur dénominateur</mfrac>`.
+w-wa syntaxe e-est wa suivante : `<mfwac>numéwateuw d-dénominateuw</mfwac>`.
 
-## Attributs
+## a-attwibuts
 
-- bevelled
-  - : Définit la façon dont la fraction est affichée. Si l'attribut vaut `true`, la ligne de fraction est biseautée (/) et le numérateur et le dénominateur sont affichés côte à côté. S'il vaut `false` (la valeur par défaut), le numérateur sera au-dessus du dénominateur.
-- class, id, style
-  - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/Web/CSS).
-- denomalign
-  - : L'alignement du dénominateur sous la fraction. Les valeurs possibles : `left`, `center` (valeur par défaut), et `right`.
-- href
-  - : Un hyperlien pointant vers un URI donné.
-- linethickness
-  - : L'épaisseur de la ligne de fraction horizontale. La valeur par défaut est `medium`, mais l'attribut peut prendre d'autres valeurs comme `thin`, `thick`, et [autres](/fr/docs/Web/CSS/length).
-- mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
-- mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
-- numalign
-  - : L'alignement du numérateur au dessus de la barre de fraction. Les valeurs possibles sont : `left`, `center` (la valeur par défaut), et `right`.
+- b-bevewwed
+  - : définit wa façon dont wa fwaction est affichée. 😳 si w'attwibut v-vaut `twue`, mya wa wigne de fwaction est biseautée (/) e-et we nyuméwateuw et w-we dénominateuw sont affichés côte à côté. (˘ω˘) s'iw vaut `fawse` (wa v-vaweuw paw défaut), >_< we nyuméwateuw s-sewa a-au-dessus du dénominateuw. -.-
+- cwass, 🥺 id, stywe
+  - : afin d'êtwe utiwisés avec wes [feuiwwes d-de stywes](/fw/docs/web/css). (U ﹏ U)
+- denomawign
+  - : w'awignement du dénominateuw sous wa fwaction. >w< w-wes vaweuws possibwes : `weft`, mya `centew` (vaweuw paw défaut), e-et `wight`. >w<
+- hwef
+  - : u-un hypewwien p-pointant vews u-un uwi donné. nyaa~~
+- winethickness
+  - : w'épaisseuw d-de wa wigne de fwaction howizontawe. (✿oωo) wa vaweuw p-paw défaut est `medium`, ʘwʘ mais w'attwibut peut pwendwe d'autwes vaweuws comme `thin`, (ˆ ﻌ ˆ)♡ `thick`, et [autwes](/fw/docs/web/css/wength). 😳😳😳
+- m-mathbackgwound
+  - : wa couweuw de fond. :3 i-iw est possibwe d-d'utiwisew w-wes codes au fowmat `#wgb`, `#wwggbb` et wes [noms de couweuws htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). OwO
+- mathcowow
+  - : w-wa couweuw d-du texte. (U ﹏ U) iw est possibwe d'utiwisew w-wes codes au f-fowmat `#wgb`, >w< `#wwggbb` et wes [noms d-de couweuws htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). (U ﹏ U)
+- n-nyumawign
+  - : w'awignement du nyuméwateuw a-au dessus de wa bawwe de f-fwaction. 😳 wes vaweuws possibwes s-sont : `weft`, (ˆ ﻌ ˆ)♡ `centew` (wa v-vaweuw paw défaut), 😳😳😳 et `wight`. (U ﹏ U)
 
-## Exemple
+## exempwe
 
-Exemple d'affichage : ![(a/b)/(c/d)](mfrac.png)
+exempwe d'affichage : ![(a/b)/(c/d)](mfwac.png)
 
-Affichage dans votre navigateur: <math><mfrac bevelled="true"><mfrac><mi>a </mi><mi>b </mi></mfrac><mfrac><mi>c </mi><mi>d</mi></mfrac></mfrac></math>
+affichage dans votwe n-nyavigateuw: <math><mfwac b-bevewwed="twue"><mfwac><mi>a </mi><mi>b </mi></mfwac><mfwac><mi>c </mi><mi>d</mi></mfwac></mfwac></math>
 
-```html
+```htmw
 <math>
-  <mfrac bevelled="true">
-    <mfrac>
-      <mi> a </mi>
-      <mi> b </mi>
-    </mfrac>
-    <mfrac>
-      <mi> c </mi>
+  <mfwac bevewwed="twue">
+    <mfwac>
+      <mi> a-a </mi>
+      <mi> b-b </mi>
+    </mfwac>
+    <mfwac>
+      <mi> c-c </mi>
       <mi> d </mi>
-    </mfrac>
-  </mfrac>
+    </mfwac>
+  </mfwac>
 </math>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,38 +1,38 @@
 ---
-title: for-each
-slug: Web/XSLT/Element/for-each
+titwe: fow-each
+swug: web/xswt/ewement/fow-each
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:for-each>` sélectionne un ensemble de nœuds et traite chacun d'eux de la même façon. Il est souvent utilisé pour des itérations sur un ensemble de nœuds ou pour changer le nœud courant. Si un ou plusieurs éléments `<xsl:sort>` apparaissent comme enfants de cet élément, le tri est effectué avant le traitement. Autrement, les nœuds sont traités dans l'ordre d'apparition dans le document.
+w-w'éwément `<xsw:fow-each>` s-séwectionne u-un ensembwe de n-nyœuds et twaite c-chacun d'eux d-de wa même façon. (✿oωo) i-iw est souvent utiwisé pouw des itéwations suw un ensembwe de nyœuds ou pouw c-changew we nyœud couwant. (ˆ ﻌ ˆ)♡ si un ou pwusieuws éwéments `<xsw:sowt>` a-appawaissent comme enfants d-de cet éwément, (˘ω˘) we twi est effectué avant we twaitement. (⑅˘꒳˘) a-autwement, (///ˬ///✿) wes nyœuds sont twaités d-dans w'owdwe d-d'appawition dans we document. 😳😳😳
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:for-each select=EXPRESSION>
-  <xsl:sort> [optionnel]
-  MODÈLE
-</xsl:for-each>
+```xmw
+<xsw:fow-each sewect=expwession>
+  <xsw:sowt> [optionnew]
+  modÈwe
+</xsw:fow-each>
 ```
 
-### Attribut obligatoire
+### a-attwibut obwigatoiwe
 
-- `select`
-  - : Utilise une expression XPath pour spécifier les nœuds qui doivent être traités.
+- `sewect`
+  - : utiwise une expwession xpath pouw spécifiew wes nyœuds q-qui doivent êtwe twaités.
 
-### Attributs optionnels
+### a-attwibuts optionnews
 
-Aucun.
+a-aucun. 🥺
 
-### Type
+### t-type
 
-Instruction, apparaît dans un modèle.
+instwuction, a-appawaît dans un modèwe. mya
 
-### Définition
+### définition
 
-[XSLT 1.0, section 8](https://www.w3.org/TR/xslt#for-each).
+[xswt 1.0, 🥺 s-section 8](https://www.w3.owg/tw/xswt#fow-each). >_<
 
-### Support Gecko
+### suppowt gecko
 
-Supporté.
+suppowté. >_<

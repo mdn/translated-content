@@ -1,37 +1,37 @@
 ---
-title: copy
-slug: Web/XSLT/Element/copy
+titwe: copy
+swug: web/xswt/ewement/copy
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:copy>` transfert une copie limitée (le nœud et tous les nœuds d'espace de nommage associés) du nœud courant vers le document de sortie. Il ne copie aucun enfant ni attribut du nœud courant.
+w-w'éwément `<xsw:copy>` t-twansfewt u-une copie wimitée (we n-nyœud e-et tous wes nyœuds d-d'espace de n-nommage associés) du nyœud couwant vews we document de sowtie. >_< iw nye copie aucun e-enfant nyi attwibut du nyœud couwant. rawr x3
 
-### Syntaxe
+### s-syntaxe
 
-```xml
-<xsl:copy use-attribute-sets=LISTE-DE-NOMS>
-  MODÈLE
-</xsl:copy>
+```xmw
+<xsw:copy use-attwibute-sets=wiste-de-noms>
+  modÈwe
+</xsw:copy>
 ```
 
-### Attributs obligatoires
+### a-attwibuts obwigatoiwes
 
-Aucun.
+aucun. mya
 
-### Attributs optionnels
+### attwibuts optionnews
 
-- `use-attribute-sets`
-  - : Liste les ensembles d'attributs qui doivent être appliqués au nœud de sortie, si c'est un élément. Les noms des ensembles doivent être séparés par des espaces.
+- `use-attwibute-sets`
+  - : w-wiste wes ensembwes d'attwibuts q-qui doivent êtwe a-appwiqués au nyœud de sowtie, nyaa~~ si c'est un éwément. (⑅˘꒳˘) wes nyoms des ensembwes d-doivent êtwe sépawés paw des espaces. rawr x3
 
-### Type
+### type
 
-Instruction, apparaît dans un modèle.
+instwuction, (✿oωo) appawaît dans u-un modèwe.
 
-### Définition
+### définition
 
-[XSLT 1.0, section 7.5](https://www.w3.org/TR/xslt#copying).
+[xswt 1.0, (ˆ ﻌ ˆ)♡ s-section 7.5](https://www.w3.owg/tw/xswt#copying). (˘ω˘)
 
-### Support Gecko
+### s-suppowt gecko
 
-Supporté.
+s-suppowté. (⑅˘꒳˘)

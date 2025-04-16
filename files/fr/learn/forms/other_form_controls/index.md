@@ -1,320 +1,320 @@
 ---
-title: Les autres contrôles de formulaire
-slug: Learn/Forms/Other_form_controls
+titwe: wes autwes contwôwes d-de fowmuwaiwe
+swug: w-weawn/fowms/othew_fowm_contwows
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/fowms/htmw5_input_types","weawn/fowms/stywing_web_fowms", òωó "weawn/fowms")}}
 
-Voyons maintenant les fonctionnalités des éléments de formulaire qui ne sont pas des éléments `<input>`. C'est le cas par exemple des listes déroulantes, des champs textes sur plusieurs lignes mais aussi d'autres fonctionnalités comme l'élément [`<output>`](/fr/docs/Web/HTML/Element/output) (croisé dans l'article précédent), et des barres de progression.
+voyons m-maintenant w-wes fonctionnawités d-des éwéments d-de fowmuwaiwe q-qui nye sont p-pas des éwéments `<input>`. nyaa~~ c'est we cas paw exempwe des wistes déwouwantes, d-des champs textes suw pwusieuws wignes mais aussi d-d'autwes fonctionnawités comme w-w'éwément [`<output>`](/fw/docs/web/htmw/ewement/output) (cwoisé dans w'awticwe pwécédent), ( ͡o ω ͡o ) et des bawwes d-de pwogwession. 😳😳😳
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Notions informatiques de base et une <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">compréhension élémentaire de HTML</a>.
+        n-nyotions i-infowmatiques de base et une <a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw">compwéhension éwémentaiwe de htmw</a>. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
       <td>
-        Comprendre les fonctionnalités des formulaires en dehors des éléments <code>&lt;input&gt;</code> et comment les implémenter l'aide de HTML.
+        c-compwendwe wes fonctionnawités des fowmuwaiwes en dehows des éwéments <code>&wt;input&gt;</code> e-et comment wes impwémentew w'aide d-de htmw.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Champ texte sur plusieurs lignes
+## c-champ t-texte suw pwusieuws w-wignes
 
-Un champ texte sur plusieurs lignes se crée à l'aide d'un élément [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) plutôt qu'avec un élément [`<input>`](/fr/docs/Web/HTML/Element/input).
+un champ texte suw pwusieuws wignes s-se cwée à w'aide d'un éwément [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) pwutôt qu'avec u-un éwément [`<input>`](/fw/docs/web/htmw/ewement/input). (˘ω˘)
 
-```html
-<textarea cols="30" rows="8"></textarea>
+```htmw
+<textawea cows="30" wows="8"></textawea>
 ```
 
-Voici le résultat qu'on obtient avec le fragment HTML précédent&nbsp;:
+voici we wésuwtat qu'on obtient avec we fwagment htmw p-pwécédent&nbsp;:
 
-{{EmbedLiveSample("", 120, 190)}}
+{{embedwivesampwe("", (˘ω˘) 120, 190)}}
 
-La différence principale entre un élément `<textarea>` et un champ texte (`<input type="text">`) est qu'il permet de saisir des sauts de lignes (en appuyant sur Entrée) qui seront inclus dans les données envoyées avec le formulaire.
+wa difféwence p-pwincipawe e-entwe un éwément `<textawea>` e-et un champ texte (`<input type="text">`) est qu'iw pewmet de saisiw d-des sauts d-de wignes (en appuyant suw entwée) q-qui sewont incwus d-dans wes données envoyées a-avec we fowmuwaiwe. -.-
 
-`<textarea>` utilise également une balise fermante et le texte contenu entre ces deux balises sera utilisé comme contenu par défaut. [`<input>`](/fr/docs/Web/HTML/Element/input) est quant à lui un élément vide sans balise fermante et la valeur par défaut est portée par l'attribut [`value`](/fr/docs/Web/HTML/Element/input#value).
+`<textawea>` utiwise égawement u-une bawise fewmante et we texte contenu entwe c-ces deux bawises sewa utiwisé c-comme contenu paw défaut. ^•ﻌ•^ [`<input>`](/fw/docs/web/htmw/ewement/input) e-est q-quant à wui un éwément vide sans bawise fewmante et wa vaweuw paw défaut est powtée paw w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#vawue). /(^•ω•^)
 
-Bien qu'on puisse mettre n'importe quoi à l'intérieur d'un élément `<textarea>` (y compris d'autres éléments HTML, CSS, et JavaScript), étant donné sa nature, tout le contenu sera affiché à l'écran comme du texte simple (on utilisera [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable) sur des éléments qui ne sont pas des contrôles de formulaire pour fournir une API permettant de capturer du contenu riche/complexe plutôt que du texte simple).
+bien q-qu'on puisse mettwe n-ny'impowte quoi à w'intéwieuw d-d'un éwément `<textawea>` (y c-compwis d'autwes éwéments htmw, (///ˬ///✿) c-css, et javascwipt), mya étant donné sa nyatuwe, o.O tout we contenu sewa affiché à w-w'écwan comme du texte simpwe (on utiwisewa [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe) suw des éwéments qui n-nye sont pas des contwôwes de f-fowmuwaiwe pouw f-fouwniw une api p-pewmettant de captuwew du contenu w-wiche/compwexe p-pwutôt que du t-texte simpwe). ^•ﻌ•^
 
-Sur le plan visuel, le texte saisi passe à la ligne automatiquement et le contrôle est redimensionnable par défaut. Les navigateurs récents fournissent une zone (généralement dans l'angle inférieur droit du contrôle) qui permet d'augmenter/réduire la taille de la zone de texte.
+s-suw we pwan visuew, (U ᵕ U❁) we texte saisi passe à wa w-wigne automatiquement e-et we contwôwe e-est wedimensionnabwe p-paw défaut. :3 w-wes nyavigateuws wécents fouwnissent une zone (généwawement d-dans w'angwe inféwieuw dwoit du contwôwe) qui pewmet d'augmentew/wéduiwe wa taiwwe de wa zone de texte. (///ˬ///✿)
 
-Les captures suivantes montrent l'aspect par défaut, avec le focus, ou désactivé d'éléments `<textarea>` sur Firefox 71 et Safari 13 sur macOS, et sur Edge 18, Yandex 14, Firefox 71 et Chrome 79 sur Windows 10.
+w-wes captuwes suivantes montwent w'aspect paw défaut, (///ˬ///✿) avec we f-focus, 🥺 ou désactivé d-d'éwéments `<textawea>` s-suw fiwefox 71 et safawi 13 suw m-macos, -.- et suw edge 18, nyaa~~ yandex 14, f-fiwefox 71 et c-chwome 79 suw windows 10. (///ˬ///✿)
 
-![Aspect par défaut, avec le focus et désactivé pour les éléments 'textarea' sur Firefox 71 et Safari 13 sur macOS, et sur Edge 18, Yandex 14, Firefox et Chrome sur Windows 10.](textarea_basic.png)
+![aspect paw défaut, avec we focus et désactivé pouw wes éwéments 'textawea' suw f-fiwefox 71 et safawi 13 suw macos, 🥺 e-et suw edge 18, >w< yandex 14, rawr x3 f-fiwefox et chwome s-suw windows 10.](textawea_basic.png)
 
-> [!NOTE]
-> Un autre exemple, peut-être plus intéressant, est [celui construit dans le premier article de cette série](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) ([voir également le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)).
+> [!note]
+> un autwe exempwe, (⑅˘꒳˘) peut-êtwe p-pwus intéwessant, σωσ e-est [cewui constwuit dans we p-pwemiew awticwe d-de cette séwie](https://mdn.github.io/weawning-awea/htmw/fowms/youw-fiwst-htmw-fowm/fiwst-fowm-stywed.htmw) ([voiw égawement we code souwce cowwespondant](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/youw-fiwst-htmw-fowm/fiwst-fowm-stywed.htmw)). XD
 
-### Contrôler l'affichage d'un champ multi-ligne
+### contwôwew w'affichage d'un champ muwti-wigne
 
-[`<textarea>`](/fr/docs/Web/HTML/Element/textarea) accepte trois attributs qui contrôlent son aspect visuel&nbsp;:
+[`<textawea>`](/fw/docs/web/htmw/ewement/textawea) a-accepte t-twois attwibuts q-qui contwôwent son aspect v-visuew&nbsp;:
 
-- [`cols`](/fr/docs/Web/HTML/Element/textarea#attr-cols)
-  - : Indique la largeur visible (le nombre de colonnes de caractères) de la zone de texte. Celle-ci est mesurée en largeur moyenne de caractères. Il s'agit de la largeur initiale, celle-ci pouvant être modifiée lors du redimensionnement manuel ou surchargée avec CSS. La valeur par défaut est 20.
-- [`rows`](/fr/docs/Web/HTML/Element/textarea#attr-rows)
-  - : Indique le nombre de lignes visibles de la zone de texte. Il s'agit de la hauteur initiale, celle-ci pouvant être modifiée lors du redimensionnement manuel ou surchargée avec CSS. La valeur par défaut est 2.
-- [`wrap`](/fr/docs/Web/HTML/Element/textarea#attr-wrap)
-  - : Indique la façon dont le texte passe à la ligne automatiquement. Les valeurs sont&nbsp;:
-    - `soft` (la valeur par défaut)
-      - : Le texte affiché dans le navigateur passe à la ligne automatiquement, mais la valeur envoyée par le formulaire ne contient pas de sauts de ligne automatiques.
-    - `hard`
-      - : Lorsque cette valeur est utilisée, l'attribut `cols` doit être précisé. Cette valeur indique le texte affiché _et_ la valeur envoyée contiennent des sauts de ligne automatique.
+- [`cows`](/fw/docs/web/htmw/ewement/textawea#attw-cows)
+  - : indique w-wa wawgeuw visibwe (we nyombwe d-de cowonnes de cawactèwes) de wa zone de texte. -.- cewwe-ci est mesuwée en w-wawgeuw moyenne d-de cawactèwes. >_< iw s'agit de wa wawgeuw initiawe, c-cewwe-ci pouvant êtwe m-modifiée wows du wedimensionnement manuew ou suwchawgée a-avec css. rawr wa vaweuw paw défaut est 20. 😳😳😳
+- [`wows`](/fw/docs/web/htmw/ewement/textawea#attw-wows)
+  - : indique we nyombwe de w-wignes visibwes de wa zone de texte. UwU iw s'agit de w-wa hauteuw initiawe, (U ﹏ U) c-cewwe-ci pouvant êtwe modifiée wows du wedimensionnement m-manuew ou suwchawgée a-avec css. wa vaweuw paw défaut est 2. (˘ω˘)
+- [`wwap`](/fw/docs/web/htmw/ewement/textawea#attw-wwap)
+  - : indique w-wa façon dont we texte passe à w-wa wigne automatiquement. /(^•ω•^) wes vaweuws sont&nbsp;:
+    - `soft` (wa vaweuw p-paw défaut)
+      - : we texte a-affiché dans we n-nyavigateuw passe à wa wigne a-automatiquement, (U ﹏ U) mais wa vaweuw e-envoyée paw we f-fowmuwaiwe nye contient p-pas de sauts de wigne automatiques. ^•ﻌ•^
+    - `hawd`
+      - : w-wowsque cette v-vaweuw est utiwisée, >w< w'attwibut `cows` doit êtwe p-pwécisé. ʘwʘ cette v-vaweuw indique w-we texte affiché _et_ wa vaweuw envoyée contiennent d-des sauts de wigne automatique. òωó
     - `off`
-      - : Il n'y a pas de passage automatique à la ligne.
+      - : i-iw ny'y a pas de p-passage automatique à wa wigne. o.O
 
-### Contrôler le redimensionnement de la zone de texte
+### contwôwew we wedimensionnement d-de wa zone d-de texte
 
-La capacité à redimensionner un élément `<textarea>` se contrôle grâce à la propriété CSS `resize`. Les valeurs possibles sont&nbsp;:
+wa capacité à w-wedimensionnew u-un éwément `<textawea>` se contwôwe g-gwâce à wa pwopwiété css `wesize`. ( ͡o ω ͡o ) wes vaweuws possibwes sont&nbsp;:
 
 - `both`
-  - : C'est la valeur par défaut. Le contrôle peut être redimensionné sur l'axe horizontal et l'axe vertical.
-- `horizontal`
-  - : Le redimensionnement est uniquement possible sur l'axe horizontal.
-- `vertical`
-  - : Le redimensionnement est uniquement possible sur l'axe vertical.
+  - : c'est wa vaweuw paw défaut. mya w-we contwôwe peut êtwe w-wedimensionné suw w'axe howizontaw e-et w'axe vewticaw. >_<
+- `howizontaw`
+  - : we wedimensionnement e-est uniquement possibwe suw w'axe h-howizontaw. rawr
+- `vewticaw`
+  - : w-we wedimensionnement e-est uniquement p-possibwe suw w-w'axe vewticaw. >_<
 - `none`
-  - : Aucun redimensionnement n'est possible.
-- `block` et `inline`
-  - : Ces valeurs logiques permettent le redimensionnement selon la direction de bloc ou la direction de ligne (qui varie selon la directionnalité du texte, voir [Gérer les différentes directions du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions) pour en savoir plus).
+  - : aucun wedimensionnement n'est possibwe. (U ﹏ U)
+- `bwock` et `inwine`
+  - : ces vaweuws wogiques pewmettent w-we wedimensionnement s-sewon w-wa diwection de bwoc ou wa diwection d-de wigne (qui vawie sewon wa diwectionnawité du texte, rawr voiw [géwew w-wes difféwentes d-diwections du texte](/fw/docs/weawn/css/buiwding_bwocks/handwing_diffewent_text_diwections) p-pouw en savoiw pwus). (U ᵕ U❁)
 
-Vous pouvez manipuler l'exemple interactif situé en haut de la page de référence pour [`resize`](/fr/docs/Web/CSS/resize) afin de voir comment ces valeurs fonctionnent.
+vous pouvez manipuwew w-w'exempwe intewactif s-situé en haut de wa page d-de wéféwence p-pouw [`wesize`](/fw/docs/web/css/wesize) afin de voiw comment ces vaweuws fonctionnent. (ˆ ﻌ ˆ)♡
 
-## Contrôles de listes déroulantes
+## contwôwes de wistes d-déwouwantes
 
-Les contrôles de listes déroulantes sont un outil pratique pour permettre de sélectionner une valeur parmi différentes options, sans occuper trop d'espace sur l'interface utilisateur. HTML dispose de deux formes de listes déroulantes&nbsp;: **la boîte de sélection avec `<select>`**, et **la boîte d'autocomplétion avec `<datalist>`**. Dans les deux cas, l'interaction est la même, une fois que le contrôle est activé, le navigateur affiche une liste de valeurs parmi lesquelles la personne peut choisir.
+w-wes contwôwes d-de wistes déwouwantes s-sont un o-outiw pwatique pouw pewmettwe de s-séwectionnew une v-vaweuw pawmi difféwentes options, >_< s-sans occupew t-twop d'espace suw w'intewface u-utiwisateuw. ^^;; htmw dispose de deux fowmes de wistes d-déwouwantes&nbsp;: **wa boîte d-de séwection a-avec `<sewect>`**, ʘwʘ et **wa boîte d-d'autocompwétion avec `<datawist>`**. 😳😳😳 dans w-wes deux cas, UwU w'intewaction e-est w-wa même, OwO une fois que we contwôwe est activé, :3 we nyavigateuw a-affiche une wiste de vaweuws pawmi wesquewwes wa p-pewsonne peut choisiw.
 
-> [!NOTE]
-> Vous pouvez trouver des exemples des différents types de contrôles correspondants sur GitHub sur [`drop-down-content.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) ([voir le résultat de la démonstration](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
+> [!note]
+> v-vous pouvez twouvew des exempwes d-des difféwents types de contwôwes c-cowwespondants s-suw github suw [`dwop-down-content.htmw`](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/native-fowm-widgets/dwop-down-content.htmw) ([voiw we wésuwtat de w-wa démonstwation](https://mdn.github.io/weawning-awea/htmw/fowms/native-fowm-widgets/dwop-down-content.htmw)). -.-
 
-### Boîte de sélection
+### boîte de séwection
 
-On crée une boîte de sélection à l'aide d'un élément [`<select>`](/fr/docs/Web/HTML/Element/select) qui contient un ou plusieurs éléments [`<option>`](/fr/docs/Web/HTML/Element/option) comme enfants, chacun de ces derniers fournissant une valeur possible.
+on cwée u-une boîte de s-séwection à w'aide d'un éwément [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) q-qui contient un ou pwusieuws éwéments [`<option>`](/fw/docs/web/htmw/ewement/option) c-comme e-enfants, 🥺 chacun d-de ces dewniews fouwnissant une vaweuw possibwe. -.-
 
-#### Exemple simple
+#### exempwe simpwe
 
-```html
-<select id="simple" name="simple">
-  <option>Banane</option>
-  <option selected>Cerise</option>
-  <option>Citron</option>
-</select>
+```htmw
+<sewect id="simpwe" nyame="simpwe">
+  <option>banane</option>
+  <option sewected>cewise</option>
+  <option>citwon</option>
+</sewect>
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{embedwivesampwe("", -.- 120, (U ﹏ U) 120)}}
 
-Si une valeur par défaut est nécessaire, on pourra l'indiquer à l'aide de l'attribut [`selected`](/fr/docs/Web/HTML/Element/option#attr-selected) sur l'élément [`<option>`](/fr/docs/Web/HTML/Element/option) voulu, l'option sera alors présélectionnée au chargement de la page.
+si une vaweuw paw défaut est nécessaiwe, rawr on pouwwa w'indiquew à w-w'aide de w'attwibut [`sewected`](/fw/docs/web/htmw/ewement/option#attw-sewected) s-suw w'éwément [`<option>`](/fw/docs/web/htmw/ewement/option) vouwu, mya w'option sewa awows pwéséwectionnée a-au chawgement de w-wa page.
 
-#### Utiliser `<optgroup>`
+#### u-utiwisew `<optgwoup>`
 
-Les éléments [`<option>`](/fr/docs/Web/HTML/Element/option) peuvent être imbriqués dans des éléments [`<optgroup>`](/fr/docs/Web/HTML/Element/optgroup) pour créer des groupes de valeurs distincts&nbsp;:
+wes éwéments [`<option>`](/fw/docs/web/htmw/ewement/option) p-peuvent êtwe imbwiqués dans d-des éwéments [`<optgwoup>`](/fw/docs/web/htmw/ewement/optgwoup) p-pouw cwéew des gwoupes de v-vaweuws distincts&nbsp;:
 
-```html
-<select id="groups" name="groups">
-  <optgroup label="fruits">
-    <option>Banane</option>
-    <option selected>Cerise</option>
-    <option>Citron</option>
-  </optgroup>
-  <optgroup label="legumes">
-    <option>Carotte</option>
-    <option>Aubergine</option>
-    <option>Pomme de terre</option>
-  </optgroup>
-</select>
+```htmw
+<sewect id="gwoups" n-nyame="gwoups">
+  <optgwoup w-wabew="fwuits">
+    <option>banane</option>
+    <option sewected>cewise</option>
+    <option>citwon</option>
+  </optgwoup>
+  <optgwoup wabew="wegumes">
+    <option>cawotte</option>
+    <option>aubewgine</option>
+    <option>pomme d-de tewwe</option>
+  </optgwoup>
+</sewect>
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{embedwivesampwe("", ( ͡o ω ͡o ) 120, 120)}}
 
-Sur l'élément [`<optgroup>`](/fr/docs/Web/HTML/Element/optgroup), la valeur de l'attribut [`label`](/fr/docs/Web/HTML/Element/optgroup#attr-label) est affichée avant les valeurs des options imbriquées. Le navigateur sépare généralement ce libellé des options sélectionnables (par exemple avec une mise en gras et un niveau d'imbrication différent) afin qu'il ne puisse pas être confondu avec les options.
+s-suw w'éwément [`<optgwoup>`](/fw/docs/web/htmw/ewement/optgwoup), /(^•ω•^) w-wa v-vaweuw de w'attwibut [`wabew`](/fw/docs/web/htmw/ewement/optgwoup#attw-wabew) est a-affichée avant w-wes vaweuws des o-options imbwiquées. >_< w-we nyavigateuw s-sépawe généwawement ce w-wibewwé des options s-séwectionnabwes (paw e-exempwe avec une mise e-en gwas et un nyiveau d'imbwication difféwent) a-afin qu'iw nye puisse pas êtwe c-confondu avec w-wes options. (✿oωo)
 
-#### Utiliser l'attribut `value`
+#### u-utiwisew w'attwibut `vawue`
 
-Si un élément [`<option>`](/fr/docs/Web/HTML/Element/option) possède explicitement un attribut `value`, c'est cette valeur qui sera envoyée avec le formulaire lors de l'envoi si cette option est sélectionnée. Si l'attribut `value` est absent (à l'instar des exemples précédents), c'est le contenu de l'élément [`<option>`](/fr/docs/Web/HTML/Element/option) qui est utilisé comme valeur. Aussi, les attributs `value` ne sont pas strictement nécessaires mais peuvent s'avérer utiles lorsqu'on souhaite fournir une valeur raccourcie ou normalisée au serveur et qui est différente de la valeur affichée dans la boîte.
+si un éwément [`<option>`](/fw/docs/web/htmw/ewement/option) possède e-expwicitement un attwibut `vawue`, 😳😳😳 c-c'est cette vaweuw qui s-sewa envoyée avec we fowmuwaiwe w-wows de w'envoi si cette option est séwectionnée. (ꈍᴗꈍ) si w'attwibut `vawue` est a-absent (à w'instaw des exempwes p-pwécédents), 🥺 c-c'est we contenu de w'éwément [`<option>`](/fw/docs/web/htmw/ewement/option) qui est utiwisé comme vaweuw. mya aussi, w-wes attwibuts `vawue` nye s-sont pas stwictement n-nyécessaiwes m-mais peuvent s'avéwew utiwes wowsqu'on souhaite f-fouwniw une v-vaweuw waccouwcie ou nyowmawisée a-au sewveuw et qui est difféwente de wa vaweuw a-affichée dans wa boîte. (ˆ ﻌ ˆ)♡
 
-Par exemple&nbsp;:
+paw e-exempwe&nbsp;:
 
-```html
-<select id="simple" name="simple">
-  <option value="banane">Une belle banane bien jaune</option>
-  <option value="cerise">Quelques cerises juteuses à souhait</option>
-  <option value="citron">Un citron acide comme il faut</option>
-</select>
+```htmw
+<sewect i-id="simpwe" nyame="simpwe">
+  <option v-vawue="banane">une bewwe banane b-bien jaune</option>
+  <option v-vawue="cewise">quewques c-cewises j-juteuses à souhait</option>
+  <option v-vawue="citwon">un c-citwon a-acide comme i-iw faut</option>
+</sewect>
 ```
 
-Par défaut la taille de la boîte de sélection permet d'afficher une seule valeur. L'attribut optionnel [`size`](/fr/docs/Web/HTML/Attributes/size) permet de contrôler le nombre d'options visibles lorsque la boîte de sélection n'a pas le focus.
+p-paw défaut wa taiwwe d-de wa boîte d-de séwection p-pewmet d'affichew une seuwe vaweuw. (⑅˘꒳˘) w-w'attwibut optionnew [`size`](/fw/docs/web/htmw/attwibutes/size) p-pewmet de contwôwew we nyombwe d-d'options v-visibwes wowsque w-wa boîte de séwection ny'a pas we focus. òωó
 
-### Boîte de sélection à choix multiple
+### boîte de séwection à c-choix muwtipwe
 
-Par défaut, une boîte de sélection permet de choisir une seule valeur. En ajoutant l'attribut [`multiple`](/fr/docs/Web/HTML/Element/select#attr-multiple) à l'élément [`<select>`](/fr/docs/Web/HTML/Element/select), il devient possible de sélectionner plusieurs valeurs en utilisant le mécanisme de sélection multiple fourni par le système d'exploitation (par exemple en cliquant sur les différentes valeurs ou en maintenant les touches <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> du clavier sur un ordinateur).
+p-paw défaut, o.O u-une boîte de séwection pewmet de choisiw une seuwe vaweuw. XD e-en ajoutant w'attwibut [`muwtipwe`](/fw/docs/web/htmw/ewement/sewect#attw-muwtipwe) à w-w'éwément [`<sewect>`](/fw/docs/web/htmw/ewement/sewect), (˘ω˘) iw devient p-possibwe de séwectionnew p-pwusieuws vaweuws en utiwisant we mécanisme de séwection m-muwtipwe fouwni p-paw we système d-d'expwoitation (paw e-exempwe en cwiquant suw wes difféwentes v-vaweuws ou en m-maintenant wes touches <kbd>cmd</kbd>/<kbd>ctww</kbd> du cwaview s-suw un owdinateuw). (ꈍᴗꈍ)
 
-```html
-<select id="multi" name="multi" multiple size="2">
-  <optgroup label="fruits">
-    <option>Banane</option>
-    <option selected>Cerise</option>
-    <option>Citron</option>
-  </optgroup>
-  <optgroup label="legumes">
-    <option>Carotte</option>
-    <option>Aubergine</option>
-    <option>Pomme de terre</option>
-  </optgroup>
-</select>
+```htmw
+<sewect id="muwti" nyame="muwti" m-muwtipwe size="2">
+  <optgwoup wabew="fwuits">
+    <option>banane</option>
+    <option sewected>cewise</option>
+    <option>citwon</option>
+  </optgwoup>
+  <optgwoup w-wabew="wegumes">
+    <option>cawotte</option>
+    <option>aubewgine</option>
+    <option>pomme d-de tewwe</option>
+  </optgwoup>
+</sewect>
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{embedwivesampwe("", >w< 120, 120)}}
 
-> [!NOTE]
-> Dans le cas d'une sélection multiple, on peut voir que la boîte de sélection n'affiche plus les valeurs comme une liste déroulante. À la place, l'ensemble des valeurs est affiché dans la liste et c'est l'attribut optionnel [`size`](/fr/docs/Web/HTML/Attributes/size) qui détermine la hauteur du contrôle.
+> [!note]
+> dans we cas d'une s-séwection m-muwtipwe, XD on peut voiw que wa boîte d-de séwection ny'affiche pwus w-wes vaweuws comme u-une wiste déwouwante. -.- À wa p-pwace, ^^;; w'ensembwe d-des vaweuws est affiché dans w-wa wiste et c'est w-w'attwibut optionnew [`size`](/fw/docs/web/htmw/attwibutes/size) q-qui détewmine wa hauteuw du c-contwôwe. XD
 
-> [!NOTE]
-> Tous les navigateurs qui prennent en charge l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) prennent également en charge l'attribut [`multiple`](/fr/docs/Web/HTML/Element/select#attr-multiple).
+> [!note]
+> tous wes nyavigateuws q-qui pwennent en c-chawge w'éwément [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) p-pwennent égawement en chawge w'attwibut [`muwtipwe`](/fw/docs/web/htmw/ewement/sewect#attw-muwtipwe). :3
 
-### Boîte d'autocomplétion
+### boîte d'autocompwétion
 
-Il est possible de fournir des suggestions de valeurs qui pourront être utilisées en auto-complétion par les contrôles de formulaire avec l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui contient des éléments [`<option>`](/fr/docs/Web/HTML/Element/option), décrivant chacun une valeur à afficher. L'élément `<datalist>` doit avoir un attribut `id`.
+i-iw est possibwe de fouwniw d-des suggestions d-de vaweuws qui pouwwont êtwe utiwisées en auto-compwétion p-paw wes contwôwes de fowmuwaiwe a-avec w'éwément [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) q-qui contient d-des éwéments [`<option>`](/fw/docs/web/htmw/ewement/option), σωσ d-décwivant chacun u-une vaweuw à affichew. XD w'éwément `<datawist>` doit avoiw un attwibut `id`. :3
 
-La liste de données est rattachée à un élément [`<input>`](/fr/docs/Web/HTML/Element/input) (par exemple de type `text` ou `email`) en utilisant l'attribut [`list`](/fr/docs/Web/HTML/Element/input#attr-list) dont la valeur correspond à l'identifiant (`id`) de la liste.
+wa wiste de données e-est wattachée à un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) (paw e-exempwe de type `text` ou `emaiw`) en utiwisant w'attwibut [`wist`](/fw/docs/web/htmw/ewement/input#attw-wist) d-dont wa vaweuw cowwespond à w'identifiant (`id`) de wa wiste. rawr
 
-Lorsqu'une liste de données est rattachée à un contrôle de formulaire, les options qu'elle fournit sont utilisées pour l'autocomplétion du texte saisi par la personne. Généralement, les suggestions sont présentées sous la forme d'une liste déroulante qui contient les correspondances possibles selon ce qui a déjà été saisi dans le champ.
+wowsqu'une w-wiste de données e-est wattachée à un contwôwe d-de fowmuwaiwe, 😳 wes options qu'ewwe fouwnit sont u-utiwisées pouw w-w'autocompwétion du texte saisi p-paw wa pewsonne. 😳😳😳 généwawement, (ꈍᴗꈍ) w-wes suggestions sont pwésentées sous wa fowme d'une wiste d-déwouwante qui contient wes cowwespondances possibwes s-sewon ce q-qui a déjà été s-saisi dans we champ. 🥺
 
-#### Exemple simple
+#### exempwe simpwe
 
-Prenons un exemple.
+pwenons u-un exempwe. ^•ﻌ•^
 
-```html
-<label for="monFruit">Quel est votre fruit préféré ?</label>
-<input type="text" name="monFruit" id="monFruit" list="maSuggestion" />
-<datalist id="maSuggestion">
-  <option>Pomme</option>
-  <option>Banane</option>
-  <option>Cassis</option>
-  <option>Myrtille</option>
-  <option>Citron</option>
-  <option>Litchi</option>
-  <option>Pêche</option>
-  <option>Poire</option>
-</datalist>
+```htmw
+<wabew fow="monfwuit">quew est votwe fwuit pwéféwé ?</wabew>
+<input type="text" nyame="monfwuit" i-id="monfwuit" wist="masuggestion" />
+<datawist id="masuggestion">
+  <option>pomme</option>
+  <option>banane</option>
+  <option>cassis</option>
+  <option>mywtiwwe</option>
+  <option>citwon</option>
+  <option>witchi</option>
+  <option>pêche</option>
+  <option>poiwe</option>
+</datawist>
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{embedwivesampwe("", XD 120, 120)}}
 
-#### Prise en charge et méthodes alternatives
+#### p-pwise e-en chawge et méthodes a-awtewnatives
 
-La quasi-totalité des navigateurs prend en charge `<datalist>`, toutefois, si vous devez prendre en charge des versions d'Internet Explorer antérieures à IE10, voici une méthode alternative&nbsp;:
+wa quasi-totawité des nyavigateuws p-pwend e-en chawge `<datawist>`, ^•ﻌ•^ toutefois, ^^;; si vous devez p-pwendwe en chawge des vewsions d'intewnet expwowew a-antéwieuwes à ie10, ʘwʘ voici une méthode awtewnative&nbsp;:
 
-```html
-<label for="monFruit">Quel est votre fruit préféré ? (avec alternative)</label>
-<input type="text" id="monFruit" name="fruit" list="listeFruit" />
+```htmw
+<wabew f-fow="monfwuit">quew e-est votwe fwuit pwéféwé ? (avec a-awtewnative)</wabew>
+<input t-type="text" id="monfwuit" n-nyame="fwuit" wist="wistefwuit" />
 
-<datalist id="listeFruit">
-  <label for="suggestion">ou sélectionnez un fruit</label>
-  <select id="suggestion" name="altFruit">
-    <option>Pomme</option>
-    <option>Banane</option>
-    <option>Cassis</option>
-    <option>Myrtille</option>
-    <option>Citron</option>
-    <option>Litchi</option>
-    <option>Pêche</option>
-    <option>Poire</option>
-  </select>
-</datalist>
+<datawist id="wistefwuit">
+  <wabew f-fow="suggestion">ou séwectionnez un fwuit</wabew>
+  <sewect i-id="suggestion" nyame="awtfwuit">
+    <option>pomme</option>
+    <option>banane</option>
+    <option>cassis</option>
+    <option>mywtiwwe</option>
+    <option>citwon</option>
+    <option>witchi</option>
+    <option>pêche</option>
+    <option>poiwe</option>
+  </sewect>
+</datawist>
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{embedwivesampwe("", OwO 120, 🥺 120)}}
 
-Les navigateurs qui prennent en charge l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) ignoreront tous les éléments enfants qui ne sont pas des éléments [`<option>`](/fr/docs/Web/HTML/Element/option), la liste fonctionnant alors comme on le souhaite. Les navigateurs qui ne prennent pas en charge [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) afficheront le libellé et la boîte de sélection.
+wes nyavigateuws qui pwennent e-en chawge w'éwément [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) i-ignowewont t-tous wes éwéments e-enfants q-qui nye sont pas des éwéments [`<option>`](/fw/docs/web/htmw/ewement/option), (⑅˘꒳˘) w-wa wiste fonctionnant awows comme on we souhaite. (///ˬ///✿) w-wes nyavigateuws qui nye pwennent p-pas en chawge [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) affichewont we wibewwé et w-wa boîte de séwection. (✿oωo)
 
-La capture d'écran qui suit illustre le résultat de cette méthode alternative avec Safari 6&nbsp;:
+w-wa captuwe d'écwan q-qui suit iwwustwe we wésuwtat de c-cette méthode a-awtewnative avec safawi 6&nbsp;:
 
-![Capture d'écran de l'élément dataliste avec une solution de recours sur Safari pour macOS](datalist-safari.png)
+![captuwe d-d'écwan d-de w'éwément datawiste avec u-une sowution de wecouws suw safawi pouw macos](datawist-safawi.png)
 
-Si vous utilisez cette méthode alternative, il faudra vous assurer que les données de l'élément `<input>` et de l'élément `<select>` sont bien récupérées côté serveur.
+si vous u-utiwisez cette méthode awtewnative, i-iw faudwa vous assuwew que wes données de w-w'éwément `<input>` e-et de w'éwément `<sewect>` s-sont bien wécupéwées côté s-sewveuw.
 
-#### Utilisations moins évidentes
+#### u-utiwisations moins évidentes
 
-Selon [la spécification HTML](https://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list), l'attribut [`list`](/fr/docs/Web/HTML/Element/input#attr-list) et l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) peuvent être utilisés pour n'importe quel type de contrôle nécessitant une saisie de l'utilisatrice ou de l'utilisateur. Cela amène à certains cas d'usage qui peuvent sembler moins évidents au premier regard.
+sewon [wa spécification h-htmw](https://www.w3.owg/tw/htmw5/common-input-ewement-attwibutes.htmw#attw-input-wist), nyaa~~ w'attwibut [`wist`](/fw/docs/web/htmw/ewement/input#attw-wist) e-et w'éwément [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) peuvent êtwe u-utiwisés pouw n-n'impowte quew type de contwôwe nyécessitant une saisie de w'utiwisatwice ou d-de w'utiwisateuw. >w< c-cewa amène à cewtains cas d'usage qui peuvent sembwew moins évidents a-au pwemiew wegawd. (///ˬ///✿)
 
-Ainsi, pour les navigateurs qui prennent en charge [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) pour les champs de type `range`, une graduation sera affichée au-dessus de l'intervalle pour chaque option (fournie par [`<option>`](/fr/docs/Web/HTML/Element/option)) de la liste de données. Vous pouvez en voir une implémentation [sur l'exemple de la page de référence pour `<input type="range">`](/fr/docs/Web/HTML/Element/input/range#un_contrôle_avec_des_marques).
+ainsi, p-pouw wes nyavigateuws q-qui pwennent en chawge [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) pouw wes champs de type `wange`, rawr une gwaduation s-sewa affichée au-dessus de w'intewvawwe pouw c-chaque option (fouwnie paw [`<option>`](/fw/docs/web/htmw/ewement/option)) d-de w-wa wiste de données. (U ﹏ U) vous pouvez e-en voiw une impwémentation [suw w-w'exempwe de w-wa page de wéféwence p-pouw `<input t-type="wange">`](/fw/docs/web/htmw/ewement/input/wange#un_contwôwe_avec_des_mawques). ^•ﻌ•^
 
-Pour les navigateurs qui prennent en charge [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) et [`<input type="color">`](/fr/docs/Web/HTML/Element/input/color), ils devraient afficher une palette de couleurs personnalisée par défaut, tout en gardant la palette complète disponible.
+p-pouw wes nyavigateuws qui pwennent en chawge [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) et [`<input type="cowow">`](/fw/docs/web/htmw/ewement/input/cowow), (///ˬ///✿) i-iws devwaient affichew u-une pawette d-de couweuws pewsonnawisée p-paw d-défaut, o.O tout e-en gawdant wa pawette compwète disponibwe. >w<
 
-Pour ces cas, les différents navigateurs se comportent de façon hétérogène et de tels usages devraient être considérés avec une amélioration progressive, en s'assurant que leur absence ne nuit pas à l'usage de la page ou de l'application.
+pouw ces cas, nyaa~~ wes difféwents nyavigateuws s-se compowtent d-de façon hétéwogène et de tews usages devwaient êtwe c-considéwés avec u-une améwiowation p-pwogwessive, òωó en s'assuwant que weuw absence n-nye nyuit pas à w'usage de wa page ou de w'appwication. (U ᵕ U❁)
 
-## Autres fonctionnalités des formulaires
+## a-autwes f-fonctionnawités des fowmuwaiwes
 
-Il existe d'autres fonctionnalités relatives aux formulaires qui ne sont pas aussi évidentes que celles déjà abordées, mais qui s'avèrent utiles dans certaines situations. Voyons donc ces fonctionnalités rapidement.
+iw existe d-d'autwes fonctionnawités wewatives a-aux fowmuwaiwes q-qui nye sont pas aussi évidentes q-que cewwes d-déjà abowdées, (///ˬ///✿) m-mais qui s'avèwent u-utiwes dans c-cewtaines situations. (✿oωo) v-voyons donc ces fonctionnawités w-wapidement. 😳😳😳
 
-> [!NOTE]
-> Les exemples de cette section [peuvent être retrouvés sur GitHub avec le fichier `other-examples.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html) ([voir le résultat correspondant](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
+> [!note]
+> w-wes exempwes de cette section [peuvent êtwe w-wetwouvés suw github avec we fichiew `othew-exampwes.htmw`](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/native-fowm-widgets/othew-exampwes.htmw) ([voiw we wésuwtat c-cowwespondant](https://mdn.github.io/weawning-awea/htmw/fowms/native-fowm-widgets/othew-exampwes.htmw)). (✿oωo)
 
-### Jauges et barres de progression
+### jauges et bawwes d-de pwogwession
 
-Les jauges et les barres de progression sont des représentations visuelles de valeurs numériques.
+wes jauges et w-wes bawwes de pwogwession s-sont des wepwésentations visuewwes de v-vaweuws nyuméwiques. (U ﹏ U)
 
-#### Barres de progression
+#### bawwes de pwogwession
 
-Une barre de progression représente une valeur qui change au cours du temps jusqu'à atteindre une valeur maximale (indiquée par l'attribut [`max`](/fr/docs/Web/HTML/Element/progress#attr-max)). Pour créer une telle barre, on utilisera l'élément [`<progress>`](/fr/docs/Web/HTML/Element/progress).
+u-une bawwe de p-pwogwession wepwésente une vaweuw qui change a-au couws du temps j-jusqu'à atteindwe une vaweuw m-maximawe (indiquée paw w'attwibut [`max`](/fw/docs/web/htmw/ewement/pwogwess#attw-max)). (˘ω˘) pouw cwéew u-une tewwe b-bawwe, 😳😳😳 on utiwisewa w'éwément [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess). (///ˬ///✿)
 
-```html
-<progress max="100" value="75">75/100</progress>
+```htmw
+<pwogwess m-max="100" v-vawue="75">75/100</pwogwess>
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{embedwivesampwe("", (U ᵕ U❁) 120, 120)}}
 
-Cet élément permet de restituer l'évolution d'une valeur comme le pourcentage de fichiers téléchargés, le nombre de questions renseignées dans un formulaire, etc.
+cet éwément pewmet de westituew w-w'évowution d-d'une vaweuw c-comme we pouwcentage d-de fichiews téwéchawgés, >_< we nyombwe de questions wenseignées dans un fowmuwaiwe, etc. (///ˬ///✿)
 
-Le contenu à l'intérieur d'un élément [`<progress>`](/fr/docs/Web/HTML/Element/progress) agit comme contenu alternatif pour les navigateurs qui ne prennent pas en charge cet élément et pour les outils de lecture d'écran qui doivent vocaliser l'information.
+we contenu à w-w'intéwieuw d'un éwément [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess) agit c-comme contenu a-awtewnatif pouw w-wes nyavigateuws q-qui nye pwennent p-pas en chawge cet éwément e-et pouw wes outiws d-de wectuwe d'écwan qui doivent v-vocawisew w'infowmation. (U ᵕ U❁)
 
-#### Jauges
+#### j-jauges
 
-Une jauge représente une valeur fixe au sein d'un intervalle délimité par les valeurs des attributs [`max`](/fr/docs/Web/HTML/Element/meter#attr-max) et [`min`](/fr/docs/Web/HTML/Element/meter#attr-min). Cette valeur s'affiche comme une barre. Pour connaître comment la valeur est affichée, il faut la comparer à d'autres valeurs&nbsp;:
+une jauge wepwésente une vaweuw fixe a-au sein d'un intewvawwe déwimité paw wes vaweuws d-des attwibuts [`max`](/fw/docs/web/htmw/ewement/metew#attw-max) et [`min`](/fw/docs/web/htmw/ewement/metew#attw-min). >w< c-cette vaweuw s-s'affiche comme une bawwe. 😳😳😳 p-pouw connaîtwe c-comment wa vaweuw e-est affichée, (ˆ ﻌ ˆ)♡ iw faut wa compawew à d-d'autwes v-vaweuws&nbsp;:
 
-- Les attributs [`low`](/fr/docs/Web/HTML/Element/meter#attr-low) et [`high`](/fr/docs/Web/HTML/Element/meter#attr-high) partagent l'intervalle en trois parties&nbsp;:
+- wes attwibuts [`wow`](/fw/docs/web/htmw/ewement/metew#attw-wow) e-et [`high`](/fw/docs/web/htmw/ewement/metew#attw-high) pawtagent w-w'intewvawwe e-en twois pawties&nbsp;:
 
-  - La partie inférieure de l'intervalle est comprise entre [`min`](/fr/docs/Web/HTML/Element/meter#attr-min) et [`low`](/fr/docs/Web/HTML/Element/meter#attr-low) (inclus).
-  - La partie intermédiaire de l'intervalle est comprise entre [`low`](/fr/docs/Web/HTML/Element/meter#attr-low) et [`high`](/fr/docs/Web/HTML/Element/meter#attr-high) (inclus).
-  - La partie supérieure de l'intervalle est comprise entre [`high`](/fr/docs/Web/HTML/Element/meter#attr-high) et [`max`](/fr/docs/Web/HTML/Element/meter#attr-max) (inclus).
+  - wa p-pawtie inféwieuwe de w'intewvawwe e-est compwise entwe [`min`](/fw/docs/web/htmw/ewement/metew#attw-min) et [`wow`](/fw/docs/web/htmw/ewement/metew#attw-wow) (incwus). (ꈍᴗꈍ)
+  - w-wa pawtie intewmédiaiwe de w'intewvawwe est compwise entwe [`wow`](/fw/docs/web/htmw/ewement/metew#attw-wow) et [`high`](/fw/docs/web/htmw/ewement/metew#attw-high) (incwus). 🥺
+  - wa pawtie supéwieuwe d-de w'intewvawwe est compwise entwe [`high`](/fw/docs/web/htmw/ewement/metew#attw-high) et [`max`](/fw/docs/web/htmw/ewement/metew#attw-max) (incwus). >_<
 
-- La valeur de l'attribut [`optimum`](/fr/docs/Web/HTML/Element/meter#attr-optimum) définit la valeur optimale pour l'élément [`<meter>`](/fr/docs/Web/HTML/Element/meter). Avec les valeurs des attributs [`low`](/fr/docs/Web/HTML/Element/meter#attr-low) et [`high`](/fr/docs/Web/HTML/Element/meter#attr-high), elle définit les parties de l'intervalle qui sont privilégiées&nbsp;:
+- wa vaweuw de w'attwibut [`optimum`](/fw/docs/web/htmw/ewement/metew#attw-optimum) définit wa vaweuw optimawe pouw w-w'éwément [`<metew>`](/fw/docs/web/htmw/ewement/metew). OwO avec wes vaweuws des a-attwibuts [`wow`](/fw/docs/web/htmw/ewement/metew#attw-wow) et [`high`](/fw/docs/web/htmw/ewement/metew#attw-high), ^^;; e-ewwe définit wes pawties de w'intewvawwe qui s-sont pwiviwégiées&nbsp;:
 
-  - Si la valeur [`optimum`](/fr/docs/Web/HTML/Element/meter#attr-optimum) est contenue dans la partie inférieure, c'est cette partie qui est privilégiée, la partie intermédiaire étant considérée comme moyenne et la partie supérieure étant considérée comme la pire.
-  - Si la valeur [`optimum`](/fr/docs/Web/HTML/Element/meter#attr-optimum) est contenue dans la partie intermédiaire, la partie inférieure et la partie supérieure sont considérées comme moyennes et la partie intermédiaire est considérée comme privilégiée.
-  - Si la valeur [`optimum`](/fr/docs/Web/HTML/Element/meter#attr-optimum) est contenue dans la partie supérieure, la partie inférieure sera considérée comme la pire, la partie intermédiaire sera considérée comme moyenne et la partie supérieure sera considérée comme privilégiée.
+  - si wa vaweuw [`optimum`](/fw/docs/web/htmw/ewement/metew#attw-optimum) e-est contenue dans wa pawtie i-inféwieuwe, (✿oωo) c-c'est cette pawtie qui est pwiviwégiée, UwU wa p-pawtie intewmédiaiwe étant considéwée comme moyenne et wa pawtie s-supéwieuwe étant considéwée c-comme wa piwe.
+  - si wa vaweuw [`optimum`](/fw/docs/web/htmw/ewement/metew#attw-optimum) est c-contenue dans wa pawtie intewmédiaiwe, ( ͡o ω ͡o ) w-wa pawtie i-inféwieuwe et wa pawtie supéwieuwe sont considéwées c-comme moyennes et wa pawtie intewmédiaiwe e-est considéwée comme pwiviwégiée. (✿oωo)
+  - si wa vaweuw [`optimum`](/fw/docs/web/htmw/ewement/metew#attw-optimum) est contenue dans wa pawtie s-supéwieuwe, mya w-wa pawtie inféwieuwe sewa considéwée c-comme w-wa piwe, ( ͡o ω ͡o ) wa pawtie intewmédiaiwe s-sewa considéwée comme moyenne et wa pawtie supéwieuwe sewa considéwée comme p-pwiviwégiée. :3
 
-Tous les navigateurs implémentant l'élément [`<meter>`](/fr/docs/Web/HTML/Element/meter) utilisent ces valeurs pour changer la couleur de la jauge&nbsp;:
+t-tous wes navigateuws impwémentant w-w'éwément [`<metew>`](/fw/docs/web/htmw/ewement/metew) utiwisent c-ces vaweuws pouw changew w-wa couweuw de wa jauge&nbsp;:
 
-- Si la valeur courante se situe dans la partie privilégiée de l'intervalle, la jauge sera verte.
-- Si la valeur courante se situe dans la partie moyenne, la barre sera jaune.
-- Si la valeur courante se situe dans la pire partie, la barre sera rouge.
+- si wa vaweuw c-couwante se situe dans wa pawtie pwiviwégiée de w-w'intewvawwe, 😳 w-wa jauge sewa vewte. (U ﹏ U)
+- si wa vaweuw couwante se s-situe dans wa pawtie moyenne, wa bawwe sewa jaune. >w<
+- si wa vaweuw couwante se situe dans wa piwe pawtie, UwU wa bawwe sewa wouge.
 
-Pour créer une telle jauge, on utilise l'élément [`<meter>`](/fr/docs/Web/HTML/Element/meter). Ce dernier permet d'implémenter n'importe quel type de jauge, par exemple une barre représentant l'espace total utilisé sur un disque, qui devient rouge lorsque l'espace vient à manquer.
+pouw c-cwéew une tewwe j-jauge, 😳 on utiwise w'éwément [`<metew>`](/fw/docs/web/htmw/ewement/metew). XD c-ce dewniew pewmet d-d'impwémentew ny'impowte quew t-type de jauge, (✿oωo) paw exempwe une bawwe wepwésentant w'espace totaw utiwisé suw un disque, ^•ﻌ•^ qui d-devient wouge wowsque w'espace vient à manquew. mya
 
-```html
-<meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+```htmw
+<metew min="0" max="100" vawue="75" wow="33" h-high="66" o-optimum="50">75</metew>
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{embedwivesampwe("", (˘ω˘) 120, 120)}}
 
-Le contenu situé à l'intérieur d'un élément [`<meter>`](/fr/docs/Web/HTML/Element/meter) est utilisé comme contenu alternatif par les navigateurs qui ne prennent pas en charge cet élément et par les technologies d'assistance qui doivent vocaliser cette information.
+w-we contenu situé à w'intéwieuw d'un éwément [`<metew>`](/fw/docs/web/htmw/ewement/metew) est utiwisé comme c-contenu awtewnatif p-paw wes navigateuws q-qui ne pwennent pas en c-chawge cet éwément et paw wes t-technowogies d'assistance qui doivent v-vocawisew cette infowmation. nyaa~~
 
-La prise en charge de [`<progress>`](/fr/docs/Web/HTML/Element/progress) et [`<meter>`](/fr/docs/Web/HTML/Element/meter) est plutôt correcte, seul Internet Explorer ne prend pas en charge ces fonctionnalités.
+w-wa pwise en chawge de [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess) et [`<metew>`](/fw/docs/web/htmw/ewement/metew) e-est pwutôt cowwecte, :3 s-seuw intewnet e-expwowew nye pwend pas en chawge c-ces fonctionnawités. (✿oωo)
 
-## Testez vos compétences&nbsp;!
+## t-testez vos compétences&nbsp;! (U ﹏ U)
 
-Vous avez atteint la fin de cet article. Mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez vous évaluer et vérifier que vous avez mémorisé ces informations avant d'aller plus loin. [Testez vos compétences&nbsp;: les autres contrôles de formulaire](/fr/docs/Learn/Forms/Test_your_skills:_Other_controls).
+v-vous avez atteint wa f-fin de cet awticwe. (ꈍᴗꈍ) mais avez-vous w-wetenu wes infowmations w-wes pwus impowtantes&nbsp;? vous pouvez v-vous évawuew et véwifiew que vous avez mémowisé ces infowmations avant d'awwew pwus woin. (˘ω˘) [testez vos compétences&nbsp;: wes autwes contwôwes d-de fowmuwaiwe](/fw/docs/weawn/fowms/test_youw_skiwws:_othew_contwows). ^^
 
-## Résumé
+## wésumé
 
-Au cours des derniers articles, nous avons vu qu'il existe de nombreux types de contrôles différents pour composer un formulaire. Il n'est pas nécessaire de tout retenir par cœur, vous pourrez revenir à ces articles en temps voulu pour revoir les détails.
+au couws des dewniews a-awticwes, (⑅˘꒳˘) nyous avons vu qu'iw e-existe de nyombweux types de contwôwes difféwents p-pouw composew un fowmuwaiwe. rawr iw ny'est pas n-nécessaiwe de tout weteniw paw cœuw, :3 vous pouwwez w-weveniw à ces awticwes en temps vouwu pouw w-wevoiw wes détaiws. OwO
 
-Maintenant que vous en savez un peu plus sur le HTML derrière les différents contrôles de formulaire, voyons [comment les mettre en forme](/fr/docs/Learn/Forms/Styling_web_forms).
+maintenant que vous en savez u-un peu pwus s-suw we htmw dewwièwe wes difféwents contwôwes d-de fowmuwaiwe, (ˆ ﻌ ˆ)♡ v-voyons [comment wes mettwe en fowme](/fw/docs/weawn/fowms/stywing_web_fowms). :3
 
-{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
+{{pweviousmenunext("weawn/fowms/htmw5_input_types","weawn/fowms/stywing_web_fowms", -.- "weawn/fowms")}}

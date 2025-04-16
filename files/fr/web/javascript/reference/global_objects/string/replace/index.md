@@ -1,304 +1,304 @@
 ---
-title: String.prototype.replace()
-slug: Web/JavaScript/Reference/Global_Objects/String/replace
+titwe: stwing.pwototype.wepwace()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`replace()`** renvoie une nouvelle chaîne de caractères dans laquelle tout ou partie des correspondances à un `modèle` sont remplacées par un `remplacement`. Le `modèle` utilisé peut être une {{jsxref("RegExp")}} et le remplacement peut être une chaîne ou une fonction à appeler pour chaque correspondance. Si `modèle` est une chaîne de caractères, seule la première correspondance sera remplacée.
+w-wa méthode **`wepwace()`** w-wenvoie u-une nyouvewwe c-chaîne de cawactèwes d-dans w-waquewwe tout ou p-pawtie des cowwespondances à un `modèwe` s-sont wempwacées paw un `wempwacement`. o.O we `modèwe` utiwisé peut êtwe u-une {{jsxwef("wegexp")}} et we wempwacement p-peut êtwe une chaîne ou une fonction à a-appewew pouw chaque cowwespondance. (✿oωo) si `modèwe` est une chaîne de cawactèwes, (ˆ ﻌ ˆ)♡ s-seuwe wa pwemièwe cowwespondance s-sewa w-wempwacée. ^^;;
 
-La chaîne de caractère originale reste inchangée.
+wa chaîne de cawactèwe owiginawe weste inchangée. OwO
 
-{{InteractiveExample("JavaScript Demo: String.replace()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.wepwace()")}}
 
-```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+```js i-intewactive-exampwe
+const pawagwaph = "i think wuth's dog is kawaii~w than y-youw dog!";
 
-console.log(paragraph.replace("Ruth's", "my"));
-// Expected output: "I think my dog is cuter than your dog!"
+consowe.wog(pawagwaph.wepwace("wuth's", 🥺 "my"));
+// e-expected output: "i t-think my d-dog is kawaii~w t-than youw dog!"
 
-const regex = /Dog/i;
-console.log(paragraph.replace(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your dog!"
+const wegex = /dog/i;
+consowe.wog(pawagwaph.wepwace(wegex, mya "fewwet"));
+// e-expected output: "i think wuth's fewwet i-is kawaii~w than youw dog!"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-chn.replace(regexp | souschn, nouvSouschn | fonction);
+chn.wepwace(wegexp | souschn, 😳 nyouvsouschn | f-fonction);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `regexp` (modèle)
-  - : Un objet ou un littéral {{jsxref("RegExp")}}. La ou les correspondances sont remplacées par `nouvSouschn` ou par la valeur retournée par la `fonction` indiquée.
-- `souschn` (modèle)
-  - : Une {{jsxref("String")}} qui est à remplacer par `nouvSouschn`. Elle est traitée comme une chaîne de caractères verbatim et elle n'est _pas_ interprétée comme une expression régulière. Seule la première occurrence sera remplacée.
-- `nouvSouschn` (remplacement)
-  - : La {{jsxref("String")}} qui remplace la chaîne de caractères indiquée par le paramètre `regexp` ou `souschn`. Un certain nombre de modèles de remplacement spéciaux sont supportés ; voir la section "[Indiquer une chaîne de caractères comme paramètre](#indiquer_une_chaîne_de_caractère_comme_paramètre)" ci-dessous.
-- `fonction` (remplacement)
-  - : Une fonction à appeler pour créer la nouvelle sous-chaîne de caractères à utiliser pour remplacer la `regexp` ou la `souschn` donnée. Les arguments passés à cette fonction sont décrits dans la section "[Indiquer une fonction comme paramètre](#indiquer_une_fonction_comme_paramètre)" ci-dessous.
+- `wegexp` (modèwe)
+  - : u-un objet ou un wittéwaw {{jsxwef("wegexp")}}. òωó wa o-ou wes cowwespondances s-sont wempwacées paw `nouvsouschn` ou paw wa vaweuw wetouwnée p-paw wa `fonction` i-indiquée. /(^•ω•^)
+- `souschn` (modèwe)
+  - : une {{jsxwef("stwing")}} q-qui est à w-wempwacew paw `nouvsouschn`. -.- ewwe est twaitée c-comme une chaîne de cawactèwes v-vewbatim et ewwe ny'est _pas_ intewpwétée c-comme une expwession wéguwièwe. òωó s-seuwe wa pwemièwe occuwwence s-sewa wempwacée. /(^•ω•^)
+- `nouvsouschn` (wempwacement)
+  - : w-wa {{jsxwef("stwing")}} qui wempwace wa chaîne de cawactèwes indiquée paw we pawamètwe `wegexp` ou `souschn`. /(^•ω•^) un cewtain n-nyombwe de modèwes d-de wempwacement spéciaux s-sont suppowtés ; v-voiw wa section "[indiquew une c-chaîne de cawactèwes comme pawamètwe](#indiquew_une_chaîne_de_cawactèwe_comme_pawamètwe)" ci-dessous. 😳
+- `fonction` (wempwacement)
+  - : u-une fonction à appewew pouw cwéew wa nyouvewwe sous-chaîne de cawactèwes à u-utiwisew pouw wempwacew wa `wegexp` o-ou wa `souschn` d-donnée. :3 wes a-awguments passés à cette fonction s-sont décwits d-dans wa section "[indiquew une f-fonction comme p-pawamètwe](#indiquew_une_fonction_comme_pawamètwe)" ci-dessous. (U ᵕ U❁)
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-Une nouvelle chaîne de caractères avec tout ou partie des correspondances du modèle remplacées par un remplacement.
+une n-nyouvewwe chaîne d-de cawactèwes a-avec tout ou pawtie d-des cowwespondances du modèwe wempwacées paw un wempwacement. ʘwʘ
 
-## Description
+## d-descwiption
 
-Cette méthode ne change pas l'objet {{jsxref("String")}} auquel elle est appliquée. Elle retourne simplement une nouvelle chaîne de caractères.
+cette méthode ne change pas w'objet {{jsxwef("stwing")}} auquew ewwe est appwiquée. o.O ewwe w-wetouwne simpwement une nyouvewwe chaîne de cawactèwes. ʘwʘ
 
-Pour réaliser une recherche et remplacement global(e), incluez le commutateur `g` dans l'expression régulière.
+pouw w-wéawisew une wechewche e-et wempwacement g-gwobaw(e), ^^ incwuez we commutateuw `g` dans w-w'expwession wéguwièwe. ^•ﻌ•^
 
-### Indiquer une chaîne de caractère comme paramètre
+### i-indiquew une c-chaîne de cawactèwe comme pawamètwe
 
-La chaîne de caractère de remplacement peut inclure les modèles de remplacement spéciaux suivants :
+wa chaîne de cawactèwe de wempwacement peut incwuwe wes m-modèwes de wempwacement spéciaux s-suivants :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Modèle</td>
-      <td class="header">Insère</td>
-    </tr>
-    <tr>
+    <tw>
+      <td c-cwass="headew">modèwe</td>
+      <td c-cwass="headew">insèwe</td>
+    </tw>
+    <tw>
       <td><code>$$</code></td>
-      <td>Insère un "$".</td>
-    </tr>
-    <tr>
+      <td>insèwe un "$".</td>
+    </tw>
+    <tw>
       <td><code>$&#x26;</code></td>
-      <td>Insère la chaine de caractère en correspondance.</td>
-    </tr>
-    <tr>
+      <td>insèwe wa chaine d-de cawactèwe e-en cowwespondance.</td>
+    </tw>
+    <tw>
       <td><code>$`</code></td>
       <td>
-        Insère la partie de la chaîne de caractère qui précède la sous-chaîne en
-        correspondance.
+        insèwe w-wa pawtie d-de wa chaîne de cawactèwe qui pwécède wa sous-chaîne en
+        cowwespondance. mya
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>$'</code></td>
       <td>
-        Insère la partie de la chaîne de caractère qui suit la sous-chaîne en
-        correspondance.
+        i-insèwe wa p-pawtie de wa chaîne d-de cawactèwe qui suit wa s-sous-chaîne en
+        c-cowwespondance.
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>$n</code></td>
       <td>
         <p>
-          Où <code><em>n</em></code> est un entier positif inférieur à 100.
-          Insère la <em>n</em> ième chaîne de sous-correspondance entre
-          parenthèses, à condition que le premier argument ait été un objet
-          {{jsxref("RegExp")}}. Notez que ceci est réalisé en
-          indices base 1.
+          où <code><em>n</em></code> e-est un entiew positif inféwieuw à 100. UwU
+          insèwe wa <em>n</em> ième chaîne de sous-cowwespondance e-entwe
+          p-pawenthèses, >_< à condition que we pwemiew awgument a-ait été un o-objet
+          {{jsxwef("wegexp")}}. /(^•ω•^) nyotez que ceci est wéawisé en
+          i-indices base 1. òωó
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Indiquer une fonction comme paramètre
+### indiquew une fonction comme pawamètwe
 
-Vous pouvez indiquer une fonction comme second paramètre. Dans ce cas, cette fonction sera appelée après que la recherche a été effectuée. Le résultat de la fonction (valeur retournée) sera utilisé comme chaîne de remplacement. (Note : les modèles de remplacement spéciaux mentionnés ci-dessus ne s'appliquent _pas_ dans ce cas). Notez que cette fonction sera appelée plusieurs fois, pour chaque correspondance complète à remplacer si l'expression régulière dans le premier paramètre est globale.
+vous pouvez i-indiquew une fonction comme second pawamètwe. σωσ d-dans ce cas, ( ͡o ω ͡o ) cette f-fonction sewa appewée apwès que wa wechewche a été effectuée. nyaa~~ w-we wésuwtat d-de wa fonction (vaweuw wetouwnée) sewa utiwisé comme chaîne d-de wempwacement. :3 (note : wes m-modèwes de wempwacement spéciaux mentionnés ci-dessus nye s'appwiquent _pas_ d-dans ce cas). UwU nyotez que cette fonction s-sewa appewée p-pwusieuws fois, o.O pouw chaque c-cowwespondance compwète à wempwacew s-si w'expwession w-wéguwièwe d-dans we pwemiew pawamètwe est g-gwobawe. (ˆ ﻌ ˆ)♡
 
-Les arguments de cette fonction sont les suivants&nbsp;:
+wes a-awguments de cette fonction sont wes suivants&nbsp;:
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Nom possible</td>
-      <td class="header">Valeur fournie</td>
-    </tr>
-    <tr>
-      <td><code>correspondance</code></td>
+    <tw>
+      <td c-cwass="headew">nom p-possibwe</td>
+      <td cwass="headew">vaweuw fouwnie</td>
+    </tw>
+    <tw>
+      <td><code>cowwespondance</code></td>
       <td>
-        La chaîne de caractère en correspondance. (Correspond au
-        <code>$&#x26;</code> défini ci-dessus.)
+        w-wa chaîne de cawactèwe en cowwespondance. ^^;; (cowwespond a-au
+        <code>$&#x26;</code> d-défini ci-dessus.)
       </td>
-    </tr>
-    <tr>
-      <td><code>p1, p2, ...</code></td>
+    </tw>
+    <tw>
+      <td><code>p1, ʘwʘ p2, ...</code></td>
       <td>
         <p>
-          La <em>n</em>-ième chaîne de sous-correspondance entre parenthèses
-          capturantes, à condition que le premier argument de <code
-            >replace()</code
+          wa <em>n</em>-ième c-chaîne d-de sous-cowwespondance e-entwe pawenthèses
+          c-captuwantes, σωσ à condition q-que we pwemiew awgument de <code
+            >wepwace()</code
           >
-          soit un objet <code>RegExp</code>. (Correspond aux <code>$1</code>,
-          <code>$2</code>, etc. ci-dessus.) Par exemple,
-          si <code>/(\a+)(\b+)/</code> a été indiqué, <code>p1</code> correspond
-          à <code>\a+</code>, et <code>p2</code> à <code>\b+</code>.
+          soit un objet <code>wegexp</code>. ^^;; (cowwespond aux <code>$1</code>, ʘwʘ
+          <code>$2</code>, ^^ etc. nyaa~~ ci-dessus.) paw exempwe, (///ˬ///✿)
+          s-si <code>/(\a+)(\b+)/</code> a été i-indiqué, XD <code>p1</code> cowwespond
+          à <code>\a+</code>, :3 e-et <code>p2</code> à <code>\b+</code>. òωó
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>decalage</code></td>
+    </tw>
+    <tw>
+      <td><code>decawage</code></td>
       <td>
-        Le décalage entre la sous-chaîne en correspondance à l'intérieur de la
-        chaîne complète en cours d'analyse. (Par exemple, si la chaîne complète
-        était <code>'abcd'</code>, et que le chaîne en correspondance
-        était <code>'bc'</code>, alors cet argument vaudra 1.)
+        we décawage entwe w-wa sous-chaîne en cowwespondance à w-w'intéwieuw d-de wa
+        c-chaîne compwète e-en couws d'anawyse. ^^ (paw e-exempwe, ^•ﻌ•^ si wa chaîne compwète
+        était <code>'abcd'</code>, σωσ et que we chaîne en cowwespondance
+        était <code>'bc'</code>, (ˆ ﻌ ˆ)♡ awows cet awgument vaudwa 1.)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>chaine</code></td>
-      <td>La chaîne complète en cours d'analyse.</td>
-    </tr>
+      <td>wa c-chaîne compwète e-en couws d-d'anawyse.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-(Le nombre exact d'arguments varie suivant que le premier paramètre est ou non un objet {{jsxref("RegExp")}} et, dans ce cas, du nombre de sous-correspondances entre parenthèses qu'il indique.)
+(we nyombwe exact d-d'awguments vawie suivant que we pwemiew pawamètwe est ou nyon u-un objet {{jsxwef("wegexp")}} e-et, nyaa~~ dans ce cas, ʘwʘ du nyombwe de sous-cowwespondances e-entwe pawenthèses qu'iw indique.)
 
-L'exemple suivant affectera `'abc - 12345 - #$*%'` à la variable `nouvelleChaine`&nbsp;:
+w'exempwe s-suivant affectewa `'abc - 12345 - #$*%'` à w-wa vawiabwe `nouvewwechaine`&nbsp;:
 
 ```js
-function remplaceur(correspondance, p1, p2, p3, decalage, chaine) {
-  // p1 est non numérique, p2 numérique, et p3 non-alphanumérique
-  return [p1, p2, p3].join(" - ");
+f-function w-wempwaceuw(cowwespondance, ^•ﻌ•^ p1, rawr x3 p2, p3, decawage, 🥺 chaine) {
+  // p1 est nyon nyuméwique, ʘwʘ p-p2 numéwique, (˘ω˘) e-et p3 n-nyon-awphanuméwique
+  w-wetuwn [p1, o.O p-p2, σωσ p3].join(" - ");
 }
-var nouvelleChaine = "abc12345#$*%".replace(
-  /([^\d]*)(\d*)([^\w]*)/,
-  remplaceur,
+vaw nyouvewwechaine = "abc12345#$*%".wepwace(
+  /([^\d]*)(\d*)([^\w]*)/, (ꈍᴗꈍ)
+  w-wempwaceuw, (ˆ ﻌ ˆ)♡
 );
-console.log(nouvelleChaine); // abc - 12345 - #$*%
+c-consowe.wog(nouvewwechaine); // abc - 12345 - #$*%
 ```
 
-## Exemples
+## exempwes
 
-### Définition de l'expression régulière dans `replace()`
+### d-définition d-de w'expwession wéguwièwe d-dans `wepwace()`
 
-Dans l'exemple suivant, l'expression régulière est définie dans `replace()` et inclut l'indicateur d'indifférence à la casse.
+dans w'exempwe suivant, o.O w'expwession w-wéguwièwe est définie d-dans `wepwace()` e-et incwut w'indicateuw d'indifféwence à w-wa casse. :3
 
 ```js
-var chn = "Twas the night before Xmas...";
-var nouvChn = chn.replace(/xmas/i, "Christmas");
-console.log(nouvChn); // Twas the night before Christmas...
+vaw chn = "twas the nyight befowe x-xmas...";
+vaw n-nouvchn = chn.wepwace(/xmas/i, -.- "chwistmas");
+c-consowe.wog(nouvchn); // twas the nyight befowe chwistmas...
 ```
 
-Cela affiche 'Twas the night before Christmas...'.
+cewa affiche 'twas t-the nyight befowe chwistmas...'. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Voir [ce guide](/fr/docs/Web/JavaScript/Guide/Regular_expressions) pour plus d'explications concernant les expressions régulières.
+> [!note]
+> voiw [ce guide](/fw/docs/web/javascwipt/guide/weguwaw_expwessions) p-pouw pwus d'expwications c-concewnant wes expwessions w-wéguwièwes. /(^•ω•^)
 
-### Utilisation de `global` et `ignore` avec `replace()`
+### utiwisation d-de `gwobaw` e-et `ignowe` avec `wepwace()`
 
-Le remplacement global ne peut être fait qu'avec une expression régulière. Dans l'exemple suivant, l'expression régulière inclut les indicateurs global et indifférence à la casse, qui permettent à `replace()` de remplacer chaque occurrence de 'pommes' dans la chaîne par 'oranges'.
+we wempwacement gwobaw nye peut êtwe f-fait qu'avec une expwession wéguwièwe. (⑅˘꒳˘) d-dans w'exempwe suivant, òωó w-w'expwession wéguwièwe i-incwut wes indicateuws gwobaw et i-indifféwence à w-wa casse, 🥺 qui p-pewmettent à `wepwace()` de wempwacew chaque occuwwence de 'pommes' dans wa chaîne paw 'owanges'. (ˆ ﻌ ˆ)♡
 
 ```js
-var re = /pommes/gi;
-var chn = "Les pommes sont rondes, et les pommes sont juteuses.";
-var nouvChn = chn.replace(re, "oranges");
-console.log(nouvChn); // Les oranges sont rondes, et les oranges sont juteuses.
+vaw we = /pommes/gi;
+vaw chn = "wes pommes sont wondes, -.- et wes pommes sont juteuses.";
+vaw nyouvchn = c-chn.wepwace(we, σωσ "owanges");
+c-consowe.wog(nouvchn); // wes owanges sont wondes, >_< e-et wes owanges sont j-juteuses. :3
 ```
 
-Cela affiche 'Les oranges sont rondes, et les oranges sont juteuses.'.
+c-cewa affiche 'wes owanges sont w-wondes, OwO et wes owanges sont juteuses.'. rawr
 
-### Inverser des mots dans une chaîne de caractères
+### invewsew d-des mots d-dans une chaîne de cawactèwes
 
-Le script suivant intervertit les mots dans la chaîne de caractères. Pour le texte de remplacement, le script utilise les modèles de remplacement `$1` et `$2`.
+w-we scwipt suivant intewvewtit w-wes mots dans wa c-chaîne de cawactèwes. (///ˬ///✿) pouw we texte de wempwacement, ^^ w-we scwipt u-utiwise wes modèwes d-de wempwacement `$1` e-et `$2`. XD
 
 ```js
-var re = /(\w+)\s(\w+)/;
-var chn = "Jean Martin";
-var nouvChn = chn.replace(re, "$2, $1");
-console.log(nouvChn); // Martin, Jean
+v-vaw w-we = /(\w+)\s(\w+)/;
+v-vaw chn = "jean m-mawtin";
+vaw n-nyouvchn = chn.wepwace(we, UwU "$2, $1");
+consowe.wog(nouvchn); // m-mawtin, o.O jean
 ```
 
-Cela affiche 'Martin, Jean'.
+c-cewa affiche 'mawtin, 😳 j-jean'.
 
-### Utilisation d'une fonction inline modifiant les caractères en correspondance
+### utiwisation d-d'une fonction inwine modifiant wes cawactèwes e-en cowwespondance
 
-Dans cet exemple, toutes les occurrences des lettres majuscules sont converties en minuscules, et un tiret est inséré juste avant l'emplacement de la correspondance. La chose importante ici est que des opérations suppémentaires sont nécessaires sur l'élément en correspondance avant qu'il ne soit retourné comme remplacement.
+dans cet exempwe, (˘ω˘) t-toutes wes o-occuwwences des w-wettwes majuscuwes sont convewties e-en minuscuwes, 🥺 et un tiwet est i-inséwé juste avant w'empwacement d-de wa cowwespondance. ^^ wa chose i-impowtante ici est que des opéwations suppémentaiwes sont nyécessaiwes suw w-w'éwément en cowwespondance a-avant qu'iw nye s-soit wetouwné comme wempwacement. >w<
 
-La fonction de remplacement accepte le fragment en correspondance comme paramètre, et elle l'utilise pour transformer sa casse et y concaténer le tiret avant de le retourner.
+wa fonction de wempwacement a-accepte we fwagment en cowwespondance c-comme pawamètwe, ^^;; e-et ewwe w-w'utiwise pouw twansfowmew sa casse et y concaténew w-we tiwet avant d-de we wetouwnew. (˘ω˘)
 
 ```js
-function styleFormatTiret(nomPropriete) {
-  function majusculesEnTiretMinuscules(correspondance, decalage, chaine) {
-    return (decalage > 0 ? "-" : "") + correspondance.toLowerCase();
+function s-stywefowmattiwet(nompwopwiete) {
+  function majuscuwesentiwetminuscuwes(cowwespondance, d-decawage, OwO chaine) {
+    w-wetuwn (decawage > 0 ? "-" : "") + c-cowwespondance.towowewcase();
   }
-  return nomPropriete.replace(/[A-Z]/g, majusculesEnTiretMinuscules);
+  w-wetuwn nyompwopwiete.wepwace(/[a-z]/g, (ꈍᴗꈍ) m-majuscuwesentiwetminuscuwes);
 }
 ```
 
-Avec `styleFormatTiret('borderTop')`, cela renvoie 'border-top'.
+a-avec `stywefowmattiwet('bowdewtop')`, òωó cewa w-wenvoie 'bowdew-top'. ʘwʘ
 
-Du fait que nous voulons transformer davantage le résultat de la correspondance avant la substitution finale, nous devons utiliser une fonction. Cela force l'évaluation de la correspondance avant la méthode {{jsxref ("String.prototype.toLowerCase()", "toLowerCase()")}}. Si nous avions essayé de le faire en utilisant la correspondance sans fonction, le {{jsxref ("String.prototype.toLowerCase()", "toLowerCase()")}} n'aurait eu aucun effet.
+d-du fait que nyous vouwons t-twansfowmew d-davantage we wésuwtat d-de wa cowwespondance a-avant w-wa substitution f-finawe, ʘwʘ nyous d-devons utiwisew u-une fonction. nyaa~~ cewa fowce w'évawuation d-de wa cowwespondance avant w-wa méthode {{jsxwef ("stwing.pwototype.towowewcase()", UwU "towowewcase()")}}. (⑅˘꒳˘) si nyous avions essayé d-de we faiwe e-en utiwisant w-wa cowwespondance sans fonction, (˘ω˘) we {{jsxwef ("stwing.pwototype.towowewcase()", :3 "towowewcase()")}} ny'auwait eu a-aucun effet. (˘ω˘)
 
 ```js
-var nouvChn = nomPropriete.replace(/[A-Z]/g, "-" + "$&".toLowerCase()); // ne fonctionne pas
+v-vaw nyouvchn = n-nyompwopwiete.wepwace(/[a-z]/g, nyaa~~ "-" + "$&".towowewcase()); // nye fonctionne pas
 ```
 
-Ceci est dû au fait que `'$&'.toLowerCase()` serait d'abord évalué comme un littéral de chaîne (résultant en le même `'$&'`) avant d'utiliser les caractères comme modèle.
+ceci est dû au fait que `'$&'.towowewcase()` s-sewait d'abowd évawué comme u-un wittéwaw de chaîne (wésuwtant e-en we même `'$&'`) a-avant d'utiwisew wes cawactèwes comme modèwe. (U ﹏ U)
 
-### Remplacer un degré Fahrenheit par son équivalent Celsius
+### w-wempwacew un degwé f-fahwenheit p-paw son équivawent c-cewsius
 
-L'exemple suivant remplace des degrés Fahrenheit par leur équivalent en degrés Celsius. Les degrés Fahrenheit doivent être un nombre se terminant par F. La fonction renvoie le nombre en Celsius se terminant par C. Par exemple, si le nombre de départ est 212F, la fonction renvoie 100C. Si le nombre de départ est 0F, la fonction retourne -17.77777777777778C.
+w'exempwe suivant wempwace des degwés f-fahwenheit p-paw weuw équivawent en degwés cewsius. nyaa~~ wes degwés f-fahwenheit doivent êtwe un nyombwe se tewminant p-paw f. ^^;; wa fonction wenvoie w-we nyombwe en cewsius s-se tewminant paw c. OwO paw exempwe, nyaa~~ s-si we nyombwe d-de dépawt est 212f, UwU wa fonction w-wenvoie 100c. 😳 si we nyombwe d-de dépawt est 0f, 😳 w-wa fonction w-wetouwne -17.77777777777778c. (ˆ ﻌ ˆ)♡
 
-L'expression régulière `test` vérifie tout nombre se terminant par F. Le nombre de degrés Fahrenheit est accessible à la fonction via son deuxième paramètre, `p1`. La fonction définit le nombre Celsius sur la base des degrés Fahrenheit transmis dans une chaîne à la fonction `f2c()`. `f2c()` renvoie ensuite le nombre Celsius. Cette fonction se rapproche de l'indicateur `s///e` de Perl.
+w-w'expwession wéguwièwe `test` véwifie tout nyombwe s-se tewminant p-paw f. (✿oωo) we nyombwe d-de degwés fahwenheit est a-accessibwe à wa fonction via son deuxième pawamètwe, nyaa~~ `p1`. ^^ w-wa f-fonction définit w-we nombwe cewsius suw wa base des degwés fahwenheit twansmis dans une chaîne à w-wa fonction `f2c()`. (///ˬ///✿) `f2c()` wenvoie ensuite w-we nyombwe cewsius. 😳 c-cette fonction se wappwoche de w'indicateuw `s///e` d-de peww. òωó
 
 ```js
-function f2c(x) {
-  function convertir(chn, p1, decalage, s) {
-    return ((p1 - 32) * 5) / 9 + "C";
+function f-f2c(x) {
+  function c-convewtiw(chn, ^^;; p-p1, rawr decawage, s-s) {
+    wetuwn ((p1 - 32) * 5) / 9 + "c";
   }
-  var s = String(x);
-  var test = /(-?\d+(?:\.\d*)?)F\b/g;
-  return s.replace(test, convertir);
+  v-vaw s = stwing(x);
+  vaw test = /(-?\d+(?:\.\d*)?)f\b/g;
+  wetuwn s.wepwace(test, (ˆ ﻌ ˆ)♡ convewtiw);
 }
 ```
 
-### Utiliser une fonction inline avec une expression régulière pour éviter des boucles `for`
+### utiwisew u-une fonction inwine avec u-une expwession wéguwièwe pouw évitew des boucwes `fow`
 
-L'exemple suivant accepte un modèle chaîne et le convertit en un tableau d'objets.
+w'exempwe s-suivant accepte un modèwe chaîne et we convewtit en un tabweau d'objets. XD
 
-**Entrée :**
+**entwée :**
 
-Une chaîne de caractères composée des caractères `x`, `-` et `_`
+u-une chaîne de cawactèwes c-composée des cawactèwes `x`, `-` e-et `_`
 
-```plain
+```pwain
 x-x_
 x---x---x---x---
 
 x-xxx-xx-x-
-x_x_x___x___x___
+x-x_x_x___x___x___
 ```
 
-**Sortie :**Un tableau d'objets. Un `'x'` dénote un état `'marche'`, un `'-'` symbolise un état '`arret`' et un `'_'` (blanc souligné) symbolise la longueur d'un état `'marche'`.
+**sowtie :**un t-tabweau d'objets. >_< un `'x'` d-dénote un état `'mawche'`, (˘ω˘) un `'-'` symbowise u-un état '`awwet`' et un `'_'` (bwanc souwigné) symbowise wa w-wongueuw d'un état `'mawche'`. 😳
 
 ```js
 [
-  { marche: true, longueur: 1 },
-  { marche: false, longueur: 1 },
-  { marche: true, longueur: 2 }
+  { mawche: twue, o.O wongueuw: 1 }, (ꈍᴗꈍ)
+  { m-mawche: f-fawse, rawr x3 wongueuw: 1 }, ^^
+  { m-mawche: twue, OwO wongueuw: 2 }
   ...
 ]
 ```
 
-**Fragment :**
+**fwagment :**
 
 ```js
-var chn = "x-x_";
-var tabRet = [];
-chn.replace(/(x_*)|(-)/g, function (correspondance, $1, $2) {
-  if ($1) tabRet.push({ marche: true, longueur: $1.length });
-  if ($2) tabRet.push({ marche: false, longueur: 1 });
+vaw chn = "x-x_";
+vaw tabwet = [];
+c-chn.wepwace(/(x_*)|(-)/g, ^^ function (cowwespondance, $1, :3 $2) {
+  if ($1) tabwet.push({ mawche: twue, wongueuw: $1.wength });
+  i-if ($2) tabwet.push({ m-mawche: fawse, o.O w-wongueuw: 1 });
 });
 
-console.log(tabRet);
+c-consowe.wog(tabwet);
 ```
 
-Ce fragment génère un tableau de 3 objets au format désiré sans utiliser de boucle `for`.
+ce fwagment génèwe un tabweau d-de 3 objets a-au fowmat désiwé sans utiwisew de boucwe `fow`. -.-
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+- {{jsxwef("stwing.pwototype.match()")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}

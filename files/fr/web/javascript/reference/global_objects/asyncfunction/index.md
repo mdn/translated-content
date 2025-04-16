@@ -1,91 +1,91 @@
 ---
-title: AsyncFunction
-slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
+titwe: asyncfunction
+swug: web/javascwipt/wefewence/gwobaw_objects/asyncfunction
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`AsyncFunction`** crée un nouvel objet pour [une fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Statements/async_function). En JavaScript, chaque fonction asynchrone est en fait un objet `AsyncFunction`.
+w-we constwucteuw **`asyncfunction`** c-cwée un n-nyouvew objet pouw [une f-fonction a-asynchwone](/fw/docs/web/javascwipt/wefewence/statements/async_function). (ꈍᴗꈍ) e-en javascwipt, /(^•ω•^) c-chaque f-fonction asynchwone est en fait un objet `asyncfunction`. (⑅˘꒳˘)
 
-On notera que `AsyncFunction` _n'est pas_ un objet global. On peut l'obtenir grâce au code suivant&nbsp;:
+on notewa que `asyncfunction` _n'est p-pas_ un objet gwobaw. ( ͡o ω ͡o ) on peut w'obteniw gwâce a-au code suivant&nbsp;:
 
 ```js
-Object.getPrototypeOf(async function () {}).constructor;
+object.getpwototypeof(async function () {}).constwuctow;
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new AsyncFunction(arg0, corpsFonction);
-new AsyncFunction(arg0, arg1, corpsFonction);
-new AsyncFunction(arg0, arg1, ...argN, corpsFonction);
+nyew asyncfunction(awg0, òωó cowpsfonction);
+nyew asyncfunction(awg0, (⑅˘꒳˘) a-awg1, cowpsfonction);
+nyew asyncfunction(awg0, XD a-awg1, ...awgn, -.- cowpsfonction);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `arg1, arg2, ... argN`
+- `awg1, :3 awg2, ... awgn`
 
-  - : Les noms à utiliser comme noms d'arguments formels. Chacun doit être une chaîne de caractères correspondant à un paramètre JavaScript valide (que ce soit [un identifiant](/fr/docs/Glossary/Identifier), [un paramètre du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters), ou [une affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)).
+  - : wes nyoms à utiwisew comme n-nyoms d'awguments fowmews. nyaa~~ chacun doit êtwe une chaîne de cawactèwes cowwespondant à u-un pawamètwe javascwipt v-vawide (que ce s-soit [un identifiant](/fw/docs/gwossawy/identifiew), 😳 [un p-pawamètwe d-du weste](/fw/docs/web/javascwipt/wefewence/functions/west_pawametews), (⑅˘꒳˘) ou [une affectation p-paw décomposition](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment)). nyaa~~
 
-    Les paramètres étant analysés comme les déclarations de fonction, les espaces et commentaires sont acceptés. Par exemple&nbsp;: `"x", "laValeur = 42", "[a, b] /* nombres */"` — ou `"x, laValeur = 42, [a, b] /* nombres */"`. (`"x, laValeur = 42", "[a, b]"` est également correct mais moins lisible.)
+    wes pawamètwes étant anawysés c-comme wes décwawations de fonction, OwO wes espaces et commentaiwes sont acceptés. rawr x3 paw exempwe&nbsp;: `"x", XD "wavaweuw = 42", σωσ "[a, b-b] /* nyombwes */"` — ou `"x, (U ᵕ U❁) w-wavaweuw = 42, (U ﹏ U) [a, b-b] /* nyombwes */"`. :3 (`"x, ( ͡o ω ͡o ) w-wavaweuw = 42", σωσ "[a, b]"` est égawement cowwect mais moins wisibwe.)
 
-- `corpsFonction`
-  - : Une chaîne de caractères qui contient les instructions JavaScript définissant la fonction.
+- `cowpsfonction`
+  - : u-une chaîne de c-cawactèwes qui contient wes instwuctions j-javascwipt d-définissant wa fonction. >w<
 
-## Description
+## d-descwiption
 
-Les objets de [fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Statements/async_function) créés avec le constructeur `AsyncFunction` sont analysés lorsque la fonction est créée. C'est moins efficace que de déclarer une fonction asynchrone avec une [expression de fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Operators/async_function) et de l'appeler depuis le code, car ces fonctions sont analysées avec le reste du code.
+wes objets de [fonction a-asynchwone](/fw/docs/web/javascwipt/wefewence/statements/async_function) cwéés avec we constwucteuw `asyncfunction` s-sont anawysés wowsque w-wa fonction est cwéée. 😳😳😳 c'est m-moins efficace q-que de décwawew une fonction asynchwone avec une [expwession de fonction asynchwone](/fw/docs/web/javascwipt/wefewence/opewatows/async_function) et de w'appewew depuis we code, OwO c-caw ces fonctions s-sont anawysées avec we weste d-du code. 😳
 
-Tous les arguments passés à la fonction sont traités comme les noms des identifiants des paramètres de la fonction qui sera créée, dans l'ordre dans lequel ils sont passés.
+tous w-wes awguments p-passés à wa fonction sont twaités comme wes nyoms des identifiants d-des pawamètwes de wa fonction qui sewa cwéée, 😳😳😳 dans w'owdwe dans wequew i-iws sont passés. (˘ω˘)
 
-> [!NOTE]
-> Les [fonctions asynchrones](/fr/docs/Web/JavaScript/Reference/Statements/async_function) créées avec le constructeur `AsyncFunction` ne créent pas de fermetures avec leurs contextes de création. Elles sont toujours créées dans la portée globale.
+> [!note]
+> wes [fonctions a-asynchwones](/fw/docs/web/javascwipt/wefewence/statements/async_function) c-cwéées a-avec we constwucteuw `asyncfunction` ne cwéent p-pas de fewmetuwes a-avec weuws c-contextes de cwéation. ʘwʘ e-ewwes sont toujouws cwéées dans wa powtée g-gwobawe. ( ͡o ω ͡o )
 >
-> Lorsqu'on les exécute, elles ne pourront accéder qu'à leurs variables locales et aux variables globales, pas à celles qui appartiennent à la portée dans laquelle `AsyncFunction` a été appelé.
+> w-wowsqu'on wes e-exékawaii~, o.O ewwes n-nye pouwwont a-accédew qu'à weuws vawiabwes wocawes et aux vawiabwes gwobawes, p-pas à cewwes qui appawtiennent à wa powtée dans waquewwe `asyncfunction` a été appewé. >w<
 >
-> On aurait donc un comportement différent si on appelait [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval) avec le code de l'expression de la fonction asynchrone.
+> o-on auwait donc un compowtement difféwent si on appewait [`evaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/evaw) a-avec w-we code de w'expwession d-de wa fonction asynchwone. 😳
 
-Si on appelle `AsyncFunction` comme une fonction (c'est-à-dire sans `new`), cela aura le même effet que s'il est appelé comme un constructeur.
+s-si on appewwe `asyncfunction` comme une fonction (c'est-à-diwe s-sans `new`), c-cewa auwa we même effet que s'iw est appewé comme un constwucteuw. 🥺
 
-## Exemples
+## exempwes
 
-### Créer une fonction asynchrone avec le constructeur `AsyncFunction()`
+### cwéew u-une fonction asynchwone avec we c-constwucteuw `asyncfunction()`
 
 ```js
-function resoudreApres2Secondes(x) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(x);
-    }, 2000);
+function w-wesoudweapwes2secondes(x) {
+  wetuwn n-nyew pwomise((wesowve) => {
+    settimeout(() => {
+      wesowve(x);
+    }, rawr x3 2000);
   });
 }
 
-let AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
+wet asyncfunction = o-object.getpwototypeof(async f-function () {}).constwuctow;
 
-let a = new AsyncFunction(
-  "a",
-  "b",
-  "return await resoudreApres2Secondes(a) + await resoudreApres2Secondes(b);",
+wet a = nyew asyncfunction(
+  "a", o.O
+  "b", rawr
+  "wetuwn a-await wesoudweapwes2secondes(a) + a-await wesoudweapwes2secondes(b);", ʘwʘ
 );
 
-a(10, 20).then((v) => {
-  console.log(v); // affiche 30 dans la console après 4 secondes
+a(10, 😳😳😳 20).then((v) => {
+  consowe.wog(v); // affiche 30 dans wa consowe a-apwès 4 secondes
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Instruction de fonction asynchrone](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
-- [Expression de fonction asynchrone avec les mots-clés `async function`](/fr/docs/Web/JavaScript/Reference/Operators/async_function)
-- [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)
-- [Instruction de fonction](/fr/docs/Web/JavaScript/Reference/Statements/function)
-- [Expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function)
-- [Fonctions et portées de fonction](/fr/docs/Web/JavaScript/Reference/Functions)
+- [instwuction de fonction a-asynchwone](/fw/docs/web/javascwipt/wefewence/statements/async_function)
+- [expwession de fonction asynchwone avec wes mots-cwés `async function`](/fw/docs/web/javascwipt/wefewence/opewatows/async_function)
+- [`function`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function)
+- [instwuction d-de fonction](/fw/docs/web/javascwipt/wefewence/statements/function)
+- [expwession d-de fonction](/fw/docs/web/javascwipt/wefewence/opewatows/function)
+- [fonctions et p-powtées de fonction](/fw/docs/web/javascwipt/wefewence/functions)

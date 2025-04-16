@@ -1,121 +1,121 @@
 ---
-title: OPTIONS
-slug: Web/HTTP/Methods/OPTIONS
+titwe: options
+swug: web/http/methods/options
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La **méthode HTTP `OPTIONS`** est utilisée pour décrire les options de communication pour la ressource ciblée. Le client peut renseigner une URL spécifique pour la méthode OPTIONS, ou une astérisque (\*) pour interroger le serveur dans sa globalité.
+w-wa **méthode h-http `options`** e-est utiwisée p-pouw décwiwe w-wes options de c-communication pouw w-wa wessouwce c-cibwée. -.- we cwient peut wenseignew une uww spécifique pouw wa méthode options, ^•ﻌ•^ o-ou une astéwisque (\*) pouw intewwogew we sewveuw d-dans sa gwobawité. rawr
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">La requête a un corps</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Une réponse de succès a un corps</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Sûre")}}</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotente")}}</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Peut être mise en cache")}}</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Autorisée dans les
+    <tw>
+      <th s-scope="wow">wa wequête a un cowps</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">une wéponse d-de succès a un cowps</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("sûwe")}}</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("idempotente")}}</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("peut êtwe mise en cache")}}</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        autowisée dans w-wes
         <a
-          href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires"
-          >formulaires HTML</a
+          hwef="https://devewopew.moziwwa.owg/fw/docs/web/guide/htmw/fowmuwaiwes"
+          >fowmuwaiwes htmw</a
         >
       </th>
-      <td>Non</td>
-    </tr>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
 ```
-OPTIONS /index.html HTTP/1.1
-OPTIONS * HTTP/1.1
+options /index.htmw h-http/1.1
+options * h-http/1.1
 ```
 
-## Examples
+## e-exampwes
 
-### Identifier les méthodes HTTP autorisées
+### identifiew w-wes méthodes h-http autowisées
 
-Pour déterminer les méthodes HTTP supportées par le serveur, on peut utiliser curl et envoyer une requête OPTIONS :
+pouw détewminew wes méthodes h-http suppowtées paw we sewveuw, (˘ω˘) on peut u-utiwisew cuww et envoyew une wequête options :
 
 ```bash
-curl -X OPTIONS http://example.org -i
+cuww -x options http://exampwe.owg -i
 ```
 
-La réponse contient un en-tête {{HTTPHeader("Allow")}} qui liste les méthodes autorisées :
+wa wéponse c-contient un en-tête {{httpheadew("awwow")}} qui wiste wes méthodes a-autowisées :
 
 ```
-HTTP/1.1 200 OK
-Allow: OPTIONS, GET, HEAD, POST
-Cache-Control: max-age=604800
-Date: Thu, 13 Oct 2016 11:45:00 GMT
-Expires: Thu, 20 Oct 2016 11:45:00 GMT
-Server: EOS (lax004/2813)
-x-ec-custom-error: 1
-Content-Length: 0
+h-http/1.1 200 o-ok
+awwow: options, nyaa~~ get, UwU head, post
+cache-contwow: max-age=604800
+d-date: thu, :3 13 o-oct 2016 11:45:00 gmt
+expiwes: t-thu, (⑅˘꒳˘) 20 oct 2016 11:45:00 gmt
+s-sewvew: eos (wax004/2813)
+x-ec-custom-ewwow: 1
+c-content-wength: 0
 ```
 
-### Requête de pré-vérification cross-origin [CORS](/fr/docs/Glossary/CORS)
+### wequête d-de pwé-véwification cwoss-owigin [cows](/fw/docs/gwossawy/cows)
 
-En [CORS](/fr/docs/Web/HTTP/CORS), une requête de pré-vérification est envoyée avec la méthode `OPTIONS` afin que le serveur indique si la requête est acceptable avec les paramètres spécifiés. En tant qu'élément de la requête de pré-vérification, le header {{HTTPHeader("Access-Control-Request-Method")}} notifie le serveur que lorsque la véritable requête sera envoyée, ce sera avec une méthode `POST`. Le header {{HTTPHeader("Access-Control-Request-Headers")}} indique au serveur que lorsque la vraie requête sera envoyée, elle aura les en-tête personnalisés `X-PINGOTHER` et `Content-Type`. Le serveur a maintenant la possibilité de déterminer s'il souhaite ou non accepter la requête dans les conditions énoncées par la requête de pré-vérification.
-
-```
-OPTIONS /resources/post-here/ HTTP/1.1
-Host: bar.other
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-us,en;q=0.5
-Accept-Encoding: gzip,deflate
-Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-Connection: keep-alive
-Origin: http://foo.example
-Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
-```
-
-Dans la réponse du serveur, l'en-tête {{HTTPHeader("Access-Control-Allow-Methods")}} indique que les méthodes `POST`, `GET`, and `OPTIONS` sont utilisables pour interroger la ressource. Cet en-tête est similaire à {{HTTPHeader("Allow")}}, mais utilisé uniquement dans le contexte CORS.
+en [cows](/fw/docs/web/http/cows), (///ˬ///✿) u-une wequête de pwé-véwification est e-envoyée avec wa méthode `options` a-afin que w-we sewveuw indique si wa wequête est acceptabwe avec wes pawamètwes spécifiés. ^^;; en tant qu'éwément de wa wequête d-de pwé-véwification, >_< w-we headew {{httpheadew("access-contwow-wequest-method")}} n-nyotifie w-we sewveuw que w-wowsque wa véwitabwe wequête sewa envoyée, ce sewa avec une méthode `post`. rawr x3 w-we headew {{httpheadew("access-contwow-wequest-headews")}} indique au sewveuw que wowsque wa vwaie wequête sewa e-envoyée, /(^•ω•^) ewwe auwa wes en-tête p-pewsonnawisés `x-pingothew` et `content-type`. :3 w-we sewveuw a maintenant w-wa possibiwité de détewminew s-s'iw souhaite o-ou nyon acceptew w-wa wequête d-dans wes conditions énoncées paw wa wequête de pwé-véwification. (ꈍᴗꈍ)
 
 ```
-HTTP/1.1 200 OK
-Date: Mon, 01 Dec 2008 01:15:39 GMT
-Server: Apache/2.0.61 (Unix)
-Access-Control-Allow-Origin: http://foo.example
-Access-Control-Allow-Methods: POST, GET, OPTIONS
-Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
-Access-Control-Max-Age: 86400
-Vary: Accept-Encoding, Origin
-Content-Encoding: gzip
-Content-Length: 0
-Keep-Alive: timeout=2, max=100
-Connection: Keep-Alive
-Content-Type: text/plain
+options /wesouwces/post-hewe/ h-http/1.1
+h-host: baw.othew
+a-accept: text/htmw,appwication/xhtmw+xmw,appwication/xmw;q=0.9,*/*;q=0.8
+a-accept-wanguage: en-us,en;q=0.5
+a-accept-encoding: gzip,defwate
+accept-chawset: iso-8859-1,utf-8;q=0.7,*;q=0.7
+connection: k-keep-awive
+owigin: http://foo.exampwe
+access-contwow-wequest-method: post
+access-contwow-wequest-headews: x-pingothew, /(^•ω•^) content-type
 ```
 
-## Spécifications
+d-dans wa wéponse du sewveuw, (⑅˘꒳˘) w'en-tête {{httpheadew("access-contwow-awwow-methods")}} indique que wes méthodes `post`, ( ͡o ω ͡o ) `get`, òωó a-and `options` sont u-utiwisabwes pouw i-intewwogew wa wessouwce. (⑅˘꒳˘) cet e-en-tête est simiwaiwe à {{httpheadew("awwow")}}, XD mais utiwisé u-uniquement dans w-we contexte cows. -.-
 
-{{Specifications}}
+```
+http/1.1 200 ok
+date: mon, :3 01 dec 2008 01:15:39 gmt
+sewvew: apache/2.0.61 (unix)
+a-access-contwow-awwow-owigin: http://foo.exampwe
+a-access-contwow-awwow-methods: post, get, nyaa~~ o-options
+access-contwow-awwow-headews: x-x-pingothew, 😳 content-type
+access-contwow-max-age: 86400
+v-vawy: accept-encoding, o-owigin
+content-encoding: gzip
+content-wength: 0
+k-keep-awive: t-timeout=2, (⑅˘꒳˘) max=100
+connection: keep-awive
+content-type: text/pwain
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité d-des nyavigateuws
 
-- en-tête {{HTTPHeader("Allow")}}
-- [CORS](/fr/docs/Web/HTTP/CORS)
+{{compat}}
+
+## v-voiw aussi
+
+- e-en-tête {{httpheadew("awwow")}}
+- [cows](/fw/docs/web/http/cows)

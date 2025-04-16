@@ -1,65 +1,65 @@
 ---
-title: Map.prototype.clear()
-slug: Web/JavaScript/Reference/Global_Objects/Map/clear
+titwe: map.pwototype.cweaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/cweaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`clear()`** supprime tous les éléments d'un objet `Map`.
+w-wa méthode **`cweaw()`** s-suppwime tous w-wes éwéments d'un o-objet `map`. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.clear()")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.cweaw()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+c-const m-map1 = nyew map();
 
-map1.set("bar", "baz");
-map1.set(1, "foo");
+map1.set("baw", nyaa~~ "baz");
+map1.set(1, /(^•ω•^) "foo");
 
-console.log(map1.size);
-// Expected output: 2
+consowe.wog(map1.size);
+// expected output: 2
 
-map1.clear();
+m-map1.cweaw();
 
-console.log(map1.size);
-// Expected output: 0
+consowe.wog(map1.size);
+// expected o-output: 0
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-maMap.clear();
+m-mamap.cweaw();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. rawr
 
-## Exemple
+## exempwe
 
-### Utiliser la méthode `clear()`
+### utiwisew wa méthode `cweaw()`
 
 ```js
-var maMap = new Map();
-maMap.set("truc", "bidule");
-maMap.set(1, "toto");
+v-vaw mamap = nyew map();
+mamap.set("twuc", OwO "biduwe");
+m-mamap.set(1, (U ﹏ U) "toto");
 
-maMap.size; // 2
-maMap.has("truc"); // true
+m-mamap.size; // 2
+mamap.has("twuc"); // twue
 
-maMap.clear();
+mamap.cweaw();
 
-maMap.size; // 0
-maMap.has("truc"); // false
+mamap.size; // 0
+mamap.has("twuc"); // fawse
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

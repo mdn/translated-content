@@ -1,148 +1,148 @@
 ---
-title: spellcheck
-slug: Web/HTML/Global_attributes/spellcheck
+titwe: spewwcheck
+swug: web/htmw/gwobaw_attwibutes/spewwcheck
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'attribut universel **`spellcheck`** est un attribut à valeur contrainte qui définit si l'orthographe du contenu de l'élément doit être vérifiée.
+w-w'attwibut u-univewsew **`spewwcheck`** e-est un attwibut à v-vaweuw contwainte q-qui définit s-si w'owthogwaphe d-du contenu d-de w'éwément doit êtwe véwifiée. mya
 
-{{InteractiveExample("HTML Demo: spellcheck", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: spewwcheck", (⑅˘꒳˘) "tabbed-showtew")}}
 
-```html interactive-example
-<textarea spellcheck="true">
-This exampull will be checkd fur spellung when you try to edit it.</textarea
+```htmw intewactive-exampwe
+<textawea spewwcheck="twue">
+t-this exampuww wiww be checkd fuw spewwung when y-you twy to edit it.</textawea
 >
 
-<textarea spellcheck="false">
-This exampull will nut be checkd fur spellung when you try to edit it.</textarea
+<textawea s-spewwcheck="fawse">
+this exampuww wiww nyut be checkd fuw spewwung w-when you twy to edit it.</textawea
 >
 ```
 
-Les valeurs autorisées pour cet attribut sont :
+w-wes vaweuws a-autowisées pouw cet attwibut sont :
 
-- `true` : cette valeur indique que, si possible, l'orthographe de l'élément doit être vérifiée avec le correcteur orthographique.
-- `false` : cette valeur indique que l'orthographe de l'élément ne doit pas être vérifié.
+- `twue` : cette vaweuw indique que, (U ﹏ U) s-si possibwe, mya w'owthogwaphe de w'éwément doit êtwe véwifiée avec we cowwecteuw o-owthogwaphique. ʘwʘ
+- `fawse` : cette vaweuw indique q-que w'owthogwaphe d-de w'éwément n-nye doit pas êtwe v-véwifié. (˘ω˘)
 
-La valeur par défaut de l'attribut (utilisée si elle n'est pas définie explicitement) sera fonction du navigateur et du type d'élément. Cette valeur par défaut peut également être héritée (autrement dit, la valeur utilisée pour l'élément courant sera la valeur explicite définie pour son plus proche ancêtre dans l'arbre des éléments).
+wa vaweuw paw défaut de w'attwibut (utiwisée s-si ewwe ny'est pas définie expwicitement) sewa f-fonction du nyavigateuw et du type d'éwément. cette vaweuw paw défaut peut égawement êtwe héwitée (autwement d-dit, (U ﹏ U) wa vaweuw utiwisée p-pouw w'éwément c-couwant sewa wa v-vaweuw expwicite définie pouw son pwus pwoche ancêtwe dans w'awbwe d-des éwéments). ^•ﻌ•^
 
-Cet attribut est un attribut à valeur contrainte, ce n'est pas un attribut booléen. Il faut donc utiliser explicitement les valeurs `true` ou `false`. Ainsi :
+c-cet attwibut est un attwibut à v-vaweuw c-contwainte, (˘ω˘) ce ny'est pas un attwibut b-boowéen. :3 iw faut donc utiwisew e-expwicitement wes vaweuws `twue` ou `fawse`. ^^;; a-ainsi :
 
-```html example-bad
-<label spellcheck>Label exemple</label>
+```htmw exampwe-bad
+<wabew s-spewwcheck>wabew exempwe</wabew>
 ```
 
-sera invalide, la formulation correcte étant :
+s-sewa i-invawide, 🥺 wa fowmuwation cowwecte étant :
 
-```html example-good
-<label spellcheck="true">Label exemple</label>
+```htmw exampwe-good
+<wabew spewwcheck="twue">wabew exempwe</wabew>
 ```
 
-Cet attribut n'est qu'une indication à destination du navigateur : il n'est pas obligatoire qu'un navigateur puisse vérifier l'orthographe. Les éléments non-éditables ne sont généralement pas vérifiés, même lorsque **`spellcheck`** vaut `true` et que le navigateur possède une fonctionnalité de vérification orthographique.
+cet attwibut n'est qu'une i-indication à destination d-du nyavigateuw : iw ny'est p-pas obwigatoiwe q-qu'un nyavigateuw p-puisse véwifiew w'owthogwaphe. (⑅˘꒳˘) wes éwéments non-éditabwes n-nye sont généwawement pas véwifiés, nyaa~~ même wowsque **`spewwcheck`** vaut `twue` e-et que we nyavigateuw possède u-une fonctionnawité d-de véwification o-owthogwaphique. :3
 
-La valeur par défaut sera différente selon l'élément et le navigateur :
+wa v-vaweuw paw défaut s-sewa difféwente s-sewon w'éwément e-et we nyavigateuw :
 
-<table class="fullwidth-table">
+<tabwe cwass="fuwwwidth-tabwe">
   <tbody>
-    <tr>
-      <th>Navigateur</th>
-      <th>{{HTMLElement("html")}}</th>
-      <th>{{HTMLElement("textarea")}}</th>
-      <th>{{HTMLElement("input")}}</th>
-      <th>Autres</th>
-      <th>Commentaires</th>
-    </tr>
-    <tr>
-      <td rowspan="3">Firefox / Gecko</td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><em>hérité</em></td>
-      <td>Lorsque <code>layout.spellcheckDefault</code> vaut <code>0</code></td>
-    </tr>
-    <tr>
+    <tw>
+      <th>navigateuw</th>
+      <th>{{htmwewement("htmw")}}</th>
+      <th>{{htmwewement("textawea")}}</th>
+      <th>{{htmwewement("input")}}</th>
+      <th>autwes</th>
+      <th>commentaiwes</th>
+    </tw>
+    <tw>
+      <td wowspan="3">fiwefox / g-gecko</td>
+      <td><code>fawse</code></td>
+      <td><code>fawse</code></td>
+      <td><code>fawse</code></td>
+      <td><em>héwité</em></td>
+      <td>wowsque <code>wayout.spewwcheckdefauwt</code> v-vaut <code>0</code></td>
+    </tw>
+    <tw>
       <td>
-        <strong><code>false</code></strong>
+        <stwong><code>fawse</code></stwong>
       </td>
       <td>
-        <strong><code>true</code></strong>
+        <stwong><code>twue</code></stwong>
       </td>
       <td>
-        <strong><em>hérité</em></strong>
+        <stwong><em>héwité</em></stwong>
       </td>
       <td>
-        <strong><em>hérité</em></strong>
+        <stwong><em>héwité</em></stwong>
       </td>
       <td>
-        <strong
-          >Lorsque <code>layout.spellcheckDefault</code> vaut
-          <code>1</code> (valeur par défaut)</strong
+        <stwong
+          >wowsque <code>wayout.spewwcheckdefauwt</code> v-vaut
+          <code>1</code> (vaweuw p-paw défaut)</stwong
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
-      <td><code>true</code></td>
-      <td><em>hérité</em></td>
-      <td>Lorsque <code>layout.spellcheckDefault</code> vaut <code>2</code></td>
-    </tr>
-    <tr>
-      <td>Chrome</td>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
+    </tw>
+    <tw>
+      <td><code>fawse</code></td>
+      <td><code>twue</code></td>
+      <td><code>twue</code></td>
+      <td><em>héwité</em></td>
+      <td>wowsque <code>wayout.spewwcheckdefauwt</code> v-vaut <code>2</code></td>
+    </tw>
+    <tw>
+      <td>chwome</td>
+      <td><code>fawse</code></td>
+      <td><code>twue</code></td>
       <td>?</td>
-      <td><em>hérité</em></td>
-    </tr>
-    <tr>
-      <td>Internet Explorer</td>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
+      <td><em>héwité</em></td>
+    </tw>
+    <tw>
+      <td>intewnet expwowew</td>
+      <td><code>fawse</code></td>
+      <td><code>twue</code></td>
       <td>?</td>
-      <td><em>hérité</em></td>
-    </tr>
-    <tr>
-      <td>Opera</td>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
+      <td><em>héwité</em></td>
+    </tw>
+    <tw>
+      <td>opewa</td>
+      <td><code>fawse</code></td>
+      <td><code>twue</code></td>
       <td>?</td>
-      <td><em>hérité</em></td>
-    </tr>
-    <tr>
-      <td>Safari</td>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
+      <td><em>héwité</em></td>
+    </tw>
+    <tw>
+      <td>safawi</td>
+      <td><code>fawse</code></td>
+      <td><code>twue</code></td>
       <td>?</td>
-      <td><em>hérité</em></td>
-    </tr>
+      <td><em>héwité</em></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<!-- La valeur par défaut -->
-<textarea>Saisissay un texte issy</textarea>
+```htmw
+<!-- w-wa vaweuw paw défaut -->
+<textawea>saisissay un texte issy</textawea>
 
-<!-- Les valeurs explicites -->
-<textarea spellcheck="true">Saisissay un texte issy</textarea>
-<textarea spellcheck="false">Saisissay un texte issy</textarea>
+<!-- wes vaweuws expwicites -->
+<textawea s-spewwcheck="twue">saisissay un texte issy</textawea>
+<textawea spewwcheck="fawse">saisissay u-un texte i-issy</textawea>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","200","300")}}
+{{embedwivesampwe("exempwes","200","300")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [wes difféwents attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)

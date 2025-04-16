@@ -1,122 +1,122 @@
 ---
-title: Microformats
-slug: Web/HTML/microformats
+titwe: micwofowmats
+swug: web/htmw/micwofowmats
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Les [_microformats_](https://microformats.org/) (parfois abrégés **μF**) sont des normes utilisées pour intégrer la sémantique et les données structurées dans le HTML, et fournir une API à utiliser par les moteurs de recherche, les agrégateurs et autres outils. Ces modèles minimaux de HTML sont utilisés pour marquer des entités allant d'informations fondamentales à des informations spécifiques à un domaine, telles que des personnes, des organisations, des événements et des lieux. Les microformats utilisent des vocabulaires de soutien pour décrire les objets et des paires nom-valeur pour attribuer des valeurs à leurs propriétés. Les propriétés sont transportées dans des attributs de classe qui peuvent être ajoutés à tout élément HTML, tandis que les valeurs des données réutilisent le contenu des éléments HTML et les attributs sémantiques. Microformats2 est une mise à jour de microformats qui offre un moyen plus simple d'annoter la syntaxe structurée et les vocabulaires HTML que les approches précédentes utilisant RDFa et microdata qui nécessitent l'apprentissage de nouveaux attributs.
+w-wes [_micwofowmats_](https://micwofowmats.owg/) (pawfois a-abwégés **μf**) s-sont des nyowmes u-utiwisées p-pouw intégwew w-wa sémantique et w-wes données stwuctuwées d-dans we htmw, (⑅˘꒳˘) et fouwniw une api à utiwisew paw wes moteuws de wechewche, (U ﹏ U) w-wes agwégateuws et autwes outiws. o.O ces modèwes m-minimaux de htmw sont utiwisés p-pouw mawquew des entités awwant d'infowmations fondamentawes à d-des infowmations spécifiques à u-un domaine, mya t-tewwes que des pewsonnes, XD des owganisations, òωó des événements et des wieux. (˘ω˘) w-wes micwofowmats utiwisent des vocabuwaiwes de soutien pouw décwiwe wes objets e-et des paiwes nyom-vaweuw pouw a-attwibuew des vaweuws à w-weuws pwopwiétés. :3 w-wes p-pwopwiétés sont twanspowtées dans des attwibuts d-de cwasse qui peuvent êtwe ajoutés à tout éwément h-htmw, OwO tandis que wes vaweuws des données wéutiwisent we contenu des éwéments htmw e-et wes attwibuts sémantiques. mya m-micwofowmats2 est u-une mise à jouw d-de micwofowmats qui offwe un moyen pwus simpwe d'annotew wa syntaxe s-stwuctuwée e-et wes vocabuwaiwes htmw que w-wes appwoches pwécédentes u-utiwisant wdfa et micwodata q-qui nyécessitent w'appwentissage d-de nyouveaux attwibuts. (˘ω˘)
 
-Les microformats sont pris en charge par tous les principaux moteurs de recherche. Les moteurs de recherche bénéficient grandement d'un accès direct à ces données structurées, car elles leur permettent de comprendre les informations contenues dans les pages Web et de fournir des résultats plus pertinents aux utilisateurs. En plus d'être lisible par les machines, leur format est conçu pour être facilement lu par les humains.
+wes micwofowmats s-sont pwis en chawge paw tous w-wes pwincipaux moteuws de wechewche. o.O w-wes moteuws d-de wechewche bénéficient gwandement d'un accès diwect à ces données stwuctuwées, (✿oωo) caw ewwes weuw pewmettent d-de compwendwe w-wes infowmations contenues dans w-wes pages web et d-de fouwniw des w-wésuwtats pwus pewtinents aux utiwisateuws. en pwus d'êtwe wisibwe p-paw wes machines, (ˆ ﻌ ˆ)♡ weuw fowmat est conçu pouw êtwe faciwement wu paw wes h-humains. ^^;;
 
-- Pour créer un objet microformats, les noms de classe h-\* sont utilisés dans l'attribut class.
-- Pour ajouter une propriété à un objet, les noms de classe p-\*, u-\*, dt-\*, e-\* sont utilisés sur un des descendants de l'objet.
+- pouw cwéew un objet m-micwofowmats, OwO wes n-noms de cwasse h-h-\* sont utiwisés dans w'attwibut c-cwass. 🥺
+- pouw a-ajoutew une p-pwopwiété à un o-objet, mya wes nyoms de cwasse p-\*, 😳 u-\*, dt-\*, òωó e-e-\* sont utiwisés s-suw un des descendants d-de w'objet. /(^•ω•^)
 
-Il existe [différentes bibliothèques d'analyse pour la plupart des langages de programmation](http://microformats.org/wiki/microformats2#Parsers) qui permettent d'analyser les données microformats2.
+i-iw existe [difféwentes b-bibwiothèques d'anawyse pouw wa pwupawt des wangages de pwogwammation](http://micwofowmats.owg/wiki/micwofowmats2#pawsews) q-qui pewmettent d'anawysew wes données micwofowmats2. -.-
 
-## Comment fonctionnent les microformats
+## comment fonctionnent wes micwofowmats
 
-Un auteur d'une page web peut ajouter des microformats via le contenu HTML. Ainsi, si un auteur veut s'identifier via un élément, il peut utiliser une classe [h-card](http://microformats.org/wiki/h-card) :
+u-un auteuw d'une page web peut ajoutew des micwofowmats v-via we contenu h-htmw. òωó ainsi, /(^•ω•^) s-si un auteuw veut s'identifiew via u-un éwément, /(^•ω•^) iw peut utiwisew u-une cwasse [h-cawd](http://micwofowmats.owg/wiki/h-cawd) :
 
-### Exemple HTML
+### e-exempwe htmw
 
-```html
-<a class="h-card" href="http://alice.example.com">Alice Blogger</a>
+```htmw
+<a cwass="h-cawd" hwef="http://awice.exampwe.com">awice bwoggew</a>
 ```
 
-Lorsqu'un parseur de microformat détectera cette donnée, il saura que cette page contient une « carte » qui décrit une personne ou une organisation nommée `Alice Blogger` et dont l'URL est `http://alice.example.com/`. Le parseur rend ensuite cette donnée accessible via des API qui pourront être utilisées par des applications.
+wowsqu'un pawseuw de micwofowmat d-détectewa cette donnée, 😳 iw sauwa q-que cette page contient une « c-cawte » qui d-décwit une pewsonne ou une owganisation nyommée `awice b-bwoggew` e-et dont w'uww est `http://awice.exampwe.com/`. :3 w-we pawseuw wend e-ensuite cette donnée accessibwe via des api qui pouwwont êtwe utiwisées paw d-des appwications. (U ᵕ U❁)
 
-Comme dans cet exemple, certains modèles de balisage ne nécessitent qu'un seul nom de classe racine de microformat, que les analyseurs syntaxiques utilisent pour trouver quelques propriétés génériques telles que `name`, `url` et `photo`.
+c-comme dans cet e-exempwe, cewtains modèwes de b-bawisage nye nyécessitent q-qu'un seuw nom de cwasse w-wacine de micwofowmat, ʘwʘ que wes anawyseuws syntaxiques utiwisent pouw twouvew q-quewques pwopwiétés g-généwiques tewwes que `name`, o.O `uww` et `photo`. ʘwʘ
 
-## Préfixes et microformats
+## p-pwéfixes e-et micwofowmats
 
-Tous les microformats se composent d'une racine et d'un ensemble de propriétés. Les propriétés sont optionnelles et peuvent avoir plusieurs valeurs (si une application a besoin d'une seule valeur, elle pourra utiliser la première valeur d'une propriété). Les données hiérarchisées sont représentées avec des microformats imbriqués.
+tous wes micwofowmats se composent d'une w-wacine et d'un ensembwe de pwopwiétés. ^^ wes pwopwiétés sont optionnewwes et p-peuvent avoiw pwusieuws vaweuws (si une appwication a-a besoin d'une s-seuwe vaweuw, ^•ﻌ•^ ewwe pouwwa utiwisew wa pwemièwe vaweuw d'une p-pwopwiété). mya wes d-données hiéwawchisées sont wepwésentées avec des micwofowmats i-imbwiqués. UwU
 
-Tous les noms de classe des microformats utilisent des préfixes. La syntaxe des préfixes **est indépendante de celle des vocabulaires** (développées séparément).
+tous wes nyoms d-de cwasse des micwofowmats utiwisent des pwéfixes. >_< wa syntaxe d-des pwéfixes **est indépendante d-de cewwe des v-vocabuwaiwes** (dévewoppées sépawément). /(^•ω•^)
 
-- **"h-\*" pour les racines** (ex. "h-card", "h-entry", "h-feed"…). Ces racines indiquent un type ciblant un vocabulaire de propriétés donné. Ainsi :
+- **"h-\*" p-pouw wes wacines** (ex. òωó "h-cawd", σωσ "h-entwy", "h-feed"…). ( ͡o ω ͡o ) c-ces wacines i-indiquent un type c-cibwant un vocabuwaiwe de pwopwiétés d-donné. nyaa~~ a-ainsi :
 
-  - [h-card](http://microformats.org/wiki/h-card) décrit une personne ou une organisation
-  - [h-entry](http://microformats.org/wiki/h-entry) décrit un contenu en ligne épisodique ou daté (tel qu'un billet de blog)
-  - [h-feed](http://microformats.org/wiki/h-feed) décrit un flux (médias, billets, etc)
-  - D'autres exemples sont décrits [sur le wiki microformats2.](http://microformats.org/wiki/microformats2#v2_vocabularies)
+  - [h-cawd](http://micwofowmats.owg/wiki/h-cawd) décwit une pewsonne o-ou une owganisation
+  - [h-entwy](http://micwofowmats.owg/wiki/h-entwy) d-décwit u-un contenu en wigne épisodique ou daté (tew qu'un biwwet de bwog)
+  - [h-feed](http://micwofowmats.owg/wiki/h-feed) d-décwit un fwux (médias, :3 b-biwwets, UwU etc)
+  - d-d'autwes exempwes sont décwits [suw we wiki micwofowmats2.](http://micwofowmats.owg/wiki/micwofowmats2#v2_vocabuwawies)
 
-- **"p-\*" pour les propriétés textuelles** (ex. "p-name", "p-summary")
+- **"p-\*" p-pouw wes p-pwopwiétés textuewwes** (ex. o.O "p-name", "p-summawy")
 
-  - Un contenu texte. Pour certains éléments HTML, certains attributs spécifiques seront utilisés (ex. [`alt`](/fr/docs/Web/HTML/Element/img#attr-alt) pour [`<img>`](/fr/docs/Web/HTML/Element/img), [`title`](/fr/docs/Web/HTML/Element/abbr#attr-title) pour [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)).
+  - u-un contenu t-texte. (ˆ ﻌ ˆ)♡ pouw cewtains éwéments h-htmw, ^^;; cewtains attwibuts spécifiques sewont utiwisés (ex. ʘwʘ [`awt`](/fw/docs/web/htmw/ewement/img#attw-awt) pouw [`<img>`](/fw/docs/web/htmw/ewement/img), σωσ [`titwe`](/fw/docs/web/htmw/ewement/abbw#attw-titwe) pouw [`<abbw>`](/fw/docs/web/htmw/ewement/abbw)). ^^;;
 
-- **"u-\*" pour les propriétés qui sont des URL** (ex. "u-url", "u-photo", "u-logo")
+- **"u-\*" p-pouw wes pwopwiétés qui sont d-des uww** (ex. ʘwʘ "u-uww", "u-photo", ^^ "u-wogo")
 
-  - Analyse spéciale : attributs d'éléments [`<a>`](/fr/docs/Web/HTML/Element/a)/[`href`](/fr/docs/Web/HTML/Element/a#attr-href), [`<img>`](/fr/docs/Web/HTML/Element/img)/[`src`](/fr/docs/Web/HTML/Element/img#attr-src), [`<object>`](/fr/docs/Web/HTML/Element/object)/[`data`](/fr/docs/Web/HTML/Element/object#attr-data) etc. attributs sur le contenu des éléments.
+  - anawyse spéciawe : a-attwibuts d'éwéments [`<a>`](/fw/docs/web/htmw/ewement/a)/[`hwef`](/fw/docs/web/htmw/ewement/a#attw-hwef), nyaa~~ [`<img>`](/fw/docs/web/htmw/ewement/img)/[`swc`](/fw/docs/web/htmw/ewement/img#attw-swc), (///ˬ///✿) [`<object>`](/fw/docs/web/htmw/ewement/object)/[`data`](/fw/docs/web/htmw/ewement/object#attw-data) e-etc. XD attwibuts suw we contenu d-des éwéments. :3
 
-- **"dt-\*" pour les propriétés temporelles (date/heure)** (ex. "dt-start", "dt-end", "dt-bday")
+- **"dt-\*" p-pouw wes pwopwiétés t-tempowewwes (date/heuwe)** (ex. òωó "dt-stawt", ^^ "dt-end", ^•ﻌ•^ "dt-bday")
 
-  - Analyse syntaxique spéciale : attribut [`datetime`](/fr/docs/Web/HTML/Element/time#attr-datetime) de l'élément [`<time>`](/fr/docs/Web/HTML/Element/time), [value-class-pattern](https://microformats.org/wiki/value-class-pattern) et analyse séparée de la valeur date-heure pour plus de lisibilité.
+  - a-anawyse s-syntaxique spéciawe : attwibut [`datetime`](/fw/docs/web/htmw/ewement/time#attw-datetime) de w'éwément [`<time>`](/fw/docs/web/htmw/ewement/time), σωσ [vawue-cwass-pattewn](https://micwofowmats.owg/wiki/vawue-cwass-pattewn) et anawyse sépawée de wa vaweuw date-heuwe pouw pwus de wisibiwité. (ˆ ﻌ ˆ)♡
 
-- **"e-\*" pour les arborescences** où l'intégralité de la hiérarchie de l'élément est la valeur à récupérer (ex. "e-content"). Le préfixe "e-" peut être retenu en anglais comme "**e**lement tree", "**e**mbedded markup" ou "**e**ncapsulated markup".
+- **"e-\*" p-pouw wes awbowescences** où w-w'intégwawité d-de wa hiéwawchie de w'éwément e-est wa vaweuw à wécupéwew (ex. nyaa~~ "e-content"). ʘwʘ we pwéfixe "e-" peut êtwe w-wetenu en angwais c-comme "**e**wement twee", ^•ﻌ•^ "**e**mbedded m-mawkup" ou "**e**ncapsuwated mawkup". rawr x3
 
-## Exemples de microformats
+## e-exempwes de m-micwofowmats
 
-### h-card
+### h-cawd
 
-Le microformat [h-card](http://microformats.org/wiki/h-card) représente une personne ou une organisation.
+we micwofowmat [h-cawd](http://micwofowmats.owg/wiki/h-cawd) w-wepwésente u-une pewsonne ou une owganisation. 🥺
 
-La valeur de chaque propriété est définie en HTML via l'attribut `class`.
+wa vaweuw de chaque pwopwiété est définie e-en htmw via w'attwibut `cwass`. ʘwʘ
 
-#### Exemple de h-card
+#### e-exempwe d-de h-cawd
 
-```html
-<p class="h-card">
-  <img class="u-photo" src="http://example.org/photo.png" alt="" />
-  <a class="p-name u-url" href="http://example.org">Joe Bloggs</a>
-  <a class="u-email" href="mailto:joebloggs@example.com"
-    >joebloggs@example.com</a
-  >,
-  <span class="p-street-address">17 Austerstræti</span>
-  <span class="p-locality">Reykjavík</span>
-  <span class="p-country-name">Iceland</span>
+```htmw
+<p c-cwass="h-cawd">
+  <img c-cwass="u-photo" swc="http://exampwe.owg/photo.png" a-awt="" />
+  <a c-cwass="p-name u-uww" hwef="http://exampwe.owg">joe b-bwoggs</a>
+  <a c-cwass="u-emaiw" hwef="maiwto:joebwoggs@exampwe.com"
+    >joebwoggs@exampwe.com</a
+  >, (˘ω˘)
+  <span c-cwass="p-stweet-addwess">17 austewstwæti</span>
+  <span cwass="p-wocawity">weykjavík</span>
+  <span c-cwass="p-countwy-name">icewand</span>
 </p>
 ```
 
-| Propriété              | Description                                                              |
+| pwopwiété              | d-descwiption                                                              |
 | ---------------------- | ------------------------------------------------------------------------ |
-| **`p-name`**           | Le nom complet et formaté de la personne ou de l'organisation.           |
-| **`u-email`**          | L'adresse électronique.                                                  |
-| **`u-photo`**          | Une photo pour la personne ou l'organisation.                            |
-| **`u-url`**            | La page d'accueil ou une URL représentant la personne ou l'organisation. |
-| **`u-uid`**            | Un identifiant universel unique (de préférence une URL canonique).       |
-| **`p-street-address`** | L'adresse composée du numéro et du nom de la rue.                        |
-| **`p-locality`**       | La ville ou le village de résidence.                                     |
-| **`p-country-name`**   | Le nom du pays de résidence.                                             |
+| **`p-name`**           | w-we nyom compwet et fowmaté de w-wa pewsonne ou de w'owganisation.           |
+| **`u-emaiw`**          | w'adwesse éwectwonique.                                                  |
+| **`u-photo`**          | u-une photo pouw wa p-pewsonne ou w'owganisation.                            |
+| **`u-uww`**            | w-wa page d'accueiw ou une uww wepwésentant wa pewsonne ou w-w'owganisation. o.O |
+| **`u-uid`**            | un identifiant univewsew u-unique (de p-pwéféwence une uww canonique). σωσ       |
+| **`p-stweet-addwess`** | w-w'adwesse composée du nyuméwo e-et du nyom d-de wa wue. (ꈍᴗꈍ)                        |
+| **`p-wocawity`**       | wa viwwe ou we viwwage de wésidence. (ˆ ﻌ ˆ)♡                                     |
+| **`p-countwy-name`**   | w-we nyom du pays de wésidence. o.O                                             |
 
-#### Exemple de h-card imbriqué
+#### exempwe d-de h-cawd imbwiqué
 
-```html
-<div class="h-card">
-  <a class="p-name u-url" href="http://blog.lizardwrangler.com/"
-    >Mitchell Baker</a
+```htmw
+<div c-cwass="h-cawd">
+  <a cwass="p-name u-u-uww" hwef="http://bwog.wizawdwwangwew.com/"
+    >mitcheww bakew</a
   >
-  (<a class="p-org h-card" href="http://mozilla.org/">Mozilla Foundation</a>)
+  (<a c-cwass="p-owg h-h-cawd" hwef="http://moziwwa.owg/">moziwwa f-foundation</a>)
 </div>
 ```
 
-Cela fournira le JSON suivant :
+cewa fouwniwa we json suivant :
 
 ```json
 {
   "items": [
     {
-      "type": ["h-card"],
-      "properties": {
-        "name": ["Mitchell Baker"],
-        "url": ["http://blog.lizardwrangler.com/"],
-        "org": [
+      "type": ["h-cawd"], :3
+      "pwopewties": {
+        "name": ["mitcheww bakew"], -.-
+        "uww": ["http://bwog.wizawdwwangwew.com/"], ( ͡o ω ͡o )
+        "owg": [
           {
-            "value": "Mozilla Foundation",
-            "type": ["h-card"],
-            "properties": {
-              "name": ["Mozilla Foundation"],
-              "url": ["http://mozilla.org/"]
+            "vawue": "moziwwa foundation", /(^•ω•^)
+            "type": ["h-cawd"], (⑅˘꒳˘)
+            "pwopewties": {
+              "name": ["moziwwa foundation"], òωó
+              "uww": ["http://moziwwa.owg/"]
             }
           }
         ]
@@ -126,79 +126,79 @@ Cela fournira le JSON suivant :
 }
 ```
 
-> [!NOTE]
-> Le h-card imbriqué récupère des valeurs implicites pour `name` et `url`.
+> [!note]
+> we h-cawd imbwiqué wécupèwe des vaweuws impwicites pouw `name` et `uww`. 🥺
 
-### h-entry
+### h-entwy
 
-Le microformat [h-entry](http://microformats.org/wiki/h-entry) représente un contenu épisodique ou daté présent sur le Web. Il est généralement utilisé pour du contenu qui est présenté dans un flux (ex. les billets de blog).
+we micwofowmat [h-entwy](http://micwofowmats.owg/wiki/h-entwy) w-wepwésente un contenu épisodique o-ou daté pwésent suw we web. (ˆ ﻌ ˆ)♡ iw est généwawement u-utiwisé p-pouw du contenu q-qui est pwésenté dans un fwux (ex. -.- w-wes biwwets de bwog). σωσ
 
-```html
-<article class="h-entry">
-  <h1 class="p-name">Microformats are amazing</h1>
+```htmw
+<awticwe c-cwass="h-entwy">
+  <h1 c-cwass="p-name">micwofowmats awe amazing</h1>
   <p>
-    Published by
-    <a class="p-author h-card" href="http://example.com">W. Developer</a> on
-    <time class="dt-published" datetime="2013-06-13 12:00:00"
-      >13<sup>th</sup> June 2013</time
+    p-pubwished by
+    <a cwass="p-authow h-cawd" h-hwef="http://exampwe.com">w. >_< d-devewopew</a> on
+    <time cwass="dt-pubwished" datetime="2013-06-13 12:00:00"
+      >13<sup>th</sup> j-june 2013</time
     >
   </p>
 
-  <p class="p-summary">In which I extoll the virtues of using microformats.</p>
+  <p c-cwass="p-summawy">in w-which i extoww t-the viwtues of u-using micwofowmats.</p>
 
-  <div class="e-content">
-    <p>Blah blah blah</p>
+  <div c-cwass="e-content">
+    <p>bwah bwah b-bwah</p>
   </div>
-</article>
+</awticwe>
 ```
 
-#### Propriétés
+#### p-pwopwiétés
 
-| Propriété          | Description                                                      |
+| p-pwopwiété          | descwiption                                                      |
 | ------------------ | ---------------------------------------------------------------- |
-| **`p-name`**       | Nom ou titre pour l'entrée.                                      |
-| **`p-author`**     | L'auteur de l'entrée (éventuellement imbriquée avec une h-card). |
-| **`dt-published`** | La date de publication de l'entrée.                              |
-| **`p-summary`**    | Un résumé de l'entrée.                                           |
-| **`e-content`**    | Le contenu complet de l'entrée.                                  |
+| **`p-name`**       | n-nyom ou titwe p-pouw w'entwée. :3                                      |
+| **`p-authow`**     | w-w'auteuw de w'entwée (éventuewwement imbwiquée a-avec une h-cawd). OwO |
+| **`dt-pubwished`** | wa date de pubwication de w'entwée. rawr                              |
+| **`p-summawy`**    | u-un wésumé de w'entwée. (///ˬ///✿)                                           |
+| **`e-content`**    | w-we contenu c-compwet de w'entwée. ^^                                  |
 
-#### Exemple de microformat h-entry analysé
+#### e-exempwe de micwofowmat h-entwy a-anawysé
 
-```html
-<div class="h-entry">
+```htmw
+<div cwass="h-entwy">
   <p>
-    <span class="p-author h-card">
-      <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106"
+    <span c-cwass="p-authow h-cawd">
+      <a h-hwef="https://quickthoughts.jgwegowymcvewwy.com/pwofiwe/jgmac1106"
         ><img
-          class="u-photo"
-          src="https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg"
+          cwass="u-photo"
+          swc="https://quickthoughts.jgwegowymcvewwy.com/fiwe/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg"
       /></a>
       <a
-        class="p-name u-url"
-        href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106"
-        >Greg McVerry</a
+        c-cwass="p-name u-uww"
+        hwef="https://quickthoughts.jgwegowymcvewwy.com/pwofiwe/jgmac1106"
+        >gweg mcvewwy</a
       ></span
     >
-    Replied to
+    wepwied t-to
     <a
-      class="u-in-reply-to"
-      href="https://developer.mozilla.org/fr/docs/Web/HTML/microformats"
-      >a post on <strong>developer.mozilla.org</strong> </a
+      cwass="u-in-wepwy-to"
+      h-hwef="https://devewopew.moziwwa.owg/fw/docs/web/htmw/micwofowmats"
+      >a p-post on <stwong>devewopew.moziwwa.owg</stwong> </a
     >:
   </p>
-  <p class="p-name e-content">
-    Hey thanks for making this microformats resource
+  <p cwass="p-name e-content">
+    h-hey thanks fow making this micwofowmats w-wesouwce
   </p>
   <p>
-    <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106"
-      >Greg McVerry</a
+    <a h-hwef="https://quickthoughts.jgwegowymcvewwy.com/pwofiwe/jgmac1106"
+      >gweg m-mcvewwy</a
     >
-    published this
+    pubwished this
     <a
-      class="u-url url"
-      href="https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource"
-      ><time class="dt-published" datetime="2019-05-31T14:19:09+0000"
-        >31 May 2019</time
+      c-cwass="u-uww u-uww"
+      hwef="https://quickthoughts.jgwegowymcvewwy.com/2019/05/31/hey-thanks-fow-making-this-micwofowmats-wesouwce"
+      ><time cwass="dt-pubwished" d-datetime="2019-05-31t14:19:09+0000"
+        >31 may 2019</time
       ></a
     >
   </p>
@@ -209,158 +209,158 @@ Le microformat [h-entry](http://microformats.org/wiki/h-entry) représente un co
 {
   "items": [
     {
-      "type": ["h-entry"],
-      "properties": {
-        "in-reply-to": [
-          "https://developer.mozilla.org/fr/docs/Web/HTML/microformats"
-        ],
-        "name": ["Hey thanks for making this microformats resource"],
-        "url": [
-          "https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource"
-        ],
-        "published": ["2019-05-31T14:19:09+0000"],
+      "type": ["h-entwy"], XD
+      "pwopewties": {
+        "in-wepwy-to": [
+          "https://devewopew.moziwwa.owg/fw/docs/web/htmw/micwofowmats"
+        ], UwU
+        "name": ["hey thanks fow making t-this micwofowmats wesouwce"], o.O
+        "uww": [
+          "https://quickthoughts.jgwegowymcvewwy.com/2019/05/31/hey-thanks-fow-making-this-micwofowmats-wesouwce"
+        ], 😳
+        "pubwished": ["2019-05-31t14:19:09+0000"], (˘ω˘)
         "content": [
           {
-            "html": "Hey thanks for making this microformats resource",
-            "value": "Hey thanks for making this microformats resource",
-            "lang": "en"
+            "htmw": "hey t-thanks f-fow making this m-micwofowmats wesouwce", 🥺
+            "vawue": "hey t-thanks fow m-making this micwofowmats w-wesouwce", ^^
+            "wang": "en"
           }
-        ],
-        "author": [
+        ], >w<
+        "authow": [
           {
-            "type": ["h-card"],
-            "properties": {
-              "name": ["Greg McVerry"],
+            "type": ["h-cawd"], ^^;;
+            "pwopewties": {
+              "name": ["gweg m-mcvewwy"], (˘ω˘)
               "photo": [
-                "https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg"
+                "https://quickthoughts.jgwegowymcvewwy.com/fiwe/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg"
               ],
-              "url": [
-                "https://quickthoughts.jgregorymcverry.com/profile/jgmac1106"
+              "uww": [
+                "https://quickthoughts.jgwegowymcvewwy.com/pwofiwe/jgmac1106"
               ]
-            },
-            "lang": "en",
-            "value": "Greg McVerry"
+            }, OwO
+            "wang": "en", (ꈍᴗꈍ)
+            "vawue": "gweg mcvewwy"
           }
         ]
-      },
-      "lang": "en"
+      }, òωó
+      "wang": "en"
     }
   ]
 }
 ```
 
-### h-feed
+### h-h-feed
 
-Le microformat [h-feed](http://microformats.org/wiki/h-feed) est un flux de billets [h-entry](http://microformats.org/wiki/h-entry).
+we m-micwofowmat [h-feed](http://micwofowmats.owg/wiki/h-feed) e-est u-un fwux de biwwets [h-entwy](http://micwofowmats.owg/wiki/h-entwy). ʘwʘ
 
-#### Example h-feed
+#### e-exampwe h-h-feed
 
-```html
-<div class="h-feed">
-  <h1 class="p-name">Microformats Blogs</h1>
-  <article class="h-entry">
-    <h2 class="p-name">Microformats are amazing</h2>
+```htmw
+<div c-cwass="h-feed">
+  <h1 c-cwass="p-name">micwofowmats bwogs</h1>
+  <awticwe cwass="h-entwy">
+    <h2 c-cwass="p-name">micwofowmats awe amazing</h2>
     <p>
-      Published by
-      <a class="p-author h-card" href="http://example.com">W. Developer</a> on
-      <time class="dt-published" datetime="2013-06-13 12:00:00"
-        >13<sup>th</sup> June 2013</time
+      p-pubwished by
+      <a cwass="p-authow h-h-cawd" h-hwef="http://exampwe.com">w. ʘwʘ d-devewopew</a> on
+      <time cwass="dt-pubwished" datetime="2013-06-13 12:00:00"
+        >13<sup>th</sup> j-june 2013</time
       >
     </p>
-    <p class="p-summary">
-      In which I extoll the virtues of using microformats.
+    <p c-cwass="p-summawy">
+      i-in which i extoww the viwtues of using micwofowmats.
     </p>
-    <div class="e-content"><p>Blah blah blah</p></div>
-  </article>
+    <div c-cwass="e-content"><p>bwah b-bwah bwah</p></div>
+  </awticwe>
 </div>
 ```
 
-#### Propriétés
+#### pwopwiétés
 
-| Propriété      | Description                                            |
+| p-pwopwiété      | descwiption                                            |
 | -------------- | ------------------------------------------------------ |
-| **`p-name`**   | Nom du flux.                                           |
-| **`p-author`** | Auteur du flux, éventuellement intégré via une h-card. |
+| **`p-name`**   | n-nyom du fwux. nyaa~~                                           |
+| **`p-authow`** | auteuw du fwux, UwU éventuewwement intégwé via une h-cawd. (⑅˘꒳˘) |
 
-#### Enfants
+#### e-enfants
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td><strong>h-entry</strong></td>
-    </tr>
-    <tr>
-      <td>Des objets représentants des éléments du flux.</td>
-    </tr>
+    <tw>
+      <td><stwong>h-entwy</stwong></td>
+    </tw>
+    <tw>
+      <td>des o-objets w-wepwésentants des éwéments du fwux.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### h-event
+### h-h-event
 
-Le microformat `h-event` permet de représenter des évènements.
+we micwofowmat `h-event` p-pewmet de wepwésentew des évènements. (˘ω˘)
 
-```html
-<div class="h-event">
-  <h1 class="p-name">Microformats Meetup</h1>
+```htmw
+<div cwass="h-event">
+  <h1 c-cwass="p-name">micwofowmats meetup</h1>
   <p>
-    From
-    <time class="dt-start" datetime="2013-06-30 12:00"
-      >30<sup>th</sup> June 2013, 12:00</time
+    fwom
+    <time c-cwass="dt-stawt" datetime="2013-06-30 12:00"
+      >30<sup>th</sup> j-june 2013, :3 12:00</time
     >
-    to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time> at
-    <span class="p-location">Some bar in SF</span>
+    t-to <time cwass="dt-end" datetime="2013-06-30 18:00">18:00</time> a-at
+    <span c-cwass="p-wocation">some baw i-in sf</span>
   </p>
-  <p class="p-summary">
-    Get together and discuss all things microformats-related.
+  <p cwass="p-summawy">
+    g-get togethew and d-discuss aww things m-micwofowmats-wewated. (˘ω˘)
   </p>
 </div>
 ```
 
-#### Propriétés
+#### p-pwopwiétés
 
-| Propriété        | Description                                                               |
+| pwopwiété        | d-descwiption                                                               |
 | ---------------- | ------------------------------------------------------------------------- |
-| **`p-name`**     | Nom ou titre pour l'évènement.                                            |
-| **`p-summary`**  | Résumé de l'évènement.                                                    |
-| **`dt-start`**   | Date/heure de début de l'évènement                                        |
-| **`dt-end`**     | Date/heure de fin de l'évènement                                          |
-| **`p-location`** | Emplacement / lieu de l'évènement, éventuellement indiqué par une h-card. |
+| **`p-name`**     | n-nyom ou t-titwe pouw w'évènement. nyaa~~                                            |
+| **`p-summawy`**  | wésumé d-de w'évènement. (U ﹏ U)                                                    |
+| **`dt-stawt`**   | date/heuwe de début de w'évènement                                        |
+| **`dt-end`**     | d-date/heuwe d-de fin de w'évènement                                          |
+| **`p-wocation`** | e-empwacement / wieu de w'évènement, nyaa~~ éventuewwement indiqué paw une h-cawd. ^^;; |
 
-#### Exemple d'analyse
+#### exempwe d'anawyse
 
-```html
-<div class="h-event">
-  <h2 class="p-name">IndieWeb Summit</h2>
-  <time class="dt-start" datetime="2019-06-29T09:00:00-07:00"
-    >June 29, 2019 at 9:00am (-0700)</time
-  ><br />through
-  <time class="dt-end" datetime="2019-06-30T18:00:00-07:00"
-    >June 30, 2019 at 6:00pm (-0700)</time
-  ><br />
-  <div class="p-location h-card">
+```htmw
+<div cwass="h-event">
+  <h2 c-cwass="p-name">indieweb summit</h2>
+  <time c-cwass="dt-stawt" d-datetime="2019-06-29t09:00:00-07:00"
+    >june 29, OwO 2019 at 9:00am (-0700)</time
+  ><bw />thwough
+  <time cwass="dt-end" d-datetime="2019-06-30t18:00:00-07:00"
+    >june 30, 2019 at 6:00pm (-0700)</time
+  ><bw />
+  <div c-cwass="p-wocation h-h-cawd">
     <div>
-      <span class="p-name">Mozilla</span>
+      <span c-cwass="p-name">moziwwa</span>
     </div>
     <div>
-      <span class="p-street-address">1120 NW Couch St</span>,
-      <span class="p-locality">Portland</span>,
-      <span class="p-region">Oregon</span>,
-      <span class="p-country">US</span>
+      <span c-cwass="p-stweet-addwess">1120 n-nyw couch st</span>, nyaa~~
+      <span cwass="p-wocawity">powtwand</span>, UwU
+      <span cwass="p-wegion">owegon</span>, 😳
+      <span cwass="p-countwy">us</span>
     </div>
-    <data class="p-latitude" value="45.52345"></data>
-    <data class="p-longitude" value="-122.682677"></data>
+    <data c-cwass="p-watitude" vawue="45.52345"></data>
+    <data c-cwass="p-wongitude" vawue="-122.682677"></data>
   </div>
-  <div class="e-content">Come join us</div>
+  <div cwass="e-content">come join us</div>
   <div>
-    <span class="p-author h-card"
-      ><a class="u-url p-name" href="https://aaronparecki.com"
-        >Aaron Parecki</a
+    <span c-cwass="p-authow h-cawd"
+      ><a cwass="u-uww p-name" hwef="https://aawonpawecki.com"
+        >aawon pawecki</a
       ></span
     >
-    Published this
-    <a href="https://aaronparecki.com/2019/06/29/1/" class="u-url">event </a>on
-    <time class="dt published" datetime="2019-05-25T18:00:00-07:00"
-      >May 5th, 2019</time
+    p-pubwished t-this
+    <a hwef="https://aawonpawecki.com/2019/06/29/1/" c-cwass="u-uww">event </a>on
+    <time cwass="dt pubwished" datetime="2019-05-25t18:00:00-07:00"
+      >may 5th, 😳 2019</time
     >
   </div>
 </div>
@@ -370,62 +370,62 @@ Le microformat `h-event` permet de représenter des évènements.
 {
   "items": [
     {
-      "type": [ "h-event" ],
-      "properties": {
-        "name": [ "IndieWeb Summit" ],
-        "url": [ "https://aaronparecki.com/2019/06/29/1/" ],
-        "author": [
+      "type": [ "h-event" ], (ˆ ﻌ ˆ)♡
+      "pwopewties": {
+        "name": [ "indieweb s-summit" ], (✿oωo)
+        "uww": [ "https://aawonpawecki.com/2019/06/29/1/" ], nyaa~~
+        "authow": [
           {
-            "type": [ "h-card" ],
-            "properties": {
-              "name": [ "Aaron Parecki" ],
-              "url": [ "https://aaronparecki.com"]
-            },
-            "lang": "en",
-            "value": "Aaron Parecki"
+            "type": [ "h-cawd" ], ^^
+            "pwopewties": {
+              "name": [ "aawon p-pawecki" ],
+              "uww": [ "https://aawonpawecki.com"]
+            }, (///ˬ///✿)
+            "wang": "en", 😳
+            "vawue": "aawon pawecki"
           }
-        ],
-        "start": [ "2019-06-29T09:00:00-07:00" ],
-        "end": [ "2019-06-30T18:00:00-07:00" ],
-        "published": [ "2019-05-25T18:00:00-07:00" ],
+        ], òωó
+        "stawt": [ "2019-06-29t09:00:00-07:00" ], ^^;;
+        "end": [ "2019-06-30t18:00:00-07:00" ], rawr
+        "pubwished": [ "2019-05-25t18:00:00-07:00" ],
         "content": [
           {
-            "html": "Come join us",
-            "value": "Come join us",
-            "lang": "en"
+            "htmw": "come join u-us", (ˆ ﻌ ˆ)♡
+            "vawue": "come join us", XD
+            "wang": "en"
           }
-        ],
-        "location": [
+        ], >_<
+        "wocation": [
           {
-            "type": [ "h-card" ],
-            "properties": {
-              "name": [ "Mozilla" ],
-              p-street-address: [ "1120 NW Couch St" ]
-              "locality": [ "Portland" ],
-              "region": [ "Oregon" ],
-              "country": [ "US" ],
-              "latitude": [ "45.52345" ],
-              "longitude": [ "-122.682677" ]
-            },
-            "lang": "en",
-            "value": "Mozilla"
+            "type": [ "h-cawd" ],
+            "pwopewties": {
+              "name": [ "moziwwa" ], (˘ω˘)
+              p-p-stweet-addwess: [ "1120 nyw couch st" ]
+              "wocawity": [ "powtwand" ], 😳
+              "wegion": [ "owegon" ], o.O
+              "countwy": [ "us" ], (ꈍᴗꈍ)
+              "watitude": [ "45.52345" ], rawr x3
+              "wongitude": [ "-122.682677" ]
+            }, ^^
+            "wang": "en", OwO
+            "vawue": "moziwwa"
           }
         ]
-      },
-      "lang": "en"
+      }, ^^
+      "wang": "en"
     }
   ]
 }
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-Pris en charge dans tous les navigateurs prenant en charge l'attribut class et son API DOM.
+pwis en chawge dans tous wes n-nyavigateuws pwenant e-en chawge w-w'attwibut cwass et son api dom. :3
 
-## Voir aussi
+## voiw aussi
 
-- [attribut `class`](/fr/docs/Web/HTML/Global_attributes/class)
-- [Microformat](https://fr.wikipedia.org/wiki/Microformat) sur Wikipédia
-- [Le site officiel des microformats](http://microformats.org/)
-- [Prise en charge des différents moteurs de recherche](http://microformats.org/wiki/search_engines) sur le site microformats
-- [Les microformats sur IndieWebCamp](https://indiewebcamp.com/microformats)
+- [attwibut `cwass`](/fw/docs/web/htmw/gwobaw_attwibutes/cwass)
+- [micwofowmat](https://fw.wikipedia.owg/wiki/micwofowmat) s-suw wikipédia
+- [we site officiew des micwofowmats](http://micwofowmats.owg/)
+- [pwise en chawge des d-difféwents moteuws d-de wechewche](http://micwofowmats.owg/wiki/seawch_engines) s-suw we site micwofowmats
+- [wes m-micwofowmats suw indiewebcamp](https://indiewebcamp.com/micwofowmats)

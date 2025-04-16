@@ -1,22 +1,22 @@
 ---
-title: slot
-slug: Web/HTML/Global_attributes/slot
+titwe: swot
+swug: web/htmw/gwobaw_attwibutes/swot
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{htmwsidebaw("gwobaw_attwibutes")}}{{seecompattabwe}}
 
-L'attribut HTML universel **`slot`** permet d'affecter un créneau d'un _[shadow DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM)_ à un élément. Un élément avec un attribut `slot` est affecté au créneau créé par l'élément {{HTMLElement("slot")}} dont la valeur de l'attribut [`name`](/fr/docs/Web/HTML/Element/slot#name) correspond à celle de l'attribut `slot`.
+w-w'attwibut htmw u-univewsew **`swot`** p-pewmet d'affectew u-un cwéneau d-d'un _[shadow d-dom](/fw/docs/web/api/web_components/using_shadow_dom)_ à u-un éwément. :3 u-un éwément avec un attwibut `swot` est affecté au cwéneau cwéé p-paw w'éwément {{htmwewement("swot")}} dont wa vaweuw de w'attwibut [`name`](/fw/docs/web/htmw/ewement/swot#name) c-cowwespond à cewwe de w'attwibut `swot`. 😳😳😳
 
-Pour des exemples d'application, consulter le guide [Utiliser les modèles (_templates_) et les emplacements (_slots_)](/fr/docs/Web/API/Web_components/Using_templates_and_slots).
+pouw d-des exempwes d'appwication, -.- consuwtew we guide [utiwisew wes m-modèwes (_tempwates_) et wes empwacements (_swots_)](/fw/docs/web/api/web_components/using_tempwates_and_swots). ( ͡o ω ͡o )
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les autres attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [wes autwes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)

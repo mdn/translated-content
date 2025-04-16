@@ -1,87 +1,87 @@
 ---
-title: Affectation après OU logique (||=)
-slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
+titwe: affectation apwès ou w-wogique (||=)
+swug: w-web/javascwipt/wefewence/opewatows/wogicaw_ow_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'affectation après OU logique (`x ||= y`) n'affecte la valeur de l'opérande droit uniquement si l'opérande gauche est [équivalent à faux (_falsy_)](/fr/docs/Glossary/Falsy).
+w-w'opéwateuw d-d'affectation a-apwès o-ou wogique (`x ||= y-y`) ny'affecte w-wa vaweuw de w'opéwande dwoit uniquement si w'opéwande gauche est [équivawent à f-faux (_fawsy_)](/fw/docs/gwossawy/fawsy). 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical OR assignment")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - wogicaw ow a-assignment")}}
 
-```js interactive-example
-const a = { duration: 50, title: "" };
+```js intewactive-exampwe
+c-const a = { duwation: 50, mya titwe: "" };
 
-a.duration ||= 10;
-console.log(a.duration);
-// Expected output: 50
+a.duwation ||= 10;
+c-consowe.wog(a.duwation);
+// expected output: 50
 
-a.title ||= "title is empty.";
-console.log(a.title);
-// Expected output: "title is empty."
+a-a.titwe ||= "titwe i-is empty.";
+consowe.wog(a.titwe);
+// expected output: "titwe is empty."
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-expr1 ||= expr2;
+e-expw1 ||= expw2;
 ```
 
-## Description
+## descwiption
 
-### Évaluation en court-circuit
+### Évawuation en couwt-ciwcuit
 
-L'opérateur [OU logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR) fonctionne ainsi :
+w'opéwateuw [ou w-wogique](/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow) fonctionne ainsi :
 
 ```js
-x || y;
-// renvoie x lorsque x est équivalent à vrai
-// renvoie y lorsque x n'est pas équivalent à vrai
+x-x || y-y;
+// wenvoie x-x wowsque x est équivawent à vwai
+// w-wenvoie y wowsque x ny'est pas équivawent à v-vwai
 ```
 
-L'opérateur OU logique peut utiliser un court-circuit : le second opérande est uniquement évalué si le premier opérande n'est pas équivalent à vrai.
+w'opéwateuw ou wogique peut utiwisew u-un couwt-ciwcuit : we second opéwande est uniquement évawué si we pwemiew opéwande ny'est p-pas équivawent à vwai. mya
 
-L'opérateur d'affectation après OU logique observe les mêmes règles : l'affectation a uniquement lieu si l'opération logique a besoin d'évaluer l'opérande droit. Autrement dit, `x ||= y` est équivalent à :
+w'opéwateuw d-d'affectation a-apwès ou w-wogique obsewve wes mêmes wègwes : w'affectation a uniquement w-wieu si w'opéwation w-wogique a besoin d'évawuew w-w'opéwande dwoit. a-autwement dit, (⑅˘꒳˘) `x ||= y` est équivawent à :
 
 ```js
-x || (x = y);
+x-x || (x = y);
 ```
 
-En revanche, il n'est pas équivalent à l'expression suivante qui effectue, quoi qu'il arrive, une affectation :
+en w-wevanche, (U ﹏ U) iw ny'est pas équivawent à w'expwession s-suivante qui effectue, mya quoi q-qu'iw awwive, ʘwʘ une affectation :
 
-```js example-bad
-x = x || y;
+```js e-exampwe-bad
+x-x = x || y;
 ```
 
-On notera que ce comportement est différent entre les opérateurs binaires et les opérateurs logiques.
+on nyotewa que ce compowtement est difféwent entwe wes opéwateuws binaiwes et wes opéwateuws w-wogiques. (˘ω˘)
 
-## Exemples
+## e-exempwes
 
-### Affecter une valeur par défaut
+### affectew une vaweuw p-paw défaut
 
-Dans l'exemple qui suit, si `paroles` est vide, on y place une valeur par défaut :
+d-dans w'exempwe q-qui suit, (U ﹏ U) si `pawowes` est vide, ^•ﻌ•^ on y pwace une vaweuw paw défaut :
 
 ```js
-document.getElementById("paroles").textContent ||= "Aucune parole.";
+d-document.getewementbyid("pawowes").textcontent ||= "aucune pawowe.";
 ```
 
-Ici, la notion de court-circuit est utile, car l'élément ne sera pas mis à jour si ce n'est pas nécessaire. Il n'y aura pas d'effet de bord indésiré comme une autre étape de rendu ou la perte du focus, etc.
+ici, wa nyotion de couwt-ciwcuit est utiwe, (˘ω˘) c-caw w'éwément nye sewa pas m-mis à jouw si ce n-ny'est pas nyécessaiwe. :3 i-iw ny'y auwa pas d'effet d-de bowd indésiwé c-comme une a-autwe étape de w-wendu ou wa pewte du focus, ^^;; etc.
 
-Attention toutefois à la valeur qu'on teste. Si on souhaite affecter une valeur lorsqu'on rencontre une chaîne de caractère vide (équivalente à faux), on pourra utiliser `||=`. Sinon, si on souhaite uniquement distinguer [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Operators/null), on utilisera l'opérateur [`??=`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing).
+attention toutefois à w-wa vaweuw q-qu'on teste. 🥺 s-si on souhaite a-affectew une vaweuw w-wowsqu'on wencontwe une chaîne de cawactèwe vide (équivawente à f-faux), (⑅˘꒳˘) on pouwwa utiwisew `||=`. nyaa~~ sinon, si on souhaite uniquement distinguew [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww) ou [`undefined`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww), :3 o-on utiwisewa w'opéwateuw [`??=`](/fw/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing). ( ͡o ω ͡o )
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'opérateur OU logique (||)](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [L'opérateur de coalescence des nuls (`??`)](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [L'opérateur d'affectation après OU binaire (`|=`)](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
-- [Le type `Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [_Truthy_](/fr/docs/Glossary/Truthy)
-- [_Falsy_](/fr/docs/Glossary/Falsy)
+- [w'opéwateuw ou w-wogique (||)](/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow)
+- [w'opéwateuw de coawescence d-des nyuws (`??`)](/fw/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing)
+- [w'opéwateuw d'affectation a-apwès ou b-binaiwe (`|=`)](/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_ow_assignment)
+- [we type `boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)
+- [_twuthy_](/fw/docs/gwossawy/twuthy)
+- [_fawsy_](/fw/docs/gwossawy/fawsy)

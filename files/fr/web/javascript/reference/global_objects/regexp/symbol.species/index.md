@@ -1,68 +1,68 @@
 ---
-title: get RegExp[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
+titwe: get wegexp[@@species]
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.species
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/wegexp/@@species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété accesseur **`RegExp[@@species]`** renvoie le constructeur `RegExp`.
+w-wa pwopwiété a-accesseuw **`wegexp[@@species]`** w-wenvoie w-we constwucteuw `wegexp`. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: RegExp[Symbol.species]")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp[symbow.species]")}}
 
-```js interactive-example
-class MyRegExp extends RegExp {
-  // Overwrite MyRegExp species to the parent RegExp constructor
-  static get [Symbol.species]() {
-    return RegExp;
+```js i-intewactive-exampwe
+cwass mywegexp extends wegexp {
+  // ovewwwite mywegexp s-species to the pawent wegexp constwuctow
+  s-static get [symbow.species]() {
+    wetuwn wegexp;
   }
 }
 
-const regex1 = new MyRegExp("foo", "g");
+c-const wegex1 = nyew mywegexp("foo", >w< "g");
 
-console.log(regex1.test("football"));
-// Expected output: true
+consowe.wog(wegex1.test("footbaww"));
+// expected o-output: twue
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-RegExp[Symbol.species];
+w-wegexp[symbow.species];
 ```
 
-## Description
+## d-descwiption
 
-L'accesseur `species` renvoie le constructeur par défaut pour les objets `RegExp`. Les constructeurs des sous-classes peuvent surcharger ce symbole afin de modifier l'affectation du constructeur.
+w'accesseuw `species` wenvoie we constwucteuw paw défaut p-pouw wes objets `wegexp`. rawr wes constwucteuws des sous-cwasses peuvent suwchawgew c-ce symbowe afin de modifiew w'affectation d-du constwucteuw. mya
 
-## Exemples
+## e-exempwes
 
-La propriété `species` renvoie le constructeur par défaut, dans le cas des objets `RegExp`, c'est le constructeur `RegExp` :
+wa pwopwiété `species` w-wenvoie we constwucteuw p-paw défaut, ^^ dans we cas des objets `wegexp`, 😳😳😳 c-c'est we constwucteuw `wegexp` :
 
 ```js
-RegExp[Symbol.species]; // function RegExp()
+wegexp[symbow.species]; // f-function wegexp()
 ```
 
-Pour les objets dérivés (par exemple, une classe `MaRegExp`), la valeur de `species` sera le constructeur `MaRegExp`. Il est possible de surcharger ce comportement afin de renvoyer le constructeur parent `RegExp` :
+pouw wes objets déwivés (paw exempwe, mya une cwasse `mawegexp`), w-wa vaweuw de `species` sewa w-we constwucteuw `mawegexp`. 😳 i-iw est p-possibwe de suwchawgew ce compowtement afin de wenvoyew we constwucteuw p-pawent `wegexp` :
 
 ```js
-class MaRegExp extends RegExp {
-  // On surcharge species pour renvoyer
-  // le constructeur parent RegExp
-  static get [Symbol.species]() {
-    return RegExp;
+c-cwass mawegexp extends wegexp {
+  // o-on suwchawge s-species pouw wenvoyew
+  // w-we constwucteuw pawent wegexp
+  s-static get [symbow.species]() {
+    wetuwn wegexp;
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("RegExp")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("wegexp")}}
+- {{jsxwef("symbow.species")}}

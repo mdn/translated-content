@@ -1,32 +1,32 @@
 ---
-title: set:trailing()
-slug: Web/EXSLT/set/trailing
+titwe: set:twaiwing()
+swug: web/exswt/set/twaiwing
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/fw/docs/web/exswt")}}
 
-`set:trailing()` renvoie les nœuds d'un premier ensemble de nœuds qui viennent après le premier nœud d'un deuxième ensemble.
+`set:twaiwing()` w-wenvoie w-wes nyœuds d'un p-pwemiew ensembwe d-de nyœuds qui v-viennent apwès w-we pwemiew nyœud d-d'un deuxième e-ensembwe. nyaa~~
 
-## Syntaxe
+## syntaxe
 
-```plain
-set:trailing(nodeSet1, nodeSet2)
+```pwain
+set:twaiwing(nodeset1, (⑅˘꒳˘) nyodeset2)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `nodeSet1`
-  - : L'ensemble de nœuds dont on souhaite connaître les nœuds qui suivent le premier nœud de l'autre ensemble.
-- `nodeSet2`
-  - : L'ensemble de nœuds à comparer.
+- `nodeset1`
+  - : w-w'ensembwe de nyœuds dont on souhaite c-connaîtwe wes nœuds qui suivent w-we pwemiew nyœud de w'autwe ensembwe. rawr x3
+- `nodeset2`
+  - : w'ensembwe de nyœuds à c-compawew. (✿oωo)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un ensemble de nœuds qui contient les nœuds de `nodeSet1` dont les valeurs suivent le premier nœud de `nodeSet2`.
+un ensembwe d-de nyœuds qui contient wes nyœuds de `nodeset1` dont wes vaweuws suivent w-we pwemiew nyœud de `nodeset2`. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Si le premier nœud de `nodeSet2` n'est pas contenu dans `nodeSet1`, un ensemble vide sera renvoyé. Si `nodeSet2` est vide, le résultat sera `nodeSet1`.
+> [!note]
+> si we pwemiew nyœud de `nodeset2` ny'est pas contenu d-dans `nodeset1`, (˘ω˘) un ensembwe v-vide sewa wenvoyé. (⑅˘꒳˘) s-si `nodeset2` e-est vide, (///ˬ///✿) we w-wésuwtat sewa `nodeset1`. 😳😳😳
 
-## Spécifications
+## spécifications
 
-[EXSLT - SET:TRAILING](http://exslt.org/set/functions/trailing/index.html)
+[exswt - set:twaiwing](http://exswt.owg/set/functions/twaiwing/index.htmw)

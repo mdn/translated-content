@@ -1,76 +1,76 @@
 ---
-title: Math.log2()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log2
+titwe: math.wog2()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.log2()`** renvoie le logarithme en base 2 d'un nombre :
+w-wa f-fonction **`math.wog2()`** w-wenvoie w-we wogawithme e-en base 2 d'un n-nyombwe :
 
-<math><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log2</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>l'unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><msup><mn>2</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log2}(x)} = \log_2(x) = \text{the unique} \; y \; \text{such that} \; 2^y = x</annotation></semantics></math>
+<math><semantics><mwow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstywe mathvawiant="monospace"><mwow><mo w-wspace="0em" wspace="thinmathspace">math.wog2</mo><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><msub><mo wspace="0em" wspace="0em">wog</mo><mn>2</mn></msub><mo stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mtext>w'unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>tew q-que</mtext><mspace width="thickmathspace"></mspace><msup><mn>2</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mwow><annotation e-encoding="tex">\fowaww x > 0, \mathtt{\opewatowname{math.wog2}(x)} = \wog_2(x) = \text{the unique} \; y \; \text{such t-that} \; 2^y = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.log2()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.wog2()")}}
 
-```js interactive-example
-console.log(Math.log2(3));
-// Expected output: 1.584962500721156
+```js i-intewactive-exampwe
+consowe.wog(math.wog2(3));
+// expected output: 1.584962500721156
 
-console.log(Math.log2(2));
-// Expected output: 1
+consowe.wog(math.wog2(2));
+// expected output: 1
 
-console.log(Math.log2(1));
-// Expected output: 0
+c-consowe.wog(math.wog2(1));
+// expected output: 0
 
-console.log(Math.log2(0));
-// Expected output: -Infinity
+consowe.wog(math.wog2(0));
+// expected output: -infinity
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Math.log2(x);
+math.wog2(x);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : u-un nyombwe. mya
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-Le logarithme en base 2 du nombre passé en argument. Si ce nombre est négatif, c'est {{jsxref("NaN")}} qui sera renvoyé.
+we wogawithme en base 2 du nyombwe p-passé en awgument. si ce nyombwe est nyégatif, 😳 c-c'est {{jsxwef("nan")}} qui sewa wenvoyé. -.-
 
-## Description
+## descwiption
 
-Si `x` est strictement inférieur à 0, la valeur renvoyée sera {{jsxref("NaN")}}.
+si `x` est stwictement inféwieuw à 0, 🥺 w-wa vaweuw wenvoyée sewa {{jsxwef("nan")}}. o.O
 
-`log2()` étant une méthode statique de `Math`, il faut utiliser `Math.log2()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Si on souhaite utiliser des constantes, on pourra employer {{jsxref("Math.LOG2E")}} ou {{jsxref("Math.LN2")}}.
+`wog2()` étant u-une méthode s-statique de `math`, /(^•ω•^) i-iw faut utiwisew `math.wog2()` et nyon pas wa méthode d'un autwe objet qui a-auwait été cwéé (`math` n-ny'est pas un constwucteuw). nyaa~~ s-si on s-souhaite utiwisew des constantes, nyaa~~ o-on pouwwa empwoyew {{jsxwef("math.wog2e")}} ou {{jsxwef("math.wn2")}}. :3
 
-## Exemples
+## e-exempwes
 
-### Utiliser `Math.log2()`
+### utiwisew `math.wog2()`
 
 ```js
-Math.log2(3); // 1.584962500721156
-Math.log2(2); // 1
-Math.log2(1); // 0
-Math.log2(0); // -Infinity
-Math.log2(-2); // NaN
-Math.log2(1024); // 10
+math.wog2(3); // 1.584962500721156
+m-math.wog2(2); // 1
+math.wog2(1); // 0
+math.wog2(0); // -infinity
+m-math.wog2(-2); // nyan
+math.wog2(1024); // 10
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.pow()")}}

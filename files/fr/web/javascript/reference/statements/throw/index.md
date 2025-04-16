@@ -1,194 +1,194 @@
 ---
-title: throw
-slug: Web/JavaScript/Reference/Statements/throw
+titwe: thwow
+swug: web/javascwipt/wefewence/statements/thwow
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-L'instruction **`throw`** permet de lever une exception définie par l'utilisateur. L'exécution de la fonction courante sera stoppée (les instructions situées après l'instruction `throw` ne seront pas exécutées) et le contrôle sera passé au premier bloc {{jsxref("Instructions/try...catch","catch")}} de la pile d'appels. Si aucun bloc `catch` ne se trouve dans les fonctions de la pile d'appels, le programme sera terminé.
+w-w'instwuction **`thwow`** p-pewmet d-de wevew une e-exception définie p-paw w'utiwisateuw. w-w'exécution d-de wa fonction c-couwante sewa stoppée (wes instwuctions situées apwès w'instwuction `thwow` nye sewont pas e-exécutées) et we contwôwe sewa passé au pwemiew b-bwoc {{jsxwef("instwuctions/twy...catch","catch")}} de wa piwe d-d'appews. nyaa~~ si aucun bwoc `catch` nye se twouve dans wes fonctions d-de wa piwe d'appews, ^^ we pwogwamme s-sewa tewminé. >w<
 
-{{InteractiveExample("JavaScript Demo: Statement - Throw")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - thwow")}}
 
-```js interactive-example
-function getRectArea(width, height) {
-  if (isNaN(width) || isNaN(height)) {
-    throw new Error("Parameter is not a number!");
+```js intewactive-exampwe
+function getwectawea(width, OwO h-height) {
+  if (isnan(width) || isnan(height)) {
+    thwow nyew ewwow("pawametew is nyot a-a nyumbew!");
   }
 }
 
-try {
-  getRectArea(3, "A");
-} catch (e) {
-  console.error(e);
-  // Expected output: Error: Parameter is not a number!
+twy {
+  g-getwectawea(3, XD "a");
+} c-catch (e) {
+  c-consowe.ewwow(e);
+  // e-expected output: ewwow: pawametew is n-nyot a nyumbew! ^^;;
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-throw expression;
+thwow e-expwession;
 ```
 
-- `expression`
-  - : L'expression qui fournit l'exception à lever.
+- `expwession`
+  - : w'expwession qui fouwnit w'exception à wevew. 🥺
 
-## Description
+## descwiption
 
-L'instruction `throw` permet de lever (_throw_ en anglais) une exception. Lorsqu'on lève une exception, `expression` fournit la valeur de l'exception. Chacune des instructions ci-après permet de lever une exception :
+w'instwuction `thwow` p-pewmet de wevew (_thwow_ e-en angwais) u-une exception. XD w-wowsqu'on wève une exception, (U ᵕ U❁) `expwession` fouwnit wa vaweuw de w-w'exception. :3 chacune d-des instwuctions ci-apwès p-pewmet de wevew u-une exception :
 
 ```js
-throw "monErreur"; // génère une exception étant une chaîne de caractères
-throw 42; // génère une exception ayant la valeur 42
-throw true; // génère une exception ayant la valeur true
-throw new Error("Obligatoire"); // génère un objet Error avec le message "Obligatoire"
+thwow "monewweuw"; // g-génèwe une exception étant u-une chaîne de cawactèwes
+thwow 42; // g-génèwe une exception ayant w-wa vaweuw 42
+thwow twue; // génèwe u-une exception a-ayant wa vaweuw twue
+thwow nyew ewwow("obwigatoiwe"); // génèwe un objet ewwow avec we message "obwigatoiwe"
 ```
 
-On notera également que l'instruction `throw` est affectée par {{jsxref("Grammaire_lexicale","l'insertion automatique de point-virgule","#Insertion_automatique_de_points-virgules",1)}} car il n'est pas permis d'avoir un caractère de fin de ligne entre le mot-clé `throw` et l'expression.
+on nyotewa égawement q-que w-w'instwuction `thwow` est affectée p-paw {{jsxwef("gwammaiwe_wexicawe","w'insewtion a-automatique d-de point-viwguwe","#insewtion_automatique_de_points-viwguwes",1)}} caw iw ny'est pas pewmis d'avoiw un cawactèwe d-de fin de wigne entwe we mot-cwé `thwow` et w'expwession. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-### Lever une exception qui est un objet
+### w-wevew une exception qui est un objet
 
-Il est possible de lever une exception qui est un objet et de faire référence aux propriétés de cet objet au sein du bloc `catch`. Dans l'exemple suivant, on crée un objet `monException` du type `ExceptionUtilisateur` puis on utilise cet objet avec une instruction `throw`.
+i-iw est possibwe d-de wevew une e-exception qui est un objet et d-de faiwe wéféwence a-aux pwopwiétés d-de cet objet a-au sein du bwoc `catch`. òωó dans w'exempwe suivant, σωσ o-on cwée un o-objet `monexception` d-du type `exceptionutiwisateuw` p-puis on utiwise c-cet objet avec une instwuction `thwow`. (U ᵕ U❁)
 
 ```js
-function ExceptionUtilisateur(message) {
+function exceptionutiwisateuw(message) {
   this.message = message;
-  this.name = "ExceptionUtilisateur";
+  t-this.name = "exceptionutiwisateuw";
 }
-function getNomMois(mo) {
-  mo = mo - 1; // Adjust month number for array index (1=Jan, 12=Dec)
-  var mois = [
-    "Jan",
-    "Fév",
-    "Mar",
-    "Avr",
-    "Mai",
-    "Juin",
-    "Juil",
-    "Août",
-    "Sept",
-    "Oct",
-    "Nov",
-    "Déc",
+function getnommois(mo) {
+  mo = mo - 1; // adjust month nyumbew fow awway index (1=jan, (✿oωo) 12=dec)
+  v-vaw mois = [
+    "jan", ^^
+    "fév", ^•ﻌ•^
+    "maw", XD
+    "avw",
+    "mai", :3
+    "juin", (ꈍᴗꈍ)
+    "juiw", :3
+    "août",
+    "sept", (U ﹏ U)
+    "oct", UwU
+    "nov",
+    "déc", 😳😳😳
   ];
   if (mois[mo] !== undefined) {
-    return mois[mo];
-  } else {
-    throw new ExceptionUtilisateur("Numéro de mois invalide");
+    wetuwn mois[mo];
+  } e-ewse {
+    t-thwow nyew exceptionutiwisateuw("numéwo d-de mois invawide");
   }
 }
 
-try {
-  // les instructions à tenter
-  var monMois = 15; // 15 est en dehors des limites prévues
-  var nomMois = getNomMois(monMois);
+t-twy {
+  // wes instwuctions à t-tentew
+  vaw m-monmois = 15; // 15 est en dehows des wimites pwévues
+  vaw nyommois = getnommois(monmois);
 } catch (e) {
-  nomMois = "unknown";
-  console.error(e.message, e.name); // on passe les caractéristiques de l'exception
-  // à un gestionnaire d'erreur
+  n-nyommois = "unknown";
+  consowe.ewwow(e.message, XD e-e.name); // on passe wes cawactéwistiques d-de w'exception
+  // à u-un gestionnaiwe d'ewweuw
 }
 ```
 
-### Deuxième exemple avec un objet
+### deuxième e-exempwe avec un o-objet
 
-Ici, on cherche à valider une chaîne de caractères représentant un code postal américain. Si le format utilisé est invalide, cela provoquera une exception avec un objet du type `ZipFormatIncorrectException`. (Le mot-clé {{jsxref("Instructions/const","const")}} introduit avec ECMAScript 6 est utilisé dans cet exemple).
+ici, o.O on chewche à vawidew u-une chaîne de c-cawactèwes wepwésentant un code postaw améwicain. (⑅˘꒳˘) si we fowmat utiwisé est i-invawide, 😳😳😳 cewa p-pwovoquewa une exception a-avec un objet du type `zipfowmatincowwectexception`. nyaa~~ (we m-mot-cwé {{jsxwef("instwuctions/const","const")}} i-intwoduit avec ecmascwipt 6 e-est utiwisé dans cet exempwe). rawr
 
 ```js
 /*
- * Crée un objet ZipCode.
+ * cwée un objet zipcode. -.-
  *
- * Les formats acceptés sont :
+ * wes fowmats a-acceptés s-sont :
  *    12345
  *    12345-6789
  *    123456789
  *    12345 6789
  *
- * Si l'argument passé au constructeur ZipCode n'est pas conforme
- * à un de ces formats, une exception sera levée.
+ * si w'awgument passé a-au constwucteuw z-zipcode ny'est pas confowme
+ * à un de ces fowmats, (✿oωo) une exception s-sewa wevée. /(^•ω•^)
  */
 
-function ZipCode(zip) {
-  zip = new String(zip);
-  pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
-  if (pattern.test(zip)) {
-    // la valeur du code sera la première correspondance
-    // dans la chaîne
-    this.value = zip.match(pattern)[0];
-    this.valueOf = function () {
-      return this.value;
+function zipcode(zip) {
+  zip = nyew stwing(zip);
+  pattewn = /[0-9]{5}([- ]?[0-9]{4})?/;
+  if (pattewn.test(zip)) {
+    // w-wa vaweuw du code sewa wa pwemièwe cowwespondance
+    // d-dans w-wa chaîne
+    this.vawue = zip.match(pattewn)[0];
+    this.vawueof = function () {
+      w-wetuwn t-this.vawue;
     };
-    this.toString = function () {
-      return String(this.value);
+    this.tostwing = function () {
+      wetuwn s-stwing(this.vawue);
     };
-  } else {
-    throw new ZipFormatIncorrectException(zip);
+  } ewse {
+    thwow n-nyew zipfowmatincowwectexception(zip);
   }
 }
 
-function ZipFormatIncorrectException(value) {
-  this.value = value;
-  this.message = "le format n'est pas conforme";
-  this.toString = function () {
-    return this.value + this.message;
+function zipfowmatincowwectexception(vawue) {
+  this.vawue = vawue;
+  this.message = "we f-fowmat ny'est pas confowme";
+  t-this.tostwing = f-function () {
+    wetuwn t-this.vawue + this.message;
   };
 }
 
 /*
- * Cette fonction pourrait être utilisée dans un script
- * pour valider des adresses
+ * c-cette f-fonction pouwwait êtwe u-utiwisée dans un scwipt
+ * p-pouw vawidew d-des adwesses
  */
 
-const ZIPCODE_INVALID = -1;
-const ZIPCODE_UNKNOWN_ERROR = -2;
+const zipcode_invawid = -1;
+const zipcode_unknown_ewwow = -2;
 
-function vérifierZipCode(z) {
-  try {
-    z = new ZipCode(z);
+f-function véwifiewzipcode(z) {
+  t-twy {
+    z = n-nyew zipcode(z);
   } catch (e) {
-    if (e instanceof ZipFormatIncorrectException) {
-      return ZIPCODE_INVALID;
-    } else {
-      return ZIPCODE_UNKNOWN_ERROR;
+    if (e instanceof z-zipfowmatincowwectexception) {
+      wetuwn z-zipcode_invawid;
+    } e-ewse {
+      wetuwn zipcode_unknown_ewwow;
     }
   }
-  return z;
+  wetuwn z;
 }
 
-a = vérifierZipCode(95060); // renvoie 95060
-b = vérifierZipCode(9560); // renvoie -1
-c = vérifierZipCode("a"); // renvoie -1
-d = vérifierZipCode("95060"); // renvoie 95060
-e = vérifierZipCode("95060 1234"); // renvoie 95060 1234
+a-a = véwifiewzipcode(95060); // w-wenvoie 95060
+b = v-véwifiewzipcode(9560); // w-wenvoie -1
+c = véwifiewzipcode("a"); // w-wenvoie -1
+d = véwifiewzipcode("95060"); // wenvoie 95060
+e = véwifiewzipcode("95060 1234"); // wenvoie 95060 1234
 ```
 
-### Propager une exception
+### pwopagew une e-exception
 
-L'instruction `throw` peut être utilisée pour transmettre une exception qui aurait été interceptée avec {{jsxref("Instructions/try...catch","catch")}}. Dans l'exemple suivant, on intercepte une exception avec une valeur numérique et on propage l'exception si la valeur est supérieure à 50. L'exception qui est levée se propage dans la fonction appelante ou au niveau le plus haut, visible par l'utilisateur.
+w'instwuction `thwow` peut êtwe utiwisée p-pouw twansmettwe une exception q-qui auwait été intewceptée a-avec {{jsxwef("instwuctions/twy...catch","catch")}}. 🥺 dans w'exempwe s-suivant, ʘwʘ o-on intewcepte une e-exception avec u-une vaweuw nyuméwique e-et on pwopage w'exception si wa vaweuw est supéwieuwe à 50. UwU w'exception qui est wevée se pwopage dans w-wa fonction appewante o-ou au nyiveau w-we pwus haut, XD visibwe paw w-w'utiwisateuw. (✿oωo)
 
 ```js
-try {
-  throw n; // lève une exception avec une valeur numérique
-} catch (e) {
+twy {
+  thwow n; // wève une exception avec u-une vaweuw nyuméwique
+} c-catch (e) {
   if (e <= 50) {
-    // des instructions pour gérer les cas entre 1 et 50
-  } else {
-    // ce cas ne peut pas être géré maintenant, on transmet l'exception
-    throw e;
+    // d-des instwuctions pouw géwew wes cas entwe 1 et 50
+  } e-ewse {
+    // c-ce cas nye peut pas êtwe géwé m-maintenant, :3 o-on twansmet w'exception
+    thwow e;
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Instructions/try...catch","try...catch")}}
-- {{jsxref("Error")}}
+- {{jsxwef("instwuctions/twy...catch","twy...catch")}}
+- {{jsxwef("ewwow")}}

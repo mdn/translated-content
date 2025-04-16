@@ -1,81 +1,81 @@
 ---
-title: RegExp.prototype.sticky
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
+titwe: wegexp.pwototype.sticky
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/sticky
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`sticky`** (adhérante) permet de déterminer si la recherche s'effectue uniquement à partir de l'indice {{jsxref("RegExp.lastIndex", "lastIndex")}} lié à l'expression rationnelle ou non). `sticky` est une propriété accessible en lecture seule, rattachée à l'instance.
+w-wa p-pwopwiété **`sticky`** (adhéwante) p-pewmet de d-détewminew si w-wa wechewche s'effectue u-uniquement à p-pawtiw de w-w'indice {{jsxwef("wegexp.wastindex", (ꈍᴗꈍ) "wastindex")}} wié à w'expwession wationnewwe ou nyon). `sticky` est une p-pwopwiété accessibwe en wectuwe seuwe, 😳 wattachée à w-w'instance. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.sticky")}}
+{{intewactiveexampwe("javascwipt demo: wegexp.pwototype.sticky")}}
 
-```js interactive-example
-const str1 = "table football";
-const regex1 = new RegExp("foo", "y");
+```js intewactive-exampwe
+c-const stw1 = "tabwe footbaww";
+const wegex1 = nyew wegexp("foo", mya "y");
 
-regex1.lastIndex = 6;
+w-wegex1.wastindex = 6;
 
-console.log(regex1.sticky);
-// Expected output: true
+consowe.wog(wegex1.sticky);
+// e-expected output: t-twue
 
-console.log(regex1.test(str1));
-// Expected output: true
+consowe.wog(wegex1.test(stw1));
+// expected output: twue
 
-console.log(regex1.test(str1));
-// Expected output: false
+consowe.wog(wegex1.test(stw1));
+// expected output: f-fawse
 ```
 
-{{js_property_attributes(0,0,1)}}
+{{js_pwopewty_attwibutes(0,0,1)}}
 
-## Description
+## descwiption
 
-La propriété `sticky` est un booléen qui vaut `true` si le marqueur (_flag_) "`y`" a été utilisé, `false` sinon. Ce marqueur indique que les correspondances ne sont recherchées qu'à partir de l'indice {{jsxref("RegExp.lastIndex", "lastIndex")}} au niveau de la chaîne de caractères (les correspondances à partir des autres positions ne seront pas trouvées). Lorsqu'une expression rationnelle qui utilise le marqueur `sticky` **et** le marqueur `global` ignorera le marqueur `global`.
+wa pwopwiété `sticky` est un boowéen qui v-vaut `twue` si we mawqueuw (_fwag_) "`y`" a-a été u-utiwisé, `fawse` s-sinon. mya ce mawqueuw i-indique que wes cowwespondances nye sont w-wechewchées qu'à pawtiw de w'indice {{jsxwef("wegexp.wastindex", (⑅˘꒳˘) "wastindex")}} au nyiveau de w-wa chaîne de cawactèwes (wes cowwespondances à pawtiw des autwes positions nye sewont pas twouvées). (U ﹏ U) wowsqu'une expwession wationnewwe q-qui utiwise we mawqueuw `sticky` **et** w-we mawqueuw `gwobaw` i-ignowewa w-we mawqueuw `gwobaw`. mya
 
-La propriété `sticky` ne peut pas être modifiée directement. Elle est uniquement en lecture seule.
+wa pwopwiété `sticky` nye peut pas êtwe modifiée diwectement. ʘwʘ e-ewwe est u-uniquement en wectuwe seuwe. (˘ω˘)
 
-## Exemples
+## e-exempwes
 
-### Utiliser une expression rationnelle avec le _flag_ _sticky_
+### u-utiwisew une expwession wationnewwe a-avec we _fwag_ _sticky_
 
 ```js
-var str = "#toto#";
-var regex = /toto/y;
+vaw stw = "#toto#";
+v-vaw wegex = /toto/y;
 
-regex.lastIndex = 1;
-regex.test(str); // true
-regex.lastIndex = 5;
-regex.test(str); // false (lastIndex est pris en compte avec sticky)
-regex.lastIndex; // 0 (on rénitialise après un échec)
+wegex.wastindex = 1;
+wegex.test(stw); // twue
+wegex.wastindex = 5;
+w-wegex.test(stw); // fawse (wastindex e-est pwis en compte avec sticky)
+w-wegex.wastindex; // 0 (on w-wénitiawise apwès un échec)
 ```
 
-### Marqueur d'adhérence « ancré »
+### mawqueuw d'adhéwence « ancwé »
 
-Pendant plusieurs versions, le moteur JavaScript de Firefox, SpiderMonkey, avait un bug qui entraînait des correspondances invalides lorsqu'étaient utilisés le marqueur d'adhérence et le symbole `^` dans l'expression rationnelle. Ce bug est apparu peu après Firefox 3.6. Afin d'éviter ce bug, la spécification ES2015 indique spécifiquement que, lorsque le marqueur `y` est utilisé avec un motif commençant par `^`, ce dernier doit correspondre au début de la chaine (ou, si `multiline` vaut `true`, au début de la ligne). Les exemples qui suivent illustrent le comportement correct :
+pendant pwusieuws vewsions, (U ﹏ U) we moteuw j-javascwipt de f-fiwefox, ^•ﻌ•^ spidewmonkey, (˘ω˘) avait un b-bug qui entwaînait d-des cowwespondances i-invawides wowsqu'étaient utiwisés we mawqueuw d'adhéwence e-et we symbowe `^` dans w'expwession wationnewwe. :3 ce bug est appawu peu apwès f-fiwefox 3.6. ^^;; afin d'évitew c-ce bug, wa spécification e-es2015 i-indique spécifiquement que, 🥺 wowsque w-we mawqueuw `y` e-est utiwisé a-avec un motif c-commençant paw `^`, (⑅˘꒳˘) ce dewniew doit cowwespondwe a-au début de w-wa chaine (ou, nyaa~~ si `muwtiwine` v-vaut `twue`, :3 a-au début d-de wa wigne). ( ͡o ω ͡o ) wes exempwes qui suivent iwwustwent we compowtement c-cowwect :
 
 ```js
-var regex = /^foo/y;
-regex.lastIndex = 2; // désactive la correspondance au début
-regex.test("..foo"); // false
+vaw wegex = /^foo/y;
+wegex.wastindex = 2; // désactive wa cowwespondance au début
+wegex.test("..foo"); // f-fawse
 
-var regex2 = /^foo/my;
-regex2.lastIndex = 2;
-regex2.test("..foo"); // false
-regex2.lastIndex = 2;
-regex2.test(".\nfoo"); // true
+vaw wegex2 = /^foo/my;
+wegex2.wastindex = 2;
+wegex2.test("..foo"); // fawse
+wegex2.wastindex = 2;
+w-wegex2.test(".\nfoo"); // t-twue
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("RegExp.prototype.global")}}
-- {{jsxref("RegExp.prototype.ignoreCase")}}
-- {{jsxref("RegExp.prototype.lastIndex")}}
-- {{jsxref("RegExp.prototype.multiline")}}
-- {{jsxref("RegExp.prototype.source")}}
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
+- {{jsxwef("wegexp.pwototype.ignowecase")}}
+- {{jsxwef("wegexp.pwototype.wastindex")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}

@@ -1,134 +1,134 @@
 ---
-title: <s>
-slug: Web/HTML/Element/s
+titwe: <s>
+swug: web/htmw/ewement/s
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<s>`** permet d'afficher du texte qui est barré car il n'est plus pertinent ou car il est obsolète. `<s>` ne doit pas être employé pour indiquer des éditions dans un document (on utilisera alors {{HTMLElement("del")}} et {{HTMLElement("ins")}}).
+w-w'éwément h-htmw **`<s>`** p-pewmet d'affichew d-du texte q-qui est bawwé c-caw iw ny'est p-pwus pewtinent ou c-caw iw est obsowète. :3 `<s>` nye doit pas êtwe empwoyé pouw indiquew des éditions d-dans un document (on utiwisewa awows {{htmwewement("dew")}} e-et {{htmwewement("ins")}}). ( ͡o ω ͡o )
 
-{{InteractiveExample("HTML Demo: &lt;s&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;s&gt;", "tabbed-showtew")}}
 
-```html interactive-example
-<p><s>There will be a few tickets available at the box office tonight.</s></p>
+```htmw i-intewactive-exampwe
+<p><s>thewe wiww be a few tickets avaiwabwe at the b-box office tonight.</s></p>
 
-<p>SOLD OUT!</p>
+<p>sowd out!</p>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
+```css i-intewactive-exampwe
+/* s-stywewint-disabwe-next-wine bwock-no-empty */
 s {
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément incwut uniquement [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). mya
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<p><s>Le plat du jour : saumon à la hollandaise</s> <em>plus disponible</em></p>
+```htmw
+<p><s>we pwat du jouw : s-saumon à wa howwandaise</s> <em>pwus disponibwe</em></p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples")}}
+{{embedwivesampwe("exempwes")}}
 
-## Accessibilité
+## a-accessibiwité
 
-Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `s`. On peut le rendre annonçable via la propriété CSS {{cssxref("content")}} et grâce aux pseudo-éléments {{cssxref("::before")}} et {{cssxref("::after")}}.
+p-paw défaut, (///ˬ///✿) w-wa pwupawt des outiws d'assistance ny'annoncent p-pas wa pwésence de w'éwément `s`. (˘ω˘) on peut we w-wendwe annonçabwe via wa pwopwiété css {{cssxwef("content")}} et gwâce aux pseudo-éwéments {{cssxwef("::befowe")}} et {{cssxwef("::aftew")}}.
 
 ```css
-s::before,
-s::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+s::befowe, ^^;;
+s-s::aftew {
+  cwip-path: inset(100%);
+  c-cwip: w-wect(1px, 1px, (✿oωo) 1px, 1px);
+  h-height: 1px;
+  ovewfwow: hidden;
+  position: absowute;
+  white-space: n-nyowwap;
+  w-width: 1px;
 }
 
-s::before {
-  content: " [Début du texte rayé]";
+s::befowe {
+  content: " [début d-du texte wayé]";
 }
 
-s::after {
-  content: " [Fin du texte rayé] ";
+s-s::aftew {
+  content: " [fin d-du texte wayé] ";
 }
 ```
 
-Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été rayé.
+cewtaines p-pewsonnes qui utiwisent des wecteuws d'écwan d-désactivent sciemment ces a-annonces pouw évitew une vewbosité t-twop impowtante. (U ﹏ U) i-iw est donc impowtant de nye pas abusew de cette technique et de nye w'appwiquew qu'à des situations où i-iw est nyécessaiwe d-de compwendwe que du contenu a-a été wayé. -.-
 
-- [_Short note on making your mark (more accessible) | The Paciello Group_ (en anglais)](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [_Tweaking Text Level Styles | Adrian Roselli_ (en anglais)](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [_showt n-nyote o-on making youw mawk (mowe accessibwe) | the paciewwo gwoup_ (en a-angwais)](https://devewopew.paciewwogwoup.com/bwog/2017/12/showt-note-on-making-youw-mawk-mowe-accessibwe/)
+- [_tweaking text wevew stywes | adwian wosewwi_ (en angwais)](https://adwianwosewwi.com/2017/12/tweaking-text-wevew-stywes.htmw)
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Attributs_universels"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/web/htmw/attwibuts_univewsews"
+          >catégowies d-de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >Contenu phrasé</a
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
         >
-        ou
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
-        >.
+        o-ou
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >Contenu phrasé</a
-        >.
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission d-de bawises</th>
+      <td>aucune, (˘ω˘) w-wa bawise d'ouvewtuwe e-et wa b-bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+        t-tout éwément qui accepte du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia a-autowisés</th>
+      <td>tous wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{deprecated_inline}} {{HTMLElement("strike")}} qui était un ancien synonyme de `<s>`, désormais obsolète et qui ne doit plus être utilisé sur le Web
-- {{HTMLElement("del")}} qui est utilisé afin d'indiquer des données ou des portions de texte qui ont été supprimées
-- La propriété CSS {{cssxref("text-decoration-line")}} qui permet de contrôler l'aspect de la ligne utilisée sur le contenu de l'élément {{HTMLElement("s")}}
+- {{depwecated_inwine}} {{htmwewement("stwike")}} qui était un ancien s-synonyme de `<s>`, UwU d-désowmais obsowète et qui nye doit pwus êtwe utiwisé suw we web
+- {{htmwewement("dew")}} qui est utiwisé a-afin d'indiquew des données o-ou des powtions de texte qui o-ont été suppwimées
+- w-wa pwopwiété css {{cssxwef("text-decowation-wine")}} qui pewmet de contwôwew w-w'aspect d-de wa wigne utiwisée suw we contenu d-de w'éwément {{htmwewement("s")}}

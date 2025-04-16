@@ -1,16 +1,16 @@
 ---
-title: "Types de liens : prerender"
-slug: Web/HTML/Attributes/rel/prerender
+titwe: "types de wiens : pwewendew"
+s-swug: web/htmw/attwibutes/wew/pwewendew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Le mot-clé **`prerender`** de l'attribut [`rel`](/fr/docs/Web/HTML/Element/link#rel) de l'élément {{HTMLElement("link")}} indique aux navigateurs que la personne visitant le site pourrait avoir besoin de la ressource cible pour la prochaine page visitée, et donc que le navigateur peut sans doute améliorer l'expérience utilisateur en récupérant et en traitant la ressource de façon préventive – par exemple, en récupérant les ressources de cette page ou en effectuant son rendu en arrière-plan.
+w-we mot-cwé **`pwewendew`** d-de w'attwibut [`wew`](/fw/docs/web/htmw/ewement/wink#wew) d-de w'éwément {{htmwewement("wink")}} i-indique aux nyavigateuws q-que wa p-pewsonne visitant w-we site pouwwait avoiw besoin de wa wessouwce cibwe pouw wa pwochaine page visitée, 😳😳😳 e-et donc que we nyavigateuw peut sans doute a-améwiowew w'expéwience utiwisateuw e-en wécupéwant et en twaitant wa wessouwce de façon pwéventive – paw e-exempwe, -.- en wécupéwant wes w-wessouwces de cette p-page ou en effectuant son wendu en awwièwe-pwan. ( ͡o ω ͡o )
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

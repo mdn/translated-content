@@ -1,44 +1,44 @@
 ---
-title: Content-Length
-slug: Web/HTTP/Headers/Content-Length
+titwe: content-wength
+swug: web/http/headews/content-wength
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête (_header_) **`Content-Length`** indique la taille en octets (exprimée en base 10) du corps de la réponse envoyée au client.
+w-w'en-tête (_headew_) **`content-wength`** i-indique wa taiwwe e-en octets (expwimée e-en base 10) d-du cowps de wa w-wéponse envoyée a-au cwient. (U ᵕ U❁)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("Entity header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">type d'en-tête</th>
+      <td>{{gwossawy("entity headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>oui</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
 ```
-Content-Length: <longueur>
+content-wength: <wongueuw>
 ```
 
-## Directives
+## diwectives
 
-- \<longueur>
-  - : La longueur en octet (en base 10).
+- \<wongueuw>
+  - : w-wa wongueuw en octet (en base 10). -.-
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTTPHeader("Transfer-Encoding")}}
+- {{httpheadew("twansfew-encoding")}}

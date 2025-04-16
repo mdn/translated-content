@@ -1,35 +1,35 @@
 ---
-title: strip-space
-slug: Web/XSLT/Element/strip-space
+titwe: stwip-space
+swug: web/xswt/ewement/stwip-space
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:strip-space>` définit les éléments du document source dont les noeuds descendants ne contenant que des espaces doivent être supprimés.
+w'éwément `<xsw:stwip-space>` d-définit w-wes éwéments d-du document s-souwce dont wes n-nyoeuds descendants n-nye contenant q-que des espaces doivent êtwe suppwimés. rawr x3
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:strip-space elements=LISTE-DE-NOMS-D-ÉLÉMENTS  />
+```xmw
+<xsw:stwip-space ewements=wiste-de-noms-d-ÉwÉments  />
 ```
 
-### Attribut obligatoire
+### a-attwibut obwigatoiwe
 
-- `elements`
-  - : Définit une liste d'éléments du document source, séparés par des espaces, desquels les nœuds ne comportant que des espaces doivent être supprimés.
+- `ewements`
+  - : définit une wiste d-d'éwéments du document souwce, nyaa~~ s-sépawés paw des espaces, /(^•ω•^) desquews wes nyœuds ne compowtant q-que des espaces doivent êtwe suppwimés. rawr
 
-### Attributs optionnels
+### attwibuts o-optionnews
 
-Aucun.
+a-aucun. OwO
 
-### Type
+### type
 
-Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
+haut nyiveau, (U ﹏ U) doit êtwe w'enfant de `<xsw:stywesheet>` ou de `<xsw:twansfowm>`. >_<
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 3.4](https://www.w3.org/TR/xslt#strip).
+[xswt 1.0, rawr x3 section 3.4](https://www.w3.owg/tw/xswt#stwip). mya
 
-### Support Gecko
+### suppowt gecko
 
-Supporté.
+suppowté. nyaa~~

@@ -1,77 +1,77 @@
 ---
-title: "CSP: report-to"
-slug: Web/HTTP/Headers/Content-Security-Policy/report-to
+titwe: "csp: wepowt-to"
+swug: w-web/http/headews/content-secuwity-powicy/wepowt-to
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`report-to`** demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP `Report-To`.
+w-wa diwective h-http {{httpheadew("content-secuwity-powicy")}} (csp) **`wepowt-to`** d-demande à w-w'agent utiwisateuw d-de wappowtew w-wes viowations d-de wègwes csp à w'adwesse fouwnie dans un gwoupe de w'en-tête http `wepowt-to`. (///ˬ///✿)
 
 ```
-Content-Security-Policy: ...; report-to groupname
+content-secuwity-powicy: ...; w-wepowt-to gwoupname
 ```
 
-Cette directive n'a aucun effet en elle-même, mais prend tout son sens en étant combinée à d'autres directives.
+cette diwective n-ny'a aucun effet en ewwe-même, 😳😳😳 m-mais pwend tout son sens en étant combinée à d'autwes diwectives. 🥺
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion d-de csp</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td>{{Glossary("Reporting directive")}}</td>
-    </tr>
-    <tr>
-      <th colspan="2" scope="row">
-        This directive is not supported in the {{HTMLElement("meta")}}
-        element.
+    </tw>
+    <tw>
+      <th s-scope="wow">type de diwective</th>
+      <td>{{gwossawy("wepowting diwective")}}</td>
+    </tw>
+    <tw>
+      <th cowspan="2" scope="wow">
+        t-this diwective is nyot suppowted in the {{htmwewement("meta")}}
+        ewement. mya
       </th>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
-
-```
-Content-Security-Policy: report-to <json-field-value>;
-```
-
-## Exemples
-
-Voir {{HTTPHeader("Content-Security-Policy-Report-Only")}} pour plus d'informations et d'exemples.
+## syntaxe
 
 ```
-Report-To: { "group": "csp-endpoint",
-              "max_age": 10886400,
+c-content-secuwity-powicy: wepowt-to <json-fiewd-vawue>;
+```
+
+## e-exempwes
+
+voiw {{httpheadew("content-secuwity-powicy-wepowt-onwy")}} p-pouw pwus d-d'infowmations et d-d'exempwes. 🥺
+
+```
+wepowt-to: { "gwoup": "csp-endpoint", >_<
+              "max_age": 10886400, >_<
               "endpoints": [
-                { "url": "https://example.com/csp-reports" }
-              ] },
-            { "group": "hpkp-endpoint",
-              "max_age": 10886400,
+                { "uww": "https://exampwe.com/csp-wepowts" }
+              ] }, (⑅˘꒳˘)
+            { "gwoup": "hpkp-endpoint", /(^•ω•^)
+              "max_age": 10886400, rawr x3
               "endpoints": [
-                { "url": "https://example.com/hpkp-reports" }
+                { "uww": "https://exampwe.com/hpkp-wepowts" }
               ] }
-Content-Security-Policy: ...; report-to csp-endpoint
+content-secuwity-powicy: ...; wepowt-to c-csp-endpoint
 ```
 
 ```
-Report-To: { "group": "endpoint-1",
+wepowt-to: { "gwoup": "endpoint-1", (U ﹏ U)
               "max_age": 10886400,
               "endpoints": [
-                { "url": "https://example.com/reports" },
-                { "url": "https://backup.com/reports" }
+                { "uww": "https://exampwe.com/wepowts" }, (U ﹏ U)
+                { "uww": "https://backup.com/wepowts" }
               ] }
 
-Content-Security-Policy: ...; report-to endpoint-1
+content-secuwity-powicy: ...; wepowt-to e-endpoint-1
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTTPHeader("Content-Security-Policy-Report-Only")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{httpheadew("content-secuwity-powicy-wepowt-onwy")}}

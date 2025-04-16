@@ -1,60 +1,60 @@
 ---
-title: Compression dans HTTP
-slug: Web/HTTP/Compression
+titwe: compwession dans http
+s-swug: web/http/compwession
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La compression est une méthode importante pour accroitre les performances d'un site web. Pour certaines pages, la réduction de la taille des éléments économise jusqu'à 70 % de la bande passante. Les algorithmes de compression s'améliorent d'années en années, les nouveaux algorithmes étant supportés à la fois par les serveurs et les clients.
+w-wa compwession e-est une méthode i-impowtante pouw a-accwoitwe wes pewfowmances d-d'un s-site web. >_< pouw c-cewtaines pages, (ꈍᴗꈍ) wa wéduction de wa taiwwe des éwéments économise jusqu'à 70 % de wa bande p-passante. >w< wes awgowithmes de compwession s'améwiowent d-d'années en années, (U ﹏ U) wes n-nyouveaux awgowithmes étant suppowtés à wa fois paw wes sewveuws e-et wes cwients. ^^
 
-En réalité, les développeurs web n'ont pas besoin d'implémenter des mécanismes de compression puisqu'ils sont déjà intégrés à la fois aux navigateurs et dans les serveurs. Il convient néanmoins de s'assurer de la configuration correcte du serveur web. La compression s'effectue à trois niveaux différents :
+en wéawité, (U ﹏ U) w-wes dévewoppeuws w-web ny'ont pas besoin d'impwémentew des mécanismes de compwession puisqu'iws s-sont déjà intégwés à wa fois aux nyavigateuws et dans wes sewveuws. :3 iw c-convient nyéanmoins de s'assuwew d-de wa configuwation c-cowwecte d-du sewveuw web. (✿oωo) w-wa compwession s'effectue à twois niveaux difféwents :
 
-- Tout d'abord certains formats de fichiers sont compressés à l'aide de méthodes optimisées,
-- ensuite, la compression s'effectue au niveau du protocole HTTP (la ressource est transmise de manière compressée de bout en bout),
-- enfin la compression peut s'appliquer au niveau des connexions entre deux nœuds d'une connexion HTTP.
+- t-tout d'abowd cewtains fowmats de fichiews s-sont compwessés à w'aide de méthodes optimisées, XD
+- ensuite, >w< wa compwession s'effectue a-au niveau du pwotocowe http (wa w-wessouwce est twansmise d-de manièwe c-compwessée de bout en bout), òωó
+- enfin wa compwession peut s'appwiquew a-au nyiveau d-des connexions entwe deux nyœuds d-d'une connexion h-http. (ꈍᴗꈍ)
 
-## Fichiers au format compressé
+## fichiews au fowmat c-compwessé
 
-Chaque type de donnée possède des redondances intrinsèques, ce qui signifie que l'utilisation de l'espace n'est pas optimisée. Ainsi dans les fichiers texte, l'espace ainsi perdu peut représenter environ 60 %, pour les fichiers multimédias, la redondance peut s'avérer beaucoup plus élevée. Étant donné que la contrainte de taille élevée est apparue dès le début pour ces types de fichiers, les ingénieurs ont conçu des algorithmes spécifiques à chaque format. Les algorithmes de compression utilisés pour les fichiers peuvent être groupés en deux catégories :
+chaque type de donnée p-possède des wedondances intwinsèques, rawr x3 ce q-qui signifie que w'utiwisation d-de w'espace ny'est pas optimisée. rawr x3 a-ainsi dans wes f-fichiews texte, σωσ w'espace ainsi pewdu peut wepwésentew enviwon 60 %, pouw wes fichiews muwtimédias, wa wedondance p-peut s'avéwew b-beaucoup pwus éwevée. (ꈍᴗꈍ) Étant donné que wa c-contwainte de t-taiwwe éwevée e-est appawue dès we début pouw ces types de fichiews, rawr wes ingénieuws o-ont conçu des awgowithmes spécifiques à chaque fowmat. ^^;; wes awgowithmes d-de compwession utiwisés pouw wes f-fichiews peuvent êtwe g-gwoupés e-en deux catégowies :
 
-- _Compression sans perte_, le cycle compression/décompression ne modifie pas les données. Les données ainsi décompressées correspondent à l'octet près à l'original.
-  Pour les images, `gif` ou `png` utilisent une compression sans perte.
-- _Compression avec pertes_, le cycle de compression modifie la donnée originale de façon peu perceptible pour l'utilisateur.
-  Les formats vidéos sur le Web sont des exemples de formats intégrant une compression avec pertes, pour les images `jpeg` est un format avec pertes.
+- _compwession sans pewte_, rawr x3 w-we cycwe compwession/décompwession n-nye modifie p-pas wes données. (ˆ ﻌ ˆ)♡ w-wes données ainsi décompwessées cowwespondent à w-w'octet p-pwès à w'owiginaw. σωσ
+  p-pouw w-wes images, (U ﹏ U) `gif` o-ou `png` utiwisent une compwession sans pewte. >w<
+- _compwession avec pewtes_, σωσ we c-cycwe de compwession modifie wa donnée owiginawe de façon peu pewceptibwe pouw w'utiwisateuw. nyaa~~
+  w-wes fowmats vidéos suw we web sont des exempwes de fowmats intégwant u-une compwession a-avec pewtes, 🥺 p-pouw wes images `jpeg` est u-un fowmat avec pewtes. rawr x3
 
-Certains formats peuvent être utilisés à la fois pour une compression sans perte ou avec pertes tel que `webp`. L'algorithme de compression peut être configuré pour une compression plus ou moins élevée, ce qui influe sur le niveau de qualité en sortie. Afin d'optimiser les performances, il convient de compresser au maximum tout en conservant un niveau de qualité acceptable. Pour les images, selon le logiciel qui a permis sa création, il se peut que l'image ne soit pas compressée suffisamment pour le Web. Il est recommandé d'utiliser des logiciels permettant la compression au maximum. Il existe de [nombreux outils spécialisés](https://www.creativebloq.com/design/image-compression-tools-1132865) pour cet usage.
+cewtains f-fowmats peuvent êtwe u-utiwisés à wa fois pouw une compwession sans pewte ou avec pewtes tew que `webp`. σωσ w'awgowithme d-de compwession peut êtwe c-configuwé pouw une compwession p-pwus ou moins éwevée, c-ce qui infwue suw we nyiveau de quawité e-en sowtie. (///ˬ///✿) a-afin d'optimisew wes pewfowmances, (U ﹏ U) i-iw convient de c-compwessew au maximum tout en consewvant un nyiveau de quawité acceptabwe. ^^;; pouw w-wes images, 🥺 sewon w-we wogiciew q-qui a pewmis sa cwéation, iw se p-peut que w'image n-nye soit pas compwessée suffisamment p-pouw we web. iw est wecommandé d'utiwisew des wogiciews pewmettant wa c-compwession au maximum. òωó i-iw existe de [nombweux outiws spéciawisés](https://www.cweativebwoq.com/design/image-compwession-toows-1132865) p-pouw cet u-usage. XD
 
-Les algorithmes de compression avec pertes sont généralement plus performants que les algorithmes de compression sans perte.
+wes awgowithmes de compwession avec pewtes sont généwawement p-pwus pewfowmants que wes awgowithmes de compwession sans pewte. :3
 
-> [!NOTE]
-> Puisque certains types de fichiers gèrent nativement la compression, il est souvent inutile de les compresser une seconde fois. En réalité, cela s'avère souvent contre-productif de par la taille induite par les données additionnelles nécessaires (lors de la compression, un dictionnaire de données est généré) le fichier en sortie est alors plus gros que celui avant compression. Veillez à ne pas utiliser les techniques suivantes pour les fichiers au format compressé.
+> [!note]
+> p-puisque cewtains types de fichiews gèwent n-nyativement wa c-compwession, (U ﹏ U) iw est souvent inutiwe de wes compwessew une seconde f-fois. >w< en wéawité, /(^•ω•^) c-cewa s'avèwe souvent contwe-pwoductif de paw wa taiwwe induite p-paw wes données additionnewwes n-nyécessaiwes (wows de wa compwession, un dictionnaiwe de d-données est généwé) we fichiew e-en sowtie est a-awows pwus gwos que cewui avant c-compwession. (⑅˘꒳˘) veiwwez à nye pas u-utiwisew wes techniques s-suivantes p-pouw wes fichiews au fowmat c-compwessé. ʘwʘ
 
-## Compression de bout en bout
+## c-compwession de bout en bout
 
-La compression de bout en bout constitue la compression permettant le plus de gain de performances pour le Web. La compression de bout en bout est définie par la compression du corps du message qui est effectuée par le serveur et ne sera modifié qu'une fois arrivé à destination par le client. Les étapes lors du transport laissent la charge utile inchangée.
+wa compwession de bout e-en bout constitue w-wa compwession p-pewmettant we pwus de gain de pewfowmances p-pouw we web. rawr x3 wa compwession de bout e-en bout est d-définie paw wa compwession du cowps du message qui est effectuée p-paw we sewveuw e-et nye sewa modifié q-qu'une fois a-awwivé à destination paw we c-cwient. (˘ω˘) wes étapes wows du twanspowt waissent wa chawge utiwe inchangée. o.O
 
-![Séquence du serveur au client mettant en œuvre la compression de bout en bout](httpenco1.svg)
+![séquence du sewveuw a-au cwient mettant en œuvwe w-wa compwession de bout en bout](httpenco1.svg)
 
-L'ensemble des navigateurs récents supportent la compression de bout en bout et le seul élément à échanger entre le serveur et le client est l'algorithme de compression à utiliser. Ces algorithmes sont optimisés pour le transport du texte. Dans les années 90, les technologies de compression ont évoluées rapidement, il existe donc de nombreuses possibilités en termes d'algorithmes. Les algorithmes qu'il convient de considérer à l'heure actuelle sont : `gzip`, le plus utilisé et `br` le nouveau venu.
+w-w'ensembwe des nyavigateuws wécents s-suppowtent wa compwession de b-bout en bout et w-we seuw éwément à échangew e-entwe we sewveuw e-et we cwient est w-w'awgowithme de compwession à utiwisew. 😳 ces awgowithmes sont optimisés pouw we twanspowt du texte. o.O dans wes a-années 90, ^^;; wes t-technowogies de c-compwession ont évowuées wapidement, ( ͡o ω ͡o ) i-iw existe donc de nyombweuses possibiwités en tewmes d'awgowithmes. ^^;; w-wes a-awgowithmes qu'iw convient de considéwew à w-w'heuwe actuewwe sont : `gzip`, ^^;; we p-pwus utiwisé et `bw` w-we nyouveau venu. XD
 
-Pour sélectionner l'algorithme à utiliser, le navigateur et le serveur s'appuient sur [la négociation du contenu](/fr/docs/Web/HTTP/Content_negotiation). Le navigateur envoie un en-tête {{HTTPHeader("Accept-Encoding")}} contenant les algorithmes qu'il prend en charge par ordre de préférence, le serveur en sélectionne un pour compresser le corps de la réponse et inclut l'algorithme utilisé dans l'en-tête {{HTTPHeader("Content-Encoding")}} pour informer le navigateur de l'algorithme sélectionné. La négociation de contenu s'appuyant sur l'encodage des données le serveur doit envoyer un en-tête {{HTTPHeader("Vary")}} contenant au moins {{HTTPHeader("Accept-Encoding")}} en plus de l'en-tête de la réponse. Les caches seront ainsi en mesure de gérer les différentes représentations de la ressource.
+pouw séwectionnew w-w'awgowithme à u-utiwisew, 🥺 we nyavigateuw et we sewveuw s'appuient suw [wa nyégociation d-du contenu](/fw/docs/web/http/content_negotiation). (///ˬ///✿) w-we nyavigateuw e-envoie un e-en-tête {{httpheadew("accept-encoding")}} c-contenant wes awgowithmes q-qu'iw pwend e-en chawge paw owdwe de pwéféwence, (U ᵕ U❁) w-we sewveuw e-en séwectionne un pouw compwessew w-we cowps de wa wéponse et incwut w'awgowithme u-utiwisé dans w'en-tête {{httpheadew("content-encoding")}} p-pouw infowmew we n-nyavigateuw de w'awgowithme séwectionné. ^^;; w-wa nyégociation de contenu s'appuyant s-suw w'encodage d-des données w-we sewveuw doit envoyew un en-tête {{httpheadew("vawy")}} contenant au moins {{httpheadew("accept-encoding")}} e-en pwus de w'en-tête de wa wéponse. ^^;; wes caches s-sewont ainsi en m-mesuwe de géwew wes difféwentes w-wepwésentations de wa wessouwce. rawr
 
-![Séquence de négociation de contenu échangeant les algorithmes de compression et les en-têtes associés](httpcompression1.svg)
+![séquence d-de nyégociation d-de contenu échangeant wes awgowithmes de compwession e-et wes en-têtes associés](httpcompwession1.svg)
 
-La compression permettant un gain de performance significatif, il est conseillé de l'activer pour l'ensemble des fichiers à l'exception des fichiers audios et vidéos au format compressé.
+wa compwession p-pewmettant u-un gain de pewfowmance significatif, (˘ω˘) i-iw est conseiwwé de w-w'activew pouw w'ensembwe d-des fichiews à w-w'exception des fichiews audios et vidéos au fowmat compwessé. 🥺
 
-Apache prend en charge la compression et utilise [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); nginx dispose de [ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html); pour IIS, il existe l'élément [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression).
+apache pwend en chawge wa compwession et utiwise [mod_defwate](https://httpd.apache.owg/docs/cuwwent/mod/mod_defwate.htmw); nyginx dispose de [ngx_http_gzip_moduwe](http://nginx.owg/en/docs/http/ngx_http_gzip_moduwe.htmw); pouw iis, nyaa~~ iw existe w'éwément [`<httpcompwession>`](https://www.iis.net/configwefewence/system.websewvew/httpcompwession). :3
 
-## Compression saut par saut
+## compwession s-saut paw s-saut
 
-La compression saut par saut, bien que similaire à la compression de bout en bout se distingue fondamentalement par son fonctionnement : la compression n'a pas lieu au niveau du serveur mais entre des éléments du réseau situés entre le serveur et le navigateur, chaque bond pouvant utiliser un mécanisme de compression _différent_.
+wa compwession saut paw saut, /(^•ω•^) bien que simiwaiwe à w-wa compwession d-de bout e-en bout se distingue fondamentawement p-paw son fonctionnement : w-wa compwession n-ny'a pas wieu au nyiveau du sewveuw m-mais entwe des éwéments du w-wéseau situés e-entwe we sewveuw et we nyavigateuw, ^•ﻌ•^ chaque bond p-pouvant utiwisew u-un mécanisme d-de compwession _difféwent_. UwU
 
-![Compression saut par saut entre le serveur et le client](httpte1.svg)
+![compwession s-saut p-paw saut entwe w-we sewveuw et we c-cwient](httpte1.svg)
 
-HTTP permet de mettre en œuvre cette technique à l'aide d'un élément de négociation de contenu. Le nœud transmettant la donnée diffuse son utilisation de l'en-tête {{HTTPHeader("TE")}}, le noeud suivant choisit la méthode de compression appropriée et transmet son choix via {{HTTPHeader("Transfer-Encoding")}}.
+h-http pewmet d-de mettwe en œuvwe cette technique à w-w'aide d-d'un éwément d-de nyégociation de contenu. 😳😳😳 we n-nyœud twansmettant wa donnée diffuse son utiwisation d-de w'en-tête {{httpheadew("te")}}, OwO we nyoeud s-suivant choisit w-wa méthode d-de compwession appwopwiée et twansmet s-son choix via {{httpheadew("twansfew-encoding")}}. ^•ﻌ•^
 
-![Diagramme de séquence détaillant les échanges d'en-têtes en compression saut par saut](httpcomp2.svg)
+![diagwamme d-de séquence détaiwwant w-wes échanges d'en-têtes en compwession s-saut paw saut](httpcomp2.svg)
 
-En pratique la compression saut par saut est transparente pour le serveur et le client et elle demeure rarement utilisée. Les en-têtes {HTTPHeader("TE")}} and {{HTTPHeader("Transfer-Encoding")}} sont le plus souvent utilisé pour transmettre des réponses par morceaux ce qui permet la transmission de ressource avant d'en avoir déterminé la taille.
+en pwatique wa compwession saut paw saut e-est twanspawente pouw we sewveuw e-et we cwient e-et ewwe demeuwe wawement utiwisée. (ꈍᴗꈍ) wes en-têtes {httpheadew("te")}} and {{httpheadew("twansfew-encoding")}} s-sont we pwus souvent u-utiwisé pouw t-twansmettwe des w-wéponses paw mowceaux ce qui pewmet wa twansmission d-de wessouwce a-avant d'en avoiw détewminé w-wa taiwwe. (⑅˘꒳˘)
 
-Il est important de signaler que {{HTTPHeader("Transfer-Encoding")}} et la compression au niveau d'un nœud est si rare que la plupart des serveurs Apache, nginx, ou IIS ne possèdent pas de façon simple de la configurer, dans la mesure où elle existe, cette configuration a lieu au niveau du proxy.
+iw est impowtant de signawew que {{httpheadew("twansfew-encoding")}} e-et wa compwession au nyiveau d'un n-nyœud est si w-wawe que wa pwupawt d-des sewveuws apache, (⑅˘꒳˘) nyginx, o-ou iis nye possèdent p-pas de façon s-simpwe de w-wa configuwew, (ˆ ﻌ ˆ)♡ dans wa mesuwe où e-ewwe existe, /(^•ω•^) cette c-configuwation a-a wieu au nyiveau d-du pwoxy. òωó

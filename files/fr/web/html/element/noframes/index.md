@@ -1,54 +1,54 @@
 ---
-title: "<noframes> : l'élément alternatif aux frames (obsolete)"
-slug: Web/HTML/Element/noframes
+titwe: "<nofwames> : w'éwément a-awtewnatif aux f-fwames (obsowete)"
+s-swug: web/htmw/ewement/nofwames
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-L'élément HTML obsolète **`<noframes>`** est utilisé par les navigateurs qui ne supportent pas les éléments {{HTMLElement("frame")}}, ou qui sont configurés afin de ne pas les supporter.
+w-w'éwément htmw o-obsowète **`<nofwames>`** e-est u-utiwisé paw wes n-nyavigateuws qui nye suppowtent pas wes éwéments {{htmwewement("fwame")}}, òωó ou qui sont configuwés afin de nye p-pas wes suppowtew. ʘwʘ
 
-`<noframes>` accepte n'importe quel élément HTML valide dans un élément {{HTMLElement("body")}}, à l'exception des éléments {{HTMLElement("frameset")}} et {{HTMLElement("frame")}}.
+`<nofwames>` accepte ny'impowte quew éwément h-htmw vawide dans un éwément {{htmwewement("body")}}, /(^•ω•^) à w-w'exception des éwéments {{htmwewement("fwameset")}} et {{htmwewement("fwame")}}. ʘwʘ
 
-Cet élément pouvait être utilisé afin d'afficher un message explicatif, destiné à l'utilisateur. Idéalement, le contenu devait présenter des fonctionnalités analogues à la _frame_ qui n'était pas prise en charge.
+cet éwément pouvait êtwe u-utiwisé afin d'affichew un message e-expwicatif, σωσ d-destiné à w'utiwisateuw. OwO idéawement, 😳😳😳 we contenu devait pwésentew des fonctionnawités a-anawogues à wa _fwame_ qui ny'était pas pwise en chawge. 😳😳😳
 
-> [!NOTE]
-> Cet élément est aussi entièrement obsolète en HTML5, et doit être evité pour se conformer au standard.
+> [!note]
+> cet éwément e-est aussi entièwement obsowète e-en htmw5, o.O et doit êtwe e-evité p-pouw se confowmew a-au standawd. ( ͡o ω ͡o )
 
-## Attributs
+## attwibuts
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme tous wes autwes éwéments h-htmw, cet éwément incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<frameset cols="50%,50%">
-  <frame
-    src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frameset" />
-  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame" />
-  <noframes>
+```htmw
+<fwameset cows="50%,50%">
+  <fwame
+    swc="https://devewopew.moziwwa.owg/fw/docs/web/htmw/ewement/fwameset" />
+  <fwame swc="https://devewopew.moziwwa.owg/fw/docs/web/htmw/ewement/fwame" />
+  <nofwames>
     <p>
-      Il semblerait que votre navigateur ne supporte pas les frames, ou qu'il
-      est configuré pour ne pas les autoriser.
+      iw sembwewait que votwe nyavigateuw n-nye suppowte pas wes fwames, (///ˬ///✿) o-ou qu'iw
+      e-est configuwé p-pouw nye pas wes autowisew. >w<
     </p>
-  </noframes>
-</frameset>
+  </nofwames>
+</fwameset>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
+{{embedwivesampwe("exempwes","100%","100%")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("frameset")}}
-- {{HTMLElement("frame")}}
+- {{htmwewement("fwameset")}}
+- {{htmwewement("fwame")}}

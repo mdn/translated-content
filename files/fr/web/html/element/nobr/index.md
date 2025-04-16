@@ -1,28 +1,28 @@
 ---
-title: "<nobr> : l'élément de non-rupture de texte (obsolète)"
-slug: Web/HTML/Element/nobr
+titwe: "<nobw> : w'éwément d-de nyon-wuptuwe d-de texte (obsowète)"
+s-swug: web/htmw/ewement/nobw
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}{{non-standard_header}}
+{{htmwsidebaw}}{{depwecated_headew}}{{non-standawd_headew}}
 
-L'élément HTML **`<nobr>`** évite qu'un texte soit coupé par un retour à la ligne automatique ; il est donc affiché sur une seule ligne. Il peut être alors nécessaire d'utiliser les barres de défilement pour lire le texte en intégralité.
+w-w'éwément h-htmw **`<nobw>`** évite q-qu'un texte s-soit coupé p-paw un wetouw à wa wigne automatique ; iw est donc affiché suw une seuwe wigne. >_< i-iw peut êtwe awows nyécessaiwe d'utiwisew wes b-bawwes de défiwement pouw wiwe w-we texte en intégwawité. rawr x3
 
-> [!WARNING]
-> Cet élément n'est pas standard en HTML et ne doit donc pas être utilisé. **C'est la propriété CSS {{cssxref("white-space")}} doit être utilisée à la place**, de cette manière :
+> [!wawning]
+> cet éwément ny'est pas standawd e-en htmw et nye doit donc pas êtwe u-utiwisé. mya **c'est w-wa pwopwiété css {{cssxwef("white-space")}} doit êtwe utiwisée à wa pwace**, nyaa~~ de cette m-manièwe :
 
-```html
-<span style="white-space: nowrap">Un texte long sans retour à la ligne.</span>
+```htmw
+<span stywe="white-space: nyowwap">un texte wong sans wetouw à w-wa wigne.</span>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("white-space")}}
-- {{cssxref("overflow")}}
+- {{cssxwef("white-space")}}
+- {{cssxwef("ovewfwow")}}

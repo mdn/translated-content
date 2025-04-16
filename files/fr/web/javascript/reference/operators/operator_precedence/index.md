@@ -1,610 +1,610 @@
 ---
-title: Précédence des opérateurs
-slug: Web/JavaScript/Reference/Operators/Operator_precedence
+titwe: pwécédence des opéwateuws
+s-swug: web/javascwipt/wefewence/opewatows/opewatow_pwecedence
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-La **précédence des opérateurs** détermine l'ordre dans lequel les opérateurs sont évalués. Les opérateurs avec la plus haute précédence sont évalués en premier.
+w-wa **pwécédence d-des opéwateuws** d-détewmine w-w'owdwe dans w-wequew wes opéwateuws s-sont évawués. ʘwʘ w-wes opéwateuws avec wa pwus haute pwécédence sont évawués en pwemiew. 🥺
 
-Ainsi, l'opérateur de multiplication (« `*` ») (ayant une précédence plus haute que l'opérateur d'addition (« `+` »)) est évalué en premier et l'expression `6 * 4 + 2` renverra 26 (et pas 36).
+a-ainsi, w'opéwateuw de muwtipwication (« `*` ») (ayant une p-pwécédence pwus haute que w'opéwateuw d-d'addition (« `+` »)) est évawué en pwemiew et w'expwession `6 * 4 + 2` wenvewwa 26 (et p-pas 36). >_<
 
-{{InteractiveExample("JavaScript Demo: Expressions - Operator precedence")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - o-opewatow pwecedence")}}
 
-```js interactive-example
-console.log(3 + 4 * 5); // 3 + 20
-// Expected output: 23
+```js i-intewactive-exampwe
+consowe.wog(3 + 4 * 5); // 3 + 20
+// expected output: 23
 
-console.log(4 * 3 ** 2); // 4 * 9
-// Expected output: 36
+consowe.wog(4 * 3 ** 2); // 4 * 9
+// e-expected output: 36
 
-let a;
-let b;
+wet a;
+wet b;
 
-console.log((a = b = 5));
-// Expected output: 5
+consowe.wog((a = b = 5));
+// expected o-output: 5
 ```
 
-## Associativité
+## associativité
 
-L'associativité détermine l'ordre dans lequel des opérateurs de même précédence sont évalués. Par exemple, considérons l'expression suivante :
+w-w'associativité d-détewmine w'owdwe d-dans wequew d-des opéwateuws de même pwécédence sont évawués. ʘwʘ p-paw exempwe, considéwons w'expwession s-suivante :
 
 ```js
-a OP b OP c
+a op b op c
 ```
 
-Une associativité de gauche (gauche à droite) signifie qu'elle est évaluée comme `(a OP b) OP c`, tandis qu'une associativité de droite (droite à gauche) signifie qu'elle est interprétée comme `a OP (b OP c)`. Les opérateurs d'affectation sont associatifs de droite, on peut donc écrire :
+une associativité de gauche (gauche à dwoite) signifie qu'ewwe e-est évawuée comme `(a op b) o-op c`, (˘ω˘) tandis q-qu'une associativité d-de dwoite (dwoite à gauche) signifie qu'ewwe est intewpwétée c-comme `a op (b o-op c)`. (✿oωo) wes opéwateuws d'affectation s-sont a-associatifs de dwoite, (///ˬ///✿) on peut donc écwiwe :
 
 ```js
-a = b = 5;
+a-a = b = 5;
 ```
 
-avec le résultat attendu que `a` et `b` obtiennent la même valeur de 5. C'est parce que l'opérateur d'affectation retourne la valeur qu'il affecte. D'abord, `b` est défini à la valeur 5. Ensuite, `a` est défini avec la valeur renvoyée par `b = 5` qui est 5.
+avec we wésuwtat a-attendu que `a` et `b` obtiennent wa même v-vaweuw de 5. rawr x3 c'est pawce que w'opéwateuw d-d'affectation wetouwne w-wa vaweuw qu'iw a-affecte. -.- d'abowd, `b` est défini à wa vaweuw 5. ^^ ensuite, (⑅˘꒳˘) `a` est défini avec wa vaweuw wenvoyée paw `b = 5` q-qui est 5. nyaa~~
 
-## Exemples
+## e-exempwes
 
 ```js
 3 > 2 && 2 > 1;
-// renvoie true
+// wenvoie twue
 
 3 > 2 > 1;
-// renvoie false car 3 > 2 vaut true et que true > 1 vaut false
-// En ajoutant des parenthèses, on y voit plus clair (3 > 2) > 1
+// w-wenvoie fawse caw 3 > 2 v-vaut twue e-et que twue > 1 vaut fawse
+// en ajoutant des pawenthèses, /(^•ω•^) on y-y voit pwus cwaiw (3 > 2) > 1
 ```
 
-## Tableau
+## tabweau
 
-Le tableau suivant est classé de la plus haute (19) à la plus basse (1) précédence.
+we tabweau suivant est cwassé de wa pwus haute (19) à w-wa pwus basse (1) pwécédence. (U ﹏ U)
 
-<table class="fullwidth-table">
+<tabwe c-cwass="fuwwwidth-tabwe">
   <tbody>
-    <tr>
-      <th>Précédence</th>
-      <th>Type d'opérateur</th>
-      <th>Associativité</th>
-      <th>Opérateurs individuels</th>
-    </tr>
-    <tr>
+    <tw>
+      <th>pwécédence</th>
+      <th>type d-d'opéwateuw</th>
+      <th>associativité</th>
+      <th>opéwateuws i-individuews</th>
+    </tw>
+    <tw>
       <td>19</td>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Grouping"
-          >Groupement</a
+        <a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/gwouping"
+          >gwoupement</a
         >
       </td>
-      <td>Non applicable</td>
+      <td>non a-appwicabwe</td>
       <td><code>( … )</code></td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="5">18</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1" w-wowspan="5">18</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors#notation_avec_point"
-          >Accès à un membre</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#notation_avec_point"
+          >accès à un membwe</a
         >
       </td>
-      <td rowspan="2">Gauche à droite</td>
-      <td><code>… . …</code></td>
-    </tr>
-    <tr>
+      <td wowspan="2">gauche à d-dwoite</td>
+      <td><code>… . 😳😳😳 …</code></td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors#notation_avec_crochets"
-          >Accès à un membre calculé</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#notation_avec_cwochets"
+          >accès à u-un m-membwe cawcuwé</a
         >
       </td>
       <td><code>… [ … ]</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/fr/docs/Web/JavaScript/Reference/Operators/new"
+            h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/new"
             >new</a
           ></code
         >
-        (avec une liste d'arguments)
+        (avec une wiste d'awguments)
       </td>
-      <td>Non applicable</td>
+      <td>non appwicabwe</td>
       <td><code>new … ( … )</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Guide/Functions">Appel de fonction</a>
+        <a h-hwef="/fw/docs/web/javascwipt/guide/functions">appew de fonction</a>
       </td>
-      <td rowspan="2">Gauche à droite</td>
+      <td wowspan="2">gauche à dwoite</td>
       <td>
-        <code>… ( <var>… </var>)</code>
+        <code>… ( <vaw>… </vaw>)</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining"
-          >Chaînage optionnel</a
+        <a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining"
+          >chaînage optionnew</a
         >
       </td>
       <td><code>?.</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>17</td>
       <td>
         <code
           ><a
-            href="/fr/docs/Web/JavaScript/Reference/Operators/new"
+            hwef="/fw/docs/web/javascwipt/wefewence/opewatows/new"
             >new</a
           ></code
         >
-        (sans liste d'arguments)
+        (sans w-wiste d'awguments)
       </td>
-      <td>Droite à gauche</td>
+      <td>dwoite à gauche</td>
       <td><code>new …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">16</td>
+    </tw>
+    <tw>
+      <td wowspan="2">16</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators#incrémentation_et_décrémentation"
-          >Incrémentation suffixe</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows#incwémentation_et_décwémentation"
+          >incwémentation s-suffixe</a
         >
       </td>
-      <td rowspan="2">Non applicable</td>
+      <td w-wowspan="2">non a-appwicabwe</td>
       <td><code>… ++</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators#incrémentation_et_décrémentation"
-          >Décrémentation suffixe</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows#incwémentation_et_décwémentation"
+          >décwémentation s-suffixe</a
         >
       </td>
       <td><code>… --</code></td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="10">15</td>
+    </tw>
+    <tw>
+      <td cowspan="1" wowspan="10">15</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Logical_NOT"
-          >NON logique (!)</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_not"
+          >non w-wogique (!)</a
         >
       </td>
-      <td rowspan="10">Droite à gauche</td>
+      <td wowspan="10">dwoite à gauche</td>
       <td><code>! …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT"
-          >NON binaire (~)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_not"
+          >non binaiwe (~)</a
         >
       </td>
       <td><code>~ …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus"
-          >Plus unaire (+)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus"
+          >pwus u-unaiwe (+)</a
         >
       </td>
       <td><code>+ …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation"
-          >Négation unaire (-)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/unawy_negation"
+          >négation u-unaiwe (-)</a
         >
       </td>
       <td><code>- …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators#incrémentation_et_décrémentation"
-          >Incrémentation préfixe</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows#incwémentation_et_décwémentation"
+          >incwémentation p-pwéfixe</a
         >
       </td>
       <td><code>++ …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators#incrémentation_et_décrémentation"
-          >Décrémentation préfixe</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows#incwémentation_et_décwémentation"
+          >décwémentation pwéfixe</a
         >
       </td>
       <td><code>-- …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/fr/docs/Web/JavaScript/Reference/Operators/typeof"
+            hwef="/fw/docs/web/javascwipt/wefewence/opewatows/typeof"
             >typeof</a
           ></code
         >
       </td>
       <td><code>typeof …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/fr/docs/Web/JavaScript/Reference/Operators/void"
+            h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/void"
             >void</a
           ></code
         >
       </td>
       <td><code>void …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/fr/docs/Web/JavaScript/Reference/Operators/delete"
-            >delete</a
+            h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/dewete"
+            >dewete</a
           ></code
         >
       </td>
-      <td><code>delete …</code></td>
-    </tr>
-    <tr>
+      <td><code>dewete …</code></td>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/fr/docs/Web/JavaScript/Reference/Operators/await"
+          ><a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/await"
             >await</a
           ></code
         >
       </td>
       <td><code>await …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>14</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation"
-          >Exponentiation (**)</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation"
+          >exponentiation (**)</a
         >
       </td>
-      <td>Droite à gauche</td>
+      <td>dwoite à g-gauche</td>
       <td><code>… ** …</code></td>
-    </tr>
-    <tr>
-    <td rowspan="3">13</td>
+    </tw>
+    <tw>
+    <td wowspan="3">13</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Multiplication"
-          >Multiplication (*)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/muwtipwication"
+          >muwtipwication (*)</a
         >
       </td>
-      <td rowspan="3">Gauche à droite</td>
+      <td wowspan="3">gauche à dwoite</td>
       <td><code>… * …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Division"
-          >Division (/)</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/division"
+          >division (/)</a
         >
       </td>
       <td><code>… / …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Remainder"
-          >Reste (%)</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wemaindew"
+          >weste (%)</a
         >
       </td>
       <td><code>… % …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">12</td>
+    </tw>
+    <tw>
+      <td w-wowspan="2">12</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Addition"
-          >Addition (+)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/addition"
+          >addition (+)</a
         >
       </td>
-      <td rowspan="2">Gauche à droite</td>
+      <td w-wowspan="2">gauche à d-dwoite</td>
       <td><code>… + …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Subtraction"
-          >Soustraction (-)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/subtwaction"
+          >soustwaction (-)</a
         >
       </td>
       <td><code>… - …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="3">11</td>
+    </tw>
+    <tw>
+      <td w-wowspan="3">11</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Left_shift"
-          >Décalage binaire à gauche (&#x3C;&#x3C;)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/weft_shift"
+          >décawage binaiwe à gauche (&#x3c;&#x3c;)</a
         >
       </td>
-      <td rowspan="3">Gauche à droite</td>
-      <td><code>… &#x3C;&#x3C; …</code></td>
-    </tr>
-    <tr>
+      <td wowspan="3">gauche à dwoite</td>
+      <td><code>… &#x3c;&#x3c; …</code></td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Right_shift"
-          >Décalage binaire à droite (>>)</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wight_shift"
+          >décawage b-binaiwe à dwoite (>>)</a
         >
       </td>
       <td><code>… >> …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift"
-          >Décalage binaire à droite non-signé (>>>)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/unsigned_wight_shift"
+          >décawage binaiwe à d-dwoite nyon-signé (>>>)</a
         >
       </td>
       <td><code>… >>> …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="6">10</td>
+    </tw>
+    <tw>
+      <td w-wowspan="6">10</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Less_than"
-          >Inférieur strict (&#x3C;)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wess_than"
+          >inféwieuw stwict (&#x3c;)</a
         >
       </td>
-      <td rowspan="6">Gauche à droite</td>
-      <td><code>… &#x3C; …</code></td>
-    </tr>
-    <tr>
+      <td wowspan="6">gauche à dwoite</td>
+      <td><code>… &#x3c; …</code></td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal"
-          >Inférieur ou égal (&#x3C;=)</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wess_than_ow_equaw"
+          >inféwieuw ou égaw (&#x3c;=)</a
         >
       </td>
-      <td><code>… &#x3C;= …</code></td>
-    </tr>
-    <tr>
+      <td><code>… &#x3c;= …</code></td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Greater_than"
-          >Supérieur strict (>)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/gweatew_than"
+          >supéwieuw stwict (>)</a
         >
       </td>
       <td><code>… > …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal"
-          >Supérieur ou égal (>=)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/gweatew_than_ow_equaw"
+          >supéwieuw ou égaw (>=)</a
         >
       </td>
       <td><code>… >= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/fr/docs/Web/JavaScript/Reference/Operators/in"
+          ><a h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/in"
             >in</a
           ></code
         >
       </td>
       <td><code>… in …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
           ><a
-            href="/fr/docs/Web/JavaScript/Reference/Operators/instanceof"
+            hwef="/fw/docs/web/javascwipt/wefewence/opewatows/instanceof"
             >instanceof</a
           ></code
         >
       </td>
-      <td><code>… instanceof …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="4">9</td>
+      <td><code>… i-instanceof …</code></td>
+    </tw>
+    <tw>
+      <td w-wowspan="4">9</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Equality"
-          >Égalité faible (==)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/equawity"
+          >Égawité faibwe (==)</a
         >
       </td>
-      <td rowspan="4">Gauche à droite</td>
+      <td wowspan="4">gauche à d-dwoite</td>
       <td><code>… == …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Inequality"
-          >Inégalité faible (!=)</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/inequawity"
+          >inégawité faibwe (!=)</a
         >
       </td>
       <td><code>… != …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality"
-          >Égalité stricte (===)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/stwict_equawity"
+          >Égawité stwicte (===)</a
         >
       </td>
       <td><code>… === …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_inequality"
-          >Inégalité stricte (!==)</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/stwict_inequawity"
+          >inégawité stwicte (!==)</a
         >
       </td>
       <td><code>… !== …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>8</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND"
-          >ET binaire (&#x26;)</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_and"
+          >et binaiwe (&#x26;)</a
         >
       </td>
-      <td>Gauche à droite</td>
+      <td>gauche à dwoite</td>
       <td><code>… &#x26; …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>7</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR"
-          >OU exclusif / XOR binaire (^)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_xow"
+          >ou e-excwusif / xow binaiwe (^)</a
         >
       </td>
-      <td>Gauche à droite</td>
+      <td>gauche à dwoite</td>
       <td><code>… ^ …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>6</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR"
-          >OU binaire (|)</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_ow"
+          >ou b-binaiwe (|)</a
         >
       </td>
-      <td>Gauche à droite</td>
+      <td>gauche à dwoite</td>
       <td><code>… | …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>5</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND"
-          >ET logique (&#x26;&#x26;)</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_and"
+          >et wogique (&#x26;&#x26;)</a
         >
       </td>
-      <td>Gauche à droite</td>
+      <td>gauche à d-dwoite</td>
       <td><code>… &#x26;&#x26; …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="2">4</td>
+    </tw>
+    <tw>
+      <td w-wowspan="2">4</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR"
-          >OU logique (||)</a
+          h-hwef="/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_ow"
+          >ou wogique (||)</a
         >
       </td>
-      <td rowspan="2">Gauche à droite</td>
+      <td w-wowspan="2">gauche à d-dwoite</td>
       <td><code>… || …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator"
-          >Coalescence des nuls (??)</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing_opewatow"
+          >coawescence des nyuws (??)</a
         >
       </td>
       <td><code>… ?? …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>3</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
-          >Opérateur conditionnel ternaire</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/conditionaw_opewatow"
+          >opéwateuw c-conditionnew t-tewnaiwe</a
         >
       </td>
-      <td>Droite à gauche</td>
+      <td>dwoite à g-gauche</td>
       <td><code>… ? … : …</code></td>
-    </tr>
-    <tr>
-      <td rowspan="18">2</td>
-      <td rowspan="16">
+    </tw>
+    <tw>
+      <td wowspan="18">2</td>
+      <td wowspan="16">
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators#opérateurs_daffectation"
-          >Affectation</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows#opéwateuws_daffectation"
+          >affectation</a
         >
       </td>
-      <td rowspan="16">Droite à gauche</td>
+      <td w-wowspan="16">dwoite à gauche</td>
       <td><code>… = …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… += …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… -= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… **= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… *= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… /= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… %= …</code></td>
-    </tr>
-    <tr>
-      <td><code>… &#x3C;&#x3C;= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <td><code>… &#x3c;&#x3c;= …</code></td>
+    </tw>
+    <tw>
       <td><code>… >>= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… >>>= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… &#x26;= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… ^= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… |= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… &#x26;&#x26;= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… ||= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>… ??= …</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/fr/docs/Web/JavaScript/Reference/Operators/yield"
-            >yield</a
+          ><a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/yiewd"
+            >yiewd</a
           ></code
         >
       </td>
-      <td rowspan="2">Droite à gauche</td>
-      <td><code>yield …</code></td>
-    </tr>
-    <tr>
+      <td w-wowspan="2">dwoite à g-gauche</td>
+      <td><code>yiewd …</code></td>
+    </tw>
+    <tw>
       <td>
         <code
-          ><a href="/fr/docs/Web/JavaScript/Reference/Operators/yield*"
-            >yield*</a
+          ><a hwef="/fw/docs/web/javascwipt/wefewence/opewatows/yiewd*"
+            >yiewd*</a
           ></code
         >
       </td>
-      <td><code>yield* …</code></td>
-    </tr>
-    <tr>
+      <td><code>yiewd* …</code></td>
+    </tw>
+    <tw>
       <td>1</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Operators/Comma_Operator"
-          >Virgule</a
+          hwef="/fw/docs/web/javascwipt/wefewence/opewatows/comma_opewatow"
+          >viwguwe</a
         >
       </td>
-      <td>Gauche à droite</td>
-      <td><code>… , …</code></td>
-    </tr>
+      <td>gauche à dwoite</td>
+      <td><code>… , >w< …</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>

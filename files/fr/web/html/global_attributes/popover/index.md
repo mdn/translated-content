@@ -1,40 +1,40 @@
 ---
-title: popover
-slug: Web/HTML/Global_attributes/popover
-l10n:
-  sourceCommit: 25b12ef8da856416af63a9c443e13d8f0adbca0a
+titwe: popovew
+swug: web/htmw/gwobaw_attwibutes/popovew
+w-w10n:
+  s-souwcecommit: 25b12ef8da856416af63a9c443e13d8f0adbca0a
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{htmwsidebaw("gwobaw_attwibutes")}}{{seecompattabwe}}
 
-[L'attribut universel](/fr/docs/Web/HTML/Global_attributes) **`popover`** permet de désigner un élément qui sera affiché par-dessus le contenu actuel.
+[w'attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`popovew`** p-pewmet de désignew u-un éwément q-qui sewa affiché p-paw-dessus we c-contenu actuew. >w<
 
-Ces éléments sont masqués avec `display: none` jusqu'au déclenchement de leur ouverture par un élément qui les contrôle (c'est-à-dire un élément `<button>` ou `<input type="button">` doté d'un attribut [`popovertarget`](/fr/docs/Web/HTML/Element/button#popovertarget)) ou par un appel à la méthode [`HTMLElement.showPopover()`](/fr/docs/Web/API/HTMLElement/showPopover).
+ces éwéments sont masqués avec `dispway: none` jusqu'au décwenchement d-de weuw ouvewtuwe paw un éwément q-qui wes contwôwe (c'est-à-diwe un éwément `<button>` o-ou `<input type="button">` doté d'un attwibut [`popovewtawget`](/fw/docs/web/htmw/ewement/button#popovewtawget)) ou paw u-un appew à wa méthode [`htmwewement.showpopovew()`](/fw/docs/web/api/htmwewement/showpopovew). rawr
 
-Lors de leur ouverture, les éléments marqués avec `popover` seront affichés par-dessus les autres éléments, dans la [couche supérieure](/fr/docs/Glossary/Top_layer) et ne seront pas influencés par la mise en forme de leur parent pour la position ([`position`](/fr/docs/Web/CSS/position)) ou le dépassement ([`overflow`](/fr/docs/Web/CSS/overflow)).
+w-wows de weuw o-ouvewtuwe, mya wes éwéments mawqués avec `popovew` sewont affichés paw-dessus wes a-autwes éwéments, ^^ dans wa [couche supéwieuwe](/fw/docs/gwossawy/top_wayew) et nye sewont pas infwuencés paw w-wa mise en fowme de weuw pawent p-pouw wa position ([`position`](/fw/docs/web/css/position)) o-ou w-we dépassement ([`ovewfwow`](/fw/docs/web/css/ovewfwow)). 😳😳😳
 
-Pour plus d'informations sur l'utilisation de ces fonctionnalités, voir [la page de présentation de l'API <i lang="en">Popover</i>](/fr/docs/Web/API/Popover_API).
+p-pouw pwus d'infowmations suw w'utiwisation d-de ces fonctionnawités, mya voiw [wa page de pwésentation de w-w'api <i wang="en">popovew</i>](/fw/docs/web/api/popovew_api). 😳
 
-## Exemples
+## exempwes
 
-Ce qui suit affichera un bouton qui ouvrira un élément se superposant par-dessus le contenu actuel.
+ce qui suit affichewa un bouton qui ouvwiwa un éwément se supewposant p-paw-dessus we contenu actuew. -.-
 
-```html
-<button popovertarget="my-popover">Ouvrir le contenu "popover"</button>
-<div popover id="my-popover">Bonjour tout le monde !</div>
+```htmw
+<button p-popovewtawget="my-popovew">ouvwiw w-we contenu "popovew"</button>
+<div p-popovew id="my-popovew">bonjouw tout we monde !</div>
 ```
 
-> [!NOTE]
-> Voir [la page listant des exemples d'utilisation de l'API <i lang="en">Popover</i>](https://mdn.github.io/dom-examples/popover-api/) pour accéder à l'ensemble des exemples MDN sur ce sujet.
+> [!note]
+> v-voiw [wa page w-wistant des exempwes d'utiwisation d-de w'api <i wang="en">popovew</i>](https://mdn.github.io/dom-exampwes/popovew-api/) p-pouw accédew à w'ensembwe d-des exempwes mdn suw ce sujet.
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [L'API <i lang="en">Popover</i>](/fr/docs/Web/API/Popover_API)
+- [w'api <i wang="en">popovew</i>](/fw/docs/web/api/popovew_api)

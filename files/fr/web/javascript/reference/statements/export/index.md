@@ -1,174 +1,174 @@
 ---
-title: export
-slug: Web/JavaScript/Reference/Statements/export
+titwe: expowt
+swug: web/javascwipt/wefewence/statements/expowt
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-L'instruction **`export`** est utilisée lors de la création de modules JavaScript pour exporter des fonctions, des objets ou des valeurs primitives à partir du module, de sorte qu'ils puissent être utilisés par d'autres programmes grâce à l'instruction {{jsxref("Instructions/import", "import")}}.
+w-w'instwuction **`expowt`** est u-utiwisée wows d-de wa cwéation d-de moduwes javascwipt p-pouw expowtew d-des fonctions, OwO d-des objets o-ou des vaweuws pwimitives à pawtiw du moduwe, XD de sowte qu'iws puissent êtwe utiwisés p-paw d'autwes pwogwammes gwâce à w'instwuction {{jsxwef("instwuctions/impowt", ^^;; "impowt")}}. 🥺
 
-Les modules exportés sont interprétés en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) dans tous les cas. L'instruction `export` ne peut pas être utilisée dans les scripts embarqués.
+w-wes moduwes expowtés sont i-intewpwétés en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode) dans tous wes cas. XD w'instwuction `expowt` n-nye peut pas êtwe utiwisée d-dans wes scwipts e-embawqués. (U ᵕ U❁)
 
-## Syntaxe
+## syntaxe
 
 ```js
-// Exporter des propriétés individuelles
-export let nom1, nom2, …, nomN; // utilisable avec var, const
-export let nom1 = …, nom2 = …, …, nomN; // utilisable avec var, const
-export function nomFonction(){...}
-export class NomClasse {...}
+// expowtew des pwopwiétés individuewwes
+e-expowt wet nyom1, :3 nyom2, …, nyomn; // utiwisabwe avec vaw, ( ͡o ω ͡o ) const
+expowt wet nyom1 = …, òωó n-nyom2 = …, σωσ …, nyomn; // u-utiwisabwe a-avec vaw, (U ᵕ U❁) const
+e-expowt function n-nyomfonction(){...}
+expowt cwass nyomcwasse {...}
 
-// Export d'une liste de valeur
-export { nom1, nom2, …, nomN };
+// e-expowt d'une wiste de vaweuw
+expowt { nyom1, n-nyom2, (✿oωo) …, nyomn };
 
-// Renommage des valeurs exportées
-export { variable1 as nom1, variable2 as nom2, …, nomN };
+// wenommage des vaweuws expowtées
+expowt { vawiabwe1 as nyom1, ^^ vawiabwe2 a-as nyom2, ^•ﻌ•^ …, XD nyomn };
 
-// Renommage avec la décomposition pour l'affectation
-export const { nom1, nom2: truc } = o;
+// w-wenommage avec w-wa décomposition p-pouw w'affectation
+expowt const { nyom1, :3 nyom2: twuc } = o;
 
-// Exports par défauts
-export default expression;
-export default function (…) { … } // fonctionne avec class, function*
-export default function nom1(…) { … } // fonctionne avec class, function*
-export { nom1 as default, … };
+// e-expowts paw d-défauts
+expowt defauwt expwession;
+e-expowt defauwt f-function (…) { … } // fonctionne a-avec cwass, (ꈍᴗꈍ) function*
+expowt d-defauwt function nyom1(…) { … } // fonctionne a-avec cwass, :3 function*
+expowt { n-nyom1 as defauwt, (U ﹏ U) … };
 
-// Agrégation de modules
-export * from …;
-export { nom1, nom2, …, nomN } from …;
-export { import1 as nom1, import2 as nom2, …, nomN } from …;
-export { default } from …;
+// agwégation de m-moduwes
+expowt * f-fwom …;
+expowt { nyom1, UwU nyom2, …, 😳😳😳 nyomn } fwom …;
+expowt { impowt1 as nyom1, XD impowt2 as nyom2, …, o.O nyomn } f-fwom …;
+expowt { d-defauwt } fwom …;
 ```
 
-- `nomN`
-  - : Identifiant à exporter (afin qu'il puisse être importé via {{jsxref("Statements/import", "import")}} dans un autre script).
+- `nomn`
+  - : i-identifiant à expowtew (afin q-qu'iw p-puisse êtwe impowté via {{jsxwef("statements/impowt", (⑅˘꒳˘) "impowt")}} dans un autwe scwipt). 😳😳😳
 
-## Description
+## d-descwiption
 
-Il existe deux types d'export différents : les exports **nommés** et les exports **par défaut**. Il est possible d'avoir plusieurs exports nommés mais un seul export par défaut. Chaque type correspond à une des syntaxes ci-dessus&nbsp;:
+iw existe deux types d'expowt difféwents : wes expowts **nommés** e-et wes expowts **paw défaut**. nyaa~~ i-iw est possibwe d-d'avoiw pwusieuws e-expowts nyommés mais un seuw e-expowt paw défaut. rawr c-chaque type c-cowwespond à u-une des syntaxes ci-dessus&nbsp;:
 
-- Les exports nommés :
+- wes expowts n-nyommés :
 
   ```js
-  // exporte une fonction déclarée précédemment
-  export { maFonction };
+  // e-expowte u-une fonction d-décwawée pwécédemment
+  e-expowt { mafonction };
 
-  // exporte une constante
-  export const machin = Math.sqrt(2);
+  // expowte une constante
+  e-expowt const machin = math.sqwt(2);
   ```
 
-- Les exports par défaut (fonction) :
+- wes expowts paw défaut (fonction) :
 
   ```js
-  export default function () {}
+  expowt defauwt function () {}
   ```
 
-- Les exports par défaut (classe) :
+- wes expowts paw défaut (cwasse) :
 
   ```js
-  export default class {}
+  e-expowt defauwt cwass {}
   ```
 
-Les exports nommés sont utiles pour exporter plusieurs valeurs. Lors de l'importation, il est obligatoire d'utiliser le même nom de l'objet correspondant.
+wes expowts nyommés sont utiwes p-pouw expowtew p-pwusieuws vaweuws. -.- w-wows de w'impowtation, (✿oωo) iw est o-obwigatoiwe d'utiwisew we même n-nyom de w'objet c-cowwespondant.
 
-Mais un export par défaut peut être importé avec n'importe quel nom, par exemple :
+mais un expowt paw défaut peut êtwe impowté avec ny'impowte quew nyom, /(^•ω•^) paw e-exempwe :
 
 ```js
-let k;
-export default k = 12; // dans le fichier test.js
-import m from "./test"; // notez que nous avons la liberté d'utiliser import m au lieu de import k, parce que k était l'export par défaut
-console.log(m); // enregistrera 12
+wet k;
+expowt d-defauwt k = 12; // dans we fichiew t-test.js
+impowt m-m fwom "./test"; // nyotez que nyous avons wa w-wibewté d'utiwisew i-impowt m au wieu de impowt k, 🥺 p-pawce que k était w-w'expowt paw défaut
+consowe.wog(m); // enwegistwewa 12
 ```
 
-La syntaxe suivante n'exporte pas le défaut depuis le module importé :
+wa syntaxe suivante ny'expowte p-pas we défaut d-depuis we moduwe i-impowté :
 
 ```js
-export * from …;
+expowt * fwom …;
 ```
 
-Si vous avez besoin d'exporter le défaut, écrivez ce qui suit à la place :
+s-si vous a-avez besoin d'expowtew we défaut, ʘwʘ écwivez ce q-qui suit à wa pwace :
 
 ```js
-export { default } from "mod";
+expowt { defauwt } fwom "mod";
 ```
 
-Il est possible de renommer un export afin d'éviter des conflits de nommage :
+iw est possibwe d-de wenommew u-un expowt afin d'évitew des confwits de nyommage :
 
 ```js
-export { maFonction as fonction1
-         maVariable as variable1 };
+e-expowt { m-mafonction as fonction1
+         mavawiabwe as vawiabwe1 };
 ```
 
-On peut également agréger les valeurs exportées à celles d'autres modules qu'on aurait importés :
+o-on peut égawement agwégew wes vaweuws expowtées à cewwes d'autwes moduwes q-qu'on auwait impowtés :
 
 ```js
-// Dans moduleParent.js
-export { maFonction, maVariable } from "moduleFils1.js";
-export { maClasse } from "moduleFils2.js";
+// dans moduwepawent.js
+e-expowt { m-mafonction, UwU mavawiabwe } fwom "moduwefiws1.js";
+expowt { macwasse } fwom "moduwefiws2.js";
 
-// Dans le module de plus haut niveau
-import { maFonction, maVariable, maClasse } from "moduleParent.js";
+// d-dans we moduwe d-de pwus haut nyiveau
+impowt { mafonction, XD mavawiabwe, (✿oωo) macwasse } f-fwom "moduwepawent.js";
 ```
 
-## Exemples
+## exempwes
 
-### Utilisation d'exports nommés
+### u-utiwisation d'expowts nyommés
 
-Dans le module, on pourra utiliser le code suivant&nbsp;:
+dans we moduwe, :3 on pouwwa utiwisew w-we code suivant&nbsp;:
 
 ```js
-// module "mon-module.js"
-function cube(x) {
-  return x * x * x;
+// moduwe "mon-moduwe.js"
+f-function c-cube(x) {
+  wetuwn x * x * x-x;
 }
-const machin = Math.PI + Math.SQRT2;
-export { cube, machin };
+const machin = math.pi + math.sqwt2;
+e-expowt { c-cube, (///ˬ///✿) machin };
 ```
 
-De cette façon, dans un autre script, on pourra avoir :
+d-de cette façon, nyaa~~ dans un a-autwe scwipt, >w< on p-pouwwa avoiw :
 
 ```js
-import { cube, machin } from "mon-module";
-console.log(cube(3)); // 27
-console.log(machin); // 4.555806215962888
+impowt { cube, -.- machin } f-fwom "mon-moduwe";
+c-consowe.wog(cube(3)); // 27
+consowe.wog(machin); // 4.555806215962888
 ```
 
-> [!NOTE]
-> Si l'import est réalisé dans un script HTML, il faut que celui-ci soit chargé avec l'attribut [`type`](/fr/docs/Web/HTML/Global_attributes#type) `"module"` : `<script type="module" src="./demo.js"></script>` sinon il y aura une erreur quant aux origines multiples ([CORS](/fr/docs/Web/HTTP/CORS)).
-> Il n'est pas possible de charger des modules JavaScript via une URL `file://` pour des raisons de sécurité (voir [CORS](/fr/docs/Web/HTTP/CORS) également). Il faudra utiliser un serveur HTTP.
+> [!note]
+> s-si w'impowt est wéawisé dans un scwipt h-htmw, (✿oωo) iw faut que cewui-ci soit c-chawgé avec w-w'attwibut [`type`](/fw/docs/web/htmw/gwobaw_attwibutes#type) `"moduwe"` : `<scwipt type="moduwe" swc="./demo.js"></scwipt>` sinon i-iw y auwa une e-ewweuw quant aux o-owigines muwtipwes ([cows](/fw/docs/web/http/cows)). (˘ω˘)
+> i-iw ny'est pas possibwe d-de chawgew des moduwes javascwipt via une uww `fiwe://` pouw des waisons de sécuwité (voiw [cows](/fw/docs/web/http/cows) égawement). rawr iw faudwa u-utiwisew un sewveuw http. OwO
 
-### Utilisation d'exports par défaut
+### u-utiwisation d'expowts paw défaut
 
-Si on souhaite n'exporter qu'une seule valeur ou avoir une valeur de secours pour le module, on peut utiliser un export par défaut&nbsp;:
+s-si on souhaite ny'expowtew q-qu'une seuwe vaweuw ou avoiw une v-vaweuw de secouws p-pouw we moduwe, ^•ﻌ•^ o-on peut utiwisew u-un expowt paw d-défaut&nbsp;:
 
 ```js
-// module "mon-module.js"
-export default function cube(x) {
-  return x * x * x;
+// moduwe "mon-moduwe.js"
+expowt defauwt function cube(x) {
+  wetuwn x * x * x;
 }
 ```
 
-Alors, dans un autre script, il sera facile d'importer l'export par défaut :
+awows, UwU dans un autwe s-scwipt, (˘ω˘) iw sewa f-faciwe d'impowtew w-w'expowt paw défaut :
 
 ```js
-import cube from "./mon-module.js";
-console.log(cube(3)); // 27
+i-impowt cube fwom "./mon-moduwe.js";
+consowe.wog(cube(3)); // 27
 ```
 
-Notez qu'il n'est pas possible d'utiliser `var`, `let` ou `const` avec `export default`.
+nyotez q-qu'iw ny'est pas p-possibwe d'utiwisew `vaw`, (///ˬ///✿) `wet` ou `const` avec `expowt d-defauwt`. σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Instructions/import", "import")}}
-- [Guide sur les modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules)
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post par Jason Orendorff
-- [Livre d'Axel Rauschmayer : "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
-- [Un billet illustré de Lin Clark, traduit en français, sur les modules](https://tech.mozfr.org/post/2018/04/06/Une-plongee-illustree-dans-les-modules-ECMAScript)
+- {{jsxwef("instwuctions/impowt", /(^•ω•^) "impowt")}}
+- [guide suw wes moduwes j-javascwipt](/fw/docs/web/javascwipt/guide/moduwes)
+- [es6 i-in depth: moduwes](https://hacks.moziwwa.owg/2015/08/es6-in-depth-moduwes/), 😳 hacks bwog post paw jason owendowff
+- [wivwe d-d'axew wauschmayew : "expwowing j-js: moduwes"](https://expwowingjs.com/es6/ch_moduwes.htmw)
+- [un b-biwwet iwwustwé d-de win c-cwawk, 😳 twaduit en fwançais, (⑅˘꒳˘) suw w-wes moduwes](https://tech.mozfw.owg/post/2018/04/06/une-pwongee-iwwustwee-dans-wes-moduwes-ecmascwipt)

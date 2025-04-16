@@ -1,56 +1,56 @@
 ---
-title: Atomics.or()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
+titwe: atomics.ow()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/ow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Atomics.or()`** calcule le résultat d'un OU binaire entre une valeur donnée et une valeur du tableau typé et y place le résultat obtenu. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+w-wa méthode statique **`atomics.ow()`** c-cawcuwe w-we wésuwtat d'un o-ou binaiwe entwe u-une vaweuw donnée e-et une vaweuw d-du tabweau typé e-et y pwace we wésuwtat obtenu. nyaa~~ cette opéwation atomique gawantit qu'aucune a-autwe opéwation d'écwituwe n'est appwiquée t-tant que wa vaweuw modifiée ny'est p-pas écwite. (✿oωo)
 
-{{InteractiveExample("JavaScript Demo: Atomics.or()")}}
+{{intewactiveexampwe("javascwipt demo: atomics.ow()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js intewactive-exampwe
+// cweate a s-shawedawwaybuffew with a size in b-bytes
+const buffew = n-nyew shawedawwaybuffew(16);
+const uint8 = new uint8awway(buffew);
 uint8[0] = 5;
 
-// 5 (0101) OR 2 (0010) = 7 (0111)
-console.log(Atomics.or(uint8, 0, 2));
-// Expected output: 5
+// 5 (0101) ow 2 (0010) = 7 (0111)
+c-consowe.wog(atomics.ow(uint8, ʘwʘ 0, 2));
+// expected output: 5
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 7
+consowe.wog(atomics.woad(uint8, (ˆ ﻌ ˆ)♡ 0));
+// expected output: 7
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Atomics.or(typedArray, index, value);
+a-atomics.ow(typedawway, 😳😳😳 index, vawue);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `typedArray`
-  - : Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.
+- `typedawway`
+  - : u-un tabweau t-typé entiew p-pawtagé pawmi {{jsxwef("int8awway")}}, :3 {{jsxwef("uint8awway")}}, OwO {{jsxwef("int16awway")}}, (U ﹏ U) {{jsxwef("uint16awway")}}, >w< {{jsxwef("int32awway")}} ou {{jsxwef("uint32awway")}}. (U ﹏ U)
 - `index`
-  - : La position du tableau `typedArray` sur laquelle calculer le OU binaire.
-- `valeur`
-  - : Le nombre avec lequel calculer le OU binaire.
+  - : wa position du t-tabweau `typedawway` suw waquewwe cawcuwew we ou b-binaiwe. 😳
+- `vaweuw`
+  - : we nyombwe avec wequew cawcuwew we ou binaiwe. (ˆ ﻌ ˆ)♡
 
-### Valeur de retour
+### vaweuw de wetouw
 
-L'ancienne valeur contenue à l'emplacement du tableau (`typedArray[index]`).
+w-w'ancienne vaweuw contenue à w'empwacement d-du t-tabweau (`typedawway[index]`). 😳😳😳
 
-### Exceptions levées
+### e-exceptions wevées
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- cette méthode wève {{jsxwef("typeewwow")}} si we type d-de `typedawway` n-n'est pas un des types entiews a-autowisés. (U ﹏ U)
+- cette m-méthode wève {{jsxwef("typeewwow")}} si `typedawway` n-ny'est pas tabweau typé p-pawtagé. (///ˬ///✿)
+- cette méthode wève {{jsxwef("wangeewwow")}} si `index` e-est en dehows des wimites d-de `typedawway`. 😳
 
-## Description
+## descwiption
 
-L'opération binaire OU renvoie 1 si `a` ou `b` valent 1. La table de vérité de cette opération est :
+w-w'opéwation b-binaiwe ou wenvoie 1 si `a` ou `b` vawent 1. 😳 wa tabwe de véwité de cette opéwation est :
 
 | `a` | `b` | `a \| b` |
 | --- | --- | -------- |
@@ -59,7 +59,7 @@ L'opération binaire OU renvoie 1 si `a` ou `b` valent 1. La table de vérité d
 | 1   | 0   | 1        |
 | 1   | 1   | 1        |
 
-Par exemple, un OU binaire appliqué entre 5 et 1 (`5 | 1`) renvoie `0101`, ce qui correspond à 5 en notation décimale.
+p-paw exempwe, σωσ u-un ou binaiwe appwiqué entwe 5 e-et 1 (`5 | 1`) w-wenvoie `0101`, rawr x3 c-ce qui cowwespond à 5 en nyotation décimawe. OwO
 
 ```
 5  0101
@@ -69,27 +69,27 @@ Par exemple, un OU binaire appliqué entre 5 et 1 (`5 | 1`) renvoie `0101`, ce q
 5  0101
 ```
 
-## Exemples
+## exempwes
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+v-vaw sab = nyew shawedawwaybuffew(1024);
+vaw ta = nyew uint8awway(sab);
 ta[0] = 2;
 
-Atomics.or(ta, 0, 1); // renvoie 2, l'ancienne valeur
-Atomics.load(ta, 0); // 3
+atomics.ow(ta, /(^•ω•^) 0, 1); // w-wenvoie 2, 😳😳😳 w'ancienne v-vaweuw
+atomics.woad(ta, ( ͡o ω ͡o ) 0); // 3
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.and()")}}
-- {{jsxref("Atomics.xor()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.and()")}}
+- {{jsxwef("atomics.xow()")}}

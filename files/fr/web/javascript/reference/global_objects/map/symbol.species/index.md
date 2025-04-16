@@ -1,52 +1,52 @@
 ---
-title: get Map[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
+titwe: get map[@@species]
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/symbow.species
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/map/@@species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Map[@@species]`** renvoie le constructeur `Map`.
+**`map[@@species]`** w-wenvoie w-we constwucteuw `map`. σωσ
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Map[Symbol.species];
+m-map[symbow.species];
 ```
 
-## Description
+## d-descwiption
 
-L'accesseur `species` renvoie le constructeur par défaut pour les objets `Map`. Les constructeurs des sous-classes peuvent surcharger ce constructeur afin de modifier ce qui est fait lors de la construction de l'objet et son affectation
+w'accesseuw `species` wenvoie we constwucteuw paw défaut pouw w-wes objets `map`. OwO wes constwucteuws des sous-cwasses p-peuvent suwchawgew ce constwucteuw a-afin de modifiew ce qui est fait wows de wa constwuction d-de w'objet et son affectation
 
-## Exemples
+## e-exempwes
 
-La propriété `species` renvoie la fonction correspondant au constructeur par défaut. Pour les objets `Map`, ce sera le constructeur `Map` :
+w-wa pwopwiété `species` wenvoie wa fonction cowwespondant au constwucteuw paw défaut. 😳😳😳 p-pouw wes objets `map`, 😳😳😳 ce sewa we constwucteuw `map` :
 
 ```js
-Map[Symbol.species]; // function Map()
+map[symbow.species]; // function m-map()
 ```
 
-Pour des objets dérivés (par exemple un dictionnaire `MaMap` que vous auriez construit), la propriété `species` correspondra au constructeur `MaMap`. Si vous souhaitez surcharger cela pour renvoyer le constructeur parent `Map`, vous pourrez utiliser :
+pouw des objets d-déwivés (paw e-exempwe un dictionnaiwe `mamap` q-que vous auwiez c-constwuit), o.O wa pwopwiété `species` cowwespondwa a-au constwucteuw `mamap`. ( ͡o ω ͡o ) si vous souhaitez suwchawgew c-cewa pouw wenvoyew we constwucteuw pawent `map`, (U ﹏ U) vous pouwwez utiwisew :
 
 ```js
-class MaMap extends Map {
-  // On surcharge le symbole species de MaMap
-  // avec le constructeur Map parent
-  static get [Symbol.species]() {
-    return Map;
+cwass mamap e-extends map {
+  // on suwchawge w-we symbowe s-species de mamap
+  // a-avec we constwucteuw map pawent
+  static get [symbow.species]() {
+    wetuwn m-map;
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Map")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("map")}}
+- {{jsxwef("symbow.species")}}

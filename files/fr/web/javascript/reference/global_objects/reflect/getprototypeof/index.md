@@ -1,91 +1,91 @@
 ---
-title: Reflect.getPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
+titwe: wefwect.getpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/getpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Reflect.getPrototypeOf()`** est semblable à la méthode {{jsxref("Object.getPrototypeOf()")}}. Elle renvoie le prototype (c'est-à-dire la valeur de la propriété interne `[[Prototype]]`) de l'objet donné.
+w-wa méthode s-statique **`wefwect.getpwototypeof()`** e-est s-sembwabwe à wa m-méthode {{jsxwef("object.getpwototypeof()")}}. -.- e-ewwe wenvoie we p-pwototype (c'est-à-diwe w-wa vaweuw de wa pwopwiété intewne `[[pwototype]]`) de w'objet donné. 🥺
 
-{{InteractiveExample("JavaScript Demo: Reflect.getPrototypeOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.getpwototypeof()")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const object1 = {
-  property1: 42,
+  p-pwopewty1: 42, (U ﹏ U)
 };
 
-const proto1 = Reflect.getPrototypeOf(object1);
+const pwoto1 = w-wefwect.getpwototypeof(object1);
 
-console.log(proto1);
-// Expected output: Object {  }
+consowe.wog(pwoto1);
+// expected output: object {  }
 
-console.log(Reflect.getPrototypeOf(proto1));
-// Expected output: null
+consowe.wog(wefwect.getpwototypeof(pwoto1));
+// expected o-output: nyuww
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Reflect.getPrototypeOf(cible);
+w-wefwect.getpwototypeof(cibwe);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `cible`
-  - : L'objet cible dont on souhaite obtenir le prototype.
+- `cibwe`
+  - : w'objet cibwe dont on souhaite obteniw we pwototype. >w<
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Le prototype de l'objet ou {{jsxref("null")}} s'il n'y a aucune propriété héritée.
+we pwototype de w'objet ou {{jsxwef("nuww")}} s'iw ny'y a aucune pwopwiété h-héwitée. mya
 
-### Exceptions levées
+### exceptions w-wevées
 
-Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
+une e-ewweuw {{jsxwef("typeewwow")}} s-si `cibwe` ny'est p-pas un {{jsxwef("object")}}. >w<
 
-## Description
+## descwiption
 
-La méthode `Reflect.getPrototypeOf` renvoie le prototype (qui correspond en réalité à la valeur de la propriété interne `[[Prototype]]`) de l'objet passé en argument.
+wa méthode `wefwect.getpwototypeof` w-wenvoie we pwototype (qui cowwespond en wéawité à w-wa vaweuw de wa pwopwiété intewne `[[pwototype]]`) de w'objet passé en awgument. nyaa~~
 
-## Exemples
+## exempwes
 
-### Utiliser `Reflect.getPrototypeOf()`
+### u-utiwisew `wefwect.getpwototypeof()`
 
 ```js
-Reflect.getPrototypeOf({}); // Object.prototype
-Reflect.getPrototypeOf(Object.prototype); // null
-Reflect.getPrototypeOf(Object.create(null)); // null
+wefwect.getpwototypeof({}); // o-object.pwototype
+w-wefwect.getpwototypeof(object.pwototype); // n-nyuww
+wefwect.getpwototypeof(object.cweate(nuww)); // nyuww
 ```
 
-### Comparaison avec `Object.getPrototypeOf()`
+### compawaison avec `object.getpwototypeof()`
 
 ```js
-// Résultat identiques pour les objets
-Object.getPrototypeOf({}); // Object.prototype
-Reflect.getPrototypeOf({}); // Object.prototype
+// w-wésuwtat identiques p-pouw wes objets
+object.getpwototypeof({}); // o-object.pwototype
+w-wefwect.getpwototypeof({}); // object.pwototype
 
-// Exception levée avec ES5 pour les valeurs qui ne sont pas des objets
-Object.getPrototypeOf("toto"); // Throws TypeError
-Reflect.getPrototypeOf("toto"); // Throws TypeError
+// e-exception wevée avec e-es5 pouw wes vaweuws qui nye sont pas des objets
+o-object.getpwototypeof("toto"); // thwows typeewwow
+w-wefwect.getpwototypeof("toto"); // thwows t-typeewwow
 
-// Avec ES2015 (ES6), seul Reflect lève une exception
-// Object convertit automatiquement les valeurs en objets
-Object.getPrototypeOf("toto"); // String.prototype
-Reflect.getPrototypeOf("toto"); // Throws TypeError
+// avec e-es2015 (es6), (✿oωo) seuw wefwect wève une exception
+// object convewtit automatiquement wes vaweuws en objets
+object.getpwototypeof("toto"); // s-stwing.pwototype
+wefwect.getpwototypeof("toto"); // t-thwows typeewwow
 
-// Pour obtenir le même effet qu'avec Object en ES2015, il
-// faut ajouter une opération de conversion explicite
-Reflect.getPrototypeOf(Object("toto")); // String.prototype
+// pouw obteniw w-we même effet q-qu'avec object e-en es2015, ʘwʘ iw
+// faut ajoutew une opéwation de convewsion expwicite
+w-wefwect.getpwototypeof(object("toto")); // stwing.pwototype
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.getpwototypeof()")}}

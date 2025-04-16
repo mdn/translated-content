@@ -1,90 +1,90 @@
 ---
-title: Math.atan2()
-slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
+titwe: math.atan2()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/atan2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.atan2()`** renvoie l'arc tangente du quotient de ses arguments, ce qui, pour `Math.atan2(y,x)`, correspond à l'angle plan (exprimé en radians) entre la droite passant par l'origine et le point de coordonnées (x,y).
+w-wa fonction **`math.atan2()`** wenvoie w-w'awc tangente d-du quotient d-de ses awguments, OwO c-ce qui, (ꈍᴗꈍ) pouw `math.atan2(y,x)`, 😳 c-cowwespond à w-w'angwe pwan (expwimé e-en wadians) entwe wa dwoite passant paw w'owigine et we point de coowdonnées (x,y). 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Math.atan2()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.atan2()")}}
 
-```js interactive-example
-function calcAngleDegrees(x, y) {
-  return (Math.atan2(y, x) * 180) / Math.PI;
+```js intewactive-exampwe
+function cawcangwedegwees(x, mya y) {
+  w-wetuwn (math.atan2(y, x) * 180) / m-math.pi;
 }
 
-console.log(calcAngleDegrees(5, 5));
-// Expected output: 45
+consowe.wog(cawcangwedegwees(5, mya 5));
+// expected output: 45
 
-console.log(calcAngleDegrees(10, 10));
-// Expected output: 45
+c-consowe.wog(cawcangwedegwees(10, (⑅˘꒳˘) 10));
+// expected o-output: 45
 
-console.log(calcAngleDegrees(0, 10));
-// Expected output: 90
+c-consowe.wog(cawcangwedegwees(0, (U ﹏ U) 10));
+// expected output: 90
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.atan2(y, x);
+math.atan2(y, mya x-x);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `y`
-  - : La coordonnée en ordonnée du point.
+  - : wa coowdonnée en owdonnée du point. ʘwʘ
 - `x`
-  - : La coordonnée en abscisse du point.
+  - : wa coowdonnée e-en abscisse du point. (˘ω˘)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-L'arc tangente du quotient formé par les deux arguments (compris dans <math><semantics><mrow><mo stretchy="false">[</mo><mo>-</mo><mi>π</mi><mo>,</mo><mi>π</mi><mo stretchy="false">]</mo></mrow><annotation encoding="TeX">[-\pi, \pi]</annotation></semantics></math>), c'est-à-dire l'angle, exprimé en radians entre l'axe des abscisses et la droite passant par l'origin (0,0) et le point de coordonnées (x,y).
+w-w'awc tangente d-du quotient f-fowmé paw wes deux awguments (compwis dans <math><semantics><mwow><mo s-stwetchy="fawse">[</mo><mo>-</mo><mi>π</mi><mo>,</mo><mi>π</mi><mo stwetchy="fawse">]</mo></mwow><annotation encoding="tex">[-\pi, (U ﹏ U) \pi]</annotation></semantics></math>), ^•ﻌ•^ c-c'est-à-diwe w'angwe, (˘ω˘) expwimé en wadians entwe w'axe des abscisses et wa dwoite passant paw w-w'owigin (0,0) et we point de c-coowdonnées (x,y). :3
 
-## Description
+## d-descwiption
 
-La méthode `Math.atan2()` renvoie une valeur numérique comprise entre -Pi et Pi qui représente l'angle theta d'un point de coordonnées (x,y). Cela correspond à l'angle (dans le sens trigonométrique) entre l'axe des abscisses et le point de coordonnées (`x,y`). Attention, le premier argument de la fonction est l'ordonnée (y) et le second est l'abscisse (x).
+w-wa méthode `math.atan2()` wenvoie une vaweuw nyuméwique compwise entwe -pi e-et pi qui wepwésente w-w'angwe theta d'un point d-de coowdonnées (x,y). ^^;; c-cewa cowwespond à w'angwe (dans w-we sens twigonométwique) e-entwe w'axe des abscisses et we point de coowdonnées (`x,y`). 🥺 a-attention, we pwemiew awgument d-de wa fonction est w'owdonnée (y) e-et we second e-est w'abscisse (x). (⑅˘꒳˘)
 
-![Graphique explicitant l'angle donné par un point de coordonnées X/Y](atan2.png)
+![gwaphique expwicitant w'angwe donné paw un point de coowdonnées x/y](atan2.png)
 
-`Math.atan2()` utilise deux arguments `x` et `y`, alors que la méthode `Math.atan()` utilise le ratio de deux nombres comme un seul argument.
+`math.atan2()` utiwise deux awguments `x` e-et `y`, nyaa~~ awows q-que wa méthode `math.atan()` utiwise we watio d-de deux nyombwes c-comme un seuw a-awgument. :3
 
-`atan2()` est une méthode statique de l'objet `Math`, elle doit toujours être utilisée avec la syntaxe `Math.atan2()`, elle ne doit pas être utilisée comme la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`atan2()` est une méthode statique de w'objet `math`, ( ͡o ω ͡o ) e-ewwe doit toujouws êtwe utiwisée avec wa syntaxe `math.atan2()`, mya ewwe nye doit pas êtwe utiwisée c-comme wa méthode d'un autwe o-objet qui auwait été c-cwéé (`math` n-ny'est pas un constwucteuw). (///ˬ///✿)
 
-## Exemples
+## e-exempwes
 
-### Utiliser `Math.atan2()`
+### u-utiwisew `math.atan2()`
 
 ```js
-Math.atan2(90, 15); // 1.4056476493802699
-Math.atan2(15, 90); // 0.16514867741462683
+m-math.atan2(90, (˘ω˘) 15); // 1.4056476493802699
+m-math.atan2(15, ^^;; 90); // 0.16514867741462683
 
-Math.atan2( ±0, -0 );               // ±PI.
-Math.atan2( ±0, +0 );               // ±0.
-Math.atan2( ±0, -x );               // ±PI pour x > 0.
-Math.atan2( ±0, x );                // ±0 pour x > 0.
-Math.atan2( -y, ±0 );               // -PI/2 pour y > 0.
-Math.atan2( y, ±0 );                // PI/2 pour y > 0.
-Math.atan2( ±y, -Infinity );        // ±PI pour y qui est un nombre fini > 0.
-Math.atan2( ±y, +Infinity );        // ±0 pour y qui est un nombre fini > 0.
-Math.atan2( ±Infinity, x );         // ±PI/2 pour x qui est un nombre fini.
-Math.atan2( ±Infinity, -Infinity ); // ±3*PI/4.
-Math.atan2( ±Infinity, +Infinity ); // ±PI/4.
+math.atan2( ±0, (✿oωo) -0 );               // ±pi. (U ﹏ U)
+math.atan2( ±0, -.- +0 );               // ±0. ^•ﻌ•^
+math.atan2( ±0, rawr -x );               // ±pi p-pouw x > 0. (˘ω˘)
+m-math.atan2( ±0, nyaa~~ x-x );                // ±0 pouw x-x > 0. UwU
+math.atan2( -y, :3 ±0 );               // -pi/2 p-pouw y > 0. (⑅˘꒳˘)
+math.atan2( y, (///ˬ///✿) ±0 );                // pi/2 p-pouw y > 0. ^^;;
+math.atan2( ±y, >_< -infinity );        // ±pi pouw y qui est un nyombwe fini > 0. rawr x3
+math.atan2( ±y, +infinity );        // ±0 pouw y qui est un nyombwe f-fini > 0. /(^•ω•^)
+math.atan2( ±infinity, :3 x );         // ±pi/2 pouw x qui est un n-nyombwe fini. (ꈍᴗꈍ)
+math.atan2( ±infinity, /(^•ω•^) -infinity ); // ±3*pi/4. (⑅˘꒳˘)
+m-math.atan2( ±infinity, ( ͡o ω ͡o ) +infinity ); // ±pi/4. òωó
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Math.acos()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/acos)
-- [`Math.asin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/asin)
-- [`Math.atan()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/atan)
-- [`Math.cos()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/cos)
-- [`Math.sin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sin)
-- [`Math.tan()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/tan)
+- [`math.acos()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/acos)
+- [`math.asin()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/asin)
+- [`math.atan()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/atan)
+- [`math.cos()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/cos)
+- [`math.sin()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/sin)
+- [`math.tan()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/tan)

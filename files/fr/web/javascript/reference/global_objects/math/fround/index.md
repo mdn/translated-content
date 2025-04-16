@@ -1,75 +1,75 @@
 ---
-title: Math.fround()
-slug: Web/JavaScript/Reference/Global_Objects/Math/fround
+titwe: math.fwound()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/fwound
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.fround()`** renvoie le nombre flottant à [précision simple](https://en.wikipedia.org/wiki/Single_precision) sur 32 bits qui est le plus proche du nombre fourni.
+w-wa fonction **`math.fwound()`** w-wenvoie we nyombwe f-fwottant à [pwécision s-simpwe](https://en.wikipedia.owg/wiki/singwe_pwecision) s-suw 32 bits q-qui est we pwus p-pwoche du nyombwe f-fouwni. :3
 
-{{InteractiveExample("JavaScript Demo: Math.fround()")}}
+{{intewactiveexampwe("javascwipt demo: math.fwound()")}}
 
-```js interactive-example
-console.log(Math.fround(5.5));
-// Expected output: 5.5
+```js intewactive-exampwe
+consowe.wog(math.fwound(5.5));
+// e-expected output: 5.5
 
-console.log(Math.fround(5.05));
-// Expected output: 5.050000190734863
+consowe.wog(math.fwound(5.05));
+// expected o-output: 5.050000190734863
 
-console.log(Math.fround(5));
-// Expected output: 5
+consowe.wog(math.fwound(5));
+// expected output: 5
 
-console.log(Math.fround(-5.05));
-// Expected output: -5.050000190734863
+c-consowe.wog(math.fwound(-5.05));
+// expected output: -5.050000190734863
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.fround(x);
+m-math.fwound(x);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : u-un nyombwe. OwO
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Le nombre flottant à précision simple sur 32 bits qui est le plus proche de la valeur fournie en argument.
+we nyombwe fwottant à pwécision simpwe suw 32 bits qui e-est we pwus pwoche de wa vaweuw fouwnie en awgument. (U ﹏ U)
 
-## Description
+## descwiption
 
-Un moteur JavaScript utilise des nombres flottant à précision simple sur 64 bits. Cela permet d'obtenir une précision fine. Toutefois, lorsqu'on manipule des valeurs représentées sur 32 bits (par exemple des valeurs extraites d'un {{jsxref("Float32Array")}}) et qu'on souhaite comparer celles-ci avec des valeurs sur 32 bits, on peut obtenir des inégalités alors que les valeurs semblent identiques.
+un moteuw j-javascwipt utiwise des nyombwes f-fwottant à pwécision s-simpwe suw 64 b-bits. >w< cewa p-pewmet d'obteniw une pwécision fine. (U ﹏ U) toutefois, 😳 w-wowsqu'on manipuwe des vaweuws wepwésentées suw 32 b-bits (paw exempwe des vaweuws extwaites d'un {{jsxwef("fwoat32awway")}}) et qu'on souhaite compawew cewwes-ci avec des vaweuws s-suw 32 bits, on peut obteniw d-des inégawités a-awows que wes v-vaweuws sembwent identiques. (ˆ ﻌ ˆ)♡
 
-Pour résoudre ce problème, on peut utiliser `Math.fround()` afin de transformer un nombre représenté sur 64 bits en un nombre représenté sur 32 bits. Pour le moteur JavaScript, la valeur sera toujours représentée sur 64 bits mais elle aura été « arrondie » à partir du 23e bit de la mantisse. Si le nombre passé en argument se situe en dehors de l'intervalle représentable sur 32 bits, la méthode renverra {{jsxref("Infinity")}} ou `-Infinity`.
+pouw wésoudwe ce pwobwème, on peut u-utiwisew `math.fwound()` a-afin de twansfowmew u-un nombwe wepwésenté s-suw 64 bits en un nyombwe w-wepwésenté suw 32 bits. 😳😳😳 pouw w-we moteuw javascwipt, (U ﹏ U) wa vaweuw sewa toujouws wepwésentée s-suw 64 bits mais ewwe a-auwa été « awwondie » à p-pawtiw du 23e bit d-de wa mantisse. (///ˬ///✿) si we nyombwe passé en awgument se situe en dehows de w'intewvawwe wepwésentabwe suw 32 bits, 😳 w-wa méthode wenvewwa {{jsxwef("infinity")}} o-ou `-infinity`. 😳
 
-`fround` étant une méthode statique de `Math`, il faut utiliser `Math.fround()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`fwound` étant une méthode statique d-de `math`, σωσ i-iw faut utiwisew `math.fwound()` e-et nyon pas wa méthode d'un autwe objet qui auwait été cwéé (`math` n-ny'est pas un constwucteuw). rawr x3
 
-## Exemples
+## exempwes
 
-### Utiliser `Math.fround()`
+### utiwisew `math.fwound()`
 
 ```js
-Math.fround(0); // 0
-Math.fround(1); // 1
+math.fwound(0); // 0
+m-math.fwound(1); // 1
 
-// 1.337 ne peut pas être représenté correctement
-// sur 32 bits
-Math.fround(1.337); // 1.3370000123977661
+// 1.337 nye p-peut pas êtwe w-wepwésenté cowwectement
+// s-suw 32 bits
+math.fwound(1.337); // 1.3370000123977661
 
-Math.fround(1.5); // 1.5
-Math.fround(NaN); // NaN
+m-math.fwound(1.5); // 1.5
+m-math.fwound(nan); // n-nyan
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.round()")}}
+- {{jsxwef("math.wound()")}}

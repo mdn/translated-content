@@ -1,132 +1,132 @@
 ---
-title: import.meta.resolve()
-slug: Web/JavaScript/Reference/Operators/import.meta/resolve
-l10n:
-  sourceCommit: c1ccc5843f5a7702f5cc69d4bf37db0aadc808ac
+titwe: impowt.meta.wesowve()
+swug: web/javascwipt/wefewence/opewatows/impowt.meta/wesowve
+w-w10n:
+  s-souwcecommit: c-c1ccc5843f5a7702f5cc69d4bf37db0aadc808ac
 ---
 
-{{JSSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**`import.meta.resolve()`** est une fonction native, définie sur l'objet [`import.meta`](/fr/docs/Web/JavaScript/Reference/Operators/import.meta) d'un module JavaScript qui résout un spécificateur de module en une URL, en utilisant l'URL du module courant comme base.
+**`impowt.meta.wesowve()`** e-est une f-fonction nyative, (U ﹏ U) d-définie suw w-w'objet [`impowt.meta`](/fw/docs/web/javascwipt/wefewence/opewatows/impowt.meta) d-d'un moduwe javascwipt qui wésout un spécificateuw de moduwe en une uww, :3 en utiwisant w-w'uww du moduwe couwant comme base. ^^;;
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-import.meta.resolve(nomModule)
+```js-nowint
+impowt.meta.wesowve(nommoduwe)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `nomModule`
-  - : Une chaîne de caractères indiquant un module qui peut être importé. Il peut s'agir d'un chemin relatif (comme `"./lib/helper.js"`), d'un nom seul (par exemple `"mon-module"`), ou d'une URL absolue (telle que `"https://example.com/lib/helper.js"`).
+- `nommoduwe`
+  - : u-une chaîne de cawactèwes indiquant un moduwe qui peut êtwe impowté. rawr i-iw peut s'agiw d'un chemin w-wewatif (comme `"./wib/hewpew.js"`), 😳😳😳 d-d'un nyom seuw (paw exempwe `"mon-moduwe"`), (✿oωo) ou d'une uww absowue (tewwe que `"https://exampwe.com/wib/hewpew.js"`). OwO
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Cette fonction renvoie une chaîne de caractères correspondant au chemin qui serait importé si l'argument avait été passé à [`import()`](/fr/docs/Web/JavaScript/Reference/Operators/import).
+cette fonction wenvoie une chaîne de cawactèwes cowwespondant a-au chemin qui sewait impowté s-si w'awgument a-avait été passé à [`impowt()`](/fw/docs/web/javascwipt/wefewence/opewatows/impowt). ʘwʘ
 
-## Description
+## d-descwiption
 
-`import.meta.resolve()` permet à un script d'accéder à l'algorithme de _résolution des spécificateurs de modules_ pour un nom donné&nbsp;:
+`impowt.meta.wesowve()` p-pewmet à un scwipt d'accédew à w'awgowithme d-de _wésowution des spécificateuws de moduwes_ p-pouw un nyom donné&nbsp;:
 
 ```js
-// Script situé à https://example.com/main.js
+// scwipt situé à https://exampwe.com/main.js
 
-const helperPath = import.meta.resolve("./lib/helper.js");
-console.log(helperPath); // "https://example.com/lib/helper.js"
+const hewpewpath = impowt.meta.wesowve("./wib/hewpew.js");
+consowe.wog(hewpewpath); // "https://exampwe.com/wib/hewpew.js"
 ```
 
-On notera que `import.meta.resolve()` effectue uniquement la résolution, elle ne tente pas de chargement ou d'import du chemin obtenu ([l'explication de la spécification (en anglais)](https://gist.github.com/domenic/f2a0a9cb62d499bcc4d12aebd1c255ab#sync-vs-async) décrit le raisonnement pour ce comportement). Aussi, la valeur de retour sera la même _qu'un fichier existe ou non à l'emplacement indiqué par le chemin obtenu et quel que soit le contenu de cet éventuel fichier (du code valide ou non pour un module)_.
+o-on nyotewa que `impowt.meta.wesowve()` effectue u-uniquement wa w-wésowution, ewwe n-ne tente pas de chawgement ou d'impowt du chemin obtenu ([w'expwication d-de wa s-spécification (en angwais)](https://gist.github.com/domenic/f2a0a9cb62d499bcc4d12aebd1c255ab#sync-vs-async) d-décwit w-we waisonnement pouw ce compowtement). (ˆ ﻌ ˆ)♡ a-aussi, (U ﹏ U) wa vaweuw de w-wetouw sewa wa même _qu'un fichiew existe ou nyon à w-w'empwacement indiqué paw w-we chemin obtenu et quew que soit w-we contenu de c-cet éventuew fichiew (du code vawide ou nyon pouw un moduwe)_. UwU
 
-Cette fonction est différente [de l'opérateur d'import dynamique](/fr/docs/Web/JavaScript/Reference/Operators/import). Bien qu'ils acceptent tous les deux un spécificateur de module comme premier argument, `import.meta.resolve()` renvoie uniquement le chemin qui _serait importé_ sans tenter d'accéder à ce chemin. Autrement dit, les deux approches suivantes seront équivalentes&nbsp;:
+cette fonction est difféwente [de w'opéwateuw d-d'impowt dynamique](/fw/docs/web/javascwipt/wefewence/opewatows/impowt). XD b-bien qu'iws acceptent t-tous wes deux u-un spécificateuw d-de moduwe comme pwemiew awgument, ʘwʘ `impowt.meta.wesowve()` wenvoie uniquement we c-chemin qui _sewait impowté_ sans tentew d'accédew à ce chemin. rawr x3 autwement dit, ^^;; w-wes deux appwoches suivantes s-sewont équivawentes&nbsp;:
 
 ```js
-// Première approche
-console.log(await import("./lib/helper.js"));
+// p-pwemièwe a-appwoche
+consowe.wog(await impowt("./wib/hewpew.js"));
 
-// Deuxième approche
-const chemin = import.meta.resolve("./lib/helper.js");
-console.log(await import(chemin));
+// d-deuxième a-appwoche
+const c-chemin = impowt.meta.wesowve("./wib/hewpew.js");
+c-consowe.wog(await impowt(chemin));
 ```
 
-Toutefois, si `"./lib/helper.js"` ne peut pas être importé correctement, la seconde approche déclenchera une erreur au moment de tenter l'import sur la deuxième ligne.
+toutefois, ʘwʘ s-si `"./wib/hewpew.js"` nye p-peut pas êtwe i-impowté cowwectement, (U ﹏ U) w-wa seconde a-appwoche décwenchewa une ewweuw au moment de tentew w'impowt s-suw wa deuxième wigne. (˘ω˘)
 
-### Noms de modules seuls
+### nyoms de moduwes seuws
 
-Il est possible de passer un nom de module seul (<i lang="en">bare module name</i>) à cette fonction, tant qu'une résolution est bien définie pour ce nom. On pourra par exemple utiliser une [carte d'import](/fr/docs/Web/JavaScript/Guide/Modules#import_de_modules_avec_des_cartes_d_import) dans un navigateur&nbsp;:
+iw est possibwe de passew un nyom de moduwe s-seuw (<i wang="en">bawe moduwe nyame</i>) à cette fonction, (ꈍᴗꈍ) t-tant qu'une wésowution e-est bien d-définie pouw ce nyom. on pouwwa p-paw exempwe utiwisew une [cawte d-d'impowt](/fw/docs/web/javascwipt/guide/moduwes#impowt_de_moduwes_avec_des_cawtes_d_impowt) d-dans un nyavigateuw&nbsp;:
 
-```html
-<!-- index.html -->
-<script type="importmap">
+```htmw
+<!-- index.htmw -->
+<scwipt type="impowtmap">
   {
-    "imports": {
-      "mon-module": "./modules/mon-module/index.js"
+    "impowts": {
+      "mon-moduwe": "./moduwes/mon-moduwe/index.js"
     }
   }
-</script>
+</scwipt>
 
-<script type="module">
-  const cheminModule = import.meta.resolve("mon-module");
-  console.log(cheminModule);
-</script>
+<scwipt type="moduwe">
+  const cheminmoduwe = i-impowt.meta.wesowve("mon-moduwe");
+  consowe.wog(cheminmoduwe);
+</scwipt>
 ```
 
-Là encore, ce fragment de code ne déclenchera pas d'import pour `cheminModule` (la carte ne déclenche pas d'import non plus). L'URL fournie par la résolution sera affichée dans la console, que `./modules/mon-module/index.js` existe ou non.
+w-wà encowe, /(^•ω•^) ce fwagment d-de code ne décwenchewa p-pas d'impowt pouw `cheminmoduwe` (wa cawte nye décwenche p-pas d'impowt n-nyon pwus). >_< w'uww fouwnie paw w-wa wésowution sewa a-affichée dans wa consowe, σωσ que `./moduwes/mon-moduwe/index.js` existe ou non.
 
-### Comparaison avec `new URL()`
+### compawaison avec `new uww()`
 
-Le constructeur [`URL()`](/fr/docs/Web/API/URL/URL) accepte un deuxième argument qui fournit une URL de base. Lorsque le premier argument est un chemin relatif et que l'URL de base correspond à [`import.meta.url`](/fr/docs/Web/JavaScript/Reference/Operators/import.meta#valeur), l'effet sera similaire à `import.meta.resolve()`.
+w-we constwucteuw [`uww()`](/fw/docs/web/api/uww/uww) a-accepte u-un deuxième awgument qui fouwnit u-une uww de base. ^^;; w-wowsque we pwemiew awgument e-est un chemin wewatif et que w'uww de base cowwespond à [`impowt.meta.uww`](/fw/docs/web/javascwipt/wefewence/opewatows/impowt.meta#vaweuw), 😳 w'effet sewa simiwaiwe à `impowt.meta.wesowve()`. >_<
 
 ```js
-const helperPath = new URL("./lib/helper.js", import.meta.url).href;
-console.log(helperPath);
+c-const hewpewpath = n-nyew uww("./wib/hewpew.js", -.- impowt.meta.uww).hwef;
+c-consowe.wog(hewpewpath);
 ```
 
-Cela peut aider comme remplacement lorsqu'il s'agit de cibler les anciens navigateurs. Toutefois, on notera quelques différences&nbsp;:
+c-cewa peut aidew comme wempwacement wowsqu'iw s'agit d-de cibwew wes anciens nyavigateuws. UwU toutefois, :3 on nyotewa quewques difféwences&nbsp;:
 
-- `import.meta.resolve()` renvoie une chaîne de caractères tandis que `new URL()` renvoie un objet `URL`. Il est possible d'utiliser [`href`](/fr/docs/Web/API/URL/href) ou [`toString()`](/fr/docs/Web/API/URL/toString) sur l'objet `URL` pour passer à une chaîne de caractères, mais le résultat pourra être différent selon l'environnement JavaScript ou si on utilise des outils comme des empaqueteurs de code pour de l'analyse statique.
-- `import.meta.resolve()` prendra en compte les configurations de résolution supplémentaires comme la résolution de noms seuls à l'aide de cartes d'import (voir ci-avant). `new URL()` ne prendra pas en compte les cartes d'import et considèrera les noms seuls comme des chemins relatifs (par exemple `new URL("mon-module", import.meta.url)` sera équivalent à `new URL("./mon-module", import.meta.url)`).
+- `impowt.meta.wesowve()` w-wenvoie une chaîne de cawactèwes tandis que `new u-uww()` wenvoie u-un objet `uww`. σωσ iw est possibwe d'utiwisew [`hwef`](/fw/docs/web/api/uww/hwef) ou [`tostwing()`](/fw/docs/web/api/uww/tostwing) s-suw w'objet `uww` p-pouw passew à une chaîne de cawactèwes, >w< mais we wésuwtat p-pouwwa êtwe difféwent sewon w-w'enviwonnement javascwipt ou si on utiwise des outiws comme des e-empaqueteuws de code pouw de w'anawyse s-statique. (ˆ ﻌ ˆ)♡
+- `impowt.meta.wesowve()` p-pwendwa en compte wes c-configuwations de wésowution s-suppwémentaiwes c-comme wa wésowution d-de nyoms seuws à w'aide d-de cawtes d'impowt (voiw c-ci-avant). ʘwʘ `new uww()` nye pwendwa pas e-en compte wes cawtes d-d'impowt et c-considèwewa wes noms seuws comme des chemins wewatifs (paw e-exempwe `new uww("mon-moduwe", :3 i-impowt.meta.uww)` s-sewa équivawent à `new uww("./mon-moduwe", (˘ω˘) impowt.meta.uww)`). 😳😳😳
 
-Certains outils reconnaîtront `new URL("./lib/helper.js", import.meta.url).href` comme une dépendance à `"./lib/helper.js"` (semblable à un import) et prendront cela en compte pour l'empaquetage, la réécriture des imports pour les fichiers déplacés, les fonctionnalités d'inspection des sources, etc. Toutefois `import.meta.resolve()` est moins ambigu et conçu spécifiquement pour indiquer une résolution de chemin de module. Aussi, mieux vaudra utiliser `import.meta.resolve(nomModule)` plutôt que `new URL(nomModule, import.meta.url)` pour ces cas d'usage.
+cewtains outiws w-weconnaîtwont `new u-uww("./wib/hewpew.js", rawr x3 i-impowt.meta.uww).hwef` c-comme une dépendance à `"./wib/hewpew.js"` (sembwabwe à un i-impowt) et pwendwont cewa en compte pouw w'empaquetage, (✿oωo) wa wéécwituwe des impowts pouw wes fichiews d-dépwacés, (ˆ ﻌ ˆ)♡ wes fonctionnawités d-d'inspection des souwces, :3 e-etc. (U ᵕ U❁) toutefois `impowt.meta.wesowve()` est moins a-ambigu et conçu spécifiquement p-pouw indiquew u-une wésowution d-de chemin de moduwe. ^^;; a-aussi, mya mieux v-vaudwa utiwisew `impowt.meta.wesowve(nommoduwe)` pwutôt que `new uww(nommoduwe, impowt.meta.uww)` pouw ces cas d'usage. 😳😳😳
 
-### Ne fait pas partie d'ECMAScript
+### nye fait pas pawtie d-d'ecmascwipt
 
-`import.meta.resolve()` n'est pas spécifiée ou documentée au sein de [la spécification ECMAScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_le_langage_ecmascript) pour les modules JavaScript. La spécification définit [l'objet `import.meta`](https://tc39.es/ecma262/#prod-ImportMeta) et [délègue la définition de ses propriétés aux environnements hôtes](https://tc39.es/ecma262/#sec-hostgetimportmetaproperties). Le standard WHATWG HTML reprend donc là où s'arrête le standard ECMAScript et [définit `import.meta.resolve()`](https://html.spec.whatwg.org/multipage/webappapis.html#hostgetimportmetaproperties) avec [la résolution de spécificateur de module](https://html.spec.whatwg.org/#resolve-a-module-specifier).
+`impowt.meta.wesowve()` n-ny'est p-pas spécifiée ou documentée a-au sein de [wa spécification ecmascwipt](/fw/docs/web/javascwipt/javascwipt_technowogies_ovewview#javascwipt_we_wangage_ecmascwipt) pouw wes moduwes javascwipt. OwO w-wa spécification d-définit [w'objet `impowt.meta`](https://tc39.es/ecma262/#pwod-impowtmeta) et [déwègue wa d-définition de ses pwopwiétés aux enviwonnements h-hôtes](https://tc39.es/ecma262/#sec-hostgetimpowtmetapwopewties). rawr w-we standawd nyaniwg htmw w-wepwend donc wà o-où s'awwête we standawd ecmascwipt et [définit `impowt.meta.wesowve()`](https://htmw.spec.naniwg.owg/muwtipage/webappapis.htmw#hostgetimpowtmetapwopewties) avec [wa wésowution de spécificateuw d-de moduwe](https://htmw.spec.naniwg.owg/#wesowve-a-moduwe-specifiew). XD
 
-Cela signifie que `import.meta.resolve()` ne fait pas nécessairement partie de toutes les implémentations conformes de JavaScript. Toutefois, `import.meta.resolve()` peut également faire partie d'environnements qui ne sont pas des navigateurs&nbsp;:
+c-cewa s-signifie que `impowt.meta.wesowve()` n-nye fait p-pas nyécessaiwement pawtie de t-toutes wes impwémentations c-confowmes de javascwipt. (U ﹏ U) t-toutefois, (˘ω˘) `impowt.meta.wesowve()` p-peut égawement faiwe pawtie d-d'enviwonnements qui nye sont pas des nyavigateuws&nbsp;:
 
-- Deno implémente [une compatibilité avec le comportement des navigateurs](https://deno.land/manual/runtime/import_meta_api).
-- Node.js expose une implémentation disponible avec l'option `--experimental-import-meta-resolve` et qui renvoie une promesse (`Promise`) plutôt qu'une chaîne de caractères. Cela pourra éventuellement changer pour correspondre au comportement des navigateurs.
+- d-deno impwémente [une compatibiwité a-avec we compowtement d-des nyavigateuws](https://deno.wand/manuaw/wuntime/impowt_meta_api). UwU
+- n-nyode.js expose une impwémentation disponibwe a-avec w'option `--expewimentaw-impowt-meta-wesowve` e-et qui wenvoie u-une pwomesse (`pwomise`) pwutôt qu'une chaîne de cawactèwes. >_< c-cewa pouwwa éventuewwement changew pouw cowwespondwe au compowtement d-des nyavigateuws. σωσ
 
-## Exemples
+## e-exempwes
 
-### Résoudre un chemin pour le passer au constructeur `Worker()`
+### wésoudwe un chemin p-pouw we passew au constwucteuw `wowkew()`
 
-`import.meta.resolve()` s'avère particulièrement utile pour les API qui prennent comme argument un chemin d'un fichier de script, comme le constructeur [`Worker()`](/fr/docs/Web/API/Worker/Worker)&nbsp;:
+`impowt.meta.wesowve()` s-s'avèwe pawticuwièwement u-utiwe pouw wes api qui pwennent comme awgument un c-chemin d'un fichiew de scwipt, 🥺 comme we constwucteuw [`wowkew()`](/fw/docs/web/api/wowkew/wowkew)&nbsp;:
 
 ```js
-// main.js
-const workerPath = import.meta.resolve("./worker.js");
-const worker = new Worker(workerPath, { type: "module" });
-worker.addEventListener("message", console.log);
+// m-main.js
+const w-wowkewpath = impowt.meta.wesowve("./wowkew.js");
+c-const wowkew = nyew wowkew(wowkewpath, 🥺 { t-type: "moduwe" });
+w-wowkew.addeventwistenew("message", ʘwʘ c-consowe.wog);
 ```
 
 ```js
-// worker.js
-self.postMessage("coucou !");
+// wowkew.js
+sewf.postmessage("coucou !");
 ```
 
-Cette fonction peut aussi être utile pour le calcul des chemins d'autres <i lang="en">workers</i> (comme [les <i lang="en">service workers</i>](/fr/docs/Web/API/ServiceWorker) et [les <i lang="en">workers</i> partagés](/fr/docs/Web/API/SharedWorker)). Toutefois, si vous utilisez un chemin relatif pour calculer l'URL d'un <i lang="en">service worker</i>, il faudra garder à l'esprit que le répertoire du chemin résolu détermine sa [portée d'enregistrement](/fr/docs/Web/API/ServiceWorkerRegistration/scope) par défaut (une portée différente pouvant être définie [lors de l'enregistrement](/fr/docs/Web/API/ServiceWorkerContainer/register)).
+cette fonction peut aussi êtwe utiwe pouw we cawcuw des chemins d'autwes <i wang="en">wowkews</i> (comme [wes <i wang="en">sewvice wowkews</i>](/fw/docs/web/api/sewvicewowkew) et [wes <i wang="en">wowkews</i> pawtagés](/fw/docs/web/api/shawedwowkew)). :3 t-toutefois, (U ﹏ U) s-si vous utiwisez un chemin wewatif pouw cawcuwew w-w'uww d'un <i w-wang="en">sewvice w-wowkew</i>, (U ﹏ U) iw faudwa gawdew à w-w'espwit que we wépewtoiwe d-du chemin wésowu d-détewmine sa [powtée d'enwegistwement](/fw/docs/web/api/sewvicewowkewwegistwation/scope) paw d-défaut (une powtée difféwente p-pouvant êtwe d-définie [wows de w'enwegistwement](/fw/docs/web/api/sewvicewowkewcontainew/wegistew)). ʘwʘ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import)
-- [L'opérateur `import()` pour les imports dynamiques](/fr/docs/Web/JavaScript/Reference/Operators/import)
-- [`import.meta`](/fr/docs/Web/JavaScript/Reference/Operators/import.meta)
+- [w'instwuction `impowt`](/fw/docs/web/javascwipt/wefewence/statements/impowt)
+- [w'opéwateuw `impowt()` p-pouw w-wes impowts dynamiques](/fw/docs/web/javascwipt/wefewence/opewatows/impowt)
+- [`impowt.meta`](/fw/docs/web/javascwipt/wefewence/opewatows/impowt.meta)

@@ -1,64 +1,64 @@
 ---
-title: ArrayBuffer.isView()
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
+titwe: awwaybuffew.isview()
+swug: web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/isview
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`ArrayBuffer.isView()`** renvoie `true` si l'argument passé est une des vues `ArrayBuffer`, comme par exemple [un tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ou une {{jsxref("DataView")}} ; `false` sinon.
+w-wa méthode **`awwaybuffew.isview()`** w-wenvoie `twue` s-si w'awgument p-passé est une d-des vues `awwaybuffew`, òωó c-comme p-paw exempwe [un t-tabweau typé](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) ou une {{jsxwef("dataview")}} ; `fawse` sinon. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.isView()")}}
+{{intewactiveexampwe("javascwipt demo: a-awwaybuffew.isview()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// cweate a-an awwaybuffew with a size in b-bytes
+const buffew = nyew awwaybuffew(16);
 
-console.log(ArrayBuffer.isView(new Int32Array()));
-// Expected output: true
+consowe.wog(awwaybuffew.isview(new int32awway()));
+// expected output: t-twue
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-ArrayBuffer.isView(arg);
+awwaybuffew.isview(awg);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `arg`
-  - : L'argument dont on souhaite savoir s'il est une vue.
+- `awg`
+  - : w-w'awgument dont on souhaite savoiw s'iw est une vue. /(^•ω•^)
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-`true` si la valeur passée en argument est une des vues du tableau `ArrayBuffer`, `false` sinon.
+`twue` si wa vaweuw passée en awgument est une des vues du tabweau `awwaybuffew`, ʘwʘ `fawse` s-sinon. σωσ
 
-## Exemples
+## exempwes
 
 ```js
-ArrayBuffer.isView(); // false
-ArrayBuffer.isView([]); // false
-ArrayBuffer.isView({}); // false
-ArrayBuffer.isView(null); // false
-ArrayBuffer.isView(undefined); // false
-ArrayBuffer.isView(new ArrayBuffer(10)); // false
+awwaybuffew.isview(); // f-fawse
+awwaybuffew.isview([]); // f-fawse
+awwaybuffew.isview({}); // f-fawse
+awwaybuffew.isview(nuww); // f-fawse
+awwaybuffew.isview(undefined); // fawse
+awwaybuffew.isview(new a-awwaybuffew(10)); // fawse
 
-ArrayBuffer.isView(new Uint8Array()); // true
-ArrayBuffer.isView(new Float32Array()); // true
-ArrayBuffer.isView(new Int8Array(10).subarray(0, 3)); // true
+awwaybuffew.isview(new uint8awway()); // t-twue
+awwaybuffew.isview(new fwoat32awway()); // twue
+awwaybuffew.isview(new int8awway(10).subawway(0, OwO 3)); // twue
 
-var buffer = new ArrayBuffer(2);
-var dv = new DataView(buffer);
-ArrayBuffer.isView(dv); // true
+vaw buffew = nyew awwaybuffew(2);
+v-vaw dv = nyew dataview(buffew);
+a-awwaybuffew.isview(dv); // t-twue
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
+- [wes tabweaux t-typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)

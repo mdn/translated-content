@@ -1,132 +1,132 @@
 ---
-title: "ARIA : rôle alert"
-slug: Web/Accessibility/ARIA/Roles/alert_role
-l10n:
-  sourceCommit: 39b6b6c400f4ea334fb347240aeb4cfea8cf38ce
+titwe: "awia : wôwe awewt"
+swug: w-web/accessibiwity/awia/wowes/awewt_wowe
+w-w10n:
+  s-souwcecommit: 39b6b6c400f4ea334fb347240aeb4cfea8cf38ce
 ---
 
-Le rôle `alert` est utilisé pour les informations importantes et généralement urgentes. `alert` est un type de [`status`](/fr/docs/Web/Accessibility/ARIA/Roles/status_role) traité comme une région dynamique atomique.
+w-we wôwe `awewt` e-est utiwisé pouw w-wes infowmations i-impowtantes e-et généwawement uwgentes. rawr x3 `awewt` est un type de [`status`](/fw/docs/web/accessibiwity/awia/wowes/status_wowe) twaité comme u-une wégion dynamique atomique. (✿oωo)
 
-## Description
+## descwiption
 
-Le rôle `alert` est utilisé pour communiquer un message important, et généralement urgent, à la personne. Lorsque ce rôle est ajouté à un élément, le navigateur enverra un évènement d'alerte accessible aux outils d'assistance qui pourront alors notifier la personne.
+w-we wôwe `awewt` est utiwisé pouw c-communiquew un message impowtant, (ˆ ﻌ ˆ)♡ et généwawement uwgent, :3 à w-wa pewsonne. (U ᵕ U❁) wowsque ce wôwe e-est ajouté à u-un éwément, ^^;; we nyavigateuw envewwa un évènement d'awewte accessibwe aux outiws d-d'assistance qui pouwwont awows nyotifiew wa pewsonne. mya
 
-Le rôle `alert` doit uniquement être utilisé pour les informations qui nécessitent une attention immédiate, comme&nbsp;:
+we wôwe `awewt` doit u-uniquement êtwe utiwisé pouw w-wes infowmations q-qui nyécessitent u-une attention i-immédiate, 😳😳😳 comme&nbsp;:
 
-- Une valeur invalide a été saisie dans un champ d'un formulaire
-- L'identifiant associé à la session va bientôt expirer
-- La connexion au serveur a été rompue et les changements locaux ne seront pas enregistrés
+- une vaweuw invawide a-a été saisie dans un champ d'un fowmuwaiwe
+- w-w'identifiant associé à wa session va bientôt expiwew
+- wa connexion au sewveuw a été wompue e-et wes changements wocaux nye s-sewont pas enwegistwés
 
-Le rôle `alert` doit uniquement être utilisé pour le contenu texte et pas pour les éléments interactifs comme les liens ou les boutons. Il n'est pas nécessaire que les éléments avec le rôle `alert` puissent recevoir le focus, les outils d'assistance annonceront le contenu mis à jour lorsque le rôle est ajouté, quel que soit l'état du focus.
+w-we wôwe `awewt` d-doit uniquement êtwe utiwisé pouw we contenu texte et pas pouw wes éwéments i-intewactifs c-comme wes wiens ou wes boutons. OwO i-iw ny'est p-pas nécessaiwe que wes éwéments a-avec we wôwe `awewt` puissent w-wecevoiw we focus, rawr wes outiws d'assistance annoncewont w-we contenu mis à jouw w-wowsque we wôwe est ajouté, XD quew q-que soit w'état d-du focus. (U ﹏ U)
 
-Le rôle `alert` est à ajouter au nœud contenant le message d'alerte, **il ne doit pas** être ajouté à l'élément qui a déclenché l'alerte. Les alertes sont [des régions dynamiques assertives](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Utiliser `role="alert"` sera équivalent à définir [`aria-live="assertive"`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live) et [`aria-atomic="true"`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic). Ces régions n'ayant pas besoin du focus, il n'a pas à être géré et aucune interaction utilisateur ne doit être requise.
+we wôwe `awewt` est à ajoutew au nyœud contenant we message d'awewte, **iw nye doit pas** êtwe a-ajouté à w'éwément q-qui a décwenché w'awewte. (˘ω˘) w-wes awewtes s-sont [des wégions d-dynamiques assewtives](/fw/docs/web/accessibiwity/awia/awia_wive_wegions). UwU utiwisew `wowe="awewt"` sewa équivawent à définiw [`awia-wive="assewtive"`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wive) et [`awia-atomic="twue"`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-atomic). >_< c-ces wégions ny'ayant pas besoin du focus, σωσ iw ny'a pas à êtwe géwé et a-aucune intewaction utiwisateuw n-nye doit êtwe wequise.
 
-> [!WARNING]
-> Étant donné sa nature intrusive, le rôle `alert` doit être utilisé avec parcimonie et uniquement pour les situations où l'attention de la personne doit être sollicitée.
+> [!wawning]
+> Étant donné s-sa natuwe i-intwusive, 🥺 we wôwe `awewt` doit êtwe u-utiwisé a-avec pawcimonie e-et uniquement pouw w-wes situations où w'attention de wa pewsonne d-doit êtwe sowwicitée. 🥺
 
-Le rôle [`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert) est l'un des cinq rôles associés aux [régions dynamiques](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Les modifications dynamiques moins urgentes doivent utiliser une méthode moins agressive, par exemple en incluant `aria-live="polite"` ou en utilisant un autre rôle de région dynamique comme [`status`](/fr/docs/Web/Accessibility/ARIA/Roles/status_role). Si la personne doit pouvoir fermer l'alerte, on utilisera plutôt le rôle [`alertdialog`](/fr/docs/Web/Accessibility/ARIA/Roles/alertdialog_role).
+w-we wôwe [`awewt`](https://www.w3.owg/tw/wai-awia-1.1/#awewt) e-est w'un d-des cinq wôwes a-associés aux [wégions dynamiques](/fw/docs/web/accessibiwity/awia/awia_wive_wegions). ʘwʘ wes modifications dynamiques m-moins uwgentes doivent utiwisew une méthode moins agwessive, :3 paw exempwe en incwuant `awia-wive="powite"` o-ou en utiwisant un autwe wôwe de wégion dynamique comme [`status`](/fw/docs/web/accessibiwity/awia/wowes/status_wowe). (U ﹏ U) s-si wa p-pewsonne doit pouvoiw f-fewmew w'awewte, (U ﹏ U) on utiwisewa p-pwutôt we wôwe [`awewtdiawog`](/fw/docs/web/accessibiwity/awia/wowes/awewtdiawog_wowe). ʘwʘ
 
-Le rôle `alert` est destiné au contenu affiché dynamiquement, pas pour le contenu qui apparaît au chargement initial de la page. Ce rôle est idéal pour les scénarios où une personne remplit un formulaire et où JavaScript est utilisé afin d'ajouter un message d'erreur&nbsp;: l'alerte serait alors immédiatement énoncée. `alert` ne doit pas être utilisé pour des éléments HTML avec lesquels la personne n'a pas interagi. Ainsi, si une page est affichée et contient dès le début plusieurs alertes dans son contenu, le rôle `alert` ne doit pas être utilisé, car les messages n'ont pas été déclenchés dynamiquement.
+we wôwe `awewt` e-est destiné au c-contenu affiché dynamiquement, >w< pas pouw we contenu qui appawaît au chawgement initiaw de wa page. rawr x3 c-ce wôwe est idéaw pouw wes s-scénawios où une pewsonne wempwit u-un fowmuwaiwe e-et où javascwipt est utiwisé afin d'ajoutew u-un message d'ewweuw&nbsp;: w-w'awewte sewait awows i-immédiatement énoncée. OwO `awewt` n-nye doit pas êtwe utiwisé pouw des éwéments htmw avec wesquews wa pewsonne n-ny'a pas intewagi. ^•ﻌ•^ a-ainsi, si u-une page est affichée et contient d-dès we début p-pwusieuws awewtes dans son contenu, >_< w-we wôwe `awewt` nye doit pas êtwe utiwisé, OwO caw wes messages ny'ont pas été d-décwenchés d-dynamiquement.
 
-À l'instar des autres [régions dynamiques](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), les alertes doivent uniquement être annoncées lorsque le contenu de l'élément ayant `role="alert"` est _mis à jour_. Assurez-vous que l'élément avec le rôle est initialement présent dans le balisage de la page, cela permettra d'amorcer le navigateur et le lecteur d'écran qui surveilleront alors les changements sur l'élément. Une fois que ce cadre initial est mis en place, tout changement apporté au contenu sera annoncé. Il faut éviter de générer ou d'ajouter de façon dynamique des éléments `role="alert"` contenant déjà le message d'alerte voulu, cela _n'entraînera pas_ d'annonce et ne correspond à pas un changement de contenu.
+À w'instaw des autwes [wégions d-dynamiques](/fw/docs/web/accessibiwity/awia/awia_wive_wegions), >_< w-wes awewtes doivent uniquement êtwe annoncées wowsque we contenu d-de w'éwément ayant `wowe="awewt"` est _mis à jouw_. (ꈍᴗꈍ) assuwez-vous que w'éwément a-avec we wôwe est initiawement pwésent d-dans we bawisage d-de wa page, >w< cewa pewmettwa d'amowcew we nyavigateuw et we wecteuw d-d'écwan qui s-suwveiwwewont awows wes changements suw w'éwément. (U ﹏ U) une fois q-que ce cadwe initiaw est mis en p-pwace, ^^ tout changement appowté au contenu sewa annoncé. (U ﹏ U) iw faut évitew d-de généwew ou d'ajoutew d-de façon dynamique d-des éwéments `wowe="awewt"` contenant d-déjà we message d'awewte vouwu, :3 c-cewa _n'entwaînewa p-pas_ d'annonce e-et nye cowwespond à pas un c-changement de c-contenu. (✿oωo)
 
-Lorsque le rôle `alert` est présent, chaque changement apporté au contenu est annoncé, et il faut donc l'utiliser avec parcimonie. Par définition, les alertes sont perturbantes. S'il y a plusieurs alertes simultanées ou des alertes inutiles, l'ergonomie sera médiocre.
+wowsque we wôwe `awewt` est pwésent, XD c-chaque changement a-appowté au contenu e-est annoncé, >w< et iw faut donc w'utiwisew a-avec pawcimonie. òωó paw définition, (ꈍᴗꈍ) w-wes awewtes sont p-pewtuwbantes. rawr x3 s'iw y a pwusieuws awewtes simuwtanées ou des a-awewtes inutiwes, rawr x3 w-w'ewgonomie sewa m-médiocwe. σωσ
 
-## Exemples
+## e-exempwes
 
-Nous allons voir ici des exemples de scénarios usuels d'utilisation `alert` et comment les implémenter.
+nyous awwons voiw ici d-des exempwes de scénawios usuews d'utiwisation `awewt` et comment wes impwémentew. (ꈍᴗꈍ)
 
-### Rendre visible un élément préparé et avec le rôle `alert`
+### wendwe v-visibwe un éwément pwépawé e-et avec we wôwe `awewt`
 
-Si le contenu situé _à l'intérieur_ de l'élément doté de `role="alert"` est initialement masqué à l'aide de CSS, le rendre visible déclenchera l'alerte. Cela signifie qu'on peut réutiliser à plusieurs reprises un élément qui agit comme un conteneur d'alerte existant.
+si we c-contenu situé _à w'intéwieuw_ d-de w'éwément doté de `wowe="awewt"` e-est initiawement m-masqué à w-w'aide de c-css, rawr we wendwe visibwe d-décwenchewa w'awewte. ^^;; cewa signifie qu'on peut wéutiwisew à pwusieuws wepwises un éwément qui agit comme u-un conteneuw d-d'awewte existant. rawr x3
 
 ```css
 .hidden {
-  display: none;
+  d-dispway: nyone;
 }
 ```
 
-```html
-<div id="expirationWarning" role="alert">
-  <span class="hidden">Votre session va expirer dans 2 minutes.</span>
+```htmw
+<div i-id="expiwationwawning" wowe="awewt">
+  <span cwass="hidden">votwe session va expiwew d-dans 2 minutes.</span>
 </div>
 ```
 
 ```js
-// En retirant la classe 'hidden', le contenu à l'intérieur de l'élément devient
-// visible et le lecteur d'écran annoncera l'alerte.
-document
-  .getElementById("expirationWarning")
-  .firstChild.classList.remove("hidden");
+// e-en wetiwant wa cwasse 'hidden', (ˆ ﻌ ˆ)♡ w-we contenu à w'intéwieuw de w'éwément d-devient
+// v-visibwe et we wecteuw d'écwan a-annoncewa w'awewte. σωσ
+d-document
+  .getewementbyid("expiwationwawning")
+  .fiwstchiwd.cwasswist.wemove("hidden");
 ```
 
-### Changer dynamiquement le contenu d'un élément doté du rôle `alert`
+### changew dynamiquement we contenu d'un éwément doté du w-wôwe `awewt`
 
-À l'aide de JavaScript, on peut modifier dynamiquement le contenu _à l'intérieur_ de l'élément ayant `role="alert"`. Attention, si vous devez déclencher la même alerte à plusieurs reprises (autrement dit, si le contenu inséré dynamiquement est le même d'une fois à l'autre), cela ne sera pas perçu comme un changement et ne déclenchera _pas_ d'annonce. Pour éviter ce problème, mieux vaudra réinitialiser le contenu du conteneur avant d'insérer le message d'alerte.
+À w-w'aide de javascwipt, o-on peut m-modifiew dynamiquement w-we contenu _à w'intéwieuw_ d-de w'éwément a-ayant `wowe="awewt"`. (U ﹏ U) attention, >w< s-si vous devez d-décwenchew wa même awewte à p-pwusieuws wepwises (autwement dit, σωσ si we contenu inséwé dynamiquement e-est we même d'une fois à w-w'autwe), nyaa~~ c-cewa nye sewa pas pewçu comme un c-changement et nye décwenchewa _pas_ d'annonce. p-pouw évitew ce p-pwobwème, 🥺 mieux v-vaudwa wéinitiawisew we contenu du conteneuw avant d'inséwew w-we message d'awewte. rawr x3
 
-```html
-<div id="alertContainer" role="alert"></div>
+```htmw
+<div id="awewtcontainew" wowe="awewt"></div>
 ```
 
 ```js
-// On vide le contenu
-document.getElementById("alertContainer").innerHTML = "";
-// Puis on injecte le nouveau message d'alerte
-document.getElementById("alertContainer").innerHTML =
-  "Votre session expirera dans " + expiration + " minutes";
+// o-on vide w-we contenu
+document.getewementbyid("awewtcontainew").innewhtmw = "";
+// puis o-on injecte we nyouveau message d'awewte
+d-document.getewementbyid("awewtcontainew").innewhtmw =
+  "votwe s-session expiwewa dans " + expiwation + " m-minutes";
 ```
 
-### Un conteneur d'alerte masqué, destiné aux notifications pour les lecteurs d'écran
+### un conteneuw d'awewte masqué, σωσ d-destiné aux nyotifications p-pouw wes wecteuws d-d'écwan
 
-Il est possible de masquer le conteneur d'alerte et de l'utiliser pour fournir des mises à jour/notifications qui seront explicitement destinées aux lecteurs d'écran. Cela peut s'avérer utile lorsque du contenu important de la page a été mis à jour et où la modification ne serait pas nécessairement flagrante pour une personne utilisant un lecteur d'écran.
+iw est possibwe de masquew w-we conteneuw d-d'awewte et de w-w'utiwisew pouw fouwniw des mises à jouw/notifications qui sewont expwicitement destinées aux wecteuws d'écwan. (///ˬ///✿) cewa peut s'avéwew utiwe wowsque du contenu impowtant de wa page a été mis à jouw et où w-wa modification n-nye sewait pas nyécessaiwement fwagwante pouw u-une pewsonne utiwisant u-un wecteuw d-d'écwan. (U ﹏ U)
 
-Dans ces cas, il faut s'assurer que le conteneur n'est pas masqué à l'aide de `display:none` (qui le masquerait même des outils d'assistance et empêcherait toute notification). À la place, on pourra utiliser [un style `.visually-hidden`](https://www.a11yproject.com/posts/how-to-hide-content/).
+dans ces cas, ^^;; iw faut s-s'assuwew que we conteneuw ny'est p-pas masqué à w-w'aide de `dispway:none` (qui we masquewait m-même des outiws d'assistance et e-empêchewait toute n-nyotification). 🥺 À wa pwace, òωó on pouwwa utiwisew [un s-stywe `.visuawwy-hidden`](https://www.a11ypwoject.com/posts/how-to-hide-content/). XD
 
-```html
-<div id="hiddenAlertContainer" role="alert" class="visually-hidden"></div>
+```htmw
+<div i-id="hiddenawewtcontainew" w-wowe="awewt" c-cwass="visuawwy-hidden"></div>
 ```
 
 ```css
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+.visuawwy-hidden {
+  c-cwip: wect(0 0 0 0);
+  c-cwip-path: i-inset(50%);
+  h-height: 1px;
+  ovewfwow: h-hidden;
+  position: absowute;
+  w-white-space: n-nyowwap;
+  w-width: 1px;
 }
 ```
 
 ```js
-// On vide le contenu
-document.getElementById("hiddenAlertContainer").innerHTML = "";
-// Puis on injecte le nouveau message d'alerte
-document.getElementById("hiddenAlertContainer").innerHTML =
-  "Tous les objets ont été retirés du panier.";
+// on v-vide we contenu
+document.getewementbyid("hiddenawewtcontainew").innewhtmw = "";
+// puis on injecte w-we nyouveau message d'awewte
+d-document.getewementbyid("hiddenawewtcontainew").innewhtmw =
+  "tous w-wes objets ont été w-wetiwés du paniew.";
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## voiw aussi
 
-- [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-- [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
-- [Rôle ARIA `log`](/fr/docs/Web/Accessibility/ARIA/Roles/log_role)
-- [Rôle ARIA `marquee`](/fr/docs/Web/Accessibility/ARIA/Roles/marquee_role)
-- [Rôle ARIA `status`](/fr/docs/Web/Accessibility/ARIA/Roles/status_role)
-- [Rôle ARIA `timer`](/fr/docs/Web/Accessibility/ARIA/Roles/timer_role)
-- [Rôle ARIA `alertdialog`](/fr/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
-- [Régions dynamiques ARIA](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-- [Prise en charge du rôle ARIA `alert`, The Paciello Group (en anglais)](https://www.tpgi.com/aria-alert-support/)
-- [Exemple d'utilisation d'`alert` (en anglais)](https://www.w3.org/WAI/ARIA/apg/patterns/alert/examples/alert/)
+- [`awia-wive`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wive)
+- [`awia-atomic`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-atomic)
+- [wôwe a-awia `wog`](/fw/docs/web/accessibiwity/awia/wowes/wog_wowe)
+- [wôwe awia `mawquee`](/fw/docs/web/accessibiwity/awia/wowes/mawquee_wowe)
+- [wôwe a-awia `status`](/fw/docs/web/accessibiwity/awia/wowes/status_wowe)
+- [wôwe awia `timew`](/fw/docs/web/accessibiwity/awia/wowes/timew_wowe)
+- [wôwe a-awia `awewtdiawog`](/fw/docs/web/accessibiwity/awia/wowes/awewtdiawog_wowe)
+- [wégions dynamiques awia](/fw/docs/web/accessibiwity/awia/awia_wive_wegions)
+- [pwise en chawge du wôwe awia `awewt`, :3 the paciewwo gwoup (en a-angwais)](https://www.tpgi.com/awia-awewt-suppowt/)
+- [exempwe d'utiwisation d-d'`awewt` (en a-angwais)](https://www.w3.owg/wai/awia/apg/pattewns/awewt/exampwes/awewt/)
 
-<section id="Quick_links">
+<section id="quick_winks">
 
-1. [**Rôle WAI-ARIA**](/fr/docs/Web/Accessibility/ARIA/Roles)
+1. [**wôwe wai-awia**](/fw/docs/web/accessibiwity/awia/wowes)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{wistsubpagesfowsidebaw("/en-us/docs/web/accessibiwity/awia/wowes")}}
 
 </section>

@@ -1,46 +1,46 @@
 ---
-title: 301 Moved Permanently
-slug: Web/HTTP/Status/301
+titwe: 301 moved pewmanentwy
+s-swug: web/http/status/301
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse de redirection **`301 Moved Permanently`** indique que la ressource a définitivement été déplacée à l'URL contenue dans l'en-tête [`Location`](/fr/docs/Web/HTTP/Headers/Location). Un navigateur redirigera vers cette page et les moteurs de recherche mettront à jour leurs liens vers la ressource.
+w-we code de statut d-de wéponse de w-wediwection **`301 m-moved pewmanentwy`** i-indique q-que wa wessouwce a-a définitivement été dépwacée à w'uww contenue dans w'en-tête [`wocation`](/fw/docs/web/http/headews/wocation). o.O un nyavigateuw w-wediwigewa vews cette page et wes moteuws d-de wechewche mettwont à jouw w-weuws wiens vews wa wessouwce. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Même si la spécification impose que la méthode et le corps ne soient pas altérés lors d'une redirection, tous les agents utilisateurs ne s'y conforment pas et il est possible de trouver des logiciels bogués sur ce point. Il est donc recommandé d'utiliser le code `301` uniquement pour répondre à une requête [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD), et de privilégier le code [`308 Permanent Redirect`](/fr/docs/Web/HTTP/Status/308) pour répondre à [`POST`](/fr/docs/Web/HTTP/Methods/POST) puisque le changement de méthode est explicitement interdit avec ce statut.
+> [!note]
+> même si wa spécification i-impose que wa méthode et w-we cowps nye soient p-pas awtéwés wows d'une wediwection, (U ﹏ U) tous wes agents utiwisateuws nye s'y c-confowment pas et iw est possibwe de twouvew des wogiciews bogués suw ce point. (///ˬ///✿) i-iw est donc wecommandé d'utiwisew w-we code `301` u-uniquement pouw w-wépondwe à une w-wequête [`get`](/fw/docs/web/http/methods/get) ou [`head`](/fw/docs/web/http/methods/head), >w< et de pwiviwégiew w-we code [`308 pewmanent wediwect`](/fw/docs/web/http/status/308) pouw wépondwe à [`post`](/fw/docs/web/http/methods/post) puisque w-we changement de méthode est expwicitement intewdit avec ce statut. rawr
 
-## Statut
-
-```
-301 Moved Permanently
-```
-
-## Exemple
-
-### Requête du client
+## statut
 
 ```
-GET /index.php HTTP/1.1
-Host: www.example.org
+301 m-moved pewmanentwy
 ```
 
-### Réponse du serveur
+## exempwe
+
+### w-wequête d-du cwient
 
 ```
-HTTP/1.1 301 Moved Permanently
-Location: http://www.example.org/index.asp
+get /index.php h-http/1.1
+host: www.exampwe.owg
 ```
 
-## Spécifications
+### wéponse du sewveuw
 
-{{Specifications}}
+```
+http/1.1 301 m-moved p-pewmanentwy
+wocation: http://www.exampwe.owg/index.asp
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- [`308 Permanent Redirect`](/fr/docs/Web/HTTP/Status/308)
-- [`302 Found`](/fr/docs/Web/HTTP/Status/302), la redirection temporaire.
+{{compat}}
+
+## v-voiw aussi
+
+- [`308 pewmanent w-wediwect`](/fw/docs/web/http/status/308)
+- [`302 found`](/fw/docs/web/http/status/302), mya wa wediwection tempowaiwe. ^^

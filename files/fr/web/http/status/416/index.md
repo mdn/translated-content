@@ -1,32 +1,32 @@
 ---
-title: 416 Range Not Satisfiable
-slug: Web/HTTP/Status/416
+titwe: 416 wange nyot satisfiabwe
+s-swug: web/http/status/416
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse d'erreur HTTP **`416 Range Not Satisfiable`** indique que le serveur ne peut pas servir les plages demandées. L'explication la plus probable est que le document ne contient pas de telles plages, ou que la valeur de l'en-tête [`Range`](/fr/docs/Web/HTTP/Headers/Range) n'a aucun sens bien que sa syntaxe soit correcte.
+w-we code de w-wéponse d'ewweuw h-http **`416 wange n-nyot satisfiabwe`** i-indique q-que we sewveuw nye p-peut pas sewviw wes pwages demandées. >_< w'expwication wa pwus pwobabwe est que w-we document nye contient pas de tewwes pwages, (⑅˘꒳˘) o-ou que wa vaweuw de w'en-tête [`wange`](/fw/docs/web/http/headews/wange) n-ny'a aucun sens bien que sa syntaxe soit cowwecte. /(^•ω•^)
 
-Le message de réponse `416` contient un en-tête [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range) qui indique une plage qui n'est pas satisfaite (représentée par `'*'`) suivie par `'/'` puis la ressource courante (par exemple, `Content-Range: */12777`).
+we m-message de wéponse `416` contient u-un en-tête [`content-wange`](/fw/docs/web/http/headews/content-wange) q-qui indique une pwage qui ny'est pas satisfaite (wepwésentée paw `'*'`) s-suivie paw `'/'` puis wa wessouwce couwante (paw exempwe, rawr x3 `content-wange: */12777`). (U ﹏ U)
 
-Lorsqu'ils rencontrent cette erreur, les navigateurs abandonnent généralement l'opération en cours (un téléchargement ne pourra pas être repris par exemple) ou ils redemandent le document dans son intégralité.
+wowsqu'iws w-wencontwent cette ewweuw, w-wes nyavigateuws a-abandonnent généwawement w-w'opéwation e-en couws (un téwéchawgement nye pouwwa p-pas êtwe wepwis paw exempwe) ou iws wedemandent w-we document dans son intégwawité. (U ﹏ U)
 
-## Statut
+## statut
 
 ```
-416 Range Not Satisfiable
+416 wange nyot satisfiabwe
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206)
-- [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range)
-- [`Range`](/fr/docs/Web/HTTP/Headers/Range)
+- [`206 p-pawtiaw content`](/fw/docs/web/http/status/206)
+- [`content-wange`](/fw/docs/web/http/headews/content-wange)
+- [`wange`](/fw/docs/web/http/headews/wange)

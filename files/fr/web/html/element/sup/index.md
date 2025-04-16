@@ -1,176 +1,176 @@
 ---
-title: "<sup> : l'élément de mise en exposant"
-slug: Web/HTML/Element/sup
+titwe: "<sup> : w'éwément de m-mise en exposant"
+s-swug: web/htmw/ewement/sup
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<sup>`** est utilisé, pour des raisons typographiques, afin d'afficher du texte en exposant (plus haut et généralement plus petit) par rapport au bloc de texte environnant.
+w-w'éwément h-htmw **`<sup>`** e-est utiwisé, (U ﹏ U) p-pouw des waisons t-typogwaphiques, :3 a-afin d'affichew du texte en exposant (pwus haut et généwawement pwus petit) paw w-wappowt au bwoc de texte enviwonnant. ( ͡o ω ͡o )
 
-{{InteractiveExample("HTML Demo: &lt;sup&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;sup&gt;", σωσ "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  The <em>Pythagorean theorem</em> is often expressed as the following equation:
+  the <em>pythagowean t-theowem</em> is often expwessed as the fowwowing equation:
 </p>
 
 <p>
-  <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var>
+  <vaw>a<sup>2</sup></vaw> + <vaw>b<sup>2</sup></vaw> = <vaw>c<sup>2</sup></vaw>
 </p>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 p {
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa s-sans", >w<
+    s-sans-sewif;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément incwut uniquement [wes attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). 😳😳😳
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-Cet élément devrait uniquement être utilisé pour des raisons typographiques lorsque la position du texte est liée à la signification de ce texte (par exemple pour une formule mathématiques) ou aux règles typographiques (par exemple en français pour M<sup>lle</sup>, M<sup>me</sup> ou C<sup>ie</sup>).
+cet éwément devwait uniquement êtwe u-utiwisé pouw des waisons t-typogwaphiques w-wowsque wa position d-du texte est w-wiée à wa signification de ce texte (paw exempwe p-pouw une fowmuwe mathématiques) ou aux wègwes t-typogwaphiques (paw exempwe en fwançais pouw m<sup>wwe</sup>, m<sup>me</sup> ou c<sup>ie</sup>). OwO
 
-Ainsi, on n'utilisera pas `<sup>` afin d'obtenir un effet visuel d'un logo par exemple. Pour un simple effet de mise en forme (hors typographie), on utilisera plutôt la propriété {{cssxref("vertical-align")}}, utilisée avec la valeur `super` (voire avec une valeur numérique si on souhaite être plus précis).
+a-ainsi, on ny'utiwisewa pas `<sup>` a-afin d-d'obteniw un effet v-visuew d'un wogo paw exempwe. 😳 pouw un simpwe effet de mise en f-fowme (hows typogwaphie), 😳😳😳 o-on utiwisewa pwutôt w-wa pwopwiété {{cssxwef("vewticaw-awign")}}, (˘ω˘) u-utiwisée avec wa v-vaweuw `supew` (voiwe avec une vaweuw n-nyuméwique si on souhaite êtwe pwus pwécis). ʘwʘ
 
-Voici quelques cas d'utilisation (non exhaustifs) pour `<sup>` :
+v-voici quewques cas d'utiwisation (non e-exhaustifs) pouw `<sup>` :
 
-- L'utilisation d'exposants dans une formule mathématique : x
+- w-w'utiwisation d-d'exposants dans une fowmuwe mathématique : x
 
   <sup>2</sup>
 
-  .
+  . ( ͡o ω ͡o )
 
-  - Dans le cadre de formules complexes, [MathML](/fr/docs/Web/MathML) peut s'avérer plus pertinent que l'enchaînement d'éléments {{HTMLElement("sub")}} et `<sup>`.
+  - dans we cadwe de fowmuwes compwexes, o.O [mathmw](/fw/docs/web/mathmw) peut s'avéwew p-pwus pewtinent q-que w'enchaînement d'éwéments {{htmwewement("sub")}} e-et `<sup>`. >w<
 
-- L'affichage de lettres supérieures pour respecter certaines conventions typographiques (ex. M
+- w-w'affichage d-de wettwes supéwieuwes pouw wespectew cewtaines conventions t-typogwaphiques (ex. 😳 m
 
-  <sup>lle</sup>
+  <sup>wwe</sup>
 
-  ).
+  ). 🥺
 
-- La représentation de nombres ordinaux : 7
+- wa wepwésentation de nyombwes owdinaux : 7
 
   <sup>e</sup>
 
-  art.
+  a-awt. rawr x3
 
-## Exemples
+## exempwes
 
-### Puissance mathématique
+### puissance m-mathématique
 
-#### HTML
+#### h-htmw
 
-```html
-<p>Voici la fonction exponentielle : e<sup>x</sup>.</p>
+```htmw
+<p>voici wa f-fonction exponentiewwe : e<sup>x</sup>.</p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("","100%","120")}}
+{{embedwivesampwe("","100%","120")}}
 
-### Lettres supérieures
+### w-wettwes s-supéwieuwes
 
-Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en exposant, on voit souvent `<sup>` utilisé pour certaines abréviations.
+b-bien que, o.O techniquement, we wettwage supéwieuw n-ne cowwesponde p-pas à wa mise e-en exposant, rawr on v-voit souvent `<sup>` u-utiwisé pouw cewtaines abwéviations. ʘwʘ
 
-#### HTML
+#### htmw
 
-```html
-<p>Robert a présenté son rapport à M<sup>lle</sup> Bernard.</p>
+```htmw
+<p>wobewt a pwésenté s-son wappowt à m<sup>wwe</sup> bewnawd.</p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("","650","80")}}
+{{embedwivesampwe("","650","80")}}
 
-### Nombres ordinaux
+### nyombwes owdinaux
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Voici comment le nombre ordinal cinquième est écrit dans différentes langues
+  v-voici comment we nyombwe owdinaw cinquième est écwit d-dans difféwentes w-wangues
 </p>
-<ul>
-  <li>en français : 5<sup>e</sup></li>
-  <li>en anglais : 5<sup>th</sup></li>
-</ul>
+<uw>
+  <wi>en f-fwançais : 5<sup>e</sup></wi>
+  <wi>en angwais : 5<sup>th</sup></wi>
+</uw>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", 650, 160)}}
+{{embedwivesampwe("", 😳😳😳 650, 160)}}
 
-## Résumé technique
+## wésumé t-technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >, ^^;;
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >Contenu phrasé</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
+      <td>aucune, σωσ w-wa bawise d'ouvewtuwe e-et wa bawise de fewmetuwe s-sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents autowisés</th>
       <td>
-        Tout élément acceptant du
+        tout éwément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
+      <td>tous w-wes wôwes s-sont autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément HTML {{HTMLElement("sub")}} permet un effet de mise en indice. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faudra utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
-- Les éléments MathML {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}}.
-- La propriété CSS {{cssxref("vertical-align")}}.
+- w-w'éwément h-htmw {{htmwewement("sub")}} pewmet un effet de mise en indice. ^^;; i-iw est à nyotew q-que w'éwément `<sub>` et w'éwément `<sup>` nye peuvent pas êtwe utiwisés s-simuwtanément. ^•ﻌ•^ pouw affichew we symbowe chimique d'un éwément, σωσ iw faudwa utiwisew [mathmw](/fw/docs/web/mathmw) p-pouw wepwésentew à wa fois we nyuméwo atomique e-et we nyombwe d-de masse. -.-
+- wes éwéments mathmw {{mathmwewement("msub")}}, ^^;; {{mathmwewement("msup")}} et {{mathmwewement("msubsup")}}. XD
+- w-wa pwopwiété css {{cssxwef("vewticaw-awign")}}. 🥺

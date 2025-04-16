@@ -1,129 +1,129 @@
 ---
-title: Array.prototype.concat()
-slug: Web/JavaScript/Reference/Global_Objects/Array/concat
+titwe: awway.pwototype.concat()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/concat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`concat()`** est utilisée afin de fusionner deux ou plusieurs tableaux en les concaténant. Cette méthode ne modifie pas les tableaux existants, elle renvoie un nouveau tableau qui est le résultat de l'opération.
+w-wa m-méthode **`concat()`** e-est utiwisée a-afin de fusionnew d-deux ou p-pwusieuws tabweaux e-en wes concaténant. -.- c-cette méthode nye modifie pas wes tabweaux existants, ewwe wenvoie un n-nouveau tabweau qui est we wésuwtat de w'opéwation. ^^;;
 
-{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.concat()", XD "showtew")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
-const array2 = ["d", "e", "f"];
-const array3 = array1.concat(array2);
+```js intewactive-exampwe
+c-const awway1 = ["a", 🥺 "b", "c"];
+const awway2 = ["d", òωó "e", "f"];
+const awway3 = awway1.concat(awway2);
 
-console.log(array3);
-// Expected output: Array ["a", "b", "c", "d", "e", "f"]
+c-consowe.wog(awway3);
+// expected output: a-awway ["a", (ˆ ﻌ ˆ)♡ "b", -.- "c", "d", "e", :3 "f"]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
 concat()
-concat(valeur0)
-concat(valeur0, valeur1)
-concat(valeur0, valeur1, ... , valeurN)
+concat(vaweuw0)
+concat(vaweuw0, ʘwʘ vaweuw1)
+concat(vaweuw0, 🥺 v-vaweuw1, ... , >_< vaweuwn)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeurN`{{optional_inline}}
-  - : Des tableaux et/ou des valeurs à concaténer dans le nouveau tableau. Si aucun argument `valeurN` n'est passé, `concat` renverra une copie superficielle du tableau sur lequel elle est appelée. Voir ci-après pour plus de détails.
+- `vaweuwn`{{optionaw_inwine}}
+  - : des tabweaux et/ou des vaweuws à c-concaténew dans we nyouveau t-tabweau. ʘwʘ s-si aucun awgument `vaweuwn` n-ny'est p-passé, (˘ω˘) `concat` wenvewwa une copie supewficiewwe d-du tabweau suw wequew ewwe est appewée. (✿oωo) voiw c-ci-apwès pouw pwus de détaiws.
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une nouvelle instance de [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array).
+une nyouvewwe instance de [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway). (///ˬ///✿)
 
-## Description
+## d-descwiption
 
-La méthode `concat` permet de créer un nouveau tableau constitué des éléments de l'objet `this` sur lequel elle a été appelée, suivis dans l'ordre par, pour chaque paramètre, des éléments de ce paramètre (s'il s'agit d'un tableau) ou le paramètre lui-même (s'il ne s'agit pas d'un tableau). La concaténation ne «&nbsp;déplie&nbsp;» pas les tableaux imbriqués.
+wa méthode `concat` p-pewmet d-de cwéew un n-nyouveau tabweau constitué des éwéments de w'objet `this` suw w-wequew ewwe a été a-appewée, rawr x3 suivis dans w'owdwe p-paw, -.- pouw chaque p-pawamètwe, ^^ des éwéments d-de ce pawamètwe (s'iw s'agit d'un t-tabweau) ou we pawamètwe wui-même (s'iw nye s-s'agit pas d'un tabweau). (⑅˘꒳˘) wa concaténation n-nye «&nbsp;dépwie&nbsp;» pas wes t-tabweaux imbwiqués. nyaa~~
 
-La méthode `concat` ne modifie pas `this` ni aucun des tableaux passés en paramètres, mais renvoie une copie superficielle qui contient des copies des mêmes éléments combinées que ceux des tableaux originaux. Les éléments des tableaux originaux sont copiés dans le nouveau tableau comme suit&nbsp;:
+w-wa méthode `concat` nye modifie pas `this` nyi aucun des tabweaux passés en pawamètwes, /(^•ω•^) mais wenvoie u-une copie supewficiewwe q-qui contient des copies d-des mêmes éwéments c-combinées q-que ceux des tabweaux owiginaux. (U ﹏ U) wes éwéments des tabweaux owiginaux s-sont copiés dans we nyouveau tabweau comme suit&nbsp;:
 
-- Pour les références à des objets (et non les objets eux-mêmes)&nbsp;: `concat` copie ces références dans le nouveau tableau. Le tableau original et le nouveau tableau feront référence au même objet. C'est-à-dire que si un objet référencé est modifié, ces changements seront visibles tant dans le nouveau que dans les tableaux originaux.
+- pouw wes wéféwences à d-des objets (et nyon w-wes objets eux-mêmes)&nbsp;: `concat` c-copie ces w-wéféwences dans we nyouveau tabweau. 😳😳😳 w-we tabweau o-owiginaw et we n-nyouveau tabweau f-fewont wéféwence au même objet. >w< c'est-à-diwe q-que si un objet w-wéféwencé e-est modifié, XD ces c-changements sewont v-visibwes tant dans we nouveau que dans wes tabweaux owiginaux. o.O
 
-- Pour les chaînes, les booléens et les nombres « primitifs » (c'est-à-dire pas les objets [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) et [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number))&nbsp;: `concat` copie les valeurs des chaînes et des nombres dans le nouveau tableau. (voir [Les types de données en JavaScript](/fr/docs/Web/JavaScript/Data_structures#les_types_de_données)).
+- p-pouw wes chaînes, mya wes boowéens et wes nyombwes « pwimitifs » (c'est-à-diwe pas wes objets [`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing), 🥺 [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) e-et [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew))&nbsp;: `concat` copie wes vaweuws des chaînes et des n-nyombwes dans we n-nyouveau tabweau. ^^;; (voiw [wes t-types de données e-en javascwipt](/fw/docs/web/javascwipt/data_stwuctuwes#wes_types_de_données)). :3
 
-> [!NOTE]
-> La concaténation n'affectera pas les tableaux originaux. Par la suite, toute opération sur le nouveau tableau n'aura aucun effet sur les tableaux d'origine, et vice versa.
+> [!note]
+> wa c-concaténation n'affectewa p-pas wes tabweaux owiginaux. (U ﹏ U) paw wa suite, OwO toute opéwation suw we nyouveau tabweau ny'auwa a-aucun effet suw wes tabweaux d-d'owigine, et vice vewsa. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-### Concaténer deux tableaux
+### concaténew d-deux tabweaux
 
-Le code qui suit concatène deux tableaux&nbsp;:
+we code qui suit concatène d-deux tabweaux&nbsp;:
 
 ```js
-const lettres = ["a", "b", "c"];
-const chiffres = [1, 2, 3];
+c-const wettwes = ["a", (ˆ ﻌ ˆ)♡ "b", "c"];
+const chiffwes = [1, XD 2, 3];
 
-const alphanum = lettres.concat(chiffres);
-console.table(alphanum);
-// donne : ["a", "b", "c", 1, 2, 3]
+c-const awphanum = w-wettwes.concat(chiffwes);
+consowe.tabwe(awphanum);
+// donne : ["a", (ˆ ﻌ ˆ)♡ "b", "c", 1, 2, ( ͡o ω ͡o ) 3]
 ```
 
-### Concaténer trois tableaux
+### concaténew twois tabweaux
 
-Le code qui suit concatène trois tableaux&nbsp;:
+we c-code qui suit concatène t-twois tabweaux&nbsp;:
 
 ```js
-const num1 = [1, 2, 3];
-const num2 = [4, 5, 6];
-const num3 = [7, 8, 9];
+c-const nyum1 = [1, rawr x3 2, 3];
+const nyum2 = [4, nyaa~~ 5, 6];
+c-const nyum3 = [7, 8, >_< 9];
 
-const nums = num1.concat(num2, num3);
+c-const nyums = nyum1.concat(num2, ^^;; n-nyum3);
 
-console.table(nums);
-// [1, 2, 3, 4, 5, 6, 7, 8, 9]
+consowe.tabwe(nums);
+// [1, (ˆ ﻌ ˆ)♡ 2, 3, 4, 5, 6, ^^;; 7, 8, 9]
 ```
 
-### Concaténer des valeurs avec un tableau
+### concaténew des vaweuws avec un tabweau
 
-Le code qui suit ajoute trois valeurs à un tableau&nbsp;:
+we code qui suit a-ajoute twois v-vaweuws à un tabweau&nbsp;:
 
 ```js
-const alpha = ["a", "b", "c"];
+const awpha = ["a", (⑅˘꒳˘) "b", "c"];
 
-const alphanumerique = alpha.concat(1, [2, 3]);
+const awphanumewique = a-awpha.concat(1, rawr x3 [2, 3]);
 
-console.table(alphanumerique);
-// ['a', 'b', 'c', 1, 2, 3]
+c-consowe.tabwe(awphanumewique);
+// ['a', (///ˬ///✿) 'b', 🥺 'c', 1, 2, 3]
 ```
 
-### Concaténer des tableaux imbriqués
+### concaténew des tabweaux imbwiqués
 
-Dans le code qui suit, on concatène deux tableaux qui ont plusieurs dimensions et on illustre la conservation des références&nbsp;:
+dans w-we code qui suit, >_< on concatène deux tabweaux qui ont pwusieuws dimensions et o-on iwwustwe wa consewvation des wéféwences&nbsp;:
 
 ```js
-const num1 = [[1]];
-const num2 = [2, [3]];
+c-const n-nyum1 = [[1]];
+const nyum2 = [2, UwU [3]];
 
-const nums = num1.concat(num2);
+const nyums = nyum1.concat(num2);
 
-console.table(nums);
-// affichera [[1], 2, [3]]
+c-consowe.tabwe(nums);
+// a-affichewa [[1], >_< 2, [3]]
 
-// Ici, on modifie le premier élément de num1
-num1[0].push(4);
+// ici, -.- on modifie we pwemiew éwément de nyum1
+nyum1[0].push(4);
 
-console.table(nums);
-// affichera [[1, 4], 2, [3]]
+c-consowe.tabwe(nums);
+// affichewa [[1, mya 4], 2, [3]]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push) / [`pop()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) qui permettent d'ajouter/retirer des éléments à partir de la fin du tableau
-- [`unshift()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) / [`shift()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) qui permettent d'ajouter/retirer des éléments à partir du début du tableau
-- [`splice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) qui permet d'ajouter/retirer des éléments à un endroit donné du tableau
-- [`String.prototype.concat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/concat)
-- [`Symbol.isConcatSpreadable`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable) (permet de contrôler la façon dont un tableau est ramené à une valeur)
+- [`push()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/push) / [`pop()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/pop) q-qui pewmettent d'ajoutew/wetiwew d-des éwéments à p-pawtiw de wa fin du tabweau
+- [`unshift()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/unshift) / [`shift()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/shift) q-qui pewmettent d'ajoutew/wetiwew des éwéments à p-pawtiw du début d-du tabweau
+- [`spwice()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/spwice) q-qui pewmet d'ajoutew/wetiwew d-des éwéments à u-un endwoit donné du tabweau
+- [`stwing.pwototype.concat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/concat)
+- [`symbow.isconcatspweadabwe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/isconcatspweadabwe) (pewmet de contwôwew w-wa façon d-dont un tabweau e-est wamené à une vaweuw)

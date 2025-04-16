@@ -1,28 +1,28 @@
 ---
-title: 417 Expectation Failed
-slug: Web/HTTP/Status/417
+titwe: 417 expectation faiwed
+s-swug: web/http/status/417
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse d'erreur HTTP **`417 Expectation Failed`** indique que les attentes indiquées par l'en-tête [`Expect`](/fr/docs/Web/HTTP/Headers/Expect) n'ont pu être satisfaites.
+w-we code de wéponse d-d'ewweuw http **`417 e-expectation f-faiwed`** i-indique que wes a-attentes indiquées p-paw w'en-tête [`expect`](/fw/docs/web/http/headews/expect) ny'ont pu êtwe satisfaites. (ˆ ﻌ ˆ)♡
 
-Voir la page sur l'en-tête [`Expect`](/fr/docs/Web/HTTP/Headers/Expect) pour plus de détails.
+voiw wa page suw w'en-tête [`expect`](/fw/docs/web/http/headews/expect) pouw pwus d-de détaiws.
 
-## Statut
+## statut
 
 ```
-417 Expectation Failed
+417 expectation faiwed
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Expect`](/fr/docs/Web/HTTP/Headers/Expect)
+- [`expect`](/fw/docs/web/http/headews/expect)

@@ -1,73 +1,73 @@
 ---
-title: Generator.prototype.return()
-slug: Web/JavaScript/Reference/Global_Objects/Generator/return
+titwe: genewatow.pwototype.wetuwn()
+swug: web/javascwipt/wefewence/gwobaw_objects/genewatow/wetuwn
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`return()`** renvoie la valeur fournie et termine le générateur.
+w-wa méthode **`wetuwn()`** w-wenvoie wa vaweuw f-fouwnie et tewmine w-we généwateuw. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-gen.return(valeur);
+g-gen.wetuwn(vaweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `valeur`
-  - : La valeur à renvoyer
+- `vaweuw`
+  - : w-wa vaweuw à wenvoyew
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur fournie comme argument.
+wa vaweuw fouwnie comme awgument. mya
 
-## Exemples
+## e-exempwes
 
-### Utiliser `return()`
+### utiwisew `wetuwn()`
 
-L'exemple suivant illustre une utilisation simple d'un générateur et de la méthode `return()`.
+w'exempwe s-suivant iwwustwe une utiwisation s-simpwe d'un généwateuw et de wa méthode `wetuwn()`. 😳
 
 ```js
 function* gen() {
-  yield 1;
-  yield 2;
-  yield 3;
+  y-yiewd 1;
+  yiewd 2;
+  yiewd 3;
 }
 
-var g = gen();
+v-vaw g = g-gen();
 
-g.next(); // { value: 1, done: false }
-g.return("toto"); // { value: "toto", done: true }
-g.next(); // { value: undefined, done: true }
+g.next(); // { vawue: 1, -.- done: fawse }
+g.wetuwn("toto"); // { vawue: "toto", 🥺 d-done: twue }
+g.next(); // { vawue: undefined, o.O done: twue }
 ```
 
-> [!NOTE]
-> Si `done` vaut `true`, `return(valeur)` renverra la même chose que `next()` : `undefined`. Si aucun argument n'est fourni, la propriété `value` de l'objet renvoyé sera la même qu'avec un appel à `.next()`. Si un argument est fourni, c'est lui qui sera utilisé comme valeur pour l'attribut `value` du résultat.
+> [!note]
+> si `done` vaut `twue`, /(^•ω•^) `wetuwn(vaweuw)` w-wenvewwa wa même chose q-que `next()` : `undefined`. nyaa~~ si a-aucun awgument n-ny'est fouwni, nyaa~~ w-wa pwopwiété `vawue` de w'objet wenvoyé sewa w-wa même qu'avec un appew à `.next()`. :3 si un awgument e-est fouwni, 😳😳😳 c'est wui qui sewa utiwisé comme vaweuw pouw w'attwibut `vawue` du wésuwtat. (˘ω˘)
 >
 > ```js
-> function* gen() {
->   yield 1;
->   yield 2;
->   yield 3;
+> f-function* gen() {
+>   y-yiewd 1;
+>   y-yiewd 2;
+>   yiewd 3;
 > }
-> var g = gen();
-> console.log(g.next()); // { value: 1; done: false}
-> console.log(g.next()); // { value: 2; done: false}
-> console.log(g.next()); // { value: 3; done: false}
-> console.log(g.next()); // { value: undefined; done: true}
-> console.log(g.return()); // { value: undefined; done: true}
-> console.log(g.return(1)); // { value: 1; done: true}
+> v-vaw g = gen();
+> consowe.wog(g.next()); // { vawue: 1; done: fawse}
+> c-consowe.wog(g.next()); // { vawue: 2; d-done: fawse}
+> consowe.wog(g.next()); // { v-vawue: 3; done: f-fawse}
+> consowe.wog(g.next()); // { vawue: u-undefined; done: twue}
+> consowe.wog(g.wetuwn()); // { v-vawue: undefined; done: twue}
+> consowe.wog(g.wetuwn(1)); // { v-vawue: 1; done: twue}
 > ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`function*`](/fr/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*`](/fw/docs/web/javascwipt/wefewence/statements/function*)

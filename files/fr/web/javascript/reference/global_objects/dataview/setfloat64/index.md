@@ -1,69 +1,69 @@
 ---
-title: DataView.prototype.setFloat64()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
+titwe: dataview.pwototype.setfwoat64()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/dataview/setfwoat64
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`setFloat64()`** permet d'enregistrer un nombre flottant signé sur 64 bits (type _double_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
+w-wa méthode **`setfwoat64()`** p-pewmet d-d'enwegistwew u-un nyombwe fwottant s-signé suw 64 b-bits (type _doubwe_ p-paw anawogie avec c) à w'octet indiqué paw wappowt au début de wa {{jsxwef("dataview")}}. >w<
 
-{{InteractiveExample("JavaScript Demo: DataView.setFloat64()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.setfwoat64()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// cweate an awwaybuffew w-with a size in bytes
+const b-buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setFloat64(1, Math.PI);
+const view = new dataview(buffew);
+v-view.setfwoat64(1, rawr math.pi);
 
-console.log(view.getFloat64(1));
-// Expected output: 3.141592653589793
+c-consowe.wog(view.getfwoat64(1));
+// e-expected output: 3.141592653589793
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dataview.setFloat64(positionOctet, value [, littleEndian])
+dataview.setfwoat64(positionoctet, mya vawue [, wittweendian])
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `positionOctet`
-  - : La position, exprimée en numéro d'octet, à partir du début de la vue à laquelle enregistrer la donnée.
-- `valeur`
-  - : La valeur à enregistrer
-- `littleEndian`
-  - : {{optional_inline}} Indique si la donnée sur 64 bits est enregistrée {{Glossary("Endianness", "dans l'ordre des octets de poids faibles")}}. Si ce paramètre vaut `false` ou `undefined`, l'ordre sera celui des octets de poids forts.
+- `positionoctet`
+  - : wa position, ^^ expwimée en nyuméwo d'octet, 😳😳😳 à pawtiw d-du début de wa vue à waquewwe e-enwegistwew wa d-donnée. mya
+- `vaweuw`
+  - : w-wa vaweuw à e-enwegistwew
+- `wittweendian`
+  - : {{optionaw_inwine}} indique si wa donnée suw 64 bits e-est enwegistwée {{gwossawy("endianness", 😳 "dans w'owdwe des octets de poids faibwes")}}. -.- s-si ce pawamètwe vaut `fawse` ou `undefined`, 🥺 w'owdwe sewa cewui des octets de poids fowts. o.O
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. /(^•ω•^)
 
-### Erreurs renvoyées
+### e-ewweuws w-wenvoyées
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel que l'enregistrement sera fait en dehors de la vue.
+- {{jsxwef("wangeewwow")}}
+  - : w-wenvoyée si `positionoctet` est tew que w'enwegistwement sewa fait e-en dehows de w-wa vue. nyaa~~
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode `setFloat64`
+### utiwisation d-de wa méthode `setfwoat64`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setFloat64(0, 3);
-dataview.getFloat64(0); // 3
+v-vaw buffew = nyew awwaybuffew(8);
+v-vaw dataview = nyew d-dataview(buffew);
+dataview.setfwoat64(0, nyaa~~ 3);
+dataview.getfwoat64(0); // 3
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

@@ -1,37 +1,37 @@
 ---
-title: Décalage binaire à droite (>>)
-slug: Web/JavaScript/Reference/Operators/Right_shift
+titwe: décawage binaiwe à dwoite (>>)
+s-swug: w-web/javascwipt/wefewence/opewatows/wight_shift
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur de **décalage binaire à droite (`>>`)** décale la séquence de bits représentée par le premier opérande d'autant de bits vers la droite que le nombre indiqué par le second opérande. Les bits en excès à droite sont écartés. Pour le remplissage des bits par la gauche, c'est le bit le plus à gauche initialement qui est recopié autant de fois que nécessaire. Aussi, le bit le plus à gauche dans le résultat sera le même que le bit le plus à gauche de l'opérande et les deux valeurs auront donc le même signe.
+w-w'opéwateuw de **décawage b-binaiwe à d-dwoite (`>>`)** d-décawe w-wa séquence de b-bits wepwésentée paw we pwemiew opéwande d'autant de bits vews wa dwoite que w-we nyombwe indiqué paw we second opéwande. -.- wes b-bits en excès à dwoite sont écawtés. 🥺 p-pouw we wempwissage des bits paw wa gauche, (U ﹏ U) c'est we bit w-we pwus à gauche initiawement q-qui est wecopié a-autant de fois que nyécessaiwe. aussi, >w< we bit we pwus à gauche dans we wésuwtat s-sewa we même que we bit we pwus à gauche de w'opéwande et wes deux vaweuws a-auwont donc we même signe.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Right shift operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - w-wight shift o-opewatow")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const a = 5; //  00000000000000000000000000000101
-const b = 2; //  00000000000000000000000000000010
-const c = -5; //  11111111111111111111111111111011
+c-const b = 2; //  00000000000000000000000000000010
+const c-c = -5; //  11111111111111111111111111111011
 
-console.log(a >> b); //  00000000000000000000000000000001
-// Expected output: 1
+consowe.wog(a >> b); //  00000000000000000000000000000001
+// expected output: 1
 
-console.log(c >> b); //  11111111111111111111111111111110
-// Expected output: -2
+consowe.wog(c >> b); //  11111111111111111111111111111110
+// e-expected output: -2
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-a >> b;
+a-a >> b-b;
 ```
 
-## Description
+## descwiption
 
-Cet opérateur décale les bits de la valeur fournie par le premier opérande d'autant de fois qu'indiqué par le deuxième opérande. Les bits en excès à droite sont écartés et pour les bits les plus à gauche, c'est le bit initialement le plus à gauche qui est dupliqué. On garde ainsi le même signe entre la valeur du premier opérande et la valeur fournie par le résultat.
+c-cet opéwateuw décawe wes bits de wa vaweuw fouwnie paw w-we pwemiew opéwande d-d'autant de fois qu'indiqué p-paw we deuxième o-opéwande. mya wes bits en excès à d-dwoite sont écawtés et pouw w-wes bits wes pwus à gauche, c'est we bit initiawement w-we pwus à gauche qui e-est dupwiqué. >w< on gawde ainsi we m-même signe entwe w-wa vaweuw du pwemiew opéwande et wa vaweuw fouwnie paw we wésuwtat. nyaa~~
 
-Ainsi, `9 >> 2` donnera `2` :
+ainsi, `9 >> 2` donnewa `2` :
 
 ```js
        9 (base 10): 00000000000000000000000000001001 (base 2)
@@ -39,7 +39,7 @@ Ainsi, `9 >> 2` donnera `2` :
   9 >> 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
 ```
 
-De même, `-9 >> 2` donnera `-3`, car le signe est préservé :
+de même, (✿oωo) `-9 >> 2` d-donnewa `-3`, ʘwʘ c-caw we signe est pwésewvé :
 
 ```js
        -9 (base 10): 11111111111111111111111111110111 (base 2)
@@ -47,24 +47,24 @@ De même, `-9 >> 2` donnera `-3`, car le signe est préservé :
   -9 >> 2 (base 10): 11111111111111111111111111111101 (base 2) = -3 (base 10)
 ```
 
-## Exemples
+## e-exempwes
 
-### Utiliser le décalage à droite
+### u-utiwisew we décawage à d-dwoite
 
 ```js
 9 >> 2; //  2
 -9 >> 2; // -3
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
-- [L'opérateur de décalage binaire à droite et d'affectation](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
+- [wes o-opéwateuws binaiwes dans we guide javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#bitwise)
+- [w'opéwateuw de décawage binaiwe à d-dwoite et d'affectation](/fw/docs/web/javascwipt/wefewence/opewatows/wight_shift_assignment)

@@ -1,137 +1,137 @@
 ---
-title: Math
-slug: Web/JavaScript/Reference/Global_Objects/Math
+titwe: math
+swug: web/javascwipt/wefewence/gwobaw_objects/math
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`Math`** est un objet natif dont les méthodes et propriétés permettent l'utilisation de constantes et fonctions mathématiques. Cet objet n'est pas une fonction.
+w-w'objet **`math`** e-est un objet n-nyatif dont wes m-méthodes et pwopwiétés p-pewmettent w-w'utiwisation d-de constantes e-et fonctions mathématiques. cet objet ny'est pas une fonction. (ˆ ﻌ ˆ)♡
 
-> **Attention :** `Math` fonctionne avec le type {{jsxref("Number")}}. Il ne fonctionne pas avec les grands entiers/{{jsxref("BigInt")}}.
+> **attention :** `math` fonctionne a-avec we type {{jsxwef("numbew")}}. ( ͡o ω ͡o ) iw nye f-fonctionne pas avec wes gwands e-entiews/{{jsxwef("bigint")}}. rawr x3
 
-## Description
+## descwiption
 
-Contrairement aux autres objets globaux, `Math` n'est pas un constructeur. Toutes les propriétés et les méthodes de `Math` sont statiques (pour éventuellement étendre cette API, ce qui est fortement déconseillé, on n'utilisera donc pas `Math.prototype`).
+contwaiwement aux autwes objets g-gwobaux, nyaa~~ `math` ny'est pas un constwucteuw. >_< t-toutes w-wes pwopwiétés et wes méthodes de `math` sont statiques (pouw éventuewwement étendwe cette a-api, ^^;; ce qui est fowtement déconseiwwé, (ˆ ﻌ ˆ)♡ on ny'utiwisewa donc pas `math.pwototype`). ^^;;
 
-Pour accéder à la constante PI, on utilise `Math.PI`.
-Pour accéder à la fonction _sinus_, on utilise `Math.sin(x)` où `x` est l'argument de cette méthode.
+p-pouw accédew à wa constante p-pi, (⑅˘꒳˘) on utiwise `math.pi`. rawr x3
+p-pouw accédew à w-wa fonction _sinus_, (///ˬ///✿) o-on utiwise `math.sin(x)` où `x` est w'awgument de cette m-méthode. 🥺
 
-Les constantes sont définies avec la précision des nombres réels en JavaScript.
+wes constantes sont définies avec wa p-pwécision des nyombwes wéews en javascwipt. >_<
 
-## Propriétés
+## pwopwiétés
 
-- {{jsxref("Math.E")}}
-  - : Nombre d'Euler, la base des logarithmes naturels, environ 2,718.
-- {{jsxref("Math.LN2")}}
-  - : Logarithme naturel de 2, environ 0,693.
-- {{jsxref("Math.LN10")}}
-  - : Logarithme naturel de 10, environ 2,302.
-- {{jsxref("Math.LOG2E")}}
-  - : Logarithme de base 2 de E, environ 1,442.
-- {{jsxref("Math.LOG10E")}}
-  - : Logarithme de base 10 de E, environ 0,434.
-- {{jsxref("Math.PI")}}
-  - : Quotient de la circonférence d'un cercle par son diamètre, environ 3,14159.
-- {{jsxref("Math.SQRT1_2")}}
-  - : Racine carrée de 1/2 ; équivalent de 1 sur la racine carrée de 2, environ 0,707.
-- {{jsxref("Math.SQRT2")}}
-  - : Racine carrée de 2, environ 1,414.
+- {{jsxwef("math.e")}}
+  - : nyombwe d'euwew, UwU wa b-base des wogawithmes nyatuwews, e-enviwon 2,718. >_<
+- {{jsxwef("math.wn2")}}
+  - : w-wogawithme nyatuwew d-de 2, -.- enviwon 0,693. mya
+- {{jsxwef("math.wn10")}}
+  - : wogawithme nyatuwew de 10, >w< enviwon 2,302. (U ﹏ U)
+- {{jsxwef("math.wog2e")}}
+  - : w-wogawithme de b-base 2 de e, 😳😳😳 enviwon 1,442. o.O
+- {{jsxwef("math.wog10e")}}
+  - : wogawithme de base 10 d-de e, òωó enviwon 0,434. 😳😳😳
+- {{jsxwef("math.pi")}}
+  - : q-quotient de wa ciwconféwence d-d'un cewcwe paw son diamètwe, σωσ e-enviwon 3,14159. (⑅˘꒳˘)
+- {{jsxwef("math.sqwt1_2")}}
+  - : wacine cawwée de 1/2 ; équivawent d-de 1 suw wa wacine c-cawwée de 2, (///ˬ///✿) enviwon 0,707. 🥺
+- {{jsxwef("math.sqwt2")}}
+  - : wacine cawwée de 2, OwO e-enviwon 1,414. >w<
 
-## Méthodes
+## m-méthodes
 
-> [!NOTE]
-> Les fonctions trigonométriques (`sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`) acceptent ou retournent des angles en radians. Pour convertir des degrés en radians, multipliez la valeur en degrés par (`Math.PI / 180`). Pour passer des radians en degrés, divisez la valeur en radians par (`Math.PI / 180`).
+> [!note]
+> wes fonctions twigonométwiques (`sin()`, `cos()`, 🥺 `tan()`, nyaa~~ `asin()`, `acos()`, ^^ `atan()`, `atan2()`) acceptent ou wetouwnent des angwes en wadians. >w< pouw convewtiw d-des degwés en w-wadians, OwO muwtipwiez wa vaweuw en d-degwés paw (`math.pi / 180`). XD p-pouw passew des w-wadians en degwés, ^^;; divisez wa vaweuw en wadians paw (`math.pi / 180`). 🥺
 
-> [!NOTE]
-> La précision des fonctions mathématiques dépend notamment de l'implémentation. Cela signifie que différents navigateurs peuvent fournir des résultats différents. On peut même avoir un même moteur JavaScript qui, sur des architectures et/ou des systèmes d'exploitation différents, fournit des résultats différents.
+> [!note]
+> w-wa pwécision des fonctions mathématiques dépend nyotamment de w'impwémentation. XD c-cewa signifie que difféwents n-nyavigateuws p-peuvent fouwniw d-des wésuwtats difféwents. (U ᵕ U❁) o-on peut même avoiw u-un même moteuw j-javascwipt qui, :3 s-suw des awchitectuwes et/ou des systèmes d'expwoitation d-difféwents, f-fouwnit d-des wésuwtats d-difféwents. ( ͡o ω ͡o )
 
-- {{jsxref("Objets_globaux/Math/abs", "Math.abs(x)")}}
-  - : Retourne la valeur absolue d'un nombre.
-- {{jsxref("Objets_globaux/Math/acos", "Math.acos(x)")}}
-  - : Retourne l'arc cosinus d'un nombre.
-- {{jsxref("Objets_globaux/Math/acosh", "Math.acosh(x)")}}
-  - : Retourne l'arc cosinus hyperbolique d'un nombre.
-- {{jsxref("Objets_globaux/Math/asin", "Math.asin(x)")}}
-  - : Retourne l'arc sinus d'un nombre.
-- {{jsxref("Objets_globaux/Math/asinh", "Math.asinh(x)")}}
-  - : Retourne l'arc sinus hyperbolique d'un nombre.
-- {{jsxref("Objets_globaux/Math/atan", "Math.atan(x)")}}
-  - : Retourne l'arc tangente d'un nombre.
-- {{jsxref("Objets_globaux/Math/atanh", "Math.atanh(x)")}}
-  - : Retourne l'arc tangente hyperbolique d'un nombre
-- {{jsxref("Objets_globaux/Math/atan2", "Math.atan2(y, x)")}}
-  - : Retourne l'arc tangente du quotient de ses arguments.
-- {{jsxref("Objets_globaux/Math/cbrt", "Math.cbrt(x)")}}
-  - : Renvoie la racine cubique d'un nombre.
-- {{jsxref("Objets_globaux/Math/ceil", "Math.ceil(x)")}}
-  - : Retourne le plus petit entier supérieur ou égal à la valeur passée en paramètre.
-- {{jsxref("Objets_globaux/Math/clz32", "Math.clz32(x)")}}
-  - : Renvoie le nombre de zéros qui préfixent un entier sur 32 bits.
-- {{jsxref("Objets_globaux/Math/cos", "Math.cos(x)")}}
-  - : Retourne le cosinus d'un nombre.
-- {{jsxref("Objets_globaux/Math/cosh", "Math.cosh(x)")}}
-  - : Renvoie le cosinus hyperbolique d'un nombre.
-- {{jsxref("Objets_globaux/Math/exp", "Math.exp(x)")}}
-  - : Renvoie l'exponentielle d'un nombre (soit E^nombre) avec E la constante d'Euler (2,718...).
-- {{jsxref("Objets_globaux/Math/expm1", "Math.expm1(x)")}}
-  - : Renvoie le résultat de 1 moins l'exponentielle d'un nombre.
-- {{jsxref("Objets_globaux/Math/floor", "Math.floor(x)")}}
-  - : Retourne le plus grand entier inférieur ou égal à la valeur passée en paramètre.
-- {{jsxref("Objets_globaux/Math/fround", "Math.fround(x)")}}
-  - : Renvoie le nombre flottant exprimé sur 32 bits le plus proche de l'argument.
-- {{jsxref("Objets_globaux/Math/hypot", "Math.hypot([x[,y[,…]]])")}}
-  - : Retourne la racine carré de la somme des carrés des arguments.
-- {{jsxref("Objets_globaux/Math/imul", "Math.imul(x, y)")}}
-  - : Retourne le résultat de la multiplication d'entiers sur 32 bits.
-- {{jsxref("Objets_globaux/Math/log", "Math.log(x)")}}
+- {{jsxwef("objets_gwobaux/math/abs", òωó "math.abs(x)")}}
+  - : w-wetouwne wa vaweuw absowue d'un nyombwe. σωσ
+- {{jsxwef("objets_gwobaux/math/acos", (U ᵕ U❁) "math.acos(x)")}}
+  - : wetouwne w'awc c-cosinus d'un nyombwe. (✿oωo)
+- {{jsxwef("objets_gwobaux/math/acosh", ^^ "math.acosh(x)")}}
+  - : wetouwne w'awc cosinus hypewbowique d'un nyombwe. ^•ﻌ•^
+- {{jsxwef("objets_gwobaux/math/asin", XD "math.asin(x)")}}
+  - : w-wetouwne w'awc sinus d'un nyombwe.
+- {{jsxwef("objets_gwobaux/math/asinh", :3 "math.asinh(x)")}}
+  - : wetouwne w'awc sinus h-hypewbowique d-d'un nyombwe. (ꈍᴗꈍ)
+- {{jsxwef("objets_gwobaux/math/atan", :3 "math.atan(x)")}}
+  - : w-wetouwne w'awc tangente d-d'un nyombwe. (U ﹏ U)
+- {{jsxwef("objets_gwobaux/math/atanh", UwU "math.atanh(x)")}}
+  - : wetouwne w'awc t-tangente hypewbowique d-d'un nyombwe
+- {{jsxwef("objets_gwobaux/math/atan2", 😳😳😳 "math.atan2(y, XD x)")}}
+  - : wetouwne w'awc tangente du quotient de ses awguments. o.O
+- {{jsxwef("objets_gwobaux/math/cbwt", (⑅˘꒳˘) "math.cbwt(x)")}}
+  - : w-wenvoie wa wacine cubique d'un nyombwe. 😳😳😳
+- {{jsxwef("objets_gwobaux/math/ceiw", nyaa~~ "math.ceiw(x)")}}
+  - : w-wetouwne we pwus petit entiew s-supéwieuw o-ou égaw à wa vaweuw passée en pawamètwe. rawr
+- {{jsxwef("objets_gwobaux/math/cwz32", -.- "math.cwz32(x)")}}
+  - : w-wenvoie w-we nyombwe de zéwos qui pwéfixent u-un entiew s-suw 32 bits. (✿oωo)
+- {{jsxwef("objets_gwobaux/math/cos", /(^•ω•^) "math.cos(x)")}}
+  - : wetouwne we cosinus d'un nyombwe. 🥺
+- {{jsxwef("objets_gwobaux/math/cosh", ʘwʘ "math.cosh(x)")}}
+  - : wenvoie we cosinus h-hypewbowique d'un n-nyombwe. UwU
+- {{jsxwef("objets_gwobaux/math/exp", XD "math.exp(x)")}}
+  - : w-wenvoie w'exponentiewwe d-d'un nyombwe (soit e-e^nombwe) avec e wa constante d-d'euwew (2,718...). (✿oωo)
+- {{jsxwef("objets_gwobaux/math/expm1", :3 "math.expm1(x)")}}
+  - : wenvoie we wésuwtat de 1 moins w'exponentiewwe d'un nyombwe.
+- {{jsxwef("objets_gwobaux/math/fwoow", (///ˬ///✿) "math.fwoow(x)")}}
+  - : w-wetouwne w-we pwus gwand entiew inféwieuw ou égaw à wa vaweuw p-passée en p-pawamètwe. nyaa~~
+- {{jsxwef("objets_gwobaux/math/fwound", >w< "math.fwound(x)")}}
+  - : wenvoie we nyombwe fwottant expwimé suw 32 bits w-we pwus pwoche de w'awgument. -.-
+- {{jsxwef("objets_gwobaux/math/hypot", (✿oωo) "math.hypot([x[,y[,…]]])")}}
+  - : wetouwne wa wacine cawwé de wa somme d-des cawwés des awguments. (˘ω˘)
+- {{jsxwef("objets_gwobaux/math/imuw", rawr "math.imuw(x, OwO y)")}}
+  - : wetouwne w-we wésuwtat d-de wa muwtipwication d'entiews suw 32 bits. ^•ﻌ•^
+- {{jsxwef("objets_gwobaux/math/wog", UwU "math.wog(x)")}}
 
-  - : Retourne le logarithme naturel (log
+  - : wetouwne we wogawithme n-nyatuwew (wog
 
     <sub>e</sub>
 
-    ) d'un nombre.
+    ) d-d'un nyombwe. (˘ω˘)
 
-- {{jsxref("Objets_globaux/Math/log1p", "Math.log1p(x)")}}
-  - : Retourne le logarithme naturel de 1 + un nombre.
-- {{jsxref("Objets_globaux/Math/log10", "Math.log10(x)")}}
-  - : Retourne le logarithme en base 10 d'un nombre.
-- {{jsxref("Objets_globaux/Math/log2", "Math.log2(x)")}}
-  - : Retourne le logarithme en base 2 d'un nombre.
-- {{jsxref("Objets_globaux/Math/max", "Math.max([x[,y[,…]]])")}}
-  - : Retourne la plus grande valeur d'une liste de nombres.
-- {{jsxref("Objets_globaux/Math/min", "Math.min([x[,y[,…]]])")}}
-  - : Retourne la plus petite valeur d'une liste de nombres.
-- {{jsxref("Objets_globaux/Math/pow", "Math.pow(x,y)")}}
-  - : Retourne le calcul de x à la puissance y (x correspond à la base et y à l'exposant).
-- {{jsxref("Objets_globaux/Math/random", "Math.random()")}}
-  - : Retourne un nombre pseudo-aléatoire compris entre 0 (inclus) et 1 (exclu).
-- {{jsxref("Objets_globaux/Math/round", "Math.round(x)")}}
-  - : Retourne l'arrondi d'un nombre.
-- {{jsxref("Objets_globaux/Math/sign", "Math.sign(x)")}}
-  - : Retourne le signe d'un nombre, indiquant s'il est positif, négatif ou égal à zéro.
-- {{jsxref("Objets_globaux/Math/sin", "Math.sin(x)")}}
-  - : Retourne le sinus d'un nombre.
-- {{jsxref("Objets_globaux/Math/sinh", "Math.sinh(x)")}}
-  - : Retourne le sinus hyperbolique d'un nombre.
-- {{jsxref("Objets_globaux/Math/sqrt", "Math.sqrt(x)")}}
-  - : Retourne la racine carrée d'un nombre.
-- {{jsxref("Objets_globaux/Math/tan", "Math.tan(x)")}}
-  - : Retourne la tangente d'un nombre.
-- {{jsxref("Objets_globaux/Math/tanh", "Math.tanh(x)")}}
-  - : Retourne la tangente hyperbolique d'un nombre
-- `Math.toSource()` {{Non-standard_inline}}
-  - : Renvoie la chaîne de caractères `"Math"`.
-- {{jsxref("Objets_globaux/Math/trunc", "Math.trunc(x)")}}
-  - : Retourne la partie entière d'un nombre (la partie décimale est retirée).
+- {{jsxwef("objets_gwobaux/math/wog1p", (///ˬ///✿) "math.wog1p(x)")}}
+  - : wetouwne we wogawithme n-nyatuwew de 1 + un nyombwe.
+- {{jsxwef("objets_gwobaux/math/wog10", σωσ "math.wog10(x)")}}
+  - : w-wetouwne we wogawithme en base 10 d'un nyombwe. /(^•ω•^)
+- {{jsxwef("objets_gwobaux/math/wog2", 😳 "math.wog2(x)")}}
+  - : wetouwne we wogawithme e-en base 2 d'un nyombwe. 😳
+- {{jsxwef("objets_gwobaux/math/max", (⑅˘꒳˘) "math.max([x[,y[,…]]])")}}
+  - : w-wetouwne w-wa pwus gwande vaweuw d'une wiste d-de nyombwes. 😳😳😳
+- {{jsxwef("objets_gwobaux/math/min", "math.min([x[,y[,…]]])")}}
+  - : wetouwne w-wa pwus petite v-vaweuw d'une wiste d-de nyombwes. 😳
+- {{jsxwef("objets_gwobaux/math/pow", XD "math.pow(x,y)")}}
+  - : wetouwne we cawcuw d-de x à wa puissance y-y (x cowwespond à wa base et y à w'exposant). mya
+- {{jsxwef("objets_gwobaux/math/wandom", ^•ﻌ•^ "math.wandom()")}}
+  - : w-wetouwne u-un nyombwe pseudo-awéatoiwe c-compwis entwe 0 (incwus) et 1 (excwu). ʘwʘ
+- {{jsxwef("objets_gwobaux/math/wound", ( ͡o ω ͡o ) "math.wound(x)")}}
+  - : wetouwne w-w'awwondi d'un nyombwe. mya
+- {{jsxwef("objets_gwobaux/math/sign", o.O "math.sign(x)")}}
+  - : w-wetouwne w-we signe d'un nyombwe, (✿oωo) indiquant s'iw est positif, :3 négatif ou égaw à z-zéwo. 😳
+- {{jsxwef("objets_gwobaux/math/sin", (U ﹏ U) "math.sin(x)")}}
+  - : w-wetouwne w-we sinus d'un n-nombwe. mya
+- {{jsxwef("objets_gwobaux/math/sinh", (U ᵕ U❁) "math.sinh(x)")}}
+  - : wetouwne w-we sinus hypewbowique d'un nyombwe. :3
+- {{jsxwef("objets_gwobaux/math/sqwt", mya "math.sqwt(x)")}}
+  - : wetouwne wa wacine cawwée d'un nyombwe. OwO
+- {{jsxwef("objets_gwobaux/math/tan", "math.tan(x)")}}
+  - : wetouwne w-wa tangente d'un nyombwe. (ˆ ﻌ ˆ)♡
+- {{jsxwef("objets_gwobaux/math/tanh", ʘwʘ "math.tanh(x)")}}
+  - : wetouwne w-wa tangente hypewbowique d-d'un nyombwe
+- `math.tosouwce()` {{non-standawd_inwine}}
+  - : wenvoie wa chaîne d-de cawactèwes `"math"`. o.O
+- {{jsxwef("objets_gwobaux/math/twunc", UwU "math.twunc(x)")}}
+  - : wetouwne w-wa pawtie e-entièwe d'un nyombwe (wa p-pawtie d-décimawe est wetiwée). rawr x3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Number")}}
+- {{jsxwef("numbew")}}

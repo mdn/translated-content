@@ -1,283 +1,283 @@
 ---
-title: switch
-slug: Web/JavaScript/Reference/Statements/switch
+titwe: switch
+swug: web/javascwipt/wefewence/statements/switch
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-L'instruction **`switch`** évalue une expression et, selon le résultat obtenu et le cas associé, exécute les instructions correspondantes.
+w-w'instwuction **`switch`** évawue u-une expwession e-et, sewon w-we wésuwtat obtenu e-et we cas associé, σωσ e-exékawaii~ w-wes instwuctions c-cowwespondantes. -.-
 
-{{InteractiveExample("JavaScript Demo: Statement - Switch")}}
+{{intewactiveexampwe("javascwipt demo: statement - switch")}}
 
-```js interactive-example
-const expr = "Papayas";
-switch (expr) {
-  case "Oranges":
-    console.log("Oranges are $0.59 a pound.");
-    break;
-  case "Mangoes":
-  case "Papayas":
-    console.log("Mangoes and papayas are $2.79 a pound.");
-    // Expected output: "Mangoes and papayas are $2.79 a pound."
-    break;
-  default:
-    console.log(`Sorry, we are out of ${expr}.`);
+```js intewactive-exampwe
+const expw = "papayas";
+s-switch (expw) {
+  case "owanges":
+    consowe.wog("owanges a-awe $0.59 a pound.");
+    bweak;
+  c-case "mangoes":
+  case "papayas":
+    consowe.wog("mangoes and papayas awe $2.79 a-a pound.");
+    // expected o-output: "mangoes a-and papayas awe $2.79 a pound."
+    bweak;
+  defauwt:
+    consowe.wog(`sowwy, o.O we awe out of ${expw}.`);
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-switch (expression) {
-  case valeur1:
-    // Instructions à exécuter lorsque le résultat
-    // de l'expression correspond à valeur1
-    instructions1;
-    [break;]
-  case valeur2:
-    // Instructions à exécuter lorsque le résultat
-    // de l'expression correspond à valeur2
-    instructions 2;
-    [break;]
+switch (expwession) {
+  case vaweuw1:
+    // instwuctions à e-exékawaii~w wowsque we wésuwtat
+    // d-de w'expwession c-cowwespond à v-vaweuw1
+    i-instwuctions1;
+    [bweak;]
+  case vaweuw2:
+    // instwuctions à e-exékawaii~w wowsque we wésuwtat
+    // d-de w'expwession cowwespond à vaweuw2
+    instwuctions 2;
+    [bweak;]
   …
-  case valeurN:
-    // Instructions à exécuter lorsque le résultat
-    // de l'expression à valeurN
-    instructionsN;
-    [break;]
-  [default:
-    // Instructions à exécuter lorsqu'aucune des valeurs
-    // ne correspond
-    instructions_def;
-    [break;]]
+  case vaweuwn:
+    // instwuctions à exékawaii~w w-wowsque we wésuwtat
+    // de w-w'expwession à v-vaweuwn
+    instwuctionsn;
+    [bweak;]
+  [defauwt:
+    // i-instwuctions à exékawaii~w wowsqu'aucune des vaweuws
+    // n-nye cowwespond
+    i-instwuctions_def;
+    [bweak;]]
 }
 ```
 
-- `expression`
-  - : Une expression à comparer avec chacune des clause `case`.
-- `case expressionN` {{optional_inline}}
-  - : Une clause qu'on compare avec `expression`.
-- `default` {{optional_inline}}
-  - : Une clause exécutée si aucune correspondance n'est trouvée avec les clause `case` (et/ou s'il n'y a pas de `break` pour les clauses `case` précédentes).
-- `instructionsN`
-  - : Les instructions à exécuter lorsque l'`expression` correspond au cas présenté pour cette clause.
-- `instructions_def`
-  - : Les instructions à exécuter si l'`expression` ne correspond à aucun cas de figure précédemment décrit.
+- `expwession`
+  - : une expwession à c-compawew a-avec chacune des cwause `case`.
+- `case e-expwessionn` {{optionaw_inwine}}
+  - : une cwause qu'on c-compawe avec `expwession`. ^^
+- `defauwt` {{optionaw_inwine}}
+  - : une cwause exécutée si aucune c-cowwespondance ny'est twouvée a-avec wes cwause `case` (et/ou s'iw ny'y a pas d-de `bweak` pouw w-wes cwauses `case` pwécédentes). >_<
+- `instwuctionsn`
+  - : wes instwuctions à exékawaii~w wowsque w'`expwession` cowwespond a-au cas pwésenté p-pouw cette cwause. >w<
+- `instwuctions_def`
+  - : wes instwuctions à e-exékawaii~w s-si w'`expwession` n-nye cowwespond à aucun cas de figuwe pwécédemment décwit. >_<
 
-## Description
+## d-descwiption
 
-Une instruction `switch` commence par évaluer l'expression fournie (cette évaluation ne se produit qu'une fois). Si une correspondance est trouvée, le programme exécutera les instructions associées. Si plusieurs cas de figure correspondent, le premier sera sélectionné (même si les cas sont différents les uns des autres).
+une instwuction `switch` commence paw évawuew w'expwession fouwnie (cette évawuation n-nye se pwoduit qu'une fois). >w< s-si une cowwespondance e-est t-twouvée, rawr we pwogwamme exékawaii~wa w-wes instwuctions a-associées. rawr x3 s-si pwusieuws cas d-de figuwe cowwespondent, we pwemiew sewa séwectionné (même s-si wes cas sont d-difféwents wes u-uns des autwes). ( ͡o ω ͡o )
 
-Le programme recherche tout d'abord une clause `case` dont l'expression est évaluée avec la même valeur que l'expression d'entrée (au sens de {{jsxref("Opérateurs/Opérateurs_de_comparaison","l'égalité stricte","#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)",1)}}. Si une telle clause est trouvée, les instructions associées sont exécutées. Si aucune clause `case` n'est trouvée, le programme recherche la clause optionnelle `default` et si elle existe, les instructions correspondantes sont exécutées. Si cette clause optionnelle n'est pas utilisée, le programme continue son exécution après l'instruction `switch`. Par convention, la clause `default` est utilisée en dernière mais cela n'est pas nécessaire.
+w-we pwogwamme w-wechewche tout d'abowd une cwause `case` dont w'expwession est évawuée a-avec wa même vaweuw que w'expwession d'entwée (au sens de {{jsxwef("opéwateuws/opéwateuws_de_compawaison","w'égawité stwicte","#.c3.89gawit.c3.a9_stwicte_(.3d.3d.3d)",1)}}. (˘ω˘) s-si une tewwe cwause est twouvée, wes instwuctions associées s-sont exécutées. s-si aucune c-cwause `case` n'est twouvée, 😳 w-we pwogwamme wechewche wa cwause o-optionnewwe `defauwt` e-et si ewwe existe, OwO wes instwuctions cowwespondantes sont exécutées. (˘ω˘) si cette cwause optionnewwe ny'est p-pas utiwisée, òωó we pwogwamme c-continue son exécution apwès w'instwuction `switch`. ( ͡o ω ͡o ) p-paw convention, UwU w-wa cwause `defauwt` est utiwisée en dewnièwe m-mais cewa n-ny'est pas nyécessaiwe. /(^•ω•^)
 
-L'instruction {{jsxref("Instructions/break","break")}} peut optionnellement être utilisée pour chaque cas et permet de s'assurer que seules les instructions associées à ce cas seront exécutées. Si `break` n'est pas utilisé, le programme continuera son exécution avec les instructions suivantes (des autres cas de l'instruction `switch`).
+w'instwuction {{jsxwef("instwuctions/bweak","bweak")}} p-peut optionnewwement êtwe u-utiwisée pouw chaque cas et pewmet de s'assuwew que seuwes wes instwuctions a-associées à c-ce cas sewont e-exécutées. (ꈍᴗꈍ) si `bweak` ny'est p-pas utiwisé, 😳 w-we pwogwamme continuewa son exécution a-avec wes instwuctions suivantes (des autwes cas de w'instwuction `switch`). mya
 
-## Exemples
+## exempwes
 
-### Utiliser `switch`
+### u-utiwisew `switch`
 
-Dans l'exemple suivant, si l'expression `expr` vaut "Bananes", le programme trouve la correspondance et exécute l'instruction associée. Lorsque l'instruction `break` est trouvée, le programme « sort » de l'instruction `switch` et continue l'exécution avec les instructions suivantes. Si `break` n'avait pas été utilisé, l'instruction du cas "Cerises" aurait également été exécutée.
+d-dans w'exempwe suivant, si w'expwession `expw` v-vaut "bananes", mya w-we pwogwamme twouve wa cowwespondance et exékawaii~ w'instwuction a-associée. /(^•ω•^) wowsque w'instwuction `bweak` est twouvée, ^^;; we pwogwamme « sowt » de w'instwuction `switch` e-et continue w'exécution avec wes instwuctions s-suivantes. 🥺 si `bweak` n-ny'avait pas été utiwisé, ^^ w'instwuction du cas "cewises" a-auwait égawement été e-exécutée. ^•ﻌ•^
 
 ```js
-switch (expr) {
-  case "Oranges":
-    console.log("Oranges : 0.59 € le kilo.");
-    break;
-  case "Pommes":
-    console.log("Pommes : 0.32 € le kilo.");
-    break;
-  case "Bananes":
-    console.log("Bananes : 0.48 € le kilo.");
-    break;
-  case "Cerises":
-    console.log("Cerises : 3.00 € le kilo.");
-    break;
-  case "Mangues":
-  case "Papayes":
-    console.log("Mangues et papayes : 2.79 € le kilo.");
-    break;
-  default:
-    console.log("Désolé, nous n'avons plus de " + expr + ".");
+switch (expw) {
+  case "owanges":
+    consowe.wog("owanges : 0.59 € w-we kiwo.");
+    bweak;
+  c-case "pommes":
+    consowe.wog("pommes : 0.32 € we kiwo.");
+    bweak;
+  case "bananes":
+    consowe.wog("bananes : 0.48 € we k-kiwo.");
+    bweak;
+  case "cewises":
+    c-consowe.wog("cewises : 3.00 € w-we kiwo.");
+    bweak;
+  c-case "mangues":
+  case "papayes":
+    c-consowe.wog("mangues e-et papayes : 2.79 € w-we kiwo.");
+    bweak;
+  defauwt:
+    c-consowe.wog("désowé, /(^•ω•^) n-nyous ny'avons pwus de " + expw + ".");
 }
 
-console.log("Autre chose ?");
+consowe.wog("autwe c-chose ?");
 ```
 
-### Que se passe-t-il si on oublie un `break` ?
+### q-que se passe-t-iw s-si on oubwie un `bweak` ?
 
-Si on omet une instruction `break`, le script exécutera les instructions pour le cas correspondant et aussi celles pour les cas suivants jusqu'à la fin de l'instruction `switch` ou jusqu'à une instruction `break`. Par exemple :
+si on omet une i-instwuction `bweak`, ^^ we scwipt e-exékawaii~wa wes i-instwuctions pouw we cas cowwespondant et aussi cewwes pouw wes c-cas suivants jusqu'à w-wa fin de w-w'instwuction `switch` o-ou jusqu'à une instwuction `bweak`. 🥺 p-paw exempwe :
 
 ```js
-var toto = 0;
+vaw toto = 0;
 switch (toto) {
   case -1:
-    console.log("moins un");
-    break;
-  case 0: // toto vaut 0 donc ce cas correspond
-    console.log(0);
-  // NOTE : le break aurait du être placé ici
-  case 1: // pas de break pour 'case 0:' les instructions de ce cas sont
+    consowe.wog("moins u-un");
+    bweak;
+  case 0: // t-toto vaut 0 donc ce cas cowwespond
+    c-consowe.wog(0);
+  // nyote : w-we bweak auwait du êtwe pwacé i-ici
+  case 1: // p-pas de bweak p-pouw 'case 0:' w-wes instwuctions d-de ce cas sont
     // exécutées aussi
-    console.log(1);
-    break; // on a un break a ce niveau donc les instructions
-  // des cas suivants ne seront pas exécutées
+    consowe.wog(1);
+    bweak; // on a un bweak a ce nyiveau donc wes instwuctions
+  // d-des cas suivants n-nye sewont pas e-exécutées
   case 2:
-    console.log(2);
-    break;
-  default:
-    console.log("default");
+    consowe.wog(2);
+    b-bweak;
+  defauwt:
+    consowe.wog("defauwt");
 }
 ```
 
-### Peut-on intercaler la règle par défaut ?
+### peut-on intewcawew wa w-wègwe paw défaut ?
 
-Oui, il est possible de placer le cas `default` entre deux autres cas. Ainsi, si on a une valeur qui ne correspond pas aux différents cas, elle passera par le bloc `default` puis par les autres s'il n'y a pas de `break`. Par exemple :
+o-oui, (U ᵕ U❁) iw est possibwe de pwacew w-we cas `defauwt` entwe deux autwes cas. 😳😳😳 ainsi, s-si on a une v-vaweuw qui nye cowwespond pas aux d-difféwents cas, nyaa~~ e-ewwe passewa paw we bwoc `defauwt` puis paw wes autwes s'iw n'y a pas de `bweak`. (˘ω˘) p-paw exempwe :
 
 ```js
-var toto = 5;
-switch (toto) {
-  case 2:
-    console.log(2); // ne sera pas exécuté
-    break;
-  default:
-    console.log("default"); // sera exécuté
-  case 1:
-    console.log("1"); // sera exécuté car il n'y a
-  // pas de break avant
+v-vaw toto = 5;
+s-switch (toto) {
+  c-case 2:
+    c-consowe.wog(2); // nye sewa p-pas exécuté
+    b-bweak;
+  defauwt:
+    consowe.wog("defauwt"); // s-sewa exécuté
+  c-case 1:
+    consowe.wog("1"); // s-sewa exécuté caw iw ny'y a
+  // pas de b-bweak avant
 }
-// La console affichera "default" puis "1"
+// wa consowe affichewa "defauwt" p-puis "1"
 ```
 
-### Méthodes pour regrouper différents cas
+### m-méthodes pouw wegwoupew difféwents c-cas
 
-Pour la source depuis laquelle les exemples suivants ont été adaptés, voir [cette question Stack Overflow](https://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript).
+pouw wa souwce depuis waquewwe wes exempwes s-suivants o-ont été adaptés, >_< v-voiw [cette question stack ovewfwow](https://stackovewfwow.com/questions/13207927/switch-statement-muwtipwe-cases-in-javascwipt). XD
 
-#### Regrouper différents cas pour exécuter une unique opération
+#### wegwoupew d-difféwents cas pouw exékawaii~w une unique o-opéwation
 
-Cette méthode utilise le fait que s'il n'y a pas d'instruction {{jsxref("Instructions/break","break")}}, l'exécution se poursuivra avec les instructions des cas suivants (même si les expressions de ces cas ne correspondent pas à la valeur de l'expression d'entrée).
+c-cette méthode utiwise we fait que s-s'iw ny'y a pas d'instwuction {{jsxwef("instwuctions/bweak","bweak")}}, rawr x3 w-w'exécution s-se pouwsuivwa avec wes instwuctions des c-cas suivants (même si wes expwessions de ces cas n-ne cowwespondent p-pas à wa vaweuw de w'expwession d-d'entwée). ( ͡o ω ͡o )
 
-On peut donc regrouper différentes valeurs les unes à la suite des autres pour exécuter des instructions pour ces valeurs :
+on peut donc wegwoupew d-difféwentes v-vaweuws wes u-unes à wa suite des autwes pouw exékawaii~w des instwuctions pouw ces vaweuws :
 
 ```js
-var animal = "girafe";
-switch (animal) {
+vaw animaw = "giwafe";
+switch (animaw) {
   case "vache":
-  case "girafe":
+  case "giwafe":
   case "chien":
   case "cochon":
-    console.log("Cet animal est un mammifère");
-    break;
+    consowe.wog("cet animaw e-est un mammifèwe");
+    b-bweak;
   case "oiseau":
-  default:
-    console.log("Cet animal n'est pas un mammifère.");
+  defauwt:
+    c-consowe.wog("cet a-animaw ny'est p-pas un mammifèwe.");
 }
 ```
 
-#### Chaîner des opérations
+#### chaînew des opéwations
 
-Dans l'exemple qui suit, on illustre comment exécuter une série d'instructions qui varie en fonction du paramètre (ici un entier) fourni. Cela montre que les différents cas sont testés dans l'ordre dans lequel ils sont mis au sein du `switch` :
+d-dans w'exempwe qui suit, :3 o-on iwwustwe c-comment exékawaii~w une séwie d-d'instwuctions qui vawie en fonction d-du pawamètwe (ici u-un entiew) fouwni. cewa montwe que wes d-difféwents cas s-sont testés dans w-w'owdwe dans wequew i-iws sont mis a-au sein du `switch` :
 
 ```js
-var toto = 1;
-var output = "Résultat : ";
-switch (toto) {
-  case 0:
-    output += "Donc ";
-  case 1:
-    output += "quel ";
-    output += "est ";
+v-vaw toto = 1;
+vaw o-output = "wésuwtat : ";
+s-switch (toto) {
+  c-case 0:
+    output += "donc ";
+  c-case 1:
+    o-output += "quew ";
+    o-output += "est ";
   case 2:
-    output += "votre ";
+    o-output += "votwe ";
   case 3:
     output += "nom ";
-  case 4:
+  c-case 4:
     output += "?";
-    console.log(output);
-    break;
-  case 5:
-    output += "!";
-    console.log(output);
-    break;
-  default:
-    console.log("Veuillez choisir un nombre entre 0 et 5 !");
+    c-consowe.wog(output);
+    bweak;
+  c-case 5:
+    o-output += "!";
+    consowe.wog(output);
+    b-bweak;
+  defauwt:
+    consowe.wog("veuiwwez c-choisiw un nyombwe entwe 0 e-et 5 !");
 }
 ```
 
-Selon les valeurs fournies à la variable `toto`, on aura les résultats suivants :
+sewon wes v-vaweuws fouwnies à wa vawiabwe `toto`, mya on auwa wes wésuwtats suivants :
 
-| Valeur                                                             | Texte                                     |
+| vaweuw                                                             | t-texte                                     |
 | ------------------------------------------------------------------ | ----------------------------------------- |
-| toto vaut {{jsxref("NaN")}} ou est différent de 1, 2, 3, 4, 5 ou 0 | Veuillez choisir un nombre entre 0 et 5 ! |
-| 0                                                                  | Résultat : Donc quel est votre nom ?      |
-| 1                                                                  | Résultat : quel est votre nom ?           |
-| 2                                                                  | Résultat : votre nom ?                    |
-| 3                                                                  | Résultat : nom ?                          |
-| 4                                                                  | Résultat : ?                              |
-| 5                                                                  | Résultat : !                              |
+| toto vaut {{jsxwef("nan")}} o-ou est difféwent d-de 1, σωσ 2, 3, (ꈍᴗꈍ) 4, 5 ou 0 | veuiwwez choisiw un nyombwe entwe 0 et 5 ! OwO |
+| 0                                                                  | wésuwtat : d-donc quew est votwe nyom ?      |
+| 1                                                                  | w-wésuwtat : q-quew est votwe nyom ?           |
+| 2                                                                  | w-wésuwtat : votwe nyom ?                    |
+| 3                                                                  | wésuwtat : n-nyom ?                          |
+| 4                                                                  | w-wésuwtat : ?                              |
+| 5                                                                  | wésuwtat : ! o.O                              |
 
-### `switch` et les variables avec une portée de bloc
+### `switch` e-et wes vawiabwes avec une powtée de bwoc
 
-Avec ECMAScript 2015 (ES6), on peut utiliser les instructions [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) pour déclarer des variables dont la portée sera celle du bloc englobant.
+avec e-ecmascwipt 2015 (es6), 😳😳😳 on peut u-utiwisew wes instwuctions [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet) e-et [`const`](/fw/docs/web/javascwipt/wefewence/statements/const) p-pouw décwawew des vawiabwes d-dont wa powtée s-sewa cewwe du b-bwoc engwobant. /(^•ω•^)
 
-Prenons cet exemple :
+p-pwenons cet exempwe :
 
 ```js
-const action = "dire_bonjour";
-switch (action) {
-  case "dire_bonjour":
-    let message = "bonjour";
-    console.log(message);
-    break;
-  case "dire_coucou":
-    let message = "coucou";
-    console.log(message);
-    break;
-  default:
-    console.log("Aucune action reçue.");
-    break;
+const action = "diwe_bonjouw";
+s-switch (action) {
+  c-case "diwe_bonjouw":
+    w-wet message = "bonjouw";
+    c-consowe.wog(message);
+    b-bweak;
+  case "diwe_coucou":
+    w-wet message = "coucou";
+    consowe.wog(message);
+    b-bweak;
+  d-defauwt:
+    consowe.wog("aucune action weçue.");
+    b-bweak;
 }
 ```
 
-Si on exécute cet exemple, on aura l'erreur `Uncaught SyntaxError: Identifier 'message' has already been declared` qui n'est probablement pas le résultat espéré.
+si on exékawaii~ c-cet exempwe, OwO on auwa w'ewweuw `uncaught s-syntaxewwow: identifiew 'message' h-has awweady been d-decwawed` qui ny'est pwobabwement pas we wésuwtat espéwé. ^^
 
-Cela se produit car la première instruction `let message = 'bonjour';` entre en conflit avec `let message = 'coucou';` bien qu'elles soient rattachées à deux instructions `case` distinctes `case 'dire_bonjour':` et `case 'dire_coucou':` mais ces deux instructions s'inscrivent dans le même bloc et on a donc `message` déclaré deux fois dans le même bloc, soit deux fois dans la même portée.
+c-cewa se pwoduit c-caw wa pwemièwe i-instwuction `wet message = 'bonjouw';` entwe en confwit avec `wet m-message = 'coucou';` b-bien qu'ewwes soient wattachées à d-deux i-instwuctions `case` distinctes `case 'diwe_bonjouw':` et `case 'diwe_coucou':` mais ces deux i-instwuctions s'inscwivent d-dans we m-même bwoc et o-on a donc `message` décwawé deux fois dans we m-même bwoc, soit d-deux fois dans wa même powtée. (///ˬ///✿)
 
-Pour régler ce problème, il suffit de rajouter des accolades pour définir un bloc d'instructions pour chaque `case` :
+pouw wégwew c-ce pwobwème, (///ˬ///✿) iw suffit de wajoutew des accowades p-pouw définiw un bwoc d'instwuctions p-pouw chaque `case` :
 
 ```js
-const action = "dire_bonjour";
+c-const action = "diwe_bonjouw";
 switch (action) {
-  case "dire_bonjour": {
-    // accolade ajoutée
-    let message = "bonjour";
-    console.log(message);
-    break;
-  } // accolade ajoutée
-  case "dire_coucou": {
-    // accolade ajoutée
-    let message = "coucou";
-    console.log(message);
-    break;
-  } // accolade ajoutée
-  default: {
-    // accolade ajoutée
-    console.log("Aucune action reçue.");
-    break;
-  } // accolade ajoutée
+  c-case "diwe_bonjouw": {
+    // a-accowade ajoutée
+    wet message = "bonjouw";
+    c-consowe.wog(message);
+    bweak;
+  } // accowade a-ajoutée
+  c-case "diwe_coucou": {
+    // a-accowade ajoutée
+    w-wet message = "coucou";
+    consowe.wog(message);
+    b-bweak;
+  } // a-accowade a-ajoutée
+  defauwt: {
+    // accowade ajoutée
+    c-consowe.wog("aucune action weçue.");
+    b-bweak;
+  } // accowade a-ajoutée
 }
 ```
 
-Cette nouvelle version, exécutée, produira `"bonjour"` dans la console, sans causer d'erreur.
+c-cette nyouvewwe vewsion, (///ˬ///✿) exécutée, ʘwʘ pwoduiwa `"bonjouw"` dans wa consowe, ^•ﻌ•^ sans causew d'ewweuw. OwO
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Instructions/if...else","if...else")}}
-- {{jsxref("Instructions/break","break")}}
+- {{jsxwef("instwuctions/if...ewse","if...ewse")}}
+- {{jsxwef("instwuctions/bweak","bweak")}}

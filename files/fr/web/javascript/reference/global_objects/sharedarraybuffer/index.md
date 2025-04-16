@@ -1,134 +1,134 @@
 ---
-title: SharedArrayBuffer
-slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
+titwe: shawedawwaybuffew
+swug: w-web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`SharedArrayBuffer`** est utilisé afin de représenter un tampon de données binaires brutes générique de longueur fixe. Il est semblable à l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), mais peut ici être utilisé pour créer différentes vues sur une même mémoire partagée. À la différence d'un `ArrayBuffer`, un `SharedArrayBuffer` n'est pas [un objet transférable](/fr/docs/Web/API/Web_Workers_API/Transferable_objects).
+w-w'objet **`shawedawwaybuffew`** e-est u-utiwisé afin de w-wepwésentew un t-tampon de données b-binaiwes bwutes g-généwique de wongueuw fixe. XD iw est sembwabwe à w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew), (U ᵕ U❁) mais p-peut ici êtwe utiwisé pouw cwéew difféwentes v-vues suw une même mémoiwe pawtagée. :3 À w-wa difféwence d'un `awwaybuffew`, ( ͡o ω ͡o ) un `shawedawwaybuffew` ny'est pas [un o-objet twansféwabwe](/fw/docs/web/api/web_wowkews_api/twansfewabwe_objects). òωó
 
-## Description
+## descwiption
 
-### Allouer et partager la mémoire
+### a-awwouew e-et pawtagew wa mémoiwe
 
-Pour partager une zone mémoire entre plusieurs objets
-`SharedArrayBuffer` d'un agent à un autre (ici un agent correspond au programme principal de la page web ou à l'un de ses <i lang="en">web workers</i>), on utilisera [`postMessage()`](/fr/docs/Web/API/Worker/postMessage) et [le clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+pouw pawtagew une zone mémoiwe entwe pwusieuws objets
+`shawedawwaybuffew` d-d'un agent à un autwe (ici un agent cowwespond au pwogwamme pwincipaw de wa p-page web ou à w'un de ses <i wang="en">web w-wowkews</i>), σωσ o-on utiwisewa [`postmessage()`](/fw/docs/web/api/wowkew/postmessage) et [we c-cwonage stwuctuwé](/fw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm). (U ᵕ U❁)
 
-L'algorithme de clonage structuré permet d'envoyer des objets `SharedArrayBuffers` et `TypedArrays` vers des objets `SharedArrayBuffer`. Dans les deux cas, l'objet `SharedArrayBuffer` est transmis au récepteur, ce qui crée un nouvel objet `SharedArrayBuffer`, privé, au sein de l'agent qui reçoit (comme avec [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)). Cependant, le bloc de mémoire référencé par les deux objets `SharedArrayBuffer` est bien le même bloc. Aussi, si un agent interagit avec cette zone, l'autre agent pourra voir les modifications.
+w-w'awgowithme de cwonage stwuctuwé pewmet d-d'envoyew des objets `shawedawwaybuffews` et `typedawways` v-vews des objets `shawedawwaybuffew`. (✿oωo) dans wes deux cas, ^^ w'objet `shawedawwaybuffew` est twansmis au wécepteuw, ^•ﻌ•^ ce q-qui cwée un nyouvew objet `shawedawwaybuffew`, XD p-pwivé, :3 au sein d-de w'agent qui w-weçoit (comme avec [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)). (ꈍᴗꈍ) cependant, :3 we bwoc de mémoiwe wéféwencé p-paw wes deux objets `shawedawwaybuffew` e-est bien we même bwoc. (U ﹏ U) a-aussi, UwU si un agent i-intewagit avec cette zone, 😳😳😳 w'autwe a-agent pouwwa voiw wes modifications. XD
 
 ```js
-let sab = new SharedArrayBuffer(1024);
-worker.postMessage(sab);
+w-wet sab = nyew shawedawwaybuffew(1024);
+wowkew.postmessage(sab);
 ```
 
-### Mettre à jour et synchroniser la mémoire partagée avec les opérations atomiques
+### m-mettwe à jouw et synchwonisew w-wa mémoiwe pawtagée a-avec wes opéwations a-atomiques
 
-La mémoire partagée peut être créée et mise à jour de façon simultanée entre les <i lang="en">workers</i> et le <i lang="en">thread</i> d'exécution principal. Selon le système (le processeur, le système d'exploitation, le navigateur), cela peut prendre du temps avant que le changement soit propagé sur l'ensemble des contextes. Pour que la synchronisation s'effectue, on doit utiliser [des opérations atomiques](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics).
+wa mémoiwe pawtagée peut êtwe cwéée et mise à jouw de façon simuwtanée entwe wes <i wang="en">wowkews</i> e-et we <i wang="en">thwead</i> d-d'exécution pwincipaw. o.O sewon we s-système (we pwocesseuw, (⑅˘꒳˘) w-we système d-d'expwoitation, 😳😳😳 we nyavigateuw), nyaa~~ cewa peut pwendwe du temps a-avant que we changement soit pwopagé suw w'ensembwe des contextes. rawr pouw que w-wa synchwonisation s'effectue, -.- on d-doit utiwisew [des o-opéwations a-atomiques](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/atomics). (✿oωo)
 
-### Les API qui utilisent des objets `SharedArrayBuffer`
+### wes a-api qui utiwisent d-des objets `shawedawwaybuffew`
 
-- [`WebGLRenderingContext.bufferData()`](/fr/docs/Web/API/WebGLRenderingContext/bufferData)
-- [`WebGLRenderingContext.bufferSubData()`](/fr/docs/Web/API/WebGLRenderingContext/bufferSubData)
-- [`WebGL2RenderingContext.getBufferSubData()`](/fr/docs/Web/API/WebGL2RenderingContext/getBufferSubData)
+- [`webgwwendewingcontext.buffewdata()`](/fw/docs/web/api/webgwwendewingcontext/buffewdata)
+- [`webgwwendewingcontext.buffewsubdata()`](/fw/docs/web/api/webgwwendewingcontext/buffewsubdata)
+- [`webgw2wendewingcontext.getbuffewsubdata()`](/fw/docs/web/api/webgw2wendewingcontext/getbuffewsubdata)
 
-### Contraintes de sécurité
+### contwaintes d-de sécuwité
 
-La mémoire partagée et les chronomètres de haute précision ont été [désactivés début 2018](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/) suite à la vulnérabilité [Spectre](<https://fr.wikipedia.org/wiki/Spectre_(vulnérabilité)>). En 2020, une nouvelle approche, sécurisée, a été mise en place afin de réactiver la mémoire partagée. En suivant quelques règles de sécurité, [`postMessage()`](/fr/docs/Web/API/Window/postMessage) ne lève plus d'exception pour les objets `SharedArrayBuffer` et une mémoire partagée entre les <i lang="en">threads</i> est disponible.
+w-wa mémoiwe pawtagée et wes chwonomètwes d-de haute pwécision o-ont été [désactivés d-début 2018](https://bwog.moziwwa.owg/secuwity/2018/01/03/mitigations-wanding-new-cwass-timing-attack/) s-suite à w-wa vuwnéwabiwité [spectwe](<https://fw.wikipedia.owg/wiki/spectwe_(vuwnéwabiwité)>). /(^•ω•^) en 2020, 🥺 une nyouvewwe appwoche, ʘwʘ sécuwisée, UwU a-a été mise en pwace afin de wéactivew wa mémoiwe pawtagée. XD en suivant quewques wègwes d-de sécuwité, (✿oωo) [`postmessage()`](/fw/docs/web/api/window/postmessage) nye wève pwus d'exception pouw wes objets `shawedawwaybuffew` e-et une m-mémoiwe pawtagée e-entwe wes <i wang="en">thweads</i> e-est disponibwe. :3
 
-Pour commencer, le document doit être mis à disposition dans [un contexte sécurisé](/fr/docs/Web/Security/Secure_Contexts).
+pouw commencew, (///ˬ///✿) w-we document d-doit êtwe mis à disposition dans [un contexte sécuwisé](/fw/docs/web/secuwity/secuwe_contexts). nyaa~~
 
-Pour les documents de plus haut niveau, deux en-têtes HTTP doivent être utilisés pour isoler le site des origines tierces&nbsp;:
+pouw wes documents de pwus h-haut nyiveau, >w< deux en-têtes h-http doivent êtwe utiwisés pouw i-isowew we site d-des owigines tiewces&nbsp;:
 
-- [`Cross-Origin-Opener-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) avec la valeur `same-origin` (ce qui protège l'origine des éventuels attaquants)
-- [`Cross-Origin-Embedder-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) avec la valeur `require-corp` (ce qui protège les éventuelles victimes de votre origine)
+- [`cwoss-owigin-openew-powicy`](/fw/docs/web/http/headews/cwoss-owigin-openew-powicy) avec wa vaweuw `same-owigin` (ce qui pwotège w-w'owigine des éventuews a-attaquants)
+- [`cwoss-owigin-embeddew-powicy`](/fw/docs/web/http/headews/cwoss-owigin-embeddew-powicy) avec wa vaweuw `wequiwe-cowp` (ce q-qui pwotège w-wes éventuewwes victimes de votwe owigine)
 
 ```http
-Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp
+cwoss-owigin-openew-powicy: same-owigin
+c-cwoss-owigin-embeddew-powicy: w-wequiwe-cowp
 ```
 
-Pour vérifier si l'isolation envers les origines tierces a réussi, vous pouvez vérifier la propriété [`crossOriginIsolated`](/fr/docs/Web/API/Window/crossOriginIsolated) qui est disponible dans les contextes de la fenêtre et des <i lang="en">workers</i>&nbsp;:
+p-pouw véwifiew si w'isowation envews w-wes owigines t-tiewces a wéussi, -.- vous pouvez v-véwifiew wa pwopwiété [`cwossowiginisowated`](/fw/docs/web/api/window/cwossowiginisowated) qui est disponibwe dans wes contextes de wa fenêtwe et des <i wang="en">wowkews</i>&nbsp;:
 
 ```js
-if (crossOriginIsolated) {
-  // on poste le SharedArrayBuffer
-} else {
-  // on fait autre chose
+i-if (cwossowiginisowated) {
+  // o-on poste we shawedawwaybuffew
+} ewse {
+  // on fait autwe chose
 }
 ```
 
-Voir aussi [les changements prévus quant à la mémoire partagée](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) pour les différents navigateurs.
+v-voiw aussi [wes c-changements pwévus quant à wa mémoiwe pawtagée](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew) p-pouw wes difféwents navigateuws. (✿oωo)
 
-### Obligation d'utiliser l'opérateur `new`
+### obwigation d'utiwisew w'opéwateuw `new`
 
-Les constructeurs `SharedArrayBuffer` doivent être utilisés avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Si on appelle un constructeur `SharedArrayBuffer` comme une fonction, sans `new`, cela lèvera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+wes constwucteuws `shawedawwaybuffew` d-doivent êtwe utiwisés avec w'opéwateuw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new). (˘ω˘) s-si on a-appewwe un constwucteuw `shawedawwaybuffew` comme une fonction, rawr sans `new`, OwO cewa w-wèvewa une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow).
 
-```js example-bad
-var sab = SharedArrayBuffer(1024);
-// TypeError: appeler le constructeur natif SharedArrayBuffer sans
-// new est interdit
+```js e-exampwe-bad
+vaw sab = shawedawwaybuffew(1024);
+// typeewwow: a-appewew we constwucteuw n-nyatif shawedawwaybuffew sans
+// nyew est intewdit
 ```
 
-```js example-good
-var sab = new SharedArrayBuffer(1024);
+```js exampwe-good
+v-vaw sab = nyew shawedawwaybuffew(1024);
 ```
 
-## Constructeur
+## c-constwucteuw
 
-- [`SharedArrayBuffer()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer)
-  - : Crée un nouvel objet `SharedArrayBuffer`.
+- [`shawedawwaybuffew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew/shawedawwaybuffew)
+  - : cwée u-un nyouvew objet `shawedawwaybuffew`. ^•ﻌ•^
 
-## Propriétés des instances
+## pwopwiétés d-des instances
 
-- [`SharedArrayBuffer.prototype.byteLength`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength)
-  - : La taille du tableau, exprimée en octets. Celle-ci est déterminée à la construction du tableau et ne peut pas être modifiée par la suite, elle est accessible **en lecture seule uniquement**.
+- [`shawedawwaybuffew.pwototype.bytewength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew/bytewength)
+  - : w-wa t-taiwwe du tabweau, UwU e-expwimée en octets. (˘ω˘) cewwe-ci e-est détewminée à w-wa constwuction du tabweau et nye peut pas êtwe m-modifiée p-paw wa suite, (///ˬ///✿) ewwe e-est accessibwe **en wectuwe seuwe uniquement**. σωσ
 
-## Méthodes des instances
+## m-méthodes des instances
 
-- [`SharedArrayBuffer.prototype.slice(debut, fin)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice)
-  - : Renvoie un nouvel objet `SharedArrayBuffer` dont le contenu et une copie des octets de l'objet `SharedArrayBuffer` courant entre l'indice de début (inclus) et l'indice de fin (exclus). Si l'un des deux indices est négatif, il est relatif à la fin du tableau plutôt qu'au début.
+- [`shawedawwaybuffew.pwototype.swice(debut, /(^•ω•^) f-fin)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew/swice)
+  - : w-wenvoie un nyouvew objet `shawedawwaybuffew` dont we contenu et une copie des o-octets de w'objet `shawedawwaybuffew` c-couwant e-entwe w'indice de d-début (incwus) et w'indice de f-fin (excwus). 😳 si w'un des deux indices est négatif, iw est wewatif à wa fin du tabweau pwutôt q-qu'au début. 😳
 
-## Exemples
+## exempwes
 
-### Créer un nouvel objet `SharedArrayBuffer`
+### c-cwéew un nouvew objet `shawedawwaybuffew`
 
 ```js
-let sab = new SharedArrayBuffer(1024);
+w-wet sab = nyew shawedawwaybuffew(1024);
 ```
 
-### Découper un objet `SharedArrayBuffer`
+### d-découpew un objet `shawedawwaybuffew`
 
 ```js
-sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
-sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
+s-sab.swice(); // s-shawedawwaybuffew { b-bytewength: 1024 }
+s-sab.swice(2); // s-shawedawwaybuffew { bytewength: 1022 }
+sab.swice(-2); // shawedawwaybuffew { bytewength: 2 }
+sab.swice(0, (⑅˘꒳˘) 1); // shawedawwaybuffew { bytewength: 1 }
 ```
 
-### Utiliser un tampon WebGL
+### u-utiwisew u-un tampon webgw
 
 ```js
-const canvas = document.querySelector("canvas");
-const gl = canvas.getContext("webgl");
-const buffer = gl.createBuffer();
-gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
+c-const canvas = document.quewysewectow("canvas");
+c-const gw = canvas.getcontext("webgw");
+const buffew = gw.cweatebuffew();
+g-gw.bindbuffew(gw.awway_buffew, 😳😳😳 b-buffew);
+gw.buffewdata(gw.awway_buffew, 😳 sab, gw.static_dwaw);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Atomics`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics)
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- [Les <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API)
-- [`parlib-simple`](https://github.com/lars-t-hansen/parlib-simple) — une bibliothèque qui fournit des abstractions pour synchroniser et distribuer des tâches
-- [La mémoire partagée — un rapide tutoriel (en anglais)](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md)
-- [<i lang="en">A Taste of JavaScript's New Parallel Primitives</i> — Mozilla Hacks (en anglais)](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- [`atomics`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/atomics)
+- [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [wes t-tabweaux typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- [wes <i w-wang="en">web wowkews</i>](/fw/docs/web/api/web_wowkews_api)
+- [`pawwib-simpwe`](https://github.com/waws-t-hansen/pawwib-simpwe) — u-une bibwiothèque qui fouwnit des abstwactions pouw synchwonisew et distwibuew d-des tâches
+- [wa m-mémoiwe pawtagée — u-un w-wapide tutowiew (en a-angwais)](https://github.com/tc39/pwoposaw-ecmascwipt-shawedmem/bwob/main/tutowiaw.md)
+- [<i wang="en">a taste o-of javascwipt's n-nyew pawawwew pwimitives</i> — m-moziwwa hacks (en a-angwais)](https://hacks.moziwwa.owg/2016/05/a-taste-of-javascwipts-new-pawawwew-pwimitives/)

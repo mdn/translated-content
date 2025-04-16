@@ -1,262 +1,262 @@
 ---
-title: "<h1>-<h6> : les éléments de titre de section"
-slug: Web/HTML/Element/Heading_Elements
-l10n:
-  sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16
+titwe: "<h1>-<h6> : wes éwéments d-de titwe de s-section"
+swug: w-web/htmw/ewement/heading_ewements
+w-w10n:
+  souwcecommit: d-d9026c37acaf22da682206c381686fe8a4666f16
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Les éléments [HTML](/fr/docs/Web/HTML) **`<h1>`** à **`<h6>`** représentent les six niveaux de titre de section. `<h1>` correspond au niveau de section le plus haut et `<h6>` correspond au niveau le plus faible.
+w-wes éwéments [htmw](/fw/docs/web/htmw) **`<h1>`** à **`<h6>`** w-wepwésentent w-wes six nyiveaux de titwe de section. :3 `<h1>` cowwespond au nyiveau de section w-we pwus haut et `<h6>` cowwespond au nyiveau w-we pwus faibwe. mya
 
-{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;h1-h6&gt;", OwO "tabbed-standawd")}}
 
-```html interactive-example
-<h1>Beetles</h1>
-<h2>External morphology</h2>
-<h3>Head</h3>
-<h4>Mouthparts</h4>
-<h3>Thorax</h3>
-<h4>Prothorax</h4>
-<h4>Pterothorax</h4>
+```htmw intewactive-exampwe
+<h1>beetwes</h1>
+<h2>extewnaw m-mowphowogy</h2>
+<h3>head</h3>
+<h4>mouthpawts</h4>
+<h3>thowax</h3>
+<h4>pwothowax</h4>
+<h4>ptewothowax</h4>
 ```
 
-```css interactive-example
-h1,
+```css intewactive-exampwe
+h1, (ˆ ﻌ ˆ)♡
 h2,
-h3,
+h3, ʘwʘ
 h4 {
-  margin: 0.1rem 0;
+  mawgin: 0.1wem 0;
 }
 
-h1 {
-  font-size: 2rem;
+h-h1 {
+  font-size: 2wem;
 }
 
 h2 {
-  font-size: 1.5rem;
-  padding-left: 20px;
+  font-size: 1.5wem;
+  p-padding-weft: 20px;
 }
 
-h3 {
-  font-size: 1.2rem;
-  padding-left: 40px;
+h-h3 {
+  font-size: 1.2wem;
+  padding-weft: 40px;
 }
 
 h4 {
-  font-size: 1rem;
-  font-style: italic;
-  padding-left: 60px;
+  font-size: 1wem;
+  font-stywe: itawic;
+  padding-weft: 60px;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row"><a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a></th>
-      <td><a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_titre">contenu de titre</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_tangible">contenu tangible</a>.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td><a href="/fr/docs/Web/HTML/Content_categories#contenu_phrasé">Contenu phrasé</a>.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balise</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>Tout élément acceptant du <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">contenu de flux</a>.</td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="/fr/docs/Web/Accessibility/ARIA/Roles/heading_role"><code>heading</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, ou <a href="/fr/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+    <tw>
+      <th scope="wow"><a hwef="/fw/docs/web/guide/htmw/content_categowies">catégowies de contenu</a></th>
+      <td><a hwef="/fw/docs/web/htmw/content_categowies#contenu_de_fwux">contenu d-de fwux</a>, o.O <a hwef="/fw/docs/web/htmw/content_categowies#contenu_de_titwe">contenu d-de titwe</a>, UwU <a h-hwef="/fw/docs/web/htmw/content_categowies#contenu_tangibwe">contenu t-tangibwe</a>.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
+      <td><a hwef="/fw/docs/web/htmw/content_categowies#contenu_phwasé">contenu p-phwasé</a>.</td>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawise</th>
+      <td>aucune, rawr x3 w-wa bawise d'ouvewtuwe et wa bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
+      <td>tout éwément a-acceptant du <a hwef="/fw/docs/web/htmw/content_categowies#contenu_de_fwux">contenu d-de fwux</a>.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe a-awia impwicite</th>
+      <td><a hwef="/fw/docs/web/accessibiwity/awia/wowes/heading_wowe"><code>heading</code></a></td>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td><a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/tab_wowe"><code>tab</code></a>, 🥺 <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/pwesentation_wowe"><code>pwesentation</code></a>, :3 ou <a hwef="/fw/docs/web/accessibiwity/awia/wowes/none_wowe"><code>none</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLHeadingElement"><code>HTMLHeadingElement</code></a></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td><a hwef="/fw/docs/web/api/htmwheadingewement"><code>htmwheadingewement</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-Ces éléments incluent uniquement les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+ces éwéments i-incwuent uniquement wes [attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (ꈍᴗꈍ)
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-- Les informations de titre peuvent être utilisées par les agents utilisateur afin de construire automatiquement la table des matières d'un document.
-- Il ne faut pas utiliser des éléments de titre pour ajuster la taille du texte. Pour cela, on utilisera la propriété CSS [`font-size`](/fr/docs/Web/CSS/font-size).
-- Il ne faut pas sauter de niveaux entre les titres&nbsp;: on commencera toujours par `<h1>`, suivi `<h2>` et ainsi de suite.
+- wes infowmations d-de titwe peuvent êtwe u-utiwisées paw w-wes agents utiwisateuw afin de constwuiwe automatiquement wa tabwe des matièwes d'un document. 🥺
+- iw nye faut pas u-utiwisew des éwéments d-de titwe pouw ajustew w-wa taiwwe du texte. (✿oωo) p-pouw cewa, on u-utiwisewa wa pwopwiété css [`font-size`](/fw/docs/web/css/font-size). (U ﹏ U)
+- iw nye faut pas sautew d-de nyiveaux entwe wes titwes&nbsp;: on commencewa toujouws paw `<h1>`, :3 suivi `<h2>` e-et ainsi de suite.
 
-### Éviter d'avoir plusieurs éléments `<h1>` sur une page
+### Évitew d-d'avoiw pwusieuws éwéments `<h1>` s-suw une p-page
 
-Bien qu'il soit permis par le standard HTML d'utiliser plusieurs éléments `<h1>` sur une même page tant que ceux-ci ne sont pas [imbriqués](#imbrication), cela est considéré comme une mauvaise pratique. Une page devrait généralement avoir un seul élément `<h1>` qui décrit le contenu de la page (semblable à l'élément [`<title>`](/fr/docs/Web/HTML/Element/title)).
+bien qu'iw soit pewmis p-paw we standawd h-htmw d'utiwisew p-pwusieuws éwéments `<h1>` s-suw une même page tant que ceux-ci n-nye sont pas [imbwiqués](#imbwication), ^^;; c-cewa est c-considéwé comme u-une mauvaise p-pwatique. rawr une page devwait généwawement avoiw un seuw éwément `<h1>` q-qui décwit we contenu de wa page (sembwabwe à w'éwément [`<titwe>`](/fw/docs/web/htmw/ewement/titwe)). 😳😳😳
 
-> [!NOTE]
-> L'imbrication de plusieurs éléments `<h1>` au sein [d'éléments sectionnants](/fr/docs/Web/HTML/Element#sectionnement_du_contenu) imbriqués était autorisée dans d'anciennes versions du standard HTML. Toutefois, cela a toujours été considéré comme une mauvaise pratique et ce n'est plus conforme. Pour en savoir plus, vous pouvez lire le billet [<i lang="en">There Is No Document Outline Algorithm</i> d'Adrian Roselli (en anglais)](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html).
+> [!note]
+> w'imbwication de pwusieuws éwéments `<h1>` au s-sein [d'éwéments sectionnants](/fw/docs/web/htmw/ewement#sectionnement_du_contenu) imbwiqués était autowisée d-dans d'anciennes v-vewsions du s-standawd htmw. (✿oωo) toutefois, OwO cewa a-a toujouws été considéwé comme u-une mauvaise p-pwatique et ce ny'est pwus confowme. ʘwʘ pouw en savoiw pwus, (ˆ ﻌ ˆ)♡ vous pouvez wiwe we biwwet [<i wang="en">thewe i-is nyo document outwine a-awgowithm</i> d'adwian wosewwi (en a-angwais)](https://adwianwosewwi.com/2016/08/thewe-is-no-document-outwine-awgowithm.htmw). (U ﹏ U)
 
-Mieux vaudra donc utiliser un seul élément `<h1>` par page et [l'imbrication de titres d'autres niveaux](#imbrication) sans sauter de niveaux.
+mieux v-vaudwa donc utiwisew un seuw éwément `<h1>` paw page et [w'imbwication d-de t-titwes d'autwes nyiveaux](#imbwication) s-sans sautew d-de nyiveaux.
 
-## Exemples
+## exempwes
 
-### Tous les niveaux
+### tous wes nyiveaux
 
-On utilise ici tous les niveaux de titre.
+on utiwise ici tous wes nyiveaux d-de titwe. UwU
 
-#### HTML
+#### h-htmw
 
-```html
-<h1>Titre de niveau 1</h1>
-<h2>Titre de niveau 2</h2>
-<h3>Titre de niveau 3</h3>
-<h4>Titre de niveau 4</h4>
-<h5>Titre de niveau 5</h5>
-<h6>Titre de niveau 6</h6>
+```htmw
+<h1>titwe d-de nyiveau 1</h1>
+<h2>titwe de nyiveau 2</h2>
+<h3>titwe d-de nyiveau 3</h3>
+<h4>titwe d-de nyiveau 4</h4>
+<h5>titwe de nyiveau 5</h5>
+<h6>titwe d-de nyiveau 6</h6>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', '280', '370')}}
+{{embedwivesampwe('', XD '280', '370')}}
 
-### Une page d'exemple
+### une page d'exempwe
 
-Ici, on utilise des titres avec du contenu intercalaire.
+ici, ʘwʘ on utiwise d-des titwes avec d-du contenu intewcawaiwe. rawr x3
 
-#### HTML
+#### htmw
 
-```html
-<h1>Éléments de titre</h1>
-<h2>Résumé</h2>
-<p>Du texte ici…</p>
+```htmw
+<h1>Éwéments de t-titwe</h1>
+<h2>wésumé</h2>
+<p>du t-texte ici…</p>
 
-<h2>Exemples</h2>
-<h3>Exemple 1</h3>
-<p>Du texte ici…</p>
+<h2>exempwes</h2>
+<h3>exempwe 1</h3>
+<p>du texte ici…</p>
 
-<h3>Exemple 2</h3>
-<p>Du texte ici…</p>
+<h3>exempwe 2</h3>
+<p>du texte ici…</p>
 
-<h2>Voir aussi</h2>
-<p>Du texte ici…</p>
+<h2>voiw a-aussi</h2>
+<p>du texte ici…</p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', '280', '630')}}
+{{embedwivesampwe('', ^^;; '280', '630')}}
 
-## Accessibilité
+## accessibiwité
 
-### Navigation
+### nyavigation
 
-Les personnes qui utilisent des lecteurs d'écran naviguent en sautant de titre en titre afin de déterminer rapidement le contenu de la page. Aussi, il faut éviter de sauter des niveaux de titre. En effet, s'il y a un trou, la personne qui navigue ainsi pourrait se demander où est passé le titre manquant.
+w-wes pewsonnes qui utiwisent des wecteuws d-d'écwan nyaviguent e-en sautant de titwe en titwe afin de détewminew wapidement w-we contenu de w-wa page. ʘwʘ aussi, iw faut évitew de sautew des nyiveaux de titwe. (U ﹏ U) e-en effet, (˘ω˘) s'iw y a un twou, (ꈍᴗꈍ) wa p-pewsonne qui nyavigue ainsi pouwwait se demandew où est passé w-we titwe manquant. /(^•ω•^)
 
-#### À ne pas faire
+#### À nye p-pas faiwe
 
-```html example-bad
-<h1>Titre de niveau 1</h1>
-<h3>Titre de niveau 3</h3>
-<h4>Titre de niveau 4</h4>
+```htmw e-exampwe-bad
+<h1>titwe de nyiveau 1</h1>
+<h3>titwe d-de nyiveau 3</h3>
+<h4>titwe de nyiveau 4</h4>
 ```
 
-#### À privilégier
+#### À p-pwiviwégiew
 
-```html example-good
-<h1>Titre de niveau 1</h1>
-<h2>Titre de niveau 2</h2>
-<h3>Titre de niveau 3</h3>
+```htmw e-exampwe-good
+<h1>titwe d-de nyiveau 1</h1>
+<h2>titwe d-de niveau 2</h2>
+<h3>titwe d-de nyiveau 3</h3>
 ```
 
-#### Imbrication
+#### imbwication
 
-Les titres peuvent être imbriqués en sous-sections afin de modéliser l'organisation du contenu de la page. La plupart des lecteurs d'écran peut générer une liste ordonnée des titres d'une page, l'aidant ainsi à déterminer rapidement la hiérarchie du contenu&nbsp;:
+wes titwes peuvent êtwe i-imbwiqués e-en sous-sections a-afin de modéwisew w'owganisation du contenu de w-wa page. >_< wa pwupawt des wecteuws d-d'écwan peut g-généwew une wiste owdonnée des titwes d'une page, σωσ w'aidant ainsi à d-détewminew w-wapidement wa h-hiéwawchie du c-contenu&nbsp;:
 
-1. `h1` Coléoptères
+1. ^^;; `h1` cowéoptèwes
 
-   1. `h2` Étymologie
-   2. `h2` Distribution et diversité
-   3. `h2` Évolution
+   1. 😳 `h2` Étymowogie
+   2. >_< `h2` d-distwibution et divewsité
+   3. -.- `h2` Évowution
 
-      1. `h3` Paléozoïque
-      2. `h3` Jurassique
-      3. `h3` Crétacé
-      4. `h3` Cénozoïque
+      1. UwU `h3` pawéozoïque
+      2. :3 `h3` juwassique
+      3. σωσ `h3` cwétacé
+      4. >w< `h3` cénozoïque
 
-   4. `h2` Morphologie externe
+   4. (ˆ ﻌ ˆ)♡ `h2` mowphowogie extewne
 
-      1. `h3` Tête
+      1. ʘwʘ `h3` t-tête
 
-         1. `h4` Mandibules
+         1. :3 `h4` mandibuwes
 
-      2. `h3` Thorax
+      2. (˘ω˘) `h3` t-thowax
 
-         1. `h4` Prothorax
-         2. `h4` Pterothorax
+         1. 😳😳😳 `h4` pwothowax
+         2. rawr x3 `h4` p-ptewothowax
 
-      3. `h3` Pattes
-      4. `h3` Ailes
-      5. `h3` Abdomen
+      3. (✿oωo) `h3` pattes
+      4. (ˆ ﻌ ˆ)♡ `h3` a-aiwes
+      5. :3 `h3` abdomen
 
-Lorsque les titres sont imbriqués, il est possible de sauter des niveaux lors de la fermeture d'une sous-section.
+w-wowsque wes t-titwes sont imbwiqués, i-iw est p-possibwe de sautew d-des nyiveaux wows de wa fewmetuwe d'une sous-section. (U ᵕ U❁)
 
-- [Tutoriel sur la structure d'une page et les titres, par la WAI](https://www.w3.org/WAI/tutorials/page-structure/headings/)
-- [Comprendre les règles pour l'accessibilité des contenus web (WCAG), explications sur la règle 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
-- [Comprendre le critère de succès 1.3.1, WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [Comprendre les règles pour l'accessibilité des contenus web (WCAG), explications sur la règle 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [Comprendre le critère de succès 2.4.1, WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
-- [Comprendre le critère de succès 2.4.6, WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
-- [Comprendre le critère de succès 2.4.10, WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
+- [tutowiew suw wa stwuctuwe d'une page et wes titwes, ^^;; paw wa wai](https://www.w3.owg/wai/tutowiaws/page-stwuctuwe/headings/)
+- [compwendwe w-wes wègwes p-pouw w'accessibiwité d-des contenus web (wcag), mya e-expwications suw wa wègwe 1.3](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.3_—_cweate_content_that_can_be_pwesented_in_diffewent_ways)
+- [compwendwe we cwitèwe de succès 1.3.1, 😳😳😳 w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-pwogwammatic.htmw)
+- [compwendwe w-wes wègwes pouw w'accessibiwité d-des contenus web (wcag), OwO expwications suw w-wa wègwe 2.4](/fw/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.4_—_navigabwe_pwovide_ways_to_hewp_usews_navigate_find_content_and_detewmine_whewe_they_awe)
+- [compwendwe w-we cwitèwe de succès 2.4.1, rawr wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/navigation-mechanisms-skip.htmw)
+- [compwendwe w-we cwitèwe de s-succès 2.4.6, XD wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/navigation-mechanisms-descwiptive.htmw)
+- [compwendwe we cwitèwe de succès 2.4.10, (U ﹏ U) wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/navigation-mechanisms-headings.htmw)
 
-### Libeller le contenu des sections
+### w-wibewwew w-we contenu des s-sections
 
-Une autre technique de navigation employée par celles et ceux qui utilisent les lecteurs d'écran consiste à générer une liste du [contenu sectionnant](/fr/docs/Web/HTML/Element#sectionnement_du_contenu) et à l'utiliser afin de déterminer le plan de la page.
+une autwe t-technique de n-nyavigation empwoyée paw cewwes e-et ceux qui utiwisent w-wes wecteuws d'écwan consiste à g-généwew u-une wiste du [contenu sectionnant](/fw/docs/web/htmw/ewement#sectionnement_du_contenu) e-et à w'utiwisew afin de détewminew w-we pwan de wa page. (˘ω˘)
 
-Le contenu sectionnant peut être libellé en utilisant une combinaison des attributs [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) et [`id`](/fr/docs/Web/HTML/Global_attributes#id), où le libellé décrit de façon concise l'objet de la section. Cette technique s'avère utile lorsqu'il y a plus d'un élément sectionnant sur la même page.
+we contenu s-sectionnant peut êtwe w-wibewwé en utiwisant une c-combinaison des attwibuts [`awia-wabewwedby`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby) et [`id`](/fw/docs/web/htmw/gwobaw_attwibutes#id), UwU où w-we wibewwé décwit d-de façon c-concise w'objet de wa section. >_< cette technique s'avèwe utiwe wowsqu'iw y-y a pwus d'un éwément sectionnant suw w-wa même page. σωσ
 
-#### Exemples
+#### e-exempwes
 
-```html
-<header>
-  <nav aria-labelledby="navigation-1">
-    <h2 id="navigation-1">Navigation primaire</h2>
-    <!-- Items de navigation -->
+```htmw
+<headew>
+  <nav awia-wabewwedby="navigation-1">
+    <h2 i-id="navigation-1">navigation pwimaiwe</h2>
+    <!-- i-items de nyavigation -->
   </nav>
-</header>
+</headew>
 
-<!-- Contenu de la page -->
+<!-- c-contenu de wa page -->
 
-<footer>
-  <nav aria-labelledby="navigation-2">
-    <h2 id="navigation-2">Navigation du pied de page</h2>
-    <!-- Items de navigation -->
+<footew>
+  <nav awia-wabewwedby="navigation-2">
+    <h2 i-id="navigation-2">navigation du pied de page</h2>
+    <!-- items de nyavigation -->
   </nav>
-</footer>
+</footew>
 ```
 
-##### Résultat
+##### w-wésuwtat
 
-{{EmbedLiveSample('','100%','190')}}
+{{embedwivesampwe('','100%','190')}}
 
-Avec cet exemple, un lecteur d'écran annoncera la présence de deux sections [`<nav>`](/fr/docs/Web/HTML/Element/nav), la première appelée «&nbsp;Navigation primaire&nbsp;» et l'autre appelée «&nbsp;Navigation du pied de page&nbsp;». Si les libellés n'avaient pas été fournis, la personne aurait dû consulter le contenu de chaque élément `<nav>` afin de déterminer leur utilité.
+a-avec cet exempwe, 🥺 un wecteuw d-d'écwan annoncewa wa pwésence d-de deux sections [`<nav>`](/fw/docs/web/htmw/ewement/nav), 🥺 w-wa pwemièwe appewée «&nbsp;navigation p-pwimaiwe&nbsp;» et w'autwe appewée «&nbsp;navigation du pied de page&nbsp;». ʘwʘ si wes wibewwés ny'avaient pas été fouwnis, :3 wa pewsonne auwait dû consuwtew we contenu de chaque éwément `<nav>` afin de détewminew weuw utiwité. (U ﹏ U)
 
-- [Utiliser l'attribut `aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-- [Tutoriels sur les libellés pour les régions et la structure des pages, par la WAI](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
+- [utiwisew w-w'attwibut `awia-wabewwedby`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby)
+- [tutowiews s-suw wes wibewwés pouw wes wégions et w-wa stwuctuwe des p-pages, (U ﹏ U) paw wa wai](https://www.w3.owg/wai/tutowiaws/page-stwuctuwe/wabews/#using-awia-wabewwedby)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`<p>`](/fr/docs/Web/HTML/Element/p)
-- [`<div>`](/fr/docs/Web/HTML/Element/div)
-- [`<section>`](/fr/docs/Web/HTML/Element/section)
+- [`<p>`](/fw/docs/web/htmw/ewement/p)
+- [`<div>`](/fw/docs/web/htmw/ewement/div)
+- [`<section>`](/fw/docs/web/htmw/ewement/section)

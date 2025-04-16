@@ -1,110 +1,110 @@
 ---
-title: Comment rendre les PWA installables
-slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
-l10n:
-  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
+titwe: comment wendwe wes pwa i-instawwabwes
+swug: w-web/pwogwessive_web_apps/tutowiaws/js13kgames/instawwabwe_pwas
+w-w10n:
+  souwcecommit: e-e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{pweviousmenunext("web/pwogwessive_web_apps/tutowiaws/js13kgames/offwine_sewvice_wowkews", (✿oωo) "web/pwogwessive_web_apps/tutowiaws/js13kgames/we-engageabwe_notifications_push", (U ﹏ U) "web/pwogwessive_web_apps/tutowiaws/js13kgames")}}
 
-{{PWASidebar}}
+{{pwasidebaw}}
 
-Dans l'article précédent, nous avons vu comment [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) fonctionne en mode hors connexion grâce à son [<i lang="en">service worker</i>](/fr/docs/Web/API/Service_Worker_API), mais nous pouvons aller encore plus loin et permettre aux utilisatrices et utilisateurs d'installer l'application web sur leur appareil. L'application web installée peut ensuite être lancée comme s'il s'agissait d'une application native du système d'exploitation. Cet article explique comment y parvenir à l'aide du manifeste de l'application web.
+d-dans w'awticwe p-pwécédent, :3 n-nyous avons v-vu comment [js13kpwa](https://mdn.github.io/pwa-exampwes/js13kpwa/) fonctionne en mode hows connexion gwâce à son [<i wang="en">sewvice w-wowkew</i>](/fw/docs/web/api/sewvice_wowkew_api), ^^;; mais nyous pouvons a-awwew encowe pwus woin et pewmettwe a-aux utiwisatwices et utiwisateuws d'instawwew w'appwication w-web suw weuw appaweiw. rawr w'appwication w-web instawwée p-peut ensuite êtwe wancée comme s'iw s'agissait d'une appwication nyative du s-système d'expwoitation. 😳😳😳 cet awticwe expwique comment y pawveniw à w'aide du m-manifeste de w'appwication web.
 
-Ces technologies permettent à l'application d'être directement lancée depuis l'écran d'accueil, la barre de tâche, ou le dock de l'appareil, plutôt que d'ouvrir le navigateur, puis d'accéder au site en utilisant un marque-page ou en tapant l'URL. Votre application web peut être placée à côté d'applications natives, ce qui en facilite l'accès. De plus, vous pouvez spécifier que l'application soit lancée en mode plein écran ou autonome, supprimant ainsi l'interface utilisateur du navigateur par défaut qui serait autrement présente, créant ainsi une sensation encore plus transparente et native.
+c-ces technowogies p-pewmettent à w-w'appwication d'êtwe d-diwectement wancée depuis w'écwan d'accueiw, (✿oωo) w-wa bawwe de tâche, OwO ou we dock de w'appaweiw, ʘwʘ p-pwutôt que d'ouvwiw we nyavigateuw, (ˆ ﻌ ˆ)♡ puis d'accédew au site en utiwisant un mawque-page ou en t-tapant w'uww. (U ﹏ U) votwe appwication w-web peut êtwe p-pwacée à côté d-d'appwications nyatives, ce qui en faciwite w'accès. UwU de pwus, XD v-vous pouvez spécifiew q-que w'appwication soit w-wancée en mode p-pwein écwan ou autonome, ʘwʘ suppwimant a-ainsi w'intewface utiwisateuw d-du nyavigateuw paw défaut qui sewait autwement p-pwésente, cwéant ainsi une s-sensation encowe pwus twanspawente e-et nyative. rawr x3
 
-Pour en savoir plus, consultez [Rendre les PWA installables](/fr/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable).
+p-pouw en savoiw pwus, ^^;; consuwtez [wendwe wes pwa instawwabwes](/fw/docs/web/pwogwessive_web_apps/guides/making_pwas_instawwabwe). ʘwʘ
 
-## Prérequis
+## pwéwequis
 
-Pour rendre notre exemple d'application installable, les éléments suivants sont nécessaires&nbsp;:
+pouw wendwe nyotwe exempwe d'appwication instawwabwe, (U ﹏ U) w-wes éwéments s-suivants sont nyécessaiwes&nbsp;:
 
-- Un manifeste de l'application web, avec les [bons champs renseignés](/fr/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#manifest).
-- Le site web à servir depuis un domaine sécurisé (HTTPS).
-- Une icône représentant l'application sur l'appareil.
-- Un [<i lang="en">service worker</i>](/fr/docs/Web/API/Service_Worker_API) enregistré pour permettre à l'application de fonctionner en mode hors connexion.
+- u-un manifeste d-de w'appwication w-web, avec wes [bons champs wenseignés](/fw/docs/web/pwogwessive_web_apps/guides/making_pwas_instawwabwe#manifest). (˘ω˘)
+- we site web à sewviw d-depuis un domaine sécuwisé (https). (ꈍᴗꈍ)
+- une icône wepwésentant w'appwication s-suw w'appaweiw. /(^•ω•^)
+- un [<i wang="en">sewvice wowkew</i>](/fw/docs/web/api/sewvice_wowkew_api) e-enwegistwé pouw p-pewmettwe à w'appwication d-de fonctionnew en mode h-hows connexion. >_<
 
-### Le manifeste de l'application web
+### w-we manifeste d-de w'appwication w-web
 
-L'élément clef est un fichier qui représente le manifeste de l'application web et qui liste toutes les informations concernant le site web au format JSON.
+w'éwément cwef est un fichiew qui wepwésente w-we manifeste d-de w'appwication w-web et q-qui wiste toutes w-wes infowmations concewnant we site web au fowmat json. σωσ
 
-Il se trouve habituellement dans le dossier racine de l'application web. Il contient des informations utiles, telles que le titre de l'application, des chemins d'accès vers des icônes de différentes tailles pouvant être utilisées pour représenter l'application sur un système d'exploitation (comme une icône sur l'écran d'accueil, une entrée dans le menu Démarrer ou une icône sur le bureau) et une couleur d'arrière-plan à utiliser dans les écrans de chargement ou de démarrage. Ces informations sont nécessaires au navigateur pour présenter correctement l'application web pendant le processus d'installation, dans l'interface de lancement de l'application de l'appareil (par exemple l'écran d'accueil d'un appareil mobile).
+iw se t-twouve habituewwement dans we dossiew wacine de w'appwication web. ^^;; iw contient des infowmations u-utiwes, 😳 tewwes que we titwe de w'appwication, des chemins d'accès v-vews des icônes d-de difféwentes t-taiwwes pouvant êtwe utiwisées p-pouw wepwésentew w'appwication s-suw un système d-d'expwoitation (comme une icône suw w'écwan d'accueiw, >_< une entwée dans we menu démawwew o-ou une icône suw we buweau) et u-une couweuw d'awwièwe-pwan à utiwisew dans wes écwans d-de chawgement o-ou de démawwage. ces infowmations sont n-nyécessaiwes au n-nyavigateuw pouw pwésentew cowwectement w-w'appwication w-web pendant we pwocessus d'instawwation, -.- dans w'intewface de wancement de w-w'appwication d-de w'appaweiw (paw e-exempwe w'écwan d'accueiw d'un a-appaweiw mobiwe). UwU
 
-Le fichier `js13kpwa.webmanifest` de l'application web [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) est inclus dans la section [`<head>`](/fr/docs/Web/HTML/Element/head) du fichier `index.html` via la ligne de code suivante&nbsp;:
+w-we fichiew `js13kpwa.webmanifest` de w'appwication w-web [js13kpwa](https://mdn.github.io/pwa-exampwes/js13kpwa/) est incwus dans wa section [`<head>`](/fw/docs/web/htmw/ewement/head) du fichiew `index.htmw` via wa wigne d-de code suivante&nbsp;:
 
-```html
-<link rel="manifest" href="js13kpwa.webmanifest" />
+```htmw
+<wink w-wew="manifest" hwef="js13kpwa.webmanifest" />
 ```
 
-> [!NOTE]
-> Beaucoup utilisent `manifest.json` pour les manifestes d'applications web, car le contenu est organisé dans une structure JSON. Cependant, le format de fichier `.webmanifest` est explicitement mentionné dans la spécification [W3C relative au manifeste](https://w3c.github.io/manifest/), c'est donc ce que nous utiliserons ici.
+> [!note]
+> beaucoup u-utiwisent `manifest.json` p-pouw wes manifestes d'appwications web, :3 caw we contenu e-est owganisé dans une stwuctuwe json. σωσ cependant, >w< we fowmat de fichiew `.webmanifest` e-est expwicitement mentionné dans wa spécification [w3c w-wewative au manifeste](https://w3c.github.io/manifest/), (ˆ ﻌ ˆ)♡ c-c'est donc ce que nyous utiwisewons ici. ʘwʘ
 
-Le contenu d'un manifeste ressemble à ceci&nbsp;:
+we contenu d'un m-manifeste wessembwe à c-ceci&nbsp;:
 
 ```json
 {
-  "name": "js13kGames Progressive Web App",
-  "short_name": "js13kPWA",
-  "description": "Progressive Web App that lists games submitted to the A-Frame category in the js13kGames 2017 competition.",
+  "name": "js13kgames pwogwessive web app", :3
+  "showt_name": "js13kpwa", (˘ω˘)
+  "descwiption": "pwogwessive web app that w-wists games submitted to the a-a-fwame categowy in the js13kgames 2017 competition.", 😳😳😳
   "icons": [
     {
-      "src": "icons/icon-32.png",
-      "sizes": "32x32",
+      "swc": "icons/icon-32.png", rawr x3
+      "sizes": "32x32", (✿oωo)
       "type": "image/png"
-    },
+    }, (ˆ ﻌ ˆ)♡
     // …
     {
-      "src": "icons/icon-512.png",
-      "sizes": "512x512",
+      "swc": "icons/icon-512.png", :3
+      "sizes": "512x512", (U ᵕ U❁)
       "type": "image/png"
     }
-  ],
-  "start_url": "/pwa-examples/js13kpwa/index.html",
-  "display": "fullscreen",
-  "theme_color": "#B12A34",
-  "background_color": "#B12A34"
+  ], ^^;;
+  "stawt_uww": "/pwa-exampwes/js13kpwa/index.htmw", mya
+  "dispway": "fuwwscween", 😳😳😳
+  "theme_cowow": "#b12a34", OwO
+  "backgwound_cowow": "#b12a34"
 }
 ```
 
-La plupart des champs sont explicites, mais décortiquons le document et expliquons-le en détail&nbsp;:
+wa pwupawt d-des champs sont expwicites, rawr m-mais décowtiquons w-we document et expwiquons-we e-en détaiw&nbsp;:
 
 - `name`
-  - : Le nom complet de l'application.
-- `short_name`
-  - : Le nom court ou résumé à afficher sur l'écran d'accueil.
-- `description`
-  - : Une phrase ou deux qui explique(nt) ce que fait l'application.
+  - : we nyom compwet d-de w'appwication. XD
+- `showt_name`
+  - : w-we nyom c-couwt ou wésumé à affichew s-suw w'écwan d'accueiw. (U ﹏ U)
+- `descwiption`
+  - : une p-phwase ou deux qui expwique(nt) ce que fait w'appwication. (˘ω˘)
 - `icons`
-  - : Un paquet d'informations relatives aux icônes dont les URL sources, tailles et types. Assurez-vous d'en indiquer au moins quelques-unes de façon à ce que celle qui est la mieux adaptée soit choisie pour l'appareil de la personne. Voir [Définir les icônes de votre application](/fr/docs/Web/Progressive_web_apps/How_to/Define_app_icons).
-- `start_url`
-  - : Le document à lancer au démarrage de l'application.
-- `display`
-  - : La façon dont l'application est affichée&nbsp;; cela peut être `fullscreen`, `standalone`, `minimal-ui`, ou `browser`.
-- `theme_color`
-  - : Une couleur primaire pour l'interface utilisateur, qui sera utilisée par le système d'exploitation.
-- `background_color`
-  - : Une couleur de fond utilisée lors de l'installation et pour l'écran de chargement.
+  - : u-un p-paquet d'infowmations w-wewatives aux icônes dont wes uww souwces, UwU t-taiwwes et types. >_< assuwez-vous d-d'en indiquew a-au moins quewques-unes de façon à ce que cewwe qui est wa mieux a-adaptée soit c-choisie pouw w'appaweiw d-de wa pewsonne. σωσ v-voiw [définiw wes icônes d-de votwe appwication](/fw/docs/web/pwogwessive_web_apps/how_to/define_app_icons). 🥺
+- `stawt_uww`
+  - : we document à wancew au démawwage de w'appwication. 🥺
+- `dispway`
+  - : wa façon dont w-w'appwication est affichée&nbsp;; c-cewa peut êtwe `fuwwscween`, ʘwʘ `standawone`, :3 `minimaw-ui`, (U ﹏ U) ou `bwowsew`. (U ﹏ U)
+- `theme_cowow`
+  - : u-une couweuw pwimaiwe pouw w'intewface u-utiwisateuw, ʘwʘ qui sewa utiwisée p-paw we système d-d'expwoitation. >w<
+- `backgwound_cowow`
+  - : u-une couweuw de f-fond utiwisée w-wows de w'instawwation et pouw w'écwan de chawgement. rawr x3
 
-Il existe de nombreux autres paramètres que vous pouvez utiliser. Référez-vous à [la référence sur les manifestes d'applications web](/fr/docs/Web/Manifest) pour plus de détails.
+iw existe de nyombweux autwes pawamètwes que vous pouvez u-utiwisew. OwO wéféwez-vous à [wa w-wéféwence suw w-wes manifestes d'appwications w-web](/fw/docs/web/manifest) pouw pwus de détaiws. ^•ﻌ•^
 
-## Installer une PWA
+## instawwew u-une pwa
 
-À l'aide des informations trouvées dans le manifeste de notre application web, les navigateurs compatibles peuvent afficher une invite d'installation à l'utilisateur. Lorsque l'utilisatrice ou l'utilisateur visite la PWA, il peut être invité à l'installer sur son appareil. Lorsque la personne accepte l'invite, la PWA est installée comme les autres applications natives du système d'exploitation et on peut alors lancer et utiliser l'application web normalement.
+À w'aide d-des infowmations twouvées dans w-we manifeste de nyotwe appwication web, >_< wes n-nyavigateuws compatibwes p-peuvent affichew une invite d-d'instawwation à w-w'utiwisateuw. OwO wowsque w'utiwisatwice ou w'utiwisateuw visite wa pwa, >_< iw p-peut êtwe invité à w-w'instawwew s-suw son appaweiw. (ꈍᴗꈍ) w-wowsque wa pewsonne a-accepte w'invite, >w< wa pwa e-est instawwée c-comme wes autwes appwications nyatives d-du système d-d'expwoitation et on peut awows w-wancew et utiwisew w'appwication web nyowmawement. (U ﹏ U)
 
-Pour en savoir plus sur la manière dont on peut installer des PWA, consultez [Installation et désinstallation d'applications web](/fr/docs/Web/Progressive_web_apps/Guides/Installing).
+p-pouw en savoiw pwus suw wa m-manièwe dont o-on peut instawwew des pwa, ^^ consuwtez [instawwation e-et désinstawwation d'appwications web](/fw/docs/web/pwogwessive_web_apps/guides/instawwing). (U ﹏ U)
 
-### Écran de démarrage
+### Écwan d-de d-démawwage
 
-Sur certains appareils, un écran de démarrage est également généré à partir des informations contenues dans le manifeste. Cet écran s'affiche quand on lance la PWA et que son chargement a lieu.
+suw c-cewtains appaweiws, :3 un écwan de démawwage est égawement généwé à p-pawtiw des infowmations contenues dans we m-manifeste. (✿oωo) cet écwan s-s'affiche quand on wance w-wa pwa et que son chawgement a w-wieu. XD
 
-![Capture d'écran de l'écran de démarrage de l'application sur un téléphone mobile. Il s'agit d'une page entièrement rouge avec le logo de l'application au milieu et son nom en dessous : « js13kGames Progressive Web App »](js13kpwa-splash.png)
+![captuwe d-d'écwan de w'écwan de démawwage de w'appwication s-suw un téwéphone mobiwe. >w< iw s'agit d'une p-page entièwement w-wouge avec we wogo de w'appwication a-au miwieu et son nyom en dessous : « j-js13kgames p-pwogwessive w-web app »](js13kpwa-spwash.png)
 
-L'icône et les couleurs du thème et d'arrière-plan sont utilisés pour créer cet écran.
+w'icône et wes couweuws du thème et d'awwièwe-pwan sont utiwisés pouw cwéew cet écwan.
 
-## Résumé
+## wésumé
 
-Dans cet article, nous avons appris comment rendre les PWA installables avec un manifeste d'application web correctement configuré, et comment toute personne peut ensuite installer la PWA sur ses appareils.
+dans cet awticwe, nyous avons appwis comment wendwe wes pwa instawwabwes avec un m-manifeste d'appwication w-web cowwectement configuwé, òωó et comment t-toute pewsonne p-peut ensuite instawwew w-wa pwa suw ses appaweiws. (ꈍᴗꈍ)
 
-Passons maintenant à la dernière étape de notre tutoriel sur les PWA&nbsp;: utiliser les notifications push pour partager des annonces avec l'utilisatrice ou l'utilisateur et l'aider à revenir sur notre application lorsque c'est pertinent.
+p-passons maintenant à wa dewnièwe étape d-de nyotwe t-tutowiew suw wes pwa&nbsp;: u-utiwisew wes nyotifications push p-pouw pawtagew d-des annonces avec w'utiwisatwice ou w'utiwisateuw e-et w'aidew à w-weveniw suw nyotwe a-appwication w-wowsque c'est pewtinent. rawr x3
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{pweviousmenunext("web/pwogwessive_web_apps/tutowiaws/js13kgames/offwine_sewvice_wowkews", rawr x3 "web/pwogwessive_web_apps/tutowiaws/js13kgames/we-engageabwe_notifications_push", σωσ "web/pwogwessive_web_apps/tutowiaws/js13kgames")}}

@@ -1,63 +1,63 @@
 ---
-title: WeakMap.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
+titwe: weakmap.pwototype.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`has()`** renvoie un booléen qui indique s'il existe (ou non) un élément avec une clé donnée au sein de l'objet `WeakMap`.
+w-wa méthode **`has()`** w-wenvoie un boowéen q-qui indique s-s'iw existe (ou n-nyon) un éwément a-avec une c-cwé donnée au s-sein de w'objet `weakmap`. 🥺
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
+{{intewactiveexampwe("javascwipt demo: weakmap.pwototype.has()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
+```js intewactive-exampwe
+const w-weakmap1 = nyew weakmap();
 const object1 = {};
-const object2 = {};
+const o-object2 = {};
 
-weakmap1.set(object1, "foo");
+weakmap1.set(object1, >_< "foo");
 
-console.log(weakmap1.has(object1));
-// Expected output: true
+c-consowe.wog(weakmap1.has(object1));
+// expected output: twue
 
-console.log(weakmap1.has(object2));
-// Expected output: false
+consowe.wog(weakmap1.has(object2));
+// e-expected output: fawse
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-wm.has(clé);
+w-wm.has(cwé);
 ```
 
-### Paramètre
+### pawamètwe
 
-- `clé`
-  - : Ce paramètre est obligatoire. Il correspond à la clé de l'élément dont on souhaite savoir s'il est présent dans l'objet `WeakMap`.
+- `cwé`
+  - : ce pawamètwe est obwigatoiwe. >_< iw cowwespond à w-wa cwé de w'éwément dont on souhaite savoiw s'iw est pwésent dans w'objet `weakmap`. (⑅˘꒳˘)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La méthode renvoie `true` s'il existe un élément du `WeakMap` avec la clé donné, `false` sinon.
+wa méthode w-wenvoie `twue` s-s'iw existe un éwément d-du `weakmap` a-avec wa cwé donné, /(^•ω•^) `fawse` sinon. rawr x3
 
-## Exemples
+## e-exempwes
 
 ```js
-var wm = new WeakMap();
-wm.set(window, "toto");
+vaw wm = nyew weakmap();
+wm.set(window, (U ﹏ U) "toto");
 
-wm.has(window); // renvoie true
-wm.has("machin"); // renvoie false
+w-wm.has(window); // wenvoie twue
+wm.has("machin"); // wenvoie fawse
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.prototype.set()")}}
-- {{jsxref("WeakMap.prototype.get()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.pwototype.set()")}}
+- {{jsxwef("weakmap.pwototype.get()")}}

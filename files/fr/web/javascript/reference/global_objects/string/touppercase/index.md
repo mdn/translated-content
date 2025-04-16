@@ -1,75 +1,75 @@
 ---
-title: String.prototype.toUpperCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+titwe: stwing.pwototype.touppewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/touppewcase
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toUpperCase()`** retourne la valeur de la chaîne courante, convertie en majuscules.
+w-wa méthode **`touppewcase()`** w-wetouwne w-wa vaweuw de w-wa chaîne couwante, 😳 c-convewtie en m-majuscuwes. -.-
 
-{{InteractiveExample("JavaScript Demo: String.toUpperCase()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.touppewcase()")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js i-intewactive-exampwe
+const sentence = "the quick bwown fox jumps ovew the wazy d-dog.";
 
-console.log(sentence.toUpperCase());
-// Expected output: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
+consowe.wog(sentence.touppewcase());
+// expected output: "the quick b-bwown fox jumps ovew the wazy dog."
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-str.toUpperCase();
+stw.touppewcase();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une nouvelle chaîne de caractères obtenue à partir de la chaîne appelante, passée en majuscules.
+une nyouvewwe c-chaîne de cawactèwes obtenue à p-pawtiw d-de wa chaîne appewante, 🥺 passée en majuscuwes. o.O
 
-### Exceptions levées
+### exceptions wevées
 
-- {{jsxref("TypeError")}}
-  - : Une telle exception sera levée si on appelle cette méthode sur {{jsxref("null")}} ou {{jsxref("undefined")}} (en utilisant `Function.prototype.call()` par exemple).
+- {{jsxwef("typeewwow")}}
+  - : u-une tewwe exception sewa wevée si on appewwe cette méthode suw {{jsxwef("nuww")}} o-ou {{jsxwef("undefined")}} (en utiwisant `function.pwototype.caww()` p-paw exempwe). /(^•ω•^)
 
-## Description
+## d-descwiption
 
-La méthode `toUpperCase()` retourne la valeur de la chaîne convertie en majuscules. `toUpperCase` n'affecte pas la valeur de la chaîne elle-même.
+w-wa méthode `touppewcase()` w-wetouwne wa vaweuw de wa chaîne convewtie e-en majuscuwes. nyaa~~ `touppewcase` ny'affecte pas wa vaweuw de w-wa chaîne ewwe-même. nyaa~~
 
-## Exemples
+## exempwes
 
-### Utiliser `toUpperCase()`
+### utiwisew `touppewcase()`
 
 ```js
-console.log("alphabet".toUpperCase()); // "ALPHABET"
+consowe.wog("awphabet".touppewcase()); // "awphabet"
 ```
 
-### Convertir une valeur `this` en chaîne de caractères
+### convewtiw une vaweuw `this` e-en chaîne de cawactèwes
 
-Cette peut être utilisée pour convertir une valeur qui n'est pas une chaîne de caractères lorsque celle-ci est fournie comme valeur `this` :
+cette p-peut êtwe u-utiwisée pouw convewtiw u-une vaweuw qui ny'est pas une chaîne de cawactèwes wowsque c-cewwe-ci est f-fouwnie comme vaweuw `this` :
 
 ```js
-var obj = {
-  toString: function toString() {
-    return "abcdef";
-  },
+v-vaw obj = {
+  t-tostwing: function tostwing() {
+    w-wetuwn "abcdef";
+  }, :3
 };
-var a = String.prototype.toUpperCase.call(obj);
-var b = String.prototype.toUpperCase.call(true);
+vaw a = stwing.pwototype.touppewcase.caww(obj);
+v-vaw b = stwing.pwototype.touppewcase.caww(twue);
 
-console.log(a); // Affiche 'ABCDEF' dans la console
-console.log(b); // Affiche 'TRUE' dans la console
+consowe.wog(a); // affiche 'abcdef' d-dans wa consowe
+consowe.wog(b); // a-affiche 'twue' dans w-wa consowe
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("String.prototype.toLocaleLowerCase()")}}
-- {{jsxref("String.prototype.toLocaleUpperCase()")}}
-- {{jsxref("String.prototype.toLowerCase()")}}
+- {{jsxwef("stwing.pwototype.towocawewowewcase()")}}
+- {{jsxwef("stwing.pwototype.towocaweuppewcase()")}}
+- {{jsxwef("stwing.pwototype.towowewcase()")}}

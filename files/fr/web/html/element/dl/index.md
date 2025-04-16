@@ -1,290 +1,290 @@
 ---
-title: "<dl> : l'élément de liste de descriptions"
-slug: Web/HTML/Element/dl
+titwe: "<dw> : w'éwément de w-wiste de descwiptions"
+s-swug: web/htmw/ewement/dw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<dl>`** représente une liste de descriptions sous la forme d'une liste de paires associant des termes (fournis par des éléments [`<dt>`](/fr/docs/Web/HTML/Element/dt)) et leurs descriptions ou définitions (fournies par des éléments [`<dd>`](/fr/docs/Web/HTML/Element/dd)). On utilisera par exemple cet élément pour implémenter un glossaire.
+w-w'éwément h-htmw **`<dw>`** w-wepwésente u-une wiste de descwiptions s-sous wa f-fowme d'une wiste de paiwes associant des tewmes (fouwnis paw des éwéments [`<dt>`](/fw/docs/web/htmw/ewement/dt)) e-et weuws descwiptions ou définitions (fouwnies p-paw des éwéments [`<dd>`](/fw/docs/web/htmw/ewement/dd)). 😳😳😳 on utiwisewa p-paw exempwe cet éwément pouw impwémentew un gwossaiwe.
 
-{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;dw&gt;", o.O "tabbed-standawd")}}
 
-```html interactive-example
-<p>Cryptids of Cornwall:</p>
+```htmw i-intewactive-exampwe
+<p>cwyptids of cownwaww:</p>
 
-<dl>
-  <dt>Beast of Bodmin</dt>
-  <dd>A large feline inhabiting Bodmin Moor.</dd>
+<dw>
+  <dt>beast o-of bodmin</dt>
+  <dd>a w-wawge fewine inhabiting bodmin moow.</dd>
 
-  <dt>Morgawr</dt>
-  <dd>A sea serpent.</dd>
+  <dt>mowgaww</dt>
+  <dd>a sea sewpent.</dd>
 
-  <dt>Owlman</dt>
-  <dd>A giant owl-like creature.</dd>
-</dl>
+  <dt>owwman</dt>
+  <dd>a giant oww-wike c-cweatuwe.</dd>
+</dw>
 ```
 
-```css interactive-example
-p,
+```css intewactive-exampwe
+p, òωó
 dt {
-  font-weight: bold;
+  font-weight: bowd;
 }
 
-dl,
+dw, 😳😳😳
 dd {
-  font-size: 0.9rem;
+  f-font-size: 0.9wem;
 }
 
 dd {
-  margin-bottom: 1em;
+  m-mawgin-bottom: 1em;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
         >
-        et, si les éléments enfants de <code>&#x3C;dl></code> incluent une paire
-        avec un nom et une valeur, du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        et, σωσ si wes éwéments e-enfants de <code>&#x3c;dw></code> incwuent une paiwe
+        avec un nyom et une vaweuw, (⑅˘꒳˘) du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu t-tangibwe</a
+        >. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
         <p>
-          Zéro ou plusieurs groupes composés d'un ou plusieurs éléments
-          <a href="/fr/docs/Web/HTML/Element/dt"><code>&#x3C;dt></code></a
-          >, chacun suivi par un ou plusieurs éléments
-          <a href="/fr/docs/Web/HTML/Element/dd"><code>&#x3C;dd></code></a>
-          entre lesquels on pourra éventuellement avoir des éléments
-          <a href="/fr/docs/Web/HTML/Element/script"
-            ><code>&#x3C;script></code></a
+          z-zéwo ou pwusieuws g-gwoupes composés d'un ou pwusieuws éwéments
+          <a hwef="/fw/docs/web/htmw/ewement/dt"><code>&#x3c;dt></code></a
+          >, 🥺 c-chacun s-suivi paw un ou pwusieuws éwéments
+          <a h-hwef="/fw/docs/web/htmw/ewement/dd"><code>&#x3c;dd></code></a>
+          e-entwe wesquews on pouwwa éventuewwement a-avoiw des éwéments
+          <a hwef="/fw/docs/web/htmw/ewement/scwipt"
+            ><code>&#x3c;scwipt></code></a
           >
-          et
-          <a href="/fr/docs/Web/HTML/Element/template"
-            ><code>&#x3C;template></code></a
-          >.
+          e-et
+          <a hwef="/fw/docs/web/htmw/ewement/tempwate"
+            ><code>&#x3c;tempwate></code></a
+          >. OwO
         </p>
         <p>
-          Selon le WHATWG : un ou plusieurs éléments
-          <a href="/fr/docs/Web/HTML/Element/div"><code>&#x3C;div></code></a>
-          éventuellement entrecoupés d'éléments
-          <a href="/fr/docs/Web/HTML/Element/script"
-            ><code>&#x3C;script></code></a
+          sewon w-we nyaniwg : un ou pwusieuws éwéments
+          <a h-hwef="/fw/docs/web/htmw/ewement/div"><code>&#x3c;div></code></a>
+          éventuewwement entwecoupés d'éwéments
+          <a h-hwef="/fw/docs/web/htmw/ewement/scwipt"
+            ><code>&#x3c;scwipt></code></a
           >
-          ou
-          <a href="/fr/docs/Web/HTML/Element/template"
-            ><code>&#x3C;template></code></a
-          >.
+          o-ou
+          <a hwef="/fw/docs/web/htmw/ewement/tempwate"
+            ><code>&#x3c;tempwate></code></a
+          >. >w<
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        aucune, 🥺 wa bawise d'ouvewtuwe et wa bawise de f-fewmetuwe sont
+        o-obwigatoiwes. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux"
-          >contenu de flux</a
-        >.
+        t-tout éwément a-acceptant du
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux"
+          >contenu de fwux</a
+        >. ^^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas de wôwe cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia a-autowisés</th>
       <td>
-        <a href="https://w3c.github.io/aria/#group">group</a>,
+        <a hwef="https://w3c.github.io/awia/#gwoup">gwoup</a>, >w<
         <code
-          ><a href="/fr/docs/Web/Accessibility/ARIA/Roles/List_role"
-            >list</a
+          ><a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/wist_wowe"
+            >wist</a
           ></code
-        >, <code><a href="https://w3c.github.io/aria/#none">none</a></code
-        >, <a href="https://w3c.github.io/aria/#presentation">presentation</a>
+        >, OwO <code><a h-hwef="https://w3c.github.io/awia/#none">none</a></code
+        >, XD <a h-hwef="https://w3c.github.io/awia/#pwesentation">pwesentation</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLDListElement"
-          ><code>HTMLDListElement</code></a
+        <a hwef="/fw/docs/web/api/htmwdwistewement"
+          ><code>htmwdwistewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément i-incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). ^^;;
 
-## Exemples
+## exempwes
 
-### Un seul terme et une seule définition
+### un s-seuw tewme et u-une seuwe définition
 
-```html
-<dl>
-  <dt>Firefox</dt>
+```htmw
+<dw>
+  <dt>fiwefox</dt>
   <dd>
-    Un navigateur Web libre, open-source, multi-plateforme dévelopé par la
-    Mozilla Corporation et des centaines de volontaires.
+    u-un nyavigateuw w-web wibwe, 🥺 open-souwce, XD m-muwti-pwatefowme dévewopé paw wa
+    moziwwa cowpowation e-et des centaines de vowontaiwes. (U ᵕ U❁)
   </dd>
-  <!-- D'autres termes et leurs descriptions -->
-</dl>
+  <!-- d'autwes tewmes et weuws descwiptions -->
+</dw>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", "",'160')}}
+{{embedwivesampwe("", :3 "",'160')}}
 
-### Plusieurs termes avec une même définition
+### pwusieuws tewmes a-avec une même définition
 
-```html
-<dl>
-  <dt>Firefox</dt>
-  <dt>Mozilla Firefox</dt>
-  <dt>Fx</dt>
+```htmw
+<dw>
+  <dt>fiwefox</dt>
+  <dt>moziwwa fiwefox</dt>
+  <dt>fx</dt>
   <dd>
-    Un navigateur Web libre, open-source, multi-plateforme dévelopé par la
-    Mozilla Corporation et des centaines de volontaires.
+    un nyavigateuw w-web wibwe, ( ͡o ω ͡o ) open-souwce, òωó m-muwti-pwatefowme d-dévewopé paw wa
+    moziwwa c-cowpowation et des centaines d-de vowontaiwes.
   </dd>
-  <!-- D'autres termes et leurs définitions -->
-</dl>
+  <!-- d-d'autwes tewmes et weuws définitions -->
+</dw>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", "", 210)}}
+{{embedwivesampwe("", σωσ "", 210)}}
 
-### Un seul terme avec plusieurs définitions
+### un seuw tewme avec pwusieuws définitions
 
-```html
-<dl>
-  <dt>Firefox</dt>
+```htmw
+<dw>
+  <dt>fiwefox</dt>
   <dd>
-    Un navigateur Web libre, open-source, multi-plateforme dévelopé par la
-    Mozilla Corporation et des centaines de volontaires.
+    u-un nyavigateuw web wibwe, (U ᵕ U❁) open-souwce, (✿oωo) m-muwti-pwatefowme dévewopé p-paw wa
+    m-moziwwa cowpowation et des centaines de vowontaiwes. ^^
   </dd>
   <dd>
-    Le petit panda, panda roux, panda fuligineux ou panda éclatant (Ailurus
-    fulgens), est un mammifère originaire de l'Himalaya et de la Chine
-    méridionale.
+    w-we petit p-panda, ^•ﻌ•^ panda woux, panda fuwigineux o-ou panda écwatant (aiwuwus
+    f-fuwgens), XD est un mammifèwe owiginaiwe de w'himawaya et de wa chine
+    méwidionawe. :3
   </dd>
-  <!-- D'autres termes et leurs définitions -->
-</dl>
+  <!-- d-d'autwes t-tewmes et weuws d-définitions -->
+</dw>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('', '', '280')}}
+{{embedwivesampwe('', (ꈍᴗꈍ) '', '280')}}
 
-### Termes et descriptions multiples
+### t-tewmes e-et descwiptions muwtipwes
 
-Il est également possible de définir plusieurs termes avec plusieurs descriptions correspondantes, en combinant les exemples ci-dessus.
+iw est égawement p-possibwe de définiw pwusieuws tewmes avec pwusieuws descwiptions cowwespondantes, :3 e-en combinant wes e-exempwes ci-dessus. (U ﹏ U)
 
-### Métadonnées
+### métadonnées
 
-Les listes de définitions sont utiles lorsqu'on souhaite afficher des métadonnées sous forme d'une liste de clés-valeurs.
+wes wistes d-de définitions s-sont utiwes wowsqu'on souhaite affichew des métadonnées sous f-fowme d'une wiste de cwés-vaweuws. UwU
 
-```html
-<dl>
-  <dt>Nom</dt>
-  <dd>Godzilla</dd>
-  <dt>Né le</dt>
+```htmw
+<dw>
+  <dt>nom</dt>
+  <dd>godziwwa</dd>
+  <dt>né we</dt>
   <dd>1952</dd>
-  <dt>Lieu de naissance</dt>
-  <dd>Japon</dd>
-  <dt>Couleur</dt>
-  <dd>Vert</dd>
-</dl>
+  <dt>wieu de nyaissance</dt>
+  <dd>japon</dd>
+  <dt>couweuw</dt>
+  <dd>vewt</dd>
+</dw>
 ```
 
-Conseil : il peut être pratique de définir un séparateur clé-valeur dans le CSS, par exemple :
+conseiw : i-iw peut êtwe pwatique de définiw un sépawateuw c-cwé-vaweuw dans w-we css, 😳😳😳 paw exempwe :
 
 ```css
-dt::after {
+dt::aftew {
   content: ": ";
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('','',240)}}
+{{embedwivesampwe('','',240)}}
 
-### Intégration de groupes nom-valeur dans les éléments `<div>`
+### i-intégwation de gwoupes nyom-vaweuw dans wes éwéments `<div>`
 
-[WHATWG](/fr/docs/Glossary/WHATWG) HTML permet d'envelopper chaque groupe nom-valeur d'un élément [`<dl>`](/fr/docs/Web/HTML/Element/dl) dans un élément [`<div>`](/fr/docs/Web/HTML/Element/div). Cela peut être utile lors de l'utilisation de [microdonnées](/fr/docs/Web/HTML/Microdata), ou lorsque les [attributs universels](/fr/docs/Web/HTML/Global_attributes) s'appliquent à un groupe entier, ou encore à des fins de style.
+[naniwg](/fw/docs/gwossawy/naniwg) h-htmw pewmet d'envewoppew c-chaque gwoupe nyom-vaweuw d'un éwément [`<dw>`](/fw/docs/web/htmw/ewement/dw) dans un éwément [`<div>`](/fw/docs/web/htmw/ewement/div). XD c-cewa peut êtwe utiwe wows de w-w'utiwisation de [micwodonnées](/fw/docs/web/htmw/micwodata), o.O o-ou wowsque wes [attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes) s-s'appwiquent à un gwoupe e-entiew, (⑅˘꒳˘) ou e-encowe à des fins d-de stywe. 😳😳😳
 
-```html
-<dl>
+```htmw
+<dw>
   <div>
-    <dt>Nom</dt>
-    <dd>Godzilla</dd>
+    <dt>nom</dt>
+    <dd>godziwwa</dd>
   </div>
   <div>
-    <dt>Né le</dt>
+    <dt>né we</dt>
     <dd>1952</dd>
   </div>
   <div>
-    <dt>Lieu de naissance</dt>
-    <dd>Japon</dd>
+    <dt>wieu de n-nyaissance</dt>
+    <dd>japon</dd>
   </div>
   <div>
-    <dt>Couleur</dt>
-    <dd>Vert</dd>
+    <dt>couweuw</dt>
+    <dd>vewt</dd>
   </div>
-</dl>
+</dw>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('','','240')}}
+{{embedwivesampwe('','','240')}}
 
-## Notes
+## nyotes
 
-Cet élément ne doit pas être utilisé (de même que les éléments [`<ul>`](/fr/docs/Web/HTML/Element/ul)), dans le seul but de créer une indentation sur la page. Bien que cela fonctionne parfaitement, c'est une pratique déconseillée qui mêle mise en forme et sémantique. Cela modifie le rôle que doivent avoir les listes de définitions.
+cet éwément nye d-doit pas êtwe utiwisé (de m-même q-que wes éwéments [`<uw>`](/fw/docs/web/htmw/ewement/uw)), nyaa~~ dans we seuw but de c-cwéew une indentation suw wa p-page. rawr bien que cewa f-fonctionne pawfaitement, -.- c'est une pwatique déconseiwwée qui m-mêwe mise en f-fowme et sémantique. (✿oωo) c-cewa modifie w-we wôwe que doivent avoiw wes w-wistes de définitions. /(^•ω•^)
 
-Pour changer l'indentation de la définition d'un terme, il faut utiliser la propriété [CSS](/fr/docs/Web/CSS) [`margin`](/fr/docs/Web/CSS/margin).
+pouw changew w'indentation de wa définition d'un tewme, 🥺 iw faut utiwisew w-wa pwopwiété [css](/fw/docs/web/css) [`mawgin`](/fw/docs/web/css/mawgin). ʘwʘ
 
-## Accessibilité
+## accessibiwité
 
-Les lecteurs d'écran annoncent `<dl>` de façon différente. À partir d'iOS 14, VoiceOver annoncera que le contenu de `<dl>` est une liste lors de la navigation au curseur (mais pas via la lecture générale). Il faut donc s'assurer que la relation entre les éléments de la liste est bien communiquée grâce aux contenus des éléments.
+w-wes wecteuws d'écwan annoncent `<dw>` d-de façon difféwente. UwU À p-pawtiw d'ios 14, XD voiceovew a-annoncewa que w-we contenu de `<dw>` e-est une wiste w-wows de wa nyavigation a-au cuwseuw (mais pas via wa wectuwe généwawe). (✿oωo) iw faut donc s'assuwew que wa wewation entwe wes éwéments d-de wa wiste e-est bien communiquée g-gwâce aux contenus des éwéments. :3
 
-- [CodePen - Les camarades HTML : dt & dd](https://codepen.io/aardrian/debug/NzGaKP) (en)
-- [VoiceOver sous iOS 14 prend en charge les listes de descriptions](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html) (en)
+- [codepen - w-wes camawades htmw : dt & dd](https://codepen.io/aawdwian/debug/nzgakp) (en)
+- [voiceovew sous ios 14 p-pwend en chawge w-wes wistes de descwiptions](https://adwianwosewwi.com/2020/09/voiceovew-on-ios-14-suppowts-descwiption-wists.htmw) (en)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément [`<dt>`](/fr/docs/Web/HTML/Element/dt)
-- L'élément [`<dd>`](/fr/docs/Web/HTML/Element/dd)
+- w-w'éwément [`<dt>`](/fw/docs/web/htmw/ewement/dt)
+- w-w'éwément [`<dd>`](/fw/docs/web/htmw/ewement/dd)

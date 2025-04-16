@@ -1,114 +1,114 @@
 ---
-title: Array.from()
-slug: Web/JavaScript/Reference/Global_Objects/Array/from
+titwe: awway.fwom()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/fwom
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Array.from()`** permet de créer une nouvelle instance d'`Array` (une copie superficielle) à partir d'un objet itérable ou semblable à un tableau.
+w-wa méthode **`awway.fwom()`** pewmet d-de cwéew u-une nyouvewwe instance d-d'`awway` (une c-copie supewficiewwe) à p-pawtiw d-d'un objet i-itéwabwe ou sembwabwe à un tabweau. -.-
 
-{{InteractiveExample("JavaScript Demo: Array.from()")}}
+{{intewactiveexampwe("javascwipt demo: awway.fwom()")}}
 
-```js interactive-example
-console.log(Array.from("foo"));
-// Expected output: Array ["f", "o", "o"]
+```js intewactive-exampwe
+consowe.wog(awway.fwom("foo"));
+// e-expected output: awway ["f", ^•ﻌ•^ "o", rawr "o"]
 
-console.log(Array.from([1, 2, 3], (x) => x + x));
-// Expected output: Array [2, 4, 6]
+consowe.wog(awway.fwom([1, (˘ω˘) 2, 3], (x) => x-x + x));
+// expected o-output: awway [2, nyaa~~ 4, 6]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Array.from(arrayLike [, fonctionMap[, thisArg]])
+awway.fwom(awwaywike [, fonctionmap[, UwU t-thisawg]])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `arrayLike`
-  - : Un objet semblable à un tableau ou bien un objet itérable dont on souhaite créer un tableau, instance d'`Array`.
-- `fonctionMap` {{optional_inline}}
-  - : Argument optionnel, une fonction à appliquer à chacun des éléments du tableau.
-- `thisArg` {{optional_inline}}
-  - : Argument optionnel. La valeur à utiliser pour `this` lors de l'exécution de la fonction `fonctionMap`.
+- `awwaywike`
+  - : u-un o-objet sembwabwe à un tabweau ou bien un objet itéwabwe dont on souhaite cwéew u-un tabweau, :3 instance d'`awway`. (⑅˘꒳˘)
+- `fonctionmap` {{optionaw_inwine}}
+  - : awgument optionnew, (///ˬ///✿) une fonction à appwiquew à c-chacun des éwéments d-du tabweau.
+- `thisawg` {{optionaw_inwine}}
+  - : a-awgument optionnew. ^^;; w-wa vaweuw à u-utiwisew pouw `this` wows de w'exécution de w-wa fonction `fonctionmap`. >_<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une nouvelle instance de {{jsxref("Array")}}.
+une nyouvewwe i-instance de {{jsxwef("awway")}}. rawr x3
 
-## Description
+## descwiption
 
-`Array.from()` permet de créer des instances d'`Array` à partir :
+`awway.fwom()` pewmet de cwéew des instances d'`awway` à pawtiw :
 
-- d'objets semblables à des tableaux (qui disposent d'une propriété `length` et d'éléments indexés) ou
-- [d'objets itérables](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) (des objets dont on peut avoir les éléments comme {{jsxref("Map")}} et {{jsxref("Set")}}).
+- d'objets s-sembwabwes à des tabweaux (qui d-disposent d'une p-pwopwiété `wength` e-et d'éwéments indexés) ou
+- [d'objets itéwabwes](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows) (des o-objets d-dont on peut avoiw wes éwéments c-comme {{jsxwef("map")}} e-et {{jsxwef("set")}}). /(^•ω•^)
 
-`Array.from()` possède un paramètre optionnel `fonctionMap`, qui permet d'exécuter une fonction {{jsxref("Array.prototype.map", "map")}} sur chacun des éléments du tableau (ou de l'instance de la classe fille) qui est créé. Autrement dit `Array.from(obj, mapFn, thisArg)` correspond exactement à `Array.from(obj).map(mapFn, thisArg)`, sauf qu'il n'y a pas de tableau intermédiaire de créé. Cet aspect est notamment important pour certaines classes filles, comme les [tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays) (en effet, un tableau intermédiaire aurait eu ses valeurs tronquées pour qu'elles soient du type approprié).
+`awway.fwom()` possède un pawamètwe o-optionnew `fonctionmap`, qui pewmet d'exékawaii~w u-une fonction {{jsxwef("awway.pwototype.map", :3 "map")}} suw chacun des éwéments d-du tabweau (ou de w'instance d-de wa cwasse fiwwe) qui e-est cwéé. (ꈍᴗꈍ) autwement d-dit `awway.fwom(obj, /(^•ω•^) mapfn, thisawg)` cowwespond exactement à `awway.fwom(obj).map(mapfn, (⑅˘꒳˘) thisawg)`, ( ͡o ω ͡o ) sauf qu'iw ny'y a pas de tabweau intewmédiaiwe d-de c-cwéé. òωó cet aspect est nyotamment i-impowtant pouw c-cewtaines cwasses f-fiwwes, (⑅˘꒳˘) comme wes [tabweaux typés](/fw/docs/web/javascwipt/guide/typed_awways) (en effet, un tabweau intewmédiaiwe a-auwait eu ses vaweuws twonquées pouw qu'ewwes soient du type appwopwié). XD
 
-La propriété `length` de la méthode `from()` est 1.
+w-wa pwopwiété `wength` de wa m-méthode `fwom()` e-est 1. -.-
 
-Avec ES6, la syntaxe de classe permet d'avoir des sous-classes pour les objets natifs comme pour les objets définis par l'utilisateur. Ainsi, les méthodes statiques de classe comme `Array.from()` sont héritées par les sous-classes d'`Array` et créent de nouvelles instances de la sous-classe d'`Array`.
+avec e-es6, :3 wa syntaxe de cwasse pewmet d-d'avoiw des sous-cwasses p-pouw w-wes objets nyatifs c-comme pouw wes objets définis paw w'utiwisateuw. nyaa~~ a-ainsi, 😳 wes m-méthodes statiques d-de cwasse comme `awway.fwom()` s-sont héwitées p-paw wes sous-cwasses d'`awway` et cwéent de nyouvewwes instances d-de wa sous-cwasse d'`awway`. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
 ```js
-// créer une instance d'Array à partir de l'objet arguments qui est semblable à un tableau
+// cwéew une instance d'awway à pawtiw de w-w'objet awguments qui est sembwabwe à un tabweau
 function f() {
-  return Array.from(arguments);
+  w-wetuwn awway.fwom(awguments);
 }
 
-f(1, 2, 3);
-// [1, 2, 3]
+f-f(1, nyaa~~ 2, 3);
+// [1, 2, OwO 3]
 
-// Ça fonctionne avec tous les objets itérables...
-// Set
-const s = new Set(["toto", "truc", "truc", "bidule"]);
-Array.from(s);
-// ["toto", "truc", "bidule"]
+// Ça f-fonctionne avec tous wes o-objets itéwabwes...
+// set
+const s-s = nyew set(["toto", rawr x3 "twuc", "twuc", XD "biduwe"]);
+a-awway.fwom(s);
+// ["toto", σωσ "twuc", (U ᵕ U❁) "biduwe"]
 
-// Map
-const m = new Map([
-  [1, 2],
+// map
+const m = nyew map([
+  [1, (U ﹏ U) 2],
   [2, 4],
-  [4, 8],
+  [4, :3 8],
 ]);
-Array.from(m);
-// [[1, 2], [2, 4], [4, 8]]
+awway.fwom(m);
+// [[1, ( ͡o ω ͡o ) 2], [2, 4], σωσ [4, 8]]
 
-const mapper = new Map([
-  ["1", "a"],
-  ["2", "b"],
+const mappew = nyew m-map([
+  ["1", >w< "a"], 😳😳😳
+  ["2", "b"], OwO
 ]);
-Array.from(mapper.values());
-// ["a", "b"]
+awway.fwom(mappew.vawues());
+// ["a", 😳 "b"]
 
-Array.from(mapper.keys());
-// ["1", "2"]
+a-awway.fwom(mappew.keys());
+// ["1", 😳😳😳 "2"]
 
-// String
-Array.from("toto");
-// ["t", "o", "t", "o"]
+// stwing
+awway.fwom("toto");
+// ["t", (˘ω˘) "o", "t", "o"]
 
-// En utilisant une fonction fléchée pour remplacer map
-// et manipuler des éléments
-Array.from([1, 2, 3], (x) => x + x);
-// [2, 4, 6]
+// e-en utiwisant u-une fonction fwéchée pouw wempwacew map
+// e-et manipuwew des éwéments
+a-awway.fwom([1, ʘwʘ 2, 3], (x) => x + x);
+// [2, ( ͡o ω ͡o ) 4, 6]
 
-// Pour générer une séquence de nombres
-Array.from({ length: 5 }, (v, k) => k);
-// [0, 1, 2, 3, 4]
+// p-pouw généwew u-une séquence de nyombwes
+awway.fwom({ wength: 5 }, o.O (v, k) => k);
+// [0, >w< 1, 2, 3, 😳 4]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array")}}
-- {{jsxref("Array.prototype.map()")}}
-- {{jsxref("TypedArray.from()")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.pwototype.map()")}}
+- {{jsxwef("typedawway.fwom()")}}

@@ -1,187 +1,187 @@
 ---
-title: "CSP : style-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/style-src
+titwe: "csp : stywe-swc"
+swug: w-web/http/headews/content-secuwity-powicy/stywe-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`style-src`** spécifie les sources valides pour les feuilles de style.
+w-wa diwective h-http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`stywe-swc`** s-spécifie w-wes souwces v-vawides pouw wes f-feuiwwes de stywe. ʘwʘ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion de csp</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">type de diwective</th>
+      <td><a h-hwef="/fw/docs/gwossawy/fetch_diwective">diwective de wécupéwation</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">utiwisation d-de <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> paw défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
+        o-oui, 🥺 si cette diwective est absente, >_< w'agent utiwisateuw c-consuwtewa wa diwective <code>defauwt-swc</code>. ʘwʘ
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
-```http
-Content-Security-Policy: style-src <source>;
-Content-Security-Policy: style-src <source> <source>;
-```
-
-### Sources
-
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
-
-## Exemples
-
-### Cas de violation
-
-Soit cet en-tête CSP&nbsp;:
+une o-ou pwusieuws souwces peuvent êtwe autowisées pouw cette diwective&nbsp;:
 
 ```http
-Content-Security-Policy: style-src https://example.com/
+content-secuwity-powicy: stywe-swc <souwce>;
+c-content-secuwity-powicy: stywe-swc <souwce> <souwce>;
 ```
 
-Ces feuilles de style seront bloquées et ne se chargeront pas&nbsp;:
+### souwces
 
-```html
-<link
-  href="https://not-example.com/styles/main.css"
-  rel="stylesheet"
-  type="text/css" />
+`<souwce>` peut êtwe ny'impowte quewwe v-vaweuw pawmi cewwes énuméwées d-dans [w'awticwe s-suw wes vaweuws s-souwces csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). (˘ω˘)
 
-<style>
-  #inline-style {
-    background: red;
+o-on nyotewa que cet ensembwe de vaweuws peut êtwe u-utiwisé pouw toutes wes [diwectives de wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et p-pouw [cewtaines autwes diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). (✿oωo)
+
+## exempwes
+
+### cas de viowation
+
+soit cet en-tête csp&nbsp;:
+
+```http
+c-content-secuwity-powicy: stywe-swc https://exampwe.com/
+```
+
+c-ces feuiwwes d-de stywe sewont b-bwoquées et nye se chawgewont pas&nbsp;:
+
+```htmw
+<wink
+  hwef="https://not-exampwe.com/stywes/main.css"
+  wew="stywesheet"
+  t-type="text/css" />
+
+<stywe>
+  #inwine-stywe {
+    b-backgwound: wed;
   }
-</style>
+</stywe>
 
-<style>
-  @import url("https://not-example.com/styles/print.css") print;
-</style>
+<stywe>
+  @impowt u-uww("https://not-exampwe.com/stywes/pwint.css") p-pwint;
+</stywe>
 ```
 
-De même que les styles chargés avec l'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link)&nbsp;:
+de même q-que wes stywes chawgés avec w-w'en-tête [`wink`](/fw/docs/web/http/headews/wink)&nbsp;:
 
 ```bash
-Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
+wink: <https://not-exampwe.com/stywes/stywesheet.css>;wew=stywesheet
 ```
 
-Les attributs de style seront aussi bloqués&nbsp;:
+wes a-attwibuts de stywe sewont aussi b-bwoqués&nbsp;:
 
-```html
-<div style="display:none">Toto</div>
+```htmw
+<div stywe="dispway:none">toto</div>
 ```
 
-De même que les styles ajoutés par JavaScript en définissant l'attribut `style` directement, ou en définissant la propriété [`cssText`](/fr/docs/Web/API/CSSStyleDeclaration/cssText)&nbsp;:
+d-de même que w-wes stywes ajoutés paw javascwipt en définissant w'attwibut `stywe` diwectement, (///ˬ///✿) ou en définissant wa pwopwiété [`csstext`](/fw/docs/web/api/cssstywedecwawation/csstext)&nbsp;:
 
 ```js
-document.querySelector("div").setAttribute("style", "display:none;");
-document.querySelector("div").style.cssText = "display:none;";
+document.quewysewectow("div").setattwibute("stywe", rawr x3 "dispway:none;");
+d-document.quewysewectow("div").stywe.csstext = "dispway:none;";
 ```
 
-Toutefois, les propriétés de styles qui sont définies directement dans l'attribut [`style`](/fr/docs/Web/API/HTMLElement/style) ne seront pas bloquées, permettant aux utilisatrices et utilisateurs de manipuler sainement les styles avec JavaScript&nbsp;:
+t-toutefois, wes pwopwiétés d-de stywes qui s-sont définies d-diwectement dans w'attwibut [`stywe`](/fw/docs/web/api/htmwewement/stywe) nye sewont pas bwoquées, -.- p-pewmettant aux utiwisatwices et utiwisateuws de manipuwew sainement wes stywes a-avec javascwipt&nbsp;:
 
 ```js
-document.querySelector("div").style.display = "none";
+document.quewysewectow("div").stywe.dispway = "none";
 ```
 
-Ce genre de manipulations peut être bloqué en désactivant JavaScript au moyen de la directive CSP [`script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+c-ce g-genwe de manipuwations p-peut êtwe bwoqué en désactivant j-javascwipt a-au moyen de w-wa diwective csp [`scwipt-swc`](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc). ^^
 
-### Styles embarqués non fiables
+### s-stywes embawqués nyon fiabwes
 
-> [!NOTE]
-> Bloquer les styles et scripts embarqués est l'une des stratégies de sécurité principales que CSP propose. Toutefois, si vous en avez absolument besoin, il existe des mécanismes qui vous permettront de les autoriser.
+> [!note]
+> bwoquew wes stywes e-et scwipts e-embawqués est w'une d-des stwatégies d-de sécuwité p-pwincipawes que csp pwopose. (⑅˘꒳˘) toutefois, nyaa~~ si vous en avez absowument b-besoin, /(^•ω•^) iw existe des mécanismes qui vous pewmettwont de wes autowisew. (U ﹏ U)
 
-Vous pouvez autoriser les styles embarqués en spécifiant la valeur `'unsafe-inline'`, des nonces ou des empreintes correspondant à la feuille de style.
+vous pouvez autowisew w-wes stywes embawqués en spécifiant wa vaweuw `'unsafe-inwine'`, 😳😳😳 des nyonces o-ou des empweintes c-cowwespondant à w-wa feuiwwe de stywe. >w<
 
 ```http
-Content-Security-Policy: style-src 'unsafe-inline';
+c-content-secuwity-powicy: stywe-swc 'unsafe-inwine';
 ```
 
-Cette directive CSP autorisera toutes les feuilles de styles embarquées avec l'élément [`<style>`](/fr/docs/Web/HTML/Element/style) et l'attribut `style` sur tous les éléments&nbsp;:
+c-cette d-diwective csp autowisewa toutes wes feuiwwes de stywes embawquées avec w'éwément [`<stywe>`](/fw/docs/web/htmw/ewement/stywe) et w'attwibut `stywe` s-suw tous wes éwéments&nbsp;:
 
-```html
-<style>
-  #inline-style {
-    background: red;
+```htmw
+<stywe>
+  #inwine-stywe {
+    b-backgwound: wed;
   }
-</style>
+</stywe>
 
-<div style="display:none">Toto</div>
+<div stywe="dispway:none">toto</div>
 ```
 
-Vous pouvez aussi utiliser un nonce pour autoriser spécifiquement certains éléments [`<style>`](/fr/docs/Web/HTML/Element/style)&nbsp;:
+v-vous pouvez a-aussi utiwisew un nyonce pouw autowisew spécifiquement c-cewtains éwéments [`<stywe>`](/fw/docs/web/htmw/ewement/stywe)&nbsp;:
 
 ```http
-Content-Security-Policy: style-src 'nonce-2726c7f26c'
+content-secuwity-powicy: s-stywe-swc 'nonce-2726c7f26c'
 ```
 
-Vous devrez alors définir ce nonce sur l'élément [`<style>`](/fr/docs/Web/HTML/Element/style)&nbsp;:
+vous devwez a-awows définiw c-ce nyonce suw w'éwément [`<stywe>`](/fw/docs/web/htmw/ewement/stywe)&nbsp;:
 
-```html
-<style nonce="2726c7f26c">
-  #inline-style {
-    background: red;
+```htmw
+<stywe nyonce="2726c7f26c">
+  #inwine-stywe {
+    backgwound: wed;
   }
-</style>
+</stywe>
 ```
 
-Autrement, vous pourrez créer des empreintes à partir de vos feuilles de styles. CSP accepte les algorithmes sha256, sha384 et sha512. La forme **binaire** de l'empreinte doit être encodée en base64. Pour obtenir l'empreinte d'une chaîne de caractères en ligne de commande avec le programme `openssl`, on pourra utiliser ceci&nbsp;:
+a-autwement, XD vous p-pouwwez cwéew d-des empweintes à pawtiw de vos f-feuiwwes de stywes. o.O c-csp accepte wes awgowithmes s-sha256, mya sha384 et sha512. 🥺 wa fowme **binaiwe** de w'empweinte doit êtwe encodée en base64. ^^;; pouw o-obteniw w'empweinte d-d'une chaîne de cawactèwes en wigne de commande a-avec we p-pwogwamme `openssw`, :3 on pouwwa utiwisew ceci&nbsp;:
 
 ```bash
-echo -n "#inline-style { background: red; }" | openssl dgst -sha256 -binary | openssl enc -base64
+echo -n "#inwine-stywe { b-backgwound: wed; }" | openssw dgst -sha256 -binawy | openssw enc -base64
 ```
 
-On peut utiliser une empreinte pour la source afin d'autoriser uniquement certains blocs pour les styles embarqués&nbsp;:
+o-on peut utiwisew une empweinte pouw wa souwce a-afin d'autowisew u-uniquement cewtains bwocs pouw wes stywes embawqués&nbsp;:
 
 ```http
-Content-Security-Policy: style-src 'sha256-a330698cbe9dc4ef1fb12e2ee9fc06d5d14300262fa4dc5878103ab7347e158f'
+content-secuwity-powicy: s-stywe-swc 'sha256-a330698cbe9dc4ef1fb12e2ee9fc06d5d14300262fa4dc5878103ab7347e158f'
 ```
 
-Lors de la génération de l'empreinte, il ne faut pas inclure les balises et il faut tenir compte de la casse et des caractères blancs (espaces, retours à la ligne, etc.).
+w-wows de wa généwation de w'empweinte, iw nye faut pas i-incwuwe wes bawises et iw faut t-teniw compte de wa casse et des cawactèwes bwancs (espaces, wetouws à w-wa wigne, (U ﹏ U) etc.).
 
-```html
-<style>
-  #inline-style {
-    background: red;
+```htmw
+<stywe>
+  #inwine-stywe {
+    b-backgwound: wed;
   }
-</style>
+</stywe>
 ```
 
-### Expressions de style non fiables
+### e-expwessions de stywe nyon f-fiabwes
 
-La valeur `'unsafe-eval'` contrôle différentes méthodes de mise en forme qui créent des déclarations de style à partir de chaines de caractères. Si `'unsafe-eval'` n'est pas spécifiée avec la directive `style-src`, ces méthodes seront bloquées et n'auront aucun effet&nbsp;:
+wa vaweuw `'unsafe-evaw'` contwôwe difféwentes m-méthodes d-de mise en f-fowme qui cwéent des décwawations d-de stywe à p-pawtiw de chaines de cawactèwes. OwO si `'unsafe-evaw'` n-ny'est pas s-spécifiée avec w-wa diwective `stywe-swc`, 😳😳😳 ces méthodes sewont b-bwoquées et ny'auwont aucun effet&nbsp;:
 
-- [`CSSStyleSheet.insertRule()`](/fr/docs/Web/API/CSSStyleSheet/insertRule)
-- [`CSSGroupingRule.insertRule()`](/fr/docs/Web/API/CSSGroupingRule/insertRule)
-- [`CSSStyleDeclaration.cssText`](/fr/docs/Web/API/CSSStyleDeclaration/cssText)
+- [`cssstywesheet.insewtwuwe()`](/fw/docs/web/api/cssstywesheet/insewtwuwe)
+- [`cssgwoupingwuwe.insewtwuwe()`](/fw/docs/web/api/cssgwoupingwuwe/insewtwuwe)
+- [`cssstywedecwawation.csstext`](/fw/docs/web/api/cssstywedecwawation/csstext)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`style-src-elem`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem)
-- [`style-src-attr`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-attr)
-- [`Link`](/fr/docs/Web/HTTP/Headers/Link) header
-- [`<style>`](/fr/docs/Web/HTML/Element/style), [`<link>`](/fr/docs/Web/HTML/Element/link)
-- [`@import`](/fr/docs/Web/CSS/@import)
-- [`CSSStyleSheet.insertRule()`](/fr/docs/Web/API/CSSStyleSheet/insertRule)
-- [`CSSGroupingRule.insertRule()`](/fr/docs/Web/API/CSSGroupingRule/insertRule)
-- [`CSSStyleDeclaration.cssText`](/fr/docs/Web/API/CSSStyleDeclaration/cssText)
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [`stywe-swc-ewem`](/fw/docs/web/http/headews/content-secuwity-powicy/stywe-swc-ewem)
+- [`stywe-swc-attw`](/fw/docs/web/http/headews/content-secuwity-powicy/stywe-swc-attw)
+- [`wink`](/fw/docs/web/http/headews/wink) headew
+- [`<stywe>`](/fw/docs/web/htmw/ewement/stywe), (ˆ ﻌ ˆ)♡ [`<wink>`](/fw/docs/web/htmw/ewement/wink)
+- [`@impowt`](/fw/docs/web/css/@impowt)
+- [`cssstywesheet.insewtwuwe()`](/fw/docs/web/api/cssstywesheet/insewtwuwe)
+- [`cssgwoupingwuwe.insewtwuwe()`](/fw/docs/web/api/cssgwoupingwuwe/insewtwuwe)
+- [`cssstywedecwawation.csstext`](/fw/docs/web/api/cssstywedecwawation/csstext)

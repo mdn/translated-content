@@ -1,37 +1,37 @@
 ---
-title: call-template
-slug: Web/XSLT/Element/call-template
+titwe: caww-tempwate
+swug: web/xswt/ewement/caww-tempwate
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:call-template>` invoque un modèle nommé.
+w-w'éwément `<xsw:caww-tempwate>` i-invoque un modèwe n-nyommé. -.-
 
-### Syntaxe
+### s-syntaxe
 
-```xml
-<xsl:call-template name=NOM>
-  <xsl:with-param> [optionnel]
-</xsl:call-template>
+```xmw
+<xsw:caww-tempwate n-nyame=nom>
+  <xsw:with-pawam> [optionnew]
+</xsw:caww-tempwate>
 ```
 
-### Attribut obligatoire
+### a-attwibut obwigatoiwe
 
 - `name`
-  - : Définit le nom du modèle à invoquer.
+  - : d-définit we nom du modèwe à invoquew. (ˆ ﻌ ˆ)♡
 
-### Attributs optionnels
+### attwibuts optionnews
 
-Aucun.
+aucun. (⑅˘꒳˘)
 
-### Type
+### t-type
 
-Instruction, apparaît dans un modèle.
+instwuction, (U ᵕ U❁) appawaît dans un modèwe. -.-
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 6](https://www.w3.org/TR/xslt#named-templates).
+[xswt 1.0, ^^;; section 6](https://www.w3.owg/tw/xswt#named-tempwates). >_<
 
-### Support Gecko
+### suppowt g-gecko
 
-Supporté.
+suppowté. mya

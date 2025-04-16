@@ -1,91 +1,91 @@
 ---
-title: "CSP : base-uri"
-slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
+titwe: "csp : base-uwi"
+swug: w-web/http/headews/content-secuwity-powicy/base-uwi
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`base-uri`** restreint les URL qui peuvent être utilisées comme valeur d'un élément [`<base>`](/fr/docs/Web/HTML/Element/base). Si cette valeur est absente, alors toutes les adresses sont autorisées. Si cette directive est absente, l'agent utilisateur utilisera la valeur de l'élément [`<base>`](/fr/docs/Web/HTML/Element/base).
+w-wa diwective h-http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`base-uwi`** w-westweint w-wes uww qui peuvent êtwe u-utiwisées c-comme vaweuw d-d'un éwément [`<base>`](/fw/docs/web/htmw/ewement/base). si cette vaweuw est absente, 🥺 awows toutes wes adwesses sont autowisées. (U ﹏ U) s-si cette diwective est absente, >w< w'agent u-utiwisateuw utiwisewa wa vaweuw d-de w'éwément [`<base>`](/fw/docs/web/htmw/ewement/base). mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion de csp</th>
       <td>2</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Document_directive">Directive de document</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
-      <td>Non, ne pas définir cette directive autorise toutes les URL</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">type de diwective</th>
+      <td><a h-hwef="/fw/docs/gwossawy/document_diwective">diwective d-de document</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">utiwisation de <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> paw défaut</th>
+      <td>non, >w< nye pas d-définiw cette diwective autowise toutes wes uww</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
-Une ou plusieurs _sources_ peuvent être autorisées pour cette directive&nbsp;:
+u-une ou pwusieuws _souwces_ peuvent êtwe autowisées p-pouw cette d-diwective&nbsp;:
 
 ```http
-Content-Security-Policy: base-uri <source>;
-Content-Security-Policy: base-uri <source> <source>;
+c-content-secuwity-powicy: b-base-uwi <souwce>;
+content-secuwity-powicy: base-uwi <souwce> <souwce>;
 ```
 
-### Sources
+### s-souwces
 
-Cette directive utilise en grande partie les mêmes valeurs de source comme arguments que les autres directives CSP&nbsp;: [valeurs sources pour CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+cette diwective utiwise en gwande p-pawtie wes mêmes vaweuws de souwce comme awguments que wes autwes diwectives csp&nbsp;: [vaweuws s-souwces pouw csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). nyaa~~
 
-On notera toutefois que certaines de ces valeurs n'ont pas de sens pour `base-uri`, à l'instar des mots-clés `'unsafe-inline'` et `'strict-dynamic'`.
+o-on nyotewa t-toutefois q-que cewtaines de ces vaweuws ny'ont pas de sens pouw `base-uwi`, (✿oωo) à w-w'instaw des m-mots-cwés `'unsafe-inwine'` et `'stwict-dynamic'`. ʘwʘ
 
-## Exemples
+## e-exempwes
 
-### Configuration avec la balise `<meta>`
+### c-configuwation avec wa bawise `<meta>`
 
-```html
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
+```htmw
+<meta h-http-equiv="content-secuwity-powicy" content="base-uwi 'sewf'" />
 ```
 
-### Configuration avec Apache
+### c-configuwation avec apache
 
-```xml
-<IfModule mod_headers.c>
-  Header set Content-Security-Policy "base-uri 'self'";
-</IfModule>
+```xmw
+<ifmoduwe mod_headews.c>
+  h-headew set content-secuwity-powicy "base-uwi 'sewf'";
+</ifmoduwe>
 ```
 
-### Configuration avec Nginx
+### configuwation avec n-nginx
 
 ```
-add_header Content-Security-Policy "base-uri 'self';"
+add_headew content-secuwity-powicy "base-uwi 'sewf';"
 ```
 
-### Cas de violation
+### c-cas d-de viowation
 
-À partir du moment où votre domaine n'est pas `example.com`, un élément [`<base>`](/fr/docs/Web/HTML/Element/base) avec son attribut `href` défini à `https://example.com` résultera en une violation de CSP.
+À pawtiw du moment où votwe domaine ny'est pas `exampwe.com`, (ˆ ﻌ ˆ)♡ un éwément [`<base>`](/fw/docs/web/htmw/ewement/base) avec son attwibut `hwef` défini à `https://exampwe.com` wésuwtewa en une v-viowation de csp. 😳😳😳
 
-```html example-bad
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
-<base href="https://example.com/" />
+```htmw e-exampwe-bad
+<meta http-equiv="content-secuwity-powicy" content="base-uwi 'sewf'" />
+<base h-hwef="https://exampwe.com/" />
 
 <!--
-Error: Refused to set the document's base URI to 'https://example.com/'
-because it violates the following Content Security Policy
-directive: "base-uri 'self'"
+e-ewwow: w-wefused to set the document's base uwi to 'https://exampwe.com/'
+because it viowates t-the fowwowing content secuwity powicy
+diwective: "base-uwi 'sewf'"
 -->
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<base>`](/fr/docs/Web/HTML/Element/base)
-- [`Node.baseURI`](/fr/docs/Web/API/Node/baseURI)
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [`<base>`](/fw/docs/web/htmw/ewement/base)
+- [`node.baseuwi`](/fw/docs/web/api/node/baseuwi)

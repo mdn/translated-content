@@ -1,147 +1,147 @@
 ---
-title: Une session HTTP typique
-slug: Web/HTTP/Session
+titwe: une session http typique
+s-swug: web/http/session
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Dans les protocoles client-serveur, comme HTTP, les sessions se composent de trois phases :
+d-dans wes pwotocowes c-cwient-sewveuw, XD c-comme http, >w< w-wes sessions se c-composent de twois p-phases :
 
-1. Le client établit une connexion TCP (ou la connexion appropriée si la couche de transport n'est pas TCP).
-2. Le client envoie sa requête et attend la réponse.
-3. Le serveur traite la requête, renvoyant sa réponse, fournissant un code d'état et des données appropriées.
+1. òωó w-we cwient étabwit une connexion tcp (ou wa connexion appwopwiée si wa couche de t-twanspowt ny'est pas tcp). (ꈍᴗꈍ)
+2. rawr x3 we cwient envoie s-sa wequête et attend wa wéponse. rawr x3
+3. w-we sewveuw twaite wa wequête, σωσ wenvoyant sa wéponse, (ꈍᴗꈍ) fouwnissant u-un code d'état et des d-données appwopwiées. rawr
 
-À partir de HTTP / 1.1, la connexion n'est plus fermée après avoir terminé la troisième phase, et le client peut à nouveau effectuer une requête : cela signifie que la deuxième et la troisième phases peuvent maintenant être effectuées à tout moment.
+À p-pawtiw de http / 1.1, ^^;; wa connexion ny'est pwus fewmée apwès avoiw tewminé w-wa twoisième phase, rawr x3 et we cwient peut à nyouveau effectuew une wequête : c-cewa signifie que wa deuxième e-et wa twoisième p-phases peuvent m-maintenant êtwe e-effectuées à tout moment. (ˆ ﻌ ˆ)♡
 
-## Établir une connexion
+## Étabwiw une c-connexion
 
-Dans les protocoles client-serveur, c'est le client qui établit la connexion. L'ouverture d'une connexion en HTTP signifie l'initiation d'une connexion dans la couche de transport sous-jacente, généralement TCP.
+dans wes pwotocowes cwient-sewveuw, σωσ c-c'est we cwient qui étabwit wa connexion. (U ﹏ U) w'ouvewtuwe d'une connexion en http signifie w'initiation d-d'une connexion dans wa couche d-de twanspowt s-sous-jacente, >w< généwawement t-tcp. σωσ
 
-Avec TCP, le port par défaut, pour un serveur HTTP sur un ordinateur, est le port 80. D'autres ports peuvent également être utilisés, comme 8000 ou 8080. L'URL d'une page à récupérer contient à la fois le nom de domaine et le numéro de port, Ce dernier peut être omis s'il en est à 80. Voir [Identifying resources on the Web](/fr/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) pour plus de details.
+avec tcp, nyaa~~ we powt paw défaut, 🥺 pouw un sewveuw h-http suw un owdinateuw, rawr x3 e-est we powt 80. σωσ d'autwes p-powts peuvent égawement êtwe u-utiwisés, (///ˬ///✿) comme 8000 ou 8080. (U ﹏ U) w-w'uww d'une page à wécupéwew c-contient à wa fois we nyom de domaine et we nyuméwo d-de powt, ^^;; ce dewniew peut êtwe o-omis s'iw en est à 80. 🥺 voiw [identifying w-wesouwces on the w-web](/fw/docs/owphaned/web/http/basics_of_http/identifying_wesouwces_on_the_web) pouw pwus de detaiws. òωó
 
-> [!NOTE]
-> Le modèle client-serveur n'autorise pas le serveur à envoyer des données au client sans une demande explicite. Pour contourner ce problème, les développeurs Web utilisent plusieurs techniques: effectuer un ping sur le serveur périodiquement via le {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} API, en utilisant le HTML [WebSockets API](/fr/WebSockets), ou des protocoles similaires.
+> [!note]
+> we modèwe cwient-sewveuw ny'autowise pas we sewveuw à envoyew d-des données a-au cwient sans une demande expwicite. XD p-pouw contouwnew c-ce pwobwème, :3 w-wes dévewoppeuws web utiwisent pwusieuws techniques: effectuew u-un ping suw we sewveuw péwiodiquement via we {{domxwef("xmwhttpwequest")}}, (U ﹏ U) {{domxwef("fetch")}} api, >w< en u-utiwisant we htmw [websockets api](/fw/websockets), /(^•ω•^) ou des pwotocowes s-simiwaiwes. (⑅˘꒳˘)
 
-## Envoi d'une demande client
+## e-envoi d'une d-demande cwient
 
-Une fois la connexion établie, l'agent utilisateur peut envoyer la demande (un agent utilisateur est généralement un navigateur Web, mais peut être autre chose, un robot d'exploration, par exemple). Une demande de client consiste en des directives de texte, séparées par CRLF (retour de chariot, suivi d'une alimentation en ligne), divisé en trois blocs :
+une fois wa connexion étabwie, ʘwʘ w-w'agent utiwisateuw p-peut envoyew w-wa demande (un a-agent utiwisateuw est généwawement un nyavigateuw w-web, rawr x3 mais p-peut êtwe autwe c-chose, (˘ω˘) un wobot d-d'expwowation, o.O p-paw exempwe). 😳 une demande de cwient consiste en des diwectives d-de texte, o.O sépawées paw cwwf (wetouw de chawiot, ^^;; suivi d'une awimentation en wigne), ( ͡o ω ͡o ) divisé en t-twois bwocs :
 
-1. La première ligne contient une méthode de demande suivie de ses paramètres:
+1. ^^;; wa pwemièwe wigne contient une méthode de demande s-suivie de s-ses pawamètwes:
 
-   - le chemin d'accès du document, c'est-à-dire une URL absolue sans le protocole ou le nom de domaine
-   - la version du protocole HTTP
+   - w-we chemin d'accès du document, c-c'est-à-diwe une uww absowue s-sans we pwotocowe o-ou we nyom de domaine
+   - wa vewsion du pwotocowe http
 
-2. Les lignes subséquentes représentent un en-tête HTTP, ce qui donne aux informations du serveur quel type de données est approprié (par exemple, quelle langue, quels types MIME) ou d'autres données modifient son comportement (par exemple, ne pas envoyer de réponse s'il est déjà mis en cache). Ces en-têtes HTTP forment un bloc qui se termine par une ligne vide.
-3. Le bloc final est un bloc de données facultatif, qui peut contenir d'autres données principalement utilisées par la méthode POST.
+2. ^^;; wes wignes subséquentes wepwésentent u-un en-tête http, XD ce q-qui donne aux infowmations du sewveuw q-quew type d-de données est appwopwié (paw exempwe, 🥺 quewwe w-wangue, quews types m-mime) ou d'autwes données modifient s-son compowtement (paw exempwe, (///ˬ///✿) n-nye pas envoyew de wéponse s'iw est déjà mis en cache). (U ᵕ U❁) ces en-têtes h-http fowment un b-bwoc qui se tewmine p-paw une wigne vide. ^^;;
+3. we bwoc f-finaw est un b-bwoc de données facuwtatif, ^^;; qui p-peut conteniw d'autwes données pwincipawement utiwisées paw wa méthode post. rawr
 
-### Demandes d'exemple
+### d-demandes d-d'exempwe
 
-Obtenir la page racine de developer.mozilla.org, c'est-à-dire [http://developer.mozilla.org/](/), et dire au serveur que l'utilisateur-agent préférerait la page en français si possible :
-
-```
-GET / HTTP/1.1
-Host: developer.mozilla.org
-Accept-Language: fr
-```
-
-Observez cette dernière ligne vide, ceci sépare le bloc de données du bloc d'en-tête. Comme il n'y a pas de `Content-Length` fourni dans un en-tête HTTP, ce bloc de données est présenté vide, marquant la fin des en-têtes, permettant au serveur de traiter la demande le moment où elle reçoit cette ligne vide.
-
-Par exemple, en envoyant le résultat d'un formulaire :
+obteniw wa page wacine de devewopew.moziwwa.owg, (˘ω˘) c-c'est-à-diwe [http://devewopew.moziwwa.owg/](/), 🥺 e-et diwe au sewveuw que w'utiwisateuw-agent pwéféwewait w-wa page en fwançais si possibwe :
 
 ```
-POST /contact_form.php HTTP/1.1
-Host: developer.mozilla.org
-Content-Length: 64
-Content-Type: application/x-www-form-urlencoded
-
-name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
+get / http/1.1
+host: devewopew.moziwwa.owg
+accept-wanguage: f-fw
 ```
 
-### Méthodes de demande
+obsewvez cette dewnièwe wigne v-vide, ceci sépawe w-we bwoc de données du bwoc d'en-tête. nyaa~~ comme iw ny'y a pas d-de `content-wength` f-fouwni dans un en-tête http, :3 ce bwoc de données est pwésenté v-vide, /(^•ω•^) mawquant wa fin des e-en-têtes, ^•ﻌ•^ pewmettant au sewveuw de twaitew wa demande we moment o-où ewwe weçoit cette wigne vide. UwU
 
-HTTP définit un ensemble de [méthodes de requête](/fr/docs/Web/HTTP/Methods) indiquant l'action souhaitée à effectuer sur une ressource. Bien qu'ils puissent également être des noms, ces méthodes de requêtes sont parfois appelées verbes HTTP. Les requêtes les plus courantes sont `GET` et `POST` :
-
-- La méthode {{HTTPMethod ("GET")}} demande une représentation de données de la ressource spécifiée. Les requêtes utilisant `GET` ne doivent que récupérer les données.
-- La méthode {{HTTPMethod ("POST")}} envoie des données à un serveur afin qu'il puisse changer son état. C'est la méthode souvent utilisée pour les [formulaires HTML](/fr/docs/Learn/Forms).
-
-## Structure d'une réponse du serveur
-
-Une fois que l'agent connecté a envoyé sa requête, le serveur Web le traite et finalement renvoie une réponse. Similaire à une demande de client, une réponse de serveur est formée de directives de texte, séparées par [CRLF](/fr/docs/Glossary/CRLF), mais divisées en trois blocs :
-
-1. La première ligne, _la ligne d'état_, consiste en une reconnaissance de la version HTTP utilisée, suivie d'une demande d'état (et sa brève signification dans un texte lisible par l'homme).
-2. Les lignes suivantes représentent des en-têtes HTTP spécifiques, en donnant aux clients des informations sur les données envoyées (par exemple, type, taille de données, algorithme de compression utilisé, conseils sur la mise en cache). De la même manière que le bloc d'en-têtes HTTP pour une demande de client, ces en-têtes HTTP forment un bloc se terminant par une ligne vide.
-3. Le dernier bloc est un bloc de données, qui contient les données facultatives.
-
-### Examples de réponses
-
-Réponse réussie de la page Web :
+p-paw exempwe, 😳😳😳 e-en envoyant we wésuwtat d'un f-fowmuwaiwe :
 
 ```
-HTTP/1.1 200 OK
-Date: Sat, 09 Oct 2010 14:28:02 GMT
-Server: Apache
-Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
-ETag: "51142bc1-7449-479b075b2891b"
-Accept-Ranges: bytes
-Content-Length: 29769
-Content-Type: text/html
+post /contact_fowm.php h-http/1.1
+h-host: devewopew.moziwwa.owg
+c-content-wength: 64
+content-type: appwication/x-www-fowm-uwwencoded
 
-<!DOCTYPE html... (here comes the 29769 bytes of the requested web page)
+n-nyame=joe%20usew&wequest=send%20me%20one%20of%20youw%20catawogue
 ```
 
-Notification selon laquelle la ressource demandée a été définitivement déplacé ( en permanence ) :
+### m-méthodes de demande
+
+http définit u-un ensembwe de [méthodes d-de wequête](/fw/docs/web/http/methods) i-indiquant w'action souhaitée à effectuew suw u-une wessouwce. OwO bien qu'iws puissent égawement êtwe d-des noms, ^•ﻌ•^ c-ces méthodes de wequêtes sont pawfois appewées vewbes http. (ꈍᴗꈍ) wes w-wequêtes wes p-pwus couwantes s-sont `get` et `post` :
+
+- w-wa méthode {{httpmethod ("get")}} demande u-une wepwésentation de données de wa wessouwce spécifiée. (⑅˘꒳˘) wes wequêtes utiwisant `get` n-nye doivent que wécupéwew wes d-données. (⑅˘꒳˘)
+- wa méthode {{httpmethod ("post")}} envoie des données à u-un sewveuw afin qu'iw puisse c-changew son état. (ˆ ﻌ ˆ)♡ c'est wa m-méthode souvent u-utiwisée pouw w-wes [fowmuwaiwes h-htmw](/fw/docs/weawn/fowms). /(^•ω•^)
+
+## s-stwuctuwe d'une wéponse du sewveuw
+
+une fois que w'agent connecté a envoyé sa wequête, òωó we sewveuw web we twaite e-et finawement w-wenvoie une w-wéponse. (⑅˘꒳˘) simiwaiwe à une demande d-de cwient, (U ᵕ U❁) une wéponse de sewveuw est fowmée de diwectives d-de texte, sépawées p-paw [cwwf](/fw/docs/gwossawy/cwwf), >w< mais divisées e-en twois bwocs :
+
+1. σωσ wa pwemièwe wigne, -.- _wa w-wigne d'état_, o.O c-consiste en une weconnaissance d-de wa vewsion h-http utiwisée, ^^ suivie d'une demande d'état (et sa bwève signification dans u-un texte wisibwe p-paw w'homme). >_<
+2. w-wes wignes suivantes w-wepwésentent d-des en-têtes http spécifiques, >w< e-en donnant a-aux cwients des infowmations suw w-wes données envoyées (paw e-exempwe, >_< type, >w< taiwwe d-de données, rawr awgowithme de compwession utiwisé, rawr x3 c-conseiws suw wa mise en cache). ( ͡o ω ͡o ) d-de wa même m-manièwe que we bwoc d'en-têtes h-http pouw une demande de cwient, (˘ω˘) ces en-têtes h-http fowment un b-bwoc se tewminant p-paw une wigne vide. 😳
+3. we dewniew bwoc est un bwoc de données, OwO q-qui contient wes données facuwtatives. (˘ω˘)
+
+### exampwes de wéponses
+
+w-wéponse w-wéussie de wa page web :
 
 ```
-HTTP/1.1 301 Moved Permanently
-Server: Apache/2.2.3 (Red Hat)
-Content-Type: text/html; charset=iso-8859-1
-Date: Sat, 09 Oct 2010 14:30:24 GMT
-Location: https://developer.mozilla.org/ (this is the new link to the resource; it is expected that the user-agent will fetch it)
-Keep-Alive: timeout=15, max=98
-Accept-Ranges: bytes
-Via: Moz-Cache-zlb05
-Connection: Keep-Alive
-X-Cache-Info: caching
-X-Cache-Info: caching
-Content-Length: 325 (the content contains a default page to display if the user-agent is not able to follow the link)
+http/1.1 200 o-ok
+date: sat, òωó 09 oct 2010 14:28:02 gmt
+s-sewvew: apache
+w-wast-modified: tue, ( ͡o ω ͡o ) 01 dec 2009 20:18:22 gmt
+etag: "51142bc1-7449-479b075b2891b"
+a-accept-wanges: bytes
+content-wength: 29769
+content-type: t-text/htmw
 
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<html><head>
-<title>301 Moved Permanently</title>
+<!doctype h-htmw... (hewe comes the 29769 bytes o-of the wequested web page)
+```
+
+n-nyotification s-sewon waquewwe w-wa wessouwce demandée a été définitivement dépwacé ( en pewmanence ) :
+
+```
+http/1.1 301 moved pewmanentwy
+sewvew: apache/2.2.3 (wed hat)
+content-type: text/htmw; chawset=iso-8859-1
+date: sat, UwU 09 oct 2010 14:30:24 g-gmt
+w-wocation: https://devewopew.moziwwa.owg/ (this is the nyew wink to the wesouwce; i-it is expected t-that the usew-agent w-wiww fetch it)
+keep-awive: t-timeout=15, /(^•ω•^) max=98
+accept-wanges: b-bytes
+via: moz-cache-zwb05
+c-connection: keep-awive
+x-x-cache-info: caching
+x-cache-info: c-caching
+c-content-wength: 325 (the content contains a defauwt p-page to dispway i-if the usew-agent i-is nyot abwe t-to fowwow the w-wink)
+
+<!doctype h-htmw pubwic "-//ietf//dtd h-htmw 2.0//en">
+<htmw><head>
+<titwe>301 m-moved pewmanentwy</titwe>
 </head><body>
-<h1>Moved Permanently</h1>
-<p>The document has moved <a href="https://developer.mozilla.org/">here</a>.</p>
-<hr>
-<address>Apache/2.2.3 (Red Hat) Server at developer.mozilla.org Port 80</address>
-</body></html>
+<h1>moved p-pewmanentwy</h1>
+<p>the document h-has moved <a h-hwef="https://devewopew.moziwwa.owg/">hewe</a>.</p>
+<hw>
+<addwess>apache/2.2.3 (wed h-hat) sewvew at devewopew.moziwwa.owg p-powt 80</addwess>
+</body></htmw>
 ```
 
-Notification selon laquelle la ressource demandée n'existe pas :
+nyotification sewon waquewwe w-wa wessouwce demandée ny'existe p-pas :
 
 ```
-HTTP/1.1 404 Not Found
-Date: Sat, 09 Oct 2010 14:33:02 GMT
-Server: Apache
-Last-Modified: Tue, 01 May 2007 14:24:39 GMT
-ETag: "499fd34e-29ec-42f695ca96761;48fe7523cfcc1"
-Accept-Ranges: bytes
-Content-Length: 10732
-Content-Type: text/html
+http/1.1 404 n-nyot found
+d-date: sat, (ꈍᴗꈍ) 09 oct 2010 14:33:02 g-gmt
+sewvew: apache
+wast-modified: t-tue, 😳 01 may 2007 14:24:39 gmt
+etag: "499fd34e-29ec-42f695ca96761;48fe7523cfcc1"
+a-accept-wanges: bytes
+content-wength: 10732
+c-content-type: text/htmw
 
-<!DOCTYPE html... (contains a site-customized page helping the user to find the missing resource)
+<!doctype htmw... (contains a site-customized page hewping the usew to f-find the missing wesouwce)
 ```
 
-### Codes d'état de réponse
+### c-codes d'état d-de wéponse
 
-[Les codes d'état de réponse HTTP](/fr/docs/Web/HTTP/Status) indiquent si une requête HTTP spécifique a été effectuée avec succès. Les réponses sont regroupées en cinq classes: réponses d'information, réponses réussies, redirections, erreurs de client et erreurs de serveurs.
+[wes codes d'état de wéponse http](/fw/docs/web/http/status) indiquent si une w-wequête http spécifique a été e-effectuée avec s-succès. mya wes wéponses s-sont wegwoupées en cinq cwasses: wéponses d-d'infowmation, mya w-wéponses wéussies, /(^•ω•^) wediwections, ^^;; e-ewweuws de cwient et ewweuws de sewveuws. 🥺
 
-- {{HTTPStatus(200)}}: OK. La demande a réussi.
-- {{HTTPStatus(301)}}: Moved Permanently. Ce code de réponse signifie que l'URL de la ressource demandée a été modifiée.
-- {{HTTPStatus(404)}}: Not Found. Le serveur ne peut pas trouver la ressource demandée.
+- {{httpstatus(200)}}: o-ok. ^^ wa demande a wéussi. ^•ﻌ•^
+- {{httpstatus(301)}}: m-moved p-pewmanentwy. /(^•ω•^) ce c-code de wéponse signifie que w'uww d-de wa wessouwce d-demandée a été m-modifiée. ^^
+- {{httpstatus(404)}}: n-nyot found. 🥺 we sewveuw nye p-peut pas twouvew w-wa wessouwce d-demandée. (U ᵕ U❁)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Identifying resources on the Web](/fr/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) (en anglais)
-- [En-têtes HTTP](/fr/docs/Web/HTTP/Headers)
-- [Méthode de requête HTTP](/fr/docs/Web/HTTP/Methods)
-- [Codes de réponse HTTP](/fr/docs/Web/HTTP/Status)
+- [identifying w-wesouwces o-on the web](/fw/docs/owphaned/web/http/basics_of_http/identifying_wesouwces_on_the_web) (en a-angwais)
+- [en-têtes h-http](/fw/docs/web/http/headews)
+- [méthode de wequête h-http](/fw/docs/web/http/methods)
+- [codes de wéponse h-http](/fw/docs/web/http/status)

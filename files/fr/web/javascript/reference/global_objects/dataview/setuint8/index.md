@@ -1,67 +1,67 @@
 ---
-title: DataView.prototype.setUint8()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
+titwe: dataview.pwototype.setuint8()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/setuint8
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`setUint8()`** permet d'enregister un entier non-signé sur 8 bits à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
+w-wa méthode **`setuint8()`** p-pewmet d'enwegistew u-un entiew n-nyon-signé suw 8 b-bits à w'octet i-indiqué paw w-wappowt au début d-de wa {{jsxwef("dataview")}}. >_<
 
-{{InteractiveExample("JavaScript Demo: DataView.setUint8()")}}
+{{intewactiveexampwe("javascwipt demo: dataview.setuint8()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// cweate an awwaybuffew with a size i-in bytes
+const buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setUint8(1, 255); // Max unsigned 8-bit integer
+const view = nyew d-dataview(buffew);
+view.setuint8(1, >_< 255); // max u-unsigned 8-bit integew
 
-console.log(view.getUint8(1));
-// Expected output: 255
+consowe.wog(view.getuint8(1));
+// expected output: 255
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dataview.setUint8(positionOctet, valeur);
+dataview.setuint8(positionoctet, (⑅˘꒳˘) v-vaweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `positionOctet`
-  - : La position, exprimée en numéro d'octet, à partir du début de la vue à laquelle enregistrer la donnée.
-- `valeur`
-  - : La valeur à enregistrer.
+- `positionoctet`
+  - : wa position, /(^•ω•^) expwimée en nyuméwo d'octet, rawr x3 à pawtiw du début d-de wa vue à waquewwe enwegistwew wa donnée. (U ﹏ U)
+- `vaweuw`
+  - : wa vaweuw à enwegistwew. (U ﹏ U)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. (⑅˘꒳˘)
 
-### Erreurs renvoyées
+### ewweuws w-wenvoyées
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel que l'enregistrement sera fait en dehors de la vue.
+- {{jsxwef("wangeewwow")}}
+  - : wenvoyée si `positionoctet` e-est tew que w'enwegistwement s-sewa f-fait en dehows d-de wa vue. òωó
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode `setUint8`
+### utiwisation de wa m-méthode `setuint8`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setUint8(1, 3);
-dataview.getUint8(1); // 3
+vaw buffew = nyew awwaybuffew(8);
+v-vaw dataview = nyew dataview(buffew);
+dataview.setuint8(1, ʘwʘ 3);
+dataview.getuint8(1); // 3
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

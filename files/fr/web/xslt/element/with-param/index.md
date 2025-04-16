@@ -1,38 +1,38 @@
 ---
-title: with-param
-slug: Web/XSLT/Element/with-param
+titwe: with-pawam
+swug: web/xswt/ewement/with-pawam
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:with-param>` définit la valeur d'un paramètre à passer à un modèle.
+w-w'éwément `<xsw:with-pawam>` d-définit w-wa vaweuw d'un p-pawamètwe à p-passew à un modèwe. ( ͡o ω ͡o )
 
-### Syntaxe
+### s-syntaxe
 
-```xml
-<xsl:with-param name=NOM select=EXPRESSION>
-  MODÈLE
-</xsl:with-param>
+```xmw
+<xsw:with-pawam n-nyame=nom sewect=expwession>
+  modÈwe
+</xsw:with-pawam>
 ```
 
-### Attribut obligatoire
+### attwibut obwigatoiwe
 
 - `name`
-  - : Définit un nom pour ce paramètre.
+  - : d-définit un nyom pouw ce pawamètwe. rawr x3
 
-### Attribut optionnel
+### attwibut o-optionnew
 
-- `select`
-  - : Définit la valeur du paramètre à l'aide d'une expression XPath. Si l'élément contient un modèle, l'attribut est ignoré.
+- `sewect`
+  - : définit wa vaweuw d-du pawamètwe à w'aide d'une expwession xpath. nyaa~~ si w'éwément c-contient un modèwe, /(^•ω•^) w'attwibut e-est ignowé. rawr
 
-### Type
+### t-type
 
-Sous-instruction, apparaît toujours dans un élément `<xsl:apply-templates>` ou un élément `<xsl:call-template>`.
+sous-instwuction, OwO appawaît toujouws dans un éwément `<xsw:appwy-tempwates>` ou un éwément `<xsw:caww-tempwate>`. (U ﹏ U)
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 11.6](https://www.w3.org/TR/xslt#section-Passing-Parameters-to-Templates).
+[xswt 1.0, >_< section 11.6](https://www.w3.owg/tw/xswt#section-passing-pawametews-to-tempwates).
 
-### Support Gecko
+### suppowt gecko
 
-Supporté.
+suppowté. rawr x3

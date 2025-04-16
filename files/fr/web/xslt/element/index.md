@@ -1,64 +1,64 @@
 ---
-title: Éléments
-slug: Web/XSLT/Element
+titwe: Éwéments
+swug: web/xswt/ewement
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-{{ XsltRef() }} Ce document traite de deux types d'éléments&nbsp;: les éléments de haut niveau, et les instructions. Un élément de haut niveau doit toujours apparaître en tant qu'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`. Une instruction, de son côté, est associée à un modèle. Une feuille de style peut comporter plusieurs modèles. Un troisième type d'élément, que nous n'aborderons pas ici, est le «&nbsp;Literal Result Element (LRE)&nbsp;». Un LRE appartient également à un modèle. Le terme regroupe tout ce qui n'est pas une instruction et qui doit être recopié tel-quel dans le document de sortie, par exemple, un élément `<hr>` dans feuille de style de conversion HTML.
+{{ x-xswtwef() }} c-ce document twaite d-de deux types d-d'éwéments&nbsp;: w-wes éwéments d-de haut nyiveau, nyaa~~ e-et wes instwuctions. (✿oωo) u-un éwément de haut nyiveau doit toujouws appawaîtwe en tant qu'enfant d-de `<xsw:stywesheet>` ou de `<xsw:twansfowm>`. ʘwʘ une instwuction, (ˆ ﻌ ˆ)♡ d-de son côté, 😳😳😳 est associée à u-un modèwe. :3 une feuiwwe de stywe peut compowtew pwusieuws modèwes. OwO u-un twoisième type d'éwément, (U ﹏ U) q-que nyous n-ny'abowdewons pas ici, >w< est we «&nbsp;witewaw wesuwt ewement (wwe)&nbsp;». (U ﹏ U) un wwe appawtient égawement à un modèwe. 😳 we tewme w-wegwoupe tout ce qui ny'est pas une instwuction et qui doit êtwe wecopié tew-quew d-dans we document de sowtie, (ˆ ﻌ ˆ)♡ p-paw exempwe, 😳😳😳 u-un éwément `<hw>` d-dans feuiwwe d-de stywe de convewsion htmw. (U ﹏ U)
 
-A ce propos, tous les attributs d'un LRE et certains attributs d'un nombre limité d'éléments XSLT peuvent inclure ce que l'on appelle un modèle de valeur d'attribut. Un modèle de valeur d'attribut est simplement une chaîne qui intègre une expression XPath utilisée pour spécifier la valeur de l'attribut. Lors de l'exécution, l'expression est évaluée et le résultat de cette évaluation est substitué à l'expression XPath. Par exemple, considérons que variable «&nbsp;`image-dir`&nbsp;» est définie comme ci-dessous&nbsp;:
+a ce pwopos, (///ˬ///✿) tous w-wes attwibuts d'un wwe et cewtains attwibuts d'un n-nombwe wimité d'éwéments xswt peuvent incwuwe ce que w'on appewwe un modèwe de vaweuw d'attwibut. 😳 u-un modèwe de vaweuw d'attwibut e-est simpwement u-une chaîne q-qui intègwe une expwession xpath utiwisée pouw spécifiew w-wa vaweuw de w'attwibut. w-wows de w'exécution, 😳 w-w'expwession est évawuée e-et we wésuwtat de cette évawuation e-est substitué à w'expwession xpath. σωσ p-paw exempwe, rawr x3 considéwons que vawiabwe «&nbsp;`image-diw`&nbsp;» e-est définie comme ci-dessous&nbsp;:
 
-```xml
-<xsl:variable name="image-dir">/images</xsl:variable>
+```xmw
+<xsw:vawiabwe n-name="image-diw">/images</xsw:vawiabwe>
 ```
 
-L'expression a évaluer est placée entre accolades&nbsp;:
+w'expwession a évawuew e-est pwacée e-entwe accowades&nbsp;:
 
-```html
-<img src="{$image-dir}/mygraphic.jpg" />
+```htmw
+<img swc="{$image-diw}/mygwaphic.jpg" />
 ```
 
-Ce qui donnera&nbsp;:
+ce qui donnewa&nbsp;:
 
-```html
-<img src="/images/mygraphic.jpg" />
+```htmw
+<img swc="/images/mygwaphic.jpg" />
 ```
 
-Les définitions des éléments ci-dessous incluent une description, la syntaxe, une liste des attributs requis ou optionnels, une description du type et de la position, les sources dans la recommandation du W3C et le niveau de support actuel dans Gecko.
+wes définitions des éwéments ci-dessous i-incwuent une d-descwiption, OwO wa syntaxe, /(^•ω•^) une w-wiste des attwibuts w-wequis ou optionnews, 😳😳😳 u-une descwiption du type et de wa position, ( ͡o ω ͡o ) wes souwces d-dans wa wecommandation du w3c et we nyiveau de suppowt actuew dans gecko. >_<
 
-- [xsl:apply-imports](apply-imports)
-- [xsl:apply-templates](apply-templates)
-- [xsl:attribute](attribute)
-- [xsl:attribute-set](attribute-set)
-- [xsl:call-template](call-template)
-- [xsl:choose](choose)
-- [xsl:comment](comment)
-- [xsl:copy](copy)
-- [xsl:copy-of](copy-of)
-- [xsl:decimal-format](decimal-format)
-- [xsl:element](element)
-- [xsl:fallback](fallback) _(non supporté)_
-- [xsl:for-each](for-each)
-- [xsl:if](if)
-- [xsl:import](import) _(supporté)_
-- [xsl:include](include)
-- [xsl:key](key)
-- [xsl:message](message)
-- [xsl:namespace-alias](namespace-alias) _(non supporté)_
-- [xsl:number](number) _(partiellement supporté)_
-- [xsl:otherwise](otherwise)
-- [xsl:output](output) _(partiellement supporté)_
-- [xsl:param](param)
-- [xsl:preserve-space](preserve-space)
-- [xsl:processing-instruction](processing-instruction)
-- [xsl:sort](sort)
-- [xsl:strip-space](strip-space)
-- [xsl:stylesheet](stylesheet) _(partiellement supporté)_
-- [xsl:template](template)
-- [xsl:text](text) _(partiellement supporté)_
-- [xsl:transform](transform)
-- [xsl:value-of](value-of) _(partiellement supporté)_
-- [xsl:variable](variable)
-- [xsl:when](when)
-- [xsl:with-param](with-param)
+- [xsw:appwy-impowts](appwy-impowts)
+- [xsw:appwy-tempwates](appwy-tempwates)
+- [xsw:attwibute](attwibute)
+- [xsw:attwibute-set](attwibute-set)
+- [xsw:caww-tempwate](caww-tempwate)
+- [xsw:choose](choose)
+- [xsw:comment](comment)
+- [xsw:copy](copy)
+- [xsw:copy-of](copy-of)
+- [xsw:decimaw-fowmat](decimaw-fowmat)
+- [xsw:ewement](ewement)
+- [xsw:fawwback](fawwback) _(non s-suppowté)_
+- [xsw:fow-each](fow-each)
+- [xsw:if](if)
+- [xsw:impowt](impowt) _(suppowté)_
+- [xsw:incwude](incwude)
+- [xsw:key](key)
+- [xsw:message](message)
+- [xsw:namespace-awias](namespace-awias) _(non suppowté)_
+- [xsw:numbew](numbew) _(pawtiewwement s-suppowté)_
+- [xsw:othewwise](othewwise)
+- [xsw:output](output) _(pawtiewwement s-suppowté)_
+- [xsw:pawam](pawam)
+- [xsw:pwesewve-space](pwesewve-space)
+- [xsw:pwocessing-instwuction](pwocessing-instwuction)
+- [xsw:sowt](sowt)
+- [xsw:stwip-space](stwip-space)
+- [xsw:stywesheet](stywesheet) _(pawtiewwement s-suppowté)_
+- [xsw:tempwate](tempwate)
+- [xsw:text](text) _(pawtiewwement suppowté)_
+- [xsw:twansfowm](twansfowm)
+- [xsw:vawue-of](vawue-of) _(pawtiewwement s-suppowté)_
+- [xsw:vawiabwe](vawiabwe)
+- [xsw:when](when)
+- [xsw:with-pawam](with-pawam)

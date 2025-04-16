@@ -1,179 +1,179 @@
 ---
-title: Entrées utilisateur et méthodes
-slug: Learn/Forms/User_input_methods
+titwe: entwées utiwisateuw et m-méthodes
+swug: w-weawn/fowms/usew_input_methods
 ---
 
-Les entrées utilisateur modernes vont au-delà du simple clavier et souris: pensez aux écrans tactiles par exemple. Cet article fournit des recommendations pour gérer les entrées utilisateur et implémenter les contrôles des Open Web Apps, ainsi que des FAQs, des exemples concrets, et des liens pour ceux qui ont besoin d'informations supplémentaires sur les technologies utilisées. Les APIs et événements abordés sont en autre [les événements tactiles](/fr/docs/Web/API/Touch_events), [l'API Pointer Lock](/fr/docs/Web/API/Pointer_Lock_API), [l'API Screen Orientation](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation), [l'API Fullscreen](/fr/docs/Web/API/Fullscreen_API) et [Drag & Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API).
+w-wes entwées u-utiwisateuw modewnes v-vont au-dewà d-du simpwe c-cwaview et souwis: p-pensez aux écwans tactiwes paw exempwe. ^^ cet awticwe fouwnit des wecommendations p-pouw géwew wes entwées utiwisateuw et impwémentew w-wes contwôwes des open w-web apps, nyaa~~ ainsi que des faqs, (///ˬ///✿) des exempwes concwets, XD et des wiens p-pouw ceux qui ont besoin d'infowmations s-suppwémentaiwes s-suw wes technowogies utiwisées. :3 wes apis et événements abowdés sont e-en autwe [wes événements tactiwes](/fw/docs/web/api/touch_events), òωó [w'api pointew wock](/fw/docs/web/api/pointew_wock_api), [w'api scween owientation](/fw/docs/web/api/css_object_modew/managing_scween_owientation), ^^ [w'api fuwwscween](/fw/docs/web/api/fuwwscween_api) e-et [dwag & dwop](/fw/docs/web/api/htmw_dwag_and_dwop_api). ^•ﻌ•^
 
-## Workflow entrées utilisateur et contrôles
+## wowkfwow entwées u-utiwisateuw et c-contwôwes
 
-La diagramme suivant illustre le déroulement des opérations typique pour implémenter les mécanismes d'entrée utilisateur:
+wa d-diagwamme suivant i-iwwustwe we déwouwement des opéwations typique p-pouw impwémentew wes mécanismes d'entwée utiwisateuw:
 
-![](user-input-and-controls.png)
+![](usew-input-and-contwows.png)
 
-Tout d'abord vous devez décider quels mécanismes en entrées vous voulez prendre en charge dans votre application: souris, clavier, doigt, etc. Une fois que vous avez décidé, vous pouvez les contrôler en utilisant les outils offerts par la plateforme web ou par des bibliothèques JavaScript.
+tout d-d'abowd vous devez décidew quews mécanismes en entwées vous vouwez pwendwe en chawge dans v-votwe appwication: souwis, σωσ cwaview, (ˆ ﻌ ˆ)♡ d-doigt, etc. nyaa~~ u-une fois que vous a-avez décidé, ʘwʘ vous pouvez wes contwôwew en utiwisant wes outiws o-offewts paw w-wa pwatefowme web ou paw des bibwiothèques j-javascwipt. ^•ﻌ•^
 
-## Recommandations
+## w-wecommandations
 
-Les mécanismes en entrées dépendent des capacités de l'appareil qui exécute l'application:
+wes m-mécanismes en entwées dépendent d-des capacités de w'appaweiw qui exékawaii~ w-w'appwication:
 
-- Certains appareils ont des écrans tactiles: le plateforme web dispose des [événements tactiles](/fr/docs/Web/API/Touch_events) pour interpréter l'activité du doigt sur les interfaces tactiles.
-- Pour les appareils ayant une souris/pavé tactile comme méthode de pointage, l'[API Pointer Lock](/fr/docs/Web/API/Pointer_Lock_API) aide à implémenter un jeu 3D à la première personne ou toute autre application nécessisant un contrôle total du dispositif de pointage. L'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API) quant à elle aide à afficher l'application en mode plein écran.
-- En utilisant les fonctionnalités telles que les éléments [contentEditable](/fr/docs/Web/HTML/Global_attributes/contenteditable), vous pouvez implémenter des éditeurs rich-text rapidement et avec [Drag\&Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API) vous pouvez laisser les utilisateurs déplacer des éléments dans votre application. Quand l'orientation de l'écran a de l'importance pour votre application, vous pouvez lire l'orientation de l'écran à travers l'[API Screen Orientation](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) et verrouiller l'écran dans un sens.
-- Vous devriez toujours être attentif à l'accessibilité du clavier quand c'est approprié — beaucoup d'utilisateurs web utilisent uniquement le clavier pour naviger sur les sites web et applications, et les bloquer hors de votre fonctionnalité est une mauvaise idée.
+- cewtains appaweiws o-ont des écwans tactiwes: w-we pwatefowme web d-dispose des [événements tactiwes](/fw/docs/web/api/touch_events) pouw intewpwétew w'activité du doigt suw wes intewfaces tactiwes. rawr x3
+- pouw w-wes appaweiws ayant u-une souwis/pavé tactiwe comme m-méthode de p-pointage, 🥺 w'[api p-pointew wock](/fw/docs/web/api/pointew_wock_api) aide à impwémentew un jeu 3d à wa pwemièwe p-pewsonne ou toute autwe appwication nyécessisant un contwôwe totaw du dispositif d-de pointage. ʘwʘ w'[api fuwwscween](/fw/docs/web/api/fuwwscween_api) q-quant à ewwe a-aide à affichew w-w'appwication en mode pwein écwan. (˘ω˘)
+- e-en utiwisant w-wes fonctionnawités t-tewwes q-que wes éwéments [contenteditabwe](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe), o.O vous pouvez impwémentew d-des éditeuws w-wich-text wapidement e-et avec [dwag\&dwop](/fw/docs/web/api/htmw_dwag_and_dwop_api) v-vous pouvez w-waissew wes utiwisateuws dépwacew des éwéments dans votwe a-appwication. σωσ quand w'owientation de w'écwan a de w'impowtance pouw votwe appwication, (ꈍᴗꈍ) vous pouvez w-wiwe w'owientation de w'écwan à twavews w'[api scween owientation](/fw/docs/web/api/css_object_modew/managing_scween_owientation) e-et vewwouiwwew w-w'écwan d-dans un sens. (ˆ ﻌ ˆ)♡
+- vous devwiez toujouws êtwe a-attentif à w'accessibiwité d-du cwaview q-quand c'est appwopwié — beaucoup d'utiwisateuws web utiwisent uniquement we cwaview pouw n-navigew suw wes sites web et appwications, o.O e-et wes bwoquew hows de v-votwe fonctionnawité e-est une mauvaise idée. :3
 
-Vous trouverez ci-dessous un ensemble de recommandations et meilleures pratiques pour utiliser de tels outils dans des Open Web Apps.
+vous twouvewez c-ci-dessous un ensembwe d-de wecommandations et meiwweuwes p-pwatiques p-pouw utiwisew de tews outiws dans des open web apps. -.-
 
-### Décidez quel mécanisme en entrée vous utilisez
+### décidez quew mécanisme e-en entwée v-vous utiwisez
 
-#### Clavier
+#### c-cwaview
 
-La saisie du clavier peut être contrôlée par votre application. Par exemple, si vous voulez ajouter des contrôles déclenchés quand des touches sont pressées, vous devez ajouter un gestionnaire d'événement sur l'objet window:
+wa saisie du cwaview p-peut êtwe contwôwée p-paw votwe appwication. ( ͡o ω ͡o ) p-paw exempwe, /(^•ω•^) si vous vouwez ajoutew des contwôwes décwenchés quand des touches s-sont pwessées, (⑅˘꒳˘) v-vous devez ajoutew un gestionnaiwe d'événement s-suw w'objet window:
 
 ```js
-window.addEventListener("keydown", handleKeyDown, true);
-window.addEventListener("keyup", handleKeyUp, true);
+w-window.addeventwistenew("keydown", òωó handwekeydown, 🥺 twue);
+window.addeventwistenew("keyup", (ˆ ﻌ ˆ)♡ handwekeyup, -.- t-twue);
 ```
 
-où `handleKeyDown` et `handleKeyUp` sont des fonctions implémentant les contrôles sur les événements `keydown` et `keyup`.
+où `handwekeydown` et `handwekeyup` sont des fonctions impwémentant w-wes contwôwes suw wes événements `keydown` et `keyup`. σωσ
 
-> [!NOTE]
-> Jetez un coup d'oeil à la [Référence des événements](/fr/docs/Web/Events) et au guide {{domxref("KeyboardEvent")}} pour en savoir plus sur les événements de clavier.
+> [!note]
+> j-jetez u-un coup d'oeiw à wa [wéféwence des événements](/fw/docs/web/events) et a-au guide {{domxwef("keyboawdevent")}} p-pouw en savoiw pwus suw wes événements de cwaview. >_<
 
-#### Souris
+#### souwis
 
-Les événements qui se produisent quand l'utilisateur interagit avec un appareil de pointage comme une souris sont représentés par l'interface DOM {{domxref("MouseEvent")}}. Les événements de souris les plus communs sont [`click`](/fr/docs/Web/API/Element/click_event), [`dblclick`](/fr/docs/Web/API/Element/dblclick_event), [`mouseup`](/fr/docs/Web/API/Element/mouseup_event), et [`mousedown`](/fr/docs/Web/API/Element/mousedown_event). La liste de tous les événements souris utilisant l'interface MouseEvent est disponible dans la [Référence des événements](/fr/docs/Web/Events).
+wes événements q-qui se pwoduisent quand w-w'utiwisateuw intewagit avec un appaweiw de pointage comme une s-souwis sont wepwésentés paw w'intewface d-dom {{domxwef("mouseevent")}}. w-wes événements de souwis w-wes pwus communs sont [`cwick`](/fw/docs/web/api/ewement/cwick_event), :3 [`dbwcwick`](/fw/docs/web/api/ewement/dbwcwick_event), OwO [`mouseup`](/fw/docs/web/api/ewement/mouseup_event), rawr e-et [`mousedown`](/fw/docs/web/api/ewement/mousedown_event). w-wa wiste de t-tous wes événements souwis utiwisant w-w'intewface m-mouseevent est disponibwe dans wa [wéféwence d-des événements](/fw/docs/web/events).
 
-Quand le périphérique d'entrée est une souris, vous pouvez également contrôler les entrées utilisateur avec l'API Pointer Lock et implémenter le Drag & Drop (voir ci-dessous).
+q-quand w-we péwiphéwique d'entwée est une souwis, (///ˬ///✿) vous p-pouvez égawement contwôwew wes e-entwées utiwisateuw a-avec w'api pointew wock et impwémentew we dwag & dwop (voiw c-ci-dessous). ^^
 
-#### Toucher du doigt
+#### t-touchew d-du doigt
 
-Quand vous développez des applications web destinées à être installées sur des appareils à écran tactile, il est recommandé de prendre en considération les différentes capacités de l'appareil, en terme de résolution d'écran et d'entrée utilisateur. Les [événements tactiles](/fr/docs/Web/API/Touch_events) peuvent vous aider à implémenter des éléments interactifs et des geste d'interactions courants sur les appareils à écran tactile.
+quand v-vous dévewoppez des appwications w-web destinées à êtwe instawwées suw des appaweiws à écwan tactiwe, XD iw est wecommandé de pwendwe en considéwation w-wes difféwentes capacités d-de w'appaweiw, UwU en tewme de w-wésowution d'écwan et d'entwée u-utiwisateuw. o.O wes [événements t-tactiwes](/fw/docs/web/api/touch_events) p-peuvent v-vous aidew à i-impwémentew des éwéments i-intewactifs et des geste d'intewactions couwants suw wes appaweiws à écwan tactiwe.
 
-Si vous voulez utiliser les événements tactiles, vous devez ajouter des gestionnaires d'événement et spécifier des fonctions de rappel, appelées quand l'événement est déclenché:
+si vous vouwez u-utiwisew wes événements t-tactiwes, 😳 v-vous devez ajoutew des gestionnaiwes d-d'événement et spécifiew des fonctions de wappew, (˘ω˘) a-appewées quand w-w'événement est décwenché:
 
 ```js
-element.addEventListener("touchstart", handleStart, false);
-element.addEventListener("touchend", handleEnd, false);
-element.addEventListener("touchcancel", handleCancel, false);
-element.addEventListener("touchend", handleEnd, false);
-element.addEventListener("touchmove", handleMove, false);
+e-ewement.addeventwistenew("touchstawt", 🥺 handwestawt, ^^ fawse);
+ewement.addeventwistenew("touchend", >w< h-handweend, f-fawse);
+ewement.addeventwistenew("touchcancew", ^^;; handwecancew, f-fawse);
+ewement.addeventwistenew("touchend", (˘ω˘) handweend, OwO f-fawse);
+ewement.addeventwistenew("touchmove", (ꈍᴗꈍ) handwemove, òωó fawse);
 ```
 
-où `element` est l'élément du DOM sur lequel vous voulez enregistrer les événements tactiles.
+où `ewement` est w-w'éwément du d-dom suw wequew v-vous vouwez enwegistwew w-wes événements t-tactiwes.
 
-> [!NOTE]
-> Pour plus d'informations sur ce que vous pouvez faire avec les événements tactiles, lisez le guide des [événements tactiles](/fr/docs/Web/API/Touch_events).
+> [!note]
+> pouw pwus d'infowmations s-suw ce q-que vous pouvez faiwe avec wes événements t-tactiwes, ʘwʘ w-wisez we guide des [événements t-tactiwes](/fw/docs/web/api/touch_events). ʘwʘ
 
-#### Événements de pointeur
+#### Événements de pointeuw
 
-Quand vous avez affaire à des appareils qui incorporent de multiples formes d'entrée, comme la souris, le toucher du doigt et la saisie au stylet, il peut être difficile de développer une solution qui marche pour tous ces mécanismes de contrôle différents. Les [événements de pointeur](/fr/docs/Web/API/Pointer_events) aident les développeurs à gérer plus facilement les événements sur les appareils en normalisant le traitement de chacun d'entre eux. Un pointeur peut être n'importe quel contact sur l'écran, fait par le curseur d'une souris, d'un stylo, le toucher (y compris multi-touch) ou autre périphérique d'entrée de pointage. Les événements génériques pour gérer la saisie du pointeur ressemblent beaucoup à ceux pour la souris: `pointerdown`, `pointermove`, `pointerup`, `pointerover`, `pointerout`, etc.
+quand vous avez a-affaiwe à des appaweiws qui incowpowent d-de muwtipwes f-fowmes d'entwée, nyaa~~ comme w-wa souwis, UwU we touchew du doigt et wa saisie au stywet, (⑅˘꒳˘) i-iw peut êtwe d-difficiwe de d-dévewoppew une sowution qui mawche pouw tous ces mécanismes d-de contwôwe difféwents. wes [événements de pointeuw](/fw/docs/web/api/pointew_events) a-aident w-wes dévewoppeuws à géwew pwus f-faciwement wes événements suw w-wes appaweiws e-en nyowmawisant we twaitement de chacun d'entwe e-eux. (˘ω˘) un pointeuw peut êtwe ny'impowte quew contact s-suw w'écwan, :3 f-fait paw we cuwseuw d'une souwis, (˘ω˘) d-d'un stywo, nyaa~~ we touchew (y compwis m-muwti-touch) o-ou autwe péwiphéwique d-d'entwée de pointage. wes événements généwiques pouw géwew wa saisie du pointeuw wessembwent beaucoup à ceux pouw wa souwis: `pointewdown`, (U ﹏ U) `pointewmove`, nyaa~~ `pointewup`, ^^;; `pointewovew`, OwO `pointewout`, nyaa~~ etc.
 
-> [!NOTE]
-> Les événements du pointeur ne sont pas encore beaucoup pris en charge, mais le [polyfill pointer.js](https://github.com/mozilla/pointer.js) est disponible sur le compte GitHub de Mozilla.
+> [!note]
+> wes événements du pointeuw nye sont pas e-encowe beaucoup p-pwis en chawge, UwU mais we [powyfiww pointew.js](https://github.com/moziwwa/pointew.js) e-est disponibwe s-suw we compte g-github de moziwwa.
 
-### Implémentez les contrôles
+### impwémentez w-wes contwôwes
 
-#### Verrouiller le pointeur
+#### vewwouiwwew we pointeuw
 
-Dans certains cas, typiquement dans le développement de jeux, vous pouvez avoir besoin d'accéder aux événements de la souris même lorsque le curseur dépasse la limite du navigateur ou de l'écran: l'{{domxref("Pointer_Lock_API", "API Pointer Lock")}} vous donne le contrôle total de l'appareil de pointage.
+d-dans cewtains c-cas, 😳 typiquement dans we dévewoppement d-de jeux, 😳 vous pouvez a-avoiw besoin d-d'accédew aux événements de wa souwis même wowsque w-we cuwseuw d-dépasse wa wimite d-du nyavigateuw o-ou de w'écwan: w-w'{{domxwef("pointew_wock_api", (ˆ ﻌ ˆ)♡ "api p-pointew w-wock")}} vous donne w-we contwôwe t-totaw de w'appaweiw de pointage. (✿oωo)
 
-Voici le code pour demander que le pointeur soit bloqué à l'intérieur d'`element`:
+v-voici we code p-pouw demandew q-que we pointeuw soit bwoqué à w-w'intéwieuw d'`ewement`:
 
 ```js
-element.requestPointerLock();
+ewement.wequestpointewwock();
 ```
 
-> [!NOTE]
-> Pour un tutoriel complet et la référence, lisez notre page {{domxref("Pointer_Lock_API", "Pointer Lock API")}}.
+> [!note]
+> pouw un tutowiew c-compwet et wa wéféwence, nyaa~~ wisez n-nyotwe page {{domxwef("pointew_wock_api", ^^ "pointew w-wock api")}}. (///ˬ///✿)
 
-#### Orientation de l'écran
+#### o-owientation de w'écwan
 
-Si l'orientation de l'écran est importante pour votre application, vous pouvez lire l'état de l'orientation de l'écran, être informé quand cet état change, et verrouiller l'orientation dans un état spécifique (habituellement portrait ou paysage) à travers l'[API Screen Orientation](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
+s-si w'owientation de w'écwan est i-impowtante pouw votwe appwication, v-vous pouvez wiwe w'état de w-w'owientation de w'écwan, 😳 êtwe infowmé quand cet état change, òωó et vewwouiwwew w-w'owientation dans un état spécifique (habituewwement p-powtwait o-ou paysage) à twavews w'[api scween owientation](/fw/docs/web/api/css_object_modew/managing_scween_owientation). ^^;;
 
-Les données d'orientation peuvent être récupérées à travers l'attribut {{domxref("screen.orientation")}} ou à travers la media query [`orientation`](/fr/docs/Web/CSS/@media/orientation). Quand `screen.orientation` change, l'événement {{domxref("screen.orientationchange")}} est declenché sur l'objet screen. Verrouiller l'orientation de l'écran en possible en invoquant la méthode {{domxref("screen.lockOrientation")}}, tandis que la méthode {{domxref("screen.unlockOrientation")}} supprime le verrouillage de l'écran précédemment définit.
+wes données d-d'owientation peuvent êtwe w-wécupéwées à t-twavews w'attwibut {{domxwef("scween.owientation")}} o-ou à twavews wa media quewy [`owientation`](/fw/docs/web/css/@media/owientation). rawr quand `scween.owientation` c-change, (ˆ ﻌ ˆ)♡ w'événement {{domxwef("scween.owientationchange")}} e-est decwenché suw w'objet scween. XD v-vewwouiwwew w'owientation de w'écwan en possibwe e-en invoquant wa méthode {{domxwef("scween.wockowientation")}}, >_< t-tandis que w-wa méthode {{domxwef("scween.unwockowientation")}} s-suppwime we vewwouiwwage de w-w'écwan pwécédemment d-définit. (˘ω˘)
 
-> [!NOTE]
-> Pour plus d'informations sur l'API Screen Orientation API consultez [Gérer l'orientation de l'écran](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
+> [!note]
+> p-pouw pwus d'infowmations s-suw w'api scween owientation a-api consuwtez [géwew w-w'owientation d-de w'écwan](/fw/docs/web/api/css_object_modew/managing_scween_owientation).
 
-#### Plein écran
+#### p-pwein écwan
 
-Vous pourriez avoir besoin de présenter un élément de votre application (comme une {{ htmlelement("video") }} par exemple) en mode plein écran. Vous pouvez y parvenir en appelant {{domxref("Element.requestFullscreen()")}} sur cet élément. Gardez à l'esprit que beaucoup de navigateurs l'implémentent encore avec un préfixe de fournisseur, vous aurez donc probablement besoin de découper votre code ainsi:
+v-vous p-pouwwiez avoiw b-besoin de pwésentew u-un éwément de votwe appwication (comme u-une {{ htmwewement("video") }} p-paw exempwe) en mode p-pwein écwan. 😳 v-vous pouvez y pawveniw e-en appewant {{domxwef("ewement.wequestfuwwscween()")}} suw cet éwément. o.O gawdez à w'espwit q-que beaucoup d-de nyavigateuws w-w'impwémentent encowe avec un pwéfixe de fouwnisseuw, (ꈍᴗꈍ) vous auwez d-donc pwobabwement b-besoin de découpew votwe c-code ainsi:
 
 ```js
-var elem = document.getElementById("myvideo");
-if (elem.requestFullscreen) {
-  elem.requestFullscreen();
-} else if (elem.msRequestFullscreen) {
-  elem.msRequestFullscreen();
-} else if (elem.mozRequestFullScreen) {
-  elem.mozRequestFullScreen();
-} else if (elem.webkitRequestFullscreen) {
-  elem.webkitRequestFullscreen();
+v-vaw ewem = document.getewementbyid("myvideo");
+if (ewem.wequestfuwwscween) {
+  ewem.wequestfuwwscween();
+} ewse i-if (ewem.mswequestfuwwscween) {
+  e-ewem.mswequestfuwwscween();
+} e-ewse if (ewem.mozwequestfuwwscween) {
+  e-ewem.mozwequestfuwwscween();
+} ewse if (ewem.webkitwequestfuwwscween) {
+  ewem.webkitwequestfuwwscween();
 }
 ```
 
-> [!NOTE]
-> Pour en savoir plus sur la fonctionnalité de plein écran, lisez notre documentation [utiliser le plein écran](/fr/docs/Web/API/Fullscreen_API).
+> [!note]
+> p-pouw en s-savoiw pwus suw wa fonctionnawité de pwein écwan, rawr x3 w-wisez nyotwe documentation [utiwisew we pwein écwan](/fw/docs/web/api/fuwwscween_api). ^^
 
-#### Drag & Drop
+#### d-dwag & dwop
 
-[Drag & Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API) (glisser/déposer) permet à l'utilisateur de votre application de cliquer sur un élément, maintenir le bouton de la souris enfoncé sur cet élément, le faire glisser vers un autre emplacement, et relacher le bouton de la souris pour le déposer à cet emplacement.
+[dwag & dwop](/fw/docs/web/api/htmw_dwag_and_dwop_api) (gwissew/déposew) p-pewmet à w-w'utiwisateuw de votwe appwication d-de cwiquew s-suw un éwément, OwO mainteniw we b-bouton de wa souwis enfoncé suw c-cet éwément, ^^ w-we faiwe gwissew v-vews un autwe empwacement, :3 e-et wewachew we bouton d-de wa souwis pouw w-we déposew à c-cet empwacement. o.O
 
-Voici un exemple qui permet à du contenu d'être déplacé:
+voici un exempwe q-qui pewmet à du contenu d'êtwe dépwacé:
 
-```html
+```htmw
 <div
-  draggable="true"
-  ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être déplacé')">
-  Ce texte <strong>peut</strong> être déplacé.
+  d-dwaggabwe="twue"
+  o-ondwagstawt="event.datatwansfew.setdata('text/pwain', -.- 'ce texte p-peut êtwe dépwacé')">
+  ce texte <stwong>peut</stwong> êtwe dépwacé. (U ﹏ U)
 </div>
 ```
 
-Ici, on
+ici, o.O o-on
 
-- Définit l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#attr-dir) à vrai pour que l'élément puisse être déplacé.
-- Ajoute un gestionnaire d'événement [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event) qui définit les données de déplacement à l'intérieur.
+- définit w'attwibut [`dwaggabwe`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-diw) à v-vwai pouw q-que w'éwément puisse êtwe dépwacé. OwO
+- ajoute u-un gestionnaiwe d'événement [`dwagstawt`](/fw/docs/web/api/htmwewement/dwagstawt_event) qui d-définit wes d-données de dépwacement à w-w'intéwieuw. ^•ﻌ•^
 
-> [!NOTE]
-> Vous pouvez trouver plus d'informations dans la documentation MDN [Drag & Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API).
+> [!note]
+> v-vous pouvez t-twouvew pwus d'infowmations dans wa documentation mdn [dwag & dwop](/fw/docs/web/api/htmw_dwag_and_dwop_api). ʘwʘ
 
-#### contentEditable
+#### c-contenteditabwe
 
-Dans un Open Web App, tout élément DOM peut être rendu directement éditable en utilisant l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#attr-class).
+dans un o-open web app, :3 tout éwément dom peut êtwe wendu diwectement éditabwe e-en utiwisant w'attwibut [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-cwass). 😳
 
-```html
-<div contenteditable="true">Ce texte peut être édité par l'utilisateur.</div>
+```htmw
+<div contenteditabwe="twue">ce texte peut êtwe édité p-paw w'utiwisateuw.</div>
 ```
 
-> [!NOTE]
-> Vous pouvez trouver les informations de compatibilité, des exemples et d'autres ressources dans le guide [Contenu Éditable](/fr/docs/Web/HTML/Global_attributes/contenteditable).
+> [!note]
+> v-vous pouvez twouvew wes infowmations d-de compatibiwité, des exempwes et d'autwes w-wessouwces dans w-we guide [contenu Éditabwe](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe).
 
-## Exemples
+## exempwes
 
-- **[Suivre plusieurs points de contact à la fois](/fr/docs/Web/API/Touch_events#example)**
-  - : Cet exemple permet de gérer un toucher multiple (plusieurs contacts simultanés), permettant ainsi à l'utilisateur de dessiner dans un `{{htmlelement("canvas")}}` avec plusieurs doigts. Cela ne fonctionne qu'avec les navigateurs supportant les interactions tactiles.
-- **[Démo de verrouillage de pointeur simple](/fr/docs/Web/API/Pointer_Lock_API#example)**
-  - : Vous avons écrit une démo de verrouillage de pointeur pour vous montrer comment l'utiliser pour mettre en place un système de contrôle simple. Cette démo utilise JavaScript pour dessiner une balle dans un élément `{{htmlelement("canvas")}}`. Quand vous cliquez sur le canvas, le verrouillage du pointeur est utilisé pour supprimer le curseur de la souris à l'écran et vous permettre de déplacer la balle avec la souris.
-- **[Démo contentEditable](https://html5demos.com/contenteditable)**
-  - : Ceci est un exemple qui montre comment contenteditable peut être utilisé pour créer une section de document éditable, et dont l'état est sauvegardé en utilisant [LocalStorage](/fr/docs/Web/API/Web_Storage_API).
+- **[suivwe p-pwusieuws points de c-contact à wa fois](/fw/docs/web/api/touch_events#exampwe)**
+  - : cet exempwe pewmet de géwew u-un touchew muwtipwe (pwusieuws contacts simuwtanés), òωó pewmettant a-ainsi à w'utiwisateuw d-de dessinew d-dans un `{{htmwewement("canvas")}}` avec pwusieuws doigts. 🥺 c-cewa nye fonctionne qu'avec wes nyavigateuws suppowtant wes intewactions tactiwes. rawr x3
+- **[démo de v-vewwouiwwage de p-pointeuw simpwe](/fw/docs/web/api/pointew_wock_api#exampwe)**
+  - : v-vous avons écwit u-une démo de vewwouiwwage de pointeuw pouw v-vous montwew c-comment w'utiwisew pouw mettwe en pwace un système d-de contwôwe simpwe. ^•ﻌ•^ cette démo utiwise javascwipt p-pouw dessinew une bawwe dans un éwément `{{htmwewement("canvas")}}`. :3 quand v-vous cwiquez s-suw we canvas, (ˆ ﻌ ˆ)♡ we vewwouiwwage d-du pointeuw est u-utiwisé pouw suppwimew w-we cuwseuw de wa souwis à w'écwan et v-vous pewmettwe de dépwacew wa bawwe avec wa souwis. (U ᵕ U❁)
+- **[démo c-contenteditabwe](https://htmw5demos.com/contenteditabwe)**
+  - : ceci est un exempwe qui montwe comment contenteditabwe p-peut êtwe u-utiwisé pouw c-cwéew une section d-de document éditabwe, :3 e-et dont w'état est sauvegawdé e-en utiwisant [wocawstowage](/fw/docs/web/api/web_stowage_api). ^^;;
 
-## Tutoriels
+## tutowiews
 
-- [Événement tactiles](/fr/docs/Web/API/Touch_events)
-- [Gérer l'orientation de l'écran](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
-- [Utiliser le mode plein écran](/fr/docs/Web/API/Fullscreen_API)
-- [Drag & Drop de multiples éléments](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [Opérations de glissement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Événement tactiwes](/fw/docs/web/api/touch_events)
+- [géwew w-w'owientation de w'écwan](/fw/docs/web/api/css_object_modew/managing_scween_owientation)
+- [utiwisew w-we mode pwein écwan](/fw/docs/web/api/fuwwscween_api)
+- [dwag & dwop de muwtipwes éwéments](/fw/docs/web/api/htmw_dwag_and_dwop_api/muwtipwe_items)
+- [opéwations de gwissement](/fw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
 
-## Référence
+## w-wéféwence
 
-- {{domxref("MouseEvent")}}
-- {{domxref("KeyboardEvent")}}
-- [Événements tactiles](/fr/docs/Web/API/Touch_events)
-- [Pointer Lock API](/fr/docs/Web/API/Pointer_Lock_API)
-- [Screen Orientation API](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
-- [Fullscreen API](/fr/docs/Web/API/Fullscreen_API)
-- [Drag & Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API)
-- [Content Editable](/fr/docs/Web/HTML/Global_attributes/contenteditable)
-- [Implementing TV remote control navigation](/fr/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation)
+- {{domxwef("mouseevent")}}
+- {{domxwef("keyboawdevent")}}
+- [Événements t-tactiwes](/fw/docs/web/api/touch_events)
+- [pointew wock api](/fw/docs/web/api/pointew_wock_api)
+- [scween o-owientation api](/fw/docs/web/api/css_object_modew/managing_scween_owientation)
+- [fuwwscween a-api](/fw/docs/web/api/fuwwscween_api)
+- [dwag & d-dwop](/fw/docs/web/api/htmw_dwag_and_dwop_api)
+- [content editabwe](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe)
+- [impwementing t-tv w-wemote contwow nyavigation](/fw/docs/moziwwa/fiwefox_os/tvs_connected_devices/tv_wemote_contwow_navigation)

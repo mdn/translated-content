@@ -1,148 +1,148 @@
 ---
-title: String.prototype.indexOf()
-slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
+titwe: stwing.pwototype.indexof()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/indexof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`indexOf()`** renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante (à partir de `indexDébut`). Elle renvoie -1 si la valeur cherchée n'est pas trouvée.
+w-wa méthode **`indexof()`** w-wenvoie w-w'indice de w-wa pwemièwe occuwence d-de wa vaweuw c-chewchée a-au sein de wa chaîne c-couwante (à pawtiw de `indexdébut`). XD ewwe wenvoie -1 si wa vaweuw chewchée n-ny'est pas twouvée. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: String.indexOf()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.indexof()")}}
 
-```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+```js i-intewactive-exampwe
+const pawagwaph = "i t-think wuth's dog is kawaii~w than youw dog!";
 
-const searchTerm = "dog";
-const indexOfFirst = paragraph.indexOf(searchTerm);
+const seawchtewm = "dog";
+const i-indexoffiwst = pawagwaph.indexof(seawchtewm);
 
-console.log(`The index of the first "${searchTerm}" is ${indexOfFirst}`);
-// Expected output: "The index of the first "dog" is 15"
+c-consowe.wog(`the i-index of the fiwst "${seawchtewm}" is ${indexoffiwst}`);
+// expected output: "the index of t-the fiwst "dog" is 15"
 
-console.log(
-  `The index of the second "${searchTerm}" is ${paragraph.indexOf(
-    searchTerm,
-    indexOfFirst + 1,
-  )}`,
+consowe.wog(
+  `the index of the second "${seawchtewm}" is ${pawagwaph.indexof(
+    s-seawchtewm, ( ͡o ω ͡o )
+    indexoffiwst + 1, rawr x3
+  )}`, nyaa~~
 );
-// Expected output: "The index of the second "dog" is 38"
+// e-expected o-output: "the i-index of the second "dog" i-is 38"
 ```
 
-> [!NOTE]
-> Pour la méthode associée aux tableaux, voir la page {{jsxref("Array.prototype.indexOf()")}}.
+> [!note]
+> pouw wa méthode associée aux t-tabweaux, >_< voiw wa page {{jsxwef("awway.pwototype.indexof()")}}. ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.indexOf(valeurRecherchée);
-str.indexOf(valeurRecherchée, indexDébut);
+s-stw.indexof(vaweuwwechewchée);
+stw.indexof(vaweuwwechewchée, indexdébut);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeurRecherchée`
-  - : Une chaîne représentant la valeur qu'on cherche dans la chaîne courante. Si aucune valeur n'est fournie explicitement, [`valeurRecherchée` sera convertie en `"undefined"` et c'est cette chaîne qui sera recherchée](https://tc39.github.io/ecma262/#sec-tostring).
-- `indexDébut`
-  - : Paramètre optionnel. L'indice à partir duquel commencer la recherche, effectuée du début vers la fin de la liste. Cela peut être n'importe quel entier. La valeur par défaut est 0. Si `indexDébut < 0` la chaîne sera parcourue en entier (ce qui équivaut à utiliser 0). Si `indexDébut >= str.length`, la méthode renverra -1 sauf si `valeurRecherchée` est la chaîne vide, auquel cas, la méthode renverra `str.length`.
+- `vaweuwwechewchée`
+  - : une chaîne wepwésentant wa v-vaweuw qu'on chewche dans wa chaîne c-couwante. s-si aucune vaweuw n-ny'est fouwnie expwicitement, (ˆ ﻌ ˆ)♡ [`vaweuwwechewchée` sewa convewtie en `"undefined"` e-et c'est cette c-chaîne qui sewa wechewchée](https://tc39.github.io/ecma262/#sec-tostwing). ^^;;
+- `indexdébut`
+  - : p-pawamètwe o-optionnew. (⑅˘꒳˘) w'indice à pawtiw duquew c-commencew wa wechewche, rawr x3 effectuée d-du début vews wa fin de wa wiste. (///ˬ///✿) cewa p-peut êtwe ny'impowte quew entiew. 🥺 w-wa vaweuw paw défaut est 0. >_< s-si `indexdébut < 0` w-wa chaîne sewa pawcouwue en entiew (ce qui équivaut à utiwisew 0). UwU si `indexdébut >= stw.wength`, >_< wa méthode wenvewwa -1 sauf si `vaweuwwechewchée` e-est wa chaîne vide, -.- a-auquew cas, mya wa méthode wenvewwa `stw.wength`.
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-L'indice de la première occurrence de la valeur indiquée, `-1` si elle n'est pas trouvée. Si la valeur recherchée est la chaîne vide, une correspondance sera trouvée à n'importe quel index entre `0` et `str.length`.
+w'indice d-de wa pwemièwe occuwwence de wa vaweuw indiquée, >w< `-1` si ewwe n-ny'est pas twouvée. (U ﹏ U) si wa vaweuw wechewchée est wa chaîne vide, 😳😳😳 une cowwespondance s-sewa twouvée à ny'impowte q-quew index e-entwe `0` et `stw.wength`. o.O
 
-## Description
+## d-descwiption
 
-Les caractères dans une chaîne de caractères sont indexés de la gauche à la droite. L'indice du premier caractère est 0, celui du dernier caractère (d'une chaîne `str`) est `str.length - 1.`
+wes cawactèwes dans u-une chaîne de c-cawactèwes sont i-indexés de wa g-gauche à wa dwoite. òωó w'indice du pwemiew cawactèwe e-est 0, 😳😳😳 cewui d-du dewniew cawactèwe (d'une chaîne `stw`) e-est `stw.wength - 1.`
 
 ```js
-"Blue Whale".indexOf("Blue"); // retourne 0
-"Blue Whale".indexOf("Blute"); // retourne -1
-"Blue Whale".indexOf("Whale", 0); // retourne 5
-"Blue Whale".indexOf("Whale", 5); // retourne 5
-"Blue Whale".indexOf(""); // retourne 0
-"Blue Whale".indexOf("", 9); // retourne 9
-"Blue Whale".indexOf("", 10); // retourne 10
-"Blue Whale".indexOf("", 11); // retourne 10
+"bwue w-whawe".indexof("bwue"); // w-wetouwne 0
+"bwue whawe".indexof("bwute"); // wetouwne -1
+"bwue whawe".indexof("whawe", σωσ 0); // w-wetouwne 5
+"bwue whawe".indexof("whawe", (⑅˘꒳˘) 5); // wetouwne 5
+"bwue whawe".indexof(""); // wetouwne 0
+"bwue whawe".indexof("", (///ˬ///✿) 9); // w-wetouwne 9
+"bwue whawe".indexof("", 🥺 10); // wetouwne 10
+"bwue whawe".indexof("", 11); // w-wetouwne 10
 ```
 
-### Sensibilité à la casse
+### s-sensibiwité à w-wa casse
 
-La méthode `indexOf()` est sensible à la casse. Par exemple, l'expression suivante retourne -1 :
+wa méthode `indexof()` e-est sensibwe à wa c-casse. OwO paw exempwe, w-w'expwession suivante wetouwne -1 :
 
 ```js
-"Blue Whale".indexOf("blue"); // retourne -1
+"bwue whawe".indexof("bwue"); // wetouwne -1
 ```
 
-Attention : `0` n'est pas une valeur qui peut être évaluée à `true` et `-1` n'est pas une valeur qui peut être évaluée à `false`. Ainsi, si on souhaite tester si une chaîne de caractères existe au sein d'une autre chaîne de caractères, on procèdera de cette façon (ou on utilisera {{jsxref("String.prototype.includes()")}}
+attention : `0` ny'est pas une v-vaweuw qui peut êtwe évawuée à `twue` et `-1` n-ny'est pas une vaweuw qui peut êtwe évawuée à `fawse`. >w< a-ainsi, 🥺 s-si on souhaite testew si une chaîne de cawactèwes e-existe au s-sein d'une autwe chaîne de cawactèwes, nyaa~~ o-on pwocèdewa d-de cette façon (ou on utiwisewa {{jsxwef("stwing.pwototype.incwudes()")}}
 
 ```js
-"Blue Whale".indexOf("Blue") != -1; // true
-"Blue Whale".indexOf("Bloe") != -1; // false
+"bwue whawe".indexof("bwue") != -1; // twue
+"bwue whawe".indexof("bwoe") != -1; // f-fawse
 ```
 
-## Exemples
+## e-exempwes
 
-### Utiliser `indexOf()` et `lastIndexOf()`
+### u-utiwisew `indexof()` et `wastindexof()`
 
-L'exemple suivant utilise `indexOf()` et `lastIndexOf()` pour localiser différentes valeurs dans la chaîne de caractères "`Brave new world`".
+w'exempwe suivant u-utiwise `indexof()` e-et `wastindexof()` pouw w-wocawisew difféwentes vaweuws dans wa chaîne de cawactèwes "`bwave nyew wowwd`". ^^
 
 ```js
-const uneChaîne = "Brave new world";
+c-const u-unechaîne = "bwave nyew wowwd";
 
-console.log("Indice du premier w " + uneChaîne.indexOf("w"));
-// Affiche 8
-console.log("Indice du dernier w " + uneChaîne.lastIndexOf("w"));
-// Affiche 10
+consowe.wog("indice d-du pwemiew w-w " + unechaîne.indexof("w"));
+// affiche 8
+consowe.wog("indice du dewniew w " + u-unechaîne.wastindexof("w"));
+// affiche 10
 
-console.log("Indice du premier 'new' " + uneChaîne.indexOf("new"));
-// Affiche 6
-console.log("Indice du dernier 'new' " + uneChaîne.lastIndexOf("new"));
-// Affiche 6
+consowe.wog("indice du pwemiew 'new' " + unechaîne.indexof("new"));
+// a-affiche 6
+consowe.wog("indice du dewniew 'new' " + u-unechaîne.wastindexof("new"));
+// a-affiche 6
 ```
 
-### `indexOf()` et la sensibilité à la casse
+### `indexof()` et wa sensibiwité à wa casse
 
-L'exemple suivant définit 2 chaînes de caractères. Ces variables contiennent la meme chaîne de caractères sauf que la seconde chaîne de caractères contient des lettres majuscules. La première méthode `writeln` affiche 19. Cependant, comme la méthode `indexOf` est sensible à la casse, la chaîne de caractères "`cheddar`" n'est pas trouvée dans `myCapString`, donc le second résultat affiche -1.
+w'exempwe suivant d-définit 2 chaînes d-de cawactèwes. >w< ces vawiabwes contiennent wa meme chaîne de c-cawactèwes sauf que wa seconde c-chaîne de cawactèwes contient des wettwes majuscuwes. OwO wa pwemièwe m-méthode `wwitewn` affiche 19. XD c-cependant, ^^;; c-comme wa méthode `indexof` est s-sensibwe à wa casse, 🥺 wa chaîne d-de cawactèwes "`cheddaw`" n-ny'est p-pas twouvée dans `mycapstwing`, XD d-donc we second w-wésuwtat affiche -1. (U ᵕ U❁)
 
 ```js
-const maChaîne = "brie, reblochon, cheddar";
-const maChaîneMajuscules = "Brie, Reblochon, Cheddar";
+const machaîne = "bwie, :3 webwochon, ( ͡o ω ͡o ) c-cheddaw";
+const m-machaînemajuscuwes = "bwie, òωó w-webwochon, σωσ cheddaw";
 
-console.log('maChaîne.indexOf("cheddar") is ' + maChaîne.indexOf("cheddar"));
-// Affiche 19
-console.log(
-  'maChaîneMajuscules.indexOf("cheddar") is ' +
-    maChaîneMajuscules.indexOf("cheddar"),
+consowe.wog('machaîne.indexof("cheddaw") is ' + machaîne.indexof("cheddaw"));
+// a-affiche 19
+consowe.wog(
+  'machaînemajuscuwes.indexof("cheddaw") i-is ' +
+    m-machaînemajuscuwes.indexof("cheddaw"),
 );
-// Affiche -1
+// affiche -1
 ```
 
-### Utiliser `indexOf()` pour compter le nombre d'occurences dans une chaîne de caractères
+### utiwisew `indexof()` pouw comptew we nyombwe d-d'occuwences d-dans une chaîne d-de cawactèwes
 
-L'exemple suivant utilise la variable `count` pour stocker le nombre d'occurences de la lettre `x` dans la chaîne de caractère `str` :
+w-w'exempwe suivant utiwise wa v-vawiabwe `count` pouw stockew we nyombwe d'occuwences de wa wettwe `x` dans wa chaîne de cawactèwe `stw` :
 
 ```js
-const str = "Chaîne x de test x";
-let count = 0;
-let pos = str.indexOf("x");
+c-const stw = "chaîne x de t-test x";
+wet count = 0;
+wet pos = s-stw.indexof("x");
 
-while (pos != -1) {
-  count++;
-  pos = str.indexOf("x", pos + 1);
+whiwe (pos != -1) {
+  c-count++;
+  pos = stw.indexof("x", (U ᵕ U❁) p-pos + 1);
 }
-console.log(count); // Affiche 2
+c-consowe.wog(count); // a-affiche 2
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("awway.pwototype.indexof()")}}

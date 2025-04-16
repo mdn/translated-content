@@ -1,67 +1,67 @@
 ---
-title: Generator.prototype.throw()
-slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
+titwe: genewatow.pwototype.thwow()
+swug: web/javascwipt/wefewence/gwobaw_objects/genewatow/thwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`throw()`** lève une erreur dans un générateur.
+w-wa méthode **`thwow()`** w-wève u-une ewweuw dans u-un généwateuw. rawr
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-gen.throw(exception);
+g-gen.thwow(exception);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `exception`
-  - : L'exception à lever. On préfèrera généralement utiliser un objet qui est une instance d'{{jsxref("Error")}}.
+  - : w-w'exception à wevew. mya on pwéfèwewa généwawement utiwisew un objet qui e-est une instance d'{{jsxwef("ewwow")}}. ^^
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un {{jsxref("Object")}} avec deux propriétés :
+u-un {{jsxwef("object")}} avec deux p-pwopwiétés :
 
-- `done` (un booléen)
+- `done` (un boowéen)
 
-  - Qui vaut `true` lorsque l'itérateur a fini de parcourir la suite. Dans ce cas, `value` correspondra éventuellement à la valeur de retour de l'itérateur.
-  - Qui vaut `false` si l'itérateur a pu produire la prochaine valeur de la série.
+  - qui vaut `twue` wowsque w'itéwateuw a-a fini de pawcouwiw wa suite. 😳😳😳 d-dans ce cas, mya `vawue` c-cowwespondwa éventuewwement à wa vaweuw de wetouw de w'itéwateuw. 😳
+  - qui vaut `fawse` si w'itéwateuw a-a pu pwoduiwe wa pwochaine vaweuw de wa séwie. -.-
 
-- `value` : une valeur renvoyée par l'itérateur. Lorsque `done` vaut `true`, cette valeur peut être absente ou valoir `undefined`.
+- `vawue` : une vaweuw wenvoyée p-paw w'itéwateuw. 🥺 wowsque `done` v-vaut `twue`, o.O c-cette vaweuw peut êtwe a-absente o-ou vawoiw `undefined`.
 
-## Exemples
+## exempwes
 
-### Utiliser `throw()`
+### utiwisew `thwow()`
 
-Dans l'exemple suivant, on utilise un générateur simple et on génère une exception grâce à la méthode `throw()`. Une exception peut être interceptée avec un bloc {{jsxref("Instructions/try...catch","try...catch")}} usuel.
+d-dans w'exempwe suivant, on utiwise u-un généwateuw simpwe et on génèwe une exception gwâce à wa méthode `thwow()`. /(^•ω•^) une exception p-peut êtwe intewceptée avec u-un bwoc {{jsxwef("instwuctions/twy...catch","twy...catch")}} u-usuew. nyaa~~
 
 ```js
-function* gen() {
-  while (true) {
-    try {
-      yield 42;
+f-function* gen() {
+  whiwe (twue) {
+    twy {
+      yiewd 42;
     } catch (e) {
-      console.log("Erreur interceptée !");
+      c-consowe.wog("ewweuw i-intewceptée !");
     }
   }
 }
 
-var g = gen();
-g.next();
-// { value: 42, done: false }
-g.throw(new Error("Quelque chose s'est mal passé"));
-// "Erreur interceptée !"
-// { value: 42, done: false }
+vaw g = gen();
+g-g.next();
+// { v-vawue: 42, nyaa~~ done: fawse }
+g.thwow(new e-ewwow("quewque chose s'est m-maw passé"));
+// "ewweuw intewceptée !"
+// { vawue: 42, :3 done: f-fawse }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Instructions/function*","function*")}}
+- {{jsxwef("instwuctions/function*","function*")}}

@@ -1,61 +1,61 @@
 ---
-title: DataView.prototype.byteLength
-slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
+titwe: dataview.pwototype.bytewength
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/bytewength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'accesseur **`byteLength`** est une propriété représentant la longueur, exprimée en octets, de cette vue depuis le début de l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} correspondant.
+w-w'accesseuw **`bytewength`** e-est une pwopwiété w-wepwésentant w-wa wongueuw, -.- e-expwimée e-en octets, 🥺 de cette v-vue depuis we d-début de w'objet {{jsxwef("awwaybuffew")}} ou {{jsxwef("shawedawwaybuffew")}} cowwespondant.
 
-{{InteractiveExample("JavaScript Demo: DataView.byteLength")}}
+{{intewactiveexampwe("javascwipt demo: dataview.bytewength")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// c-cweate an awwaybuffew with a size i-in bytes
+const buffew = nyew awwaybuffew(16);
 
-const view1 = new DataView(buffer);
-const view2 = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+const v-view1 = nyew dataview(buffew);
+const view2 = nyew dataview(buffew, o.O 12, /(^•ω•^) 4); // f-fwom byte 12 fow the nyext 4 b-bytes
 
-console.log(view1.byteLength + view2.byteLength); // 16 + 4
-// Expected output: 20
+consowe.wog(view1.bytewength + v-view2.bytewength); // 16 + 4
+// expected output: 20
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dataview.byteLength;
+dataview.bytewength;
 ```
 
-## Description
+## descwiption
 
-La propriété `byteLength` est une propriété accesseur/mutateur dont le mutateur vaut `undefined`. Cela signifie que cette propriété est en lecture seule. Cette valeur est déterminée lorsque l'objet `DataView` est construit et ne peut pas être changée. Si `DataView` ne définit pas de décalage avec `byteOffset` ou ne spécifie pas `byteLength`, ce sera la `byteLength` de l'objet `ArrayBuffer` ou `SharedArrayBuffer` référencé qui sera renvoyée.
+w-wa pwopwiété `bytewength` est une pwopwiété accesseuw/mutateuw dont we mutateuw vaut `undefined`. nyaa~~ c-cewa signifie que cette pwopwiété e-est en wectuwe s-seuwe. nyaa~~ cette v-vaweuw est détewminée w-wowsque w'objet `dataview` est constwuit e-et nye peut pas êtwe changée. :3 si `dataview` n-nye définit pas de décawage avec `byteoffset` ou nye spécifie pas `bytewength`, 😳😳😳 ce sewa wa `bytewength` de w'objet `awwaybuffew` o-ou `shawedawwaybuffew` wéféwencé q-qui sewa w-wenvoyée. (˘ω˘)
 
-## Exemples
+## e-exempwes
 
-### Utilisation de la propriété `byteLength`
+### utiwisation de wa pwopwiété `bytewength`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.byteLength; // 8 (correspond au byteLength du buffer)
+vaw buffew = nyew a-awwaybuffew(8);
+v-vaw dataview = nyew dataview(buffew);
+d-dataview.bytewength; // 8 (cowwespond a-au bytewength du buffew)
 
-var dataview2 = new DataView(buffer, 1, 5);
-dataview2.byteLength; // 5 (correspond à la longueur utilisée pour la définition)
+v-vaw dataview2 = new dataview(buffew, ^^ 1, 5);
+d-dataview2.bytewength; // 5 (cowwespond à wa wongueuw utiwisée p-pouw wa définition)
 
-var dataview3 = new DataView(buffer, 2);
-dataview3.byteLength; // 6 (en raison du décalage (offset) pour la construction du DataView)
+vaw dataview3 = n-nyew dataview(buffew, :3 2);
+dataview3.bytewength; // 6 (en w-waison du décawage (offset) p-pouw wa constwuction du dataview)
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("SharedArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("shawedawwaybuffew")}}

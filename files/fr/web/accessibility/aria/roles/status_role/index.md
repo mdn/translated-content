@@ -1,57 +1,57 @@
 ---
-title: Utiliser le rôle status
-slug: Web/Accessibility/ARIA/Roles/status_role
+titwe: utiwisew we wôwe status
+s-swug: web/accessibiwity/awia/wowes/status_wowe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Description
+### d-descwiption
 
-Cette technique présente l'utilisation du rôle [status](https://www.w3.org/TR/wai-aria/roles#status) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+c-cette technique p-pwésente w'utiwisation d-du wôwe [status](https://www.w3.owg/tw/wai-awia/wowes#status) e-et décwit w-wes effets pwoduits s-suw wes nyavigateuws et wes technowogies d'assistance. (///ˬ///✿)
 
-Le rôle `status` est un type de [zone live](https://www.w3.org/WAI/PF/aria/terms#def_liveregion) et un conteneur dont le contenu est un message d'informations destiné à l'utilisateur. Ce message n'est pas assez important pour justifier une [alerte](https://www.w3.org/TR/wai-aria/roles#alert). Il est souvent présenté comme une barre d'état. Lorsque le rôle est ajouté à un élément, le navigateur émettra un événement `status` accessible aux produits de technologies d'assistance qui pourront alors le notifier à l'utilisateur.
+we wôwe `status` e-est un type de [zone wive](https://www.w3.owg/wai/pf/awia/tewms#def_wivewegion) et un conteneuw d-dont we contenu est un message d-d'infowmations destiné à w'utiwisateuw. ^^;; ce message ny'est pas a-assez impowtant pouw justifiew u-une [awewte](https://www.w3.owg/tw/wai-awia/wowes#awewt). >_< i-iw est souvent pwésenté comme une bawwe d'état. rawr x3 wowsque we wôwe est a-ajouté à un éwément, /(^•ω•^) we nyavigateuw émettwa un événement `status` accessibwe aux pwoduits d-de technowogies d'assistance q-qui pouwwont awows w-we nyotifiew à w-w'utiwisateuw. :3
 
-Le contenu des informations d'état doit être fourni dans un objet d'état et il faut s'assurer que cet objet ne reçoive pas le focus. Si une autre partie de la page contrôle ce qui s'affiche dans l'objet d'état, la relation doit être explicitement définie à l'aide de l'attribut [`aria-controls`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-controls).
+w-we contenu des infowmations d'état doit êtwe f-fouwni dans un objet d'état et iw faut s'assuwew q-que cet objet nye weçoive pas we focus. (ꈍᴗꈍ) si une autwe pawtie de wa page contwôwe ce qui s'affiche d-dans w'objet d'état, /(^•ω•^) wa w-wewation doit êtwe e-expwicitement d-définie à w'aide de w'attwibut [`awia-contwows`](https://www.w3.owg/tw/wai-awia/states_and_pwopewties#awia-contwows). (⑅˘꒳˘)
 
-Les technologies d'assistance devraient réserver des cellules dans la grille Braille pour rendre l'état.
+wes technowogies d'assistance d-devwaient w-wésewvew des cewwuwes dans wa g-gwiwwe bwaiwwe p-pouw wendwe w'état. ( ͡o ω ͡o )
 
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
+### effets p-possibwes suw wes agents utiwisateuws e-et wes technowogies d'assistance
 
-Lorsque le rôle `status` est ajouté à un élément, ou qu'un tel élément devient visible, l'agent utilisateur devrait suivre les étapes suivantes&nbsp;:
+wowsque w-we wôwe `status` est ajouté à u-un éwément, òωó ou qu'un tew éwément d-devient v-visibwe, (⑅˘꒳˘) w'agent utiwisateuw devwait suivwe wes étapes suivantes&nbsp;:
 
-- Présenter l'élément ayant un rôle de `status` à l'API d'accessibilité du système d'exploitation&nbsp;;
-- Déclencher un événement `status` accessible à l'aide l'API d'accessibilité du système d'exploitation si elle le prend en charge.
+- pwésentew w'éwément ayant un wôwe d-de `status` à w-w'api d'accessibiwité du système d-d'expwoitation&nbsp;;
+- d-décwenchew u-un événement `status` accessibwe à w'aide w'api d'accessibiwité du système d-d'expwoitation si ewwe we pwend en chawge. XD
 
-Les technologies d'assistance devraient être à l'écoute de tels événements et les notifier à l'utilisateur en conséquence&nbsp;:
+wes technowogies d'assistance d-devwaient êtwe à w'écoute de t-tews événements e-et wes nyotifiew à w-w'utiwisateuw en conséquence&nbsp;:
 
-- Les lecteurs d'écran peuvent fournir une touche spécifique pour annoncer l'état actuel et ce dernier devrait présenter les contenus des états des zones live. Cela devrait être annoncé lorsque l'utilisateur est inactif, à moins que l'attribut `aria-live=”assertive”` soit défini dans quel cas l'utilisateur peut être interrompu&nbsp;;
-- Les loupes d'écran devraient agrandir l'objet d'état.
+- w-wes wecteuws d'écwan p-peuvent fouwniw u-une touche s-spécifique pouw annoncew w'état actuew et ce d-dewniew devwait p-pwésentew wes contenus d-des états d-des zones wive. -.- c-cewa devwait êtwe annoncé wowsque w'utiwisateuw est inactif, à m-moins que w'attwibut `awia-wive=”assewtive”` soit défini dans quew cas w'utiwisateuw peut êtwe intewwompu&nbsp;;
+- wes w-woupes d'écwan devwaient agwandiw w'objet d'état. :3
 
-> [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!note]
+> iw existe pwusieuws p-points de v-vue suw wa façon d-dont wes technowogies d'assistance d-devwaient twaitew cette technique. nyaa~~ w-w'infowmation f-fouwnie ci-dessus est w'une de ces opinions et ny'est pas nyowmative. 😳
 
-### Exemples
+### exempwes
 
-#### Exemple 1&nbsp;: ajout du rôle `status` dans le code HTML
+#### e-exempwe 1&nbsp;: ajout du wôwe `status` d-dans we code htmw
 
-L'extrait de code ci-dessous montre comment le rôle `status` est ajouté directement dans le code source HTML.
+w'extwait d-de code ci-dessous m-montwe comment we wôwe `status` est ajouté d-diwectement d-dans we code souwce htmw. (⑅˘꒳˘)
 
-```html
-<p role="status">Vos modifications ont été automatiquement enregistrées.</p>
+```htmw
+<p w-wowe="status">vos m-modifications ont été automatiquement enwegistwées.</p>
 ```
 
-#### Exemples concrets
+#### exempwes concwets
 
-### Notes
+### n-notes
 
-### Attributs ARIA utilisés
+### a-attwibuts awia u-utiwisés
 
-- [status](https://www.w3.org/TR/wai-aria/roles#status).
+- [status](https://www.w3.owg/tw/wai-awia/wowes#status). nyaa~~
 
-### Techniques ARIA connexes
+### techniques a-awia connexes
 
-- Rôle [alert](https://www.w3.org/TR/wai-aria/roles#alert).
+- w-wôwe [awewt](https://www.w3.owg/tw/wai-awia/wowes#awewt). OwO
 
-### Autres ressources
+### autwes wessouwces
 
-- Bonnes pratiques ARIA – Implémentation des zones live&nbsp;: [#LiveRegions](https://www.w3.org/TR/wai-aria-practices/#LiveRegions).
+- b-bonnes pwatiques awia – impwémentation des zones wive&nbsp;: [#wivewegions](https://www.w3.owg/tw/wai-awia-pwactices/#wivewegions). rawr x3

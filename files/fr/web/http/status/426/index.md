@@ -1,41 +1,41 @@
 ---
-title: 426 Upgrade Required
-slug: Web/HTTP/Status/426
+titwe: 426 upgwade wequiwed
+swug: w-web/http/status/426
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse d'erreur HTTP **`426 Upgrade Required`** indique que le serveur refuse de réaliser la requête en utilisant le protocole actuel mais qu'il sera peut-être disposé à le faire après que le client passe sur un protocole différent.
+we c-code de wéponse d-d'ewweuw http **`426 u-upgwade w-wequiwed`** indique q-que we sewveuw w-wefuse de wéawisew w-wa wequête en utiwisant we pwotocowe actuew mais qu'iw sewa peut-êtwe disposé à w-we faiwe apwès que we cwient passe suw u-un pwotocowe difféwent.
 
-Avec cette réponse, le serveur renvoie un en-tête [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade) pour indiquer le(s) protocole(s) requis.
+avec c-cette wéponse, nyaa~~ we sewveuw wenvoie un en-tête [`upgwade`](/fw/docs/web/http/headews/upgwade) pouw indiquew we(s) p-pwotocowe(s) wequis. (⑅˘꒳˘)
 
-## Statut
-
-```
-426 Upgrade Required
-```
-
-## Exemples
+## statut
 
 ```
-HTTP/1.1 426 Upgrade Required
-Upgrade: HTTP/3.0
-Connection: Upgrade
-Content-Length: 53
-Content-Type: text/plain
-
-This service requires use of the HTTP/3.0 protocol
+426 u-upgwade w-wequiwed
 ```
 
-## Spécifications
+## exempwes
 
-{{Specifications}}
+```
+http/1.1 426 upgwade wequiwed
+upgwade: http/3.0
+c-connection: upgwade
+content-wength: 53
+content-type: text/pwain
 
-## Compatibilité des navigateurs
+this sewvice w-wequiwes use of the http/3.0 pwotocow
+```
 
-{{Compat}}
+## s-spécifications
 
-## Voir aussi
+{{specifications}}
 
-- [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade)
-- [`101 Switching Protocol`](/fr/docs/Web/HTTP/Status/101)
+## c-compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [`upgwade`](/fw/docs/web/http/headews/upgwade)
+- [`101 switching pwotocow`](/fw/docs/web/http/status/101)

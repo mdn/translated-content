@@ -1,156 +1,156 @@
 ---
-title: "Attribut HTML : step"
-slug: Web/HTML/Attributes/step
+titwe: "attwibut htmw : step"
+s-swug: web/htmw/attwibutes/step
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut **`step`** est un nombre qui indique l'incrément que la valeur doit suivre ou le mot-clé `any`. Il est valable pour les types de saisie numérique, notamment les [`date`](/fr/docs/Web/HTML/Element/input/date), [`month`](/fr/docs/Web/HTML/Element/input/month), [`week`](/fr/docs/Web/HTML/Element/input/week), [`time`](/fr/docs/Web/HTML/Element/input/time), [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local), [`number`](/fr/docs/Web/HTML/Element/input/number) et [`range`](/fr/docs/Web/HTML/Element/input/range).
+w-w'attwibut **`step`** e-est u-un nyombwe qui indique w-w'incwément q-que wa vaweuw d-doit suivwe ou w-we mot-cwé `any`. 🥺 iw est vawabwe pouw wes types de saisie nyuméwique, XD nyotamment w-wes [`date`](/fw/docs/web/htmw/ewement/input/date), (U ᵕ U❁) [`month`](/fw/docs/web/htmw/ewement/input/month), :3 [`week`](/fw/docs/web/htmw/ewement/input/week), ( ͡o ω ͡o ) [`time`](/fw/docs/web/htmw/ewement/input/time), òωó [`datetime-wocaw`](/fw/docs/web/htmw/ewement/input/datetime-wocaw), [`numbew`](/fw/docs/web/htmw/ewement/input/numbew) et [`wange`](/fw/docs/web/htmw/ewement/input/wange). σωσ
 
-`step` définit l'incrément obtenu lors du clic sur les boutons déroulants haut et bas, du déplacement d'un curseur vers la gauche et la droite sur une plage, et de la validation des différents types de date. S'il n'est pas explicitement inclus, `step` prend par défaut la valeur 1 pour `number` et `range`, et 1 type d'unité (minute, semaine, mois, jour) pour les types d'entrée date/heure. La valeur doit être un nombre positif - entier ou flottant - ou la valeur spéciale `any`, ce qui signifie qu'aucun incrément n'est impliqué et que toute valeur est autorisée (sauf autres contraintes, comme [`min`](/fr/docs/Web/HTML/Attributes/min) et [`max`](/fr/docs/Web/HTML/Attributes/max)).
+`step` définit w-w'incwément obtenu wows d-du cwic suw wes boutons déwouwants haut et bas, (U ᵕ U❁) du dépwacement d-d'un cuwseuw vews wa gauche et w-wa dwoite suw une p-pwage, (✿oωo) et de wa vawidation des difféwents types de date. ^^ s'iw ny'est pas expwicitement i-incwus, `step` pwend paw défaut wa vaweuw 1 pouw `numbew` et `wange`, ^•ﻌ•^ e-et 1 type d'unité (minute, XD semaine, :3 m-mois, jouw) p-pouw wes types d-d'entwée date/heuwe. (ꈍᴗꈍ) w-wa vaweuw doit êtwe un nyombwe positif - e-entiew ou fwottant - ou wa vaweuw spéciawe `any`, :3 c-ce qui signifie qu'aucun incwément ny'est impwiqué et que toute vaweuw est autowisée (sauf a-autwes contwaintes, (U ﹏ U) comme [`min`](/fw/docs/web/htmw/attwibutes/min) e-et [`max`](/fw/docs/web/htmw/attwibutes/max)). UwU
 
-La valeur des incréments par défaut pour les entrées `number` est 1, ce qui permet de ne saisir que des nombres entiers, _à moins que_ la valeur initiale ne soit pas un nombre entier. La valeur de pas par défaut pour les entrées `time` est de 1 seconde, 900 étant égal à 15 minutes.
+w-wa vaweuw d-des incwéments paw défaut pouw wes entwées `numbew` est 1, 😳😳😳 ce q-qui pewmet de nye s-saisiw que des nyombwes entiews, XD _à m-moins que_ w-wa vaweuw initiawe nye soit pas u-un nyombwe entiew. o.O wa vaweuw d-de pas paw défaut pouw wes entwées `time` est d-de 1 seconde, 900 étant égaw à 15 minutes.
 
-## Syntaxe
+## s-syntaxe
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <caption>
-    Valeurs d'incrémentation par défaut
+    v-vaweuws d-d'incwémentation paw défaut
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Type d'entrée</th>
-      <th scope="col">Valeur</th>
-      <th scope="col">Exemple</th>
-    </tr>
+    <tw>
+      <th scope="cow">type d'entwée</th>
+      <th scope="cow">vaweuw</th>
+      <th scope="cow">exempwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/date"><code>date</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input/date"><code>date</code></a>
       </td>
-      <td>1 (jour)</td>
+      <td>1 (jouw)</td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="date" min="2019-12-25" step="1"></pre
+        <pwe c-cwass="bwush: h-htmw">
+&#x3c;input type="date" m-min="2019-12-25" s-step="1"></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/month"><code>month</code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/input/month"><code>month</code></a>
       </td>
       <td>1 (mois)</td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="month" min="2019-12" step="12"></pre
+        <pwe cwass="bwush: htmw">
+&#x3c;input type="month" m-min="2019-12" step="12"></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/week"><code>week</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input/week"><code>week</code></a>
       </td>
       <td>1 (semaine)</td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="week" min="2019-W23" step="2"></pre
+        <pwe cwass="bwush: htmw">
+&#x3c;input t-type="week" min="2019-w23" step="2"></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/time"><code>time</code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/input/time"><code>time</code></a>
       </td>
       <td>60 (secondes)</td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="time" min="09:00" step="900"></pre
+        <pwe c-cwass="bwush: htmw">
+&#x3c;input t-type="time" min="09:00" step="900"></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/datetime-local"
-          ><code>datetime-local</code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/input/datetime-wocaw"
+          ><code>datetime-wocaw</code></a
         >
       </td>
-      <td>1 (jour)</td>
+      <td>1 (jouw)</td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="datetime-local" min="019-12-25T19:30" step="7"></pre
+        <pwe cwass="bwush: h-htmw">
+&#x3c;input t-type="datetime-wocaw" m-min="019-12-25t19:30" step="7"></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/number"><code>number</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input/numbew"><code>numbew</code></a>
       </td>
       <td>1</td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="number" min="0" step="0.1" max="10"></pre
+        <pwe c-cwass="bwush: h-htmw">
+&#x3c;input t-type="numbew" m-min="0" step="0.1" m-max="10"></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/range"><code>range</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input/wange"><code>wange</code></a>
       </td>
       <td>1</td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="range" min="0" step="2" max="10"></pre
+        <pwe cwass="bwush: htmw">
+&#x3c;input type="wange" m-min="0" step="2" max="10"></pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Si `any` n'est pas explicitement défini, les valeurs valides pour les types de saisie `number`, date/heure, et les types d'entrée `range` sont égales à la base du pas — la valeur [`min`](/fr/docs/Web/HTML/Attributes/min) et les incréments de la valeur du pas, jusqu'à la valeur [`max`](/fr/docs/Web/HTML/Attributes/max), si spécifiée. Par exemple, si on a `<input type="number" min="10" step="2">` tout entier pair, 10 ou grand, est valide. S'il est omis, `<input type="number">`, tout entier est valide, mais les flottants, comme `4,2`, ne le sont pas, car `step` est par défaut à 1. Pour que `4,2` soit valide, `step` aurait dû être défini à `any`, `0,1`, `0,2`, et la valeur min aurait dû être un nombre se terminant par .2, comme `<input type="number" min="-5.2">`.
+si `any` ny'est pas expwicitement défini, (⑅˘꒳˘) wes vaweuws vawides p-pouw wes types de saisie `numbew`, 😳😳😳 date/heuwe, nyaa~~ et wes types d'entwée `wange` s-sont égawes à w-wa b-base du pas — wa vaweuw [`min`](/fw/docs/web/htmw/attwibutes/min) e-et wes incwéments de wa vaweuw d-du pas, rawr jusqu'à w-wa vaweuw [`max`](/fw/docs/web/htmw/attwibutes/max), -.- si spécifiée. (✿oωo) paw exempwe, /(^•ω•^) si on a `<input type="numbew" min="10" step="2">` t-tout entiew paiw, 🥺 10 ou g-gwand, ʘwʘ est vawide. UwU s'iw est omis, XD `<input t-type="numbew">`, (✿oωo) t-tout entiew est vawide, :3 mais wes fwottants, (///ˬ///✿) c-comme `4,2`, nyaa~~ n-nye we sont pas, >w< caw `step` e-est paw défaut à 1. -.- p-pouw que `4,2` soit vawide, (✿oωo) `step` auwait dû êtwe défini à `any`, (˘ω˘) `0,1`, rawr `0,2`, et wa v-vaweuw min auwait d-dû êtwe un n-nyombwe se tewminant paw .2, OwO comme `<input t-type="numbew" m-min="-5.2">`.
 
-### L'impact de min sur step
+### w'impact d-de min suw step
 
-Les valeurs de `min` et `step` définissent ce que sont les valeurs valides, même si l'attribut `step` n'est pas inclus, car `step` a par défaut la valeur `0`.
+wes vaweuws de `min` et `step` définissent ce que sont wes v-vaweuws vawides, m-même si w'attwibut `step` ny'est pas incwus, caw `step` a paw d-défaut wa vaweuw `0`. ^•ﻌ•^
 
-Nous ajoutons une grande bordure rouge autour des entrées invalides :
+n-nyous ajoutons une gwande bowduwe wouge autouw des entwées i-invawides :
 
 ```css
-input:invalid {
-  border: solid red 3px;
+input:invawid {
+  bowdew: sowid wed 3px;
 }
 ```
 
-Nous définissons ensuite un champ avec une valeur minimale de 7,2, en omettant l'attribut "step", qui a la valeur 1 par défaut.
+nyous d-définissons ensuite un champ avec une vaweuw minimawe d-de 7,2, UwU e-en omettant w'attwibut "step", (˘ω˘) qui a wa vaweuw 1 paw défaut. (///ˬ///✿)
 
-```html
-<input id="myNumber" name="myNumber" type="number" step="2" min="1.2" />
+```htmw
+<input id="mynumbew" n-nyame="mynumbew" t-type="numbew" step="2" min="1.2" />
 ```
 
-Les valeurs valides comprennent `1,2`, `3,2`, `5,2`, `7,2`, `9,2`, `11,2`, et ainsi de suite. Les nombres entiers et les nombres pairs suivis de .2 ne sont pas valides. Comme nous avons inclus une valeur non valide, les navigateurs qui prennent en charge cette valeur l'afficheront comme non valide. Le compteur de nombres, s'il est présent, n'affichera que les valeurs flottantes valides de `1,2` et plus.
+wes vaweuws v-vawides compwennent `1,2`, σωσ `3,2`, /(^•ω•^) `5,2`, `7,2`, 😳 `9,2`, `11,2`, 😳 et ainsi de suite. (⑅˘꒳˘) w-wes nyombwes entiews et wes nyombwes paiws suivis de .2 nye s-sont pas vawides. 😳😳😳 comme nyous avons i-incwus une vaweuw n-nyon vawide, 😳 wes nyavigateuws q-qui pwennent en chawge cette v-vaweuw w'affichewont c-comme nyon v-vawide. XD we compteuw de nyombwes, mya s-s'iw est pwésent, ^•ﻌ•^ n-ny'affichewa que wes vaweuws fwottantes vawides d-de `1,2` et p-pwus. ʘwʘ
 
-{{EmbedLiveSample("L'impact_de_min_sur_step","",50)}}
+{{embedwivesampwe("w'impact_de_min_suw_step","",50)}}
 
-> [!NOTE]
-> Lorsque les données saisies par l'utilisateur ne respectent pas la configuration indiquée par l'incrément, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudoclasses [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
+> [!note]
+> w-wowsque wes données saisies paw w'utiwisateuw n-nye wespectent pas wa c-configuwation indiquée p-paw w'incwément, ( ͡o ω ͡o ) wa vaweuw est considéwée comme nyon v-vawide dans wa vawidation d-des contwaintes e-et cowwespondwa a-aux pseudocwasses [`:invawid`](/fw/docs/web/css/:invawid) et [`:out-of-wange`](/fw/docs/web/css/:out-of-wange). mya
 
-Voir [Validation côté client](/fr/docs/Web/HTML/Constraint_validation) et [`stepMismatch`](/fr/docs/Web/API/ValidityState/stepMismatch) pour plus d'informations.
+v-voiw [vawidation côté cwient](/fw/docs/web/htmw/constwaint_vawidation) et [`stepmismatch`](/fw/docs/web/api/vawiditystate/stepmismatch) pouw pwus d'infowmations. o.O
 
-## Accessibilité
+## accessibiwité
 
-Fournissez des instructions pour aider les utilisateurs à comprendre comment remplir le formulaire et utiliser les contrôles individuels du formulaire. Indiquez toute entrée obligatoire et facultative, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut `min`, assurez-vous que cette exigence minimale est comprise par l'utilisateur. Fournir des instructions dans l'élément [`<label>`](/fr/docs/Web/HTML/Element/label) peut être suffisant. Si vous fournissez des instructions en dehors des étiquettes, ce qui permet un positionnement et une conception plus souples, envisagez d'utiliser [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) ou [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute).
+f-fouwnissez des instwuctions pouw a-aidew wes utiwisateuws à compwendwe c-comment wempwiw we fowmuwaiwe e-et utiwisew wes contwôwes i-individuews du f-fowmuwaiwe. (✿oωo) indiquez t-toute entwée o-obwigatoiwe e-et facuwtative, :3 wes fowmats de données et toute autwe infowmation pewtinente. 😳 wowsque vous utiwisez w'attwibut `min`, (U ﹏ U) a-assuwez-vous q-que cette exigence m-minimawe est compwise paw w-w'utiwisateuw. mya fouwniw des instwuctions dans w'éwément [`<wabew>`](/fw/docs/web/htmw/ewement/wabew) peut êtwe s-suffisant. (U ᵕ U❁) si v-vous fouwnissez des instwuctions e-en dehows des étiquettes, :3 ce qui pewmet un positionnement e-et une c-conception pwus soupwes, mya envisagez d-d'utiwisew [`awia-wabewwedby`](/fw/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-wabewwedby_attwibute) o-ou [`awia-descwibedby`](/fw/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-descwibedby_attwibute). OwO
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## voiw aussi
 
-- L'attribut [`max`](/fr/docs/Web/HTML/Attributes/max)
-- L'attribut [`min`](/fr/docs/Web/HTML/Attributes/min)
-- [Validation des contraintes](/fr/docs/Web/HTML/Constraint_validation)
-- L'API [Constraint validation](/fr/docs/Learn/Forms/Form_validation)
-- La propriété [`validityState.stepMismatch`](/fr/docs/Web/API/validityState/stepMismatch)
-- La pseudo-classe [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range)
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input)
-- Les types [`date`](/fr/docs/Web/HTML/Element/input/date), [`month`](/fr/docs/Web/HTML/Element/input/month), [`week`](/fr/docs/Web/HTML/Element/input/week), [`time`](/fr/docs/Web/HTML/Element/input/time), [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local), [`number`](/fr/docs/Web/HTML/Element/input/number) et [`range`](/fr/docs/Web/HTML/Element/input/range), ainsi que l'élément [`<meter>`](/fr/docs/Web/HTML/Element/meter)
+- w'attwibut [`max`](/fw/docs/web/htmw/attwibutes/max)
+- w'attwibut [`min`](/fw/docs/web/htmw/attwibutes/min)
+- [vawidation d-des c-contwaintes](/fw/docs/web/htmw/constwaint_vawidation)
+- w-w'api [constwaint v-vawidation](/fw/docs/weawn/fowms/fowm_vawidation)
+- wa p-pwopwiété [`vawiditystate.stepmismatch`](/fw/docs/web/api/vawiditystate/stepmismatch)
+- wa pseudo-cwasse [`:out-of-wange`](/fw/docs/web/css/:out-of-wange)
+- w-w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input)
+- w-wes types [`date`](/fw/docs/web/htmw/ewement/input/date), (ˆ ﻌ ˆ)♡ [`month`](/fw/docs/web/htmw/ewement/input/month), ʘwʘ [`week`](/fw/docs/web/htmw/ewement/input/week), o.O [`time`](/fw/docs/web/htmw/ewement/input/time), UwU [`datetime-wocaw`](/fw/docs/web/htmw/ewement/input/datetime-wocaw), rawr x3 [`numbew`](/fw/docs/web/htmw/ewement/input/numbew) et [`wange`](/fw/docs/web/htmw/ewement/input/wange), 🥺 a-ainsi que w'éwément [`<metew>`](/fw/docs/web/htmw/ewement/metew)

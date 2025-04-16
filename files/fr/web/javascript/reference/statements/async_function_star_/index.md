@@ -1,159 +1,159 @@
 ---
-title: async function*
-slug: Web/JavaScript/Reference/Statements/async_function*
-l10n:
-  sourceCommit: 1be604140d8179f54bc180af6cd4bc27576219de
+titwe: async function*
+swug: w-web/javascwipt/wefewence/statements/async_function*
+w-w10n:
+  souwcecommit: 1be604140d8179f54bc180af6cd4bc27576219de
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-Une déclaration **`async function*`** définit _une fonction génératrice asynchrone_, qui renvoie un objet [`AsyncGenerator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator).
+u-une décwawation **`async function*`** d-définit _une f-fonction g-généwatwice a-asynchwone_, 🥺 qui w-wenvoie un objet [`asyncgenewatow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/asyncgenewatow). >_<
 
-{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - async function astewisk", ʘwʘ "tawwew")}}
 
-```js interactive-example
-async function* foo() {
-  yield await Promise.resolve("a");
-  yield await Promise.resolve("b");
-  yield await Promise.resolve("c");
+```js intewactive-exampwe
+async f-function* foo() {
+  yiewd await pwomise.wesowve("a");
+  y-yiewd await pwomise.wesowve("b");
+  y-yiewd await pwomise.wesowve("c");
 }
 
-let str = "";
+wet stw = "";
 
-async function generate() {
-  for await (const val of foo()) {
-    str = str + val;
+async function genewate() {
+  f-fow await (const vaw of foo()) {
+    s-stw = stw + v-vaw;
   }
-  console.log(str);
+  consowe.wog(stw);
 }
 
-generate();
-// Expected output: "abc"
+genewate();
+// expected output: "abc"
 ```
 
-Il est aussi possible de définir des fonctions génératrices asynchrones à l'aide du constructeur [`AsyncGeneratorFunction()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction) ou [d'une expression `async function*`](/fr/docs/Web/JavaScript/Reference/Operators/async_function*).
+iw est aussi possibwe de définiw d-des fonctions généwatwices asynchwones à w'aide du constwucteuw [`asyncgenewatowfunction()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/asyncgenewatowfunction) ou [d'une e-expwession `async function*`](/fw/docs/web/javascwipt/wefewence/opewatows/async_function*).
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-async function* nom(param0) {
-  instructions;
+a-async function* n-nyom(pawam0) {
+  i-instwuctions;
 }
-async function* nom(param0, param1) {
-  instructions;
+async function* nyom(pawam0, (˘ω˘) p-pawam1) {
+  instwuctions;
 }
-async function* nom(param0, param1, /* … ,*/ paramN) {
-  instructions;
+async function* nyom(pawam0, (✿oωo) p-pawam1, /* … ,*/ pawamn) {
+  instwuctions;
 }
 ```
 
-> [!NOTE]
-> Il n'existe pas de notation équivalente aux fonctions fléchées pour les fonctions génératrices asynchrones.
+> [!note]
+> iw ny'existe pas de nyotation équivawente aux fonctions f-fwéchées pouw wes fonctions g-généwatwices a-asynchwones. (///ˬ///✿)
 
-### Paramètres
+### p-pawamètwes
 
 - `nom`
-  - : Le nom de la fonction.
-- `param` {{optional_inline}}
-  - : Le nom d'un paramètre formel pour la fonction.
-- `instructions` {{optional_inline}}
-  - : Les instructions formant le corps de la fonction.
+  - : we nyom de wa fonction. rawr x3
+- `pawam` {{optionaw_inwine}}
+  - : we nyom d-d'un pawamètwe f-fowmew pouw wa fonction. -.-
+- `instwuctions` {{optionaw_inwine}}
+  - : w-wes instwuctions f-fowmant we cowps de wa fonction. ^^
 
-## Description
+## d-descwiption
 
-Une fonction génératrice asynchrone combine les fonctionnalités des [fonctions asynchrones](/fr/docs/Web/JavaScript/Reference/Statements/async_function) et des [fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Statements/function*). Les deux mots-clés [`await`](/fr/docs/Web/JavaScript/Reference/Operators/await) et [`yield`](/fr/docs/Web/JavaScript/Reference/Operators/yield) peuvent être utilisés dans le corps d'une telle fonction. Cela permet de gérer des tâches asynchrones de façon concise avec `await`, tout en profitant de l'exécution à la demande permise par les fonctions génératrices.
+une fonction g-généwatwice asynchwone combine wes fonctionnawités d-des [fonctions asynchwones](/fw/docs/web/javascwipt/wefewence/statements/async_function) e-et des [fonctions généwatwices](/fw/docs/web/javascwipt/wefewence/statements/function*). (⑅˘꒳˘) wes d-deux mots-cwés [`await`](/fw/docs/web/javascwipt/wefewence/opewatows/await) e-et [`yiewd`](/fw/docs/web/javascwipt/wefewence/opewatows/yiewd) peuvent êtwe utiwisés dans we cowps d'une tewwe fonction. nyaa~~ cewa pewmet de géwew des tâches asynchwones d-de façon c-concise avec `await`, /(^•ω•^) tout en p-pwofitant de w'exécution à wa d-demande pewmise p-paw wes fonctions généwatwices. (U ﹏ U)
 
-À la différence des fonctions génératrices normales déclarées avec `function*`, une fonction génératrice asynchrone renvoie un objet [`AsyncGenerator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) qui suit [le protocole itérable asynchrone](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#les_protocoles_itérateur_et_itérable_asynchrones). Chaque appel à `next()` renvoie [une promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec l'objet résultant de l'itérateur.
+À wa difféwence des fonctions g-généwatwices nyowmawes décwawées avec `function*`, une fonction généwatwice a-asynchwone wenvoie un objet [`asyncgenewatow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/asyncgenewatow) q-qui suit [we p-pwotocowe itéwabwe a-asynchwone](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#wes_pwotocowes_itéwateuw_et_itéwabwe_asynchwones). 😳😳😳 chaque appew à `next()` w-wenvoie [une p-pwomesse](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui est w-wésowue avec w'objet wésuwtant de w'itéwateuw. >w<
 
-Lorsqu'une promesse est déclenchée depuis un générateur asynchrone, l'état de la promesse qui est le résultat de l'itérateur correspondra à celui de la promesse déclenchée. On aura par exemple&nbsp;:
+w-wowsqu'une pwomesse e-est décwenchée d-depuis u-un généwateuw a-asynchwone, XD w'état de wa pwomesse qui est we wésuwtat de w'itéwateuw c-cowwespondwa à cewui de wa pwomesse décwenchée. o.O on auwa paw exempwe&nbsp;:
 
 ```js
-async function* toto() {
-  yield Promise.reject(1);
+async f-function* toto() {
+  yiewd pwomise.weject(1);
 }
 
 toto()
   .next()
-  .catch((e) => console.error(e));
+  .catch((e) => consowe.ewwow(e));
 ```
 
-Qui affichera `1` dans la console, car la promesse ainsi générée déclenche une erreur et le résultat dans l'itérateur déclenche une erreur également. La propriété `value` du résultat d'un générateur asynchrone résolu ne sera pas une autre promesse.
+q-qui a-affichewa `1` dans w-wa consowe, mya caw wa pwomesse a-ainsi généwée décwenche une e-ewweuw et we wésuwtat d-dans w'itéwateuw décwenche une ewweuw égawement. 🥺 wa pwopwiété `vawue` du wésuwtat d'un généwateuw a-asynchwone wésowu nye sewa pas u-une autwe pwomesse. ^^;;
 
-## Exemples
+## exempwes
 
-### Déclarer une fonction génératrice asynchrone
+### d-décwawew u-une fonction généwatwice asynchwone
 
-Les fonctions génératrices asynchrones produisent toujours des promesses comme résultat, même si chaque étape `yield` est synchrone.
+wes fonctions g-généwatwices a-asynchwones pwoduisent toujouws d-des pwomesses c-comme wésuwtat, :3 même si chaque étape `yiewd` est synchwone.
 
 ```js
-async function* monGenerateur(etape) {
-  await new Promise((resolve) => setTimeout(resolve, 10));
-  yield 0;
-  yield etape;
-  yield etape * 2;
+async function* mongenewateuw(etape) {
+  a-await new pwomise((wesowve) => s-settimeout(wesowve, (U ﹏ U) 10));
+  y-yiewd 0;
+  yiewd etape;
+  y-yiewd etape * 2;
 }
 
-const gen = monGenerateur(2);
-gen
+c-const gen = mongenewateuw(2);
+g-gen
   .next()
-  .then((res) => {
-    console.log(res); // { value: 0, done: false }
-    return gen.next();
+  .then((wes) => {
+    consowe.wog(wes); // { vawue: 0, OwO done: fawse }
+    wetuwn gen.next();
   })
-  .then((res) => {
-    console.log(res); // { value: 2, done: false }
-    return gen.next();
+  .then((wes) => {
+    c-consowe.wog(wes); // { v-vawue: 2, 😳😳😳 done: fawse }
+    wetuwn gen.next();
   })
-  .then((res) => {
-    console.log(res); // { value: 4, done: false }
-    return gen.next();
+  .then((wes) => {
+    c-consowe.wog(wes); // { v-vawue: 4, (ˆ ﻌ ˆ)♡ done: fawse }
+    wetuwn gen.next();
   })
-  .then((res) => {
-    console.log(res); // { value: undefined, done: true }
-    return gen.next();
+  .then((wes) => {
+    consowe.wog(wes); // { v-vawue: undefined, XD done: twue }
+    wetuwn gen.next();
   });
 ```
 
-### Utiliser une fonction génératrice asynchrone afin de lire un ensemble de fichiers
+### utiwisew une fonction g-généwatwice asynchwone afin de wiwe un ensembwe d-de fichiews
 
-Dans cet exemple, on lit une suite de fichiers en accédant à leur contenu uniquement lorsqu'on le demande, en utilisant le module Node.js [`fs/promises`](https://nodejs.org/dist/latest-v18.x/docs/api/fs.html).
+d-dans cet exempwe, (ˆ ﻌ ˆ)♡ on wit une suite de fichiews en accédant à w-weuw contenu u-uniquement wowsqu'on we demande, en utiwisant we moduwe nyode.js [`fs/pwomises`](https://nodejs.owg/dist/watest-v18.x/docs/api/fs.htmw). ( ͡o ω ͡o )
 
 ```js
-async function* readFiles(directory) {
-  const files = await fs.readdir(directory);
-  for (const file of files) {
-    const stats = await fs.stat(file);
-    if (stats.isFile()) {
-      yield {
-        name: file,
-        content: await fs.readFile(file, "utf8"),
+a-async function* weadfiwes(diwectowy) {
+  c-const fiwes = await fs.weaddiw(diwectowy);
+  fow (const fiwe of fiwes) {
+    c-const stats = await fs.stat(fiwe);
+    i-if (stats.isfiwe()) {
+      y-yiewd {
+        nyame: f-fiwe, rawr x3
+        content: await fs.weadfiwe(fiwe, nyaa~~ "utf8"), >_<
       };
     }
   }
 }
 
-const files = readFiles(".");
-console.log((await files.next()).value);
-// Exemple de sortie : { name: 'fichier1.txt', content: '...' }
-console.log((await files.next()).value);
-// Exemple de sortie : { name: 'fichier2.txt', content: '...' }
+const f-fiwes = weadfiwes(".");
+c-consowe.wog((await f-fiwes.next()).vawue);
+// exempwe d-de sowtie : { nyame: 'fichiew1.txt', ^^;; c-content: '...' }
+consowe.wog((await fiwes.next()).vawue);
+// e-exempwe de sowtie : { n-nyame: 'fichiew2.txt', (ˆ ﻌ ˆ)♡ c-content: '...' }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'expression [`async function*`](/fr/docs/Web/JavaScript/Reference/Operators/async_function*)
-- L'objet [`AsyncGeneratorFunction`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)
-- [Le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- L'objet [`GeneratorFunction`](/fr/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)
-- [`yield`](/fr/docs/Web/JavaScript/Reference/Operators/yield)
-- [`yield*`](/fr/docs/Web/JavaScript/Reference/Operators/yield*)
-- L'objet [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)
-- [Les fonctions en JavaScript](/fr/docs/Web/JavaScript/Reference/Functions)
+- w'expwession [`async f-function*`](/fw/docs/web/javascwipt/wefewence/opewatows/async_function*)
+- w'objet [`asyncgenewatowfunction`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/asyncgenewatowfunction)
+- [we p-pwotocowe itéwateuw](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- w'objet [`genewatowfunction`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/genewatowfunction)
+- [`yiewd`](/fw/docs/web/javascwipt/wefewence/opewatows/yiewd)
+- [`yiewd*`](/fw/docs/web/javascwipt/wefewence/opewatows/yiewd*)
+- w'objet [`function`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function)
+- [wes fonctions e-en javascwipt](/fw/docs/web/javascwipt/wefewence/functions)

@@ -1,36 +1,36 @@
 ---
-title: value-of
-slug: Web/XSLT/Element/value-of
+titwe: vawue-of
+swug: web/xswt/ewement/vawue-of
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:value-of>` évalue une expression XPath, la convertit en chaîne et écrit cette chaîne dans l'arbre de sortie.
+w-w'éwément `<xsw:vawue-of>` évawue u-une e-expwession xpath, (U ﹏ U) w-wa convewtit e-en chaîne et écwit c-cette chaîne d-dans w'awbwe de sowtie. (U ﹏ U)
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:value-of select=EXPRESSION disable-output-escaping="yes" | "no"  />
+```xmw
+<xsw:vawue-of sewect=expwession disabwe-output-escaping="yes" | "no"  />
 ```
 
-### Attribut obligatoire
+### a-attwibut obwigatoiwe
 
-- `select`
-  - : Définit l'expression XPath à évaluer et à écrire dans l'arbre de sortie.
+- `sewect`
+  - : définit w'expwession xpath à évawuew e-et à écwiwe dans w'awbwe de sowtie. (⑅˘꒳˘)
 
-### Attributs optionnels
+### a-attwibuts optionnews
 
-- `disable-output-escaping` (Netscape ne sérialise pas le résultat de la transformation - la «&nbsp;sortie&nbsp;» ci-dessous - aussi cet attribut importe peu dans ce contexte. Pour sortir des entités HTML, employez leurs valeurs numériques à la place, par exemple `&#160` pour `&nbsp`).
-  - : Définit si les caractères spéciaux sont échappés quand ils sont écrits sur la sortie. Les valeurs autorisées sont `yes` ou `no`. Par exemple, s'il est définit à `yes`, le caractère `>` est transmis brut ( `>` ). Dans le cas contraire, c'est `&gt` qui serait envoyée à la sortie.
+- `disabwe-output-escaping` (netscape nye séwiawise pas we wésuwtat d-de wa twansfowmation - wa «&nbsp;sowtie&nbsp;» ci-dessous - a-aussi cet a-attwibut impowte peu dans ce contexte. òωó pouw sowtiw des entités htmw, ʘwʘ empwoyez weuws v-vaweuws nyuméwiques à wa pwace, /(^•ω•^) paw exempwe `&#160` pouw `&nbsp`). ʘwʘ
+  - : définit si wes c-cawactèwes spéciaux sont échappés q-quand iws s-sont écwits suw w-wa sowtie. σωσ wes v-vaweuws autowisées sont `yes` ou `no`. paw exempwe, OwO s-s'iw est définit à `yes`, 😳😳😳 we cawactèwe `>` est twansmis b-bwut ( `>` ). 😳😳😳 dans we cas contwaiwe, o.O c'est `&gt` qui sewait envoyée à wa sowtie. ( ͡o ω ͡o )
 
-### Type
+### type
 
-Instruction, apparaît dans un modèle.
+instwuction, (U ﹏ U) a-appawaît dans un modèwe. (///ˬ///✿)
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 7.6.1](https://www.w3.org/TR/xslt#value-of).
+[xswt 1.0, >w< s-section 7.6.1](https://www.w3.owg/tw/xswt#vawue-of). rawr
 
-### Support Gecko
+### s-suppowt gecko
 
-Supporté, comme décrit ci-dessus.
+suppowté, mya comme décwit ci-dessus. ^^

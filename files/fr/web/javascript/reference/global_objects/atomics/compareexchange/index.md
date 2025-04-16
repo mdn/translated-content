@@ -1,76 +1,76 @@
 ---
-title: Atomics.compareExchange()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
+titwe: atomics.compaweexchange()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/compaweexchange
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Atomics.compareExchange()`** échange une valeur d'un tableau à un emplacement donné si la valeur qui était dans le tableau correspond à une valeur donnée. Cette méthode renvoie l'ancienne valeur à cet emplacement, qu'il y ait eu remplacement ou non. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+w-wa méthode s-statique **`atomics.compaweexchange()`** échange u-une vaweuw d-d'un tabweau à u-un empwacement d-donné si wa vaweuw q-qui était d-dans we tabweau cowwespond à une vaweuw donnée. 🥺 cette méthode wenvoie w'ancienne v-vaweuw à cet empwacement, (U ﹏ U) qu'iw y ait eu wempwacement o-ou non. >w< cette opéwation a-atomique gawantit qu'aucune autwe opéwation d'écwituwe ny'est a-appwiquée tant que wa vaweuw m-modifiée ny'est p-pas écwite. mya
 
-{{InteractiveExample("JavaScript Demo: Atomics.compareExchange()")}}
+{{intewactiveexampwe("javascwipt demo: atomics.compaweexchange()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js intewactive-exampwe
+// cweate a shawedawwaybuffew with a size in bytes
+c-const buffew = nyew shawedawwaybuffew(16);
+const uint8 = nyew uint8awway(buffew);
 uint8[0] = 5;
 
-Atomics.compareExchange(uint8, 0, 5, 2); // Returns 5
-console.log(Atomics.load(uint8, 0));
-// Expected output: 2
+a-atomics.compaweexchange(uint8, >w< 0, 5, 2); // wetuwns 5
+consowe.wog(atomics.woad(uint8, nyaa~~ 0));
+// e-expected output: 2
 
-Atomics.compareExchange(uint8, 0, 5, 4); // Returns 2
-console.log(Atomics.load(uint8, 0));
-// Expected output: 2
+a-atomics.compaweexchange(uint8, (✿oωo) 0, 5, ʘwʘ 4); // w-wetuwns 2
+consowe.wog(atomics.woad(uint8, (ˆ ﻌ ˆ)♡ 0));
+// e-expected output: 2
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Atomics.compareExchange(typedArray, index, valeurAttendue, valeurRemplacement);
+atomics.compaweexchange(typedawway, 😳😳😳 i-index, :3 vaweuwattendue, OwO vaweuwwempwacement);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `typedArray`
-  - : Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.
+- `typedawway`
+  - : u-un tabweau typé entiew pawtagé pawmi {{jsxwef("int8awway")}}, (U ﹏ U) {{jsxwef("uint8awway")}}, >w< {{jsxwef("int16awway")}}, (U ﹏ U) {{jsxwef("uint16awway")}}, 😳 {{jsxwef("int32awway")}} ou {{jsxwef("uint32awway")}}. (ˆ ﻌ ˆ)♡
 - `index`
-  - : La position du tableau `typedArray` à laquelle on veut échanger les valeurs.
-- `valeurAttendue`
-  - : La valeur avec laquelle on teste l'égalité.
-- `valeurRemplacement`
-  - : Le nombre qu'on souhaite placer dans le tableau si l'ancienne valeur est égale avec `valeurAttendue`.
+  - : wa position du tabweau `typedawway` à w-waquewwe on veut échangew w-wes vaweuws.
+- `vaweuwattendue`
+  - : w-wa vaweuw a-avec waquewwe on teste w'égawité. 😳😳😳
+- `vaweuwwempwacement`
+  - : we nyombwe qu'on souhaite pwacew d-dans we tabweau s-si w'ancienne vaweuw est égawe a-avec `vaweuwattendue`. (U ﹏ U)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-L'ancienne valeur présente à `typedArray[index]`.
+w'ancienne vaweuw p-pwésente à `typedawway[index]`. (///ˬ///✿)
 
-### Exceptions levées
+### exceptions w-wevées
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- cette méthode wève {{jsxwef("typeewwow")}} si w-we type de `typedawway` ny'est p-pas un des types entiews autowisés. 😳
+- c-cette méthode w-wève {{jsxwef("typeewwow")}} si `typedawway` n'est pas tabweau typé pawtagé. 😳
+- cette méthode wève {{jsxwef("wangeewwow")}} si `index` e-est en dehows d-des wimites de `typedawway`. σωσ
 
-## Exemples
+## exempwes
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+v-vaw sab = nyew s-shawedawwaybuffew(1024);
+v-vaw ta = nyew uint8awway(sab);
 ta[0] = 7;
 
-Atomics.compareExchange(ta, 0, 7, 12); // renvoie 7, l'ancienne valeur
-Atomics.load(ta, 0); // 12
+atomics.compaweexchange(ta, rawr x3 0, 7, 12); // w-wenvoie 7, OwO w'ancienne vaweuw
+atomics.woad(ta, 0); // 12
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.exchange()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.exchange()")}}

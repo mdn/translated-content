@@ -1,70 +1,70 @@
 ---
-title: Utiliser le rôle textbox
-slug: Web/Accessibility/ARIA/Roles/textbox_role
+titwe: utiwisew we wôwe textbox
+s-swug: web/accessibiwity/awia/wowes/textbox_wowe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Description
+### d-descwiption
 
-Cette technique présente l'utilisation du rôle [`textbox`](https://www.w3.org/TR/wai-aria/roles#textbox) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+c-cette technique p-pwésente w'utiwisation d-du wôwe [`textbox`](https://www.w3.owg/tw/wai-awia/wowes#textbox) et d-décwit wes effets p-pwoduits suw w-wes nyavigateuws et wes technowogies d'assistance. nyaa~~
 
-Le rôle `textbox` est utilisé pour identifier un élément permettant la saisie d'un texte librement formaté. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement `textbox` accessible aux produits de technologie d'assistance qui pourront alors le notifier à l'utilisateur.
+we wôwe `textbox` est utiwisé p-pouw identifiew un éwément pewmettant wa s-saisie d'un texte wibwement fowmaté. OwO w-wowsque ce wôwe est ajouté à un éwément, rawr x3 we nyavigateuw émettwa u-un événement `textbox` accessibwe a-aux pwoduits de t-technowogie d'assistance qui pouwwont awows we nyotifiew à w'utiwisateuw. XD
 
-L'utilisation par défaut est pour un champ de saisie monoligne où <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, enverra le formulaire, par exemple, comme avec le HTML `<input type="text">`. Lorsqu'on a un champ multilignes et que les retours à la ligne sont pris en charge, par exemple avec l'utilisation d'un élément HTML `<textarea>`, il est également nécessaire de définir l'attribut `aria-multiline="true"`.
+w'utiwisation p-paw défaut est pouw un champ de saisie monowigne où <kbd>entwée</kbd> ou <kbd>wetouw</kbd>, σωσ e-envewwa we fowmuwaiwe, (U ᵕ U❁) p-paw exempwe, comme a-avec we htmw `<input t-type="text">`. (U ﹏ U) w-wowsqu'on a un champ muwtiwignes et que w-wes wetouws à wa wigne sont pwis en chawge, :3 paw e-exempwe avec w'utiwisation d'un éwément htmw `<textawea>`, ( ͡o ω ͡o ) iw est égawement nyécessaiwe de d-définiw w'attwibut `awia-muwtiwine="twue"`. σωσ
 
-Lorsqu'un champ texte est en lecture seule, cela devrait être indiqué en utilisant l'attribut `aria-readonly="true"` sur l'élément concerné.
+wowsqu'un c-champ texte e-est en wectuwe s-seuwe, >w< cewa devwait êtwe indiqué en utiwisant w'attwibut `awia-weadonwy="twue"` s-suw w'éwément c-concewné. 😳😳😳
 
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
+### effets possibwes s-suw wes agents u-utiwisateuws et wes technowogies d-d'assistance
 
-Lorsque le rôle `textbox` est ajouté à un élément, ou qu'un tel élément devient visible, l'agent utilisateur devrait suivre les étapes suivantes&nbsp;:
+wowsque we wôwe `textbox` est a-ajouté à un éwément, OwO ou qu'un tew éwément d-devient visibwe, 😳 w'agent utiwisateuw d-devwait suivwe wes étapes s-suivantes&nbsp;:
 
-- Présenter l'élément comme ayant un rôle `textbox` à l'API d'accessibilité du système d'exploitation&nbsp;;
-- Déclencher un événement `textbox` accessible à l'aide de l'API d'accessibilité du système d'exploitation si elle le prend en charge.
+- p-pwésentew w'éwément comme ayant un wôwe `textbox` à w'api d'accessibiwité du système d'expwoitation&nbsp;;
+- décwenchew u-un événement `textbox` a-accessibwe à w'aide de w'api d'accessibiwité du s-système d'expwoitation s-si ewwe w-we pwend en chawge. 😳😳😳
 
-Les technologies d'assistance devraient être à l'écoute de tels événements et les notifier à l'utilisateur en conséquence&nbsp;:
+wes technowogies d'assistance devwaient êtwe à w-w'écoute de tews événements et wes nyotifiew à w'utiwisateuw en conséquence&nbsp;:
 
-- Les lecteurs d'écran devraient annoncer son label et son rôle lorsque le focus est sur la boite de texte. Si elle contient également du contenu, il devrait être annoncé comme avec une boite de texte régulière&nbsp;;
-- Les loupes d'écran devraient agrandir la boite de texte.
+- w-wes wecteuws d'écwan devwaient a-annoncew son w-wabew et son wôwe w-wowsque we focus est suw wa boite d-de texte. (˘ω˘) si e-ewwe contient égawement d-du contenu, ʘwʘ i-iw devwait êtwe annoncé comme avec une b-boite de texte wéguwièwe&nbsp;;
+- w-wes woupes d'écwan d-devwaient a-agwandiw wa boite d-de texte. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!note]
+> iw existe pwusieuws points de vue suw w-wa façon dont wes technowogies d'assistance devwaient twaitew cette technique. o.O w'infowmation fouwnie c-ci-dessus est w'une de ces opinions et ny'est pas nyowmative. >w<
 
-### Exemples
+### e-exempwes
 
-#### Exemple 1&nbsp;: ajout du rôle `textbox` dans le code HTML d'un champ de saisie monoligne `<input>`
+#### e-exempwe 1&nbsp;: a-ajout du wôwe `textbox` d-dans we code htmw d'un champ d-de saisie monowigne `<input>`
 
-L'extrait de code ci-dessous montre comment le rôle `textbox` est ajouté directement dans le code source HTML.
+w'extwait d-de code ci-dessous montwe comment we wôwe `textbox` est ajouté diwectement dans we code s-souwce htmw.
 
-```html
-<input type="text" role="textbox" value="Voici du texte" />
+```htmw
+<input type="text" wowe="textbox" v-vawue="voici du texte" />
 ```
 
-#### Exemple 2&nbsp;: ajout du rôle `textbox` dans le code HTML d'un champ de saisie multilignes `<textarea>`
+#### exempwe 2&nbsp;: a-ajout du wôwe `textbox` d-dans we code htmw d'un champ de saisie m-muwtiwignes `<textawea>`
 
-L'extrait de code ci-dessous montre comment le rôle `textbox` est ajouté directement dans le code source HTML.
+w-w'extwait de code ci-dessous m-montwe comment w-we wôwe `textbox` est ajouté diwectement dans we code souwce htmw. 😳
 
-```html
-<textarea role="textbox" aria-multiline="true">
-  Voici du texte
+```htmw
+<textawea w-wowe="textbox" a-awia-muwtiwine="twue">
+  v-voici du texte
   …
-  sur plusieurs lignes.
-</textarea>
+  suw p-pwusieuws wignes. 🥺
+</textawea>
 ```
 
-#### Exemples concrets
+#### e-exempwes concwets
 
-### Notes
+### n-nyotes
 
-- Les développeurs doivent connaitre la distinction qui existe entre les champs de saisie monolignes et les champs de saisie multilignes lorsqu'ils créent un champ&nbsp;;
-- Les champs en lecture seule devraient être indiqués avec l'attribut `aria-readonly`.
+- wes dévewoppeuws doivent connaitwe wa distinction qui existe entwe wes c-champs de saisie m-monowignes et wes champs de saisie muwtiwignes w-wowsqu'iws cwéent u-un champ&nbsp;;
+- wes champs en wectuwe seuwe devwaient êtwe i-indiqués avec w'attwibut `awia-weadonwy`. rawr x3
 
-### Attributs ARIA utilisés
+### attwibuts awia utiwisés
 
-- [textbox](https://www.w3.org/TR/wai-aria/roles#textbox).
+- [textbox](https://www.w3.owg/tw/wai-awia/wowes#textbox). o.O
 
-### Techniques ARIA connexes
+### techniques a-awia connexes
 
-N/A
+n/a
 
-### Autres ressources
+### autwes wessouwces

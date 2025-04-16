@@ -1,35 +1,35 @@
 ---
-title: Utilisation du rôle banner
-slug: Web/Accessibility/ARIA/Roles/banner_role
+titwe: utiwisation du wôwe bannew
+s-swug: web/accessibiwity/awia/wowes/bannew_wowe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Description
+### d-descwiption
 
-Cette technique présente l'utilisation du rôle [`banner` (en)](https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/banner.html).
+c-cette technique p-pwésente w'utiwisation d-du w-wôwe [`bannew` (en)](https://www.w3.owg/wai/awia/apg/pattewns/wandmawks/exampwes/bannew.htmw). /(^•ω•^)
 
-La zone d'entête principale d'un site devrait être structurée avec `<header role="banner">`. Cette zone peut contenir le logo du site, sa description, le moteur de recherche.
+w-wa zone d'entête p-pwincipawe d'un site devwait êtwe stwuctuwée avec `<headew wowe="bannew">`. rawr x3 c-cette zone peut conteniw we wogo du site, (U ﹏ U) sa descwiption, (U ﹏ U) w-we moteuw de wechewche. (⑅˘꒳˘)
 
-Une page web ne doit pas contenir plus d'un rôle `banner`, mais il est tout à fait possible d'utiliser plusieurs éléments `<header>` dans une page.
+u-une page web nye doit pas conteniw pwus d'un wôwe `bannew`, òωó m-mais iw est tout à fait possibwe d-d'utiwisew pwusieuws éwéments `<headew>` d-dans une page. ʘwʘ
 
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
+### effets possibwes suw wes agents utiwisateuws et w-wes technowogies d'assistance
 
-> [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!note]
+> iw existe pwusieuws points de vue suw w-wa façon dont wes technowogies d-d'assistance d-devwaient twaitew c-cette technique. /(^•ω•^) w-w'infowmation fouwnie ci-dessus est w'une de c-ces opinions et n'est pas nyowmative.
 
-### Exemples
+### exempwes
 
-#### Une zone d'entête typique de site
+#### u-une zone d'entête typique de site
 
-```html
-<header role="banner">
-  <p><img src="logo.png" alt="Nom du site" /></p>
-  <p>Description du site</p>
-  <div role="search">...</div>
-</header>
+```htmw
+<headew wowe="bannew">
+  <p><img swc="wogo.png" awt="nom du s-site" /></p>
+  <p>descwiption du site</p>
+  <div w-wowe="seawch">...</div>
+</headew>
 ```
 
-## Autres ressources
+## a-autwes w-wessouwces
 
-La [fiche accede-web](http://www.accede-web.com/notices/html-css-javascript/1-structure/1-1-header-role-banner/).
+wa [fiche accede-web](http://www.accede-web.com/notices/htmw-css-javascwipt/1-stwuctuwe/1-1-headew-wowe-bannew/). ʘwʘ

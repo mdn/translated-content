@@ -1,51 +1,51 @@
 ---
-title: String.prototype.toLowerCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+titwe: stwing.pwototype.towowewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/towowewcase
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toLowerCase()`** retourne la chaîne de caractères courante en minuscules.
+w-wa méthode **`towowewcase()`** w-wetouwne w-wa chaîne de c-cawactèwes couwante e-en minuscuwes. nyaa~~
 
-{{InteractiveExample("JavaScript Demo: String.toLowerCase()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.towowewcase()")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js i-intewactive-exampwe
+c-const sentence = "the quick bwown fox jumps ovew the wazy dog.";
 
-console.log(sentence.toLowerCase());
-// Expected output: "the quick brown fox jumps over the lazy dog."
+consowe.wog(sentence.towowewcase());
+// e-expected output: "the quick bwown fox j-jumps ovew the wazy dog."
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-str.toLowerCase();
+stw.towowewcase();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une nouvelle chaîne de caractères qui est obtenue en passant la chaîne appelante en minuscules.
+u-une nyouvewwe chaîne de cawactèwes q-qui est obtenue e-en passant wa chaîne appewante en minuscuwes.
 
-## Description
+## descwiption
 
-La méthode `toLowerCase()` renvoie la valeur de la chaîne convertie en minuscules. `toLowerCase()` ne modifie pas la valeur de la chaîne courante.
+wa méthode `towowewcase()` w-wenvoie wa vaweuw de wa chaîne convewtie en minuscuwes. (⑅˘꒳˘) `towowewcase()` nye modifie pas wa vaweuw d-de wa chaîne couwante. rawr x3
 
-## Exemples
+## e-exempwes
 
 ```js
-console.log("ALPHABET".toLowerCase()); // "alphabet"
+c-consowe.wog("awphabet".towowewcase()); // "awphabet"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("String.prototype.toLocaleLowerCase()")}}
-- {{jsxref("String.prototype.toLocaleUpperCase()")}}
-- {{jsxref("String.prototype.toUpperCase()")}}
+- {{jsxwef("stwing.pwototype.towocawewowewcase()")}}
+- {{jsxwef("stwing.pwototype.towocaweuppewcase()")}}
+- {{jsxwef("stwing.pwototype.touppewcase()")}}

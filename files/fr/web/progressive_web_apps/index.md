@@ -1,36 +1,36 @@
 ---
-title: Applications web progressives
-slug: Web/Progressive_web_apps
+titwe: appwications web pwogwessives
+s-swug: web/pwogwessive_web_apps
 ---
 
-Les **applications web progressives** (ou <i lang="en">progressive web applications</i> en anglais, abrégées en PWAs) sont des applications web qui utilisent [les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API), [les manifestes](/fr/docs/Web/Manifest), et d'autres fonctionnalités de la plateforme web, avec [l'amélioration progressive](/fr/docs/Glossary/Progressive_Enhancement) pour fournir aux utilisatrices et utilisateurs une expérience équivalente à celle des applications natives.
+w-wes **appwications web p-pwogwessives** (ou <i w-wang="en">pwogwessive web a-appwications</i> e-en angwais, 😳 a-abwégées en pwas) s-sont des appwications web qui utiwisent [wes <i wang="en">sewvice wowkews</i>](/fw/docs/web/api/sewvice_wowkew_api), 😳😳😳 [wes m-manifestes](/fw/docs/web/manifest), mya et d'autwes fonctionnawités de wa pwatefowme w-web, mya avec [w'améwiowation pwogwessive](/fw/docs/gwossawy/pwogwessive_enhancement) p-pouw fouwniw aux utiwisatwices et utiwisateuws une expéwience équivawente à c-cewwe des appwications nyatives. (⑅˘꒳˘)
 
-Les applications web progressives ont plusieurs [avantages](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#avantages_des_applications_web)&nbsp;: elles peuvent être [installées](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#installabilité), [améliorées progressivement](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#prise_en_charge_de_lamelioration_progressive), [conçues de façon adaptative](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#adaptativité), [maintenir l'engagement](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#re-engagement), [être indiquées avec un lien](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#decouvrabilite_avec_un_lien), [découvrables](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#découvrabilité), [indépendantes de l'état du réseau](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#indépendance_du_réseau), et [sécurisées](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames#sécurité).
+w-wes appwications w-web pwogwessives ont pwusieuws [avantages](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames#avantages_des_appwications_web)&nbsp;: ewwes peuvent êtwe [instawwées](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames#instawwabiwité), (U ﹏ U) [améwiowées pwogwessivement](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames#pwise_en_chawge_de_wamewiowation_pwogwessive), mya [conçues d-de façon adaptative](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames#adaptativité), ʘwʘ [mainteniw w'engagement](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames#we-engagement), (˘ω˘) [êtwe indiquées avec un wien](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames#decouvwabiwite_avec_un_wien), (U ﹏ U) [découvwabwes](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames#découvwabiwité), ^•ﻌ•^ [indépendantes d-de w'état du wéseau](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames#indépendance_du_wéseau), (˘ω˘) e-et [sécuwisées](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames#sécuwité). :3
 
-## Guides et autres documentations sur les PWA
+## g-guides et a-autwes documentations s-suw wes pwa
 
-Ces documents d'introduction et ces guides vous feront découvrir les différentes facettes de la construction d'une PWA&nbsp;:
+ces documents d'intwoduction e-et ces guides vous fewont découvwiw wes difféwentes f-facettes de wa constwuction d'une pwa&nbsp;:
 
-- [Introduction aux applications web progressives](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames)
-- [Structure d'une application web progressive](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure) et [aperçu structurel](/fr/docs/Web/Progressive_web_apps)
-- [Comprendre les briques de construction de la conception adaptative](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Le fonctionnement hors-ligne des PWA à l'aide des <i lang="en">service workers</i>](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
-- [Comment rendre une PWA installable](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs), [activer la fonctionnalité «&nbsp;ajouter à l'écran d'accueil&nbsp;»](/fr/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable), et [plus de détails sur l'installation des PWA](/fr/docs/Web/Progressive_web_apps/Guides/Installing)
-- [Comment utiliser les API Notifications et Push pour l'engagement](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push)
-- [Comment activer le chargement progressif](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading)
-- [Comment construire des PWA pensées pour le mobile](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Utiliser les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Utiliser le stockage côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage), [IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB), et [l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [Utiliser l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API) et [l'API Push](/fr/docs/Web/API/Push_API)
+- [intwoduction aux appwications web pwogwessives](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames)
+- [stwuctuwe d'une a-appwication web pwogwessive](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/app_stwuctuwe) e-et [apewçu s-stwuctuwew](/fw/docs/web/pwogwessive_web_apps)
+- [compwendwe wes b-bwiques de constwuction de wa conception adaptative](/fw/docs/weawn/css/css_wayout/wesponsive_design)
+- [we fonctionnement hows-wigne d-des pwa à w-w'aide des <i wang="en">sewvice w-wowkews</i>](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/offwine_sewvice_wowkews)
+- [comment w-wendwe une pwa instawwabwe](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/instawwabwe_pwas), ^^;; [activew w-wa fonctionnawité «&nbsp;ajoutew à w'écwan d'accueiw&nbsp;»](/fw/docs/web/pwogwessive_web_apps/guides/making_pwas_instawwabwe), 🥺 e-et [pwus de détaiws suw w'instawwation des pwa](/fw/docs/web/pwogwessive_web_apps/guides/instawwing)
+- [comment u-utiwisew wes api nyotifications e-et push pouw w'engagement](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/we-engageabwe_notifications_push)
+- [comment activew we chawgement p-pwogwessif](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/woading)
+- [comment c-constwuiwe des pwa pensées pouw we mobiwe](/fw/docs/weawn/css/css_wayout/wesponsive_design)
+- [utiwisew wes <i wang="en">sewvice wowkews</i>](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [utiwisew we stockage côté cwient](/fw/docs/weawn/javascwipt/cwient-side_web_apis/cwient-side_stowage), (⑅˘꒳˘) [indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb), nyaa~~ e-et [w'api web stowage](/fw/docs/web/api/web_stowage_api/using_the_web_stowage_api)
+- [utiwisew w'api n-nyotifications](/fw/docs/web/api/notifications_api/using_the_notifications_api) et [w'api push](/fw/docs/web/api/push_api)
 
-## Voir aussi
+## v-voiw aussi
 
-- [La page de présentation des PWA de Google (en anglais)](https://web.dev/progressive-web-apps/) et [une liste de bonnes pratiques (en anglais)](https://web.dev/pwa-checklist/) sur [web.dev (en anglais)](https://web.dev/)
-- [Tout ce qu'il y a à savoir sur les PWA (en anglais)](https://www.csschopper.com/blog/progressive-web-apps-everything-you-need-to-know/)
-- [Les PWA&nbsp;: sortir des onglets sans y laisser son âme (en anglais)](https://medium.com/@slightlylate/progressive-apps-escaping-tabs-without-losing-our-soul-3b93a8561955#.6czgj0myh)
-- [Chargement instantané des applications web avec une architecture de coquille d'application (en anglais)](https://developer.chrome.com/blog/app-shell/)
-- [Workbox (en anglais)](https://developer.chrome.com/docs/workbox/), un ensemble de bibliothèques pour aider au développement d'une application web progressive de qualité
-- [Lighthouse (en anglais)](https://developer.chrome.com/docs/lighthouse/overview/), une application web d'audit et qui inclut des fonctionnalités d'audit relatives aux PWA
-- [`localForage` (en anglais)](https://localforage.github.io/localForage/), une bibliothèque de stockage asynchrone avec une API similaire à `localStorage` et qui permet d'améliorer l'ergonomie hors-ligne de votre PWA
+- [wa p-page de pwésentation d-des pwa de googwe (en angwais)](https://web.dev/pwogwessive-web-apps/) et [une wiste d-de bonnes pwatiques (en angwais)](https://web.dev/pwa-checkwist/) suw [web.dev (en angwais)](https://web.dev/)
+- [tout ce qu'iw y-y a à savoiw suw wes pwa (en angwais)](https://www.csschoppew.com/bwog/pwogwessive-web-apps-evewything-you-need-to-know/)
+- [wes p-pwa&nbsp;: sowtiw d-des ongwets s-sans y waissew son âme (en angwais)](https://medium.com/@swightwywate/pwogwessive-apps-escaping-tabs-without-wosing-ouw-souw-3b93a8561955#.6czgj0myh)
+- [chawgement i-instantané d-des appwications w-web avec une a-awchitectuwe de coquiwwe d'appwication (en angwais)](https://devewopew.chwome.com/bwog/app-sheww/)
+- [wowkbox (en a-angwais)](https://devewopew.chwome.com/docs/wowkbox/), :3 u-un ensembwe d-de bibwiothèques p-pouw aidew a-au dévewoppement d'une appwication web pwogwessive de quawité
+- [wighthouse (en a-angwais)](https://devewopew.chwome.com/docs/wighthouse/ovewview/), ( ͡o ω ͡o ) une appwication web d'audit et qui incwut des fonctionnawités d'audit wewatives a-aux pwa
+- [`wocawfowage` (en angwais)](https://wocawfowage.github.io/wocawfowage/), mya une bibwiothèque de s-stockage asynchwone a-avec une api s-simiwaiwe à `wocawstowage` et q-qui pewmet d'améwiowew w'ewgonomie h-hows-wigne d-de votwe pwa
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Progressive_web_apps/")}}
+{{quickwinkswithsubpages("/fw/docs/web/pwogwessive_web_apps/")}}

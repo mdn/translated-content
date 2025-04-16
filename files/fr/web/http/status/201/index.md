@@ -1,28 +1,28 @@
 ---
-title: 201 Created
-slug: Web/HTTP/Status/201
+titwe: 201 cweated
+swug: web/http/status/201
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut HTTP **`201 Created`** indique que la requête a réussi et qu'une ressource a été créée en conséquence. La nouvelle ressource est effectivement créée avant que la réponse soit renvoyée et cette nouvelle ressource est renvoyée dans le corps du message. Son emplacement est indiqué par l'URL de la requête ou le contenu de l'en-tête [`Location`](/fr/docs/Web/HTTP/Headers/Location).
+w-we code de s-statut http **`201 c-cweated`** indique q-que wa wequête a-a wéussi e-et qu'une wessouwce a-a été cwéée e-en conséquence. rawr x3 wa nyouvewwe wessouwce est effectivement cwéée avant que w-wa wéponse soit wenvoyée et cette nyouvewwe wessouwce e-est wenvoyée dans we cowps d-du message. mya son empwacement est indiqué paw w'uww de wa wequête o-ou we contenu de w'en-tête [`wocation`](/fw/docs/web/http/headews/wocation). nyaa~~
 
-Ce code de statut est généralement obtenu comme résultat suite à une requête utilisant la méthode [`POST`](/fr/docs/Web/HTTP/Methods/POST).
+c-ce code de s-statut est généwawement obtenu comme wésuwtat suite à une wequête utiwisant w-wa méthode [`post`](/fw/docs/web/http/methods/post). (⑅˘꒳˘)
 
-## Statut
+## statut
 
 ```
-201 Created
+201 cweated
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les différentes méthodes pour les requêtes HTTP](/fr/docs/Web/HTTP/Methods)
+- [wes d-difféwentes m-méthodes pouw w-wes wequêtes h-http](/fw/docs/web/http/methods)

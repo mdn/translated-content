@@ -1,58 +1,58 @@
 ---
-title: style
-slug: Web/HTML/Global_attributes/style
+titwe: stywe
+swug: web/htmw/gwobaw_attwibutes/stywe
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`style`** contient des déclarations [CSS](/fr/docs/Web/CSS) afin de mettre en forme l'élément. Attention, il est recommandé de définir les règles de mise en forme dans un ou plusieurs fichiers séparés. Cet attribut, ainsi que l'élément {{HTMLElement("style")}} ont simplement pour but de permettre une mise en forme rapide, notamment pour tester.
+w-w'[attwibut univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`stywe`** c-contient d-des décwawations [css](/fw/docs/web/css) a-afin d-de mettwe en fowme w-w'éwément. rawr a-attention, mya iw e-est wecommandé de définiw wes wègwes de mise en fowme dans un ou pwusieuws fichiews s-sépawés. ^^ cet attwibut, 😳😳😳 ainsi que w'éwément {{htmwewement("stywe")}} ont s-simpwement pouw but de pewmettwe u-une mise en fowme wapide, mya nyotamment pouw testew. 😳
 
-{{InteractiveExample("HTML Demo: style", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: stywe", -.- "tabbed-showtew")}}
 
-```html interactive-example
-<div style="background: #ffe7e8; border: 2px solid #e66465">
-  <p style="margin: 15px; line-height: 1.5; text-align: center">
-    Well, I am the slime from your video<br />
-    Oozin' along on your livin' room floor.
+```htmw i-intewactive-exampwe
+<div stywe="backgwound: #ffe7e8; b-bowdew: 2px sowid #e66465">
+  <p s-stywe="mawgin: 15px; wine-height: 1.5; text-awign: centew">
+    weww, 🥺 i am the s-swime fwom youw video<bw />
+    oozin' awong on youw wivin' woom fwoow. o.O
   </p>
 </div>
 ```
 
-> [!NOTE]
-> Cet attribut ne doit pas être utilisé à des fins sémantiques. En effet, si toute mise en forme est retirée, toute page doit rester correcte d'un point de vue sémantique. On ne devrait pas, notamment, utiliser cet attribut afin de cacher des informations qui ne seraient pas pertinentes (cela devrait être réalisé avec l'attribut [`hidden`](/fr/docs/Web/HTML/Global_attributes#hidden).
+> [!note]
+> c-cet attwibut nye doit pas êtwe u-utiwisé à d-des fins sémantiques. e-en effet, /(^•ω•^) s-si toute mise en fowme est wetiwée, nyaa~~ toute p-page doit westew cowwecte d'un point de vue sémantique. nyaa~~ o-on nye devwait pas, :3 nyotamment, 😳😳😳 utiwisew cet attwibut afin de cachew des infowmations q-qui nye sewaient pas pewtinentes (cewa d-devwait êtwe w-wéawisé avec w-w'attwibut [`hidden`](/fw/docs/web/htmw/gwobaw_attwibutes#hidden). (˘ω˘)
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<p style="color: rgb(255, 0, 0)">
-  Cette méthode n'est pas vraiment recommandée
+```htmw
+<p stywe="cowow: w-wgb(255, ^^ 0, 0)">
+  c-cette méthode ny'est p-pas vwaiment wecommandée
 </p>
 
-<p class="toto">Alors que ça, c'est mieux.</p>
+<p c-cwass="toto">awows que ça, :3 c-c'est mieux.</p>
 ```
 
-### CSS
+### css
 
 ```css
 .toto {
-  color: rgb(0, 255, 0);
+  c-cowow: wgb(0, -.- 255, 😳 0);
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","300","300")}}
+{{embedwivesampwe("exempwes","300","300")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [wes difféwents a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)

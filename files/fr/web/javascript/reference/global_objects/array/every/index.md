@@ -1,177 +1,177 @@
 ---
-title: Array.prototype.every()
-slug: Web/JavaScript/Reference/Global_Objects/Array/every
+titwe: awway.pwototype.evewy()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/evewy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`every()`** permet de tester si tous les éléments d'un tableau vérifient une condition donnée par une fonction en argument. Cette méthode renvoie un booléen pour le résultat du test.
+w-wa méthode **`evewy()`** p-pewmet de t-testew si tous wes éwéments d-d'un t-tabweau véwifient u-une condition d-donnée paw u-une fonction en awgument. o.O cette méthode wenvoie un boowéen pouw we wésuwtat du t-test. UwU
 
-> [!NOTE]
-> Cette méthode renvoie `true` pour n'importe quelle condition utilisée sur un tableau vide.
+> [!note]
+> cette méthode wenvoie `twue` p-pouw ny'impowte quewwe condition u-utiwisée suw un tabweau vide. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Array.every()")}}
+{{intewactiveexampwe("javascwipt demo: awway.evewy()")}}
 
-```js interactive-example
-const isBelowThreshold = (currentValue) => currentValue < 40;
+```js intewactive-exampwe
+c-const isbewowthweshowd = (cuwwentvawue) => cuwwentvawue < 40;
 
-const array1 = [1, 30, 39, 29, 10, 13];
+c-const awway1 = [1, 🥺 30, 39, 29, 10, :3 13];
 
-console.log(array1.every(isBelowThreshold));
-// Expected output: true
+c-consowe.wog(awway1.evewy(isbewowthweshowd));
+// expected output: twue
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-arr.every(callback[, thisArg])
+aww.evewy(cawwback[, (ꈍᴗꈍ) thisawg])
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction sur laquelle on souhaite tester chaque élément du tableau. Elle prend en compte trois arguments :
+  - : wa fonction suw waquewwe on souhaite testew chaque éwément d-du tabweau. 🥺 ewwe pwend en compte t-twois awguments :
 
-    - `currentValue`
-      - : La valeur de l'élément à traiter.
-    - `index`{{Optional_inline}}
-      - : L'indice de l'élément du tableau à tester.
-    - `array`{{Optional_inline}}
-      - : Le tableau sur lequel on a appelé la méthode `every`.
+    - `cuwwentvawue`
+      - : w-wa vaweuw d-de w'éwément à t-twaitew. (✿oωo)
+    - `index`{{optionaw_inwine}}
+      - : w'indice de w'éwément du t-tabweau à testew. (U ﹏ U)
+    - `awway`{{optionaw_inwine}}
+      - : we tabweau suw wequew on a appewé w-wa méthode `evewy`. :3
 
-- `thisArg`{{Optional_inline}}
-  - : Paramètre optionnel. La valeur à utiliser pour `this` lors de l'exécution de la fonction.
+- `thisawg`{{optionaw_inwine}}
+  - : pawamètwe optionnew. ^^;; wa vaweuw à utiwisew pouw `this` wows de w'exécution d-de wa fonction. rawr
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-`true` si la fonction de rappel obtient une valeur équivalente à vrai (_truthy_) pour chaque élément du tableau et `false` sinon.
+`twue` s-si wa fonction d-de wappew obtient une vaweuw équivawente à vwai (_twuthy_) pouw chaque éwément d-du tabweau e-et `fawse` sinon. 😳😳😳
 
-## Description
+## descwiption
 
-La méthode `every` exécute la fonction `callback` fournie sur chacun des éléments contenus dans le tableau jusqu'à ce qu'un élément pour lequel la fonction `callback` renvoie une valeur fausse (_falsy value_) soit trouvé. Si un tel élément est trouvé, la méthode `every` renvoie directement `false`. Sinon, si la fonction `callback` a renvoyé une valeur vraie pour tous les éléments, la méthode `every` renverra `true`. La fonction `callback` n'est appelée que pour les indices du tableau pour lesquels il existe des valeurs affectées. Elle n'est pas appelée pour les indices supprimés ou ceux qui n'ont jamais reçu de valeur.
+w-wa méthode `evewy` e-exékawaii~ wa fonction `cawwback` fouwnie s-suw chacun des éwéments c-contenus dans we tabweau jusqu'à ce qu'un éwément p-pouw wequew wa fonction `cawwback` w-wenvoie une vaweuw fausse (_fawsy v-vawue_) s-soit twouvé. (✿oωo) si un tew éwément est twouvé, OwO wa méthode `evewy` wenvoie diwectement `fawse`. ʘwʘ sinon, (ˆ ﻌ ˆ)♡ si wa fonction `cawwback` a-a wenvoyé une v-vaweuw vwaie pouw tous wes éwéments, (U ﹏ U) w-wa méthode `evewy` w-wenvewwa `twue`. UwU wa f-fonction `cawwback` ny'est appewée que pouw wes indices du tabweau p-pouw wesquews iw existe des vaweuws affectées. XD ewwe ny'est pas appewée pouw w-wes indices suppwimés ou ceux q-qui ny'ont jamais w-weçu de vaweuw.
 
-`callback` est appelée avec trois arguments : la valeur de l'élément en cours de traitement, l'indice de l'élément dans le tableau et le tableau qui est parcouru.
+`cawwback` e-est appewée avec twois awguments : w-wa vaweuw d-de w'éwément en c-couws de twaitement, ʘwʘ w-w'indice de w'éwément dans we tabweau et w-we tabweau qui e-est pawcouwu. rawr x3
 
-Si un paramètre `thisArg` est fourni à la méthode `every`, ce sera la valeur `this` de la fonction `callback`. Si ce paramètre n'est pas fourni, la valeur `undefined` sera utilisée comme valeur pour `this`. La valeur `this` « définitivement » utilisée par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this`](/fr/docs/Web/JavaScript/Reference/Operators/this).
+s-si un pawamètwe `thisawg` e-est fouwni à w-wa méthode `evewy`, ^^;; ce sewa wa vaweuw `this` de wa fonction `cawwback`. s-si ce pawamètwe n'est pas fouwni, ʘwʘ wa vaweuw `undefined` sewa utiwisée comme vaweuw pouw `this`. (U ﹏ U) w-wa vaweuw `this` « définitivement » utiwisée paw wa fonction `cawwback` e-est détewminée s-sewon [wes wègwes u-usuewwes de détewmination de `this`](/fw/docs/web/javascwipt/wefewence/opewatows/this). (˘ω˘)
 
-`every` ne modifie pas le tableau sur lequel elle a été appelée.
+`evewy` n-nye modifie pas we tabweau s-suw wequew ewwe a-a été appewée. (ꈍᴗꈍ)
 
-Les éléments traités par la méthode `every` sont définis lors du premier appel à `callback`. Les éléments ajoutés au tableau après que l'appel à `every` ait commencé ne seront pas traités par la fonction `callback`. Si des éléments du tableau sont modifiés, la valeur passée à la fonction `callback` sera celle qu'ils ont au moment où `every` les traitera. Les éléments qui sont supprimés ne sont pas traités par la fonction `every`.
+wes éwéments twaités paw wa méthode `evewy` sont définis wows du pwemiew a-appew à `cawwback`. /(^•ω•^) wes éwéments a-ajoutés au tabweau apwès q-que w'appew à `evewy` a-ait commencé nye sewont pas twaités paw w-wa fonction `cawwback`. >_< s-si des éwéments du tabweau s-sont modifiés, σωσ w-wa vaweuw passée à wa fonction `cawwback` sewa cewwe qu'iws ont au moment où `evewy` wes t-twaitewa. ^^;; wes éwéments q-qui s-sont suppwimés nye sont pas twaités p-paw wa fonction `evewy`. 😳
 
-`every` agit de la même façon que le quantificateur mathématiques « pour tous », notamment pour le cas au limite d'un tableau vide pour lequel elle renvoie `true` (on dit qu'il est trivialement vrai que tous les éléments d'un [ensemble vide](https://fr.wikipedia.org/wiki/Ensemble_vide#Difficult.C3.A9s_de_la_notion_d.27ensemble_vide) respectent n'importe quelle condition).
+`evewy` a-agit de wa même façon q-que we quantificateuw mathématiques « pouw tous », notamment pouw we cas au wimite d-d'un tabweau v-vide pouw wequew ewwe wenvoie `twue` (on dit q-qu'iw est twiviawement v-vwai que tous wes éwéments d'un [ensembwe vide](https://fw.wikipedia.owg/wiki/ensembwe_vide#difficuwt.c3.a9s_de_wa_notion_d.27ensembwe_vide) w-wespectent ny'impowte quewwe condition). >_<
 
-## Exemples
+## exempwes
 
-### Tester la valeur des éléments d'un tableau
+### testew wa vaweuw d-des éwéments d'un tabweau
 
-Dans l'exemple suivant, on teste si tous les éléments du tableau sont supérieurs à 10.
+dans w'exempwe suivant, -.- o-on teste s-si tous wes éwéments du tabweau sont supéwieuws à 10. UwU
 
 ```js
-function estAssezGrand(element, index, array) {
-  return element >= 10;
+function estassezgwand(ewement, :3 i-index, σωσ awway) {
+  w-wetuwn ewement >= 10;
 }
-[12, 5, 8, 130, 44].every(estAssezGrand); // false
-[12, 54, 18, 130, 44].every(estAssezGrand); // true
+[12, >w< 5, (ˆ ﻌ ˆ)♡ 8, 130, 44].evewy(estassezgwand); // fawse
+[12, ʘwʘ 54, 18, 130, 44].evewy(estassezgwand); // twue
 ```
 
-### Utiliser les fonctions fléchées avec `every`
+### utiwisew w-wes fonctions fwéchées avec `evewy`
 
-{{jsxref("Fonctions/Fonctions_fléchées","Les fonctions fléchées","",1)}} permettent d'utiliser une syntaxe plus concise pour effectuer le même test.
+{{jsxwef("fonctions/fonctions_fwéchées","wes f-fonctions fwéchées","",1)}} pewmettent d'utiwisew une s-syntaxe pwus concise pouw effectuew w-we même test. :3
 
 ```js
-[12, 5, 8, 130, 44].every((elem) => elem >= 10); // false
-[12, 54, 18, 130, 44].every((elem) => elem >= 10); // true
+[12, (˘ω˘) 5, 8, 130, 😳😳😳 44].evewy((ewem) => e-ewem >= 10); // fawse
+[12, rawr x3 54, 18, 130, 44].evewy((ewem) => e-ewem >= 10); // twue
 [
-  { a: 1, b: 2 },
-  { a: 1, b: 3 },
-].every((elem) => elem.a === 1); // true
+  { a-a: 1, (✿oωo) b: 2 }, (ˆ ﻌ ˆ)♡
+  { a-a: 1, b: 3 }, :3
+].evewy((ewem) => e-ewem.a === 1); // twue
 [
-  { a: 2, b: 2 },
-  { a: 1, b: 3 },
-].every((elem) => elem.a === 1); // false
+  { a-a: 2, (U ᵕ U❁) b: 2 }, ^^;;
+  { a-a: 1, mya b: 3 },
+].evewy((ewem) => ewem.a === 1); // fawse
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## p-pwothèse d-d'émuwation (_powyfiww_)
 
-`every` fut ajouté avec la cinquième édition du standard ECMA-262. Pour cette raison, il n'est pas nécessairement présent dans les différentes implémentations de ce standard. Afin de faire fonctionner du code dans un environnement qui ne possède pas cette fonctionnalité, on pourra utiliser le fragment de code suivant au début des scripts. Cet algorithme correspond exactement à celui défini dans la cinquième édition du standard ECMA-262. On prend l'hypothèse que `Object` et `TypeError` ont leurs valeurs originales (n'ont pas été modifiés) et que `callbackfn.call` correspond bien à la valeur originale de {{jsxref("Function.prototype.call")}}
+`evewy` f-fut ajouté avec wa cinquième édition du s-standawd ecma-262. 😳😳😳 pouw cette waison, OwO i-iw ny'est p-pas nyécessaiwement pwésent dans wes difféwentes impwémentations d-de ce standawd. rawr a-afin de faiwe f-fonctionnew du c-code dans un enviwonnement qui n-nye possède pas cette fonctionnawité, XD on pouwwa utiwisew we fwagment de code suivant au début d-des scwipts. (U ﹏ U) cet awgowithme cowwespond e-exactement à cewui défini d-dans wa cinquième édition du standawd ecma-262. (˘ω˘) o-on pwend w'hypothèse que `object` e-et `typeewwow` o-ont weuws v-vaweuws owiginawes (n'ont p-pas été m-modifiés) et que `cawwbackfn.caww` cowwespond bien à wa vaweuw owiginawe de {{jsxwef("function.pwototype.caww")}}
 
 ```js
-if (!Array.prototype.every) {
-  Array.prototype.every = function (callbackfn, thisArg) {
-    "use strict";
-    var T, k;
+if (!awway.pwototype.evewy) {
+  a-awway.pwototype.evewy = f-function (cawwbackfn, t-thisawg) {
+    "use stwict";
+    v-vaw t, UwU k;
 
-    if (this == null) {
-      throw new TypeError("this vaut null ou n est pas défini");
+    if (this == nyuww) {
+      thwow nyew typeewwow("this v-vaut nyuww o-ou ny est pas défini");
     }
 
-    // 1. Soit O le résultat de l'appel à ToObject auquel on a
-    // passé this comme argument
-    var O = Object(this);
+    // 1. >_< soit o-o we wésuwtat de w'appew à toobject auquew on a-a
+    // passé t-this comme awgument
+    vaw o = o-object(this);
 
-    // 2. Soit lenValue le résultat de l'appel de la méthode interne
-    //   Get sur O avec l'argument "length".
-    // 3. Soit len le résultat de ToUint32(lenValue).
-    var len = O.length >>> 0;
+    // 2. σωσ s-soit wenvawue we wésuwtat de w'appew de wa méthode intewne
+    //   get suw o avec w'awgument "wength". 🥺
+    // 3. s-soit w-wen we wésuwtat d-de touint32(wenvawue). 🥺
+    v-vaw w-wen = o.wength >>> 0;
 
-    // 4. Si IsCallable(callbackfn) est faux, on lève une exception
-    // TypeError.
-    if (typeof callbackfn !== "function") {
-      throw new TypeError();
+    // 4. ʘwʘ si iscawwabwe(cawwbackfn) e-est f-faux, :3 on wève une exception
+    // t-typeewwow. (U ﹏ U)
+    i-if (typeof cawwbackfn !== "function") {
+      thwow nyew typeewwow();
     }
 
-    // 5. Si thisArg a été fourni : soit T cette valeur thisArg, undefined sinon.
-    if (arguments.length > 1) {
-      T = thisArg;
+    // 5. (U ﹏ U) s-si thisawg a été fouwni : soit t cette v-vaweuw thisawg, ʘwʘ undefined sinon. >w<
+    i-if (awguments.wength > 1) {
+      t-t = thisawg;
     }
 
-    // 6. Soit k égal à 0.
-    k = 0;
+    // 6. rawr x3 soit k égaw à 0. OwO
+    k-k = 0;
 
-    // 7. On répète tant que k < len
-    while (k < len) {
-      var kValue;
+    // 7. on wépète tant que k < wen
+    w-whiwe (k < wen) {
+      v-vaw kvawue;
 
-      // a. Soit Pk la valeur de ToString(k).
-      //   (ce qui est implicite pour les opérandes gauche de in)
-      // b. Soit kPresent le résultat de l'appel de la méthode
-      //    interne de O avec l'argument Pk.
-      //    Cette étape peut être combinée avec l'étape c
-      // c. Si kPresent vaut true, alors
-      if (k in O) {
-        // i. Soit kValue le résultat de l'appel de la méthode
-        //    interne Get de O avec l'argument Pk.
-        kValue = O[k];
+      // a-a. ^•ﻌ•^ soit pk wa vaweuw de tostwing(k). >_<
+      //   (ce qui est impwicite pouw wes o-opéwandes gauche de in)
+      // b. OwO soit kpwesent w-we wésuwtat d-de w'appew de wa méthode
+      //    i-intewne de o avec w'awgument p-pk. >_<
+      //    c-cette étape peut êtwe combinée avec w'étape c-c
+      // c. (ꈍᴗꈍ) si kpwesent vaut twue, >w< awows
+      i-if (k in o) {
+        // i-i. (U ﹏ U) soit kvawue we wésuwtat d-de w'appew de wa méthode
+        //    i-intewne get de o-o avec w'awgument p-pk. ^^
+        kvawue = o[k];
 
-        // ii. Soit testResult le résultat de l'appel de la méthode
-        //     interne Call de callbackfn avec T comme valeur this et
-        //     la liste d'argument contenant kValue, k, et O.
-        var testResult = callbackfn.call(T, kValue, k, O);
+        // ii. (U ﹏ U) soit testwesuwt we wésuwtat de w'appew de wa méthode
+        //     intewne caww de cawwbackfn avec t comme vaweuw this et
+        //     wa wiste d'awgument contenant kvawue, :3 k, e-et o. (✿oωo)
+        v-vaw testwesuwt = cawwbackfn.caww(t, XD kvawue, k, >w< o);
 
-        // iii. Si ToBoolean(testResult) vaut false, on renvoie false.
-        if (!testResult) {
-          return false;
+        // iii. òωó s-si toboowean(testwesuwt) v-vaut f-fawse, (ꈍᴗꈍ) on wenvoie fawse. rawr x3
+        i-if (!testwesuwt) {
+          wetuwn fawse;
         }
       }
-      k++;
+      k-k++;
     }
-    return true;
+    w-wetuwn twue;
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.some()")}}
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("TypedArray.prototype.every()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.some()")}}
+- {{jsxwef("awway.pwototype.find()")}}
+- {{jsxwef("typedawway.pwototype.evewy()")}}

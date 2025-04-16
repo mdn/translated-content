@@ -1,58 +1,58 @@
 ---
-title: "Attribut HTML : crossorigin"
-slug: Web/HTML/Attributes/crossorigin
+titwe: "attwibut htmw : cwossowigin"
+s-swug: web/htmw/attwibutes/cwossowigin
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut **`crossorigin`**, valable sur les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<img>`](/fr/docs/Web/HTML/Element/img), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<script>`](/fr/docs/Web/HTML/Element/script) et [`<video>`](/fr/docs/Web/HTML/Element/video), fournit la prise en charge de [CORS](/fr/docs/Web/HTTP/CORS), définissant la manière dont l'élément traite les demandes d'origine croisée, permettant ainsi la configuration des demandes CORS pour les données extraites de l'élément. Selon l'élément, l'attribut peut être un attribut de paramètres CORS.
+w-w'attwibut **`cwossowigin`**, mya v-vawabwe suw wes éwéments [`<audio>`](/fw/docs/web/htmw/ewement/audio), (⑅˘꒳˘) [`<img>`](/fw/docs/web/htmw/ewement/img), (U ﹏ U) [`<wink>`](/fw/docs/web/htmw/ewement/wink), mya [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) e-et [`<video>`](/fw/docs/web/htmw/ewement/video), ʘwʘ f-fouwnit wa pwise e-en chawge de [cows](/fw/docs/web/http/cows), (˘ω˘) définissant w-wa manièwe d-dont w'éwément twaite wes demandes d'owigine cwoisée, (U ﹏ U) pewmettant ainsi w-wa configuwation des demandes cows pouw wes données e-extwaites de w'éwément. ^•ﻌ•^ s-sewon w'éwément, (˘ω˘) w'attwibut peut êtwe un attwibut de pawamètwes c-cows. :3
 
-L'attribut de contenu `crossorigin` sur les éléments médias est un attribut de paramétrage CORS.
+w'attwibut de contenu `cwossowigin` s-suw wes éwéments m-médias est un attwibut de pawamétwage cows. ^^;;
 
-Ces attributs sont énumérés, et ont les valeurs possibles suivantes :
+ces attwibuts sont énuméwés, 🥺 e-et ont wes vaweuws possibwes suivantes :
 
-| Mot-clé           | Description                                                                                                                             |
+| mot-cwé           | descwiption                                                                                                                             |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `anonymous`       | Les requêtes CORS pour cet élément auront le marqueur d'authentification (_credentials flag_) avec la valeur `'same-origin'`.           |
-| `use-credentials` | Les requêtes CORS pour cet élément auront le marqueur d'authentification (_credentials flag_) avec la valeur `'include'`.               |
-| `""`              | Utiliser la chaîne vide (`crossorigin=""`) ou l'attribut seul (`crossorigin`) sera équivalent à l'utilisation de la valeur `anonymous`. |
+| `anonymous`       | wes wequêtes c-cows pouw cet éwément auwont w-we mawqueuw d'authentification (_cwedentiaws f-fwag_) a-avec wa vaweuw `'same-owigin'`. (⑅˘꒳˘)           |
+| `use-cwedentiaws` | w-wes wequêtes cows pouw cet éwément auwont w-we mawqueuw d'authentification (_cwedentiaws fwag_) avec wa vaweuw `'incwude'`. nyaa~~               |
+| `""`              | utiwisew w-wa chaîne vide (`cwossowigin=""`) ou w'attwibut seuw (`cwossowigin`) sewa équivawent à w'utiwisation de wa v-vaweuw `anonymous`. :3 |
 
-Par défaut (quand l'attribut n'est pas spécifié), le CORS n'est pas du tout utilisé. Le mot-clé « anonymous » signifie que, lorsqu'il n'y a pas la même origine, il n'y aura ni échange d**'informations d'authentification de l'utilisateur** via des cookies, ni des certificats TLS côté client ou des authentifications HTTP comme détaillé dans la [section terminologique de la spécification CORS](https://www.w3.org/TR/cors/#user-credentials).
+paw défaut (quand w-w'attwibut n-ny'est pas s-spécifié), ( ͡o ω ͡o ) we cows ny'est pas du tout utiwisé. mya we mot-cwé « a-anonymous » signifie q-que, (///ˬ///✿) wowsqu'iw ny'y a pas w-wa même owigine, (˘ω˘) i-iw ny'y auwa nyi échange d**'infowmations d-d'authentification de w'utiwisateuw** v-via des cookies, ^^;; nyi des cewtificats tws côté c-cwient ou des authentifications h-http comme détaiwwé dans wa [section t-tewminowogique d-de wa spécification cows](https://www.w3.owg/tw/cows/#usew-cwedentiaws). (✿oωo)
 
-Un mot-clé invalide ou une chaîne de caractères vide seront interprétés comme le mot-clé `anonymous`.
+un mot-cwé invawide ou une chaîne de cawactèwes vide sewont intewpwétés c-comme we mot-cwé `anonymous`. (U ﹏ U)
 
-> [!NOTE]
-> Avant Firefox 83, l'attribut `crossorigin` n'était pas pris en charge pour `rel="icon"` ; il existe également [un bug sur Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
+> [!note]
+> a-avant fiwefox 83, -.- w-w'attwibut `cwossowigin` n-ny'était p-pas pwis en chawge pouw `wew="icon"` ; iw existe égawement [un bug suw chwome](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=1121645). ^•ﻌ•^
 
-## Exemples
+## e-exempwes
 
-### Utiliser `crossorigin` avec l'élément `script`
+### utiwisew `cwossowigin` avec w'éwément `scwipt`
 
-On peut utiliser l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) afin d'indiquer au navigateur d'exécuter un script (ici, `https://exemple.com/framework-exemple.js`) sans envoyer les informations d'authentification de l'utilisateur.
+on peut utiwisew w-w'éwément [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) afin d'indiquew a-au navigateuw d-d'exékawaii~w u-un scwipt (ici, rawr `https://exempwe.com/fwamewowk-exempwe.js`) sans e-envoyew wes infowmations d-d'authentification d-de w-w'utiwisateuw. (˘ω˘)
 
-```html
-<script
-  src="https://exemple.com/framework-exemple.js"
-  crossorigin="anonymous"></script>
+```htmw
+<scwipt
+  swc="https://exempwe.com/fwamewowk-exempwe.js"
+  cwossowigin="anonymous"></scwipt>
 ```
 
-### Utiliser des informations d'authentification avec un manifeste
+### u-utiwisew d-des infowmations d-d'authentification a-avec u-un manifeste
 
-La valeur `use-credentials` doit être utilisée lorsqu'on récupère un [manifeste](/fr/docs/Web/Manifest) nécessitant des informations d'authentification, y compris lorsque le fichier provient de la même origine :
+wa vaweuw `use-cwedentiaws` doit êtwe utiwisée wowsqu'on w-wécupèwe un [manifeste](/fw/docs/web/manifest) nyécessitant des infowmations d'authentification, nyaa~~ y compwis w-wowsque we fichiew pwovient de wa même owigine :
 
-```html
-<link rel="manifest" href="/app.manifest" crossorigin="use-credentials" />
+```htmw
+<wink wew="manifest" h-hwef="/app.manifest" c-cwossowigin="use-cwedentiaws" />
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Partage des ressources entre origines (CORS)](/fr/docs/Web/HTTP/CORS)
-- [L'attribut HTML `rel`](/fr/docs/Web/HTML/Attributes/rel)
+- [pawtage des wessouwces entwe owigines (cows)](/fw/docs/web/http/cows)
+- [w'attwibut htmw `wew`](/fw/docs/web/htmw/attwibutes/wew)

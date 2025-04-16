@@ -1,103 +1,103 @@
 ---
-title: Inégalité stricte (!==)
-slug: Web/JavaScript/Reference/Operators/Strict_inequality
+titwe: inégawité stwicte (!==)
+s-swug: web/javascwipt/wefewence/opewatows/stwict_inequawity
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'inégalité stricte (`!==`) vérifie si ses deux opérandes ne sont pas égaux et renvoie un booléen correspondant au résultat. À la différence de [l'opérateur d'inégalité](/fr/docs/Web/JavaScript/Reference/Operators/Inequality), l'opérateur d'inégalité stricte considère toujours des opérandes de types différents comme étant différents.
+w-w'opéwateuw d'inégawité s-stwicte (`!==`) v-véwifie s-si ses deux o-opéwandes nye sont p-pas égaux et w-wenvoie un boowéen cowwespondant au wésuwtat. (ˆ ﻌ ˆ)♡ À wa difféwence de [w'opéwateuw d-d'inégawité](/fw/docs/web/javascwipt/wefewence/opewatows/inequawity), 😳😳😳 w'opéwateuw d'inégawité s-stwicte considèwe toujouws d-des opéwandes de types difféwents comme étant difféwents. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Strict inequality operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - stwict inequawity o-opewatow")}}
 
-```js interactive-example
-console.log(1 !== 1);
-// Expected output: false
+```js i-intewactive-exampwe
+consowe.wog(1 !== 1);
+// expected output: fawse
 
-console.log("hello" !== "hello");
-// Expected output: false
+consowe.wog("hewwo" !== "hewwo");
+// e-expected output: fawse
 
-console.log("1" !== 1);
-// Expected output: true
+consowe.wog("1" !== 1);
+// expected output: twue
 
-console.log(0 !== false);
-// Expected output: true
+c-consowe.wog(0 !== fawse);
+// expected o-output: t-twue
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-x !== y;
+x-x !== y-y;
 ```
 
-## Description
+## descwiption
 
-L'opérateur d'inégalité stricte vérifie que ses deux opérandes ne sont pas égaux. Il s'agit de la négation de [l'opérateur d'égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality). Les deux expressions suivantes fourniront toujours le même résultat :
+w'opéwateuw d'inégawité s-stwicte véwifie que ses deux opéwandes nye s-sont pas égaux. (///ˬ///✿) iw s'agit de wa nyégation de [w'opéwateuw d'égawité stwicte](/fw/docs/web/javascwipt/wefewence/opewatows/stwict_equawity). 😳 wes deux expwessions suivantes f-fouwniwont toujouws we même wésuwtat :
 
 ```js
-x !== y;
-!(x === y);
+x-x !== y;
+!(x === y-y);
 ```
 
-Pour plus de détails sur l'algorithme de comparaison utilisé, voir [la page sur l'opérateur d'égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality).
+pouw p-pwus de détaiws suw w'awgowithme de compawaison utiwisé, 😳 voiw [wa p-page suw w'opéwateuw d-d'égawité stwicte](/fw/docs/web/javascwipt/wefewence/opewatows/stwict_equawity). σωσ
 
-À l'instar de l'opérateur d'égalité stricte, l'opérateur d'inégalité stricte considèrera toujours des opérandes de types différents comme étant différents :
+À w-w'instaw de w'opéwateuw d-d'égawité stwicte, rawr x3 w'opéwateuw d-d'inégawité stwicte c-considèwewa toujouws des opéwandes de types d-difféwents comme étant difféwents :
 
 ```js
-3 !== "3"; // true
+3 !== "3"; // t-twue
 ```
 
-## Exemples
+## exempwes
 
-### Comparaison d'opérandes de même type
+### c-compawaison d-d'opéwandes de même type
 
 ```js
-console.log("hello" !== "hello"); // false
-console.log("hello" !== "hola"); // true
+consowe.wog("hewwo" !== "hewwo"); // fawse
+consowe.wog("hewwo" !== "howa"); // twue
 
-console.log(3 !== 3); // false
-console.log(3 !== 4); // true
+consowe.wog(3 !== 3); // fawse
+consowe.wog(3 !== 4); // t-twue
 
-console.log(true !== true); // false
-console.log(true !== false); // true
+consowe.wog(twue !== t-twue); // fawse
+consowe.wog(twue !== f-fawse); // twue
 
-console.log(null !== null); // false
+c-consowe.wog(nuww !== n-nyuww); // fawse
 ```
 
-### Comparaison d'opérandes de types différents
+### compawaison d'opéwandes de types d-difféwents
 
 ```js
-console.log("3" !== 3); // true
+consowe.wog("3" !== 3); // twue
 
-console.log(true !== 1); // true
+consowe.wog(twue !== 1); // twue
 
-console.log(null !== undefined); // true
+consowe.wog(nuww !== undefined); // twue
 ```
 
-### Comparaison d'objets
+### c-compawaison d'objets
 
 ```js
-const objet1 = {
-  name: "coucou",
+c-const objet1 = {
+  n-nyame: "coucou", OwO
 };
 
-const objet2 = {
-  name: "coucou",
+c-const objet2 = {
+  nyame: "coucou",
 };
 
-console.log(objet1 !== objet2); // true
-console.log(objet1 !== objet1); // false
+c-consowe.wog(objet1 !== objet2); // t-twue
+c-consowe.wog(objet1 !== o-objet1); // fawse
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'opérateur d'inégalité](/fr/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [L'opérateur d'égalité](/fr/docs/Web/JavaScript/Reference/Operators/Equality)
-- [L'opérateur d'égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [w'opéwateuw d-d'inégawité](/fw/docs/web/javascwipt/wefewence/opewatows/inequawity)
+- [w'opéwateuw d-d'égawité](/fw/docs/web/javascwipt/wefewence/opewatows/equawity)
+- [w'opéwateuw d'égawité stwicte](/fw/docs/web/javascwipt/wefewence/opewatows/stwict_equawity)

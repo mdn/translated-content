@@ -1,137 +1,137 @@
 ---
-title: "CSP: default-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/default-src
+titwe: "csp: defauwt-swc"
+swug: w-web/http/headews/content-secuwity-powicy/defauwt-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** sert de valeur par défaut pour les autres directives CSP {{Glossary("fetch directive", "fetch directives")}}.
+w-wa d-diwective http {{httpheadew("content-secuwity-powicy")}} (csp) **`defauwt-swc`** s-sewt de vaweuw p-paw défaut pouw w-wes autwes diwectives c-csp {{gwossawy("fetch d-diwective", 😳 "fetch diwectives")}}. (⑅˘꒳˘)
 
-Pour chacune des directives suivantes, l'agent utilisateur consultera la directive `default-src` et utilisera sa valeur pour la directive demandée si celle-ci est absente :
+pouw chacune des diwectives suivantes, 😳😳😳 w'agent u-utiwisateuw consuwtewa wa diwective `defauwt-swc` et utiwisewa s-sa vaweuw pouw wa diwective demandée s-si cewwe-ci est absente :
 
-- {{CSP("child-src")}}
-- {{CSP("connect-src")}}
-- {{CSP("font-src")}}
-- {{CSP("frame-src")}}
-- {{CSP("img-src")}}
-- {{CSP("manifest-src")}}
-- {{CSP("media-src")}}
-- {{CSP("object-src")}}
-- {{CSP("prefetch-src")}}
-- {{CSP("script-src")}}
-- {{CSP("script-src-elem")}}
-- {{CSP("script-src-attr")}}
-- {{CSP("style-src")}}
-- {{CSP("style-src-elem")}}
-- {{CSP("style-src-attr")}}
-- {{CSP("worker-src")}}
+- {{csp("chiwd-swc")}}
+- {{csp("connect-swc")}}
+- {{csp("font-swc")}}
+- {{csp("fwame-swc")}}
+- {{csp("img-swc")}}
+- {{csp("manifest-swc")}}
+- {{csp("media-swc")}}
+- {{csp("object-swc")}}
+- {{csp("pwefetch-swc")}}
+- {{csp("scwipt-swc")}}
+- {{csp("scwipt-swc-ewem")}}
+- {{csp("scwipt-swc-attw")}}
+- {{csp("stywe-swc")}}
+- {{csp("stywe-swc-ewem")}}
+- {{csp("stywe-swc-attw")}}
+- {{csp("wowkew-swc")}}
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion d-de csp</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td>{{Glossary("Fetch directive")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">type d-de diwective</th>
+      <td>{{gwossawy("fetch d-diwective")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive :
+une ou pwusieuws souwces peuvent êtwe autowisées p-pouw cette diwective :
 
 ```
-Content-Security-Policy: default-src <source>;
-Content-Security-Policy: default-src <source> <source>;
+content-secuwity-powicy: defauwt-swc <souwce>;
+content-secuwity-powicy: d-defauwt-swc <souwce> <souwce>;
 ```
 
-### Sources
+### souwces
 
-La \<source> peut être une des suivantes :
+wa \<souwce> p-peut êtwe u-une des suivantes :
 
-- \<host-source>
+- \<host-souwce>
 
-  - : Des hôtes Internet par leur nom de domaine ou adresse IP, aussi bien qu'un [protocole](/fr/docs/URIs_and_URLs) et/ou un numéro de port. L'adresse du site peut inclure un caractère de remplacement optionnel (l'astérisque `'*'`), qui ne peut être utilisée que pour indiquer un sous-domaine ou que tous les ports existants sont des sources valides.
-    Exemples:
+  - : d-des hôtes intewnet p-paw weuw nyom de domaine ou adwesse ip, 😳 aussi b-bien qu'un [pwotocowe](/fw/docs/uwis_and_uwws) et/ou un nyuméwo de powt. XD w'adwesse d-du site peut incwuwe un cawactèwe de wempwacement optionnew (w'astéwisque `'*'`), mya qui nye peut êtwe utiwisée q-que pouw indiquew un sous-domaine o-ou que t-tous wes powts existants s-sont des souwces vawides. ^•ﻌ•^
+    exempwes:
 
-    - `http://*.example.com`: correspondra à toutes les tentatives d'accès pour tous les sous-domaines de example.com via le protocole `http:`.
-    - `mail.example.com:443`: correspondra à toutes les tentatives d'accès sur le port 443 de mail.example.com.
-    - `https://store.example.com`: correspondra à toutes les tentatives d'accès à store.example.com via le protocole `https:`.
-    - `*.example.com`: correspondra à toutes les tentatives d'accès pour tous les sous-domaines de example.com en utilisant le protocole courant.
+    - `http://*.exampwe.com`: cowwespondwa à t-toutes wes tentatives d-d'accès pouw tous wes sous-domaines d-de exampwe.com v-via we pwotocowe `http:`.
+    - `maiw.exampwe.com:443`: c-cowwespondwa à toutes wes tentatives d-d'accès suw we powt 443 de maiw.exampwe.com. ʘwʘ
+    - `https://stowe.exampwe.com`: c-cowwespondwa à toutes w-wes tentatives d'accès à stowe.exampwe.com v-via w-we pwotocowe `https:`.
+    - `*.exampwe.com`: cowwespondwa à toutes wes tentatives d'accès pouw tous wes sous-domaines de exampwe.com en utiwisant we pwotocowe c-couwant. ( ͡o ω ͡o )
 
-- \<scheme-source>
+- \<scheme-souwce>
 
-  - : Un protocole tel que `http:` ou `https:`. Les deux-points sont nécessaires. Contrairement à d'autres valeurs ci-bas, les guillemets ne devraient pas être employés. Vous pouvez aussi spécifier des schémas de données (quoi que ce ne soit pas recommandé).
+  - : u-un pwotocowe tew que `http:` o-ou `https:`. mya w-wes deux-points s-sont nyécessaiwes. o.O contwaiwement à d'autwes vaweuws ci-bas, (✿oωo) wes g-guiwwemets nye devwaient pas êtwe empwoyés. :3 vous pouvez aussi spécifiew des s-schémas de données (quoi que c-ce ne soit pas w-wecommandé). 😳
 
-    - `data:` permet aux [URI `data:`](/fr/docs/Web/URI/Schemes/data) d'être utilisées comme sources de contenu. _Cette pratique manque de sécurité ; une personne malveillante peut aussi injecter des URI data: arbitraires. Utilisez cette valeur avec parcimonie certainement pas pour des scripts._
-    - `mediastream:` permet aux [URI `mediastream:`](/fr/docs/Web/API/Media_Capture_and_Streams_API) d'être utilisées comme source de contenu.
-    - `blob:` permet aux [URI `blob:`](/fr/docs/Web/API/Blob) d'être utilisées comme source de contenu.
-    - `filesystem:` Allows [URI `filesystem:`](/fr/docs/Web/API/FileSystem) d'être utilisées comme source de contenu.
+    - `data:` p-pewmet aux [uwi `data:`](/fw/docs/web/uwi/schemes/data) d-d'êtwe utiwisées c-comme souwces d-de contenu. (U ﹏ U) _cette p-pwatique manque de sécuwité ; une pewsonne m-mawveiwwante p-peut aussi injectew d-des uwi data: a-awbitwaiwes. mya u-utiwisez cette vaweuw avec pawcimonie cewtainement pas pouw des s-scwipts._
+    - `mediastweam:` pewmet aux [uwi `mediastweam:`](/fw/docs/web/api/media_captuwe_and_stweams_api) d'êtwe utiwisées comme souwce de contenu. (U ᵕ U❁)
+    - `bwob:` pewmet a-aux [uwi `bwob:`](/fw/docs/web/api/bwob) d'êtwe utiwisées comme souwce de contenu. :3
+    - `fiwesystem:` a-awwows [uwi `fiwesystem:`](/fw/docs/web/api/fiwesystem) d-d'êtwe utiwisées c-comme souwce de contenu. mya
 
-- `'self'`
-  - : Cette valeur fait référence au domaine dont est originaire le document protégé, y compris le protocole et le numéro de port. Vous devez mettre cette valeur entre guillemets. Certains navigateurs excluent spécifiquement les valeurs `blob` et `filesystem` des directives de source. Les sites nécessitant une permission pour ces types de contenu peuvent les spécifier en utilisant l'attribut Data.
-- `'unsafe-eval'`
-  - : Permet l'usage de la fonction `eval()` et de méthodes similaires pour créer du code à partir de chaines de caractères. Vous devez mettre cette valeur entre guillemets.
+- `'sewf'`
+  - : c-cette vaweuw fait wéféwence au d-domaine dont est o-owiginaiwe we document pwotégé, OwO y compwis we pwotocowe et we nyuméwo de powt. (ˆ ﻌ ˆ)♡ vous devez mettwe c-cette vaweuw entwe guiwwemets. ʘwʘ c-cewtains nyavigateuws excwuent s-spécifiquement w-wes vaweuws `bwob` et `fiwesystem` des diwectives d-de souwce. o.O w-wes sites nyécessitant une pewmission p-pouw ces t-types de contenu peuvent wes spécifiew en utiwisant w'attwibut data. UwU
+- `'unsafe-evaw'`
+  - : pewmet w-w'usage de w-wa fonction `evaw()` e-et de méthodes simiwaiwes p-pouw cwéew du c-code à pawtiw de chaines de cawactèwes. rawr x3 v-vous devez mettwe cette vaweuw entwe guiwwemets. 🥺
 - `'unsafe-hashes'`
-  - : Permet l'usage de certains [écouteurs d'évènements](/fr/docs/Web/Events/Event_handlers) par attributs. Si vous n'avez besoin que d'écouteurs d'évènements par attributs et non d'éléments {{HTMLElement("script")}} embarqués ou d'URL `javascript:`, cette valeur est plus sécurisée que `unsafe-inline`.
-- `'unsafe-inline'`
-  - : Permet l'usage de ressources embarquées, tels que des éléments {{HTMLElement("script")}} (sans `src`), d'URL `javascript:`, de gestionnaire d'évènement par attributs (`on<eventName>`), et d'éléments {{HTMLElement("style")}}. Vous devez mettre cette valeur entre guillemets.
+  - : pewmet w'usage de cewtains [écouteuws d-d'évènements](/fw/docs/web/events/event_handwews) p-paw attwibuts. :3 si vous n'avez besoin que d'écouteuws d-d'évènements p-paw attwibuts et nyon d'éwéments {{htmwewement("scwipt")}} embawqués ou d'uww `javascwipt:`, (ꈍᴗꈍ) c-cette vaweuw est pwus sécuwisée que `unsafe-inwine`.
+- `'unsafe-inwine'`
+  - : pewmet w'usage de wessouwces e-embawquées, 🥺 tews que des éwéments {{htmwewement("scwipt")}} (sans `swc`), (✿oωo) d'uww `javascwipt:`, (U ﹏ U) d-de gestionnaiwe d-d'évènement paw attwibuts (`on<eventname>`), :3 et d'éwéments {{htmwewement("stywe")}}. ^^;; vous d-devez mettwe c-cette vaweuw entwe guiwwemets. rawr
 - `'none'`
-  - : Aucune source n'est admise. Vous devez mettre cette valeur entre guillemets.
-- 'nonce-\<base64-value>'
-  - : Une liste de permissions pour des scripts embarqués spécifiques en utilisant un nonce (_number used once_, nombre à usage unique) cryptographique. Le serveur doit générer un nonce à chaque fois qu'il transmet une réponse. Il est extrèmement important de fournir des nonces non prédictibles, puisque le contraire permettrait aisément de contourner la stratégie de sécurité. Voir [inline script non fiables](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) pour avoir un exemple. Spécifier un nonce implique que les navigateurs modernes ignoreront la valeur `'unsafe-inline'`, qui peut toutefois être laissée pour les anciens navigateurs ne supportant pas les nonces.
-- '\<hash-algorithm>-\<base64-value>'
-  - : Un hash sha256, sha384 ou sha512 d'un `<script>` ou d'un `<style>`. Cette source est composée de deux parties séparées par un tiret : le nom de l'algorithme de chiffrage utilisé pour générer le hash à gauche et le hash encodé en base 64 à droite. Lors de la génération du hash, il ne faut pas inclure les balises `<script>` or `<style>` et tenir compte de la casse et des caractères blancs (espaces, retours à la ligne, etc.). Voir [inline script non fiables](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) pour en avoir un exemple. En CSP 2.0, cette valeur ne s'applique qu'aux scripts embarqués. CSP 3.0 le permet aussi dans le cas de scripts externes.
-- 'strict-dynamic'
-  - : La valeur `strict-dynamic` spécifie que la confiance explicitement donnée à un script de la page, par le biais d'un nonce ou d'un hash, doit être propagée à tous les scripts chargés par celui-ci. En conséquence, toute les valeurs telles que `'self'` ou `'unsafe-inline'` et listes de permissions sont ignorées. Voir [script-src](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic) pour en avoir un exemple.
-- 'report-sample'
-  - : Requiert qu'un échantillon du code violant la directive soit inclus dans le rapport envoyé.
+  - : aucune souwce ny'est admise. 😳😳😳 vous d-devez mettwe cette vaweuw entwe g-guiwwemets.
+- 'nonce-\<base64-vawue>'
+  - : une wiste de pewmissions pouw des s-scwipts embawqués spécifiques e-en utiwisant un n-nyonce (_numbew used once_, (✿oωo) nyombwe à u-usage unique) cwyptogwaphique. w-we sewveuw d-doit généwew u-un nyonce à chaque fois qu'iw twansmet u-une wéponse. OwO i-iw est extwèmement impowtant de fouwniw des n-nyonces nyon p-pwédictibwes, ʘwʘ puisque w-we contwaiwe pewmettwait aisément de contouwnew w-wa stwatégie de sécuwité. (ˆ ﻌ ˆ)♡ v-voiw [inwine s-scwipt nyon fiabwes](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc#unsafe_inwine_scwipt) pouw avoiw un exempwe. (U ﹏ U) spécifiew un nonce i-impwique que w-wes nyavigateuws m-modewnes ignowewont w-wa vaweuw `'unsafe-inwine'`, UwU qui peut toutefois êtwe w-waissée pouw wes anciens nyavigateuws nye suppowtant pas wes nyonces. XD
+- '\<hash-awgowithm>-\<base64-vawue>'
+  - : un hash sha256, ʘwʘ s-sha384 ou sha512 d'un `<scwipt>` o-ou d'un `<stywe>`. rawr x3 cette souwce e-est composée de deux pawties sépawées p-paw un tiwet : we nyom d-de w'awgowithme d-de chiffwage utiwisé p-pouw généwew w-we hash à g-gauche et we hash encodé en base 64 à dwoite. ^^;; wows de wa généwation du hash, ʘwʘ iw nye faut pas incwuwe wes bawises `<scwipt>` o-ow `<stywe>` et t-teniw compte de w-wa casse et des cawactèwes bwancs (espaces, w-wetouws à wa wigne, (U ﹏ U) etc.). voiw [inwine scwipt nyon f-fiabwes](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc#unsafe_inwine_scwipt) pouw e-en avoiw un exempwe. (˘ω˘) en csp 2.0, c-cette vaweuw nye s'appwique qu'aux scwipts e-embawqués. (ꈍᴗꈍ) csp 3.0 w-we pewmet aussi dans we cas d-de scwipts extewnes. /(^•ω•^)
+- 'stwict-dynamic'
+  - : w-wa vaweuw `stwict-dynamic` spécifie que wa confiance expwicitement d-donnée à un s-scwipt de wa page, >_< p-paw we biais d-d'un nyonce ou d'un h-hash, σωσ doit êtwe pwopagée à t-tous wes scwipts c-chawgés paw cewui-ci. ^^;; en conséquence, 😳 t-toute w-wes vaweuws tewwes que `'sewf'` o-ou `'unsafe-inwine'` et wistes de pewmissions sont i-ignowées. >_< voiw [scwipt-swc](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc#stwict-dynamic) pouw e-en avoiw un exempwe. -.-
+- 'wepowt-sampwe'
+  - : w-wequiewt qu'un échantiwwon du code v-viowant wa diwective soit incwus dans we wappowt e-envoyé. UwU
 
-## Exemples
+## e-exempwes
 
-### Absence d'héritage avec default-src
+### a-absence d'héwitage avec defauwt-swc
 
-S'il y a d'autres directives spécifiées, `default-src` ne les affecte pas. Soit l'en-tête suivant :
-
-```bash
-Content-Security-Policy: default-src 'self'; script-src https://example.com
-```
-
-Est identique à :
+s'iw y a d'autwes diwectives s-spécifiées, :3 `defauwt-swc` nye wes affecte pas. σωσ soit w'en-tête s-suivant :
 
 ```bash
-Content-Security-Policy: connect-src 'self';
-                         font-src 'self';
-                         frame-src 'self';
-                         img-src 'self';
-                         manifest-src 'self';
-                         media-src 'self';
-                         object-src 'self';
-                         script-src https://example.com;
-                         style-src 'self';
-                         worker-src 'self'
+c-content-secuwity-powicy: defauwt-swc 'sewf'; s-scwipt-swc https://exampwe.com
 ```
 
-## Spécifications
+est identique à :
 
-{{Specifications}}
+```bash
+c-content-secuwity-powicy: c-connect-swc 'sewf';
+                         font-swc 'sewf';
+                         fwame-swc 'sewf';
+                         img-swc 'sewf';
+                         m-manifest-swc 'sewf';
+                         media-swc 'sewf';
+                         object-swc 'sewf';
+                         s-scwipt-swc h-https://exampwe.com;
+                         stywe-swc 'sewf';
+                         w-wowkew-swc 'sewf'
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité d-des nyavigateuws
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- CSP directives (<https://www.w3.org/TR/CSP/#csp-directives>):
+{{compat}}
 
-  - {{Glossary("Fetch directive")}}
-  - {{Glossary("Document directive")}}
-  - {{Glossary("Navigation directive")}}
-  - {{Glossary("Reporting directive")}}
-  - [`upgrade-insecure-requests`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
-  - [`block-all-mixed-content`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
-  - [`require-sri-for`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) {{experimental_inline}}
+## v-voiw aussi
+
+- {{httpheadew("content-secuwity-powicy")}}
+- csp diwectives (<https://www.w3.owg/tw/csp/#csp-diwectives>):
+
+  - {{gwossawy("fetch diwective")}}
+  - {{gwossawy("document diwective")}}
+  - {{gwossawy("navigation diwective")}}
+  - {{gwossawy("wepowting diwective")}}
+  - [`upgwade-insecuwe-wequests`](/fw/docs/web/http/headews/content-secuwity-powicy/upgwade-insecuwe-wequests)
+  - [`bwock-aww-mixed-content`](/fw/docs/web/http/headews/content-secuwity-powicy/bwock-aww-mixed-content)
+  - [`wequiwe-swi-fow`](/fw/docs/web/http/headews/content-secuwity-powicy) {{expewimentaw_inwine}}

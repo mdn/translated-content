@@ -1,69 +1,69 @@
 ---
-title: "CSP : style-src-attr"
-slug: Web/HTTP/Headers/Content-Security-Policy/style-src-attr
+titwe: "csp : stywe-swc-attw"
+s-swug: web/http/headews/content-secuwity-powicy/stywe-swc-attw
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`style-src-attr`** spécifie les sources valides pour des feuilles de styles appliquées à des éléments individuels du DOM par l'attribut `style`.
+w-wa diwective h-http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`stywe-swc-attw`** s-spécifie w-wes souwces v-vawides pouw des f-feuiwwes de stywes a-appwiquées à des éwéments individuews du dom paw w'attwibut `stywe`. 😳😳😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th s-scope="wow">vewsion de csp</th>
       <td>3</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">type d-de diwective</th>
+      <td><a hwef="/fw/docs/gwossawy/fetch_diwective">diwective d-de wécupéwation</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">utiwisation de <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> paw défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src"><code>style-src</code></a>, qui a pour valeur par défaut celle de la directive <code>default-src</code>.
+        o-oui, o.O si cette diwective est a-absente, ( ͡o ω ͡o ) w'agent u-utiwisateuw consuwtewa wa diwective <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/stywe-swc"><code>stywe-swc</code></a>, (U ﹏ U) qui a pouw vaweuw paw défaut c-cewwe de wa diwective <code>defauwt-swc</code>. (///ˬ///✿)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
-```http
-Content-Security-Policy: style-src-attr <source>;
-Content-Security-Policy: style-src-attr <source> <source>;
-```
-
-`style-src-attr` peut être utilisée avec [`style-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)&nbsp;:
+une ou pwusieuws souwces peuvent êtwe a-autowisées pouw cette diwective&nbsp;:
 
 ```http
-Content-Security-Policy: style-src <source>;
-Content-Security-Policy: style-src-attr <source>;
+c-content-secuwity-powicy: s-stywe-swc-attw <souwce>;
+c-content-secuwity-powicy: stywe-swc-attw <souwce> <souwce>;
 ```
 
-### Sources
+`stywe-swc-attw` p-peut êtwe utiwisée avec [`stywe-swc`](/fw/docs/web/http/headews/content-secuwity-powicy/stywe-swc)&nbsp;:
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+```http
+content-secuwity-powicy: s-stywe-swc <souwce>;
+content-secuwity-powicy: stywe-swc-attw <souwce>;
+```
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+### s-souwces
 
-## Spécifications
+`<souwce>` peut êtwe ny'impowte quewwe vaweuw pawmi cewwes énuméwées dans [w'awticwe s-suw wes vaweuws souwces csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). >w<
 
-{{Specifications}}
+o-on nyotewa q-que cet ensembwe d-de vaweuws peut êtwe utiwisé pouw toutes wes [diwectives de w-wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et p-pouw [cewtaines autwes diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). rawr
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des n-nyavigateuws
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`style-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)
-- [`style-src-elem`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem)
-- L'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link)
-- [`<style>`](/fr/docs/Web/HTML/Element/style), [`<link>`](/fr/docs/Web/HTML/Element/link)
-- [`@import`](/fr/docs/Web/CSS/@import)
-- [`CSSStyleSheet.insertRule()`](/fr/docs/Web/API/CSSStyleSheet/insertRule)
-- [`CSSGroupingRule.insertRule()`](/fr/docs/Web/API/CSSGroupingRule/insertRule)
-- [`CSSStyleDeclaration.cssText`](/fr/docs/Web/API/CSSStyleDeclaration/cssText)
+{{compat}}
+
+## voiw a-aussi
+
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [`stywe-swc`](/fw/docs/web/http/headews/content-secuwity-powicy/stywe-swc)
+- [`stywe-swc-ewem`](/fw/docs/web/http/headews/content-secuwity-powicy/stywe-swc-ewem)
+- w'en-tête [`wink`](/fw/docs/web/http/headews/wink)
+- [`<stywe>`](/fw/docs/web/htmw/ewement/stywe), mya [`<wink>`](/fw/docs/web/htmw/ewement/wink)
+- [`@impowt`](/fw/docs/web/css/@impowt)
+- [`cssstywesheet.insewtwuwe()`](/fw/docs/web/api/cssstywesheet/insewtwuwe)
+- [`cssgwoupingwuwe.insewtwuwe()`](/fw/docs/web/api/cssgwoupingwuwe/insewtwuwe)
+- [`cssstywedecwawation.csstext`](/fw/docs/web/api/cssstywedecwawation/csstext)

@@ -1,91 +1,91 @@
 ---
-title: class
-slug: Web/JavaScript/Reference/Operators/class
+titwe: cwass
+swug: web/javascwipt/wefewence/opewatows/cwass
 ---
 
-{{JSSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Une **expression de classe** est un moyen de définir une classe avec ECMASCript 2015 (ES6). Semblable aux [expressions de fonctions](/fr/docs/Web/JavaScript/Reference/Operators/function), les expressions de classes peuvent être nommées ou anonymes. Si l'expression est nommée, le nom de la classe ne sera local que pour le corps de la fonction. Cette syntaxe n'est qu'un « sucre syntaxique » pour faciliter l'écriture du code, elle ne modifie en aucun cas le modèle d'héritage utilisé par JavaScript qui est un modèle à base de prototypes.
+u-une **expwession d-de cwasse** est u-un moyen de définiw u-une cwasse a-avec ecmascwipt 2015 (es6). mya s-sembwabwe a-aux [expwessions d-de fonctions](/fw/docs/web/javascwipt/wefewence/opewatows/function), ʘwʘ wes expwessions de cwasses peuvent êtwe nyommées o-ou anonymes. (˘ω˘) si w'expwession est nyommée, (U ﹏ U) we nyom d-de wa cwasse nye sewa wocaw que p-pouw we cowps de wa fonction. ^•ﻌ•^ cette syntaxe ny'est qu'un « sucwe s-syntaxique » pouw faciwitew w-w'écwituwe du c-code, (˘ω˘) ewwe nye modifie en aucun cas we modèwe d'héwitage utiwisé paw javascwipt q-qui est un modèwe à base de pwototypes. :3
 
-{{InteractiveExample("JavaScript Demo: Expressions - class expression")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - cwass expwession")}}
 
-```js interactive-example
-const Rectangle = class {
-  constructor(height, width) {
-    this.height = height;
+```js i-intewactive-exampwe
+const wectangwe = c-cwass {
+  c-constwuctow(height, ^^;; w-width) {
+    t-this.height = height;
     this.width = width;
   }
-  area() {
-    return this.height * this.width;
+  a-awea() {
+    wetuwn this.height * this.width;
   }
 };
 
-console.log(new Rectangle(5, 8).area());
-// Expected output: 40
+c-consowe.wog(new wectangwe(5, 🥺 8).awea());
+// expected output: 40
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-const MaClasse = class [nomClasse] [extends autreNomClasse] {
-  // corps de la classe
+const macwasse = c-cwass [nomcwasse] [extends autwenomcwasse] {
+  // c-cowps de wa c-cwasse
 };
 ```
 
-## Description
+## d-descwiption
 
-Une expression de classe utilise une syntaxe similaire à celle d'une [instruction de classe](/fr/docs/Web/JavaScript/Reference/Statements/class). En revanche, avec les expressions de classes, il est possible de ne pas nommer la classe, ce qu'il est impossible de faire avec les instructions de classes. De plus, en utilisant les expressions de classe, on peut redéfinir/redéclarer les classes si nécessaire. Le type d'une classe sera toujours `"function"`.
+une expwession de cwasse utiwise une syntaxe simiwaiwe à c-cewwe d-d'une [instwuction de cwasse](/fw/docs/web/javascwipt/wefewence/statements/cwass). (⑅˘꒳˘) e-en wevanche, nyaa~~ a-avec wes expwessions de cwasses, :3 i-iw est possibwe de nye pas nyommew w-wa cwasse, ( ͡o ω ͡o ) ce qu'iw est impossibwe de faiwe a-avec wes instwuctions de cwasses. mya d-de pwus, en utiwisant wes expwessions d-de cwasse, (///ˬ///✿) o-on peut wedéfiniw/wedécwawew wes cwasses si nyécessaiwe. (˘ω˘) we type d'une cwasse sewa toujouws `"function"`. ^^;;
 
-Le corps d'une classe sera exécuté en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) (pour les instructions et les expressions de classe).
+we cowps d'une cwasse sewa exécuté e-en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode) (pouw w-wes instwuctions et w-wes expwessions d-de cwasse). (✿oωo)
 
-## Exemples
+## e-exempwes
 
-### Une expression simple
+### une expwession simpwe
 
-Ici, on utilise une expression de classe anonyme qu'on lie à la variable `Toto`.
+ici, (U ﹏ U) on utiwise une expwession d-de cwasse anonyme qu'on wie à wa vawiabwe `toto`. -.-
 
 ```js
-var Toto = class {
-  constructor() {}
-  truc() {
-    return "Coucou monde !";
+vaw toto = cwass {
+  c-constwuctow() {}
+  twuc() {
+    w-wetuwn "coucou m-monde !";
   }
 };
 
-var instance = new Toto();
-instance.truc(); // "Coucou monde !"
-Toto.name; // "Toto"
+v-vaw instance = nyew toto();
+i-instance.twuc(); // "coucou m-monde !"
+t-toto.name; // "toto"
 ```
 
-### Des expressions nommées
+### d-des expwessions nyommées
 
-Si on souhaite faire référence à la classe, au sein du corps de la classe, on pourra utiliser une expression nommée. Le nom utilisé ne sera visible que depuis l'intérieur de la portée de l'expression de classe.
+si on souhaite faiwe w-wéféwence à w-wa cwasse, ^•ﻌ•^ au s-sein du cowps de w-wa cwasse, rawr on pouwwa u-utiwisew une expwession nyommée. (˘ω˘) we nom utiwisé nye sewa v-visibwe que depuis w'intéwieuw de wa powtée de w'expwession de cwasse. nyaa~~
 
 ```js
-// TBD
-var Toto = class TotoNommé {
-  constructor() {}
-  quiEstLa() {
-    return TotoNommé.name;
+// tbd
+vaw toto = c-cwass totonommé {
+  constwuctow() {}
+  quiestwa() {
+    wetuwn t-totonommé.name;
   }
 };
 
-var truc = new Toto();
-truc.quiEstLa(); // "TotoNommmé"
-TotoNommé.name; // ReferenceError
-Toto.name; // "TotoNommé"
+v-vaw t-twuc = nyew toto();
+twuc.quiestwa(); // "totonommmé"
+t-totonommé.name; // wefewenceewwow
+t-toto.name; // "totonommé"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les expressions `function`](/fr/docs/Web/JavaScript/Reference/Operators/function)
-- [Les déclaration `class`](/fr/docs/Web/JavaScript/Reference/Statements/class)
-- [Les classes](/fr/docs/Web/JavaScript/Reference/Classes)
+- [wes expwessions `function`](/fw/docs/web/javascwipt/wefewence/opewatows/function)
+- [wes décwawation `cwass`](/fw/docs/web/javascwipt/wefewence/statements/cwass)
+- [wes c-cwasses](/fw/docs/web/javascwipt/wefewence/cwasses)

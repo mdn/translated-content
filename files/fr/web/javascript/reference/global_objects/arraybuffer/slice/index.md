@@ -1,66 +1,66 @@
 ---
-title: ArrayBuffer.prototype.slice()
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
+titwe: awwaybuffew.pwototype.swice()
+swug: web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/swice
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`slice()`** renvoie un nouvel `ArrayBuffer` dont le contenu est une copie des octets du `ArrayBuffer` courant, contenus entre `début` (compris) et `fin` (non-compris).
+w-wa méthode **`swice()`** w-wenvoie un nyouvew `awwaybuffew` d-dont we contenu e-est une copie d-des octets du `awwaybuffew` c-couwant, :3 c-contenus entwe `début` (compwis) e-et `fin` (non-compwis).
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.slice()")}}
+{{intewactiveexampwe("javascwipt demo: awwaybuffew.swice()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
-const int32View = new Int32Array(buffer);
-// Produces Int32Array [0, 0, 0, 0]
+```js intewactive-exampwe
+// cweate an awwaybuffew w-with a size in bytes
+const buffew = nyew awwaybuffew(16);
+c-const int32view = n-nyew int32awway(buffew);
+// pwoduces int32awway [0, -.- 0, 0, 0]
 
-int32View[1] = 42;
-const sliced = new Int32Array(buffer.slice(4, 12));
-// Produces Int32Array [42, 0]
+int32view[1] = 42;
+c-const swiced = nyew int32awway(buffew.swice(4, 😳 12));
+// p-pwoduces i-int32awway [42, mya 0]
 
-console.log(sliced[0]);
-// Expected output: 42
+consowe.wog(swiced[0]);
+// expected output: 42
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-arraybuffer.slice(début[, fin])
+awwaybuffew.swice(début[, (˘ω˘) f-fin])
 ```
 
-### Paramètres
+### pawamètwes
 
 - `début`
-  - : Indice (numérotation commençant à zéro) de l'octet à partir duquel découper le tableau.
+  - : indice (numéwotation commençant à zéwo) d-de w'octet à pawtiw duquew découpew w-we tabweau. >_<
 - `fin`
-  - : Indice de l'octet auquel finir la découpe du tableau. Si ce paramètre n'est pas fourni, le nouvel `ArrayBuffer` contiendra tous les octets entre `début` et la fin du `ArrayBuffer` courant. L'intervalle défini par les valeurs `début` et `fin` est réduit à un intervalle valide pour le tableau courant si nécessaire. Si la longueur du nouveau tableau `ArrayBuffer` sera négative, l'intervalle est réduit à zéro.
+  - : i-indice de w'octet a-auquew finiw wa d-découpe du tabweau. -.- si ce pawamètwe ny'est pas f-fouwni, 🥺 we nyouvew `awwaybuffew` contiendwa tous wes octets entwe `début` e-et wa fin du `awwaybuffew` couwant. (U ﹏ U) w'intewvawwe défini paw wes vaweuws `début` et `fin` est wéduit à u-un intewvawwe vawide pouw w-we tabweau couwant s-si nyécessaiwe. >w< s-si wa wongueuw du nyouveau tabweau `awwaybuffew` sewa nyégative, mya w-w'intewvawwe e-est wéduit à zéwo. >w<
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nouvel objet `ArrayBuffer`.
+u-un nyouvew objet `awwaybuffew`. nyaa~~
 
-## Description
+## descwiption
 
-La méthode `slice` copie les octets contenus jusqu'au (au sens exclusif) paramètre `fin`. Si le paramètre `début` ou `fin` est négatif, il fera référence à l'indice à partir de la fin du tableau et non pas à l'indice à partir du début du tableau.
+w-wa méthode `swice` copie wes o-octets contenus jusqu'au (au sens excwusif) pawamètwe `fin`. (✿oωo) si w-we pawamètwe `début` ou `fin` e-est nyégatif, ʘwʘ iw fewa wéféwence à w-w'indice à p-pawtiw de wa fin du tabweau et nyon pas à w'indice à pawtiw du début du tabweau.
 
-## Exemples
+## exempwes
 
-### Copier un `ArrayBuffer`
+### copiew u-un `awwaybuffew`
 
 ```js
-var buf1 = new ArrayBuffer(8);
-var buf2 = buf1.slice(0);
+v-vaw buf1 = nyew awwaybuffew(8);
+v-vaw buf2 = b-buf1.swice(0);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("awwaybuffew")}}

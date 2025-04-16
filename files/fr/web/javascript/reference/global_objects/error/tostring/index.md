@@ -1,73 +1,73 @@
 ---
-title: Error.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Error/toString
+titwe: ewwow.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toString()`** renvoie une représentation de l'objet {{jsxref("Error")}} sous la forme d'une chaine de caractères.
+w-wa méthode **`tostwing()`** wenvoie u-une wepwésentation d-de w'objet {{jsxwef("ewwow")}} s-sous wa f-fowme d'une chaine d-de cawactèwes. ʘwʘ
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-e.toString();
+e-e.tostwing();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères représentant l'objet {{jsxref("Error")}}.
+une chaîne de cawactèwes wepwésentant w'objet {{jsxwef("ewwow")}}. σωσ
 
-## Description
+## d-descwiption
 
-L'objet {{jsxref("Error")}} surcharge la méthode {{jsxref("Object.prototype.toString()")}} héritée par tous les objets. Sa sémantique est la suivante (en partant du principe que {{jsxref("Object")}} et {{jsxref("String")}} ont leurs valeurs originales) :
+w'objet {{jsxwef("ewwow")}} suwchawge wa m-méthode {{jsxwef("object.pwototype.tostwing()")}} héwitée paw t-tous wes objets. OwO sa sémantique est wa suivante (en pawtant du p-pwincipe que {{jsxwef("object")}} et {{jsxwef("stwing")}} o-ont weuws v-vaweuws owiginawes) :
 
 ```js
-Error.prototype.toString = function () {
-  "use strict";
+ewwow.pwototype.tostwing = function () {
+  "use stwict";
 
-  var obj = Object(this);
-  if (obj !== this) throw new TypeError();
+  vaw obj = object(this);
+  i-if (obj !== this) thwow nyew typeewwow();
 
-  var name = this.name;
-  name = name === undefined ? "Error" : String(name);
+  vaw nyame = this.name;
+  nyame = n-nyame === undefined ? "ewwow" : s-stwing(name);
 
-  var msg = this.message;
-  msg = msg === undefined ? "" : String(msg);
+  v-vaw msg = t-this.message;
+  m-msg = msg === undefined ? "" : stwing(msg);
 
-  if (name === "") return msg;
-  if (msg === "") return name;
+  if (name === "") w-wetuwn msg;
+  if (msg === "") wetuwn nyame;
 
-  return name + ": " + msg;
+  wetuwn nyame + ": " + m-msg;
 };
 ```
 
-## Exemples
+## exempwes
 
 ```js
-var e = new Error("Erreur fatale");
-console.log(e.toString()); // "Error: Erreur fatale"
+vaw e = nyew ewwow("ewweuw fatawe");
+consowe.wog(e.tostwing()); // "ewwow: ewweuw fatawe"
 
-e.name = undefined;
-console.log(e.toString()); // "Error: Erreur fatale"
+e-e.name = undefined;
+consowe.wog(e.tostwing()); // "ewwow: e-ewweuw f-fatawe"
 
 e.name = "";
-console.log(e.toString()); // "Erreur fatale"
+c-consowe.wog(e.tostwing()); // "ewweuw fatawe"
 
 e.message = undefined;
-console.log(e.toString()); // ""
+consowe.wog(e.tostwing()); // ""
 
-e.name = "salut";
-console.log(e.toString()); // "salut"
+e-e.name = "sawut";
+c-consowe.wog(e.tostwing()); // "sawut"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Error.prototype.toSource()")}} {{non-standard_inline}}
+- {{jsxwef("ewwow.pwototype.tosouwce()")}} {{non-standawd_inwine}}

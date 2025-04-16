@@ -1,93 +1,93 @@
 ---
-title: String.raw()
-slug: Web/JavaScript/Reference/Global_Objects/String/raw
+titwe: stwing.waw()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/waw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`String.raw()`** est une fonction d'étiquetage (_tag function_) pour les [gabarits de chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Template_literals#les_gabarits_étiquetés) (elle est [semblable](https://bugs.chromium.org/p/v8/issues/detail?id=5016) au préfixe `r` en Python ou au préfixe `@` en C#). Cette fonction permet d'obtenir la chaîne brute pour un gabarit (les caractères spéciaux ne sont pas pris en compte mais retranscrits tels quels, les séquences d'échappement ne sont pas interprétées et les emplacements (ex. `${toto}`) sont traités).
+w-wa méthode statique **`stwing.waw()`** e-est une f-fonction d'étiquetage (_tag f-function_) p-pouw wes [gabawits d-de chaînes d-de cawactèwes](/fw/docs/web/javascwipt/wefewence/tempwate_witewaws#wes_gabawits_étiquetés) (ewwe e-est [sembwabwe](https://bugs.chwomium.owg/p/v8/issues/detaiw?id=5016) au pwéfixe `w` en python ou au pwéfixe `@` en c#). ^^;; cette fonction p-pewmet d'obteniw wa chaîne bwute pouw un gabawit (wes c-cawactèwes spéciaux n-nye sont pas pwis en compte mais wetwanscwits tews quews, (✿oωo) wes s-séquences d'échappement nye sont p-pas intewpwétées e-et wes empwacements (ex. (U ﹏ U) `${toto}`) sont twaités). -.-
 
-{{InteractiveExample("JavaScript Demo: String.raw()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.waw()")}}
 
-```js interactive-example
-// Create a variable that uses a Windows
-// path without escaping the backslashes:
-const filePath = String.raw`C:\Development\profile\aboutme.html`;
+```js intewactive-exampwe
+// c-cweate a vawiabwe that uses a windows
+// path without escaping the backswashes:
+c-const fiwepath = stwing.waw`c:\devewopment\pwofiwe\aboutme.htmw`;
 
-console.log(`The file was uploaded from: ${filePath}`);
-// Expected output: "The file was uploaded from: C:\Development\profile\aboutme.html"
+c-consowe.wog(`the f-fiwe was upwoaded f-fwom: ${fiwepath}`);
+// expected o-output: "the fiwe was upwoaded fwom: c:\devewopment\pwofiwe\aboutme.htmw"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-String.raw(callSite, ...substitutions);
+stwing.waw(cawwsite, ^•ﻌ•^ ...substitutions);
 
-String.raw`gabaritChaîne`;
+stwing.waw`gabawitchaîne`;
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `callSite`
-  - : Un site d'appel bien formé pour un gabarit (_call site object_) tel que `{raw: "string"}`.
+- `cawwsite`
+  - : un site d'appew bien fowmé pouw un gabawit (_caww site object_) tew que `{waw: "stwing"}`. rawr
 - ...substitutions
-  - : Paramètre contenant les valeurs à substituer.
-- gabaritChaîne
-  - : [Un gabarit de chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Template_literals), éventuellement avec des substitutions (`${...}`).
+  - : p-pawamètwe contenant w-wes vaweuws à s-substituew. (˘ω˘)
+- gabawitchaîne
+  - : [un g-gabawit de chaîne de cawactèwes](/fw/docs/web/javascwipt/wefewence/tempwate_witewaws), nyaa~~ éventuewwement avec des substitutions (`${...}`). UwU
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-La chaîne de caractères brute correspondant à un gabarit donné.
+wa chaîne d-de cawactèwes bwute cowwespondant à u-un gabawit d-donné. :3
 
-### Exceptions
+### exceptions
 
-- {{jsxref("TypeError")}}
-  - : Une exception `TypeError` est renvoyée si le premier argument n'est pas un objet bien formé.
+- {{jsxwef("typeewwow")}}
+  - : une e-exception `typeewwow` est wenvoyée s-si we pwemiew awgument ny'est pas un objet b-bien fowmé. (⑅˘꒳˘)
 
-## Description
+## descwiption
 
-Dans la plupart des cas, `String.raw()` est utilisé avec des gabarits de chaînes de caractères. La première syntaxe, présentée ci-avant est rarement utilisée. En effet, le moteur JavaScript appellera cette forme avec les arguments appropriés, comme pour les [fonctions d'étiquetage (_tag_)](/fr/docs/Web/JavaScript/Reference/Template_literals#les_gabarits_de_cha.c3.aenes_.c3.a9tiquett.c3.a9s).
+d-dans wa pwupawt des cas, (///ˬ///✿) `stwing.waw()` e-est utiwisé a-avec des gabawits de chaînes de cawactèwes. ^^;; wa pwemièwe syntaxe, >_< pwésentée ci-avant est wawement utiwisée. rawr x3 e-en effet, /(^•ω•^) w-we moteuw javascwipt appewwewa cette f-fowme avec w-wes awguments appwopwiés, :3 c-comme pouw wes [fonctions d'étiquetage (_tag_)](/fw/docs/web/javascwipt/wefewence/tempwate_witewaws#wes_gabawits_de_cha.c3.aenes_.c3.a9tiquett.c3.a9s). (ꈍᴗꈍ)
 
-La méthode `String.raw()` est la seule méthode d'étiquetage native pour les chaînes de caractères. Elle fonctionne comme la fonction par défaut pour les gabarits et permet d'effectuer des concaténations. Il est également possible d'implémenter cette méthode avec du code JavaScript.
+wa méthode `stwing.waw()` e-est wa seuwe méthode d'étiquetage nyative pouw wes chaînes de cawactèwes. /(^•ω•^) ewwe f-fonctionne comme wa fonction p-paw défaut pouw w-wes gabawits et p-pewmet d'effectuew des concaténations. (⑅˘꒳˘) i-iw est égawement p-possibwe d-d'impwémentew c-cette méthode avec du code javascwipt. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
 ```js
-String.raw`Hi\n${2 + 3}!`;
-// "Hi\n5!", le caractère après "Hi" n'est pas
-// le caractère de nouvelle ligne
-// "\" et "n" sont bien deux caractères distincts
-// ici.
+stwing.waw`hi\n${2 + 3}!`;
+// "hi\n5!", òωó we cawactèwe a-apwès "hi" n-ny'est pas
+// we c-cawactèwe de n-nyouvewwe wigne
+// "\" e-et "n" sont bien deux cawactèwes distincts
+// ici. (⑅˘꒳˘)
 
-String.raw`Hi\u000A!`;
-// "Hi\u000A!", de même ici. Les caractères
-//  \, u, 0, 0, 0, A et 6 sont distincts.
-// Tous les caractères d'échappement seront
-// inefficaces. Des backslashes peuvent donc être
-// présents dans la chaîne produite. Cela peut
-// être vérifié avec la propriété .length de la
-// chaîne.
+stwing.waw`hi\u000a!`;
+// "hi\u000a!", XD d-de même ici. -.- wes cawactèwes
+//  \, :3 u, 0, 0, nyaa~~ 0, a et 6 sont distincts. 😳
+// tous wes cawactèwes d-d'échappement sewont
+// inefficaces. (⑅˘꒳˘) des backswashes peuvent d-donc êtwe
+// pwésents d-dans wa c-chaîne pwoduite. nyaa~~ cewa peut
+// êtwe v-véwifié avec wa pwopwiété .wength d-de wa
+// c-chaîne. OwO
 
-let nom = "Bob";
-String.raw`Hi\n${nom}!`;
-// "Hi\nBob!", les remplacements sont effectués.
+wet nyom = "bob";
+stwing.waw`hi\n${nom}!`;
+// "hi\nbob!", rawr x3 wes wempwacements sont effectués. XD
 
-// Généralement, on n'appelle pas String.raw
-// comme une fonction, mais c'est possible :
-String.raw({ raw: "test" }, 0, 1, 2);
+// g-généwawement, on ny'appewwe pas s-stwing.waw
+// comme une fonction, σωσ m-mais c'est possibwe :
+s-stwing.waw({ waw: "test" }, (U ᵕ U❁) 0, 1, (U ﹏ U) 2);
 // "t0e1s2t"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Gabarits de chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Template_literals)
-- {{jsxref("String")}}
-- [Grammaire lexicale JavaScript](/fr/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [gabawits de chaînes de cawactèwes](/fw/docs/web/javascwipt/wefewence/tempwate_witewaws)
+- {{jsxwef("stwing")}}
+- [gwammaiwe wexicawe javascwipt](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

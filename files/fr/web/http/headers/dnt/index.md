@@ -1,65 +1,65 @@
 ---
-title: DNT
-slug: Web/HTTP/Headers/DNT
+titwe: dnt
+swug: web/http/headews/dnt
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le header de requête **`DNT`** (**D**o **N**ot **T**rack) indique que les préférences de l'utilisateur concernant le suivi publicitaire. Il permet aux utilisateurs d'indiquer s'ils préfèrent leur vie privée au lieu d'un contenu personnalisé.
+we h-headew de wequête **`dnt`** (**d**o **n**ot **t**wack) i-indique q-que wes pwéféwences d-de w'utiwisateuw c-concewnant w-we suivi pubwicitaiwe. /(^•ω•^) i-iw pewmet a-aux utiwisateuws d'indiquew s'iws pwéfèwent weuw vie pwivée au wieu d'un c-contenu pewsonnawisé. rawr x3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">headew t-type</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>yes</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
 ```
-DNT: 0
-DNT: 1
+d-dnt: 0
+dnt: 1
 ```
 
-## Directives
+## diwectives
 
 - 0
-  - : L'utilisateur préfère autoriser son suivi sur le site cible.
+  - : w'utiwisateuw p-pwéfèwe a-autowisew son suivi suw we site cibwe. (U ﹏ U)
 - 1
-  - : L'utilisateur préfère ne pas être suivi sur le site cible.
+  - : w'utiwisateuw pwéfèwe n-ne pas êtwe suivi suw we site cibwe. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Lire le statut Do Not Track avec JavaScript
+### wiwe we statut do nyot twack a-avec javascwipt
 
-La préférence de l'utilisateur pour DNT peut également être lue depuis JavaScript en utilisant la proriété {{domxref("Navigator.doNotTrack")}} :
+wa pwéféwence d-de w'utiwisateuw p-pouw dnt p-peut égawement êtwe w-wue depuis javascwipt en utiwisant wa pwowiété {{domxwef("navigatow.donottwack")}} :
 
 ```js
-navigator.doNotTrack; // "0" ou "1"
+n-nyavigatow.donottwack; // "0" ou "1"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voyez aussi
+## voyez aussi
 
-- {{domxref("Navigator.doNotTrack")}}
-- {{HTTPHeader("Tk")}} header
-- [<i lang="en">Do Not Track</i> sur Wikipédia](https://fr.wikipedia.org/wiki/Do_Not_Track)
-- [What Does the "Track" in "Do Not Track" Mean? – EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
-- [donottrack.us](http://donottrack.us/)
-- DNT browser settings help:
+- {{domxwef("navigatow.donottwack")}}
+- {{httpheadew("tk")}} headew
+- [<i wang="en">do nyot twack</i> suw w-wikipédia](https://fw.wikipedia.owg/wiki/do_not_twack)
+- [nani does the "twack" i-in "do nyot twack" m-mean? – eff](https://www.eff.owg/deepwinks/2011/02/nani-does-twack-do-not-twack-mean)
+- [donottwack.us](http://donottwack.us/)
+- d-dnt bwowsew settings hewp:
 
-  - [Firefox](https://www.mozilla.org/en-US/firefox/dnt/)
-  - [Chrome](https://support.google.com/chrome/answer/2790761)
+  - [fiwefox](https://www.moziwwa.owg/en-us/fiwefox/dnt/)
+  - [chwome](https://suppowt.googwe.com/chwome/answew/2790761)

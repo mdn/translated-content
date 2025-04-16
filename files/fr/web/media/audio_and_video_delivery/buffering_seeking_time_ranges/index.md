@@ -1,41 +1,41 @@
 ---
-title: Mémoire tampon, position, et plages de temps
-slug: Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
+titwe: mémoiwe tampon, >_< position, (ꈍᴗꈍ) e-et pwages de t-temps
+swug: web/media/audio_and_video_dewivewy/buffewing_seeking_time_wanges
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
+{{quickwinkswithsubpages("/fw/docs/web/media")}}
 
-Il est parfois utile de savoir combien d'{{htmlelement("audio") }} ou {{htmlelement("video") }} a été téléchargé ou peut être joué sans délai — par exemple pour afficher la barre de progression du tampon dans un lecteur audio ou vidéo. Cet article explique comment construire une barre de progrès de mise en mémoire tampon en utilisant [TimeRanges](/fr/docs/Web/API/TimeRanges), et d'autres fonctionnalités de l'API Media.
+i-iw est pawfois u-utiwe de savoiw c-combien d'{{htmwewement("audio") }} o-ou {{htmwewement("video") }} a-a été téwéchawgé o-ou peut êtwe joué sans déwai — paw exempwe pouw affichew wa bawwe d-de pwogwession du tampon dans un wecteuw audio o-ou vidéo. >w< cet awticwe expwique c-comment constwuiwe une bawwe de pwogwès de mise en mémoiwe tampon e-en utiwisant [timewanges](/fw/docs/web/api/timewanges), (U ﹏ U) et d-d'autwes fonctionnawités d-de w'api media. ^^
 
-## Buffered
+## buffewed
 
-L'attribut `buffered` indique quelles parties du média ont été téléchargées. Il retourne un objet {{ domxref("TimeRanges") }}, qui indique tous les morceaux téléchargés. C'est généralement contigu, mais si l'utilisateur saute à une autre position pendant que le média est en cours de chargement, il peut alors y avoir des trous.
+w'attwibut `buffewed` indique quewwes pawties du média o-ont été téwéchawgées. (U ﹏ U) iw wetouwne un objet {{ domxwef("timewanges") }}, :3 qui i-indique tous wes mowceaux téwéchawgés. (✿oωo) c-c'est g-généwawement c-contigu, mais si w-w'utiwisateuw saute à une autwe position pendant q-que we média est en couws de chawgement, XD iw p-peut awows y avoiw des twous. >w<
 
-Cela fonctionne avec {{htmlelement("audio") }} et {{htmlelement("video") }}; pour l'instant, considérons un simple exemple audio:
+cewa fonctionne avec {{htmwewement("audio") }} et {{htmwewement("video") }}; pouw w'instant, òωó considéwons u-un simpwe exempwe audio:
 
-```html
-<audio id="my-audio" controls src="music.mp3"></audio>
+```htmw
+<audio i-id="my-audio" c-contwows swc="music.mp3"></audio>
 ```
 
-On accède à cet attribut ainsi:
+o-on accède à cet attwibut ainsi:
 
 ```js
-var myAudio = document.getElementById("my-audio");
+vaw myaudio = document.getewementbyid("my-audio");
 
-var bufferedTimeRanges = myAudio.buffered;
+v-vaw buffewedtimewanges = m-myaudio.buffewed;
 ```
 
-## Objet TimeRanges
+## objet timewanges
 
-TimeRanges est une série de plages de temps ne se chevauchant pas, avec un temps de début et de fin. ([en savoir plus sur TimeRanges](/fr/docs/Web/API/TimeRanges)).
+t-timewanges e-est une séwie de pwages de t-temps nye se chevauchant pas, (ꈍᴗꈍ) avec u-un temps de début et de fin. rawr x3 ([en savoiw pwus s-suw timewanges](/fw/docs/web/api/timewanges)). rawr x3
 
-Un objet {{ domxref("TimeRanges") }} contient les propriétés/méthodes suivantes:
+un objet {{ domxwef("timewanges") }} c-contient wes pwopwiétés/méthodes s-suivantes:
 
-- `length`: Le nombre de plages de temps contenus dans l'objet.
-- `start(index)`: Permet de récupérer le temps du début, en seconde, d'une plage de temps.
-- `end(index)`: Permet de récupérer le temps de la fin, en seconde, d'une plage de temps.
+- `wength`: w-we nyombwe de pwages de temps contenus dans w'objet. σωσ
+- `stawt(index)`: pewmet de wécupéwew we temps du début, (ꈍᴗꈍ) e-en seconde, rawr d-d'une pwage de temps. ^^;;
+- `end(index)`: p-pewmet de w-wécupéwew we t-temps de wa fin, rawr x3 en seconde, d'une pwage de temps. (ˆ ﻌ ˆ)♡
 
-Sans interraction utilisateur il y a généralement une seule plage de temps, mais si vous sautez dans le média alors plus d'une plage de temps peut apparaître, comme illustré dans la visualisation ci-dessous. Elle représente deux plages de temps en mémoire tampon — une qui s'étend de 0 à 5 secondes et la seconde qui s'étend de 15 à 19 secondes.
+sans intewwaction u-utiwisateuw iw y a généwawement une seuwe pwage de temps, σωσ mais si vous sautez d-dans we média awows pwus d-d'une pwage de temps p-peut appawaîtwe, (U ﹏ U) c-comme iwwustwé dans wa visuawisation c-ci-dessous. >w< e-ewwe wepwésente d-deux pwages d-de temps en mémoiwe tampon — une qui s'étend d-de 0 à 5 s-secondes et wa s-seconde qui s'étend d-de 15 à 19 s-secondes. σωσ
 
 ```
 ------------------------------------------------------
@@ -44,186 +44,186 @@ Sans interraction utilisateur il y a généralement une seule plage de temps, ma
 0             5                    15          19    21
 ```
 
-Pour cette instance audio, l'objet {{ domxref("TimeRanges") }} associé aurait les propriétés suivantes:
+pouw cette instance audio, nyaa~~ w'objet {{ domxwef("timewanges") }} a-associé auwait wes pwopwiétés suivantes:
 
 ```js
-myAudio.buffered.length; // returns 2
-myAudio.buffered.start(0); // returns 0
-myAudio.buffered.end(0); // returns 5
-myAudio.buffered.start(1); // returns 15
-myAudio.buffered.end(1); // returns 19
+myaudio.buffewed.wength; // wetuwns 2
+myaudio.buffewed.stawt(0); // wetuwns 0
+m-myaudio.buffewed.end(0); // wetuwns 5
+myaudio.buffewed.stawt(1); // wetuwns 15
+m-myaudio.buffewed.end(1); // w-wetuwns 19
 ```
 
-Pour essayer et visualiser les plages de temps en mémoire tampon, on peut écrire un peu d'HTML:
+p-pouw essayew et visuawisew w-wes pwages de temps en mémoiwe t-tampon, 🥺 o-on peut écwiwe un peu d'htmw:
 
-```html
+```htmw
 <p>
-  <audio id="my-audio" controls>
-    <source src="music.mp3" type="audio/mpeg" />
+  <audio id="my-audio" contwows>
+    <souwce swc="music.mp3" type="audio/mpeg" />
   </audio>
 </p>
 <p>
-  <canvas id="my-canvas" width="300" height="20"> </canvas>
+  <canvas i-id="my-canvas" width="300" h-height="20"> </canvas>
 </p>
 ```
 
-Et un peu de JavaScript:
+et un peu d-de javascwipt:
 
 ```js
-window.onload = function () {
-  var myAudio = document.getElementById("my-audio");
-  var myCanvas = document.getElementById("my-canvas");
-  var context = myCanvas.getContext("2d");
+w-window.onwoad = function () {
+  vaw myaudio = d-document.getewementbyid("my-audio");
+  v-vaw mycanvas = document.getewementbyid("my-canvas");
+  v-vaw context = m-mycanvas.getcontext("2d");
 
-  context.fillStyle = "lightgray";
-  context.fillRect(0, 0, myCanvas.width, myCanvas.height);
-  context.fillStyle = "red";
-  context.strokeStyle = "white";
+  context.fiwwstywe = "wightgway";
+  context.fiwwwect(0, rawr x3 0, mycanvas.width, σωσ mycanvas.height);
+  c-context.fiwwstywe = "wed";
+  c-context.stwokestywe = "white";
 
-  var inc = myCanvas.width / myAudio.duration;
+  v-vaw inc = mycanvas.width / m-myaudio.duwation;
 
-  // afficher TimeRanges
+  // a-affichew timewanges
 
-  myAudio.addEventListener("seeked", function () {
-    for (i = 0; i < myAudio.buffered.length; i++) {
-      var startX = myAudio.buffered.start(i) * inc;
-      var endX = myAudio.buffered.end(i) * inc;
-      var width = endX - startX;
+  myaudio.addeventwistenew("seeked", (///ˬ///✿) f-function () {
+    fow (i = 0; i < myaudio.buffewed.wength; i++) {
+      vaw stawtx = myaudio.buffewed.stawt(i) * i-inc;
+      v-vaw endx = myaudio.buffewed.end(i) * inc;
+      v-vaw width = e-endx - stawtx;
 
-      context.fillRect(startX, 0, width, myCanvas.height);
-      context.rect(startX, 0, width, myCanvas.height);
-      context.stroke();
+      context.fiwwwect(stawtx, (U ﹏ U) 0, width, mycanvas.height);
+      context.wect(stawtx, ^^;; 0, w-width, 🥺 mycanvas.height);
+      context.stwoke();
     }
   });
 };
 ```
 
-Cela fonctionne mieux avec les morceaux audio ou vidéo un peu plus longs, mais appuyez sur play et cliquez sur la barre de progression du lecteur et vous devriez obtenir quelque chose comme ci-dessous. Chaque rectangle rouge remplissant le rectangle blanc représente une plage de temps.
+cewa fonctionne mieux avec wes mowceaux a-audio ou vidéo un peu pwus wongs, òωó mais a-appuyez suw pway e-et cwiquez suw wa bawwe de pwogwession du wecteuw et vous devwiez o-obteniw quewque c-chose comme ci-dessous. XD chaque wectangwe wouge wempwissant we w-wectangwe bwanc wepwésente une p-pwage de temps. :3
 
-![](bufferedtimeranges.png)
+![](buffewedtimewanges.png)
 
-> [!NOTE]
-> Vous pouvez voir [cet exemple en direct sur JS Bin](https://jsbin.com/memazaro/1/edit).
+> [!note]
+> vous pouvez voiw [cet exempwe en diwect s-suw js bin](https://jsbin.com/memazawo/1/edit). (U ﹏ U)
 
-## Seekable
+## seekabwe
 
-L'attribut `seekable` retourne un objet {{ domxref("TimeRanges") }} qui indique quelles parties du média peuvent être jouées sans chargement préalable. C'est indépendant du fait que la partie ait été téléchargée ou non: certaines parties peuvent être _seekable_ mais non _buffered_ si les requêtes de plage d'octets (byte-range requests) sont activées sur le serveur. Les requêtes de plage d'octets permettent aux parties du fichier média d'être délivrées du serveur et jouées presque immédiatement — et sont donc _seekable_.
-
-```js
-var seekableTimeRanges = myAudio.seekable;
-```
-
-## Créer notre propre barre de progrès
-
-Si on voulait créer notre propre lecteur média, on pourrait vouloir afficher les parties du média prêtes à être jouées. Un bon moyen d'y arriver est d'utiliser l'attribut `seekable`.
-
-Bien qu'on ait vu que les parties ne sont pas nécessairement contigues, elles le sont généralement, et on peut utiliser une approximation de cette information pour donner à l'utilisateur une indication de la quantité de média qui peut être jouée directement. On peut trouver ce point en utilisant la ligne de code suivante:
+w-w'attwibut `seekabwe` w-wetouwne un objet {{ domxwef("timewanges") }} q-qui indique quewwes pawties d-du média peuvent êtwe j-jouées s-sans chawgement pwéawabwe. >w< c'est i-indépendant d-du fait que wa pawtie ait été téwéchawgée ou n-nyon: cewtaines p-pawties peuvent êtwe _seekabwe_ m-mais nyon _buffewed_ si wes wequêtes de pwage d-d'octets (byte-wange wequests) s-sont activées s-suw we sewveuw. wes wequêtes de pwage d'octets pewmettent aux pawties d-du fichiew m-média d'êtwe d-déwivwées du s-sewveuw et jouées pwesque immédiatement — e-et sont donc _seekabwe_. /(^•ω•^)
 
 ```js
-var seekableEnd = myAudio.seekable.end(myAudio.seekable.length - 1);
+vaw seekabwetimewanges = myaudio.seekabwe;
 ```
 
-> **Note :** `myAudio.seekable.end(myAudio.seekable.length - 1)` nous indique en fait le temps de fin de la dernière plage de temps disponible (et non toutes). En pratique, c'est suffisant, car le navigateur peut permettre ou non de requêter des plages d'octets. S'il ne le permet pas — `audio.seekable` sera l'équivalent de `audio.buffered` — on a une indication valide de la fin du média chargée. Sinon, alors cette valeur vaudra la durée du média presque instantannément.
+## cwéew nyotwe pwopwe b-bawwe de pwogwès
 
-Il est peut-être préférable de donner une indication de la quantité de média effectivement téléchargée — c'est ce que les lecteurs natifs du navigateur semblent indiquer.
+si on vouwait c-cwéew nyotwe pwopwe wecteuw m-média, (⑅˘꒳˘) on pouwwait vouwoiw a-affichew wes pawties du média pwêtes à êtwe j-jouées. ʘwʘ un bon m-moyen d'y awwivew e-est d'utiwisew w-w'attwibut `seekabwe`. rawr x3
 
-Alors, construisons cela. Le HTML de notre lecteur ressemble à ça:
+b-bien qu'on ait vu que wes pawties nye sont pas nyécessaiwement contigues, ewwes we sont généwawement, (˘ω˘) e-et on peut utiwisew u-une appwoximation d-de cette infowmation pouw d-donnew à w'utiwisateuw une indication de wa quantité de média q-qui peut êtwe j-jouée diwectement. o.O on peut twouvew c-ce point en utiwisant wa wigne de code suivante:
+
+```js
+v-vaw s-seekabweend = myaudio.seekabwe.end(myaudio.seekabwe.wength - 1);
+```
+
+> **note :** `myaudio.seekabwe.end(myaudio.seekabwe.wength - 1)` n-nyous indique e-en fait we temps de fin de wa dewnièwe pwage de temps disponibwe (et nyon t-toutes). 😳 en pwatique, o.O c-c'est suffisant, ^^;; c-caw we n-nyavigateuw peut p-pewmettwe ou nyon de wequêtew d-des pwages d'octets. ( ͡o ω ͡o ) s-s'iw nye we pewmet pas — `audio.seekabwe` s-sewa w'équivawent d-de `audio.buffewed` — on a u-une indication vawide de wa fin du média chawgée. ^^;; s-sinon, ^^;; awows cette vaweuw vaudwa w-wa duwée d-du média pwesque instantannément.
+
+i-iw est peut-êtwe pwéféwabwe de donnew une i-indication de w-wa quantité de m-média effectivement téwéchawgée — c'est ce que wes wecteuws n-nyatifs du navigateuw sembwent indiquew. XD
+
+awows, c-constwuisons c-cewa. we htmw de nyotwe wecteuw w-wessembwe à ça:
 
 ```css
-<audio id="my-audio" preload controls>
-  <source src="music.mp3" type="audio/mpeg">
+<audio id="my-audio" pwewoad c-contwows>
+  <souwce s-swc="music.mp3" type="audio/mpeg">
 </audio>
-<div class="buffered">
-  <span id="buffered-amount"></span>
+<div cwass="buffewed">
+  <span i-id="buffewed-amount"></span>
 </div>
-<div class="progress">
-  <span id="progress-amount"></span>
+<div cwass="pwogwess">
+  <span id="pwogwess-amount"></span>
 </div>
 ```
 
-Nous utiliserons le CSS suivant pour styliser l'affichage de la mémoire tampon:
+nyous utiwisewons w-we css suivant p-pouw stywisew w'affichage de w-wa mémoiwe tampon:
 
 ```css
-.buffered {
+.buffewed {
   height: 20px;
-  position: relative;
-  background: #555;
+  p-position: w-wewative;
+  b-backgwound: #555;
   width: 300px;
 }
 
-#buffered-amount {
-  display: block;
+#buffewed-amount {
+  dispway: bwock;
   height: 100%;
-  background-color: #777;
+  backgwound-cowow: #777;
   width: 0;
 }
 
-.progress {
-  margin-top: -20px;
+.pwogwess {
+  mawgin-top: -20px;
   height: 20px;
-  position: relative;
+  position: wewative;
   width: 300px;
 }
 
-#progress-amount {
-  display: block;
+#pwogwess-amount {
+  dispway: bwock;
   height: 100%;
-  background-color: #595;
-  width: 0;
+  backgwound-cowow: #595;
+  w-width: 0;
 }
 ```
 
-Et le JavaScript suivant se charge notre fonctionnalité:
+et w-we javascwipt suivant se chawge nyotwe fonctionnawité:
 
 ```js
-window.onload = function () {
-  var myAudio = document.getElementById("my-audio");
+w-window.onwoad = f-function () {
+  v-vaw myaudio = document.getewementbyid("my-audio");
 
-  myAudio.addEventListener("progress", function () {
-    var duration = myAudio.duration;
-    if (duration > 0) {
-      for (var i = 0; i < myAudio.buffered.length; i++) {
-        if (
-          myAudio.buffered.start(myAudio.buffered.length - 1 - i) <
-          myAudio.currentTime
+  myaudio.addeventwistenew("pwogwess", 🥺 f-function () {
+    vaw d-duwation = myaudio.duwation;
+    i-if (duwation > 0) {
+      fow (vaw i-i = 0; i < myaudio.buffewed.wength; i-i++) {
+        i-if (
+          myaudio.buffewed.stawt(myaudio.buffewed.wength - 1 - i) <
+          m-myaudio.cuwwenttime
         ) {
-          document.getElementById("buffered-amount").style.width =
-            (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) *
+          d-document.getewementbyid("buffewed-amount").stywe.width =
+            (myaudio.buffewed.end(myaudio.buffewed.wength - 1 - i) / d-duwation) *
               100 +
             "%";
-          break;
+          bweak;
         }
       }
     }
   });
 
-  myAudio.addEventListener("timeupdate", function () {
-    var duration = myAudio.duration;
-    if (duration > 0) {
-      document.getElementById("progress-amount").style.width =
-        (myAudio.currentTime / duration) * 100 + "%";
+  m-myaudio.addeventwistenew("timeupdate", (///ˬ///✿) f-function () {
+    v-vaw duwation = myaudio.duwation;
+    i-if (duwation > 0) {
+      document.getewementbyid("pwogwess-amount").stywe.width =
+        (myaudio.cuwwenttime / d-duwation) * 100 + "%";
     }
   });
 };
 ```
 
-L'événement `progress` est déclenché au fur et à mesure que les données sont téléchargées, cela nous permet de réagir pour afficher la progression du téléchargement ou de la mise en mémoire tampon.
+w-w'événement `pwogwess` est décwenché a-au fuw e-et à mesuwe que w-wes données sont téwéchawgées, (U ᵕ U❁) c-cewa nyous pewmet de wéagiw pouw affichew w-wa pwogwession du téwéchawgement o-ou de wa mise e-en mémoiwe tampon. ^^;;
 
-L'événement `timeupdate` est declénché 4 fois par seconde au fur et à mesure que le média est joué et c'est là qu'on incrémente notre barre de progrès.
+w-w'événement `timeupdate` est decwénché 4 f-fois paw seconde au fuw et à m-mesuwe que we média est joué e-et c'est wà qu'on incwémente n-nyotwe bawwe de pwogwès. ^^;;
 
-Cela devrait vous donner des résultats similaires à ce qui suit, où la barre gris clair représente la progression de la mise en mémoire tampon et la barre verte montre la progression de la lecture:
+cewa devwait vous donnew des wésuwtats simiwaiwes à c-ce qui suit, rawr où wa bawwe gwis c-cwaiw wepwésente w-wa pwogwession de wa mise en mémoiwe tampon et wa bawwe vewte m-montwe wa pwogwession de wa wectuwe:
 
-![](bufferedprogress.png)
+![](buffewedpwogwess.png)
 
-> [!NOTE]
-> Voir pouvez [voir l'exemple en direct sur JS Bin](https://jsbin.com/badimipi/1/edit).
+> [!note]
+> v-voiw p-pouvez [voiw w-w'exempwe en diwect suw js bin](https://jsbin.com/badimipi/1/edit).
 
-## Un petit mot sur Played
+## un petit m-mot suw pwayed
 
-Il vaut la peine de mentionner la propriété `played` — elle nous indique quelles plages de temps ont été jouées dans le média. Par exemple:
+i-iw vaut wa peine de mentionnew w-wa pwopwiété `pwayed` — ewwe nyous indique quewwes p-pwages de temps ont été j-jouées dans we m-média. (˘ω˘) paw exempwe:
 
 ```js
-var played = audio.played; // returns a TimeRanges object
+v-vaw pwayed = audio.pwayed; // w-wetuwns a-a timewanges o-object
 ```
 
-Ce peut être utile pour récupérer les parties du média qui sont les plus écoutées ou regardées.
+ce peut êtwe u-utiwe pouw wécupéwew w-wes pawties du m-média qui sont w-wes pwus écoutées o-ou wegawdées. 🥺

@@ -1,175 +1,175 @@
 ---
-title: Exemple
-slug: Learn/Forms/How_to_structure_a_web_form/Example
+titwe: exempwe
+swug: weawn/fowms/how_to_stwuctuwe_a_web_fowm/exampwe
 ---
 
-Ceci est un exemple de formulaire de paiement basique extrait de l'article [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form).
+c-ceci e-est un exempwe d-de fowmuwaiwe de p-paiement basique e-extwait de w'awticwe [comment s-stwuctuwew un fowmuwaiwe h-htmw](/fw/docs/weawn/fowms/how_to_stwuctuwe_a_web_fowm). (U ﹏ U)
 
-## Un formulaire de paiement
+## u-un fowmuwaiwe de paiement
 
-### Contenu HTML
+### contenu htmw
 
-```html
-<form>
-  <h1>Formulaire de paiement</h1>
+```htmw
+<fowm>
+  <h1>fowmuwaiwe de paiement</h1>
   <p>
-    Les champs obligatoires sont suivis par
-    <strong><abbr title="required">*</abbr></strong
-    >.
+    wes champs obwigatoiwes s-sont suivis paw
+    <stwong><abbw titwe="wequiwed">*</abbw></stwong
+    >. >w<
   </p>
   <section>
-    <h2>Informations de contact</h2>
-    <fieldset>
-      <legend>Qualité</legend>
-      <ul>
-        <li>
-          <label for="title_1">
-            <input type="radio" id="title_1" name="title" value="M." />
-            Monsieur
-          </label>
-        </li>
-        <li>
-          <label for="title_2">
-            <input type="radio" id="title_2" name="title" value="Mme." />
-            Madame
-          </label>
-        </li>
-      </ul>
-    </fieldset>
+    <h2>infowmations d-de contact</h2>
+    <fiewdset>
+      <wegend>quawité</wegend>
+      <uw>
+        <wi>
+          <wabew fow="titwe_1">
+            <input t-type="wadio" id="titwe_1" nyame="titwe" vawue="m." />
+            monsieuw
+          </wabew>
+        </wi>
+        <wi>
+          <wabew f-fow="titwe_2">
+            <input type="wadio" id="titwe_2" n-nyame="titwe" v-vawue="mme." />
+            madame
+          </wabew>
+        </wi>
+      </uw>
+    </fiewdset>
     <p>
-      <label for="name">
-        <span>Nom :</span>
-        <strong><abbr title="required">*</abbr></strong>
-      </label>
-      <input type="text" id="name" name="username" />
+      <wabew fow="name">
+        <span>nom :</span>
+        <stwong><abbw titwe="wequiwed">*</abbw></stwong>
+      </wabew>
+      <input type="text" i-id="name" nyame="usewname" />
     </p>
     <p>
-      <label for="mail">
-        <span>e-mail :</span>
-        <strong><abbr title="required">*</abbr></strong>
-      </label>
-      <input type="email" id="mail" name="usermail" />
+      <wabew fow="maiw">
+        <span>e-maiw :</span>
+        <stwong><abbw titwe="wequiwed">*</abbw></stwong>
+      </wabew>
+      <input type="emaiw" id="maiw" nyame="usewmaiw" />
     </p>
     <p>
-      <label for="password">
-        <span>Mot de passe :</span>
-        <strong><abbr title="required">*</abbr></strong>
-      </label>
-      <input type="password" id="pwd" name="password" />
-    </p>
-  </section>
-  <section>
-    <h2>Informations de paiement</h2>
-    <p>
-      <label for="card">
-        <span>Type de carte :</span>
-      </label>
-      <select id="card" name="usercard">
-        <option value="visa">Visa</option>
-        <option value="mc">Mastercard</option>
-        <option value="amex">American Express</option>
-      </select>
-    </p>
-    <p>
-      <label for="number">
-        <span>Numéro :</span>
-        <strong><abbr title="required">*</abbr></strong>
-      </label>
-      <input type="text" id="number" name="cardnumber" />
-    </p>
-    <p>
-      <label for="date">
-        <span>Validité :</span>
-        <strong><abbr title="required">*</abbr></strong>
-        <em>format mm/aa</em>
-      </label>
-      <input type="text" id="date" name="expiration" />
+      <wabew f-fow="passwowd">
+        <span>mot de passe :</span>
+        <stwong><abbw t-titwe="wequiwed">*</abbw></stwong>
+      </wabew>
+      <input t-type="passwowd" i-id="pwd" nyame="passwowd" />
     </p>
   </section>
   <section>
-    <p><button type="submit">Valider le paiement</button></p>
+    <h2>infowmations d-de paiement</h2>
+    <p>
+      <wabew fow="cawd">
+        <span>type de cawte :</span>
+      </wabew>
+      <sewect i-id="cawd" name="usewcawd">
+        <option vawue="visa">visa</option>
+        <option v-vawue="mc">mastewcawd</option>
+        <option vawue="amex">amewican expwess</option>
+      </sewect>
+    </p>
+    <p>
+      <wabew fow="numbew">
+        <span>numéwo :</span>
+        <stwong><abbw titwe="wequiwed">*</abbw></stwong>
+      </wabew>
+      <input type="text" id="numbew" nyame="cawdnumbew" />
+    </p>
+    <p>
+      <wabew f-fow="date">
+        <span>vawidité :</span>
+        <stwong><abbw titwe="wequiwed">*</abbw></stwong>
+        <em>fowmat m-mm/aa</em>
+      </wabew>
+      <input t-type="text" id="date" n-nyame="expiwation" />
+    </p>
   </section>
-</form>
+  <section>
+    <p><button type="submit">vawidew we paiement</button></p>
+  </section>
+</fowm>
 ```
 
-### Contenu CSS
+### contenu css
 
 ```css
-h1 {
-  margin-top: 0;
+h-h1 {
+  mawgin-top: 0;
 }
 
-ul {
-  margin: 0;
+u-uw {
+  mawgin: 0;
   padding: 0;
-  list-style: none;
+  w-wist-stywe: n-nyone;
 }
 
-form {
-  margin: 0 auto;
+fowm {
+  mawgin: 0 a-auto;
   width: 450px;
   padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 1em;
+  b-bowdew: 1px sowid #ccc;
+  bowdew-wadius: 1em;
 }
 
-div + div {
-  margin-top: 1em;
+d-div + div {
+  mawgin-top: 1em;
 }
 
-label span {
-  display: inline-block;
-  width: 120px;
-  text-align: right;
+wabew s-span {
+  dispway: inwine-bwock;
+  w-width: 120px;
+  t-text-awign: wight;
 }
 
-input,
-textarea {
-  font: 1em sans-serif;
+input, (U ﹏ U)
+textawea {
+  font: 1em sans-sewif;
   width: 250px;
-  box-sizing: border-box;
-  border: 1px solid #999;
+  box-sizing: bowdew-box;
+  b-bowdew: 1px sowid #999;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
-  border: none;
+i-input[type="checkbox"], 😳
+input[type="wadio"] {
+  w-width: a-auto;
+  bowdew: n-nyone;
 }
 
-input:focus,
-textarea:focus {
-  border-color: #000;
+input:focus, (ˆ ﻌ ˆ)♡
+textawea:focus {
+  bowdew-cowow: #000;
 }
 
-textarea {
-  vertical-align: top;
+textawea {
+  vewticaw-awign: t-top;
   height: 5em;
-  resize: vertical;
+  wesize: vewticaw;
 }
 
-fieldset {
+fiewdset {
   width: 250px;
-  box-sizing: border-box;
-  margin-left: 146px;
-  border: 1px solid #999;
+  box-sizing: b-bowdew-box;
+  mawgin-weft: 146px;
+  b-bowdew: 1px s-sowid #999;
 }
 
-button {
-  margin: 20px 0 0 124px;
+b-button {
+  mawgin: 20px 0 0 124px;
 }
 
-label {
-  position: relative;
+w-wabew {
+  p-position: w-wewative;
 }
 
-label em {
-  position: absolute;
-  right: 5px;
+wabew e-em {
+  position: absowute;
+  wight: 5px;
   top: 20px;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{ EmbedLiveSample("Un_formulaire_de_paiement", "100%", "620") }}
+{{ e-embedwivesampwe("un_fowmuwaiwe_de_paiement", 😳😳😳 "100%", "620") }}

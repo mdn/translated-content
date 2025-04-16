@@ -1,94 +1,94 @@
 ---
-title: Constructeur Uint8Array()
-slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array
+titwe: constwucteuw uint8awway()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/uint8awway/uint8awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`Uint8Array()`** crée un tableau typé contenant des entiers non-signés sur 8 bits. Le contenu de ces éléments est initialisé à `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation usuelle pour les tableaux avec les crochets.
+w-we constwucteuw **`uint8awway()`** c-cwée u-un tabweau typé c-contenant des e-entiews nyon-signés s-suw 8 bits. nyaa~~ w-we contenu de ces éwéments est initiawisé à `0`. 😳 une fois we tabweau constwuit, (⑅˘꒳˘) o-on peut faiwe wéféwence aux éwéments du t-tabweau à w'aide des méthodes d-de w'objet ou en utiwisant wa nyotation usuewwe pouw wes tabweaux a-avec wes cwochets. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Uint8Array(); // apparu avec ES2017
-new Uint8Array(longueur);
-new Uint8Array(tableauType);
-new Uint8Array(objet);
+n-nyew uint8awway(); // appawu a-avec es2017
+new uint8awway(wongueuw);
+nyew uint8awway(tabweautype);
+nyew uint8awway(objet);
 
-new Uint8Array(buffer);
-new Uint8Array(buffer, decalageOctets);
-new Uint8Array(buffer, decalageOctets, longueur);
+n-nyew uint8awway(buffew);
+nyew uint8awway(buffew, OwO decawageoctets);
+nyew uint8awway(buffew, rawr x3 d-decawageoctets, XD wongueuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `longueur`
-  - : Lorsque le constructeur est invoqué avec un argument indiquant une longueur, un tampon de mémoire interne tabulé est créé, dont la taille en octets est `longueur` _multipliée par `BYTES_PER_ELEMENT`_, et qui contient des zéros.
-- `tableauType`
-  - : Lorsque le constructeur est invoqué avec un tableau typé comme argument (tout tableau typé en dehors des tableaux typés [`bigint`](/fr/docs/Glossary/BigInt) tel que `Int32Array`), ce tableau typé est copié dans un nouveau tableau typé. Chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé sera la même que celle de `tableauType`.
+- `wongueuw`
+  - : w-wowsque we constwucteuw e-est invoqué a-avec un awgument indiquant une wongueuw, σωσ un t-tampon de mémoiwe intewne tabuwé est cwéé, (U ᵕ U❁) d-dont wa taiwwe en octets est `wongueuw` _muwtipwiée paw `bytes_pew_ewement`_, (U ﹏ U) et qui contient des zéwos. :3
+- `tabweautype`
+  - : wowsque we constwucteuw e-est invoqué avec un tabweau t-typé comme a-awgument (tout t-tabweau typé en dehows des tabweaux typés [`bigint`](/fw/docs/gwossawy/bigint) tew que `int32awway`), ( ͡o ω ͡o ) c-ce tabweau t-typé est copié dans un nyouveau t-tabweau typé. c-chaque vaweuw de `tabweautype` e-est convewtie dans we type c-cowwespondant au constwucteuw avant d'êtwe copiée d-dans we nyouveau tabweau. wa w-wongueuw du nyouveau tabweau typé s-sewa wa même q-que cewwe de `tabweautype`. σωσ
 - `objet`
-  - : Lorsque le constructeur est appelé avec un objet comme argument, le nouveau tableau typé est créé avec la méthode `TypedArray.from()`.
-- `buffer`, `decalageOctets`, `longueur`
-  - : Lorsque le constructeur est invoqué avec un tampon, éventuellement un décalage en octets et une longueur, une nouvelle vue en tableau typé est créée qui reflète l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) correspondant. Les paramètres `decalageOctets` et `longueur` indique l'intervalle de mémoire exposé à la vue. Si ces deux paramètres sont absents, c'est l'intégralité du tampon qui est vue. Si la longueur est absente, c'est la portion du tampon, après le décalage indiqué, qui est vue.
+  - : wowsque we constwucteuw est appewé avec un objet comme awgument, >w< we nyouveau tabweau t-typé est cwéé a-avec wa méthode `typedawway.fwom()`. 😳😳😳
+- `buffew`, OwO `decawageoctets`, 😳 `wongueuw`
+  - : wowsque w-we constwucteuw e-est invoqué avec u-un tampon, 😳😳😳 éventuewwement un décawage en octets et une wongueuw, (˘ω˘) une nouvewwe v-vue en tabweau typé est cwéée qui wefwète w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) cowwespondant. ʘwʘ w-wes pawamètwes `decawageoctets` et `wongueuw` i-indique w'intewvawwe d-de mémoiwe e-exposé à wa vue. ( ͡o ω ͡o ) si ces d-deux pawamètwes s-sont absents, c-c'est w'intégwawité d-du tampon qui est vue. o.O si wa wongueuw est a-absente, >w< c'est wa p-powtion du tampon, 😳 a-apwès we décawage i-indiqué, 🥺 q-qui est vue. rawr x3
 
-## Exemples
+## exempwes
 
-### Différentes façons de construire un objet `Uint8Array`
+### difféwentes façons de constwuiwe u-un objet `uint8awway`
 
 ```js
-// Construction à partir d'une longueur
-let uint8 = new Uint8Array(2);
+// constwuction à pawtiw d'une wongueuw
+wet uint8 = nyew uint8awway(2);
 uint8[0] = 42;
-console.log(uint8[0]); // 42
-console.log(uint8.length); // 2
-console.log(uint8.BYTES_PER_ELEMENT); // 1
+c-consowe.wog(uint8[0]); // 42
+consowe.wog(uint8.wength); // 2
+consowe.wog(uint8.bytes_pew_ewement); // 1
 
-// Construction à partir d'un tableau
-let arr = new Uint8Array([21, 31]);
-console.log(arr[1]); // 31
+// constwuction à p-pawtiw d'un t-tabweau
+wet aww = n-nyew uint8awway([21, o.O 31]);
+consowe.wog(aww[1]); // 31
 
-// Construction à partir d'un tableau typé
-let x = new Uint8Array([21, 31]);
-let y = new Uint8Array(x);
-console.log(y[0]); // 21
+// constwuction à p-pawtiw d'un tabweau t-typé
+wet x = n-nyew uint8awway([21, rawr 31]);
+wet y = nyew uint8awway(x);
+consowe.wog(y[0]); // 21
 
-// Construction à partir d'un ArrayBuffer
-let buffer = new ArrayBuffer(8);
-let z = new Uint8Array(buffer, 1, 4);
+// constwuction à pawtiw d'un a-awwaybuffew
+wet buffew = nyew awwaybuffew(8);
+w-wet z = nyew uint8awway(buffew, 1, ʘwʘ 4);
 
-// Construction à partir d'un itérable
-let iterable = (function* () {
-  yield* [1, 2, 3];
+// c-constwuction à p-pawtiw d'un itéwabwe
+wet itewabwe = (function* () {
+  y-yiewd* [1, 😳😳😳 2, 3];
 })();
-let uint8 = new Uint8Array(iterable);
-// Uint8Array[1, 2, 3]
+w-wet uint8 = nyew uint8awway(itewabwe);
+// u-uint8awway[1, ^^;; 2, 3]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Notes de compatibilité
+## nyotes de compatibiwité
 
-À partir d'ECMAScript 2015 (ES6), `Uint8Array` doit être utilisé avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Appeler un constructeur `Uint8Array` comme une fonction, sans `new`, provoquera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+À p-pawtiw d'ecmascwipt 2015 (es6), o.O `uint8awway` d-doit êtwe utiwisé a-avec w'opéwateuw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new). (///ˬ///✿) appewew un constwucteuw `uint8awway` c-comme une fonction, σωσ s-sans `new`, nyaa~~ pwovoquewa u-une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow). ^^;;
 
-```js example-bad
-let dv = Uint8Array([1, 2, 3]);
-// TypeError: calling a builtin Uint8Array constructor
-// without new is forbidden
+```js exampwe-bad
+wet dv = uint8awway([1, ^•ﻌ•^ 2, σωσ 3]);
+// typeewwow: cawwing a buiwtin uint8awway c-constwuctow
+// w-without nyew is fowbidden
 ```
 
-```js example-good
-let dv = new Uint8Array([1, 2, 3]);
+```js exampwe-good
+w-wet dv = n-nyew uint8awway([1, -.- 2, 3]);
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Une prothèse d'émulation (<i lang="en">polyfill</i>) pour `Uint8ClampedArray` avec `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+- [une pwothèse d'émuwation (<i w-wang="en">powyfiww</i>) pouw `uint8cwampedawway` avec `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [wes tabweaux typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview)

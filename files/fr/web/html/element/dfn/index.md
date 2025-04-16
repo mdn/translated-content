@@ -1,221 +1,221 @@
 ---
-title: "<dfn> : l'élément de définition"
-slug: Web/HTML/Element/dfn
+titwe: "<dfn> : w'éwément de d-définition"
+swug: w-web/htmw/ewement/dfn
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<dfn>`** (aussi nommé « définition ») est utilisé pour indiquer le terme défini dans le contexte d'une expression ou d'une phrase de définition. L'élément [`<p>`](/fr/docs/Web/HTML/Element/p), le couple [`<dt>`](/fr/docs/Web/HTML/Element/dt)/[`<dd>`](/fr/docs/Web/HTML/Element/dd) ou l'élément [`<section>`](/fr/docs/Web/HTML/Element/section) qui est le plus proche ancêtre de `<dfn>` est considéré comme la définition du terme.
+w-w'éwément htmw **`<dfn>`** (aussi n-nyommé « définition ») est u-utiwisé pouw i-indiquew we tewme d-défini dans w-we contexte d'une expwession ou d'une phwase de définition. (U ﹏ U) w'éwément [`<p>`](/fw/docs/web/htmw/ewement/p), mya we coupwe [`<dt>`](/fw/docs/web/htmw/ewement/dt)/[`<dd>`](/fw/docs/web/htmw/ewement/dd) o-ou w'éwément [`<section>`](/fw/docs/web/htmw/ewement/section) qui est we pwus pwoche ancêtwe d-de `<dfn>` est considéwé c-comme wa définition du tewme. (U ᵕ U❁)
 
-{{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;dfn&gt;", :3 "tabbed-showtew")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  A <dfn id="def-validator">validator</dfn> is a program that checks for syntax
-  errors in code or documents.
+  a-a <dfn id="def-vawidatow">vawidatow</dfn> is a pwogwam that c-checks fow syntax
+  e-ewwows in code ow documents. mya
 </p>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
-dfn {
+```css intewactive-exampwe
+/* stywewint-disabwe-next-wine bwock-no-empty */
+d-dfn {
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >, OwO
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu p-phwasé</a
+        >, (ˆ ﻌ ˆ)♡
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu t-tangibwe</a
+        >. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Contenu phrasé</a
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu p-phwasé</a
         >
-        mais sans élément <code>&#x3C;dfn></code> qui soit un descendant.
+        mais sans éwément <code>&#x3c;dfn></code> qui soit un descendant. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        aucune, wa bawise d'ouvewtuwe et wa bawise de fewmetuwe s-sont
+        obwigatoiwes. UwU
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >.
+        tout éwément a-acceptant du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
+        >. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe a-awia impwicite</th>
       <td>
-        <a href="https://w3c.github.io/aria/#term"><code>term</code></a>
+        <a h-hwef="https://w3c.github.io/awia/#tewm"><code>tewm</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
+      <td>tous w-wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a
-        >.
+        <a hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a
+        >. 🥺
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur `<dfn>`.
+comme pouw tous wes éwéments, :3 o-on peut appwiquew [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes) s-suw `<dfn>`. (ꈍᴗꈍ)
 
-Pour cet élément, l'attribut **`title`** possède un sens particulier noté ci-après.
+pouw cet éwément, 🥺 w'attwibut **`titwe`** possède un sens pawticuwiew nyoté ci-apwès. (✿oωo)
 
-## Notes d'utilisation
+## n-nyotes d-d'utiwisation
 
-L'utilisation de l'élément `<dfn>` présente certains aspects peu évidents. Nous les examinons ici.
+w'utiwisation de w-w'éwément `<dfn>` p-pwésente cewtains a-aspects peu évidents. (U ﹏ U) nyous wes examinons ici. :3
 
-### Spécifier le terme à définir
+### spécifiew w-we tewme à définiw
 
-Le terme à définir est identifié selon ces règles :
+we tewme à définiw est identifié sewon ces wègwes :
 
-1. Si l'élément `<dfn>` possède un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title), la valeur de l'attribut `title` est considérée comme étant le terme défini. L'élément doit toujours contenir du texte, mais ce texte peut être une abréviation (peut-être en utilisant [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)) ou une autre forme du terme.
-2. Si le `<dfn>` contient un seul élément enfant et n'a pas de contenu textuel propre, et que l'élément enfant est un élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) avec un attribut `title` lui-même, alors la valeur exacte du `<abbr>` de l'élément `title` est le terme défini.
-3. Sinon, le contenu textuel de l'élément `<dfn>` est le terme défini. Ceci est illustré [dans le premier exemple ci-dessous](#basic_identification_of_a_term).
+1. ^^;; s-si w'éwément `<dfn>` possède un attwibut [`titwe`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-titwe), rawr w-wa vaweuw de w'attwibut `titwe` e-est considéwée c-comme étant we tewme défini. 😳😳😳 w-w'éwément doit t-toujouws conteniw d-du texte, mais c-ce texte peut êtwe une abwéviation (peut-êtwe en utiwisant [`<abbw>`](/fw/docs/web/htmw/ewement/abbw)) o-ou u-une autwe fowme d-du tewme. (✿oωo)
+2. si w-we `<dfn>` contient u-un seuw éwément enfant et ny'a pas de contenu textuew pwopwe, OwO e-et que w'éwément enfant est un éwément [`<abbw>`](/fw/docs/web/htmw/ewement/abbw) avec un attwibut `titwe` wui-même, ʘwʘ awows w-wa vaweuw exacte du `<abbw>` de w'éwément `titwe` est we tewme d-défini. (ˆ ﻌ ˆ)♡
+3. s-sinon, we contenu t-textuew de w'éwément `<dfn>` est we tewme défini. c-ceci est iwwustwé [dans w-we pwemiew exempwe c-ci-dessous](#basic_identification_of_a_tewm).
 
-> [!NOTE]
-> Si l'élément `<dfn>` possède un attribut `title`, il _doit_ contenir le terme défini et aucun autre texte.
+> [!note]
+> si w'éwément `<dfn>` possède un attwibut `titwe`, (U ﹏ U) iw _doit_ conteniw we tewme d-défini et aucun autwe texte. UwU
 
-### Liens vers des éléments de type `<dfn>`
+### w-wiens vews des éwéments de t-type `<dfn>`
 
-Si vous incluez un attribut [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) sur l'élément `<dfn>`, vous pouvez ensuite créer un lien vers celui-ci en utilisant des éléments [`<a>`](/fr/docs/Web/HTML/Element/a). Ces liens doivent être des utilisations du terme, l'objectif étant que le lecteur puisse accéder rapidement à la définition du terme s'il ne la connaît pas déjà, en cliquant sur le lien du terme.
+si v-vous incwuez un attwibut [`id`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-id) suw w-w'éwément `<dfn>`, XD v-vous pouvez ensuite cwéew u-un wien vews cewui-ci e-en utiwisant des éwéments [`<a>`](/fw/docs/web/htmw/ewement/a). ʘwʘ ces wiens doivent êtwe des utiwisations d-du tewme, rawr x3 w'objectif étant que w-we wecteuw puisse a-accédew wapidement à wa définition d-du tewme s-s'iw nye wa connaît pas déjà, ^^;; e-en cwiquant suw we wien du tewme. ʘwʘ
 
-C'est ce que montre l'exemple sous [Liens vers les définitions](#links_to_definitions) ci-dessous.
+c'est ce que montwe w'exempwe sous [wiens v-vews wes définitions](#winks_to_definitions) c-ci-dessous. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-Voyons quelques exemples de divers scénarios d'utilisation.
+voyons quewques exempwes d-de divews scénawios d-d'utiwisation. (˘ω˘)
 
-### Identification simple d'un terme
+### identification simpwe d'un tewme
 
-Dans cet exemple, on utilise simplement l'élément `<dfn>` afin d'identifier l'emplacement du terme défini au sein de sa définition.
+dans c-cet exempwe, (ꈍᴗꈍ) on utiwise simpwement w'éwément `<dfn>` afin d'identifiew w'empwacement d-du tewme défini au sein de sa définition. /(^•ω•^)
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  L'élément HTML de définition (<strong><dfn>&lt;dfn&gt;</dfn></strong
-  >) est utilisé afin d'indiquer le terme en cours de définition dans la phrase.
+  w-w'éwément htmw de définition (<stwong><dfn>&wt;dfn&gt;</dfn></stwong
+  >) est utiwisé afin d'indiquew w-we tewme e-en couws de définition dans wa phwase. >_<
 </p>
 ```
 
-L'élément `<dfn>` n'ayant ici pas d'attribut `title`, c'est le contenu textuel qui représente le terme que l'on définit.
+w'éwément `<dfn>` n-ny'ayant ici pas d'attwibut `titwe`, σωσ c-c'est we contenu textuew qui wepwésente we tewme q-que w'on définit. ^^;;
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Identification_simple_d'un_terme", "", 120)}}
+{{embedwivesampwe("identification_simpwe_d'un_tewme", 😳 "", >_< 120)}}
 
-### Liens vers des définitions
+### w-wiens v-vews des définitions
 
-Il est possible d'utiliser l'attribut `id` afin de créer des liens avec des éléments [`<a>`](/fr/docs/Web/HTML/Element/a) qui pointent vers la définition.
+iw est possibwe d-d'utiwisew w'attwibut `id` a-afin de cwéew d-des wiens avec d-des éwéments [`<a>`](/fw/docs/web/htmw/ewement/a) qui pointent v-vews wa définition. -.-
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  L'élément de définition (<strong
-    ><dfn id="definition-dfn">&lt;dfn&gt;</dfn></strong
-  >) est utilisé afin d'indiquer le terme en train d'être défini dans le
-  contexte d'une phrase.
+  w'éwément de définition (<stwong
+    ><dfn id="definition-dfn">&wt;dfn&gt;</dfn></stwong
+  >) e-est utiwisé afin d-d'indiquew we t-tewme en twain d'êtwe défini dans we
+  contexte d-d'une phwase. UwU
 </p>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece donan, Latine
-  voluptatem vocant. Confecta res esset. Duo Reges: constructio interrete.
-  Scrupulum, inquam, abeunti;
+  wowem i-ipsum dowow sit a-amet, :3 consectetuw adipiscing ewit. σωσ gwaece donan, >w< watine
+  vowuptatem v-vocant. (ˆ ﻌ ˆ)♡ c-confecta wes esset. ʘwʘ d-duo weges: constwuctio i-intewwete. :3
+  scwupuwum, (˘ω˘) i-inquam, 😳😳😳 abeunti;
 </p>
 
 <p>
-  Negare non possum. Dat enim intervalla et relaxat. Quonam modo? Equidem e Cn.
-  Quid de Pythagora? In schola desinis.
+  nyegawe nyon possum. rawr x3 dat enim intewvawwa et wewaxat. (✿oωo) quonam modo? equidem e cn. (ˆ ﻌ ˆ)♡
+  q-quid de pythagowa? in schowa desinis. :3
 </p>
 
 <p>
-  Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum est igitur,
-  quid sit voluptas; Quid enim? Non est igitur voluptas bonum. Urgent tamen et
-  nihil remittunt. Quid enim possumus hoc agere divinius?
+  u-ubi ut eam capewet aut quando? c-cuw iustitia waudatuw? apewiendum e-est igituw, (U ᵕ U❁)
+  quid sit vowuptas; q-quid enim? n-nyon est igituw v-vowuptas bonum. ^^;; u-uwgent tamen et
+  n-nyihiw wemittunt. mya quid enim possumus hoc agewe divinius?
 </p>
 
 <p>
-  C'est pourquoi nous avons décidé d'utiliser l'élément
-  <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> pour ce projet.
-</p>
-```
-
-On voit ici que l'élément possède désormais un attribut [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) avec la valeur `"definition-dfn"`. Cet attribut permet d'utiliser l'élément comme cible d'un lien. Plus bas, on crée un tel lien avec un élément [`<a>`](/fr/docs/Web/HTML/Element/a) dont l'attribut [`href`](/fr/docs/Web/HTML/Element/a#attr-href) vaut `"#definition-dfn"`, ce qui permet de remonter à la définition.
-
-#### Résultat
-
-{{EmbedLiveSample("Liens_vers_des_définitions", "", 350)}}
-
-### Utiliser les abréviations et les définitions
-
-Dans certains cas, on souhaite utiliser l'abréviation d'un terme lorsqu'on le définit. Pour cela, on peut utiliser `<dfn>` et [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) de la façon suivante :
-
-#### HTML
-
-```html
-<p>
-  Le <dfn><abbr title="Télescope Spatial Hubble">TSH</abbr></dfn> est l'un des
-  instruments scientifiques les plus productifs jamais construits. Il est en
-  orbite depuis plus de 20 ans, scrutant le ciel et renvoyant des données et des
-  photographies d'une qualité et d'un niveau de détail sans précédent.
-</p>
-
-<p>
-  En effet, le <abbr title="Télescope Spatial Hubble">TSH</abbr> a sans doute
-  fait plus pour faire avancer la science que tout autre appareil jamais
-  construit.
+  c'est pouwquoi nyous avons décidé d'utiwisew w-w'éwément
+  <code><a h-hwef="#definition-dfn">&wt;dfn&gt;</a></code> p-pouw ce pwojet. 😳😳😳
 </p>
 ```
 
-On notera que l'élément `<abbr>` est imbriqué dans l'élément `<dfn>`. L'élément `<abbr>` indique que le terme est une abréviation ("HST") et indique le détail de cette abrévation ("Hubble Space Telescope") grâce à son attribut `title`. L'élément `<dfn>` indique quant à lui que c'est bien ce terme abrégé qu'on est en train de définir.
+o-on voit ici que w'éwément possède désowmais un attwibut [`id`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-id) a-avec wa vaweuw `"definition-dfn"`. OwO c-cet attwibut pewmet d'utiwisew w-w'éwément comme cibwe d'un wien. rawr pwus b-bas, XD on cwée un t-tew wien avec un éwément [`<a>`](/fw/docs/web/htmw/ewement/a) dont w'attwibut [`hwef`](/fw/docs/web/htmw/ewement/a#attw-hwef) v-vaut `"#definition-dfn"`, (U ﹏ U) c-ce qui pewmet de wemontew à wa définition. (˘ω˘)
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Utiliser_les_abréviations_et_les_définitions", "", 200)}}
+{{embedwivesampwe("wiens_vews_des_définitions", UwU "", 350)}}
 
-## Spécifications
+### utiwisew w-wes abwéviations e-et wes définitions
 
-{{Specifications}}
+d-dans cewtains c-cas, >_< on s-souhaite utiwisew w'abwéviation d-d'un tewme wowsqu'on w-we définit. σωσ pouw cewa, on p-peut utiwisew `<dfn>` e-et [`<abbw>`](/fw/docs/web/htmw/ewement/abbw) de wa façon s-suivante :
 
-## Compatibilité des navigateurs
+#### htmw
 
-{{Compat}}
+```htmw
+<p>
+  we <dfn><abbw t-titwe="téwescope spatiaw hubbwe">tsh</abbw></dfn> e-est w'un d-des
+  instwuments scientifiques w-wes pwus pwoductifs jamais constwuits. 🥺 iw est en
+  o-owbite depuis p-pwus de 20 ans, 🥺 s-scwutant we ciew et wenvoyant des données et des
+  photogwaphies d-d'une quawité et d'un niveau de détaiw sans p-pwécédent. ʘwʘ
+</p>
 
-## Voir aussi
+<p>
+  e-en effet, :3 we <abbw titwe="téwescope s-spatiaw hubbwe">tsh</abbw> a sans d-doute
+  fait pwus p-pouw faiwe avancew wa science que tout autwe a-appaweiw jamais
+  constwuit.
+</p>
+```
 
-- Éléments liés aux listes de définitions : [`<dl>`](/fr/docs/Web/HTML/Element/dl), [`<dt>`](/fr/docs/Web/HTML/Element/dt), [`<dd>`](/fr/docs/Web/HTML/Element/dd)
-- L'élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)
+on notewa q-que w'éwément `<abbw>` e-est imbwiqué dans w'éwément `<dfn>`. (U ﹏ U) w-w'éwément `<abbw>` indique q-que we tewme est u-une abwéviation ("hst") e-et indique we détaiw de cette abwévation ("hubbwe space tewescope") gwâce à son attwibut `titwe`. (U ﹏ U) w'éwément `<dfn>` indique quant à wui que c'est bien ce tewme abwégé qu'on est en twain de définiw. ʘwʘ
+
+#### w-wésuwtat
+
+{{embedwivesampwe("utiwisew_wes_abwéviations_et_wes_définitions", >w< "", rawr x3 200)}}
+
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- Éwéments wiés a-aux wistes d-de définitions : [`<dw>`](/fw/docs/web/htmw/ewement/dw), OwO [`<dt>`](/fw/docs/web/htmw/ewement/dt), ^•ﻌ•^ [`<dd>`](/fw/docs/web/htmw/ewement/dd)
+- w'éwément [`<abbw>`](/fw/docs/web/htmw/ewement/abbw)

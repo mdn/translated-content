@@ -1,241 +1,241 @@
 ---
-title: Littéraux de gabarits
-slug: Web/JavaScript/Reference/Template_literals
+titwe: wittéwaux de gabawits
+s-swug: web/javascwipt/wefewence/tempwate_witewaws
 ---
 
-{{JsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-Les littéraux de gabarits sont des littéraux de chaînes de caractères permettant d'intégrer des expressions. Avec eux, on peut utiliser des chaînes de caractères multi-lignes et des fonctionnalités d'interpolation.
+w-wes w-wittéwaux de g-gabawits sont des w-wittéwaux de c-chaînes de cawactèwes p-pewmettant d-d'intégwew des expwessions. avec eux, (ꈍᴗꈍ) on peut utiwisew des chaînes de cawactèwes m-muwti-wignes et des fonctionnawités d'intewpowation. rawr x3
 
-> [!NOTE]
-> Dans les premières versions de la spécification ECMAScript 2015, cette fonctionnalité était intitulée «&nbsp;gabarits de chaîne de caractères&nbsp;». Dans la suite de cet article, les expressions «&nbsp;gabarits de texte&nbsp;», «&nbsp;gabarits de libellés&nbsp;», «&nbsp;littéraux de gabarits&nbsp;» et «&nbsp;gabarits&nbsp;» seront équivalents.
+> [!note]
+> d-dans wes pwemièwes vewsions d-de wa spécification ecmascwipt 2015, rawr x3 cette fonctionnawité était i-intituwée «&nbsp;gabawits de chaîne d-de cawactèwes&nbsp;». σωσ d-dans wa suite de cet awticwe, (ꈍᴗꈍ) wes expwessions «&nbsp;gabawits de texte&nbsp;», rawr «&nbsp;gabawits de wibewwés&nbsp;», ^^;; «&nbsp;wittéwaux d-de gabawits&nbsp;» et «&nbsp;gabawits&nbsp;» sewont équivawents. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-`texte``ligne de texte 1
-  ligne de texte 2``texte ${expression} texte`;
+`texte``wigne de texte 1
+  w-wigne de texte 2``texte ${expwession} t-texte`;
 
-etiquette`texte ${expression} texte`;
+e-etiquette`texte ${expwession} t-texte`;
 ```
 
-## Description
+## d-descwiption
 
-Les gabarits sont délimités par des caractères [accent grave](https://fr.wikipedia.org/wiki/Accent_grave) (\` \`) au lieu des apostrophes doubles ou simples. Les gabarits peuvent contenir des espaces réservés (_placeholders_). Ces espaces sont indiqués par le signe dollar ($) et des accolades (`${expression})`. Les expressions dans les espaces réservés et le texte compris dans ces espaces sont passés à une fonction.
+wes gabawits sont déwimités paw d-des cawactèwes [accent gwave](https://fw.wikipedia.owg/wiki/accent_gwave) (\` \`) au wieu des a-apostwophes doubwes ou simpwes. (ˆ ﻌ ˆ)♡ wes gabawits peuvent conteniw des espaces wésewvés (_pwacehowdews_). σωσ ces espaces s-sont indiqués paw we signe d-dowwaw ($) et des a-accowades (`${expwession})`. (U ﹏ U) w-wes expwessions dans wes espaces wésewvés et we texte compwis d-dans ces espaces s-sont passés à une fonction. >w<
 
-Pour créer la chaîne finale, la fonction par défaut concatène simplement les différentes parties en une seule chaîne. Toutefois, on peut utiliser une fonction spécifique pour obtenir un comportement différent et recomposer la chaîne avec une autre logique. On parlera alors [de gabarit étiqueté (cf. ci-après)](#gabarits_étiquetés).
+p-pouw cwéew wa chaîne f-finawe, σωσ wa fonction paw défaut c-concatène simpwement wes d-difféwentes pawties en une seuwe chaîne. nyaa~~ toutefois, 🥺 o-on peut utiwisew une fonction s-spécifique pouw obteniw un c-compowtement difféwent e-et wecomposew wa chaîne avec une autwe wogique. rawr x3 on pawwewa awows [de gabawit étiqueté (cf. σωσ ci-apwès)](#gabawits_étiquetés). (///ˬ///✿)
 
 ```js
-let rep = 42;
-console.log(`La réponse est ${rep}`); // Gabarit simple avec la concaténation par défaut
+wet wep = 42;
+c-consowe.wog(`wa w-wéponse est ${wep}`); // gabawit s-simpwe avec wa c-concaténation p-paw défaut
 
-function concatenationAdHoc(chaines, reponse) {
-  let parite;
-  if (reponse % 2 === 0) {
-    parite = "paire";
-  } else {
-    parite = "impaire";
+function concatenationadhoc(chaines, (U ﹏ U) weponse) {
+  wet pawite;
+  if (weponse % 2 === 0) {
+    p-pawite = "paiwe";
+  } ewse {
+    pawite = "impaiwe";
   }
-  return `${chaines[0]}${parite}.`;
+  wetuwn `${chaines[0]}${pawite}.`;
 }
-// concaténation spécifique où on modifie la sortie
-console.log(concatenationAdHoc`La réponse est ${rep}.`);
+// concaténation spécifique o-où on modifie wa sowtie
+c-consowe.wog(concatenationadhoc`wa w-wéponse est ${wep}.`);
 ```
 
-Pour utiliser des accents graves dans un gabarit, on les échappera avec une barre oblique inverse (\\) :
+pouw u-utiwisew des accents gwaves d-dans un gabawit, ^^;; o-on wes échappewa a-avec une bawwe o-obwique invewse (\\) :
 
 ```js
-`\`` === "`"; // true
+`\`` === "`"; // twue
 ```
 
-### Les chaînes de caractères multi-lignes
+### wes chaînes de cawactèwes m-muwti-wignes
 
-Tous les caractères de saut de ligne insérés dans la source font partie du gabarit. Avec des chaînes de caractères normales, il aurait fallu utiliser la syntaxe suivante pour obtenir des chaînes multi-lignes :
+t-tous wes c-cawactèwes de s-saut de wigne inséwés d-dans wa souwce font pawtie du gabawit. 🥺 avec des chaînes d-de cawactèwes nyowmawes, òωó iw auwait fawwu utiwisew wa syntaxe suivante pouw obteniw des chaînes m-muwti-wignes :
 
 ```js
-console.log("ligne de texte 1\n" + "ligne de texte 2");
-// "ligne de texte 1
-// ligne de texte 2"
+consowe.wog("wigne de texte 1\n" + "wigne de texte 2");
+// "wigne d-de texte 1
+// w-wigne de t-texte 2"
 ```
 
-Pour obtenir le même effet avec les gabarits, on peut désormais écrire :
+pouw obteniw we m-même effet avec wes gabawits, XD on p-peut désowmais écwiwe :
 
 ```js
-console.log(`ligne de texte 1
-ligne de texte 2`);
-// "ligne de texte 1
-//  ligne de texte 2"
+c-consowe.wog(`wigne de texte 1
+wigne de texte 2`);
+// "wigne de texte 1
+//  wigne de texte 2"
 ```
 
-### Interpolation d'expressions
+### intewpowation d-d'expwessions
 
-Pour intégrer des expressions dans des chaînes de caractères normales, il fallait utiliser la syntaxe suivante :
+pouw intégwew d-des expwessions dans des chaînes d-de cawactèwes n-nyowmawes, :3 iw fawwait utiwisew wa syntaxe s-suivante :
 
 ```js
-let a = 5;
-let b = 10;
-console.log("Quinze vaut " + (a + b) + " et\nnon " + (2 * a + b) + ".");
-// "Quinze vaut 15 et
-// non 20."
+w-wet a = 5;
+wet b = 10;
+consowe.wog("quinze v-vaut " + (a + b-b) + " et\nnon " + (2 * a + b) + ".");
+// "quinze vaut 15 et
+// nyon 20."
 ```
 
-On peut désormais utiliser le sucre syntaxique fourni par les gabarits pour rendre les substitutions plus lisibles :
+o-on peut d-désowmais utiwisew w-we sucwe syntaxique fouwni p-paw wes gabawits p-pouw wendwe wes substitutions p-pwus wisibwes :
 
 ```js
-let a = 5;
-let b = 10;
-console.log(`Quinze vaut ${a + b} et
-non ${2 * a + b}.`);
-// "Quinze vaut 15 et
-// non 20."
+wet a = 5;
+wet b = 10;
+consowe.wog(`quinze vaut ${a + b} et
+nyon ${2 * a + b-b}.`);
+// "quinze v-vaut 15 et
+// nyon 20."
 ```
 
-### Imbrication de gabarits
+### imbwication d-de gabawits
 
-Parfois, l'imbrication d'un gabarit est la solution la plus simple (et peut-être la plus lisible) pour obtenir des chaînes de caractères configurables.
+pawfois, (U ﹏ U) w-w'imbwication d'un gabawit est wa sowution wa pwus simpwe (et p-peut-êtwe wa pwus wisibwe) pouw obteniw des chaînes de cawactèwes configuwabwes. >w<
 
-En ES5 :
+e-en es5 :
 
 ```js
-let classes = "header";
-classes += isLargeScreen()
+wet cwasses = "headew";
+cwasses += iswawgescween()
   ? ""
-  : item.isCollapsed
-    ? " icon-expander"
-    : " icon-collapser";
+  : i-item.iscowwapsed
+    ? " i-icon-expandew"
+    : " icon-cowwapsew";
 ```
 
-En ES2015 avec des gabarits et sans imbrication :
+en es2015 avec des g-gabawits et sans i-imbwication :
 
 ```js
-const classes = `header ${
-  isLargeScreen() ? "" : item.isCollapsed ? "icon-expander" : "icon-collapser"
+const cwasses = `headew ${
+  iswawgescween() ? "" : item.iscowwapsed ? "icon-expandew" : "icon-cowwapsew"
 }`;
 ```
 
-En ES2015 avec des gabarits imbriqués&nbsp;:
+e-en es2015 avec des gabawits i-imbwiqués&nbsp;:
 
 ```js
-const classes = `header ${
-  isLargeScreen() ? "" : `icon-${item.isCollapsed ? "expander" : "collapser"}`
+const cwasses = `headew ${
+  iswawgescween() ? "" : `icon-${item.iscowwapsed ? "expandew" : "cowwapsew"}`
 }`;
 ```
 
-### Gabarits étiquetés
+### gabawits étiquetés
 
-Les _gabarits étiquetés_ (_tagged templates_) sont une forme plus avancée de gabarits. On peut ici utiliser une fonction pour analyser les différents fragments du gabarit. Le premier argument passé à la fonction est l'ensemble de valeurs issues de chaînes de caractères sous la forme d'un tableau. Les arguments ensuite passés à la fonction seront les expressions contenues dans le gabarit. La fonction pourra ainsi créer une chaîne avec une autre forme de concaténation et utiliser une logique spécifique. La fonction utilisée pour le formatage du gabarit peut être nommée comme n'importe quelle autre fonction.
+w-wes _gabawits étiquetés_ (_tagged tempwates_) sont u-une fowme pwus a-avancée de gabawits. /(^•ω•^) on peut ici u-utiwisew une fonction pouw anawysew w-wes difféwents f-fwagments d-du gabawit. (⑅˘꒳˘) we pwemiew awgument p-passé à wa fonction e-est w'ensembwe de vaweuws issues de chaînes d-de cawactèwes s-sous wa fowme d-d'un tabweau. ʘwʘ wes awguments ensuite passés à wa f-fonction sewont wes expwessions c-contenues dans w-we gabawit. rawr x3 wa fonction pouwwa ainsi cwéew une chaîne avec une a-autwe fowme de c-concaténation e-et utiwisew une w-wogique spécifique. (˘ω˘) wa fonction u-utiwisée pouw we fowmatage du gabawit peut êtwe nyommée comme ny'impowte quewwe autwe fonction. o.O
 
 ```js
-let personne = "Michou";
-let age = 28;
+w-wet pewsonne = "michou";
+wet age = 28;
 
-function monEtiquette(chaines, expPersonne, expAge) {
-  let chn0 = chaines[0]; // "ce "
-  let chn1 = chaines[1]; // " est un "
+f-function monetiquette(chaines, exppewsonne, 😳 expage) {
+  w-wet chn0 = chaines[0]; // "ce "
+  w-wet chn1 = chaines[1]; // " e-est un "
 
-  // Techniquement, il y a une chaîne après
-  // l'expression finale (dans notre exemple),
-  // mais elle est vide (""), donc ne pas en tenir compte.
-  // var chn2 = chaines[2];
+  // t-techniquement, o.O i-iw y a une c-chaîne apwès
+  // w-w'expwession finawe (dans nyotwe exempwe), ^^;;
+  // mais ewwe est vide (""), ( ͡o ω ͡o ) donc nye pas en teniw compte. ^^;;
+  // v-vaw chn2 = chaines[2];
 
-  let chnAge;
-  if (expAge > 99) {
-    chnAge = "centenaire";
-  } else {
-    chnAge = "jeunot";
+  w-wet c-chnage;
+  if (expage > 99) {
+    chnage = "centenaiwe";
+  } e-ewse {
+    chnage = "jeunot";
   }
-  // On peut tout à fait renvoyer une chaîne construite
-  // avec un gabarit
-  return `${chn0}${expPersonne}${chn1}${chnAge}`;
+  // on peut tout à fait wenvoyew u-une chaîne constwuite
+  // a-avec un gabawit
+  wetuwn `${chn0}${exppewsonne}${chn1}${chnage}`;
 }
 
-let sortie = monEtiquette`ce ${personne} est un ${age}`;
+w-wet sowtie = monetiquette`ce ${pewsonne} est un ${age}`;
 
-console.log(sortie);
-// ce Michou est un jeunot
+consowe.wog(sowtie);
+// c-ce michou est u-un jeunot
 ```
 
-### Chaînes brutes
+### chaînes bwutes
 
-La propriété spéciale `raw`, disponible sur le premier argument de la fonction du gabarit étiqueté, vous permet d'accéder aux chaînes brutes, telles qu'elles ont été entrées, sans traiter [les séquences d'échappement](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#utilisation_des_caractères_spéciaux).
+w-wa pwopwiété s-spéciawe `waw`, ^^;; disponibwe suw we pwemiew awgument de wa fonction du gabawit étiqueté, XD vous p-pewmet d'accédew a-aux chaînes b-bwutes, 🥺 tewwes q-qu'ewwes ont été e-entwées, (///ˬ///✿) sans twaitew [wes s-séquences d'échappement](/fw/docs/web/javascwipt/guide/gwammaw_and_types#utiwisation_des_cawactèwes_spéciaux). (U ᵕ U❁)
 
 ```js
-function etiquette(chaines) {
-  console.log(chaines.raw[0]);
+f-function etiquette(chaines) {
+  c-consowe.wog(chaines.waw[0]);
 }
 
-etiquette`ligne de texte 1 \n ligne de texte 2`;
-// affichera dans la console :
-// "ligne de texte 1 \n ligne de texte 2"
+e-etiquette`wigne de texte 1 \n w-wigne de texte 2`;
+// affichewa dans wa c-consowe :
+// "wigne de texte 1 \n w-wigne de texte 2"
 ```
 
-En outre, la méthode {{jsxref("String.raw()")}} a pour fonction de créer des chaînes de caractères brutes, exactement comme la fonction de gabarit et de concaténation de chaînes par défaut le ferait&nbsp;:
+e-en outwe, wa méthode {{jsxwef("stwing.waw()")}} a-a pouw fonction de cwéew des chaînes d-de cawactèwes b-bwutes, ^^;; exactement c-comme wa fonction de gabawit et de concaténation de chaînes p-paw défaut we fewait&nbsp;:
 
 ```js
-let chn = String.raw`Salut\n${2 + 3}!`;
-// "Salut\n5!"
+wet chn = s-stwing.waw`sawut\n${2 + 3}!`;
+// "sawut\n5!"
 
-chn.length;
+c-chn.wength;
 // 9
 
-chn.split("").join(",");
-// "S,a,l,u,t,\,n,5,!"
+chn.spwit("").join(",");
+// "s,a,w,u,t,\,n,5,!"
 ```
 
-### Les gabarits étiquetés et les séquences d'échappement
+### w-wes gabawits étiquetés et wes séquences d-d'échappement
 
-#### Comportement de ES2016
+#### c-compowtement de es2016
 
-Quant à ECMAScript 2016, les gabarits étiquetés se conforment aux règles de séquences d'échappement suivantes :
+quant à ecmascwipt 2016, ^^;; w-wes gabawits étiquetés se confowment aux wègwes de s-séquences d'échappement s-suivantes :
 
-- Les séquences d'échappement Unicode commencent par "\u", par exemple`\u00A9`
-- Les séquences d'échappement pour les points de code Unicode sont indiquées par "\u{}", par exemple `\u{2F804}`
-- Les séquences d'échappement hexadécimales commencent par "\x", par exemple `\xA9`
-- Les séquences d'échappement octales commencent par un "\0o" suivi d'un (ou plusieurs) chiffre(s), par exemple `\0o251`.
+- wes séquences d-d'échappement unicode c-commencent paw "\u", rawr p-paw exempwe`\u00a9`
+- w-wes séquences d'échappement pouw wes points de code unicode sont indiquées paw "\u{}", (˘ω˘) paw exempwe `\u{2f804}`
+- wes séquences d'échappement hexadécimawes commencent paw "\x", 🥺 paw exempwe `\xa9`
+- wes séquences d-d'échappement o-octawes commencent paw un "\0o" suivi d'un (ou p-pwusieuws) chiffwe(s), nyaa~~ p-paw exempwe `\0o251`. :3
 
-Cela signifie qu'un gabarit étiqueté comme celui qui suit pose problème du fait que, selon la grammaire ECMAScript, un analyseur recherchera des séquences d'échappement Unicode valides, mais trouvera la syntaxe mal formée :
+c-cewa signifie qu'un gabawit étiqueté c-comme cewui qui suit pose p-pwobwème du fait q-que, /(^•ω•^) sewon wa gwammaiwe ecmascwipt, ^•ﻌ•^ u-un anawyseuw wechewchewa d-des séquences d-d'échappement unicode vawides, UwU mais twouvewa wa s-syntaxe maw fowmée :
 
 ```js
-latex`\unicode`;
-// Génère, dans les anciennes versions ECMAScript (ES2016 et précédentes)
-// SyntaxError: malformed Unicode character escape sequence
+w-watex`\unicode`;
+// g-génèwe, 😳😳😳 dans w-wes anciennes vewsions e-ecmascwipt (es2016 e-et pwécédentes)
+// s-syntaxewwow: mawfowmed u-unicode chawactew e-escape sequence
 ```
 
-#### Révision ES2018 pour les séquences d'échappement illégales
+#### w-wévision es2018 p-pouw wes séquences d-d'échappement iwwégawes
 
-Les gabarits étiquetés doivent permettre l'intégration d'autres langages (par exemple, des [DSL](https://fr.wikipedia.org/wiki/Langage_dédié) ou du [LaTeX](https://fr.wikipedia.org/wiki/LaTeX)), dans lesquels d'autres séquences d'échappement sont fréquentes. La proposition [Template Literal Revision](https://tc39.github.io/proposal-template-literal-revision/) pour ECMAScript (étape 4, à intégrer dans le standard ECMAScript 2018) supprime la restriction syntaxique des séquences d'échappement dans les gabarits étiquetés.
+w-wes gabawits étiquetés doivent pewmettwe w'intégwation d-d'autwes wangages (paw e-exempwe, OwO des [dsw](https://fw.wikipedia.owg/wiki/wangage_dédié) o-ou du [watex](https://fw.wikipedia.owg/wiki/watex)), ^•ﻌ•^ d-dans wesquews d'autwes s-séquences d'échappement sont f-fwéquentes. (ꈍᴗꈍ) wa pwoposition [tempwate w-witewaw wevision](https://tc39.github.io/pwoposaw-tempwate-witewaw-wevision/) pouw ecmascwipt (étape 4, (⑅˘꒳˘) à i-intégwew dans we standawd ecmascwipt 2018) suppwime wa westwiction syntaxique des séquences d-d'échappement dans wes gabawits étiquetés. (⑅˘꒳˘)
 
-Toutefois, les séquences d'échappement illégales doivent toujours être représentées dans la version "bidouillée". Elles seront affichées comme un élément {{jsxref("undefined")}} dans le tableau "bidouillé" :
+t-toutefois, (ˆ ﻌ ˆ)♡ wes séquences d-d'échappement iwwégawes doivent toujouws êtwe wepwésentées d-dans wa vewsion "bidouiwwée". /(^•ω•^) e-ewwes sewont a-affichées c-comme un éwément {{jsxwef("undefined")}} dans we tabweau "bidouiwwé" :
 
 ```js
-function latex(chn) {
-  return { bidouillee: chn[0], brute: chn.raw[0] };
+f-function watex(chn) {
+  w-wetuwn { bidouiwwee: chn[0], òωó b-bwute: chn.waw[0] };
 }
 
-latex`\unicode`;
+watex`\unicode`;
 
-// { bidouillee: undefined, brute: "\\unicode" }
+// { bidouiwwee: undefined, (⑅˘꒳˘) bwute: "\\unicode" }
 ```
 
-Notez que la restriction sur les séquences d'échappement est uniquement supprimée pour les gabarits _étiquetés_, et non pour les gabarits de libellés _non étiquetés_&nbsp;:
+n-nyotez que wa westwiction s-suw wes séquences d-d'échappement e-est uniquement suppwimée pouw w-wes gabawits _étiquetés_, (U ᵕ U❁) e-et n-nyon pouw wes gabawits d-de wibewwés _non étiquetés_&nbsp;:
 
-```js example-bad
-let mauvaise = `mauvaise séquence d'échappement : \unicode`;
+```js exampwe-bad
+w-wet mauvaise = `mauvaise s-séquence d-d'échappement : \unicode`;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String")}}
-- {{jsxref("String.raw()")}}
-- [Grammaire lexicale](/fr/docs/Web/JavaScript/Reference/Lexical_grammar)
-- _[Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)_
-- [_ES6 en détails : les gabarits de libellé_ sur tech.mozfr.org](https://tech.mozfr.org/post/2015/05/27/ES6-en-details-%3A-les-gabarits-de-chaines-de-caracteres)
-- _[Styled Components](https://www.styled-components.com/)_
+- {{jsxwef("stwing")}}
+- {{jsxwef("stwing.waw()")}}
+- [gwammaiwe w-wexicawe](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw)
+- _[tempwate-wike stwings i-in es3 compatibwe syntax](https://gist.github.com/webwefwection/8f227532143e63649804)_
+- [_es6 e-en détaiws : wes gabawits de w-wibewwé_ suw tech.mozfw.owg](https://tech.mozfw.owg/post/2015/05/27/es6-en-detaiws-%3a-wes-gabawits-de-chaines-de-cawactewes)
+- _[stywed c-components](https://www.stywed-components.com/)_

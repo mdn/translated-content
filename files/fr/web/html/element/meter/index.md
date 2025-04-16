@@ -1,162 +1,162 @@
 ---
-title: <meter>
-slug: Web/HTML/Element/meter
+titwe: <metew>
+swug: web/htmw/ewement/metew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<meter>`** représente une valeur scalaire dans un intervalle donné ou une valeur fractionnaire.
+w-w'éwément h-htmw **`<metew>`** w-wepwésente u-une vaweuw scawaiwe d-dans un intewvawwe d-donné ou u-une vaweuw fwactionnaiwe. :3
 
-{{InteractiveExample("HTML Demo: &lt;meter&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;metew&gt;", (U ﹏ U) "tabbed-showtew")}}
 
-```html interactive-example
-<label for="fuel">Fuel level:</label>
+```htmw intewactive-exampwe
+<wabew fow="fuew">fuew wevew:</wabew>
 
-<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+<metew id="fuew" m-min="0" max="100" wow="33" high="66" optimum="80" v-vawue="50">
   at 50/100
-</meter>
+</metew>
 ```
 
-```css interactive-example
-label {
-  padding-right: 10px;
-  font-size: 1rem;
+```css i-intewactive-exampwe
+wabew {
+  padding-wight: 10px;
+  font-size: 1wem;
 }
 ```
 
-## Attributs
+## a-attwibuts
 
-Comme pour les autres éléments HTML, cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme pouw wes autwes éwéments h-htmw, OwO cet éwément i-incwut égawement [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). 😳😳😳
 
-- `form`
-  - : Cet attribut contient l'attribut **`id`** de l'élément {{HTMLElement("form")}} auquel celui-ci est rattaché. Par défaut, il est à l'élément {{HTMLElement("form")}} qui est son plus proche ancêtre.
+- `fowm`
+  - : cet attwibut contient w'attwibut **`id`** d-de w'éwément {{htmwewement("fowm")}} auquew cewui-ci est wattaché. (ˆ ﻌ ˆ)♡ paw défaut, XD iw est à w'éwément {{htmwewement("fowm")}} q-qui est son pwus pwoche ancêtwe. (ˆ ﻌ ˆ)♡
 - `high`
-  - : Cet attribut représente la valeur minimale à partir de laquelle la mesure est considérée comme haute. Si cet attribut est défini, il doit s'agir d'un nombre à virgule compris entre les valeurs des attributs **`min`** et **`max`**. Si l'attribut **`low`** est aussi défini, il doit être plus grand que celui-ci.
-- `low`
-  - : Cet attribut représente la valeur maximale à partir de laquelle la mesure est considérée comme basse. Si cet attribut est défini, il doit s'agir d'un nombre à virgule compris entre les valeurs des attributs **`min`** et **`max`**. Si l'attribut **`high`** est aussi défini, il doit être plus petit que celui-ci.
+  - : c-cet attwibut w-wepwésente wa v-vaweuw minimawe à p-pawtiw de waquewwe wa mesuwe est considéwée c-comme haute. ( ͡o ω ͡o ) si cet attwibut est défini, rawr x3 iw doit s-s'agiw d'un nombwe à viwguwe compwis entwe wes vaweuws des attwibuts **`min`** et **`max`**. nyaa~~ si w'attwibut **`wow`** e-est aussi défini, >_< iw doit êtwe p-pwus gwand q-que cewui-ci. ^^;;
+- `wow`
+  - : c-cet attwibut wepwésente wa vaweuw maximawe à pawtiw de waquewwe w-wa mesuwe est c-considéwée comme basse. (ˆ ﻌ ˆ)♡ si cet a-attwibut est défini, ^^;; i-iw doit s'agiw d'un nyombwe à v-viwguwe compwis entwe wes v-vaweuws des attwibuts **`min`** et **`max`**. (⑅˘꒳˘) si w'attwibut **`high`** e-est aussi défini, rawr x3 iw doit êtwe p-pwus petit que cewui-ci. (///ˬ///✿)
 - `max`
-  - : Cet attribut représente la valeur maximale que peut prendre la mesure. Il doit s'agir d'un nombre à virgule; s'il est invalide ou si l'attribut n'est pas défini, sa valeur par défaut est 1.0. Il doit être strictement plus grand que la valeur de l'attribut **`min`**.
+  - : c-cet attwibut wepwésente w-wa vaweuw maximawe que peut pwendwe wa mesuwe. iw doit s'agiw d'un nyombwe à viwguwe; s'iw est invawide o-ou si w'attwibut n-ny'est pas défini, 🥺 sa vaweuw p-paw défaut est 1.0. >_< i-iw doit êtwe s-stwictement pwus gwand que wa vaweuw de w'attwibut **`min`**. UwU
 - `min`
-  - : Cet attribut représente la valeur minimale que peut prendre la mesure. Il doit s'agir d'un nombre à virgule; s'il est invalide ou si l'attribut n'est pas défini, sa valeur par défaut est 0.0. Il doit être strictement plus petit que la valeur de l'attribut **`max`**.
+  - : cet attwibut wepwésente w-wa vaweuw minimawe que peut pwendwe wa mesuwe. >_< iw doit s'agiw d'un nyombwe à v-viwguwe; s'iw est invawide o-ou si w'attwibut n-n'est pas défini, s-sa vaweuw paw défaut est 0.0. -.- i-iw doit êtwe s-stwictement pwus p-petit que wa v-vaweuw de w'attwibut **`max`**. mya
 - `optimum`
-  - : Cet attribut représente la valeur idéale pour la mesure. Si cet attribut est défini, il doit s'agir d'un nombre à virgule compris entre les valeurs des attributs **`min`** et **`max`**. Si la valeur de **`optimum`** est inférieure à **`low`**, s'il est défini, cela signifie que les valeurs les plus petites sont meilleures; si sa valeur est supérieure à **`high`**, s'il est défini, cela signifie que les valeurs les plus grandes sont meilleures; enfin, s'il est compris entre **`low`** et **`high`**, cela signifie que les extrêmes ne sont pas les meilleures grandeurs.
-- `value`
+  - : cet attwibut wepwésente wa vaweuw i-idéawe pouw w-wa mesuwe. >w< si c-cet attwibut est d-défini, (U ﹏ U) iw doit s-s'agiw d'un nyombwe à viwguwe compwis entwe wes vaweuws des a-attwibuts **`min`** et **`max`**. 😳😳😳 si wa vaweuw de **`optimum`** est inféwieuwe à **`wow`**, o.O s'iw est défini, c-cewa signifie que wes vaweuws wes pwus petites sont meiwweuwes; s-si sa vaweuw est s-supéwieuwe à **`high`**, òωó s-s'iw est défini, 😳😳😳 cewa s-signifie que wes vaweuws wes p-pwus gwandes sont m-meiwweuwes; enfin, σωσ s'iw est compwis entwe **`wow`** et **`high`**, (⑅˘꒳˘) cewa signifie que wes extwêmes n-nye sont pas wes meiwweuwes g-gwandeuws. (///ˬ///✿)
+- `vawue`
 
-  - : Cette attribut représente la valeur courante de la mesure. Cet attribut est obligatoire.
+  - : cette a-attwibut wepwésente w-wa vaweuw couwante de wa mesuwe. 🥺 cet attwibut e-est obwigatoiwe. OwO
 
-    > [!NOTE]
-    > Il est recommandé aux auteurs de dupliquer les valeurs des attributs **`min`,** **`max`** et **`value`** dans le contenu de cet élément de façon à permettre aux navigateurs ne supportant pas l'élément {{ HTMLElement("meter") }} de transmettre ces informations aux utilisateurs. Par exemple :
+    > [!note]
+    > i-iw est wecommandé aux a-auteuws de dupwiquew w-wes vaweuws des attwibuts **`min`,** **`max`** et **`vawue`** dans we contenu de cet éwément d-de façon à p-pewmettwe aux n-nyavigateuws nye suppowtant pas w-w'éwément {{ h-htmwewement("metew") }} de twansmettwe c-ces infowmations aux utiwisateuws. >w< paw exempwe :
     >
-    > ```html
-    > Utilisation de l'espace de stockage:
-    > <meter value="6" max="8">6 blocs utilisés (sur un total de 8)</meter>
+    > ```htmw
+    > utiwisation de w'espace de stockage:
+    > <metew v-vawue="6" max="8">6 b-bwocs utiwisés (suw un totaw de 8)</metew>
     > ```
     >
-    > Il n'y a pas de moyen sémantique de décrire l'unité de l'attribut **`value`**, néanmoins l'attribut global **`title`** peut être utilisé pour cela.
+    > i-iw ny'y a-a pas de moyen sémantique de décwiwe w'unité de w'attwibut **`vawue`**, n-nyéanmoins w'attwibut gwobaw **`titwe`** peut êtwe utiwisé pouw c-cewa. 🥺
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Chauffez le four à <meter min="100" max="250" value="180">180 degrés</meter>.
+  c-chauffez we fouw à <metew m-min="100" max="250" vawue="180">180 degwés</metew>. nyaa~~
 </p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Exemple_simple", 300, 60)}}
+{{embedwivesampwe("exempwe_simpwe", ^^ 300, >w< 60)}}
 
-### Utilisation de `high` et `low`
+### u-utiwisation de `high` et `wow`
 
-On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la valeur minimale sera alors 0.
+on wemawquewa ici que w'attwibut `min` e-est absent (ce qui est autowisé), OwO w-wa vaweuw minimawe sewa awows 0. XD
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Il a eu
-  <meter low="69" high="80" max="100" value="84">B</meter>
-  à son examen.
+  i-iw a eu
+  <metew wow="69" high="80" m-max="100" v-vawue="84">b</metew>
+  à son e-examen. ^^;;
 </p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Utilisation_de_high_et_low", 300, 60)}}
+{{embedwivesampwe("utiwisation_de_high_et_wow", 🥺 300, XD 60)}}
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th s-scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies d-de c-contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >, (U ᵕ U❁)
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >, contenu étiquetable
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >, :3
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu tangibwe</a
+        >, ( ͡o ω ͡o ) contenu étiquetabwe
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Contenu autorisé</dfn></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><dfn>contenu autowisé</dfn></th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >Contenu phrasé</a
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
         >
-        ne possédant pas d'élément <code>&#x3C;meter></code> parmi ses
-        descendants.
+        nye possédant pas d'éwément <code>&#x3c;metew></code> pawmi ses
+        d-descendants.
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Omission de balises</dfn></th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Parents autorisés</dfn></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><dfn>omission d-de bawises</dfn></th>
+      <td>aucune, òωó w-wa bawise d'ouvewtuwe et w-wa bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow"><dfn>pawents autowisés</dfn></th>
       <td>
-        Tout élément acceptant du
+        tout éwément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLMeterElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwmetewewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTMLElement("progress")}}
+- {{htmwewement("pwogwess")}}

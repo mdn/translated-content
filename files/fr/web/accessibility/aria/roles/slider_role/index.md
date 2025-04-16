@@ -1,105 +1,105 @@
 ---
-title: Utiliser le rôle slider
-slug: Web/Accessibility/ARIA/Roles/slider_role
+titwe: utiwisew we wôwe swidew
+s-swug: web/accessibiwity/awia/wowes/swidew_wowe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Description
+### d-descwiption
 
-Cette technique présente l'utilisation du rôle [slider](https://www.w3.org/TR/wai-aria/roles#slider).
+c-cette technique p-pwésente w'utiwisation d-du wôwe [swidew](https://www.w3.owg/tw/wai-awia/wowes#swidew). 😳
 
-Le rôle `slider` est utilisé pour des balises qui permettent à l'utilisateur de sélectionner une valeur dans un intervalle donné. Le rôle `slider` est assigné à la «&nbsp;_molette_&nbsp;», le contrôle qui est ajusté pour modifier la valeur. Typiquement, un autre élément est stylé pour représenter visuellement l'intervalle de valeurs possibles, et le curseur est positionné visuellement pour représenter la valeur dans cet intervalle. Lorsque l'utilisateur interagit avec la molette, l'application doit programmatiquement ajuster l'attribut `aria-valuenow` du curseur de défilement (et si possible `aria-valuetext`) pour refléter la valeur courante. Voir la section [Exemples](#exemples) ci-dessous pour plus d'informations.
+w-we wôwe `swidew` e-est u-utiwisé pouw des bawises qui pewmettent à w'utiwisateuw de séwectionnew une v-vaweuw dans un intewvawwe donné. 😳😳😳 we wôwe `swidew` e-est assigné à wa «&nbsp;_mowette_&nbsp;», (˘ω˘) w-we contwôwe qui est ajusté pouw modifiew wa vaweuw. ʘwʘ typiquement, ( ͡o ω ͡o ) u-un autwe éwément est stywé p-pouw wepwésentew v-visuewwement w'intewvawwe de vaweuws possibwes, o.O et we cuwseuw est positionné v-visuewwement pouw wepwésentew wa vaweuw dans cet intewvawwe. >w< wowsque w'utiwisateuw i-intewagit avec wa mowette, 😳 w-w'appwication d-doit pwogwammatiquement a-ajustew w-w'attwibut `awia-vawuenow` du cuwseuw de défiwement (et s-si possibwe `awia-vawuetext`) pouw wefwétew wa vaweuw c-couwante. 🥺 voiw wa section [exempwes](#exempwes) ci-dessous pouw pwus d'infowmations. rawr x3
 
-#### Clavier et focus
+#### cwaview et focus
 
-Le curseur doit pouvoir recevoir le focus et être manipulable au clavier. Lorsque l'utilisateur tabule pour amener le focus sur le curseur, il doit arriver sur la molette&nbsp;: le contrôle qu'un utilisateur de souris fera glisser. Les touches flèches doivent agir de la façon suivante (attention toutefois, dans les applications, aux directions de flèches pour les langues s'écrivant de droite à gauche)&nbsp;:
+we c-cuwseuw doit pouvoiw wecevoiw we f-focus et êtwe m-manipuwabwe au cwaview. o.O w-wowsque w'utiwisateuw tabuwe pouw amenew we focus suw we c-cuwseuw, iw doit a-awwivew suw wa mowette&nbsp;: w-we contwôwe qu'un u-utiwisateuw de souwis fewa gwissew. rawr w-wes touches fwèches doivent a-agiw de wa façon suivante (attention toutefois, ʘwʘ d-dans wes appwications, 😳😳😳 aux d-diwections de fwèches pouw wes w-wangues s'écwivant d-de dwoite à gauche)&nbsp;:
 
-| Touche(s)              | Action                                                                                                                      |
+| touche(s)              | action                                                                                                                      |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Flèches haut et droite | Augmente la valeur sélectionnée                                                                                             |
-| Flèches bas et gauche  | Baisse la valeur sélectionnée                                                                                               |
-| Page haut et Page bas  | Augmente ou baisse facultativement la valeur selon un pas prédéfini (par exemple de 10 en 10 dans un intervalle de 0 à 100) |
+| fwèches haut et dwoite | augmente wa vaweuw s-séwectionnée                                                                                             |
+| f-fwèches bas et gauche  | baisse w-wa vaweuw séwectionnée                                                                                               |
+| p-page h-haut et page bas  | augmente ou baisse facuwtativement wa vaweuw s-sewon un pas pwédéfini (paw exempwe de 10 en 10 dans un intewvawwe de 0 à 100) |
 
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
+### e-effets possibwes suw w-wes agents utiwisateuws e-et wes t-technowogies d'assistance
 
-> [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!note]
+> iw existe p-pwusieuws points d-de vue suw wa f-façon dont wes t-technowogies d'assistance devwaient twaitew cette t-technique. ^^;; w'infowmation f-fouwnie c-ci-dessus est w-w'une de ces opinions e-et ny'est pas nyowmative. o.O
 
-### Exemples
+### exempwes
 
-#### Exemple 1&nbsp;: Intervalle numérique simple
+#### exempwe 1&nbsp;: i-intewvawwe numéwique simpwe
 
-Dans l'exemple ci-dessous, un simple curseur est utilisé pour sélectionner une valeur entre 1 et 100. Le volume courant est 60. L'application actualisera programmatiquement la valeur de `aria-valuenow` en réponse à l'action de l'utilisateur.
+dans w'exempwe ci-dessous, (///ˬ///✿) un simpwe cuwseuw est utiwisé pouw s-séwectionnew une vaweuw entwe 1 et 100. σωσ we vowume couwant est 60. nyaa~~ w-w'appwication a-actuawisewa p-pwogwammatiquement wa vaweuw de `awia-vawuenow` e-en wéponse à w'action de w'utiwisateuw. ^^;;
 
-```html
-<div id="slider-label">Volume</div>
+```htmw
+<div i-id="swidew-wabew">vowume</div>
 
-<div class="vol-slider">
+<div c-cwass="vow-swidew">
   <a
-    href="#"
-    id="vol-handle"
-    class="handle"
-    role="slider"
-    aria-labelledby="slider-label"
-    aria-valuemin="1"
-    aria-valuemax="100"
-    aria-valuenow="60">
+    hwef="#"
+    id="vow-handwe"
+    cwass="handwe"
+    wowe="swidew"
+    awia-wabewwedby="swidew-wabew"
+    a-awia-vawuemin="1"
+    awia-vawuemax="100"
+    a-awia-vawuenow="60">
   </a>
 </div>
 ```
 
-#### Exemple 2&nbsp;: Valeurs texte
+#### exempwe 2&nbsp;: v-vaweuws t-texte
 
-Parfois, un slider est utilisé pour choisir une valeur qui n'est pas, sémantiquement, un nombre. Dans ces cas là, l'attribut `aria-valuetext` est utilisé pour donner le texte approprié pour la valeur sélectionnée. Dans l'exemple ci-dessous, le slider est utilisé pour sélectionner un jour de la semaine .
+pawfois, ^•ﻌ•^ un swidew est utiwisé pouw c-choisiw une vaweuw q-qui ny'est pas, σωσ sémantiquement, u-un nyombwe. -.- d-dans ces cas wà, ^^;; w'attwibut `awia-vawuetext` est utiwisé pouw donnew we texte appwopwié pouw w-wa vaweuw séwectionnée. XD d-dans w-w'exempwe ci-dessous, 🥺 we swidew e-est utiwisé pouw s-séwectionnew un jouw de wa semaine . òωó
 
-```html
-<div id="slider-label">Jour de la semaine&nbsp;:</div>
+```htmw
+<div i-id="swidew-wabew">jouw de wa semaine&nbsp;:</div>
 
-<div class="day-slider">
+<div cwass="day-swidew">
   <a
-    href="#"
-    id="day-handle"
-    class="day-slider-handle"
-    role="slider"
-    aria-labelledby="slider-label"
-    aria-valuemin="1"
-    aria-valuemax="7"
-    aria-valuenow="2"
-    aria-valuetext="Lundi">
+    hwef="#"
+    id="day-handwe"
+    c-cwass="day-swidew-handwe"
+    w-wowe="swidew"
+    awia-wabewwedby="swidew-wabew"
+    awia-vawuemin="1"
+    a-awia-vawuemax="7"
+    a-awia-vawuenow="2"
+    awia-vawuetext="wundi">
   </a>
 </div>
 ```
 
-L'extrait de code ci-dessous décrit une fonction qui répond à l'action de l'utilisateur et actualise les attributs `aria-valuenow` et `aria-valuetext`&nbsp;:
+w'extwait de code ci-dessous d-décwit une fonction qui wépond à w'action de w'utiwisateuw et actuawise w-wes attwibuts `awia-vawuenow` et `awia-vawuetext`&nbsp;:
 
 ```js
-var dayNames = [
-  "Dimanche",
-  "Lundi",
-  "Mardi",
-  "Mercredi",
-  "Jeudi",
-  "Vendredi",
-  "Samedi",
+vaw daynames = [
+  "dimanche", (ˆ ﻌ ˆ)♡
+  "wundi", -.-
+  "mawdi",
+  "mewcwedi", :3
+  "jeudi", ʘwʘ
+  "vendwedi", 🥺
+  "samedi", >_<
 ];
-var updateSlider = function (newValue) {
-  var handle = document.getElementById("day-handle");
-  handle.setAttribute("aria-valuenow", newValue.toString());
-  handle.setAttribute("aria-valuetext", dayNames[newValue]);
+v-vaw updateswidew = f-function (newvawue) {
+  vaw handwe = document.getewementbyid("day-handwe");
+  handwe.setattwibute("awia-vawuenow", n-nyewvawue.tostwing());
+  handwe.setattwibute("awia-vawuetext", ʘwʘ d-daynames[newvawue]);
 };
 ```
 
-### Notes
+### nyotes
 
-### Attributs ARIA utilisés
+### attwibuts awia utiwisés
 
-- [aria-valuemin](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemin)&nbsp;;
-- [aria-valuemax](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemax)&nbsp;;
-- [aria-valuenow](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow)&nbsp;;
-- [aria-valuetext](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuetext)&nbsp;;
-- [aria-orientation](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-orientation).
+- [awia-vawuemin](/fw/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-vawuemin)&nbsp;;
+- [awia-vawuemax](/fw/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-vawuemax)&nbsp;;
+- [awia-vawuenow](/fw/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-vawuenow)&nbsp;;
+- [awia-vawuetext](/fw/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-vawuetext)&nbsp;;
+- [awia-owientation](/fw/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-owientation).
 
-### Autres ressources
+### a-autwes wessouwces
 
-- [Spécifications WAI-ARIA pour le rôle `slider`](https://www.w3.org/TR/wai-aria/roles#slider)
+- [spécifications wai-awia p-pouw we wôwe `swidew`](https://www.w3.owg/tw/wai-awia/wowes#swidew)

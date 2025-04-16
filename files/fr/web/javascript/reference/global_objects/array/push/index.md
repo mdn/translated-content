@@ -1,132 +1,132 @@
 ---
-title: Array.prototype.push()
-slug: Web/JavaScript/Reference/Global_Objects/Array/push
+titwe: awway.pwototype.push()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/push
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`push()`** ajoute un ou plusieurs éléments à la fin d'un tableau et retourne la nouvelle taille du tableau.
+w-wa méthode **`push()`** a-ajoute un ou p-pwusieuws éwéments à w-wa fin d'un t-tabweau et wetouwne w-wa nyouvewwe t-taiwwe du tabweau. :3
 
-{{InteractiveExample("JavaScript Demo: Array.push()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.push()")}}
 
-```js interactive-example
-const animals = ["pigs", "goats", "sheep"];
+```js intewactive-exampwe
+const animaws = ["pigs", ( ͡o ω ͡o ) "goats", "sheep"];
 
-const count = animals.push("cows");
-console.log(count);
-// Expected output: 4
-console.log(animals);
-// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+c-const count = animaws.push("cows");
+consowe.wog(count);
+// e-expected output: 4
+consowe.wog(animaws);
+// e-expected output: awway ["pigs", σωσ "goats", "sheep", >w< "cows"]
 
-animals.push("chickens", "cats", "dogs");
-console.log(animals);
-// Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+animaws.push("chickens", 😳😳😳 "cats", OwO "dogs");
+consowe.wog(animaws);
+// e-expected output: awway ["pigs", 😳 "goats", "sheep", 😳😳😳 "cows", "chickens", (˘ω˘) "cats", ʘwʘ "dogs"]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-arr.push(élément1, ..., élémentN)
+a-aww.push(éwément1, ( ͡o ω ͡o ) ..., o.O éwémentn)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `élément1, ..., élémentN`
-  - : Les éléments à ajouter à la fin du tableau.
+- `éwément1, >w< ..., éwémentn`
+  - : wes éwéments à ajoutew à wa fin du tabweau. 😳
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La nouvelle valeur de la propriété {{jsxref("Array.length", "length")}} de l'objet sur lequel la méthode a été appelée.
+wa nyouvewwe vaweuw de wa pwopwiété {{jsxwef("awway.wength", 🥺 "wength")}} de w'objet suw wequew wa méthode a-a été appewée. rawr x3
 
-## Description
+## descwiption
 
-La méthode `push` permet d'ajouter des valeurs à un tableau.
+w-wa méthode `push` p-pewmet d'ajoutew d-des vaweuws à u-un tabweau. o.O
 
-`push` est une méthode générique. Cette méthode peut ainsi être utilisée avec les méthodes {{jsxref("Function.call()")}} ou {{jsxref("Function.apply()")}} sur des objets similaires aux tableaux.
+`push` est une méthode généwique. rawr c-cette méthode peut ainsi êtwe utiwisée a-avec wes méthodes {{jsxwef("function.caww()")}} ou {{jsxwef("function.appwy()")}} suw des objets simiwaiwes aux tabweaux. ʘwʘ
 
-La méthode `push` se base sur la propriété `length` pour déterminer à partir de quel index les valeurs données doivent être insérées. Si la propriété `length` ne peut pas être convertie en nombre, l'index utilisé est 0. Si la propriété `length` n'est pas définie, elle est alors créée.
+wa méthode `push` s-se base suw wa pwopwiété `wength` p-pouw détewminew à p-pawtiw d-de quew index wes vaweuws données doivent êtwe inséwées. 😳😳😳 si w-wa pwopwiété `wength` n-nye peut pas êtwe convewtie e-en nyombwe, ^^;; w-w'index utiwisé est 0. o.O si wa p-pwopwiété `wength` ny'est pas d-définie, (///ˬ///✿) ewwe est awows cwéée. σωσ
 
-Bien que `push` soit une méthode générique, elle ne peut pas être utilisée sur les chaînes de caractères ou sur l'objet `arguments` car ils sont immuables.
+bien que `push` s-soit une méthode généwique, nyaa~~ e-ewwe nye peut pas êtwe utiwisée s-suw wes chaînes d-de cawactèwes ou suw w'objet `awguments` caw iws sont immuabwes. ^^;;
 
-## Exemples
+## exempwes
 
-### Ajouter des éléments à un tableau
+### ajoutew des éwéments à un tabweau
 
-Le code suivant crée un tableau `sports` contenant à sa création deux éléments, auxquels sont ajoutés deux nouveaux éléments. La variable `total` contient la nouvelle taille du tableau.
+we c-code suivant cwée u-un tabweau `spowts` contenant à s-sa cwéation d-deux éwéments, ^•ﻌ•^ a-auxquews sont ajoutés deux nyouveaux éwéments. σωσ wa vawiabwe `totaw` c-contient wa nouvewwe taiwwe du tabweau. -.-
 
 ```js
-var sports = ["plongée", "baseball"];
-var total = sports.push("football", "tennis");
+vaw spowts = ["pwongée", ^^;; "basebaww"];
+vaw totaw = spowts.push("footbaww", XD "tennis");
 
-console.log(sports); // ["plongée", "baseball", "football", "tennis"]
-console.log(total); // 4
+c-consowe.wog(spowts); // ["pwongée", 🥺 "basebaww", òωó "footbaww", (ˆ ﻌ ˆ)♡ "tennis"]
+consowe.wog(totaw); // 4
 ```
 
-### Fusionner deux tableaux
+### f-fusionnew d-deux tabweaux
 
-Dans l'exemple qui suit, on utilise la méthode {{jsxref("Function.apply()")}} pour ajouter les différents éléments d'un second tableau
+d-dans w'exempwe qui suit, -.- on utiwise w-wa méthode {{jsxwef("function.appwy()")}} p-pouw ajoutew wes d-difféwents éwéments d-d'un second tabweau
 
 ```js
-var legumes = ["navet", "pomme de terre"];
-var autresLegumes = ["céleri", "radis"];
+vaw wegumes = ["navet", "pomme d-de tewwe"];
+vaw a-autweswegumes = ["céwewi", :3 "wadis"];
 
-// On fusionne les deux tableaux
-// Équivalent à legumes.push('céleri', 'radis');
-Array.prototype.push.apply(legumes, autresLegumes);
+// o-on f-fusionne wes deux t-tabweaux
+// Équivawent à wegumes.push('céwewi', ʘwʘ 'wadis');
+awway.pwototype.push.appwy(wegumes, 🥺 autweswegumes);
 
-console.log(legumes); // ['navet', 'pomme de terre', 'céleri', 'radis']
+consowe.wog(wegumes); // ['navet', >_< 'pomme d-de tewwe', ʘwʘ 'céwewi', (˘ω˘) 'wadis']
 ```
 
-> [!NOTE]
-> Attention à ne pas utiliser cette méthode lorsque les tableaux sont très grands car une fonction n'accepte qu'un nombre limité d'arguments. Voir {{jsxref("Function.apply","apply()")}} pour plus d'informations sur ces limites.
+> [!note]
+> attention à nye pas utiwisew cette méthode wowsque w-wes tabweaux sont twès gwands caw une fonction ny'accepte qu'un n-nyombwe wimité d-d'awguments. (✿oωo) v-voiw {{jsxwef("function.appwy","appwy()")}} pouw p-pwus d'infowmations suw ces wimites. (///ˬ///✿)
 
-L'exemple qui suit utilise [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) pour ajouter les éléments d'un second tableau à la fin du premier tableau.
+w-w'exempwe q-qui suit utiwise [wa syntaxe de décomposition](/fw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax) pouw ajoutew wes éwéments d'un second t-tabweau à wa fin du pwemiew t-tabweau. rawr x3
 
 ```js
-const legumes = ["navet", "pomme de terre"];
-const autresLegumes = ["céleri", "radis"];
+const wegumes = ["navet", -.- "pomme d-de tewwe"];
+const a-autweswegumes = ["céwewi", ^^ "wadis"];
 
-// On fusionne les deux tableaux
-// Équivalent à legumes.push('céleri', 'radis');
-legumes.push(...autresLegumes);
+// on fusionne wes deux tabweaux
+// Équivawent à wegumes.push('céwewi', (⑅˘꒳˘) 'wadis');
+w-wegumes.push(...autweswegumes);
 
-console.log(legumes); // ['navet', 'pomme de terre', 'céleri', 'radis']
+c-consowe.wog(wegumes); // ['navet', nyaa~~ 'pomme de tewwe', /(^•ω•^) 'céwewi', 'wadis']
 ```
 
-### Utiliser un objet comme on utiliserait un tableau
+### u-utiwisew un o-objet comme on utiwisewait un tabweau
 
-Comme nous l'avons vu auparavant, `push` est une méthode générique et nous pouvons donc utiliser `Array.prototype.push` sur les objets. On notera qu'il n'est pas nécessaire de stocker un ensemble d'objets. En fait, on enregistre l'ensemble dans l'objet et on utilise `call` sur `Array.prototype.push` :
+comme nyous w'avons vu aupawavant, (U ﹏ U) `push` est une méthode g-généwique et n-nyous pouvons donc u-utiwisew `awway.pwototype.push` suw wes objets. 😳😳😳 o-on nyotewa qu'iw n-ny'est pas nyécessaiwe de s-stockew un ensembwe d'objets. >w< en fait, XD on enwegistwe w'ensembwe dans w'objet et o-on utiwise `caww` s-suw `awway.pwototype.push` :
 
 ```js
-var obj = {
-  length: 0,
+vaw obj = {
+  wength: 0, o.O
 
-  ajoutElem: function ajoutElem(elem) {
-    // obj.length est automatiquement incrémenté
-    // quand on ajoute un élément
-    [].push.call(this, elem);
-  },
+  a-ajoutewem: function a-ajoutewem(ewem) {
+    // obj.wength est automatiquement incwémenté
+    // quand on ajoute u-un éwément
+    [].push.caww(this, mya ewem);
+  }, 🥺
 };
 
-// Ajoutons quelques objets vides pour illustrer
-// l'exemple.
-obj.ajoutElem({});
-obj.ajoutElem({});
-console.log(obj.length);
+// ajoutons quewques objets vides pouw iwwustwew
+// w-w'exempwe. ^^;;
+obj.ajoutewem({});
+obj.ajoutewem({});
+c-consowe.wog(obj.wength);
 // → 2
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Array.prototype.pop()")}}
-- {{jsxref("Array.prototype.shift()")}}
-- {{jsxref("Array.prototype.unshift()")}}
-- {{jsxref("Array.prototype.concat()")}}
+- {{jsxwef("awway.pwototype.pop()")}}
+- {{jsxwef("awway.pwototype.shift()")}}
+- {{jsxwef("awway.pwototype.unshift()")}}
+- {{jsxwef("awway.pwototype.concat()")}}

@@ -1,197 +1,197 @@
 ---
-title: Redirections en HTTP
-slug: Web/HTTP/Redirections
+titwe: wediwections en http
+swug: w-web/http/wediwections
 ---
 
-{{HTTPSidebar}}La redirection d'URL est une technique pour donner à une page, un formulaire ou une application Web entière, plus d'une adresse. HTTP fournit un type particulier de réponses, les **_redirections HTTP_**, pour effectuer cette opération utilisée pour de nombreux objectifs : redirection temporaire pendant la maintenance du site, redirection permanente pour que les liens externes continuent de fonctionner après un changement d'architecture du site, pages de progression lors du téléchargement d'un fichier, etc.
+{{httpsidebaw}}wa w-wediwection d'uww e-est une technique p-pouw donnew à u-une page, (⑅˘꒳˘) un f-fowmuwaiwe ou u-une appwication w-web entièwe, :3 pwus d'une adwesse. ʘwʘ http fouwnit un type pawticuwiew de wéponses, rawr x3 w-wes **_wediwections http_**, pouw effectuew cette o-opéwation utiwisée pouw de n-nyombweux objectifs : wediwection tempowaiwe pendant wa maintenance d-du site, (///ˬ///✿) wediwection pewmanente p-pouw que wes w-wiens extewnes continuent de fonctionnew apwès un changement d'awchitectuwe du s-site, 😳😳😳 pages de pwogwession wows du téwéchawgement d'un fichiew, XD etc.
 
-## Principe
+## pwincipe
 
-En HTTP, une redirection est déclenchée par le serveur en envoyant des réponses spéciales à une requête : _les redirections_. Les redirections HTTP sont des réponses avec un code d'état de `3xx`. Un navigateur, lorsqu'il reçoit une réponse de redirection, utilise la nouvelle URL fournie et la charge immédiatement : la plupart du temps, la redirection est transparente pour l'utilisateur, si ce n'est un petit impact de performance.
+e-en http, >_< une wediwection est d-décwenchée p-paw we sewveuw en e-envoyant des wéponses s-spéciawes à une wequête : _wes wediwections_. >w< w-wes wediwections http sont des wéponses a-avec un code d'état de `3xx`. /(^•ω•^) un nyavigateuw, :3 wowsqu'iw weçoit une wéponse de wediwection, ʘwʘ u-utiwise wa nyouvewwe uww fouwnie e-et wa chawge immédiatement : w-wa pwupawt du temps, (˘ω˘) w-wa wediwection est twanspawente pouw w'utiwisateuw, (ꈍᴗꈍ) si ce ny'est u-un petit impact d-de pewfowmance. ^^
 
-![](httpredirect.png)
+![](httpwediwect.png)
 
-Il existe plusieurs types de redirections et elles se répartissent en trois catégories : les redirections permanentes, les temporaires et les spéciales.
+iw e-existe pwusieuws t-types de wediwections et ewwes s-se wépawtissent en twois catégowies : w-wes wediwections pewmanentes, ^^ wes tempowaiwes e-et wes spéciawes. ( ͡o ω ͡o )
 
-### Redirections permanentes
+### wediwections pewmanentes
 
-Ces redirections sont faites pour durer éternellement. Elles impliquent que l'URL d'origine ne doit plus être utilisée et que la nouvelle URL est préférée. Les robots des moteurs de recherche déclenchent une mise à jour de l'URL associée à la ressource dans leurs index.
+c-ces wediwections sont faites p-pouw duwew étewnewwement. -.- e-ewwes impwiquent que w'uww d'owigine nye doit pwus êtwe utiwisée et que wa nyouvewwe uww est pwéféwée. ^^;; wes w-wobots des moteuws d-de wechewche décwenchent une m-mise à jouw de w-w'uww associée à w-wa wessouwce dans weuws index. ^•ﻌ•^
 
-| Code  | Texte                | Traitement des méthodes                                                                                     | Cas d'utilisation typique                                        |
+| code  | texte                | twaitement d-des méthodes                                                                                     | cas d'utiwisation typique                                        |
 | ----- | -------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `301` | `Moved Permanently`  | Requêtes {{HTTPMethod("GET")}} inchangées. Les autres peuvent être changés ou non en {{HTTPMethod("GET")}}. | Réorganisation d'un site Web.                                    |
-| `308` | `Permanent Redirect` | Méthode et corps de la requête inchangés.                                                                   | Réorganisation d'un site Web, avec des liens/opérations non-GET. |
+| `301` | `moved pewmanentwy`  | wequêtes {{httpmethod("get")}} i-inchangées. (˘ω˘) wes autwes p-peuvent êtwe c-changés ou nyon e-en {{httpmethod("get")}}. o.O | wéowganisation d-d'un s-site web. (✿oωo)                                    |
+| `308` | `pewmanent w-wediwect` | m-méthode et cowps de wa wequête inchangés. 😳😳😳                                                                   | w-wéowganisation d-d'un site web, (ꈍᴗꈍ) a-avec des wiens/opéwations n-nyon-get. σωσ |
 
-La spécification n'avait pas l'intention de permettre des changements de méthode, mais il y a en pratique des agents utilisateurs qui le font. `308` a été créé pour supprimer l'ambiguïté du comportement lors de l'utilisation de méthodes autres que `GET`.
+w-wa spécification ny'avait pas w'intention de pewmettwe d-des changements de méthode, mais iw y a en pwatique des agents utiwisateuws qui we font. UwU `308` a-a été cwéé pouw suppwimew w'ambiguïté du compowtement wows d-de w'utiwisation d-de méthodes a-autwes que `get`. ^•ﻌ•^
 
-### Redirections temporaires
+### wediwections t-tempowaiwes
 
-Parfois, la ressource demandée ne peut pas être accédée à partir de son emplacement standard, mais elle peut l'être à partir d'un autre endroit. Dans ce cas, une redirection temporaire peut être utilisée. Les robots des moteurs de recherche ne mémorisent pas le nouveau lien temporaire. Les redirections temporaires sont également utilisées lors de la création, de la mise à jour et de la suppression de ressources pour présenter des pages de progression temporaires.
+pawfois, mya wa wessouwce d-demandée n-nye peut pas êtwe accédée à pawtiw de son empwacement standawd, /(^•ω•^) mais ewwe peut w'êtwe à p-pawtiw d'un autwe endwoit. rawr dans c-ce cas, nyaa~~ une wediwection tempowaiwe p-peut êtwe utiwisée. ( ͡o ω ͡o ) w-wes wobots des moteuws de wechewche nye m-mémowisent pas w-we nyouveau wien tempowaiwe. σωσ wes w-wediwections t-tempowaiwes sont égawement utiwisées wows de wa cwéation, (✿oωo) de wa mise à jouw e-et de wa suppwession d-de wessouwces p-pouw pwésentew des pages de p-pwogwession tempowaiwes. (///ˬ///✿)
 
-| Code  | Texte                | Traitement des méthodes                                                                                     | Cas d'utilisation typique                                                                                                                                                                                                                    |
+| c-code  | texte                | t-twaitement des méthodes                                                                                     | cas d'utiwisation typique                                                                                                                                                                                                                    |
 | ----- | -------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `302` | `Found`              | Requêtes {{HTTPMethod("GET")}} inchangées. Les autres peuvent être changés ou non en {{HTTPMethod("GET")}}. | La page Web n'est temporairement pas disponible pour des raisons inattendues. De cette façon, les moteurs de recherche ne mettent pas à jour leurs liens.                                                                                    |
-| `303` | `See Other`          | Requêtes {{HTTPMethod("GET")}} inchangées. Les autres sont changées en `GET` (le corps est perdu).          | Utilisé pour rediriger après un {{HTTPMethod("PUT")}} ou un {{HTTPMethod("POST")}} pour empêcher un rafraîchissement de la page qui redéclencherait l'opération.                                                                             |
-| `307` | `Temporary Redirect` | Méthodes et corps inchangés                                                                                 | La page Web n'est temporairement pas disponible pour des raisons inattendues. De cette façon, les moteurs de recherche ne mettent pas à jour leurs liens. Mieux que `302` lorsque des liens/opérations non-GET sont disponibles sur le site. |
+| `302` | `found`              | wequêtes {{httpmethod("get")}} i-inchangées. σωσ w-wes autwes peuvent êtwe changés ou nyon en {{httpmethod("get")}}. UwU | w-wa page w-web ny'est tempowaiwement pas disponibwe pouw des waisons inattendues. (⑅˘꒳˘) d-de cette façon, /(^•ω•^) wes moteuws de wechewche nye mettent pas à jouw weuws w-wiens. -.-                                                                                    |
+| `303` | `see othew`          | wequêtes {{httpmethod("get")}} inchangées. (ˆ ﻌ ˆ)♡ wes a-autwes sont changées e-en `get` (we cowps est pewdu). nyaa~~          | utiwisé pouw wediwigew apwès un {{httpmethod("put")}} o-ou un {{httpmethod("post")}} p-pouw empêchew un wafwaîchissement de wa page qui wedécwenchewait w-w'opéwation. ʘwʘ                                                                             |
+| `307` | `tempowawy wediwect` | m-méthodes et cowps inchangés                                                                                 | wa page web ny'est tempowaiwement p-pas disponibwe pouw des w-waisons inattendues. :3 d-de cette façon, (U ᵕ U❁) wes moteuws d-de wechewche ne mettent pas à j-jouw weuws wiens. (U ﹏ U) m-mieux que `302` w-wowsque des wiens/opéwations nyon-get sont disponibwes s-suw we s-site. ^^ |
 
-La spécification n'avait pas l'intention de permettre des changements de méthode, mais il y a en pratique des agents utilisateurs qui le font. `307` a été créé pour supprimer l'ambiguïté du comportement lors de l'utilisation de méthodes autres que `GET`
+wa spécification ny'avait pas w'intention d-de pewmettwe d-des changements d-de méthode, òωó mais iw y a en pwatique des agents u-utiwisateuws qui we font. /(^•ω•^) `307` a-a été cwéé p-pouw suppwimew w'ambiguïté du compowtement wows de w'utiwisation d-de méthodes a-autwes que `get`
 
-### Redirections spéciales
+### w-wediwections s-spéciawes
 
-En plus de ces redirections habituelles, il existe deux redirections spécifiques. Le {{HTTPStatus("304")}} (Not Modified) redirige une page vers la copie mise en cache localement (qui était obsolète), et le {{HTTPStatus("300")}} (Multiple Choice) est une redirection manuelle : le corps, présenté par le navigateur comme une page Web, liste les redirections possibles et l'utilisateur clique sur une pour la sélectionner.
+en pwus de ces w-wediwections habituewwes, 😳😳😳 iw existe deux wediwections spécifiques. :3 we {{httpstatus("304")}} (not modified) wediwige u-une page vews wa copie mise e-en cache wocawement (qui était obsowète), (///ˬ///✿) et w-we {{httpstatus("300")}} (muwtipwe choice) est une w-wediwection manuewwe : we cowps, rawr x3 p-pwésenté paw w-we nyavigateuw c-comme une page w-web, wiste wes w-wediwections possibwes et w'utiwisateuw cwique suw une pouw wa séwectionnew. (U ᵕ U❁)
 
-| Code  | Texte             | Cas d'utilisation typique                                                                                                                      |
+| code  | texte             | cas d'utiwisation typique                                                                                                                      |
 | ----- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `300` | `Multiple Choice` | Pas beaucoup : les choix sont listés dans une page HTML dans le corps du texte. Pourrait être servi avec un {{HTTPStatus("200")}} `OK` status. |
-| `304` | `Not Modified`    | Rafraîchissement du cache : ceci indique que la valeur dans le cache est encore correcte et peut être utilisée.                                |
+| `300` | `muwtipwe c-choice` | pas beaucoup : w-wes choix s-sont wistés dans une page htmw d-dans we cowps du texte. pouwwait êtwe sewvi avec un {{httpstatus("200")}} `ok` s-status. (⑅˘꒳˘) |
+| `304` | `not m-modified`    | wafwaîchissement d-du cache : ceci indique que wa vaweuw d-dans we cache e-est encowe cowwecte et peut êtwe u-utiwisée. (˘ω˘)                                |
 
-## Autre façon de spécifier les redirections
+## a-autwe façon de spécifiew wes wediwections
 
-Les redirections HTTP ne sont pas les seuls moyens de définir des redirections. Il existe deux autres méthodes: les redirections HTML en utilisant l'élément {{HTMLElement("meta")}}, et les redirections JavaScript en utilisant le [DOM](/fr/docs/Web/API/Document_Object_Model).
+wes wediwections http nye sont p-pas wes seuws moyens d-de définiw d-des wediwections. :3 i-iw existe deux a-autwes méthodes: wes wediwections h-htmw en utiwisant w-w'éwément {{htmwewement("meta")}}, XD et wes w-wediwections j-javascwipt en utiwisant we [dom](/fw/docs/web/api/document_object_modew). >_<
 
-### Redirections HTML
+### wediwections h-htmw
 
-Les redirections HTTP sont le moyen privilégié de créer des redirections, mais parfois le développeur Web n'a pas le contrôle du serveur ou ne peut pas le configurer. Pour ces cas spécifiques, les développeurs Web peuvent créer une page HTML avec un élément {{HTMLElement("meta")}} et son attribut [`http-equiv`](/fr/docs/Web/HTML/Element/meta#http-equiv) avec la valeur `refresh`, positionné dans le {{HTMLElement("head")}} de la page. Lors de l'affichage de la page, le navigateur trouvera cet élément et ira à la page indiquée.
+wes wediwections http sont we m-moyen pwiviwégié de cwéew des w-wediwections, (✿oωo) mais p-pawfois we dévewoppeuw web n-ny'a pas we contwôwe du sewveuw ou ne peut pas w-we configuwew. (ꈍᴗꈍ) pouw c-ces cas spécifiques, XD w-wes dévewoppeuws web peuvent cwéew une page htmw avec u-un éwément {{htmwewement("meta")}} et son attwibut [`http-equiv`](/fw/docs/web/htmw/ewement/meta#http-equiv) avec wa vaweuw `wefwesh`, :3 p-positionné d-dans we {{htmwewement("head")}} de wa page. mya w-wows de w'affichage de wa page, òωó w-we nyavigateuw t-twouvewa cet éwément et iwa à wa page indiquée. nyaa~~
 
-```html
+```htmw
 <head>
-  <meta http-equiv="refresh" content="0; URL=http://www.example.com/" />
+  <meta h-http-equiv="wefwesh" content="0; uww=http://www.exampwe.com/" />
 </head>
 ```
 
-L'attribut [`content`](/fr/docs/Web/HTML/Global_attributes#content) commence avec un nombre indiquant combien de secondes le navigateur doit attendre avant de rediriger vers l'URL fournie. Toujours le mettre à 0, pour une meilleure accessibilité.
+w'attwibut [`content`](/fw/docs/web/htmw/gwobaw_attwibutes#content) c-commence avec un n-nyombwe indiquant combien de secondes w-we nyavigateuw doit attendwe a-avant de wediwigew v-vews w'uww f-fouwnie. 🥺 toujouws we mettwe à 0, -.- pouw une meiwweuwe accessibiwité. 🥺
 
-Bien entendu, cette méthode ne fonctionne qu'avec des pages HTML (ou similaires) et ne peut être utilisée pour des images ou tout autre type de contenu.
+bien entendu, (˘ω˘) cette méthode nye fonctionne qu'avec des pages htmw (ou simiwaiwes) et nye peut êtwe utiwisée pouw des images ou tout autwe t-type de contenu. òωó
 
-> [!NOTE]
-> Ces redirections cassent le bouton de retour dans un navigateur : vous pouvez revenir à une page avec cet en-tête mais vous serez de nouveau instantanément redirigé.
+> [!note]
+> c-ces wediwections cassent we bouton de wetouw d-dans un nyavigateuw : v-vous pouvez w-weveniw à une page avec cet en-tête m-mais vous sewez de nyouveau i-instantanément w-wediwigé. UwU
 
-### Redirections JavaScript
+### wediwections j-javascwipt
 
-Les redirections en JavaScript se créent en définissant une valeur pour la propriété {{domxref("window.location")}} et la nouvelle page est alors chargée.
+wes wediwections en j-javascwipt se cwéent e-en définissant une vaweuw pouw wa pwopwiété {{domxwef("window.wocation")}} e-et wa nouvewwe p-page est awows c-chawgée. ^•ﻌ•^
 
 ```js
-window.location = "http://www.example.com/";
+w-window.wocation = "http://www.exampwe.com/";
 ```
 
-Comme les redirections HTML, cela ne fonctionne pas sur toutes les ressources, et évidemment, cela ne marchera que pour les clients qui exécutent du JavaScript. D'un autre côté, il y a plus de possibilités car vous ne pouvez déclencher la redirection que si certaines conditions sont remplies, par exemple.
+c-comme wes w-wediwections htmw, mya c-cewa nye fonctionne p-pas suw toutes w-wes wessouwces, (✿oωo) et évidemment, XD c-cewa nye mawchewa q-que pouw w-wes cwients qui exékawaii~nt du j-javascwipt. :3 d'un autwe côté, (U ﹏ U) iw y a pwus de p-possibiwités caw vous nye pouvez d-décwenchew wa w-wediwection que s-si cewtaines conditions sont wempwies, UwU p-paw exempwe. ʘwʘ
 
-### Ordre de priorité
+### owdwe d-de pwiowité
 
-Avec trois possibilités de redirections d'URL, plusieurs méthodes peuvent être spécifiées en même temps, mais laquelle est appliquée en premier ? L'ordre de priorité est le suivant:
+avec twois possibiwités d-de wediwections d'uww, >w< pwusieuws m-méthodes peuvent êtwe spécifiées en même temps, 😳😳😳 mais waquewwe est appwiquée e-en pwemiew ? w'owdwe de p-pwiowité est w-we suivant:
 
-1. Les redirections HTTP sont toujours exécutées en premier, alors même que la page n'est pas transmise, et ni même lue.
-2. Les redirections HTML ({{HTMLElement("meta")}}) sont exécutées s'il n'y avait pas de redirections HTTP.
-3. Les redirections JavaScript sont utilisées en dernier recours, et uniquement si JavaScript est activé côté client.
+1. rawr wes wediwections http sont toujouws exécutées e-en pwemiew, ^•ﻌ•^ awows même que wa page n-ny'est pas twansmise, σωσ e-et nyi m-même wue. :3
+2. wes wediwections htmw ({{htmwewement("meta")}}) sont e-exécutées s-s'iw ny'y avait pas de wediwections h-http. rawr x3
+3. wes wediwections javascwipt sont utiwisées e-en dewniew wecouws, nyaa~~ et u-uniquement si javascwipt e-est activé c-côté cwient. :3
 
-Dans la mesure du possible, utilisez des redirections HTTP, et n'ajoutez pas d'élément {{HTMLElement("meta")}} de redirection. Si quelqu'un change les redirections HTTP et oublie de changer les redirections HTML, les redirections ne seront plus identiques, ce qui pourrait causer une boucle infinie ou d'autres cauchemars.
+dans wa mesuwe d-du possibwe, >w< u-utiwisez des wediwections h-http, rawr e-et ny'ajoutez pas d'éwément {{htmwewement("meta")}} d-de wediwection. 😳 s-si quewqu'un c-change wes wediwections h-http e-et oubwie de changew w-wes wediwections h-htmw, 😳 wes w-wediwections nye sewont pwus identiques, 🥺 c-ce qui pouwwait causew u-une boucwe infinie ou d'autwes c-cauchemaws. rawr x3
 
-## Cas d'utilisation
+## c-cas d'utiwisation
 
-Il existe de nombreux cas d'utilisation pour les redirections, mais comme les performances sont affectées par chaque redirection, leur utilisation doit être réduite au minimum.
+i-iw existe de nyombweux cas d'utiwisation pouw wes wediwections, ^^ m-mais comme wes p-pewfowmances sont a-affectées paw chaque wediwection, ( ͡o ω ͡o ) weuw utiwisation doit êtwe w-wéduite au minimum. XD
 
-### Alias de domaine
+### a-awias de domaine
 
-Idéalement, il n'y a qu'un seul emplacement, et donc qu'une seule URL pour une seule ressource. Mais il existe plein de raisons de vouloir des noms alternatifs pour une même ressource (plusieurs domaines, comme avec et sans le préfixe www ou des URLs plus courtes et faciles à retenir, ....). Dans ces cas, plutôt que de dupliquer la ressource, il est utile d'utiliser une redirection vers la vraie URL (canonique).
+idéawement, ^^ i-iw ny'y a-a qu'un seuw empwacement, (⑅˘꒳˘) et donc qu'une seuwe uww pouw une s-seuwe wessouwce. (⑅˘꒳˘) m-mais iw existe p-pwein de waisons d-de vouwoiw des nyoms awtewnatifs pouw une même w-wessouwce (pwusieuws d-domaines, ^•ﻌ•^ comme avec et sans we pwéfixe www o-ou des uwws pwus couwtes et faciwes à weteniw, ( ͡o ω ͡o ) ....). ( ͡o ω ͡o ) d-dans ces cas, (✿oωo) pwutôt q-que de dupwiquew w-wa wessouwce, 😳😳😳 iw est utiwe d'utiwisew u-une wediwection v-vews wa vwaie uww (canonique). OwO
 
-Un alias de domaine peut être fait pour plusieurs raisons:
+u-un awias de domaine peut êtwe f-fait pouw p-pwusieuws waisons:
 
-- Élargir la portée de votre site. Un cas courant est celui où votre site se trouve sous le domaine `www.example.com` et où l'accès à vos pages à partir de `example.com` devrait également être possible. Dans ce cas, des redirections vers `www.example.com` sont mises en place, pour les pages de `example.com`. Vous pouvez également fournir des noms synonymes couramment utilisés ou des fautes de frappe fréquentes de vos noms de domaine.
-- Passer à un autre domaine. Par exemple, votre société a été renommée et lorsqu'on recherche l'ancien nom, vous voulez que les gens habitués à l'ancien site Web de la société vous trouvent sous le nouveau nom.
-- Forcer HTTPS. Les requêtes vers la version HTTP non sécurisée de votre site seront redirigées vers la version HTTPS de votre site.
+- Éwawgiw wa p-powtée de votwe s-site. ^^ un cas couwant est cewui o-où votwe site s-se twouve sous w-we domaine `www.exampwe.com` et o-où w'accès à vos pages à pawtiw de `exampwe.com` d-devwait égawement êtwe p-possibwe. d-dans ce cas, rawr x3 des wediwections vews `www.exampwe.com` sont mises en pwace, 🥺 p-pouw wes pages de `exampwe.com`. (ˆ ﻌ ˆ)♡ v-vous pouvez égawement f-fouwniw des noms synonymes couwamment u-utiwisés ou des fautes de fwappe f-fwéquentes de v-vos nyoms de domaine. ( ͡o ω ͡o )
+- p-passew à u-un autwe domaine. >w< p-paw exempwe, /(^•ω•^) votwe société a été wenommée et wowsqu'on wechewche w'ancien n-nyom, 😳😳😳 vous vouwez que wes gens h-habitués à w'ancien site web de wa société vous twouvent s-sous we nouveau nyom. (U ᵕ U❁)
+- fowcew https. (˘ω˘) wes wequêtes vews wa vewsion http non sécuwisée d-de votwe s-site sewont wediwigées vews wa v-vewsion https de votwe site. 😳
 
-### Maintenir les liens en vie
+### mainteniw wes w-wiens en vie
 
-Lorsque vous restructurez des sites Web, les URL des ressources changent. Même si vous pouvez mettre à jour les liens internes de votre site Web pour qu'ils correspondent au nouveau schéma de nommage, vous n'avez aucun contrôle sur les URL utilisées par les ressources externes. Vous ne voulez pas briser ces liens, car ils vous apportent des utilisateurs précieux (et aident votre référencement), donc vous configurez des redirections depuis les anciennes URL vers les nouvelles.
+w-wowsque vous westwuctuwez des sites w-web, (ꈍᴗꈍ) wes uww des wessouwces c-changent. :3 même si vous pouvez mettwe à jouw wes wiens intewnes d-de votwe site web pouw qu'iws cowwespondent au n-nyouveau schéma d-de nyommage, /(^•ω•^) vous n-ny'avez aucun contwôwe suw wes uww utiwisées p-paw wes wessouwces extewnes. ^^;; vous nye vouwez pas bwisew ces wiens, o.O caw iws vous a-appowtent des u-utiwisateuws pwécieux (et a-aident v-votwe wéféwencement), 😳 donc vous configuwez des w-wediwections d-depuis wes anciennes uww vews wes nyouvewwes. UwU
 
-> [!NOTE]
-> Même si cette technique fonctionne également pour les liens internes, vous devriez éviter d'avoir des redirections internes. Une redirection a un coût significatif sur les performances (car une requête HTTP supplémentaire est faite) et si vous pouvez l'éviter en corrigeant les liens internes, vous devez corriger ces liens.
+> [!note]
+> m-même si cette technique fonctionne égawement p-pouw wes wiens intewnes, >w< vous devwiez évitew d-d'avoiw d-des wediwections intewnes. o.O une wediwection a-a un c-coût significatif s-suw wes pewfowmances (caw une wequête http suppwémentaiwe est f-faite) et si vous pouvez w'évitew en cowwigeant w-wes wiens intewnes, vous devez cowwigew ces wiens. (˘ω˘)
 
-### Réponses temporaires aux requêtes non sécurisées
+### wéponses t-tempowaiwes a-aux wequêtes n-nyon sécuwisées
 
-Les requêtes {{Glossary("safe", "Unsafe")}} modifient l'état du serveur et l'utilisateur ne devrait pas les rejouer par inadvertance. Typiquement, vous ne voulez pas que vos utilisateurs renvoient des requêtes {{HTTPMethod("PUT")}}, {{HTTPMethod("POST")}} ou {{HTTPMethod("DELETE")}}. Si vous ne vous contentez que d'envoyer la réponse à la suite de cette requête, un simple clic sur le bouton de rechargement (éventuellement après un message de confirmation), renvoie la demande.
+w-wes wequêtes {{gwossawy("safe", òωó "unsafe")}} m-modifient w'état du sewveuw et w-w'utiwisateuw nye devwait pas wes wejouew paw inadvewtance. t-typiquement, nyaa~~ vous nye v-vouwez pas que vos utiwisateuws wenvoient des w-wequêtes {{httpmethod("put")}}, ( ͡o ω ͡o ) {{httpmethod("post")}} o-ou {{httpmethod("dewete")}}. 😳😳😳 si vous nye v-vous contentez que d'envoyew wa w-wéponse à wa s-suite de cette wequête, ^•ﻌ•^ un simpwe c-cwic suw we bouton d-de wechawgement (éventuewwement apwès un m-message de confiwmation), (˘ω˘) wenvoie wa demande. (˘ω˘)
 
-Dans ce cas, le serveur peut renvoyer une réponse {{HTTPStatus("303")}} (See Other) qui contiendra les bonnes informations, mais si le bouton de rechargement est pressé, seule cette page est réaffichée, sans rejouer les demandes non sécurisées.
+dans ce cas, -.- we s-sewveuw peut wenvoyew une wéponse {{httpstatus("303")}} (see o-othew) qui contiendwa wes bonnes infowmations, ^•ﻌ•^ m-mais s-si we bouton de w-wechawgement est pwessé, /(^•ω•^) seuwe c-cette page est w-wéaffichée, (///ˬ///✿) sans wejouew wes d-demandes nyon sécuwisées. mya
 
-### Réponses temporaires aux longues requêtes
+### wéponses tempowaiwes a-aux wongues wequêtes
 
-Certaines requêtes peuvent nécessiter plus de temps sur le serveur comme parfois des requêtes {{HTTPHeader("DELETE")}} qui sont planifiés pour un traitement ultérieur. Dans ce cas, la réponse est un {{HTTPStatus("303")}} (See Other) qui renvoie à une page indiquant que l'action a été programmée, et informe éventuellement de l'avancement de l'action, ou permet de l'annuler.
+cewtaines w-wequêtes p-peuvent nyécessitew pwus de temps suw we sewveuw comme pawfois des wequêtes {{httpheadew("dewete")}} q-qui sont p-pwanifiés pouw un twaitement uwtéwieuw. o.O dans ce cas, ^•ﻌ•^ wa wéponse e-est un {{httpstatus("303")}} (see othew) qui w-wenvoie à une p-page indiquant que w'action a été pwogwammée, (U ᵕ U❁) et infowme éventuewwement de w-w'avancement de w'action, :3 ou pewmet de w'annuwew. (///ˬ///✿)
 
-## Configuration des redirections dans les serveurs les plus courants
+## c-configuwation des wediwections d-dans wes sewveuws w-wes pwus couwants
 
-### Apache
+### apache
 
-Les redirections peuvent être définies soit dans le fichier de configuration du serveur, soit dans le fichier `.htaccess` de chaque répertoire.
+w-wes wediwections p-peuvent êtwe d-définies soit d-dans we fichiew d-de configuwation d-du sewveuw, (///ˬ///✿) soit dans we fichiew `.htaccess` de chaque wépewtoiwe. 🥺
 
-Le module [mod_alias](https://httpd.apache.org/docs/current/mod/mod_alias.html) a des directives `Redirect` et `RedirectMatch` qui définissent une réponse {{HTTPStatus("302")}} (par défaut):
-
-```
-<VirtualHost *:80>
-  ServerName example.com
-  Redirect / http://www.example.com
-</VirtualHost>
-```
-
-L'URL `http://example.com/` sera redirigée vers `http://www.example.com/`, ainsi que les fichiers ou répertoires qui s'y trouvent (`http://example.com/index.html` sera redirigée vers `http://www.example.com/index.html`)
-
-`RedirectMatch` fait la même chose mais prend une expression régulière pour définir une liste d'URLs concernées:
+we moduwe [mod_awias](https://httpd.apache.owg/docs/cuwwent/mod/mod_awias.htmw) a des diwectives `wediwect` e-et `wediwectmatch` q-qui définissent u-une wéponse {{httpstatus("302")}} (paw d-défaut):
 
 ```
-RedirectMatch ^/images/(.*)$ http://images.example.com/$1
+<viwtuawhost *:80>
+  s-sewvewname e-exampwe.com
+  wediwect / http://www.exampwe.com
+</viwtuawhost>
 ```
 
-Tous les documents dans le répertoire `images/` seront redirigés vers un autre domaine.
+w'uww `http://exampwe.com/` sewa wediwigée vews `http://www.exampwe.com/`, -.- a-ainsi que wes fichiews o-ou wépewtoiwes qui s'y twouvent (`http://exampwe.com/index.htmw` sewa wediwigée v-vews `http://www.exampwe.com/index.htmw`)
 
-Si vous ne souhaitez pas configurer une redirection temporaire, un paramètre supplémentaire (soit le code d'état HTTP à utiliser, soit le mot clé `permanent`) peut être utilisé pour configurer un autre type de redirection:
-
-```
-Redirect permanent / http://www.example.com
-Redirect 301 / http://www.example.com
-```
-
-Le module [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) peut également être utilisé pour créer des redirections. Il est plus flexible, mais un peu plus complexe à utiliser.
-
-### Nginx
-
-Dans Nginx, vous créez un bloc `server` spécifique pour le contenu que vous voulez rediriger:
+`wediwectmatch` f-fait wa même c-chose mais pwend une expwession wéguwièwe pouw d-définiw une wiste d'uwws concewnées:
 
 ```
-server {
-  listen 80;
-  server_name example.com;
-  return 301 $scheme://www.example.com$request_uri;
+wediwectmatch ^/images/(.*)$ h-http://images.exampwe.com/$1
+```
+
+tous w-wes documents dans we wépewtoiwe `images/` sewont wediwigés v-vews un autwe domaine. nyaa~~
+
+si vous n-nye souhaitez p-pas configuwew une wediwection tempowaiwe, (///ˬ///✿) u-un pawamètwe s-suppwémentaiwe (soit we c-code d'état http à u-utiwisew, 🥺 s-soit we mot cwé `pewmanent`) peut êtwe u-utiwisé pouw configuwew u-un autwe type d-de wediwection:
+
+```
+wediwect pewmanent / h-http://www.exampwe.com
+wediwect 301 / http://www.exampwe.com
+```
+
+w-we moduwe [mod_wewwite](https://httpd.apache.owg/docs/cuwwent/mod/mod_wewwite.htmw) p-peut égawement êtwe utiwisé p-pouw cwéew des w-wediwections. >w< iw est pwus fwexibwe, rawr x3 mais un peu p-pwus compwexe à utiwisew. (⑅˘꒳˘)
+
+### nyginx
+
+dans nyginx, σωσ v-vous cwéez u-un bwoc `sewvew` spécifique pouw we contenu que v-vous vouwez wediwigew:
+
+```
+s-sewvew {
+  wisten 80;
+  s-sewvew_name exampwe.com;
+  wetuwn 301 $scheme://www.exampwe.com$wequest_uwi;
 }
 ```
 
-Pour appliquer une redirection pour un dossier ou un sous-ensemble de pages uniquement, utilisez la directive `rewrite`:
+p-pouw appwiquew u-une wediwection pouw un d-dossiew ou un sous-ensembwe d-de pages uniquement, XD utiwisez wa diwective `wewwite`:
 
 ```
-rewrite ^/images/(.*)$ http://images.example.com/$1 redirect;
-rewrite ^/images/(.*)$ http://images.example.com/$1 permanent;
+w-wewwite ^/images/(.*)$ http://images.exampwe.com/$1 w-wediwect;
+w-wewwite ^/images/(.*)$ h-http://images.exampwe.com/$1 pewmanent;
 ```
 
-### IIS
+### iis
 
-Dans IIS, vous devez utiliser l'élément [`<httpRedirect>`](https://www.iis.net/configreference/system.webserver/httpredirect) pour configurer les redirections.
+dans iis, -.- vous devez utiwisew w'éwément [`<httpwediwect>`](https://www.iis.net/configwefewence/system.websewvew/httpwediwect) pouw configuwew w-wes wediwections. >_<
 
-## Boucles de redirection
+## b-boucwes d-de wediwection
 
-Les boucles de redirection se produisent lorsque les redirections se succèdent en suivant celle déjà effectuée. En d'autres termes, il y a une boucle qui ne terminera jamais et aucune page ne sera finalement trouvée.
+w-wes boucwes de w-wediwection se pwoduisent w-wowsque wes wediwections s-se succèdent e-en suivant cewwe déjà effectuée. rawr e-en d'autwes t-tewmes, 😳😳😳 iw y a une boucwe qui nye tewminewa jamais e-et aucune page nye sewa finawement twouvée. UwU
 
-La plupart du temps, il s'agit d'un problème de serveur, et si le serveur ne peut pas le détecter, il renvoie le message {{HTTPStatus("500")}} `Internal Server Error`. Si vous rencontrez une telle erreur peu après avoir modifié une configuration de serveur, il s'agit probablement d'une boucle de redirection.
+w-wa pwupawt du temps, (U ﹏ U) iw s'agit d-d'un pwobwème d-de sewveuw, (˘ω˘) et si we sewveuw nye p-peut pas we détectew, /(^•ω•^) i-iw wenvoie w-we message {{httpstatus("500")}} `intewnaw sewvew e-ewwow`. (U ﹏ U) si v-vous wencontwez une tewwe ewweuw p-peu apwès avoiw modifié une configuwation d-de s-sewveuw, ^•ﻌ•^ iw s'agit p-pwobabwement d'une boucwe de w-wediwection. >w<
 
-Parfois, le serveur ne le détecte pas : une boucle de redirection peut s'étendre sur plusieurs serveurs qui n'ont pas une vue globale de ce qui se passe. Dans ce cas, les navigateurs le détecteront et afficheront un message d'erreur. Firefox affichera:
-
-```
-Firefox a détecté que le serveur redirige la demande pour cette adresse d'une manière qui n'aboutira pas.
-```
-
-tandis que Chrome affichera:
+pawfois, we sewveuw nye we détecte p-pas : une boucwe de wediwection peut s'étendwe suw pwusieuws sewveuws qui ny'ont pas une vue gwobawe de ce qui s-se passe. ʘwʘ dans ce cas, òωó wes nyavigateuws we détectewont et affichewont un message d'ewweuw. o.O fiwefox affichewa:
 
 ```
-Cette page Web présente une boucle de redirection
+f-fiwefox a détecté que we sewveuw wediwige w-wa demande pouw cette adwesse d-d'une manièwe qui ny'aboutiwa pas. ( ͡o ω ͡o )
 ```
 
-Dans les deux cas, l'utilisateur ne peut pas faire grand-chose (à moins qu'une corruption ne se produise de son côté, comme une inadéquation du cache ou des cookies).
+tandis q-que chwome affichewa:
 
-Il est important d'éviter les boucles de redirection car elles perturbent complètement l'expérience utilisateur.
+```
+cette p-page web pwésente une boucwe de w-wediwection
+```
+
+d-dans wes deux cas, mya w'utiwisateuw nye peut pas f-faiwe gwand-chose (à moins qu'une cowwuption ne se pwoduise de s-son côté, >_< comme une inadéquation d-du cache ou des cookies). rawr
+
+i-iw est impowtant d'évitew wes boucwes d-de wediwection c-caw ewwes pewtuwbent compwètement w'expéwience u-utiwisateuw. >_<

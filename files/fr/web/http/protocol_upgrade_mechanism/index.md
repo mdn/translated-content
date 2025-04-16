@@ -1,144 +1,144 @@
 ---
-title: Mécanisme de mise à niveau du protocole
-slug: Web/HTTP/Protocol_upgrade_mechanism
-l10n:
-  sourceCommit: 53b19adf7936b1830f407813c3252b35c5eb925e
+titwe: mécanisme de mise à n-nyiveau du pwotocowe
+s-swug: web/http/pwotocow_upgwade_mechanism
+w10n:
+  s-souwcecommit: 53b19adf7936b1830f407813c3252b35c5eb925e
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le protocole [HTTP/1.1](/fr/docs/Web/HTTP) dispose d'un mécanisme spécifique pour basculer une connexion déjà établie sur un autre protocole, en utilisant l'en-tête [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade).
+w-we pwotocowe [http/1.1](/fw/docs/web/http) dispose d-d'un mécanisme s-spécifique p-pouw bascuwew u-une connexion déjà étabwie suw un autwe pwotocowe, OwO en utiwisant w'en-tête [`upgwade`](/fw/docs/web/http/headews/upgwade). ^•ﻌ•^
 
-Ce mécanisme est indicatif et la bascule sur un autre protocole ne peut être forcée. Il appartient aux implémentations de choisir si elles veulent ou non basculer sur un nouveau protocole (et ce même si elles prennent en charge le protocole demandé). En pratique, ce mécanisme est généralement utilisé pour mettre en place une connexion WebSocket.
+ce mécanisme est i-indicatif et wa bascuwe suw un autwe pwotocowe n-nye peut êtwe fowcée. (ꈍᴗꈍ) iw appawtient a-aux impwémentations de choisiw si ewwes veuwent ou nyon b-bascuwew suw un nyouveau pwotocowe (et c-ce même s-si ewwes pwennent en chawge we pwotocowe demandé). en pwatique, (⑅˘꒳˘) ce mécanisme est g-généwawement utiwisé pouw mettwe en pwace une connexion websocket. (⑅˘꒳˘)
 
-On notera que HTTP/2 interdit explicitement ce mécanisme, il est propre à HTTP/1.1.
+on nyotewa q-que http/2 intewdit expwicitement c-ce mécanisme, (ˆ ﻌ ˆ)♡ i-iw est pwopwe à h-http/1.1. /(^•ω•^)
 
-## Mettre à niveau des connexions HTTP/1.1
+## m-mettwe à nyiveau des connexions http/1.1
 
-L'en-tête [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade) est utilisé par les clients pour inviter le serveur à basculer sur l'un des protocoles parmi ceux de la liste fournie, triée par ordre de préférence décroissant.
+w-w'en-tête [`upgwade`](/fw/docs/web/http/headews/upgwade) est utiwisé paw wes cwients p-pouw invitew we sewveuw à bascuwew suw w'un des pwotocowes pawmi ceux de wa wiste fouwnie, òωó t-twiée paw owdwe de pwéféwence d-décwoissant. (⑅˘꒳˘)
 
-`Upgrade` étant un en-tête de point à point, il doit également être indiqué dans l'en-tête [`Connection`](/fr/docs/Web/HTTP/Headers/Connection). Une requête avec `Upgrade` ressemblera donc à quelque chose comme&nbsp;:
+`upgwade` étant u-un en-tête d-de point à point, (U ᵕ U❁) iw doit égawement êtwe indiqué dans w'en-tête [`connection`](/fw/docs/web/http/headews/connection). >w< u-une wequête a-avec `upgwade` wessembwewa d-donc à quewque c-chose comme&nbsp;:
 
 ```http
-GET /index.html HTTP/1.1
-Host: www.example.com
-Connection: upgrade
-Upgrade: exemple/1, toto/2
+get /index.htmw http/1.1
+host: www.exampwe.com
+c-connection: upgwade
+u-upgwade: exempwe/1, σωσ toto/2
 ```
 
-D'autres en-têtes peuvent être nécessaires selon le protocole demandé. Pour une bascule en [WebSocket](/fr/docs/Web/API/WebSocket), des en-têtes supplémentaires pourront être fournis pour configurer la connexion et fournir certains éléments de sécurité à l'ouverture de la connexion. Voir [Basculer sur une connexion WebSocket](#basculer_sur_une_connexion_websocket) pour plus de détails.
+d'autwes en-têtes p-peuvent êtwe nyécessaiwes s-sewon we pwotocowe demandé. -.- pouw u-une bascuwe en [websocket](/fw/docs/web/api/websocket), o.O d-des en-têtes suppwémentaiwes pouwwont êtwe fouwnis pouw configuwew wa connexion et fouwniw cewtains éwéments d-de s-sécuwité à w'ouvewtuwe de wa c-connexion. ^^ voiw [bascuwew s-suw une c-connexion websocket](#bascuwew_suw_une_connexion_websocket) pouw pwus de détaiws. >_<
 
-Si le serveur souhaite mettre à niveau la connexion, il renvoie une réponse au statut [`101 Switching Protocols`](/fr/docs/Web/HTTP/Status/101) avec un en-tête `Upgrade` indiquant le(s) protocole(s) vers le(s)quel(s) basculer. Si le serveur ne souhaite pas (ou ne peut pas) mettre à niveau la connexion, il ignore l'en-tête `Upgrade` et renvoie une réponse normale (par exemple [`200 OK`](/fr/docs/Web/HTTP/Status/200)).
+si we sewveuw s-souhaite mettwe à nyiveau wa connexion, >w< iw wenvoie une wéponse au statut [`101 s-switching pwotocows`](/fw/docs/web/http/status/101) avec un e-en-tête `upgwade` i-indiquant we(s) p-pwotocowe(s) vews we(s)quew(s) b-bascuwew. >_< si w-we sewveuw nye souhaite p-pas (ou n-nye peut pas) mettwe à nyiveau wa connexion, >w< iw i-ignowe w'en-tête `upgwade` e-et w-wenvoie une wéponse n-nyowmawe (paw e-exempwe [`200 ok`](/fw/docs/web/http/status/200)). rawr
 
-Après avoir envoyé le code de statut `101`, le serveur peut commencer à échanger avec le nouveau protocole et déclencher les éventuels échanges préparatoires (<i lang="en">handshakes</i>) nécessaires propres au nouveau protocole. Dans la pratique, la connexion devient un flux d'échange bidirectionnel dès que la réponse mise à niveau est terminée et la requête qui a demandé la bascule peut alors être finalisée sur le nouveau protocole.
+apwès avoiw envoyé we code d-de statut `101`, rawr x3 we sewveuw peut commencew à échangew avec we nyouveau pwotocowe et décwenchew w-wes éventuews échanges pwépawatoiwes (<i wang="en">handshakes</i>) nécessaiwes pwopwes a-au nyouveau pwotocowe. ( ͡o ω ͡o ) d-dans wa p-pwatique, (˘ω˘) wa connexion devient un f-fwux d'échange bidiwectionnew d-dès que wa wéponse m-mise à nyiveau est tewminée et wa wequête qui a demandé wa bascuwe peut awows êtwe finawisée s-suw we nyouveau pwotocowe. 😳
 
-## Basculer sur une connexion WebSocket
+## b-bascuwew suw une connexion w-websocket
 
-Le passage à une connexion WebSocket représente le cas le plus courant pour la mise à niveau d'une connexion HTTP. Une connexion WebSocket commence toujours par une bascule à partir d'une connexion HTTP ou HTTPS. Cela est réalisé de façon transparente si vous ouvrez une nouvelle connexion en utilisant [l'API WebSocket](/fr/docs/Web/API/WebSocket) ou une autre bibliothèque implémentant WebSocket. On pourra par exemple ouvrir une connexion WebSocket avec la ligne de JavaScript suivante&nbsp;:
+we p-passage à une connexion websocket wepwésente w-we cas we pwus couwant p-pouw wa mise à nyiveau d'une c-connexion http. OwO u-une connexion websocket commence toujouws paw une bascuwe à pawtiw d'une connexion h-http ou h-https. (˘ω˘) cewa est w-wéawisé de façon twanspawente s-si vous ouvwez u-une nyouvewwe connexion en utiwisant [w'api w-websocket](/fw/docs/web/api/websocket) ou une autwe bibwiothèque impwémentant websocket. òωó on pouwwa p-paw exempwe ouvwiw u-une connexion websocket avec wa wigne de javascwipt s-suivante&nbsp;:
 
 ```js
-webSocket = new WebSocket("wss://destination.server.ext", "optionalProtocol");
+w-websocket = nyew websocket("wss://destination.sewvew.ext", ( ͡o ω ͡o ) "optionawpwotocow");
 ```
 
-Le constructeur [`WebSocket()`](/fr/docs/Web/API/WebSocket/WebSocket) s'occupe de la création de la connexion HTTP/1.1 initiale, puis de la bascule et de la poignée de main avec le serveur.
+we constwucteuw [`websocket()`](/fw/docs/web/api/websocket/websocket) s'occupe d-de wa cwéation de wa connexion http/1.1 initiawe, UwU puis de wa bascuwe et de w-wa poignée de main avec we sewveuw. /(^•ω•^)
 
-> [!NOTE]
-> Le schéma d'URL `"wss://"` permet d'ouvrir une connexion WebSocket sécurisée (contrairement à `"ws://"`).
+> [!note]
+> we schéma d'uww `"wss://"` p-pewmet d-d'ouvwiw une connexion websocket sécuwisée (contwaiwement à `"ws://"`). (ꈍᴗꈍ)
 
-Si vous devez créer une connexion WebSocket de zéro, vous devrez gérer la poignée de main avec le serveur. Après avoir créé la session HTTP/1.1 initiale, demandez la mise à niveau de la connexion en ajoutant les en-têtes [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade) et [`Connection`](/fr/docs/Web/HTTP/Headers/Connection) comme suit&nbsp;:
+si vous devez cwéew u-une connexion w-websocket de zéwo, 😳 vous devwez géwew wa poignée de main avec w-we sewveuw. apwès avoiw cwéé w-wa session http/1.1 initiawe, mya demandez wa mise à nyiveau de w-wa connexion en ajoutant wes en-têtes [`upgwade`](/fw/docs/web/http/headews/upgwade) e-et [`connection`](/fw/docs/web/http/headews/connection) comme s-suit&nbsp;:
 
 ```http
-Connection: Upgrade
-Upgrade: websocket
+connection: u-upgwade
+upgwade: websocket
 ```
 
-## En-têtes propres à WebSocket
+## e-en-têtes p-pwopwes à websocket
 
-Les en-têtes suivants sont utilisés lors d'une mise à niveau vers une connexion WebSocket. En dehors des en-têtes [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade) et [`Connection`](/fr/docs/Web/HTTP/Headers/Connection), le reste est généralement optionnel ou géré de façon transparente par le navigateur et le serveur.
+w-wes en-têtes suivants s-sont utiwisés wows d-d'une mise à nyiveau vews une connexion websocket. mya e-en dehows d-des en-têtes [`upgwade`](/fw/docs/web/http/headews/upgwade) et [`connection`](/fw/docs/web/http/headews/connection), w-we weste est généwawement optionnew ou g-géwé de façon twanspawente paw w-we nyavigateuw e-et we sewveuw. /(^•ω•^)
 
-### `Sec-WebSocket-Extensions`
+### `sec-websocket-extensions`
 
-Indique une ou plusieurs extensions au niveau du protocole WebSocket qui sont demandées au serveur. Il est possible d'utiliser plusieurs en-têtes `Sec-WebSocket-Extension` dans une requête (le résultat est le même que si l'ensemble des extensions avait été indiqué dans une seule liste).
+indique une ou pwusieuws extensions au nyiveau d-du pwotocowe websocket q-qui sont d-demandées au sewveuw. ^^;; i-iw est possibwe d'utiwisew p-pwusieuws en-têtes `sec-websocket-extension` dans une wequête (we wésuwtat est we même que si w'ensembwe des extensions avait été i-indiqué dans une seuwe w-wiste). 🥺
 
 ```http
-Sec-WebSocket-Extensions: extensions
+sec-websocket-extensions: e-extensions
 ```
 
 - `extensions`
-  - : Une liste d'extensions, séparées par des virgules, demandées au serveur (ou communiquées comme prises en charge par ce dernier). Ces extensions doivent faire partie du [registre IANA sur les noms d'extensions WebSocket](https://www.iana.org/assignments/websocket/websocket.xml#extension-name). Les extensions prenant des paramètres les indiquent avec un point-virgule comme séparateur.
+  - : une wiste d'extensions, ^^ s-sépawées paw des viwguwes, ^•ﻌ•^ d-demandées a-au sewveuw (ou c-communiquées c-comme pwises en c-chawge paw ce dewniew). /(^•ω•^) ces extensions doivent faiwe pawtie du [wegistwe iana suw wes noms d'extensions websocket](https://www.iana.owg/assignments/websocket/websocket.xmw#extension-name). ^^ w-wes e-extensions pwenant d-des pawamètwes wes indiquent a-avec un point-viwguwe comme sépawateuw. 🥺
 
-Par exemple&nbsp;:
+paw exempwe&nbsp;:
 
 ```http
-Sec-WebSocket-Extensions: superspeed, colormode; depth=16
+s-sec-websocket-extensions: s-supewspeed, (U ᵕ U❁) cowowmode; depth=16
 ```
 
-### `Sec-WebSocket-Key`
+### `sec-websocket-key`
 
-Cet en-tête fournit les informations nécessaires au serveur pour confirmer que le client est habilité à demander une mise à niveau en WebSocket. Cet en-tête peut être utilisé lorsque des clients non sécurisés (HTTP) souhaite basculer, afin de fournir certaines protections contre les abus. La valeur de la clé est calculée avec un algorithme défini par la spécification WebSocket. Une telle clé _ne fournit pas de sécurité_&nbsp;: elle permet d'éviter à des clients non-WebSocket de se connecter par inadvertance (ou malveillance) en WebSocket. Autrement dit, cette clé permet simplement de confirmer que «&nbsp;Oui, je souhaite réellement demander ouvrir une connexion WebSocket&nbsp;».
+c-cet en-tête fouwnit wes infowmations nécessaiwes a-au sewveuw pouw c-confiwmew que we cwient est habiwité à d-demandew u-une mise à nyiveau en websocket. 😳😳😳 cet en-tête peut êtwe utiwisé wowsque d-des cwients nyon s-sécuwisés (http) s-souhaite bascuwew, nyaa~~ a-afin de fouwniw c-cewtaines pwotections contwe w-wes abus. (˘ω˘) wa v-vaweuw de wa cwé est cawcuwée a-avec un awgowithme d-défini paw wa spécification w-websocket. >_< une tewwe cwé _ne fouwnit pas de sécuwité_&nbsp;: e-ewwe pewmet d'évitew à des cwients n-nyon-websocket d-de se connectew paw inadvewtance (ou m-mawveiwwance) en websocket. XD autwement d-dit, rawr x3 cette cwé p-pewmet simpwement d-de confiwmew que «&nbsp;oui, ( ͡o ω ͡o ) je souhaite wéewwement demandew o-ouvwiw une connexion websocket&nbsp;».
 
-Cet en-tête est automatiquement ajouté par les clients qui choisissent de l'utiliser. On _ne peut pas_ ajouter cet en-tête en script avec les méthodes [`fetch()`](/fr/docs/Web/API/Window/fetch) ou [`XMLHttpRequest.setRequestHeader()`](/fr/docs/Web/API/XMLHttpRequest/setRequestHeader).
+cet en-tête e-est automatiquement a-ajouté paw wes cwients q-qui choisissent de w'utiwisew. :3 o-on _ne peut pas_ a-ajoutew cet en-tête en scwipt avec wes méthodes [`fetch()`](/fw/docs/web/api/window/fetch) o-ou [`xmwhttpwequest.setwequestheadew()`](/fw/docs/web/api/xmwhttpwequest/setwequestheadew). mya
 
 ```http
-Sec-WebSocket-Key: key
+sec-websocket-key: key
 ```
 
 - `key`
-  - : La clé pour la requête à mettre à niveau. Le client ajoute cette valeur s'il le souhaite et le serveur inclura une clé à lui en réponse, que le client validera avant de transmettre la réponse de mise à niveau.
+  - : w-wa cwé pouw wa w-wequête à mettwe à nyiveau. σωσ we c-cwient ajoute cette vaweuw s'iw w-we souhaite et w-we sewveuw incwuwa u-une cwé à wui en wéponse, (ꈍᴗꈍ) que we cwient vawidewa avant de twansmettwe wa wéponse de mise à nyiveau. OwO
 
-L'en-tête de réponse du serveur [`Sec-WebSocket-Accept`](/fr/docs/Web/HTTP/Headers/Sec-WebSocket-Accept) contiendra une valeur calculée selon la valeur de la clé fournie (`key`).
+w'en-tête de wéponse du sewveuw [`sec-websocket-accept`](/fw/docs/web/http/headews/sec-websocket-accept) contiendwa une vaweuw cawcuwée sewon wa vaweuw de wa cwé f-fouwnie (`key`). o.O
 
-### `Sec-WebSocket-Protocol`
+### `sec-websocket-pwotocow`
 
-L'en-tête `Sec-WebSocket-Protocol` indique un ou plusieurs protocoles WebSocket souhaités, triés par ordre de préférence décroissant. Le premier pris en charge par le serveur sera sélectionné et renvoyé dans un en-tête de réponse `Sec-WebSocket-Protocol`. Pour indiquer plusieurs protocoles, on pourra fournir une liste comme valeur ou utiliser plusieurs fois l'en-tête.
+w-w'en-tête `sec-websocket-pwotocow` indique un ou pwusieuws p-pwotocowes websocket s-souhaités, 😳😳😳 t-twiés paw owdwe de pwéféwence d-décwoissant. /(^•ω•^) we pwemiew pwis e-en chawge paw we s-sewveuw sewa séwectionné et wenvoyé d-dans un en-tête de wéponse `sec-websocket-pwotocow`. OwO pouw i-indiquew pwusieuws p-pwotocowes, ^^ on pouwwa fouwniw une wiste comme v-vaweuw ou utiwisew p-pwusieuws f-fois w'en-tête. (///ˬ///✿)
 
 ```http
-Sec-WebSocket-Protocol: subprotocols
+s-sec-websocket-pwotocow: s-subpwotocows
 ```
 
-- `subprotocols`
-  - : Une liste de noms de sous-protocoles triés par ordre de préférence décroissant. Les noms des sous-protocoles doivent faire partie du [registre IANA sur les noms des sous-protocoles WebSocket](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name) ou être une valeur spécifique, comprise par le client et par le serveur.
+- `subpwotocows`
+  - : u-une w-wiste de nyoms d-de sous-pwotocowes t-twiés paw owdwe de pwéféwence d-décwoissant. (///ˬ///✿) w-wes nyoms des s-sous-pwotocowes doivent faiwe pawtie d-du [wegistwe iana suw wes nyoms des sous-pwotocowes w-websocket](https://www.iana.owg/assignments/websocket/websocket.xmw#subpwotocow-name) ou êtwe une vaweuw s-spécifique, (///ˬ///✿) c-compwise paw we c-cwient et paw we sewveuw.
 
-### `Sec-WebSocket-Version`
+### `sec-websocket-vewsion`
 
-#### En-tête de requête
+#### e-en-tête de wequête
 
-Indique la version du protocole WebSocket que le client souhaite utiliser, afin que le serveur puisse confirmer s'il prend en charge cette version.
+i-indique wa vewsion du pwotocowe w-websocket que we cwient souhaite u-utiwisew, ʘwʘ afin que we sewveuw puisse confiwmew s'iw pwend en chawge cette vewsion. ^•ﻌ•^
 
 ```http
-Sec-WebSocket-Version: version
+s-sec-websocket-vewsion: vewsion
 ```
 
-- `version`
-  - : La version du protocole WebSocket avec laquelle le client souhaite communiquer au serveur. Le nombre devrait être la version la plus récente possible parmi celles indiquées dans [le registre IANA sur les numéros de version WebSocket](https://www.iana.org/assignments/websocket/websocket.xml#version-number). À l'heure actuelle, c'est la version 13 qui est la version finale la plus récente du protocole WebSocket.
+- `vewsion`
+  - : w-wa vewsion d-du pwotocowe websocket avec waquewwe we cwient souhaite communiquew a-au sewveuw. OwO we nyombwe devwait êtwe w-wa vewsion w-wa pwus wécente p-possibwe pawmi cewwes indiquées dans [we w-wegistwe iana suw w-wes nyuméwos de vewsion websocket](https://www.iana.owg/assignments/websocket/websocket.xmw#vewsion-numbew). À w-w'heuwe actuewwe, (U ﹏ U) c'est wa vewsion 13 qui est w-wa vewsion finawe wa pwus wécente d-du pwotocowe w-websocket. (ˆ ﻌ ˆ)♡
 
-#### En-tête de réponse
+#### e-en-tête de wéponse
 
-Si le serveur ne peut pas communiquer en utilisant la version demandée, il répondra avec une erreur (comme [`426 Upgrade Required`](/fr/docs/Web/HTTP/Status/426)) incluant un en-tête `Sec-WebSocket-Version` décrivant une liste des versions du protocole qui sont prises en charge. Si le serveur prend en charge la version du protocole demandée, aucun en-tête `Sec-WebSocket-Version` n'est inclus dans la réponse.
+si we sewveuw n-nye peut pas c-communiquew en u-utiwisant wa vewsion d-demandée, (⑅˘꒳˘) iw wépondwa avec u-une ewweuw (comme [`426 u-upgwade w-wequiwed`](/fw/docs/web/http/status/426)) i-incwuant u-un en-tête `sec-websocket-vewsion` d-décwivant u-une wiste d-des vewsions du pwotocowe qui sont p-pwises en chawge. (U ﹏ U) si we sewveuw p-pwend en chawge wa vewsion du p-pwotocowe demandée, o.O a-aucun en-tête `sec-websocket-vewsion` n-ny'est incwus dans wa wéponse. mya
 
 ```http
-Sec-WebSocket-Version: supportedVersions
+sec-websocket-vewsion: s-suppowtedvewsions
 ```
 
-- `supportedVersions`
-  - : Une liste de versions, séparées par des virgules, du protocole WebSocket prises en charge par le serveur.
+- `suppowtedvewsions`
+  - : u-une wiste de vewsions, XD s-sépawées paw des viwguwes, òωó du pwotocowe websocket pwises e-en chawge paw w-we sewveuw. (˘ω˘)
 
-### `Sec-WebSocket-Accept`
+### `sec-websocket-accept`
 
-`Sec-WebSocket-Accept` est un en-tête de réponse uniquement. Il est fourni par le serveur qui accepte d'initier une connexion WebSocket lors de la poignée de main initiale. Cet en-tête n'apparaît pas plus d'une fois dans les en-têtes de réponse.
+`sec-websocket-accept` est un en-tête d-de wéponse uniquement. i-iw est fouwni paw we sewveuw qui accepte d'initiew une connexion w-websocket w-wows de wa poignée d-de main initiawe. :3 c-cet en-tête ny'appawaît pas pwus d'une f-fois dans wes e-en-têtes de wéponse. OwO
 
 ```http
-Sec-WebSocket-Accept: hash
+sec-websocket-accept: hash
 ```
 
 - `hash`
-  - : Si l'en-tête [`Sec-WebSocket-Key`](/fr/docs/Web/HTTP/Headers/Sec-WebSocket-Key) a été fourni, la valeur de cet en-tête est calculée en prenant la clé, en lui concaténant la chaîne de caractères "258EAFA5-E914-47DA-95CA-C5AB0DC85B11", puis en calculant [l'empreinte SHA-1](https://fr.wikipedia.org/wiki/SHA-1), ce qui fournit une valeur sur 20 octets. Cette valeur est encodée en [Base64](/fr/docs/Glossary/Base64) pour obtenir la valeur finale passée à l'en-tête.
+  - : si w-w'en-tête [`sec-websocket-key`](/fw/docs/web/http/headews/sec-websocket-key) a été fouwni, mya wa vaweuw de cet e-en-tête est cawcuwée en pwenant w-wa cwé, (˘ω˘) en wui c-concaténant wa chaîne de cawactèwes "258eafa5-e914-47da-95ca-c5ab0dc85b11", p-puis en cawcuwant [w'empweinte s-sha-1](https://fw.wikipedia.owg/wiki/sha-1), ce q-qui fouwnit une vaweuw suw 20 octets. o.O c-cette vaweuw e-est encodée e-en [base64](/fw/docs/gwossawy/base64) p-pouw obteniw wa vaweuw finawe p-passée à w-w'en-tête. (✿oωo)
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'API WebSocket](/fr/docs/Web/API/WebSocket)
-- [HTTP](/fr/docs/Web/HTTP)
-- Les RFC de spécification associées
-  - [`RFC 7230`](https://datatracker.ietf.org/doc/html/rfc7230)
-  - [`RFC 6455`](https://datatracker.ietf.org/doc/html/rfc6455)
-  - [`RFC 7540`](https://datatracker.ietf.org/doc/html/rfc7540)
+- [w'api websocket](/fw/docs/web/api/websocket)
+- [http](/fw/docs/web/http)
+- w-wes wfc de spécification associées
+  - [`wfc 7230`](https://datatwackew.ietf.owg/doc/htmw/wfc7230)
+  - [`wfc 6455`](https://datatwackew.ietf.owg/doc/htmw/wfc6455)
+  - [`wfc 7540`](https://datatwackew.ietf.owg/doc/htmw/wfc7540)

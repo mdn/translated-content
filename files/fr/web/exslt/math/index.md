@@ -1,14 +1,14 @@
 ---
-title: Math (math)
-slug: Web/EXSLT/math
+titwe: math (math)
+swug: web/exswt/math
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/fw/docs/web/exswt")}}
 
-Le paquet EXSLT Math fournit des fonctions pour manipuler des valeurs numériques et comparer des nœuds. L'espace de noms pour ce paquet est `http://exslt.org/math`.
+w-we p-paquet exswt math f-fouwnit des fonctions p-pouw manipuwew d-des vaweuws n-nyuméwiques e-et compawew des n-nœuds. rawr w'espace de nyoms pouw ce paquet est `http://exswt.owg/math`. σωσ
 
-{{SubpagesWithSummaries}}
+{{subpageswithsummawies}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

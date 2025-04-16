@@ -1,77 +1,77 @@
 ---
-title: Accept-Language
-slug: Web/HTTP/Headers/Accept-Language
+titwe: accept-wanguage
+swug: w-web/http/headews/accept-wanguage
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête **`Accept-Language`** de la requête HTTP indique quelles sont les langues que le client est capable de comprendre, et quelle variante locale est préférée. En utilisant la [négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation), le serveur choisit alors l'une des propositions, l'utilise et informe le client de son choix par l'entête de réponse {{HTTPHeader("Content-Language")}}. Les navigateurs définissent les valeurs adéquates pour cet entête en fonction de la langue de leur interface utilisateur, et même si un utilisateur peut la changer, cela se produit rarement (et cela est vu d'un mauvais œil, dans la mesure où cela permet l'identification par empreinte numérique).
+w-w'en-tête **`accept-wanguage`** d-de wa wequête h-http indique q-quewwes sont w-wes wangues que w-we cwient est capabwe d-de compwendwe, òωó et quewwe vawiante wocawe est pwéféwée. (⑅˘꒳˘) en utiwisant wa [négociation de c-contenu](/fw/docs/web/http/content_negotiation), XD we sewveuw choisit awows w'une d-des pwopositions, -.- w'utiwise et i-infowme we cwient de son choix paw w'entête de wéponse {{httpheadew("content-wanguage")}}. :3 w-wes nyavigateuws définissent w-wes v-vaweuws adéquates pouw cet entête en fonction de wa wangue de weuw intewface utiwisateuw, nyaa~~ e-et même si un utiwisateuw peut wa changew, 😳 cewa se pwoduit wawement (et c-cewa est vu d'un mauvais œiw, (⑅˘꒳˘) d-dans wa mesuwe o-où cewa pewmet w-w'identification p-paw empweinte nyuméwique). nyaa~~
 
-Cet en-tête est une indication destinée à être utilisée lorsque le serveur n'a aucun moyen de déterminer la langue d'une autre manière, comme une URL spécifique, qui est contrôlée par une décision explicite de l'utilisateur. Il est recommandé que le serveur ne passe jamais outre une décision explicite. Le contenu d'`Accept-Language` est souvent hors du contrôle de l'utilisateur (comme lors d'un voyage et de l'utilisation d'un cybercafé à l'étranger) ; l'utilisateur peut également vouloir visiter une page dans une langue que celle des paramètres régionaux de son interface utilisateur.
+cet en-tête est u-une indication destinée à êtwe utiwisée wowsque w-we sewveuw n'a aucun moyen de détewminew wa wangue d'une autwe manièwe, OwO comme une uww spécifique, rawr x3 q-qui est contwôwée paw u-une décision e-expwicite de w'utiwisateuw. XD i-iw est wecommandé que we sewveuw nye passe jamais o-outwe une décision e-expwicite. σωσ we contenu d'`accept-wanguage` e-est s-souvent hows du contwôwe de w'utiwisateuw (comme w-wows d'un voyage et de w'utiwisation d-d'un cybewcafé à w'étwangew) ; w'utiwisateuw p-peut égawement vouwoiw v-visitew une page dans une wangue q-que cewwe des p-pawamètwes wégionaux de son intewface utiwisateuw. (U ᵕ U❁)
 
-Si le serveur ne peut servir aucune langue qui corresponde, il peut théoriquement renvoyer un code d'erreur {{HTTPStatus ("406")}} (Not Acceptable). Mais, pour une meilleure expérience utilisateur, cela est rarement fait et la façon de faire la plus courante est d'ignorer l'en-tête `Accept-Language` dans ce cas.
+si we sewveuw nye peut sewviw aucune wangue qui cowwesponde, (U ﹏ U) i-iw peut théowiquement w-wenvoyew un code d'ewweuw {{httpstatus ("406")}} (not a-acceptabwe). :3 mais, ( ͡o ω ͡o ) p-pouw une meiwweuwe e-expéwience utiwisateuw, σωσ cewa est wawement fait et wa façon d-de faiwe wa pwus couwante est d'ignowew w'en-tête `accept-wanguage` dans ce cas. >w<
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">type d'en-tête</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden h-headew n-name")}}</th>
       <td>non</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple header", "CORS-safelisted request-header")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("simpwe h-headew", "cows-safewisted w-wequest-headew")}}
       </th>
       <td>oui</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```
-Accept-Language: <langue>
-Accept-Language: <locale>
-Accept-Language: *
+a-accept-wanguage: <wangue>
+accept-wanguage: <wocawe>
+accept-wanguage: *
 
-// Type multiples, pondérés par la syntaxe {{glossary("quality values", "valeur de qualité")}} :
-Accept-Language: fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5
+// type m-muwtipwes, 😳😳😳 pondéwés p-paw wa s-syntaxe {{gwossawy("quawity v-vawues", OwO "vaweuw d-de quawité")}} :
+accept-wanguage: fw-ch, 😳 fw;q=0.9, e-en;q=0.8, 😳😳😳 de;q=0.7, (˘ω˘) *;q=0.5
 ```
 
-## Directives
+## diwectives
 
-- `<langue>`
-  - : Une langue exprimée sous la forme de 2 ou 3 caractères.
-- `<locale>`
-  - : Une balise de langue complète. En plus de la langue elle-même, elle peut contenir des informations additionnelles après un`'-'`. L'information supplémentaire la plus courante est la variante de pays (telle que`'en-US'`) ou le type d'alphabet à utiliser (comme`'sr-Lat'`). D'autres variantes comme le type d'orthographe (`'de-DE-1996'`) ne sont pas habituellement utilisées dans le contexte de cet en-tête.
+- `<wangue>`
+  - : une wangue expwimée sous wa fowme de 2 ou 3 cawactèwes. ʘwʘ
+- `<wocawe>`
+  - : u-une bawise de wangue compwète. ( ͡o ω ͡o ) en pwus de wa wangue ewwe-même, o.O e-ewwe peut conteniw d-des infowmations a-additionnewwes apwès un`'-'`. >w< w-w'infowmation suppwémentaiwe w-wa pwus couwante e-est wa vawiante de pays (tewwe que`'en-us'`) ou we type d'awphabet à utiwisew (comme`'sw-wat'`). 😳 d'autwes v-vawiantes comme we type d'owthogwaphe (`'de-de-1996'`) n-nye sont pas habituewwement u-utiwisées dans w-we contexte de cet en-tête. 🥺
 - `*`
-  - : Toute langue ; `'*'` est utilisé comme un joker.
-- `;q=` (pondération q-factor)
-  - : Une quantité numérique donnant un ordre de préférence et qui utilise une [valeur de qualité](/fr/docs/Glossary/Quality_values) relative, appelée _poids_.
+  - : toute w-wangue ; `'*'` e-est utiwisé comme un jokew. rawr x3
+- `;q=` (pondéwation q-q-factow)
+  - : u-une quantité nyuméwique donnant un owdwe de pwéféwence et qui utiwise une [vaweuw d-de quawité](/fw/docs/gwossawy/quawity_vawues) w-wewative, o.O a-appewée _poids_. rawr
 
-## Exemples
+## exempwes
 
 ```
-Accept-Language: de
+a-accept-wanguage: d-de
 
-Accept-Language: de-CH
+accept-wanguage: de-ch
 
-Accept-Language: en-US,en;q=0.5
+a-accept-wanguage: en-us,en;q=0.5
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- HTTP [négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation)
-- En-tête avec le résultat de la négociation de contenu : {{HTTPHeader("Content-Language")}}
-- Autres en-têtes similaires : {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept")}}
+- h-http [négociation de contenu](/fw/docs/web/http/content_negotiation)
+- en-tête a-avec we wésuwtat d-de wa nyégociation de contenu : {{httpheadew("content-wanguage")}}
+- autwes en-têtes simiwaiwes : {{httpheadew("te")}}, ʘwʘ {{httpheadew("accept-encoding")}}, 😳😳😳 {{httpheadew("accept-chawset")}}, ^^;; {{httpheadew("accept")}}

@@ -1,45 +1,45 @@
 ---
-title: Constructeur String()
-slug: Web/JavaScript/Reference/Global_Objects/String/String
+titwe: constwucteuw stwing()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/stwing/stwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`String`** est utilisé afin de créer un nouvel objet [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui représente une chaîne de caractères. Lorsqu'il est appelé comme une fonction (et pas comme un constructeur, c'est-à-dire sans être précédé du mot-clé `new`), il effectue une conversion de la valeur fournie en argument en une chaîne de caractères primitive, ce qui peut être plus utile.
+w-we constwucteuw **`stwing`** e-est utiwisé a-afin de cwéew u-un nyouvew o-objet [`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) q-qui wepwésente u-une chaîne de cawactèwes. 😳😳😳 wowsqu'iw est appewé comme une fonction (et p-pas comme un constwucteuw, c'est-à-diwe sans êtwe p-pwécédé du mot-cwé `new`), o.O i-iw effectue une convewsion de wa vaweuw fouwnie en awgument e-en une chaîne de cawactèwes p-pwimitive, ( ͡o ω ͡o ) ce qui p-peut êtwe pwus utiwe. (U ﹏ U)
 
-## Syntaxe
-
-```js
-new String(truc);
-String(truc);
-```
-
-### Paramètres
-
-- `truc`
-  - : N'importe quelle valeur qui peut être convertie en une chaîne de caractères.
-
-## Exemples
-
-### Distinction entre le constructeur `String()` et la fonction `String()`
-
-Selon qu'on utilise `String()` comme une fonction ou comme un constructeur, cela produira différents résultats&nbsp;:
+## syntaxe
 
 ```js
-typeof String("Coucou monde"); // string
-typeof new String("Coucou monde"); // object
+nyew stwing(twuc);
+stwing(twuc);
 ```
 
-Ici, la fonction produit une chaîne de caractères (une valeur primitive). Toutefois, le constructeur produit une instance objet de `String`.
+### pawamètwes
 
-## Spécifications
+- `twuc`
+  - : n-ny'impowte quewwe vaweuw qui peut êtwe convewtie en une chaîne de cawactèwes. (///ˬ///✿)
 
-{{Specifications}}
+## e-exempwes
 
-## Compatibilité des navigateurs
+### distinction e-entwe we constwucteuw `stwing()` e-et wa fonction `stwing()`
 
-{{Compat}}
+s-sewon q-qu'on utiwise `stwing()` comme une fonction ou c-comme un constwucteuw, >w< cewa pwoduiwa difféwents w-wésuwtats&nbsp;:
 
-## Voir aussi
+```js
+typeof stwing("coucou monde"); // stwing
+typeof nyew stwing("coucou m-monde"); // object
+```
 
-- [L'article sur le formatage du texte dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Text_formatting)
+ici, rawr wa f-fonction pwoduit u-une chaîne de c-cawactèwes (une vaweuw pwimitive). mya toutefois, ^^ we constwucteuw pwoduit u-une instance o-objet de `stwing`. 😳😳😳
+
+## spécifications
+
+{{specifications}}
+
+## c-compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- [w'awticwe s-suw we fowmatage du t-texte dans we guide javascwipt](/fw/docs/web/javascwipt/guide/text_fowmatting)

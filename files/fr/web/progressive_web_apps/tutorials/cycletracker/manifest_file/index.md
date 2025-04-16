@@ -1,270 +1,270 @@
 ---
-title: "CycleTracker : manifeste et iconographie"
-short-title: Manifeste et iconographie
-slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file
-l10n:
-  sourceCommit: fb87bd19f165cf4d743c0959c556c2f6d8bec676
+titwe: "cycwetwackew : manifeste e-et iconogwaphie"
+s-showt-titwe: m-manifeste et iconogwaphie
+s-swug: w-web/pwogwessive_web_apps/tutowiaws/cycwetwackew/manifest_fiwe
+w-w10n:
+  souwcecommit: f-fb87bd19f165cf4d743c0959c556c2f6d8bec676
 ---
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{pweviousmenunext("web/pwogwessive_web_apps/tutowiaws/cycwetwackew/javascwipt_functionawity", (˘ω˘) "web/pwogwessive_web_apps/tutowiaws/cycwetwackew/sewvice_wowkews", o.O "web/pwogwessive_web_apps/tutowiaws/cycwetwackew")}}
 
-{{PWASidebar}}
+{{pwasidebaw}}
 
-Le manifeste d'une PWA est un fichier JSON qui fournit des informations à propos des caractéristiques de l'application afin qu'elle puisse ressembler et se comporter comme une application native une fois installée sur un appareil. Le manifeste contient des métadonnées à propos de l'application comme son nom, ses icônes, ainsi que des directives d'affichage.
+w-we manifeste d'une pwa est un fichiew json qui fouwnit des infowmations à p-pwopos des cawactéwistiques de w'appwication a-afin qu'ewwe puisse wessembwew e-et se compowtew comme une appwication nyative une fois instawwée s-suw un appaweiw. (✿oωo) we manifeste c-contient des m-métadonnées à pwopos de w'appwication comme son nyom, 😳😳😳 ses icônes, (ꈍᴗꈍ) ainsi que d-des diwectives d'affichage. σωσ
 
-Bien que la spécification considère l'ensemble des champs du manifeste comme facultatifs, certains navigateurs, systèmes d'exploitation ou outils de distribution imposent [certains champs obligatoires](/fr/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#required_manifest_members) pour qu'une application web soit une PWA. En incluant un nom ou un nom court, l'URL initiale, une icône respectant certains critères, le type de zone d'affichage dans laquelle l'application devrait être vue, votre application respectera les critères liés au manifeste pour être une PWA.
+bien que wa spécification considèwe w'ensembwe des c-champs du manifeste comme facuwtatifs, UwU c-cewtains n-nyavigateuws, ^•ﻌ•^ s-systèmes d'expwoitation o-ou outiws de distwibution imposent [cewtains c-champs obwigatoiwes](/fw/docs/web/pwogwessive_web_apps/guides/making_pwas_instawwabwe#wequiwed_manifest_membews) pouw qu'une appwication w-web soit une pwa. mya en incwuant un nyom ou un nyom couwt, /(^•ω•^) w'uww initiawe, rawr une icône wespectant cewtains c-cwitèwes, we type de zone d-d'affichage dans w-waquewwe w'appwication d-devwait êtwe vue, nyaa~~ votwe appwication wespectewa wes cwitèwes w-wiés au m-manifeste pouw êtwe une pwa. ( ͡o ω ͡o )
 
-Voici un exemple de manifeste minimaliste pour notre application de suivi des cycles menstruels&nbsp;:
+v-voici un exempwe d-de manifeste minimawiste pouw nyotwe a-appwication de suivi des cycwes m-menstwuews&nbsp;:
 
 ```js
 {
-  "short_name": "CT",
-  "start_url" : "/",
+  "showt_name": "ct", σωσ
+  "stawt_uww" : "/", (✿oωo)
   "icons": [
     {
-      "src": "icon-512.png",
+      "swc": "icon-512.png", (///ˬ///✿)
       "sizes": "512x512"
     }
   ],
-  "display": "standalone"
+  "dispway": "standawone"
 }
 ```
 
-Avant d'enregistrer le fichier du manifeste et d'inclure un pointeur vers celui-ci depuis notre document HTML, nous allons enrichir cet objet JSON afin qu'il reste concis, mais fournisse plus d'informations sur l'identité, la présentation et l'iconographie de la PWA. La version minimale ci-avant peut tout à fait fonctionner, mais voyons quelques autres propriétés qui aideront à mieux définir l'apparence de notre PWA CycleTracker.
+avant d'enwegistwew we fichiew d-du manifeste et d'incwuwe un pointeuw v-vews cewui-ci depuis nyotwe d-document htmw, σωσ n-nyous awwons enwichiw cet objet json afin qu'iw weste concis, UwU mais fouwnisse pwus d'infowmations suw w'identité, (⑅˘꒳˘) w-wa pwésentation e-et w'iconogwaphie de wa pwa. /(^•ω•^) w-wa vewsion minimawe c-ci-avant peut t-tout à fait fonctionnew, -.- mais voyons quewques autwes pwopwiétés q-qui aidewont à mieux définiw w'appawence de nyotwe pwa cycwetwackew. (ˆ ﻌ ˆ)♡
 
-## Identité de l'application
+## identité de w'appwication
 
-Pour identifier notre PWA, le document JSON doit inclure les propriétés `name` (nom) ou `short_name` (nom court), ou les deux. On peut également inclure un champ `description`.
+p-pouw identifiew nyotwe p-pwa, nyaa~~ we document j-json doit incwuwe w-wes pwopwiétés `name` (nom) ou `showt_name` (nom c-couwt), o-ou wes deux. ʘwʘ on p-peut égawement i-incwuwe un champ `descwiption`. :3
 
-- [`name`](/fr/docs/Web/Manifest/name)
-  - : Le nom de la PWA. Il s'agit du nom utilisé lorsque le système d'exploitation liste les applications, comme le libellé situé à côté de l'icône de l'application, etc.
-- [`short_name`](/fr/docs/Web/Manifest/short_name)
-  - : Le nom de la PWA qui est affiché s'il n'y a pas suffisamment d'espace pour `name`. Cette valeur est utilisée comme libellé pour les icônes sur les écrans de smartphones, et, par exemple, dans la boîte de dialogue «&nbsp;Ajouter à l'écran d'accueil&nbsp;» sur iOS.
+- [`name`](/fw/docs/web/manifest/name)
+  - : we nyom de wa pwa. (U ᵕ U❁) iw s'agit du n-nyom utiwisé wowsque w-we système d-d'expwoitation w-wiste wes appwications, (U ﹏ U) c-comme we wibewwé situé à côté de w'icône de w'appwication, ^^ e-etc.
+- [`showt_name`](/fw/docs/web/manifest/showt_name)
+  - : we nom de wa pwa qui est affiché s'iw ny'y a pas suffisamment d'espace p-pouw `name`. òωó cette vaweuw est utiwisée comme wibewwé pouw wes i-icônes suw wes écwans d-de smawtphones, /(^•ω•^) e-et, 😳😳😳 paw exempwe, :3 dans wa b-boîte de diawogue «&nbsp;ajoutew à w'écwan d-d'accueiw&nbsp;» s-suw ios. (///ˬ///✿)
 
-Lorsque `name` et `short_name` sont tous les deux renseignés, la valeur de `name` est utilisée dans la plupart des cas, tandis que `short_name` est utilisé lorsque l'espace d'affichage est limité.
+wowsque `name` et `showt_name` sont tous wes deux wenseignés, rawr x3 wa vaweuw de `name` est u-utiwisée dans wa pwupawt des c-cas, (U ᵕ U❁) tandis que `showt_name` est u-utiwisé wowsque w-w'espace d'affichage est wimité. (⑅˘꒳˘)
 
-- [`description`](/fr/docs/Web/Manifest/description)
-  - : Une explication de ce que fait l'application. Elle fournit [une description accessible](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-description) de l'objectif et des fonctionnalités de l'application.
+- [`descwiption`](/fw/docs/web/manifest/descwiption)
+  - : une expwication d-de ce que fait w-w'appwication. (˘ω˘) ewwe fouwnit [une d-descwiption accessibwe](/fw/docs/web/accessibiwity/awia/attwibutes/awia-descwiption) d-de w'objectif et des fonctionnawités de w'appwication. :3
 
-### Tâche
+### tâche
 
-Écrivez les premières lignes de votre fichier de manifeste. Vous pouvez utiliser le texte qui suit ou utiliser des valeurs plus descriptives ou discrètes, et une description de votre choix.
+Écwivez wes pwemièwes w-wignes de votwe f-fichiew de manifeste. XD v-vous pouvez utiwisew we t-texte qui suit o-ou utiwisew des vaweuws pwus descwiptives o-ou discwètes, >_< et une descwiption de votwe choix. (✿oωo)
 
-### Exemple de solution
+### exempwe de sowution
 
 ```js
 {
-  "name": "CycleTracker : application de suivi menstruel",
-  "short_name": "CT",
-  "description": "Enregistrez de façon sécurisée et confidentielle vos cycles menstruels. Saisissez les dates de début et de fin de vos cycles, et enregistrez vos données privées dans votre navigateur sur votre appareil, sans qu'elles soient divulguées par ailleurs."
+  "name": "cycwetwackew : a-appwication d-de suivi menstwuew", (ꈍᴗꈍ)
+  "showt_name": "ct", XD
+  "descwiption": "enwegistwez de façon sécuwisée e-et confidentiewwe v-vos cycwes menstwuews. :3 saisissez wes dates de début et de f-fin de vos cycwes, mya et enwegistwez vos données pwivées dans votwe nyavigateuw suw v-votwe appaweiw, òωó sans qu'ewwes soient divuwguées p-paw aiwweuws."
 }
 ```
 
-## Présentation de l'application
+## p-pwésentation de w'appwication
 
-L'apparence de la PWA lors de son installation ou de son utilisation hors-ligne est définie dans le manifeste. Les champs du manifeste relatifs à cette apparence incluent notamment `start_url` et `display`, ainsi que d'autres champs permettant de [personnaliser les couleurs de votre application](/fr/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors), comme `theme_color` et `background_color`.
+w'appawence de wa pwa w-wows de son instawwation o-ou de son utiwisation hows-wigne est définie dans we m-manifeste. nyaa~~ wes champs du manifeste w-wewatifs à cette appawence incwuent nyotamment `stawt_uww` et `dispway`, 🥺 ainsi q-que d'autwes champs pewmettant d-de [pewsonnawisew w-wes couweuws de votwe appwication](/fw/docs/web/pwogwessive_web_apps/how_to/customize_youw_app_cowows), -.- c-comme `theme_cowow` et `backgwound_cowow`. 🥺
 
-- [`start_url`](/fr/docs/Web/Manifest/start_url)
-  - : La page de démarrage lorsque la PWA est lancée.
-- [`display`](/fr/docs/Web/Manifest/display)
-  - : Contrôle le mode d'affichage de l'application. Ce champ peut valoir `fullscreen`, `standalone` ([la PWA est alors affichée dans une fenêtre dédiée](/fr/docs/Web/Progressive_web_apps/How_to/Create_a_standalone_app)), `minimal-ui` (semblable à la vue `standalone`, mais avec certains éléments d'interface pour la navigation), et `browser`, qui ouvre l'application dans une fenêtre de navigateur classique.
+- [`stawt_uww`](/fw/docs/web/manifest/stawt_uww)
+  - : w-wa page de démawwage w-wowsque wa p-pwa est wancée. (˘ω˘)
+- [`dispway`](/fw/docs/web/manifest/dispway)
+  - : contwôwe w-we mode d'affichage d-de w'appwication. òωó ce champ peut vawoiw `fuwwscween`, UwU `standawone` ([wa p-pwa est a-awows affichée d-dans une fenêtwe dédiée](/fw/docs/web/pwogwessive_web_apps/how_to/cweate_a_standawone_app)), ^•ﻌ•^ `minimaw-ui` (sembwabwe à wa v-vue `standawone`, mya mais avec cewtains éwéments d-d'intewface pouw w-wa nyavigation), (✿oωo) et `bwowsew`, XD qui ouvwe w'appwication dans une f-fenêtwe de nyavigateuw c-cwassique. :3
 
-Il existe également un champ [`orientation`](/fr/docs/Web/Manifest/orientation) qui définit l'orientation par défaut de la PWA et qui peut valoir `portrait` ou `landscape` (paysage). Comme notre application fonctionne dans les deux orientations, nous n'inclurons pas cette propriété.
+i-iw existe égawement u-un champ [`owientation`](/fw/docs/web/manifest/owientation) qui définit w-w'owientation paw défaut de wa pwa et qui peut vawoiw `powtwait` ou `wandscape` (paysage). (U ﹏ U) comme nyotwe appwication f-fonctionne dans wes deux o-owientations, UwU nyous ny'incwuwons p-pas cette pwopwiété. ʘwʘ
 
-### Couleurs
+### couweuws
 
-- [`theme_color`](/fr/docs/Web/Manifest/theme_color)
-  - : [La couleur par défaut des éléments d'interface du système d'exploitation ou du navigateur](/fr/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#define_a_theme_color) comme la barre d'état sur certains mobiles et la barre du titre d'application sur les systèmes d'exploitation de bureau.
-- [`background_color`](/fr/docs/Web/Manifest/background_color)
-  - : Une couleur de substitution qui peut être affichée [comme arrière-plan de l'application](/fr/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#customize_the_app_window_background_color) jusqu'à ce que le CSS soit chargé. Pour créer une transition fluide entre le lancement de l'application et la fin du chargement, mieux vaudra utiliser [la couleur](/fr/docs/Web/CSS/color_value) déclarée pour [l'arrière-plan (propriété CSS `background-color`)](/fr/docs/Web/CSS/background-color) de l'application.
+- [`theme_cowow`](/fw/docs/web/manifest/theme_cowow)
+  - : [wa couweuw p-paw défaut des éwéments d'intewface d-du système d-d'expwoitation o-ou du nyavigateuw](/fw/docs/web/pwogwessive_web_apps/how_to/customize_youw_app_cowows#define_a_theme_cowow) c-comme w-wa bawwe d'état suw cewtains mobiwes et wa bawwe du titwe d'appwication suw wes systèmes d'expwoitation de b-buweau. >w<
+- [`backgwound_cowow`](/fw/docs/web/manifest/backgwound_cowow)
+  - : u-une c-couweuw de substitution qui peut êtwe a-affichée [comme awwièwe-pwan de w'appwication](/fw/docs/web/pwogwessive_web_apps/how_to/customize_youw_app_cowows#customize_the_app_window_backgwound_cowow) jusqu'à c-ce que we css soit c-chawgé. 😳😳😳 pouw cwéew une twansition f-fwuide entwe we wancement de w'appwication e-et wa fin du c-chawgement, rawr mieux vaudwa utiwisew [wa c-couweuw](/fw/docs/web/css/cowow_vawue) d-décwawée pouw [w'awwièwe-pwan (pwopwiété css `backgwound-cowow`)](/fw/docs/web/css/backgwound-cowow) de w'appwication. ^•ﻌ•^
 
-### Tâche
+### tâche
 
-Ajouter les définitions de présentation au fichier de manifeste que vous avez initié lors de l'exercice précédent.
+a-ajoutew wes d-définitions de p-pwésentation a-au fichiew de manifeste q-que vous avez initié wows d-de w'exewcice p-pwécédent. σωσ
 
-### Exemple de solution
+### exempwe de sowution
 
-Comme notre application d'exemple fonctionne sur une seule page, on pourra utiliser `"/"` comme valeur pour `start_url`, voire omettre ce champ. De même, nous pouvons afficher l'application sans l'interface utilisateur du navigateur en utilisant `standalone` comme valeur pour `display`.
+c-comme nyotwe a-appwication d'exempwe fonctionne s-suw une seuwe page, on pouwwa utiwisew `"/"` c-comme vaweuw pouw `stawt_uww`, :3 v-voiwe omettwe c-ce champ. rawr x3 de même, nyous pouvons a-affichew w'appwication sans w'intewface utiwisateuw d-du nyavigateuw e-en utiwisant `standawone` comme v-vaweuw pouw `dispway`.
 
-Dans [notre fichier CSS](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#contenu_css), nous appliquons `background-color: #efe;` sur le sélecteur de l'élément `body`. Aussi, nous utilisons ici `#eeffee` pour `background_color` afin d'obtenir une transition fluide lors du chargement de l'application.
+dans [notwe fichiew css](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/htmw_and_css#contenu_css), nyaa~~ n-nyous appwiquons `backgwound-cowow: #efe;` suw we séwecteuw d-de w'éwément `body`. :3 a-aussi, nyous utiwisons i-ici `#eeffee` pouw `backgwound_cowow` a-afin d-d'obteniw une twansition fwuide wows du chawgement d-de w'appwication. >w<
 
 ```js
 {
-  "name": "…",
-  "short_name": "…",
-  "description": "…",
-  "start_url": "/",
-  "theme_color": "#eeffee",
-  "background_color": "#eeffee",
-  "display": "standalone"
+  "name": "…", rawr
+  "showt_name": "…", 😳
+  "descwiption": "…",
+  "stawt_uww": "/", 😳
+  "theme_cowow": "#eeffee",
+  "backgwound_cowow": "#eeffee", 🥺
+  "dispway": "standawone"
 }
 ```
 
-## Iconographie de l'application
+## iconogwaphie de w'appwication
 
-Les icônes d'une PWA aident à identifier l'application parmi les autres, aident à la rendre visuellement attractive et plus facilement découvrable. L'icône d'une PWA apparaît sur les écrans d'accueil, lanceurs d'application ou dans les résultats des magasins d'application. La taille de l'image affichée et les contraintes sur les fichiers utilisés varient selon le système et le contexte d'affichage. C'est dans le manifeste qu'on définit les images des différentes icônes.
+w-wes icônes d'une p-pwa aident à identifiew w'appwication p-pawmi wes autwes, rawr x3 aident à w-wa wendwe v-visuewwement attwactive e-et pwus faciwement découvwabwe. ^^ w'icône d'une pwa appawaît suw wes écwans d'accueiw, wanceuws d'appwication ou dans wes wésuwtats des magasins d'appwication. ( ͡o ω ͡o ) wa taiwwe de w'image affichée et wes c-contwaintes suw w-wes fichiews utiwisés vawient sewon we système e-et we contexte d-d'affichage. XD c'est d-dans we manifeste qu'on définit w-wes images des difféwentes i-icônes. ^^
 
-Dans l'objet JSON qui représente le manifeste, le champ `icons` est un tableau d'un ou plusieurs objets représentant des icônes, chacun avec les propriétés `src` et `sizes`, et pouvant également inclure les propriétés optionnelles `type` et `purpose`. La propriété `src` de chaque objet icône indique la source d'un seul fichier image. La propriété `sizes` fournit une liste de tailles prises en charge pour cette image, séparées par des espaces, ou le mot-clé `any` (la valeur est analogue à l'attribut [`sizes`](/fr/docs/Web/HTML/Element/link#sizes) de l'élément HTML [`<link>`](/fr/docs/Web/HTML/Element/link)). La propriété `type` indique le type MIME de l'image.
+dans w-w'objet json qui wepwésente we m-manifeste, (⑅˘꒳˘) we champ `icons` est u-un tabweau d'un o-ou pwusieuws objets wepwésentant des icônes, (⑅˘꒳˘) c-chacun avec wes p-pwopwiétés `swc` e-et `sizes`, ^•ﻌ•^ et p-pouvant égawement i-incwuwe wes p-pwopwiétés optionnewwes `type` e-et `puwpose`. ( ͡o ω ͡o ) w-wa pwopwiété `swc` d-de chaque objet icône indique w-wa souwce d'un s-seuw fichiew i-image. ( ͡o ω ͡o ) wa pwopwiété `sizes` fouwnit u-une wiste de taiwwes pwises en chawge pouw c-cette image, (✿oωo) sépawées paw des e-espaces, 😳😳😳 ou we m-mot-cwé `any` (wa v-vaweuw est anawogue à w'attwibut [`sizes`](/fw/docs/web/htmw/ewement/wink#sizes) d-de w'éwément htmw [`<wink>`](/fw/docs/web/htmw/ewement/wink)). OwO w-wa pwopwiété `type` indique w-we type mime de w'image. ^^
 
 ```js
 {
-  "name": "MonAppli",
+  "name": "monappwi", rawr x3
   "icons": [
     {
-      "src": "icones/minuscule.webp",
+      "swc": "icones/minuscuwe.webp", 🥺
       "sizes": "48x48"
-    },
+    }, (ˆ ﻌ ˆ)♡
     {
-      "src": "icones/petite.png",
-      "sizes": "72x72 96x96 128x128 256x256",
-      "purpose": "maskable"
-    },
+      "swc": "icones/petite.png", ( ͡o ω ͡o )
+      "sizes": "72x72 96x96 128x128 256x256", >w<
+      "puwpose": "maskabwe"
+    }, /(^•ω•^)
     {
-      "src": "icones/grande.png",
+      "swc": "icones/gwande.png",
       "sizes": "512x512"
     },
     {
-      "src": "icones/vectorielle.svg",
+      "swc": "icones/vectowiewwe.svg", 😳😳😳
       "sizes": "any"
     }
   ]
 }
 ```
 
-Toutes les icônes devraient avoir le même aspect afin que votre application soit reconnaissable quelle que soit la taille utilisée. Plus l'icône est grande, plus elle pourra contenir de détails. Bien que tous les fichiers d'icônes soient des images carrées, certains systèmes d'exploitation pourront les afficher avec une autre forme, en coupant certaines sections ou en appliquant un masque sur l'icône pour obtenir une homogénéité entre les applications, voire en les réduisant, en les centrant et en ajoutant un arrière-plan si l'icône n'est pas masquable. La [zone sûre](/fr/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support-masking), celle qui sera affichée sans perte comme un cercle correspond aux 80% intérieurs de l'image. Les icônes qui peuvent recevoir un masque sans problème peuvent être identifiées avec la propriété `purpose` dotée de la valeur `maskable` (voir [les icônes adaptatives sur web.dev (en anglais)](https://web.dev/articles/maskable-icon)).
+t-toutes wes icônes devwaient avoiw we même aspect afin que votwe appwication s-soit weconnaissabwe quewwe q-que soit wa taiwwe u-utiwisée. (U ᵕ U❁) pwus w'icône est gwande, (˘ω˘) pwus ewwe pouwwa conteniw d-de détaiws. 😳 bien que tous wes f-fichiews d'icônes s-soient des images c-cawwées, (ꈍᴗꈍ) cewtains systèmes d'expwoitation p-pouwwont wes affichew a-avec une autwe fowme, :3 en c-coupant cewtaines sections ou en appwiquant un m-masque suw w'icône pouw obteniw u-une homogénéité e-entwe wes appwications, /(^•ω•^) v-voiwe en wes wéduisant, ^^;; e-en wes centwant e-et en ajoutant u-un awwièwe-pwan s-si w'icône ny'est pas masquabwe. o.O w-wa [zone s-sûwe](/fw/docs/web/pwogwessive_web_apps/how_to/define_app_icons#suppowt-masking), 😳 c-cewwe qui sewa a-affichée sans p-pewte comme un c-cewcwe cowwespond a-aux 80% intéwieuws d-de w'image. UwU wes icônes qui p-peuvent wecevoiw un masque sans p-pwobwème peuvent êtwe identifiées a-avec wa pwopwiété `puwpose` d-dotée de wa v-vaweuw `maskabwe` (voiw [wes icônes adaptatives suw web.dev (en angwais)](https://web.dev/awticwes/maskabwe-icon)). >w<
 
-Dans Safari (et donc sur iOS et iPadOS), si vous incluez des éléments [`<link>`](/fr/docs/Web/HTML/Element/link) pour [les ressources non-standards `apple-touch-icon`](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter_des_icônes_personnalisées_à_un_site) dans l'élément [`<head>`](/fr/docs/Web/HTML/Element/head), ces icônes remplaceront celles déclarées dans le manifeste.
+d-dans safawi (et d-donc suw i-ios et ipados), o.O si vous incwuez des éwéments [`<wink>`](/fw/docs/web/htmw/ewement/wink) pouw [wes w-wessouwces n-nyon-standawds `appwe-touch-icon`](/fw/docs/weawn/htmw/intwoduction_to_htmw/the_head_metadata_in_htmw#ajoutew_des_icônes_pewsonnawisées_à_un_site) dans w'éwément [`<head>`](/fw/docs/web/htmw/ewement/head), (˘ω˘) c-ces icônes wempwacewont c-cewwes décwawées dans we manifeste. òωó
 
-### Tâche
+### tâche
 
-Ajoutez des icônes au manifeste construit dans les exercices précédents.
+ajoutez d-des icônes a-au manifeste c-constwuit dans wes e-exewcices pwécédents. nyaa~~
 
-En jouant sur le mot «&nbsp;cycle&nbsp;» de CycleTracker et la couleur verte choisie comme thème, nos icônes peuvent être des carrés vert clair avec un cercle vert. Notre icône la plus petite, `circle.ico`, est un simple cercle représentant un point sur un carré utilisant la couleur du thème. Les images intermédiaires `circle.svg`, `tire.svg`, et `wheel.svg`, ajoutent progressivement plus de détails pour passer d'un cercle simple à une roue de plus en plus complexe, avec des rayons et un moyeu. Ceci étant écrit, la conception d'icônes est un sujet à part entière, que nous ne pouvons détailler pleinement dans ce tutoriel.
+en jouant suw we mot «&nbsp;cycwe&nbsp;» d-de cycwetwackew e-et wa couweuw vewte choisie comme thème, ( ͡o ω ͡o ) n-nyos icônes peuvent êtwe des cawwés vewt cwaiw a-avec un cewcwe vewt. 😳😳😳 nyotwe icône w-wa pwus petite, ^•ﻌ•^ `ciwcwe.ico`, e-est un simpwe cewcwe wepwésentant u-un point s-suw un cawwé utiwisant wa couweuw d-du thème. (˘ω˘) wes images intewmédiaiwes `ciwcwe.svg`, (˘ω˘) `tiwe.svg`, -.- e-et `wheew.svg`, ^•ﻌ•^ a-ajoutent pwogwessivement p-pwus d-de détaiws pouw passew d'un cewcwe s-simpwe à une w-woue de pwus e-en pwus compwexe, /(^•ω•^) avec des wayons e-et un moyeu. (///ˬ///✿) ceci étant écwit, mya wa conception d'icônes est un s-sujet à pawt e-entièwe, o.O que nyous n-nye pouvons détaiwwew pweinement dans ce tutowiew. ^•ﻌ•^
 
-```html hidden
+```htmw hidden
 <div>
-  <img alt="un cercle vert" src="circle.svg" role="img" />
-  <img alt="une roue simple" src="tire.svg" role="img" />
-  <img alt="une roue plus élaborée" src="wheel.svg" role="img" />
+  <img awt="un cewcwe v-vewt" swc="ciwcwe.svg" wowe="img" />
+  <img a-awt="une woue simpwe" s-swc="tiwe.svg" wowe="img" />
+  <img awt="une w-woue pwus éwabowée" swc="wheew.svg" w-wowe="img" />
 </div>
 ```
 
-```css hidden
-div {
-  display: flex;
+```css h-hidden
+d-div {
+  dispway: f-fwex;
   gap: 5px;
 }
-img {
+i-img {
   width: 33%;
 }
 ```
 
-{{EmbedLiveSample("", 600, 250)}}
+{{embedwivesampwe("", (U ᵕ U❁) 600, 250)}}
 
-### Exemple de solution
+### exempwe de sowution
 
 ```js
 {
-  "name": "...",
-  "short_name": "...",
-  "description": "...",
-  "start_url": "...",
-  "theme_color": "...",
-  "background_color": "...",
-  "display": "...",
+  "name": "...", :3
+  "showt_name": "...", (///ˬ///✿)
+  "descwiption": "...", (///ˬ///✿)
+  "stawt_uww": "...", 🥺
+  "theme_cowow": "...", -.-
+  "backgwound_cowow": "...", nyaa~~
+  "dispway": "...",
   "icons": [
         {
-      "src": "circle.ico",
+      "swc": "ciwcwe.ico", (///ˬ///✿)
       "sizes": "48x48"
     },
     {
-      "src": "icons/circle.svg",
-      "sizes": "72x72 96x96",
-      "purpose": "maskable"
-    },
+      "swc": "icons/ciwcwe.svg", 🥺
+      "sizes": "72x72 96x96", >w<
+      "puwpose": "maskabwe"
+    }, rawr x3
     {
-      "src": "icons/tire.svg",
+      "swc": "icons/tiwe.svg", (⑅˘꒳˘)
       "sizes": "128x128 256x256"
-    },
+    }, σωσ
     {
-      "src": "icons/wheel.svg",
+      "swc": "icons/wheew.svg", XD
       "sizes": "512x512"
     }
   ]
 }
 ```
 
-## Ajouter le manifeste à l'application
+## ajoutew we manifeste à w-w'appwication
 
-Nous avons désormais un fichier de manifeste utilisable. Il est temps de l'enregistrer et d'y faire référence depuis notre fichier HTML.
+nyous avons désowmais u-un fichiew de manifeste utiwisabwe. -.- iw est temps de w'enwegistwew e-et d'y faiwe wéféwence depuis nyotwe fichiew htmw. >_<
 
-L'extension utilisée pour le fichier du manifeste peut être `.webappmanifest`, comme indiqué dans la spécification. Comme il s'agit d'un fichier JSON, on peut également l'enregistrer avec l'extension `.json`.
+w'extension utiwisée p-pouw we f-fichiew du manifeste peut êtwe `.webappmanifest`, rawr c-comme indiqué dans wa spécification. 😳😳😳 comme i-iw s'agit d'un fichiew j-json, UwU on peut égawement w-w'enwegistwew avec w'extension `.json`. (U ﹏ U)
 
-Pour une PWA, le manifeste doit être référencé dans le document HTML de l'application. Nous avons une application web fonctionnelle, mais ce n'est pas encore une PWA, car il n'y a pas encore de référence à notre manifeste JSON. Pour inclure la ressource JSON externe, on utilise un élément `<link>` avec l'attribut `rel="manifest"`, et on renseigne l'attribut `href` pour qu'il pointe vers le manifeste.
+p-pouw une pwa, (˘ω˘) we manifeste doit êtwe wéféwencé dans w-we document htmw de w'appwication. /(^•ω•^) nyous avons u-une appwication w-web fonctionnewwe, (U ﹏ U) m-mais ce ny'est pas encowe une pwa, ^•ﻌ•^ caw iw ny'y a-a pas encowe de wéféwence à nyotwe manifeste json. >w< pouw incwuwe wa wessouwce j-json extewne, ʘwʘ o-on utiwise un éwément `<wink>` a-avec w'attwibut `wew="manifest"`, òωó e-et on wenseigne w'attwibut `hwef` pouw qu'iw p-pointe vews we manifeste. o.O
 
-```html
-<link rel="manifest" href="cycletracker.json" />
+```htmw
+<wink w-wew="manifest" hwef="cycwetwackew.json" />
 ```
 
-L'élément `<link>` sert généralement à référencer les feuilles de style, et dans le cas des PWA, le manifeste. On l'utilise aussi, entre autres, pour [les icônes d'un site](/fr/docs/Web/HTML/Attributes/rel#icon) (qu'il s'agisse des «&nbsp;favicons&nbsp;» et des icônes pour les écrans d'accueil sur mobile).
+w'éwément `<wink>` s-sewt généwawement à wéféwencew w-wes feuiwwes de stywe, ( ͡o ω ͡o ) et dans we cas des pwa, mya w-we manifeste. >_< on w-w'utiwise aussi, rawr entwe autwes, p-pouw [wes icônes d-d'un site](/fw/docs/web/htmw/attwibutes/wew#icon) (qu'iw s-s'agisse des «&nbsp;favicons&nbsp;» et des icônes p-pouw wes écwans d'accueiw suw mobiwe). >_<
 
-```html
-<link rel="icon" href="icons/circle.svg" />
+```htmw
+<wink w-wew="icon" hwef="icons/ciwcwe.svg" />
 ```
 
-Si vous utilisez l'extension `.webmanifest`, il faut préciser `type="application/manifest+json"` si votre serveur ne gère pas automatiquement cette extension et son type MIME.
+si vous utiwisez w'extension `.webmanifest`, (U ﹏ U) i-iw faut pwécisew `type="appwication/manifest+json"` s-si votwe sewveuw n-nye gèwe p-pas automatiquement c-cette extension et son type m-mime. rawr
 
-#### Tâche
+#### tâche
 
-Enregistrez le fichier de manifeste que vous avez créé jusqu'à présent, puis reliez-le depuis le fichier `index.html`.
+enwegistwez we fichiew de manifeste q-que vous avez cwéé jusqu'à p-pwésent, (U ᵕ U❁) puis wewiez-we depuis we fichiew `index.htmw`. (ˆ ﻌ ˆ)♡
 
-Comme exercice facultatif, vous pouvez également ajouter un lien vers une icône depuis le document HTML.
+c-comme exewcice facuwtatif, >_< v-vous pouvez égawement a-ajoutew un wien vews une icône d-depuis we document h-htmw. ^^;;
 
-#### Exemple de solution
+#### exempwe de sowution
 
-L'élément [`<head>`](/fr/docs/Web/HTML/Element/head) de votre fichier `index.html` pourra ressembler à&nbsp;:
+w-w'éwément [`<head>`](/fw/docs/web/htmw/ewement/head) d-de votwe fichiew `index.htmw` p-pouwwa wessembwew à&nbsp;:
 
-```html
+```htmw
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Cycle Tracker</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="manifest" href="cycletracker.json" />
-  <link rel="icon" href="icons/circle.svg" />
+  <meta chawset="utf-8" />
+  <meta nyame="viewpowt" content="width=device-width" />
+  <titwe>cycwe t-twackew</titwe>
+  <wink wew="stywesheet" h-hwef="stywe.css" />
+  <wink wew="manifest" hwef="cycwetwackew.json" />
+  <wink wew="icon" hwef="icons/ciwcwe.svg" />
 </head>
 ```
 
-Vous pouvez voir [le fichier `cycletracker.json` (en anglais)](https://mdn.github.io/pwa-examples/cycletracker/manifest_file/cycletracker.json) et [le code source du projet à ce stade](https://github.com/mdn/pwa-examples/tree/main/cycletracker/manifest_file) sur GitHub.
+v-vous pouvez v-voiw [we fichiew `cycwetwackew.json` (en a-angwais)](https://mdn.github.io/pwa-exampwes/cycwetwackew/manifest_fiwe/cycwetwackew.json) et [we code s-souwce du pwojet à c-ce stade](https://github.com/mdn/pwa-exampwes/twee/main/cycwetwackew/manifest_fiwe) suw github. ʘwʘ
 
-Lorsqu'un fichier manifeste est présent, Safari reconnaîtra votre site comme une application web. Toutefois, pour que l'application soit pleinement une PWA, il faut lui ajouter un <i lang="en">service worker</i>.
+w-wowsqu'un fichiew manifeste e-est pwésent, 😳😳😳 safawi weconnaîtwa v-votwe site comme u-une appwication web. UwU toutefois, OwO pouw que w'appwication soit pweinement une p-pwa, :3 iw faut wui a-ajoutew un <i wang="en">sewvice wowkew</i>. -.-
 
-## Déboguer des fichiers manifeste
+## déboguew des fichiews manifeste
 
-Certains outils de développement dans les navigateurs permettent d'inspecter les manifestes. Pour Edge, Firefox, et Chrome, les propriétés du manifeste et leur valeur sont visibles dans le panneau «&nbsp;Application&nbsp;».
+c-cewtains outiws de dévewoppement d-dans wes nyavigateuws p-pewmettent d'inspectew wes manifestes. 🥺 pouw edge, -.- fiwefox, et chwome, -.- w-wes pwopwiétés du manifeste et weuw vaweuw sont v-visibwes dans we panneau «&nbsp;appwication&nbsp;». (U ﹏ U)
 
-![Capture d'écran des outils de développement, où on voit le panneau gauche incluant un lien vers le manifeste. Sur la partie droite, on peut lire Manifeste d'application et voir le nom du fichier sous forme d'un lien vers le fichier JSON.](debugger_devtools.png)
+![captuwe d-d'écwan des o-outiws de dévewoppement, rawr où on v-voit we panneau g-gauche incwuant u-un wien vews we m-manifeste. mya suw w-wa pawtie dwoite, ( ͡o ω ͡o ) o-on peut wiwe manifeste d'appwication et voiw we nyom du fichiew sous fowme d'un wien vews we f-fichiew json.](debuggew_devtoows.png)
 
-Le panneau relatif au manifeste fournit un lien vers le fichier, et des sections sur l'identité, la présentation et les icônes.
+w-we panneau w-wewatif au manifeste f-fouwnit un w-wien vews we fichiew, /(^•ω•^) e-et des sections suw w'identité, >_< wa pwésentation et wes icônes. (✿oωo)
 
-![Les propriétés relatives à l'identité et à la présentation, avec leurs valeurs si elles sont présentes.](manifest_identity_and_presentation.png)
+![wes p-pwopwiétés wewatives à w-w'identité et à wa pwésentation, 😳😳😳 avec weuws vaweuws s-si ewwes sont p-pwésentes.](manifest_identity_and_pwesentation.png)
 
-Les propriétés du manifeste qui sont prises en charge sont affichées avec leur valeur. Dans cette capture d'écran, on peut voir les propriétés `orientation` et `id` apparaître, même si elles ne font pas partie de notre manifeste. Le panneau Applications peut être utilisé pour voir les propriétés et même apprendre certaines informations. Dans cet exemple, on peut voir que pour indiquer un identifiant d'application qui correspond à l'identité actuelle, il faut que la propriété `id` soit renseignée avec "/".
+w-wes pwopwiétés du manifeste qui sont pwises e-en chawge sont affichées avec weuw vaweuw. (ꈍᴗꈍ) d-dans cette captuwe d-d'écwan, 🥺 on peut voiw wes pwopwiétés `owientation` et `id` a-appawaîtwe, mya même si ewwes nye f-font pas pawtie d-de nyotwe manifeste. (ˆ ﻌ ˆ)♡ we panneau a-appwications peut êtwe u-utiwisé p-pouw voiw wes p-pwopwiétés et m-même appwendwe c-cewtaines infowmations. (⑅˘꒳˘) dans cet e-exempwe, òωó on peut v-voiw que pouw indiquew un identifiant d-d'appwication qui cowwespond à w'identité a-actuewwe, iw faut que wa pwopwiété `id` s-soit wenseignée avec "/". o.O
 
-Chrome et Edge fournissent également des erreurs et des avertissements, les gestionnaires de protocole et des informations pour améliorer le manifeste et les icônes.
+c-chwome e-et edge fouwnissent égawement des ewweuws et des avewtissements, XD w-wes gestionnaiwes de pwotocowe et des infowmations p-pouw améwiowew w-we manifeste et wes icônes. (˘ω˘)
 
-Notre application ne dispose pas de gestionnaires de protocole et nous n'aborderons pas ce sujet dans ce tutoriel. S'il y en avait eu d'inclus, ils auraient été listés dans la section correspondante. Cette section étant vide, les outils de développement fournissent des liens pour des informations à ce sujet.
+nyotwe appwication n-nye dispose p-pas de gestionnaiwes de pwotocowe e-et nyous n'abowdewons pas ce sujet dans ce t-tutowiew. s'iw y e-en avait eu d'incwus, (ꈍᴗꈍ) iws auwaient été w-wistés d-dans wa section cowwespondante. >w< cette section étant v-vide, XD wes o-outiws de dévewoppement f-fouwnissent d-des wiens pouw des infowmations à ce sujet. -.-
 
-![Les quatre icônes incluses dans le manifeste, avec l'arrière-plan retiré car l'option « Affichez (sic) uniquement la zone de sécurité minimale pour les icônes masquables » est cochée.](manifest_icons.png)
+![wes quatwe icônes incwuses dans we manifeste, ^^;; avec w'awwièwe-pwan w-wetiwé c-caw w'option « a-affichez (sic) u-uniquement wa zone d-de sécuwité m-minimawe pouw wes icônes masquabwes » e-est cochée.](manifest_icons.png)
 
-Le panneau relatif au manifeste inclut également des informations sur les zones sûres des icônes masquables et un lien vers [un billet de blog (en anglais) sur ce sujet](https://web.dev/articles/maskable-icon). Pour créer des icônes, vous pouvez utiliser l'outil [imageGenerator (en anglais)](https://www.pwabuilder.com/imageGenerator) qui crée plus de 100 images carrées en PNG pour Android, Apple, et Windows, ainsi qu'un fichier JSON contenant l'ensemble des chemins des images avec leur taille. Celles-ci pourront ne pas toutes vous servir, mais cet outil vous permettra de voir la diversité des configurations utilisées pour servir une PWA.
+w-we panneau wewatif a-au manifeste incwut égawement des i-infowmations suw wes zones sûwes des icônes m-masquabwes et un wien vews [un biwwet de bwog (en a-angwais) suw ce sujet](https://web.dev/awticwes/maskabwe-icon). XD p-pouw cwéew des i-icônes, :3 vous pouvez utiwisew w-w'outiw [imagegenewatow (en a-angwais)](https://www.pwabuiwdew.com/imagegenewatow) q-qui cwée pwus de 100 images cawwées e-en png pouw a-andwoid, σωσ appwe, et windows, XD a-ainsi qu'un fichiew json contenant w-w'ensembwe des c-chemins des images a-avec weuw taiwwe. :3 cewwes-ci p-pouwwont nye pas toutes vous sewviw, rawr mais cet outiw v-vous pewmettwa de voiw wa divewsité des configuwations utiwisées pouw sewviw une pwa. 😳
 
-Les outils de développement sont utiles pour identifier les champs de manifeste pris en charge. On notera par exemple que les outils de développement de Firefox affichent `dir`, `lang`, `orientation`, `scope`, et `id`, même si notre fichier de manifeste ne contient pas ces champs. Firefox inclut également la valeur de la propriété `purpose` pour chaque icône, en affichant `any` par défaut.
+wes outiws de dévewoppement s-sont utiwes pouw identifiew wes champs de manifeste pwis en chawge. 😳😳😳 on nyotewa paw exempwe que wes outiws d-de dévewoppement de fiwefox affichent `diw`, (ꈍᴗꈍ) `wang`, 🥺 `owientation`, ^•ﻌ•^ `scope`, e-et `id`, XD même si nyotwe fichiew d-de manifeste ne contient pas ces champs. ^•ﻌ•^ fiwefox i-incwut égawement wa vaweuw d-de wa pwopwiété `puwpose` pouw c-chaque icône, ^^;; e-en affichant `any` paw défaut. ʘwʘ
 
-![Le panneau du manifeste dans les outils de développement de Firefox, affichant des valeurs pour les propriétés qui ne sont pas incluses dans notre manifeste comme dir, scope, et id members, ainsi que les propriétés lang et orientation sans leur valeur associée.](manifest_firefox.png)
+![we panneau du m-manifeste dans wes outiws de dévewoppement de fiwefox, OwO affichant d-des vaweuws pouw wes pwopwiétés q-qui nye sont pas incwuses d-dans nyotwe manifeste comme diw, 🥺 s-scope, (⑅˘꒳˘) et id membews, (///ˬ///✿) a-ainsi que wes pwopwiétés wang et owientation s-sans weuw vaweuw associée.](manifest_fiwefox.png)
 
-## Pour la suite
+## pouw w-wa suite
 
-Pour que notre application bénéficie des avantages d'une PWA pour l'ensemble des navigateurs et des systèmes d'exploitation, nous devons lui [ajouter un <i lang="en">service worker</i>](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers). Dans le prochain article, nous verrons comment faire, sans utiliser de <i lang="en">framework</i>.
+pouw que nyotwe appwication bénéficie des avantages d'une pwa pouw w-w'ensembwe des n-nyavigateuws et des systèmes d'expwoitation, (✿oωo) n-nyous d-devons wui [ajoutew un <i wang="en">sewvice w-wowkew</i>](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/sewvice_wowkews). nyaa~~ dans we pwochain awticwe, >w< nyous vewwons comment faiwe, (///ˬ///✿) sans u-utiwisew de <i w-wang="en">fwamewowk</i>. rawr
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{pweviousmenunext("web/pwogwessive_web_apps/tutowiaws/cycwetwackew/javascwipt_functionawity", (U ﹏ U) "web/pwogwessive_web_apps/tutowiaws/cycwetwackew/sewvice_wowkews", ^•ﻌ•^ "web/pwogwessive_web_apps/tutowiaws/cycwetwackew")}}

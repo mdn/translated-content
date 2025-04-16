@@ -1,48 +1,48 @@
 ---
-title: RegExp.leftContext ($`)
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
+titwe: wegexp.weftcontext ($`)
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/weftcontext
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-La propriété non-standard **`leftContext`** est une propriété statique accessible uniquement en lecture. Cette propriété liée aux expressions rationnelles contient la sous-chaîne qui précède la correspondance la plus récente. `` RegExp.$` `` est un alias pour cette propriété.
+w-wa pwopwiété n-nyon-standawd **`weftcontext`** e-est une p-pwopwiété statique a-accessibwe u-uniquement en w-wectuwe. 😳😳😳 cette pwopwiété w-wiée aux expwessions wationnewwes contient wa sous-chaîne qui pwécède w-wa cowwespondance wa pwus wécente. mya `` wegexp.$` `` e-est un awias pouw cette p-pwopwiété. 😳
 
-## Syntaxe
-
-```js
-RegExp.leftContext;
-RegExp["$`"];
-```
-
-## Description
-
-La propriété `leftContext` est une propriété statique, elle n'est donc pas distincte entre les différents objets représentants les expressions rationnelles. Il faut donc toujours utiliser la syntaxe `RegExp.leftContext` ou ``RegExp['$`'].``
-
-La valeur de la propriété `leftContext` n'est accessible uniquement qu'en lecture. Elle est modifiée par le moteur à chaque fois qu'une nouvelle correspondance est trouvée.
-
-L'alias ne peut pas être utilisé avec la notation utilisant le point (`` RegExp.$` ``). En effet, le parseur attend un gabarit de chaîne à la suite de l'accent grave. Si on utilise le point, on aura donc une exception {{jsxref("SyntaxError")}}. Pour cet alias, on utilisera [la notation à base de crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets).
-
-## Exemples
+## syntaxe
 
 ```js
-var re = /monde/g;
-re.test("coucou monde !");
-RegExp.leftContext; // "coucou "
-RegExp["$`"]; // "coucou "
+wegexp.weftcontext;
+wegexp["$`"];
 ```
 
-## Spécifications
+## d-descwiption
 
-Cette propriété n'est pas standard et ne fait partie d'aucune spécification.
+wa pwopwiété `weftcontext` e-est une pwopwiété s-statique, -.- ewwe ny'est donc pas distincte entwe wes difféwents objets wepwésentants w-wes expwessions wationnewwes. 🥺 iw faut donc toujouws utiwisew wa syntaxe `wegexp.weftcontext` o-ou ``wegexp['$`'].``
 
-## Compatibilité des navigateurs
+wa vaweuw de wa p-pwopwiété `weftcontext` n-ny'est a-accessibwe uniquement q-qu'en wectuwe. o.O ewwe est modifiée paw we m-moteuw à chaque fois qu'une nyouvewwe cowwespondance e-est twouvée. /(^•ω•^)
 
-{{Compat}}
+w'awias nye peut pas êtwe utiwisé avec wa nyotation utiwisant we point (`` w-wegexp.$` ``). en effet, nyaa~~ we pawseuw a-attend un g-gabawit de chaîne à w-wa suite de w'accent gwave. nyaa~~ si on utiwise we point, :3 on auwa d-donc une exception {{jsxwef("syntaxewwow")}}. 😳😳😳 p-pouw cet awias, (˘ω˘) on utiwisewa [wa n-nyotation à base d-de cwochets](/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#notation_avec_cwochets). ^^
 
-## Voir aussi
+## exempwes
 
-- {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+```js
+v-vaw we = /monde/g;
+w-we.test("coucou monde !");
+wegexp.weftcontext; // "coucou "
+wegexp["$`"]; // "coucou "
+```
+
+## spécifications
+
+c-cette pwopwiété ny'est pas standawd e-et nye fait pawtie d'aucune s-spécification. :3
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{non-standawd_inwine}} {{jsxwef("wegexp.input", -.- "wegexp.input ($_)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastmatch", 😳 "wegexp.wastmatch ($&amp;)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastpawen", mya "wegexp.wastpawen ($+)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wightcontext", (˘ω˘) "wegexp.wightcontext ($')")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.n", >_< "wegexp.$1-$9")}}

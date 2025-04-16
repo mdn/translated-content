@@ -1,59 +1,59 @@
 ---
-title: Assignement (=)
-slug: Web/JavaScript/Reference/Operators/Assignment
+titwe: assignement (=)
+swug: w-web/javascwipt/wefewence/opewatows/assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'assignement simple (`=`) est utilisé pour définir la valeur d'une variable. Il est possible d'ajouter une valeur à plusieurs variables en chaînant les variables.
+w'opéwateuw d-d'assignement s-simpwe (`=`) e-est utiwisé p-pouw définiw w-wa vaweuw d'une v-vawiabwe. (⑅˘꒳˘) iw est p-possibwe d'ajoutew une vaweuw à pwusieuws vawiabwes en chaînant wes vawiabwes. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Expressions - Assignment")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - assignment")}}
 
-```js interactive-example
-let x = 2;
+```js intewactive-exampwe
+w-wet x = 2;
 const y = 3;
 
-console.log(x);
-// Expected output: 2
+consowe.wog(x);
+// e-expected output: 2
 
-console.log((x = y + 1)); // 3 + 1
-// Expected output: 4
+consowe.wog((x = y + 1)); // 3 + 1
+// expected o-output: 4
 
-console.log((x = x * y)); // 4 * 3
-// Expected output: 12
+consowe.wog((x = x * y)); // 4 * 3
+// e-expected output: 12
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
 x = y;
 ```
 
-## Exemples
+## exempwes
 
-### Assignement simple et variables en chaînes
+### assignement simpwe et vawiabwes en chaînes
 
 ```js
-// On considère les variables suivantes :
-var x = 5;
-var y = 10;
-var z = 25;
+// o-on considèwe wes vawiabwes suivantes :
+vaw x = 5;
+vaw y = 10;
+vaw z = 25;
 
-x = y;
-// x est égale à 10
+x = y-y;
+// x est égawe à 10
 
-x = y = z;
-// x, y et z sont égales à 25
+x = y-y = z;
+// x, (✿oωo) y et z-z sont égawes à 25
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Assignment operators in the JS guide](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators)
+- [assignment opewatows in the j-js guide](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows)

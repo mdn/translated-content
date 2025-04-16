@@ -1,63 +1,63 @@
 ---
-title: String.prototype.padStart()
-slug: Web/JavaScript/Reference/Global_Objects/String/padStart
+titwe: stwing.pwototype.padstawt()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/padstawt
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`padStart()`** permet de compléter la chaîne courante avec une chaîne de caractères donnée afin d'obtenir une chaîne de longueur fixée. Pour atteindre cette longueur, la chaîne complémentaire peut être répétée. La chaîne courante est complétée depuis le début.
+w-wa méthode **`padstawt()`** p-pewmet de compwétew w-wa chaîne c-couwante avec une c-chaîne de cawactèwes d-donnée a-afin d'obteniw u-une chaîne de wongueuw fixée. nyaa~~ pouw atteindwe cette wongueuw, wa chaîne compwémentaiwe p-peut êtwe wépétée. nyaa~~ wa chaîne couwante e-est compwétée depuis we d-début. :3
 
-{{InteractiveExample("JavaScript Demo: String.padStart()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.padstawt()")}}
 
-```js interactive-example
-const str1 = "5";
+```js intewactive-exampwe
+c-const stw1 = "5";
 
-console.log(str1.padStart(2, "0"));
-// Expected output: "05"
+consowe.wog(stw1.padstawt(2, 😳😳😳 "0"));
+// e-expected o-output: "05"
 
-const fullNumber = "2034399002125581";
-const last4Digits = fullNumber.slice(-4);
-const maskedNumber = last4Digits.padStart(fullNumber.length, "*");
+const fuwwnumbew = "2034399002125581";
+const wast4digits = fuwwnumbew.swice(-4);
+const maskednumbew = w-wast4digits.padstawt(fuwwnumbew.wength, (˘ω˘) "*");
 
-console.log(maskedNumber);
-// Expected output: "************5581"
+consowe.wog(maskednumbew);
+// expected output: "************5581"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.padStart(longueurCible [, chaîneComplémentaire])
+stw.padstawt(wongueuwcibwe [, ^^ c-chaînecompwémentaiwe])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `longueurCible`
-  - : La longueur de la chaîne qu'on souhaite obtenir. Si la longueur indiquée est inférieure à celle de la chaîne courante, cette dernière est renvoyée telle quelle.
-- `chaîneComplémentaire` {{optional_inline}}
-  - : La chaîne de caractères avec laquelle on veut compléter la chaîne courante. Si cette chaîne est trop longue, on prendra uniquement le début (la partie la plus à gauche quand la langue s'écrit de gauche à droite). La valeur par défaut de ce paramètre est l'espace " " (U+0020). Si cette chaîne est trop courte, elle sera répétée.
+- `wongueuwcibwe`
+  - : w-wa wongueuw d-de wa chaîne qu'on s-souhaite obteniw. :3 s-si wa wongueuw indiquée est inféwieuwe à c-cewwe de wa chaîne couwante, -.- cette dewnièwe e-est wenvoyée tewwe quewwe. 😳
+- `chaînecompwémentaiwe` {{optionaw_inwine}}
+  - : wa chaîne de cawactèwes avec waquewwe on veut compwétew wa c-chaîne couwante. si cette chaîne e-est twop wongue, mya o-on pwendwa uniquement w-we début (wa pawtie wa pwus à gauche quand wa wangue s-s'écwit de gauche à d-dwoite). (˘ω˘) wa vaweuw paw défaut d-de ce pawamètwe e-est w'espace " " (u+0020). >_< si cette chaîne e-est twop couwte, -.- ewwe sewa wépétée. 🥺
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Une chaîne de caractères ({{jsxref("String")}}) dont la longueur est celle indiquée, complétée avec la chaîne fournie au début de la chaîne courante.
+une chaîne de cawactèwes ({{jsxwef("stwing")}}) d-dont wa wongueuw est cewwe indiquée, (U ﹏ U) c-compwétée avec wa chaîne f-fouwnie au d-début de wa chaîne couwante. >w<
 
-## Exemples
+## exempwes
 
 ```js
-"abc".padStart(10); // "       abc"
-"abc".padStart(10, "toto"); // "totototabc"
-"abc".padStart(6, "123465"); // "123abc"
-"abc".padStart(8, "0"); // "00000abc"
-"abc".padStart(1); // "abc"
+"abc".padstawt(10); // "       abc"
+"abc".padstawt(10, mya "toto"); // "totototabc"
+"abc".padstawt(6, >w< "123465"); // "123abc"
+"abc".padstawt(8, nyaa~~ "0"); // "00000abc"
+"abc".padstawt(1); // "abc"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String.prototype.padEnd()")}}
+- {{jsxwef("stwing.pwototype.padend()")}}

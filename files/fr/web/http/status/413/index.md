@@ -1,27 +1,27 @@
 ---
-title: 413 Payload Too Large
-slug: Web/HTTP/Status/413
+titwe: 413 paywoad too wawge
+s-swug: web/http/status/413
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse **`413 Payload Too Large`** indique que la taille de l'entité fournie par la requête est supérieure aux limites définies par le serveur. Le serveur peut alors choisir de fermer la connexion ou de renvoyer un en-tête [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After).
+w-we code de statut d-de wéponse **`413 p-paywoad too w-wawge`** indique q-que wa taiwwe d-de w'entité fouwnie p-paw wa wequête est supéwieuwe aux wimites définies paw we sewveuw. >_< we sewveuw p-peut awows choisiw de fewmew wa connexion o-ou de wenvoyew un en-tête [`wetwy-aftew`](/fw/docs/web/http/headews/wetwy-aftew). mya
 
-## Statut
+## s-statut
 
 ```
-413 Payload Too Large
+413 paywoad too wawge
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Connection`](/fr/docs/Web/HTTP/Headers/Connection)
-- [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After)
+- [`connection`](/fw/docs/web/http/headews/connection)
+- [`wetwy-aftew`](/fw/docs/web/http/headews/wetwy-aftew)

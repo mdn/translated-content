@@ -1,70 +1,70 @@
 ---
-title: "CSP : script-src-attr"
-slug: Web/HTTP/Headers/Content-Security-Policy/script-src-attr
+titwe: "csp : scwipt-swc-attw"
+s-swug: web/http/headews/content-secuwity-powicy/scwipt-swc-attw
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`script-src-attr`** indique les sources valides pour les gestionnaires d'évènement déclarés dans le document HTML. Cela inclut les scripts déclarés à même les attributs comme `onclick`, mais pas les URL chargées directement par des éléments [`<script>`](/fr/docs/Web/HTML/Element/script) (voir [`script-src-elem`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) pour ces derniers).
+w-wa diwective h-http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`scwipt-swc-attw`** i-indique w-wes souwces v-vawides pouw wes g-gestionnaiwes d-d'évènement décwawés dans we document htmw. -.- cewa incwut wes scwipts décwawés à m-même wes attwibuts comme `oncwick`, 😳 mais p-pas wes uww chawgées diwectement p-paw des éwéments [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) (voiw [`scwipt-swc-ewem`](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc-ewem) pouw ces dewniews). mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion de csp</th>
       <td>3</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">type de d-diwective</th>
+      <td><a h-hwef="/fw/docs/gwossawy/fetch_diwective">diwective de wécupéwation</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">utiwisation de <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> paw défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src"><code>script-src</code></a>, qui a pour valeur par défaut celle de la directive <code>default-src</code>.
+        o-oui, (˘ω˘) si cette diwective est absente, >_< w'agent utiwisateuw consuwtewa w-wa diwective <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc"><code>scwipt-swc</code></a>, -.- q-qui a pouw vaweuw p-paw défaut cewwe d-de wa diwective <code>defauwt-swc</code>. 🥺
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
-```http
-Content-Security-Policy: script-src-attr <source>;
-Content-Security-Policy: script-src-attr <source> <source>;
-```
-
-`script-src-attr` peut être utilisée avec [`script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)&nbsp;:
+une ou pwusieuws souwces peuvent êtwe a-autowisées pouw cette diwective&nbsp;:
 
 ```http
-Content-Security-Policy: script-src <source>;
-Content-Security-Policy: script-src-attr <source>;
+c-content-secuwity-powicy: scwipt-swc-attw <souwce>;
+content-secuwity-powicy: scwipt-swc-attw <souwce> <souwce>;
 ```
 
-### Sources
+`scwipt-swc-attw` peut êtwe utiwisée avec [`scwipt-swc`](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc)&nbsp;:
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+```http
+c-content-secuwity-powicy: scwipt-swc <souwce>;
+c-content-secuwity-powicy: s-scwipt-swc-attw <souwce>;
+```
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+### s-souwces
 
-## Exemples
+`<souwce>` peut êtwe ny'impowte quewwe vaweuw pawmi c-cewwes énuméwées d-dans [w'awticwe suw wes vaweuws s-souwces csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). (U ﹏ U)
 
-### Valeur par défaut avec `script-src`
+o-on nyotewa que cet ensembwe d-de vaweuws peut êtwe utiwisé p-pouw toutes wes [diwectives de wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et pouw [cewtaines a-autwes diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). >w<
 
-Si la directive `script-src-attr` est absente, l'agent utilisateur se rabat sur la valeur de la directive [`script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src), qui elle-même a pour valeur par défaut celle de la directive [`default-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src).
+## e-exempwes
 
-## Spécifications
+### vaweuw paw défaut a-avec `scwipt-swc`
 
-{{Specifications}}
+s-si wa diwective `scwipt-swc-attw` est absente, mya w'agent utiwisateuw se wabat suw wa vaweuw de wa diwective [`scwipt-swc`](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc), >w< q-qui ewwe-même a-a pouw vaweuw paw défaut cewwe d-de wa diwective [`defauwt-swc`](/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc). nyaa~~
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<script>`](/fr/docs/Web/HTML/Element/script)
-- [`script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)
-- [`script-src-elem`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem)
+{{compat}}
+
+## voiw a-aussi
+
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt)
+- [`scwipt-swc`](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc)
+- [`scwipt-swc-ewem`](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc-ewem)

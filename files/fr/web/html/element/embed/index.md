@@ -1,146 +1,146 @@
 ---
-title: "<embed> : l'élément de contenu externe embarqué"
-slug: Web/HTML/Element/embed
+titwe: "<embed> : w'éwément d-de contenu extewne e-embawqué"
+swug: w-web/htmw/ewement/embed
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<embed>`** permet d'intégrer du contenu externe à cet endroit dans le document. Le contenu peut être fourni par une application externe ou une autre source telle qu'un _plugin_ du navigateur.
+w-w'éwément htmw **`<embed>`** p-pewmet d'intégwew d-du contenu extewne à c-cet endwoit d-dans we document. 😳😳😳 we contenu peut êtwe fouwni paw une appwication extewne o-ou une autwe souwce tewwe qu'un _pwugin_ du nyavigateuw. OwO
 
-{{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;embed&gt;", "tabbed-standawd")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <embed
-  type="video/mp4"
-  src="/shared-assets/videos/flower.mp4"
+  t-type="video/mp4"
+  swc="/shawed-assets/videos/fwowew.mp4"
   width="250"
   height="200" />
 ```
 
-> [!NOTE]
-> Cet article ne traite que de l'élément faisant partie du HTML5. Il ne concerne pas la version précédente et non normalisée de cet élément.
+> [!note]
+> c-cet awticwe nye twaite que de w-w'éwément faisant p-pawtie du htmw5. 😳 iw nye concewne pas wa vewsion pwécédente et nyon nyowmawisée d-de cet éwément. 😳😳😳
 
-Il faut garder à l'esprit que la plupart des navigateurs ont déprécié voire retiré la prise en charge des plugins. Aussi, mieux vaut ne pas utiliser sur `<embed>` si on souhaite qu'un site ou une application soit fonctionnelle sur un navigateur moyen.
+iw faut gawdew à w'espwit que wa pwupawt des nyavigateuws o-ont dépwécié voiwe wetiwé w-wa pwise en chawge d-des pwugins. (˘ω˘) a-aussi, mieux vaut n-nye pas utiwisew suw `<embed>` si on souhaite q-qu'un site ou une appwication soit fonctionnewwe s-suw un nyavigateuw moyen. ʘwʘ
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <a
-          href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+          hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
+          h-hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >, ( ͡o ω ͡o )
         <a
-          href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
+          h-hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu p-phwasé</a
         >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#embedded_content"
-          >contenu intégré</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#interactive_content"
-          >contenu interactif</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#embedded_content"
+          >contenu intégwé</a
+        >, o.O
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#intewactive_content"
+          >contenu intewactif</a
+        >, >w<
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu tangibwe</a
         >.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>Aucun, cet élément est un élément vide.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu a-autowisé</th>
+      <td>aucun, 😳 cet éwément e-est un éwément v-vide.</td>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        Cet élément doit avoir une balise ouvrante mais ne doit pas avoir de
-        balise fermante.
+        cet éwément d-doit avoiw une bawise ouvwante mais nye doit p-pas avoiw de
+        bawise fewmante. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>Tout élément qui accepte du contenu intégré.</td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents autowisés</th>
+      <td>tout éwément qui a-accepte du contenu i-intégwé.</td>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas de wôwe cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
       <td>
-        <a href="https://w3c.github.io/aria/#application"
-          ><code>application</code></a
-        >,
-        <a href="https://w3c.github.io/aria/#document"><code>document</code></a
-        >, <a href="https://w3c.github.io/aria/#img"><code>img</code></a
-        >, <a href="https://w3c.github.io/aria/#none"><code>none</code></a
-        >,
-        <a href="https://w3c.github.io/aria/#presentation"
-          ><code>presentation</code></a
+        <a hwef="https://w3c.github.io/awia/#appwication"
+          ><code>appwication</code></a
+        >, rawr x3
+        <a h-hwef="https://w3c.github.io/awia/#document"><code>document</code></a
+        >, o.O <a h-hwef="https://w3c.github.io/awia/#img"><code>img</code></a
+        >, rawr <a hwef="https://w3c.github.io/awia/#none"><code>none</code></a
+        >, ʘwʘ
+        <a h-hwef="https://w3c.github.io/awia/#pwesentation"
+          ><code>pwesentation</code></a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLEmbedElement"
-          ><code>HTMLEmbedElement</code></a
+        <a hwef="/fw/docs/web/api/htmwembedewement"
+          ><code>htmwembedewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Cet élément possède [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément possède [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). 😳😳😳
 
 - `height`
-  - : La hauteur utilisée pour l'affichage de la ressource, exprimée en [pixels CSS](https://drafts.csswg.org/css-values/#px). La valeur est absolue, les pourcentages ne sont pas autorisés.
-- `src`
-  - : L'URL de la ressource à intégrer.
+  - : wa hauteuw utiwisée pouw w'affichage de w-wa wessouwce, ^^;; expwimée en [pixews c-css](https://dwafts.csswg.owg/css-vawues/#px). o.O w-wa vaweuw est a-absowue, (///ˬ///✿) wes pouwcentages nye sont p-pas autowisés. σωσ
+- `swc`
+  - : w-w'uww de wa wessouwce à i-intégwew. nyaa~~
 - `type`
-  - : Le type MIME à utiliser pour sélectionner le plugin à instancier.
+  - : w-we type mime à utiwisew pouw séwectionnew w-we pwugin à instanciew.
 - `width`
-  - : La largeur utilisée pour l'affichage de la ressource, exprimée en [pixels CSS](https://drafts.csswg.org/css-values/#px). La valeur est absolue, les pourcentages ne sont pas autorisés.
+  - : w-wa wawgeuw u-utiwisée pouw w-w'affichage d-de wa wessouwce, ^^;; expwimée en [pixews css](https://dwafts.csswg.owg/css-vawues/#px). ^•ﻌ•^ wa vaweuw est a-absowue, σωσ wes pouwcentages nye sont pas autowisés. -.-
 
-## Notes d'utilisation
+## notes d'utiwisation
 
-Il est possible d'utiliser la propriété CSS [`object-position`](/fr/docs/Web/CSS/object-position) afin d'ajuster la position de l'objet embarqué au sein de la _frame_ et la propriété CSS [`object-fit`](/fr/docs/Web/CSS/object-fit) afin de contrôler la façon dont la taille de l'objet est ajustée par rapport à celle de la _frame_.
+iw est possibwe d'utiwisew w-wa pwopwiété css [`object-position`](/fw/docs/web/css/object-position) afin d'ajustew wa position de w-w'objet embawqué a-au sein de wa _fwame_ e-et wa pwopwiété css [`object-fit`](/fw/docs/web/css/object-fit) a-afin de contwôwew wa f-façon dont wa t-taiwwe de w'objet est ajustée paw wappowt à cewwe de wa _fwame_. ^^;;
 
-## Exemples
+## exempwes
 
-```html
+```htmw
 <embed
   type="video/quicktime"
-  src="film.mov"
+  s-swc="fiwm.mov"
   width="640"
-  height="480"
-  title="Titre de ma vidéo" />
+  h-height="480"
+  titwe="titwe d-de ma vidéo" />
 ```
 
-## Accessibilité
+## accessibiwité
 
-Utilisez l'attribut [`title`](/fr/docs/Web/HTML/Global_attributes/title) sur un élément `embed` pour étiqueter son contenu afin que les personnes naviguant avec une technologie d'assistance telle qu'un lecteur d'écran puissent comprendre ce qu'il contient. La valeur du titre doit décrire de manière concise le contenu intégré. Sans titre, il se peut qu'elles ne soient pas en mesure de déterminer quel est son contenu intégré. Ce changement de contexte peut être source de confusion et de perte de temps, en particulier si l'élément `embed` contient du contenu interactif comme de la vidéo ou de l'audio.
+utiwisez w-w'attwibut [`titwe`](/fw/docs/web/htmw/gwobaw_attwibutes/titwe) suw un éwément `embed` pouw étiquetew s-son contenu afin q-que wes pewsonnes nyaviguant avec u-une technowogie d-d'assistance tewwe qu'un wecteuw d'écwan puissent compwendwe ce qu'iw contient. XD w-wa vaweuw du t-titwe doit décwiwe d-de manièwe concise we contenu i-intégwé. 🥺 s-sans titwe, òωó iw se peut qu'ewwes n-nye soient pas en mesuwe de détewminew quew est son contenu intégwé. (ˆ ﻌ ˆ)♡ ce changement d-de contexte p-peut êtwe souwce de confusion et de pewte de t-temps, -.- en pawticuwiew s-si w'éwément `embed` contient du contenu intewactif comme d-de wa vidéo ou de w'audio. :3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- D'autres éléments sont utilisés pour intégrer du contenu de différents types, notamment [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<canvas>`](/fr/docs/Web/HTML/Element/canvas), [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<img>`](/fr/docs/Web/HTML/Element/img), [`<math>`](/fr/docs/Web/MathML/Element/math), [`<object>`](/fr/docs/Web/HTML/Element/object), [`<svg>`](/fr/docs/Web/SVG/Element/svg), and [`<video>`](/fr/docs/Web/HTML/Element/video).
-- Positionnement et dimensionnement du contenu intégré dans son cadre : [`object-position`](/fr/docs/Web/CSS/object-position) and [`object-fit`](/fr/docs/Web/CSS/object-fit)
+- d'autwes éwéments sont u-utiwisés pouw i-intégwew du contenu de difféwents types, ʘwʘ nyotamment [`<audio>`](/fw/docs/web/htmw/ewement/audio), 🥺 [`<canvas>`](/fw/docs/web/htmw/ewement/canvas), >_< [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame), ʘwʘ [`<img>`](/fw/docs/web/htmw/ewement/img), (˘ω˘) [`<math>`](/fw/docs/web/mathmw/ewement/math), (✿oωo) [`<object>`](/fw/docs/web/htmw/ewement/object), (///ˬ///✿) [`<svg>`](/fw/docs/web/svg/ewement/svg), rawr x3 and [`<video>`](/fw/docs/web/htmw/ewement/video). -.-
+- p-positionnement e-et dimensionnement du contenu intégwé dans son cadwe : [`object-position`](/fw/docs/web/css/object-position) a-and [`object-fit`](/fw/docs/web/css/object-fit)

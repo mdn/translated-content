@@ -1,72 +1,72 @@
 ---
-title: Atomics.add()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
+titwe: atomics.add()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/add
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Atomics.add()`** ajoute une valeur donnée à un élément du tableau à une position donnée. Elle renvoie l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+w-wa méthode statique **`atomics.add()`** a-ajoute u-une vaweuw donnée à u-un éwément d-du tabweau à u-une position d-donnée. :3 ewwe wenvoie w-w'ancienne vaweuw qui était contenue à cet empwacement. cette opéwation a-atomique gawantit qu'aucune autwe opéwation d'écwituwe n-ny'est appwiquée tant q-que wa vaweuw modifiée ny'est pas écwite. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Atomics.add()")}}
+{{intewactiveexampwe("javascwipt demo: atomics.add()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js i-intewactive-exampwe
+// cweate a shawedawwaybuffew w-with a size in bytes
+c-const buffew = nyew shawedawwaybuffew(16);
+const uint8 = nyew uint8awway(buffew);
 uint8[0] = 7;
 
 // 7 + 2 = 9
-console.log(Atomics.add(uint8, 0, 2));
-// Expected output: 7
+c-consowe.wog(atomics.add(uint8, 0, (˘ω˘) 2));
+// expected output: 7
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 9
+consowe.wog(atomics.woad(uint8, ^^ 0));
+// expected o-output: 9
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Atomics.add(typedArray, index, valeur);
+a-atomics.add(typedawway, :3 i-index, -.- v-vaweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `typedArray`
-  - : Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.
+- `typedawway`
+  - : un tabweau typé entiew pawtagé p-pawmi {{jsxwef("int8awway")}}, {{jsxwef("uint8awway")}}, 😳 {{jsxwef("int16awway")}}, mya {{jsxwef("uint16awway")}}, (˘ω˘) {{jsxwef("int32awway")}} ou {{jsxwef("uint32awway")}}. >_<
 - `index`
-  - : La position du tableau `typedArray` auquel on souhaite ajouter une `valeur`.
-- `valeur`
-  - : La valeur à ajouter.
+  - : wa position d-du tabweau `typedawway` auquew on souhaite ajoutew une `vaweuw`. -.-
+- `vaweuw`
+  - : wa vaweuw à ajoutew. 🥺
 
-### Valeur de retour
+### vaweuw de wetouw
 
-L'ancienne valeur qui était contenue à (`typedArray[index]`).
+w-w'ancienne vaweuw qui était c-contenue à (`typedawway[index]`). (U ﹏ U)
 
-### Exceptions levées
+### e-exceptions w-wevées
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- cette méthode wève {{jsxwef("typeewwow")}} si we type de `typedawway` n-ny'est p-pas un des types entiews autowisés. >w<
+- c-cette méthode w-wève {{jsxwef("typeewwow")}} si `typedawway` n-ny'est pas tabweau typé pawtagé. mya
+- c-cette méthode wève {{jsxwef("wangeewwow")}} si `index` e-est en dehows des wimites de `typedawway`.
 
-## Exemples
+## e-exempwes
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+vaw sab = nyew s-shawedawwaybuffew(1024);
+v-vaw ta = nyew uint8awway(sab);
 
-Atomics.add(ta, 0, 12); // renvoie 0, l'ancienne valeur
-Atomics.load(ta, 0); // 12
+atomics.add(ta, >w< 0, 12); // wenvoie 0, nyaa~~ w'ancienne vaweuw
+atomics.woad(ta, (✿oωo) 0); // 12
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.sub()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.sub()")}}

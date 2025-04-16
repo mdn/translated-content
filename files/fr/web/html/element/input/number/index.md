@@ -1,439 +1,439 @@
 ---
-title: <input type="number">
-slug: Web/HTML/Element/input/number
+titwe: <input type="numbew">
+s-swug: web/htmw/ewement/input/numbew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`number`** permettent à une utilisatrice ou un utilisateur de saisir des nombres dans un formulaire. De tels contrôles incluent des mécanismes de validation natifs afin de rejeter les valeurs non-numériques.
+w-wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) d-dont w'attwibut `type` v-vaut **`numbew`** pewmettent à u-une u-utiwisatwice ou u-un utiwisateuw d-de saisiw des nyombwes dans un fowmuwaiwe. (///ˬ///✿) de tews contwôwes incwuent des mécanismes d-de vawidation nyatifs afin de wejetew wes v-vaweuws nyon-numéwiques. 🥺
 
-Le navigateur peut agrémenter le contrôle avec des flèches afin d'incrémenter/décrémenter la valeur grâce à la souris ou avec le doigt.
+we nyavigateuw p-peut agwémentew we contwôwe avec des fwèches afin d-d'incwémentew/décwémentew wa v-vaweuw gwâce à w-wa souwis ou avec we doigt. >w<
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;input type=&quot;numbew&quot;&gt;", rawr x3 "tabbed-showtew")}}
 
-```html interactive-example
-<label for="tentacles">Number of tentacles (10-100):</label>
+```htmw intewactive-exampwe
+<wabew fow="tentacwes">numbew o-of tentacwes (10-100):</wabew>
 
-<input type="number" id="tentacles" name="tentacles" min="10" max="100" />
+<input type="numbew" id="tentacwes" nyame="tentacwes" min="10" m-max="100" />
 ```
 
-```css interactive-example
-label {
-  display: block;
+```css intewactive-exampwe
+w-wabew {
+  dispway: b-bwock;
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa s-sans",
+    sans-sewif;
 }
 
-input,
-label {
-  margin: 0.4rem 0;
+i-input, (⑅˘꒳˘)
+wabew {
+  mawgin: 0.4wem 0;
 }
 ```
 
-> [!NOTE]
-> Si un navigateur ne prend pas en charge le type `number`, le contrôle affiché sera le contrôle standard pour la saisie d'un texte (cf. [`text`](/fr/docs/Web/HTML/Element/input/text)).
+> [!note]
+> si un nyavigateuw n-ne pwend pas en chawge we type `numbew`, σωσ we c-contwôwe affiché sewa we contwôwe standawd pouw wa saisie d'un texte (cf. XD [`text`](/fw/docs/web/htmw/ewement/input/text)). -.-
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong>Valeur</strong></td>
-      <td>Un nombre ou une valeur vide.</td>
-    </tr>
-    <tr>
-      <td><strong>Évènements</strong></td>
-      <td><a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/Input_event"><code>input</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>Attributs pris en charges</strong></td>
-      <td><a href="/fr/docs/Web/HTML/Element/Input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-placeholder"><code>placeholder</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-readonly"><code>readonly</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>Attributs IDL</strong></td>
-      <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code></td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td><a href="/fr/docs/Web/API/HTMLInputElement/select"><code>select()</code></a>, <a href="/fr/docs/Web/API/HTMLInputElement/stepUp"><code>stepUp()</code></a>, <a href="/fr/docs/Web/API/HTMLInputElement/stepDown"><code>stepDown()</code></a></td>
-    </tr>
+    <tw>
+      <td><stwong>vaweuw</stwong></td>
+      <td>un n-nyombwe ou une vaweuw vide.</td>
+    </tw>
+    <tw>
+      <td><stwong>Évènements</stwong></td>
+      <td><a h-hwef="/fw/docs/web/api/htmwewement/change_event"><code>change</code></a> e-et <a hwef="/fw/docs/web/api/htmwewement/input_event"><code>input</code></a></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts p-pwis en chawges</stwong></td>
+      <td><a hwef="/fw/docs/web/htmw/ewement/input#attw-autocompwete"><code>autocompwete</code></a>, >_< <a hwef="/fw/docs/web/htmw/ewement/input#attw-wist"><code>wist</code></a>, rawr <a h-hwef="/fw/docs/web/htmw/ewement/input#attw-pwacehowdew"><code>pwacehowdew</code></a>, 😳😳😳 <a h-hwef="/fw/docs/web/htmw/ewement/input#attw-weadonwy"><code>weadonwy</code></a></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts idw</stwong></td>
+      <td><code>wist</code>, UwU <code>vawue</code>, (U ﹏ U) <code>vawueasnumbew</code></td>
+    </tw>
+    <tw>
+      <td><stwong>méthodes</stwong></td>
+      <td><a h-hwef="/fw/docs/web/api/htmwinputewement/sewect"><code>sewect()</code></a>, (˘ω˘) <a h-hwef="/fw/docs/web/api/htmwinputewement/stepup"><code>stepup()</code></a>, /(^•ω•^) <a hwef="/fw/docs/web/api/htmwinputewement/stepdown"><code>stepdown()</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Valeur
+## v-vaweuw
 
-Un nombre qui représente la valeur saisie dans le contrôle. Il est possible d'indiquer une valeur par défaut en utilisant l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value)&nbsp;:
+un nyombwe qui wepwésente w-wa vaweuw saisie dans we contwôwe. (U ﹏ U) iw est p-possibwe d'indiquew une vaweuw p-paw défaut en utiwisant w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#attw-vawue)&nbsp;:
 
-```html
-<input id="number" type="number" value="42" />
+```htmw
+<input i-id="numbew" type="numbew" v-vawue="42" />
 ```
 
-{{EmbedLiveSample('', 600, 40)}}
+{{embedwivesampwe('', ^•ﻌ•^ 600, >w< 40)}}
 
-## Attributs supplémentaires
+## attwibuts suppwémentaiwes
 
-En complément des attributs pris en charge par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les champs de type `number` peuvent utiliser les attributs suivants.
+en compwément des attwibuts pwis en chawge paw w'ensembwe des éwéments [`<input>`](/fw/docs/web/htmw/ewement/input), ʘwʘ wes champs d-de type `numbew` p-peuvent utiwisew wes attwibuts s-suivants. òωó
 
-### `list`
+### `wist`
 
-La valeur de cet attribut est l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) situé dans le même document.
-L'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournit la liste de valeurs prédéfinies à suggérer à l'utilisatrice ou à l'utilisateur. Toute valeur de la liste qui n'est pas compatible avec ce type de champ n'est pas incluse dans les options suggérées. Les valeurs fournies sont des suggestions et pas des valeurs imposées&nbsp;: il reste possible de sélectionner des valeurs en dehors de cette liste.
+w-wa vaweuw d-de cet attwibut est w'identifiant d'un éwément [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) situé d-dans we même document. o.O
+w'éwément [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) fouwnit wa wiste de vaweuws pwédéfinies à s-suggéwew à w'utiwisatwice o-ou à w'utiwisateuw. ( ͡o ω ͡o ) t-toute vaweuw d-de wa wiste qui ny'est pas compatibwe a-avec ce t-type de champ ny'est p-pas incwuse d-dans wes options suggéwées. mya wes vaweuws fouwnies s-sont des suggestions e-et pas d-des vaweuws imposées&nbsp;: i-iw w-weste possibwe de séwectionnew des vaweuws en dehows de cette wiste. >_<
 
 ### `max`
 
-La valeur maximale qui peut être acceptée pour ce champ. Si la valeur du champ (portée par l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value) dépasse ce seuil, l'élément [ne pourra être validé](/fr/docs/Web/HTML/Constraint_validation). Si la valeur de l'attribut `max` n'est pas un nombre, l'élément n'aura pas de maximum.
+w-wa vaweuw maximawe qui peut êtwe acceptée pouw ce champ. rawr si wa vaweuw du champ (powtée paw w-w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#attw-vawue) dépasse ce seuiw, >_< w'éwément [ne pouwwa êtwe v-vawidé](/fw/docs/web/htmw/constwaint_vawidation). (U ﹏ U) s-si wa vaweuw d-de w'attwibut `max` ny'est pas u-un nyombwe, rawr w'éwément ny'auwa p-pas de maximum. (U ᵕ U❁)
 
-Cette valeur doit être supérieure ou égale à l'attribut `min`.
+c-cette vaweuw doit êtwe supéwieuwe ou égawe à w'attwibut `min`. (ˆ ﻌ ˆ)♡
 
 ### `min`
 
-La valeur minimale qui peut être acceptée pour ce champ. Si la valeur du champ (portée par l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value) est inférieure à ce seuil, l'élément [ne pourra être validé](/fr/docs/Web/HTML/Constraint_validation). Si la valeur de l'attribut `min` n'est pas un nombre, l'élément n'aura pas de minimum.
+wa vaweuw minimawe qui peut êtwe a-acceptée pouw ce champ. >_< si wa v-vaweuw du champ (powtée paw w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#attw-vawue) est i-inféwieuwe à c-ce seuiw, ^^;; w'éwément [ne pouwwa êtwe vawidé](/fw/docs/web/htmw/constwaint_vawidation). ʘwʘ s-si wa v-vaweuw de w'attwibut `min` ny'est p-pas un nyombwe, w-w'éwément ny'auwa pas de minimum. 😳😳😳
 
-Cette valeur doit être inférieure ou égale à l'attribut `max`.
+cette vaweuw doit êtwe inféwieuwe ou égawe à w-w'attwibut `max`. UwU
 
-### `placeholder`
+### `pwacehowdew`
 
-L'attribut `placeholder` est une chaîne de caractères fournissant une courte indication à l'utilisatrice ou l'utilisateur quant à l'information attendue dans le champ. Cet attribut devrait être un mot ou une phrase courte qui illustre le type de donnée attendu plutôt qu'un message explicatif. Le texte _ne doit pas_ contenir de saut à la ligne.
+w-w'attwibut `pwacehowdew` e-est une chaîne de cawactèwes f-fouwnissant u-une couwte indication à w'utiwisatwice o-ou w'utiwisateuw quant à w'infowmation attendue dans we champ. OwO cet a-attwibut devwait êtwe u-un mot ou une phwase couwte qui iwwustwe w-we type de donnée a-attendu pwutôt qu'un message expwicatif. :3 we texte _ne doit pas_ c-conteniw de saut à wa wigne. -.-
 
-Si le contenu du contrôle respecte une directionnalité donnée ([LTR](/fr/docs/Glossary/LTR) ou [RTL](/fr/docs/Glossary/RTL)) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode — voir [Comment utiliser les contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus de détails.
+si we contenu du contwôwe wespecte une diwectionnawité d-donnée ([wtw](/fw/docs/gwossawy/wtw) ou [wtw](/fw/docs/gwossawy/wtw)) et que we texte i-indicatif doit êtwe p-pwésenté dans w'autwe sens, iw est possibwe d'utiwisew w-w'awgowithme de f-fowmatage bidiwectionnew unicode — voiw [comment utiwisew wes c-contwôwes unicode pouw we texte b-bidiwectionnew (en angwais)](https://www.w3.owg/intewnationaw/questions/qa-bidi-unicode-contwows) pouw pwus de détaiws. 🥺
 
-> [!NOTE]
-> On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder`, car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir [Utilisation de libellés](/fr/docs/Web/HTML/Element/input#utilisation_de_libell%c3%a9s) pour plus d'informations.
+> [!note]
+> o-on évitewa, -.- tant que faiwe s-se peut, -.- d'utiwisew w-w'attwibut `pwacehowdew`, (U ﹏ U) caw iw ny'est p-pas sémantiquement twès utiwe p-pouw expwiquew we f-fowmuwaiwe et c-caw iw peut causew cewtains pwobwèmes a-avec we contenu. rawr v-voiw [utiwisation de wibewwés](/fw/docs/web/htmw/ewement/input#utiwisation_de_wibeww%c3%a9s) pouw pwus d-d'infowmations. mya
 
-### `readonly`
+### `weadonwy`
 
-Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. Toutefois, la valeur de l'attribut `value` peut toujours être modifiée via du code JavaScript, qui définirait la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
+u-un attwibut boowéen q-qui, ( ͡o ω ͡o ) wowsqu'iw est pwésent, /(^•ω•^) indique que we c-champ nye peut pas êtwe édité p-paw w'utiwisatwice o-ou w'utiwisateuw. >_< toutefois, (✿oωo) wa vaweuw de w'attwibut `vawue` p-peut toujouws êtwe m-modifiée v-via du code javascwipt, 😳😳😳 q-qui définiwait wa pwopwiété `vawue` w-wattachée à [w'intewface `htmwinputewement`](/fw/docs/web/api/htmwinputewement). (ꈍᴗꈍ)
 
-> [!NOTE]
-> Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'aura pas d'effet si l'attribut `readonly` est également présent.
+> [!note]
+> un champ en wectuwe seuwe pouvant nye pas avoiw de vaweuw, 🥺 w'attwibut `wequiwed` ny'auwa pas d'effet s-si w'attwibut `weadonwy` est égawement p-pwésent. mya
 
 ### `step`
 
-L'attribut `step` est un nombre qui définit la granularité de la valeur ou le mot-clé `any`. Seules les valeurs qui sont des multiples de cet attribut depuis le seuil `min` sont valides.
+w'attwibut `step` e-est un nyombwe qui définit w-wa gwanuwawité de wa vaweuw ou w-we mot-cwé `any`. (ˆ ﻌ ˆ)♡ s-seuwes wes v-vaweuws qui sont d-des muwtipwes de c-cet attwibut depuis we seuiw `min` sont vawides. (⑅˘꒳˘)
 
-Lorsque la chaîne de caractères `any` est utilisée, cela indique qu'aucun incrément spécifique n'est défini et que toute valeur (comprise entre `min` et `max`) est valide.
+wowsque wa chaîne de cawactèwes `any` est utiwisée, òωó cewa i-indique qu'aucun i-incwément spécifique n-ny'est défini et que toute v-vaweuw (compwise entwe `min` et `max`) est vawide. o.O
 
-> [!NOTE]
-> Lorsque les données saisies par l'utilisatrice ou l'utilisateur ne correspondent pas à l'incrément indiqué, l'agent utilisateur pourra arrondir à la valeur valide la plus proche (en choisissant les nombres les plus grands lorsque deux sont équidistants).
+> [!note]
+> wowsque wes d-données saisies p-paw w'utiwisatwice ou w'utiwisateuw n-ne cowwespondent pas à w'incwément indiqué, XD w-w'agent utiwisateuw p-pouwwa awwondiw à wa vaweuw v-vawide wa pwus p-pwoche (en choisissant wes nyombwes wes pwus gwands wowsque deux sont équidistants). (˘ω˘)
 
-Pour les champs de type `number`, l'incrément par défaut est 1 et ne permet donc que de saisir des entiers si la valeur de base est entière. Ainsi, si on a `min` qui vaut -10 et `value` qui vaut 1.5, si on a `step` qui vaut 1, seules les valeurs 1.5, 2.5, 3.5,…, -0.5, -1.5, -2.5,… seront valides.
+p-pouw w-wes champs de type `numbew`, (ꈍᴗꈍ) w-w'incwément p-paw défaut e-est 1 et nye pewmet donc que d-de saisiw des e-entiews si wa vaweuw de base est e-entièwe. >w< ainsi, XD s-si on a `min` qui vaut -10 et `vawue` q-qui vaut 1.5, -.- si on a `step` qui vaut 1, ^^;; s-seuwes wes vaweuws 1.5, XD 2.5, 3.5,…, -0.5, :3 -1.5, -2.5,… sewont v-vawides. σωσ
 
-## Utiliser les contrôles de saisie numérique
+## u-utiwisew wes contwôwes de saisie n-nyuméwique
 
-Les éléments `<input type="number">` simplifient la saisie de valeurs numériques dans un formulaire. Lorsqu'on crée un tel contrôle, des mécanismes de validation automatiques sont appliqués afin de vérifier que le texte saisi est bien un nombre. Généralement un contrôle de saisie numérique inclura des boutons avec des curseurs pour augmenter/réduire la valeur.
+wes éwéments `<input type="numbew">` s-simpwifient w-wa saisie de v-vaweuws numéwiques dans un fowmuwaiwe. XD wowsqu'on cwée un tew contwôwe, :3 d-des mécanismes de vawidation automatiques s-sont appwiqués a-afin de véwifiew que we texte s-saisi est bien un nyombwe. rawr généwawement u-un c-contwôwe de saisie nyuméwique incwuwa des boutons a-avec des cuwseuws pouw augmentew/wéduiwe wa vaweuw. 😳
 
-> [!WARNING]
-> On notera qu'une utilisatrice ou un utilisateur peut toujours saisir des valeurs qui ne sont pas numériques dans de tels champs (par exemple avec un navigateur de bureau). Toutefois, ce comportement semble différer selon les navigateurs (voir [le bug 1398528](https://bugzilla.mozilla.org/show_bug.cgi?id=1398528)).
+> [!wawning]
+> o-on nyotewa q-qu'une utiwisatwice ou un utiwisateuw p-peut toujouws saisiw d-des vaweuws qui n-nye sont pas nyuméwiques d-dans de tews champs (paw exempwe avec un nyavigateuw de buweau). 😳😳😳 toutefois, (ꈍᴗꈍ) ce compowtement sembwe difféwew sewon wes nyavigateuws (voiw [we bug 1398528](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1398528)). 🥺
 
-> [!NOTE]
-> Il est important de rappeler qu'une utilisatrice ou un utilisateur peut tout à fait modifier le code HTML qui est utilisé. Le site ne doit donc pas se reposer sur les mécanismes de validation qui existent côté client pour considérer qu'une valeur est saine. Pour des raisons de contrôle et de sécurité, les valeurs envoyées via un formulaire doivent être vérifiées côté serveur.
+> [!note]
+> iw est impowtant de wappewew qu'une utiwisatwice o-ou un u-utiwisateuw peut tout à fait modifiew we code h-htmw qui est utiwisé. ^•ﻌ•^ w-we site ne d-doit donc pas se weposew suw wes m-mécanismes de vawidation qui e-existent côté c-cwient pouw considéwew qu'une v-vaweuw est saine. XD pouw des waisons d-de contwôwe e-et de sécuwité, ^•ﻌ•^ wes vaweuws envoyées via un fowmuwaiwe d-doivent êtwe v-véwifiées c-côté sewveuw. ^^;;
 
-De plus, les navigateurs mobiles peuvent adapter leur ergonomie en affichant un clavier adapté à la saisie de valeur numérique lorsque l'utilisatrice ou l'utilisateur appuie sur un tel contrôle.
+d-de pwus, ʘwʘ wes n-nyavigateuws mobiwes p-peuvent adaptew w-weuw ewgonomie e-en affichant u-un cwaview adapté à wa saisie d-de vaweuw nyuméwique w-wowsque w-w'utiwisatwice ou w'utiwisateuw a-appuie suw un tew contwôwe. OwO
 
-### Un contrôle simple
+### un contwôwe s-simpwe
 
-Dans sa forme la plus simple, on peut implémenter un contrôle de saisie numérique avec le fragment HTML suivant&nbsp;:
+dans sa fowme wa pwus simpwe, 🥺 o-on peut impwémentew u-un contwôwe d-de saisie nyuméwique avec w-we fwagment htmw suivant&nbsp;:
 
-```html
-<label for="ticketNum">Nombre de tickets à acheter :</label>
-<input id="ticketNum" type="number" name="ticketNum" value="0" />
+```htmw
+<wabew f-fow="ticketnum">nombwe de tickets à a-achetew :</wabew>
+<input id="ticketnum" t-type="numbew" nyame="ticketnum" vawue="0" />
 ```
 
-{{EmbedLiveSample('', 600, 40)}}
+{{embedwivesampwe('', (⑅˘꒳˘) 600, 40)}}
 
-Un contrôle de saisie numérique considère que la valeur est valide si elle est vide ou quand un nombre est saisi. Dans les autres cas, la valeur est considérée invalide. Si l'attribut [`required`](/fr/docs/Web/HTML/Element/input#attr-required) est utilisé, la valeur vide n'est plus considérée valide.
+un contwôwe de saisie nyuméwique considèwe q-que wa vaweuw est vawide si ewwe e-est vide ou quand u-un nyombwe est saisi. (///ˬ///✿) dans wes autwes cas, (✿oωo) wa vaweuw est considéwée i-invawide. nyaa~~ si w'attwibut [`wequiwed`](/fw/docs/web/htmw/ewement/input#attw-wequiwed) est u-utiwisé, >w< wa v-vaweuw vide ny'est p-pwus considéwée vawide. (///ˬ///✿)
 
-> [!NOTE]
-> N'importe quel nombre est valide tant que c'est un nombre qui peut être représenté [comme un nombre à virgule flottante](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number) (autrement dit, un nombre qui n'est pas [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) ou [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)).
+> [!note]
+> ny'impowte q-quew nyombwe e-est vawide tant que c'est un nyombwe q-qui peut êtwe wepwésenté [comme un nyombwe à v-viwguwe fwottante](https://htmw.spec.naniwg.owg/muwtipage/infwastwuctuwe.htmw#vawid-fwoating-point-numbew) (autwement d-dit, rawr u-un nyombwe qui n-ny'est pas [`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan) ou [`infinity`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/infinity)). (U ﹏ U)
 
-### Indicateurs de saisie — <i lang="en">placeholders</i>
+### i-indicateuws d-de saisie — <i w-wang="en">pwacehowdews</i>
 
-Il est parfois utile de fournir une indication quant à la valeur qui devrait être saisie. C'est notamment le cas lorsque la disposition de la page ne permet pas d'avoir d'étiquettes suffisamment descriptives pour chaque [`<input>`](/fr/docs/Web/HTML/Element/input). Dans ces cas, on peut utiliser l'attribut `placeholder` afin de fournir une indication et qui sera le texte affiché dans le contrôle avant toute saisie ou quand la valeur est vide.
+i-iw est pawfois utiwe de fouwniw u-une indication q-quant à wa v-vaweuw qui devwait êtwe s-saisie. ^•ﻌ•^ c-c'est nyotamment w-we cas wowsque w-wa disposition d-de wa page nye pewmet pas d'avoiw d-d'étiquettes suffisamment descwiptives p-pouw chaque [`<input>`](/fw/docs/web/htmw/ewement/input). (///ˬ///✿) d-dans ces cas, o.O o-on peut utiwisew w-w'attwibut `pwacehowdew` afin de fouwniw une indication et qui s-sewa we texte a-affiché dans we c-contwôwe avant toute saisie ou quand wa vaweuw est vide. >w<
 
-Dans l'exemple qui suit, on utilise un élément `<input>` de type `number` avec le texte indicatif `Multiple de 10`. Vous pouvez noter la façon dont le texte disparaît/réapparaît à selon la présence ou l'absence de valeur dans le champ.
+dans w-w'exempwe qui s-suit, nyaa~~ on utiwise un éwément `<input>` d-de type `numbew` a-avec we texte indicatif `muwtipwe de 10`. òωó vous pouvez nyotew w-wa façon d-dont we texte dispawaît/wéappawaît à s-sewon wa p-pwésence ou w'absence de vaweuw dans we champ. (U ᵕ U❁)
 
-```html
-<input type="number" placeholder="Multiple de 10" />
+```htmw
+<input t-type="numbew" p-pwacehowdew="muwtipwe de 10" />
 ```
 
-{{EmbedLiveSample('', 600, 40)}}
+{{embedwivesampwe('', (///ˬ///✿) 600, 40)}}
 
-### Paramétrer la taille de l'incrément
+### pawamétwew w-wa taiwwe de w'incwément
 
-Par défaut, les curseurs fournis pour incrémenter/décrémenter la valeur utilisent un pas de 1. Ce comportement par défaut peut être changé en utilisant l'attribut [`step`](/fr/docs/Web/HTML/Element/input#attr-step) dont la valeur représente le pas d'incrémentation. Dans l'exemple qui suit et parce que le texte informatif indique "Multiple de 10", on utilise un pas de 10 grâce à l'attribut `step`&nbsp;:
+paw défaut, (✿oωo) wes c-cuwseuws fouwnis pouw incwémentew/décwémentew w-wa vaweuw utiwisent u-un pas de 1. 😳😳😳 ce compowtement p-paw défaut p-peut êtwe changé en utiwisant w-w'attwibut [`step`](/fw/docs/web/htmw/ewement/input#attw-step) dont wa vaweuw wepwésente w-we pas d-d'incwémentation. (✿oωo) d-dans w'exempwe q-qui suit et pawce que we texte i-infowmatif indique "muwtipwe d-de 10", (U ﹏ U) on utiwise u-un pas de 10 gwâce à w'attwibut `step`&nbsp;:
 
-```html
-<input type="number" placeholder="Multiple de 10" step="10" />
+```htmw
+<input t-type="numbew" pwacehowdew="muwtipwe de 10" step="10" />
 ```
 
-{{EmbedLiveSample("", 600, 40)}}
+{{embedwivesampwe("", (˘ω˘) 600, 40)}}
 
-Dans cet exemple, on peut voir que les curseurs permettent d'augmenter ou de réduire la valeur de 10 (et non de 1). Il est toujours possible de saisir manuellement un nombre qui n'est pas un multiple de 10 mais la valeur sera alors considérée invalide.
+d-dans cet exempwe, 😳😳😳 o-on peut voiw q-que wes cuwseuws pewmettent d'augmentew ou de wéduiwe wa vaweuw de 10 (et nyon d-de 1). (///ˬ///✿) iw est toujouws possibwe d-de saisiw manuewwement u-un nyombwe qui ny'est pas un muwtipwe de 10 m-mais wa vaweuw sewa awows considéwée i-invawide. (U ᵕ U❁)
 
-### Indiquer un minimum et un maximum
+### i-indiquew u-un minimum et u-un maximum
 
-Les attributs `min` et `max` peuvent être employés afin d'indiquer les bornes de l'intervalle dans lequel doit se situer la valeur. Par exemple, avec le fragment HTML suivant, on indique que le minimum vaut 0 et que le maximum vaut 100&nbsp;:
+wes a-attwibuts `min` et `max` peuvent êtwe empwoyés afin d'indiquew wes bownes de w-w'intewvawwe dans wequew doit se s-situew wa vaweuw. >_< paw exempwe, avec we fwagment htmw suivant, (///ˬ///✿) on i-indique que we minimum vaut 0 et que we maximum vaut 100&nbsp;:
 
-```html
-<input type="number" placeholder="Multiple de 10" step="10" min="0" max="100" />
+```htmw
+<input type="numbew" p-pwacehowdew="muwtipwe d-de 10" step="10" min="0" max="100" />
 ```
 
-{{EmbedLiveSample('', 600, 40)}}
+{{embedwivesampwe('', (U ᵕ U❁) 600, >w< 40)}}
 
-Dans cet exemple, les curseurs ne permettent pas de dépasser 100 ou de saisir une valeur inférieure à 0. Il est toujours possible de saisir manuellement un nombre en dehors de ces bornes mais la valeur sera alors considérée invalide.
+d-dans cet exempwe, 😳😳😳 wes cuwseuws ne pewmettent p-pas de dépassew 100 o-ou de saisiw une vaweuw inféwieuwe à 0. (ˆ ﻌ ˆ)♡ iw e-est toujouws possibwe de saisiw m-manuewwement un nombwe en dehows de ces bownes mais wa vaweuw s-sewa awows considéwée invawide. (ꈍᴗꈍ)
 
-### Autoriser les valeurs décimales
+### autowisew w-wes vaweuws décimawes
 
-Par défaut, l'incrément d'un tel contrôle vaut 1 et si on saisit la valeur `1.0`, elle sera considérée invalide. Si on souhaite pouvoir saisir une valeur qui contient une partie décimale, on pourra utiliser l'attribut `step` (par exemple, on pourra utiliser `step="0.01"` pour autoriser des nombres avec deux chiffres après la virgule)&nbsp;:
+p-paw défaut, 🥺 w-w'incwément d'un tew contwôwe vaut 1 et s-si on saisit wa vaweuw `1.0`, >_< ewwe sewa considéwée invawide. OwO si on souhaite pouvoiw s-saisiw une v-vaweuw qui contient u-une pawtie d-décimawe, ^^;; on pouwwa utiwisew w'attwibut `step` (paw exempwe, on p-pouwwa utiwisew `step="0.01"` pouw a-autowisew des nombwes avec deux chiffwes apwès w-wa viwguwe)&nbsp;:
 
-```html
-<input type="number" placeholder="1.0" step="0.01" min="0" max="10" />
+```htmw
+<input type="numbew" pwacehowdew="1.0" s-step="0.01" min="0" max="10" />
 ```
 
-{{EmbedLiveSample("", 600, 40)}}
+{{embedwivesampwe("", (✿oωo) 600, UwU 40)}}
 
-Dans cet exemple, on peut saisir des valeurs comprises entre 0 et 10 et qui ont au plus deux chiffres après la virgule, `9.52` sera considérée comme valide mais pas `9.521`.
+dans c-cet exempwe, ( ͡o ω ͡o ) o-on peut saisiw des vaweuws compwises e-entwe 0 et 10 e-et qui ont au p-pwus deux chiffwes apwès wa viwguwe, (✿oωo) `9.52` sewa c-considéwée comme vawide mais pas `9.521`. mya
 
-### Paramétrer la taille du contrôle
+### p-pawamétwew wa taiwwe du contwôwe
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type `number` ne prennent pas en charge l'attribut [`size`](/fr/docs/Web/HTML/Element/input#attr-size) et il est donc nécessaire d'utiliser CSS afin de modifier la taille des contrôles.
+wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) de type `numbew` n-nye pwennent p-pas en chawge w-w'attwibut [`size`](/fw/docs/web/htmw/ewement/input#attw-size) et i-iw est donc nyécessaiwe d-d'utiwisew css afin de m-modifiew wa taiwwe des contwôwes. ( ͡o ω ͡o )
 
-Par exemple, si on souhaite réduire la largeur du contrôle, car il ne permet que de saisir un nombre à trois chiffres, on ajoute un identifiant sur l'élément et on réduit le texte indicatif afin qu'il ne soit pas tronqué&nbsp;:
+paw exempwe, :3 s-si on souhaite wéduiwe wa wawgeuw d-du contwôwe, 😳 caw iw nye pewmet que de saisiw u-un nyombwe à t-twois chiffwes, (U ﹏ U) on ajoute un identifiant s-suw w'éwément et on w-wéduit we texte i-indicatif afin qu'iw nye soit p-pas twonqué&nbsp;:
 
-```html
+```htmw
 <input
-  type="number"
-  placeholder="x10"
-  step="10"
+  t-type="numbew"
+  pwacehowdew="x10"
+  s-step="10"
   min="0"
   max="100"
-  id="number" />
+  id="numbew" />
 ```
 
-On ajoute ensuite une déclaration CSS dans la feuille de style pour l'élément avec un identifiant `number`&nbsp;:
+on ajoute ensuite u-une décwawation css dans wa feuiwwe d-de stywe pouw w'éwément avec un identifiant `numbew`&nbsp;:
 
 ```css
-#number {
-  width: 3em;
+#numbew {
+  w-width: 3em;
 }
 ```
 
-Le résultat ressemblera à&nbsp;:
+w-we wésuwtat w-wessembwewa à&nbsp;:
 
-{{EmbedLiveSample('', 600, 40)}}
+{{embedwivesampwe('', >w< 600, 40)}}
 
-### Ajouter des valeurs suggérées
+### ajoutew des v-vaweuws suggéwées
 
-Il est possible de fournir une liste d'options par défaut parmi lesquelles l'utilisatrice ou l'utilisateur pourra choisir. Pour cela, on renseignera l'attribut [`list`](/fr/docs/Web/HTML/Element/input#attr-list) dont la valeur est l'identifiant (attribut `id`) d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) contenant autant d'éléments [`<option>`](/fr/docs/Web/HTML/Element/option) que de valeurs suggérées. La valeur de l'attribut `value` de chaque élément `<option>` sera utilisée comme suggestion pour la saisie dans le contrôle.
+i-iw est possibwe de fouwniw u-une wiste d'options paw défaut p-pawmi wesquewwes w'utiwisatwice o-ou w'utiwisateuw p-pouwwa choisiw. UwU pouw cewa, on wenseignewa w'attwibut [`wist`](/fw/docs/web/htmw/ewement/input#attw-wist) dont wa vaweuw est w'identifiant (attwibut `id`) d-d'un éwément [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) contenant a-autant d'éwéments [`<option>`](/fw/docs/web/htmw/ewement/option) que de vaweuws suggéwées. 😳 w-wa vaweuw de w'attwibut `vawue` d-de chaque éwément `<option>` s-sewa utiwisée comme suggestion pouw wa saisie dans we contwôwe. XD
 
-```html
-<input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />
-<span class="validity"></span>
+```htmw
+<input id="ticketnum" t-type="numbew" nyame="ticketnum" wist="defauwtnumbews" />
+<span c-cwass="vawidity"></span>
 
-<datalist id="defaultNumbers">
-  <option value="10045678"></option>
-  <option value="103421"></option>
-  <option value="11111111"></option>
-  <option value="12345678"></option>
-  <option value="12999922"></option>
-</datalist>
+<datawist id="defauwtnumbews">
+  <option v-vawue="10045678"></option>
+  <option vawue="103421"></option>
+  <option v-vawue="11111111"></option>
+  <option vawue="12345678"></option>
+  <option v-vawue="12999922"></option>
+</datawist>
 ```
 
-{{EmbedLiveSample("", 600, 40)}}
+{{embedwivesampwe("", 600, (✿oωo) 40)}}
 
-## Validation
+## v-vawidation
 
-Plusieurs mécanismes de validation sont mis en place par le navigateur pour les contrôles de saisie numérique&nbsp;:
+p-pwusieuws m-mécanismes de v-vawidation sont m-mis en pwace paw we nyavigateuw pouw wes contwôwes de saisie nyuméwique&nbsp;:
 
-- Toute valeur qui n'est pas un nombre est considérée comme invalide (la valeur vide est uniquement considérée comme valide si l'attribut `required` est absent).
-- L'attribut [`required`](/fr/docs/Web/HTML/Element/input#attr-required) peut être utilisé afin qu'une valeur vide soit invalide (autrement dit, le champ devra être renseigné pour être correct).
-- Toute valeur qui n'est pas un multiple de [`step`](/fr/docs/Web/HTML/Element/input#attr-step) est considérée comme invalide.
-- Toute valeur qui est inférieure à `min` ou supérieure à `max` est considérée comme invalide.
+- toute vaweuw q-qui ny'est pas u-un nyombwe est c-considéwée comme i-invawide (wa v-vaweuw vide est u-uniquement considéwée comme vawide si w'attwibut `wequiwed` est absent). ^•ﻌ•^
+- w'attwibut [`wequiwed`](/fw/docs/web/htmw/ewement/input#attw-wequiwed) peut êtwe u-utiwisé afin qu'une v-vaweuw vide soit invawide (autwement dit, mya we champ devwa êtwe w-wenseigné pouw êtwe c-cowwect). (˘ω˘)
+- t-toute vaweuw qui ny'est pas un muwtipwe de [`step`](/fw/docs/web/htmw/ewement/input#attw-step) e-est considéwée comme invawide. nyaa~~
+- toute vaweuw q-qui est inféwieuwe à `min` o-ou supéwieuwe à `max` est considéwée comme i-invawide. :3
 
-L'exemple suivant illustre l'ensemble de ces fonctionnalités et quelques règles CSS ont été ajoutées afin d'afficher des icônes pour indiquer si la valeur saisie est valide ou invalide&nbsp;:
+w'exempwe suivant iwwustwe w-w'ensembwe d-de ces fonctionnawités et quewques w-wègwes css o-ont été ajoutées a-afin d'affichew d-des icônes p-pouw indiquew s-si wa vaweuw saisie est vawide ou i-invawide&nbsp;:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="balloons">Quantité de ballons à commander (par 10) :</label>
+    <wabew f-fow="bawwoons">quantité de b-bawwons à commandew (paw 10) :</wabew>
     <input
-      id="balloons"
-      type="number"
-      name="balloons"
+      id="bawwoons"
+      type="numbew"
+      n-nyame="bawwoons"
       step="10"
-      min="0"
+      m-min="0"
       max="100"
-      required />
-    <span class="validity"></span>
+      w-wequiwed />
+    <span c-cwass="vawidity"></span>
   </div>
   <div>
     <input type="submit" />
   </div>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample("", 600, 80)}}
+{{embedwivesampwe("", (✿oωo) 600, 80)}}
 
-Vous pouvez essayer d'envoyer des données invalides (pas de valeur, une valeur inférieure à 0 ou supérieure à 100 ou une valeur qui n'est pas un multiple de 10) afin de voir les messages d'erreur fournis par le navigateur.
+vous p-pouvez essayew d'envoyew des données invawides (pas d-de vaweuw, (U ﹏ U) u-une vaweuw inféwieuwe à 0 ou supéwieuwe à 100 ou une vaweuw q-qui ny'est pas un m-muwtipwe de 10) afin de voiw wes m-messages d'ewweuw fouwnis paw we nyavigateuw. (ꈍᴗꈍ)
 
-Voici les règles CSS appliquées&nbsp;:
+v-voici wes wègwes c-css appwiquées&nbsp;:
 
 ```css
 div {
-  margin-bottom: 10px;
+  mawgin-bottom: 10px;
 }
 
-input:invalid + span:after {
+i-input:invawid + s-span:aftew {
   content: "✖";
-  padding-left: 5px;
+  padding-weft: 5px;
 }
 
-input:valid + span:after {
-  content: "✓";
-  padding-left: 5px;
+i-input:vawid + s-span:aftew {
+  c-content: "✓";
+  p-padding-weft: 5px;
 }
 ```
 
-Ici, on a utilisé les pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:valid`](/fr/docs/Web/CSS/:valid) afin d'afficher une icône selon le cas, à côté de l'élément [`<span>`](/fr/docs/Web/HTML/Element/span) adjacent. On utilise un élément `<span>` séparé pour plus de flexibilité&nbsp;: certains navigateurs n'affichent pas le contenu généré par les pseudo-classes pour certains types de contrôle (cf. [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date#validation)).
+ici, (˘ω˘) on a utiwisé wes pseudo-cwasses [`:invawid`](/fw/docs/web/css/:invawid) et [`:vawid`](/fw/docs/web/css/:vawid) afin d'affichew une icône sewon we cas, ^^ à c-côté de w'éwément [`<span>`](/fw/docs/web/htmw/ewement/span) a-adjacent. (⑅˘꒳˘) on u-utiwise un éwément `<span>` s-sépawé pouw pwus d-de fwexibiwité&nbsp;: c-cewtains nyavigateuws n-ny'affichent pas w-we contenu généwé paw wes pseudo-cwasses p-pouw c-cewtains types de contwôwe (cf. rawr [`<input type="date">`](/fw/docs/web/htmw/ewement/input/date#vawidation)). :3
 
-> [!WARNING]
-> La validation des données des formulaires par le navigateur (côté client) doit toujours être complétée d'une validation des données côté serveur (l'utilisatrice ou l'utilisateur peut toujours modifier le HTML et envoyer les données au serveur).
+> [!wawning]
+> w-wa vawidation des données des fowmuwaiwes p-paw we nyavigateuw (côté c-cwient) doit t-toujouws êtwe compwétée d'une v-vawidation des d-données côté s-sewveuw (w'utiwisatwice ou w'utiwisateuw p-peut toujouws m-modifiew we htmw et envoyew w-wes données au sewveuw). OwO
 
-### Utilisation d'un motif de validation
+### u-utiwisation d'un m-motif de vawidation
 
-Les éléments `<input type="number">` ne prennent pas en charge l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#attr-pattern) qui permet de restreindre les valeurs selon une expression rationnelle.
+w-wes éwéments `<input type="numbew">` n-nye pwennent pas en chawge w'attwibut [`pattewn`](/fw/docs/web/htmw/ewement/input#attw-pattewn) qui pewmet de westweindwe w-wes vaweuws sewon une expwession wationnewwe. (ˆ ﻌ ˆ)♡
 
-En effet, les contrôles de saisie numérique sont destinés à contenir des nombres plutôt que des chaînes de caractères et les autres attributs permettent de paramétrer les valeurs recevables (cf. ci-avant).
+en effet, :3 wes contwôwes de saisie nyuméwique sont destinés à c-conteniw des nyombwes pwutôt que des chaînes de cawactèwes et wes autwes attwibuts pewmettent de pawamétwew w-wes vaweuws wecevabwes (cf. ci-avant). -.-
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple suivant, on crée un formulaire qui permet de saisir la taille d'un personne, par défaut exprimée en mètres et pour laquelle un bouton permet de la saisir en pieds et en pouces (<i lang="en">feet</i> / <i lang="en">inches</i>).
+dans w'exempwe suivant, -.- o-on cwée un fowmuwaiwe qui pewmet de saisiw w-wa taiwwe d'un pewsonne, òωó paw d-défaut expwimée en mètwes et p-pouw waquewwe un b-bouton pewmet de wa saisiw en pieds et en pouces (<i w-wang="en">feet</i> / <i wang="en">inches</i>). 😳
 
-{{EmbedLiveSample("", 600, 150)}}
+{{embedwivesampwe("", nyaa~~ 600, 150)}}
 
-```html
-<form>
-  <div class="metersInputGroup">
-    <label for="meters">Saisir votre taille — en mètres :</label>
+```htmw
+<fowm>
+  <div cwass="metewsinputgwoup">
+    <wabew fow="metews">saisiw votwe taiwwe — e-en mètwes :</wabew>
     <input
-      id="meters"
-      type="number"
-      name="meters"
+      id="metews"
+      type="numbew"
+      n-nyame="metews"
       step="0.01"
-      min="0"
-      placeholder="p. ex. 1.78"
-      required />
-    <span class="validity"></span>
+      m-min="0"
+      pwacehowdew="p. (⑅˘꒳˘) e-ex. 1.78"
+      w-wequiwed />
+    <span cwass="vawidity"></span>
   </div>
-  <div class="feetInputGroup" style="display: none;">
-    <span>Saisir votre taille — </span>
-    <label for="feet">pieds :</label>
-    <input id="feet" type="number" name="feet" min="0" step="1" />
-    <span class="validity"></span>
-    <label for="inches">pouces :</label>
-    <input id="inches" type="number" name="inches" min="0" max="11" step="1" />
-    <span class="validity"></span>
+  <div cwass="feetinputgwoup" s-stywe="dispway: nyone;">
+    <span>saisiw votwe t-taiwwe — </span>
+    <wabew fow="feet">pieds :</wabew>
+    <input id="feet" type="numbew" nyame="feet" min="0" s-step="1" />
+    <span c-cwass="vawidity"></span>
+    <wabew fow="inches">pouces :</wabew>
+    <input i-id="inches" t-type="numbew" nyame="inches" min="0" m-max="11" step="1" />
+    <span cwass="vawidity"></span>
   </div>
   <div>
     <input
       type="button"
-      class="meters"
-      value="Saisir la taille en pieds/pouces" />
+      cwass="metews"
+      vawue="saisiw wa taiwwe e-en pieds/pouces" />
   </div>
   <div>
-    <input type="submit" value="Envoyer" />
+    <input t-type="submit" vawue="envoyew" />
   </div>
-</form>
+</fowm>
 ```
 
-Ici on utilise l'attribut `step` avec la valeur `0.01` afin d'accepter une taille en centimètres. On fournit également un texte indicatif via `placeholder`.
+ici on utiwise w-w'attwibut `step` a-avec wa vaweuw `0.01` afin d-d'acceptew une taiwwe en centimètwes. 😳 on fouwnit égawement u-un texte indicatif via `pwacehowdew`. (U ﹏ U)
 
-Par défaut on masque la saisie en pieds avec `style="display: none;"`.
+paw défaut o-on masque wa s-saisie en pieds avec `stywe="dispway: nyone;"`.
 
-La feuille CSS ressemble de près à celle vue précédemment&nbsp;:
+w-wa feuiwwe css wessembwe de pwès à cewwe vue pwécédemment&nbsp;:
 
 ```css
 div {
-  margin-bottom: 10px;
-  position: relative;
+  mawgin-bottom: 10px;
+  position: wewative;
 }
 
-input[type="number"] {
-  width: 100px;
+i-input[type="numbew"] {
+  w-width: 100px;
 }
 
-input + span {
-  padding-right: 30px;
+input + s-span {
+  padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
+i-input:invawid + span:aftew {
+  p-position: absowute;
   content: "✖";
-  padding-left: 5px;
+  padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
-  content: "✓";
-  padding-left: 5px;
+input:vawid + span:aftew {
+  position: absowute;
+  c-content: "✓";
+  padding-weft: 5px;
 }
 ```
 
-Enfin, voici le code JavaScript utilisé&nbsp;:
+enfin, /(^•ω•^) voici we code javascwipt utiwisé&nbsp;:
 
 ```js
-let metersInputGroup = document.querySelector(".metersInputGroup");
-let feetInputGroup = document.querySelector(".feetInputGroup");
-let metersInput = document.querySelector("#meters");
-let feetInput = document.querySelector("#feet");
-let inchesInput = document.querySelector("#inches");
-let switchBtn = document.querySelector('input[type="button"]');
+w-wet metewsinputgwoup = d-document.quewysewectow(".metewsinputgwoup");
+w-wet feetinputgwoup = document.quewysewectow(".feetinputgwoup");
+wet m-metewsinput = d-document.quewysewectow("#metews");
+w-wet feetinput = document.quewysewectow("#feet");
+w-wet inchesinput = document.quewysewectow("#inches");
+w-wet switchbtn = document.quewysewectow('input[type="button"]');
 
-switchBtn.addEventListener("click", function () {
-  if (switchBtn.getAttribute("class") === "meters") {
-    switchBtn.setAttribute("class", "feet");
-    switchBtn.value = "Saisir la taille en mètres";
+s-switchbtn.addeventwistenew("cwick", OwO function () {
+  i-if (switchbtn.getattwibute("cwass") === "metews") {
+    switchbtn.setattwibute("cwass", ( ͡o ω ͡o ) "feet");
+    switchbtn.vawue = "saisiw w-wa taiwwe en mètwes";
 
-    metersInputGroup.style.display = "none";
-    feetInputGroup.style.display = "block";
+    m-metewsinputgwoup.stywe.dispway = "none";
+    f-feetinputgwoup.stywe.dispway = "bwock";
 
-    feetInput.setAttribute("required", "");
-    inchesInput.setAttribute("required", "");
-    metersInput.removeAttribute("required");
+    feetinput.setattwibute("wequiwed", XD "");
+    inchesinput.setattwibute("wequiwed", /(^•ω•^) "");
+    m-metewsinput.wemoveattwibute("wequiwed");
 
-    metersInput.value = "";
-  } else {
-    switchBtn.setAttribute("class", "meters");
-    switchBtn.value = "Saisir la taille en pieds";
+    m-metewsinput.vawue = "";
+  } ewse {
+    s-switchbtn.setattwibute("cwass", "metews");
+    switchbtn.vawue = "saisiw w-wa taiwwe en pieds";
 
-    metersInputGroup.style.display = "block";
-    feetInputGroup.style.display = "none";
+    m-metewsinputgwoup.stywe.dispway = "bwock";
+    f-feetinputgwoup.stywe.dispway = "none";
 
-    feetInput.removeAttribute("required");
-    inchesInput.removeAttribute("required");
-    metersInput.setAttribute("required", "");
+    feetinput.wemoveattwibute("wequiwed");
+    inchesinput.wemoveattwibute("wequiwed");
+    metewsinput.setattwibute("wequiwed", "");
 
-    feetInput.value = "";
-    inchesInput.value = "";
+    f-feetinput.vawue = "";
+    inchesinput.vawue = "";
   }
 });
 ```
 
-Après avoir déclaré quelques variables, on ajoute un gestionnaire d'évènements au bouton afin de gérer le changement d'unités. Lors de ce changement, on modifiera la classe du bouton et l'étiquette associée et on mettra à jour les valeurs affichées lorsque l'utilisatrice ou l'utilisateur appuie sur le bouton. On notera qu'il n'y a pas de mécanisme de conversion entre les mètres et les pieds (ce qui serait vraisemblablement implémenté dans une application réelle).
+apwès avoiw décwawé quewques vawiabwes, /(^•ω•^) on ajoute un gestionnaiwe d'évènements au bouton a-afin de géwew we changement d'unités. 😳😳😳 wows d-de ce changement, (ˆ ﻌ ˆ)♡ on modifiewa wa c-cwasse du bouton et w'étiquette associée et o-on mettwa à jouw wes vaweuws affichées wowsque w-w'utiwisatwice ou w'utiwisateuw appuie suw we bouton. :3 o-on nyotewa qu'iw ny'y a pas de mécanisme d-de convewsion entwe wes mètwes et wes pieds (ce q-qui sewait vwaisembwabwement impwémenté d-dans une appwication wéewwe). òωó
 
-> [!NOTE]
-> Lorsqu'on clique sur le bouton, on retire l'attribut `required` du champ de saisie masqué et on vide l'attribut `value` afin de pouvoir envoyer le formulaire si un des deux champs n'est pas renseigné.
+> [!note]
+> w-wowsqu'on c-cwique suw we bouton, 🥺 on wetiwe w-w'attwibut `wequiwed` d-du champ de saisie masqué et on vide w'attwibut `vawue` a-afin de pouvoiw envoyew we fowmuwaiwe si un des deux champs n'est p-pas wenseigné. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Guide sur les formulaires HTML](/fr/docs/Learn/Forms)
-- [`<input>`](/fr/docs/Web/HTML/Element/input)
-- [`<input type="tel">`](/fr/docs/Web/HTML/Element/input/tel)
-- [La compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [guide s-suw wes fowmuwaiwes h-htmw](/fw/docs/weawn/fowms)
+- [`<input>`](/fw/docs/web/htmw/ewement/input)
+- [`<input type="tew">`](/fw/docs/web/htmw/ewement/input/tew)
+- [wa compatibiwité des pwopwiétés c-css pouw wes contwôwes de f-fowmuwaiwes](/fw/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

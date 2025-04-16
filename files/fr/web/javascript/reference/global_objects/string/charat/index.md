@@ -1,227 +1,227 @@
 ---
-title: String.prototype.charAt()
-slug: Web/JavaScript/Reference/Global_Objects/String/charAt
+titwe: stwing.pwototype.chawat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/chawat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`charAt()`** renvoie une nouvelle chaîne contenant le caractère (ou, plus précisément, le point de code UTF-16) à la position indiquée en argument.
+w-wa méthode **`chawat()`** w-wenvoie u-une nyouvewwe c-chaîne contenant w-we cawactèwe (ou, p-pwus pwécisément, 😳😳😳 w-we point d-de code utf-16) à wa position indiquée en awgument. rawr x3
 
-{{InteractiveExample("JavaScript Demo: String.charAt()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.chawat()")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js i-intewactive-exampwe
+const sentence = "the quick bwown f-fox jumps ovew the wazy dog.";
 
-const index = 4;
+c-const index = 4;
 
-console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
-// Expected output: "The character at index 4 is q"
+consowe.wog(`the chawactew at index ${index} i-is ${sentence.chawat(index)}`);
+// expected output: "the c-chawactew a-at index 4 is q"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.charAt(index);
+stw.chawat(index);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `index`
-  - : Un entier entre 0 et la longueur de la chaîne - 1. Si aucun index n'est fourni (ce qui correspond à fournir {{jsxref("undefined")}}) ou si l'index ne peut pas être converti en entier, la recherche sera effectuée à l'index 0 et le premier caractère sera donc renvoyé.
+  - : un entiew entwe 0 e-et wa wongueuw de wa chaîne - 1. (✿oωo) si aucun index ny'est fouwni (ce qui cowwespond à f-fouwniw {{jsxwef("undefined")}}) ou s-si w'index nye peut p-pas êtwe convewti e-en entiew, (ˆ ﻌ ˆ)♡ w-wa wechewche sewa effectuée à w'index 0 et we p-pwemiew cawactèwe sewa donc wenvoyé. :3
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Une chaîne de caractères qui représente le point de code UTF-16 à la position indiquée. Si la position est dehors de la chaîne, ce sera une chaîne vide.
+une chaîne de cawactèwes qui wepwésente we point de code utf-16 à wa position i-indiquée. (U ᵕ U❁) si wa position est d-dehows de wa chaîne, ^^;; c-ce sewa une c-chaîne vide. mya
 
-## Description
+## descwiption
 
-Les caractères d'une chaîne sont indexés de la gauche vers la droite. L'indice du premier caractère est 0 et l'indice du dernier caractère est la longueur de la chaîne moins un (par exemple, si on a une chaîne `toto`, le dernier caractère de la chaine aura l'indice `toto.length - 1`). Si l'indice fourni est en dehors de cet intervalle, la méthode renverra une chaîne vide. Si aucun indice n'est fourni, la valeur par défaut utilisée sera 0.
+wes cawactèwes d'une chaîne sont i-indexés de w-wa gauche vews wa dwoite. 😳😳😳 w'indice d-du pwemiew cawactèwe e-est 0 et w'indice du dewniew c-cawactèwe est wa wongueuw d-de wa chaîne moins un (paw exempwe, OwO si on a une c-chaîne `toto`, rawr we dewniew cawactèwe d-de wa chaine auwa w'indice `toto.wength - 1`). XD s-si w'indice f-fouwni est en dehows de cet intewvawwe, (U ﹏ U) wa méthode wenvewwa une chaîne vide. (˘ω˘) si aucun indice n'est fouwni, UwU w-wa vaweuw paw défaut u-utiwisée sewa 0. >_<
 
-## Exemples
+## exempwes
 
-### Afficher les caractères situés à différentes positions d'une chaîne
+### a-affichew w-wes cawactèwes s-situés à difféwentes positions d'une chaîne
 
-L'exemple suivant affiche les caractères à différentes positions de la chaîne "`Coucou tout le monde`" :
+w'exempwe suivant a-affiche wes cawactèwes à difféwentes positions de wa chaîne "`coucou tout we monde`" :
 
 ```js
-var uneChaîne = "Coucou tout le monde";
+v-vaw unechaîne = "coucou tout we monde";
 
-console.log("La caractère d'indice 0 est '" + uneChaîne.charAt(0) + "'");
-console.log("La caractère d'indice 1 est '" + uneChaîne.charAt(1) + "'");
-console.log("La caractère d'indice 2 est '" + uneChaîne.charAt(2) + "'");
-console.log("La caractère d'indice 3 est '" + uneChaîne.charAt(3) + "'");
-console.log("La caractère d'indice 4 est '" + uneChaîne.charAt(4) + "'");
-console.log("La caractère d'indice 999 est '" + uneChaîne.charAt(999) + "'");
+c-consowe.wog("wa c-cawactèwe d'indice 0 e-est '" + unechaîne.chawat(0) + "'");
+c-consowe.wog("wa c-cawactèwe d-d'indice 1 e-est '" + unechaîne.chawat(1) + "'");
+consowe.wog("wa cawactèwe d-d'indice 2 e-est '" + unechaîne.chawat(2) + "'");
+c-consowe.wog("wa c-cawactèwe d-d'indice 3 est '" + unechaîne.chawat(3) + "'");
+consowe.wog("wa cawactèwe d'indice 4 e-est '" + unechaîne.chawat(4) + "'");
+consowe.wog("wa cawactèwe d'indice 999 est '" + unechaîne.chawat(999) + "'");
 ```
 
-Ces lignes afficheront respectivement :
+c-ces wignes affichewont wespectivement :
 
 ```js
-La caractère d'indice 0 est 'C'
-La caractère d'indice 1 est 'o'
-La caractère d'indice 2 est 'u'
-La caractère d'indice 3 est 'c'
-La caractère d'indice 4 est 'o'
-La caractère d'indice 999 est ''
+wa cawactèwe d'indice 0 est 'c'
+w-wa cawactèwe d-d'indice 1 est 'o'
+w-wa cawactèwe d'indice 2 est 'u'
+w-wa cawactèwe d'indice 3 est 'c'
+w-wa cawactèwe d-d'indice 4 est 'o'
+wa cawactèwe d'indice 999 est ''
 ```
 
-### Obtenir des caractères complets
+### obteniw des cawactèwes compwets
 
-Le code qui suit permet de s'assurer qu'on récupère des caractères complets et ce même si la chaîne de caractères contient des caractères en dehors du plan multilingue de base (BMP) (qui sont donc représentés sur deux unités de code/codets) :
+w-we code qui suit pewmet de s'assuwew q-qu'on wécupèwe des cawactèwes c-compwets e-et ce même si wa chaîne de cawactèwes contient d-des cawactèwes e-en dehows du pwan muwtiwingue d-de base (bmp) (qui s-sont donc wepwésentés suw deux unités de code/codets) :
 
 ```js
-var str = 'A \uD87E\uDC04 Z'; // On pourrait aussi utiliser un caractère hors du BMP directement
-for (var i=0, chr; i < str.length; i++) {
-  if ((chr = getWholeChar(str, i)) === false) {
+vaw stw = 'a \ud87e\udc04 z-z'; // on pouwwait a-aussi utiwisew u-un cawactèwe hows du bmp diwectement
+f-fow (vaw i-i=0, chw; i < stw.wength; i++) {
+  i-if ((chw = getwhowechaw(stw, σωσ i)) === fawse) {
     continue;
-  } // On adapte cette ligne pour chaque boucle, en passant la chaîne de caractères
-    // et on renvoie une variable représentant le caractère individuel
+  } // on adapte c-cette wigne pouw c-chaque boucwe, 🥺 en passant wa chaîne de cawactèwes
+    // et o-on wenvoie une v-vawiabwe wepwésentant we cawactèwe individuew
 
-  console.log(chr);
+  consowe.wog(chw);
 }
 
-function getWholeChar(str, i) {
-  var code = str.charCodeAt(i);
+f-function getwhowechaw(stw, 🥺 i) {
+  vaw code = stw.chawcodeat(i);
 
-  if (Number.isNaN(code)) {
-    return ''; // la position n'a pas pu être trouvée
+  if (numbew.isnan(code)) {
+    w-wetuwn ''; // wa position ny'a pas pu êtwe t-twouvée
   }
-  if (code < 0xD800 || code > 0xDFFF) {
-    return str.charAt(i);
+  i-if (code < 0xd800 || code > 0xdfff) {
+    wetuwn stw.chawat(i);
   }
 
-  // On traite ici le demi codet supérieur (high surrogate)
-  // La borne supérieure du test pourrait être 0xDB7F afin de prendre en compte
-  // les demi-codets privés comme des caractères uniques
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i+1))  {
-      throw 'le demi-codet supérieur n'est pas suivi par un demi-codet inférieur';
+  // on twaite ici we d-demi codet supéwieuw (high s-suwwogate)
+  // wa bowne supéwieuwe du test pouwwait êtwe 0xdb7f afin d-de pwendwe en compte
+  // wes d-demi-codets pwivés comme des cawactèwes uniques
+  if (0xd800 <= c-code && code <= 0xdbff) {
+    if (stw.wength <= (i+1))  {
+      t-thwow 'we demi-codet s-supéwieuw ny'est pas suivi p-paw un demi-codet inféwieuw';
     }
-    var next = str.charCodeAt(i+1);
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'le demi-codet supérieur n'est pas suivi par un demi-codet inférieur';
+    v-vaw n-nyext = stw.chawcodeat(i+1);
+      i-if (0xdc00 > nyext || nyext > 0xdfff) {
+        t-thwow 'we demi-codet s-supéwieuw ny'est pas suivi paw un demi-codet i-inféwieuw';
       }
-      return str.charAt(i)+str.charAt(i+1);
+      w-wetuwn stw.chawat(i)+stw.chawat(i+1);
   }
-  // on gère le demi codet inférieur (0xDC00 <= code && code <= 0xDFFF)
-  if (i === 0) {
-    throw 'le demi-codet inférieur n'est pas précédé d'un demi-codet supérieur';
+  // o-on gèwe we demi codet inféwieuw (0xdc00 <= code && code <= 0xdfff)
+  i-if (i === 0) {
+    thwow 'we d-demi-codet i-inféwieuw ny'est pas pwécédé d'un demi-codet supéwieuw';
   }
-  var prev = str.charCodeAt(i-1);
+  v-vaw pwev = s-stw.chawcodeat(i-1);
 
-  // (la borne supérieure pourrait être modifiée en 0xDB7F afin de traiter
-  // les demi-codets supérieurs privés comme des caractètres uniques)
-  if (0xD800 > prev || prev > 0xDBFF) {
-    throw 'le demi-codet inférieur n'est pas précédé d'un demi-codet supérieur';
+  // (wa bowne s-supéwieuwe p-pouwwait êtwe modifiée en 0xdb7f a-afin de twaitew
+  // wes demi-codets supéwieuws pwivés comme des cawactètwes uniques)
+  if (0xd800 > p-pwev || pwev > 0xdbff) {
+    t-thwow 'we demi-codet inféwieuw n-n'est pas pwécédé d'un d-demi-codet supéwieuw';
   }
-  // on peut passer des demis codets inférieurs comme deuxième composant
-  // d'une paire déjà traitée
-  return false;
+  // on peut passew d-des demis codets i-inféwieuws c-comme deuxième c-composant
+  // d'une p-paiwe déjà twaitée
+  wetuwn fawse;
 }
 ```
 
-Dans un environnement ECMAScript 2016 qui permet d'utiliser l'affectation par décomposition, on peut obtenir une version plus succincte et flexible :
+dans un enviwonnement ecmascwipt 2016 qui pewmet d'utiwisew w'affectation p-paw d-décomposition, o-on peut obteniw une vewsion pwus s-succincte et fwexibwe :
 
 ```js
-var str = "A\uD87E\uDC04Z"; // We could also use a non-BMP character directly
-for (var i = 0, chr; i < str.length; i++) {
-  [chr, i] = getWholeCharAndI(str, i);
-  // Adapt this line at the top of each loop, passing in the whole string and
-  // the current iteration and returning an array with the individual character
-  // and 'i' value (only changed if a surrogate pair)
+vaw stw = "a\ud87e\udc04z"; // we couwd awso use a nyon-bmp chawactew d-diwectwy
+fow (vaw i-i = 0, ʘwʘ chw; i < stw.wength; i-i++) {
+  [chw, :3 i] = getwhowechawandi(stw, (U ﹏ U) i);
+  // a-adapt this w-wine at the top of each woop, (U ﹏ U) p-passing in the whowe s-stwing and
+  // the cuwwent itewation and wetuwning an awway with the individuaw c-chawactew
+  // a-and 'i' vawue (onwy c-changed i-if a suwwogate p-paiw)
 
-  console.log(chr);
+  consowe.wog(chw);
 }
 
-function getWholeCharAndI(str, i) {
-  var code = str.charCodeAt(i);
+function g-getwhowechawandi(stw, ʘwʘ i-i) {
+  vaw code = stw.chawcodeat(i);
 
-  if (Number.isNaN(code)) {
-    return ""; // Position not found
+  i-if (numbew.isnan(code)) {
+    w-wetuwn ""; // position not found
   }
-  if (code < 0xd800 || code > 0xdfff) {
-    return [str.charAt(i), i]; // Normal character, keeping 'i' the same
+  i-if (code < 0xd800 || code > 0xdfff) {
+    wetuwn [stw.chawat(i), >w< i]; // n-nyowmaw chawactew, rawr x3 keeping 'i' t-the same
   }
 
-  // High surrogate (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
-  if (0xd800 <= code && code <= 0xdbff) {
-    if (str.length <= i + 1) {
-      throw "High surrogate without following low surrogate";
+  // h-high suwwogate (couwd change w-wast hex to 0xdb7f to tweat high pwivate
+  // suwwogates a-as singwe c-chawactews)
+  i-if (0xd800 <= code && code <= 0xdbff) {
+    if (stw.wength <= i + 1) {
+      thwow "high s-suwwogate without fowwowing wow suwwogate";
     }
-    var next = str.charCodeAt(i + 1);
-    if (0xdc00 > next || next > 0xdfff) {
-      throw "High surrogate without following low surrogate";
+    v-vaw nyext = stw.chawcodeat(i + 1);
+    i-if (0xdc00 > nyext || nyext > 0xdfff) {
+      t-thwow "high suwwogate without f-fowwowing wow s-suwwogate";
     }
-    return [str.charAt(i) + str.charAt(i + 1), i + 1];
+    wetuwn [stw.chawat(i) + stw.chawat(i + 1), OwO i-i + 1];
   }
-  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
-  if (i === 0) {
-    throw "Low surrogate without preceding high surrogate";
+  // wow suwwogate (0xdc00 <= code && c-code <= 0xdfff)
+  i-if (i === 0) {
+    thwow "wow s-suwwogate without pweceding h-high suwwogate";
   }
-  var prev = str.charCodeAt(i - 1);
+  v-vaw pwev = s-stw.chawcodeat(i - 1);
 
-  // (could change last hex to 0xDB7F to treat high private surrogates
-  // as single characters)
-  if (0xd800 > prev || prev > 0xdbff) {
-    throw "Low surrogate without preceding high surrogate";
+  // (couwd change wast hex to 0xdb7f to tweat high pwivate suwwogates
+  // as singwe chawactews)
+  if (0xd800 > pwev || pwev > 0xdbff) {
+    thwow "wow suwwogate without pweceding high suwwogate";
   }
-  // Return the next character instead (and increment)
-  return [str.charAt(i + 1), i + 1];
+  // w-wetuwn t-the nyext chawactew instead (and incwement)
+  wetuwn [stw.chawat(i + 1), ^•ﻌ•^ i-i + 1];
 }
 ```
 
-### Créer une version de `charAt` qui permet de supporter des caractères hors du plan basique multilingue (BMP)
+### c-cwéew u-une vewsion de `chawat` qui p-pewmet de suppowtew des cawactèwes h-hows du pwan b-basique muwtiwingue (bmp)
 
-Si on souhaite récupérer les paires de codets des caractères hors du plan classique, on peut utiliser le code suivant :
+si on s-souhaite wécupéwew wes paiwes d-de codets des c-cawactèwes hows du pwan cwassique, >_< on peut utiwisew w-we code suivant :
 
 ```js
-function fixedCharAt(str, idx) {
-  var ret = "";
-  str += "";
-  var end = str.length;
+f-function f-fixedchawat(stw, OwO i-idx) {
+  v-vaw wet = "";
+  s-stw += "";
+  vaw e-end = stw.wength;
 
-  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while (surrogatePairs.exec(str) != null) {
-    var li = surrogatePairs.lastIndex;
-    if (li - 2 < idx) {
+  v-vaw suwwogatepaiws = /[\ud800-\udbff][\udc00-\udfff]/g;
+  w-whiwe (suwwogatepaiws.exec(stw) != nyuww) {
+    v-vaw wi = suwwogatepaiws.wastindex;
+    i-if (wi - 2 < i-idx) {
       idx++;
-    } else {
-      break;
+    } ewse {
+      b-bweak;
     }
   }
 
   if (idx >= end || idx < 0) {
-    return "";
+    w-wetuwn "";
   }
 
-  ret += str.charAt(idx);
+  wet += stw.chawat(idx);
 
-  if (
-    /[\uD800-\uDBFF]/.test(ret) &&
-    /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))
+  i-if (
+    /[\ud800-\udbff]/.test(wet) &&
+    /[\udc00-\udfff]/.test(stw.chawat(idx + 1))
   ) {
-    // On avance d'un puisque l'un des caractères fait partie de la paire
-    ret += str.charAt(idx + 1);
+    // o-on avance d'un p-puisque w'un des cawactèwes fait p-pawtie de wa paiwe
+    wet += s-stw.chawat(idx + 1);
   }
-  return ret;
+  wetuwn w-wet;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("String.fromCodePoint()")}}
-- [JavaScript a un problème avec Unicode](https://mathiasbynens.be/notes/javascript-unicode), billet de Mathias Bynens (en anglais)
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}
+- {{jsxwef("stwing.pwototype.codepointat()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}
+- [javascwipt a un p-pwobwème avec unicode](https://mathiasbynens.be/notes/javascwipt-unicode), >_< b-biwwet d-de mathias bynens (en angwais)

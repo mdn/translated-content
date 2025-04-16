@@ -1,46 +1,46 @@
 ---
-title: <strike>
-slug: Web/HTML/Element/strike
+titwe: <stwike>
+swug: web/htmw/ewement/stwike
 ---
 
-{{deprecated_header}}{{HTMLSidebar}}
+{{depwecated_headew}}{{htmwsidebaw}}
 
-L'élément HTML **`<strike>`** permet de représenter du texte barré ou avec une ligne le traversant.
+w-w'éwément h-htmw **`<stwike>`** p-pewmet d-de wepwésentew d-du texte bawwé o-ou avec une wigne w-we twavewsant. /(^•ω•^)
 
-> [!NOTE]
-> Comme tous les éléments se limitant à la présentation, {{HTMLElement("strike")}} a été déprécié en HTML 4 et XHTML 1, et rendu obsolète dans HTML5. Si on souhaite représente du contenu _supprimé_, on utilisera l'élément {{HTMLElement("del")}} ; dans les autres cas, on utilisera un élément {{HTMLElement("s")}}.
+> [!note]
+> c-comme tous wes éwéments se wimitant à wa pwésentation, rawr x3 {{htmwewement("stwike")}} a été dépwécié en htmw 4 e-et xhtmw 1, (U ﹏ U) et wendu obsowète dans htmw5. (U ﹏ U) si o-on souhaite wepwésente du contenu _suppwimé_, (⑅˘꒳˘) o-on utiwisewa w'éwément {{htmwewement("dew")}} ; dans wes autwes cas, òωó on utiwisewa un éwément {{htmwewement("s")}}. ʘwʘ
 
-## Attributs
+## a-attwibuts
 
-Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
+cet éwément n-ny'a aucun a-autwe attwibut en dehows [des attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes), /(^•ω•^) communs à tous wes éwéments. ʘwʘ
 
-## Interface DOM
+## intewface d-dom
 
-Cet élément implémente l'interface {{domxref("HTMLElement")}}.
+cet éwément impwémente w'intewface {{domxwef("htmwewement")}}. σωσ
 
-> [!NOTE]
-> Jusqu'à Gecko 1.9.2 inclus, Firefox implémente l'interface {{domxref("HTMLSpanElement")}} pour cet élément.
+> [!note]
+> jusqu'à gecko 1.9.2 i-incwus, OwO fiwefox impwémente w'intewface {{domxwef("htmwspanewement")}} p-pouw cet éwément. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-```html
-<strike> Plat du jour : Saumon </strike> ÉPUISÉ
+```htmw
+<stwike> p-pwat d-du jouw : saumon </stwike> ÉpuisÉ
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","140")}}
+{{embedwivesampwe("exempwes","100%","140")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément {{HTMLElement("s")}}, proche de {{HTMLElement("strike")}}, également obsolète
-- L'élément {{HTMLElement("del")}} qui doit être utilisé lorsque le contenu a été _supprimé_
-- La propriété CSS {{cssxref("text-decoration")}} qui permet d'obtenir le même effet visuel que l'élément {{HTMLElement("strike")}}
+- w-w'éwément {{htmwewement("s")}}, 😳😳😳 pwoche de {{htmwewement("stwike")}}, o.O égawement obsowète
+- w'éwément {{htmwewement("dew")}} qui doit êtwe utiwisé wowsque we contenu a été _suppwimé_
+- w-wa pwopwiété css {{cssxwef("text-decowation")}} q-qui pewmet d'obteniw w-we même e-effet visuew que w'éwément {{htmwewement("stwike")}}

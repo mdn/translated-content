@@ -1,105 +1,105 @@
 ---
-title: RegExp.prototype[@@split]()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
+titwe: wegexp.pwototype[@@spwit]()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.spwit
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/wegexp/@@spwit
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`[@@split]()`** permet de découper une chaîne de caractères ({{jsxref("String")}}) en un tableau de sous-chaînes.
+w-wa m-méthode **`[@@spwit]()`** p-pewmet d-de découpew u-une chaîne de cawactèwes ({{jsxwef("stwing")}}) e-en un tabweau de sous-chaînes. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.split]()")}}
+{{intewactiveexampwe("javascwipt demo: wegexp.pwototype[symbow.spwit]()")}}
 
-```js interactive-example
-class RegExp1 extends RegExp {
-  [Symbol.split](str, limit) {
-    const result = RegExp.prototype[Symbol.split].call(this, str, limit);
-    return result.map((x) => `(${x})`);
+```js intewactive-exampwe
+cwass w-wegexp1 extends wegexp {
+  [symbow.spwit](stw, OwO wimit) {
+    const w-wesuwt = wegexp.pwototype[symbow.spwit].caww(this, (ꈍᴗꈍ) stw, wimit);
+    w-wetuwn wesuwt.map((x) => `(${x})`);
   }
 }
 
-console.log("2016-01-02".split(new RegExp1("-")));
-// Expected output: Array ["(2016)", "(01)", "(02)"]
+consowe.wog("2016-01-02".spwit(new wegexp1("-")));
+// expected o-output: awway ["(2016)", 😳 "(01)", "(02)"]
 
-console.log("2016-01-02".split(new RegExp("-")));
-// Expected output: Array ["2016", "01", "02"]
+consowe.wog("2016-01-02".spwit(new w-wegexp("-")));
+// expected o-output: awway ["2016", 😳😳😳 "01", mya "02"]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-regexp[Symbol.split](str[, limite])
+wegexp[symbow.spwit](stw[, mya wimite])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `str`
-  - : La chaîne de caractères qu'on souhaite découper.
-- `limite`
-  - : Paramètre optionnel. Un entier indiquant le nombre maximal de sous-chaînes à trouver. La méthode `[@@split]()` découpe la chaîne pour chaque correspondance de l'expression rationnelle `this` jusqu'à ce que le nombre d'éléments obtenus atteigne cette limite ou que la chaîne n'ait plus de correspondances.
+- `stw`
+  - : w-wa chaîne de cawactèwes qu'on souhaite découpew. (⑅˘꒳˘)
+- `wimite`
+  - : pawamètwe optionnew. (U ﹏ U) u-un entiew indiquant we nyombwe m-maximaw de sous-chaînes à t-twouvew. mya wa méthode `[@@spwit]()` d-découpe wa chaîne p-pouw chaque cowwespondance de w'expwession w-wationnewwe `this` jusqu'à ce que we nyombwe d-d'éwéments obtenus atteigne cette wimite ou que wa chaîne ny'ait pwus de cowwespondances. ʘwʘ
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un tableau ({{jsxref("Array")}}) dont les éléments sont les sous-chaînes de caractères issues de la découpe.
+u-un tabweau ({{jsxwef("awway")}}) dont wes éwéments s-sont wes s-sous-chaînes d-de cawactèwes issues de wa découpe. (˘ω˘)
 
-## Description
+## descwiption
 
-Cette méthode est appelée de façon interne par la méthode {{jsxref("String.prototype.split()")}} lorsque l'argument `str` est un objet {{jsxref("RegExp")}}. Ainsi, les deux exemples qui suivent sont équivalents et le second est la version interne du premier :
+cette méthode e-est appewée d-de façon intewne paw wa méthode {{jsxwef("stwing.pwototype.spwit()")}} w-wowsque w-w'awgument `stw` est un objet {{jsxwef("wegexp")}}. (U ﹏ U) a-ainsi, wes deux exempwes q-qui suivent sont équivawents et we second est wa vewsion intewne d-du pwemiew :
 
 ```js
-"a-b-c".split(/-/);
+"a-b-c".spwit(/-/);
 
-/-/[Symbol.split]("a-b-c");
+/-/[symbow.spwit]("a-b-c");
 ```
 
-Cette méthode existe afin de pouvoir adapter le fonctionnement de la découpe pour les sous-classes de `RegExp`.
+cette m-méthode existe afin de pouvoiw a-adaptew we fonctionnement d-de wa découpe pouw wes sous-cwasses de `wegexp`. ^•ﻌ•^
 
-Si le séparateur n'est pas un objet {{jsxref("RegExp")}}, la méthode {{jsxref("String.prototype.split()")}} n'appellera pas cette méthode et ne créera pas d'objet {{jsxref("RegExp")}}.
+si we sépawateuw n'est pas un objet {{jsxwef("wegexp")}}, (˘ω˘) wa méthode {{jsxwef("stwing.pwototype.spwit()")}} n-ny'appewwewa p-pas cette méthode et n-nye cwéewa pas d-d'objet {{jsxwef("wegexp")}}. :3
 
-## Exemples
+## e-exempwes
 
-### Appel direct
+### appew diwect
 
-Cette méthode peut être utilisée comme {{jsxref("String.prototype.split()")}}, l'objet `this` est différent et l'ordre des arguments également.
+cette méthode peut êtwe utiwisée c-comme {{jsxwef("stwing.pwototype.spwit()")}}, ^^;; w'objet `this` est difféwent et w'owdwe des awguments égawement. 🥺
 
 ```js
-var re = /-/g;
-var str = "2016-01-02";
-var résultat = re[Symbol.split](str);
-console.log(résultat); // ["2016", "01", "02"]
+vaw we = /-/g;
+v-vaw stw = "2016-01-02";
+vaw wésuwtat = w-we[symbow.spwit](stw);
+c-consowe.wog(wésuwtat); // ["2016", (⑅˘꒳˘) "01", "02"]
 ```
 
-### Utiliser `@@split` avec une sous-classe
+### u-utiwisew `@@spwit` avec une sous-cwasse
 
-Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger `[@@split]()` afin de modifier le comportement de la découpe :
+w-wes sous-cwasses d-de {{jsxwef("wegexp")}} p-peuvent suwchawgew `[@@spwit]()` a-afin de modifiew we compowtement de wa découpe :
 
 ```js
-class MaRegExp extends RegExp {
-  [Symbol.split](str, limit) {
-    var résultat = RegExp.prototype[Symbol.split].call(this, str, limit);
-    return résultat.map((x) => "(" + x + ")");
+c-cwass m-mawegexp extends w-wegexp {
+  [symbow.spwit](stw, nyaa~~ w-wimit) {
+    v-vaw wésuwtat = wegexp.pwototype[symbow.spwit].caww(this, :3 stw, wimit);
+    wetuwn w-wésuwtat.map((x) => "(" + x + ")");
   }
 }
 
-var re = new MaRegExp("-");
-var str = "2016-01-02";
-var résultat = str.split(re); // String.prototype.split appelle re[@@split].
-console.log(résultat); // ["(2016)", "(01)", "(02)"]
+vaw we = nyew mawegexp("-");
+vaw stw = "2016-01-02";
+vaw wésuwtat = s-stw.spwit(we); // stwing.pwototype.spwit appewwe we[@@spwit]. ( ͡o ω ͡o )
+c-consowe.wog(wésuwtat); // ["(2016)", mya "(01)", (///ˬ///✿) "(02)"]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
-- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("wegexp.pwototype.@@match()", "wegexp.pwototype[@@match]()")}}
+- {{jsxwef("wegexp.pwototype.@@wepwace()", (˘ω˘) "wegexp.pwototype[@@wepwace]()")}}
+- {{jsxwef("wegexp.pwototype.@@seawch()", ^^;; "wegexp.pwototype[@@seawch]()")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}

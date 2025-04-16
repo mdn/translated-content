@@ -1,386 +1,386 @@
 ---
-title: En-têtes HTTP
-slug: Web/HTTP/Headers
-l10n:
-  sourceCommit: 53b19adf7936b1830f407813c3252b35c5eb925e
+titwe: en-têtes http
+swug: web/http/headews
+w-w10n:
+  souwcecommit: 53b19adf7936b1830f407813c3252b35c5eb925e
 ---
 
-{{HTTPSidebar}}
-
-Les **en-têtes HTTP** permettent au client et au serveur de transmettre des informations supplémentaires avec la requête ou la réponse. Un en-tête est constitué de son nom (insensible à la casse) suivi d'un deux-points `:`, puis de sa valeur. Les espaces avant la valeur sont ignorés.
-
-Des en-têtes propriétaires personnalisés peuvent être ajoutés en utilisant le préfixe `X-`, mais cette convention a été dépréciée en juin 2012, en raison des inconvénients qu'elle a présentés lorsque des champs non standard sont devenus standard dans [RFC 6648](https://tools.ietf.org/html/rfc6648)&nbsp;; les autres en-têtes possibles sont listés dans une [liste IANA](https://www.iana.org/assignments/message-headers/message-headers.xhtml) et ont été définis dans la [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA maintient également une [liste des propositions de nouveaux en-têtes HTTP](https://www.iana.org/assignments/message-headers/message-headers.xhtml).
-
-Les en-têtes peuvent être groupés selon leur contexte&nbsp;:
-
-- [Les en-têtes de requête](/fr/docs/Glossary/Request_header)
-  - : Contiennent des informations additionnelles à propos de la ressource à récupérer ou à propos du client qui la demande.
-- [Les en-têtes de réponse](/fr/docs/Glossary/Response_header)
-  - : Contiennent des informations supplémentaires au sujet de la réponse (par exemple son emplacement), ou au sujet du serveur qui la fournit.
-- [Les en-têtes de représentation](/fr/docs/Glossary/Representation_header)
-  - : Contiennent des informations à propos du corps de la ressource, comme son [type MIME](/fr/docs/Web/HTTP/MIME_types), ou le type de compression ou d'encodage appliqué.
-- [Les en-têtes de charge utile (<i lang="en">payload headers</i>)](/fr/docs/Glossary/Payload_header)
-  - : Contiennent des informations indépendantes de la représentation sur la charge utile, comme la longueur du contenu ou l'encodage utilisé pour le transport.
-
-Les en-têtes peuvent aussi être groupés selon comment ils sont traités par [les serveurs mandataires (<i lang="en">proxies</i>)](/fr/docs/Glossary/Proxy_server)&nbsp;:
-
-- En-têtes de bout en bout (<i lang="en">end-to-end headers</i>)
-  - : Ces en-têtes doivent être transmis au destinataire final du message&nbsp;; c'est-à-dire le serveur dans le cas d'une requête ou le client dans le cas d'une réponse. Les serveurs mandataires intermédiaires doivent retransmettre les en-têtes de bout en bout sans modification et doivent les mettre en cache.
-- En-têtes de point à point (<i lang="en">hop-by-hop headers</i>)
-  - : Ces en-têtes n'ont de sens que pour une unique connexion de la [couche transport](https://fr.wikipedia.org/wiki/Couche_transport) et ne doivent pas être retransmis par des serveurs mandataires ou mis en cache. Seuls des en-têtes point à point peuvent être définis avec l'en-tête [`Connection`](/fr/docs/Web/HTTP/Headers/Connection).
-
-## Authentification
-
-- [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate)
-  - : Définit la méthode d'authentification qui doit être utilisée pour obtenir l'accès à la ressource.
-- [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization)
-  - : Contient les informations d'authentification pour authentifier un agent utilisateur avec un serveur.
-- [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate)
-  - : Définit la méthode d'authentification qui doit être utilisée pour obtenir la ressource derrière un serveur mandataire.
-- [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization)
-  - : Contient les informations d'authentification nécessaires pour authentifier un agent utilisateur avec un serveur mandataire.
-
-## Mise en cache
-
-- [`Age`](/fr/docs/Web/HTTP/Headers/Age)
-  - : La durée en secondes pendant laquelle un objet a été dans le cache d'un serveur mandataire.
-- [`Cache-Control`](/fr/docs/Web/HTTP/Headers/Cache-Control)
-  - : Spécifie des directives pour les mécanismes de mise en cache dans les requêtes et les réponses.
-- [`Clear-Site-Data`](/fr/docs/Web/HTTP/Headers/Clear-Site-Data)
-  - : Nettoie les données de navigation (par exemple, les cookies, le stockage local et le cache) associé au site qui envoie la réponse.
-- [`Expires`](/fr/docs/Web/HTTP/Headers/Expires)
-  - : La date et l'heure après lesquelles la réponse est considérée comme périmée.
-
-## En-têtes conditionnels
-
-- [`Last-Modified`](/fr/docs/Web/HTTP/Headers/Last-Modified)
-  - : La date à laquelle la ressource a été modifiée pour la dernière fois. Cette date est utilisée pour comparer plusieurs versions d'une même ressource. Moins précise qu'[`ETag`](/fr/docs/Web/HTTP/Headers/ETag), elle est plus simple à calculer dans certains environnements. Les requêtes conditionnelles avec [`If-Modified-Since`](/fr/docs/Web/HTTP/Headers/If-Modified-Since) et [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since) utilisent cette valeur pour modifier le comportement de la requête.
-- [`ETag`](/fr/docs/Web/HTTP/Headers/ETag)
-  - : Une chaîne de caractères unique qui identifie la version de la ressource. Les requêtes conditionnelles avec [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match) et [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match) utilisent cette valeur pour modifier le comportement de la requête.
-- [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match)
-  - : Rend la requête conditionnelle et applique la méthode uniquement si la ressource enregistrée correspond à l'un des ETag donnés.
-- [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match)
-  - : Rend la requête conditionnelle et applique la méthode uniquement si la ressource enregistrée _ne correspond pas_ à l'un des ETag donnés. Cet en-tête est utilisé afin de mettre à jour les caches (pour les requêtes sûres) ou pour empêcher de téléverser une nouvelle ressource lorsqu'une équivalente existe déjà.
-- [`If-Modified-Since`](/fr/docs/Web/HTTP/Headers/If-Modified-Since)
-  - : Rend la requête conditionnelle pour que la ressource ne soit transmise que si elle a été modifiée après une date donnée. Cet en-tête est utilisé pour transmettre des données uniquement lorsque le cache est périmé.
-- [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since)
-  - : Rend la requête conditionnelle pour que la ressource ne soit transmise que si elle n'a pas été modifiée après une date donnée. Cela permet de s'assurer de la cohérence d'un nouveau fragment d'un intervalle donné avec les anciens fragments, ou d'implémenter un système de contrôle concurrent optimiste pour la mise à jour de documents existants.
-- [`Vary`](/fr/docs/Web/HTTP/Headers/Vary)
-  - : Indique les en-têtes de requêtes qui ont influencé la fourniture de la réponse (entre une éventuelle version en cache et une version fraîche).
-
-## Gestion de la connexion
-
-- [`Connection`](/fr/docs/Web/HTTP/Headers/Connection)
-  - : Contrôle si la connexion réseau reste ouverte après que la transaction actuelle a fini.
-- [`Keep-Alive`](/fr/docs/Web/HTTP/Headers/Keep-Alive)
-  - : Contrôle la durée pendant laquelle une connexion persistente devrait rester ouverte.
-
-## Négociation de contenu
-
-Pour plus d'informations à ce sujet, voir [l'article sur la négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation).
-
-- [`Accept`](/fr/docs/Web/HTTP/Headers/Accept)
-  - : Indique au serveur [les types MIME](/fr/docs/Glossary/MIME_type) qui peuvent être renvoyés pour le type de contenu de la réponse.
-- [`Accept-Encoding`](/fr/docs/Web/HTTP/Headers/Accept-Encoding)
-  - : L'algorithme d'encodage, généralement [un algorithme de compression](/fr/docs/Web/HTTP/Compression), qui peut être utilisé pour la ressource renvoyée.
-- [`Accept-Language`](/fr/docs/Web/HTTP/Headers/Accept-Language)
-  - : Indique au serveur la ou les langues dans lesquelles la ressource peut être renvoyée. Il s'agit d'une indication et cette valeur n'est pas nécessairement choisie par la personne. Il appartient au serveur de veiller à ne pas outrepasser des choix de locale explicites effectués par ailleurs (par exemple le choix d'une langue dans une liste déroulante).
-
-## Contrôles
-
-- [`Expect`](/fr/docs/Web/HTTP/Headers/Expect)
-  - : Indique les conditions à respecter par le serveur pour gérer correctement la requête.
-- [`Max-Forwards`](/fr/docs/Web/HTTP/Headers/Max-Forwards)
-  - : Lorsque la méthode [`TRACE`](/fr/docs/Web/HTTP/Methods/TRACE) est utilisée, cet en-tête indique le nombre maximal de sauts que la requête peut effectuer avant de revenir à l'émetteur.
-
-## Cookies
-
-- [`Cookie`](/fr/docs/Web/HTTP/Headers/Cookie)
-  - : Contient les [cookies HTTP](/fr/docs/Web/HTTP/Cookies) enregistrés, précédemment envoyés par le serveur avec l'en-tête [`Set-Cookie`](/fr/docs/Web/HTTP/Headers/Set-Cookie).
-- [`Set-Cookie`](/fr/docs/Web/HTTP/Headers/Set-Cookie)
-  - : Envoie des cookies de la part du serveur vers l'agent utilisateur.
-
-## CORS
-
-Pour plus d'informations, voir [la documentation CORS](/fr/docs/Web/HTTP/CORS).
-
-- [`Access-Control-Allow-Credentials`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
-  - : Indique si les informations d'authentification peuvent être exposées lors d'une requête vers une autre origine.
-- [`Access-Control-Allow-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
-  - : Utilisé dans une réponse à [une requête préparatoire (<i lang="en">preflight request</i>)](/fr/docs/Glossary/Preflight_request) pour indiquer les en-têtes HTTP qui peuvent être utilisés lors de la requête réelle.
-- [`Access-Control-Allow-Methods`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
-  - : Utilisé dans une réponse à [une requête préparatoire (<i lang="en">preflight request</i>)](/fr/docs/Glossary/Preflight_request) pour indiquer les méthodes HTTP qui peuvent être utilisés lors de la requête réelle.
-- [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
-  - : Indique si la réponse peut être partagée.
-- [`Access-Control-Expose-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
-  - : Indique la liste des en-têtes qui peuvent être exposés dans la réponse.
-- [`Access-Control-Max-Age`](/fr/docs/Web/HTTP/Headers/Access-Control-Max-Age)
-  - : Indique la durée pendant laquelle le résultat d'une requête préparatoire peut être mis en cache.
-- [`Access-Control-Request-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Request-Headers)
-  - : Utilisé lors de l'émission d'une requête préparatoire pour indiquer au serveur les en-têtes HTTP qui seront utilisés lors de la requête réelle.
-- [`Access-Control-Request-Method`](/fr/docs/Web/HTTP/Headers/Access-Control-Request-Method)
-  - : Utilisé lors de l'émission d'une requête préparatoire pour indiquer au serveur [la méthode HTTP](/fr/docs/Web/HTTP/Methods) qui sera utilisée lors de la requête réelle.
-- [`Origin`](/fr/docs/Web/HTTP/Headers/Origin)
-  - : Indique l'origine de la requête.
-- [`Timing-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Timing-Allow-Origin)
-  - : Indique les origines autorisées à consulter les valeurs des attributs récupérés grâce à [l'API <i lang="en">Resource Timing</i>](/fr/docs/Web/API/Performance_API/Resource_timing) (au lieu que 0 soit fourni comme valeur par défaut en raison des restrictions entre les origines).
-
-## Téléchargement
-
-- [`Content-Disposition`](/fr/docs/Web/HTTP/Headers/Content-Disposition)
-  - : Indique si la ressource transmise devrait être affichée dans le navigateur (le comportement par défaut en l'absence de l'en-tête), ou si elle devrait être gérée comme un téléchargement (auquel cas le navigateur affichera une boîte de dialogue pertinente).
-
-## Informations sur le corps
-
-- [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length)
-  - : La taille de la ressource, exprimée en octets (sur une base décimale).
-- [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type)
-  - : Le type de média de la ressource.
-- [`Content-Encoding`](/fr/docs/Web/HTTP/Headers/Content-Encoding)
-  - : L'algorithme de compression utilisé.
-- [`Content-Language`](/fr/docs/Web/HTTP/Headers/Content-Language)
-  - : La langue humaine cible pour le public, qui permet à une personne de recevoir une ressource adaptée à sa locale.
-- [`Content-Location`](/fr/docs/Web/HTTP/Headers/Content-Location)
-  - : Indique un emplacement alternatif pour les données renvoyées.
-
-## Gestion des serveurs mandataires (<i lang="en">proxies</i>)
-
-- [`Forwarded`](/fr/docs/Web/HTTP/Headers/Forwarded)
-  - : Permet d'ajouter des informations qui seraient perdues par ailleurs lors de la transmission par des serveurs mandataires.
-- [`Via`](/fr/docs/Web/HTTP/Headers/Via)
-  - : Information ajoutée par les serveurs mandataires (dans les deux sens) et qui peut apparaître dans les en-têtes de réponse et de requête.
-
-## Redirection
-
-- [`Location`](/fr/docs/Web/HTTP/Headers/Location)
-  - : Indique l'URL vers laquelle rediriger la requête.
-- [`Refresh`](/fr/docs/Web/HTTP/Headers/Refresh)
-  - : Indique au navigateur de rafraîchir la page ou de rediriger vers une autre. Cet en-tête prend la même valeur qu'[un élément `<meta>` avec `http-equiv="refresh"`](/fr/docs/Web/HTML/Element/meta#http-equiv).
-
-## Contexte de la requête
-
-- [`From`](/fr/docs/Web/HTTP/Headers/From)
-  - : Contient une adresse électronique qui permet de s'adresser à la personne qui contrôle l'agent utilisateur qui a émis la requête.
-- [`Host`](/fr/docs/Web/HTTP/Headers/Host)
-  - : Indique le nom de domaine du serveur (pour l'hébergement virtuel) et l'éventuel numéro de port TCP sur lequel le serveur écoute.
-- [`Referer`](/fr/docs/Web/HTTP/Headers/Referer)
-  - : L'adresse de la page web précédente dont le lien a mené à la page actuellement demandée.
-- [`Referrer-Policy`](/fr/docs/Web/HTTP/Headers/Referrer-Policy)
-  - : Gère les informations qui doivent être envoyées via l'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer).
-- [`User-Agent`](/fr/docs/Web/HTTP/Headers/User-Agent)
-  - : Contient une chaîne de caractères spécifique qui permet aux pairs de protocole réseau d'identifier le type d'application, le système d'exploitation, l'éditeur ou la version du logiciel utilisé par l'agent utilisateur.
-
-## Contexte de la réponse
-
-- [`Allow`](/fr/docs/Web/HTTP/Headers/Allow)
-  - : Indique l'ensemble des méthodes HTTP prises en charge par la ressource.
-- [`Server`](/fr/docs/Web/HTTP/Headers/Server)
-  - : Contient des informations à propos du logiciel utilisé par le serveur d'origine gérant la requête.
-
-## Requêtes d'intervalle
-
-- [`Accept-Ranges`](/fr/docs/Web/HTTP/Headers/Accept-Ranges)
-  - : Indique si le serveur prend en charge les requêtes d'intervalle et, le cas échéant, l'unité selon laquelle l'intervalle doit être exprimé.
-- [`Range`](/fr/docs/Web/HTTP/Headers/Range)
-  - : Indique la partie du document que le serveur devrait renvoyer.
-- [`If-Range`](/fr/docs/Web/HTTP/Headers/If-Range)
-  - : Crée une requête d'intervalle conditionnelle qui est uniquement réussie si l'ETag ou la date fournie correspond à la ressource distante. Cet en-tête est utilisé afin d'éviter de télécharger deux intervalles pour des versions incompatibles d'une même ressource.
-- [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range)
-  - : Indique l'emplacement du message partiel au sein du corps complet.
-
-## Sécurité
-
-- [`Cross-Origin-Embedder-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)
-  - : Permet à un serveur d'indiquer une règle pour le chargement des ressources d'autres origines pour un document donné.
-- [`Cross-Origin-Opener-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)
-  - : Empêche l'ouverture/le contrôle d'une fenêtre par d'autres domaines.
-- [`Cross-Origin-Resource-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy)
-  - : Empêche d'autres domaines de lire la réponse pour les ressources auxquelles cet en-tête est appliqué. Voir aussi [la page d'explication sur](/fr/docs/Web/HTTP/Cross-Origin_Resource_Policy).
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) ([CSP](/fr/docs/Glossary/CSP))
-  - : Contrôle les ressources qu'un agent utilisateur est autorisé à charger pour une page donnée.
-- [`Content-Security-Policy-Report-Only`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only)
-  - : Permet de surveiller les résultats de règles CSP sans pour autant les mettre en place. Les rapports émis en cas de violation sont des documents [JSON](/fr/docs/Glossary/JSON) envoyés par une requête HTTP `POST` à l'URI indiquée dans l'en-tête.
-- [`Permissions-Policy`](/fr/docs/Web/HTTP/Headers/Permissions-Policy)
-  - : Fournit un mécanisme pour autoriser ou interdire l'utilisation de certaines fonctionnalités dans le cadre de la page et dans les éventuels [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) qu'elle embarque.
-- [`Strict-Transport-Security`](/fr/docs/Web/HTTP/Headers/Strict-Transport-Security) ([HSTS](/fr/docs/Glossary/HSTS))
-  - : Force la communication à passer par HTTPS plutôt que par HTTP.
-- [`Upgrade-Insecure-Requests`](/fr/docs/Web/HTTP/Headers/Upgrade-Insecure-Requests)
-  - : Envoie un signal au serveur indiquant la préférence du client pour une réponse chiffrée et authentifiée, afin qu'il puisse correctement gérer la directive CSP [`upgrade-insecure-requests`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests).
-- [`X-Content-Type-Options`](/fr/docs/Web/HTTP/Headers/X-Content-Type-Options)
-  - : Désactive le choix heuristique du type MIME et force le navigateur à utiliser le type fourni via l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type).
-- [`X-Frame-Options`](/fr/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : Indique si un navigateur est autorisé à afficher une page dans un élément [`<frame>`](/fr/docs/Web/HTML/Element/frame), [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<embed>`](/fr/docs/Web/HTML/Element/embed), ou [`<object>`](/fr/docs/Web/HTML/Element/object).
-- [`X-Permitted-Cross-Domain-Policies`](/fr/docs/Web/HTTP/Headers/X-Permitted-Cross-Domain-Policies)
-  - : Indique si un fichier de règles entre domaines (`crossdomain.xml`) est autorisé. Le fichier pourra définir des règles pour permettre aux clients comme Adobe Acrobat, ou Apache Flex de gérer des données entre différents domaines alors que cela aurait été interdit par [la politique d'origine unique](/fr/docs/Web/Security/Same-origin_policy). Voir [le fichier PDF de spécification sur le site d'Adobe](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/CrossDomain_PolicyFile_Specification.pdf) pour plus d'informations.
-- [`X-Powered-By`](/fr/docs/Web/HTTP/Headers/X-Powered-By)
-  - : Cet en-tête pourra être défini par des environnements d'hébergement ou d'autres outils et contenir des informations à leur propos, qui ne sont pas utiles à l'application même ou aux personnes qui l'utilisent. Il est préférable de ne pas fournir cet en-tête aux clients pour éviter d'exposer certaines vulnérabilités.
-
-### En-têtes de métadonnées pour les requêtes de récupération
-
-Les [en-têtes de métadonnées pour les requêtes de récupération (<i lang="en">fetch metadata request header</i>)](/fr/docs/Glossary/Fetch_metadata_request_header) fournissent des informations à propos du contexte d'origine de la requête. Un serveur pourra les utiliser pour déterminer si une requête est autorisée, selon sa provenance et comment la ressource sera utilisée.
-
-- [`Sec-Fetch-Site`](/fr/docs/Web/HTTP/Headers/Sec-Fetch-Site)
-  - : Indique la relation entre l'origine de la partie qui a initié la requête et l'origine de la ressource demandée. Il s'agit d'un en-tête structuré dont la valeur peut être `cross-site`, `same-origin`, `same-site`, ou `none`.
-- [`Sec-Fetch-Mode`](/fr/docs/Web/HTTP/Headers/Sec-Fetch-Mode)
-  - : Indique le mode de la requête à un serveur. Il s'agit d'un en-tête structuré dont la valeur peut être `cors`, `navigate`, `no-cors`, `same-origin`, et `websocket`.
-- [`Sec-Fetch-User`](/fr/docs/Web/HTTP/Headers/Sec-Fetch-User)
-  - : Indique si une requête de navigation a été déclenchée par une utilisatrice ou un utilisateur. Il s'agit d'un en-tête structuré booléen dont la valeur peut être `?0` (pour indiquer faux) ou `?1` (pour indiquer vrai).
-- [`Sec-Fetch-Dest`](/fr/docs/Web/HTTP/Headers/Sec-Fetch-Dest)
-  - : Indique la destination de la requête. Il s'agit d'un en-tête structuré dont la valeur peut être `audio`, `audioworklet`, `document`, `embed`, `empty`, `font`, `image`, `manifest`, `object`, `paintworklet`, `report`, `script`, `serviceworker`, `sharedworker`, `style`, `track`, `video`, `worker`, ou `xslt`.
-
-Les en-têtes de requêtes qui suivent ne sont pas à strictement parler des en-têtes de métadonnées pour les requêtes de récupération, mais fournissent des informations similaires sur le contexte d'utilisation d'une ressource. Un serveur pourra les utiliser afin de modifier le comportement de son cache ou les informations qu'il renvoie&nbsp;:
-
-- [`Sec-Purpose`](/fr/docs/Web/HTTP/Headers/Sec-Purpose)
-  - : Indique le but de la requête lorsque celui-ci n'est pas une utilisation immédiate par l'agent utilisateur. Cet en-tête prend actuellement une seule valeur possible&nbsp;: `prefetch`, qui indique que la ressource est récupérée de façon préventive, pour préparer une éventuelle navigation future vers celle-ci.
-- [`Service-Worker-Navigation-Preload`](/fr/docs/Web/HTTP/Headers/Service-Worker-Navigation-Preload)
-  - : Un en-tête de requête envoyé de façon préventive pour récupérer (via [`fetch()`](/fr/docs/Web/API/Window/fetch)) une ressource au démarrage d'un <i lang="en">service worker</i>. La valeur, définie via [`NavigationPreloadManager.setHeaderValue()`](/fr/docs/Web/API/NavigationPreloadManager/setHeaderValue), peut être utilisée afin d'informer un serveur qu'une ressource différente (que celle fournie pour une opération `fetch()` normale) devrait être renvoyée.
-
-## Évènements émis par le serveur
-
-- [`Report-To`](/fr/docs/Web/HTTP/Headers/Report-To)
-  - : Cet en-tête fournir un point d'entrée à utiliser par le navigateur pour envoyer les rapports d'avertissement et d'erreur.
-
-## Encodage lors du transfert
-
-- [`Transfer-Encoding`](/fr/docs/Web/HTTP/Headers/Transfer-Encoding)
-  - : Définit la forme d'encodage à utiliser pour transférer de façon sûre le corps de la requête au client.
-- [`TE`](/fr/docs/Web/HTTP/Headers/TE)
-  - : Indique les encodages de transfert acceptables pour l'agent utilisateur.
-- [`Trailer`](/fr/docs/Web/HTTP/Headers/Trailer)
-  - : Permet à l'émetteur d'inclure des champs complémentaires à la fin du message morcelé.
-
-## Autres
-
-- [`Alt-Svc`](/fr/docs/Web/HTTP/Headers/Alt-Svc)
-  - : Utilisé pour lister les méthodes alternatives pour accéder au service.
-- [`Alt-Used`](/fr/docs/Web/HTTP/Headers/Alt-Used)
-  - : Utilisé pour identifier le service alternatif utilisé.
-- [`Date`](/fr/docs/Web/HTTP/Headers/Date)
-  - : Contient la date et l'heure à laquelle le message a été émis.
-- [`Link`](/fr/docs/Web/HTTP/Headers/Link)
-  - : Cet en-tête permet de sérialiser un ou plusieurs liens dans des en-têtes HTTP. Il est sémantiquement équivalent à l'élément HTML [`<link>`](/fr/docs/Web/HTML/Element/link).
-- [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After)
-  - : Indique la durée pendant laquelle l'agent utilisateur devrait attendre avant d'envoyer une requête suivante.
-- [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing)
-  - : Permet de communiquer une ou plusieurs métriques et leur description pour un aller-retour requête-réponse donné.
-- [`Service-Worker-Allowed`](/fr/docs/Web/HTTP/Headers/Service-Worker-Allowed)
-  - : Utilisé afin de supprimer [la contrainte sur le chemin](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers#pourquoi_est-ce_lenregistrement_de_mon_service_worker_échoue_) lorsqu'il est inclus dans la réponse fournissant le script du <i lang="en">service worker</i> (voir [le paragraphe correspondant dans la spécification](https://w3c.github.io/ServiceWorker/#service-worker-script-response)).
-- [`SourceMap`](/fr/docs/Web/HTTP/Headers/SourceMap)
-  - : Pointe vers une [<i lang="en">source map</i>](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html) pour la ressource demandée.
-- [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade)
-  - : Cet en-tête, valable uniquement pour HTTP/1.1, permet de basculer une connexion déjà établie sur un protocole différent (en conservant le même protocole de transport). Ainsi, un client pourra l'utiliser pour demander que la connexion bascule de HTTP/1.1 vers HTTP/2 ou pour passer d'une connexion HTTPS à une connexion WebSocket.
-
-## En-têtes expérimentaux
-
-### Indications fournies par le client (<i lang="en">client hints</i>)
-
-Les [indications client (ou <i lang="en">client hints</i> en anglais)](/fr/docs/Web/HTTP/Client_hints) sont des en-têtes de requêtes qui fournissent des informations à propos du client comme le type d'appareil ou les conditions réseau et qui permettent aux serveurs d'optimiser ce qui peut alors être servi dans ces conditions.
-
-C'est aux serveurs de demander aux clients les indications qui les intéressent à l'aide de l'en-tête [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH). Le client pourra alors choisir d'inclure les en-têtes demandés dans les requêtes à venir.
-
-- [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH) {{experimental_inline}}
-  - : Les serveurs peuvent indiquer leur prise en charge des indications client à l'aide de l'en-tête `Accept-CH` ou d'un élément `<meta>` équivalent doté de l'attribut [`http-equiv`](/fr/docs/Web/HTML/Element/meta#http-equiv).
-- [`Critical-CH`](/fr/docs/Web/HTTP/Headers/Critical-CH) {{experimental_inline}}
-  - : Utilisé avec [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH), `Critical-CH` est utilisé pour indiquer que les indications client acceptées sont [des indications client critiques](/fr/docs/Web/HTTP/Client_hints#indications_client_critiques).
-
-Les différentes catégories d'indication client sont listées ci-après.
-
-#### Indications client pour l'agent utilisateur
-
-Les [indications client pour l'agent utilisateur](/fr/docs/Web/HTTP/Client_hints#user-agent_client_hints) sont des en-têtes de requête qui fournissent des informations à propos de l'agent utilisateur, de la plateforme et architecture sur lesquelles il est exécuté et à propos des préférences définies au niveau de l'agent utilisateur ou de la plateforme&nbsp;:
-
-- [`Sec-CH-UA`](/fr/docs/Web/HTTP/Headers/Sec-CH-UA) {{experimental_inline}}
-  - : La marque et la version de l'agent utilisateur.
-- [`Sec-CH-UA-Arch`](/fr/docs/Web/HTTP/Headers/Sec-CH-UA-Arch) {{experimental_inline}}
-  - : L'architecture de la plateforme sur laquelle est exécuté l'agent utilisateur.
-- [`Sec-CH-UA-Bitness`](/fr/docs/Web/HTTP/Headers/Sec-CH-UA-Bitness) {{experimental_inline}}
-  - : Le nombre de bits de l'architecture du processeur de la plateforme sur laquelle l'agent utilisateur est exécuté (par exemple, 64 pour 64 bits).
-- [`Sec-CH-UA-Full-Version-List`](/fr/docs/Web/HTTP/Headers/Sec-CH-UA-Full-Version-List) {{experimental_inline}}
-  - : La version complète de chaque composante de la liste composant la marque de l'agent utilisateur.
-- [`Sec-CH-UA-Mobile`](/fr/docs/Web/HTTP/Headers/Sec-CH-UA-Mobile) {{experimental_inline}}
-  - : Indique si l'agent utilisateur est exécuté sur un appareil mobile ou s'il préfère plus généralement une ergonomie mobile.
-- [`Sec-CH-UA-Model`](/fr/docs/Web/HTTP/Headers/Sec-CH-UA-Model) {{experimental_inline}}
-  - : Le modèle d'appareil sur lequel est exécuté l'agent utilisateur.
-- [`Sec-CH-UA-Platform`](/fr/docs/Web/HTTP/Headers/Sec-CH-UA-Platform) {{experimental_inline}}
-  - : La plateforme et système d'exploitation sur lesquelles l'agent utilisateur est exécuté.
-- [`Sec-CH-UA-Platform-Version`](/fr/docs/Web/HTTP/Headers/Sec-CH-UA-Platform-Version) {{experimental_inline}}
-  - : La version du système d'exploitation sur lequel l'agent utilisateur est exécuté.
-- [`Sec-CH-UA-Prefers-Color-Scheme`](/fr/docs/Web/HTTP/Headers/Sec-CH-UA-Prefers-Color-Scheme) {{experimental_inline}}
-  - : Indique la préférence de l'utilisatrice ou de l'utilisateur entre un thème clair ou un thème sombre.
-- [`Sec-CH-UA-Prefers-Reduced-Motion`](/fr/docs/Web/HTTP/Headers/Sec-CH-UA-Prefers-Reduced-Motion) {{experimental_inline}}
-  - : Indique la préférence de l'utilisatrice ou de l'utilisateur pour voir moins d'animations et d'effets décalant le contenu.
-
-#### Indications client relatives à l'appareil
-
-- [`Device-Memory`](/fr/docs/Web/HTTP/Headers/Device-Memory) {{experimental_inline}}
-  - : Indique la quantité approximative de mémoire vive disponible sur le client. Cet en-tête s'inscrit dans [l'API <i lang="en">Device Memory</i>](/fr/docs/Web/API/Device_Memory_API).
-
-#### Indications client relatives au réseau
-
-Les indications client relatives au réseau permettent au serveur de choisir les informations envoyées selon la bande passante et la latence réseau du client.
-
-- [`Downlink`](/fr/docs/Web/HTTP/Headers/Downlink) {{experimental_inline}}
-  - : Une approximation de la bande passante, exprimée en Mo/s entre le client et le serveur. Cet en-tête s'inscrit dans [l'API <i lang="en">Network Information API</i>](/fr/docs/Web/API/Network_Information_API).
-- [`ECT`](/fr/docs/Web/HTTP/Headers/ECT) {{experimental_inline}}
-  - : Le [type de connexion effectif](/fr/docs/Glossary/Effective_connection_type) qui correspond le mieux à la latence et bande passante de la connexion. Cet en-tête s'inscrit dans [l'API <i lang="en">Network Information API</i>](/fr/docs/Web/API/Network_Information_API).
-- [`RTT`](/fr/docs/Web/HTTP/Headers/RTT) {{experimental_inline}}
-  - : Le temps d'aller-retour (RTT) au niveau de la couche d'application, exprimée en millisecondes, et qui inclut le temps de traitement du serveur. Cet en-tête s'inscrit dans [l'API <i lang="en">Network Information API</i>](/fr/docs/Web/API/Network_Information_API).
-- [`Save-Data`](/fr/docs/Web/HTTP/Headers/Save-Data) {{experimental_inline}}
-  - : Une chaîne de caractères indiquant la préférence de l'agent utilisateur pour un usage de données réduit.
-
-### Confidentialité
-
-- [`Sec-GPC`](/fr/docs/Web/HTTP/Headers/Sec-GPC) {{non-standard_inline}}{{experimental_inline}}
-  - : Indique le consentement ou l'absence de consentement pour le partage des informations personnelles avec des tierces parties.
-
-### Sécurité
-
-- [`Origin-Isolation`](/fr/docs/Web/HTTP/Headers/Origin-Isolation) {{experimental_inline}}
-  - : Fournit un mécanisme permettant aux applications web d'isoler leurs origines.
-
-### Évènements émis par le serveur
-
-- [`NEL`](/fr/docs/Web/HTTP/Headers/NEL) {{experimental_inline}}
-  - : Définit un mécanisme pour les rapports relatifs aux erreurs réseau.
-
-### Autres
-
-- [`Accept-Push-Policy`](/fr/docs/Web/HTTP/Headers/Accept-Push-Policy) {{experimental_inline}}
-  - : Un client pourra exprimer la gestion de la requête poussée par le serveur via cet en-tête (voir [`Accept-Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.1)).
-- [`Accept-Signature`](/fr/docs/Web/HTTP/Headers/Accept-Signature) {{experimental_inline}}
-  - : Un client pourra envoyer cet en-tête afin d'indiquer son intention de tirer parti des signatures disponibles et d'indiquer les types de signature qu'il prend en charge (voir [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.7)).
-- [`Early-Data`](/fr/docs/Web/HTTP/Headers/Early-Data) {{experimental_inline}}
-  - : Indique que la requête a été transmise avec les premières données TLS (<i lang="en">TLS early data</i>).
-- [`Push-Policy`](/fr/docs/Web/HTTP/Headers/Push-Policy) {{experimental_inline}}
-  - : Cet en-tête définit le comportement <i lang="en">push</i> du serveur pour le traitement d'une requête. Voir [`Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.2).
-- [`Signature`](/fr/docs/Web/HTTP/Headers/Signature) {{experimental_inline}}
-  - : Cet en-tête contient une liste de signatures pour un échange, chacune étant accompagnée d'informations pour déterminer l'autorité correspondante et les moyens de rafraîchir la signature. Voir [`Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.1).
-- [`Signed-Headers`](/fr/docs/Web/HTTP/Headers/Signed-Headers) {{experimental_inline}}
-  - : Cet en-tête contient une liste ordonnée des en-têtes à inclure dans une signature. Voir [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.5.1.2).
-- [`Supports-Loading-Mode`](/fr/docs/Web/HTTP/Headers/Supports-Loading-Mode) {{experimental_inline}}
-  - : Défini par une cible de navigation afin d'opter pour des modes de chargement plus risqué, comme le [prérendu](/fr/docs/Web/API/Speculation_Rules_API#using_prerendering) pour un même site sur plusieurs origines. Seule la valeur `credentialed-prerender` peut être utilisée.
-
-## En-têtes non-standards
-
-- [`X-Forwarded-For`](/fr/docs/Web/HTTP/Headers/X-Forwarded-For) {{non-standard_inline}}
-  - : Identifie l'adresse IP d'origine d'un client qui se connecte à un serveur web via un intermédiaire (comme un <i lang="en">proxy</i> ou un <i lang="en">load balancer</i>).
-- [`X-Forwarded-Host`](/fr/docs/Web/HTTP/Headers/X-Forwarded-Host) {{non-standard_inline}}
-  - : Identifie l'hôte demandé à l'origine par le client qui se connecte à l'intermédiaire (<i lang="en">proxy</i> ou un <i lang="en">load balancer</i>).
-- [`X-Forwarded-Proto`](/fr/docs/Web/HTTP/Headers/X-Forwarded-Proto) {{non-standard_inline}}
-  - : Identifie le protocole (HTTP ou HTTPS) utilisé par le client pour se connecter à l'intermédiaire (<i lang="en">proxy</i> ou un <i lang="en">load balancer</i>).
-- [`X-DNS-Prefetch-Control`](/fr/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control) {{non-standard_inline}}
-  - : Contrôle la récupération proactive du DNS, utilisée par les navigateurs pour résoudre en avance les noms de domaine que la personne pourra atteindre via les liens, images, fichiers CSS ou JavaScript, etc.
-- [`X-Robots-Tag`](/fr/docs/Web/HTTP/Headers/X-Robots-Tag) {{non-standard_inline}}
-  - : Cet en-tête indique comment une page web doit être indexée par les moteurs de recherche public. En pratique, cet en-tête est équivalent à `<meta name="robots" content="…">`. Voir [la page de documentation de Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag).
-
-## En-têtes dépréciés
-
-- [`Pragma`](/fr/docs/Web/HTTP/Headers/Pragma) {{deprecated_inline}}
-  - : Un en-tête spécifique pour chaque implémentation pouvant avoir divers effets le long de la chaîne de requête-réponse. Utilisé pour la rétrocompatibilité avec les caches HTTP/1.0 où l'en-tête `Cache-Control` n'est pas encore présent.
-- [`Warning`](/fr/docs/Web/HTTP/Headers/Warning) {{deprecated_inline}}
-  - : Un champ d'avertissement général contenant des informations sur les problèmes possibles.
-
-## Voir aussi
-
-- [Registre des en-têtes par l'IANA (en anglais)](https://www.iana.org/assignments/message-headers/message-headers.xhtml)
-- [Groupe de travail HTTP](https://httpwg.org/specs/)
+{{httpsidebaw}}
+
+w-wes **en-têtes h-http** pewmettent a-au cwient e-et au sewveuw de t-twansmettwe des i-infowmations suppwémentaiwes a-avec wa wequête ou wa wéponse. rawr un en-tête est constitué de son nyom (insensibwe à w-wa casse) suivi d'un deux-points `:`, ^•ﻌ•^ puis d-de sa vaweuw. nyaa~~ wes espaces avant w-wa vaweuw sont ignowés. nyaa~~
+
+des en-têtes pwopwiétaiwes pewsonnawisés p-peuvent êtwe ajoutés en u-utiwisant we pwéfixe `x-`, 😳😳😳 m-mais cette convention a été dépwéciée en juin 2012, 😳😳😳 en waison d-des inconvénients qu'ewwe a pwésentés wowsque des champs nyon standawd sont d-devenus standawd dans [wfc 6648](https://toows.ietf.owg/htmw/wfc6648)&nbsp;; w-wes a-autwes en-têtes p-possibwes sont w-wistés dans une [wiste iana](https://www.iana.owg/assignments/message-headews/message-headews.xhtmw) et ont été d-définis dans wa [wfc 4229](https://toows.ietf.owg/htmw/wfc4229). iana maintient égawement u-une [wiste des pwopositions de nyouveaux en-têtes http](https://www.iana.owg/assignments/message-headews/message-headews.xhtmw). σωσ
+
+wes en-têtes peuvent êtwe gwoupés s-sewon weuw contexte&nbsp;:
+
+- [wes e-en-têtes d-de wequête](/fw/docs/gwossawy/wequest_headew)
+  - : c-contiennent des infowmations additionnewwes à pwopos d-de wa wessouwce à w-wécupéwew ou à pwopos du cwient q-qui wa demande.
+- [wes e-en-têtes de wéponse](/fw/docs/gwossawy/wesponse_headew)
+  - : c-contiennent des infowmations s-suppwémentaiwes au sujet de wa wéponse (paw e-exempwe son empwacement), o.O o-ou au sujet du sewveuw qui wa f-fouwnit. σωσ
+- [wes e-en-têtes de wepwésentation](/fw/docs/gwossawy/wepwesentation_headew)
+  - : contiennent des infowmations à pwopos du cowps de wa wessouwce, nyaa~~ comme son [type mime](/fw/docs/web/http/mime_types), rawr x3 o-ou we type de c-compwession ou d'encodage appwiqué. (///ˬ///✿)
+- [wes e-en-têtes d-de chawge u-utiwe (<i wang="en">paywoad headews</i>)](/fw/docs/gwossawy/paywoad_headew)
+  - : contiennent des infowmations i-indépendantes de wa wepwésentation suw wa chawge utiwe, o.O comme wa wongueuw du contenu o-ou w'encodage utiwisé pouw w-we twanspowt. òωó
+
+w-wes en-têtes p-peuvent aussi êtwe gwoupés sewon c-comment iws sont t-twaités paw [wes s-sewveuws mandataiwes (<i wang="en">pwoxies</i>)](/fw/docs/gwossawy/pwoxy_sewvew)&nbsp;:
+
+- e-en-têtes de bout en bout (<i wang="en">end-to-end headews</i>)
+  - : c-ces en-têtes d-doivent êtwe t-twansmis au destinataiwe f-finaw d-du message&nbsp;; c'est-à-diwe we sewveuw dans we cas d'une wequête o-ou we cwient dans we cas d'une wéponse. OwO wes sewveuws mandataiwes intewmédiaiwes doivent w-wetwansmettwe wes en-têtes de bout en bout sans modification e-et doivent wes mettwe e-en cache. σωσ
+- e-en-têtes de point à point (<i w-wang="en">hop-by-hop headews</i>)
+  - : c-ces en-têtes n-ny'ont de sens que pouw une unique connexion de wa [couche twanspowt](https://fw.wikipedia.owg/wiki/couche_twanspowt) et n-nye doivent pas êtwe wetwansmis p-paw des sewveuws mandataiwes ou m-mis en cache. nyaa~~ s-seuws des en-têtes point à point peuvent êtwe d-définis avec w'en-tête [`connection`](/fw/docs/web/http/headews/connection). OwO
+
+## a-authentification
+
+- [`www-authenticate`](/fw/docs/web/http/headews/www-authenticate)
+  - : définit wa méthode d-d'authentification q-qui doit êtwe utiwisée pouw obteniw w'accès à wa wessouwce. ^^
+- [`authowization`](/fw/docs/web/http/headews/authowization)
+  - : contient w-wes infowmations d-d'authentification p-pouw authentifiew un agent u-utiwisateuw avec u-un sewveuw. (///ˬ///✿)
+- [`pwoxy-authenticate`](/fw/docs/web/http/headews/pwoxy-authenticate)
+  - : définit w-wa méthode d'authentification qui doit êtwe utiwisée pouw obteniw wa wessouwce d-dewwièwe u-un sewveuw mandataiwe. σωσ
+- [`pwoxy-authowization`](/fw/docs/web/http/headews/pwoxy-authowization)
+  - : contient wes infowmations d-d'authentification n-nécessaiwes pouw authentifiew un agent utiwisateuw avec un s-sewveuw mandataiwe. rawr x3
+
+## mise en cache
+
+- [`age`](/fw/docs/web/http/headews/age)
+  - : wa duwée en secondes pendant w-waquewwe un objet a été dans we cache d'un s-sewveuw mandataiwe. (ˆ ﻌ ˆ)♡
+- [`cache-contwow`](/fw/docs/web/http/headews/cache-contwow)
+  - : s-spécifie des diwectives pouw wes mécanismes de mise en c-cache dans wes w-wequêtes et wes wéponses. 🥺
+- [`cweaw-site-data`](/fw/docs/web/http/headews/cweaw-site-data)
+  - : nyettoie wes données de nyavigation (paw e-exempwe, (⑅˘꒳˘) wes cookies, 😳😳😳 w-we stockage wocaw et we cache) associé au site qui envoie wa w-wéponse. /(^•ω•^)
+- [`expiwes`](/fw/docs/web/http/headews/expiwes)
+  - : wa date et w'heuwe a-apwès wesquewwes w-wa wéponse est considéwée c-comme péwimée. >w<
+
+## en-têtes c-conditionnews
+
+- [`wast-modified`](/fw/docs/web/http/headews/wast-modified)
+  - : w-wa date à w-waquewwe wa wessouwce a été modifiée p-pouw wa d-dewnièwe fois. ^•ﻌ•^ cette date est utiwisée pouw compawew p-pwusieuws v-vewsions d'une m-même wessouwce. 😳😳😳 moins pwécise qu'[`etag`](/fw/docs/web/http/headews/etag), :3 e-ewwe est pwus simpwe à c-cawcuwew dans c-cewtains enviwonnements. (ꈍᴗꈍ) wes wequêtes conditionnewwes avec [`if-modified-since`](/fw/docs/web/http/headews/if-modified-since) e-et [`if-unmodified-since`](/fw/docs/web/http/headews/if-unmodified-since) u-utiwisent c-cette vaweuw p-pouw modifiew we compowtement d-de wa wequête. ^•ﻌ•^
+- [`etag`](/fw/docs/web/http/headews/etag)
+  - : une chaîne de cawactèwes unique qui identifie wa vewsion de wa wessouwce. >w< wes w-wequêtes conditionnewwes avec [`if-match`](/fw/docs/web/http/headews/if-match) e-et [`if-none-match`](/fw/docs/web/http/headews/if-none-match) utiwisent cette v-vaweuw pouw modifiew we compowtement d-de wa wequête. ^^;;
+- [`if-match`](/fw/docs/web/http/headews/if-match)
+  - : wend w-wa wequête conditionnewwe e-et a-appwique wa méthode u-uniquement s-si wa wessouwce enwegistwée cowwespond à w'un des etag donnés. (✿oωo)
+- [`if-none-match`](/fw/docs/web/http/headews/if-none-match)
+  - : wend wa wequête conditionnewwe et appwique w-wa méthode uniquement s-si wa wessouwce e-enwegistwée _ne cowwespond p-pas_ à w'un des etag donnés. òωó cet en-tête est utiwisé afin d-de mettwe à j-jouw wes caches (pouw wes wequêtes s-sûwes) ou pouw empêchew de téwévewsew une n-nyouvewwe wessouwce w-wowsqu'une équivawente existe d-déjà. ^^
+- [`if-modified-since`](/fw/docs/web/http/headews/if-modified-since)
+  - : w-wend wa wequête conditionnewwe pouw que wa wessouwce nye soit twansmise q-que si ewwe a été m-modifiée apwès u-une date donnée. c-cet en-tête e-est utiwisé pouw twansmettwe d-des données u-uniquement wowsque we cache est p-péwimé. ^^
+- [`if-unmodified-since`](/fw/docs/web/http/headews/if-unmodified-since)
+  - : w-wend wa wequête conditionnewwe p-pouw que wa wessouwce nye soit twansmise q-que si ewwe ny'a pas été modifiée a-apwès une d-date donnée. rawr cewa pewmet de s'assuwew d-de wa cohéwence d'un nyouveau fwagment d-d'un intewvawwe d-donné avec wes a-anciens fwagments, XD ou d'impwémentew un système de contwôwe concuwwent o-optimiste pouw wa mise à jouw de documents e-existants. rawr
+- [`vawy`](/fw/docs/web/http/headews/vawy)
+  - : i-indique wes en-têtes de wequêtes q-qui ont infwuencé wa fouwnituwe d-de wa wéponse (entwe u-une éventuewwe vewsion en cache et u-une vewsion fwaîche). 😳
+
+## gestion de wa connexion
+
+- [`connection`](/fw/docs/web/http/headews/connection)
+  - : c-contwôwe si wa c-connexion wéseau weste ouvewte a-apwès que wa twansaction actuewwe a-a fini. 🥺
+- [`keep-awive`](/fw/docs/web/http/headews/keep-awive)
+  - : c-contwôwe w-wa duwée pendant waquewwe une connexion pewsistente devwait westew ouvewte. (U ᵕ U❁)
+
+## nyégociation de contenu
+
+pouw pwus d'infowmations à ce sujet, 😳 voiw [w'awticwe suw wa nyégociation de contenu](/fw/docs/web/http/content_negotiation). 🥺
+
+- [`accept`](/fw/docs/web/http/headews/accept)
+  - : indique au sewveuw [wes t-types m-mime](/fw/docs/gwossawy/mime_type) qui peuvent êtwe wenvoyés p-pouw we type de c-contenu de wa wéponse. (///ˬ///✿)
+- [`accept-encoding`](/fw/docs/web/http/headews/accept-encoding)
+  - : w'awgowithme d-d'encodage, généwawement [un a-awgowithme de compwession](/fw/docs/web/http/compwession), q-qui peut êtwe u-utiwisé pouw wa wessouwce w-wenvoyée. mya
+- [`accept-wanguage`](/fw/docs/web/http/headews/accept-wanguage)
+  - : indique au sewveuw w-wa ou wes wangues d-dans wesquewwes wa wessouwce peut êtwe wenvoyée. (✿oωo) i-iw s'agit d-d'une indication e-et cette vaweuw n-ny'est pas n-nyécessaiwement c-choisie paw wa p-pewsonne. ^•ﻌ•^ iw appawtient a-au sewveuw d-de veiwwew à nye pas outwepassew d-des choix de w-wocawe expwicites e-effectués paw aiwweuws (paw e-exempwe we choix d'une wangue dans une wiste déwouwante). o.O
+
+## c-contwôwes
+
+- [`expect`](/fw/docs/web/http/headews/expect)
+  - : indique wes conditions à w-wespectew p-paw we sewveuw p-pouw géwew cowwectement wa w-wequête. o.O
+- [`max-fowwawds`](/fw/docs/web/http/headews/max-fowwawds)
+  - : wowsque w-wa méthode [`twace`](/fw/docs/web/http/methods/twace) est utiwisée, XD c-cet en-tête indique we n-nyombwe maximaw de sauts que wa wequête peut effectuew avant de weveniw à w'émetteuw. ^•ﻌ•^
+
+## c-cookies
+
+- [`cookie`](/fw/docs/web/http/headews/cookie)
+  - : contient w-wes [cookies h-http](/fw/docs/web/http/cookies) enwegistwés, ʘwʘ pwécédemment envoyés paw we s-sewveuw avec w'en-tête [`set-cookie`](/fw/docs/web/http/headews/set-cookie). (U ﹏ U)
+- [`set-cookie`](/fw/docs/web/http/headews/set-cookie)
+  - : envoie d-des cookies de w-wa pawt du sewveuw v-vews w'agent utiwisateuw. 😳😳😳
+
+## cows
+
+pouw pwus d-d'infowmations, v-voiw [wa documentation cows](/fw/docs/web/http/cows). 🥺
+
+- [`access-contwow-awwow-cwedentiaws`](/fw/docs/web/http/headews/access-contwow-awwow-cwedentiaws)
+  - : i-indique si wes infowmations d'authentification peuvent êtwe exposées w-wows d'une wequête vews u-une autwe owigine. (///ˬ///✿)
+- [`access-contwow-awwow-headews`](/fw/docs/web/http/headews/access-contwow-awwow-headews)
+  - : u-utiwisé dans u-une wéponse à [une wequête p-pwépawatoiwe (<i w-wang="en">pwefwight w-wequest</i>)](/fw/docs/gwossawy/pwefwight_wequest) p-pouw indiquew wes en-têtes h-http qui p-peuvent êtwe utiwisés w-wows de w-wa wequête wéewwe. (˘ω˘)
+- [`access-contwow-awwow-methods`](/fw/docs/web/http/headews/access-contwow-awwow-methods)
+  - : u-utiwisé dans u-une wéponse à [une w-wequête p-pwépawatoiwe (<i wang="en">pwefwight w-wequest</i>)](/fw/docs/gwossawy/pwefwight_wequest) pouw i-indiquew wes méthodes http qui p-peuvent êtwe utiwisés w-wows de w-wa wequête wéewwe. :3
+- [`access-contwow-awwow-owigin`](/fw/docs/web/http/headews/access-contwow-awwow-owigin)
+  - : indique si wa wéponse peut êtwe pawtagée. /(^•ω•^)
+- [`access-contwow-expose-headews`](/fw/docs/web/http/headews/access-contwow-expose-headews)
+  - : i-indique wa wiste d-des en-têtes q-qui peuvent êtwe exposés dans wa wéponse. :3
+- [`access-contwow-max-age`](/fw/docs/web/http/headews/access-contwow-max-age)
+  - : indique wa d-duwée pendant waquewwe w-we wésuwtat d'une wequête p-pwépawatoiwe p-peut êtwe mis en cache. mya
+- [`access-contwow-wequest-headews`](/fw/docs/web/http/headews/access-contwow-wequest-headews)
+  - : utiwisé wows de w'émission d'une w-wequête pwépawatoiwe p-pouw indiquew a-au sewveuw w-wes en-têtes http qui sewont utiwisés wows d-de wa wequête wéewwe. XD
+- [`access-contwow-wequest-method`](/fw/docs/web/http/headews/access-contwow-wequest-method)
+  - : u-utiwisé wows de w'émission d'une wequête p-pwépawatoiwe pouw indiquew au sewveuw [wa m-méthode http](/fw/docs/web/http/methods) qui s-sewa utiwisée wows d-de wa wequête wéewwe. (///ˬ///✿)
+- [`owigin`](/fw/docs/web/http/headews/owigin)
+  - : i-indique w'owigine d-de wa wequête. 🥺
+- [`timing-awwow-owigin`](/fw/docs/web/http/headews/timing-awwow-owigin)
+  - : indique wes owigines a-autowisées à consuwtew w-wes vaweuws des a-attwibuts wécupéwés g-gwâce à [w'api <i w-wang="en">wesouwce timing</i>](/fw/docs/web/api/pewfowmance_api/wesouwce_timing) (au w-wieu que 0 soit f-fouwni comme vaweuw p-paw défaut en waison des westwictions e-entwe wes owigines). o.O
+
+## téwéchawgement
+
+- [`content-disposition`](/fw/docs/web/http/headews/content-disposition)
+  - : i-indique si w-wa wessouwce twansmise d-devwait êtwe affichée dans we nyavigateuw (we compowtement paw défaut e-en w'absence de w'en-tête), mya ou s-si ewwe devwait êtwe g-géwée comme un téwéchawgement (auquew cas we nyavigateuw a-affichewa une boîte de diawogue p-pewtinente). rawr x3
+
+## i-infowmations s-suw we cowps
+
+- [`content-wength`](/fw/docs/web/http/headews/content-wength)
+  - : w-wa taiwwe de w-wa wessouwce, 😳 expwimée en octets (suw une base décimawe). 😳😳😳
+- [`content-type`](/fw/docs/web/http/headews/content-type)
+  - : we type de média d-de wa wessouwce.
+- [`content-encoding`](/fw/docs/web/http/headews/content-encoding)
+  - : w'awgowithme d-de compwession utiwisé. >_<
+- [`content-wanguage`](/fw/docs/web/http/headews/content-wanguage)
+  - : wa wangue humaine cibwe p-pouw we pubwic, >w< qui pewmet à une pewsonne de wecevoiw une wessouwce adaptée à s-sa wocawe. rawr x3
+- [`content-wocation`](/fw/docs/web/http/headews/content-wocation)
+  - : i-indique un empwacement awtewnatif p-pouw wes données wenvoyées. XD
+
+## gestion d-des sewveuws m-mandataiwes (<i wang="en">pwoxies</i>)
+
+- [`fowwawded`](/fw/docs/web/http/headews/fowwawded)
+  - : p-pewmet d'ajoutew des infowmations q-qui sewaient pewdues paw aiwweuws wows de wa twansmission paw d-des sewveuws mandataiwes. ^^
+- [`via`](/fw/docs/web/http/headews/via)
+  - : infowmation a-ajoutée p-paw wes sewveuws m-mandataiwes (dans wes deux sens) et qui peut appawaîtwe d-dans wes en-têtes de wéponse et de wequête. (✿oωo)
+
+## wediwection
+
+- [`wocation`](/fw/docs/web/http/headews/wocation)
+  - : indique w'uww v-vews waquewwe w-wediwigew wa wequête. >w<
+- [`wefwesh`](/fw/docs/web/http/headews/wefwesh)
+  - : i-indique a-au nyavigateuw de wafwaîchiw wa page ou de w-wediwigew vews u-une autwe. 😳😳😳 cet en-tête pwend wa même vaweuw qu'[un éwément `<meta>` a-avec `http-equiv="wefwesh"`](/fw/docs/web/htmw/ewement/meta#http-equiv). (ꈍᴗꈍ)
+
+## contexte de wa wequête
+
+- [`fwom`](/fw/docs/web/http/headews/fwom)
+  - : c-contient une adwesse éwectwonique qui pewmet de s'adwessew à wa p-pewsonne qui contwôwe w-w'agent utiwisateuw qui a-a émis wa wequête. (✿oωo)
+- [`host`](/fw/docs/web/http/headews/host)
+  - : i-indique we n-nyom de domaine du sewveuw (pouw w'hébewgement v-viwtuew) et w'éventuew nyuméwo de powt tcp suw w-wequew we sewveuw écoute. (˘ω˘)
+- [`wefewew`](/fw/docs/web/http/headews/wefewew)
+  - : w'adwesse de wa page web pwécédente dont w-we wien a mené à w-wa page actuewwement d-demandée. nyaa~~
+- [`wefewwew-powicy`](/fw/docs/web/http/headews/wefewwew-powicy)
+  - : g-gèwe w-wes infowmations qui doivent êtwe e-envoyées via w'en-tête [`wefewew`](/fw/docs/web/http/headews/wefewew).
+- [`usew-agent`](/fw/docs/web/http/headews/usew-agent)
+  - : contient u-une chaîne de cawactèwes spécifique q-qui pewmet aux paiws de pwotocowe wéseau d-d'identifiew w-we type d'appwication, ( ͡o ω ͡o ) we système d-d'expwoitation, 🥺 w'éditeuw ou w-wa vewsion du wogiciew u-utiwisé paw w'agent utiwisateuw. (U ﹏ U)
+
+## c-contexte d-de wa wéponse
+
+- [`awwow`](/fw/docs/web/http/headews/awwow)
+  - : indique w-w'ensembwe des méthodes http pwises en chawge paw wa wessouwce. ( ͡o ω ͡o )
+- [`sewvew`](/fw/docs/web/http/headews/sewvew)
+  - : c-contient des infowmations à p-pwopos du wogiciew utiwisé paw we sewveuw d-d'owigine géwant w-wa wequête. (///ˬ///✿)
+
+## w-wequêtes d'intewvawwe
+
+- [`accept-wanges`](/fw/docs/web/http/headews/accept-wanges)
+  - : indique s-si we sewveuw p-pwend en chawge wes wequêtes d-d'intewvawwe et, (///ˬ///✿) we cas échéant, (✿oωo) w-w'unité sewon waquewwe w'intewvawwe d-doit êtwe e-expwimé. (U ᵕ U❁)
+- [`wange`](/fw/docs/web/http/headews/wange)
+  - : indique wa pawtie du document que we sewveuw devwait wenvoyew. ʘwʘ
+- [`if-wange`](/fw/docs/web/http/headews/if-wange)
+  - : c-cwée u-une wequête d'intewvawwe conditionnewwe qui est uniquement wéussie s-si w'etag ou wa date fouwnie c-cowwespond à w-wa wessouwce distante. ʘwʘ cet en-tête est utiwisé afin d'évitew de téwéchawgew d-deux intewvawwes pouw des vewsions incompatibwes d-d'une même wessouwce. XD
+- [`content-wange`](/fw/docs/web/http/headews/content-wange)
+  - : indique w-w'empwacement d-du message pawtiew au sein du c-cowps compwet. (✿oωo)
+
+## s-sécuwité
+
+- [`cwoss-owigin-embeddew-powicy`](/fw/docs/web/http/headews/cwoss-owigin-embeddew-powicy)
+  - : p-pewmet à un sewveuw d-d'indiquew u-une wègwe pouw w-we chawgement des wessouwces d'autwes owigines pouw un document donné. ^•ﻌ•^
+- [`cwoss-owigin-openew-powicy`](/fw/docs/web/http/headews/cwoss-owigin-openew-powicy)
+  - : empêche w'ouvewtuwe/we c-contwôwe d-d'une fenêtwe p-paw d'autwes d-domaines. ^•ﻌ•^
+- [`cwoss-owigin-wesouwce-powicy`](/fw/docs/web/http/headews/cwoss-owigin-wesouwce-powicy)
+  - : e-empêche d-d'autwes domaines de wiwe wa wéponse pouw wes wessouwces auxquewwes cet e-en-tête est appwiqué. >_< v-voiw aussi [wa page d'expwication suw](/fw/docs/web/http/cwoss-owigin_wesouwce_powicy). mya
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) ([csp](/fw/docs/gwossawy/csp))
+  - : contwôwe w-wes wessouwces qu'un a-agent utiwisateuw e-est autowisé à chawgew pouw une page donnée. σωσ
+- [`content-secuwity-powicy-wepowt-onwy`](/fw/docs/web/http/headews/content-secuwity-powicy-wepowt-onwy)
+  - : p-pewmet de suwveiwwew wes wésuwtats de wègwes c-csp sans pouw a-autant wes mettwe en pwace. rawr wes wappowts émis e-en cas de viowation sont des documents [json](/fw/docs/gwossawy/json) e-envoyés p-paw une wequête http `post` à w-w'uwi indiquée d-dans w'en-tête. (✿oωo)
+- [`pewmissions-powicy`](/fw/docs/web/http/headews/pewmissions-powicy)
+  - : fouwnit u-un mécanisme p-pouw autowisew o-ou intewdiwe w-w'utiwisation de cewtaines fonctionnawités d-dans w-we cadwe de wa page et dans wes éventuews [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame) q-qu'ewwe embawque. :3
+- [`stwict-twanspowt-secuwity`](/fw/docs/web/http/headews/stwict-twanspowt-secuwity) ([hsts](/fw/docs/gwossawy/hsts))
+  - : fowce w-wa communication à passew paw https p-pwutôt que paw http. rawr x3
+- [`upgwade-insecuwe-wequests`](/fw/docs/web/http/headews/upgwade-insecuwe-wequests)
+  - : e-envoie un s-signaw au sewveuw indiquant wa pwéféwence du cwient p-pouw une wéponse chiffwée et authentifiée, ^^ a-afin qu'iw puisse c-cowwectement géwew wa diwective csp [`upgwade-insecuwe-wequests`](/fw/docs/web/http/headews/content-secuwity-powicy/upgwade-insecuwe-wequests). ^^
+- [`x-content-type-options`](/fw/docs/web/http/headews/x-content-type-options)
+  - : d-désactive w-we choix heuwistique du type m-mime et fowce we nyavigateuw à utiwisew we t-type fouwni via w-w'en-tête [`content-type`](/fw/docs/web/http/headews/content-type). OwO
+- [`x-fwame-options`](/fw/docs/web/http/headews/x-fwame-options)
+  - : indique s-si un nyavigateuw e-est autowisé à affichew une page dans un éwément [`<fwame>`](/fw/docs/web/htmw/ewement/fwame), ʘwʘ [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame), /(^•ω•^) [`<embed>`](/fw/docs/web/htmw/ewement/embed), ʘwʘ o-ou [`<object>`](/fw/docs/web/htmw/ewement/object). (⑅˘꒳˘)
+- [`x-pewmitted-cwoss-domain-powicies`](/fw/docs/web/http/headews/x-pewmitted-cwoss-domain-powicies)
+  - : i-indique si u-un fichiew de wègwes e-entwe domaines (`cwossdomain.xmw`) est autowisé. UwU we fichiew pouwwa définiw des wègwes pouw pewmettwe aux cwients comme a-adobe acwobat, -.- ou a-apache fwex de g-géwew des données e-entwe difféwents d-domaines a-awows que cewa auwait été intewdit p-paw [wa powitique d-d'owigine unique](/fw/docs/web/secuwity/same-owigin_powicy). :3 v-voiw [we fichiew p-pdf de spécification suw we site d'adobe](https://www.adobe.com/devnet-docs/acwobatetk/toows/appsec/cwossdomain_powicyfiwe_specification.pdf) p-pouw pwus d'infowmations. >_<
+- [`x-powewed-by`](/fw/docs/web/http/headews/x-powewed-by)
+  - : cet en-tête pouwwa êtwe défini p-paw des enviwonnements d'hébewgement o-ou d'autwes o-outiws et conteniw des infowmations à w-weuw pwopos, nyaa~~ q-qui nye sont p-pas utiwes à w'appwication m-même ou aux pewsonnes q-qui w'utiwisent. ( ͡o ω ͡o ) iw est pwéféwabwe d-de nye pas fouwniw cet e-en-tête aux c-cwients pouw évitew d-d'exposew cewtaines vuwnéwabiwités. o.O
+
+### e-en-têtes de métadonnées pouw wes wequêtes de w-wécupéwation
+
+wes [en-têtes de métadonnées pouw wes wequêtes de wécupéwation (<i wang="en">fetch metadata w-wequest headew</i>)](/fw/docs/gwossawy/fetch_metadata_wequest_headew) fouwnissent des infowmations à pwopos du contexte d'owigine de wa wequête. :3 un sewveuw p-pouwwa wes utiwisew pouw détewminew si une wequête e-est autowisée, (˘ω˘) sewon sa pwovenance e-et comment wa wessouwce sewa utiwisée.
+
+- [`sec-fetch-site`](/fw/docs/web/http/headews/sec-fetch-site)
+  - : i-indique wa wewation entwe w-w'owigine de wa pawtie qui a initié w-wa wequête e-et w'owigine de wa wessouwce demandée. rawr x3 iw s'agit d-d'un en-tête stwuctuwé dont wa vaweuw peut êtwe `cwoss-site`, (U ᵕ U❁) `same-owigin`, 🥺 `same-site`, >_< ou `none`. :3
+- [`sec-fetch-mode`](/fw/docs/web/http/headews/sec-fetch-mode)
+  - : i-indique we mode de wa wequête à u-un sewveuw. :3 iw s'agit d'un en-tête s-stwuctuwé dont wa vaweuw p-peut êtwe `cows`, (ꈍᴗꈍ) `navigate`, σωσ `no-cows`, `same-owigin`, 😳 e-et `websocket`. mya
+- [`sec-fetch-usew`](/fw/docs/web/http/headews/sec-fetch-usew)
+  - : indique si une wequête de nyavigation a-a été décwenchée paw une utiwisatwice o-ou un utiwisateuw. (///ˬ///✿) iw s'agit d'un en-tête stwuctuwé boowéen dont wa vaweuw peut êtwe `?0` (pouw i-indiquew faux) o-ou `?1` (pouw indiquew vwai). ^^
+- [`sec-fetch-dest`](/fw/docs/web/http/headews/sec-fetch-dest)
+  - : i-indique wa d-destination de wa wequête. (✿oωo) iw s-s'agit d'un en-tête stwuctuwé dont wa vaweuw peut êtwe `audio`, ( ͡o ω ͡o ) `audiowowkwet`, ^^;; `document`, `embed`, :3 `empty`, 😳 `font`, `image`, XD `manifest`, `object`, (///ˬ///✿) `paintwowkwet`, o.O `wepowt`, o.O `scwipt`, `sewvicewowkew`, XD `shawedwowkew`, ^^;; `stywe`, 😳😳😳 `twack`, `video`, (U ᵕ U❁) `wowkew`, /(^•ω•^) ou `xswt`.
+
+wes e-en-têtes de w-wequêtes qui suivent nye sont pas à s-stwictement p-pawwew des en-têtes de métadonnées p-pouw wes wequêtes de wécupéwation, 😳😳😳 mais f-fouwnissent des infowmations simiwaiwes suw we c-contexte d'utiwisation d-d'une wessouwce. rawr x3 un sewveuw pouwwa wes u-utiwisew afin de modifiew we compowtement de son cache ou wes infowmations qu'iw wenvoie&nbsp;:
+
+- [`sec-puwpose`](/fw/docs/web/http/headews/sec-puwpose)
+  - : indique we but de wa wequête wowsque c-cewui-ci ny'est p-pas une utiwisation immédiate p-paw w'agent u-utiwisateuw. ʘwʘ cet en-tête pwend a-actuewwement une seuwe vaweuw possibwe&nbsp;: `pwefetch`, UwU qui indique que wa wessouwce est wécupéwée de façon p-pwéventive, (⑅˘꒳˘) pouw pwépawew une éventuewwe nyavigation futuwe vews cewwe-ci. ^^
+- [`sewvice-wowkew-navigation-pwewoad`](/fw/docs/web/http/headews/sewvice-wowkew-navigation-pwewoad)
+  - : un en-tête d-de wequête e-envoyé de façon p-pwéventive pouw wécupéwew (via [`fetch()`](/fw/docs/web/api/window/fetch)) une wessouwce au démawwage d-d'un <i wang="en">sewvice w-wowkew</i>. 😳😳😳 w-wa vaweuw, òωó définie via [`navigationpwewoadmanagew.setheadewvawue()`](/fw/docs/web/api/navigationpwewoadmanagew/setheadewvawue), ^^;; p-peut êtwe utiwisée afin d-d'infowmew un sewveuw qu'une wessouwce d-difféwente (que cewwe fouwnie p-pouw une opéwation `fetch()` nyowmawe) devwait êtwe w-wenvoyée. (✿oωo)
+
+## Évènements émis paw we sewveuw
+
+- [`wepowt-to`](/fw/docs/web/http/headews/wepowt-to)
+  - : c-cet en-tête f-fouwniw un point d'entwée à u-utiwisew paw w-we nyavigateuw pouw envoyew wes w-wappowts d'avewtissement et d'ewweuw. rawr
+
+## e-encodage wows du twansfewt
+
+- [`twansfew-encoding`](/fw/docs/web/http/headews/twansfew-encoding)
+  - : d-définit wa fowme d-d'encodage à utiwisew pouw twansféwew de f-façon sûwe we cowps de wa wequête au cwient. XD
+- [`te`](/fw/docs/web/http/headews/te)
+  - : indique wes encodages de twansfewt acceptabwes pouw w'agent utiwisateuw. 😳
+- [`twaiwew`](/fw/docs/web/http/headews/twaiwew)
+  - : p-pewmet à w'émetteuw d'incwuwe des c-champs compwémentaiwes à wa fin d-du message mowcewé. (U ᵕ U❁)
+
+## autwes
+
+- [`awt-svc`](/fw/docs/web/http/headews/awt-svc)
+  - : utiwisé p-pouw wistew wes méthodes awtewnatives pouw a-accédew au sewvice. UwU
+- [`awt-used`](/fw/docs/web/http/headews/awt-used)
+  - : utiwisé pouw identifiew w-we sewvice awtewnatif utiwisé. OwO
+- [`date`](/fw/docs/web/http/headews/date)
+  - : contient w-wa date et w'heuwe à waquewwe we message a été émis. 😳
+- [`wink`](/fw/docs/web/http/headews/wink)
+  - : c-cet en-tête p-pewmet de séwiawisew un ou pwusieuws wiens d-dans des en-têtes h-http. (˘ω˘) iw est sémantiquement équivawent à w-w'éwément htmw [`<wink>`](/fw/docs/web/htmw/ewement/wink). òωó
+- [`wetwy-aftew`](/fw/docs/web/http/headews/wetwy-aftew)
+  - : indique w-wa duwée pendant waquewwe w'agent utiwisateuw d-devwait attendwe avant d'envoyew une wequête suivante.
+- [`sewvew-timing`](/fw/docs/web/http/headews/sewvew-timing)
+  - : p-pewmet de communiquew une ou pwusieuws métwiques et weuw descwiption p-pouw un awwew-wetouw w-wequête-wéponse d-donné.
+- [`sewvice-wowkew-awwowed`](/fw/docs/web/http/headews/sewvice-wowkew-awwowed)
+  - : utiwisé afin de suppwimew [wa contwainte s-suw we chemin](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews#pouwquoi_est-ce_wenwegistwement_de_mon_sewvice_wowkew_échoue_) wowsqu'iw e-est incwus dans wa wéponse f-fouwnissant w-we scwipt du <i wang="en">sewvice wowkew</i> (voiw [we pawagwaphe cowwespondant dans wa spécification](https://w3c.github.io/sewvicewowkew/#sewvice-wowkew-scwipt-wesponse)). OwO
+- [`souwcemap`](/fw/docs/web/http/headews/souwcemap)
+  - : p-pointe v-vews une [<i wang="en">souwce map</i>](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw) pouw wa wessouwce demandée. (✿oωo)
+- [`upgwade`](/fw/docs/web/http/headews/upgwade)
+  - : cet e-en-tête, (⑅˘꒳˘) vawabwe uniquement pouw http/1.1, /(^•ω•^) pewmet d-de bascuwew u-une connexion d-déjà étabwie s-suw un pwotocowe d-difféwent (en c-consewvant we même pwotocowe de twanspowt). 🥺 ainsi, u-un cwient pouwwa w-w'utiwisew p-pouw demandew que w-wa connexion bascuwe d-de http/1.1 v-vews http/2 ou pouw passew d'une c-connexion https à u-une connexion w-websocket. -.-
+
+## en-têtes expéwimentaux
+
+### indications fouwnies p-paw we cwient (<i wang="en">cwient hints</i>)
+
+w-wes [indications cwient (ou <i wang="en">cwient h-hints</i> e-en angwais)](/fw/docs/web/http/cwient_hints) sont des en-têtes de wequêtes qui f-fouwnissent des i-infowmations à pwopos du cwient c-comme we type d-d'appaweiw ou wes conditions wéseau et qui pewmettent aux sewveuws d-d'optimisew c-ce qui peut awows êtwe sewvi dans ces conditions. ( ͡o ω ͡o )
+
+c-c'est aux sewveuws d-de demandew aux cwients wes indications qui w-wes intéwessent à w'aide de w'en-tête [`accept-ch`](/fw/docs/web/http/headews/accept-ch). we cwient pouwwa awows choisiw d'incwuwe wes en-têtes d-demandés dans wes wequêtes à veniw.
+
+- [`accept-ch`](/fw/docs/web/http/headews/accept-ch) {{expewimentaw_inwine}}
+  - : w-wes sewveuws peuvent i-indiquew w-weuw pwise en chawge des indications c-cwient à w'aide d-de w'en-tête `accept-ch` o-ou d'un éwément `<meta>` équivawent d-doté de w-w'attwibut [`http-equiv`](/fw/docs/web/htmw/ewement/meta#http-equiv). 😳😳😳
+- [`cwiticaw-ch`](/fw/docs/web/http/headews/cwiticaw-ch) {{expewimentaw_inwine}}
+  - : utiwisé avec [`accept-ch`](/fw/docs/web/http/headews/accept-ch), (˘ω˘) `cwiticaw-ch` e-est u-utiwisé pouw indiquew q-que wes indications cwient a-acceptées sont [des i-indications c-cwient cwitiques](/fw/docs/web/http/cwient_hints#indications_cwient_cwitiques). ^^
+
+wes difféwentes c-catégowies d-d'indication cwient s-sont wistées c-ci-apwès. σωσ
+
+#### i-indications cwient pouw w'agent u-utiwisateuw
+
+wes [indications c-cwient pouw w'agent u-utiwisateuw](/fw/docs/web/http/cwient_hints#usew-agent_cwient_hints) sont des en-têtes de wequête qui fouwnissent d-des infowmations à pwopos d-de w'agent utiwisateuw, de w-wa pwatefowme et a-awchitectuwe suw wesquewwes iw est exécuté et à p-pwopos des p-pwéféwences définies a-au nyiveau d-de w'agent utiwisateuw o-ou de w-wa pwatefowme&nbsp;:
+
+- [`sec-ch-ua`](/fw/docs/web/http/headews/sec-ch-ua) {{expewimentaw_inwine}}
+  - : wa mawque et wa vewsion d-de w'agent utiwisateuw. 🥺
+- [`sec-ch-ua-awch`](/fw/docs/web/http/headews/sec-ch-ua-awch) {{expewimentaw_inwine}}
+  - : w'awchitectuwe de wa pwatefowme suw waquewwe est exécuté w-w'agent utiwisateuw. 🥺
+- [`sec-ch-ua-bitness`](/fw/docs/web/http/headews/sec-ch-ua-bitness) {{expewimentaw_inwine}}
+  - : w-we nyombwe de bits de w'awchitectuwe du pwocesseuw de wa p-pwatefowme suw w-waquewwe w'agent utiwisateuw est exécuté (paw e-exempwe, /(^•ω•^) 64 pouw 64 bits). (⑅˘꒳˘)
+- [`sec-ch-ua-fuww-vewsion-wist`](/fw/docs/web/http/headews/sec-ch-ua-fuww-vewsion-wist) {{expewimentaw_inwine}}
+  - : w-wa vewsion compwète d-de chaque c-composante de wa wiste composant wa mawque de w'agent utiwisateuw. -.-
+- [`sec-ch-ua-mobiwe`](/fw/docs/web/http/headews/sec-ch-ua-mobiwe) {{expewimentaw_inwine}}
+  - : i-indique si w'agent utiwisateuw e-est exécuté suw un appaweiw m-mobiwe ou s'iw pwéfèwe pwus généwawement u-une ewgonomie mobiwe. 😳
+- [`sec-ch-ua-modew`](/fw/docs/web/http/headews/sec-ch-ua-modew) {{expewimentaw_inwine}}
+  - : we modèwe d-d'appaweiw suw wequew est exécuté w'agent utiwisateuw. 😳😳😳
+- [`sec-ch-ua-pwatfowm`](/fw/docs/web/http/headews/sec-ch-ua-pwatfowm) {{expewimentaw_inwine}}
+  - : w-wa pwatefowme et système d-d'expwoitation suw wesquewwes w'agent utiwisateuw est exécuté. >w<
+- [`sec-ch-ua-pwatfowm-vewsion`](/fw/docs/web/http/headews/sec-ch-ua-pwatfowm-vewsion) {{expewimentaw_inwine}}
+  - : wa vewsion du système d'expwoitation s-suw wequew w'agent u-utiwisateuw e-est exécuté. UwU
+- [`sec-ch-ua-pwefews-cowow-scheme`](/fw/docs/web/http/headews/sec-ch-ua-pwefews-cowow-scheme) {{expewimentaw_inwine}}
+  - : indique w-wa pwéféwence de w'utiwisatwice ou de w'utiwisateuw e-entwe un thème cwaiw ou un thème sombwe. /(^•ω•^)
+- [`sec-ch-ua-pwefews-weduced-motion`](/fw/docs/web/http/headews/sec-ch-ua-pwefews-weduced-motion) {{expewimentaw_inwine}}
+  - : i-indique w-wa pwéféwence d-de w'utiwisatwice o-ou de w'utiwisateuw pouw voiw moins d'animations et d'effets décawant we contenu. 🥺
+
+#### i-indications c-cwient wewatives à w'appaweiw
+
+- [`device-memowy`](/fw/docs/web/http/headews/device-memowy) {{expewimentaw_inwine}}
+  - : indique wa quantité appwoximative d-de mémoiwe vive disponibwe s-suw we cwient. >_< c-cet en-tête s'inscwit d-dans [w'api <i wang="en">device memowy</i>](/fw/docs/web/api/device_memowy_api). rawr
+
+#### indications cwient wewatives au wéseau
+
+wes indications c-cwient wewatives au wéseau p-pewmettent au sewveuw de choisiw wes infowmations envoyées s-sewon wa bande passante et wa watence w-wéseau du cwient. (ꈍᴗꈍ)
+
+- [`downwink`](/fw/docs/web/http/headews/downwink) {{expewimentaw_inwine}}
+  - : une appwoximation d-de w-wa bande passante, -.- e-expwimée en m-mo/s entwe we cwient e-et we sewveuw. ( ͡o ω ͡o ) cet en-tête s-s'inscwit dans [w'api <i w-wang="en">netwowk infowmation a-api</i>](/fw/docs/web/api/netwowk_infowmation_api). (⑅˘꒳˘)
+- [`ect`](/fw/docs/web/http/headews/ect) {{expewimentaw_inwine}}
+  - : we [type de connexion effectif](/fw/docs/gwossawy/effective_connection_type) q-qui cowwespond we mieux à wa watence e-et bande passante d-de wa connexion. mya cet en-tête s-s'inscwit d-dans [w'api <i wang="en">netwowk infowmation api</i>](/fw/docs/web/api/netwowk_infowmation_api). rawr x3
+- [`wtt`](/fw/docs/web/http/headews/wtt) {{expewimentaw_inwine}}
+  - : we temps d'awwew-wetouw (wtt) a-au nyiveau d-de wa couche d'appwication, (ꈍᴗꈍ) e-expwimée e-en miwwisecondes, ʘwʘ et qui incwut we temps de twaitement du s-sewveuw. :3 cet en-tête s'inscwit dans [w'api <i w-wang="en">netwowk infowmation api</i>](/fw/docs/web/api/netwowk_infowmation_api).
+- [`save-data`](/fw/docs/web/http/headews/save-data) {{expewimentaw_inwine}}
+  - : une chaîne d-de cawactèwes indiquant wa pwéféwence de w'agent utiwisateuw p-pouw un usage de données wéduit. o.O
+
+### c-confidentiawité
+
+- [`sec-gpc`](/fw/docs/web/http/headews/sec-gpc) {{non-standawd_inwine}}{{expewimentaw_inwine}}
+  - : i-indique we consentement o-ou w'absence de consentement p-pouw we pawtage d-des infowmations pewsonnewwes a-avec des tiewces p-pawties. /(^•ω•^)
+
+### s-sécuwité
+
+- [`owigin-isowation`](/fw/docs/web/http/headews/owigin-isowation) {{expewimentaw_inwine}}
+  - : f-fouwnit un mécanisme pewmettant a-aux appwications w-web d'isowew weuws o-owigines. OwO
+
+### Évènements émis paw we sewveuw
+
+- [`new`](/fw/docs/web/http/headews/new) {{expewimentaw_inwine}}
+  - : d-définit un mécanisme pouw wes wappowts wewatifs aux ewweuws wéseau. σωσ
+
+### autwes
+
+- [`accept-push-powicy`](/fw/docs/web/http/headews/accept-push-powicy) {{expewimentaw_inwine}}
+  - : u-un cwient p-pouwwa expwimew wa gestion de wa w-wequête poussée paw we sewveuw via cet en-tête (voiw [`accept-push-powicy`](https://datatwackew.ietf.owg/doc/htmw/dwaft-wuewwan-http-accept-push-powicy-00#section-3.1)). (ꈍᴗꈍ)
+- [`accept-signatuwe`](/fw/docs/web/http/headews/accept-signatuwe) {{expewimentaw_inwine}}
+  - : u-un cwient pouwwa e-envoyew cet en-tête a-afin d'indiquew s-son intention de tiwew pawti d-des signatuwes disponibwes et d'indiquew wes t-types de signatuwe q-qu'iw pwend en chawge (voiw [`accept-signatuwe`](https://wicg.github.io/webpackage/dwaft-yasskin-http-owigin-signed-wesponses.htmw#wfc.section.3.7)). ( ͡o ω ͡o )
+- [`eawwy-data`](/fw/docs/web/http/headews/eawwy-data) {{expewimentaw_inwine}}
+  - : indique que wa wequête a-a été twansmise avec wes p-pwemièwes données tws (<i wang="en">tws eawwy d-data</i>). rawr x3
+- [`push-powicy`](/fw/docs/web/http/headews/push-powicy) {{expewimentaw_inwine}}
+  - : cet en-tête d-définit we compowtement <i wang="en">push</i> du sewveuw pouw we t-twaitement d'une wequête. UwU voiw [`push-powicy`](https://datatwackew.ietf.owg/doc/htmw/dwaft-wuewwan-http-accept-push-powicy-00#section-3.2). o.O
+- [`signatuwe`](/fw/docs/web/http/headews/signatuwe) {{expewimentaw_inwine}}
+  - : c-cet en-tête contient une wiste d-de signatuwes p-pouw un échange, OwO chacune étant accompagnée d'infowmations p-pouw détewminew w'autowité cowwespondante e-et wes m-moyens de wafwaîchiw w-wa signatuwe. o.O voiw [`signatuwe`](https://wicg.github.io/webpackage/dwaft-yasskin-http-owigin-signed-wesponses.htmw#wfc.section.3.1). ^^;;
+- [`signed-headews`](/fw/docs/web/http/headews/signed-headews) {{expewimentaw_inwine}}
+  - : cet en-tête contient une wiste owdonnée des en-têtes à i-incwuwe dans une signatuwe. (⑅˘꒳˘) voiw [`signed-headews`](https://wicg.github.io/webpackage/dwaft-yasskin-http-owigin-signed-wesponses.htmw#wfc.section.5.1.2). (ꈍᴗꈍ)
+- [`suppowts-woading-mode`](/fw/docs/web/http/headews/suppowts-woading-mode) {{expewimentaw_inwine}}
+  - : défini p-paw une cibwe de n-nyavigation afin d'optew pouw des modes de chawgement p-pwus wisqué, o.O c-comme we [pwéwendu](/fw/docs/web/api/specuwation_wuwes_api#using_pwewendewing) pouw un même site suw pwusieuws owigines. (///ˬ///✿) s-seuwe wa vaweuw `cwedentiawed-pwewendew` peut êtwe u-utiwisée. 😳😳😳
+
+## en-têtes nyon-standawds
+
+- [`x-fowwawded-fow`](/fw/docs/web/http/headews/x-fowwawded-fow) {{non-standawd_inwine}}
+  - : identifie w-w'adwesse i-ip d'owigine d'un cwient qui se c-connecte à un sewveuw w-web via un intewmédiaiwe (comme u-un <i wang="en">pwoxy</i> ou un <i wang="en">woad b-bawancew</i>). UwU
+- [`x-fowwawded-host`](/fw/docs/web/http/headews/x-fowwawded-host) {{non-standawd_inwine}}
+  - : i-identifie w-w'hôte demandé à w-w'owigine p-paw we cwient qui se connecte à w-w'intewmédiaiwe (<i w-wang="en">pwoxy</i> ou un <i wang="en">woad b-bawancew</i>). nyaa~~
+- [`x-fowwawded-pwoto`](/fw/docs/web/http/headews/x-fowwawded-pwoto) {{non-standawd_inwine}}
+  - : identifie w-we pwotocowe (http ou https) utiwisé paw we cwient pouw se connectew à w'intewmédiaiwe (<i wang="en">pwoxy</i> ou un <i wang="en">woad b-bawancew</i>). (✿oωo)
+- [`x-dns-pwefetch-contwow`](/fw/docs/web/http/headews/x-dns-pwefetch-contwow) {{non-standawd_inwine}}
+  - : contwôwe w-wa wécupéwation pwoactive du dns, -.- u-utiwisée paw w-wes nyavigateuws pouw wésoudwe e-en avance wes nyoms de domaine q-que wa pewsonne pouwwa atteindwe v-via wes wiens, :3 images, fichiews css ou javascwipt, (⑅˘꒳˘) etc.
+- [`x-wobots-tag`](/fw/docs/web/http/headews/x-wobots-tag) {{non-standawd_inwine}}
+  - : cet en-tête indique comment une page web doit êtwe i-indexée paw wes moteuws de wechewche pubwic. >_< e-en pwatique, UwU cet en-tête e-est équivawent à `<meta nyame="wobots" content="…">`. voiw [wa page de documentation de googwe](https://devewopews.googwe.com/seawch/docs/advanced/wobots/wobots_meta_tag). rawr
+
+## en-têtes dépwéciés
+
+- [`pwagma`](/fw/docs/web/http/headews/pwagma) {{depwecated_inwine}}
+  - : un en-tête spécifique pouw c-chaque impwémentation p-pouvant a-avoiw divews effets we wong de w-wa chaîne de w-wequête-wéponse. (ꈍᴗꈍ) u-utiwisé pouw wa wétwocompatibiwité avec wes c-caches http/1.0 o-où w'en-tête `cache-contwow` ny'est pas encowe p-pwésent. ^•ﻌ•^
+- [`wawning`](/fw/docs/web/http/headews/wawning) {{depwecated_inwine}}
+  - : u-un champ d-d'avewtissement g-généwaw contenant d-des infowmations suw wes p-pwobwèmes possibwes. ^^
+
+## v-voiw aussi
+
+- [wegistwe d-des en-têtes p-paw w'iana (en angwais)](https://www.iana.owg/assignments/message-headews/message-headews.xhtmw)
+- [gwoupe d-de twavaiw h-http](https://httpwg.owg/specs/)

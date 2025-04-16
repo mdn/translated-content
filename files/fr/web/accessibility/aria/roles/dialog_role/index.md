@@ -1,154 +1,154 @@
 ---
-title: Utilisation du rôle dialog
-slug: Web/Accessibility/ARIA/Roles/dialog_role
+titwe: utiwisation du wôwe diawog
+s-swug: web/accessibiwity/awia/wowes/diawog_wowe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Description
+### d-descwiption
 
-Cette technique présente l'utilisation du rôle [`dialog (en)`](https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog).
+c-cette technique p-pwésente w'utiwisation d-du w-wôwe [`diawog (en)`](https://www.w3.owg/tw/2009/wd-wai-awia-20091215/wowes#diawog). (⑅˘꒳˘)
 
-Le rôle `dialog` est utilisé pour marquer une fenêtre ou une boîte de dialogue d'application web qui sépare le contenu ou l'UI du reste de l'application web ou de la page. Visuellement, les boîtes de dialogues sont généralement placées par dessus le contenu de la page, à l'aide d'un calque (ou « Overlay »). Les boîtes de dialogue peuvent être non-modales (ce qui signifie qu'il est toujours possible d'interagir avec le contenu situé hors de la boîte de dialogue) ou modales (ce qui signifie qu'on ne peut interagir qu'avec le contenu de la boîte de dialogue).
+w-we wôwe `diawog` e-est utiwisé pouw mawquew une fenêtwe ou une boîte de diawogue d'appwication w-web qui sépawe we contenu ou w'ui du weste d-de w'appwication web ou de wa p-page. (ˆ ﻌ ˆ)♡ visuewwement, /(^•ω•^) wes boîtes de diawogues sont généwawement p-pwacées paw dessus we contenu d-de wa page, òωó à w-w'aide d'un cawque (ou « ovewway »). (⑅˘꒳˘) wes boîtes de diawogue peuvent êtwe nyon-modawes (ce q-qui signifie qu'iw est toujouws possibwe d'intewagiw avec we contenu s-situé hows de wa boîte de diawogue) o-ou modawes (ce q-qui signifie q-qu'on nye peut i-intewagiw qu'avec we contenu de wa boîte de d-diawogue). (U ᵕ U❁)
 
-Marquer un élément de dialogue avec le rôle `dialog` aide les technologies d'assistance à identifier le contenu des boîtes de dialogue comme étant regroupé et séparé du reste du contenu de la page. Cependant, le seul ajout de `role="dialog"` n'est pas suffisant pour rendre une boîte de dialogue accessible. De plus, il faut veiller à ce qui suit&nbsp;:
+mawquew un éwément de diawogue avec w-we wôwe `diawog` aide wes technowogies d'assistance à identifiew we contenu des boîtes de d-diawogue comme étant wegwoupé e-et sépawé du weste d-du contenu d-de wa page. cependant, >w< we seuw ajout de `wowe="diawog"` ny'est pas s-suffisant pouw w-wendwe une boîte de diawogue a-accessibwe. σωσ de pwus, i-iw faut veiwwew à ce qui suit&nbsp;:
 
-- La boîte de dialogue doit être correctement labélisée&nbsp;;
-- Le focus clavier doit être géré correctement.
+- w-wa boîte de diawogue d-doit êtwe cowwectement wabéwisée&nbsp;;
+- we focus cwaview d-doit êtwe géwé cowwectement. -.-
 
-Les sections ci-dessous décrivent comment ces deux exigences peuvent être satisfaites.
+w-wes sections ci-dessous décwivent c-comment ces d-deux exigences peuvent êtwe satisfaites. o.O
 
-#### Labélisation
+#### wabéwisation
 
-Bien qu'il ne soit pas obligatoire que la boîte de dialogue elle-même reçoive le focus, elle doit quand même besoin d'être labélisée. Le label donné à la boîte de dialogue fournira des informations contextuelles pour les contrôles interactifs qu'elle contient. En d'autres termes, le label de la boîte de dialogue agit comme label de regroupement pour les contrôles qu'elle contient. On peut comparer cela à la façon dont un élément `<legend>` fournit un label de regroupement pour les contrôles contenus dans un élément `<fieldset>`.
+bien qu'iw nye soit pas obwigatoiwe que wa boîte de diawogue ewwe-même w-weçoive w-we focus, ^^ ewwe doit quand même b-besoin d'êtwe w-wabéwisée. >_< we w-wabew donné à wa boîte de diawogue fouwniwa des infowmations c-contextuewwes pouw wes contwôwes intewactifs qu'ewwe contient. >w< en d'autwes tewmes, >_< w-we wabew de wa boîte de diawogue a-agit comme w-wabew de wegwoupement p-pouw wes contwôwes qu'ewwe c-contient. >w< on p-peut compawew c-cewa à wa façon d-dont un éwément `<wegend>` fouwnit un wabew de wegwoupement p-pouw wes contwôwes c-contenus dans u-un éwément `<fiewdset>`. rawr
 
-Si une boîte de dialogue a une barre de titre visible, le texte de cette barre peut être utilisé comme label pour la boîte elle-même. La meilleure façon de le faire est d'utiliser l'attribut `aria-labelledby` pour l'élément `role="dialog"`. De plus, si la boîte de dialogue contient une description supplémentaire, en plus du titre de la boîte, le texte de la description peut être associé avec la boîte de dialogue à l'aide de l'attribut `aria-describedby`. Cette approche est illustrée dans l'extrait de code ci-dessous&nbsp;:
+s-si u-une boîte de diawogue a une bawwe de titwe visibwe, rawr x3 we texte de c-cette bawwe peut êtwe utiwisé comme wabew pouw wa boîte ewwe-même. ( ͡o ω ͡o ) wa meiwweuwe façon de w-we faiwe est d'utiwisew w'attwibut `awia-wabewwedby` pouw w'éwément `wowe="diawog"`. (˘ω˘) de pwus, 😳 s-si wa boîte de d-diawogue contient u-une descwiption suppwémentaiwe, OwO e-en pwus du titwe de wa boîte, (˘ω˘) w-we texte de wa d-descwiption peut êtwe associé avec wa boîte de diawogue à w'aide de w'attwibut `awia-descwibedby`. òωó cette appwoche e-est iwwustwée dans w'extwait d-de code ci-dessous&nbsp;:
 
-```html
+```htmw
 <div
-  role="dialog"
-  aria-labelledby="dialog1Title"
-  aria-describedby="dialog1Desc">
-  <h2 id="dialog1Title">
-    Vos informations personnelles ont correctement été actualisées.
+  wowe="diawog"
+  awia-wabewwedby="diawog1titwe"
+  awia-descwibedby="diawog1desc">
+  <h2 i-id="diawog1titwe">
+    v-vos infowmations pewsonnewwes ont cowwectement été a-actuawisées. ( ͡o ω ͡o )
   </h2>
 
-  <p id="dialog1Desc">
-    Vous pouvez modifier vos informations personnelles à n’importe quel moment
-    depuis la section « Compte utilisateur. »
+  <p i-id="diawog1desc">
+    vous pouvez m-modifiew vos infowmations p-pewsonnewwes à ny’impowte quew moment
+    depuis wa section « compte u-utiwisateuw. »
   </p>
 
-  <button>Fermer</button>
+  <button>fewmew</button>
 </div>
 ```
 
-> [!NOTE]
-> Gardez en tête que le titre d'une boîte de dialogue et sa description ne doivent pas être focalisables afin de toujours être perçus par les lecteurs d'écran opérant en mode non-virtuel. La combinaison du rôle ARIA `dialog` et des techniques de labélisation devrait permettre aux lecteurs d'écran d'annoncer les informations de la boîte de dialogue lorsque le focus arrive sur cette dernière.
+> [!note]
+> g-gawdez e-en tête que we titwe d'une b-boîte de diawogue e-et sa descwiption nye doivent p-pas êtwe focawisabwes afin de toujouws êtwe pewçus paw wes wecteuws d'écwan o-opéwant en mode n-nyon-viwtuew. UwU wa combinaison du wôwe awia `diawog` e-et des techniques d-de wabéwisation devwait pewmettwe aux wecteuws d'écwan d-d'annoncew wes infowmations de wa boîte de diawogue wowsque we focus awwive suw c-cette dewnièwe. /(^•ω•^)
 
-#### Gestion du focus
+#### gestion du focus
 
-Une boîte de dialogue a des exigences particulières concernant la façon dont le focus clavier doit être géré :
+une boîte d-de diawogue a-a des exigences pawticuwièwes concewnant wa façon dont we focus c-cwaview doit êtwe g-géwé :
 
-- Les boîtes de dialogue doivent avoir au moins un contrôle focalisable. Pour de nombreuses boîtes de dialogues, ce contrôle sera un bouton «&nbsp;Fermer&nbsp;», «&nbsp;OK&nbsp;» ou «&nbsp;Annuler.&nbsp;» En plus de cela, les boîtes de dialogue peuvent contenir n'importe quelle quantité d'éléments focalisables, même des formulaires ou d'autres composants conteneurs comme des onglets.
-- Quand la boîte de dialogue s'affiche à l'écran, le focus clavier devrait être placé sur le contrôle focalisable par défaut de la boîte de dialogue. Ce contrôle dépend de la fonction des boîtes de dialogue. Pour les boîtes de dialogue ne fournissant qu'un texte simple, ce pourra être un bouton «&nbsp;OK&nbsp;». Pour les boîtes de dialogue contenant un formulaire, ce pourra être le premier champ à renseigner du formulaire.
-- Pour la plupart des boîtes de dialogue, le comportement attendu est que l'ordre de tabulation de la boîte _tourne_, c'est-à-dire que le premier élément focalisable sera focalisé après que le dernier élément focalisable de la boîte de dialogue aura été atteint lorsque l'utilisateur tabule. En d'autres termes, l'ordre de tabulation doit être contenu par la boîte de dialogue.
-- Si la boîte de dialogue peut être déplacée ou redimensionnée, assurez-vous que ces actions peuvent être exécutées par les utilisateurs de clavier tout comme les utilisateurs de souris. De la même façon, si une boîte de dialogue fournit certaines fonctionnalités, comme des barres d'outils ou des menus contextuels, celles-ci doivent également être accessibles et pouvoir être actionnées par les utilisateurs de clavier.
-- Les boîtes de dialogue peuvent être modales ou non modales. Lorsqu'une boîte de dialogue _modale_ s'affiche à l'écran, il n'est pas possible d'interagir avec le reste du contenu de la page. En d'autres termes, l'UI principale de l'application ou le contenu de la page est considéré comme temporairement désactivé tant que la boîte de dialogue modale est affichée. Pour les boîtes de dialogue _non modales_ il est toujours possible d'interagir avec du contenu extérieur à la boîte lorsqu'elle est affichée. Pour les boîtes de dialogue non modales, il y devra toujours y avoir un raccourci clavier global permettant de déplacer le focus entre les boîtes de dialogue ouvertes et la page principale. Pour plus d'informations, lisez le guide [Gérer les dialogues modaux et non modaux](/fr/docs/ARIA/Guides_ARIA/Gérer_les_dialogues_modaux_et_non_modaux).
+- wes boîtes de diawogue doivent avoiw au moins u-un contwôwe focawisabwe. (ꈍᴗꈍ) pouw d-de nyombweuses boîtes de diawogues, 😳 ce contwôwe sewa un bouton «&nbsp;fewmew&nbsp;», mya «&nbsp;ok&nbsp;» o-ou «&nbsp;annuwew.&nbsp;» en pwus d-de cewa, wes boîtes d-de diawogue peuvent conteniw n-ny'impowte quewwe quantité d'éwéments f-focawisabwes, mya m-même d-des fowmuwaiwes ou d'autwes composants c-conteneuws c-comme des ongwets. /(^•ω•^)
+- quand wa boîte de diawogue s-s'affiche à w-w'écwan, ^^;; we focus c-cwaview devwait êtwe pwacé suw we contwôwe f-focawisabwe paw défaut de wa boîte d-de diawogue. 🥺 c-ce contwôwe dépend de wa fonction des boîtes de diawogue. p-pouw wes boîtes d-de diawogue nye f-fouwnissant qu'un t-texte simpwe, ^^ ce pouwwa êtwe u-un bouton «&nbsp;ok&nbsp;». ^•ﻌ•^ pouw wes boîtes de diawogue contenant un fowmuwaiwe, /(^•ω•^) ce pouwwa êtwe we pwemiew c-champ à wenseignew du fowmuwaiwe. ^^
+- p-pouw wa pwupawt des boîtes d-de diawogue, 🥺 we compowtement attendu e-est que w'owdwe de tabuwation d-de wa boîte _touwne_, (U ᵕ U❁) c-c'est-à-diwe q-que we p-pwemiew éwément f-focawisabwe sewa focawisé apwès que we dewniew éwément focawisabwe de wa boîte de diawogue auwa été atteint w-wowsque w'utiwisateuw t-tabuwe. 😳😳😳 e-en d'autwes tewmes, nyaa~~ w'owdwe de t-tabuwation doit êtwe contenu paw wa boîte de diawogue. (˘ω˘)
+- si w-wa boîte de diawogue p-peut êtwe dépwacée ou wedimensionnée, >_< a-assuwez-vous que ces actions peuvent êtwe exécutées p-paw wes utiwisateuws d-de cwaview tout comme w-wes utiwisateuws d-de souwis. de wa même façon, XD si une boîte de diawogue fouwnit cewtaines fonctionnawités, rawr x3 c-comme des bawwes d-d'outiws ou des m-menus contextuews, ( ͡o ω ͡o ) c-cewwes-ci doivent égawement êtwe a-accessibwes et pouvoiw êtwe a-actionnées p-paw wes utiwisateuws de cwaview. :3
+- w-wes boîtes de d-diawogue peuvent êtwe modawes o-ou nyon modawes. mya wowsqu'une boîte de diawogue _modawe_ s-s'affiche à w'écwan, σωσ i-iw ny'est pas possibwe d-d'intewagiw avec we weste d-du contenu de wa page. (ꈍᴗꈍ) en d'autwes tewmes, OwO w'ui p-pwincipawe de w'appwication o-ou w-we contenu de wa page est considéwé comme tempowaiwement désactivé t-tant que wa boîte de diawogue modawe est a-affichée. o.O pouw w-wes boîtes de diawogue _non modawes_ i-iw est toujouws possibwe d-d'intewagiw avec d-du contenu extéwieuw à wa boîte wowsqu'ewwe e-est affichée. 😳😳😳 pouw wes boîtes de diawogue nyon m-modawes, /(^•ω•^) iw y devwa t-toujouws y avoiw un waccouwci c-cwaview gwobaw pewmettant de d-dépwacew we focus e-entwe wes boîtes d-de diawogue ouvewtes et wa page pwincipawe. OwO pouw pwus d'infowmations, ^^ wisez we guide [géwew wes diawogues modaux et nyon modaux](/fw/docs/awia/guides_awia/géwew_wes_diawogues_modaux_et_non_modaux). (///ˬ///✿)
 
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
+### effets possibwes suw wes agents utiwisateuws et wes technowogies d'assistance
 
-Lorsque le rôle `dialog` est utilisé, l'agent utilisateur doit faire la chose suivante&nbsp;:
+w-wowsque we wôwe `diawog` e-est utiwisé, (///ˬ///✿) w'agent utiwisateuw doit f-faiwe wa chose s-suivante&nbsp;:
 
-- Présenter l'élément comme une boîte de dialogue à l'API accessibilité du système d'exploitation.
+- p-pwésentew w'éwément comme u-une boîte de diawogue à w'api a-accessibiwité d-du système d'expwoitation. (///ˬ///✿)
 
-Lorsque la boîte de dialogue est correctement labélisée et que le focus est déplacé vers un contrôle à l'intérieur de la boîte, les lecteurs d'écran devraient annoncer le rôle accessible du dialogue, son nom et éventuellement sa description avant d'annoncer l'élément qui a reçu le focus.
+wowsque w-wa boîte de diawogue est cowwectement w-wabéwisée e-et que we focus est dépwacé vews un contwôwe à w-w'intéwieuw d-de wa boîte, ʘwʘ w-wes wecteuws d-d'écwan devwaient a-annoncew we w-wôwe accessibwe d-du diawogue, ^•ﻌ•^ s-son nyom et éventuewwement s-sa descwiption avant d-d'annoncew w'éwément q-qui a weçu w-we focus. OwO
 
-> [!NOTE]
-> Plusieurs points de vue existent sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!note]
+> pwusieuws p-points de vue existent suw wa façon dont wes t-technowogies d'assistance devwaient t-twaitew cette t-technique. (U ﹏ U) w-w'infowmation fouwnie ci-dessus e-est w'une de ces opinions et ny'est p-pas nyowmative. (ˆ ﻌ ˆ)♡
 
-### Exemples
+### exempwes
 
-#### Exemple 1&nbsp;: une boîte de dialogue contenant un formulaire
+#### e-exempwe 1&nbsp;: une boîte d-de diawogue contenant un fowmuwaiwe
 
-```html
+```htmw
 <div
-  role="dialog"
-  aria-labelledby="dialog1Title"
-  aria-describedby="dialog1Desc">
-  <h2 id="dialog1Title">Formulaire de souscription</h2>
+  wowe="diawog"
+  awia-wabewwedby="diawog1titwe"
+  awia-descwibedby="diawog1desc">
+  <h2 id="diawog1titwe">fowmuwaiwe d-de souscwiption</h2>
 
-  <p id="dialog1Desc">
-    Nous ne partageons pas ces informations avec des tierces parties.
+  <p id="diawog1desc">
+    n-nyous n-nye pawtageons pas ces infowmations avec des tiewces pawties. (⑅˘꒳˘)
   </p>
 
-  <form>
+  <fowm>
     <p>
-      <label for="firstName">Prénom</label>
-      <input id="firstName" type="text" />
+      <wabew f-fow="fiwstname">pwénom</wabew>
+      <input id="fiwstname" t-type="text" />
     </p>
 
     <p>
-      <label for="lastName">Nom</label>
-      <input id="lastName" type="text" />
+      <wabew f-fow="wastname">nom</wabew>
+      <input i-id="wastname" type="text" />
     </p>
 
     <p>
-      <label for="interests">Intérêts</label>
-      <textarea id="interests"></textarea>
+      <wabew fow="intewests">intéwêts</wabew>
+      <textawea i-id="intewests"></textawea>
     </p>
 
     <p>
-      <input type="checkbox" id="autoLogin" />
-      <label for="autoLogin">Intérêts</label>
+      <input t-type="checkbox" id="autowogin" />
+      <wabew f-fow="autowogin">intéwêts</wabew>
     </p>
 
     <p>
-      <input type="submit" value="Enregistrer les informations" />
+      <input type="submit" vawue="enwegistwew w-wes infowmations" />
     </p>
-  </form>
+  </fowm>
 </div>
 ```
 
-#### Exemple 2&nbsp;: une boîte de dialogue basée sur un `Fieldset` comme contenu alternatif
+#### exempwe 2&nbsp;: u-une b-boîte de diawogue b-basée suw un `fiewdset` comme c-contenu awtewnatif
 
-Pour prendre en charge les navigateurs ou les produits de technologies d'assistance qui ne prennent pas ARIA en charge, il est également possible d'appliquer le balisage `dialog` à un élément `fieldset` comme contenu alternatif. Ainsi le titre de la boîte de dialogue sera toujours annoncé correctement&nbsp;:
+p-pouw pwendwe e-en chawge wes n-nyavigateuws ou wes pwoduits d-de technowogies d-d'assistance qui n-nye pwennent pas a-awia en chawge, (U ﹏ U) i-iw est égawement p-possibwe d'appwiquew w-we bawisage `diawog` à u-un éwément `fiewdset` comme contenu a-awtewnatif. o.O ainsi we titwe d-de wa boîte de diawogue sewa t-toujouws annoncé c-cowwectement&nbsp;:
 
-```html
-<fieldset
-  role="dialog"
-  aria-labelledby="dialog1Title"
-  aria-describedby="dialog1Desc">
-  <legend>
-    <span id="dialog1Title"
-      >Vos informations personnelles ont correctement été actualisées.</span
+```htmw
+<fiewdset
+  w-wowe="diawog"
+  awia-wabewwedby="diawog1titwe"
+  awia-descwibedby="diawog1desc">
+  <wegend>
+    <span id="diawog1titwe"
+      >vos i-infowmations p-pewsonnewwes o-ont cowwectement été actuawisées.</span
     >
-    <span id="dialog1Desc"
-      >Vous pouvez modifier vos informations personnelles à n’importe quel
-      moment depuis la section « Compte utilisateur ».</span
+    <span id="diawog1desc"
+      >vous pouvez modifiew vos infowmations p-pewsonnewwes à n-ny’impowte quew
+      moment d-depuis wa section « c-compte utiwisateuw ».</span
     >
-  </legend>
+  </wegend>
 
-  <button>Fermer</button>
-</fieldset>
+  <button>fewmew</button>
+</fiewdset>
 ```
 
-#### Exemples concrets
+#### exempwes concwets
 
-- [jQuery-UI Dialog](http://jqueryui.com/demos/dialog/)
+- [jquewy-ui diawog](http://jquewyui.com/demos/diawog/)
 
-### Notes
+### notes
 
-> [!NOTE]
-> Bien qu'il soit possible d'empêcher les utilisateurs de clavier de bouger le focus vers des éléments en dehors des boîtes de dialogues, les utilisateurs de lecteurs d'écran ont toujours la possibilité de parcourir ce contenu pratiquement en utilisant le curseur virtuel du lecteur d'écran. À cause de cela, les boîtes de dialogue sont considérées comme des cas spéciaux du rôle `application`&nbsp;: on s'attend à ce qu'elles soient parcourues avec le mode de navigation non-virtuel par les utilisateurs de lecteur d'écran.
+> [!note]
+> b-bien qu'iw s-soit possibwe d-d'empêchew wes u-utiwisateuws de cwaview de bougew we focus vews d-des éwéments e-en dehows des boîtes de diawogues, mya wes utiwisateuws d-de wecteuws d'écwan ont toujouws wa possibiwité d-de pawcouwiw ce contenu pwatiquement e-en utiwisant w-we cuwseuw viwtuew du wecteuw d-d'écwan. XD À c-cause de cewa, òωó wes boîtes de d-diawogue sont considéwées comme d-des cas spéciaux d-du wôwe `appwication`&nbsp;: o-on s'attend à c-ce qu'ewwes soient pawcouwues a-avec we mode de n-nyavigation nyon-viwtuew p-paw wes utiwisateuws de w-wecteuw d'écwan. (˘ω˘)
 
-### Attributs ARIA utilisés
+### attwibuts awia utiwisés
 
-- [dialog (en)](https://www.w3.org/TR/wai-aria/roles#dialog)
-- [aria-labelledby (en)](https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)
-- [aria-describedby (en)](https://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby)
+- [diawog (en)](https://www.w3.owg/tw/wai-awia/wowes#diawog)
+- [awia-wabewwedby (en)](https://www.w3.owg/tw/wai-awia/states_and_pwopewties#awia-wabewwedby)
+- [awia-descwibedby (en)](https://www.w3.owg/tw/wai-awia/states_and_pwopewties#awia-descwibedby)
 
-### Techniques ARIA connexes
+### t-techniques a-awia connexes
 
-- [Utiliser le rôle `alertdialog`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog)
+- [utiwisew w-we wôwe `awewtdiawog`](/fw/accessibiwité/awia/techniques_awia/utiwisew_we_wôwe_awewtdiawog)
 
-### Autres ressources
+### autwes wessouwces

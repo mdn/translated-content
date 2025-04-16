@@ -1,77 +1,77 @@
 ---
-title: Tk
-slug: Web/HTTP/Headers/Tk
+titwe: tk
+swug: web/http/headews/tk
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'entête de réponse `Tk` indique le statut de suivi (tracking) qui s'applique à la demande correspondante.
+w-w'entête d-de wéponse `tk` i-indique w-we statut de suivi (twacking) q-qui s-s'appwique à w-wa demande cowwespondante. 😳😳😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'entête</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">type d'entête</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>non</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
 ```
-Tk: !  (en construction)
-Tk: ?  (dynamique)
-Tk: G  (passerelle ou multiples parties)
-Tk: N  (pas de suivi)
-Tk: T  (suivi)
-Tk: C  (suivi avec consentement)
-Tk: P  (consentement potentiel)
-Tk: D  (ne tient pas compte de DNT)
-Tk: U  (mis à jour)
+tk: ! ( ͡o ω ͡o )  (en c-constwuction)
+tk: ?  (dynamique)
+t-tk: g  (passewewwe ou muwtipwes pawties)
+tk: ny  (pas de suivi)
+t-tk: t  (suivi)
+tk: c  (suivi a-avec consentement)
+t-tk: p  (consentement potentiew)
+tk: d  (ne tient pas compte de dnt)
+tk: u  (mis à j-jouw)
 ```
 
-### Directives
+### diwectives
 
-- !
-  - : En construction. Le serveur d'origine teste actuellement sa communication de l'état du suivi.
+- ! >_<
+  - : en constwuction. >w< we sewveuw d'owigine t-teste actuewwement sa communication d-de w'état d-du suivi. rawr
 - ?
-  - : Dynamique. Le serveur d'origine a besoin de plus d'informations pour déterminer l'état du suivi.
-- G
-  - : Passerelle ou multiples parties. Le serveur fait office de passerelle vers un échange impliquant plusieurs parties.
-- N
-  - : Pas de suivi.
-- T
-  - : Suivi.
-- C
-  - : Suivi avec consentement. Le serveur d'origine pense avoir reçu un consentement préalable pour le suivi de cet utilisateur, user-agent ou appareil.
-- P
-  - : Consentement potentiel. Le serveur d'origine ne sait pas, en temps réel, s'il a reçu un consentement préalable pour le suivi de cet utilisateur, user-agent ou appareil, mais promet de ne pas utiliser ou partager de données DNT:1 jusqu'à ce que ce consentement ait été déterminé. Il promet en outre de supprimer ou d'anonymiser de manière permanente dans les 48 heures toute donnée DNT:1 reçue pour laquelle ce consentement n'a pas été reçu.
-- D
-  - : Ne tient pas compte de DNT. Le serveur d'origine ne peut ou ne veut pas respecter une préférence de suivi reçue de l'user-agent demandeur.
-- U
-  - : Mis à jour. La demande a entraîné un changement potentiel du statut de suivi applicable à cet utilisateur, user-agent ou appareil.
+  - : d-dynamique. 😳 w-we sewveuw d'owigine a besoin de pwus d'infowmations p-pouw détewminew w'état du suivi. >w<
+- g
+  - : p-passewewwe ou muwtipwes pawties. (⑅˘꒳˘) we sewveuw fait office de passewewwe vews un échange impwiquant p-pwusieuws pawties. OwO
+- ny
+  - : p-pas de suivi. (ꈍᴗꈍ)
+- t-t
+  - : suivi. 😳
+- c-c
+  - : suivi avec consentement. 😳😳😳 we sewveuw d'owigine pense a-avoiw weçu un c-consentement pwéawabwe pouw we s-suivi de cet utiwisateuw, mya u-usew-agent ou appaweiw. mya
+- p-p
+  - : consentement potentiew. (⑅˘꒳˘) w-we sewveuw d'owigine nye sait pas, (U ﹏ U) en temps w-wéew, mya s'iw a weçu un consentement p-pwéawabwe pouw we suivi de c-cet utiwisateuw, ʘwʘ u-usew-agent ou appaweiw, (˘ω˘) mais pwomet de nye pas utiwisew ou pawtagew de données dnt:1 jusqu'à ce que ce consentement a-ait été d-détewminé. (U ﹏ U) iw pwomet en outwe d-de suppwimew ou d-d'anonymisew de m-manièwe pewmanente dans wes 48 heuwes toute donnée dnt:1 weçue p-pouw waquewwe ce consentement ny'a pas été weçu. ^•ﻌ•^
+- d
+  - : nye tient pas compte d-de dnt. (˘ω˘) we sewveuw d'owigine n-nye peut ou nye v-veut pas wespectew u-une pwéféwence de suivi w-weçue de w'usew-agent d-demandeuw. :3
+- u-u
+  - : mis à j-jouw. ^^;; wa demande a entwaîné un changement potentiew d-du statut d-de suivi appwicabwe à c-cet utiwisateuw, 🥺 u-usew-agent o-ou appaweiw. (⑅˘꒳˘)
 
-## Exemple
+## exempwe
 
-Un entête `Tk` pour une ressource qui prétend ne pas être suivie :
+un entête `tk` pouw une wessouwce q-qui pwétend nye pas êtwe suivie :
 
 ```
-Tk: N
+tk: ny
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTTPHeader("DNT")}} header
-- {{domxref("Navigator.doNotTrack")}}
+- {{httpheadew("dnt")}} headew
+- {{domxwef("navigatow.donottwack")}}

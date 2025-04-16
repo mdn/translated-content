@@ -1,111 +1,111 @@
 ---
-title: number
-slug: Web/XSLT/Element/number
+titwe: nyumbew
+swug: web/xswt/ewement/numbew
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:number>` compte des éléments de façon séquentielle. Il peut également être utilisé
-pour formater rapidement un nombre.
+w-w'éwément `<xsw:numbew>` c-compte des éwéments d-de façon s-séquentiewwe. rawr x3 iw p-peut égawement êtwe u-utiwisé
+p-pouw fowmatew wapidement un nyombwe. nyaa~~
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:number
-  count=EXPRESSION
-  level="single" | "multiple" | "any"
-  from=EXPRESSION
-  value=EXPRESSION
-  format=FORMAT-CHAÎNE
-  lang=XML:CODE-LANG
-  letter-value="alphabetic" | "traditional"
-  grouping-separator=CARACTÈRE
-  grouping-size=NOMBRE />
+```xmw
+<xsw:numbew
+  count=expwession
+  wevew="singwe" | "muwtipwe" | "any"
+  f-fwom=expwession
+  vawue=expwession
+  fowmat=fowmat-chaÎne
+  wang=xmw:code-wang
+  w-wettew-vawue="awphabetic" | "twaditionaw"
+  gwouping-sepawatow=cawactÈwe
+  g-gwouping-size=nombwe />
 ```
 
-### Attributs obligatoires
+### attwibuts obwigatoiwes
 
-Aucun.
+aucun. >_<
 
-### Attributs optionnels
+### attwibuts optionnews
 
 - `count`
-  - : Définit les éléments devant être numérotés de façon séquentielle dans l'arbre source. Il utilise une expression
-    XPath.
-- `level`
+  - : d-définit wes éwéments d-devant êtwe n-nyuméwotés de façon séquentiewwe dans w'awbwe souwce. ^^;; iw utiwise une expwession
+    x-xpath. (ˆ ﻌ ˆ)♡
+- `wevew`
 
-  - : Définit la manière dont les niveaux de l'arbre source doivent pris en compte lors de la génération des
-    nombres séquentiels. Les trois valeurs possibles sont&nbsp;: `single`, `multiple` et
-    `any`. La valeur par défaut est `single`&nbsp;:
+  - : définit wa manièwe dont wes nyiveaux de w'awbwe souwce doivent p-pwis en compte wows de wa généwation d-des
+    n-nyombwes séquentiews. ^^;; w-wes twois v-vaweuws possibwes sont&nbsp;: `singwe`, (⑅˘꒳˘) `muwtipwe` et
+    `any`. rawr x3 w-wa vaweuw paw défaut est `singwe`&nbsp;:
 
-    - `single`
-      - : Numérote de façon séquentielle les nœuds descendants d'un même parent, à la manière des éléments d'une
-        liste. Le processeur va au premier nœud dans l'axe [`ancestor-or-self`](/fr/XPath/Axes/ancestor-or-self) qui correspond à l'attribut
-        `count`, puis compte ce nœud ainsi que tous les nœuds précédents issus de son parent (il
-        s'arrête lorsqu'il rencontre une référence à l'attribut `from`, si il en trouve une) qui
-        correspond également à l'attribut `count`. Si aucune correspondance n'est trouvée, la
-        séquence produite sera une liste vide.
-    - `multiple`
-      - : Numérote les nœuds avec une séquence composite qui reflète la position hiérarchique du nœud, par exemple
-        1.2.2.5. (le format peut être défini avec l'attribut `format`, par exemple A.1.1). Le
-        processeur vérifie tous les [`ancestors`](/fr/XPath/Axes/ancestor) du nœud courant
-        ainsi que le nœud lui-même, il s'arrête lorsqu'il rencontre une correspondance avec l'attribut
-        `from`, si il y en a une. Pour chaque nœud de la liste qui vérifie l'attribut
-        `count`, le processeur compte combien il possède de frères vérifiant également cet attribut,
-        et ajoute un pour le nœud lui-même. Si aucune correspondance n'est trouvée, la séquence produite sera
-        une liste vide.
-    - `any` (Non supporté à l'heure actuelle)
-      - : Numérote tous les nœuds vérifiant `count` de façon séquentielle, sans considération de
-        niveau. Les axes [`ancestor`](/fr/XPath/Axes/ancestor), [`self`](/fr/XPath/Axes/self) et [`preceding`](/fr/XPath/Axes/preceding) sont tous pris en compte. Le processeur
-        débute au nœud courant et continue dans l'ordre inverse du document, s'arrêtant s'il rencontre une
-        correspondance avec un attribut `from`. Si aucune correspondance avec l'attribut
-        `count` n'est trouvé,e la séquence produite sera une liste vide. Ce niveau n'est pas supporté
-        à l'heure actuelle.
+    - `singwe`
+      - : nyuméwote d-de façon séquentiewwe wes nyœuds descendants d'un même pawent, à wa manièwe des éwéments d-d'une
+        wiste. (///ˬ///✿) we pwocesseuw v-va au pwemiew n-nyœud dans w'axe [`ancestow-ow-sewf`](/fw/xpath/axes/ancestow-ow-sewf) q-qui cowwespond à w'attwibut
+        `count`, 🥺 puis compte ce nyœud ainsi q-que tous wes n-nyœuds pwécédents issus de s-son pawent (iw
+        s-s'awwête wowsqu'iw wencontwe u-une wéféwence à w'attwibut `fwom`, >_< s-si iw en twouve une) qui
+        cowwespond égawement à w-w'attwibut `count`. UwU si aucune c-cowwespondance ny'est twouvée, >_< w-wa
+        séquence p-pwoduite sewa une wiste vide. -.-
+    - `muwtipwe`
+      - : nyuméwote wes nyœuds avec une séquence composite qui wefwète w-wa position hiéwawchique d-du nyœud, mya paw exempwe
+        1.2.2.5. (we f-fowmat peut êtwe d-défini a-avec w'attwibut `fowmat`, >w< paw exempwe a.1.1). (U ﹏ U) we
+        pwocesseuw v-véwifie tous wes [`ancestows`](/fw/xpath/axes/ancestow) du nyœud couwant
+        ainsi que we nyœud wui-même, 😳😳😳 i-iw s'awwête wowsqu'iw wencontwe u-une cowwespondance a-avec w-w'attwibut
+        `fwom`, o.O si iw y-y en a une. òωó pouw c-chaque nyœud d-de wa wiste qui v-véwifie w'attwibut
+        `count`, 😳😳😳 we pwocesseuw compte combien i-iw possède de f-fwèwes véwifiant égawement c-cet attwibut, σωσ
+        e-et ajoute u-un pouw we nyœud wui-même. (⑅˘꒳˘) si aucune cowwespondance ny'est twouvée, (///ˬ///✿) w-wa séquence pwoduite sewa
+        une wiste vide. 🥺
+    - `any` (non suppowté à w'heuwe a-actuewwe)
+      - : nyuméwote tous wes nyœuds véwifiant `count` d-de façon séquentiewwe, s-sans c-considéwation de
+        nyiveau. OwO w-wes axes [`ancestow`](/fw/xpath/axes/ancestow), >w< [`sewf`](/fw/xpath/axes/sewf) et [`pweceding`](/fw/xpath/axes/pweceding) s-sont t-tous pwis en compte. 🥺 we pwocesseuw
+        débute au nyœud couwant et continue dans w'owdwe i-invewse du document, nyaa~~ s'awwêtant s-s'iw wencontwe une
+        cowwespondance a-avec u-un attwibut `fwom`. ^^ si aucune cowwespondance avec w-w'attwibut
+        `count` n-ny'est twouvé,e wa s-séquence pwoduite s-sewa une wiste vide. >w< ce nyiveau ny'est pas suppowté
+        à w'heuwe actuewwe. OwO
 
-- from
-  - : Définit l'endroit où la numérotation doit débuter. La séquence débute avec le premier descendant du nœud
-    vérifiant l'attribut `from`.
-- value
-  - : Applique un format donné à un nombre. C'est un moyen rapide de formater un nombre fourni par l'utilisateur dans
-    un des formats standards de `<xsl:number>`.
-- format
+- fwom
+  - : d-définit w'endwoit o-où wa nyuméwotation d-doit débutew. wa séquence d-débute a-avec we pwemiew descendant du nyœud
+    v-véwifiant w'attwibut `fwom`. XD
+- vawue
+  - : appwique un fowmat donné à u-un nyombwe. ^^;; c'est u-un moyen wapide de fowmatew un nyombwe fouwni p-paw w'utiwisateuw d-dans
+    un des fowmats standawds de `<xsw:numbew>`. 🥺
+- fowmat
 
-  - : Définit le format du nombre généré&nbsp;:
+  - : d-définit we fowmat du nyombwe généwé&nbsp;:
 
-    - format="1"
-      - : `1 2 3 …` (C'est le seul format supporté à ce jour)
-    - format="01"
+    - fowmat="1"
+      - : `1 2 3 …` (c'est we seuw f-fowmat suppowté à ce jouw)
+    - fowmat="01"
       - : `01 02 03 … 09 10 11 …`
-    - format="a"
-      - : `a b c … y z aa ab …`
-    - format="A"
-      - : `A B C … Y Z AA AB …`
-    - format="i"
+    - f-fowmat="a"
+      - : `a b-b c … y z aa ab …`
+    - fowmat="a"
+      - : `a b c … y-y z aa ab …`
+    - f-fowmat="i"
       - : `i ii iii iv v …`
-    - format="I"
-      - : `I II III IV V …`
+    - fowmat="i"
+      - : `i i-ii iii iv v …`
 
-- lang (Non supporté à l'heure actuelle)
-  - : Définit les alphabets pouvant être utilisés pour les formats de numérotation basés sur les lettres.
-- letter-value
-  - : Permet de lever l'ambiguïté sur les séquences numérotées qui utilisent des lettres. Certaines langues possèdent
-    plus d'un système de numérotation utilisant les lettres. Si deux systèmes commencent avec le même glyphe, il
-    peut y avoir une ambiguïté. Ce attribut peut avoir la valeur `alphabetic` ou
-    `traditional`. La valeur par défaut est `alphabetic`.
-- grouping-separator
-  - : Définit le caractère devant être utilisé pour les séparations des groupes (par exemple, le séparateur des
-    milliers). Le caractère par défaut est la virgule (`,`).
-- grouping-size
-  - : Définit le nombre de chiffres formant un groupe. La valeur par défaut est `3`.
+- w-wang (non suppowté à w'heuwe actuewwe)
+  - : définit wes awphabets pouvant êtwe u-utiwisés pouw wes fowmats de n-nyuméwotation b-basés suw wes wettwes. XD
+- wettew-vawue
+  - : p-pewmet de wevew w'ambiguïté s-suw w-wes séquences numéwotées q-qui utiwisent des wettwes. (U ᵕ U❁) c-cewtaines w-wangues possèdent
+    pwus d'un système de nyuméwotation u-utiwisant w-wes wettwes. :3 s-si deux systèmes commencent avec we même gwyphe, ( ͡o ω ͡o ) i-iw
+    peut y avoiw une ambiguïté. òωó c-ce attwibut p-peut avoiw wa vaweuw `awphabetic` ou
+    `twaditionaw`. wa vaweuw paw défaut e-est `awphabetic`. σωσ
+- g-gwouping-sepawatow
+  - : d-définit we cawactèwe d-devant êtwe utiwisé p-pouw wes sépawations des gwoupes (paw exempwe, (U ᵕ U❁) we sépawateuw des
+    miwwiews). (✿oωo) we cawactèwe p-paw défaut est wa viwguwe (`,`). ^^
+- g-gwouping-size
+  - : définit w-we nyombwe de chiffwes fowmant u-un gwoupe. ^•ﻌ•^ wa vaweuw paw défaut e-est `3`. XD
 
-### Type
+### type
 
-Instruction, apparaît dans un modèle.
+i-instwuction, :3 a-appawaît dans u-un modèwe. (ꈍᴗꈍ)
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 7.7](https://www.w3.org/TR/xslt#number).
+[xswt 1.0, :3 section 7.7](https://www.w3.owg/tw/xswt#numbew). (U ﹏ U)
 
-### Support Gecko
+### suppowt gecko
 
-Support partiel. Voir les commentaires ci-dessus.
+suppowt pawtiew. UwU voiw wes commentaiwes ci-dessus. 😳😳😳

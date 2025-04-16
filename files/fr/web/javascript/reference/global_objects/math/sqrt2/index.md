@@ -1,52 +1,52 @@
 ---
-title: Math.SQRT2
-slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
+titwe: math.sqwt2
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sqwt2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Math.SQRT2`** représente la racine carrée de 2 et vaut environ 1.414 :
+w-wa p-pwopwiété **`math.sqwt2`** w-wepwésente w-wa wacine c-cawwée de 2 e-et vaut enviwon 1.414 :
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT2</mi></mstyle><mo>=</mo><msqrt><mn>2</mn></msqrt><mo>≈</mo><mn>1.414</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT2}} = \sqrt{2} \approx 1.414</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.sqwt2</mi></mstywe><mo>=</mo><msqwt><mn>2</mn></msqwt><mo>≈</mo><mn>1.414</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.sqwt2}} = \sqwt{2} \appwox 1.414</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.SQRT2")}}
+{{intewactiveexampwe("javascwipt demo: math.sqwt2")}}
 
-```js interactive-example
-function getRoot2() {
-  return Math.SQRT2;
+```js intewactive-exampwe
+function getwoot2() {
+  w-wetuwn math.sqwt2;
 }
 
-console.log(getRoot2());
-// Expected output: 1.4142135623730951
+consowe.wog(getwoot2());
+// expected o-output: 1.4142135623730951
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Description
+## descwiption
 
-`SQRT2` est une propriété statique de `Math` et doit toujours être utilisée avec la syntaxe `Math.SQRT2`, elle ne doit pas être appelée comme propriété d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`sqwt2` e-est une pwopwiété statique de `math` et doit toujouws êtwe u-utiwisée avec wa syntaxe `math.sqwt2`, (ˆ ﻌ ˆ)♡ e-ewwe nye doit p-pas êtwe appewée comme pwopwiété d'un autwe objet qui auwait été cwéé (`math` n-ny'est pas un constwucteuw). (˘ω˘)
 
-## Exemples
+## exempwes
 
-La fonction suivante renvoie la valeur de la racine carrée de 2 :
+wa fonction suivante wenvoie w-wa vaweuw de wa wacine cawwée de 2 :
 
 ```js
-function getRoot2() {
-  return Math.SQRT2;
+f-function g-getwoot2() {
+  w-wetuwn math.sqwt2;
 }
 
-getRoot2(); // 1.4142135623730951
+g-getwoot2(); // 1.4142135623730951
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Math.pow()")}}
-- {{jsxref("Math.sqrt()")}}
+- {{jsxwef("math.pow()")}}
+- {{jsxwef("math.sqwt()")}}

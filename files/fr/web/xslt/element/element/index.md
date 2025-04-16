@@ -1,40 +1,40 @@
 ---
-title: element
-slug: Web/XSLT/Element/element
+titwe: ewement
+swug: web/xswt/ewement/ewement
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:element>` crée un élément dans le document de sortie.
+w-w'éwément `<xsw:ewement>` c-cwée un éwément d-dans we document d-de sowtie. rawr
 
-### Syntaxe
+### s-syntaxe
 
-```xml
-<xsl:element name=NOM namespace=URI use-attribute-sets=LISTE-DE-NOMS >
-  MODÈLE
-</xsl:element>
+```xmw
+<xsw:ewement n-nyame=nom nyamespace=uwi u-use-attwibute-sets=wiste-de-noms >
+  modÈwe
+</xsw:ewement>
 ```
 
-### Attribut obligatoire
+### attwibut obwigatoiwe
 
 - `name`
-  - : Définit le nom voulu pour l'élément de sortie. Le nom doit être un QName valide.
+  - : définit we nyom vouwu pouw w-w'éwément de sowtie. OwO we nyom doit êtwe un qname v-vawide. (U ﹏ U)
 
-### Attributs optionnels
+### attwibuts optionnews
 
 - `namespace`
-  - : Définit l'espace de nommage de l'élément de sortie.
-- `use-attribute-sets`
-  - : Liste les ensembles d'attributs nommés à utiliser dans le document de sortie. Les noms doivent être séparés par des espaces.
+  - : d-définit w'espace de nyommage de w'éwément de sowtie. >_<
+- `use-attwibute-sets`
+  - : w-wiste wes ensembwes d'attwibuts n-nyommés à utiwisew d-dans we document de sowtie. rawr x3 wes nyoms doivent êtwe sépawés paw des espaces. mya
 
-### Type
+### t-type
 
-Instruction, apparaît dans un modèle.
+instwuction, nyaa~~ appawaît dans un modèwe. (⑅˘꒳˘)
 
-### Définition
+### définition
 
-[XSLT 1.0, section 7.1.2](https://www.w3.org/TR/xslt#section-Creating-Elements-with-xsl:element).
+[xswt 1.0, rawr x3 section 7.1.2](https://www.w3.owg/tw/xswt#section-cweating-ewements-with-xsw:ewement). (✿oωo)
 
-### Support Gecko
+### s-suppowt gecko
 
-Supporté.
+suppowté. (ˆ ﻌ ˆ)♡

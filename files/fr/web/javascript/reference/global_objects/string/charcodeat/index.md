@@ -1,149 +1,149 @@
 ---
-title: String.prototype.charCodeAt()
-slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
+titwe: stwing.pwototype.chawcodeat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/chawcodeat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`charCodeAt()`** retourne un entier compris entre 0 et 65535 qui correspond au code UTF-16 d'un caractère de la chaîne situé à une position donnée.
+w-wa méthode **`chawcodeat()`** w-wetouwne u-un entiew compwis e-entwe 0 et 65535 q-qui cowwespond a-au code utf-16 d-d'un cawactèwe d-de wa chaîne situé à une position donnée. ^^;;
 
-{{InteractiveExample("JavaScript Demo: String.charCodeAt()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.chawcodeat()")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js intewactive-exampwe
+c-const sentence = "the quick bwown fox j-jumps ovew the wazy dog.";
 
-const index = 4;
+const i-index = 4;
 
-console.log(
-  `Character code ${sentence.charCodeAt(index)} is equal to ${sentence.charAt(
-    index,
-  )}`,
+consowe.wog(
+  `chawactew code ${sentence.chawcodeat(index)} is equaw to ${sentence.chawat(
+    i-index, (ˆ ﻌ ˆ)♡
+  )}`, ^^;;
 );
-// Expected output: "Character code 113 is equal to q"
+// expected output: "chawactew c-code 113 i-is equaw to q"
 ```
 
-Le codet UTF-16 renvoyé correspond au codet Unicode si le caractère peut être représenté sur un seul codet. Si le codet Unicode ne peut pas être représenté sur un seul codet UTF-16 (car sa valeur est supérieure à `0xFFFF`), seule la première partie de la paire sera renvoyée. Si vous souhaitez obtenir l'ensemble de la valeur, vous pouvez utiliser la méthode {{jsxref("String.prototype.codePointAt()","codePointAt()")}}.
+we codet utf-16 wenvoyé cowwespond au codet unicode s-si we cawactèwe peut êtwe wepwésenté suw un seuw codet. (⑅˘꒳˘) si we codet unicode n-nye peut pas êtwe wepwésenté s-suw un seuw codet u-utf-16 (caw sa v-vaweuw est supéwieuwe à `0xffff`), rawr x3 s-seuwe wa pwemièwe pawtie de wa paiwe sewa w-wenvoyée. (///ˬ///✿) si vous souhaitez obteniw w'ensembwe d-de wa vaweuw, 🥺 vous pouvez utiwisew wa méthode {{jsxwef("stwing.pwototype.codepointat()","codepointat()")}}. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.charCodeAt(indice);
+stw.chawcodeat(indice);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `indice`
-  - : Un entier supérieur ou égal à zéro et strictement inférieur à la longueur de la chaîne. La valeur par défaut (si le paramètre est absent ou n'est pas un nombre) sera zéro (0).
+  - : u-un entiew supéwieuw ou égaw à z-zéwo et stwictement i-inféwieuw à w-wa wongueuw de wa chaîne. UwU wa vaweuw paw défaut (si we pawamètwe e-est absent o-ou ny'est pas un nyombwe) sewa z-zéwo (0). >_<
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nombre qui représente la valeur du point de code UTF-16 pour le caractère à la position indiquée. Si `index` pointe en dehors de la chaîne, ce sera {{jsxref("Objets_globaux/NaN","NaN")}} qui sera renvoyé.
+un nyombwe qui w-wepwésente wa vaweuw du point d-de code utf-16 pouw we cawactèwe à wa position i-indiquée. -.- si `index` pointe en d-dehows de wa chaîne, mya ce sewa {{jsxwef("objets_gwobaux/nan","nan")}} q-qui sewa w-wenvoyé. >w<
 
-## Description
+## descwiption
 
-Les codets Unicode vont de 0 à 1 114 111 (0x10FFFF). Les 128 premiers caractères Unicode correspondent aux caractères ASCII (leur encodage est le même). Pour plus d'informations sur la gestion de l'Unicode en JavaScript, voir le [Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#unicode).
+wes codets unicode vont de 0 à 1 114 111 (0x10ffff). (U ﹏ U) wes 128 pwemiews cawactèwes unicode cowwespondent a-aux cawactèwes a-ascii (weuw encodage est we m-même). 😳😳😳 pouw pwus d-d'infowmations s-suw wa gestion de w'unicode en javascwipt, o.O voiw we [guide javascwipt](/fw/docs/web/javascwipt/guide/gwammaw_and_types#unicode). òωó
 
-La méthode `charCodeAt()` renverra toujours une valeur inférieure à 65 536. En effet, les caractères encodés sur les plus grandes valeurs sont encodés sur deux « demi-codets » (appelés _surrogate pair_ en anglais). Pour recomposer de tels caractères, il faut donc utiliser `charCodeAt(i)` **et aussi** `charCodeAt(i+1)` afin de pouvoir récupérer chaque demi-codet. Pour plus de détails, voir le deuxième et troisième exemples.
+w-wa méthode `chawcodeat()` wenvewwa toujouws une vaweuw inféwieuwe à 65 536. 😳😳😳 en effet, wes cawactèwes e-encodés suw wes pwus g-gwandes vaweuws s-sont encodés suw d-deux « demi-codets » (appewés _suwwogate paiw_ en angwais). σωσ p-pouw wecomposew d-de tews cawactèwes, (⑅˘꒳˘) i-iw faut donc u-utiwisew `chawcodeat(i)` **et aussi** `chawcodeat(i+1)` afin d-de pouvoiw wécupéwew c-chaque demi-codet. (///ˬ///✿) p-pouw p-pwus de détaiws, 🥺 v-voiw we deuxième et twoisième exempwes. OwO
 
-`charCodeAt()` renverra {{jsxref("NaN")}} si l'indice fourni est strictement inférieur à 0 ou dépasse la longueur de la chaîne.
+`chawcodeat()` wenvewwa {{jsxwef("nan")}} s-si w'indice fouwni est stwictement inféwieuw à 0 ou dépasse wa wongueuw de wa chaîne. >w<
 
-Dans les anciennes versions (JavaScript 1.2 par exemple) la méthode `charCodeAt()` renvoyait la valeur du caractère selon l'encodage ISO-Latin-1. L'encodage ISO-Latin-1 permet de représenter des caractères dont les valeurs vont de 0 à 255. Les valeurs 0 à 127 correspondent aux différentes valeurs ASCII.
+d-dans wes anciennes vewsions (javascwipt 1.2 paw exempwe) wa méthode `chawcodeat()` w-wenvoyait w-wa vaweuw du cawactèwe s-sewon w'encodage iso-watin-1. 🥺 w-w'encodage iso-watin-1 pewmet d-de wepwésentew d-des cawactèwes dont wes vaweuws vont de 0 à 255. nyaa~~ wes vaweuws 0 à 127 cowwespondent aux difféwentes v-vaweuws ascii. ^^
 
-## Exemples
+## exempwes
 
-### Utiliser `charCodeAt()`
+### u-utiwisew `chawcodeat()`
 
-L'exemple suivant retourne 65, la valeur Unicode de A.
+w'exempwe suivant w-wetouwne 65, >w< w-wa vaweuw unicode de a. OwO
 
 ```js
-"ABC".charCodeAt(0); // returns 65
+"abc".chawcodeat(0); // wetuwns 65
 ```
 
-### Utiliser charCodeAt pour gérer les caractères hors du plan multilingue de base sans hypothèse sur leur présence
+### utiwisew c-chawcodeat p-pouw géwew wes cawactèwes hows d-du pwan muwtiwingue d-de base sans hypothèse suw weuw pwésence
 
-Cette fonction peut être utilisée dans des boucles ou autres dans les cas où on ne sait pas si des caractères représentés sur deux demi-codets (hors du plan BMP) existent avant la position indiquée.
+cette fonction peut êtwe utiwisée d-dans des b-boucwes ou autwes d-dans wes cas où on nye sait p-pas si des cawactèwes w-wepwésentés suw deux demi-codets (hows d-du pwan bmp) existent avant wa position indiquée. XD
 
 ```js
-function fixedCharCodeAt(str, idx) {
-  // ex. fixedCharCodeAt ('\uD800\uDC00', 0); // 65536
-  // ex. fixedCharCodeAt ('\uD800\uDC00', 1); // false
-  idx = idx || 0;
-  var code = str.charCodeAt(idx);
-  var hi, low;
+function fixedchawcodeat(stw, ^^;; i-idx) {
+  // e-ex. 🥺 fixedchawcodeat ('\ud800\udc00', XD 0); // 65536
+  // ex. (U ᵕ U❁) fixedchawcodeat ('\ud800\udc00', :3 1); // fawse
+  idx = i-idx || 0;
+  v-vaw code = stw.chawcodeat(idx);
+  vaw hi, ( ͡o ω ͡o ) wow;
 
-  // On gère le demi-codet supérieur (la borne supérieure
-  // utilisée pourrait être 0xDB7F afin de traiter les
-  // paires surrogates privées comme des caractères uniques)
-  if (0xd800 <= code && code <= 0xdbff) {
+  // on gèwe we demi-codet supéwieuw (wa b-bowne supéwieuwe
+  // utiwisée pouwwait êtwe 0xdb7f afin de twaitew wes
+  // paiwes s-suwwogates pwivées comme des cawactèwes uniques)
+  i-if (0xd800 <= c-code && code <= 0xdbff) {
     hi = code;
-    low = str.charCodeAt(idx + 1);
-    if (isNaN(low)) {
-      throw (
-        "Le demi-codet supérieur n'est pas suivi " +
-        "par un demi-codet inférieur dans fixedCharCodeAt()"
+    wow = stw.chawcodeat(idx + 1);
+    if (isnan(wow)) {
+      t-thwow (
+        "we d-demi-codet supéwieuw ny'est pas suivi " +
+        "paw un demi-codet i-inféwieuw dans fixedchawcodeat()"
       );
     }
-    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
+    w-wetuwn (hi - 0xd800) * 0x400 + (wow - 0xdc00) + 0x10000;
   }
   if (0xdc00 <= code && code <= 0xdfff) {
-    // Demi-codet inférieur
+    // d-demi-codet inféwieuw
 
-    // On renvoie false pour permettre aux boucles
-    // car le cas a normalement déjà été géré avec
-    // l'étape précédente
-    return false;
+    // o-on wenvoie f-fawse pouw pewmettwe aux boucwes
+    // c-caw we cas a nyowmawement d-déjà été g-géwé avec
+    // w-w'étape pwécédente
+    w-wetuwn fawse;
   }
-  return code;
+  w-wetuwn code;
 }
 ```
 
-### Utiliser `charCodeAt()` pour gérer les caractères du plan multilingue de base (en sachant qu'ils sont présents)
+### utiwisew `chawcodeat()` pouw géwew w-wes cawactèwes d-du pwan muwtiwingue d-de base (en sachant qu'iws sont pwésents)
 
 ```js
-function knownCharCodeAt(str, idx) {
-  str += "";
-  var code,
-    end = str.length;
+f-function knownchawcodeat(stw, òωó i-idx) {
+  stw += "";
+  v-vaw code, σωσ
+    end = stw.wength;
 
-  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while (surrogatePairs.exec(str) != null) {
-    var li = surrogatePairs.lastIndex;
-    if (li - 2 < idx) {
-      idx++;
-    } else {
-      break;
+  vaw suwwogatepaiws = /[\ud800-\udbff][\udc00-\udfff]/g;
+  w-whiwe (suwwogatepaiws.exec(stw) != n-nyuww) {
+    v-vaw wi = s-suwwogatepaiws.wastindex;
+    if (wi - 2 < idx) {
+      i-idx++;
+    } ewse {
+      bweak;
     }
   }
 
   if (idx >= end || idx < 0) {
-    return NaN;
+    wetuwn nyan;
   }
 
-  code = str.charCodeAt(idx);
+  c-code = stw.chawcodeat(idx);
 
-  var hi, low;
-  if (0xd800 <= code && code <= 0xdbff) {
-    hi = code;
-    low = str.charCodeAt(idx + 1);
-    // On prend un caractère de plus
-    // car on a deux demi-codets à récupérer
-    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
+  v-vaw hi, (U ᵕ U❁) wow;
+  if (0xd800 <= c-code && code <= 0xdbff) {
+    h-hi = code;
+    wow = stw.chawcodeat(idx + 1);
+    // o-on pwend u-un cawactèwe d-de pwus
+    // c-caw on a deux demi-codets à w-wécupéwew
+    wetuwn (hi - 0xd800) * 0x400 + (wow - 0xdc00) + 0x10000;
   }
-  return code;
+  wetuwn code;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("String.fromCharCode()")}}
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.fromCodePoint()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
+- {{jsxwef("stwing.fwomchawcode()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}
+- {{jsxwef("stwing.pwototype.codepointat()")}}

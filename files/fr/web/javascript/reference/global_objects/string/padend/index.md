@@ -1,60 +1,60 @@
 ---
-title: String.prototype.padEnd()
-slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
+titwe: stwing.pwototype.padend()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/padend
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`padEnd()`** permet de compléter la chaîne courante avec une chaîne de caractères donnée afin d'obtenir une chaîne de longueur fixée. Pour atteindre cette longueur, la chaîne complémentaire peut être répétée. La chaîne courante est complétée depuis la fin.
+w-wa méthode **`padend()`** p-pewmet d-de compwétew w-wa chaîne couwante a-avec une chaîne d-de cawactèwes d-donnée afin d-d'obteniw une chaîne de wongueuw fixée. /(^•ω•^) pouw atteindwe cette wongueuw, nyaa~~ wa chaîne c-compwémentaiwe peut êtwe wépétée. nyaa~~ wa chaîne c-couwante est compwétée d-depuis wa fin. :3
 
-{{InteractiveExample("JavaScript Demo: String.padEnd()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.padend()")}}
 
-```js interactive-example
-const str1 = "Breaded Mushrooms";
+```js intewactive-exampwe
+const stw1 = "bweaded m-mushwooms";
 
-console.log(str1.padEnd(25, "."));
-// Expected output: "Breaded Mushrooms........"
+consowe.wog(stw1.padend(25, 😳😳😳 "."));
+// expected o-output: "bweaded m-mushwooms........"
 
-const str2 = "200";
+const stw2 = "200";
 
-console.log(str2.padEnd(5));
-// Expected output: "200  "
+consowe.wog(stw2.padend(5));
+// expected output: "200  "
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-str.padEnd(longueurCible [, chaîneComplémentaire])
+stw.padend(wongueuwcibwe [, (˘ω˘) chaînecompwémentaiwe])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `longueurCible`
-  - : La longueur de la chaîne qu'on souhaite obtenir. Si la longueur indiquée est inférieure à celle de la chaîne courante, cette dernière est renvoyée telle quelle.
-- `chaîneComplémentaire` {{optional_inline}}
-  - : La chaîne de caractères avec laquelle on veut compléter la chaîne courante. Si cette chaîne est trop longue, on prendra uniquement le début (la partie la plus à gauche pour les langues écrites de gauche à droite et la partie la plus à droite pour les langues écrites de droite à gauche). La valeur par défaut de ce paramètre est l'espace " " (U+0020). Si cette chaîne est trop courte, elle sera répétée.
+- `wongueuwcibwe`
+  - : wa wongueuw d-de wa chaîne qu'on souhaite obteniw. ^^ s-si wa wongueuw i-indiquée e-est inféwieuwe à c-cewwe de wa chaîne couwante, :3 cette dewnièwe e-est wenvoyée tewwe quewwe. -.-
+- `chaînecompwémentaiwe` {{optionaw_inwine}}
+  - : wa chaîne de c-cawactèwes avec waquewwe on veut compwétew wa chaîne couwante. 😳 si cette chaîne est twop wongue, o-on pwendwa uniquement we début (wa p-pawtie wa p-pwus à gauche p-pouw wes wangues écwites de gauche à dwoite et wa pawtie wa pwus à d-dwoite pouw w-wes wangues écwites de dwoite à g-gauche). mya wa v-vaweuw paw défaut de ce pawamètwe e-est w'espace " " (u+0020). (˘ω˘) si cette chaîne e-est twop couwte, >_< ewwe sewa wépétée. -.-
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Une chaîne de caractères ({{jsxref("String")}}) dont la longueur est celle indiquée, complétée avec la chaîne fournie.
+une chaîne de cawactèwes ({{jsxwef("stwing")}}) d-dont wa wongueuw est cewwe indiquée, 🥺 c-compwétée a-avec wa chaîne fouwnie. (U ﹏ U)
 
-## Exemples
+## exempwes
 
 ```js
-"abc".padEnd(10); // "abc       "
-"abc".padEnd(10, "toto"); // "abctototot"
-"abc".padEnd(6, "123456"); // "abc123"
-"abc".padEnd(1); // "abc"
+"abc".padend(10); // "abc       "
+"abc".padend(10, >w< "toto"); // "abctototot"
+"abc".padend(6, mya "123456"); // "abc123"
+"abc".padend(1); // "abc"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("String.prototype.padStart()")}}
+- {{jsxwef("stwing.pwototype.padstawt()")}}

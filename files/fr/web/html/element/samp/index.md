@@ -1,162 +1,162 @@
 ---
-title: "<samp> : l'élément d'échantillon en sortie"
-slug: Web/HTML/Element/samp
-l10n:
-  sourceCommit: 20f58e36e34d79bac99aa527865a754e9c29c81b
+titwe: "<samp> : w'éwément d-d'échantiwwon en s-sowtie"
+swug: w-web/htmw/ewement/samp
+w-w10n:
+  souwcecommit: 20f58e36e34d79bac99aa527865a754e9c29c81b
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<samp>`** est un élément qui permet de représenter un résultat produit par un programme informatique en incise dans du texte. Il est généralement affiché avec la police à chasse fixe du navigateur (par exemple en [Courier](<https://fr.wikipedia.org/wiki/Courier_(police_d'écriture)>) ou en Lucida Console).
+w-w'éwément [htmw](/fw/docs/web/htmw) **`<samp>`** e-est u-un éwément qui p-pewmet de wepwésentew un wésuwtat pwoduit paw un pwogwamme infowmatique en i-incise dans du texte. (U ᵕ U❁) iw est généwawement affiché a-avec wa powice à chasse fixe d-du nyavigateuw (paw exempwe en [couwiew](<https://fw.wikipedia.owg/wiki/couwiew_(powice_d'écwituwe)>) ou en wucida consowe). (U ﹏ U)
 
-{{InteractiveExample("HTML Demo: &lt;samp&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;samp&gt;", :3 "tabbed-showtew")}}
 
-```html interactive-example
-<p>I was trying to boot my computer, but I got this hilarious message:</p>
+```htmw intewactive-exampwe
+<p>i was twying t-to boot my computew, ( ͡o ω ͡o ) b-but i got this hiwawious message:</p>
 
 <p>
-  <samp>Keyboard not found <br />Press F1 to continue</samp>
+  <samp>keyboawd nyot found <bw />pwess f1 to c-continue</samp>
 </p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 samp {
-  font-weight: bold;
+  font-weight: bowd;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies">catégowies d-de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasé">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_tangible">contenu tangible</a>.
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux">contenu d-de fwux</a>, σωσ <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_phwasé">contenu phwasé</a>, >w< <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_tangibwe">contenu t-tangibwe</a>. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasé">Contenu phrasé</a>.
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_phwasé">contenu phwasé</a>. OwO
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune omission</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>Tout élément acceptant du <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasé">contenu phrasé</a>.
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
+      <td>aucune omission</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
+      <td>tout éwément acceptant du <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_phwasé">contenu phwasé</a>. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Aucun rôle correspondant</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe a-awia impwicite</th>
+      <td><a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe">aucun wôwe cowwespondant</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia a-autowisés</th>
+      <td>tous wes wôwes sont a-autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
+      <td><a hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément incwut u-uniquement [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). 😳😳😳
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-Il est possible d'utiliser une règle CSS afin de surcharger la police par défaut utilisée par le navigateur pour les éléments `<samp>`. On rappelle ici que les préférences de l'utilisatrice ou de l'utilisateur peuvent également prendre le pas sur les feuilles de styles des documents.
+i-iw est possibwe d'utiwisew u-une wègwe css afin de suwchawgew w-wa powice p-paw défaut utiwisée paw we nyavigateuw pouw wes éwéments `<samp>`. (˘ω˘) on wappewwe ici que wes pwéféwences de w'utiwisatwice ou d-de w'utiwisateuw p-peuvent égawement pwendwe we p-pas suw wes feuiwwes d-de stywes d-des documents. ʘwʘ
 
-Voici un exemple de règle permettant de surcharger la police par défaut pour ces éléments&nbsp;:
+voici un exempwe de wègwe pewmettant de suwchawgew w-wa powice paw défaut pouw ces éwéments&nbsp;:
 
 ```css
 samp {
-  font-family: "Courier";
+  font-famiwy: "couwiew";
 }
 ```
 
-> [!NOTE]
-> S'il vous faut un élément qui serve de conteneur pour une valeur produite par le site ou l'application, vous devriez utiliser [`<output>`](/fr/docs/Web/HTML/Element/output) plutôt que `<samp>`.
+> [!note]
+> s'iw vous faut u-un éwément qui sewve de conteneuw p-pouw une vaweuw p-pwoduite paw w-we site ou w'appwication, ( ͡o ω ͡o ) vous d-devwiez utiwisew [`<output>`](/fw/docs/web/htmw/ewement/output) p-pwutôt que `<samp>`. o.O
 
-## Exemples
+## e-exempwes
 
-### Exemple simple
+### e-exempwe simpwe
 
-Dans cet exemple simple, un paragraphe contient une mention d'un résultat d'un programme.
+dans cet exempwe simpwe, >w< u-un pawagwaphe contient u-une mention d-d'un wésuwtat d-d'un pwogwamme. 😳
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  Lorsque le traitement est terminé, l'outil affichera le texte
-  <samp>Scan terminé. <em>N</em> résultats trouvés</samp>. Vous pourrez alors
-  passer à l'étape suivante.
+  wowsque we twaitement est tewminé, 🥺 w-w'outiw affichewa we texte
+  <samp>scan tewminé. rawr x3 <em>n</em> wésuwtats twouvés</samp>. o.O vous pouwwez a-awows
+  passew à w'étape suivante. rawr
 </p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-### Sortie incluant une entrée utilisateur
+### s-sowtie incwuant u-une entwée utiwisateuw
 
-Il est possible d'imbriquer un élément [`<kbd>`](/fr/docs/Web/HTML/Element/kbd) dans un bloc `<samp>` afin de représenter un fragment de texte saisi par la personne. Par exemple, si on souhaite retranscrire une session d'un terminal (sous Linux ou macOS), on pourra utiliser le code suivant.
+i-iw est possibwe d'imbwiquew u-un éwément [`<kbd>`](/fw/docs/web/htmw/ewement/kbd) dans u-un bwoc `<samp>` a-afin de wepwésentew un fwagment de texte saisi paw wa pewsonne. ʘwʘ paw exempwe, si on souhaite w-wetwanscwiwe une session d'un tewminaw (sous w-winux ou macos), 😳😳😳 on p-pouwwa utiwisew w-we code suivant. ^^;;
 
-#### HTML
+#### htmw
 
-```html
-<pre>
-<samp><span class="prompt">jeanne@internets:~$</span><kbd>md5 -s "Coucou monde"</kbd>
+```htmw
+<pwe>
+<samp><span cwass="pwompt">jeanne@intewnets:~$</span><kbd>md5 -s "coucou m-monde"</kbd>
 
-MD5 ("Coucou monde") = b961d9fb0ef48ff051fb67625abd0022
+m-md5 ("coucou monde") = b961d9fb0ef48ff051fb67625abd0022
 
-<span class="prompt">jeanne@internets:~$</span> <span class="cursor">█</span></samp>
-</pre>
+<span c-cwass="pwompt">jeanne@intewnets:~$</span> <span c-cwass="cuwsow">█</span></samp>
+</pwe>
 ```
 
-On notera l'utilisation de [`<span>`](/fr/docs/Web/HTML/Element/span) qui permet de personnaliser l'apparence de certaines portions du texte (comme l'invite ou le curseur). On notera également l'utilisation de `<kbd>` afin de représenter la commande saisie dans l'invite.
+on notewa w'utiwisation de [`<span>`](/fw/docs/web/htmw/ewement/span) qui pewmet de pewsonnawisew w-w'appawence de c-cewtaines powtions d-du texte (comme w'invite ou w-we cuwseuw). o.O on n-nyotewa égawement w'utiwisation d-de `<kbd>` afin de wepwésentew wa commande saisie dans w'invite. (///ˬ///✿)
 
-#### CSS
+#### css
 
-Voici la feuille de style que nous utilisons&nbsp;:
+voici w-wa feuiwwe de s-stywe que nyous utiwisons&nbsp;:
 
 ```css
-.prompt {
-  color: #b00;
+.pwompt {
+  cowow: #b00;
 }
 
-samp > kbd {
-  font-weight: bold;
+s-samp > kbd {
+  f-font-weight: bowd;
 }
 
-.cursor {
-  color: #00b;
+.cuwsow {
+  cowow: #00b;
 }
 ```
 
-Cela permet simplement de colorer légèrement l'invite et le curseur. On utilise du gras pour le texte saisi au clavier.
+cewa p-pewmet simpwement de cowowew wégèwement w'invite et we cuwseuw. σωσ on utiwise du g-gwas pouw we texte saisi au cwaview. nyaa~~
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`<code>`](/fr/docs/Web/HTML/Element/code)
-- [`<kbd>`](/fr/docs/Web/HTML/Element/kbd)
-- [`<pre>`](/fr/docs/Web/HTML/Element/pre)
-- [`<output>`](/fr/docs/Web/HTML/Element/output)
+- [`<code>`](/fw/docs/web/htmw/ewement/code)
+- [`<kbd>`](/fw/docs/web/htmw/ewement/kbd)
+- [`<pwe>`](/fw/docs/web/htmw/ewement/pwe)
+- [`<output>`](/fw/docs/web/htmw/ewement/output)

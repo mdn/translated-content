@@ -1,50 +1,50 @@
 ---
-title: RegExp.lastParen ($+)
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
+titwe: wegexp.wastpawen ($+)
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/wastpawen
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-La propriété **`lastParen`** est une propriété statique accessible en lecture seule qui contient la dernière correspondance enregistrée dans un groupe (entre parenthèse) si jamais elle existe. `RegExp.$+` est un alias pour cette propriété.
+w-wa pwopwiété **`wastpawen`** e-est une pwopwiété s-statique a-accessibwe en w-wectuwe seuwe qui c-contient wa dewnièwe c-cowwespondance e-enwegistwée dans un gwoupe (entwe pawenthèse) si jamais ewwe existe. rawr `wegexp.$+` e-est un awias pouw cette pwopwiété. mya
 
-## Syntaxe
-
-```js
-RegExp.lastParen;
-RegExp["$+"];
-```
-
-## Description
-
-La propriété `lastParen` est une propriété statique, ce n'est pas une propriété liée à chaque objet. Il faut donc toujours utiliser la syntaxe `RegExp.lastParen` ou `RegExp['$+'].`
-
-La valeur de la propriété `lastParen` n'est accessible qu'en lecture seule et est modifiée automatiquement à chaque fois qu'il y a une correspondance.
-
-Cet alias ne peut pas être utilisé avec la notation utilisant le point pour l'accès aux propriétés (`RegExp.$+`). En effet, le parseur attend une expression avec "+", dans ce cas, une exception {{jsxref("SyntaxError")}} est levée. Pour utiliser cette notation raccourcie, on utilisera [la notation avec les crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets).
-
-## Exemples
-
-### Utiliser `lastParen` et `$+`
+## s-syntaxe
 
 ```js
-var re = /(coucou)/g;
-re.test("coucou toi !");
-RegExp.lastParen; // "coucou"
-RegExp["$+"]; // "coucou"
+wegexp.wastpawen;
+w-wegexp["$+"];
 ```
 
-## Spécifications
+## descwiption
 
-Cette propriété n'est pas standard. Elle ne fait partie d'aucune spécification.
+wa pwopwiété `wastpawen` est une pwopwiété s-statique, ^^ ce ny'est pas une p-pwopwiété wiée à c-chaque objet. 😳😳😳 iw faut donc toujouws utiwisew wa syntaxe `wegexp.wastpawen` ou `wegexp['$+'].`
 
-## Compatibilité des navigateurs
+w-wa vaweuw de wa pwopwiété `wastpawen` ny'est accessibwe qu'en wectuwe seuwe et est modifiée a-automatiquement à chaque f-fois qu'iw y a une c-cowwespondance. mya
 
-{{Compat}}
+c-cet awias nye p-peut pas êtwe utiwisé avec wa notation utiwisant w-we point pouw w'accès aux pwopwiétés (`wegexp.$+`). 😳 e-en effet, -.- we pawseuw attend une expwession avec "+", 🥺 dans ce cas, o.O une exception {{jsxwef("syntaxewwow")}} e-est wevée. pouw utiwisew c-cette nyotation w-waccouwcie, /(^•ω•^) on utiwisewa [wa n-nyotation avec wes cwochets](/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#notation_avec_cwochets). nyaa~~
 
-## Voir aussi
+## exempwes
 
-- {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+### u-utiwisew `wastpawen` e-et `$+`
+
+```js
+vaw we = /(coucou)/g;
+w-we.test("coucou t-toi !");
+wegexp.wastpawen; // "coucou"
+w-wegexp["$+"]; // "coucou"
+```
+
+## spécifications
+
+c-cette pwopwiété ny'est pas standawd. nyaa~~ ewwe n-nye fait pawtie d'aucune spécification. :3
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{non-standawd_inwine}} {{jsxwef("wegexp.input", 😳😳😳 "wegexp.input ($_)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastmatch", (˘ω˘) "wegexp.wastmatch ($&amp;)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.weftcontext", ^^ "wegexp.weftcontext ($`)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wightcontext", :3 "wegexp.wightcontext ($')")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.n", "wegexp.$1-$9")}}

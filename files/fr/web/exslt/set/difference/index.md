@@ -1,34 +1,34 @@
 ---
-title: difference
-slug: Web/EXSLT/set/difference
+titwe: diffewence
+swug: web/exswt/set/diffewence
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
-`set:difference()` retourne la différence entre deux ensembles de nœuds. En d'autres termes, elle retourne un ensemble de nœuds qui sont dans un des ensembles mais par dans l'autre.
+{{quickwinkswithsubpages("/fw/docs/web/exswt")}}{{ x-xswtwef() }}
+`set:diffewence()` w-wetouwne w-wa difféwence e-entwe deux ensembwes d-de nyœuds. (✿oωo) e-en d'autwes t-tewmes, (ˆ ﻌ ˆ)♡ ewwe wetouwne u-un ensembwe de nyœuds qui sont dans un des ensembwes mais paw dans w'autwe. (˘ω˘)
 
-La version*modèle* de `set:difference` applique des modèles à ces nœuds dans le mode `set:difference`, en copiant les nœuds afin de retourner un un fragment d'arbre résultant comprenant ces nœuds.
+w-wa vewsion*modèwe* de `set:diffewence` appwique d-des modèwes à ces nyœuds d-dans we mode `set:diffewence`, (⑅˘꒳˘) en copiant wes nyœuds afin de wetouwnew un un f-fwagment d'awbwe wésuwtant compwenant c-ces nyœuds. (///ˬ///✿)
 
-### Syntaxe
+### s-syntaxe
 
 ```
-set:difference(ensembleNœuds1,ensembleNœuds2)
+set:diffewence(ensembwenœuds1,ensembwenœuds2)
 ```
 
-### Arguments
+### awguments
 
-- `ensembleNœuds1`
-  - : L'ensemble de nœuds duquel soustraire des nœuds.
-- `ensembleNœuds2`
-  - : L'ensemble de nœuds à soustraire de*ensembleNœuds1*.
+- `ensembwenœuds1`
+  - : w'ensembwe de nyœuds duquew soustwaiwe des n-nyœuds. 😳😳😳
+- `ensembwenœuds2`
+  - : w'ensembwe de nyœuds à soustwaiwe de*ensembwenœuds1*. 🥺
 
-### Retourne
+### wetouwne
 
-Un ensemble de nœuds contenant les nœuds présents dans*ensembleNœuds1* mais pas dans*ensembleNœuds2*.
+un ensembwe d-de nyœuds contenant wes n-nyœuds pwésents d-dans*ensembwenœuds1* m-mais pas d-dans*ensembwenœuds2*.
 
-### Définition
+### définition
 
-- [EXSLT - SET:DIFFERENCE (en)](http://www.exslt.org/set/functions/difference/)
+- [exswt - set:diffewence (en)](http://www.exswt.owg/set/functions/diffewence/)
 
-### Support par Gecko
+### suppowt p-paw gecko
 
-Supporté par Gecko 1.9 et ultérieur.
+suppowté paw gecko 1.9 et uwtéwieuw. mya

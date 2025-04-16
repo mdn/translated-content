@@ -1,193 +1,193 @@
 ---
-title: RegExp.prototype.exec()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
+titwe: wegexp.pwototype.exec()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/exec
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`exec()`** exécute la recherche d'une correspondance sur une chaîne de caractères donnée. Elle renvoie un tableau contenant les résultats ou {{jsxref("null")}}.
+w-wa méthode **`exec()`** e-exékawaii~ w-wa wechewche d'une c-cowwespondance s-suw une chaîne d-de cawactèwes d-donnée. XD ewwe w-wenvoie un tabweau contenant wes wésuwtats ou {{jsxwef("nuww")}}. ^^;;
 
-Si on souhaite uniquement savoir s'il y a une correspondance, on utilisera la méthode {{jsxref("RegExp.prototype.test()")}} ou la méthode {{jsxref("String.prototype.search()")}}.
+si on souhaite uniquement savoiw s-s'iw y a une cowwespondance, 🥺 on utiwisewa wa m-méthode {{jsxwef("wegexp.pwototype.test()")}} ou wa méthode {{jsxwef("stwing.pwototype.seawch()")}}. XD
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.exec()")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp.pwototype.exec()")}}
 
-```js interactive-example
-const regex1 = RegExp("foo*", "g");
-const str1 = "table football, foosball";
-let array1;
+```js intewactive-exampwe
+const wegex1 = w-wegexp("foo*", (U ᵕ U❁) "g");
+const s-stw1 = "tabwe f-footbaww, :3 foosbaww";
+wet awway1;
 
-while ((array1 = regex1.exec(str1)) !== null) {
-  console.log(`Found ${array1[0]}. Next starts at ${regex1.lastIndex}.`);
-  // Expected output: "Found foo. Next starts at 9."
-  // Expected output: "Found foo. Next starts at 19."
+whiwe ((awway1 = wegex1.exec(stw1)) !== nyuww) {
+  c-consowe.wog(`found ${awway1[0]}. ( ͡o ω ͡o ) nyext stawts at ${wegex1.wastindex}.`);
+  // expected output: "found foo. òωó n-nyext stawts at 9."
+  // expected o-output: "found f-foo. σωσ nyext stawts a-at 19."
 }
 ```
 
-Les objets représentant des expressions rationnelles gardent un état en mémoire lorsqu'ils utilisent les marqueurs {{jsxref("RegExp.global", "global")}} ou {{jsxref("RegExp.sticky", "sticky")}} et ils gardent notamment en mémoire {{jsxref("RegExp.lastIndex", "lastIndex")}} à partir de la correspondance précédemment trouvée. Ainsi, `exec()` peut être utilisée afin de parcourir plusieurs correspondances dans un texte (avec des groupes capturants) (contrairement à {{jsxref("String.prototype.match()")}}).
+w-wes objets wepwésentant des expwessions wationnewwes g-gawdent un état en mémoiwe wowsqu'iws u-utiwisent wes mawqueuws {{jsxwef("wegexp.gwobaw", (U ᵕ U❁) "gwobaw")}} ou {{jsxwef("wegexp.sticky", (✿oωo) "sticky")}} et iws gawdent nyotamment en mémoiwe {{jsxwef("wegexp.wastindex", ^^ "wastindex")}} à pawtiw d-de wa cowwespondance pwécédemment t-twouvée. ^•ﻌ•^ a-ainsi, `exec()` p-peut êtwe utiwisée afin de pawcouwiw pwusieuws cowwespondances d-dans un texte (avec d-des gwoupes captuwants) (contwaiwement à {{jsxwef("stwing.pwototype.match()")}}). XD
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-regexObj.exec(chaîne);
+w-wegexobj.exec(chaîne);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `chaîne`
-  - : La chaîne de caractères dans laquelle on recherche la correspondance décrite par l'expression rationnelle.
+  - : w-wa chaîne de cawactèwes d-dans waquewwe on wechewche wa cowwespondance d-décwite paw w'expwession wationnewwe. :3
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-S'il y a une correspondance, la méthode `exec()` renvoie un tableau (contenant des éléments et deux propriétés `index` et `values`, cf. ci-après) et met à jour les propriétés de l'objet représentant l'expression rationnelle (notamment {{jsxref("RegExp.lastIndex", "lastIndex")}}). Le tableau renvoyé contient le texte qui correspond dans le premier élément puis un élément pour chaque groupe capturé dans les parenthèses capturantes.
+s'iw y a une cowwespondance, (ꈍᴗꈍ) w-wa m-méthode `exec()` wenvoie un tabweau (contenant des éwéments et deux pwopwiétés `index` et `vawues`, :3 cf. ci-apwès) et met à j-jouw wes pwopwiétés d-de w'objet wepwésentant w-w'expwession wationnewwe (notamment {{jsxwef("wegexp.wastindex", (U ﹏ U) "wastindex")}}). UwU w-we tabweau wenvoyé c-contient we texte qui cowwespond dans we pwemiew éwément p-puis un éwément pouw chaque gwoupe captuwé dans wes pawenthèses captuwantes. 😳😳😳
 
-S'il n'y a aucune correspondance, la méthode `exec()` renvoie {{jsxref("null")}} et la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}} reçoit la valeur 0.
+s-s'iw ny'y a aucune cowwespondance, XD w-wa méthode `exec()` w-wenvoie {{jsxwef("nuww")}} e-et wa pwopwiété {{jsxwef("wegexp.wastindex", o.O "wastindex")}} weçoit wa v-vaweuw 0. (⑅˘꒳˘)
 
-## Description
+## descwiption
 
-Si on a l'exemple suivant :
+s-si on a-a w'exempwe suivant :
 
 ```js
-// On a une correspondance si on a "quick brown" suivi par "jumps", on ignore les caractères entre
-// On garde en mémoire "brown" et "jumps"
-// On ignore la casse
-var re = /quick\s(brown).+?(jumps)/gi;
-var result = re.exec("The Quick Brown Fox Jumps Over The Lazy Dog");
+// o-on a une cowwespondance si on a "quick bwown" s-suivi paw "jumps", 😳😳😳 o-on ignowe wes c-cawactèwes entwe
+// o-on gawde en m-mémoiwe "bwown" et "jumps"
+// on ignowe wa casse
+vaw we = /quick\s(bwown).+?(jumps)/gi;
+v-vaw wesuwt = we.exec("the quick bwown fox jumps ovew the wazy dog");
 ```
 
-Le tableau suivant montre l'état résultant suite à ce script :
+we tabweau s-suivant montwe w'état wésuwtant suite à ce scwipt :
 
-<table class="fullwidth-table">
+<tabwe cwass="fuwwwidth-tabwe">
   <tbody>
-    <tr>
-      <td class="header">Objet</td>
-      <td class="header">Propriété/Index</td>
-      <td class="header">Description</td>
-      <td class="header">Exemple</td>
-    </tr>
-    <tr>
-      <td rowspan="4"><code>result</code></td>
+    <tw>
+      <td cwass="headew">objet</td>
+      <td c-cwass="headew">pwopwiété/index</td>
+      <td c-cwass="headew">descwiption</td>
+      <td c-cwass="headew">exempwe</td>
+    </tw>
+    <tw>
+      <td wowspan="4"><code>wesuwt</code></td>
       <td><code>[0]</code></td>
-      <td>La chaîne complète des caractères qui correspondent.</td>
-      <td><code>"Quick Brown Fox Jumps"</code></td>
-    </tr>
-    <tr>
+      <td>wa c-chaîne compwète d-des cawactèwes q-qui cowwespondent.</td>
+      <td><code>"quick bwown fox jumps"</code></td>
+    </tw>
+    <tw>
       <td>
-        <code>[1], ...[<em>n</em> ]</code>
+        <code>[1], nyaa~~ ...[<em>n</em> ]</code>
       </td>
       <td>
-        Les sous-chaînes correspondantes aux groupes capturants s'il y en a. Le
-        nombre de groupes de parenthèses capturantes est illimité.
+        wes sous-chaînes cowwespondantes aux gwoupes captuwants s'iw y-y en a. rawr we
+        nombwe de gwoupes d-de pawenthèses captuwantes e-est iwwimité. -.-
       </td>
       <td>
-        <code>result[1] === "Brown"<br />result[2] === "Jumps"</code>
+        <code>wesuwt[1] === "bwown"<bw />wesuwt[2] === "jumps"</code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>index</code></td>
       <td>
-        L'indice (compté à partir de 0) de la correspondance dans la chaîne.
+        w-w'indice (compté à pawtiw de 0) de wa cowwespondance d-dans wa c-chaîne. (✿oωo)
       </td>
       <td><code>4</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>input</code></td>
-      <td>La chaîne de caractères utilisée en entrée.</td>
-      <td><code>"The Quick Brown Fox Jumps Over The Lazy Dog"</code></td>
-    </tr>
-    <tr>
-      <td rowspan="5"><code>re</code></td>
-      <td><code>lastIndex</code></td>
+      <td>wa chaîne de c-cawactèwes utiwisée e-en entwée.</td>
+      <td><code>"the quick bwown fox jumps ovew the wazy dog"</code></td>
+    </tw>
+    <tw>
+      <td w-wowspan="5"><code>we</code></td>
+      <td><code>wastindex</code></td>
       <td>
-        L'indice à partir duquel chercher la prochaine correspondance. Lorsque
-        le drapeau "g" est absent, cette propriété sera 0.
+        w-w'indice à p-pawtiw duquew chewchew wa p-pwochaine cowwespondance. w-wowsque
+        we dwapeau "g" e-est absent, /(^•ω•^) cette pwopwiété sewa 0. 🥺
       </td>
       <td><code>25</code></td>
-    </tr>
-    <tr>
-      <td><code>ignoreCase</code></td>
+    </tw>
+    <tw>
+      <td><code>ignowecase</code></td>
       <td>
-        Indique si le drapeau "<code>i</code>" a été utilisé pour ignorer la
-        casse.
+        indique si we dwapeau "<code>i</code>" a-a été u-utiwisé pouw ignowew wa
+        casse. ʘwʘ
       </td>
-      <td><code>true</code></td>
-    </tr>
-    <tr>
-      <td><code>global</code></td>
+      <td><code>twue</code></td>
+    </tw>
+    <tw>
+      <td><code>gwobaw</code></td>
       <td>
-        Indique si le drapeau "<code>g</code>" a été utilisé pour la
-        correspondance globale.
+        i-indique si we d-dwapeau "<code>g</code>" a été utiwisé pouw wa
+        cowwespondance g-gwobawe. UwU
       </td>
-      <td><code>true</code></td>
-    </tr>
-    <tr>
-      <td><code>multiline</code></td>
+      <td><code>twue</code></td>
+    </tw>
+    <tw>
+      <td><code>muwtiwine</code></td>
       <td>
-        Indique si le drapeau "<code>m</code>" a été utilisé pour chercher une
-        correspondance sur plusieurs lignes.
+        indique si we dwapeau "<code>m</code>" a été utiwisé pouw chewchew u-une
+        cowwespondance suw pwusieuws wignes. XD
       </td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>source</code></td>
-      <td>Le texte du motif.</td>
-      <td><code>"quick\s(brown).+?(jumps)"</code></td>
-    </tr>
+      <td><code>fawse</code></td>
+    </tw>
+    <tw>
+      <td><code>souwce</code></td>
+      <td>we t-texte du motif.</td>
+      <td><code>"quick\s(bwown).+?(jumps)"</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-### Trouver des correspondances successives
+### twouvew des cowwespondances successives
 
-Si on utilise le drapeau "`g`" dans l'expression rationnelle, on peut utiliser la méthode `exec()` plusieurs fois afin de trouver les correspondances successives dans la chaîne. Lorsqu'on procède ainsi, la recherche reprend à la position indiquée par la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}} ({{jsxref("RegExp.prototype.test()", "test()")}} fera également progresser la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}}).
+si on u-utiwise we dwapeau "`g`" d-dans w'expwession wationnewwe, (✿oωo) on peut utiwisew wa méthode `exec()` p-pwusieuws fois afin d-de twouvew wes cowwespondances successives dans wa chaîne. wowsqu'on p-pwocède ainsi, :3 wa wechewche w-wepwend à w-wa position indiquée paw wa pwopwiété {{jsxwef("wegexp.wastindex", (///ˬ///✿) "wastindex")}} ({{jsxwef("wegexp.pwototype.test()", nyaa~~ "test()")}} f-fewa égawement pwogwessew w-wa pwopwiété {{jsxwef("wegexp.wastindex", >w< "wastindex")}}). -.-
 
-On notera que la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}} ne sera pas réinitialisée lors de la recherche sur une autre chaîne de caractères, c'est la valeur existante de {{jsxref("RegExp.lastIndex", "lastIndex")}} qui sera utilisée.
+on n-nyotewa que wa p-pwopwiété {{jsxwef("wegexp.wastindex", (✿oωo) "wastindex")}} nye sewa p-pas wéinitiawisée w-wows de wa wechewche suw une autwe chaîne d-de cawactèwes, (˘ω˘) c-c'est wa vaweuw e-existante de {{jsxwef("wegexp.wastindex", rawr "wastindex")}} qui sewa utiwisée. OwO
 
-Par exemple, si on utilise le fragment de code suivant :
+paw e-exempwe, ^•ﻌ•^ si on utiwise we fwagment d-de code suivant :
 
 ```js
-var maRegex = /ab*/g;
-var str = "abbcdefabh";
-var monTableau;
-while ((monTableau = maRegex.exec(str)) !== null) {
-  var msg = "Trouvé " + monTableau[0] + ". ";
-  msg += "Prochaine correspondance à partir de " + maRegex.lastIndex;
-  console.log(msg);
+vaw m-mawegex = /ab*/g;
+vaw stw = "abbcdefabh";
+vaw montabweau;
+whiwe ((montabweau = m-mawegex.exec(stw)) !== n-nyuww) {
+  v-vaw msg = "twouvé " + m-montabweau[0] + ". UwU ";
+  msg += "pwochaine c-cowwespondance à pawtiw de " + mawegex.wastindex;
+  consowe.wog(msg);
 }
 ```
 
-Le script affichera alors :
+we scwipt affichewa awows :
 
 ```
-Trouvé abb. Prochaine correspondance à partir de 3
-Trouvé ab. Prochaine correspondance à partir de 9
+t-twouvé abb. (˘ω˘) pwochaine cowwespondance à p-pawtiw de 3
+twouvé a-ab. (///ˬ///✿) pwochaine cowwespondance à pawtiw de 9
 ```
 
-> [!WARNING]
-> Il ne faut pas placer un littéral d'expression rationnelle (ou le constructeur {{jsxref("RegExp")}}) au sein de la condition `while` car cela créerait un boucle infinie s'il y a une correspondance car la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}} serait redéfinie à chaque itération. Il faut également s'assurer que le drapeau global est défini sinon on aura également une boucle.
+> [!wawning]
+> i-iw nye faut pas pwacew un wittéwaw d-d'expwession w-wationnewwe (ou w-we constwucteuw {{jsxwef("wegexp")}}) a-au sein d-de wa condition `whiwe` caw cewa cwéewait un boucwe infinie s'iw y a une cowwespondance caw wa pwopwiété {{jsxwef("wegexp.wastindex", σωσ "wastindex")}} s-sewait wedéfinie à c-chaque i-itéwation. /(^•ω•^) iw faut égawement s-s'assuwew que we dwapeau gwobaw est défini sinon on auwa égawement u-une boucwe. 😳
 
-### Utiliser `exec()` avec des littéraux
+### u-utiwisew `exec()` avec d-des wittéwaux
 
-Il est aussi possible d'utiliser `exec()` sans créer d'objet {{jsxref("RegExp")}} explicite :
+iw est aussi possibwe d'utiwisew `exec()` s-sans cwéew d-d'objet {{jsxwef("wegexp")}} expwicite :
 
 ```js
-var matches = /(coucou \S+)/.exec("Ceci est un coucou monde !");
-console.log(matches[1]);
+v-vaw matches = /(coucou \s+)/.exec("ceci e-est un coucou monde !");
+consowe.wog(matches[1]);
 ```
 
-Cela affichera 'coucou monde !'.
+cewa affichewa 'coucou monde !'. 😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Le chapitre sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
-- {{jsxref("RegExp")}}
-- {{jsxref("String.prototype.match()")}}
-- {{jsxref("String.prototype.matchAll()")}}
+- w-we chapitwe suw [wes expwessions w-wationnewwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions) d-du [guide javascwipt](/fw/docs/web/javascwipt/guide)
+- {{jsxwef("wegexp")}}
+- {{jsxwef("stwing.pwototype.match()")}}
+- {{jsxwef("stwing.pwototype.matchaww()")}}

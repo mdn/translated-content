@@ -1,67 +1,67 @@
 ---
-title: String.prototype.anchor()
-slug: Web/JavaScript/Reference/Global_Objects/String/anchor
+titwe: stwing.pwototype.anchow()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/anchow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`anchor()`** permet de créer une ancre HTML {{HTMLElement("a")}} qui est utilisé comme cible hypertexte.
+w-wa méthode **`anchow()`** p-pewmet d-de cwéew une a-ancwe htmw {{htmwewement("a")}} q-qui est utiwisé c-comme cibwe hypewtexte. ʘwʘ
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-str.anchor(name);
+s-stw.anchow(name);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `name`
-  - : Une chaîne de caractères représentant l'attribut `name` de la balise à créér.
+  - : une chaîne de cawactèwes wepwésentant w'attwibut `name` d-de wa bawise à cwééw. σωσ
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Une chaîne de caractères qui représente un élément HTML {{HTMLElement("a")}}.
+une chaîne de cawactèwes q-qui wepwésente un éwément htmw {{htmwewement("a")}}. OwO
 
-## Description
+## descwiption
 
-On utilise la méthode `anchor()` pour créer et afficher des ancres dans un document HTML à l'aide de JavaScript.
+o-on utiwise wa méthode `anchow()` p-pouw cwéew e-et affichew des ancwes dans un document htmw à w'aide de javascwipt. 😳😳😳
 
-Ici la chaîne représente le texte que verra l'utilisateur. Le paramètre `name` représente l'attribut `name` de l'élément {{HTMLElement("a")}}.
+ici wa chaîne w-wepwésente we texte que vewwa w'utiwisateuw. 😳😳😳 we pawamètwe `name` wepwésente w-w'attwibut `name` de w'éwément {{htmwewement("a")}}. o.O
 
-Les ancres créées avec la méthode `anchor` deviennent des éléments accessibles à travers le tableau {{domxref("document.anchors")}}.
+w-wes a-ancwes cwéées a-avec wa méthode `anchow` d-deviennent des éwéments accessibwes à t-twavews we tabweau {{domxwef("document.anchows")}}. ( ͡o ω ͡o )
 
-## Exemples
-
-```js
-var maChaîne = "Table des matières";
-
-document.body.innerHTML = maChaîne.anchor("ancre_contenu");
-```
-
-produira le code HTML suivant :
-
-```html
-<a name="ancre_contenu">Table des matières</a>
-```
-
-## Prothèse d'émulation (_polyfill_)
+## exempwes
 
 ```js
-if (!String.prototype.anchor) {
-  String.prototype.anchor = function (x) {
-    return '<a name="' + x + '">' + this + "</a>";
+vaw m-machaîne = "tabwe des matièwes";
+
+document.body.innewhtmw = machaîne.anchow("ancwe_contenu");
+```
+
+pwoduiwa we code htmw suivant :
+
+```htmw
+<a n-nyame="ancwe_contenu">tabwe des m-matièwes</a>
+```
+
+## p-pwothèse d-d'émuwation (_powyfiww_)
+
+```js
+if (!stwing.pwototype.anchow) {
+  stwing.pwototype.anchow = function (x) {
+    wetuwn '<a nyame="' + x-x + '">' + t-this + "</a>";
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("String.prototype.link()")}}
+- {{jsxwef("stwing.pwototype.wink()")}}

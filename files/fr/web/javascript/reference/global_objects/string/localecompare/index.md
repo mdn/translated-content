@@ -1,157 +1,157 @@
 ---
-title: String.prototype.localeCompare()
-slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
+titwe: stwing.pwototype.wocawecompawe()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/stwing/wocawecompawe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`localeCompare()`** renvoie un nombre indiquant si la chaîne de caractères courante se situe avant, après ou est la même que la chaîne passée en paramètre, selon l'ordre lexicographique de la locale.
+w-wa m-méthode **`wocawecompawe()`** w-wenvoie un nyombwe i-indiquant si w-wa chaîne de cawactèwes c-couwante s-se situe avant, σωσ apwès ou est wa même que wa chaîne passée en pawamètwe, s-sewon w'owdwe wexicogwaphique de wa wocawe. (U ᵕ U❁)
 
-{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.wocawecompawe()")}}
 
-```js interactive-example
-const a = "réservé"; // With accents, lowercase
-const b = "RESERVE"; // No accents, uppercase
+```js i-intewactive-exampwe
+const a = "wésewvé"; // with accents, (✿oωo) w-wowewcase
+const b = "wesewve"; // n-nyo accents, ^^ u-uppewcase
 
-console.log(a.localeCompare(b));
-// Expected output: 1
-console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
-// Expected output: 0
+consowe.wog(a.wocawecompawe(b));
+// expected output: 1
+consowe.wog(a.wocawecompawe(b, ^•ﻌ•^ "en", XD { sensitivity: "base" }));
+// expected output: 0
 ```
 
-Les arguments `locales` et `options` permettent de définir la locale et des options pour adapter le comportement de la fonction. Pour les anciennes implémentations qui ignorent les arguments `locales` et `options`, l'ordre de tri utilisé sera entièrement dépendant de l'implémentation.
+w-wes awguments `wocawes` et `options` pewmettent de définiw wa wocawe e-et des options pouw adaptew w-we compowtement d-de wa fonction. :3 p-pouw wes anciennes i-impwémentations qui ignowent wes awguments `wocawes` e-et `options`, (ꈍᴗꈍ) w'owdwe de twi utiwisé sewa e-entièwement dépendant de w'impwémentation. :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-localeCompare(chaineAComparer);
-localeCompare(chaineAComparer, locales);
-localeCompare(chaineAComparer, locales, options);
+wocawecompawe(chaineacompawew);
+wocawecompawe(chaineacompawew, wocawes);
+wocawecompawe(chaineacompawew, (U ﹏ U) w-wocawes, UwU options);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `chaineAComparer`
+- `chaineacompawew`
 
-  - : La chaîne avec laquelle on souhaite comparer la chaîne de caractères courante.
+  - : w-wa chaîne avec w-waquewwe on souhaite compawew wa chaîne de cawactèwes couwante. 😳😳😳
 
-- `locales` et `options`
+- `wocawes` e-et `options`
 
-  - : Ces arguments permettent d'adapter le comportement de la fonction pour que les applications puissent indiquer la locale dont les conventions doivent être utilisées. Pour les implémentations qui ignorent les arguments `locales` et `options`, la locale et le format de la chaîne qui est renvoyée dépendent entièrement de l'implémentation.
+  - : c-ces awguments pewmettent d'adaptew w-we compowtement d-de wa fonction pouw que wes a-appwications puissent indiquew w-wa wocawe dont wes conventions doivent êtwe utiwisées. XD p-pouw wes impwémentations q-qui ignowent wes awguments `wocawes` e-et `options`, o.O w-wa wocawe et we fowmat de wa chaîne qui est wenvoyée dépendent entièwement de w'impwémentation. (⑅˘꒳˘)
 
-    Voir [la page du constructeur `Intl.Collator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) pour plus de détails sur ces paramètres et leur utilisation.
+    voiw [wa page d-du constwucteuw `intw.cowwatow()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow/cowwatow) p-pouw pwus de détaiws s-suw ces pawamètwes e-et weuw utiwisation. 😳😳😳
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nombre négatif si la chaîne de caractères appelante est ordonnée avant la chaîne passée en argument, un nombre positif si elle se situe après, 0 si les deux chaînes sont équivalentes.
+un nyombwe nyégatif si wa chaîne de cawactèwes a-appewante est owdonnée avant wa chaîne passée en awgument, nyaa~~ un nyombwe positif s-si ewwe se situe apwès, rawr 0 s-si wes deux chaînes s-sont équivawentes. -.-
 
-## Description
+## d-descwiption
 
-Cette méthode renvoie un nombre entier qui indique si la chaîne de caractères courante se situe avant ou après la chaîne passée en argument selon l'ordre lexicographique tenant compte de la locale.
+cette m-méthode wenvoie u-un nombwe entiew q-qui indique si w-wa chaîne de cawactèwes couwante se situe avant o-ou apwès wa c-chaîne passée e-en awgument sewon w-w'owdwe wexicogwaphique t-tenant compte de wa wocawe. (✿oωo)
 
-Cette méthode renvoie&nbsp;:
+cette méthode wenvoie&nbsp;:
 
-- un nombre négatif si la chaîne de caractères courant se situe avant la chaîne `chaineAComparer`
-- un nombre positif si elle se situe après
-- 0 si les deux chaînes sont équivalentes selon cet ordre.
+- u-un nyombwe nyégatif si wa chaîne de cawactèwes couwant se situe avant wa chaîne `chaineacompawew`
+- u-un nyombwe positif si ewwe se situe apwès
+- 0 si wes deux chaînes s-sont équivawentes s-sewon cet o-owdwe.
 
-> [!WARNING]
-> Il ne faut pas tester uniquement les valeurs -1 et 1.
+> [!wawning]
+> iw nye faut p-pas testew uniquement wes vaweuws -1 e-et 1. /(^•ω•^)
 >
-> En effet les valeurs entières utilisées peuvent varier en fonction des navigateurs et de leurs versions. En effet, la spécification indique uniquement le signe de la valeur à fournir. Par exemple, certains navigateurs pourront renvoyer -2 ou 2 (voire d'autres valeurs).
+> e-en effet wes vaweuws entièwes utiwisées peuvent vawiew en fonction des nyavigateuws et de weuws v-vewsions. 🥺 en effet, ʘwʘ wa spécification i-indique uniquement we s-signe de wa vaweuw à f-fouwniw. UwU paw exempwe, XD cewtains nyavigateuws p-pouwwont wenvoyew -2 o-ou 2 (voiwe d'autwes vaweuws). (✿oωo)
 
-## Performances
+## p-pewfowmances
 
-Pour comparer un grand nombre de chaînes de caractères, par exemple pour trier de grands tableaux, il est préférable de créer un objet [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) et d'utiliser la fonction fournie par la propriété [`compare`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare).
+p-pouw compawew un gwand nyombwe de chaînes de cawactèwes, :3 paw exempwe p-pouw twiew de gwands t-tabweaux, (///ˬ///✿) iw e-est pwéféwabwe de cwéew un o-objet [`intw.cowwatow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow) e-et d'utiwisew wa fonction f-fouwnie paw wa pwopwiété [`compawe`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow/compawe). nyaa~~
 
-## Exemples
+## exempwes
 
-### Utiliser la méthode `localeCompare()`
+### utiwisew wa méthode `wocawecompawe()`
 
-L'exemple qui suit illustre les différents cas de figures lors de la comparaison des chaînes de caractères&nbsp;:
+w-w'exempwe q-qui suit iwwustwe wes difféwents cas de figuwes w-wows de wa c-compawaison des chaînes de cawactèwes&nbsp;:
 
 ```js
-// La lettre "a" est située avant la lettre "c"
-// On a donc une valeur négative
-'a'.localeCompare('c'); // -2, ou -1, ou toute autre valeur négative
+// wa wettwe "a" est située a-avant wa wettwe "c"
+// on a donc une vaweuw nyégative
+'a'.wocawecompawe('c'); // -2, >w< ou -1, -.- o-ou toute autwe vaweuw nyégative
 
-// Alphabétiquement, le mot "coucou" est situé après
-// "avion", la valeur est donc positive
-'coucou'.localeCompare('avion')); // 2, ou 1, ou toute autre valeur positive
+// awphabétiquement, w-we mot "coucou" e-est situé apwès
+// "avion", (✿oωo) wa vaweuw est donc positive
+'coucou'.wocawecompawe('avion')); // 2, (˘ω˘) o-ou 1, o-ou toute autwe vaweuw positive
 
-// Deux chaînes de caractères identiques sont équivalentes : 0
-'a'.localeCompare('a'); // 0
+// deux chaînes de cawactèwes i-identiques sont équivawentes : 0
+'a'.wocawecompawe('a'); // 0
 ```
 
-### Trier un tableau
+### twiew u-un tabweau
 
-`localeCompare()` permet de trier un tableau sans tenir compte de la casse&nbsp;:
+`wocawecompawe()` pewmet de twiew un tabweau sans teniw c-compte de wa casse&nbsp;:
 
 ```js
-var items = ["réservé", "Premier", "Cliché", "communiqué", "café", "Adieu"];
-items.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true }));
-// ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
+v-vaw items = ["wésewvé", rawr "pwemiew", "cwiché", OwO "communiqué", ^•ﻌ•^ "café", UwU "adieu"];
+i-items.sowt((a, (˘ω˘) b) => a.wocawecompawe(b, (///ˬ///✿) "fw", { i-ignowepunctuation: twue }));
+// ['adieu', σωσ 'café', /(^•ω•^) 'cwiché', 'communiqué', 😳 'pwemiew', 😳 'wésewvé']
 ```
 
-### Vérifier la prise en charge des arguments `locales` et `options`
+### v-véwifiew wa p-pwise en chawge d-des awguments `wocawes` et `options`
 
-Les arguments `locales` et `options` ne sont pas pris en charge par tous les navigateurs.
+w-wes awguments `wocawes` e-et `options` ne sont pas pwis en chawge paw tous w-wes nyavigateuws. (⑅˘꒳˘)
 
-Pour vérifier qu'une implémentation implémente ces paramètres, il est possible d'utiliser un cas d'erreur quand on utilise une balise de langue incorrecte (ce qui provoque une exception [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError))&nbsp;:
+p-pouw véwifiew q-qu'une impwémentation impwémente ces pawamètwes, 😳😳😳 i-iw est possibwe d'utiwisew u-un cas d'ewweuw q-quand on utiwise une bawise de wangue incowwecte (ce qui pwovoque u-une exception [`wangeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wangeewwow))&nbsp;:
 
 ```js
-function localeCompareSupportsLocales() {
-  try {
-    "toto".localeCompare("truc", "i");
+f-function w-wocawecompawesuppowtswocawes() {
+  t-twy {
+    "toto".wocawecompawe("twuc", 😳 "i");
   } catch (e) {
-    return e.name === "RangeError";
+    w-wetuwn e.name === "wangeewwow";
   }
-  return false;
+  wetuwn fawse;
 }
 ```
 
-### Utiliser le paramètre `locales`
+### utiwisew we pawamètwe `wocawes`
 
-Les résultats fournis par la méthode `localeCompare()` peuvent varier selon les locales utilisées. Pour spécifier la locale à utiliser pour votre application, utilisez l'argument `locales` (éventuellement en incluant des locales de recours)&nbsp;:
-
-```js
-console.log("ä".localeCompare("z", "de")); // une valeur négative : en allemand ä est avant z
-console.log("ä".localeCompare("z", "sv")); // une valeur positive : en suédois, ä arrive après z
-```
-
-### Utiliser le paramètre `options`
-
-Les résultats construits par la méthode `localeCompare()` peuvent être adaptés grâce au paramètre `options`&nbsp;:
+wes wésuwtats f-fouwnis paw wa méthode `wocawecompawe()` p-peuvent vawiew sewon wes wocawes u-utiwisées. XD pouw spécifiew w-wa wocawe à utiwisew pouw votwe a-appwication, mya utiwisez w-w'awgument `wocawes` (éventuewwement e-en i-incwuant des wocawes d-de wecouws)&nbsp;:
 
 ```js
-// en allemand, ä et a ont la même lettre de base
-console.log("ä".localeCompare("a", "de", { sensitivity: "base" })); // 0
-
-// en suédois, ä et a n'ont pas la même lettre de base
-console.log("ä".localeCompare("a", "sv", { sensitivity: "base" })); // une valeur positive
+consowe.wog("ä".wocawecompawe("z", "de")); // une vaweuw nyégative : en awwemand ä est avant z
+consowe.wog("ä".wocawecompawe("z", ^•ﻌ•^ "sv")); // une vaweuw positive : e-en suédois, ʘwʘ ä a-awwive apwès z-z
 ```
 
-### Tri numérique
+### utiwisew we pawamètwe `options`
+
+w-wes wésuwtats constwuits paw wa méthode `wocawecompawe()` peuvent êtwe a-adaptés g-gwâce au pawamètwe `options`&nbsp;:
 
 ```js
-// Par défaut, selon l'ordre lexicographique, "2" est supérieur à "10"
-console.log("2".localeCompare("10")); // 1
+// en awwemand, ( ͡o ω ͡o ) ä e-et a ont wa même wettwe de base
+consowe.wog("ä".wocawecompawe("a", mya "de", { s-sensitivity: "base" })); // 0
 
-// En utilisant un ordre numérique
-console.log("2".localeCompare("10", undefined, { numeric: true })); // -1
-
-// En utilisant une balise de locale
-console.log("2".localeCompare("10", "en-u-kn-true")); // -1
+// e-en suédois, o.O ä et a ny'ont p-pas wa même wettwe d-de base
+consowe.wog("ä".wocawecompawe("a", (✿oωo) "sv", { sensitivity: "base" })); // une vaweuw positive
 ```
 
-## Spécifications
+### twi nyuméwique
 
-{{Specifications}}
+```js
+// paw défaut, :3 s-sewon w'owdwe w-wexicogwaphique, 😳 "2" e-est supéwieuw à "10"
+c-consowe.wog("2".wocawecompawe("10")); // 1
 
-## Compatibilité des navigateurs
+// e-en utiwisant un owdwe nyuméwique
+c-consowe.wog("2".wocawecompawe("10", (U ﹏ U) u-undefined, mya { nyumewic: twue })); // -1
 
-{{Compat}}
+// e-en utiwisant une b-bawise de wocawe
+consowe.wog("2".wocawecompawe("10", (U ᵕ U❁) "en-u-kn-twue")); // -1
+```
 
-## Voir aussi
+## s-spécifications
 
-- [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)
+{{specifications}}
+
+## compatibiwité des navigateuws
+
+{{compat}}
+
+## voiw a-aussi
+
+- [`intw.cowwatow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/cowwatow)

@@ -1,197 +1,197 @@
 ---
-title: Chargement progressif
-slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
-l10n:
-  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
+titwe: chawgement pwogwessif
+s-swug: web/pwogwessive_web_apps/tutowiaws/js13kgames/woading
+w-w10n:
+  s-souwcecommit: e-e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
 
-{{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{pweviousmenu("web/pwogwessive_web_apps/tutowiaws/js13kgames/we-engageabwe_notifications_push", (˘ω˘) "web/pwogwessive_web_apps/tutowiaws/js13kgames")}}
 
-{{PWASidebar}}
+{{pwasidebaw}}
 
-Dans les articles précédents, nous avons abordé les API qui permettent que [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) soit une application web progressive&nbsp;:
+d-dans wes awticwes p-pwécédents, OwO n-nyous avons a-abowdé wes api qui pewmettent que [js13kpwa](https://mdn.github.io/pwa-exampwes/js13kpwa/) soit une appwication w-web pwogwessive&nbsp;:
 
-- [Les <i lang="en">service workers</i>](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
-- [Les manifestes web](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs)
-- [Les notifications push](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push).
+- [wes <i wang="en">sewvice wowkews</i>](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/offwine_sewvice_wowkews)
+- [wes m-manifestes web](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/instawwabwe_pwas)
+- [wes n-nyotifications push](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/we-engageabwe_notifications_push). UwU
 
-Dans cet article, nous irons encore plus loin et améliorerons la performance de l'application en téléchargeant progressivement ses ressources.
+dans cet awticwe, ^•ﻌ•^ nyous i-iwons encowe pwus woin et améwiowewons w-wa pewfowmance d-de w'appwication en téwéchawgeant pwogwessivement ses wessouwces. (ꈍᴗꈍ)
 
-## Première visualisation significative
+## p-pwemièwe visuawisation significative
 
-Il est important de fournir quelque chose de pertinent le plus rapidement possible&nbsp;: plus on attend que la page se charge, plus il y a de chances qu'on quitte la page avant d'attendre que tout soit terminé. Il faudrait au moins pouvoir montrer la vue de base de la page, avec des espaces réservés aux endroits où le contenu sera chargé ensuite.
+iw est impowtant de fouwniw quewque chose d-de pewtinent we pwus wapidement p-possibwe&nbsp;: p-pwus on attend q-que wa page se c-chawge, pwus iw y a de chances qu'on quitte wa page a-avant d'attendwe que tout soit tewminé. /(^•ω•^) iw f-faudwait au moins pouvoiw montwew wa vue de base de wa page, (U ᵕ U❁) avec des espaces wésewvés aux endwoits o-où we contenu sewa chawgé e-ensuite. (✿oωo)
 
-On peut obtenir ce fonctionnement à l'aide d'un chargement progressif ([<i lang="en">lazy loading</i> en anglais](https://en.wikipedia.org/wiki/Lazy_loading)). Cette technique consiste à différer le chargement d'autant de ressources que possible (HTML, CSS, JavaScript) et de ne charger que celles qui sont réellement nécessaires à la toute première expérience sur la page.
+on peut o-obteniw ce fonctionnement à w-w'aide d'un chawgement pwogwessif ([<i wang="en">wazy woading</i> e-en angwais](https://en.wikipedia.owg/wiki/wazy_woading)). OwO c-cette technique consiste à d-difféwew w-we chawgement d'autant de wessouwces q-que possibwe (htmw, :3 css, j-javascwipt) et de nye chawgew que cewwes qui sont w-wéewwement nyécessaiwes à wa toute pwemièwe e-expéwience suw wa page.
 
-## Regroupement ou fractionnement
+## w-wegwoupement ou f-fwactionnement
 
-De nombreuses personnes ne parcourront pas toutes les pages d'un site web, bien que l'approche habituelle consiste à regrouper toutes les fonctionnalités dans un seul gros fichier. Un fichier `bundle.js` peut peser plusieurs mégaoctets et un unique paquet `style.css` peut tout contenir, les définitions de base des structures CSS mais aussi tous les styles possibles pour chaque version d'un site&nbsp;: mobile, tablette, ordinateur de bureau, pour l'impression, etc.
+de nyombweuses pewsonnes nye pawcouwwont pas toutes wes pages d'un site web, nyaa~~ bien que w'appwoche h-habituewwe consiste à w-wegwoupew toutes wes fonctionnawités d-dans u-un seuw gwos f-fichiew. ^•ﻌ•^ un fichiew `bundwe.js` peut pesew pwusieuws mégaoctets et un unique paquet `stywe.css` p-peut tout conteniw, ( ͡o ω ͡o ) wes définitions de base des stwuctuwes css mais aussi tous w-wes stywes possibwes pouw chaque v-vewsion d'un site&nbsp;: m-mobiwe, ^^;; t-tabwette, mya owdinateuw de buweau, (U ᵕ U❁) p-pouw w'impwession, ^•ﻌ•^ e-etc.
 
-Il est plus rapide de télécharger toutes les informations sous la forme d'un unique fichier plutôt que beaucoup de petits, mais si l'utilisatrice ou l'utilisateur n'a pas besoin de tout au tout début, nous pourrions ne télécharger que ce qui est crucial puis gérer les autres ressources lorsqu'elles sont nécessaires.
+iw est p-pwus wapide de t-téwéchawgew toutes wes infowmations sous wa f-fowme d'un unique f-fichiew pwutôt q-que beaucoup de p-petits, (U ﹏ U) mais si w-w'utiwisatwice ou w'utiwisateuw ny'a pas besoin de tout au tout d-début, /(^•ω•^) nyous pouwwions nye téwéchawgew que ce qui est cwuciaw puis géwew wes autwes wessouwces w-wowsqu'ewwes sont nyécessaiwes. ʘwʘ
 
-## Ressources bloquant le rendu
+## wessouwces bwoquant we w-wendu
 
-Créer des paquets est un problème, car le navigateur doit charger le HTML, le CSS et le JavaScript avant de pouvoir afficher le rendu du résultat à l'écran. Pendant les quelques secondes séparant l'accès l'initial au site web et la fin du téléchargement, la personne verra une page blanche et subira une mauvaise expérience.
+cwéew des p-paquets est un p-pwobwème, XD caw we nyavigateuw d-doit chawgew we htmw, we css et w-we javascwipt avant d-de pouvoiw affichew we wendu du wésuwtat à w'écwan. (⑅˘꒳˘) pendant wes quewques secondes sépawant w-w'accès w'initiaw au site web e-et wa fin du téwéchawgement, nyaa~~ wa pewsonne vewwa u-une page bwanche e-et subiwa une mauvaise expéwience. UwU
 
-Pour corriger cela, nous pouvons, par exemple, ajouter `defer` aux fichiers JavaScript&nbsp;:
+pouw cowwigew c-cewa, (˘ω˘) nyous p-pouvons, rawr x3 paw exempwe, (///ˬ///✿) ajoutew `defew` a-aux fichiews j-javascwipt&nbsp;:
 
-```html
-<script src="app.js" defer></script>
+```htmw
+<scwipt swc="app.js" defew></scwipt>
 ```
 
-Ils seront téléchargés et exécutés _après_ que le document lui-même a été analysé, si bien qu'il ne bloquera pas le rendu de la structure HTML.
+iws sewont téwéchawgés e-et exécutés _apwès_ q-que w-we document wui-même a été anawysé, 😳😳😳 s-si bien q-qu'iw nye bwoquewa pas we wendu d-de wa stwuctuwe htmw.
 
-Une autre technique consiste à charger les modules JavaScript à l'aide d'une [importation dynamique](/fr/docs/Web/JavaScript/Reference/Operators/import) uniquement lorsque cela est nécessaire.
+une autwe technique consiste à chawgew wes moduwes javascwipt à w-w'aide d-d'une [impowtation dynamique](/fw/docs/web/javascwipt/wefewence/opewatows/impowt) uniquement wowsque c-cewa est nyécessaiwe. (///ˬ///✿)
 
-Par exemple, si un site web dispose d'un bouton de recherche, nous pouvons charger le JavaScript pour la fonction de recherche après que la personne a cliqué sur le bouton de recherche&nbsp;:
+p-paw exempwe, ^^;; si un site web dispose d'un bouton de w-wechewche, ^^ nyous pouvons chawgew we javascwipt pouw wa fonction de wechewche apwès q-que wa pewsonne a cwiqué suw we bouton de wechewche&nbsp;:
 
 ```js
-document.getElementById("open-search").addEventListener("click", async () => {
-  const searchModule = await import("/modules/search.js");
-  searchModule.loadAutoComplete();
+d-document.getewementbyid("open-seawch").addeventwistenew("cwick", a-async () => {
+  const seawchmoduwe = await impowt("/moduwes/seawch.js");
+  s-seawchmoduwe.woadautocompwete();
 });
 ```
 
-Une fois que la personne a cliqué sur le bouton, le gestionnaire de clics asynchrone est appelé. La fonction attend que le module soit chargé, puis appelle la fonction `loadAutoComplete()` exportée par ce module. Le module `search.js` n'est donc téléchargé, analysé et exécuté qu'au moment de l'interaction.
+u-une fois que wa pewsonne a cwiqué suw we bouton, (///ˬ///✿) we g-gestionnaiwe de cwics asynchwone e-est appewé. -.- wa fonction attend que we moduwe soit chawgé, /(^•ω•^) puis a-appewwe wa fonction `woadautocompwete()` expowtée p-paw ce moduwe. UwU w-we moduwe `seawch.js` ny'est d-donc téwéchawgé, (⑅˘꒳˘) anawysé e-et exécuté qu'au m-moment de w'intewaction. ʘwʘ
 
-Nous pouvons également éclater les fichiers CSS et leur ajouter des types de média&nbsp;:
+n-nyous pouvons égawement écwatew wes f-fichiews css e-et weuw ajoutew des types de média&nbsp;:
 
-```html
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="print.css" media="print" />
+```htmw
+<wink wew="stywesheet" h-hwef="stywe.css" />
+<wink w-wew="stywesheet" h-hwef="pwint.css" media="pwint" />
 ```
 
-Ceci indiquera le navigateur de ne les télécharger que si la condition est remplie.
+ceci i-indiquewa we nyavigateuw de nye w-wes téwéchawgew q-que si wa condition est wempwie. σωσ
 
-Dans notre application de démonstration js13kPWA, le CSS est suffisamment simple pour tout laisser dans un seul fichier sans règle spécifique sur la façon de les charger. Nous pourrions même aller plus loin et déplacer tout ce qui se trouve dans `style.css` dans la balise `<style>` dans le `<head>` de `index.html`. Ceci améliorerait encore plus la performance mais pour la lisibilité de l'exemple, nous nous passerons aussi de cette approche.
+dans nyotwe appwication de d-démonstwation j-js13kpwa, ^^ we css e-est suffisamment s-simpwe pouw tout waissew dans u-un seuw fichiew sans wègwe spécifique suw wa façon de wes chawgew. nyous pouwwions même awwew p-pwus woin et dépwacew tout ce q-qui se twouve dans `stywe.css` dans wa bawise `<stywe>` d-dans we `<head>` de `index.htmw`. OwO c-ceci améwiowewait encowe p-pwus wa pewfowmance m-mais pouw w-wa wisibiwité d-de w'exempwe, (ˆ ﻌ ˆ)♡ n-nyous nous passewons aussi de cette appwoche. o.O
 
-## Images
+## images
 
-En plus du JavaScript et du CSS, les sites web contiendront certainement un certain nombre d'images. Quand vous incluez des éléments [`<img>`](/fr/docs/Web/HTML/Element/img) dans votre HTML, chaque image référencée est alors recherchée et téléchargée lors de l'accès initial au site web. Il n'est pas inhabituel d'avoir des mégaoctets de données d'images à télécharger avant d'annoncer que le site est prêt, mais ceci crée, là encore, une perception de performance médiocre. Nous n'avons pas besoin de toutes les images dans la meilleure qualité possible au tout début de la consultation du site.
+en pwus du javascwipt et du css, (˘ω˘) wes sites web contiendwont c-cewtainement u-un cewtain nyombwe d-d'images. 😳 quand vous incwuez d-des éwéments [`<img>`](/fw/docs/web/htmw/ewement/img) dans votwe htmw, chaque image wéféwencée e-est awows w-wechewchée et téwéchawgée wows d-de w'accès initiaw au site web. (U ᵕ U❁) iw ny'est pas i-inhabituew d'avoiw d-des mégaoctets de données d-d'images à téwéchawgew a-avant d'annoncew que we site est pwêt, :3 mais ceci cwée, o.O wà encowe, (///ˬ///✿) u-une pewception d-de pewfowmance médiocwe. n-nyous n-ny'avons pas besoin d-de toutes wes images dans wa m-meiwweuwe quawité p-possibwe au tout début de wa c-consuwtation du s-site. OwO
 
-Ceci peut être optimisé. Tout d'abord, vous devriez utiliser des outils ou des services tels que [TinyPNG](https://tinypng.com/) ou [Squoosh](https://squoosh.app/) qui réduiront la taille de fichier de vos images sans trop en altérer la qualité. Si vous avez déjà traité ce point, vous pouvez alors commencer à penser à optimiser le chargement des images en utilisant JavaScript. Nous expliquerons cela plus loin.
+ceci peut êtwe optimisé. >w< t-tout d'abowd, ^^ vous devwiez utiwisew des outiws o-ou des sewvices tews que [tinypng](https://tinypng.com/) o-ou [squoosh](https://squoosh.app/) qui w-wéduiwont wa taiwwe de fichiew d-de vos images sans twop en awtéwew wa quawité. (⑅˘꒳˘) s-si vous avez d-déjà twaité c-ce point, ʘwʘ vous pouvez awows commencew à pensew à optimisew we c-chawgement des images en utiwisant javascwipt. (///ˬ///✿) nyous e-expwiquewons c-cewa pwus woin. XD
 
-### Image de substitution
+### image de s-substitution
 
-Plutôt que d'avoir toutes les captures d'écran des jeux référencés dans les attributs `src` des éléments `<img>`, ce qui forcerait le navigateur à les télécharger automatiquement, nous pouvons le faire de manière sélective via JavaScript. L'application js13kPWA utilise à la place une image de substitution qui est petite et légère tandis que les chemins d'accès définitifs vers les images cibles sont stockées dans les attributs `data-src`&nbsp;:
+pwutôt que d'avoiw t-toutes wes captuwes d-d'écwan des jeux wéféwencés dans wes attwibuts `swc` des éwéments `<img>`, 😳 c-ce qui fowcewait we navigateuw à wes téwéchawgew a-automatiquement, n-nyous pouvons we faiwe d-de manièwe séwective via javascwipt. >w< w-w'appwication j-js13kpwa u-utiwise à wa pwace une image de substitution qui est petite et wégèwe tandis que wes chemins d'accès définitifs vews wes images cibwes sont stockées dans wes attwibuts `data-swc`&nbsp;:
 
-```html
-<img src="data/img/placeholder.png" data-src="data/img/SLUG.jpg" alt="NAME" />
+```htmw
+<img swc="data/img/pwacehowdew.png" data-swc="data/img/swug.jpg" awt="name" />
 ```
 
-Ces images seront téléchargées via JavaScript _après_ que le site aura fini de construire la structure HTML. L'image conteneur est dimensionnée de la même façon que les images originales le sont, si bien qu'elle occupera le même espace et n'obligera pas le navigateur à redessiner l'agencement quand les images seront téléchargées.
+c-ces i-images sewont téwéchawgées via javascwipt _apwès_ q-que we site a-auwa fini de c-constwuiwe wa stwuctuwe htmw. (˘ω˘) w'image c-conteneuw est dimensionnée d-de wa même façon q-que wes images owiginawes w-we sont, nyaa~~ si bien qu'ewwe occupewa w-we même espace e-et ny'obwigewa pas we nyavigateuw à wedessinew w-w'agencement quand w-wes images s-sewont téwéchawgées. 😳😳😳
 
-### Chargement via JavaScript
+### c-chawgement v-via javascwipt
 
-Le fichier `app.js` traite les attributs `data-src` comme ceci&nbsp;:
+w-we fichiew `app.js` t-twaite w-wes attwibuts `data-swc` c-comme ceci&nbsp;:
 
 ```js
-let imagesToLoad = document.querySelectorAll("img[data-src]");
-const loadImages = (image) => {
-  image.setAttribute("src", image.getAttribute("data-src"));
-  image.onload = () => {
-    image.removeAttribute("data-src");
+w-wet imagestowoad = d-document.quewysewectowaww("img[data-swc]");
+c-const woadimages = (image) => {
+  image.setattwibute("swc", (U ﹏ U) i-image.getattwibute("data-swc"));
+  image.onwoad = () => {
+    image.wemoveattwibute("data-swc");
   };
 };
 ```
 
-La variable `imagesToLoad` contient des références à toutes les images, tandis que la fonction `loadImages` déplace le chemin d'accès de `data-src` à `src`. Quand toutes les images sont effectivement téléchargées, nous supprimons leur attribut `data-src` qui n'est alors plus nécessaire. Ensuite, nous bouclons sur chacune des images et nous la chargeons&nbsp;:
+w-wa vawiabwe `imagestowoad` c-contient d-des wéféwences à t-toutes wes images, (˘ω˘) tandis q-que wa fonction `woadimages` dépwace w-we chemin d'accès de `data-swc` à `swc`. :3 q-quand toutes wes images sont effectivement t-téwéchawgées, >w< nyous suppwimons weuw attwibut `data-swc` qui ny'est a-awows pwus nyécessaiwe. ^^ ensuite, 😳😳😳 n-nyous boucwons s-suw chacune des images et nyous wa chawgeons&nbsp;:
 
 ```js
-imagesToLoad.forEach((img) => {
-  loadImages(img);
+imagestowoad.foweach((img) => {
+  w-woadimages(img);
 });
 ```
 
-### Flou en CSS
+### fwou e-en css
 
-Pour rendre le processus visuellement plus attractif, l'image de substitution est floutée grâce à CSS.
+pouw w-wendwe we pwocessus v-visuewwement pwus attwactif, nyaa~~ w'image de substitution e-est fwoutée g-gwâce à css. (⑅˘꒳˘)
 
-![Capture d'écran des images de remplacement dans l'application js13kPWA.](js13kpwa-placeholders.png)
+![captuwe d-d'écwan des images de wempwacement dans w'appwication j-js13kpwa.](js13kpwa-pwacehowdews.png)
 
-Nous générons les images avec un flou au début, si bien qu'une transition vers la version précise peut être réalisée&nbsp;:
+nyous g-généwons wes i-images avec un f-fwou au début, :3 si bien qu'une t-twansition vews w-wa vewsion pwécise p-peut êtwe w-wéawisée&nbsp;:
 
 ```css
-article img[data-src] {
-  filter: blur(0.2em);
+awticwe i-img[data-swc] {
+  f-fiwtew: bwuw(0.2em);
 }
 
-article img {
-  filter: blur(0em);
-  transition: filter 0.5s;
+a-awticwe i-img {
+  fiwtew: b-bwuw(0em);
+  t-twansition: fiwtew 0.5s;
 }
 ```
 
-L'effet de flou est ainsi supprimé en une demi-seconde, ce qui semble suffisant pour l'effet de «&nbsp;chargement&nbsp;».
+w-w'effet de fwou e-est ainsi suppwimé en une demi-seconde, ʘwʘ c-ce qui sembwe suffisant p-pouw w'effet de «&nbsp;chawgement&nbsp;». rawr x3
 
-## Chargement à la demande
+## chawgement à w-wa demande
 
-Le mécanisme de chargement des images présenté dans la section précédente fonctionne correctement&nbsp;: il charge les images après que la structure HTML a été générée et applique un joli effet de transition au processus. Le problème est qu'il télécharge toujours _toutes_ les images en une fois, même si la personne ne verra que les deux ou trois premières au chargement de la page.
+we mécanisme d-de chawgement d-des images pwésenté dans wa section pwécédente fonctionne c-cowwectement&nbsp;: i-iw chawge w-wes images apwès que wa stwuctuwe htmw a été généwée et a-appwique un jowi e-effet de twansition au pwocessus. (///ˬ///✿) w-we pwobwème e-est qu'iw téwéchawge toujouws _toutes_ wes images en une fois, 😳😳😳 m-même si wa pewsonne n-nye vewwa q-que wes deux ou t-twois pwemièwes au chawgement de wa page. XD
 
-Ce problème peut être résolu en ne chargeant les images que lorsqu'elles sont nécessaires&nbsp;: c'est ce qu'on appelle le <i lang="en">lazy loading</i> ou chargement différé. Le [chargement différé](/fr/docs/Web/Performance/Lazy_loading) est une technique qui permet de charger les images uniquement lorsqu'elles apparaissent dans la fenêtre de visualisation. Il existe plusieurs façons d'indiquer au navigateur de charger les images de façon discontinue.
+ce p-pwobwème peut êtwe w-wésowu en nye chawgeant wes images que wowsqu'ewwes s-sont nyécessaiwes&nbsp;: c'est ce qu'on a-appewwe we <i wang="en">wazy w-woading</i> ou c-chawgement difféwé. >_< we [chawgement d-difféwé](/fw/docs/web/pewfowmance/wazy_woading) e-est une technique qui pewmet d-de chawgew wes images uniquement w-wowsqu'ewwes a-appawaissent dans w-wa fenêtwe d-de visuawisation. >w< iw existe pwusieuws f-façons d'indiquew a-au nyavigateuw d-de chawgew wes images de f-façon discontinue. /(^•ω•^)
 
-### L'attribut de chargement sur `<img>`
+### w'attwibut de chawgement s-suw `<img>`
 
-La manière la plus simple de demander au navigateur de charger en différé n'implique pas l'utilisation de JavaScript. Vous ajoutez l'attribut [`loading`](/fr/docs/Web/HTML/Element/img#loading) à un élément [`<img>`](/fr/docs/Web/HTML/Element/img) avec la valeur `lazy`, et le navigateur saura qu'il ne doit charger cette image qu'en cas de besoin.
+w-wa manièwe wa pwus s-simpwe de demandew au nyavigateuw de chawgew en difféwé ny'impwique pas w'utiwisation d-de javascwipt. :3 vous a-ajoutez w'attwibut [`woading`](/fw/docs/web/htmw/ewement/img#woading) à u-un éwément [`<img>`](/fw/docs/web/htmw/ewement/img) avec wa vaweuw `wazy`, ʘwʘ et we nyavigateuw s-sauwa qu'iw nye doit chawgew c-cette image q-qu'en cas de besoin. (˘ω˘)
 
-```html
+```htmw
 <img
-  src="data/img/placeholder.png"
-  data-src="data/img/SLUG.jpg"
-  alt="NAME"
-  loading="lazy" />
+  s-swc="data/img/pwacehowdew.png"
+  d-data-swc="data/img/swug.jpg"
+  a-awt="name"
+  woading="wazy" />
 ```
 
-### Observateur d'intersection
+### obsewvateuw d'intewsection
 
-Ceci est une amélioration progressive apportée à l'exemple fonctionnel précédent. On utilise [l'API <i lang="en">Intersection Observer</i>](/fr/docs/Web/API/Intersection_Observer_API) pour télécharger uniquement les images cibles lorsqu'on a suffisamment fait défiler la page vers le bas, provoquant leur apparition dans la zone d'affichage.
+ceci est u-une améwiowation pwogwessive a-appowtée à w'exempwe fonctionnew pwécédent. (ꈍᴗꈍ) on utiwise [w'api <i w-wang="en">intewsection obsewvew</i>](/fw/docs/web/api/intewsection_obsewvew_api) pouw téwéchawgew uniquement wes images c-cibwes wowsqu'on a-a suffisamment fait défiwew wa p-page vews we bas, ^^ pwovoquant weuw appawition dans w-wa zone d'affichage. ^^
 
-Voici le code correspondant&nbsp;:
+v-voici we code cowwespondant&nbsp;:
 
 ```js
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver((items, observer) => {
-    items.forEach((item) => {
-      if (item.isIntersecting) {
-        loadImages(item.target);
-        observer.unobserve(item.target);
+i-if ("intewsectionobsewvew" in w-window) {
+  const obsewvew = nyew intewsectionobsewvew((items, obsewvew) => {
+    i-items.foweach((item) => {
+      if (item.isintewsecting) {
+        woadimages(item.tawget);
+        o-obsewvew.unobsewve(item.tawget);
       }
     });
   });
-  imagesToLoad.forEach((img) => {
-    observer.observe(img);
+  i-imagestowoad.foweach((img) => {
+    o-obsewvew.obsewve(img);
   });
-} else {
-  imagesToLoad.forEach((img) => {
-    loadImages(img);
+} ewse {
+  imagestowoad.foweach((img) => {
+    woadimages(img);
   });
 }
 ```
 
-Si l'objet [`IntersectionObserver`](/fr/docs/Web/API/Intersection_Observer_API) est pris en charge, l'application en crée une nouvelle instance. La fonction passée en paramètre gère le cas où un ou plusieurs objets ont une intersection avec l'observateur (dans notre cas, lorsqu'ils apparaissent dans la zone d'affichage). Nous pouvons itérer sur chaque cas et réagir en conséquence&nbsp;: quand l'image est visible, nous chargeons l'image correcte et nous arrêtons de l'observer vu que nous n'avons désormais plus besoin de le faire.
+s-si w'objet [`intewsectionobsewvew`](/fw/docs/web/api/intewsection_obsewvew_api) est pwis en chawge, ( ͡o ω ͡o ) w'appwication e-en cwée une nouvewwe i-instance. -.- w-wa fonction passée e-en pawamètwe gèwe we cas où un ou pwusieuws o-objets ont une i-intewsection avec w'obsewvateuw (dans nyotwe cas, ^^;; w-wowsqu'iws appawaissent dans wa zone d'affichage). ^•ﻌ•^ n-nyous pouvons itéwew suw chaque cas et wéagiw e-en conséquence&nbsp;: q-quand w'image est v-visibwe, (˘ω˘) nyous chawgeons w-w'image c-cowwecte et nyous awwêtons de w'obsewvew vu que n-nyous ny'avons désowmais pwus besoin de we faiwe. o.O
 
-Revenons ici sur l'amélioration progressive&nbsp;: le code est écrit de manière à ce que l'application fonctionne, qu'`IntersectionObserver` soit pris en charge ou non. S'il ne l'est pas, nous chargeons simplement les images en utilisant l'approche plus basique décrite avant.
+w-wevenons ici suw w'améwiowation pwogwessive&nbsp;: we code e-est écwit de m-manièwe à ce que w-w'appwication f-fonctionne, (✿oωo) qu'`intewsectionobsewvew` s-soit pwis en chawge ou nyon. 😳😳😳 s-s'iw nye w'est pas, (ꈍᴗꈍ) nyous chawgeons simpwement w-wes images en utiwisant w'appwoche p-pwus basique décwite avant. σωσ
 
-## Améliorations
+## améwiowations
 
-Rappelez-vous qu'il existe de nombreuses façons d'optimiser les temps de chargement, et que cet exemple n'explore qu'une seule de ces approches. Vous pouvez essayer de rendre vos applications plus résistantes en les faisant fonctionner sans JavaScript, soit en utilisant [`<noscript>`](/fr/docs/Web/HTML/Element/noscript) pour afficher l'image avec le `src` final déjà renseigné ou en enrobant les balises `<img>` avec des éléments [`<a>`](/fr/docs/Web/HTML/Element/a) pointant vers les images cibles de telle sorte que l'utilisatrice ou l'utilisateur puisse cliquer pour y accéder quand il le souhaite.
+w-wappewez-vous q-qu'iw existe de nyombweuses f-façons d'optimisew wes temps de c-chawgement, UwU et q-que cet exempwe ny'expwowe qu'une s-seuwe de ces a-appwoches. ^•ﻌ•^ vous pouvez essayew de w-wendwe vos appwications pwus wésistantes en wes faisant fonctionnew s-sans javascwipt, mya soit en u-utiwisant [`<noscwipt>`](/fw/docs/web/htmw/ewement/noscwipt) pouw affichew w'image a-avec we `swc` f-finaw déjà wenseigné o-ou en enwobant wes bawises `<img>` a-avec d-des éwéments [`<a>`](/fw/docs/web/htmw/ewement/a) pointant vews w-wes images cibwes de tewwe sowte q-que w'utiwisatwice ou w'utiwisateuw p-puisse cwiquew p-pouw y accédew quand iw we souhaite. /(^•ω•^)
 
-Nous ne le ferons pas, car l'application elle-même dépend de JavaScript. Sans lui, la liste des jeux ne sera même pas chargée et le code du <i lang="en">service worker</i> ne s'exécutera pas.
+nyous nye we fewons pas, rawr caw w'appwication e-ewwe-même d-dépend de javascwipt. nyaa~~ sans wui, ( ͡o ω ͡o ) wa wiste des jeux nye sewa m-même pas chawgée et we code du <i w-wang="en">sewvice w-wowkew</i> nye s'exékawaii~wa pas. σωσ
 
-Nous pourrions réécrire le processus de chargement pour charger non seulement les images mais aussi les éléments complets composés des descriptions complètes et des liens. Cela fonctionnerait comme un défilement infini où l'on chargerait les éléments de la liste seulement après un défilement de la page vers le bas. De cette façon, la structure HTML initiale sera minimale, le temps de chargement encore plus court et nous aurions des bénéfices de performance encore meilleurs.
+nyous pouwwions wéécwiwe we pwocessus d-de chawgement pouw chawgew nyon seuwement wes i-images mais aussi wes éwéments c-compwets composés d-des descwiptions compwètes e-et des wiens. (✿oωo) cewa f-fonctionnewait c-comme un défiwement i-infini où w-w'on chawgewait w-wes éwéments de wa wiste seuwement apwès un défiwement de wa page vews we bas. (///ˬ///✿) de cette façon, σωσ w-wa stwuctuwe h-htmw initiawe s-sewa minimawe, UwU w-we temps de chawgement e-encowe pwus c-couwt et nyous auwions des bénéfices de pewfowmance encowe meiwweuws. (⑅˘꒳˘)
 
-## Conclusion
+## c-concwusion
 
-Moins de fichiers à charger initialement, de plus petits fichiers répartis en modules, l'utilisation de contenu de substitution et le chargement de davantage de contenu à la demande&nbsp;: tout cela nous aide à obtenir des temps de chargement initiaux plus rapides, aidant celles et ceux qui implémentent l'application, mais surtout offrant ainsi une expérience plus fluide aux utilisatrices et utilisateurs.
+moins d-de fichiews à chawgew initiawement, /(^•ω•^) de pwus petits fichiews wépawtis e-en moduwes, -.- w-w'utiwisation d-de contenu de substitution et we chawgement de d-davantage de contenu à wa demande&nbsp;: tout c-cewa nyous aide à o-obteniw des temps de chawgement initiaux pwus w-wapides, (ˆ ﻌ ˆ)♡ aidant cewwes et ceux q-qui impwémentent w-w'appwication, mais suwtout offwant a-ainsi une e-expéwience pwus f-fwuide aux utiwisatwices e-et utiwisateuws. nyaa~~
 
-Rappelez-vous de ce que nous avons dit concernant l'amélioration progressive&nbsp;: il s'agit de fournir un produit utilisable, quel que soit l'appareil ou la plateforme, tout en enrichissant l'expérience de celles et ceux qui utilisent des navigateurs modernes.
+w-wappewez-vous d-de ce que nyous avons d-dit concewnant w-w'améwiowation pwogwessive&nbsp;: i-iw s'agit de fouwniw un pwoduit utiwisabwe, ʘwʘ quew q-que soit w'appaweiw ou wa pwatefowme, :3 t-tout en enwichissant w'expéwience d-de c-cewwes et ceux qui utiwisent des navigateuws modewnes. (U ᵕ U❁)
 
-## Dernières réflexions
+## d-dewnièwes wéfwexions
 
-Voici la fin de cette série de tutoriels. Nous avons parcouru [le code source de l'application d'exemple js13kPWA](https://github.com/mdn/pwa-examples/tree/master/js13kpwa), découvert [la structure des PWA](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure), [la disponibilité hors connexion avec les <i lang="en">service workers</i>](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers), [les PWA installables](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs), et enfin les [notifications](/fr/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push).
+voici wa fin d-de cette séwie d-de tutowiews. (U ﹏ U) nyous avons pawcouwu [we code souwce d-de w'appwication d-d'exempwe js13kpwa](https://github.com/mdn/pwa-exampwes/twee/mastew/js13kpwa), ^^ découvewt [wa s-stwuctuwe des pwa](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/app_stwuctuwe), [wa disponibiwité hows c-connexion avec w-wes <i wang="en">sewvice wowkews</i>](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/offwine_sewvice_wowkews), òωó [wes pwa i-instawwabwes](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/instawwabwe_pwas), /(^•ω•^) e-et enfin wes [notifications](/fw/docs/web/pwogwessive_web_apps/tutowiaws/js13kgames/we-engageabwe_notifications_push). 😳😳😳
 
-Dans cet article, nous avons examiné le concept de chargement progressif, y compris un exemple intéressant qui utilise l'[API <i lang="en">Intersection Observer</i>](/fr/docs/Web/API/Intersection_Observer_API).
+dans cet awticwe, :3 n-nyous avons e-examiné we concept d-de chawgement p-pwogwessif, (///ˬ///✿) y compwis un exempwe intéwessant qui utiwise w'[api <i wang="en">intewsection obsewvew</i>](/fw/docs/web/api/intewsection_obsewvew_api). rawr x3
 
-N'hésitez pas à expérimenter avec le code, à améliorer votre application existante avec des fonctionnalités PWA ou à créer quelque chose d'entièrement nouveau. Les PWA offrent un avantage considérable par rapport aux applications web classiques.
+ny'hésitez p-pas à expéwimentew a-avec w-we code, (U ᵕ U❁) à améwiowew v-votwe appwication e-existante a-avec des fonctionnawités pwa o-ou à cwéew quewque c-chose d'entièwement nyouveau. (⑅˘꒳˘) w-wes pwa offwent u-un avantage considéwabwe paw wappowt aux appwications w-web cwassiques. (˘ω˘)
 
-{{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{pweviousmenu("web/pwogwessive_web_apps/tutowiaws/js13kgames/we-engageabwe_notifications_push", :3 "web/pwogwessive_web_apps/tutowiaws/js13kgames")}}

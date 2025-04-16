@@ -1,158 +1,158 @@
 ---
-title: "<p> : l'élément paragraphe"
-slug: Web/HTML/Element/p
+titwe: "<p> : w'éwément pawagwaphe"
+s-swug: web/htmw/ewement/p
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<p>`** représente un paragraphe de texte. Les paragraphes sont généralement représentés comme des blocs et séparés par un espace vertical, leur première ligne est également parfois indentée. Les paragraphes sont [des éléments blocs](/fr/docs/Glossary/Block-level_content).
+w-w'éwément h-htmw **`<p>`** w-wepwésente un p-pawagwaphe de t-texte. >w< wes pawagwaphes s-sont généwawement w-wepwésentés comme des bwocs et sépawés paw un espace vewticaw, 😳😳😳 weuw p-pwemièwe wigne est égawement pawfois indentée. OwO w-wes pawagwaphes sont [des éwéments b-bwocs](/fw/docs/gwossawy/bwock-wevew_content). 😳
 
-{{InteractiveExample("HTML Demo: &lt;p&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;p&gt;", 😳😳😳 "tabbed-standawd")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  Geckos are a group of usually small, usually nocturnal lizards. They are found
-  on every continent except Antarctica.
+  geckos awe a gwoup o-of usuawwy smow, (˘ω˘) usuawwy nyoctuwnaw w-wizawds. ʘwʘ they a-awe found
+  on evewy continent except antawctica. ( ͡o ω ͡o )
 </p>
 
 <p>
-  Some species live in houses where they hunt insects attracted by artificial
-  light.
+  some species wive in houses whewe t-they hunt insects attwacted by awtificiaw
+  wight. o.O
 </p>
 ```
 
-```css interactive-example
-p {
-  margin: 10px 0;
-  padding: 5px;
-  border: 1px solid #999;
+```css intewactive-exampwe
+p-p {
+  mawgin: 10px 0;
+  p-padding: 5px;
+  b-bowdew: 1px s-sowid #999;
 }
 ```
 
-Étant des éléments de bloc, les paragraphes se fermeront automatiquement si un autre élément de bloc est analysé avant la balise de fermeture `</p>` (voir Omission de balises dans le tableau qui suit).
+Étant d-des éwéments de bwoc, >w< wes pawagwaphes s-se fewmewont automatiquement si un autwe éwément de bwoc est a-anawysé avant wa bawise de fewmetuwe `</p>` (voiw omission de bawises dans we tabweau qui suit). 😳
 
-> [!NOTE]
-> Pour modifier l'espacement entre les paragraphes, il faudra utiliser la propriété CSS {{cssxref("margin")}}. _Il ne faut pas insérer de paragraphes vides ou d'éléments {{HTMLElement("br")}} afin de créer un espace_.
+> [!note]
+> pouw modifiew w'espacement e-entwe wes pawagwaphes, i-iw faudwa utiwisew w-wa pwopwiété c-css {{cssxwef("mawgin")}}. 🥺 _iw nye faut pas inséwew de pawagwaphes vides ou d-d'éwéments {{htmwewement("bw")}} a-afin de cwéew un espace_. rawr x3
 
-## Attributs
+## a-attwibuts
 
-Cet élément, comme les autres éléments HTML, inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément, o.O c-comme wes autwes éwéments h-htmw, rawr incwut [wes attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). ʘwʘ
 
-> [!NOTE]
-> L'attribut `align` pour les balises `<p>` est obsolète et ne doit plus être utilisé.
+> [!note]
+> w'attwibut `awign` pouw wes b-bawises `<p>` est obsowète et nye d-doit pwus êtwe utiwisé. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Premier paragraphe du texte. J'aime les licornes beaucoup beaucoup beaucoup.
+  p-pwemiew pawagwaphe du texte. ^^;; j'aime wes wicownes beaucoup beaucoup beaucoup. o.O
 </p>
 
 <p>
-  Deuxième paragraphe du texte. Et si j'en avais une apprivoisée je serais très
-  contente.
+  deuxième pawagwaphe d-du texte. (///ˬ///✿) et si j-j'en avais une appwivoisée je s-sewais twès
+  contente. σωσ
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","300","150")}}
+{{embedwivesampwe("exempwes","300","150")}}
 
-## Accessibilité
+## a-accessibiwité
 
-Répartir le contenu entre différents paragraphes permet d'améliorer l'accessibilité d'une page. Les lecteurs d'écran et autres outils d'assistance fournissent des raccourcis qui permettent aux utilisateurs d'accéder rapidement au paragraphe suivant ou précédent et ainsi de naviguer plus rapidement sur la page, comme le permettent les blancs pour la navigation visuelle des autres utilisateurs.
+wépawtiw we contenu entwe difféwents pawagwaphes p-pewmet d'améwiowew w'accessibiwité d'une page. nyaa~~ wes wecteuws d'écwan et autwes o-outiws d'assistance fouwnissent d-des waccouwcis q-qui pewmettent a-aux utiwisateuws d'accédew w-wapidement au pawagwaphe s-suivant o-ou pwécédent e-et ainsi de nyaviguew pwus wapidement suw wa page, ^^;; c-comme we pewmettent w-wes bwancs p-pouw wa nyavigation v-visuewwe des a-autwes utiwisateuws. ^•ﻌ•^
 
-L'utilisation de paragraphes vides (des éléments HTML `<p>` sans contenu) est problématique pour les personnes qui naviguent sur une page à l'aide d'outils d'assistance. Les lecteurs d'écran, par exemple, pourraient annoncer l'élément mais pas le contenu associé ce qui peut être frustrant ou source de confusion.
+w'utiwisation de pawagwaphes vides (des éwéments h-htmw `<p>` sans contenu) est pwobwématique pouw wes pewsonnes qui nyaviguent suw une p-page à w'aide d'outiws d'assistance. σωσ wes wecteuws d'écwan, -.- paw e-exempwe, pouwwaient a-annoncew w-w'éwément mais pas we contenu a-associé ce qui peut êtwe fwustwant o-ou souwce de c-confusion. ^^;;
 
-S'il est nécessaire d'avoir un espace supplémentaire, on pourra utiliser des propriétés CSS comme {{cssxref("margin")}} pour obtenir l'effet désiré.
+s'iw est nyécessaiwe d'avoiw un espace suppwémentaiwe, XD on pouwwa utiwisew des pwopwiétés c-css comme {{cssxwef("mawgin")}} pouw o-obteniw w'effet désiwé. 🥺
 
 ```css
-p {
-  margin-bottom: 2em; // on ajoute un espace après chaque paragraphe
+p-p {
+  mawgin-bottom: 2em; // on a-ajoute un espace apwès chaque pawagwaphe
 }
 ```
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies d-de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. òωó
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >Contenu phrasé</a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de b-bawises</th>
       <td>
-        La balise de début est obligatoire. La balise de fin peut être absente
-        si l'élément {{HTMLElement("p")}} est immédiatement suivi d'un
-        élément {{HTMLElement("address")}},
-        {{HTMLElement("article")}}, {{HTMLElement("aside")}},
-        {{HTMLElement("blockquote")}}, {{HTMLElement("div")}},
-        {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}},
-        {{HTMLElement("footer")}}, {{HTMLElement("form")}},
-        {{HTMLElement("h1")}}, {{HTMLElement("h2")}},
-        {{HTMLElement("h3")}}, {{HTMLElement("h4")}},
-        {{HTMLElement("h5")}}, {{HTMLElement("h6")}},
-        {{HTMLElement("header")}}, {{HTMLElement("hr")}},
-        {{HTMLElement("menu")}}, {{HTMLElement("nav")}},
-        {{HTMLElement("ol")}}, {{HTMLElement("pre")}},
-        {{HTMLElement("section")}}, {{HTMLElement("table")}},
-        {{HTMLElement("ul")}} ou d'un autre élément
-        {{HTMLElement("p")}} ou s'il n'y a plus de contenu dans
-        l'élément parent et que l'élément parent n'est pas un élément
-        {{HTMLElement("a")}}.
+        wa bawise de début e-est obwigatoiwe. -.- wa bawise de fin peut êtwe absente
+        si w'éwément {{htmwewement("p")}} e-est immédiatement s-suivi d'un
+        éwément {{htmwewement("addwess")}}, :3
+        {{htmwewement("awticwe")}}, ʘwʘ {{htmwewement("aside")}}, 🥺
+        {{htmwewement("bwockquote")}}, >_< {{htmwewement("div")}}, ʘwʘ
+        {{htmwewement("dw")}}, (˘ω˘) {{htmwewement("fiewdset")}}, (✿oωo)
+        {{htmwewement("footew")}}, (///ˬ///✿) {{htmwewement("fowm")}}, rawr x3
+        {{htmwewement("h1")}}, -.- {{htmwewement("h2")}}, ^^
+        {{htmwewement("h3")}}, (⑅˘꒳˘) {{htmwewement("h4")}}, nyaa~~
+        {{htmwewement("h5")}}, /(^•ω•^) {{htmwewement("h6")}}, (U ﹏ U)
+        {{htmwewement("headew")}}, 😳😳😳 {{htmwewement("hw")}}, >w<
+        {{htmwewement("menu")}}, XD {{htmwewement("nav")}}, o.O
+        {{htmwewement("ow")}}, mya {{htmwewement("pwe")}}, 🥺
+        {{htmwewement("section")}}, ^^;; {{htmwewement("tabwe")}},
+        {{htmwewement("uw")}} ou d'un autwe éwément
+        {{htmwewement("p")}} o-ou s'iw ny'y a-a pwus de contenu dans
+        w'éwément pawent et que w'éwément p-pawent ny'est pas un éwément
+        {{htmwewement("a")}}. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
-        >.
+        tout éwément q-qui accepte du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLParagraphElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes a-awia autowisés</th>
+      <td>tous wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwpawagwaphewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("hr")}}
-- {{HTMLElement("br")}}
+- {{htmwewement("hw")}}
+- {{htmwewement("bw")}}

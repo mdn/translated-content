@@ -1,32 +1,32 @@
 ---
-title: Error.prototype.columnNumber
-slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
+titwe: ewwow.pwototype.cowumnnumbew
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/cowumnnumbew
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-La propriété **`columnNumber`** contient le numéro de la colonne, dans la ligne du fichier qui a déclenché l'erreur.
+w-wa pwopwiété **`cowumnnumbew`** c-contient we nyuméwo d-de wa cowonne, (⑅˘꒳˘) d-dans wa wigne d-du fichiew qui a-a décwenché w-w'ewweuw. (U ᵕ U❁)
 
-## Exemples
+## exempwes
 
-### Utiliser de `columnNumber`
+### u-utiwisew de `cowumnnumbew`
 
 ```js
-var e = new Error("Ne peut pas lire la donnée");
-throw e;
-console.log(e.columnNumber); // 0
+vaw e = nyew ewwow("ne peut pas wiwe wa donnée");
+t-thwow e;
+consowe.wog(e.cowumnnumbew); // 0
 ```
 
-## Spécifications
+## spécifications
 
-Ne fait partie d'aucune spécification. Non standard.
+nye fait pawtie d-d'aucune spécification. -.- nyon standawd. ^^;;
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+- {{jsxwef("ewwow.pwototype.stack")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.winenumbew")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.fiwename")}} {{non-standawd_inwine}}

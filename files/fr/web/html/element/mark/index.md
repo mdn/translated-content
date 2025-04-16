@@ -1,177 +1,177 @@
 ---
-title: "<mark> : l'élément de marquage du texte"
-slug: Web/HTML/Element/mark
+titwe: "<mawk> : w'éwément d-de mawquage du texte"
+s-swug: web/htmw/ewement/mawk
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<mark>`** représente un texte marqué ou surligné à cause de sa pertinence dans le contexte. Il peut par exemple être utilisé afin d'indiquer les correspondances d'un mot-clé recherché au sein d'un document.
+w-w'éwément h-htmw **`<mawk>`** w-wepwésente u-un texte mawqué o-ou suwwigné à c-cause de sa pewtinence dans we contexte. ʘwʘ iw peut paw exempwe êtwe utiwisé afin d-d'indiquew wes cowwespondances d'un mot-cwé w-wechewché au sein d'un document. 🥺
 
-{{InteractiveExample("HTML Demo: &lt;mark&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;mawk&gt;", >_< "tabbed-showtew")}}
 
-```html interactive-example
-<p>Search results for "salamander":</p>
+```htmw i-intewactive-exampwe
+<p>seawch wesuwts fow "sawamandew":</p>
 
-<hr />
+<hw />
 
 <p>
-  Several species of <mark>salamander</mark> inhabit the temperate rainforest of
-  the Pacific Northwest.
+  sevewaw species of <mawk>sawamandew</mawk> i-inhabit the tempewate wainfowest o-of
+  the p-pacific nyowthwest. ʘwʘ
 </p>
 
 <p>
-  Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and
-  other small creatures.
+  most <mawk>sawamandew</mawk>s awe nyoctuwnaw, (˘ω˘) and hunt fow insects, (✿oωo) wowms, and
+  o-othew smow cweatuwes. (///ˬ///✿)
 </p>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
-mark {
+```css intewactive-exampwe
+/* stywewint-disabwe-next-wine bwock-no-empty */
+mawk {
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément incwut uniquement [wes attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). rawr x3
 
-## Notes d'utilisation
+## nyotes d-d'utiwisation
 
-- Au sein d'une citation ({{HTMLElement("q")}}) ou dans un autre bloc ({{HTMLElement("blockquote")}}), le texte surligné marque généralement du texte référencé en dehors de la citation ou qui est indiqué pour demander une attention particulière bien que l'auteur ne considère pas ce texte comme important.
-- Au sein du texte principal, le texte surligné marque du texte d'une pertinence partiulière pour l'utilisateur (par exemple lorsqu'il recherche un terme en particulier).
-- `<mark>` ne doit pas être utilisé pour de la coloration syntaxique, c'est l'élément {{HTMLElement("span")}} qui devra être utilisé.
-- `<mark>` ne doit pas être confondu avec {{HTMLElement("strong")}}. L'élément {{HTMLElement("strong")}} est utilisé afin d'indiquer des fragments de texte _importants_ alors que `<mark>` est utilisé afin d'indiquer des fragments de texte _pertinents_.
+- a-au sein d'une c-citation ({{htmwewement("q")}}) ou dans un autwe bwoc ({{htmwewement("bwockquote")}}), -.- w-we texte suwwigné mawque généwawement d-du texte wéféwencé en dehows de wa citation ou qui est indiqué pouw demandew une attention p-pawticuwièwe bien que w'auteuw n-nye considèwe p-pas ce texte c-comme impowtant. ^^
+- au sein du texte pwincipaw, (⑅˘꒳˘) we texte suwwigné m-mawque du texte d-d'une pewtinence pawtiuwièwe p-pouw w'utiwisateuw (paw e-exempwe wowsqu'iw wechewche u-un tewme en pawticuwiew). nyaa~~
+- `<mawk>` n-nye doit pas êtwe utiwisé pouw de wa c-cowowation syntaxique, /(^•ω•^) c'est w'éwément {{htmwewement("span")}} q-qui devwa êtwe utiwisé. (U ﹏ U)
+- `<mawk>` n-nye doit pas êtwe c-confondu avec {{htmwewement("stwong")}}. 😳😳😳 w'éwément {{htmwewement("stwong")}} est utiwisé afin d'indiquew des fwagments de texte _impowtants_ a-awows que `<mawk>` e-est utiwisé afin d'indiquew d-des fwagments d-de texte _pewtinents_. >w<
 
-## Exemples
+## e-exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  L'élément &lt;mark&gt; est utilisé pour
-  <mark>mettre en avant</mark>
-  du texte pertinent dans le contexte.
+  w'éwément &wt;mawk&gt; e-est utiwisé pouw
+  <mawk>mettwe en avant</mawk>
+  du texte pewtinent dans we contexte. XD
 </p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Exemple_simple","100%","100%")}}
+{{embedwivesampwe("exempwe_simpwe","100%","100%")}}
 
-### Identifier des passages
+### identifiew d-des passages
 
-Dans cet exemple, on utilise `<mark>` pour marquer les résultats d'une recherche dans un passage.
+d-dans cet exempwe, o.O o-on utiwise `<mawk>` pouw m-mawquew wes wésuwtats d-d'une wechewche d-dans un p-passage. mya
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  It is a dark time for the Rebellion. Although the Death Star has been
-  destroyed, <mark class="match">Imperial</mark> troops have driven the Rebel
-  forces from their hidden base and pursued them across the galaxy.
+  it is a dawk time fow the webewwion. 🥺 a-awthough t-the death staw h-has been
+  destwoyed, <mawk c-cwass="match">impewiaw</mawk> t-twoops have dwiven the webew
+  fowces fwom theiw hidden b-base and puwsued them acwoss the gawaxy. ^^;;
 </p>
 
 <p>
-  Evading the dreaded <mark class="match">Imperial</mark> Starfleet, a group of
-  freedom fighters led by Luke Skywalker has established a new secret base on
-  the remote ice world of Hoth.
+  evading the dweaded <mawk cwass="match">impewiaw</mawk> stawfweet, :3 a-a gwoup of
+  fweedom fightews wed by wuke skywawkew has e-estabwished a n-nyew secwet base o-on
+  the wemote ice wowwd of hoth. (U ﹏ U)
 </p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Identifier_des_passages", 650, 130)}}
+{{embedwivesampwe("identifiew_des_passages", OwO 650, 130)}}
 
-## Accessibilité
+## accessibiwité
 
-Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `mark`. On peut le rendre annonçable via la propriété CSS {{cssxref("content")}} et grâce aux pseudo-éléments {{cssxref("::before")}} et {{cssxref("::after")}}.
+p-paw défaut, 😳😳😳 w-wa pwupawt des outiws d'assistance ny'annoncent pas wa pwésence de w'éwément `mawk`. (ˆ ﻌ ˆ)♡ on peut we wendwe a-annonçabwe via wa pwopwiété c-css {{cssxwef("content")}} et gwâce a-aux pseudo-éwéments {{cssxwef("::befowe")}} e-et {{cssxwef("::aftew")}}. XD
 
 ```css
-mark::before,
-mark::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
+mawk::befowe, (ˆ ﻌ ˆ)♡
+mawk::aftew {
+  c-cwip-path: i-inset(100%);
+  cwip: wect(1px, ( ͡o ω ͡o ) 1px, 1px, rawr x3 1px);
+  h-height: 1px;
+  o-ovewfwow: hidden;
+  position: absowute;
+  white-space: nowwap;
   width: 1px;
 }
 
-mark::before {
-  content: " [Début du marquage]";
+m-mawk::befowe {
+  c-content: " [début d-du mawquage]";
 }
 
-mark::after {
-  content: " [Fin du marquage] ";
+mawk::aftew {
+  c-content: " [fin d-du mawquage] ";
 }
 ```
 
-Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été marqué.
+cewtaines p-pewsonnes qui utiwisent des wecteuws d'écwan désactivent sciemment ces a-annonces pouw évitew u-une vewbosité twop impowtante. nyaa~~ iw est donc i-impowtant de nye p-pas abusew de cette technique et de nye w'appwiquew qu'à des s-situations où iw est nyécessaiwe de compwendwe que du contenu a été mawqué. >_<
 
-- [_Short note on making your mark (more accessible) | The Paciello Group_ (en anglais)](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [_Tweaking Text Level Styles | Adrian Roselli_ (en anglais)](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [_showt n-nyote on making youw mawk (mowe accessibwe) | t-the paciewwo g-gwoup_ (en angwais)](https://devewopew.paciewwogwoup.com/bwog/2017/12/showt-note-on-making-youw-mawk-mowe-accessibwe/)
+- [_tweaking text wevew stywes | a-adwian wosewwi_ (en a-angwais)](https://adwianwosewwi.com/2017/12/tweaking-text-wevew-stywes.htmw)
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >, ^^;;
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >, (ˆ ﻌ ˆ)♡
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. ^^;;
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >Contenu phrasé</a
-        >.
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
+      <td>aucune, rawr x3 w-wa bawise d-d'ouvewtuwe et w-wa bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >du contenu phrasé</a
-        >.
+        tout éwément qui accepte
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >du c-contenu p-phwasé</a
+        >. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>tous w-wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

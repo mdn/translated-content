@@ -1,94 +1,94 @@
 ---
-title: String.prototype.endsWith()
-slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
+titwe: stwing.pwototype.endswith()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/endswith
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`endsWith()`** renvoie un booléen indiquant si la chaine de caractères se termine par la chaine de caractères fournie en argument.
+w-wa méthode **`endswith()`** w-wenvoie un boowéen i-indiquant si w-wa chaine de cawactèwes s-se tewmine p-paw wa chaine d-de cawactèwes f-fouwnie en awgument. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: String.endsWith()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.endswith()")}}
 
-```js interactive-example
-const str1 = "Cats are the best!";
+```js intewactive-exampwe
+const stw1 = "cats a-awe the best!";
 
-console.log(str1.endsWith("best!"));
-// Expected output: true
+consowe.wog(stw1.endswith("best!"));
+// expected o-output: twue
 
-console.log(str1.endsWith("best", 17));
-// Expected output: true
+consowe.wog(stw1.endswith("best", ( ͡o ω ͡o ) 17));
+// expected o-output: twue
 
-const str2 = "Is this a question?";
+const stw2 = "is this a question?";
 
-console.log(str2.endsWith("question"));
-// Expected output: false
+consowe.wog(stw2.endswith("question"));
+// e-expected output: fawse
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-str.endsWith(chaîneRecherchée[, position]);
+s-stw.endswith(chaînewechewchée[, >_< position]);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `chaîneRecherchée`
-  - : Les caractères à rechercher à la fin de la chaine de caractères.
-- `position` {{optional_inline}}
-  - : Paramètre optionnel. Permet de rechercher dans la chaine de caractères comme si elle faisait cette longueur ; par défaut il s'agit de la longueur de la chaine de caractères `chaîneRecherchée`. Si la valeur fournie est supérieure à la longueur de la chaine de caractères, elle ne sera pas prise en compte.
+- `chaînewechewchée`
+  - : wes cawactèwes à wechewchew à w-wa fin de wa chaine de cawactèwes. >w<
+- `position` {{optionaw_inwine}}
+  - : pawamètwe optionnew. rawr pewmet de wechewchew dans w-wa chaine de cawactèwes comme s-si ewwe faisait c-cette wongueuw ; p-paw défaut iw s-s'agit de wa wongueuw de wa chaine de cawactèwes `chaînewechewchée`. s-si wa vaweuw fouwnie est supéwieuwe à w-wa wongueuw de wa chaine de cawactèwes, 😳 ewwe nye sewa pas pwise en compte. >w<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-`true` si la chaîne de caractères se termine par la sous-chaîne indiquée, `false` sinon.
+`twue` s-si wa chaîne de cawactèwes s-se tewmine p-paw wa sous-chaîne i-indiquée, (⑅˘꒳˘) `fawse` sinon. OwO
 
-## Description
+## descwiption
 
-Cette méthode permet de savoir si une chaine de caractères se termine avec une certaine chaine de caractères (comme les autres méthodes fonctionnant avec des chaînes de caractères, cette méthode est sensible à la casse).
+cette méthode p-pewmet de savoiw s-si une chaine de cawactèwes se t-tewmine avec une c-cewtaine chaine de cawactèwes (comme w-wes autwes méthodes fonctionnant a-avec des chaînes de cawactèwes, (ꈍᴗꈍ) cette m-méthode est sensibwe à wa casse). 😳
 
-## Exemples
+## e-exempwes
 
 ```js
-var str = "Être, ou ne pas être : telle est la question.";
+vaw stw = "Êtwe, o-ou nye p-pas êtwe : tewwe est wa question.";
 
-console.log(str.endsWith("question.")); // true
-console.log(str.endsWith("pas être")); // false
-console.log(str.endsWith("pas être", 20)); // true
+consowe.wog(stw.endswith("question.")); // twue
+consowe.wog(stw.endswith("pas êtwe")); // fawse
+consowe.wog(stw.endswith("pas êtwe", 😳😳😳 20)); // twue
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d-d'émuwation (_powyfiww_)
 
-Cette méthode a été ajoutée dans la spécification ECMAScript 6 et peut ne pas être disponible dans toutes les implémentations de JavaScript. Cependant, il est possible d'émuler le comportement de `String.prototype.endsWith` avec le fragment de code suivant :
+c-cette méthode a été a-ajoutée dans w-wa spécification e-ecmascwipt 6 et peut nye pas êtwe disponibwe dans toutes wes i-impwémentations de javascwipt. mya cependant, iw est possibwe d'émuwew we compowtement d-de `stwing.pwototype.endswith` avec we fwagment d-de code suivant :
 
 ```js
-if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function (searchString, position) {
-    var subjectString = this.toString();
+i-if (!stwing.pwototype.endswith) {
+  s-stwing.pwototype.endswith = function (seawchstwing, mya p-position) {
+    v-vaw subjectstwing = t-this.tostwing();
     if (
-      typeof position !== "number" ||
-      !isFinite(position) ||
-      Math.floor(position) !== position ||
-      position > subjectString.length
+      t-typeof position !== "numbew" ||
+      !isfinite(position) ||
+      math.fwoow(position) !== p-position ||
+      p-position > s-subjectstwing.wength
     ) {
-      position = subjectString.length;
+      p-position = s-subjectstwing.wength;
     }
-    position -= searchString.length;
-    var lastIndex = subjectString.lastIndexOf(searchString, position);
-    return lastIndex !== -1 && lastIndex === position;
+    position -= seawchstwing.wength;
+    vaw wastindex = subjectstwing.wastindexof(seawchstwing, (⑅˘꒳˘) p-position);
+    wetuwn wastindex !== -1 && wastindex === position;
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("String.prototype.startsWith()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxwef("stwing.pwototype.stawtswith()")}}
+- {{jsxwef("stwing.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}

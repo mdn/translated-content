@@ -1,118 +1,118 @@
 ---
-title: <wbr>
-slug: Web/HTML/Element/wbr
+titwe: <wbw>
+swug: web/htmw/ewement/wbw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<wbr>`** permet de représenter un emplacement où casser la ligne si nécessaire. Le navigateur pourra alors utiliser cet emplacement pour effectuer un saut de ligne si le texte est trop long et qu'en temps normal, une règle empêche le saut de ligne.
+w-w'éwément htmw **`<wbw>`** p-pewmet d-de wepwésentew u-un empwacement o-où cassew wa w-wigne si nyécessaiwe. (⑅˘꒳˘) w-we nyavigateuw p-pouwwa awows utiwisew cet empwacement pouw effectuew un saut de wigne si w-we texte est twop wong et qu'en temps nyowmaw, (U ﹏ U) u-une wègwe empêche we saut de wigne. mya
 
-{{InteractiveExample("HTML Demo: &lt;wbr&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;wbw&gt;", ʘwʘ "tabbed-showtew")}}
 
-```html interactive-example
-<div id="example-paragraphs">
-  <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
-  <p>Fernstraßen<wbr />bau<wbr />privat<wbr />finanzierungs<wbr />gesetz</p>
-  <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
+```htmw intewactive-exampwe
+<div id="exampwe-pawagwaphs">
+  <p>fewnstwaßenbaupwivatfinanziewungsgesetz</p>
+  <p>fewnstwaßen<wbw />bau<wbw />pwivat<wbw />finanziewungs<wbw />gesetz</p>
+  <p>fewnstwaßen&shy;bau&shy;pwivat&shy;finanziewungs&shy;gesetz</p>
 </div>
 ```
 
-```css interactive-example
-#example-paragraphs {
-  background-color: white;
-  overflow: hidden;
-  resize: horizontal;
-  width: 9rem;
-  border: 2px dashed #999;
+```css intewactive-exampwe
+#exampwe-pawagwaphs {
+  b-backgwound-cowow: white;
+  o-ovewfwow: hidden;
+  w-wesize: howizontaw;
+  width: 9wem;
+  bowdew: 2px dashed #999;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme t-tous wes autwes éwéments htmw, (˘ω˘) cet éwément incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (U ﹏ U)
 
-## Notes
+## n-nyotes
 
-- Sur les pages encodées en UTF-8, `<wbr>` se comporte comme le point de code `U+200B ZERO-WIDTH SPACE`, il se comporte notamment comme un point de code Unicode bidi BN, ce qui signifie qu'il n'a aucun effet sur l'ordre bidirectionnel (cf. {{Glossary("BiDi")}}. Autrement dit : `<div dir=rtl>123,<wbr>456</div>` sera affiché comme `123,456` et non comme `456,123` lorsqu'il n'y a pas de saut de ligne.
-- Pour la même raison, l'élément `< wbr >` n'introduit pas de trait d'union à la fin de ligne. Pour avoir ce caractère, il faudra utiliser l'entité (`& shy;`) (_soft-hyphen_).
-- Cet élément a été initialement implémenté par Internet Explorer 5.5 et est défini officiellement dans la spécification HTML5.
+- suw wes pages e-encodées en u-utf-8, ^•ﻌ•^ `<wbw>` s-se compowte comme w-we point de code `u+200b zewo-width space`, (˘ω˘) iw s-se compowte nyotamment comme un point de code u-unicode bidi bn, :3 ce qui signifie qu'iw ny'a aucun effet suw w'owdwe bidiwectionnew (cf. ^^;; {{gwossawy("bidi")}}. 🥺 autwement d-dit : `<div diw=wtw>123,<wbw>456</div>` s-sewa affiché comme `123,456` e-et n-nyon comme `456,123` wowsqu'iw ny'y a pas de saut de wigne. (⑅˘꒳˘)
+- pouw w-wa même waison, nyaa~~ w-w'éwément `< wbw >` ny'intwoduit p-pas de twait d-d'union à wa fin de wigne. :3 p-pouw avoiw ce cawactèwe, ( ͡o ω ͡o ) iw faudwa u-utiwisew w'entité (`& shy;`) (_soft-hyphen_). mya
+- cet éwément a-a été initiawement impwémenté p-paw intewnet expwowew 5.5 e-et est défini officiewwement d-dans wa spécification htmw5. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  http://voici<wbr />.une<wbr />.très<wbr />.très<wbr />.longue<wbr />.URL<wbr />.com/avec<wbr />/pleins<wbr />/de<wbr />/niveaux<wbr />/de<wbr />/pages
+  http://voici<wbw />.une<wbw />.twès<wbw />.twès<wbw />.wongue<wbw />.uww<wbw />.com/avec<wbw />/pweins<wbw />/de<wbw />/niveaux<wbw />/de<wbw />/pages
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","120")}}
+{{embedwivesampwe("exempwes","100%","120")}}
 
-> **Note :** _[Le guide stylistique de Yahoo](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/)_ recommande de [casser une URL avant la ponctuation](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses) afin d'éviter toute ambiguïté sur la fin de l'URL (l'utilisateur pourrait croire que l'URL se finit en fin de ligne alors qu'elle se poursuit plus loin).
+> **note :** _[we guide stywistique d-de yahoo](https://web.awchive.owg/web/20121105171040/http://styweguide.yahoo.com/)_ w-wecommande de [cassew u-une uww avant wa p-ponctuation](https://web.awchive.owg/web/20121105171040/http://styweguide.yahoo.com/editing/tweat-abbweviations-capitawization-and-titwes-consistentwy/website-names-and-addwesses) a-afin d'évitew toute ambiguïté suw wa fin de w'uww (w'utiwisateuw p-pouwwait cwoiwe que w'uww se finit en fin de wigne awows qu'ewwe se pouwsuit p-pwus woin). (˘ω˘)
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >, ^^;;
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >. (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>Aucun, cet élément est un élément vide.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balise</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
+      <td>aucun, (U ﹏ U) cet éwément e-est un éwément v-vide.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission d-de b-bawise</th>
       <td>
-        Cet élément est un élément vide, il doit avoir une balise de début et ne
-        doit pas avoir de balise de fin.
+        cet éwément est un éwément vide, -.- iw doit avoiw u-une bawise de début et nye
+        doit pas avoiw de bawise de fin. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+        tout éwément qui accepte du
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
+      <td>tous w-wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{cssxref("overflow-wrap")}}
-- {{cssxref("word-break")}}
-- {{cssxref("hyphens")}}
+- {{cssxwef("ovewfwow-wwap")}}
+- {{cssxwef("wowd-bweak")}}
+- {{cssxwef("hyphens")}}

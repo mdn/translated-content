@@ -1,70 +1,70 @@
 ---
-title: BigInt.asUintN()
-slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
+titwe: bigint.asuintn()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/bigint/asuintn
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`BigInt.asUintN()`** permet d'écréter un `BigInt` pour ramener sa valeur sur un entier non-signé entre 0 et 2^(largeur)-1.
+w-wa méthode s-statique **`bigint.asuintn()`** p-pewmet d'écwétew u-un `bigint` p-pouw wamenew s-sa vaweuw suw un e-entiew nyon-signé entwe 0 et 2^(wawgeuw)-1. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: BigInt.asUintN()")}}
+{{intewactiveexampwe("javascwipt demo: bigint.asuintn()")}}
 
-```js interactive-example
-const U64_CEIL = 2n ** 64n;
+```js intewactive-exampwe
+const u64_ceiw = 2n ** 64n;
 
-console.log(BigInt.asUintN(64, U64_CEIL - 1n));
-// 18446744073709551615n (2n ** 64n - 1n, the maximum non-wrapping value)
-console.log(BigInt.asUintN(64, U64_CEIL));
-// 0n (wraps to zero)
-console.log(BigInt.asUintN(64, U64_CEIL + 1n));
+c-consowe.wog(bigint.asuintn(64, σωσ u64_ceiw - 1n));
+// 18446744073709551615n (2n ** 64n - 1n, OwO the m-maximum nyon-wwapping vawue)
+consowe.wog(bigint.asuintn(64, 😳😳😳 u-u64_ceiw));
+// 0n (wwaps to zewo)
+consowe.wog(bigint.asuintn(64, 😳😳😳 u64_ceiw + 1n));
 // 1n
-console.log(BigInt.asUintN(64, U64_CEIL * 2n));
-// 0n (wraps on multiples)
-console.log(BigInt.asUintN(64, U64_CEIL * -42n));
-// 0n (also wraps on negative multiples)
+consowe.wog(bigint.asuintn(64, o.O u-u64_ceiw * 2n));
+// 0n (wwaps on muwtipwes)
+c-consowe.wog(bigint.asuintn(64, ( ͡o ω ͡o ) u64_ceiw * -42n));
+// 0n (awso w-wwaps on nyegative muwtipwes)
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-var résultat = BigInt.asUintN(largeur, bigint);
+vaw wésuwtat = b-bigint.asuintn(wawgeuw, (U ﹏ U) bigint);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `largeur`
-  - : Le nombre de bits disponible pour stocker l'entier.
+- `wawgeuw`
+  - : we nyombwe de bits disponibwe p-pouw stockew w'entiew. (///ˬ///✿)
 - `bigint`
-  - : L'entier qu'on souhaite stocker sur le nombre de bits indiqués.
+  - : w-w'entiew qu'on s-souhaite stockew s-suw we nyombwe d-de bits indiqués. >w<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur de `bigint` modulo 2^`largeur` comme un entier non signé.
+wa vaweuw d-de `bigint` moduwo 2^`wawgeuw` comme un entiew n-non signé. rawr
 
-## Exemples
+## exempwes
 
-La méthode `BigInt.asUintN()` peut s'avérer utile pour rester dans une arithmétique exprimée sur 64 bits .
+wa méthode `bigint.asuintn()` peut s'avéwew utiwe pouw westew dans u-une awithmétique expwimée suw 64 b-bits . mya
 
 ```js
-const max = 2n ** 64n - 1n;
+c-const max = 2n ** 64n - 1n;
 
-BigInt.asUintN(64, max);
+b-bigint.asuintn(64, ^^ max);
 // ↪ 18446744073709551615n
 
-BigInt.asUintN(64, max + 1n);
+bigint.asuintn(64, 😳😳😳 max + 1n);
 // ↪ 0n
-// zéro en raison du dépassement
+// z-zéwo en waison d-du dépassement
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{JSxRef("BigInt")}}
-- {{JSxRef("BigInt.asIntN()")}}
+- {{jsxwef("bigint")}}
+- {{jsxwef("bigint.asintn()")}}

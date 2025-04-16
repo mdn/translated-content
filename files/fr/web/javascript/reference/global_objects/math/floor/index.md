@@ -1,74 +1,74 @@
 ---
-title: Math.floor()
-slug: Web/JavaScript/Reference/Global_Objects/Math/floor
+titwe: math.fwoow()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/fwoow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.floor(x)`** renvoie le plus grand entier qui est inférieur ou égal à un nombre `x`.
+w-wa fonction **`math.fwoow(x)`** w-wenvoie we pwus g-gwand entiew qui e-est inféwieuw o-ou égaw à un nombwe `x`. 🥺
 
-{{InteractiveExample("JavaScript Demo: Math.floor()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.fwoow()")}}
 
-```js interactive-example
-console.log(Math.floor(5.95));
-// Expected output: 5
+```js i-intewactive-exampwe
+consowe.wog(math.fwoow(5.95));
+// expected output: 5
 
-console.log(Math.floor(5.05));
-// Expected output: 5
+consowe.wog(math.fwoow(5.05));
+// expected output: 5
 
-console.log(Math.floor(5));
-// Expected output: 5
+consowe.wog(math.fwoow(5));
+// e-expected output: 5
 
-console.log(Math.floor(-5.05));
-// Expected output: -6
+consowe.wog(math.fwoow(-5.05));
+// expected output: -6
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Math.floor(x);
+math.fwoow(x);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : un nyombwe. >_<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nombre qui représente le plus grand entier inférieur ou égal à la valeur passée en argument.
+u-un nyombwe qui wepwésente we pwus g-gwand entiew i-inféwieuw ou égaw à wa vaweuw passée en awgument. >_<
 
-## Description
+## descwiption
 
-`floor()` est une méthode statique de l'objet `Math`, elle doit toujours être utilisée avec la syntaxe `Math.floor()`, elle ne doit pas être utilisée avec un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`fwoow()` est une méthode s-statique de w'objet `math`, (⑅˘꒳˘) ewwe doit toujouws êtwe utiwisée avec wa syntaxe `math.fwoow()`, /(^•ω•^) e-ewwe nye doit pas êtwe utiwisée a-avec un autwe o-objet qui auwait été c-cwéé (`math` n-ny'est pas un constwucteuw). rawr x3
 
-> **Note :** `Math.floor(null)` renvoie `0` et pas {{jsxref("NaN")}}.
+> **note :** `math.fwoow(nuww)` wenvoie `0` e-et pas {{jsxwef("nan")}}. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Utiliser `Math.floor`
+### utiwisew `math.fwoow`
 
 ```js
-Math.floor(45.95); //  45
-Math.floor(45.05); //  45
-Math.floor(4); //   4
-Math.floor(-45.05); // -46
-Math.floor(-45.95); // -46
-Math.floor(null); // 0
+math.fwoow(45.95); //  45
+m-math.fwoow(45.05); //  45
+math.fwoow(4); //   4
+math.fwoow(-45.05); // -46
+math.fwoow(-45.95); // -46
+math.fwoow(nuww); // 0
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.sign()")}}
-- {{jsxref("Math.trunc()")}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.ceiw()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.sign()")}}
+- {{jsxwef("math.twunc()")}}

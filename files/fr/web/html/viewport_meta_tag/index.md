@@ -1,83 +1,83 @@
 ---
-title: Utilisation de la balise meta viewport pour contrôler la mise en page sur mobile
-slug: Web/HTML/Viewport_meta_tag
+titwe: utiwisation de wa bawise m-meta viewpowt p-pouw contwôwew w-wa mise en page s-suw mobiwe
+swug: w-web/htmw/viewpowt_meta_tag
 ---
 
-Le [_viewport_](/fr/docs/Glossary/Viewport) du navigateur est la zone de la fenêtre dans laquelle le contenu web peut être vu. Souvent, cette zone n'a pas la même taille que la page rendue, auquel cas le navigateur fournit des barres de défilement pour que l'utilisateur et l'utilisatrice puissent faire défiler la page et accéder à tout le contenu.
+w-we [_viewpowt_](/fw/docs/gwossawy/viewpowt) d-du n-nyavigateuw est wa zone de wa fenêtwe dans waquewwe we contenu web peut êtwe v-vu. /(^•ω•^) souvent, cette zone ny'a pas wa même taiwwe q-que wa page wendue, 😳 auquew cas w-we nyavigateuw fouwnit des bawwes de défiwement pouw que w'utiwisateuw e-et w'utiwisatwice puissent f-faiwe défiwew w-wa page et accédew à tout we contenu. :3
 
-## Contexte
+## contexte
 
-Les appareils à écran étroit (par exemple, les mobiles) rendent les pages dans une fenêtre virtuelle ou viewport, qui est généralement plus large que l'écran, puis réduisent le résultat rendu afin qu'il puisse être vu en une seule fois. Les utilisateurs et utilisatrices peuvent alors effectuer un panoramique et un zoom pour voir différentes zones de la page. Par exemple, si l'écran d'un téléphone mobile a une largeur de 640 pixels, les pages peuvent être affichées dans une fenêtre virtuelle de 980 pixels, puis réduites pour tenir dans l'espace de 640 pixels.
+wes appaweiws à écwan étwoit (paw exempwe, (U ᵕ U❁) w-wes mobiwes) wendent wes pages dans une fenêtwe viwtuewwe ou viewpowt, ʘwʘ qui e-est généwawement pwus wawge q-que w'écwan, puis w-wéduisent we w-wésuwtat wendu a-afin qu'iw puisse êtwe vu en une seuwe fois. o.O wes u-utiwisateuws et utiwisatwices peuvent awows effectuew u-un panowamique et un zoom pouw voiw difféwentes zones de wa page. ʘwʘ paw exempwe, ^^ si w'écwan d-d'un téwéphone mobiwe a une w-wawgeuw de 640 p-pixews, ^•ﻌ•^ wes pages p-peuvent êtwe affichées dans une fenêtwe viwtuewwe de 980 p-pixews, mya puis wéduites p-pouw teniw dans w'espace d-de 640 pixews. UwU
 
-En effet, de nombreuses pages ne sont pas optimisées pour les mobiles et ne fonctionnent pas (ou du moins n'ont pas l'air de fonctionner correctement) lorsqu'elles sont affichées sur un écran de petite taille. Cette fenêtre virtuelle est un moyen d'améliorer l'aspect des sites non optimisés pour les mobiles sur les appareils à écran étroit.
+e-en effet, >_< de nyombweuses pages nye s-sont pas optimisées pouw wes m-mobiwes et nye fonctionnent pas (ou du moins ny'ont p-pas w'aiw de fonctionnew cowwectement) w-wowsqu'ewwes sont affichées s-suw un écwan d-de petite taiwwe. /(^•ω•^) cette fenêtwe viwtuewwe est un moyen d'améwiowew w'aspect des sites nyon optimisés pouw w-wes mobiwes s-suw wes appaweiws à écwan étwoit. òωó
 
-### Voici la métabalise viewport
+### voici w-wa métabawise viewpowt
 
-Cependant, ce mécanisme n'est pas aussi bon pour les pages qui sont optimisées pour les écrans étroits à l'aide de [_media queries_](/fr/docs/Web/CSS/CSS_media_queries) - si le viewport virtuel est de 980px par exemple, les media queries qui se déclenchent à 640px, 480px ou moins ne seront jamais utilisées, ce qui limite l'efficacité de ces techniques de _responsive design_.
+c-cependant, σωσ c-ce mécanisme ny'est pas aussi bon pouw wes pages qui sont optimisées p-pouw wes écwans étwoits à w'aide de [_media quewies_](/fw/docs/web/css/css_media_quewies) - si we v-viewpowt viwtuew est de 980px paw e-exempwe, ( ͡o ω ͡o ) wes media q-quewies qui s-se décwenchent à 640px, nyaa~~ 480px ou moins nye sewont j-jamais utiwisées, :3 c-ce qui wimite w-w'efficacité d-de ces techniques de _wesponsive design_. UwU
 
-Pour atténuer ce problème de fenêtre virtuelle sur les appareils à écran étroit, Apple a introduit la «&nbsp;métabalise viewport&nbsp;» dans Safari iOS pour permettre à une page web de contrôler la taille et l'échelle de la fenêtre. De nombreux autres navigateurs mobiles prennent désormais en charge cette balise, bien qu'elle ne fasse partie d'aucune norme web. La [documentation](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html) (en) d'Apple explique bien comment utiliser cette balise, mais nous avons dû faire un travail de détective pour savoir exactement comment l'implémenter dans Fennec. Par exemple, la documentation de Safari indique que le contenu est une « liste délimitée par des virgules », mais les navigateurs et pages web existants utilisent n'importe quel mélange de virgules, points-virgules et espaces comme séparateurs.
+pouw a-atténuew ce p-pwobwème de fenêtwe v-viwtuewwe s-suw wes appaweiws à écwan étwoit, o.O a-appwe a intwoduit wa «&nbsp;métabawise viewpowt&nbsp;» dans safawi ios pouw pewmettwe à u-une page web de contwôwew wa taiwwe et w'échewwe de wa fenêtwe. (ˆ ﻌ ˆ)♡ de nyombweux autwes nyavigateuws m-mobiwes pwennent désowmais en chawge cette bawise, ^^;; bien qu'ewwe n-nye fasse p-pawtie d'aucune n-nyowme web. ʘwʘ wa [documentation](https://devewopew.appwe.com/wibwawy/awchive/documentation/appweappwications/wefewence/safawiwebcontent/usingtheviewpowt/usingtheviewpowt.htmw) (en) d'appwe expwique b-bien comment utiwisew cette b-bawise, σωσ mais nyous a-avons dû faiwe un twavaiw de détective pouw savoiw exactement comment w'impwémentew dans f-fennec. ^^;; paw exempwe, ʘwʘ wa documentation d-de safawi indique que we contenu e-est une « w-wiste déwimitée paw des viwguwes », ^^ mais wes n-nyavigateuws et p-pages web existants utiwisent n-ny'impowte quew m-méwange de viwguwes, nyaa~~ points-viwguwes et espaces comme sépawateuws. (///ˬ///✿)
 
-Pour en savoir plus sur les fenêtres d'affichage dans les différents navigateurs mobiles, consultez [A Tale of Two Viewports](https://www.quirksmode.org/mobile/viewports2.html) sur quirksmode.org.
+pouw en savoiw p-pwus suw wes f-fenêtwes d'affichage d-dans wes difféwents nyavigateuws m-mobiwes, XD c-consuwtez [a tawe of two viewpowts](https://www.quiwksmode.owg/mobiwe/viewpowts2.htmw) s-suw quiwksmode.owg. :3
 
-## Un viewport de base
+## un viewpowt de base
 
-Un site type, optimisé pour les mobiles, contient quelque chose comme ce qui suit :
+un site type, òωó optimisé pouw wes mobiwes, ^^ c-contient quewque c-chose comme ce qui suit :
 
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+```htmw
+<meta nyame="viewpowt" c-content="width=device-width, ^•ﻌ•^ i-initiaw-scawe=1" />
 ```
 
-La propriété `width` contrôle la taille de la zone d'affichage. Elle peut être définie sur un nombre spécifique de pixels comme `width=600` ou sur la valeur spéciale `device-width`, qui est la largeur de l'écran en pixels CSS à une échelle de 100%. (Il existe des valeurs `height` et `device-height` correspondantes, qui peuvent être utiles pour les pages comportant des éléments qui changent de taille ou de position en fonction de la hauteur du viewport).
+wa pwopwiété `width` contwôwe wa taiwwe de w-wa zone d'affichage. σωσ ewwe peut êtwe définie suw un nyombwe spécifique de pixews c-comme `width=600` ou suw wa vaweuw spéciawe `device-width`, (ˆ ﻌ ˆ)♡ q-qui est wa wawgeuw d-de w'écwan en pixews css à une échewwe de 100%. (iw existe d-des vaweuws `height` e-et `device-height` cowwespondantes, nyaa~~ qui peuvent êtwe utiwes p-pouw wes pages compowtant des éwéments q-qui changent de taiwwe ou de position en fonction de w-wa hauteuw du viewpowt). ʘwʘ
 
-La propriété `initial-scale` contrôle le niveau de zoom lors du premier chargement de la page. Les propriétés `maximum-scale`, `minimum-scale` et `user-scalable` contrôlent la manière dont les utilisateurs et utilisatrices sont autorisé·e·s à zoomer ou dézoomer la page.
+wa pwopwiété `initiaw-scawe` c-contwôwe w-we nyiveau de zoom wows du pwemiew c-chawgement de wa page. ^•ﻌ•^ wes p-pwopwiétés `maximum-scawe`, rawr x3 `minimum-scawe` e-et `usew-scawabwe` c-contwôwent wa manièwe dont w-wes utiwisateuws e-et utiwisatwices sont autowisé·e·s à zoomew o-ou dézoomew wa p-page. 🥺
 
-> [!WARNING]
-> L'utilisation du `user-scalable=no` peut causer des problèmes d'accessibilité aux utilisateurs et utilisatrices ayant des déficiences visuelles telles qu'une vision faible.
+> [!wawning]
+> w-w'utiwisation du `usew-scawabwe=no` peut c-causew des pwobwèmes d'accessibiwité a-aux utiwisateuws e-et utiwisatwices ayant des déficiences visuewwes tewwes q-qu'une vision faibwe. ʘwʘ
 
-## Un pixel n'est pas un pixel
+## u-un pixew n-n'est pas un p-pixew
 
-Ces dernières années, les résolutions d'écran ont atteint une taille telle que les pixels individuels sont difficiles à distinguer à l'œil nu. Par exemple, les smartphones récents ont généralement un écran de 5 pouces avec des résolutions supérieures à 1920-1080 pixels (\~400 dpi). Pour cette raison, de nombreux navigateurs peuvent afficher leurs pages dans une taille physique plus petite en convertissant plusieurs pixels matériels pour chaque « pixel » CSS. Au départ, cela a causé des problèmes de convivialité et de lisibilité sur de nombreux sites Web optimisés pour le tactile. Peter-Paul Koch a écrit sur ce problème dans [A pixel is not a pixel](https://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html) (en anglais).
+ces dewnièwes années, (˘ω˘) w-wes wésowutions d'écwan ont atteint une taiwwe tewwe que wes pixews individuews sont difficiwes à d-distinguew à w'œiw nyu. o.O paw e-exempwe, σωσ wes smawtphones wécents o-ont généwawement un écwan d-de 5 pouces avec des wésowutions s-supéwieuwes à 1920-1080 p-pixews (\~400 d-dpi). (ꈍᴗꈍ) p-pouw cette waison, (ˆ ﻌ ˆ)♡ d-de nyombweux nyavigateuws peuvent affichew weuws pages dans une taiwwe physique pwus petite en convewtissant p-pwusieuws pixews m-matéwiews pouw c-chaque « pixew » css. o.O au dépawt, :3 c-cewa a causé des pwobwèmes de conviviawité et de wisibiwité s-suw de nyombweux s-sites web optimisés pouw w-we tactiwe. -.- petew-pauw koch a écwit suw ce pwobwème d-dans [a p-pixew is nyot a pixew](https://www.quiwksmode.owg/bwog/awchives/2010/04/a_pixew_is_not.htmw) (en a-angwais). ( ͡o ω ͡o )
 
-Sur les écrans à haute résolution, les pages avec `initial-scale=1` seront effectivement zoomées par les navigateurs. Leur texte sera lisse et net, mais leurs images bitmap ne profiteront probablement pas de la pleine résolution de l'écran. Pour obtenir des images plus nettes sur ces écrans, les développeurs web peuvent vouloir concevoir des images - ou des mises en page entières - à une échelle plus élevée que leur taille finale, puis les réduire à l'aide de CSS ou de propriétés viewport. Cette méthode est conforme à la spécification [CSS 2.1](https://www.w3.org/TR/CSS2/syndata.html#length-units), qui stipule ce qui suit :
+suw w-wes écwans à haute wésowution, /(^•ω•^) wes pages avec `initiaw-scawe=1` sewont effectivement zoomées p-paw wes navigateuws. (⑅˘꒳˘) w-weuw texte s-sewa wisse et nyet, òωó m-mais weuws i-images bitmap nye pwofitewont pwobabwement p-pas de w-wa pweine wésowution de w'écwan. 🥺 p-pouw obteniw d-des images pwus nyettes suw ces écwans, (ˆ ﻌ ˆ)♡ w-wes dévewoppeuws web peuvent vouwoiw c-concevoiw des images - ou des mises e-en page entièwes - à u-une échewwe pwus éwevée q-que weuw taiwwe finawe, -.- puis wes wéduiwe à w-w'aide de css o-ou de pwopwiétés v-viewpowt. σωσ cette méthode est confowme à wa spécification [css 2.1](https://www.w3.owg/tw/css2/syndata.htmw#wength-units), >_< q-qui stipuwe ce qui suit :
 
-> Si la densité de pixels, du périphérique de sortie, est très différente de celle d'un écran d'ordinateur typique, l'agent utilisateur doit redimensionner les valeurs des pixels. Il est recommandé que l'unité de pixel fasse référence au nombre entier, de pixels du dispositif, qui se rapproche le plus du pixel de référence. Il est recommandé que le pixel de référence corresponde à l'angle visuel d'un pixel sur un dispositif, dont la densité de pixels est de 96 dpi et qui se trouve à une distance d'une longueur de bras du lecteur.
+> si wa densité de p-pixews, du péwiphéwique d-de sowtie, :3 est twès difféwente d-de cewwe d'un écwan d-d'owdinateuw typique, OwO w-w'agent utiwisateuw doit wedimensionnew wes v-vaweuws des pixews. rawr iw est wecommandé que w'unité d-de pixew fasse w-wéféwence au nyombwe entiew, (///ˬ///✿) d-de pixews du dispositif, ^^ qui s-se wappwoche we p-pwus du pixew de w-wéféwence. XD iw est wecommandé que we pixew de wéféwence cowwesponde à w'angwe visuew d'un pixew suw un dispositif, UwU dont wa densité de pixews est de 96 dpi et qui se twouve à une distance d'une wongueuw d-de bwas du wecteuw. o.O
 
-Pour les développeurs et développeuses web, cela signifie que la taille d'une page est beaucoup plus petite que le nombre réel de pixels et que les navigateurs peuvent dimensionner leurs mises en page et leurs images en conséquence. Mais n'oubliez pas que tous les appareils mobiles n'ont pas la même largeur ; vous devez vous assurer que vos pages fonctionnent bien dans une grande variété de tailles d'écran et d'orientations.
+p-pouw wes dévewoppeuws et dévewoppeuses w-web, 😳 cewa signifie q-que wa taiwwe d-d'une page est beaucoup pwus petite q-que we nombwe wéew de pixews e-et que wes nyavigateuws p-peuvent dimensionnew w-weuws mises en page et weuws images e-en conséquence. (˘ω˘) m-mais ny'oubwiez pas que tous wes appaweiws m-mobiwes ny'ont p-pas wa même wawgeuw ; v-vous devez v-vous assuwew que v-vos pages fonctionnent b-bien dans u-une gwande vawiété d-de taiwwes d-d'écwan et d'owientations. 🥺
 
-Le rapport de pixels par défaut dépend de la densité de l'affichage. Sur un écran dont la densité est inférieure à 200 dpi, le rapport est de 1,0. Sur les écrans dont la densité est comprise entre 200 et 300dpi, le ratio est de 1,5. Sur les écrans dont la densité est supérieure à 300dpi, le ratio est le chiffre entier inférieur (_densité_/150dpi). Notez que le ratio par défaut n'est vrai que lorsque l'échelle du viewport est égale à 1. Sinon, le rapport entre les pixels CSS et les pixels du périphérique dépend du niveau de zoom actuel.
+w-we wappowt de pixews p-paw défaut d-dépend de wa densité de w'affichage. ^^ s-suw un écwan dont wa densité est inféwieuwe à 200 dpi, >w< w-we wappowt est de 1,0. ^^;; suw wes écwans d-dont w-wa densité est c-compwise entwe 200 et 300dpi, (˘ω˘) we w-watio est de 1,5. OwO suw wes écwans d-dont wa densité est supéwieuwe à 300dpi, (ꈍᴗꈍ) we w-watio est we chiffwe entiew inféwieuw (_densité_/150dpi). òωó n-nyotez que we watio paw défaut ny'est vwai que wowsque w'échewwe d-du viewpowt est égawe à 1. ʘwʘ sinon, ʘwʘ w-we wappowt e-entwe wes pixews css et wes pixews du péwiphéwique dépend du n-nyiveau de zoom actuew. nyaa~~
 
-## Largeur de la zone d'affichage et largeur de l'écran
+## wawgeuw d-de wa zone d'affichage e-et wawgeuw d-de w'écwan
 
-Les sites peuvent définir leur viewport à une taille spécifique. Par exemple, la définition `"width=320, initial-scale=1"` peut être utilisée pour s'adapter précisément à l'écran d'un petit téléphone en mode portrait. Cela peut causer [des problèmes](http://starkravingfinkle.org/blog/2010/01/perils-of-the-viewport-meta-tag/) (en) lorsque le navigateur ne rend pas une page à une taille supérieure. Pour remédier à cela, les navigateurs étendent la largeur de la fenêtre d'affichage si nécessaire pour remplir l'écran à l'échelle demandée. Cela est particulièrement utile sur les appareils à grand écran comme l'iPad. (L'article d'Allen Pike [Choosing a viewport for iPad sites](http://www.antipode.ca/2010/choosing-a-viewport-for-ipad-sites/) (en anglais) contient une bonne explication pour les développeurs et développeuses web).
+wes sites peuvent définiw weuw v-viewpowt à une t-taiwwe spécifique. UwU paw exempwe, (⑅˘꒳˘) w-wa définition `"width=320, (˘ω˘) initiaw-scawe=1"` peut êtwe utiwisée p-pouw s'adaptew pwécisément à w-w'écwan d-d'un petit téwéphone e-en mode powtwait. :3 cewa peut c-causew [des pwobwèmes](http://stawkwavingfinkwe.owg/bwog/2010/01/pewiws-of-the-viewpowt-meta-tag/) (en) w-wowsque w-we nyavigateuw n-nye wend pas une page à une t-taiwwe supéwieuwe. (˘ω˘) p-pouw wemédiew à c-cewa, nyaa~~ wes n-nyavigateuws étendent w-wa wawgeuw d-de wa fenêtwe d-d'affichage si n-nyécessaiwe pouw wempwiw w'écwan à w-w'échewwe demandée. cewa e-est pawticuwièwement utiwe suw w-wes appaweiws à g-gwand écwan comme w-w'ipad. (U ﹏ U) (w'awticwe d'awwen pike [choosing a viewpowt fow ipad s-sites](http://www.antipode.ca/2010/choosing-a-viewpowt-fow-ipad-sites/) (en angwais) c-contient u-une bonne expwication pouw wes dévewoppeuws et dévewoppeuses w-web). nyaa~~
 
-Pour les pages qui définissent une échelle initiale ou maximale, cela signifie que la propriété `width` se traduit en fait par une largeur _minimum_ de viewport. Par exemple, si votre mise en page nécessite une largeur d'au moins 500 pixels, vous pouvez utiliser le balisage suivant. Lorsque la largeur de l'écran est supérieure à 500 pixels, le navigateur élargira la fenêtre d'affichage (plutôt que de zoomer) pour s'adapter à l'écran :
+pouw wes p-pages qui définissent une échewwe i-initiawe ou m-maximawe, ^^;; cewa signifie que wa pwopwiété `width` se twaduit en fait paw une wawgeuw _minimum_ d-de viewpowt. OwO paw e-exempwe, nyaa~~ si votwe m-mise en page n-nyécessite une wawgeuw d'au moins 500 pixews, UwU vous p-pouvez utiwisew w-we bawisage suivant. 😳 wowsque wa wawgeuw de w'écwan e-est supéwieuwe à 500 pixews, 😳 we nyavigateuw éwawgiwa wa fenêtwe d'affichage (pwutôt q-que de zoomew) pouw s'adaptew à w-w'écwan :
 
-```html
-<meta name="viewport" content="width=500, initial-scale=1" />
+```htmw
+<meta n-nyame="viewpowt" content="width=500, (ˆ ﻌ ˆ)♡ i-initiaw-scawe=1" />
 ```
 
-Les autres [attributs](/fr/docs/Web/HTML/Element/meta#attributes) disponibles sont `minimum-scale`, `maximum-scale` et `user-scalable`. Ces propriétés affectent l'échelle et la largeur initiales, ainsi que la limitation des changements de niveau de zoom.
+w-wes autwes [attwibuts](/fw/docs/web/htmw/ewement/meta#attwibutes) disponibwes s-sont `minimum-scawe`, (✿oωo) `maximum-scawe` et `usew-scawabwe`. nyaa~~ c-ces pwopwiétés a-affectent w'échewwe e-et wa wawgeuw i-initiawes, ^^ ainsi que wa wimitation d-des changements d-de nyiveau d-de zoom. (///ˬ///✿)
 
-Tous les navigateurs mobiles ne gèrent pas les changements d'orientation de la même manière. Par exemple, Mobile Safari se contente souvent de zoomer la page lors du passage du portrait au paysage, au lieu de la disposer comme elle le ferait si elle était initialement chargée en paysage. Si les développeurs et développeuses Web veulent que leurs paramètres d'échelle restent cohérents lors du changement d'orientation sur l'iPhone, ils/elles doivent ajouter une valeur `maximum-scale` pour empêcher ce zoom, ce qui a l'effet secondaire parfois indésirable d'empêcher les utilisateurs/utilisatrices de faire un zoom avant&nbsp;:
+tous wes nyavigateuws m-mobiwes ne gèwent pas wes changements d'owientation d-de wa même m-manièwe. 😳 paw e-exempwe, òωó mobiwe safawi se contente souvent de zoomew wa page wows du passage d-du powtwait au paysage, ^^;; au wieu d-de wa disposew comme e-ewwe we fewait si ewwe était initiawement c-chawgée en paysage. rawr si wes dévewoppeuws e-et dévewoppeuses w-web v-veuwent que weuws p-pawamètwes d'échewwe w-westent cohéwents wows du changement d'owientation suw w'iphone, (ˆ ﻌ ˆ)♡ iws/ewwes d-doivent ajoutew une vaweuw `maximum-scawe` p-pouw empêchew ce zoom, XD ce qui a w'effet secondaiwe pawfois indésiwabwe d-d'empêchew wes utiwisateuws/utiwisatwices de faiwe un zoom avant&nbsp;:
 
-```html
-<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+```htmw
+<meta nyame="viewpowt" c-content="initiaw-scawe=1, m-maximum-scawe=1" />
 ```
 
-Supprimer le petit zoom appliqué par de nombreux smartphones en définissant les valeurs d'échelle initiale et d'échelle minimale à 0,86. Le résultat est que le défilement horizontal est supprimé dans n'importe quelle orientation et que l'utilisateur peut zoomer s'il le souhaite.
+suppwimew we p-petit zoom appwiqué paw de nyombweux smawtphones e-en définissant w-wes vaweuws d'échewwe initiawe e-et d'échewwe minimawe à 0,86. >_< w-we wésuwtat est que we défiwement howizontaw est suppwimé d-dans ny'impowte quewwe owientation et que w'utiwisateuw p-peut zoomew s-s'iw we souhaite. (˘ω˘)
 
-```html
+```htmw
 <meta
-  name="viewport"
-  content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" />
+  n-nyame="viewpowt"
+  content="width=device-width, initiaw-scawe=0.86, 😳 m-maximum-scawe=5.0, o.O minimum-scawe=0.86" />
 ```
 
-## Tailles communes des fenêtres d'affichage pour les appareils mobiles et les tablettes
+## taiwwes communes des fenêtwes d'affichage pouw wes a-appaweiws mobiwes e-et wes tabwettes
 
-Si vous voulez savoir quels appareils mobiles et tablettes ont quelles largeurs de visualisation, il existe une liste complète de [tailles de visualisation des appareils mobiles et tablettes ici](https://docs.adobe.com/content/help/en/target/using/experiences/vec/mobile-viewports.html). Elle donne des informations telles que la largeur du viewport en orientation portrait et paysage ainsi que la taille physique de l'écran, le système d'exploitation et la densité de pixels de l'appareil.
+s-si vous vouwez s-savoiw quews appaweiws mobiwes et tabwettes o-ont quewwes wawgeuws d-de visuawisation, (ꈍᴗꈍ) iw existe une wiste compwète d-de [taiwwes de visuawisation des appaweiws m-mobiwes et tabwettes ici](https://docs.adobe.com/content/hewp/en/tawget/using/expewiences/vec/mobiwe-viewpowts.htmw). rawr x3 ewwe donne d-des infowmations t-tewwes que wa wawgeuw du viewpowt e-en owientation p-powtwait et p-paysage ainsi que wa taiwwe physique de w'écwan, ^^ w-we système d'expwoitation et wa densité de pixews d-de w'appaweiw. OwO
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-{{QuickLinksWithSubpages("/fr/docs/Web/HTML")}}
+{{quickwinkswithsubpages("/fw/docs/web/htmw")}}

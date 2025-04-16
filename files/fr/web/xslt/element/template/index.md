@@ -1,57 +1,57 @@
 ---
-title: template
-slug: Web/XSLT/Element/template
+titwe: tempwate
+swug: web/xswt/ewement/tempwate
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:template>` définit un modèle produisant une sortie. Au moins l'un des atttributs match et set doit posséder une valeur.
+w-w'éwément `<xsw:tempwate>` d-définit un m-modèwe pwoduisant u-une sowtie. ʘwʘ a-au moins w'un des a-atttwibuts match e-et set doit possédew une vaweuw. σωσ
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:template
-  match=MOTIF
-  name=NOM
-  mode=NOM
-  priority=NOMBRE>
-  <xsl:param> [optionnel]
-  MODÈLE
-</xsl:template>
+```xmw
+<xsw:tempwate
+  match=motif
+  nyame=nom
+  m-mode=nom
+  pwiowity=nombwe>
+  <xsw:pawam> [optionnew]
+  modÈwe
+</xsw:tempwate>
 ```
 
-### Attributs obligatoires
+### attwibuts o-obwigatoiwes
 
-Aucun.
+aucun.
 
-### Attributs optionnels
+### a-attwibuts optionnews
 
 - `match`
-  - : Définit le motif qui détermine les éléments auxquels ce modèle doit être appliqué. Il devient attribut obligatoire si l'attribut `name` n'est pas présent.
+  - : définit we motif qui détewmine wes éwéments a-auxquews ce modèwe doit êtwe a-appwiqué. OwO i-iw devient attwibut obwigatoiwe si w'attwibut `name` ny'est pas pwésent. 😳😳😳
 
 <!---->
 
 - `name`
-  - : Définit un nom pour ce modèle, par lequel il sera invoqué à l'aide de l'élément `<xsl:call-template>`.
+  - : d-définit un nyom pouw ce modèwe, 😳😳😳 paw wequew iw sewa invoqué à w'aide de w'éwément `<xsw:caww-tempwate>`.
 
 <!---->
 
 - `mode`
-  - : Définit un mode particulier pour ce modèle, qui peut correspondre à un attribut de l'élément `<xsl:apply-templates>`. Utile pour traiter la même information de différentes façons.
+  - : d-définit un mode pawticuwiew p-pouw ce m-modèwe, o.O qui peut c-cowwespondwe à u-un attwibut de w'éwément `<xsw:appwy-tempwates>`. ( ͡o ω ͡o ) utiwe pouw t-twaitew wa même infowmation de difféwentes façons. (U ﹏ U)
 
 <!---->
 
-- `priority`
-  - : Définit une priorité pour ce modèle, sous forme d'un nombre quelconque, à l'eception de `Infinity` (infini). Le processeur utilise ce nombre lorsque plusieurs modèles s'appliquent au même nœud.
+- `pwiowity`
+  - : d-définit une pwiowité pouw ce modèwe, (///ˬ///✿) sous fowme d'un nyombwe quewconque, >w< à w'eception de `infinity` (infini). rawr w-we pwocesseuw utiwise ce nyombwe w-wowsque pwusieuws m-modèwes s-s'appwiquent au même nyœud. mya
 
-### Type
+### type
 
-Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
+haut nyiveau, ^^ doit êtwe w-w'enfant de `<xsw:stywesheet>` o-ou de `<xsw:twansfowm>`. 😳😳😳
 
-### Définition
+### définition
 
-[XSLT 1.0, section 5.3](https://www.w3.org/TR/xslt#section-Defining-Template-Rules).
+[xswt 1.0, mya s-section 5.3](https://www.w3.owg/tw/xswt#section-defining-tempwate-wuwes). 😳
 
-### Support Gecko
+### s-suppowt gecko
 
-Supporté.
+suppowté. -.-

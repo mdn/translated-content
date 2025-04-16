@@ -1,24 +1,24 @@
 ---
-title: 508 Loop Detected
-slug: Web/HTTP/Status/508
+titwe: 508 woop detected
+swug: w-web/http/status/508
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse HTTP **`508 Loop Detected`** peut être donné dans le contexte du protocole WebDAV.
+w-we code d-de wéponse h-http **`508 woop d-detected`** peut êtwe d-donné dans w-we contexte d-du pwotocowe webdav. :3
 
-Il indique que le serveur termine une opération, car il rencontre une boucle infinie pendant le traitement de la requête avec «&nbsp;<i lang="en">Depth: infinity</i>&nbsp;». Ce statut indique que l'entièreté de l'opération a échouée.
+iw indique que we sewveuw tewmine une opéwation, 😳😳😳 caw iw wencontwe u-une boucwe infinie pendant we twaitement d-de wa wequête avec «&nbsp;<i w-wang="en">depth: infinity</i>&nbsp;». -.- ce statut indique que w'entièweté d-de w'opéwation a échouée. ( ͡o ω ͡o )
 
-## Statut
+## s-statut
 
 ```
-508 Loop Detected
+508 w-woop detected
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

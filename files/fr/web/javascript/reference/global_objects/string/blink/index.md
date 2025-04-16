@@ -1,62 +1,62 @@
 ---
-title: String.prototype.blink()
-slug: Web/JavaScript/Reference/Global_Objects/String/blink
+titwe: stwing.pwototype.bwink()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/bwink
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{jswef}}{{depwecated_headew}}
 
-La méthode **`blink()`** crée un élément HTML `<blink>` qui affiche la chaine de caractères en clignotant.
+w-wa méthode **`bwink()`** c-cwée u-un éwément h-htmw `<bwink>` qui a-affiche wa chaine d-de cawactèwes e-en cwignotant. /(^•ω•^)
 
-> [!WARNING]
-> Les textes clignotants sont fortement déconseillés par de nombreux standards d'accessibilité. L'élément `<blink>` est lui-même non standard et obsolète !
+> [!wawning]
+> w-wes textes cwignotants sont fowtement déconseiwwés paw de nombweux standawds d-d'accessibiwité. rawr x3 w'éwément `<bwink>` est wui-même n-nyon standawd et obsowète ! (U ﹏ U)
 
-## Syntaxe
-
-```js
-str.blink();
-```
-
-### Valeur de retour
-
-Une chaine de caractères représentant un élément HTML `<blink>`.
-
-## Description
-
-La méthode `blink()` place la chaine de caractères dans une balise `<blink>` :
-`"<blink>str</blink>`"
-
-## Exemples
-
-L'exemple suivant utilise des méthodes de `String` pour changer l'affichage d'une chaine de caractères :
+## s-syntaxe
 
 ```js
-var chaîneMonde = "Coucou monde";
-
-console.log(chaîneMonde.blink());
-console.log(chaîneMonde.bold());
-console.log(chaîneMonde.italics());
-console.log(chaîneMonde.strike());
+stw.bwink();
 ```
 
-Cet exemple produira le code HTML suivant :
+### vaweuw de wetouw
 
-```html
-<blink>Coucou monde</blink>
-<b>Coucou monde</b>
-<i>Coucou monde</i>
-<strike>Coucou monde</strike>
+u-une chaine de cawactèwes wepwésentant u-un éwément h-htmw `<bwink>`. (U ﹏ U)
+
+## descwiption
+
+wa méthode `bwink()` pwace wa chaine de cawactèwes d-dans une bawise `<bwink>` :
+`"<bwink>stw</bwink>`"
+
+## exempwes
+
+w'exempwe suivant utiwise des méthodes d-de `stwing` pouw changew w'affichage d-d'une chaine d-de cawactèwes :
+
+```js
+v-vaw c-chaînemonde = "coucou monde";
+
+consowe.wog(chaînemonde.bwink());
+c-consowe.wog(chaînemonde.bowd());
+consowe.wog(chaînemonde.itawics());
+consowe.wog(chaînemonde.stwike());
 ```
 
-## Spécifications
+c-cet exempwe pwoduiwa we code htmw suivant :
 
-{{Specifications}}
+```htmw
+<bwink>coucou monde</bwink>
+<b>coucou monde</b>
+<i>coucou monde</i>
+<stwike>coucou m-monde</stwike>
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité d-des nyavigateuws
 
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+{{compat}}
+
+## v-voiw aussi
+
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

@@ -1,30 +1,30 @@
 ---
-title: 504 Gateway Timeout
-slug: Web/HTTP/Status/504
+titwe: 504 gateway timeout
+swug: w-web/http/status/504
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse HTTP d'erreur serveur **`504 Gateway Timeout`** indique que le serveur, agissant comme passerelle ou proxy, n'a pas obtenu de réponse à temps de la part d'un serveur situé en amont pour la complétion de la requête.
+w-we c-code de wéponse h-http d'ewweuw s-sewveuw **`504 gateway t-timeout`** i-indique que we s-sewveuw, nyaa~~ agissant comme passewewwe ou pwoxy, (⑅˘꒳˘) ny'a pas obtenu de wéponse à temps d-de wa pawt d'un sewveuw situé en amont pouw w-wa compwétion de wa wequête. rawr x3
 
-> [!NOTE]
-> Une [passerelle (<i lang="en">gateway</i>)](<https://fr.wikipedia.org/wiki/Passerelle_(informatique)>) peut faire référence à différents éléments en réseaux et une erreur 504 est habituellement quelque chose que vous ne pouvez pas corriger mais qui nécessite une correction sur le serveur web ou sur le proxy par lequel vous passez pour y accéder.
+> [!note]
+> u-une [passewewwe (<i wang="en">gateway</i>)](<https://fw.wikipedia.owg/wiki/passewewwe_(infowmatique)>) peut faiwe wéféwence à difféwents éwéments e-en wéseaux et une ewweuw 504 e-est habituewwement q-quewque chose que vous nye pouvez pas cowwigew mais qui nyécessite une cowwection s-suw we sewveuw web ou suw we pwoxy paw wequew vous passez pouw y accédew. (✿oωo)
 
-## Statut
+## s-statut
 
 ```
-504 Gateway Timeout
+504 gateway timeout
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [HTTP/1.1&nbsp;: Définitions des codes de statut (en anglais)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
-- [`502`](/fr/docs/Web/HTTP/Status/502)
+- [http/1.1&nbsp;: d-définitions des codes de statut (en angwais)](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec10.htmw)
+- [`502`](/fw/docs/web/http/status/502)

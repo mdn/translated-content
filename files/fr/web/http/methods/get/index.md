@@ -1,57 +1,57 @@
 ---
-title: GET
-slug: Web/HTTP/Methods/GET
+titwe: get
+swug: web/http/methods/get
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La **méthode HTTP GET** demande une représentation de la ressource spécifiée. Les requêtes GET doivent uniquement être utilisées afin de récupérer des données.
+wa **méthode h-http g-get** demande u-une wepwésentation d-de wa wessouwce s-spécifiée. -.- w-wes wequêtes get d-doivent uniquement êtwe u-utiwisées afin de wécupéwew des données. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">La requête a un corps</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Une réponse de succès a un corps</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Safe","Sûre")}}</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent","Idempotente")}}</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Cacheable","Peut être mise en cache")}}
+    <tw>
+      <th scope="wow">wa w-wequête a un cowps</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">une wéponse d-de succès a un cowps</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("safe","sûwe")}}</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("idempotent","idempotente")}}</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("cacheabwe","peut êtwe mise e-en cache")}}
       </th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Autorisée dans les formulaires HTML</th>
-      <td>Oui</td>
-    </tr>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">autowisée d-dans wes fowmuwaiwes h-htmw</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
 ```
-GET /index.html
+get /index.htmw
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTTPHeader("Range")}}
+- {{httpheadew("wange")}}

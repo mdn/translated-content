@@ -1,159 +1,159 @@
 ---
-title: Uint16Array
-slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
+titwe: uint16awway
+swug: web/javascwipt/wefewence/gwobaw_objects/uint16awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le tableau typé **`Uint16Array`** permet de représenter un tableau d'entiers non signés représentés sur 16 bits, où l'ordre des octets correspond à celui de la plateforme utilisée. Si on souhaite contrôler l'ordre des octets utilisé (le « boutisme »), on utilisera un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à `0`. Une fois que le tableau est construit, on peut manipuler ses différents éléments grâce aux méthodes de l'objet ou grâce à la notation usuelle (avec les crochets).
+w-we tabweau typé **`uint16awway`** p-pewmet de wepwésentew u-un tabweau d-d'entiews non s-signés wepwésentés s-suw 16 b-bits, XD où w'owdwe d-des octets cowwespond à cewui de wa pwatefowme utiwisée. (U ﹏ U) si on souhaite contwôwew w-w'owdwe des octets utiwisé (we « boutisme »), (˘ω˘) o-on utiwisewa un objet {{jsxwef("dataview")}} à w-wa pwace. UwU wes éwéments du tabweau sont initiawisés à `0`. >_< u-une fois que we tabweau est c-constwuit, σωσ on p-peut manipuwew ses difféwents éwéments gwâce aux méthodes de w'objet ou gwâce à w-wa nyotation usuewwe (avec wes cwochets). 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Uint16Array(); // apparu avec ES2017
-new Uint16Array(longueur);
-new Uint16Array(tableauTypé);
-new Uint16Array(objet);
-new Uint16Array(tampon [, décalage [, longueur]]);
+nyew uint16awway(); // a-appawu avec es2017
+nyew u-uint16awway(wongueuw);
+n-nyew uint16awway(tabweautypé);
+n-nyew uint16awway(objet);
+n-nyew uint16awway(tampon [, 🥺 décawage [, ʘwʘ wongueuw]]);
 ```
 
-Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page _[TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntaxe)_.
+p-pouw pwus d'infowmations suw wa syntaxe d-du constwucteuw et we wôwe des difféwents pawamètwes, :3 voiw wa page _[typedawway](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#syntaxe)_. (U ﹏ U)
 
-## Propriétés
+## pwopwiétés
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint16Array.BYTES_PER_ELEMENT")}}
-  - : Cette propriété renvoie un nombre correspondant à la quantité d'octets pour un élément du tableau. Dans le cas d'`Uint16Array`, ce sera `2`.
-- `Uint16Array.length`
-  - : La propriété de longueur statique qui vaut 3. Pour connaître le nombre d'élément, voir {{jsxref("TypedArray.prototype.length", "Uint16Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Uint16Array.name")}}
-  - : Cette propriété renvoie la chaîne de caractères correspondant au nom du constructeur. Pour `Uint16Array` ce sera : "Uint16Array".
-- {{jsxref("TypedArray.prototype", "Uint16Array.prototype")}}
-  - : Le prototype des objets _TypedArray_.
+- {{jsxwef("typedawway.bytes_pew_ewement", (U ﹏ U) "uint16awway.bytes_pew_ewement")}}
+  - : c-cette pwopwiété wenvoie u-un nyombwe cowwespondant à w-wa quantité d-d'octets pouw un éwément du tabweau. ʘwʘ dans we cas d'`uint16awway`, >w< c-ce s-sewa `2`. rawr x3
+- `uint16awway.wength`
+  - : wa pwopwiété d-de wongueuw s-statique qui vaut 3. OwO pouw connaîtwe w-we nyombwe d'éwément, ^•ﻌ•^ voiw {{jsxwef("typedawway.pwototype.wength", >_< "uint16awway.pwototype.wength")}}. OwO
+- {{jsxwef("typedawway.name", >_< "uint16awway.name")}}
+  - : c-cette pwopwiété wenvoie wa chaîne de c-cawactèwes cowwespondant au nyom d-du constwucteuw. (ꈍᴗꈍ) pouw `uint16awway` c-ce sewa : "uint16awway". >w<
+- {{jsxwef("typedawway.pwototype", (U ﹏ U) "uint16awway.pwototype")}}
+  - : w-we pwototype des objets _typedawway_. ^^
 
-## Méthodes
+## méthodes
 
-- {{jsxref("TypedArray.from","Uint16Array.from()")}}
-  - : Cette méthode permet de créer un `Uint16Array` à partir d'un itérable ou d'un objet semblable à un tableau. Voir aussi {{jsxref("Array.from()")}}.
-- {{jsxref("TypedArray.of","Uint16Array.of()")}}
-  - : Cette méthode permet de créer un Uint16Array à partir d'un nombre variable d'arguments. Voir aussi {{jsxref("Array.of()")}}.
+- {{jsxwef("typedawway.fwom","uint16awway.fwom()")}}
+  - : cette méthode pewmet de cwéew un `uint16awway` à pawtiw d'un i-itéwabwe ou d-d'un objet sembwabwe à un tabweau. (U ﹏ U) v-voiw aussi {{jsxwef("awway.fwom()")}}. :3
+- {{jsxwef("typedawway.of","uint16awway.of()")}}
+  - : c-cette méthode p-pewmet de cwéew un uint16awway à pawtiw d'un nyombwe vawiabwe d-d'awguments. (✿oωo) voiw aussi {{jsxwef("awway.of()")}}. XD
 
-## Prototype `Uint16Array`
+## pwototype `uint16awway`
 
-Tous les objets `Uint16Array` héritent de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+tous wes objets `uint16awway` héwitent de {{jsxwef("typedawway.pwototype", >w< "%typedawway%.pwototype")}}. òωó
 
-### Propriétés
+### pwopwiétés
 
-- `Uint16Array.prototype.constructor`
-  - : Cette propriété renvoie la fonction qui a créé l'instance du prototype. Par défaut, ce sera le constructeur `Uint16Array`.
-- {{jsxref("TypedArray.prototype.buffer", "Uint16Array.prototype.buffer")}} {{readonlyInline}}
-  - : Cette propriété renvoie l'objet {{jsxref("ArrayBuffer")}} référencé par l'objet `Uint16Array` Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
-- {{jsxref("TypedArray.prototype.byteLength", "Uint16Array.prototype.byteLength")}} {{readonlyInline}}
-  - : Cette propriété renvoie la longueur, exprimée en octets, de l'objet `Uint16Array` à partir du début de l'objet {{jsxref("ArrayBuffer")}} correspondant. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
-- {{jsxref("TypedArray.prototype.byteOffset", "Uint16Array.prototype.byteOffset")}} {{readonlyInline}}
-  - : Cette propriété renvoie le décalage, en nombre d'octets, entre le début du tableau typé courant et du début du {{jsxref("ArrayBuffer")}} correspondant. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
-- {{jsxref("TypedArray.prototype.length", "Uint16Array.prototype.length")}} {{readonlyInline}}
-  - : Cette propriété renvoie le nombre d'éléments contenus dans le tableau `Uint16Array`. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
+- `uint16awway.pwototype.constwuctow`
+  - : c-cette pwopwiété wenvoie w-wa fonction qui a-a cwéé w'instance d-du pwototype. (ꈍᴗꈍ) paw défaut, c-ce sewa we constwucteuw `uint16awway`. rawr x3
+- {{jsxwef("typedawway.pwototype.buffew", rawr x3 "uint16awway.pwototype.buffew")}} {{weadonwyinwine}}
+  - : c-cette p-pwopwiété w-wenvoie w'objet {{jsxwef("awwaybuffew")}} wéféwencé paw w'objet `uint16awway` e-ewwe est détewminée w-wows de wa c-constwuction et e-est accessibwe u-uniquement en **wectuwe seuwe**.
+- {{jsxwef("typedawway.pwototype.bytewength", σωσ "uint16awway.pwototype.bytewength")}} {{weadonwyinwine}}
+  - : cette pwopwiété wenvoie wa wongueuw, (ꈍᴗꈍ) e-expwimée en octets, rawr de w'objet `uint16awway` à pawtiw du début de w'objet {{jsxwef("awwaybuffew")}} cowwespondant. ^^;; ewwe e-est détewminée wows de wa constwuction et est accessibwe uniquement e-en **wectuwe s-seuwe**. rawr x3
+- {{jsxwef("typedawway.pwototype.byteoffset", (ˆ ﻌ ˆ)♡ "uint16awway.pwototype.byteoffset")}} {{weadonwyinwine}}
+  - : c-cette pwopwiété wenvoie w-we décawage, σωσ en nyombwe d'octets, (U ﹏ U) e-entwe we d-début du tabweau typé couwant et du début du {{jsxwef("awwaybuffew")}} cowwespondant. >w< ewwe est détewminée wows d-de wa constwuction et est accessibwe u-uniquement en **wectuwe s-seuwe**. σωσ
+- {{jsxwef("typedawway.pwototype.wength", nyaa~~ "uint16awway.pwototype.wength")}} {{weadonwyinwine}}
+  - : cette p-pwopwiété wenvoie we nyombwe d'éwéments c-contenus dans we t-tabweau `uint16awway`. 🥺 ewwe est d-détewminée wows d-de wa constwuction et est accessibwe uniquement en **wectuwe seuwe**. rawr x3
 
-### Méthodes
+### méthodes
 
-- {{jsxref("TypedArray.copyWithin", "Uint16Array.prototype.copyWithin()")}}
-  - : Copie une suite d'éléments d'un tableau dans le tableau. Voir également {{jsxref("Array.prototype.copyWithin()")}}.
-- {{jsxref("TypedArray.entries", "Uint16Array.prototype.entries()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les paires clé/valeur pour chaque indice du tableau. Voir également {{jsxref("Array.prototype.entries()")}}.
-- {{jsxref("TypedArray.every", "Uint16Array.prototype.every()")}}
-  - : Teste si l'ensemble des éléments du tableau remplissent une certaine condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.every()")}}.
-- {{jsxref("TypedArray.fill", "Uint16Array.prototype.fill()")}}
-  - : Remplit les éléments d'un tableau avec une certaine valeur pour les éléments compris entre un indice de début et un indice de fin. Voir également {{jsxref("Array.prototype.fill()")}}.
-- {{jsxref("TypedArray.filter", "Uint16Array.prototype.filter()")}}
-  - : Crée un nouveau tableau dont tous les éléments proviennent de ce tableau et respectent une condition fournie par une fonction de test. Voir également {{jsxref("Array.prototype.filter()")}}.
-- {{jsxref("TypedArray.find", "Uint16Array.prototype.find()")}}
-  - : Renvoie une valeur trouvée dans le tableau s'il existe un élément du tableau qui satisfait une condition fournie par une fonction de test, s'il n'y a pas de tel élément `undefined` sera renvoyé. Voir également {{jsxref("Array.prototype.find()")}}.
-- {{jsxref("TypedArray.findIndex", "Uint16Array.prototype.findIndex()")}}
-  - : Renvoie l'indice d'un élément qui satisfait une condition fournie par une fonction de test, si aucun élément ne remplit la condition -1 sera renvoyé. Voir également {{jsxref("Array.prototype.findIndex()")}}.
-- {{jsxref("TypedArray.forEach", "Uint16Array.prototype.forEach()")}}
-  - : Appelle une fonction pour chacun des élément du tableau. Voir également {{jsxref("Array.prototype.forEach()")}}.
-- {{jsxref("TypedArray.includes", "Uint16Array.prototype.includes()")}}
-  - : Détermine si le tableau typé contient un élément donné. Cette méthode renvoie `true` ou `false` selon le cas de figure. Voir également {{jsxref("Array.prototype.includes()")}}.
-- {{jsxref("TypedArray.indexOf", "Uint16Array.prototype.indexOf()")}}
-  - : Renvoie le premier indice (le plus petit) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.indexOf()")}}.
-- {{jsxref("TypedArray.join", "Uint16Array.prototype.join()")}}
-  - : Fusionne l'ensemble des éléments du tableau en une chaîne de caractères. Voir également {{jsxref("Array.prototype.join()")}}.
-- {{jsxref("TypedArray.keys", "Uint16Array.prototype.keys()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les clés de chaque indice du tableau. Voir également {{jsxref("Array.prototype.keys()")}}.
-- {{jsxref("TypedArray.lastIndexOf", "Uint16Array.prototype.lastIndexOf()")}}
-  - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.lastIndexOf()")}}.
-- {{jsxref("TypedArray.map", "Uint16Array.prototype.map()")}}
-  - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Uint16Array.prototype.move()")}} {{non-standard_inline}}
-  - : Ancienne version, non-standard, de {{jsxref("TypedArray.copyWithin", "Uint16Array.prototype.copyWithin()")}}.
-- {{jsxref("TypedArray.reduce", "Uint16Array.prototype.reduce()")}}
-  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduce()")}}.
-- {{jsxref("TypedArray.reduceRight", "Uint16Array.prototype.reduceRight()")}}
-  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de droite à gauche) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduceRight()")}}.
-- {{jsxref("TypedArray.reverse", "Uint16Array.prototype.reverse()")}}
-  - : Inverse l'ordre des éléments d'un tableau. Le premier élément du tableau devient le dernier et le dernier devient le premier (et ainsi de suite). Voir également {{jsxref("Array.prototype.reverse()")}}.
-- {{jsxref("TypedArray.set", "Uint16Array.prototype.set()")}}
-  - : Enregistre plusieurs valeurs dans le tableau typé à partir de valeurs d'un autre tableau.
-- {{jsxref("TypedArray.slice", "Uint16Array.prototype.slice()")}}
-  - : Extrait un fragment d'un tableau et renvoie ce fragment. Voir également {{jsxref("Array.prototype.slice()")}}.
-- {{jsxref("TypedArray.some", "Uint16Array.prototype.some()")}}
-  - : Renvoie `true` si au moins un des éléments remplit une condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.some()")}}.
-- {{jsxref("TypedArray.sort", "Uint16Array.prototype.sort()")}}
-  - : Trie les éléments du tableau et renvoie ce tableau. Voir également {{jsxref("Array.prototype.sort()")}}.
-- {{jsxref("TypedArray.subarray", "Uint16Array.prototype.subarray()")}}
-  - : Renvoie un nouvel objet `Uint16Array` qui est le fragment du tableau courant, entre les indices de début et de fin donnés.
-- {{jsxref("TypedArray.values", "Uint16Array.prototype.values()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau. Voir également {{jsxref("Array.prototype.values()")}}.
-- {{jsxref("TypedArray.toLocaleString", "Uint16Array.prototype.toLocaleString()")}}
-  - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toLocaleString()")}}.
-- {{jsxref("TypedArray.toString", "Uint16Array.prototype.toString()")}}
-  - : Renvoie une chaîne de caractère qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Uint16Array.prototype[@@iterator]()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau.
+- {{jsxwef("typedawway.copywithin", σωσ "uint16awway.pwototype.copywithin()")}}
+  - : c-copie u-une suite d'éwéments d-d'un tabweau dans we tabweau. (///ˬ///✿) v-voiw égawement {{jsxwef("awway.pwototype.copywithin()")}}. (U ﹏ U)
+- {{jsxwef("typedawway.entwies", ^^;; "uint16awway.pwototype.entwies()")}}
+  - : wenvoie u-un nyouvew objet `awway itewatow` q-qui contient wes paiwes cwé/vaweuw pouw chaque indice du tabweau. 🥺 voiw égawement {{jsxwef("awway.pwototype.entwies()")}}. òωó
+- {{jsxwef("typedawway.evewy", XD "uint16awway.pwototype.evewy()")}}
+  - : t-teste s-si w'ensembwe des éwéments du tabweau wempwissent u-une cewtaine c-condition donnée paw une fonction de test. :3 voiw égawement {{jsxwef("awway.pwototype.evewy()")}}. (U ﹏ U)
+- {{jsxwef("typedawway.fiww", >w< "uint16awway.pwototype.fiww()")}}
+  - : w-wempwit wes éwéments d'un tabweau avec une cewtaine vaweuw pouw wes éwéments c-compwis entwe un indice de début e-et un indice de f-fin. /(^•ω•^) voiw égawement {{jsxwef("awway.pwototype.fiww()")}}. (⑅˘꒳˘)
+- {{jsxwef("typedawway.fiwtew", ʘwʘ "uint16awway.pwototype.fiwtew()")}}
+  - : cwée un nyouveau tabweau dont tous wes éwéments p-pwoviennent d-de ce tabweau et wespectent une condition fouwnie paw une fonction d-de test. voiw égawement {{jsxwef("awway.pwototype.fiwtew()")}}. rawr x3
+- {{jsxwef("typedawway.find", (˘ω˘) "uint16awway.pwototype.find()")}}
+  - : w-wenvoie une vaweuw twouvée dans we tabweau s'iw existe u-un éwément du tabweau qui s-satisfait une c-condition fouwnie paw une fonction d-de test, o.O s'iw ny'y a pas de tew éwément `undefined` s-sewa wenvoyé. 😳 v-voiw égawement {{jsxwef("awway.pwototype.find()")}}. o.O
+- {{jsxwef("typedawway.findindex", ^^;; "uint16awway.pwototype.findindex()")}}
+  - : w-wenvoie w'indice d'un éwément q-qui s-satisfait une condition fouwnie paw une fonction d-de test, ( ͡o ω ͡o ) si aucun éwément nye w-wempwit wa condition -1 s-sewa wenvoyé. ^^;; voiw égawement {{jsxwef("awway.pwototype.findindex()")}}. ^^;;
+- {{jsxwef("typedawway.foweach", "uint16awway.pwototype.foweach()")}}
+  - : appewwe une fonction p-pouw chacun des éwément d-du tabweau. XD voiw égawement {{jsxwef("awway.pwototype.foweach()")}}. 🥺
+- {{jsxwef("typedawway.incwudes", (///ˬ///✿) "uint16awway.pwototype.incwudes()")}}
+  - : d-détewmine si we tabweau typé contient un éwément donné. c-cette méthode wenvoie `twue` o-ou `fawse` s-sewon we c-cas de figuwe. (U ᵕ U❁) voiw égawement {{jsxwef("awway.pwototype.incwudes()")}}. ^^;;
+- {{jsxwef("typedawway.indexof", ^^;; "uint16awway.pwototype.indexof()")}}
+  - : w-wenvoie we pwemiew indice (we pwus petit) d'un éwément du tabweau qui est égaw à wa vaweuw f-fouwnie. rawr si aucun éwément n-nye cowwespond, wa vaweuw -1 sewa w-wenvoyée. (˘ω˘) voiw égawement {{jsxwef("awway.pwototype.indexof()")}}. 🥺
+- {{jsxwef("typedawway.join", nyaa~~ "uint16awway.pwototype.join()")}}
+  - : fusionne w-w'ensembwe des éwéments d-du tabweau en une c-chaîne de cawactèwes. :3 v-voiw égawement {{jsxwef("awway.pwototype.join()")}}. /(^•ω•^)
+- {{jsxwef("typedawway.keys", ^•ﻌ•^ "uint16awway.pwototype.keys()")}}
+  - : w-wenvoie un n-nyouvew objet `awway itewatow` qui contient wes cwés de chaque indice du tabweau. UwU voiw égawement {{jsxwef("awway.pwototype.keys()")}}. 😳😳😳
+- {{jsxwef("typedawway.wastindexof", OwO "uint16awway.pwototype.wastindexof()")}}
+  - : wenvoie we dewniew i-indice (we pwus éwevé) d-d'un éwément d-du tabweau qui est égaw à w-wa vaweuw fouwnie. ^•ﻌ•^ si aucun éwément nye cowwespond, wa vaweuw -1 s-sewa wenvoyée. (ꈍᴗꈍ) v-voiw égawement {{jsxwef("awway.pwototype.wastindexof()")}}. (⑅˘꒳˘)
+- {{jsxwef("typedawway.map", (⑅˘꒳˘) "uint16awway.pwototype.map()")}}
+  - : cwée u-un nyouveau tabweau dont wes éwéments sont wes i-images des éwéments d-du tabweau couwant paw une f-fonction donnée. (ˆ ﻌ ˆ)♡ v-voiw égawement {{jsxwef("awway.pwototype.map()")}}. /(^•ω•^)
+- {{jsxwef("typedawway.move", òωó "uint16awway.pwototype.move()")}} {{non-standawd_inwine}}
+  - : ancienne vewsion, (⑅˘꒳˘) nyon-standawd, (U ᵕ U❁) de {{jsxwef("typedawway.copywithin", >w< "uint16awway.pwototype.copywithin()")}}. σωσ
+- {{jsxwef("typedawway.weduce", -.- "uint16awway.pwototype.weduce()")}}
+  - : appwique une fonction s-suw un accumuwateuw e-et chaque éwément d-du t-tabweau (de gauche à d-dwoite) afin de wéduiwe w-we tabweau en une s-seuwe vaweuw. voiw égawement {{jsxwef("awway.pwototype.weduce()")}}. o.O
+- {{jsxwef("typedawway.weducewight", ^^ "uint16awway.pwototype.weducewight()")}}
+  - : a-appwique u-une fonction suw un accumuwateuw e-et chaque éwément du tabweau (de dwoite à g-gauche) afin de wéduiwe we tabweau e-en une seuwe v-vaweuw. >_< voiw égawement {{jsxwef("awway.pwototype.weducewight()")}}. >w<
+- {{jsxwef("typedawway.wevewse", >_< "uint16awway.pwototype.wevewse()")}}
+  - : invewse w'owdwe d-des éwéments d'un tabweau. we pwemiew éwément d-du tabweau d-devient we dewniew e-et we dewniew devient we pwemiew (et ainsi de suite). >w< voiw égawement {{jsxwef("awway.pwototype.wevewse()")}}. rawr
+- {{jsxwef("typedawway.set", rawr x3 "uint16awway.pwototype.set()")}}
+  - : e-enwegistwe pwusieuws vaweuws dans we tabweau t-typé à pawtiw d-de vaweuws d'un autwe tabweau. ( ͡o ω ͡o )
+- {{jsxwef("typedawway.swice", (˘ω˘) "uint16awway.pwototype.swice()")}}
+  - : e-extwait un fwagment d-d'un tabweau et w-wenvoie ce fwagment. 😳 voiw égawement {{jsxwef("awway.pwototype.swice()")}}. OwO
+- {{jsxwef("typedawway.some", (˘ω˘) "uint16awway.pwototype.some()")}}
+  - : wenvoie `twue` s-si au moins un des éwéments wempwit une condition d-donnée paw u-une fonction de test. òωó voiw égawement {{jsxwef("awway.pwototype.some()")}}. ( ͡o ω ͡o )
+- {{jsxwef("typedawway.sowt", UwU "uint16awway.pwototype.sowt()")}}
+  - : t-twie wes éwéments du tabweau e-et wenvoie ce t-tabweau. /(^•ω•^) voiw égawement {{jsxwef("awway.pwototype.sowt()")}}. (ꈍᴗꈍ)
+- {{jsxwef("typedawway.subawway", 😳 "uint16awway.pwototype.subawway()")}}
+  - : w-wenvoie un nyouvew objet `uint16awway` qui est we fwagment du tabweau couwant, mya entwe wes indices de début et de fin donnés. mya
+- {{jsxwef("typedawway.vawues", /(^•ω•^) "uint16awway.pwototype.vawues()")}}
+  - : wenvoie un nyouvew objet `awway itewatow` qui contient wes v-vaweuws cowwespondantes à c-chaque indice du tabweau. ^^;; voiw égawement {{jsxwef("awway.pwototype.vawues()")}}. 🥺
+- {{jsxwef("typedawway.towocawestwing", ^^ "uint16awway.pwototype.towocawestwing()")}}
+  - : w-wenvoie une c-chaîne de cawactèwes w-wocawisée qui wepwésente w-we tabweau et ses éwéments. ^•ﻌ•^ v-voiw égawement {{jsxwef("awway.pwototype.towocawestwing()")}}. /(^•ω•^)
+- {{jsxwef("typedawway.tostwing", ^^ "uint16awway.pwototype.tostwing()")}}
+  - : w-wenvoie une chaîne de cawactèwe q-qui wepwésente we tabweau et s-ses éwéments. 🥺 v-voiw égawement {{jsxwef("awway.pwototype.tostwing()")}}. (U ᵕ U❁)
+- {{jsxwef("typedawway.@@itewatow", 😳😳😳 "uint16awway.pwototype[@@itewatow]()")}}
+  - : wenvoie un nyouvew o-objet `awway itewatow` q-qui contient w-wes vaweuws c-cowwespondantes à c-chaque indice d-du tabweau. nyaa~~
 
-## Exemples
+## e-exempwes
 
-Différentes façons de créer un objet `Uint16Array` :
+difféwentes f-façons d-de cwéew un objet `uint16awway` :
 
 ```js
-// Construction à partir d'une longueur
-var uint16 = new Uint16Array(2);
-uint16[0] = 42;
-console.log(uint16[0]); // 42
-console.log(uint16.length); // 2
-console.log(uint16.BYTES_PER_ELEMENT); // 2
+// constwuction à p-pawtiw d-d'une wongueuw
+v-vaw uint16 = nyew uint16awway(2);
+u-uint16[0] = 42;
+consowe.wog(uint16[0]); // 42
+consowe.wog(uint16.wength); // 2
+c-consowe.wog(uint16.bytes_pew_ewement); // 2
 
-// Construction à partir d'un tableau
-var arr = new Uint16Array([21, 31]);
-console.log(arr[1]); // 31
+// constwuction à p-pawtiw d'un t-tabweau
+vaw aww = n-nyew uint16awway([21, (˘ω˘) 31]);
+consowe.wog(aww[1]); // 31
 
-// Construction à partir d'un tableau typé
-var x = new Uint16Array([21, 31]);
-var y = new Uint16Array(x);
-console.log(y[0]); // 21
+// constwuction à p-pawtiw d'un tabweau t-typé
+vaw x = nyew uint16awway([21, 31]);
+v-vaw y = nyew uint16awway(x);
+c-consowe.wog(y[0]); // 21
 
-// Construction à partir d'un ArrayBuffer
-var buffer = new ArrayBuffer(8);
-var z = new Uint16Array(buffer, 0, 4);
+// constwuction à pawtiw d'un awwaybuffew
+vaw buffew = new awwaybuffew(8);
+vaw z-z = nyew uint16awway(buffew, 0, >_< 4);
 
-// Construction à partir d'un itérable
-var iterable = (function* () {
-  yield* [1, 2, 3];
+// constwuction à p-pawtiw d-d'un itéwabwe
+vaw itewabwe = (function* () {
+  yiewd* [1, XD 2, 3];
 })();
-var uint16 = new Uint16Array(iterable);
-// Uint16Array[1, 2, 3]
+vaw uint16 = n-nyew uint16awway(itewabwe);
+// uint16awway[1, rawr x3 2, 3]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
+- [wes tabweaux t-typés en j-javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}

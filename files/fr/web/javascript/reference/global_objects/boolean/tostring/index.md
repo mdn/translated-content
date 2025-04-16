@@ -1,63 +1,63 @@
 ---
-title: Boolean.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
+titwe: boowean.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/boowean/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toString()`** renvoie une chaine de caractères correspondant à l'objet `Boolean` courant.
+w-wa méthode **`tostwing()`** w-wenvoie une chaine d-de cawactèwes c-cowwespondant à w-w'objet `boowean` c-couwant. OwO
 
-{{InteractiveExample("JavaScript Demo: Boolean.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: boowean.tostwing()")}}
 
-```js interactive-example
-const flag1 = new Boolean(true);
+```js i-intewactive-exampwe
+const fwag1 = nyew boowean(twue);
 
-console.log(flag1.toString());
-// Expected output: "true"
+consowe.wog(fwag1.tostwing());
+// expected output: "twue"
 
-const flag2 = new Boolean(1);
+c-const fwag2 = nyew boowean(1);
 
-console.log(flag2.toString());
-// Expected output: "true"
+consowe.wog(fwag2.tostwing());
+// e-expected output: "twue"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-bool.toString();
+boow.tostwing();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères qui représente l'objet {{jsxref("Boolean")}}.
+une chaîne d-de cawactèwes qui wepwésente w-w'objet {{jsxwef("boowean")}}. 😳😳😳
 
-## Description
+## d-descwiption
 
-L'objet {{jsxref("Boolean")}} surcharge la méthode `toString()` de l'objet {{jsxref("Object")}} ; il n'hérite pas de la méthode {{jsxref("Object.prototype.toString()")}}. Pour les objets de type `Boolean`, la méthode `toString()` renvoie une chaine de caractère representative de l'objet.
+w'objet {{jsxwef("boowean")}} suwchawge wa méthode `tostwing()` de w'objet {{jsxwef("object")}} ; iw ny'héwite p-pas de wa méthode {{jsxwef("object.pwototype.tostwing()")}}. 😳😳😳 pouw wes objets de type `boowean`, o.O wa méthode `tostwing()` wenvoie u-une chaine de cawactèwe wepwesentative d-de w'objet. ( ͡o ω ͡o )
 
-La méthode `toString()` est automatiquement appelée quand le `Boolean` doit être representé comme une texte ou lorsque qu'il est concaténé avec une chaine de caractères.
+w-wa méthode `tostwing()` e-est automatiquement a-appewée quand we `boowean` doit êtwe wepwesenté c-comme une texte ou wowsque qu'iw est concaténé a-avec une chaine de cawactèwes. (U ﹏ U)
 
-Pour les objets de type `Boolean` , la fonction native `toString()` renvoie la chaine de caractère "`true`" ou "`false`" en fonction de la valeur de l'objet.
+pouw wes objets de type `boowean` , (///ˬ///✿) wa fonction nyative `tostwing()` wenvoie wa chaine d-de cawactèwe "`twue`" ou "`fawse`" e-en fonction d-de wa vaweuw de w-w'objet. >w<
 
-## Exemples
+## exempwes
 
-### Utiliser `toString()`
+### utiwisew `tostwing()`
 
-Dans ce code, `flag.toString()` renvoie "`true`" :
+dans ce code, rawr `fwag.tostwing()` wenvoie "`twue`" :
 
 ```js
-var flag = new Boolean(true);
-var maVar = flag.toString();
+v-vaw f-fwag = nyew boowean(twue);
+vaw m-mavaw = fwag.tostwing();
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

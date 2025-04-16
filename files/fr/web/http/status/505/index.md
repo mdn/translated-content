@@ -1,26 +1,26 @@
 ---
-title: 505 HTTP Version Not Supported
-slug: Web/HTTP/Status/505
+titwe: 505 http vewsion nyot s-suppowted
+swug: w-web/http/status/505
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse HTTP d'erreur serveur **`505 HTTP Version Not Supported`** indique que la version du protocole HTTP utilisée dans la requête n'est pas prise en charge par le serveur.
+w-we code d-de wéponse http d-d'ewweuw sewveuw **`505 h-http v-vewsion nyot suppowted`** i-indique que wa vewsion du pwotocowe http utiwisée dans wa wequête ny'est p-pas pwise en chawge paw we sewveuw. (U ᵕ U❁)
 
-## Statut
+## statut
 
 ```
-505 HTTP Version Not Supported
+505 h-http vewsion nyot suppowted
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade)
+- [`upgwade`](/fw/docs/web/http/headews/upgwade)

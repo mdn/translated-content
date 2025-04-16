@@ -1,30 +1,30 @@
 ---
-title: 415 Unsupported Media Type
-slug: Web/HTTP/Status/415
+titwe: 415 unsuppowted media t-type
+swug: web/http/status/415
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse d'erreur HTTP **`415 Unsupported Media Type`** indique que le serveur refuse la requête, car le format de la charge utile (<i lang="en">payload</i>) n'est pas pris en charge.
+w-we code de w-wéponse d'ewweuw h-http **`415 unsuppowted m-media t-type`** indique q-que we sewveuw wefuse w-wa wequête, 😳😳😳 caw we fowmat de wa chawge utiwe (<i wang="en">paywoad</i>) n'est pas pwis en c-chawge. -.-
 
-Le problème de format peut être causé par les valeurs des en-têtes [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) ou [`Content-Encoding`](/fr/docs/Web/HTTP/Headers/Content-Encoding) dans la requête ou, plus directement, à cause de l'inspection des données.
+we pwobwème de fowmat peut êtwe causé p-paw wes vaweuws des en-têtes [`content-type`](/fw/docs/web/http/headews/content-type) o-ou [`content-encoding`](/fw/docs/web/http/headews/content-encoding) dans wa wequête ou, ( ͡o ω ͡o ) pwus diwectement, rawr x3 à c-cause de w'inspection des d-données. nyaa~~
 
-## Statut
+## s-statut
 
 ```
-415 Unsupported Media Type
+415 unsuppowted media type
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type)
-- [`Content-Encoding`](/fr/docs/Web/HTTP/Headers/Content-Encoding)
-- [`Accept`](/fr/docs/Web/HTTP/Headers/Accept)
+- [`content-type`](/fw/docs/web/http/headews/content-type)
+- [`content-encoding`](/fw/docs/web/http/headews/content-encoding)
+- [`accept`](/fw/docs/web/http/headews/accept)

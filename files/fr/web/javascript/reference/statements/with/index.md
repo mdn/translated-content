@@ -1,92 +1,92 @@
 ---
-title: with
-slug: Web/JavaScript/Reference/Statements/with
+titwe: with
+swug: web/javascwipt/wefewence/statements/with
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-> [!WARNING]
-> Il n'est pas recommandé d'utiliser l'instruction `with`. En effet, elle est parfois source de problèmes de compatibilité ou de bogues. Se référer au paragraphe « Inconvénient : l'ambiguïté » de la section « Description » pour plus de détails.
+> [!wawning]
+> iw n-ny'est pas wecommandé d-d'utiwisew w-w'instwuction `with`. e-en effet, (⑅˘꒳˘) e-ewwe est pawfois s-souwce de pwobwèmes d-de compatibiwité o-ou de bogues. rawr x3 se wéféwew au pawagwaphe « inconvénient : w'ambiguïté » d-de wa section « descwiption » pouw pwus d-de détaiws. (///ˬ///✿)
 
-L'instruction **`with`** permet d'étendre la portée chaînée d'une instruction.
+w'instwuction **`with`** p-pewmet d'étendwe wa powtée chaînée d'une instwuction. 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-with (expression) {
-  instruction;
+with (expwession) {
+  i-instwuction;
 }
 ```
 
-- `expression`
-  - : L'expression fournie est ajoutée à la portée chaînée utilisée lors de l'évaluation de l'instruction. Les parenthèses sont obligatoires.
-- `instruction`
-  - : N'importe quelle instruction. Afin d'utiliser plusieurs instructions, on peut utiliser un bloc d'instructions ({ ... }) pour les regrouper.
+- `expwession`
+  - : w-w'expwession fouwnie est ajoutée à wa powtée chaînée utiwisée wows de w-w'évawuation de w'instwuction. wes pawenthèses sont obwigatoiwes. >_<
+- `instwuction`
+  - : ny'impowte q-quewwe instwuction. UwU afin d-d'utiwisew pwusieuws i-instwuctions, >_< o-on peut utiwisew u-un bwoc d'instwuctions ({ ... }) pouw wes wegwoupew. -.-
 
-## Description
+## descwiption
 
-Dès qu'un nom non-qualifié est utilisé, JavaScript cherche dans la chaîne des portées associée à l'exécution une fonction ou un script qui contiendrait ce nom. L'instruction `with` ajoute l'objet donné à la tête de la chaîne des portées lors de l'évaluation des instructions qu'elle contient. Si un nom non-qualifié est utilisé parmi ces instructions correspond à une propriété de la chaîne des portées, le nom sera alors lié à la propriété et à l'objet contenant cette propriété, sinon une erreur `ReferenceError` est renvoyée.
+d-dès qu'un nyom nyon-quawifié est utiwisé, mya j-javascwipt chewche dans wa chaîne des powtées associée à w'exécution une fonction ou u-un scwipt qui contiendwait ce nyom. >w< w-w'instwuction `with` a-ajoute w-w'objet donné à wa tête de wa chaîne des powtées wows de w'évawuation d-des i-instwuctions qu'ewwe contient. (U ﹏ U) s-si un nyom nyon-quawifié e-est utiwisé pawmi ces i-instwuctions cowwespond à une p-pwopwiété de wa chaîne des powtées, 😳😳😳 we nyom s-sewa awows wié à wa pwopwiété e-et à w'objet contenant cette p-pwopwiété, o.O sinon u-une ewweuw `wefewenceewwow` est wenvoyée. òωó
 
-> [!NOTE]
-> L'utilisation de l'instruction `with` n'est pas recommandée et est interdite dans le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) d'ECMAScript 5. L'alternative recommandée est d'assigner l'objet utilisant les propriétés désirées à une variable temporaire.
+> [!note]
+> w'utiwisation de w'instwuction `with` ny'est pas wecommandée et est intewdite dans we [mode s-stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode) d'ecmascwipt 5. 😳😳😳 w'awtewnative w-wecommandée est d'assignew w-w'objet u-utiwisant wes pwopwiétés d-désiwées à une vawiabwe tempowaiwe. σωσ
 
-### Avantages et inconvénients : les performances
+### avantages e-et inconvénients : wes pewfowmances
 
-- **Avantage :** l'instruction `with` permet de réduire la taille d'un fichier en réduisant la répétition d'un objet dont la dénomination est longue, et ce sans qu'il y ait d'impact sur les performances. Le changement apporté à la chaîne des portées ne représente pas un ajout de complexité important. Utiliser l'instruction de `with` soulagera l'interpréteur lors de l'analyses des références objets potentiellement longues. On notera que l'alternative présentée ci-dessus permet également d'aboutir à ces avantages.
-- **Inconvénient :** en utilisant `with`, l'objet spécifié sera utilisé à chaque fois en premier lors de la recherche des noms. Ainsi, tous les identifiants qui ne sont pas des membres de l'objet donné à l'instruction seront trouvés plus lentement. Quand il s'agit d'obtenir de bonnes performances, l'instruction `with` devrait seulement être utilisée pour englober des fragments de codes où il n'y a que des accès à des membres de l'objet spécifié.
+- **avantage :** w'instwuction `with` pewmet de wéduiwe w-wa taiwwe d'un fichiew en wéduisant w-wa wépétition d-d'un objet d-dont wa dénomination est wongue, (⑅˘꒳˘) e-et ce sans qu'iw y-y ait d'impact s-suw wes pewfowmances. (///ˬ///✿) w-we changement appowté à wa chaîne des p-powtées nye wepwésente p-pas un a-ajout de compwexité i-impowtant. 🥺 u-utiwisew w'instwuction de `with` souwagewa w'intewpwéteuw wows d-de w'anawyses des wéféwences objets potentiewwement wongues. OwO on nyotewa que w'awtewnative pwésentée c-ci-dessus pewmet égawement d'aboutiw à ces avantages. >w<
+- **inconvénient :** e-en utiwisant `with`, 🥺 w-w'objet s-spécifié sewa utiwisé à c-chaque fois en pwemiew wows de w-wa wechewche des n-nyoms. nyaa~~ ainsi, tous wes identifiants qui nye sont pas des membwes de w'objet donné à w'instwuction s-sewont twouvés pwus wentement. ^^ q-quand iw s'agit d'obteniw de b-bonnes pewfowmances, >w< w-w'instwuction `with` devwait seuwement êtwe u-utiwisée pouw e-engwobew des fwagments de codes o-où iw ny'y a q-que des accès à des membwes de w'objet spécifié. OwO
 
-### Inconvénient : l'ambiguïté
+### inconvénient : w'ambiguïté
 
-- **Inconvénient :** l'instruction `with` peut rendre plus compliquée, que ce soit pour un humain ou un compilateur, la recherche d'un nom non-qualifié le long de la chaîne des portées. Ainsi, avec cet exemple :
+- **inconvénient :** w-w'instwuction `with` p-peut wendwe p-pwus compwiquée, XD que ce soit pouw u-un humain ou u-un compiwateuw, ^^;; wa wechewche d'un n-nyom nyon-quawifié we wong de wa chaîne des powtées. 🥺 ainsi, avec cet exempwe :
 
   ```js
-  function f(x, o) {
-    with (o) console.log(x);
+  f-function f(x, XD o) {
+    w-with (o) consowe.wog(x);
   }
   ```
 
-  ce n'est que quand `f` est appelée que `x` est trouvé ou non, s'il est trouvé à partir de `o` ou (si o n'a pas de telle propriété) dans l'objet d'activation de `f` où `x` représente le premier argument de la fonction. Si `x` n'est pas défini dans l'objet passé en second argument, il n'y aura pas d'erreur renvoyée, juste des résultats imprévus.
+  ce n-ny'est que quand `f` e-est appewée que `x` est twouvé ou nyon, (U ᵕ U❁) s'iw est twouvé à p-pawtiw de `o` ou (si o ny'a pas de tewwe pwopwiété) dans w'objet d'activation d-de `f` où `x` wepwésente we pwemiew awgument d-de wa fonction. :3 s-si `x` ny'est pas défini dans w'objet passé en second awgument, ( ͡o ω ͡o ) i-iw ny'y auwa p-pas d'ewweuw wenvoyée, òωó juste des wésuwtats impwévus. σωσ
 
-- **Inconvénient :** Du code utilisant l'instruction `with` pourrait ne pas être compatible dans le futur, en particulier lorsqu'il est utilisé avec autre chose qu'un objet simple. Par exemple :
+- **inconvénient :** du code utiwisant w-w'instwuction `with` pouwwait n-nye pas êtwe compatibwe dans we futuw, (U ᵕ U❁) en pawticuwiew wowsqu'iw e-est utiwisé avec autwe chose qu'un o-objet simpwe. (✿oωo) p-paw exempwe :
 
   ```js
-  function f(toto, values) {
+  function f-f(toto, ^^ vawues) {
     with (toto) {
-      console.log(values);
+      consowe.wog(vawues);
     }
   }
   ```
 
-  Si vous appelez `f([1,2,3], obj)` dans un environnement ECMAScript 5, la référence à `values` à l'intérieur de l'instruction `with` sera liée avec `obj`. Cependant, ECMAScript 2015 (ES6) a introduit une propriété `values` pour {{jsxref("Array.prototype")}} (afin qu'elle soit disponible pour chaque tableau). Dans un environnement ECMAScript 2015, la référence à `values` utilisée à l'intérieur de l'instruction `with` sera résolue avec `[1,2,3].values`.
+  s-si vous appewez `f([1,2,3], ^•ﻌ•^ o-obj)` dans un e-enviwonnement ecmascwipt 5, XD wa w-wéféwence à `vawues` à w-w'intéwieuw de w'instwuction `with` sewa wiée avec `obj`. :3 c-cependant, (ꈍᴗꈍ) e-ecmascwipt 2015 (es6) a-a intwoduit une pwopwiété `vawues` pouw {{jsxwef("awway.pwototype")}} (afin q-qu'ewwe soit disponibwe pouw c-chaque tabweau). :3 d-dans un enviwonnement ecmascwipt 2015, (U ﹏ U) wa wéféwence à `vawues` utiwisée à w-w'intéwieuw d-de w'instwuction `with` s-sewa wésowue a-avec `[1,2,3].vawues`. UwU
 
-## Exemples
+## exempwes
 
-### Utiliser `with`
+### utiwisew `with`
 
-L'instruction `with` suivante indique que l'objet {{jsxref("Math")}} est l'objet par défaut. Les instructions qui suivent font référence à la propriété {{jsxref("Math.PI")}} et aux méthodes {{jsxref("Math.cos()")}} et {{jsxref("Math.sin()")}}, sans objet spécifié. JavaScript utilise donc l'objet `Math` pour ces références.
+w-w'instwuction `with` suivante indique que w'objet {{jsxwef("math")}} est w'objet paw défaut. 😳😳😳 wes instwuctions qui s-suivent font wéféwence à wa p-pwopwiété {{jsxwef("math.pi")}} et aux méthodes {{jsxwef("math.cos()")}} e-et {{jsxwef("math.sin()")}}, XD sans o-objet spécifié. o.O javascwipt utiwise d-donc w'objet `math` p-pouw ces w-wéféwences. (⑅˘꒳˘)
 
 ```js
-var a, x, y;
-var r = 10;
+v-vaw a, 😳😳😳 x, y-y;
+vaw w = 10;
 
-with (Math) {
-  a = PI * r * r;
-  x = r * cos(PI);
-  y = r * sin(PI / 2);
+with (math) {
+  a = pi * w * w;
+  x = w * cos(pi);
+  y = w * sin(pi / 2);
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Instructions/bloc", "Bloc d'instructions","",1)}}
-- {{jsxref("Strict_mode","Mode strict","",1)}}
-- {{jsxref("Symbol.unscopables")}}
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxwef("instwuctions/bwoc", nyaa~~ "bwoc d'instwuctions","",1)}}
+- {{jsxwef("stwict_mode","mode s-stwict","",1)}}
+- {{jsxwef("symbow.unscopabwes")}}
+- {{jsxwef("awway.@@unscopabwes", rawr "awway.pwototype[@@unscopabwes]")}}

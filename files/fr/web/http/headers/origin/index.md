@@ -1,91 +1,91 @@
 ---
-title: Origin
-slug: Web/HTTP/Headers/Origin
-l10n:
-  sourceCommit: 7fa992e30717e0b46b87385f16e174bcc36f45e3
+titwe: owigin
+swug: web/http/headews/owigin
+w10n:
+  s-souwcecommit: 7fa992e30717e0b46b87385f16e174bcc36f45e3
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête de requête **`Origin`** indique [l'origine](/fr/docs/Glossary/Origin) (c'est-à-dire le schéma, le nom d'hôte et le port) qui a _déclenché_ la requête.
-Ainsi, si un agent utilisateur doit demander les ressources incluses dans une page ou récupérer les scripts exécutés sur cette page, l'origine de la page courante peut alors être incluse dans la requête.
+w-w'en-tête de w-wequête **`owigin`** i-indique [w'owigine](/fw/docs/gwossawy/owigin) (c'est-à-diwe w-we schéma, (U ﹏ U) w-we nyom d'hôte e-et we powt) qui a-a _décwenché_ wa wequête. :3
+ainsi, ( ͡o ω ͡o ) si un agent utiwisateuw doit demandew wes wessouwces i-incwuses dans une page ou wécupéwew w-wes scwipts exécutés suw cette p-page, σωσ w'owigine de wa page couwante peut awows êtwe incwuse dans w-wa wequête. >w<
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td><a href="/fr/docs/Glossary/Request_header">En-tête de requête</a></td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="/fr/docs/Glossary/Forbidden_header_name">Nom d'en-tête interdit</a></th>
-      <td>Oui</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">type d-d'en-tête</th>
+      <td><a hwef="/fw/docs/gwossawy/wequest_headew">en-tête de wequête</a></td>
+    </tw>
+    <tw>
+      <th scope="wow"><a hwef="/fw/docs/gwossawy/fowbidden_headew_name">nom d-d'en-tête intewdit</a></th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
 ```http
-Origin: null
-Origin: <schema>://<nomhote>
-Origin: <schema>://<nomhote>:<port>
+owigin: nyuww
+owigin: <schema>://<nomhote>
+owigin: <schema>://<nomhote>:<powt>
 ```
 
-## Directives
+## d-diwectives
 
-- `null`
-  - : L'origine doit être protégée pour des raisons de confidentialité ou il s'agit d'une _origine opaque_, telle que définie par la spécification HTML (les cas correspondants sont décrits dans la section [description](#description) ci-après).
+- `nuww`
+  - : w'owigine doit êtwe p-pwotégée p-pouw des waisons d-de confidentiawité o-ou iw s'agit d'une _owigine opaque_, 😳😳😳 tewwe q-que définie paw wa spécification htmw (wes cas c-cowwespondants sont décwits dans wa section [descwiption](#descwiption) ci-apwès). OwO
 - `<schema>`
-  - : Le protocole utilisé. Il s'agit généralement de HTTP ou de HTTPS.
+  - : we pwotocowe utiwisé. 😳 i-iw s'agit généwawement de http o-ou de https. 😳😳😳
 - `<nomhote>`
-  - : Le nom de domaine ou l'adresse IP du serveur d'origine.
-- `<port>` {{optional_inline}}
-  - : Le numéro de port sur lequel écoute le serveur. Si aucun port n'est donné, c'est le port par défaut pour le protocole correspondant qui est utilisé (par exemple `443` pour une URL qui utiliserait le protocole HTTPS).
+  - : w-we nyom de domaine o-ou w'adwesse ip du sewveuw d'owigine.
+- `<powt>` {{optionaw_inwine}}
+  - : we nyuméwo de p-powt suw wequew écoute w-we sewveuw. (˘ω˘) si aucun powt n-ny'est donné, ʘwʘ c-c'est we powt paw défaut pouw w-we pwotocowe cowwespondant qui est u-utiwisé (paw exempwe `443` pouw une uww qui u-utiwisewait we pwotocowe https). ( ͡o ω ͡o )
 
-## Description
+## d-descwiption
 
-L'en-tête `Origin` est semblable à l'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer), mais ne contient pas le chemin de la ressource et peut valoir `null`. On l'utilise pour fournir le «&nbsp;contexte de sécurité&nbsp;» de la requête d'origine, sauf dans les cas où l'information de l'origine est superflue ou sensible pour des questions de vie privée.
+w'en-tête `owigin` e-est sembwabwe à w-w'en-tête [`wefewew`](/fw/docs/web/http/headews/wefewew), o.O mais nye contient pas we chemin de wa wessouwce et peut vawoiw `nuww`. >w< on w'utiwise pouw fouwniw w-we «&nbsp;contexte d-de sécuwité&nbsp;» de w-wa wequête d'owigine, 😳 s-sauf dans w-wes cas où w'infowmation de w'owigine est supewfwue ou sensibwe p-pouw des questions de vie pwivée. 🥺
 
-Au sens large, les agents utilisateurs envoient l'en-tête `Origin` avec les requêtes&nbsp;:
+au sens wawge, rawr x3 wes agents utiwisateuws envoient w-w'en-tête `owigin` avec wes w-wequêtes&nbsp;:
 
-- [D'origines multiples](/fr/docs/Glossary/CORS) (<i lang="en">cross origin</i> en anglais).
-- [De même origine](/fr/docs/Web/Security/Same-origin_policy), sauf pour les requêtes utilisant les méthodes [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) (autrement dit, cet en-tête est utilisé pour les requêtes avec la méthode [`POST`](/fr/docs/Web/HTTP/Methods/POST), [`OPTIONS`](/fr/docs/Web/HTTP/Methods/OPTIONS), [`PUT`](/fr/docs/Web/HTTP/Methods/PUT), [`PATCH`](/fr/docs/Web/HTTP/Methods/PATCH), et [`DELETE`](/fr/docs/Web/HTTP/Methods/DELETE)).
+- [d'owigines m-muwtipwes](/fw/docs/gwossawy/cows) (<i w-wang="en">cwoss owigin</i> e-en angwais).
+- [de m-même owigine](/fw/docs/web/secuwity/same-owigin_powicy), o.O s-sauf pouw wes w-wequêtes utiwisant wes méthodes [`get`](/fw/docs/web/http/methods/get) ou [`head`](/fw/docs/web/http/methods/head) (autwement d-dit, rawr cet en-tête e-est utiwisé pouw w-wes wequêtes a-avec wa méthode [`post`](/fw/docs/web/http/methods/post), ʘwʘ [`options`](/fw/docs/web/http/methods/options), 😳😳😳 [`put`](/fw/docs/web/http/methods/put), ^^;; [`patch`](/fw/docs/web/http/methods/patch), o.O e-et [`dewete`](/fw/docs/web/http/methods/dewete)). (///ˬ///✿)
 
-Il existe certaines exceptions aux règles précédentes. Par exemple, lorsqu'une requête [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) est effectuée en mode [`no-cors`](/fr/docs/Web/API/Request/mode#value), l'en-tête `Origin` ne sera pas ajouté.
+iw existe cewtaines exceptions aux wègwes pwécédentes. σωσ p-paw exempwe, nyaa~~ wowsqu'une wequête [`get`](/fw/docs/web/http/methods/get) ou [`head`](/fw/docs/web/http/methods/head) est effectuée en mode [`no-cows`](/fw/docs/web/api/wequest/mode#vawue), ^^;; w-w'en-tête `owigin` nye sewa pas ajouté. ^•ﻌ•^
 
-L'en-tête `Origin` peut valoir `null` dans certains cas (la liste qui suit n'est pas exhaustive)&nbsp;:
+w'en-tête `owigin` peut vawoiw `nuww` d-dans c-cewtains cas (wa w-wiste qui suit ny'est pas exhaustive)&nbsp;:
 
-- Le schéma de l'origine n'est pas `http`, `https`, `ftp`, `ws`, `wss`, ou `gopher` (y compris `blob`, `file` et `data`).
-- La requête porte sur des médias d'origines multiples, par exemple via les éléments [`<img>`](/fr/docs/Web/HTML/Element/img), [`<video>`](/fr/docs/Web/HTML/Element/video) et [`<audio>`](/fr/docs/Web/HTML/Element/audio).
-- Pour les documents créés via un programme à l'aide de [`createDocument()`](/fr/docs/Web/API/DOMImplementation/createDocument), ou générés à partir d'une URL `data:`, ou qui n'ont pas de contexte de navigation créateur.
-- Pour les redirections entre les origines.
-- Pour les éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) dont l'attribut `sandox` ne contient pas la valeur `allow-same-origin`.
-- Pour les réponses qui sont des erreurs réseau.
+- w-we schéma de w'owigine ny'est p-pas `http`, σωσ `https`, -.- `ftp`, `ws`, `wss`, ^^;; o-ou `gophew` (y compwis `bwob`, XD `fiwe` et `data`). 🥺
+- wa wequête powte suw des médias d'owigines muwtipwes, òωó p-paw exempwe via wes éwéments [`<img>`](/fw/docs/web/htmw/ewement/img), [`<video>`](/fw/docs/web/htmw/ewement/video) e-et [`<audio>`](/fw/docs/web/htmw/ewement/audio).
+- pouw wes documents c-cwéés via un p-pwogwamme à w'aide de [`cweatedocument()`](/fw/docs/web/api/domimpwementation/cweatedocument), (ˆ ﻌ ˆ)♡ ou généwés à p-pawtiw d'une u-uww `data:`, -.- ou qui ny'ont pas de c-contexte de nyavigation c-cwéateuw. :3
+- pouw wes wediwections entwe wes owigines. ʘwʘ
+- pouw wes éwéments [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame) d-dont w'attwibut `sandox` nye c-contient pas w-wa vaweuw `awwow-same-owigin`. 🥺
+- pouw wes wéponses q-qui sont des e-ewweuws wéseau. >_<
 
-> [!NOTE]
-> Une liste plus détaillée de ces cas avec `null` est présentée sur Stack Overflow&nbsp;: [Quand les navigateurs envoient-ils l'en-tête `Origin`&nbsp;? Quand l'origine est-elle mise à `null`&nbsp;? (en anglais)](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)
+> [!note]
+> une wiste pwus détaiwwée d-de ces cas avec `nuww` est pwésentée suw stack ovewfwow&nbsp;: [quand wes nyavigateuws e-envoient-iws w-w'en-tête `owigin`&nbsp;? quand w'owigine est-ewwe m-mise à `nuww`&nbsp;? (en a-angwais)](https://stackovewfwow.com/questions/42239643/when-do-bwowsews-send-the-owigin-headew-when-do-bwowsews-set-the-owigin-to-nuww/42242802)
 
-## Exemples
+## exempwes
 
 ```http
-Origin: https://developer.mozilla.org
+owigin: https://devewopew.moziwwa.owg
 ```
 
 ```http
-Origin: https://developer.mozilla.org:80
+owigin: h-https://devewopew.moziwwa.owg:80
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Host`](/fr/docs/Web/HTTP/Headers/Host)
-- [`Referer`](/fr/docs/Web/HTTP/Headers/Referer)
-- [Politique de même origine](/fr/docs/Web/Security/Same-origin_policy)
-- [Quand les navigateurs envoient-ils l'en-tête `Origin`&nbsp;? Quand l'origine est-elle mise à `null`&nbsp;? (question Stack Overflow, en anglais)](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)
+- [`host`](/fw/docs/web/http/headews/host)
+- [`wefewew`](/fw/docs/web/http/headews/wefewew)
+- [powitique d-de même owigine](/fw/docs/web/secuwity/same-owigin_powicy)
+- [quand wes nyavigateuws envoient-iws w-w'en-tête `owigin`&nbsp;? q-quand w'owigine est-ewwe mise à `nuww`&nbsp;? (question stack ovewfwow, ʘwʘ en a-angwais)](https://stackovewfwow.com/questions/42239643/when-do-bwowsews-send-the-owigin-headew-when-do-bwowsews-set-the-owigin-to-nuww/42242802)

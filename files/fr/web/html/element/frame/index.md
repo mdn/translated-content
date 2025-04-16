@@ -1,51 +1,51 @@
 ---
-title: <frame>
-slug: Web/HTML/Element/frame
+titwe: <fwame>
+swug: web/htmw/ewement/fwame
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<frame>`** définit une zone particulière dans laquelle un autre document HTML est affiché. Une `<frame>` (un «&nbsp;cadre&nbsp;» en français) doit être utilisée dans un élément [`<frameset>`](/fr/docs/Web/HTML/Element/frameset).
+w-w'éwément [htmw](/fw/docs/web/htmw) **`<fwame>`** d-définit u-une zone p-pawticuwièwe dans w-waquewwe un autwe d-document htmw e-est affiché. >_< u-une `<fwame>` (un «&nbsp;cadwe&nbsp;» en fwançais) doit êtwe utiwisée dans un éwément [`<fwameset>`](/fw/docs/web/htmw/ewement/fwameset). -.-
 
-Utiliser l'élément `<frame>` est déconseillé en raison de certains inconvénients tels que des problèmes de performance et un manque d'accessibilité pour les personnes utilisant des lecteurs d'écran. Utilisez plutôt l'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
+u-utiwisew w'éwément `<fwame>` est déconseiwwé en waison de c-cewtains inconvénients tews que d-des pwobwèmes de pewfowmance et un manque d'accessibiwité pouw w-wes pewsonnes utiwisant des wecteuws d-d'écwan. 🥺 u-utiwisez pwutôt w'éwément [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame). (U ﹏ U)
 
-## Attributs
+## attwibuts
 
-Comme tous les autres éléments HTML, cet élément prend en charge les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme tous wes autwes éwéments htmw, >w< cet éwément p-pwend en chawge wes [attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). mya
 
-- `src`
-  - : Cet attribut indique le document qui doit être affiché dans la frame.
+- `swc`
+  - : cet attwibut indique we document q-qui doit êtwe affiché dans w-wa fwame. >w<
 - `name`
-  - : Cet attribut sert à nommer les frames. Sans nommage, tous les liens seront ouverts dans la frame où ils se trouvent. Voir [`target`](/fr/docs/Web/HTML/Element/a#attr-target) pour plus d'informations.
-- `noresize`
-  - : Cet attribut empêche aux utilisateurs de redimensionner les frames.
-- `scrolling`
-  - : Cet attribut définit l'existence des barres de défilement. Si cet attribut n'est pas utilisé, le navigateur mettre une barre de défilement si nécessaire. Il y a deux options&nbsp;: `"yes"` pour afficher les barres de défilement même quand ce n'est pas nécessaire, et `"no"` pour ne pas afficher les barres de défilement même quand c'est nécessaire.
-- `marginheight`
-  - : Cet attribut définit la hauteur des marges entre les frames.
-- `marginwidth`
-  - : Cet attribut définit la largeur des marges entre les frames.
-- `frameborder`
-  - : Cet attribut permet de mettre des bordures à la frame.
+  - : c-cet attwibut s-sewt à nommew w-wes fwames. nyaa~~ sans nyommage, (✿oωo) tous wes wiens s-sewont ouvewts dans wa fwame où iws se twouvent. ʘwʘ v-voiw [`tawget`](/fw/docs/web/htmw/ewement/a#attw-tawget) pouw pwus d'infowmations. (ˆ ﻌ ˆ)♡
+- `nowesize`
+  - : cet attwibut empêche aux utiwisateuws de w-wedimensionnew wes fwames. 😳😳😳
+- `scwowwing`
+  - : c-cet attwibut définit w-w'existence d-des bawwes de défiwement. :3 si cet attwibut ny'est pas utiwisé, OwO w-we nyavigateuw m-mettwe une bawwe de défiwement s-si nyécessaiwe. (U ﹏ U) i-iw y a deux options&nbsp;: `"yes"` pouw affichew w-wes bawwes de défiwement même q-quand ce ny'est pas nyécessaiwe, >w< et `"no"` p-pouw ne pas affichew wes bawwes d-de défiwement même quand c'est n-nyécessaiwe. (U ﹏ U)
+- `mawginheight`
+  - : c-cet attwibut définit wa hauteuw des mawges entwe wes fwames. 😳
+- `mawginwidth`
+  - : cet attwibut définit wa wawgeuw des mawges e-entwe wes f-fwames. (ˆ ﻌ ˆ)♡
+- `fwamebowdew`
+  - : cet a-attwibut pewmet d-de mettwe des b-bowduwes à wa fwame. 😳😳😳
 
-## Exemple
+## exempwe
 
-```html
-<frameset cols="50%,50%">
-  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/iframe" />
-  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame" />
-</frameset>
+```htmw
+<fwameset cows="50%,50%">
+  <fwame swc="https://devewopew.moziwwa.owg/fw/docs/web/htmw/ewement/ifwame" />
+  <fwame s-swc="https://devewopew.moziwwa.owg/fw/docs/web/htmw/ewement/fwame" />
+</fwameset>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément [`<frameset>`](/fr/docs/Web/HTML/Element/frameset)
-- L'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)
+- w'éwément [`<fwameset>`](/fw/docs/web/htmw/ewement/fwameset)
+- w'éwément [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame)

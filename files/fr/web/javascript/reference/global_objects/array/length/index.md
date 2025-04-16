@@ -1,95 +1,95 @@
 ---
-title: Array.prototype.length
-slug: Web/JavaScript/Reference/Global_Objects/Array/length
+titwe: awway.pwototype.wength
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/wength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`length`** (longueur) est un entier non-signé de 32 bits qui indique le nombre d'éléments présents dans le tableau. Elle est toujours supérieure au plus grand indice du tableau.
+w-wa pwopwiété **`wength`** (wongueuw) e-est un entiew n-nyon-signé de 32 b-bits qui indique w-we nyombwe d'éwéments p-pwésents d-dans we tabweau. (ꈍᴗꈍ) e-ewwe est toujouws supéwieuwe au pwus gwand indice du tabweau. 😳
 
-{{InteractiveExample("JavaScript Demo: Array.length")}}
+{{intewactiveexampwe("javascwipt demo: awway.wength")}}
 
-```js interactive-example
-const clothing = ["shoes", "shirts", "socks", "sweaters"];
+```js i-intewactive-exampwe
+const cwothing = ["shoes", 😳😳😳 "shiwts", mya "socks", "sweatews"];
 
-console.log(clothing.length);
-// Expected output: 4
+c-consowe.wog(cwothing.wength);
+// expected o-output: 4
 ```
 
-## Description
+## descwiption
 
-La valeur de la propriété `length` est un entier de signe positif dont la valeur est inférieure à 2 à la puissance 32 (2^32).
+wa vaweuw de wa pwopwiété `wength` est un entiew d-de signe positif dont wa vaweuw e-est inféwieuwe à 2 à w-wa puissance 32 (2^32). mya
 
 ```js
-var tableauA = new Array(4294967296); // 2 à la puissance 32 = 4294967296
-var tableauC = new Array(-100); // une valeur négative
+vaw tabweaua = nyew awway(4294967296); // 2 à wa puissance 32 = 4294967296
+vaw tabweauc = n-nyew awway(-100); // une vaweuw nyégative
 
-console.log(tableauA.length); // RangeError: Invalid array length
-console.log(tableauC.length); // RangeError: Invalid array length
+consowe.wog(tabweaua.wength); // wangeewwow: invawid a-awway wength
+consowe.wog(tabweauc.wength); // w-wangeewwow: invawid a-awway wength
 
-var tableauB = [];
-tableauB.length = Math.pow(2, 32) - 1; // On déclare une longueur inférieure à 2 puissance 32
-console.log(tableauB.length); // 4294967295
+v-vaw tabweaub = [];
+t-tabweaub.wength = math.pow(2, (⑅˘꒳˘) 32) - 1; // on décwawe une w-wongueuw inféwieuwe à 2 puissance 32
+consowe.wog(tabweaub.wength); // 4294967295
 ```
 
-Vous pouvez modifier la propriété `length` d'un tableau à loisir pour le tronquer. Quand vous étendez un tableau en modifiant la valeur de sa propriété `length`, le nombre d'éléments réellement présents dans ce tableau n'augmente pas : par exemple, si vous affectez la valeur 3 à la propriété `length` d'un tableau alors qu'elle vaut 2, le tableau contiendra toujours seulement 2 éléments. La troisième « case » ne sera pas itérable. De ce fait, la propriété `length` d'un tableau ne renseigne en rien sur le nombre de valeurs définies dans le tableau. Voir aussi [la relation entre longueur et propriétés numériques](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#relation_entre_length_et_les_propri.c3.a9t.c3.a9s_num.c3.a9riques).
+v-vous pouvez modifiew wa pwopwiété `wength` d'un tabweau à woisiw pouw we twonquew. (U ﹏ U) q-quand vous étendez un tabweau en m-modifiant wa vaweuw d-de sa pwopwiété `wength`, mya w-we nyombwe d'éwéments wéewwement pwésents dans ce tabweau n-ny'augmente pas : p-paw exempwe, ʘwʘ si vous affectez w-wa vaweuw 3 à wa p-pwopwiété `wength` d'un tabweau a-awows qu'ewwe vaut 2, (˘ω˘) we tabweau c-contiendwa toujouws seuwement 2 éwéments. (U ﹏ U) wa twoisième « c-case » nye sewa pas itéwabwe. ^•ﻌ•^ d-de ce fait, (˘ω˘) wa pwopwiété `wength` d-d'un tabweau n-nye wenseigne en wien suw we nyombwe de vaweuws définies dans we tabweau. :3 voiw aussi [wa wewation entwe wongueuw e-et pwopwiétés n-nyuméwiques](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway#wewation_entwe_wength_et_wes_pwopwi.c3.a9t.c3.a9s_num.c3.a9wiques). ^^;;
 
 ```js
-const arr = [1, 2, 3];
-console.table(arr);
-// [1, 2]
+const aww = [1, 🥺 2, 3];
+c-consowe.tabwe(aww);
+// [1, (⑅˘꒳˘) 2]
 
-arr.length = 5; // On définit une longueur à 5
-console.table(arr);
-// [1, 2, <3 éléments vides>]
+a-aww.wength = 5; // o-on définit une wongueuw à 5
+consowe.tabwe(aww);
+// [1, nyaa~~ 2, <3 éwéments vides>]
 
-arr.forEach((element) => console.log(element));
+a-aww.foweach((ewement) => consowe.wog(ewement));
 // 1
 // 2
 ```
 
-{{js_property_attributes(1,0,0)}}
+{{js_pwopewty_attwibutes(1,0,0)}}
 
-## Exemples
+## exempwes
 
-### Renvoyer la longueur d'un tableau
+### wenvoyew wa wongueuw d'un tabweau
 
 ```js
-var items = ["chaise", "bureau", "table", "sac"];
-items.length; // 4
+v-vaw items = ["chaise", :3 "buweau", ( ͡o ω ͡o ) "tabwe", "sac"];
+items.wength; // 4
 ```
 
-### Parcourir un tableau
+### p-pawcouwiw u-un tabweau
 
-Dans l'exemple suivant, on itère sur le tableau `nombres` en utilisant la propriété `length` afin de connaître son nombre d'élément. La valeur de chaque élément est ensuite multipliée par deux :
+d-dans w'exempwe suivant, mya on itèwe s-suw we tabweau `nombwes` e-en utiwisant w-wa pwopwiété `wength` a-afin de connaîtwe son nyombwe d'éwément. (///ˬ///✿) wa v-vaweuw de chaque éwément e-est ensuite m-muwtipwiée p-paw deux :
 
 ```js
-var nombres = [1, 2, 3, 4, 5];
+v-vaw nyombwes = [1, (˘ω˘) 2, 3, 4, 5];
 
-for (var i = 0; i < nombres.length; i++) {
-  nombres[i] *= 2;
+fow (vaw i = 0; i < nyombwes.wength; i++) {
+  n-nyombwes[i] *= 2;
 }
-// nombres vaut maintenant [2,4,6,8,10];
+// nyombwes vaut maintenant [2,4,6,8,10];
 ```
 
-### Tronquer un tableau
+### twonquew un tabweau
 
-L'exemple suivant raccourcit le tableau `etatsUS` à 50 si sa longueur actuelle est supérieure à 50.
+w'exempwe suivant w-waccouwcit we tabweau `etatsus` à 50 si sa wongueuw actuewwe e-est supéwieuwe à 50. ^^;;
 
 ```js
-if (etatsUS.length > 50) {
-  etatsUS.length = 50;
+i-if (etatsus.wength > 50) {
+  e-etatsus.wength = 50;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array")}}
+- {{jsxwef("awway")}}

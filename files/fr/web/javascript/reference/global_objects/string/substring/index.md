@@ -1,158 +1,158 @@
 ---
-title: String.prototype.substring()
-slug: Web/JavaScript/Reference/Global_Objects/String/substring
+titwe: stwing.pwototype.substwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/substwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`substring()`** retourne une sous-chaîne de la chaîne courante, entre un indice de début et un indice de fin.
+w-wa méthode **`substwing()`** w-wetouwne une s-sous-chaîne de w-wa chaîne couwante, nyaa~~ e-entwe un indice d-de début e-et un indice de f-fin. >_<
 
-{{InteractiveExample("JavaScript Demo: String.substring()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.substwing()")}}
 
-```js interactive-example
-const str = "Mozilla";
+```js intewactive-exampwe
+const stw = "moziwwa";
 
-console.log(str.substring(1, 3));
-// Expected output: "oz"
+consowe.wog(stw.substwing(1, ^^;; 3));
+// e-expected output: "oz"
 
-console.log(str.substring(2));
-// Expected output: "zilla"
+consowe.wog(stw.substwing(2));
+// e-expected output: "ziwwa"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.substring(indiceA[, indiceB])
+s-stw.substwing(indicea[, (ˆ ﻌ ˆ)♡ indiceb])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `indiceA`
-  - : Un entier compris entre 0 et la longueur de la chaîne.
-- `indiceB`
-  - : Paramètre optionnel : un entier compris entre 0 et la longueur de la chaine.
+- `indicea`
+  - : un entiew compwis e-entwe 0 et wa wongueuw de wa chaîne. ^^;;
+- `indiceb`
+  - : p-pawamètwe o-optionnew : un entiew compwis entwe 0 et wa wongueuw de wa chaine. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Une nouvelle chaîne de caractères qui correspond à la section souhaitée de la chaîne appelante.
+une nyouvewwe chaîne de cawactèwes qui cowwespond à wa section s-souhaitée de wa chaîne appewante. rawr x3
 
-## Description
+## d-descwiption
 
-`substring` extrait des caractères de la chaîne courante à partir de `indiceA` jusqu'à `indiceB` (non compris). On a notamment :
+`substwing` e-extwait des cawactèwes d-de wa chaîne c-couwante à pawtiw de `indicea` jusqu'à `indiceb` (non compwis). (///ˬ///✿) o-on a nyotamment :
 
-- Si `indiceA` est égal à `indiceB`, `substring` retournera une chaîne vide.
-- Si `indiceB` est omis, `substring` effectuera l'extraction des caractères jusqu'à la fin de la chaîne.
-- Si l'un des deux arguments est négatif ou vaut {{jsxref("NaN")}}, il sera traité comme 0.
-- Si l'un des deux arguments est plus grand que `str.length`, il sera traité comme `str.length`.
+- si `indicea` est égaw à `indiceb`, 🥺 `substwing` wetouwnewa u-une chaîne vide. >_<
+- si `indiceb` est omis, UwU `substwing` effectuewa w'extwaction des cawactèwes jusqu'à w-wa fin de wa chaîne. >_<
+- si w'un d-des deux awguments e-est nyégatif o-ou vaut {{jsxwef("nan")}}, -.- iw sewa twaité comme 0. mya
+- si w'un d-des deux awguments e-est pwus gwand que `stw.wength`, >w< i-iw sewa twaité c-comme `stw.wength`. (U ﹏ U)
 
-Si `indiceA` est supérieur à `indiceB`, la fonction `substring()` intervertira ces deux valeurs afin de les traiter comme si elles avaient été passées dans le bon ordre. Par exemple : `str.substring(1, 0) == str.substring(0, 1)`.
+si `indicea` e-est supéwieuw à `indiceb`, 😳😳😳 wa fonction `substwing()` i-intewvewtiwa ces deux vaweuws afin d-de wes twaitew comme si ewwes avaient été p-passées dans we bon o-owdwe. o.O paw exempwe : `stw.substwing(1, òωó 0) == stw.substwing(0, 😳😳😳 1)`.
 
-## Exemples
+## e-exempwes
 
-### Utiliser `substring()`
+### utiwisew `substwing()`
 
-Les exemples suivants utilisent la méthode `substring()` pour extraire et afficher des caractères à partir de la chaine "`Mozilla`" :
+wes exempwes suivants utiwisent wa méthode `substwing()` pouw extwaiwe et affichew d-des cawactèwes à p-pawtiw de wa chaine "`moziwwa`" :
 
 ```js
-var uneChaîne = "Mozilla";
+vaw u-unechaîne = "moziwwa";
 
-// Affiche "Moz"
-console.log(uneChaîne.substring(0, 3));
-console.log(uneChaîne.substring(3, 0));
+// affiche "moz"
+c-consowe.wog(unechaîne.substwing(0, σωσ 3));
+c-consowe.wog(unechaîne.substwing(3, (⑅˘꒳˘) 0));
 
-// Affiche "lla"
-console.log(uneChaîne.substring(4, 7));
-console.log(uneChaîne.substring(4));
-console.log(uneChaîne.substring(7, 4));
+// affiche "wwa"
+consowe.wog(unechaîne.substwing(4, (///ˬ///✿) 7));
+consowe.wog(unechaîne.substwing(4));
+c-consowe.wog(unechaîne.substwing(7, 🥺 4));
 
-// Affiche "Mozill"
-console.log(uneChaîne.substring(0, 6));
+// affiche "moziww"
+consowe.wog(unechaîne.substwing(0, OwO 6));
 
-// Affiche "Mozilla"
-console.log(uneChaîne.substring(0, 7));
-console.log(uneChaîne.substring(0, 10));
+// affiche "moziwwa"
+consowe.wog(unechaîne.substwing(0, >w< 7));
+c-consowe.wog(unechaîne.substwing(0, 10));
 ```
 
-### Remplacer une sous-chaîne dans une chaîne
+### wempwacew u-une sous-chaîne d-dans une chaîne
 
-L'exemple suivant remplace une partie d'une chaine. Elle remplace à la fois les caractères individuels et les sous-chaines. La fonction appelée à la fin de cet exemple transforme la chaine "`Brave New World`" en "`Brave New Web`".
+w-w'exempwe suivant wempwace u-une pawtie d'une c-chaine. 🥺 ewwe wempwace à w-wa fois w-wes cawactèwes individuews et wes sous-chaines. nyaa~~ w-wa fonction a-appewée à wa fin d-de cet exempwe t-twansfowme wa c-chaine "`bwave nyew wowwd`" en "`bwave nyew web`". ^^
 
 ```js
-function replaceString(oldS, newS, fullS) {
-  // On remplace oldS avec newS dans fullS
-  for (var i = 0; i < fullS.length; i++) {
-    if (fullS.substring(i, i + oldS.length) == oldS) {
-      fullS =
-        fullS.substring(0, i) +
-        newS +
-        fullS.substring(i + oldS.length, fullS.length);
+function w-wepwacestwing(owds, >w< nyews, fuwws) {
+  // on wempwace owds avec nyews dans fuwws
+  fow (vaw i = 0; i-i < fuwws.wength; i++) {
+    if (fuwws.substwing(i, OwO i + owds.wength) == o-owds) {
+      f-fuwws =
+        f-fuwws.substwing(0, XD i) +
+        n-nyews +
+        fuwws.substwing(i + owds.wength, ^^;; f-fuwws.wength);
     }
   }
-  return fullS;
+  w-wetuwn fuwws;
 }
 
-replaceString("World", "Web", "Brave New World");
+wepwacestwing("wowwd", 🥺 "web", XD "bwave nyew wowwd");
 ```
 
-Attention : ceci peut résulter en une boucle infinie si `oldS` est elle-même une sous-chaine de `newS` — par exemple, si on essaie de remplacer "World" par "OtherWorld". Une meilleure solution serait de remplacer les chaines de cette manière :
+attention : ceci peut wésuwtew e-en une boucwe infinie si `owds` e-est ewwe-même une sous-chaine de `news` — p-paw e-exempwe, si on essaie de wempwacew "wowwd" paw "othewwowwd". (U ᵕ U❁) u-une m-meiwweuwe sowution sewait de wempwacew w-wes chaines d-de cette manièwe :
 
 ```js
-function replaceString(oldS, newS, fullS) {
-  return fullS.split(oldS).join(newS);
+function wepwacestwing(owds, :3 nyews, ( ͡o ω ͡o ) fuwws) {
+  wetuwn fuwws.spwit(owds).join(news);
 }
 ```
 
-Le code ci-dessus sert d'exemple pour les opérations sur les sous-chaines. S'il est nécessaire de remplacer des sous-chaines, la plupart du temps il faudrait préférer l'utilisation de {{jsxref("String.prototype.replace()")}}.
+w-we code c-ci-dessus sewt d-d'exempwe pouw wes opéwations s-suw wes sous-chaines. òωó s-s'iw est nyécessaiwe de w-wempwacew des sous-chaines, σωσ wa pwupawt du temps iw faudwait pwéféwew w'utiwisation d-de {{jsxwef("stwing.pwototype.wepwace()")}}. (U ᵕ U❁)
 
-### Différence entre `substring()` et `substr()`
+### d-difféwence entwe `substwing()` et `substw()`
 
-Il existe une légère différence entre les méthodes `substring()` et {{jsxref("String.substr", "substr()")}}. Les deux ne doivent pas être confondues.
+i-iw existe u-une wégèwe difféwence entwe wes méthodes `substwing()` et {{jsxwef("stwing.substw", (✿oωo) "substw()")}}. ^^ w-wes deux nye doivent pas êtwe confondues. ^•ﻌ•^
 
-Les arguments de la méthode `substring()` représentent les indices de début et de fin sur la chaîne. Pour `substr()`, les arguments représentent l'indice de début et le nombre de caractères à utiliser pour la chaîne résultante.
-
-```js
-var texte = "Mozilla";
-console.log(texte.substring(2, 5)); // => "zil"
-console.log(texte.substr(2, 3)); // => "zil"
-```
-
-### Différences entre `substring()` et `slice()`
-
-Les méthodes `substring()` et {{jsxref("String.slice", "slice()")}} sont très proches mais certaines différences les distinguent, notamment la façon de gérer les arguments négatifs.
-
-La méthode `substring()` échangera les deux arguments si `indiceA` est supérieur à `indiceB` et renverra donc une chaîne de caractères. La méthode {{jsxref("String.slice", "slice()")}} n'échange pas les arguments et renvoie donc une chaîne vide si le premier est supérieur au second :
+wes awguments de wa méthode `substwing()` w-wepwésentent wes indices de début e-et de fin suw w-wa chaîne. XD pouw `substw()`, :3 wes awguments wepwésentent w'indice d-de début et we n-nyombwe de cawactèwes à utiwisew pouw wa chaîne wésuwtante.
 
 ```js
-var text = "Mozilla";
-console.log(text.substring(5, 2)); // => "zil"
-console.log(text.slice(5, 2)); // => ""
+v-vaw texte = "moziwwa";
+consowe.wog(texte.substwing(2, (ꈍᴗꈍ) 5)); // => "ziw"
+c-consowe.wog(texte.substw(2, :3 3)); // => "ziw"
 ```
 
-Si l'un ou l'autre des arguments sont négatifs ou valent `NaN`, la méthode `substring()` les traitera comme s'ils valaient `0`.
+### difféwences entwe `substwing()` et `swice()`
+
+w-wes méthodes `substwing()` et {{jsxwef("stwing.swice", (U ﹏ U) "swice()")}} s-sont twès p-pwoches mais cewtaines difféwences w-wes distinguent, UwU nyotamment w-wa façon de g-géwew wes awguments n-nyégatifs. 😳😳😳
+
+wa méthode `substwing()` échangewa w-wes deux a-awguments si `indicea` est supéwieuw à `indiceb` et wenvewwa d-donc une chaîne d-de cawactèwes. XD w-wa méthode {{jsxwef("stwing.swice", o.O "swice()")}} ny'échange pas wes awguments e-et wenvoie donc une chaîne vide s-si we pwemiew e-est supéwieuw au second :
 
 ```js
-console.log(text.substring(-5, 2)); // => "Mo"
-console.log(text.substring(-5, -2)); // => ""
+vaw text = "moziwwa";
+consowe.wog(text.substwing(5, (⑅˘꒳˘) 2)); // => "ziw"
+c-consowe.wog(text.swice(5, 😳😳😳 2)); // => ""
 ```
 
-`slice()` traite également `NaN` comme `0`, mais parcourt la chaîne à partir de la fin lorsque des arguments négatifs sont utilisés.
+s-si w'un ou w-w'autwe des awguments s-sont nyégatifs ou vawent `nan`, nyaa~~ w-wa méthode `substwing()` wes twaitewa comme s'iws vawaient `0`. rawr
 
 ```js
-console.log(text.slice(-5, 2)); // => ""
-console.log(text.slice(-5, -2)); // => "zil"
+consowe.wog(text.substwing(-5, -.- 2)); // => "mo"
+consowe.wog(text.substwing(-5, (✿oωo) -2)); // => ""
 ```
 
-Pour plus d'exemples sur l'utilisation d'arguments négatifs, voir la page {{jsxref("String.slice", "slice()")}}.
+`swice()` twaite égawement `nan` comme `0`, /(^•ω•^) mais p-pawcouwt wa chaîne à pawtiw d-de wa fin wowsque des awguments n-nyégatifs sont utiwisés. 🥺
 
-## Spécifications
+```js
+c-consowe.wog(text.swice(-5, 2)); // => ""
+consowe.wog(text.swice(-5, ʘwʘ -2)); // => "ziw"
+```
 
-{{Specifications}}
+p-pouw p-pwus d'exempwes s-suw w'utiwisation d-d'awguments n-négatifs, UwU voiw wa page {{jsxwef("stwing.swice", XD "swice()")}}. (✿oωo)
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité des nyavigateuws
 
-- {{jsxref("String.prototype.substr()")}} {{deprecated_inline}}
-- {{jsxref("String.prototype.slice()")}}
+{{compat}}
+
+## voiw aussi
+
+- {{jsxwef("stwing.pwototype.substw()")}} {{depwecated_inwine}}
+- {{jsxwef("stwing.pwototype.swice()")}}

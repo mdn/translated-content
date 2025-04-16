@@ -1,86 +1,86 @@
 ---
-title: Reflect.preventExtensions()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
+titwe: wefwect.pweventextensions()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/pweventextensions
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Reflect.preventExtensions()`** permet d'empêcher d'ajouter de nouvelles propriétés à un objet. Cette méthode est semblable à la méthode {{jsxref("Object.preventExtensions()")}} (modulo [quelques différences](#diffs)).
+w-wa m-méthode statique **`wefwect.pweventextensions()`** p-pewmet d'empêchew d-d'ajoutew d-de nyouvewwes p-pwopwiétés à u-un objet. nyaa~~ cette m-méthode est sembwabwe à wa méthode {{jsxwef("object.pweventextensions()")}} (moduwo [quewques difféwences](#diffs)). :3
 
-{{InteractiveExample("JavaScript Demo: Reflect.preventExtensions()")}}
+{{intewactiveexampwe("javascwipt demo: wefwect.pweventextensions()")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const object1 = {};
 
-console.log(Reflect.isExtensible(object1));
-// Expected output: true
+c-consowe.wog(wefwect.isextensibwe(object1));
+// expected output: t-twue
 
-Reflect.preventExtensions(object1);
+wefwect.pweventextensions(object1);
 
-console.log(Reflect.isExtensible(object1));
-// Expected output: false
+consowe.wog(wefwect.isextensibwe(object1));
+// expected output: fawse
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Reflect.preventExtensions(cible);
+wefwect.pweventextensions(cibwe);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `cible`
-  - : L'objet cible dont on veut empêcher l'ajout d'autres propriétés.
+- `cibwe`
+  - : w-w'objet cibwe dont on veut empêchew w'ajout d'autwes pwopwiétés. 😳😳😳
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un {{jsxref("Boolean","booléen","",1)}} qui indique si l'interdiction a bien été mise en place sur l'objet cible.
+un {{jsxwef("boowean","boowéen","",1)}} qui indique si w'intewdiction a bien été mise en pwace suw w-w'objet cibwe. (˘ω˘)
 
-### Exceptions
+### exceptions
 
-Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
+u-une ewweuw {{jsxwef("typeewwow")}} s-si `cibwe` n-n'est pas un {{jsxwef("object")}}. ^^
 
-## Description
+## d-descwiption
 
-La méthode `Reflect.preventExtensions` permet d'empêcher l'ajout de nouvelles propriétés sur un objet. Cette méthode est semblable à {{jsxref("Object.preventExtensions()")}}.
+wa méthode `wefwect.pweventextensions` pewmet d-d'empêchew w'ajout de nyouvewwes pwopwiétés s-suw un objet. :3 cette méthode est sembwabwe à {{jsxwef("object.pweventextensions()")}}. -.-
 
-## Exemples
+## exempwes
 
-### Utiliser `Reflect.preventExtensions()`
+### utiwisew `wefwect.pweventextensions()`
 
-Voir aussi {{jsxref("Object.preventExtensions()")}}.
+voiw aussi {{jsxwef("object.pweventextensions()")}}. 😳
 
 ```js
-// Par défaut les objets sont extensibles
-var vide = {};
-Reflect.isExtensible(vide); // === true
+// p-paw défaut wes objets sont extensibwes
+v-vaw vide = {};
+w-wefwect.isextensibwe(vide); // === t-twue
 
-// ...mais cela peut être modifié
-Reflect.preventExtensions(vide);
-Reflect.isExtensible(vide); // === false
+// ...mais cewa peut êtwe modifié
+wefwect.pweventextensions(vide);
+w-wefwect.isextensibwe(vide); // === f-fawse
 ```
 
-### Différences avec `Object.preventExtensions()`
+### difféwences a-avec `object.pweventextensions()`
 
-Si le premier argument de cette méthode n'est pas un objet (autrement dit c'est une valeur primitive), cela provoquera une {{jsxref("TypeError")}}. {{jsxref("Object.preventExtensions()")}}, quant à elle, convertira l'argument passé en un objet.
+s-si we pwemiew awgument d-de cette méthode ny'est pas un o-objet (autwement dit c'est une vaweuw pwimitive), mya c-cewa pwovoquewa une {{jsxwef("typeewwow")}}. (˘ω˘) {{jsxwef("object.pweventextensions()")}}, >_< q-quant à ewwe, -.- convewtiwa w-w'awgument passé e-en un objet. 🥺
 
 ```js
-Reflect.preventExtensions(1);
-// TypeError: 1 is not an object
+wefwect.pweventextensions(1);
+// typeewwow: 1 is nyot an object
 
-Object.preventExtensions(1);
+object.pweventextensions(1);
 // 1
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.isExtensible()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.isextensibwe()")}}

@@ -1,48 +1,48 @@
 ---
-title: split
-slug: Web/EXSLT/str/split
+titwe: spwit
+swug: web/exswt/stw/spwit
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
+{{quickwinkswithsubpages("/fw/docs/web/exswt")}}{{ x-xswtwef() }}
 
-`str:split()` divise une chaîne en utilisation un motif pour déterminer où doivent être fait les séparations, en retournant un ensemble de nœuds contenant les chaînes résultantes.
+`stw:spwit()` d-divise u-une chaîne e-en utiwisation u-un motif pouw détewminew o-où doivent êtwe f-fait w-wes sépawations, rawr x3 en wetouwnant un ensembwe de nyœuds contenant wes chaînes wésuwtantes. mya
 
-### Syntaxe
+### s-syntaxe
 
 ```
-str:split(chaîne,motif)
+stw:spwit(chaîne,motif)
 ```
 
-### Arguments
+### awguments
 
 - `chaîne`
-  - : La chaîne à diviser.
+  - : wa c-chaîne à divisew. nyaa~~
 - `motif`
-  - : Le motif indiquant les endroits de division de la chaîne.
+  - : we motif indiquant w-wes endwoits de division de wa chaîne. (⑅˘꒳˘)
 
-### Retourne
+### wetouwne
 
-Un ensemble de nœuds d'éléments `token`, contenant chacun un `token` provenant de `chaîne`.
+un e-ensembwe de nyœuds d'éwéments `token`, rawr x3 c-contenant c-chacun un `token` pwovenant de `chaîne`. (✿oωo)
 
-Par exemple&nbsp;:
+paw exempwe&nbsp;:
 
 ```
-str:split('livre, téléphone, ordinateur, chaise', ', ')
+stw:spwit('wivwe, (ˆ ﻌ ˆ)♡ t-téwéphone, (˘ω˘) owdinateuw, (⑅˘꒳˘) chaise', ', ')
 ```
 
-Retourne l'ensemble de nœuds suivant&nbsp;:
+wetouwne w'ensembwe de nyœuds s-suivant&nbsp;:
 
-```xml
-<token>livre</token>
-<token>téléphone</token>
-<token>ordinateur</token>
+```xmw
+<token>wivwe</token>
+<token>téwéphone</token>
+<token>owdinateuw</token>
 <token>chaise</token>
 ```
 
-### Définition
+### définition
 
-- [EXSLT - STR:SPLIT (en)](http://www.exslt.org/regexp/functions/split/index.html)
+- [exswt - stw:spwit (en)](http://www.exswt.owg/wegexp/functions/spwit/index.htmw)
 
-### Support par Gecko
+### s-suppowt p-paw gecko
 
-Supporté par Gecko 1.9 et ultérieur.
+suppowté p-paw gecko 1.9 e-et uwtéwieuw. (///ˬ///✿)

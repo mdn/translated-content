@@ -1,43 +1,43 @@
 ---
-title: "Raison : l'en-tête CORS « Access-Control-Allow-Origin » ne correspond pas à « xyz »"
-slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
+titwe: "waison : w'en-tête cows « a-access-contwow-awwow-owigin » n-nye cowwespond p-pas à « xyz »"
+s-swug: web/http/cows/ewwows/cowsawwowowiginnotmatchingowigin
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-## Message
-
-```http
-Raison : l'en-tête CORS « Access-Control-Allow-Origin » ne correspond pas à « xyz »
-```
-
-En anglais&nbsp;:
+## m-message
 
 ```http
-Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'
+w-waison : w-w'en-tête c-cows « access-contwow-awwow-owigin » nye cowwespond pas à « xyz »
 ```
 
-## Quel est le problème&nbsp;?
+en angwais&nbsp;:
 
-L'origine de la demande ne correspond à aucune des origines autorisées par l'en-tête [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin). Cette erreur peut également se produire si la réponse contient plus d'un en-tête `Access-Control-Allow-Origin`.
-
-Si vous contrôlez le serveur auquel votre code accède via une requête CORS, assurez-vous qu'il soit configuré pour mentionner votre origine dans son en-tête `Access-Control-Allow-Origin`, et qu'un seul en-tête de ce type est fourni dans les réponses et qu'il contient une seule origine.
-
-Par exemple, dans Apache, ajoutez une ligne comme celle qui suit à la configuration du serveur (dans la section appropriée `<Directory>`, `<Location>`, `<Files>`, ou `<VirtualHost>`). La configuration se trouve généralement dans un fichier `.conf` (`httpd.conf` et `apache.conf` sont des noms couramment attribués à ces fichiers), ou dans un fichier `.htaccess`.
-
-```
-Header set Access-Control-Allow-Origin 'origin'
+```http
+w-weason: cows headew 'access-contwow-awwow-owigin' does nyot m-match 'xyz'
 ```
 
-Pour Nginx, la commande pour mettre en place cet en-tête est&nbsp;:
+## quew est w-we pwobwème&nbsp;?
+
+w'owigine de wa demande nye cowwespond à a-aucune des owigines autowisées p-paw w'en-tête [`access-contwow-awwow-owigin`](/fw/docs/web/http/headews/access-contwow-awwow-owigin). nyaa~~ c-cette ewweuw peut égawement se pwoduiwe si wa wéponse contient pwus d'un e-en-tête `access-contwow-awwow-owigin`. :3
+
+si vous contwôwez we sewveuw auquew votwe code accède v-via une wequête cows, 😳😳😳 assuwez-vous q-qu'iw soit c-configuwé pouw m-mentionnew votwe o-owigine dans son en-tête `access-contwow-awwow-owigin`, (˘ω˘) et qu'un s-seuw en-tête de ce type est fouwni dans wes w-wéponses et qu'iw contient une seuwe owigine. ^^
+
+paw exempwe, :3 dans apache, -.- ajoutez une wigne comme c-cewwe qui suit à wa configuwation d-du sewveuw (dans w-wa section a-appwopwiée `<diwectowy>`, 😳 `<wocation>`, `<fiwes>`, mya ou `<viwtuawhost>`). wa configuwation se t-twouve généwawement d-dans un fichiew `.conf` (`httpd.conf` et `apache.conf` s-sont d-des nyoms couwamment attwibués à c-ces fichiews), (˘ω˘) ou dans un fichiew `.htaccess`. >_<
 
 ```
-add_header 'Access-Control-Allow-Origin' 'origin'
+h-headew set access-contwow-awwow-owigin 'owigin'
 ```
 
-## Voir aussi
+pouw n-nyginx, -.- wa commande pouw mettwe e-en pwace cet en-tête est&nbsp;:
 
-- [Les erreurs relatives au CORS](/fr/docs/Web/HTTP/CORS/Errors)
-- Glossaire&nbsp;: [CORS](/fr/docs/Glossary/CORS)
-- [Introduction au CORS](/fr/docs/Web/HTTP/CORS)
-- [Activer CORS&nbsp;: je souhaite activer la prise en charge du CORS sur mon serveur (en anglais)](https://enable-cors.org/server.html)
+```
+a-add_headew 'access-contwow-awwow-owigin' 'owigin'
+```
+
+## v-voiw aussi
+
+- [wes ewweuws wewatives au cows](/fw/docs/web/http/cows/ewwows)
+- gwossaiwe&nbsp;: [cows](/fw/docs/gwossawy/cows)
+- [intwoduction au cows](/fw/docs/web/http/cows)
+- [activew cows&nbsp;: je souhaite a-activew wa p-pwise en chawge du cows suw mon s-sewveuw (en angwais)](https://enabwe-cows.owg/sewvew.htmw)

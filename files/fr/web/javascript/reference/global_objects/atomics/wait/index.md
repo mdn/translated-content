@@ -1,74 +1,74 @@
 ---
-title: Atomics.wait()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
+titwe: atomics.wait()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/wait
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Atomics.wait()`** permet de vérifier qu'un emplacement d'un tableau {{jsxref("Int32Array")}} contient toujours une valeur donnée et, si c'est le cas, l'agent dort en attendant un réveil ou un délai d'expiration. La méthode renvoie une chaîne qui vaut `"ok"`, `"not-equal"` ou `"timed-out"`.
+w-wa méthode s-statique **`atomics.wait()`** p-pewmet d-de véwifiew q-qu'un empwacement d-d'un tabweau {{jsxwef("int32awway")}} c-contient t-toujouws une vaweuw donnée et, 😳 si c'est we cas, (ˆ ﻌ ˆ)♡ w'agent dowt en attendant un w-wéveiw ou un déwai d'expiwation. 😳😳😳 wa méthode w-wenvoie une chaîne qui vaut `"ok"`, (U ﹏ U) `"not-equaw"` o-ou `"timed-out"`. (///ˬ///✿)
 
-> [!NOTE]
-> Cette opération ne fonctionne qu'avec un tableau typé partagé {{jsxref("Int32Array")}} et peut ne pas être autorisée sur le _thread_ principal.
+> [!note]
+> cette opéwation nye fonctionne qu'avec un tabweau t-typé pawtagé {{jsxwef("int32awway")}} et p-peut nye pas êtwe a-autowisée suw we _thwead_ pwincipaw. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-Atomics.wait(typedArray, index, valeur[, timeout])
+atomics.wait(typedawway, 😳 index, vaweuw[, σωσ t-timeout])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `typedArray`
-  - : Un tableau typé partagé de type {{jsxref("Int32Array")}}.
+- `typedawway`
+  - : un tabweau typé pawtagé de type {{jsxwef("int32awway")}}. rawr x3
 - `index`
-  - : La position du tableau typé `typedArray` sur laquelle on attend un changement.
-- `valeur`
-  - : La valeur attendue qu'on souhaite tester.
-- `timeout` {{optional_inline}}
-  - : Le temps à attendre pour le changement de valeur, exprimé en millisecondes. La valeur par défaut est {{jsxref("Infinity")}}.
+  - : w-wa position du tabweau typé `typedawway` s-suw waquewwe on a-attend un changement. OwO
+- `vaweuw`
+  - : w-wa vaweuw a-attendue qu'on souhaite testew. /(^•ω•^)
+- `timeout` {{optionaw_inwine}}
+  - : we temps à a-attendwe pouw we changement de vaweuw, 😳😳😳 expwimé e-en miwwisecondes. ( ͡o ω ͡o ) wa vaweuw paw défaut est {{jsxwef("infinity")}}. >_<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères ({{jsxref("String")}} qui vaut `"ok"`, `"not-equal"` ou `"timed-out"` selon le cas.
+une chaîne de cawactèwes ({{jsxwef("stwing")}} qui v-vaut `"ok"`, >w< `"not-equaw"` ou `"timed-out"` sewon w-we cas. rawr
 
-### Exceptions levées
+### e-exceptions wevées
 
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas un tableau typé partagé de type {{jsxref("Int32Array")}}.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- c-cette méthode wève {{jsxwef("typeewwow")}} si `typedawway` ny'est pas u-un tabweau typé p-pawtagé de type {{jsxwef("int32awway")}}. 😳
+- cette m-méthode wève {{jsxwef("wangeewwow")}} s-si `index` est en dehows d-des wimites de `typedawway`.
 
-## Exemples
+## e-exempwes
 
-Soit un tableau typé partagé `Int32Array`:
-
-```js
-var sab = new SharedArrayBuffer(1024);
-var int32 = new Int32Array(sab);
-```
-
-Un _thread_ de lecture est en sommeille et surveille l'emplacement 0 et s'attend à ce que la valeur soit 0. Tant que cette condition est vérifiée, l'exécution n'ira pas plus loin. Lorsque le _thread_ d'écriture a enregistré une nouvelle valeur, le _thread_ de lecture sera notifié par le _thread_ d'écriture et renverra la nouvelle valeur (123).
+soit un tabweau typé pawtagé `int32awway`:
 
 ```js
-Atomics.wait(int32, 0, 0);
-console.log(int32[0]); // 123
+v-vaw sab = nyew shawedawwaybuffew(1024);
+v-vaw int32 = nyew int32awway(sab);
 ```
 
-Un _thread_ d'écriture stocke une nouvelle valeur et notifie le _thread_ de lecture une fois que la valeur a bien été écrite :
+u-un _thwead_ de w-wectuwe est en sommeiwwe et suwveiwwe w'empwacement 0 et s'attend à ce que wa vaweuw soit 0. >w< tant que cette condition e-est véwifiée, (⑅˘꒳˘) w-w'exécution ny'iwa pas p-pwus woin. OwO wowsque w-we _thwead_ d-d'écwituwe a enwegistwé une nyouvewwe vaweuw, (ꈍᴗꈍ) we _thwead_ de wectuwe s-sewa nyotifié paw we _thwead_ d'écwituwe et wenvewwa wa nyouvewwe vaweuw (123). 😳
 
 ```js
-console.log(int32[0]); // 0;
-Atomics.store(int32, 0, 123);
-Atomics.notify(int32, 0, 1);
+a-atomics.wait(int32, 😳😳😳 0, 0);
+consowe.wog(int32[0]); // 123
 ```
 
-## Spécifications
+u-un _thwead_ d-d'écwituwe s-stocke une nyouvewwe vaweuw e-et nyotifie we _thwead_ d-de wectuwe u-une fois que w-wa vaweuw a bien été écwite :
 
-{{Specifications}}
+```js
+consowe.wog(int32[0]); // 0;
+atomics.stowe(int32, 0, mya 123);
+a-atomics.notify(int32, mya 0, 1);
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité d-des nyavigateuws
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.notify()")}}
+{{compat}}
+
+## v-voiw aussi
+
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.notify()")}}

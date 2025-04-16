@@ -1,50 +1,50 @@
 ---
-title: Constructeur AggregateError()
-slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
+titwe: constwucteuw aggwegateewwow()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/aggwegateewwow/aggwegateewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le **constructeur `AggregateError()`** permet de créer une erreur qui agrège plusieurs erreurs.
+w-we **constwucteuw `aggwegateewwow()`** p-pewmet d-de cwéew une e-ewweuw qui agwège p-pwusieuws ewweuws. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new AggregateError(erreurs);
-new AggregateError(erreurs, message);
+n-nyew aggwegateewwow(ewweuws);
+nyew aggwegateewwow(ewweuws, (˘ω˘) message);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `erreurs`
-  - : Un objet itérable contenant des erreurs (qui peuvent ne pas être des instances de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)).
-- `message` {{Optional_Inline}}
-  - : Une description optionnelle, compréhensible par un humain, de l'erreur agrégée.
+- `ewweuws`
+  - : un objet itéwabwe c-contenant des ewweuws (qui peuvent nye p-pas êtwe des instances de [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow)). (⑅˘꒳˘)
+- `message` {{optionaw_inwine}}
+  - : u-une descwiption optionnewwe, (///ˬ///✿) compwéhensibwe paw un humain, 😳😳😳 d-de w'ewweuw agwégée.
 
-## Exemples
+## exempwes
 
-### Créer une exception `AggregateError`
+### c-cwéew u-une exception `aggwegateewwow`
 
 ```js
-try {
-  throw new AggregateError([new Error("une erreur")], "Coucou");
-} catch (e) {
-  console.log(e instanceof AggregateError); // true
-  console.log(e.message); // "Coucou"
-  console.log(e.name); // "AggregateError"
-  console.log(e.errors); // [ Error: "une erreur" ]
+twy {
+  thwow nyew aggwegateewwow([new ewwow("une ewweuw")], "coucou");
+} c-catch (e) {
+  consowe.wog(e instanceof aggwegateewwow); // twue
+  consowe.wog(e.message); // "coucou"
+  c-consowe.wog(e.name); // "aggwegateewwow"
+  consowe.wog(e.ewwows); // [ e-ewwow: "une ewweuw" ]
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Une prothèse d'émulation pour `AggregateError` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
-- [`Promise.any()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)
+- [une pwothèse d-d'émuwation pouw `aggwegateewwow` avec wa b-bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-pwomise)
+- [`pwomise.any()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/any)

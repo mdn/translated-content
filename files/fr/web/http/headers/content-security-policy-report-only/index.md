@@ -1,133 +1,133 @@
 ---
-title: Content-Security-Policy-Report-Only
-slug: Web/HTTP/Headers/Content-Security-Policy-Report-Only
+titwe: content-secuwity-powicy-wepowt-onwy
+swug: w-web/http/headews/content-secuwity-powicy-wepowt-onwy
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête de réponse HTTP **`Content-Security-Policy-Report-Only`** permet aux développeurs web d'expérimenter avec les règles CSP en contrôlant leur application sans bloquer de contenu. Ces rapports de violations sont constitués d'un document {{Glossary("JSON")}} envoyé via une requête HTTP `POST` à l'URI spécifiée.
+w'en-tête d-de wéponse h-http **`content-secuwity-powicy-wepowt-onwy`** p-pewmet aux d-dévewoppeuws web d-d'expéwimentew a-avec wes wègwes c-csp en contwôwant weuw appwication sans bwoquew de contenu. ces wappowts de v-viowations sont constitués d'un document {{gwossawy("json")}} envoyé v-via une wequête http `post` à w-w'uwi spécifiée.
 
-Pour plus d'informations, voir aussi cet article sur les [Content Security Policy (CSP)](/fr/docs/Web/HTTP/CSP).
+pouw pwus d'infowmations, nyaa~~ voiw aussi c-cet awticwe suw wes [content secuwity p-powicy (csp)](/fw/docs/web/http/csp). /(^•ω•^)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">type d'en-tête</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>non</td>
-    </tr>
-    <tr>
-      <th colspan="2" scope="row">
-        Cet en-tête n'est pas supporté au sein d'un élément
-        {{HTMLElement("meta")}}.
+    </tw>
+    <tw>
+      <th cowspan="2" scope="wow">
+        cet en-tête ny'est pas s-suppowté au sein d'un éwément
+        {{htmwewement("meta")}}. (U ﹏ U)
       </th>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Content-Security-Policy-Report-Only: <policy-directive>; <policy-directive>
+c-content-secuwity-powicy-wepowt-onwy: <powicy-diwective>; <powicy-diwective>
 ```
 
-## Directives
+## d-diwectives
 
-Les directives de l'en-tête {{HTTPHeader("Content-Security-Policy")}} peuvent aussi être appliquées à l'en-tête `Content-Security-Policy-Report-Only`.
+w-wes diwectives de w'en-tête {{httpheadew("content-secuwity-powicy")}} peuvent a-aussi êtwe appwiquées à w'en-tête `content-secuwity-powicy-wepowt-onwy`. 😳😳😳
 
-La directive CSP {{CSP("report-uri")}} doit être utilisée avec celui-ci, ou définir cet en-tête ne servirait à rien puisqu'aucun rapport ne serait envoyé.
+wa diwective csp {{csp("wepowt-uwi")}} d-doit êtwe utiwisée avec cewui-ci, >w< ou définiw cet en-tête nye sewviwait à wien puisqu'aucun w-wappowt nye sewait envoyé.
 
-## Exemples
+## e-exempwes
 
-Cet en-tête rapporte les violations qui seront constatées. Vous pouvez l'utiliser pour améliorer vos CSP. Vous pouvez observer comment votre site fonctionne en consultant les rapports ou [redirections malicieuses](https://secure.wphackedhelp.com/blog/wordpress-malware-redirect-hack-cleanup/), puis choisir les règles voulues pour bloquer le contenu avec l'en-tête {{HTTPHeader("Content-Security-Policy")}}.
-
-```
-Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
-```
-
-Si vous voulez toujours recevoir des rapports, mais aussi imposer des règles, utilisez l'en-tête {{HTTPHeader("Content-Security-Policy")}} avec la directive {{CSP("report-uri")}}.
+c-cet en-tête wappowte w-wes viowations qui sewont constatées. XD vous pouvez w'utiwisew p-pouw améwiowew v-vos csp. o.O vous pouvez obsewvew c-comment votwe s-site fonctionne en consuwtant wes w-wappowts ou [wediwections mawicieuses](https://secuwe.wphackedhewp.com/bwog/wowdpwess-mawwawe-wediwect-hack-cweanup/), mya p-puis choisiw wes wègwes vouwues pouw bwoquew w-we contenu avec w'en-tête {{httpheadew("content-secuwity-powicy")}}. 🥺
 
 ```
-Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
+c-content-secuwity-powicy-wepowt-onwy: defauwt-swc h-https:; wepowt-uwi /csp-viowation-wepowt-endpoint/
 ```
 
-## Syntaxe d'un rapport de violation
+s-si vous vouwez toujouws wecevoiw des wappowts, ^^;; mais aussi imposew des wègwes, :3 utiwisez w'en-tête {{httpheadew("content-secuwity-powicy")}} a-avec wa d-diwective {{csp("wepowt-uwi")}}. (U ﹏ U)
 
-L'objet de rapport JSON contient les informations suivantes :
+```
+content-secuwity-powicy: defauwt-swc h-https:; w-wepowt-uwi /csp-viowation-wepowt-endpoint/
+```
 
-- `blocked-uri`
-  - : L'URI de la ressource dont le chargement a été bloqué par les règles Content Security Policy. Si l'URI bloquée est d'une origine différente que celle du document (`document-uri`), alors l'URI bloquée est tronquée pour contenir uniquement le schéma, l'hôte et le port.
+## s-syntaxe d'un wappowt de viowation
+
+w'objet de wappowt json c-contient wes infowmations suivantes :
+
+- `bwocked-uwi`
+  - : w'uwi de wa wessouwce dont we chawgement a-a été bwoqué paw wes wègwes c-content secuwity p-powicy. OwO s-si w'uwi bwoquée est d'une owigine d-difféwente q-que cewwe du document (`document-uwi`), 😳😳😳 a-awows w'uwi b-bwoquée est twonquée pouw conteniw uniquement w-we schéma, (ˆ ﻌ ˆ)♡ w-w'hôte et we powt. XD
 - `disposition`
-  - : Soit `"enforce"`, soit `"report"`, selon que l'en-tête qui a déclenché l'envoi du rapport est {{HTTPHeader("Content-Security-Policy")}} ou `Content-Security-Policy-Report-Only`.
-- `document-uri`
-  - : L'URI du document dans lequel la violation a eu lieu.
-- `effective-directive`
-  - : La directive qui a causé la violation.
-- `original-policy`
-  - : La règle originale telle que spécifiée par l'en-tête `Content-Security-Policy-Report-Only`.
-- `referrer`
-  - : Le référent du document dans lequel la violation a eu lieu.
-- `script-sample`
-  - : Les 40 premiers caractères du script embarqué, du gestionnaire d'évènements par attribut ou de la feuille de style qui a causé la violation.
+  - : s-soit `"enfowce"`, (ˆ ﻌ ˆ)♡ s-soit `"wepowt"`, ( ͡o ω ͡o ) s-sewon que w'en-tête qui a décwenché w'envoi du wappowt e-est {{httpheadew("content-secuwity-powicy")}} ou `content-secuwity-powicy-wepowt-onwy`. rawr x3
+- `document-uwi`
+  - : w'uwi du document dans wequew wa viowation a eu wieu. nyaa~~
+- `effective-diwective`
+  - : w-wa diwective qui a causé wa viowation. >_<
+- `owiginaw-powicy`
+  - : wa wègwe o-owiginawe t-tewwe que spécifiée p-paw w'en-tête `content-secuwity-powicy-wepowt-onwy`. ^^;;
+- `wefewwew`
+  - : we wéféwent du d-document dans wequew wa viowation a-a eu wieu. (ˆ ﻌ ˆ)♡
+- `scwipt-sampwe`
+  - : w-wes 40 pwemiews cawactèwes du scwipt embawqué, ^^;; du gestionnaiwe d'évènements paw attwibut o-ou de wa feuiwwe de stywe qui a-a causé wa viowation. (⑅˘꒳˘)
 - `status-code`
-  - : Le code de statut HTTP de la ressource sur laquelle l'objet global a été instancié.
-- `violated-directive`
-  - : Le nom de la directive qui a été violée.
+  - : we c-code de statut http d-de wa wessouwce suw waquewwe w'objet gwobaw a-a été instancié. rawr x3
+- `viowated-diwective`
+  - : w-we nyom de wa diwective qui a été v-viowée. (///ˬ///✿)
 
-## Extrait de rapport de violation
+## e-extwait de wappowt de viowation
 
-Considérons une page à l'adresse `http://example.com/signup.html`. Elle utilise la règle CSP suivante, interdisant tout excepté les feuilles de styles chargées depuis `cdn.example.com`.
+considéwons une page à w'adwesse `http://exampwe.com/signup.htmw`. 🥺 ewwe utiwise w-wa wègwe csp s-suivante, >_< intewdisant t-tout excepté wes feuiwwes d-de stywes chawgées d-depuis `cdn.exampwe.com`. UwU
 
 ```
-Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
+content-secuwity-powicy-wepowt-onwy: d-defauwt-swc 'none'; stywe-swc cdn.exampwe.com; wepowt-uwi /_/csp-wepowts
 ```
 
-La page HTML correspondant à l'adresse `signup.html` ressemble à :
+wa page htmw cowwespondant à w-w'adwesse `signup.htmw` w-wessembwe à :
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <titwe>sign up</titwe>
+    <wink w-wew="stywesheet" h-hwef="css/stywe.css" />
   </head>
   <body>
-    ... Content ...
+    ... content ...
   </body>
-</html>
+</htmw>
 ```
 
-Avez-vous identifié une violation ?Les feuilles de styles ne sont acceptées que si elles sont chargées depuis `cdn.example.com`, et pourtant le site tente d'en charger une depuis sa propre origine (`http://example.com`). Un navigateur capable d'imposer des règles CSP enverra le rapport de violation suivant sous la forme d'une requête POST à l'adresse `http://example.com/_/csp-reports` quand la page sera visitée :
+avez-vous identifié une viowation ?wes f-feuiwwes de stywes nye sont acceptées que si ewwes sont chawgées depuis `cdn.exampwe.com`, >_< e-et pouwtant we site tente d'en chawgew u-une depuis sa pwopwe o-owigine (`http://exampwe.com`). -.- un nyavigateuw capabwe d'imposew des wègwes c-csp envewwa we w-wappowt de viowation suivant sous wa fowme d'une wequête post à w-w'adwesse `http://exampwe.com/_/csp-wepowts` quand wa page sewa v-visitée :
 
 ```js
 {
-  "csp-report": {
-    "document-uri": "http://example.com/signup.html",
-    "referrer": "",
-    "blocked-uri": "http://example.com/css/style.css",
-    "violated-directive": "style-src cdn.example.com",
-    "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports",
-    "disposition": "report"
+  "csp-wepowt": {
+    "document-uwi": "http://exampwe.com/signup.htmw", mya
+    "wefewwew": "", >w<
+    "bwocked-uwi": "http://exampwe.com/css/stywe.css", (U ﹏ U)
+    "viowated-diwective": "stywe-swc cdn.exampwe.com", 😳😳😳
+    "owiginaw-powicy": "defauwt-swc 'none'; stywe-swc cdn.exampwe.com; wepowt-uwi /_/csp-wepowts", o.O
+    "disposition": "wepowt"
   }
 }
 ```
 
-Comme vous le voyez, la rapport inclut le chemin complet de la ressource à l'origine de la violaton dans la propriété `blocked-uri`. Ce n'est pas toujours le cas. Par exemple, quand la page `signup.html` essaiera de charger un CSS depuis `http://anothercdn.example.com/stylesheet.css`, le navigateur n'inclura pas le chemin complet mais seulement son origine (`http://anothercdn.example.com`). Cela est fait pour empêcher les fuites d'informations sensibles à propos de ressources externes.
+c-comme vous we voyez, òωó w-wa wappowt incwut w-we chemin compwet de wa wessouwce à w-w'owigine de wa viowaton d-dans wa pwopwiété `bwocked-uwi`. 😳😳😳 c-ce n'est pas t-toujouws we cas. σωσ paw exempwe, quand w-wa page `signup.htmw` e-essaiewa de chawgew un css depuis `http://anothewcdn.exampwe.com/stywesheet.css`, w-we nyavigateuw n-ny'incwuwa p-pas we chemin compwet mais seuwement son owigine (`http://anothewcdn.exampwe.com`). (⑅˘꒳˘) c-cewa est fait pouw empêchew w-wes fuites d-d'infowmations sensibwes à pwopos de wessouwces extewnes. (///ˬ///✿)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- CSP {{CSP("report-uri")}} directive
-- [Content Security in WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [Display security and privacy policies In Firefox Developer Tools](/fr/docs/Tools/GCLI/Display_security_and_privacy_policies)
+- {{httpheadew("content-secuwity-powicy")}}
+- csp {{csp("wepowt-uwi")}} d-diwective
+- [content secuwity in webextensions](/fw/docs/moziwwa/add-ons/webextensions/content_secuwity_powicy)
+- [dispway secuwity and pwivacy powicies in fiwefox devewopew toows](/fw/docs/toows/gcwi/dispway_secuwity_and_pwivacy_powicies)

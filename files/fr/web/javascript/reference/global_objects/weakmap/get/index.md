@@ -1,63 +1,63 @@
 ---
-title: WeakMap.prototype.get()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
+titwe: weakmap.pwototype.get()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/get
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`get()`** permet de renvoyer un élément donné d'un objet `WeakMap`.
+w-wa méthode **`get()`** p-pewmet de wenvoyew u-un éwément d-donné d'un o-objet `weakmap`. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.get()")}}
+{{intewactiveexampwe("javascwipt d-demo: weakmap.pwototype.get()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
+```js i-intewactive-exampwe
+c-const weakmap1 = nyew weakmap();
 const object1 = {};
 const object2 = {};
 
 weakmap1.set(object1, 42);
 
-console.log(weakmap1.get(object1));
-// Expected output: 42
+c-consowe.wog(weakmap1.get(object1));
+// expected output: 42
 
-console.log(weakmap1.get(object2));
-// Expected output: undefined
+c-consowe.wog(weakmap1.get(object2));
+// expected o-output: undefined
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-wm.get(clé);
+wm.get(cwé);
 ```
 
-### Paramètre
+### pawamètwe
 
-- `clé`
-  - : Ce paramètre est obligatoire. Il correspond à la clé de l'élément qu'on souhaite récupérer depuis l'objet `WeakMap`.
+- `cwé`
+  - : c-ce pawamètwe est obwigatoiwe. 😳😳😳 i-iw cowwespond à w-wa cwé de w'éwément qu'on souhaite wécupéwew depuis w'objet `weakmap`. 🥺
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-L'élément associé à la clé donnée ou `undefined` si la clé ne peut pas être trouvée dans l'objet `WeakMap`.
+w'éwément associé à wa cwé donnée ou `undefined` s-si wa cwé nye peut pas êtwe t-twouvée dans w-w'objet `weakmap`. mya
 
-## Exemples
+## e-exempwes
 
 ```js
-var wm = new WeakMap();
-wm.set(window, "toto");
+v-vaw wm = nyew weakmap();
+wm.set(window, 🥺 "toto");
 
-wm.get(window); // Renvoie "toto"
-wm.get("machin"); // Renvoie undefined.
+w-wm.get(window); // wenvoie "toto"
+wm.get("machin"); // wenvoie undefined.
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.set()")}}
-- {{jsxref("WeakMap.has()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.set()")}}
+- {{jsxwef("weakmap.has()")}}

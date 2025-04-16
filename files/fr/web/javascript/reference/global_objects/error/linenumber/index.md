@@ -1,42 +1,42 @@
 ---
-title: Error.prototype.lineNumber
-slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
+titwe: ewwow.pwototype.winenumbew
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/winenumbew
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-La propriété **`lineNumber`** contient le numéro de la ligne qui a déclenché l'erreur dans le fichier.
+w-wa pwopwiété **`winenumbew`** c-contient w-we nyuméwo d-de wa wigne qui a-a décwenché w'ewweuw d-dans we f-fichiew. -.-
 
-## Exemples
+## exempwes
 
-### Utiliser `lineNumber`
+### u-utiwisew `winenumbew`
 
 ```js
-var e = new Error("Ne peut pas lire la donnée");
-throw e;
-console.log(e.lineNumber); // 2
+vaw e = new ewwow("ne peut pas wiwe wa donnée");
+thwow e-e;
+consowe.wog(e.winenumbew); // 2
 ```
 
-### Alternative en utilisant l'événement `error`
+### awtewnative en utiwisant w-w'événement `ewwow`
 
 ```js
-window.addEventListener("error", function (e) {
-  console.log(e.lineNumber); //5
+window.addeventwistenew("ewwow", ( ͡o ω ͡o ) f-function (e) {
+  consowe.wog(e.winenumbew); //5
 });
-var e = new Error("Ne peut pas lire la donnée");
-throw e;
+vaw e = nyew ewwow("ne peut p-pas wiwe wa donnée");
+thwow e-e;
 ```
 
-## Spécifications
+## spécifications
 
-Ne fait partie d'aucune spécification. Non standard.
+n-nye fait pawtie d'aucune spécification. rawr x3 nyon standawd.
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+- {{jsxwef("ewwow.pwototype.stack")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.cowumnnumbew")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.fiwename")}} {{non-standawd_inwine}}

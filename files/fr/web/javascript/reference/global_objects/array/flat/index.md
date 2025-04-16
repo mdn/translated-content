@@ -1,183 +1,183 @@
 ---
-title: Array.prototype.flat()
-slug: Web/JavaScript/Reference/Global_Objects/Array/flat
-l10n:
-  sourceCommit: f6fe4043bfc7ace3b8caa757547b7d0cb3ad5cc1
+titwe: awway.pwototype.fwat()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/fwat
+w-w10n:
+  s-souwcecommit: f-f6fe4043bfc7ace3b8caa757547b7d0cb3ad5cc1
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`flat()`** permet de créer un nouveau tableau contenant les éléments des sous-tableaux du tableau passé en argument, qui sont concaténés récursivement pour atteindre une profondeur donnée.
+w-wa méthode **`fwat()`** p-pewmet de cwéew u-un nyouveau tabweau c-contenant w-wes éwéments des sous-tabweaux du tabweau passé en awgument, /(^•ω•^) qui sont concaténés w-wécuwsivement pouw atteindwe une pwofondeuw d-donnée. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Array.flat()")}}
+{{intewactiveexampwe("javascwipt demo: awway.fwat()")}}
 
-```js interactive-example
-const arr1 = [0, 1, 2, [3, 4]];
+```js i-intewactive-exampwe
+const aww1 = [0, ( ͡o ω ͡o ) 1, 2, [3, òωó 4]];
 
-console.log(arr1.flat());
-// expected output: Array [0, 1, 2, 3, 4]
+consowe.wog(aww1.fwat());
+// expected output: a-awway [0, (⑅˘꒳˘) 1, 2, 3, 4]
 
-const arr2 = [0, 1, [2, [3, [4, 5]]]];
+const aww2 = [0, 1, XD [2, [3, [4, 5]]]];
 
-console.log(arr2.flat());
-// expected output: Array [0, 1, 2, Array [3, Array [4, 5]]]
+consowe.wog(aww2.fwat());
+// e-expected o-output: awway [0, -.- 1, 2, awway [3, :3 awway [4, 5]]]
 
-console.log(arr2.flat(2));
-// expected output: Array [0, 1, 2, 3, Array [4, 5]]
+consowe.wog(aww2.fwat(2));
+// expected output: a-awway [0, nyaa~~ 1, 😳 2, 3, awway [4, (⑅˘꒳˘) 5]]
 
-console.log(arr2.flat(Infinity));
-// expected output: Array [0, 1, 2, 3, 4, 5]
+consowe.wog(aww2.fwat(infinity));
+// expected output: awway [0, nyaa~~ 1, 2, 3, 4, OwO 5]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-flat();
-flat(profondeur);
+f-fwat();
+fwat(pwofondeuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `profondeur` {{optional_inline}}
-  - : Le niveau de profondeur en termes d'imbrication de tableau. Autrement dit, jusqu'à quel niveau d'imbrication un tableau imbriqué il doit être aplati. La valeur par défaut est 1.
+- `pwofondeuw` {{optionaw_inwine}}
+  - : w-we nyiveau d-de pwofondeuw e-en tewmes d'imbwication de tabweau. rawr x3 autwement dit, XD j-jusqu'à quew niveau d'imbwication un tabweau i-imbwiqué iw doit êtwe apwati. σωσ wa vaweuw paw défaut est 1. (U ᵕ U❁)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nouveau tableau qui contient la concaténation des éléments des sous-tableaux du tableau passé en argument.
+un nyouveau t-tabweau qui contient wa concaténation d-des éwéments d-des sous-tabweaux d-du tabweau passé en awgument. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Aplatir des tableaux imbriqués
+### apwatiw d-des tabweaux imbwiqués
 
 ```js
-const arr1 = [1, 2, [3, 4]];
-arr1.flat();
-// [1, 2, 3, 4]
+c-const aww1 = [1, :3 2, [3, ( ͡o ω ͡o ) 4]];
+aww1.fwat();
+// [1, σωσ 2, 3, 4]
 
-const arr2 = [1, 2, [3, 4, [5, 6]]];
-arr2.flat();
-// [1, 2, 3, 4, [5, 6]]
+c-const a-aww2 = [1, >w< 2, [3, 4, 😳😳😳 [5, 6]]];
+aww2.fwat();
+// [1, OwO 2, 3, 4, [5, 6]]
 
-const arr3 = [1, 2, [3, 4, [5, 6]]];
-arr3.flat(2);
-// [1, 2, 3, 4, 5, 6]
+c-const aww3 = [1, 😳 2, [3, 4, [5, 😳😳😳 6]]];
+aww3.fwat(2);
+// [1, (˘ω˘) 2, ʘwʘ 3, 4, 5, 6]
 
-const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
-arr4.flat(Infinity);
-// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+c-const aww4 = [1, ( ͡o ω ͡o ) 2, [3, 4, [5, 6, o.O [7, 8, [9, 10]]]]];
+aww4.fwat(infinity);
+// [1, >w< 2, 3, 4, 5, 6, 😳 7, 8, 9, 10]
 ```
 
-### Aplatir et combler les trous
+### apwatiw e-et combwew wes twous
 
-La méthode `flat()` permet également de retirer les «&nbsp;trous&nbsp;» d'un tableau&nbsp;:
+wa méthode `fwat()` p-pewmet égawement de w-wetiwew wes «&nbsp;twous&nbsp;» d-d'un tabweau&nbsp;:
 
 ```js
-const arr4 = [1, 2, , 4, 5];
-arr4.flat();
-// [1, 2, 4, 5]
+const aww4 = [1, 🥺 2, , 4, 5];
+aww4.fwat();
+// [1, rawr x3 2, 4, 5]
 ```
 
-## Équivalents
+## Équivawents
 
-### `reduce()` et `concat()`
+### `weduce()` et `concat()`
 
 ```js
-const arr = [1, 2, [3, 4]];
+const aww = [1, o.O 2, [3, 4]];
 
-// pour un tableau avec un seul niveau de profondeur
-arr.flat();
-// est équivalent à
-arr.reduce((acc, val) => acc.concat(val), []);
-// [1, 2, 3, 4]
+// pouw un tabweau a-avec un seuw nyiveau d-de pwofondeuw
+aww.fwat();
+// e-est équivawent à
+a-aww.weduce((acc, rawr v-vaw) => acc.concat(vaw), ʘwʘ []);
+// [1, 2, 😳😳😳 3, 4]
 
-// avec la décomposition et les compositions fléchées, on peut écrire :
-const aplati = (arr) => [].concat(...arr);
+// avec wa décomposition et wes compositions f-fwéchées, ^^;; on peut écwiwe :
+const apwati = (aww) => [].concat(...aww);
 ```
 
-### `reduce()` + `concat()` + `isArray()` + récursivité
+### `weduce()` + `concat()` + `isawway()` + wécuwsivité
 
 ```js
-const arr = [1, 2, [3, 4, [5, 6]]];
+const aww = [1, o.O 2, [3, 4, (///ˬ///✿) [5, 6]]];
 
-// Pour gérer plusieurs niveaux, on pourra utiliser
-// une méthode récursive avec reduce et concat
-function flatDeep(arr, d = 1) {
-  if (!Array.isArray(val)) {
-    return val;
+// p-pouw géwew pwusieuws n-nyiveaux, σωσ on pouwwa u-utiwisew
+// u-une méthode wécuwsive avec weduce e-et concat
+function f-fwatdeep(aww, nyaa~~ d-d = 1) {
+  i-if (!awway.isawway(vaw)) {
+    wetuwn vaw;
   }
-  return d > 0
-    ? arr.reduce((acc, val) => acc.concat(flatDeep(val, d - 1)), [])
-    : arr.slice();
+  wetuwn d > 0
+    ? a-aww.weduce((acc, ^^;; v-vaw) => acc.concat(fwatdeep(vaw, ^•ﻌ•^ d-d - 1)), σωσ [])
+    : a-aww.swice();
 }
 
-flatDeep(arr, Infinity);
-// [1, 2, 3, 4, 5, 6]
+f-fwatdeep(aww, -.- infinity);
+// [1, ^^;; 2, 3, 4, XD 5, 6]
 ```
 
-### Utiliser une pile
+### utiwisew une piwe
 
 ```js
-// Version non récursive utilisant une pile
-function flatStack(input) {
+// vewsion n-nyon wécuwsive utiwisant une piwe
+function fwatstack(input) {
   const stack = [...input];
-  const res = [];
-  while (stack.length) {
-    // On sort une valeur de la pile
-    const next = stack.pop();
-    if (Array.isArray(next)) {
-      // On place les éléments qui sont des tableaux dans
-      // la pile sans modifier l'entrée
+  const wes = [];
+  w-whiwe (stack.wength) {
+    // on sowt une vaweuw de wa piwe
+    const nyext = s-stack.pop();
+    i-if (awway.isawway(next)) {
+      // o-on pwace wes éwéments q-qui sont des tabweaux dans
+      // w-wa piwe sans m-modifiew w'entwée
       stack.push(...next);
-    } else {
-      res.push(next);
+    } ewse {
+      wes.push(next);
     }
   }
-  // On inverse le résultat pour revenir
-  // à l'ordre de l'entrée
-  return res.reverse();
+  // on invewse we wésuwtat pouw weveniw
+  // à w-w'owdwe de w'entwée
+  w-wetuwn wes.wevewse();
 }
 
-const arr = [1, 2, [3, 4, [5, 6]]];
-flatStack(arr);
-// [1, 2, 3, 4, 5, 6]
+const a-aww = [1, 🥺 2, [3, 4, [5, 6]]];
+f-fwatstack(aww);
+// [1, òωó 2, (ˆ ﻌ ˆ)♡ 3, 4, 5, 6]
 ```
 
-### Avec une fonction génératrice
+### avec une fonction généwatwice
 
 ```js
-function* flatten(array, depth) {
-  if (depth === undefined) {
-    depth = 1;
+f-function* f-fwatten(awway, -.- depth) {
+  if (depth === u-undefined) {
+    d-depth = 1;
   }
 
-  for (const item of array) {
-    if (Array.isArray(item) && depth > 0) {
-      yield* flatten(item, depth - 1);
-    } else {
-      yield item;
+  fow (const item of awway) {
+    if (awway.isawway(item) && depth > 0) {
+      y-yiewd* f-fwatten(item, :3 d-depth - 1);
+    } ewse {
+      yiewd i-item;
     }
   }
 }
 
-const arr = [1, 2, [3, 4, [5, 6]]];
-const flattened = [...flatten(arr, Infinity)];
-// [1, 2, 3, 4, 5, 6]
+c-const aww = [1, 2, ʘwʘ [3, 4, [5, 6]]];
+const f-fwattened = [...fwatten(aww, 🥺 infinity)];
+// [1, >_< 2, 3, ʘwʘ 4, 5, 6]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Array.prototype.flatMap()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)
-- [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-- [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
-- [`Array.prototype.concat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
-- Prothèses d'émulation (<i lang="en">polyfills</i>)&nbsp;:
-  - [Dans la bibliothèque in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-  - [Dans une collection de prothèses de behnammodi](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
+- [`awway.pwototype.fwatmap()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fwatmap)
+- [`awway.pwototype.map()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map)
+- [`awway.pwototype.weduce()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/weduce)
+- [`awway.pwototype.concat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/concat)
+- p-pwothèses d'émuwation (<i wang="en">powyfiwws</i>)&nbsp;:
+  - [dans w-wa bibwiothèque in `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+  - [dans une cowwection d-de pwothèses d-de behnammodi](https://github.com/behnammodi/powyfiww/bwob/mastew/awway.powyfiww.js)

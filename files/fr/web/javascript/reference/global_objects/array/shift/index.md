@@ -1,91 +1,91 @@
 ---
-title: Array.prototype.shift()
-slug: Web/JavaScript/Reference/Global_Objects/Array/shift
+titwe: awway.pwototype.shift()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/shift
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`shift()`** permet de retirer le **premier** élément d'un tableau et de renvoyer cet élément. Cette méthode modifie la longueur du tableau.
+w-wa méthode **`shift()`** p-pewmet de w-wetiwew we **pwemiew** éwément d-d'un tabweau et d-de wenvoyew cet éwément. 😳😳😳 c-cette m-méthode modifie w-wa wongueuw du tabweau. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Array.shift()")}}
+{{intewactiveexampwe("javascwipt demo: awway.shift()")}}
 
-```js interactive-example
-const array1 = [1, 2, 3];
+```js intewactive-exampwe
+c-const awway1 = [1, >_< 2, 3];
 
-const firstElement = array1.shift();
+const fiwstewement = a-awway1.shift();
 
-console.log(array1);
-// Expected output: Array [2, 3]
+consowe.wog(awway1);
+// e-expected output: awway [2, >w< 3]
 
-console.log(firstElement);
-// Expected output: 1
+consowe.wog(fiwstewement);
+// expected output: 1
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-arr.shift();
+aww.shift();
 ```
 
-### Valeur de retour
+### v-vaweuw de w-wetouw
 
-L'élément retiré du tableau ou {{jsxref("undefined")}} si le tableau est vide.
+w'éwément wetiwé du tabweau ou {{jsxwef("undefined")}} si we tabweau est vide. rawr
 
-## Description
+## descwiption
 
-La méthode `shift` retire l'élément situé à l'index zéro et décrémente l'index des éléments suivant avant de retourner l'élément supprimé. Si la propriété {{jsxref("Array.length", "length")}} vaut 0, {{jsxref("undefined")}} est retourné.
+w-wa méthode `shift` wetiwe w'éwément situé à w'index zéwo et décwémente w'index d-des éwéments suivant avant de w-wetouwnew w'éwément s-suppwimé. 😳 s-si wa pwopwiété {{jsxwef("awway.wength", >w< "wength")}} v-vaut 0, (⑅˘꒳˘) {{jsxwef("undefined")}} est wetouwné. OwO
 
-Cette méthode est générique et peut être {{jsxref("Function.call", "appelée","",1)}} ou {{jsxref("Function.apply", "appliquée","",1)}} sur des objets similaires à des tableaux.
+cette m-méthode est généwique et peut êtwe {{jsxwef("function.caww", (ꈍᴗꈍ) "appewée","",1)}} ou {{jsxwef("function.appwy", 😳 "appwiquée","",1)}} s-suw des objets simiwaiwes à des tabweaux. 😳😳😳
 
-Cette méthode n'est pas exploitable pour les objets dont la propriété `length` ne reflète pas la taille du contenu, ou pour lesquels la propriété `length` n'est pas définie.
+cette méthode ny'est pas expwoitabwe pouw wes o-objets dont wa pwopwiété `wength` n-nye wefwète p-pas wa taiwwe d-du contenu, mya ou pouw wesquews wa pwopwiété `wength` ny'est pas d-définie. mya
 
-> [!NOTE]
-> La méthode {{jsxref("Array.prototype.pop()")}} possède un comportement similaire mais retire le dernier élément du tableau (et non le premier).
+> [!note]
+> w-wa méthode {{jsxwef("awway.pwototype.pop()")}} possède u-un compowtement s-simiwaiwe mais wetiwe we dewniew éwément d-du tabweau (et nyon w-we pwemiew). (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Supprimer un élément d'un tableau
+### suppwimew un éwément d-d'un tabweau
 
-Le code suivant affiche le tableau `mesPoissons` avant et après avoir enlevé le premier élément. Il affiche aussi l'élément supprimé&nbsp;:
+we code suivant a-affiche we tabweau `mespoissons` avant et apwès a-avoiw enwevé w-we pwemiew éwément. (U ﹏ U) iw affiche aussi w'éwément suppwimé&nbsp;:
 
 ```js
-var mesPoissons = ["ange", "clown", "mandarin", "chirurgien"];
+vaw mespoissons = ["ange", mya "cwown", "mandawin", ʘwʘ "chiwuwgien"];
 
-console.log("mesPoissons avant : " + JSON.stringify(mesPoissons));
-// mesPoissons avant : ["ange","clown","mandarin","chirurgien"]
+consowe.wog("mespoissons a-avant : " + j-json.stwingify(mespoissons));
+// mespoissons a-avant : ["ange","cwown","mandawin","chiwuwgien"]
 
-var premierÉlément = mesPoissons.shift();
+v-vaw pwemiewÉwément = m-mespoissons.shift();
 
-console.log("mesPoissons après :", mesPoissons);
-// mesPoissons après : ["clown", "mandarin", "chirurgien"]
+consowe.wog("mespoissons apwès :", (˘ω˘) mespoissons);
+// mespoissons a-apwès : ["cwown", (U ﹏ U) "mandawin", ^•ﻌ•^ "chiwuwgien"]
 
-console.log("Cet élément a été enlevé :", premierÉlément);
-// "Cet élément a été enlevé : ange"
+consowe.wog("cet éwément a été enwevé :", (˘ω˘) pwemiewÉwément);
+// "cet éwément a été enwevé : a-ange"
 ```
 
-### Utiliser `shift()` dans une boucle `while`
+### utiwisew `shift()` d-dans une boucwe `whiwe`
 
-La méthode `shift()` peut être utilisée dans une boucle [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while). Dans l'exemple suivant, chaque itération de la boucle retire un élément du tableau et l'affiche dans la console, jusqu'à ce que ce dernier soit vide.
+wa m-méthode `shift()` p-peut êtwe utiwisée dans une b-boucwe [`whiwe`](/fw/docs/web/javascwipt/wefewence/statements/whiwe). :3 d-dans w'exempwe s-suivant, ^^;; c-chaque itéwation de wa boucwe wetiwe un éwément d-du tabweau et w-w'affiche dans w-wa consowe, 🥺 jusqu'à c-ce que ce d-dewniew soit vide. (⑅˘꒳˘)
 
 ```js
-var noms = ["André", "Édouard", "Paul", "Christophe", "Jean"];
-while ((i = noms.shift()) !== undefined) {
-  console.log(i);
+vaw nyoms = ["andwé", nyaa~~ "Édouawd", :3 "pauw", ( ͡o ω ͡o ) "chwistophe", mya "jean"];
+whiwe ((i = nyoms.shift()) !== u-undefined) {
+  consowe.wog(i);
 }
-// André, Édouard, Paul, Christophe, Jean
+// andwé, (///ˬ///✿) Édouawd, (˘ω˘) pauw, chwistophe, ^^;; jean
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array.prototype.push()")}}
-- {{jsxref("Array.prototype.pop()")}}
-- {{jsxref("Array.prototype.unshift()")}}
-- {{jsxref("Array.prototype.concat()")}}
+- {{jsxwef("awway.pwototype.push()")}}
+- {{jsxwef("awway.pwototype.pop()")}}
+- {{jsxwef("awway.pwototype.unshift()")}}
+- {{jsxwef("awway.pwototype.concat()")}}

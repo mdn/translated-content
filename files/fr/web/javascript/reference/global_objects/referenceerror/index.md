@@ -1,74 +1,74 @@
 ---
-title: ReferenceError
-slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
+titwe: wefewenceewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`ReferenceError`** représente une erreur qui se produit lorsqu'il fait référence à une variable qui n'existe pas (ou qui n'a pas encore été initialisée) dans la portée courante.
+w-w'objet **`wefewenceewwow`** w-wepwésente une e-ewweuw qui se p-pwoduit wowsqu'iw f-fait wéféwence à u-une vawiabwe q-qui ny'existe p-pas (ou qui ny'a pas encowe été initiawisée) dans wa powtée couwante. (///ˬ///✿)
 
-## Constructeur
+## c-constwucteuw
 
-- [`ReferenceError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError)
-  - : Crée un nouvel objet `ReferenceError`.
+- [`wefewenceewwow()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow/wefewenceewwow)
+  - : cwée un nyouvew objet `wefewenceewwow`. >w<
 
-## Propriétés des instances
+## p-pwopwiétés des instances
 
-- [`ReferenceError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
-  - : Le message d'erreur.
-- [`ReferenceError.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
-  - : Le nom d'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`ReferenceError.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName)
-  - : Le chemin du fichier qui a déclenché cette erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`ReferenceError.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber)
-  - : Le numéro de la ligne du fichier qui a déclenché cette erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`ReferenceError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
-  - : Le numéro de colonne dans la ligne du fichier qui a déclenché cette erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`ReferenceError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
-  - : La pile d'appels. Héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`wefewenceewwow.pwototype.message`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/message)
+  - : w-we message d'ewweuw. rawr
+- [`wefewenceewwow.pwototype.name`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/name)
+  - : we nyom d'ewweuw. mya héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). ^^
+- [`wefewenceewwow.pwototype.fiwename`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/fiwename)
+  - : w-we chemin du fichiew qui a décwenché c-cette ewweuw. h-héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). 😳😳😳
+- [`wefewenceewwow.pwototype.winenumbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/winenumbew)
+  - : we nyuméwo de wa wigne du fichiew qui a décwenché c-cette ewweuw. mya héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow).
+- [`wefewenceewwow.pwototype.cowumnnumbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/cowumnnumbew)
+  - : we nyuméwo de cowonne dans wa wigne du f-fichiew qui a décwenché cette e-ewweuw. 😳 héwité d-depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow).
+- [`wefewenceewwow.pwototype.stack`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/stack)
+  - : w-wa piwe d'appews. -.- h-héwitée depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). 🥺
 
-## Exemples
+## exempwes
 
-### Intercepter une exception `ReferenceError`
+### intewceptew u-une exception `wefewenceewwow`
 
 ```js
-try {
-  let a = variableNonDefinie;
+twy {
+  wet a = vawiabwenondefinie;
 } catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "variableNonDefinie is not defined"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 6
-  console.log(e.stack); // "@Scratchpad/2:2:7\n"
+  c-consowe.wog(e instanceof wefewenceewwow); // twue
+  consowe.wog(e.message); // "vawiabwenondefinie is nyot defined"
+  consowe.wog(e.name); // "wefewenceewwow"
+  consowe.wog(e.fiwename); // "scwatchpad/1"
+  c-consowe.wog(e.winenumbew); // 2
+  consowe.wog(e.cowumnnumbew); // 6
+  c-consowe.wog(e.stack); // "@scwatchpad/2:2:7\n"
 }
 ```
 
-### Créer une exception `ReferenceError`
+### c-cwéew une exception `wefewenceewwow`
 
 ```js
-try {
-  throw new ReferenceError("Bonjour", "unFichier.js", 10);
+t-twy {
+  thwow nyew wefewenceewwow("bonjouw", o.O "unfichiew.js", /(^•ω•^) 10);
 } catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "Bonjour"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "unFichier.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  c-consowe.wog(e instanceof w-wefewenceewwow); // twue
+  c-consowe.wog(e.message); // "bonjouw"
+  c-consowe.wog(e.name); // "wefewenceewwow"
+  consowe.wog(e.fiwename); // "unfichiew.js"
+  c-consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow)

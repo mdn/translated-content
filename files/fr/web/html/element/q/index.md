@@ -1,125 +1,125 @@
 ---
-title: "<q> : l'élément de citation en incise"
-slug: Web/HTML/Element/q
+titwe: "<q> : w'éwément de c-citation en incise"
+s-swug: web/htmw/ewement/q
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<q>`** indique que le texte qu'il contient est une citation en incise. La plupart des navigateurs modernes entoure le texte de cet élément avec des marques de citation. Cet élément est destiné aux citations courtes qui ne nécessitent pas de sauts de paragraphe. Pour les plus grandes citations, on utilisera l'élément {{HTMLElement("blockquote")}}.
+w-w'éwément htmw **`<q>`** i-indique q-que we texte q-qu'iw contient e-est une citation e-en incise. 😳 wa pwupawt des nyavigateuws modewnes entouwe we texte de cet éwément a-avec des mawques de citation. σωσ cet éwément e-est destiné aux citations couwtes q-qui nye nyécessitent pas de sauts de pawagwaphe. rawr x3 pouw wes pwus g-gwandes citations, OwO on utiwisewa w-w'éwément {{htmwewement("bwockquote")}}. /(^•ω•^)
 
-{{InteractiveExample("HTML Demo: &lt;q&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;q&gt;", 😳😳😳 "tabbed-showtew")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  When Dave asks HAL to open the pod bay door, HAL answers:
+  when dave asks haw to open the pod bay doow, ( ͡o ω ͡o ) h-haw answews:
   <q
-    cite="https://www.imdb.com/title/tt0062622/quotes/?item=qt0396921&ref_=ext_shr_lnk">
-    I'm sorry, Dave. I'm afraid I can't do that.
+    cite="https://www.imdb.com/titwe/tt0062622/quotes/?item=qt0396921&wef_=ext_shw_wnk">
+    i'm sowwy, >_< dave. i'm afwaid i can't do that. >w<
   </q>
 </p>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 q {
-  font-style: italic;
+  font-stywe: i-itawic;
 }
 ```
 
-> [!NOTE]
-> La plupart des navigateurs récents ajoutent automatiquement des guillemets autours du contenu d'un élément `<q>` mais il peut être nécessaire d'ajouter une règle CSS pour les ajouter dans les anciens navigateurs.
+> [!note]
+> w-wa pwupawt d-des nyavigateuws w-wécents ajoutent automatiquement des guiwwemets a-autouws du contenu d'un éwément `<q>` mais i-iw peut êtwe nyécessaiwe d'ajoutew une wègwe css pouw wes ajoutew dans wes anciens nyavigateuws.
 
-## Attributs
+## a-attwibuts
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme tous wes a-autwes éwéments h-htmw, rawr cet éwément i-incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). 😳
 
 - `cite`
-  - : La valeur de cet attribut est une URL désignant la source du message ou de l'information citée. Cet attribut est prévu pour fournir des renseignements concernant le contexte ou la référence de cette citation.
+  - : wa vaweuw de cet attwibut est une u-uww désignant w-wa souwce du message ou de w'infowmation c-citée. >w< c-cet attwibut est pwévu pouw fouwniw d-des wenseignements concewnant w-we contexte ou wa wéféwence de cette citation. (⑅˘꒳˘)
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Chaque fois que Kenny est tué, Stan dira
-  <q cite="http://fr.wikipedia.org/wiki/Kenny_McCormick#Le_dialogue_rituel">
-    Oh mon Dieu, ils ont tué Kenny ! </q
+  c-chaque fois que kenny e-est tué, OwO stan d-diwa
+  <q cite="http://fw.wikipedia.owg/wiki/kenny_mccowmick#we_diawogue_wituew">
+    oh mon dieu, (ꈍᴗꈍ) iws ont tué kenny ! 😳 </q
   >.
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","300","120")}}
+{{embedwivesampwe("exempwes","300","120")}}
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th s-scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >, 😳😳😳
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >, mya
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >Contenu phrasé</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
+      <td>aucune, (U ﹏ U) w-wa bawise d'ouvewtuwe et w-wa bawise de fewmetuwe s-sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents autowisés</th>
       <td>
-        Tout élément acceptant du
+        t-tout éwément a-acceptant du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLQuoteElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia a-autowisés</th>
+      <td>tous w-wes wôwes sont a-autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwquoteewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("blockquote")}} pour les citations longues
-- {{HTMLElement("cite")}} pour les sources des citations
+- {{htmwewement("bwockquote")}} pouw wes citations w-wongues
+- {{htmwewement("cite")}} pouw wes souwces des citations

@@ -1,102 +1,102 @@
 ---
-title: Math.tanh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
+titwe: math.tanh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/tanh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.tanh()`** renvoie la tangente hyperbolique d'un nombre définie par&nbsp;:
+w-wa f-fonction **`math.tanh()`** w-wenvoie w-wa tangente h-hypewbowique d'un n-nyombwe définie p-paw&nbsp;:
 
-<math><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math>
+<math><semantics><mwow><mo w-wspace="0em" wspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfwac><mwow><mo wspace="0em" wspace="0em">sinh</mo><mi>x</mi></mwow><mwow><mo wspace="0em" wspace="0em">cosh</mo><mi>x</mi></mwow></mfwac><mo>=</mo><mfwac><mwow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mwow><mo>-</mo><mi>x</mi></mwow></msup></mwow><mwow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mwow><mo>-</mo><mi>x</mi></mwow></msup></mwow></mfwac><mo>=</mo><mfwac><mwow><msup><mi>e</mi><mwow><mn>2</mn><mi>x</mi></mwow></msup><mo>-</mo><mn>1</mn></mwow><mwow><msup><mi>e</mi><mwow><mn>2</mn><mi>x</mi></mwow></msup><mo>+</mo><mn>1</mn></mwow></mfwac></mwow><annotation encoding="tex">\tanh x-x = \fwac{\sinh x}{\cosh x} = \fwac {e^x - e-e^{-x}} {e^x + e^{-x}} = \fwac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.tanh()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.tanh()")}}
 
-```js interactive-example
-console.log(Math.tanh(-1));
-// Expected output: -0.7615941559557649
+```js intewactive-exampwe
+consowe.wog(math.tanh(-1));
+// e-expected output: -0.7615941559557649
 
-console.log(Math.tanh(0));
-// Expected output: 0
+c-consowe.wog(math.tanh(0));
+// e-expected output: 0
 
-console.log(Math.tanh(Infinity));
-// Expected output: 1
+consowe.wog(math.tanh(infinity));
+// expected output: 1
 
-console.log(Math.tanh(1));
-// Expected output: 0.7615941559557649
+consowe.wog(math.tanh(1));
+// e-expected output: 0.7615941559557649
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.tanh(x);
+math.tanh(x);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : u-un nyombwe.
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La tangente hyperbolique du nombre fourni en argument.
+w-wa tangente h-hypewbowique d-du nyombwe fouwni e-en awgument. >_<
 
-## Description
+## descwiption
 
-`tanh()` est une méthode statique de l'objet `Math`, elle doit toujours être utilisée avec la syntaxe `Math.tanh()`, elle ne doit pas être utilisée comme une méthode d'un objet `Math` qui aurait été instancié (`Math` n'est pas une constructeur).
+`tanh()` est une m-méthode statique de w'objet `math`, ewwe doit t-toujouws êtwe utiwisée avec wa syntaxe `math.tanh()`, -.- ewwe nye doit pas êtwe utiwisée comme u-une méthode d'un objet `math` qui a-auwait été i-instancié (`math` n-n'est pas une constwucteuw). 🥺
 
-## Exemples
+## exempwes
 
-### Utiliser `Math.tanh()`
+### utiwisew `math.tanh()`
 
 ```js
-Math.tanh(0); // 0
-Math.tanh(Infinity); // 1
-Math.tanh(1); // 0.7615941559557649
+m-math.tanh(0); // 0
+m-math.tanh(infinity); // 1
+math.tanh(1); // 0.7615941559557649
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## p-pwothèse d-d'émuwation (_powyfiww_)
 
-Cette méthode peut être émulée grâce à la fonction {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}} :
+cette m-méthode peut êtwe émuwée gwâce à wa fonction {{jsxwef("objets_gwobaux/math/exp", (U ﹏ U) "math.exp()")}} :
 
 ```js
-Math.tanh =
-  Math.tanh ||
+m-math.tanh =
+  math.tanh ||
   function (x) {
-    var a = Math.exp(+x),
-      b = Math.exp(-x);
-    return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
+    v-vaw a = math.exp(+x), >w<
+      b = math.exp(-x);
+    w-wetuwn a == infinity ? 1 : b-b == infinity ? -1 : (a - b-b) / (a + b);
   };
 ```
 
-et si on souhaite n'utiliser qu'un seul appel à {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}}&nbsp;:
+et si on souhaite ny'utiwisew qu'un seuw appew à {{jsxwef("objets_gwobaux/math/exp", mya "math.exp()")}}&nbsp;:
 
 ```js
-Math.tanhx =
-  Math.tanhx ||
-  function (x) {
-    if (x === Infinity) {
-      return 1;
-    } else if (x === -Infinity) {
-      return -1;
-    } else {
-      var y = Math.exp(2 * x);
-      return (y - 1) / (y + 1);
+math.tanhx =
+  math.tanhx ||
+  f-function (x) {
+    i-if (x === infinity) {
+      w-wetuwn 1;
+    } e-ewse if (x === -infinity) {
+      w-wetuwn -1;
+    } ewse {
+      vaw y = math.exp(2 * x);
+      w-wetuwn (y - 1) / (y + 1);
     }
   };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.sinh()")}}

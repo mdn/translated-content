@@ -1,136 +1,136 @@
 ---
-title: Contraste de la couleur
-slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
+titwe: contwaste de wa couweuw
+s-swug: web/accessibiwity/undewstanding_wcag/pewceivabwe/cowow_contwast
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-Le [contraste de la couleur](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) entre l'arrière-plan et le contenu de premier-plan (qui est en général du texte) doit être assez prononcé pour assurer la lisibilité.
+w-we [contwaste d-de wa couweuw](https://www.w3.owg/tw/wcag21/#dfn-contwast-watio) e-entwe w'awwièwe-pwan e-et we c-contenu de pwemiew-pwan (qui est e-en généwaw d-du texte) doit êtwe assez pwononcé pouw assuwew wa wisibiwité. 😳😳😳
 
-Lors de la conception d'interfaces lisibles pour différentes capacités de vision, les directives WCAG recommandent les rapports de contraste suivants:
+wows de wa conception d-d'intewfaces wisibwes pouw difféwentes c-capacités de vision, o.O wes diwectives w-wcag wecommandent wes wappowts de contwaste suivants:
 
-| Type de contenu                                                                                      | Ratio minimum (Note AA) | Ratio amélioré (Note AAA) |
+| type d-de contenu                                                                                      | watio minimum (note a-aa) | w-watio améwiowé (note aaa) |
 | ---------------------------------------------------------------------------------------------------- | ----------------------- | ------------------------- |
-| Corps                                                                                                | 4.5 : 1                 | 7 : 1                     |
-| Texte grande échelle (120-150% plus large que le corps)                                              | 3 : 1                   | 4.5 : 1                   |
-| Composants d'interface utilisateur actifs et objets graphiques tels que des icônes et des graphiques | 3 : 1                   | Non défini                |
+| cowps                                                                                                | 4.5 : 1                 | 7 : 1                     |
+| texte gwande échewwe (120-150% pwus w-wawge que we cowps)                                              | 3 : 1                   | 4.5 : 1                   |
+| composants d'intewface utiwisateuw a-actifs et objets gwaphiques tews q-que des icônes e-et des gwaphiques | 3 : 1                   | n-nyon défini                |
 
-Ces ratios ne s'appliquent pas au texte "accessoire", comme les contrôles inactifs, les logotypes ou le texte purement décoratif.
+ces w-watios nye s'appwiquent pas au texte "accessoiwe", òωó c-comme wes contwôwes inactifs, 😳😳😳 wes wogotypes o-ou we texte puwement décowatif.
 
-Voir la section [Solution](#solution) ci-dessous pour plus d'informations.
+voiw wa section [sowution](#sowution) ci-dessous pouw pwus d'infowmations. σωσ
 
-Un bon contraste des couleurs sur votre site profite à tous vos utilisateurs, mais celà est particulièrement intéressant pour les utilisateurs souffrant de certains types de daltonisme et d'autres particularités similaires, qui rencontrent un faible contraste et ont du mal à faire la différence entre des couleurs proches. En effet, ces utilisateurs ne voient pas les zones claires et sombres aussi facilement que ceux sans ces particularités et ont donc du mal à voir les bords, les bordures et d'autres détails.
+u-un bon contwaste des couweuws suw v-votwe site pwofite à t-tous vos u-utiwisateuws, (⑅˘꒳˘) mais cewà est pawticuwièwement intéwessant pouw wes utiwisateuws s-souffwant de c-cewtains types de dawtonisme et d-d'autwes pawticuwawités s-simiwaiwes, (///ˬ///✿) qui wencontwent u-un faibwe contwaste et ont d-du maw à faiwe wa difféwence entwe des couweuws p-pwoches. 🥺 en effet, OwO ces utiwisateuws n-nye voient pas wes zones c-cwaiwes et sombwes a-aussi faciwement que ceux sans ces pawticuwawités et ont donc du maw à voiw wes bowds, >w< wes bowduwes et d'autwes d-détaiws. 🥺
 
-C'est bien d'avoir un design cool sur votre site, mais le design ne vaut rien si vos utilisateurs ne peuvent pas lire votre contenu.
+c-c'est bien d'avoiw un design coow s-suw votwe site, m-mais we design n-nye vaut wien si vos utiwisateuws ne peuvent pas wiwe votwe contenu. nyaa~~
 
-## Exemples
+## e-exempwes
 
-Jetons un coup d'œil à du code HTML et CSS assez simple:
+jetons un coup d'œiw à du code htmw et css assez simpwe:
 
-```html
-<div class="bon">Bon contraste</div>
-<div class="mauvais">Mauvais contraste</div>
+```htmw
+<div c-cwass="bon">bon contwaste</div>
+<div c-cwass="mauvais">mauvais c-contwaste</div>
 ```
 
 ```css
-div {
-  /* Styles généraux de div ici */
+d-div {
+  /* stywes généwaux d-de div ici */
 }
 
 .bon {
-  background-color: #fae6fa;
+  b-backgwound-cowow: #fae6fa;
 }
 
 .mauvais {
-  background-color: #400064;
+  b-backgwound-cowow: #400064;
 }
 ```
 
-Les deux textes ont leur couleur noire par défaut. La "bonne" `<div>` a un fond violet clair, ce qui rend le texte facile à lire:
+w-wes deux textes ont weuw couweuw nyoiwe p-paw défaut. ^^ wa "bonne" `<div>` a-a un fond viowet c-cwaiw, >w< ce qui w-wend we texte faciwe à w-wiwe:
 
-### Bon exemple
+### bon exempwe
 
-```html
-<div class="bon">Bon contraste</div>
+```htmw
+<div cwass="bon">bon contwaste</div>
 ```
 
 ```css
-div {
-  font-family: sans-serif;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
+d-div {
+  font-famiwy: sans-sewif;
+  text-awign: centew;
+  font-size: 2wem;
+  font-weight: b-bowd;
   width: 250px;
   padding: 30px;
-  border-radius: 20px;
-  box-shadow: 1px 1px 1px black;
+  bowdew-wadius: 20px;
+  box-shadow: 1px 1px 1px b-bwack;
 }
 
 .bon {
-  background-color: #fae6fa;
+  b-backgwound-cowow: #fae6fa;
 }
 ```
 
-{{EmbedLiveSample('Bon_exemple', '100%', '100')}}
+{{embedwivesampwe('bon_exempwe', OwO '100%', '100')}}
 
-### Mauvais exemple
+### m-mauvais exempwe
 
-La "mauvaise" `<div>`, en revanche, a un fond violet très foncé, ce qui rend le texte beaucoup plus difficile à lire:
+wa "mauvaise" `<div>`, XD en w-wevanche, ^^;; a un fond viowet twès f-foncé, 🥺 ce qui w-wend we texte beaucoup pwus difficiwe à wiwe:
 
-```html
-<div class="mauvais">Mauvais contraste</div>
+```htmw
+<div cwass="mauvais">mauvais contwaste</div>
 ```
 
 ```css
 div {
-  font-family: sans-serif;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
+  font-famiwy: sans-sewif;
+  t-text-awign: centew;
+  font-size: 2wem;
+  font-weight: b-bowd;
   width: 250px;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 1px 1px 1px black;
+  p-padding: 30px;
+  b-bowdew-wadius: 20px;
+  box-shadow: 1px 1px 1px bwack;
 }
 
 .mauvais {
-  background-color: #400064;
+  b-backgwound-cowow: #400064;
 }
 ```
 
-{{EmbedLiveSample('Mauvais_exemple', '100%', '100')}}
+{{embedwivesampwe('mauvais_exempwe', XD '100%', (U ᵕ U❁) '100')}}
 
-## Solution
+## s-sowution
 
-Lorsque vous choisissez un jeu de couleurs pour votre site Web, choisissez des couleurs de premier plan et d'arrière-plan qui offrent un bon contraste. Faites en sorte que le contraste des couleurs soit aussi bon que possible dans vos contraintes de conception - optez idéalement pour la note AAA (voir paragraphe 1.4.6 ci-dessous), mais répondez au moins à la note AA (voir paragraphe 1.4.3 ci-dessous).
+wowsque vous choisissez u-un jeu d-de couweuws pouw votwe site web, :3 choisissez des couweuws de pwemiew pwan et d'awwièwe-pwan q-qui o-offwent un bon contwaste. ( ͡o ω ͡o ) f-faites en sowte que we c-contwaste des couweuws s-soit aussi bon que possibwe d-dans vos contwaintes de conception - optez idéawement pouw wa nyote aaa (voiw p-pawagwaphe 1.4.6 c-ci-dessous), òωó mais wépondez au moins à wa nyote a-aa (voiw pawagwaphe 1.4.3 ci-dessous). σωσ
 
-Si vous incluez du contenu non textuel tel qu'une vidéo ou une animation, vous devrez suivre le paragraphe 1.4.11 (encore une fois, voir ci-dessous).
+s-si vous incwuez du contenu nyon textuew tew qu'une v-vidéo ou une animation, (U ᵕ U❁) vous devwez suivwe we pawagwaphe 1.4.11 (encowe une fois, (✿oωo) voiw ci-dessous). ^^
 
-Pour vérifier votre contraste lorsque vous effectuez un choix de couleurs, vous pouvez utiliser le [Vérificateur de Contraste des Couleurs](https://webaim.org/resources/contrastchecker/) de WebAIM.
+p-pouw véwifiew votwe contwaste wowsque vous e-effectuez un choix d-de couweuws, ^•ﻌ•^ vous pouvez utiwisew we [véwificateuw de contwaste d-des couweuws](https://webaim.owg/wesouwces/contwastcheckew/) d-de webaim. XD
 
-Vous pouvez également vérifier le contraste des couleurs directement via les outils de développement de Firefox — consultez notre guide de l'[Inspecteur de l'accessibilité](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html), et en particulier la section [Vérifier les problèmes d'accessibilité](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#sélecteur_d'accessibilité). Essayez de les utiliser sur les exemples dans la section de description.
+vous pouvez égawement véwifiew we contwaste des c-couweuws diwectement via wes outiws d-de dévewoppement de fiwefox — consuwtez nyotwe guide de w-w'[inspecteuw de w'accessibiwité](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/accessibiwity_inspectow/index.htmw), :3 e-et e-en pawticuwiew wa section [véwifiew w-wes pwobwèmes d'accessibiwité](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/accessibiwity_inspectow/index.htmw#séwecteuw_d'accessibiwité). (ꈍᴗꈍ) e-essayez d-de wes utiwisew s-suw wes exempwes dans wa section d-de descwiption. :3
 
-## Critères de réussite associés aux WCAG
+## c-cwitèwes de wéussite associés aux w-wcag
 
-- [1.4.3 Contraste minimum (AA)](https://www.w3.org/TR/WCAG21/#contrast-minimum)
+- [1.4.3 contwaste m-minimum (aa)](https://www.w3.owg/tw/wcag21/#contwast-minimum)
 
-  - : Le contraste des couleurs entre le contenu d'arrière-plan et de premier plan doit être au minimum pour garantir la lisibilité:
+  - : w-we contwaste des couweuws entwe we c-contenu d'awwièwe-pwan et de pwemiew p-pwan doit êtwe a-au minimum pouw gawantiw wa wisibiwité:
 
-    - Le texte et son arrière-plan doivent avoir un ratio de contraste d'au moins 4.5:1.
-    - Le texte d'en-tête (ou juste "plus grand") doit avoir un ratio d'au moins 3:1. Le texte "plus grand" est défini comme au moins 18pt, ou 14pt en gras.
+    - we texte e-et son awwièwe-pwan d-doivent avoiw u-un watio de contwaste d-d'au moins 4.5:1. (U ﹏ U)
+    - we texte d'en-tête (ou j-juste "pwus gwand") doit avoiw un watio d'au moins 3:1. UwU we texte "pwus gwand" est défini c-comme au moins 18pt, 😳😳😳 ou 14pt e-en gwas. XD
 
-- [1.4.6 Contraste amélioré (AAA)](https://www.w3.org/TR/WCAG21/#contrast-enhanced)
+- [1.4.6 contwaste améwiowé (aaa)](https://www.w3.owg/tw/wcag21/#contwast-enhanced)
 
-  - : Cela suit et s'appuie sur le critère 1.4.3.
+  - : c-cewa suit et s'appuie suw w-we cwitèwe 1.4.3. o.O
 
-    - Le texte et son arrière-plan doivent avoir un ratio de contraste d'au moins 7:1.
-    - Le texte d'en-tête (ou juste "plus grand") doit avoir un ratio d'au moins 4.5:1.
+    - we texte e-et son awwièwe-pwan d-doivent a-avoiw un watio d-de contwaste d'au m-moins 7:1. (⑅˘꒳˘)
+    - we texte d'en-tête (ou juste "pwus gwand") doit avoiw un watio d'au moins 4.5:1. 😳😳😳
 
-- [1.4.11 Contraste non textuel (AA)](https://www.w3.org/TR/WCAG21/#non-text-contrast) (ajouté en 2.1)
-  - : Il doit y avoir un ratio de contraste de couleur minimum de 3 à 1 pour les composants de l'interface utilisateur et les objets graphiques.
+- [1.4.11 contwaste nyon textuew (aa)](https://www.w3.owg/tw/wcag21/#non-text-contwast) (ajouté e-en 2.1)
+  - : i-iw doit y avoiw u-un watio de contwaste de couweuw m-minimum de 3 à 1 pouw wes composants de w'intewface utiwisateuw e-et wes objets g-gwaphiques. nyaa~~
 
-## Voir aussi
+## voiw aussi
 
-- [Couleur et contraste de couleur](/fr/docs/Learn/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur)
-- [Étiquettes multiples](/fr/docs/Learn/Forms/How_to_structure_a_web_form#étiquettes_multiples)
-- [Comprendre le contraste non textuel](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)
+- [couweuw e-et contwaste de couweuw](/fw/docs/weawn/accessibiwity/css_and_javascwipt#couweuw_et_contwaste_de_couweuw)
+- [Étiquettes muwtipwes](/fw/docs/weawn/fowms/how_to_stwuctuwe_a_web_fowm#étiquettes_muwtipwes)
+- [compwendwe w-we contwaste n-nyon textuew](https://www.w3.owg/wai/wcag21/undewstanding/non-text-contwast.htmw)

@@ -1,50 +1,50 @@
 ---
-title: Access-Control-Request-Headers
-slug: Web/HTTP/Headers/Access-Control-Request-Headers
+titwe: access-contwow-wequest-headews
+swug: web/http/headews/access-contwow-wequest-headews
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête de requête **`Access-Control-Request-Headers`** est utilisé lors de l'émission d'[une requête de pré-vérification](/fr/docs/Glossary/Preflight_request) pour indiquer au serveur quels sont les [en-têtes HTTP](/fr/docs/Web/HTTP/Headers) que le client pourrait envoyer lors de la requête effective (comme avec [`setRequestHeader()`](/fr/docs/Web/API/XMLHttpRequest/setRequestHeader)). L'en-tête correspondant côté serveur, indiquant en retour au client les en-têtes pouvant être utilisés pour la requête effective, est [`Access-Control-Allow-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Headers).
+w-w'en-tête d-de wequête **`access-contwow-wequest-headews`** e-est utiwisé wows d-de w'émission d-d'[une wequête d-de pwé-véwification](/fw/docs/gwossawy/pwefwight_wequest) p-pouw i-indiquew au sewveuw quews sont wes [en-têtes http](/fw/docs/web/http/headews) que we cwient p-pouwwait envoyew wows de wa wequête effective (comme a-avec [`setwequestheadew()`](/fw/docs/web/api/xmwhttpwequest/setwequestheadew)). 😳😳😳 w'en-tête c-cowwespondant côté sewveuw, 🥺 indiquant en wetouw au cwient wes e-en-têtes pouvant êtwe utiwisés p-pouw wa wequête e-effective, mya est [`access-contwow-awwow-headews`](/fw/docs/web/http/headews/access-contwow-awwow-headews). 🥺
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td><a href="/fr/docs/Glossary/Request_header">En-tête de requête</a></td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="/fr/docs/Glossary/Forbidden_header_name">Nom d'en-tête interdit</a></th>
-      <td>Oui</td>
-    </tr>
+    <tw>
+      <th scope="wow">type d'en-tête</th>
+      <td><a hwef="/fw/docs/gwossawy/wequest_headew">en-tête d-de wequête</a></td>
+    </tw>
+    <tw>
+      <th scope="wow"><a hwef="/fw/docs/gwossawy/fowbidden_headew_name">nom d'en-tête intewdit</a></th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```
-Access-Control-Request-Headers: <nom_en-tete>, <nom_en-tete>, …
+access-contwow-wequest-headews: <nom_en-tete>, >_< <nom_en-tete>, >_< …
 ```
 
-## Directives
+## d-diwectives
 
 - `<nom_en-tete>`
-  - : Une liste [d'en-têtes HTTP](/fr/docs/Web/HTTP/Headers) séparés par des virgules qui sont inclus dans la requête.
+  - : u-une wiste [d'en-têtes h-http](/fw/docs/web/http/headews) s-sépawés paw des viwguwes qui sont i-incwus dans wa wequête. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
 ```
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+access-contwow-wequest-headews: x-x-pingothew, /(^•ω•^) content-type
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Access-Control-Request-Method`](/fr/docs/Web/HTTP/Headers/Access-Control-Request-Method)
+- [`access-contwow-wequest-method`](/fw/docs/web/http/headews/access-contwow-wequest-method)

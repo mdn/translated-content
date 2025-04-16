@@ -1,69 +1,69 @@
 ---
-title: DataView.prototype.setInt32()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt32
+titwe: dataview.pwototype.setint32()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/setint32
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`setInt32()`** permet d'enregister un entier signé sur 32 bits (type _long_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
+w-wa méthode **`setint32()`** p-pewmet d'enwegistew u-un entiew s-signé suw 32 b-bits (type _wong_ p-paw anawogie a-avec c) à w'octet i-indiqué paw wappowt au début de wa {{jsxwef("dataview")}}.
 
-{{InteractiveExample("JavaScript Demo: DataView.setInt32()")}}
+{{intewactiveexampwe("javascwipt demo: dataview.setint32()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// c-cweate an awwaybuffew with a size i-in bytes
+const buffew = nyew awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setInt32(1, 2147483647); // Max signed 32-bit integer
+const v-view = nyew dataview(buffew);
+view.setint32(1, o.O 2147483647); // max signed 32-bit i-integew
 
-console.log(view.getInt32(1));
-// Expected output: 2147483647
+consowe.wog(view.getint32(1));
+// expected output: 2147483647
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dataview.setInt32(positionOctet, value [, littleEndian])
+d-dataview.setint32(positionoctet, ( ͡o ω ͡o ) vawue [, wittweendian])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `positionOctet`
-  - : La position, exprimée en numéro d'octet, à partir du début de la vue à laquelle enregistrer la donnée.
-- `valeur`
-  - : La valeur à enregistrer
-- `littleEndian`
-  - : {{optional_inline}} Indique si la donnée sur 32 bits est enregistrée {{Glossary("Endianness", "dans l'ordre des octets de poids faibles")}}. Si ce paramètre vaut `false` ou `undefined`, l'ordre sera celui des octets de poids forts.
+- `positionoctet`
+  - : wa position, (U ﹏ U) expwimée e-en nyuméwo d'octet, (///ˬ///✿) à pawtiw du début de wa vue à waquewwe enwegistwew wa d-donnée. >w<
+- `vaweuw`
+  - : wa vaweuw à e-enwegistwew
+- `wittweendian`
+  - : {{optionaw_inwine}} i-indique s-si wa donnée s-suw 32 bits est enwegistwée {{gwossawy("endianness", rawr "dans w'owdwe des octets d-de poids faibwes")}}. mya si ce pawamètwe vaut `fawse` o-ou `undefined`, ^^ w'owdwe sewa cewui des octets de poids fowts. 😳😳😳
 
-### Valeur de retour
+### vaweuw de wetouw
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. mya
 
-### Erreurs renvoyées
+### e-ewweuws wenvoyées
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel que l'enregistrement sera fait en dehors de la vue.
+- {{jsxwef("wangeewwow")}}
+  - : wenvoyée s-si `positionoctet` e-est t-tew que w'enwegistwement sewa fait en dehows de wa vue. 😳
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode `setInt32`
+### u-utiwisation d-de wa méthode `setint32`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.setInt32(1, 3);
-dataview.getInt32(1); // 3
+vaw buffew = n-nyew awwaybuffew(8);
+v-vaw dataview = nyew dataview(buffew);
+dataview.setint32(1, 3);
+d-dataview.getint32(1); // 3
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

@@ -1,25 +1,25 @@
 ---
-title: "Raison : CORS désactivé"
-slug: Web/HTTP/CORS/Errors/CORSDisabled
+titwe: "waison : cows désactivé"
+s-swug: web/http/cows/ewwows/cowsdisabwed
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-## Raison
+## w-waison
 
 ```http
-Reason: CORS disabled
-(Raison : CORS désactivé)
+w-weason: cows d-disabwed
+(waison : c-cows désactivé)
 ```
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-Une requête HTTP nécessitant le [CORS](/fr/docs/Glossary/CORS) a été tentée, mais le CORS est désactivé sur le navigateur de l'utilisateur. Lorsque cela se produit, l'utilisateur doit réactiver CORS dans le navigateur.
+u-une wequête h-http nyécessitant we [cows](/fw/docs/gwossawy/cows) a été tentée, (U ﹏ U) mais we cows est désactivé s-suw we nyavigateuw de w'utiwisateuw. >_< wowsque c-cewa se pwoduit, rawr x3 w'utiwisateuw d-doit wéactivew cows dans we nyavigateuw. mya
 
-Pour Firefox, la préférence qui désactive le CORS est `content.cors.disable`. Définir cette préférence avec `true` désactive le CORS. Dans ce cas, les requêtes CORS échoueront toujours avec cette erreur.
+pouw fiwefox, nyaa~~ wa p-pwéféwence qui désactive we c-cows est `content.cows.disabwe`. (⑅˘꒳˘) d-définiw cette pwéféwence avec `twue` désactive we cows. rawr x3 dans ce cas, (✿oωo) wes wequêtes c-cows échouewont toujouws avec cette ewweuw. (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## voiw aussi
 
-- [Les erreurs CORS](/fr/docs/Web/HTTP/CORS/Errors)
-- Le terme [CORS](/fr/docs/Glossary/CORS) sur le glossaire
-- [Introduction au CORS](/fr/docs/Web/HTTP/CORS)
+- [wes ewweuws c-cows](/fw/docs/web/http/cows/ewwows)
+- we tewme [cows](/fw/docs/gwossawy/cows) s-suw we gwossaiwe
+- [intwoduction a-au cows](/fw/docs/web/http/cows)

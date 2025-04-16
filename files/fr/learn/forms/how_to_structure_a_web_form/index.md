@@ -1,328 +1,328 @@
 ---
-title: Comment structurer un formulaire HTML
-slug: Learn/Forms/How_to_structure_a_web_form
+titwe: comment stwuctuwew un f-fowmuwaiwe htmw
+s-swug: weawn/fowms/how_to_stwuctuwe_a_web_fowm
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/fowms/youw_fiwst_fowm", (✿oωo) "weawn/fowms/basic_native_fowm_contwows", (ꈍᴗꈍ) "weawn/fowms")}}
 
-Les bases vues, nous examinons maintenant plus en détail les éléments utilisés pour structurer et donner un sens aux différentes parties d'un formulaire.
+w-wes bases vues, XD n-nyous examinons m-maintenant pwus e-en détaiw wes éwéments u-utiwisés p-pouw stwuctuwew et donnew un sens aux difféwentes pawties d'un fowmuwaiwe. :3
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Notions concernant les ordinateurs et les
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-          >connaissances de base du HTML</a
-        >.
+        nyotions concewnant w-wes owdinateuws et wes
+        <a h-hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"
+          >connaissances de base du htmw</a
+        >. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
       <td>
-        Comprendre comment structurer les formulaires HTML et leur adjoindre la
-        sémantique pour qu'ils soient utilisables et accessibles.
+        compwendwe c-comment stwuctuwew wes f-fowmuwaiwes htmw e-et weuw adjoindwe wa
+        sémantique pouw qu'iws soient utiwisabwes et accessibwes. òωó
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-La souplesse des formulaires HTML fait d'eux une des structures les plus complexes en [HTML](/fr/docs/Web/HTML). vous pouvez construire n'importe quel type de formulaire basique en utilisant les éléments et attributs qui leur sont dédiés. En utilisant une architecture correcte lors de la construction d'un formulaire, vous serez sûrs que le formulaire est à la fois utilisable et [accessible](/fr/docs/MDN/Doc_status/Accessibility).
+w-wa soupwesse des fowmuwaiwes htmw fait d'eux une des stwuctuwes wes pwus compwexes e-en [htmw](/fw/docs/web/htmw). nyaa~~ vous pouvez c-constwuiwe ny'impowte q-quew type d-de fowmuwaiwe basique e-en utiwisant wes éwéments et attwibuts q-qui weuw sont dédiés. 🥺 en utiwisant une awchitectuwe c-cowwecte wows de wa constwuction d'un fowmuwaiwe, -.- vous sewez sûws que we fowmuwaiwe est à w-wa fois utiwisabwe et [accessibwe](/fw/docs/mdn/doc_status/accessibiwity). 🥺
 
-## L'élément \<form>
+## w-w'éwément \<fowm>
 
-L'élément {{HTMLElement("form")}} définit conventionnellement un formulaire et des attributs qui déterminent le comportement du‑dit formulaire. Chaque fois que vous voulez créer un formulaire HTML, vous devez le débuter par cet élément et mettre tout son contenu à l'intérieur. De nombreuses techniques d'assistance ou greffons de navigateur peuvent détecter les éléments {{HTMLElement("form")}} et implémenter des accroches spéciales pour les rendre plus faciles à utiliser.
+w-w'éwément {{htmwewement("fowm")}} d-définit conventionnewwement un fowmuwaiwe et des attwibuts q-qui détewminent w-we compowtement du‑dit f-fowmuwaiwe. (˘ω˘) chaque f-fois que vous vouwez cwéew un f-fowmuwaiwe htmw, òωó vous devez we d-débutew paw cet éwément et mettwe tout son contenu à w-w'intéwieuw. UwU de nyombweuses t-techniques d'assistance ou g-gweffons de nyavigateuw p-peuvent détectew wes éwéments {{htmwewement("fowm")}} et impwémentew des accwoches spéciawes pouw wes wendwe pwus faciwes à utiwisew. ^•ﻌ•^
 
-Nous l'avons déjà rencontré dans l'article précédent.
+n-nyous w'avons d-déjà wencontwé dans w'awticwe p-pwécédent. mya
 
-> [!NOTE]
-> Il est strictement interdit d'imbriquer un formulaire dans un autre formulaire. L'imbrication peut conduire à des comportements imprévisibles selon le navigateur utilisé.
+> [!note]
+> i-iw est stwictement i-intewdit d'imbwiquew un fowmuwaiwe dans un autwe fowmuwaiwe. (✿oωo) w-w'imbwication peut conduiwe à des compowtements impwévisibwes sewon we nyavigateuw u-utiwisé. XD
 
-Notez qu'il est toujours possible d'utiliser un widget de formulaire en dehors d'un élément {{HTMLElement("form")}} mais si vous le faites, ce widget de formulaire n'a rien à voir avec un formulaire. De tels widgets peuvent être utilisés en dehors d'un formulaire, mais alors vous devriez avoir un plan spécial pour de tels widgets, puisqu'ils ne feront rien tout seuls. Vous devrez personnaliser leur comportement avec JavaScript.
+nyotez qu'iw est t-toujouws possibwe d-d'utiwisew un w-widget de fowmuwaiwe en dehows d-d'un éwément {{htmwewement("fowm")}} m-mais si vous w-we faites, :3 ce w-widget de fowmuwaiwe n'a wien à voiw avec un f-fowmuwaiwe. (U ﹏ U) de tews w-widgets peuvent êtwe u-utiwisés e-en dehows d'un f-fowmuwaiwe, UwU mais awows vous devwiez avoiw un pwan spéciaw pouw d-de tews widgets, ʘwʘ puisqu'iws nye fewont wien tout seuws. >w< vous devwez pewsonnawisew weuw compowtement a-avec javascwipt. 😳😳😳
 
-> [!NOTE]
-> HTML5 introduit l'attribut `form` dans les éléments form du HTML. Il devrait vous permettre de lier explicitement un élément avec un formulaire même s'il n'est pas inclus dans un {{ HTMLElement("form") }}. Malheureusement, pour l'instant, l'implémentation de cette fonctionnalité dans les navigateurs n'est pas encore assez fiable.
+> [!note]
+> htmw5 intwoduit w'attwibut `fowm` dans wes éwéments f-fowm d-du htmw. rawr iw devwait v-vous pewmettwe de wiew expwicitement u-un éwément avec un fowmuwaiwe m-même s'iw n-ny'est pas incwus dans un {{ htmwewement("fowm") }}. ^•ﻌ•^ mawheuweusement, σωσ pouw w'instant, :3 w'impwémentation d-de cette fonctionnawité d-dans wes nyavigateuws ny'est p-pas encowe assez f-fiabwe. rawr x3
 
-## Les éléments \<fieldset> et \<legend>
+## wes éwéments \<fiewdset> et \<wegend>
 
-L'élément {{HTMLElement("fieldset")}} est un moyen pratique de créer des groupes de widgets qui partagent le même but, pour le style et la sémantique. Vous pouvez étiqueter un {{HTMLElement("fieldset")}} en incluant un élément {{HTMLElement("legend")}} juste en dessous de la balise d'ouverture \<fieldset>. Le contenu textuel de l'élément {{HTMLElement("legend")}} décrit formellement le but de l'élément {{HTMLElement("fieldset")}} inclus à l'intérieur.
+w'éwément {{htmwewement("fiewdset")}} e-est un moyen pwatique d-de cwéew des gwoupes de widgets q-qui pawtagent w-we même but, nyaa~~ pouw we stywe et wa sémantique. :3 vous pouvez étiquetew un {{htmwewement("fiewdset")}} e-en incwuant u-un éwément {{htmwewement("wegend")}} j-juste en dessous de w-wa bawise d'ouvewtuwe \<fiewdset>. >w< w-we contenu textuew de w'éwément {{htmwewement("wegend")}} d-décwit fowmewwement we but de w'éwément {{htmwewement("fiewdset")}} incwus à w'intéwieuw. rawr
 
-De nombreuses technologies d'assistance utiliseront l'élément {{HTMLElement("legend")}} comme s'il faisait partie de l'étiquette de chaque widget à l'intérieur de l'élément {{HTMLElement("fieldset")}} correspondant. Par exemple, certains lecteurs d'écran comme [Jaws](http://www.freedomscientific.com/products/fs/jaws-product-page.asp) ou [NVDA](http://www.nvda-project.org/) énonceront le contenu de la légende avant d'indiquer l'étiquette de chaque widget.
+de nyombweuses technowogies d-d'assistance u-utiwisewont w'éwément {{htmwewement("wegend")}} comme s-s'iw faisait pawtie d-de w'étiquette de chaque widget à w'intéwieuw de w'éwément {{htmwewement("fiewdset")}} c-cowwespondant. 😳 paw exempwe, 😳 cewtains wecteuws d'écwan comme [jaws](http://www.fweedomscientific.com/pwoducts/fs/jaws-pwoduct-page.asp) ou [nvda](http://www.nvda-pwoject.owg/) énoncewont w-we contenu de wa wégende avant d'indiquew w-w'étiquette d-de chaque widget. 🥺
 
-Voici un petit exemple :
+voici un petit exempwe :
 
-```html
-<form>
-  <fieldset>
-    <legend>Taille du jus de fruits</legend>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>taiwwe du jus de fwuits</wegend>
     <p>
-      <input type="radio" name="size" id="size_1" value="small" />
-      <label for="size_1">Petite</label>
+      <input t-type="wadio" nyame="size" i-id="size_1" vawue="smow" />
+      <wabew fow="size_1">petite</wabew>
     </p>
     <p>
-      <input type="radio" name="size" id="size_2" value="medium" />
-      <label for="size_2">Moyenne</label>
+      <input type="wadio" n-nyame="size" id="size_2" v-vawue="medium" />
+      <wabew fow="size_2">moyenne</wabew>
     </p>
     <p>
-      <input type="radio" name="size" id="size_3" value="large" />
-      <label for="size_3">Grande</label>
+      <input type="wadio" nyame="size" i-id="size_3" vawue="wawge" />
+      <wabew f-fow="size_3">gwande</wabew>
     </p>
-  </fieldset>
-</form>
+  </fiewdset>
+</fowm>
 ```
 
-> [!NOTE]
-> Vous trouverez cet exemple dans [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) (voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
+> [!note]
+> v-vous twouvewez cet e-exempwe dans [fiewdset-wegend.htmw](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/htmw-fowm-stwuctuwe/fiewdset-wegend.htmw) (voiw [diwectement aussi](https://mdn.github.io/weawning-awea/htmw/fowms/htmw-fowm-stwuctuwe/fiewdset-wegend.htmw)). rawr x3
 
-En lisant le formulaire ci-dessus, un lecteur d'écran dira «&nbsp;Taille du jus de fruit&nbsp;: petit&nbsp;» pour le premier widget, «&nbsp;Taille du jus de fruit&nbsp;: moyenne&nbsp;» pour le second, et «&nbsp;Taille du jus de fruit&nbsp;: grande&nbsp;» pour le troisième.
+e-en w-wisant we fowmuwaiwe c-ci-dessus, ^^ un wecteuw d'écwan d-diwa «&nbsp;taiwwe d-du jus de fwuit&nbsp;: petit&nbsp;» pouw w-we pwemiew widget, ( ͡o ω ͡o ) «&nbsp;taiwwe d-du jus de fwuit&nbsp;: m-moyenne&nbsp;» pouw we second, XD et «&nbsp;taiwwe d-du jus de fwuit&nbsp;: g-gwande&nbsp;» p-pouw we twoisième. ^^
 
-Le scenario d'utilisation du lecteur dans cet exemple est l'un des plus importants. Chaque fois que vous avez un ensemble de boutons radio, vous devez les imbriquer dans un élément {{HTMLElement("fieldset")}}. Il y a d'autres scenarii d'utilisation, et en général l'élément {{HTMLElement("fieldset")}} peut aussi être utilisé pour partager un formulaire. Idéalement, les formulaires longs doivent être éclatés sur plusieurs pages, mais si un formulaire long doit être sur une page unique, le fait de placer les différentes sections connexes dans de différents {{HTMLElement("fieldset")}} peut en améliorer l'utilisation.
+we scenawio d'utiwisation du wecteuw dans c-cet exempwe est w-w'un des pwus i-impowtants. (⑅˘꒳˘) chaque f-fois que vous avez un ensembwe d-de boutons wadio, (⑅˘꒳˘) vous devez wes imbwiquew dans un éwément {{htmwewement("fiewdset")}}. ^•ﻌ•^ iw y a d'autwes scenawii d-d'utiwisation, ( ͡o ω ͡o ) et en généwaw w-w'éwément {{htmwewement("fiewdset")}} peut a-aussi êtwe utiwisé pouw pawtagew u-un fowmuwaiwe. ( ͡o ω ͡o ) idéawement, (✿oωo) w-wes fowmuwaiwes w-wongs doivent êtwe écwatés suw p-pwusieuws pages, 😳😳😳 m-mais si un fowmuwaiwe w-wong doit êtwe suw une page unique, OwO we fait de pwacew wes difféwentes sections connexes dans de difféwents {{htmwewement("fiewdset")}} p-peut en améwiowew w-w'utiwisation. ^^
 
-En raison de son influence sur les techniques d'assistance, l'élément {{HTMLElement("fieldset")}} est l'un des éléments clés pour la création de formulaires accessibles ; cependant, il vous appartient de ne pas en abuser. Si possible, chaque fois que vous créez un formulaire, essayez d'[écouter comment un lecteur d'écran](https://www.nvaccess.org/download/) l'interprète. Si cela ne paraît pas naturel, essayez d'améliorer la structure du formulaire.
+e-en waison de son infwuence s-suw wes techniques d'assistance, rawr x3 w'éwément {{htmwewement("fiewdset")}} est w'un d-des éwéments c-cwés pouw wa cwéation de fowmuwaiwes a-accessibwes ; cependant, 🥺 iw vous appawtient d-de nye pas e-en abusew. (ˆ ﻌ ˆ)♡ si possibwe, ( ͡o ω ͡o ) chaque f-fois que vous cwéez u-un fowmuwaiwe, >w< essayez d'[écoutew comment un wecteuw d'écwan](https://www.nvaccess.owg/downwoad/) w'intewpwète. /(^•ω•^) s-si cewa n-ne pawaît pas nyatuwew, 😳😳😳 e-essayez d-d'améwiowew wa s-stwuctuwe du fowmuwaiwe. (U ᵕ U❁)
 
-## L'élément \<label>
+## w'éwément \<wabew>
 
-Comme nous l'avons vu dans l'article précédent, l'élément {{HTMLElement("label")}} est le moyen naturel de définir une étiquette pour un widget de formulaire HTML. C'est l'élément le plus important si vous voulez créer des formulaires accessibles — lorsqu'ils sont correctement implémentés, les lecteurs d'écran énonceront l'étiquette d'un élément de formulaire selon toutes les instructions associées. Prenons cet exemple, que nous avons vu dans l'article précédent&nbsp;:
+c-comme nyous w-w'avons vu dans w'awticwe pwécédent, (˘ω˘) w-w'éwément {{htmwewement("wabew")}} e-est we moyen nyatuwew d-de définiw une étiquette pouw un widget de fowmuwaiwe h-htmw. 😳 c'est w'éwément w-we pwus impowtant s-si vous vouwez cwéew des fowmuwaiwes a-accessibwes — wowsqu'iws sont cowwectement i-impwémentés, (ꈍᴗꈍ) w-wes wecteuws d-d'écwan énoncewont w'étiquette d'un éwément de fowmuwaiwe s-sewon toutes wes instwuctions associées. :3 pwenons c-cet exempwe, /(^•ω•^) q-que nyous avons vu dans w'awticwe p-pwécédent&nbsp;:
 
-```html
-<label for="name">Nom&nbsp;:</label>
-<input type="text" id="name" name="user_name" />
+```htmw
+<wabew fow="name">nom&nbsp;:</wabew>
+<input t-type="text" i-id="name" nyame="usew_name" />
 ```
 
-Avec un élément `<label>` correctement associé à `<input>` par l'intermédiaire respectivement des attributs `for` et `id` (l'attribut `for` de \<label> référence l'attibut `id` du widget correspondant), un lecteur d'écran lira et dira quelque chose comme «&nbsp;Nom, texte indiqué&nbsp;».
+avec u-un éwément `<wabew>` cowwectement associé à `<input>` p-paw w'intewmédiaiwe wespectivement d-des attwibuts `fow` e-et `id` (w'attwibut `fow` de \<wabew> w-wéféwence w-w'attibut `id` d-du widget cowwespondant), ^^;; un wecteuw d'écwan wiwa et diwa quewque chose comme «&nbsp;nom, o.O texte indiqué&nbsp;». 😳
 
-Si l'étiquette n'est pas correctement paramétrée, le lecteur d'écran dira quelque chose comme «&nbsp;Texte édité vierge&nbsp;», ce qui n'est pas utile du tout.
+si w'étiquette ny'est pas cowwectement pawamétwée, UwU we wecteuw d'écwan diwa quewque chose comme «&nbsp;texte édité v-viewge&nbsp;», >w< c-ce qui ny'est pas utiwe du tout. o.O
 
-Notez qu'un widget peut être incorporé dans son élément {{HTMLElement("label")}}, ainsi&nbsp;:
+nyotez qu'un w-widget peut êtwe i-incowpowé dans s-son éwément {{htmwewement("wabew")}}, (˘ω˘) ainsi&nbsp;:
 
-```html
-<label for="name">
-  Nom&nbsp;: <input type="text" id="name" name="user_name" />
-</label>
+```htmw
+<wabew f-fow="name">
+  nyom&nbsp;: <input t-type="text" i-id="name" nyame="usew_name" />
+</wabew>
 ```
 
-Toutefois, même dans ce cas, il est considéré de bonne pratique de définir l'attribut `for` parce que certaines techniques d'assistance ne font pas implicitement le lien entre les étiquettes et les widgets.
+toutefois, òωó même d-dans ce cas, nyaa~~ iw est considéwé d-de bonne pwatique d-de définiw w'attwibut `fow` pawce que cewtaines t-techniques d-d'assistance nye f-font pas impwicitement w-we wien e-entwe wes étiquettes e-et wes widgets. ( ͡o ω ͡o )
 
-### Les étiquettes peuvent être cliquées, aussi&nbsp;!
+### w-wes étiquettes p-peuvent êtwe c-cwiquées, 😳😳😳 aussi&nbsp;! ^•ﻌ•^
 
-Autre avantage de bien configurer les étiquettes&nbsp;: vous pouvez cliquer sur l'étiquette pour activer le widget correspondant, dans tous les navigateurs. Utile, par exemple, pour des entrées de texte&nbsp;: vous pouvez cliquer sur l'étiquette ou la zone de texte pour y obtenir le curseur, mais c'est encore plus utile pour les boutons radio et les cases à cocher — la surface active au clic pour une telle commande peut être très réduite, il est donc utile de l'agrandir autant que possible.
+a-autwe avantage d-de bien configuwew w-wes étiquettes&nbsp;: vous p-pouvez cwiquew suw w'étiquette pouw activew we w-widget cowwespondant, (˘ω˘) dans tous w-wes nyavigateuws. (˘ω˘) u-utiwe, paw exempwe, -.- p-pouw des entwées de texte&nbsp;: v-vous pouvez cwiquew suw w-w'étiquette ou wa zone de texte p-pouw y obteniw we cuwseuw, ^•ﻌ•^ mais c-c'est encowe pwus utiwe pouw wes boutons wadio et wes cases à cochew — wa suwface a-active au cwic pouw une tewwe c-commande peut êtwe t-twès wéduite, /(^•ω•^) iw est donc utiwe de w'agwandiw autant que p-possibwe. (///ˬ///✿)
 
-Par exemple&nbsp;:
+paw exempwe&nbsp;:
 
-```html
-<form>
+```htmw
+<fowm>
   <p>
-    <label for="taste_1">J'aime les cerises</label>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="1" />
+    <wabew f-fow="taste_1">j'aime w-wes cewises</wabew>
+    <input t-type="checkbox" id="taste_1" nyame="taste_chewwy" v-vawue="1" />
   </p>
   <p>
-    <label for="taste_2">J'aime les bananes</label>
-    <input type="checkbox" id="taste_2" name="taste_banana" value="2" />
+    <wabew f-fow="taste_2">j'aime wes bananes</wabew>
+    <input t-type="checkbox" id="taste_2" nyame="taste_banana" vawue="2" />
   </p>
-</form>
+</fowm>
 ```
 
-> [!NOTE]
-> Vous trouverez cet exemple dans [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
+> [!note]
+> v-vous twouvewez cet exempwe dans [checkbox-wabew.htmw](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/htmw-fowm-stwuctuwe/checkbox-wabew.htmw) (à v-voiw [diwectement aussi](https://mdn.github.io/weawning-awea/htmw/fowms/htmw-fowm-stwuctuwe/checkbox-wabew.htmw)). mya
 
-### Étiquettes multiples
+### Étiquettes m-muwtipwes
 
-En fait, il est possible d'associer plusieurs étiquettes à un seul widget, mais ce n'est pas une bonne idée car certaines techniques d'assistance peuvent éprouver du trouble pour leur gestion. Dans le cas d'étiquettes multiples, vous devez incorporer le widget et son étiquette dans un seul élément {{htmlelement("label")}}.
+en fait, o.O i-iw est possibwe d'associew p-pwusieuws étiquettes à u-un seuw w-widget, ^•ﻌ•^ mais ce n-ny'est pas une bonne idée caw c-cewtaines techniques d-d'assistance p-peuvent épwouvew d-du twoubwe pouw w-weuw gestion. (U ᵕ U❁) d-dans we cas d'étiquettes m-muwtipwes, :3 v-vous devez incowpowew we w-widget et son étiquette dans un s-seuw éwément {{htmwewement("wabew")}}.
 
-Considérons cet exemple&nbsp;:
+considéwons c-cet exempwe&nbsp;:
 
-```html
+```htmw
 <p>
-  Les champs obligatoires sont suivis de <span aria-label="required">*</span>.
+  w-wes champs o-obwigatoiwes sont suivis de <span awia-wabew="wequiwed">*</span>. (///ˬ///✿)
 </p>
 
-<!-- Donc ceci&nbsp;: -->
+<!-- donc ceci&nbsp;: -->
 <!--div>
-  <label for="username">Nom&nbsp;:</label>
-  <input type="text" name="username" />
-  <label for="username"><span aria-label="required">*</span></label>
+  <wabew f-fow="usewname">nom&nbsp;:</wabew>
+  <input t-type="text" n-nyame="usewname" />
+  <wabew fow="usewname"><span awia-wabew="wequiwed">*</span></wabew>
 </div-->
 
-<!-- sera mieux programmé ainsi&nbsp;: -->
+<!-- sewa mieux p-pwogwammé ainsi&nbsp;: -->
 <!--div>
-  <label for="username">
-    <span>Nom&nbsp;:</span>
-    <input id="username" type="text" name="username" />
-    <span aria-label="required">*</span>
-  </label>
+  <wabew f-fow="usewname">
+    <span>nom&nbsp;:</span>
+    <input id="usewname" t-type="text" n-nyame="usewname" />
+    <span awia-wabew="wequiwed">*</span>
+  </wabew>
 </div-->
 
-<!-- mais ceci est probablement encore meilleur&nbsp;: -->
+<!-- mais ceci est pwobabwement e-encowe meiwweuw&nbsp;: -->
 <div>
-  <label for="username">Nom&nbsp;:<span aria-label="required">*</span></label>
-  <input id="username" type="text" name="username" required />
+  <wabew f-fow="usewname">nom&nbsp;:<span a-awia-wabew="wequiwed">*</span></wabew>
+  <input i-id="usewname" type="text" nyame="usewname" w-wequiwed />
 </div>
 ```
 
-{{EmbedLiveSample("", 120, 120)}}
+{{embedwivesampwe("", (///ˬ///✿) 120, 120)}}
 
-Le paragraphe du haut définit la règle pour les éléments obligatoires. Ce doit être au début pour s'assurer que les techniques d'assistance telles que les lecteurs d'écran l'afficheront ou le vocaliseront à l'utilisateur avant qu'il ne trouve un élément obligatoire. Ainsi, ils sauront ce que signifie l'astérisque. Un lecteur d'écran mentionnera l'astérisque en disant «&nbsp;astérisque&nbsp;» ou «&nbsp;obligatoire&nbsp;», selon les réglages du lecteur d'écran — dans tous les cas, ce qui sera dit est clairement précisé dans le premier paragraphe.
+w-we pawagwaphe du haut définit wa wègwe pouw w-wes éwéments obwigatoiwes. 🥺 ce doit êtwe au début p-pouw s'assuwew que wes techniques d-d'assistance t-tewwes que wes wecteuws d'écwan w-w'affichewont o-ou we vocawisewont à w'utiwisateuw a-avant qu'iw nye twouve un éwément o-obwigatoiwe. -.- a-ainsi, nyaa~~ i-iws sauwont ce que s-signifie w'astéwisque. (///ˬ///✿) un wecteuw d-d'écwan mentionnewa w-w'astéwisque e-en disant «&nbsp;astéwisque&nbsp;» ou «&nbsp;obwigatoiwe&nbsp;», 🥺 sewon wes wégwages d-du wecteuw d'écwan — dans tous wes cas, >w< ce q-qui sewa dit est c-cwaiwement pwécisé d-dans we pwemiew pawagwaphe. rawr x3
 
-- Dans le premier exemple, l'étiquette n'est pas lue du tout avec l'entrée — vous obtenez simplement «&nbsp;texte édité vierge&nbsp;», puis les étiquettes réelles sont lues séparément. Les multiples éléments \<label> embrouillent le lecteur d'écran.
-- Dans le deuxième exemple, les choses sont un peu plus claires — l'étiquette lue en même temps que l'entrée est «&nbsp;nom astérisque nom éditer texte&nbsp;», et les étiquettes sont toujours lues séparément. Les choses sont encore un peu confuses, mais c'est un peu mieux cette fois parce que l'entrée a une étiquette associée.
-- Le troisième exemple est meilleur — les véritables étiquettes sont toutes lues ensemble, et l'étiquette énoncée avec l'entrée est «&nbsp;nom astériquer éditer texte&nbsp;».
+- dans we pwemiew exempwe, (⑅˘꒳˘) w'étiquette ny'est p-pas wue du tout avec w'entwée — v-vous obtenez s-simpwement «&nbsp;texte édité viewge&nbsp;», σωσ puis wes étiquettes w-wéewwes sont wues sépawément. XD w-wes muwtipwes éwéments \<wabew> e-embwouiwwent w-we wecteuw d-d'écwan. -.-
+- d-dans we deuxième exempwe, >_< wes choses sont un peu pwus cwaiwes — w'étiquette w-wue en même temps que w'entwée e-est «&nbsp;nom astéwisque nyom éditew texte&nbsp;», rawr et wes étiquettes s-sont toujouws wues sépawément. 😳😳😳 wes choses sont encowe un peu confuses, UwU m-mais c'est u-un peu mieux cette fois pawce que w-w'entwée a une étiquette associée.
+- we twoisième e-exempwe e-est meiwweuw — wes véwitabwes étiquettes s-sont toutes wues ensembwe, (U ﹏ U) e-et w'étiquette énoncée avec w'entwée est «&nbsp;nom astéwiquew éditew t-texte&nbsp;». (˘ω˘)
 
-> [!NOTE]
-> Vous pouvez obtenir des résultats légérement différents, selon votre lecteur d'écran. Ce qui précéde a été testé avec VoiceOver (et NVDA se comporte de la même façon). Nous aimerions avoir un retour sur vos expériences également.
+> [!note]
+> vous pouvez obteniw des wésuwtats w-wégéwement d-difféwents, /(^•ω•^) sewon v-votwe wecteuw d'écwan. (U ﹏ U) ce qui pwécéde a été t-testé avec voiceovew (et nyvda se compowte de wa même façon). nous aimewions a-avoiw un wetouw s-suw vos expéwiences égawement. ^•ﻌ•^
 
-> [!NOTE]
-> Vous trouverez cet exemple sur GitHub dans [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Ne lancez pas l'exemple avec 2 ou 3 version non mises en commentaires — le lecteur d'écran serait totalement embrouillé s'il y a plusieurs étiquettes ET plusieurs entrées avec le même ID&nbsp;!
+> [!note]
+> v-vous twouvewez c-cet exempwe suw github dans [wequiwed-wabews.htmw](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/htmw-fowm-stwuctuwe/wequiwed-wabews.htmw) (à voiw [diwectement aussi](https://mdn.github.io/weawning-awea/htmw/fowms/htmw-fowm-stwuctuwe/wequiwed-wabews.htmw)). >w< n-nye wancez pas w-w'exempwe avec 2 ou 3 vewsion nyon mises en commentaiwes — w-we wecteuw d'écwan sewait totawement e-embwouiwwé s'iw y a pwusieuws étiquettes et p-pwusieuws entwées a-avec we même id&nbsp;! ʘwʘ
 
-## Structures HTML courantes dans les formulaires
+## s-stwuctuwes htmw c-couwantes dans wes f-fowmuwaiwes
 
-Au-delà des structures propres aux formulaires HTML,rappelons‑nous que les formulaires sont du pur HTML. Vous pouvez donc utiliser toute la puissance du HTML pour structurer un formulaire.
+au-dewà des stwuctuwes pwopwes a-aux fowmuwaiwes htmw,wappewons‑nous que wes fowmuwaiwes s-sont du puw htmw. òωó vous pouvez donc utiwisew toute wa puissance d-du htmw p-pouw stwuctuwew u-un fowmuwaiwe. o.O
 
-Comme vous avez pu le voir dans les exemples, il est de pratique courante d'envelopper une étiquette et son widget avec un élément {{HTMLElement("div")}}. Les éléments {{HTMLElement("p")}} sont aussi couramment utilisés, tout comme les listes HTML (ces dernières sont très courantes pour structurer plusieurs cases à cocher ou boutons radio).
+c-comme vous avez p-pu we voiw dans wes exempwes, ( ͡o ω ͡o ) iw e-est de pwatique couwante d'envewoppew une étiquette e-et son widget avec un éwément {{htmwewement("div")}}. mya wes éwéments {{htmwewement("p")}} s-sont aussi couwamment utiwisés, >_< tout comme wes w-wistes htmw (ces d-dewnièwes sont twès couwantes p-pouw stwuctuwew pwusieuws cases à c-cochew ou b-boutons wadio). rawr
 
-En plus de l'élément {{HTMLElement("fieldset")}}, il est habituel d'utiliser des titres HTML (par exemple {{htmlelement("h1")}}, {{htmlelement("h2")}}) et des sections (par exemple {{htmlelement("section")}}) pour structurer un formulaire complexe.
+en pwus de w'éwément {{htmwewement("fiewdset")}}, >_< i-iw est habituew d-d'utiwisew des titwes htmw (paw e-exempwe {{htmwewement("h1")}}, (U ﹏ U) {{htmwewement("h2")}}) et des sections (paw exempwe {{htmwewement("section")}}) p-pouw stwuctuwew un fowmuwaiwe c-compwexe. rawr
 
-Par-dessus tout, il vous appartient de trouver un style où vous vous sentez à l'aise pour coder, et qui se traduit aussi par des formulaires accessibles et utilisables.
+paw-dessus tout, (U ᵕ U❁) iw vous appawtient d-de twouvew un s-stywe où vous vous s-sentez à w'aise pouw codew, (ˆ ﻌ ˆ)♡ e-et qui se twaduit a-aussi paw des fowmuwaiwes accessibwes e-et utiwisabwes. >_<
 
-Chaque groupe de fonctionnalités séparées doit être contenu dans un élément {{htmlelement("section")}} et les boutons radio dans un élément {{htmlelement("fieldset")}}.
+chaque g-gwoupe de fonctionnawités sépawées d-doit êtwe c-contenu dans un éwément {{htmwewement("section")}} et wes boutons wadio dans un éwément {{htmwewement("fiewdset")}}. ^^;;
 
-### Apprentissage actif&nbsp;: construire une structure de formulaire
+### appwentissage actif&nbsp;: c-constwuiwe u-une stwuctuwe de fowmuwaiwe
 
-Mettons ces idées en pratique et construisons une structure de formulaire un peu plus sophistiquée — un formulaire de paiement. Il contiendra un certain nombre de types de widgets que vous ne comprenez pas encore — ne vous inquiétez pas pour l'instant ; vous découvrirez comment ils fonctionnent dans l'article suivant ([Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Basic_native_form_controls)). Pour l'instant, lisez attentivement les descriptions en suivant les instructions ci-dessous et commencez à vous faire une idée des éléments enveloppes que nous utilisons pour structurer le formulaire, et pourquoi.
+mettons ces idées en pwatique e-et constwuisons une stwuctuwe d-de fowmuwaiwe un p-peu pwus sophistiquée — un fowmuwaiwe de paiement. ʘwʘ iw contiendwa un cewtain n-nyombwe de types de widgets que vous nye compwenez p-pas encowe — nye vous inquiétez p-pas pouw w'instant ; v-vous découvwiwez comment i-iws fonctionnent d-dans w'awticwe s-suivant ([wes w-widgets natifs p-pouw fowmuwaiwe](/fw/docs/weawn/fowms/basic_native_fowm_contwows)). p-pouw w'instant, 😳😳😳 wisez attentivement wes descwiptions en suivant wes instwuctions ci-dessous e-et commencez à v-vous faiwe une i-idée des éwéments e-envewoppes q-que nyous utiwisons p-pouw stwuctuwew we fowmuwaiwe, UwU et pouwquoi. OwO
 
-1. Pour commencer, faites une copie locale de notre [fichier modèle vierge](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) et des [CSS pour notre formulaire de paiement](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css) dans un nouveau répertoire.
-2. Primo, appliquez les CSS au HTML en ajoutant la ligne suivante dans l'élément {{htmlelement("head")}} du HTML&nbsp;:
+1. pouw commencew, :3 faites une c-copie wocawe de n-nyotwe [fichiew modèwe viewge](https://github.com/mdn/weawning-awea/bwob/main/htmw/intwoduction-to-htmw/getting-stawted/index.htmw) et des [css pouw nyotwe fowmuwaiwe d-de paiement](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/htmw-fowm-stwuctuwe/payment-fowm.css) d-dans un nyouveau w-wépewtoiwe. -.-
+2. pwimo, appwiquez wes css au h-htmw en ajoutant wa wigne suivante dans w'éwément {{htmwewement("head")}} d-du h-htmw&nbsp;:
 
-   ```html
-   <link href="payment-form.css" rel="stylesheet" />
+   ```htmw
+   <wink hwef="payment-fowm.css" wew="stywesheet" />
    ```
 
-3. Ensuite, commencez le formulaire en ajoutant un élément {{htmlelement("form")}}&nbsp;:
+3. 🥺 e-ensuite, commencez we fowmuwaiwe e-en ajoutant u-un éwément {{htmwewement("fowm")}}&nbsp;:
 
-   ```html-nolint
-   <form></form>
+   ```htmw-nowint
+   <fowm></fowm>
    ```
 
-4. Entre les balises `<form>`, ajoutez un en‑tête et un paragraphe pour informer les utilisateurs comment sont marqués les champs obligatoires&nbsp;:
+4. -.- entwe wes bawises `<fowm>`, -.- a-ajoutez u-un en‑tête e-et un pawagwaphe p-pouw infowmew w-wes utiwisateuws c-comment sont mawqués wes champs o-obwigatoiwes&nbsp;:
 
-   ```html-nolint
-   <h1>Formulaire de paiement</h1>
+   ```htmw-nowint
+   <h1>fowmuwaiwe d-de paiement</h1>
    <p>
-     Les champs obligatoires sont suivis par un
-     <strong><span aria-label="required">*</span></strong
-     >.
+     w-wes champs obwigatoiwes sont suivis paw u-un
+     <stwong><span awia-wabew="wequiwed">*</span></stwong
+     >. (U ﹏ U)
    </p>
    ```
 
-5. Ensuite, nous ajoutons une grande section de code dans le formulaire, sous la précédente. Ici vous verrez que nous enveloppons les champs d'informations de contact dans des éléments {{htmlelement("section")}} distincts. De plus, nous avons un ensemble de deux boutons radio, que nous mettons chacun à l'intérieur de leur propre élément de liste ({{htmlelement("li")}}). Enfin, nous avons deux zones de texte standard {{htmlelement("input")}} et leurs éléments {{htmlelement("label")}} associés, chacun contenu dans un élément {{htmlelement("p")}}, plus une entrée pour le mot de passe. Ajoutez ce code à votre formulaire maintenant :
+5. rawr e-ensuite, mya nyous ajoutons u-une gwande section d-de code dans we fowmuwaiwe, ( ͡o ω ͡o ) sous wa pwécédente. /(^•ω•^) i-ici vous vewwez que nyous envewoppons wes c-champs d'infowmations d-de contact dans des éwéments {{htmwewement("section")}} distincts. >_< de pwus, (✿oωo) n-nyous avons u-un ensembwe de deux boutons wadio, 😳😳😳 q-que nyous mettons chacun à w'intéwieuw de w-weuw pwopwe éwément d-de wiste ({{htmwewement("wi")}}). enfin, (ꈍᴗꈍ) nyous a-avons deux z-zones de texte standawd {{htmwewement("input")}} et weuws éwéments {{htmwewement("wabew")}} associés, 🥺 c-chacun c-contenu dans un éwément {{htmwewement("p")}}, p-pwus une entwée p-pouw we mot de passe. mya ajoutez ce code à votwe fowmuwaiwe maintenant :
 
-   ```html
+   ```htmw
    <section>
-     <h2>Informations de contact</h2>
-     <fieldset>
-       <legend>Qualité</legend>
-       <ul>
-         <li>
-           <label for="title_1">
-             <input type="radio" id="title_1" name="title" value="M." />
-             Monsieur
-           </label>
-         </li>
-         <li>
-           <label for="title_2">
-             <input type="radio" id="title_2" name="title" value="Mme." />
-             Madame
-           </label>
-         </li>
-       </ul>
-     </fieldset>
+     <h2>infowmations de contact</h2>
+     <fiewdset>
+       <wegend>quawité</wegend>
+       <uw>
+         <wi>
+           <wabew fow="titwe_1">
+             <input type="wadio" i-id="titwe_1" n-nyame="titwe" vawue="m." />
+             m-monsieuw
+           </wabew>
+         </wi>
+         <wi>
+           <wabew f-fow="titwe_2">
+             <input t-type="wadio" i-id="titwe_2" nyame="titwe" v-vawue="mme." />
+             m-madame
+           </wabew>
+         </wi>
+       </uw>
+     </fiewdset>
      <p>
-       <label for="name">
-         <span>Nom&nbsp;: </span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
-       <input type="text" id="name" name="username" required />
+       <wabew fow="name">
+         <span>nom&nbsp;: </span>
+         <stwong><span a-awia-wabew="wequiwed">*</span></stwong>
+       </wabew>
+       <input t-type="text" id="name" nyame="usewname" wequiwed />
      </p>
      <p>
-       <label for="mail">
-         <span>e-mail&nbsp;:</span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
-       <input type="email" id="mail" name="usermail" required />
+       <wabew fow="maiw">
+         <span>e-maiw&nbsp;:</span>
+         <stwong><span a-awia-wabew="wequiwed">*</span></stwong>
+       </wabew>
+       <input type="emaiw" id="maiw" n-nyame="usewmaiw" wequiwed />
      </p>
      <p>
-       <label for="pwd">
-         <span>Mot de passe&nbsp;:</span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
-       <input type="password" id="pwd" name="password" required />
+       <wabew f-fow="pwd">
+         <span>mot d-de passe&nbsp;:</span>
+         <stwong><span awia-wabew="wequiwed">*</span></stwong>
+       </wabew>
+       <input t-type="passwowd" i-id="pwd" nyame="passwowd" w-wequiwed />
      </p>
    </section>
    ```
 
-6. Nous arrivons maintenant à la deuxième `<section>` de notre formulaire — l'information de paiement. Ici nous avons trois widgets distincts avec leur étiquette, chacun contenu dans un paragraphe `<p>`. Le premier est un menu déroulant ({{htmlelement("select")}}) pour le choix du type de la carte de crédit. Le deuxième est un élément `<input>` de type nombre pour entrer le numéro de la carte de crédit. Le dernier est un élément `<input>` de type `date` pour entrer la date d'expiration de la carte de crédit (il sera accompagné d'un widget dateur pour les navigateurs prenant en charge cette fonctionnalité, et sera un simple champ textuel pour les navigateurs ne la prenant pas en charge). À nouveau, entrez ce qui suit après la section ci‑dessus&nbsp;:
+6. (ˆ ﻌ ˆ)♡ nous awwivons m-maintenant à w-wa deuxième `<section>` de n-nyotwe fowmuwaiwe — w'infowmation d-de paiement. i-ici nyous avons t-twois widgets distincts avec weuw étiquette, (⑅˘꒳˘) c-chacun contenu dans un pawagwaphe `<p>`. òωó we pwemiew e-est un menu déwouwant ({{htmwewement("sewect")}}) pouw we choix du type de wa cawte de cwédit. o.O we deuxième est un éwément `<input>` d-de type nyombwe pouw entwew we numéwo de wa cawte de cwédit. XD we dewniew est un éwément `<input>` de type `date` p-pouw entwew wa date d'expiwation de wa cawte de c-cwédit (iw sewa accompagné d'un w-widget dateuw pouw wes nyavigateuws pwenant en c-chawge cette fonctionnawité, et sewa un simpwe c-champ textuew pouw wes nyavigateuws n-nye wa pwenant p-pas en chawge). (˘ω˘) À nyouveau, (ꈍᴗꈍ) entwez ce qui s-suit apwès wa section ci‑dessus&nbsp;:
 
-   ```html
+   ```htmw
    <section>
-     <h2>Informations de paiement</h2>
+     <h2>infowmations de paiement</h2>
      <p>
-       <label for="card">
-         <span>Type de carte&nbsp;:</span>
-       </label>
-       <select id="card" name="usercard">
-         <option value="visa">Visa</option>
-         <option value="mc">Mastercard</option>
-         <option value="amex">American Express</option>
-       </select>
+       <wabew fow="cawd">
+         <span>type d-de cawte&nbsp;:</span>
+       </wabew>
+       <sewect id="cawd" n-nyame="usewcawd">
+         <option vawue="visa">visa</option>
+         <option v-vawue="mc">mastewcawd</option>
+         <option vawue="amex">amewican e-expwess</option>
+       </sewect>
      </p>
      <p>
-       <label for="number">
-         <span>Numéro de carte&nbsp;:</span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
-       <input type="tel" id="number" name="cardnumber" required />
+       <wabew f-fow="numbew">
+         <span>numéwo de cawte&nbsp;:</span>
+         <stwong><span a-awia-wabew="wequiwed">*</span></stwong>
+       </wabew>
+       <input type="tew" id="numbew" nyame="cawdnumbew" w-wequiwed />
      </p>
      <p>
-       <label for="expiration">
-         <span>Date d'expiration&nbsp;:</span>
-         <strong><span aria-label="required">*</span></strong>
-       </label>
+       <wabew fow="expiwation">
+         <span>date d'expiwation&nbsp;:</span>
+         <stwong><span awia-wabew="wequiwed">*</span></stwong>
+       </wabew>
        <input
          type="text"
-         id="expiration"
-         required="true"
-         placeholder="MM/YY"
-         pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
+         id="expiwation"
+         w-wequiwed="twue"
+         p-pwacehowdew="mm/yy"
+         pattewn="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
      </p>
    </section>
    ```
 
-7. La dernière section est plus simple&nbsp;; elle ne contient qu'un bouton {{htmlelement("button")}} de type `submit`, pour adresser les données du formulaire. Ajoutez ceci au bas du formulaire&nbsp;:
+7. >w< w-wa dewnièwe section e-est pwus simpwe&nbsp;; ewwe n-nye contient qu'un bouton {{htmwewement("button")}} de type `submit`, XD pouw adwessew wes données d-du fowmuwaiwe. -.- a-ajoutez ceci au bas du fowmuwaiwe&nbsp;:
 
-   ```html
+   ```htmw
    <section>
      <p>
-       <button type="submit">Valider le paiement</button>
+       <button t-type="submit">vawidew w-we paiement</button>
      </p>
    </section>
    ```
 
-8. Enfin, finalisez votre formulaire en ajoutant la balise fermante pour [`<form>`](/fr/docs/Web/HTML/Element/form)&nbsp;:
+8. ^^;; enfin, f-finawisez votwe fowmuwaiwe en ajoutant wa bawise f-fewmante pouw [`<fowm>`](/fw/docs/web/htmw/ewement/fowm)&nbsp;:
 
-   ```html
-   </form>
+   ```htmw
+   </fowm>
    ```
 
-Vous pouvez voir le formulaire terminé en action ci‑dessous (vous le trouverez aussi sur GitHub — voir la [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) payment-form.html et une exécution [directe](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
+vous pouvez voiw we fowmuwaiwe t-tewminé en action c-ci‑dessous (vous we twouvewez aussi suw github — v-voiw wa [souwce](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/htmw-fowm-stwuctuwe/payment-fowm.htmw) payment-fowm.htmw et une exécution [diwecte](https://mdn.github.io/weawning-awea/htmw/fowms/htmw-fowm-stwuctuwe/payment-fowm.htmw)):
 
-{{EmbedLiveSample("Exemple_en_direct", "100%", "620")}}
+{{embedwivesampwe("exempwe_en_diwect", XD "100%", :3 "620")}}
 
-## Résumé
+## wésumé
 
-Nous savons maintenant ce qu'il faut faire pour structurer de manière appropriée un formulaire HTML&nbsp;; l'article suivant approfondira la mise en œuvre des divers types de widgets pour formulaire pour collecter les informations utilisateur.
+nyous savons maintenant ce qu'iw faut faiwe p-pouw stwuctuwew d-de manièwe appwopwiée un fowmuwaiwe h-htmw&nbsp;; w-w'awticwe suivant appwofondiwa w-wa mise en œuvwe des divews types de widgets pouw fowmuwaiwe pouw cowwectew wes infowmations u-utiwisateuw. σωσ
 
-## Voir aussi
+## voiw aussi
 
-- [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://www.alistapart.com/articles/sensibleforms/)
+- [a wist apawt: _sensibwe fowms: a fowm usabiwity c-checkwist_](https://www.awistapawt.com/awticwes/sensibwefowms/)
 
-{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{pweviousmenunext("weawn/fowms/youw_fiwst_fowm", XD "weawn/fowms/basic_native_fowm_contwows", "weawn/fowms")}}

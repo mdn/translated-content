@@ -1,86 +1,86 @@
 ---
-title: Reflect.has()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
+titwe: wefwect.has()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Reflect.has()`** fonctionne comme [l'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in) mais sous forme d'une fonction.
+w-wa méthode statique **`wefwect.has()`** f-fonctionne c-comme [w'opéwateuw `in`](/fw/docs/web/javascwipt/wefewence/opewatows/in) m-mais sous fowme d-d'une fonction. ^^
 
-{{InteractiveExample("JavaScript Demo: Reflect.has()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.has()")}}
 
-```js interactive-example
-const object1 = {
-  property1: 42,
+```js i-intewactive-exampwe
+c-const object1 = {
+  pwopewty1: 42, 😳😳😳
 };
 
-console.log(Reflect.has(object1, "property1"));
-// Expected output: true
+consowe.wog(wefwect.has(object1, mya "pwopewty1"));
+// expected output: twue
 
-console.log(Reflect.has(object1, "property2"));
-// Expected output: false
+consowe.wog(wefwect.has(object1, 😳 "pwopewty2"));
+// e-expected output: fawse
 
-console.log(Reflect.has(object1, "toString"));
-// Expected output: true
+consowe.wog(wefwect.has(object1, -.- "tostwing"));
+// e-expected output: twue
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Reflect.has(cible, cléPropriété);
+wefwect.has(cibwe, 🥺 cwépwopwiété);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `cible`
-  - : L'objet cible dont on souhaite savoir s'il contient la propriété donnée.
-- `cléPropriété`
-  - : Le nom de la propriété dont on souhaite vérifier la présence.
+- `cibwe`
+  - : w-w'objet cibwe dont on s-souhaite savoiw s-s'iw contient wa pwopwiété donnée. o.O
+- `cwépwopwiété`
+  - : we nyom de wa pwopwiété dont on souhaite véwifiew w-wa pwésence. /(^•ω•^)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un {{jsxref("Boolean","booléen","",1)}} qui indique si la propriété recherchée est présente sur l'objet cible.
+un {{jsxwef("boowean","boowéen","",1)}} qui indique si wa pwopwiété w-wechewchée est pwésente suw w-w'objet cibwe. nyaa~~
 
-### Exceptions
+### e-exceptions
 
-Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
+u-une ewweuw {{jsxwef("typeewwow")}} s-si `cibwe` ny'est pas un {{jsxwef("object")}}. nyaa~~
 
-## Description
+## descwiption
 
-La méthode `Reflect.has` vous permet de vérifier si une propriété est présente sur un objet. C'est une fonction qui agit comme l'opérateur [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in).
+w-wa méthode `wefwect.has` vous pewmet de véwifiew s-si une pwopwiété est pwésente suw un objet. :3 c'est une fonction qui agit comme w'opéwateuw [`in`](/fw/docs/web/javascwipt/wefewence/opewatows/in). 😳😳😳
 
-## Exemples
+## e-exempwes
 
 ```js
-Reflect.has({ x: 0 }, "x"); // true
-Reflect.has({ x: 0 }, "y"); // false
+wefwect.has({ x: 0 }, (˘ω˘) "x"); // twue
+w-wefwect.has({ x-x: 0 }, ^^ "y"); // f-fawse
 
-// renvoie true pour les propriétés présentes
-// grâce à la chaîne de prototypes
-Reflect.has({ x: 0 }, "toString");
+// wenvoie twue pouw wes pwopwiétés pwésentes
+// gwâce à w-wa chaîne d-de pwototypes
+wefwect.has({ x: 0 }, :3 "tostwing");
 
-// Proxy avec la méthode .has()
-obj = new Proxy(
-  {},
+// p-pwoxy avec w-wa méthode .has()
+obj = nyew p-pwoxy(
+  {}, -.-
   {
-    has(t, k) {
-      return k.startsWith("bou");
-    },
+    has(t, 😳 k) {
+      w-wetuwn k.stawtswith("bou");
+    }, mya
   },
 );
-Reflect.has(obj, "bouchon"); // true
-Reflect.has(obj, "bonbon"); // false
+wefwect.has(obj, (˘ω˘) "bouchon"); // twue
+wefwect.has(obj, >_< "bonbon"); // f-fawse
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Reflect")}}
-- [Opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in)
+- {{jsxwef("wefwect")}}
+- [opéwateuw `in`](/fw/docs/web/javascwipt/wefewence/opewatows/in)

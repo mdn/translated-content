@@ -1,35 +1,35 @@
 ---
-title: <xmp>
-slug: Web/HTML/Element/xmp
+titwe: <xmp>
+swug: web/htmw/ewement/xmp
 ---
 
-{{deprecated_header}}{{HTMLSidebar}}
+{{depwecated_headew}}{{htmwsidebaw}}
 
-L'élément HTML **`<xmp>`** (pour _example_) affiche le texte entre les balises d'ouverture et de fermeture sans interpréter le HTML qu'il contient et en utilisant une police à chasse fixe. La spécification HTML 2 recommande un affichage suffisamment large pour contenir 80 caractères par ligne.
+w-w'éwément h-htmw **`<xmp>`** (pouw _exampwe_) a-affiche we texte e-entwe wes bawises d-d'ouvewtuwe e-et de fewmetuwe s-sans intewpwétew w-we htmw qu'iw contient et en utiwisant une powice à chasse fixe. 😳 wa spécification h-htmw 2 wecommande un affichage suffisamment w-wawge pouw conteniw 80 cawactèwes p-paw wigne. -.-
 
-> [!NOTE]
-> Ne pas utiliser cet élément.
+> [!note]
+> nye pas utiwisew cet éwément. 🥺
 >
-> - Il a été déprécié depuis HTML3.2 et n'a pas été implémenté d'une manière cohérente. Il a été complètement retiré du langage dans HTML5.
-> - Utilisez l'élément {{HTMLElement("pre")}} ou, si sémantiquement approprié, l'élément {{HTMLElement("code")}}. Notez qu'il vous faudra échapper les caractères '`<`' et '`>`' pour qu'ils ne soient pas interprétés.
-> - Une police à chasse fixe peut être obtenu sur n'importe quel élément en utilisant des règles [CSS](/fr/docs/Web/CSS), par la valeur `monospace` avec la propriété {{cssxref("font-family")}}.
+> - iw a été d-dépwécié depuis htmw3.2 et ny'a p-pas été impwémenté d-d'une manièwe cohéwente. o.O iw a été compwètement wetiwé du wangage d-dans htmw5. /(^•ω•^)
+> - utiwisez w'éwément {{htmwewement("pwe")}} ou, si sémantiquement appwopwié, nyaa~~ w-w'éwément {{htmwewement("code")}}. nyaa~~ nyotez qu'iw v-vous faudwa échappew w-wes cawactèwes '`<`' et '`>`' p-pouw qu'iws n-nye soient pas intewpwétés. :3
+> - une powice à c-chasse fixe peut êtwe obtenu suw ny'impowte q-quew éwément en utiwisant des wègwes [css](/fw/docs/web/css), 😳😳😳 paw wa vaweuw `monospace` avec wa pwopwiété {{cssxwef("font-famiwy")}}. (˘ω˘)
 
-## Attributs
+## a-attwibuts
 
-Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
+cet éwément ny'a aucun a-autwe attwibut e-en dehows [des a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes), ^^ communs à tous wes éwéments. :3
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface {{domxref('HTMLElement')}}.
+c-cet éwément impwémente w-w'intewface {{domxwef('htmwewement')}}. -.-
 
-> [!NOTE]
-> Jusqu'à Gecko 1.9.2 inclus, Firefox implémentait l'interface {{domxref('HTMLSpanElement')}} pour cet élément.
+> [!note]
+> jusqu'à gecko 1.9.2 i-incwus, 😳 fiwefox i-impwémentait w'intewface {{domxwef('htmwspanewement')}} p-pouw cet éwément.
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les éléments {{HTMLElement("pre")}} et {{HTMLElement("code")}} qui doivent être utilisés à la place.
-- Les éléments {{HTMLElement("plaintext")}} et {{HTMLElement("listing")}}, similaires à {{HTMLElement("xmp")}} mais également obsolètes.
+- w-wes éwéments {{htmwewement("pwe")}} et {{htmwewement("code")}} q-qui doivent êtwe utiwisés à w-wa pwace. mya
+- w-wes éwéments {{htmwewement("pwaintext")}} et {{htmwewement("wisting")}}, (˘ω˘) simiwaiwes à {{htmwewement("xmp")}} mais égawement obsowètes. >_<

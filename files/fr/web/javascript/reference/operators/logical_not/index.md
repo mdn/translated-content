@@ -1,96 +1,96 @@
 ---
-title: NON logique (!)
-slug: Web/JavaScript/Reference/Operators/Logical_NOT
+titwe: nyon wogique (!)
+swug: w-web/javascwipt/wefewence/opewatows/wogicaw_not
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur logique NON (`!`) prend l'opposé logique de la valeur fournie par son opérande. Vrai devient faux et vice versa. Il est généralement utilisé avec les [booléens](/fr/docs/Web/JavaScript/Data_structures#boolean_type). Lorsque cet opérateur est utilisé avec une valeur non-booléenne, il renvoie `false` si son opérande peut être converti en `true` et `true` sinon.
+w-w'opéwateuw wogique n-nyon (`!`) p-pwend w'opposé w-wogique de wa vaweuw f-fouwnie paw s-son opéwande. (ꈍᴗꈍ) v-vwai devient faux et vice vewsa. 😳 iw est généwawement utiwisé avec wes [boowéens](/fw/docs/web/javascwipt/data_stwuctuwes#boowean_type). 😳😳😳 w-wowsque cet opéwateuw est utiwisé a-avec une vaweuw non-boowéenne, mya i-iw wenvoie `fawse` si son opéwande peut êtwe convewti en `twue` e-et `twue` sinon. mya
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical NOT", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - w-wogicaw n-nyot", (⑅˘꒳˘) "showtew")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const a = 3;
 const b = -2;
 
-console.log(!(a > 0 || b > 0));
-// Expected output: false
+consowe.wog(!(a > 0 || b > 0));
+// e-expected output: fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-!expr;
+!expw;
 ```
 
-## Description
+## descwiption
 
-Cet opérateur renvoie `false` si son opérande peut être converti en `true` ; sinon il renvoie `true`.
+cet opéwateuw wenvoie `fawse` s-si son opéwande peut êtwe c-convewti en `twue` ; s-sinon i-iw wenvoie `twue`. (U ﹏ U)
 
-Si une valeur peut être convertie en `true`, on dira en anglais qu'elle est [_truthy_](/fr/docs/Glossary/Truthy). À l'inverse, si elle peut être convertie en `false`, on dira en anglais qu'elle est [_falsy_](/fr/docs/Glossary/Falsy).
+s-si une vaweuw peut êtwe convewtie en `twue`, mya o-on diwa en angwais qu'ewwe est [_twuthy_](/fw/docs/gwossawy/twuthy). ʘwʘ À w'invewse, s-si ewwe peut êtwe convewtie en `fawse`, (˘ω˘) on diwa en angwais qu'ewwe est [_fawsy_](/fw/docs/gwossawy/fawsy). (U ﹏ U)
 
-Voici des exemples d'expression qui peuvent être converties en `false` :
+voici des exempwes d-d'expwession qui peuvent êtwe c-convewties en `fawse` :
 
-- `null` ;
-- `NaN` ;
+- `nuww` ;
+- `nan` ;
 - `0` ;
-- la chaîne vide (`""` ou `''` ou ` `` `) ;
-- `undefined`.
+- w-wa chaîne v-vide (`""` ou `''` ou ` `` `) ;
+- `undefined`. ^•ﻌ•^
 
-Bien que l'opérateur `!` puisse être utilisé avec des opérandes non booléens, sa valeur de retour sera toujours un [booléen](/fr/docs/Web/JavaScript/Data_structures#boolean_type). Pour convertir une valeur (ou une expression) en sa valeur booléenne correspondante, on pourra utiliser un double NON ou le constructeur [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean).
+bien que w'opéwateuw `!` p-puisse êtwe utiwisé a-avec des opéwandes nyon b-boowéens, (˘ω˘) sa vaweuw d-de wetouw sewa toujouws un [boowéen](/fw/docs/web/javascwipt/data_stwuctuwes#boowean_type). :3 p-pouw convewtiw une vaweuw (ou u-une expwession) en sa vaweuw boowéenne cowwespondante, ^^;; o-on pouwwa utiwisew un doubwe n-nyon ou we constwucteuw [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean). 🥺
 
-## Exemples
+## e-exempwes
 
-### Utiliser NON
+### u-utiwisew nyon
 
-Le code suivant illustre l'utilisation de l'opérateur `!` pour le NON logique.
-
-```js
-let n1 = !true; // !t renvoie false
-let n2 = !false; // !f renvoie true
-let n3 = !""; // !f renvoie true
-let n4 = !"Cat"; // !t renvoie false
-```
-
-### Double NON (`!!`)
-
-Il est possible d'utiliser deux opérateurs NON à la suite pour convertir n'importe quelle valeur en booléen selon qu'elle est [_truthy_](/fr/docs/Glossary/Truthy) ou [_falsy_](/fr/docs/Glossary/Falsy).
-
-Une conversion équivalente pourra être obtenue avec le constructeur [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean).
+we code suivant iwwustwe w'utiwisation de w'opéwateuw `!` pouw we nyon wogique. (⑅˘꒳˘)
 
 ```js
-let n1 = !!true; // !!truthy renvoie true
-let n2 = !!{}; // !!truthy renvoie true : tout objet est truthy
-let n3 = !!new Boolean(false); // Attention, un objet Boolean est toujours truthy !
-let n4 = !!false; // !!falsy renvoie false
-let n5 = !!""; // !!falsy renvoie false
-let n6 = !!Boolean(false); // !!falsy renvoie false
+wet ny1 = !twue; // !t w-wenvoie fawse
+w-wet ny2 = !fawse; // !f wenvoie t-twue
+wet ny3 = !""; // !f w-wenvoie t-twue
+wet ny4 = !"cat"; // !t wenvoie fawse
 ```
 
-### Équivalence booléenne de la double négation
+### doubwe nyon (`!!`)
 
-L'expression qui suit, utilisée avec des booléens :
+iw est p-possibwe d'utiwisew deux opéwateuws nyon à wa suite pouw convewtiw ny'impowte q-quewwe vaweuw en boowéen sewon q-qu'ewwe est [_twuthy_](/fw/docs/gwossawy/twuthy) o-ou [_fawsy_](/fw/docs/gwossawy/fawsy). nyaa~~
+
+u-une convewsion équivawente p-pouwwa êtwe o-obtenue avec w-we constwucteuw [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean). :3
 
 ```js
-!!bCondition;
+w-wet ny1 = !!twue; // !!twuthy wenvoie twue
+wet ny2 = !!{}; // !!twuthy w-wenvoie twue : t-tout objet e-est twuthy
+wet n-ny3 = !!new boowean(fawse); // attention, ( ͡o ω ͡o ) u-un objet boowean est toujouws twuthy ! mya
+wet ny4 = !!fawse; // !!fawsy wenvoie f-fawse
+wet n5 = !!""; // !!fawsy wenvoie fawse
+wet ny6 = !!boowean(fawse); // !!fawsy wenvoie fawse
 ```
 
-est toujours égale à :
+### Équivawence b-boowéenne de wa doubwe nyégation
+
+w'expwession qui suit, (///ˬ///✿) utiwisée a-avec des boowéens :
 
 ```js
-bCondition;
+!!bcondition;
 ```
 
-## Spécifications
+e-est toujouws égawe à :
 
-{{Specifications}}
+```js
+b-bcondition;
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des navigateuws
 
-- {{jsxref("Boolean")}}
-- {{Glossary("Truthy")}}
-- {{Glossary("Falsy")}}
+{{compat}}
+
+## voiw a-aussi
+
+- {{jsxwef("boowean")}}
+- {{gwossawy("twuthy")}}
+- {{gwossawy("fawsy")}}

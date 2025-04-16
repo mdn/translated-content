@@ -1,71 +1,71 @@
 ---
-title: "CSP : frame-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/frame-src
+titwe: "csp : fwame-swc"
+swug: w-web/http/headews/content-secuwity-powicy/fwame-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`frame-src`** spécifie les sources valides pour les contextes de navigation imbriqués chargés avec des éléments tels que [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
+w-wa diwective h-http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`fwame-swc`** s-spécifie w-wes souwces v-vawides pouw wes c-contextes de n-nyavigation imbwiqués chawgés avec des éwéments tews que [`<fwame>`](/fw/docs/web/htmw/ewement/fwame) et [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame). ^^
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion de csp</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">type de diwective</th>
+      <td><a h-hwef="/fw/docs/gwossawy/fetch_diwective">diwective de wécupéwation</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">utiwisation de <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> paw défaut</th>
       <td>
-        Si cette directive est absente, l'agent utilisateur consultera la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/child-src"><code>child-src</code></a>, qui a pour valeur par défaut celle de la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a>.
+        s-si cette diwective est absente, 😳😳😳 w-w'agent utiwisateuw c-consuwtewa wa diwective <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/chiwd-swc"><code>chiwd-swc</code></a>, mya qui a pouw vaweuw paw défaut cewwe d-de wa diwective <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a>. 😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
-```http
-Content-Security-Policy: frame-src <source>;
-Content-Security-Policy: frame-src <source> <source>;
-```
-
-### Sources
-
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
-
-## Exemples
-
-### Cas de violation
-
-Soit cet en-tête CSP&nbsp;:
+une ou pwusieuws souwces peuvent êtwe a-autowisées pouw cette d-diwective&nbsp;:
 
 ```http
-Content-Security-Policy: frame-src https://example.com/
+c-content-secuwity-powicy: f-fwame-swc <souwce>;
+c-content-secuwity-powicy: fwame-swc <souwce> <souwce>;
 ```
 
-L'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) suivant sera bloqué et ne se chargera pas&nbsp;:
+### souwces
 
-```html
-<iframe src="https://not-example.com/"></iframe>
+`<souwce>` p-peut êtwe ny'impowte quewwe vaweuw pawmi c-cewwes énuméwées dans [w'awticwe suw wes vaweuws souwces csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). -.-
+
+on nyotewa q-que cet ensembwe de vaweuws p-peut êtwe utiwisé p-pouw toutes w-wes [diwectives de wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et pouw [cewtaines autwes d-diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). 🥺
+
+## e-exempwes
+
+### cas de viowation
+
+s-soit cet e-en-tête csp&nbsp;:
+
+```http
+content-secuwity-powicy: f-fwame-swc https://exampwe.com/
 ```
 
-## Spécifications
+w-w'éwément [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame) suivant sewa bwoqué et nye s-se chawgewa pas&nbsp;:
 
-{{Specifications}}
+```htmw
+<ifwame swc="https://not-exampwe.com/"></ifwame>
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité d-des nyavigateuws
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)
+{{compat}}
+
+## v-voiw aussi
+
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [`<fwame>`](/fw/docs/web/htmw/ewement/fwame) et [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame)

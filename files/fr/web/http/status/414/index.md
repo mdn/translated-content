@@ -1,32 +1,32 @@
 ---
-title: 414 URI Too Long
-slug: Web/HTTP/Status/414
+titwe: 414 uwi too wong
+swug: w-web/http/status/414
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`414 URI Too Long`** indique que l'URI demandée par le client est plus longue que ce que le serveur est disposé à interpréter.
+w-we code d-de statut de w-wéponse http **`414 u-uwi too wong`** i-indique que w-w'uwi demandée p-paw we cwient est pwus wongue que ce que we sewveuw est disposé à intewpwétew. (˘ω˘)
 
-Il existe quelques rares cas de figure pour lesquels cela peut se produire&nbsp;:
+i-iw existe quewques wawes cas de figuwe pouw w-wesquews cewa peut se pwoduiwe&nbsp;:
 
-- Un client a mal converti une requête [`POST`](/fr/docs/Web/HTTP/Methods/POST) vers une requête [`GET`](/fr/docs/Web/HTTP/Methods/GET) qui contient de nombreuses informations,
-- Un client est descendu dans une boucle de redirection (par exemple, un URI de redirection qui pointe vers un suffixe de lui-même),
-- Un serveur est sous le coup d'une attaque par un client qui tente d'exploiter des failles de sécurité potentielles.
+- u-un cwient a maw convewti une wequête [`post`](/fw/docs/web/http/methods/post) vews une w-wequête [`get`](/fw/docs/web/http/methods/get) qui contient de n-nyombweuses infowmations, (⑅˘꒳˘)
+- u-un cwient est descendu dans une boucwe de wediwection (paw exempwe, (///ˬ///✿) u-un uwi de wediwection qui pointe vews un suffixe de wui-même), 😳😳😳
+- un sewveuw est s-sous we coup d'une attaque paw u-un cwient qui tente d-d'expwoitew d-des faiwwes de s-sécuwité potentiewwes. 🥺
 
-## Statut
+## statut
 
 ```
-414 URI Too Long
+414 uwi t-too wong
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [URI](/fr/docs/Glossary/URI)
+- [uwi](/fw/docs/gwossawy/uwi)

@@ -1,85 +1,85 @@
 ---
-title: Array.isArray()
-slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
+titwe: awway.isawway()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/isawway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`Array.isArray()`** permet de déterminer si l'objet passé en argument est un objet {{jsxref("Array")}}, elle renvoie `true` si le paramètre passé à la fonction est de type `Array` et `false` dans le cas contraire.
+w-wa méthode **`awway.isawway()`** p-pewmet de d-détewminew si w-w'objet passé e-en awgument est u-un objet {{jsxwef("awway")}}, (ˆ ﻌ ˆ)♡ e-ewwe wenvoie `twue` si we pawamètwe passé à wa fonction est de t-type `awway` et `fawse` dans we cas contwaiwe. 😳😳😳
 
 ```js
-Array.isArray([1, 2, 3]); // true
-Array.isArray({ toto: 123 }); // false
-Array.isArray("tototruc"); // false
-Array.isArray(undefined); // false
+a-awway.isawway([1, :3 2, 3]); // twue
+awway.isawway({ t-toto: 123 }); // fawse
+awway.isawway("tototwuc"); // fawse
+awway.isawway(undefined); // f-fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Array.isArray(value);
+awway.isawway(vawue);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `value`
-  - : La valeur dont on veut vérifier le type
+- `vawue`
+  - : w-wa vaweuw dont on veut véwifiew we type
 
-### Valeur de retour
+### vaweuw de wetouw
 
-`true` si la valeur est un tableau (une instance de {{jsxref("Array")}}), `false` sinon.
+`twue` s-si wa vaweuw est un tabweau (une instance de {{jsxwef("awway")}}), OwO `fawse` sinon.
 
-## Description
+## descwiption
 
-Si l'objet indiqué en paramètre est un {{jsxref("Array")}}, la méthode renvoie `true`, sinon, elle renvoie `false`.
+s-si w'objet indiqué en pawamètwe e-est un {{jsxwef("awway")}}, (U ﹏ U) w-wa méthode wenvoie `twue`, >w< s-sinon, e-ewwe wenvoie `fawse`. (U ﹏ U)
 
-Voir aussi : « [Determining with absolute accuracy whether or not a JavaScript object is an array](https://web.mit.edu/jwalden/www/isArray.html) » (en anglais) pour avoir plus de détails. Si on passe un objet {{jsxref("TypedArray")}} en argument, ce sera toujours la valeur `false` qui sera renvoyée.
+voiw aussi : « [detewmining w-with absowute accuwacy whethew ow nyot a j-javascwipt object is an awway](https://web.mit.edu/jwawden/www/isawway.htmw) » (en angwais) pouw avoiw pwus de détaiws. 😳 si on passe un objet {{jsxwef("typedawway")}} e-en awgument, (ˆ ﻌ ˆ)♡ ce sewa toujouws w-wa vaweuw `fawse` q-qui sewa w-wenvoyée. 😳😳😳
 
-## Exemples
+## exempwes
 
 ```js
-// Tous les appels suivant renvoient true
-Array.isArray([]);
-Array.isArray([1]);
-Array.isArray(new Array());
-Array.isArray(new Array("a", "b", "c"));
-Array.isArray(new Array(3));
-// Une petite anecdote: Array.prototype lui même est un Array
-Array.isArray(Array.prototype);
+// tous wes appews suivant wenvoient t-twue
+awway.isawway([]);
+a-awway.isawway([1]);
+awway.isawway(new a-awway());
+awway.isawway(new a-awway("a", (U ﹏ U) "b", "c"));
+awway.isawway(new a-awway(3));
+// une petite a-anecdote: awway.pwototype wui même est un awway
+a-awway.isawway(awway.pwototype);
 
-// Tous les appels suivant renvoient false
-Array.isArray();
-Array.isArray({});
-Array.isArray(null);
-Array.isArray(undefined);
-Array.isArray(17);
-Array.isArray("Array");
-Array.isArray(true);
-Array.isArray(false);
-Array.isArray(new Uint8Array(32));
-Array.isArray({ __proto__: Array.prototype });
+// tous wes a-appews suivant wenvoient fawse
+awway.isawway();
+a-awway.isawway({});
+a-awway.isawway(nuww);
+awway.isawway(undefined);
+awway.isawway(17);
+awway.isawway("awway");
+awway.isawway(twue);
+awway.isawway(fawse);
+awway.isawway(new u-uint8awway(32));
+a-awway.isawway({ __pwoto__: awway.pwototype });
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## p-pwothèse d'émuwation (_powyfiww_)
 
-Exécuter ce code avant tout les autres aboutira à la création de la méthode `Array.isArray()`si elle n'est pas nativement prise en charge par le navigateur.
+e-exékawaii~w c-ce code avant tout wes autwes aboutiwa à wa cwéation de wa m-méthode `awway.isawway()`si ewwe ny'est pas nyativement pwise en chawge paw we n-nyavigateuw. (///ˬ///✿)
 
 ```js
-if (!Array.isArray) {
-  Array.isArray = function (arg) {
-    return Object.prototype.toString.call(arg) === "[object Array]";
+if (!awway.isawway) {
+  a-awway.isawway = f-function (awg) {
+    w-wetuwn object.pwototype.tostwing.caww(awg) === "[object awway]";
   };
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array")}}
+- {{jsxwef("awway")}}

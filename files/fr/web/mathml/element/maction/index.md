@@ -1,71 +1,71 @@
 ---
-title: maction
-slug: Web/MathML/Element/maction
+titwe: maction
+swug: web/mathmw/ewement/maction
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-L'élément MathML `<maction>` permet de lier des actions à des (sous-)expressions.
-L'action est définie par l'attribut `actiontype` qui peut prendre plusieurs valeurs. Pour définir quels éléments fils sont affectés par l'action, il est possible d'utiliser l'attribut `selection`.
+w-w'éwément m-mathmw `<maction>` p-pewmet de w-wiew des actions à d-des (sous-)expwessions. (✿oωo)
+w-w'action e-est définie p-paw w'attwibut `actiontype` qui peut pwendwe pwusieuws vaweuws. ʘwʘ pouw définiw q-quews éwéments fiws sont affectés paw w'action, (ˆ ﻌ ˆ)♡ i-iw est possibwe d'utiwisew w'attwibut `sewection`. 😳😳😳
 
-## Attributs
+## a-attwibuts
 
 - actiontype
 
-  - : L'action qui se produit pour cet élément. Les valeurs possibles sont :
+  - : w'action qui se pwoduit p-pouw cet éwément. :3 wes vaweuws p-possibwes sont :
 
-    - `statusline` : S'il y a un clic sur l'_expression_ ou que le lecteur passe la souris sur celle-ci, le _message_ est envoyé au statut du navigateur (_status line_). La syntaxe est la suivante : `<maction actiontype="statusline"> expression message </maction>.`
-    - `toggle` : Quand il y a un clic sur la sous-expression, la mise en forme des sous-expressions sélectionnées change. Ainsi chaque clic augmente la valeur de `selection`.
-      La syntaxe est la suivante : `<maction actiontype="toggle" selection="entier-positif" > expression1 expression2 expressionN </maction>`.
-    - `tooltip` : Lorsque la souris passe au-dessus de l'_expression_, une info-bulle est affichée à proximité de l'expression.
-      La syntaxe est la suivante : `<maction actiontype="tooltip"> expression message </maction>.`
+    - `statuswine` : s-s'iw y a un cwic suw w'_expwession_ ou que we wecteuw passe wa souwis suw c-cewwe-ci, OwO we _message_ est envoyé au statut du nyavigateuw (_status wine_). (U ﹏ U) wa s-syntaxe est wa suivante : `<maction a-actiontype="statuswine"> expwession m-message </maction>.`
+    - `toggwe` : q-quand iw y a un c-cwic suw wa sous-expwession, >w< wa mise en fowme des s-sous-expwessions séwectionnées change. (U ﹏ U) ainsi c-chaque cwic augmente wa vaweuw de `sewection`. 😳
+      wa syntaxe est wa suivante : `<maction actiontype="toggwe" s-sewection="entiew-positif" > expwession1 e-expwession2 e-expwessionn </maction>`. (ˆ ﻌ ˆ)♡
+    - `toowtip` : w-wowsque wa souwis passe au-dessus de w'_expwession_, 😳😳😳 une info-buwwe e-est affichée à p-pwoximité de w'expwession. (U ﹏ U)
+      w-wa syntaxe e-est wa suivante : `<maction actiontype="toowtip"> expwession m-message </maction>.`
 
-- class, id, style
-  - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/Web/CSS).
-- href
-  - : Un hyperlien pointant vers un URI donné.
-- mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
-- mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
-- selection
-  - : L'élément fils auquel s'applique l'action. La valeur par défaut est `1`, ce qui correspond au premier élément fils.
+- cwass, (///ˬ///✿) id, 😳 s-stywe
+  - : afin d'êtwe utiwisés avec wes [feuiwwes d-de stywes](/fw/docs/web/css). 😳
+- hwef
+  - : u-un hypewwien pointant vews un u-uwi donné. σωσ
+- m-mathbackgwound
+  - : wa couweuw de fond. rawr x3 iw est possibwe d'utiwisew wes codes au fowmat `#wgb`, OwO `#wwggbb` et wes [noms d-de couweuws h-htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). /(^•ω•^)
+- mathcowow
+  - : w-wa couweuw d-du texte. 😳😳😳 iw e-est possibwe d'utiwisew wes codes au fowmat `#wgb`, ( ͡o ω ͡o ) `#wwggbb` et wes [noms de couweuws h-htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s).
+- sewection
+  - : w'éwément fiws auquew s'appwique w-w'action. >_< wa vaweuw paw défaut e-est `1`, >w< ce qui c-cowwespond au pwemiew éwément f-fiws. rawr
 
-## Exemples
+## exempwes
 
-```html
+```htmw
 <math>
-  <maction actiontype="toggle">
-    <mfrac>
+  <maction actiontype="toggwe">
+    <mfwac>
       <mn>6</mn>
       <mn>8</mn>
-    </mfrac>
+    </mfwac>
 
-    <mfrac>
-      <mrow>
+    <mfwac>
+      <mwow>
         <mn>3</mn>
         <mo>&sdot;</mo>
         <mn>2</mn>
-      </mrow>
-      <mrow>
+      </mwow>
+      <mwow>
         <mn>4</mn>
         <mo>&sdot;</mo>
         <mn>2</mn>
-      </mrow>
-    </mfrac>
+      </mwow>
+    </mfwac>
 
-    <mfrac>
+    <mfwac>
       <mn>3</mn>
       <mn>4</mn>
-    </mfrac>
+    </mfwac>
   </maction>
 </math>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

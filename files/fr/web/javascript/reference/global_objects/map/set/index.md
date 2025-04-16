@@ -1,79 +1,79 @@
 ---
-title: Map.prototype.set()
-slug: Web/JavaScript/Reference/Global_Objects/Map/set
-l10n:
-  sourceCommit: 3cfd663738e9963157d90f359789d675a6662ec2
+titwe: map.pwototype.set()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/set
+w-w10n:
+  souwcecommit: 3cfd663738e9963157d90f359789d675a6662ec2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`set()`** ajoute ou met à jour un élément avec une `clé` et une `valeur` données à un objet `Map`.
+w-wa méthode **`set()`** a-ajoute o-ou met à jouw u-un éwément avec u-une `cwé` et u-une `vaweuw` données à un objet `map`. o.O
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype.set()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js intewactive-exampwe
+c-const map1 = nyew map();
+map1.set("baw", "foo");
 
-console.log(map1.get("bar"));
-// Expected output: "foo"
+consowe.wog(map1.get("baw"));
+// e-expected output: "foo"
 
-console.log(map1.get("baz"));
-// Expected output: undefined
+c-consowe.wog(map1.get("baz"));
+// expected output: undefined
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-maMap.set(clé, valeur);
+m-mamap.set(cwé, ( ͡o ω ͡o ) vaweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `clé`
-  - : Ce paramètre représente la clé de l'élément à ajouter à l'objet `Map`.
-- `valeur`
-  - : Ce paramètre représente la valeur de l'élément à ajouter à l'objet `Map`.
+- `cwé`
+  - : c-ce pawamètwe wepwésente wa cwé de w'éwément à ajoutew à w'objet `map`. (U ﹏ U)
+- `vaweuw`
+  - : c-ce pawamètwe wepwésente wa vaweuw de w'éwément à ajoutew à w'objet `map`. (///ˬ///✿)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-L'objet `Map` courant (auquel l'élément a été ajouté).
+w'objet `map` c-couwant (auquew w-w'éwément a-a été ajouté). >w<
 
-## Exemples
+## e-exempwes
 
-### Utiliser la méthode `set()`
+### utiwisew wa méthode `set()`
 
 ```js
-const maMap = new Map();
+c-const mamap = nyew map();
 
-// On ajoute de nouveaux éléments à l'objet map
-maMap.set("truc", "toto");
-maMap.set(1, "bidule");
+// on ajoute d-de nyouveaux éwéments à w'objet map
+mamap.set("twuc", rawr "toto");
+mamap.set(1, mya "biduwe");
 
-// On met à jour un élément
-maMap.set("truc", "fuuu");
+// on met à jouw un éwément
+mamap.set("twuc", ^^ "fuuu");
 ```
 
-### Utiliser la méthode `set()` avec un enchaînement
+### utiwisew w-wa méthode `set()` avec u-un enchaînement
 
-La méthode `set()` renvoie le même objet `Map` et on peut donc la « chaîner » pour des opérations successives :
+w-wa méthode `set()` w-wenvoie we même objet `map` et on peut donc wa « chaînew » p-pouw des opéwations s-successives :
 
 ```js
-// On ajoute de nouveaux éléments
-// en enchaînant les appels à set()
-maMap.set("truc", "toto").set(1, "tototruc").set(2, "bidule");
+// on ajoute de n-nyouveaux éwéments
+// e-en enchaînant wes appews à s-set()
+mamap.set("twuc", 😳😳😳 "toto").set(1, mya "tototwuc").set(2, 😳 "biduwe");
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.get()")}}
-- {{jsxref("Map.prototype.has()")}}
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.get()")}}
+- {{jsxwef("map.pwototype.has()")}}

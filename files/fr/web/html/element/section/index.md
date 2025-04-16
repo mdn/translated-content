@@ -1,145 +1,145 @@
 ---
-title: "<section> : l'élément de section générique"
-slug: Web/HTML/Element/section
+titwe: "<section> : w'éwément d-de section généwique"
+s-swug: w-web/htmw/ewement/section
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<section>`** représente une section générique d'un document, par exemple un groupe de contenu thématique. Une section commence généralement avec un titre.
+w-w'éwément htmw **`<section>`** w-wepwésente une s-section généwique d-d'un document, nyaa~~ p-paw exempwe un gwoupe de contenu thématique. UwU une section commence généwawement a-avec un titwe. :3
 
-{{InteractiveExample("HTML Demo: &lt;section&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;section&gt;", (⑅˘꒳˘) "tabbed-standawd")}}
 
-```html interactive-example
-<h1>Choosing an Apple</h1>
+```htmw intewactive-exampwe
+<h1>choosing a-an appwe</h1>
 <section>
-  <h2>Introduction</h2>
+  <h2>intwoduction</h2>
   <p>
-    This document provides a guide to help with the important task of choosing
-    the correct Apple.
+    this document p-pwovides a guide to hewp with the impowtant task of choosing
+    t-the cowwect appwe. (///ˬ///✿)
   </p>
 </section>
 
 <section>
-  <h2>Criteria</h2>
+  <h2>cwitewia</h2>
   <p>
-    There are many different criteria to be considered when choosing an Apple —
-    size, color, firmness, sweetness, tartness...
+    thewe awe many diffewent c-cwitewia t-to be considewed when choosing an appwe —
+    size, ^^;; cowow, fiwmness, >_< sweetness, t-tawtness...
   </p>
 </section>
 ```
 
-```css interactive-example
-h1,
+```css intewactive-exampwe
+h1, rawr x3
 h2 {
-  margin: 0;
+  mawgin: 0;
 }
 ```
 
-Ainsi, un menu de navigation devrait être délimité par un élément {{htmlelement("nav")}} mais une liste de résultat de recherche, qui ne dispose pas d'élément spécifique pour être représentée, pourrait être englobée dans un élément `<section>`.
+ainsi, /(^•ω•^) un menu de n-nyavigation devwait êtwe déwimité p-paw un éwément {{htmwewement("nav")}} m-mais u-une wiste de wésuwtat d-de wechewche, :3 qui nye dispose pas d'éwément s-spécifique pouw êtwe wepwésentée, (ꈍᴗꈍ) pouwwait êtwe e-engwobée dans un éwément `<section>`. /(^•ω•^)
 
-> [!NOTE]
-> Si le contenu de l'élément devrait être considéré comme un fragment indépendant (qui puisse être séparée du reste du contenu), l'élément {{HTMLElement("article")}} sera plus pertinent.
+> [!note]
+> si we contenu de w'éwément devwait êtwe considéwé comme un f-fwagment indépendant (qui puisse êtwe s-sépawée d-du weste du c-contenu), (⑅˘꒳˘) w'éwément {{htmwewement("awticwe")}} sewa pwus pewtinent. ( ͡o ω ͡o )
 
-## Attributs
+## attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément i-incwut uniquement [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). òωó
 
-## Notes d'utilisation
+## n-nyotes d-d'utiwisation
 
-- Chaque élément `<section>` devrait être identifié, généralement grâce à un élément de titre ({{HTMLElement('h1')}}-{{HTMLElement('h6')}}) qui est un élément fils de l'élément `<section>`.
-- S'il est plus pertinent que le contenu soit à part, on utilisera l'élément {{HTMLElement("article")}}.
-- L'élément `<section>` ne doit pas être utilisé comme un conteneur générique : c'est le rôle de {{HTMLElement("div")}}, notamment lorsque le sectionnement du contenu sert uniquement la mise en forme. Pour savoir lequel utiliser, on peut se demander si la section doit apparaître sur le plan du document : si oui, on utilisera `<section>`, sinon, `<div>`.
+- chaque éwément `<section>` devwait êtwe i-identifié, (⑅˘꒳˘) généwawement g-gwâce à un éwément de titwe ({{htmwewement('h1')}}-{{htmwewement('h6')}}) q-qui est un éwément fiws d-de w'éwément `<section>`.
+- s'iw e-est pwus pewtinent q-que we contenu soit à pawt, XD on utiwisewa w'éwément {{htmwewement("awticwe")}}.
+- w'éwément `<section>` ne doit pas êtwe utiwisé comme u-un conteneuw g-généwique : c'est we wôwe de {{htmwewement("div")}}, -.- n-nyotamment w-wowsque we sectionnement d-du contenu sewt uniquement wa mise en fowme. :3 pouw savoiw w-wequew utiwisew, nyaa~~ on peut se demandew si wa section doit appawaîtwe suw we p-pwan du document : si oui, 😳 on utiwisewa `<section>`, (⑅˘꒳˘) s-sinon, nyaa~~ `<div>`.
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <section>
-  <h1>Titre</h1>
-  <p>Du contenu sur un thème pour ce titre</p>
+  <h1>titwe</h1>
+  <p>du contenu s-suw un thème pouw c-ce titwe</p>
 </section>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("",'','130')}}
+{{embedwivesampwe("",'','130')}}
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies d-de c-contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_sectionnant"
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >, OwO
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_sectionnant"
           >contenu sectionnant</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        >, rawr x3
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >.
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
+      <td>aucune, (U ᵕ U❁) w-wa bawise d'ouvewtuwe et wa bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
-        >. Un élément <code>&#x3C;section></code> ne peut pas être le descendant
-        d'un élément {{HTMLElement("address")}}.
+        t-tout éwément q-qui accepte du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >. (U ﹏ U) un éwément <code>&#x3c;section></code> n-nye peut pas êtwe w-we descendant
+        d'un éwément {{htmwewement("addwess")}}. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
       <td>
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/alert_role">alert</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">contentinfo</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/log_role">log</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/main_role">main</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/marquee_role">marquee</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/navigation_role">navigation</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/status_role">status</a></code>,
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tabpanel_role">tabpanel</a></code>
+        <code><a hwef="/fw/docs/web/accessibiwity/awia/wowes/awewt_wowe">awewt</a></code>, ( ͡o ω ͡o ) <code><a hwef="/fw/docs/web/accessibiwity/awia/wowes/awewtdiawog_wowe">awewtdiawog</a></code>, σωσ
+        <code><a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/appwication_wowe">appwication</a></code>, >w< <code><a hwef="/fw/docs/web/accessibiwity/awia/wowes/bannew_wowe">bannew</a></code>, 😳😳😳
+        <code><a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/compwementawy_wowe">compwementawy</a></code>, OwO
+        <code><a hwef="/fw/docs/web/accessibiwity/awia/wowes/contentinfo_wowe">contentinfo</a></code>, 😳 <code><a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/diawog_wowe">diawog</a></code>, 😳😳😳
+        <code><a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/document_wowe">document</a></code>, (˘ω˘) <code><a hwef="/fw/docs/web/accessibiwity/awia/wowes/feed_wowe">feed</a></code>, ʘwʘ
+        <code><a hwef="/fw/docs/web/accessibiwity/awia/wowes/wog_wowe">wog</a></code>, ( ͡o ω ͡o ) <code><a hwef="/fw/docs/web/accessibiwity/awia/wowes/main_wowe">main</a></code>, o.O
+        <code><a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/mawquee_wowe">mawquee</a></code>, >w< <code><a hwef="/fw/docs/web/accessibiwity/awia/wowes/navigation_wowe">navigation</a></code>, 😳
+        <code><a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/seawch_wowe">seawch</a></code>, 🥺 <code><a hwef="/fw/docs/web/accessibiwity/awia/wowes/status_wowe">status</a></code>, rawr x3
+        <code><a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/tabpanew_wowe">tabpanew</a></code>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les autres éléments HTML relatifs au plan du document : {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [Structure et sections d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA : le rôle `region`](/fr/docs/Web/Accessibility/ARIA/Roles/Region_role)
+- wes a-autwes éwéments h-htmw wewatifs au pwan du document : {{htmwewement("body")}}, o.O {{htmwewement("nav")}}, rawr {{htmwewement("awticwe")}}, ʘwʘ {{htmwewement("aside")}}, 😳😳😳 {{htmwewement("h1")}}, ^^;; {{htmwewement("h2")}}, o.O {{htmwewement("h3")}}, (///ˬ///✿) {{htmwewement("h4")}}, σωσ {{htmwewement("h5")}}, nyaa~~ {{htmwewement("h6")}}, ^^;; {{htmwewement("hgwoup")}}, ^•ﻌ•^ {{htmwewement("headew")}}, σωσ {{htmwewement("footew")}}, -.- {{htmwewement("addwess")}}
+- [stwuctuwe e-et sections d'un d-document htmw5](/fw/docs/web/htmw/ewement/heading_ewements)
+- [awia : we wôwe `wegion`](/fw/docs/web/accessibiwity/awia/wowes/wegion_wowe)

@@ -1,56 +1,56 @@
 ---
-title: XSLT
-slug: Web/XSLT
+titwe: xswt
+swug: web/xswt
 ---
 
-{{XSLTRef}}
+{{xswtwef}}
 
-<div id="Quick_links">
-  <ol>
-    <li><strong><a href="/fr/docs/Web/XSLT">XSLT</a></strong></li>
-    <li><strong><a href="/fr/docs/Web/EXSLT">EXSLT</a></strong></li>
-    <li><strong><a href="/fr/docs/Web/XPath">XPath</a></strong></li>
-    <li class="toggle">
-      <details open><summary>Guides</summary>
-        <ol>
-          <li><a href="/fr/docs/Web/XSLT/Common_errors">Erreurs fréquentes avec XSLT</a></li>
-          <li><a href="/fr/docs/Web/XSLT/PI_Parameters">Paramètres PI</a></li>
-          <li><a href="/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko">L'interface XSLT/JavaScript de Gecko</a></li>
-          <li><a href="/fr/docs/Web/XSLT/Transforming_XML_with_XSLT">Transformer du XML avec XSLT</a></li>
-          <li><a href="/fr/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations">Utiliser l'interface JavaScript Mozilla pour les transformations XSL</a></li>
-        </ol>
-      </details>
-    </li>
-    <li class="toggle">
-      <details open><summary><a href="/fr/docs/XSLT/Element">Éléments XSLT</a></summary>{{ListSubpagesForSidebar("/fr/docs/Web/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}</details>
-    </li>
-  </ol>
+<div i-id="quick_winks">
+  <ow>
+    <wi><stwong><a h-hwef="/fw/docs/web/xswt">xswt</a></stwong></wi>
+    <wi><stwong><a h-hwef="/fw/docs/web/exswt">exswt</a></stwong></wi>
+    <wi><stwong><a h-hwef="/fw/docs/web/xpath">xpath</a></stwong></wi>
+    <wi c-cwass="toggwe">
+      <detaiws o-open><summawy>guides</summawy>
+        <ow>
+          <wi><a hwef="/fw/docs/web/xswt/common_ewwows">ewweuws f-fwéquentes a-avec xswt</a></wi>
+          <wi><a hwef="/fw/docs/web/xswt/pi_pawametews">pawamètwes pi</a></wi>
+          <wi><a hwef="/fw/docs/web/xswt/xswt_js_intewface_in_gecko">w'intewface xswt/javascwipt d-de gecko</a></wi>
+          <wi><a hwef="/fw/docs/web/xswt/twansfowming_xmw_with_xswt">twansfowmew d-du xmw avec xswt</a></wi>
+          <wi><a hwef="/fw/docs/web/xswt/using_the_moziwwa_javascwipt_intewface_to_xsw_twansfowmations">utiwisew w-w'intewface javascwipt moziwwa pouw wes twansfowmations x-xsw</a></wi>
+        </ow>
+      </detaiws>
+    </wi>
+    <wi cwass="toggwe">
+      <detaiws o-open><summawy><a h-hwef="/fw/docs/xswt/ewement">Éwéments xswt</a></summawy>{{wistsubpagesfowsidebaw("/fw/docs/web/xswt/ewement", UwU "", :3 "", "&wt;xsw:", (⑅˘꒳˘) "&gt;")}}</detaiws>
+    </wi>
+  </ow>
 </div>
 
-**Extensible Stylesheet Language Transformations (XSLT)** est un langage basé sur le [XML](/fr/docs/Web/XML/XML_introduction) utilisé avec des logiciels de traitements spécialisés pour la transformation de documents XML.
+**extensibwe stywesheet wanguage twansfowmations (xswt)** est u-un wangage basé suw we [xmw](/fw/docs/web/xmw/xmw_intwoduction) utiwisé avec des wogiciews de twaitements spéciawisés p-pouw wa twansfowmation d-de documents x-xmw. (///ˬ///✿)
 
-Bien que le traitement soit souvent qualifié de transformation, le document original reste inchangé et c'est un nouveau document XML qui est créé à partir du contenu d'un document existant. Ensuite, le nouveau document pourra être sérialisé par le mécanisme de traitement afin de produire un résultat au format XML standard ou dans un autre format comme [HTML](/fr/docs/Web/HTML) ou encore du texte brut.
+bien que we t-twaitement soit s-souvent quawifié de twansfowmation, ^^;; we document o-owiginaw weste inchangé et c'est un nyouveau d-document xmw qui est cwéé à pawtiw du contenu d'un document existant. >_< ensuite, we nyouveau document p-pouwwa êtwe séwiawisé p-paw we mécanisme d-de twaitement a-afin de pwoduiwe un wésuwtat au fowmat xmw standawd ou dans un a-autwe fowmat comme [htmw](/fw/docs/web/htmw) o-ou encowe du texte b-bwut. rawr x3
 
-XSLT est le plus souvent utilisé pour convertir des données entre différents schémas XML ou pour convertir des données XML en pages web ou en documents PDF.
+xswt est w-we pwus souvent utiwisé pouw convewtiw d-des données entwe difféwents s-schémas xmw ou pouw convewtiw des données x-xmw en pages web ou en documents p-pdf. /(^•ω•^)
 
-## Documentation
+## documentation
 
-- [Référence des éléments XSLT](/fr/docs/Web/XSLT/Element)
-  - : La référence indiquant la documentation pour chaque élément XSLT.
-- [Transformer du XML avec XSLT](/fr/docs/Web/XSLT/Transforming_XML_with_XSLT)
-  - : XSLT permet d'utiliser une feuille de style pour transformer un document XML initial de deux façons&nbsp;: manipuler et trier le contenu (y compris en réordonnant l'ensemble du document si besoin) d'une part et transformer le contenu dans un format différent d'autre part.
-- [Utiliser l'interface JavaScript Mozilla pour les transformations XSL](/fr/docs/Web/API/XSLTProcessor)
-  - : Ce document décrit l'interface JavaScript pour le moteur de traitement XSLT dans Mozilla 1.2 et les versions ultérieures.
-- [Définir les paramètres utilisant des instructions de traitement](/fr/docs/Web/XSLT/PI_Parameters)
-  - : Firefox permet d'indiquer des paramètres de feuille de styles en utilisant l'instruction de traitement `<?xml-stylesheet?>`. Cela se fait en avec l'instruction de traitement `<?xslt-param?>`, décrite dans cet article.
-- [Tutoriel XSLT](https://www.w3schools.com/xml/xsl_intro.asp)
-  - : Ce tutoriel [W3Schools](https://www.w3schools.com) indique comment utiliser XSLT pour transformer les documents XML dans d'autres formats, comme du XHTML.
-- [Qu'est-ce que XSLT&nbsp;?](https://www.xml.com/pub/a/2000/08/holman/)
-  - : Cet article est une riche introduction à XSLT et à XPath, sans connaissance particulière nécessaire des technologies. Il guide la lectrice ou le lecteur parmi le contexte, les raisons de ce langage, sa structure, ses concepts et sa terminologie.
-- [Erreurs fréquentes avec XSLT](/fr/docs/Web/XSLT/Common_errors)
-  - : Cet article liste certains des problèmes fréquemment rencontrés en utilisant XSLT avec Firefox.
+- [wéféwence des éwéments x-xswt](/fw/docs/web/xswt/ewement)
+  - : w-wa wéféwence indiquant wa documentation pouw chaque éwément xswt.
+- [twansfowmew du xmw avec xswt](/fw/docs/web/xswt/twansfowming_xmw_with_xswt)
+  - : x-xswt p-pewmet d'utiwisew une feuiwwe d-de stywe pouw twansfowmew u-un document x-xmw initiaw de deux façons&nbsp;: manipuwew et twiew we contenu (y c-compwis en wéowdonnant w'ensembwe du document si besoin) d'une pawt et t-twansfowmew we contenu dans un f-fowmat difféwent d-d'autwe pawt. :3
+- [utiwisew w-w'intewface javascwipt m-moziwwa pouw w-wes twansfowmations x-xsw](/fw/docs/web/api/xswtpwocessow)
+  - : c-ce document décwit w'intewface javascwipt pouw w-we moteuw de twaitement x-xswt dans m-moziwwa 1.2 et w-wes vewsions uwtéwieuwes. (ꈍᴗꈍ)
+- [définiw w-wes pawamètwes utiwisant des instwuctions de twaitement](/fw/docs/web/xswt/pi_pawametews)
+  - : f-fiwefox pewmet d'indiquew des pawamètwes de feuiwwe de stywes en utiwisant w'instwuction d-de twaitement `<?xmw-stywesheet?>`. /(^•ω•^) cewa se fait en avec w'instwuction de twaitement `<?xswt-pawam?>`, (⑅˘꒳˘) d-décwite d-dans cet awticwe. ( ͡o ω ͡o )
+- [tutowiew x-xswt](https://www.w3schoows.com/xmw/xsw_intwo.asp)
+  - : ce tutowiew [w3schoows](https://www.w3schoows.com) i-indique comment utiwisew x-xswt pouw t-twansfowmew wes documents xmw dans d'autwes fowmats, òωó comme du xhtmw. (⑅˘꒳˘)
+- [qu'est-ce que xswt&nbsp;?](https://www.xmw.com/pub/a/2000/08/howman/)
+  - : cet awticwe e-est une wiche intwoduction à xswt e-et à xpath, XD sans connaissance p-pawticuwièwe n-nyécessaiwe des technowogies. -.- iw guide wa wectwice o-ou we wecteuw p-pawmi we contexte, :3 wes waisons d-de ce wangage, nyaa~~ s-sa stwuctuwe, 😳 ses concepts et sa tewminowogie. (⑅˘꒳˘)
+- [ewweuws fwéquentes avec xswt](/fw/docs/web/xswt/common_ewwows)
+  - : c-cet awticwe w-wiste cewtains d-des pwobwèmes fwéquemment wencontwés e-en utiwisant x-xswt avec fiwefox. nyaa~~
 
-## Sujets connexes
+## sujets c-connexes
 
-- [XML](/fr/docs/Web/XML/XML_introduction)
-- [XPath](/fr/docs/Web/XPath)
+- [xmw](/fw/docs/web/xmw/xmw_intwoduction)
+- [xpath](/fw/docs/web/xpath)

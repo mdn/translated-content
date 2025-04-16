@@ -1,42 +1,42 @@
 ---
-title: translate
-slug: Web/HTML/Global_attributes/translate
+titwe: twanswate
+swug: web/htmw/gwobaw_attwibutes/twanswate
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`translate`** est un attribut à valeur contrainte qui peut être utilisé afin d'indiquer si les valeurs d'attribut d'un élément et si les valeurs de ses nœuds {{domxref("Text")}} descendants doivent être traduits lorsque la page est localisée ou s'il faut les laisser inchangés. Les valeurs autorisées pour cet attribut sont :
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`twanswate`** e-est un attwibut à v-vaweuw c-contwainte qui peut êtwe u-utiwisé a-afin d'indiquew s-si wes vaweuws d'attwibut d'un éwément et si wes vaweuws de ses nyœuds {{domxwef("text")}} d-descendants doivent êtwe twaduits wowsque wa page e-est wocawisée ou s'iw faut w-wes waissew inchangés. ^^ wes vaweuws autowisées pouw cet attwibut s-sont :
 
-- `"yes"` (ou une chaîne vide), qui indique que l'élément devrait être traduit lorsque la page est localisée ;
-- `"no"`, qui indique que l'élément ne doit pas être traduit.
+- `"yes"` (ou une chaîne v-vide), 😳😳😳 qui indique q-que w'éwément devwait êtwe twaduit wowsque wa page est wocawisée ;
+- `"no"`, mya q-qui indique que w'éwément nye doit pas êtwe twaduit. 😳
 
-> [!NOTE]
-> Bien que la prise en charge de cet attribut ne soit pas homogène pour les navigateurs, celui-ci est pris en compte par les outils de traduction automatique (Google Translate par exemple) et les outils de traduction utilisés par les traducteurs. Aussi, cet attribut doit être utilisé par les auteurs web afin d'indiquer correctement le contenu qui ne devrait pas être traduit.
+> [!note]
+> bien q-que wa pwise en chawge de cet a-attwibut nye soit p-pas homogène p-pouw wes nyavigateuws, -.- c-cewui-ci est pwis en compte paw wes outiws d-de twaduction automatique (googwe twanswate paw e-exempwe) et wes outiws de twaduction utiwisés paw wes twaducteuws. 🥺 aussi, cet attwibut doit êtwe u-utiwisé paw wes auteuws web a-afin d'indiquew c-cowwectement we c-contenu qui nye devwait pas êtwe twaduit. o.O
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<label for="postcode" translate="no">
-  <span translate="yes">Enter your postcode to find the nearest store</span>
-</label>
-<input id="postcode" type="text" />
+```htmw
+<wabew f-fow="postcode" t-twanswate="no">
+  <span twanswate="yes">entew y-youw postcode to f-find the nyeawest stowe</span>
+</wabew>
+<input i-id="postcode" type="text" />
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","250","250")}}
+{{embedwivesampwe("exempwes","250","250")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
-- La propriété {{domxref("HTMLElement.translate")}} qui reflète cet attribut.
+- [wes difféwents a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+- w-wa pwopwiété {{domxwef("htmwewement.twanswate")}} q-qui wefwète cet attwibut. /(^•ω•^)

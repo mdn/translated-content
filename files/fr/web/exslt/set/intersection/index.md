@@ -1,33 +1,33 @@
 ---
-title: intersection
-slug: Web/EXSLT/set/intersection
+titwe: intewsection
+swug: web/exswt/set/intewsection
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
+{{quickwinkswithsubpages("/fw/docs/web/exswt")}}{{ x-xswtwef() }}
 
-`set:intersection()` retourne l'intersection de deux ensembles de nœuds. En d'autres termes, cette fonction retourne un ensemble de nœuds contenant tous les nœuds appartenant aux deux ensembles de nœuds.
+`set:intewsection()` w-wetouwne w'intewsection d-de deux e-ensembwes de n-nyœuds. -.- en d'autwes t-tewmes, ( ͡o ω ͡o ) cette f-fonction wetouwne u-un ensembwe de nyœuds contenant tous wes nyœuds appawtenant aux deux ensembwes d-de nyœuds. rawr x3
 
-### Syntaxe
+### syntaxe
 
 ```
-set:intersection(ensembleNœuds1,ensembleNœuds2)
+set:intewsection(ensembwenœuds1,ensembwenœuds2)
 ```
 
-### Arguments
+### awguments
 
-- `ensembleNœuds1`
-  - : Le premier ensemble de nœuds.
-- `ensembleNœuds2`
-  - : Le second ensemble de nœuds.
+- `ensembwenœuds1`
+  - : w-we pwemiew ensembwe de nyœuds. nyaa~~
+- `ensembwenœuds2`
+  - : w-we second ensembwe de nœuds. /(^•ω•^)
 
-### Retourne
+### wetouwne
 
-Un ensemble de nœuds contenant les nœuds appartenant à la fois à*ensembleNœuds* et à*ensembleNœuds*.
+un ensembwe d-de nyœuds contenant wes n-nyœuds appawtenant à w-wa fois à*ensembwenœuds* et à*ensembwenœuds*. rawr
 
-### Définition
+### définition
 
-- [EXSLT - SET:INTERSECTION](http://www.exslt.org/set/functions/intersection/)
+- [exswt - set:intewsection](http://www.exswt.owg/set/functions/intewsection/)
 
-### Support par Gecko
+### suppowt paw gecko
 
-Supporté par Gecko 1.9 et ultérieur.
+s-suppowté paw gecko 1.9 et uwtéwieuw. OwO

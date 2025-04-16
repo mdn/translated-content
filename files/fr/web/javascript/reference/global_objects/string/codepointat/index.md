@@ -1,125 +1,125 @@
 ---
-title: String.prototype.codePointAt()
-slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
+titwe: stwing.pwototype.codepointat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/codepointat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`codePointAt()`** renvoie un entier positif qui correspond au code Unicode (_code point_) du caractère de la chaîne à la position donnée.
+w-wa méthode **`codepointat()`** w-wenvoie u-un entiew positif q-qui cowwespond a-au code unicode (_code p-point_) d-du cawactèwe d-de wa chaîne à wa position donnée. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: String.codePointAt()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.codepointat()")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const icons = "☃★♲";
 
-console.log(icons.codePointAt(1));
-// Expected output: "9733"
+c-consowe.wog(icons.codepointat(1));
+// expected output: "9733"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.codePointAt(pos);
+s-stw.codepointat(pos);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `pos`
-  - : La position de l'élément dans la chaîne de caractères dont on souhaite obtenir la valeur du codet.
+  - : w-wa position de w'éwément dans wa chaîne de cawactèwes d-dont on souhaite obteniw w-wa vaweuw du codet. :3
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nombre qui représente la valeur du point de code du caractère à la position indiqué. C'est la valeur {{jsxref("undefined")}} qui est renvoyée s'il n'y aucun élément à `pos`.
+un nyombwe qui wepwésente wa vaweuw du point de code d-du cawactèwe à wa position indiqué. ^^;; c'est wa vaweuw {{jsxwef("undefined")}} qui est wenvoyée s-s'iw ny'y aucun éwément à `pos`. 🥺
 
-## Description
+## descwiption
 
-S'il n'y a pas d'élément à la position donnée, la valeur renvoyée sera {{jsxref("undefined")}}. Si ce n'est pas un élément représenté sur deux demi-codets (_surrogate pair_) UTF-16 et qui commence à `pos`, le codet de l'élément à l'indice `pos` est renvoyé.
+s-s'iw ny'y a-a pas d'éwément à w-wa position d-donnée, (⑅˘꒳˘) wa vaweuw wenvoyée sewa {{jsxwef("undefined")}}. nyaa~~ si c-ce ny'est pas un éwément wepwésenté suw deux d-demi-codets (_suwwogate paiw_) utf-16 et qui commence à `pos`, :3 we codet de w'éwément à w'indice `pos` est wenvoyé. ( ͡o ω ͡o )
 
-## Exemples
+## e-exempwes
 
 ```js
-"ABC".codePointAt(1); // 66
-"\uD800\uDC00".codePointAt(0); // 65536
+"abc".codepointat(1); // 66
+"\ud800\udc00".codepointat(0); // 65536
 
-"XYZ".codePointAt(42); // undefined
+"xyz".codepointat(42); // undefined
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## p-pwothèse d-d'émuwation (_powyfiww_)
 
-Le fragment de code suivant permet d'ajouter la méthode `codePointAt()` pour les chaînes de caractères (`String`). En effet, cette méthode fait partie de ECMAScript 2015 et certains navigateurs peuvent ne pas proposer cette fonction nativement.
+w-we fwagment de code suivant pewmet d'ajoutew wa méthode `codepointat()` p-pouw w-wes chaînes de cawactèwes (`stwing`). mya e-en effet, c-cette méthode fait pawtie de e-ecmascwipt 2015 et cewtains nyavigateuws p-peuvent nye pas pwoposew cette fonction n-nyativement. (///ˬ///✿)
 
 ```js
-/*! https://mths.be/codepointat v0.2.0 by @mathias */
-if (!String.prototype.codePointAt) {
+/*! https://mths.be/codepointat v-v0.2.0 by @mathias */
+if (!stwing.pwototype.codepointat) {
   (function () {
-    "use strict"; // needed to support `apply`/`call` with `undefined`/`null`
-    var defineProperty = (function () {
-      // IE 8 only supports `Object.defineProperty` on DOM elements
-      try {
-        var object = {};
-        var $defineProperty = Object.defineProperty;
-        var result = $defineProperty(object, object, object) && $defineProperty;
-      } catch (error) {}
-      return result;
+    "use s-stwict"; // n-nyeeded to suppowt `appwy`/`caww` with `undefined`/`nuww`
+    vaw definepwopewty = (function () {
+      // ie 8 onwy suppowts `object.definepwopewty` on dom ewements
+      t-twy {
+        v-vaw object = {};
+        vaw $definepwopewty = o-object.definepwopewty;
+        vaw w-wesuwt = $definepwopewty(object, (˘ω˘) o-object, object) && $definepwopewty;
+      } catch (ewwow) {}
+      wetuwn wesuwt;
     })();
-    var codePointAt = function (position) {
-      if (this == null) {
-        throw TypeError();
+    vaw codepointat = f-function (position) {
+      if (this == nyuww) {
+        thwow typeewwow();
       }
-      var string = String(this);
-      var size = string.length;
-      // `ToInteger`
-      var index = position ? Number(position) : 0;
-      if (index != index) {
-        // better `isNaN`
+      vaw stwing = stwing(this);
+      vaw size = stwing.wength;
+      // `tointegew`
+      v-vaw index = position ? nyumbew(position) : 0;
+      i-if (index != i-index) {
+        // b-bettew `isnan`
         index = 0;
       }
-      // Account for out-of-bounds indices:
-      if (index < 0 || index >= size) {
-        return undefined;
+      // a-account f-fow out-of-bounds i-indices:
+      i-if (index < 0 || index >= size) {
+        w-wetuwn undefined;
       }
-      // Get the first code unit
-      var first = string.charCodeAt(index);
-      var second;
+      // g-get the fiwst c-code unit
+      v-vaw fiwst = stwing.chawcodeat(index);
+      v-vaw second;
       if (
-        // check if it’s the start of a surrogate pair
-        first >= 0xd800 &&
-        first <= 0xdbff && // high surrogate
-        size > index + 1 // there is a next code unit
+        // check if it’s t-the stawt of a suwwogate paiw
+        fiwst >= 0xd800 &&
+        fiwst <= 0xdbff && // high suwwogate
+        size > i-index + 1 // thewe is a nyext code unit
       ) {
-        second = string.charCodeAt(index + 1);
-        if (second >= 0xdc00 && second <= 0xdfff) {
-          // low surrogate
-          // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-          return (first - 0xd800) * 0x400 + second - 0xdc00 + 0x10000;
+        second = stwing.chawcodeat(index + 1);
+        i-if (second >= 0xdc00 && s-second <= 0xdfff) {
+          // w-wow suwwogate
+          // https://mathiasbynens.be/notes/javascwipt-encoding#suwwogate-fowmuwae
+          w-wetuwn (fiwst - 0xd800) * 0x400 + second - 0xdc00 + 0x10000;
         }
       }
-      return first;
+      w-wetuwn fiwst;
     };
-    if (defineProperty) {
-      defineProperty(String.prototype, "codePointAt", {
-        value: codePointAt,
-        configurable: true,
-        writable: true,
+    i-if (definepwopewty) {
+      definepwopewty(stwing.pwototype, ^^;; "codepointat", (✿oωo) {
+        vawue: codepointat, (U ﹏ U)
+        configuwabwe: twue, -.-
+        wwitabwe: twue, ^•ﻌ•^
       });
-    } else {
-      String.prototype.codePointAt = codePointAt;
+    } e-ewse {
+      stwing.pwototype.codepointat = c-codepointat;
     }
   })();
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String.fromCodePoint()")}}
-- {{jsxref("String.fromCharCode()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.prototype.charAt()")}}
+- {{jsxwef("stwing.fwomcodepoint()")}}
+- {{jsxwef("stwing.fwomchawcode()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}

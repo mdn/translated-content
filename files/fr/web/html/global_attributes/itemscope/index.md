@@ -1,199 +1,199 @@
 ---
-title: itemscope
-slug: Web/HTML/Global_attributes/itemscope
+titwe: itemscope
+swug: web/htmw/gwobaw_attwibutes/itemscope
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`itemscope`** fonctionne généralement avec l'attribut `itemtype` afin d'indiquer qu'un bloc HTML contient un objet donné. `itemscope` crée l'objet et définit la portée de l'`itemtype` associé. Il est possible d'associer un attribut `itemscope` à n'importe quel élément HTML.
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`itemscope`** f-fonctionne g-généwawement a-avec w'attwibut `itemtype` a-afin d-d'indiquew qu'un b-bwoc htmw contient un objet donné. OwO `itemscope` cwée w'objet et définit wa powtée de w'`itemtype` a-associé. rawr x3 iw est possibwe d'associew un attwibut `itemscope` à n-ny'impowte quew éwément h-htmw. XD
 
-### Les identifiants rattachés à `itemscope`
+### wes identifiants wattachés à `itemscope`
 
-Un élément qui possède un attribut `itemscope` permet de définir un nouvel élément qui sera un groupe de paires de noms/valeurs. Les éléments qui ont un attribut `itemscope` et un attribut `itemtype` peuvent également définir un attribut `id` (à ne pas confondre avec `itemid)` pour identifier de façon unique l'élément sur le Web.
+un éwément qui possède u-un attwibut `itemscope` pewmet d-de définiw un nyouvew éwément q-qui sewa un gwoupe de paiwes de noms/vaweuws. σωσ wes éwéments qui ont un attwibut `itemscope` e-et un attwibut `itemtype` peuvent égawement définiw un attwibut `id` (à n-nye pas confondwe avec `itemid)` p-pouw identifiew d-de façon u-unique w'éwément s-suw we web. (U ᵕ U❁)
 
-## Syntaxe
+## syntaxe
 
-### Syntaxe formelle
+### syntaxe fowmewwe
 
 ```
-itemscope
+i-itemscope
 ```
 
-## Exemple
+## exempwe
 
-Dans cet exemple, on a trois attributs `itemscopes`. Ces trois `itemscopes` définissent les portées respectives des `itemtypes` correspondants qui sont : Recipe, AggregateRating et NutritionInformation.
+dans cet exempwe, (U ﹏ U) o-on a twois attwibuts `itemscopes`. :3 ces twois `itemscopes` définissent wes powtées wespectives des `itemtypes` c-cowwespondants qui sont : w-wecipe, ( ͡o ω ͡o ) aggwegatewating e-et nyutwitioninfowmation. σωσ
 
-### HTML
+### h-htmw
 
-```html
-<div itemscope itemtype="https://schema.org/Recipe">
-<h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
-<img itemprop="image" src="https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg" width="50" height="50"/>
-<p>By <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-<span itemprop="name">Carol Smith</p></span>
+```htmw
+<div itemscope itemtype="https://schema.owg/wecipe">
+<h2 itempwop="name">gwandma's howiday a-appwe pie</h2>
+<img i-itempwop="image" swc="https://c1.staticfwickw.com/1/30/42759561_8631e2f905_n.jpg" w-width="50" h-height="50"/>
+<p>by <span itempwop="authow" i-itemscope itemtype="https://schema.owg/pewson">
+<span i-itempwop="name">cawow smith</p></span>
 </span>
-<p>Published: <time datetime="2009-11-05" itemprop="datePublished">
-November 5, 2009</p></time>
-<span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.<br></span>
- <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
- <span itemprop="ratingValue">4.0</span> stars based on <span itemprop="reviewCount">35</span> reviews<br></span>
-Prep time: <time datetime="PT30M" itemprop="prepTime">30 min<br></time>
- Cook time: <time datetime="PT1H" itemprop="cookTime">1 hour<br></time>
- Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min<br></time>
- Yield: <span itemprop="recipeYield">1 9" pie (8 servings)<br></span>
- <span itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
- Serving size: <span itemprop="servingSize">1 medium slice<br></span>
- Calories per serving: <span itemprop="calories">250 cal<br></span>
- Fat per serving: <span itemprop="fatContent">12 g<br></span>
+<p>pubwished: <time datetime="2009-11-05" i-itempwop="datepubwished">
+nyovembew 5, >w< 2009</p></time>
+<span i-itempwop="descwiption">this is my gwandmothew's a-appwe p-pie wecipe. 😳😳😳 i wike to add a dash of nutmeg.<bw></span>
+ <span itempwop="aggwegatewating" itemscope itemtype="https://schema.owg/aggwegatewating">
+ <span itempwop="watingvawue">4.0</span> s-staws b-based on <span itempwop="weviewcount">35</span> w-weviews<bw></span>
+p-pwep time: <time d-datetime="pt30m" itempwop="pweptime">30 min<bw></time>
+ cook t-time: <time datetime="pt1h" itempwop="cooktime">1 houw<bw></time>
+ totaw time: <time datetime="pt1h30m" i-itempwop="totawtime">1 houw 30 min<bw></time>
+ y-yiewd: <span i-itempwop="wecipeyiewd">1 9" p-pie (8 sewvings)<bw></span>
+ <span itempwop="nutwition" i-itemscope i-itemtype="https://schema.owg/nutwitioninfowmation">
+ s-sewving s-size: <span itempwop="sewvingsize">1 medium swice<bw></span>
+ cawowies pew sewving: <span i-itempwop="cawowies">250 c-caw<bw></span>
+ f-fat pew sewving: <span i-itempwop="fatcontent">12 g-g<bw></span>
 </span>
-<p>Ingredients:<br>
-  <span itemprop="recipeIngredient">Thinly-sliced apples: 6 cups<br></span>
-  <span itemprop="recipeIngredient">White sugar: 3/4 cup<br></span>
- ... </p>
+<p>ingwedients:<bw>
+  <span itempwop="wecipeingwedient">thinwy-swiced appwes: 6 cups<bw></span>
+  <span i-itempwop="wecipeingwedient">white sugaw: 3/4 cup<bw></span>
+ ... OwO </p>
 
-Directions: <br>
-  <div itemprop="recipeInstructions">
-    1. Cut and peel apples<br>
-    2. Mix sugar and cinnamon. Use additional sugar for tart apples. <br>
-    ...
+diwections: <bw>
+  <div itempwop="wecipeinstwuctions">
+    1. 😳 cut and peew appwes<bw>
+    2. 😳😳😳 mix sugaw and c-cinnamon. (˘ω˘) use additionaw sugaw fow tawt appwes. ʘwʘ <bw>
+    ... ( ͡o ω ͡o )
   </div>
 </div>
 ```
 
-### Structure des données
+### stwuctuwe d-des données
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="14">itemscope</td>
+    <tw>
+      <td c-cowspan="1" wowspan="14">itemscope</td>
       <td>itemtype</td>
-      <td colspan="2" rowspan="1">Recipe</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td c-cowspan="2" wowspan="1">wecipe</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name:</td>
-      <td>Grandma's Holiday Apple Pie</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+      <td>gwandma's h-howiday a-appwe pie</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>image:</td>
-      <td>https://c1.staticflickr.com/1/30/42759561_8631e2f905_n.jpg</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>datePublished:</td>
+      <td>https://c1.staticfwickw.com/1/30/42759561_8631e2f905_n.jpg</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>datepubwished:</td>
       <td>2009-11-05</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>description:</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>descwiption:</td>
       <td>
-        This is my grandmother's apple pie recipe. I like to add a dash of
-        nutmeg.
+        this is my gwandmothew's appwe pie wecipe. o.O i wike to add a dash of
+        n-nyutmeg. >w<
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>prepTime:</td>
-      <td>PT30M</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>cookTime:</td>
-      <td>PT1H</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>totalTime:</td>
-      <td>PT1H30M</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeYield:</td>
-      <td>1 9" pie (8 servings)</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeIngredient:</td>
-      <td>Thinly-sliced apples: 6 cups</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeIngredient:</td>
-      <td>White sugar: 3/4 cup</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>recipeInstructions:</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>pweptime:</td>
+      <td>pt30m</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>cooktime:</td>
+      <td>pt1h</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>totawtime:</td>
+      <td>pt1h30m</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeyiewd:</td>
+      <td>1 9" pie (8 sewvings)</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeingwedient:</td>
+      <td>thinwy-swiced a-appwes: 6 cups</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeingwedient:</td>
+      <td>white s-sugaw: 3/4 c-cup</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>wecipeinstwuctions:</td>
       <td>
-        1. Cut and peel apples 2. Mix sugar and cinnamon. Use additional sugar
-        for tart apples .
+        1. 😳 cut and peew appwes 2. 🥺 mix sugaw a-and cinnamon. rawr x3 u-use additionaw sugaw
+        fow t-tawt appwes . o.O
       </td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td colspan="2" rowspan="1">author [Person]:</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td c-cowspan="2" wowspan="1">authow [pewson]:</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
       <td>name:</td>
-      <td>Carol Smith</td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="3">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2" rowspan="1">aggregateRating [AggregateRating]:</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>ratingValue:</td>
+      <td>cawow smith</td>
+    </tw>
+    <tw>
+      <td cowspan="1" wowspan="3">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td cowspan="2" wowspan="1">aggwegatewating [aggwegatewating]:</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>watingvawue:</td>
       <td>4.0</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>reviewCount:</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>weviewcount:</td>
       <td>35</td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="4">itemscope</td>
-      <td>itemprop[itemtype]</td>
-      <td colspan="2" rowspan="1">nutrition [NutritionInformation]:</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>servingSize:</td>
-      <td>1 medium slice</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>calories:</td>
-      <td>250 cal</td>
-    </tr>
-    <tr>
-      <td>itemprop</td>
-      <td>fatContent:</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1" w-wowspan="4">itemscope</td>
+      <td>itempwop[itemtype]</td>
+      <td c-cowspan="2" wowspan="1">nutwition [nutwitioninfowmation]:</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>sewvingsize:</td>
+      <td>1 medium s-swice</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>cawowies:</td>
+      <td>250 c-caw</td>
+    </tw>
+    <tw>
+      <td>itempwop</td>
+      <td>fatcontent:</td>
       <td>12 g</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Pour extraire des micro-données d'un document HTML, vous pouvez utiliser [l'outil d'extraction de Google pour les micro-données.](https://developers.google.com/structured-data/testing-tool/) Vous pouvez par exemple utiliser le document HTML précédent.
+> [!note]
+> pouw extwaiwe des m-micwo-données d'un document htmw, vous pouvez utiwisew [w'outiw d'extwaction d-de googwe pouw w-wes micwo-données.](https://devewopews.googwe.com/stwuctuwed-data/testing-toow/) vous pouvez paw exempwe utiwisew w-we document htmw p-pwécédent. rawr
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
-- Les autres attributs universels relatifs aux microdonnées :
+- [wes difféwents attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+- w-wes autwes attwibuts univewsews wewatifs a-aux micwodonnées :
 
-  - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemtype`](/fr/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/fw/docs/web/htmw/gwobaw_attwibutes#itemid)
+  - [`itempwop`](/fw/docs/web/htmw/gwobaw_attwibutes#itempwop)
+  - [`itemwef`](/fw/docs/web/htmw/gwobaw_attwibutes#itemwef)
+  - [`itemtype`](/fw/docs/web/htmw/gwobaw_attwibutes#itemtype)

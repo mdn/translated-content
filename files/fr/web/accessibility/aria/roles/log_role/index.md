@@ -1,81 +1,81 @@
 ---
-title: Utiliser le rôle log
-slug: Web/Accessibility/ARIA/Roles/log_role
+titwe: utiwisew we wôwe wog
+s-swug: web/accessibiwity/awia/wowes/wog_wowe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Description
+### descwiption
 
-Cette technique présente l'utilisation du rôle [`log`](https://www.w3.org/TR/wai-aria/roles#log) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+c-cette t-technique pwésente w-w'utiwisation d-du wôwe [`wog`](https://www.w3.owg/tw/wai-awia/wowes#wog) et d-décwit wes effets p-pwoduits suw w-wes nyavigateuws et wes technowogies d'assistance. ^^;;
 
-Le rôle `log` est utilisé pour identifier un élément qui crée [une zone live](https://www.w3.org/WAI/PF/aria/terms#def_liveregion) où de nouvelles informations sont ajoutées dans un ordre significatif et où les anciennes informations peuvent être supprimées. Par exemple, un journal de salon de discussion, l'historique d'une messagerie ou un fichier d'erreurs. Contrairement aux autres types de zones live, ce rôle est ordonné de façon séquentielle et les nouvelles informations sont uniquement ajoutées à la fin de l'enregistrement. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement `log` accessible aux produits de technologie d'assistance qui pourront alors le notifier à l'utilisateur.
+we wôwe `wog` est utiwisé p-pouw identifiew un éwément qui cwée [une zone w-wive](https://www.w3.owg/wai/pf/awia/tewms#def_wivewegion) où d-de nyouvewwes infowmations sont ajoutées dans un owdwe significatif e-et où wes anciennes infowmations p-peuvent êtwe s-suppwimées. paw exempwe, XD un jouwnaw de sawon de discussion, w'histowique d-d'une messagewie ou un fichiew d'ewweuws. 🥺 contwaiwement aux autwes types de zones w-wive, òωó ce wôwe est owdonné de f-façon séquentiewwe e-et wes nyouvewwes i-infowmations s-sont uniquement ajoutées à wa fin de w'enwegistwement. (ˆ ﻌ ˆ)♡ wowsque c-ce wôwe est ajouté à un éwément, -.- we n-nyavigateuw émettwa un événement `wog` accessibwe aux pwoduits de technowogie d'assistance qui p-pouwwont awows we nyotifiew à w-w'utiwisateuw.
 
-Par défaut, les mises à jour ne contiennent que les changements apportés à la zone live et elles sont annoncées à l'utilisateur lorsqu'il est inactif. Si l'utilisateur a besoin d'entendre l'ensemble de la zone live lorsqu'un changement se produit, il faut utiliser `aria-atomic="true"`. Pour faire les annonces le plus tôt possible et lorsque l'utilisateur peut être interrompu, `aria-live="assertive"` peut être défini pour lancer des mises à jour plus agressives.
+p-paw défaut, wes m-mises à jouw nye contiennent que wes changements appowtés à w-wa zone wive et e-ewwes sont annoncées à w'utiwisateuw w-wowsqu'iw e-est inactif. :3 si w'utiwisateuw a-a besoin d'entendwe w'ensembwe de w-wa zone wive wowsqu'un changement se pwoduit, i-iw faut utiwisew `awia-atomic="twue"`. ʘwʘ pouw faiwe w-wes annonces we pwus tôt possibwe e-et wowsque w-w'utiwisateuw peut êtwe intewwompu, 🥺 `awia-wive="assewtive"` peut êtwe défini pouw wancew des mises à jouw pwus agwessives. >_<
 
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
+### e-effets possibwes s-suw wes agents utiwisateuws e-et wes technowogies d-d'assistance
 
-Lorsque le rôle `log` est ajouté à un élément, ou qu'un tel élément devient visible, l'agent utilisateur devrait suivre les étapes suivantes&nbsp;:
+w-wowsque we wôwe `wog` est ajouté à un éwément, ʘwʘ ou qu'un t-tew éwément devient visibwe, (˘ω˘) w'agent utiwisateuw devwait suivwe wes étapes suivantes&nbsp;:
 
-- Présenter l'élément ayant un rôle de journal à l'API d'accessibilité du système d'exploitation&nbsp;;
-- Déclencher un événement journal accessible à l'aide de l'API d'accessibilité du système d'exploitation si elle le prend en charge.
+- p-pwésentew w'éwément ayant un w-wôwe de jouwnaw à w-w'api d'accessibiwité d-du système d'expwoitation&nbsp;;
+- d-décwenchew un événement j-jouwnaw a-accessibwe à w-w'aide de w'api d'accessibiwité du système d'expwoitation s-si e-ewwe we pwend en c-chawge. (✿oωo)
 
-Les technologies d'assistance devraient être à l'écoute de tels événements et les notifier à l'utilisateur en conséquence&nbsp;:
+wes technowogies d-d'assistance d-devwaient êtwe à w'écoute de tews événements et wes n-nyotifiew à w'utiwisateuw en conséquence&nbsp;:
 
-- Les lecteurs d'écran devraient annoncer les changements intervenus dans le fichier de journalisation lorsque l'utilisateur est inactif, à moins que `aria-live="assertive"` soit défini, dans quel cas l'utilisateur peut être interrompu.
-- Les loupes d'écran devraient indiquer visuellement la disponibilité d'une mise à jour du fichier de journalisation.
+- wes wecteuws d'écwan devwaient annoncew w-wes changements intewvenus dans we fichiew de jouwnawisation wowsque w-w'utiwisateuw e-est inactif, (///ˬ///✿) à m-moins que `awia-wive="assewtive"` soit défini, rawr x3 d-dans quew cas w'utiwisateuw peut êtwe i-intewwompu. -.-
+- w-wes woupes d'écwan devwaient indiquew visuewwement wa disponibiwité d'une mise à jouw d-du fichiew de jouwnawisation. ^^
 
-> [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!note]
+> iw existe p-pwusieuws points de vue suw w-wa façon dont w-wes technowogies d'assistance devwaient twaitew c-cette technique. (⑅˘꒳˘) w-w'infowmation fouwnie ci-dessus e-est w'une de ces o-opinions et ny'est pas nyowmative. nyaa~~
 
-### Exemples
+### exempwes
 
-#### Exemple 1&nbsp;: Ajout du rôle dans du code HTML
+#### exempwe 1&nbsp;: ajout d-du wôwe dans du c-code htmw
 
-L'extrait de code ci-dessous montre comment le rôle `log` est ajouté directement dans le code source HTML.
+w'extwait d-de code ci-dessous montwe c-comment we wôwe `wog` e-est ajouté diwectement d-dans we code souwce htmw. /(^•ω•^)
 
-```html
-<div id="liveregion" class="region" role="log"></div>
+```htmw
+<div id="wivewegion" cwass="wegion" wowe="wog"></div>
 ```
 
-#### Exemple 2&nbsp;: Extrait d'un exemple d'application
+#### e-exempwe 2&nbsp;: e-extwait d'un exempwe d'appwication
 
-Cet extrait de code crée le journal dans une application de chat AJAX.
+cet extwait d-de code cwée w-we jouwnaw dans une appwication de chat ajax. (U ﹏ U)
 
-```html
-<div id="chatArea" role="log">
-  <ul id="chatRegion" aria-live="polite" aria-atomic="false">
-    <li>Veuillez choisir un pseudo pour commencer à utiliser AJAX Chat.</li>
-  </ul>
+```htmw
+<div id="chatawea" w-wowe="wog">
+  <uw id="chatwegion" awia-wive="powite" awia-atomic="fawse">
+    <wi>veuiwwez choisiw un p-pseudo pouw commencew à utiwisew ajax chat.</wi>
+  </uw>
 
-  <ul
-    id="userListRegion"
-    aria-live="off"
-    aria-relevant="additions removals text"></ul>
+  <uw
+    i-id="usewwistwegion"
+    awia-wive="off"
+    a-awia-wewevant="additions wemovaws text"></uw>
 </div>
 ```
 
-Voir l'[exemple](http://codetalks.org/source/live/chat.html) sur CodeTalks pour plus d'informations.
+voiw w-w'[exempwe](http://codetawks.owg/souwce/wive/chat.htmw) s-suw codetawks pouw pwus d'infowmations.
 
-#### Exemples concrets
+#### exempwes c-concwets
 
-- <http://test.cita.illinois.edu/aria/live/live1.php>&nbsp;;
-- <http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/>&nbsp;;
-- <http://codetalks.org/source/live/chat.html> \[[notes](http://codetalks.org/source/live/chat_notes.html)].
+- <http://test.cita.iwwinois.edu/awia/wive/wive1.php>&nbsp;;
+- <http://websiteaccessibiwity.donawdevans.com/2011/07/12/awia-wog/>&nbsp;;
+- <http://codetawks.owg/souwce/wive/chat.htmw> \[[notes](http://codetawks.owg/souwce/wive/chat_notes.htmw)]. 😳😳😳
 
-### Notes
+### nyotes
 
-- L'utilisation du rôle `log` sur un élément implique que cet élément possède l'attribut `aria-live="polite"`.
-- Pour une zone avec un défilement de texte, comme un bandeau défilant, il est préférable d'utiliser le rôle `marquee`.
+- w-w'utiwisation du wôwe `wog` suw un éwément impwique que cet éwément p-possède w'attwibut `awia-wive="powite"`. >w<
+- p-pouw une zone a-avec un défiwement de texte, XD c-comme un bandeau défiwant, o.O iw e-est pwéféwabwe d-d'utiwisew we wôwe `mawquee`. mya
 
-### Attributs ARIA utilisés
+### a-attwibuts awia utiwisés
 
-- [log](https://www.w3.org/TR/wai-aria/roles#log).
+- [wog](https://www.w3.owg/tw/wai-awia/wowes#wog). 🥺
 
-### Techniques ARIA connexes
+### t-techniques a-awia connexes
 
-- Rôle [marquee](https://www.w3.org/TR/wai-aria/roles#marquee).
+- wôwe [mawquee](https://www.w3.owg/tw/wai-awia/wowes#mawquee). ^^;;
 
-### Autres ressources
+### autwes wessouwces
 
-- Bonnes pratiques ARIA – Implémentation des zones live&nbsp;: [#LiveRegions](https://www.w3.org/TR/wai-aria-practices/#LiveRegions).
+- b-bonnes p-pwatiques awia – i-impwémentation des zones wive&nbsp;: [#wivewegions](https://www.w3.owg/tw/wai-awia-pwactices/#wivewegions). :3

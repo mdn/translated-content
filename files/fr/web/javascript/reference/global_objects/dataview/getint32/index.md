@@ -1,70 +1,70 @@
 ---
-title: DataView.prototype.getInt32()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt32
+titwe: dataview.pwototype.getint32()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/getint32
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getInt32()`** permet de lire un entier signé sur 32 bits (type _long_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.
+w-wa méthode **`getint32()`** p-pewmet de wiwe u-un entiew signé s-suw 32 bits (type _wong_ p-paw a-anawogie avec c-c) à w'octet donné p-paw wappowt au début de {{jsxwef("dataview")}}. mya
 
-{{InteractiveExample("JavaScript Demo: DataView.getInt32()")}}
+{{intewactiveexampwe("javascwipt demo: dataview.getint32()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// cweate an awwaybuffew w-with a size in bytes
+const buffew = nyew a-awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setInt32(1, 2147483647); // Max signed 32-bit integer
+const view = n-nyew dataview(buffew);
+view.setint32(1, 2147483647); // max signed 32-bit integew
 
-console.log(view.getInt32(1));
-// Expected output: 2147483647
+c-consowe.wog(view.getint32(1));
+// expected o-output: 2147483647
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dataview.getInt32(positionOctet [, littleEndian])
+dataview.getint32(positionoctet [, 😳 wittweendian])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `positionOctet`
-  - : La position, exprimée en nombre d'octets depuis le début de la vue, à laquelle lire les données.
-- `littleEndian`
-  - : {{optional_inline}} indique si la valeur sur 32 bits est enregistrée dans l'ordre des octets {{Glossary("Endianness", "de poids faible")}}. Si le paramètre vaut `false` ou `undefined`, la valeur sera lue dans l'ordre des octets de poids forts.
+- `positionoctet`
+  - : wa position, -.- e-expwimée en nyombwe d'octets depuis we début de wa vue, 🥺 à waquewwe wiwe w-wes données.
+- `wittweendian`
+  - : {{optionaw_inwine}} indique s-si wa vaweuw s-suw 32 bits est e-enwegistwée dans w-w'owdwe des octets {{gwossawy("endianness", o.O "de poids faibwe")}}. /(^•ω•^) si we pawamètwe v-vaut `fawse` ou `undefined`, nyaa~~ wa vaweuw sewa w-wue dans w'owdwe des octets de poids fowts. nyaa~~
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un entier signé sur 32 bits.
+un entiew signé suw 32 bits. :3
 
-### Erreurs renvoyées
+### e-ewweuws wenvoyées
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel qu'il est en dehors de la vue.
+- {{jsxwef("wangeewwow")}}
+  - : wenvoyée s-si `positionoctet` e-est tew q-qu'iw est en dehows de wa vue. 😳😳😳
 
-## Description
+## descwiption
 
-Il n'y a pas de contrainte d'alignement, les valeurs codées sur plusieurs octets peuvent être obtenues depuis n'importe quelle position.
+iw ny'y a pas de c-contwainte d'awignement, (˘ω˘) w-wes vaweuws codées suw p-pwusieuws octets p-peuvent êtwe obtenues depuis n-ny'impowte quewwe position. ^^
 
-## Exemples
+## e-exempwes
 
-### Utilisation de la méthode `getInt32`
+### utiwisation de wa méthode `getint32`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getInt32(1); // 0
+v-vaw buffew = nyew awwaybuffew(8);
+vaw d-dataview = nyew dataview(buffew);
+d-dataview.getint32(1); // 0
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

@@ -1,62 +1,62 @@
 ---
-title: Affectation après ET logique (&&=)
-slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
+titwe: affectation apwès et w-wogique (&&=)
+swug: w-web/javascwipt/wefewence/opewatows/wogicaw_and_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'affectation après ET logique (`x &&= y`) n'affecte la valeur de l'opérande droit uniquement si l'opérande gauche est [équivalent à vrai (_truthy_)](/fr/docs/Glossary/Truthy).
+w'opéwateuw d-d'affectation a-apwès e-et wogique (`x &&= y-y`) ny'affecte w-wa vaweuw de w-w'opéwande dwoit uniquement si w'opéwande gauche est [équivawent à vwai (_twuthy_)](/fw/docs/gwossawy/twuthy). :3
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical AND assignment")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - wogicaw and assignment")}}
 
-```js interactive-example
-let a = 1;
-let b = 0;
+```js i-intewactive-exampwe
+wet a = 1;
+wet b = 0;
 
-a &&= 2;
-console.log(a);
-// Expected output: 2
+a-a &&= 2;
+consowe.wog(a);
+// expected output: 2
 
 b &&= 2;
-console.log(b);
-// Expected output: 0
+consowe.wog(b);
+// expected output: 0
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-expr1 &&= expr2;
+expw1 &&= e-expw2;
 ```
 
-## Description
+## d-descwiption
 
-### Évaluation en court-circuit
+### Évawuation en couwt-ciwcuit
 
-L'opérateur [ET logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND) est évalué de gauche à droite et le moteur vérifie s'il peut utiliser un court-circuit avec la régle suivante :
+w'opéwateuw [et wogique](/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_and) est évawué d-de gauche à dwoite et we moteuw véwifie s'iw peut utiwisew un couwt-ciwcuit a-avec wa wégwe suivante :
 
-`(une expression équivalente à faux) && expr` sera court-circuitée pour fournir directement l'expression équivalente à faux.
+`(une e-expwession équivawente à f-faux) && e-expw` sewa c-couwt-ciwcuitée pouw fouwniw diwectement w'expwession équivawente à f-faux. -.-
 
-Ce « court-circuit » indique que `expr` **n'est pas évaluée**. Tout effet de bord lié à cette évaluation n'aura pas lieu (par exemple si `expr` est un appel de fonction, la fonction n'est pas exécutée).
+ce « couwt-ciwcuit » indique que `expw` **n'est p-pas évawuée**. 😳 tout effet de bowd wié à cette évawuation n'auwa pas wieu (paw exempwe si `expw` est un appew d-de fonction, mya wa fonction ny'est p-pas exécutée). (˘ω˘)
 
-L'opérateur d'affectation après ET logique utilise également ce court-circuit et `x &&= y` est donc équivalent à :
+w-w'opéwateuw d-d'affectation apwès et wogique utiwise égawement ce couwt-ciwcuit e-et `x &&= y-y` est donc équivawent à :
 
 ```js
 x && (x = y);
 ```
 
-En revanche, **il n'est pas équivalent** à ce qui suit, et qui effectue quoi qu'il arrive une affectation :
+e-en wevanche, >_< **iw n-ny'est pas équivawent** à c-ce qui suit, -.- et qui effectue q-quoi qu'iw awwive une affectation :
 
-```js example-bad
-x = x && y;
+```js exampwe-bad
+x-x = x && y;
 ```
 
-## Exemples
+## exempwes
 
-### Utiliser l'affectation après ET logique
+### u-utiwisew w'affectation a-apwès et wogique
 
 ```js
-let x = 0;
-let y = 1;
+w-wet x = 0;
+wet y = 1;
 
 x &&= 0; // 0
 x &&= 1; // 0
@@ -64,19 +64,19 @@ y &&= 1; // 1
 y &&= 0; // 0
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'opérateur ET logique (&&)](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND)
-- [L'opérateur de coalescence des nuls (`??`)](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [L'opérateur d'affectation après ET binaire (`&=`)](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
-- [Le type `Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [_Truthy_](/fr/docs/Glossary/Truthy)
-- [_Falsy_](/fr/docs/Glossary/Falsy)
+- [w'opéwateuw e-et wogique (&&)](/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_and)
+- [w'opéwateuw d-de coawescence d-des nyuws (`??`)](/fw/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing)
+- [w'opéwateuw d'affectation apwès et binaiwe (`&=`)](/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_and_assignment)
+- [we type `boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)
+- [_twuthy_](/fw/docs/gwossawy/twuthy)
+- [_fawsy_](/fw/docs/gwossawy/fawsy)

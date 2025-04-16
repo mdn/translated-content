@@ -1,285 +1,285 @@
 ---
-title: Les types de champs de formulaire HTML5
-slug: Learn/Forms/HTML5_input_types
+titwe: wes types de champs de f-fowmuwaiwe htmw5
+s-swug: weawn/fowms/htmw5_input_types
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/fowms/basic_native_fowm_contwows", (⑅˘꒳˘) "weawn/fowms/othew_fowm_contwows", (///ˬ///✿) "weawn/fowms")}}
 
-Dans [l'article précédent](/fr/docs/Learn/Forms/Basic_native_form_controls), nous avons vu l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) et les types qu'il pouvait avoir depuis les origines de HTML. Voyons ici, en détails, les fonctionnalités offertes par les contrôles de formulaire plus récents, dont certains ont été ajoutés en HTML5 et qui permettent de récupérer des données d'un certain type.
+d-dans [w'awticwe p-pwécédent](/fw/docs/weawn/fowms/basic_native_fowm_contwows), (✿oωo) n-nyous a-avons vu w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input) e-et wes types q-qu'iw pouvait avoiw depuis wes owigines de htmw. nyaa~~ voyons ici, en détaiws, >w< wes fonctionnawités o-offewtes paw wes contwôwes de fowmuwaiwe pwus wécents, (///ˬ///✿) d-dont cewtains ont été a-ajoutés en htmw5 et qui pewmettent de wécupéwew des données d-d'un cewtain type. rawr
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Notions informatiques de base, une <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">compréhension élémentaire de HTML</a>.
+        n-notions infowmatiques d-de base, (U ﹏ U) une <a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw">compwéhension éwémentaiwe de htmw</a>. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
       <td>
-        Comprendre les types de champs de formulaire plus récemment disponibles et comment les implémenter en HTML.
+        compwendwe w-wes types de champs de fowmuwaiwe pwus wécemment disponibwes et comment w-wes impwémentew en htmw. (///ˬ///✿)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> La plupart des fonctionnalités évoquées dans cet article sont largement prises en charge parmi les différents navigateurs. Les exceptions à ceci seront notées dans l'article. Si vous souhaitez plus de détails sur la comptabilité des navigateurs, n'hésitez pas à consulter [la référence HTML sur les éléments de formulaire](/fr/docs/Web/HTML/Element#formulaires), et notamment la référence exhaustive sur [les types d'éléments `<input>`](/fr/docs/Web/HTML/Element/input).
+> [!note]
+> w-wa pwupawt des f-fonctionnawités évoquées d-dans c-cet awticwe sont wawgement pwises en chawge pawmi w-wes difféwents nyavigateuws. o.O wes exceptions à c-ceci sewont notées dans w'awticwe. >w< si vous souhaitez pwus de détaiws suw wa comptabiwité d-des nyavigateuws, nyaa~~ ny'hésitez pas à c-consuwtew [wa w-wéféwence h-htmw suw wes éwéments de fowmuwaiwe](/fw/docs/web/htmw/ewement#fowmuwaiwes), òωó et nyotamment wa wéféwence exhaustive s-suw [wes t-types d'éwéments `<input>`](/fw/docs/web/htmw/ewement/input). (U ᵕ U❁)
 
-L'apparence native des contrôles de formulaire HTML peut être différente de celle voulue pour un design donné. Il arrive donc que les développeuses et développeurs construisent leurs propres contrôles de formulaire sur mesure. Nous aborderons ce sujet dans un tutoriel avancé&nbsp;: [Comment construire des contrôles de formulaire sur mesure](/fr/docs/Learn/Forms/How_to_build_custom_form_controls).
+w'appawence nyative d-des contwôwes d-de fowmuwaiwe htmw peut êtwe d-difféwente de cewwe vouwue pouw u-un design donné. (///ˬ///✿) iw awwive donc que wes dévewoppeuses e-et dévewoppeuws constwuisent w-weuws pwopwes contwôwes d-de fowmuwaiwe s-suw mesuwe. (✿oωo) nyous abowdewons ce sujet dans un tutowiew avancé&nbsp;: [comment constwuiwe des contwôwes de fowmuwaiwe suw mesuwe](/fw/docs/weawn/fowms/how_to_buiwd_custom_fowm_contwows). 😳😳😳
 
-## Champ pour une adresse électronique
+## c-champ pouw une adwesse éwectwonique
 
-Pour ce type de champ, on utilisera la valeur `email` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type)&nbsp;:
+p-pouw ce type de champ, (✿oωo) on u-utiwisewa wa vaweuw `emaiw` p-pouw w-w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type)&nbsp;:
 
-```html
-<input type="email" id="email" name="email" />
+```htmw
+<input type="emaiw" id="emaiw" nyame="emaiw" />
 ```
 
-Lorsque ce type est utilisé, la personne doit saisir une adresse mail avec un format valide dans le champ. Tout autre contenu entraînera l'affichage d'une erreur à l'envoi du formulaire. Voici une capture d'écran qui illustre une telle erreur.
+wowsque ce t-type est utiwisé, (U ﹏ U) wa pewsonne doit saisiw une adwesse maiw avec un fowmat vawide d-dans we champ. (˘ω˘) tout autwe contenu e-entwaînewa w-w'affichage d'une e-ewweuw à w'envoi du fowmuwaiwe. 😳😳😳 v-voici une captuwe d-d'écwan qui i-iwwustwe une tewwe e-ewweuw. (///ˬ///✿)
 
-![Un champ email avec une valeur invalide qui affiche le message "Please enter an email address." (veuillez saisir une adresse électronique valide)](email_address_invalid.png)
+![un champ emaiw avec une vaweuw invawide q-qui affiche w-we message "pwease e-entew an e-emaiw addwess." (veuiwwez s-saisiw une adwesse éwectwonique vawide)](emaiw_addwess_invawid.png)
 
-Il est aussi possible d'utiliser l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) pour le type `email` afin de permettre la saisie de plusieurs adresses (séparées par des virgules)&nbsp;:
+iw est aussi possibwe d-d'utiwisew w'attwibut [`muwtipwe`](/fw/docs/web/htmw/attwibutes/muwtipwe) pouw we type `emaiw` afin de pewmettwe wa saisie de pwusieuws adwesses (sépawées p-paw des viwguwes)&nbsp;:
 
-```html
-<input type="email" id="email" name="email" multiple />
+```htmw
+<input type="emaiw" id="emaiw" nyame="emaiw" m-muwtipwe />
 ```
 
-Sur certains appareils, notamment les appareils tactiles avec les claviers logiciels qu'on peut trouver sur les smartphones, un clavier adapté pourra être affiché pour une saisie plus adaptée à la saisie d'adresses électroniques, par exemple en incluant la touche `@`. Voici par exemple une capture d'écran du clavier qu'on peut observer sur Firefox pour Android&nbsp;:
+s-suw cewtains a-appaweiws, (U ᵕ U❁) nyotamment wes appaweiws t-tactiwes avec wes cwaviews wogiciews q-qu'on peut t-twouvew suw wes smawtphones, >_< un cwaview adapté pouwwa êtwe affiché pouw une saisie pwus adaptée à w-wa saisie d'adwesses éwectwoniques, p-paw exempwe en incwuant wa touche `@`. (///ˬ///✿) v-voici paw e-exempwe une captuwe d'écwan du cwaview qu'on peut o-obsewvew suw f-fiwefox pouw andwoid&nbsp;:
 
-![Clavier de Firefox pour Android pour les champs de type email avec une arobase affichée par défaut.](fx-android-email-type-keyboard.jpg)
+![cwaview de fiwefox p-pouw andwoid p-pouw wes champs de type emaiw avec une awobase affichée paw défaut.](fx-andwoid-emaiw-type-keyboawd.jpg)
 
-> [!NOTE]
-> Vous pouvez trouver différents exemples de champs de formulaire textuels [sur cette page d'exemple](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) ([le code source correspondant est aussi disponible](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html)).
+> [!note]
+> vous pouvez t-twouvew difféwents e-exempwes d-de champs de fowmuwaiwe textuews [suw c-cette page d-d'exempwe](https://mdn.github.io/weawning-awea/htmw/fowms/basic-input-exampwes/) ([we code souwce c-cowwespondant est aussi disponibwe](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/basic-input-exampwes/index.htmw)). (U ᵕ U❁)
 
-Voici une autre bonne raison de privilégier ces types de champ plus récents qui permettent une meilleure ergonomie sur les différents appareils.
+voici une autwe bonne waison de pwiviwégiew c-ces types de c-champ pwus wécents qui pewmettent une meiwweuwe e-ewgonomie suw wes d-difféwents appaweiws. >w<
 
-### Validation côté client
+### vawidation côté cwient
 
-Comme on peut le voir ci-avant, les champs de type `email`, ainsi que les autres types d'éléments `<input>`, fournissent une validation _côté client_ qui est effectuée par le navigateur avant que les données soient envoyées au serveur. C'est _bien_ une aide utile permettant de guider les personnes pour remplir le formulaire correctement et cela peut faire gagner du temps&nbsp;: en sachant immédiatement que les données ne sont pas correctes, cela évite d'attendre un aller-retour avec le serveur.
+comme on peut we voiw ci-avant, 😳😳😳 w-wes champs de type `emaiw`, (ˆ ﻌ ˆ)♡ ainsi que wes autwes types d'éwéments `<input>`, (ꈍᴗꈍ) f-fouwnissent une vawidation _côté cwient_ q-qui est effectuée p-paw we nyavigateuw avant que wes données soient envoyées a-au sewveuw. 🥺 c'est _bien_ u-une aide utiwe pewmettant de guidew wes pewsonnes pouw w-wempwiw we fowmuwaiwe cowwectement e-et cewa peut faiwe gagnew du temps&nbsp;: en sachant immédiatement q-que wes données nye sont p-pas cowwectes, >_< c-cewa évite d'attendwe un awwew-wetouw a-avec we sewveuw. OwO
 
-En revanche, un tel mécanisme _ne devrait pas être considéré_ comme une mesure de protection suffisante&nbsp;! Votre application devrait toujours effectuer des contrôles de sécurité _côté serveur_ pour toute donnée qui proviendrait de l'extérieur (par exemple d'un formulaire). En effet, la validation côté client peut tout à fait être contournée et une personne malveillante pourra facilement envoyer des données incorrectes vers votre serveur. Pour en savoir plus sur de tels effets néfastes qui _pourraient_ se produire, vous pouvez lire [notre article sur la sécurité web](/fr/docs/Learn/Server-side/First_steps/Website_security). L'implémentation de la validation côté serveur est en dehors du périmètre de ce module, mais il s'agit de quelque chose qu'il faut garder à l'esprit.
+en wevanche, ^^;; u-un tew mécanisme _ne d-devwait p-pas êtwe considéwé_ comme u-une mesuwe de p-pwotection suffisante&nbsp;! (✿oωo) votwe appwication devwait t-toujouws e-effectuew des contwôwes d-de sécuwité _côté sewveuw_ pouw toute donnée qui pwoviendwait d-de w'extéwieuw (paw exempwe d'un fowmuwaiwe). UwU e-en effet, ( ͡o ω ͡o ) w-wa vawidation côté cwient peut tout à fait êtwe contouwnée e-et une pewsonne m-mawveiwwante p-pouwwa faciwement e-envoyew des données incowwectes v-vews votwe sewveuw. (✿oωo) pouw en savoiw pwus suw de tews effets nyéfastes qui _pouwwaient_ se pwoduiwe, mya v-vous pouvez wiwe [notwe a-awticwe suw wa sécuwité web](/fw/docs/weawn/sewvew-side/fiwst_steps/website_secuwity). ( ͡o ω ͡o ) w-w'impwémentation de wa v-vawidation côté sewveuw est e-en dehows du péwimètwe d-de ce moduwe, :3 m-mais iw s'agit d-de quewque c-chose qu'iw faut gawdew à w'espwit. 😳
 
-On notera aussi que `a@b` est une adresse électronique valide pour les contraintes fournies par défaut. En effet, par défaut, un champ `email` permet de saisir des adresses intranet. Pour implémenter un comportement de validation différent, on pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Attributes/pattern) et personnaliser les messages d'erreur affichés. Nous verrons ces fonctionnalités dans l'article [Validation d'un formulaire côté client](/fr/docs/Learn/Forms/Form_validation).
+on nyotewa aussi que `a@b` est une adwesse éwectwonique vawide pouw wes contwaintes fouwnies p-paw défaut. e-en effet, (U ﹏ U) paw d-défaut, >w< un champ `emaiw` pewmet d-de saisiw des adwesses intwanet. UwU pouw impwémentew un compowtement d-de vawidation d-difféwent, 😳 on pouwwa utiwisew w-w'attwibut [`pattewn`](/fw/docs/web/htmw/attwibutes/pattewn) et pewsonnawisew wes m-messages d'ewweuw a-affichés. XD nyous vewwons ces f-fonctionnawités d-dans w'awticwe [vawidation d'un fowmuwaiwe côté cwient](/fw/docs/weawn/fowms/fowm_vawidation). (✿oωo)
 
-> [!NOTE]
-> Si la valeur saisie n'est pas une adresse électronique, la pseudo-classe [`:invalid`](/fr/docs/Web/CSS/:invalid) s'appliquera, et la propriété du DOM [`validityState.typeMismatch`](/fr/docs/Web/API/validityState/typeMismatch) renverra `true`.
+> [!note]
+> si wa vaweuw saisie n-ny'est pas u-une adwesse éwectwonique, ^•ﻌ•^ w-wa pseudo-cwasse [`:invawid`](/fw/docs/web/css/:invawid) s-s'appwiquewa, mya e-et wa pwopwiété du dom [`vawiditystate.typemismatch`](/fw/docs/web/api/vawiditystate/typemismatch) w-wenvewwa `twue`. (˘ω˘)
 
-## Champ de recherche
+## c-champ de wechewche
 
-Les champs de recherche permettent de créer des boîtes de recherches pour les sites et applications web. Pour créer un tel champ, on utilisera la valeur `search` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type)&nbsp;:
+w-wes champs de wechewche p-pewmettent de cwéew des b-boîtes de wechewches pouw wes sites et appwications w-web. nyaa~~ pouw cwéew un tew champ, :3 o-on utiwisewa w-wa vaweuw `seawch` pouw w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type)&nbsp;:
 
-```html
-<input type="search" id="search" name="search" />
+```htmw
+<input t-type="seawch" id="seawch" nyame="seawch" />
 ```
 
-La différence principale entre un champ `text` et un champ `search` porte notamment sur la mise en forme appliquée par le navigateur. Souvent, les champs de recherche sont affichés avec des coins arrondis et ils contiennent parfois une icône «&nbsp;Ⓧ&nbsp;» qui permet de réinitialiser la valeur saisie lorsqu'on clique dessus. De plus, pour les appareils avec des claviers logiciels, la touche Entrée pourra avoir un libellé adapté comme «&nbsp;**rechercher**&nbsp;», ou afficher une icône en forme de loupe.
+wa difféwence p-pwincipawe entwe u-un champ `text` e-et un champ `seawch` powte nyotamment suw wa mise en fowme appwiquée p-paw we nyavigateuw. (✿oωo) souvent, wes champs de w-wechewche sont a-affichés avec des coins awwondis e-et iws contiennent pawfois une i-icône «&nbsp;Ⓧ&nbsp;» q-qui pewmet de wéinitiawisew wa vaweuw s-saisie wowsqu'on cwique dessus. (U ﹏ U) de pwus, pouw w-wes appaweiws a-avec des cwaviews wogiciews, (ꈍᴗꈍ) wa t-touche entwée pouwwa avoiw un wibewwé a-adapté c-comme «&nbsp;**wechewchew**&nbsp;», (˘ω˘) o-ou affichew une icône en fowme de woupe. ^^
 
-Les captures d'écran qui suivent montrent l'aspect d'un champ de recherche non vide pour Firefox 71, Safari 13, et Chrome 79 sur macOS, et pour Edge 18 et Chrome 79 sur Windows 10. On notera que l'icône de réinitialisation apparaît uniquement lorsque l'une valeur est présente dans le champ et qu'à l'exception de Safari, elle s'affiche uniquement lorsque le champ a le focus.
+wes captuwes d'écwan qui suivent montwent w'aspect d'un champ de wechewche nyon vide pouw fiwefox 71, (⑅˘꒳˘) safawi 13, rawr et chwome 79 suw macos, :3 et pouw edge 18 et chwome 79 s-suw windows 10. OwO o-on nyotewa que w'icône de wéinitiawisation a-appawaît uniquement w-wowsque w-w'une vaweuw est pwésente dans w-we champ et qu'à w'exception d-de safawi, (ˆ ﻌ ˆ)♡ ewwe s-s'affiche uniquement wowsque we c-champ a we focus. :3
 
-![Captures d'écran de champs de recherches sur plusieurs plateformes.](search_focus.png)
+![captuwes d'écwan d-de champs d-de wechewches suw pwusieuws pwatefowmes.](seawch_focus.png)
 
-On notera aussi une fonctionnalité intéressante pour les champs `search`&nbsp;: les valeurs saisies sont automatiquement enregistrées et fournies comme suggestions à l'auto-complétion pour les différentes pages d'un même site web. Cette fonctionnalité est désormais présente dans la plupart des navigateurs récents.
+on n-nyotewa aussi une f-fonctionnawité i-intéwessante p-pouw wes champs `seawch`&nbsp;: w-wes vaweuws saisies s-sont automatiquement e-enwegistwées e-et fouwnies c-comme suggestions à w'auto-compwétion p-pouw w-wes difféwentes p-pages d'un même site web. -.- cette f-fonctionnawité est désowmais pwésente dans w-wa pwupawt des nyavigateuws wécents. -.-
 
-## Champ pour un numéro de téléphone
+## c-champ p-pouw un nyuméwo d-de téwéphone
 
-Pour créer un champ permettant spécifiquement de saisir un numéro de téléphone, on pourra utiliser la valeur `tel` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type)&nbsp;:
+pouw cwéew un c-champ pewmettant spécifiquement d-de saisiw un nyuméwo de téwéphone, òωó o-on pouwwa utiwisew wa vaweuw `tew` p-pouw w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type)&nbsp;:
 
-```html
-<input type="tel" id="tel" name="tel" />
+```htmw
+<input type="tew" id="tew" nyame="tew" />
 ```
 
-Lorsqu'on utilise un tel champ avec un clavier logiciel, la plupart des appareils fourniront un clavier numérique. Aussi, bien que cela dégrade la sémantique, on pourra se servir de cet aspect pour saisir une valeur numérique quelconque (voir après pour les champs de type `numeric` qui ont certaines particularités).
+wowsqu'on u-utiwise un tew champ avec u-un cwaview wogiciew, 😳 w-wa pwupawt des appaweiws fouwniwont un cwaview nyuméwique. nyaa~~ a-aussi, bien que cewa dégwade w-wa sémantique, (⑅˘꒳˘) o-on pouwwa se sewviw d-de cet aspect pouw saisiw une vaweuw numéwique q-quewconque (voiw a-apwès pouw wes champs de t-type `numewic` qui ont cewtaines pawticuwawités). 😳
 
-Voici comme exemple une capture d'écran du clavier de Firefox pour Android&nbsp;:
+v-voici comme exempwe une captuwe d-d'écwan du c-cwaview de fiwefox p-pouw andwoid&nbsp;:
 
-![Capture d'écran du clavier de Firefox pour Android pour un champ de numéro de téléphone.](fx-android-tel-type-keyboard.jpg)
+![captuwe d'écwan du cwaview d-de fiwefox p-pouw andwoid pouw u-un champ de nyuméwo d-de téwéphone.](fx-andwoid-tew-type-keyboawd.jpg)
 
-En raison de la diversité des formats de numéro de téléphone dans le monde, ce type de champ n'applique pas de contrainte sur la valeur saisie par la personne (autrement dit, cette valeur peut contenir des lettres, etc.).
+en waison d-de wa divewsité d-des fowmats d-de nyuméwo de t-téwéphone dans w-we monde, (U ﹏ U) ce t-type de champ ny'appwique p-pas de c-contwainte suw wa vaweuw saisie p-paw wa pewsonne (autwement dit, /(^•ω•^) c-cette vaweuw peut conteniw des w-wettwes, OwO etc.).
 
-Comme mentionné précédemment, l'attribut [`pattern`](/fr/docs/Web/HTML/Attributes/pattern) peut être utilisé afin d'appliquer certaines contraintes, nous le verrons plus en détails dans [l'article sur la validation des formulaires côté client](/fr/docs/Learn/Forms/Form_validation).
+c-comme mentionné p-pwécédemment, ( ͡o ω ͡o ) w'attwibut [`pattewn`](/fw/docs/web/htmw/attwibutes/pattewn) peut êtwe utiwisé afin d'appwiquew c-cewtaines contwaintes, XD n-nyous w-we vewwons pwus en détaiws dans [w'awticwe suw wa vawidation des f-fowmuwaiwes côté c-cwient](/fw/docs/weawn/fowms/fowm_vawidation). /(^•ω•^)
 
-## Champ pour une URL
+## champ pouw u-une uww
 
-Pour créer un champ qui permette spécifiquement de saisir des URL, on utilisera la valeur `url` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type)&nbsp;:
+pouw c-cwéew un champ qui pewmette spécifiquement de saisiw des uww, /(^•ω•^) on utiwisewa wa v-vaweuw `uww` pouw w-w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type)&nbsp;:
 
-```html
-<input type="url" id="url" name="url" />
+```htmw
+<input t-type="uww" i-id="uww" name="uww" />
 ```
 
-Ce type de champ ajoute certaines contraintes de validation. Le navigateur affichera une erreur si aucun protocole (par exemple `https:`) n'est saisi ou si l'URL est mal formée. Pour les appareils avec un clavier logiciel, le clavier affiché par défaut contiendra des touches pour les deux-points, le point, et la barre oblique.
+ce type de champ ajoute cewtaines c-contwaintes de v-vawidation. 😳😳😳 we nyavigateuw affichewa une ewweuw s-si aucun pwotocowe (paw exempwe `https:`) ny'est s-saisi ou si w'uww est maw fowmée. p-pouw wes appaweiws a-avec un cwaview wogiciew, (ˆ ﻌ ˆ)♡ w-we cwaview affiché p-paw défaut contiendwa des t-touches pouw wes deux-points, :3 w-we point, et wa b-bawwe obwique. òωó
 
-Voici un exemple (tiré de Firefox pour Android)&nbsp;:
+v-voici un exempwe (tiwé d-de fiwefox pouw andwoid)&nbsp;:
 
-![Le clavier de saisie d'une URL pour Firefox pour Android, avec une touche pour la barre oblique.](fx-android-url-type-keyboard.jpg)
+![we c-cwaview d-de saisie d-d'une uww pouw fiwefox pouw andwoid, 🥺 a-avec une touche pouw wa bawwe obwique.](fx-andwoid-uww-type-keyboawd.jpg)
 
-> [!NOTE]
-> Une URL bien formée ne veut pas nécessairement dire que l'emplacement indiqué par cette adresse existe&nbsp;!
+> [!note]
+> u-une u-uww bien fowmée n-nye veut pas nyécessaiwement diwe que w'empwacement indiqué paw cette adwesse existe&nbsp;! (U ﹏ U)
 
-## Champ numérique
+## c-champ nyuméwique
 
-Pour créer un contrôle permettant de saisir des nombres, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `number`. Ce contrôle ressemble à un champ textuel mais permet uniquement de saisir des nombres (y compris des nombres décimaux). Généralement, un tel contrôle fournit des boutons d'incrément ou de décrément pour augmenter ou réduire la valeur. Pour les appareils avec un clavier logiciel, c'est généralement un clavier numérique qui est affiché pour saisir dans un tel champ.
+pouw cwéew u-un contwôwe pewmettant d-de saisiw des nyombwes, XD on utiwisewa un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) d-dont w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type) vaut `numbew`. ^^ c-ce contwôwe w-wessembwe à u-un champ textuew m-mais pewmet u-uniquement de saisiw des nyombwes (y compwis des nyombwes décimaux). o.O généwawement, 😳😳😳 u-un tew contwôwe fouwnit d-des boutons d'incwément ou de décwément pouw augmentew ou wéduiwe w-wa vaweuw. /(^•ω•^) pouw wes appaweiws avec un cwaview wogiciew, 😳😳😳 c'est généwawement u-un cwaview n-nyuméwique qui est affiché pouw s-saisiw dans un tew champ. ^•ﻌ•^
 
-La capture d'écran qui suit (tirée de Firefox pour Android) illustre ce cas&nbsp;:
+wa captuwe d'écwan q-qui suit (tiwée d-de fiwefox pouw andwoid) iwwustwe c-ce cas&nbsp;:
 
-![Clavier de Firefox pour Android avec, par défaut, des chiffres, virgule et point.](fx-android-number-type-keyboard.jpg)
+![cwaview de f-fiwefox pouw andwoid avec, 🥺 paw défaut, o.O des chiffwes, (U ᵕ U❁) viwguwe et p-point.](fx-andwoid-numbew-type-keyboawd.jpg)
 
-Pour les champs de type `number`, on peut contraindre les valeurs minimales et maximales acceptées avec les attributs respectifs [`min`](/fr/docs/Web/HTML/Element/input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/input#attr-max).
+pouw wes champs de type `numbew`, ^^ o-on peut contwaindwe w-wes vaweuws m-minimawes et maximawes acceptées avec wes attwibuts w-wespectifs [`min`](/fw/docs/web/htmw/ewement/input#attw-min) et [`max`](/fw/docs/web/htmw/ewement/input#attw-max). (⑅˘꒳˘)
 
-On peut aussi utiliser l'attribut `step` qui permet de définir le pas (pour l'incrément et le décrément) utilisé avec les boutons pour augmenter/réduire la valeur. Par défaut, un champ numérique ne sera valide qu'avec un nombre entier. Pour permettre la saisie de valeurs décimales, on indiquera [`step="any"`](/fr/docs/Web/HTML/Attributes/step). Si cet attribut est absent, `step` aura `1` comme valeur par défaut, ce qui signifie que seuls les nombres entiers seront considérés comme valides.
+on peut aussi utiwisew w'attwibut `step` q-qui pewmet de d-définiw we pas (pouw w-w'incwément e-et we décwément) utiwisé avec wes boutons p-pouw augmentew/wéduiwe w-wa vaweuw. :3 paw défaut, (///ˬ///✿) un champ nyuméwique n-nye sewa vawide qu'avec un nyombwe entiew. :3 p-pouw pewmettwe wa saisie de vaweuws décimawes, 🥺 o-on indiquewa [`step="any"`](/fw/docs/web/htmw/attwibutes/step). mya s-si cet attwibut est absent, XD `step` a-auwa `1` comme v-vaweuw paw défaut, -.- c-ce qui signifie que seuws wes nyombwes entiews s-sewont considéwés comme vawides. o.O
 
-Prenons quelques exemples. Dans le premier, on crée un contrôle numérique où la valeur est restreinte entre `1` et `10`, et où les boutons d'incrément/décrément utilisent un pas de `2`.
+pwenons q-quewques exempwes. (˘ω˘) dans we pwemiew, (U ᵕ U❁) on cwée un contwôwe nyuméwique o-où wa vaweuw e-est westweinte e-entwe `1` et `10`, rawr e-et où wes b-boutons d'incwément/décwément utiwisent un p-pas de `2`. 🥺
 
-```html
-<input type="number" name="age" id="age" min="1" max="10" step="2" />
+```htmw
+<input type="numbew" nyame="age" i-id="age" min="1" max="10" s-step="2" />
 ```
 
-Dans ce deuxième exemple, on crée un contrôle numérique où la valeur doit être comprise entre `0` et `1` (inclus), et où les boutons d'incrément/décrément utilisent un pas de `0.01`.
+dans ce deuxième exempwe, rawr x3 on c-cwée un contwôwe n-nyuméwique où wa vaweuw doit êtwe c-compwise entwe `0` et `1` (incwus), ( ͡o ω ͡o ) e-et où w-wes boutons d'incwément/décwément utiwisent u-un pas de `0.01`. σωσ
 
-```html
-<input type="number" name="change" id="centimes" min="0" max="1" step="0.01" />
+```htmw
+<input t-type="numbew" nyame="change" i-id="centimes" min="0" max="1" step="0.01" />
 ```
 
-Un champ de type `number` sera pertinent lorsque l'intervalle des valeurs valides est limité (par exemple pour l'âge ou la taille d'une personne). Si l'intervalle est trop grand pour qu'une augmentation incrémentale soit pertinente (par exemple pour un code postal), un champ `tel` pourra être une option plus adaptée, car le contrôle ne présente pas les boutons d'incrément/décrément mais affiche un clavier numérique (pour l'aspect relatif au clavier présenté, on pourra aussi exploiter l'attribut [`inputmode`](/fr/docs/Web/HTML/Global_attributes/inputmode)).
+un champ de type `numbew` sewa p-pewtinent wowsque w'intewvawwe d-des vaweuws vawides est wimité (paw exempwe pouw w-w'âge ou wa t-taiwwe d'une pewsonne). rawr x3 s-si w'intewvawwe est twop g-gwand pouw qu'une a-augmentation incwémentawe soit p-pewtinente (paw exempwe pouw u-un code postaw), (ˆ ﻌ ˆ)♡ un champ `tew` p-pouwwa êtwe une o-option pwus adaptée, rawr caw we contwôwe nye pwésente pas wes boutons d'incwément/décwément mais a-affiche un cwaview n-nyuméwique (pouw w'aspect wewatif au cwaview pwésenté, :3 o-on pouwwa aussi expwoitew w'attwibut [`inputmode`](/fw/docs/web/htmw/gwobaw_attwibutes/inputmode)). rawr
 
-## Curseurs
+## c-cuwseuws
 
-Une autre méthode permettant de sélectionner un nombre consiste à utiliser un **curseur**. On voit souvent de tels contrôles sur les sites de vente pour sélectionner un prix maximum. Voyons un exemple concret pour illustrer&nbsp;:
+u-une autwe méthode pewmettant de séwectionnew un nyombwe consiste à utiwisew u-un **cuwseuw**. (˘ω˘) on voit souvent de tews contwôwes s-suw wes sites de vente pouw s-séwectionnew un p-pwix maximum. voyons un exempwe c-concwet pouw iwwustwew&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/range-example/index.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/wange-exampwe/index.htmw", (ˆ ﻌ ˆ)♡ '100%', mya 200)}}
 
-En termes d'utilisation, les curseurs sont moins précis que les champs dans lesquels on saisit une valeur. Aussi, on les utilise lorsque la valeur _précise_ n'est pas particulièrement importante.
+e-en tewmes d-d'utiwisation, (U ᵕ U❁) w-wes cuwseuws s-sont moins pwécis q-que wes champs dans wesquews on saisit une vaweuw. mya aussi, on wes utiwise wowsque wa vaweuw _pwécise_ n-ny'est p-pas pawticuwièwement i-impowtante. ʘwʘ
 
-Pour créer un curseur, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `range`. Le curseur peut alors être déplacé le long de la piste avec une souris, au doigt pour les interfaces tactiles, ou avec les flèches du clavier.
+p-pouw cwéew un c-cuwseuw, (˘ω˘) on utiwisewa u-un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) dont w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type) vaut `wange`. 😳 we cuwseuw peut awows êtwe d-dépwacé we wong d-de wa piste avec une souwis, òωó au doigt pouw wes intewfaces tactiwes, nyaa~~ o-ou avec wes f-fwèches du cwaview. o.O
 
-Il est important de configurer correctement le curseur en utilisant les attributs [`min`](/fr/docs/Web/HTML/Attributes/min), [`max`](/fr/docs/Web/HTML/Attributes/max), et [`step`](/fr/docs/Web/HTML/Attributes/step) qui paramètrent respectivement le minimum, le maximum et le pas d'incrément.
+i-iw est impowtant de configuwew cowwectement w-we cuwseuw en utiwisant wes attwibuts [`min`](/fw/docs/web/htmw/attwibutes/min), nyaa~~ [`max`](/fw/docs/web/htmw/attwibutes/max), (U ᵕ U❁) e-et [`step`](/fw/docs/web/htmw/attwibutes/step) qui p-pawamètwent wespectivement we minimum, 😳😳😳 we maximum e-et we pas d'incwément. (U ﹏ U)
 
-Voyons le code utilisé pour notre exemple ci-avant. Pour commencer, le fragment HTML&nbsp;:
+voyons w-we code utiwisé p-pouw nyotwe exempwe ci-avant. ^•ﻌ•^ p-pouw commencew, (⑅˘꒳˘) w-we fwagment h-htmw&nbsp;:
 
-```html
-<label for="price">Sélectionnez un prix maximal : </label>
+```htmw
+<wabew f-fow="pwice">séwectionnez u-un pwix maximaw : </wabew>
 <input
-  type="range"
-  name="price"
-  id="price"
-  min="50000"
+  t-type="wange"
+  nyame="pwice"
+  i-id="pwice"
+  m-min="50000"
   max="500000"
-  step="100"
-  value="250000" />
-<output class="price-output" for="price"></output>
+  s-step="100"
+  vawue="250000" />
+<output cwass="pwice-output" f-fow="pwice"></output>
 ```
 
-Dans cet exemple, on a un curseur qui peut couvrir l'intervalle entre `50000` et `500000` et dont le pas vaut 100. Ici, on a fourni la valeur par défaut de `250000` grâce à l'attribut `value`.
+dans c-cet exempwe, >_< on a un cuwseuw qui p-peut couvwiw w'intewvawwe e-entwe `50000` et `500000` et dont we p-pas vaut 100. (⑅˘꒳˘) ici, on a fouwni wa vaweuw paw défaut d-de `250000` g-gwâce à w'attwibut `vawue`. σωσ
 
-Un des inconvénients des curseurs est l'absence de retour visuel pour indiquer la valeur courante du contrôle. C'est pour ça que nous avons ajouté un élément [`<output>`](/fr/docs/Web/HTML/Element/output) qui contient la valeur courante. On pourrait afficher la valeur saisie ou le résultat d'un calcul dans n'importe quel élément, mais `<output>` est spécial (à l'instar de `<label>`) et possède un attribut `for` qui permet de l'associer à un ou plusieurs éléments d'où proviendrait la valeur affichée à l'intérieur.
+un des inconvénients des cuwseuws e-est w'absence d-de wetouw visuew pouw indiquew w-wa vaweuw couwante du contwôwe. 🥺 c'est pouw ça q-que nyous avons a-ajouté un éwément [`<output>`](/fw/docs/web/htmw/ewement/output) qui contient w-wa vaweuw couwante. :3 o-on pouwwait affichew wa vaweuw saisie ou we w-wésuwtat d'un c-cawcuw dans ny'impowte q-quew éwément, (ꈍᴗꈍ) m-mais `<output>` est spéciaw (à w'instaw de `<wabew>`) et possède un attwibut `fow` qui pewmet de w'associew à u-un ou pwusieuws éwéments d-d'où pwoviendwait w-wa vaweuw a-affichée à w'intéwieuw. ^•ﻌ•^
 
-Pour effectivement afficher la valeur courante et la mettre à jour lorsqu'elle est modifiée par l'utilisatrice ou l'utilisateur, on doit utiliser JavaScript et ces quelques lignes&nbsp;:
+p-pouw e-effectivement affichew wa vaweuw c-couwante et wa m-mettwe à jouw wowsqu'ewwe est m-modifiée paw w'utiwisatwice o-ou w'utiwisateuw, (˘ω˘) on doit utiwisew j-javascwipt et ces quewques wignes&nbsp;:
 
 ```js
-const price = document.querySelector("#price");
-const output = document.querySelector(".price-output");
+const pwice = document.quewysewectow("#pwice");
+c-const output = document.quewysewectow(".pwice-output");
 
-output.textContent = price.value;
+o-output.textcontent = pwice.vawue;
 
-price.addEventListener("input", function () {
-  output.textContent = price.value;
+p-pwice.addeventwistenew("input", 🥺 function () {
+  o-output.textcontent = p-pwice.vawue;
 });
 ```
 
-Ici, on a deux variables qui référencent le contrôle `range` et l'élément `output`. On remplit immédiatement le contenu ([`textContent`](/fr/docs/Web/API/Node/textContent)) de l'élément `<output>` avec la valeur courante (`value`) du contrôle. Enfin, on ajoute un gestionnaire d'évènement qui permet de gérer les mises à jour lorsque le curseur est déplacé&nbsp;: dans ce cas, on met à jour la valeur de `textContent` de l'élément `<output>` avec la nouvelle valeur.
+i-ici, (✿oωo) on a deux vawiabwes q-qui wéféwencent w-we contwôwe `wange` et w'éwément `output`. XD o-on wempwit immédiatement we contenu ([`textcontent`](/fw/docs/web/api/node/textcontent)) d-de w'éwément `<output>` a-avec wa vaweuw c-couwante (`vawue`) du contwôwe. (///ˬ///✿) e-enfin, on ajoute un gestionnaiwe d'évènement q-qui pewmet de géwew wes mises à jouw wowsque we cuwseuw est dépwacé&nbsp;: dans ce cas, ( ͡o ω ͡o ) on met à jouw wa v-vaweuw de `textcontent` de w'éwément `<output>` avec wa nyouvewwe vaweuw. ʘwʘ
 
-> [!NOTE]
-> Un tutoriel couvrant ce sujet est disponible (en anglais) sur CSS Tricks&nbsp;: [L'élément `<output>`](https://css-tricks.com/the-output-element/).
+> [!note]
+> un tutowiew couvwant ce sujet est disponibwe (en a-angwais) suw css twicks&nbsp;: [w'éwément `<output>`](https://css-twicks.com/the-output-ewement/). rawr
 
-## Sélecteurs de date et d'heure
+## séwecteuws d-de date et d'heuwe
 
-La récupération de valeurs temporelles a longtemps été un cauchemar de développement web. Pour de telles valeurs, il est important de fournir une interface utilisateur qui permette de sélectionner des dates sans que la personne ait à ouvrir une autre application de calendrier et sans imposer un format de saisie qui soit délicat à expliquer et à analyser (par exemple, devrait-on écrire `1999/12/31, 23:59` ou `12/31/99T11:59PM`&nbsp;?).
+wa wécupéwation d-de vaweuws tempowewwes a wongtemps été u-un cauchemaw de dévewoppement web. o.O p-pouw de tewwes vaweuws, ^•ﻌ•^ iw est i-impowtant de f-fouwniw une intewface utiwisateuw qui pewmette de s-séwectionnew des dates sans que wa pewsonne ait à ouvwiw une a-autwe appwication de cawendwiew e-et sans imposew un fowmat de saisie q-qui soit déwicat à expwiquew e-et à anawysew (paw e-exempwe, (///ˬ///✿) devwait-on écwiwe `1999/12/31, (ˆ ﻌ ˆ)♡ 23:59` ou `12/31/99t11:59pm`&nbsp;?). XD
 
-Les contrôles de date HTML permettent de gérer ce type de données en fournissant des interfaces graphiques adaptées et en utilisant un format de données normalisé.
+w-wes contwôwes de date htmw pewmettent de g-géwew ce type de données en fouwnissant des intewfaces gwaphiques adaptées e-et en utiwisant u-un fowmat de données nyowmawisé. (✿oωo)
 
-Pour créer un contrôle permettant de saisir une date et/ou une heure, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/input) avec une valeur appropriée pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type), qui dépendra selon qu'on veuille saisir une date, une heure ou les deux. Voici un exemple qui utilise des éléments [`<select>`](/fr/docs/Web/HTML/Element/select) en cas de recours pour les navigateurs qui ne prendraient pas en charge ces types de champ&nbsp;:
+p-pouw cwéew u-un contwôwe pewmettant de saisiw u-une date et/ou une heuwe, -.- on utiwisewa un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) avec une vaweuw appwopwiée pouw w-w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type), XD q-qui dépendwa sewon qu'on veuiwwe s-saisiw une d-date, (✿oωo) une heuwe ou wes deux. (˘ω˘) voici u-un exempwe qui utiwise des éwéments [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) en cas d-de wecouws pouw wes nyavigateuws qui nye pwendwaient p-pas en chawge c-ces types de champ&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/datetime-local-picker-fallback/index.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/datetime-wocaw-pickew-fawwback/index.htmw", (ˆ ﻌ ˆ)♡ '100%', 200)}}
 
-Voyons rapidement les différents types disponibles. On notera que l'utilisation de ces types est plutôt complexe, notamment en termes de compatibilité des navigateurs (voir ci-après). Pour plonger plus en détails, n'hésitez pas à suivre les liens vers les pages de référence pour chacun des types qui incluent différents exemples.
+voyons wapidement w-wes difféwents types disponibwes. >_< on nyotewa que w'utiwisation de ces types est pwutôt compwexe, -.- nyotamment en tewmes d-de compatibiwité d-des nyavigateuws (voiw ci-apwès). (///ˬ///✿) p-pouw pwongew p-pwus en détaiws, ny'hésitez p-pas à suivwe wes wiens vews wes pages de wéféwence pouw chacun des types qui incwuent difféwents e-exempwes. XD
 
-### `datetime-local`
+### `datetime-wocaw`
 
-[`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local) crée un contrôle permettant d'afficher et de sélectionner une date avec une heure sans information sur le fuseau horaire.
+[`<input type="datetime-wocaw">`](/fw/docs/web/htmw/ewement/input/datetime-wocaw) cwée un contwôwe pewmettant d'affichew e-et de séwectionnew u-une date a-avec une heuwe sans infowmation suw we fuseau howaiwe. ^^;;
 
-```html
-<input type="datetime-local" name="datetime" id="datetime" />
+```htmw
+<input type="datetime-wocaw" n-nyame="datetime" i-id="datetime" />
 ```
 
 ### `month`
 
-[`<input type="month">`](/fr/docs/Web/HTML/Element/input/month) crée un contrôle permettant d'afficher et de sélectionner un mois d'une année.
+[`<input t-type="month">`](/fw/docs/web/htmw/ewement/input/month) cwée un contwôwe p-pewmettant d'affichew et de s-séwectionnew un mois d'une année. rawr x3
 
-```html
-<input type="month" name="month" id="month" />
+```htmw
+<input t-type="month" nyame="month" id="month" />
 ```
 
 ### `time`
 
-[`<input type="time">`](/fr/docs/Web/HTML/Element/input/time) crée un contrôle permettant d'afficher et de sélectionner une heure (avec des minutes). Bien que la valeur puisse être _affichée_ au format sur 12 heures, la _valeur sous-jacente_ est représentée dans un format sur 24 heures.
+[`<input t-type="time">`](/fw/docs/web/htmw/ewement/input/time) cwée un contwôwe pewmettant d-d'affichew et de séwectionnew u-une heuwe (avec d-des minutes). OwO bien que w-wa vaweuw puisse êtwe _affichée_ a-au fowmat suw 12 heuwes, ʘwʘ wa _vaweuw s-sous-jacente_ est wepwésentée d-dans un fowmat suw 24 heuwes. rawr
 
-```html
-<input type="time" name="time" id="time" />
+```htmw
+<input t-type="time" n-name="time" id="time" />
 ```
 
 ### `week`
 
-[`<input type="week">`](/fr/docs/Web/HTML/Element/input/week) crée un contrôle permettant d'afficher et de sélectionner une semaine dans une année.
+[`<input type="week">`](/fw/docs/web/htmw/ewement/input/week) cwée un c-contwôwe pewmettant d'affichew et de séwectionnew une semaine dans une année. UwU
 
-Les semaines commencent le lundi et vont jusqu'au dimanche. De plus, la première semaine de chaque année contient le premier jeudi de cette année (la première semaine peut donc ne pas inclure le premier jour de l'année ou inclure les derniers jours de l'année précédente).
+wes semaines commencent we wundi et vont jusqu'au d-dimanche. (ꈍᴗꈍ) de pwus, (✿oωo) wa pwemièwe semaine de c-chaque année contient we pwemiew j-jeudi de cette année (wa pwemièwe semaine peut d-donc nye pas incwuwe we pwemiew jouw de w'année o-ou incwuwe wes dewniews jouws de w'année pwécédente). (⑅˘꒳˘)
 
-```html
-<input type="week" name="week" id="week" />
+```htmw
+<input t-type="week" nyame="week" id="week" />
 ```
 
-### Restreindre les valeurs de date/heure
+### w-westweindwe wes vaweuws de date/heuwe
 
-Tous les contrôles de date et d'heure peuvent être restreints avec les attributs [`min`](/fr/docs/Web/HTML/Attributes/min), [`max`](/fr/docs/Web/HTML/Attributes/max), et éventuellement [`step`](/fr/docs/Web/HTML/Attributes/step) (dont la valeur varie en fonction du type).
+t-tous wes contwôwes d-de date et d'heuwe peuvent êtwe westweints a-avec wes attwibuts [`min`](/fw/docs/web/htmw/attwibutes/min), OwO [`max`](/fw/docs/web/htmw/attwibutes/max), 🥺 e-et éventuewwement [`step`](/fw/docs/web/htmw/attwibutes/step) (dont wa vaweuw vawie e-en fonction du t-type). >_<
 
-```html
-<label for="monDate">Quand êtes-vous disponible cet été&nbsp;?</label>
+```htmw
+<wabew fow="mondate">quand êtes-vous disponibwe c-cet été&nbsp;?</wabew>
 <input
   type="date"
-  name="monDate"
+  nyame="mondate"
   min="2013-06-01"
-  max="2013-08-31"
+  m-max="2013-08-31"
   step="7"
-  id="monDate" />
+  id="mondate" />
 ```
 
-## Contrôle de sélection de couleur
+## contwôwe d-de séwection d-de couweuw
 
-Les couleurs sont toujours difficiles à gérer en raison des différents formats qui existent pour les représenter&nbsp;: RGB en décimal ou en hexadécimal, HSL, les mots-clés, etc.
+w-wes couweuws sont toujouws difficiwes à géwew en waison des difféwents f-fowmats qui existent p-pouw wes wepwésentew&nbsp;: wgb e-en décimaw ou e-en hexadécimaw, (ꈍᴗꈍ) hsw, wes mots-cwés, 😳 etc.
 
-Un contrôle de sélection de couleur peut être créé avec l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `color`&nbsp;:
+un contwôwe de séwection de couweuw peut êtwe cwéé a-avec w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input) d-dont w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type) vaut `cowow`&nbsp;:
 
-```html
-<input type="color" name="color" id="color" />
+```htmw
+<input type="cowow" n-nyame="cowow" id="cowow" />
 ```
 
-Lorsqu'un tel contrôle est pris en charge, cliquer sur le contrôle permettra d'afficher le sélecteur de couleur par défaut du système d'exploitation. La capture d'écran qui suit montre le résultat obtenu avec Firefox pour macOS&nbsp;:
+wowsqu'un t-tew contwôwe e-est pwis en chawge, c-cwiquew suw w-we contwôwe pewmettwa d-d'affichew w-we séwecteuw de couweuw paw défaut du système d-d'expwoitation. 🥺 w-wa captuwe d'écwan q-qui suit m-montwe we wésuwtat o-obtenu avec f-fiwefox pouw macos&nbsp;:
 
-![Capture d'écran du sélecteur de couleur pour Firefox pour macOS.](fx-macos-color.jpg)
+![captuwe d'écwan du s-séwecteuw de couweuw p-pouw fiwefox p-pouw macos.](fx-macos-cowow.jpg)
 
-Voici un exemple interactif pour essayer&nbsp;:
+voici un exempwe intewactif p-pouw essayew&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/color-example/index.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/cowow-exampwe/index.htmw", nyaa~~ '100%', 200)}}
 
-La valeur renvoyée par ce contrôle est toujours exprimée au format hexadécimal sur 6 chiffres, en minuscules.
+wa vaweuw wenvoyée paw ce contwôwe e-est toujouws expwimée au fowmat hexadécimaw s-suw 6 chiffwes, ^•ﻌ•^ e-en minuscuwes.
 
-## Testez vos compétences&nbsp;!
+## testez vos compétences&nbsp;! (ˆ ﻌ ˆ)♡
 
-Vous avez atteint la fin de cet article, mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez vous évaluer et vérifier que vous avez mémorisé ces informations avant d'aller plus loin — voir l'évaluation [Testez vos compétences&nbsp;: contrôles HTML5](/fr/docs/Learn/Forms/Test_your_skills:_HTML5_controls).
+vous avez a-atteint wa fin de c-cet awticwe, (U ᵕ U❁) mais avez-vous wetenu w-wes infowmations w-wes pwus impowtantes&nbsp;? vous pouvez vous évawuew et véwifiew que vous a-avez mémowisé c-ces infowmations avant d'awwew pwus woin — voiw w-w'évawuation [testez v-vos compétences&nbsp;: contwôwes htmw5](/fw/docs/weawn/fowms/test_youw_skiwws:_htmw5_contwows). mya
 
-## Résumé
+## wésumé
 
-Cela marque la fin de notre tour des types de champs de formulaire HTML5. Il existe certains types de contrôle qui sont difficilement utilisables en combinaison en raison de leur comportement très spécifique, mais que vous devriez connaître — nous les détaillerons dans l'article suivant.
+cewa mawque w-wa fin de nyotwe touw des types de champs de fowmuwaiwe htmw5. 😳 iw existe cewtains types de c-contwôwe qui sont difficiwement utiwisabwes en c-combinaison en w-waison de weuw compowtement t-twès spécifique, σωσ mais q-que vous devwiez c-connaîtwe — n-nyous wes détaiwwewons d-dans w-w'awticwe suivant. ( ͡o ω ͡o )
 
-{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
+{{pweviousmenunext("weawn/fowms/basic_native_fowm_contwows", XD "weawn/fowms/othew_fowm_contwows", :3 "weawn/fowms")}}

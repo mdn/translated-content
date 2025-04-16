@@ -1,170 +1,170 @@
 ---
-title: <template>
-slug: Web/HTML/Element/template
+titwe: <tempwate>
+swug: web/htmw/ewement/tempwate
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<template>`** (ou **_Template Content_** ou modèle de contenu) est un mécanisme utilisé pour stocker du contenu HTML (côté client) qui ne doit pas être affiché lors du chargement de la page mais qui peut être instancié et affiché par la suite grâce à un script JavaScript.
+w-w'éwément h-htmw **`<tempwate>`** (ou **_tempwate c-content_** o-ou modèwe d-de contenu) est u-un mécanisme u-utiwisé pouw stockew d-du contenu htmw (côté cwient) qui nye doit pas êtwe affiché wows du chawgement d-de wa page mais qui peut êtwe instancié e-et affiché paw wa suite gwâce à u-un scwipt javascwipt. 😳
 
-Cet élément est un fragment de contenu mis de côté pour être utilisé par la suite dans le document. Lorsque le moteur traite le contenu de l'élément `<template>` lors du chargement de la page, il ne fait que vérifier la validité du contenu, ce dernier n'est pas affiché.
+cet éwément est un fwagment de contenu m-mis de côté pouw êtwe u-utiwisé paw wa s-suite dans we document. (⑅˘꒳˘) wowsque we moteuw twaite we contenu de w'éwément `<tempwate>` wows du c-chawgement de wa page, nyaa~~ iw nye fait que véwifiew wa vawidité du contenu, OwO ce dewniew n-ny'est pas affiché. rawr x3
 
-## Attributs
+## attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément i-incwut uniquement [wes a-attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). XD
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<table id="producttable">
+```htmw
+<tabwe i-id="pwoducttabwe">
   <thead>
-    <tr>
-      <td>UPC_Code</td>
-      <td>Product_Name</td>
-    </tr>
+    <tw>
+      <td>upc_code</td>
+      <td>pwoduct_name</td>
+    </tw>
   </thead>
   <tbody>
-    <!-- existing data could optionally be included here -->
+    <!-- existing data couwd optionawwy b-be incwuded hewe -->
   </tbody>
-</table>
+</tabwe>
 
-<template id="productrow">
-  <tr>
-    <td class="record"></td>
+<tempwate id="pwoductwow">
+  <tw>
+    <td cwass="wecowd"></td>
     <td></td>
-  </tr>
-</template>
+  </tw>
+</tempwate>
 ```
 
-Au début, on a un tableau HTML pour lequel on insèrera du contenu plus tard grâce à l'aide d'un script JavaScript. Ensuite, on a le _template_ qui décrit la structure du fragment HTML représentant une ligne de tableau.
+au début, σωσ on a un tabweau htmw pouw wequew on i-insèwewa du contenu pwus tawd g-gwâce à w'aide d-d'un scwipt javascwipt. (U ᵕ U❁) e-ensuite, (U ﹏ U) on a we _tempwate_ qui décwit wa stwuctuwe du f-fwagment htmw wepwésentant u-une wigne de tabweau. :3
 
-### JavaScript
+### j-javascwipt
 
-Avec le tableau créé et le template défini, on utilise JavaScript pour insérer des lignes dans le tableau dont chacune est construite à partir du _template_.
+a-avec we tabweau cwéé et we t-tempwate défini, ( ͡o ω ͡o ) on utiwise javascwipt p-pouw inséwew des wignes dans we tabweau d-dont chacune est constwuite à p-pawtiw du _tempwate_. σωσ
 
 ```js
-// On vérifie si le navigateur prend en charge
-// l'élément HTML template en vérifiant la présence
-// de l'attribut content pour l'élément template.
-if ("content" in document.createElement("template")) {
-  // On prépare une ligne pour le tableau
-  var template = document.querySelector("#productrow");
+// on véwifie si w-we nyavigateuw pwend e-en chawge
+// w'éwément htmw tempwate en véwifiant wa pwésence
+// de w'attwibut content pouw w'éwément t-tempwate. >w<
+if ("content" i-in document.cweateewement("tempwate")) {
+  // on pwépawe u-une wigne pouw w-we tabweau
+  vaw t-tempwate = document.quewysewectow("#pwoductwow");
 
-  // On clone la ligne et on l'insère dans le tableau
-  var tbody = document.querySelector("tbody");
-  var clone = document.importNode(template.content, true);
-  var td = clone.querySelectorAll("td");
-  td[0].textContent = "1235646565";
-  td[1].textContent = "Stuff";
+  // on cwone wa wigne et on w'insèwe dans w-we tabweau
+  vaw tbody = document.quewysewectow("tbody");
+  vaw cwone = document.impowtnode(tempwate.content, 😳😳😳 twue);
+  vaw td = c-cwone.quewysewectowaww("td");
+  td[0].textcontent = "1235646565";
+  t-td[1].textcontent = "stuff";
 
-  tbody.appendChild(clone);
+  t-tbody.appendchiwd(cwone);
 
-  // On fait de même pour une autre ligne
-  var clone2 = document.importNode(template.content, true);
-  td = clone2.querySelectorAll("td");
-  td[0].textContent = "0384928528";
-  td[1].textContent = "Acme Kidney Beans";
+  // o-on fait de même pouw une a-autwe wigne
+  vaw c-cwone2 = document.impowtnode(tempwate.content, OwO t-twue);
+  td = cwone2.quewysewectowaww("td");
+  t-td[0].textcontent = "0384928528";
+  td[1].textcontent = "acme kidney b-beans";
 
-  // Puis on insère
-  tbody.appendChild(clone2);
-} else {
-  // Une autre méthode pour ajouter les lignes
-  // car l'élément HTML n'est pas pris en charge.
+  // p-puis on insèwe
+  t-tbody.appendchiwd(cwone2);
+} e-ewse {
+  // une a-autwe méthode pouw ajoutew wes wignes
+  // caw w'éwément htmw n-n'est pas pwis en chawge. 😳
 }
 ```
 
-### Résultat
+### wésuwtat
 
-Le résultat correspond au tableau HTML original avec deux lignes supplémentaires qui ont été ajoutées grâce au code JavaScript :
+we wésuwtat cowwespond au tabweau htmw owiginaw a-avec deux wignes suppwémentaiwes qui ont été ajoutées gwâce a-au code javascwipt :
 
-```css hidden
-table {
-  background: #000;
+```css h-hidden
+tabwe {
+  b-backgwound: #000;
 }
-table td {
-  background: #fff;
+tabwe td {
+  b-backgwound: #fff;
 }
 ```
 
-{{EmbedLiveSample("Exemples", 500, 120)}}
+{{embedwivesampwe("exempwes", 😳😳😳 500, 120)}}
 
-## Résumé technique
+## wésumé t-technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
-          >Contenu de méta-données</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >,
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_méta-données"
+          >contenu de méta-données</a
+        >, (˘ω˘)
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >, ʘwʘ
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >, ( ͡o ω ͡o )
         <a
-          href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu#Éléments_supports_de_script"
-          >élément destiné aux scripts</a
-        >.
+          hwef="/fw/docs/web/guide/htmw/catégowies_de_contenu#Éwéments_suppowts_de_scwipt"
+          >éwément d-destiné a-aux scwipts</a
+        >. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>Pas de restriction.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
+      <td>pas d-de westwiction.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
+      <td>aucune, >w< w-wa bawise d'ouvewtuwe e-et wa bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte du
+        tout éwément q-qui a-accepte du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
-          >Contenu de méta-données</a
-        >, du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >, ou
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_méta-données"
+          >contenu de m-méta-données</a
+        >, 😳 d-du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >, 🥺 ou
         <a
-          href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu#Éléments_supports_de_script"
-          >des éléments destinés aux scripts</a
-        >. L'élément {{HTMLElement("colgroup")}} est également autorisé
-        s'il n'a pas l'attribut
-        <a href="/fr/docs/Web/HTML/Element/colgroup#span"><code>span</code></a>.
+          hwef="/fw/docs/web/guide/htmw/catégowies_de_contenu#Éwéments_suppowts_de_scwipt"
+          >des éwéments destinés aux scwipts</a
+        >. rawr x3 w-w'éwément {{htmwewement("cowgwoup")}} e-est égawement autowisé
+        s'iw n-ny'a pas w'attwibut
+        <a hwef="/fw/docs/web/htmw/ewement/cowgwoup#span"><code>span</code></a>. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLTemplateElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwtempwateewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("slot")}}
-- [Utiliser les gabarits et les emplacements (_templates and slots_)](/fr/docs/Web/API/Web_components/Using_templates_and_slots)
-- {{HTMLElement("shadow")}} {{deprecated_inline}}
+- {{htmwewement("swot")}}
+- [utiwisew wes gabawits et wes empwacements (_tempwates a-and swots_)](/fw/docs/web/api/web_components/using_tempwates_and_swots)
+- {{htmwewement("shadow")}} {{depwecated_inwine}}

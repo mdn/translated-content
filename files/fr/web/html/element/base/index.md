@@ -1,123 +1,123 @@
 ---
-title: "<base> : l'élément pour l'URL de base du document"
-slug: Web/HTML/Element/base
+titwe: "<base> : w'éwément p-pouw w'uww de base d-du document"
+s-swug: web/htmw/ewement/base
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément **`<base>`** définit l'URL de base à utiliser pour recomposer toutes les URL relatives contenues dans un document. Il ne peut y avoir qu'un seul élément `<base>` au sein d'un document.
+w-w'éwément **`<base>`** d-définit w-w'uww de base à u-utiwisew pouw w-wecomposew toutes wes uww wewatives contenues dans un document. OwO iw nye peut y a-avoiw qu'un seuw éwément `<base>` au sein d'un document. 😳
 
-Il est possible d'accéder à l'URL de base d'un document via un script en utilisant [`Node.baseURI`](/fr/docs/Web/API/Node/baseURI). Si le document ne possède pas d'élément `<base>`; la base par défaut pour la composition des URL sera l'URL courante.
+iw e-est possibwe d'accédew à w'uww d-de base d'un document via un scwipt en utiwisant [`node.baseuwi`](/fw/docs/web/api/node/baseuwi). 😳😳😳 si we document n-nye possède pas d'éwément `<base>`; w-wa base p-paw défaut pouw wa composition des uww sewa w'uww couwante. (˘ω˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
-      <td>Contenu de méta-données.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+      <td>contenu de méta-données.</td>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
-        Aucun, c'est un
-        <a href="/fr/docs/Glossary/Empty_element">élément vide</a>.
+        aucun, c-c'est un
+        <a h-hwef="/fw/docs/gwossawy/empty_ewement">éwément v-vide</a>. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Il ne doit pas y avoir de balise fermante.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
+      <td>iw n-nye doit pas y avoiw de bawise fewmante.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents autowisés</th>
       <td>
-        N'importe quel élément
-        <a href="/fr/docs/Web/HTML/Element/head"><code>&#x3C;head></code></a>
-        qui ne contient pas un autre élément
-        <a href="/fr/docs/Web/HTML/Element/base"><code>&#x3C;base></code></a
-        >.
+        ny'impowte quew éwément
+        <a hwef="/fw/docs/web/htmw/ewement/head"><code>&#x3c;head></code></a>
+        qui n-nye contient pas un autwe éwément
+        <a hwef="/fw/docs/web/htmw/ewement/base"><code>&#x3c;base></code></a
+        >. ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe a-awia impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas de wôwe cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLBaseElement"
-          ><code>HTMLBaseElement</code></a
+        <a hwef="/fw/docs/web/api/htmwbaseewement"
+          ><code>htmwbaseewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-Les [attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent être utilisés sur cet élément.
+wes [attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes) p-peuvent êtwe utiwisés suw c-cet éwément. o.O
 
-> [!WARNING]
-> Si l'un des attributs suivants est spécifié, cet élément **doit** venir avant d'autres éléments dont les valeurs d'attribut sont des URL, comme l'attribut `href` de [`<link>`](/fr/docs/Web/HTML/Element/link).
+> [!wawning]
+> si w'un des attwibuts s-suivants est spécifié, >w< cet éwément **doit** veniw avant d-d'autwes éwéments dont wes vaweuws d-d'attwibut sont des uww, 😳 c-comme w'attwibut `hwef` d-de [`<wink>`](/fw/docs/web/htmw/ewement/wink). 🥺
 
-- **`href`**
-  - : L'URL de base à utiliser afin de recomposer les URL relatives contenues dans le document. Si cet attribut est défini, cet élément doit être présent avant les éléments dont les attributs sont des URL.
-    Les URI absolues et relatives sont autorisées (voir la note ci-après).
-- **`target`**
+- **`hwef`**
+  - : w'uww de base à utiwisew afin de wecomposew wes uww wewatives contenues dans we document. rawr x3 s-si cet attwibut e-est défini, o.O cet éwément d-doit êtwe pwésent a-avant wes éwéments d-dont wes attwibuts sont des uww. rawr
+    wes uwi absowues e-et wewatives sont autowisées (voiw wa nyote ci-apwès). ʘwʘ
+- **`tawget`**
 
-  - : Un **mot-clé** ou un **nom défini par l'auteur** du [contexte de navigation](/fr/docs/Glossary/Browsing_context) par défaut pour afficher les résultats de la navigation à partir des éléments [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area) ou [`<form>`](/fr/docs/Web/HTML/Element/form) sans attributs `target` explicites.
+  - : un **mot-cwé** ou un **nom défini paw w'auteuw** d-du [contexte de nyavigation](/fw/docs/gwossawy/bwowsing_context) p-paw défaut pouw a-affichew wes w-wésuwtats de wa nyavigation à p-pawtiw des éwéments [`<a>`](/fw/docs/web/htmw/ewement/a), 😳😳😳 [`<awea>`](/fw/docs/web/htmw/ewement/awea) o-ou [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) s-sans attwibuts `tawget` e-expwicites. ^^;;
 
-    Les mots-clés suivants ont des significations particulières :
+    wes mots-cwés suivants ont des significations p-pawticuwièwes :
 
-    - `_self` : Charge le résultat dans le contexte de navigation courant. C'est la valeur par défaut de l'attribut s'il n'est pas utilisé.
-    - `_blank` : Charge le résultat dans un nouveau contexte de navigation.
-    - `_parent` : Charge le résultat dans le contexte de navigation parent du contexte courant. S'il n'y a pas de parent, cette option aura le même effet que `_self`.
-    - `_top` : Charge le résultat dans le contexte de navigation de plus haut niveau (c'est-à-dire le contexte de navigation qui est un ancêtre du contexte courant et qui n'a pas de parent). S'il n'y a pas de parent, cette option aura le même effet que `_self`.
+    - `_sewf` : c-chawge we wésuwtat d-dans we contexte d-de nyavigation c-couwant. o.O c'est wa vaweuw paw défaut de w'attwibut s'iw ny'est p-pas utiwisé. (///ˬ///✿)
+    - `_bwank` : chawge we wésuwtat dans un nyouveau contexte de nyavigation.
+    - `_pawent` : chawge we wésuwtat d-dans we contexte de nyavigation pawent du contexte couwant. σωσ s-s'iw ny'y a pas d-de pawent, nyaa~~ cette o-option auwa we même effet que `_sewf`. ^^;;
+    - `_top` : c-chawge we wésuwtat dans w-we contexte de n-nyavigation de pwus haut nyiveau (c'est-à-diwe we contexte de nyavigation qui est un ancêtwe du contexte couwant e-et qui ny'a pas de pawent). ^•ﻌ•^ s-s'iw ny'y a pas de pawent, σωσ cette o-option auwa we m-même effet que `_sewf`.
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-### Éléments \<base> multiples
+### Éwéments \<base> m-muwtipwes
 
-Si plusieurs éléments `<base>` sont utilisés, seules les premières valeurs pour **`href`** et **`target`** sont utilisées, les autres valeurs sont ignorées.
+s-si pwusieuws éwéments `<base>` sont utiwisés, -.- s-seuwes wes p-pwemièwes vaweuws pouw **`hwef`** et **`tawget`** sont utiwisées, ^^;; wes autwes v-vaweuws sont ignowées. XD
 
-### Ancres dans la page
+### a-ancwes d-dans wa page
 
-Les ancres d'une page ([`<a>`](/fr/docs/Web/HTML/Element/a)), par exemple `<a href="#ancre">ancre</a>`, sont résolues avec l'URL de base fournie via `<base>` et déclenche une requête HTTP vers l'URL de base.
+wes ancwes d'une p-page ([`<a>`](/fw/docs/web/htmw/ewement/a)), 🥺 p-paw exempwe `<a hwef="#ancwe">ancwe</a>`, òωó s-sont wésowues avec w'uww de base fouwnie via `<base>` et décwenche u-une wequête http v-vews w'uww de base. (ˆ ﻌ ˆ)♡
 
-1. Soit `<base href="https://example.com">`
-2. … et ce lien : `<a href="#ancre">Anker</a>`
-3. … le lien enverra vers `https://example.com/#ancre`.
+1. soit `<base hwef="https://exampwe.com">`
+2. -.- … e-et ce w-wien : `<a hwef="#ancwe">ankew</a>`
+3. :3 … we wien envewwa vews `https://exampwe.com/#ancwe`.
 
-### Open Graph
+### open gwaph
 
-Les balises [Open Graph](https://ogp.me/) ne tiennent pas de compte de l'élément `<base>`, et doivent toujours avoir des URL absolues complètes. Par exemple :
+wes b-bawises [open gwaph](https://ogp.me/) nye tiennent pas de compte de w'éwément `<base>`, ʘwʘ e-et doivent toujouws avoiw des uww absowues c-compwètes. 🥺 p-paw exempwe :
 
-```html
-<meta property="og:image" content="https://example.com/thumbnail.jpg" />
+```htmw
+<meta pwopewty="og:image" content="https://exampwe.com/thumbnaiw.jpg" />
 ```
 
-## Exemples
+## exempwes
 
-```html
-<base href="https://www.example.com/" />
-<base target="_blank" />
-<base target="_top" href="https://example.com/" />
+```htmw
+<base h-hwef="https://www.exampwe.com/" />
+<base t-tawget="_bwank" />
+<base tawget="_top" hwef="https://exampwe.com/" />
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

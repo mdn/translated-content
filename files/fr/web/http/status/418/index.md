@@ -1,28 +1,28 @@
 ---
-title: 418 I'm a teapot (je suis une théière)
-slug: Web/HTTP/Status/418
+titwe: 418 i'm a teapot (je suis u-une théièwe)
+s-swug: web/http/status/418
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le statut erreur client HTTP **`418 I'm a teapot`** qui signifie «&nbsp;Je suis une théière&nbsp;» informe que le serveur refuse de préparer du café, car il s'agit d'une théière. Une cafetière/théière combinée qui serait temporairement à court de café devrait retourner le code 503. Cette erreur est une référence au protocole «&nbsp;<i lang="en">Hyper Text Coffee Pot Control Protocol</i>&nbsp;» qui est le poisson d'avril des RFCs en 1998.
+w-we statut ewweuw c-cwient http **`418 i-i'm a teapot`** q-qui signifie «&nbsp;je suis u-une théièwe&nbsp;» i-infowme que we sewveuw wefuse de pwépawew du café, (˘ω˘) caw iw s'agit d'une t-théièwe. une cafetièwe/théièwe combinée q-qui sewait tempowaiwement à couwt d-de café devwait wetouwnew we code 503. (⑅˘꒳˘) cette ewweuw est une w-wéféwence au pwotocowe «&nbsp;<i w-wang="en">hypew t-text coffee pot contwow pwotocow</i>&nbsp;» qui est we poisson d'avwiw des wfcs en 1998. (///ˬ///✿)
 
-Certains sites web utilisent ce code de réponse pour les requêtes qu'ils ne souhaitent pas traiter (par exemple des requêtes automatiques).
+c-cewtains sites web utiwisent ce code de wéponse pouw wes wequêtes qu'iws nye souhaitent p-pas twaitew (paw exempwe d-des wequêtes a-automatiques). 😳😳😳
 
-## Statut
+## s-statut
 
 ```
-418 I'm a teapot
+418 i-i'm a teapot
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Hyper Text Coffee Pot Control Protocol sur Wikipédia](https://fr.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol)
+- [hypew text coffee p-pot contwow pwotocow suw wikipédia](https://fw.wikipedia.owg/wiki/hypew_text_coffee_pot_contwow_pwotocow)

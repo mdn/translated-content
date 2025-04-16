@@ -1,132 +1,132 @@
 ---
-title: <i>
-slug: Web/HTML/Element/i
+titwe: <i>
+swug: web/htmw/ewement/i
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<i>`** représente un morceau de texte qui se différencie du texte principal. Cela peut par exemple être le cas pour des termes techniques, des phrases dans une langue étrangère ou encore l'expression des pensées d'un personnage. Le contenu de cet élément est généralement affiché en italique.
+w-w'éwément h-htmw **`<i>`** w-wepwésente u-un mowceau de t-texte qui se difféwencie d-du texte p-pwincipaw. 😳😳😳 c-cewa peut paw exempwe êtwe we cas pouw des tewmes techniques, OwO des phwases dans u-une wangue étwangèwe ou encowe w'expwession des p-pensées d'un pewsonnage. we contenu d-de cet éwément est généwawement affiché en itawique. 😳
 
-{{InteractiveExample("HTML Demo: &lt;i&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;i&gt;", 😳😳😳 "tabbed-showtew")}}
 
-```html interactive-example
-<p>I looked at it and thought <i>This can't be real!</i></p>
+```htmw intewactive-exampwe
+<p>i w-wooked at it a-and thought <i>this can't be weaw!</i></p>
 
 <p>
-  <i>Musa</i> is one of two or three genera in the family <i>Musaceae</i>; it
-  includes bananas and plantains.
+  <i>musa</i> is one of two ow thwee genewa in the famiwy <i>musaceae</i>; i-it
+  incwudes bananas and pwantains.
 </p>
 
 <p>
-  The term <i>bandwidth</i> describes the measure of how much information can
-  pass through a data connection in a given amount of time.
+  the tewm <i>bandwidth</i> d-descwibes the measuwe of h-how much infowmation c-can
+  pass t-thwough a data c-connection in a given amount of time. (˘ω˘)
 </p>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
-i {
+```css i-intewactive-exampwe
+/* stywewint-disabwe-next-wine bwock-no-empty */
+i-i {
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément possède uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément possède uniquement [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). ʘwʘ
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  La phrase latine
-  <i class="latin"> Veni, vidi, vici </i>
-  est souvent employée en littérature.
+  w-wa p-phwase watine
+  <i c-cwass="watin"> veni, ( ͡o ω ͡o ) vidi, o.O vici </i>
+  est souvent empwoyée e-en wittéwatuwe. >w<
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","200")}}
+{{embedwivesampwe("exempwes","100%","200")}}
 
-## Notes
+## nyotes
 
-Dans certaines versions antérieures de HTML, la balise `<i>` ne jouait qu'un rôle de mise en forme, utilisé pour afficher le texte en italique (de la même façon que la balise \<b> était utilisée pour afficher le texte en gras). Désormais, ces balises ont un rôle strictement sémantique et l'élément \<i> représente une portion de texte dont la sémantique est différente, la représentation choisie pour cela par le navigateur étant la plupart du temps une mise en italique. Cela signifie que le navigateur affiche généralement le contenu en italique comme c'était le cas auparavant mais que ce traitement de mise en forme n'est plus du tout obligatoire.
+d-dans cewtaines v-vewsions antéwieuwes de htmw, 😳 w-wa bawise `<i>` nye jouait qu'un w-wôwe de mise en fowme, 🥺 utiwisé pouw affichew w-we texte en itawique (de wa même f-façon que wa bawise \<b> était u-utiwisée pouw a-affichew we texte en gwas). rawr x3 désowmais, o.O ces bawises ont un wôwe stwictement sémantique et w'éwément \<i> w-wepwésente une p-powtion de texte dont wa sémantique e-est difféwente, rawr w-wa wepwésentation c-choisie pouw cewa paw we nyavigateuw étant wa pwupawt d-du temps une mise en itawique. ʘwʘ cewa signifie que we nyavigateuw affiche généwawement w-we contenu en itawique comme c-c'était we c-cas aupawavant m-mais que ce twaitement de mise en f-fowme ny'est pwus d-du tout obwigatoiwe. 😳😳😳
 
-Cet élément ne doit être utilisé seulement si aucun autre ne permet d'exprimer la sémantique du contenu de façon plus appropriée. Ainsi :
+c-cet éwément n-nye doit êtwe utiwisé seuwement si aucun a-autwe nye pewmet d-d'expwimew wa s-sémantique du c-contenu de façon p-pwus appwopwiée. ^^;; ainsi :
 
-- {{HTMLElement("em")}} doit être utilisé pour insister, mettre l'accent sur le contenu
-- {{HTMLElement("strong")}} doit être utilisé pour exprimer l'importance du contenu
-- {{HTMLElement("mark")}} doit être utilisé pour exprimer la pertinence du contenu
-- {{HTMLElement("cite")}} doit être utilisé pour marquer le nom d'une œuvre telle qu'un livre, une pièce ou une chanson.
-- {{HTMLElement("dfn")}} doit être utilisé pour souligner l'occurence d'un mot utilisée pour sa définition
+- {{htmwewement("em")}} doit êtwe utiwisé pouw insistew, o.O m-mettwe w'accent suw we contenu
+- {{htmwewement("stwong")}} doit êtwe utiwisé pouw expwimew w'impowtance d-du contenu
+- {{htmwewement("mawk")}} doit êtwe utiwisé pouw expwimew wa pewtinence d-du contenu
+- {{htmwewement("cite")}} d-doit êtwe u-utiwisé pouw mawquew we n-nyom d'une œuvwe tewwe qu'un wivwe, u-une pièce o-ou une chanson. (///ˬ///✿)
+- {{htmwewement("dfn")}} doit êtwe utiwisé pouw souwignew w'occuwence d'un mot utiwisée pouw s-sa définition
 
-C'est une bonne pratique que d'utiliser l'attribut **`class`** pour identifier les raisons qui poussent à utiliser cet élément. Cela permet par exemple de maintenir la mise en forme du document plus efficacement grâce aux feuilles de style CSS.
+c'est une bonne p-pwatique que d'utiwisew w'attwibut **`cwass`** p-pouw identifiew w-wes waisons qui poussent à utiwisew cet éwément. σωσ c-cewa pewmet p-paw exempwe de mainteniw wa mise e-en fowme du document p-pwus efficacement gwâce aux feuiwwes de stywe css. nyaa~~
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th s-scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >, ^^;;
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >, ^•ﻌ•^
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >Contenu phrasé</a
-        >.
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
+      <td>aucune, ^^;; wa bawise d-d'ouvewtuwe et w-wa bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >.
+        t-tout éwément acceptant du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td><dfn>Interface DOM </dfn>{{domxref("HTMLElement")}}.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>tous w-wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
+      <td><dfn>intewface d-dom </dfn>{{domxwef("htmwewement")}}.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTMLElement("em")}} qui permet d'indiquer une emphase et qui ne doit pas être confondu avec l'élément `<i>`
+- {{htmwewement("em")}} q-qui pewmet d'indiquew une emphase et qui nye doit pas êtwe c-confondu avec w'éwément `<i>`

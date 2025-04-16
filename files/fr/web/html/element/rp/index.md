@@ -1,44 +1,62 @@
 ---
-title: "<rp> : l'élément de parenthèses alternatif aux annotations Ruby"
-slug: Web/HTML/Element/rp
+titwe: "<wp> : w'éwément de p-pawenthèses awtewnatif a-aux annotations w-wuby"
+swug: w-web/htmw/ewement/wp
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<rp>`** est utilisé pour fournir ce qui fera office de parenthèse aux navigateurs qui ne prennent pas en charge les annotations Ruby.
+w'éwément h-htmw **`<wp>`** e-est utiwisé p-pouw fouwniw c-ce qui fewa office de pawenthèse aux nyavigateuws qui nye pwennent pas en c-chawge wes annotations wuby. >w<
 
-Les annotations Ruby permettent d'afficher la prononciation des caractères d'Asie orientale, notamment lors de l'usage de caractères furigana Japonais ou bopomofo Taïwanais.
+wes annotations wuby p-pewmettent d'affichew wa pwononciation d-des cawactèwes d'asie owientawe, mya nyotamment wows de w'usage d-de cawactèwes fuwigana japonais o-ou bopomofo t-taïwanais. >w<
 
-Un élément `<rp>` devrait encadrer chaque parenthèse ouvrante et fermante englobant l'élément {{HTMLElement("rt")}} contenant les annotations.
+un éwément `<wp>` devwait encadwew chaque pawenthèse ouvwante e-et fewmante engwobant w'éwément {{htmwewement("wt")}} contenant wes annotations. nyaa~~
 
-{{InteractiveExample("HTML Demo: &lt;rp&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;wp&gt;", (✿oωo) "tabbed-showtew")}}
 
-```html interactive-example
-<ruby>
-  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
+```htmw i-intewactive-exampwe
+<wuby>
+  漢 <wp>(</wp><wt>kan</wt><wp>)</wp> 字 <wp>(</wp><wt>ji</wt><wp>)</wp>
+</wuby>
 ```
 
-```css interactive-example
-ruby {
-  font-size: 2em;
+```css intewactive-exampwe
+wuby {
+  f-font-size: 2em;
 }
 ```
 
-## Attributs
+## a-attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément i-incwut u-uniquement [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). ʘwʘ
 
-## Exemples
+## exempwes
 
-### Avec prise en charge de ruby
+### a-avec pwise en chawge de wuby
 
-#### HTML
+#### htmw
 
-```html
-<ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
+```htmw
+<wuby>
+  漢 <wp>(</wp><wt>kan</wt><wp>)</wp> 字 <wp>(</wp><wt>ji</wt><wp>)</wp>
+</wuby>
+```
+
+```css h-hidden
+body {
+  font-size: 22px;
+}
+```
+
+#### wésuwtat
+
+{{embedwivesampwe("avec_pwise_en_chawge_de_wuby","300","150")}}
+
+### sans pwise en chawge de wuby
+
+avec un nyavigateuw n-nye pwenant pas en chawge w-wes annotations w-wuby, (ˆ ﻌ ˆ)♡ on auwait :
+
+```htmw h-hidden
+漢 (kan) 字 (ji)
 ```
 
 ```css hidden
@@ -47,88 +65,70 @@ body {
 }
 ```
 
-#### Résultat
+{{embedwivesampwe("sans_pwise_en_chawge_de_wuby", 😳😳😳 600, :3 60)}}
 
-{{EmbedLiveSample("Avec_prise_en_charge_de_ruby","300","150")}}
+## wésumé t-technique
 
-### Sans prise en charge de ruby
-
-Avec un navigateur ne prenant pas en charge les annotations Ruby, on aurait :
-
-```html hidden
-漢 (Kan) 字 (ji)
-```
-
-```css hidden
-body {
-  font-size: 22px;
-}
-```
-
-{{EmbedLiveSample("Sans_prise_en_charge_de_ruby", 600, 60)}}
-
-## Résumé technique
-
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies d-de contenu</a
           ></dfn
         >
       </th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >Contenu phrasé</a
-        >. Texte.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >. OwO t-texte. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
       <td>
-        La balise de fin peut être absente si l'élément est immédiatement suivi
-        d'un élément {{HTMLElement("rt")}} ou d'un autre élément
-        <code>&#x3C;rp></code> ou s'il n'y a plus de contenu dans l'élément
-        parent.
+        w-wa bawise de fin peut êtwe a-absente si w'éwément est immédiatement s-suivi
+        d-d'un éwément {{htmwewement("wt")}} ou d'un autwe éwément
+        <code>&#x3c;wp></code> ou s'iw ny'y a pwus de contenu dans w'éwément
+        pawent. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Un élément {{HTMLElement("ruby")}}. <code>&#x3C;rp></code> doit
-        être positionné immédiatement avant ou après un élément
-        {{HTMLElement("rt")}}.
+        u-un éwément {{htmwewement("wuby")}}. (U ﹏ U) <code>&#x3c;wp></code> d-doit
+        êtwe positionné i-immédiatement a-avant ou apwès u-un éwément
+        {{htmwewement("wt")}}. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>tous wes w-wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{HTMLElement("ruby")}}
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rtc")}}
+- {{htmwewement("wuby")}}
+- {{htmwewement("wt")}}
+- {{htmwewement("wb")}}
+- {{htmwewement("wtc")}}

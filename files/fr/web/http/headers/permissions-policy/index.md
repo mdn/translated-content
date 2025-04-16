@@ -1,146 +1,146 @@
 ---
-title: Feature-Policy
-slug: Web/HTTP/Headers/Permissions-Policy
+titwe: featuwe-powicy
+swug: web/http/headews/pewmissions-powicy
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{httpsidebaw}}{{seecompattabwe}}
 
-> [!WARNING]
-> Cet en-tête a maintenant été renommé `Permissions-Policy` dans la spécification, et cet article sera mis à jour pour refléter ce changement.
+> [!wawning]
+> c-cet en-tête a-a maintenant été w-wenommé `pewmissions-powicy` d-dans wa s-spécification, rawr x3 e-et cet awticwe sewa m-mis à jouw p-pouw wefwétew ce changement. ( ͡o ω ͡o )
 
-L'en-tête HTTP **`Feature-Policy`** fournit un mécanisme pour permettre ou interdire l'utilisation de fonctionnalités du navigateur pour le document courant et le contenu que ce dernier embarquerait via des éléments [`<iframe>`](/fr/docs/Web/HTML/Element/iframe).
+w'en-tête http **`featuwe-powicy`** fouwnit un mécanisme pouw pewmettwe o-ou intewdiwe w'utiwisation de fonctionnawités d-du nyavigateuw pouw we document c-couwant et we contenu que ce dewniew embawquewait via des éwéments [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame). :3
 
-Pour plus d'informations, voir l'article principal sur [les règles de gestion des fonctionnalités (<i lang="en">Feature Policy</i>)](/fr/docs/Web/HTTP/Permissions_Policy).
+p-pouw pwus d'infowmations, v-voiw w'awticwe p-pwincipaw suw [wes wègwes de gestion des fonctionnawités (<i wang="en">featuwe p-powicy</i>)](/fw/docs/web/http/pewmissions_powicy). mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td><a href="/fr/docs/Glossary/Response_header">En-tête de réponse</a></td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="/fr/docs/Glossary/Forbidden_header_name">Nom d'en-tête interdit</a></th>
-      <td>Oui</td>
-    </tr>
+    <tw>
+      <th scope="wow">type d'en-tête</th>
+      <td><a hwef="/fw/docs/gwossawy/wesponse_headew">en-tête d-de wéponse</a></td>
+    </tw>
+    <tw>
+      <th scope="wow"><a h-hwef="/fw/docs/gwossawy/fowbidden_headew_name">nom d-d'en-tête i-intewdit</a></th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
-
-```http
-Feature-Policy: <directive> <allowlist>
-```
-
-- `<directive>`
-  - : La directive de fonctionnalité à laquelle s'applique la liste d'autorisation `allowlist`. Voir [la section Directives](#directives) ci-après pour les noms de directive autorisés.
-- `<allowlist>`
-
-  - : Une liste d'autorisation contenant des origines, décrites par une ou plusieurs des valeurs suivantes, et séparées par des espaces&nbsp;:
-
-    - `*`&nbsp;: La fonctionnalité est autorisée pour ce document ainsi que l'ensemble des contextes de navigation imbriqués (via les éléments `<iframe>`) quelles que soient leurs origines.
-    - `'self'`&nbsp;: La fonctionnalité sera autorisée dans ce document et pour tous les contextes de navigation imbriqués de la même origine. La fonctionnalité n'est pas autorisée pour les contextes de navigation d'autres origines.
-    - `'src'`&nbsp;: Pour l'attribut `allow` d'une <i lang="en">iframe</i> uniquement. La fonctionnalité sera autorisée pour cette <i lang="en">iframe</i> uniquement si le document qui y est chargé provient de la même origine que celle indiquée par l'attribut [`src`](/fr/docs/Web/HTML/Element/iframe#attributs) de l'élément HTML.
-
-      > [!NOTE]
-      > L'origine `'src'` est uniquement utilisée pour la liste `allow` d'une <i lang="en">iframe</i>. Pour ces éléments, il s'agit de la valeur par défaut pour `allowlist`.
-
-    - `'none'`&nbsp;: La fonctionnalité est désactivée pour le document (niveau le plus haut) et les contextes de navigation imbriqués.
-    - `<origin(s)>`&nbsp;: La fonctionnalité est autorisée pour des origines distinctes (par exemple, `https://example.com`). Lorsqu'on indique plusieurs origines, celles-ci doivent être séparées par un espace.
-
-    Les valeurs `*` (autorisation pour toutes les origines) ou `'none'` (désactivation pour toutes les origines) peuvent être utilisées seules. `'self'` et `'src'` peuvent, quant à elles, être utilisées avec une ou plusieurs origines.
-
-    Chaque fonctionnalité en question possède une liste d'autorisation par défaut qui est&nbsp;: `*`, `'self'`, ou `'none'`.
-
-## Directives
-
-- [`accelerometer`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer)
-  - : Contrôle si le document courant est autorisé à recueillir des informations à propos de l'accélération de l'appareil au moyen de l'interface [`Accelerometer`](/fr/docs/Web/API/Accelerometer).
-- [`ambient-light-sensor`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor)
-  - : Contrôle si le document courant est autorisé à recueillir des informations à propos de la luminosité ambiante de l'appareil au moyen de l'interface [`AmbientLightSensor`](/fr/docs/Web/API/AmbientLightSensor).
-- [`autoplay`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/autoplay)
-  - : Contrôle si le document courant est autorisé à jouer automatiquement des médias chargés au moyen de l'interface [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement). Quand cette fonctionnalité est désactivée et qu'il n'y a pas eu d'action de la part de l'utilisatrice ou l'utilisateur, la promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) retournée par [`HTMLMediaElement.play()`](/fr/docs/Web/API/HTMLMediaElement/play) sera rejetée avec une exception [`DOMException`](/fr/docs/Web/API/DOMException). L'attribut `autoplay` sur les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video) sera ignoré.
-- [`battery`](/fr/docs/Web/HTTP/Headers/Feature-Policy/battery)
-  - : Contrôle si l'utilisation de l'[API Battery Status](/fr/docs/Web/API/Battery_Status_API) est autorisé. Quand cette fonctionnalité est désactivée, la promesse retournée par [`Navigator.getBattery()`](/fr/docs/Web/API/Navigator/getBattery) sera rejetée avec une exception [`DOMException`](/fr/docs/Web/API/DOMException) [`NotAllowedError`](/fr/docs/Web/API/DOMException#notallowederror).
-- [`camera`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/camera)
-  - : Contrôle si le document courant est autorisé à utiliser l'appareil photographique du système. Quand cette fonctionnalité est désactivée, la promesse retournée par [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) sera rejetée avec une exception [`DOMException`](/fr/docs/Web/API/DOMException) [`NotAllowedError`](/fr/docs/Web/API/DOMException#notallowederror).
-- [`display-capture`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/display-capture)
-  - : Contrôle si le document courant est autorisé ou non à utiliser la méthode [`getDisplayMedia()`](/fr/docs/Web/API/MediaDevices/getDisplayMedia) pour effectuer une capture d'écran. Quand cette fonctionnalité est désactivée, la promesse retounrée par `getDisplayMedia()` sera rejetée avec une exception [`NotAllowedError`](/fr/docs/Web/API/DOMException#notallowederror) si la permission de prendre une capture d'écran n'est pas obtenue.
-- [`document-domain`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/document-domain)
-  - : Contrôle si le document courant est autorisé à définir la propriété [`document.domain`](/fr/docs/Web/API/Document/domain). Quand cette directive est désactivée, tenter de modifier [`document.domain`](/fr/docs/Web/API/Document/domain) échouera et lèvera une exception [`DOMException`](/fr/docs/Web/API/DOMException) [`SecurityError`](/fr/docs/Web/API/DOMException#securityerror).
-- [`encrypted-media`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/encrypted-media)
-  - : Contrôle si le document courant est autorisé à utiliser l'[API Encrypted Media Extensions](/fr/docs/Web/API/Encrypted_Media_Extensions_API) (EME). Quand cette directive est désactivée, la promesse retournée par [`Navigator.requestMediaKeySystemAccess()`](/fr/docs/Web/API/Navigator/requestMediaKeySystemAccess) sera rejetée avec une exception [`DOMException`](/fr/docs/Web/API/DOMException).
-- [`execution-while-not-rendered`](/fr/docs/Web/HTTP/Headers/Feature-Policy/execution-while-not-rendered)
-  - : Contrôle si les tâches des cadres doivent être exécutées s'ils ne seront pas rendus à l'écran (par exemple si un élément `<iframe>` est masqué via l'attribut [`hidden`](/fr/docs/Web/HTML/Global_attributes/hidden) ou `display: none`).
-- [`execution-while-out-of-viewport`](/fr/docs/Web/HTTP/Headers/Feature-Policy/execution-while-out-of-viewport)
-  - : Contrôle si les tâches des cadres doivent être exécutées quand ils sont en dehors de la zone d'affichage.
-- [`fullscreen`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/fullscreen)
-  - : Contrôle si le document courant est autorisé à utiliser [`Element.requestFullScreen()`](/fr/docs/Web/API/Element/requestFullscreen). Quand cette directive est désactivée, la promesse retournée sera rejetée avec une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
-- [`gamepad`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/gamepad)
-  - : Contrôle si le document courant peut utiliser l'[API Gamepad](/fr/docs/Web/API/Gamepad_API). Lorsque cette fonctionnalité n'est pas autorisée, [`Navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads) lèvera une exception ([`DOMException`](/fr/docs/Web/API/DOMException)) `SecurityError`, et les évènements [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) et [`gamepaddisconnected`](/fr/docs/Web/API/Window/gamepaddisconnected_event) ne seront pas déclenchés.
-- [`geolocation`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/geolocation)
-  - : Contrôle si le document courant est autorisé à utiliser l'interface [`Geolocation`](/fr/docs/Web/API/Geolocation). Quand cette directive est désactivée, les appels à [`getCurrentPosition()`](/fr/docs/Web/API/Geolocation/getCurrentPosition) et [`watchPosition()`](/fr/docs/Web/API/Geolocation/watchPosition) causeront un appel de leurs fonctions de rappel avec une exception [`PositionError`](/fr/docs/Web/API/GeolocationPositionError) dont le code est `PERMISSION_DENIED`.
-- [`gyroscope`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/gyroscope)
-  - : Contrôle si le document courant est autorisé à recueillir des informations à propos de l'orientation de l'appareil au moyen de l'interface [`Gyroscope`](/fr/docs/Web/API/Gyroscope).
-- [`layout-animations`](/fr/docs/Web/HTTP/Headers/Permissions-Policy)
-  - : Contrôle si le document courant est autorisé à afficher des animations de mise en page.
-- [`legacy-image-formats`](/fr/docs/Web/HTTP/Headers/Permissions-Policy)
-  - : Contrôle si le document courant est autorisé à afficher des images dans des formats historiques.
-- [`magnetometer`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/magnetometer)
-  - : Contrôle si le document courant est autorisé à recueillir des informations à propos de l'orientation au moyen de l'interface [`Magnetometer`](/fr/docs/Web/API/Magnetometer).
-- [`microphone`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/microphone)
-  - : Contrôle si le document courant est autorisé à utiliser le microphone de l'appareil. Quand cette fonctionnalité est désactivée, la promesse retournée par [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) sera rejetée avec une exception [`NotAllowedError`](/fr/docs/Web/API/DOMException#notallowederror).
-- [`midi`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/midi)
-  - : Contrôle si le document courant est autorisé à utiliser l'[API Web MIDI](/fr/docs/Web/API/Web_MIDI_API). Quand cette fonctionnalité est désactivée, la promesse retournée par [`Navigator.requestMIDIAccess()`](/fr/docs/Web/API/Navigator/requestMIDIAccess) sera rejetée avec une exception [`DOMException`](/fr/docs/Web/API/DOMException).
-- [`navigation-override`](/fr/docs/Web/HTTP/Headers/Feature-Policy/navigation-override)
-  - : Contrôle la disponibilité des mécanismes qui permettent à la page de prendre le contrôle sur le comportement de la [navigation spatiale](https://www.w3.org/TR/css-nav/), ou de l'annuler complètement.
-- [`oversized-images`](/fr/docs/Web/HTTP/Headers/Permissions-Policy)
-  - : Contrôle si le document courant est autorisé à télécharger et afficher des images lourdes.
-- [`payment`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/payment)
-  - : Contrôle si le document courant est autorisé à utiliser l'[API Payment Request](/fr/docs/Web/API/Payment_Request_API). Quand cette directive est désactivée, le constructeur [`PaymentRequest()`](/fr/docs/Web/API/PaymentRequest) lèvera une exception [`DOMException`](/fr/docs/Web/API/DOMException) [`SecurityError`](/fr/docs/Web/API/DOMException#securityerror).
-- [`picture-in-picture`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture)
-  - : Contrôle si le document courant peut jouer une vidéo avec l'incrustation vidéo avec l'API correspondante.
-- [`publickey-credentials-get`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get)
-  - : Contrôle si le document courant est autorisé à utiliser l'[API Web Authentication](/fr/docs/Web/API/Web_Authentication_API) afin de récupérer des informations d'authentification avec clé publique (par exemple avec [`navigator.credentials.get({publicKey: ..., ...})`](/fr/docs/Web/API/CredentialsContainer/get)) déjà enregistrées.
-- [`speaker-selection`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection)
-  - : Contrôle si le document courant est autorisé à utiliser l'[API Audio Output Devices](/fr/docs/Web/API/Audio_Output_Devices_API) afin d'énumérer et de sélectionner les haut-parleurs.
-- [`sync-xhr`](/fr/docs/Web/HTTP/Headers/Permissions-Policy)
-  - : Contrôle si le document courant est autorisé à réaliser des requêtes [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest).
-- [`unoptimized-images`](/fr/docs/Web/HTTP/Headers/Permissions-Policy) {{experimental_inline}}{{Non-standard_Inline}}
-  - : Contrôle si le document courant est autorisé à télécharger et à afficher des images qui ne sont pas optimisées.
-- [`unsized-media`](/fr/docs/Web/HTTP/Headers/Permissions-Policy) {{experimental_inline}}{{Non-standard_Inline}}
-  - : Contrôle si le document courant est autorisé à modifier la taille des éléments média après que la disposition initiale a été terminée.
-- [`usb`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/usb)
-  - : Contrôle si le document courant est autorisé à utiliser l'[API WebUSB](https://wicg.github.io/webusb/).
-- [`screen-wake-lock`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/screen-wake-lock)
-  - : Contrôle si le document courant est autorisé à utiliser l'[API Screen Wake Lock](/fr/docs/Web/API/Screen_Wake_Lock_API) pour indiquer que l'appareil ne devrait pas assombrir ou éteindre l'écran.
-- [`web-share`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/web-share)
-  - : Contrôle si le document courant est autorisé à utiliser la méthode [`Navigator.share()`](/fr/docs/Web/API/Navigator/share) de l'[API Web Share](/fr/docs/Web/API/Web_Share_API) pour partager du texte, des liens, des images et d'autres contenus vers des cibles arbitraires, par exemple à des applications mobiles.
-- [`xr-spatial-tracking`](/fr/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking)
-  - : Contrôle si le document courant est autorisé à utiliser l'[API WebXR Device](/fr/docs/Web/API/WebXR_Device_API) pour interagir avec une session WebXR.
-
-## Exemple
-
-SecureCorp Inc. souhaite désactiver les API du microphone et de géolocalisation dans son application. Elle peut le faire en délivrant l'en-tête de réponse HTTP suivant pour définir une règle de gestion des fonctionnalités&nbsp;:
+## s-syntaxe
 
 ```http
-Feature-Policy: microphone 'none'; geolocation 'none'
+featuwe-powicy: <diwective> <awwowwist>
 ```
 
-En spécifiant la valeur `'none'` pour liste des origines, les fonctionnalités auxquelles la valeur est appliquée seront désactivées pour tous les contextes de navigation (incluant tous les cadres `<iframe>`), quelle que soit leur origine.
+- `<diwective>`
+  - : wa diwective de fonctionnawité à w-waquewwe s'appwique wa wiste d'autowisation `awwowwist`. σωσ voiw [wa s-section diwectives](#diwectives) ci-apwès pouw wes nyoms de diwective autowisés. (ꈍᴗꈍ)
+- `<awwowwist>`
 
-## Spécifications
+  - : une wiste d'autowisation c-contenant des owigines, OwO décwites p-paw une o-ou pwusieuws des v-vaweuws suivantes, o.O et sépawées paw des espaces&nbsp;:
 
-{{Specifications}}
+    - `*`&nbsp;: wa fonctionnawité est a-autowisée pouw c-ce document ainsi que w'ensembwe d-des contextes d-de nyavigation imbwiqués (via w-wes éwéments `<ifwame>`) quewwes q-que soient weuws owigines. 😳😳😳
+    - `'sewf'`&nbsp;: wa fonctionnawité s-sewa autowisée dans ce d-document et pouw tous wes contextes d-de nyavigation i-imbwiqués de wa même owigine. /(^•ω•^) wa fonctionnawité ny'est pas autowisée pouw wes contextes de nyavigation d'autwes o-owigines. OwO
+    - `'swc'`&nbsp;: p-pouw w'attwibut `awwow` d'une <i w-wang="en">ifwame</i> u-uniquement. ^^ w-wa fonctionnawité sewa autowisée pouw cette <i wang="en">ifwame</i> u-uniquement si we document qui y est chawgé pwovient de wa même owigine q-que cewwe indiquée paw w'attwibut [`swc`](/fw/docs/web/htmw/ewement/ifwame#attwibuts) d-de w-w'éwément htmw. (///ˬ///✿)
 
-## Compatibilité des navigateurs
+      > [!note]
+      > w-w'owigine `'swc'` est u-uniquement utiwisée p-pouw wa wiste `awwow` d-d'une <i w-wang="en">ifwame</i>. pouw ces éwéments, (///ˬ///✿) i-iw s'agit de wa v-vaweuw paw défaut p-pouw `awwowwist`.
 
-{{Compat}}
+    - `'none'`&nbsp;: w-wa f-fonctionnawité est désactivée pouw we document (niveau we pwus h-haut) et wes contextes de nyavigation imbwiqués. (///ˬ///✿)
+    - `<owigin(s)>`&nbsp;: wa fonctionnawité est autowisée pouw des owigines d-distinctes (paw exempwe, ʘwʘ `https://exampwe.com`). ^•ﻌ•^ wowsqu'on indique pwusieuws o-owigines, OwO cewwes-ci d-doivent êtwe s-sépawées paw un espace. (U ﹏ U)
 
-## Voir aussi
+    w-wes vaweuws `*` (autowisation pouw toutes wes owigines) o-ou `'none'` (désactivation p-pouw toutes wes owigines) peuvent êtwe utiwisées seuwes. (ˆ ﻌ ˆ)♡ `'sewf'` et `'swc'` peuvent, (⑅˘꒳˘) quant à e-ewwes, (U ﹏ U) êtwe utiwisées avec u-une ou pwusieuws owigines.
 
-- [Gestion des fonctionnalités](/fr/docs/Web/HTTP/Permissions_Policy)
-- [Utiliser la gestion des fonctionnalités](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
-- [`Document.featurePolicy`](/fr/docs/Web/API/Document/featurePolicy) and [`FeaturePolicy`](/fr/docs/Web/API/FeaturePolicy)
-- [<i lang="en">Feature-Policy Tester</i> (une extension pour les outils de développement Chrome)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`Referrer-Policy`](/fr/docs/Web/HTTP/Headers/Referrer-Policy)
+    c-chaque fonctionnawité e-en question possède une wiste d'autowisation p-paw défaut q-qui est&nbsp;: `*`, o.O `'sewf'`, ou `'none'`. mya
+
+## d-diwectives
+
+- [`accewewometew`](/fw/docs/web/http/headews/pewmissions-powicy/accewewometew)
+  - : c-contwôwe si we document couwant est autowisé à wecueiwwiw des infowmations à p-pwopos de w-w'accéwéwation d-de w'appaweiw au moyen de w'intewface [`accewewometew`](/fw/docs/web/api/accewewometew). XD
+- [`ambient-wight-sensow`](/fw/docs/web/http/headews/pewmissions-powicy/ambient-wight-sensow)
+  - : c-contwôwe s-si we document couwant est a-autowisé à wecueiwwiw des infowmations à pwopos de wa wuminosité ambiante de w'appaweiw au m-moyen de w'intewface [`ambientwightsensow`](/fw/docs/web/api/ambientwightsensow).
+- [`autopway`](/fw/docs/web/http/headews/pewmissions-powicy/autopway)
+  - : c-contwôwe si we document couwant est autowisé à j-jouew automatiquement d-des médias chawgés au moyen de w'intewface [`htmwmediaewement`](/fw/docs/web/api/htmwmediaewement). quand c-cette fonctionnawité est désactivée et qu'iw ny'y a pas eu d'action de wa p-pawt de w'utiwisatwice ou w'utiwisateuw, wa pwomesse ([`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)) w-wetouwnée p-paw [`htmwmediaewement.pway()`](/fw/docs/web/api/htmwmediaewement/pway) sewa wejetée avec une exception [`domexception`](/fw/docs/web/api/domexception). òωó w'attwibut `autopway` s-suw wes éwéments [`<audio>`](/fw/docs/web/htmw/ewement/audio) e-et [`<video>`](/fw/docs/web/htmw/ewement/video) sewa ignowé. (˘ω˘)
+- [`battewy`](/fw/docs/web/http/headews/featuwe-powicy/battewy)
+  - : contwôwe si w'utiwisation d-de w'[api battewy status](/fw/docs/web/api/battewy_status_api) e-est autowisé. :3 quand cette fonctionnawité est désactivée, OwO w-wa pwomesse wetouwnée paw [`navigatow.getbattewy()`](/fw/docs/web/api/navigatow/getbattewy) s-sewa wejetée avec u-une exception [`domexception`](/fw/docs/web/api/domexception) [`notawwowedewwow`](/fw/docs/web/api/domexception#notawwowedewwow). mya
+- [`camewa`](/fw/docs/web/http/headews/pewmissions-powicy/camewa)
+  - : contwôwe s-si we document couwant est a-autowisé à u-utiwisew w'appaweiw p-photogwaphique du système. q-quand cette fonctionnawité e-est désactivée, (˘ω˘) wa pwomesse wetouwnée p-paw [`getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia) s-sewa wejetée a-avec une exception [`domexception`](/fw/docs/web/api/domexception) [`notawwowedewwow`](/fw/docs/web/api/domexception#notawwowedewwow). o.O
+- [`dispway-captuwe`](/fw/docs/web/http/headews/pewmissions-powicy/dispway-captuwe)
+  - : contwôwe si we document c-couwant est autowisé ou nyon à u-utiwisew wa méthode [`getdispwaymedia()`](/fw/docs/web/api/mediadevices/getdispwaymedia) p-pouw effectuew une captuwe d'écwan. quand cette fonctionnawité e-est d-désactivée, (✿oωo) wa p-pwomesse wetounwée p-paw `getdispwaymedia()` sewa w-wejetée avec une exception [`notawwowedewwow`](/fw/docs/web/api/domexception#notawwowedewwow) si wa pewmission de pwendwe une captuwe d'écwan ny'est pas obtenue.
+- [`document-domain`](/fw/docs/web/http/headews/pewmissions-powicy/document-domain)
+  - : c-contwôwe si we document couwant e-est autowisé à définiw wa pwopwiété [`document.domain`](/fw/docs/web/api/document/domain). (ˆ ﻌ ˆ)♡ q-quand cette diwective est désactivée, ^^;; t-tentew de modifiew [`document.domain`](/fw/docs/web/api/document/domain) échouewa e-et wèvewa u-une exception [`domexception`](/fw/docs/web/api/domexception) [`secuwityewwow`](/fw/docs/web/api/domexception#secuwityewwow). OwO
+- [`encwypted-media`](/fw/docs/web/http/headews/pewmissions-powicy/encwypted-media)
+  - : contwôwe s-si we document c-couwant e-est autowisé à utiwisew w'[api encwypted media extensions](/fw/docs/web/api/encwypted_media_extensions_api) (eme). 🥺 quand cette diwective est désactivée, mya wa p-pwomesse wetouwnée p-paw [`navigatow.wequestmediakeysystemaccess()`](/fw/docs/web/api/navigatow/wequestmediakeysystemaccess) s-sewa wejetée avec une e-exception [`domexception`](/fw/docs/web/api/domexception). 😳
+- [`execution-whiwe-not-wendewed`](/fw/docs/web/http/headews/featuwe-powicy/execution-whiwe-not-wendewed)
+  - : contwôwe si wes tâches des cadwes d-doivent êtwe e-exécutées s'iws nye sewont pas w-wendus à w'écwan (paw exempwe si un éwément `<ifwame>` e-est m-masqué via w'attwibut [`hidden`](/fw/docs/web/htmw/gwobaw_attwibutes/hidden) ou `dispway: n-nyone`). òωó
+- [`execution-whiwe-out-of-viewpowt`](/fw/docs/web/http/headews/featuwe-powicy/execution-whiwe-out-of-viewpowt)
+  - : c-contwôwe si wes tâches des cadwes doivent êtwe exécutées quand iws s-sont en dehows d-de wa zone d'affichage. /(^•ω•^)
+- [`fuwwscween`](/fw/docs/web/http/headews/pewmissions-powicy/fuwwscween)
+  - : c-contwôwe s-si we document c-couwant est autowisé à utiwisew [`ewement.wequestfuwwscween()`](/fw/docs/web/api/ewement/wequestfuwwscween). -.- q-quand cette diwective e-est désactivée, òωó wa pwomesse w-wetouwnée s-sewa wejetée avec une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow).
+- [`gamepad`](/fw/docs/web/http/headews/pewmissions-powicy/gamepad)
+  - : c-contwôwe si we document couwant peut utiwisew w-w'[api gamepad](/fw/docs/web/api/gamepad_api). /(^•ω•^) wowsque cette f-fonctionnawité n-ny'est pas autowisée, /(^•ω•^) [`navigatow.getgamepads()`](/fw/docs/web/api/navigatow/getgamepads) wèvewa u-une exception ([`domexception`](/fw/docs/web/api/domexception)) `secuwityewwow`, 😳 et wes évènements [`gamepadconnected`](/fw/docs/web/api/window/gamepadconnected_event) et [`gamepaddisconnected`](/fw/docs/web/api/window/gamepaddisconnected_event) nye s-sewont pas décwenchés. :3
+- [`geowocation`](/fw/docs/web/http/headews/pewmissions-powicy/geowocation)
+  - : c-contwôwe s-si we document couwant est autowisé à utiwisew w'intewface [`geowocation`](/fw/docs/web/api/geowocation). (U ᵕ U❁) q-quand cette diwective est désactivée, wes appews à [`getcuwwentposition()`](/fw/docs/web/api/geowocation/getcuwwentposition) e-et [`watchposition()`](/fw/docs/web/api/geowocation/watchposition) c-causewont un appew de weuws f-fonctions de wappew avec une exception [`positionewwow`](/fw/docs/web/api/geowocationpositionewwow) d-dont we code e-est `pewmission_denied`. ʘwʘ
+- [`gywoscope`](/fw/docs/web/http/headews/pewmissions-powicy/gywoscope)
+  - : contwôwe si we document c-couwant est autowisé à wecueiwwiw des infowmations à p-pwopos d-de w'owientation de w'appaweiw a-au moyen de w'intewface [`gywoscope`](/fw/docs/web/api/gywoscope). o.O
+- [`wayout-animations`](/fw/docs/web/http/headews/pewmissions-powicy)
+  - : contwôwe si we document c-couwant e-est autowisé à a-affichew des animations de mise en page. ʘwʘ
+- [`wegacy-image-fowmats`](/fw/docs/web/http/headews/pewmissions-powicy)
+  - : contwôwe si we document couwant est autowisé à affichew des images dans des fowmats histowiques. ^^
+- [`magnetometew`](/fw/docs/web/http/headews/pewmissions-powicy/magnetometew)
+  - : contwôwe si we document couwant est autowisé à w-wecueiwwiw des i-infowmations à pwopos de w'owientation au moyen d-de w'intewface [`magnetometew`](/fw/docs/web/api/magnetometew). ^•ﻌ•^
+- [`micwophone`](/fw/docs/web/http/headews/pewmissions-powicy/micwophone)
+  - : c-contwôwe si w-we document couwant est autowisé à u-utiwisew we micwophone de w'appaweiw. mya q-quand c-cette fonctionnawité est désactivée, UwU w-wa pwomesse wetouwnée p-paw [`mediadevices.getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia) s-sewa wejetée avec une exception [`notawwowedewwow`](/fw/docs/web/api/domexception#notawwowedewwow). >_<
+- [`midi`](/fw/docs/web/http/headews/pewmissions-powicy/midi)
+  - : contwôwe s-si we document c-couwant est autowisé à u-utiwisew w-w'[api web midi](/fw/docs/web/api/web_midi_api). /(^•ω•^) q-quand cette f-fonctionnawité e-est désactivée, òωó w-wa pwomesse wetouwnée p-paw [`navigatow.wequestmidiaccess()`](/fw/docs/web/api/navigatow/wequestmidiaccess) sewa w-wejetée avec u-une exception [`domexception`](/fw/docs/web/api/domexception). σωσ
+- [`navigation-ovewwide`](/fw/docs/web/http/headews/featuwe-powicy/navigation-ovewwide)
+  - : c-contwôwe wa disponibiwité d-des mécanismes qui pewmettent à wa page d-de pwendwe we contwôwe suw w-we compowtement d-de wa [navigation s-spatiawe](https://www.w3.owg/tw/css-nav/), ( ͡o ω ͡o ) ou d-de w'annuwew compwètement. nyaa~~
+- [`ovewsized-images`](/fw/docs/web/http/headews/pewmissions-powicy)
+  - : contwôwe s-si we document couwant est autowisé à t-téwéchawgew et affichew d-des images wouwdes. :3
+- [`payment`](/fw/docs/web/http/headews/pewmissions-powicy/payment)
+  - : contwôwe si we document couwant est autowisé à utiwisew w'[api p-payment wequest](/fw/docs/web/api/payment_wequest_api). UwU quand c-cette diwective e-est désactivée, o.O we constwucteuw [`paymentwequest()`](/fw/docs/web/api/paymentwequest) wèvewa une exception [`domexception`](/fw/docs/web/api/domexception) [`secuwityewwow`](/fw/docs/web/api/domexception#secuwityewwow). (ˆ ﻌ ˆ)♡
+- [`pictuwe-in-pictuwe`](/fw/docs/web/http/headews/pewmissions-powicy/pictuwe-in-pictuwe)
+  - : contwôwe s-si we document couwant p-peut jouew une vidéo a-avec w'incwustation v-vidéo avec w'api cowwespondante. ^^;;
+- [`pubwickey-cwedentiaws-get`](/fw/docs/web/http/headews/pewmissions-powicy/pubwickey-cwedentiaws-get)
+  - : contwôwe s-si we document c-couwant est autowisé à utiwisew w-w'[api web authentication](/fw/docs/web/api/web_authentication_api) afin de w-wécupéwew des infowmations d'authentification a-avec cwé pubwique (paw e-exempwe a-avec [`navigatow.cwedentiaws.get({pubwickey: ..., ...})`](/fw/docs/web/api/cwedentiawscontainew/get)) déjà enwegistwées. ʘwʘ
+- [`speakew-sewection`](/fw/docs/web/http/headews/pewmissions-powicy/speakew-sewection)
+  - : c-contwôwe s-si we document c-couwant est a-autowisé à utiwisew w'[api audio o-output devices](/fw/docs/web/api/audio_output_devices_api) a-afin d-d'énuméwew e-et de séwectionnew w-wes haut-pawweuws. σωσ
+- [`sync-xhw`](/fw/docs/web/http/headews/pewmissions-powicy)
+  - : c-contwôwe s-si we document c-couwant est autowisé à wéawisew d-des wequêtes [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest). ^^;;
+- [`unoptimized-images`](/fw/docs/web/http/headews/pewmissions-powicy) {{expewimentaw_inwine}}{{non-standawd_inwine}}
+  - : contwôwe si w-we document couwant est autowisé à t-téwéchawgew e-et à affichew d-des images qui nye sont pas optimisées. ʘwʘ
+- [`unsized-media`](/fw/docs/web/http/headews/pewmissions-powicy) {{expewimentaw_inwine}}{{non-standawd_inwine}}
+  - : contwôwe si w-we document couwant e-est autowisé à m-modifiew wa taiwwe des éwéments média apwès que wa disposition i-initiawe a-a été tewminée. ^^
+- [`usb`](/fw/docs/web/http/headews/pewmissions-powicy/usb)
+  - : contwôwe s-si we document c-couwant est autowisé à utiwisew w'[api webusb](https://wicg.github.io/webusb/). nyaa~~
+- [`scween-wake-wock`](/fw/docs/web/http/headews/pewmissions-powicy/scween-wake-wock)
+  - : contwôwe s-si we document c-couwant est a-autowisé à u-utiwisew w'[api scween wake wock](/fw/docs/web/api/scween_wake_wock_api) pouw indiquew q-que w'appaweiw n-nye devwait pas assombwiw ou éteindwe w'écwan. (///ˬ///✿)
+- [`web-shawe`](/fw/docs/web/http/headews/pewmissions-powicy/web-shawe)
+  - : c-contwôwe si we document couwant est autowisé à u-utiwisew wa méthode [`navigatow.shawe()`](/fw/docs/web/api/navigatow/shawe) d-de w'[api web s-shawe](/fw/docs/web/api/web_shawe_api) pouw pawtagew d-du texte, XD d-des wiens, des images et d'autwes c-contenus vews des cibwes awbitwaiwes, :3 p-paw exempwe à d-des appwications m-mobiwes. òωó
+- [`xw-spatiaw-twacking`](/fw/docs/web/http/headews/pewmissions-powicy/xw-spatiaw-twacking)
+  - : c-contwôwe si we document couwant e-est autowisé à u-utiwisew w'[api w-webxw device](/fw/docs/web/api/webxw_device_api) pouw intewagiw a-avec une session webxw. ^^
+
+## exempwe
+
+secuwecowp i-inc. ^•ﻌ•^ souhaite d-désactivew w-wes api du micwophone et de géowocawisation dans son appwication. σωσ ewwe peut we f-faiwe en déwivwant w'en-tête de w-wéponse http s-suivant pouw définiw une wègwe de gestion des f-fonctionnawités&nbsp;:
+
+```http
+featuwe-powicy: m-micwophone 'none'; g-geowocation 'none'
+```
+
+e-en spécifiant w-wa vaweuw `'none'` p-pouw wiste des owigines, (ˆ ﻌ ˆ)♡ wes fonctionnawités auxquewwes wa vaweuw e-est appwiquée sewont désactivées p-pouw tous wes contextes de nyavigation (incwuant tous wes cadwes `<ifwame>`), nyaa~~ q-quewwe que soit weuw owigine. ʘwʘ
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des n-navigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- [gestion d-des fonctionnawités](/fw/docs/web/http/pewmissions_powicy)
+- [utiwisew wa gestion des fonctionnawités](/fw/docs/web/http/featuwe_powicy/using_featuwe_powicy)
+- [`document.featuwepowicy`](/fw/docs/web/api/document/featuwepowicy) a-and [`featuwepowicy`](/fw/docs/web/api/featuwepowicy)
+- [<i w-wang="en">featuwe-powicy testew</i> (une e-extension pouw wes o-outiws de dévewoppement chwome)](https://chwome.googwe.com/webstowe/detaiw/featuwe-powicy-testew-dev/pchamnkhkeokbpahnocjaeednpbpacop)
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [`wefewwew-powicy`](/fw/docs/web/http/headews/wefewwew-powicy)

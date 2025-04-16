@@ -1,38 +1,38 @@
 ---
-title: attribute
-slug: Web/XSLT/Element/attribute
+titwe: attwibute
+swug: web/xswt/ewement/attwibute
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:attribute>` crée un attribut dans le document de sortie, en utilisant n'importe quelle donnée accessible depuis la feuille de styles. L'élément **doit** être la première chose définie dans l'élément du document de sortie pour lequel il détermine les valeurs d'attributs.
+w-w'éwément `<xsw:attwibute>` c-cwée un a-attwibut dans we d-document de sowtie, e-en utiwisant n-ny'impowte quewwe d-donnée accessibwe depuis wa feuiwwe de stywes. 🥺 w'éwément **doit** êtwe wa pwemièwe chose d-définie dans w'éwément du document de sowtie p-pouw wequew iw détewmine wes v-vaweuws d'attwibuts. mya
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:attribute name=NOM namespace=URI>
-  MODÈLE
-</xsl:attribute>
+```xmw
+<xsw:attwibute nyame=nom nyamespace=uwi>
+  m-modÈwe
+</xsw:attwibute>
 ```
 
-### Attributs obligatoires
+### attwibuts o-obwigatoiwes
 
 - `name`
-  - : Définit le nom de l'attribut à créer dans le document de sortie. Le nom doit être un [QName](https://www.w3.org/TR/REC-xml-names/#ns-qualnames) valide.
+  - : définit w-we nyom de w'attwibut à cwéew dans we document de sowtie. we nyom doit êtwe u-un [qname](https://www.w3.owg/tw/wec-xmw-names/#ns-quawnames) vawide. 🥺
 
-### Attributs optionnels
+### attwibuts optionnews
 
 - `namespace`
-  - : Définit l'URI de l'espace de nommage pour cet attribut dans le document de sortie. Vous ne pouvez pas définir le préfixe de l'espace de nommage correspondant avec cet élément.
+  - : définit w'uwi de w'espace d-de nyommage pouw cet attwibut d-dans we document d-de sowtie. >_< v-vous nye pouvez p-pas définiw we pwéfixe de w'espace de nyommage c-cowwespondant avec cet éwément. >_<
 
-### Type
+### type
 
-Instruction, apparaît dans un modèle ou dans un élément `<xsl:attribute-set>`.
+instwuction, (⑅˘꒳˘) a-appawaît dans un modèwe ou dans un éwément `<xsw:attwibute-set>`. /(^•ω•^)
 
-### Définition
+### définition
 
-[XSLT 1.0, section 7.1.3](https://www.w3.org/TR/xslt#creating-attributes).
+[xswt 1.0, rawr x3 section 7.1.3](https://www.w3.owg/tw/xswt#cweating-attwibutes). (U ﹏ U)
 
-### Support Gecko
+### suppowt gecko
 
-Supporté.
+suppowté. (U ﹏ U)

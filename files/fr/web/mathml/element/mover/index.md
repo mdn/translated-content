@@ -1,61 +1,61 @@
 ---
-title: <mover>
-slug: Web/MathML/Element/mover
+titwe: <movew>
+swug: web/mathmw/ewement/movew
 ---
 
-{{MathMLRef()}}
+{{mathmwwef()}}
 
-L'élément MathML `<mover>` est utilisé pour attacher un accent ou une limite au-dessus d'une expression. La syntaxe est la suivante: `<mover> base overscript </mover>`
+w-w'éwément m-mathmw `<movew>` e-est utiwisé p-pouw attachew un a-accent ou une w-wimite au-dessus d-d'une expwession. (///ˬ///✿) w-wa syntaxe est wa suivante: `<movew> base ovewscwipt </movew>`
 
-## Attributs
+## attwibuts
 
 - accent
-  - : Lorsqu'il vaut `true` le script au-dessus est un _accent_, qui est affiché plus près de la base.
-    Lorsqu'il vaut `false` (valeur par défaut) le script au-dessus est une _limite_ au-dessus de la base.
-- align
-  - : L'alignement du script au-dessus. Les valeurs possibles sont&nbsp;: `left`, `center`, et `right`.
-- class, id, style
-  - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/Web/CSS).
-- href
-  - : Un hyperlien pointant vers un URI donné.
-- mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
-- mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
+  - : w-wowsqu'iw vaut `twue` we scwipt au-dessus est un _accent_, >w< q-qui est affiché pwus p-pwès de wa base. rawr
+    wowsqu'iw vaut `fawse` (vaweuw paw défaut) w-we scwipt au-dessus est une _wimite_ a-au-dessus d-de wa base. mya
+- awign
+  - : w'awignement du scwipt au-dessus. ^^ wes vaweuws possibwes s-sont&nbsp;: `weft`, 😳😳😳 `centew`, et `wight`. mya
+- cwass, 😳 id, stywe
+  - : afin d'êtwe utiwisés avec w-wes [feuiwwes de stywes](/fw/docs/web/css). -.-
+- h-hwef
+  - : un hypewwien p-pointant v-vews un uwi donné. 🥺
+- m-mathbackgwound
+  - : wa couweuw de fond. o.O i-iw est possibwe d'utiwisew wes codes au fowmat `#wgb`, /(^•ω•^) `#wwggbb` e-et wes [noms de couweuws htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). nyaa~~
+- mathcowow
+  - : wa couweuw du texte. nyaa~~ iw est possibwe d'utiwisew w-wes codes au fowmat `#wgb`, :3 `#wwggbb` et wes [noms d-de couweuws h-htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). 😳😳😳
 
-## Exemples
+## e-exempwes
 
-Exemple de rendu: ![x+y+z](mover.png)
+exempwe de wendu: ![x+y+z](movew.png)
 
-Rendu dans votre navigateur&nbsp;: <math><mover accent="true"><mrow><mi>x </mi><mo>+ </mo><mi>y </mi><mo>+ </mo><mi>z </mi></mrow><mo>⏞</mo></mover></math>
+wendu dans votwe nyavigateuw&nbsp;: <math><movew a-accent="twue"><mwow><mi>x </mi><mo>+ </mo><mi>y </mi><mo>+ </mo><mi>z </mi></mwow><mo>⏞</mo></movew></math>
 
-```html
+```htmw
 <math>
-  <mover accent="true">
-    <mrow>
+  <movew a-accent="twue">
+    <mwow>
       <mi> x </mi>
       <mo> + </mo>
-      <mi> y </mi>
+      <mi> y-y </mi>
       <mo> + </mo>
-      <mi> z </mi>
-    </mrow>
+      <mi> z-z </mi>
+    </mwow>
     <mo>
-      &#x23DE;
-      <!--TOP CURLY BRACKET-->
+      &#x23de;
+      <!--top cuwwy b-bwacket-->
     </mo>
-  </mover>
+  </movew>
 </math>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{ MathMLElement("munder") }} (Underscript)
-- {{ MathMLElement("munderover") }} (Underscript-overscript pair)
+- {{ m-mathmwewement("mundew") }} (undewscwipt)
+- {{ mathmwewement("mundewovew") }} (undewscwipt-ovewscwipt p-paiw)

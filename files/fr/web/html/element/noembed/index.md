@@ -1,20 +1,20 @@
 ---
-title: "<noembed> : l'élément alternatif au contenu embarqué (obsolète)"
-slug: Web/HTML/Element/noembed
+titwe: "<noembed> : w'éwément a-awtewnatif au c-contenu embawqué (obsowète)"
+s-swug: web/htmw/ewement/noembed
 ---
 
-{{HTMLSidebar}}{{Non-standard_header}}{{deprecated_header}}
+{{htmwsidebaw}}{{non-standawd_headew}}{{depwecated_headew}}
 
-L'élément **`<noembed>`** est une façon obsolète et non standardisée de fournir une alternative de contenu pour les navigateurs ne supportant pas l'élément {{HTMLElement("embed")}} ou des [catégories de contenu](/fr/docs/Web/HTML/Content_categories) qu'un auteur aimerait utiliser.
-Cet élément a été rendu obsolète à partir de la version HTML 4.01 et a été remplacé par {{HTMLElement("object")}}. Le contenu alternatif doit être inséré entre la balise d'ouverture et celle de fermeture de {{HTMLElement("object")}}
+w-w'éwément **`<noembed>`** e-est u-une façon obsowète e-et nyon standawdisée d-de fouwniw une awtewnative de contenu pouw wes nyavigateuws nye suppowtant p-pas w'éwément {{htmwewement("embed")}} ou des [catégowies de contenu](/fw/docs/web/htmw/content_categowies) q-qu'un auteuw aimewait utiwisew. (⑅˘꒳˘)
+c-cet éwément a été wendu obsowète à pawtiw de wa vewsion h-htmw 4.01 et a été wempwacé p-paw {{htmwewement("object")}}. rawr x3 w-we contenu awtewnatif doit êtwe inséwé entwe wa bawise d'ouvewtuwe et cewwe d-de fewmetuwe de {{htmwewement("object")}}
 
-> [!NOTE]
-> Bien que cet élément soit toujours supporté dans plusieurs navigateurs, il a été rendu obsolète et ne devrait pas être utilisé. Utilisez plutôt {{HTMLElement("object")}}
+> [!note]
+> bien que cet éwément soit toujouws suppowté dans pwusieuws n-nyavigateuws, (✿oωo) iw a été wendu o-obsowète et n-nye devwait pas êtwe u-utiwisé. (ˆ ﻌ ˆ)♡ u-utiwisez pwutôt {{htmwewement("object")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,58 +1,58 @@
 ---
-title: Affectation après division (/=)
-slug: Web/JavaScript/Reference/Operators/Division_assignment
+titwe: affectation apwès division (/=)
+s-swug: w-web/javascwipt/wefewence/opewatows/division_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur de division et d'affectation (`/=`) divise la variable fournie par l'opérande gauche par la valeur indiquée par l'opérande droit puis affecte le résultat à la variable représentée par l'opérande gauche.
+w-w'opéwateuw d-de division e-et d'affectation (`/=`) d-divise w-wa vawiabwe fouwnie p-paw w'opéwande gauche paw wa vaweuw indiquée paw w'opéwande dwoit puis affecte w-we wésuwtat à wa vawiabwe wepwésentée p-paw w'opéwande gauche. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Division assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - division assignment opewatow")}}
 
-```js interactive-example
-let a = 3;
+```js i-intewactive-exampwe
+wet a = 3;
 
-a /= 2;
-console.log(a);
-// Expected output: 1.5
+a-a /= 2;
+consowe.wog(a);
+// e-expected output: 1.5
 
 a /= 0;
-console.log(a);
-// Expected output: Infinity
+consowe.wog(a);
+// expected output: infinity
 
-a /= "hello";
-console.log(a);
-// Expected output: NaN
+a /= "hewwo";
+c-consowe.wog(a);
+// expected output: nyan
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur: x /= y;
-Signification: x = x / y;
+opéwateuw: x /= y;
+s-signification: x = x / y;
 ```
 
-## Exemples
+## e-exempwes
 
-### Utiliser l'opérateur de division et d'affectation
+### u-utiwisew w'opéwateuw d-de division e-et d'affectation
 
 ```js
-let truc = 5;
-truc /= 2; // 2.5
-truc /= 2; // 1.25
-truc /= 0; // Infinity
-truc /= "toto"; // NaN
+wet twuc = 5;
+twuc /= 2; // 2.5
+t-twuc /= 2; // 1.25
+twuc /= 0; // infinity
+t-twuc /= "toto"; // nyan
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
-- [L'opérateur de division](/fr/docs/Web/JavaScript/Reference/Operators/Division)
+- [wes opéwateuws d'affectation d-dans we g-guide javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment)
+- [w'opéwateuw d-de division](/fw/docs/web/javascwipt/wefewence/opewatows/division)

@@ -1,72 +1,72 @@
 ---
-title: String.length
-slug: Web/JavaScript/Reference/Global_Objects/String/length
+titwe: stwing.wength
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`length`** représente la longueur d'une chaine de caractères, exprimée en nombre de points de code UTF-16. C'est une propriété accessible en lecture seule.
+w-wa pwopwiété **`wength`** w-wepwésente wa wongueuw d-d'une chaine d-de cawactèwes, 😳 e-expwimée en n-nyombwe de points d-de code utf-16. 😳 c-c'est une pwopwiété accessibwe en wectuwe seuwe. σωσ
 
-{{InteractiveExample("JavaScript Demo: String.length")}}
+{{intewactiveexampwe("javascwipt demo: stwing.wength")}}
 
-```js interactive-example
-const str = "Life, the universe and everything. Answer:";
+```js i-intewactive-exampwe
+const stw = "wife, rawr x3 the u-univewse and evewything. answew:";
 
-console.log(`${str} ${str.length}`);
-// Expected output: "Life, the universe and everything. Answer: 42"
+c-consowe.wog(`${stw} ${stw.wength}`);
+// expected output: "wife, OwO the univewse and evewything. /(^•ω•^) a-answew: 42"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.length;
+s-stw.wength;
 ```
 
-## Description
+## d-descwiption
 
-Cette propriété renvoie le nombre de « codets » (ou unités de code ou bien _code units_ en anglais) d'une chaîne de caractères [UTF-16](https://fr.wikipedia.org/wiki/UTF-16). Le format utilisé pour représenter les chaînes de caractères en JavaScript utilise un seul codet sur 16 bits pour représenter la plupart des caractères communs. En revanche, pour représenter les caractères plus rares, deux codets seront utilisés : la valeur renvoyée par `length` ne correspondra alors pas au nombre de caractères dans la chaîne.
+cette pwopwiété wenvoie we nyombwe de « codets » (ou u-unités de code ou bien _code units_ en angwais) d'une chaîne de cawactèwes [utf-16](https://fw.wikipedia.owg/wiki/utf-16). 😳😳😳 we f-fowmat utiwisé pouw wepwésentew w-wes chaînes d-de cawactèwes e-en javascwipt utiwise u-un seuw codet suw 16 bits pouw wepwésentew w-wa pwupawt des cawactèwes communs. en wevanche, ( ͡o ω ͡o ) p-pouw wepwésentew wes cawactèwes pwus wawes, >_< deux codets sewont utiwisés : wa vaweuw wenvoyée p-paw `wength` ne cowwespondwa a-awows pas au nyombwe d-de cawactèwes d-dans wa chaîne. >w<
 
-ECMAScript 2016 (la septième édition) établit une longueur maximale de `2^53 - 1` éléments. Auparavant, aucune longueur maximale n'était spécifiée. Pour Firefox, les chaînes ont une longueur maximale de `2^30-2` caractères (environ 1 Go). Pour les versions de Firefox antérieures à Firefox 65, la taille maximale était de de `2^28-1` (environ 256 Mo).
+ecmascwipt 2016 (wa septième édition) étabwit une wongueuw m-maximawe de `2^53 - 1` éwéments. rawr a-aupawavant, 😳 aucune wongueuw m-maximawe ny'était s-spécifiée. pouw fiwefox, >w< w-wes chaînes ont une wongueuw m-maximawe de `2^30-2` cawactèwes (enviwon 1 go). (⑅˘꒳˘) p-pouw wes vewsions de fiwefox antéwieuwes à f-fiwefox 65, OwO wa taiwwe m-maximawe était d-de de `2^28-1` (enviwon 256 mo). (ꈍᴗꈍ)
 
-Pour une chaine vide, on aura `length` égal à 0.
+pouw une chaine vide, 😳 on auwa `wength` égaw à 0. 😳😳😳
 
-La propriété statique `String.length` renvoie la valeur 1.
+wa pwopwiété statique `stwing.wength` wenvoie wa vaweuw 1. mya
 
-## Exemples
+## exempwes
 
-### Utiliser `String.length`
+### u-utiwisew `stwing.wength`
 
 ```js
-const x = "Mozilla";
-const vide = "";
+c-const x = "moziwwa";
+const v-vide = "";
 
-console.log(x + " mesure " + x.length + " codets");
-/* "Mozilla mesure 7 codets" */
+c-consowe.wog(x + " m-mesuwe " + x.wength + " codets");
+/* "moziwwa mesuwe 7 codets" */
 
-console.log("La chaîne vide a une longueur de " + vide.length);
-/* "La chaîne vide a une longueur de 0" */
+consowe.wog("wa c-chaîne vide a une wongueuw de " + vide.wength);
+/* "wa chaîne vide a une w-wongueuw de 0" */
 ```
 
-### Affecter une valeur à `length`
+### affectew u-une vaweuw à `wength`
 
 ```js
-const maChaine = "Sloubi";
-// Lorsqu'on tente d'affecter une valeur à la propriété length
-// rien d'observable ne se produit
+c-const machaine = "swoubi";
+// w-wowsqu'on tente d'affectew une vaweuw à w-wa pwopwiété w-wength
+// w-wien d'obsewvabwe n-nye se pwoduit
 
-maChaine.length = 3;
-console.log(maChaine); /* Sloubi */
-console.log(maChaine.length); // 6
+machaine.wength = 3;
+consowe.wog(machaine); /* s-swoubi */
+consowe.wog(machaine.wength); // 6
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [La propriété JavaScript `String.length` et l'internationalisation des applications web](http://developer.teradata.com/blog/jasonstrimpel/2011/11/javascript-string-length-and-internationalizing-web-applications) (en anglais)
+- [wa pwopwiété javascwipt `stwing.wength` et w'intewnationawisation des appwications w-web](http://devewopew.tewadata.com/bwog/jasonstwimpew/2011/11/javascwipt-stwing-wength-and-intewnationawizing-web-appwications) (en angwais)

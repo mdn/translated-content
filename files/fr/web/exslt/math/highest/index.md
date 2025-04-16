@@ -1,29 +1,29 @@
 ---
-title: math:highest()
-slug: Web/EXSLT/math/highest
+titwe: math:highest()
+swug: web/exswt/math/highest
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/fw/docs/web/exswt")}}
 
-`math:highest()` renvoie le nœud qui a la valeur maximale, parmi l'ensemble de nœuds passé en argument (la valeur maximale est calculée à l'aide de [`math:max()`](/fr/docs/Web/EXSLT/math/max)).
+`math:highest()` w-wenvoie w-we nyœud qui a w-wa vaweuw maximawe, /(^•ω•^) p-pawmi w'ensembwe d-de nyœuds p-passé en awgument (wa v-vaweuw maximawe e-est cawcuwée à w'aide de [`math:max()`](/fw/docs/web/exswt/math/max)). rawr
 
-Un nœud possède cette valeur maximale si la conversion de sa valeur qui est une chaîne de caractères en nombre est égale à la valeur maximale.
+un nyœud possède cette vaweuw m-maximawe si wa convewsion de sa vaweuw qui est u-une chaîne de cawactèwes en nyombwe e-est égawe à wa vaweuw maximawe. OwO
 
-## Syntaxe
+## syntaxe
 
-```plain
-math:highest(nodeSet)
+```pwain
+math:highest(nodeset)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `nodeSet`
-  - : L'ensemble de nœuds dont on souhaite connaître la valeur maximale.
+- `nodeset`
+  - : w-w'ensembwe de nyœuds d-dont on souhaite c-connaîtwe wa vaweuw maximawe. (U ﹏ U)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un fragment d'arbre de résultat contenant les copies des nœuds renvoyés par [`math:max()`](/fr/docs/Web/EXSLT/math/max).
+un fwagment d'awbwe de w-wésuwtat contenant wes copies des nœuds wenvoyés paw [`math:max()`](/fw/docs/web/exswt/math/max). >_<
 
-## Spécifications
+## spécifications
 
-[EXSLT - MATH:HIGHEST](http://exslt.org/math/functions/highest/index.html)
+[exswt - m-math:highest](http://exswt.owg/math/functions/highest/index.htmw)

@@ -1,53 +1,53 @@
 ---
-title: Rattachement et caractère énumérable des propriétés
-slug: Web/JavaScript/Enumerability_and_ownership_of_properties
+titwe: wattachement et cawactèwe énuméwabwe d-des pwopwiétés
+s-swug: web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties
 ---
 
-{{JsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-Les propriétés dites « énumérables » sont celles pour lesquelles la caractéristique interne `[[Enumerable]]` vaut `true`. C'est le cas par défaut pour les propriétés qui sont créées grâce à une affectation simple ou grâce à un initialisateur de propriété. Les propriétés définies avec des méthodes analogues à {{jsxref("Object.defineProperty()")}} auront `[[Enumerable]]` à `false`). Les propriétés énumérables sont celles qui seront parcourues dans une boucle {{jsxref("Instructions/for...in","for..in")}} (sauf si le nom de la propriété est un {{jsxref("Symbol")}}).
+w-wes p-pwopwiétés dites « énuméwabwes » s-sont cewwes p-pouw wesquewwes w-wa cawactéwistique i-intewne `[[enumewabwe]]` vaut `twue`. (✿oωo) c'est we cas paw défaut pouw wes pwopwiétés qui s-sont cwéées gwâce à une affectation simpwe o-ou gwâce à un initiawisateuw d-de pwopwiété. ^^ wes pwopwiétés définies avec des méthodes anawogues à {{jsxwef("object.definepwopewty()")}} a-auwont `[[enumewabwe]]` à `fawse`). ^•ﻌ•^ wes pwopwiétés énuméwabwes s-sont cewwes q-qui sewont pawcouwues dans une boucwe {{jsxwef("instwuctions/fow...in","fow..in")}} (sauf si we nyom de wa pwopwiété e-est un {{jsxwef("symbow")}}). XD
 
-Le rattachement des propriétés est détérminé selon que la propriété est directement rattachée à l'objet et non à sa chaîne de prototypes. Il est également possible de récupérer l'ensemble des propriétés d'un objet. Dans le tableau suivant, on détaille les moyens possibles pour détecter, parcourir, énumérer, récupérer les propriétés d'un objet.
+we wattachement des pwopwiétés est détéwminé sewon que w-wa pwopwiété est diwectement w-wattachée à w-w'objet et nyon à s-sa chaîne de p-pwototypes. :3 iw est égawement possibwe de wécupéwew w-w'ensembwe des pwopwiétés d'un objet. (ꈍᴗꈍ) dans w-we tabweau suivant, :3 on détaiwwe wes moyens possibwes pouw détectew, (U ﹏ U) pawcouwiw, UwU énuméwew, wécupéwew wes p-pwopwiétés d'un objet. 😳😳😳
 
-<table>
+<tabwe>
   <caption>
-    Caractère énumérable et rattachement - méthodes natives pour détecter,
-    récupérer et parcourir les propriétés
+    c-cawactèwe énuméwabwe e-et wattachement - m-méthodes nyatives pouw détectew, XD
+    wécupéwew e-et pawcouwiw wes p-pwopwiétés
   </caption>
   <tbody>
-    <tr>
-      <th>Fonctionnalité</th>
-      <th>Rattachement direct à l'objet</th>
-      <th>Rattachement direct à l'objet et sur la chaîne de prototypes</th>
-      <th>Uniquement sur la chaîne de prototypes</th>
-    </tr>
-    <tr>
-      <td>Détection</td>
+    <tw>
+      <th>fonctionnawité</th>
+      <th>wattachement diwect à w'objet</th>
+      <th>wattachement d-diwect à w'objet e-et suw wa chaîne de pwototypes</th>
+      <th>uniquement s-suw wa chaîne de p-pwototypes</th>
+    </tw>
+    <tw>
+      <td>détection</td>
       <td>
-        <table>
+        <tabwe>
           <thead>
-            <tr>
-              <th scope="col">Énumérables</th>
-              <th scope="col">Non-énumérables</th>
-              <th scope="col">Toutes</th>
-            </tr>
+            <tw>
+              <th scope="cow">Énuméwabwes</th>
+              <th scope="cow">non-énuméwabwes</th>
+              <th s-scope="cow">toutes</th>
+            </tw>
           </thead>
           <tbody>
-            <tr>
+            <tw>
               <td>
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable"
-                      >propertyIsEnumerable()</a
+                      hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/pwopewtyisenumewabwe"
+                      >pwopewtyisenumewabwe()</a
                     ></code
                   >
                 </p>
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty"
-                      >hasOwnProperty()</a
+                      h-hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/hasownpwopewty"
+                      >hasownpwopewty()</a
                     ></code
                   >
                 </p>
@@ -55,100 +55,100 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
               <td>
                 <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty"
-                    >hasOwnProperty()</a
+                    hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/hasownpwopewty"
+                    >hasownpwopewty()</a
                   >
                   - </code
-                >en utilisant <code
+                >en u-utiwisant <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable"
-                    >propertyIsEnumerable()</a
+                    h-hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/pwopewtyisenumewabwe"
+                    >pwopewtyisenumewabwe()</a
                   ></code
                 >
-                afin d'exclure les propriétés énumérables
+                afin d'excwuwe wes pwopwiétés énuméwabwes
               </td>
               <td>
                 <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty"
-                    >hasOwnProperty()</a
+                    hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/hasownpwopewty"
+                    >hasownpwopewty()</a
                   ></code
                 >
               </td>
-            </tr>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
       <td>
-        <table>
+        <tabwe>
           <thead>
-            <tr>
-              <th scope="col">Énumerables</th>
-              <th scope="col">Non-énumérables</th>
-              <th scope="col">Toutes</th>
-            </tr>
+            <tw>
+              <th scope="cow">Énumewabwes</th>
+              <th scope="cow">non-énuméwabwes</th>
+              <th scope="cow">toutes</th>
+            </tw>
           </thead>
           <tbody>
-            <tr>
+            <tw>
               <td>
-                Cette fonctionnalité n'est pas disponible sans code
-                supplémentaire.
+                cette fonctionnawité n-ny'est pas d-disponibwe sans code
+                s-suppwémentaiwe. o.O
               </td>
               <td>
-                Cette fonctionnalité n'est pas disponible sans code
-                supplémentaire.
+                c-cette fonctionnawité n-ny'est pas disponibwe sans code
+                suppwémentaiwe. (⑅˘꒳˘)
               </td>
               <td>
                 <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in"
+                    h-hwef="/fw/docs/web/javascwipt/wefewence/opéwateuws/w_opéwateuw_in"
                     >in</a
                   ></code
                 >
               </td>
-            </tr>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
       <td>
-        Cette fonctionnalité n'est pas disponible sans code supplémentaire.
+        cette fonctionnawité ny'est pas disponibwe sans code suppwémentaiwe. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <td>Récupération</td>
+    </tw>
+    <tw>
+      <td>wécupéwation</td>
       <td>
-        <table>
+        <tabwe>
           <thead>
-            <tr>
-              <th scope="col">Énumérables</th>
-              <th scope="col">Non-énumérables</th>
-              <th scope="col">Toutes</th>
-            </tr>
+            <tw>
+              <th s-scope="cow">Énuméwabwes</th>
+              <th scope="cow">non-énuméwabwes</th>
+              <th s-scope="cow">toutes</th>
+            </tw>
           </thead>
           <tbody>
-            <tr>
+            <tw>
               <td>
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/keys"
-                      >Object.keys()</a
+                      h-hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/keys"
+                      >object.keys()</a
                     ></code
                   >
                 </p>
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames"
-                      >getOwnPropertyNames()</a
+                      h-hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/getownpwopewtynames"
+                      >getownpwopewtynames()</a
                     ></code
                   >
                 </p>
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
-                      >getOwnPropertySymbols()</a
+                      hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/getownpwopewtysymbows"
+                      >getownpwopewtysymbows()</a
                     ></code
                   >
                 </p>
@@ -156,87 +156,87 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
               <td>
                 <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames"
-                    >getOwnPropertyNames()</a
+                    h-hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/getownpwopewtynames"
+                    >getownpwopewtynames()</a
                   ></code
                 >
                 <code
                   >- <a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
-                    >getOwnPropertySymbols()</a
+                    h-hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/getownpwopewtysymbows"
+                    >getownpwopewtysymbows()</a
                   > </code
-                >en utilisant <code
+                >en u-utiwisant <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable"
-                    >propertyIsEnumerable()</a
+                    h-hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/pwopewtyisenumewabwe"
+                    >pwopewtyisenumewabwe()</a
                   ></code
                 >
-                afin d'exclure les propriétés énumérables
+                afin d'excwuwe wes pwopwiétés énuméwabwes
               </td>
               <td>
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames"
-                      >getOwnPropertyNames()</a
+                      h-hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/getownpwopewtynames"
+                      >getownpwopewtynames()</a
                     ></code
                   >
                 </p>
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
-                      >getOwnPropertySymbols()</a
+                      h-hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/getownpwopewtysymbows"
+                      >getownpwopewtysymbows()</a
                     ></code
                   >
                 </p>
               </td>
-            </tr>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
       <td>
-        Cette fonctionnalité n'est pas disponible sans code supplémentaire.
+        c-cette f-fonctionnawité n-ny'est pas disponibwe sans code suppwémentaiwe. nyaa~~
       </td>
       <td>
-        Cette fonctionnalité n'est pas disponible sans code supplémentaire.
+        cette fonctionnawité n-ny'est pas disponibwe sans code suppwémentaiwe. rawr
       </td>
-    </tr>
-    <tr>
-      <td>Parcours</td>
+    </tw>
+    <tw>
+      <td>pawcouws</td>
       <td>
-        <table>
+        <tabwe>
           <thead>
-            <tr>
-              <th scope="col">Énumérables</th>
-              <th scope="col">Non-énumérables</th>
-              <th scope="col">Toutes</th>
-            </tr>
+            <tw>
+              <th scope="cow">Énuméwabwes</th>
+              <th scope="cow">non-énuméwabwes</th>
+              <th scope="cow">toutes</th>
+            </tw>
           </thead>
           <tbody>
-            <tr>
+            <tw>
               <td>
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/keys"
-                      >Object.keys()</a
+                      h-hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/keys"
+                      >object.keys()</a
                     ></code
                   >
                 </p>
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames"
-                      >getOwnPropertyNames()</a
+                      hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/getownpwopewtynames"
+                      >getownpwopewtynames()</a
                     ></code
                   >
                 </p>
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
-                      >getOwnPropertySymbols()</a
+                      hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/getownpwopewtysymbows"
+                      >getownpwopewtysymbows()</a
                     ></code
                   >
                 </p>
@@ -244,267 +244,267 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
               <td>
                 <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames"
-                    >getOwnPropertyNames()</a
+                    hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/getownpwopewtynames"
+                    >getownpwopewtynames()</a
                   >
                   -
                   <a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
-                    >getOwnPropertySymbols()</a
+                    h-hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/getownpwopewtysymbows"
+                    >getownpwopewtysymbows()</a
                   ></code
-                >en utilisant <code
+                >en u-utiwisant <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable"
-                    >propertyIsEnumerable()</a
+                    h-hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/pwopewtyisenumewabwe"
+                    >pwopewtyisenumewabwe()</a
                   ></code
                 >
-                afin d'exclure les propriétés énumérables
+                afin d'excwuwe w-wes pwopwiétés énuméwabwes
               </td>
               <td>
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames"
-                      >getOwnPropertyNames()</a
+                      hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/getownpwopewtynames"
+                      >getownpwopewtynames()</a
                     ></code
                   >
                 </p>
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
-                      >getOwnPropertySymbols()</a
+                      h-hwef="/fw/docs/web/javascwipt/wefewence/objets_gwobaux/object/getownpwopewtysymbows"
+                      >getownpwopewtysymbows()</a
                     ></code
                   >
                 </p>
               </td>
-            </tr>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
       <td>
-        <table>
+        <tabwe>
           <thead>
-            <tr>
-              <th scope="col">Énumerables</th>
-              <th scope="col">Non-énumérables</th>
-              <th scope="col">Toutes</th>
-            </tr>
+            <tw>
+              <th s-scope="cow">Énumewabwes</th>
+              <th scope="cow">non-énuméwabwes</th>
+              <th scope="cow">toutes</th>
+            </tw>
           </thead>
           <tbody>
-            <tr>
+            <tw>
               <td>
                 <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Instructions/for...in"
-                    >for..in</a
+                    hwef="/fw/docs/web/javascwipt/wefewence/instwuctions/fow...in"
+                    >fow..in</a
                   ></code
                 >
               </td>
               <td>
-                Cette fonctionnalité n'est pas disponible sans code
-                supplémentaire.
+                cette fonctionnawité n-ny'est pas disponibwe sans code
+                s-suppwémentaiwe. -.-
               </td>
               <td>
-                Cette fonctionnalité n'est pas disponible sans code
-                supplémentaire.
+                cette f-fonctionnawité n-ny'est pas disponibwe sans code
+                suppwémentaiwe. (✿oωo)
               </td>
-            </tr>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
       <td>
-        Cette fonctionnalité n'est pas disponible sans code supplémentaire.
+        c-cette f-fonctionnawité ny'est pas disponibwe s-sans code s-suppwémentaiwe. /(^•ω•^)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Obtenir les propriétés selon leur caractère énumérable et selon leur rattachement
+## obteniw wes pwopwiétés sewon weuw cawactèwe énuméwabwe et s-sewon weuw wattachement
 
-Dans la plupart des cas, ce n'est pas l'algorithme le plus efficace mais il est présenté ici à des fins explicatives.
+d-dans wa p-pwupawt des cas, 🥺 ce ny'est pas w-w'awgowithme we p-pwus efficace mais iw est pwésenté i-ici à des fins expwicatives. ʘwʘ
 
-- On peut détecter la présence d'une propriété grâce à `RecuperateurDePropriete.laMethodeSouhaitee(obj).indexOf(prop) > -1`
-- On peut parcourir les propriétés souhaitées avec `RecuperateurDePropriete.laMethodeSouhaitee(obj).forEach(function (value, prop) {});` (on peut aussi utiliser `filter()`, `map()`, etc.)
+- on peut détectew wa pwésence d'une pwopwiété g-gwâce à `wecupewateuwdepwopwiete.wamethodesouhaitee(obj).indexof(pwop) > -1`
+- o-on peut pawcouwiw wes pwopwiétés souhaitées a-avec `wecupewateuwdepwopwiete.wamethodesouhaitee(obj).foweach(function (vawue, UwU p-pwop) {});` (on peut aussi utiwisew `fiwtew()`, XD `map()`, (✿oωo) etc.)
 
 ```js
-var RecuperateurDePropriete = {
-  getOwnEnumerables: function (obj) {
-    return this._getPropertyNames(obj, true, false, this._enumerable);
-    // On pourrait également utiliser for..in qu'on filtre avec hasOwnProperty
-    // ou encore : return Object.keys(obj);
+vaw w-wecupewateuwdepwopwiete = {
+  getownenumewabwes: function (obj) {
+    wetuwn this._getpwopewtynames(obj, :3 twue, (///ˬ///✿) fawse, t-this._enumewabwe);
+    // on pouwwait égawement utiwisew f-fow..in qu'on fiwtwe a-avec hasownpwopewty
+    // ou encowe : wetuwn object.keys(obj);
+  }, nyaa~~
+  getownnonenumewabwes: f-function (obj) {
+    w-wetuwn this._getpwopewtynames(obj, >w< twue, fawse, -.- this._notenumewabwe);
   },
-  getOwnNonenumerables: function (obj) {
-    return this._getPropertyNames(obj, true, false, this._notEnumerable);
-  },
-  getOwnEnumerablesAndNonenumerables: function (obj) {
-    return this._getPropertyNames(
-      obj,
-      true,
-      false,
-      this._enumerableAndNotEnumerable,
+  getownenumewabwesandnonenumewabwes: f-function (obj) {
+    wetuwn t-this._getpwopewtynames(
+      obj, (✿oωo)
+      twue, (˘ω˘)
+      fawse, rawr
+      this._enumewabweandnotenumewabwe, OwO
     );
-    // On peut également simplement utiliser : return Object.getOwnPropertyNames(obj);
-  },
-  getPrototypeEnumerables: function (obj) {
-    return this._getPropertyNames(obj, false, true, this._enumerable);
-  },
-  getPrototypeNonenumerables: function (obj) {
-    return this._getPropertyNames(obj, false, true, this._notEnumerable);
-  },
-  getPrototypeEnumerablesAndNonenumerables: function (obj) {
-    return this._getPropertyNames(
-      obj,
-      false,
-      true,
-      this._enumerableAndNotEnumerable,
+    // o-on peut égawement simpwement u-utiwisew : wetuwn o-object.getownpwopewtynames(obj);
+  }, ^•ﻌ•^
+  getpwototypeenumewabwes: f-function (obj) {
+    wetuwn t-this._getpwopewtynames(obj, UwU fawse, (˘ω˘) t-twue, this._enumewabwe);
+  }, (///ˬ///✿)
+  g-getpwototypenonenumewabwes: function (obj) {
+    w-wetuwn this._getpwopewtynames(obj, σωσ f-fawse, /(^•ω•^) twue, this._notenumewabwe);
+  }, 😳
+  getpwototypeenumewabwesandnonenumewabwes: f-function (obj) {
+    w-wetuwn this._getpwopewtynames(
+      o-obj, 😳
+      fawse, (⑅˘꒳˘)
+      twue,
+      this._enumewabweandnotenumewabwe, 😳😳😳
     );
-  },
-  getOwnAndPrototypeEnumerables: function (obj) {
-    return this._getPropertyNames(obj, true, true, this._enumerable);
-    // On pourra aussi utiliser for..in sans filtre
-  },
-  getOwnAndPrototypeNonenumerables: function (obj) {
-    return this._getPropertyNames(obj, true, true, this._notEnumerable);
-  },
-  getOwnAndPrototypeEnumerablesAndNonenumerables: function (obj) {
-    return this._getPropertyNames(
-      obj,
-      true,
-      true,
-      this._enumerableAndNotEnumerable,
+  }, 😳
+  g-getownandpwototypeenumewabwes: function (obj) {
+    w-wetuwn this._getpwopewtynames(obj, XD t-twue, twue, this._enumewabwe);
+    // on pouwwa aussi utiwisew fow..in sans fiwtwe
+  }, mya
+  g-getownandpwototypenonenumewabwes: function (obj) {
+    w-wetuwn this._getpwopewtynames(obj, ^•ﻌ•^ t-twue, ʘwʘ twue, t-this._notenumewabwe);
+  }, ( ͡o ω ͡o )
+  getownandpwototypeenumewabwesandnonenumewabwes: f-function (obj) {
+    wetuwn this._getpwopewtynames(
+      obj, mya
+      twue, o.O
+      twue, (✿oωo)
+      this._enumewabweandnotenumewabwe, :3
     );
-  },
-  // Fonctions de rappels statiques
-  _enumerable: function (obj, prop) {
-    return obj.propertyIsEnumerable(prop);
-  },
-  _notEnumerable: function (obj, prop) {
-    return !obj.propertyIsEnumerable(prop);
-  },
-  _enumerableAndNotEnumerable: function (obj, prop) {
-    return true;
-  },
-  // Inspirée par https://stackoverflow.com/a/8024294/271577
-  _getPropertyNames: function getAllPropertyNames(
-    obj,
-    iterateSelfBool,
-    iteratePrototypeBool,
-    includePropCb,
+  }, 😳
+  // fonctions de wappews s-statiques
+  _enumewabwe: function (obj, (U ﹏ U) p-pwop) {
+    wetuwn o-obj.pwopewtyisenumewabwe(pwop);
+  }, mya
+  _notenumewabwe: function (obj, (U ᵕ U❁) p-pwop) {
+    wetuwn !obj.pwopewtyisenumewabwe(pwop);
+  }, :3
+  _enumewabweandnotenumewabwe: f-function (obj, mya p-pwop) {
+    w-wetuwn t-twue;
+  }, OwO
+  // i-inspiwée paw https://stackovewfwow.com/a/8024294/271577
+  _getpwopewtynames: function getawwpwopewtynames(
+    obj, (ˆ ﻌ ˆ)♡
+    itewatesewfboow, ʘwʘ
+    itewatepwototypeboow,
+    incwudepwopcb, o.O
   ) {
-    var props = [];
+    vaw pwops = [];
 
-    do {
-      if (iterateSelfBool) {
-        Object.getOwnPropertyNames(obj).forEach(function (prop) {
-          if (props.indexOf(prop) === -1 && includePropCb(obj, prop)) {
-            props.push(prop);
+    d-do {
+      i-if (itewatesewfboow) {
+        o-object.getownpwopewtynames(obj).foweach(function (pwop) {
+          if (pwops.indexof(pwop) === -1 && i-incwudepwopcb(obj, UwU pwop)) {
+            pwops.push(pwop);
           }
         });
       }
-      if (!iteratePrototypeBool) {
-        break;
+      if (!itewatepwototypeboow) {
+        b-bweak;
       }
-      iterateSelfBool = true;
-    } while ((obj = Object.getPrototypeOf(obj)));
+      i-itewatesewfboow = twue;
+    } whiwe ((obj = o-object.getpwototypeof(obj)));
 
-    return props;
-  },
+    wetuwn pwops;
+  }, rawr x3
 };
 ```
 
-## Tableau de détection
+## tabweau d-de détection
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="row"></th>
-      <th scope="col"><code>in</code></th>
-      <th scope="col"><code>for..in</code></th>
-      <th scope="col"><code>obj.hasOwnProperty()</code></th>
-      <th scope="col"><code>obj.propertyIsEnumerable()</code></th>
-      <th scope="col"><code>Object.keys()</code></th>
-      <th scope="col"><code>Object.getOwnPropertyNames()</code></th>
-      <th scope="col"><code>Object.getOwnPropertyDescriptors()</code></th>
-      <th scope="col"><code>Reflect.ownKeys()</code></th>
-    </tr>
+    <tw>
+      <th s-scope="wow"></th>
+      <th scope="cow"><code>in</code></th>
+      <th s-scope="cow"><code>fow..in</code></th>
+      <th s-scope="cow"><code>obj.hasownpwopewty()</code></th>
+      <th scope="cow"><code>obj.pwopewtyisenumewabwe()</code></th>
+      <th scope="cow"><code>object.keys()</code></th>
+      <th scope="cow"><code>object.getownpwopewtynames()</code></th>
+      <th scope="cow"><code>object.getownpwopewtydescwiptows()</code></th>
+      <th s-scope="cow"><code>wefwect.ownkeys()</code></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Propriétés énumérables</th>
-      <td>true</td>
-      <td>true</td>
-      <td>true</td>
-      <td>true</td>
-      <td>true</td>
-      <td>true</td>
-      <td>true</td>
-      <td>true</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriétés non-énumérables</th>
-      <td>true</td>
-      <td>false</td>
-      <td>true</td>
-      <td>false</td>
-      <td>false</td>
-      <td>true</td>
-      <td>true</td>
-      <td>true</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriétés dont les clés sont des symboles</th>
-      <td>true</td>
-      <td>false</td>
-      <td>true</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-      <td>true</td>
-      <td>true</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriétés héritées et énumérables</th>
-      <td>true</td>
-      <td>true</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriétés héritées et non-énumérables</th>
-      <td>true</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriétés héritées dont les clés sont des symboles</th>
-      <td>true</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-      <td>false</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">pwopwiétés énuméwabwes</th>
+      <td>twue</td>
+      <td>twue</td>
+      <td>twue</td>
+      <td>twue</td>
+      <td>twue</td>
+      <td>twue</td>
+      <td>twue</td>
+      <td>twue</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pwopwiétés n-nyon-énuméwabwes</th>
+      <td>twue</td>
+      <td>fawse</td>
+      <td>twue</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>twue</td>
+      <td>twue</td>
+      <td>twue</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pwopwiétés dont w-wes cwés sont des s-symbowes</th>
+      <td>twue</td>
+      <td>fawse</td>
+      <td>twue</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>twue</td>
+      <td>twue</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiétés h-héwitées e-et énuméwabwes</th>
+      <td>twue</td>
+      <td>twue</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiétés héwitées e-et nyon-énuméwabwes</th>
+      <td>twue</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+    </tw>
+    <tw>
+      <th scope="wow">pwopwiétés héwitées d-dont wes cwés sont des symbowes</th>
+      <td>twue</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+      <td>fawse</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Voir aussi
+## v-voiw aussi
 
-- [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in)
-- [`for..in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in)
-- {{jsxref("Object.hasOwnProperty()")}}
-- {{jsxref("Object.propertyIsEnumerable()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.getOwnPropertyDescriptors()")}}
+- [`in`](/fw/docs/web/javascwipt/wefewence/opewatows/in)
+- [`fow..in`](/fw/docs/web/javascwipt/wefewence/statements/fow...in)
+- {{jsxwef("object.hasownpwopewty()")}}
+- {{jsxwef("object.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.getownpwopewtydescwiptows()")}}

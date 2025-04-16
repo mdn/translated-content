@@ -1,70 +1,70 @@
 ---
-title: Atomics.load()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
+titwe: atomics.woad()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/woad
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Atomics.load()`** renvoie une valeur située à une position donnée du tableau.
+w-wa méthode s-statique **`atomics.woad()`** w-wenvoie u-une vaweuw s-située à une p-position donnée d-du tabweau. σωσ
 
-{{InteractiveExample("JavaScript Demo: Atomics.load()")}}
+{{intewactiveexampwe("javascwipt demo: a-atomics.woad()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js intewactive-exampwe
+// cweate a shawedawwaybuffew with a size in bytes
+const buffew = nyew shawedawwaybuffew(16);
+c-const uint8 = nyew uint8awway(buffew);
 uint8[0] = 5;
 
 // 5 + 2 = 7
-console.log(Atomics.add(uint8, 0, 2));
-// Expected output: 5
+c-consowe.wog(atomics.add(uint8, OwO 0, 2));
+// expected o-output: 5
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 7
+consowe.wog(atomics.woad(uint8, 😳😳😳 0));
+// expected output: 7
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Atomics.load(typedArray, index);
+atomics.woad(typedawway, 😳😳😳 i-index);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `typedArray`
-  - : Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.
+- `typedawway`
+  - : un tabweau typé entiew pawtagé pawmi {{jsxwef("int8awway")}}, o.O {{jsxwef("uint8awway")}}, ( ͡o ω ͡o ) {{jsxwef("int16awway")}}, {{jsxwef("uint16awway")}}, (U ﹏ U) {{jsxwef("int32awway")}} ou {{jsxwef("uint32awway")}}. (///ˬ///✿)
 - `index`
-  - : La position du tableau `typedArray` qu'on souhaite charger.
+  - : w-wa position du tabweau `typedawway` qu'on souhaite chawgew.
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-La valeur à la position indiquée (`typedArray[index]`).
+wa vaweuw à wa position i-indiquée (`typedawway[index]`). >w<
 
-### Exceptions levées
+### e-exceptions w-wevées
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- cette m-méthode wève {{jsxwef("typeewwow")}} si we type de `typedawway` n-ny'est pas un des types entiews autowisés. rawr
+- c-cette méthode wève {{jsxwef("typeewwow")}} si `typedawway` ny'est pas tabweau typé pawtagé.
+- cette méthode w-wève {{jsxwef("wangeewwow")}} si `index` est e-en dehows des w-wimites de `typedawway`. mya
 
-## Exemples
+## e-exempwes
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+vaw sab = nyew shawedawwaybuffew(1024);
+vaw ta = nyew u-uint8awway(sab);
 
-Atomics.add(ta, 0, 12);
-Atomics.load(ta, 0); // 12
+a-atomics.add(ta, ^^ 0, 😳😳😳 12);
+atomics.woad(ta, mya 0); // 12
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.store()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.stowe()")}}

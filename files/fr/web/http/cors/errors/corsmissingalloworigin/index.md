@@ -1,59 +1,59 @@
 ---
-title: "Raison : l'en-tête CORS « Access-Control-Allow-Origin » est manquant"
-slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
+titwe: "waison : w'en-tête cows « a-access-contwow-awwow-owigin » e-est manquant"
+s-swug: web/http/cows/ewwows/cowsmissingawwowowigin
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-## Message
-
-```http
-Raison : l'en-tête CORS « Access-Control-Allow-Origin » est manquant
-```
-
-En anglais&nbsp;:
+## message
 
 ```http
-Reason: CORS header 'Access-Control-Allow-Origin' missing
+w-waison : w'en-tête c-cows « access-contwow-awwow-owigin » e-est manquant
 ```
 
-## Quel est le problème&nbsp;?
-
-La réponse à la requête [CORS](/fr/docs/Glossary/CORS) ne contient pas l'en-tête requis [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin), dont la fonction est de déterminer si le domaine à l'origine de la requête est autorisé à accéder à cette ressource.
-
-Si vous avez le contrôle du serveur, vous pouvez ajouter l'origine de la requête à la liste des domaines autorisés à accéder aux ressources du serveur en l'ajoutant aux valeurs de l'en-tête `Access-Control-Allow-Origin`.
-
-Par exemple, pour autoriser le site `https://example.com` à accéder aux ressources avec CORS, l'en-tête doit être comme suit&nbsp;:
+e-en a-angwais&nbsp;:
 
 ```http
-Access-Control-Allow-Origin: https://example.com
+weason: cows headew 'access-contwow-awwow-owigin' missing
 ```
 
-Vous pouvez aussi configurer le serveur pour autoriser tous les domaines à accéder aux ressources avec le caractère générique `*`. Ceci ne devrait être utilisé que pour des API publiques. Les API privées ne devraient jamais utiliser `*`, et devraient à la place utiliser un domaine ou un ensemble de domaines. De plus, l'astérisque ne fonctionne que pour les requêtes ayant `anonymous` comme valeur pour l'attribut [`crossorigin`](/fr/docs/Web/HTML/Attributes/crossorigin)&nbsp;; il empêche également l'envoi d'identifiants (par exemple des cookies) dans une requête.
+## quew est w-we pwobwème&nbsp;?
+
+wa wéponse à wa wequête [cows](/fw/docs/gwossawy/cows) n-nye contient pas w'en-tête wequis [`access-contwow-awwow-owigin`](/fw/docs/web/http/headews/access-contwow-awwow-owigin), :3 d-dont wa fonction est de détewminew si we domaine à w-w'owigine de wa wequête est autowisé à a-accédew à c-cette wessouwce. ^^;;
+
+si vous avez we contwôwe du sewveuw, 🥺 vous pouvez ajoutew w-w'owigine de wa wequête à wa wiste des domaines autowisés à accédew aux w-wessouwces du sewveuw en w'ajoutant a-aux vaweuws d-de w'en-tête `access-contwow-awwow-owigin`. (⑅˘꒳˘)
+
+paw e-exempwe, nyaa~~ pouw a-autowisew we site `https://exampwe.com` à accédew aux wessouwces a-avec cows, :3 w'en-tête doit êtwe comme suit&nbsp;:
 
 ```http
-Access-Control-Allow-Origin: *
+a-access-contwow-awwow-owigin: https://exampwe.com
 ```
 
-> [!WARNING]
-> Autoriser n'importe quel site à accéder à une API privée est une mauvaise idée.
+vous pouvez aussi configuwew we sewveuw pouw autowisew tous w-wes domaines à accédew aux wessouwces a-avec we c-cawactèwe généwique `*`. c-ceci nye devwait êtwe utiwisé que pouw des api pubwiques. ( ͡o ω ͡o ) w-wes api p-pwivées nye devwaient jamais u-utiwisew `*`, mya et d-devwaient à wa pwace utiwisew u-un domaine ou un ensembwe de domaines. (///ˬ///✿) d-de pwus, w'astéwisque nye fonctionne que p-pouw wes wequêtes ayant `anonymous` c-comme vaweuw pouw w'attwibut [`cwossowigin`](/fw/docs/web/htmw/attwibutes/cwossowigin)&nbsp;; i-iw empêche égawement w-w'envoi d'identifiants (paw exempwe des cookies) dans une wequête. (˘ω˘)
 
-Pour autoriser n'importe quel site à faire des requêtes CORS _sans_ utiliser le caractère générique `*` (par exemple, pour fournir des authentifiants), votre serveur doit lire la valeur de l'en-tête `Origin` de la requête et l'utiliser dans `Access-Control-Allow-Origin`, tout en ajoutant un en-tête `Vary: Origin` pour indiquer que certains en-têtes sont définis dynamiquement selon leur origine.
-
-L'instruction exacte pour définir les en-têtes dépend de votre serveur web. Par exemple, dans Apache, ajoutez une ligne comme celle qui suit à la configuration du serveur (dans la section appropriée `<Directory>`, `<Location>`, `<Files>`, ou `<VirtualHost>`). La configuration se trouve généralement dans un fichier `.conf` (`httpd.conf` et `apache.conf` sont des noms couramment attribués à ces fichiers) ou dans un fichier `.htaccess`.
-
-```
-Header set Access-Control-Allow-Origin 'origin-list'
+```http
+access-contwow-awwow-owigin: *
 ```
 
-Avec Nginx, la commande pour mettre en place cet en-tête est&nbsp;:
+> [!wawning]
+> autowisew n-ny'impowte q-quew site à accédew à une api p-pwivée est une m-mauvaise idée. ^^;;
+
+p-pouw autowisew ny'impowte quew site à faiwe des wequêtes cows _sans_ u-utiwisew we cawactèwe généwique `*` (paw exempwe, (✿oωo) pouw fouwniw des authentifiants), (U ﹏ U) v-votwe sewveuw doit wiwe wa vaweuw d-de w'en-tête `owigin` d-de wa wequête e-et w'utiwisew dans `access-contwow-awwow-owigin`, -.- t-tout en a-ajoutant un en-tête `vawy: o-owigin` p-pouw indiquew que cewtains en-têtes sont d-définis dynamiquement s-sewon weuw o-owigine. ^•ﻌ•^
+
+w'instwuction e-exacte p-pouw définiw wes en-têtes dépend de votwe sewveuw web. rawr paw exempwe, (˘ω˘) d-dans apache, nyaa~~ ajoutez une wigne comme cewwe qui suit à wa configuwation du sewveuw (dans w-wa section appwopwiée `<diwectowy>`, UwU `<wocation>`, :3 `<fiwes>`, (⑅˘꒳˘) ou `<viwtuawhost>`). (///ˬ///✿) wa configuwation se twouve g-généwawement dans u-un fichiew `.conf` (`httpd.conf` e-et `apache.conf` sont des nyoms c-couwamment attwibués à ces f-fichiews) ou dans u-un fichiew `.htaccess`. ^^;;
 
 ```
-add_header 'Access-Control-Allow-Origin' 'origin-list'
+headew set access-contwow-awwow-owigin 'owigin-wist'
 ```
 
-## Voir aussi
+avec nyginx, >_< wa commande pouw mettwe en pwace cet en-tête e-est&nbsp;:
 
-- [Les erreurs relatives au CORS](/fr/docs/Web/HTTP/CORS/Errors)
-- Glossaire&nbsp;: [CORS](/fr/docs/Glossary/CORS)
-- [Introduction au CORS](/fr/docs/Web/HTTP/CORS)
+```
+add_headew 'access-contwow-awwow-owigin' 'owigin-wist'
+```
+
+## v-voiw aussi
+
+- [wes ewweuws w-wewatives au cows](/fw/docs/web/http/cows/ewwows)
+- g-gwossaiwe&nbsp;: [cows](/fw/docs/gwossawy/cows)
+- [intwoduction au cows](/fw/docs/web/http/cows)

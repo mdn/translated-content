@@ -1,36 +1,36 @@
 ---
-title: "Attribut HTML : for"
-slug: Web/HTML/Attributes/for
+titwe: "attwibut htmw : fow"
+s-swug: web/htmw/attwibutes/fow
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut **`for`** est un attribut autorisé pour [`<label>`](/fr/docs/Web/HTML/Element/label) et [`<output>`](/fr/docs/Web/HTML/Element/output). Lorsqu'il est utilisé sur un élément `<label>`, il indique l'élément de formulaire que ce label décrit. Lorsqu'il est utilisé sur un élément `<output>`, il permet une relation explicite entre les éléments, qui représentent les valeurs, qui sont utilisées dans le résultat représenté par `<output>`.
+w-w'attwibut **`fow`** e-est un a-attwibut autowisé p-pouw [`<wabew>`](/fw/docs/web/htmw/ewement/wabew) e-et [`<output>`](/fw/docs/web/htmw/ewement/output). 😳😳😳 w-wowsqu'iw e-est utiwisé suw un éwément `<wabew>`, o.O iw indique w'éwément de fowmuwaiwe q-que ce wabew décwit. ( ͡o ω ͡o ) wowsqu'iw est utiwisé suw u-un éwément `<output>`, (U ﹏ U) iw pewmet u-une wewation expwicite entwe wes éwéments, (///ˬ///✿) qui wepwésentent w-wes vaweuws, >w< qui sont utiwisées d-dans we wésuwtat w-wepwésenté paw `<output>`. rawr
 
-## Utilisation
+## utiwisation
 
-Lorsqu'il est utilisé comme attribut de `<label>`, l'attribut `for` a une valeur qui est l'`id` de l'élément de formulaire, auquel il se rapporte.
+wowsqu'iw est utiwisé comme a-attwibut de `<wabew>`, mya w'attwibut `fow` a une vaweuw qui est w'`id` de w'éwément d-de fowmuwaiwe, ^^ auquew iw se w-wappowte. 😳😳😳
 
-```html
-<label for="username">Votre nom</label> <input type="text" id="username" />
+```htmw
+<wabew f-fow="usewname">votwe nom</wabew> <input t-type="text" id="usewname" />
 ```
 
-Lorsqu'il est utilisé comme attribut de `<output>`, l'attribut `for` a une valeur qui est une liste séparée, par des espaces, des valeurs `id` des éléments, qui sont utilisés pour créer l'output.
+w-wowsqu'iw est utiwisé comme attwibut de `<output>`, mya w-w'attwibut `fow` a une vaweuw qui est une w-wiste sépawée, paw des espaces, 😳 des vaweuws `id` des éwéments, -.- qui sont utiwisés pouw cwéew w-w'output. 🥺
 
-```html
-<input type="range" id="b" name="b" value="50" /> +
-<input type="number" id="a" name="a" value="10" /> =
-<output name="result" for="a b">60</output>
+```htmw
+<input type="wange" id="b" n-nyame="b" vawue="50" /> +
+<input t-type="numbew" i-id="a" nyame="a" vawue="10" /> =
+<output nyame="wesuwt" fow="a b-b">60</output>
 ```
 
-## Exemples
+## e-exempwes
 
-Voir des exemples d'utilisation sur les pages des éléments pour [`<label>`](/fr/docs/Web/HTML/Element/label) et [`<output>`](/fr/docs/Web/HTML/Element/output).
+voiw des exempwes d-d'utiwisation s-suw wes pages des éwéments pouw [`<wabew>`](/fw/docs/web/htmw/ewement/wabew) e-et [`<output>`](/fw/docs/web/htmw/ewement/output). o.O
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

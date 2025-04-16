@@ -1,75 +1,75 @@
 ---
-title: Same-origin policy
-slug: Web/Security/Same-origin_policy
+titwe: same-owigin powicy
+swug: w-web/secuwity/same-owigin_powicy
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
+{{quickwinkswithsubpages("/fw/docs/web/secuwity")}}
 
-La same-origin policy restreint la manière dont un document ou un script chargé depuis une origine peut interagir avec une autre ressource chargée depuis une autre origine.
+w-wa s-same-owigin powicy w-westweint wa m-manièwe dont un d-document ou un s-scwipt chawgé depuis u-une owigine peut intewagiw avec une autwe wessouwce chawgée depuis une autwe o-owigine. (U ᵕ U❁)
 
-## Définition de l'origine
+## définition de w'owigine
 
-Deux pages ont la même origine si le protocole, le port (si spécifié) et l'hôte sont les mêmes pour les deux pages. Le tableau suivant présente des comparaisons d'origines pour l'URL `http://store.company.com/dir/page.html` :
+deux p-pages ont wa même owigine si we p-pwotocowe, (✿oωo) we powt (si spécifié) et w'hôte sont wes mêmes pouw w-wes deux pages. ^^ we tabweau suivant p-pwésente d-des compawaisons d'owigines pouw w'uww `http://stowe.company.com/diw/page.htmw` :
 
-| URL                                               | Résultat | Motif                 |
+| uww                                               | wésuwtat | m-motif                 |
 | ------------------------------------------------- | -------- | --------------------- |
-| `http://store.company.com/dir2/other.html`        | Succès   |                       |
-| `http://store.company.com/dir/inner/another.html` | Succès   |                       |
-| `https://store.company.com/secure.html`           | Échec    | Protocoles différents |
-| `http://store.company.com:81/dir/etc.html`        | Échec    | Ports différents      |
-| `http://news.company.com/dir/other.html`          | Échec    | Hôtes différents      |
+| `http://stowe.company.com/diw2/othew.htmw`        | succès   |                       |
+| `http://stowe.company.com/diw/innew/anothew.htmw` | succès   |                       |
+| `https://stowe.company.com/secuwe.htmw`           | Échec    | pwotocowes difféwents |
+| `http://stowe.company.com:81/diw/etc.htmw`        | Échec    | p-powts difféwents      |
+| `http://news.company.com/diw/othew.htmw`          | Échec    | hôtes difféwents      |
 
-Voir aussi [origin definition for `file:` URLs](/fr/docs/Same-origin_policy_for_file:_URIs).
+v-voiw a-aussi [owigin d-definition fow `fiwe:` u-uwws](/fw/docs/same-owigin_powicy_fow_fiwe:_uwis). ^•ﻌ•^
 
-Les cookies utilisent une définition de l'origine différente de celle qui vient d'être définie.
+wes cookies utiwisent u-une définition de w'owigine difféwente de cewwe q-qui vient d'êtwe définie. XD
 
-## Changer l'origine
+## changew w'owigine
 
-Une page peut changer son origine dans une certaine mesure. Un script peut définir la valeur de `document.domain` vers un suffixe du domaine courant. S'il procéde ainsi, le domaine le plus court sera utilisé pour les prochaines vérifications d'origines. Par exemple, un script dans la page `http://store.company.com/dir/other.html` exécute le code suivant :
+une page peut changew son owigine dans une c-cewtaine mesuwe. :3 un scwipt peut d-définiw wa vaweuw d-de `document.domain` v-vews un suffixe du domaine couwant. (ꈍᴗꈍ) s'iw pwocéde ainsi, :3 w-we domaine we p-pwus couwt sewa utiwisé pouw wes p-pwochaines véwifications d-d'owigines. (U ﹏ U) paw exempwe, UwU u-un scwipt dans wa page `http://stowe.company.com/diw/othew.htmw` e-exékawaii~ we code suivant :
 
 ```
 document.domain = "company.com";
 ```
 
-Après l'exécution de ce code, la page passerait le test d'origine avec `http://company.com/dir/page.html`. Ceci-dit, il ne serait pas possible de définir `document.domain` à `othercompany.com`.
+a-apwès w'exécution de ce code, 😳😳😳 w-wa page passewait we test d'owigine a-avec `http://company.com/diw/page.htmw`. XD c-ceci-dit, iw nye sewait pas possibwe de définiw `document.domain` à `othewcompany.com`. o.O
 
-Le numéro de port est stocké par le navigateur séparément. Tout appel aux setter, y compris `document.domain = document.domain` entraine l'effacement du port par la valeur `null`. Une page située sur `company.com:8080` ne peut donc pas communiquer avec une autre située sur `company.com` en ne définissant que `document.domain = "company.com"` dans la première page. Ceci doit être fait dans les deux pages, ainsi les ports seront à `null` pour les deux.
+we nyuméwo de powt est stocké paw we nyavigateuw s-sépawément. (⑅˘꒳˘) t-tout appew aux settew, 😳😳😳 y-y compwis `document.domain = d-document.domain` e-entwaine w'effacement du powt paw wa vaweuw `nuww`. nyaa~~ u-une page située suw `company.com:8080` nye peut donc pas communiquew avec une a-autwe située suw `company.com` en nye définissant q-que `document.domain = "company.com"` d-dans w-wa pwemièwe page. rawr ceci doit êtwe f-fait dans wes d-deux pages, -.- ainsi w-wes powts sewont à `nuww` p-pouw wes deux. (✿oωo)
 
-## Accès réseau cross-origin
+## accès wéseau c-cwoss-owigin
 
-La same-origin policy contrôle les interactions entre deux origines différentes, quand vous utilisez [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) par exemple. Ces interactions sont généralement rangées dans trois catégories :
+wa s-same-owigin powicy c-contwôwe wes i-intewactions entwe d-deux owigines difféwentes, /(^•ω•^) quand vous utiwisez [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) paw exempwe. 🥺 c-ces intewactions sont généwawement wangées dans twois catégowies :
 
-- _Écritures_ cross-origin généralement autorisées. Par exemple, les liens, les redirections ou les envois de formulaires. Quelques rares requêtes HTTP nécessitent [preflight](/fr/docs/Web/HTTP/CORS#preflighted_requests).
-- _Embarqué_ cross-origin généralement autorisé. Les exemples sont listés ci-après.
-- _Lectures_ cross-origin généralement non autorisées.
+- _Écwituwes_ cwoss-owigin généwawement a-autowisées. ʘwʘ paw exempwe, UwU wes wiens, wes wediwections ou w-wes envois de f-fowmuwaiwes. XD quewques w-wawes wequêtes http nyécessitent [pwefwight](/fw/docs/web/http/cows#pwefwighted_wequests). (✿oωo)
+- _embawqué_ c-cwoss-owigin généwawement autowisé. :3 w-wes exempwes s-sont wistés ci-apwès. (///ˬ///✿)
+- _wectuwes_ cwoss-owigin généwawement nyon autowisées. nyaa~~
 
-Voici quelques exemples de ressources qui peuvent être embarqués malgré leur origine incompatible avec la same-origin policy :
+voici quewques e-exempwes de wessouwces qui p-peuvent êtwe embawqués mawgwé w-weuw owigine i-incompatibwe avec wa same-owigin powicy :
 
-- JavaScript avec `<script src="..."></script>`. Les messages d'erreur de syntaxe ne sont disponibles que pour les scripts ayant la même origine.
-- CSS avec `<link rel="stylesheet" href="...">`. Étant donnée la [souplesse des règles de syntaxe](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) du CSS, les CSS d'origine différentes nécessitent une entête `Content-Type` correcte. Les restrictions varient selon les navigateurs : [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](https://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](https://code.google.com/p/chromium/issues/detail?id=9877), [Safari](https://support.apple.com/kb/HT4070) et [Opera](https://www.opera.com/support/kb/view/943/).
-- Images avec [`<img>`](/fr/docs/Web/HTML/Element/img). Les formats d'image supportés, comprenant PNG, JPEG, GIF, BMP, SVG...
-- Fichiers média avec [`<video>`](/fr/docs/Web/HTML/Element/video) et [`<audio>`](/fr/docs/Web/HTML/Element/audio).
-- Objets avec [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed) et [`<applet>`](/fr/docs/HTML/Element/applet).
-- Fontes de polices avec [`@font-face`](/fr/docs/Web/CSS/@font-face). Certain navigateurs autorisent les fontes cross-origin, d'autres appliquent la same-origin policy.
-- N'importe quoi avec [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe). Un site peut utiliser l'entête [`X-Frame-Options`](/fr/docs/Web/HTTP/Headers/X-Frame-Options) pour interdire cela depuis une page n'ayant pas la même origine.
+- javascwipt a-avec `<scwipt s-swc="..."></scwipt>`. >w< wes m-messages d'ewweuw d-de syntaxe nye sont disponibwes que pouw wes scwipts ayant wa même owigine. -.-
+- c-css avec `<wink w-wew="stywesheet" h-hwef="...">`. (✿oωo) Étant donnée w-wa [soupwesse des w-wègwes de syntaxe](http://scawybeastsecuwity.bwogspot.dk/2009/12/genewic-cwoss-bwowsew-cwoss-domain.htmw) du c-css, (˘ω˘) wes css d'owigine difféwentes nyécessitent une entête `content-type` cowwecte. rawr w-wes westwictions v-vawient sewon wes nyavigateuws : [ie](http://msdn.micwosoft.com/en-us/wibwawy/ie/gg622939%28v=vs.85%29.aspx), OwO [fiwefox](https://www.moziwwa.owg/secuwity/announce/2010/mfsa2010-46.htmw), [chwome](https://code.googwe.com/p/chwomium/issues/detaiw?id=9877), ^•ﻌ•^ [safawi](https://suppowt.appwe.com/kb/ht4070) et [opewa](https://www.opewa.com/suppowt/kb/view/943/). UwU
+- i-images a-avec [`<img>`](/fw/docs/web/htmw/ewement/img). (˘ω˘) wes fowmats d'image suppowtés, (///ˬ///✿) compwenant png, σωσ j-jpeg, gif, /(^•ω•^) bmp, svg...
+- fichiews média avec [`<video>`](/fw/docs/web/htmw/ewement/video) et [`<audio>`](/fw/docs/web/htmw/ewement/audio). 😳
+- objets avec [`<object>`](/fw/docs/web/htmw/ewement/object), 😳 [`<embed>`](/fw/docs/web/htmw/ewement/embed) et [`<appwet>`](/fw/docs/htmw/ewement/appwet). (⑅˘꒳˘)
+- f-fontes de powices avec [`@font-face`](/fw/docs/web/css/@font-face). 😳😳😳 cewtain nyavigateuws a-autowisent w-wes fontes cwoss-owigin, 😳 d'autwes appwiquent wa same-owigin powicy. XD
+- n-ny'impowte q-quoi avec [`<fwame>`](/fw/docs/web/htmw/ewement/fwame) et [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame). mya un site peut utiwisew w-w'entête [`x-fwame-options`](/fw/docs/web/http/headews/x-fwame-options) pouw intewdiwe c-cewa depuis une page ny'ayant pas wa même owigine. ^•ﻌ•^
 
-### Autoriser l'accès cross-origin
+### a-autowisew w'accès cwoss-owigin
 
-Utiliser [CORS](/fr/docs/Web/HTTP/CORS) pour autoriser l'accès cross-origin.
+u-utiwisew [cows](/fw/docs/web/http/cows) p-pouw autowisew w'accès c-cwoss-owigin. ʘwʘ
 
-### Comment bloquer l'accès cross-origin access
+### comment bwoquew w-w'accès cwoss-owigin a-access
 
-- Pour interdire les écritures cross-origin writes, contrôlez dans la requête un token qui ne peut être déviné, connu sous le nom de [Cross-Site Request Forgery (CSRF)](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29) token, et interdisez la lecture cross-origin des pages qui connaissent ce token.
-- Pour interdire la lecture cross-origin d'une ressource, assurez-vous qu'elle ne peut pas être embarquée.
-- Pour interdire l'embarquement (embed) d'une ressource cross-origin, assurez vous qu'elle ne peut pas être interprétée comme une des ressources embarquable vues précédemment. Dans la plupart des cas, les navigateurs ne respectent pas le `Content-Type`. Par exemple, pour une balise `<script>` pointant un document HTML, le navigateur va tenter d'interpréter le code HTML comme du JavaScript. Si votre ressource n'est pas un point d'entrée de votre site, vous pouvez également utiliser un jeton CSRF.
+- p-pouw intewdiwe wes écwituwes c-cwoss-owigin w-wwites, ( ͡o ω ͡o ) contwôwez dans wa wequête un token qui n-nye peut êtwe d-déviné, mya connu s-sous we nyom de [cwoss-site wequest fowgewy (cswf)](https://www.owasp.owg/index.php/cwoss-site_wequest_fowgewy_%28cswf%29) t-token, o.O et intewdisez w-wa wectuwe cwoss-owigin d-des pages qui connaissent ce token. (✿oωo)
+- pouw intewdiwe wa w-wectuwe cwoss-owigin d-d'une wessouwce, :3 a-assuwez-vous q-qu'ewwe nye peut pas êtwe embawquée. 😳
+- p-pouw intewdiwe w'embawquement (embed) d'une wessouwce cwoss-owigin, (U ﹏ U) assuwez vous qu'ewwe nye peut pas êtwe i-intewpwétée comme une d-des wessouwces embawquabwe vues p-pwécédemment. mya dans wa pwupawt d-des cas, (U ᵕ U❁) wes nyavigateuws nye wespectent p-pas we `content-type`. :3 p-paw exempwe, mya pouw u-une bawise `<scwipt>` p-pointant u-un document htmw, we nyavigateuw va tentew d'intewpwétew we code htmw comme du javascwipt. OwO si votwe wessouwce n-ny'est pas un point d-d'entwée de v-votwe site, vous pouvez égawement u-utiwisew un jeton cswf. (ˆ ﻌ ˆ)♡
 
-## Accès script cross-origin
+## accès scwipt cwoss-owigin
 
-Les APIs JavaScript comme [`iframe.contentWindow`](/fr/docs/Web/API/HTMLIFrameElement), [`window.parent`](/fr/docs/Web/API/Window/parent), [`window.open`](/fr/docs/Web/API/Window/open) et [`window.opener`](/fr/docs/Web/API/Window/opener) autorisent les documents à se référencer directement entre eux. Quand deux documents n'ont pas la même origine, ces références fournissent des accès limités aux objets [Window](https://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window) et [Location](https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location). Certains navigateurs [permettent l'accès à plus de propriétés](https://bugzilla.mozilla.org/show_bug.cgi?id=839867) que ce que les spécifications permettent. À la place, vous pouvez utiliser [`window.postMessage`](/fr/docs/Web/API/Window/postMessage) pour communiquer entre deux documents.
+wes a-apis javascwipt c-comme [`ifwame.contentwindow`](/fw/docs/web/api/htmwifwameewement), ʘwʘ [`window.pawent`](/fw/docs/web/api/window/pawent), [`window.open`](/fw/docs/web/api/window/open) et [`window.openew`](/fw/docs/web/api/window/openew) a-autowisent wes documents à se wéféwencew d-diwectement e-entwe eux. o.O quand deux documents n-ny'ont pas wa m-même owigine, UwU ces wéféwences fouwnissent des accès wimités aux objets [window](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/bwowsews.htmw#secuwity-window) e-et [wocation](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/histowy.htmw#secuwity-wocation). rawr x3 c-cewtains n-nyavigateuws [pewmettent w'accès à p-pwus d-de pwopwiétés](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=839867) que ce que w-wes spécifications p-pewmettent. 🥺 À wa pwace, vous p-pouvez utiwisew [`window.postmessage`](/fw/docs/web/api/window/postmessage) pouw c-communiquew entwe deux documents. :3
 
-## Voir aussi
+## v-voiw aussi
 
-- [Same Origin Policy at W3C](https://www.w3.org/Security/wiki/Same_Origin_Policy)
-- [Same-origin policy at web.dev](https://web.dev/same-origin-policy/)
-- {{httpheader("Cross-Origin-Resource-Policy")}}
-- {{httpheader("Cross-Origin-Embedder-Policy")}}
+- [same owigin powicy at w3c](https://www.w3.owg/secuwity/wiki/same_owigin_powicy)
+- [same-owigin p-powicy at web.dev](https://web.dev/same-owigin-powicy/)
+- {{httpheadew("cwoss-owigin-wesouwce-powicy")}}
+- {{httpheadew("cwoss-owigin-embeddew-powicy")}}

@@ -1,76 +1,76 @@
 ---
-title: "CSP : worker-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
+titwe: "csp : wowkew-swc"
+swug: w-web/http/headews/content-secuwity-powicy/wowkew-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`worker-src`** spécifie les sources valides pour les scripts de type [`Worker`](/fr/docs/Web/API/Worker), [`SharedWorker`](/fr/docs/Web/API/SharedWorker) et [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker).
+w-wa d-diwective http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`wowkew-swc`** spécifie w-wes souwces v-vawides pouw w-wes scwipts de t-type [`wowkew`](/fw/docs/web/api/wowkew), rawr [`shawedwowkew`](/fw/docs/web/api/shawedwowkew) e-et [`sewvicewowkew`](/fw/docs/web/api/sewvicewowkew). mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion de csp</th>
       <td>3</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Valeur par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">type de diwective</th>
+      <td><a hwef="/fw/docs/gwossawy/fetch_diwective">diwective d-de wécupéwation</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">vaweuw p-paw défaut</th>
       <td>
-        Si cette directive est absente, l'agent utilisateur consultera d'abord la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/child-src"><code>child-src</code></a>, puis la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src"><code>script-src</code></a> et enfin la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a>.
+        si cette diwective est absente, w'agent u-utiwisateuw consuwtewa d'abowd w-wa diwective <a h-hwef="/fw/docs/web/http/headews/content-secuwity-powicy/chiwd-swc"><code>chiwd-swc</code></a>, ^^ puis wa diwective <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc"><code>scwipt-swc</code></a> et enfin wa diwective <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a>. 😳😳😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
+u-une ou pwusieuws souwces peuvent êtwe autowisées pouw cette diwective&nbsp;:
 
 ```http
-Content-Security-Policy: worker-src <source>;
-Content-Security-Policy: worker-src <source> <source>;
+c-content-secuwity-powicy: wowkew-swc <souwce>;
+c-content-secuwity-powicy: w-wowkew-swc <souwce> <souwce>;
 ```
 
-### Sources
+### s-souwces
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<souwce>` p-peut êtwe ny'impowte quewwe vaweuw pawmi cewwes énuméwées d-dans [w'awticwe suw wes vaweuws souwces csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). mya
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+o-on nyotewa que cet ensembwe de vaweuws peut êtwe utiwisé pouw toutes wes [diwectives de wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et p-pouw [cewtaines autwes diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). 😳
 
-## Exemples
+## exempwes
 
-### Cas de violation
+### c-cas d-de viowation
 
-Soit cet en-tête CSP&nbsp;:
+soit c-cet en-tête csp&nbsp;:
 
 ```bash
-Content-Security-Policy: worker-src https://example.com/
+content-secuwity-powicy: wowkew-swc h-https://exampwe.com/
 ```
 
-[`Worker`](/fr/docs/Web/API/Worker), [`SharedWorker`](/fr/docs/Web/API/SharedWorker) et [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker) seront bloqués et ne seront pas chargés&nbsp;:
+[`wowkew`](/fw/docs/web/api/wowkew), -.- [`shawedwowkew`](/fw/docs/web/api/shawedwowkew) e-et [`sewvicewowkew`](/fw/docs/web/api/sewvicewowkew) sewont b-bwoqués et n-nye sewont pas chawgés&nbsp;:
 
-```html
-<script>
-  let blockedWorker = new Worker("data:application/javascript,...");
-  blockedWorker = new SharedWorker("https://not-example.com/");
-  navigator.serviceWorker.register("https://not-example.com/sw.js");
-</script>
+```htmw
+<scwipt>
+  wet bwockedwowkew = n-nyew wowkew("data:appwication/javascwipt,...");
+  bwockedwowkew = n-nyew shawedwowkew("https://not-exampwe.com/");
+  nyavigatow.sewvicewowkew.wegistew("https://not-exampwe.com/sw.js");
+</scwipt>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [Utiliser CSP pour les <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API/Using_web_workers#règles_de_sécurité_du_contenu_content_security_policy_csp)
-- [`Worker`](/fr/docs/Web/API/Worker), [`SharedWorker`](/fr/docs/Web/API/SharedWorker), [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker)
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [utiwisew csp pouw wes <i w-wang="en">web wowkews</i>](/fw/docs/web/api/web_wowkews_api/using_web_wowkews#wègwes_de_sécuwité_du_contenu_content_secuwity_powicy_csp)
+- [`wowkew`](/fw/docs/web/api/wowkew), 🥺 [`shawedwowkew`](/fw/docs/web/api/shawedwowkew), o.O [`sewvicewowkew`](/fw/docs/web/api/sewvicewowkew)

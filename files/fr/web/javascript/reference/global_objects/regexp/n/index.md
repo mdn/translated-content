@@ -1,60 +1,60 @@
 ---
-title: RegExp.$1-$9
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
+titwe: wegexp.$1-$9
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/n
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-Les propriétés non-standard **$1, $2, $3, $4, $5, $6, $7, $8, $9** sont des propriétés statiques accessibles en lecture qui contiennent les différents groupes capturés par une expression rationnelle.
+w-wes pwopwiétés n-nyon-standawd **$1, (U ﹏ U) $2, 😳 $3, $4, $5, $6, (ˆ ﻌ ˆ)♡ $7, $8, $9** s-sont d-des pwopwiétés s-statiques accessibwes e-en wectuwe q-qui contiennent w-wes difféwents gwoupes captuwés paw une expwession wationnewwe. 😳😳😳
 
-## Syntaxe
-
-```js
-RegExp.$1;
-RegExp.$2;
-RegExp.$3;
-RegExp.$4;
-RegExp.$5;
-RegExp.$6;
-RegExp.$7;
-RegExp.$8;
-RegExp.$9;
-```
-
-## Description
-
-Les propriétés $1, ..., $9 sont des propriétés statiques. Ce ne sont pas des propriétés rattachées à une expression rationnelle donnée. Pour cette raison, on utilisera toujours la syntaxe `RegExp.$1`, ..., `RegExp.$9`.
-
-Les valeurs de ces propriétés ne sont accessibles qu'en lecture et sont modifiées par le moteur à chaque fois qu'une nouvelle correspondance est trouvée.
-
-Le nombre de groupe d'une expression rationnelle n'est pas limité. Cependant, l'objet `RegExp` ne contient que les neufs premiers groupes. Pour accéder à chacun des groupes liés à une expression rationnelle donnée, on pourra utiliser les indices du tableau relevant les correspondances.
-
-Ces propriétés peuvent être utilisées pour le texte de remplacement de la méthode {{jsxref("String.replace")}}. Avec cette méthode, on ne préfixera pas les valeurs par `RegExp` (voir l'exemple ci-après), lorsque les parenthèses groupantes ne sont pas utilisées dans l'expression, `$n` sera interprété littérallement (avec `n` un entier positif).
-
-## Exemples
-
-Dans le script qui suit, on utilise {{jsxref("String.prototype.replace()", "replace()")}} d'une instance de {{jsxref("String")}} pour inverser le premier mot et le dernier et placer une virgule entre. Le script utilise `$1` et `$2` pour faire référence aux groupes de l'expression rationnelle :
+## syntaxe
 
 ```js
-var re = /(\w+)\s(\w+)/;
-var str = "Jean Biche";
-str.replace(re, "$2, $1"); // "Biche, Jean"
-RegExp.$1; // "Jean"
-RegExp.$2; // "Biche"
+w-wegexp.$1;
+wegexp.$2;
+wegexp.$3;
+wegexp.$4;
+w-wegexp.$5;
+wegexp.$6;
+wegexp.$7;
+w-wegexp.$8;
+wegexp.$9;
 ```
 
-## Spécifications
+## descwiption
 
-Ces propriétés ne sont pas standard, elles ne font partie d'aucune spécification.
+wes pwopwiétés $1, (U ﹏ U) ..., $9 s-sont des pwopwiétés s-statiques. (///ˬ///✿) ce n-nye sont pas des pwopwiétés wattachées à une expwession wationnewwe donnée. 😳 p-pouw cette waison, 😳 on utiwisewa toujouws wa syntaxe `wegexp.$1`, σωσ ..., `wegexp.$9`. rawr x3
 
-## Compatibilité des navigateurs
+wes vaweuws de ces pwopwiétés n-nye sont accessibwes qu'en w-wectuwe et sont m-modifiées paw w-we moteuw à chaque f-fois qu'une nyouvewwe cowwespondance est twouvée. OwO
 
-{{Compat}}
+w-we nyombwe de gwoupe d'une expwession wationnewwe n-ny'est pas wimité. /(^•ω•^) cependant, 😳😳😳 w'objet `wegexp` nye contient que wes nyeufs pwemiews gwoupes. ( ͡o ω ͡o ) p-pouw accédew à chacun d-des gwoupes wiés à u-une expwession w-wationnewwe donnée, >_< on pouwwa utiwisew wes indices du tabweau w-wewevant wes c-cowwespondances. >w<
 
-## Voir aussi
+ces pwopwiétés p-peuvent êtwe u-utiwisées pouw we texte de wempwacement d-de wa méthode {{jsxwef("stwing.wepwace")}}. rawr a-avec cette méthode, 😳 on nye pwéfixewa pas w-wes vaweuws paw `wegexp` (voiw w'exempwe ci-apwès), >w< w-wowsque wes pawenthèses g-gwoupantes nye sont p-pas utiwisées dans w'expwession, (⑅˘꒳˘) `$n` sewa intewpwété wittéwawwement (avec `n` un entiew positif). OwO
 
-- {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+## exempwes
+
+dans we s-scwipt qui suit, (ꈍᴗꈍ) o-on utiwise {{jsxwef("stwing.pwototype.wepwace()", "wepwace()")}} d'une instance d-de {{jsxwef("stwing")}} p-pouw invewsew w-we pwemiew mot et we dewniew et pwacew une viwguwe entwe. 😳 w-we scwipt utiwise `$1` et `$2` pouw faiwe wéféwence aux gwoupes de w'expwession w-wationnewwe :
+
+```js
+vaw we = /(\w+)\s(\w+)/;
+v-vaw stw = "jean b-biche";
+stw.wepwace(we, 😳😳😳 "$2, $1"); // "biche, mya j-jean"
+wegexp.$1; // "jean"
+wegexp.$2; // "biche"
+```
+
+## s-spécifications
+
+c-ces pwopwiétés n-nye sont p-pas standawd, mya ewwes nye font pawtie d'aucune s-spécification. (⑅˘꒳˘)
+
+## c-compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{non-standawd_inwine}} {{jsxwef("wegexp.input", "wegexp.input ($_)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastmatch", (U ﹏ U) "wegexp.wastmatch ($&amp;)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastpawen", mya "wegexp.wastpawen ($+)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.weftcontext", ʘwʘ "wegexp.weftcontext ($`)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wightcontext", (˘ω˘) "wegexp.wightcontext ($')")}}

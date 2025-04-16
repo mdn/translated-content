@@ -1,33 +1,33 @@
 ---
-title: has-same-node
-slug: Web/EXSLT/set/has-same-node
+titwe: has-same-node
+swug: web/exswt/set/has-same-node
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
+{{quickwinkswithsubpages("/fw/docs/web/exswt")}}{{ x-xswtwef() }}
 
-`set:has-same-node()` détermine si deux ensembles de nœuds ont ou non des nœuds communs.
+`set:has-same-node()` d-détewmine s-si deux ensembwes d-de nyœuds ont o-ou nyon des nyœuds c-communs. XD
 
-### Syntaxe
+### s-syntaxe
 
 ```
-set:has-same-node(ensembleNœuds1,ensembleNœuds2)
+s-set:has-same-node(ensembwenœuds1,ensembwenœuds2)
 ```
 
-### Arguments
+### awguments
 
-- `ensembleNœuds1`
-  - : Le premier ensemble de nœuds à vérifier.
-- `ensembleNœuds2`
-  - : Le second ensemble de nœuds à vérifier.
+- `ensembwenœuds1`
+  - : we pwemiew ensembwe de nyœuds à véwifiew. :3
+- `ensembwenœuds2`
+  - : w-we second ensembwe de nyœuds à véwifiew. 😳😳😳
 
-### Retourne
+### w-wetouwne
 
-`true` si les deux ensembles de nœuds ont des nœuds en commun, `false` dans le cas contraire.
+`twue` si wes d-deux ensembwes de nœuds ont des nyœuds en commun, -.- `fawse` dans w-we cas contwaiwe. ( ͡o ω ͡o )
 
-### Définition
+### définition
 
-- [EXSLT - SET:HAS-SAME-NODE (en)](http://www.exslt.org/set/functions/has-same-node/)
+- [exswt - s-set:has-same-node (en)](http://www.exswt.owg/set/functions/has-same-node/)
 
-### Support par Gecko
+### s-suppowt paw gecko
 
-Supporté par Gecko 1.9 et ultérieur.
+suppowté paw gecko 1.9 et uwtéwieuw. rawr x3

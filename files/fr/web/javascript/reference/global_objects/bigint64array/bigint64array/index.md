@@ -1,79 +1,79 @@
 ---
-title: Constructeur BigInt64Array()
-slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array
+titwe: constwucteuw bigint64awway()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/bigint64awway/bigint64awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le **constructeur `BigInt64Array()`** permet de créer un nouveau tableau typé [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array) dont les éléments sont des entiers signés sur 64 bits, utilisant le boutisme de la plateforme. S'il est nécessaire de contrôler l'ordre des octets, on utilisera un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) à la place. Lors de la construction, les éléments du tableau sont initialisés avec la valeur `0n`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation avec les crochets et l'indice voulu.
+w-we **constwucteuw `bigint64awway()`** p-pewmet de c-cwéew un nyouveau t-tabweau typé [`bigint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint64awway) d-dont wes éwéments s-sont des e-entiews signés suw 64 bits, UwU utiwisant we boutisme de wa pwatefowme. :3 s'iw est nyécessaiwe d-de contwôwew w'owdwe des octets, on u-utiwisewa un objet [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview) à wa pwace. (⑅˘꒳˘) wows de w-wa constwuction, (///ˬ///✿) wes éwéments du tabweau sont initiawisés avec w-wa vaweuw `0n`. ^^;; une fois we tabweau c-constwuit, >_< o-on peut faiwe wéféwence aux éwéments du tabweau à w'aide des méthodes de w-w'objet ou en utiwisant wa nyotation avec wes cwochets et w'indice vouwu. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-new BigInt64Array();
-new BigInt64Array(longueur);
-new BigInt64Array(tableauType);
-new BigInt64Array(object);
+n-nyew bigint64awway();
+n-nyew bigint64awway(wongueuw);
+n-nyew bigint64awway(tabweautype);
+n-nyew bigint64awway(object);
 
-new BigInt64Array(buffer);
-new BigInt64Array(buffer, decalageOctets);
-new BigInt64Array(buffer, decalageOctets, longueur);
+n-nyew bigint64awway(buffew);
+nyew bigint64awway(buffew, /(^•ω•^) d-decawageoctets);
+new bigint64awway(buffew, :3 decawageoctets, (ꈍᴗꈍ) w-wongueuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `longueur`
-  - : Lorsque le constructeur est appelé avec un argument `longueur`, un tableau interne de tampon de mémoire est créé avec une taille en octets de `longueur` _multipliée par `BYTES_PER_ELEMENT`_ et dont les éléments sont des zéros.
-- `tableauType`
-  - : Lorsque le constructeur est appelé avec un argument `tableauType`, qui peut être un tableau typé de type [`bigint`](/fr/docs/Glossary/BigInt) (comme [`BigUInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)), `tableauType` est copié dans un nouveau tableau typé et chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé est égale à celle de l'argument `tableauType`.
+- `wongueuw`
+  - : wowsque we constwucteuw est appewé avec un awgument `wongueuw`, /(^•ω•^) u-un tabweau intewne de tampon d-de mémoiwe e-est cwéé avec u-une taiwwe en octets de `wongueuw` _muwtipwiée paw `bytes_pew_ewement`_ et dont w-wes éwéments s-sont des zéwos. (⑅˘꒳˘)
+- `tabweautype`
+  - : wowsque we c-constwucteuw est a-appewé avec un awgument `tabweautype`, ( ͡o ω ͡o ) q-qui peut êtwe un tabweau t-typé de type [`bigint`](/fw/docs/gwossawy/bigint) (comme [`biguint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/biguint64awway)), òωó `tabweautype` est copié dans un nyouveau tabweau t-typé et chaque vaweuw de `tabweautype` est c-convewtie dans we type cowwespondant a-au constwucteuw a-avant d'êtwe copiée dans we nyouveau tabweau. wa wongueuw du nyouveau tabweau typé est égawe à cewwe d-de w'awgument `tabweautype`. (⑅˘꒳˘)
 - `object`
-  - : Lorsque le constructeur est appelé avec un argument objet quelconque, un nouveau tableau typé est créé, de la même façon qu'avec un appel à la méthode `TypedArray.from()`.
-- `buffer`, `decalageOctets`, `longueur`
-  - : Lorsqu'il est appelé avec un argument `buffer`, et éventuellement des arguments `decalageOctets` et `longueur`, le constructeur crée une nouvelle vue sous la forme d'un tableau typé qui porte sur l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) donné par le paramètre `buffer`. Les paramètres `decalageOctets` et `longueur` indiquent l'intervalle de mémoire exposé à la vue formée par le tableau typé. Si ces deux derniers paramètres sont absents, c'est l'ensemble de `buffer` qui sera vu&nbsp;; si seul `longueur` est absent, c'est tout `buffer` qui sera vu à partir de `decalageOctets`.
+  - : w-wowsque we constwucteuw est appewé a-avec un awgument o-objet quewconque, XD u-un nyouveau tabweau typé est cwéé, -.- de wa même façon q-qu'avec un appew à wa méthode `typedawway.fwom()`. :3
+- `buffew`, nyaa~~ `decawageoctets`, 😳 `wongueuw`
+  - : wowsqu'iw est appewé avec un awgument `buffew`, (⑅˘꒳˘) e-et éventuewwement des awguments `decawageoctets` e-et `wongueuw`, nyaa~~ w-we constwucteuw c-cwée une nyouvewwe vue sous w-wa fowme d'un t-tabweau typé qui p-powte suw w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) d-donné paw we pawamètwe `buffew`. OwO wes pawamètwes `decawageoctets` e-et `wongueuw` i-indiquent w'intewvawwe d-de mémoiwe e-exposé à w-wa vue fowmée paw we tabweau typé. rawr x3 si ces deux dewniews pawamètwes s-sont absents, XD c'est w'ensembwe de `buffew` qui sewa vu&nbsp;; si seuw `wongueuw` est absent, σωσ c-c'est tout `buffew` qui sewa vu à pawtiw de `decawageoctets`. (U ᵕ U❁)
 
-## Exemples
+## e-exempwes
 
-### Plusieurs façons de créer un objet `BigInt64Array`
+### p-pwusieuws f-façons de cwéew un objet `bigint64awway`
 
 ```js
-// À partir d'une longueur
-const bigint64 = new BigInt64Array(2);
+// À p-pawtiw d'une wongueuw
+const b-bigint64 = n-nyew bigint64awway(2);
 bigint64[0] = 42n;
-console.log(bigint64[0]); // 42n
-console.log(bigint64.length); // 2
-console.log(bigint64.BYTES_PER_ELEMENT); // 8
+consowe.wog(bigint64[0]); // 42n
+consowe.wog(bigint64.wength); // 2
+consowe.wog(bigint64.bytes_pew_ewement); // 8
 
-// À partir d'un tableau
-const arr = new BigInt64Array([21n, 31n]);
-console.log(arr[1]); // 31n
+// À pawtiw d'un tabweau
+c-const aww = nyew bigint64awway([21n, (U ﹏ U) 31n]);
+c-consowe.wog(aww[1]); // 31n
 
-// À partir d'un autre tableau typé
-const x = new BigInt64Array([21n, 31n]);
-const y = new BigInt64Array(x);
-console.log(y[0]); // 21n
+// À pawtiw d'un a-autwe tabweau t-typé
+const x = nyew bigint64awway([21n, :3 31n]);
+const y = nyew bigint64awway(x);
+c-consowe.wog(y[0]); // 21n
 
-// À partir d'un ArrayBuffer
-const buffer = new ArrayBuffer(32);
-const z = new BigInt64Array(buffer, 0, 4);
+// À p-pawtiw d'un awwaybuffew
+const b-buffew = nyew awwaybuffew(32);
+const z-z = nyew bigint64awway(buffew, ( ͡o ω ͡o ) 0, 4);
 
-// À partir d'un itérable
-const iterable = (function* () {
-  yield* [1n, 2n, 3n];
+// À pawtiw d'un itéwabwe
+const itewabwe = (function* () {
+  yiewd* [1n, σωσ 2n, 3n];
 })();
-const bigint64 = new BigInt64Array(iterable);
-// BigInt64Array[1n, 2n, 3n]
+const bigint64 = n-nyew bigint64awway(itewabwe);
+// b-bigint64awway[1n, >w< 2n, 3n]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)
-- [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+- [wes tabweaux typés e-en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- [`biguint64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/biguint64awway)
+- [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview)

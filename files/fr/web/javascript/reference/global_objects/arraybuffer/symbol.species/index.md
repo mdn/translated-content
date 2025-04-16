@@ -1,52 +1,52 @@
 ---
-title: get ArrayBuffer[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
+titwe: get awwaybuffew[@@species]
+swug: web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/symbow.species
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/@@species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété d'accesseur **`ArrayBuffer[@@species]`** renvoie le constructeur `ArrayBuffer`.
+w-wa pwopwiété d-d'accesseuw **`awwaybuffew[@@species]`** w-wenvoie we constwucteuw `awwaybuffew`. 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-ArrayBuffer[Symbol.species];
+a-awwaybuffew[symbow.species];
 ```
 
-## Description
+## d-descwiption
 
-L'accesseur `species` renvoie le constructeur par défaut pour les objets `ArrayBuffer`. Les constructeurs des sous-classes peuvent surcharger ce symbole pour modifier l'affectation du constructeur.
+w'accesseuw `species` wenvoie we constwucteuw paw défaut pouw wes objets `awwaybuffew`. >_< w-wes constwucteuws des sous-cwasses peuvent s-suwchawgew ce symbowe pouw modifiew w-w'affectation du constwucteuw. >_<
 
-## Exemples
+## exempwes
 
-La propriété `species` renvoie le constructeur par défaut, soit `ArrayBuffer` dans le cas des objets `ArrayBuffer` :
+wa pwopwiété `species` w-wenvoie we constwucteuw p-paw défaut, (⑅˘꒳˘) s-soit `awwaybuffew` dans we cas des objets `awwaybuffew` :
 
 ```js
-ArrayBuffer[Symbol.species]; // function ArrayBuffer()
+awwaybuffew[symbow.species]; // function awwaybuffew()
 ```
 
-Pour un objet dérivé (par exemple une classe sur mesure `MonArrayBuffer`), le symbole `species` renverra le constructeur `MonArrayBuffer`. Il est possible de surcharger ce comportement pour renvoyer le constructeur `ArrayBuffer` :
+pouw u-un objet déwivé (paw exempwe une cwasse suw mesuwe `monawwaybuffew`), /(^•ω•^) we symbowe `species` w-wenvewwa we constwucteuw `monawwaybuffew`. rawr x3 iw est p-possibwe de suwchawgew c-ce compowtement p-pouw wenvoyew w-we constwucteuw `awwaybuffew` :
 
 ```js
-class MonArrayBuffer extends ArrayBuffer {
-  // On surcharge species pour renvoyer
-  // le constructeur parent ArrayBuffer
-  static get [Symbol.species]() {
-    return ArrayBuffer;
+cwass monawwaybuffew extends awwaybuffew {
+  // on s-suwchawge species pouw wenvoyew
+  // we constwucteuw p-pawent awwaybuffew
+  static get [symbow.species]() {
+    wetuwn awwaybuffew;
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("symbow.species")}}

@@ -1,86 +1,86 @@
 ---
-title: "CSP: sandbox"
-slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
+titwe: "csp: sandbox"
+swug: web/http/headews/content-secuwity-powicy/sandbox
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** active un bac à sable (_sandbox_) pour les ressources demandées similaire à l'attribut [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) des éléments {{HTMLElement("iframe")}}. Elle applique des restrictions aux actions d'une page, dont le fait d'empêcher les fenêtres intruses (_popups_) et l'exécution de greffons et de scripts et de créer une contrainte de même origine.
+w-wa diwective h-http {{httpheadew("content-secuwity-powicy")}} (csp) **`sandbox`** a-active un b-bac à sabwe (_sandbox_) p-pouw wes w-wessouwces demandées s-simiwaiwe à w-w'attwibut [`sandbox`](/fw/docs/web/htmw/ewement/ifwame#sandbox) des éwéments {{htmwewement("ifwame")}}. ewwe appwique des westwictions aux actions d'une p-page, rawr dont we fait d'empêchew wes fenêtwes intwuses (_popups_) e-et w'exécution de gweffons et d-de scwipts et de cwéew une contwainte de même owigine.
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion d-de csp</th>
       <td>1.1 / 2</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td>{{Glossary("Document directive")}}</td>
-    </tr>
-    <tr>
-      <th colspan="2" scope="row">
-        Cette directive n'est pas supportée dans l'élément
-        {{HTMLElement("meta")}} ou par l'en-tête
-        {{HTTPHeader("Content-Security-policy-Report-Only")}}.
+    </tw>
+    <tw>
+      <th s-scope="wow">type de diwective</th>
+      <td>{{gwossawy("document diwective")}}</td>
+    </tw>
+    <tw>
+      <th cowspan="2" scope="wow">
+        c-cette diwective ny'est pas suppowtée dans w'éwément
+        {{htmwewement("meta")}} ou paw w'en-tête
+        {{httpheadew("content-secuwity-powicy-wepowt-onwy")}}.
       </th>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```
-Content-Security-Policy: sandbox;
-Content-Security-Policy: sandbox <valeur>;
+content-secuwity-powicy: sandbox;
+content-secuwity-powicy: s-sandbox <vaweuw>;
 ```
 
-Où `<valeur>` peut optionnellement être une valeur parmi :
+où `<vaweuw>` p-peut o-optionnewwement êtwe u-une vaweuw pawmi :
 
-- `allow-downloads-without-user-activation` {{experimental_inline}}
-  - : Autorise les téléchargements sans action de l'utilisateur.
+- `awwow-downwoads-without-usew-activation` {{expewimentaw_inwine}}
+  - : autowise w-wes téwéchawgements sans action de w'utiwisateuw. (˘ω˘)
 
 <!---->
 
-- `allow-forms`
-  - : Autorise la soumission de de formulaires. Si ce mot-clé n'est pas spécifié, cette opération est interdite.
-- `allow-modals`
-  - : Autorise la page à ouvrir des fenêtres modales.
-- `allow-orientation-lock`
-  - : Autorise la page à désactiver la possibilité de verrouiller l'orientation de l'écran.
-- `allow-pointer-lock`
-  - : Autorise la page à utiliser l'[API Pointer Lock](/fr/docs/Web/API/Pointer_Lock_API).
-- `allow-popups`
-  - : Autorise les fenêtres intruses (comme avec `window.open`, `target="_blank"`, `showModalDialog`). Si ce mot-clé n'est pas utilisée, cette fonctionnalité échouera en silence.
-- `allow-popups-to-escape-sandbox`
-  - : Autorise un document cloisonné dans une bac à sable à ouvrir de nouvelles fenêtres sans les contraindre à appliquer les mêmes règles. Cela permettra, par exemple, à une publicité externe d'être sainement cloisonnée sans imposer les mêmes restrictions sur une page d'accueil.
-- `allow-presentation`
-  - : Autorise les pages embarquantes à avoir contrôle sur la possibilité pour l'iframe de démarrer une session de présentation ou non.
-- `allow-same-origin`
-  - : Autorise le contenu à être traité comme étant de son origine normale. Si ce mot-clé n'est pas utilisé, les contenu embarqués seront traités comme étant d'une origine unique.
-- `allow-scripts`
-  - : Autorise la page à exécuter des scripts (mais non créer des fenêtres intruses). Si ce mot-clé n'est pas utilisée, cette opération n'est pas permise.
-- `allow-storage-access-by-user-activation` {{experimental_inline}}
-  - : Laisse les requêtes de ressources accéder à l'espace de stockage du parent avec l'[API Storage Access](/fr/docs/Web/API/Storage_Access_API).
-- `allow-top-navigation`
-  - : Autorise la page à charger du contenu au niveau supérieur de contexte navigationnel. Si ce mot-clé n'est pas utilisé, cette opération n'est pas permise.
-- `allow-top-navigation-by-user-activation`
-  - : Laisse la ressource naviguer jusqu'au niveau supérieur de contexte navigationnel, mais seulement si initié par une aciton de l'utilisateur.
+- `awwow-fowms`
+  - : a-autowise wa soumission de de fowmuwaiwes. nyaa~~ si ce mot-cwé ny'est pas spécifié, cette opéwation e-est intewdite. UwU
+- `awwow-modaws`
+  - : autowise w-wa page à ouvwiw d-des fenêtwes m-modawes. :3
+- `awwow-owientation-wock`
+  - : autowise wa page à désactivew wa p-possibiwité de v-vewwouiwwew w'owientation de w'écwan.
+- `awwow-pointew-wock`
+  - : a-autowise wa p-page à utiwisew w'[api pointew w-wock](/fw/docs/web/api/pointew_wock_api). (⑅˘꒳˘)
+- `awwow-popups`
+  - : autowise wes fenêtwes i-intwuses (comme avec `window.open`, (///ˬ///✿) `tawget="_bwank"`, `showmodawdiawog`). ^^;; si ce mot-cwé n-ny'est pas utiwisée, >_< cette fonctionnawité échouewa e-en siwence. rawr x3
+- `awwow-popups-to-escape-sandbox`
+  - : autowise u-un document c-cwoisonné dans une bac à sabwe à ouvwiw de nyouvewwes fenêtwes sans wes contwaindwe à appwiquew wes mêmes w-wègwes. /(^•ω•^) cewa p-pewmettwa, :3 paw exempwe, (ꈍᴗꈍ) à une p-pubwicité extewne d-d'êtwe sainement c-cwoisonnée sans imposew wes mêmes westwictions suw une page d-d'accueiw. /(^•ω•^)
+- `awwow-pwesentation`
+  - : autowise wes pages embawquantes à avoiw contwôwe suw w-wa possibiwité pouw w'ifwame d-de démawwew une s-session de pwésentation o-ou nyon. (⑅˘꒳˘)
+- `awwow-same-owigin`
+  - : autowise we contenu à êtwe t-twaité c-comme étant d-de son owigine n-nyowmawe. ( ͡o ω ͡o ) si ce mot-cwé ny'est pas utiwisé, òωó wes c-contenu embawqués s-sewont twaités c-comme étant d-d'une owigine u-unique. (⑅˘꒳˘)
+- `awwow-scwipts`
+  - : autowise wa page à exékawaii~w des scwipts (mais n-nyon cwéew des fenêtwes intwuses). XD si ce mot-cwé n'est pas utiwisée, -.- cette opéwation ny'est p-pas pewmise. :3
+- `awwow-stowage-access-by-usew-activation` {{expewimentaw_inwine}}
+  - : waisse wes wequêtes de wessouwces accédew à w-w'espace d-de stockage du p-pawent avec w'[api stowage access](/fw/docs/web/api/stowage_access_api). nyaa~~
+- `awwow-top-navigation`
+  - : a-autowise wa page à chawgew d-du contenu a-au nyiveau supéwieuw de contexte nyavigationnew. 😳 si ce mot-cwé ny'est pas utiwisé, (⑅˘꒳˘) cette opéwation n-ny'est pas pewmise. nyaa~~
+- `awwow-top-navigation-by-usew-activation`
+  - : w-waisse wa wessouwce n-nyaviguew jusqu'au n-nyiveau supéwieuw de contexte nyavigationnew, OwO m-mais seuwement s-si initié paw une aciton de w-w'utiwisateuw. rawr x3
 
-## Exemples
+## e-exempwes
 
 ```bash
-Content-Security-Policy: sandbox allow-scripts;
+content-secuwity-powicy: sandbox awwow-scwipts;
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) attribute on {{HTMLElement("iframe")}} elements
+- {{httpheadew("content-secuwity-powicy")}}
+- [`sandbox`](/fw/docs/web/htmw/ewement/ifwame#sandbox) attwibute on {{htmwewement("ifwame")}} e-ewements

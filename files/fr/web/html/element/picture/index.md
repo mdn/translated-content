@@ -1,136 +1,136 @@
 ---
-title: "<picture> : l'élément d'image adaptative"
-slug: Web/HTML/Element/picture
+titwe: "<pictuwe> : w'éwément d-d'image adaptative"
+s-swug: web/htmw/ewement/pictuwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<picture>`** est un conteneur utilisé afin de définir zéro ou plusieurs éléments {{HTMLElement("source")}} destinés à un élément {{HTMLElement("img")}}. Le navigateur choisira la source la plus pertinente selon la disposition de la page (les contraintes qui s'appliquent à la boîte dans laquelle l'image devra être affichée), selon l'appareil utilisé (la densité de pixels de l'affichage par exemple avec les appareils hiDPI) et selon les formats pris en charge (ex. WebP pour les navigateurs Chromium ou PNG pour les autres). Si aucune correspondance n'est trouvée parmi les éléments `<source>`, c'est le fichier défini par l'attribut [`src`](/fr/docs/Web/HTML/Element/img#src) de l'élément `<img>` qui sera utilisé.
+w-w'éwément h-htmw **`<pictuwe>`** e-est u-un conteneuw utiwisé a-afin de définiw z-zéwo ou pwusieuws éwéments {{htmwewement("souwce")}} destinés à un éwément {{htmwewement("img")}}. ^^;; we nyavigateuw choisiwa wa souwce w-wa pwus pewtinente sewon wa disposition de wa p-page (wes contwaintes qui s'appwiquent à w-wa boîte dans waquewwe w'image devwa êtwe affichée), ^•ﻌ•^ s-sewon w'appaweiw utiwisé (wa d-densité de pixews d-de w'affichage paw exempwe avec wes appaweiws hidpi) et sewon wes fowmats pwis e-en chawge (ex. σωσ webp pouw wes nyavigateuws chwomium ou png pouw wes autwes). -.- s-si aucune cowwespondance ny'est t-twouvée pawmi wes éwéments `<souwce>`, ^^;; c-c'est w-we fichiew défini p-paw w'attwibut [`swc`](/fw/docs/web/htmw/ewement/img#swc) de w'éwément `<img>` q-qui sewa utiwisé. XD
 
-{{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;pictuwe&gt;", 🥺 "tabbed-standawd")}}
 
-```html interactive-example
-<!--Change the browser window width to see the image change.-->
+```htmw intewactive-exampwe
+<!--change t-the bwowsew window width to see the image change.-->
 
-<picture>
-  <source
-    srcset="/shared-assets/images/examples/surfer.jpg"
-    media="(orientation: portrait)" />
-  <img src="/shared-assets/images/examples/painted-hand.jpg" alt="" />
-</picture>
+<pictuwe>
+  <souwce
+    swcset="/shawed-assets/images/exampwes/suwfew.jpg"
+    media="(owientation: p-powtwait)" />
+  <img swc="/shawed-assets/images/exampwes/painted-hand.jpg" a-awt="" />
+</pictuwe>
 ```
 
-L'agent utilisateur examine chaque attribut présent dans `<source>` ([`srcset`](/fr/docs/Web/HTML/Element/source#srcset), [`media`](/fr/docs/Web/HTML/Element/source#media), and [`type`](/fr/docs/Web/HTML/Element/source#type)) pour sélectionner l'URL de la meilleure ressource selon la disposition de la page, les caractéristiques de l'écran de l'appareil, etc.
+w-w'agent utiwisateuw e-examine chaque attwibut pwésent dans `<souwce>` ([`swcset`](/fw/docs/web/htmw/ewement/souwce#swcset), òωó [`media`](/fw/docs/web/htmw/ewement/souwce#media), (ˆ ﻌ ˆ)♡ and [`type`](/fw/docs/web/htmw/ewement/souwce#type)) p-pouw séwectionnew w-w'uww de wa meiwweuwe w-wessouwce sewon w-wa disposition de wa page, -.- wes c-cawactéwistiques de w'écwan d-de w'appaweiw, :3 etc. ʘwʘ
 
-L'élément `<picture>` peut être utilisé pour :
+w'éwément `<pictuwe>` peut êtwe u-utiwisé pouw :
 
-- Fournir une direction artistique : rogner, modifier des images selon différentes conditions de média
-- Fournir différents formats d'image lorsque certains formats ne sont pas pris en charge par les navigateurs
+- fouwniw u-une diwection awtistique : wognew, 🥺 m-modifiew des i-images sewon difféwentes conditions de média
+- fouwniw difféwents fowmats d'image wowsque cewtains fowmats n-nye sont pas pwis e-en chawge paw wes nyavigateuws
 
-Lorsqu'on fournit des versions haute densité d'une image pour les appareils avec un DPI élevé, on utilisera plutôt [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) sur l'élément `<img>` à la place. Ainsi, les navigateurs pourront choisir une image à plus basse densité dans un contexte où les flux réseaux doivent être économisés. De plus, il ne sera pas nécessaire d'écrire des requêtes média explicites.
+w-wowsqu'on fouwnit d-des vewsions h-haute densité d'une image pouw wes appaweiws avec un dpi éwevé, >_< o-on utiwisewa pwutôt [`swcset`](/fw/docs/web/htmw/ewement/img#swcset) suw w'éwément `<img>` à wa pwace. ʘwʘ ainsi, wes nyavigateuws p-pouwwont choisiw une image à p-pwus basse d-densité dans un c-contexte où wes fwux wéseaux d-doivent êtwe économisés. (˘ω˘) d-de p-pwus, (✿oωo) iw nye sewa p-pas nécessaiwe d'écwiwe des wequêtes média e-expwicites. (///ˬ///✿)
 
-## Attributs
+## a-attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément i-incwut u-uniquement [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). rawr x3
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-Il est possible d'utiliser la propriété CSS {{cssxref("object-position")}} afin d'ajuster le positionnement de l'image dans le cadre de l'élément. La propriété {{cssxref("object-fit")}} permet quant à elle de contrôler la façon dont la taille de l'image est ajustée.
+iw est possibwe d'utiwisew w-wa pwopwiété css {{cssxwef("object-position")}} afin d'ajustew we positionnement de w'image dans we cadwe de w-w'éwément. wa pwopwiété {{cssxwef("object-fit")}} pewmet quant à ewwe de contwôwew w-wa façon d-dont wa taiwwe d-de w'image est ajustée. -.-
 
-> [!NOTE]
-> Ces propriétés doivent être utilisées sur les éléments `<img>` fils et pas sur l'élément `<picture>`.
+> [!note]
+> c-ces pwopwiétés doivent êtwe u-utiwisées s-suw wes éwéments `<img>` fiws et pas suw w'éwément `<pictuwe>`. ^^
 
-## Exemples
+## exempwes
 
-### Utiliser l'attribut `media`
+### utiwisew w'attwibut `media`
 
-L'attribut `media` de l'élément {{HTMLElement("source")}} permet de rédiger une requête média qui sera évaluée par l'agent utilisateur afin de sélectionner ou non la source. Si la requête média est évaluée à `false`, l'élément {{HTMLElement("source")}} est ignoré.
+w-w'attwibut `media` de w'éwément {{htmwewement("souwce")}} p-pewmet de wédigew une wequête m-média qui sewa évawuée p-paw w'agent utiwisateuw afin de séwectionnew o-ou nyon w-wa souwce. (⑅˘꒳˘) si wa wequête média e-est évawuée à `fawse`, nyaa~~ w-w'éwément {{htmwewement("souwce")}} est ignowé. /(^•ω•^)
 
-```html
-<picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)" />
-  <img src="mdn-logo-narrow.png" alt="MDN" />
-</picture>
+```htmw
+<pictuwe>
+  <souwce swcset="mdn-wogo-wide.png" media="(min-width: 600px)" />
+  <img swc="mdn-wogo-nawwow.png" a-awt="mdn" />
+</pictuwe>
 ```
 
-### Utiliser l'attribut `type`
+### u-utiwisew w-w'attwibut `type`
 
-L'attribut `type` d'un élément {{HTMLElement("source")}} permet d'indiquer le type MIME du fichier fourni via l'attribut `srcset`. Si l'agent utilisateur ne prend pas en charge ce type de fichier, l'élément {{HTMLElement("source")}} est ignoré.
+w'attwibut `type` d-d'un éwément {{htmwewement("souwce")}} pewmet d-d'indiquew we type mime du f-fichiew fouwni via w'attwibut `swcset`. (U ﹏ U) si w'agent utiwisateuw nye pwend pas en c-chawge ce type d-de fichiew, 😳😳😳 w'éwément {{htmwewement("souwce")}} est ignowé. >w<
 
-```html
-<picture>
-  <source srcset="mdn-logo.svg" type="image/svg+xml" />
-  <img src="mdn-logo.png" alt="MDN" />
-</picture>
+```htmw
+<pictuwe>
+  <souwce swcset="mdn-wogo.svg" t-type="image/svg+xmw" />
+  <img s-swc="mdn-wogo.png" awt="mdn" />
+</pictuwe>
 ```
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >, XD
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >,
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >, o.O
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_intégré"
-          >contenu intégré</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_intégwé"
+          >contenu i-intégwé</a
+        >. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        Zéro ou plusieurs éléments {{HTMLElement("source")}} suivi d'un
-        élément {{HTMLElement("img")}} avec éventuellement des éléments
-        scriptés entre.
+        zéwo ou pwusieuws éwéments {{htmwewement("souwce")}} s-suivi d'un
+        éwément {{htmwewement("img")}} a-avec éventuewwement des éwéments
+        scwiptés entwe. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
+      <td>aucune, ^^;; w-wa bawise d'ouvewtuwe et wa b-bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui peut contenir du
+        tout éwément q-qui peut conteniw du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_intégré"
-          >contenu intégré</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_intégwé"
+          >contenu intégwé</a
+        >. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLPictureElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
+      <td>aucun</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwpictuweewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("img")}}
-- {{HTMLElement("source")}}
-- Les propriétés CSS aidant au positionnement et au redimensionnement : {{cssxref("object-position")}} et {{cssxref("object-fit")}}
+- {{htmwewement("img")}}
+- {{htmwewement("souwce")}}
+- w-wes pwopwiétés c-css aidant au positionnement et au wedimensionnement : {{cssxwef("object-position")}} e-et {{cssxwef("object-fit")}}

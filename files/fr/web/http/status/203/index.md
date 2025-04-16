@@ -1,30 +1,30 @@
 ---
-title: 203 Non-Authoritative Information
-slug: Web/HTTP/Status/203
+titwe: 203 nyon-authowitative infowmation
+swug: w-web/http/status/203
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`203 Non-Authoritative Information`** indique que la requête a réussi mais que le contenu a été modifié entre la réponse [`200`](/fr/docs/Web/HTTP/Status/200) (`OK`) du serveur original par un [proxy](/fr/docs/Glossary/Proxy_server) transformant.
+w-we c-code de statut de w-wéponse http **`203 n-nyon-authowitative i-infowmation`** i-indique q-que wa wequête a wéussi mais que we contenu a été modifié entwe wa wéponse [`200`](/fw/docs/web/http/status/200) (`ok`) du s-sewveuw owiginaw paw un [pwoxy](/fw/docs/gwossawy/pwoxy_sewvew) twansfowmant. -.-
 
-La réponse 203 est similaire au code d'en-tête [`214` (Transformation Applied)](/fr/docs/Web/HTTP/Headers/Warning#Warning_codes) [`Warning`](/fr/docs/Web/HTTP/Headers/Warning), qui a l'avantage d'être applicable à tout code de statut.
+w-wa wéponse 203 est simiwaiwe au c-code d'en-tête [`214` (twansfowmation appwied)](/fw/docs/web/http/headews/wawning#wawning_codes) [`wawning`](/fw/docs/web/http/headews/wawning), ( ͡o ω ͡o ) qui a w'avantage d'êtwe appwicabwe à t-tout code de statut. rawr x3
 
-## Statut
+## s-statut
 
 ```
-203 Non-Authoritative Information
+203 n-nyon-authowitative infowmation
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`200`](/fr/docs/Web/HTTP/Status/200)
-- [Serveur proxy](/fr/docs/Glossary/Proxy_server)
-- [`Warning`](/fr/docs/Web/HTTP/Headers/Warning)
+- [`200`](/fw/docs/web/http/status/200)
+- [sewveuw pwoxy](/fw/docs/gwossawy/pwoxy_sewvew)
+- [`wawning`](/fw/docs/web/http/headews/wawning)

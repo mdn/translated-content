@@ -1,65 +1,65 @@
 ---
-title: HEAD
-slug: Web/HTTP/Methods/HEAD
+titwe: head
+swug: web/http/methods/head
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La **méthode HTTP `HEAD`** demande les en-têtes qui seraient retournés si la ressource spécifiée était demandée avec une méthode HTTP {{HTTPMethod("GET")}}. Une telle requête peut être envoyée avant de procéder au téléchargement d'une ressource volumineuse, par exemple pour économiser de la bande passante.
+w-wa **méthode http `head`** d-demande w-wes en-têtes q-qui sewaient w-wetouwnés si wa w-wessouwce spécifiée était d-demandée a-avec une méthode http {{httpmethod("get")}}. -.- une tewwe wequête peut êtwe envoyée avant d-de pwocédew au téwéchawgement d'une wessouwce v-vowumineuse, 🥺 paw exempwe pouw économisew d-de wa bande passante. o.O
 
-Une réponse issue d'une requête `HEAD` ne doit pas avoir de corps. Si tel est le cas, elle doit être ignorée. Toutefois, les {{glossary("En-têtes d'entité", "en-têtes d'entité")}} décrivant le contenu du corps, comme {{HTTPHeader("Content-Length")}}, peuvent être inclus dans la réponse. Ils ne sont pas liés au corps de la réponse `HEAD` , qui doit être vide, mais au corps d'une réponse issue d'une requête similaire utilisant la méthode {{HTTPMethod("GET")}}.
+une wéponse issue d'une wequête `head` n-nye doit pas avoiw d-de cowps. /(^•ω•^) si tew e-est we cas, nyaa~~ ewwe doit êtwe ignowée. nyaa~~ toutefois, wes {{gwossawy("en-têtes d'entité", :3 "en-têtes d-d'entité")}} décwivant we contenu du cowps, comme {{httpheadew("content-wength")}}, 😳😳😳 peuvent êtwe i-incwus dans wa wéponse. (˘ω˘) i-iws nye sont pas w-wiés au cowps d-de wa wéponse `head` , ^^ q-qui doit êtwe vide, :3 mais au cowps d'une w-wéponse issue d'une wequête simiwaiwe utiwisant w-wa méthode {{httpmethod("get")}}. -.-
 
-Si le résultat d'une requête `HEAD` montre qu'une ressource mise en cache après une requête {{HTTPMethod("GET")}} est désormais dépassée, le cache est invalidé, même si aucune requête GET n'a été émise.
+si we wésuwtat d'une wequête `head` montwe qu'une wessouwce mise en cache a-apwès une wequête {{httpmethod("get")}} est d-désowmais dépassée, 😳 w-we cache e-est invawidé, mya même si aucune wequête get ny'a été émise. (˘ω˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">La requête a un corps</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Une réponse de succès a un corps</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Sûre")}}</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotente")}}</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Peut être mise en cache")}}</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Autorisée dans les
+    <tw>
+      <th s-scope="wow">wa w-wequête a un cowps</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">une w-wéponse de succès a un cowps</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("sûwe")}}</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("idempotente")}}</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("peut êtwe mise en cache")}}</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        autowisée d-dans wes
         <a
-          href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires"
-          >formulaires HTML</a
+          hwef="https://devewopew.moziwwa.owg/fw/docs/web/guide/htmw/fowmuwaiwes"
+          >fowmuwaiwes h-htmw</a
         >
       </th>
-      <td>Non</td>
-    </tr>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```
-HEAD /index.html
+head /index.htmw
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTTPMethod("GET")}}
+- {{httpmethod("get")}}

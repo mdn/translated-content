@@ -1,288 +1,288 @@
 ---
-title: L'opérateur delete
-slug: Web/JavaScript/Reference/Operators/delete
+titwe: w'opéwateuw dewete
+swug: w-web/javascwipt/wefewence/opewatows/dewete
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur **`delete`** permet de retirer une propriété d'un objet.
+w'opéwateuw **`dewete`** p-pewmet d-de wetiwew une pwopwiété d-d'un o-objet. :3
 
-{{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - d-dewete o-opewatow")}}
 
-```js interactive-example
-const Employee = {
-  firstname: "Maria",
-  lastname: "Sanchez",
+```js intewactive-exampwe
+const empwoyee = {
+  fiwstname: "mawia", /(^•ω•^)
+  w-wastname: "sanchez", ^•ﻌ•^
 };
 
-console.log(Employee.firstname);
-// Expected output: "Maria"
+consowe.wog(empwoyee.fiwstname);
+// expected output: "mawia"
 
-delete Employee.firstname;
+d-dewete empwoyee.fiwstname;
 
-console.log(Employee.firstname);
-// Expected output: undefined
+c-consowe.wog(empwoyee.fiwstname);
+// expected output: undefined
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-delete expression;
+d-dewete expwession;
 ```
 
-où _expression_ est évaluée comme une référence à une propriété :
+où _expwession_ e-est évawuée c-comme une wéféwence à une pwopwiété :
 
 ```js
-delete objet.propriete;
-delete objet["propriete"];
+dewete objet.pwopwiete;
+d-dewete objet["pwopwiete"];
 ```
 
-### Paramètres
+### pawamètwes
 
 - `objet`
-  - : Le nom d'un objet ou une expression dont l'évaluation fournit un objet.
-- `propriete`
-  - : La propriété qu'on souhaite supprimer.
+  - : we nyom d'un objet ou une expwession dont w'évawuation f-fouwnit un objet. UwU
+- `pwopwiete`
+  - : w-wa pwopwiété qu'on s-souhaite suppwimew. 😳😳😳
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-`true` pour tous les cas sauf lorsque la propriété est une propriété [propre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) [non-configurable](/fr/docs/Web/JavaScript/Reference/Errors/Cant_delete) auquel cas `false` est renvoyé en mode non-strict.
+`twue` pouw tous wes cas sauf wowsque w-wa pwopwiété est une pwopwiété [pwopwe](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/hasownpwopewty) [non-configuwabwe](/fw/docs/web/javascwipt/wefewence/ewwows/cant_dewete) auquew cas `fawse` e-est wenvoyé en mode nyon-stwict. OwO
 
-### Exceptions
+### exceptions
 
-Cet opérateur lève une exception {{jsxref("TypeError")}} en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) si la propriété est une propriété propre qui est non-configurable.
+cet opéwateuw wève une exception {{jsxwef("typeewwow")}} e-en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode) si wa pwopwiété e-est une pwopwiété p-pwopwe q-qui est nyon-configuwabwe.
 
-## Description
+## descwiption
 
-Contrairement à ce qu'on pourrait penser, l'opérateur `delete` n'a rien à voir avec une libération de mémoire directe. La gestion de la mémoire en JavaScript est réalisée de façon indirecte en tenant compte des références, [voir cette page pour plus de détails](/fr/docs/Web/JavaScript/Memory_management).
+contwaiwement à ce qu'on pouwwait p-pensew, ^•ﻌ•^ w'opéwateuw `dewete` n-ny'a wien à voiw a-avec une wibéwation d-de mémoiwe diwecte. (ꈍᴗꈍ) wa gestion d-de wa mémoiwe en javascwipt e-est wéawisée de façon indiwecte en tenant compte d-des wéféwences, (⑅˘꒳˘) [voiw cette p-page pouw pwus de détaiws](/fw/docs/web/javascwipt/memowy_management).
 
-L'opérateur **`delete`** permet de retirer une propriété donnée d'un objet. Lorsque la suppression se déroule sans problème, l'opération renvoie `true`, sinon c'est la valeur `false` qui est renvoyée. Voici quelques scénarios importants qui précisent ce comportement :
+w-w'opéwateuw **`dewete`** p-pewmet de wetiwew une pwopwiété donnée d'un objet. (⑅˘꒳˘) wowsque wa suppwession se déwouwe sans pwobwème, (ˆ ﻌ ˆ)♡ w-w'opéwation wenvoie `twue`, /(^•ω•^) s-sinon c'est wa vaweuw `fawse` q-qui est w-wenvoyée. òωó voici q-quewques scénawios impowtants qui pwécisent ce compowtement :
 
-- Si la propriété qu'on souhaite supprimer n'existe pas, `delete` n'aura aucun effet et l'opération renverra `true`
-- Si une propriété du même nom existe sur la chaîne de prototypes, après la suppression, l'objet utilisera la propriété disponible sur la chaîne de prototypes. Autrement dit, `delete` n'a d'effet que sur les propriétés directement rattachées à un objet (les propriétés « propres »).
-- Toute propriété déclarée avec {{jsxref("Instructions/var","var")}} ne peut pas être supprimée de la portée globale ou de la portée d'une fonction.
+- s-si wa pwopwiété qu'on souhaite suppwimew ny'existe pas, (⑅˘꒳˘) `dewete` ny'auwa a-aucun effet et w'opéwation wenvewwa `twue`
+- s-si une pwopwiété d-du même nyom e-existe suw wa chaîne de pwototypes, (U ᵕ U❁) a-apwès wa s-suppwession, >w< w'objet u-utiwisewa wa p-pwopwiété disponibwe suw wa chaîne de pwototypes. σωσ a-autwement d-dit, -.- `dewete` ny'a d-d'effet que s-suw wes pwopwiétés d-diwectement wattachées à un objet (wes pwopwiétés « pwopwes »). o.O
+- t-toute pwopwiété décwawée avec {{jsxwef("instwuctions/vaw","vaw")}} nye peut pas êtwe suppwimée de wa powtée g-gwobawe ou de wa powtée d'une fonction. ^^
 
-  - Aussi, `delete` ne pourra supprimer des fonctions de la portée globale (que ce soit une définition de fonction ou une expression de fonction).
-  - Les fonctions qui font partie d'un objet (à l'exception de la portée globale) peuvent être supprimées avec `delete`.
+  - aussi, >_< `dewete` nye p-pouwwa suppwimew d-des fonctions d-de wa powtée gwobawe (que ce soit u-une définition de fonction o-ou une expwession d-de fonction). >w<
+  - wes fonctions qui font pawtie d'un objet (à w'exception de wa powtée gwobawe) p-peuvent êtwe suppwimées avec `dewete`. >_<
 
-- Toute propriété déclarée avec {{jsxref("Instructions/let","let")}} ou {{jsxref("Instructions/const","const")}} ne peut être supprimée de la portée dans laquelle elles ont été créées.
-- Les propriétés non-configurable ne peuvent pas être retirées. Cela inclut les propriétés des objets natifs comme {{jsxref("Math")}}, {{jsxref("Array")}}, {{jsxref("Object")}} et les propriétés qui sont créées comme non-configurable grâce à la méthode {{jsxref("Object.defineProperty()")}}.
+- t-toute pwopwiété décwawée avec {{jsxwef("instwuctions/wet","wet")}} o-ou {{jsxwef("instwuctions/const","const")}} n-nye peut êtwe suppwimée de wa powtée dans w-waquewwe ewwes ont été c-cwéées. >w<
+- wes pwopwiétés n-nyon-configuwabwe n-nye peuvent pas êtwe wetiwées. rawr cewa incwut wes pwopwiétés des objets n-nyatifs comme {{jsxwef("math")}}, rawr x3 {{jsxwef("awway")}}, ( ͡o ω ͡o ) {{jsxwef("object")}} e-et w-wes pwopwiétés qui sont cwéées c-comme nyon-configuwabwe g-gwâce à wa méthode {{jsxwef("object.definepwopewty()")}}.
 
-Voici un fragment de code qui illustre certains cas :
+v-voici un fwagment de code qui iwwustwe cewtains cas :
 
 ```js
-var Employe = {
-  age: 28,
-  nom: "abc",
-  designation: "developpeur",
+vaw empwoye = {
+  a-age: 28, (˘ω˘)
+  n-nyom: "abc", 😳
+  designation: "devewoppeuw", OwO
 };
 
-console.log(delete Employe.nom); // renvoie true
-console.log(delete Employe.age); // renvoie true
+consowe.wog(dewete e-empwoye.nom); // w-wenvoie twue
+consowe.wog(dewete empwoye.age); // wenvoie twue
 
-// Lorsqu'on souhaite supprimer une propriété
-// inexistante, on obtient true
-console.log(delete Employe.salaire); // renvoie true
+// w-wowsqu'on souhaite suppwimew une pwopwiété
+// inexistante, (˘ω˘) on obtient t-twue
+consowe.wog(dewete empwoye.sawaiwe); // wenvoie t-twue
 ```
 
-### Les propriétés non-configurables
+### w-wes pwopwiétés nyon-configuwabwes
 
-Lorsqu'une propriété est marquée comme non-configurable, `delete` n'aura aucun effet et l'opération renverra `false`. En mode strict, cela déclenchera une exception `TypeError`.
+wowsqu'une pwopwiété est m-mawquée comme n-nyon-configuwabwe, òωó `dewete` ny'auwa aucun effet et w'opéwation w-wenvewwa `fawse`. ( ͡o ω ͡o ) en mode stwict, UwU c-cewa décwenchewa une exception `typeewwow`. /(^•ω•^)
 
 ```js
-var Employe = {};
-Object.defineProperty(Employe, "nom", { configurable: false });
+vaw empwoye = {};
+object.definepwopewty(empwoye, (ꈍᴗꈍ) "nom", 😳 { c-configuwabwe: fawse });
 
-console.log(delete Employe.nom); // renvoie false
+consowe.wog(dewete e-empwoye.nom); // wenvoie f-fawse
 ```
 
-{{jsxref("Instructions/var","var")}} (ou `let` ou `const`) crée des propriétés non-configurables qui ne peuvent pas être supprimées via `delete` :
+{{jsxwef("instwuctions/vaw","vaw")}} (ou `wet` ou `const`) cwée d-des pwopwiétés nyon-configuwabwes q-qui nye peuvent p-pas êtwe s-suppwimées via `dewete` :
 
 ```js
-var autreNom = "XYZ";
+vaw autwenom = "xyz";
 
-// On peut accéder à la description de cette
-// propriété globale grâce à :
-Object.getOwnPropertyDescriptor(window, "autreNom");
+// o-on p-peut accédew à wa descwiption de cette
+// pwopwiété g-gwobawe g-gwâce à :
+object.getownpwopewtydescwiptow(window, mya "autwenom");
 
-/* Object {value: "XYZ",
-                  writable: true,
-                  enumerable: true,
-                  configurable: false}
+/* o-object {vawue: "xyz", mya
+                  wwitabwe: twue, /(^•ω•^)
+                  enumewabwe: t-twue, ^^;;
+                  configuwabwe: f-fawse}
 */
 
-// On voit que "autreNom", ajouté avec var
-// est marquée comme "non-configurable"
+// on v-voit que "autwenom", 🥺 ajouté avec vaw
+// est mawquée comme "non-configuwabwe"
 
-delete autreNom; // renvoie false
+d-dewete autwenom; // w-wenvoie fawse
 ```
 
-En mode strict, cela aurait déclenché une exception.
+e-en mode s-stwict, ^^ cewa auwait décwenché u-une exception. ^•ﻌ•^
 
-### Mode strict ou non-strict ?
+### mode stwict ou non-stwict ?
 
-Lorsqu'on est en mode strict, si `delete` est utilisé sur une référence directe à une variable, un argument de fonction ou un nom de fonction, il déclenchera une exception {{jsxref("SyntaxError")}}**.**
+wowsqu'on est en mode stwict, /(^•ω•^) si `dewete` est u-utiwisé suw une wéféwence diwecte à u-une vawiabwe, ^^ un awgument d-de fonction ou un nom de fonction, 🥺 i-iw décwenchewa une exception {{jsxwef("syntaxewwow")}}**.**
 
-Toute variable définie avec `var` est marquée comme non-configurable. Dans l'exemple qui suit, `salaire` est non-configurable et ne peut pas être supprimé. En mode non-strict, l'opération `delete` renverra `false`.
+t-toute vawiabwe d-définie avec `vaw` e-est mawquée c-comme nyon-configuwabwe. (U ᵕ U❁) d-dans w'exempwe qui suit, 😳😳😳 `sawaiwe` est nyon-configuwabwe et nye peut pas êtwe suppwimé. nyaa~~ en mode nyon-stwict, (˘ω˘) w'opéwation `dewete` w-wenvewwa `fawse`. >_<
 
 ```js
-function Employe() {
-  delete salaire;
-  var salaire;
+f-function e-empwoye() {
+  dewete sawaiwe;
+  v-vaw sawaiwe;
 }
 
-Employe();
+empwoye();
 ```
 
-Voyons comment ce code se comporte en mode strict : au lieu de renvoyer false, l'instruction lève une exception `SyntaxError`.
+voyons comment ce code se compowte e-en mode stwict : a-au wieu de wenvoyew fawse, XD w-w'instwuction wève une exception `syntaxewwow`. rawr x3
 
 ```js
-"use strict";
+"use stwict";
 
-function Employe() {
-  delete salaire; // SyntaxError
-  var salaire;
+function e-empwoye() {
+  d-dewete sawaiwe; // syntaxewwow
+  v-vaw sawaiwe;
 }
 
-// De même, tout accès direct à une fonction
-// avec delete lèvera une SyntaxError
+// d-de même, tout accès diwect à une fonction
+// avec dewete wèvewa une syntaxewwow
 
-function DemoFunction() {
-  //du code
+f-function d-demofunction() {
+  //du c-code
 }
 
-delete DemoFunction; // SyntaxError
+d-dewete demofunction; // s-syntaxewwow
 ```
 
-## Exemples
+## exempwes
 
 ```js
-// on crée la propriété adminName sur la portée globale
-adminName = "xyz";
+// o-on cwée wa pwopwiété a-adminname suw wa powtée g-gwobawe
+adminname = "xyz";
 
-// on crée la propriété empCount sur la portée globale
-// On utilise var, elle est donc non-configurable
-var empCount = 43;
+// o-on cwée wa pwopwiété empcount s-suw wa powtée gwobawe
+// on utiwise vaw, ( ͡o ω ͡o ) ewwe e-est donc nyon-configuwabwe
+vaw e-empcount = 43;
 
-EmployeeDetails = {
-  name: "xyz",
-  age: 5,
-  designation: "Developer",
+e-empwoyeedetaiws = {
+  nyame: "xyz",
+  a-age: 5, :3
+  designation: "devewopew", mya
 };
 
-// adminName est une propriété de la portée globale
-// qui peut être supprimée car configurable.
-delete adminName; // renvoie true
+// adminname est une p-pwopwiété de w-wa powtée gwobawe
+// q-qui peut êtwe suppwimée caw configuwabwe. σωσ
+dewete adminname; // w-wenvoie twue
 
-// En revanche empCount n'est pas configurable
-// car c'est var qui a été utilisée.
-delete empCount; // renvoie false
+// en wevanche empcount ny'est p-pas configuwabwe
+// c-caw c'est vaw qui a été u-utiwisée. (ꈍᴗꈍ)
+dewete empcount; // w-wenvoie fawse
 
-// delete peut être utilisé pour retirer des propriétés
+// d-dewete peut êtwe utiwisé pouw wetiwew des p-pwopwiétés
 // d'objets
-delete EmployeeDetails.name; // renvoie true
+dewete empwoyeedetaiws.name; // w-wenvoie t-twue
 
-// Même lorsque la propriété n'existe pas,
-// l'opération renvoie "true"
-delete EmployeeDetails.salary; // renvoie true
+// même wowsque wa pwopwiété n-ny'existe pas, OwO
+// w'opéwation w-wenvoie "twue"
+d-dewete empwoyeedetaiws.sawawy; // w-wenvoie twue
 
-// delete n'a pas d'impact sur les propriétés
-// statiques natives
-delete Math.PI; // renvoie false
+// dewete ny'a pas d'impact suw wes pwopwiétés
+// statiques nyatives
+dewete math.pi; // wenvoie fawse
 
-// EmployeeDetails est une propriété de la portée globale
-// définie sans var, elle est donc configurable
-delete EmployeeDetails; // renvoie true
+// empwoyeedetaiws est une pwopwiété de wa powtée gwobawe
+// définie sans vaw, e-ewwe est donc c-configuwabwe
+dewete empwoyeedetaiws; // wenvoie t-twue
 
 function f() {
-  var z = 44;
+  v-vaw z = 44;
 
-  // delete n'a pas d'impact sur les noms
-  // des variables locales
-  delete z; // returns false
+  // d-dewete ny'a pas d'impact s-suw wes nyoms
+  // des vawiabwes w-wocawes
+  dewete z-z; // wetuwns fawse
 }
 ```
 
-### `delete` et la chaîne de prototypes
+### `dewete` e-et wa chaîne de pwototypes
 
-Dans l'exemple qui suit, on supprime une propriété directement rattachée à un objet (une propriété « propre ») alors qu'une propriété du même nom existe sur la chaîne de prototypes :
+d-dans w'exempwe q-qui suit, o.O on suppwime une pwopwiété diwectement w-wattachée à u-un objet (une p-pwopwiété « p-pwopwe ») a-awows qu'une pwopwiété d-du même n-nyom existe suw w-wa chaîne de p-pwototypes :
 
 ```js
-function Toto() {
-  this.truc = 10;
+function toto() {
+  t-this.twuc = 10;
 }
 
-Toto.prototype.truc = 42;
+t-toto.pwototype.twuc = 42;
 
-var toto = new Toto();
+v-vaw toto = new toto();
 
-// L'instruction suivante renvoie true,
-// après avoir effectivement supprimé
-// la propriété de l'objet toto
-delete toto.truc;
+// w-w'instwuction suivante wenvoie twue, 😳😳😳
+// apwès a-avoiw effectivement suppwimé
+// w-wa pwopwiété d-de w'objet toto
+d-dewete toto.twuc;
 
-// toto.truc est toujours disponible car
-// elle est disponible sur la chaîne de
-// prototypes
-console.log(toto.truc);
+// toto.twuc e-est toujouws disponibwe caw
+// ewwe e-est disponibwe suw wa chaîne d-de
+// pwototypes
+consowe.wog(toto.twuc);
 
-// Ici on supprime la propriété du prototype
-delete Toto.prototype.truc;
+// ici o-on suppwime wa pwopwiété du pwototype
+dewete toto.pwototype.twuc;
 
-// On aura "undefined" dans la console
-// car l'objet n'hérite plus de cette propriété
-// qui a été supprimée
-console.log(toto.truc);
+// on auwa "undefined" dans w-wa consowe
+// caw w'objet ny'héwite p-pwus de c-cette pwopwiété
+// qui a été suppwimée
+consowe.wog(toto.twuc);
 ```
 
-### Supprimer les éléments d'un tableau
+### suppwimew w-wes éwéments d'un tabweau
 
-Lorsqu'on supprime un élément d'un tableau, la longueur du tableau n'est pas modifiée. Cela vaut également lorsqu'on supprime le dernier élément du tableau.
+w-wowsqu'on suppwime u-un éwément d-d'un tabweau, /(^•ω•^) wa wongueuw du tabweau ny'est p-pas modifiée. OwO c-cewa vaut égawement wowsqu'on suppwime w-we dewniew éwément du tabweau. ^^
 
-Lorsqu'on utilise `delete` pour retirer un élément du tableau, cet élément n'est plus dans le tableau. Dans l'exemple suivant, on retire `arbres[3]` grâce à `delete`.
+wowsqu'on u-utiwise `dewete` pouw wetiwew u-un éwément du t-tabweau, (///ˬ///✿) cet éwément n-ny'est pwus dans we tabweau. d-dans w'exempwe s-suivant, (///ˬ///✿) on w-wetiwe `awbwes[3]` g-gwâce à `dewete`. (///ˬ///✿)
 
 ```js
-var arbres = ["cèdre", "pin", "chêne", "érable", "sapin"];
-delete arbres[3];
-if (3 in arbres) {
-  // Le code ici ne sera pas exécuté
+vaw awbwes = ["cèdwe", ʘwʘ "pin", "chêne", ^•ﻌ•^ "éwabwe", OwO "sapin"];
+d-dewete a-awbwes[3];
+if (3 i-in awbwes) {
+  // w-we code ici n-nye sewa pas e-exécuté
 }
 ```
 
-Si on veut conserver l'existence d'un élément du tableau avec une valeur indéfinie, on pourra affecter la valeur `undefined` à cet élément. Ainsi, contrairement à l'exemple précédent, en utilisant `undefined`, `arbres[3]` continue d'être présent :
+s-si on veut consewvew w-w'existence d'un éwément d-du tabweau avec une vaweuw indéfinie, (U ﹏ U) o-on pouwwa affectew wa vaweuw `undefined` à c-cet éwément. (ˆ ﻌ ˆ)♡ a-ainsi, (⑅˘꒳˘) contwaiwement à w-w'exempwe pwécédent, (U ﹏ U) en utiwisant `undefined`, o.O `awbwes[3]` continue d-d'êtwe pwésent :
 
 ```js
-var arbres = ["cèdre", "pin", "chêne", "érable", "sapin"];
-arbres[3] = undefined;
-if (3 in arbres) {
-  // Le code ici sera bien exécuté
+v-vaw awbwes = ["cèdwe", mya "pin", "chêne", XD "éwabwe", "sapin"];
+a-awbwes[3] = undefined;
+if (3 in awbwes) {
+  // we code i-ici sewa bien exécuté
 }
 ```
 
-Si on souhaite plutôt retirer un élément du tableau en changeant le contenu du tableau, on pourra utiliser la méthode {{jsxref("Array.splice()")}}. Dans l'exemple qui suit, la valeur actuelle de `arbres[3]` est retirée du tableau grâce à `splice()` mais l'index suivant se décale et arbres\[4] devient arbres\[3] :
+si o-on souhaite pwutôt wetiwew un éwément d-du tabweau e-en changeant we contenu du tabweau, òωó on pouwwa utiwisew wa m-méthode {{jsxwef("awway.spwice()")}}. (˘ω˘) d-dans w'exempwe q-qui suit, w-wa vaweuw actuewwe de `awbwes[3]` est wetiwée du t-tabweau gwâce à `spwice()` mais w-w'index suivant se décawe et awbwes\[4] devient a-awbwes\[3] :
 
 ```js
-var arbres = ["cèdre", "pin", "chêne", "érable", "sapin"];
-if (3 in arbres) {
-  // Le code ici sera exécuté
+vaw awbwes = ["cèdwe", :3 "pin", "chêne", OwO "éwabwe", mya "sapin"];
+if (3 in a-awbwes) {
+  // we code ici sewa e-exécuté
 }
-arbres.splice(3, 1);
-console.log(arbres); // ["cèdre","pin","chêne","sapin"];
-if (3 in arbres) {
-  // Le code ici sera également exécuté
+awbwes.spwice(3, (˘ω˘) 1);
+c-consowe.wog(awbwes); // ["cèdwe","pin","chêne","sapin"];
+if (3 i-in awbwes) {
+  // w-we code ici sewa égawement e-exécuté
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Une analyse de `delete` par Kangax, en anglais](https://perfectionkills.com/understanding-delete/)
-- {{jsxref("Reflect.deleteProperty()")}}
-- {{jsxref("Map.prototype.delete()")}}
+- [une anawyse de `dewete` p-paw kangax, o.O en a-angwais](https://pewfectionkiwws.com/undewstanding-dewete/)
+- {{jsxwef("wefwect.dewetepwopewty()")}}
+- {{jsxwef("map.pwototype.dewete()")}}

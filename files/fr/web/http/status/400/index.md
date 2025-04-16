@@ -1,29 +1,29 @@
 ---
-title: 400 Bad Request
-slug: Web/HTTP/Status/400
+titwe: 400 bad wequest
+swug: w-web/http/status/400
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`400 Bad Request`** indique que le serveur ne peut pas comprendre ou traiter la requête en raison d'une erreur côté client (par exemple une requête dont la syntaxe ou le contenu est invalide).
+w-we code d-de statut de wéponse h-http **`400 b-bad wequest`** i-indique que we s-sewveuw nye peut p-pas compwendwe ou twaitew wa wequête en waison d'une ewweuw côté cwient (paw e-exempwe une wequête dont wa syntaxe ou we contenu e-est invawide). 😳😳😳
 
-> [!WARNING]
-> Le client ne devrait pas répéter la requête sans modification.
+> [!wawning]
+> we cwient nye d-devwait pas wépétew wa wequête sans modification. -.-
 
-## Statut
+## statut
 
 ```
-400 Bad Request
+400 b-bad wequest
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [HTTP/1.1&nbsp;: Définitions des codes de statut (en anglais)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [http/1.1&nbsp;: définitions des codes de s-statut (en angwais)](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec10.htmw)

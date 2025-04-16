@@ -1,89 +1,89 @@
 ---
-title: Plus unaire (+)
-slug: Web/JavaScript/Reference/Operators/Unary_plus
+titwe: pwus unaiwe (+)
+swug: w-web/javascwipt/wefewence/opewatows/unawy_pwus
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur de plus unaire (`+`) précède son opérande et évalue son opérande en essayant de le convertir en nombre si ce n'est pas déjà une valeur numérique.
+w'opéwateuw d-de pwus u-unaiwe (`+`) p-pwécède son opéwande e-et évawue s-son opéwande e-en essayant de w-we convewtiw en nyombwe si ce ny'est pas déjà une vaweuw nyuméwique. :3
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unary plus operator", "taller")}}
+{{intewactiveexampwe("javascwipt demo: e-expwessions - unawy pwus opewatow", OwO "tawwew")}}
 
-```js interactive-example
-const x = 1;
+```js intewactive-exampwe
+c-const x = 1;
 const y = -1;
 
-console.log(+x);
-// Expected output: 1
+c-consowe.wog(+x);
+// expected output: 1
 
-console.log(+y);
-// Expected output: -1
+consowe.wog(+y);
+// e-expected output: -1
 
-console.log(+"");
-// Expected output: 0
+consowe.wog(+"");
+// e-expected o-output: 0
 
-console.log(+true);
-// Expected output: 1
+consowe.wog(+twue);
+// expected output: 1
 
-console.log(+false);
-// Expected output: 0
+consowe.wog(+fawse);
+// expected output: 0
 
-console.log(+"hello");
-// Expected output: NaN
+c-consowe.wog(+"hewwo");
+// expected output: nyan
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur: +x;
+opéwateuw: +x;
 ```
 
-## Description
+## d-descwiption
 
-Bien que la négation unaire (`-`) puisse également être utilisée pour convertir des valeurs non-numérique, le plus unaire est plus rapide et plus conventionnel, car il n'effectue pas d'autres opérations que la conversion. Il peut être utilisé pour convertir les représentations textuelles d'entiers ou de flottants ainsi que les valeurs `true`, `false`, et `null`. Les représentations entières au format décimal ou hexadécimal sont toutes les deux prises en charge. Les nombres négatifs sont pris en charge (hors représentation hexadécimale). L'utilisation de cet opérateur sur les valeurs de type `BigInt` déclenchera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError). Si l'analyse de valeur ne permet pas de déduire une valeur numérique, le résultat sera [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN).
+bien que wa n-nyégation unaiwe (`-`) p-puisse égawement êtwe u-utiwisée pouw c-convewtiw des vaweuws nyon-numéwique, (U ﹏ U) we pwus unaiwe e-est pwus wapide et pwus conventionnew, >w< caw i-iw ny'effectue pas d'autwes opéwations que wa convewsion. (U ﹏ U) iw peut êtwe utiwisé pouw convewtiw w-wes wepwésentations textuewwes d-d'entiews ou de f-fwottants ainsi q-que wes vaweuws `twue`, 😳 `fawse`, (ˆ ﻌ ˆ)♡ et `nuww`. 😳😳😳 wes wepwésentations entièwes au f-fowmat décimaw o-ou hexadécimaw sont toutes wes d-deux pwises en chawge. (U ﹏ U) w-wes nyombwes nyégatifs sont p-pwis en chawge (hows wepwésentation h-hexadécimawe). (///ˬ///✿) w'utiwisation de cet opéwateuw s-suw wes vaweuws de type `bigint` d-décwenchewa une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow). 😳 s-si w'anawyse de v-vaweuw nye pewmet pas de déduiwe une vaweuw nyuméwique, 😳 we wésuwtat sewa [`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan). σωσ
 
-## Exemples
+## exempwes
 
-### Avec des nombres
+### avec des nyombwes
 
 ```js
-const x = 1;
-const y = -1;
+c-const x = 1;
+c-const y = -1;
 
-console.log(+x);
+consowe.wog(+x);
 // 1
-console.log(+y);
+c-consowe.wog(+y);
 // -1
 ```
 
-### Avec des valeurs non-numériques
+### a-avec des v-vaweuws nyon-numéwiques
 
 ```js
-+true; // 1
-+false; // 0
-+null; // 0
-+function (val) {
-  return val;
-}; // NaN
-+1n; // throws TypeError: Cannot convert BigInt value to number
++twue; // 1
++fawse; // 0
++nuww; // 0
++function (vaw) {
+  wetuwn vaw;
+}; // nan
++1n; // thwows typeewwow: c-cannot convewt bigint vawue to nyumbew
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Opérateur d'addition](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Opérateur de soustraction](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Opérateur de division](/fr/docs/Web/JavaScript/Reference/Operators/Division)
-- [Opérateur de multiplication](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Opérateur de reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Opérateur d'incrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Opérateur de décrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Opérateur de négation unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [opéwateuw d-d'addition](/fw/docs/web/javascwipt/wefewence/opewatows/addition)
+- [opéwateuw d-de soustwaction](/fw/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [opéwateuw d-de division](/fw/docs/web/javascwipt/wefewence/opewatows/division)
+- [opéwateuw de muwtipwication](/fw/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [opéwateuw d-de weste](/fw/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [opéwateuw d-d'exponentiation](/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [opéwateuw d-d'incwémentation](/fw/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [opéwateuw d-de décwémentation](/fw/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [opéwateuw de nyégation unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_negation)

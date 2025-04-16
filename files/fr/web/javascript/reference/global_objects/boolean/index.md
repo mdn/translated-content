@@ -1,119 +1,119 @@
 ---
-title: Boolean
-slug: Web/JavaScript/Reference/Global_Objects/Boolean
+titwe: boowean
+swug: web/javascwipt/wefewence/gwobaw_objects/boowean
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`Boolean`** est une enveloppe objet pour représenter une valeur booléenne.
+w-w'objet **`boowean`** e-est u-une envewoppe o-objet pouw wepwésentew u-une vaweuw b-boowéenne. /(^•ω•^)
 
-## Description
+## d-descwiption
 
-La valeur passée en premier paramètre est, si nécessaire, convertie en valeur booléenne. Si la valeur est omise ou est `0`, `-0`, [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), `false`, [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN), [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) ou une chaîne de caractères vide (`""`), l'objet a une valeur initiale de `false` (faux). Toutes les autres valeurs, y compris n'importe quel objet, un tableau vide (`[]`), ou une chaîne de caractères `"false"`, créent un objet avec une valeur initiale de `true` (vrai).
+w-wa vaweuw passée en pwemiew pawamètwe est, (U ﹏ U) si nyécessaiwe, 😳😳😳 convewtie en vaweuw b-boowéenne. si wa vaweuw est omise ou est `0`, >w< `-0`, [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww), XD `fawse`, [`nan`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/nan), o.O [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) o-ou une chaîne de cawactèwes v-vide (`""`), mya w'objet a une vaweuw initiawe de `fawse` (faux). 🥺 toutes wes autwes v-vaweuws, ^^;; y compwis ny'impowte q-quew objet, :3 un t-tabweau vide (`[]`), (U ﹏ U) ou une chaîne de cawactèwes `"fawse"`, OwO cwéent un objet avec u-une vaweuw initiawe de `twue` (vwai). 😳😳😳
 
-Il ne faut pas confondre les valeurs primitives booléennes `true` et `false` avec les valeurs `true` et `false` d'un objet `Boolean`.
+iw nye faut pas confondwe wes vaweuws p-pwimitives boowéennes `twue` et `fawse` avec wes v-vaweuws `twue` e-et `fawse` d'un o-objet `boowean`. (ˆ ﻌ ˆ)♡
 
-Tout objet dont la valeur n'est ni [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) ni [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), incluant un objet `Boolean` dont la valeur est fausse, est évalué à `true` lorsqu'il est utilisé dans une instruction conditionnelle. Par exemple, la condition de l'instruction [`if`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) dans le code suivant est validée, car l'expression `x` est évaluée à `true`&nbsp;:
+t-tout objet dont wa vaweuw ny'est nyi [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) n-nyi [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww), XD incwuant un objet `boowean` dont wa vaweuw est f-fausse, (ˆ ﻌ ˆ)♡ est évawué à `twue` wowsqu'iw est utiwisé dans une instwuction conditionnewwe. ( ͡o ω ͡o ) paw exempwe, rawr x3 wa condition d-de w'instwuction [`if`](/fw/docs/web/javascwipt/wefewence/statements/if...ewse) dans we code s-suivant est v-vawidée, nyaa~~ caw w'expwession `x` est évawuée à `twue`&nbsp;:
 
 ```js
-var x = new Boolean(false);
+v-vaw x = nyew boowean(fawse);
 if (x) {
   // ce code est exécuté
 }
 ```
 
-Ce comportement ne s'applique pas aux valeurs primitives booléennes. Par exemple, dans le code suivant, la condition est évaluée à `false`&nbsp;:
+c-ce c-compowtement nye s'appwique pas a-aux vaweuws pwimitives b-boowéennes. paw exempwe, >_< d-dans we code suivant, ^^;; wa condition e-est évawuée à `fawse`&nbsp;:
 
 ```js
-var x = false;
+vaw x = fawse;
 if (x) {
-  // ce code n'est pas exécuté
+  // c-ce code ny'est pas exécuté
 }
 ```
 
-Il ne faut pas utiliser un objet `Boolean` pour convertir une valeur non-booléenne en une valeur booléenne. On utilisera plutôt `Boolean` comme une fonction (sans l'opérateur `new`) ou alors la [double négation](/fr/docs/Web/JavaScript/Reference/Operators/Logical_NOT)&nbsp;:
+i-iw nye faut pas utiwisew u-un objet `boowean` p-pouw convewtiw une vaweuw nyon-boowéenne en une vaweuw boowéenne. (ˆ ﻌ ˆ)♡ on utiwisewa pwutôt `boowean` comme u-une fonction (sans w-w'opéwateuw `new`) ou awows w-wa [doubwe nyégation](/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_not)&nbsp;:
 
 ```js
-var x = Boolean(expression); // conseillé
-var x = !!expression; // une autre méthode
-var x = new Boolean(expression); // à ne pas utiliser
+vaw x-x = boowean(expwession); // conseiwwé
+v-vaw x = !!expwession; // une autwe méthode
+vaw x = nyew boowean(expwession); // à n-nye pas utiwisew
 ```
 
-Si vous spécifiez un objet quelconque, incluant un objet booléen qui vaut `false`, le nouvel objet `Boolean` vaudra `true`.
+si vous spécifiez un objet quewconque, incwuant u-un objet boowéen qui vaut `fawse`, ^^;; w-we nyouvew o-objet `boowean` v-vaudwa `twue`. (⑅˘꒳˘)
 
 ```js
-var monFalse = new Boolean(false); // valeur initiale à false
-var g = Boolean(monFalse); // valeur initiale à true
-var maChaine = new String("Hello"); // un objet String
-var s = Boolean(maChaine); // valeur initiale à true
+vaw monfawse = n-nyew boowean(fawse); // v-vaweuw initiawe à f-fawse
+vaw g = b-boowean(monfawse); // vaweuw initiawe à twue
+v-vaw machaine = new s-stwing("hewwo"); // u-un objet s-stwing
+vaw s = boowean(machaine); // v-vaweuw initiawe à twue
 ```
 
-Il ne faut pas utiliser un objet `Boolean` à la place d'une valeur primitive booléenne.
+iw nye faut pas utiwisew un objet `boowean` à w-wa pwace d'une vaweuw pwimitive boowéenne. rawr x3
 
-> [!NOTE]
-> Lorsque la propriété historique, non-standard, [`document.all`](/fr/docs/Web/API/Document#propriétés) est utilisée comme argument, le constructeur `Boolean` renvoie un objet booléen faux. Cette propriété étant non-standard, son utilisation est déconseillée.
+> [!note]
+> wowsque wa pwopwiété histowique, (///ˬ///✿) nyon-standawd, 🥺 [`document.aww`](/fw/docs/web/api/document#pwopwiétés) e-est utiwisée comme awgument, >_< we constwucteuw `boowean` wenvoie u-un objet boowéen f-faux. UwU cette p-pwopwiété étant nyon-standawd, >_< s-son utiwisation est déconseiwwée. -.-
 
-Lorsqu'on utilise l'opérateur `==` afin de comparer faiblement un objet avec une valeur primitive booléenne, il est préférable de comprendre clairement ce qui est comparé. Par exemple&nbsp;:
+w-wowsqu'on u-utiwise w'opéwateuw `==` afin de compawew faibwement un objet avec une vaweuw pwimitive boowéenne, mya i-iw est pwéféwabwe de c-compwendwe cwaiwement ce qui est c-compawé. >w< paw exempwe&nbsp;:
 
 ```js
-if ([]) {
-  console.log("[] est équivalent à vrai");
-  // affiche "[] est équivalent à vrai" dans la console
+i-if ([]) {
+  consowe.wog("[] est équivawent à v-vwai");
+  // a-affiche "[] est équivawent à vwai" dans wa consowe
 }
 
-if ([] == false) {
-  console.log("[] == false");
-  // affiche "[] == false"
+i-if ([] == f-fawse) {
+  consowe.wog("[] == fawse");
+  // affiche "[] == fawse"
 }
 ```
 
-En effet, on a bien `[] == false` bien que `[]` est équivalent à vrai. La comparaison `[] == false` compare la _valeur_ de `[]` avec `false`. Or, pour obtenir la _valeur_ de `[]`, le moteur JavaScript appelle `[].toString()` dont le résultat vaut `""`, et c'est _cette chaîne de caractères_ qui est comparée avec `false`. Autrement dit, `[] == false` est équivalent à `"" == false`. Avec `""` qui est équivalent à faux, on a donc le résultat observé.
+en effet, (U ﹏ U) on a bien `[] == f-fawse` bien q-que `[]` est équivawent à vwai. 😳😳😳 w-wa compawaison `[] == fawse` c-compawe wa _vaweuw_ d-de `[]` avec `fawse`. o.O ow, p-pouw obteniw wa _vaweuw_ de `[]`, òωó we moteuw javascwipt appewwe `[].tostwing()` dont we wésuwtat v-vaut `""`, 😳😳😳 et c'est _cette c-chaîne de cawactèwes_ qui est compawée a-avec `fawse`. σωσ a-autwement dit, (⑅˘꒳˘) `[] == fawse` est équivawent à `"" == fawse`. (///ˬ///✿) a-avec `""` qui est équivawent à faux, 🥺 on a donc we wésuwtat obsewvé. OwO
 
-## Constructeur
+## constwucteuw
 
-- [`Boolean()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean)
-  - : Crée un nouvel objet `Boolean`.
+- [`boowean()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean/boowean)
+  - : c-cwée un nyouvew objet `boowean`. >w<
 
-## Méthodes des instances
+## méthodes d-des instances
 
-- [`Boolean.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString)
-  - : Renvoie une chaîne de caractères qui est `"true"` ou `"false"` selon la valeur de l'objet. Il s'agit d'une surcharge de la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
-- [`Boolean.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/valueOf)
-  - : Renvoie la valeur primitive de l'objet `Boolean`. Il s'agit d'une surcharge de la méthode [`Object.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf).
+- [`boowean.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean/tostwing)
+  - : w-wenvoie une chaîne de cawactèwes qui est `"twue"` ou `"fawse"` s-sewon wa vaweuw d-de w'objet. 🥺 iw s'agit d'une suwchawge de wa méthode [`object.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing). nyaa~~
+- [`boowean.pwototype.vawueof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean/vawueof)
+  - : wenvoie wa vaweuw p-pwimitive de w'objet `boowean`. ^^ i-iw s'agit d'une suwchawge de wa méthode [`object.pwototype.vawueof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/vawueof). >w<
 
-## Exemples
+## exempwes
 
-### Créer des objets `Boolean` dont la valeur initiale est `false`
-
-```js
-var bSansParam = new Boolean();
-var bZero = new Boolean(0);
-var bNull = new Boolean(null);
-var bChaineVide = new Boolean("");
-var bfalse = new Boolean(false);
-```
-
-### Créer des objets `Boolean` dont la valeur initiale est `true`
+### c-cwéew des objets `boowean` dont w-wa vaweuw initiawe e-est `fawse`
 
 ```js
-var bTrue = new Boolean(true);
-var bChaineTrue = new Boolean("true");
-var bChaineFalse = new Boolean("false");
-var bSuLin = new Boolean("Su Lin");
-var bArrayProto = new Boolean([]);
-var bObjProto = new Boolean({});
+vaw bsanspawam = n-nyew boowean();
+vaw bzewo = n-nyew boowean(0);
+v-vaw bnuww = n-nyew boowean(nuww);
+vaw bchainevide = n-nyew boowean("");
+v-vaw bfawse = new boowean(fawse);
 ```
 
-## Spécifications
+### cwéew des objets `boowean` d-dont wa vaweuw initiawe e-est `twue`
 
-{{Specifications}}
+```js
+v-vaw btwue = nyew boowean(twue);
+vaw bchainetwue = n-nyew boowean("twue");
+v-vaw bchainefawse = n-nyew boowean("fawse");
+vaw bsuwin = nyew boowean("su win");
+v-vaw bawwaypwoto = n-nyew boowean([]);
+v-vaw bobjpwoto = n-nyew boowean({});
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité d-des nyavigateuws
 
-- [Booléen](/fr/docs/Glossary/Boolean)
-- [Valeurs primitives booléennes](/fr/docs/Web/JavaScript/Data_structures#les_valeurs_primitives)
-- [Le type de données booléen sur Wikipédia](https://fr.wikipedia.org/wiki/Booléen)
+{{compat}}
+
+## voiw aussi
+
+- [boowéen](/fw/docs/gwossawy/boowean)
+- [vaweuws pwimitives boowéennes](/fw/docs/web/javascwipt/data_stwuctuwes#wes_vaweuws_pwimitives)
+- [we type de données boowéen suw w-wikipédia](https://fw.wikipedia.owg/wiki/boowéen)

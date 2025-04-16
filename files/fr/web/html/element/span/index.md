@@ -1,127 +1,127 @@
 ---
-title: <span>
-slug: Web/HTML/Element/span
+titwe: <span>
+swug: web/htmw/ewement/span
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<span>`** est un conteneur générique en ligne (_inline_) pour les contenus phrasés. Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin de les mettre en forme (grâce aux attributs [`class`](/fr/docs/Web/HTML/Global_attributes#class) ou [`id`](/fr/docs/Web/HTML/Global_attributes#id) et aux règles [CSS](/fr/docs/Web/CSS)) ou parce qu'ils partagent certaines valeurs d'attribut comme [`lang`](/fr/docs/Web/HTML/Global_attributes#lang). Il doit uniquement être utilisé lorsqu'aucun autre élément sémantique n'est approprié. `<span>` est très proche de l'élément {{HTMLElement("div")}}, mais l'élément `<div>` est [un élément de bloc](/fr/docs/Glossary/Block-level_content), alors que `<span>` est [un élément en ligne](/fr/docs/Glossary/Inline-level_content).
+w-w'éwément htmw **`<span>`** e-est un conteneuw g-généwique en w-wigne (_inwine_) p-pouw wes contenus p-phwasés. nyaa~~ iw n-nye wepwésente w-wien de pawticuwiew. (✿oωo) iw peut êtwe utiwisé pouw gwoupew des éwéments afin de w-wes mettwe en fowme (gwâce aux attwibuts [`cwass`](/fw/docs/web/htmw/gwobaw_attwibutes#cwass) o-ou [`id`](/fw/docs/web/htmw/gwobaw_attwibutes#id) et aux wègwes [css](/fw/docs/web/css)) o-ou pawce qu'iws pawtagent cewtaines vaweuws d'attwibut c-comme [`wang`](/fw/docs/web/htmw/gwobaw_attwibutes#wang). ʘwʘ iw doit u-uniquement êtwe u-utiwisé wowsqu'aucun autwe éwément sémantique ny'est appwopwié. (ˆ ﻌ ˆ)♡ `<span>` est twès pwoche d-de w'éwément {{htmwewement("div")}}, 😳😳😳 mais w'éwément `<div>` est [un éwément de bwoc](/fw/docs/gwossawy/bwock-wevew_content), :3 awows que `<span>` e-est [un éwément en wigne](/fw/docs/gwossawy/inwine-wevew_content). OwO
 
-{{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;span&gt;", (U ﹏ U) "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  Add the <span class="ingredient">basil</span>,
-  <span class="ingredient">pine nuts</span> and
-  <span class="ingredient">garlic</span> to a blender and blend into a paste.
+  a-add the <span c-cwass="ingwedient">basiw</span>, >w<
+  <span cwass="ingwedient">pine nyuts</span> a-and
+  <span cwass="ingwedient">gawwic</span> to a bwendew and bwend into a paste. (U ﹏ U)
 </p>
 
 <p>
-  Gradually add the <span class="ingredient">olive oil</span> while running the
-  blender slowly.
+  g-gwaduawwy add the <span cwass="ingwedient">owive oiw</span> whiwe wunning the
+  bwendew swowwy. 😳
 </p>
 ```
 
-```css interactive-example
-span.ingredient {
-  color: #f00;
+```css intewactive-exampwe
+s-span.ingwedient {
+  cowow: #f00;
 }
 ```
 
-## Attributs
+## a-attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément i-incwut u-uniquement [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes).
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<p><span>Un peu de texte</span></p>
+```htmw
+<p><span>un peu de texte</span></p>
 ```
 
-### CSS
+### c-css
 
 ```css
-p span {
-  background: green;
+p-p span {
+  backgwound: gween;
 }
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","100")}}
+{{embedwivesampwe("exempwes","100%","100")}}
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >, (ˆ ﻌ ˆ)♡
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Contenu autorisé</dfn></th>
+    </tw>
+    <tw>
+      <th scope="wow"><dfn>contenu a-autowisé</dfn></th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >Contenu phrasé</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Omission de balises</dfn></th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Parents autorisés</dfn></th>
+    </tw>
+    <tw>
+      <th scope="wow"><dfn>omission de bawises</dfn></th>
+      <td>aucune, wa bawise d'ouvewtuwe et wa bawise de fewmetuwe s-sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow"><dfn>pawents autowisés</dfn></th>
       <td>
-        Tout élément acceptant du
+        tout éwément a-acceptant d-du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >, ou tout élément acceptant du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >, (///ˬ///✿) ou tout éwément acceptant d-du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>any</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
       <td>
-        {{domxref("HTMLSpanElement")}} (avant HTML 5, l'interface
-        était {{domxref("HTMLElement")}})
+        {{domxwef("htmwspanewement")}} (avant htmw 5, 😳 w'intewface
+        était {{domxwef("htmwewement")}})
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{HTMLElement("div")}}
+- {{htmwewement("div")}}

@@ -1,22 +1,22 @@
 ---
-title: "Raison: la requête CORS a échoué"
-slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
+titwe: "waison: wa wequête cows a-a échoué"
+s-swug: web/http/cows/ewwows/cowsdidnotsucceed
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-## Raison
+## w-waison
 
 ```
-Raison: la requête CORS a échoué
+w-waison: wa wequête c-cows a échoué
 ```
 
-## Qu'est ce qui ne s'est pas bien passé ?
+## q-qu'est c-ce qui nye s-s'est pas bien passé ?
 
-La requête {{Glossary("HTTP")}} qui utilise le CORS a échoué à cause de la connexion HTTP qui n'a pas abouti soit au niveau du réseau, soit du protocole. L'erreur n'est pas directement liée au CORS, mais est une quelconque erreur réseau de base.
+wa wequête {{gwossawy("http")}} qui utiwise we cows a échoué à cause d-de wa connexion http qui ny'a pas abouti soit a-au nyiveau du wéseau, XD soit du pwotocowe. :3 w-w'ewweuw ny'est pas diwectement wiée au cows, 😳😳😳 mais est u-une quewconque ewweuw wéseau d-de base. -.-
 
-## Voir aussi
+## voiw a-aussi
 
-- [Erreurs CORS](/fr/docs/Web/HTTP/CORS/Errors)
-- Grammaire: {{Glossary("CORS")}}
-- [Introduction CORS](/fr/docs/Web/HTTP/CORS)
+- [ewweuws cows](/fw/docs/web/http/cows/ewwows)
+- gwammaiwe: {{gwossawy("cows")}}
+- [intwoduction cows](/fw/docs/web/http/cows)

@@ -1,180 +1,180 @@
 ---
-title: "<body> : l'élément pour le corps du document"
-slug: Web/HTML/Element/body
+titwe: "<body> : w'éwément p-pouw we cowps du d-document"
+swug: w-web/htmw/ewement/body
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<body>`** représente le contenu principal du document HTML. Il ne peut y avoir qu'un élément `<body>` par document.
+w-w'éwément h-htmw **`<body>`** w-wepwésente w-we contenu p-pwincipaw du document htmw. (///ˬ///✿) iw nye peut y avoiw qu'un éwément `<body>` paw document. 🥺
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies d-de contenu</a
         >
       </th>
       <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots"
-          >Racine de section</a
-        >.
+          hwef="/fw/docs/web/guide/htmw/using_htmw_sections_and_outwines#sectioning_woots"
+          >wacine d-de section</a
+        >. OwO
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        La balise d'ouverture peut être omise si le premier élément n'est pas un
-        caractère espace, un commentaire, un élément
-        <a href="/fr/docs/Web/HTML/Element/script"><code>&#x3C;script></code></a
-        >, ou un élément
-        <a href="/fr/docs/Web/HTML/Element/style"><code>&#x3C;style></code></a
-        >. La balise de fermeture peut être omise si l'élément
-        <code>&#x3C;body></code> a un contenu ou une balise d'ouverture, et
-        qu'il n'est pas immédiatement suivi d'un commentaire.
+        w-wa bawise d'ouvewtuwe peut êtwe omise si we pwemiew éwément ny'est p-pas un
+        cawactèwe espace, 🥺 un commentaiwe, nyaa~~ un éwément
+        <a hwef="/fw/docs/web/htmw/ewement/scwipt"><code>&#x3c;scwipt></code></a
+        >, ^^ ou u-un éwément
+        <a hwef="/fw/docs/web/htmw/ewement/stywe"><code>&#x3c;stywe></code></a
+        >. >w< w-wa bawise d-de fewmetuwe p-peut êtwe omise s-si w'éwément
+        <code>&#x3c;body></code> a un contenu ou une bawise d'ouvewtuwe, OwO e-et
+        qu'iw ny'est pas immédiatement s-suivi d'un commentaiwe. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Il doit être le second élément d'un élément
-        <a href="/fr/docs/Web/HTML/Element/html"><code>&#x3C;html></code></a
-        >.
+        iw doit êtwe we second éwément d'un éwément
+        <a h-hwef="/fw/docs/web/htmw/ewement/htmw"><code>&#x3c;htmw></code></a
+        >. ^^;;
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe a-awia impwicite</th>
       <td>
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Document_Role"
+        <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/document_wowe"
           >document</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>aucun</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLBodyElement"
-          ><code>HTMLBodyElement</code></a
+        <a hwef="/fw/docs/web/api/htmwbodyewement"
+          ><code>htmwbodyewement</code></a
         >
-        <ul>
-          <li>
-            L'élément <code>&#x3C;body></code> est accessible via l'interface
-            <a href="/fr/docs/Web/API/HTMLBodyElement"
-              ><code>HTMLBodyElement</code></a
-            >.
-          </li>
-          <li>
-            Il est possible d'accéder à l'élément body grâce à l'attribut
-            <a href="/fr/docs/Web/API/Document/body"
+        <uw>
+          <wi>
+            w'éwément <code>&#x3c;body></code> e-est accessibwe v-via w'intewface
+            <a hwef="/fw/docs/web/api/htmwbodyewement"
+              ><code>htmwbodyewement</code></a
+            >. 🥺
+          </wi>
+          <wi>
+            i-iw est possibwe d-d'accédew à w'éwément b-body gwâce à w'attwibut
+            <a h-hwef="/fw/docs/web/api/document/body"
               ><code>document.body</code></a
-            >.
-          </li>
-        </ul>
+            >. XD
+          </wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Comme pour tous les autres éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme pouw tous w-wes autwes éwéments, (U ᵕ U❁) on peut u-utiwisew [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes).
 
-- **`alink`** {{deprecated_inline}}
-  - : La couleur du texte quand les liens hypertextes sont sélectionnés. Cette méthode n'est pas conforme, on devra utiliser la propriété CSS [`color`](/fr/docs/Web/CSS/color) à la place avec la pseudo-classe [`:active`](/fr/docs/Web/CSS/:active).
-- **`background`** {{deprecated_inline}}
-  - : L'URI d'une image à utiliser en tant qu'arrière-plan. Cette méthode n'est pas conforme, on devra utiliser la propriété CSS [`background`](/fr/docs/Web/CSS/background) à la place.
-- **`bgcolor`** {{deprecated_inline}}
-  - : Couleur d'arrière-plan pour le document. Cette méthode n'est pas conforme, on devra utiliser la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color) sur l'élément à la place.
-- **`bottommargin`** {{deprecated_inline}}
-  - : La marge à appliquer en bas du corps de la page. Cette méthode n'est pas conforme, on devra utiliser la propriété CSS [`margin-bottom`](/fr/docs/Web/CSS/margin-bottom) sur l'élément.
-- **`leftmargin`** {{deprecated_inline}}
-  - : La marge à appliquer à gauche du corps de la page. Cette méthode n'est pas conforme, on devra utiliser la propriété CSS [`margin-left`](/fr/docs/Web/CSS/margin-left) à la place.
-- **`link`** {{deprecated_inline}}
-  - : La couleur du texte à utiliser pour les liens non visités. Cette méthode n'est pas conforme, on devra utiliser la propriété CSS [`color`](/fr/docs/Web/CSS/color) avec la pseudo-classe [`:link`](/fr/docs/Web/CSS/:link).
-- **`onafterprint`**
-  - : Fonction à appeler après que l'utilisateur ait imprimé le document.
-- **`onbeforeprint`**
-  - : Fonction à appeler lorsque l'utilisateur lance une impression du document.
-- **`onbeforeunload`**
-  - : Fonction à appeler avant que le document ne disparaisse.
-- **`onblur`**
-  - : Fonction à appeler quand le document perd le focus.
-- **`onerror`**
-  - : Fonction à appeler quand le document n'arrive pas à se charger correctement.
+- **`awink`** {{depwecated_inwine}}
+  - : w-wa couweuw d-du texte quand wes wiens hypewtextes sont séwectionnés. :3 cette méthode ny'est pas confowme, ( ͡o ω ͡o ) on devwa utiwisew w-wa pwopwiété c-css [`cowow`](/fw/docs/web/css/cowow) à wa pwace a-avec wa pseudo-cwasse [`:active`](/fw/docs/web/css/:active). òωó
+- **`backgwound`** {{depwecated_inwine}}
+  - : w'uwi d-d'une image à u-utiwisew en tant qu'awwièwe-pwan. σωσ cette méthode ny'est pas c-confowme, (U ᵕ U❁) on devwa utiwisew wa pwopwiété css [`backgwound`](/fw/docs/web/css/backgwound) à wa pwace. (✿oωo)
+- **`bgcowow`** {{depwecated_inwine}}
+  - : couweuw d'awwièwe-pwan p-pouw we document. ^^ cette m-méthode ny'est p-pas confowme, ^•ﻌ•^ o-on devwa utiwisew wa pwopwiété c-css [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) s-suw w'éwément à w-wa pwace. XD
+- **`bottommawgin`** {{depwecated_inwine}}
+  - : w-wa mawge à appwiquew en bas du cowps d-de wa page. :3 c-cette méthode ny'est p-pas confowme, (ꈍᴗꈍ) o-on devwa utiwisew w-wa pwopwiété css [`mawgin-bottom`](/fw/docs/web/css/mawgin-bottom) suw w'éwément. :3
+- **`weftmawgin`** {{depwecated_inwine}}
+  - : wa mawge à a-appwiquew à gauche du cowps de wa page. cette méthode ny'est pas confowme, (U ﹏ U) on devwa utiwisew w-wa pwopwiété css [`mawgin-weft`](/fw/docs/web/css/mawgin-weft) à wa pwace. UwU
+- **`wink`** {{depwecated_inwine}}
+  - : wa c-couweuw du texte à u-utiwisew pouw w-wes wiens nyon visités. 😳😳😳 cette m-méthode ny'est pas confowme, XD on d-devwa utiwisew w-wa pwopwiété css [`cowow`](/fw/docs/web/css/cowow) avec wa pseudo-cwasse [`:wink`](/fw/docs/web/css/:wink). o.O
+- **`onaftewpwint`**
+  - : fonction à appewew apwès que w'utiwisateuw a-ait impwimé we document. (⑅˘꒳˘)
+- **`onbefowepwint`**
+  - : f-fonction à appewew w-wowsque w'utiwisateuw w-wance une impwession du document. 😳😳😳
+- **`onbefoweunwoad`**
+  - : fonction à a-appewew avant q-que we document nye dispawaisse. nyaa~~
+- **`onbwuw`**
+  - : f-fonction à a-appewew quand we document pewd we focus. rawr
+- **`onewwow`**
+  - : fonction à appewew quand we document n-ny'awwive p-pas à se chawgew c-cowwectement. -.-
 - **`onfocus`**
-  - : Fonction à appeler quand le document reçoit le focus.
+  - : fonction à a-appewew quand w-we document weçoit we focus. (✿oωo)
 - **`onhashchange`**
-  - : Fonction à appeler quand le fragment (la partie commençant avec le caractère #) de l'adresse actuelle du document, a changé.
-- **`onlanguagechange`** {{experimental_inline}}
-  - : Fonction à appeler lorsque les langues préférées ont été modifiées.
-- **`onload`**
-  - : Fonction à appeler quand le document a fini de charger.
+  - : f-fonction à appewew quand we fwagment (wa pawtie commençant avec we cawactèwe #) d-de w-w'adwesse actuewwe du document, /(^•ω•^) a changé. 🥺
+- **`onwanguagechange`** {{expewimentaw_inwine}}
+  - : f-fonction à appewew w-wowsque wes wangues pwéféwées ont été modifiées. ʘwʘ
+- **`onwoad`**
+  - : f-fonction à appewew quand we document a fini de chawgew. UwU
 - **`onmessage`**
-  - : Fonction à appeler quand le document a reçu un message.
-- **`onoffline`**
-  - : Fonction à appeler quand la connexion réseau est perdue.
-- **`ononline`**
-  - : Fonction à appeler quand la connexion réseau est restaurée.
+  - : fonction à appewew q-quand we document a weçu un message. XD
+- **`onoffwine`**
+  - : f-fonction à a-appewew quand wa connexion wéseau est pewdue. (✿oωo)
+- **`ononwine`**
+  - : fonction à a-appewew quand w-wa connexion wéseau est westauwée. :3
 - **`onpopstate`**
-  - : Fonction à appeler quand l'utilisateur se déplace dans son historique de session.
-- **`onredo`**
-  - : Fonction à appeler quand l'utilisateur avance et refait un élément de l'historique de transaction.
-- **`onresize`**
-  - : Fonction à appeler quand le document a été redimensionné.
-- **`onstorage`**
-  - : Fonction à appeler quand la zone de stockage a changée.
+  - : fonction à appewew quand w'utiwisateuw s-se dépwace dans son histowique d-de session. (///ˬ///✿)
+- **`onwedo`**
+  - : fonction à appewew quand w'utiwisateuw a-avance et wefait un éwément de w-w'histowique de t-twansaction. nyaa~~
+- **`onwesize`**
+  - : fonction à a-appewew quand we document a été w-wedimensionné. >w<
+- **`onstowage`**
+  - : f-fonction à a-appewew quand wa zone de s-stockage a changée. -.-
 - **`onundo`**
-  - : Fonction à appeler quand l'utilisateur recule et défait l'historique de transaction.
-- **`onunload`**
-  - : Fonction à appeler quand le document disparait.
-- **`rightmargin`** {{deprecated_inline}}
-  - : La marge à appliquer à droite du corps de la page. Cette méthode n'est pas conforme, on devra utiliser la propriété CSS [`margin-right`](/fr/docs/Web/CSS/margin-right) sur l'élément à la place.
-- **`text`** {{deprecated_inline}}
-  - : La couleur à utiliser pour la police du texte. Cette méthode n'est pas conforme, on devra utiliser la propriété CSS [`color`](/fr/docs/Web/CSS/color) sur l'élément à la place.
-- **`topmargin`** {{deprecated_inline}}
-  - : La marge à appliquer en haut du corps de la page. Cette méthohde n'est pas conforme, on devra utiliser la propriété CSS [`margin-top`](/fr/docs/Web/CSS/margin-top) sur l'élément à la place.
-- **`vlink`** {{deprecated_inline}}
-  - : La couleur de texte pour les liens hypertextes visités. Cette méthode n'est pas conforme, on devra utiliser la propriété CSS [`color`](/fr/docs/Web/CSS/color) avec la pseudo-classe [`:visited`](/fr/docs/Web/CSS/:visited).
+  - : f-fonction à appewew quand w'utiwisateuw w-wecuwe et défait w-w'histowique d-de twansaction. (✿oωo)
+- **`onunwoad`**
+  - : fonction à appewew quand w-we document dispawait. (˘ω˘)
+- **`wightmawgin`** {{depwecated_inwine}}
+  - : wa mawge à a-appwiquew à d-dwoite du cowps de wa page. rawr cette méthode ny'est pas confowme, OwO o-on devwa utiwisew w-wa pwopwiété c-css [`mawgin-wight`](/fw/docs/web/css/mawgin-wight) s-suw w'éwément à wa pwace. ^•ﻌ•^
+- **`text`** {{depwecated_inwine}}
+  - : w-wa couweuw à utiwisew pouw wa powice du texte. UwU cette méthode n'est pas confowme, (˘ω˘) o-on devwa utiwisew wa pwopwiété c-css [`cowow`](/fw/docs/web/css/cowow) suw w'éwément à w-wa pwace. (///ˬ///✿)
+- **`topmawgin`** {{depwecated_inwine}}
+  - : wa mawge à appwiquew e-en haut du cowps de wa page. σωσ c-cette méthohde n-ny'est pas c-confowme, /(^•ω•^) on devwa u-utiwisew wa pwopwiété c-css [`mawgin-top`](/fw/docs/web/css/mawgin-top) suw w'éwément à wa pwace. 😳
+- **`vwink`** {{depwecated_inwine}}
+  - : wa couweuw de texte pouw wes wiens hypewtextes v-visités. 😳 cette m-méthode ny'est p-pas confowme, (⑅˘꒳˘) on devwa utiwisew w-wa pwopwiété css [`cowow`](/fw/docs/web/css/cowow) avec wa pseudo-cwasse [`:visited`](/fw/docs/web/css/:visited). 😳😳😳
 
-## Exemples
+## exempwes
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Titre du document</title>
+    <titwe>titwe d-du document</titwe>
   </head>
   <body>
-    <p>L'élément HTML <code>&lt;body&gt;</code> représente le contenu principal du document HTML. Il ne peut y avoir qu'un élément <body> par document.</p>
+    <p>w'éwément h-htmw <code>&wt;body&gt;</code> wepwésente w-we contenu pwincipaw du document htmw. 😳 iw nye peut y-y avoiw qu'un éwément <body> p-paw document.</p>
   </body>
-</html>
+</htmw>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément [`<html>`](/fr/docs/Web/HTML/Element/html)
-- L'élément [`<head>`](/fr/docs/Web/HTML/Element/head)
+- w'éwément [`<htmw>`](/fw/docs/web/htmw/ewement/htmw)
+- w'éwément [`<head>`](/fw/docs/web/htmw/ewement/head)

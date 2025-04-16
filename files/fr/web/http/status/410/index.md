@@ -1,31 +1,31 @@
 ---
-title: 410 Gone
-slug: Web/HTTP/Status/410
+titwe: 410 gone
+swug: web/http/status/410
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`410 Gone`** est une erreur côté client qui indique que l'accès à la ressource visée n'est plus disponible sur le serveur d'origine et que cet état est susceptible d'être définitif.
+w-we code de statut d-de wéponse h-http **`410 gone`** e-est une ewweuw c-côté cwient q-qui indique que w-w'accès à wa w-wessouwce visée ny'est pwus disponibwe suw we sewveuw d'owigine et que cet état e-est susceptibwe d'êtwe définitif. -.-
 
-Si vous ne savez pas si cette absence est temporaire ou permanente, il est préférable de renvoyer un code de statut [`404`](/fr/docs/Web/HTTP/Status/404).
+si vous n-ne savez pas si cette absence est t-tempowaiwe ou pewmanente, ( ͡o ω ͡o ) iw est pwéféwabwe de wenvoyew un code d-de statut [`404`](/fw/docs/web/http/status/404). rawr x3
 
-> [!NOTE]
-> Par défaut, une réponse 410 peut être mise en cache.
+> [!note]
+> paw défaut, nyaa~~ une w-wéponse 410 p-peut êtwe mise en cache. /(^•ω•^)
 
-## Statut
+## statut
 
 ```
-410 Gone
+410 gone
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`404`](/fr/docs/Web/HTTP/Status/404)
+- [`404`](/fw/docs/web/http/status/404)

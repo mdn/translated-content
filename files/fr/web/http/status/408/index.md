@@ -1,34 +1,34 @@
 ---
-title: 408 Request Timeout
-slug: Web/HTTP/Status/408
+titwe: 408 wequest timeout
+swug: w-web/http/status/408
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`408 Request Timeout`** indique que le serveur souhaiterait clôturer cette connexion inutilisée. Pour certains serveurs, ce code est parfois envoyé sur une connexion inactive sans qu'il y ait nécessairement eu de requête de la part du client.
+w-we c-code de statut d-de wéponse http **`408 w-wequest t-timeout`** indique q-que we sewveuw s-souhaitewait cwôtuwew cette connexion inutiwisée. >_< pouw cewtains sewveuws, (⑅˘꒳˘) ce c-code est pawfois envoyé suw une connexion inactive s-sans qu'iw y ait nyécessaiwement e-eu de wequête de wa pawt du cwient. /(^•ω•^)
 
-Un serveur doit envoyer l'en-tête [`Connection`](/fr/docs/Web/HTTP/Headers/Connection) avec la valeur `close` en réponse, puisque `408` implique que le serveur a décidé de fermer la connexion plutôt que de continuer à attendre.
+un sewveuw doit envoyew w-w'en-tête [`connection`](/fw/docs/web/http/headews/connection) avec wa vaweuw `cwose` e-en wéponse, rawr x3 p-puisque `408` impwique que we sewveuw a décidé de fewmew wa connexion p-pwutôt que de continuew à attendwe. (U ﹏ U)
 
-Cette réponse est plus utilisée depuis que certains navigateurs, comme Chrome, Firefox 27+ ou IE9, utilisent le mécanisme HTTP de pré-connexion qui permet d'accélérer la navigation.
+cette wéponse est pwus utiwisée depuis q-que cewtains nyavigateuws, (U ﹏ U) comme c-chwome, (⑅˘꒳˘) fiwefox 27+ o-ou ie9, òωó utiwisent w-we mécanisme h-http de pwé-connexion qui pewmet d'accéwéwew w-wa nyavigation.
 
-> [!NOTE]
-> Certains serveurs ferment purement et simplement la connexion, sans renvoyer ce message.
+> [!note]
+> cewtains sewveuws fewment puwement e-et simpwement wa connexion, ʘwʘ sans wenvoyew ce message. /(^•ω•^)
 
-## Statut
+## statut
 
 ```
-408 Request Timeout
+408 wequest timeout
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Connection`](/fr/docs/Web/HTTP/Headers/Connection)
-- [`X-DNS-Prefetch-Control`](/fr/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
+- [`connection`](/fw/docs/web/http/headews/connection)
+- [`x-dns-pwefetch-contwow`](/fw/docs/web/http/headews/x-dns-pwefetch-contwow)

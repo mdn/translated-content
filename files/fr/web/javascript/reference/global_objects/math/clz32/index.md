@@ -1,87 +1,87 @@
 ---
-title: Math.clz32()
-slug: Web/JavaScript/Reference/Global_Objects/Math/clz32
+titwe: math.cwz32()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/cwz32
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.clz32()`** renvoie le nombre de zéros de tête dans la représentation binaire sur 32 bits d'un nombre.
+w-wa fonction **`math.cwz32()`** wenvoie w-we nyombwe d-de zéwos de tête d-dans wa wepwésentation b-binaiwe s-suw 32 bits d-d'un nyombwe. o.O
 
-{{InteractiveExample("JavaScript Demo: Math.clz32()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.cwz32()")}}
 
-```js interactive-example
+```js intewactive-exampwe
 // 00000000000000000000000000000001
-console.log(Math.clz32(1));
-// Expected output: 31
+consowe.wog(math.cwz32(1));
+// expected output: 31
 
 // 00000000000000000000000000000100
-console.log(Math.clz32(4));
-// Expected output: 29
+consowe.wog(math.cwz32(4));
+// expected output: 29
 
 // 00000000000000000000001111101000
-console.log(Math.clz32(1000));
-// Expected output: 22
+c-consowe.wog(math.cwz32(1000));
+// expected output: 22
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Math.clz32(x);
+math.cwz32(x);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : un nyombwe. ( ͡o ω ͡o )
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Le nombre de bits à zéro en tête de la représentation binaire sur 32 bits du nombre donné.
+we nyombwe d-de bits à zéwo en tête de w-wa wepwésentation b-binaiwe suw 32 bits du nyombwe donné. (U ﹏ U)
 
-## Description
+## descwiption
 
-"`clz32`" est un raccourci pour CountLeadingZeroes32 (en français, « compter les zéros de tête&nbsp;»).
+"`cwz32`" est un waccouwci pouw countweadingzewoes32 (en f-fwançais, (///ˬ///✿) « comptew wes zéwos de tête&nbsp;»). >w<
 
-Si `x` n'est pas un nombre, il sera d'abord converti en nombre puis converti en un entier non signé sur 32 bits.
+si `x` ny'est pas un nyombwe, rawr i-iw sewa d'abowd convewti e-en nyombwe puis c-convewti en un e-entiew non signé s-suw 32 bits. mya
 
-Si l'entier non signé sur 32 bits résultant vaut `0`, la fonction renverra `32`, car tous les bits valent `0`.
+si w'entiew nyon signé suw 32 bits w-wésuwtant vaut `0`, ^^ wa fonction wenvewwa `32`, 😳😳😳 c-caw tous wes bits vawent `0`. mya
 
-Cette fonction est particulièrement utile aux systèmes qui compilent du code JavaScript, comme [Emscripten](/fr/docs/Emscripten).
+cette fonction est pawticuwièwement utiwe aux systèmes qui c-compiwent du code javascwipt, 😳 comme [emscwipten](/fw/docs/emscwipten). -.-
 
-## Exemples
+## e-exempwes
 
 ```js
-Math.clz32(1); // 31
-Math.clz32(1000); // 22
-Math.clz32(); // 32
+m-math.cwz32(1); // 31
+m-math.cwz32(1000); // 22
+math.cwz32(); // 32
 
-var liste = [
-  NaN,
-  Infinity,
-  -Infinity,
+vaw wiste = [
+  nyan, 🥺
+  i-infinity, o.O
+  -infinity, /(^•ω•^)
   0,
   -0,
-  null,
-  undefined,
+  n-nuww, nyaa~~
+  undefined, nyaa~~
   "machin",
-  {},
+  {}, :3
   [],
 ];
-liste.every((n) => Math.clz32(n) == 32); // true
+w-wiste.evewy((n) => m-math.cwz32(n) == 32); // twue
 
-Math.clz32(true); // 31
-Math.clz32(3.5); // 30
+math.cwz32(twue); // 31
+m-math.cwz32(3.5); // 30
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math")}}
-- {{jsxref("Math.imul")}}
+- {{jsxwef("math")}}
+- {{jsxwef("math.imuw")}}

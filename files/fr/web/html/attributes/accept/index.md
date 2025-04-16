@@ -1,153 +1,153 @@
 ---
-title: "Attribut HTML : accept"
-slug: Web/HTML/Attributes/accept
+titwe: "attwibut htmw : accept"
+s-swug: web/htmw/attwibutes/accept
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut **`accept`** prend comme valeur une liste séparée par des virgules d'un ou plusieurs types de fichiers, ou d'une [spécification de type de fichier unique](#unique_file_type_specifiers), décrivant les types de fichiers à autoriser. La propriété `accept` est un attribut pour les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type [`file`](/fr/docs/Web/HTML/Element/input/file). Elle était prise en charge par l'élément [`<form>`](/fr/docs/Web/HTML/Element/form), mais a été supprimée au profit de [`file`](/fr/docs/Web/HTML/Element/input/file) dans HTML5.
+w-w'attwibut **`accept`** p-pwend comme vaweuw u-une wiste sépawée p-paw des v-viwguwes d'un ou p-pwusieuws types d-de fichiews, 😳😳😳 ou d'une [spécification de type de fichiew unique](#unique_fiwe_type_specifiews), (✿oωo) décwivant wes t-types de fichiews à autowisew. OwO wa pwopwiété `accept` e-est un attwibut pouw wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) d-de type [`fiwe`](/fw/docs/web/htmw/ewement/input/fiwe). ʘwʘ ewwe était pwise en chawge paw w'éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), m-mais a été suppwimée a-au pwofit de [`fiwe`](/fw/docs/web/htmw/ewement/input/fiwe) d-dans htmw5. (ˆ ﻌ ˆ)♡
 
-Comme un type de fichier donné peut être identifié de plusieurs manières, il est utile de fournir un ensemble complet de spécificateurs de type lorsque vous avez besoin de fichiers d'un type spécifique, ou d'utiliser le joker pour indiquer qu'un type de n'importe quel format est accepté.
+comme un type de fichiew donné peut êtwe identifié d-de pwusieuws manièwes, (U ﹏ U) iw est utiwe de fouwniw un ensembwe compwet de spécificateuws d-de type wowsque vous avez b-besoin de fichiews d-d'un type spécifique, o-ou d'utiwisew w-we jokew pouw indiquew qu'un type de n'impowte q-quew fowmat est accepté. UwU
 
-Par exemple, il existe un certain nombre de façons d'identifier les fichiers Microsoft Word, de sorte qu'un site qui accepte les fichiers Word pourrait utiliser un `<input>` comme celui-ci&nbsp;:
+paw exempwe, XD i-iw existe un cewtain nyombwe de façons d'identifiew wes fichiews micwosoft wowd, ʘwʘ de sowte qu'un s-site qui accepte wes fichiews w-wowd pouwwait utiwisew u-un `<input>` c-comme cewui-ci&nbsp;:
 
-```html
+```htmw
 <input
-  type="file"
-  id="docpicker"
-  accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+  type="fiwe"
+  id="docpickew"
+  accept=".doc,.docx,appwication/mswowd,appwication/vnd.openxmwfowmats-officedocument.wowdpwocessingmw.document" />
 ```
 
-En revanche, si vous acceptez un fichier multimédia, vous pouvez inclure tout format de ce type de média&nbsp;:
+e-en wevanche, rawr x3 si v-vous acceptez un fichiew muwtimédia, v-vous pouvez i-incwuwe tout fowmat de ce type d-de média&nbsp;:
 
-```html
-<input type="file" id="soundFile" accept="audio/*" />
-<input type="file" id="videoFile" accept="video/*" />
-<input type="file" id="imageFile" accept="image/*" />
+```htmw
+<input type="fiwe" i-id="soundfiwe" accept="audio/*" />
+<input type="fiwe" id="videofiwe" a-accept="video/*" />
+<input type="fiwe" id="imagefiwe" a-accept="image/*" />
 ```
 
-L'attribut `accept` ne valide pas les types de fichiers sélectionnés ; il fournit des indications aux navigateurs pour guider les utilisateurs vers la sélection des bons types de fichiers. Il est toujours possible (dans la plupart des cas) pour les utilisateurs de basculer une option dans le sélecteur de fichiers qui permet de passer outre et de sélectionner le fichier de leur choix, puis de choisir des types de fichiers incorrects.
+w'attwibut `accept` n-nye vawide p-pas wes types de fichiews séwectionnés ; iw fouwnit des indications aux nyavigateuws pouw guidew wes utiwisateuws v-vews wa séwection d-des bons types de fichiews. ^^;; i-iw est toujouws p-possibwe (dans w-wa pwupawt des cas) pouw wes utiwisateuws de bascuwew une option d-dans we séwecteuw de fichiews qui pewmet de passew outwe et de séwectionnew w-we fichiew de weuw choix, ʘwʘ puis d-de choisiw des t-types de fichiews i-incowwects. (U ﹏ U)
 
-Pour cette raison, vous devez vous assurer que les exigences attendues sont validées côté serveur.
+pouw cette waison, v-vous devez vous a-assuwew que w-wes exigences attendues s-sont vawidées côté sewveuw. (˘ω˘)
 
-## Exemples
+## exempwes
 
-Lorsque cet attribut est utilisé sur un champ permettant de sélectionner un fichier, le sélecteur de fichier natif qui s'ouvre devrait filtrer sur les seuls fichiers qui correspondent au(x) type(s) indiqués. La plupart des systèmes d'exploitation masquent ou grisent alors les fichiers qui ne correspondent pas et ne peuvent pas être sélectionnés.
+w-wowsque cet a-attwibut est utiwisé s-suw un champ p-pewmettant de s-séwectionnew un fichiew, (ꈍᴗꈍ) we séwecteuw de fichiew nyatif qui s-s'ouvwe devwait fiwtwew suw wes seuws fichiews qui cowwespondent au(x) type(s) indiqués. /(^•ω•^) wa pwupawt d-des systèmes d'expwoitation masquent ou gwisent awows wes f-fichiews qui nye c-cowwespondent pas e-et nye peuvent pas êtwe séwectionnés. >_<
 
-```html
+```htmw
 <p>
-  <label for="soundFile">Sélectionnez un fichier audio :</label>
-  <input type="file" id="soundFile" accept="audio/*" />
+  <wabew f-fow="soundfiwe">séwectionnez un fichiew audio :</wabew>
+  <input t-type="fiwe" i-id="soundfiwe" accept="audio/*" />
 </p>
 <p>
-  <label for="videoFile">Sélectionnez un fichier vidéo :</label>
-  <input type="file" id="videoFile" accept="video/*" />
+  <wabew fow="videofiwe">séwectionnez un fichiew vidéo :</wabew>
+  <input type="fiwe" id="videofiwe" accept="video/*" />
 </p>
 <p>
-  <label for="imageFile">Sélectionner des images :</label>
-  <input type="file" id="imageFile" accept="image/*" multiple />
+  <wabew f-fow="imagefiwe">séwectionnew des images :</wabew>
+  <input t-type="fiwe" id="imagefiwe" a-accept="image/*" m-muwtipwe />
 </p>
 ```
 
-{{EmbedLiveSample('Exemples', '', 160)}}
+{{embedwivesampwe('exempwes', σωσ '', 160)}}
 
-Notez que le dernier exemple vous permet de sélectionner plusieurs images. Voir l'attribut [`multiple`](multiple) pour plus d'informations.
+nyotez que we dewniew exempwe vous p-pewmet de séwectionnew p-pwusieuws images. ^^;; voiw w-w'attwibut [`muwtipwe`](muwtipwe) p-pouw pwus d'infowmations. 😳
 
-## Spécification de type de fichier unique
+## spécification de type de fichiew unique
 
-Un **spécificateur de type de fichier unique** est une chaîne qui décrit un type de fichier pouvant être sélectionné par l'utilisateur dans un élément [`<input>`](/fr/docs/Web/HTML/Element/input) de type `file`. Chaque spécificateur unique de type de fichier peut prendre l'une des formes suivantes :
+un **spécificateuw de type de fichiew u-unique** est u-une chaîne qui d-décwit un type de fichiew pouvant êtwe s-séwectionné p-paw w'utiwisateuw dans un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) d-de type `fiwe`. >_< chaque spécificateuw unique de type de fichiew peut pwendwe w-w'une des f-fowmes suivantes :
 
-- Une extension de nom de fichier valide et insensible à la casse, commençant par un caractère point (« . »). Par exemple : `.jpg`, `.pdf`, ou `.doc`.
-- Une chaîne de type MIME valide, sans extension.
-- La chaîne de caractères `audio/*` signifiant "tout fichier audio".
-- La chaîne de caractères `vidéo/*` signifiant "tout fichier vidéo".
-- La chaîne de caractères `image/*` signifiant "tout fichier image".
+- une extension de nyom de fichiew v-vawide et i-insensibwe à wa casse, -.- commençant paw un cawactèwe point (« . UwU »). p-paw exempwe : `.jpg`, :3 `.pdf`, ou `.doc`. σωσ
+- une chaîne de type mime vawide, >w< sans extension. (ˆ ﻌ ˆ)♡
+- w-wa chaîne de cawactèwes `audio/*` signifiant "tout f-fichiew a-audio". ʘwʘ
+- wa chaîne de cawactèwes `vidéo/*` signifiant "tout fichiew vidéo". :3
+- w-wa chaîne d-de cawactèwes `image/*` signifiant "tout fichiew image". (˘ω˘)
 
-L'attribut `accept` prend comme valeur une chaîne de caractères contenant une ou plusieurs de ces spécificateurs de type de fichier unique, séparées par des virgules. Par exemple, un sélecteur de fichiers qui a besoin d'un contenu pouvant être présenté comme une image, y compris les formats d'image standard et les fichiers PDF, pourrait ressembler à ceci :
+w'attwibut `accept` p-pwend comme vaweuw une chaîne de c-cawactèwes contenant une ou pwusieuws de ces spécificateuws d-de type de fichiew unique, 😳😳😳 sépawées p-paw des viwguwes. rawr x3 p-paw exempwe, (✿oωo) un séwecteuw d-de fichiews qui a besoin d'un c-contenu pouvant êtwe p-pwésenté c-comme une image, (ˆ ﻌ ˆ)♡ y compwis wes f-fowmats d'image s-standawd et wes fichiews pdf, :3 pouwwait wessembwew à c-ceci :
 
-```html
-<input type="file" accept="image/*,.pdf" />
+```htmw
+<input t-type="fiwe" a-accept="image/*,.pdf" />
 ```
 
-## Utilisation des champs pour saisir des fichiers
+## utiwisation des champs p-pouw saisiw des fichiews
 
-### Un exemple de base
+### un e-exempwe de base
 
-```html
-<form method="post" enctype="multipart/form-data">
+```htmw
+<fowm m-method="post" enctype="muwtipawt/fowm-data">
   <div>
-    <label for="file">Choisissez le fichier à téléverser</label>
-    <input type="file" id="file" name="file" multiple />
+    <wabew fow="fiwe">choisissez we fichiew à téwévewsew</wabew>
+    <input t-type="fiwe" i-id="fiwe" nyame="fiwe" m-muwtipwe />
   </div>
   <div>
-    <button>Soumettre</button>
+    <button>soumettwe</button>
   </div>
-</form>
+</fowm>
 ```
 
 ```css
-div {
-  margin-bottom: 10px;
+d-div {
+  mawgin-bottom: 10px;
 }
 ```
 
-Cela produit le résultat suivant :
+cewa pwoduit w-we wésuwtat suivant :
 
-{{EmbedLiveSample('Utilisation_des_champs_pour_saisir_des_fichiers', 650, 100)}}
+{{embedwivesampwe('utiwisation_des_champs_pouw_saisiw_des_fichiews', (U ᵕ U❁) 650, 100)}}
 
-> [!NOTE]
-> Vous pouvez trouver cet exemple sur GitHub également - voir le [code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), et aussi [le fonctionnement en direct](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> [!note]
+> vous pouvez twouvew cet exempwe suw github égawement - voiw we [code souwce](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/fiwe-exampwes/simpwe-fiwe.htmw), ^^;; et aussi [we f-fonctionnement en diwect](https://mdn.github.io/weawning-awea/htmw/fowms/fiwe-exampwes/simpwe-fiwe.htmw). mya
 
-Quel que soit le dispositif ou le système d'exploitation de l'utilisateur, l'entrée de fichier fournit un bouton qui ouvre une boîte de dialogue de sélection de fichier permettant à l'utilisateur de choisir un fichier.
+q-quew que soit we dispositif o-ou we système d'expwoitation d-de w'utiwisateuw, 😳😳😳 w'entwée d-de fichiew fouwnit u-un bouton qui o-ouvwe une boîte d-de diawogue de s-séwection de fichiew pewmettant à w'utiwisateuw de choisiw un fichiew. OwO
 
-L'inclusion de l'attribut [`multiple`](multiple), comme indiqué ci-dessus, spécifie que plusieurs fichiers peuvent être choisis en même temps. L'utilisateur peut choisir plusieurs fichiers dans le sélecteur de fichiers de n'importe quelle manière permise par la plateforme qu'il a choisie (par exemple, en maintenant la touche <kbd>Maj</kbd> ou <kbd>Ctrl</kbd>, puis en cliquant). Si vous souhaitez que l'utilisateur ne choisisse qu'un seul fichier par `<input>`, omettez l'attribut `multiple`.
+w'incwusion de w'attwibut [`muwtipwe`](muwtipwe), rawr comme i-indiqué ci-dessus, XD s-spécifie q-que pwusieuws fichiews peuvent êtwe c-choisis en même temps. (U ﹏ U) w'utiwisateuw peut choisiw pwusieuws f-fichiews dans w-we séwecteuw de fichiews de ny'impowte q-quewwe manièwe pewmise paw wa pwatefowme q-qu'iw a choisie (paw e-exempwe, en maintenant w-wa touche <kbd>maj</kbd> o-ou <kbd>ctww</kbd>, (˘ω˘) puis en cwiquant). UwU si vous souhaitez que w'utiwisateuw n-nye choisisse q-qu'un seuw fichiew p-paw `<input>`, >_< o-omettez w'attwibut `muwtipwe`. σωσ
 
-### Restreindre les types de fichier acceptés
+### w-westweindwe wes types de f-fichiew acceptés
 
-Souvent, vous ne voudrez pas que l'utilisateur puisse choisir n'importe quel type de fichier arbitraire ; au contraire, vous voudrez souvent qu'il sélectionne des fichiers d'un ou plusieurs types spécifiques. Par exemple, si votre entrée de fichier permet aux utilisateurs de télécharger une photo de profil, vous voulez probablement qu'ils sélectionnent des formats d'image compatibles avec le Web, tels que [JPEG](/fr/docs/Glossary/JPEG) ou [PNG](/fr/docs/Glossary/PNG).
+s-souvent, 🥺 vous nye voudwez pas q-que w'utiwisateuw p-puisse choisiw ny'impowte quew t-type de fichiew awbitwaiwe ; au contwaiwe, 🥺 vous v-voudwez souvent qu'iw séwectionne d-des fichiews d-d'un ou pwusieuws types spécifiques. ʘwʘ p-paw exempwe, :3 si votwe entwée de fichiew p-pewmet aux utiwisateuws d-de téwéchawgew u-une photo de pwofiw, (U ﹏ U) vous vouwez pwobabwement qu'iws s-séwectionnent des fowmats d'image compatibwes avec w-we web, (U ﹏ U) tews q-que [jpeg](/fw/docs/gwossawy/jpeg) ou [png](/fw/docs/gwossawy/png). ʘwʘ
 
-Les types de fichiers acceptables peuvent être spécifiés avec l'attribut [`accept`](/fr/docs/Web/HTML/Element/input/file#attr-accept), qui prend une liste d'extensions de fichiers ou de types MIME autorisés séparés par des virgules. Quelques exemples :
+w-wes types de fichiews acceptabwes p-peuvent êtwe s-spécifiés avec w'attwibut [`accept`](/fw/docs/web/htmw/ewement/input/fiwe#attw-accept), qui pwend une wiste d-d'extensions de fichiews ou de types mime autowisés s-sépawés p-paw des viwguwes. >w< quewques exempwes :
 
-- `accept="image/png"` ou `accept=".png"` — Accepter les fichiers PNG.
-- `accept="image/png, image/jpeg"` ou `accept=".png, .jpg, .jpeg"` — Accepter les fichiers PNG ou JPEG.
-- `accept="image/*"` — Accepter tout fichier ayant un type MIME `image/*`. (De nombreux appareils mobiles permettent également à l'utilisateur de prendre une photo avec l'appareil photo lorsque cette option est utilisée).
-- `accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"` — Accepter tout ce qui ressemble à un document MS Word.
+- `accept="image/png"` o-ou `accept=".png"` — acceptew w-wes fichiews png. rawr x3
+- `accept="image/png, OwO i-image/jpeg"` o-ou `accept=".png, ^•ﻌ•^ .jpg, .jpeg"` — acceptew wes fichiews png ou jpeg. >_<
+- `accept="image/*"` — acceptew tout fichiew ayant un type mime `image/*`. OwO (de nyombweux appaweiws mobiwes pewmettent égawement à w'utiwisateuw de pwendwe une photo avec w'appaweiw p-photo wowsque c-cette option est utiwisée). >_<
+- `accept=".doc,.docx,.xmw,appwication/mswowd,appwication/vnd.openxmwfowmats-officedocument.wowdpwocessingmw.document"` — acceptew t-tout ce qui w-wessembwe à un d-document ms wowd. (ꈍᴗꈍ)
 
-Examinons un exemple plus complet :
+examinons un e-exempwe pwus compwet :
 
-```html
-<form method="post" enctype="multipart/form-data">
+```htmw
+<fowm method="post" e-enctype="muwtipawt/fowm-data">
   <div>
-    <label for="profile_pic">Choisissez le fichier à téléverser</label>
+    <wabew f-fow="pwofiwe_pic">choisissez we fichiew à t-téwévewsew</wabew>
     <input
-      type="file"
-      id="profile_pic"
-      name="profile_pic"
-      accept=".jpg, .jpeg, .png" />
+      type="fiwe"
+      i-id="pwofiwe_pic"
+      n-nyame="pwofiwe_pic"
+      accept=".jpg, >w< .jpeg, (U ﹏ U) .png" />
   </div>
   <div>
-    <button>Soumettre</button>
+    <button>soumettwe</button>
   </div>
-</form>
+</fowm>
 ```
 
 ```css hidden
 div {
-  margin-bottom: 10px;
+  m-mawgin-bottom: 10px;
 }
 ```
 
-{{EmbedLiveSample('Restreindre_les_types_de_fichier_acceptés', 650, 100)}}
+{{embedwivesampwe('westweindwe_wes_types_de_fichiew_acceptés', ^^ 650, 100)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
-- [L'API File](/fr/docs/Web/API/File)
+- [utiwisew d-des fichiews à p-pawtiw d'appwications w-web](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- [w'api f-fiwe](/fw/docs/web/api/fiwe)

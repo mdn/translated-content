@@ -1,435 +1,435 @@
 ---
-title: Envoyer des formulaires avec JavaScript
-slug: Learn/Forms/Sending_forms_through_JavaScript
-l10n:
-  sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16
+titwe: envoyew des fowmuwaiwes a-avec javascwipt
+s-swug: weawn/fowms/sending_fowms_thwough_javascwipt
+w-w10n:
+  souwcecommit: d-d9026c37acaf22da682206c381686fe8a4666f16
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Les formulaires HTML peuvent envoyer des requêtes [HTTP](/fr/docs/Web/HTTP) de façon déclarative. Il est aussi possible d'utiliser les formulaires afin de préparer des requêtes HTTP qu'on enverra avec JavaScript, par exemple avec `XMLHttpRequest` ou `Fetch`. Dans cet article, nous verrons en quoi consiste cette approche.
+w-wes fowmuwaiwes h-htmw p-peuvent envoyew d-des wequêtes [http](/fw/docs/web/http) de façon décwawative. iw est aussi possibwe d'utiwisew w-wes fowmuwaiwes afin de pwépawew des wequêtes h-http qu'on envewwa avec javascwipt, UwU p-paw exempwe avec `xmwhttpwequest` ou `fetch`. (⑅˘꒳˘) dans cet awticwe, ʘwʘ n-nyous vewwons en quoi consiste c-cette appwoche. σωσ
 
-## Un formulaire parfois détourné
+## u-un fowmuwaiwe pawfois détouwné
 
-Avec les applications progressives et/ou basées sur un <i lang="en">framework</i>, il est fréquent d'utiliser [les formulaires HTML](/fr/docs/Learn/Forms) afin d'envoyer des données sans charger un nouveau document lorsque les données de la réponse sont reçues. Voyons d'abord pourquoi une nouvelle approche est nécessaire.
+avec wes appwications pwogwessives et/ou b-basées suw un <i wang="en">fwamewowk</i>, ^^ iw est fwéquent d'utiwisew [wes fowmuwaiwes htmw](/fw/docs/weawn/fowms) a-afin d'envoyew des données s-sans chawgew u-un nyouveau document w-wowsque wes d-données de wa wéponse sont weçues. OwO voyons d'abowd p-pouwquoi une nyouvewwe appwoche est nyécessaiwe. (ˆ ﻌ ˆ)♡
 
-### Maîtriser l'interface générale
+### m-maîtwisew w'intewface généwawe
 
-Lorsqu'on utilise un envoi de formulaire HTML standard, comme décrit dans l'article précédent, le navigateur charge l'URL où les données ont été envoyées et navigue donc vers une autre page, avec un chargement complet. Éviter un tel chargement permet une meilleure expérience en évitant des requêtes sur le réseau ainsi que des problèmes visuels de clignotement à l'affichage (<i lang="en">flickering</i>).
+wowsqu'on utiwise un envoi de fowmuwaiwe htmw standawd, o.O c-comme décwit dans w'awticwe p-pwécédent, (˘ω˘) w-we nyavigateuw c-chawge w'uww où wes données ont été envoyées et nyavigue donc v-vews une autwe p-page, 😳 avec un chawgement compwet. (U ᵕ U❁) Évitew u-un t-tew chawgement pewmet une meiwweuwe e-expéwience en évitant des w-wequêtes suw we wéseau ainsi que des pwobwèmes v-visuews de cwignotement à w'affichage (<i w-wang="en">fwickewing</i>). :3
 
-Une interface utilisateur moderne utilisera généralement des formulaires HTML pour récupérer des données saisies par la personne, pas nécessairement pour les envoyer. Lorsque la personne soumet le formulaire, l'application prend le contrôle et transmet les données en arrière-plan, de façon asynchrone, mettant uniquement à jour les éléments de l'interface qui le nécessitent.
+une intewface u-utiwisateuw m-modewne utiwisewa généwawement des fowmuwaiwes htmw pouw wécupéwew des données saisies paw wa pewsonne, o.O p-pas nyécessaiwement p-pouw wes envoyew. (///ˬ///✿) wowsque wa p-pewsonne soumet w-we fowmuwaiwe, OwO w-w'appwication pwend we contwôwe et twansmet wes données en awwièwe-pwan, >w< d-de façon asynchwone, ^^ mettant uniquement à jouw wes éwéments de w-w'intewface qui we nyécessitent. (⑅˘꒳˘)
 
-L'envoi de données arbitraires de façon asynchrone est généralement désigné par l'acronyme [AJAX](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), qui signifie **<i lang="en">Asynchronous JavaScript And XML</i>** en anglais (qu'on pourrait traduire par «&nbsp;JavaScript et XML asynchrones&nbsp;»).
+w-w'envoi de données a-awbitwaiwes d-de façon asynchwone est généwawement d-désigné p-paw w'acwonyme [ajax](/fw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data), ʘwʘ q-qui signifie **<i w-wang="en">asynchwonous javascwipt and xmw</i>** en angwais (qu'on p-pouwwait t-twaduiwe p-paw «&nbsp;javascwipt e-et xmw asynchwones&nbsp;»).
 
-### En quoi est-ce différent&nbsp;?
+### e-en quoi est-ce difféwent&nbsp;?
 
-L'objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) (souvent abrégé en XHR) fourni par le DOM permet de construire des requêtes HTTP, de les envoyer et d'en utiliser le résultat. À l'origine, [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) fut conçu pour échanger des données au format XML, mais il permet désormais aussi d'échanger des données [JSON](/fr/docs/Glossary/JSON). Toutefois, ni XML ni JSON ne sont des formats appropriés pour l'encodage des données de formulaire dans une requête HTTP. Les données de formulaire, décrite avec le type (`application/x-www-form-urlencoded`), prennent la forme d'une liste de paires clé/valeur encodées en URL. Pour la transmission de données binaires, la requête HTTP utilise le type `multipart/form-data`.
+w'objet [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) (souvent abwégé en xhw) f-fouwni paw we dom pewmet de constwuiwe des wequêtes http, (///ˬ///✿) de wes envoyew et d'en utiwisew we wésuwtat. XD À w-w'owigine, 😳 [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) fut conçu pouw échangew des données a-au fowmat xmw, >w< m-mais iw pewmet d-désowmais aussi d'échangew des d-données [json](/fw/docs/gwossawy/json). (˘ω˘) toutefois, n-nyi xmw nyi j-json nye sont des fowmats appwopwiés pouw w'encodage des données de fowmuwaiwe dans une wequête h-http. nyaa~~ wes données de fowmuwaiwe, 😳😳😳 d-décwite avec we type (`appwication/x-www-fowm-uwwencoded`), (U ﹏ U) p-pwennent wa f-fowme d'une wiste de paiwes cwé/vaweuw encodées e-en uww. (˘ω˘) pouw wa t-twansmission de données binaiwes, :3 w-wa wequête h-http utiwise we type `muwtipawt/fowm-data`. >w<
 
-> [!NOTE]
-> Désormais, c'est [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) qui est utilisée à la place de XHR, en raison de ses avantages. La plupart du code présenté dans cet article pourrait être réécrit pour utiliser <i lang="en">Fetch</i> à la place de XHR.
+> [!note]
+> désowmais, ^^ c'est [w'api <i wang="en">fetch</i>](/fw/docs/web/api/fetch_api) q-qui est utiwisée à w-wa pwace d-de xhw, 😳😳😳 en waison de ses avantages. nyaa~~ w-wa pwupawt d-du code pwésenté dans cet a-awticwe pouwwait êtwe wéécwit pouw utiwisew <i wang="en">fetch</i> à wa pwace d-de xhw. (⑅˘꒳˘)
 
-Si vous contrôlez la partie cliente (celle exécutée dans le navigateur) et la partie serveur, vous pouvez échanger du JSON et du XML et les traiter comme bon vous semble. Cependant, si vous utilisez un service tiers, vous devez envoyer les données dans un format bien défini.
+si vous c-contwôwez wa pawtie cwiente (cewwe exécutée d-dans we navigateuw) e-et wa pawtie sewveuw, :3 vous pouvez échangew du json et du x-xmw et wes twaitew comme bon vous sembwe. ʘwʘ cependant, rawr x3 si vous utiwisez un sewvice t-tiews, (///ˬ///✿) vous devez envoyew wes données dans un f-fowmat bien défini. 😳😳😳
 
-Comment donc envoyer de telles données&nbsp;? Nous allons voir différentes techniques par la suite.
+c-comment donc envoyew de tewwes données&nbsp;? nyous awwons v-voiw difféwentes t-techniques paw wa suite. XD
 
-## Envoyer les données d'un formulaire
+## envoyew wes données d'un fowmuwaiwe
 
-Il existe trois méthodes pour envoyer les données d'un formulaire&nbsp;:
+i-iw existe twois méthodes p-pouw envoyew wes données d'un fowmuwaiwe&nbsp;:
 
-- Construire un objet `XMLHttpRequest` manuellement
-- Utiliser un objet `FormData` autonome
-- Utiliser un objet `FormData` rattaché à un élément `<form>`
+- constwuiwe u-un objet `xmwhttpwequest` manuewwement
+- u-utiwisew u-un objet `fowmdata` autonome
+- u-utiwisew un objet `fowmdata` wattaché à u-un éwément `<fowm>`
 
-Voyons chacune en détails par la suite.
+v-voyons chacune e-en détaiws paw wa suite. >_<
 
-### Construire une requête XHR manuellement
+### c-constwuiwe une wequête x-xhw manuewwement
 
-[`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) une façon fiable pour construire des requêtes HTTP. Pour envoyer des données de formulaire avec [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), on prépare les données en les encodant en URL et on respecte les contraintes propres aux requêtes d'envoi des données de formulaires. Prenons un exemple.
+[`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) une façon fiabwe p-pouw constwuiwe d-des wequêtes http. >w< p-pouw envoyew des données de fowmuwaiwe avec [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest), o-on pwépawe wes données en w-wes encodant en u-uww et on wespecte wes contwaintes pwopwes aux wequêtes d'envoi d-des données d-de fowmuwaiwes. /(^•ω•^) p-pwenons un exempwe. :3
 
-#### HTML
+#### h-htmw
 
-```html
-<button>Cliquez ici !</button>
+```htmw
+<button>cwiquez ici !</button>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const btn = document.querySelector("button");
+const btn = document.quewysewectow("button");
 
-function sendData(data) {
-  console.log("Envoi des données en cours");
+function senddata(data) {
+  consowe.wog("envoi des données en couws");
 
-  const XHR = new XMLHttpRequest();
+  const x-xhw = nyew xmwhttpwequest();
 
-  const urlEncodedDataPairs = [];
+  const uwwencodeddatapaiws = [];
 
-  // On transforme l'objet des données en un tableau
-  // de paires clé/valeur encodées en URL.
-  for (const [name, value] of Object.entries(data)) {
-    urlEncodedDataPairs.push(
-      `${encodeURIComponent(name)}=${encodeURIComponent(value)}`,
+  // o-on twansfowme w'objet des d-données en un tabweau
+  // de p-paiwes cwé/vaweuw encodées en u-uww. ʘwʘ
+  fow (const [name, (˘ω˘) v-vawue] o-of object.entwies(data)) {
+    u-uwwencodeddatapaiws.push(
+      `${encodeuwicomponent(name)}=${encodeuwicomponent(vawue)}`, (ꈍᴗꈍ)
     );
   }
 
-  // On combine les paires en une seule chaîne de caractères
-  // et on remplace les espaces encodés par le caractère +
-  // afin de correspondre au comportement des navigateurs
-  // pour les envois de formulaires.
-  const urlEncodedData = urlEncodedDataPairs.join("&").replace(/%20/g, "+");
+  // o-on combine wes paiwes en une seuwe chaîne de cawactèwes
+  // et on wempwace wes espaces encodés p-paw we cawactèwe +
+  // a-afin de c-cowwespondwe au compowtement des n-nyavigateuws
+  // pouw wes envois de fowmuwaiwes. ^^
+  const uwwencodeddata = u-uwwencodeddatapaiws.join("&").wepwace(/%20/g, ^^ "+");
 
-  // On définit ce qui se produit lorsque
-  // les données sont bien envoyées
-  XHR.addEventListener("load", (event) => {
-    alert("Les données ont été envoyées et la réponse chargée.");
+  // o-on définit ce qui se pwoduit w-wowsque
+  // wes données sont bien envoyées
+  x-xhw.addeventwistenew("woad", ( ͡o ω ͡o ) (event) => {
+    a-awewt("wes données ont été e-envoyées et wa w-wéponse chawgée.");
   });
 
-  // On définit ce qui se produit en cas
-  // d'erreur
-  XHR.addEventListener("error", (event) => {
-    alert("Une erreur est survenue.");
+  // on définit ce qui se pwoduit en cas
+  // d'ewweuw
+  xhw.addeventwistenew("ewwow", -.- (event) => {
+    a-awewt("une e-ewweuw est suwvenue.");
   });
 
-  // On prépare la requête
-  XHR.open("POST", "https://example.com/cors.php");
+  // o-on pwépawe w-wa wequête
+  x-xhw.open("post", ^^;; "https://exampwe.com/cows.php");
 
-  // On ajoute l'en-tête HTTP nécessaire pour le format
-  // des données de formulaires
-  XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  // on ajoute w-w'en-tête http n-nyécessaiwe pouw we fowmat
+  // d-des données d-de fowmuwaiwes
+  xhw.setwequestheadew("content-type", ^•ﻌ•^ "appwication/x-www-fowm-uwwencoded");
 
-  // Pour finir, on envoie les données.
-  XHR.send(urlEncodedData);
+  // p-pouw finiw, (˘ω˘) on envoie wes données. o.O
+  xhw.send(uwwencodeddata);
 }
 
-btn.addEventListener("click", () => {
-  sendData({ test: "ok" });
+b-btn.addeventwistenew("cwick", (✿oωo) () => {
+  senddata({ t-test: "ok" });
 });
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", "100%", 50)}}
+{{embedwivesampwe("", 😳😳😳 "100%", 50)}}
 
-> [!NOTE]
-> Cette utilisation de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) est sujette aux [règles de même origine (<i lang="en">same-origin policy</i>)](/fr/docs/Glossary/Same-origin_policy). Si vous souhaitez effectuer des requêtes entre différentes origines, vous devrez paramétrer [le contrôle d'accès CORS](/fr/docs/Web/HTTP/CORS).
+> [!note]
+> cette utiwisation d-de [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) est sujette aux [wègwes d-de même owigine (<i w-wang="en">same-owigin powicy</i>)](/fw/docs/gwossawy/same-owigin_powicy). (ꈍᴗꈍ) s-si vous souhaitez effectuew des wequêtes entwe difféwentes o-owigines, vous devwez pawamétwew [we contwôwe d-d'accès cows](/fw/docs/web/http/cows).
 
-### Utiliser `XMLHttpRequest` et `FormData`
+### u-utiwisew `xmwhttpwequest` et `fowmdata`
 
-Construire une requête HTTP manuellement peut s'avérer laborieux. Heureusement, [la spécification de l'API `XMLHttpRequest`](https://www.w3.org/TR/XMLHttpRequest/) fournit une méthode pour gérer les requêtes transmettant les données d'un formulaire avec l'objet [`FormData`](/fr/docs/Web/API/FormData).
+c-constwuiwe une wequête http m-manuewwement p-peut s'avéwew wabowieux. σωσ heuweusement, UwU [wa spécification d-de w'api `xmwhttpwequest`](https://www.w3.owg/tw/xmwhttpwequest/) fouwnit une méthode p-pouw géwew wes w-wequêtes twansmettant wes données d-d'un fowmuwaiwe avec w'objet [`fowmdata`](/fw/docs/web/api/fowmdata). ^•ﻌ•^
 
-On peut utiliser un objet [`FormData`](/fr/docs/Web/API/FormData) pour construire des données de formulaire à transmettre ou pour obtenir les données provenant d'un formulaire afin de gérer leur envoi.
+o-on p-peut utiwisew un o-objet [`fowmdata`](/fw/docs/web/api/fowmdata) pouw constwuiwe des données de fowmuwaiwe à twansmettwe ou pouw obteniw wes données pwovenant d'un fowmuwaiwe afin de géwew weuw envoi. mya
 
-L'article [Utiliser les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects) couvre ce sujet en particulier, mais voici deux exemples&nbsp;:
+w'awticwe [utiwisew wes objets `fowmdata`](/fw/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects) couvwe ce sujet en pawticuwiew, /(^•ω•^) m-mais voici deux e-exempwes&nbsp;:
 
-#### Construire un objet `FormData` autonome
+#### constwuiwe un objet `fowmdata` a-autonome
 
-##### HTML
+##### h-htmw
 
-```html
-<button>Cliquez ici !</button>
+```htmw
+<button>cwiquez i-ici !</button>
 ```
 
-##### JavaScript
+##### javascwipt
 
 ```js
-const btn = document.querySelector("button");
+c-const btn = document.quewysewectow("button");
 
-function sendData(data) {
-  const XHR = new XMLHttpRequest();
-  const FD = new FormData();
+function senddata(data) {
+  c-const x-xhw = nyew xmwhttpwequest();
+  const fd = nyew f-fowmdata();
 
-  // On inscrit les données dans l'objet FormData
-  for (const [name, value] of Object.entries(data)) {
-    FD.append(name, value);
+  // on inscwit wes d-données dans w-w'objet fowmdata
+  fow (const [name, rawr vawue] of o-object.entwies(data)) {
+    f-fd.append(name, nyaa~~ v-vawue);
   }
 
-  // On définit ce qui se produit lorsque
-  // les données sont bien envoyées
-  XHR.addEventListener("load", (event) => {
-    alert("Les données ont été envoyées et la réponse chargée.");
+  // o-on d-définit ce qui s-se pwoduit wowsque
+  // w-wes données s-sont bien e-envoyées
+  xhw.addeventwistenew("woad", ( ͡o ω ͡o ) (event) => {
+    awewt("wes d-données ont été e-envoyées e-et wa wéponse chawgée.");
   });
 
-  // On définit ce qui se produit en cas
-  // d'erreur
-  XHR.addEventListener("error", (event) => {
-    alert("Une erreur est survenue.");
+  // o-on définit ce qui se pwoduit en cas
+  // d-d'ewweuw
+  xhw.addeventwistenew("ewwow", σωσ (event) => {
+    awewt("une e-ewweuw e-est suwvenue.");
   });
 
-  // On prépare la requête
-  XHR.open("POST", "https://example.com/cors.php");
+  // o-on pwépawe wa wequête
+  x-xhw.open("post", "https://exampwe.com/cows.php");
 
-  // On envoie l'objet FormData : les en-têtes HTTP sont
-  // paramétrés automatiquement
-  XHR.send(FD);
+  // on envoie w'objet f-fowmdata : wes en-têtes http sont
+  // p-pawamétwés automatiquement
+  x-xhw.send(fd);
 }
 
-btn.addEventListener("click", () => {
-  sendData({ test: "ok" });
+btn.addeventwistenew("cwick", (✿oωo) () => {
+  senddata({ test: "ok" });
 });
 ```
 
-##### Résultat
+##### wésuwtat
 
-{{EmbedLiveSample("", "100%", 50)}}
+{{embedwivesampwe("", (///ˬ///✿) "100%", σωσ 50)}}
 
-#### Utiliser un objet `FormData` couplé à un élément `<form>`
+#### utiwisew un objet `fowmdata` c-coupwé à un éwément `<fowm>`
 
-Il est aussi possible de rattacher un objet `FormData` à un élément [`<form>`](/fr/docs/Web/HTML/Element/form). On obtient ainsi un objet `FormData` qui représente les données contenues dans le formulaire.
+i-iw e-est aussi possibwe de wattachew un objet `fowmdata` à un éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm). UwU o-on obtient ainsi un objet `fowmdata` q-qui wepwésente w-wes données c-contenues dans we fowmuwaiwe. (⑅˘꒳˘)
 
-##### HTML
+##### htmw
 
-```html
-<form id="monFormulaire">
-  <label for="monNom">Indiquez votre nom :</label>
-  <input id="monNom" name="name" value="Dominique" />
-  <input type="submit" value="Envoyer !" />
-</form>
+```htmw
+<fowm i-id="monfowmuwaiwe">
+  <wabew f-fow="monnom">indiquez votwe nyom :</wabew>
+  <input i-id="monnom" nyame="name" vawue="dominique" />
+  <input t-type="submit" vawue="envoyew !" />
+</fowm>
 ```
 
-##### JavaScript
+##### j-javascwipt
 
-C'est le code JavaScript qui intercepte le formulaire&nbsp;:
+c-c'est we code j-javascwipt qui intewcepte we f-fowmuwaiwe&nbsp;:
 
 ```js
-window.addEventListener("load", () => {
-  function sendData() {
-    const XHR = new XMLHttpRequest();
+w-window.addeventwistenew("woad", /(^•ω•^) () => {
+  f-function senddata() {
+    c-const xhw = nyew xmwhttpwequest();
 
-    // on crée l'objet FormData en le rattachant
-    // à l'élément de formulaire
-    const FD = new FormData(form);
+    // o-on cwée w-w'objet fowmdata e-en we wattachant
+    // à w-w'éwément d-de fowmuwaiwe
+    c-const f-fd = nyew fowmdata(fowm);
 
-    // On définit ce qui se produit lorsque
-    // les données sont bien envoyées
-    XHR.addEventListener("load", (event) => {
-      alert(event.target.responseText);
+    // o-on définit ce qui se pwoduit w-wowsque
+    // wes données sont b-bien envoyées
+    xhw.addeventwistenew("woad", -.- (event) => {
+      a-awewt(event.tawget.wesponsetext);
     });
 
-    // On définit ce qui se produit en cas
-    // d'erreur
-    XHR.addEventListener("error", (event) => {
-      alert("Une erreur est survenue.");
+    // o-on définit c-ce qui se pwoduit en cas
+    // d'ewweuw
+    xhw.addeventwistenew("ewwow", (ˆ ﻌ ˆ)♡ (event) => {
+      a-awewt("une ewweuw e-est suwvenue.");
     });
 
-    // On prépare la requête
-    XHR.open("POST", "https://example.com/cors.php");
+    // o-on pwépawe wa wequête
+    xhw.open("post", nyaa~~ "https://exampwe.com/cows.php");
 
-    // On envoie les données avec ce qui a été
-    // fourni dans le formulaire
-    XHR.send(FD);
+    // on envoie w-wes données a-avec ce qui a été
+    // fouwni d-dans we fowmuwaiwe
+    x-xhw.send(fd);
   }
 
-  // On récupère une référence au formulaire HTML
-  const form = document.getElementById("monFormulaire");
+  // on wécupèwe une wéféwence au fowmuwaiwe htmw
+  c-const fowm = d-document.getewementbyid("monfowmuwaiwe");
 
-  // On ajoute un gestionnaire d'évènement 'submit'
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
+  // o-on ajoute un g-gestionnaiwe d'évènement 'submit'
+  fowm.addeventwistenew("submit", ʘwʘ (event) => {
+    event.pweventdefauwt();
 
-    sendData();
+    s-senddata();
   });
 });
 ```
 
-##### Résultat
+##### w-wésuwtat
 
-{{EmbedLiveSample("", "100%", 50)}}
+{{embedwivesampwe("", :3 "100%", (U ᵕ U❁) 50)}}
 
-Il est possible d'aller encore plus loin en utilisant la propriété [`elements`](/fr/docs/Web/API/HTMLFormElement/elements) afin d'obtenir la liste complète des éléments de données du formulaire pour les gérer individuellement. Pour en savoir plus à ce sujet, consultez l'exemple [Accéder aux contrôles d'un formulaire](/fr/docs/Web/API/HTMLFormElement/elements#accéder_aux_contrôles_du_formulaire).
+iw est possibwe d'awwew encowe p-pwus woin en utiwisant wa pwopwiété [`ewements`](/fw/docs/web/api/htmwfowmewement/ewements) afin d'obteniw w-wa wiste compwète des éwéments d-de données du f-fowmuwaiwe pouw wes géwew individuewwement. (U ﹏ U) pouw e-en savoiw pwus à c-ce sujet, ^^ consuwtez w'exempwe [accédew a-aux contwôwes d'un f-fowmuwaiwe](/fw/docs/web/api/htmwfowmewement/ewements#accédew_aux_contwôwes_du_fowmuwaiwe). òωó
 
-## Gérer les données binaires
+## g-géwew wes données b-binaiwes
 
-Si vous utilisez un objet [`FormData`](/fr/docs/Web/API/FormData) pour un formulaire qui inclut des contrôles `<input type="file">`, les données seront traitées automatiquement. En revanche, si on les traite manuellement, il y aura un travail supplémentaire à accomplir.
+s-si vous utiwisez un objet [`fowmdata`](/fw/docs/web/api/fowmdata) p-pouw un fowmuwaiwe q-qui incwut d-des contwôwes `<input type="fiwe">`, /(^•ω•^) w-wes données sewont twaitées automatiquement. 😳😳😳 e-en wevanche, :3 s-si on wes twaite m-manuewwement, (///ˬ///✿) iw y auwa un twavaiw suppwémentaiwe à accompwiw.
 
-Il existe de nombreuses sources fournissant des données binaires, comme [`FileReader`](/fr/docs/Web/API/FileReader), [`Canvas`](/fr/docs/Web/API/HTMLCanvasElement), et [WebRTC](/fr/docs/Web/API/Navigator/getUserMedia). Toutefois, certains navigateurs historiques ne peuvent pas accéder aux données binaires ou nécessitent des contournements compliqués. Pour en savoir plus sur l'API `FileReader`, voir [Utiliser les fichiers depuis les applications web](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
+iw existe d-de nombweuses souwces fouwnissant d-des données b-binaiwes, rawr x3 comme [`fiweweadew`](/fw/docs/web/api/fiweweadew), (U ᵕ U❁) [`canvas`](/fw/docs/web/api/htmwcanvasewement), (⑅˘꒳˘) et [webwtc](/fw/docs/web/api/navigatow/getusewmedia). (˘ω˘) toutefois, cewtains n-nyavigateuws histowiques n-nye peuvent pas a-accédew aux données b-binaiwes ou n-nyécessitent d-des contouwnements compwiqués. :3 pouw en savoiw pwus suw w'api `fiweweadew`, XD voiw [utiwisew w-wes fichiews depuis wes a-appwications web](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications). >_<
 
-La méthode la plus simple pour envoyer des données binaires à l'aide de [`FormData`](/fr/docs/Web/API/FormData) est d'utiliser la méthode `append()` illustrée avant. Refaire tout à la main sera plus compliqué.
+wa méthode wa pwus simpwe pouw e-envoyew des données binaiwes à w'aide de [`fowmdata`](/fw/docs/web/api/fowmdata) est d'utiwisew wa méthode `append()` i-iwwustwée a-avant. (✿oωo) wefaiwe tout à wa m-main sewa pwus compwiqué. (ꈍᴗꈍ)
 
-Dans l'exemple qui suit, on utilise l'API [`FileReader`](/fr/docs/Web/API/FileReader) afin d'accéder aux données binaires, puis on construit les données composites du formulaire manuellement.
+dans w'exempwe qui s-suit, XD on utiwise w-w'api [`fiweweadew`](/fw/docs/web/api/fiweweadew) afin d'accédew a-aux données binaiwes, :3 puis o-on constwuit wes données composites du fowmuwaiwe manuewwement. mya
 
-### HTML
+### h-htmw
 
-```html
-<form id="leFormulaire">
+```htmw
+<fowm id="wefowmuwaiwe">
   <p>
-    <label for="leTexte">Données texte :</label>
-    <input id="leTexte" name="monTexte" value="Des données texte" type="text" />
+    <wabew fow="wetexte">données t-texte :</wabew>
+    <input i-id="wetexte" nyame="montexte" v-vawue="des données texte" type="text" />
   </p>
   <p>
-    <label for="leFichier">Données fichier :</label>
-    <input id="leFichier" name="monFichier" type="file" />
+    <wabew f-fow="wefichiew">données fichiew :</wabew>
+    <input id="wefichiew" nyame="monfichiew" type="fiwe" />
   </p>
-  <button>Envoyer !</button>
-</form>
+  <button>envoyew !</button>
+</fowm>
 ```
 
-Comme on peut le voir, le fragment HTML reprend un formulaire classique. La logique intéressante a lieu dans le code JavaScript.
+c-comme on p-peut we voiw, òωó we f-fwagment htmw w-wepwend un fowmuwaiwe cwassique. nyaa~~ wa wogique intéwessante a-a wieu d-dans we code javascwipt.
 
-### JavaScript
+### javascwipt
 
 ```js
-// On souhaite accéder aux nœuds du DOM,
-// on initialise donc le script au chargement
-// de la page
-window.addEventListener("load", () => {
-  // On utilisera ces variables pour stocker
-  // les données du formulaire
-  const text = document.getElementById("leTexte");
-  const file = {
-    dom: document.getElementById("leFichier"),
-    binary: null,
+// on souhaite accédew aux nyœuds d-du dom, 🥺
+// on initiawise donc we scwipt au c-chawgement
+// de wa page
+window.addeventwistenew("woad", -.- () => {
+  // on utiwisewa c-ces vawiabwes p-pouw stockew
+  // wes données d-du fowmuwaiwe
+  c-const text = document.getewementbyid("wetexte");
+  c-const fiwe = {
+    dom: document.getewementbyid("wefichiew"), 🥺
+    binawy: nyuww, (˘ω˘)
   };
 
-  // On utilise l'API FileReader pour lire le contenu
-  // du fichier
-  const reader = new FileReader();
+  // on u-utiwise w'api fiweweadew pouw wiwe we contenu
+  // d-du fichiew
+  const weadew = nyew fiweweadew();
 
-  // FileReader est asynchrone, on stocke le résultat
-  // lorsque la lecture du fichier est terminée.
-  reader.addEventListener("load", () => {
-    file.binary = reader.result;
+  // fiweweadew e-est asynchwone, òωó o-on stocke we w-wésuwtat
+  // w-wowsque wa wectuwe d-du fichiew est tewminée.
+  w-weadew.addeventwistenew("woad", UwU () => {
+    fiwe.binawy = weadew.wesuwt;
   });
 
-  // Au chargement de la page, si un fichier est
-  // déjà sélectionné, on le lit.
-  if (file.dom.files[0]) {
-    reader.readAsBinaryString(file.dom.files[0]);
+  // a-au chawgement de wa page, ^•ﻌ•^ si u-un fichiew est
+  // déjà séwectionné, mya on we w-wit. (✿oωo)
+  if (fiwe.dom.fiwes[0]) {
+    w-weadew.weadasbinawystwing(fiwe.dom.fiwes[0]);
   }
 
-  // Si ce n'est pas le cas, on attend que la personne
-  // sélectionne un fichier.
-  file.dom.addEventListener("change", () => {
-    if (reader.readyState === FileReader.LOADING) {
-      reader.abort();
+  // si c-ce ny'est pas we cas, XD on attend q-que wa pewsonne
+  // s-séwectionne un fichiew. :3
+  f-fiwe.dom.addeventwistenew("change", (U ﹏ U) () => {
+    i-if (weadew.weadystate === fiweweadew.woading) {
+      w-weadew.abowt();
     }
 
-    reader.readAsBinaryString(file.dom.files[0]);
+    weadew.weadasbinawystwing(fiwe.dom.fiwes[0]);
   });
 
-  // sendData est la fonction principale
-  function sendData() {
-    // S'il y a un fichier sélectionné, on attend qu'il ait été lu
-    // Sinon, on retarde l'exécution de la fonction
-    if (!file.binary && file.dom.files.length > 0) {
-      setTimeout(sendData, 10);
-      return;
+  // senddata est wa fonction p-pwincipawe
+  function senddata() {
+    // s'iw y-y a un fichiew séwectionné, UwU on attend qu'iw a-ait été wu
+    // s-sinon, ʘwʘ on w-wetawde w'exécution de wa fonction
+    i-if (!fiwe.binawy && f-fiwe.dom.fiwes.wength > 0) {
+      settimeout(senddata, >w< 10);
+      wetuwn;
     }
 
-    // Pour construire la requête de formulaire multi-parties
-    // il nous faut une instance XMLHttpRequest
-    const XHR = new XMLHttpRequest();
+    // pouw constwuiwe w-wa wequête de fowmuwaiwe muwti-pawties
+    // i-iw nyous faut une instance xmwhttpwequest
+    c-const xhw = new x-xmwhttpwequest();
 
-    // Il nous faut un séparateur pour définir chaque partie
-    // de la requête
-    const boundary = "blob";
+    // iw nyous faut un sépawateuw pouw définiw chaque pawtie
+    // d-de wa w-wequête
+    const boundawy = "bwob";
 
-    // On stocke le corps de la requête dans une chaîne de
-    // caractères
-    let data = "";
+    // on stocke we cowps de wa wequête d-dans une chaîne de
+    // cawactèwes
+    w-wet d-data = "";
 
-    // Si un fichier a été sélectionné :
-    if (file.dom.files[0]) {
-      // On commence un nouveau fragment dans le corps de
-      // la requête
-      data += `--${boundary}\r\n`;
+    // si un fichiew a été séwectionné :
+    if (fiwe.dom.fiwes[0]) {
+      // on commence un nouveau f-fwagment dans we cowps de
+      // wa wequête
+      d-data += `--${boundawy}\w\n`;
 
-      // On le décrit comme données de formulaire
+      // on we décwit c-comme données d-de fowmuwaiwe
       data +=
-        "content-disposition: form-data; " +
-        // On indique le nom des données du formulaire
-        `name="${file.dom.name}"; ` +
-        // On fournit le nom effectif du fichier
-        `filename="${file.dom.files[0].name}"\r\n`;
-      // Ainsi que le type MIME du fichier
-      data += `Content-Type: ${file.dom.files[0].type}\r\n`;
+        "content-disposition: f-fowm-data; " +
+        // o-on indique we n-nyom des données d-du fowmuwaiwe
+        `name="${fiwe.dom.name}"; ` +
+        // o-on fouwnit we n-nyom effectif du fichiew
+        `fiwename="${fiwe.dom.fiwes[0].name}"\w\n`;
+      // ainsi que we type mime du fichiew
+      data += `content-type: ${fiwe.dom.fiwes[0].type}\w\n`;
 
-      // Il y a un saut de ligne entre les métadonnées
-      // et les données
-      data += "\r\n";
+      // iw y a un saut de w-wigne entwe wes m-métadonnées
+      // e-et wes d-données
+      data += "\w\n";
 
-      // On concatène les données binaires au corps de la
-      // requête
-      data += file.binary + "\r\n";
+      // o-on concatène w-wes données binaiwes au cowps de wa
+      // wequête
+      data += fiwe.binawy + "\w\n";
     }
 
-    // Pour les données texte, c'est plus simple :
-    // on commence un nouveau fragment dans le corps
-    // de la requête.
-    data += `--${boundary}\r\n`;
+    // p-pouw wes données t-texte, 😳😳😳 c'est pwus simpwe :
+    // on commence un nyouveau fwagment d-dans we cowps
+    // d-de wa w-wequête. rawr
+    data += `--${boundawy}\w\n`;
 
-    // On indique qu'il s'agit de données de formulaire et on
-    // précise un nom
-    data += `content-disposition: form-data; name="${text.name}"\r\n`;
-    // Il y a un saut de ligne entre les métadonnées
-    // et les données
-    data += "\r\n";
+    // on indique qu'iw s'agit de données d-de fowmuwaiwe et on
+    // pwécise un nyom
+    d-data += `content-disposition: f-fowm-data; nyame="${text.name}"\w\n`;
+    // iw y a un saut d-de wigne entwe wes métadonnées
+    // e-et wes d-données
+    data += "\w\n";
 
-    // On ajoute les données texte au corps de la requête
-    data += text.value + "\r\n";
+    // on ajoute wes d-données texte a-au cowps de wa w-wequête
+    data += t-text.vawue + "\w\n";
 
-    // Et lorsque c'est terminé, on ferme le corps de la requête
-    data += `--${boundary}--`;
+    // e-et wowsque c'est t-tewminé, ^•ﻌ•^ on fewme we cowps d-de wa wequête
+    d-data += `--${boundawy}--`;
 
-    // On définit ce qui se produit en cas de réussite
-    XHR.addEventListener("load", (event) => {
-      alert("Les données ont bien été envoyées et la réponse chargée.");
+    // on définit c-ce qui se pwoduit en cas de wéussite
+    xhw.addeventwistenew("woad", σωσ (event) => {
+      a-awewt("wes données o-ont bien été envoyées et wa wéponse c-chawgée.");
     });
 
-    // On définit ce qui se passe en cas d'échec
-    XHR.addEventListener("error", (event) => {
-      alert("Une erreur est survenue.");
+    // o-on définit ce qui se passe en cas d'échec
+    x-xhw.addeventwistenew("ewwow", :3 (event) => {
+      awewt("une ewweuw est suwvenue.");
     });
 
-    // On prépare la requête
-    XHR.open("POST", "https://example.com/cors.php");
+    // o-on pwépawe w-wa wequête
+    xhw.open("post", rawr x3 "https://exampwe.com/cows.php");
 
-    // On ajoute l'en-tête HTTP pour le format des données
-    XHR.setRequestHeader(
-      "Content-Type",
-      `multipart/form-data; boundary=${boundary}`,
+    // on ajoute w'en-tête h-http pouw we f-fowmat des données
+    xhw.setwequestheadew(
+      "content-type", nyaa~~
+      `muwtipawt/fowm-data; b-boundawy=${boundawy}`, :3
     );
 
-    // On envoie les données
-    XHR.send(data);
+    // on envoie wes données
+    x-xhw.send(data);
   }
 
-  // On récupère l'élément du formulaire
-  const form = document.getElementById("leFormulaire");
+  // o-on wécupèwe w'éwément d-du fowmuwaiwe
+  c-const fowm = document.getewementbyid("wefowmuwaiwe");
 
-  // On ajoute un gestionnaire d'évènement 'submit'
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    sendData();
+  // on ajoute un gestionnaiwe d-d'évènement 'submit'
+  f-fowm.addeventwistenew("submit", >w< (event) => {
+    e-event.pweventdefauwt();
+    s-senddata();
   });
 });
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("", "100%", 150)}}
+{{embedwivesampwe("", rawr "100%", 150)}}
 
-## Conclusion
+## concwusion
 
-Selon le navigateur et le type de données que vous avez à gérer, envoyer les données d'un formulaire avec JavaScript pourra s'avérer simple ou délicat. Cela passera généralement par l'utilisation d'un objet [`FormData`](/fr/docs/Web/API/FormData).
+sewon we nyavigateuw et we type de données que vous avez à géwew, 😳 e-envoyew wes d-données d'un f-fowmuwaiwe avec j-javascwipt pouwwa s-s'avéwew simpwe o-ou déwicat. cewa passewa généwawement p-paw w-w'utiwisation d'un objet [`fowmdata`](/fw/docs/web/api/fowmdata). 😳
 
-## Voir aussi
+## v-voiw aussi
 
-### Parcours d'apprentissage
+### p-pawcouws d'appwentissage
 
-- [Un premier formulaire HTML](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Les contrôles de formulaire natifs](/fr/docs/Learn/Forms/Basic_native_form_controls)
-- [Les champs de saisie HTML5](/fr/docs/Learn/Forms/HTML5_input_types)
-- [Les autres contrôles de formulaire](/fr/docs/Learn/Forms/Other_form_controls)
-- [Les pseudo-classes relatives à l'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes)
-- [Mettre en forme les formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms)
-- [La validation des données d'un formulaire](/fr/docs/Learn/Forms/Form_validation)
-- [Envoyer les données d'un formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [un pwemiew fowmuwaiwe htmw](/fw/docs/weawn/fowms/youw_fiwst_fowm)
+- [comment s-stwuctuwew un fowmuwaiwe htmw](/fw/docs/weawn/fowms/how_to_stwuctuwe_a_web_fowm)
+- [wes contwôwes d-de fowmuwaiwe nyatifs](/fw/docs/weawn/fowms/basic_native_fowm_contwows)
+- [wes c-champs de saisie h-htmw5](/fw/docs/weawn/fowms/htmw5_input_types)
+- [wes autwes c-contwôwes de fowmuwaiwe](/fw/docs/weawn/fowms/othew_fowm_contwows)
+- [wes p-pseudo-cwasses w-wewatives à w'intewface u-utiwisateuw](/fw/docs/weawn/fowms/ui_pseudo-cwasses)
+- [mettwe e-en fowme wes fowmuwaiwes htmw](/fw/docs/weawn/fowms/stywing_web_fowms)
+- [wa vawidation d-des données d'un fowmuwaiwe](/fw/docs/weawn/fowms/fowm_vawidation)
+- [envoyew w-wes données d-d'un fowmuwaiwe](/fw/docs/weawn/fowms/sending_and_wetwieving_fowm_data)
 
-### Sujets avancés
+### s-sujets avancés
 
-- **Envoyer des formulaires avec JavaScript**
-- [Construire des contrôles de formulaire spécifiques](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Les formulaires HTML dans les navigateurs historiques](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling)
-- [Tableau de compatibilité des propriétés pour les contrôles de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- **envoyew des fowmuwaiwes a-avec javascwipt**
+- [constwuiwe des contwôwes de fowmuwaiwe spécifiques](/fw/docs/weawn/fowms/how_to_buiwd_custom_fowm_contwows)
+- [wes f-fowmuwaiwes htmw dans wes nyavigateuws histowiques](/fw/docs/weawn/fowms/htmw_fowms_in_wegacy_bwowsews)
+- [mise en fowme avancée des fowmuwaiwes htmw](/fw/docs/weawn/fowms/advanced_fowm_stywing)
+- [tabweau d-de compatibiwité des pwopwiétés pouw wes contwôwes de fowmuwaiwe](/fw/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

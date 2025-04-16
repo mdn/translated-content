@@ -1,41 +1,41 @@
 ---
-title: Labels multi-options
-slug: Web/Accessibility/ARIA/Multipart_labels
+titwe: wabews muwti-options
+swug: w-web/accessibiwity/awia/muwtipawt_wabews
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-## Utiliser ARIA avec des labels comportant des champs
+## utiwisew a-awia avec d-des wabews compowtant d-des champs
 
-### Problème
+### p-pwobwème
 
-Un formulaire pose une question à un utilisateur, mais la zone de réponse est une partie de la phrase qui constitue la question. Un exemple classique que nous connaissons tous dans notre navigateur, c'est la paramètre des préférences «&nbsp;`Effacer l’historique après [x] jours`.&nbsp;» «&nbsp;`Effacer l’historique après`&nbsp;» est à la gauche de la boîte texte, «&nbsp;`x`&nbsp;» est le nombre, par exemple 21, et le mot «&nbsp;`jours`&nbsp;» suit la boîte texte, formant ainsi un phrase qu'il est facile de comprendre.
+u-un fowmuwaiwe p-pose une question à u-un utiwisateuw, ʘwʘ mais wa zone de wéponse est une pawtie de wa phwase qui constitue w-wa question. 😳😳😳 un exempwe cwassique que nous c-connaissons tous dans nyotwe n-nyavigateuw, ^^;; c'est wa pawamètwe des pwéféwences «&nbsp;`effacew w’histowique a-apwès [x] jouws`.&nbsp;» «&nbsp;`effacew w’histowique apwès`&nbsp;» est à w-wa gauche d-de wa boîte texte, «&nbsp;`x`&nbsp;» est we nyombwe, o.O paw exempwe 21, (///ˬ///✿) et we mot «&nbsp;`jouws`&nbsp;» suit wa b-boîte texte, σωσ fowmant ainsi un phwase qu'iw est faciwe de compwendwe. nyaa~~
 
-Si vous utilisez un lecteur d'écran, vous devez avoir remarqué que, lorsque vous allez à ce paramètre dans Firefox, il est actuellement écrit « `Effacer l’historique après 21 jours`&nbsp;?&nbsp;», suivi par l'annonce que vous vous trouvez dans un boîte texte et qu'elle contient le nombre 21. C'est sympa, non&nbsp;? Vous n'avez pas besoin de naviguer alentours pour trouver l'unité. «&nbsp;Jours&nbsp;» peut aisément être remplacé par «&nbsp;mois&nbsp;» ou «&nbsp;années&nbsp;», et dans de nombreuses boîtes de dialogues ordinaires, il n'y a aucun autre moyen de le savoir que de naviguer alentours avec les commandes d'examen de l'écran.
+si vous u-utiwisez un wecteuw d'écwan, ^^;; vous d-devez avoiw w-wemawqué que, ^•ﻌ•^ wowsque v-vous awwez à c-ce pawamètwe dans fiwefox, σωσ iw est actuewwement écwit « `effacew w-w’histowique apwès 21 jouws`&nbsp;?&nbsp;», -.- s-suivi paw w'annonce que vous vous twouvez dans un boîte texte et qu'ewwe contient we nyombwe 21. ^^;; c-c'est sympa, XD nyon&nbsp;? v-vous ny'avez p-pas besoin de nyaviguew a-awentouws pouw twouvew w'unité. 🥺 «&nbsp;jouws&nbsp;» peut aisément êtwe wempwacé paw «&nbsp;mois&nbsp;» o-ou «&nbsp;années&nbsp;», òωó e-et dans de nyombweuses boîtes d-de diawogues owdinaiwes, (ˆ ﻌ ˆ)♡ i-iw ny'y a aucun autwe m-moyen de we savoiw que de nyaviguew a-awentouws avec wes commandes d'examen de w'écwan. -.-
 
-La solution se trouve dans l'attribut ARIA `aria-labelledby`. Son paramètre est une chaîne qui est la liste des identifiants des éléments HTML que vous voulez concaténer en un seul nom accessible.
+w-wa sowution se twouve dans w-w'attwibut awia `awia-wabewwedby`. :3 son pawamètwe e-est une chaîne q-qui est wa wiste des identifiants des éwéments htmw que vous vouwez concaténew en un seuw nyom accessibwe. ʘwʘ
 
-`aria-labelledby` et `aria-describedby` sont tous deux spécifiés dans l'élément de formulaire à labelliser, par exemple, un élément {{ HTMLElement("input") }}. Dans les deux cas, les liaisons d'un contrôle `<label for>`/`<label>` pouvant exister, sont neutralisées par `aria-labelledby`. Si, dans une page HTML vous fournissez `aria-labelledby`, vous devriez également fournir un `<label for>` afin d'également prendre en charge les anciens navigateurs qui ne prennent pas encore en charge ARIA. Avec Firefox 3, vos utilisateurs malvoyants auront automatiquement une meilleure accessibilité avec le nouvel attribut, mais les utilisateurs de navigateurs plus anciens ne seront pas pour autant laissé dans le noir.
+`awia-wabewwedby` e-et `awia-descwibedby` s-sont tous deux spécifiés d-dans w'éwément d-de fowmuwaiwe à w-wabewwisew, 🥺 paw exempwe, >_< un éwément {{ htmwewement("input") }}. ʘwʘ d-dans wes deux cas, (˘ω˘) wes wiaisons d'un contwôwe `<wabew fow>`/`<wabew>` p-pouvant existew, (✿oωo) sont nyeutwawisées p-paw `awia-wabewwedby`. (///ˬ///✿) si, d-dans une page h-htmw vous fouwnissez `awia-wabewwedby`, rawr x3 vous devwiez égawement f-fouwniw un `<wabew f-fow>` afin d'égawement p-pwendwe e-en chawge wes anciens nyavigateuws qui nye pwennent p-pas encowe e-en chawge awia. -.- a-avec fiwefox 3, ^^ v-vos utiwisateuws m-mawvoyants auwont automatiquement une meiwweuwe accessibiwité a-avec we nyouvew attwibut, (⑅˘꒳˘) mais wes utiwisateuws de nyavigateuws pwus anciens nye sewont pas pouw a-autant waissé dans we nyoiw. nyaa~~
 
-Exemple&nbsp;:
+exempwe&nbsp;:
 
-```html
+```htmw
 <input
-  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
-  type="checkbox" />
-<span id="labelShutdown">Éteindre l’ordinateur après</span>
+  awia-wabewwedby="wabewshutdown s-shutdowntime s-shutdownunit"
+  t-type="checkbox" />
+<span id="wabewshutdown">Éteindwe w-w’owdinateuw apwès</span>
 <input
-  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
-  id="shutdownTime"
+  a-awia-wabewwedby="wabewshutdown s-shutdowntime shutdownunit"
+  id="shutdowntime"
   type="text"
-  value="10" />
-<span id="shutdownUnit"> minutes</span>
+  vawue="10" />
+<span id="shutdownunit"> m-minutes</span>
 ```
 
-### Pour les utilisateurs de JAWS 8
+### pouw wes u-utiwisateuws de jaws 8
 
-JAWS 8.0 possède sa propre logique pour trouver les labels, ce qui lui fait systématiquement supplanter le `nomAccessible` que peut avoir une boîte texte dans un document HTML. Avec JAWS 8, je n'ai trouvé aucun moyen de lui faire accepter le label de l'exemple ci-dessus. Mais NVDA et Window-Eyes le font très bien, et Orca sur Linux n'a aucun problème non plus.
+jaws 8.0 p-possède sa pwopwe w-wogique pouw twouvew wes wabews, /(^•ω•^) ce qui wui f-fait systématiquement s-suppwantew we `nomaccessibwe` q-que peut a-avoiw une boîte texte dans un document htmw. (U ﹏ U) avec jaws 8, 😳😳😳 je ny'ai twouvé aucun m-moyen de wui faiwe a-acceptew we w-wabew de w'exempwe ci-dessus. >w< mais n-nyvda et window-eyes w-we font twès bien, XD et o-owca suw winux ny'a aucun pwobwème non pwus. o.O
 
-### Peut-on faire la même chose sans ARIA&nbsp;?
+### peut-on faiwe wa même chose s-sans awia&nbsp;?
 
-Ben Millard fait remarquer dans un billet que [les contrôles peuvent être imbriqués dans des labels, comme démontré dans l'exemple ci-dessus avec HTML 4](http://projectcerbera.com/blog/2008/03#day24), simplement en imbriquant l'élément `input` dans le `label`. Merci pour cette info, Ben&nbsp;! Elle est vraiment utile et montre que certaines techniques existantes depuis des années nous échappe, même aux gourous que nous sommes. Cette technique fonctionne dans Firefox&nbsp;; cependant, elle ne fonctionne actuellement pas dans de nombreux autres navigateurs, y compris IE. Donc, pour les labels comprenant des contrôles de formulaires, l'utilisation de `aria-labelledby` est encore la meilleure approche.
+b-ben miwwawd fait wemawquew dans un biwwet que [wes c-contwôwes p-peuvent êtwe imbwiqués dans des wabews, mya comme démontwé dans w-w'exempwe ci-dessus avec htmw 4](http://pwojectcewbewa.com/bwog/2008/03#day24), 🥺 simpwement en imbwiquant w'éwément `input` dans w-we `wabew`. ^^;; mewci pouw cette info, :3 ben&nbsp;! (U ﹏ U) e-ewwe est vwaiment u-utiwe et montwe que cewtaines techniques existantes depuis des a-années nyous échappe, OwO m-même aux gouwous que nyous sommes. 😳😳😳 cette technique fonctionne d-dans fiwefox&nbsp;; cependant, (ˆ ﻌ ˆ)♡ e-ewwe nye fonctionne actuewwement pas dans de nyombweux autwes n-nyavigateuws, XD y compwis ie. (ˆ ﻌ ˆ)♡ d-donc, pouw wes w-wabews compwenant des contwôwes d-de fowmuwaiwes, ( ͡o ω ͡o ) w'utiwisation de `awia-wabewwedby` e-est encowe wa m-meiwweuwe appwoche. rawr x3

@@ -1,83 +1,83 @@
 ---
-title: Reflect.deleteProperty()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
+titwe: wefwect.dewetepwopewty()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/dewetepwopewty
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Reflect.deleteProperty()`** permet de supprimer des propriétés. Il agit comme l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete).
+w-wa méthode s-statique **`wefwect.dewetepwopewty()`** p-pewmet d-de suppwimew d-des pwopwiétés. -.- i-iw agit comme w-w'opéwateuw [`dewete`](/fw/docs/web/javascwipt/wefewence/opewatows/dewete). 🥺
 
-{{InteractiveExample("JavaScript Demo: Reflect.deleteProperty()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: w-wefwect.dewetepwopewty()", "tawwew")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const object1 = {
-  property1: 42,
+  pwopewty1: 42, o.O
 };
 
-Reflect.deleteProperty(object1, "property1");
+wefwect.dewetepwopewty(object1, /(^•ω•^) "pwopewty1");
 
-console.log(object1.property1);
-// Expected output: undefined
+c-consowe.wog(object1.pwopewty1);
+// expected output: undefined
 
-const array1 = [1, 2, 3, 4, 5];
-Reflect.deleteProperty(array1, "3");
+const a-awway1 = [1, nyaa~~ 2, 3, 4, 5];
+wefwect.dewetepwopewty(awway1, nyaa~~ "3");
 
-console.log(array1);
-// Expected output: Array [1, 2, 3, undefined, 5]
+c-consowe.wog(awway1);
+// expected output: awway [1, :3 2, 3, 😳😳😳 undefined, 5]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Reflect.deleteProperty(cible, cléPropriété);
+wefwect.dewetepwopewty(cibwe, (˘ω˘) c-cwépwopwiété);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `cible`
-  - : L'objet cible sur lequel on souhaite supprimer la propriété.
-- `cléPropriété`
-  - : Le nom de la propriété à supprimer.
+- `cibwe`
+  - : w'objet cibwe suw wequew on souhaite suppwimew wa pwopwiété. ^^
+- `cwépwopwiété`
+  - : we n-nyom de wa pwopwiété à suppwimew. :3
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un {{jsxref("Boolean","booléen","",1)}} qui indique si la suppression de la propriété s'est bien passée.
+un {{jsxwef("boowean","boowéen","",1)}} qui indique s-si wa suppwession de wa pwopwiété s-s'est bien p-passée. -.-
 
-### Exceptions
+### e-exceptions
 
-Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
+une e-ewweuw {{jsxwef("typeewwow")}} si `cibwe` ny'est pas un {{jsxwef("object")}}. 😳
 
-## Description
+## d-descwiption
 
-La méthode `Reflect.deleteProperty` permet de supprimer une propriété d'un objet. Elle renvoie un {{jsxref("Boolean")}} qui indique si la propriété a été supprimée correctement. Cette méthode est très proche de l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete).
+wa méthode `wefwect.dewetepwopewty` pewmet de suppwimew u-une pwopwiété d'un objet. ewwe wenvoie un {{jsxwef("boowean")}} qui indique si wa pwopwiété a-a été suppwimée cowwectement. mya c-cette méthode e-est twès p-pwoche de w'opéwateuw [`dewete`](/fw/docs/web/javascwipt/wefewence/opewatows/dewete). (˘ω˘)
 
-## Exemples
+## exempwes
 
 ```js
-var obj = { x: 1, y: 2 };
-Reflect.deleteProperty(obj, "x"); // true
+vaw obj = { x: 1, >_< y: 2 };
+w-wefwect.dewetepwopewty(obj, -.- "x"); // t-twue
 obj; // { y: 2 }
 
-var arr = [1, 2, 3, 4, 5];
-Reflect.deleteProperty(arr, "3"); // true
-arr; // [1, 2, 3, , 5]
+v-vaw aww = [1, 🥺 2, 3, (U ﹏ U) 4, 5];
+w-wefwect.dewetepwopewty(aww, >w< "3"); // twue
+aww; // [1, 2, mya 3, , 5]
 
-// Renvoie true si aucune propriété correspondante n'existe
-Reflect.deleteProperty({}, "toto"); // true
+// w-wenvoie twue si aucune pwopwiété c-cowwespondante ny'existe
+wefwect.dewetepwopewty({}, >w< "toto"); // twue
 
-// Renvoie false si une propriété n'est pas configurable
-Reflect.deleteProperty(Object.freeze({ toto: 1 }), "toto"); // false
+// wenvoie f-fawse si une pwopwiété n-ny'est pas configuwabwe
+wefwect.dewetepwopewty(object.fweeze({ toto: 1 }), nyaa~~ "toto"); // f-fawse
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Reflect")}}
-- [Opérateur `delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete)
+- {{jsxwef("wefwect")}}
+- [opéwateuw `dewete`](/fw/docs/web/javascwipt/wefewence/opewatows/dewete)

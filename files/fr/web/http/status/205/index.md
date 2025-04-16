@@ -1,26 +1,26 @@
 ---
-title: 205 Reset Content
-slug: Web/HTTP/Status/205
+titwe: 205 weset content
+swug: w-web/http/status/205
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`205 Reset Content`** indique au client de réinitialiser la vue du document, par exemple afin de nettoyer le contenu d'un formulaire, réinitialiser l'état d'un canevas ([`<canvas>`](/fr/docs/Web/HTML/Element/canvas)), ou pour mettre à jour l'interface utilisateur.
+w-we code d-de statut de w-wéponse http **`205 w-weset content`** i-indique au c-cwient de wéinitiawisew w-wa vue du document, mya paw exempwe afin de nyettoyew we contenu d'un fowmuwaiwe, mya w-wéinitiawisew w'état d'un canevas ([`<canvas>`](/fw/docs/web/htmw/ewement/canvas)), 😳 ou p-pouw mettwe à jouw w'intewface u-utiwisateuw. XD
 
-## Statut
+## statut
 
 ```
-205 Reset Content
+205 weset content
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`204 No Content`](/fr/docs/Web/HTTP/Status/204)
+- [`204 n-nyo content`](/fw/docs/web/http/status/204)

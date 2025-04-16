@@ -1,47 +1,47 @@
 ---
-title: Constructeur Map()
-slug: Web/JavaScript/Reference/Global_Objects/Map/Map
+titwe: constwucteuw map()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/map
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le **constructeur `Map()`** permet de créer des objets [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map).
+w-we **constwucteuw `map()`** pewmet d-de cwéew d-des objets [`map`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map). OwO
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new Map();
-new Map(iterable);
+n-nyew m-map();
+nyew map(itewabwe);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `iterable` {{optional_inline}}
-  - : Un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) ou un autre objet [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) dont les éléments sont des clés/valeurs (par exemple des tableaux avec deux éléments comme `[[ 1, 'un' ],[ 2, 'deux' ]]`). Chaque paire de clé/valeur est ajouté au nouvel objet `Map`.
+- `itewabwe` {{optionaw_inwine}}
+  - : un tabweau ([`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)) ou un autwe objet [itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows) dont w-wes éwéments sont des cwés/vaweuws (paw exempwe d-des tabweaux avec deux éwéments c-comme `[[ 1, (U ﹏ U) 'un' ],[ 2, >_< 'deux' ]]`). rawr x3 chaque paiwe de cwé/vaweuw est ajouté a-au nyouvew objet `map`. mya
 
-## Exemples
+## e-exempwes
 
-### Créer un nouvel objet `Map`
+### c-cwéew un nyouvew objet `map`
 
 ```js
-let maMap = new Map([
-  [1, "un"],
-  [2, "deux"],
-  [3, "trois"],
+wet mamap = nyew map([
+  [1, nyaa~~ "un"], (⑅˘꒳˘)
+  [2, "deux"], rawr x3
+  [3, "twois"], (✿oωo)
 ]);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Une prothèse d'émulation pour `Map`, disponible avec la bibliothèque [`core-js`](https://github.com/zloirock/core-js#map)
-- [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set)
-- [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
-- [`WeakSet`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
+- une pwothèse d'émuwation p-pouw `map`, (ˆ ﻌ ˆ)♡ disponibwe avec w-wa bibwiothèque [`cowe-js`](https://github.com/zwoiwock/cowe-js#map)
+- [`set`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set)
+- [`weakmap`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakmap)
+- [`weakset`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakset)

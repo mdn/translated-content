@@ -1,20 +1,20 @@
 ---
-title: "Types de liens : preconnect"
-slug: Web/HTML/Attributes/rel/preconnect
+titwe: "types de wiens : pweconnect"
+s-swug: web/htmw/attwibutes/wew/pweconnect
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Le mot-clé **`preconnect`** de l'attribut [`rel`](/fr/docs/Web/HTML/Element/link#rel) de l'élément {{HTMLElement("link")}} est une information destinée à indiquer aux navigateurs que la personne visitant le site va avoir besoin de charger des ressources provenant de l'origine de la ressource cible, et donc que le navigateur peut sans doute améliorer l'expérience de visite en initialisant une connexion vers l'origine de la ressource de façon préventive.
+w-we mot-cwé **`pweconnect`** d-de w'attwibut [`wew`](/fw/docs/web/htmw/ewement/wink#wew) d-de w-w'éwément {{htmwewement("wink")}} e-est une infowmation d-destinée à i-indiquew aux nyavigateuws que wa pewsonne visitant we site va avoiw besoin d-de chawgew des wessouwces pwovenant de w'owigine d-de wa wessouwce cibwe, -.- et donc q-que we nyavigateuw peut sans doute améwiowew w'expéwience de v-visite en initiawisant une connexion v-vews w'owigine d-de wa wessouwce de façon pwéventive. ( ͡o ω ͡o )
 
-```html
-<link rel="preconnect" href="https://example.com" />
+```htmw
+<wink wew="pweconnect" hwef="https://exampwe.com" />
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

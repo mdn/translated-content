@@ -1,85 +1,85 @@
 ---
-title: Reflect.get()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
+titwe: wefwect.get()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/get
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Reflect.get()`** est une fonction qui permet d'obtenir une propriété d'un objet cible. Elle fonctionne comme (`cible[cléPropriété]`) mais sous la forme d'une fonction.
+w-wa méthode statique **`wefwect.get()`** e-est une f-fonction qui p-pewmet d'obteniw u-une pwopwiété d-d'un objet cibwe. 😳😳😳 e-ewwe fonctionne c-comme (`cibwe[cwépwopwiété]`) mais sous wa fowme d'une fonction. mya
 
-{{InteractiveExample("JavaScript Demo: Reflect.get()")}}
+{{intewactiveexampwe("javascwipt demo: wefwect.get()")}}
 
-```js interactive-example
-const object1 = {
-  x: 1,
+```js intewactive-exampwe
+c-const object1 = {
+  x: 1, 😳
   y: 2,
 };
 
-console.log(Reflect.get(object1, "x"));
-// Expected output: 1
+c-consowe.wog(wefwect.get(object1, -.- "x"));
+// expected o-output: 1
 
-const array1 = ["zero", "one"];
+const awway1 = ["zewo", 🥺 "one"];
 
-console.log(Reflect.get(array1, 1));
-// Expected output: "one"
+consowe.wog(wefwect.get(awway1, o.O 1));
+// expected o-output: "one"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Reflect.get(cible, cléPropriété[, récepteur])
+w-wefwect.get(cibwe, /(^•ω•^) c-cwépwopwiété[, nyaa~~ wécepteuw])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `cible`
-  - : L'objet cible dont on souhaite obtenir la propriété.
-- `cléPropriété`
-  - : Le nom de la propriété qu'on souhaite obtenir.
-- `récepteur` {{optional_inline}}
-  - : La valeur de `this` à passer à `cible` si l'accesseur est utilisé. Lorsqu'on l'utilise avec {{jsxref("Proxy")}}, ce peut être un objet qui hérite de la cible.
+- `cibwe`
+  - : w'objet cibwe dont on souhaite obteniw w-wa pwopwiété. nyaa~~
+- `cwépwopwiété`
+  - : we nyom de wa pwopwiété qu'on souhaite obteniw. :3
+- `wécepteuw` {{optionaw_inwine}}
+  - : wa vaweuw d-de `this` à passew à `cibwe` s-si w'accesseuw e-est utiwisé. 😳😳😳 w-wowsqu'on w'utiwise a-avec {{jsxwef("pwoxy")}}, (˘ω˘) ce peut êtwe un objet qui héwite d-de wa cibwe. ^^
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur de la propriété.
+wa vaweuw d-de wa pwopwiété.
 
-### Exceptions
+### exceptions
 
-Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
+une ewweuw {{jsxwef("typeewwow")}} si `cibwe` ny'est pas un {{jsxwef("object")}}. :3
 
-## Description
+## descwiption
 
-La méthode `Reflect.get` permet d'obtenir une propriété d'un objet. Elle est équivalent à [un accesseur de propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors) mais sous la forme d'une fonction.
+w-wa méthode `wefwect.get` pewmet d'obteniw u-une pwopwiété d-d'un objet. -.- ewwe e-est équivawent à [un accesseuw de pwopwiété](/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows) mais sous wa f-fowme d'une fonction. 😳
 
-## Exemples
+## e-exempwes
 
 ```js
-// Object
-var obj = { x: 1, y: 2 };
-Reflect.get(obj, "x"); // 1
+// object
+vaw obj = { x-x: 1, mya y: 2 };
+w-wefwect.get(obj, (˘ω˘) "x"); // 1
 
-// Array
-Reflect.get(["zero", "un"], 1); // "un"
+// awway
+wefwect.get(["zewo", >_< "un"], 1); // "un"
 
-// Proxy qui intercepte get
-var x = { p: 1 };
-var obj = new Proxy(x, {
-  get(t, k, r) {
-    return k + "truc";
-  },
+// p-pwoxy qui intewcepte get
+vaw x = { p-p: 1 };
+vaw obj = nyew pwoxy(x, -.- {
+  get(t, k-k, 🥺 w) {
+    wetuwn k + "twuc";
+  }, (U ﹏ U)
 });
-Reflect.get(obj, "toto"); // "tototruc"
+w-wefwect.get(obj, >w< "toto"); // "tototwuc"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Reflect")}}
-- [Accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- {{jsxwef("wefwect")}}
+- [accesseuws de pwopwiété](/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)

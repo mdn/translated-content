@@ -1,273 +1,273 @@
 ---
-title: "<ol> : l'élément de liste ordonnée"
-slug: Web/HTML/Element/ol
+titwe: "<ow> : w'éwément de w-wiste owdonnée"
+s-swug: web/htmw/ewement/ow
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<ol>`** représente une liste ordonnée. Les éléments d'une telle liste sont généralement affichés avec un indicateur ordinal pouvant prendre la forme de nombres, de lettres, de chiffres romains ou de points. La mise en forme de la numérotation n'est pas utilisée dans la description HTML mais dans la feuille de style CSS associée grâce à la propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
+w-w'éwément htmw **`<ow>`** w-wepwésente u-une wiste o-owdonnée. o.O wes éwéments d-d'une t-tewwe wiste sont généwawement affichés avec un indicateuw owdinaw pouvant p-pwendwe wa fowme de nyombwes, (⑅˘꒳˘) de wettwes, de chiffwes w-womains ou de points. 😳😳😳 wa m-mise en fowme de wa nyuméwotation ny'est pas utiwisée dans wa d-descwiption htmw mais dans wa feuiwwe d-de stywe css a-associée gwâce à wa pwopwiété [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type). nyaa~~
 
-{{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;ow&gt;", rawr "tabbed-showtew")}}
 
-```html interactive-example
-<ol>
-  <li>Mix flour, baking powder, sugar, and salt.</li>
-  <li>In another bowl, mix eggs, milk, and oil.</li>
-  <li>Stir both mixtures together.</li>
-  <li>Fill muffin tray 3/4 full.</li>
-  <li>Bake for 20 minutes.</li>
-</ol>
+```htmw intewactive-exampwe
+<ow>
+  <wi>mix fwouw, -.- b-baking powdew, sugaw, (✿oωo) and sawt.</wi>
+  <wi>in anothew boww, /(^•ω•^) mix eggs, 🥺 miwk, and oiw.</wi>
+  <wi>stiw b-both mixtuwes togethew.</wi>
+  <wi>fiww m-muffin tway 3/4 f-fuww.</wi>
+  <wi>bake f-fow 20 minutes.</wi>
+</ow>
 ```
 
-```css interactive-example
-li {
+```css i-intewactive-exampwe
+wi {
   font:
-    1rem "Fira Sans",
-    sans-serif;
-  margin-bottom: 0.5rem;
+    1wem "fiwa sans", ʘwʘ
+    s-sans-sewif;
+  mawgin-bottom: 0.5wem;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th s-scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/Guide/HTML/Content_categories"
-            >Catégories de contenu</a
+          ><a hwef="/fw/docs/web/guide/htmw/content_categowies"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >, UwU
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu t-tangibwe</a
         >
-        si les enfants de l'élément <code>&#x3C;ol></code> incluent au moins un
-        élément <a href="/fr/docs/Web/HTML/Element/li"><code>&#x3C;li></code></a
-        >.
+        si wes enfants d-de w'éwément <code>&#x3c;ow></code> i-incwuent au m-moins un
+        éwément <a hwef="/fw/docs/web/htmw/ewement/wi"><code>&#x3c;wi></code></a
+        >. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        Zéro, un, ou plusieurs éléments
-        <a href="/fr/docs/Web/HTML/Element/li"><code>&#x3C;li></code></a> (qui
-        peuvent imbriquer d'autres éléments
-        <a href="/fr/docs/Web/HTML/Element/ol"><code>&#x3C;ol></code></a> ou
-        <a href="/fr/docs/Web/HTML/Element/ul"><code>&#x3C;ul></code></a
-        >),
-        <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+        z-zéwo, (✿oωo) un, o-ou pwusieuws éwéments
+        <a hwef="/fw/docs/web/htmw/ewement/wi"><code>&#x3c;wi></code></a> (qui
+        p-peuvent imbwiquew d-d'autwes éwéments
+        <a hwef="/fw/docs/web/htmw/ewement/ow"><code>&#x3c;ow></code></a> o-ou
+        <a hwef="/fw/docs/web/htmw/ewement/uw"><code>&#x3c;uw></code></a
+        >), :3
+        <a h-hwef="/fw/docs/web/htmw/ewement/scwipt"
+          ><code>&#x3c;scwipt></code></a
         >
         ou
-        <a href="/fr/docs/Web/HTML/Element/template"
-          ><code>&#x3C;template></code></a
-        >.
+        <a hwef="/fw/docs/web/htmw/ewement/tempwate"
+          ><code>&#x3c;tempwate></code></a
+        >. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires
+        aucune, nyaa~~ wa b-bawise d'ouvewtuwe et wa bawise d-de fewmetuwe sont
+        o-obwigatoiwes
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu de flux</a
-        >.
+        tout éwément acceptant du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia impwicite</th>
       <td>
         <code
-          ><a href="/fr/docs/Web/Accessibility/ARIA/Roles/List_role"
-            >list</a
+          ><a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/wist_wowe"
+            >wist</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
       <td>
-        <a href="https://w3c.github.io/aria/#directory">directory</a>,
-        <a href="https://w3c.github.io/aria/#group">group</a>,
-        <a href="https://w3c.github.io/aria/#listbox">listbox</a>,
-        <a href="https://w3c.github.io/aria/#menu">menu</a>,
-        <a href="https://w3c.github.io/aria/#menubar">menubar</a>,
-        <a href="https://w3c.github.io/aria/#none">none</a>,
-        <a href="https://w3c.github.io/aria/#presentation">presentation</a>,
-        <a href="https://w3c.github.io/aria/#radiogroup">radiogroup</a>,
-        <a href="https://w3c.github.io/aria/#tablist">tablist</a>,
-        <a href="https://w3c.github.io/aria/#toolbar">toolbar</a>,
-        <a href="https://w3c.github.io/aria/#tree">tree</a>.
+        <a h-hwef="https://w3c.github.io/awia/#diwectowy">diwectowy</a>, -.-
+        <a hwef="https://w3c.github.io/awia/#gwoup">gwoup</a>, (✿oωo)
+        <a hwef="https://w3c.github.io/awia/#wistbox">wistbox</a>, (˘ω˘)
+        <a hwef="https://w3c.github.io/awia/#menu">menu</a>, rawr
+        <a h-hwef="https://w3c.github.io/awia/#menubaw">menubaw</a>, OwO
+        <a hwef="https://w3c.github.io/awia/#none">none</a>, ^•ﻌ•^
+        <a hwef="https://w3c.github.io/awia/#pwesentation">pwesentation</a>, UwU
+        <a hwef="https://w3c.github.io/awia/#wadiogwoup">wadiogwoup</a>, (˘ω˘)
+        <a hwef="https://w3c.github.io/awia/#tabwist">tabwist</a>, (///ˬ///✿)
+        <a h-hwef="https://w3c.github.io/awia/#toowbaw">toowbaw</a>, σωσ
+        <a hwef="https://w3c.github.io/awia/#twee">twee</a>. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLOListElement"
-          ><code>HTMLOListElement</code></a
+        <a hwef="/fw/docs/web/api/htmwowistewement"
+          ><code>htmwowistewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-À l'instar des autres éléments HTML, il est possible d'utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
+À w-w'instaw des autwes éwéments h-htmw, 😳 iw e-est possibwe d'utiwisew [wes attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes) s-suw cet éwément. 😳
 
-- **`reversed`**
-  - : Cet attribut booléen indique que les éléments de la liste sont dans l'ordre inverse. Les éléments sont numérotés de haut en bas.
-- **`start`**
-  - : Un nombre entier à partir duquel on commence à compter pour les éléments de la liste. Toujours un chiffre arabique (1, 2, 3, etc.), même lorsque le `type` de numérotation est constitué de lettres ou de chiffres romains. Par exemple, pour commencer à numéroter les éléments à partir de la lettre "d" ou du chiffre romain "iv", utilisez `start="4"`.
+- **`wevewsed`**
+  - : cet attwibut boowéen indique q-que wes éwéments d-de wa wiste s-sont dans w'owdwe i-invewse. (⑅˘꒳˘) wes éwéments s-sont nyuméwotés de haut en bas. 😳😳😳
+- **`stawt`**
+  - : un nyombwe entiew à p-pawtiw duquew on commence à comptew pouw wes éwéments de wa wiste. 😳 toujouws un chiffwe a-awabique (1, 2, XD 3, etc.), même wowsque we `type` de nyuméwotation e-est constitué d-de wettwes ou d-de chiffwes womains. mya paw exempwe, ^•ﻌ•^ p-pouw commencew à nyuméwotew w-wes éwéments à p-pawtiw de wa wettwe "d" ou du chiffwe womain "iv", ʘwʘ utiwisez `stawt="4"`. ( ͡o ω ͡o )
 - **`type`**
 
-  - : Définit le type de numérotation :
+  - : définit we type de nyuméwotation :
 
-    - `a` pour les lettres minuscules
-    - `A` pour les lettres majuscules
-    - `i` pour les chiffres romains minuscules
-    - `I` pour les chiffres romains majuscules
-    - `1` pour les chiffres (par défaut)
+    - `a` p-pouw wes wettwes minuscuwes
+    - `a` p-pouw wes wettwes majuscuwes
+    - `i` p-pouw w-wes chiffwes womains minuscuwes
+    - `i` pouw w-wes chiffwes womains m-majuscuwes
+    - `1` pouw w-wes chiffwes (paw d-défaut)
 
-    Le type spécifié est utilisé pour l'ensemble de la liste, sauf si un attribut différent [`type`](/fr/docs/Web/HTML/Element/li#attr-type) est utilisé sur un élément [`<li>`](/fr/docs/Web/HTML/Element/li) fermé.
+    we type spécifié est utiwisé pouw w'ensembwe de wa wiste, mya sauf s-si un attwibut d-difféwent [`type`](/fw/docs/web/htmw/ewement/wi#attw-type) e-est utiwisé suw un éwément [`<wi>`](/fw/docs/web/htmw/ewement/wi) f-fewmé.
 
-    > [!NOTE]
-    > À moins que le type du numéro de la liste n'ait de l'importance (comme dans les documents juridiques ou techniques où les éléments sont référencés par leur numéro/lettre), utilisez plutôt la propriété CSS [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
+    > [!note]
+    > À m-moins que we type du numéwo de w-wa wiste ny'ait de w'impowtance (comme dans wes documents juwidiques ou techniques o-où wes éwéments s-sont wéféwencés paw weuw nyuméwo/wettwe), o.O u-utiwisez pwutôt w-wa pwopwiété css [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type). (✿oωo)
 
-## Note d'utilisation
+## nyote d'utiwisation
 
-En général, les éléments d'une liste ordonnée s'affichent avec un [marqueur](/fr/docs/Web/CSS/::marker) précédant l'élément, tel qu'un chiffre ou une lettre.
+en généwaw, :3 w-wes éwéments d'une wiste owdonnée s'affichent avec un [mawqueuw](/fw/docs/web/css/::mawkew) pwécédant w-w'éwément, 😳 tew qu'un chiffwe ou une wettwe. (U ﹏ U)
 
-Les éléments `<ol>` et [`<ul>`](/fr/docs/Web/HTML/Element/ul) peuvent s'imbriquer aussi profondément que vous le souhaitez, alternant entre `<ol>` et `<ul>` comme vous le souhaitez.
+w-wes éwéments `<ow>` e-et [`<uw>`](/fw/docs/web/htmw/ewement/uw) peuvent s'imbwiquew aussi pwofondément que vous w-we souhaitez, mya a-awtewnant entwe `<ow>` et `<uw>` comme vous we souhaitez. (U ᵕ U❁)
 
-Les éléments `<ol>` et [`<ul>`](/fr/docs/Web/HTML/Element/ul) représentent tous deux une liste d'éléments. La différence est qu'avec l'élément `<ol>`, l'ordre est significatif. Par exemple :
+wes éwéments `<ow>` e-et [`<uw>`](/fw/docs/web/htmw/ewement/uw) wepwésentent t-tous deux une wiste d'éwéments. :3 wa difféwence est qu'avec w-w'éwément `<ow>`, mya w'owdwe e-est significatif. OwO p-paw exempwe :
 
-- Étapes d'une recette
-- Instructions détaillées
-- La liste des ingrédients en proportion décroissante sur les étiquettes d'information nutritionnelle
+- Étapes d'une w-wecette
+- instwuctions détaiwwées
+- w-wa wiste d-des ingwédients e-en pwopowtion décwoissante s-suw wes étiquettes d-d'infowmation nyutwitionnewwe
 
-Pour déterminer la liste à utiliser, essayez de modifier l'ordre des éléments de la liste ; si le sens change, utilisez l'élément `<ol>` - sinon, vous pouvez utiliser [`<ul>`](/fr/docs/Web/HTML/Element/ul).
+pouw détewminew w-wa wiste à u-utiwisew, (ˆ ﻌ ˆ)♡ essayez d-de modifiew w'owdwe des éwéments de wa wiste ; s-si we sens change, ʘwʘ utiwisez w'éwément `<ow>` - s-sinon, o.O vous p-pouvez utiwisew [`<uw>`](/fw/docs/web/htmw/ewement/uw). UwU
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-```html
-<ol>
-  <li>Fee</li>
-  <li>Fi</li>
-  <li>Fo</li>
-  <li>Fum</li>
-</ol>
+```htmw
+<ow>
+  <wi>fee</wi>
+  <wi>fi</wi>
+  <wi>fo</wi>
+  <wi>fum</wi>
+</ow>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", 400, 140)}}
+{{embedwivesampwe("", rawr x3 400, 140)}}
 
-### Utilisation des chiffres romains
+### u-utiwisation des c-chiffwes womains
 
-```html
-<ol type="i">
-  <li>Introduction</li>
-  <li>Liste des Greffes</li>
-  <li>Conclusion</li>
-</ol>
+```htmw
+<ow t-type="i">
+  <wi>intwoduction</wi>
+  <wi>wiste des gweffes</wi>
+  <wi>concwusion</wi>
+</ow>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", 400, 120)}}
+{{embedwivesampwe("", 🥺 400, 120)}}
 
-### Utilisation de l'attribut start
+### utiwisation de w'attwibut stawt
 
-```html
+```htmw
 <p>
-  Les places d'arrivée des concurrents qui ne sont pas dans le cercle des
+  wes pwaces d'awwivée des c-concuwwents qui nye sont pas dans w-we cewcwe des
   gagnants :
 </p>
 
-<ol start="4">
-  <li>Speedwalk Stu</li>
-  <li>Saunterin' Sam</li>
-  <li>Slowpoke Rodriguez</li>
-</ol>
+<ow s-stawt="4">
+  <wi>speedwawk stu</wi>
+  <wi>sauntewin' s-sam</wi>
+  <wi>swowpoke wodwiguez</wi>
+</ow>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", 400, 210)}}
+{{embedwivesampwe("", :3 400, 210)}}
 
-### Listes imbriquées
+### w-wistes imbwiquées
 
-```html
-<ol>
-  <li>Premier élément</li>
-  <li>
-    Deuxième élément
-    <!-- La fermeture </li> n'est pas encore placée ! -->
-    <ol>
-      <li>Premier élément de la liste imbriquée</li>
-      <li>Deuxième élément de la liste imbriquée</li>
-      <li>Troisième élément de la liste imbriquée</li>
-    </ol>
-  </li>
-  <!-- Voici la fermeture </li> ! -->
-  <li>Troisième élément</li>
-</ol>
+```htmw
+<ow>
+  <wi>pwemiew éwément</wi>
+  <wi>
+    deuxième éwément
+    <!-- w-wa fewmetuwe </wi> ny'est p-pas encowe p-pwacée ! (ꈍᴗꈍ) -->
+    <ow>
+      <wi>pwemiew éwément de wa wiste imbwiquée</wi>
+      <wi>deuxième éwément de wa wiste imbwiquée</wi>
+      <wi>twoisième éwément de wa wiste imbwiquée</wi>
+    </ow>
+  </wi>
+  <!-- v-voici w-wa fewmetuwe </wi> ! 🥺 -->
+  <wi>twoisième éwément</wi>
+</ow>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", 400, 200)}}
+{{embedwivesampwe("", 400, (✿oωo) 200)}}
 
-### Liste non ordonnée dans une liste ordonnée
+### wiste nyon owdonnée d-dans une wiste owdonnée
 
-```html
-<ol>
-  <li>Premier élément</li>
-  <li>
-    Deuxième élément
-    <!-- La fermeture </li> n'est pas placée ici ! -->
-    <ul>
-      <li>Premier élément de la liste non-ordonnée imbriquée</li>
-      <li>Deuxième élément de la liste non-ordonnée imbriquée</li>
-      <li>Troisième élément de la liste non-ordonnée imbriquée</li>
-    </ul>
-  </li>
-  <!-- La fermeture </li> est ici. -->
-  <li>Troisième élément</li>
-</ol>
+```htmw
+<ow>
+  <wi>pwemiew éwément</wi>
+  <wi>
+    deuxième éwément
+    <!-- wa fewmetuwe </wi> n-ny'est pas pwacée i-ici ! (U ﹏ U) -->
+    <uw>
+      <wi>pwemiew éwément de wa wiste n-nyon-owdonnée imbwiquée</wi>
+      <wi>deuxième éwément de w-wa wiste nyon-owdonnée i-imbwiquée</wi>
+      <wi>twoisième éwément de wa wiste n-nyon-owdonnée i-imbwiquée</wi>
+    </uw>
+  </wi>
+  <!-- wa fewmetuwe </wi> est ici. :3 -->
+  <wi>twoisième éwément</wi>
+</ow>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", 400, 210)}}
+{{embedwivesampwe("", ^^;; 400, rawr 210)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les autres éléments HTML relatifs aux listes : [`<ul>`](/fr/docs/Web/HTML/Element/ul), [`<li>`](/fr/docs/Web/HTML/Element/li), [`<menu>`](/fr/docs/Web/HTML/Element/menu)
-- Les propriétés CSS pouvant servir à la mise en forme de l'élément `<ol>` :
+- w-wes autwes éwéments h-htmw wewatifs aux wistes : [`<uw>`](/fw/docs/web/htmw/ewement/uw), 😳😳😳 [`<wi>`](/fw/docs/web/htmw/ewement/wi), [`<menu>`](/fw/docs/web/htmw/ewement/menu)
+- w-wes pwopwiétés c-css pouvant sewviw à wa mise e-en fowme de w'éwément `<ow>` :
 
-  - [`list-style`](/fr/docs/Web/CSS/list-style) qui permet de choisir comment les nombres ordinaux sont affichés,
-  - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), utiles pour gérer les listes imbriquées complexes,
-  - [`line-height`](/fr/docs/Web/CSS/line-height) qui permet d'obtenir le même effet que l'attribut [`compact`](#attr-compact) qui est déprécié,
-  - [`margin`](/fr/docs/Web/CSS/margin) qui permet de contrôler l'indentation de la liste.
+  - [`wist-stywe`](/fw/docs/web/css/wist-stywe) q-qui pewmet de choisiw comment w-wes nyombwes owdinaux sont affichés, (✿oωo)
+  - [wes compteuws css](/fw/docs/web/css/css_countew_stywes/using_css_countews), OwO u-utiwes pouw géwew wes wistes i-imbwiquées c-compwexes, ʘwʘ
+  - [`wine-height`](/fw/docs/web/css/wine-height) qui p-pewmet d'obteniw we même effet que w'attwibut [`compact`](#attw-compact) q-qui e-est dépwécié, (ˆ ﻌ ˆ)♡
+  - [`mawgin`](/fw/docs/web/css/mawgin) q-qui pewmet de contwôwew w'indentation de wa wiste. (U ﹏ U)

@@ -1,64 +1,64 @@
 ---
-title: Date
-slug: Web/HTTP/Headers/Date
+titwe: date
+swug: web/http/headews/date
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête général HTTP **`Date`** contient la date et l'heure d'origine du message.
+w-w'en-tête généwaw h-http **`date`** c-contient wa d-date et w'heuwe d-d'owigine du message. >_<
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("General header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name ")}}</th>
+    <tw>
+      <th s-scope="wow">type d-d'en-tête</th>
+      <td>{{gwossawy("genewaw headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame ")}}</th>
       <td>oui</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
 ```
-Date: <day-name>, <jour> <mois> <année> <heure>:<minute>:<seconde> GMT
+d-date: <day-name>, >_< <jouw> <mois> <année> <heuwe>:<minute>:<seconde> gmt
 ```
 
-## Directives
+## diwectives
 
 - \<day-name>
-  - : L'un des mots "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ou "Sun" (sensible à la casse).
+  - : w-w'un des mots "mon", (⑅˘꒳˘) "tue", "wed", "thu", /(^•ω•^) "fwi", "sat" ou "sun" (sensibwe à w-wa casse). rawr x3
 - \<day>
-  - : Numéro de jour à 2 chiffres, par ex. "04" ou "23".
+  - : nyuméwo de jouw à 2 chiffwes, (U ﹏ U) paw ex. "04" ou "23". (U ﹏ U)
 - \<month>
-  - : L'un des mots "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (sensible à la casse).
-- \<year>
-  - : Numéro d'année à 4 chiffres, par exemple "1990" ou "2018".
-- \<hour>
-  - : Numéro d'heure à 2 chiffres, par exemple "09" or "23".
+  - : w-w'un des mots "jan", (⑅˘꒳˘) "feb", "maw", òωó "apw", "may", "jun", ʘwʘ "juw", "aug", /(^•ω•^) "sep", "oct", ʘwʘ "nov", "dec" (sensibwe à wa casse). σωσ
+- \<yeaw>
+  - : nyuméwo d-d'année à 4 c-chiffwes, OwO paw exempwe "1990" ou "2018". 😳😳😳
+- \<houw>
+  - : nyuméwo d'heuwe à 2 c-chiffwes, 😳😳😳 paw exempwe "09" ow "23". o.O
 - \<minute>
-  - : Numéro d'heure à 2 chiffres, par exemple "04" or "59".
+  - : nyuméwo d'heuwe à 2 chiffwes, ( ͡o ω ͡o ) paw exempwe "04" o-ow "59". (U ﹏ U)
 - \<second>
-  - : Numéro de seconde à 2 chiffres, par exemple "04" or "59".
-- GMT
-  - : Temps sur le Méridien de Greenwich. Les dates HTTP sont toujours exprimées en GMT, jamais en heure locale.
+  - : nyuméwo de s-seconde à 2 chiffwes, (///ˬ///✿) p-paw exempwe "04" o-ow "59". >w<
+- g-gmt
+  - : temps suw we méwidien de gweenwich. rawr w-wes dates http sont toujouws expwimées en gmt, mya j-jamais en heuwe wocawe. ^^
 
-## Exemples
+## exempwes
 
 ```
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+date: wed, 😳😳😳 21 oct 2015 07:28:00 gmt
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTTPHeader("Age")}}
+- {{httpheadew("age")}}

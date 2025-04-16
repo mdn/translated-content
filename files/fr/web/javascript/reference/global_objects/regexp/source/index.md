@@ -1,59 +1,59 @@
 ---
-title: RegExp.prototype.source
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
+titwe: wegexp.pwototype.souwce
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/souwce
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`source`** renvoie une chaîne de caractères qui contient le texte du motif à rechercher (_pattern_), sans les barres obliques (_slashes_). C'est une propriété en lecture seule liée à l'instance. **`source`** ne contient aucun des options ou drapeaux (_flags_) (tels que "g", "i" ou "m") de l'expression rationnelle.
+w-wa p-pwopwiété **`souwce`** w-wenvoie u-une chaîne de c-cawactèwes qui c-contient we texte d-du motif à wechewchew (_pattewn_), /(^•ω•^) s-sans wes bawwes obwiques (_swashes_). ʘwʘ c'est une pwopwiété en wectuwe seuwe w-wiée à w'instance. σωσ **`souwce`** nye contient aucun des options o-ou dwapeaux (_fwags_) (tews que "g", OwO "i" ou "m") d-de w'expwession wationnewwe. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.source")}}
+{{intewactiveexampwe("javascwipt demo: wegexp.pwototype.souwce")}}
 
-```js interactive-example
-const regex1 = /fooBar/gi;
+```js intewactive-exampwe
+c-const wegex1 = /foobaw/gi;
 
-console.log(regex1.source);
-// Expected output: "fooBar"
+consowe.wog(wegex1.souwce);
+// e-expected o-output: "foobaw"
 
-console.log(new RegExp().source);
-// Expected output: "(?:)"
+consowe.wog(new wegexp().souwce);
+// expected output: "(?:)"
 
-console.log(new RegExp("\n").source === "\\n");
-// Expected output: true (starting with ES5)
-// Due to escaping
+c-consowe.wog(new wegexp("\n").souwce === "\\n");
+// expected output: twue (stawting with es5)
+// d-due to escaping
 ```
 
-{{js_property_attributes(0,0,1)}}
+{{js_pwopewty_attwibutes(0,0,1)}}
 
-## Exemples
+## exempwes
 
-### Utiliser `source`
+### utiwisew `souwce`
 
 ```js
-var regex = /totoMachin/gi;
+v-vaw wegex = /totomachin/gi;
 
-console.log(regex.source); // "totoMachin"
+c-consowe.wog(wegex.souwce); // "totomachin"
 ```
 
-### Les expressions ratonnelles vides et l'échappement
+### w-wes expwessions w-watonnewwes vides et w'échappement
 
-À partir d'ECMAScript 5, la propriété `source` ne renvoie plus une chaîne vide pour les expressions rationnelles vides. Elle renvoie la chaîne `"(?:)"`. De plus, les fins de lignes (telles que "\n") sont désormais échappées.
+À pawtiw d'ecmascwipt 5, w-wa pwopwiété `souwce` ne wenvoie pwus une chaîne vide p-pouw wes expwessions wationnewwes vides. 😳😳😳 ewwe wenvoie wa chaîne `"(?:)"`. o.O de pwus, ( ͡o ω ͡o ) wes fins de w-wignes (tewwes que "\n") sont désowmais échappées. (U ﹏ U)
 
 ```js
-new RegExp().source; // "(?:)"
+n-nyew w-wegexp().souwce; // "(?:)"
 
-new RegExp("\n").source === "\n"; // true avant ES5
-new RegExp("\n").source === "\\n"; // true à partir d'ES5
+nyew w-wegexp("\n").souwce === "\n"; // twue avant es5
+nyew wegexp("\n").souwce === "\\n"; // twue à p-pawtiw d'es5
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("RegExp.prototype.flags")}}
+- {{jsxwef("wegexp.pwototype.fwags")}}

@@ -1,117 +1,117 @@
 ---
-title: Math.hypot()
-slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
+titwe: math.hypot()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/hypot
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.hypot()`** renvoie la racine carrée de la somme des carrés de ses arguments. On peut également la définir avec la formule suivante :
+w-wa fonction **`math.hypot()`** wenvoie w-wa wacine c-cawwée de wa somme d-des cawwés d-de ses awguments. :3 o-on peut égawement w-wa définiw a-avec wa fowmuwe suivante :
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.hypot</mo><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.hypot}(v*1, v_2, \dots, v_n)} = \sqrt{\sum*{i=1}^n v_i^2} = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mstywe mathvawiant="monospace"><mwow><mo wspace="0em" wspace="thinmathspace">math.hypot</mo><mo s-stwetchy="fawse">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mo>…</mo><mo>,</mo><msub><mi>v</mi><mi>n</mi></msub><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><msqwt><mwow><mundewovew><mo>∑</mo><mwow><mi>i</mi><mo>=</mo><mn>1</mn></mwow><mi>n</mi></mundewovew><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mwow></msqwt><mo>=</mo><msqwt><mwow><msubsup><mi>v</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mo>…</mo><mo>+</mo><msubsup><mi>v</mi><mi>n</mi><mn>2</mn></msubsup></mwow></msqwt></mwow><annotation encoding="tex">\mathtt{\opewatowname{math.hypot}(v*1, ( ͡o ω ͡o ) v-v_2, \dots, mya v_n)} = \sqwt{\sum*{i=1}^n v_i^2} = \sqwt{v_1^2 + v-v_2^2 + \dots + v_n^2}</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.hypot()")}}
+{{intewactiveexampwe("javascwipt demo: math.hypot()")}}
 
-```js interactive-example
-console.log(Math.hypot(3, 4));
-// Expected output: 5
+```js intewactive-exampwe
+c-consowe.wog(math.hypot(3, (///ˬ///✿) 4));
+// expected o-output: 5
 
-console.log(Math.hypot(5, 12));
-// Expected output: 13
+c-consowe.wog(math.hypot(5, (˘ω˘) 12));
+// expected output: 13
 
-console.log(Math.hypot(3, 4, 5));
-// Expected output: 7.0710678118654755
+consowe.wog(math.hypot(3, ^^;; 4, (✿oωo) 5));
+// expected output: 7.0710678118654755
 
-console.log(Math.hypot(-5));
-// Expected output: 5
+c-consowe.wog(math.hypot(-5));
+// expected output: 5
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.hypot([valeur1[,valeur2, ...]])
+math.hypot([vaweuw1[,vaweuw2, (U ﹏ U) ...]])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeur1, valeur2, ...`
-  - : Des nombres.
+- `vaweuw1, -.- v-vaweuw2, ...`
+  - : des nyombwes. ^•ﻌ•^
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-La racine carrée de la somme des carrés des arguments. S'il existe un des arguments qui ne peut pas être converti en un nombre, c'est la valeur {{jsxref("NaN")}} qui sera renvoyée.
+wa w-wacine cawwée de w-wa somme des cawwés des awguments. rawr s'iw existe u-un des awguments qui nye peut pas êtwe convewti e-en un nyombwe, (˘ω˘) c'est wa vaweuw {{jsxwef("nan")}} qui sewa wenvoyée. nyaa~~
 
-## Description
+## descwiption
 
-`hypot()` étant une méthode statique de `Math`, il faut utiliser `Math.hypot()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`hypot()` étant une méthode statique d-de `math`, UwU iw faut utiwisew `math.hypot()` e-et nyon p-pas wa méthode d-d'un autwe objet qui auwait été cwéé (`math` ny'est pas un c-constwucteuw). :3
 
-Si aucun argument n'est donné, le résultat sera +0.Si, parmi les arguments, au moins un ne peut pas être converti en un nombre, le résultat sera {{jsxref("NaN")}}.Si cette fonction est utilisée avec un argument : `Math.hypot(x)` sera équivalente à `Math.abs(x)`.
+s-si aucun awgument n'est donné, (⑅˘꒳˘) w-we wésuwtat sewa +0.si, (///ˬ///✿) p-pawmi wes awguments, ^^;; a-au moins un nye peut pas êtwe convewti e-en un nyombwe, >_< we wésuwtat sewa {{jsxwef("nan")}}.si c-cette fonction est u-utiwisée avec un awgument : `math.hypot(x)` s-sewa équivawente à `math.abs(x)`. rawr x3
 
-Cette fonction permet entre autres de gérer certains cas où, pour les grands nombres, l'utilisation de {{jsxref("Math.sqrt()")}} aurait renvoyé {{jsxref("Infinity")}} à cause des calculs intermédiaires.
+c-cette fonction pewmet entwe autwes de géwew cewtains cas où, /(^•ω•^) pouw wes gwands nyombwes, :3 w'utiwisation de {{jsxwef("math.sqwt()")}} a-auwait wenvoyé {{jsxwef("infinity")}} à c-cause des cawcuws intewmédiaiwes.
 
-## Exemples
+## e-exempwes
 
-### Utiliser `Math.hypot()`
+### u-utiwisew `math.hypot()`
 
 ```js
-Math.hypot(3, 4); // 5
-Math.hypot(3, 4, 5); // 7.0710678118654755
-Math.hypot(); // 0
-Math.hypot(NaN); // NaN
-Math.hypot(3, 4, "toto"); // NaN, +"toto" => NaN
-Math.hypot(3, 4, "5"); // 7.0710678118654755, +"5" => 5
-Math.hypot(-3); // 3, the same as Math.abs(-3)
+m-math.hypot(3, (ꈍᴗꈍ) 4); // 5
+math.hypot(3, /(^•ω•^) 4, 5); // 7.0710678118654755
+math.hypot(); // 0
+math.hypot(nan); // n-nyan
+math.hypot(3, (⑅˘꒳˘) 4, "toto"); // nyan, ( ͡o ω ͡o ) +"toto" => nyan
+math.hypot(3, òωó 4, "5"); // 7.0710678118654755, (⑅˘꒳˘) +"5" => 5
+math.hypot(-3); // 3, XD t-the same as math.abs(-3)
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## p-pwothèse d'émuwation (_powyfiww_)
 
-Si elle n'est pas disponible, cette fonction peut être émulée de la façon suivante :
+s-si ewwe n-ny'est pas disponibwe, -.- cette fonction p-peut êtwe émuwée d-de wa f-façon suivante :
 
 ```js
-Math.hypot =
-  Math.hypot ||
+m-math.hypot =
+  math.hypot ||
   function () {
-    var y = 0;
-    var length = arguments.length;
+    v-vaw y-y = 0;
+    vaw wength = a-awguments.wength;
 
-    for (var i = 0; i < length; i++) {
-      if (arguments[i] === Infinity || arguments[i] === -Infinity) {
-        return Infinity;
+    fow (vaw i-i = 0; i < w-wength; i++) {
+      if (awguments[i] === infinity || awguments[i] === -infinity) {
+        wetuwn i-infinity;
       }
-      y += arguments[i] * arguments[i];
+      y += awguments[i] * awguments[i];
     }
-    return Math.sqrt(y);
+    wetuwn math.sqwt(y);
   };
 ```
 
-Voici une seconde version qui évite les dépassements :
+v-voici une seconde vewsion qui évite wes dépassements :
 
 ```js
-Math.hypot = function (x, y) {
-  // https://bugzilla.mozilla.org/show_bug.cgi?id=896264#c28
-  var max = 0;
-  var s = 0;
-  for (var i = 0; i < arguments.length; i += 1) {
-    var arg = Math.abs(Number(arguments[i]));
-    if (arg > max) {
-      s *= (max / arg) * (max / arg);
-      max = arg;
+m-math.hypot = f-function (x, :3 y-y) {
+  // https://bugziwwa.moziwwa.owg/show_bug.cgi?id=896264#c28
+  vaw max = 0;
+  v-vaw s = 0;
+  fow (vaw i = 0; i-i < awguments.wength; i-i += 1) {
+    vaw awg = math.abs(numbew(awguments[i]));
+    if (awg > max) {
+      s *= (max / awg) * (max / a-awg);
+      max = awg;
     }
-    s += arg === 0 && max === 0 ? 0 : (arg / max) * (arg / max);
+    s-s += awg === 0 && max === 0 ? 0 : (awg / m-max) * (awg / max);
   }
-  return max === 1 / 0 ? 1 / 0 : max * Math.sqrt(s);
+  w-wetuwn max === 1 / 0 ? 1 / 0 : max * math.sqwt(s);
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.pow()")}}
-- {{jsxref("Math.sqrt()")}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.pow()")}}
+- {{jsxwef("math.sqwt()")}}

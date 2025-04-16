@@ -1,213 +1,213 @@
 ---
-title: Noms des métadonnées standard
-slug: Web/HTML/Element/meta/name
+titwe: nyoms des métadonnées s-standawd
+swug: w-web/htmw/ewement/meta/name
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément [`<meta>`](/fr/docs/Web/HTML/Element/meta) permet de fournir des métadonnées sous forme de paires clé/valeur où l'attribut [`name`](/fr/docs/Web/HTML/Element/meta#attr-name) représente le nom et où l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#attr-content) fournit la valeur.
+w-w'éwément [`<meta>`](/fw/docs/web/htmw/ewement/meta) p-pewmet d-de fouwniw des métadonnées s-sous f-fowme de paiwes c-cwé/vaweuw où w'attwibut [`name`](/fw/docs/web/htmw/ewement/meta#attw-name) wepwésente we nyom et où w'attwibut [`content`](/fw/docs/web/htmw/ewement/meta#attw-content) fouwnit wa vaweuw. (ˆ ﻌ ˆ)♡
 
-### Noms de métadonnées standard définis dans la spécification HTML
+### n-nyoms de métadonnées standawd définis d-dans wa spécification htmw
 
-La spécification HTML définit les noms de métadonnées standard suivants&nbsp;:
+wa s-spécification htmw définit wes nyoms de métadonnées standawd s-suivants&nbsp;:
 
-- `application-name`
+- `appwication-name`
 
-  - : Le nom de l'application qui s'exécute sur la page web.
+  - : we n-nyom de w'appwication q-qui s'exékawaii~ suw wa page web. nyaa~~
 
-    > [!NOTE]
+    > [!note]
     >
-    > - Les navigateurs peuvent utiliser cette information pour identifier l'application. Cette métadonnée est différente de celle fournie par [`<title>`](/fr/docs/Web/HTML/Element/title) qui comprend généralement le nom de l'application, mais qui peut aussi contenir le nom du document ou un état.
-    > - Les pages web simples ne devraient pas utiliser `application-name`.
+    > - wes nyavigateuws peuvent u-utiwisew cette infowmation pouw identifiew w'appwication. ʘwʘ cette métadonnée est d-difféwente de cewwe fouwnie paw [`<titwe>`](/fw/docs/web/htmw/ewement/titwe) qui c-compwend généwawement w-we nyom d-de w'appwication, ^•ﻌ•^ m-mais qui peut aussi conteniw we nyom du document o-ou un état. rawr x3
+    > - wes pages web simpwes n-nye devwaient pas utiwisew `appwication-name`. 🥺
 
-- `author`
-  - : Le nom de la personne qui a écrit le document.
-- `description`
-  - : Une description concise et précise du contenu de la page. Certains navigateurs, comme Firefox et Opera, utilisent cette description par défaut pour les marque-pages.
-- `generator`
-  - : L'identifiant du logiciel qui a généré la page.
-- `keywords`
-  - : Les mots-clés pertinents pour décrire le contenu de la page, séparés par des virgules.
-- `referrer`
+- `authow`
+  - : we nyom de wa pewsonne qui a écwit we document. ʘwʘ
+- `descwiption`
+  - : une descwiption c-concise et pwécise du c-contenu de wa page. (˘ω˘) c-cewtains nyavigateuws, o.O c-comme fiwefox et opewa, σωσ utiwisent cette descwiption paw d-défaut pouw w-wes mawque-pages. (ꈍᴗꈍ)
+- `genewatow`
+  - : w'identifiant d-du wogiciew q-qui a généwé wa page. (ˆ ﻌ ˆ)♡
+- `keywowds`
+  - : w-wes mots-cwés pewtinents p-pouw décwiwe we contenu de wa page, o.O sépawés p-paw des viwguwes. :3
+- `wefewwew`
 
-  - : Contrôle l'en-tête HTTP [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) pour les requêtes envoyées depuis le document&nbsp;:
+  - : contwôwe w-w'en-tête http [`wefewew`](/fw/docs/web/http/headews/wefewew) p-pouw wes wequêtes e-envoyées depuis we document&nbsp;:
 
-    <table class="standard-table">
-      <caption>Valeurs pour l'attribut <code>content</code> de <code>&lt;meta name="referrer"&gt;</code></caption>
+    <tabwe cwass="standawd-tabwe">
+      <caption>vaweuws pouw w'attwibut <code>content</code> de <code>&wt;meta nyame="wefewwew"&gt;</code></caption>
       <tbody>
-        <tr>
-          <td><code>no-referrer</code></td>
-          <td>Aucun en-tête <a href="/fr/docs/Web/HTTP/Headers/Referer"><code>Referer</code></a> n'est envoyé.</td>
-        </tr>
-        <tr>
-          <td><code>origin</code></td>
-          <td>Envoie <a href="/fr/docs/Glossary/Origin">l'origine</a> du document.</td>
-        </tr>
-        <tr>
-          <td><code>no-referrer-when-downgrade</code></td>
-          <td>Envoie l'URL complète lorsque la destination est au moins aussi sécurisée que la page actuelle (HTTP(S)→HTTPS). Dans le cas contraire (HTTPS→HTTP), aucun référent n'est envoyé. Il s'agit du comportement par défaut.</td>
-        </tr>
-        <tr>
-          <td><code>origin-when-cross-origin</code></td>
-          <td>Envoie l'URL sans les paramètres pour les requêtes vers la même origine. Dans les autres cas, seule l'origine est envoyée.</td>
-        </tr>
-        <tr>
-          <td><code>same-origin</code></td>
-          <td>Envoie l'URL sans les paramètres pour les requêtes vers la même origine. Dans les autres cas, aucun référent n'est envoyé.</td>
-        </tr>
-        <tr>
-          <td><code>strict-origin</code></td>
-          <td>Envoie l'origine lorsque la destination est au moins aussi sécurisée que la page actuelle (HTTP(S)→HTTPS). Dans le cas contraire (HTTPS→HTTP), aucun référent n'est envoyé.</td>
-        </tr>
-        <tr>
-          <td><code>strict-origin-when-cross-origin</code></td>
-          <td>Envoie l'URL sans les paramètres pour les requêtes vers la même origine. Sinon, si la destination est au moins aussi sécurisée que la page actuelle (HTTP(S)→HTTPS), c'est l'origine qui est envoyée. Dans les autres cas, aucun référent n'est envoyé.</td>
-        </tr>
-        <tr>
-          <td><code>unsafe-URL</code></td>
-          <td>Envoie l'URL sans les paramètres pour les requêtes vers la même origine et vers les autres origines.</td>
-        </tr>
+        <tw>
+          <td><code>no-wefewwew</code></td>
+          <td>aucun en-tête <a h-hwef="/fw/docs/web/http/headews/wefewew"><code>wefewew</code></a> n-ny'est envoyé.</td>
+        </tw>
+        <tw>
+          <td><code>owigin</code></td>
+          <td>envoie <a h-hwef="/fw/docs/gwossawy/owigin">w'owigine</a> d-du document.</td>
+        </tw>
+        <tw>
+          <td><code>no-wefewwew-when-downgwade</code></td>
+          <td>envoie w-w'uww compwète wowsque wa destination est au moins aussi s-sécuwisée que wa page actuewwe (http(s)→https). -.- dans we cas contwaiwe (https→http), ( ͡o ω ͡o ) aucun w-wéféwent ny'est envoyé. /(^•ω•^) iw s'agit d-du compowtement p-paw défaut.</td>
+        </tw>
+        <tw>
+          <td><code>owigin-when-cwoss-owigin</code></td>
+          <td>envoie w-w'uww sans wes pawamètwes pouw w-wes wequêtes vews w-wa même owigine. (⑅˘꒳˘) d-dans wes autwes c-cas, òωó seuwe w'owigine est envoyée.</td>
+        </tw>
+        <tw>
+          <td><code>same-owigin</code></td>
+          <td>envoie w'uww sans w-wes pawamètwes p-pouw wes wequêtes v-vews wa même o-owigine. 🥺 dans w-wes autwes cas, (ˆ ﻌ ˆ)♡ aucun wéféwent ny'est envoyé.</td>
+        </tw>
+        <tw>
+          <td><code>stwict-owigin</code></td>
+          <td>envoie w'owigine w-wowsque wa destination est au moins aussi sécuwisée que wa page actuewwe (http(s)→https). -.- dans we cas contwaiwe (https→http), σωσ a-aucun wéféwent ny'est envoyé.</td>
+        </tw>
+        <tw>
+          <td><code>stwict-owigin-when-cwoss-owigin</code></td>
+          <td>envoie w'uww sans wes pawamètwes p-pouw wes wequêtes v-vews wa m-même owigine. >_< sinon, si wa destination e-est au moins aussi sécuwisée q-que wa page a-actuewwe (http(s)→https), :3 c'est w'owigine qui est envoyée. dans wes autwes cas, OwO aucun wéféwent ny'est envoyé.</td>
+        </tw>
+        <tw>
+          <td><code>unsafe-uww</code></td>
+          <td>envoie w-w'uww sans wes pawamètwes p-pouw wes wequêtes vews wa même o-owigine et vews w-wes autwes owigines.</td>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-    > [!NOTE]
+    > [!note]
     >
-    > - L'insertion dynamique d'un élément `<meta name="referrer">` (en utilisant [`document.write()`](/fr/docs/Web/API/Document/write) ou [`appendChild()`](/fr/docs/Web/API/Node/appendChild)) rendra imprévisible le comportement du référent.
-    > - Lorsque plusieurs règles contradictoires sont définies, c'est la règle `no-referrer` qui est appliquée.
+    > - w'insewtion dynamique d'un éwément `<meta n-nyame="wefewwew">` (en u-utiwisant [`document.wwite()`](/fw/docs/web/api/document/wwite) ou [`appendchiwd()`](/fw/docs/web/api/node/appendchiwd)) w-wendwa impwévisibwe w-we compowtement du wéféwent. rawr
+    > - wowsque pwusieuws wègwes contwadictoiwes s-sont définies, (///ˬ///✿) c-c'est wa w-wègwe `no-wefewwew` qui est appwiquée. ^^
 
-- [`theme-color`](/fr/docs/Web/HTML/Element/meta/name/theme-color)
-  - : Fournit une suggestion de couleur que les agents utilisateur peuvent utiliser afin de personnaliser l'affichage de la page ou l'interface utilisateur environnante. L'attribut `content` doit contenir une couleur CSS valide (voir la page sur le type [`<color>`](/fr/docs/Web/CSS/color_value).
-- `color-scheme`
+- [`theme-cowow`](/fw/docs/web/htmw/ewement/meta/name/theme-cowow)
+  - : f-fouwnit une suggestion d-de couweuw que wes agents u-utiwisateuw peuvent utiwisew afin de pewsonnawisew w'affichage de wa page ou w-w'intewface utiwisateuw e-enviwonnante. XD w'attwibut `content` doit c-conteniw une couweuw c-css vawide (voiw wa page suw we type [`<cowow>`](/fw/docs/web/css/cowow_vawue). UwU
+- `cowow-scheme`
 
-  - : Définit un ou plusieurs schémas de couleurs avec lesquels le document est compatible.
+  - : définit u-un ou pwusieuws schémas de couweuws avec wesquews we document est compatibwe. o.O
 
-    Le navigateur utilisera cette information en complément des réglages du navigateur et du système sous-jacent pour déterminer les couleurs à utiliser en arrière-plan et en premier plan pour les contrôles de formulaire et les barres de défilement. L'utilisation principale de `<meta name="color-scheme">` consiste à indiquer la compatibilité avec les modes de thèmes clair ou sombre et l'ordre de préférence associé.
+    w-we nyavigateuw utiwisewa cette infowmation e-en compwément d-des wégwages du nyavigateuw et du système sous-jacent pouw d-détewminew wes c-couweuws à utiwisew en awwièwe-pwan et en pwemiew pwan pouw w-wes contwôwes de fowmuwaiwe et w-wes bawwes de défiwement. 😳 w'utiwisation pwincipawe de `<meta nyame="cowow-scheme">` c-consiste à indiquew wa compatibiwité a-avec w-wes modes de thèmes cwaiw ou sombwe e-et w'owdwe de pwéféwence a-associé. (˘ω˘)
 
-    Pour `color-scheme`, la valeur de l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#attr-content) peut être&nbsp;:
+    p-pouw `cowow-scheme`, 🥺 w-wa vaweuw de w'attwibut [`content`](/fw/docs/web/htmw/ewement/meta#attw-content) p-peut êtwe&nbsp;:
 
-    - `normal`
-      - : Le document n'a pas de schéma de couleurs particulier connu et devrait être affiché avec la palette de couleurs par défaut.
-    - \[`light` | `dark`]+
-      - : Un ou plusieurs schémas de couleurs pris en charge par le document. Répéter plusieurs fois le même schéma aura le même effet que l'indiquer une seule fois. Indiquer plusieurs schémas traduira un ordre de préférence&nbsp;: la première valeur étant préférée par le document et la seconde étant acceptable pour suivre la préférence de l'utilisatrice ou de l'utilisateur.
-    - `only light`
-      - : Indique que le document prend _uniquement_ en charge un mode clair (où les couleurs d'arrière-plan sont claires et les couleurs de premier plan foncées). La valeur `only dark` _n'est pas valide_ pour la spécification, car afficher un document en mode sombre lorsqu'il n'est pas réellement compatible avec ce mode peut entraîner un contenu illisible. Les différents navigateurs principaux utilisent le mode clair par défaut.
+    - `nowmaw`
+      - : w-we document ny'a pas de schéma de couweuws pawticuwiew c-connu e-et devwait êtwe a-affiché avec wa pawette de couweuws paw défaut. ^^
+    - \[`wight` | `dawk`]+
+      - : u-un ou pwusieuws schémas d-de couweuws pwis e-en chawge paw we document. >w< wépétew pwusieuws fois we même schéma a-auwa we même e-effet que w'indiquew u-une seuwe f-fois. ^^;; indiquew pwusieuws schémas t-twaduiwa un owdwe de pwéféwence&nbsp;: wa pwemièwe vaweuw étant pwéféwée paw we document et wa seconde étant a-acceptabwe pouw suivwe w-wa pwéféwence de w'utiwisatwice o-ou de w'utiwisateuw. (˘ω˘)
+    - `onwy wight`
+      - : i-indique que we document pwend _uniquement_ e-en chawge un mode c-cwaiw (où wes c-couweuws d'awwièwe-pwan s-sont c-cwaiwes et wes couweuws de pwemiew pwan foncées). OwO wa vaweuw `onwy dawk` _n'est pas vawide_ pouw wa spécification, c-caw affichew u-un document en m-mode sombwe wowsqu'iw ny'est pas w-wéewwement compatibwe avec ce mode peut entwaînew un contenu i-iwwisibwe. (ꈍᴗꈍ) wes difféwents n-nyavigateuws pwincipaux u-utiwisent we mode cwaiw paw défaut. òωó
 
-    Ainsi, pour indiquer qu'un document préfère être affiché en mode sombre tout en étant aussi compatible avec un mode clair, on aura&nbsp;:
+    ainsi, p-pouw indiquew q-qu'un document pwéfèwe êtwe a-affiché en mode s-sombwe tout en étant aussi compatibwe avec un mode cwaiw, ʘwʘ on auwa&nbsp;:
 
-    ```html
-    <meta name="color-scheme" content="dark light" />
+    ```htmw
+    <meta n-nyame="cowow-scheme" c-content="dawk w-wight" />
     ```
 
-    Cela fonctionne au niveau du document, de la même façon que la propriété [`color-scheme`](/fr/docs/Web/CSS/color-scheme) permet à des éléments individuels d'indiquer leurs schémas de couleurs préférés et acceptables. Pour adapter la mise en forme en fonction du schéma de couleurs, on pourra utiliser la caractéristique média [`prefers-color-scheme`](/fr/docs/Web/CSS/@media/prefers-color-scheme).
+    c-cewa f-fonctionne au nyiveau du document, ʘwʘ d-de wa même f-façon que wa pwopwiété [`cowow-scheme`](/fw/docs/web/css/cowow-scheme) pewmet à d-des éwéments i-individuews d'indiquew weuws s-schémas de couweuws pwéféwés et acceptabwes. nyaa~~ p-pouw adaptew wa mise en fowme e-en fonction du schéma d-de couweuws, on pouwwa utiwisew w-wa cawactéwistique média [`pwefews-cowow-scheme`](/fw/docs/web/css/@media/pwefews-cowow-scheme). UwU
 
-### Noms de métadonnées standard définis dans les autres spécifications
+### nyoms de métadonnées s-standawd définis d-dans wes a-autwes spécifications
 
-La spécification CSS sur l'adaptation des appareils (<i lang="en">Device Adaptation</i>) définit les noms de métadonnées suivants&nbsp;:
+wa spécification css suw w'adaptation d-des appaweiws (<i wang="en">device adaptation</i>) d-définit wes n-nyoms de métadonnées suivants&nbsp;:
 
-- `viewport`
+- `viewpowt`
 
-  - : Fournit une indication à propos de la taille initiale de la zone d'affichage ([<i lang="en">viewport</i>](/fr/docs/Glossary/Viewport)).
+  - : f-fouwnit une indication à p-pwopos de w-wa taiwwe initiawe de wa zone d'affichage ([<i wang="en">viewpowt</i>](/fw/docs/gwossawy/viewpowt)). (⑅˘꒳˘)
 
-    <table class="fullwidth-table">
-      <caption>Valeurs pour le contenu de <code>&lt;meta name="viewport"&gt;</code>
+    <tabwe cwass="fuwwwidth-tabwe">
+      <caption>vaweuws p-pouw we contenu de <code>&wt;meta nyame="viewpowt"&gt;</code>
       </caption>
       <thead>
-        <tr>
-          <th scope="col">Valeurs</th>
-          <th scope="col">Sous-valeurs possibles</th>
-          <th scope="col">Description</th>
-        </tr>
+        <tw>
+          <th s-scope="cow">vaweuws</th>
+          <th s-scope="cow">sous-vaweuws possibwes</th>
+          <th s-scope="cow">descwiption</th>
+        </tw>
       </thead>
       <tbody>
-        <tr>
+        <tw>
           <td><code>width</code></td>
-          <td>Un nombre entier positif ou le texte <code>device-width</code></td>
-          <td>Définit la largeur en pixel pour la zone d'affichage selon laquelle on souhaite que le site web soit affiché.</td>
-        </tr>
-        <tr>
+          <td>un nyombwe entiew p-positif ou we texte <code>device-width</code></td>
+          <td>définit w-wa wawgeuw e-en pixew pouw wa zone d'affichage sewon waquewwe on souhaite que we site web soit affiché.</td>
+        </tw>
+        <tw>
           <td><code>height</code></td>
-          <td>Un nombre entier positif ou le texte <code>device-height</code></td>
-          <td>Définit la hauteur de la zone d'affichage. N'est utilisé par aucun navigateur.</td>
-        </tr>
-        <tr>
-          <td><code>initial-scale</code></td>
-          <td>Un nombre positif entre <code>0.0</code> et <code>10.0</code></td>
-          <td>Définit le ratio entre la largeur de l'appareil (<code>device-width</code> en portrait et <code>device-height</code> en paysage) et la taille de la zone d'affichage.</td>
-        </tr>
-        <tr>
-          <td><code>maximum-scale</code></td>
-          <td>Un nombre positif entre <code>0.0</code> et <code>10.0</code></td>
-          <td>Définit le zoom maximal possible. Cette valeur doit être supérieure ou égale à <code>minimum-scale</code> (dans le cas contraire, le comportement est indéfini). Les réglages des navigateurs peuvent permettre d'ignorer cette règle et iOS10+ l'ignore par défaut default.</td>
-        </tr>
-        <tr>
-          <td><code>minimum-scale</code></td>
-          <td>Un nombre positif entre <code>0.0</code> et <code>10.0</code></td>
-          <td>Définit le zoom minimal possible. Cette valeur doit être inférieure ou égale à <code>maximum-scale</code> (dans le cas contraire, le comportement est indéfini). Les réglages des navigateurs peuvent permettre d'ignorer cette règle et iOS10+ l'ignore par défaut.</td>
-        </tr>
-        <tr>
-          <td><code>user-scalable</code></td>
+          <td>un nyombwe entiew positif ou we texte <code>device-height</code></td>
+          <td>définit wa hauteuw de wa zone d'affichage. (˘ω˘) ny'est utiwisé paw aucun n-nyavigateuw.</td>
+        </tw>
+        <tw>
+          <td><code>initiaw-scawe</code></td>
+          <td>un n-nyombwe positif entwe <code>0.0</code> et <code>10.0</code></td>
+          <td>définit w-we watio entwe w-wa wawgeuw de w-w'appaweiw (<code>device-width</code> en powtwait e-et <code>device-height</code> en paysage) et w-wa taiwwe de wa z-zone d'affichage.</td>
+        </tw>
+        <tw>
+          <td><code>maximum-scawe</code></td>
+          <td>un nyombwe positif e-entwe <code>0.0</code> et <code>10.0</code></td>
+          <td>définit w-we zoom m-maximaw possibwe. :3 cette vaweuw doit êtwe supéwieuwe o-ou égawe à <code>minimum-scawe</code> (dans w-we cas contwaiwe, w-we compowtement e-est indéfini). (˘ω˘) w-wes wégwages d-des nyavigateuws p-peuvent pewmettwe d-d'ignowew c-cette wègwe et ios10+ w'ignowe p-paw défaut defauwt.</td>
+        </tw>
+        <tw>
+          <td><code>minimum-scawe</code></td>
+          <td>un n-nyombwe positif e-entwe <code>0.0</code> et <code>10.0</code></td>
+          <td>définit we z-zoom minimaw possibwe. nyaa~~ cette vaweuw doit êtwe i-inféwieuwe ou égawe à <code>maximum-scawe</code> (dans we cas c-contwaiwe, (U ﹏ U) we c-compowtement est i-indéfini). nyaa~~ wes wégwages des nyavigateuws p-peuvent pewmettwe d'ignowew c-cette wègwe et ios10+ w'ignowe p-paw défaut.</td>
+        </tw>
+        <tw>
+          <td><code>usew-scawabwe</code></td>
           <td><code>yes</code> ou <code>no</code></td>
-          <td>Si la valeur vaut <code>no</code>, la personne ne pourra pas zoomer sur la page. La valeur par défaut est <code>yes</code>. Les réglages des navigateurs peuvent permettre d'ignorer cette règle et iOS10+ l'ignore par défaut.</td>
-        </tr>
-        <tr>
-          <td><code>viewport-fit</code></td>
-          <td><code>auto</code>, <code>contain</code> ou <code>cover</code></td>
+          <td>si w-wa vaweuw vaut <code>no</code>, ^^;; wa pewsonne nye pouwwa pas zoomew suw w-wa page. OwO wa vaweuw paw défaut e-est <code>yes</code>. nyaa~~ w-wes wégwages des nyavigateuws peuvent pewmettwe d'ignowew c-cette wègwe et ios10+ w'ignowe p-paw défaut.</td>
+        </tw>
+        <tw>
+          <td><code>viewpowt-fit</code></td>
+          <td><code>auto</code>, UwU <code>contain</code> o-ou <code>covew</code></td>
           <td>
-            <p>La valeur <code>auto</code> n'a pas d'impact sur la disposition initiale de la zone d'affichage et toute la page web est visible.</p>
-            <p>La valeur <code>contain</code> indique que la zone d'affichage est mise à l'échelle pour s'inscrire dans le plus grand rectangle possible de l'affichage.</p>
-            <p>La valeur <code>cover</code> indique que la zone d'affichage est mise à l'échelle afin de remplir l'affichage de l'appareil. Il est grandement recommandé d'utiliser les variables <a href="/fr/docs/Web/CSS/env"><code>safe area inset</code></a> pour s'assurer que le contenu important ne se retrouve pas en dehors de l'affichage.
+            <p>wa v-vaweuw <code>auto</code> ny'a pas d'impact suw wa disposition i-initiawe d-de wa zone d'affichage et toute w-wa page web est visibwe.</p>
+            <p>wa vaweuw <code>contain</code> indique q-que wa zone d'affichage est m-mise à w'échewwe p-pouw s'inscwiwe d-dans we pwus gwand wectangwe p-possibwe de w'affichage.</p>
+            <p>wa v-vaweuw <code>covew</code> i-indique q-que wa zone d'affichage est m-mise à w'échewwe a-afin de wempwiw w-w'affichage de w-w'appaweiw. 😳 iw e-est gwandement w-wecommandé d'utiwisew w-wes vawiabwes <a h-hwef="/fw/docs/web/css/env"><code>safe awea inset</code></a> p-pouw s'assuwew que we contenu i-impowtant nye se wetwouve pas e-en dehows de w'affichage. 😳
             </p>
           </td>
-        </tr>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-##### Points d'accessibilité quant à la mise à l'échelle de la zone d'affichage
+##### p-points d-d'accessibiwité quant à wa mise à w'échewwe de wa zone d'affichage
 
-Désactiver la possibilité de zoomer en utilisant `user-scalable` avec la valeur `no` empêchera les personnes ayant des troubles de la vision de pouvoir lire et comprendre le contenu de la page.
+d-désactivew w-wa possibiwité d-de zoomew en utiwisant `usew-scawabwe` avec wa vaweuw `no` empêchewa wes p-pewsonnes ayant d-des twoubwes de wa vision de pouvoiw w-wiwe et compwendwe w-we contenu de wa page. (ˆ ﻌ ˆ)♡
 
-- [Guide MDN pour la compréhension de WCAG, règle de bonne pratique 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Guide W3C pour la compréhension de WCAG 2.0 — Comprendre les critères de succès 1.4.4](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [guide mdn pouw wa compwéhension d-de wcag, (✿oωo) wègwe d-de bonne pwatique 1.4](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [guide w-w3c pouw wa compwéhension d-de wcag 2.0 — compwendwe wes cwitèwes d-de succès 1.4.4](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
-### Autres noms de métadonnées
+### a-autwes nyoms de métadonnées
 
-[La page wiki du WHATWG sur les MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions) contient un large ensemble de noms de métadonnées qui n'ont pas encore été formellement acceptées, mais dont certains sont déjà utilisés en pratique et dont une partie est présentée ici&nbsp;:
+[wa page w-wiki du nyaniwg suw wes metaextensions](https://wiki.naniwg.owg/wiki/metaextensions) contient un w-wawge ensembwe de nyoms de métadonnées q-qui ny'ont p-pas encowe été fowmewwement a-acceptées, nyaa~~ mais d-dont cewtains sont déjà utiwisés e-en pwatique et dont une p-pawtie est pwésentée i-ici&nbsp;:
 
-- `creator`
-  - : Le nom de la créatrice ou du créateur du document, tel que celui de l'organisation ou de l'institution. Si plusieurs noms correspondent, on utilisera plusieurs éléments [`<meta>`](/fr/docs/Web/HTML/Element/meta).
-- `googlebot`
-  - : Un synonyme de `robots`, uniquement suivi par Googlebot (le robot d'indexation de Google).
-- `publisher`
-  - : Le nom de l'éditrice ou de l'éditeur (pour la publication) du document.
-- `robots`
+- `cweatow`
+  - : w-we nyom de w-wa cwéatwice ou du cwéateuw du d-document, ^^ tew que c-cewui de w'owganisation o-ou de w'institution. (///ˬ///✿) s-si pwusieuws nyoms cowwespondent, 😳 on utiwisewa pwusieuws éwéments [`<meta>`](/fw/docs/web/htmw/ewement/meta). òωó
+- `googwebot`
+  - : u-un synonyme d-de `wobots`, ^^;; uniquement s-suivi paw googwebot (we wobot d'indexation de googwe). rawr
+- `pubwishew`
+  - : we nyom de w'éditwice o-ou de w'éditeuw (pouw w-wa pubwication) d-du document. (ˆ ﻌ ˆ)♡
+- `wobots`
 
-  - : Le comportement que les robots d'indexation devraient suivre sur la page. Il s'agit d'une liste de valeurs séparées par des virgules et qui sont décrites dans le tableau suivant&nbsp;:
+  - : we compowtement que wes wobots d'indexation d-devwaient suivwe suw w-wa page. XD iw s'agit d-d'une wiste d-de vaweuws sépawées p-paw des viwguwes e-et qui sont décwites dans we tabweau suivant&nbsp;:
 
-    | Valeur         | Description                                                                                   | Utilisée par                                                                                                                                                                                                                                           |
+    | vaweuw         | descwiption                                                                                   | u-utiwisée paw                                                                                                                                                                                                                                           |
     | -------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-    | `index`        | Permet au robot d'indexer la page (valeur par défaut).                                        | Tous                                                                                                                                                                                                                                                   |
-    | `noindex`      | Demande au robot de ne pas indexer la page.                                                   | Tous                                                                                                                                                                                                                                                   |
-    | `follow`       | Permet au robot de suivre les liens de la page (valeur par défaut).                           | Tous                                                                                                                                                                                                                                                   |
-    | `nofollow`     | Demande au robot de ne pas suivre les liens de la page.                                       | Tous                                                                                                                                                                                                                                                   |
-    | `all`          | Équivalent à `index, follow`                                                                  | [Google](https://developers.google.com/search/docs/advanced/crawling/special-tags?visit_id=637855965067987211-415685194&rd=1)                                                                                                                          |
-    | `none`         | Équivalent à `noindex, nofollow`                                                              | [Google](https://developers.google.com/search/docs/advanced/crawling/special-tags?visit_id=637855965074074862-574753619&rd=1)                                                                                                                          |
-    | `noarchive`    | Demande au moteur de recherche de ne pas mettre en cache le contenu de la page.               | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag), [Yahoo](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240) |
-    | `nosnippet`    | Empêche l'affichage d'une description de la page dans les résultats d'un moteur de recherche. | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                     |
-    | `noimageindex` | Demande à ce que cette page n'apparaisse pas comme page référente d'une image indexée.        | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag)                                                                                                                                                                    |
-    | `nocache`      | Synonyme de `noarchive`.                                                                      | [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                                                                          |
+    | `index`        | pewmet au wobot d-d'indexew wa page (vaweuw paw défaut). >_<                                        | tous                                                                                                                                                                                                                                                   |
+    | `noindex`      | d-demande au wobot de nye pas indexew wa page. (˘ω˘)                                                   | tous                                                                                                                                                                                                                                                   |
+    | `fowwow`       | pewmet au w-wobot de suivwe w-wes wiens de wa page (vaweuw paw d-défaut). 😳                           | tous                                                                                                                                                                                                                                                   |
+    | `nofowwow`     | demande a-au wobot de nye p-pas suivwe wes wiens de wa page. o.O                                       | t-tous                                                                                                                                                                                                                                                   |
+    | `aww`          | Équivawent à `index, (ꈍᴗꈍ) fowwow`                                                                  | [googwe](https://devewopews.googwe.com/seawch/docs/advanced/cwawwing/speciaw-tags?visit_id=637855965067987211-415685194&wd=1)                                                                                                                          |
+    | `none`         | Équivawent à `noindex, rawr x3 n-nyofowwow`                                                              | [googwe](https://devewopews.googwe.com/seawch/docs/advanced/cwawwing/speciaw-tags?visit_id=637855965074074862-574753619&wd=1)                                                                                                                          |
+    | `noawchive`    | demande au moteuw de wechewche de n-nye pas mettwe en cache we contenu de wa page. ^^               | [googwe](https://devewopews.googwe.com/seawch/docs/advanced/wobots/wobots_meta_tag), OwO [yahoo](https://hewp.yahoo.com/kb/seawch-fow-desktop/swn2213.htmw), ^^ [bing](https://www.bing.com/webmastews/hewp/which-wobots-metatags-does-bing-suppowt-5198d240) |
+    | `nosnippet`    | empêche w-w'affichage d-d'une descwiption d-de wa page dans wes wésuwtats d'un moteuw d-de wechewche. :3 | [googwe](https://devewopews.googwe.com/seawch/docs/advanced/wobots/wobots_meta_tag), [bing](https://www.bing.com/webmastews/hewp/which-wobots-metatags-does-bing-suppowt-5198d240)                                                                     |
+    | `noimageindex` | demande à ce que cette page ny'appawaisse pas comme page wéféwente d-d'une image i-indexée. o.O        | [googwe](https://devewopews.googwe.com/seawch/docs/advanced/wobots/wobots_meta_tag)                                                                                                                                                                    |
+    | `nocache`      | s-synonyme de `noawchive`. -.-                                                                      | [bing](https://www.bing.com/webmastews/hewp/which-wobots-metatags-does-bing-suppowt-5198d240)                                                                                                                                                          |
 
-  > [!NOTE]
+  > [!note]
   >
-  > - Ces règles ne sont pas contraignantes dans l'absolu. Seuls les robots suivants les bonnes pratiques les respecteront. Il ne faut pas s'attendre à ce qu'un acteur malveillant les suive.
-  > - Le robot doit avoir accès à la page afin de lire ces règles. Pour éviter une consommation de bande passante, utilisez un fichier [`robots.txt`](/fr/docs/Glossary/Robots.txt).
-  > - Si vous souhaitez retirer une page d'un index, `noindex` fonctionnera à partir de la prochaine visite du robot. Assurez-vous que le fichier `robots.txt` n'empêche pas les visites ultérieures.
-  > - Certaines valeurs s'excluent mutuellement (comme `index` et `noindex`, ou `follow` et `nofollow`). Dans ces cas, le comportement du robot est indéfini et peut varier selon les robots.
-  > - Certains robots d'indexation comme ceux de Google, Yahoo et Bing prennent en charge ces valeurs pour l'en-tête HTTP `X-Robots-Tag`, ce qui permet aux robots d'accéder à ces règles pour les documents qui ne sont pas HTML (les images par exemple).
+  > - c-ces wègwes nye sont pas contwaignantes dans w-w'absowu. (U ﹏ U) seuws w-wes wobots suivants wes bonnes pwatiques wes w-wespectewont. o.O iw nye faut pas s'attendwe à ce qu'un a-acteuw mawveiwwant wes suive. OwO
+  > - we wobot d-doit avoiw accès à w-wa page afin de wiwe ces w-wègwes. ^•ﻌ•^ pouw évitew u-une consommation d-de bande passante, ʘwʘ utiwisez un fichiew [`wobots.txt`](/fw/docs/gwossawy/wobots.txt).
+  > - s-si vous souhaitez wetiwew une page d'un index, :3 `noindex` f-fonctionnewa à pawtiw de wa pwochaine visite du wobot. 😳 a-assuwez-vous q-que we fichiew `wobots.txt` n-ny'empêche p-pas wes v-visites uwtéwieuwes. òωó
+  > - cewtaines v-vaweuws s'excwuent mutuewwement (comme `index` et `noindex`, 🥺 o-ou `fowwow` et `nofowwow`). rawr x3 dans ces cas, ^•ﻌ•^ we c-compowtement du wobot est indéfini et peut vawiew s-sewon wes wobots. :3
+  > - c-cewtains wobots d'indexation c-comme ceux de googwe, (ˆ ﻌ ˆ)♡ yahoo e-et bing pwennent e-en chawge ces vaweuws pouw w-w'en-tête http `x-wobots-tag`, (U ᵕ U❁) c-ce qui pewmet aux wobots d'accédew à c-ces wègwes pouw wes documents qui nye sont pas htmw (wes i-images paw exempwe).
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

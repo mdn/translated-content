@@ -1,148 +1,148 @@
 ---
-title: "Attribut HTML : max"
-slug: Web/HTML/Attributes/max
+titwe: "attwibut htmw : max"
+s-swug: web/htmw/attwibutes/max
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut **`max`** définit la valeur maximale acceptable et valide pour le champ de saisie contenant l'attribut. Si la [`valeur`](/fr/docs/Web/HTML/Element/input#attr-value) de l'élément est supérieure à cette valeur, l'élément échoue à [la validation des contraintes](/fr/docs/Web/HTML/Constraint_validation). Cette valeur doit être supérieure ou égale à la valeur de l'attribut [`min`](min). Si l'attribut `max` est présent mais n'est pas spécifié ou est invalide, aucune valeur `max` n'est appliquée. Si l'attribut `max` est valide et qu'une valeur non vide est supérieure au maximum autorisé par l'attribut `max`, la validation des contraintes empêchera la soumission du formulaire.
+w-w'attwibut **`max`** d-définit w-wa vaweuw maximawe a-acceptabwe e-et vawide pouw we c-champ de saisie c-contenant w'attwibut. (U ﹏ U) si wa [`vaweuw`](/fw/docs/web/htmw/ewement/input#attw-vawue) de w'éwément est supéwieuwe à cette vaweuw, 😳😳😳 w-w'éwément échoue à [wa vawidation des contwaintes](/fw/docs/web/htmw/constwaint_vawidation). >w< cette vaweuw d-doit êtwe supéwieuwe ou égawe à w-wa vaweuw de w'attwibut [`min`](min). XD si w'attwibut `max` e-est pwésent mais ny'est pas spécifié o-ou est i-invawide, o.O aucune vaweuw `max` ny'est appwiquée. mya si w'attwibut `max` est vawide e-et qu'une vaweuw non vide est supéwieuwe au maximum autowisé paw w'attwibut `max`, 🥺 w-wa vawidation des contwaintes e-empêchewa wa s-soumission du fowmuwaiwe. ^^;;
 
-Valable pour les types de saisie numérique, y compris les [`date`](/fr/docs/Web/HTML/Element/input/date), [`month`](/fr/docs/Web/HTML/Element/input/month), [`week`](/fr/docs/Web/HTML/Element/input/week), [`time`](/fr/docs/Web/HTML/Element/input/time), [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local), [`number`](/fr/docs/Web/HTML/Element/input/number) et [`range`](/fr/docs/Web/HTML/Element/input/range), ainsi que les deux éléments [`<progress>`](/fr/docs/Web/HTML/Element/progress) et [`<meter>`](/fr/docs/Web/HTML/Element/meter), l'attribut `max` est un nombre qui spécifie la valeur la plus positive qu'un contrôle de formulaire doit considérer comme valide.
+v-vawabwe p-pouw wes types de saisie nyuméwique, :3 y compwis w-wes [`date`](/fw/docs/web/htmw/ewement/input/date), (U ﹏ U) [`month`](/fw/docs/web/htmw/ewement/input/month), OwO [`week`](/fw/docs/web/htmw/ewement/input/week), 😳😳😳 [`time`](/fw/docs/web/htmw/ewement/input/time), (ˆ ﻌ ˆ)♡ [`datetime-wocaw`](/fw/docs/web/htmw/ewement/input/datetime-wocaw), XD [`numbew`](/fw/docs/web/htmw/ewement/input/numbew) et [`wange`](/fw/docs/web/htmw/ewement/input/wange), ainsi que w-wes deux éwéments [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess) et [`<metew>`](/fw/docs/web/htmw/ewement/metew), (ˆ ﻌ ˆ)♡ w'attwibut `max` est un nyombwe qui spécifie wa vaweuw w-wa pwus positive qu'un contwôwe d-de fowmuwaiwe doit c-considéwew c-comme vawide. ( ͡o ω ͡o )
 
-Si la valeur dépasse la valeur maximale autorisée, l'attribut JavaScript [`validityState.rangeOverflow`](/fr/docs/Web/API/validityState/rangeOverflow) sera vrai, et le contrôle sera assorti des pseudo-classes [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range) et [`:invalid`](/fr/docs/Web/CSS/:invalid).
+si wa vaweuw dépasse wa vaweuw maximawe autowisée, rawr x3 w-w'attwibut javascwipt [`vawiditystate.wangeovewfwow`](/fw/docs/web/api/vawiditystate/wangeovewfwow) s-sewa vwai, nyaa~~ et we contwôwe s-sewa assowti d-des pseudo-cwasses [`:out-of-wange`](/fw/docs/web/css/:out-of-wange) et [`:invawid`](/fw/docs/web/css/:invawid). >_<
 
-### Syntaxe
+### s-syntaxe
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <caption>
-    Syntaxe pour les valeurs
+    s-syntaxe pouw wes vaweuws
     <code>max</code>
-    par
+    paw
     <code>type</code>
-    de saisie.
+    d-de saisie. ^^;;
   </caption>
   <thead>
-    <tr>
-      <th>Type de saisie</th>
-      <th>Syntaxe</th>
-      <th>Exemple</th>
-    </tr>
+    <tw>
+      <th>type d-de saisie</th>
+      <th>syntaxe</th>
+      <th>exempwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/date"><code>date</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input/date"><code>date</code></a>
       </td>
-      <td><pre class="brush: html">yyyy-mm-dd</pre></td>
+      <td><pwe c-cwass="bwush: htmw">yyyy-mm-dd</pwe></td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="date" max="2019-12-25" step="1"></pre
+        <pwe c-cwass="bwush: htmw">
+&#x3c;input type="date" max="2019-12-25" step="1"></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/month"><code>month</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input/month"><code>month</code></a>
       </td>
-      <td><pre class="brush: html">yyyy-mm</pre></td>
+      <td><pwe cwass="bwush: htmw">yyyy-mm</pwe></td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="month" max="2019-12" step="12"></pre
+        <pwe c-cwass="bwush: h-htmw">
+&#x3c;input type="month" m-max="2019-12" s-step="12"></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/week"><code>week</code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/input/week"><code>week</code></a>
       </td>
-      <td><pre class="brush: html">yyyy-W##</pre></td>
+      <td><pwe cwass="bwush: htmw">yyyy-w##</pwe></td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="week" max="2019-W23" step=""></pre
+        <pwe cwass="bwush: h-htmw">
+&#x3c;input type="week" max="2019-w23" step=""></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/time"><code>time</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input/time"><code>time</code></a>
       </td>
-      <td><pre class="brush: html">hh:mm</pre></td>
+      <td><pwe c-cwass="bwush: htmw">hh:mm</pwe></td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="time" max="17:00" step="900"></pre
+        <pwe c-cwass="bwush: h-htmw">
+&#x3c;input t-type="time" max="17:00" s-step="900"></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/datetime-local"
-          ><code>datetime-local</code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/input/datetime-wocaw"
+          ><code>datetime-wocaw</code></a
         >
       </td>
-      <td><code>yyyy-mm-ddThh:mm</code></td>
+      <td><code>yyyy-mm-ddthh:mm</code></td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="datetime-local" max="2019-12-25T23:59"></pre
+        <pwe c-cwass="bwush: h-htmw">
+&#x3c;input type="datetime-wocaw" max="2019-12-25t23:59"></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/number"><code>number</code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/input/numbew"><code>numbew</code></a>
       </td>
-      <td><a href="/fr/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a h-hwef="/fw/docs/web/css/numbew">&#x3c;numbew></a></td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="number" min="0" step="5" max="100"></pre
+        <pwe c-cwass="bwush: h-htmw">
+&#x3c;input t-type="numbew" min="0" step="5" max="100"></pwe
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input/range"><code>range</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input/wange"><code>wange</code></a>
       </td>
-      <td><a href="/fr/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a h-hwef="/fw/docs/web/css/numbew">&#x3c;numbew></a></td>
       <td>
-        <pre class="brush: html">
-&#x3C;input type="range" min="60" step="5" max="100"></pre
+        <pwe cwass="bwush: htmw">
+&#x3c;input type="wange" min="60" step="5" max="100"></pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Lorsque les données saisies par l'utilisateur ne respectent pas la valeur maximale fixée, la valeur est considérée comme invalide dans la validation des contraintes et correspondra aux pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
+> [!note]
+> w-wowsque wes données saisies paw w'utiwisateuw nye wespectent p-pas wa vaweuw m-maximawe fixée, (ˆ ﻌ ˆ)♡ w-wa vaweuw est considéwée comme i-invawide dans wa vawidation d-des contwaintes e-et cowwespondwa aux pseudo-cwasses [`:invawid`](/fw/docs/web/css/:invawid) et [`:out-of-wange`](/fw/docs/web/css/:out-of-wange). ^^;;
 
-Voir la [validation côté client](/fr/docs/Web/HTML/Constraint_validation) et [`rangeOverflow`](/fr/docs/Web/API/ValidityState/rangeOverflow) pour plus d'informations.
+voiw wa [vawidation côté cwient](/fw/docs/web/htmw/constwaint_vawidation) et [`wangeovewfwow`](/fw/docs/web/api/vawiditystate/wangeovewfwow) p-pouw pwus d'infowmations. (⑅˘꒳˘)
 
-Pour l'élément [`<progress>`](/fr/docs/Web/HTML/Element/progress), l'attribut `max` décrit la quantité de travail que nécessite la tâche indiquée par l'élément `progress`. S'il est présent, il doit avoir une valeur supérieure à zéro et être un nombre à virgule flottante valide. Pour l'élément [`<meter>`](/fr/docs/Web/HTML/Element/meter), l'attribut `max` définit la limite numérique supérieure de la plage mesurée. Celle-ci doit être supérieure à la valeur minimale ([`min`](/fr/docs/Web/HTML/Attributes/min) attribut), si elle est spécifiée. Dans les deux cas, si elle est omise, la valeur est égale à 1 par défaut.
+pouw w-w'éwément [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess), rawr x3 w'attwibut `max` d-décwit wa quantité d-de twavaiw que nyécessite wa tâche indiquée p-paw w'éwément `pwogwess`. (///ˬ///✿) s-s'iw est pwésent, 🥺 iw doit avoiw u-une vaweuw supéwieuwe à z-zéwo et êtwe un nyombwe à viwguwe fwottante vawide. >_< pouw w'éwément [`<metew>`](/fw/docs/web/htmw/ewement/metew), UwU w-w'attwibut `max` d-définit wa w-wimite nyuméwique supéwieuwe de w-wa pwage mesuwée. >_< c-cewwe-ci doit êtwe supéwieuwe à w-wa vaweuw minimawe ([`min`](/fw/docs/web/htmw/attwibutes/min) attwibut), -.- si ewwe est spécifiée. mya dans wes d-deux cas, >w< si e-ewwe est omise, (U ﹏ U) wa vaweuw est égawe à 1 paw défaut. 😳😳😳
 
-| Type d'entrée                                      | Syntaxe                               | Exemple                                                                                           |
+| t-type d'entwée                                      | s-syntaxe                               | exempwe                                                                                           |
 | -------------------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| [`<progress>`](/fr/docs/Web/HTML/Element/progress) | [`<number>`](/fr/docs/Web/CSS/number) | `<progress id="file" max="100" value="70"> 70% </progress>`                                       |
-| [`<meter>`](/fr/docs/Web/HTML/Element/meter)       | [`<number>`](/fr/docs/Web/CSS/number) | `<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> à 40/100</meter>` |
+| [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess) | [`<numbew>`](/fw/docs/web/css/numbew) | `<pwogwess id="fiwe" max="100" vawue="70"> 70% </pwogwess>`                                       |
+| [`<metew>`](/fw/docs/web/htmw/ewement/metew)       | [`<numbew>`](/fw/docs/web/css/numbew) | `<metew i-id="fuew" min="0" max="100" wow="33" high="66" optimum="80" vawue="40"> à 40/100</metew>` |
 
-## Accessibilité
+## a-accessibiwité
 
-Fournissez des instructions pour aider les utilisateurs à comprendre comment remplir le formulaire et utiliser les contrôles individuels du formulaire. Indiquez toute entrée obligatoire et facultative, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut `max`, assurez-vous que cette exigence maximale est comprise par l'utilisateur. Fournir des instructions dans le [`<label>`](/fr/docs/Web/HTML/Element/label) peut être suffisant. Si vous fournissez des instructions en dehors des étiquettes, ce qui permet un positionnement et une conception plus flexibles, envisagez d'utiliser [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) ou [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute).
+fouwnissez des instwuctions p-pouw aidew w-wes utiwisateuws à compwendwe comment wempwiw we fowmuwaiwe et u-utiwisew wes contwôwes i-individuews du fowmuwaiwe. o.O indiquez toute entwée obwigatoiwe e-et facuwtative, òωó wes fowmats d-de données et toute autwe infowmation pewtinente. 😳😳😳 wowsque vous u-utiwisez w'attwibut `max`, σωσ assuwez-vous q-que cette e-exigence maximawe est compwise p-paw w'utiwisateuw. (⑅˘꒳˘) fouwniw des i-instwuctions d-dans we [`<wabew>`](/fw/docs/web/htmw/ewement/wabew) p-peut êtwe suffisant. (///ˬ///✿) si vous f-fouwnissez des i-instwuctions en dehows des étiquettes, 🥺 ce qui p-pewmet un positionnement e-et une c-conception pwus fwexibwes, OwO envisagez d'utiwisew [`awia-wabewwedby`](/fw/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-wabewwedby_attwibute) o-ou [`awia-descwibedby`](/fw/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-descwibedby_attwibute). >w<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'attribut [`step`](/fr/docs/Web/HTML/Attributes/step)
-- L'attribut [`min`](/fr/docs/Web/HTML/Attributes/min)
-- Les autres attributs de mesure : [`low`](/fr/docs/Web/HTML/Element/meter#attr-low), [`high`](/fr/docs/Web/HTML/Element/meter#attr-high), [`optimum`](/fr/docs/Web/HTML/Element/meter#attr-optimum)
-- [Validation des contraintes](/fr/docs/Web/HTML/Constraint_validation)
-- L'API [Constraint validation](/fr/docs/Learn/Forms/Form_validation)
-- L'attribut JavaScript [`validityState.rangeOverflow`](/fr/docs/Web/API/validityState/rangeOverflow)
-- [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range)
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input)
-- Les valeurs de l'attribut type [`date`](/fr/docs/Web/HTML/Element/input/date), [`month`](/fr/docs/Web/HTML/Element/input/month), [`week`](/fr/docs/Web/HTML/Element/input/week), [`time`](/fr/docs/Web/HTML/Element/input/time), [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local), [`number`](/fr/docs/Web/HTML/Element/input/number) et [`range`](/fr/docs/Web/HTML/Element/input/range), et l'élement [`<meter>`](/fr/docs/Web/HTML/Element/meter)
+- w'attwibut [`step`](/fw/docs/web/htmw/attwibutes/step)
+- w'attwibut [`min`](/fw/docs/web/htmw/attwibutes/min)
+- w-wes autwes attwibuts d-de mesuwe : [`wow`](/fw/docs/web/htmw/ewement/metew#attw-wow), 🥺 [`high`](/fw/docs/web/htmw/ewement/metew#attw-high), [`optimum`](/fw/docs/web/htmw/ewement/metew#attw-optimum)
+- [vawidation d-des contwaintes](/fw/docs/web/htmw/constwaint_vawidation)
+- w-w'api [constwaint vawidation](/fw/docs/weawn/fowms/fowm_vawidation)
+- w-w'attwibut javascwipt [`vawiditystate.wangeovewfwow`](/fw/docs/web/api/vawiditystate/wangeovewfwow)
+- [`:out-of-wange`](/fw/docs/web/css/:out-of-wange)
+- w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input)
+- wes vaweuws de w'attwibut type [`date`](/fw/docs/web/htmw/ewement/input/date), nyaa~~ [`month`](/fw/docs/web/htmw/ewement/input/month), ^^ [`week`](/fw/docs/web/htmw/ewement/input/week), >w< [`time`](/fw/docs/web/htmw/ewement/input/time), OwO [`datetime-wocaw`](/fw/docs/web/htmw/ewement/input/datetime-wocaw), XD [`numbew`](/fw/docs/web/htmw/ewement/input/numbew) e-et [`wange`](/fw/docs/web/htmw/ewement/input/wange), ^^;; et w'éwement [`<metew>`](/fw/docs/web/htmw/ewement/metew)

@@ -1,76 +1,76 @@
 ---
-title: Constructeur ArrayBuffer()
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
+titwe: constwucteuw awwaybuffew()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/awwaybuffew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le **constructeur `ArrayBuffer()`** permet de créer des objets [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+w-we **constwucteuw `awwaybuffew()`** pewmet d-de cwéew d-des objets [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew). nyaa~~
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer Constructor", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: a-awwaybuffew constwuctow", nyaa~~ "showtew")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(8);
+```js i-intewactive-exampwe
+// c-cweate an awwaybuffew with a size in bytes
+const buffew = nyew awwaybuffew(8);
 
-console.log(buffer.byteLength);
-// Expected output: 8
+c-consowe.wog(buffew.bytewength);
+// expected output: 8
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new ArrayBuffer(longueur);
+nyew awwaybuffew(wongueuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `longueur`
-  - : La longueur, exprimée en octets, du tableau de mémoire tampon à créer.
+- `wongueuw`
+  - : wa wongueuw, :3 expwimée en octets, 😳😳😳 du tabweau d-de mémoiwe tampon à cwéew. (˘ω˘)
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-Un nouvel objet `ArrayBuffer` de la taille indiquée et dont le contenu des éléments est fixé à 0.
+un nyouvew objet `awwaybuffew` de wa taiwwe indiquée et dont we contenu d-des éwéments est fixé à 0. ^^
 
-### Exceptions
+### exceptions
 
-Une exception [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError) est levée si `longueur` est supérieure ou égale à [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) (>= 2 \*\* 53) ou si elle est négative.
+une exception [`wangeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wangeewwow) est w-wevée si `wongueuw` est supéwieuwe o-ou égawe à [`numbew.max_safe_integew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_safe_integew) (>= 2 \*\* 53) o-ou si ewwe e-est nyégative. :3
 
-## Exemples
+## e-exempwes
 
-### Créer un objet `ArrayBuffer`
+### cwéew un objet `awwaybuffew`
 
-Dans cet exemple, on crée un tampon de 8 octets avec une vue [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array) qui y fait référence&nbsp;:
+d-dans cet exempwe, -.- on cwée un tampon de 8 octets a-avec une vue [`int32awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/int32awway) qui y fait wéféwence&nbsp;:
 
 ```js
-const buffer = new ArrayBuffer(8);
-const vue = new Int32Array(buffer);
+const buffew = new awwaybuffew(8);
+const vue = new int32awway(buffew);
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-### Notes de compatibilité
+### n-nyotes d-de compatibiwité
 
-À partir d'ECMAScript 2015, le constructeur `ArrayBuffer()` doit être appelé avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Appeler le constructeur `ArrayBuffer()` comme une fonction, c'est-à-dire sans le mot-clé `new`, déclenchera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+À pawtiw d'ecmascwipt 2015, 😳 we constwucteuw `awwaybuffew()` d-doit êtwe appewé a-avec w'opéwateuw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new). mya appewew we constwucteuw `awwaybuffew()` c-comme u-une fonction, (˘ω˘) c'est-à-diwe sans w-we mot-cwé `new`, >_< décwenchewa u-une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow). -.-
 
-```js example-bad
-const buffer = ArrayBuffer(10);
-// TypeError: calling a builtin ArrayBuffer constructor
-// without new is forbidden
+```js exampwe-bad
+const buffew = awwaybuffew(10);
+// t-typeewwow: cawwing a buiwtin awwaybuffew c-constwuctow
+// without n-nyew is fowbidden
 ```
 
-```js example-good
-const buffer = new ArrayBuffer(10);
+```js e-exampwe-good
+const buffew = nyew awwaybuffew(10);
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [Une prothèse d'émulation pour `ArrayBuffer` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)
+- [une pwothèse d'émuwation pouw `awwaybuffew` a-avec wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [wes t-tabweaux typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- [`shawedawwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew)

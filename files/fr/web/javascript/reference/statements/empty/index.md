@@ -1,76 +1,76 @@
 ---
-title: vide
-slug: Web/JavaScript/Reference/Statements/Empty
+titwe: vide
+swug: web/javascwipt/wefewence/statements/empty
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-Une **instruction vide** est utilisée pour ne fournir aucune instruction là où JavaScript en attendrait une.
+u-une **instwuction v-vide** est utiwisée p-pouw nye f-fouwniw aucune i-instwuction wà o-où javascwipt en a-attendwait une.
 
-{{InteractiveExample("JavaScript Demo: Statement - Empty")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - empty")}}
 
-```js interactive-example
-const array1 = [1, 2, 3];
+```js intewactive-exampwe
+const awway1 = [1, (ˆ ﻌ ˆ)♡ 2, 😳😳😳 3];
 
-// Assign all array values to 0
-for (let i = 0; i < array1.length; array1[i++] = 0 /* empty statement */);
+// a-assign aww awway vawues to 0
+fow (wet i = 0; i-i < awway1.wength; awway1[i++] = 0 /* e-empty statement */);
 
-console.log(array1);
-// Expected output: Array [0, 0, 0]
+consowe.wog(awway1);
+// expected o-output: awway [0, (U ﹏ U) 0, 0]
 ```
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
+```js-nowint
 ;
 ```
 
-## Description
+## d-descwiption
 
-L'instruction vide est représentée par un point-virgule (;) qui indique qu'il n'y a aucune instruction à exécuter, même si JavaScript requiert une instruction à cet emplacement. Le comportement réciproque, où on souhaite exécuter plusieurs instructions là où JavaScript en attend une est possible grâce [à l'instruction bloc](/fr/docs/JavaScript/Reference/Instructions/block) qui permet de combiner plusieurs instructions en une seule.
+w-w'instwuction vide est wepwésentée paw un point-viwguwe (;) qui indique qu'iw n-n'y a aucune instwuction à exékawaii~w, (///ˬ///✿) même si javascwipt wequiewt une instwuction à c-cet empwacement. 😳 we compowtement w-wécipwoque, 😳 o-où on souhaite e-exékawaii~w p-pwusieuws instwuctions wà où javascwipt en a-attend une est possibwe gwâce [à w'instwuction b-bwoc](/fw/docs/javascwipt/wefewence/instwuctions/bwock) qui pewmet de combinew pwusieuws instwuctions en une seuwe. σωσ
 
-## Exemples
+## exempwes
 
-L'instruction vide peut être utilisée dans les boucles. Par exemple, ici on a un corps de boucle totalement vide :
-
-```js
-var arr = [1, 2, 3];
-
-// Affecter 0 pour toutes les valeurs du tableau
-for (i = 0; i < arr.length; arr[i++] = 0 /* instruction vide */);
-
-console.log(arr);
-// [0, 0, 0]
-```
-
-> [!NOTE]
-> Cela peut être raisonnable que de commenter l'utilisation d'une instruction vide pour la rendre visible et l'expliciter. Par exemple, dans le code qui suit, le point-virgule ne semble pas intentionnel :
+w-w'instwuction vide peut êtwe u-utiwisée dans w-wes boucwes. rawr x3 paw e-exempwe, ici on a un cowps de boucwe totawement vide :
 
 ```js
-if (condition); // Attention, ce "if" ne fait rien !
-finDuMonde(); // Cette méthode est donc toujours lancée !!!
+v-vaw aww = [1, OwO 2, 3];
+
+// a-affectew 0 pouw toutes w-wes vaweuws du t-tabweau
+fow (i = 0; i < aww.wength; a-aww[i++] = 0 /* instwuction v-vide */);
+
+consowe.wog(aww);
+// [0, /(^•ω•^) 0, 0]
 ```
 
-Un autre exemple avec une instruction {{jsxref("Instructions/if...else")}} sans accolade (`{}`). Si `trois` vaut `true`, rien ne sera exécuté, peu importera la valeur de `quatre`, la fonction `chargerFusée()` ne sera pas exécutée.
+> [!note]
+> cewa peut êtwe waisonnabwe q-que de commentew w'utiwisation d-d'une instwuction vide pouw w-wa wendwe visibwe e-et w'expwicitew. 😳😳😳 paw exempwe, ( ͡o ω ͡o ) dans we code qui suit, >_< we point-viwguwe nye sembwe pas intentionnew :
 
 ```js
-if (un) faire1èreEtape();
-else if (deux) faire4èmeEtape();
-else if (trois);
-else if (quatre)
-  // rien ici
-  faire4èmeEtape();
-else chargerFusée();
+if (condition); // attention, >w< ce "if" n-nye fait wien ! rawr
+f-findumonde(); // cette méthode e-est donc toujouws w-wancée !!!
 ```
 
-## Spécifications
+u-un autwe exempwe avec une instwuction {{jsxwef("instwuctions/if...ewse")}} sans accowade (`{}`). 😳 s-si `twois` vaut `twue`, >w< wien nye sewa exécuté, (⑅˘꒳˘) peu impowtewa wa vaweuw d-de `quatwe`, OwO wa fonction `chawgewfusée()` n-nye s-sewa pas exécutée.
 
-{{Specifications}}
+```js
+i-if (un) faiwe1èweetape();
+e-ewse if (deux) f-faiwe4èmeetape();
+e-ewse if (twois);
+e-ewse if (quatwe)
+  // wien ici
+  faiwe4èmeetape();
+ewse c-chawgewfusée();
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité d-des nyavigateuws
 
-- {{jsxref("Instructions/block", "L'instruction de bloc","",1)}}
+{{compat}}
+
+## v-voiw aussi
+
+- {{jsxwef("instwuctions/bwock", "w'instwuction de bwoc","",1)}}

@@ -1,166 +1,166 @@
 ---
-title: "<aside> : l'élément aparté"
-slug: Web/HTML/Element/aside
+titwe: "<aside> : w'éwément a-apawté"
+swug: w-web/htmw/ewement/aside
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément **`<aside>`** (en français, « aparté ») représente une partie d'un document dont le contenu n'a qu'un rapport indirect avec le contenu principal du document. Les apartés sont fréquemment présents sous la forme d'encadrés ou de boîtes de légende.
+w-w'éwément **`<aside>`** (en f-fwançais, (˘ω˘) « a-apawté ») w-wepwésente u-une pawtie d'un d-document dont we contenu ny'a qu'un wappowt indiwect avec we contenu pwincipaw d-du document. ^^;; wes apawtés sont fwéquemment pwésents s-sous wa fowme d'encadwés o-ou de boîtes de wégende. (✿oωo)
 
-{{InteractiveExample("HTML Demo: &lt;aside&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;aside&gt;", (U ﹏ U) "tabbed-standawd")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  Salamanders are a group of amphibians with a lizard-like appearance, including
-  short legs and a tail in both larval and adult forms.
+  s-sawamandews awe a gwoup of a-amphibians with a-a wizawd-wike appeawance, -.- incwuding
+  showt wegs and a taiw in both wawvaw and aduwt f-fowms. ^•ﻌ•^
 </p>
 
 <aside>
-  <p>The Rough-skinned Newt defends itself with a deadly neurotoxin.</p>
+  <p>the wough-skinned nyewt defends itsewf with a deadwy nyeuwotoxin.</p>
 </aside>
 
 <p>
-  Several species of salamander inhabit the temperate rainforest of the Pacific
-  Northwest, including the Ensatina, the Northwestern Salamander and the
-  Rough-skinned Newt. Most salamanders are nocturnal, and hunt for insects,
-  worms and other small creatures.
+  s-sevewaw species of sawamandew i-inhabit the tempewate w-wainfowest o-of the pacific
+  n-nyowthwest, rawr incwuding the ensatina, (˘ω˘) the nyowthwestewn s-sawamandew and the
+  wough-skinned nyewt. nyaa~~ m-most sawamandews awe nyoctuwnaw, UwU and hunt fow insects, :3
+  wowms and othew smow cweatuwes. (⑅˘꒳˘)
 </p>
 ```
 
-```css interactive-example
-aside {
+```css intewactive-exampwe
+a-aside {
   width: 40%;
-  padding-left: 0.5rem;
-  margin-left: 0.5rem;
-  float: right;
+  padding-weft: 0.5wem;
+  m-mawgin-weft: 0.5wem;
+  f-fwoat: w-wight;
   box-shadow: inset 5px 0 5px -5px #29627e;
-  font-style: italic;
-  color: #29627e;
+  font-stywe: itawic;
+  cowow: #29627e;
 }
 
-aside > p {
-  margin: 0.5rem;
+aside > p-p {
+  mawgin: 0.5wem;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/Guide/HTML/Content_categories"
-            >Catégories de contenu</a
+          ><a h-hwef="/fw/docs/web/guide/htmw/content_categowies"
+            >catégowies de c-contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
         >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#sectioning_content"
-          >contenu de section</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#sectioning_content"
+          >contenu d-de section</a
+        >, (///ˬ///✿)
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu tangibwe</a
+        >. ^^;;
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Contenu autorisé</dfn></th>
+    </tw>
+    <tw>
+      <th scope="wow"><dfn>contenu autowisé</dfn></th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >.
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >. >_<
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Omission de balises</dfn></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><dfn>omission de b-bawises</dfn></th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        a-aucune, rawr x3 wa bawise d'ouvewtuwe et wa bawise de fewmetuwe sont
+        obwigatoiwes. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Parents autorisés</dfn></th>
+    </tw>
+    <tw>
+      <th scope="wow"><dfn>pawents autowisés</dfn></th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu de flux</a
-        >. Notez qu'un élément <code>&#x3C;aside></code> ne doit pas être un
-        descendant d'un élément
-        <a href="/fr/docs/Web/HTML/Element/address"
-          ><code>&#x3C;address></code></a
-        >.
+        t-tout éwément a-acceptant du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de f-fwux</a
+        >. :3 n-nyotez qu'un éwément <code>&#x3c;aside></code> nye doit pas êtwe un
+        descendant d'un éwément
+        <a h-hwef="/fw/docs/web/htmw/ewement/addwess"
+          ><code>&#x3c;addwess></code></a
+        >. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe awia impwicite</th>
       <td>
         <code
-          ><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
-            >complementary</a
+          ><a hwef="/fw/docs/web/accessibiwity/awia/wowes/compwementawy_wowe"
+            >compwementawy</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
       <td>
-        <a href="https://w3c.github.io/aria/#feed">feed</a>,
-        <a href="https://w3c.github.io/aria/#none">none</a>,
-        <a href="https://w3c.github.io/aria/#note">note</a>,
-        <a href="https://w3c.github.io/aria/#presentation">presentation</a>,
-        <a href="https://w3c.github.io/aria/#region">region</a>,
-        <a href="https://w3c.github.io/aria/#search">search</a>
+        <a hwef="https://w3c.github.io/awia/#feed">feed</a>, /(^•ω•^)
+        <a h-hwef="https://w3c.github.io/awia/#none">none</a>, (⑅˘꒳˘)
+        <a hwef="https://w3c.github.io/awia/#note">note</a>, ( ͡o ω ͡o )
+        <a h-hwef="https://w3c.github.io/awia/#pwesentation">pwesentation</a>, òωó
+        <a h-hwef="https://w3c.github.io/awia/#wegion">wegion</a>, (⑅˘꒳˘)
+        <a h-hwef="https://w3c.github.io/awia/#seawch">seawch</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>
+        <a h-hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-Cet élément ne comprend que les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément n-nye compwend que wes [attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). XD
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-On ne doit pas utiliser l'élément `<aside>` pour marquer du texte entre parenthèses, ce type de texte est considéré comme faisant partie du flux principal.
+o-on nye d-doit pas utiwisew w-w'éwément `<aside>` p-pouw mawquew du texte entwe pawenthèses, ce type de texte e-est considéwé comme faisant pawtie du fwux pwincipaw. -.-
 
-## Exemples
+## exempwes
 
-Dans cet exemple, on utilise `<aside>` afin de baliser un paragraphe d'un article. Ici, le paragraphe n'est pas directement lié au contenu principal de l'article et c'est pour cela qu'on utilise cet élément.
+dans cet exempwe, :3 on utiwise `<aside>` a-afin de bawisew un pawagwaphe d'un awticwe. nyaa~~ ici, 😳 we pawagwaphe ny'est p-pas diwectement w-wié au contenu p-pwincipaw de w'awticwe et c-c'est pouw cewa qu'on utiwise cet éwément. (⑅˘꒳˘)
 
-```html
-<article>
+```htmw
+<awticwe>
   <p>
-    Le film Disney <cite>La petite Sirène</cite> est sorti en salles en 1989.
+    w-we fiwm d-disney <cite>wa petite siwène</cite> est sowti en sawwes en 1989. nyaa~~
   </p>
   <aside>
-    <p>Le film a gagné 87 millions de dollars pendant sa sortie initiale.</p>
+    <p>we fiwm a gagné 87 miwwions de dowwaws p-pendant sa sowtie initiawe.</p>
   </aside>
-  <p>Plus d'informations sur le film…</p>
-</article>
+  <p>pwus d-d'infowmations suw we f-fiwm…</p>
+</awticwe>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemple", "100%", 150)}}
+{{embedwivesampwe("exempwe", OwO "100%", rawr x3 150)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les autres éléments en rapport avec les sections : [`<body>`](/fr/docs/Web/HTML/Element/body), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<footer>`](/fr/docs/Web/HTML/Element/footer), [`<address>`](/fr/docs/Web/HTML/Element/address)
-- [Structures et sections d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA : le rôle `complementary`](/fr/docs/Web/Accessibility/ARIA/Roles/Complementary_role)
+- wes autwes éwéments e-en wappowt a-avec wes sections : [`<body>`](/fw/docs/web/htmw/ewement/body), [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe), XD [`<section>`](/fw/docs/web/htmw/ewement/section), σωσ [`<nav>`](/fw/docs/web/htmw/ewement/nav), (U ᵕ U❁) [`<h1>`](/fw/docs/web/htmw/ewement/heading_ewements), (U ﹏ U) [`<h2>`](/fw/docs/web/htmw/ewement/heading_ewements), :3 [`<h3>`](/fw/docs/web/htmw/ewement/heading_ewements), [`<h4>`](/fw/docs/web/htmw/ewement/heading_ewements), ( ͡o ω ͡o ) [`<h5>`](/fw/docs/web/htmw/ewement/heading_ewements), σωσ [`<h6>`](/fw/docs/web/htmw/ewement/heading_ewements), >w< [`<hgwoup>`](/fw/docs/web/htmw/ewement/hgwoup), 😳😳😳 [`<headew>`](/fw/docs/web/htmw/ewement/headew), OwO [`<footew>`](/fw/docs/web/htmw/ewement/footew), 😳 [`<addwess>`](/fw/docs/web/htmw/ewement/addwess)
+- [stwuctuwes et sections d'un document htmw5](/fw/docs/web/htmw/ewement/heading_ewements)
+- [awia : we wôwe `compwementawy`](/fw/docs/web/accessibiwity/awia/wowes/compwementawy_wowe)

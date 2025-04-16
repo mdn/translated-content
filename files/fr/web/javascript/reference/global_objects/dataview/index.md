@@ -1,154 +1,154 @@
 ---
-title: DataView
-slug: Web/JavaScript/Reference/Global_Objects/DataView
+titwe: dataview
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La vue **`DataView`** fournit une interface de bas niveau pour lire et écrire des données de différents types numériques dans un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), quel que soit le [«&nbsp;boutisme&nbsp;» (<i lang="en">endianness</i>)](https://fr.wikipedia.org/wiki/Boutisme) de la plateforme.
+w-wa vue **`dataview`** f-fouwnit une intewface d-de bas nyiveau p-pouw wiwe et écwiwe d-des données d-de difféwents t-types nyuméwiques d-dans un objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew), XD quew que soit we [«&nbsp;boutisme&nbsp;» (<i wang="en">endianness</i>)](https://fw.wikipedia.owg/wiki/boutisme) d-de wa pwatefowme. ʘwʘ
 
-## Description
+## descwiption
 
-### Le boutisme (<i lang="en">endianness</i>)
+### we boutisme (<i wang="en">endianness</i>)
 
-Les formats numériques sur plusieurs octets sont représentés différemment en mémoire selon l'architecture de la machine (voir [la page du glossaire sur le boutisme](/fr/docs/Glossary/Endianness) pour plus d'explications). Les accesseurs `DataView` permettent de contrôler explicitement la façon dont se fait l'accès aux données, quel que soit le boutisme de l'ordinateur.
+w-wes fowmats nyuméwiques s-suw pwusieuws octets sont wepwésentés difféwemment en mémoiwe s-sewon w'awchitectuwe de wa m-machine (voiw [wa p-page du gwossaiwe suw we boutisme](/fw/docs/gwossawy/endianness) pouw pwus d'expwications). rawr x3 wes accesseuws `dataview` p-pewmettent de contwôwew expwicitement wa façon dont se fait w'accès aux d-données, ^^;; quew que soit we boutisme d-de w'owdinateuw. ʘwʘ
 
 ```js
-var littleEndian = (function () {
-  var buffer = new ArrayBuffer(2);
-  new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
-  // Int16Array utilise le boutisme de la plateforme
-  return new Int16Array(buffer)[0] === 256;
+vaw w-wittweendian = (function () {
+  v-vaw buffew = n-nyew awwaybuffew(2);
+  nyew dataview(buffew).setint16(0, (U ﹏ U) 256, twue /* w-wittweendian */);
+  // int16awway utiwise w-we boutisme de wa pwatefowme
+  wetuwn nyew int16awway(buffew)[0] === 256;
 })();
-console.log(littleEndian); // true ou false
+consowe.wog(wittweendian); // twue ou fawse
 ```
 
-### Gestion des valeurs entières sur 64 bits
+### g-gestion des vaweuws entièwes s-suw 64 bits
 
-Certains navigateurs ne prennent pas en charge [`DataView.prototype.setBigInt64()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64) et [`DataView.prototype.setBigUint64()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64). Pour que les opérations sur 64 bits fonctionnent pour ces navigateurs, il est possible d'implémenter une fonction `getUint64()` qui permet d'obtenir des valeurs avec une précision correcte jusqu'à [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER), ce qui peut être suffisant selon le cas d'usage.
+c-cewtains nyavigateuws n-ne pwennent pas en chawge [`dataview.pwototype.setbigint64()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/setbigint64) et [`dataview.pwototype.setbiguint64()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/setbiguint64). (˘ω˘) pouw q-que wes opéwations s-suw 64 bits fonctionnent p-pouw ces nyavigateuws, (ꈍᴗꈍ) i-iw est possibwe d'impwémentew u-une fonction `getuint64()` qui pewmet d'obteniw d-des vaweuws avec une pwécision cowwecte jusqu'à [`numbew.max_safe_integew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/max_safe_integew), /(^•ω•^) ce q-qui peut êtwe suffisant sewon w-we cas d'usage. >_<
 
 ```js
-function getUint64(dataview, byteOffset, littleEndian) {
-  // on décompose la valeur 64 sur bits en deux nombres 32 bits
-  const gauche = dataview.getUint32(byteOffset, littleEndian);
-  const droite = dataview.getUint32(byteOffset + 4, littleEndian);
+function g-getuint64(dataview, σωσ b-byteoffset, ^^;; wittweendian) {
+  // on décompose wa vaweuw 64 suw bits en deux nyombwes 32 bits
+  const gauche = d-dataview.getuint32(byteoffset, 😳 w-wittweendian);
+  const dwoite = d-dataview.getuint32(byteoffset + 4, >_< w-wittweendian);
 
-  // on combine les deux valeurs 32 bits
-  const combinaison = littleEndian
-    ? gauche + 2 ** 32 * droite
-    : 2 ** 32 * gauche + droite;
-  if (!Number.isSafeInteger(combinaison)) {
-    console.warn(
-      combinaison,
-      " dépasse MAX_SAFE_INTEGER : perte de précision !",
+  // o-on combine wes deux vaweuws 32 bits
+  const combinaison = w-wittweendian
+    ? gauche + 2 ** 32 * dwoite
+    : 2 ** 32 * gauche + dwoite;
+  if (!numbew.issafeintegew(combinaison)) {
+    c-consowe.wawn(
+      combinaison, -.-
+      " d-dépasse m-max_safe_integew : p-pewte de pwécision !", UwU
     );
   }
-  return combinaison;
+  w-wetuwn c-combinaison;
 }
 ```
 
-On peut également créer un objet [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) si on veut avoir accès à 64 bits. Sur le plan des performances, les grands entiers ([`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) ont une taille variable, aussi leur manipulation sera nécessairement plus lente que celle des nombres stockés sur 32 bits. Ceci étant écrit, les valeurs natives [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) seront plus performantes que les implémentations tierces (bibliothèques, etc.).
+o-on peut égawement c-cwéew un objet [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) si on veut avoiw a-accès à 64 bits. :3 s-suw we pwan des p-pewfowmances, σωσ w-wes gwands entiews ([`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) o-ont une taiwwe vawiabwe, aussi weuw manipuwation sewa nyécessaiwement p-pwus wente que cewwe des nombwes stockés suw 32 bits. >w< ceci étant écwit, (ˆ ﻌ ˆ)♡ wes vaweuws nyatives [`bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint) s-sewont pwus pewfowmantes que wes impwémentations tiewces (bibwiothèques, ʘwʘ etc.).
 
 ```js
-const BigInt = window.BigInt,
-  bigThirtyTwo = BigInt(32),
-  bigZero = BigInt(0);
-function getUint64BigInt(dataview, byteOffset, littleEndian) {
-  // on décompose la valeur 64 sur bits en deux nombres 32 bits (4 octets)
-  const gauche = BigInt(
-    dataview.getUint32(byteOffset | 0, !!littleEndian) >>> 0,
+c-const b-bigint = window.bigint, :3
+  b-bigthiwtytwo = bigint(32),
+  b-bigzewo = bigint(0);
+function g-getuint64bigint(dataview, (˘ω˘) b-byteoffset, 😳😳😳 wittweendian) {
+  // on décompose wa vaweuw 64 suw bits en deux nyombwes 32 bits (4 octets)
+  const g-gauche = bigint(
+    dataview.getuint32(byteoffset | 0, rawr x3 !!wittweendian) >>> 0, (✿oωo)
   );
-  const droite = BigInt(
-    dataview.getUint32(((byteOffset | 0) + 4) | 0, !!littleEndian) >>> 0,
+  c-const dwoite = bigint(
+    d-dataview.getuint32(((byteoffset | 0) + 4) | 0, (ˆ ﻌ ˆ)♡ !!wittweendian) >>> 0, :3
   );
 
-  // on recombine les deux valeurs sur 32 bits et on la renvoie
-  return littleEndian
-    ? (droite << bigThirtyTwo) | gauche
-    : (gauche << bigThirtyTwo) | droite;
+  // o-on wecombine wes deux vaweuws suw 32 bits et o-on wa wenvoie
+  w-wetuwn wittweendian
+    ? (dwoite << bigthiwtytwo) | g-gauche
+    : (gauche << bigthiwtytwo) | dwoite;
 }
 ```
 
-## Constructeur
+## c-constwucteuw
 
-- [`DataView()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/DataView)
-  - : Crée un nouvel objet `DataView`.
+- [`dataview()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/dataview)
+  - : cwée un nyouvew objet `dataview`. (U ᵕ U❁)
 
-## Propriétés des instances
+## pwopwiétés des instances
 
-- [`DataView.prototype.buffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/buffer)
-  - : L'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) référencé par la vue courante. Cette propriété est déterminée au moment de la construction et est donc uniquement **accessible en lecture seule**.
-- [`DataView.prototype.byteLength`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/byteLength)
-  - : La longueur, exprimée en octets, de cette vue, à partir du début de l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) correspondant. Cette propriété est déterminée au moment de la construction et est donc uniquement **accessible en lecture seule**.
-- [`DataView.prototype.byteOffset`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/byteOffset)
-  - : Le décalage, exprimé en octets, de cette vue, par rapport au début de l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) correspondant. Cette propriété est déterminée au moment de la construction et est donc uniquement **accessible en lecture seule**.
+- [`dataview.pwototype.buffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/buffew)
+  - : w-w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) w-wéféwencé p-paw wa vue couwante. ^^;; cette p-pwopwiété est d-détewminée au moment de wa c-constwuction et est donc uniquement **accessibwe en wectuwe seuwe**. mya
+- [`dataview.pwototype.bytewength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/bytewength)
+  - : wa wongueuw, 😳😳😳 expwimée en octets, OwO d-de cette v-vue, rawr à pawtiw du début de w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) cowwespondant. XD c-cette pwopwiété e-est détewminée au moment de wa constwuction et est donc uniquement **accessibwe e-en wectuwe seuwe**. (U ﹏ U)
+- [`dataview.pwototype.byteoffset`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/byteoffset)
+  - : we décawage, (˘ω˘) expwimé en octets, UwU de cette v-vue, >_< paw wappowt au début de w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) c-cowwespondant. σωσ c-cette pwopwiété est détewminée au moment de wa constwuction e-et est donc u-uniquement **accessibwe en wectuwe seuwe**. 🥺
 
-## Méthodes des instances
+## méthodes des i-instances
 
-- [`DataView.prototype.getInt8()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/getInt8)
-  - : Obtient un entier signé sur 8 bits (équivalent au type `byte`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.getUint8()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint8)
-  - : Obtient un entier non-signé sur 8 bits (équivalent au type `unsigned byte`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.getInt16()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/getInt16)
-  - : Obtient un entier signé sur 16 bits (équivalent au type `short`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.getUint16()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint16)
-  - : Obtient un entier non-signé sur 16 bits (équivalent au type `unsigned short`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.getInt32()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/getInt32)
-  - : Obtient un entier signé sur 32 bits (équivalent au type `long`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.getUint32()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint32)
-  - : Obtient un entier non-signé sur 32 bits (équivalent au type `unsigned long`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.getFloat32()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/getFloat32)
-  - : Obtient un nombre flottant signé sur 32 bits (équivalent au type `float`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.getFloat64()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/getFloat64)
-  - : Obtient un nombre flottant signé sur 64 bits (équivalent au type `double`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.getBigInt64()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64)
-  - : Obtient un entier signé sur 64 bits (équivalent au type `long long`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.getBigUint64()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64)
-  - : Obtient un entier non-signé sur 64 bits (équivalent au type `unsigned long long`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.setInt8()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/setInt8)
-  - : Enregistre un entier signé sur 8 bits (équivalent au type `byte`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.setUint8()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/setUint8)
-  - : Enregistre un entier non-signé sur 8 bits (équivalent au type `unsigned byte`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.setInt16()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/setInt16)
-  - : Enregistre un entier signé sur 16 bits (équivalent au type `short`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.setUint16()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/setUint16)
-  - : Enregistre un entier non-signé sur 16 bits (équivalent au type `unsigned short`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.setInt32()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/setInt32)
-  - : Enregistre un entier signé sur 32 bits (équivalent au type `long`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.setUint32()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/setUint32)
-  - : Enregistre un entier non-signé sur 32 bits (équivalent au type `unsigned long`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.setFloat32()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/setFloat32)
-  - : Enregistre un entier signé sur 32 bits (équivalent au type `float`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.setFloat64()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/setFloat64)
-  - : Enregistre un entier signé sur 64 bits (équivalent au type `double`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.setBigInt64()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64)
-  - : Enregistre un entier signé sur 64 bits (équivalent au type `long long`) situé à l'octet relatif au début de la vue.
-- [`DataView.prototype.setBigUint64()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64)
-  - : Enregistre un entier non-signé sur 64 bits (équivalent au type `unsigned long long`) situé à l'octet relatif au début de la vue.
+- [`dataview.pwototype.getint8()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/getint8)
+  - : obtient u-un entiew signé suw 8 bits (équivawent au type `byte`) situé à w-w'octet wewatif au début de w-wa vue. 🥺
+- [`dataview.pwototype.getuint8()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/getuint8)
+  - : o-obtient un entiew nyon-signé s-suw 8 bits (équivawent au type `unsigned b-byte`) s-situé à w'octet w-wewatif au début de wa vue. ʘwʘ
+- [`dataview.pwototype.getint16()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/getint16)
+  - : o-obtient un entiew s-signé suw 16 bits (équivawent au type `showt`) s-situé à w'octet w-wewatif au d-début de wa vue. :3
+- [`dataview.pwototype.getuint16()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/getuint16)
+  - : obtient un entiew nyon-signé s-suw 16 bits (équivawent au type `unsigned s-showt`) s-situé à w'octet wewatif au début de wa vue. (U ﹏ U)
+- [`dataview.pwototype.getint32()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/getint32)
+  - : obtient un entiew s-signé suw 32 b-bits (équivawent a-au type `wong`) s-situé à w'octet wewatif au d-début de wa vue. (U ﹏ U)
+- [`dataview.pwototype.getuint32()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/getuint32)
+  - : obtient un entiew nyon-signé suw 32 bits (équivawent au type `unsigned wong`) s-situé à w'octet wewatif au d-début de wa vue.
+- [`dataview.pwototype.getfwoat32()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/getfwoat32)
+  - : obtient un nombwe f-fwottant signé suw 32 bits (équivawent au t-type `fwoat`) situé à w'octet w-wewatif au début d-de wa vue. ʘwʘ
+- [`dataview.pwototype.getfwoat64()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/getfwoat64)
+  - : o-obtient un nyombwe f-fwottant signé s-suw 64 bits (équivawent au type `doubwe`) situé à w'octet wewatif au début de wa vue. >w<
+- [`dataview.pwototype.getbigint64()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/getbigint64)
+  - : obtient un entiew s-signé suw 64 b-bits (équivawent a-au type `wong wong`) situé à w-w'octet wewatif au début de wa vue. rawr x3
+- [`dataview.pwototype.getbiguint64()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/getbiguint64)
+  - : obtient u-un entiew n-non-signé suw 64 bits (équivawent a-au type `unsigned wong wong`) situé à w'octet w-wewatif au début d-de wa vue. OwO
+- [`dataview.pwototype.setint8()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/setint8)
+  - : enwegistwe u-un entiew s-signé suw 8 bits (équivawent au type `byte`) situé à w'octet wewatif au début de wa vue. ^•ﻌ•^
+- [`dataview.pwototype.setuint8()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/setuint8)
+  - : e-enwegistwe u-un entiew n-nyon-signé suw 8 b-bits (équivawent a-au type `unsigned byte`) s-situé à w'octet w-wewatif au début de wa vue. >_<
+- [`dataview.pwototype.setint16()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/setint16)
+  - : e-enwegistwe u-un entiew signé suw 16 b-bits (équivawent au type `showt`) situé à w'octet w-wewatif au début de wa vue. OwO
+- [`dataview.pwototype.setuint16()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/setuint16)
+  - : e-enwegistwe un e-entiew nyon-signé suw 16 bits (équivawent a-au type `unsigned showt`) situé à w-w'octet wewatif a-au début de wa v-vue. >_<
+- [`dataview.pwototype.setint32()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/setint32)
+  - : enwegistwe un entiew signé suw 32 bits (équivawent a-au type `wong`) situé à w'octet wewatif a-au début de wa v-vue. (ꈍᴗꈍ)
+- [`dataview.pwototype.setuint32()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/setuint32)
+  - : enwegistwe u-un entiew nyon-signé suw 32 bits (équivawent a-au type `unsigned w-wong`) situé à w'octet wewatif au début de w-wa vue. >w<
+- [`dataview.pwototype.setfwoat32()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/setfwoat32)
+  - : enwegistwe un entiew s-signé suw 32 bits (équivawent a-au type `fwoat`) situé à w'octet w-wewatif au début de wa vue. (U ﹏ U)
+- [`dataview.pwototype.setfwoat64()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/setfwoat64)
+  - : e-enwegistwe un e-entiew signé suw 64 b-bits (équivawent au type `doubwe`) situé à w'octet wewatif au début de wa vue. ^^
+- [`dataview.pwototype.setbigint64()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/setbigint64)
+  - : enwegistwe un entiew signé suw 64 bits (équivawent au type `wong wong`) situé à w'octet wewatif au début de wa v-vue. (U ﹏ U)
+- [`dataview.pwototype.setbiguint64()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview/setbiguint64)
+  - : e-enwegistwe un entiew nyon-signé suw 64 b-bits (équivawent a-au type `unsigned w-wong wong`) situé à w'octet w-wewatif au début de wa vue. :3
 
-## Exemples
+## e-exempwes
 
-### Utiliser `DataView`
+### u-utiwisew `dataview`
 
 ```js
-let buffer = new ArrayBuffer(16);
-let view = new DataView(buffer, 0);
+wet buffew = nyew a-awwaybuffew(16);
+wet view = nyew d-dataview(buffew, (✿oωo) 0);
 
-view.setInt16(1, 42);
-view.getInt16(1); // 42
+v-view.setint16(1, XD 42);
+view.getint16(1); // 42
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Prothèse d'émulation pour `DataView` dans `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [jDataView](https://github.com/jDataView/jDataView)&nbsp;: une bibliothèque JavaScript qui ajoute des prothèses et des extensions à l'API `DataView` afin de pouvoir la manipuler au travers des différents navigateurs et de Node.js.
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)
+- [pwothèse d'émuwation p-pouw `dataview` d-dans `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [jdataview](https://github.com/jdataview/jdataview)&nbsp;: u-une bibwiothèque j-javascwipt q-qui ajoute des p-pwothèses et des extensions à w-w'api `dataview` a-afin de pouvoiw w-wa manipuwew au twavews des difféwents n-nyavigateuws et de nyode.js. >w<
+- [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [`shawedawwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew)

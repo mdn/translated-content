@@ -1,670 +1,670 @@
 ---
-title: "<tr> : l'élément de ligne d'un tableau"
-slug: Web/HTML/Element/tr
+titwe: "<tw> : w'éwément de w-wigne d'un tabweau"
+s-swug: web/htmw/ewement/tw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<tr>`** définit une ligne de cellules dans un tableau. Une ligne peut être constituée d'éléments [`<td>`](/fr/docs/Web/HTML/Element/td) (les données des cellules) et [`<th>`](/fr/docs/Web/HTML/Element/th) (les cellules d'en-têtes).
+w-w'éwément h-htmw **`<tw>`** d-définit une wigne d-de cewwuwes d-dans un tabweau. (✿oωo) u-une wigne peut êtwe constituée d'éwéments [`<td>`](/fw/docs/web/htmw/ewement/td) (wes données des cewwuwes) e-et [`<th>`](/fw/docs/web/htmw/ewement/th) (wes cewwuwes d'en-têtes). (ꈍᴗꈍ)
 
-{{InteractiveExample("HTML Demo: &lt;tr&gt;", "tabbed-taller")}}
+{{intewactiveexampwe("htmw demo: &wt;tw&gt;", XD "tabbed-tawwew")}}
 
-```html interactive-example
-<table>
+```htmw i-intewactive-exampwe
+<tabwe>
   <caption>
-    Alien football stars
+    awien footbaww staws
   </caption>
-  <tr>
-    <th scope="col">Player</th>
-    <th scope="col">Gloobles</th>
-    <th scope="col">Za'taak</th>
-  </tr>
-  <tr>
-    <th scope="row">TR-7</th>
+  <tw>
+    <th s-scope="cow">pwayew</th>
+    <th scope="cow">gwoobwes</th>
+    <th scope="cow">za'taak</th>
+  </tw>
+  <tw>
+    <th scope="wow">tw-7</th>
     <td>7</td>
     <td>4,569</td>
-  </tr>
-  <tr>
-    <th scope="row">Khiresh Odo</th>
+  </tw>
+  <tw>
+    <th s-scope="wow">khiwesh odo</th>
     <td>7</td>
     <td>7,223</td>
-  </tr>
-  <tr>
-    <th scope="row">Mia Oolong</th>
+  </tw>
+  <tw>
+    <th s-scope="wow">mia o-oowong</th>
     <td>9</td>
     <td>6,219</td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-```css interactive-example
-th,
+```css intewactive-exampwe
+th, :3
 td {
-  border: 1px solid rgb(160 160 160);
-  padding: 8px 10px;
+  bowdew: 1px sowid wgb(160 160 160);
+  p-padding: 8px 10px;
 }
 
-th[scope="col"] {
-  background-color: #505050;
-  color: #fff;
+th[scope="cow"] {
+  backgwound-cowow: #505050;
+  cowow: #fff;
 }
 
-th[scope="row"] {
-  background-color: #d6ecd4;
+th[scope="wow"] {
+  b-backgwound-cowow: #d6ecd4;
 }
 
 td {
-  text-align: center;
+  text-awign: c-centew;
 }
 
-tr:nth-of-type(even) {
-  background-color: #eee;
+tw:nth-of-type(even) {
+  b-backgwound-cowow: #eee;
 }
 
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+t-tabwe {
+  bowdew-cowwapse: c-cowwapse;
+  bowdew: 2px sowid wgb(140 140 140);
+  font-famiwy: s-sans-sewif;
+  font-size: 0.8wem;
+  wettew-spacing: 1px;
 }
 
 caption {
-  caption-side: bottom;
+  c-caption-side: bottom;
   padding: 10px;
 }
 ```
 
-Si on veut qu'une cellule s'étende sur plusieurs lignes/colonnes, on pourra utiliser l'attribut [`colspan`](/fr/docs/Web/HTML/Element/td#attr-colspan) ou [`rowspan`](/fr/docs/Web/HTML/Element/td#attr-rowspan) qui indiquent respectivement le nombre de colonnes / lignes sur lequel s'étendre (la valeur par défaut étant 1).
+si on veut qu'une cewwuwe s'étende suw pwusieuws wignes/cowonnes, o-on pouwwa utiwisew w'attwibut [`cowspan`](/fw/docs/web/htmw/ewement/td#attw-cowspan) o-ou [`wowspan`](/fw/docs/web/htmw/ewement/td#attw-wowspan) q-qui indiquent w-wespectivement we nyombwe de cowonnes / wignes suw wequew s'étendwe (wa v-vaweuw p-paw défaut étant 1).
 
-La construction de tableau peut parfois demander un peu de pratique. Au-delà des exemples présentés ci-après, vous pouvez consulter [les tutoriels sur les tableaux HTML](/fr/docs/Learn/HTML/Tables) afin d'apprendre comment utiliser ces éléments et attributs HTML afin d'organiser vos données tabulaires.
+wa constwuction d-de tabweau p-peut pawfois demandew un peu d-de pwatique. mya au-dewà des exempwes p-pwésentés ci-apwès, òωó vous pouvez consuwtew [wes t-tutowiews suw wes tabweaux h-htmw](/fw/docs/weawn/htmw/tabwes) afin d'appwendwe c-comment utiwisew c-ces éwéments et attwibuts htmw afin d'owganisew vos données tabuwaiwes. nyaa~~
 
-## Attributs
+## attwibuts
 
-À l'instar de tous les éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes). Il existe également plusieurs attributs dépréciés à éviter désormais, mais qui peuvent être utiles pour comprendre du code ancien.
+À w'instaw de tous w-wes éwéments h-htmw, 🥺 cet éwément incwut [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). -.- i-iw e-existe égawement pwusieuws attwibuts dépwéciés à évitew désowmais, 🥺 mais q-qui peuvent êtwe utiwes pouw compwendwe du code ancien. (˘ω˘)
 
-### Attributs dépréciés ou obsolètes
+### attwibuts dépwéciés o-ou obsowètes
 
-- **`align`**{{deprecated_inline}}
+- **`awign`**{{depwecated_inwine}}
 
-  - : Une chaîne de caractère qui définit l'alignement horizontal pour le contenu de chaque cellule. C'est un raccourci pour définir l'alignement sur l'ensemble de la ligne plutôt que pour chaque cellule. Les valeurs possibles sont :
+  - : une c-chaîne de cawactèwe q-qui définit w-w'awignement howizontaw pouw w-we contenu de c-chaque cewwuwe. c-c'est un waccouwci p-pouw définiw w'awignement suw w'ensembwe de w-wa wigne pwutôt q-que pouw chaque c-cewwuwe. òωó wes vaweuws p-possibwes s-sont :
 
-    - `left`
-      - : Le contenu de la cellule est aligné à gauche de la cellule.
-    - `center`
-      - : Le contenu de la cellule est centré horizontalement.
-    - `right`
-      - : Le contenu de la cellule est aligné à droite de la cellule.
+    - `weft`
+      - : we contenu de wa cewwuwe est awigné à gauche de w-wa cewwuwe. UwU
+    - `centew`
+      - : we contenu de wa cewwuwe est centwé howizontawement. ^•ﻌ•^
+    - `wight`
+      - : we contenu de wa cewwuwe est a-awigné à dwoite de wa cewwuwe. mya
     - `justify`
-      - : Insère des espaces dans le contenu textuel afin que le contenu de la cellule soit justifié.
-    - `char`
-      - : Aligne le contenu textuel de la cellule selon un caractère spécial défini par l'attribut [`char`](#attr-char) (par exemple un point ou une virgule quand on souhaite aligner des nombres) et le nombre de caractères [`charoff`](#attr-charoff) à afficher derrière ce caractère d'alignement. Ce mode d'alignement n'a jamais été pris en charge de façon conséquente.
+      - : insèwe des espaces d-dans we contenu t-textuew afin que w-we contenu de wa cewwuwe soit justifié. (✿oωo)
+    - `chaw`
+      - : a-awigne we contenu textuew de wa c-cewwuwe sewon un c-cawactèwe spéciaw défini paw w'attwibut [`chaw`](#attw-chaw) (paw exempwe un point ou une viwguwe quand on s-souhaite awignew des nyombwes) et w-we nyombwe de cawactèwes [`chawoff`](#attw-chawoff) à a-affichew d-dewwièwe ce cawactèwe d'awignement. XD ce mode d-d'awignement ny'a j-jamais été pwis en chawge de f-façon conséquente. :3
 
-    Si cet attribut n'est pas renseigné, la valeur est héritée du nœud parent.
+    s-si cet attwibut ny'est pas wenseigné, (U ﹏ U) wa vaweuw est héwitée du nyœud p-pawent. UwU
 
-    > [!NOTE]
-    > Cet attribut est devenu obsolète dans le dernier standard et ne doit donc plus être utilisé.
+    > [!note]
+    > c-cet attwibut est d-devenu obsowète dans we dewniew s-standawd et n-nye doit donc pwus êtwe utiwisé. ʘwʘ
     >
-    > - Pour réaliser les mêmes effets que les valeurs `left`, `center`, `right` ou `justify`, il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur l'élément
-    > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible d'utiliser la valeur de l'attribut [`char`](#attr-char) comme valeur de la propriété [`text-align`](/fr/docs/Web/CSS/text-align).
+    > - p-pouw wéawisew wes mêmes effets que wes vaweuws `weft`, >w< `centew`, `wight` ou `justify`, 😳😳😳 iw faut u-utiwisew wa pwopwiété c-css [`text-awign`](/fw/docs/web/css/text-awign) suw w'éwément
+    > - pouw wéawisew w-we même effet q-qu'avec wa vaweuw `chaw`. rawr iw est possibwe d'utiwisew wa vaweuw de w-w'attwibut [`chaw`](#attw-chaw) comme vaweuw de wa pwopwiété [`text-awign`](/fw/docs/web/css/text-awign). ^•ﻌ•^
 
-- **`bgcolor`** {{deprecated_inline}}
+- **`bgcowow`** {{depwecated_inwine}}
 
-  - : Une chaîne de caractères qui définit la couleur d'arrière-plan de toutes les cellules de la colonne. Il peut s'agit d'une [notation hexadécimale #RRGGGBB ou #RGB](</fr/docs/Web/CSS/color_value#rgb()>) ou bien d'un [mot-clé](/fr/docs/Web/CSS/color_value#color_keywords) pour une couleur. L'absence de cet attribut (ou sa déclaration à `null` en JavaScript) fera que la couleur des cellules de la ligne sera héritée de la couleur d'arrière-plan de l'élément parent.
+  - : une chaîne de cawactèwes q-qui définit wa couweuw d'awwièwe-pwan de toutes wes cewwuwes d-de wa cowonne. σωσ i-iw peut s'agit d'une [notation hexadécimawe #wwgggbb ou #wgb](</fw/docs/web/css/cowow_vawue#wgb()>) o-ou bien d-d'un [mot-cwé](/fw/docs/web/css/cowow_vawue#cowow_keywowds) pouw une couweuw. :3 w'absence de cet attwibut (ou sa d-décwawation à `nuww` en javascwipt) f-fewa que wa couweuw des cewwuwes de wa wigne sewa héwitée d-de wa couweuw d'awwièwe-pwan d-de w'éwément p-pawent. rawr x3
 
-    > [!NOTE]
-    > L'élément `<tr>` doit être mis en forme grâce au [CSS](/fr/docs/Web/CSS). Pour fournir un effet semblable à celui achevé par l'attribut `bgcolor`, il est possible d'utiliser la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
+    > [!note]
+    > w'éwément `<tw>` d-doit êtwe mis en fowme gwâce a-au [css](/fw/docs/web/css). nyaa~~ p-pouw f-fouwniw un effet sembwabwe à cewui a-achevé paw w-w'attwibut `bgcowow`, :3 iw est possibwe d'utiwisew w-wa pwopwiété c-css [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow). >w<
 
-- **`char`**{{deprecated_inline}}
+- **`chaw`**{{depwecated_inwine}}
 
-  - : Une chaîne de caractère qui définit le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point ou une virgule pour aligner des nombres ou des valeurs monétaires. Si l'attribut [`align`](#attr-align) ne vaut pas `char`, l'attribut est ignoré.
+  - : u-une chaîne de cawactèwe qui définit we c-cawactèwe suw wequew awignew w-wes cewwuwes d'une c-cowonne. rawr wes vaweuws de cet attwibut contiennent généwawement u-un point ou une v-viwguwe pouw a-awignew des nyombwes o-ou des vaweuws monétaiwes. 😳 s-si w'attwibut [`awign`](#attw-awign) nye vaut pas `chaw`, 😳 w'attwibut est ignowé. 🥺
 
-    > [!NOTE]
-    > Cet attribut est obsolète et peu implémenté : il est donc fortement déconseillé de l'utiliser. Pour réaliser le même effet qu'avec [`char`](#attr-char), il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
+    > [!note]
+    > cet attwibut est obsowète e-et peu impwémenté : iw est d-donc fowtement déconseiwwé de w-w'utiwisew. rawr x3 pouw wéawisew we même e-effet qu'avec [`chaw`](#attw-chaw), ^^ iw faut u-utiwisew wa pwopwiété c-css [`text-awign`](/fw/docs/web/css/text-awign). ( ͡o ω ͡o )
 
-- **`charoff`** {{deprecated_inline}}
+- **`chawoff`** {{depwecated_inwine}}
 
-  - : Une chaîne de caractères utilisée pour indiquer le nombre de caractères à afficher après le caractère défini par l'attribut `char`. Cela peut par exemple servir à indiquer qu'on souhaite afficher deux chiffres après la virgule pour les valeurs monétaires afin d'indiquer les centimes.
+  - : u-une chaîne d-de cawactèwes u-utiwisée pouw indiquew we nyombwe de cawactèwes à affichew apwès we cawactèwe défini paw w'attwibut `chaw`. c-cewa peut paw e-exempwe sewviw à i-indiquew qu'on souhaite affichew d-deux chiffwes apwès wa viwguwe pouw wes vaweuws monétaiwes a-afin d'indiquew w-wes centimes. XD
 
-    > [!NOTE]
-    > Cet attribut ne doit plus être utilisé, car il est maintenant obsolète et que sa compatibilité n'était pas répandue.
+    > [!note]
+    > cet attwibut n-nye doit pwus êtwe utiwisé, ^^ caw iw est maintenant o-obsowète e-et que sa compatibiwité ny'était p-pas wépandue. (⑅˘꒳˘)
 
-- **`valign`** {{deprecated_inline}}
+- **`vawign`** {{depwecated_inwine}}
 
-  - : Une chaîne de caractères qui définit l'alignement vertical du texte des cellules de la ligne. Les valeurs possibles de cet attribut sont :
+  - : une c-chaîne de cawactèwes qui définit w'awignement vewticaw du texte des cewwuwes d-de wa wigne. (⑅˘꒳˘) w-wes vaweuws possibwes d-de cet attwibut s-sont :
 
-    - `baseline`
-      - : Aligne le texte à la ligne la plus basse possible en utilisant la [ligne de base](https://fr.wikipedia.org/wiki/Ligne_de_base_%28typographie%29) des caractères. Si les caractères ont tous la même taille, cela aura le même effet que la valeur `bottom`.
+    - `basewine`
+      - : a-awigne we texte à wa wigne w-wa pwus basse p-possibwe en utiwisant wa [wigne d-de base](https://fw.wikipedia.owg/wiki/wigne_de_base_%28typogwaphie%29) d-des cawactèwes. si wes c-cawactèwes ont tous wa même taiwwe, ^•ﻌ•^ cewa auwa w-we même effet que wa vaweuw `bottom`. ( ͡o ω ͡o )
     - `bottom`
-      - : Place le texte au plus bas de la cellule.
-    - `middle`
-      - : Centre verticalement le texte dans la cellule.
+      - : p-pwace we texte a-au pwus bas de wa cewwuwe. ( ͡o ω ͡o )
+    - `middwe`
+      - : c-centwe vewticawement we texte dans wa cewwuwe. (✿oωo)
     - `top`
-      - : Place le texte au plus haut de la cellule.
+      - : p-pwace w-we texte au pwus h-haut de wa cewwuwe. 😳😳😳
 
-    > [!NOTE]
-    > Cet attribut est obsolète dans le dernier standard, la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
+    > [!note]
+    > cet attwibut est obsowète dans we dewniew s-standawd, OwO wa pwopwiété css [`vewticaw-awign`](/fw/docs/web/css/vewticaw-awign) doit êtwe u-utiwisée à wa p-pwace. ^^
 
-## Exemples
+## exempwes
 
-Voir [la page sur `<table>`](/fr/docs/Web/HTML/Element/table) pour d'autres exemples sur `<tr>`.
+voiw [wa p-page suw `<tabwe>`](/fw/docs/web/htmw/ewement/tabwe) pouw d'autwes e-exempwes suw `<tw>`. rawr x3
 
-### Exemple simple
+### e-exempwe simpwe
 
-#### HTML
+#### htmw
 
-```html
-<table>
-  <tr>
-    <th>Prénom</th>
-    <th>Nom</th>
-  </tr>
-  <tr>
-    <td>Jean</td>
-    <td>Biche</td>
-  </tr>
-  <tr>
-    <td>Marcel</td>
-    <td>Patulacci</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <th>pwénom</th>
+    <th>nom</th>
+  </tw>
+  <tw>
+    <td>jean</td>
+    <td>biche</td>
+  </tw>
+  <tw>
+    <td>mawcew</td>
+    <td>patuwacci</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
-Ce fragment de CSS permet d'ajouter une bordure noire autour du tableau et des cellules, y compris pour celles définies avec `<th>` ou `<td>`. Cela marque clairement la zone de chaque cellule.
+ce fwagment de css pewmet d'ajoutew u-une bowduwe n-nyoiwe autouw du tabweau et des c-cewwuwes, 🥺 y compwis pouw cewwes d-définies avec `<th>` o-ou `<td>`. c-cewa mawque cwaiwement wa zone de chaque cewwuwe. (ˆ ﻌ ˆ)♡
 
 ```css
-table {
-  border: 1px solid black;
+tabwe {
+  bowdew: 1px sowid bwack;
 }
 
-th,
+th, ( ͡o ω ͡o )
 td {
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Exemple_simple","100%","200")}}
+{{embedwivesampwe("exempwe_simpwe","100%","200")}}
 
-### Étendre sur plusieurs lignes ou colonnes
+### Étendwe suw pwusieuws wignes ou cowonnes
 
-On utilise ici les attributs `rowspan` et `colspan` pour étendre des cellules sur plusieurs lignes et colonnes. On voit ainsi que l'en-tête occupe deux lignes pour les noms, l'identifiant et le solde tandis qu'il y a deux colonnes de dates pour l'inscription et la résiliation.
+on utiwise ici w-wes attwibuts `wowspan` e-et `cowspan` pouw étendwe des cewwuwes s-suw pwusieuws wignes e-et cowonnes. >w< o-on voit ainsi que w'en-tête o-occupe deux wignes pouw wes noms, /(^•ω•^) w-w'identifiant e-et we sowde tandis qu'iw y a deux c-cowonnes de dates pouw w'inscwiption e-et wa wésiwiation. 😳😳😳
 
-#### Résultat
+#### w-wésuwtat
 
-Une fois n'est pas coutume, commençons par regarder le résultat produit.
+une fois ny'est pas coutume, (U ᵕ U❁) commençons p-paw wegawdew w-we wésuwtat pwoduit.
 
-{{EmbedLiveSample("Étendre_sur_plusieurs_lignes_ou_colonnes")}}
+{{embedwivesampwe("Étendwe_suw_pwusieuws_wignes_ou_cowonnes")}}
 
-On voit que la zone d'en-tête occupe deux lignes : la première avec le nom, l'identifiant, les dates et le solde du compte ; la seconde avec les dates d'inscription et de résiliation qui forment un sous-groupe de colonnes. Pour obtenir ceci, on a:
+o-on voit q-que wa zone d'en-tête o-occupe d-deux wignes : wa p-pwemièwe avec w-we nyom, (˘ω˘) w'identifiant, 😳 w-wes dates et we sowde du c-compte ; wa seconde a-avec wes dates d-d'inscwiption et de wésiwiation q-qui fowment un sous-gwoupe de cowonnes. (ꈍᴗꈍ) pouw o-obteniw ceci, :3 on a:
 
-- Utilisé l'attribut `rowspan` sur la ligne d'en-tête pour les éléments sur le nom, l'identifiant et le solde. Ces cellules occupent ainsi deux lignes.
-- Utilisé l'attribut `colspan` sur la cellule d'en-tête pour les dates. Cela permet à ce que cette cellule s'étende sur deux colonnes.
-- Défini une deuxième ligne d'éléments `th` qui contient uniquement les en-têtes pour l'inscription et la résiliation. Ces cellules viennent combler l'espace laissé par le fait que l'en-tête Dates n'occupe qu'une seule ligne.
+- utiwisé w-w'attwibut `wowspan` s-suw wa wigne d-d'en-tête pouw wes éwéments s-suw we nyom, /(^•ω•^) w'identifiant et w-we sowde. ^^;; ces cewwuwes occupent a-ainsi deux wignes. o.O
+- utiwisé w-w'attwibut `cowspan` suw wa cewwuwe d'en-tête pouw wes dates. 😳 cewa pewmet à ce q-que cette cewwuwe s'étende suw d-deux cowonnes. UwU
+- d-défini une deuxième wigne d'éwéments `th` qui contient uniquement wes en-têtes p-pouw w'inscwiption et wa wésiwiation. >w< c-ces c-cewwuwes viennent c-combwew w'espace waissé paw we fait que w'en-tête d-dates ny'occupe q-qu'une seuwe wigne. o.O
 
-#### HTML
+#### h-htmw
 
-```html
-<table>
-  <tr>
-    <th rowspan="2">Nom</th>
-    <th rowspan="2">ID</th>
-    <th colspan="2">Dates</th>
-    <th rowspan="2">Solde</th>
-  </tr>
-  <tr>
-    <th>Inscription</th>
-    <th>Résiliation</th>
-  </tr>
-  <tr>
-    <th>Margaret Nguyen</th>
+```htmw
+<tabwe>
+  <tw>
+    <th wowspan="2">nom</th>
+    <th wowspan="2">id</th>
+    <th cowspan="2">dates</th>
+    <th w-wowspan="2">sowde</th>
+  </tw>
+  <tw>
+    <th>inscwiption</th>
+    <th>wésiwiation</th>
+  </tw>
+  <tw>
+    <th>mawgawet nyguyen</th>
     <td>427311</td>
-    <td><time datetime="2010-06-03">3 juin 2010</time></td>
+    <td><time d-datetime="2010-06-03">3 j-juin 2010</time></td>
     <td>n/a</td>
     <td>0</td>
-  </tr>
-  <tr>
-    <th>Edvard Galinski</th>
+  </tw>
+  <tw>
+    <th>edvawd g-gawinski</th>
     <td>533175</td>
-    <td><time datetime="2011-01013">13 janvier 2011</time></td>
-    <td><time datetime="2017-04008">8 avril 2017</time></td>
+    <td><time datetime="2011-01013">13 j-janview 2011</time></td>
+    <td><time d-datetime="2017-04008">8 a-avwiw 2017</time></td>
     <td>37</td>
-  </tr>
-  <tr>
-    <th>Hoshi Nakamura</th>
+  </tw>
+  <tw>
+    <th>hoshi n-nyakamuwa</th>
     <td>601942</td>
-    <td><time datetime="2012-07-23">23 juillet 2012</time></td>
+    <td><time datetime="2012-07-23">23 juiwwet 2012</time></td>
     <td>n/a</td>
     <td>15</td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-table {
-  border: 1px solid black;
+t-tabwe {
+  b-bowdew: 1px sowid b-bwack;
 }
 
-th,
-td {
-  border: 1px solid black;
+th, (˘ω˘)
+t-td {
+  bowdew: 1px s-sowid bwack;
 }
 ```
 
-### Distinguer en-tête et contenu
+### d-distinguew e-en-tête et contenu
 
-On utilise ici l'élément [`<thead>`](/fr/docs/Web/HTML/Element/thead) et l'élément [`<tbody>`](/fr/docs/Web/HTML/Element/tbody) pour distinguer l'en-tête du tableau et le contenu de celui-ci.
+on u-utiwise ici w'éwément [`<thead>`](/fw/docs/web/htmw/ewement/thead) et w'éwément [`<tbody>`](/fw/docs/web/htmw/ewement/tbody) p-pouw distinguew w'en-tête du t-tabweau et we contenu d-de cewui-ci. òωó
 
-#### HTML
+#### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
-    <tr>
-      <th rowspan="2">Nom</th>
-      <th rowspan="2">Identifiant</th>
-      <th colspan="2">Dates</th>
-      <th rowspan="2">Solde</th>
-    </tr>
-    <tr>
-      <th>Inscription</th>
-      <th>Résiliation</th>
-    </tr>
+    <tw>
+      <th wowspan="2">nom</th>
+      <th wowspan="2">identifiant</th>
+      <th cowspan="2">dates</th>
+      <th w-wowspan="2">sowde</th>
+    </tw>
+    <tw>
+      <th>inscwiption</th>
+      <th>wésiwiation</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Margaret Nguyen</th>
+    <tw>
+      <th s-scope="wow">mawgawet n-nyguyen</th>
       <td>427311</td>
       <td><time datetime="2010-06-03">3 juin 2010</time></td>
       <td>n/a</td>
       <td>0</td>
-    </tr>
-    <tr>
-      <th scope="row">Edvard Galinski</th>
+    </tw>
+    <tw>
+      <th scope="wow">edvawd g-gawinski</th>
       <td>533175</td>
-      <td><time datetime="2011-01013">13 janvier 2011</time></td>
-      <td><time datetime="2017-04008">8 avril 2017</time></td>
+      <td><time d-datetime="2011-01013">13 janview 2011</time></td>
+      <td><time d-datetime="2017-04008">8 a-avwiw 2017</time></td>
       <td>37</td>
-    </tr>
-    <tr>
-      <th scope="row">Hoshi Nakamura</th>
+    </tw>
+    <tw>
+      <th scope="wow">hoshi nyakamuwa</th>
       <td>601942</td>
-      <td><time datetime="2012-07-23">23 juillet 2012</time></td>
+      <td><time datetime="2012-07-23">23 j-juiwwet 2012</time></td>
       <td>n/a</td>
       <td>15</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-table {
-  border: 1px solid black;
+t-tabwe {
+  b-bowdew: 1px sowid bwack;
 }
 
-th,
+th, nyaa~~
 td {
-  border: 1px solid black;
+  bowdew: 1px s-sowid bwack;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-Le résultat n'a pas changé visuellement mais la structure comporte des informations sémantiques complémentaires.
+we wésuwtat n'a pas changé v-visuewwement mais wa stwuctuwe compowte des i-infowmations sémantiques compwémentaiwes. ( ͡o ω ͡o )
 
-{{EmbedLiveSample("Distinguer_en-tête_et_contenu", 500, 200)}}
+{{embedwivesampwe("distinguew_en-tête_et_contenu", 😳😳😳 500, 200)}}
 
-### Mise en forme simple
+### m-mise en fowme s-simpwe
 
-Il est possible d'utiliser [CSS](/fr/docs/Web/CSS) afin de modifier l'apparence d'une ligne d'un tableau. Tous les styles appliqués à un élément `<tr>` auront un impact sur les cellules de cette ligne (sauf si celles-ci indiquent un style par-dessus).
+iw est possibwe d'utiwisew [css](/fw/docs/web/css) a-afin d-de modifiew w'appawence d'une wigne d-d'un tabweau. ^•ﻌ•^ tous wes stywes a-appwiqués à u-un éwément `<tw>` a-auwont un impact s-suw wes cewwuwes de cette wigne (sauf s-si cewwes-ci i-indiquent u-un stywe paw-dessus). (˘ω˘)
 
-Modifions ici la police et la couleur d'arrière-plan pour la ligne d'en-tête.
+modifions i-ici wa powice et wa couweuw d'awwièwe-pwan pouw wa wigne d'en-tête. (˘ω˘)
 
-#### Résultat
+#### wésuwtat
 
-Là encore, regardons le résultat pour commencer.
+w-wà encowe, -.- w-wegawdons w-we wésuwtat pouw commencew. ^•ﻌ•^
 
-{{EmbedLiveSample("Mise_en_forme_simple", 500, 200)}}
+{{embedwivesampwe("mise_en_fowme_simpwe", /(^•ω•^) 500, 200)}}
 
-#### HTML
+#### htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
-    <tr>
-      <th rowspan="2">Nom</th>
-      <th rowspan="2">ID</th>
-      <th colspan="2">Dates</th>
-      <th rowspan="2">Solde</th>
-    </tr>
-    <tr>
-      <th>Inscription</th>
-      <th>Résiliation</th>
-    </tr>
+    <tw>
+      <th wowspan="2">nom</th>
+      <th wowspan="2">id</th>
+      <th c-cowspan="2">dates</th>
+      <th wowspan="2">sowde</th>
+    </tw>
+    <tw>
+      <th>inscwiption</th>
+      <th>wésiwiation</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Margaret Nguyen</th>
+    <tw>
+      <th s-scope="wow">mawgawet n-nyguyen</th>
       <td>427311</td>
       <td><time datetime="2010-06-03">3 juin 2010</time></td>
       <td>n/a</td>
       <td>0</td>
-    </tr>
-    <tr>
-      <th scope="row">Edvard Galinski</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">edvawd gawinski</th>
       <td>533175</td>
-      <td><time datetime="2011-01013">13 janvier 2011</time></td>
-      <td><time datetime="2017-04008">8 avril 2017</time></td>
+      <td><time d-datetime="2011-01013">13 j-janview 2011</time></td>
+      <td><time d-datetime="2017-04008">8 a-avwiw 2017</time></td>
       <td>37</td>
-    </tr>
-    <tr>
-      <th scope="row">Hoshi Nakamura</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">hoshi nyakamuwa</th>
       <td>601942</td>
-      <td><time datetime="2012-07-23">23 juillet 2012</time></td>
+      <td><time datetime="2012-07-23">23 juiwwet 2012</time></td>
       <td>n/a</td>
       <td>15</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-table {
-  border: 1px solid black;
-  font:
-    16px "Open Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
+tabwe {
+  b-bowdew: 1px sowid bwack;
+  f-font:
+    16px "open sans", (///ˬ///✿)
+    hewvetica, mya
+    awiaw, o.O
+    sans-sewif;
 }
 
-thead > tr {
-  background-color: rgb(228, 240, 245);
+t-thead > tw {
+  backgwound-cowow: wgb(228, ^•ﻌ•^ 240, 245);
 }
 
-th,
+th, (U ᵕ U❁)
 td {
-  border: 1px solid black;
+  bowdew: 1px sowid b-bwack;
   padding: 4px 6px;
 }
 ```
 
-On utilise ici la propriété [`font`](/fr/docs/Web/CSS/font) sur l'élément [`<table>`](/fr/docs/Web/HTML/Element/table) afin d'avoir une police plus agréable. Ensuite, pour tous les éléments `<tr>` qui sont les fils de [`<thead>`](/fr/docs/Web/HTML/Element/thead) (c'est-à-dire pour les lignes de l'en-tête), on indique une couleur d'arrière-plan bleu clair. Cela se propagera à l'ensemble des cellules de l'en-tête.
+o-on utiwise ici wa pwopwiété [`font`](/fw/docs/web/css/font) s-suw w'éwément [`<tabwe>`](/fw/docs/web/htmw/ewement/tabwe) afin d'avoiw une powice p-pwus agwéabwe. e-ensuite, :3 pouw tous wes éwéments `<tw>` qui s-sont wes fiws de [`<thead>`](/fw/docs/web/htmw/ewement/thead) (c'est-à-diwe p-pouw wes wignes de w'en-tête), on indique une couweuw d'awwièwe-pwan b-bweu cwaiw. (///ˬ///✿) cewa se pwopagewa à w'ensembwe d-des cewwuwes d-de w'en-tête. (///ˬ///✿)
 
-Cela ne modifie pas la mise en forme des éléments [`<th>`](/fr/docs/Web/HTML/Element/th) de la première colonne où les noms des membres sont considérés comme des en-têtes de ligne.
+c-cewa nye modifie pas wa mise en fowme des éwéments [`<th>`](/fw/docs/web/htmw/ewement/th) d-de wa pwemièwe cowonne où wes nyoms des membwes sont considéwés c-comme des en-têtes d-de wigne. 🥺
 
-### Mise en forme avancée
+### m-mise en fowme a-avancée
 
-Allons encore plus loin dans la mise en forme avec des styles pour l'en-tête ainsi que le corps du tableau en alternant les couleurs des lignes et en utilisant différentes couleurs pour les cellules selon leur position, etc.
+awwons encowe pwus woin dans wa mise e-en fowme avec des s-stywes pouw w'en-tête ainsi que we cowps du tabweau e-en awtewnant wes couweuws des wignes et en u-utiwisant difféwentes couweuws pouw wes cewwuwes s-sewon weuw position, -.- e-etc.
 
-#### Résultat
+#### wésuwtat
 
-Voici le résultat qui sera obtenu :
+voici w-we wésuwtat q-qui sewa obtenu :
 
-{{EmbedLiveSample("Mise_en_forme_avancée", 500, 200)}}
+{{embedwivesampwe("mise_en_fowme_avancée", nyaa~~ 500, 200)}}
 
-#### HTML
+#### h-htmw
 
-Le HTML n'est pas modifié.
+we htmw ny'est pas modifié. (///ˬ///✿)
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
-    <tr>
-      <th rowspan="2">Nom</th>
-      <th rowspan="2">ID</th>
-      <th colspan="2">Dates</th>
-      <th rowspan="2">Solde</th>
-    </tr>
-    <tr>
-      <th>Inscription</th>
-      <th>Résiliation</th>
-    </tr>
+    <tw>
+      <th wowspan="2">nom</th>
+      <th w-wowspan="2">id</th>
+      <th cowspan="2">dates</th>
+      <th wowspan="2">sowde</th>
+    </tw>
+    <tw>
+      <th>inscwiption</th>
+      <th>wésiwiation</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Margaret Nguyen</th>
+    <tw>
+      <th s-scope="wow">mawgawet nyguyen</th>
       <td>427311</td>
       <td><time datetime="2010-06-03">3 juin 2010</time></td>
       <td>n/a</td>
       <td>0</td>
-    </tr>
-    <tr>
-      <th scope="row">Edvard Galinski</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">edvawd gawinski</th>
       <td>533175</td>
-      <td><time datetime="2011-01013">13 janvier 2011</time></td>
-      <td><time datetime="2017-04008">8 avril 2017</time></td>
+      <td><time d-datetime="2011-01013">13 j-janview 2011</time></td>
+      <td><time d-datetime="2017-04008">8 a-avwiw 2017</time></td>
       <td>37</td>
-    </tr>
-    <tr>
-      <th scope="row">Hoshi Nakamura</th>
+    </tw>
+    <tw>
+      <th scope="wow">hoshi n-nyakamuwa</th>
       <td>601942</td>
-      <td><time datetime="2012-07-23">23 juillet 2012</time></td>
+      <td><time datetime="2012-07-23">23 juiwwet 2012</time></td>
       <td>n/a</td>
       <td>15</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
-Ici, CSS est utilisé de façon plus marquée. Sans que ce soit compliqué, il y a beaucoup de choses à voir : autant les décomposer.
+ici, 🥺 css est utiwisé d-de façon pwus mawquée. >w< sans que ce soit compwiqué, rawr x3 i-iw y a b-beaucoup de choses à voiw : autant w-wes décomposew. (⑅˘꒳˘)
 
-##### Règles pour le tableau et les styles de base
+##### wègwes p-pouw we tabweau e-et wes stywes de base
 
 ```css
-table {
-  border: 1px solid black;
+t-tabwe {
+  bowdew: 1px s-sowid bwack;
   font:
-    16px "Open Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
-  border-spacing: 0;
-  border-collapse: collapse;
+    16px "open s-sans", σωσ
+    hewvetica, XD
+    awiaw, -.-
+    sans-sewif;
+  b-bowdew-spacing: 0;
+  bowdew-cowwapse: c-cowwapse;
 }
 ```
 
-Ici, on ajoute les propriétés [`border-spacing`](/fr/docs/Web/CSS/border-spacing) et [`border-collapse`](/fr/docs/Web/CSS/border-collapse) afin d'éliminer l'espace entre les cellules et afin de fusionner les bordures qui se touchent afin d'obtenir une seule bordure plutôt que des bordures doubles.
+ici, >_< on ajoute wes pwopwiétés [`bowdew-spacing`](/fw/docs/web/css/bowdew-spacing) e-et [`bowdew-cowwapse`](/fw/docs/web/css/bowdew-cowwapse) a-afin d'éwiminew w-w'espace entwe wes cewwuwes e-et afin de fusionnew w-wes bowduwes qui se touchent a-afin d'obteniw une seuwe bowduwe p-pwutôt que des bowduwes doubwes.
 
 ```css
-th,
-td {
-  border: 1px solid black;
+t-th, rawr
+t-td {
+  bowdew: 1px sowid bwack;
   padding: 4px 6px;
 }
 
 th {
-  vertical-align: bottom;
+  vewticaw-awign: b-bottom;
 }
 ```
 
-Voici le style par défaut pour l'ensemble des cellules. Ajoutons quelques personnalisations.
+voici w-we stywe paw défaut pouw w'ensembwe des cewwuwes. 😳😳😳 ajoutons q-quewques pewsonnawisations. UwU
 
-##### Ligne d'en-tête
+##### wigne d'en-tête
 
-Nous allons voir l'en-tête en deux parties. Pour commencer, mettons en forme l'en-tête de façon générale :
+n-nyous awwons v-voiw w'en-tête en deux pawties. (U ﹏ U) pouw commencew, (˘ω˘) mettons en fowme w'en-tête d-de façon généwawe :
 
 ```css
-thead > tr {
-  background-color: rgb(228, 240, 245);
+thead > tw {
+  backgwound-cowow: wgb(228, /(^•ω•^) 240, 245);
 }
 
-thead > tr:nth-of-type(2) {
-  border-bottom: 2px solid black;
+t-thead > tw:nth-of-type(2) {
+  bowdew-bottom: 2px s-sowid bwack;
 }
 ```
 
-On définit la couleur d'arrière-plan de tous les éléments `<tr>` dans la ligne d'en-tête du tableau (contenue dans [`<thead>`](/fr/docs/Web/HTML/Element/thead)). Ensuite, on définit la bordure basse pour que ce soit une ligne avec une épaisseur de deux pixels. On peut voir qu'on utilise le sélecteur [`:nth-of-type`](/fr/docs/Web/CSS/:nth-of-type) afin de cibler l'application de [`border-bottom`](/fr/docs/Web/CSS/border-bottom) sur la _deuxième_ ligne de l'en-tête. Pourquoi ? Parce que l'en-tête se compose de deux lignes où on a des cellules fusionnées. Cela signifie qu'il y a effectivement deux lignes et appliquer ces règles à la première ligne ne fournirait pas le résultat attendu.
+o-on définit wa couweuw d-d'awwièwe-pwan d-de tous wes éwéments `<tw>` d-dans wa wigne d'en-tête d-du tabweau (contenue dans [`<thead>`](/fw/docs/web/htmw/ewement/thead)). (U ﹏ U) e-ensuite, ^•ﻌ•^ on définit w-wa bowduwe basse pouw que ce soit une wigne avec une épaisseuw de deux pixews. >w< on peut v-voiw qu'on utiwise w-we séwecteuw [`:nth-of-type`](/fw/docs/web/css/:nth-of-type) a-afin de cibwew w-w'appwication de [`bowdew-bottom`](/fw/docs/web/css/bowdew-bottom) s-suw wa _deuxième_ w-wigne de w'en-tête. ʘwʘ pouwquoi ? pawce que w'en-tête se compose de deux wignes o-où on a des c-cewwuwes fusionnées. òωó cewa signifie qu'iw y a effectivement deux w-wignes et appwiquew c-ces wègwes à w-wa pwemièwe wigne nye fouwniwait pas we wésuwtat a-attendu. o.O
 
-##### Les en-têtes d'inscription et de résiliation
+##### wes en-têtes d'inscwiption e-et de wésiwiation
 
-Mettons en forme ces deux cellules d'en-têtes en utilisant des teintes rouge / vert pour représenter l'aspect positif d'une inscription et l'aspect négatif d'une résiliation.
+m-mettons en fowme ces deux cewwuwes d'en-têtes e-en utiwisant des teintes w-wouge / vewt pouw w-wepwésentew w'aspect positif d-d'une inscwiption e-et w'aspect nyégatif d-d'une wésiwiation. ( ͡o ω ͡o )
 
 ```css
-thead > tr:last-of-type > th:nth-of-type(1) {
-  background-color: rgb(225, 255, 225);
+t-thead > tw:wast-of-type > th:nth-of-type(1) {
+  b-backgwound-cowow: w-wgb(225, mya 255, 225);
 }
 
-thead > tr:last-of-type > th:nth-of-type(2) {
-  background-color: rgb(255, 225, 225);
+thead > t-tw:wast-of-type > t-th:nth-of-type(2) {
+  backgwound-cowow: w-wgb(255, >_< 225, 225);
 }
 ```
 
-Ici, on cible la dernière ligne de l'en-tête du tableau et on indique la couleur pour la première cellule d'en-tête (qui correspond à l'inscription) avec du vert et la seconde (qui correspond à la résiliation) avec du rouge.
+ici, on cibwe wa dewnièwe w-wigne de w'en-tête du tabweau e-et on indique wa couweuw pouw w-wa pwemièwe c-cewwuwe d'en-tête (qui cowwespond à w'inscwiption) a-avec du vewt et wa seconde (qui cowwespond à w-wa wésiwiation) a-avec du wouge. rawr
 
-##### Ajouter des couleurs pour les autres lignes
+##### ajoutew des couweuws pouw w-wes autwes wignes
 
-Pour améliorer la lisibilité d'un tableau, il est courant d'appliquer une alternance de couleur entre chaque ligne. Faisons cela en ciblant les lignes paires :
+p-pouw améwiowew wa wisibiwité d-d'un tabweau, >_< iw est couwant d'appwiquew une a-awtewnance de c-couweuw entwe chaque wigne. (U ﹏ U) faisons c-cewa en cibwant w-wes wignes paiwes :
 
 ```css
-tbody > tr:nth-of-type(even) {
-  background-color: rgb(237, 238, 242);
+tbody > tw:nth-of-type(even) {
+  b-backgwound-cowow: w-wgb(237, rawr 238, (U ᵕ U❁) 242);
 }
 ```
 
-##### Mise en forme de la colonne d'en-tête gauche
+##### m-mise en fowme d-de wa cowonne d'en-tête gauche
 
-On veut que la première colonne se démarque. Mettons la en forme également.
+on veut que wa pwemièwe cowonne se démawque. (ˆ ﻌ ˆ)♡ mettons wa en fowme égawement. >_<
 
 ```css
-tbody > tr > th:first-of-type {
-  text-align: left;
-  background-color: rgb(225, 229, 244);
+t-tbody > t-tw > th:fiwst-of-type {
+  t-text-awign: w-weft;
+  b-backgwound-cowow: w-wgb(225, ^^;; 229, ʘwʘ 244);
 }
 ```
 
-Cela applique [`text-align`](/fr/docs/Web/CSS/text-align) à chaque première cellule de chaque ligne afin de justifier à gauche les noms des membres avec une couleur d'arrière-plan légèrement différentes.
+cewa a-appwique [`text-awign`](/fw/docs/web/css/text-awign) à c-chaque pwemièwe cewwuwe d-de chaque wigne a-afin de justifiew à gauche wes nyoms des membwes a-avec une couweuw d'awwièwe-pwan wégèwement d-difféwentes. 😳😳😳
 
-##### Justifier les soldes de compte
+##### justifiew w-wes sowdes de c-compte
 
-Enfin, lorsqu'on affiche des valeurs monétaires, on les représente alignées à droite pour faciliter une lecture comparative entre les valeurs. Appliquons ceci à l'exemple.
+enfin, wowsqu'on affiche d-des vaweuws monétaiwes, UwU o-on wes w-wepwésente awignées à dwoite p-pouw faciwitew u-une wectuwe compawative entwe wes v-vaweuws. OwO appwiquons ceci à w'exempwe. :3
 
 ```css
-tbody > tr > td:last-of-type {
-  text-align: right;
+t-tbody > tw > td:wast-of-type {
+  t-text-awign: wight;
 }
 ```
 
-Cette règle applique la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur le dernier élément [`<td>`](/fr/docs/Web/HTML/Element/td) de chaque ligne du corps du tableau avec la valeur `"right"`.
+c-cette wègwe appwique w-wa pwopwiété css [`text-awign`](/fw/docs/web/css/text-awign) suw we dewniew éwément [`<td>`](/fw/docs/web/htmw/ewement/td) d-de chaque wigne du cowps du tabweau avec wa vaweuw `"wight"`. -.-
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        Zéro ou plusieurs éléments
-        <a href="/fr/docs/Web/HTML/Element/td"><code>&#x3C;td></code></a> ou
-        <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a
-        >, éventuellement mélangés. Les éléments de script (<a
-          href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+        zéwo ou pwusieuws éwéments
+        <a hwef="/fw/docs/web/htmw/ewement/td"><code>&#x3c;td></code></a> ou
+        <a hwef="/fw/docs/web/htmw/ewement/th"><code>&#x3c;th></code></a
+        >, 🥺 éventuewwement méwangés. -.- w-wes éwéments de scwipt (<a
+          hwef="/fw/docs/web/htmw/ewement/scwipt"
+          ><code>&#x3c;scwipt></code></a
         >
-        et
-        <a href="/fr/docs/Web/HTML/Element/template"
-          ><code>&#x3C;template></code></a
-        >) sont également utilisés.
+        e-et
+        <a hwef="/fw/docs/web/htmw/ewement/tempwate"
+          ><code>&#x3c;tempwate></code></a
+        >) s-sont égawement utiwisés. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        La balise de début est obligatoire. La balise de fin peut être absente
-        si l'élément <code>&#x3C;tr></code> est immédiatement suivi par un
-        élément <code>&#x3C;tr></code> ou si l'élément du groupe parent (<a
-          href="/fr/docs/Web/HTML/Element/thead"
-          ><code>&#x3C;thead></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/tbody"><code>&#x3C;tbody></code></a>
-        ou
-        <a href="/fr/docs/Web/HTML/Element/tfoot"><code>&#x3C;tfoot></code></a
-        >) n'a plus d'autre contenu.
+        wa b-bawise de début est obwigatoiwe. (U ﹏ U) w-wa bawise de f-fin peut êtwe absente
+        si w'éwément <code>&#x3c;tw></code> est immédiatement s-suivi paw un
+        éwément <code>&#x3c;tw></code> ou si w'éwément d-du gwoupe pawent (<a
+          hwef="/fw/docs/web/htmw/ewement/thead"
+          ><code>&#x3c;thead></code></a
+        >, rawr
+        <a hwef="/fw/docs/web/htmw/ewement/tbody"><code>&#x3c;tbody></code></a>
+        o-ou
+        <a hwef="/fw/docs/web/htmw/ewement/tfoot"><code>&#x3c;tfoot></code></a
+        >) ny'a p-pwus d'autwe contenu. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents a-autowisés</th>
       <td>
-        Un élément
-        <a href="/fr/docs/Web/HTML/Element/table"><code>&#x3C;table></code></a>
-        (uniquement si le tableau ne possède pas d'élément
-        <a href="/fr/docs/Web/HTML/Element/body"><code>&#x3C;body></code></a> et
-        uniquement après un élément
-        <a href="/fr/docs/Web/HTML/Element/caption"
-          ><code>&#x3C;caption></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/colgroup"
-          ><code>&#x3C;colgroup></code></a
+        un éwément
+        <a hwef="/fw/docs/web/htmw/ewement/tabwe"><code>&#x3c;tabwe></code></a>
+        (uniquement s-si we tabweau nye possède pas d'éwément
+        <a h-hwef="/fw/docs/web/htmw/ewement/body"><code>&#x3c;body></code></a> et
+        uniquement apwès un éwément
+        <a hwef="/fw/docs/web/htmw/ewement/caption"
+          ><code>&#x3c;caption></code></a
+        >, ( ͡o ω ͡o )
+        <a h-hwef="/fw/docs/web/htmw/ewement/cowgwoup"
+          ><code>&#x3c;cowgwoup></code></a
         >
+        o-ou
+        <a hwef="/fw/docs/web/htmw/ewement/thead"><code>&#x3c;thead></code></a
+        >) , /(^•ω•^)
+        <a h-hwef="/fw/docs/web/htmw/ewement/thead"><code>&#x3c;thead></code></a
+        >, >_<
+        <a h-hwef="/fw/docs/web/htmw/ewement/tbody"><code>&#x3c;tbody></code></a>
         ou
-        <a href="/fr/docs/Web/HTML/Element/thead"><code>&#x3C;thead></code></a
-        >) ,
-        <a href="/fr/docs/Web/HTML/Element/thead"><code>&#x3C;thead></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/tbody"><code>&#x3C;tbody></code></a>
-        ou
-        <a href="/fr/docs/Web/HTML/Element/tfoot"><code>&#x3C;tfoot></code></a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/ewement/tfoot"><code>&#x3c;tfoot></code></a
+        >. (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe awia impwicite</th>
       <td>
         <code
-          ><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Row_Role"
-            >row</a
+          ><a hwef="/fw/docs/web/accessibiwity/awia/wowes/wow_wowe"
+            >wow</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia a-autowisés</th>
+      <td>tous w-wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLTableRowElement"
-          ><code>HTMLTableRowElement</code></a
+        <a hwef="/fw/docs/web/api/htmwtabwewowewement"
+          ><code>htmwtabwewowewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Apprendre : les tableaux HTML](/fr/docs/Learn/HTML/Tables) : une introduction à l'utilisation des tableaux qui aborde `<tr>`.
-- Les autres éléments HTML relatifs aux tableaux : [`<caption>`](/fr/docs/Web/HTML/Element/caption), [`<col>`](/fr/docs/Web/HTML/Element/col), [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup), [`<table>`](/fr/docs/Web/HTML/Element/table), [`<tbody>`](/fr/docs/Web/HTML/Element/tbody), [`<td>`](/fr/docs/Web/HTML/Element/td), [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot), [`<th>`](/fr/docs/Web/HTML/Element/th), [`<thead>`](/fr/docs/Web/HTML/Element/thead).
-- [`HTMLTableRowElement`](/fr/docs/Web/API/HTMLTableRowElement) : l'interface DOM sur laquelle `<tr>` est basé.
-- Les propriétés et pseudo-classes CSS qui sont particulièrement utiles pour mettre en forme l'élément `<tr>` :
+- [appwendwe : wes tabweaux htmw](/fw/docs/weawn/htmw/tabwes) : u-une i-intwoduction à w'utiwisation des tabweaux qui abowde `<tw>`. 😳😳😳
+- w-wes autwes éwéments htmw wewatifs aux tabweaux : [`<caption>`](/fw/docs/web/htmw/ewement/caption), (ꈍᴗꈍ) [`<cow>`](/fw/docs/web/htmw/ewement/cow), 🥺 [`<cowgwoup>`](/fw/docs/web/htmw/ewement/cowgwoup), mya [`<tabwe>`](/fw/docs/web/htmw/ewement/tabwe), (ˆ ﻌ ˆ)♡ [`<tbody>`](/fw/docs/web/htmw/ewement/tbody), (⑅˘꒳˘) [`<td>`](/fw/docs/web/htmw/ewement/td), òωó [`<tfoot>`](/fw/docs/web/htmw/ewement/tfoot), o.O [`<th>`](/fw/docs/web/htmw/ewement/th), XD [`<thead>`](/fw/docs/web/htmw/ewement/thead). (˘ω˘)
+- [`htmwtabwewowewement`](/fw/docs/web/api/htmwtabwewowewement) : w'intewface dom suw waquewwe `<tw>` est basé. (ꈍᴗꈍ)
+- wes pwopwiétés et p-pseudo-cwasses c-css qui sont pawticuwièwement utiwes pouw mettwe e-en fowme w'éwément `<tw>` :
 
-  - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) qui permet de définir l'alignement des cellules dans la colonne ou sur une ligne
-  - La propriété [`text-align`](/fr/docs/Web/CSS/text-align) qui permet d'aligner l'ensemble des cellules par rapport au même caractère (comme le point ou la virgule).
+  - w-wa pseudo-cwasse [`:nth-chiwd`](/fw/docs/web/css/:nth-chiwd) qui pewmet de d-définiw w'awignement des cewwuwes dans wa cowonne ou suw une wigne
+  - wa pwopwiété [`text-awign`](/fw/docs/web/css/text-awign) qui pewmet d'awignew w-w'ensembwe des cewwuwes paw wappowt au même cawactèwe (comme we point o-ou wa viwguwe). >w<

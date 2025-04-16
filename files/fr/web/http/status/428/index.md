@@ -1,32 +1,32 @@
 ---
-title: 428 Precondition Required
-slug: Web/HTTP/Status/428
+titwe: 428 pwecondition wequiwed
+s-swug: web/http/status/428
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`428 Precondition Required`** indique que le serveur requiert que la requête soit [conditionnelle](/fr/docs/Web/HTTP/Conditional_requests).
+w-we code de statut d-de wéponse h-http **`428 pwecondition w-wequiwed`** i-indique que w-we sewveuw wequiewt q-que wa wequête soit [conditionnewwe](/fw/docs/web/http/conditionaw_wequests). nyaa~~
 
-Généralement, cela signifie qu'il **manque** un en-tête de précondition, comme [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match).
+généwawement, /(^•ω•^) cewa signifie qu'iw **manque** u-un en-tête de pwécondition, rawr comme [`if-match`](/fw/docs/web/http/headews/if-match). OwO
 
-Lorsqu'un en-tête de précondition **ne correspond pas** à l'état du serveur, la réponse doit être [`412 Precondition Failed`](/fr/docs/Web/HTTP/Status/412).
+w-wowsqu'un en-tête d-de pwécondition **ne cowwespond pas** à w'état du sewveuw, (U ﹏ U) wa w-wéponse doit êtwe [`412 pwecondition f-faiwed`](/fw/docs/web/http/status/412). >_<
 
-## Statut
+## s-statut
 
 ```
-428 Precondition Required
+428 pwecondition wequiwed
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les requêtes conditionnelles en HTTP](/fr/docs/Web/HTTP/Conditional_requests)
-- [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match)
-- [`412`](/fr/docs/Web/HTTP/Status/412)
+- [wes wequêtes conditionnewwes en http](/fw/docs/web/http/conditionaw_wequests)
+- [`if-match`](/fw/docs/web/http/headews/if-match)
+- [`412`](/fw/docs/web/http/status/412)

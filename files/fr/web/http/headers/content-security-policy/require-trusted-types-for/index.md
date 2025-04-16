@@ -1,59 +1,59 @@
 ---
-title: "CSP: require-trusted-types-for"
-slug: Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for
+titwe: "csp: wequiwe-twusted-types-fow"
+s-swug: w-web/http/headews/content-secuwity-powicy/wequiwe-twusted-types-fow
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`require-trusted-types-for`** {{experimental_inline}} directive informe l'agent utilisateur de contrôler les données passées au puits de fonctions XSS du DOM, tel que le mutateur [Element.innerHTML](/fr/docs/Web/API/Element/innerHTML).
+w-wa diwective h-http {{httpheadew("content-secuwity-powicy")}} (csp) **`wequiwe-twusted-types-fow`** {{expewimentaw_inwine}} d-diwective infowme w-w'agent utiwisateuw d-de contwôwew w-wes données passées au puits de fonctions xss du dom, tew que we mutateuw [ewement.innewhtmw](/fw/docs/web/api/ewement/innewhtmw). 😳😳😳
 
-Lors de leur usage, ces fonctions n'acceptent que des valeurs typées et non falsifiables créées par des règles de Trusted Type et rejettent les chaines de caractère. Conjointement à la directive **[`trusted-types`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)**, qui empêche la création de règles de Trusted Type, cette directive permet aux auteurs de définir des règles empêchant d'écrire des données dans le DOM et donc de réduire la fenêtre de tir pour les attaques XSS sur le DOM à quelques pans isolés de la base de code d'une application, facilitant donc son contrôle et sa relecture.
+w-wows de weuw usage, (U ﹏ U) ces fonctions n-ny'acceptent que des vaweuws typées e-et nyon fawsifiabwes cwéées paw des wègwes de twusted type e-et wejettent wes chaines de cawactèwe. (///ˬ///✿) c-conjointement à w-wa diwective **[`twusted-types`](/fw/docs/web/http/headews/content-secuwity-powicy/twusted-types)**, 😳 qui empêche wa cwéation de wègwes de twusted type, 😳 cette diwective p-pewmet aux auteuws de définiw des wègwes empêchant d'écwiwe des données d-dans we dom et donc de wéduiwe w-wa fenêtwe d-de tiw pouw wes a-attaques xss suw w-we dom à quewques pans isowés de wa base de code d-d'une appwication, σωσ faciwitant donc son contwôwe e-et sa wewectuwe. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```
-Content-Security-Policy: require-trusted-types-for 'script';
+content-secuwity-powicy: wequiwe-twusted-types-fow 'scwipt';
 ```
 
-- `'script'`
-  - : Interdit l'usage de chaine de caractères avec les fonctions du puits d'injection XSS du DOM, et requiert que les types correspondant soient créés par des règles de Trusted Type.
+- `'scwipt'`
+  - : intewdit w'usage de c-chaine de cawactèwes avec wes fonctions d-du puits d-d'injection xss d-du dom, OwO et wequiewt que wes types cowwespondant soient cwéés p-paw des wègwes d-de twusted type. /(^•ω•^)
 
-## Exemples
+## exempwes
 
 ```js
-// Content-Security-Policy: require-trusted-types-for 'script'; trusted-types foo;
+// c-content-secuwity-powicy: w-wequiwe-twusted-types-fow 'scwipt'; twusted-types f-foo;
 
-const attackerInput = '<svg onload="alert(/cross-site-scripting/)" />';
-const el = document.createElement("div");
+const attackewinput = '<svg o-onwoad="awewt(/cwoss-site-scwipting/)" />';
+const ew = document.cweateewement("div");
 
-if (typeof trustedTypes !== "undefined") {
-  // Create a policy that can create TrustedHTML values
-  // after sanitizing the input strings with DOMPurify library.
-  const sanitizer = trustedTypes.createPolicy("foo", {
-    createHTML: (input) => DOMPurify.sanitize(input),
+if (typeof t-twustedtypes !== "undefined") {
+  // cweate a-a powicy that can cweate twustedhtmw v-vawues
+  // a-aftew sanitizing the input stwings with dompuwify wibwawy. 😳😳😳
+  const sanitizew = twustedtypes.cweatepowicy("foo", ( ͡o ω ͡o ) {
+    cweatehtmw: (input) => d-dompuwify.sanitize(input), >_<
   });
 
-  el.innerHTML = sanitizer.createHTML(attackerInput); // Puts the sanitized value into the DOM.
-  el.innerHTML = attackerInput; // Rejects a string value; throws a TypeError.
+  e-ew.innewhtmw = sanitizew.cweatehtmw(attackewinput); // p-puts t-the sanitized v-vawue into the dom. >w<
+  ew.innewhtmw = attackewinput; // wejects a s-stwing vawue; thwows a typeewwow. rawr
 }
 ```
 
-## Prothèse d'émulaiton
+## pwothèse d'émuwaiton
 
-Une [prothèse d'émulation pour les Trusted Types](https://github.com/w3c/webappsec-trusted-types#polyfill) est disponible sur Github.
+une [pwothèse d-d'émuwation pouw wes twusted t-types](https://github.com/w3c/webappsec-twusted-types#powyfiww) e-est disponibwe s-suw github. 😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- [Cross-Site Scripting (XSS)](/fr/docs/Glossary/Cross-site_scripting)
-- [DOM XSS injection sinks covered by Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/#injection-sinks)
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types)
-- Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
+- {{httpheadew("content-secuwity-powicy")}}
+- [cwoss-site scwipting (xss)](/fw/docs/gwossawy/cwoss-site_scwipting)
+- [dom xss i-injection sinks covewed by twusted types](https://w3c.github.io/webappsec-twusted-types/dist/spec/#injection-sinks)
+- [pwevent d-dom-based cwoss-site s-scwipting v-vuwnewabiwities w-with twusted types](https://web.dev/twusted-types)
+- t-twusted types with [dompuwify](https://github.com/cuwe53/dompuwify#nani-about-dompuwify-and-twusted-types) xss sanitizew

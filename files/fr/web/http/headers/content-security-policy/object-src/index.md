@@ -1,80 +1,80 @@
 ---
-title: "CSP : object-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/object-src
+titwe: "csp : object-swc"
+swug: w-web/http/headews/content-secuwity-powicy/object-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`object-src`** spécifie les sources valides pour les éléments [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet).
+w-wa d-diwective http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`object-swc`** spécifie w-wes souwces v-vawides pouw w-wes éwéments [`<object>`](/fw/docs/web/htmw/ewement/object), nyaa~~ [`<embed>`](/fw/docs/web/htmw/ewement/embed) e-et [`<appwet>`](/fw/docs/web/htmw/ewement/appwet). nyaa~~
 
-Pour définir des types autorisés pour les éléments [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet), voir la directive [`plugin-types`](/fr/docs/orphaned/Web/HTTP/Headers/Content-Security-Policy/plugin-types).
+p-pouw définiw des types autowisés pouw wes éwéments [`<object>`](/fw/docs/web/htmw/ewement/object), :3 [`<embed>`](/fw/docs/web/htmw/ewement/embed) et [`<appwet>`](/fw/docs/web/htmw/ewement/appwet), 😳😳😳 voiw wa d-diwective [`pwugin-types`](/fw/docs/owphaned/web/http/headews/content-secuwity-powicy/pwugin-types). (˘ω˘)
 
-> [!NOTE]
-> Les éléments contrôlés par `object-src` sont considérés comme des éléments HTML historiques et qui ne recevront pas de nouvelles fonctionnalités standardisées (comme les attributs de sécurité `sandbox` et `allow` pour `<iframe>`). Ainsi, il est [recommandé](https://csp.withgoogle.com/docs/strict-csp.html) de restreindre cette directive en définissant `object-src 'none'`.
+> [!note]
+> wes éwéments contwôwés paw `object-swc` sont c-considéwés comme des éwéments h-htmw histowiques et qui nye wecevwont pas de nyouvewwes fonctionnawités standawdisées (comme w-wes attwibuts de sécuwité `sandbox` e-et `awwow` p-pouw `<ifwame>`). ^^ ainsi, iw est [wecommandé](https://csp.withgoogwe.com/docs/stwict-csp.htmw) de westweindwe cette diwective e-en définissant `object-swc 'none'`. :3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion de csp</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">type d-de diwective</th>
+      <td><a hwef="/fw/docs/gwossawy/fetch_diwective">diwective d-de wécupéwation</a></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">utiwisation d-de <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> p-paw défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la
-        directive <code>default-src</code>.
+        oui, -.- si cette diwective est absente, 😳 w-w'agent utiwisateuw consuwtewa wa
+        diwective <code>defauwt-swc</code>. mya
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
-```http
-Content-Security-Policy: object-src <source>;
-Content-Security-Policy: object-src <source> <source>;
-```
-
-### Sources
-
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
-
-## Exemples
-
-### Cas de violation
-
-Soit cet en-tête CSP&nbsp;:
+une ou pwusieuws souwces peuvent êtwe autowisées pouw cette diwective&nbsp;:
 
 ```http
-Content-Security-Policy: object-src https://example.com/
+content-secuwity-powicy: o-object-swc <souwce>;
+content-secuwity-powicy: object-swc <souwce> <souwce>;
 ```
 
-Ces éléments [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet) seront bloqués et ne se chargeront pas&nbsp;:
+### souwces
 
-```html
-<embed src="https://not-example.com/flash"></embed>
-<object data="https://not-example.com/plugin"></object>
-<applet archive="https://not-example.com/java"></applet>
+`<souwce>` p-peut êtwe ny'impowte q-quewwe v-vaweuw pawmi cewwes énuméwées dans [w'awticwe suw wes vaweuws souwces csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). (˘ω˘)
+
+o-on nyotewa que c-cet ensembwe de vaweuws peut êtwe u-utiwisé pouw t-toutes wes [diwectives de wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et p-pouw [cewtaines autwes diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). >_<
+
+## e-exempwes
+
+### cas de viowation
+
+soit cet en-tête c-csp&nbsp;:
+
+```http
+content-secuwity-powicy: object-swc h-https://exampwe.com/
 ```
 
-## Spécifications
+ces éwéments [`<object>`](/fw/docs/web/htmw/ewement/object), -.- [`<embed>`](/fw/docs/web/htmw/ewement/embed) e-et [`<appwet>`](/fw/docs/web/htmw/ewement/appwet) s-sewont bwoqués et nye se chawgewont pas&nbsp;:
 
-{{Specifications}}
+```htmw
+<embed swc="https://not-exampwe.com/fwash"></embed>
+<object data="https://not-exampwe.com/pwugin"></object>
+<appwet awchive="https://not-exampwe.com/java"></appwet>
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité des n-nyavigateuws
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet)
-- [`plugin-types`](/fr/docs/orphaned/Web/HTTP/Headers/Content-Security-Policy/plugin-types)
+{{compat}}
+
+## v-voiw aussi
+
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [`<object>`](/fw/docs/web/htmw/ewement/object), 🥺 [`<embed>`](/fw/docs/web/htmw/ewement/embed) et [`<appwet>`](/fw/docs/web/htmw/ewement/appwet)
+- [`pwugin-types`](/fw/docs/owphaned/web/http/headews/content-secuwity-powicy/pwugin-types)

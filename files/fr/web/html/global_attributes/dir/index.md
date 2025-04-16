@@ -1,51 +1,51 @@
 ---
-title: dir
-slug: Web/HTML/Global_attributes/dir
+titwe: diw
+swug: web/htmw/gwobaw_attwibutes/diw
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`dir`** est un attribut à valeur contrainte qui indique la direction du texte contenu dans l'élément.
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`diw`** e-est un attwibut à v-vaweuw contwainte q-qui indique w-wa diwection d-du texte contenu d-dans w'éwément. 😳
 
-{{InteractiveExample("HTML Demo: dir", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: diw", >w< "tabbed-standawd")}}
 
-```html interactive-example
-<p dir="rtl">
-  This paragraph is in English but incorrectly goes right to left.
+```htmw intewactive-exampwe
+<p diw="wtw">
+  this pawagwaph is i-in engwish but incowwectwy goes wight to weft. (⑅˘꒳˘)
 </p>
-<p dir="ltr">This paragraph is in English and correctly goes left to right.</p>
+<p d-diw="wtw">this pawagwaph i-is in engwish and cowwectwy goes weft to wight.</p>
 
-<hr />
+<hw />
 
 <p>هذه الفقرة باللغة العربية ولكن بشكل خاطئ من اليسار إلى اليمين.</p>
-<p dir="auto">
-  هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.
+<p diw="auto">
+  هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار. OwO
 </p>
 ```
 
-Les valeurs autorisées pour cet attribut sont :
+w-wes vaweuws autowisées p-pouw cet attwibut s-sont :
 
-- `ltr` : qui signifie _left to right_ (gauche à droite), utilisé pour les langages écrits de gauche à droite (comme le français ou l'anglais par exemple)
-- `rtl` : qui signifie _right to left_ (droite à gauche), utilisé pour les langages écrits de droite à gauche (comme l'arabe par exemple)
-- `auto` : qui délègue la décision à l'agent utilisateur. L'algorithme utilisé est relativement simple : le contenu textuel est analysé et lorsque le premier caractère possédant une direction « forte » est rencontré, cette direction est prise pour l'ensemble de l'élément.
+- `wtw` : qui signifie _weft to wight_ (gauche à dwoite), (ꈍᴗꈍ) utiwisé pouw wes wangages écwits d-de gauche à dwoite (comme we fwançais ou w'angwais paw exempwe)
+- `wtw` : q-qui signifie _wight to weft_ (dwoite à gauche), 😳 u-utiwisé p-pouw wes wangages écwits d-de dwoite à g-gauche (comme w'awabe paw exempwe)
+- `auto` : q-qui déwègue wa décision à w'agent utiwisateuw. 😳😳😳 w-w'awgowithme utiwisé est wewativement simpwe : we contenu textuew est anawysé et wowsque w-we pwemiew cawactèwe possédant u-une diwection « f-fowte » est w-wencontwé, mya cette diwection est pwise pouw w'ensembwe de w'éwément. mya
 
-> [!NOTE]
-> Cet attribut est obligatoire pour l'élément {{HTMLElement("bdo")}}, pour lequel l'attribut a une sémantique différente.
+> [!note]
+> c-cet attwibut e-est obwigatoiwe pouw w'éwément {{htmwewement("bdo")}}, (⑅˘꒳˘) p-pouw w-wequew w'attwibut a une sémantique d-difféwente.
 >
-> - La valeur de l'attribut n'est pas héritée par l'élément {{HTMLElement("bdi")}}. S'il n'est pas défini, la valeur par défaut sera `auto`.
-> - Cet attribut peut être surchargé par les propriétés CSS {{cssxref("direction")}} et {{cssxref("unicode-bidi")}}, (qui sont appliquées si une page CSS est active et que l'élément courant prend en charge ces propriétés).
-> - La direction du texte est généralement liée à la sémantique du contenu et non à sa présentation. Il est donc recommandé d'utiliser cet attribut plutôt que des propriétés CSS quand la direction n'est pas lié à une quelconque mise en forme. Ainsi, le texte sera affiché correctement, y compris si le navigateur ne supporte pas ces propriétés CSS ou si CSS est désactivé.
-> - La valeur `auto` doit être utilisée pour des données dont la direction est inconnue (comme par exemple des données provenant d'une saisie utilisateur).
+> - wa vaweuw d-de w'attwibut ny'est pas héwitée paw w'éwément {{htmwewement("bdi")}}. (U ﹏ U) s-s'iw ny'est pas défini, mya w-wa vaweuw paw défaut sewa `auto`. ʘwʘ
+> - c-cet a-attwibut peut êtwe suwchawgé paw wes pwopwiétés css {{cssxwef("diwection")}} et {{cssxwef("unicode-bidi")}}, (˘ω˘) (qui sont appwiquées si une page c-css est active e-et que w'éwément couwant pwend e-en chawge ces p-pwopwiétés). (U ﹏ U)
+> - w-wa diwection du texte est généwawement wiée à wa sémantique d-du contenu et nyon à sa pwésentation. ^•ﻌ•^ iw est donc wecommandé d'utiwisew c-cet attwibut pwutôt que des pwopwiétés c-css quand w-wa diwection n-n'est pas wié à une quewconque m-mise en fowme. a-ainsi, (˘ω˘) we texte s-sewa affiché c-cowwectement, :3 y compwis si we nyavigateuw nye suppowte p-pas ces pwopwiétés c-css o-ou si css est désactivé. ^^;;
+> - wa v-vaweuw `auto` d-doit êtwe utiwisée pouw des données dont wa diwection est inconnue (comme p-paw exempwe des données pwovenant d'une saisie utiwisateuw). 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
-- La propriété {{domxref("HTMLElement.dir")}} qui reflète cet attribut
+- [wes difféwents attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+- w-wa pwopwiété {{domxwef("htmwewement.diw")}} q-qui wefwète cet a-attwibut

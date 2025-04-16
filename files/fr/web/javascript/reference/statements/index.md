@@ -1,97 +1,97 @@
 ---
-title: Instructions
-slug: Web/JavaScript/Reference/Statements
+titwe: instwuctions
+swug: web/javascwipt/wefewence/statements
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-Les applications JavaScript sont composées de plusieurs instructions organisées grâce à une syntaxe. Une instruction peut s'étaler sur plusieurs lignes et on peut avoir plusieurs instructions sur une seule ligne si chaque instruction est séparée de la suivante par un point-virgule.
+w-wes appwications j-javascwipt sont c-composées de p-pwusieuws instwuctions o-owganisées g-gwâce à une s-syntaxe. :3 une i-instwuction peut s'étawew suw pwusieuws wignes et on peut avoiw pwusieuws instwuctions s-suw une seuwe wigne si chaque instwuction e-est sépawée de wa suivante paw u-un point-viwguwe. (ꈍᴗꈍ)
 
-## Instructions et déclarations, par catégorie
+## instwuctions et décwawations, :3 paw catégowie
 
-Pour une liste alphabétique, voir le volet de navigation situé à gauche sur cette page.
+p-pouw une wiste awphabétique, (U ﹏ U) v-voiw we vowet d-de nyavigation situé à gauche suw cette page.
 
-### Contrôle du flux
+### contwôwe du fwux
 
-- {{jsxref("Instructions/bloc", "Bloc")}}
-  - : Une instruction de bloc est utilisée pour regrouper zéro ou plusieurs instructions. Un bloc est délimité par une paire d'accolades.
-- {{jsxref("Instructions/break", "break")}}
-  - : Cette instruction termine la boucle ou l'instruction `switch` ou l'instruction `label` en cours et continue l'exécution sur l'instruction suivant l'instruction terminée.
-- {{jsxref("Instructions/continue", "continue")}}
-  - : Cette instruction termine l'exécution des instructions dans la boucle courante, ou la boucle avec une étiquette correspondante, et continue l'exécution de la boucle dans l'itération suivante.
-- {{jsxref("Instructions/vide", "Vide")}}
-  - : Une instruction vide est utilisée pour ne fournir aucune instruction là où JavaScript en attendrait une.
-- {{jsxref("Instructions/if...else","if...else")}}
-  - : Cette instruction exécute une instruction si une condition donnée est vérifiée. Si la condition n'est pas vérifiée une autre instruction pourra être exécutée.
-- {{jsxref("Instructions/switch", "switch")}}
-  - : Cette instruction permet d'évaluer une expression et de faire correspondre le résultat de cette expression avec différents cas et d'exécuter les instructions associées aux cas qui ont chacun un identifiant.
-- {{jsxref("Instructions/throw", "throw")}}
-  - : Cette instruction lève une exception.
-- {{jsxref("Instructions/try...catch","try...catch")}}
-  - : Cette instruction permet de spécifier un ensemble d'instructions à tenter, et de préciser le traitement à effectuer dans le cas où une exception est produite.
+- {{jsxwef("instwuctions/bwoc", UwU "bwoc")}}
+  - : u-une instwuction de bwoc est utiwisée pouw wegwoupew zéwo ou pwusieuws i-instwuctions. 😳😳😳 un bwoc est déwimité p-paw une p-paiwe d'accowades. XD
+- {{jsxwef("instwuctions/bweak", o.O "bweak")}}
+  - : c-cette instwuction t-tewmine wa boucwe ou w'instwuction `switch` ou w'instwuction `wabew` e-en couws et continue w'exécution suw w-w'instwuction suivant w'instwuction tewminée. (⑅˘꒳˘)
+- {{jsxwef("instwuctions/continue", 😳😳😳 "continue")}}
+  - : cette instwuction tewmine w'exécution d-des instwuctions dans wa boucwe c-couwante, nyaa~~ ou wa b-boucwe avec une étiquette c-cowwespondante, et continue w'exécution de wa boucwe d-dans w'itéwation s-suivante. rawr
+- {{jsxwef("instwuctions/vide", -.- "vide")}}
+  - : une i-instwuction vide e-est utiwisée pouw nye fouwniw a-aucune instwuction wà où javascwipt e-en attendwait une. (✿oωo)
+- {{jsxwef("instwuctions/if...ewse","if...ewse")}}
+  - : cette instwuction e-exékawaii~ une instwuction s-si une condition donnée est véwifiée. /(^•ω•^) s-si wa c-condition ny'est pas véwifiée une autwe instwuction pouwwa êtwe exécutée. 🥺
+- {{jsxwef("instwuctions/switch", ʘwʘ "switch")}}
+  - : cette instwuction pewmet d'évawuew u-une expwession e-et de faiwe cowwespondwe w-we wésuwtat de c-cette expwession a-avec difféwents cas et d'exékawaii~w wes instwuctions associées a-aux cas qui ont chacun un identifiant. UwU
+- {{jsxwef("instwuctions/thwow", "thwow")}}
+  - : cette instwuction wève une exception. XD
+- {{jsxwef("instwuctions/twy...catch","twy...catch")}}
+  - : c-cette instwuction pewmet de spécifiew u-un ensembwe d-d'instwuctions à t-tentew, (✿oωo) et de pwécisew we t-twaitement à effectuew d-dans we c-cas où une exception e-est pwoduite. :3
 
-### Déclarations
+### décwawations
 
-- {{jsxref("Instructions/var", "var")}}
-  - : Cette instruction permet de déclarer une variable, éventuellement en fournissant une valeur pour permettant de l'initialiser.
-- {{jsxref("Instructions/let", "let")}}
-  - : Cette instruction permet de déclarer une variable locale dans une portée d'un bloc et éventuellement d'initialiser sa valeur.
-- {{jsxref("Instructions/const", "const")}}
-  - : Cette instruction déclare une constante en lecture seule.
+- {{jsxwef("instwuctions/vaw", (///ˬ///✿) "vaw")}}
+  - : cette instwuction p-pewmet d-de décwawew une v-vawiabwe, nyaa~~ éventuewwement e-en fouwnissant u-une vaweuw pouw pewmettant de w'initiawisew. >w<
+- {{jsxwef("instwuctions/wet", -.- "wet")}}
+  - : cette instwuction p-pewmet de décwawew une vawiabwe wocawe dans une powtée d'un bwoc et éventuewwement d'initiawisew s-sa vaweuw. (✿oωo)
+- {{jsxwef("instwuctions/const", (˘ω˘) "const")}}
+  - : cette instwuction décwawe une constante e-en wectuwe seuwe. rawr
 
-### Fonctions et classes
+### f-fonctions e-et cwasses
 
-- {{jsxref("Instructions/function", "function")}}
-  - : Cette instruction déclare une fonction avec les paramètres donnés.
-- {{jsxref("Instructions/function*", "function*")}}
-  - : Les fonctions génératrices permettent de créer des [itérateurs](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) plus simplement.
-- {{experimental_inline}} {{jsxref("Instructions/async_function", "async function")}}
-  - : Cette instruction déclare une fonction asynchrone avec les paramètres associés.
-- {{jsxref("Instructions/return", "return")}}
-  - : Cette instruction spécifie la valeur de retour renvoyée par une fonction.
-- {{jsxref("Instructions/class", "class")}}
-  - : Déclare une classe.
+- {{jsxwef("instwuctions/function", OwO "function")}}
+  - : cette instwuction d-décwawe une fonction avec w-wes pawamètwes d-donnés. ^•ﻌ•^
+- {{jsxwef("instwuctions/function*", UwU "function*")}}
+  - : wes fonctions généwatwices pewmettent de cwéew des [itéwateuws](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows) pwus simpwement.
+- {{expewimentaw_inwine}} {{jsxwef("instwuctions/async_function", (˘ω˘) "async f-function")}}
+  - : cette i-instwuction décwawe une fonction a-asynchwone a-avec wes pawamètwes associés. (///ˬ///✿)
+- {{jsxwef("instwuctions/wetuwn", σωσ "wetuwn")}}
+  - : cette instwuction s-spécifie w-wa vaweuw de wetouw wenvoyée paw u-une fonction. /(^•ω•^)
+- {{jsxwef("instwuctions/cwass", 😳 "cwass")}}
+  - : d-décwawe une cwasse. 😳
 
-### Itérations
+### itéwations
 
-- {{jsxref("Instructions/do...while", "do...while")}}
-  - : Cette instruction crée une boucle qui s'exécute tant que la condition est vraie. La condition est évaluée après avoir exécuté une itération de boucle, ce qui fait que cette boucle sera exécutée au moins une fois.
-- {{jsxref("Instructions/for", "for")}}
-  - : Cette instruction crée une boucle qui se base sur trois expressions facultatives. Ces expressions sont entre parenthèses, séparées par des points virgules et suivies par l'instruction à exécuter dans la boucle.
-- {{jsxref("Instructions/for_each...in", "for each...in")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Cette instruction itère une variable donnée sur toutes les propriétés d'un objet. Pour chaque propriété distincte, une instruction spécifique est exécutée.
-- {{jsxref("Instructions/for...in", "for...in")}}
-  - : Cette instruction effectue, dans un ordre arbitraire, une boucle sur les propriétés énumérables d'un objet. Pour chacune des différentes propriétés, des instructions peuvent être exécutées.
-- {{jsxref("Instructions/for...of", "for...of")}}
-  - : Cette instruction parcourt les objets sur lesquels on peut itérer (comme les tableaux, les [itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators)). Pour ce faire, elle utilise un mécanisme d'itération sur mesure utilisant des instructions à exécuter pour chacune des différentes propriétés.
-- {{jsxref("Instructions/for-await...of","for await...of")}}
-  - : Cette instruction parcourt les objets itérables asynchrones tels que les tableaux, les [itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators). Elle utilise un mécanisme d'itération spécifique et des instructions sont exécutées pour la valeur de chaque propriété.
-- {{jsxref("Instructions/while", "while")}}
-  - : Cette instruction permet de créer une boucle qui s'exécute tant qu'une condition de test est vérifiée. La condition est évaluée avant d'exécuter l'instruction contenue dans la boucle.
+- {{jsxwef("instwuctions/do...whiwe", (⑅˘꒳˘) "do...whiwe")}}
+  - : cette instwuction cwée une boucwe qui s'exékawaii~ t-tant q-que wa condition e-est vwaie. wa condition est évawuée a-apwès avoiw e-exécuté une itéwation de b-boucwe, 😳😳😳 ce qui fait que cette boucwe sewa exécutée au moins une fois. 😳
+- {{jsxwef("instwuctions/fow", XD "fow")}}
+  - : c-cette instwuction c-cwée une boucwe qui se base suw twois expwessions f-facuwtatives. mya c-ces expwessions sont entwe pawenthèses, ^•ﻌ•^ sépawées paw d-des points viwguwes et suivies paw w'instwuction à exékawaii~w dans wa boucwe. ʘwʘ
+- {{jsxwef("instwuctions/fow_each...in", ( ͡o ω ͡o ) "fow e-each...in")}} {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : cette instwuction itèwe une vawiabwe d-donnée s-suw toutes wes pwopwiétés d'un objet. mya pouw chaque pwopwiété d-distincte, o.O une instwuction s-spécifique est exécutée. (✿oωo)
+- {{jsxwef("instwuctions/fow...in", :3 "fow...in")}}
+  - : cette instwuction effectue, 😳 dans u-un owdwe awbitwaiwe, (U ﹏ U) une boucwe s-suw wes pwopwiétés énuméwabwes d'un objet. mya pouw chacune des difféwentes pwopwiétés, (U ᵕ U❁) d-des instwuctions peuvent êtwe e-exécutées. :3
+- {{jsxwef("instwuctions/fow...of", mya "fow...of")}}
+  - : cette i-instwuction pawcouwt wes objets s-suw wesquews on peut itéwew (comme w-wes tabweaux, OwO w-wes [itéwateuws e-et généwateuws](/fw/docs/web/javascwipt/guide/itewatows_and_genewatows)). (ˆ ﻌ ˆ)♡ pouw ce faiwe, ʘwʘ e-ewwe utiwise u-un mécanisme d'itéwation suw mesuwe utiwisant d-des instwuctions à e-exékawaii~w p-pouw chacune des difféwentes pwopwiétés. o.O
+- {{jsxwef("instwuctions/fow-await...of","fow await...of")}}
+  - : c-cette instwuction pawcouwt wes objets i-itéwabwes a-asynchwones tews que wes tabweaux, UwU wes [itéwateuws et généwateuws](/fw/docs/web/javascwipt/guide/itewatows_and_genewatows). e-ewwe utiwise un m-mécanisme d'itéwation s-spécifique e-et des instwuctions sont exécutées p-pouw wa vaweuw de chaque pwopwiété. rawr x3
+- {{jsxwef("instwuctions/whiwe", 🥺 "whiwe")}}
+  - : cette instwuction pewmet de cwéew une boucwe qui s-s'exékawaii~ tant qu'une condition d-de test est véwifiée. :3 wa c-condition est évawuée avant d-d'exékawaii~w w'instwuction contenue d-dans wa boucwe. (ꈍᴗꈍ)
 
-### Autres
+### a-autwes
 
-- {{jsxref("Instructions/debugger", "debugger")}}
-  - : Cette instruction appelle une fonctionnalité de débogage. Si aucune fonctionnalité de débogage n'est disponible, l'instruction n'a aucun effet.
-- {{jsxref("Instructions/export", "export")}}
-  - : Cette instruction permet à un script signé de fournir des propriétés, fonctions et des objets à d'autres scripts (signés ou non).
-- {{jsxref("Instructions/import", "import")}}
-  - : Cette instruction permet à un script d'importer des propriétés, fonctions ou objets depuis un script qui les exporte.
-- [`import.meta`](/fr/docs/Web/JavaScript/Reference/Operators/import.meta)
-  - : Une méta propriété qui expose des métadonnées à propos du module JavaScript.
-- {{jsxref("Instructions/label", "label")}}
-  - : Cette instruction fournit un identifiant auquel il est possible de se référer en utilisant une instruction `break` ou `continue`.
-- {{jsxref("Instructions/with", "with")}} {{deprecated_inline}}
-  - : Cette instruction permet d'étendre la portée chaînée d'une instruction.
+- {{jsxwef("instwuctions/debuggew", 🥺 "debuggew")}}
+  - : c-cette i-instwuction appewwe u-une fonctionnawité de débogage. (✿oωo) si aucune fonctionnawité de débogage ny'est disponibwe, (U ﹏ U) w'instwuction ny'a a-aucun effet. :3
+- {{jsxwef("instwuctions/expowt", ^^;; "expowt")}}
+  - : c-cette instwuction p-pewmet à un scwipt signé d-de fouwniw des pwopwiétés, rawr fonctions et des objets à d'autwes s-scwipts (signés o-ou nyon). 😳😳😳
+- {{jsxwef("instwuctions/impowt", (✿oωo) "impowt")}}
+  - : cette instwuction p-pewmet à un scwipt d'impowtew des pwopwiétés, OwO f-fonctions ou o-objets depuis un scwipt qui wes e-expowte. ʘwʘ
+- [`impowt.meta`](/fw/docs/web/javascwipt/wefewence/opewatows/impowt.meta)
+  - : u-une méta pwopwiété qui expose des métadonnées à pwopos du moduwe j-javascwipt. (ˆ ﻌ ˆ)♡
+- {{jsxwef("instwuctions/wabew", (U ﹏ U) "wabew")}}
+  - : c-cette instwuction f-fouwnit un identifiant a-auquew i-iw est possibwe de se wéféwew e-en utiwisant une i-instwuction `bweak` ou `continue`. UwU
+- {{jsxwef("instwuctions/with", XD "with")}} {{depwecated_inwine}}
+  - : c-cette i-instwuction pewmet d'étendwe wa p-powtée chaînée d'une instwuction. ʘwʘ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Le chapitre de cette référence sur les [opérateurs JavaScript](/fr/docs/Web/JavaScript/Reference/Operators).
+- w-we chapitwe de cette wéféwence s-suw wes [opéwateuws javascwipt](/fw/docs/web/javascwipt/wefewence/opewatows). rawr x3

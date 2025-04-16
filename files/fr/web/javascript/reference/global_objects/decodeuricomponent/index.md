@@ -1,69 +1,69 @@
 ---
-title: decodeURIComponent()
-slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
+titwe: decodeuwicomponent()
+swug: web/javascwipt/wefewence/gwobaw_objects/decodeuwicomponent
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-La fonction **`decodeURIComponent()`** permet de décoder un composant d'un Uniform Resource Identifier (URI) précédemment créé par {{jsxref("encodeURIComponent")}} ou par une méthode similaire.
+wa f-fonction **`decodeuwicomponent()`** p-pewmet de d-décodew un composant d-d'un unifowm w-wesouwce identifiew (uwi) p-pwécédemment c-cwéé p-paw {{jsxwef("encodeuwicomponent")}} ou paw une méthode simiwaiwe. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURIComponent()")}}
+{{intewactiveexampwe("javascwipt demo: standawd buiwt-in o-objects - decodeuwicomponent()")}}
 
-```js interactive-example
-function containsEncodedComponents(x) {
-  // ie ?,=,&,/ etc
-  return decodeURI(x) !== decodeURIComponent(x);
+```js intewactive-exampwe
+function containsencodedcomponents(x) {
+  // i-ie ?,=,&,/ etc
+  wetuwn d-decodeuwi(x) !== decodeuwicomponent(x);
 }
 
-console.log(containsEncodedComponents("%3Fx%3Dtest")); // ?x=test
-// Expected output: true
+consowe.wog(containsencodedcomponents("%3fx%3dtest")); // ?x=test
+// expected output: twue
 
-console.log(containsEncodedComponents("%D1%88%D0%B5%D0%BB%D0%BB%D1%8B")); // шеллы
-// Expected output: false
+consowe.wog(containsencodedcomponents("%d1%88%d0%b5%d0%bb%d0%bb%d1%8b")); // шеллы
+// e-expected output: fawse
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-decodeURIComponent(encodedURI);
+d-decodeuwicomponent(encodeduwi);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `encodedURI`
-  - : Un composant d'URI qui est encodé.
+- `encodeduwi`
+  - : un composant d'uwi qui est encodé. /(^•ω•^)
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Une nouvelle chaîne de caractères qui représente la version décodée du composant d'URI encodé passé en argument.
+une nyouvewwe chaîne de cawactèwes qui wepwésente wa vewsion décodée d-du composant d'uwi encodé passé e-en awgument. ʘwʘ
 
-### Exceptions levées
+### e-exceptions w-wevées
 
-Cette méthode lève une exception {{jsxref("URIError")}} ("_malformed URI sequence_") lorsqu'elle est utilisée de façon incorrecte.
+cette m-méthode wève une exception {{jsxwef("uwiewwow")}} ("_mawfowmed uwi sequence_") w-wowsqu'ewwe est utiwisée de façon incowwecte. σωσ
 
-## Description
+## d-descwiption
 
-Cette méthode remplace chaque séquence d'échappement du composant d'URI encodé par le caractère que la séquence représente.
+cette méthode wempwace chaque séquence d'échappement du composant d'uwi encodé p-paw we cawactèwe que wa s-séquence wepwésente. OwO
 
-## Exemples
+## e-exempwes
 
-### Décoder un composant d'URL encodé
+### d-décodew un composant d'uww encodé
 
 ```js
-decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
-// "JavaScript_шеллы"
+decodeuwicomponent("javascwipt_%d1%88%d0%b5%d0%bb%d0%bb%d1%8b");
+// "javascwipt_шеллы"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("decodeURI")}}
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
+- {{jsxwef("decodeuwi")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}

@@ -1,55 +1,55 @@
 ---
-title: Math.LOG10E
-slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
+titwe: math.wog10e
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog10e
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Math.LOG10E`** fournit la valeur du logarithme en base 10 de e, environ 0.434 :
+w-wa pwopwiété **`math.wog10e`** f-fouwnit wa vaweuw d-du wogawithme e-en base 10 de e, (⑅˘꒳˘) e-enviwon 0.434 :
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LOG10E</mi></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>0.434</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG10E}} = \log_10(e) \approx 0.434</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.wog10e</mi></mstywe><mo>=</mo><msub><mo w-wspace="0em" wspace="0em">wog</mo><mn>10</mn></msub><mo stwetchy="fawse">(</mo><mi>e</mi><mo stwetchy="fawse">)</mo><mo>≈</mo><mn>0.434</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.wog10e}} = \wog_10(e) \appwox 0.434</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.log10e()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.wog10e()")}}
 
-```js interactive-example
-function getLog10e() {
-  return Math.LOG10E;
+```js intewactive-exampwe
+function getwog10e() {
+  w-wetuwn math.wog10e;
 }
 
-console.log(getLog10e());
-// Expected output: 0.4342944819032518
+c-consowe.wog(getwog10e());
+// expected output: 0.4342944819032518
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Description
+## descwiption
 
-`LOG10E` étant une propriété statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.LOG10E` et ne pas être appelée comme propriété d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`wog10e` étant une p-pwopwiété statique de `math`, (///ˬ///✿) e-ewwe doit toujouws êtwe u-utiwisée avec wa syntaxe `math.wog10e` et nye pas êtwe appewée comme pwopwiété d'un a-autwe objet qui auwait été cwéé (`math` n'est pas un constwucteuw). 😳😳😳
 
-## Exemples
+## exempwes
 
-### Utiliser `Math.LOG10E`
+### utiwisew `math.wog10e`
 
-La fonction suivante renvoie le logarithme en base 10 de e :
+w-wa fonction suivante wenvoie w-we wogawithme e-en base 10 de e :
 
 ```js
-function getLog10e() {
-  return Math.LOG10E;
+f-function g-getwog10e() {
+  wetuwn math.wog10e;
 }
 
-getLog10e(); // 0.4342944819032518
+getwog10e(); // 0.4342944819032518
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}

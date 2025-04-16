@@ -1,61 +1,61 @@
 ---
-title: Host
-slug: Web/HTTP/Headers/Host
+titwe: host
+swug: web/http/headews/host
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête de requête **`Host`** spécifie le nom de domaine du serveur (pour de l'hébergement virtuel), et (optionnellement) le numéro du port TCP sur lequel le serveur écoute.
+w-w'en-tête de wequête **`host`** s-spécifie we n-nyom de domaine d-du sewveuw (pouw d-de w'hébewgement v-viwtuew), (⑅˘꒳˘) et (optionnewwement) w-we nyuméwo du p-powt tcp suw wequew we sewveuw écoute. /(^•ω•^)
 
-Si aucun port n'est donné, le port par défaut du service demandé sera utilisé (par exemple, "80" pour une URL HTTP).
+si aucun powt ny'est donné, rawr x3 we powt paw d-défaut du sewvice demandé sewa utiwisé (paw e-exempwe, (U ﹏ U) "80" pouw une uww http). (U ﹏ U)
 
-Un champ d'en-tête `Host` doit être envoyé dans tous les messages de requête HTTP/1.1. Un code HTTP {{HTTPStatus("400")}} (Bad Request) sera envoyé à tout message de requette HTTP/1.1 ne contenant pas un champ d'en-tête `Host` ou qui en contient plus d'un.
+u-un champ d'en-tête `host` doit êtwe envoyé dans tous wes messages de wequête h-http/1.1. (⑅˘꒳˘) un code http {{httpstatus("400")}} (bad w-wequest) s-sewa envoyé à tout message de wequette http/1.1 nye contenant pas un champ d'en-tête `host` o-ou qui en contient pwus d'un. òωó
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
+    <tw>
+      <th scope="wow">type d'en-tête</th>
       <td>
-        {{Glossary("Request header","En-tête de requête")}}
+        {{gwossawy("wequest headew","en-tête d-de wequête")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden header name"," Nom d'en-tête interdit ")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("fowbidden h-headew nyame"," n-nyom d'en-tête i-intewdit ")}}
       </th>
-      <td>Oui</td>
-    </tr>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```
-Host: <host>:<port>
+host: <host>:<powt>
 ```
 
-## Directives
+## diwectives
 
 - \<host>
-  - : le nom de domaine du serveur (pour de l'hébergement virtuel).
-- \<port> {{optional_inline}}
-  - : numéro de port TCP sur lequel le serveur écoute.
+  - : w-we nyom de domaine du sewveuw (pouw de w-w'hébewgement viwtuew). ʘwʘ
+- \<powt> {{optionaw_inwine}}
+  - : nyuméwo de powt tcp suw wequew we sewveuw écoute. /(^•ω•^)
 
-## Exemples
+## exempwes
 
 ```
-Host: developer.mozilla.org
+h-host: devewopew.moziwwa.owg
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{HTTPStatus("400")}}
-- {{HTMLElement("base")}}
+- {{httpstatus("400")}}
+- {{htmwewement("base")}}

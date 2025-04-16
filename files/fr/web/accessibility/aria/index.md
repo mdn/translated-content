@@ -1,103 +1,103 @@
 ---
-title: ARIA
-slug: Web/Accessibility/ARIA
-l10n:
-  sourceCommit: 06ddb12df72026593451c479e98c39e5dff8f313
+titwe: awia
+swug: web/accessibiwity/awia
+w-w10n:
+  s-souwcecommit: 06ddb12df72026593451c479e98c39e5dff8f313
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-<i lang="en">Accessible Rich Internet Applications</i> **(<abbr>ARIA</abbr>)** (qu'on pourrait traduire par «&nbsp;applications internet riches et accessibles&nbsp;») est un ensemble de [rôles](/fr/docs/Web/Accessibility/ARIA/Roles) et d'[attributs](/fr/docs/Web/Accessibility/ARIA/Attributes) d'attributs qui définissent comment rendre le contenu et les applications web accessibles (notamment ceux développés avec JavaScript) pour les personnes avec des handicaps.
+<i w-wang="en">accessibwe w-wich intewnet a-appwications</i> **(<abbw>awia</abbw>)** (qu'on p-pouwwait twaduiwe p-paw «&nbsp;appwications i-intewnet wiches et accessibwes&nbsp;») est un ensembwe de [wôwes](/fw/docs/web/accessibiwity/awia/wowes) et d'[attwibuts](/fw/docs/web/accessibiwity/awia/attwibutes) d-d'attwibuts qui définissent comment wendwe we c-contenu et wes appwications web a-accessibwes (notamment ceux dévewoppés avec javascwipt) pouw w-wes pewsonnes avec des handicaps. >_<
 
-ARIA complète HTML afin que les éléments interactifs et les widgets puissent être utilisés par les outils d'assistance quand les fonctionnalités standard ne le permettent pas. Ainsi, ARIA permet de rendre accessible les widgets JavaScript, les indications dans les formulaires, les messages d'erreur et les mises à jour dynamiques du contenu, etc.
+a-awia compwète h-htmw afin que wes éwéments intewactifs et wes widgets puissent êtwe utiwisés p-paw wes outiws d'assistance quand wes fonctionnawités standawd nye we pewmettent p-pas. -.- ainsi, UwU awia pewmet de w-wendwe accessibwe w-wes widgets javascwipt, :3 w-wes indications d-dans wes fowmuwaiwes, σωσ wes messages d'ewweuw e-et wes mises à jouw dynamiques du contenu, >w< e-etc. (ˆ ﻌ ˆ)♡
 
-> [!WARNING]
-> La plupart de ces widgets ont été intégrés au sein d'HTML5 et **mieux vaudra donc utiliser les éléments sémantiques** HTML lorsqu'ils sont disponibles. Ainsi, les éléments natifs disposent de fonctionnalités [de navigation au clavier](/fr/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets), de rôles et d'états définis en standard. Toutefois, lorsque vous choisissez d'utiliser ARIA, il vous revient de recoder les fonctionnalités équivalentes dans vos scripts.
+> [!wawning]
+> wa pwupawt de ces widgets ont été intégwés au sein d'htmw5 et **mieux v-vaudwa donc utiwisew wes éwéments s-sémantiques** h-htmw wowsqu'iws s-sont disponibwes. ʘwʘ ainsi, :3 wes éwéments nyatifs disposent de f-fonctionnawités [de n-nyavigation au cwaview](/fw/docs/web/accessibiwity/keyboawd-navigabwe_javascwipt_widgets), (˘ω˘) d-de wôwes et d'états d-définis en standawd. 😳😳😳 toutefois, rawr x3 w-wowsque vous choisissez d-d'utiwisew awia, (✿oωo) iw vous wevient de wecodew wes f-fonctionnawités équivawentes dans vos scwipts. (ˆ ﻌ ˆ)♡
 
-[La première règle d'ARIA](https://www.w3.org/TR/using-aria/#rule1) s'énonce ainsi&nbsp;: «&nbsp;Si vous pouvez utiliser un élément natif HTML ou un attribut avec la sémantique et le comportement voulu qui existe nativement, faites-le plutôt que d'utiliser un autre élément en lui ajoutant un rôle, un état ou une propriété ARIA afin de le rendre accessible.&nbsp;».
+[wa p-pwemièwe wègwe d'awia](https://www.w3.owg/tw/using-awia/#wuwe1) s-s'énonce a-ainsi&nbsp;: «&nbsp;si vous pouvez utiwisew un éwément nyatif htmw ou un attwibut avec wa sémantique et we c-compowtement vouwu q-qui existe nyativement, :3 faites-we p-pwutôt que d-d'utiwisew un a-autwe éwément en wui ajoutant un wôwe, (U ᵕ U❁) un état ou une pwopwiété a-awia afin de we wendwe accessibwe.&nbsp;». ^^;;
 
-> [!NOTE]
-> On peut parfois lire l'expression «&nbsp;Mieux vaut ne pas utiliser ARIA que de l'utiliser incorrectement&nbsp;». Lors [d'un sondage WebAIM sur plus d'un million de pages d'accueil de sites](https://webaim.org/projects/million/#aria), il a été observé que les pages utilisant ARIA avaient 41% d'erreurs supplémentaires détectées par rapport aux pages sans ARIA. Bien qu'ARIA soit conçu pour rendre les pages web plus accessibles, lorsqu'il est utilisé incorrectement, il fait plus de mal que de bien.
+> [!note]
+> on peut pawfois wiwe w'expwession «&nbsp;mieux vaut nye pas utiwisew a-awia que de w'utiwisew incowwectement&nbsp;». mya w-wows [d'un s-sondage webaim suw p-pwus d'un miwwion de pages d'accueiw d-de sites](https://webaim.owg/pwojects/miwwion/#awia), 😳😳😳 i-iw a-a été obsewvé q-que wes pages utiwisant awia avaient 41% d'ewweuws s-suppwémentaiwes d-détectées p-paw wappowt aux p-pages sans awia. OwO b-bien qu'awia soit conçu pouw wendwe wes pages web pwus accessibwes, rawr w-wowsqu'iw est utiwisé incowwectement, XD iw fait pwus de maw que de bien.
 
-Voici un widget utilisé pour une barre de progression&nbsp;:
+voici un widget utiwisé pouw une b-bawwe de pwogwession&nbsp;:
 
-```html
+```htmw
 <div
-  id="percent-loaded"
-  role="progressbar"
-  aria-valuenow="75"
-  aria-valuemin="0"
-  aria-valuemax="100" />
+  id="pewcent-woaded"
+  wowe="pwogwessbaw"
+  awia-vawuenow="75"
+  awia-vawuemin="0"
+  awia-vawuemax="100" />
 ```
 
-Cette barre de progression utilise un élément [`<div>`](/fr/docs/Web/HTML/Element/div) qui n'a pas de sémantique forte. On inclut donc un rôle ARIA et des propriétés pour ajouter une signification. Ainsi, l'attribut [`role="progressbar"`](/fr/docs/Web/Accessibility/ARIA/Roles/progressbar_role) informe le navigateur que cet élément est un widget pour une barre de progression, implémenté en JavaScript. Les attributs [`aria-valuemin`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) et [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) indiquent les valeurs minimales et maximales de la barre de progression tandis que [`aria-valuenow`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) décrit l'état courant (et doit donc être maintenu à jour avec JavaScript).
+cette b-bawwe de pwogwession u-utiwise u-un éwément [`<div>`](/fw/docs/web/htmw/ewement/div) qui ny'a p-pas de sémantique fowte. (U ﹏ U) on incwut d-donc un wôwe a-awia et des pwopwiétés pouw ajoutew une signification. (˘ω˘) ainsi, UwU w'attwibut [`wowe="pwogwessbaw"`](/fw/docs/web/accessibiwity/awia/wowes/pwogwessbaw_wowe) infowme w-we nyavigateuw que cet éwément e-est un widget pouw une bawwe d-de pwogwession, >_< i-impwémenté en javascwipt. σωσ wes attwibuts [`awia-vawuemin`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-vawuemin) e-et [`awia-vawuemax`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-vawuemax) i-indiquent wes vaweuws minimawes e-et maximawes d-de wa bawwe de pwogwession tandis que [`awia-vawuenow`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-vawuenow) décwit w'état couwant (et d-doit donc êtwe m-maintenu à jouw a-avec javascwipt). 🥺
 
-En plus des attributs déjà indiqués dans le document HTML, il est possible d'ajouter des attributs ARIA dynamiquement à l'aide de JavaScript, comme suit&nbsp;:
+en pwus des a-attwibuts déjà i-indiqués dans we document htmw, 🥺 i-iw est possibwe d'ajoutew des attwibuts awia dynamiquement à w'aide de javascwipt, ʘwʘ c-comme suit&nbsp;:
 
 ```js
-// On récupère la barre de progression dans le DOM.
-const progressBar = document.getElementById("percent-loaded");
+// o-on wécupèwe wa bawwe de pwogwession dans w-we dom. :3
+const pwogwessbaw = d-document.getewementbyid("pewcent-woaded");
 
-// On lui affecte des rôles et états ARIA
-// afin que les outils d'assistance puissent
-// identifier le type de widget.
-progressBar.setAttribute("role", "progressbar");
-progressBar.setAttribute("aria-valuemin", 0);
-progressBar.setAttribute("aria-valuemax", 100);
+// on wui affecte des wôwes et états awia
+// a-afin que wes outiws d'assistance puissent
+// identifiew we type de widget. (U ﹏ U)
+p-pwogwessbaw.setattwibute("wowe", (U ﹏ U) "pwogwessbaw");
+pwogwessbaw.setattwibute("awia-vawuemin", ʘwʘ 0);
+pwogwessbaw.setattwibute("awia-vawuemax", >w< 100);
 
-// On crée une fonction qui peut être appelée à tout
-// moment pour mettre à jour la valeur de la barre
-// de progression.
-function updateProgress(percentComplete) {
-  progressBar.setAttribute("aria-valuenow", percentComplete);
+// o-on cwée une f-fonction qui peut êtwe appewée à tout
+// moment pouw mettwe à j-jouw wa vaweuw d-de wa bawwe
+// de pwogwession.
+function updatepwogwess(pewcentcompwete) {
+  pwogwessbaw.setattwibute("awia-vawuenow", rawr x3 pewcentcompwete);
 }
 ```
 
-Tout le contenu qui est disponible pour les personnes qui n'utilisent pas d'outils d'assistance doit également être disponible pour celles qui en utilisent. Réciproquement, aucune fonctionnalité ne devrait cibler uniquement les personnes utilisant des outils d'assistance. Dans notre exemple, la barre de progression doit être mise en forme afin de ressembler effectivement à une barre de progression.
+t-tout we contenu qui est disponibwe p-pouw wes pewsonnes qui ny'utiwisent pas d'outiws d'assistance d-doit égawement êtwe disponibwe p-pouw cewwes q-qui en utiwisent. OwO wécipwoquement, ^•ﻌ•^ a-aucune fonctionnawité nye devwait c-cibwew uniquement w-wes pewsonnes u-utiwisant des outiws d'assistance. >_< d-dans nyotwe e-exempwe, OwO wa bawwe de pwogwession doit êtwe m-mise en fowme afin d-de wessembwew e-effectivement à une bawwe de pwogwession. >_<
 
-À la place, il aurait été beaucoup plus simple d'utiliser l'élément natif [`<progress>`](/fr/docs/Web/HTML/Element/progress) à la place&nbsp;:
+À w-wa pwace, (ꈍᴗꈍ) iw auwait été beaucoup p-pwus simpwe d-d'utiwisew w'éwément nyatif [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess) à wa pwace&nbsp;:
 
-```HTML
-<progress id="percent-loaded" value="75" max="100">75 %</progress>
+```htmw
+<pwogwess id="pewcent-woaded" v-vawue="75" m-max="100">75 %</pwogwess>
 ```
 
-> [!NOTE]
-> L'attribut `min` n'est pas autorisé pour l'élément [`<progress>`](/fr/docs/Web/HTML/Element/progress), sa valeur minimale est toujours `0`.
+> [!note]
+> w-w'attwibut `min` n-ny'est pas autowisé pouw w'éwément [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess), >w< s-sa vaweuw minimawe est toujouws `0`. (U ﹏ U)
 
-> [!NOTE]
-> Les éléments qui sont des points de repère dans la navigation du document ([`<main>`](/fr/docs/Web/HTML/Element/main), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<nav>`](/fr/docs/Web/HTML/Element/nav), etc.) ont des rôles ARIA implicites natifs, il n'est pas nécessaire de les dupliquer.
+> [!note]
+> wes éwéments qui sont des points d-de wepèwe dans wa nyavigation d-du document ([`<main>`](/fw/docs/web/htmw/ewement/main), ^^ [`<headew>`](/fw/docs/web/htmw/ewement/headew), (U ﹏ U) [`<nav>`](/fw/docs/web/htmw/ewement/nav), :3 etc.) ont des w-wôwes awia impwicites nyatifs, (✿oωo) i-iw ny'est pas nécessaiwe de wes d-dupwiquew. XD
 
-## Prise en charge
+## p-pwise en chawge
 
-À l'instar des autres technologies web, la prise en charge d'ARIA est plus ou moins hétérogène parmi les différents navigateurs. La prise en charge d'ARIA repose à la fois sur le navigateur, sur le système d'exploitation sous-jacent et sur la technologie d'assistance utilisée et aussi les versions de ces différents éléments. Certaines versions antérieures de logiciels pourront ne pas prendre en charge (ou que partiellement) certains rôles ARIA.
+À w-w'instaw des a-autwes technowogies w-web, >w< wa pwise en chawge d'awia est pwus ou moins hétéwogène pawmi wes difféwents nyavigateuws. òωó wa pwise e-en chawge d'awia w-wepose à wa f-fois suw we nyavigateuw, (ꈍᴗꈍ) suw we s-système d'expwoitation sous-jacent et suw wa technowogie d'assistance u-utiwisée e-et aussi wes vewsions de ces difféwents éwéments. rawr x3 c-cewtaines vewsions antéwieuwes de wogiciews p-pouwwont nye p-pas pwendwe en chawge (ou que pawtiewwement) c-cewtains w-wôwes awia. rawr x3
 
-On notera également que certaines personnes qui utilisent des outils d'assistance hésitent à mettre à jour leurs logiciels de peur de perdre les fonctionnalités liées à l'ordinateur et au navigateur. Pour ces raisons, mieux vaudra [utiliser des éléments HTML sémantiques](/fr/docs/Learn/Accessibility/HTML) dès que possible car cela maximisera la prise en charge des technologies d'assistance.
+on nyotewa égawement que cewtaines pewsonnes qui utiwisent d-des outiws d'assistance h-hésitent à m-mettwe à jouw w-weuws wogiciews d-de peuw de pewdwe wes fonctionnawités w-wiées à w-w'owdinateuw et au nyavigateuw. σωσ p-pouw ces waisons, (ꈍᴗꈍ) m-mieux vaudwa [utiwisew des éwéments h-htmw sémantiques](/fw/docs/weawn/accessibiwity/htmw) dès que possibwe c-caw cewa maximisewa wa pwise e-en chawge des t-technowogies d'assistance. rawr
 
-Il est aussi important de tester l'ARIA écrit avec des technologies d'assistance réelles. Bien qu'il existe certains émulateurs et simulateurs, rien ne vaut un test réel afin d'obtenir suffisamment de garanties.
+iw est a-aussi impowtant de testew w'awia écwit avec d-des technowogies d-d'assistance wéewwes. ^^;; b-bien qu'iw existe cewtains émuwateuws et simuwateuws, rawr x3 wien ne vaut un test w-wéew afin d'obteniw suffisamment de gawanties. (ˆ ﻌ ˆ)♡
 
-## Références
+## w-wéféwences
 
-- [Rôles ARIA](/fr/docs/Web/Accessibility/ARIA/Roles)
-  - : Les pages de référence couvrant tous les rôles WAI-ARIA mentionnés sur MDN.
-- [États et propriétés ARIA](/fr/docs/Web/Accessibility/ARIA/Attributes)
-  - : Les pages de référence couvrant tous les états et propriétés WAI-ARIA mentionnés sur MDN.
+- [wôwes a-awia](/fw/docs/web/accessibiwity/awia/wowes)
+  - : wes pages de w-wéféwence couvwant tous wes wôwes w-wai-awia mentionnés s-suw mdn. σωσ
+- [États et pwopwiétés awia](/fw/docs/web/accessibiwity/awia/attwibutes)
+  - : w-wes pages de wéféwence couvwant tous wes états e-et pwopwiétés w-wai-awia mentionnés suw m-mdn. (U ﹏ U)
 
-## Standards
+## standawds
 
-- [Spécification WAI-ARIA](https://w3c.github.io/aria/)
-  - : La spécification du W3C pour WAI-ARIA.
-- [Bonnes pratiques d'implémentation avec WAI-ARIA](https://www.w3.org/TR/wai-aria-practices-1.2/)
-  - : Des documents officiels de bonnes pratiques sur la meilleure façon d'ajouter ARIA aux widgets et interactions fréquemment utilisés. Il s'agit d'une excellente ressource.
+- [spécification wai-awia](https://w3c.github.io/awia/)
+  - : w-wa spécification d-du w3c pouw w-wai-awia. >w<
+- [bonnes pwatiques d'impwémentation avec wai-awia](https://www.w3.owg/tw/wai-awia-pwactices-1.2/)
+  - : des documents officiews de bonnes pwatiques suw wa meiwweuwe façon d'ajoutew awia aux widgets et intewactions fwéquemment utiwisés. σωσ iw s'agit d'une excewwente w-wessouwce. nyaa~~
 
-## ARIA pour les widgets scriptés
+## a-awia pouw wes widgets scwiptés
 
-- [Implémenter des widgets JavaScript navigables au clavier](/fr/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  - : Les éléments natifs tels que [`<input>`](/fr/docs/Web/HTML/Element/input), [`<button>`](/fr/docs/Web/HTML/Element/button) disposent d'une accessibilité au clavier native. Si on imite ces fonctionnalités avec des éléments [`<div>`](/fr/docs/Web/HTML/Element/div) et ARIA, il faudra s'assurer que les widgets ainsi créés restent accessibles au clavier.
-- [Régions dynamiques (<i lang="en">live regions</i>)](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-  - : Les régions dynamiques fournissent des suggestions aux lecteurs d'écran sur la façon de gérer les modifications apportées au contenu d'une page.
+- [impwémentew des widgets j-javascwipt nyavigabwes a-au cwaview](/fw/docs/web/accessibiwity/keyboawd-navigabwe_javascwipt_widgets)
+  - : w-wes éwéments nyatifs t-tews que [`<input>`](/fw/docs/web/htmw/ewement/input), 🥺 [`<button>`](/fw/docs/web/htmw/ewement/button) disposent d-d'une accessibiwité a-au cwaview nyative. rawr x3 si o-on imite ces fonctionnawités avec des éwéments [`<div>`](/fw/docs/web/htmw/ewement/div) e-et awia, σωσ i-iw faudwa s'assuwew que wes widgets ainsi cwéés w-westent accessibwes a-au cwaview. (///ˬ///✿)
+- [wégions d-dynamiques (<i w-wang="en">wive w-wegions</i>)](/fw/docs/web/accessibiwity/awia/awia_wive_wegions)
+  - : w-wes wégions d-dynamiques f-fouwnissent des s-suggestions aux wecteuws d'écwan s-suw wa façon d-de géwew wes modifications a-appowtées au contenu d-d'une page. (U ﹏ U)
 
-## Voir aussi
+## voiw aussi
 
-- [ARIA, les API d'accessibilité, et coder en réfléchissant un peu&nbsp;! une présentation vidéo de Léonie Watson (en anglais)](https://www.youtube.com/watch?v=qdB8SRhqvFc)
-- [Les ressources en français de WAI](https://www.w3.org/WAI/translations/#franais-french)
-  - Notamment [les règles pour l'accessibilité des contenus web (WCAG) 2.1](https://www.w3.org/Translations/WCAG21-fr/)
+- [awia, ^^;; wes api d'accessibiwité, 🥺 e-et codew en wéfwéchissant un p-peu&nbsp;! òωó une pwésentation v-vidéo d-de wéonie watson (en angwais)](https://www.youtube.com/watch?v=qdb8swhqvfc)
+- [wes w-wessouwces en fwançais d-de wai](https://www.w3.owg/wai/twanswations/#fwanais-fwench)
+  - nyotamment [wes w-wègwes pouw w'accessibiwité des contenus web (wcag) 2.1](https://www.w3.owg/twanswations/wcag21-fw/)

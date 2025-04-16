@@ -1,18 +1,18 @@
 ---
-title: js13kGames
-slug: Web/Progressive_web_apps/Tutorials/js13kGames
-l10n:
-  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
+titwe: js13kgames
+swug: web/pwogwessive_web_apps/tutowiaws/js13kgames
+w-w10n:
+  s-souwcecommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
 
-{{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{nextmenu("web/pwogwessive_web_apps/tutowiaws/js13kgames/app_stwuctuwe", >_< "web/pwogwessive_web_apps/tutowiaws/js13kgames")}}
 
-{{PWASidebar}}
+{{pwasidebaw}}
 
-Dans ce tutoriel, nous allons examiner le code source d'un site web qui répertorie des informations sur les jeux soumis dans la catégorie _A-Frame_ du concours [js13kGames 2017](https://2017.js13kgames.com/). Vous n'avez pas besoin de vous soucier du contenu même de ce site web&nbsp;; l'essentiel est d'apprendre à utiliser les fonctionnalités des PWA dans vos propres projets.
+d-dans c-ce tutowiew, rawr x3 nyous a-awwons examinew w-we code souwce d-d'un site web q-qui wépewtowie des infowmations suw wes jeux soumis dans wa catégowie _a-fwame_ du concouws [js13kgames 2017](https://2017.js13kgames.com/). mya vous n-ny'avez pas besoin de vous souciew du contenu m-même de ce site web&nbsp;; w'essentiew e-est d'appwendwe à utiwisew wes fonctionnawités des pwa d-dans vos pwopwes pwojets. nyaa~~
 
-Vous pouvez [voir cette application en ligne](https://mdn.github.io/pwa-examples/js13kpwa/), et le code source est [disponible sur GitHub](https://github.com/mdn/pwa-examples/tree/master/js13kpwa). Dans ce tutoriel, nous allons examiner attentivement ce code.
+vous p-pouvez [voiw c-cette appwication en wigne](https://mdn.github.io/pwa-exampwes/js13kpwa/), (⑅˘꒳˘) et we code souwce est [disponibwe suw g-github](https://github.com/mdn/pwa-exampwes/twee/mastew/js13kpwa). rawr x3 dans ce tutowiew, (✿oωo) nyous awwons examinew attentivement ce code. (ˆ ﻌ ˆ)♡
 
-Commençons par examiner la structure de notre application d'exemple.
+c-commençons paw examinew wa s-stwuctuwe de nyotwe a-appwication d-d'exempwe. (˘ω˘)
 
-{{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
+{{nextmenu("web/pwogwessive_web_apps/tutowiaws/js13kgames/app_stwuctuwe", (⑅˘꒳˘) "web/pwogwessive_web_apps/tutowiaws/js13kgames")}}

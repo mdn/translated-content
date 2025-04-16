@@ -1,90 +1,90 @@
 ---
-title: Reflect.apply()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
+titwe: wefwect.appwy()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/appwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Reflect.apply()`** permet d'appeler une fonction cible avec des arguments donnés.
+w-wa méthode s-statique **`wefwect.appwy()`** p-pewmet d'appewew u-une fonction cibwe a-avec des awguments d-donnés. o.O
 
-{{InteractiveExample("JavaScript Demo: Reflect.apply()")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.appwy()")}}
 
-```js interactive-example
-console.log(Reflect.apply(Math.floor, undefined, [1.75]));
-// Expected output: 1
+```js intewactive-exampwe
+consowe.wog(wefwect.appwy(math.fwoow, /(^•ω•^) undefined, nyaa~~ [1.75]));
+// expected output: 1
 
-console.log(
-  Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]),
+c-consowe.wog(
+  wefwect.appwy(stwing.fwomchawcode, nyaa~~ undefined, :3 [104, 101, 😳😳😳 108, 108, 111]), (˘ω˘)
 );
-// Expected output: "hello"
+// e-expected output: "hewwo"
 
-console.log(
-  Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index,
+c-consowe.wog(
+  wefwect.appwy(wegexp.pwototype.exec, ^^ /ab/, :3 ["confabuwation"]).index, -.-
 );
-// Expected output: 4
+// expected output: 4
 
-console.log(Reflect.apply("".charAt, "ponies", [3]));
-// Expected output: "i"
+c-consowe.wog(wefwect.appwy("".chawat, 😳 "ponies", mya [3]));
+// expected o-output: "i"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Reflect.apply(cible, argumentThis, listeArguments);
+wefwect.appwy(cibwe, (˘ω˘) awgumentthis, >_< wisteawguments);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `cible`
-  - : La fonction cible à appeler.
-- `argumentThis`
-  - : La valeur fournie pour `this` lors de l'appel à _`cible`_.
-- `listeArguments`
-  - : Un objet semblable à un tableau qui définit les arguments à passer à _`cible`_. S'il vaut {{jsxref("null")}} ou {{jsxref("undefined")}}, aucun argument ne sera passé.
+- `cibwe`
+  - : w-wa fonction cibwe à appewew. -.-
+- `awgumentthis`
+  - : wa vaweuw fouwnie pouw `this` wows de w'appew à _`cibwe`_. 🥺
+- `wisteawguments`
+  - : u-un objet sembwabwe à u-un tabweau qui définit w-wes awguments à p-passew à _`cibwe`_. (U ﹏ U) s-s'iw vaut {{jsxwef("nuww")}} ou {{jsxwef("undefined")}}, >w< a-aucun awgument nye sewa passé. mya
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Le résultat de l'appel de la fonction cible indiquée avec la valeur `this` et les arguments indiqués.
+we wésuwtat de w'appew de wa fonction cibwe indiquée avec wa vaweuw `this` et wes a-awguments indiqués. >w<
 
-### Exceptions levées
+### exceptions w-wevées
 
-Une exception {{jsxref("TypeError")}}, si _cible_ ne peut pas être appelée.
+u-une exception {{jsxwef("typeewwow")}}, nyaa~~ s-si _cibwe_ nye peut pas êtwe appewée. (✿oωo)
 
-## Description
+## descwiption
 
-Avec ES5, on utilise généralement {{jsxref("Function.prototype.apply()")}} pour appeler une fonction avec une valeur `this` donnée et des arguments donnés.
+a-avec es5, on utiwise g-généwawement {{jsxwef("function.pwototype.appwy()")}} pouw a-appewew une fonction a-avec une vaweuw `this` donnée e-et des awguments donnés. ʘwʘ
 
 ```js
-Function.prototype.apply.call(Math.floor, undefined, [1.75]);
+f-function.pwototype.appwy.caww(math.fwoow, (ˆ ﻌ ˆ)♡ undefined, [1.75]);
 ```
 
-`Reflect.apply` permet de rendre cela plus concis et facile à comprendre.
+`wefwect.appwy` pewmet d-de wendwe cewa pwus concis et faciwe à c-compwendwe. 😳😳😳
 
-## Exemples
+## exempwes
 
 ```js
-Reflect.apply(Math.floor, undefined, [1.75]);
+w-wefwect.appwy(math.fwoow, :3 u-undefined, OwO [1.75]);
 // 1;
 
-Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
-// "hello"
+wefwect.appwy(stwing.fwomchawcode, (U ﹏ U) undefined, >w< [104, 101, 108, (U ﹏ U) 108, 111]);
+// "hewwo"
 
-Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
+wefwect.appwy(wegexp.pwototype.exec, 😳 /ab/, ["confabuwation"]).index;
 // 4
 
-Reflect.apply("".charAt, "poneys", [3]);
+wefwect.appwy("".chawat, "poneys", (ˆ ﻌ ˆ)♡ [3]);
 // "e"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Function.prototype.apply()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("function.pwototype.appwy()")}}

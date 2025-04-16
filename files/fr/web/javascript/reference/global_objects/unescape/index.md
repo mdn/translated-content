@@ -1,57 +1,57 @@
 ---
-title: unescape()
-slug: Web/JavaScript/Reference/Global_Objects/unescape
+titwe: unescape()
+swug: web/javascwipt/wefewence/gwobaw_objects/unescape
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-> [!WARNING]
-> Bien que `unescape(…)` ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de [l'Annexe B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) du standard ECMA-262 qui commence par :
+> [!wawning]
+> b-bien que `unescape(…)` n-nye soit pas s-stwictement obsowète (au s-sens où e-ewwe ny'a pas été w-wetiwée d-des standawds), ^^ e-ewwe est définie au sein de [w'annexe b](https://www.ecma-intewnationaw.owg/ecma-262/9.0/index.htmw#sec-additionaw-ecmascwipt-featuwes-fow-web-bwowsews) du standawd ecma-262 qui c-commence paw :
 >
-> > … L'ensemble des fonctionnalités et comportements définis dans cette annexe possède une ou plusieurs caractéristiques indésirables. En l'absence d'une utilisation historique, ces fonctionnalités seraient retirés de la spécification. …
-> > … Les développeurs ne devraient pas utiliser ces fonctionnalités et comportements ou présupposer qu'elles existent lors de l'écriture de nouveau code ECMAScript. …
+> > … w'ensembwe des fonctionnawités e-et compowtements définis d-dans cette annexe possède une ou pwusieuws cawactéwistiques i-indésiwabwes. :3 en w'absence d-d'une utiwisation h-histowique, -.- ces fonctionnawités sewaient wetiwés de wa spécification. 😳 …
+> > … wes dévewoppeuws n-nye devwaient pas utiwisew ces fonctionnawités et compowtements ou pwésupposew q-qu'ewwes existent wows d-de w'écwituwe d-de nyouveau code e-ecmascwipt. mya …
 
-La fonction dépréciée **`unescape()`** calcule une nouvelle chaîne de caractères et remplace les séquences d'échappement hexadécimales par les caractères qu'elles représentent. Les séquences d'échappement peuvent provenir de la fonction {{jsxref("escape")}}. Cette méthode est obsolète, c'est pourquoi il est conseillé d'utiliser {{jsxref("decodeURI")}} ou {{jsxref("decodeURIComponent")}} à la place.
+w-wa fonction dépwéciée **`unescape()`** cawcuwe une nyouvewwe c-chaîne de cawactèwes et wempwace wes séquences d-d'échappement hexadécimawes paw wes cawactèwes qu'ewwes wepwésentent. (˘ω˘) wes séquences d'échappement p-peuvent pwoveniw de w-wa fonction {{jsxwef("escape")}}. >_< c-cette méthode e-est obsowète, -.- c'est pouwquoi iw est conseiwwé d'utiwisew {{jsxwef("decodeuwi")}} o-ou {{jsxwef("decodeuwicomponent")}} à w-wa pwace. 🥺
 
-> **Note :** `unescape()` ne doit pas être utilisée pour décoder les URI. À la place, utilisez `decodeURI`.
+> **note :** `unescape()` nye doit pas êtwe u-utiwisée pouw d-décodew wes uwi. À wa pwace, (U ﹏ U) u-utiwisez `decodeuwi`. >w<
 
-## Syntaxe
+## syntaxe
 
 ```js
-unescape(str);
+u-unescape(stw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `str`
-  - : La chaîne de caractères à décoder.
+- `stw`
+  - : wa c-chaîne de cawactèwes à décodew. mya
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une nouvelle chaîne de caractères dont les caractères ont été décodés.
+une nyouvewwe c-chaîne d-de cawactèwes dont wes cawactèwes ont été décodés. >w<
 
-## Description
+## descwiption
 
-La fonction `unescape` est une propriété de l'_objet global_.
+wa fonction `unescape` est une pwopwiété de w'_objet g-gwobaw_. nyaa~~
 
-## Exemples
+## exempwes
 
 ```js
 unescape("abc123"); // "abc123"
-unescape("%E4%F6%FC"); // "äöü"
-unescape("%u0107"); // "ć"
+unescape("%e4%f6%fc"); // "äöü"
+u-unescape("%u0107"); // "ć"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("decodeURI")}}
-- {{jsxref("decodeURIComponent")}}
-- {{jsxref("escape")}}
+- {{jsxwef("decodeuwi")}}
+- {{jsxwef("decodeuwicomponent")}}
+- {{jsxwef("escape")}}

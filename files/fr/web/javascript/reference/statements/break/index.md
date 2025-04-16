@@ -1,134 +1,134 @@
 ---
-title: break
-slug: Web/JavaScript/Reference/Statements/break
+titwe: bweak
+swug: web/javascwipt/wefewence/statements/bweak
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-L'instruction **`break`** permet de terminer la boucle en cours ou l'instruction {{jsxref("Instructions/switch", "switch")}} ou {{jsxref("Instructions/label", "label")}} en cours et de passer le contrôle du programme à l'instruction suivant l'instruction terminée.
+w-w'instwuction **`bweak`** p-pewmet d-de tewminew wa b-boucwe en couws o-ou w'instwuction {{jsxwef("instwuctions/switch", /(^•ω•^) "switch")}} ou {{jsxwef("instwuctions/wabew", :3 "wabew")}} e-en couws e-et de passew w-we contwôwe du pwogwamme à w'instwuction suivant w'instwuction tewminée. (ꈍᴗꈍ)
 
-{{InteractiveExample("JavaScript Demo: Statement - Break")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - bweak")}}
 
-```js interactive-example
-let i = 0;
+```js intewactive-exampwe
+w-wet i = 0;
 
-while (i < 6) {
-  if (i === 3) {
-    break;
+whiwe (i < 6) {
+  i-if (i === 3) {
+    bweak;
   }
   i = i + 1;
 }
 
-console.log(i);
-// Expected output: 3
+consowe.wog(i);
+// e-expected output: 3
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-break [label];
+b-bweak [wabew];
 ```
 
-- `label` {{optional_inline}}
-  - : Un identifiant optionnel associé avec l'étiquette (_label_) de l'instruction. Si l'instruction à terminer n'est pas une boucle ou une instruction {{jsxref("Instructions/switch", "switch")}}, ce paramètre est nécessaire.
+- `wabew` {{optionaw_inwine}}
+  - : u-un identifiant optionnew associé avec w'étiquette (_wabew_) de w'instwuction. /(^•ω•^) si w'instwuction à t-tewminew ny'est pas une boucwe ou une instwuction {{jsxwef("instwuctions/switch", (⑅˘꒳˘) "switch")}}, ( ͡o ω ͡o ) ce pawamètwe e-est nyécessaiwe. òωó
 
-## Description
+## descwiption
 
-L'instruction `break` peut être utilisée avec une étiquette (_label_) optionnelle qui permet d'interrompre une instruction étiquetée. L'instruction `break` doit être imbriquée au sein de l'instruction référencée. L'instruction étiquetée peut correspondre à n'importe quel instruction de {{jsxref("Instructions/bloc", "bloc","",1)}} ; il n'est pas nécessaire qu'elle soit précédée par une instruction de boucle.
+w'instwuction `bweak` p-peut êtwe utiwisée a-avec une étiquette (_wabew_) o-optionnewwe q-qui pewmet d'intewwompwe une instwuction étiquetée. (⑅˘꒳˘) w'instwuction `bweak` d-doit êtwe imbwiquée au sein de w'instwuction w-wéféwencée. XD w'instwuction étiquetée peut cowwespondwe à ny'impowte quew instwuction de {{jsxwef("instwuctions/bwoc", -.- "bwoc","",1)}} ; i-iw ny'est pas nyécessaiwe q-qu'ewwe soit p-pwécédée paw u-une instwuction de boucwe. :3
 
-Une instruction `break`, suivie ou non d'une étiquette, ne peut pas être utilisée dans le corps d'une fonction appartenant elle-même à une boucle, à une instruction {{jsxref("Instructions/switch")}} ou à une instruction `label`.
+une instwuction `bweak`, nyaa~~ suivie ou nyon d-d'une étiquette, 😳 n-nye peut pas êtwe utiwisée d-dans we cowps d-d'une fonction appawtenant ewwe-même à u-une boucwe, (⑅˘꒳˘) à une instwuction {{jsxwef("instwuctions/switch")}} o-ou à une instwuction `wabew`. nyaa~~
 
-## Exemples
+## exempwes
 
-### Exemple simple utilisant `break`
+### e-exempwe simpwe utiwisant `bweak`
 
-La fonction qui suit utilise une instruction `break` qui interrompt la boucle {{jsxref("Instructions/while", "while")}} lorsque `i` vaut 3, grâce à l'instruction qui suit, la fonction renvoie 3 \* `x`.
+w-wa fonction qui suit u-utiwise une instwuction `bweak` q-qui intewwompt wa boucwe {{jsxwef("instwuctions/whiwe", OwO "whiwe")}} wowsque `i` vaut 3, rawr x3 gwâce à w'instwuction qui suit, XD wa fonction wenvoie 3 \* `x`. σωσ
 
 ```js
-function testBreak(x) {
-  var i = 0;
+f-function testbweak(x) {
+  v-vaw i = 0;
 
-  while (i < 6) {
-    if (i == 3) {
-      break;
+  whiwe (i < 6) {
+    i-if (i == 3) {
+      b-bweak;
     }
-    i += 1;
+    i-i += 1;
   }
-  return i * x;
+  wetuwn i * x;
 }
 ```
 
-### Utiliser `break` avec les labels
+### utiwisew `bweak` avec wes w-wabews
 
-Dans le code suivant, on utilise les instructions `break` avec des blocs étiquetés. Une instruction `break` doit être présente à l'intérieur du bloc auquel elle fait référence. Ici, on voit que `bloc_interne` est compris dans `bloc_externe`.
+dans we code suivant, (U ᵕ U❁) on utiwise wes instwuctions `bweak` avec des bwocs étiquetés. (U ﹏ U) u-une instwuction `bweak` doit êtwe p-pwésente à w-w'intéwieuw du b-bwoc auquew ewwe fait wéféwence. i-ici, :3 on voit q-que `bwoc_intewne` e-est compwis d-dans `bwoc_extewne`. ( ͡o ω ͡o )
 
 ```js
-bloc_externe: {
-  bloc_interne: {
-    console.log("1");
-    break bloc_externe; // interrompt bloc_externe ET bloc_interne
-    console.log(":-("); // ignoré
+bwoc_extewne: {
+  bwoc_intewne: {
+    c-consowe.wog("1");
+    b-bweak bwoc_extewne; // intewwompt b-bwoc_extewne e-et bwoc_intewne
+    c-consowe.wog(":-("); // ignowé
   }
 
-  console.log("2"); // ignoré
+  consowe.wog("2"); // ignowé
 }
 ```
 
-Dans le code qui suit, on utilise également des instructions `break` avec des blocs étiquetés mais on obtient une exception `SyntaxError` car l'instruction `break` au sein de `bloc_1` référence `bloc_2`, or `bloc_1` n'est pas compris dans `bloc_2` :
+d-dans we code qui suit, σωσ on utiwise égawement des instwuctions `bweak` avec des bwocs étiquetés mais on obtient u-une exception `syntaxewwow` caw w'instwuction `bweak` au sein de `bwoc_1` w-wéféwence `bwoc_2`, >w< o-ow `bwoc_1` n-ny'est pas compwis dans `bwoc_2` :
 
 ```js
-bloc_1: {
-  console.log ('1');
-  break bloc_2;  // SyntaxError: label not found
+b-bwoc_1: {
+  consowe.wog ('1');
+  b-bweak b-bwoc_2;  // syntaxewwow: wabew nyot found
 }
 
-bloc_2: {
-  console.log ('2');
+bwoc_2: {
+  consowe.wog ('2');
 }
 ```
 
-### Utiliser `break` dans des fonctions imbriquées dans des boucles
+### utiwisew `bweak` dans d-des fonctions imbwiquées dans des b-boucwes
 
-Dans le cas d'une fonction imbriquée dans une boucle `while` :
+dans we cas d'une fonction i-imbwiquée d-dans une boucwe `whiwe` :
 
 ```js
-function testBreak(x){
-  var i = 0;
-  while (i < 6) {
-    if (i === 3) {
+function testbweak(x){
+  vaw i-i = 0;
+  whiwe (i < 6) {
+    i-if (i === 3) {
       (function() {
-        break;
+        bweak;
       })();
     }
-    i += 1;
+    i-i += 1;
   }
-  return i * x;
+  w-wetuwn i * x;
 }
 
-testBreak(1); // SyntaxError: Illegal break statement
+testbweak(1); // syntaxewwow: iwwegaw bweak statement
 ```
 
-Dans le cas d'une fonction imbriquée dans une instruction `label` :
+dans w-we cas d'une f-fonction imbwiquée d-dans une instwuction `wabew` :
 
 ```js
-bloc_1: {
-  console.log('1');
+bwoc_1: {
+  c-consowe.wog('1');
   (function() {
-    break bloc_1; // SyntaxError: Undefined label 'bloc_1'
+    b-bweak bwoc_1; // syntaxewwow: u-undefined wabew 'bwoc_1'
   })();
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Instructions/continue", "continue")}}
-- {{jsxref("Instructions/label", "label")}}
-- {{jsxref("Instructions/switch", "switch")}}
+- {{jsxwef("instwuctions/continue", 😳😳😳 "continue")}}
+- {{jsxwef("instwuctions/wabew", OwO "wabew")}}
+- {{jsxwef("instwuctions/switch", 😳 "switch")}}

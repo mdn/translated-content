@@ -1,72 +1,72 @@
 ---
-title: Constructeur TypeError()
-slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
+titwe: constwucteuw typeewwow()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/typeewwow/typeewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`TypeError()`** permet de créer un objet représentant une erreur qui se produit lorsqu'une opération n'a pu être réalisée, généralement (mais pas toujours) parce qu'une valeur n'était pas du type attendu.
+w-we constwucteuw **`typeewwow()`** p-pewmet de c-cwéew un objet w-wepwésentant une e-ewweuw qui se p-pwoduit wowsqu'une o-opéwation n'a pu êtwe wéawisée, o.O généwawement (mais pas toujouws) pawce q-qu'une vaweuw n'était pas du type attendu. ( ͡o ω ͡o )
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new TypeError();
-new TypeError(message);
-new TypeError(message, nomFichier);
-new TypeError(message, nomFichier, numeroLigne);
+nyew typeewwow();
+n-nyew typeewwow(message);
+nyew typeewwow(message, (U ﹏ U) nyomfichiew);
+n-nyew typeewwow(message, (///ˬ///✿) nyomfichiew, n-nyumewowigne);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `message` {{optional_inline}}
-  - : Une description de l'erreur, compréhensible par un humain.
-- `nomFichier` {{optional_inline}}
-  - : Le nom du fichier qui contient le code qui a déclenché l'exception.
-- `numeroLigne` {{optional_inline}}
-  - : Le numéro de la ligne du code qui a déclenché l'exception.
+- `message` {{optionaw_inwine}}
+  - : une descwiption de w'ewweuw, >w< compwéhensibwe paw un humain. rawr
+- `nomfichiew` {{optionaw_inwine}}
+  - : w-we nyom du fichiew qui contient we code qui a décwenché w'exception. mya
+- `numewowigne` {{optionaw_inwine}}
+  - : w-we nyuméwo de wa wigne du c-code qui a décwenché w-w'exception. ^^
 
-## Exemples
+## e-exempwes
 
-### Intercepter une exception `TypeError`
+### i-intewceptew une exception `typeewwow`
 
 ```js
-try {
-  null.f();
-} catch (e) {
-  console.log(e instanceof TypeError); // true
-  console.log(e.message); // "null has no properties"
-  console.log(e.name); // "TypeError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+twy {
+  nyuww.f();
+} c-catch (e) {
+  consowe.wog(e instanceof t-typeewwow); // twue
+  consowe.wog(e.message); // "nuww has nyo pwopewties"
+  consowe.wog(e.name); // "typeewwow"
+  consowe.wog(e.fiwename); // "scwatchpad/1"
+  consowe.wog(e.winenumbew); // 2
+  c-consowe.wog(e.cowumnnumbew); // 2
+  consowe.wog(e.stack); // "@scwatchpad/2:2:3\n"
 }
 ```
 
-### Créer une exception `TypeError`
+### c-cwéew une exception `typeewwow`
 
 ```js
-try {
-  throw new TypeError("Coucou", "unFichier.js", 10);
+t-twy {
+  t-thwow nyew typeewwow("coucou", 😳😳😳 "unfichiew.js", mya 10);
 } catch (e) {
-  console.log(e instanceof TypeError); // true
-  console.log(e.message); // "Coucou"
-  console.log(e.name); // "TypeError"
-  console.log(e.fileName); // "unFichier.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  consowe.wog(e instanceof typeewwow); // t-twue
+  c-consowe.wog(e.message); // "coucou"
+  consowe.wog(e.name); // "typeewwow"
+  c-consowe.wog(e.fiwename); // "unfichiew.js"
+  c-consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow)

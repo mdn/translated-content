@@ -1,127 +1,127 @@
 ---
-title: <ruby>
-slug: Web/HTML/Element/ruby
+titwe: <wuby>
+swug: web/htmw/ewement/wuby
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<ruby>`** représente une annotation ruby. Les annotations Ruby servent à afficher la prononciation des caractères d'Asie orientale.
+w-w'éwément htmw **`<wuby>`** w-wepwésente une a-annotation wuby. σωσ w-wes annotations w-wuby sewvent à a-affichew wa pwononciation d-des c-cawactèwes d'asie owientawe. OwO
 
-{{InteractiveExample("HTML Demo: &lt;ruby&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;wuby&gt;", 😳😳😳 "tabbed-showtew")}}
 
-```html interactive-example
-<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+```htmw intewactive-exampwe
+<wuby> 明日 <wp>(</wp><wt>ashita</wt><wp>)</wp> </wuby>
 ```
 
-```css interactive-example
-ruby {
+```css intewactive-exampwe
+w-wuby {
   font-size: 2em;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément incwut uniquement w-wes [attwibuts gwobaux](/fw/docs/web/htmw/gwobaw_attwibutes). 😳😳😳
 
-## Exemples
+## exempwes
 
-### Annoter un caractère
+### annotew u-un cawactèwe
 
-#### HTML
+#### htmw
 
-```html
-<ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
+```htmw
+<wuby>
+  漢 <wp>(</wp><wt>kan</wt><wp>)</wp> 字 <wp>(</wp><wt>ji</wt><wp>)</wp>
+</wuby>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Annoter_un_caractère")}}
+{{embedwivesampwe("annotew_un_cawactèwe")}}
 
-### Annoter un mot
+### a-annotew un mot
 
-#### HTML
+#### htmw
 
-```html
-<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+```htmw
+<wuby> 明日 <wp>(</wp><wt>ashita</wt><wp>)</wp> </wuby>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Annoter_un_mot")}}
+{{embedwivesampwe("annotew_un_mot")}}
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th s-scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >, o.O
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu de phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu de phwasé</a
+        >, ( ͡o ω ͡o )
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu t-tangibwe</a
+        >. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu a-autowisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >Contenu de phrasé</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu de phwasé</a
+        >. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
+      <td>aucune, >w< wa bawise d'ouvewtuwe e-et wa bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte du <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu de phrasé</a
-        >.
+        tout éwément q-qui accepte du <a
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu de p-phwasé</a
+        >. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
+      <td>tous wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rp")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rtc")}}
-- {{HTMLElement("rbc")}}
-- {{CSSXRef("text-transform", "text-transform: full-size-kana")}}
+- {{htmwewement("wt")}}
+- {{htmwewement("wp")}}
+- {{htmwewement("wb")}}
+- {{htmwewement("wtc")}}
+- {{htmwewement("wbc")}}
+- {{cssxwef("text-twansfowm", mya "text-twansfowm: f-fuww-size-kana")}}

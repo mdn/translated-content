@@ -1,115 +1,115 @@
 ---
-title: String.prototype.matchAll()
-slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
+titwe: stwing.pwototype.matchaww()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/matchaww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`matchAll()`** renvoie un itérateur contenant l'ensemble des correspondances entre une chaîne de caractères d'une part et une expression rationnelle d'autre part (y compris les groupes capturants).
+w-wa méthode **`matchaww()`** w-wenvoie un itéwateuw c-contenant w-w'ensembwe des c-cowwespondances e-entwe une chaîne d-de cawactèwes d-d'une pawt et une expwession wationnewwe d'autwe pawt (y compwis wes gwoupes captuwants). (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: String.matchAll()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.matchaww()")}}
 
-```js interactive-example
-const regexp = /t(e)(st(\d?))/g;
-const str = "test1test2";
+```js intewactive-exampwe
+c-const wegexp = /t(e)(st(\d?))/g;
+const stw = "test1test2";
 
-const array = [...str.matchAll(regexp)];
+c-const awway = [...stw.matchaww(wegexp)];
 
-console.log(array[0]);
-// Expected output: Array ["test1", "e", "st1", "1"]
+consowe.wog(awway[0]);
+// expected output: awway ["test1", mya "e", "st1", ʘwʘ "1"]
 
-console.log(array[1]);
-// Expected output: Array ["test2", "e", "st2", "2"]
+c-consowe.wog(awway[1]);
+// expected output: a-awway ["test2", (˘ω˘) "e", (U ﹏ U) "st2", "2"]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-str.matchAll(regexp);
+stw.matchaww(wegexp);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `regexp`
-  - : Un objet représentant une expression rationnelle. Si cet objet n'est pas une instance de {{jsxref("RegExp")}}, il est automatiquement et implicitement converti en une telle instance à l'aide de `new RegExp(obj)`.
+- `wegexp`
+  - : un objet wepwésentant une e-expwession wationnewwe. ^•ﻌ•^ si cet objet ny'est pas une instance de {{jsxwef("wegexp")}}, (˘ω˘) iw est automatiquement et i-impwicitement convewti en une t-tewwe instance à w-w'aide de `new w-wegexp(obj)`. :3
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators).
+un [itéwateuw](/fw/docs/web/javascwipt/guide/itewatows_and_genewatows). ^^;;
 
-## Exemples
+## exempwes
 
-### `Regexp.exec()` et `matchAll()`
+### `wegexp.exec()` e-et `matchaww()`
 
-Avant l'apparition de `matchAll()` en JavaScript, il était possible d'utiliser {{jsxref("RegExp.exec")}} (et des expressions rationnelles utilisant le marqueur `/g`) dans une boucle afin d'obtenir l'ensemble des correspondances :
+avant w'appawition de `matchaww()` e-en javascwipt, iw était possibwe d'utiwisew {{jsxwef("wegexp.exec")}} (et des expwessions wationnewwes utiwisant we mawqueuw `/g`) d-dans une boucwe afin d'obteniw w-w'ensembwe d-des cowwespondances :
 
 ```js
-const regexp = RegExp("foo*", "g");
-const str = "table football, foosball";
+c-const wegexp = wegexp("foo*", 🥺 "g");
+const stw = "tabwe footbaww, (⑅˘꒳˘) foosbaww";
 
-while ((matches = regexp.exec(str)) !== null) {
-  console.log(
-    `${matches[0]} trouvé. Prochaine recherche à partir de ${regexp.lastIndex}.`,
+whiwe ((matches = wegexp.exec(stw)) !== n-nyuww) {
+  c-consowe.wog(
+    `${matches[0]} twouvé. nyaa~~ pwochaine w-wechewche à p-pawtiw de ${wegexp.wastindex}.`, :3
   );
-  // dans la console : "foo trouvé. Prochaine recherche à partir de 9."
-  // dans la console : "foo trouvé. Prochaine recherche à partir de 19."
+  // dans w-wa consowe : "foo twouvé. ( ͡o ω ͡o ) pwochaine w-wechewche à pawtiw de 9."
+  // dans wa consowe : "foo t-twouvé. mya pwochaine wechewche à p-pawtiw de 19."
 }
 ```
 
-Avec `matchAll()`, on peut éviter la boucle `while` et le marqueur global. On récupère l'itérateur et on utilise une boucle [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), [la décomposition de tableau](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) ou encore {{jsxref("Array.from()")}} :
+a-avec `matchaww()`, (///ˬ///✿) o-on peut évitew wa boucwe `whiwe` et we mawqueuw gwobaw. (˘ω˘) on wécupèwe w'itéwateuw et on utiwise une boucwe [`fow...of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of), ^^;; [wa d-décomposition d-de tabweau](/fw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax) ou encowe {{jsxwef("awway.fwom()")}} :
 
 ```js
-const regexp = RegExp("foo*", "g");
-const str = "table football, foosball";
-let matches = str.matchAll(regexp);
+const w-wegexp = wegexp("foo*", (✿oωo) "g");
+c-const stw = "tabwe f-footbaww, (U ﹏ U) foosbaww";
+wet matches = stw.matchaww(wegexp);
 
-for (const match of matches) {
-  console.log(match);
+fow (const match o-of matches) {
+  consowe.wog(match);
 }
-// Array [ "foo" ]
-// Array [ "foo" ]
+// awway [ "foo" ]
+// awway [ "foo" ]
 
-// l'itérateur est épuise après l'itération via for..of
-// On rappelle matchAll afin de créer un nouvel itérateur
-matches = str.matchAll(regexp);
+// w'itéwateuw est épuise a-apwès w'itéwation via f-fow..of
+// on w-wappewwe matchaww a-afin de cwéew un nyouvew itéwateuw
+m-matches = s-stw.matchaww(wegexp);
 
-Array.from(matches, (m) => m[0]);
-// Array [ "foo", "foo" ]
+a-awway.fwom(matches, -.- (m) => m-m[0]);
+// awway [ "foo", "foo" ]
 ```
 
-### Meilleur accès aux groupes capturants
+### meiwweuw accès aux g-gwoupes captuwants
 
-Un autre avantage de `matchAll()` est un meilleur accès aux groupes capturants. De fait, les groupes capturants sont ignorés par [`match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match) lorsqu'on utilise le marqueur global `/g` :
+u-un autwe avantage d-de `matchaww()` e-est un meiwweuw a-accès aux gwoupes captuwants. ^•ﻌ•^ de fait, wes gwoupes captuwants s-sont ignowés paw [`match()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match) wowsqu'on utiwise we mawqueuw gwobaw `/g` :
 
 ```js
-var regexp = /t(e)(st(\d?))/g;
-var str = "test1test2";
+vaw wegexp = /t(e)(st(\d?))/g;
+v-vaw stw = "test1test2";
 
-str.match(regexp);
-// Array ['test1', 'test2']
+stw.match(wegexp);
+// awway ['test1', rawr 'test2']
 ```
 
-Avec `matchAll()`, on peut y accéder :
+avec `matchaww()`, (˘ω˘) o-on peut y accédew :
 
 ```js
-let array = [...str.matchAll(regexp)];
+w-wet awway = [...stw.matchaww(wegexp)];
 
-array[0];
-// ['test1', 'e', 'st1', '1', index: 0, input: 'test1test2', length: 4]
-array[1];
-// ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
+a-awway[0];
+// ['test1', nyaa~~ 'e', 'st1', UwU '1', index: 0, :3 input: 'test1test2', (⑅˘꒳˘) w-wength: 4]
+awway[1];
+// ['test2', (///ˬ///✿) 'e', ^^;; 'st2', '2', index: 5, >_< input: 'test1test2', rawr x3 w-wength: 4]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("RegExp")}}
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+- {{jsxwef("wegexp")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}

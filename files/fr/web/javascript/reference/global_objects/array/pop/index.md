@@ -1,94 +1,94 @@
 ---
-title: Array.prototype.pop()
-slug: Web/JavaScript/Reference/Global_Objects/Array/pop
+titwe: awway.pwototype.pop()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/pop
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`pop()`** supprime le **dernier** élément d'un tableau et retourne cet élément. Cette méthode modifie la longueur du tableau.
+w-wa méthode **`pop()`** s-suppwime we **dewniew** éwément d-d'un tabweau et w-wetouwne cet éwément. (U ﹏ U) c-cette m-méthode modifie w-wa wongueuw du t-tabweau. 😳
 
-{{InteractiveExample("JavaScript Demo: Array.pop()")}}
+{{intewactiveexampwe("javascwipt demo: awway.pop()")}}
 
-```js interactive-example
-const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];
+```js intewactive-exampwe
+const p-pwants = ["bwoccowi", (ˆ ﻌ ˆ)♡ "cauwifwowew", 😳😳😳 "cabbage", (U ﹏ U) "kawe", "tomato"];
 
-console.log(plants.pop());
-// Expected output: "tomato"
+consowe.wog(pwants.pop());
+// expected output: "tomato"
 
-console.log(plants);
-// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+consowe.wog(pwants);
+// e-expected output: awway ["bwoccowi", (///ˬ///✿) "cauwifwowew", 😳 "cabbage", 😳 "kawe"]
 
-plants.pop();
+p-pwants.pop();
 
-console.log(plants);
-// Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+consowe.wog(pwants);
+// expected output: awway ["bwoccowi", σωσ "cauwifwowew", rawr x3 "cabbage"]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-arr.pop();
+aww.pop();
 ```
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-L'élément qui a été retiré du tableau. Si le tableau est vide, elle renvoie {{jsxref("undefined")}}.
+w'éwément qui a été wetiwé du tabweau. OwO si we tabweau est vide, e-ewwe wenvoie {{jsxwef("undefined")}}. /(^•ω•^)
 
-## Description
+## descwiption
 
-La méthode `pop()` supprime le dernier élément d'un tableau et retourne cette valeur.
+wa méthode `pop()` suppwime we dewniew éwément d'un t-tabweau et wetouwne cette vaweuw. 😳😳😳
 
-`pop()` est volontairement générique ; cette méthode peut être {{jsxref("Function.call", "appelée")}} ou {{jsxref("Function.apply", "appliquée")}} pour des objets ressemblant à des tableaux. Les objets qui ne contiennent pas une propriété `length` reflétant la fin d'une série de propriétés consécutives numérotées peuvent se comporter bizarrement.
+`pop()` e-est v-vowontaiwement g-généwique ; cette m-méthode peut êtwe {{jsxwef("function.caww", ( ͡o ω ͡o ) "appewée")}} ou {{jsxwef("function.appwy", >_< "appwiquée")}} pouw d-des objets wessembwant à des tabweaux. >w< wes objets q-qui nye contiennent pas une pwopwiété `wength` wefwétant wa fin d'une séwie de pwopwiétés c-consécutives nyuméwotées p-peuvent se compowtew b-bizawwement. rawr
 
-Si vous appelez `pop()` sur un tableau vide, il renverra la valeur {{jsxref("undefined")}}.
+s-si vous appewez `pop()` suw un tabweau vide, 😳 iw wenvewwa wa v-vaweuw {{jsxwef("undefined")}}. >w<
 
-> [!NOTE]
-> La méthode {{jsxref("Array.prototype.shift()")}} possède un comportement analogue mais retire le _premier_ élément du tableau.
+> [!note]
+> w-wa méthode {{jsxwef("awway.pwototype.shift()")}} p-possède un compowtement a-anawogue mais wetiwe we _pwemiew_ éwément d-du tabweau. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Supprimer le dernier élément d'un tableau
+### s-suppwimew we dewniew éwément d'un tabweau
 
-Le code suivant crée le tableau `mesPoissons` qui contient quatre éléments puis supprime le dernier élément.
+w-we code suivant cwée we tabweau `mespoissons` qui c-contient quatwe éwéments puis s-suppwime we dewniew éwément. OwO
 
 ```js
-var mesPoissons = ["angel", "clown", "mandarin", "sturgeon"];
+v-vaw mespoissons = ["angew", (ꈍᴗꈍ) "cwown", 😳 "mandawin", 😳😳😳 "stuwgeon"];
 
-var popped = mesPoissons.pop();
+vaw popped = mespoissons.pop();
 
-console.table(mesPoissons); // angel, clown, madarin
-console.log(popped); // sturgeon
+consowe.tabwe(mespoissons); // angew, mya cwown, madawin
+consowe.wog(popped); // stuwgeon
 ```
 
-### Utiliser `apply()` ou `call()` sur les objets semblables aux tableaux
+### u-utiwisew `appwy()` o-ou `caww()` suw wes objets s-sembwabwes a-aux tabweaux
 
-Le code suivant crée un objet `mesPoissons` semblable à un tableau, qui contient 4 propriétés indexées avec des nombres et une propriété `length`. On utilise la méthode {{jsxref("Function.call()")}} pour invoquer `pop()` sur cet objet :
+we c-code suivant cwée un objet `mespoissons` sembwabwe à un tabweau, mya q-qui contient 4 pwopwiétés indexées avec des nyombwes et une pwopwiété `wength`. (⑅˘꒳˘) o-on utiwise wa méthode {{jsxwef("function.caww()")}} pouw i-invoquew `pop()` s-suw cet objet :
 
 ```js
-var mesPoissons = {
-  0: "angel",
-  1: "clown",
-  2: "mandarin",
-  3: "sturgeon",
-  length: 4,
+v-vaw mespoissons = {
+  0: "angew", (U ﹏ U)
+  1: "cwown", mya
+  2: "mandawin", ʘwʘ
+  3: "stuwgeon", (˘ω˘)
+  w-wength: 4, (U ﹏ U)
 };
 
-var popped = Array.prototype.pop.call(mesPoissons); // on aurait pu utiliser apply()
-console.log(mesPoissons); // {0: 'angel', 1: 'clown', 2: 'mandarin', length: 3}
-console.log(popped); // 'sturgeon'
+vaw p-popped = awway.pwototype.pop.caww(mespoissons); // o-on auwait p-pu utiwisew appwy()
+consowe.wog(mespoissons); // {0: 'angew', ^•ﻌ•^ 1: 'cwown', 2: 'mandawin', (˘ω˘) wength: 3}
+c-consowe.wog(popped); // 'stuwgeon'
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array.prototype.push()")}}
-- {{jsxref("Array.prototype.shift()")}}
-- {{jsxref("Array.prototype.unshift()")}}
-- {{jsxref("Array.prototype.splice()")}}
+- {{jsxwef("awway.pwototype.push()")}}
+- {{jsxwef("awway.pwototype.shift()")}}
+- {{jsxwef("awway.pwototype.unshift()")}}
+- {{jsxwef("awway.pwototype.spwice()")}}

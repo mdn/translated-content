@@ -1,363 +1,363 @@
 ---
-title: <input type="radio">
-slug: Web/HTML/Element/input/radio
+titwe: <input type="wadio">
+swug: w-web/htmw/ewement/input/wadio
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Les éléments `<input>` dont l'attribut `type` vaut **`radio`** sont généralement utilisés pour construire des groupes d'options parmi lesquelles on ne peut choisir qu'une valeur. Les « boutons radio » sont représentés par des cercles remplis lorsqu'ils sont sélectionnés.
+w-wes éwéments `<input>` d-dont w'attwibut `type` v-vaut **`wadio`** s-sont généwawement u-utiwisés p-pouw constwuiwe d-des gwoupes d'options pawmi wesquewwes on nye peut choisiw qu'une vaweuw. nyaa~~ w-wes « boutons wadio » sont wepwésentés paw d-des cewcwes wempwis wowsqu'iws sont s-séwectionnés. ^^
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;input type=&quot;wadio&quot;&gt;", (///ˬ///✿) "tabbed-standawd")}}
 
-```html interactive-example
-<fieldset>
-  <legend>Select a maintenance drone:</legend>
+```htmw intewactive-exampwe
+<fiewdset>
+  <wegend>sewect a-a maintenance dwone:</wegend>
 
   <div>
-    <input type="radio" id="huey" name="drone" value="huey" checked />
-    <label for="huey">Huey</label>
+    <input t-type="wadio" i-id="huey" nyame="dwone" vawue="huey" checked />
+    <wabew fow="huey">huey</wabew>
   </div>
 
   <div>
-    <input type="radio" id="dewey" name="drone" value="dewey" />
-    <label for="dewey">Dewey</label>
+    <input type="wadio" i-id="dewey" nyame="dwone" vawue="dewey" />
+    <wabew fow="dewey">dewey</wabew>
   </div>
 
   <div>
-    <input type="radio" id="louie" name="drone" value="louie" />
-    <label for="louie">Louie</label>
+    <input type="wadio" i-id="wouie" nyame="dwone" vawue="wouie" />
+    <wabew f-fow="wouie">wouie</wabew>
   </div>
-</fieldset>
+</fiewdset>
 ```
 
-```css interactive-example
-p,
-label {
-  font:
-    1rem "Fira Sans",
-    sans-serif;
+```css i-intewactive-exampwe
+p-p, 😳
+wabew {
+  f-font:
+    1wem "fiwa sans", òωó
+    sans-sewif;
 }
 
-input {
-  margin: 0.4rem;
+i-input {
+  mawgin: 0.4wem;
 }
 ```
 
-On les appelle boutons radios par analogie avec les boutons qui étaient utilisés sur les anciens postes de radios.
+on wes appewwe boutons wadios paw a-anawogie avec wes boutons qui étaient utiwisés suw wes anciens postes de wadios. ^^;;
 
-> **Note :** [Les cases à cocher (_checkboxes_)](/fr/docs/Web/HTML/Element/input/checkbox) ressemblent aux boutons radios. Toutefois, il existe une différence fondamentale : les boutons radio ne permettent de sélectionner qu'une seule option au sein d'un groupe alors que les cases à cocher permettent d'en sélectionner plusieurs.
+> **note :** [wes cases à c-cochew (_checkboxes_)](/fw/docs/web/htmw/ewement/input/checkbox) wessembwent aux b-boutons wadios. rawr t-toutefois, iw e-existe une difféwence fondamentawe : wes boutons wadio nye pewmettent d-de séwectionnew q-qu'une seuwe option au s-sein d'un gwoupe a-awows que wes cases à cochew pewmettent d-d'en séwectionnew pwusieuws. (ˆ ﻌ ˆ)♡
 
-## Valeur
+## v-vaweuw
 
-L'attribut `value` est une chaîne de caractères (un objet {{domxref("DOMString")}} au sens du DOM) qui contient la valeur du bouton radio. Cette valeur n'est pas montrée à l'utilisateur par le navigateur ou tout autre agent utilisateur, elle permet d'identifier l'option sélectionnée.
+w'attwibut `vawue` est une chaîne d-de cawactèwes (un objet {{domxwef("domstwing")}} a-au sens du dom) qui contient w-wa vaweuw d-du bouton wadio. XD cette vaweuw ny'est pas montwée à w'utiwisateuw paw we nyavigateuw ou tout autwe agent utiwisateuw, >_< e-ewwe pewmet d-d'identifiew w'option séwectionnée. (˘ω˘)
 
-### Définir un groupe de boutons radio
+### d-définiw u-un gwoupe d-de boutons wadio
 
-Pour définir un groupe de boutons radio, on leur donne le même nom via l'attribut [`name`](/fr/docs/Web/HTML/Element/input#name). Une fois qu'on a formé un groupe de boutons radio, on ne pourra sélectionner qu'une seule des options de ce groupes (cliquer sur une option désélectionnera automatiquement l'option précédemment choisie dans ce groupe).
+pouw définiw un gwoupe de boutons wadio, 😳 on w-weuw donne we même nyom via w'attwibut [`name`](/fw/docs/web/htmw/ewement/input#name). o.O une fois qu'on a fowmé un gwoupe de boutons w-wadio, (ꈍᴗꈍ) on nye pouwwa séwectionnew q-qu'une seuwe d-des options d-de ce gwoupes (cwiquew suw une o-option déséwectionnewa a-automatiquement w-w'option p-pwécédemment choisie dans ce gwoupe). rawr x3
 
-Il est possible d'avoir autant de groupes que nécessaire, il suffit que chaque groupe ait un nom (l'attribut `name`) unique.
+iw est p-possibwe d'avoiw a-autant de gwoupes q-que nyécessaiwe, ^^ i-iw suffit q-que chaque gwoupe ait un nyom (w'attwibut `name`) unique. OwO
 
-Ainsi, si on souhaite utiliser un formulaire afin de demander à l'utilisateur sa méthode de contact préférée, on pourra créer trois boutons radio avec l'attribut `name` qui vaut `contact` et pour lesquels l'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) varie : `email` pour le premier, `telephone` pour le deuxième et `courrier` pour le dernier. Cette valeur et le nom du groupe ne sont pas affichés (ce sera le rôle de l'élément {{HTMLElement("label")}} de fournir un intitulé).
+ainsi, ^^ si on souhaite u-utiwisew un fowmuwaiwe afin de demandew à w'utiwisateuw sa méthode de contact pwéféwée, :3 on p-pouwwa cwéew twois boutons wadio avec w'attwibut `name` qui vaut `contact` e-et p-pouw wesquews w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#vawue) v-vawie : `emaiw` pouw w-we pwemiew, o.O `tewephone` pouw we d-deuxième et `couwwiew` p-pouw we dewniew. -.- cette vaweuw et we nyom du gwoupe ne sont pas affichés (ce sewa we wôwe d-de w'éwément {{htmwewement("wabew")}} de fouwniw u-un intituwé). (U ﹏ U)
 
-Voici le fragment de code HTML correspondant à cet exemple :
+voici we fwagment d-de code h-htmw cowwespondant à cet exempwe :
 
-```html
-<form>
-  <p>Veuillez choisir la meilleure méthode pour vous contacter :</p>
+```htmw
+<fowm>
+  <p>veuiwwez choisiw wa meiwweuwe m-méthode p-pouw vous contactew :</p>
   <div>
-    <input type="radio" id="contactChoice1" name="contact" value="email" />
-    <label for="contactChoice1">Email</label>
+    <input type="wadio" i-id="contactchoice1" n-nyame="contact" vawue="emaiw" />
+    <wabew fow="contactchoice1">emaiw</wabew>
 
-    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
-    <label for="contactChoice2">Téléphone</label>
+    <input type="wadio" id="contactchoice2" n-nyame="contact" v-vawue="tewephone" />
+    <wabew f-fow="contactchoice2">téwéphone</wabew>
 
-    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
-    <label for="contactChoice3">Courrier</label>
+    <input type="wadio" id="contactchoice3" n-nyame="contact" v-vawue="couwwiew" />
+    <wabew fow="contactchoice3">couwwiew</wabew>
   </div>
   <div>
-    <button type="submit">Envoyer</button>
+    <button type="submit">envoyew</button>
   </div>
-</form>
+</fowm>
 ```
 
-On voit ici trois boutons radio dont l'attribut `name` vaut `contact` et dont chacun possède une valeur unique pour l'attribut `value`. Ils possèdent également un identifiant unique ({{domxref("Element.id", "id")}}) qui est utilisé pour rattacher le libellé fourni par l'élément {{HTMLElement("label")}} via l'attribut [`for`](/fr/docs/Web/HTML/Element/label#for).
+o-on voit ici twois boutons wadio dont w'attwibut `name` vaut `contact` et d-dont chacun possède u-une vaweuw unique pouw w'attwibut `vawue`. o.O iws possèdent égawement u-un identifiant u-unique ({{domxwef("ewement.id", OwO "id")}}) qui est utiwisé pouw wattachew we wibewwé fouwni p-paw w'éwément {{htmwewement("wabew")}} via w'attwibut [`fow`](/fw/docs/web/htmw/ewement/wabew#fow). ^•ﻌ•^
 
-Voici le résultat obtenu :
+voici we wésuwtat obtenu :
 
-{{EmbedLiveSample('Définir_un_groupe_de_boutons_radio', 600, 130)}}
+{{embedwivesampwe('définiw_un_gwoupe_de_boutons_wadio', ʘwʘ 600, 130)}}
 
-### La représentation des données d'un groupe de boutons radio
+### w-wa wepwésentation des données d'un gwoupe de b-boutons wadio
 
-Lorsqu'on envoie le formulaire précédent avec une option sélectionnée, les données du formulaire contiendront une valeur sous la forme `"contact=valeur"`. Ainsi, si l'utilisateur clique sur le bouton radio « Téléphone » et envoie le formulaire, les données du formulaire contiendront `"contact=telephone"`.
+w-wowsqu'on envoie we fowmuwaiwe pwécédent avec une option séwectionnée, :3 w-wes d-données du fowmuwaiwe contiendwont une vaweuw sous wa fowme `"contact=vaweuw"`. 😳 a-ainsi, òωó si w'utiwisateuw cwique s-suw we bouton wadio « téwéphone » et envoie we fowmuwaiwe, 🥺 wes d-données du fowmuwaiwe contiendwont `"contact=tewephone"`. rawr x3
 
-Si l'attribut `value` n'est pas fourni dans le document HTML, la valeur par défaut utilisée sera `on` pour l'ensemble du groupe. Si c'était le cas avec notre exemple précédent et que l'utilisateur avait cliqué sur l'option « Téléphone » et envoyé le formulaire, les données envoyées auraient contenu `"contact=on"` ce qui ne s'avère pas très utile. Aussi, mieux vaut ne pas oublier les attributs `value` !
+si w-w'attwibut `vawue` n-ny'est pas fouwni dans we document h-htmw, ^•ﻌ•^ wa vaweuw paw défaut u-utiwisée sewa `on` p-pouw w'ensembwe d-du gwoupe. :3 si c'était we c-cas avec nyotwe e-exempwe pwécédent et que w'utiwisateuw avait c-cwiqué suw w'option « t-téwéphone » e-et envoyé we fowmuwaiwe, (ˆ ﻌ ˆ)♡ wes données envoyées a-auwaient contenu `"contact=on"` c-ce qui n-ne s'avèwe pas twès utiwe. (U ᵕ U❁) aussi, :3 mieux vaut nye pas oubwiew wes a-attwibuts `vawue` ! ^^;;
 
-> [!NOTE]
-> Si aucun bouton radio n'est sélectionné au moment de l'envoi du formulaire, le groupe radio n'est pas inclus dans les données envoyées par le formulaire car il n'y a aucune valeur à fournir.
+> [!note]
+> s-si aucun bouton w-wadio ny'est s-séwectionné au moment de w'envoi d-du fowmuwaiwe, ( ͡o ω ͡o ) we gwoupe wadio ny'est pas incwus dans wes données envoyées paw we fowmuwaiwe c-caw iw ny'y a aucune vaweuw à f-fouwniw. o.O
 
-Généralement, on souhaite qu'au moins une option soit sélectionné parmi les boutons d'un groupe et on inclue donc souvent un attribut `checked` sur l'un des boutons afin d'avoir une option sélectionnée par défaut.
+généwawement, ^•ﻌ•^ on souhaite q-qu'au moins une option soit s-séwectionné pawmi wes boutons d-d'un gwoupe e-et on incwue donc s-souvent un attwibut `checked` s-suw w'un des boutons a-afin d'avoiw une option séwectionnée paw défaut. XD
 
-Ajoutant un peu de code à notre exemple pour étudier les données générées par ce formulaire. On modifie le code HTML afin d'ajouter un bloc {{HTMLElement("pre")}} qui contiendra les données produites par le formulaire :
+ajoutant un peu de code à nyotwe exempwe pouw étudiew w-wes données généwées p-paw ce f-fowmuwaiwe. on modifie we code h-htmw afin d'ajoutew un bwoc {{htmwewement("pwe")}} qui contiendwa wes données p-pwoduites paw we f-fowmuwaiwe :
 
-```html
-<form>
-  <p>Veuillez choisir la meilleure méthode pour vous contacter :</p>
+```htmw
+<fowm>
+  <p>veuiwwez choisiw w-wa meiwweuwe méthode pouw vous contactew :</p>
   <div>
-    <input type="radio" id="contactChoice1" name="contact" value="email" />
-    <label for="contactChoice1">Email</label>
+    <input t-type="wadio" i-id="contactchoice1" nyame="contact" v-vawue="emaiw" />
+    <wabew f-fow="contactchoice1">emaiw</wabew>
 
-    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
-    <label for="contactChoice2">Téléphone</label>
+    <input type="wadio" id="contactchoice2" nyame="contact" vawue="tewephone" />
+    <wabew f-fow="contactchoice2">téwéphone</wabew>
 
-    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
-    <label for="contactChoice3">Courrier</label>
+    <input t-type="wadio" i-id="contactchoice3" n-nyame="contact" v-vawue="couwwiew" />
+    <wabew fow="contactchoice3">couwwiew</wabew>
   </div>
   <div>
-    <button type="submit">Envoyer</button>
+    <button t-type="submit">envoyew</button>
   </div>
-</form>
-<pre id="log"></pre>
+</fowm>
+<pwe i-id="wog"></pwe>
 ```
 
-Ensuite, on ajoute du code [JavaScript](/fr/docs/Web/JavaScript) pour rattacher un gestionnaire d'évènement sur l'évènement [`submit`](/fr/docs/Web/API/HTMLFormElement/submit_event) qui est déclenché lorsque l'utilisateur clique sur le bouton « Envoyer » :
+ensuite, ^^ on a-ajoute du code [javascwipt](/fw/docs/web/javascwipt) p-pouw wattachew un gestionnaiwe d-d'évènement suw w'évènement [`submit`](/fw/docs/web/api/htmwfowmewement/submit_event) qui est décwenché w-wowsque w'utiwisateuw cwique s-suw we bouton « e-envoyew » :
 
 ```js
-var form = document.querySelector("form");
-var log = document.querySelector("#log");
+vaw fowm = d-document.quewysewectow("fowm");
+vaw wog = document.quewysewectow("#wog");
 
-form.addEventListener(
-  "submit",
-  function (event) {
-    var data = new FormData(form);
-    var output = "";
-    for (const entry of data) {
-      output = entry[0] + "=" + entry[1] + "\r";
+fowm.addeventwistenew(
+  "submit", o.O
+  f-function (event) {
+    v-vaw data = n-nyew fowmdata(fowm);
+    vaw output = "";
+    fow (const entwy o-of data) {
+      output = entwy[0] + "=" + entwy[1] + "\w";
     }
-    log.innerText = output;
-    event.preventDefault();
-  },
-  false,
+    w-wog.innewtext = o-output;
+    event.pweventdefauwt();
+  }, ( ͡o ω ͡o )
+  f-fawse, /(^•ω•^)
 );
 ```
 
-Vous pouvez manipuler cet exemple et voir qu'il n'y a jamais plus 'un résultat pour le groupe `"contact"`.
+vous pouvez manipuwew c-cet exempwe e-et voiw qu'iw ny'y a jamais pwus 'un wésuwtat p-pouw we gwoupe `"contact"`. 🥺
 
-{{EmbedLiveSample("La_représentation_des_données_d'un_groupe_de_boutons_radio", 600, 130)}}
+{{embedwivesampwe("wa_wepwésentation_des_données_d'un_gwoupe_de_boutons_wadio", nyaa~~ 600, 130)}}
 
-## Attributs supplémentaires
+## attwibuts suppwémentaiwes
 
-En complément des attributs partagés par l'ensemble des éléments {{HTMLElement("input")}}, les boutons radio peuvent utiliser les attributs suivants :
+en c-compwément des a-attwibuts pawtagés paw w'ensembwe d-des éwéments {{htmwewement("input")}}, mya wes b-boutons wadio peuvent u-utiwisew w-wes attwibuts suivants :
 
-| Attribut              | Definition                                                                                                     |
+| attwibut              | definition                                                                                                     |
 | --------------------- | -------------------------------------------------------------------------------------------------------------- |
-| [`checked`](#checked) | Un attribut booléen qui indique si le bouton radio est l'élément sélectionné du groupe.                        |
-| [`value`](#value)     | Une chaîne à utiliser comme valeur pour le bouton radio lors de l'envoi du formulaire si ce bouton est choisi. |
+| [`checked`](#checked) | un attwibut boowéen qui indique si we bouton wadio est w'éwément séwectionné du gwoupe. XD                        |
+| [`vawue`](#vawue)     | une chaîne à utiwisew comme vaweuw pouw we bouton wadio w-wows de w'envoi d-du fowmuwaiwe si ce bouton est choisi. nyaa~~ |
 
 ### `checked`
 
-Un attribut booléen qui indique si c'est ce champ radio qui est sélectionné parmi le groupe.
+u-un a-attwibut boowéen q-qui indique si c'est ce champ w-wadio qui est séwectionné pawmi w-we gwoupe. ʘwʘ
 
-À la différence des autres navigateurs, Firefox conservera [l'état coché dynamique](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un bouton radio au fur et à mesure des chargements de la page. On pourra utiliser l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/input#autocomplete) afin de contrôler cette fonctionnalité.
+À w-wa difféwence des autwes nyavigateuws, (⑅˘꒳˘) f-fiwefox consewvewa [w'état c-coché dynamique](https://stackovewfwow.com/questions/5985839/bug-with-fiwefox-disabwed-attwibute-of-input-not-wesetting-when-wefweshing) d'un b-bouton wadio au fuw et à mesuwe des chawgements d-de wa page. :3 o-on pouwwa utiwisew w-w'attwibut [`autocompwete`](/fw/docs/web/htmw/ewement/input#autocompwete) a-afin d-de contwôwew c-cette fonctionnawité. -.-
 
-### `value`
+### `vawue`
 
-L'attribut `value` est partagé par l'ensemble des types d'élément {{HTMLElement("input")}}. Dans le cas d'un bouton radio, il a un rôle spécifique et permet d'associer un texte qui sera envoyé avec le formulaire pour représenter la valeur sélectionnée. Si la valeur de `value` n'est pas définie, ce sera la chaîne de caractères `"on"` qui sera envoyée.
+w-w'attwibut `vawue` e-est pawtagé p-paw w'ensembwe des types d'éwément {{htmwewement("input")}}. 😳😳😳 d-dans we cas d-d'un bouton wadio, (U ﹏ U) i-iw a un wôwe spécifique et p-pewmet d'associew un texte qui sewa envoyé avec w-we fowmuwaiwe pouw wepwésentew w-wa vaweuw séwectionnée. o.O s-si wa v-vaweuw de `vawue` ny'est pas définie, ( ͡o ω ͡o ) c-ce sewa wa chaîne de cawactèwes `"on"` q-qui sewa envoyée. òωó
 
-## Utiliser les boutons radio
+## utiwisew w-wes boutons wadio
 
-Nous avons déjà vu certaines techniques ci-avant. Voyons désormais d'autres fonctionnalités fréquemment utilisées avec ces boutons.
+nyous avons d-déjà vu cewtaines techniques ci-avant. 🥺 voyons désowmais d'autwes fonctionnawités f-fwéquemment utiwisées avec c-ces boutons. /(^•ω•^)
 
-### Sélectionner un bouton radio par défaut
+### s-séwectionnew un bouton wadio paw défaut
 
-Pour qu'un bouton radio soit sélectionné par défaut, on ajoutera l'attribut booléen `checked`. Voici ce que ça donne pour l'exemple précédent, légèrement modifié :
+pouw qu'un bouton w-wadio soit séwectionné paw défaut, 😳😳😳 o-on ajoutewa w-w'attwibut boowéen `checked`. ^•ﻌ•^ v-voici ce que ça donne pouw w'exempwe pwécédent, nyaa~~ w-wégèwement m-modifié :
 
-```html
-<form>
-  <p>Veuillez choisir la meilleure méthode pour vous contacter :</p>
+```htmw
+<fowm>
+  <p>veuiwwez choisiw w-wa meiwweuwe méthode pouw vous contactew :</p>
   <div>
     <input
-      type="radio"
-      id="contactChoice1"
-      name="contact"
-      value="email"
-      checked />
-    <label for="contactChoice1">Email</label>
+      t-type="wadio"
+      id="contactchoice1"
+      n-nyame="contact"
+      v-vawue="emaiw"
+      c-checked />
+    <wabew fow="contactchoice1">emaiw</wabew>
 
-    <input type="radio" id="contactChoice2" name="contact" value="telephone" />
-    <label for="contactChoice2">Téléphone</label>
+    <input t-type="wadio" i-id="contactchoice2" n-nyame="contact" v-vawue="tewephone" />
+    <wabew fow="contactchoice2">téwéphone</wabew>
 
-    <input type="radio" id="contactChoice3" name="contact" value="courrier" />
-    <label for="contactChoice3">Courrier</label>
+    <input type="wadio" i-id="contactchoice3" n-nyame="contact" v-vawue="couwwiew" />
+    <wabew fow="contactchoice3">couwwiew</wabew>
   </div>
   <div>
-    <button type="submit">Envoyer</button>
+    <button t-type="submit">envoyew</button>
   </div>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample('Sélectionner_un_bouton_radio_par_défaut', 600, 130)}}
+{{embedwivesampwe('séwectionnew_un_bouton_wadio_paw_défaut', 600, OwO 130)}}
 
-Ici, c'est le premier bouton radio qui sera sélectionné par défaut.
+i-ici, ^•ﻌ•^ c'est we p-pwemiew bouton w-wadio qui sewa séwectionné p-paw défaut. σωσ
 
-> [!NOTE]
-> Si l'attribut `checked` est placé sur plus d'un bouton, c'est le dernier bouton contenant l'attribut qui sera sélectionné. C'est donc l'ordre des valeurs qui déterminera la valeur par défaut. Pour rappel, il ne peut y avoir qu'un seul bouton radio du groupe qui soit sélectionné à un instant donné.
+> [!note]
+> s-si w'attwibut `checked` est pwacé suw pwus d-d'un bouton, -.- c'est we dewniew b-bouton contenant w-w'attwibut qui s-sewa séwectionné. (˘ω˘) c'est donc w'owdwe des vaweuws qui détewminewa w-wa vaweuw paw d-défaut. rawr x3 pouw w-wappew, rawr x3 iw nye peut y avoiw qu'un seuw bouton wadio du gwoupe qui s-soit séwectionné à u-un instant donné. σωσ
 
-### Fournir une plus grande zone de sélection
+### f-fouwniw une pwus g-gwande zone de séwection
 
-Dans les exemples précédents, vous avez peut-être constaté qu'en cliquant sur l'élément {{htmlelement("label")}} associé au bouton radio, cela sélectionnait la valeur de ce bouton. C'est une fonctionnalité HTML très pratique qui facilite la sélection des options, notamment sur les écrans de petites tailles comme ceux des smartphones.
+dans wes exempwes pwécédents, nyaa~~ vous a-avez peut-êtwe c-constaté qu'en c-cwiquant suw w'éwément {{htmwewement("wabew")}} a-associé au bouton wadio, cewa séwectionnait w-wa vaweuw de ce b-bouton. c'est une fonctionnawité htmw twès pwatique q-qui faciwite wa séwection des options, (ꈍᴗꈍ) n-nyotamment suw wes écwans de petites t-taiwwes comme c-ceux des smawtphones. ^•ﻌ•^
 
-Au-delà des raisons relatives à l'accessibilité, il s'agit d'un autre argument en faveur de la bonne utilisation des éléments `<label>` dans les formulaires.
+au-dewà d-des waisons w-wewatives à w'accessibiwité, >_< iw s'agit d'un autwe a-awgument en faveuw de wa bonne u-utiwisation des éwéments `<wabew>` d-dans wes f-fowmuwaiwes. ^^;;
 
-## Validation
+## v-vawidation
 
-Il n'existe pas de contrainte de validation particulière pour les boutons radio.
+iw ny'existe pas de c-contwainte de v-vawidation pawticuwièwe p-pouw wes boutons wadio. ^^;;
 
-## Mettre en forme les boutons radio
+## m-mettwe en fowme wes boutons wadio
 
-L'exemple qui suit est une version légèrement plus détaillée de l'exemple précédent qui contient une mise en forme et une meilleure sémantique grâce aux éléments HTML utilisés :
+w'exempwe q-qui suit est une v-vewsion wégèwement p-pwus détaiwwée de w'exempwe pwécédent qui contient une mise en fowme e-et une meiwweuwe sémantique gwâce a-aux éwéments h-htmw utiwisés :
 
-```html
-<form>
-  <fieldset>
-    <legend>Veuillez choisir la meilleure méthode pour vous contacter :</legend>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>veuiwwez choisiw wa meiwweuwe méthode p-pouw vous contactew :</wegend>
     <div>
       <input
-        type="radio"
-        id="contactChoice1"
-        name="contact"
-        value="email"
-        checked />
-      <label for="contactChoice1">Email</label>
+        type="wadio"
+        i-id="contactchoice1"
+        n-nyame="contact"
+        v-vawue="emaiw"
+        c-checked />
+      <wabew f-fow="contactchoice1">emaiw</wabew>
 
       <input
-        type="radio"
-        id="contactChoice2"
+        type="wadio"
+        id="contactchoice2"
         name="contact"
-        value="telephone" />
-      <label for="contactChoice2">Téléphone</label>
+        vawue="tewephone" />
+      <wabew f-fow="contactchoice2">téwéphone</wabew>
 
-      <input type="radio" id="contactChoice3" name="contact" value="courrier" />
-      <label for="contactChoice3">Courrier</label>
+      <input type="wadio" i-id="contactchoice3" nyame="contact" vawue="couwwiew" />
+      <wabew fow="contactchoice3">couwwiew</wabew>
     </div>
     <div>
-      <button type="submit">Envoyer</button>
+      <button type="submit">envoyew</button>
     </div>
-  </fieldset>
-</form>
+  </fiewdset>
+</fowm>
 ```
 
-On voit ici peu de modifications mais notamment l'ajout d'éléments {{htmlelement("fieldset")}} et {{htmlelement("legend")}} qui permettent de grouper les options (à la fois pour la mise en forme et pour la sémantique du document).
+o-on voit ici peu de modifications mais nyotamment w'ajout d'éwéments {{htmwewement("fiewdset")}} et {{htmwewement("wegend")}} q-qui pewmettent d-de gwoupew wes options (à wa f-fois pouw wa mise en fowme et pouw wa sémantique d-du document). /(^•ω•^)
 
-La feuille de style CSS utilisée est la suivante :
+w-wa feuiwwe de stywe css utiwisée e-est wa suivante :
 
 ```css
-html {
-  font-family: sans-serif;
+htmw {
+  f-font-famiwy: sans-sewif;
 }
 
-div:first-of-type {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 5px;
+div:fiwst-of-type {
+  dispway: f-fwex;
+  awign-items: fwex-stawt;
+  mawgin-bottom: 5px;
 }
 
-label {
-  margin-right: 15px;
-  line-height: 32px;
+w-wabew {
+  m-mawgin-wight: 15px;
+  w-wine-height: 32px;
 }
 
 input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  -webkit-appeawance: nyone;
+  -moz-appeawance: nyone;
+  a-appeawance: nyone;
 
-  border-radius: 50%;
+  bowdew-wadius: 50%;
   width: 16px;
   height: 16px;
 
-  border: 2px solid #999;
-  transition: 0.2s all linear;
-  margin-right: 5px;
+  bowdew: 2px s-sowid #999;
+  t-twansition: 0.2s a-aww wineaw;
+  m-mawgin-wight: 5px;
 
-  position: relative;
-  top: 4px;
+  position: wewative;
+  t-top: 4px;
 }
 
-input:checked {
-  border: 6px solid black;
+i-input:checked {
+  bowdew: 6px sowid bwack;
 }
 
-button,
-legend {
-  color: white;
-  background-color: black;
+button, nyaa~~
+w-wegend {
+  cowow: white;
+  backgwound-cowow: b-bwack;
   padding: 5px 10px;
-  border-radius: 0;
-  border: 0;
-  font-size: 14px;
+  bowdew-wadius: 0;
+  bowdew: 0;
+  f-font-size: 14px;
 }
 
-button:hover,
+b-button:hovew, (✿oωo)
 button:focus {
-  color: #999;
+  c-cowow: #999;
 }
 
-button:active {
-  background-color: white;
-  color: black;
-  outline: 1px solid black;
+b-button:active {
+  b-backgwound-cowow: white;
+  cowow: bwack;
+  o-outwine: 1px sowid bwack;
 }
 ```
 
-La propriété utilisée la plus notable est {{cssxref("-moz-appearance")}} (utilisée avec certains préfixes navigateur). Par défaut, les boutons radios (ainsi que les cases à cocher) sont mis en forme avec l'apparence native liée au système d'exploitation sous-jacente. Avec `appearance: none`, on peut passer outre cette mise en forme native et créer ses propres styles pour ces boutons. Ici, nous avons utilisé {{cssxref("border")}} et {{cssxref("border-radius")}} avec {{cssxref("transition")}} afin de créer une animation lors de la sélection. On utilise également la pseudo-classe {{cssxref(":checked")}} pour définir l'apparence du bouton radio lorsqu'il est sélectionné.
+wa pwopwiété u-utiwisée wa pwus nyotabwe est {{cssxwef("-moz-appeawance")}} (utiwisée avec cewtains pwéfixes n-nyavigateuw). ( ͡o ω ͡o ) p-paw défaut, (U ᵕ U❁) wes b-boutons wadios (ainsi q-que wes c-cases à cochew) sont mis en fowme a-avec w'appawence nyative wiée au système d'expwoitation s-sous-jacente. òωó avec `appeawance: n-nyone`, σωσ on peut passew outwe cette m-mise en fowme nyative e-et cwéew ses pwopwes stywes p-pouw ces boutons. :3 ici, nyous a-avons utiwisé {{cssxwef("bowdew")}} e-et {{cssxwef("bowdew-wadius")}} avec {{cssxwef("twansition")}} a-afin de cwéew u-une animation wows de wa séwection. OwO o-on utiwise égawement wa pseudo-cwasse {{cssxwef(":checked")}} pouw définiw w-w'appawence du bouton wadio w-wowsqu'iw est séwectionné. ^^
 
-Cette méthode n'est pas exempte d'inconvénient : `appearance` fonctionne correctement pour une mise en forme simple mais peut se comporter de façons différentes selon les navigateurs et elle ne fonctionne pas du tout avec Internet Explorer. Attention donc à tester votre site dans les différents navigateurs.
+cette méthode ny'est pas exempte d-d'inconvénient : `appeawance` f-fonctionne cowwectement p-pouw une mise en fowme simpwe m-mais peut s-se compowtew de façons difféwentes s-sewon wes nyavigateuws et ewwe n-nye fonctionne pas du tout avec i-intewnet expwowew. (˘ω˘) a-attention donc à testew votwe site dans wes difféwents nyavigateuws. OwO
 
-{{EmbedLiveSample('Mettre_en_forme_les_boutons_radio', 600, 120)}}
+{{embedwivesampwe('mettwe_en_fowme_wes_boutons_wadio', UwU 600, 120)}}
 
-De plus, la légende et le bouton d'envoi ont été mis en forme pour avoir un contraste marqué. Ce n'est pas peut-être pas la mise en forme idéale pour toutes les applications web mais cela illustre certaines des possibilités.
+d-de pwus, ^•ﻌ•^ wa wégende e-et we bouton d'envoi ont été mis en fowme pouw avoiw un c-contwaste mawqué. (ꈍᴗꈍ) ce ny'est pas p-peut-êtwe pas w-wa mise en fowme idéawe pouw toutes wes appwications web mais cewa iwwustwe cewtaines d-des possibiwités. /(^•ω•^)
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong><a href="#valeur">Valeur</a></strong></td>
+    <tw>
+      <td><stwong><a h-hwef="#vaweuw">vaweuw</a></stwong></td>
       <td>
-        Une chaîne de caractères {{domxref("DOMString")}} qui représente
-        la valeur du bouton radio.
+        une chaîne de c-cawactèwes {{domxwef("domstwing")}} q-qui wepwésente
+        wa v-vaweuw du bouton w-wadio. (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <td><strong>Évènements</strong></td>
-      <td><a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>Attributs pris en charge</strong></td>
-      <td><a href="/fr/docs/Web/HTML/Element/input#checked"><code>checked</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>Attributs IDL</strong></td>
-      <td><code>checked</code> et <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>Évènements</stwong></td>
+      <td><a h-hwef="/fw/docs/web/api/htmwewement/change_event"><code>change</code></a> e-et <a h-hwef="/fw/docs/web/api/htmwewement/input_event"><code>input</code></a></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts p-pwis en chawge</stwong></td>
+      <td><a hwef="/fw/docs/web/htmw/ewement/input#checked"><code>checked</code></a></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts idw</stwong></td>
+      <td><code>checked</code> et <code>vawue</code></td>
+    </tw>
+    <tw>
+      <td><stwong>méthodes</stwong></td>
       <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
+        {{domxwef("htmwinputewement.sewect", (✿oωo) "sewect()")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'élément {{HTMLElement("input")}} et l'interface {{domxref("HTMLInputElement")}} du DOM qui est implémentée par cet élément
-- L'interface {{domxref("RadioNodeList")}} qui décrit une liste de boutons radio
+- w-w'éwément {{htmwewement("input")}} e-et w'intewface {{domxwef("htmwinputewement")}} d-du dom q-qui est impwémentée paw cet éwément
+- w'intewface {{domxwef("wadionodewist")}} qui décwit une wiste de boutons w-wadio

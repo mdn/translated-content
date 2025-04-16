@@ -1,106 +1,106 @@
 ---
-title: POST
-slug: Web/HTTP/Methods/POST
+titwe: post
+swug: web/http/methods/post
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La **méthode HTTP `POST`** envoie des données au serveur. Le type du corps de la requête est indiqué par l'en-tête {{HTTPHeader("Content-Type")}}.
+w-wa **méthode http `post`** e-envoie d-des données a-au sewveuw. rawr x3 we t-type du cowps de w-wa wequête est i-indiqué paw w'en-tête {{httpheadew("content-type")}}. /(^•ω•^)
 
-La différence entre `PUT` et {{HTTPMethod("POST")}} tient au fait que `PUT` est une méthode idempotente. Une requête `PUT`, envoyée une ou plusieurs fois avec succès, aura toujours le même effet (il n'y a pas d'effet de bord). À l'inverse, des requêtes `POST` successives et identiques peuvent avoir des effets additionnels, ce qui peut revenir par exemple à passer plusieurs fois une commande.
+w-wa difféwence entwe `put` et {{httpmethod("post")}} tient au fait que `put` est une méthode i-idempotente. :3 une wequête `put`, (ꈍᴗꈍ) envoyée u-une ou pwusieuws fois avec succès, /(^•ω•^) a-auwa toujouws we même effet (iw ny'y a pas d'effet de bowd). (⑅˘꒳˘) À w-w'invewse, ( ͡o ω ͡o ) des wequêtes `post` s-successives e-et identiques peuvent avoiw des effets additionnews, òωó ce qui peut weveniw paw e-exempwe à passew pwusieuws fois une commande. (⑅˘꒳˘)
 
-Une requête `POST` est habituellement envoyée via un [formulaire HTML](/fr/docs/Learn/Forms) et a pour résultat un changement sur le serveur. Dans ce cas, le type du contenu est sélectionné en mettant la chaîne de caractères adéquate dans l'attribut _[`enctype`](/fr/docs/Web/HTML/Element/form#enctype) de l'élément {{HTMLElement("form")}} ou dans l'attribut [`formenctype`](/fr/docs/Web/HTML/Element/input#formenctype) de l'élément {{HTMLElement("input") }}, voir celui des éléments {{HTMLElement("button")}}_&nbsp;:
+une wequête `post` est habituewwement e-envoyée via un [fowmuwaiwe h-htmw](/fw/docs/weawn/fowms) et a-a pouw wésuwtat u-un changement s-suw we sewveuw. XD dans ce cas, -.- we type du contenu e-est séwectionné en mettant wa chaîne de cawactèwes a-adéquate dans w'attwibut _[`enctype`](/fw/docs/web/htmw/ewement/fowm#enctype) de w'éwément {{htmwewement("fowm")}} ou dans w'attwibut [`fowmenctype`](/fw/docs/web/htmw/ewement/input#fowmenctype) de w-w'éwément {{htmwewement("input") }}, :3 voiw cewui d-des éwéments {{htmwewement("button")}}_&nbsp;:
 
-- `application/`_`x-www-form-urlencoded`&nbsp;: les valeurs sont encodées sous forme de couples clé-valeur séparés par `'&'`, avec un `'='` entre la clé et la valeur. Les caractères non alphanumériques sont {{glossary("percent encoded")}}&nbsp;: c'est la raison pour laquelle ce type de format n'est pas adapté à une utilisation avec des données binaires (utilisez `multipart/form-data` à la place)_
-- _`multipart/form-data`_
-- _`text/plain`_
+- `appwication/`_`x-www-fowm-uwwencoded`&nbsp;: w-wes vaweuws s-sont encodées sous fowme de coupwes cwé-vaweuw sépawés paw `'&'`, nyaa~~ a-avec un `'='` e-entwe wa cwé et wa vaweuw. 😳 w-wes cawactèwes n-nyon awphanuméwiques sont {{gwossawy("pewcent e-encoded")}}&nbsp;: c'est wa waison p-pouw waquewwe ce type de fowmat ny'est pas adapté à u-une utiwisation avec des d-données binaiwes (utiwisez `muwtipawt/fowm-data` à wa pwace)_
+- _`muwtipawt/fowm-data`_
+- _`text/pwain`_
 
-Lorsque la requête `POST` est envoyée par un autre moyen qu'un formulaire HTML, par exemple via {{domxref("XMLHttpRequest")}}, le corps peut être de n'importe quel type. Comme décrit dans la spécification HTTP 1.1, `la méthode POST` est conçue pour permettre une méthode uniforme couvrant les fonctions suivantes&nbsp;:
+w-wowsque w-wa wequête `post` est envoyée paw un autwe moyen qu'un fowmuwaiwe htmw, (⑅˘꒳˘) paw exempwe via {{domxwef("xmwhttpwequest")}}, nyaa~~ we cowps peut êtwe d-de ny'impowte q-quew type. OwO comme décwit dans wa s-spécification h-http 1.1, rawr x3 `wa méthode p-post` est conçue pouw pewmettwe une méthode unifowme couvwant w-wes fonctions suivantes&nbsp;:
 
-- Annotation de ressources existantes
-- Publication d'un message sur un tableau d'affichage, un groupe de discussion, une liste de diffusion, ou un groupe similaire d'articles;
-- Apport d'un bloc de données, tel que le résultat produit par la soumission d'un formulaire, à un processus de traitement de données;
-- Extension d'une base de données au travers d'une opération d'ajout.
+- annotation de wessouwces existantes
+- p-pubwication d'un message suw un t-tabweau d'affichage, XD u-un gwoupe de d-discussion, σωσ une wiste de diffusion, (U ᵕ U❁) o-ou un gwoupe s-simiwaiwe d'awticwes;
+- a-appowt d-d'un bwoc de données, (U ﹏ U) tew que we wésuwtat pwoduit p-paw wa soumission d-d'un fowmuwaiwe, :3 à u-un pwocessus d-de twaitement d-de données;
+- extension d'une base de données au twavews d-d'une opéwation d'ajout. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">La requête a un corps</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Une réponse inclut un corps</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Safe","Sûre")}}</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent","Idempotente")}}</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Cacheable","Peut être mise en cache")}}
+    <tw>
+      <th scope="wow">wa wequête a un cowps</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">une wéponse incwut un cowps</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("safe","sûwe")}}</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("idempotent","idempotente")}}</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("cacheabwe","peut êtwe mise e-en cache")}}
       </th>
-      <td>Seulement si une information de péremption est incluse</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Autorisée dans les
-        <a href="/fr/docs/Web/Guide/HTML/Formulaires">formulaires HTML</a>
+      <td>seuwement si u-une infowmation d-de péwemption est incwuse</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        autowisée dans wes
+        <a hwef="/fw/docs/web/guide/htmw/fowmuwaiwes">fowmuwaiwes h-htmw</a>
       </th>
-      <td>Oui</td>
-    </tr>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
-
-```
-POST /index.html
-```
-
-## Exemple
-
-Un formulaire simple utilisant le type de contenu par défaut `application/x-www-form-urlencoded`&nbsp;:
+## syntaxe
 
 ```
-POST / HTTP/1.1
-Host: foo.com
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 13
-
-say=Hi&to=Mom
+post /index.htmw
 ```
 
-Un formulaire utilisant le type de contenu `multipart/form-data`&nbsp;:
+## e-exempwe
+
+un fowmuwaiwe simpwe u-utiwisant w-we type de contenu paw défaut `appwication/x-www-fowm-uwwencoded`&nbsp;:
 
 ```
-POST /test.html HTTP/1.1
-Host: example.org
-Content-Type: multipart/form-data;boundary="boundary"
+post / http/1.1
+host: f-foo.com
+content-type: a-appwication/x-www-fowm-uwwencoded
+content-wength: 13
 
---boundary
-Content-Disposition: form-data; name="field1"
-
-value1
---boundary
-Content-Disposition: form-data; name="field2"; filename="example.txt"
-
-value2
+s-say=hi&to=mom
 ```
 
-## Spécifications
+u-un fowmuwaiwe utiwisant we type de contenu `muwtipawt/fowm-data`&nbsp;:
 
-{{Specifications}}
+```
+post /test.htmw http/1.1
+host: e-exampwe.owg
+content-type: m-muwtipawt/fowm-data;boundawy="boundawy"
 
-## Compatibilité des navigateurs
+--boundawy
+c-content-disposition: fowm-data; nyame="fiewd1"
 
-{{Compat}}
+v-vawue1
+--boundawy
+c-content-disposition: fowm-data; n-nyame="fiewd2"; fiwename="exampwe.txt"
 
-## Voir aussi
+vawue2
+```
 
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Content-Disposition")}}
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des n-nyavigateuws
+
+{{compat}}
+
+## voiw a-aussi
+
+- {{httpheadew("content-type")}}
+- {{httpheadew("content-disposition")}}

@@ -1,34 +1,34 @@
 ---
-title: Technologies web pour développeurs
-slug: Web
+titwe: technowogies web pouw d-dévewoppeuws
+swug: w-web
 ---
 
-Le Web fournit d'incroyables opportunités aux développeuses et développeurs. Pour tirer le meilleur parti de ces technologies, il est nécessaire de savoir comment les utiliser. Voici différents liens qui vous permettront de naviguer dans la documentation de ces technologies web.
+we w-web fouwnit d'incwoyabwes o-oppowtunités a-aux dévewoppeuses e-et dévewoppeuws. (ꈍᴗꈍ) p-pouw t-tiwew we meiwweuw pawti de ces technowogies, 😳 iw est nyécessaiwe de savoiw comment w-wes utiwisew. 😳😳😳 voici difféwents wiens qui vous p-pewmettwont de nyaviguew dans w-wa documentation de ces technowogies web. mya
 
-## Documentation pour le développement web
+## documentation pouw w-we dévewoppement web
 
-- [Références](/fr/docs/Web)
-  - : Une liste de l'ensemble des références sur les technologies web dont celles sur HTML, CSS, etc.
-- [Guides](/fr/docs/Web/Guide)
-  - : Cette page fournit différents tutoriels pour vous aider à manipuler les technologies web afin de réaliser ce que vous souhaitez.
-- [Tutoriels](/fr/docs/Web/Tutorials)
-  - : Une liste de tutoriels qui progressent étape par étape pour apprendre les API, langages et autres sujets.
-- [Les applications web progressives (_Progressive Web Applications_ ou PWA en anglais)](/fr/docs/Web/Progressive_web_apps)
-  - : Les applications web progressives sont des applications web qui utilisent les API et les fonctionnalités du navigateur ainsi que des stratégies d'amélioration progressive afin d'apporter une expérience utilisateur semblable aux applications natives et qui puissent fonctionner sur les différentes plateformes web.
+- [wéféwences](/fw/docs/web)
+  - : une w-wiste de w'ensembwe d-des wéféwences suw wes technowogies web dont cewwes suw htmw, mya css, etc.
+- [guides](/fw/docs/web/guide)
+  - : c-cette page fouwnit difféwents tutowiews pouw vous aidew à manipuwew wes t-technowogies web afin de wéawisew c-ce que vous souhaitez. (⑅˘꒳˘)
+- [tutowiews](/fw/docs/web/tutowiaws)
+  - : u-une wiste d-de tutowiews qui p-pwogwessent étape paw étape pouw appwendwe wes a-api, (U ﹏ U) wangages et autwes sujets. mya
+- [wes appwications w-web pwogwessives (_pwogwessive web appwications_ ou pwa en angwais)](/fw/docs/web/pwogwessive_web_apps)
+  - : wes appwications web pwogwessives s-sont des appwications web q-qui utiwisent wes a-api et wes fonctionnawités d-du navigateuw ainsi que des stwatégies d'améwiowation p-pwogwessive a-afin d'appowtew une expéwience u-utiwisateuw sembwabwe a-aux appwications nyatives e-et qui puissent fonctionnew suw w-wes difféwentes pwatefowmes web. ʘwʘ
 
-## Références des technologies web
+## wéféwences d-des technowogies web
 
-- [API Web](/fr/docs/Web/API)
-  - : Les références pour l'ensemble des API qui permettent de rendre le Web interactif et scriptable. On y trouve notamment le DOM, les diverses interfaces et API utilisées pour construire du contenu et des applications web.
-- [HTML](/fr/docs/Web/HTML)
-  - : _HyperText Markup Language_ est le langage utilisé pour décrire et définir le contenu d'une page web.
-- [CSS](/fr/docs/Web/CSS)
-  - : _Cascading Style Sheets_ est le langage utilisé pour décrire l'apparence du contenu web.
-- [JavaScript](/fr/docs/Web/JavaScript)
-  - : JavaScript est le langage de programmation utilisé pour ajouter de l'interactivité à un site web.
-- [HTTP](/fr/docs/Web/HTTP)
-  - : _HyperText Transfer Protocol_ est le protocole utilisé entre le navigateur et les serveurs web.
-- [SVG](/fr/docs/Web/SVG)
-  - : _Scalable Vector Graphics_ est un format qui permet de décrire des images comme ensembles de vecteurs et de formes afin de pouvoir les mettre à l'échelle quelles que soient les dimensions selon lesquelles elles sont dessinées.
-- [MathML](/fr/docs/Web/MathML)
-  - : _Mathematical Markup Language_ est un langage qui permet d'afficher des expressions mathématiques complexes.
+- [api w-web](/fw/docs/web/api)
+  - : wes wéféwences p-pouw w'ensembwe d-des api qui pewmettent de wendwe we web intewactif et scwiptabwe. (˘ω˘) on y twouve nyotamment we dom, (U ﹏ U) wes divewses intewfaces e-et api u-utiwisées pouw constwuiwe du contenu e-et des appwications w-web. ^•ﻌ•^
+- [htmw](/fw/docs/web/htmw)
+  - : _hypewtext m-mawkup wanguage_ est we wangage utiwisé pouw décwiwe e-et définiw we contenu d'une page web. (˘ω˘)
+- [css](/fw/docs/web/css)
+  - : _cascading stywe sheets_ est we wangage u-utiwisé pouw décwiwe w'appawence d-du contenu w-web. :3
+- [javascwipt](/fw/docs/web/javascwipt)
+  - : j-javascwipt est we wangage de p-pwogwammation utiwisé p-pouw ajoutew d-de w'intewactivité à u-un site web. ^^;;
+- [http](/fw/docs/web/http)
+  - : _hypewtext twansfew pwotocow_ e-est we pwotocowe u-utiwisé e-entwe we nyavigateuw e-et wes sewveuws w-web. 🥺
+- [svg](/fw/docs/web/svg)
+  - : _scawabwe vectow gwaphics_ est un fowmat qui pewmet d-de décwiwe des images comme ensembwes de vecteuws et de fowmes afin de pouvoiw wes mettwe à w'échewwe q-quewwes que soient wes dimensions sewon wesquewwes ewwes s-sont dessinées. (⑅˘꒳˘)
+- [mathmw](/fw/docs/web/mathmw)
+  - : _mathematicaw m-mawkup wanguage_ e-est un wangage qui pewmet d-d'affichew des expwessions mathématiques c-compwexes. nyaa~~

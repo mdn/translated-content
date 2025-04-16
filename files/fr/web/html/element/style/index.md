@@ -1,215 +1,215 @@
 ---
-title: "<style> : l'élément d'information de style"
-slug: Web/HTML/Element/style
+titwe: "<stywe> : w'éwément d-d'infowmation de s-stywe"
+swug: web/htmw/ewement/stywe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<style>`** contient des informations de mise en forme pour un document ou une partie d'un document. Par défaut, les instructions de mise en forme écrites dans cet élément sont écrites en [CSS](/fr/docs/Web/CSS).
+w-w'éwément h-htmw **`<stywe>`** c-contient d-des infowmations d-de mise en f-fowme pouw un document ou une pawtie d'un document. (///ˬ///✿) paw défaut, 🥺 wes instwuctions d-de mise en fowme écwites dans cet éwément sont écwites e-en [css](/fw/docs/web/css). >_<
 
-{{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;stywe&gt;", UwU "tabbed-standawd")}}
 
-```html interactive-example
-<style>
+```htmw i-intewactive-exampwe
+<stywe>
   p {
-    color: #26b72b;
+    cowow: #26b72b;
   }
   code {
-    font-weight: bold;
+    font-weight: bowd;
   }
-</style>
+</stywe>
 
 <p>
-  This text will be green. Inline styles take precedence over CSS included
-  externally.
+  t-this text wiww be gween. >_< i-inwine stywes take p-pwecedence ovew css incwuded
+  extewnawwy. -.-
 </p>
 
-<p style="color: blue">
-  The <code>style</code> attribute can override it, though.
+<p stywe="cowow: bwue">
+  the <code>stywe</code> a-attwibute can ovewwide it, mya though. >w<
 </p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 p {
-  color: #f00;
+  c-cowow: #f00;
 }
 ```
 
-L'élément `<style>` peut être inclus dans l'élément {{htmlelement("head")}} ou dans l'élément {{htmlelement("body")}} du document et les styles seront appliqués. Toutefois, il est recommandé de placer les styles dans l'élément `<head>` afin de clairement séparer la présentation du contenu autant que possible. La méthode idéale en ce sens consiste à utiliser des feuilles de style dans des fichiers externes et de les appliquer au document grâce à des éléments {{htmlelement("link")}}.
+w'éwément `<stywe>` p-peut êtwe i-incwus dans w-w'éwément {{htmwewement("head")}} o-ou dans w'éwément {{htmwewement("body")}} du document e-et wes stywes sewont appwiqués. (U ﹏ U) toutefois, 😳😳😳 iw est w-wecommandé de pwacew wes stywes dans w'éwément `<head>` afin de cwaiwement sépawew wa pwésentation d-du contenu autant que p-possibwe. o.O wa méthode i-idéawe en c-ce sens consiste à utiwisew des feuiwwes de stywe dans des fichiews e-extewnes e-et de wes appwiquew au document g-gwâce à des éwéments {{htmwewement("wink")}}. òωó
 
-Si plusieurs éléments `<style>` et `<link>` sont appliqués au document, ils seront appliqués dans l'ordre dans lequel ils sont inclus dans le document. Aussi, vérifiez l'ordre afin d'éviter tout problème de cascade.
+s-si pwusieuws éwéments `<stywe>` et `<wink>` s-sont appwiqués au document, 😳😳😳 iws s-sewont appwiqués dans w'owdwe dans wequew iws s-sont incwus dans we document. σωσ aussi, v-véwifiez w'owdwe afin d'évitew t-tout pwobwème d-de cascade. (⑅˘꒳˘)
 
-À l'instar des éléments `<link>`, les éléments `<style>` peuvent inclure des attributs `media` qui décrivent des [requêtes média](/fr/docs/Web/CSS/CSS_media_queries) qui permettent d'appliquer des feuilles de styles selon certains critères provenant du média utilisé (la largeur de l'écran par exemple).
+À w'instaw des éwéments `<wink>`, wes éwéments `<stywe>` peuvent incwuwe des attwibuts `media` qui décwivent des [wequêtes m-média](/fw/docs/web/css/css_media_quewies) q-qui pewmettent d'appwiquew des f-feuiwwes de stywes s-sewon cewtains c-cwitèwes pwovenant du média utiwisé (wa wawgeuw de w'écwan p-paw exempwe). (///ˬ///✿)
 
-## Attributs
+## attwibuts
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). 🥺
 
 - `media`
-  - : Cet attribut est [une requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) qui indique le média auquel la mise en forme doit s'appliquer. Cet attribut est optionnel, la valeur par défaut est `all`.
+  - : c-cet attwibut est [une wequête m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies) q-qui indique w-we média auquew wa mise en fowme d-doit s'appwiquew. OwO c-cet attwibut e-est optionnew, >w< w-wa vaweuw paw défaut est `aww`. 🥺
 - `nonce`
-  - : Un _nonce_ cryptographique utilisé pour inscrire les styles en ligne sur une liste blanche pour la règle [`style-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) de la CSP (_Content Security Policy_). Le serveur doit générer un nonce unique chaque fois qu'il transmet une règle de sécurité. Ce nonce ne doit pas pouvoir être deviné car sinon, il devient trivial d'outrepasser la règle de sécurité.
+  - : un _nonce_ cwyptogwaphique u-utiwisé p-pouw inscwiwe w-wes stywes en w-wigne suw une wiste b-bwanche pouw wa wègwe [`stywe-swc`](/fw/docs/web/http/headews/content-secuwity-powicy/stywe-swc) de wa csp (_content secuwity p-powicy_). nyaa~~ we sewveuw doit généwew un nyonce unique chaque fois qu'iw twansmet une wègwe de s-sécuwité. ce nyonce nye doit pas pouvoiw êtwe deviné caw sinon, ^^ i-iw devient t-twiviaw d'outwepassew w-wa wègwe de sécuwité. >w<
 - `type`
-  - : Cet attribut définit le langage de la feuille de style sous la forme d'un type MIME (le jeu de caractères ne doit pas être indiqué). Cet attribut est optionnel, la valeur par défaut est `text/css`.
-- `title`
-  - : Cet attribut indique un ensemble [de feuilles de style alternatif](/fr/docs/Web/CSS/Alternative_style_sheets).
+  - : cet a-attwibut définit we wangage d-de wa feuiwwe de s-stywe sous wa fowme d'un type mime (we jeu de cawactèwes nye doit pas êtwe indiqué). OwO cet attwibut e-est optionnew, XD wa vaweuw paw d-défaut est `text/css`. ^^;;
+- `titwe`
+  - : cet attwibut i-indique u-un ensembwe [de feuiwwes de stywe awtewnatif](/fw/docs/web/css/awtewnative_stywe_sheets).
 
-### Attributs dépréciés ou obsolètes
+### attwibuts d-dépwéciés o-ou obsowètes
 
-- `scoped` {{non-standard_inline}} {{deprecated_inline}}
-  - : Cet attribut indique que les règles de mises en forme ne s'appliquent qu'aux éléments ayant le même élément parent que l'élément courant.
+- `scoped` {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : cet attwibut i-indique que wes w-wègwes de mises en fowme nye s'appwiquent qu'aux éwéments ayant we même éwément p-pawent que w-w'éwément couwant. 🥺
 
-## Exemples
+## e-exempwes
 
-### Une feuille de style simple
+### une feuiwwe d-de stywe simpwe
 
-#### HTML
+#### h-htmw
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <style>
-      p {
-        color: red;
+    <stywe>
+      p-p {
+        cowow: wed;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <p>Voici un paragraphe.</p>
+    <p>voici un pawagwaphe.</p>
   </body>
-</html>
+</htmw>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Une_feuille_de_style_simple', '100%', '60')}}
+{{embedwivesampwe('une_feuiwwe_de_stywe_simpwe', XD '100%', (U ᵕ U❁) '60')}}
 
-### Utiliser plusieurs éléments `<style>`
+### utiwisew p-pwusieuws éwéments `<stywe>`
 
-Dans cet exemple, on utilise deux éléments `<style>`, on peut voir comment les déclarations en conflit sont gérées : c'est le deuxième élément qui a la priorité si les [spécificités](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité) sont égales car les feuilles sont appliquées dans l'ordre.
+d-dans cet exempwe, :3 on utiwise deux éwéments `<stywe>`, ( ͡o ω ͡o ) on peut v-voiw comment wes d-décwawations en confwit sont géwées : c'est we deuxième éwément q-qui a wa pwiowité si wes [spécificités](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance#spécificité) sont égawes caw wes feuiwwes sont a-appwiquées dans w'owdwe.
 
-#### HTML
+#### htmw
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <style>
+    <stywe>
+      p-p {
+        cowow: white;
+        backgwound-cowow: bwue;
+        p-padding: 5px;
+        b-bowdew: 1px sowid bwack;
+      }
+    </stywe>
+    <stywe>
       p {
-        color: white;
-        background-color: blue;
+        cowow: bwue;
+        b-backgwound-cowow: yewwow;
+      }
+    </stywe>
+  </head>
+  <body>
+    <p>voici u-un pawagwaphe.</p>
+  </body>
+</htmw>
+```
+
+#### wésuwtat
+
+{{embedwivesampwe('utiwisew_pwusieuws_éwéments_stywe', òωó '100%', σωσ '60')}}
+
+### utiwisew une wequête média
+
+dans c-cet exempwe (basé suw we pwécédent), (U ᵕ U❁) o-on ajoute u-un attwibut `media` suw we d-deuxième éwément `<stywe>` afin q-que wes wègwes c-cowwespondantes n-nye soient appwiquées que si w-wa wawgeuw de wa z-zone d'affichage (_viewpowt_) est inféwieuwe à 500 pixews. (✿oωo)
+
+#### h-htmw
+
+```htmw
+<!doctype h-htmw>
+<htmw>
+  <head>
+    <stywe>
+      p-p {
+        cowow: white;
+        backgwound-cowow: b-bwue;
         padding: 5px;
-        border: 1px solid black;
+        b-bowdew: 1px s-sowid bwack;
       }
-    </style>
-    <style>
+    </stywe>
+    <stywe media="aww and (max-width: 500px)">
       p {
-        color: blue;
-        background-color: yellow;
+        cowow: b-bwue;
+        b-backgwound-cowow: y-yewwow;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <p>Voici un paragraphe.</p>
+    <p>voici u-un pawagwaphe.</p>
   </body>
-</html>
+</htmw>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Utiliser_plusieurs_éléments_style', '100%', '60')}}
+{{embedwivesampwe('utiwisew_une_wequête_média', ^^ '100%', '60')}}
 
-### Utiliser une requête média
+## wésumé technique
 
-Dans cet exemple (basé sur le précédent), on ajoute un attribut `media` sur le deuxième élément `<style>` afin que les règles correspondantes ne soient appliquées que si la largeur de la zone d'affichage (_viewport_) est inférieure à 500 pixels.
-
-#### HTML
-
-```html
-<!doctype html>
-<html>
-  <head>
-    <style>
-      p {
-        color: white;
-        background-color: blue;
-        padding: 5px;
-        border: 1px solid black;
-      }
-    </style>
-    <style media="all and (max-width: 500px)">
-      p {
-        color: blue;
-        background-color: yellow;
-      }
-    </style>
-  </head>
-  <body>
-    <p>Voici un paragraphe.</p>
-  </body>
-</html>
-```
-
-#### Résultat
-
-{{EmbedLiveSample('Utiliser_une_requête_média', '100%', '60')}}
-
-## Résumé technique
-
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <th>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
-          >Contenu de métadonnées</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th>Contenu autorisé</th>
-      <td>
-        Du contenu textuel correspondant à l'attribut
-        <code>type</code> (c'est-à-dire <code>text/css</code>).
-      </td>
-    </tr>
-    <tr>
-      <th>Omission de balises</th>
-      <td>Les deux balises doivent être présentes.</td>
-    </tr>
-    <tr>
-      <th>Parents autorisés</th>
-      <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_méta-données"
           >contenu de métadonnées</a
-        >.
+        >. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun</td>
-    </tr>
-    <tr>
-      <th>Interface DOM</th>
-      <td>{{domxref("HTMLStyleElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th>contenu a-autowisé</th>
+      <td>
+        du contenu t-textuew cowwespondant à w'attwibut
+        <code>type</code> (c'est-à-diwe <code>text/css</code>). XD
+      </td>
+    </tw>
+    <tw>
+      <th>omission d-de bawises</th>
+      <td>wes deux bawises d-doivent êtwe pwésentes.</td>
+    </tw>
+    <tw>
+      <th>pawents a-autowisés</th>
+      <td>
+        t-tout éwément q-qui accepte d-du
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_méta-données"
+          >contenu de métadonnées</a
+        >. :3
+      </td>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>aucun</td>
+    </tw>
+    <tw>
+      <th>intewface dom</th>
+      <td>{{domxwef("htmwstyweewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'élément {{HTMLElement("link")}} qui permet d'utiliser des feuilles de style externes.
+- w'éwément {{htmwewement("wink")}} qui p-pewmet d'utiwisew des feuiwwes de stywe extewnes. (ꈍᴗꈍ)

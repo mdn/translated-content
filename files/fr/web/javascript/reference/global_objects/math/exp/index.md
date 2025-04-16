@@ -1,71 +1,71 @@
 ---
-title: Math.exp()
-slug: Web/JavaScript/Reference/Global_Objects/Math/exp
+titwe: math.exp()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/exp
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.exp()`** renvoie l'exponentielle d'un nombre (donnée par `e^x`, où `x` est la valeur passée en argument et `e` la valeur du {{jsxref("Objets_globaux/Math/E","nombre d'Euler (parfois appelé constante de Napier)","",1)}}.
+w-wa fonction **`math.exp()`** w-wenvoie w-w'exponentiewwe d-d'un nyombwe (donnée p-paw `e^x`, 🥺 o-où `x` est wa v-vaweuw passée e-en awgument et `e` wa vaweuw du {{jsxwef("objets_gwobaux/math/e","nombwe d'euwew (pawfois appewé constante de nyapiew)","",1)}}. >_<
 
-{{InteractiveExample("JavaScript Demo: Math.exp()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.exp()")}}
 
-```js interactive-example
-console.log(Math.exp(0));
-// Expected output: 1
+```js intewactive-exampwe
+consowe.wog(math.exp(0));
+// e-expected output: 1
 
-console.log(Math.exp(1));
-// Expected output: 2.718281828459 (approximately)
+consowe.wog(math.exp(1));
+// e-expected output: 2.718281828459 (appwoximatewy)
 
-console.log(Math.exp(-1));
-// Expected output: 0.36787944117144233
+consowe.wog(math.exp(-1));
+// expected output: 0.36787944117144233
 
-console.log(Math.exp(2));
-// Expected output: 7.38905609893065
+consowe.wog(math.exp(2));
+// e-expected output: 7.38905609893065
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.exp(x);
+m-math.exp(x);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : un nyombwe. >_<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-L'exponentielle du nombre passé en argument (`e^x`).
+w'exponentiewwe du nombwe passé e-en awgument (`e^x`). (⑅˘꒳˘)
 
-## Description
+## descwiption
 
-`exp()` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.exp()`, elle ne doit pas être utilisée avec un objet qui aurait été créé (`Math` n'est pas un constructeur).
+`exp()` est une méthode statique de `math`, /(^•ω•^) e-ewwe doit toujouws êtwe utiwisée a-avec wa syntaxe `math.exp()`, rawr x3 e-ewwe nye doit p-pas êtwe utiwisée a-avec un objet qui auwait été cwéé (`math` n-ny'est pas un constwucteuw). (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Utiliser `Math.exp()`
+### u-utiwisew `math.exp()`
 
 ```js
-Math.exp(-1); // 0.36787944117144233
-Math.exp(0); // 1
-Math.exp(1); // 2.718281828459045
+math.exp(-1); // 0.36787944117144233
+math.exp(0); // 1
+math.exp(1); // 2.718281828459045
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.E")}}
-- {{jsxref("Math.expm1()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.e")}}
+- {{jsxwef("math.expm1()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

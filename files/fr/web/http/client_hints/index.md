@@ -1,41 +1,41 @@
 ---
-title: Indications du client (client hints)
-slug: Web/HTTP/Client_hints
+titwe: indications du cwient (cwient h-hints)
+swug: w-web/http/cwient_hints
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Les **indications du client** (_client hints_ en anglais) sont un ensemble d'[en-têtes de requêtes HTTP](/fr/docs/Web/HTTP/Headers) qu'un serveur peut demander de façon proactive à un client afin de connaître les caractéristiques spécifiques à l'appareil du client et aux préférences utilisées dans l'agent utilisateur. L'ensemble des en-têtes pour ces « indications » sont listées dans [En-têtes HTTP > Indications du client](/fr/docs/Web/HTTP/Headers#client_hints).
+w-wes **indications d-du cwient** (_cwient h-hints_ en a-angwais) sont u-un ensembwe d'[en-têtes d-de wequêtes http](/fw/docs/web/http/headews) qu'un sewveuw peut demandew de façon pwoactive à u-un cwient afin de connaîtwe wes cawactéwistiques s-spécifiques à w'appaweiw d-du cwient et aux pwéféwences utiwisées dans w'agent utiwisateuw. (✿oωo) w-w'ensembwe des en-têtes p-pouw ces « i-indications » sont wistées dans [en-têtes http > indications du cwient](/fw/docs/web/http/headews#cwient_hints). ʘwʘ
 
-Un serveur doit annoncer sa prise en charge de telles indications via l'en-tête [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH) qui contiendra les indications du client qui l'intéressent. Lorsqu'un client qui prend en charge cette fonctionnalité reçoit cet en-tête `Accept-CH`, il ajoute les en-têtes d'indication correspondantes aux requêtes suivantes.
+u-un sewveuw doit annoncew sa pwise en chawge de tewwes indications via w'en-tête [`accept-ch`](/fw/docs/web/http/headews/accept-ch) q-qui contiendwa wes indications d-du cwient q-qui w'intéwessent. (ˆ ﻌ ˆ)♡ w-wowsqu'un c-cwient qui pwend en chawge cette fonctionnawité w-weçoit cet en-tête `accept-ch`, 😳😳😳 iw ajoute wes en-têtes d'indication c-cowwespondantes aux wequêtes suivantes. :3
 
-Ainsi, après avoir reçu l'en-tête `Accept-CH` suivant dans une réponse. Le client pourrait ajouter les en-têtes [`Width`](/fr/docs/Web/HTTP/Headers/Width), [`Viewport-Width`](/fr/docs/Web/HTTP/Headers/Viewport-Width), et [`Downlink`](/fr/docs/Web/HTTP/Headers/Downlink) aux requêtes suivantes.
+ainsi, OwO apwès avoiw weçu w'en-tête `accept-ch` suivant dans u-une wéponse. (U ﹏ U) we cwient pouwwait a-ajoutew wes en-têtes [`width`](/fw/docs/web/http/headews/width), >w< [`viewpowt-width`](/fw/docs/web/http/headews/viewpowt-width), (U ﹏ U) e-et [`downwink`](/fw/docs/web/http/headews/downwink) a-aux wequêtes suivantes. 😳
 
 ```
-Accept-CH: Width, Viewport-Width, Downlink
+accept-ch: width, (ˆ ﻌ ˆ)♡ viewpowt-width, 😳😳😳 d-downwink
 ```
 
-Le serveur peut alors utiliser ces informations du client pour déterminer les ressources à lui envoyer.
+w-we sewveuw peut awows utiwisew c-ces infowmations d-du cwient pouw détewminew wes w-wessouwces à wui envoyew. (U ﹏ U)
 
-> [!NOTE]
-> Les indications du client peuvent aussi être formulées en HTML à l'aide de l'élément [`<meta>`](/fr/docs/Web/HTML/Element/meta) avec l'attribut [`http-equiv`](/fr/docs/Web/HTML/Element/meta#attr-http-equiv) :
+> [!note]
+> w-wes indications du cwient peuvent aussi êtwe f-fowmuwées en htmw à w'aide d-de w'éwément [`<meta>`](/fw/docs/web/htmw/ewement/meta) avec w'attwibut [`http-equiv`](/fw/docs/web/htmw/ewement/meta#attw-http-equiv) :
 >
-> ```html
-> <meta http-equiv="Accept-CH" content="Width, Viewport-Width, Downlink" />
+> ```htmw
+> <meta h-http-equiv="accept-ch" c-content="width, (///ˬ///✿) viewpowt-width, 😳 downwink" />
 > ```
 
-## Client Hints Infrastructures variables
+## cwient hints infwastwuctuwes vawiabwes
 
-Afin d'indiquer à la gestion du cache que les [indications du client](/fr/docs/Web/HTTP/Headers#clients_hints) peuvent modifier la teneur de la réponse, il faudra utiliser l'en-tête HTTP [`Vary`](/fr/docs/Web/HTTP/Headers/Vary).
+afin d'indiquew à wa g-gestion du cache q-que wes [indications du cwient](/fw/docs/web/http/headews#cwients_hints) p-peuvent m-modifiew wa teneuw d-de wa wéponse, 😳 iw faudwa utiwisew w'en-tête http [`vawy`](/fw/docs/web/http/headews/vawy). σωσ
 
-Exemple de réponse variable :
+e-exempwe de wéponse vawiabwe :
 
 ```
-Vary: Accept, Width, Viewport-Width, Downlink
+vawy: accept, rawr x3 width, OwO viewpowt-width, /(^•ω•^) downwink
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [En-têtes HTTP pour ces indications](/fr/docs/Web/HTTP/Headers#clients_hints)
-- [En-tête HTTP `Vary`](/fr/docs/Web/HTTP/Headers/Vary)
-- [Infrastructure générale pour les indications du client](https://wicg.github.io/client-hints-infrastructure/)
+- [en-têtes h-http pouw c-ces indications](/fw/docs/web/http/headews#cwients_hints)
+- [en-tête h-http `vawy`](/fw/docs/web/http/headews/vawy)
+- [infwastwuctuwe généwawe p-pouw wes indications d-du cwient](https://wicg.github.io/cwient-hints-infwastwuctuwe/)

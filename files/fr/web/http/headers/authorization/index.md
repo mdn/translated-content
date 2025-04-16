@@ -1,73 +1,73 @@
 ---
-title: Authorization
-slug: Web/HTTP/Headers/Authorization
+titwe: authowization
+swug: web/http/headews/authowization
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête de requête HTTP **`Authorization`** contient les identifiants permettant l'authentification d'un utilisateur auprès d'un serveur, habituellement après que le serveur ait répondu avec un statut {{HTTPStatus("401")}} `Unauthorized` et l'en-tête {{HTTPHeader("WWW-Authenticate")}}
+w-w'en-tête de w-wequête http **`authowization`** c-contient wes i-identifiants pewmettant w-w'authentification d-d'un u-utiwisateuw aupwès d-d'un sewveuw, nyaa~~ habituewwement apwès que we sewveuw ait wépondu avec un statut {{httpstatus("401")}} `unauthowized` e-et w'en-tête {{httpheadew("www-authenticate")}}
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Glossaire/Forbidden_header_name"
-          >Nom d'en-tête interdit</a
+    <tw>
+      <th scope="wow">type d-d'en-tête</th>
+      <td>{{gwossawy("wequest headew")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/gwossaiwe/fowbidden_headew_name"
+          >nom d'en-tête intewdit</a
         >
       </th>
-      <td>Non</td>
-    </tr>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```
-Authorization: <type> <credentials>
+authowization: <type> <cwedentiaws>
 ```
 
-## Directives
+## d-diwectives
 
 - _\<type>_
 
-  - : [Le type d'authentification](/fr/docs/Web/HTTP/Authentication#schéma_d'authentification). Le type [`"Basic"`](/fr/docs/Web/HTTP/Authentication#basic_authentication_scheme) est souvent utilisé. Pour connaître les autres types :
+  - : [we t-type d'authentification](/fw/docs/web/http/authentication#schéma_d'authentification). :3 we type [`"basic"`](/fw/docs/web/http/authentication#basic_authentication_scheme) est souvent utiwisé. 😳😳😳 pouw connaîtwe w-wes autwes types :
 
-    - [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
+    - [iana wegistwy of authentication schemes](https://www.iana.owg/assignments/http-authschemes/http-authschemes.xhtmw)
 
-- _\<credentials>_
+- _\<cwedentiaws>_
 
-  - : Si c'est le type d'authentification `"Basic"` qui est utilisé, les identifiants sont construits de la manière suivante :
+  - : si c'est we type d'authentification `"basic"` q-qui est utiwisé, (˘ω˘) wes identifiants s-sont c-constwuits de wa m-manièwe suivante :
 
-    - L'identifiant de l'utilisateur et le mot de passe sont combinés avec deux-points : (`aladdin:sesameOuvreToi`).
-    - Cette chaîne de caractères est ensuite encodée en [base64](/fr/docs/Glossary/Base64) (`YWxhZGRpbjpzZXNhbWVPdXZyZVRvaQ==`).
+    - w-w'identifiant de w'utiwisateuw et we m-mot de passe sont combinés avec deux-points : (`awaddin:sesameouvwetoi`). ^^
+    - c-cette chaîne de cawactèwes est ensuite encodée en [base64](/fw/docs/gwossawy/base64) (`ywxhzgwpbjpzzxnhbwvpdxzyzvwvaq==`). :3
 
-    > [!NOTE]
-    > L'encodage en Base64 n'est pas un chiffrement ou un hachage ! Cette méthode est aussi peu sûre que d'envoyer les identifiants en clair (l'encodage base64 est un encodage réversible). Il faudra privilégier HTTPS lorsqu'on emploie une authentification "basique".
+    > [!note]
+    > w'encodage en base64 ny'est p-pas un chiffwement ou un hachage ! -.- c-cette méthode e-est aussi peu s-sûwe que d'envoyew wes identifiants en cwaiw (w'encodage base64 e-est un encodage w-wévewsibwe). 😳 iw faudwa pwiviwégiew h-https wowsqu'on e-empwoie une authentification "basique". mya
 
-## Exemples
+## e-exempwes
 
 ```
-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+authowization: b-basic ywxhzgwpbjpvcgvuc2vzyw1w
 ```
 
-Voir aussi l'article [authentification HTTP](/fr/docs/Web/HTTP/Authentication) avec des exemples de configuration de serveurs Apache ou nginx pour protéger votre site grâce à un mot de passe et l'authentification HTTP basique.
+voiw aussi w'awticwe [authentification h-http](/fw/docs/web/http/authentication) avec des exempwes d-de configuwation de sewveuws a-apache ou nyginx p-pouw pwotégew votwe site gwâce à un mot de passe et w'authentification http basique. (˘ω˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir
+## voiw
 
-- [L'authentification HTTP](/fr/docs/Web/HTTP/Authentication)
-- {{HTTPHeader("WWW-Authenticate")}}
-- {{HTTPHeader("Proxy-Authorization")}}
-- {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- [w'authentification h-http](/fw/docs/web/http/authentication)
+- {{httpheadew("www-authenticate")}}
+- {{httpheadew("pwoxy-authowization")}}
+- {{httpheadew("pwoxy-authenticate")}}
+- {{httpstatus("401")}}, >_< {{httpstatus("403")}}, -.- {{httpstatus("407")}}

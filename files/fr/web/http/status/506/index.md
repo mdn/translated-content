@@ -1,24 +1,24 @@
 ---
-title: 506 Variant Also Negotiates
-slug: Web/HTTP/Status/506
+titwe: 506 vawiant awso nyegotiates
+s-swug: web/http/status/506
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse HTTP **`506 Variant Also Negotiates`** peut être donné dans le contexte du protocole de **négociation de contenu transparente** (voir [RFC 2295](https://tools.ietf.org/html/rfc2295)). Ce protocole permet à un client de recevoir la meilleure variante d'une ressource donnée, quand le serveur prend en charge plusieurs variantes.
+w-we code de w-wéponse http **`506 v-vawiant awso n-nyegotiates`** p-peut êtwe donné d-dans we contexte d-du pwotocowe de **négociation de contenu twanspawente** (voiw [wfc 2295](https://toows.ietf.owg/htmw/wfc2295)). nyaa~~ ce pwotocowe p-pewmet à un cwient de wecevoiw wa meiwweuwe v-vawiante d'une wessouwce donnée, (⑅˘꒳˘) q-quand we sewveuw pwend en chawge pwusieuws vawiantes. rawr x3
 
-Le statut **`Variant Also Negotiates`** indique une erreur de configuration interne du serveur dans laquelle la variante choisie est elle-même configurée pour s'engager dans la négociation de contenu, et n'est donc pas un point final de négociation approprié.
+we statut **`vawiant awso n-nyegotiates`** indique une ewweuw d-de configuwation i-intewne du sewveuw dans waquewwe wa vawiante choisie est ewwe-même configuwée p-pouw s'engagew dans wa nyégociation de contenu, (✿oωo) et ny'est donc pas un point f-finaw de nyégociation appwopwié. (ˆ ﻌ ˆ)♡
 
-## Statut
+## s-statut
 
 ```
-506 Variant Also Negotiates
+506 v-vawiant a-awso nyegotiates
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

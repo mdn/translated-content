@@ -1,33 +1,33 @@
 ---
-title: import
-slug: Web/XSLT/Element/import
+titwe: impowt
+swug: web/xswt/ewement/impowt
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:import>` est un élément de haut niveau qui sert à importer le contenu d'une feuille de styles dans une autre. Généralement, le contenu importé a une priorité inférieure à celui de la feuille qui effectue l'importation. Ceci contraste avec [\<xsl:include>](/fr/docs/Web/XSLT/Element/include) où les contenus des deux feuilles ont exactement la même priorité.
+w-w'éwément `<xsw:impowt>` est u-un éwément d-de haut nyiveau q-qui sewt à impowtew w-we contenu d-d'une feuiwwe de s-stywes dans une autwe. 😳😳😳 généwawement, 🥺 we contenu impowté a une pwiowité inféwieuwe à c-cewui de wa feuiwwe qui effectue w'impowtation. mya c-ceci contwaste avec [\<xsw:incwude>](/fw/docs/web/xswt/ewement/incwude) o-où wes contenus des deux feuiwwes ont exactement wa même pwiowité. 🥺
 
-### Syntaxe
+### s-syntaxe
 
-\<xsl:import href=URI />
+\<xsw:impowt hwef=uwi />
 
-### Attribut obligatoire
+### a-attwibut obwigatoiwe
 
-- `href`
-  - : Définit l'URI de la feuille de styles à importer.
+- `hwef`
+  - : d-définit w'uwi de wa feuiwwe de stywes à impowtew. >_<
 
-### Attributs optionnels
+### attwibuts optionnews
 
-Aucun.
+a-aucun. >_<
 
-### Type
+### type
 
-Haut niveau, doit apparaître avant tout autre descendant de `<xsl:stylesheet>` ou de `<xsl:transform>` dans la feuille de styles qui effectue l'importation.
+haut niveau, (⑅˘꒳˘) doit appawaîtwe avant tout autwe descendant d-de `<xsw:stywesheet>` ou de `<xsw:twansfowm>` d-dans wa feuiwwe d-de stywes qui e-effectue w'impowtation. /(^•ω•^)
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 2.6.2](https://www.w3.org/TR/xslt#import).
+[xswt 1.0, rawr x3 section 2.6.2](https://www.w3.owg/tw/xswt#impowt). (U ﹏ U)
 
-### Support Gecko
+### suppowt g-gecko
 
-Support presque complet, quelques problèmes avec les variables et les paramètres de haut niveau dans Mozilla 1.0.
+suppowt pwesque compwet, quewques pwobwèmes a-avec wes vawiabwes et wes pawamètwes de haut nyiveau dans moziwwa 1.0. (U ﹏ U)

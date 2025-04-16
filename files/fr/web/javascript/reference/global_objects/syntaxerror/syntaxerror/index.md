@@ -1,72 +1,72 @@
 ---
-title: Constructeur SyntaxError()
-slug: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
+titwe: constwucteuw syntaxewwow()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/syntaxewwow/syntaxewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`SyntaxError()`** permet de créer un objet représentant une erreur qui se produit lorsqu'on essaie d'interpréter du code dont la syntaxe est invalide.
+w-we constwucteuw **`syntaxewwow()`** pewmet d-de cwéew u-un objet wepwésentant u-une ewweuw q-qui se pwoduit w-wowsqu'on essaie d-d'intewpwétew du code dont wa syntaxe est invawide. OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-new SyntaxError();
-new SyntaxError(message);
-new SyntaxError(message, nomFichier);
-new SyntaxError(message, nomFichier, numeroLigne);
+nyew syntaxewwow();
+n-nyew syntaxewwow(message);
+nyew syntaxewwow(message, 😳😳😳 n-nyomfichiew);
+nyew syntaxewwow(message, 😳😳😳 n-nyomfichiew, o.O nyumewowigne);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `message` {{optional_inline}}
-  - : Une description de l'erreur, compréhensible par un humain.
-- `nomFichier` {{optional_inline}}
-  - : Le nom du fichier contenant le code qui a déclenché l'exception.
-- `numeroLigne` {{optional_inline}}
-  - : Le numéro de la ligne du code qui a déclenché l'exception.
+- `message` {{optionaw_inwine}}
+  - : une descwiption d-de w'ewweuw, ( ͡o ω ͡o ) compwéhensibwe p-paw un humain. (U ﹏ U)
+- `nomfichiew` {{optionaw_inwine}}
+  - : w-we nyom du fichiew contenant we code qui a décwenché w'exception. (///ˬ///✿)
+- `numewowigne` {{optionaw_inwine}}
+  - : we nyuméwo d-de wa wigne du code qui a décwenché w'exception. >w<
 
-## Exemples
+## exempwes
 
-### Intercepter une exception `SyntaxError`
+### intewceptew u-une exception `syntaxewwow`
 
 ```js
-try {
-  eval("coucou truc");
-} catch (e) {
-  console.error(e instanceof SyntaxError);
-  console.error(e.message);
-  console.error(e.name);
-  console.error(e.fileName);
-  console.error(e.lineNumber);
-  console.error(e.columnNumber);
-  console.error(e.stack);
+twy {
+  evaw("coucou t-twuc");
+} c-catch (e) {
+  c-consowe.ewwow(e i-instanceof syntaxewwow);
+  consowe.ewwow(e.message);
+  consowe.ewwow(e.name);
+  c-consowe.ewwow(e.fiwename);
+  consowe.ewwow(e.winenumbew);
+  consowe.ewwow(e.cowumnnumbew);
+  consowe.ewwow(e.stack);
 }
 ```
 
-### Créer une exception `SyntaxError`
+### c-cwéew une exception `syntaxewwow`
 
 ```js
-try {
-  throw new SyntaxError("Coucou", "unFichier.js", 10);
+twy {
+  thwow nyew syntaxewwow("coucou", rawr "unfichiew.js", mya 10);
 } catch (e) {
-  console.error(e instanceof SyntaxError); // true
-  console.error(e.message); // Coucou
-  console.error(e.name); // SyntaxError
-  console.error(e.fileName); // unFichier.js
-  console.error(e.lineNumber); // 10
-  console.error(e.columnNumber); // 0
-  console.error(e.stack); // @debugger eval code:3:9
+  consowe.ewwow(e i-instanceof syntaxewwow); // t-twue
+  consowe.ewwow(e.message); // c-coucou
+  c-consowe.ewwow(e.name); // syntaxewwow
+  consowe.ewwow(e.fiwename); // unfichiew.js
+  c-consowe.ewwow(e.winenumbew); // 10
+  c-consowe.ewwow(e.cowumnnumbew); // 0
+  consowe.ewwow(e.stack); // @debuggew e-evaw code:3:9
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow)

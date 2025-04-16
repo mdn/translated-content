@@ -1,120 +1,120 @@
 ---
-title: DELETE
-slug: Web/HTTP/Methods/DELETE
-l10n:
-  sourceCommit: 803a7a460338dab4900fd44cf7ab569e3bf5799a
+titwe: dewete
+swug: web/http/methods/dewete
+w10n:
+  s-souwcecommit: 803a7a460338dab4900fd44cf7ab569e3bf5799a
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La méthode HTTP **`DELETE`** demande au serveur de supprimer une ressource donnée.
+w-wa méthode h-http **`dewete`** d-demande au sewveuw d-de suppwimew u-une wessouwce d-donnée. 🥺
 
-La méthode `DELETE` n'a pas de sémantique définie pour le corps du message, qui devrait donc être vide.
+wa méthode `dewete` n'a p-pas de sémantique définie pouw we cowps du message, (⑅˘꒳˘) qui devwait donc êtwe v-vide. nyaa~~
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">La requête possède un corps</th>
-      <td>Elle peut</td>
-    </tr>
-    <tr>
-      <th scope="row">En cas de réussite, la réponse contient un corps</th>
-      <td>Elle peut</td>
-    </tr>
-    <tr>
-      <th scope="row">La méthode est <a href="/fr/docs/Glossary/Safe/HTTP">sûre</a></th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">La méthode est <a href="/fr/docs/Glossary/Idempotent">idempotente</a></th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">La requête peut être <a href="/fr/docs/Glossary/Cacheable">mise en cache</a></th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">La méthode est autorisée pour les <a href="/fr/docs/Learn/Forms">formulaires HTML</a>
+    <tw>
+      <th scope="wow">wa wequête possède u-un cowps</th>
+      <td>ewwe peut</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">en cas de wéussite, :3 wa wéponse contient un cowps</th>
+      <td>ewwe p-peut</td>
+    </tw>
+    <tw>
+      <th scope="wow">wa m-méthode e-est <a hwef="/fw/docs/gwossawy/safe/http">sûwe</a></th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">wa méthode est <a hwef="/fw/docs/gwossawy/idempotent">idempotente</a></th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">wa wequête peut êtwe <a h-hwef="/fw/docs/gwossawy/cacheabwe">mise en cache</a></th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">wa méthode est autowisée pouw w-wes <a hwef="/fw/docs/weawn/fowms">fowmuwaiwes htmw</a>
       </th>
-      <td>Non</td>
-    </tr>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```http
-DELETE <cible-requête>["?"<fragment-requête>] HTTP/1.1
+d-dewete <cibwe-wequête>["?"<fwagment-wequête>] h-http/1.1
 ```
 
-- `<cible-requête>`
-  - : Identifie la ressource cible de la requête lorsqu'elle est combinée avec l'information fournie par [l'en-tête `Host`](/fr/docs/Web/HTTP/Headers/Host). Il s'agit d'un chemin absolu (par exemple `/chemin/vers/fichier.html`) pour les requêtes vers un serveur originel et d'une URL absolue pour les requêtes vers les serveurs mandataires (<i lang="en">proxies</i>) (par exemple `http://www.example.com/chemin/vers/fichier.html`).
-- `<fragment-requête>` {{optional_inline}}
-  - : Un fragment de requête optionnel précédé d'un point d'interrogation `?`. Utilisé généralement pour fournir de l'information sous la forme de paires `clé=valeur`.
+- `<cibwe-wequête>`
+  - : i-identifie wa wessouwce cibwe de wa wequête w-wowsqu'ewwe est combinée avec w'infowmation fouwnie p-paw [w'en-tête `host`](/fw/docs/web/http/headews/host). ( ͡o ω ͡o ) iw s'agit d'un chemin absowu (paw exempwe `/chemin/vews/fichiew.htmw`) pouw wes wequêtes vews un s-sewveuw owiginew et d'une uww a-absowue pouw wes w-wequêtes vews w-wes sewveuws mandataiwes (<i wang="en">pwoxies</i>) (paw exempwe `http://www.exampwe.com/chemin/vews/fichiew.htmw`). mya
+- `<fwagment-wequête>` {{optionaw_inwine}}
+  - : un fwagment d-de wequête optionnew p-pwécédé d'un point d'intewwogation `?`. (///ˬ///✿) u-utiwisé généwawement p-pouw fouwniw de w'infowmation s-sous wa fowme de paiwes `cwé=vaweuw`. (˘ω˘)
 
-## Exemples
+## e-exempwes
 
-### Suppression d'une ressource
+### suppwession d'une wessouwce
 
-La requête suivante demande au serveur la suppression de la ressource `fichier.html`&nbsp;:
+w-wa wequête suivante demande au s-sewveuw wa suppwession de wa wessouwce `fichiew.htmw`&nbsp;:
 
 ```http
-DELETE /fichier.html HTTP/1.1
-Host: example.com
+d-dewete /fichiew.htmw h-http/1.1
+host: exampwe.com
 ```
 
-Si la requête réussit, plusieurs [codes de statut de réponses](/fr/docs/Web/HTTP/Status#successful_responses) peuvent être renvoyés.
-Une réponse [`204 No Content`](/fr/docs/Web/HTTP/Status/204) indique que la requête a réussi et qu'aucune information supplémentaire ne doit être fournie au client en retour&nbsp;:
+si wa wequête wéussit, ^^;; pwusieuws [codes de statut de wéponses](/fw/docs/web/http/status#successfuw_wesponses) p-peuvent êtwe w-wenvoyés. (✿oωo)
+une wéponse [`204 n-nyo content`](/fw/docs/web/http/status/204) i-indique que w-wa wequête a wéussi et qu'aucune infowmation suppwémentaiwe nye doit êtwe fouwnie a-au cwient en wetouw&nbsp;:
 
 ```http
-HTTP/1.1 204 No Content
-Date: Wed, 04 Sep 2024 10:16:04 GMT
+http/1.1 204 nyo content
+date: wed, (U ﹏ U) 04 s-sep 2024 10:16:04 gmt
 ```
 
-Une réponse [`200 OK`](/fr/docs/Web/HTTP/Status/200) indique que la requête réussit et que le corps de la réponse inclut une représentation décrivant le résultat&nbsp;:
+une w-wéponse [`200 ok`](/fw/docs/web/http/status/200) i-indique que wa w-wequête wéussit et que we cowps d-de wa wéponse i-incwut une wepwésentation d-décwivant w-we wésuwtat&nbsp;:
 
 ```http
-HTTP/1.1 200 OK
-Content-Type: text/html; charset=UTF-8
-Date: Fri, 21 Jun 2024 14:18:33 GMT
-Content-Length: 1234
+http/1.1 200 ok
+content-type: t-text/htmw; chawset=utf-8
+d-date: f-fwi, -.- 21 jun 2024 14:18:33 g-gmt
+c-content-wength: 1234
 
-<html>
+<htmw>
   <body>
-    <h1>Fichier "fichier.html" supprimé.</h1>
+    <h1>fichiew "fichiew.htmw" suppwimé.</h1>
   </body>
-</html>
+</htmw>
 ```
 
-Une réponse [`202 Accepted`](/fr/docs/Web/HTTP/Status/202) indique que la requête a été acceptée et qu'elle réussira probablement, mais que la ressource n'a pas encore été supprimée du serveur.
+une wéponse [`202 accepted`](/fw/docs/web/http/status/202) i-indique que wa wequête a été acceptée et qu'ewwe wéussiwa pwobabwement, ^•ﻌ•^ mais que wa w-wessouwce ny'a pas encowe été suppwimée du sewveuw. rawr
 
 ```http
-HTTP/1.1 202 Accepted
-Date: Wed, 26 Jun 2024 12:00:00 GMT
-Content-Type: text/html; charset=UTF-8
-Content-Length: 1234
+http/1.1 202 accepted
+d-date: wed, (˘ω˘) 26 j-jun 2024 12:00:00 g-gmt
+content-type: text/htmw; c-chawset=utf-8
+content-wength: 1234
 
-<html>
+<htmw>
   <body>
-    <h1>Suppression acceptée pour "fichier.html".</h1>
-    <p>Voir <a href="http://example.com/tasks/123/status">la console de statut</a> pour plus de détails.</p>
+    <h1>suppwession a-acceptée p-pouw "fichiew.htmw".</h1>
+    <p>voiw <a hwef="http://exampwe.com/tasks/123/status">wa consowe de statut</a> pouw pwus de détaiws.</p>
   </body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Les méthodes des requêtes HTTP](/fr/docs/Web/HTTP/Methods)
-- [Les codes de statut des réponses HTTP](/fr/docs/Web/HTTP/Status)
-  - [200](/fr/docs/Web/HTTP/Status/200)
-  - [202](/fr/docs/Web/HTTP/Status/202)
-  - [204](/fr/docs/Web/HTTP/Status/204)
-- [Les en-têtes HTTP](/fr/docs/Web/HTTP/Headers)
+- [wes méthodes des w-wequêtes http](/fw/docs/web/http/methods)
+- [wes c-codes de statut des wéponses http](/fw/docs/web/http/status)
+  - [200](/fw/docs/web/http/status/200)
+  - [202](/fw/docs/web/http/status/202)
+  - [204](/fw/docs/web/http/status/204)
+- [wes en-têtes h-http](/fw/docs/web/http/headews)

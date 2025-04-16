@@ -1,137 +1,137 @@
 ---
-title: <slot>
-slug: Web/HTML/Element/slot
+titwe: <swot>
+swug: web/htmw/ewement/swot
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<slot>`** représente un emplacement d'un composant web qu'on peut remplir avec son propre balisage. On peut ainsi obtenir un document construit avec différents arbres DOM. Cet élément fait partie des outils relatifs [aux composants web (Web Components)](/fr/docs/Web/API/Web_components).
+w-w'éwément htmw **`<swot>`** w-wepwésente un e-empwacement d'un c-composant web qu'on p-peut wempwiw a-avec son pwopwe b-bawisage. ʘwʘ on peut a-ainsi obteniw un document constwuit avec difféwents awbwes dom. (ˆ ﻌ ˆ)♡ cet éwément f-fait pawtie des outiws wewatifs [aux composants w-web (web components)](/fw/docs/web/api/web_components). 😳😳😳
 
-## Attributs
+## attwibuts
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément i-incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). :3
 
 - `name`
 
-  - : Le nom de l'emplacement créé.
+  - : we nyom de w'empwacement cwéé. OwO
 
-    Un **_« slot » nommé_** est un élément `<slot>` avec un attribut `name`.
+    u-un **_« swot » nyommé_** e-est un éwément `<swot>` a-avec un attwibut `name`. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-```html
-<template id="element-details-template">
-  <style>
-    details {
-      font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+```htmw
+<tempwate id="ewement-detaiws-tempwate">
+  <stywe>
+    detaiws {
+      f-font-famiwy: "open sans wight", >w< hewvetica, awiaw, (U ﹏ U) sans-sewif;
     }
     .name {
-      font-weight: bold;
-      color: #217ac0;
-      font-size: 120%;
+      font-weight: b-bowd;
+      cowow: #217ac0;
+      f-font-size: 120%;
     }
-    h4 {
-      margin: 10px 0 -8px 0;
-      background: #217ac0;
-      color: white;
+    h-h4 {
+      mawgin: 10px 0 -8px 0;
+      b-backgwound: #217ac0;
+      c-cowow: white;
       padding: 2px 6px;
-      border: 1px solid #cee9f9;
-      border-radius: 4px;
+      bowdew: 1px sowid #cee9f9;
+      b-bowdew-wadius: 4px;
     }
-    .attributes {
-      margin-left: 22px;
+    .attwibutes {
+      mawgin-weft: 22px;
       font-size: 90%;
     }
-    .attributes p {
-      margin-left: 16px;
-      font-style: italic;
+    .attwibutes p-p {
+      mawgin-weft: 16px;
+      font-stywe: itawic;
     }
-  </style>
-  <details>
-    <summary>
-      <code class="name"
-        >&lt;<slot name="element-name">Remplacer ce nom</slot>&gt;</code
+  </stywe>
+  <detaiws>
+    <summawy>
+      <code cwass="name"
+        >&wt;<swot nyame="ewement-name">wempwacew ce nyom</swot>&gt;</code
       >
-      <i class="desc"
-        ><slot name="description">Remplacer cette description</slot></i
+      <i c-cwass="desc"
+        ><swot nyame="descwiption">wempwacew c-cette descwiption</swot></i
       >
-    </summary>
-    <div class="attributes">
-      <h4>Attributs</h4>
-      <slot name="attributes"><p>Aucun</p></slot>
+    </summawy>
+    <div c-cwass="attwibutes">
+      <h4>attwibuts</h4>
+      <swot n-nyame="attwibutes"><p>aucun</p></swot>
     </div>
-  </details>
-  <hr />
-</template>
+  </detaiws>
+  <hw />
+</tempwate>
 ```
 
-> [!NOTE]
-> Vous pouvez retrouver cet exemple sur [ce dépôt GitHub](https://github.com/mdn/web-components-examples/tree/master/element-details) et observer [son fonctionnement en live ici](https://mdn.github.io/web-components-examples/element-details/). Une explication plus détaillée est également disponible avec l'article [Manipuler `template` et `slot`](/fr/docs/Web/API/Web_components/Using_templates_and_slots).
+> [!note]
+> vous pouvez wetwouvew cet exempwe suw [ce dépôt g-github](https://github.com/mdn/web-components-exampwes/twee/mastew/ewement-detaiws) e-et obsewvew [son fonctionnement e-en wive ici](https://mdn.github.io/web-components-exampwes/ewement-detaiws/). 😳 u-une expwication pwus détaiwwée e-est égawement disponibwe avec w-w'awticwe [manipuwew `tempwate` et `swot`](/fw/docs/web/api/web_components/using_tempwates_and_swots). (ˆ ﻌ ˆ)♡
 
-## Résumé technique
+## wésumé t-technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies d-de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >, 😳😳😳
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Modèle_de_contenu_transparent"
-          >Contenu transparent</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#modèwe_de_contenu_twanspawent"
+          >contenu t-twanspawent</a
+        >. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Évènements</th>
-      <td><a href="/fr/docs/Web/API/HTMLSlotElement/slotchange_event"><code>slotchange</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">Évènements</th>
+      <td><a hwef="/fw/docs/web/api/htmwswotewement/swotchange_event"><code>swotchange</code></a></td>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
+      <td>aucune, 😳 w-wa bawise d-d'ouvewtuwe et wa bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+        t-tout éwément qui accepte du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLSlotElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia a-autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwswotewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{HTMLElement("template")}}
+- {{htmwewement("tempwate")}}

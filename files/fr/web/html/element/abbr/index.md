@@ -1,225 +1,225 @@
 ---
-title: "<abbr> : l'élément d'abréviation"
-slug: Web/HTML/Element/abbr
+titwe: "<abbw> : w'éwément d-d'abwéviation"
+s-swug: web/htmw/ewement/abbw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<abbr>`** (**abréviation** en français) représente une abréviation ou un acronyme ; l'attribut facultatif [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title) peut fournir une explication ou une description de l'abréviation. S'il est présent, `title` doit contenir cette description complète et rien d'autre.
+w-w'éwément htmw **`<abbw>`** (**abwéviation** e-en fwançais) w-wepwésente une a-abwéviation ou u-un acwonyme ; w'attwibut f-facuwtatif [`titwe`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-titwe) peut fouwniw une expwication ou une descwiption de w-w'abwéviation. (˘ω˘) s'iw est pwésent, (///ˬ///✿) `titwe` doit c-conteniw cette descwiption compwète e-et wien d'autwe. σωσ
 
-{{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;abbw&gt;", /(^•ω•^) "tabbed-showtew")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your
-  <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can
-  keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content
-  layer separate. This is called "separation of concerns."
+  you can use <abbw>css</abbw> (cascading s-stywe sheets) to stywe youw
+  <abbw>htmw</abbw> (hypewtext m-mawkup wanguage). 😳 u-using stywe sheets, 😳 you can
+  keep youw <abbw>css</abbw> pwesentation wayew a-and <abbw>htmw</abbw> content
+  wayew sepawate. (⑅˘꒳˘) this is cawwed "sepawation of concewns."
 </p>
 ```
 
-```css interactive-example
-abbr {
-  font-style: italic;
-  color: chocolate;
+```css i-intewactive-exampwe
+abbw {
+  f-font-stywe: i-itawic;
+  cowow: c-chocowate;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/Guide/HTML/Content_categories"
-            >Catégories de contenu</a
+          ><a hwef="/fw/docs/web/guide/htmw/content_categowies"
+            >catégowies d-de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phras.c3.a9"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_tangible"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux"
+          >contenu de fwux</a
+        >, 😳😳😳
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >, 😳
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Contenu autorisé</dfn></th>
+    </tw>
+    <tw>
+      <th scope="wow"><dfn>contenu autowisé</dfn></th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phras.c3.a9"
-          >Contenu phrasé</a
-        >.
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Omission de balises</dfn></th>
+    </tw>
+    <tw>
+      <th scope="wow"><dfn>omission d-de bawises</dfn></th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        a-aucune, ^•ﻌ•^ wa bawise d-d'ouvewtuwe et wa bawise de fewmetuwe sont
+        obwigatoiwes. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Parents autorisés</dfn></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><dfn>pawents a-autowisés</dfn></th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phras.c3.a9"
-          >contenu phrasé</a
-        >.
+        tout éwément acceptant d-du
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >. ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>tous wes wôwes s-sont autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>
+        <a h-hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément ny'a pas d'autwes a-attwibuts que w-wes [attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). mya
 
-On notera que l'attribut **`title`** possède ici une sémantique spécifique et il représente la description complète de l'abréviation. Souvent, mais pas nécessairement, il s'affiche comme une info-bulle au survol de la souris.
+on nyotewa que w'attwibut **`titwe`** possède ici une sémantique spécifique et iw wepwésente w-wa descwiption c-compwète de w'abwéviation. o.O souvent, (✿oωo) mais pas n-nécessaiwement, i-iw s'affiche comme u-une info-buwwe au suwvow de wa souwis. :3
 
-Chaque élément `<abbr>` est indépendant, rattacher un titre à l'un ne l'associe pas aux abréviations identiques qui suivent.
+chaque éwément `<abbw>` est indépendant, 😳 w-wattachew un titwe à w'un nye w'associe pas aux abwéviations identiques q-qui suivent. (U ﹏ U)
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-### Cas d'usage généraux
+### c-cas d-d'usage généwaux
 
-Il n'est pas obligatoire d'utiliser `<abbr>` pour toutes les abréviations d'un document mais voici quelques cas où cet élément s'avère pertinent :
+i-iw ny'est pas obwigatoiwe d-d'utiwisew `<abbw>` p-pouw toutes w-wes abwéviations d-d'un document mais voici quewques cas où cet éwément s-s'avèwe p-pewtinent :
 
-- Lorsqu'une abréviation est utilisée et qu'on souhaite fournir une définition ou une explication en dehors du contenu du document, on utilisera `<abbr>` avec un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title) adéquat.
-- Lorsqu'une abréviation fait partie d'un jargon ou d'un vocabulaire qui risque d'être inconnu du lecteur, un élément `<abbr>` avec un attribut `title` explicatif pourra être utilisé.
-- Lorsqu'on souhaite bénéficier de la sémantique liée à l'abréviation (par exemple pour les manipuler en script ou les mettre en forme avec des feuilles de style), on pourra utiliser `<abbr>` pour identifier ces contenus.
-- Lorsqu'on souhaite définir des termes qui sont des abréviations, on pourra utiliser une combinaison de `<abbr>` et de [`<dfn>`](/fr/docs/Web/HTML/Element/dfn). Voir ci-après pour un exemple.
+- w-wowsqu'une abwéviation e-est utiwisée e-et qu'on souhaite fouwniw une définition ou une expwication e-en dehows du contenu du document, mya on utiwisewa `<abbw>` avec un attwibut [`titwe`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-titwe) adéquat. (U ᵕ U❁)
+- w-wowsqu'une abwéviation fait pawtie d'un jawgon ou d'un vocabuwaiwe q-qui wisque d-d'êtwe inconnu d-du wecteuw, :3 un éwément `<abbw>` avec un attwibut `titwe` e-expwicatif pouwwa êtwe u-utiwisé. mya
+- w-wowsqu'on souhaite bénéficiew de wa sémantique wiée à w'abwéviation (paw exempwe pouw wes manipuwew en scwipt o-ou wes mettwe en fowme avec d-des feuiwwes de stywe), OwO on pouwwa u-utiwisew `<abbw>` p-pouw identifiew ces contenus. (ˆ ﻌ ˆ)♡
+- wowsqu'on s-souhaite définiw d-des tewmes qui sont des abwéviations, ʘwʘ o-on pouwwa u-utiwisew une combinaison de `<abbw>` et de [`<dfn>`](/fw/docs/web/htmw/ewement/dfn). o.O voiw ci-apwès pouw un exempwe. UwU
 
-### Grammaire
+### g-gwammaiwe
 
-Lorsqu'il est présent, le nombre (grammatical) du texte de l'attribut **`title`** devrait correspondre à celui du contenu de l'élément `abbr`. C'est également le cas dans les langues avec plus de deux genres grammaticaux (par exemple, l'arabe, en plus des catégories pour le singulier et le pluriel, possède également une catégorie double).
+w-wowsqu'iw e-est pwésent, rawr x3 we nyombwe (gwammaticaw) d-du texte d-de w'attwibut **`titwe`** devwait c-cowwespondwe à cewui du contenu de w'éwément `abbw`. 🥺 c'est égawement we c-cas dans wes wangues a-avec pwus de deux genwes gwammaticaux (paw exempwe, :3 w'awabe, e-en pwus des catégowies p-pouw we singuwiew et we pwuwiew, (ꈍᴗꈍ) possède égawement une catégowie doubwe). 🥺
 
-## Mise en forme par défaut
+## m-mise en fowme paw défaut
 
-Le but de cet élément est purement explicatif. Tous les navigateurs l'affichent en ligne (`display: inline`) par défaut mais le reste de la mise en forme par défaut peut varier d'un navigateur à l'autre :
+we but de cet éwément est puwement expwicatif. (✿oωo) t-tous wes nyavigateuws w'affichent en wigne (`dispway: i-inwine`) p-paw défaut mais we weste de wa mise en fowme paw défaut p-peut vawiew d'un n-nyavigateuw à w'autwe :
 
-- Certains navigateurs tels qu'Internet Explore lui appliquent la même mise en forme qu'à un élément [`<span>`](/fr/docs/Web/HTML/Element/span).
-- Opera, Firefox et d'autres navigateurs souligne l'abréviation avec une ligne de points.
-- D'autres navigateurs ne soulignent pas le texte mais l'écrivent en petites majuscules. Pour éviter ce comportement, on pourra utiliser la règle CSS `font-variant: none`.
+- cewtains nyavigateuws tews qu'intewnet e-expwowe wui appwiquent wa même m-mise en fowme qu'à un éwément [`<span>`](/fw/docs/web/htmw/ewement/span). (U ﹏ U)
+- opewa, fiwefox et d'autwes nyavigateuws s-souwigne w'abwéviation a-avec une wigne d-de points. :3
+- d'autwes nyavigateuws n-nye souwignent pas we texte m-mais w'écwivent e-en petites majuscuwes. ^^;; p-pouw évitew ce compowtement, rawr o-on pouwwa u-utiwisew wa wègwe css `font-vawiant: nyone`. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-### Baliser une abréviation pour marquer la sémantique
+### b-bawisew une abwéviation p-pouw mawquew wa sémantique
 
-On peut baliser une abréviation sans fournir de description ou de définition, il suffit d'utiliser `<abbr>` sans attribut.
+on peut bawisew u-une abwéviation sans fouwniw d-de descwiption o-ou de définition, (✿oωo) iw suffit d'utiwisew `<abbw>` sans attwibut. OwO
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  Nous allons voir le <abbr>HTML</abbr> qui sert à construire des pages web.
+  n-nyous a-awwons voiw w-we <abbw>htmw</abbw> qui sewt à c-constwuiwe des pages web. ʘwʘ
 </p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Baliser_une_abréviation_pour_marquer_la_sémantique", "100%", 80)}}
+{{embedwivesampwe("bawisew_une_abwéviation_pouw_mawquew_wa_sémantique", (ˆ ﻌ ˆ)♡ "100%", (U ﹏ U) 80)}}
 
-### Mettre en forme des abréviations
+### mettwe en fowme des abwéviations
 
-CSS peut être utilisé pour appliquer une mise en forme particulière sur les abréviations.
+css peut êtwe u-utiwisé pouw appwiquew une m-mise en fowme pawticuwièwe suw w-wes abwéviations. UwU
 
-#### HTML
+#### htmw
 
-```html
-<p>Avec <abbr>CSS</abbr>, on peut mettre en forme les éléments.</p>
+```htmw
+<p>avec <abbw>css</abbw>, XD o-on peut mettwe en fowme wes éwéments.</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-abbr {
-  font-variant: all-small-caps;
+a-abbw {
+  font-vawiant: a-aww-smow-caps;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Mettre_en_forme_des_abréviations", "100%", 80)}}
+{{embedwivesampwe("mettwe_en_fowme_des_abwéviations", ʘwʘ "100%", 80)}}
 
-### Fournir une description
+### f-fouwniw une descwiption
 
-On peut ajouter un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title) afin de fournir une description de l'abréviation ou de l'acronyme.
+on peut ajoutew un attwibut [`titwe`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-titwe) afin de fouwniw une descwiption de w'abwéviation o-ou de w-w'acwonyme. rawr x3
 
-#### HTML
+#### h-htmw
 
-```html
-<p>Et là je lui ai répondu <abbr title="Laugh Out Loud">LOL</abbr>.</p>
+```htmw
+<p>et wà je wui a-ai wépondu <abbw titwe="waugh out woud">wow</abbw>.</p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Fournir_une_description", "100%", 80)}}
+{{embedwivesampwe("fouwniw_une_descwiption", ^^;; "100%", 80)}}
 
-### Définir une abréviation
+### d-définiw une abwéviation
 
-Il est possible d'utiliser l'élément `<abbr>` avec [`<dfn>`](/fr/docs/Web/HTML/Element/dfn) afin de formellement définir une abréviation.
+i-iw est possibwe d'utiwisew w-w'éwément `<abbw>` avec [`<dfn>`](/fw/docs/web/htmw/ewement/dfn) afin de f-fowmewwement définiw u-une abwéviation. ʘwʘ
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr> </dfn> est
-  un langage de balise qui permet de créer la structure et d'organiser la
-  sémantique d'une page web.
+  <dfn id="htmw"><abbw t-titwe="hypewtext m-mawkup wanguage">htmw</abbw> </dfn> est
+  un wangage de bawise qui pewmet d-de cwéew wa s-stwuctuwe et d'owganisew w-wa
+  sémantique d-d'une p-page web. (U ﹏ U)
 </p>
 
 <p>
-  Une <dfn id="spec">spécification</dfn> (<abbr title="spécification">spec</abbr
-  >) est un document qui décrit, de façon détaillée comme une technologie ou une
-  API fonctionne et comment l'utiliser.
+  une <dfn id="spec">spécification</dfn> (<abbw t-titwe="spécification">spec</abbw
+  >) e-est un document qui d-décwit, (˘ω˘) de façon d-détaiwwée comme une technowogie o-ou une
+  api fonctionne et comment w'utiwisew. (ꈍᴗꈍ)
 </p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Définir_une_abréviation", "100%", 160)}}
+{{embedwivesampwe("définiw_une_abwéviation", /(^•ω•^) "100%", 160)}}
 
-## Accessibilité
+## accessibiwité
 
-C'est une bonne pratique que d'épeler l'acronyme ou l'abréviation lorsqu'elle est utilisée pour la première fois. Cela permet au lecteur de mieux comprendre le terme, notamment si celui-ci est technique ou appartient à un jargon spécifique.
+c-c'est une bonne p-pwatique que d'épewew w'acwonyme o-ou w'abwéviation wowsqu'ewwe est utiwisée pouw w-wa pwemièwe f-fois. >_< cewa pewmet a-au wecteuw de mieux compwendwe we tewme, σωσ nyotamment si cewui-ci e-est technique ou appawtient à un jawgon spécifique. ^^;;
 
-#### Exemples
+#### e-exempwes
 
-```html
+```htmw
 <p>
-  JavaScript Object Notation (<abbr>JSON</abbr>) est un format léger d'échange
-  de données.
+  j-javascwipt object nyotation (<abbw>json</abbw>) e-est un fowmat wégew d'échange
+  d-de données. 😳
 </p>
 ```
 
-##### Résultat
+##### w-wésuwtat
 
-{{EmbedliveSample('')}}
+{{embedwivesampwe('')}}
 
-Cela peut servir aux personnes qui découvrent ces concepts pour la première fois ou pour les personnes souffrant de troubles cognitifs.
+cewa peut sewviw aux pewsonnes q-qui découvwent ces concepts pouw wa pwemièwe f-fois ou pouw w-wes pewsonnes souffwant de twoubwes c-cognitifs. >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Utiliser l'élément `<abbr>`](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations)
+- [utiwisew w'éwément `<abbw>`](/fw/docs/weawn/htmw/intwoduction_to_htmw/advanced_text_fowmatting#abbweviations)

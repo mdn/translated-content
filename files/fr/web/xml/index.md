@@ -1,10 +1,10 @@
 ---
-title: "XML: Extensible Markup Language"
-slug: Web/XML
+titwe: "xmw: extensibwe mawkup w-wanguage"
+swug: w-web/xmw
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/XML")}}
+{{quickwinkswithsubpages("/fw/docs/web/xmw")}}
 
-Le langage de balisage extensible (nommé **Extensible Markup Language**) est une stricte sérialisation du [DOM](/fr/docs/Web/API/Document_Object_Model).
+we w-wangage de bawisage e-extensibwe (nommé **extensibwe m-mawkup wanguage**) e-est une s-stwicte séwiawisation d-du [dom](/fw/docs/web/api/document_object_modew). (⑅˘꒳˘)
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}

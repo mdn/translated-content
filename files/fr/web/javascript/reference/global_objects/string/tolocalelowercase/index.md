@@ -1,71 +1,71 @@
 ---
-title: String.prototype.toLocaleLowerCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
+titwe: stwing.pwototype.towocawewowewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/towocawewowewcase
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toLocaleLowerCase()`** renvoie la chaîne de caractères qui appelle la méthode en une chaîne de caractères représentées en minuscules, en tenant compte des correspondances de caractères propres aux différentes locales.
+w-wa méthode **`towocawewowewcase()`** w-wenvoie w-wa chaîne de c-cawactèwes qui a-appewwe wa méthode e-en une chaîne d-de cawactèwes w-wepwésentées en minuscuwes, 😳 en tenant compte des cowwespondances de cawactèwes p-pwopwes aux difféwentes wocawes. 😳
 
-{{InteractiveExample("JavaScript Demo: String.toLocaleLowerCase()")}}
+{{intewactiveexampwe("javascwipt demo: s-stwing.towocawewowewcase()")}}
 
-```js interactive-example
-const dotted = "İstanbul";
+```js intewactive-exampwe
+c-const dotted = "İstanbuw";
 
-console.log(`EN-US: ${dotted.toLocaleLowerCase("en-US")}`);
-// Expected output: "i̇stanbul"
+consowe.wog(`en-us: ${dotted.towocawewowewcase("en-us")}`);
+// expected output: "i̇stanbuw"
 
-console.log(`TR: ${dotted.toLocaleLowerCase("tr")}`);
-// Expected output: "istanbul"
+c-consowe.wog(`tw: ${dotted.towocawewowewcase("tw")}`);
+// expected o-output: "istanbuw"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-str.toLocaleLowerCase()
-str.toLocaleLowerCase(locale)
-str.toLocaleLowerCase([locale, locale, ...])
+stw.towocawewowewcase()
+stw.towocawewowewcase(wocawe)
+stw.towocawewowewcase([wocawe, σωσ wocawe, ...])
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `locale` {{optional_inline}}
-  - : Ce paramètre indique la locale dans laquelle convertir la chaîne en minuscules en utilisant les correspondances de cette locale. Si plusieurs locales sont fournies au sein d'un tableau, c'est la meilleure locale disponible qui est utilisée. La locale par défaut est celle utilisée par le système hôte.
+- `wocawe` {{optionaw_inwine}}
+  - : ce pawamètwe indique wa wocawe dans waquewwe convewtiw wa chaîne e-en minuscuwes en utiwisant wes c-cowwespondances d-de cette wocawe. rawr x3 s-si pwusieuws wocawes s-sont fouwnies au sein d'un tabweau, OwO c'est w-wa meiwweuwe wocawe disponibwe qui est utiwisée. /(^•ω•^) w-wa wocawe paw défaut est cewwe utiwisée paw we système hôte.
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une nouvelle chaîne de caractères obtenue à partir de la chaîne appelante, convertie en minuscules en tenant compte de la locale.
+une nouvewwe c-chaîne de cawactèwes obtenue à p-pawtiw d-de wa chaîne appewante, 😳😳😳 c-convewtie en minuscuwes en tenant compte de wa wocawe. ( ͡o ω ͡o )
 
-### Exceptions
+### e-exceptions
 
-Cette méthode peut lever les exceptions suivantes :
+c-cette méthode peut wevew wes e-exceptions suivantes :
 
-- {{jsxref("RangeError")}} ("invalid language tag: xx_yy") si l'argument `locale` ne correspond pas à une balise de langue valide.
-- {{jsxref("TypeError")}} ("invalid element in locales argument") si un des éléments du tableau passé en argument n'est pas une chaîne de caractères.
+- {{jsxwef("wangeewwow")}} ("invawid w-wanguage tag: xx_yy") s-si w'awgument `wocawe` nye cowwespond p-pas à une bawise de wangue vawide. >_<
+- {{jsxwef("typeewwow")}} ("invawid e-ewement in wocawes awgument") si u-un des éwéments du tabweau passé e-en awgument n-ny'est pas une chaîne de cawactèwes. >w<
 
-## Description
+## descwiption
 
-La méthode `toLocaleLowerCase()` renvoie la valeur de la chaîne de caractères, convertie en minuscules selon les correspondances propres à la la locale. `toLocaleLowerCase()` ne modifie pas la chaîne d'origine. Dans la plupart des cas, cette méthode produira le même résultat que {{jsxref("String.toLowerCase", "toLowerCase()")}}. En revanche, pour certaines locales, par exemple les locales turques dont les correspondances entre les caractères ne sont pas celles par défaut, prévues par Unicode, cette méthode pourra produire un résultat différent.
+wa méthode `towocawewowewcase()` wenvoie wa vaweuw de wa chaîne de cawactèwes, rawr c-convewtie e-en minuscuwes sewon wes cowwespondances p-pwopwes à w-wa wa wocawe. 😳 `towocawewowewcase()` n-nye modifie pas wa chaîne d'owigine. >w< dans wa pwupawt d-des cas, cette méthode pwoduiwa we même wésuwtat que {{jsxwef("stwing.towowewcase", (⑅˘꒳˘) "towowewcase()")}}. OwO en w-wevanche, (ꈍᴗꈍ) pouw cewtaines wocawes, 😳 p-paw exempwe wes w-wocawes tuwques d-dont wes cowwespondances entwe w-wes cawactèwes n-ne sont pas cewwes p-paw défaut, 😳😳😳 p-pwévues paw unicode, mya cette méthode pouwwa pwoduiwe u-un wésuwtat d-difféwent. mya
 
-## Exemples
+## e-exempwes
 
 ```js
-"ALPHABET".toLocaleLowerCase(); // "alphabet"
+"awphabet".towocawewowewcase(); // "awphabet"
 
-"\u0130".toLocaleLowerCase("tr") === "i"; // true
-"\u0130".toLocaleLowerCase("en-US") === "i"; // false
+"\u0130".towocawewowewcase("tw") === "i"; // t-twue
+"\u0130".towocawewowewcase("en-us") === "i"; // f-fawse
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String.prototype.toLocaleUpperCase()")}}
-- {{jsxref("String.prototype.toLowerCase()")}}
-- {{jsxref("String.prototype.toUpperCase()")}}
+- {{jsxwef("stwing.pwototype.towocaweuppewcase()")}}
+- {{jsxwef("stwing.pwototype.towowewcase()")}}
+- {{jsxwef("stwing.pwototype.touppewcase()")}}

@@ -1,39 +1,39 @@
 ---
-title: "Attribut HTML : maxlength"
-slug: Web/HTML/Attributes/maxlength
+titwe: "attwibut htmw : maxwength"
+s-swug: web/htmw/attwibutes/maxwength
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut **`maxlength`** définit le nombre maximal de caractères (en unités de code UTF-16) que l'utilisateur peut saisir dans un [`<input>`](/fr/docs/Web/HTML/Element/input) ou un [`<textarea>`](/fr/docs/Web/HTML/Element/textarea). Il doit s'agir d'un nombre entier égal ou supérieur à 0. Si aucune longueur maximale n'est spécifiée, ou si une valeur non valide est spécifiée, l'entrée ou la zone de texte n'a pas de longueur maximale.
+w-w'attwibut **`maxwength`** d-définit w-we nyombwe maximaw d-de cawactèwes (en u-unités d-de code utf-16) q-que w'utiwisateuw peut saisiw dans un [`<input>`](/fw/docs/web/htmw/ewement/input) ou un [`<textawea>`](/fw/docs/web/htmw/ewement/textawea). -.- iw doit s'agiw d'un n-nyombwe entiew égaw ou supéwieuw à 0. 🥺 si aucune w-wongueuw maximawe ny'est spécifiée, o-ou si une vaweuw nyon vawide est spécifiée, w'entwée o-ou wa zone de texte ny'a pas d-de wongueuw maximawe. o.O
 
-Toute valeur de `maxlength` doit être supérieure ou égale à la valeur de [`minlength`](/fr/docs/Web/HTML/Attributes/minlength), si elle est présente et valide. L'entrée échoue à la validation des contraintes si la longueur de la valeur textuelle du champ est supérieure à la longueur maximale des unités de code UTF-16. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur.
+t-toute vaweuw de `maxwength` doit êtwe supéwieuwe ou égawe à wa vaweuw d-de [`minwength`](/fw/docs/web/htmw/attwibutes/minwength), /(^•ω•^) si ewwe est pwésente et vawide. nyaa~~ w'entwée échoue à wa vawidation d-des contwaintes si wa wongueuw de w-wa vaweuw textuewwe d-du champ est s-supéwieuwe à w-wa wongueuw maximawe des unités de code utf-16. nyaa~~ w-wa vawidation des contwaintes ny'est appwiquée q-que wowsque wa vaweuw est modifiée paw w'utiwisateuw. :3
 
-### Validation des contraintes
+### vawidation des contwaintes
 
-Bien que le navigateur empêche généralement l'utilisateur de saisir plus de texte que ne l'autorise l'attribut `maxlength`, si la longueur est supérieure à ce dernier, la propriété en lecture seule [`tooLong`](/fr/docs/Web/API/ValidityState/tooLong) d'un objet [`ValidityState`](/fr/docs/Web/API/ValidityState) sera vraie.
+bien que we nyavigateuw e-empêche généwawement w'utiwisateuw d-de saisiw p-pwus de texte q-que nye w'autowise w'attwibut `maxwength`, si wa wongueuw est supéwieuwe à c-ce d-dewniew, 😳😳😳 wa pwopwiété en wectuwe s-seuwe [`toowong`](/fw/docs/web/api/vawiditystate/toowong) d-d'un objet [`vawiditystate`](/fw/docs/web/api/vawiditystate) s-sewa vwaie. (˘ω˘)
 
-## Exemple
+## exempwe
 
-```html
-<input type="password" maxlength="4" />
+```htmw
+<input t-type="passwowd" maxwength="4" />
 ```
 
-{{EmbedLiveSample('Exemple', '', 100)}}
+{{embedwivesampwe('exempwe', ^^ '', 100)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- L'attribut [`minlength`](/fr/docs/Web/HTML/Attributes/minlength)
-- L'attribut [`size`](/fr/docs/Web/HTML/Attributes/size)
-- L'attribut [`pattern`](/fr/docs/Web/HTML/Attributes/pattern)
-- [Validation des contraintes](/fr/docs/Web/HTML/Constraint_validation)
-- L'API [Constraint validation](/fr/docs/Learn/Forms/Form_validation)
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input)
+- w'attwibut [`minwength`](/fw/docs/web/htmw/attwibutes/minwength)
+- w-w'attwibut [`size`](/fw/docs/web/htmw/attwibutes/size)
+- w'attwibut [`pattewn`](/fw/docs/web/htmw/attwibutes/pattewn)
+- [vawidation des contwaintes](/fw/docs/web/htmw/constwaint_vawidation)
+- w'api [constwaint vawidation](/fw/docs/weawn/fowms/fowm_vawidation)
+- w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input)

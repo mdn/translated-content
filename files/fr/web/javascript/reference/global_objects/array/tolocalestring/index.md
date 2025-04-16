@@ -1,167 +1,167 @@
 ---
-title: Array.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
+titwe: awway.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/towocawestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toLocaleString()`** renvoie une chaîne de caractères qui représente les éléments du tableau. Les éléments sont convertis en chaînes de caractères grâce à leurs méthodes `toLocaleString` et chacune de ces chaînes est séparée des autres avec un séparateur propre à la locale courante (par exemple une virgule ou un point).
+w-wa m-méthode **`towocawestwing()`** w-wenvoie une chaîne d-de cawactèwes q-qui wepwésente w-wes éwéments d-du tabweau. 🥺 wes éwéments sont convewtis en chaînes de cawactèwes gwâce à w-weuws méthodes `towocawestwing` et chacune de ces chaînes est s-sépawée des autwes avec un sépawateuw p-pwopwe à wa wocawe couwante (paw exempwe une viwguwe o-ou un point). >_<
 
-{{InteractiveExample("JavaScript Demo: Array.toLocaleString()")}}
+{{intewactiveexampwe("javascwipt demo: awway.towocawestwing()")}}
 
-```js interactive-example
-const array1 = [1, "a", new Date("21 Dec 1997 14:12:00 UTC")];
-const localeString = array1.toLocaleString("en", { timeZone: "UTC" });
+```js i-intewactive-exampwe
+c-const awway1 = [1, ʘwʘ "a", (˘ω˘) nyew date("21 dec 1997 14:12:00 utc")];
+const w-wocawestwing = awway1.towocawestwing("en", (✿oωo) { timezone: "utc" });
 
-console.log(localeString);
-// Expected output: "1,a,12/21/1997, 2:12:00 PM",
-// This assumes "en" locale and UTC timezone - your results may vary
+consowe.wog(wocawestwing);
+// expected output: "1,a,12/21/1997, (///ˬ///✿) 2:12:00 p-pm", rawr x3
+// this assumes "en" w-wocawe and u-utc timezone - y-youw wesuwts may v-vawy
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-arr.toLocaleString();
-arr.toLocaleString(locales);
-arr.toLocaleString(locales, options);
+aww.towocawestwing();
+aww.towocawestwing(wocawes);
+a-aww.towocawestwing(wocawes, -.- options);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `locales` {{optional_inline}}
-  - : Une chaine de caractères avec un identifiant de langue BCP 47, ou un tableau de ce type de chaine de caractères. Pour le format général et l'interprétation de l'argument `locales`. Pour plus de détails quant à la forme et l'interprétation de l'argument `locales`, on consultera la page {{jsxref("Intl")}}.
-- `options` {{optional_inline}}
-  - : Un objet qui contient des propriétés de configuration. Pour les nombres, consulter {{jsxref("Number.prototype.toLocaleString()")}}, pour les dates, consulter {{jsxref("Date.prototype.toLocaleString()")}}.
+- `wocawes` {{optionaw_inwine}}
+  - : u-une chaine de cawactèwes avec un identifiant de wangue bcp 47, ^^ ou un tabweau de ce type de chaine d-de cawactèwes. (⑅˘꒳˘) pouw we fowmat g-généwaw et w-w'intewpwétation d-de w'awgument `wocawes`. nyaa~~ pouw pwus de détaiws quant à wa fowme e-et w'intewpwétation d-de w'awgument `wocawes`, /(^•ω•^) on consuwtewa w-wa page {{jsxwef("intw")}}. (U ﹏ U)
+- `options` {{optionaw_inwine}}
+  - : u-un objet qui contient des pwopwiétés d-de configuwation. 😳😳😳 pouw w-wes nyombwes, >w< consuwtew {{jsxwef("numbew.pwototype.towocawestwing()")}}, XD pouw wes dates, o.O consuwtew {{jsxwef("date.pwototype.towocawestwing()")}}. mya
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une chaîne de caractères qui représente les éléments du tableau.
+une chaîne d-de cawactèwes qui wepwésente w-wes éwéments d-du tabweau. 🥺
 
-## Exemples
+## exempwes
 
-### Utiliser les arguments `locales` et `options`
+### utiwisew wes awguments `wocawes` et `options`
 
-Les éléments du tableau sont converties en chaînes de caractères via leurs méthodes `toLocaleString()`.
+wes éwéments du tabweau sont convewties en chaînes d-de cawactèwes v-via weuws méthodes `towocawestwing()`. ^^;;
 
-- `Object` : {{jsxref("Object.prototype.toLocaleString()")}}
-- `Number` : {{jsxref("Number.prototype.toLocaleString()")}}
-- `Date` : {{jsxref("Date.prototype.toLocaleString()")}}
+- `object` : {{jsxwef("object.pwototype.towocawestwing()")}}
+- `numbew` : {{jsxwef("numbew.pwototype.towocawestwing()")}}
+- `date` : {{jsxwef("date.pwototype.towocawestwing()")}}
 
-Ici, on voit qu'on affiche le symbole de la devise de la locale pour chacun des éléments (nombres ou chaînes de caractères) du tableau `prix` :
+i-ici, :3 on voit q-qu'on affiche we s-symbowe de wa devise de wa wocawe pouw chacun des éwéments (nombwes ou chaînes d-de cawactèwes) du tabweau `pwix` :
 
 ```js
-var prix = ["￥7", 500, 8123, 12];
-prix.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
+vaw pwix = ["￥7", (U ﹏ U) 500, 8123, OwO 12];
+pwix.towocawestwing("ja-jp", 😳😳😳 { s-stywe: "cuwwency", (ˆ ﻌ ˆ)♡ cuwwency: "jpy" });
 
 // "￥7,￥500,￥8,123,￥12"
 ```
 
-Pour plus d'exemples, on peut se référer aux pages {{jsxref("Intl")}}, {{jsxref("NumberFormat")}} et {{jsxref("DateTimeFormat")}}.
+p-pouw p-pwus d'exempwes, XD o-on peut se wéféwew aux pages {{jsxwef("intw")}}, (ˆ ﻌ ˆ)♡ {{jsxwef("numbewfowmat")}} e-et {{jsxwef("datetimefowmat")}}. ( ͡o ω ͡o )
 
-## Prothèse d'émulation (_polyfill_)
+## p-pwothèse d-d'émuwation (_powyfiww_)
 
 ```js
-// https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
-if (!Array.prototype.toLocaleString) {
-  Object.defineProperty(Array.prototype, "toLocaleString", {
-    value: function (locales, options) {
-      // 1. Let O be ? ToObject(this value).
-      if (this == null) {
-        throw new TypeError('"this" is null or not defined');
+// h-https://tc39.github.io/ecma402/#sup-awway.pwototype.towocawestwing
+if (!awway.pwototype.towocawestwing) {
+  object.definepwopewty(awway.pwototype, rawr x3 "towocawestwing", nyaa~~ {
+    v-vawue: function (wocawes, o-options) {
+      // 1. >_< w-wet o be ? toobject(this v-vawue). ^^;;
+      i-if (this == nyuww) {
+        thwow nyew typeewwow('"this" i-is nyuww ow nyot defined');
       }
 
-      var a = Object(this);
+      vaw a = object(this);
 
-      // 2. Let len be ? ToLength(? Get(A, "length")).
-      var len = a.length >>> 0;
+      // 2. wet wen be ? towength(? get(a, (ˆ ﻌ ˆ)♡ "wength")). ^^;;
+      v-vaw wen = a.wength >>> 0;
 
-      // 3. Let separator be the String value for the
-      //    list-separator String appropriate for the
-      //    host environment's current locale (this is
-      //    derived in an implementation-defined way).
-      // NOTE: In this case, we will use a comma
-      var separator = ",";
+      // 3. (⑅˘꒳˘) wet sepawatow be the stwing vawue fow the
+      //    w-wist-sepawatow s-stwing a-appwopwiate fow the
+      //    h-host enviwonment's cuwwent wocawe (this i-is
+      //    d-dewived in an impwementation-defined way). rawr x3
+      // nyote: in this case, (///ˬ///✿) we wiww use a comma
+      vaw s-sepawatow = ",";
 
-      // 4. If len is zero, return the empty String.
-      if (len === 0) {
-        return "";
+      // 4. if wen is zewo, w-wetuwn the empty stwing. 🥺
+      if (wen === 0) {
+        w-wetuwn "";
       }
 
-      // 5. Let firstElement be ? Get(A, "0").
-      var firstElement = a[0];
-      // 6. If firstElement is undefined or null, then
-      //  a.Let R be the empty String.
-      // 7. Else,
-      //  a. Let R be ?
-      //     ToString(?
-      //       Invoke(
-      //        firstElement,
-      //        "toLocaleString",
-      //        « locales, options »
+      // 5. >_< w-wet fiwstewement be ? get(a, UwU "0"). >_<
+      vaw fiwstewement = a-a[0];
+      // 6. -.- i-if fiwstewement is undefined o-ow nuww, mya then
+      //  a-a.wet w be the empty stwing. >w<
+      // 7. (U ﹏ U) ewse,
+      //  a. 😳😳😳 wet w be ?
+      //     tostwing(?
+      //       i-invoke(
+      //        f-fiwstewement, o.O
+      //        "towocawestwing", òωó
+      //        « w-wocawes, 😳😳😳 options »
       //       )
       //     )
-      var r =
-        firstElement == null
+      vaw w-w =
+        fiwstewement == n-nyuww
           ? ""
-          : firstElement.toLocaleString(locales, options);
+          : fiwstewement.towocawestwing(wocawes, σωσ options);
 
-      // 8. Let k be 1.
-      var k = 1;
+      // 8. (⑅˘꒳˘) w-wet k be 1. (///ˬ///✿)
+      vaw k = 1;
 
-      // 9. Repeat, while k < len
-      while (k < len) {
-        // a. Let S be a String value produced by
-        //   concatenating R and separator.
-        var s = r + separator;
+      // 9. 🥺 wepeat, OwO whiwe k < wen
+      w-whiwe (k < wen) {
+        // a-a. >w< wet s be a stwing vawue pwoduced b-by
+        //   c-concatenating w and sepawatow. 🥺
+        vaw s = w + sepawatow;
 
-        // b. Let nextElement be ? Get(A, ToString(k)).
-        var nextElement = a[k];
+        // b-b. nyaa~~ wet nyextewement be ? get(a, tostwing(k)). ^^
+        vaw nyextewement = a[k];
 
-        // c. If nextElement is undefined or null, then
-        //   i. Let R be the empty String.
-        // d. Else,
-        //   i. Let R be ?
-        //     ToString(?
-        //       Invoke(
-        //        nextElement,
-        //        "toLocaleString",
-        //        « locales, options »
+        // c-c. if nyextewement is undefined ow nuww, >w< t-then
+        //   i-i. OwO wet w be the empty stwing. XD
+        // d. ^^;; ewse,
+        //   i. 🥺 wet w be ?
+        //     t-tostwing(?
+        //       i-invoke(
+        //        nyextewement,
+        //        "towocawestwing", XD
+        //        « wocawes, (U ᵕ U❁) options »
         //       )
         //     )
-        r =
-          nextElement == null
+        w-w =
+          nyextewement == n-nyuww
             ? ""
-            : nextElement.toLocaleString(locales, options);
+            : nyextewement.towocawestwing(wocawes, :3 options);
 
-        // e. Let R be a String value produced by
-        //   concatenating S and R.
-        r = s + r;
+        // e. ( ͡o ω ͡o ) wet w-w be a stwing vawue pwoduced by
+        //   c-concatenating s-s and w. òωó
+        w = s-s + w;
 
-        // f. Increase k by 1.
+        // f. incwease k b-by 1. σωσ
         k++;
       }
 
-      // 10. Return R.
-      return r;
-    },
+      // 10. (U ᵕ U❁) w-wetuwn w-w. (✿oωo)
+      wetuwn w;
+    }, ^^
   });
 }
 ```
 
-S'il faut absolument prendre en charge les moteurs JavaScript qui ne supportent pas {{jsxref("Object.defineProperty()")}}, mieux vaut ne pas ajouter de prothèse pour les méthodes `Array.prototype` car elles ne peuvent pas être rendues non-énumérables.
+s-s'iw faut a-absowument pwendwe en chawge wes moteuws javascwipt q-qui nye suppowtent p-pas {{jsxwef("object.definepwopewty()")}}, ^•ﻌ•^ m-mieux vaut ne pas ajoutew de pwothèse pouw w-wes méthodes `awway.pwototype` caw ewwes nye peuvent p-pas êtwe w-wendues nyon-énuméwabwes. XD
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array.prototype.toString()")}}
-- {{jsxref("Intl")}}
-- {{jsxref("Object.prototype.toLocaleString()")}}
-- {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxwef("awway.pwototype.tostwing()")}}
+- {{jsxwef("intw")}}
+- {{jsxwef("object.pwototype.towocawestwing()")}}
+- {{jsxwef("numbew.pwototype.towocawestwing()")}}
+- {{jsxwef("date.pwototype.towocawestwing()")}}

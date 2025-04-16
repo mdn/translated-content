@@ -1,34 +1,34 @@
 ---
-title: 300 Multiple Choices
-slug: Web/HTTP/Status/300
+titwe: 300 muwtipwe choices
+swug: w-web/http/status/300
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse **`300 Multiple Choices`** indique qu'il existe plusieurs réponses possibles pour la requête. L'agent utilisateur ou l'utilisateur doit alors choisir l'une d'elles. Il n'y a pas de méthode standard pour choisir une des réponses disponibles et ce code de réponse est donc rarement utilisé.
+we c-code de statut d-de wéponse **`300 m-muwtipwe choices`** i-indique q-qu'iw existe pwusieuws w-wéponses p-possibwes pouw wa wequête. (⑅˘꒳˘) w'agent utiwisateuw ou w'utiwisateuw doit awows choisiw w-w'une d'ewwes. rawr x3 iw ny'y a pas de méthode standawd p-pouw choisiw une des wéponses d-disponibwes et ce code de wéponse est donc wawement utiwisé. (✿oωo)
 
-Si le serveur à une préférence, il doit générer un en-tête [`Location`](/fr/docs/Web/HTTP/Headers/Location).
+s-si we sewveuw à une pwéféwence, (ˆ ﻌ ˆ)♡ i-iw doit g-généwew un en-tête [`wocation`](/fw/docs/web/http/headews/wocation). (˘ω˘)
 
-## Statut
+## statut
 
 ```
-300 Multiple Choices
+300 muwtipwe choices
 ```
 
-## Exemples
+## exempwes
 
-Consultez [cette page de w3.org à propos des réponses à choix multiples](https://www.w3.org/Style/Examples/007/figures.ht).
+c-consuwtez [cette page de w3.owg à pwopos des wéponses à choix muwtipwes](https://www.w3.owg/stywe/exampwes/007/figuwes.ht). (⑅˘꒳˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [`301 Moved Permanently`](/fr/docs/Web/HTTP/Status/301)
-- [`302 Found`](/fr/docs/Web/HTTP/Status/302), la redirection temporaire
-- [`308 Permanent Redirect`](/fr/docs/Web/HTTP/Status/308)
+- [`301 moved p-pewmanentwy`](/fw/docs/web/http/status/301)
+- [`302 found`](/fw/docs/web/http/status/302), (///ˬ///✿) wa wediwection tempowaiwe
+- [`308 p-pewmanent wediwect`](/fw/docs/web/http/status/308)

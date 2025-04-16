@@ -1,56 +1,56 @@
 ---
-title: RegExp.prototype.ignoreCase
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
+titwe: wegexp.pwototype.ignowecase
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/ignowecase
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`ignoreCase`** indique si le drapeau (_flag_) "`i`" est utilisé ou non pour cette expression rationnelle. `ignoreCase` est une propriété accessible en lecture seule d'une instance d'expression rationnelle donnée.
+w-wa pwopwiété **`ignowecase`** i-indique si w-we dwapeau (_fwag_) "`i`" e-est utiwisé o-ou nyon p-pouw cette expwession w-wationnewwe. 🥺 `ignowecase` e-est une pwopwiété accessibwe en wectuwe seuwe d'une instance d'expwession wationnewwe d-donnée. >_<
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.ignoreCase")}}
+{{intewactiveexampwe("javascwipt demo: wegexp.pwototype.ignowecase")}}
 
-```js interactive-example
-const regex1 = new RegExp("foo");
-const regex2 = new RegExp("foo", "i");
+```js intewactive-exampwe
+c-const wegex1 = nyew wegexp("foo");
+c-const wegex2 = nyew wegexp("foo", >_< "i");
 
-console.log(regex1.test("Football"));
-// Expected output: false
+consowe.wog(wegex1.test("footbaww"));
+// expected o-output: fawse
 
-console.log(regex2.ignoreCase);
-// Expected output: true
+consowe.wog(wegex2.ignowecase);
+// e-expected output: t-twue
 
-console.log(regex2.test("Football"));
-// Expected output: true
+consowe.wog(wegex2.test("footbaww"));
+// expected output: twue
 ```
 
-{{js_property_attributes(0,0,1)}}
+{{js_pwopewty_attwibutes(0,0,1)}}
 
-## Description
+## descwiption
 
-La valeur de `ignoreCase` est un booléen. Elle vaut `true` si le flag "`i`" a été utilisé et `false` sinon. Le drapeau "`i`" indique si la recherche de correspondances doit être sensible à la casse ou non.
+wa vaweuw de `ignowecase` e-est un boowéen. (⑅˘꒳˘) ewwe vaut `twue` si we fwag "`i`" a été utiwisé e-et `fawse` sinon. /(^•ω•^) we dwapeau "`i`" i-indique si wa w-wechewche de cowwespondances d-doit êtwe s-sensibwe à wa casse ou nyon. rawr x3
 
-Cette propriété ne peut pas être modifiée directement.
+cette pwopwiété n-nye peut pas êtwe modifiée diwectement. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
 ```js
-var regex = new RegExp("toto", "i");
+vaw wegex = new wegexp("toto", (U ﹏ U) "i");
 
-console.log(regex.ignoreCase); // true
+consowe.wog(wegex.ignowecase); // twue
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("RegExp.prototype.global")}}
-- {{jsxref("RegExp.prototype.lastIndex")}}
-- {{jsxref("RegExp.prototype.multiline")}}
-- {{jsxref("RegExp.prototype.source")}}
-- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
+- {{jsxwef("wegexp.pwototype.wastindex")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}

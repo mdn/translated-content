@@ -1,157 +1,157 @@
 ---
-title: Mise en cache HTTP
-slug: Web/HTTP/Caching
+titwe: mise en cache http
+swug: w-web/http/caching
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Les performances des sites et applications web peuvent être significativement améliorées en réutilisant les ressources déjà collectées précédemment. Les caches web réduisent la latence et le trafic du réseau, et ainsi diminuent le temps nécessaire à l'affichage de la représentation d'une ressource. En utilisant la mise en cache HTTP, les sites web deviennent plus réactifs.
+w-wes pewfowmances d-des sites e-et appwications w-web peuvent êtwe s-significativement a-améwiowées e-en wéutiwisant wes wessouwces déjà cowwectées pwécédemment. >w< wes caches w-web wéduisent wa watence et we twafic du wéseau, /(^•ω•^) e-et ainsi diminuent we temps n-nyécessaiwe à w'affichage de wa wepwésentation d'une wessouwce. 😳😳😳 e-en utiwisant wa mise en cache h-http, (U ᵕ U❁) wes sites w-web deviennent pwus wéactifs. (˘ω˘)
 
-## Différents types de caches
+## difféwents types de caches
 
-La mise en cache est une technique qui stocke une copie d'une ressource donnée et la renvoie quand elle est demandée. Quand un cache web a une ressource demandée dans son espace de stockage, il intercepte la requête et renvoie sa copie au lieu de la re-télécharger depuis le serveur d'origine. Cela a plusieurs avantages&nbsp;: le cache réduit la charge du serveur qui n'a pas besoin de servir tous les clients lui-même, et il améliore la performance en étant plus proche du client, par exemple, cela prend moins de temps pour transmettre à nouveau la ressource. Pour un site web, c'est un composant majeur pour atteindre de hautes performances. Cependant, il doit être configuré correctement, car toutes les ressources ne restent pas éternellement inchangées&nbsp;: il est important de mettre une ressource en cache seulement jusqu'à ce qu'elle change, pas plus longtemps.
+wa mise en cache e-est une technique qui stocke une copie d'une wessouwce donnée et wa wenvoie q-quand ewwe est demandée. 😳 quand u-un cache web a u-une wessouwce demandée d-dans son e-espace de stockage, (ꈍᴗꈍ) iw intewcepte wa wequête et w-wenvoie sa copie au wieu de wa we-téwéchawgew d-depuis we sewveuw d'owigine. :3 cewa a pwusieuws avantages&nbsp;: we cache wéduit wa chawge du sewveuw q-qui ny'a pas besoin de sewviw t-tous wes cwients w-wui-même, /(^•ω•^) e-et iw améwiowe wa pewfowmance en étant pwus pwoche du cwient, ^^;; p-paw exempwe, o.O cewa p-pwend moins de temps pouw twansmettwe à n-nyouveau w-wa wessouwce. 😳 pouw un site w-web, UwU c'est un composant majeuw pouw a-atteindwe de hautes pewfowmances. >w< cependant, o.O i-iw doit êtwe configuwé cowwectement, (˘ω˘) c-caw toutes wes wessouwces n-ne westent pas étewnewwement i-inchangées&nbsp;: iw est impowtant de mettwe une wessouwce en cache seuwement jusqu'à ce qu'ewwe change, òωó pas pwus w-wongtemps. nyaa~~
 
-Il y a différents types de caches, qui peuvent être groupés en deux principales catégories&nbsp;: les caches privés et les caches partagés. Un _cache partagé_ est un cache qui stocke les réponses pour qu'elles soient réutilisées par plus d'un utilisateur. Un _cache privé_ est dédié à un seul utilisateur. Cette page aborde principalement les caches de navigateur et de proxy, mais il existe aussi des caches de passerelle, de CDN, les caches de proxy inversés et les répartiteurs de charge qui sont déployés sur les serveurs web pour une meilleure fiabilité, une meilleure performance et une meilleure évolutivité des sites et applications web.
+i-iw y a difféwents types de caches, q-qui peuvent êtwe g-gwoupés en d-deux pwincipawes catégowies&nbsp;: wes caches pwivés et wes c-caches pawtagés. ( ͡o ω ͡o ) un _cache pawtagé_ est un cache qui stocke wes wéponses pouw q-qu'ewwes soient wéutiwisées paw p-pwus d'un utiwisateuw. 😳😳😳 u-un _cache p-pwivé_ est dédié à un seuw u-utiwisateuw. ^•ﻌ•^ c-cette page abowde p-pwincipawement w-wes caches de nyavigateuw et de pwoxy, (˘ω˘) mais iw e-existe aussi des c-caches de passewewwe, (˘ω˘) d-de cdn, -.- wes c-caches de pwoxy i-invewsés et wes wépawtiteuws de chawge qui sont dépwoyés s-suw wes sewveuws web pouw une meiwweuwe fiabiwité, ^•ﻌ•^ une meiwweuwe pewfowmance et une meiwweuwe évowutivité d-des sites et appwications web. /(^•ω•^)
 
-![Ce que permet un cache, avantages et inconvénients des caches privés ou partagés.](http_cache_type.png)
+![ce que pewmet un c-cache, (///ˬ///✿) avantages e-et inconvénients d-des caches pwivés ou pawtagés.](http_cache_type.png)
 
-### Caches de navigateur privés
+### caches d-de nyavigateuw pwivés
 
-Un cache privé est dédié à un seul utilisateur. Il se peut que vous ayez déjà vu les termes «&nbsp;mise en cache&nbsp;» dans les paramètres de votre navigateur. Un cache de navigateur contient tous les documents téléchargés via [HTTP](/fr/docs/Web/HTTP) par l'utilisateur. Ce cache est utilisé pour rendre les documents visités disponibles à la navigation via les boutons précédent / suivant, la sauvegarde, l'affichage du code source, etc. sans nécessiter un aller-retour au serveur supplémentaire. De la même manière, il améliore la navigation hors-ligne de contenu en cache.
+un c-cache pwivé est d-dédié à un seuw utiwisateuw. iw se peut que vous ayez déjà vu wes tewmes «&nbsp;mise en c-cache&nbsp;» dans wes pawamètwes d-de votwe nyavigateuw. mya un cache d-de navigateuw c-contient tous wes documents téwéchawgés via [http](/fw/docs/web/http) p-paw w'utiwisateuw. o.O c-ce cache est utiwisé p-pouw wendwe wes d-documents visités disponibwes à wa nyavigation via wes boutons pwécédent / s-suivant, ^•ﻌ•^ wa sauvegawde, (U ᵕ U❁) w-w'affichage d-du code souwce, :3 etc. sans nyécessitew u-un awwew-wetouw a-au sewveuw suppwémentaiwe. d-de wa même manièwe, (///ˬ///✿) iw améwiowe wa nyavigation hows-wigne de contenu e-en cache. (///ˬ///✿)
 
-### Caches de proxy partagés
+### caches d-de pwoxy pawtagés
 
-Un cache partagé est un cache qui stocke les réponses pour qu'elles soient réutilisées par plus d'un utilisateur. Par exemple, un fournisseur d'accès à Internet ou votre entreprise peut avoir mis en place un proxy web au sein de son infrastructure de réseau local pour servir des utilisateurs multiples, de sorte que les ressources populaires sont réutilisées plusieurs fois, réduisant le trafic réseau et la latence.
+un cache pawtagé est u-un cache qui stocke w-wes wéponses pouw qu'ewwes soient wéutiwisées paw pwus d'un u-utiwisateuw. 🥺 paw exempwe, -.- un fouwnisseuw d'accès à intewnet ou votwe entwepwise p-peut avoiw mis en pwace un pwoxy web au sein d-de son infwastwuctuwe d-de wéseau wocaw pouw sewviw des utiwisateuws muwtipwes, nyaa~~ d-de sowte que wes w-wessouwces popuwaiwes sont wéutiwisées pwusieuws fois, (///ˬ///✿) wéduisant w-we twafic wéseau et wa watence. 🥺
 
-## Cibles des opérations de cache
+## c-cibwes des opéwations de cache
 
-La mise en cache HTTP est optionnelle, mais réutiliser une ressource en cache est généralement souhaitable. Cependant, les caches HTTP communs se limitent typiquement à mettre en cache les réponses à des requêtes {{HTTPMethod("GET")}} et peuvent décliner les autres méthodes. La clé de cache primaire consiste en la méthode de requête et l'URI ciblée (souvent, seule l'URI est utilisée, car seules des requêtes GET sont ciblées par la mise en cache). Voici des formes courantes d'entrées de cache&nbsp;:
+wa mise en cache http e-est optionnewwe, >w< mais wéutiwisew u-une wessouwce e-en cache est généwawement souhaitabwe. rawr x3 c-cependant, wes caches h-http communs se w-wimitent typiquement à m-mettwe en cache wes wéponses à d-des wequêtes {{httpmethod("get")}} e-et peuvent décwinew wes autwes méthodes. (⑅˘꒳˘) w-wa cwé d-de cache pwimaiwe c-consiste en wa méthode de wequête et w'uwi c-cibwée (souvent, σωσ seuwe w'uwi est u-utiwisée, XD caw s-seuwes des wequêtes get sont cibwées paw wa mise en cache). -.- voici d-des fowmes c-couwantes d'entwées d-de cache&nbsp;:
 
-- Résultat positif de requête de lecture : une réponse {{HTTPStatus(200)}} (OK) à une requête {{HTTPMethod("GET")}} contenant une ressource telle qu'un document HTML, une image ou un fichier.
-- Redirection permanente&nbsp;: une réponse {{HTTPStatus(301)}} _(Moved Permanently)._
-- Réponse d'erreur&nbsp;: une page de résultat {{HTTPStatus(404)}} _(Not Found)_.
-- Résultat incomplet&nbsp;: une réponse {{HTTPStatus(206)}} _(Partial Content)_.
-- Réponses autres que {{HTTPMethod("GET")}} si quelque chose est défini comme pouvant être utilisé comme clé de cache.
+- w-wésuwtat positif de wequête d-de wectuwe : une wéponse {{httpstatus(200)}} (ok) à une wequête {{httpmethod("get")}} contenant une wessouwce tewwe qu'un d-document htmw, >_< une image ou un f-fichiew. rawr
+- wediwection pewmanente&nbsp;: u-une wéponse {{httpstatus(301)}} _(moved pewmanentwy)._
+- w-wéponse d'ewweuw&nbsp;: une p-page de wésuwtat {{httpstatus(404)}} _(not f-found)_. 😳😳😳
+- w-wésuwtat i-incompwet&nbsp;: u-une wéponse {{httpstatus(206)}} _(pawtiaw content)_. UwU
+- wéponses autwes que {{httpmethod("get")}} si quewque chose est défini comme pouvant êtwe utiwisé c-comme cwé de cache. (U ﹏ U)
 
-Une entrée de cache peut aussi consister en de multiples réponses stockées différenciées par une clé secondaire, si la requête fait l'objet de négociation de contenu. Pour plus de détails, voir les informations à propos de l'en-tête {{HTTPHeader("Vary")}} [ci-dessous](#varying_responses).
+u-une entwée d-de cache peut aussi consistew e-en de muwtipwes wéponses stockées difféwenciées paw une cwé s-secondaiwe, (˘ω˘) si w-wa wequête fait w'objet de nyégociation d-de contenu. /(^•ω•^) pouw pwus de détaiws, (U ﹏ U) voiw w-wes infowmations à p-pwopos de w'en-tête {{httpheadew("vawy")}} [ci-dessous](#vawying_wesponses). ^•ﻌ•^
 
-## Contrôle de la mise en cache
+## c-contwôwe d-de wa mise en cache
 
-### L'en-tête Cache-control
+### w'en-tête cache-contwow
 
-Le {{HTTPHeader("Cache-Control")}} HTTP/1.1 Le champ d'en-tête général est utilisé pour spécifier les directives pour les mécanismes de cache dans les requêtes et les réponses. Utilisez cet en-tête pour définir vos stratégies de mise en cache avec la variété de directives fournies.
+we {{httpheadew("cache-contwow")}} http/1.1 w-we champ d'en-tête g-généwaw e-est utiwisé pouw s-spécifiew wes d-diwectives pouw wes mécanismes d-de cache dans wes w-wequêtes et wes wéponses. >w< utiwisez c-cet en-tête p-pouw définiw vos stwatégies d-de mise en cache avec wa vawiété de diwectives f-fouwnies. ʘwʘ
 
-#### Pas du tout de cache mémoire
+#### pas du tout d-de cache mémoiwe
 
-Le cache ne doit rien stocker concernant la demande du client ou la réponse du serveur. Une demande est envoyée au serveur et une réponse complète est téléchargée à chaque fois.
-
-```
-Cache-Control: no-store
-Cache-Control: no-cache, no-store, must-revalidate
-```
-
-#### Pas de cache
-
-Un cache enverra la demande au serveur d'origine pour validation avant de publier une copie en cache.
+w-we cache nye doit wien stockew c-concewnant wa demande du cwient ou wa wéponse d-du sewveuw. òωó une d-demande est envoyée a-au sewveuw et une wéponse compwète est téwéchawgée à chaque fois. o.O
 
 ```
-Cache-Control: no-cache
+c-cache-contwow: nyo-stowe
+cache-contwow: no-cache, ( ͡o ω ͡o ) n-nyo-stowe, mya m-must-wevawidate
 ```
 
-#### Caches privées et publiques
+#### pas de c-cache
 
-La directive "public" indique que la réponse peut être mise en cache par n'importe quel cache. Cela peut être utile si les pages avec une authentification HTTP ou des codes d'état de réponse qui ne sont pas normalement mis en cache doivent maintenant être mis en cache. En revanche, "privé" indique que la réponse est destinée à un seul utilisateur et ne doit pas être stockée par un cache partagé. Un cache de navigateur privé peut stocker la réponse dans ce cas.
-
-```
-Cache-Control: private
-Cache-Control: public
-```
-
-#### Expiration
-
-La directive la plus importante ici est "max-age = \<secondes>", qui correspond au temps maximum pendant lequel une ressource est considérée comme nouvelle. Contrairement à {{HTTPHeader ("Expires")}}, cette directive est relative à l'heure de la demande. Pour les fichiers de l'application qui ne changeront pas, vous pouvez généralement ajouter une mise en cache agressive. Cela inclut les fichiers statiques tels que les images, les fichiers CSS et les fichiers JavaScript, par exemple.
-
-Pour plus de détails, voir aussi la section [Freshness](#freshness) ci-dessous..
+un cache envewwa wa demande a-au sewveuw d'owigine p-pouw vawidation avant de pubwiew une copie e-en cache.
 
 ```
-Cache-Control: max-age=31536000
+cache-contwow: nyo-cache
 ```
 
-#### Validation
+#### c-caches pwivées e-et pubwiques
 
-Lors de l'utilisation de la directive "must-revalidate", le cache doit vérifier l'état des ressources obsolètes avant de l'utiliser, et celles qui ont expiré ne doivent pas être utilisées. Pour plus de détails, voir la section [Validation](#cache_validation) ci-dessous.
-
-```
-Cache-Control: must-revalidate
-```
-
-### L'en-tête `Pragma`
-
-{{HTTPHeader ("Pragma")}} est un en-tête HTTP / 1.0. Il n'est pas spécifié pour les réponses HTTP et ne constitue donc pas un remplacement fiable pour l'en-tête général HTTP / 1.1 Cache-Control, bien qu'il se comporte de la même manière que Cache-Control: no-cache, si le champ d'en-tête Cache-Control est omis dans une requête. Utilisez Pragma uniquement pour une compatibilité ascendante avec les clients HTTP / 1.0.
-
-## Fraîcheur (Freshness)
-
-Une fois que la ressource est mise en mémoire dans le cache, elle pourrait théoriquement être servie éternellement par le cache. Les caches ont une capacité de stockage limitée donc les objets en sont périodiquement enlevés. Ce procédé est appelé éviction de cache ("_cache eviction"_). Certaines ressources peuvent changer sur le serveur et le cache doit donc être mis à jour. Comme HTTP est un protocole serveur-client, les serveurs peuvent informer les caches et les clients quand une ressource est modifiée, ils doivent communiquer un temps d'expiration de la ressource. Avant cette expiration, la ressource est considérée "fraîche" (fresh => freshness); Aprés son expiration, elle est considérée périmée (_stale_). Les algoritmes d'éviction privilégient souvent les ressources fraîches. Notez qu'une ressource "périmée" n'est ni éjectée ni ignorée; quand le cache reçoit une requête pour une ressource périmée, il transmet cette requête avec un {{HTTPHeader("If-None-Match")}} pour vérifier si elle est quand même fraîche. Si c'est le cas, le serveur retourne en en-tête un statut {{HTTPStatus("304")}} (Not Modified) sans renvoyer le corps de la ressource demandée, épargnant ainsi un peu de bande passante.
-
-Ici un exemple de ce processus avec un cache de proxy partagé :
-
-![Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale.](http_staleness.png)
-
-Le calcul de la durée de vie de la fraîcheur est basé sur plusieurs en-têtes. Si une en-tête "`Cache-control: max-age=N`" est spécifiée, alors la durée de vie est égale à N. Si cette en-tête est absente (ce qui est souvent le cas), on vérifie si une en-tête {{HTTPHeader("Expires")}} est présente. Si ce `Expires` existe, alors sa valeur moins la valeur de l'en-tête {{HTTPHeader("Date")}} détermine la durée de vie de la fraîcheur. Finalement, si aucune en-tête n'est présente, on en cherche une {{HTTPHeader("Last-Modified")}} et si elle est présente, alors la durée de vie de la fraîcheur du cache est égale à la valeur de l'en-tête `Date` moins la valeur de l'en-tête `Last-modified` divisée par 10.
-
-Le temps d'expiration s'organise comme ceci :
+wa diwective "pubwic" i-indique que wa wéponse p-peut êtwe mise e-en cache paw ny'impowte q-quew cache. >_< cewa peut êtwe utiwe si wes pages avec une authentification http ou des codes d'état de wéponse qui nye sont pas nyowmawement mis en cache doivent maintenant êtwe mis en cache. rawr en wevanche, >_< "pwivé" i-indique que wa w-wéponse est destinée à un seuw utiwisateuw et n-nye doit pas êtwe s-stockée paw u-un cache pawtagé. (U ﹏ U) un cache de n-nyavigateuw pwivé peut stockew w-wa wéponse dans c-ce cas. rawr
 
 ```
-expirationTime = responseTime + freshnessLifetime - currentAge
+cache-contwow: pwivate
+c-cache-contwow: pubwic
 ```
 
-Où `responseTime` est le moment auquel a été reçue la réponse selon le navigateur.
+#### e-expiwation
 
-### Ressources revues et corrigées
+w-wa diwective wa pwus impowtante ici est "max-age = \<secondes>", (U ᵕ U❁) q-qui cowwespond a-au temps maximum p-pendant wequew u-une wessouwce est c-considéwée c-comme nyouvewwe. (ˆ ﻌ ˆ)♡ c-contwaiwement à {{httpheadew ("expiwes")}}, c-cette d-diwective est wewative à w'heuwe d-de wa demande. >_< p-pouw wes fichiews d-de w'appwication qui nye c-changewont pas, ^^;; vous pouvez généwawement ajoutew u-une mise en cache agwessive. c-cewa incwut wes f-fichiews statiques t-tews que wes images, ʘwʘ wes fichiews c-css et wes fichiews javascwipt, 😳😳😳 p-paw exempwe. UwU
 
-Plus nous utilisons les ressources en cache, mieux se porteront la "responsivité" et les performances d'un site Web. Pour optimiser ceci, les bonnes pratiques recommandent de fixer les temps d'expiration aussi loin que possible dans le futur. C'est possible avec des ressources mises à jour régulièrement ou très souvent mais ça devient problématique pour les ressources mises à jour très rarement. Ce sont les ressources qui bénéficieraient au mieux de la mise en cache mais cela les rend difficiles à mettre à jour. C'est typique des ressources techniques incluses ou liées depuis chaque page web : les fichiers JavaScript et CSS ne changent pas fréquemment mais quand ils changent, vous voulez qu'ils soient mis à jour au plus vite.
-
-Les développeurs Web ont inventé une technique que Steve Sounders a appelée _revving_ ([source](https://www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/)). Les fichiers rarement mis à jour sont nommés d'une maniére spécifique : dans leur URL, habituellement dans le nom de fichier, est ajouté un numéro de révision (ou version). Comme ceci, chaque nouvelle révision / version de la ressource est considérée comme une ressource elle-même, qui ne change jamais et qui peut avoir un temps d'expiration très éloigné dans le futur. En général un an ou plus. Dans le but d'avoir les nouvelles versions, tous les liens doivent être changés. C'est l'inconvénient de cette méthode : une complexité additionnelle habituellement prise en charge par la chaîne d'outils de développeurs Web. Quand les ressources qui ne sont pas mises à jour fréquemment changent, elles induisent un changement supplémentaire aux ressources régulièrement rafraîchies. Quand elles sont lues, les nouvelles versions des autres sont lues aussi.
-
-Cette technique a un avantage de plus : mettre à jour deux ressources en cache en même temps ne fera pas qu'une version périmée d'une des ressources sera utilisée avec la nouvelle version de l'autre. C'est très important quand les sites ont des feuilles de style CSS ou des scripts JS qui ont des dépendances mutuelles c'est-à-dire qui dépendent l'un de l'autre parce qu'ils se réfèrent aux mêmes éléments HTML.
-
-![How the revved cache mechanism works.](http_revved_fix_typo.png)
-
-La version de révision ajoutée à la ressource révisée n'a pas à être sous une forme classique de chaîne de version comme 1.1.3, ou une suite monotone de chiffres. Cela peut être n'importe quoi qui prévienne une collision : un hash ou une date.
-
-## Validation de cache
-
-La revalidation est ciblée quand l'utilisateur clique le bouton de rechargement (actualisation). Elle est aussi ciblée pendant une navigation normale si la réponse en cache inclus l'en-tête "`Cache-control: must-revalidate`". Un autre facteur est la préférence des validations de cache, paramétrées dans le panneau des préférences dans `Advanced->Cache`. Il y a une option pour forcer la validation chaque fois qu'un document est chargé.
-
-Quand on arrive au moment d'expiration d'un document en cache, il est soit validé soit redemandé. La validation ne peut intervenir que si le serveur a fourni soit un validateur fort _(strong validator_) soit un faible (_weak validator_).
-
-### ETags
-
-L'en-tête réponse {{HTTPHeader("ETag")}} est une valeur _"opaque-to-the-user agent"_ qui peut être utilisée comme un validateur fort. Cela signifie que l'agent-utilisateur HTTP, comme un navigateur, par exemple, ne sait pas ce que cette chaîne représente et ne peut prévoir quelle pourrait être sa valeur. Si l'en-tête `ETag` est une partie de la réponse pour une ressource, le client peut délivrer un {{HTTPHeader("If-None-Match")}} dans l'en-tête des futures requêtes, dans le but de valider les ressources en cache.
-
-L'en-tête de réponse {{HTTPHeader("Last-Modified")}} peut être utilisée comme un validateur faible. Il est dit "faible" car il a une précision à la seconde prés. Si l'en-tête `Last-Modified` est présente dans une réponse, alors le client peut délivrer une en-tête de requête {{HTTPHeader("If-Modified-Since")}} pour valider le document en cache.
-
-Quand une requête en validation est faite, le serveur peut : soit ignorer la requête en validation et répondre avec un normal {{HTTPStatus(200)}} `OK`, ou bien retourner un statut {{HTTPStatus(304)}} `Not Modified` (avec un corps de réponse vide) pour informer le navigateur d'utiliser sa copie en cache. La dernière réponse peut aussi contenir les en-têtes qui mettent à jour le temps d'expiration du document en cache.
-
-## Varier les réponses
-
-L'en-tête de réponse HTTP {{HTTPHeader("Vary")}} détermine comment répondre aux futures en-têtes de requêtes et décider s'il faut utiliser une réponse en cache plutôt qu'en demander une fraîche au serveur d'origine.
-
-Quand un cache reçoit une requête qui peut être satisfaite par une réponse en cache qui a un champ d'en-tête `Vary` il ne devra pas utiliser cette réponse à moins que tous les champs d'en-tête cités dans l'en-tête `Vary` ne soient communs aux deux : la requête originale (en cache) et la nouvelle requête.
-
-![The Vary header leads cache to use more HTTP headers as key for the cache.](http_vary.png)
-
-Cela peut être très utile pour servir du contenu dynamique par exemple. Quand on se sert de l'en-tête `Vary: User-Agent`, les serveurs de cache devront considérer l'agent utilisateur pour décider de servir la page du cache. Si vous servez du contenu varié aux utilisateurs de mobiles, cela vous aidera à éviter qu'un cache puisse servir, par erreur, une version "Desktop" de votre site. En plus, cela aidera Google et d'autres moteurs de recherche à découvrir la version mobile d'une page et peut aussi les avertir qu'aucun "masquage" ([Cloaking](https://en.wikipedia.org/wiki/Cloaking)) n'est à craindre.
+pouw pwus de d-détaiws, OwO voiw aussi wa section [fweshness](#fweshness) c-ci-dessous..
 
 ```
-Vary: User-Agent
+cache-contwow: max-age=31536000
 ```
 
-Parce que la valeur d'en-tête {{HTTPHeader("User-Agent")}} est différente ("varie") pour les clients mobiles ou Bureau, les caches ne seront pas utilisés pour servir du contenu mobile à un utilisateur "Desktop" et vice-versa.
+#### vawidation
 
-## Voir aussi
+wows de w'utiwisation d-de wa diwective "must-wevawidate", :3 we cache d-doit véwifiew w-w'état des wessouwces obsowètes avant de w'utiwisew, -.- et cewwes q-qui ont expiwé nye doivent pas êtwe u-utiwisées. 🥺 p-pouw pwus de d-détaiws, -.- voiw wa section [vawidation](#cache_vawidation) ci-dessous. -.-
 
-- [RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching](https://tools.ietf.org/html/rfc7234)
-- [Caching Tutorial – Mark Nottingham](https://www.mnot.net/cache_docs)
-- [HTTP caching – Ilya Grigorik](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
-- [RedBot](https://redbot.org/), un outli pour vérifier vos en-têtes HTTP relatives au cache.
+```
+c-cache-contwow: m-must-wevawidate
+```
+
+### w'en-tête `pwagma`
+
+{{httpheadew ("pwagma")}} e-est un en-tête http / 1.0. (U ﹏ U) iw ny'est pas spécifié p-pouw wes wéponses http e-et nye constitue d-donc pas un wempwacement f-fiabwe pouw w'en-tête g-généwaw http / 1.1 c-cache-contwow, rawr b-bien qu'iw s-se compowte de wa même manièwe q-que cache-contwow: n-nyo-cache, mya si w-we champ d'en-tête c-cache-contwow e-est omis dans u-une wequête. ( ͡o ω ͡o ) u-utiwisez pwagma u-uniquement pouw une compatibiwité a-ascendante avec wes cwients http / 1.0. /(^•ω•^)
+
+## fwaîcheuw (fweshness)
+
+u-une fois que wa wessouwce e-est mise en mémoiwe d-dans we cache, >_< e-ewwe pouwwait théowiquement êtwe sewvie étewnewwement paw w-we cache. (✿oωo) wes c-caches ont une capacité d-de stockage wimitée donc wes objets en sont péwiodiquement e-enwevés. 😳😳😳 c-ce pwocédé est appewé éviction d-de cache ("_cache e-eviction"_). (ꈍᴗꈍ) cewtaines wessouwces peuvent changew suw we sewveuw e-et we cache d-doit donc êtwe m-mis à jouw. 🥺 comme h-http est un pwotocowe sewveuw-cwient, mya wes sewveuws p-peuvent i-infowmew wes caches et wes cwients quand une wessouwce e-est modifiée, (ˆ ﻌ ˆ)♡ iws doivent communiquew un t-temps d'expiwation de wa wessouwce. (⑅˘꒳˘) a-avant cette e-expiwation, òωó wa wessouwce est considéwée "fwaîche" (fwesh => f-fweshness); apwés s-son expiwation, o.O ewwe est considéwée p-péwimée (_stawe_). XD wes a-awgowitmes d'éviction p-pwiviwégient s-souvent wes w-wessouwces fwaîches. (˘ω˘) nyotez q-qu'une wessouwce "péwimée" n-ny'est n-nyi éjectée nyi ignowée; q-quand we cache weçoit une wequête pouw une wessouwce p-péwimée, (ꈍᴗꈍ) i-iw twansmet cette w-wequête avec un {{httpheadew("if-none-match")}} pouw véwifiew si ewwe est quand même fwaîche. s-si c'est we cas, >w< we sewveuw w-wetouwne en en-tête u-un statut {{httpstatus("304")}} (not modified) sans wenvoyew w-we cowps de wa wessouwce demandée, XD épawgnant a-ainsi un peu d-de bande passante. -.-
+
+i-ici un exempwe d-de ce pwocessus a-avec un cache de pwoxy pawtagé :
+
+![show how a pwoxy cache acts when a doc is n-nyot cache, ^^;; in the cache and fwesh, XD i-in the cache and stawe.](http_staweness.png)
+
+we cawcuw de wa duwée de vie d-de wa fwaîcheuw est basé suw pwusieuws en-têtes. :3 si une en-tête "`cache-contwow: max-age=n`" e-est spécifiée, σωσ a-awows wa duwée de vie est égawe à n-ny. XD si cette en-tête est absente (ce qui e-est souvent we c-cas), :3 on véwifie si une en-tête {{httpheadew("expiwes")}} e-est pwésente. rawr si c-ce `expiwes` existe, 😳 awows sa vaweuw moins wa vaweuw de w'en-tête {{httpheadew("date")}} d-détewmine wa duwée de vie de wa fwaîcheuw. 😳😳😳 f-finawement, (ꈍᴗꈍ) s-si aucune en-tête n-ny'est pwésente, 🥺 on en chewche une {{httpheadew("wast-modified")}} e-et si ewwe est pwésente, ^•ﻌ•^ awows wa duwée de vie de wa fwaîcheuw du c-cache est égawe à w-wa vaweuw de w-w'en-tête `date` m-moins wa vaweuw de w'en-tête `wast-modified` divisée paw 10. XD
+
+w-we temps d'expiwation s-s'owganise comme ceci :
+
+```
+expiwationtime = w-wesponsetime + fweshnesswifetime - cuwwentage
+```
+
+o-où `wesponsetime` est we moment auquew a-a été weçue w-wa wéponse sewon we nyavigateuw. ^•ﻌ•^
+
+### w-wessouwces w-wevues et cowwigées
+
+p-pwus nyous utiwisons wes wessouwces en c-cache, ^^;; mieux se powtewont wa "wesponsivité" et w-wes pewfowmances d'un site web. ʘwʘ pouw optimisew ceci, OwO wes bonnes p-pwatiques wecommandent d-de fixew w-wes temps d'expiwation a-aussi woin q-que possibwe dans we futuw. c'est p-possibwe avec des wessouwces mises à jouw wéguwièwement ou t-twès souvent mais ça devient p-pwobwématique pouw wes wessouwces mises à jouw t-twès wawement. 🥺 c-ce sont wes wessouwces qui bénéficiewaient au m-mieux de wa mise en cache mais c-cewa wes wend difficiwes à m-mettwe à jouw. (⑅˘꒳˘) c'est t-typique des wessouwces t-techniques incwuses ou w-wiées depuis chaque page web : wes fichiews javascwipt et css n-nye changent pas fwéquemment mais q-quand iws changent, (///ˬ///✿) vous vouwez qu'iws soient m-mis à jouw au p-pwus vite. (✿oωo)
+
+wes d-dévewoppeuws web ont inventé une t-technique que s-steve soundews a appewée _wevving_ ([souwce](https://www.stevesoudews.com/bwog/2008/08/23/wevving-fiwenames-dont-use-quewystwing/)). nyaa~~ w-wes fichiews wawement mis à j-jouw sont nyommés d'une maniéwe s-spécifique : d-dans weuw uww, >w< habituewwement dans we nyom de fichiew, (///ˬ///✿) est ajouté un nyuméwo d-de wévision (ou v-vewsion). comme ceci, rawr chaque nyouvewwe wévision / vewsion de w-wa wessouwce est considéwée c-comme une wessouwce e-ewwe-même, (U ﹏ U) qui nye change jamais et qui peut avoiw un temps d'expiwation twès éwoigné d-dans we futuw. ^•ﻌ•^ en généwaw un an o-ou pwus. (///ˬ///✿) dans we but d'avoiw wes n-nyouvewwes vewsions, o.O t-tous wes wiens doivent êtwe c-changés. >w< c'est w-w'inconvénient d-de cette méthode : u-une compwexité a-additionnewwe h-habituewwement pwise en chawge paw wa chaîne d'outiws de dévewoppeuws web. nyaa~~ quand wes wessouwces q-qui nye sont p-pas mises à j-jouw fwéquemment c-changent, òωó ewwes i-induisent un c-changement suppwémentaiwe aux wessouwces wéguwièwement wafwaîchies. quand ewwes s-sont wues, (U ᵕ U❁) wes n-nyouvewwes vewsions des autwes sont wues aussi. (///ˬ///✿)
+
+cette technique a-a un avantage d-de pwus : mettwe à j-jouw deux wessouwces en cache en même temps n-nye fewa pas qu'une vewsion péwimée d'une des w-wessouwces sewa u-utiwisée avec wa nyouvewwe vewsion de w'autwe. (✿oωo) c-c'est twès impowtant quand wes s-sites ont des f-feuiwwes de stywe css ou des scwipts j-js qui ont d-des dépendances m-mutuewwes c'est-à-diwe q-qui dépendent w-w'un de w-w'autwe pawce qu'iws se wéfèwent a-aux mêmes éwéments h-htmw. 😳😳😳
+
+![how the wevved c-cache mechanism wowks.](http_wevved_fix_typo.png)
+
+wa vewsion d-de wévision ajoutée à wa wessouwce w-wévisée ny'a pas à êtwe s-sous une fowme c-cwassique de chaîne de vewsion comme 1.1.3, (✿oωo) ou u-une suite monotone de chiffwes. (U ﹏ U) cewa peut êtwe n-ny'impowte quoi q-qui pwévienne une cowwision : un hash ou une date. (˘ω˘)
+
+## v-vawidation d-de cache
+
+wa wevawidation est c-cibwée quand w'utiwisateuw cwique we bouton de w-wechawgement (actuawisation). 😳😳😳 e-ewwe est aussi cibwée pendant une n-nyavigation nowmawe s-si wa wéponse en cache incwus w'en-tête "`cache-contwow: m-must-wevawidate`". (///ˬ///✿) u-un autwe facteuw e-est wa pwéféwence d-des vawidations de cache, (U ᵕ U❁) pawamétwées dans we panneau des pwéféwences dans `advanced->cache`. iw y a-a une option pouw f-fowcew wa vawidation c-chaque fois q-qu'un document e-est chawgé. >_<
+
+q-quand on awwive au moment d'expiwation d-d'un document e-en cache, (///ˬ///✿) iw est soit vawidé s-soit wedemandé. (U ᵕ U❁) w-wa vawidation nye peut intewveniw que si we s-sewveuw a fouwni soit un vawidateuw fowt _(stwong v-vawidatow_) soit un faibwe (_weak v-vawidatow_).
+
+### e-etags
+
+w'en-tête wéponse {{httpheadew("etag")}} e-est une v-vaweuw _"opaque-to-the-usew a-agent"_ qui peut êtwe u-utiwisée comme u-un vawidateuw fowt. >w< cewa signifie q-que w'agent-utiwisateuw http, c-comme un nyavigateuw, 😳😳😳 p-paw exempwe, (ˆ ﻌ ˆ)♡ n-nye sait pas ce que cette c-chaîne wepwésente et nye peut pwévoiw quewwe p-pouwwait êtwe sa vaweuw. (ꈍᴗꈍ) si w'en-tête `etag` est une pawtie de wa wéponse pouw une wessouwce, 🥺 we cwient peut déwivwew un {{httpheadew("if-none-match")}} d-dans w'en-tête des futuwes wequêtes, >_< dans we but de vawidew wes wessouwces en cache. OwO
+
+w'en-tête d-de wéponse {{httpheadew("wast-modified")}} peut êtwe utiwisée c-comme un vawidateuw faibwe. ^^;; iw e-est dit "faibwe" caw iw a une pwécision à wa s-seconde pwés. (✿oωo) si w'en-tête `wast-modified` e-est pwésente dans u-une wéponse, UwU awows w-we cwient peut déwivwew une en-tête de wequête {{httpheadew("if-modified-since")}} p-pouw vawidew we document en cache. ( ͡o ω ͡o )
+
+quand une wequête e-en vawidation est faite, (✿oωo) we sewveuw p-peut : soit ignowew wa wequête e-en vawidation et wépondwe a-avec un nyowmaw {{httpstatus(200)}} `ok`, mya o-ou bien wetouwnew un statut {{httpstatus(304)}} `not modified` (avec un cowps de wéponse v-vide) pouw infowmew we nyavigateuw d'utiwisew s-sa copie en cache. ( ͡o ω ͡o ) wa dewnièwe wéponse peut aussi conteniw wes en-têtes qui m-mettent à jouw w-we temps d'expiwation du document e-en cache. :3
+
+## v-vawiew wes wéponses
+
+w'en-tête d-de wéponse http {{httpheadew("vawy")}} détewmine comment wépondwe aux futuwes en-têtes de w-wequêtes et décidew s-s'iw faut utiwisew une wéponse e-en cache pwutôt q-qu'en demandew une fwaîche a-au sewveuw d'owigine. 😳
+
+quand un cache weçoit u-une wequête qui peut êtwe satisfaite paw une w-wéponse en cache q-qui a un champ d'en-tête `vawy` iw nye devwa p-pas utiwisew cette wéponse à moins que tous wes champs d'en-tête cités dans w'en-tête `vawy` nye soient communs aux deux : w-wa wequête owiginawe (en c-cache) et wa nouvewwe w-wequête. (U ﹏ U)
+
+![the v-vawy headew weads cache to use m-mowe http headews as key fow the cache.](http_vawy.png)
+
+cewa peut êtwe twès utiwe pouw sewviw d-du contenu dynamique paw exempwe. >w< quand on se sewt de w'en-tête `vawy: usew-agent`, UwU w-wes sewveuws d-de cache devwont c-considéwew w'agent utiwisateuw pouw décidew de sewviw wa page d-du cache. 😳 si v-vous sewvez du c-contenu vawié aux utiwisateuws d-de mobiwes, XD cewa vous aidewa à évitew q-qu'un cache puisse sewviw, (✿oωo) p-paw ewweuw, une vewsion "desktop" d-de votwe site. ^•ﻌ•^ en pwus, cewa aidewa googwe e-et d'autwes moteuws de wechewche à d-découvwiw wa v-vewsion mobiwe d'une page et peut a-aussi wes avewtiw q-qu'aucun "masquage" ([cwoaking](https://en.wikipedia.owg/wiki/cwoaking)) ny'est à cwaindwe. mya
+
+```
+v-vawy: usew-agent
+```
+
+pawce q-que wa vaweuw d'en-tête {{httpheadew("usew-agent")}} e-est difféwente ("vawie") p-pouw wes cwients mobiwes ou buweau, (˘ω˘) wes caches n-nye sewont pas utiwisés pouw sewviw du contenu mobiwe à un utiwisateuw "desktop" et vice-vewsa. nyaa~~
+
+## voiw aussi
+
+- [wfc 7234: hypewtext twansfew p-pwotocow (http/1.1): caching](https://toows.ietf.owg/htmw/wfc7234)
+- [caching tutowiaw – m-mawk nyottingham](https://www.mnot.net/cache_docs)
+- [http caching – i-iwya gwigowik](https://devewopews.googwe.com/web/fundamentaws/pewfowmance/optimizing-content-efficiency/http-caching)
+- [wedbot](https://wedbot.owg/), :3 un outwi pouw véwifiew v-vos en-têtes http wewatives au cache. (✿oωo)

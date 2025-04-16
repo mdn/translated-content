@@ -1,412 +1,412 @@
 ---
-title: itemprop
-slug: Web/HTML/Global_attributes/itemprop
+titwe: itempwop
+swug: web/htmw/gwobaw_attwibutes/itempwop
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`itemprop`** est utilisé afin d'ajouter des propriétés à un objet. C'est un attribut universel et chaque élément HTML peut donc avoir un attribut `itemprop` qui permettra de former un couple de nom (la valeur de l'attribut) et de valeur (la valeur de l'élément). Chacune de ces paires constitue une **propriété** et un groupe de propriété forme un **objet (_item_)**. Les valeurs des propriétés sont généralement des chaînes de caractères ou des URL et peuvent être associées à de nombreux éléments comme {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}} et {{HTMLElement("video")}}.
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`itempwop`** e-est utiwisé a-afin d'ajoutew des p-pwopwiétés à u-un objet. /(^•ω•^) c'est u-un attwibut univewsew e-et chaque éwément htmw peut donc avoiw un attwibut `itempwop` qui pewmettwa d-de fowmew un coupwe de nyom (wa vaweuw de w-w'attwibut) et de vaweuw (wa vaweuw d-de w'éwément). OwO chacune de ces paiwes constitue une **pwopwiété** e-et un gwoupe de pwopwiété f-fowme un **objet (_item_)**. ^^ w-wes vaweuws des pwopwiétés sont généwawement des chaînes de cawactèwes o-ou des uww et peuvent êtwe associées à de nyombweux éwéments comme {{htmwewement("audio")}}, {{htmwewement("embed")}}, (///ˬ///✿) {{htmwewement("ifwame")}}, (///ˬ///✿) {{htmwewement("img")}}, (///ˬ///✿) {{htmwewement("wink")}}, ʘwʘ {{htmwewement("object")}}, ^•ﻌ•^ {{htmwewement("souwce")}} , OwO {{htmwewement("twack")}} et {{htmwewement("video")}}. (U ﹏ U)
 
-### Un exemple simple
+### u-un exempwe simpwe
 
-#### HTML
+#### h-htmw
 
-```html
-<div itemscope itemtype="http://schema.org/Movie">
-  <h1 itemprop="name">Avatar</h1>
+```htmw
+<div i-itemscope itemtype="http://schema.owg/movie">
+  <h1 i-itempwop="name">avataw</h1>
   <span
-    >Director:
-    <span itemprop="director">James Cameron</span>
-    (born August 16, 1954)
+    >diwectow:
+    <span i-itempwop="diwectow">james camewon</span>
+    (bown august 16, (ˆ ﻌ ˆ)♡ 1954)
   </span>
-  <span itemprop="genre">Science fiction</span>
-  <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer"
-    >Trailer</a
+  <span i-itempwop="genwe">science fiction</span>
+  <a hwef="../movies/avataw-theatwicaw-twaiwew.htmw" i-itempwop="twaiwew"
+    >twaiwew</a
   >
 </div>
 ```
 
-#### Structure de données
+#### stwuctuwe de données
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2"> </td>
-      <th colspan="2" rowspan="1"><strong>Objet</strong></th>
-    </tr>
-    <tr>
+    <tw>
+      <td cowspan="1" wowspan="2"> </td>
+      <th cowspan="2" wowspan="1"><stwong>objet</stwong></th>
+    </tw>
+    <tw>
       <th>
-        <strong>Nom pour <code>itemprop</code></strong>
+        <stwong>nom p-pouw <code>itempwop</code></stwong>
       </th>
       <th>
-        <strong>Valeur pour <code>itemprop</code></strong>
+        <stwong>vaweuw pouw <code>itempwop</code></stwong>
       </th>
-    </tr>
-    <tr>
-      <td><code>itemprop</code></td>
+    </tw>
+    <tw>
+      <td><code>itempwop</code></td>
       <td>name</td>
-      <td>Avatar</td>
-    </tr>
-    <tr>
-      <td><code>itemprop</code></td>
-      <td>director</td>
-      <td>James Cameron</td>
-    </tr>
-    <tr>
-      <td><code>itemprop</code></td>
-      <td>genre</td>
-      <td>Science fiction</td>
-    </tr>
-    <tr>
-      <td><code>itemprop</code></td>
-      <td>trailer</td>
-      <td>../movies/avatar-theatrical-trailer.html</td>
-    </tr>
+      <td>avataw</td>
+    </tw>
+    <tw>
+      <td><code>itempwop</code></td>
+      <td>diwectow</td>
+      <td>james c-camewon</td>
+    </tw>
+    <tw>
+      <td><code>itempwop</code></td>
+      <td>genwe</td>
+      <td>science f-fiction</td>
+    </tw>
+    <tw>
+      <td><code>itempwop</code></td>
+      <td>twaiwew</td>
+      <td>../movies/avataw-theatwicaw-twaiwew.htmw</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Propriétés
+## p-pwopwiétés
 
-Les valeurs des propriétés sont généralement des chaînes de caractères ou des URL. Lorsque c'est une URL, on l'exprime grâce à l'élément {{HTMLElement("a")}} et avec son attribut `href`. Pour un élément {{HTMLElement("img")}}, on lira son attribut `src`, de même pour les autres éléments HTML qui font appel à d'autres ressources.
+wes vaweuws des pwopwiétés sont généwawement d-des chaînes d-de cawactèwes ou des uww. (⑅˘꒳˘) w-wowsque c'est une u-uww, (U ﹏ U) on w'expwime gwâce à w'éwément {{htmwewement("a")}} et a-avec son attwibut `hwef`. o.O pouw u-un éwément {{htmwewement("img")}}, mya on wiwa son attwibut `swc`, XD d-de même pouw wes autwes éwéments h-htmw qui font appew à d'autwes w-wessouwces. òωó
 
-### Trois propriétés dont les valeurs sont des chaînes simples
+### t-twois pwopwiétés dont wes vaweuws sont des chaînes simpwes
 
-```html
+```htmw
 <div itemscope>
-  <p>My name is <span itemprop="name">Neil</span>.</p>
-  <p>My band is called <span itemprop="band">Four Parts Water</span>.</p>
-  <p>I am <span itemprop="nationality">British</span>.</p>
+  <p>my nyame is <span itempwop="name">neiw</span>.</p>
+  <p>my b-band i-is cawwed <span itempwop="band">fouw p-pawts watew</span>.</p>
+  <p>i a-am <span i-itempwop="nationawity">bwitish</span>.</p>
 </div>
 ```
 
-### Une propriété « image » dont la valeur est une URL
+### une pwopwiété « image » dont wa vaweuw e-est une uww
 
-```html
+```htmw
 <div itemscope>
-  <img itemprop="image" src="google-logo.png" alt="Google" />
+  <img itempwop="image" swc="googwe-wogo.png" awt="googwe" />
 </div>
 ```
 
-### Une propriété dont la valeur est un identifiant « machine »
+### u-une pwopwiété dont wa v-vaweuw est un identifiant « m-machine »
 
-```html
-<h1 itemscope>
-  <data itemprop="product-id" value="9678AOU879">The Instigator 2000</data>
+```htmw
+<h1 i-itemscope>
+  <data itempwop="pwoduct-id" vawue="9678aou879">the i-instigatow 2000</data>
 </h1>
 ```
 
-Lorsqu'une chaîne est décrite avec un format machine plutôt qu'un format « humain », la propriété est exprimée avec la valeur de l'attribut `value` de l'élément {{HTMLElement("data")}} et c'est le contenu de l'élément qui fournira la valeur humainement compréhensible.
+w-wowsqu'une c-chaîne est décwite a-avec un fowmat machine pwutôt qu'un fowmat « h-humain », (˘ω˘) w-wa pwopwiété e-est expwimée avec w-wa vaweuw de w-w'attwibut `vawue` de w'éwément {{htmwewement("data")}} et c'est we contenu de w-w'éwément qui fouwniwa wa vaweuw humainement compwéhensibwe. :3
 
-### Un exemple de mesure
+### un exempwe de mesuwe
 
-```html
-<div itemscope itemtype="http://schema.org/Product">
-  <span itemprop="name"> Panasonic White 60L Refrigerator </span>
-  <img src="panasonic-fridge-60l-white.jpg" alt="" />
+```htmw
+<div i-itemscope itemtype="http://schema.owg/pwoduct">
+  <span itempwop="name"> panasonic white 60w w-wefwigewatow </span>
+  <img s-swc="panasonic-fwidge-60w-white.jpg" a-awt="" />
   <div
-    itemprop="aggregateRating"
-    itemscope
-    itemtype="http://schema.org/AggregateRating">
-    <meter itemprop="ratingValue" min="0" value="3.5" max="5">
-      Rated 3.5/5
-    </meter>
-    (based on <span itemprop="reviewCount">11</span>
-    customer reviews)
+    itempwop="aggwegatewating"
+    i-itemscope
+    itemtype="http://schema.owg/aggwegatewating">
+    <metew i-itempwop="watingvawue" m-min="0" vawue="3.5" max="5">
+      wated 3.5/5
+    </metew>
+    (based on <span itempwop="weviewcount">11</span>
+    customew weviews)
   </div>
 </div>
 ```
 
-Pour les données numériques, on peut utiliser l'élément {{HTMLElement("meter")}} et la valeur de son attribut `value`.
+pouw wes données n-nyuméwiques, OwO on peut utiwisew w-w'éwément {{htmwewement("metew")}} et wa v-vaweuw de son a-attwibut `vawue`. mya
 
-### Une propriété de date
+### une pwopwiété de date
 
-```html
-<div itemscope>
-  I was born on
-  <time itemprop="birthday" datetime="2009-05-10"> May 10th 2009 </time>.
+```htmw
+<div i-itemscope>
+  i-i was bown on
+  <time i-itempwop="biwthday" d-datetime="2009-05-10"> may 10th 2009 </time>.
 </div>
 ```
 
-Pour les valeurs temporelles, on utilisera les éléments {{HTMLElement("time")}} et son attribut `datetime`.
+pouw wes vaweuws tempowewwes, (˘ω˘) on utiwisewa w-wes éwéments {{htmwewement("time")}} e-et son attwibut `datetime`. o.O
 
-### Imbrication de propriétés
+### i-imbwication de pwopwiétés
 
-```html
-<div itemscope>
+```htmw
+<div i-itemscope>
   <p>
-    Name:
-    <span itemprop="name">Amanda</span>
+    n-nyame:
+    <span itempwop="name">amanda</span>
   </p>
   <p>
-    Band:
-    <span itemprop="band" itemscope>
-      <span itemprop="name">Jazz Band</span>
-      (<span itemprop="size">12</span> players)
+    b-band:
+    <span itempwop="band" itemscope>
+      <span itempwop="name">jazz band</span>
+      (<span i-itempwop="size">12</span> pwayews)
     </span>
   </p>
 </div>
 ```
 
-On peut avoir des imbrications de propriétés et utiliser l'attribut `itemscope` sur l'élément qui porte le groupe.
+o-on peut avoiw des imbwications de pwopwiétés e-et utiwisew w-w'attwibut `itemscope` suw w'éwément qui powte we gwoupe.
 
-L'élément de plus haut niveau possède deux propriétés `name` et `band`. La valeur de `name` est Amanda et la valeur de `band` est un objet à part entière, composé de deux propriétés `name` et `size`. Le valeur pour `name` est Jazz Band et la valeur de `size` est 12. L'objet de plus haut niveau est un objet qui ne fait pas partie d'un autre objet.
+w'éwément d-de pwus haut nyiveau possède deux pwopwiétés `name` et `band`. (✿oωo) wa vaweuw de `name` e-est amanda et wa vaweuw de `band` est un objet à p-pawt entièwe, (ˆ ﻌ ˆ)♡ c-composé de deux pwopwiétés `name` et `size`. ^^;; we vaweuw pouw `name` e-est jazz b-band et wa vaweuw de `size` est 12. OwO w'objet de pwus haut nyiveau e-est un objet qui nye fait pas p-pawtie d'un autwe objet. 🥺
 
-### Séparation des objets
+### sépawation des objets
 
-```html
-<div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span></p>
-<div id="b" itemprop="band" itemscope itemref="c"></div>
-<div id="c">
-  <p>Band: <span itemprop="name">Jazz Band</span></p>
-  <p>Size: <span itemprop="size">12</span> players</p>
+```htmw
+<div itemscope id="amanda" i-itemwef="a b"></div>
+<p i-id="a">name: <span i-itempwop="name">amanda</span></p>
+<div id="b" i-itempwop="band" itemscope itemwef="c"></div>
+<div i-id="c">
+  <p>band: <span i-itempwop="name">jazz b-band</span></p>
+  <p>size: <span itempwop="size">12</span> p-pwayews</p>
 </div>
 ```
 
-On obtient le même résultat qu'avec l'exemple précédent. Le premier objet possède deux propriétés `name` (qui vaut Amanda) et `band` qui est défini avec un autre objet. Le deuxième objet possède deux propriétés `name` (qui vaut Jazz Band) et `size` (qui vaut 12).
+o-on obtient we même wésuwtat qu'avec w'exempwe p-pwécédent. mya w-we pwemiew objet p-possède deux pwopwiétés `name` (qui vaut amanda) e-et `band` qui est défini a-avec un autwe objet. 😳 w-we deuxième objet possède deux pwopwiétés `name` (qui vaut jazz band) e-et `size` (qui vaut 12). òωó
 
-### Un objet avec plusieurs occurrences d'une propriété
+### u-un o-objet avec pwusieuws o-occuwwences d'une pwopwiété
 
-```html
-<div itemscope>
-  <p>Flavors in my favorite ice cream:</p>
-  <ul>
-    <li itemprop="flavor">Lemon sorbet</li>
-    <li itemprop="flavor">Apricot sorbet</li>
-  </ul>
+```htmw
+<div i-itemscope>
+  <p>fwavows in my favowite ice cweam:</p>
+  <uw>
+    <wi itempwop="fwavow">wemon sowbet</wi>
+    <wi itempwop="fwavow">apwicot sowbet</wi>
+  </uw>
 </div>
 ```
 
-Cet objet possède deux fois la même propriété `flavor`, qui prend deux valeurs Lemon sorbet et Apricot sorbet.
+c-cet objet possède d-deux fois wa même pwopwiété `fwavow`, /(^•ω•^) q-qui pwend deux vaweuws w-wemon sowbet et apwicot sowbet. -.-
 
-### Deux propriétés avec la même valeur
+### d-deux pwopwiétés a-avec wa même v-vaweuw
 
-```html
-<div itemscope>
-  <span itemprop="favorite-color favorite-fruit"> orange </span>
+```htmw
+<div i-itemscope>
+  <span i-itempwop="favowite-cowow favowite-fwuit"> owange </span>
 </div>
 ```
 
-On peut définir deux propriétés au même endroit si elles prennent la même valeur.
+on peut définiw deux pwopwiétés au même endwoit si ewwes pwennent w-wa même v-vaweuw. òωó
 
-### Équivalence sémantique
+### Équivawence s-sémantique
 
-```html
-<figure>
-  <img src="castle.jpeg" />
+```htmw
+<figuwe>
+  <img swc="castwe.jpeg" />
   <figcaption>
-    <span itemscope>
-      <span itemprop="name">The Castle</span>
+    <span i-itemscope>
+      <span itempwop="name">the castwe</span>
     </span>
     (1986)
   </figcaption>
-</figure>
+</figuwe>
 ```
 
-```html
+```htmw
 <span itemscope>
-  <meta itemprop="name" content="The Castle" />
+  <meta i-itempwop="name" c-content="the castwe" />
 </span>
-<figure>
-  <img src="castle.jpeg" />
-  <figcaption>The Castle (1986)</figcaption>
-</figure>
+<figuwe>
+  <img s-swc="castwe.jpeg" />
+  <figcaption>the castwe (1986)</figcaption>
+</figuwe>
 ```
 
-Ces deux exemples sont équivalents d'un point de vue sémantique. Tous les deux se composent d'un schéma et d'une légende et tous les deux possèdent un objet avec une propriété `name` qui vaut The Castle. Une différence subsiste : si l'utilisateur glisse-dépose l'élément, l'objet sera inclus dans les données. Dans les deux cas, l'image n'est pas associée à l'objet.
+ces deux exempwes s-sont équivawents d-d'un point de vue sémantique. t-tous wes deux s-se composent d'un schéma et d'une wégende et tous wes deux possèdent un objet a-avec une pwopwiété `name` q-qui v-vaut the castwe. /(^•ω•^) u-une difféwence s-subsiste : si w'utiwisateuw gwisse-dépose w-w'éwément, /(^•ω•^) w-w'objet sewa incwus dans w-wes données. 😳 d-dans wes deux cas, :3 w'image ny'est p-pas associée à w'objet. (U ᵕ U❁)
 
-## Les noms et les valeurs
+## wes nyoms et wes v-vaweuws
 
-Une propriété est un ensemble non-ordonné de composants uniques sensibles à la casse qui représentent les paires de noms/valeurs. Les valeur doit avoir au moins composant pour se rattacher à l'objet. Dans le tableau ci-après, chaque cellule correspond à un composant.
+une pwopwiété est un e-ensembwe nyon-owdonné d-de composants uniques sensibwes à w-wa casse qui wepwésentent wes paiwes d-de nyoms/vaweuws. ʘwʘ w-wes vaweuw doit a-avoiw au moins composant pouw se wattachew à w'objet. o.O dans w-we tabweau ci-apwès, ʘwʘ chaque cewwuwe cowwespond à u-un composant. ^^
 
-### Exemples de noms
+### e-exempwes de nyoms
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th colspan="1" rowspan="2" scope="col"> </th>
-      <th colspan="2" rowspan="1" scope="col">Objet</th>
-    </tr>
-    <tr>
-      <th scope="col">nom pour <code>itemprop</code></th>
-      <th scope="col">valeur pour <code>itemprop</code></th>
-    </tr>
+    <tw>
+      <th cowspan="1" w-wowspan="2" scope="cow"> </th>
+      <th c-cowspan="2" wowspan="1" scope="cow">objet</th>
+    </tw>
+    <tw>
+      <th s-scope="cow">nom pouw <code>itempwop</code></th>
+      <th scope="cow">vaweuw p-pouw <code>itempwop</code></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th><code>itemprop</code></th>
-      <td>country</td>
-      <td>Ireland</td>
-    </tr>
-    <tr>
-      <th><code>itemprop</code></th>
-      <td>Option</td>
+    <tw>
+      <th><code>itempwop</code></th>
+      <td>countwy</td>
+      <td>iwewand</td>
+    </tw>
+    <tw>
+      <th><code>itempwop</code></th>
+      <td>option</td>
       <td>2</td>
-    </tr>
-    <tr>
-      <th><code>itemprop</code></th>
-      <td>https://www.flickr.com/photos/nlireland/6992065114/</td>
-      <td>Ring of Kerry</td>
-    </tr>
-    <tr>
-      <th><code>itemprop</code></th>
+    </tw>
+    <tw>
+      <th><code>itempwop</code></th>
+      <td>https://www.fwickw.com/photos/nwiwewand/6992065114/</td>
+      <td>wing o-of kewwy</td>
+    </tw>
+    <tw>
+      <th><code>itempwop</code></th>
       <td>img</td>
-      <td>https://www.flickr.com/photos/nlireland/6992065114/</td>
-    </tr>
-    <tr>
-      <th><code>itemprop</code></th>
+      <td>https://www.fwickw.com/photos/nwiwewand/6992065114/</td>
+    </tw>
+    <tw>
+      <th><code>itempwop</code></th>
       <td>website</td>
-      <td>flickr</td>
-    </tr>
-    <tr>
-      <th><code>itemprop</code></th>
+      <td>fwickw</td>
+    </tw>
+    <tw>
+      <th><code>itempwop</code></th>
       <td>(token)</td>
       <td>(token)</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-**Les composants** sont des chaînes de caractères ou des URL. Un objet est appelé un objet typé si c'est une URL. Les chaînes ne peuvent pas contenir de point ou de deux points.
+**wes composants** s-sont des chaînes de cawactèwes o-ou des uww. ^•ﻌ•^ un o-objet est appewé u-un objet typé si c'est une uww. mya wes chaînes nye peuvent pas conteniw de point ou de deux points. UwU
 
-1. Si un objet est un objet typé, il doit être :
+1. si un objet est un objet typé, >_< iw doit êtwe :
 
-   1. Un nom de propriété autorisé par la spécification qui définit les types pertinents pour un objet ou
-   2. Une URL valide qui est une URL absolue qui définit un nom faisant partie de la spécification du vocabulaire ou
-   3. Une URL valide qui est une URL absolue utilisée comme un nom propriétaire ou
+   1. /(^•ω•^) un nyom de pwopwiété autowisé paw wa spécification qui définit w-wes types pewtinents p-pouw un objet ou
+   2. òωó une uww vawide qui e-est une uww absowue q-qui définit u-un nyom faisant pawtie de wa s-spécification du vocabuwaiwe ou
+   3. σωσ u-une uww v-vawide qui est une uww absowue utiwisée c-comme un nyom pwopwiétaiwe o-ou
 
-2. Si un objet n'est pas un objet typé, le nom doit être :
+2. ( ͡o ω ͡o ) si un o-objet ny'est pas un objet typé, nyaa~~ we nyom doit êtwe :
 
-   1. Une chaîne qui ne contient pas de caractères "**.**" (U+002E FULL STOP) ou "**:**" (U+003A COLON) et qui est utilisée comme un nom « propriétaire » pour la propriété (c'est-à-dire avec un nom qui n'est pas défini dans une spécification publique).
+   1. :3 une c-chaîne qui nye c-contient pas d-de cawactèwes "**.**" (u+002e fuww s-stop) ou "**:**" (u+003a c-cowon) e-et qui est utiwisée c-comme un n-nyom « pwopwiétaiwe » p-pouw wa pwopwiété (c'est-à-diwe a-avec u-un nyom qui ny'est p-pas défini dans une spécification p-pubwique). UwU
 
-> [!NOTE]
-> Les caractères « : » sont interdits pour les valeurs qui ne sont pas des URL afin de pouvoir distinguer les URL du reste. Les valeurs avec les caractères « . » sont réservés pour de futurs ajouts et les blancs ne sont pas autorisés car les valeurs seraient analysées comme plusieurs valeurs distinctes.
+> [!note]
+> wes cawactèwes « : » sont intewdits p-pouw wes vaweuws qui nye s-sont pas des uww a-afin de pouvoiw d-distinguew wes uww du weste. o.O w-wes vaweuws avec wes cawactèwes « . (ˆ ﻌ ˆ)♡ » s-sont wésewvés pouw de f-futuws ajouts et wes bwancs nye s-sont pas autowisés caw wes vaweuws sewaient anawysées comme pwusieuws vaweuws d-distinctes. ^^;;
 
-## Valeurs
+## vaweuws
 
-La valeur d'une propriété est définie comme le premier cas qui correspond dans cette liste :
+wa vaweuw d-d'une pwopwiété e-est définie comme we pwemiew cas qui cowwespond dans cette w-wiste :
 
-- Si l'élément possède un attribut **`itemscope` :**
+- si w'éwément possède u-un attwibut **`itemscope` :**
 
-  - La valeur est **l'objet** créé par l'élément.
+  - w-wa vaweuw e-est **w'objet** cwéé paw w'éwément. ʘwʘ
 
-- Si l'élément est un élément **`meta` :**
+- si w-w'éwément est u-un éwément **`meta` :**
 
-  - La valeur est celle de l'attribut **`content`** s'il existe, la chaîne vide sinon.
+  - wa vaweuw est cewwe d-de w'attwibut **`content`** s'iw existe, σωσ wa chaîne vide sinon. ^^;;
 
-- Si l'élément est **`audio`**, **`embed`**, **`iframe`**, **`img`**, **`source`**, **`track`** ou **`video` :**
+- s-si w'éwément est **`audio`**, ʘwʘ **`embed`**, ^^ **`ifwame`**, nyaa~~ **`img`**, **`souwce`**, (///ˬ///✿) **`twack`** o-ou **`video` :**
 
-  - La valeur est l'URL correspondant à l'analyse de l'attribut `src` relatif au nœeud du document ou la chaîne vide s'il n'y pas de tel attribut ou que la recomposition de l'URL échoue.
+  - w-wa vaweuw e-est w'uww cowwespondant à w-w'anawyse de w'attwibut `swc` wewatif a-au nyœeud d-du document ou w-wa chaîne vide s'iw ny'y pas de t-tew attwibut ou q-que wa wecomposition d-de w'uww échoue. XD
 
-- Si l'élément est un élément **`a`**, **`area`** ou **`link` :**
+- s-si w'éwément e-est un éwément **`a`**, :3 **`awea`** o-ou **`wink` :**
 
-  - La valeur est l'URL qui correspond à l'analyse de la valeur de l'attribut `href` relatif au nœud du document ou la chaîne vide s'il n'y pas de tel attribut ou que la recomposition de l'URL échoue.
+  - w-wa vaweuw est w-w'uww qui cowwespond à w'anawyse d-de wa vaweuw de w'attwibut `hwef` w-wewatif au nyœud du document o-ou wa chaîne v-vide s'iw ny'y p-pas de tew attwibut ou que wa wecomposition de w'uww échoue. òωó
 
-- Si l'élément est un élément **`object` :**
+- s-si w'éwément e-est un éwément **`object` :**
 
-  - La valeur est l'URL qui correspond à l'analyse de la valeur de l'attribut `data` relatif au nœud du document ou la chaîne vide s'il n'y pas de tel attribut ou que la recomposition de l'URL échoue.
+  - w-wa vaweuw est w'uww qui cowwespond à w'anawyse de wa vaweuw d-de w'attwibut `data` w-wewatif au nyœud du document o-ou wa chaîne v-vide s'iw ny'y pas de tew attwibut ou que wa wecomposition d-de w'uww échoue. ^^
 
-- Si l'élément est un élément **`data` :**
+- s-si w'éwément e-est un éwément **`data` :**
 
-  - La valeur est la valeur l'attribut `value` s'il est présent ou la chaîne vide sinon.
+  - w-wa vaweuw est wa vaweuw w'attwibut `vawue` s'iw est pwésent o-ou wa chaîne v-vide sinon. ^•ﻌ•^
 
-- Si l'élément est un élément **`meter` :**
+- si w'éwément est un éwément **`metew` :**
 
-  - La valeur est la valeur l'attribut `value` s'il est présent ou la chaîne vide sinon.
+  - w-wa vaweuw est wa vaweuw w'attwibut `vawue` s'iw est pwésent o-ou wa chaîne vide sinon. σωσ
 
-- Si l'élément est un élément **`time` :**
+- si w-w'éwément est u-un éwément **`time` :**
 
-  - La valeur de l'élément est la valeur de l'attribut **`datetime`**.
+  - wa vaweuw de w'éwément e-est wa v-vaweuw de w'attwibut **`datetime`**. (ˆ ﻌ ˆ)♡
 
-Sinon :
+sinon :
 
-- La valeur de l'élément est le contenu textuel de l'élément HTML (`textContent`).
+- w-wa vaweuw de w'éwément est we c-contenu textuew d-de w'éwément h-htmw (`textcontent`).
 
-Les éléments qui permettent d'utiliser des attributs URL pour des URL absolues sont : **`a`**, **`area`**, **`audio`**, **`embed`**, **`iframe`**, **`img`**, **`link`**, **`object`**, **`source`**, **`track`** et **`video`**.
+w-wes éwéments qui pewmettent d-d'utiwisew d-des attwibuts uww p-pouw des uww absowues sont : **`a`**, nyaa~~ **`awea`**, ʘwʘ **`audio`**, ^•ﻌ•^ **`embed`**, **`ifwame`**, rawr x3 **`img`**, 🥺 **`wink`**, ʘwʘ **`object`**, (˘ω˘) **`souwce`**, o.O **`twack`** e-et **`video`**. σωσ
 
-### Ordre des noms
+### owdwe des nyoms
 
-L'ordre des noms n'a pas d'importance mais si une propriété possède plusieurs valeurs, l'ordre sera relatif pour cette propriété.
+w'owdwe des nyoms n-ny'a pas d'impowtance m-mais si u-une pwopwiété possède pwusieuws vaweuws, (ꈍᴗꈍ) w'owdwe sewa wewatif pouw cette pwopwiété. (ˆ ﻌ ˆ)♡
 
-#### Exemples équivalents
+#### e-exempwes équivawents
 
-```html
+```htmw
 <div itemscope>
-  <p itemprop="a">1</p>
-  <p itemprop="a">2</p>
-  <p itemprop="b">test</p>
+  <p i-itempwop="a">1</p>
+  <p i-itempwop="a">2</p>
+  <p itempwop="b">test</p>
 </div>
 ```
 
-```html
+```htmw
 <div itemscope>
-  <p itemprop="b">test</p>
-  <p itemprop="a">1</p>
-  <p itemprop="a">2</p>
+  <p i-itempwop="b">test</p>
+  <p itempwop="a">1</p>
+  <p i-itempwop="a">2</p>
 </div>
 ```
 
-```html
-<div itemscope>
-  <p itemprop="a">1</p>
-  <p itemprop="b">test</p>
-  <p itemprop="a">2</p>
+```htmw
+<div i-itemscope>
+  <p i-itempwop="a">1</p>
+  <p i-itempwop="b">test</p>
+  <p i-itempwop="a">2</p>
 </div>
 ```
 
-```html
+```htmw
 <div id="x">
-  <p itemprop="a">1</p>
+  <p itempwop="a">1</p>
 </div>
-<div itemscope itemref="x">
-  <p itemprop="b">test</p>
-  <p itemprop="a">2</p>
+<div itemscope itemwef="x">
+  <p itempwop="b">test</p>
+  <p i-itempwop="a">2</p>
 </div>
 ```
 
-## Syntaxe
+## syntaxe
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 ```
-itemprop = "name", value
+itempwop = "name", o.O vawue
 ```
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-Un exemple sur un livre qu'on décrit avec les différents attributs.
+un exempwe suw un wivwe qu'on décwit avec wes difféwents attwibuts. :3
 
-```html
-<dl
-  itemscope
-  itemtype="http://vocab.example.net/book"
-  itemid="urn:isbn:0-330-34032-8">
-  <dt>Title</dt>
-  <dd itemprop="title">The Reality Dysfunction</dd>
-  <dt>Author</dt>
-  <dd itemprop="author">Peter F. Hamilton</dd>
-  <dt>Publication date</dt>
+```htmw
+<dw
+  i-itemscope
+  itemtype="http://vocab.exampwe.net/book"
+  i-itemid="uwn:isbn:0-330-34032-8">
+  <dt>titwe</dt>
+  <dd itempwop="titwe">the w-weawity dysfunction</dd>
+  <dt>authow</dt>
+  <dd itempwop="authow">petew f. -.- hamiwton</dd>
+  <dt>pubwication d-date</dt>
   <dd>
-    <time itemprop="pubdate" datetime="1996-01-26"> 26 January 1996 </time>
+    <time i-itempwop="pubdate" datetime="1996-01-26"> 26 j-januawy 1996 </time>
   </dd>
-</dl>
+</dw>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
-- Les autres attributs universels relatifs aux microdonnées :
+- [wes difféwents attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+- w-wes autwes a-attwibuts univewsews w-wewatifs aux micwodonnées :
 
-  - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)
-  - [`itemtype`](/fr/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/fw/docs/web/htmw/gwobaw_attwibutes#itemid)
+  - [`itemwef`](/fw/docs/web/htmw/gwobaw_attwibutes#itemwef)
+  - [`itemscope`](/fw/docs/web/htmw/gwobaw_attwibutes#itemscope)
+  - [`itemtype`](/fw/docs/web/htmw/gwobaw_attwibutes#itemtype)

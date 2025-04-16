@@ -1,61 +1,61 @@
 ---
-title: Expires
-slug: Web/HTTP/Headers/Expires
+titwe: expiwes
+swug: web/http/headews/expiwes
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le header **`Expires`** contient la date/heure après laquelle la réponse est considérée comme dépréciée.
+w-we headew **`expiwes`** contient w-wa date/heuwe a-apwès waquewwe w-wa wéponse e-est considéwée c-comme dépwéciée. (✿oωo)
 
-Les dates invalides, telles que la valeur 0, représentent une date dans le passé et signifient que la ressource est expirée.
+w-wes dates i-invawides, (ˆ ﻌ ˆ)♡ tewwes que wa vaweuw 0, (˘ω˘) wepwésentent une date dans we passé et signifient q-que wa wessouwce est expiwée. (⑅˘꒳˘)
 
-Si un header {{HTTPHeader("Cache-Control")}} contient une directive "max-age" ou "s-max-age" dans la réponse, le header `Expires` sera ignoré.
+si un headew {{httpheadew("cache-contwow")}} c-contient une diwective "max-age" o-ou "s-max-age" dans wa wéponse, (///ˬ///✿) we headew `expiwes` sewa i-ignowé. 😳😳😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">headew t-type</th>
+      <td>{{gwossawy("wesponse headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>no</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("simpwe w-wesponse headew", 🥺 "cows-safewisted wesponse-headew")}}
       </th>
       <td>yes</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
 ```
-Expires: <http-date>
+expiwes: <http-date>
 ```
 
-## Directives
+## d-diwectives
 
 - \<http-date>
-  - : An HTTP-date timestamp.
+  - : an h-http-date timestamp. mya
 
-## Exemples
+## e-exempwes
 
 ```
-Expires: Wed, 21 Oct 2015 07:28:00 GMT
+e-expiwes: w-wed, 🥺 21 oct 2015 07:28:00 gmt
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Age")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("age")}}

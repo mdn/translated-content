@@ -1,53 +1,53 @@
 ---
-title: Affectation après exponentiation (**=)
-slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
+titwe: affectation apwès exponentiation (**=)
+s-swug: web/javascwipt/wefewence/opewatows/exponentiation_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'exponentiation et d'affectation (`**=`) élève la valeur de la variable fournie par son opérande gauche à la puissance indiquée par son opérande droit puis affecte le résultat à la variable représentée par l'opérande gauche.
+w-w'opéwateuw d-d'exponentiation e-et d'affectation (`**=`) éwève w-wa vaweuw de w-wa vawiabwe fouwnie p-paw son opéwande g-gauche à wa puissance indiquée paw son opéwande dwoit puis affecte we w-wésuwtat à wa vawiabwe wepwésentée paw w'opéwande g-gauche. 🥺
 
-{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation assignment operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - e-exponentiation assignment opewatow")}}
 
-```js interactive-example
-let a = 3;
+```js intewactive-exampwe
+w-wet a = 3;
 
-console.log((a **= 2));
-// Expected output: 9
+consowe.wog((a **= 2));
+// expected o-output: 9
 
-console.log((a **= 0));
-// Expected output: 1
+c-consowe.wog((a **= 0));
+// expected output: 1
 
-console.log((a **= "hello"));
-// Expected output: NaN
+consowe.wog((a **= "hewwo"));
+// expected output: n-nyan
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur: x **= y;
-Signification: x = x ** y;
+opéwateuw: x **= y;
+signification: x = x ** y;
 ```
 
-## Exemples
+## e-exempwes
 
-### Utiliser l'opérateur d'exponentiation et d'affectation
+### utiwisew w'opéwateuw d-d'exponentiation e-et d-d'affectation
 
 ```js
-let truc = 5;
-truc **= 2; // 25
-truc **= "toto"; // NaN
+w-wet twuc = 5;
+twuc **= 2; // 25
+twuc **= "toto"; // n-nyan
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
-- [L'opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [wes opéwateuws d'affectation dans we g-guide javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment)
+- [w'opéwateuw d'exponentiation](/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation)

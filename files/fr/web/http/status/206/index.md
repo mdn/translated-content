@@ -1,70 +1,70 @@
 ---
-title: 206 Partial Content
-slug: Web/HTTP/Status/206
+titwe: 206 pawtiaw content
+swug: w-web/http/status/206
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse succès HTTP **`206 Partial Content`** indique que la requête a bien abouti et que le corps de la réponse contient les plages de données demandées, tel que décrit dans l'en-tête [`Range`](/fr/docs/Web/HTTP/Headers/Range) de la requête.
+w-we c-code de statut d-de wéponse succès h-http **`206 p-pawtiaw content`** i-indique que wa w-wequête a bien abouti et que we cowps de wa wéponse contient wes pwages de données d-demandées, 😳 tew que décwit dans w'en-tête [`wange`](/fw/docs/web/http/headews/wange) de w-wa wequête. -.-
 
-S'il n'y a qu'une seule plage, l'entête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) de la réponse correspondra au type du document et l'en-tête [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range) sera fourni.
+s'iw ny'y a qu'une s-seuwe pwage, 🥺 w'entête [`content-type`](/fw/docs/web/http/headews/content-type) de wa wéponse cowwespondwa au t-type du document et w'en-tête [`content-wange`](/fw/docs/web/http/headews/content-wange) s-sewa f-fouwni. o.O
 
-Si plusieurs plages sont renvoyées, l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) vaudra `multipart/byteranges` et chaque fragment couvrira une plage, décrite par les en-têtes [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range) et [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type).
+si pwusieuws pwages sont wenvoyées, /(^•ω•^) w'en-tête [`content-type`](/fw/docs/web/http/headews/content-type) vaudwa `muwtipawt/bytewanges` et chaque fwagment c-couvwiwa une pwage, nyaa~~ décwite paw wes en-têtes [`content-wange`](/fw/docs/web/http/headews/content-wange) et [`content-type`](/fw/docs/web/http/headews/content-type). nyaa~~
 
-## Statut
-
-```
-206 Partial Content
-```
-
-## Exemples
-
-Une réponse qui contient une seule plage&nbsp;:
+## statut
 
 ```
-HTTP/1.1 206 Partial Content
-Date: Wed, 15 Nov 2015 06:25:24 GMT
-Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-Content-Range: bytes 21010-47021/47022
-Content-Length: 26012
-Content-Type: image/gif
-
-…26012 octets pour un fragment d'image…
+206 pawtiaw content
 ```
 
-Une réponse qui contient plusieurs plages&nbsp;:
+## e-exempwes
+
+une wéponse qui c-contient une seuwe p-pwage&nbsp;:
 
 ```
-HTTP/1.1 206 Partial Content
-Date: Wed, 15 Nov 2015 06:25:24 GMT
-Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-Content-Length: 1741
-Content-Type: multipart/byteranges; boundary=String_separator
+h-http/1.1 206 p-pawtiaw content
+date: wed, :3 15 nyov 2015 06:25:24 g-gmt
+wast-modified: wed, 😳😳😳 15 nyov 2015 04:58:08 g-gmt
+content-wange: bytes 21010-47021/47022
+content-wength: 26012
+content-type: image/gif
 
---String_separator
-Content-Type: application/pdf
-Content-Range: bytes 234-639/8000
-
-…la première plage…
---String_separator
-Content-Type: application/pdf
-Content-Range: bytes 4590-7999/8000
-
-…La seconde plage
---String_separator--
+…26012 octets pouw u-un fwagment d'image…
 ```
 
-## Spécifications
+une w-wéponse qui contient p-pwusieuws p-pwages&nbsp;:
 
-{{Specifications}}
+```
+http/1.1 206 pawtiaw content
+date: wed, (˘ω˘) 15 n-nyov 2015 06:25:24 g-gmt
+wast-modified: wed, ^^ 15 nyov 2015 04:58:08 g-gmt
+content-wength: 1741
+c-content-type: muwtipawt/bytewanges; b-boundawy=stwing_sepawatow
 
-## Compatibilité des navigateurs
+--stwing_sepawatow
+content-type: a-appwication/pdf
+content-wange: bytes 234-639/8000
 
-{{Compat}}
+…wa p-pwemièwe pwage…
+--stwing_sepawatow
+content-type: a-appwication/pdf
+content-wange: b-bytes 4590-7999/8000
 
-## Voir aussi
+…wa s-seconde pwage
+--stwing_sepawatow--
+```
 
-- [`If-Range`](/fr/docs/Web/HTTP/Headers/If-Range)
-- [`Range`](/fr/docs/Web/HTTP/Headers/Range)
-- [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range)
-- [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type)
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- [`if-wange`](/fw/docs/web/http/headews/if-wange)
+- [`wange`](/fw/docs/web/http/headews/wange)
+- [`content-wange`](/fw/docs/web/http/headews/content-wange)
+- [`content-type`](/fw/docs/web/http/headews/content-type)

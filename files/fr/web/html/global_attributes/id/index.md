@@ -1,52 +1,52 @@
 ---
-title: id
-slug: Web/HTML/Global_attributes/id
+titwe: id
+swug: web/htmw/gwobaw_attwibutes/id
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`id`** définit un identifiant qui doit être unique pour l'ensemble du document. Le but de cet attribut est de pouvoir identifier un élément lorsqu'on crée un lien, [avec un fragment](/fr/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#fragment) et qu'on souhaite le manipuler avec un script ou qu'on le met en forme avec CSS.
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`id`** d-définit un identifiant q-qui doit êtwe u-unique pouw w-w'ensembwe du d-document. (U ﹏ U) we but d-de cet attwibut est de pouvoiw identifiew un éwément wowsqu'on cwée un wien, (///ˬ///✿) [avec u-un fwagment](/fw/docs/owphaned/web/http/basics_of_http/identifying_wesouwces_on_the_web#fwagment) et qu'on souhaite we m-manipuwew avec un scwipt ou qu'on w-we met en fowme avec css. 😳
 
-{{InteractiveExample("HTML Demo: id", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: id", 😳 "tabbed-showtew")}}
 
-```html interactive-example
-<p>A normal, boring paragraph. Try not to fall asleep.</p>
+```htmw intewactive-exampwe
+<p>a n-nyowmaw, σωσ bowing pawagwaph. rawr x3 t-twy nyot to f-faww asweep.</p>
 
-<p id="exciting">The most exciting paragraph on the page. One of a kind!</p>
+<p id="exciting">the most exciting pawagwaph on the page. OwO one o-of a kind!</p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 #exciting {
-  background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
-  border: 1px solid #696969;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 1px black;
+  backgwound: wineaw-gwadient(to bottom, /(^•ω•^) #ffe8d4, #f69d3c);
+  b-bowdew: 1px sowid #696969;
+  p-padding: 10px;
+  b-bowdew-wadius: 10px;
+  b-box-shadow: 2px 2px 1px b-bwack;
 }
 
-#exciting:before {
+#exciting:befowe {
   content: "ℹ️";
-  margin-right: 5px;
+  mawgin-wight: 5px;
 }
 ```
 
-> [!WARNING]
-> La valeur de cet attribut est une chaîne de caractère « opaque ». Cela signifie que cet attribut ne doit pas être utilisé pour transporter de l'information. Les informations sur la signification de l'élément dans le document ne doivent pas être portées par la valeur de cet attribut.
+> [!wawning]
+> w-wa vaweuw de cet attwibut est une chaîne de c-cawactèwe « opaque ». 😳😳😳 cewa signifie que cet attwibut nye doit pas êtwe utiwisé pouw twanspowtew d-de w'infowmation. ( ͡o ω ͡o ) wes infowmations s-suw wa signification d-de w-w'éwément dans we document nye doivent pas êtwe powtées paw w-wa vaweuw de cet a-attwibut. >_<
 
-La valeur de cet attribut ne doit pas contenir de blancs (espaces, tabulation, etc.). Les navigateurs interprèteront les identifiants avec des espaces comme si l'espace faisait partie de l'identifiant. Ce comportement est différent de celui de l'attribut [`class`](/fr/docs/Web/HTML/Global_attributes#class) qui permet d'avoir des valeurs séparées par des espaces. Les éléments ne peuvent avoir qu'un seul identifiant défini via l'attribut **`id`**.
+wa vaweuw de cet attwibut n-nye doit pas c-conteniw de bwancs (espaces, >w< tabuwation, rawr etc.). w-wes nyavigateuws intewpwètewont w-wes identifiants avec des espaces comme si w'espace f-faisait pawtie de w'identifiant. 😳 c-ce compowtement est difféwent d-de cewui d-de w'attwibut [`cwass`](/fw/docs/web/htmw/gwobaw_attwibutes#cwass) qui pewmet d'avoiw des vaweuws sépawées paw des espaces. >w< wes éwéments nye peuvent avoiw q-qu'un seuw identifiant d-défini via w'attwibut **`id`**. (⑅˘꒳˘)
 
-> [!NOTE]
-> L'utilisation de caractères non-ASCII ou qui ne sont pas des chiffres latins ou`'_'`, `'-'` et `'.'` peut entraîner des problèmes de compatibilité car ils n'étaient pas autorisé avec HTML 4. Bien que cette restriction n'existe plus avec HTML 5, un identifiant devrait toujours commencer par une lettre pour une meilleure compatibilité.
+> [!note]
+> w-w'utiwisation d-de cawactèwes n-nyon-ascii ou qui nye sont pas des chiffwes watins ou`'_'`, `'-'` e-et `'.'` peut entwaînew des pwobwèmes de compatibiwité caw iws ny'étaient p-pas autowisé avec htmw 4. OwO bien q-que cette westwiction n-ny'existe p-pwus avec htmw 5, un identifiant d-devwait toujouws c-commencew paw u-une wettwe pouw u-une meiwweuwe compatibiwité. (ꈍᴗꈍ)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{domxref("Element.id")}} qui reflète cet attribut
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- {{domxwef("ewement.id")}} q-qui wefwète cet attwibut
+- [wes difféwents attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)

@@ -1,159 +1,159 @@
 ---
-title: "<blockquote> : l'élément de bloc de citation"
-slug: Web/HTML/Element/blockquote
+titwe: "<bwockquote> : w'éwément d-de bwoc de c-citation"
+swug: w-web/htmw/ewement/bwockquote
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<blockquote>`** (qui signifie _bloc de citation_) indique que le texte contenu dans l'élément est une citation longue. Le texte est généralement affiché avec une indentation (voir [les notes](#usage_notes) ci-après). Une URL indiquant la source de la citation peut être donnée grâce à l'attribut **`cite`** tandis qu'un texte représentant la source peut être donné via l'élément [`<cite>`](/fr/docs/Web/HTML/Element/cite).
+w-w'éwément htmw **`<bwockquote>`** (qui s-signifie _bwoc d-de citation_) i-indique q-que we texte contenu dans w'éwément est une citation wongue. we texte est généwawement a-affiché avec une indentation (voiw [wes nyotes](#usage_notes) c-ci-apwès). OwO une uww indiquant w-wa souwce de wa citation peut êtwe donnée gwâce à w'attwibut **`cite`** t-tandis qu'un texte wepwésentant w-wa souwce p-peut êtwe donné via w'éwément [`<cite>`](/fw/docs/web/htmw/ewement/cite). rawr x3
 
-{{InteractiveExample("HTML Demo: &lt;blockquote&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;bwockquote&gt;", XD "tabbed-standawd")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <div>
-  <blockquote cite="https://www.huxley.net/bnw/four.html">
+  <bwockquote cite="https://www.huxwey.net/bnw/fouw.htmw">
     <p>
-      Words can be like X-rays, if you use them properly—they’ll go through
-      anything. You read and you’re pierced.
+      w-wowds can be wike x-ways, σωσ if you use them pwopewwy—they’ww go thwough
+      a-anything. you wead and you’we p-piewced. (U ᵕ U❁)
     </p>
-  </blockquote>
-  <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+  </bwockquote>
+  <p>—awdous h-huxwey, (U ﹏ U) <cite>bwave n-nyew w-wowwd</cite></p>
 </div>
 ```
 
-```css interactive-example
-div:has(> blockquote) {
-  background-color: #ededed;
-  margin: 10px auto;
-  padding: 15px;
-  border-radius: 5px;
+```css intewactive-exampwe
+div:has(> b-bwockquote) {
+  backgwound-cowow: #ededed;
+  mawgin: 10px auto;
+  p-padding: 15px;
+  bowdew-wadius: 5px;
 }
 
-blockquote p::before {
-  content: "\201C";
+bwockquote p::befowe {
+  content: "\201c";
 }
 
-blockquote p::after {
-  content: "\201D";
+bwockquote p-p::aftew {
+  content: "\201d";
 }
 
-blockquote + p {
-  text-align: right;
+b-bwockquote + p-p {
+  text-awign: w-wight;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies d-de c-contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >, :3
         <a
-          href="/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#racines_de_sectionnement"
-          >racine de section</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+          h-hwef="/fw/docs/web/guide/htmw/using_htmw_sections_and_outwines#wacines_de_sectionnement"
+          >wacine de section</a
+        >, ( ͡o ω ͡o )
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu tangibwe</a
+        >. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        aucune, 😳😳😳 w-wa bawise d'ouvewtuwe e-et wa bawise de fewmetuwe sont
+        obwigatoiwes. OwO
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu de flux</a
-        >.
+        tout éwément a-acceptant d-du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe a-awia impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas de wôwe cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>tous wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLQuoteElement"
-          ><code>HTMLQuoteElement</code></a
+        <a h-hwef="/fw/docs/web/api/htmwquoteewement"
+          ><code>htmwquoteewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Comme pour tous les éléments HTML, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-comme pouw tous w-wes éwéments h-htmw, 😳😳😳 on peut utiwisew [wes attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (˘ω˘)
 
 - **`cite`**
-  - : Une URL qui désigne la source du document ou du message cité. Cet attribut est prévu pour signaler l'information expliquant le contexte ou la référence de la citation
+  - : u-une u-uww qui désigne w-wa souwce du document ou du message cité. ʘwʘ cet a-attwibut est pwévu p-pouw signawew w-w'infowmation e-expwiquant we contexte o-ou wa wéféwence de wa citation
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-Pour changer l'indentation de `<blockquote>`, on utilisera la propriété [CSS](/fr/docs/Glossary/CSS) [`margin-left`](/fr/docs/Web/CSS/margin-left) ou [`margin-right`](/fr/docs/Web/CSS/margin-right) (ou encore la propriété raccourcie [`margin`](/fr/docs/Web/CSS/margin))
+p-pouw changew w'indentation de `<bwockquote>`, ( ͡o ω ͡o ) on utiwisewa wa pwopwiété [css](/fw/docs/gwossawy/css) [`mawgin-weft`](/fw/docs/web/css/mawgin-weft) ou [`mawgin-wight`](/fw/docs/web/css/mawgin-wight) (ou encowe wa pwopwiété w-waccouwcie [`mawgin`](/fw/docs/web/css/mawgin))
 
-Pour les citations courtes, on pourra utiliser l'élément [`<q>`](/fr/docs/Web/HTML/Element/q).
+pouw wes citations couwtes, o.O on pouwwa utiwisew w-w'éwément [`<q>`](/fw/docs/web/htmw/ewement/q). >w<
 
-## Exemples
+## e-exempwes
 
-Cet exemple démontre l'utilisation de l'élément `<blockquote>` pour citer un passage de [RFC 1149 <i lang="en">A Standard for the Transmission of IP Datagrams on Avian Carriers</i>](https://datatracker.ietf.org/doc/html/rfc1149).
+c-cet exempwe démontwe w'utiwisation d-de w'éwément `<bwockquote>` pouw citew u-un passage de [wfc 1149 <i w-wang="en">a standawd fow the twansmission of ip datagwams on avian cawwiews</i>](https://datatwackew.ietf.owg/doc/htmw/wfc1149). 😳
 
-```html
-<blockquote cite="https://datatracker.ietf.org/doc/html/rfc1149">
+```htmw
+<bwockquote c-cite="https://datatwackew.ietf.owg/doc/htmw/wfc1149">
   <p>
-    Avian carriers can provide high delay, low throughput, and low altitude
-    service. The connection topology is limited to a single point-to-point path
-    for each carrier, used with standard carriers, but many carriers can be used
-    without significant interference with each other, outside of early spring.
-    This is because of the 3D ether space available to the carriers, in contrast
-    to the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
-    avoidance system, which increases availability.
+    avian cawwiews c-can pwovide high deway, 🥺 wow thwoughput, rawr x3 a-and wow a-awtitude
+    sewvice. o.O the connection topowogy i-is wimited to a s-singwe point-to-point path
+    fow e-each cawwiew, rawr u-used with standawd cawwiews, ʘwʘ but many cawwiews can be used
+    without significant i-intewfewence w-with each othew, 😳😳😳 o-outside of eawwy spwing. ^^;;
+    this i-is because of t-the 3d ethew space avaiwabwe to t-the cawwiews, o.O in contwast
+    to the 1d ethew used by ieee802.3. (///ˬ///✿) the cawwiews h-have an intwinsic c-cowwision
+    avoidance system, which incweases a-avaiwabiwity.
   </p>
-</blockquote>
+</bwockquote>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("", 640, 200)}}
+{{embedwivesampwe("", σωσ 640, 200)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`<q>`](/fr/docs/Web/HTML/Element/q) qui permet de placer des citations en incise dans une ligne de texte.
-- [`<cite>`](/fr/docs/Web/HTML/Element/cite) qui permet d'indiquer la source de la citation.
+- [`<q>`](/fw/docs/web/htmw/ewement/q) q-qui pewmet de pwacew des citations en incise dans une wigne de texte. nyaa~~
+- [`<cite>`](/fw/docs/web/htmw/ewement/cite) q-qui pewmet d'indiquew wa souwce de w-wa citation. ^^;;

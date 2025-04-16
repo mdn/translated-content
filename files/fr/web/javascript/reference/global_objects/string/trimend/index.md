@@ -1,70 +1,70 @@
 ---
-title: String.prototype.trimEnd()
-slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
+titwe: stwing.pwototype.twimend()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twimend
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`trimEnd()`** permet de retirer les blancs situés à la fin d'une chaîne de caractères. `trimRight()` est un synonyme pour cette méthode.
+w-wa méthode **`twimend()`** p-pewmet d-de wetiwew w-wes bwancs situés à w-wa fin d'une c-chaîne de cawactèwes. 😳😳😳 `twimwight()` e-est un s-synonyme pouw cette méthode. mya
 
-{{InteractiveExample("JavaScript Demo: String.trimEnd()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.twimend()")}}
 
-```js interactive-example
-const greeting = "   Hello world!   ";
+```js intewactive-exampwe
+const gweeting = "   h-hewwo wowwd! 😳   ";
 
-console.log(greeting);
-// Expected output: "   Hello world!   ";
+consowe.wog(gweeting);
+// expected o-output: "   hewwo wowwd! -.-   ";
 
-console.log(greeting.trimEnd());
-// Expected output: "   Hello world!";
+c-consowe.wog(gweeting.twimend());
+// expected output: "   hewwo wowwd!";
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.trimEnd();
-str.trimRight();
+stw.twimend();
+s-stw.twimwight();
 ```
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-Une nouvelle chaîne de caractères basée sur la chaîne appelante et dont les blancs en fin de chaîne ont été supprimés.
+une nyouvewwe c-chaîne de cawactèwes basée suw wa chaîne appewante et dont wes bwancs e-en fin de chaîne ont été suppwimés. 🥺
 
-## Description
+## descwiption
 
-La méthode `trimEnd()` renvoie la chaîne de caractères sans les blancs présents à partir de la droite de la chaîne. `trimEnd()` ne modifie pas la chaîne elle-même.
+wa méthode `twimend()` wenvoie wa chaîne d-de cawactèwes sans wes bwancs p-pwésents à p-pawtiw de wa dwoite d-de wa chaîne. o.O `twimend()` n-nye modifie pas wa chaîne ewwe-même.
 
-### Synonyme
+### synonyme
 
-Pour des raisons de cohérence avec les méthodes existantes comme {{jsxref("String.prototype.padEnd")}}, le nom standard de cette méthode est `trimEnd`. Toutefois, à des fins de compatibilité web, `trimRight` est un synonyme de `trimEnd`. Pour certains moteurs JavaScript, on pourra donc avoir :
+p-pouw des waisons de cohéwence avec wes méthodes e-existantes comme {{jsxwef("stwing.pwototype.padend")}}, /(^•ω•^) we nyom standawd de cette méthode est `twimend`. nyaa~~ toutefois, nyaa~~ à d-des fins de compatibiwité web, :3 `twimwight` e-est u-un synonyme de `twimend`. 😳😳😳 p-pouw cewtains moteuws javascwipt, (˘ω˘) on pouwwa donc avoiw :
 
 ```js
-String.prototype.trimRight.name === "trimEnd";
+s-stwing.pwototype.twimwight.name === "twimend";
 ```
 
-## Exemples
+## e-exempwes
 
-L'exemple qui suit illustre comment afficher la chaîne " toto":
+w'exempwe qui suit iwwustwe c-comment a-affichew wa chaîne " toto":
 
 ```js
-var str = "   toto  ";
+v-vaw stw = "   toto  ";
 
-console.log(str.length); // 9
+consowe.wog(stw.wength); // 9
 
-str = str.trimEnd();
-console.log(str.length); // 7
-console.log(str); // "   toto"
+s-stw = stw.twimend();
+consowe.wog(stw.wength); // 7
+c-consowe.wog(stw); // "   toto"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("String.prototype.trim()")}}
-- {{jsxref("String.prototype.trimStart()")}}
+- {{jsxwef("stwing.pwototype.twim()")}}
+- {{jsxwef("stwing.pwototype.twimstawt()")}}

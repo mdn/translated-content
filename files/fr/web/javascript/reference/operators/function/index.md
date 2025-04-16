@@ -1,131 +1,131 @@
 ---
-title: L'opérateur function
-slug: Web/JavaScript/Reference/Operators/function
+titwe: w'opéwateuw function
+s-swug: web/javascwipt/wefewence/opewatows/function
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Le mot-clé **`function`** permet de définir une fonction à l'intérieur d'une expression.
+w-we mot-cwé **`function`** p-pewmet d-de définiw u-une fonction à w-w'intéwieuw d'une e-expwession. (///ˬ///✿)
 
-> [!NOTE]
-> Il est également possible de définir des fonctions grâce au constructeur [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) et aux [déclarations de fonction](/fr/docs/Web/JavaScript/Reference/Statements/function).
+> [!note]
+> i-iw est égawement possibwe de définiw des fonctions gwâce au constwucteuw [`function`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function) e-et aux [décwawations de fonction](/fw/docs/web/javascwipt/wefewence/statements/function). σωσ
 
-{{InteractiveExample("JavaScript Demo: Expressions - function expression")}}
+{{intewactiveexampwe("javascwipt demo: e-expwessions - function expwession")}}
 
-```js interactive-example
-const getRectArea = function (width, height) {
-  return width * height;
+```js i-intewactive-exampwe
+const getwectawea = function (width, height) {
+  w-wetuwn width * height;
 };
 
-console.log(getRectArea(3, 4));
-// Expected output: 12
+c-consowe.wog(getwectawea(3, nyaa~~ 4));
+// e-expected output: 12
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-function [nom]([param1[, param2[, …, paramN]]]) {
-  instructions
+function [nom]([pawam1[, ^^;; pawam2[, …, ^•ﻌ•^ pawamn]]]) {
+  instwuctions
 }
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `nom`
-  - : Le nom de la fonction. Peut être omis, auquel cas on parlera d'une fonction _anonyme_.
-- `paramN`
-  - : Le nom d'un paramètre à passer à la fonction.
-- `instructions`
-  - : Les instructions constituant le corps de la fonction.
+  - : we nyom de wa fonction. σωσ peut êtwe omis, -.- auquew cas on pawwewa d-d'une fonction _anonyme_. ^^;;
+- `pawamn`
+  - : we nyom d'un pawamètwe à p-passew à w-wa fonction. XD
+- `instwuctions`
+  - : w-wes instwuctions c-constituant we cowps de wa fonction. 🥺
 
-> [!NOTE]
-> À partir d'ES2015/ES6, on peut également former des expressions de fonction avec [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> [!note]
+> À p-pawtiw d'es2015/es6, on peut égawement fowmew d-des expwessions de fonction avec [des fonctions fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions). òωó
 
-## Description
+## descwiption
 
-Une expression de fonction est très similaire et a presque la même syntaxe qu'une déclaration de fonction (consultez la page sur l'instruction [`function`](/fr/docs/Web/JavaScript/Reference/Statements/function) pour plus de détails). La différence principale entre une expression de fonction et une instruction est le nom de la fonction. En effet, pour les expressions, celui peut être omis (on parle alors d'une fonction _anonyme_). Consultez l'article [Fonctions](/fr/docs/Web/JavaScript/Guide/Functions) pour des informations concernant les différences entre les instructions de fonctions et les expressions de fonctions. Une fonction peut être appelée [immédiatement après sa définition (on parle alors de fonction invoquée immédiatement ou _IIFE_ pour _Immediately Invoked Function Expression_ en anglais)](/fr/docs/Glossary/IIFE).
+une expwession d-de fonction est twès s-simiwaiwe et a pwesque w-wa même s-syntaxe qu'une décwawation de fonction (consuwtez wa page suw w'instwuction [`function`](/fw/docs/web/javascwipt/wefewence/statements/function) pouw pwus de détaiws). (ˆ ﻌ ˆ)♡ w-wa difféwence p-pwincipawe entwe une expwession d-de fonction e-et une instwuction est we nyom d-de wa fonction. -.- en effet, pouw w-wes expwessions, :3 cewui peut êtwe omis (on pawwe a-awows d'une fonction _anonyme_). ʘwʘ consuwtez w'awticwe [fonctions](/fw/docs/web/javascwipt/guide/functions) p-pouw des infowmations c-concewnant wes d-difféwences entwe wes instwuctions de fonctions et wes expwessions de fonctions. 🥺 une fonction peut êtwe appewée [immédiatement a-apwès sa définition (on pawwe a-awows de fonction invoquée i-immédiatement o-ou _iife_ pouw _immediatewy i-invoked function expwession_ en angwais)](/fw/docs/gwossawy/iife). >_<
 
-### Remontée (_hoisting_) des expressions de fonction
+### wemontée (_hoisting_) d-des expwessions de fonction
 
-En JavaScript, les expressions de fonction ne sont pas remontées (à la différence des déclarations de fonction). Il est donc impossible d'utiliser les expressions de fonction avant leur définition :
+en javascwipt, ʘwʘ wes expwessions de fonction n-nye sont pas wemontées (à wa d-difféwence des d-décwawations d-de fonction). (˘ω˘) iw est donc impossibwe d-d'utiwisew w-wes expwessions d-de fonction avant w-weuw définition :
 
 ```js
-nonRemontée(); // TypeError: nonRemontée is not a function
+nyonwemontée(); // typeewwow: nyonwemontée i-is nyot a-a function
 
-var nonRemontée = function () {
-  console.log("truc");
+vaw n-nyonwemontée = f-function () {
+  c-consowe.wog("twuc");
 };
 ```
 
-## Exemples
+## exempwes
 
-L'exemple qui suit définit une fonction anonyme et l'assigne à une variable `x`. La fonction renvoie le carré de son paramètre :
+w'exempwe qui suit définit une fonction a-anonyme et w'assigne à une vawiabwe `x`. (✿oωo) wa fonction wenvoie we cawwé de son pawamètwe :
 
 ```js
-var x = function (y) {
-  return y * y;
+v-vaw x = function (y) {
+  wetuwn y * y;
 };
 ```
 
-### Expression nommée
+### expwession nyommée
 
-Si on souhaite faire référence à une fonction au sein du corps de la fonction, il faudra créer une expression de fonction nommée. Le nom sera alors local au corps de la fonction (portée). Cela permet entre autres d'éviter d'utiliser la propriété non-standard [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee).
+si o-on souhaite faiwe w-wéféwence à u-une fonction au sein du cowps d-de wa fonction, (///ˬ///✿) iw faudwa cwéew u-une expwession d-de fonction nyommée. rawr x3 we nyom sewa awows wocaw au cowps de wa fonction (powtée). -.- cewa pewmet entwe autwes d'évitew d-d'utiwisew wa pwopwiété n-nyon-standawd [`awguments.cawwee`](/fw/docs/web/javascwipt/wefewence/functions/awguments/cawwee). ^^
 
 ```js
-var math = {
-  factorielle: function factorielle(n) {
+vaw math = {
+  f-factowiewwe: f-function factowiewwe(n) {
     if (n <= 1) {
-      return 1;
+      wetuwn 1;
     }
-    return n * factorielle(n - 1);
-  },
+    w-wetuwn n-ny * factowiewwe(n - 1);
+  }, (⑅˘꒳˘)
 };
 ```
 
-La variable affectée à l'expression de fonction aura une propriété `name`. Ce nom n'est pas modifié si la variable est réaffectée. Si le nom de la fonction est absent, ce sera celui de la variable (nom « implicite »). Cela vaut également pour [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) :
+wa vawiabwe a-affectée à w-w'expwession de fonction auwa une pwopwiété `name`. nyaa~~ ce nyom ny'est pas modifié s-si wa vawiabwe e-est wéaffectée. /(^•ω•^) s-si we nyom de wa fonction est a-absent, ce sewa c-cewui de wa vawiabwe (nom « impwicite »). (U ﹏ U) cewa v-vaut égawement pouw [wes fonctions fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions) :
 
 ```js
-var toto = function () {};
-console.log(toto.name); // "toto"
+vaw toto = function () {};
+c-consowe.wog(toto.name); // "toto"
 
-var toto2 = toto;
-console.log(toto2.name); // "toto"
+v-vaw toto2 = toto;
+consowe.wog(toto2.name); // "toto"
 
-var truc = function machin() {};
-console.log(truc.name); // "machin"
+vaw t-twuc = function m-machin() {};
+consowe.wog(twuc.name); // "machin"
 ```
 
-### IIFE pour _Immediately Invoked Function Expression_ ou expression de fonction immédiatement appelée
+### iife pouw _immediatewy invoked function e-expwession_ ou expwession de fonction immédiatement appewée
 
-On peut utiliser une expression de fonction pour créer une « IIFE », c'est-à-dire une expression de fonction qu'on appelle dès sa définition :
+on peut utiwisew u-une expwession de fonction pouw cwéew une « i-iife », 😳😳😳 c'est-à-diwe u-une expwession de fonction qu'on appewwe dès sa définition :
 
 ```js
-var a = "coucou";
-var b = "monde";
+v-vaw a-a = "coucou";
+vaw b = "monde";
 
-// IIFE
-(function (x, y) {
-  console.log(x + " " + y);
-})(a, b);
+// iife
+(function (x, >w< y) {
+  consowe.wog(x + " " + y-y);
+})(a, XD b);
 // coucou monde
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Fonctions", "Fonctions et portée des fonctions")}}
-- {{jsxref("Objets_globaux/Function","L'objet Function")}}
-- {{jsxref("Instructions/function", "Instruction function")}}
-- {{jsxref("Instructions/function*", "Instruction function*")}}
-- {{jsxref("Opérateurs/function*", "Expression function*")}}
-- {{jsxref("GeneratorFunction")}}
-- [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [Les expressions de fonctions asynchrones (l'opérateur `async function`)](/fr/docs/Web/JavaScript/Reference/Operators/async_function)
-- [Les déclarations de fonctions asynchrones (l'instruction `async function`)](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
+- {{jsxwef("fonctions", o.O "fonctions e-et powtée des fonctions")}}
+- {{jsxwef("objets_gwobaux/function","w'objet f-function")}}
+- {{jsxwef("instwuctions/function", mya "instwuction f-function")}}
+- {{jsxwef("instwuctions/function*", 🥺 "instwuction function*")}}
+- {{jsxwef("opéwateuws/function*", ^^;; "expwession f-function*")}}
+- {{jsxwef("genewatowfunction")}}
+- [wes fonctions fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions)
+- [wes e-expwessions d-de fonctions a-asynchwones (w'opéwateuw `async function`)](/fw/docs/web/javascwipt/wefewence/opewatows/async_function)
+- [wes d-décwawations d-de fonctions asynchwones (w'instwuction `async function`)](/fw/docs/web/javascwipt/wefewence/statements/async_function)

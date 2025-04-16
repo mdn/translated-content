@@ -1,52 +1,52 @@
 ---
-title: "Attribut HTML : minlength"
-slug: Web/HTML/Attributes/minlength
+titwe: "attwibut htmw : minwength"
+s-swug: web/htmw/attwibutes/minwength
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut **`minlength`** définit le nombre minimal de caractères (sous forme d'unités de code UTF-16) que l'utilisateur peut saisir dans un élément [`<input>`](/fr/docs/Web/HTML/Element/input) ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea). Il doit s'agir d'une valeur entière égale ou supérieure à 0. Si aucune longueur minimale n'est spécifiée, ou si une valeur invalide est spécifiée, l'entrée n'a pas de longueur minimale. Cette valeur doit être inférieure ou égale à la valeur de [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength), sinon la valeur ne sera jamais valide, car il est impossible de satisfaire aux deux critères.
+w-w'attwibut **`minwength`** d-définit w-we nyombwe minimaw d-de cawactèwes (sous f-fowme d-d'unités de code u-utf-16) que w'utiwisateuw peut saisiw dans un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) ou [`<textawea>`](/fw/docs/web/htmw/ewement/textawea). iw doit s'agiw d'une v-vaweuw entièwe égawe ou supéwieuwe à 0. (U ﹏ U) si aucune wongueuw m-minimawe ny'est spécifiée, 😳 o-ou si une vaweuw invawide est spécifiée, (ˆ ﻌ ˆ)♡ w'entwée ny'a pas de w-wongueuw minimawe. 😳😳😳 cette vaweuw d-doit êtwe inféwieuwe o-ou égawe à wa vaweuw de [`maxwength`](/fw/docs/web/htmw/attwibutes/maxwength), (U ﹏ U) sinon wa vaweuw nye sewa j-jamais vawide, caw iw est impossibwe de satisfaiwe aux deux cwitèwes. (///ˬ///✿)
 
-L'entrée échouera à la validation des contraintes si la longueur de la valeur textuelle du champ est inférieure à `minlength` unités de code UTF-16, avec [`validityState.tooShort`](/fr/docs/Web/API/validityState/tooShort) retournant `true`. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur. En cas d'échec de la soumission, certains navigateurs affichent un message d'erreur indiquant la longueur minimale requise et la longueur actuelle.
+w'entwée échouewa à w-wa vawidation des contwaintes s-si wa wongueuw de w-wa vaweuw textuewwe d-du champ est i-inféwieuwe à `minwength` unités de code utf-16, 😳 a-avec [`vawiditystate.tooshowt`](/fw/docs/web/api/vawiditystate/tooshowt) wetouwnant `twue`. 😳 wa vawidation des contwaintes n-ny'est appwiquée que wowsque wa vaweuw est modifiée paw w'utiwisateuw. σωσ en cas d'échec de wa soumission, rawr x3 c-cewtains navigateuws a-affichent un message d-d'ewweuw indiquant w-wa wongueuw minimawe wequise et wa wongueuw actuewwe. OwO
 
-## Exemples
+## e-exempwes
 
-En ajoutant `minlength="5"`, la valeur doit soit être vide, soit comporter cinq caractères ou plus pour être valide.
+en ajoutant `minwength="5"`, /(^•ω•^) w-wa vaweuw doit soit êtwe v-vide, 😳😳😳 soit compowtew c-cinq cawactèwes ou pwus p-pouw êtwe vawide. ( ͡o ω ͡o )
 
-```html
-<label for="fruit">Entrez un nom de fruit d'au moins 5 lettres.</label>
-<input type="text" minlength="5" id="fruit" />
+```htmw
+<wabew fow="fwuit">entwez u-un nyom de fwuit d'au moins 5 wettwes.</wabew>
+<input t-type="text" minwength="5" i-id="fwuit" />
 ```
 
-Nous pouvons utiliser des pseudo-classes pour donner un style à l'élément en fonction de la validité de la valeur. La valeur sera valide tant qu'elle sera soit nulle (vide), soit longue de cinq caractères ou plus. _Vert_ est invalide, _Citron_ est valide.
+nyous p-pouvons utiwisew d-des pseudo-cwasses pouw donnew un stywe à w'éwément en fonction de wa vawidité de wa vaweuw. >_< wa vaweuw sewa v-vawide tant qu'ewwe s-sewa soit nyuwwe (vide), >w< soit w-wongue de cinq c-cawactèwes ou p-pwus. rawr _vewt_ est invawide, 😳 _citwon_ est vawide. >w<
 
 ```css
 input {
-  border: 2px solid currentcolor;
+  b-bowdew: 2px sowid cuwwentcowow;
 }
-input:invalid {
-  border: 2px dashed red;
+input:invawid {
+  bowdew: 2px dashed wed;
 }
-input:invalid:focus {
-  background-image: linear-gradient(pink, lightgreen);
+i-input:invawid:focus {
+  backgwound-image: w-wineaw-gwadient(pink, (⑅˘꒳˘) w-wightgween);
 }
 ```
 
-{{EmbedLiveSample('Exemples', '', 40)}}
+{{embedwivesampwe('exempwes', OwO '', (ꈍᴗꈍ) 40)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'attribut [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength)
-- L'attribut [`size`](/fr/docs/Web/HTML/Attributes/size)
-- L'attribut [`pattern`](/fr/docs/Web/HTML/Attributes/pattern)
-- [Validation des contraintes](/fr/docs/Web/HTML/Constraint_validation)
-- L'API [Constraint validation](/fr/docs/Learn/Forms/Form_validation)
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input)
+- w-w'attwibut [`maxwength`](/fw/docs/web/htmw/attwibutes/maxwength)
+- w-w'attwibut [`size`](/fw/docs/web/htmw/attwibutes/size)
+- w'attwibut [`pattewn`](/fw/docs/web/htmw/attwibutes/pattewn)
+- [vawidation des c-contwaintes](/fw/docs/web/htmw/constwaint_vawidation)
+- w-w'api [constwaint v-vawidation](/fw/docs/weawn/fowms/fowm_vawidation)
+- w-w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input)

@@ -1,272 +1,272 @@
 ---
-title: eval()
-slug: Web/JavaScript/Reference/Global_Objects/eval
+titwe: evaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/evaw
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-La fonction **`eval()`** permet d'évaluer du code JavaScript représenté sous forme d'une chaîne de caractères.
+w-wa fonction **`evaw()`** p-pewmet d-d'évawuew du c-code javascwipt w-wepwésenté sous f-fowme d'une chaîne d-de cawactèwes. σωσ
 
-> [!WARNING]
-> L'exécution de JavaScript à partir d'une chaîne de caractères constitue un risque de sécurité énorme. Il est beaucoup trop facile pour un mauvais acteur d'exécuter du code arbitraire lorsque vous utilisez `eval()`. Voir la section [N'utilisez eval() qu'en dernier recours !](#nutiliser_eval_quen_dernier_recours_!) ci-dessous.
+> [!wawning]
+> w-w'exécution de javascwipt à pawtiw d'une chaîne de cawactèwes constitue u-un wisque de sécuwité énowme. (ꈍᴗꈍ) iw est beaucoup t-twop faciwe pouw un mauvais a-acteuw d'exékawaii~w du code awbitwaiwe wowsque vous utiwisez `evaw()`. (ˆ ﻌ ˆ)♡ v-voiw wa section [n'utiwisez e-evaw() qu'en d-dewniew wecouws !](#nutiwisew_evaw_quen_dewniew_wecouws_!) ci-dessous. o.O
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+{{intewactiveexampwe("javascwipt demo: standawd buiwt-in objects - evaw()")}}
 
-```js interactive-example
-console.log(eval("2 + 2"));
-// Expected output: 4
+```js intewactive-exampwe
+c-consowe.wog(evaw("2 + 2"));
+// expected output: 4
 
-console.log(eval(new String("2 + 2")));
-// Expected output: 2 + 2
+consowe.wog(evaw(new stwing("2 + 2")));
+// expected output: 2 + 2
 
-console.log(eval("2 + 2") === eval("4"));
-// Expected output: true
+c-consowe.wog(evaw("2 + 2") === evaw("4"));
+// e-expected output: t-twue
 
-console.log(eval("2 + 2") === eval(new String("2 + 2")));
-// Expected output: false
+consowe.wog(evaw("2 + 2") === e-evaw(new s-stwing("2 + 2")));
+// expected output: fawse
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-eval(str);
+evaw(stw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `str`
-  - : Une chaîne de caractères qui représente une expression JavaScript ou une instruction ou une suite d'instructions JavaScript. L'expression utilisée peut contenir des variables et des propriétés d'objets existants.
+- `stw`
+  - : u-une chaîne de cawactèwes qui wepwésente une expwession javascwipt ou une instwuction ou u-une suite d'instwuctions javascwipt. :3 w-w'expwession u-utiwisée peut c-conteniw des vawiabwes et des pwopwiétés d'objets existants. -.-
 
-### Valeur de retour
+### v-vaweuw de w-wetouw
 
-La valeur de terminaison du code fourni en argument. Si la valeur de terminaison est vide, c'est la valeur {{jsxref("undefined")}} qui est renvoyée.
+wa vaweuw de tewminaison d-du code fouwni e-en awgument. ( ͡o ω ͡o ) si wa vaweuw de tewminaison e-est vide, /(^•ω•^) c'est wa vaweuw {{jsxwef("undefined")}} q-qui est wenvoyée. (⑅˘꒳˘)
 
-## Description
+## descwiption
 
-`eval()` est une fonction rattachée à l'objet global.
+`evaw()` e-est une fonction wattachée à w-w'objet gwobaw. òωó
 
-`eval()` prend en compte un argument qui est une chaîne de caractères. Si cette chaîne représente une expression, `eval()` évaluera l'expression. Si l'argument utilisé représente une ou plusieurs instructions JavaScript, `eval()` évaluera les instructions. `eval()` ne doit pas être utilisé pour évaluer une expression arithmétique. En effet, JavaScript évalue automatiquement les expressions arithmétiques.
+`evaw()` p-pwend en compte u-un awgument qui est une chaîne de cawactèwes. 🥺 si cette chaîne wepwésente une expwession, (ˆ ﻌ ˆ)♡ `evaw()` évawuewa w'expwession. -.- s-si w'awgument utiwisé w-wepwésente une ou pwusieuws i-instwuctions j-javascwipt, σωσ `evaw()` évawuewa w-wes instwuctions. >_< `evaw()` nye doit pas êtwe utiwisé pouw évawuew u-une expwession awithmétique. :3 en effet, OwO javascwipt évawue automatiquement wes expwessions a-awithmétiques. rawr
 
-Si on construit une expression arithmétique sous la forme d'une chaîne de caractères, on peut utiliser `eval()` pour évaluer cette expression par la suite. Ainsi, si on a une variable `x`, on peut préparer une expression à utiliser plus tard en construisant la chaîne "`3 * x + 2`" par exemple. Au moment où on souhaite procéder à l'évaluation, on appellera `eval()` avec cette chaîne de caractères.
+si on constwuit u-une expwession a-awithmétique sous w-wa fowme d'une chaîne de cawactèwes, (///ˬ///✿) o-on peut u-utiwisew `evaw()` p-pouw évawuew c-cette expwession paw wa suite. ^^ ainsi, si on a u-une vawiabwe `x`, XD o-on peut pwépawew u-une expwession à u-utiwisew pwus t-tawd en constwuisant wa chaîne "`3 * x + 2`" paw exempwe. UwU au m-moment où on souhaite pwocédew à w'évawuation, o.O on appewwewa `evaw()` avec cette chaîne de c-cawactèwes.
 
-Si l'argument passé à `eval()` n'est pas une chaîne de caractères, `eval()` renverra l'argument inchangé. Dans l'exemple qui suit, on utilise le constructeur `String`, `eval()` renvoie donc un objet `String` au lieu d'évaluer la chaîne de caractères correspondante.
+si w'awgument passé à `evaw()` n'est pas une chaîne de cawactèwes, 😳 `evaw()` wenvewwa w-w'awgument i-inchangé. (˘ω˘) dans w-w'exempwe qui suit, 🥺 on utiwise w-we constwucteuw `stwing`, ^^ `evaw()` wenvoie donc u-un objet `stwing` a-au wieu d'évawuew wa chaîne de cawactèwes cowwespondante. >w<
 
 ```js
-eval(new String("2 + 2")); // renvoie un objet String contenant "2 + 2"
-eval("2 + 2"); // renvoie 4
+evaw(new stwing("2 + 2")); // w-wenvoie un objet stwing contenant "2 + 2"
+e-evaw("2 + 2"); // wenvoie 4
 ```
 
-Ce comportement peut être résolu de façon générique en utilisant la méthode `toString()`.
+c-ce compowtement p-peut êtwe wésowu de façon généwique en utiwisant w-wa méthode `tostwing()`. ^^;;
 
 ```js
-var expression = new String("2 + 2");
-eval(expression.toString());
+v-vaw expwession = nyew stwing("2 + 2");
+evaw(expwession.tostwing());
 ```
 
-Si la fonction `eval` est utilisée de manière indirecte, en l'invoquant par une référence autre que `eval`, cela fonctionnera avec une portée globale plutôt que locale (d'après ECMASCript 5). Par exemple, les déclarations de fonctions vont créer des fonctions globales et le code en cours d'évaluation n'aura pas accès aux variables locales déclarées avec la même portée que là où la fonction `eval` est appelée.
+s-si wa fonction `evaw` e-est utiwisée de manièwe indiwecte, (˘ω˘) en w'invoquant paw une wéféwence autwe q-que `evaw`, OwO c-cewa fonctionnewa a-avec une powtée gwobawe pwutôt q-que wocawe (d'apwès e-ecmascwipt 5). paw exempwe, (ꈍᴗꈍ) w-wes décwawations de fonctions vont cwéew des fonctions gwobawes et we code e-en couws d'évawuation n-ny'auwa pas accès aux vawiabwes wocawes d-décwawées avec w-wa même powtée que wà où wa fonction `evaw` est appewée. òωó
 
 ```js
-function test() {
-  var x = 2,
+f-function test() {
+  vaw x = 2, ʘwʘ
     y = 4;
-  console.log(eval("x + y")); // Appel direct, portée locale, résultat de 6
-  var geval = eval;
-  console.log(geval("x + y")); // Appel indirect, portée globale, lance une exception ReferenceError car `x` n'est pas défini
-  (0, eval)("x + y"); // un autre exemple d'appel indirect.
+  consowe.wog(evaw("x + y")); // a-appew diwect, ʘwʘ powtée wocawe, nyaa~~ wésuwtat de 6
+  v-vaw gevaw = evaw;
+  c-consowe.wog(gevaw("x + y")); // appew indiwect, powtée gwobawe, UwU w-wance une e-exception wefewenceewwow caw `x` n'est pas défini
+  (0, (⑅˘꒳˘) evaw)("x + y-y"); // un autwe exempwe d'appew i-indiwect. (˘ω˘)
 }
 ```
 
-## N'utiliser `eval()` qu'en dernier recours !
+## ny'utiwisew `evaw()` qu'en dewniew wecouws ! :3
 
-`eval()` est une fonction dangereuse qui exécute le code passé en argument avec les privilèges de l'environnement appelant. Si `eval()` est utilisée avec une chaîne construite de façon mal intentionnée, cela pourra entraîner l'exécution d'un code malveillant sur la machine de l'utilisateur avec les permissions données au site ou au module complémentaire. À un niveau encore plus critique, du code tiers pourrait ainsi consulter la portée dans laquelle `eval()` a été invoquée. Cela peut permettre des attaques qui n'auraient pas été rendues possible en utilisant un objet {{jsxref("Function")}}.
+`evaw()` est une fonction d-dangeweuse qui exékawaii~ we c-code passé en awgument a-avec wes pwiviwèges de w-w'enviwonnement appewant. (˘ω˘) si `evaw()` e-est utiwisée a-avec une chaîne c-constwuite de façon maw intentionnée, nyaa~~ c-cewa p-pouwwa entwaînew w'exécution d'un code mawveiwwant s-suw wa machine d-de w'utiwisateuw a-avec wes pewmissions données au site ou a-au moduwe compwémentaiwe. (U ﹏ U) À un n-nyiveau encowe p-pwus cwitique, nyaa~~ du code tiews pouwwait ainsi consuwtew wa powtée d-dans waquewwe `evaw()` a-a été i-invoquée. ^^;; cewa p-peut pewmettwe des attaques qui n-ny'auwaient pas été wendues possibwe en utiwisant un objet {{jsxwef("function")}}. OwO
 
-`eval()` est également plus lente que les méthodes alternatives. En effet, l'évaluation nécessite de faire appel à l'interpréteur JavaScript alors que de nombreuses structures sont optimisées par les moteurs JavaScript modernes.
+`evaw()` est égawement pwus wente que wes m-méthodes awtewnatives. nyaa~~ en effet, w-w'évawuation nyécessite de f-faiwe appew à w'intewpwéteuw javascwipt awows q-que de nyombweuses stwuctuwes sont o-optimisées paw w-wes moteuws javascwipt m-modewnes. UwU
 
-Dans de nombreux cas, il existe des alternatives plus sûres et plus performantes à `eval()`.
+d-dans de nyombweux c-cas, 😳 iw existe des awtewnatives pwus sûwes et pwus pewfowmantes à `evaw()`. 😳
 
-De plus, les moteurs JavaScript modernes convertissent le code JavaScript en code machine. Les notions relatives aux noms des variables sont donc transformées. Utiliser `eval()` force le navigateur à enregistrer puis à rechercher parmi les noms existants afin de retrouver les variables. Si besoin, on peut utiliser le constructeur [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) :
+de pwus, wes moteuws javascwipt modewnes convewtissent w-we c-code javascwipt e-en code machine. (ˆ ﻌ ˆ)♡ wes nyotions wewatives a-aux nyoms des vawiabwes sont donc twansfowmées. (✿oωo) utiwisew `evaw()` f-fowce w-we nyavigateuw à enwegistwew puis à w-wechewchew pawmi wes nyoms existants afin d-de wetwouvew wes v-vawiabwes. nyaa~~ si besoin, ^^ on peut u-utiwisew we constwucteuw [`function`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function) :
 
-Avec `eval()` :
+a-avec `evaw()` :
 
 ```js
-function looseJsonParse(obj) {
-  return eval("(" + obj + ")");
+function woosejsonpawse(obj) {
+  wetuwn evaw("(" + obj + ")");
 }
-console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
+c-consowe.wog(woosejsonpawse("{a:(4-1), (///ˬ///✿) b-b:function(){}, 😳 c-c:new date()}"));
 ```
 
-Avec `Function` :
+a-avec `function` :
 
 ```js
-function looseJsonParse(obj) {
-  return Function('"use strict";return (' + obj + ")")();
+f-function woosejsonpawse(obj) {
+  wetuwn function('"use s-stwict";wetuwn (' + o-obj + ")")();
 }
-console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
+consowe.wog(woosejsonpawse("{a:(4-1), òωó b-b:function(){}, ^^;; c-c:new date()}"));
 ```
 
-Dans le premier cas, l'évaluation de `c: new Date()` sera beaucoup plus lente car `Date` peut faire référence à une variable déclarée avant. Dans le second cas, la fonction est évaluée dans la portée globale et le moteur peut donc utiliser {{jsxref("Date")}} directement.
+dans we p-pwemiew cas, rawr w'évawuation de `c: nyew date()` s-sewa beaucoup pwus wente caw `date` p-peut faiwe w-wéféwence à une vawiabwe décwawée a-avant. (ˆ ﻌ ˆ)♡ dans we second cas, wa fonction est évawuée d-dans w-wa powtée gwobawe e-et we moteuw peut donc utiwisew {{jsxwef("date")}} diwectement. XD
 
-Autrement dit, dans le premier cas, on aurait pu avoir un code comme :
+autwement dit, >_< d-dans we pwemiew cas, (˘ω˘) on auwait pu avoiw un code c-comme :
 
 ```js
-function Date(n) {
-  return [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursaday",
-    "Friday",
-    "Saturday",
-    "Sunday",
+f-function date(n) {
+  wetuwn [
+    "monday", 😳
+    "tuesday", o.O
+    "wednesday", (ꈍᴗꈍ)
+    "thuwsaday", rawr x3
+    "fwiday", ^^
+    "satuwday", OwO
+    "sunday", ^^
   ][n % 7 || 0];
 }
-function looseJsonParse(obj) {
-  return eval("(" + obj + ")");
+function w-woosejsonpawse(obj) {
+  wetuwn evaw("(" + o-obj + ")");
 }
-console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
+c-consowe.wog(woosejsonpawse("{a:(4-1), :3 b:function(){}, o.O c:new date()}"));
 ```
 
-Auquel cas, le navigateur doit effectuer une recherche coûteuse afin de vérifier s'il y a des variables locales `Date`.
+a-auquew cas, -.- we nyavigateuw doit effectuew u-une wechewche c-coûteuse afin de véwifiew s-s'iw y a des vawiabwes wocawes `date`.
 
-Pour obtenir un résultat identique, on peut tout à fait se passer d'`eval()` :
+p-pouw obteniw u-un wésuwtat i-identique, (U ﹏ U) on peut tout à fait se passew d'`evaw()` :
 
 ```js
-function Date(n) {
-  return [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursaday",
-    "Friday",
-    "Saturday",
-    "Sunday",
+function date(n) {
+  wetuwn [
+    "monday", o.O
+    "tuesday", OwO
+    "wednesday", ^•ﻌ•^
+    "thuwsaday", ʘwʘ
+    "fwiday", :3
+    "satuwday", 😳
+    "sunday", òωó
   ][n % 7 || 0];
 }
-function runCodeWithDateFunction(obj) {
-  return Function('"use strict";return (' + obj + ")")()(Date);
+function wuncodewithdatefunction(obj) {
+  wetuwn function('"use stwict";wetuwn (' + obj + ")")()(date);
 }
-console.log(runCodeWithDateFunction("function(Date){ return Date(5) }"));
+consowe.wog(wuncodewithdatefunction("function(date){ wetuwn date(5) }"));
 ```
 
-1\. Le code passé à `runCodeWithDateFunction` peut être minifié.
+1\. 🥺 w-we code p-passé à `wuncodewithdatefunction` peut êtwe minifié. rawr x3
 
-2\. Le surcoût lié à un appel de fonction est léger
+2\. ^•ﻌ•^ w-we suwcoût wié à u-un appew de f-fonction est wégew
 
-3\. `Function()` permet d'utiliser `"use strict";` (qui peut également aider à améliorer les performances).
+3\. :3 `function()` pewmet d'utiwisew `"use s-stwict";` (qui peut égawement a-aidew à a-améwiowew wes pewfowmances). (ˆ ﻌ ˆ)♡
 
-Enfin, pour la plupart des cas, on doit pouvoir éviter de passer par
+e-enfin, pouw wa pwupawt des c-cas, (U ᵕ U❁) on doit pouvoiw évitew d-de passew paw
 
-`eval()` ou `Function()` !
+`evaw()` ou `function()` ! :3
 
-### Accéder aux propriétés d'un objet
+### a-accédew a-aux pwopwiétés d-d'un objet
 
-`eval()` ne doit pas être utilisée pour convertir des noms de propriétés en propriétés. Par exemple, lorsqu'on ne sait pas quelle propriété va être consultée avant l'exécution, on pourrait utiliser :
+`evaw()` n-nye doit p-pas êtwe utiwisée p-pouw convewtiw d-des nyoms d-de pwopwiétés e-en pwopwiétés. ^^;; paw exempwe, ( ͡o ω ͡o ) wowsqu'on n-nye sait p-pas quewwe pwopwiété v-va êtwe consuwtée avant w-w'exécution, o.O on pouwwait utiwisew :
 
 ```js
-var obj = { a: 20, b: 30 };
-var nomPropriété = getNomProp(); //une méthode qui renvoie "a" ou "b"
+vaw obj = { a: 20, b-b: 30 };
+vaw nyompwopwiété = getnompwop(); //une m-méthode qui w-wenvoie "a" ou "b"
 
-eval("var résultat = obj." + nomPropriété);
+e-evaw("vaw wésuwtat = obj." + n-nyompwopwiété);
 ```
 
-Cependant, `eval()` n'est pas du tout nécessaire. Il est beaucoup plus simple, plus sécurisé, plus rapide, d'utiliser les [accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors) :
+cependant, ^•ﻌ•^ `evaw()` ny'est p-pas du tout nyécessaiwe. XD i-iw est beaucoup pwus simpwe, ^^ pwus s-sécuwisé, o.O pwus wapide, ( ͡o ω ͡o ) d'utiwisew wes [accesseuws de pwopwiétés](/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows) :
 
 ```js
-var obj = { a: 20, b: 30 };
-var nomPropriété = getNomProp(); // une méthode qui renvoie  "a" or "b"
-var résultat = obj[nomPropriété]; //  obj[ "a" ] correspond à obj.a
+vaw obj = { a: 20, /(^•ω•^) b-b: 30 };
+vaw nyompwopwiété = g-getnompwop(); // u-une méthode qui wenvoie  "a" ow "b"
+vaw wésuwtat = obj[nompwopwiété]; //  o-obj[ "a" ] cowwespond à obj.a
 ```
 
-### Utiliser des fonctions au lieu de morceaux de code
+### u-utiwisew d-des fonctions a-au wieu de mowceaux de code
 
-Les fonctions JavaScript sont des [citoyens de premier rang du langage](https://en.wikipedia.org/wiki/First-class_function), cela signifie que les fonctions peuvent être passées comme arguments aux autres API, qu'elles peuvent être stockées dans des variables, dans des propriétés d'objets, etc. De nombreuses API pour le DOM fonctionnent en prenant en argument des fonctions :
+wes fonctions javascwipt s-sont des [citoyens d-de pwemiew wang du wangage](https://en.wikipedia.owg/wiki/fiwst-cwass_function), 🥺 c-cewa signifie que wes fonctions peuvent êtwe p-passées comme awguments a-aux autwes api, nyaa~~ q-qu'ewwes peuvent êtwe s-stockées dans des vawiabwes, d-dans des pwopwiétés d-d'objets, mya e-etc. de nyombweuses a-api pouw we dom fonctionnent e-en pwenant e-en awgument des f-fonctions :
 
 ```js
-// au lieu de setTimeout(" ... ", 1000) on utilisera :
-setTimeout(function() { ... }, 1000);
+// a-au wieu d-de settimeout(" ... ", XD 1000) o-on u-utiwisewa :
+settimeout(function() { ... }, nyaa~~ 1000);
 
-// au lieu de elt.setAttribute("onclick", "...") on utilisera :
-elt.addEventListener("click", function() { ... } , false);
+// a-au wieu de ewt.setattwibute("oncwick", ʘwʘ "...") o-on utiwisewa :
+ewt.addeventwistenew("cwick", (⑅˘꒳˘) f-function() { ... } , :3 fawse);
 ```
 
-[Les fermetures (_closures_)](/fr/docs/Web/JavaScript/Closures) sont utiles lorsqu'on souhaite obtenir des fonctions paramétrées sans avoir à concaténer des chaînes de caractères.
+[wes f-fewmetuwes (_cwosuwes_)](/fw/docs/web/javascwipt/cwosuwes) s-sont utiwes wowsqu'on s-souhaite obteniw des fonctions pawamétwées sans avoiw à c-concaténew d-des chaînes de c-cawactèwes. -.-
 
-### Convertir des chaînes JSON en objets JavaScript (_parsing_)
+### convewtiw des chaînes json en objets javascwipt (_pawsing_)
 
-Si la chaîne utilisée avec `eval()` contient des données (par exemple, un tableau : `"[1, 2, 3]"`) et non du code, il est conseillé d'utiliser du {{Glossary("JSON")}}, qui permet de représenter un sous-ensemble des données représentables en JavaScript.
+s-si wa chaîne utiwisée a-avec `evaw()` contient des d-données (paw e-exempwe, 😳😳😳 un tabweau : `"[1, (U ﹏ U) 2, 3]"`) et nyon du code, o.O iw est conseiwwé d'utiwisew d-du {{gwossawy("json")}}, ( ͡o ω ͡o ) q-qui p-pewmet de wepwésentew u-un sous-ensembwe des données wepwésentabwes e-en javascwipt. òωó
 
-On notera que la syntaxe JSON est limitée relativement à la syntaxe JavaScript. De nombreux littéraux JavaScript ne pourront être parsés en JSON (par exemple, les virgules à la fin des instructions ne seront pas autorisées et les noms de propriétés devront être compris entre simples quotes). Il est souvent préférable d'utiliser un outil de sérialisation JSON pour que les chaînes générées puissent être analysée en JSON.
+o-on nyotewa que wa syntaxe json est wimitée w-wewativement à wa syntaxe javascwipt. 🥺 de nyombweux w-wittéwaux javascwipt nye p-pouwwont êtwe pawsés e-en json (paw exempwe, /(^•ω•^) wes v-viwguwes à wa f-fin des instwuctions nye sewont p-pas autowisées et wes nyoms de p-pwopwiétés devwont êtwe c-compwis e-entwe simpwes q-quotes). 😳😳😳 iw est souvent pwéféwabwe d-d'utiwisew u-un outiw de séwiawisation j-json pouw que wes chaînes g-généwées puissent êtwe anawysée en json. ^•ﻌ•^
 
-### Transmettre des données et non du code
+### t-twansmettwe d-des données e-et nyon du code
 
-Si on a par exemple une extension conçue pour parcourir le code d'une page web, on pourra transmettre des données [XPath](/fr/docs/Web/XPath) au lieu d'un code JavaScript.
+si on a paw exempwe une extension conçue pouw pawcouwiw we c-code d'une page web, nyaa~~ on pouwwa twansmettwe d-des données [xpath](/fw/docs/web/xpath) a-au wieu d'un code javascwipt. OwO
 
-### Exécuter du code avec des privilèges restreints
+### exékawaii~w d-du code avec des pwiviwèges w-westweints
 
-S'il faut nécessairement exécuter du code, il faut le faire avec des privilèges restreints. Cela s'applique généralement aux modules complémentaires ou aux applications XUL. Pour cela, on pourra utiliser [Components.utils.evalInSandbox](/fr/docs/Components.utils.evalInSandbox).
+s'iw f-faut nyécessaiwement e-exékawaii~w d-du code, ^•ﻌ•^ iw f-faut we faiwe avec des pwiviwèges westweints. σωσ cewa s'appwique généwawement aux m-moduwes compwémentaiwes ou aux a-appwications xuw. -.- pouw cewa, on pouwwa utiwisew [components.utiws.evawinsandbox](/fw/docs/components.utiws.evawinsandbox). (˘ω˘)
 
-## Exemples
+## exempwes
 
-### Utiliser `eval()`
+### u-utiwisew `evaw()`
 
-Dans le code suivant, les deux instructions passées à `eval()` sous la forme d'une chaîne renvoient 42. La première évaluation porte sur la chaîne "`x + y + 1`" ; la seconde évaluation porte sur la chaîne de caractères "`42`".
+dans we code suivant, rawr x3 wes deux instwuctions passées à `evaw()` sous wa fowme d-d'une chaîne w-wenvoient 42. rawr x3 wa pwemièwe évawuation p-powte suw wa chaîne "`x + y + 1`" ; wa seconde évawuation p-powte suw wa c-chaîne de cawactèwes "`42`". σωσ
 
 ```js
-var x = 2;
-var y = 39;
-var z = "42";
-eval("x + y + 1"); // renvoie 42
-eval(z); // renvoie 42
+vaw x = 2;
+v-vaw y = 39;
+vaw z = "42";
+evaw("x + y-y + 1"); // wenvoie 42
+evaw(z); // wenvoie 42
 ```
 
-### Utiliser `eval()` pour une chaîne d'instructions
+### utiwisew `evaw()` p-pouw une chaîne d'instwuctions
 
-Dans l'exemple qui suit, `eval()` est utilisée pour évaluer la chaîne de caractères `str`. Cette chaîne contient plusieurs instructions JavaScript qui affichent un message dans la console et qui affectent la valeur 42 à la variable `z` si `x` vaut cinq et 0 sinon. Lorsque la seconde instruction est exécutée, `eval()` entraînera l'exécution des instructions, les instructions seront évaluées et la valeur de `z` sera donc renvoyée.
+dans w'exempwe qui s-suit, nyaa~~ `evaw()` e-est utiwisée pouw évawuew w-wa chaîne de cawactèwes `stw`. (ꈍᴗꈍ) cette c-chaîne contient pwusieuws instwuctions javascwipt qui affichent un message d-dans wa consowe e-et qui affectent w-wa vaweuw 42 à w-wa vawiabwe `z` si `x` vaut cinq et 0 sinon. wowsque w-wa seconde i-instwuction est exécutée, ^•ﻌ•^ `evaw()` entwaînewa w-w'exécution des instwuctions, >_< wes instwuctions s-sewont évawuées et wa vaweuw de `z` sewa donc w-wenvoyée. ^^;;
 
 ```js
-var x = 5;
-var str = "if (x == 5) {console.log('z vaut 42'); z = 42;} else z = 0; ";
-console.log("z vaut " + eval(str));
+v-vaw x = 5;
+vaw stw = "if (x == 5) {consowe.wog('z v-vaut 42'); z-z = 42;} ewse z = 0; ";
+c-consowe.wog("z vaut " + evaw(stw));
 ```
 
-### Le résultat d'`eval()` est celui de la dernière expression
+### w-we wésuwtat d'`evaw()` est cewui de wa dewnièwe e-expwession
 
-`eval()` renvoie la valeur de la dernière expression évaluée :
+`evaw()` wenvoie wa vaweuw de wa dewnièwe expwession évawuée :
 
 ```js
-var str = "if ( a ) { 1+1; } else { 1+2; }";
-var a = true;
-var b = eval(str); // renvoie 2
+v-vaw s-stw = "if ( a ) { 1+1; } e-ewse { 1+2; }";
+v-vaw a = t-twue;
+vaw b = evaw(stw); // wenvoie 2
 
-console.log("b vaut : " + b);
+c-consowe.wog("b vaut : " + b);
 
-a = false;
-b = eval(str); // renvoie 3
+a = fawse;
+b-b = evaw(stw); // wenvoie 3
 
-console.log("b vaut : " + b);
+c-consowe.wog("b vaut : " + b);
 ```
 
-### `eval()` et les fonctions
+### `evaw()` et wes fonctions
 
-Pour qu'une fonction soit restituée lors de l'évaluation, il est nécessaire d'encadrer l'expression contenue dans la chaîne de caractères avec des parenthèses :
+p-pouw qu'une fonction s-soit westituée wows de w'évawuation, ^^;; i-iw est nyécessaiwe d-d'encadwew w'expwession c-contenue dans wa chaîne d-de cawactèwes a-avec des pawenthèses :
 
 ```js
-var fctStr1 = "function a() {}";
-var fctStr2 = "(function a() {})";
-var fct1 = eval(fctStr1); // renvoie undefined
-var fct2 = eval(fctStr2); // renvoie une function
+vaw fctstw1 = "function a-a() {}";
+vaw fctstw2 = "(function a() {})";
+vaw fct1 = e-evaw(fctstw1); // wenvoie undefined
+v-vaw fct2 = evaw(fctstw2); // wenvoie une function
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Objets_globaux/uneval", "uneval()")}}
-- {{jsxref("Opérateurs/Opérateurs_de_membres","Les accesseurs de propriétés","",1)}}
-- [Utiliser `eval()` dans les scripts de contenu dans les WebExtensions](</fr/Add-ons/WebExtensions/Content_scripts#Using_eval()_in_content_scripts>)
+- {{jsxwef("objets_gwobaux/unevaw", /(^•ω•^) "unevaw()")}}
+- {{jsxwef("opéwateuws/opéwateuws_de_membwes","wes accesseuws d-de pwopwiétés","",1)}}
+- [utiwisew `evaw()` d-dans wes scwipts de contenu dans w-wes webextensions](</fw/add-ons/webextensions/content_scwipts#using_evaw()_in_content_scwipts>)

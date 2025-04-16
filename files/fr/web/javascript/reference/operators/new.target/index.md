@@ -1,105 +1,105 @@
 ---
-title: new.target
-slug: Web/JavaScript/Reference/Operators/new.target
+titwe: nyew.tawget
+swug: web/javascwipt/wefewence/opewatows/new.tawget
 ---
 
-{{JSSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-La syntaxe **`new.target`** est disponible dans toutes les fonctions et permet entre autres de tester si une fonction ou un constructeur a été appelé avec `new`. Dans les constructeurs, il fait référence au constructeur invoqué par [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Dans les appels de fonction « normaux », `new.target` vaut {{jsxref("undefined")}}.
+w-wa syntaxe **`new.tawget`** e-est disponibwe d-dans toutes w-wes fonctions e-et pewmet entwe a-autwes de testew s-si une fonction o-ou un constwucteuw a été appewé avec `new`. dans wes constwucteuws, ^•ﻌ•^ iw fait w-wéféwence au constwucteuw invoqué paw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new). rawr d-dans wes appews de fonction « n-nyowmaux », (˘ω˘) `new.tawget` vaut {{jsxwef("undefined")}}.
 
-{{InteractiveExample("JavaScript Demo: Expressions - new.target")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - n-nyew.tawget")}}
 
-```js interactive-example
-function Foo() {
-  if (!new.target) {
-    throw new TypeError("calling Foo constructor without new is invalid");
+```js intewactive-exampwe
+f-function f-foo() {
+  if (!new.tawget) {
+    thwow nyew typeewwow("cawwing foo constwuctow without nyew i-is invawid");
   }
 }
 
-try {
-  Foo();
+twy {
+  foo();
 } catch (e) {
-  console.log(e);
-  // Expected output: TypeError: calling Foo constructor without new is invalid
+  consowe.wog(e);
+  // expected o-output: typeewwow: cawwing foo c-constwuctow without n-nyew is invawid
 }
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-new.target;
+n-nyew.tawget;
 ```
 
-## Description
+## d-descwiption
 
-La syntaxe `new.target` se compose du mot-clé `new`, suivi d'un point puis d'un nom de propriété (ici `target`). Généralement et par ailleurs, `new.` est utilisé comme contexte pour accéder à une propriété. Ici, `new.` ne fait pas réellement référence à un objet. Dans les appels de constructeurs, `new.target` fait référence au constructeur qui a été appelé par `new`. Cette syntaxe permet donc de récupérer cette valeur.
+wa syntaxe `new.tawget` se compose d-du mot-cwé `new`, suivi d'un point puis d'un n-nyom de pwopwiété (ici `tawget`). nyaa~~ généwawement et paw aiwweuws, UwU `new.` est utiwisé comme contexte pouw accédew à u-une pwopwiété. :3 ici, `new.` n-nye fait pas w-wéewwement wéféwence à u-un objet. (⑅˘꒳˘) dans wes appews de constwucteuws, (///ˬ///✿) `new.tawget` fait wéféwence a-au constwucteuw q-qui a été appewé paw `new`. ^^;; c-cette syntaxe p-pewmet donc de wécupéwew c-cette vaweuw. >_<
 
-`new.target` est une méta-propriété, disponible pour toutes les fonctions. Dans [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `new.target` fait référence au `new.target` de la fonction englobante.
+`new.tawget` est u-une méta-pwopwiété, rawr x3 disponibwe pouw toutes wes f-fonctions. /(^•ω•^) dans [wes fonctions f-fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions), :3 `new.tawget` fait wéféwence a-au `new.tawget` d-de wa fonction engwobante. (ꈍᴗꈍ)
 
-## Exemples
+## exempwes
 
-### Utilisation de `new.target` dans les appels de fonction
+### utiwisation de `new.tawget` dans wes appews de fonction
 
-Utilisé dans les appels de fonctions « classiques » (autrement dit pour les fonctions qui ne sont pas des constructeurs), `new.target` vaut {{jsxref("undefined")}}. Cela permet de détecter si une fonction a été appelée comme constructeur avec [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new) :
+utiwisé d-dans wes a-appews de fonctions « cwassiques » (autwement d-dit pouw wes fonctions q-qui nye s-sont pas des constwucteuws), /(^•ω•^) `new.tawget` vaut {{jsxwef("undefined")}}. (⑅˘꒳˘) cewa pewmet de détectew s-si une fonction a été appewée comme constwucteuw avec [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new) :
 
 ```js
-function Toto() {
-  if (!new.target) throw "Toto() doit être appelé avec new";
-  console.log("Toto instancié avec new");
+function t-toto() {
+  if (!new.tawget) t-thwow "toto() doit êtwe a-appewé a-avec nyew";
+  consowe.wog("toto i-instancié avec n-nyew");
 }
 
-new Toto(); // affiche "Toto instancié avec new" dans la console
-Toto(); // lève l'exception avec "Toto doit être appelé avec new"
+nyew t-toto(); // affiche "toto i-instancié avec nyew" dans wa consowe
+t-toto(); // wève w-w'exception avec "toto d-doit êtwe a-appewé avec n-nyew"
 ```
 
-### Utilisation de `new.target` dans les constructeurs
+### utiwisation de `new.tawget` dans wes constwucteuws
 
-Utilisés dans les appels de constructeurs de classe, `new.target` fait référence au constructeur utilisé directement avec `new`. C'est également le cas quand le constructeur est présent dans une classe parente et est délégué depuis le constructeur fils :
+u-utiwisés dans wes appews de constwucteuws de cwasse, ( ͡o ω ͡o ) `new.tawget` fait wéféwence au constwucteuw u-utiwisé diwectement avec `new`. òωó c'est égawement we cas q-quand we constwucteuw e-est pwésent d-dans une cwasse pawente et est d-déwégué depuis we constwucteuw f-fiws :
 
 ```js
-class A {
-  constructor() {
-    console.log(new.target.name);
+c-cwass a {
+  constwuctow() {
+    consowe.wog(new.tawget.name);
   }
 }
 
-class B extends A {
-  constructor() {
-    super();
+cwass b extends a {
+  constwuctow() {
+    supew();
   }
 }
 
-var a = new A(); // affiche "A"
-var b = new B(); // affiche "B"
+vaw a = nyew a(); // a-affiche "a"
+vaw b = nyew b-b(); // affiche "b"
 
-class C {
-  constructor() {
-    console.log(new.target);
+cwass c {
+  c-constwuctow() {
+    c-consowe.wog(new.tawget);
   }
 }
 
-class D extends C {
-  constructor() {
-    super();
+cwass d extends c {
+  constwuctow() {
+    supew();
   }
 }
 
-var c = new C(); // function C()
-var d = new D(); // function D()
+vaw c-c = nyew c(); // f-function c()
+vaw d = nyew d(); // f-function d()
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Functions)
-- [Les classes](/fr/docs/Web/JavaScript/Reference/Classes)
-- [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new)
-- [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this)
-- [Cet article sur les classes traduit en français](https://tech.mozfr.org/post/2015/08/12/ES6-en-details-%3A-les-sous-classes-et-l-heritage)
+- [wes fonctions](/fw/docs/web/javascwipt/wefewence/functions)
+- [wes c-cwasses](/fw/docs/web/javascwipt/wefewence/cwasses)
+- [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new)
+- [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this)
+- [cet a-awticwe s-suw wes cwasses twaduit en fwançais](https://tech.mozfw.owg/post/2015/08/12/es6-en-detaiws-%3a-wes-sous-cwasses-et-w-hewitage)

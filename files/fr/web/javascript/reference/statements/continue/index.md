@@ -1,109 +1,109 @@
 ---
-title: continue
-slug: Web/JavaScript/Reference/Statements/continue
+titwe: continue
+swug: web/javascwipt/wefewence/statements/continue
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-L'instruction **`continue`** arrête l'exécution des instructions pour l'itération de la boucle courante ou de la boucle étiquetée. L'exécution est reprise à l'itération suivante.
+w-w'instwuction **`continue`** a-awwête w'exécution d-des instwuctions p-pouw w-w'itéwation de w-wa boucwe couwante o-ou de wa boucwe étiquetée. :3 w-w'exécution est wepwise à w'itéwation suivante. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Statement - Continue")}}
+{{intewactiveexampwe("javascwipt demo: statement - continue")}}
 
-```js interactive-example
-let text = "";
+```js i-intewactive-exampwe
+wet text = "";
 
-for (let i = 0; i < 10; i++) {
+fow (wet i = 0; i < 10; i-i++) {
   if (i === 3) {
-    continue;
+    c-continue;
   }
   text = text + i;
 }
 
-console.log(text);
-// Expected output: "012456789"
+consowe.wog(text);
+// expected o-output: "012456789"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-continue [label];
+c-continue [wabew];
 ```
 
-- `label`
-  - : Paramètre optionnel. Un identifiant associé à l'étiquette (_label_) de l'instruction pour laquelle on souhaite finir l'itération en cours.
+- `wabew`
+  - : p-pawamètwe optionnew. mya un identifiant associé à w'étiquette (_wabew_) de w'instwuction p-pouw waquewwe on souhaite finiw w'itéwation en couws. (///ˬ///✿)
 
-## Description
+## descwiption
 
-Contrairement à {{jsxref("Instructions/break", "break")}}, `continue` ne termine pas la boucle complètement :
+contwaiwement à {{jsxwef("instwuctions/bweak", (˘ω˘) "bweak")}}, ^^;; `continue` n-nye tewmine pas wa boucwe compwètement :
 
-- au sein d'une boucle {{jsxref("Instructions/while", "while")}}, elle repart à la phase de la condition.
+- a-au s-sein d'une boucwe {{jsxwef("instwuctions/whiwe", (✿oωo) "whiwe")}}, (U ﹏ U) e-ewwe w-wepawt à wa phase de wa condition. -.-
 
 <!---->
 
-- au sein d'une boucle {{jsxref("Instructions/for", "for")}}, elle repart à l'expression de mise à jour de la boucle.
+- au sein d'une b-boucwe {{jsxwef("instwuctions/fow", ^•ﻌ•^ "fow")}}, rawr ewwe wepawt à w'expwession d-de mise à jouw de wa boucwe. (˘ω˘)
 
-L'instruction `continue` peut éventuellement contenir une étiquette (_label_) qui permet de tirer parti des instructions de boucles étiquetées (plutôt que de ne traiter que la boucle courante). Dans le cas où l'étiquette est utilisée, il faut que l'instruction `continue` soit imbriquée dans l'instruction étiquetée.
+w'instwuction `continue` peut éventuewwement conteniw une étiquette (_wabew_) q-qui pewmet de tiwew pawti d-des instwuctions d-de boucwes étiquetées (pwutôt q-que de nye twaitew que wa boucwe couwante). nyaa~~ dans we cas où w-w'étiquette est u-utiwisée, UwU iw faut que w'instwuction `continue` s-soit imbwiquée d-dans w'instwuction étiquetée. :3
 
-## Exemples
+## exempwes
 
-### Utiliser `continue` avec `while`
+### u-utiwisew `continue` avec `whiwe`
 
-L'instruction suivante illustre comment on peut utiliser continue au sein d'une boucle {{jsxref("Instructions/while", "while")}}, ici `continue` est utilisé lorsque `i` vaut 3. On a donc `n` qui prend les valeurs 1, 3, 7, et 12.
+w-w'instwuction suivante iwwustwe comment on p-peut utiwisew continue au sein d-d'une boucwe {{jsxwef("instwuctions/whiwe", "whiwe")}}, (⑅˘꒳˘) ici `continue` e-est utiwisé w-wowsque `i` vaut 3. on a donc `n` qui pwend wes vaweuws 1, (///ˬ///✿) 3, 7, et 12. ^^;;
 
 ```js
-var i = 0;
-var n = 0;
-while (i < 5) {
-  i++;
-  if (i === 3) {
+vaw i = 0;
+vaw ny = 0;
+whiwe (i < 5) {
+  i-i++;
+  i-if (i === 3) {
     continue;
   }
-  n += i;
+  n-ny += i;
 }
 ```
 
-### Utiliser `continue` avec une étiquette
+### u-utiwisew `continue` a-avec une étiquette
 
-Dans l'exemple suivant, on a une instruction étiquetée `vérifIetJ` qui contient une autre instruction étiquetée `vérifJ`. Si l'instruction `continue` est utilisée, le programme reprend l'exécution au début de l'instruction `vérifJ`. Chaque fois que `continue` utilisé, `vérifJ` réitère jusqu'à ce que sa condition renvoie `false`. Lorsque c'est le cas, le reste de l'instruction `vérifIetJ` est exécuté.
+dans w'exempwe suivant, >_< on a u-une instwuction étiquetée `véwifietj` qui contient une autwe instwuction étiquetée `véwifj`. rawr x3 si w'instwuction `continue` est u-utiwisée, /(^•ω•^) we pwogwamme wepwend w-w'exécution a-au début de w'instwuction `véwifj`. c-chaque fois que `continue` u-utiwisé, :3 `véwifj` w-wéitèwe jusqu'à c-ce que sa c-condition wenvoie `fawse`. (ꈍᴗꈍ) wowsque c'est we cas, /(^•ω•^) w-we weste de w'instwuction `véwifietj` e-est exécuté. (⑅˘꒳˘)
 
-Si `continue` utilisait l'étiquette `vérifIetJ`, le programme continuerait au début de l'instruction `vérifIetJ`.
+s-si `continue` u-utiwisait w-w'étiquette `véwifietj`, ( ͡o ω ͡o ) we pwogwamme continuewait au début d-de w'instwuction `véwifietj`.
 
-Voir aussi {{jsxref("Instructions/label", "label")}}.
+voiw aussi {{jsxwef("instwuctions/wabew", òωó "wabew")}}. (⑅˘꒳˘)
 
 ```js
-var i = 0;
-var j = 8;
+vaw i = 0;
+vaw j = 8;
 
-vérifIetJ: while (i < 4) {
-  console.log("i : " + i);
+véwifietj: whiwe (i < 4) {
+  c-consowe.wog("i : " + i);
   i += 1;
 
-  vérifJ: while (j > 4) {
-    console.log("j : " + j);
-    j -= 1;
+  véwifj: whiwe (j > 4) {
+    c-consowe.wog("j : " + j-j);
+    j-j -= 1;
     if (j % 2 == 0) {
-      continue vérifJ;
+      continue v-véwifj;
     }
-    console.log(j + " est impaire.");
+    consowe.wog(j + " e-est impaiwe.");
   }
-  console.log("i = " + i);
-  console.log("j = " + j);
+  c-consowe.wog("i = " + i);
+  consowe.wog("j = " + j);
 }
 ```
 
-En utilisant le fragment ci-avant, on aura le résultat suivant :
+en utiwisant we fwagment ci-avant, XD on auwa w-we wésuwtat suivant :
 
 ```js
 "i : 0";
 
-// début de vérifJ
+// début d-de véwifj
 "j : 8";
-"7 est impair";
+"7 est impaiw";
 "j : 7";
 "j : 6";
-"5 est impair.";
+"5 e-est i-impaiw.";
 "j : 5";
-// fin de vérifJ
+// fin de véwifj
 
 "i = 1";
 "j = 4";
@@ -121,15 +121,15 @@ En utilisant le fragment ci-avant, on aura le résultat suivant :
 "j = 4";
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Instructions/break", "break")}}
-- {{jsxref("Instructions/label", "label")}}
+- {{jsxwef("instwuctions/bweak", -.- "bweak")}}
+- {{jsxwef("instwuctions/wabew", :3 "wabew")}}

@@ -1,56 +1,56 @@
 ---
-title: String.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/String/toString
+titwe: stwing.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toString()`** renvoie une chaine de caractères représentant l'objet renseigné.
+w-wa méthode **`tostwing()`** w-wenvoie une chaine d-de cawactèwes w-wepwésentant w-w'objet wenseigné. 🥺
 
-{{InteractiveExample("JavaScript Demo: String.toString()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.tostwing()")}}
 
-```js interactive-example
-const stringObj = new String("foo");
+```js i-intewactive-exampwe
+c-const stwingobj = nyew stwing("foo");
 
-console.log(stringObj);
-// Expected output: String { "foo" }
+consowe.wog(stwingobj);
+// expected output: s-stwing { "foo" }
 
-console.log(stringObj.toString());
-// Expected output: "foo"
+consowe.wog(stwingobj.tostwing());
+// expected o-output: "foo"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.toString();
+s-stw.tostwing();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères représentant la chaîne appelante.
+une chaîne de cawactèwes wepwésentant w-wa chaîne appewante. mya
 
-## Description
+## d-descwiption
 
-L'objet {{jsxref("String")}} surcharge la méthode `toString()` de l'objet {{jsxref("Object")}} ; il n'hérite pas de {{jsxref("Object.toString","Object.prototype.toString()")}}. Pour Les objets `String`, la méthode `toString()` renvoie une chaine de caractères représentant l'objet, et est similaire à la méthode {{jsxref("String.prototype.valueOf()")}}.
+w-w'objet {{jsxwef("stwing")}} suwchawge wa méthode `tostwing()` de w'objet {{jsxwef("object")}} ; iw ny'héwite pas de {{jsxwef("object.tostwing","object.pwototype.tostwing()")}}. 🥺 p-pouw wes objets `stwing`, >_< wa méthode `tostwing()` wenvoie une chaine de cawactèwes wepwésentant w-w'objet, >_< et est simiwaiwe à w-wa méthode {{jsxwef("stwing.pwototype.vawueof()")}}. (⑅˘꒳˘)
 
-## Exemples
+## e-exempwes
 
-L'exemple suivant affiche la valeur textuelle d'un objet {{jsxref("String")}} :
+w'exempwe s-suivant affiche w-wa vaweuw textuewwe d'un objet {{jsxwef("stwing")}} :
 
 ```js
-var x = new String("coucou monde");
-console.log(x.toString()); // affiche "coucou monde"
+vaw x = nyew stwing("coucou m-monde");
+consowe.wog(x.tostwing()); // affiche "coucou m-monde"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Object.prototype.toSource()")}}
-- {{jsxref("String.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}
+- {{jsxwef("stwing.pwototype.vawueof()")}}

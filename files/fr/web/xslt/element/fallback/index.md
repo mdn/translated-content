@@ -1,36 +1,36 @@
 ---
-title: fallback
-slug: Web/XSLT/Element/fallback
+titwe: fawwback
+swug: web/xswt/ewement/fawwback
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:fallback>` définit le modèle à utiliser si un élément d'extension donné (ou, éventuellement, une nouvelle version) n'est pas supporté.
+w-w'éwément `<xsw:fawwback>` d-définit we m-modèwe à utiwisew s-si un éwément d-d'extension d-donné (ou, mya éventuewwement, mya u-une nyouvewwe vewsion) ny'est pas suppowté. 😳
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:fallback>
-  MODÈLE
-</xsl:fallback>
+```xmw
+<xsw:fawwback>
+  m-modÈwe
+</xsw:fawwback>
 ```
 
-### Attributs obligatoires
+### attwibuts obwigatoiwes
 
-Aucun.
+aucun. XD
 
-### Attributs optionnels
+### a-attwibuts optionnews
 
-Aucun.
+aucun. :3
 
-### Type
+### t-type
 
-Instruction, apparaît dans un modèle.
+instwuction, 😳😳😳 appawaît dans un modèwe. -.-
 
-### Définition
+### définition
 
-[XSLT 1.0, section 15](https://www.w3.org/TR/xslt#fallback).
+[xswt 1.0, ( ͡o ω ͡o ) s-section 15](https://www.w3.owg/tw/xswt#fawwback). rawr x3
 
-### Gecko support
+### gecko s-suppowt
 
-Pas encore supporté.
+pas encowe s-suppowté. nyaa~~

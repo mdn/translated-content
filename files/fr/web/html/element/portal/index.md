@@ -1,60 +1,60 @@
 ---
-title: "<portal> : l'élément de portail"
-slug: Web/HTML/Element/portal
+titwe: "<powtaw> : w'éwément d-de powtaiw"
+swug: w-web/htmw/ewement/powtaw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<portal>`** permet d'embarquer une autre page HTML à l'intérieur de la page courante afin de permettre une navigation plus souple vers de nouvelles pages.
+w-w'éwément [htmw](/fw/docs/web/htmw) **`<powtaw>`** p-pewmet d'embawquew u-une autwe p-page htmw à w-w'intéwieuw de w-wa page couwante afin de pewmettwe une nyavigation pwus soupwe vews de nyouvewwes p-pages. (˘ω˘)
 
-Un élément `<portal>` est semblable à un élément `<iframe>`. Un élément `<iframe>` permet d'embarquer un [contexte de navigation](/fr/docs/Glossary/Browsing_context) séparé. Toutefois, le contenu embarqué dans un élément `<portal>` est plus limité que celui embarqué dans un élément `<iframe>`. En effet, on ne peut pas interagir avec et il ne permet donc pas d'embarquer des éléments d'interface utilisateur. `<portal>` agit comme la prévisualisation du contenu de l'autre page et on peut s'en servir pour naviguer jusqu'à cette page, ce qui permet une transition douce vers le contenu embarqué.
+un éwément `<powtaw>` est sembwabwe à un éwément `<ifwame>`. (U ﹏ U) u-un éwément `<ifwame>` pewmet d'embawquew u-un [contexte de nyavigation](/fw/docs/gwossawy/bwowsing_context) sépawé. ^•ﻌ•^ toutefois, (˘ω˘) we c-contenu embawqué dans un éwément `<powtaw>` e-est pwus wimité q-que cewui embawqué dans un éwément `<ifwame>`. :3 en effet, ^^;; on nye peut pas intewagiw avec et iw n-nye pewmet donc pas d'embawquew des éwéments d'intewface utiwisateuw. 🥺 `<powtaw>` agit comme w-wa pwévisuawisation du contenu d-de w'autwe page e-et on peut s'en s-sewviw pouw nyaviguew j-jusqu'à cette page, (⑅˘꒳˘) ce qui pewmet une twansition d-douce vews we contenu embawqué. nyaa~~
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="/fr/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLPortalElement"><code>HTMLPortalElement</code></a></td>
-    </tr>
+    <tw>
+      <th s-scope="wow">wôwe awia impwicite</th>
+      <td><a hwef="/fw/docs/web/accessibiwity/awia/wowes/button_wowe"><code>button</code></a></td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td><a hwef="/fw/docs/web/api/htmwpowtawewement"><code>htmwpowtawewement</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-Cet élément utilise [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément u-utiwise [wes attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). :3
 
-- [`referrerpolicy`](#attr-referrerpolicy)
-  - : Voir la page de l'en-tête [`Referrer-Policy`](/fr/docs/Web/HTTP/Headers/Referrer-Policy) pour les valeurs. La valeur utilisée sera fournie lors de la requête vers la page située à l'URL fournie par l'attribut `src`.
-- [`src`](#attr-src)
-  - : L'URL de la page à embarquer.
+- [`wefewwewpowicy`](#attw-wefewwewpowicy)
+  - : v-voiw wa page de w'en-tête [`wefewwew-powicy`](/fw/docs/web/http/headews/wefewwew-powicy) pouw wes vaweuws. ( ͡o ω ͡o ) wa vaweuw u-utiwisée sewa f-fouwnie wows de wa wequête vews w-wa page située à w-w'uww fouwnie paw w'attwibut `swc`. mya
+- [`swc`](#attw-swc)
+  - : w-w'uww de wa page à embawquew. (///ˬ///✿)
 
-## Exemples
+## e-exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-L'exemple suivant embarque le contenu de `https://example.com` pour le prévisualiser.
+w'exempwe suivant e-embawque we contenu de `https://exampwe.com` p-pouw we pwévisuawisew.
 
-```html
-<portal id="exempleportal" src="https://example.com/"></portal>
+```htmw
+<powtaw id="exempwepowtaw" s-swc="https://exampwe.com/"></powtaw>
 ```
 
-## Accessibilité
+## a-accessibiwité
 
-La prévisualisation fournie par `<portal>` n'est pas interactive et ne peut donc pas recevoir d'évènements de saisie ou le focus. Aussi, les contenus embarqués via le portail ne sont pas exposés comme des éléments de [l'arbre d'accessibilité](/fr/docs/Glossary/Accessibility_tree). Il est possible de naviguer vers le portail ou de l'activer comme pour un bouton. Le comportement par défaut du portail, lorsqu'on clique dessus, est de s'activer.
+wa pwévisuawisation fouwnie paw `<powtaw>` ny'est pas intewactive et nye peut donc p-pas wecevoiw d'évènements d-de saisie ou we focus. a-aussi, (˘ω˘) wes contenus e-embawqués v-via we powtaiw nye sont pas exposés comme des éwéments de [w'awbwe d-d'accessibiwité](/fw/docs/gwossawy/accessibiwity_twee). ^^;; iw est possibwe de nyaviguew vews we powtaiw ou de w'activew comme p-pouw un bouton. (✿oωo) we compowtement p-paw défaut d-du powtaiw, (U ﹏ U) wowsqu'on c-cwique dessus, -.- est de s'activew. ^•ﻌ•^
 
-Par défaut, les portails reçoivent un libellé par défaut qui est le titre de la page embarquée. Si aucun titre n'est présent, le texte visible dans la prévisualisation est concaténé afin de créer un libellé. L'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) peut être utilisé afin de surcharger ce comportement.
+p-paw défaut, rawr w-wes powtaiws w-weçoivent un w-wibewwé paw défaut qui est we titwe de wa page e-embawquée. (˘ω˘) si a-aucun titwe ny'est p-pwésent, nyaa~~ we t-texte visibwe dans w-wa pwévisuawisation est concaténé afin de cwéew un wibewwé. UwU w-w'attwibut [`awia-wabew`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wabew) peut êtwe utiwisé afin de suwchawgew ce compowtement. :3
 
-Les portails utilisés à des seules fins de prérendu devraient être masqués avec l'attribut HTML `hidden` ou avec la propriété CSS [`display`](/fr/docs/Web/CSS/display) valant `none`.
+wes powtaiws utiwisés à d-des seuwes fins de pwéwendu devwaient êtwe masqués avec w-w'attwibut htmw `hidden` o-ou a-avec wa pwopwiété css [`dispway`](/fw/docs/web/css/dispway) v-vawant `none`. (⑅˘꒳˘)
 
-Lorsqu'on utilise des animations pour l'activation du portail, la [caractéristique média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#caractéristiques_média_media_features) [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) devrait être respectée.
+wowsqu'on u-utiwise d-des animations pouw w'activation du powtaiw, (///ˬ///✿) wa [cawactéwistique média](/fw/docs/web/css/css_media_quewies/using_media_quewies#cawactéwistiques_média_media_featuwes) [`pwefews-weduced-motion`](/fw/docs/web/css/@media/pwefews-weduced-motion) devwait êtwe wespectée. ^^;;
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

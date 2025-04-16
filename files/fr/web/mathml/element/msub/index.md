@@ -1,50 +1,50 @@
 ---
-title: <msub>
-slug: Web/MathML/Element/msub
+titwe: <msub>
+swug: web/mathmw/ewement/msub
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-L'élément MathML `<msub>` est utilisé pour attaché un indice à une expression. On utilise la syntaxe suivante: `<msub> base indice </msub>`.
+w-w'éwément mathmw `<msub>` est u-utiwisé pouw a-attaché un indice à u-une expwession. 😳😳😳 o-on utiwise w-wa syntaxe suivante: `<msub> base i-indice </msub>`. 🥺
 
-## Attributes
+## a-attwibutes
 
-- class, id, style
-  - : Fournit pour être utilisé avec [stylesheets](/fr/docs/Web/CSS).
-- href
-  - : Utilisé pour ajouter un hyperlien vers une URI.
-- mathbackground
-  - : La couleur d'arrière plan. Vous pouvez utiliser `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#les_mots-clés).
-- mathcolor
-  - : La couleur du texte. Vous pouvez utiliser `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#les_mots-clés).
-- subscriptshift
-  - : The minimum space by which to shift the subscript below the baseline of the expression, as a [length value](/fr/docs/Web/MathML/Values#lengths).
+- cwass, mya id, 🥺 stywe
+  - : fouwnit pouw êtwe utiwisé avec [stywesheets](/fw/docs/web/css).
+- h-hwef
+  - : utiwisé pouw ajoutew un hypewwien v-vews une uwi. >_<
+- mathbackgwound
+  - : w-wa couweuw d'awwièwe pwan. >_< vous pouvez utiwisew `#wgb`, (⑅˘꒳˘) `#wwggbb` et wes [noms d-de couweuws htmw](/fw/docs/web/css/cowow_vawue#wes_mots-cwés). /(^•ω•^)
+- m-mathcowow
+  - : w-wa couweuw du texte. rawr x3 vous pouvez utiwisew `#wgb`, (U ﹏ U) `#wwggbb` et wes [noms de couweuws htmw](/fw/docs/web/css/cowow_vawue#wes_mots-cwés). (U ﹏ U)
+- s-subscwiptshift
+  - : the minimum space by which to shift the subscwipt bewow the b-basewine of the expwession, (⑅˘꒳˘) as a-a [wength vawue](/fw/docs/web/mathmw/vawues#wengths). òωó
 
-## Example
+## e-exampwe
 
-Image fixe: ![x1](msub.png)
+i-image fixe: ![x1](msub.png)
 
-Rendu dans votre navigateur: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
+w-wendu dans votwe nyavigateuw: <math><msub><mi>x</mi> <mn>1</mn></msub></math>
 
-```html
+```htmw
 <math>
   <msub>
-    <mi>X</mi>
+    <mi>x</mi>
     <mn>1</mn>
   </msub>
 </math>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{ MathMLElement("msup") }} (Superscript)
-- {{ MathMLElement("msubsup") }} (Subscript-superscript pair)
-- {{ MathMLElement("mmultiscripts") }} (Prescripts and tensor indices)
+- {{ m-mathmwewement("msup") }} (supewscwipt)
+- {{ mathmwewement("msubsup") }} (subscwipt-supewscwipt paiw)
+- {{ mathmwewement("mmuwtiscwipts") }} (pwescwipts and tensow indices)

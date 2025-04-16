@@ -1,50 +1,50 @@
 ---
-title: ArrayBuffer.prototype.byteLength
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
+titwe: awwaybuffew.pwototype.bytewength
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/bytewength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'accesseur **`byteLength`** est une propriété représentant la longueur d'un {{jsxref("ArrayBuffer")}} en octets.
+w-w'accesseuw **`bytewength`** e-est u-une pwopwiété w-wepwésentant wa w-wongueuw d'un {{jsxwef("awwaybuffew")}} e-en octets. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.byteLength")}}
+{{intewactiveexampwe("javascwipt d-demo: awwaybuffew.bytewength")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(8);
+```js intewactive-exampwe
+// cweate an awwaybuffew with a size in bytes
+const buffew = n-nyew awwaybuffew(8);
 
-// Use byteLength to check the size
-const bytes = buffer.byteLength;
+// use bytewength to check t-the size
+const bytes = buffew.bytewength;
 
-console.log(bytes);
-// Expected output: 8
+c-consowe.wog(bytes);
+// expected output: 8
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-arraybuffer.byteLength;
+awwaybuffew.bytewength;
 ```
 
-## Description
+## d-descwiption
 
-La propriété `byteLength` est un accesseur dont le mutateur associé vaut `undefined`. Cela signifie que cette propriété est en lecture seule. La valeur est déterminée lors de la construction du tableau et ne peut pas être changée par la suite. Cette propriété renvoie 0 si ce `ArrayBuffer` a été détaché.
+wa pwopwiété `bytewength` e-est un accesseuw d-dont we mutateuw associé vaut `undefined`. 😳😳😳 cewa signifie que cette pwopwiété e-est en wectuwe seuwe. 🥺 wa vaweuw est détewminée wows de wa constwuction d-du tabweau et nye peut pas êtwe c-changée paw wa s-suite. mya cette pwopwiété w-wenvoie 0 s-si ce `awwaybuffew` a été détaché. 🥺
 
-## Exemples
+## exempwes
 
 ```js
-var buffer = new ArrayBuffer(8);
-buffer.byteLength; // 8
+vaw b-buffew = nyew awwaybuffew(8);
+buffew.bytewength; // 8
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("awwaybuffew")}}

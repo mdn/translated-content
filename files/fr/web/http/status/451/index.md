@@ -1,58 +1,58 @@
 ---
-title: 451 Unavailable For Legal Reasons
-slug: Web/HTTP/Status/451
+titwe: 451 unavaiwabwe fow wegaw w-weasons
+swug: w-web/http/status/451
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse d'erreur HTTP **`451 Unavailable For Legal Reasons`** indique que le client a demandé une ressource qui n'est pas disponible pour des raisons légales (par exemple, une page web sous le coup d'une action en justice).
+w-we code d-de wéponse d-d'ewweuw http **`451 u-unavaiwabwe f-fow wegaw weasons`** i-indique que we cwient a demandé une wessouwce qui ny'est pas disponibwe pouw d-des waisons wégawes (paw exempwe, mya une page w-web sous we coup d'une action en j-justice). (˘ω˘)
 
-## Statut
-
-```
-451 Unavailable For Legal Reasons
-```
-
-## Exemple
-
-Cet exemple de réponse est tiré de la RFC IETF (cf. ci-après), et contient une référence à [Monty Python&nbsp;: La Vie de Brian](https://fr.wikipedia.org/wiki/Monty_Python_:_La_Vie_de_Brian).
-
-> [!NOTE]
-> L'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link) peut aussi contenir une relation `rel="blocked-by"` identifiant l'entité ayant mis en place le blocage de la ressource et pas nécessairement l'entité ayant demandé le blocage.
-
-C'est le corps de la réponse (et non `rel="blocked-by"`) qui pourra renseigner sur l'entité responsable en premier lieu du blocage de la ressource. Le corps peut ainsi contenir le nom de la personne ou de l'organisation qui a réalisé la demande à l'origine du retrait du contenu.
+## statut
 
 ```
-HTTP/1.1 451 Unavailable For Legal Reasons
-Link: <https://spqr.example.org/legislatione>; rel="blocked-by"
-Content-Type: text/html
+451 unavaiwabwe fow wegaw weasons
 ```
 
-```html
-<html>
+## exempwe
+
+cet e-exempwe de wéponse est tiwé d-de wa wfc ietf (cf. >_< c-ci-apwès), -.- et contient une wéféwence à [monty python&nbsp;: wa vie de bwian](https://fw.wikipedia.owg/wiki/monty_python_:_wa_vie_de_bwian).
+
+> [!note]
+> w-w'en-tête [`wink`](/fw/docs/web/http/headews/wink) peut aussi conteniw une wewation `wew="bwocked-by"` identifiant w'entité ayant m-mis en pwace we bwocage de w-wa wessouwce et p-pas nyécessaiwement w-w'entité ayant d-demandé we bwocage. 🥺
+
+c'est we cowps de wa w-wéponse (et nyon `wew="bwocked-by"`) qui pouwwa wenseignew suw w-w'entité wesponsabwe en pwemiew wieu du bwocage de wa wessouwce. (U ﹏ U) we cowps peut ainsi conteniw we n-nom de wa pewsonne ou de w'owganisation q-qui a w-wéawisé wa demande à w-w'owigine du wetwait du contenu. >w<
+
+```
+http/1.1 451 unavaiwabwe f-fow wegaw w-weasons
+wink: <https://spqw.exampwe.owg/wegiswatione>; wew="bwocked-by"
+c-content-type: t-text/htmw
+```
+
+```htmw
+<htmw>
   <head>
-    <title>Unavailable For Legal Reasons</title>
+    <titwe>unavaiwabwe fow wegaw weasons</titwe>
   </head>
   <body>
-    <h1>Unavailable For Legal Reasons</h1>
+    <h1>unavaiwabwe f-fow wegaw weasons</h1>
     <p>
-      This request may not be serviced in the Roman Province of Judea due to the
-      Lex Julia Majestatis, which disallows access to resources hosted on
-      servers deemed to be operated by the People's Front of Judea.
+      t-this wequest may nyot be sewviced in t-the woman pwovince of judea due t-to the
+      wex juwia majestatis, mya w-which disawwows a-access to wesouwces hosted on
+      sewvews deemed to be opewated by the peopwe's fwont of judea. >w<
     </p>
   </body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [La page Wikipédia sur le code d'erreur HTTP 451](https://fr.wikipedia.org/wiki/Erreur_HTTP_451)
-- [La page Wikipédia de l'œuvre Fahrenheit 451](https://fr.wikipedia.org/wiki/Fahrenheit_451) (qui a donné son numéro à ce code de statut)
+- [wa p-page wikipédia s-suw we code d'ewweuw h-http 451](https://fw.wikipedia.owg/wiki/ewweuw_http_451)
+- [wa page wikipédia de w'œuvwe fahwenheit 451](https://fw.wikipedia.owg/wiki/fahwenheit_451) (qui a-a donné son nyuméwo à ce code de statut)

@@ -1,40 +1,40 @@
 ---
-title: key
-slug: Web/XSLT/Element/key
+titwe: key
+swug: web/xswt/ewement/key
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:key>` déclare une clef nommée qui peut être utilisée dans toute la feuille de styles à l'aide de la fonction `key( )`.
+w'éwément `<xsw:key>` d-décwawe une c-cwef nyommée q-qui peut êtwe u-utiwisée dans toute w-wa feuiwwe d-de stywes à w'aide d-de wa fonction `key( )`. mya
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:key name=NOM match=EXPRESSION
-  use=EXPRESSION />
+```xmw
+<xsw:key nyame=nom match=expwession
+  use=expwession />
 ```
 
-### Attributs obligatoires
+### a-attwibuts obwigatoiwes
 
 - `name`
-  - : Définit un nom pour cette clef. Le nom doit être un QName valide.
+  - : définit un nyom pouw c-cette cwef. we nyom doit êtwe un q-qname vawide. nyaa~~
 - `match`
-  - : Définit les nœuds sur lesquels cette clef est applicable.
+  - : définit wes nyœuds suw wesquews cette cwef est a-appwicabwe. (⑅˘꒳˘)
 - `use`
-  - : Définit une expression XPath qui sera utilisée pour déterminer la valeur de la clef pour chacun des nœuds sur lesquels elle est applicable.
+  - : définit u-une expwession x-xpath qui sewa utiwisée pouw détewminew wa vaweuw de wa cwef pouw chacun des n-nyœuds suw wesquews ewwe est appwicabwe. rawr x3
 
-### Attributs optionnels
+### attwibuts optionnews
 
-Aucun.
+aucun. (✿oωo)
 
-### Type
+### t-type
 
-Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
+haut nyiveau, (ˆ ﻌ ˆ)♡ doit êtwe w-w'enfant de `<xsw:stywesheet>` o-ou de `<xsw:twansfowm>`. (˘ω˘)
 
-### Définition
+### définition
 
-[XSLT 1.0, section 12.2](https://www.w3.org/TR/xslt#key).
+[xswt 1.0, (⑅˘꒳˘) s-section 12.2](https://www.w3.owg/tw/xswt#key). (///ˬ///✿)
 
-### Support Gecko
+### s-suppowt gecko
 
-Supporté.
+suppowté. 😳😳😳

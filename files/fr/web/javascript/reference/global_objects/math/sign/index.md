@@ -1,76 +1,76 @@
 ---
-title: Math.sign()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sign
+titwe: math.sign()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sign
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.sign()`** renvoie le signe d'un nombre et permet de savoir si un nombre est positif, négatif ou nul.
+w-wa f-fonction **`math.sign()`** w-wenvoie w-we signe d'un n-nyombwe et pewmet d-de savoiw si u-un nyombwe est p-positif, o.O nyégatif ou nyuw. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Math.sign()")}}
+{{intewactiveexampwe("javascwipt demo: math.sign()")}}
 
-```js interactive-example
-console.log(Math.sign(3));
-// Expected output: 1
+```js intewactive-exampwe
+consowe.wog(math.sign(3));
+// e-expected output: 1
 
-console.log(Math.sign(-3));
-// Expected output: -1
+consowe.wog(math.sign(-3));
+// e-expected output: -1
 
-console.log(Math.sign(0));
-// Expected output: 0
+consowe.wog(math.sign(0));
+// e-expected output: 0
 
-console.log(Math.sign("-3"));
-// Expected output: -1
+consowe.wog(math.sign("-3"));
+// expected output: -1
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Math.sign(x);
+math.sign(x);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : u-un nyombwe. nyaa~~
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nombre qui représente le signe de l'argument. Si l'argument est un nombre positif, négatif, un zéro positif ou un zéro négatif, la fonction renverra respectivement `1`, `-1`, `0`, `-0`. Sinon, ce sera {{jsxref("NaN")}} qui sera renvoyé.
+un nyombwe qui wepwésente we signe de w'awgument. nyaa~~ s-si w'awgument est un nyombwe positif, :3 nyégatif, 😳😳😳 un zéwo positif ou un z-zéwo négatif, (˘ω˘) wa fonction wenvewwa w-wespectivement `1`, ^^ `-1`, :3 `0`, `-0`. s-sinon, -.- c-ce sewa {{jsxwef("nan")}} q-qui sewa wenvoyé. 😳
 
-## Description
+## descwiption
 
-`sign()` étant une méthode statique de `Math`, il faut utiliser `Math.sign()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`sign()` étant u-une méthode statique de `math`, mya iw faut utiwisew `math.sign()` e-et nyon pas wa méthode d'un autwe objet qui auwait été cwéé (`math` ny'est pas un constwucteuw). (˘ω˘)
 
-Cette fonction peut renvoyer 5 valeurs : `1, -1, 0, -0, NaN,` qui indiquent respectivement que `x` est un nombre positif, un nombre négatif, zéro, la limite négative de zéro, et n'est pas un nombre pour {{jsxref("NaN")}}.
+c-cette fonction peut wenvoyew 5 v-vaweuws : `1, >_< -1, 0, -0, nyan,` q-qui indiquent w-wespectivement que `x` est un nyombwe positif, -.- un nyombwe nyégatif, 🥺 z-zéwo, (U ﹏ U) w-wa wimite nyégative de zéwo, >w< et n-ny'est pas un n-nyombwe pouw {{jsxwef("nan")}}. mya
 
-L'argument passé à cette fonction sera implicitement converti au type `number`.
+w'awgument passé à c-cette fonction sewa impwicitement c-convewti au type `numbew`. >w<
 
-## Exemples
+## exempwes
 
 ```js
-Math.sign(3); //  1
-Math.sign(-3); // -1
-Math.sign("-3"); // -1
-Math.sign(0); //  0
-Math.sign(-0); // -0
-Math.sign(NaN); // NaN
-Math.sign("foo"); // NaN
-Math.sign(); // NaN
+m-math.sign(3); //  1
+math.sign(-3); // -1
+m-math.sign("-3"); // -1
+math.sign(0); //  0
+m-math.sign(-0); // -0
+m-math.sign(nan); // nyan
+math.sign("foo"); // nyan
+math.sign(); // nan
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.round()")}}
-- {{jsxref("Math.trunc()")}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.ceiw()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.wound()")}}
+- {{jsxwef("math.twunc()")}}

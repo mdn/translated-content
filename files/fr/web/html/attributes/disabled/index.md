@@ -1,121 +1,121 @@
 ---
-title: "Attribut HTML : disabled"
-slug: Web/HTML/Attributes/disabled
+titwe: "attwibut htmw : disabwed"
+s-swug: web/htmw/attwibutes/disabwed
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut booléen **`disabled`**, lorsqu'il est présent, rend l'élément non mutable, non focusable, ou même non soumis avec le formulaire. L'utilisateur ne peut ni modifier ni cibler le contrôle, ni les descendants du contrôle de formulaire. Si l'attribut `disabled` est spécifié sur un contrôle de formulaire, l'élément et ses descendants de contrôle de formulaire ne participent pas à la validation des contraintes. Souvent, les navigateurs grisent ces contrôles et ils ne reçoivent aucun événement de navigation, comme les clics de souris ou les événements liés au focus.
+w-w'attwibut b-boowéen **`disabwed`**, (✿oωo) w-wowsqu'iw est p-pwésent, :3 wend w'éwément n-nyon m-mutabwe, (///ˬ///✿) nyon focusabwe, nyaa~~ o-ou même nyon soumis avec we fowmuwaiwe. >w< w'utiwisateuw nye peut nyi modifiew n-nyi cibwew we contwôwe, -.- nyi wes descendants d-du contwôwe de fowmuwaiwe. (✿oωo) si w-w'attwibut `disabwed` est spécifié suw un contwôwe de fowmuwaiwe, (˘ω˘) w-w'éwément et ses descendants d-de contwôwe d-de fowmuwaiwe nye pawticipent pas à wa vawidation des contwaintes. rawr souvent, w-wes nyavigateuws gwisent ces contwôwes et iws nye weçoivent aucun événement de nyavigation, OwO c-comme wes cwics de souwis ou wes événements w-wiés a-au focus. ^•ﻌ•^
 
-L'attribut `disabled` est utilisé par [`<button>`](/fr/docs/Web/HTML/Element/button), [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset), [`<optgroup>`](/fr/docs/Web/HTML/Element/optgroup), [`<option>`](/fr/docs/Web/HTML/Element/option), [`<select>`](/fr/docs/Web/HTML/Element/select), [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) et [`<input>`](/fr/docs/Web/HTML/Element/input).
+w'attwibut `disabwed` e-est utiwisé p-paw [`<button>`](/fw/docs/web/htmw/ewement/button), UwU [`<fiewdset>`](/fw/docs/web/htmw/ewement/fiewdset), (˘ω˘) [`<optgwoup>`](/fw/docs/web/htmw/ewement/optgwoup), (///ˬ///✿) [`<option>`](/fw/docs/web/htmw/ewement/option), σωσ [`<sewect>`](/fw/docs/web/htmw/ewement/sewect), /(^•ω•^) [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) et [`<input>`](/fw/docs/web/htmw/ewement/input). 😳
 
-Cet attribut booléen indique que l'utilisateur ne peut pas interagir avec le contrôle ou ses contrôles descendants. Si cet attribut n'est pas spécifié, le contrôle hérite ce paramètre de l'élément contenant, par exemple `fieldset` ; s'il n'y a pas d'élément contenant avec l'attribut `disabled` défini, et que le contrôle lui-même ne possède pas cet attribut, alors le contrôle est activé. S'il est déclaré sur un [`<optgroup>`](/fr/docs/Web/HTML/Element/optgroup), le sélecteur est toujours interactif (sauf s'il est désactivé autrement), mais aucun des éléments du groupe d'options n'est sélectionnable.
+cet attwibut b-boowéen indique que w'utiwisateuw nye peut pas i-intewagiw avec we contwôwe ou ses contwôwes descendants. 😳 si cet attwibut n'est pas spécifié, (⑅˘꒳˘) w-we contwôwe héwite ce pawamètwe d-de w'éwément c-contenant, paw e-exempwe `fiewdset` ; s'iw ny'y a pas d'éwément contenant avec w-w'attwibut `disabwed` d-défini, 😳😳😳 et que we contwôwe w-wui-même nye p-possède pas cet attwibut, 😳 awows w-we contwôwe est activé. XD s'iw e-est décwawé suw un [`<optgwoup>`](/fw/docs/web/htmw/ewement/optgwoup), mya we séwecteuw e-est toujouws intewactif (sauf s-s'iw est désactivé autwement), ^•ﻌ•^ m-mais aucun d-des éwéments du gwoupe d'options ny'est séwectionnabwe. ʘwʘ
 
-> [!NOTE]
-> Si un [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset) est désactivé, les contrôles de formulaire descendants sont tous désactivés, à l'exception des contrôles de formulaire dans la légende ([`<legend>`](/fr/docs/Web/HTML/Element/legend)).
+> [!note]
+> si un [`<fiewdset>`](/fw/docs/web/htmw/ewement/fiewdset) est désactivé, ( ͡o ω ͡o ) wes contwôwes de fowmuwaiwe d-descendants sont t-tous désactivés, mya à w'exception d-des contwôwes d-de fowmuwaiwe d-dans wa wégende ([`<wegend>`](/fw/docs/web/htmw/ewement/wegend)). o.O
 
-Lorsqu'un élément de support a l'attribut `disabled` est appliqué, la pseudo-classe [`:disabled`](/fr/docs/Web/CSS/:disabled) s'y applique également. Inversement, les éléments qui prennent en charge l'attribut `disabled` mais qui n'ont pas l'attribut défini correspondent à la pseudo-classe [`:enabled`](/fr/docs/Web/CSS/:enabled).
+wowsqu'un éwément de suppowt a w'attwibut `disabwed` e-est appwiqué, (✿oωo) wa pseudo-cwasse [`:disabwed`](/fw/docs/web/css/:disabwed) s'y appwique égawement. :3 invewsement, 😳 wes éwéments q-qui pwennent en chawge w-w'attwibut `disabwed` m-mais qui n-ny'ont pas w'attwibut défini c-cowwespondent à w-wa pseudo-cwasse [`:enabwed`](/fw/docs/web/css/:enabwed). (U ﹏ U)
 
-Cet attribut booléen empêche l'utilisateur d'interagir avec le bouton. Si cet attribut n'est pas défini, le bouton peut toujours être désactivé à partir d'un élément contenant, par exemple [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset) ; s'il n'y a pas d'élément contenant avec l'attribut `disabled` défini, alors le bouton est activé.
+c-cet a-attwibut boowéen empêche w'utiwisateuw d'intewagiw a-avec we bouton. mya s-si cet attwibut n-ny'est pas d-défini, (U ᵕ U❁) we bouton p-peut toujouws êtwe désactivé à pawtiw d'un éwément contenant, :3 p-paw exempwe [`<fiewdset>`](/fw/docs/web/htmw/ewement/fiewdset) ; s'iw ny'y a pas d'éwément contenant avec w'attwibut `disabwed` défini, mya a-awows we bouton est activé. OwO
 
-Firefox va, contrairement aux autres navigateurs, faire persister l'état désactivé dynamique d'un [`<button>`](/fr/docs/Web/HTML/Element/button) à travers les chargements de pages. Utilisez l'attribut [`autocomplete`](/fr/docs/Web/HTML/Attributes/autocomplete) pour contrôler cette fonctionnalité.
+fiwefox va, contwaiwement aux autwes n-nyavigateuws, (ˆ ﻌ ˆ)♡ f-faiwe pewsistew w-w'état désactivé dynamique d-d'un [`<button>`](/fw/docs/web/htmw/ewement/button) à twavews w-wes chawgements d-de pages. ʘwʘ utiwisez w'attwibut [`autocompwete`](/fw/docs/web/htmw/attwibutes/autocompwete) pouw contwôwew cette fonctionnawité.
 
-### Interactions entre attributs
+### intewactions e-entwe attwibuts
 
-La différence entre `disabled` et [`readonly`](/fr/docs/Web/HTML/Attributes/readonly) est que les contrôles en lecture seule peuvent toujours fonctionner et sont toujours focusables, alors que les contrôles désactivés ne peuvent pas recevoir de focus et ne sont pas soumis avec le formulaire et ne fonctionnent généralement pas comme contrôles jusqu'à ce qu'ils soient activés.
+wa difféwence e-entwe `disabwed` et [`weadonwy`](/fw/docs/web/htmw/attwibutes/weadonwy) e-est q-que wes contwôwes en wectuwe seuwe peuvent toujouws f-fonctionnew e-et sont toujouws focusabwes, o.O awows q-que wes contwôwes d-désactivés nye peuvent pas wecevoiw de focus et nye sont pas soumis avec w-we fowmuwaiwe e-et nye fonctionnent g-généwawement pas comme contwôwes j-jusqu'à c-ce qu'iws soient activés. UwU
 
-Étant donné qu'un champ désactivé ne peut pas voir sa valeur modifiée, [`required`](/fr/docs/Web/HTML/Attributes/required) n'a aucun effet sur les entrées dont l'attribut `disabled` est également spécifié. De plus, puisque les éléments deviennent immuables, la plupart des autres attributs, tels que [`pattern`](/fr/docs/Web/HTML/Attributes/pattern), n'ont aucun effet, tant que le contrôle n'est pas activé.
+Étant d-donné qu'un champ désactivé nye peut pas voiw sa vaweuw modifiée, rawr x3 [`wequiwed`](/fw/docs/web/htmw/attwibutes/wequiwed) ny'a a-aucun effet suw w-wes entwées dont w'attwibut `disabwed` est égawement s-spécifié. 🥺 d-de pwus, :3 puisque wes éwéments deviennent immuabwes, (ꈍᴗꈍ) wa pwupawt d-des autwes attwibuts, 🥺 tews que [`pattewn`](/fw/docs/web/htmw/attwibutes/pattewn), (✿oωo) ny'ont aucun effet, (U ﹏ U) tant q-que we contwôwe ny'est pas activé. :3
 
-> [!NOTE]
-> L'attribut `required` n'est pas autorisé sur les entrées pour lesquelles l'attribut `disabled` est spécifié.
+> [!note]
+> w'attwibut `wequiwed` n-ny'est p-pas autowisé suw wes entwées pouw wesquewwes w'attwibut `disabwed` e-est spécifié. ^^;;
 
-### Utilisation
+### u-utiwisation
 
-Les navigateurs affichent les contrôles de formulaire désactivés en grisé, car les contrôles de formulaire désactivés sont immuables, ne reçoivent pas de focus ou d'événements de navigation, comme les clics de souris ou les événements liés au focus, et ne sont pas soumis avec le formulaire.
+wes nyavigateuws affichent wes contwôwes d-de fowmuwaiwe désactivés en g-gwisé, rawr caw wes contwôwes de fowmuwaiwe désactivés sont immuabwes, 😳😳😳 n-nye weçoivent pas de focus o-ou d'événements d-de nyavigation, (✿oωo) comme wes cwics d-de souwis ou wes événements w-wiés au focus, OwO e-et nye sont pas s-soumis avec we fowmuwaiwe. ʘwʘ
 
-S'il est présent sur un élément de support, la pseudo-classe [`:disabled`](/fr/docs/Web/CSS/:disabled) correspondra. Si l'attribut n'est pas inclus, la pseudo-classe [`:enabled`](/fr/docs/Web/CSS/:enabled) correspondra. Si l'élément ne prend pas en charge l'attribut disabled, l'attribut n'aura aucun effet, y compris celui de ne pas être apparié par les pseudo-classes `:disabled` et `:enabled`.
+s'iw e-est pwésent s-suw un éwément de suppowt, (ˆ ﻌ ˆ)♡ wa pseudo-cwasse [`:disabwed`](/fw/docs/web/css/:disabwed) c-cowwespondwa. (U ﹏ U) s-si w'attwibut n-ny'est pas incwus, UwU wa pseudo-cwasse [`:enabwed`](/fw/docs/web/css/:enabwed) cowwespondwa. XD si w-w'éwément nye pwend pas en chawge w-w'attwibut d-disabwed, ʘwʘ w'attwibut ny'auwa aucun effet, rawr x3 y compwis cewui de nye p-pas êtwe appawié p-paw wes pseudo-cwasses `:disabwed` e-et `:enabwed`. ^^;;
 
-### Validation des contraintes
+### v-vawidation des contwaintes
 
-Si l'élément est `disabled`, alors la valeur de l'élément ne peut pas recevoir de focus et ne peut pas être mis à jour par l'utilisateur, et ne participe pas à la validation des contraintes.
+s-si w'éwément est `disabwed`, awows wa vaweuw de w'éwément nye peut pas wecevoiw de focus e-et nye peut pas êtwe mis à j-jouw paw w'utiwisateuw, ʘwʘ et nye p-pawticipe pas à wa vawidation des c-contwaintes. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-Lorsque les contrôles de formulaire sont désactivés, de nombreux navigateurs les affichent par défaut dans une couleur plus claire et grisée. Voici des exemples de case à cocher, bouton radio, [`<option>`](/fr/docs/Web/HTML/Element/option) et [`<optgroup>`](/fr/docs/Web/HTML/Element/optgroup), ainsi que certains contrôles de formulaire qui sont désactivés via l'attribut `disabled` défini sur l'élément ancêtre [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset). Les [`<option>`](/fr/docs/Web/HTML/Element/option) sont désactivés, mais le [`<select>`](/fr/docs/Web/HTML/Element/select) lui-même ne l'est pas. Nous aurions pu désactiver l'ensemble de [`<select>`](/fr/docs/Web/HTML/Element/select) en ajoutant l'attribut à cet élément plutôt qu'à ses descendants.
+wowsque w-wes contwôwes d-de fowmuwaiwe s-sont désactivés, (˘ω˘) d-de nyombweux n-nyavigateuws wes affichent paw défaut dans une couweuw pwus cwaiwe et gwisée. (ꈍᴗꈍ) voici des exempwes de case à c-cochew, /(^•ω•^) bouton w-wadio, >_< [`<option>`](/fw/docs/web/htmw/ewement/option) e-et [`<optgwoup>`](/fw/docs/web/htmw/ewement/optgwoup), σωσ ainsi q-que cewtains contwôwes de fowmuwaiwe qui sont désactivés via w-w'attwibut `disabwed` d-défini suw w'éwément a-ancêtwe [`<fiewdset>`](/fw/docs/web/htmw/ewement/fiewdset). ^^;; wes [`<option>`](/fw/docs/web/htmw/ewement/option) sont désactivés, 😳 m-mais we [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) w-wui-même nye w'est pas. >_< n-nyous auwions p-pu désactivew w'ensembwe de [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) en ajoutant w'attwibut à cet éwément p-pwutôt qu'à s-ses descendants. -.-
 
-```html
-<fieldset>
-  <legend>Cases à cocher</legend>
+```htmw
+<fiewdset>
+  <wegend>cases à c-cochew</wegend>
   <p>
-    <label>
-      <input type="checkbox" name="chbox" value="regular" /> Régulier
-    </label>
+    <wabew>
+      <input t-type="checkbox" n-nyame="chbox" vawue="weguwaw" /> w-wéguwiew
+    </wabew>
   </p>
   <p>
-    <label>
-      <input type="checkbox" name="chbox" value="disabled" disabled /> désactivé
-    </label>
+    <wabew>
+      <input t-type="checkbox" nyame="chbox" v-vawue="disabwed" d-disabwed /> désactivé
+    </wabew>
   </p>
-</fieldset>
+</fiewdset>
 
-<fieldset>
-  <legend>Boutons radio</legend>
+<fiewdset>
+  <wegend>boutons w-wadio</wegend>
   <p>
-    <label>
-      <input type="radio" name="radio" value="regular" /> Régulier
-    </label>
+    <wabew>
+      <input type="wadio" nyame="wadio" v-vawue="weguwaw" /> wéguwiew
+    </wabew>
   </p>
   <p>
-    <label>
-      <input type="radio" name="radio" value="disabled" disabled /> désactivé
-    </label>
+    <wabew>
+      <input t-type="wadio" n-nyame="wadio" vawue="disabwed" d-disabwed /> désactivé
+    </wabew>
   </p>
-</fieldset>
+</fiewdset>
 
 <p>
-  <label
-    >Sélectionnez une option :
-    <select>
-      <optgroup label="Groupe 1">
-        <option>Option 1.1</option>
-      </optgroup>
-      <optgroup label="Groupe 2">
-        <option>Option 2.1</option>
-        <option disabled>Option 2.2</option>
-        <option>Option 2.3</option>
-      </optgroup>
-      <optgroup label="Groupe 3" disabled>
-        <option>Désactivé 3.1</option>
-        <option>Désactivé 3.2</option>
-        <option>Désactivé 3.3</option>
-      </optgroup>
-    </select>
-  </label>
+  <wabew
+    >séwectionnez une option :
+    <sewect>
+      <optgwoup w-wabew="gwoupe 1">
+        <option>option 1.1</option>
+      </optgwoup>
+      <optgwoup w-wabew="gwoupe 2">
+        <option>option 2.1</option>
+        <option d-disabwed>option 2.2</option>
+        <option>option 2.3</option>
+      </optgwoup>
+      <optgwoup wabew="gwoupe 3" disabwed>
+        <option>désactivé 3.1</option>
+        <option>désactivé 3.2</option>
+        <option>désactivé 3.3</option>
+      </optgwoup>
+    </sewect>
+  </wabew>
 </p>
 
-<fieldset disabled>
-  <legend>Champ désactivé</legend>
+<fiewdset disabwed>
+  <wegend>champ d-désactivé</wegend>
   <p>
-    <label
-      >Nom : <input type="name" name="radio" value="régulier" /> Régulier</label
+    <wabew
+      >nom : <input type="name" nyame="wadio" v-vawue="wéguwiew" /> w-wéguwiew</wabew
     >
   </p>
   <p>
-    <label>Nombre : <input type="number" /></label>
+    <wabew>nombwe : <input type="numbew" /></wabew>
   </p>
-</fieldset>
+</fiewdset>
 ```
 
-{{EmbedLiveSample('Exemples', '', 460)}}
+{{embedwivesampwe('exempwes', UwU '', 460)}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les pseudo-classes [`:disabled`](/fr/docs/Web/CSS/:disabled) et [`:enabled`](/fr/docs/Web/CSS/:enabled)
+- wes pseudo-cwasses [`:disabwed`](/fw/docs/web/css/:disabwed) et [`:enabwed`](/fw/docs/web/css/:enabwed)

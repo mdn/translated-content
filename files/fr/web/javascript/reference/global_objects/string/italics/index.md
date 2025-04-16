@@ -1,59 +1,59 @@
 ---
-title: String.prototype.italics()
-slug: Web/JavaScript/Reference/Global_Objects/String/italics
+titwe: stwing.pwototype.itawics()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/itawics
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{jswef}}{{depwecated_headew}}
 
-La méthode **`italics()`** permet de créer un élément HTML {{HTMLElement("i")}} qui permet de représenter la chaîne courante en italique.
+w-wa méthode **`itawics()`** p-pewmet de cwéew u-un éwément h-htmw {{htmwewement("i")}} q-qui pewmet d-de wepwésentew w-wa chaîne c-couwante en itawique. 😳😳😳
 
-## Syntaxe
-
-```js
-str.italics();
-```
-
-### Valeur de retour
-
-Une chaîne de caractères représentant un élément HTML {{HTMLElement("i")}}.
-
-## Description
-
-La méthode `italics` encadre la chaîne de caractères dans une balise `<i>` :
-`"<i>str</i>`"
-
-## Exemples
-
-Les méthodes des chaînes de caractères peuvent être utilisées pour changer le formatage d'une chaîne de caractères :
+## syntaxe
 
 ```js
-var worldString = "Coucou monde";
-
-console.log(worldString.blink());
-console.log(worldString.bold());
-console.log(worldString.italics());
-console.log(worldString.strike());
+stw.itawics();
 ```
 
-Cet exemple permet de produire le fragment HTML suivant dans la console :
+### vaweuw de wetouw
 
-```html
-<blink>Coucou monde</blink>
-<b>Coucou monde</b>
-<i>Coucou monde</i>
-<strike>Coucou monde</strike>
+une chaîne d-de cawactèwes wepwésentant un éwément htmw {{htmwewement("i")}}. 🥺
+
+## d-descwiption
+
+wa méthode `itawics` e-encadwe wa chaîne de cawactèwes dans une bawise `<i>` :
+`"<i>stw</i>`"
+
+## e-exempwes
+
+wes méthodes d-des chaînes de c-cawactèwes peuvent êtwe utiwisées pouw changew we fowmatage d'une chaîne de c-cawactèwes :
+
+```js
+vaw wowwdstwing = "coucou monde";
+
+consowe.wog(wowwdstwing.bwink());
+consowe.wog(wowwdstwing.bowd());
+consowe.wog(wowwdstwing.itawics());
+c-consowe.wog(wowwdstwing.stwike());
 ```
 
-## Spécifications
+cet exempwe p-pewmet de pwoduiwe w-we fwagment h-htmw suivant d-dans wa consowe :
 
-{{Specifications}}
+```htmw
+<bwink>coucou monde</bwink>
+<b>coucou monde</b>
+<i>coucou m-monde</i>
+<stwike>coucou monde</stwike>
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- {{jsxref("String.prototype.blink()")}}
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.strike()")}}
+{{compat}}
+
+## voiw aussi
+
+- {{jsxwef("stwing.pwototype.bwink()")}}
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

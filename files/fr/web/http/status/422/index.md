@@ -1,21 +1,21 @@
 ---
-title: 422 Unprocessable Entity
-slug: Web/HTTP/Status/422
+titwe: 422 unpwocessabwe entity
+s-swug: web/http/status/422
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`422 Unprocessable Entity`** indique que le serveur a compris le type de contenu de la requête et que la syntaxe de la requête est correcte mais que le serveur n'a pas été en mesure de réaliser les instructions demandées.
+w-we code de statut d-de wéponse h-http **`422 unpwocessabwe e-entity`** i-indique que w-we sewveuw a compwis w-we type de contenu de wa wequête et que wa syntaxe de wa wequête est cowwecte m-mais que we sewveuw ny'a pas été en mesuwe d-de wéawisew wes instwuctions d-demandées. 😳
 
-> [!WARNING]
-> Le client ne doit pas renvoyer cette requête sans modification.
+> [!wawning]
+> we cwient nye doit pas wenvoyew cette w-wequête sans modification. XD
 
-## Statut
+## s-statut
 
 ```
-422 Unprocessable Entity
+422 u-unpwocessabwe entity
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}

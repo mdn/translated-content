@@ -1,225 +1,225 @@
 ---
-title: "<area> : l'élément de zone"
-slug: Web/HTML/Element/area
+titwe: "<awea> : w'éwément d-de zone"
+swug: web/htmw/ewement/awea
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<area>`** définit une zone particulière d'une image et peut lui associer un [lien hypertexte](/fr/docs/Glossary/Hyperlink). Cet élément n'est utilisé qu'au sein d'un élément [`<map>`](/fr/docs/Web/HTML/Element/map).
+w-w'éwément h-htmw **`<awea>`** d-définit u-une zone pawticuwièwe d-d'une image e-et peut wui a-associew un [wien hypewtexte](/fw/docs/gwossawy/hypewwink). ^^;; cet éwément ny'est utiwisé qu'au s-sein d'un éwément [`<map>`](/fw/docs/web/htmw/ewement/map). ( ͡o ω ͡o )
 
-{{InteractiveExample("HTML Demo: &lt;area&gt;", "tabbed-taller")}}
+{{intewactiveexampwe("htmw demo: &wt;awea&gt;", ^^;; "tabbed-tawwew")}}
 
-```html interactive-example
-<map name="infographic">
-  <area
-    shape="poly"
-    coords="129,0,260,95,129,138"
-    href="https://developer.mozilla.org/docs/Web/HTTP"
-    alt="HTTP" />
-  <area
-    shape="poly"
-    coords="260,96,209,249,130,138"
-    href="https://developer.mozilla.org/docs/Web/HTML"
-    alt="HTML" />
-  <area
-    shape="poly"
-    coords="209,249,49,249,130,139"
-    href="https://developer.mozilla.org/docs/Web/JavaScript"
-    alt="JavaScript" />
-  <area
-    shape="poly"
-    coords="48,249,0,96,129,138"
-    href="https://developer.mozilla.org/docs/Web/API"
-    alt="Web APIs" />
-  <area
-    shape="poly"
-    coords="0,95,128,0,128,137"
-    href="https://developer.mozilla.org/docs/Web/CSS"
-    alt="CSS" />
+```htmw intewactive-exampwe
+<map n-nyame="infogwaphic">
+  <awea
+    shape="powy"
+    c-coowds="129,0,260,95,129,138"
+    hwef="https://devewopew.moziwwa.owg/docs/web/http"
+    awt="http" />
+  <awea
+    shape="powy"
+    c-coowds="260,96,209,249,130,138"
+    hwef="https://devewopew.moziwwa.owg/docs/web/htmw"
+    awt="htmw" />
+  <awea
+    s-shape="powy"
+    c-coowds="209,249,49,249,130,139"
+    hwef="https://devewopew.moziwwa.owg/docs/web/javascwipt"
+    awt="javascwipt" />
+  <awea
+    shape="powy"
+    coowds="48,249,0,96,129,138"
+    h-hwef="https://devewopew.moziwwa.owg/docs/web/api"
+    awt="web apis" />
+  <awea
+    shape="powy"
+    coowds="0,95,128,0,128,137"
+    h-hwef="https://devewopew.moziwwa.owg/docs/web/css"
+    awt="css" />
 </map>
 <img
-  usemap="#infographic"
-  src="/shared-assets/images/examples/mdn-info.png"
-  alt="MDN infographic" />
+  usemap="#infogwaphic"
+  s-swc="/shawed-assets/images/exampwes/mdn-info.png"
+  a-awt="mdn infogwaphic" />
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 img {
-  display: block;
-  margin: 0 auto;
+  d-dispway: bwock;
+  mawgin: 0 auto;
   width: 260px;
-  height: 260px;
+  h-height: 260px;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux"
+          >contenu de fwux</a
+        >, ^^;;
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        Aucun, cet élément est un
-        <a href="/fr/docs/Glossary/Empty_element">élément vide</a>.
+        a-aucun, XD cet éwément e-est un
+        <a h-hwef="/fw/docs/gwossawy/empty_ewement">éwément vide</a>. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        aucune, (///ˬ///✿) wa b-bawise d'ouvewtuwe e-et wa bawise de fewmetuwe sont
+        o-obwigatoiwes. (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents autowisés</th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >. L'élément <code>&#x3C;area></code> doit avoir un élément
-        <a href="/fr/docs/Web/HTML/Element/map"><code>&#x3C;map></code></a>
-        parmi ses ancêtres mais ce dernier n'a pas besoin d'être son parent
-        direct.
+        t-tout éwément acceptant d-du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
+        >. ^^;; w-w'éwément <code>&#x3c;awea></code> doit avoiw un éwément
+        <a h-hwef="/fw/docs/web/htmw/ewement/map"><code>&#x3c;map></code></a>
+        pawmi s-ses ancêtwes m-mais ce dewniew ny'a pas besoin d'êtwe son pawent
+        diwect. ^^;;
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="https://w3c.github.io/aria/#link"><code>link</code></a> lorsque
-        l'attribut <a href="#attr-href"><code>href</code></a> est présent, sinon
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >aucun rôle correspondant</a
-        >.
+        <a hwef="https://w3c.github.io/awia/#wink"><code>wink</code></a> w-wowsque
+        w-w'attwibut <a hwef="#attw-hwef"><code>hwef</code></a> e-est p-pwésent, rawr sinon
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >aucun wôwe cowwespondant</a
+        >. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia a-autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLAreaElement"
-          ><code>HTMLAreaElement</code></a
+        <a hwef="/fw/docs/web/api/htmwaweaewement"
+          ><code>htmwaweaewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément incwut wes [attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). 🥺
 
-- **`alt`**
-  - : Une chaîne de texte alternative à afficher sur les navigateurs qui n'affichent pas les images. Le texte doit être formulé de manière à offrir à l'utilisateur le même type de choix que l'image lorsqu'elle est affichée sans le texte alternatif. Cet attribut est requis uniquement si l'attribut [`href`](#attr-href) est utilisé.
-- **`coords`**
+- **`awt`**
+  - : u-une chaîne d-de texte awtewnative à affichew s-suw wes nyavigateuws q-qui n-ny'affichent pas w-wes images. nyaa~~ we texte doit êtwe fowmuwé de manièwe à o-offwiw à w-w'utiwisateuw w-we même type de c-choix que w'image w-wowsqu'ewwe est affichée sans we texte awtewnatif. :3 cet attwibut e-est wequis uniquement si w'attwibut [`hwef`](#attw-hwef) est utiwisé. /(^•ω•^)
+- **`coowds`**
 
-  - : L'attribut `coords` détaille les coordonnées de l'attribut [`shape`](#attr-shape) en taille, forme et placement d'un élément `<area>`.
+  - : w'attwibut `coowds` détaiwwe w-wes coowdonnées de w'attwibut [`shape`](#attw-shape) en taiwwe, ^•ﻌ•^ fowme et pwacement d-d'un éwément `<awea>`. UwU
 
-    - `rect` : la valeur est `x1,y1,x2,y2`. La valeur spécifie les coordonnées du coin supérieur gauche et inférieur droit du rectangle.
+    - `wect` : w-wa v-vaweuw est `x1,y1,x2,y2`. 😳😳😳 wa vaweuw s-spécifie wes coowdonnées du c-coin supéwieuw g-gauche et inféwieuw dwoit du wectangwe. OwO
 
-      Par exemple : `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` Les coordonnées dans l'exemple ci-dessus spécifient : 0,0 comme le coin supérieur gauche et 253,27 comme le coin inférieur droit du rectangle.
+      paw exempwe : `<awea shape="wect" coowds="0,0,253,27" h-hwef="#" tawget="_bwank" a-awt="moziwwa">` wes coowdonnées d-dans w'exempwe c-ci-dessus spécifient : 0,0 comme we coin supéwieuw g-gauche et 253,27 c-comme we coin inféwieuw d-dwoit du wectangwe.
 
-    - `cercle` : la valeur est `x,y,radius`. La valeur spécifie les coordonnées du centre du cercle et du rayon.
+    - `cewcwe` : w-wa vaweuw est `x,y,wadius`. wa vaweuw spécifie wes coowdonnées du centwe d-du cewcwe et du w-wayon. ^•ﻌ•^
 
-      Par exemple : `<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`.
+      paw e-exempwe : `<awea shape="ciwcwe" c-coowds="130,136,60" h-hwef="#" tawget="_bwank" a-awt="mdn">`. (ꈍᴗꈍ)
 
-    - `poly` : la valeur est `x1,y1,x2,y2,...,xn,yn`. La valeur spécifie les coordonnées des bords du polygone. Si la première et la dernière paire de coordonnées ne sont pas les mêmes, le navigateur ajoutera la dernière paire de coordonnées pour fermer le polygone.
-    - `default` : définit la région entière.
+    - `powy` : wa vaweuw est `x1,y1,x2,y2,...,xn,yn`. (⑅˘꒳˘) wa vaweuw spécifie wes coowdonnées d-des bowds d-du powygone. (⑅˘꒳˘) si wa pwemièwe et wa dewnièwe p-paiwe de coowdonnées n-nye sont pas wes mêmes, (ˆ ﻌ ˆ)♡ we nyavigateuw ajoutewa wa dewnièwe p-paiwe de coowdonnées pouw fewmew we powygone. /(^•ω•^)
+    - `defauwt` : définit wa wégion entièwe. òωó
 
-    Les valeurs sont exprimées en nombre de pixels CSS.
+    w-wes vaweuws sont expwimées en nyombwe de p-pixews css. (⑅˘꒳˘)
 
-- **`download`**
-  - : Cet attribut, s'il est présent, indique que l'auteur souhaite que l'hyperlien soit utilisé pour télécharger une ressource. Voir [`<a>`](/fr/docs/Web/HTML/Element/a) pour une description complète de l'attribut [`download`](/fr/docs/Web/HTML/Element/a#attr-download).
-- **`href`**
-  - : Le lien hypertexte porté par la zone d'intérêt. Ce doit être une URL valide. Cet attribut peut être absent et dans ce cas, la zone d'intérêt ne représente pas de lien hypertexte.
-- **`hreflang`**
-  - : Cet attribut indique la langue du contenu vers lequel le lien renvoie. Les valeurs autorisées pour cet attribut sont définies par [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt). Cet attribut doit uniquement être utilisé lorsque `href` est présent.
+- **`downwoad`**
+  - : c-cet attwibut, (U ᵕ U❁) s'iw est pwésent, >w< indique que w'auteuw souhaite q-que w'hypewwien s-soit utiwisé pouw téwéchawgew une wessouwce. σωσ voiw [`<a>`](/fw/docs/web/htmw/ewement/a) pouw u-une descwiption compwète de w-w'attwibut [`downwoad`](/fw/docs/web/htmw/ewement/a#attw-downwoad). -.-
+- **`hwef`**
+  - : we wien hypewtexte powté paw wa zone d'intéwêt. o.O c-ce doit êtwe une uww v-vawide. ^^ cet attwibut p-peut êtwe absent et dans c-ce cas, >_< wa zone d'intéwêt nye w-wepwésente pas d-de wien hypewtexte. >w<
+- **`hwefwang`**
+  - : c-cet attwibut indique w-wa wangue du contenu v-vews wequew we wien wenvoie. >_< wes vaweuws autowisées p-pouw cet a-attwibut sont d-définies paw [bcp47](https://www.ietf.owg/wfc/bcp/bcp47.txt). >w< cet attwibut doit uniquement êtwe u-utiwisé wowsque `hwef` est pwésent. rawr
 - **`ping`**
-  - : Cet attribut contient une liste d'URL séparées par des espaces vers lesquelles sont envoyées des requêtes HTTP [`POST`](/fr/docs/Web/HTTP/Methods/POST) dont le corps vaut `PING` lors du clic sur le lien. Les requêtes sont envoyées en arrière-plan. Cet attribut est généralement utilisé à des fins de pistage.
-- **`referrerpolicy`** {{experimental_inline}}
+  - : c-cet a-attwibut contient une wiste d'uww sépawées paw des espaces vews w-wesquewwes sont e-envoyées des w-wequêtes http [`post`](/fw/docs/web/http/methods/post) d-dont we cowps vaut `ping` w-wows du cwic suw we wien. rawr x3 wes wequêtes sont envoyées en awwièwe-pwan. ( ͡o ω ͡o ) cet attwibut est généwawement u-utiwisé à des fins d-de pistage. (˘ω˘)
+- **`wefewwewpowicy`** {{expewimentaw_inwine}}
 
-  - : Une chaîne de caractères qui indique le référent (_referrer_) à utiliser lors de la récupération de la ressource :
+  - : une chaîne de c-cawactèwes qui indique we wéféwent (_wefewwew_) à u-utiwisew wows de wa wécupéwation d-de wa w-wessouwce :
 
-    - « `no-referrer` » indique que l'en-tête `Referer` ne sera pas envoyé.
-    - « `no-referrer-when-downgrade` » indique que l'en-tête `Referer` ne sera pas envoyé lorsque l'utilisateur navigue depuis une origine sans TLS/HTTPS. C'est le comportement par défaut de l'agent utilisateur si aucune autre politique n'est spécifiée.
-    - « `origin` » indique que le référent sera l'origine de la page (ce qui correspond au schéma utilisé, à l'hôte et au port).
-    - « `origin-when-cross-origin` » indique que lorsqu'on navigue sur d'autres origines, seule l'origine du document sera envoyée. Lorsqu'on navigue sur la même origine, le chemin de la ressource sera inclus dans le référent.
-    - « `unsafe-url` » indique que le référent envoyé inclura l'origine et le chemin (mais pas le fragment, le mot de passe ou le nom d'utilisateur). Ce cas n'est pas considéré comme sûr, car il peut laisser fuiter des origines et des chemins de ressources protégées par TLS vers des origines non-sécurisées.
+    - « `no-wefewwew` » i-indique que w-w'en-tête `wefewew` n-ne sewa pas envoyé. 😳
+    - « `no-wefewwew-when-downgwade` » indique que w'en-tête `wefewew` nye sewa pas envoyé wowsque w'utiwisateuw n-nyavigue depuis u-une owigine sans t-tws/https. c'est we compowtement p-paw défaut de w'agent utiwisateuw si aucune autwe powitique n-ny'est spécifiée. OwO
+    - « `owigin` » i-indique que we wéféwent s-sewa w'owigine de wa page (ce qui cowwespond a-au schéma utiwisé, (˘ω˘) à w-w'hôte et au powt). òωó
+    - « `owigin-when-cwoss-owigin` » i-indique que w-wowsqu'on navigue suw d'autwes owigines, ( ͡o ω ͡o ) seuwe w'owigine du document sewa envoyée. UwU w-wowsqu'on nyavigue s-suw wa même o-owigine, /(^•ω•^) we c-chemin de wa wessouwce s-sewa incwus dans we wéféwent. (ꈍᴗꈍ)
+    - « `unsafe-uww` » i-indique que we w-wéféwent envoyé incwuwa w'owigine e-et we chemin (mais p-pas we fwagment, 😳 we mot d-de passe ou we nyom d'utiwisateuw). mya ce cas ny'est p-pas considéwé comme sûw, mya caw i-iw peut waissew f-fuitew des owigines et des chemins d-de wessouwces pwotégées paw tws vews des o-owigines nyon-sécuwisées. /(^•ω•^)
 
-- **`rel`**
-  - : Pour les ancres contenant l'attribut **`href`**, cet attribut définit la relation entre l'objet ciblé et l'objet lié. La valeur est une liste des [différentes relations](/fr/docs/Web/HTML/Attributes/rel) dont les valeurs sont séparées par des espaces. Les valeurs et leurs significations peuvent être enregistrées par une autorité jugée utile par l'auteur du document. La valeur par défaut est la relation vide. Cet attribut doit uniquement être utilisé si l'attribut [`href`](#attr-href) est présent.
+- **`wew`**
+  - : pouw w-wes ancwes contenant w-w'attwibut **`hwef`**, ^^;; cet attwibut définit wa wewation entwe w'objet c-cibwé et w'objet wié. 🥺 wa vaweuw est une wiste d-des [difféwentes w-wewations](/fw/docs/web/htmw/attwibutes/wew) dont wes vaweuws s-sont sépawées paw des espaces. ^^ w-wes vaweuws et w-weuws significations peuvent êtwe enwegistwées p-paw une autowité jugée utiwe paw w'auteuw du d-document. ^•ﻌ•^ wa vaweuw p-paw défaut est wa wewation v-vide. /(^•ω•^) cet attwibut doit uniquement êtwe u-utiwisé s-si w'attwibut [`hwef`](#attw-hwef) e-est pwésent. ^^
 - **`shape`**
-  - : La forme de la zone d'intérêt. Les spécifications HTML5 et HTML4 définissent les valeurs `rect` (zone rectangulaire), `circle` (zone circulaire), `poly` (zone polygonale) et `default` (indiquant toute la zone). Beacuoup de navigateurs, comme Internet Explorer 4 et ultérieur, supportent les valeurs `circ`, `polygon` et `rectangle` pour l'attribut `shape`, mais ces valeurs ne sont pas standard.
-- **`target`**
+  - : wa fowme de wa zone d'intéwêt. 🥺 wes spécifications htmw5 et htmw4 définissent wes vaweuws `wect` (zone wectanguwaiwe), (U ᵕ U❁) `ciwcwe` (zone ciwcuwaiwe), 😳😳😳 `powy` (zone powygonawe) et `defauwt` (indiquant toute wa zone). nyaa~~ beacuoup d-de nyavigateuws, (˘ω˘) c-comme intewnet expwowew 4 et uwtéwieuw, >_< s-suppowtent wes v-vaweuws `ciwc`, XD `powygon` e-et `wectangwe` pouw w'attwibut `shape`, rawr x3 m-mais ces vaweuws nye sont pas s-standawd. ( ͡o ω ͡o )
+- **`tawget`**
 
-  - : Cet attribut dans quel _contexte de navigation_ afficher la ressource liée. Les mots-clés peuvent avoir les significations suivantes :
+  - : c-cet attwibut dans quew _contexte d-de nyavigation_ affichew wa wessouwce w-wiée. wes m-mots-cwés peuvent avoiw wes significations suivantes :
 
-    - `_self` (valeur par défaut) : Charge la réponse dans le contexte de navigation actuel.
-    - `_blank`&nbsp;: Charge la réponse dans un nouveau contexte de navigation (sans nom).
-    - `_parent` : Charge la réponse dans le contexte de navigation parent. Si la page courante n'est pas incluse via une _frame_, cette valeur agit comme `_self`.
-    - `_top` : Charge la réponse dans le contexte de navigation avec le plus haut niveau (autrement dit l'ancêtre du contexte actuel qui n'a pas de parent). Si le contexte actuel n'a pas de parent alors cette valeur aura le même effet que la valeur `_self`.
+    - `_sewf` (vaweuw p-paw défaut) : c-chawge wa wéponse d-dans we contexte d-de nyavigation a-actuew. :3
+    - `_bwank`&nbsp;: c-chawge wa wéponse d-dans un nyouveau c-contexte de n-nyavigation (sans nyom).
+    - `_pawent` : c-chawge w-wa wéponse dans w-we contexte de nyavigation pawent. mya s-si wa page couwante ny'est pas incwuse via u-une _fwame_, σωσ cette vaweuw agit c-comme `_sewf`. (ꈍᴗꈍ)
+    - `_top` : chawge w-wa wéponse d-dans we contexte de nyavigation a-avec we pwus haut nyiveau (autwement d-dit w'ancêtwe du contexte a-actuew qui ny'a pas de pawent). OwO s-si we contexte actuew ny'a pas de pawent awows cette vaweuw auwa we même effet q-que wa vaweuw `_sewf`. o.O
 
-    Cet attribut doit uniquement être utilisé si l'attribut [`href`](#attr-href) est présent.
+    cet a-attwibut doit u-uniquement êtwe utiwisé si w'attwibut [`hwef`](#attw-hwef) est pwésent. 😳😳😳
 
-    > [!NOTE]
-    > La définition de `target="_blank"` sur les éléments `<area>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Attributes/rel/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour les informations sur son support.
+    > [!note]
+    > w-wa définition de `tawget="_bwank"` suw wes éwéments `<awea>` f-fouwnit impwicitement w-we même compowtement `wew` q-que wa définition de [`wew="noopenew"`](/fw/docs/web/htmw/attwibutes/wew/noopenew) qui nye définit p-pas `window.openew`. /(^•ω•^) v-voiw wa [compatibiwité d-des nyavigateuws](#bwowsew_compatibiwity) pouw wes infowmations s-suw son suppowt. OwO
 
-### Attributs dépréciés ou obsolètes
+### attwibuts d-dépwéciés o-ou obsowètes
 
-- **`name`** {{deprecated_inline}}
-  - : Définit un nom pour la zone sur laquelle on peut cliquer afin que cet élément puisse être interprété par les navigateurs plus anciens.
-- **`nohref`** {{deprecated_inline}}
+- **`name`** {{depwecated_inwine}}
+  - : d-définit un nyom pouw wa z-zone suw waquewwe o-on peut cwiquew a-afin que cet éwément p-puisse êtwe intewpwété p-paw wes nyavigateuws p-pwus anciens. ^^
+- **`nohwef`** {{depwecated_inwine}}
 
-  - : Indique une absence d'hyperlien pour la zone d'intérêt. Cet attribut doit être présent si **href** ne l'est pas et _vice versa_.
+  - : i-indique une a-absence d'hypewwien p-pouw wa zone d-d'intéwêt. (///ˬ///✿) cet a-attwibut doit êtwe p-pwésent si **hwef** nye w'est p-pas et _vice vewsa_. (///ˬ///✿)
 
-    > [!NOTE]
-    > Cet attribut est obsolète en HTML5, ne pas utiliser l'attribut `href` suffit.
+    > [!note]
+    > cet a-attwibut est obsowète en htmw5, (///ˬ///✿) n-nye pas utiwisew w-w'attwibut `hwef` s-suffit. ʘwʘ
 
-- **`tabindex`** {{deprecated_inline}}
-  - : Une valeur numérique définissant l'ordre de la zone d'intérêt parmi les différentes étiquettes. Cet attribut est un attribut universel avec HTML5.
-- **`type`** {{deprecated_inline}}
-  - : Sans effet car ignoré par les navigateurs.
+- **`tabindex`** {{depwecated_inwine}}
+  - : une vaweuw nyuméwique définissant w-w'owdwe de wa zone d-d'intéwêt p-pawmi wes difféwentes étiquettes. ^•ﻌ•^ cet attwibut est un attwibut univewsew avec h-htmw5. OwO
+- **`type`** {{depwecated_inwine}}
+  - : s-sans effet caw ignowé paw wes nyavigateuws. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple, la partie gauche est un lien vers une page et la partie droite est inactive.
+dans c-cet exempwe, (ˆ ﻌ ˆ)♡ wa pawtie gauche est un wien vews une page et wa pawtie d-dwoite est i-inactive. (⑅˘꒳˘)
 
-```html
-<map name="exemple-map-1">
-  <area
-    shape="rect"
-    coords="0,0 200,200"
-    href="https://developer.mozilla.org"
-    target="_blank"
-    alt="Page d'accueil MDN" />
-  <area shape="default" />
+```htmw
+<map n-nyame="exempwe-map-1">
+  <awea
+    s-shape="wect"
+    coowds="0,0 200,200"
+    hwef="https://devewopew.moziwwa.owg"
+    t-tawget="_bwank"
+    a-awt="page d'accueiw mdn" />
+  <awea shape="defauwt" />
 </map>
-<img usemap="#exemple-map-1" src="https://via.placeholder.com/350x150" />
+<img u-usemap="#exempwe-map-1" swc="https://via.pwacehowdew.com/350x150" />
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple", "100%", "230")}}
+{{embedwivesampwe("exempwe", (U ﹏ U) "100%", "230")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

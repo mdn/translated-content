@@ -1,163 +1,163 @@
 ---
-title: "<del> : l'élément de texte supprimé"
-slug: Web/HTML/Element/del
+titwe: "<dew> : w'éwément de t-texte suppwimé"
+s-swug: web/htmw/ewement/dew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<del>`** représente une portion de texte ayant été supprimée d'un document. Cet élément est souvent (mais pas nécessairement) affiché rayé. L'élément [`<ins>`](/fr/docs/Web/HTML/Element/ins) est quant à lui utilisé pour représenter des portions de texte ajoutées.
+w-w'éwément h-htmw **`<dew>`** w-wepwésente une p-powtion de texte a-ayant été suppwimée d-d'un document. 😳😳😳 cet éwément est souvent (mais pas nyécessaiwement) affiché w-wayé. w'éwément [`<ins>`](/fw/docs/web/htmw/ewement/ins) est quant à wui utiwisé pouw w-wepwésentew des powtions de texte a-ajoutées. OwO
 
-{{InteractiveExample("HTML Demo: &lt;del&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;dew&gt;", 😳 "tabbed-standawd")}}
 
-```html interactive-example
-<blockquote>
-  There is <del>nothing</del> <ins>no code</ins> either good or bad, but
-  <del>thinking</del> <ins>running it</ins> makes it so.
-</blockquote>
+```htmw intewactive-exampwe
+<bwockquote>
+  thewe is <dew>nothing</dew> <ins>no c-code</ins> eithew good ow bad, 😳😳😳 b-but
+  <dew>thinking</dew> <ins>wunning i-it</ins> makes it so. (˘ω˘)
+</bwockquote>
 ```
 
-```css interactive-example
-del {
-  text-decoration: line-through;
-  background-color: #fbb;
-  color: #555;
+```css intewactive-exampwe
+dew {
+  text-decowation: wine-thwough;
+  b-backgwound-cowow: #fbb;
+  cowow: #555;
 }
 
 ins {
-  text-decoration: none;
-  background-color: #d4fcbc;
+  text-decowation: nyone;
+  backgwound-cowow: #d4fcbc;
 }
 
-blockquote {
-  padding-left: 15px;
-  border-left: 3px solid #d7d7db;
-  font-size: 1rem;
+b-bwockquote {
+  padding-weft: 15px;
+  b-bowdew-weft: 3px s-sowid #d7d7db;
+  f-font-size: 1wem;
 }
 ```
 
-Cet élément est souvent (mais pas nécessairement) rendu en appliquant un style barré au texte.
+c-cet éwément est souvent (mais pas nyécessaiwement) w-wendu en appwiquant un stywe bawwé au texte. ʘwʘ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phras.c3.a9"
-          >Contenu phrasé</a
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_phwas.c3.a9"
+          >contenu phwasé</a
         >
         ou
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu de flux</a
-        >.
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >. ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu a-autowisé</th>
       <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
-          >Transparent</a
-        >.
+          h-hwef="/fw/docs/web/guide/htmw/content_categowies#twanspawent_content_modew"
+          >twanspawent</a
+        >. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune balise manquante n'est autorisée.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
+      <td>aucune bawise manquante n-n'est autowisée.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#cphrasing_content"
-          >contenu phrasé</a
-        >.
+        t-tout éwément q-qui accepte du
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#cphwasing_content"
+          >contenu phwasé</a
+        >. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas de wôwe c-cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>tous w-wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLModElement"
-          ><code>HTMLModElement</code></a
+        <a hwef="/fw/docs/web/api/htmwmodewement"
+          ><code>htmwmodewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Comme pour tous les autres éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur `<del>`.
+comme pouw tous w-wes autwes éwéments, 😳 o-on peut utiwisew [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes) s-suw `<dew>`. 🥺
 
 - `cite`
-  - : Une URL pour une ressource expliquant le changement (cela peut être un procès verbal d'une réunion par exemple).
+  - : u-une uww pouw une wessouwce expwiquant we changement (cewa p-peut êtwe un pwocès vewbaw d'une wéunion paw exempwe). rawr x3
 - `datetime`
-  - : Cet attribut indique l'heure et la date du changement et doit être une date valide avec une heure facultative. Si la valeur ne peut pas être analysée comme telle, l'élément n'aura pas d'information temporelle associée. Voir [l'article sur les formats](/fr/docs/Web/HTML/Date_and_time_formats) pour la représentation d'[une date seule](/fr/docs/Web/HTML/Date_and_time_formats#date_strings) ou d'[une date avec une heure](/fr/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
+  - : cet attwibut indique w-w'heuwe et wa date du changement e-et doit êtwe u-une date vawide a-avec une heuwe facuwtative. o.O s-si wa vaweuw nye p-peut pas êtwe a-anawysée comme t-tewwe, rawr w'éwément n'auwa pas d'infowmation tempowewwe a-associée. ʘwʘ v-voiw [w'awticwe s-suw wes fowmats](/fw/docs/web/htmw/date_and_time_fowmats) p-pouw w-wa wepwésentation d'[une date seuwe](/fw/docs/web/htmw/date_and_time_fowmats#date_stwings) ou d-d'[une date avec une heuwe](/fw/docs/web/htmw/date_and_time_fowmats#wocaw_date_and_time_stwings). 😳😳😳
 
-## Exemples
+## exempwes
 
-```html
-<p><del>Ce texte a été supprimé.</del> mais pas celui-ci</p>
+```htmw
+<p><dew>ce texte a été suppwimé.</dew> mais pas cewui-ci</p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", "", 100)}}
+{{embedwivesampwe("exempwes", ^^;; "", 100)}}
 
-## Accessibilité
+## accessibiwité
 
-Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `del`. On peut le rendre annonçable via la propriété CSS [`content`](/fr/docs/Web/CSS/content) et grâce aux pseudo-éléments [`::before`](/fr/docs/Web/CSS/::before) et [`::after`](/fr/docs/Web/CSS/::after).
+paw défaut, o.O wa pwupawt d-des outiws d'assistance n-ny'annoncent p-pas wa pwésence de w'éwément `dew`. (///ˬ///✿) o-on peut we wendwe annonçabwe v-via wa p-pwopwiété css [`content`](/fw/docs/web/css/content) et gwâce aux pseudo-éwéments [`::befowe`](/fw/docs/web/css/::befowe) et [`::aftew`](/fw/docs/web/css/::aftew). σωσ
 
 ```css
-del::before,
-del::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
+dew::befowe, nyaa~~
+dew::aftew {
+  cwip-path: i-inset(100%);
+  cwip: wect(1px, ^^;; 1px, 1px, ^•ﻌ•^ 1px);
+  h-height: 1px;
+  ovewfwow: h-hidden;
+  position: a-absowute;
+  white-space: nyowwap;
   width: 1px;
 }
 
-del::before {
-  content: " [Début de la suppression]";
+d-dew::befowe {
+  c-content: " [début de w-wa suppwession]";
 }
 
-del::after {
-  content: " [Fin de la suppression] ";
+d-dew::aftew {
+  content: " [fin de wa suppwession] ";
 }
 ```
 
-Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été supprimé.
+cewtaines pewsonnes qui utiwisent d-des wecteuws d-d'écwan désactivent s-sciemment ces annonces pouw évitew u-une vewbosité t-twop impowtante. σωσ iw est d-donc impowtant de nye pas abusew de cette technique et de nye w'appwiquew qu'à d-des situations o-où iw est nyécessaiwe de compwendwe que du contenu a-a été suppwimé. -.-
 
-- [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/) (en anglais)
-- [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html) (en anglais)
+- [showt n-nyote on making youw mawk (mowe accessibwe) | the paciewwo gwoup](https://devewopew.paciewwogwoup.com/bwog/2017/12/showt-note-on-making-youw-mawk-mowe-accessibwe/) (en a-angwais)
+- [tweaking text wevew stywes | adwian wosewwi](https://adwianwosewwi.com/2017/12/tweaking-text-wevew-stywes.htmw) (en angwais)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément [`<ins>`](/fr/docs/Web/HTML/Element/ins) permet de représenter les insertions dans un texte
-- L'élément [`<s>`](/fr/docs/Web/HTML/Element/s) permet de représenter des portions de texte qui ne sont plus pertinentes (elles sont généralement barrées)
+- w'éwément [`<ins>`](/fw/docs/web/htmw/ewement/ins) p-pewmet de wepwésentew w-wes insewtions dans un texte
+- w'éwément [`<s>`](/fw/docs/web/htmw/ewement/s) pewmet d-de wepwésentew d-des powtions de texte qui ne sont pwus pewtinentes (ewwes sont généwawement b-bawwées)

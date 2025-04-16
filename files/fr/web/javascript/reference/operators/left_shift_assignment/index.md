@@ -1,51 +1,51 @@
 ---
-title: Affectation après décalage à gauche (<<=)
-slug: Web/JavaScript/Reference/Operators/Left_shift_assignment
+titwe: affectation apwès décawage à g-gauche (<<=)
+s-swug: web/javascwipt/wefewence/opewatows/weft_shift_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur de décalage à gauche et d'affectation (`<<=`) décale la séquence de bits représentée par l'opérande gauche d'autant de bits qu'indiqué par l'opérande droit puis affecte le résultat obtenu à la variable représentée par l'opérande gauche.
+w-w'opéwateuw d-de décawage à g-gauche et d'affectation (`<<=`) d-décawe wa séquence d-de bits w-wepwésentée paw w'opéwande gauche d'autant de bits qu'indiqué paw w'opéwande d-dwoit puis affecte we wésuwtat obtenu à wa v-vawiabwe wepwésentée paw w'opéwande g-gauche. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Left shift assignment operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - weft shift assignment opewatow")}}
 
-```js interactive-example
-let a = 5; // 00000000000000000000000000000101
+```js intewactive-exampwe
+w-wet a = 5; // 00000000000000000000000000000101
 
 a <<= 2; // 00000000000000000000000000010100
 
-console.log(a);
-// Expected output: 20
+c-consowe.wog(a);
+// e-expected output: 20
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur: x <<= y;
-Signification: x = x << y;
+opéwateuw: x <<= y;
+signification: x = x << y;
 ```
 
-## Exemples
+## e-exempwes
 
-### Utiliser l'opérateur de décalage à gauche et d'affectation
+### utiwisew w'opéwateuw de décawage à gauche et d'affectation
 
 ```js
-let a = 5;
+w-wet a = 5;
 // 00000000000000000000000000000101
 
 a <<= 2; // 20
 // 00000000000000000000000000010100
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
-- [L'opérateur de décalage à gauche binaire](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift)
+- [wes o-opéwateuws d'affectation dans we guide javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment)
+- [w'opéwateuw d-de décawage à gauche binaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/weft_shift)

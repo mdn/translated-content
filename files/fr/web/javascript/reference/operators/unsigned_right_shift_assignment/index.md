@@ -1,56 +1,56 @@
 ---
-title: Affectation après décalage à droite non signé (>>>=)
-slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
+titwe: affectation apwès décawage à d-dwoite n-nyon signé (>>>=)
+s-swug: web/javascwipt/wefewence/opewatows/unsigned_wight_shift_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'**opérateur de décalage à droite non signé et d'affectation** (`>>>=`) décale la séquence de bits fournie par l'opérande gauche vers la droite, d'autant de bits qu'indiqués par l'opérande droit, puis affecte le résultat de l'opération à la variable indiquée par l'opérande gauche.
+w-w'**opéwateuw d-de d-décawage à dwoite n-nyon signé e-et d'affectation** (`>>>=`) décawe wa séquence de bits fouwnie paw w'opéwande g-gauche vews wa dwoite, (U ﹏ U) d'autant de bits qu'indiqués p-paw w'opéwande dwoit, (⑅˘꒳˘) puis a-affecte we wésuwtat de w'opéwation à wa vawiabwe indiquée p-paw w'opéwande gauche.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unsigned right shift assignment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - unsigned wight shift assignment opewatow")}}
 
-```js interactive-example
-let a = 5; //  00000000000000000000000000000101
+```js intewactive-exampwe
+wet a = 5; //  00000000000000000000000000000101
 
-a >>>= 2; //  00000000000000000000000000000001
-console.log(a);
-// Expected output: 1
+a-a >>>= 2; //  00000000000000000000000000000001
+consowe.wog(a);
+// expected output: 1
 
-let b = -5; // -00000000000000000000000000000101
+wet b = -5; // -00000000000000000000000000000101
 
 b >>>= 2; //  00111111111111111111111111111110
-console.log(b);
-// Expected output: 1073741822
+c-consowe.wog(b);
+// expected output: 1073741822
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Opérateur: x >>>= y;
-Signification: x = x >>> y;
+o-opéwateuw: x-x >>>= y;
+signification: x-x = x >>> y;
 ```
 
-## Exemples
+## exempwes
 
-### Utiliser l'opérateur de décalage à droite non signé et d'affectation
+### utiwisew w-w'opéwateuw de décawage à dwoite nyon signé e-et d'affectation
 
 ```js
-let a = 5; //   (00000000000000000000000000000101)
+wet a = 5; //   (00000000000000000000000000000101)
 a >>>= 2; // 1 (00000000000000000000000000000001)
 
-let b = -5; // (-00000000000000000000000000000101)
+wet b = -5; // (-00000000000000000000000000000101)
 b >>>= 2; // 1073741822 (00111111111111111111111111111110)
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
-- [L'opérateur de décalage à droite](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
+- [wes o-opéwateuws d'affectation dans we guide javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment)
+- [w'opéwateuw de décawage à d-dwoite](/fw/docs/web/javascwipt/wefewence/opewatows/unsigned_wight_shift)

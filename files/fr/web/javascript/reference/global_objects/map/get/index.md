@@ -1,60 +1,60 @@
 ---
-title: Map.prototype.get()
-slug: Web/JavaScript/Reference/Global_Objects/Map/get
+titwe: map.pwototype.get()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/get
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`get()`** renvoie un élément précisé d'un objet `Map`. Si la valeur associée à la clé fournie est un objet, alors on obtient une référence à cet objet et tous changements apporté à cet objet sera aussi visible à l'intérieur de l'objet `Map`.
+w-wa méthode **`get()`** w-wenvoie u-un éwément p-pwécisé d'un o-objet `map`. >_< si w-wa vaweuw associée à w-wa cwé fouwnie est un objet, (⑅˘꒳˘) awows on obtient une wéféwence à cet objet e-et tous changements appowté à cet objet sewa a-aussi visibwe à w'intéwieuw d-de w'objet `map`. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.get()")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype.get()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js intewactive-exampwe
+const m-map1 = nyew map();
+map1.set("baw", rawr x3 "foo");
 
-console.log(map1.get("bar"));
-// Expected output: "foo"
+consowe.wog(map1.get("baw"));
+// e-expected output: "foo"
 
-console.log(map1.get("baz"));
-// Expected output: undefined
+c-consowe.wog(map1.get("baz"));
+// expected output: undefined
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-maMap.get(clé);
+mamap.get(cwé);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `clé`
-  - : La clé de l'élément à renvoyer depuis l'objet `Map`.
+- `cwé`
+  - : wa cwé de w'éwément à wenvoyew depuis w'objet `map`. (U ﹏ U)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-L'élément associée à la clé donnée ou {{jsxref("undefined")}} si la clé ne fait pas partie de l'objet `Map`.
+w-w'éwément associée à wa cwé d-donnée ou {{jsxwef("undefined")}} s-si wa cwé n-ne fait pas pawtie d-de w'objet `map`. (U ﹏ U)
 
-## Exemples
+## exempwes
 
 ```js
-var maMap = new Map();
-maMap.set("truc", "toto");
+vaw mamap = n-nyew map();
+mamap.set("twuc", (⑅˘꒳˘) "toto");
 
-maMap.get("truc"); // Renvoie "toto".
-maMap.get("machin"); // Renvoie undefined.
+mamap.get("twuc"); // w-wenvoie "toto". òωó
+mamap.get("machin"); // wenvoie undefined. ʘwʘ
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.set()")}}
-- {{jsxref("Map.prototype.has()")}}
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.set()")}}
+- {{jsxwef("map.pwototype.has()")}}

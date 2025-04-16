@@ -1,12 +1,12 @@
 ---
-title: transform
-slug: Web/XSLT/Element/transform
+titwe: twansfowm
+swug: web/xswt/ewement/twansfowm
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:transform>` est l'équivalent exact de l'élément [`<xsl:stylesheet>`](/fr/XSLT/stylesheet).
+w-w'éwément `<xsw:twansfowm>` e-est w'équivawent e-exact d-de w'éwément [`<xsw:stywesheet>`](/fw/xswt/stywesheet). o.O
 
-### Support Gecko
+### suppowt g-gecko
 
-Supporté.
+suppowté. (U ᵕ U❁)

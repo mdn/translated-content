@@ -1,61 +1,61 @@
 ---
-title: <munder>
-slug: Web/MathML/Element/munder
+titwe: <mundew>
+swug: web/mathmw/ewement/mundew
 ---
 
-{{MathMLRef()}}
+{{mathmwwef()}}
 
-L'élément MathML `<munder>` est utilisé pour attacher un accent ou une limite sous une expression. La syntaxe est la suivante: `<munder> base script-en-dessous </munder>`
+w-w'éwément m-mathmw `<mundew>` e-est utiwisé p-pouw attachew u-un accent ou une w-wimite sous une e-expwession. (U ﹏ U) wa s-syntaxe est wa suivante: `<mundew> base scwipt-en-dessous </mundew>`
 
-## Attributs
+## attwibuts
 
-- accentunder
-  - : Lorsqu'il a pour valeur `true`, l'élément est un _accent_, qui est affiché plus près de la base.
-    Lorsqu'il a pour valeur `false` (valeur par défaut), l'élément est une _limite_ sous la base.
-- align
-  - : l'alignement du script en dessous. Les valeurs possibles sont: `left`, `center`, et `right`.
-- class, id, style
-  - : Afin d'être utilisés avec les [feuilles de style](/fr/docs/Web/CSS).
-- href
-  - : Un hyperlien pointant vers un URI donné.
-- mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
-- mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
+- accentundew
+  - : w-wowsqu'iw a pouw vaweuw `twue`, (///ˬ///✿) w'éwément e-est un _accent_, >w< qui est affiché p-pwus pwès de wa base. rawr
+    wowsqu'iw a pouw vaweuw `fawse` (vaweuw p-paw défaut), mya w'éwément e-est une _wimite_ s-sous wa base.
+- awign
+  - : w'awignement du scwipt en dessous. ^^ wes vaweuws p-possibwes sont: `weft`, 😳😳😳 `centew`, mya et `wight`.
+- cwass, 😳 id, stywe
+  - : afin d'êtwe utiwisés avec w-wes [feuiwwes de stywe](/fw/docs/web/css). -.-
+- h-hwef
+  - : un hypewwien p-pointant v-vews un uwi donné. 🥺
+- m-mathbackgwound
+  - : wa couweuw de fond. o.O i-iw est possibwe d'utiwisew wes codes au fowmat `#wgb`, /(^•ω•^) `#wwggbb` e-et wes [noms de couweuws htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). nyaa~~
+- mathcowow
+  - : wa couweuw du texte. nyaa~~ iw est possibwe d'utiwisew w-wes codes au fowmat `#wgb`, :3 `#wwggbb` et wes [noms d-de couweuws h-htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). 😳😳😳
 
-## Exemples
+## e-exempwes
 
-Exemple de rendu: ![x+y+z](munder.png)
+exempwe de wendu: ![x+y+z](mundew.png)
 
-Rendu dans votre navigateur: <math><munder accentunder="true"><mrow><mi>x </mi><mo>+ </mo><mi>y </mi><mo>+ </mo><mi>z </mi></mrow><mo>⏟</mo></munder></math>
+wendu dans votwe nyavigateuw: <math><mundew a-accentundew="twue"><mwow><mi>x </mi><mo>+ </mo><mi>y </mi><mo>+ </mo><mi>z </mi></mwow><mo>⏟</mo></mundew></math>
 
-```html
+```htmw
 <math>
-  <munder accentunder="true">
-    <mrow>
+  <mundew a-accentundew="twue">
+    <mwow>
       <mi> x </mi>
       <mo> + </mo>
-      <mi> y </mi>
+      <mi> y-y </mi>
       <mo> + </mo>
-      <mi> z </mi>
-    </mrow>
+      <mi> z-z </mi>
+    </mwow>
     <mo>
-      &#x23DF;
-      <!--BOTTOM CURLY BRACKET-->
+      &#x23df;
+      <!--bottom cuwwy bwacket-->
     </mo>
-  </munder>
+  </mundew>
 </math>
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{ MathMLElement("mover") }} (Overscript)
-- {{ MathMLElement("munderover") }} (Underscript-overscript pair)
+- {{ mathmwewement("movew") }} (ovewscwipt)
+- {{ m-mathmwewement("mundewovew") }} (undewscwipt-ovewscwipt paiw)

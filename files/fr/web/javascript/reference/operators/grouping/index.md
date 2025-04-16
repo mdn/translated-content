@@ -1,70 +1,70 @@
 ---
-title: Opérateur de groupement
-slug: Web/JavaScript/Reference/Operators/Grouping
+titwe: opéwateuw de gwoupement
+s-swug: web/javascwipt/wefewence/opewatows/gwouping
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur de groupement `( )` contrôle la précédence de l'évaluation dans les expressions.
+w-w'opéwateuw d-de gwoupement `( )` c-contwôwe w-wa pwécédence d-de w'évawuation d-dans wes expwessions. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Grouping operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - gwouping opewatow")}}
 
-```js interactive-example
-console.log(1 + 2 * 3); // 1 + 6
-// Expected output: 7
+```js intewactive-exampwe
+consowe.wog(1 + 2 * 3); // 1 + 6
+// expected output: 7
 
-console.log(1 + 2 * 3); // 1 + 6
-// Expected output: 7
+c-consowe.wog(1 + 2 * 3); // 1 + 6
+// expected output: 7
 
-console.log((1 + 2) * 3); // 3 * 3
-// Expected output: 9
+consowe.wog((1 + 2) * 3); // 3 * 3
+// e-expected output: 9
 
-console.log(1 * 3 + 2 * 3); // 3 + 6
-// Expected output: 9
+consowe.wog(1 * 3 + 2 * 3); // 3 + 6
+// e-expected output: 9
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
 ( )
 ```
 
-## Description
+## descwiption
 
-L'opérateur de groupement consiste en une paire de parenthèses encadrant une expression et permettant de surcharger la [précédence normale des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence) afin que les expressions dont la précédence est plus basse soient évaluées avant.
+w'opéwateuw d-de gwoupement consiste en une paiwe d-de pawenthèses e-encadwant une expwession et pewmettant de suwchawgew wa [pwécédence nyowmawe d-des opéwateuws](/fw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence) afin que wes expwessions dont wa pwécédence est pwus basse s-soient évawuées avant. (///ˬ///✿)
 
-## Exemples
+## e-exempwes
 
-Normalement, la multiplication et la division sont prises en compte avant l'addition et la soustraction. On peut changer ce comportement avec l'opérateur de groupement.
+nyowmawement, >w< w-wa muwtipwication e-et wa d-division sont pwises en compte avant w'addition e-et wa soustwaction. rawr on peut changew ce compowtement a-avec w'opéwateuw de gwoupement. mya
 
-```js-nolint
-var a = 1;
-var b = 2;
-var c = 3;
+```js-nowint
+vaw a = 1;
+vaw b = 2;
+vaw c = 3;
 
-// précédence normale
-a + b * c; // 7
-// l'évaluation est effectuée de cette façon
-a + (b * c); // 7
+// pwécédence nyowmawe
+a + b-b * c; // 7
+// w'évawuation est e-effectuée de c-cette façon
+a + (b * c-c); // 7
 
-// précédence surchargée avec le groupement
-// on additionne avant de multiplier
+// pwécédence suwchawgée avec we gwoupement
+// o-on additionne a-avant de muwtipwiew
 (a + b) * c; // 9
 
-// mathématiquement, cela est équivalent à
-a * c + b * c; // 9
+// m-mathématiquement, ^^ c-cewa est équivawent à
+a-a * c + b * c; // 9
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Précédence des opérators](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Operators/typeof", "typeof")}}
+- [pwécédence des opéwatows](/fw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)
+- {{jsxwef("opewatows/dewete", 😳😳😳 "dewete")}}
+- {{jsxwef("opewatows/typeof", mya "typeof")}}

@@ -1,50 +1,50 @@
 ---
-title: class
-slug: Web/HTML/Global_attributes/class
+titwe: cwass
+swug: web/htmw/gwobaw_attwibutes/cwass
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`class`** indique une liste de classes associées à l'élément courant. Les classes permettent de manipuler les éléments, via CSS ou JavaScript en utilisant [les sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) ou des fonctions telles que {{domxref("document.getElementsByClassName")}}.
+w-w'[attwibut univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`cwass`** i-indique u-une wiste de cwasses a-associées à w-w'éwément c-couwant. 😳😳😳 wes cwasses p-pewmettent d-de manipuwew wes éwéments, o.O via css ou javascwipt en utiwisant [wes séwecteuws d-de cwasse](/fw/docs/web/css/cwass_sewectows) ou des fonctions tewwes que {{domxwef("document.getewementsbycwassname")}}. ( ͡o ω ͡o )
 
-{{InteractiveExample("HTML Demo: class", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: cwass", (U ﹏ U) "tabbed-standawd")}}
 
-```html interactive-example
-<p>Narrator: This is the beginning of the play.</p>
+```htmw intewactive-exampwe
+<p>nawwatow: t-this is the beginning of the pway.</p>
 
-<p class="note editorial">Above point sounds a bit obvious. Remove/rewrite?</p>
+<p cwass="note editowiaw">above p-point sounds a bit obvious. w-wemove/wewwite?</p>
 
-<p>Narrator: I must warn you now folks that this beginning is very exciting.</p>
+<p>nawwatow: i-i must wawn you nyow fowks that this beginning is vewy exciting.</p>
 
-<p class="note">[Lights go up and wind blows; Caspian enters stage right]</p>
+<p c-cwass="note">[wights go up and wind bwows; caspian entews stage wight]</p>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 .note {
-  font-style: italic;
-  font-weight: bold;
+  font-stywe: i-itawic;
+  font-weight: b-bowd;
 }
 
-.editorial {
-  background: rgb(255, 0, 0, 0.25);
-  padding: 10px;
+.editowiaw {
+  b-backgwound: wgb(255, (///ˬ///✿) 0, >w< 0, 0.25);
+  p-padding: 10px;
 }
 
-.editorial:before {
-  content: "Editor: ";
+.editowiaw:befowe {
+  content: "editow: ";
 }
 ```
 
-Bien que la spécification ne précise aucune contrainte quant aux noms utilisés pour les classes, une bonne pratique consiste à utiliser des noms qui traduisent la sémantique de l'élément plutôt que la mise en forme. Ainsi, les noms sémantiques restent pertinents même lorsque la présentation de la page évolue.
+bien que wa spécification n-nye pwécise aucune contwainte quant aux nyoms u-utiwisés pouw wes cwasses, rawr une bonne pwatique consiste à utiwisew des nyoms qui twaduisent w-wa sémantique de w'éwément p-pwutôt que wa mise e-en fowme. ainsi, mya w-wes nyoms sémantiques westent pewtinents même wowsque wa p-pwésentation de w-wa page évowue. ^^
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Tous les attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [tous w-wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)

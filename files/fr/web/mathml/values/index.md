@@ -1,104 +1,104 @@
 ---
-title: Valeurs
-slug: Web/MathML/Values
+titwe: vaweuws
+swug: web/mathmw/vawues
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-## Longueurs
+## w-wongueuws
 
-Plusieurs éléments de présentation MathML possèdent des attributs qui acceptent des valeurs pour mesurer des tailles ou des espacements. MathML accepte différentes unités et constantes pour spécifier les longueurs.
+pwusieuws éwéments d-de pwésentation m-mathmw possèdent d-des attwibuts q-qui acceptent d-des vaweuws pouw m-mesuwew des taiwwes o-ou des espacements. >_< mathmw accepte difféwentes unités et constantes pouw s-spécifiew wes wongueuws. >_<
 
-### Unités
+### unités
 
-| Uniét | Description                                                                                                                     |
+| uniét | descwiption                                                                                                                     |
 | ----- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `em`  | Unité {{ Cssxref("font-size", "relative à la police") }}                                                                        |
-| `ex`  | Unité {{ Cssxref("font-size", "relative à la police") }}. (La hauteur "x" de l'élément, `1ex ≈ 0.5em` dans beaucoup de polices) |
-| `px`  | Pixels                                                                                                                          |
-| `in`  | Pouces (1 pouce = 2,54 centimètres)                                                                                             |
-| `cm`  | Centimètres                                                                                                                     |
-| `mm`  | Millimètres                                                                                                                     |
-| `pt`  | Points (1 point = 1/72 pouce)                                                                                                   |
-| `pc`  | Picas (1 pica = 12 points)                                                                                                      |
-| `%`   | Pourcentage de la valeur par défaut.                                                                                            |
+| `em`  | u-unité {{ cssxwef("font-size", (⑅˘꒳˘) "wewative à w-wa powice") }}                                                                        |
+| `ex`  | unité {{ cssxwef("font-size", /(^•ω•^) "wewative à wa powice") }}. rawr x3 (wa h-hauteuw "x" de w'éwément, (U ﹏ U) `1ex ≈ 0.5em` d-dans beaucoup d-de powices) |
+| `px`  | pixews                                                                                                                          |
+| `in`  | pouces (1 pouce = 2,54 centimètwes)                                                                                             |
+| `cm`  | centimètwes                                                                                                                     |
+| `mm`  | m-miwwimètwes                                                                                                                     |
+| `pt`  | points (1 point = 1/72 pouce)                                                                                                   |
+| `pc`  | picas (1 p-pica = 12 points)                                                                                                      |
+| `%`   | pouwcentage d-de wa vaweuw paw d-défaut.                                                                                            |
 
-### Constantes
+### c-constantes
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th>Constante</th>
-      <th>Valeur</th>
-    </tr>
+    <tw>
+      <th>constante</th>
+      <th>vaweuw</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>veryverythinmathspace</code></td>
+    <tw>
+      <td><code>vewyvewythinmathspace</code></td>
       <td>1/18<code>em</code></td>
-    </tr>
-    <tr>
-      <td><code>verythinmathspace</code></td>
+    </tw>
+    <tw>
+      <td><code>vewythinmathspace</code></td>
       <td>2/18<code>em</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>thinmathspace</code></td>
       <td>3/18<code>em</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>mediummathspace</code></td>
       <td>4/18<code>em</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>thickmathspace</code></td>
       <td>5/18<code>em</code></td>
-    </tr>
-    <tr>
-      <td><code>verythickmathspace</code></td>
+    </tw>
+    <tw>
+      <td><code>vewythickmathspace</code></td>
       <td>6/18<code>em</code></td>
-    </tr>
-    <tr>
-      <td><code>veryverythickmathspace</code></td>
+    </tw>
+    <tw>
+      <td><code>vewyvewythickmathspace</code></td>
       <td>7/18<code>em</code></td>
-    </tr>
+    </tw>
   </tbody>
   <thead>
-    <tr>
-      <th colspan="2">
-        Les <em>contstantes</em> négatives ont été introduites avec Gecko 7.0 ([bug Firefox 650530](https://bugzil.la/650530))
+    <tw>
+      <th cowspan="2">
+        wes <em>contstantes</em> nyégatives o-ont été intwoduites avec gecko 7.0 ([bug f-fiwefox 650530](https://bugziw.wa/650530))
       </th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>negativeveryverythinmathspace</code></td>
+    <tw>
+      <td><code>negativevewyvewythinmathspace</code></td>
       <td>-1/18<code>em</code></td>
-    </tr>
-    <tr>
-      <td><code>negativeverythinmathspace</code></td>
+    </tw>
+    <tw>
+      <td><code>negativevewythinmathspace</code></td>
       <td>-2/18<code>em</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>negativethinmathspace</code></td>
       <td>-3/18<code>em</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>negativemediummathspace</code></td>
       <td>-4/18<code>em</code></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>negativethickmathspace</code></td>
       <td>-5/18<code>em</code></td>
-    </tr>
-    <tr>
-      <td><code>negativeverythickmathspace</code></td>
+    </tw>
+    <tw>
+      <td><code>negativevewythickmathspace</code></td>
       <td>-6/18<code>em</code></td>
-    </tr>
-    <tr>
-      <td><code>negativeveryverythickmathspace</code></td>
+    </tw>
+    <tw>
+      <td><code>negativevewyvewythickmathspace</code></td>
       <td>-7/18<code>em</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Note : [L'association avec des espaces de noms a été dépréciée](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) dans MathML3 et a été retirée dans Gecko 15.0 ([bug 673759](https://bugzilla.mozilla.org/show_bug.cgi?id=673759)).
+nyote : [w'association avec des espaces de nyoms a été dépwéciée](https://www.w3.owg/tw/mathmw3/chaptew3.htmw#id.3.3.4.2.1) dans m-mathmw3 et a été wetiwée dans g-gecko 15.0 ([bug 673759](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=673759)). (U ﹏ U)

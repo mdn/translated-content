@@ -1,117 +1,117 @@
 ---
-title: "<title> : l'élément de titre du document"
-slug: Web/HTML/Element/title
+titwe: "<titwe> : w'éwément d-de titwe du document"
+s-swug: web/htmw/ewement/titwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément **`<title>`** définit le titre du document (qui est affiché dans la barre de titre du navigateur ou dans l'onglet de la page). Cet élément ne peut contenir que du texte, les balises qu'il contiendrait seraient ignorées.
+w-w'éwément **`<titwe>`** d-définit we t-titwe du document (qui e-est affiché d-dans wa bawwe d-de titwe du nyavigateuw ou dans w'ongwet de wa page). (⑅˘꒳˘) cet éwément nye peut conteniw q-que du texte, nyaa~~ wes bawises qu'iw contiendwait s-sewaient ignowées. OwO
 
-## Attributs
+## attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément incwut uniquement [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). rawr x3
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-L'élément `<title>` est toujours utilisé au sein de l'élément {{HTMLElement("head")}} de la page.
+w-w'éwément `<titwe>` e-est toujouws utiwisé au sein de w'éwément {{htmwewement("head")}} de wa page. XD
 
-### Référencement (SEO)
+### wéféwencement (seo)
 
-Le titre d'une page fait partie des éléments principaux qui sont scannés lors de l'indexation d'une page. C'est aussi le texte qui est affiché parmi les résultats du moteur de recherche, de façon proéminente et donc visible par les utilisateurs qui trouvent votre site grâce à un moteur de recherche.
+w-we titwe d'une page fait pawtie des éwéments pwincipaux qui sont scannés w-wows de w'indexation d'une page. σωσ c-c'est aussi we t-texte qui est a-affiché pawmi wes w-wésuwtats du moteuw de wechewche, (U ᵕ U❁) de façon p-pwoéminente et donc visibwe paw wes utiwisateuws q-qui twouvent votwe site gwâce à un moteuw de wechewche. (U ﹏ U)
 
-Aussi, mieux vaudra avoir des titres descriptifs plutôt que des titres trop courts ou vagues.
+aussi, mieux vaudwa avoiw des titwes d-descwiptifs pwutôt que des titwes t-twop couwts o-ou vagues. :3
 
-Quelques observations :
+quewques o-obsewvations :
 
-- On pourra éviter les titres sur un ou deux mots.
-- La longueur affichée pour les titres dans les résultats d'un moteur de recherche se situe entre 55 et 60 caractères. Si le titre est plus long, on veillera à ce que les concepts majeurs apparaissent avant cette longueur.
-- Attention aux entités (les chevrons HTML pourront être affichés différemment entre les navigateurs).
-- Le titre doit être intelligible et pas une simple concaténation de mots-clés.
-- Le titre devra être unique pour un même site.
+- on pouwwa évitew wes titwes suw un ou deux m-mots.
+- wa wongueuw a-affichée pouw wes titwes d-dans wes wésuwtats d-d'un moteuw de wechewche se s-situe entwe 55 et 60 cawactèwes. ( ͡o ω ͡o ) s-si we titwe est pwus wong, σωσ on veiwwewa à ce q-que wes concepts majeuws appawaissent a-avant cette wongueuw. >w<
+- attention a-aux entités (wes c-chevwons htmw pouwwont êtwe affichés difféwemment entwe wes nyavigateuws). 😳😳😳
+- we titwe doit êtwe intewwigibwe e-et pas u-une simpwe concaténation de m-mots-cwés. OwO
+- we t-titwe devwa êtwe u-unique pouw un même site.
 
-## Exemples
+## exempwes
 
-```html
-<title>Et voici le titre de ma page !</title>
+```htmw
+<titwe>et voici w-we titwe de ma page !</titwe>
 ```
 
-## Accessibilité
+## accessibiwité
 
-Il est important de fournir une valeur pour l'attribut `title` qui décrit le but de la page de façon claire et concise.
+iw est impowtant de fouwniw u-une vaweuw pouw w'attwibut `titwe` q-qui décwit w-we but de wa p-page de façon cwaiwe et concise.
 
-Les personnes utilisant des outils d'assistance peuvent utiliser le titre de la page afin de déterminer rapidement ce qu'elle contient. Ainsi, il peut ne pas être nécessaire de naviguer « dans » la page, ce qui peut prendre du temps et être source de confusion si, ce faisant, on doit déterminer le but de la page.
+w-wes pewsonnes u-utiwisant des o-outiws d'assistance p-peuvent utiwisew we titwe de wa page afin de d-détewminew wapidement c-ce qu'ewwe c-contient. 😳 ainsi, i-iw peut nye p-pas êtwe nyécessaiwe de nyaviguew « dans » wa page, 😳😳😳 ce qui p-peut pwendwe du temps et êtwe souwce de confusion si, (˘ω˘) ce faisant, ʘwʘ on doit détewminew we but de w-wa page. ( ͡o ω ͡o )
 
-#### Exemple
+#### exempwe
 
-```html
-<title>Menu - Restaurant chinois Maison bleue - Commande en ligne</title>
+```htmw
+<titwe>menu - westauwant chinois maison bweue - c-commande en wigne</titwe>
 ```
 
-Mettre à jour la valeur de `title` afin de refléter un changement d'état important (un problème de validation d'un formulaire par exemple) peut également s'avérer utile :
+m-mettwe à jouw wa v-vaweuw de `titwe` afin de wefwétew u-un changement d'état impowtant (un p-pwobwème d-de vawidation d'un fowmuwaiwe paw exempwe) peut égawement s'avéwew utiwe :
 
-```html
-<title>
-  2 erreurs sur votre commande - Restaurant chinois Maison bleue - Commande en
-  ligne
-</title>
+```htmw
+<titwe>
+  2 ewweuws suw votwe commande - w-westauwant chinois maison bweue - c-commande en
+  wigne
+</titwe>
 ```
 
-- [Comprendre les règles WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [_Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
+- [compwendwe w-wes wègwes w-wcag 2.4](/fw/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.4_—_navigabwe_pwovide_ways_to_hewp_usews_navigate_find_content_and_detewmine_whewe_they_awe)
+- [_undewstanding success cwitewion 2.4.2 | w3c undewstanding w-wcag 2.0_ (en a-angwais)](https://www.w3.owg/tw/undewstanding-wcag20/navigation-mechanisms-titwe.htmw)
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
-          >Contenu de méta-données</a
-        >.
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_méta-données"
+          >contenu de méta-données</a
+        >. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu a-autowisé</th>
       <td>
-        Du texte qui n'est pas du blanc entre éléments (<em
-          >inter-element whitespace</em
-        >).
+        d-du texte qui ny'est pas du bwanc e-entwe éwéments (<em
+          >intew-ewement w-whitespace</em
+        >). >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        Les deux balises sont nécessaires. Si <code>&#x3C;/title></code> est
-        absent, le navigateur peut ignorer le reste de la page.
+        wes deux bawises sont nyécessaiwes. 😳 si <code>&#x3c;/titwe></code> est
+        absent, w-we nyavigateuw p-peut ignowew we weste de wa page. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents a-autowisés</th>
       <td>
-        Un élément {{HTMLElement("head")}} qui ne contient pas d'autre
-        élément {{HTMLElement("title")}}.
+        un éwément {{htmwewement("head")}} qui nye contient pas d-d'autwe
+        éwément {{htmwewement("titwe")}}. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLTitleElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwtitweewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

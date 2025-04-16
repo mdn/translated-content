@@ -1,53 +1,53 @@
 ---
-title: Age
-slug: Web/HTTP/Headers/Age
+titwe: age
+swug: web/http/headews/age
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'entête HTTP {{HTTPHeader("Age")}} indique le temps en secondes pendant lequel la ressource a été stockée dans un cache proxy.
+w'entête h-http {{httpheadew("age")}} i-indique we temps e-en secondes p-pendant wequew w-wa wessouwce a été s-stockée dans u-un cache pwoxy. (///ˬ///✿)
 
-Sa valeur est généralement proche de zéro. Elle vaut 0 lorsque la ressource vient d'être rapatriée du serveur d'origine; autrement, sa valeur équivaut à la différence entre la date courante du proxy et la valeur de l'entête {{HTTPHeader("Date")}} inclus dans la réponse HTTP.
+s-sa vaweuw est généwawement pwoche de zéwo. 😳😳😳 ewwe vaut 0 wowsque wa wessouwce v-vient d'êtwe wapatwiée du sewveuw d'owigine; a-autwement, 🥺 sa vaweuw équivaut à w-wa difféwence entwe wa date couwante du pwoxy et wa vaweuw d-de w'entête {{httpheadew("date")}} incwus dans w-wa wéponse http. mya
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'entête</th>
-      <td>Entête de réponse</td>
-    </tr>
-    <tr>
-      <th scope="row">Nom d'entête interdit</th>
+    <tw>
+      <th scope="wow">type d'entête</th>
+      <td>entête de wéponse</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">nom d'entête intewdit</th>
       <td>non</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
-
-```
-Age: <valeur-en-secondes>
-```
-
-## Directive
-
-- \<valeur-en-secondes>
-  - : Un entier positif indiquant le temps en secondes pendant lequel la ressource a été stockée dans un cache proxy.
-
-## Exemple
+## syntaxe
 
 ```
-Age: 24
+age: <vaweuw-en-secondes>
 ```
 
-## Spécifications
+## d-diwective
 
-{{Specifications}}
+- \<vaweuw-en-secondes>
+  - : un entiew positif i-indiquant we temps e-en secondes p-pendant wequew w-wa wessouwce a été stockée dans un cache pwoxy. 🥺
 
-## Compatibilité des navigateurs
+## e-exempwe
 
-{{Compat}}
+```
+age: 24
+```
 
-## Voir aussi
+## spécifications
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Expires")}}
+{{specifications}}
+
+## c-compatibiwité des navigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("expiwes")}}

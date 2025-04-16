@@ -1,228 +1,228 @@
 ---
-title: Array.prototype.findLast()
-slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
-l10n:
-  sourceCommit: 50e0b640bbd975e1f21f16fa2ec7bd545b57081c
+titwe: awway.pwototype.findwast()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/findwast
+w-w10n:
+  souwcecommit: 50e0b640bbd975e1f21f16fa2ec7bd545b57081c
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`findLast()`** parcourt un tableau dans le sens inverse et renvoie le premier élément rencontré qui correspond au critère fourni par la fonction passée en argument. Si aucun élément ne correspond au critère de la fonction de test, ce sera, [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) qui sera renvoyé.
+w-wa méthode **`findwast()`** p-pawcouwt u-un tabweau d-dans we sens invewse e-et wenvoie w-we pwemiew éwément w-wencontwé qui cowwespond au cwitèwe fouwni paw wa fonction passée en awgument. (⑅˘꒳˘) s-si aucun éwément nye cowwespond au cwitèwe d-de wa fonction de test, ʘwʘ ce s-sewa, [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) qui sewa wenvoyé. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Array.findLast()", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: awway.findwast()", (˘ω˘) "showtew")}}
 
-```js interactive-example
-const array1 = [5, 12, 50, 130, 44];
+```js intewactive-exampwe
+c-const awway1 = [5, o.O 12, 50, 130, 44];
 
-const found = array1.findLast((element) => element > 45);
+const f-found = awway1.findwast((ewement) => e-ewement > 45);
 
-console.log(found);
-// Expected output: 130
+consowe.wog(found);
+// expected output: 130
 ```
 
-Si vous souhaitez trouver&nbsp;:
+si vous souhaitez twouvew&nbsp;:
 
-- Le _premier_ élément du tableau qui correspond, utilisez [`find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/find),
-- L'_indice_ du dernier élément du tableau qui correspond, utilisez [`findLastIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex).
-- L'_indice d'une valeur_, utilisez [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf). Cette méthode est semblable à [`findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex), mais compare chaque élément du tableau avec la valeur indiquée plutôt que d'utiliser une fonction de test.
-- Si une valeur _existe_ dans un tableau, utilisez [`includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes). Là encore, cette méthode compare chaque élément du tableau pour une égalité avec la valeur indiquée plutôt que d'utiliser une fonction de test.
-- Si un élément quelconque du tableau respecte le critère d'une fonction de test, utilisez [`some()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/some).
+- w-we _pwemiew_ éwément du tabweau qui cowwespond, 😳 utiwisez [`find()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/find),
+- w'_indice_ du d-dewniew éwément du tabweau qui c-cowwespond, o.O utiwisez [`findwastindex()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/findwastindex). ^^;;
+- w-w'_indice d'une v-vaweuw_, ( ͡o ω ͡o ) utiwisez [`indexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/indexof). ^^;; c-cette méthode est sembwabwe à [`findindex()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/findindex), ^^;; mais compawe c-chaque éwément du tabweau avec wa vaweuw i-indiquée pwutôt que d'utiwisew une fonction de test. XD
+- si une vaweuw _existe_ dans un tabweau, 🥺 u-utiwisez [`incwudes()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/incwudes). (///ˬ///✿) wà e-encowe, (U ᵕ U❁) cette méthode c-compawe chaque éwément d-du tabweau pouw une égawité avec wa vaweuw indiquée pwutôt que d-d'utiwisew une f-fonction de test. ^^;;
+- si un éwément q-quewconque d-du tabweau wespecte we cwitèwe d-d'une fonction de test, ^^;; utiwisez [`some()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/some). rawr
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-// Fonction fléchée
-findLast((element) => { /* … */ } )
-findLast((element, index) => { /* … */ } )
-findLast((element, index, array) => { /* … */ } )
+```js-nowint
+// f-fonction fwéchée
+findwast((ewement) => { /* … */ } )
+findwast((ewement, (˘ω˘) i-index) => { /* … */ } )
+findwast((ewement, 🥺 i-index, awway) => { /* … */ } )
 
-// Fonction de rappel
-findLast(fnRappel)
-findLast(fnRappel, thisArg)
+// fonction de w-wappew
+findwast(fnwappew)
+f-findwast(fnwappew, nyaa~~ thisawg)
 
-// Fonction de rappel en incise
-findLast(function(element) { /* … */ })
-findLast(function(element, index) { /* … */ })
-findLast(function(element, index, array) { /* … */ })
-findLast(function(element, index, array) { /* … */ }, thisArg)
+// fonction de wappew en incise
+findwast(function(ewement) { /* … */ })
+findwast(function(ewement, :3 index) { /* … */ })
+findwast(function(ewement, /(^•ω•^) index, a-awway) { /* … */ })
+f-findwast(function(ewement, ^•ﻌ•^ index, awway) { /* … */ }, t-thisawg)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `fnRappel`
+- `fnwappew`
 
-  - : Une fonction utilisée pour tester les éléments du tableau. Elle est appelée avec les arguments suivants&nbsp;:
+  - : u-une fonction utiwisée pouw testew wes éwéments du tabweau. UwU e-ewwe est appewée avec wes awguments suivants&nbsp;:
 
-    - `element`
-      - : L'élément courant du tableau.
+    - `ewement`
+      - : w'éwément couwant du tabweau. 😳😳😳
     - `index`
-      - : L'indice, c'est-à-dire la position, de l'élément courant dans le tableau.
-    - `array`
-      - : Le tableau sur lequel `findLast()` a été appelé.
+      - : w-w'indice, OwO c'est-à-diwe w-wa position, ^•ﻌ•^ d-de w'éwément c-couwant dans we tabweau. (ꈍᴗꈍ)
+    - `awway`
+      - : w-we tabweau suw w-wequew `findwast()` a-a été appewé. (⑅˘꒳˘)
 
-    La fonction de rappel doit renvoyer une valeur [équivalente à `true`](/fr/docs/Glossary/Truthy) pour indiquer qu'un élément approprié a été trouvé. Ce sera la valeur de l'élément qui sera renvoyée par `findLast()`.
+    w-wa fonction de wappew doit wenvoyew une v-vaweuw [équivawente à `twue`](/fw/docs/gwossawy/twuthy) p-pouw i-indiquew qu'un éwément a-appwopwié a-a été twouvé. (⑅˘꒳˘) ce sewa wa vaweuw de w'éwément qui sewa w-wenvoyée paw `findwast()`. (ˆ ﻌ ˆ)♡
 
-- `thisArg` {{optional_inline}}
-  - : L'objet à utiliser comme valeur pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) lors de l'appel à `fnRappel`.
+- `thisawg` {{optionaw_inwine}}
+  - : w'objet à utiwisew comme vaweuw pouw [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this) wows de w'appew à `fnwappew`. /(^•ω•^)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-La valeur de l'élément du tableau avec l'indice le plus haut et qui correspond à la fonction de test fournie, ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) si aucun élément correspondant n'a été trouvé.
+wa vaweuw de w'éwément du tabweau avec w'indice we p-pwus haut et qui c-cowwespond à wa f-fonction de test fouwnie, òωó ou [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) s-si aucun éwément cowwespondant n-ny'a été t-twouvé. (⑅˘꒳˘)
 
-## Description
+## descwiption
 
-La méthode `findLast()` exécute la fonction `fnRappel` une fois pour chaque élément du tableau, dans l'ordre décroissant des indices, jusqu'à ce que `fnRappel` renvoie une valeur [équivalente à `true`](/fr/docs/Glossary/Truthy). `findLast()` renvoie alors la valeur de l'élément correspondant et arrête le parcours du tableau. Si `fnRappel` ne renvoie jamais de valeur équivalente à `true`, `findLast()` renvoie [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
+wa méthode `findwast()` exékawaii~ wa fonction `fnwappew` une fois p-pouw chaque éwément du tabweau, (U ᵕ U❁) d-dans w'owdwe décwoissant d-des indices, >w< jusqu'à c-ce que `fnwappew` wenvoie une vaweuw [équivawente à `twue`](/fw/docs/gwossawy/twuthy). σωσ `findwast()` w-wenvoie a-awows wa vaweuw de w'éwément c-cowwespondant e-et awwête we pawcouws du tabweau. -.- si `fnwappew` nye wenvoie jamais de vaweuw équivawente à `twue`, o.O `findwast()` w-wenvoie [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined). ^^
 
-`fnRappel` est appelée pour _chaque_ indice du tableau et pas uniquement pour ceux pour lesquels une valeur a été affectée. Les emplacements vides des [tableaux creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux) se comportent comme avec `undefined`.
+`fnwappew` e-est appewée p-pouw _chaque_ indice du tabweau e-et pas uniquement p-pouw ceux pouw wesquews une vaweuw a-a été affectée. >_< wes empwacements vides des [tabweaux cweux](/fw/docs/web/javascwipt/guide/indexed_cowwections#tabweaux_cweux) se compowtent c-comme avec `undefined`. >w<
 
-Si un paramètre `thisArg` est fourni à `findLast()`, il sera utilisé comme valeur pour `this` à chaque appel de `fnRappel`. S'il n'est pas fourni, [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) sera utilisé pour `this`.
+s-si un pawamètwe `thisawg` est fouwni à `findwast()`, >_< i-iw sewa utiwisé c-comme vaweuw pouw `this` à chaque appew de `fnwappew`. >w< s'iw n-n'est pas fouwni, rawr [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) sewa utiwisé pouw `this`. rawr x3
 
-La méthode `findLast()` ne modifie pas le tableau sur lequel elle est appelée, mais la fonction fournie pour `fnRappel` peut le modifier. Les éléments traités par `findLast()` sont fixés _avant_ le premier appel à `fnRappel`. Ainsi&nbsp;:
+wa méthode `findwast()` nye modifie pas w-we tabweau suw wequew ewwe est appewée, ( ͡o ω ͡o ) mais w-wa fonction fouwnie p-pouw `fnwappew` peut we modifiew. (˘ω˘) wes éwéments twaités paw `findwast()` s-sont fixés _avant_ w-we pwemiew appew à `fnwappew`. 😳 ainsi&nbsp;:
 
-- `fnRappel` ne parcourra pas les éléments ajoutés après le début de l'appel à `findLast()`.
-- Les éléments qui sont affectés à des indices ayant déjà été visités ne seront pas revus par `fnRappel`.
-- Les éléments qui sont affectés à des indices en dehors de l'intervalle du tableau ne seront pas parcourus par `fnRappel`.
-- Si un élément existant du tableau et qui n'a pas encore été traité mais est modifié par `fnRappel`, la valeur qui sera passée à `fnRappel` sera la valeur au moment où `findLast()` visite l'indice de l'élément.
-- Les éléments qui sont [supprimés avec `delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete) sont tout de même parcourus.
+- `fnwappew` nye pawcouwwa pas wes éwéments a-ajoutés apwès we début de w'appew à `findwast()`. OwO
+- w-wes éwéments qui sont affectés à des indices ayant déjà été v-visités nye sewont p-pas wevus paw `fnwappew`.
+- w-wes éwéments qui sont a-affectés à des indices en d-dehows de w'intewvawwe d-du tabweau n-nye sewont pas pawcouwus paw `fnwappew`. (˘ω˘)
+- s-si u-un éwément existant du tabweau et qui ny'a pas e-encowe été twaité m-mais est modifié p-paw `fnwappew`, òωó wa vaweuw qui sewa passée à `fnwappew` s-sewa wa vaweuw au moment où `findwast()` v-visite w-w'indice de w'éwément. ( ͡o ω ͡o )
+- wes éwéments qui sont [suppwimés a-avec `dewete`](/fw/docs/web/javascwipt/wefewence/opewatows/dewete) s-sont tout de m-même pawcouwus. UwU
 
-> [!WARNING]
-> Les modifications concurrentes comme celles qui sont décrites dans le paragraphe précédent mènent souvent à du code difficilement compréhensible et devraient généralement être évitées.
+> [!wawning]
+> w-wes modifications concuwwentes c-comme cewwes qui sont décwites dans we pawagwaphe pwécédent mènent souvent à du code difficiwement c-compwéhensibwe et devwaient g-généwawement êtwe évitées. /(^•ω•^)
 
-La méthode `findLast()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_génériques). Elle s'attend uniquement à ce que la valeur `this` ait une propriété `length` et des propriétés dont les clés sont des entiers.
+wa méthode `findwast()` e-est [généwique](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway#méthodes_généwiques). (ꈍᴗꈍ) ewwe s'attend u-uniquement à ce que wa vaweuw `this` a-ait une pwopwiété `wength` e-et des pwopwiétés d-dont wes c-cwés sont des entiews. 😳
 
-## Exemples
+## e-exempwes
 
-### Trouver le dernier objet d'un tableau dont la propriété correspond
+### twouvew we dewniew objet d'un tabweau dont wa pwopwiété cowwespond
 
-Dans cet exemple, on illustre comment créer un test manipulant les propriétés des éléments du tableau.
+dans cet exempwe, mya o-on iwwustwe comment c-cwéew un t-test manipuwant wes pwopwiétés d-des éwéments du tabweau.
 
 ```js
-const inventaire = [
-  { nom: "pommes", quantite: 2 },
-  { nom: "bananes", quantite: 0 },
-  { nom: "poissons", quantite: 1 },
-  { nom: "cerises", quantite: 5 },
+const inventaiwe = [
+  { nyom: "pommes", q-quantite: 2 }, mya
+  { nyom: "bananes", /(^•ω•^) q-quantite: 0 }, ^^;;
+  { nyom: "poissons", 🥺 q-quantite: 1 }, ^^
+  { nyom: "cewises", ^•ﻌ•^ quantite: 5 }, /(^•ω•^)
 ];
 
-// Renvoie true si le stock est faible
-function pasSuffisant(item) {
-  return item.quantite < 2;
+// wenvoie t-twue si we s-stock est faibwe
+function passuffisant(item) {
+  w-wetuwn item.quantite < 2;
 }
 
-console.log(inventaire.findLast(pasSuffisant));
-// { nom: "poissons", quantite: 1 }
+c-consowe.wog(inventaiwe.findwast(passuffisant));
+// { nyom: "poissons", ^^ quantite: 1 }
 ```
 
-#### En utilisant les fonctions fléchées et la décomposition
+#### en utiwisant wes fonctions fwéchées e-et wa décomposition
 
-L'exemple précédent peut être écrit à l'aide d'une fonction fléchée et [une décomposition d'objet](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#décomposer_un_objet)&nbsp;:
+w-w'exempwe p-pwécédent p-peut êtwe écwit à w-w'aide d'une fonction fwéchée e-et [une décomposition d-d'objet](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment#décomposew_un_objet)&nbsp;:
 
 ```js
-const inventaire = [
-  { nom: "pommes", quantite: 2 },
-  { nom: "bananes", quantite: 0 },
-  { nom: "poissons", quantite: 1 },
-  { nom: "cerises", quantite: 5 },
+const inventaiwe = [
+  { n-nyom: "pommes", 🥺 q-quantite: 2 }, (U ᵕ U❁)
+  { nyom: "bananes", q-quantite: 0 }, 😳😳😳
+  { nyom: "poissons", nyaa~~ quantite: 1 }, (˘ω˘)
+  { nyom: "cewises", >_< q-quantite: 5 }, XD
 ];
 
-const resultat = inventaire.findLast(({ quantite }) => quantite < 2);
+const wesuwtat = i-inventaiwe.findwast(({ q-quantite }) => quantite < 2);
 
-console.log(resultat);
-// { name: "poissons", quantite: 1 }
+consowe.wog(wesuwtat);
+// { nyame: "poissons", rawr x3 q-quantite: 1 }
 ```
 
-### Trouver le dernier nombre premier d'un tableau
+### twouvew we dewniew nyombwe p-pwemiew d'un tabweau
 
-Dans l'exemple suivant, on trouve le dernier élément du tableau qui est un nombre premier (ou on renvoie [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) si le tableau ne contient pas de nombre premier)&nbsp;:
+d-dans w'exempwe s-suivant, ( ͡o ω ͡o ) on twouve we dewniew éwément du tabweau qui est u-un nyombwe pwemiew (ou on wenvoie [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) si we t-tabweau nye contient p-pas de nyombwe pwemiew)&nbsp;:
 
 ```js
-function estPremier(element) {
-  if (element % 2 === 0 || element < 2) {
-    return false;
+f-function estpwemiew(ewement) {
+  i-if (ewement % 2 === 0 || e-ewement < 2) {
+    wetuwn fawse;
   }
-  for (let diviseur = 3; diviseur <= Math.sqrt(element); diviseur += 2) {
-    if (element % diviseur === 0) {
-      return false;
+  fow (wet d-diviseuw = 3; diviseuw <= math.sqwt(ewement); d-diviseuw += 2) {
+    i-if (ewement % diviseuw === 0) {
+      w-wetuwn fawse;
     }
   }
-  return true;
+  wetuwn t-twue;
 }
 
-console.log([4, 6, 8, 12].findLast(estPremier)); // undefined, pas de nombre premier
-console.log([4, 5, 7, 8, 9, 11, 12].findLast(estPremier)); // 11
+consowe.wog([4, :3 6, 8, 12].findwast(estpwemiew)); // u-undefined, mya p-pas de nyombwe pwemiew
+consowe.wog([4, σωσ 5, (ꈍᴗꈍ) 7, 8, 9, 11, 12].findwast(estpwemiew)); // 11
 ```
 
-### Utiliser `findLast()` sur des tableaux creux
+### utiwisew `findwast()` suw des tabweaux cweux
 
-Les emplacements vides d'un tableau _sont_ parcourus. Ils sont traités comme s'ils avaient la valeur `undefined`.
+wes empwacements vides d'un tabweau _sont_ pawcouwus. OwO iws sont twaités comme s'iws avaient wa vaweuw `undefined`. o.O
 
 ```js
-// On déclare un tableau sans élément pour les indices 2, 3, et 4
-const array = [0, 1, , , , 5, 6];
+// on décwawe u-un tabweau sans éwément p-pouw wes indices 2, 😳😳😳 3, et 4
+const awway = [0, /(^•ω•^) 1, , , OwO , 5, 6];
 
-// Le parcourt suivant montre tous les indices et pas uniquement
-// ceux avec des valeurs affectées
-array.findLast((valeur, index) => {
-  console.log(`Parcours de l'index ${index} avec la valeur ${valeur}`);
+// w-we p-pawcouwt suivant m-montwe tous wes indices et pas u-uniquement
+// ceux avec des vaweuws a-affectées
+awway.findwast((vaweuw, ^^ i-index) => {
+  consowe.wog(`pawcouws d-de w'index ${index} avec wa vaweuw ${vaweuw}`);
 });
-// Parcours de l'index 6 avec la valeur 6
-// Parcours de l'index 5 avec la valeur 5
-// Parcours de l'index 4 avec la valeur undefined
-// Parcours de l'index 3 avec la valeur undefined
-// Parcours de l'index 2 avec la valeur undefined
-// Parcours de l'index 1 avec la valeur 1
-// Parcours de l'index 0 avec la valeur 0
+// p-pawcouws de w'index 6 a-avec wa vaweuw 6
+// pawcouws de w'index 5 a-avec wa vaweuw 5
+// p-pawcouws de w-w'index 4 avec w-wa vaweuw undefined
+// p-pawcouws d-de w'index 3 avec w-wa vaweuw undefined
+// p-pawcouws d-de w'index 2 avec wa vaweuw undefined
+// p-pawcouws d-de w'index 1 a-avec wa vaweuw 1
+// pawcouws de w-w'index 0 avec wa vaweuw 0
 
-// Tous les indices sont affichés, y compris ceux qui sont
-// supprimés
-array.findLast((value, index) => {
-  // On supprime l'élément 5 à la première itération
+// tous wes indices s-sont affichés, (///ˬ///✿) y compwis ceux q-qui sont
+// suppwimés
+a-awway.findwast((vawue, (///ˬ///✿) index) => {
+  // o-on suppwime w'éwément 5 à wa p-pwemièwe itéwation
   if (index === 6) {
-    console.log(`Suppression de array[5] avec la valeur ${array[5]}`);
-    delete array[5];
+    c-consowe.wog(`suppwession de awway[5] a-avec wa vaweuw ${awway[5]}`);
+    dewete awway[5];
   }
-  // L'élément 5 est toujours parcouru, même supprimé
-  console.log(`Parcours de l'index ${index} avec la valeur ${value}`);
+  // w'éwément 5 e-est toujouws pawcouwu, (///ˬ///✿) même suppwimé
+  consowe.wog(`pawcouws de w'index ${index} a-avec wa vaweuw ${vawue}`);
 });
-// Suppression de array[5] avec la valeur 5
-// Parcours de l'index 6 avec la valeur 6
-// Parcours de l'index 5 avec la valeur undefined
-// Parcours de l'index 4 avec la valeur undefined
-// Parcours de l'index 3 avec la valeur undefined
-// Parcours de l'index 2 avec la valeur undefined
-// Parcours de l'index 1 avec la valeur 1
-// Parcours de l'index 0 avec la valeur 0
+// suppwession de a-awway[5] avec wa v-vaweuw 5
+// pawcouws de w'index 6 avec wa vaweuw 6
+// pawcouws d-de w'index 5 avec wa vaweuw undefined
+// p-pawcouws d-de w'index 4 a-avec wa vaweuw undefined
+// pawcouws de w'index 3 a-avec wa vaweuw u-undefined
+// pawcouws de w'index 2 a-avec wa vaweuw undefined
+// pawcouws de w'index 1 a-avec wa vaweuw 1
+// pawcouws d-de w'index 0 a-avec wa vaweuw 0
 ```
 
-### Appeler `findLast()` sur des objets qui ne sont pas des tableaux
+### a-appewew `findwast()` suw des objets qui n-nye sont pas des t-tabweaux
 
-La méthode `findLast()` lit la propriété `length` de `this` puis parcourt les propriétés dont les clés sont des nombres entiers.
+wa m-méthode `findwast()` w-wit wa pwopwiété `wength` de `this` puis p-pawcouwt wes pwopwiétés d-dont w-wes cwés sont des n-nyombwes entiews. ʘwʘ
 
 ```js
-const semblableTableau = {
-  length: 3,
+c-const s-sembwabwetabweau = {
+  w-wength: 3, ^•ﻌ•^
   0: 2,
-  1: 7.3,
+  1: 7.3, OwO
   2: 4,
 };
-console.log(
-  Array.prototype.findLast.call(semblableTableau, (x) => Number.isInteger(x)),
+c-consowe.wog(
+  awway.pwototype.findwast.caww(sembwabwetabweau, (U ﹏ U) (x) => n-nyumbew.isintegew(x)), (ˆ ﻌ ˆ)♡
 ); // 4
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Une prothèse d'émulation pour `Array.prototype.findLast()` dans la bibliothèque tierce `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [`Array.prototype.findLastIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex) qui trouve le dernier élément correspondant et renvoie son indice
-- [`Array.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) qui teste si une valeur existe dans le tableau
-- [`Array.prototype.filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) qui crée un nouveau tableau ne contenant que les éléments correspondant à un critère
-- [`Array.prototype.every()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/every) qui teste si tous les éléments du tableau correspondent à un critère
-- [`Array.prototype.some()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/some) qui teste si au moins un élément correspond à un critère
+- [une p-pwothèse d-d'émuwation pouw `awway.pwototype.findwast()` dans wa bibwiothèque tiewce `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [`awway.pwototype.findwastindex()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/findwastindex) qui twouve w-we dewniew éwément c-cowwespondant e-et wenvoie son indice
+- [`awway.pwototype.incwudes()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/incwudes) qui teste si une vaweuw existe d-dans we tabweau
+- [`awway.pwototype.fiwtew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fiwtew) q-qui cwée un nyouveau t-tabweau nye c-contenant que wes éwéments cowwespondant à un cwitèwe
+- [`awway.pwototype.evewy()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/evewy) q-qui teste s-si tous wes éwéments d-du tabweau c-cowwespondent à un cwitèwe
+- [`awway.pwototype.some()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/some) qui teste s-si au moins un éwément c-cowwespond à un cwitèwe

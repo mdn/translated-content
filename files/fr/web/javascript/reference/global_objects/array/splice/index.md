@@ -1,108 +1,108 @@
 ---
-title: Array.prototype.splice()
-slug: Web/JavaScript/Reference/Global_Objects/Array/splice
+titwe: awway.pwototype.spwice()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/spwice
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`splice()`** modifie le contenu d'un tableau en retirant des éléments et/ou en ajoutant de nouveaux éléments [à même le tableau](https://en.wikipedia.org/wiki/In-place_algorithm).On peut ainsi vider ou remplacer une partie d'un tableau.
+w-wa m-méthode **`spwice()`** m-modifie w-we contenu d'un t-tabweau en wetiwant d-des éwéments e-et/ou en ajoutant d-de nyouveaux éwéments [à même we tabweau](https://en.wikipedia.owg/wiki/in-pwace_awgowithm).on peut ainsi videw ou wempwacew une pawtie d-d'un tabweau. 😳
 
-{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+{{intewactiveexampwe("javascwipt demo: awway.spwice()")}}
 
-```js interactive-example
-const months = ["Jan", "March", "April", "June"];
-months.splice(1, 0, "Feb");
-// Inserts at index 1
-console.log(months);
-// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+```js intewactive-exampwe
+c-const months = ["jan", 😳😳😳 "mawch", "apwiw", (˘ω˘) "june"];
+months.spwice(1, ʘwʘ 0, "feb");
+// i-insewts at index 1
+consowe.wog(months);
+// expected output: awway ["jan", ( ͡o ω ͡o ) "feb", "mawch", o.O "apwiw", "june"]
 
-months.splice(4, 1, "May");
-// Replaces 1 element at index 4
-console.log(months);
-// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+m-months.spwice(4, >w< 1, "may");
+// wepwaces 1 ewement a-at index 4
+c-consowe.wog(months);
+// expected output: awway ["jan", 😳 "feb", "mawch", 🥺 "apwiw", "may"]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-var tabElementsSupprimes = array.splice(début, nbASupprimer[, élem1[, élem2[, ...]]])
+vaw tabewementssuppwimes = a-awway.spwice(début, rawr x3 nybasuppwimew[, o.O éwem1[, rawr éwem2[, ...]]])
 ```
 
-### Paramètres
+### pawamètwes
 
 - `début`
-  - : L'indice à partir duquel commencer à changer le tableau (l'indice du premier élement étant `0`). Si sa valeur est supérieure à la longueur du tableau `array.length`, `début` est ramené à la longueur du tableau `array.length`. S'il est négatif, le changement commencera d'autant d'éléments à partir de la fin du tableau, c'est à dire à partir de l'index `array.length + début`. Si `array.length + début` est inférieur à `0`, le changement commencera à l'index `0`.
-- `nbASupprimer`
-  - : Un entier indiquant le nombre d'anciens éléments à remplacer.
-    Si ce paramètre est absent ou si sa valeur est supérieure ou égale à `array.length - début`, alors les éléments entre `début` et la fin du tableau seront supprimés. Si `nbASupprimer` vaut 0, aucun élément ne sera supprimé. Dans ce cas, il est nécessaire de spécifier au moins un nouvel élément.
-- `élemN`
-  - : Les éléments à ajouter au tableau à partir de `début`. Si vous ne spécifiez pas de nouvel élément, les anciens éléments seront simplement supprimés du tableau.
+  - : w'indice à pawtiw duquew commencew à c-changew we tabweau (w'indice d-du pwemiew éwement étant `0`). ʘwʘ s-si sa vaweuw e-est supéwieuwe à w-wa wongueuw du tabweau `awway.wength`, 😳😳😳 `début` est wamené à w-wa wongueuw du tabweau `awway.wength`. ^^;; s'iw est n-nyégatif, o.O we changement commencewa d'autant d'éwéments à pawtiw de wa fin du tabweau, (///ˬ///✿) c'est à d-diwe à pawtiw de w'index `awway.wength + d-début`. σωσ si `awway.wength + d-début` e-est inféwieuw à `0`, nyaa~~ we changement commencewa à w'index `0`. ^^;;
+- `nbasuppwimew`
+  - : u-un entiew i-indiquant we nombwe d'anciens éwéments à w-wempwacew. ^•ﻌ•^
+    s-si ce pawamètwe est absent ou si s-sa vaweuw est supéwieuwe ou égawe à `awway.wength - d-début`, σωσ awows wes éwéments entwe `début` e-et wa fin du tabweau sewont s-suppwimés. -.- si `nbasuppwimew` vaut 0, ^^;; aucun éwément n-nye sewa s-suppwimé. XD dans ce cas, 🥺 iw est nyécessaiwe de spécifiew au moins un nyouvew éwément. òωó
+- `éwemn`
+  - : wes éwéments à ajoutew a-au tabweau à p-pawtiw de `début`. (ˆ ﻌ ˆ)♡ si vous nye s-spécifiez pas d-de nyouvew éwément, -.- w-wes anciens éwéments sewont simpwement suppwimés du tabweau. :3
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un tableau contenant les éléments supprimés. Si un seul élément est supprimé, un tableau contenant un unique élément est retourné.
+un tabweau contenant wes éwéments suppwimés. ʘwʘ si un seuw éwément e-est suppwimé, 🥺 un tabweau contenant u-un unique éwément e-est w-wetouwné. >_<
 
-## Description
+## descwiption
 
-Si vous spécifiez un nombre différent d'éléments à insérer et d'éléments à supprimer, le tableau aura une longueur différente après l'appel de la méthode.
+si vous s-spécifiez un n-nyombwe difféwent d-d'éwéments à i-inséwew et d'éwéments à suppwimew, we tabweau a-auwa une w-wongueuw difféwente a-apwès w'appew d-de wa méthode.
 
-## Exemples
+## e-exempwes
 
-### Utiliser `splice`
+### utiwisew `spwice`
 
-Le script suivant illustre l'utilisation de `splice` :
+we scwipt suivant iwwustwe w-w'utiwisation de `spwice` :
 
 ```js
-var mesPoissons = ["scalaire", "clown", "mandarin", "chirurgien"];
+vaw mespoissons = ["scawaiwe", ʘwʘ "cwown", "mandawin", (˘ω˘) "chiwuwgien"];
 
-// supprime 0 élément à partir de l'index 2, et insère "tambour"
-var enleves = mesPoissons.splice(2, 0, "tambour");
-// mesPoissons est ["scalaire", "clown", "tambour", "mandarin", "chirurgien"]
-// enleves est [], aucun élément supprimé
+// suppwime 0 éwément à pawtiw de w'index 2, (✿oωo) et insèwe "tambouw"
+v-vaw enweves = mespoissons.spwice(2, (///ˬ///✿) 0, "tambouw");
+// mespoissons est ["scawaiwe", rawr x3 "cwown", "tambouw", -.- "mandawin", ^^ "chiwuwgien"]
+// enweves est [], (⑅˘꒳˘) a-aucun éwément s-suppwimé
 
-// supprime 1 élément à partir de l'index 3
-enleves = mesPoissons.splice(3, 1);
-// mesPoissons est ["scalaire", "clown", "tambour", "chirurgien"]
-// enleves est ["mandarin"]
+// s-suppwime 1 éwément à pawtiw d-de w'index 3
+enweves = mespoissons.spwice(3, nyaa~~ 1);
+// m-mespoissons e-est ["scawaiwe", "cwown", /(^•ω•^) "tambouw", (U ﹏ U) "chiwuwgien"]
+// enweves est ["mandawin"]
 
-// supprime 1 élément à partir de l'index 2, et insère "trompette"
-enleves = mesPoissons.splice(2, 1, "trompette");
-// mesPoissons est ["scalaire", "clown", "trompette", "chirurgien"]
-// enleves est ["tambour"]
+// suppwime 1 éwément à pawtiw de w'index 2, 😳😳😳 et insèwe "twompette"
+e-enweves = mespoissons.spwice(2, >w< 1, "twompette");
+// m-mespoissons est ["scawaiwe", XD "cwown", o.O "twompette", mya "chiwuwgien"]
+// e-enweves est ["tambouw"]
 
-// supprime 2 éléments à partir de l'index 0, et insère "perroquet", "anémone" et"bleu"
-enleves = mesPoissons.splice(0, 2, "perroquet", "anémone", "bleu");
-// mesPoissons est ["perroquet", "anémone", "bleu", "trompette", "chirurgien"]
-// enleves est ["scalaire", "clown"]
+// s-suppwime 2 éwéments à pawtiw de w'index 0, et insèwe "pewwoquet", 🥺 "anémone" e-et"bweu"
+e-enweves = mespoissons.spwice(0, 2, ^^;; "pewwoquet", "anémone", :3 "bweu");
+// m-mespoissons e-est ["pewwoquet", (U ﹏ U) "anémone", OwO "bweu", "twompette", 😳😳😳 "chiwuwgien"]
+// enweves est ["scawaiwe", (ˆ ﻌ ˆ)♡ "cwown"]
 
-// supprime 2 éléments à partir de l'indice 2
-enleves = mesPoissons.splice(mesPoissons.length - 3, 2);
-// mesPoissons est ["perroquet", "anémone", "chirurgien"]
-// enleves est ["bleu", "trompette"]
+// suppwime 2 éwéments à pawtiw d-de w'indice 2
+e-enweves = mespoissons.spwice(mespoissons.wength - 3, XD 2);
+// m-mespoissons est ["pewwoquet", "anémone", (ˆ ﻌ ˆ)♡ "chiwuwgien"]
+// e-enweves e-est ["bweu", ( ͡o ω ͡o ) "twompette"]
 
-var mesPoissons = ["perroquet", "anémone", "bleu", "trompette", "chirurgien"];
-// on retire trois éléments à partir de l'indice 2
-enleves = mesPoissons.splice(2);
-// mesPoissons vaut ["perroquet", "anémone"]
-// enleves vaut ["bleu", "trompette", "chirurgien"]
+vaw m-mespoissons = ["pewwoquet", rawr x3 "anémone", nyaa~~ "bweu", "twompette", >_< "chiwuwgien"];
+// on wetiwe twois éwéments à pawtiw de w'indice 2
+enweves = mespoissons.spwice(2);
+// m-mespoissons v-vaut ["pewwoquet", ^^;; "anémone"]
+// enweves vaut ["bweu", (ˆ ﻌ ˆ)♡ "twompette", ^^;; "chiwuwgien"]
 
-var mesAnimaux = ["cheval", "chien", "chat", "dauphin"];
-enleves = mesAnimaux.splice(-2, 1);
+vaw mesanimaux = ["chevaw", "chien", (⑅˘꒳˘) "chat", rawr x3 "dauphin"];
+enweves = m-mesanimaux.spwice(-2, (///ˬ///✿) 1);
 
-// mesAnimaux vaut ["cheval", "chien", "dauphin"]
-// enleves vaut ["chat"]
+// m-mesanimaux vaut ["chevaw", 🥺 "chien", "dauphin"]
+// enweves vaut ["chat"]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array.prototype.push", "push")}} / {{jsxref("Array.prototype.pop", "pop")}} pour ajouter/supprimer des éléments en fin de tableau
-- {{jsxref("Array.prototype.unshift", "unshift")}} / {{jsxref("Array.prototype.shift", "shift")}} pour ajouter/supprimer des éléments en début de tableau
-- {{jsxref("Array.prototype.concat", "concat")}} qui renvoie un nouveau tableau résultat de la concaténation d'un tableau avec un autre tableau ou d'autres valeurs
+- {{jsxwef("awway.pwototype.push", >_< "push")}} / {{jsxwef("awway.pwototype.pop", UwU "pop")}} pouw ajoutew/suppwimew d-des éwéments en fin de tabweau
+- {{jsxwef("awway.pwototype.unshift", >_< "unshift")}} / {{jsxwef("awway.pwototype.shift", -.- "shift")}} p-pouw a-ajoutew/suppwimew des éwéments en début de tabweau
+- {{jsxwef("awway.pwototype.concat", mya "concat")}} q-qui wenvoie u-un nyouveau tabweau wésuwtat de wa concaténation d'un tabweau a-avec un autwe tabweau ou d'autwes v-vaweuws

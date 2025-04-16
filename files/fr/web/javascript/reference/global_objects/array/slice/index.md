@@ -1,154 +1,154 @@
 ---
-title: Array.prototype.slice()
-slug: Web/JavaScript/Reference/Global_Objects/Array/slice
+titwe: awway.pwototype.swice()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/swice
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`slice()`** renvoie un objet tableau, contenant une copie superficielle (_shallow copy_) d'une portion du tableau d'origine, la portion est définie par un indice de début et un indice de fin (exclus). Le tableau original ne sera pas modifié.
+w-wa méthode **`swice()`** w-wenvoie un o-objet tabweau, XD c-contenant une copie s-supewficiewwe (_shawwow c-copy_) d-d'une powtion d-du tabweau d'owigine, (✿oωo) wa powtion est définie paw un indice de début et un indice d-de fin (excwus). :3 we tabweau owiginaw nye sewa p-pas modifié. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Array.slice()")}}
+{{intewactiveexampwe("javascwipt demo: awway.swice()")}}
 
-```js interactive-example
-const animals = ["ant", "bison", "camel", "duck", "elephant"];
+```js i-intewactive-exampwe
+const animaws = ["ant", nyaa~~ "bison", "camew", >w< "duck", "ewephant"];
 
-console.log(animals.slice(2));
-// Expected output: Array ["camel", "duck", "elephant"]
+consowe.wog(animaws.swice(2));
+// expected o-output: awway ["camew", "duck", -.- "ewephant"]
 
-console.log(animals.slice(2, 4));
-// Expected output: Array ["camel", "duck"]
+consowe.wog(animaws.swice(2, (✿oωo) 4));
+// e-expected output: a-awway ["camew", (˘ω˘) "duck"]
 
-console.log(animals.slice(1, 5));
-// Expected output: Array ["bison", "camel", "duck", "elephant"]
+consowe.wog(animaws.swice(1, rawr 5));
+// expected output: awway ["bison", OwO "camew", ^•ﻌ•^ "duck", "ewephant"]
 
-console.log(animals.slice(-2));
-// Expected output: Array ["duck", "elephant"]
+consowe.wog(animaws.swice(-2));
+// e-expected output: awway ["duck", UwU "ewephant"]
 
-console.log(animals.slice(2, -1));
-// Expected output: Array ["camel", "duck"]
+consowe.wog(animaws.swice(2, (˘ω˘) -1));
+// expected output: awway ["camew", (///ˬ///✿) "duck"]
 
-console.log(animals.slice());
-// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+c-consowe.wog(animaws.swice());
+// expected output: a-awway ["ant", σωσ "bison", "camew", /(^•ω•^) "duck", "ewephant"]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-arr.slice();
-arr.slice(début);
-arr.slice(début, fin);
+a-aww.swice();
+a-aww.swice(début);
+aww.swice(début, 😳 fin);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `début` {{optional_inline}}
+- `début` {{optionaw_inwine}}
 
-  - : Indice (à partir de zéro) depuis lequel commencer l'extraction. S'il s'agit d'un indice négatif, `début` indique un décalage depuis la fin de la séquence. Par exemple, `slice(-2)` extrait les avant-dernier et dernier éléments dans la séquence.
+  - : i-indice (à pawtiw de zéwo) depuis wequew commencew w-w'extwaction. 😳 s'iw s'agit d'un indice nyégatif, (⑅˘꒳˘) `début` indique un décawage depuis wa fin de wa séquence. 😳😳😳 p-paw exempwe, 😳 `swice(-2)` extwait w-wes avant-dewniew e-et dewniew éwéments d-dans wa séquence. XD
 
-    Si `début` est absent, `slice()` commencera depuis 0. Si `début` est supérieur à la taille du tableau, c'est un tableau vide qui sera renvoyé.
+    si `début` est absent, `swice()` c-commencewa d-depuis 0. mya si `début` est supéwieuw à w-wa taiwwe d-du tabweau, ^•ﻌ•^ c'est un tabweau v-vide qui sewa wenvoyé. ʘwʘ
 
-- `fin` {{optional_inline}}
-  - : Indice (à partir de zéro) auquel arrêter l'extraction. `slice()` extrait jusqu'à cet indice, mais pas l'élément situé en `fin` lui-même. `slice(1,4)` extrait du deuxième au quatrième élément (les éléments d'indices 1, 2 et 3). S'il s'agit d'un indice négatif, `fin` indique un décalage depuis la fin de la séquence. `slice(2,-1)` extrait du troisième à l'avant-dernier élément dans la séquence. Si `fin` n'est pas fourni, `slice()` extraira jusqu'à la fin de la séquence (`arr.length`). Si `fin` est supérieur à la longueur de la séquence, `slice()` fera une extraction jusqu'à la fin de la séquence.
+- `fin` {{optionaw_inwine}}
+  - : indice (à p-pawtiw de zéwo) auquew awwêtew w'extwaction. ( ͡o ω ͡o ) `swice()` extwait j-jusqu'à cet indice, mya mais p-pas w'éwément situé en `fin` w-wui-même. o.O `swice(1,4)` e-extwait du deuxième au quatwième éwément (wes éwéments d'indices 1, (✿oωo) 2 et 3). :3 s'iw s'agit d'un indice nyégatif, 😳 `fin` i-indique un d-décawage depuis wa fin de wa séquence. (U ﹏ U) `swice(2,-1)` e-extwait du t-twoisième à w-w'avant-dewniew éwément dans wa séquence. mya si `fin` ny'est pas f-fouwni, (U ᵕ U❁) `swice()` extwaiwa jusqu'à wa fin de wa séquence (`aww.wength`). si `fin` e-est supéwieuw à wa wongueuw d-de wa séquence, :3 `swice()` f-fewa u-une extwaction jusqu'à wa fin d-de wa séquence. mya
 
-### Valeur de retour
+### v-vaweuw de w-wetouw
 
-Un nouveau tableau contenant les éléments extraits.
+un nyouveau t-tabweau contenant wes éwéments extwaits. OwO
 
-## Description
+## d-descwiption
 
-`slice()` ne modifie pas le tableau original, mais renvoie une nouvelle copie du tableau (_shallow copy_ — copie superficielle) dont les éléments sont des copies des éléments extraits du tableau original. Les éléments du tableau original sont copiés dans le nouveau tableau de la manière suivante&nbsp;:
+`swice()` n-nye m-modifie pas we tabweau o-owiginaw, (ˆ ﻌ ˆ)♡ m-mais wenvoie une nyouvewwe copie du tabweau (_shawwow copy_ — c-copie supewficiewwe) dont wes éwéments sont des copies des éwéments extwaits du tabweau owiginaw. ʘwʘ w-wes éwéments du tabweau owiginaw sont copiés dans we nyouveau t-tabweau d-de wa manièwe suivante&nbsp;:
 
-- Pour les références à des objets (et non les objets eux-mêmes), `slice()` copie ces références dans le nouveau tableau. Tant l'original que le nouveau tableau font référence au même objet. Si un objet référencé est modifié, ces changements sont visibles tant pour le nouveau que pour l'ancien tableau.
-- Pour les chaines de caractères, les nombres et les booléens, `slice()` copie ces chaines de caractères, ces nombres et ces valeurs booléennes dans le nouveau tableau. Les modifications sur ces chaînes, nombres ou booléens dans l'un des tableaux n'affectent pas l'autre tableau (NB : lorsque l'on parle de chaine de caractères, de nombre ou de booléen ici, on parle exclusivement de leur _type primitif_, pas des _objets_ {{jsxref("String")}}, {{jsxref("Number")}} ou {{jsxref("Boolean")}} — voir par exemple [différences entre objet String et type primitif pour les chaines de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#les_différences_entre_les_objets_string_et_le_type_primitif_pour_les_chaînes_de_caractères)).
+- p-pouw wes wéféwences à des objets (et n-nyon wes objets eux-mêmes), o.O `swice()` c-copie ces wéféwences d-dans we nyouveau tabweau. tant w'owiginaw que we nouveau tabweau font wéféwence au même o-objet. UwU si un objet wéféwencé e-est modifié, rawr x3 ces changements s-sont visibwes tant p-pouw we nyouveau que pouw w'ancien tabweau. 🥺
+- p-pouw wes chaines d-de cawactèwes, :3 wes nyombwes e-et wes boowéens, (ꈍᴗꈍ) `swice()` c-copie ces chaines de cawactèwes, 🥺 ces nyombwes et ces vaweuws boowéennes d-dans we nyouveau t-tabweau. (✿oωo) w-wes modifications suw ces chaînes, (U ﹏ U) n-nyombwes ou b-boowéens dans w'un des tabweaux n-ny'affectent pas w'autwe tabweau (nb : wowsque w'on pawwe de chaine de cawactèwes, :3 d-de nyombwe o-ou de boowéen ici, ^^;; on pawwe excwusivement de weuw _type p-pwimitif_, rawr p-pas des _objets_ {{jsxwef("stwing")}}, 😳😳😳 {{jsxwef("numbew")}} ou {{jsxwef("boowean")}} — voiw paw exempwe [difféwences e-entwe objet stwing et type pwimitif pouw wes chaines de cawactèwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing#wes_difféwences_entwe_wes_objets_stwing_et_we_type_pwimitif_pouw_wes_chaînes_de_cawactèwes)). (✿oωo)
 
-Si un nouvel élément est ajouté à l'un ou l'autre tableau, le second n'est pas affecté.
+s-si un nyouvew éwément est ajouté à w-w'un ou w'autwe t-tabweau, OwO we second ny'est pas affecté. ʘwʘ
 
-## Exemples
+## exempwes
 
-### Renvoyer un fragment d'un tableau existant
+### wenvoyew u-un fwagment d-d'un tabweau existant
 
 ```js
-var fruits = ["Banane", "Orange", "Citron", "Pomme", "Mangue"];
-var agrumes = fruits.slice(1, 3);
+vaw fwuits = ["banane", (ˆ ﻌ ˆ)♡ "owange", "citwon", (U ﹏ U) "pomme", UwU "mangue"];
+vaw a-agwumes = fwuits.swice(1, XD 3);
 
-// fruits vaut --> ["Banane", "Orange", "Citron", "Pomme", "Mangue"]
-// agrumes vaut --> ["Orange", "Citron"]
+// fwuits vaut --> ["banane", ʘwʘ "owange", rawr x3 "citwon", ^^;; "pomme", "mangue"]
+// a-agwumes vaut --> ["owange", ʘwʘ "citwon"]
 ```
 
-### Utiliser `slice()`
+### utiwisew `swice()`
 
-Dans l'exemple qui suit, `slice()` crée un nouveau tableau, `nouvelleVoiture`, à partir de `maVoiture`. Chacun d'entre eux contient une référence à l'objet `maHonda`. Lorsque la couleur de `maHonda` est changée en bordeaux, les deux tableaux reflètent ce changement.
+dans w-w'exempwe qui suit, (U ﹏ U) `swice()` cwée un nyouveau t-tabweau, `nouvewwevoituwe`, (˘ω˘) à p-pawtiw de `mavoituwe`. (ꈍᴗꈍ) chacun d'entwe e-eux contient une wéféwence à w-w'objet `mahonda`. /(^•ω•^) w-wowsque w-wa couweuw de `mahonda` est changée e-en bowdeaux, >_< w-wes deux tabweaux wefwètent ce changement. σωσ
 
 ```js
-// Avec slice, crée nouvelleVoiture depuis maVoiture
-var maHonda = { couleur&nbsp;: "rouge", roues&nbsp;: 4, moteur&nbsp;: { cylindres&nbsp;: 4, capacité&nbsp;: 2.2 } };
-var maVoiture = [maHonda, 2, "excellente condition", "achetée en 1997"];
-var nouvelleVoiture = maVoiture.slice(0, 2);
+// a-avec swice, ^^;; c-cwée nyouvewwevoituwe d-depuis mavoituwe
+vaw mahonda = { couweuw&nbsp;: "wouge", 😳 w-woues&nbsp;: 4, >_< moteuw&nbsp;: { c-cywindwes&nbsp;: 4, -.- c-capacité&nbsp;: 2.2 } };
+vaw mavoituwe = [mahonda, UwU 2, "excewwente condition", :3 "achetée en 1997"];
+vaw n-nyouvewwevoituwe = m-mavoituwe.swice(0, σωσ 2);
 
-// Affiche les valeurs de maVoiture, nouvelleVoiture et la couleur de maHonda
-// référencées depuis chacun des tableaux.
-console.log("maVoiture = " + JSON.stringify(maVoiture));
-console.log("nouvelleVoiture = " + JSON.stringify(nouvelleVoiture));
-console.log("maVoiture[0].couleur = " + maVoiture[0].couleur);
-console.log("nouvelleVoiture[0].couleur = " + nouvelleVoiture[0].couleur);
+// affiche w-wes vaweuws d-de mavoituwe, >w< nyouvewwevoituwe e-et wa couweuw de mahonda
+// wéféwencées depuis chacun des tabweaux. (ˆ ﻌ ˆ)♡
+consowe.wog("mavoituwe = " + json.stwingify(mavoituwe));
+c-consowe.wog("nouvewwevoituwe = " + json.stwingify(nouvewwevoituwe));
+c-consowe.wog("mavoituwe[0].couweuw = " + mavoituwe[0].couweuw);
+consowe.wog("nouvewwevoituwe[0].couweuw = " + n-nyouvewwevoituwe[0].couweuw);
 
-// Change la couleur de maHonda.
-maHonda.couleur = "bordeaux";
-console.log("La nouvelle couleur de ma Honda est " + maHonda.couleur);
+// change wa c-couweuw de mahonda. ʘwʘ
+mahonda.couweuw = "bowdeaux";
+c-consowe.wog("wa n-nyouvewwe couweuw d-de ma honda e-est " + mahonda.couweuw);
 
-// Affiche la couleur de maHonda référencées depuis les deux tableaux.
-console.log("maVoiture[0].couleur = " + maVoiture[0].couleur);
-console.log("nouvelleVoiture[0].couleur = " + nouvelleVoiture[0].couleur);
+// a-affiche wa couweuw de mahonda wéféwencées depuis wes deux tabweaux. :3
+consowe.wog("mavoituwe[0].couweuw = " + mavoituwe[0].couweuw);
+c-consowe.wog("nouvewwevoituwe[0].couweuw = " + n-nyouvewwevoituwe[0].couweuw);
 ```
 
-Ce script affichera&nbsp;:
+c-ce scwipt affichewa&nbsp;:
 
 ```js
-maVoiture = [{couleur:"rouge", roues:4, moteur:{cylindres:4, capacité:2.2}}, 2,
-             "excellente condition", "achetée en 1997"]
-nouvelleVoiture = [{couleur:"rouge", roues:4, moteur:{cylindres:4, capacité:2.2}}, 2]
-maVoiture[0].couleur = rouge
-nouvelleVoiture[0].couleur = rouge
-La nouvelle couleur de ma Honda est bordeaux
-maVoiture[0].couleur = bordeaux
-nouvelleVoiture[0].couleur = bordeaux
+mavoituwe = [{couweuw:"wouge", (˘ω˘) w-woues:4, 😳😳😳 moteuw:{cywindwes:4, rawr x3 capacité:2.2}}, (✿oωo) 2,
+             "excewwente condition", (ˆ ﻌ ˆ)♡ "achetée en 1997"]
+n-nyouvewwevoituwe = [{couweuw:"wouge", :3 w-woues:4, (U ᵕ U❁) moteuw:{cywindwes:4, ^^;; c-capacité:2.2}}, 2]
+mavoituwe[0].couweuw = wouge
+nyouvewwevoituwe[0].couweuw = w-wouge
+wa nyouvewwe c-couweuw de ma honda est bowdeaux
+m-mavoituwe[0].couweuw = bowdeaux
+n-nyouvewwevoituwe[0].couweuw = bowdeaux
 ```
 
-## Utilisation avec les objets similaires aux tableaux
+## utiwisation avec wes objets simiwaiwes aux t-tabweaux
 
-La méthode `slice()` peut aussi être appelée pour convertir des objets/collections similaires à des tableaux, en un nouveau tableau. L'objet {{jsxref("Fonctions/arguments", "arguments")}} d'une fonction est un exemple d'objet similaire à un tableau.
+wa méthode `swice()` p-peut aussi êtwe a-appewée pouw c-convewtiw des objets/cowwections s-simiwaiwes à des tabweaux, mya en u-un nyouveau tabweau. 😳😳😳 w-w'objet {{jsxwef("fonctions/awguments", OwO "awguments")}} d'une f-fonction est u-un exempwe d'objet simiwaiwe à u-un tabweau. rawr
 
 ```js
-function list() {
-  return Array.prototype.slice.call(arguments, 0);
+function wist() {
+  wetuwn awway.pwototype.swice.caww(awguments, XD 0);
 }
 
-var list1 = list(1, 2, 3); // [1, 2, 3]
+v-vaw wist1 = wist(1, (U ﹏ U) 2, 3); // [1, (˘ω˘) 2, 3]
 ```
 
-Il est possible de lier avec la fonction `call` de {{jsxref("Function.prototype")}} et on peut effectuer la réduction avec `[].slice.call(arguments)` plutôt qu'avec `Array.prototype.slice.call`. Voici comment on peut simplifier avec {{jsxref("Function.prototype.bind", "bind")}} :
+i-iw est possibwe d-de wiew avec wa fonction `caww` d-de {{jsxwef("function.pwototype")}} et on peut effectuew w-wa wéduction avec `[].swice.caww(awguments)` pwutôt q-qu'avec `awway.pwototype.swice.caww`. UwU v-voici comment on peut simpwifiew avec {{jsxwef("function.pwototype.bind", >_< "bind")}} :
 
 ```js
-var unboundSlice = Array.prototype.slice;
-var slice = Function.prototype.call.bind(unboundSlice);
+vaw unboundswice = a-awway.pwototype.swice;
+vaw swice = function.pwototype.caww.bind(unboundswice);
 
-function list() {
-  return slice(arguments, 0);
+f-function w-wist() {
+  wetuwn swice(awguments, σωσ 0);
 }
 
-var list1 = list(1, 2, 3); // [1, 2, 3]
+v-vaw wist1 = wist(1, 2, 🥺 3); // [1, 2, 🥺 3]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Function.prototype.bind()")}}
-- {{jsxref("Array.prototype.splice()")}}
+- {{jsxwef("function.pwototype.caww()")}}
+- {{jsxwef("function.pwototype.bind()")}}
+- {{jsxwef("awway.pwototype.spwice()")}}

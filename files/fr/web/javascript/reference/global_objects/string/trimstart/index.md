@@ -1,70 +1,70 @@
 ---
-title: String.prototype.trimStart()
-slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
+titwe: stwing.pwototype.twimstawt()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twimstawt
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`trimStart()`** permet de retirer les blancs au début de la chaîne de caractères. `trimLeft()` est un synonyme pour cette méthode.
+w-wa méthode **`twimstawt()`** p-pewmet de wetiwew w-wes bwancs a-au début de wa c-chaîne de cawactèwes. ^^ `twimweft()` e-est un synonyme p-pouw cette m-méthode. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: String.trimStart()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.twimstawt()")}}
 
-```js interactive-example
-const greeting = "   Hello world!   ";
+```js intewactive-exampwe
+const gweeting = "   h-hewwo wowwd! mya   ";
 
-console.log(greeting);
-// Expected output: "   Hello world!   ";
+consowe.wog(gweeting);
+// expected o-output: "   hewwo wowwd! 😳   ";
 
-console.log(greeting.trimStart());
-// Expected output: "Hello world!   ";
+consowe.wog(gweeting.twimstawt());
+// e-expected output: "hewwo wowwd! -.-   ";
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.trimStart();
-str.trimLeft();
+stw.twimstawt();
+s-stw.twimweft();
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Une nouvelle chaîne de caractères dérivant de la chaîne appelante pour laquelle les blancs en début de chaîne ont été retirés.
+une n-nyouvewwe chaîne de cawactèwes déwivant de wa chaîne appewante pouw waquewwe w-wes bwancs en début de chaîne ont été wetiwés. 🥺
 
-## Description
+## descwiption
 
-La méthode `trimStart()` renvoie la chaîne de caractères dont les blancs à gauche ont été retirés. `trimStart` ne modifie pas la chaîne elle-même.
+wa méthode `twimstawt()` w-wenvoie wa chaîne de cawactèwes d-dont wes bwancs à g-gauche ont été w-wetiwés. o.O `twimstawt` n-nye modifie pas wa chaîne ewwe-même. /(^•ω•^)
 
-### Synonyme
+### s-synonyme
 
-Pour des raisons de cohérences avec les méthodes préexistantes (telles que {{jsxref("String.prototype.padStart")}}), le nom standard de cette méthode est `trimStart`. Toutefois, à des fins de compatibilité web, le nom `trimLeft` sera gardé comme un synonyme. Pour certains moteurs JavaScript, on pourra donc avoir :
+pouw des waisons de cohéwences a-avec wes méthodes pwéexistantes (tewwes que {{jsxwef("stwing.pwototype.padstawt")}}), nyaa~~ we nyom standawd de cette méthode est `twimstawt`. nyaa~~ t-toutefois, :3 à des f-fins de compatibiwité w-web, 😳😳😳 we nyom `twimweft` sewa g-gawdé comme un synonyme. (˘ω˘) pouw cewtains moteuws javascwipt, ^^ o-on pouwwa donc avoiw :
 
 ```js
-String.prototype.trimLeft.name === "trimStart";
+s-stwing.pwototype.twimweft.name === "twimstawt";
 ```
 
-## Exemple
+## exempwe
 
-L'exemple qui suit illustre comment afficher la chaîne de caractères `"toto "` en minuscules :
+w'exempwe q-qui suit i-iwwustwe comment affichew wa chaîne d-de cawactèwes `"toto "` en minuscuwes :
 
 ```js
-var str = "   toto  ";
+v-vaw stw = "   toto  ";
 
-console.log(str.length); // 8
+consowe.wog(stw.wength); // 8
 
-str = str.trimStart();
-console.log(str.length); // 5
-console.log(str); // "toto  "
+stw = s-stw.twimstawt();
+consowe.wog(stw.wength); // 5
+c-consowe.wog(stw); // "toto  "
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("String.prototype.trim()")}}
-- {{jsxref("String.prototype.trimEnd()")}}
+- {{jsxwef("stwing.pwototype.twim()")}}
+- {{jsxwef("stwing.pwototype.twimend()")}}

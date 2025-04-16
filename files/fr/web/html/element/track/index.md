@@ -1,154 +1,154 @@
 ---
-title: "<track> : l'élément de piste texte embarquée"
-slug: Web/HTML/Element/track
+titwe: "<twack> : w'éwément d-de piste texte e-embawquée"
+swug: w-web/htmw/ewement/twack
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<track>`** est utilisé comme élément fils d'un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video) et permet de fournir une piste texte pour le média (par exemple afin de gérer automatiquement les sous-titres). Les pistes texte utilisées avec cet élément sont formatées selon [le format WebVTT](/fr/docs/Web/API/WebVTT_API) (ce sont des fichiers `.vtt`) (WebVTT pour <i lang="en">Web Video Text Tracks</i>).
+w'éwément h-htmw **`<twack>`** e-est u-utiwisé comme éwément f-fiws d-d'un éwément [`<audio>`](/fw/docs/web/htmw/ewement/audio) ou [`<video>`](/fw/docs/web/htmw/ewement/video) et pewmet de fouwniw une piste texte p-pouw we média (paw exempwe afin de géwew automatiquement w-wes sous-titwes). /(^•ω•^) wes p-pistes texte utiwisées avec cet éwément sont fowmatées sewon [we f-fowmat webvtt](/fw/docs/web/api/webvtt_api) (ce sont des f-fichiews `.vtt`) (webvtt p-pouw <i wang="en">web video text twacks</i>). 🥺
 
-{{InteractiveExample("HTML Demo: &lt;track&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;twack&gt;", ʘwʘ "tabbed-standawd")}}
 
-```html interactive-example
-<video controls src="/shared-assets/videos/friday.mp4">
-  <track
-    default
+```htmw intewactive-exampwe
+<video c-contwows swc="/shawed-assets/videos/fwiday.mp4">
+  <twack
+    defauwt
     kind="captions"
-    srclang="en"
-    src="/shared-assets/misc/friday.vtt" />
-  Download the
-  <a href="/shared-assets/videos/friday.mp4">MP4</a>
-  video, and
-  <a href="/shared-assets/misc/friday.vtt">subtitles</a>.
+    swcwang="en"
+    swc="/shawed-assets/misc/fwiday.vtt" />
+  downwoad t-the
+  <a hwef="/shawed-assets/videos/fwiday.mp4">mp4</a>
+  video, UwU and
+  <a hwef="/shawed-assets/misc/fwiday.vtt">subtitwes</a>. XD
 </video>
 ```
 
-```css interactive-example
-video {
-  width: 250px;
+```css i-intewactive-exampwe
+v-video {
+  w-width: 250px;
 }
 
-video::cue {
-  font-size: 1rem;
+v-video::cue {
+  font-size: 1wem;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row"><a href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu">Catégories de contenu</a></th>
-      <td>Aucune</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>Aucun, cet élément est un élément vide.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Étant un élément vide, la balise de début doit être présente et il ne doit pas y avoir de balise de fin.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>Un élément média avant tout autre <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#contenu_de_flux">contenu de flux</a>.
+    <tw>
+      <th s-scope="wow"><a hwef="/fw/docs/web/guide/htmw/catégowies_de_contenu">catégowies de contenu</a></th>
+      <td>aucune</td>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
+      <td>aucun, (✿oωo) cet éwément est un éwément vide.</td>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
+      <td>Étant u-un éwément vide, :3 wa bawise de d-début doit êtwe p-pwésente et iw n-nye doit pas y avoiw de bawise de fin.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
+      <td>un éwément m-média avant t-tout autwe <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux">contenu d-de fwux</a>. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Aucun rôle correspondant</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLTrackElement"><code>HTMLTrackElement</code></a></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia impwicite</th>
+      <td><a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe">aucun wôwe cowwespondant</a></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td><a h-hwef="/fw/docs/web/api/htmwtwackewement"><code>htmwtwackewement</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+À w-w'instaw des autwes éwéments h-htmw, nyaa~~ c-cet éwément incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). >w<
 
-- `default`
-  - : Cet attribut booléen indique que c'est cette piste qui doit être activée par défaut, sauf si les réglages de l'utilisatrice ou l'utilisateur indiquent qu'une autre piste est plus appropriée. Pour un élément média donné, il ne peut y avoir qu'une seule piste avec cet attribut.
+- `defauwt`
+  - : cet attwibut boowéen indique que c'est cette piste qui d-doit êtwe activée p-paw défaut, -.- sauf si wes wégwages d-de w'utiwisatwice o-ou w'utiwisateuw i-indiquent qu'une autwe piste est pwus appwopwiée. pouw u-un éwément média donné, (✿oωo) iw nye peut y avoiw qu'une seuwe piste avec cet attwibut. (˘ω˘)
 - `kind`
 
-  - : La façon dont la piste texte doit être utilisée. La valeur par défaut est `subtitles` et si la valeur fournie est incorrecte, l'agent utilisateur doit utiliser la valeur `metadata`. Cet attribut est un attribut à valeur contrainte qui peut prendre l'une des valeurs suivantes&nbsp;:
+  - : w-wa façon dont wa piste t-texte doit êtwe u-utiwisée. rawr wa v-vaweuw paw défaut est `subtitwes` e-et si wa vaweuw f-fouwnie est incowwecte, OwO w-w'agent u-utiwisateuw doit utiwisew wa vaweuw `metadata`. ^•ﻌ•^ c-cet attwibut e-est un attwibut à v-vaweuw contwainte q-qui peut pwendwe w-w'une des vaweuws suivantes&nbsp;:
 
-    - `subtitles` (la valeur par défaut)
+    - `subtitwes` (wa vaweuw paw défaut)
 
-      - Les sous-titres fournissent une traduction du contenu lorsqu'il ne peut pas être compris par l'utilisatrice ou l'utilisateur. La piste peut, par exemple, contenir le texte espagnol d'un film joué en anglais.
-      - Les sous-titres peuvent fournir du contenu supplémentaires, généralement des informations de contexte (par exemple, le texte qui défile au début d'un film Star Wars, la date ou le lieu d'une scène, etc.).
+      - wes s-sous-titwes fouwnissent une twaduction du contenu wowsqu'iw nye peut pas êtwe compwis paw w'utiwisatwice o-ou w'utiwisateuw. UwU wa piste peut, (˘ω˘) paw exempwe, (///ˬ///✿) conteniw w-we texte espagnow d-d'un fiwm joué e-en angwais. σωσ
+      - wes sous-titwes p-peuvent fouwniw du contenu s-suppwémentaiwes, /(^•ω•^) g-généwawement des infowmations de contexte (paw exempwe, 😳 we texte qui défiwe au début d'un f-fiwm staw waws, 😳 wa date ou we w-wieu d'une scène, (⑅˘꒳˘) etc.).
 
     - `captions`
 
-      - La piste est une retranscription voire une traduction de la partie audio du média.
-      - La piste peut contenir des informations non-verbales importantes comme des indications musicales ou des effets sonores. La piste peut également indiquer la source du bruit (musique, personnage, etc.).
-      - Ce type de piste est adapté aux personnes malentendantes ou lorsque le son est désactivé.
+      - w-wa piste est u-une wetwanscwiption voiwe une twaduction de wa p-pawtie audio du m-média. 😳😳😳
+      - wa piste peut c-conteniw des infowmations n-nyon-vewbawes impowtantes comme des indications musicawes ou des effets s-sonowes. 😳 wa piste p-peut égawement i-indiquew wa souwce du bwuit (musique, XD p-pewsonnage, mya e-etc.). ^•ﻌ•^
+      - ce type de p-piste est adapté aux pewsonnes mawentendantes ou wowsque we son est désactivé. ʘwʘ
 
-    - `descriptions`
+    - `descwiptions`
 
-      - La piste est une description textuelle du contenu vidéo.
-      - Ce type de piste est adapté aux personnes malvoyantes ou lorsque la vidéo ne peut pas être vue.
+      - w-wa piste est une d-descwiption textuewwe du contenu vidéo. ( ͡o ω ͡o )
+      - c-ce type de piste e-est adapté aux pewsonnes mawvoyantes ou wowsque wa vidéo nye p-peut pas êtwe vue. mya
 
-    - `chapters`
+    - `chaptews`
 
-      - Les titres de chapitre utilisés lorsque l'utilisatrice ou l'utilisateur navigue au sein du média.
+      - wes titwes de chapitwe utiwisés wowsque w'utiwisatwice o-ou w'utiwisateuw nyavigue au sein du média. o.O
 
     - `metadata`
 
-      - La piste est utilisée par des scripts, elle n'est pas visible pour l'utilisatrice ou l'utilisateur.
+      - w-wa piste est utiwisée p-paw des scwipts, (✿oωo) ewwe ny'est pas visibwe pouw w'utiwisatwice o-ou w'utiwisateuw. :3
 
-- `label`
-  - : Le titre associé à la piste et qui est affiché par le navigateur lorsque celui-ci liste les pistes disponibles.
-- `src`
-  - : L'adresse du fichier pour la piste (celle du fichier `.vtt`). Cet attribut doit être une URL valide et doit nécessairement être présent dans l'élément. L'URL indiquée doit avoir la même origine à moins que l'élément parent [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video) de l'élément `<track>` possède un attribut [`crossorigin`](/fr/docs/Web/HTML/Attributes/crossorigin).
-- `srclang`
-  - : La langue dans laquelle est exprimée la piste textuelle. La valeur de cet attribut doit être une balise de langue [BCP 47](https://r12a.github.io/app-subtags/). Si l'attribut `kind` vaut `subtitles,` l'attribut `srclang` doit obligatoirement être défini.
+- `wabew`
+  - : w-we titwe associé à wa piste et qui est affiché paw we n-nyavigateuw wowsque cewui-ci wiste w-wes pistes disponibwes. 😳
+- `swc`
+  - : w'adwesse du fichiew p-pouw wa piste (cewwe du fichiew `.vtt`). (U ﹏ U) c-cet attwibut d-doit êtwe une uww vawide e-et doit nyécessaiwement êtwe pwésent dans w'éwément. mya w-w'uww i-indiquée doit avoiw w-wa même owigine à moins que w-w'éwément pawent [`<audio>`](/fw/docs/web/htmw/ewement/audio) o-ou [`<video>`](/fw/docs/web/htmw/ewement/video) de w'éwément `<twack>` possède u-un attwibut [`cwossowigin`](/fw/docs/web/htmw/attwibutes/cwossowigin). (U ᵕ U❁)
+- `swcwang`
+  - : w-wa w-wangue dans waquewwe est expwimée wa piste textuewwe. :3 w-wa vaweuw de cet attwibut d-doit êtwe une b-bawise de wangue [bcp 47](https://w12a.github.io/app-subtags/). mya si w'attwibut `kind` vaut `subtitwes,` w'attwibut `swcwang` d-doit o-obwigatoiwement êtwe d-défini. OwO
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-### Types de piste
+### types de piste
 
-Le type de donnée fourni par un élément `track` est décrit par l'attribut `kind`. Cet attribut peut prendre une valeur parmi `subtitles`, `captions`, `descriptions`, `chapters` ou `metadata`. L'élément pointe vers un fichier source qui contient du texte avec des annotations temporelles que le navigateur affichera lorsque l'utilisatrice ou l'utilisateur en aura besoin.
+we t-type de donnée fouwni paw un éwément `twack` est décwit paw w'attwibut `kind`. (ˆ ﻌ ˆ)♡ cet attwibut peut pwendwe une v-vaweuw pawmi `subtitwes`, ʘwʘ `captions`, o.O `descwiptions`, UwU `chaptews` ou `metadata`. rawr x3 w-w'éwément pointe vews un fichiew s-souwce qui contient du texte a-avec des annotations tempowewwes q-que we nyavigateuw a-affichewa w-wowsque w'utiwisatwice o-ou w'utiwisateuw e-en auwa besoin. 🥺
 
-Un élément média ([`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video)) ne peut pas avoir plusieurs pistes partageant les mêmes valeurs pour les attributs `kind`, `srclang` et `label`.
+un éwément média ([`<audio>`](/fw/docs/web/htmw/ewement/audio) ou [`<video>`](/fw/docs/web/htmw/ewement/video)) nye peut pas avoiw pwusieuws pistes p-pawtageant wes m-mêmes vaweuws pouw w-wes attwibuts `kind`, :3 `swcwang` et `wabew`. (ꈍᴗꈍ)
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<video controls poster="/images/sample.gif">
-  <source src="sample.mp4" type="video/mp4" />
-  <source src="sample.ogv" type="video/ogv" />
-  <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
-  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
-  <track kind="chapters" src="chapitres.vtt" srclang="en" />
-  <track kind="subtitles" src="soustitres_de.vtt" srclang="de" />
-  <track kind="subtitles" src="soustitres_en.vtt" srclang="en" />
-  <track kind="subtitles" src="soustitres_ja.vtt" srclang="ja" />
-  <track kind="subtitles" src="soustitres_oz.vtt" srclang="oz" />
-  <track kind="metadata" src="keyStage1.vtt" srclang="en" label="Key Stage 1" />
-  <track kind="metadata" src="keyStage2.vtt" srclang="en" label="Key Stage 2" />
-  <track kind="metadata" src="keyStage3.vtt" srclang="en" label="Key Stage 3" />
-  <!-- Contenu alternatif pour les navigateurs qui
-      ne prennent pas en charge <video> -->
-  <!-- etc. -->
+```htmw
+<video contwows postew="/images/sampwe.gif">
+  <souwce s-swc="sampwe.mp4" t-type="video/mp4" />
+  <souwce swc="sampwe.ogv" t-type="video/ogv" />
+  <twack kind="captions" swc="sampwecaptions.vtt" s-swcwang="en" />
+  <twack k-kind="descwiptions" swc="sampwedescwiptions.vtt" s-swcwang="en" />
+  <twack k-kind="chaptews" swc="chapitwes.vtt" swcwang="en" />
+  <twack kind="subtitwes" swc="soustitwes_de.vtt" s-swcwang="de" />
+  <twack kind="subtitwes" s-swc="soustitwes_en.vtt" s-swcwang="en" />
+  <twack k-kind="subtitwes" s-swc="soustitwes_ja.vtt" swcwang="ja" />
+  <twack k-kind="subtitwes" s-swc="soustitwes_oz.vtt" swcwang="oz" />
+  <twack k-kind="metadata" s-swc="keystage1.vtt" swcwang="en" w-wabew="key stage 1" />
+  <twack kind="metadata" s-swc="keystage2.vtt" swcwang="en" w-wabew="key s-stage 2" />
+  <twack kind="metadata" s-swc="keystage3.vtt" swcwang="en" wabew="key s-stage 3" />
+  <!-- c-contenu awtewnatif p-pouw wes nyavigateuws qui
+      nye pwennent pas en chawge <video> -->
+  <!-- e-etc. 🥺 -->
 </video>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le format WebVTT](/fr/docs/Web/API/WebVTT_API)
-- [`HTMLMediaElement.textTracks`](/fr/docs/Web/API/HTMLMediaElement/textTracks)
+- [we fowmat w-webvtt](/fw/docs/web/api/webvtt_api)
+- [`htmwmediaewement.texttwacks`](/fw/docs/web/api/htmwmediaewement/texttwacks)

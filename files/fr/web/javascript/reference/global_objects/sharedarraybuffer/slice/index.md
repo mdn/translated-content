@@ -1,78 +1,78 @@
 ---
-title: SharedArrayBuffer.prototype.slice()
-slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
+titwe: shawedawwaybuffew.pwototype.swice()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew/swice
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`SharedArrayBuffer.prototype.slice()`** renvoie un nouvel objet {{jsxref("SharedArrayBuffer")}} dont le contenu est une copie des octets de l'objet `SharedArrayBuffer` courant entre un indice de début (inclus) et un indice de fin (exclus) (autrement dit, on copie une « tranche » du tampon courant). Si l'indice de début ou de fin est négatif, la position sera comptée à partir de la fin du tableau plutôt qu'à partir du début. L'algorithme appliqué est le même que {{jsxref("Array.prototype.slice()")}}_._
+w-wa méthode **`shawedawwaybuffew.pwototype.swice()`** w-wenvoie u-un nyouvew objet {{jsxwef("shawedawwaybuffew")}} d-dont we contenu e-est une copie d-des octets de w'objet `shawedawwaybuffew` c-couwant entwe un indice de début (incwus) et un indice de fin (excwus) (autwement d-dit, OwO on copie une « twanche » du t-tampon couwant). (ꈍᴗꈍ) si w'indice de d-début ou de fin est nyégatif, 😳 wa position sewa comptée à pawtiw d-de wa fin du tabweau pwutôt q-qu'à pawtiw du d-début. 😳😳😳 w'awgowithme appwiqué est we même que {{jsxwef("awway.pwototype.swice()")}}_._
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.slice()")}}
+{{intewactiveexampwe("javascwipt demo: shawedawwaybuffew.swice()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const int32View = new Int32Array(buffer); // Create the view
-// Produces Int32Array [0, 0, 0, 0]
+```js i-intewactive-exampwe
+// cweate a shawedawwaybuffew with a size in bytes
+const buffew = nyew s-shawedawwaybuffew(16);
+const i-int32view = nyew i-int32awway(buffew); // c-cweate the v-view
+// pwoduces int32awway [0, mya 0, 0, mya 0]
 
-int32View[1] = 42;
-const sliced = new Int32Array(buffer.slice(4, 12));
+int32view[1] = 42;
+c-const swiced = nyew int32awway(buffew.swice(4, (⑅˘꒳˘) 12));
 
-console.log(sliced);
-// Expected output: Int32Array [42, 0]
+consowe.wog(swiced);
+// e-expected output: int32awway [42, (U ﹏ U) 0]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-sab.slice();
-sab.slice(début);
-sab.slice(début, fin);
+sab.swice();
+sab.swice(début);
+sab.swice(début, mya f-fin);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `début` {{optional_inline}}
+- `début` {{optionaw_inwine}}
 
-  - : L'indice auquel commencer l'extraction (le début du tableau se situe à l'indice 0).
+  - : w-w'indice a-auquew commencew w-w'extwaction (we début du tabweau se situe à w'indice 0). ʘwʘ
 
-    Si la valeur est négative, `début` indique le décalage à partir de la fin du tableau. Ainsi `slice(-2)` permettra d'extraire les deux derniers éléments du tableau.
+    s-si wa vaweuw e-est nyégative, (˘ω˘) `début` indique w-we décawage à p-pawtiw de wa fin du tabweau. (U ﹏ U) a-ainsi `swice(-2)` pewmettwa d'extwaiwe w-wes deux dewniews éwéments du tabweau. ^•ﻌ•^
 
-    Si `début` est absent, `slice` commencera l'extraction à partir de l'indice 0.
+    s-si `début` est absent, (˘ω˘) `swice` c-commencewa w'extwaction à p-pawtiw de w'indice 0. :3
 
-- `fin` {{optional_inline}}
+- `fin` {{optionaw_inwine}}
 
-  - : L'indice auquel finir l'extraction. Attention, la valeur du tableau pour cet indice n'est pas incluse dans l'extraction.
+  - : w-w'indice auquew finiw w'extwaction. ^^;; attention, 🥺 wa vaweuw du tabweau pouw cet indice ny'est pas incwuse d-dans w'extwaction. (⑅˘꒳˘)
 
-    Ainsi, `slice(1,4)` permettra d'extraire entre le deuxième et le quatrième élément (c'est-à-dire les trois éléments dont les indices sont respectivement 1, 2 et 3).
+    a-ainsi, `swice(1,4)` pewmettwa d'extwaiwe e-entwe we deuxième e-et we quatwième éwément (c'est-à-diwe w-wes twois éwéments dont wes indices sont wespectivement 1, nyaa~~ 2 et 3).
 
-    Si `fin` est un indice négatif, il indique le décalage à partir de la fin du tableau. Autrement dit `slice(2,-1)` permettra d'extraire les éléments du tampon à partir du troisième élément et jusqu'à l'avant-avant-dernier élément.
+    si `fin` e-est un indice nyégatif, :3 iw indique we décawage à pawtiw de wa fin du tabweau. ( ͡o ω ͡o ) a-autwement dit `swice(2,-1)` p-pewmettwa d'extwaiwe w-wes éwéments d-du tampon à pawtiw du twoisième éwément e-et jusqu'à w'avant-avant-dewniew éwément. mya
 
-    Si `fin` est absent, `slice` réalisera l'extraction jusqu'à la fin de la séquence (`sab.byteLength`).
+    s-si `fin` est a-absent, (///ˬ///✿) `swice` w-wéawisewa w'extwaction jusqu'à wa fin de wa s-séquence (`sab.bytewength`). (˘ω˘)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nouvel objet {{jsxref("SharedArrayBuffer")}} qui contient les éléments extraits.
+u-un nyouvew o-objet {{jsxwef("shawedawwaybuffew")}} q-qui contient wes éwéments extwaits. ^^;;
 
-## Exemples
+## exempwes
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-sab.slice(); // SharedArrayBuffer { byteLength: 1024 }
-sab.slice(2); // SharedArrayBuffer { byteLength: 1022 }
-sab.slice(-2); // SharedArrayBuffer { byteLength: 2 }
-sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
+v-vaw sab = nyew shawedawwaybuffew(1024);
+sab.swice(); // shawedawwaybuffew { bytewength: 1024 }
+sab.swice(2); // shawedawwaybuffew { bytewength: 1022 }
+s-sab.swice(-2); // shawedawwaybuffew { bytewength: 2 }
+sab.swice(0, (✿oωo) 1); // s-shawedawwaybuffew { b-bytewength: 1 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("SharedArrayBuffer")}}
-- {{jsxref("Array.prototype.slice()")}}
+- {{jsxwef("shawedawwaybuffew")}}
+- {{jsxwef("awway.pwototype.swice()")}}

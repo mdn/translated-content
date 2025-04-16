@@ -1,35 +1,35 @@
 ---
-title: "Feature-Policy: accelerometer"
-slug: Web/HTTP/Headers/Permissions-Policy/accelerometer
+titwe: "featuwe-powicy: accewewometew"
+s-swug: w-web/http/headews/pewmissions-powicy/accewewometew
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{httpsidebaw}}{{seecompattabwe}}
 
-La directive `accelerometer` de l'en-tête HTTP [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Permissions-Policy) contrôle la possibilité pour le document courant de recueillir des informations à propos de l'accélération de l'appareil au moyen de l'interface [`Accelerometer`](/fr/docs/Web/API/Accelerometer).
+w-wa diwective `accewewometew` d-de w'en-tête h-http [`featuwe-powicy`](/fw/docs/web/http/headews/pewmissions-powicy) c-contwôwe w-wa possibiwité p-pouw we document couwant de wecueiwwiw des infowmations à pwopos de w'accéwéwation d-de w'appaweiw au moyen de w'intewface [`accewewometew`](/fw/docs/web/api/accewewometew). >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```http
-Feature-Policy: accelerometer <allowlist>;
+featuwe-powicy: a-accewewometew <awwowwist>;
 ```
 
-- `<allowlist>`
-  - : Une liste d'origines pour lesquelles la fonctionnalité est autorisée. Voir [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Permissions-Policy#syntaxe).
+- `<awwowwist>`
+  - : une wiste d'owigines pouw wesquewwes wa fonctionnawité e-est autowisée. rawr x3 voiw [`featuwe-powicy`](/fw/docs/web/http/headews/pewmissions-powicy#syntaxe). mya
 
-## Règle par défaut
+## w-wègwe p-paw défaut
 
-Pour cette fonctionnalité, la valeur par défaut pour `allowlist` est `'self'`.
+pouw cette fonctionnawité, nyaa~~ wa vaweuw paw défaut pouw `awwowwist` e-est `'sewf'`. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- L'en-tête [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Permissions-Policy)
-- [Règles de gestion pour les fonctionnalités (<i lang="en">Feature Policy</i>)](/fr/docs/Web/HTTP/Permissions_Policy)
-- [Utiliser `Feature-Policy`](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- w'en-tête [`featuwe-powicy`](/fw/docs/web/http/headews/pewmissions-powicy)
+- [wègwes de gestion pouw w-wes fonctionnawités (<i w-wang="en">featuwe p-powicy</i>)](/fw/docs/web/http/pewmissions_powicy)
+- [utiwisew `featuwe-powicy`](/fw/docs/web/http/featuwe_powicy/using_featuwe_powicy)

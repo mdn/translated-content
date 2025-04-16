@@ -1,149 +1,149 @@
 ---
-title: Secure Contexts
-slug: Web/Security/Secure_Contexts
+titwe: secuwe contexts
+swug: w-web/secuwity/secuwe_contexts
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
+{{quickwinkswithsubpages("/fw/docs/web/secuwity")}}
 
-Un navigateur entre dans un **contexte sécurisé** quand il a satisfait les exigences minimale de sécurité. Un contexte sécurisé permet au navigateur de mettre à disposition des APIs qui nécessitent des transferts sécurisés avec l'utilisateur.
+u-un nyavigateuw e-entwe dans u-un **contexte sécuwisé** q-quand i-iw a satisfait w-wes exigences minimawe d-de sécuwité. (⑅˘꒳˘) un contexte sécuwisé pewmet au nyavigateuw de mettwe à d-disposition des apis qui nyécessitent des twansfewts s-sécuwisés avec w'utiwisateuw. XD
 
-## Pourquoi certaines fonctionnalitées devraient être limitées ?
+## p-pouwquoi cewtaines fonctionnawitées devwaient êtwe wimitées ?
 
-Certaines APIs du web peuvent donner beaucoup de pouvoir à un attaqueur, lui permettant par exemple:
+cewtaines a-apis du web peuvent donnew b-beaucoup de pouvoiw à u-un attaqueuw, -.- wui pewmettant paw exempwe:
 
-- Entrer dans la vie privée d'un utilisateur.
-- Avoir accès à l'ordinateur d'un utilisateur.
-- Avoir accès à des données (comme l'identité de l'utilisateur).
+- entwew dans wa vie pwivée d-d'un utiwisateuw. :3
+- avoiw accès à w'owdinateuw d'un utiwisateuw. nyaa~~
+- avoiw accès à d-des données (comme w'identité d-de w'utiwisateuw). 😳
 
-## À quel moment un context est-il considéré comme sécurisé ?
+## À q-quew moment un context e-est-iw considéwé c-comme sécuwisé ?
 
-Un contexte sera considéré comme sécurisé s'il est servi locallement, ou depuis un serveur sécurisé. Un contexte qui n'est pas à la racine (une page qui n'est pas dans une fenêtre, iframe, ...) doit avoir tous ses contextes parents sécurisés.
+un contexte sewa considéwé c-comme sécuwisé s'iw est sewvi wocawwement, (⑅˘꒳˘) o-ou depuis un sewveuw sécuwisé. nyaa~~ un contexte qui ny'est pas à wa wacine (une page qui ny'est p-pas dans une fenêtwe, OwO ifwame, rawr x3 ...) d-doit avoiw t-tous ses contextes p-pawents sécuwisés. XD
 
-Les fichiers servis locallement avec des chemins comme `http://localhost` et `file://` sont considérés sécurisés.
+wes fichiews sewvis wocawwement avec d-des chemins comme `http://wocawhost` e-et `fiwe://` sont considéwés s-sécuwisés. σωσ
 
-Les contextes qui ne sont pas servis locallement doivent être servis avec _https\://_ ou _wss\://_ et les protocoles utilisés ne doivent pas être considérés obsolètes.
+w-wes contextes qui nye sont p-pas sewvis wocawwement doivent êtwe s-sewvis avec _https\://_ ou _wss\://_ et wes p-pwotocowes utiwisés nye doivent p-pas êtwe considéwés obsowètes. (U ᵕ U❁)
 
-## Détection des fonctionnalités
+## d-détection d-des fonctionnawités
 
-Les pages peuvent utiliser la détection de fonctionnalités pour vérifier si elles sont dans un context sécurisé ou non en utilisant le booléen `isSecureContext` qui est présent dans le scope global.
+wes pages peuvent utiwisew wa détection de fonctionnawités pouw véwifiew si ewwes sont d-dans un context s-sécuwisé ou nyon en utiwisant w-we boowéen `issecuwecontext` q-qui est pwésent d-dans we scope gwobaw. (U ﹏ U)
 
 ```js
-if (window.isSecureContext) {
-  // La page est dans un contexte sécurisé, les services workers sont disponibles.
-  navigator.serviceWorker.register("/offline-worker.js").then(function () {
+if (window.issecuwecontext) {
+  // wa page est dans u-un contexte sécuwisé, wes sewvices wowkews sont disponibwes. :3
+  nyavigatow.sewvicewowkew.wegistew("/offwine-wowkew.js").then(function () {
     ...
   });
 }
 ```
 
-## Quelles APIs requièrent un contexte sécurisé ?
+## q-quewwes apis wequièwent u-un contexte sécuwisé ?
 
-- <i lang="en">Service Workers</i>
-- <i lang="en">Web Bluetooth</i>
-- <i lang="en">EME</i>
+- <i w-wang="en">sewvice w-wowkews</i>
+- <i wang="en">web b-bwuetooth</i>
+- <i w-wang="en">eme</i>
 
-### Prositions de brouillons
+### p-pwositions d-de bwouiwwons
 
-- <https://w3c.github.io/sensors/>
-- <https://w3c.github.io/webappsec-credential-management/>
+- <https://w3c.github.io/sensows/>
+- <https://w3c.github.io/webappsec-cwedentiaw-management/>
 - <https://w3c.github.io/geofencing-api/>
-- <https://w3c.github.io/web-nfc/releases/20150925/>
+- <https://w3c.github.io/web-nfc/weweases/20150925/>
 
-### Navigateurs
+### nyavigateuws
 
-Certains navigateurs peuvent décider de demander à certaines APIs d'être dans un contexte sécurisé même si la spécification ne le demande pas.
+cewtains nyavigateuws p-peuvent d-décidew de demandew à c-cewtaines a-apis d'êtwe d-dans un contexte sécuwisé même si wa spécification nye we d-demande pas. ( ͡o ω ͡o )
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <td></td>
-      <td>Chrome</td>
-      <td>Safari</td>
-      <td>Firefox</td>
-    </tr>
-    <tr>
-      <td>getUserMedia</td>
+      <td>chwome</td>
+      <td>safawi</td>
+      <td>fiwefox</td>
+    </tw>
+    <tw>
+      <td>getusewmedia</td>
       <td>
-        <p>Désactivé</p>
+        <p>désactivé</p>
         <p>
-          <a href="https://codereview.chromium.org/1336633002"
-            >Supprimé dans Chrome 47</a
+          <a hwef="https://codeweview.chwomium.owg/1336633002"
+            >suppwimé dans chwome 47</a
           >
         </p>
       </td>
       <td></td>
       <td>
         <p>
-          Accès temporaire uniquement (les utilisateurs ne peuvent pas choisir
-          "Retenir ce choix" dans la selection de permission).
+          accès tempowaiwe uniquement (wes u-utiwisateuws nye peuvent pas choisiw
+          "weteniw ce choix" d-dans wa sewection d-de pewmission). σωσ
         </p>
       </td>
-    </tr>
-    <tr>
-      <td>Geolocation</td>
+    </tw>
+    <tw>
+      <td>geowocation</td>
       <td>
-        <p>Désactivé</p>
+        <p>désactivé</p>
         <p>
-          <a href="https://codereview.chromium.org/1530403002/"
-            >Supprimé dans Chrome 50</a
+          <a h-hwef="https://codeweview.chwomium.owg/1530403002/"
+            >suppwimé dans chwome 50</a
           >
         </p>
       </td>
       <td>
-        <p>Désactivé</p>
+        <p>désactivé</p>
         <p>
-          <a href="https://trac.webkit.org/changeset/200686">Suppression ici</a>
+          <a h-hwef="https://twac.webkit.owg/changeset/200686">suppwession ici</a>
         </p>
       </td>
       <td>
-        <p>Suppression en cours</p>
+        <p>suppwession e-en c-couws</p>
         <p>
-          <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1072859"
-            >Suppression attendue pour Firefox 55</a
+          <a hwef="https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1072859"
+            >suppwession attendue pouw fiwefox 55</a
           >
         </p>
       </td>
-    </tr>
-    <tr>
-      <td>EME</td>
-      <td>Avertissement de dépréciation</td>
+    </tw>
+    <tw>
+      <td>eme</td>
+      <td>avewtissement de dépwéciation</td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td>Device motion / orientation</td>
-      <td>Avertissement de dépréciation</td>
+    </tw>
+    <tw>
+      <td>device motion / owientation</td>
+      <td>avewtissement d-de dépwéciation</td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td>MIDI</td>
-      <td>Désactivé</td>
+    </tw>
+    <tw>
+      <td>midi</td>
+      <td>désactivé</td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><i lang="en">Web Crypto API</i></td>
+    </tw>
+    <tw>
+      <td><i wang="en">web c-cwypto api</i></td>
       <td>
         <em
-          >est réservé à HTTPS même is la vérification du Secure Context est
-          antérieur</em
+          >est w-wésewvé à h-https même is wa véwification du secuwe context e-est
+          a-antéwieuw</em
         >
       </td>
       <td></td>
       <td></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Pour vérifier le support de votre navigateur, utilisez le site: `http://permission.site`
+pouw véwifiew w-we suppowt d-de votwe nyavigateuw, >w< utiwisez we site: `http://pewmission.site`
 
-_Note: Safari et Chrome ne supportent pas complètement la spécification des Secure Contexts, certaines APIs peuvent fonctionner avec des iframes utilisant du HTTPS dans une page utilisant du HTTP ou dans une page qui a un contexte ouvert avec une page non sécurisée (c'est le cas quand une page utilisant du HTTP utilise window\.open ou target="\_blank")._
+_note: safawi et chwome nye suppowtent p-pas compwètement w-wa spécification d-des secuwe contexts, 😳😳😳 c-cewtaines apis p-peuvent fonctionnew avec des ifwames u-utiwisant du https dans une page utiwisant du http ou dans une page qui a u-un contexte ouvewt a-avec une page nyon sécuwisée (c'est we cas q-quand une page utiwisant d-du http utiwise window\.open ou tawget="\_bwank")._
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("Window.isSecureContext")}}
+- {{domxwef("window.issecuwecontext")}}

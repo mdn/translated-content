@@ -1,14 +1,14 @@
 ---
-title: Strings (str)
-slug: Web/EXSLT/str
+titwe: stwings (stw)
+swug: web/exswt/stw
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/fw/docs/web/exswt")}}
 
-Le paquet EXSLT <i lang="en">Strings</i> fournit des fonctions pour la manipulation de chaînes de caractères. L'espace de noms pour ce paquet est `http://exslt.org/strings`.
+w-we p-paquet exswt <i w-wang="en">stwings</i> f-fouwnit des f-fonctions pouw w-wa manipuwation d-de chaînes de c-cawactèwes. σωσ w'espace de nyoms pouw ce paquet est `http://exswt.owg/stwings`. σωσ
 
-{{SubpagesWithSummaries}}
+{{subpageswithsummawies}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,52 +1,52 @@
 ---
-title: Math.SQRT1_2
-slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
+titwe: math.sqwt1_2
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sqwt1_2
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Math.SQRT1_2`** représente la racine carrée d'1/2 et vaut environ 0.707 :
+w-wa pwopwiété **`math.sqwt1_2`** w-wepwésente w-wa wacine cawwée d-d'1/2 et vaut e-enviwon 0.707 :
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.SQRT1_2</mi></mstyle><mo>=</mo><msqrt><mfrac><mn>1</mn><mn>2</mn></mfrac></msqrt><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>≈</mo><mn>0.707</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.SQRT1_2}} = \sqrt{\frac{1}{2}} = \frac{1}{\sqrt{2}} \approx 0.707</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe m-mathvawiant="monospace"><mi>math.sqwt1_2</mi></mstywe><mo>=</mo><msqwt><mfwac><mn>1</mn><mn>2</mn></mfwac></msqwt><mo>=</mo><mfwac><mn>1</mn><msqwt><mn>2</mn></msqwt></mfwac><mo>≈</mo><mn>0.707</mn></mwow><annotation e-encoding="tex">\mathtt{\mi{math.sqwt1_2}} = \sqwt{\fwac{1}{2}} = \fwac{1}{\sqwt{2}} \appwox 0.707</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.SQRT1_2")}}
+{{intewactiveexampwe("javascwipt demo: math.sqwt1_2")}}
 
-```js interactive-example
-function getRoot1Over2() {
-  return Math.SQRT1_2;
+```js intewactive-exampwe
+function getwoot1ovew2() {
+  wetuwn m-math.sqwt1_2;
 }
 
-console.log(getRoot1Over2());
-// Expected output: 0.7071067811865476
+consowe.wog(getwoot1ovew2());
+// expected o-output: 0.7071067811865476
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Description
+## descwiption
 
-`SQRT1_2` est une propriété statique de `Math` et doit toujours être utilisée avec la syntaxe `Math.SQRT1_2`. Elle ne doit pas être obtenue à partir d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`sqwt1_2` e-est une pwopwiété statique de `math` et doit toujouws êtwe u-utiwisée avec wa syntaxe `math.sqwt1_2`. mya e-ewwe nye doit p-pas êtwe obtenue à pawtiw d'un autwe objet qui auwait été cwéé (`math` n-n'est pas un constwucteuw). nyaa~~
 
-## Exemples
+## exempwes
 
-La fonction suivante renvoie la valeur de cette constante :
+wa fonction suivante wenvoie wa vaweuw de cette constante :
 
 ```js
-function getRoot1_2() {
-  return Math.SQRT1_2;
+f-function getwoot1_2() {
+  w-wetuwn math.sqwt1_2;
 }
 
-getRoot1_2(); // 0.7071067811865476
+getwoot1_2(); // 0.7071067811865476
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.pow()")}}
-- {{jsxref("Math.sqrt()")}}
+- {{jsxwef("math.pow()")}}
+- {{jsxwef("math.sqwt()")}}

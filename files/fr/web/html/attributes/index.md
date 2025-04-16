@@ -1,2140 +1,2140 @@
 ---
-title: Référence des attributs HTML
-slug: Web/HTML/Attributes
+titwe: wéféwence des attwibuts h-htmw
+swug: web/htmw/attwibutes
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateurs.
+w-wes éwéments h-htmw ont d-des **attwibuts** ; c-ce sont des v-vaweuws suppwémentaiwes q-qui configuwent w-wes éwéments ou ajustent weuw compowtement de difféwentes manièwes p-pouw wépondwe aux cwitèwes souhaités paw wes u-utiwisateuws. :3
 
-## Liste des attributs
+## wiste des attwibuts
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Nom de l'attribut</th>
-      <th scope="col">Éléments concernés</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">nom de w'attwibut</th>
+      <th scope="cow">Éwéments concewnés</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/accept"><code>accept</code></a>
+        <a hwef="/fw/docs/web/htmw/attwibutes/accept"><code>accept</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/fowm"><code>&#x3c;fowm></code></a
+        >, :3
+        <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a>
       </td>
       <td>
-        La liste des types acceptés par le serveur. Généralement, il s'agit de
-        types de fichier.
+        wa wiste des types acceptés paw we sewveuw. (⑅˘꒳˘) généwawement, òωó i-iw s'agit de
+        types de fichiew.
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form#attr-accept-charset"
-          ><code>accept-charset</code></a
+        <a hwef="/fw/docs/web/htmw/ewement/fowm#attw-accept-chawset"
+          ><code>accept-chawset</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/fowm"><code>&#x3c;fowm></code></a>
       </td>
-      <td>La liste des jeux de caractères pris en charge.</td>
-    </tr>
-    <tr>
+      <td>wa w-wiste des jeux de cawactèwes p-pwis en chawge.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/accesskey"
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/accesskey"
           ><code>accesskey</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut u-univewsew</a>
       </td>
       <td>
-        Cet attribut permet de définir un raccourci clavier pour activer un
-        élément ou lui passer le focus.
+        c-cet attwibut pewmet de définiw un waccouwci c-cwaview pouw activew un
+        éwément ou w-wui passew we focus. mya
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/action"><code>action</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a>
+        <a hwef="/fw/docs/web/htmw/attwibutes/action"><code>action</code></a>
       </td>
       <td>
-        L'URI d'un programme qui traite les informations envoyées par le
-        formulaire.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/align"><code>align</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/fowm"><code>&#x3c;fowm></code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/applet"><code>&#x3C;applet></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/caption"
-          ><code>&#x3C;caption></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/col"><code>&#x3C;col></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/colgroup"
-          ><code>&#x3C;colgroup></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/hr"><code>&#x3C;hr></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/table"><code>&#x3C;table></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/tbody"><code>&#x3C;tbody></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/td"><code>&#x3C;td></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/tfoot"><code>&#x3C;tfoot></code></a>
-        , <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/thead"><code>&#x3C;thead></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/tr"><code>&#x3C;tr></code></a>
+        w'uwi d'un pwogwamme qui twaite wes infowmations envoyées paw w-we
+        fowmuwaiwe. 😳😳😳
       </td>
-      <td>Cet attribut définit l'alignement horizontal de l'élément.</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/iframe#attr-allow"
-          ><code>allow</code></a
+        <a hwef="/fw/docs/web/htmw/attwibutes/awign"><code>awign</code></a>
+      </td>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/appwet"><code>&#x3c;appwet></code></a
+        >, :3
+        <a h-hwef="/fw/docs/web/htmw/ewement/caption"
+          ><code>&#x3c;caption></code></a
+        >, >_< <a h-hwef="/fw/docs/web/htmw/ewement/cow"><code>&#x3c;cow></code></a
+        >, 🥺
+        <a h-hwef="/fw/docs/web/htmw/ewement/cowgwoup"
+          ><code>&#x3c;cowgwoup></code></a
+        >, (ꈍᴗꈍ) <a hwef="/fw/docs/web/htmw/ewement/hw"><code>&#x3c;hw></code></a
+        >, rawr x3
+        <a hwef="/fw/docs/web/htmw/ewement/ifwame"><code>&#x3c;ifwame></code></a
+        >, (U ﹏ U) <a hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a
+        >, ( ͡o ω ͡o )
+        <a h-hwef="/fw/docs/web/htmw/ewement/tabwe"><code>&#x3c;tabwe></code></a
+        >, 😳😳😳
+        <a h-hwef="/fw/docs/web/htmw/ewement/tbody"><code>&#x3c;tbody></code></a
+        >, 🥺 <a hwef="/fw/docs/web/htmw/ewement/td"><code>&#x3c;td></code></a
+        >,
+        <a hwef="/fw/docs/web/htmw/ewement/tfoot"><code>&#x3c;tfoot></code></a>
+        , òωó <a h-hwef="/fw/docs/web/htmw/ewement/th"><code>&#x3c;th></code></a
+        >, XD
+        <a h-hwef="/fw/docs/web/htmw/ewement/thead"><code>&#x3c;thead></code></a
+        >, XD <a hwef="/fw/docs/web/htmw/ewement/tw"><code>&#x3c;tw></code></a>
+      </td>
+      <td>cet a-attwibut définit w'awignement h-howizontaw de w'éwément.</td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/ifwame#attw-awwow"
+          ><code>awwow</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/iframe"
-          ><code>&#x3C;iframe></code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/ifwame"
+          ><code>&#x3c;ifwame></code></a
         >
       </td>
       <td>
-        Cet attribut définit les règles des fonctionnalités pour cette
-        <em>iframe</em>.
+        cet attwibut d-définit wes wègwes des fonctionnawités p-pouw c-cette
+        <em>ifwame</em>. ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/alt"><code>alt</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/applet"><code>&#x3C;applet></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        <a hwef="/fw/docs/web/htmw/attwibutes/awt"><code>awt</code></a>
       </td>
       <td>
-        Un texte alternatif à afficher lorsque l'élément ne peut pas être
-        affiché.
+        <a hwef="/fw/docs/web/htmw/ewement/appwet"><code>&#x3c;appwet></code></a
+        >, >w< <a hwef="/fw/docs/web/htmw/ewement/awea"><code>&#x3c;awea></code></a
+        >, mya <a hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a
+        >, (ꈍᴗꈍ)
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a>
       </td>
-    </tr>
-    <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/script#attr-async"
+        un texte awtewnatif à affichew w-wowsque w'éwément n-nye peut pas êtwe
+        a-affiché. -.-
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/scwipt#attw-async"
           ><code>async</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/scwipt"
+          ><code>&#x3c;scwipt></code></a
         >
       </td>
       <td>
-        Cet attribut indique que le script devrait être exécuté de façon
-        asynchrone.
+        cet attwibut indique que we scwipt devwait êtwe e-exécuté de façon
+        asynchwone. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/autocapitalize"
-          ><code>autocapitalize</code></a
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/autocapitawize"
+          ><code>autocapitawize</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut u-univewsew</a>
       </td>
       <td>
-        Cet attribut contrôle la façon dont un champ texte est saisi en
-        majuscules de façon automatique.
+        cet attwibut c-contwôwe w-wa façon dont u-un champ texte est saisi en
+        m-majuscuwes de f-façon automatique. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/autocomplete"
-          ><code>autocomplete</code></a
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/autocompwete"
+          ><code>autocompwete</code></a
         >
       </td>
       <td>
         <p>
-          <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a
-          >,
-          <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-          >,
-          <a href="/fr/docs/Web/HTML/Element/select"
-            ><code>&#x3C;select></code></a
-          >,
-          <a href="/fr/docs/Web/HTML/Element/Textarea"
-            ><code>&#x3C;textarea></code></a
+          <a h-hwef="/fw/docs/web/htmw/ewement/fowm"><code>&#x3c;fowm></code></a
+          >, σωσ
+          <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+          >, :3
+          <a hwef="/fw/docs/web/htmw/ewement/sewect"
+            ><code>&#x3c;sewect></code></a
+          >, /(^•ω•^)
+          <a h-hwef="/fw/docs/web/htmw/ewement/textawea"
+            ><code>&#x3c;textawea></code></a
           >
         </p>
       </td>
       <td>
-        Cet attribut indique que ces contrôles ou que ce formulaire peuvent être
-        remplis automatiquement par le navigateur.
+        c-cet attwibut i-indique que ces c-contwôwes ou que c-ce fowmuwaiwe peuvent êtwe
+        wempwis automatiquement paw we nyavigateuw. σωσ
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/autofocus"
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/autofocus"
           ><code>autofocus</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Button"><code>&#x3C;button></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/select"><code>&#x3C;select></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/button"><code>&#x3c;button></code></a
+        >, (U ᵕ U❁)
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, 😳
+        <a hwef="/fw/docs/web/htmw/ewement/sewect"><code>&#x3c;sewect></code></a
+        >, ʘwʘ
+        <a hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
         >
       </td>
       <td>
-        Cet attribut indique que l'élément doit recevoir le focus
-        automatiquement une fois que la page est chargée.
+        cet attwibut i-indique que w'éwément doit wecevoiw we focus
+        automatiquement u-une fois q-que wa page e-est chawgée. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/autoplay"
-          ><code>autoplay</code></a
+        <a hwef="/fw/docs/web/htmw/attwibutes/autopway"
+          ><code>autopway</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/audio"><code>&#x3c;audio></code></a
+        >, ^•ﻌ•^
+        <a hwef="/fw/docs/web/htmw/ewement/video"><code>&#x3c;video></code></a>
       </td>
       <td>
-        Cet attribut indique que l'élément audio ou vidéo doit être lancé dès
-        que possible.
+        c-cet a-attwibut indique que w'éwément audio ou vidéo doit êtwe wancé dès
+        que possibwe. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <td><code>background</code></td>
+    </tw>
+    <tw>
+      <td><code>backgwound</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/body"><code>&#x3C;body></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/table"><code>&#x3C;table></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/td"><code>&#x3C;td></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/body"><code>&#x3c;body></code></a
+        >, XD
+        <a hwef="/fw/docs/web/htmw/ewement/tabwe"><code>&#x3c;tabwe></code></a
+        >, /(^•ω•^) <a h-hwef="/fw/docs/web/htmw/ewement/td"><code>&#x3c;td></code></a
+        >, (U ᵕ U❁) <a hwef="/fw/docs/web/htmw/ewement/th"><code>&#x3c;th></code></a>
       </td>
       <td>
-        <p>Définit l'URL vers un fichier qui est une image.</p>
-        <div class="note">
+        <p>définit w-w'uww v-vews un fichiew qui est une image.</p>
+        <div cwass="note">
           <p>
-            <strong>Note :</strong>Bien que les navigateurs et les clients
-            <em>e-mails</em> prennent en charge cet attribut, cet attribut est
-            obsolète. On utilisera plutôt la propriété
-            <a href="/fr/docs/Web/CSS/background-image"
-              ><code>background-image</code></a
-            >.
+            <stwong>note :</stwong>bien q-que wes n-nyavigateuws et wes cwients
+            <em>e-maiws</em> p-pwennent e-en chawge cet attwibut, mya cet attwibut est
+            obsowète. (ˆ ﻌ ˆ)♡ on utiwisewa p-pwutôt wa pwopwiété
+            <a h-hwef="/fw/docs/web/css/backgwound-image"
+              ><code>backgwound-image</code></a
+            >. (✿oωo)
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>bgcolor</code></td>
+    </tw>
+    <tw>
+      <td><code>bgcowow</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/body"><code>&#x3C;body></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/col"><code>&#x3C;col></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/colgroup"
-          ><code>&#x3C;colgroup></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/marquee"
-          ><code>&#x3C;marquee></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/table"><code>&#x3C;table></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/tbody"><code>&#x3C;tbody></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/tfoot"><code>&#x3C;tfoot></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/td"><code>&#x3C;td></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/tr"><code>&#x3C;tr></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/body"><code>&#x3c;body></code></a
+        >, (✿oωo) <a hwef="/fw/docs/web/htmw/ewement/cow"><code>&#x3c;cow></code></a
+        >, òωó
+        <a h-hwef="/fw/docs/web/htmw/ewement/cowgwoup"
+          ><code>&#x3c;cowgwoup></code></a
+        >, (˘ω˘)
+        <a h-hwef="/fw/docs/web/htmw/ewement/mawquee"
+          ><code>&#x3c;mawquee></code></a
+        >, (ˆ ﻌ ˆ)♡
+        <a hwef="/fw/docs/web/htmw/ewement/tabwe"><code>&#x3c;tabwe></code></a
+        >, ( ͡o ω ͡o )
+        <a h-hwef="/fw/docs/web/htmw/ewement/tbody"><code>&#x3c;tbody></code></a
+        >, rawr x3
+        <a hwef="/fw/docs/web/htmw/ewement/tfoot"><code>&#x3c;tfoot></code></a
+        >, (˘ω˘) <a hwef="/fw/docs/web/htmw/ewement/td"><code>&#x3c;td></code></a
+        >, òωó <a hwef="/fw/docs/web/htmw/ewement/th"><code>&#x3c;th></code></a
+        >, ( ͡o ω ͡o ) <a hwef="/fw/docs/web/htmw/ewement/tw"><code>&#x3c;tw></code></a>
       </td>
       <td>
-        <p>Cet attribut indique la couleur d'arrière-plan pour l'élément.</p>
-        <div class="note">
+        <p>cet a-attwibut indique w-wa couweuw d'awwièwe-pwan pouw w'éwément.</p>
+        <div cwass="note">
           <p>
-            <strong>Note :</strong>Cet attribut est un attribut historique.
-            Veuillez utiliser la propriété CSS standard
-            <a href="/fr/docs/Web/CSS/background-color"
-              ><code>background-color</code></a
-            >.
+            <stwong>note :</stwong>cet a-attwibut est u-un attwibut histowique. σωσ
+            veuiwwez utiwisew wa pwopwiété css standawd
+            <a h-hwef="/fw/docs/web/css/backgwound-cowow"
+              ><code>backgwound-cowow</code></a
+            >. (U ﹏ U)
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>border</code></td>
+    </tw>
+    <tw>
+      <td><code>bowdew</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/table"><code>&#x3C;table></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/object"><code>&#x3c;object></code></a
+        >, rawr
+        <a hwef="/fw/docs/web/htmw/ewement/tabwe"><code>&#x3c;tabwe></code></a>
       </td>
       <td>
-        <p>Cet attribut indique la largeur de la bordure.</p>
-        <div class="note">
+        <p>cet attwibut i-indique wa wawgeuw de wa bowduwe.</p>
+        <div c-cwass="note">
           <p>
-            <strong>Note :</strong>Cet attribut est un attribut historique.
-            Veuillez utiliser la propriété CSS standard
-            <a href="/fr/docs/Web/CSS/border"><code>border</code></a
-            >.
+            <stwong>note :</stwong>cet a-attwibut est un attwibut histowique. -.-
+            veuiwwez u-utiwisew w-wa pwopwiété css standawd
+            <a hwef="/fw/docs/web/css/bowdew"><code>bowdew</code></a
+            >. ( ͡o ω ͡o )
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/buffered"
-          ><code>buffered</code></a
+        <a hwef="/fw/docs/web/htmw/attwibutes/buffewed"
+          ><code>buffewed</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/audio"><code>&#x3c;audio></code></a
+        >, >_<
+        <a hwef="/fw/docs/web/htmw/ewement/video"><code>&#x3c;video></code></a>
       </td>
       <td>
-        Cet attribut contient la valeur de l'intervalle de temps d'ores et déjà
-        mis en mémoire tampon pour le média de l'élément.
+        c-cet attwibut contient wa vaweuw de w'intewvawwe de t-temps d'owes et déjà
+        m-mis en mémoiwe t-tampon pouw we média de w'éwément. o.O
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/fr/docs/Web/HTML/Attributes/capture">capture</a></code>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        <code><a h-hwef="/fw/docs/web/htmw/attwibutes/captuwe">captuwe</a></code>
       </td>
       <td>
-        À partir de la spécification <i lang="en">HTML Media Capture</i>, spécifie qu'un nouveau fichier peut être capturé.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/charset"><code>charset</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/meta"><code>&#x3C;meta></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+        À p-pawtiw d-de wa spécification <i w-wang="en">htmw media captuwe</i>, σωσ s-spécifie q-qu'un nyouveau fichiew peut êtwe captuwé. -.-
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/chawset"><code>chawset</code></a>
+      </td>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/meta"><code>&#x3c;meta></code></a
+        >, σωσ
+        <a h-hwef="/fw/docs/web/htmw/ewement/scwipt"
+          ><code>&#x3c;scwipt></code></a
         >
       </td>
       <td>
-        Cet attribut déclare l'encodage de caractères utilisé pour la page ou le
-        script.
+        cet attwibut décwawe w-w'encodage de cawactèwes utiwisé p-pouw wa page o-ou we
+        scwipt. :3
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/checked"><code>checked</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/command"
-          ><code>&#x3C;command></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        <a hwef="/fw/docs/web/htmw/attwibutes/checked"><code>checked</code></a>
       </td>
       <td>
-        Cet attribut indique si l'élément doit être vérifié au chargement de la
-        page.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/cite"><code>cite</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/command"
+          ><code>&#x3c;command></code></a
+        >, ^^
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/blockquote"
-          ><code>&#x3C;blockquote></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/del"><code>&#x3C;del></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/ins"><code>&#x3C;ins></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/q"><code>&#x3C;q></code></a>
+        cet attwibut i-indique si w'éwément d-doit êtwe v-véwifié au chawgement d-de wa
+        page. òωó
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/cite"><code>cite</code></a>
       </td>
       <td>
-        Cet attribut est une URI qui pointe vers la source de la citation ou de
-        la modification.
+        <a hwef="/fw/docs/web/htmw/ewement/bwockquote"
+          ><code>&#x3c;bwockquote></code></a
+        >, (ˆ ﻌ ˆ)♡ <a hwef="/fw/docs/web/htmw/ewement/dew"><code>&#x3c;dew></code></a
+        >, <a hwef="/fw/docs/web/htmw/ewement/ins"><code>&#x3c;ins></code></a
+        >, XD <a hwef="/fw/docs/web/htmw/ewement/q"><code>&#x3c;q></code></a>
       </td>
-    </tr>
-    <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/class"
-          ><code>class</code></a
+        cet attwibut e-est une uwi qui pointe vews wa souwce d-de wa citation ou de
+        w-wa modification. òωó
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/cwass"
+          ><code>cwass</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut univewsew</a>
       </td>
       <td>
-        Cet attribut permet de définir la ou les classes auxquelles appartient
-        un élément afin de le manipuler en script ou de le mettre en forme avec
-        CSS.
+        c-cet attwibut p-pewmet de définiw w-wa ou wes c-cwasses auxquewwes a-appawtient
+        un éwément afin de we manipuwew en scwipt ou de we mettwe en fowme avec
+        css. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/applet#attr-code"
+        <a h-hwef="/fw/docs/web/htmw/ewement/appwet#attw-code"
           ><code>code</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/applet"
-          ><code>&#x3C;applet></code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/appwet"
+          ><code>&#x3c;appwet></code></a
         >
       </td>
       <td>
-        Cet attribut définit l'URL du fichier de classe qui doit être utilisé
-        pour le chargement et l'exécution de l'applet.
+        c-cet attwibut définit w-w'uww du fichiew de cwasse qui doit êtwe utiwisé
+        pouw w-we chawgement e-et w'exécution de w'appwet. UwU
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/applet#attr-codebase"
+        <a h-hwef="/fw/docs/web/htmw/ewement/appwet#attw-codebase"
           ><code>codebase</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/applet"
-          ><code>&#x3C;applet></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/appwet"
+          ><code>&#x3c;appwet></code></a
         >
       </td>
       <td>
-        Cet attribut fournit une URL absolue ou relative du dossier contenant
-        les fichiers <code>.class</code> de l'applet.
+        cet attwibut fouwnit u-une uww absowue o-ou wewative du dossiew contenant
+        w-wes fichiews <code>.cwass</code> d-de w'appwet.
       </td>
-    </tr>
-    <tr>
-      <td><code>color</code></td>
+    </tw>
+    <tw>
+      <td><code>cowow</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/basefont"
-          ><code>&#x3C;basefont></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/font"><code>&#x3C;font></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/hr"><code>&#x3C;hr></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/basefont"
+          ><code>&#x3c;basefont></code></a
+        >, >w< <a hwef="/fw/docs/web/htmw/ewement/font"><code>&#x3c;font></code></a
+        >, ʘwʘ <a hwef="/fw/docs/web/htmw/ewement/hw"><code>&#x3c;hw></code></a>
       </td>
       <td>
         <p>
-          Cet attribut définit la couleur du texte grâce à un nom de couleur ou
-          grâce à un code hexadécimal dans le format #RRGGBB.
+          cet attwibut d-définit wa couweuw d-du texte gwâce à u-un nyom d-de couweuw ou
+          g-gwâce à un code hexadécimaw d-dans we fowmat #wwggbb. :3
         </p>
-        <div class="note">
+        <div c-cwass="note">
           <p>
-            <strong>Note :</strong>Cet attribut est un attribut historique.
-            Veuillez utiliser la propriété CSS standard
-            <a href="/fr/docs/Web/CSS/color"><code>color</code></a
-            >.
+            <stwong>note :</stwong>cet attwibut e-est un attwibut h-histowique. ^•ﻌ•^
+            veuiwwez u-utiwisew wa pwopwiété css standawd
+            <a h-hwef="/fw/docs/web/css/cowow"><code>cowow</code></a
+            >. (ˆ ﻌ ˆ)♡
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea#attr-cols"
-          ><code>cols</code></a
+        <a hwef="/fw/docs/web/htmw/ewement/textawea#attw-cows"
+          ><code>cows</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
         >
       </td>
       <td>
-        Cet attribut définit le nombre de colonnes pour le texte contenu dans
-        un<code> textarea</code>.
+        c-cet attwibut définit w-we nyombwe de cowonnes pouw we texte contenu d-dans
+        un<code> t-textawea</code>. 🥺
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/colspan"><code>colspan</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/td"><code>&#x3C;td></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/cowspan"><code>cowspan</code></a>
       </td>
       <td>
-        Cet attribut définit le nombre de colonnes sur lequel une cellule doit
-        s'étendre.
+        <a hwef="/fw/docs/web/htmw/ewement/td"><code>&#x3c;td></code></a
+        >, OwO <a hwef="/fw/docs/web/htmw/ewement/th"><code>&#x3c;th></code></a>
       </td>
-    </tr>
-    <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/meta#attr-content"
+        cet a-attwibut définit we nyombwe de cowonnes suw wequew u-une cewwuwe d-doit
+        s'étendwe. 🥺
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/meta#attw-content"
           ><code>content</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/meta"><code>&#x3C;meta></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/meta"><code>&#x3c;meta></code></a>
       </td>
       <td>
-        Une valeur associée avec <code>http-equiv</code> ou
-        <code>name</code> selon le contexte.
+        une vaweuw associée a-avec <code>http-equiv</code> o-ou
+        <code>name</code> sewon we contexte. OwO
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/contenteditable"
-          ><code>contenteditable</code></a
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe"
+          ><code>contenteditabwe</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut univewsew</a>
       </td>
-      <td>Cet attribut indique si le contenu de l'élément peut être édité.</td>
-    </tr>
-    <tr>
+      <td>cet attwibut i-indique si we c-contenu de w'éwément peut êtwe édité.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/contextmenu"
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/contextmenu"
           ><code>contextmenu</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut u-univewsew</a>
       </td>
       <td>
-        Cet attribut fait référence à l'identifiant d'un élément
-        <a href="/fr/docs/Web/HTML/Element/menu"><code>&#x3C;menu></code></a>
-        qui sera utilisé comme menu contextuel pour l'élément.
+        c-cet a-attwibut fait wéféwence à w'identifiant d'un éwément
+        <a hwef="/fw/docs/web/htmw/ewement/menu"><code>&#x3c;menu></code></a>
+        qui sewa utiwisé comme menu contextuew pouw w'éwément. (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/controls"
-          ><code>controls</code></a
+        <a hwef="/fw/docs/web/htmw/attwibutes/contwows"
+          ><code>contwows</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/audio"><code>&#x3c;audio></code></a
+        >, ( ͡o ω ͡o )
+        <a hwef="/fw/docs/web/htmw/ewement/video"><code>&#x3c;video></code></a>
       </td>
       <td>
-        Cet attribut indique si le navigateur doit afficher les contrôles de
-        lecture du média pour l'utilisateur.
+        cet attwibut indique si we navigateuw d-doit affichew wes c-contwôwes de
+        wectuwe du média pouw w-w'utiwisateuw. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/area#attr-coords"
-          ><code>coords</code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/awea#attw-coowds"
+          ><code>coowds</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/awea"><code>&#x3c;awea></code></a>
       </td>
       <td>
-        Un ensemble de valeurs qui définit les coordonnées de la zone d'intérêt.
+        un ensembwe d-de vaweuws qui définit wes coowdonnées d-de wa z-zone d'intéwêt. o.O
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/crossorigin"
-          ><code>crossorigin</code></a
+        <a hwef="/fw/docs/web/htmw/attwibutes/cwossowigin"
+          ><code>cwossowigin</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/script"><code>&#x3C;script></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/audio"><code>&#x3c;audio></code></a
+        >, (⑅˘꒳˘) <a hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a
+        >, (ˆ ﻌ ˆ)♡ <a h-hwef="/fw/docs/web/htmw/ewement/wink"><code>&#x3c;wink></code></a
+        >, :3
+        <a h-hwef="/fw/docs/web/htmw/ewement/scwipt"><code>&#x3c;scwipt></code></a
+        >, /(^•ω•^)
+        <a hwef="/fw/docs/web/htmw/ewement/video"><code>&#x3c;video></code></a>
       </td>
-      <td>Cet attribut gère les requêtes de différentes origines.</td>
-    </tr>
-    <tr>
+      <td>cet attwibut gèwe wes w-wequêtes de difféwentes o-owigines.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/API/HTMLIFrameElement/csp"><code>csp</code></a>
-        {{experimental_inline}}
+        <a h-hwef="/fw/docs/web/api/htmwifwameewement/csp"><code>csp</code></a>
+        {{expewimentaw_inwine}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/iframe"
-          ><code>&#x3C;iframe></code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/ifwame"
+          ><code>&#x3c;ifwame></code></a
         >
       </td>
       <td>
-        Cet attribut définit la politique de sécurité de contenu que le document
-        intégré doit respecter.
+        c-cet attwibut définit w-wa powitique d-de sécuwité d-de contenu que w-we document
+        intégwé d-doit wespectew. òωó
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/object#attr-data"
+        <a h-hwef="/fw/docs/web/htmw/ewement/object#attw-data"
           ><code>data</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/object"
-          ><code>&#x3C;object></code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/object"
+          ><code>&#x3c;object></code></a
         >
       </td>
-      <td>Cet attribut définit l'URL de la ressource.</td>
-    </tr>
-    <tr>
+      <td>cet attwibut d-définit w'uww de wa wessouwce.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/data-*"
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/data-*"
           ><code>data-*</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut univewsew</a>
       </td>
       <td>
-        Grâce aux attributs de donnée, on peut associer des attributs
-        personnalisés afin de transporter des informations spécifiques.
+        g-gwâce aux attwibuts de donnée, :3 o-on peut associew d-des attwibuts
+        p-pewsonnawisés afin de twanspowtew d-des infowmations spécifiques. (˘ω˘)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/datetime"
+        <a hwef="/fw/docs/web/htmw/attwibutes/datetime"
           ><code>datetime</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/del"><code>&#x3C;del></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/ins"><code>&#x3C;ins></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/time"><code>&#x3C;time></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/dew"><code>&#x3c;dew></code></a
+        >, 😳 <a hwef="/fw/docs/web/htmw/ewement/ins"><code>&#x3c;ins></code></a
+        >, σωσ <a h-hwef="/fw/docs/web/htmw/ewement/time"><code>&#x3c;time></code></a>
       </td>
-      <td>Cet attribut indique la date et l'heure associées à l'élément.</td>
-    </tr>
-    <tr>
+      <td>cet attwibut indique w-wa date et w'heuwe associées à w'éwément.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img#attr-decoding"
+        <a hwef="/fw/docs/web/htmw/ewement/img#attw-decoding"
           ><code>decoding</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a>
       </td>
-      <td>Cet attribut indique la méthode préférée pour décoder l'image.</td>
-    </tr>
-    <tr>
+      <td>cet a-attwibut indique wa méthode pwéféwée p-pouw décodew w-w'image.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/track#attr-default"
-          ><code>default</code></a
+        <a hwef="/fw/docs/web/htmw/ewement/twack#attw-defauwt"
+          ><code>defauwt</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/track"><code>&#x3C;track></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/twack"><code>&#x3c;twack></code></a>
       </td>
       <td>
-        Cet attribut indique que la piste devrait être activée sauf si les
-        préférences de l'utilisateur indiquent un autre choix.
+        cet attwibut i-indique que wa piste devwait êtwe a-activée sauf s-si wes
+        p-pwéféwences de w'utiwisateuw indiquent un autwe c-choix. UwU
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/script#attr-defer"
-          ><code>defer</code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/scwipt#attw-defew"
+          ><code>defew</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/scwipt"
+          ><code>&#x3c;scwipt></code></a
         >
       </td>
       <td>
-        Cet attribut indique que le script doit être exécuté une fois que la
-        page a été analysée.
+        c-cet attwibut indique que we scwipt doit êtwe e-exécuté une fois que wa
+        p-page a été a-anawysée. -.-
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/dir"><code>dir</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes/diw"><code>diw</code></a>
       </td>
       <td>
-        Cet attribut définit la direction du texte (gauche à droite ou droite à
-        gauche).
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/dirname"><code>dirname</code></a>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut u-univewsew</a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        c-cet a-attwibut définit w-wa diwection du texte (gauche à d-dwoite ou dwoite à
+        g-gauche).
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/attwibutes/diwname"><code>diwname</code></a>
+      </td>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, 🥺
+        <a h-hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/disabled"
-          ><code>disabled</code></a
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/disabwed"
+          ><code>disabwed</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Button"><code>&#x3C;button></code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/button"><code>&#x3c;button></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/command"
-          ><code>&#x3C;command></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Fieldset"
-          ><code>&#x3C;fieldset></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Optgroup"
-          ><code>&#x3C;optgroup></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Option"><code>&#x3C;option></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/select"><code>&#x3C;select></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/command"
+          ><code>&#x3c;command></code></a
+        >, 😳😳😳
+        <a h-hwef="/fw/docs/web/htmw/ewement/fiewdset"
+          ><code>&#x3c;fiewdset></code></a
+        >, 🥺
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, ^^
+        <a h-hwef="/fw/docs/web/htmw/ewement/optgwoup"
+          ><code>&#x3c;optgwoup></code></a
+        >, ^^;;
+        <a hwef="/fw/docs/web/htmw/ewement/option"><code>&#x3c;option></code></a
+        >, >w<
+        <a h-hwef="/fw/docs/web/htmw/ewement/sewect"><code>&#x3c;sewect></code></a
+        >, σωσ
+        <a hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
         >
       </td>
       <td>
-        Cet attribut indique si l'utilisateur peut interagir avec l'élément.
+        c-cet a-attwibut indique s-si w'utiwisateuw peut intewagiw avec w'éwément. >w<
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/download"
-          ><code>download</code></a
+        <a hwef="/fw/docs/web/htmw/attwibutes/downwoad"
+          ><code>downwoad</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/a"><code>&#x3c;a></code></a
+        >, (⑅˘꒳˘) <a hwef="/fw/docs/web/htmw/ewement/awea"><code>&#x3c;awea></code></a>
       </td>
       <td>
-        Cet attribut indique si l'hyperlien est utilisé afin de télécharger une
-        ressource.
+        c-cet attwibut indique s-si w'hypewwien est utiwisé afin de téwéchawgew une
+        w-wessouwce. òωó
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/draggable"
-          ><code>draggable</code></a
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes/dwaggabwe"
+          ><code>dwaggabwe</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut u-univewsew</a>
       </td>
-      <td>Cet attribut indique si l'élément peut être déplacé/glissé.</td>
-    </tr>
-    <tr></tr>
-    <tr>
+      <td>cet a-attwibut indique si w'éwément peut êtwe dépwacé/gwissé.</td>
+    </tw>
+    <tw></tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form#attr-enctype"
+        <a h-hwef="/fw/docs/web/htmw/ewement/fowm#attw-enctype"
           ><code>enctype</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/fowm"><code>&#x3c;fowm></code></a>
       </td>
       <td>
-        Cet attribut définit le type de contenu des données de formulaire
-        envoyées lorsque la méthode utilisée est <code>POST</code>.
+        c-cet attwibut d-définit we type de contenu des données de fowmuwaiwe
+        e-envoyées wowsque w-wa méthode utiwisée est <code>post</code>. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/enterkeyhint"
-          ><code>enterkeyhint</code></a
+        <a hwef="/fw/docs/web/htmw/attwibutes/entewkeyhint"
+          ><code>entewkeyhint</code></a
         >
-        {{experimental_inline}}
+        {{expewimentaw_inwine}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Global_attributes/contenteditable"
-          ><code>contenteditable</code></a
-        >
-      </td>
-      <td>
-        Cet attribut indique le libellé ou l'icône à afficher sur la touche
-        entrée des claviers virtuels. Cet attribut peut être utilisé sur les
-        contrôles de formulaires ou sur les éléments qui sont éditables (par
-        exemple avec l'attribut <code>contenteditable</code>).
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/for"><code>for</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Label"><code>&#x3C;label></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/output"
-          ><code>&#x3C;output></code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
+        >, (ꈍᴗꈍ)
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe"
+          ><code>contenteditabwe</code></a
         >
       </td>
       <td>
-        Cet attribut décrit l'élément auquel se rapporte l'élément courant.
+        cet attwibut i-indique we wibewwé ou w'icône à a-affichew suw w-wa touche
+        entwée des cwaviews v-viwtuews. rawr x3 c-cet attwibut peut êtwe utiwisé s-suw wes
+        contwôwes de f-fowmuwaiwes ou suw w-wes éwéments q-qui sont éditabwes (paw
+        e-exempwe avec w'attwibut <code>contenteditabwe</code>). ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/form"><code>form</code></a>
+        <a hwef="/fw/docs/web/htmw/attwibutes/fow"><code>fow</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Button"><code>&#x3C;button></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Fieldset"
-          ><code>&#x3C;fieldset></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Label"><code>&#x3C;label></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/output"><code>&#x3C;output></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Progress"
-          ><code>&#x3C;progress></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/select"><code>&#x3C;select></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
-        >
-      </td>
-      <td>Cet attribut indique le formulaire auquel l'élément se rapporte.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/formaction"
-          ><code>formaction</code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/wabew"><code>&#x3c;wabew></code></a
+        >, UwU
+        <a h-hwef="/fw/docs/web/htmw/ewement/output"
+          ><code>&#x3c;output></code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Button"
-          ><code>&#x3C;button></code></a
+        c-cet attwibut décwit w'éwément a-auquew se wappowte w'éwément couwant. ^^
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/fowm"><code>fowm</code></a>
+      </td>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/button"><code>&#x3c;button></code></a
+        >, (˘ω˘)
+        <a h-hwef="/fw/docs/web/htmw/ewement/fiewdset"
+          ><code>&#x3c;fiewdset></code></a
+        >, (ˆ ﻌ ˆ)♡
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, OwO
+        <a hwef="/fw/docs/web/htmw/ewement/wabew"><code>&#x3c;wabew></code></a
+        >, 😳
+        <a hwef="/fw/docs/web/htmw/ewement/metew"><code>&#x3c;metew></code></a
+        >, UwU
+        <a hwef="/fw/docs/web/htmw/ewement/object"><code>&#x3c;object></code></a
+        >, 🥺
+        <a h-hwef="/fw/docs/web/htmw/ewement/output"><code>&#x3c;output></code></a
+        >, 😳😳😳
+        <a hwef="/fw/docs/web/htmw/ewement/pwogwess"
+          ><code>&#x3c;pwogwess></code></a
+        >, ʘwʘ
+        <a h-hwef="/fw/docs/web/htmw/ewement/sewect"><code>&#x3c;sewect></code></a
+        >, /(^•ω•^)
+        <a h-hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
+        >
+      </td>
+      <td>cet attwibut indique we f-fowmuwaiwe auquew w'éwément s-se wappowte.</td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/fowmaction"
+          ><code>fowmaction</code></a
         >
       </td>
       <td>
-        Cet attribut est l'URI du programme qui traite les données pour ces
-        champs du formulaire. Il prend le pas sur l'attribut
-        <code>action</code> défini pour
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/formenctype"
-          ><code>formenctype</code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, :3
+        <a h-hwef="/fw/docs/web/htmw/ewement/button"
+          ><code>&#x3c;button></code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Button"
-          ><code>&#x3C;button></code></a
+        c-cet attwibut est w'uwi du pwogwamme qui twaite wes données pouw ces
+        champs d-du fowmuwaiwe. :3 iw pwend we pas s-suw w'attwibut
+        <code>action</code> défini pouw
+        <a hwef="/fw/docs/web/htmw/ewement/fowm"><code>&#x3c;fowm></code></a
+        >. mya
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/fowmenctype"
+          ><code>fowmenctype</code></a
         >
       </td>
       <td>
-        Si le bouton ou le champ sert à l'envoi (<code>type="submit"</code>),
-        cet attribut indique l'encodage utilisé pour l'envoi des données. Si cet
-        attribut est indiqué, il surcharge l'attribut <code>enctype</code> du
-        <a href="/fr/docs/Web/HTML/Element/Form">formulaire</a> auquel est
-        rattaché le bouton/champ.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/formmethod"
-          ><code>formmethod</code></a
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, (///ˬ///✿)
+        <a hwef="/fw/docs/web/htmw/ewement/button"
+          ><code>&#x3c;button></code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Button"
-          ><code>&#x3C;button></code></a
+        si we bouton ou we champ sewt à w-w'envoi (<code>type="submit"</code>), (⑅˘꒳˘)
+        c-cet attwibut indique w-w'encodage utiwisé pouw w'envoi des données. :3 s-si cet
+        a-attwibut est indiqué, /(^•ω•^) iw suwchawge w-w'attwibut <code>enctype</code> du
+        <a h-hwef="/fw/docs/web/htmw/ewement/fowm">fowmuwaiwe</a> auquew est
+        wattaché we bouton/champ. ^^;;
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/fowmmethod"
+          ><code>fowmmethod</code></a
         >
       </td>
       <td>
-        Si le bouton ou le champ sert à l'envoi (<code>type="submit"</code>),
-        cet attribut indique la méthode HTTP pour envoyer les données
-        (<code>GET</code>, <code>POST</code>, etc.). Si cet attribut est
-        indiqué, il surcharge l'attribut <code>method</code> du formulaire
-        auquel est rattaché le bouton/champ.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/formnovalidate"
-          ><code>formnovalidate</code></a
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, (U ᵕ U❁)
+        <a hwef="/fw/docs/web/htmw/ewement/button"
+          ><code>&#x3c;button></code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Button"
-          ><code>&#x3C;button></code></a
+        s-si we bouton ou w-we champ sewt à w-w'envoi (<code>type="submit"</code>), (U ﹏ U)
+        cet attwibut indique wa méthode h-http pouw envoyew wes données
+        (<code>get</code>, mya <code>post</code>, ^•ﻌ•^ etc.). si cet attwibut est
+        i-indiqué, (U ﹏ U) iw suwchawge w-w'attwibut <code>method</code> d-du fowmuwaiwe
+        a-auquew est wattaché we bouton/champ. :3
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/fowmnovawidate"
+          ><code>fowmnovawidate</code></a
         >
       </td>
       <td>
-        Si le bouton ou le champ sert à l'envoi (<code>type="submit"</code>),
-        cet attribut booléen indique que le formulaire ne doit pas être validé à
-        l'envoi. Si cet attribut est indiqué, il surcharge l'attribut
-        <code>novalidate</code> du formulaire auquel est rattaché le
-        bouton/champ.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/formtarget"
-          ><code>formtarget</code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, rawr x3
+        <a hwef="/fw/docs/web/htmw/ewement/button"
+          ><code>&#x3c;button></code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Button"
-          ><code>&#x3C;button></code></a
+        si we bouton o-ou we champ sewt à w'envoi (<code>type="submit"</code>), 😳😳😳
+        cet attwibut b-boowéen indique que we fowmuwaiwe nye doit pas êtwe v-vawidé à
+        w-w'envoi. si cet attwibut e-est indiqué, i-iw suwchawge w'attwibut
+        <code>novawidate</code> d-du fowmuwaiwe auquew est wattaché we
+        b-bouton/champ. >w<
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/attwibutes/fowmtawget"
+          ><code>fowmtawget</code></a
         >
       </td>
       <td>
-        Si le bouton ou le champ sert à l'envoi (<code>type="submit"</code>),
-        cet attribut indique le contexte de navigation (onglet, fenêtre ou
-        <em>iframe</em>) dans lequel afficher la réponse après l'envoi du
-        formulaire. Si cet attribut est indiqué, il surcharge l'attribut
-        <code>target</code> du formulaire auquel est rattaché le bouton/champ.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/headers"><code>headers</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, òωó
+        <a h-hwef="/fw/docs/web/htmw/ewement/button"
+          ><code>&#x3c;button></code></a
+        >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/td"><code>&#x3C;td></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a>
+        si we bouton ou we champ sewt à w'envoi (<code>type="submit"</code>), 😳
+        c-cet a-attwibut indique w-we contexte de n-nyavigation (ongwet, (✿oωo) f-fenêtwe ou
+        <em>ifwame</em>) dans w-wequew affichew wa wéponse apwès w'envoi du
+        f-fowmuwaiwe. OwO si cet attwibut e-est indiqué, (U ﹏ U) iw suwchawge w'attwibut
+        <code>tawget</code> du fowmuwaiwe a-auquew est wattaché w-we bouton/champ. (ꈍᴗꈍ)
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/attwibutes/headews"><code>headews</code></a>
       </td>
       <td>
-        Les identifiants des éléments <code>&#x3C;th></code> qui s'appliquent à
-        cet élément.
+        <a h-hwef="/fw/docs/web/htmw/ewement/td"><code>&#x3c;td></code></a
+        >, rawr <a hwef="/fw/docs/web/htmw/ewement/th"><code>&#x3c;th></code></a>
       </td>
-    </tr>
-    <tr>
+      <td>
+        w-wes i-identifiants des éwéments <code>&#x3c;th></code> qui s'appwiquent à
+        c-cet éwément. ^^
+      </td>
+    </tw>
+    <tw>
       <td><code>height</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/canvas"><code>&#x3C;canvas></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/embed"><code>&#x3C;embed></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/canvas"><code>&#x3c;canvas></code></a
+        >, rawr
+        <a hwef="/fw/docs/web/htmw/ewement/embed"><code>&#x3c;embed></code></a
+        >, nyaa~~
+        <a h-hwef="/fw/docs/web/htmw/ewement/ifwame"><code>&#x3c;ifwame></code></a
+        >, nyaa~~ <a hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a
+        >, o.O
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, òωó
+        <a hwef="/fw/docs/web/htmw/ewement/object"><code>&#x3c;object></code></a
+        >, ^^;;
+        <a h-hwef="/fw/docs/web/htmw/ewement/video"><code>&#x3c;video></code></a>
       </td>
       <td>
         <p>
-          Pour ces éléments, cet attribut définit la hauteur occupée par
-          l'élément. Pour les autres éléments, on utilisera
-          <a href="/fr/docs/Web/CSS/height"><code>height</code></a> property.
+          pouw ces éwéments, rawr c-cet attwibut définit wa hauteuw occupée paw
+          w-w'éwément. ^•ﻌ•^ p-pouw wes a-autwes éwéments, nyaa~~ on utiwisewa
+          <a h-hwef="/fw/docs/web/css/height"><code>height</code></a> p-pwopewty. nyaa~~
         </p>
-        <div class="note">
+        <div cwass="note">
           <p>
-            <strong>Note :</strong>Pour certains éléments comme
-            <a href="/fr/docs/Web/HTML/Element/div"><code>&#x3C;div></code></a
-            >,cet attribut est un reliquat et ne devrait plus être utilisé.
-            C'est la propriété CSS
-            <a href="/fr/docs/Web/CSS/height"><code>height</code></a> qui est la
-            méthode standard pour définir la hauteur d'un élément.
+            <stwong>note :</stwong>pouw cewtains éwéments c-comme
+            <a hwef="/fw/docs/web/htmw/ewement/div"><code>&#x3c;div></code></a
+            >,cet a-attwibut est un wewiquat e-et nye devwait p-pwus êtwe utiwisé. 😳😳😳
+            c'est wa pwopwiété css
+            <a hwef="/fw/docs/web/css/height"><code>height</code></a> qui est wa
+            m-méthode s-standawd pouw définiw wa hauteuw d'un éwément. 😳😳😳
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/hidden"
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/hidden"
           ><code>hidden</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut univewsew</a>
       </td>
       <td>
-        Cet attribut empêche le rendu d'un élément sur une page tout en
-        conservant les éléments fils actifs.
+        c-cet attwibut e-empêche we wendu d'un éwément suw une page tout en
+        consewvant wes éwéments f-fiws actifs. σωσ
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Meter#attr-high"
+        <a hwef="/fw/docs/web/htmw/ewement/metew#attw-high"
           ><code>high</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/metew"><code>&#x3c;metew></code></a>
       </td>
-      <td>Cet attribut indique la borne inférieure de l'intervalle haut.</td>
-    </tr>
-    <tr>
+      <td>cet a-attwibut indique wa bowne i-inféwieuwe d-de w'intewvawwe haut.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/href"><code>href</code></a>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/hwef"><code>hwef</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/base"><code>&#x3C;base></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/a"><code>&#x3c;a></code></a
+        >, o.O <a h-hwef="/fw/docs/web/htmw/ewement/awea"><code>&#x3c;awea></code></a
+        >, σωσ <a h-hwef="/fw/docs/web/htmw/ewement/base"><code>&#x3c;base></code></a
+        >, nyaa~~ <a h-hwef="/fw/docs/web/htmw/ewement/wink"><code>&#x3c;wink></code></a>
       </td>
-      <td>L'URL de la ressource liée.</td>
-    </tr>
-    <tr>
+      <td>w'uww de w-wa wessouwce wiée.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/hreflang"
-          ><code>hreflang</code></a
+        <a hwef="/fw/docs/web/htmw/attwibutes/hwefwang"
+          ><code>hwefwang</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/a"><code>&#x3c;a></code></a
+        >, rawr x3 <a hwef="/fw/docs/web/htmw/ewement/awea"><code>&#x3c;awea></code></a
+        >, (///ˬ///✿) <a hwef="/fw/docs/web/htmw/ewement/wink"><code>&#x3c;wink></code></a>
       </td>
-      <td>Cet attribut indique la langue utilisée pour la ressource liée.</td>
-    </tr>
-    <tr>
+      <td>cet attwibut i-indique wa wangue u-utiwisée pouw w-wa wessouwce wiée.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/meta#attr-http-equiv"
+        <a h-hwef="/fw/docs/web/htmw/ewement/meta#attw-http-equiv"
           ><code>http-equiv</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/meta"><code>&#x3C;meta></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/meta"><code>&#x3c;meta></code></a>
       </td>
       <td>
-        Définit une directive
-        <a href="/fr/docs/Web/HTTP/Headers/Pragma">Pragma</a>.
+        d-définit une diwective
+        <a hwef="/fw/docs/web/http/headews/pwagma">pwagma</a>. o.O
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/command#attr-icon"
+        <a hwef="/fw/docs/web/htmw/ewement/command#attw-icon"
           ><code>icon</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/command"
-          ><code>&#x3C;command></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/command"
+          ><code>&#x3c;command></code></a
         >
       </td>
-      <td>Cet attribut indique une image qui représente la commande.</td>
-    </tr>
-    <tr>
+      <td>cet attwibut i-indique u-une image qui wepwésente wa commande.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/id"><code>id</code></a>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/id"><code>id</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut u-univewsew</a>
       </td>
       <td>
-        Cet attribut permet d'identifier un élément d'un document de façon
-        unique. Il est généralement utilisé pour manipuler l'élément avec des
-        scripts ou pour le mettre en forme avec CSS.
+        c-cet attwibut p-pewmet d'identifiew un éwément d'un document d-de façon
+        unique. òωó iw est généwawement u-utiwisé pouw m-manipuwew w'éwément avec des
+        scwipts o-ou pouw we mettwe en fowme avec c-css. OwO
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/importance"
-          ><code>importance</code></a
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/impowtance"
+          ><code>impowtance</code></a
         >
-        {{experimental_inline}}
+        {{expewimentaw_inwine}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
-        >
-      </td>
-      <td>
-        Cet attribut indique la priorité relative pour la récupération
-        (<em>fetch</em>) des ressources.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/Security/Subresource_Integrity"
-          ><code>integrity</code></a
+        <a hwef="/fw/docs/web/htmw/ewement/ifwame"><code>&#x3c;ifwame></code></a
+        >, σωσ <a h-hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a
+        >, nyaa~~ <a h-hwef="/fw/docs/web/htmw/ewement/wink"><code>&#x3c;wink></code></a
+        >, OwO
+        <a h-hwef="/fw/docs/web/htmw/ewement/scwipt"
+          ><code>&#x3c;scwipt></code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+        c-cet attwibut indique w-wa pwiowité w-wewative pouw wa wécupéwation
+        (<em>fetch</em>) d-des w-wessouwces. ^^
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/secuwity/subwesouwce_integwity"
+          ><code>integwity</code></a
+        >
+      </td>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/wink"><code>&#x3c;wink></code></a
+        >, (///ˬ///✿)
+        <a hwef="/fw/docs/web/htmw/ewement/scwipt"
+          ><code>&#x3c;scwipt></code></a
         >
       </td>
       <td>
         <p>
-          Une fonctionnalité relative à la sécurité qui permet aux navigateurs
-          de vérifier les fichiers qu'ils récupèrent.
+          une fonctionnawité w-wewative à wa sécuwité q-qui pewmet aux nyavigateuws
+          d-de véwifiew w-wes fichiews qu'iws wécupèwent. σωσ
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img#attr-intrinsicsize"
-          ><code>intrinsicsize</code></a
+        <a hwef="/fw/docs/web/htmw/ewement/img#attw-intwinsicsize"
+          ><code>intwinsicsize</code></a
         >
-        {{deprecated_inline}}
+        {{depwecated_inwine}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a>
       </td>
       <td>
-        Cet attribut indique au navigateur qu'il faut ignorer la taille
-        intrinsèque de l'image et qu'il faut utiliser la taille indiquée avec
-        les attributs.
+        cet attwibut indique au nyavigateuw q-qu'iw f-faut ignowew wa taiwwe
+        intwinsèque de w'image e-et qu'iw f-faut utiwisew wa taiwwe indiquée a-avec
+        wes attwibuts. rawr x3
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/inputmode"
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/inputmode"
           ><code>inputmode</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Global_attributes/contenteditable"
-          ><code>contenteditable</code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
+        >, (ˆ ﻌ ˆ)♡
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe"
+          ><code>contenteditabwe</code></a
         >
       </td>
       <td>
-        Cet attribut fournit une indication sur le type de donnée qui pourrait
-        être saisi par l'utilisateur lors de l'édition du formulaire ou de
-        l'élément. Cet attribut peut être utilisé sur les contrôles de
-        formulaires ou sur les éléments qui sont éditables (par exemple avec
-        l'attribut <code>contenteditable</code>).
+        cet attwibut f-fouwnit une indication s-suw we type de donnée qui pouwwait
+        êtwe s-saisi paw w-w'utiwisateuw w-wows de w'édition d-du fowmuwaiwe ou de
+        w'éwément. 🥺 cet attwibut peut êtwe utiwisé suw wes contwôwes de
+        fowmuwaiwes o-ou suw wes éwéments q-qui s-sont éditabwes (paw e-exempwe avec
+        w-w'attwibut <code>contenteditabwe</code>). (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img#attr-ismap"
+        <a h-hwef="/fw/docs/web/htmw/ewement/img#attw-ismap"
           ><code>ismap</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a>
       </td>
       <td>
-        Cet attribut indique que l'image contribue à une mosaïque d'images
-        interactive côté serveur.
+        c-cet attwibut i-indique que w'image contwibue à u-une mosaïque d-d'images
+        intewactive côté sewveuw. 😳😳😳
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/itemprop"
-          ><code>itemprop</code></a
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes/itempwop"
+          ><code>itempwop</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut univewsew</a>
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/track#attr-kind"
+        <a h-hwef="/fw/docs/web/htmw/ewement/twack#attw-kind"
           ><code>kind</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/track"><code>&#x3C;track></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/twack"><code>&#x3c;twack></code></a>
       </td>
-      <td>Cet attribut définit le type de piste textuelle.</td>
-    </tr>
-    <tr>
+      <td>cet a-attwibut d-définit we type de piste t-textuewwe.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/label"><code>label</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Optgroup"
-          ><code>&#x3C;optgroup></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Option"><code>&#x3C;option></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/track"><code>&#x3C;track></code></a>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/wabew"><code>wabew</code></a>
       </td>
       <td>
-        Cet attribut définit un titre, lisible par un utilisateur, pour
-        l'élément.
+        <a h-hwef="/fw/docs/web/htmw/ewement/optgwoup"
+          ><code>&#x3c;optgwoup></code></a
+        >, /(^•ω•^)
+        <a hwef="/fw/docs/web/htmw/ewement/option"><code>&#x3c;option></code></a
+        >, >w<
+        <a h-hwef="/fw/docs/web/htmw/ewement/twack"><code>&#x3c;twack></code></a>
       </td>
-    </tr>
-    <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/lang"><code>lang</code></a>
+        c-cet attwibut définit un t-titwe, ^•ﻌ•^ wisibwe paw un utiwisateuw, 😳😳😳 p-pouw
+        w-w'éwément. :3
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes/wang"><code>wang</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut u-univewsew</a>
       </td>
-      <td>Cet attribut définit la langue utilisée dans l'élément.</td>
-    </tr>
-    <tr>
+      <td>cet attwibut définit wa wangue u-utiwisée dans w'éwément.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/script#attr-language"
-          ><code>language</code></a
+        <a hwef="/fw/docs/web/htmw/ewement/scwipt#attw-wanguage"
+          ><code>wanguage</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/scwipt"
+          ><code>&#x3c;scwipt></code></a
         >
       </td>
-      <td>Cet attribut définit le langage de script utilisé dans l'élément.</td>
-    </tr>
-    <tr>
-      <td><code>loading</code> {{experimental_inline}}</td>
+      <td>cet attwibut définit we wangage de scwipt utiwisé d-dans w'éwément.</td>
+    </tw>
+    <tw>
+      <td><code>woading</code> {{expewimentaw_inwine}}</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"
-          ><code>&#x3C;iframe></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a
+        >, (ꈍᴗꈍ)
+        <a hwef="/fw/docs/web/htmw/ewement/ifwame"
+          ><code>&#x3c;ifwame></code></a
         >
       </td>
-      <td>Cet attribut indique que l'élément doit être chargé à la demande.</td>
-    </tr>
-    <tr>
+      <td>cet attwibut indique que w'éwément doit êtwe chawgé à w-wa demande.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-list"
-          ><code>list</code></a
+        <a hwef="/fw/docs/web/htmw/ewement/input#attw-wist"
+          ><code>wist</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a>
       </td>
       <td>
-        Cet attribut constitue une liste d'options prédéfinie qui est suggérée à
-        l'utilisateur.
+        cet attwibut constitue u-une wiste d'options pwédéfinie q-qui est suggéwée à
+        w'utiwisateuw. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/loop"><code>loop</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/bgsound"
-          ><code>&#x3C;bgsound></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/marquee"
-          ><code>&#x3C;marquee></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/woop"><code>woop</code></a>
       </td>
       <td>
-        Cet attribut indique si le média courant doit recommencer au début une
-        fois que sa lecture est terminée.
+        <a hwef="/fw/docs/web/htmw/ewement/audio"><code>&#x3c;audio></code></a
+        >, >w<
+        <a h-hwef="/fw/docs/web/htmw/ewement/bgsound"
+          ><code>&#x3c;bgsound></code></a
+        >, ^^;;
+        <a hwef="/fw/docs/web/htmw/ewement/mawquee"
+          ><code>&#x3c;mawquee></code></a
+        >, (✿oωo)
+        <a h-hwef="/fw/docs/web/htmw/ewement/video"><code>&#x3c;video></code></a>
       </td>
-    </tr>
-    <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Meter#attr-low"><code>low</code></a>
+        c-cet attwibut indique si we média couwant d-doit wecommencew au début une
+        fois que sa wectuwe e-est tewminée. òωó
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/metew#attw-wow"><code>wow</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/metew"><code>&#x3c;metew></code></a>
       </td>
-      <td>Cet attribut indique la borne supérieure de l'intervalle bas.</td>
-    </tr>
-    <tr>
+      <td>cet attwibut i-indique wa bowne supéwieuwe d-de w'intewvawwe b-bas.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/html#attr-manifest"
+        <a hwef="/fw/docs/web/htmw/ewement/htmw#attw-manifest"
           ><code>manifest</code></a
         >
-        {{deprecated_inline}}
+        {{depwecated_inwine}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/html"><code>&#x3C;html></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/htmw"><code>&#x3c;htmw></code></a>
       </td>
       <td>
-        Cet attribut définit l'URL du manifeste du document pour la gestion du
-        cache.
-        <div class="note">
+        c-cet attwibut définit w'uww du manifeste d-du document pouw wa gestion du
+        cache. ^^
+        <div cwass="note">
           <p>
-            <strong>Note :</strong>Cet attribut est obsolète, utilisez
-            <a href="/fr/docs/Web/Manifest"
-              ><code>&#x3C;link rel="manifest"></code></a
+            <stwong>note :</stwong>cet attwibut e-est obsowète, ^^ u-utiwisez
+            <a hwef="/fw/docs/web/manifest"
+              ><code>&#x3c;wink w-wew="manifest"></code></a
             >
-            à la place.
+            à w-wa pwace. rawr
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/max"><code>max</code></a>
+        <a hwef="/fw/docs/web/htmw/attwibutes/max"><code>max</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Progress"
-          ><code>&#x3C;progress></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, XD
+        <a h-hwef="/fw/docs/web/htmw/ewement/metew"><code>&#x3c;metew></code></a
+        >, rawr
+        <a hwef="/fw/docs/web/htmw/ewement/pwogwess"
+          ><code>&#x3c;pwogwess></code></a
         >
       </td>
-      <td>Cet attribut indique la valeur maximale autorisée.</td>
-    </tr>
-    <tr>
+      <td>cet attwibut indique wa vaweuw maximawe autowisée.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/maxlength"
-          ><code>maxlength</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/maxwength"
+          ><code>maxwength</code></a
         >
       </td>
       <td>
-        Cet attribut définit le nombre maximal de caractères autorisé dans
-        l'élément.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/minlength"
-          ><code>minlength</code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, 😳
+        <a hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        c-cet attwibut définit w-we nyombwe maximaw de cawactèwes a-autowisé dans
+        w'éwément. 🥺
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/attwibutes/minwength"
+          ><code>minwength</code></a
         >
       </td>
       <td>
-        Cet attribut définit le nombre minimal de caractères qui doivent être
-        saisis dans l'élément.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/media"><code>media</code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, (U ᵕ U❁)
+        <a hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
+        >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a
+        cet attwibut d-définit we n-nyombwe minimaw de cawactèwes qui doivent êtwe
+        s-saisis dans w'éwément. 😳
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/attwibutes/media"><code>media</code></a>
+      </td>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/a"><code>&#x3c;a></code></a
+        >, 🥺 <a hwef="/fw/docs/web/htmw/ewement/awea"><code>&#x3c;awea></code></a
+        >, (///ˬ///✿) <a hwef="/fw/docs/web/htmw/ewement/wink"><code>&#x3c;wink></code></a
+        >, mya
+        <a hwef="/fw/docs/web/htmw/ewement/souwce"><code>&#x3c;souwce></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Source"><code>&#x3C;source></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/style"><code>&#x3C;style></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/stywe"><code>&#x3c;stywe></code></a>
       </td>
       <td>
-        Cet attribut est indication à propos du type de média pour la ressource
-        liée.
+        c-cet a-attwibut est indication à pwopos d-du type de média p-pouw wa wessouwce
+        wiée.
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form#attr-method"
+        <a hwef="/fw/docs/web/htmw/ewement/fowm#attw-method"
           ><code>method</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/fowm"><code>&#x3c;fowm></code></a>
       </td>
       <td>
-        Cet attribut définit la méthode <a href="/fr/docs/Web/HTTP">HTTP</a> à
-        utiliser pour l'envoi des données du formulaire (<code>GET</code> par
-        défaut ou <code>POST</code>)
+        cet attwibut définit wa méthode <a hwef="/fw/docs/web/http">http</a> à
+        utiwisew pouw w'envoi d-des données du fowmuwaiwe (<code>get</code> paw
+        défaut ou <code>post</code>)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/min"><code>min</code></a>
+        <a hwef="/fw/docs/web/htmw/attwibutes/min"><code>min</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, (✿oωo)
+        <a h-hwef="/fw/docs/web/htmw/ewement/metew"><code>&#x3c;metew></code></a>
       </td>
-      <td>Cet attribut indique la valeur minimale autorisée.</td>
-    </tr>
-    <tr>
+      <td>cet a-attwibut indique wa vaweuw minimawe autowisée.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/multiple"
-          ><code>multiple</code></a
+        <a hwef="/fw/docs/web/htmw/attwibutes/muwtipwe"
+          ><code>muwtipwe</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/select"
-          ><code>&#x3C;select></code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, ^•ﻌ•^
+        <a h-hwef="/fw/docs/web/htmw/ewement/sewect"
+          ><code>&#x3c;sewect></code></a
         >
       </td>
       <td>
-        Cet attribut indique si plusieurs valeurs peuvent être saisies pour des
-        entrées de type <code>email</code> ou <code>file</code>.
+        c-cet attwibut indique si p-pwusieuws vaweuws peuvent êtwe s-saisies pouw des
+        entwées d-de type <code>emaiw</code> ou <code>fiwe</code>. o.O
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/muted"><code>muted</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/muted"><code>muted</code></a>
       </td>
       <td>
-        Cet attribut indique si le son de la vidéo doit être coupé lorsque la
-        page est chargée initialement.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/name"><code>name</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/audio"><code>&#x3c;audio></code></a
+        >, o.O
+        <a hwef="/fw/docs/web/htmw/ewement/video"><code>&#x3c;video></code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Button"><code>&#x3C;button></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Fieldset"
-          ><code>&#x3C;fieldset></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/output"><code>&#x3C;output></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/select"><code>&#x3C;select></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/map"><code>&#x3C;map></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/meta"><code>&#x3C;meta></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/param"><code>&#x3C;param></code></a>
+        c-cet attwibut indique si w-we son de wa vidéo d-doit êtwe coupé wowsque wa
+        p-page est c-chawgée initiawement. XD
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/attwibutes/name"><code>name</code></a>
       </td>
       <td>
-        Le nom de l'élément qui peut être utilisé par le serveur pour identifier
-        le champ d'un formulaire.
+        <a hwef="/fw/docs/web/htmw/ewement/button"><code>&#x3c;button></code></a
+        >, ^•ﻌ•^ <a h-hwef="/fw/docs/web/htmw/ewement/fowm"><code>&#x3c;fowm></code></a
+        >, ʘwʘ
+        <a hwef="/fw/docs/web/htmw/ewement/fiewdset"
+          ><code>&#x3c;fiewdset></code></a
+        >, (U ﹏ U)
+        <a h-hwef="/fw/docs/web/htmw/ewement/ifwame"><code>&#x3c;ifwame></code></a
+        >, 😳😳😳
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, 🥺
+        <a h-hwef="/fw/docs/web/htmw/ewement/object"><code>&#x3c;object></code></a
+        >,
+        <a h-hwef="/fw/docs/web/htmw/ewement/output"><code>&#x3c;output></code></a
+        >, (///ˬ///✿)
+        <a hwef="/fw/docs/web/htmw/ewement/sewect"><code>&#x3c;sewect></code></a
+        >, (˘ω˘)
+        <a hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
+        >, :3 <a h-hwef="/fw/docs/web/htmw/ewement/map"><code>&#x3c;map></code></a
+        >, /(^•ω•^) <a hwef="/fw/docs/web/htmw/ewement/meta"><code>&#x3c;meta></code></a
+        >, :3
+        <a hwef="/fw/docs/web/htmw/ewement/pawam"><code>&#x3c;pawam></code></a>
       </td>
-    </tr>
-    <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form#attr-novalidate"
-          ><code>novalidate</code></a
+        we nyom de w'éwément qui peut êtwe utiwisé paw we sewveuw pouw i-identifiew
+        we champ d'un fowmuwaiwe. mya
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/fowm#attw-novawidate"
+          ><code>novawidate</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/fowm"><code>&#x3c;fowm></code></a>
       </td>
       <td>
-        Cet attribut indique que les données du formulaire ne doivent pas être
-        validées lors de l'envoi.
+        c-cet attwibut indique que wes données d-du fowmuwaiwe nye doivent pas êtwe
+        vawidées wows de w-w'envoi. XD
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/details#attr-open"
+        <a hwef="/fw/docs/web/htmw/ewement/detaiws#attw-open"
           ><code>open</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/details"
-          ><code>&#x3C;details></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/detaiws"
+          ><code>&#x3c;detaiws></code></a
         >
       </td>
       <td>
-        Cet attribut indique si les détails seront affichés lors du chargement
-        de la page.
+        cet attwibut i-indique si wes détaiws sewont affichés w-wows du chawgement
+        de wa page. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Meter#attr-optimum"
+        <a h-hwef="/fw/docs/web/htmw/ewement/metew#attw-optimum"
           ><code>optimum</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/metew"><code>&#x3c;metew></code></a>
       </td>
-      <td>Cet attribut indique la valeur numérique optimale.</td>
-    </tr>
-    <tr>
+      <td>cet a-attwibut indique wa vaweuw nyuméwique o-optimawe.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/pattewn"><code>pattewn</code></a>
       </td>
       <td>
-        Cet attribut définit une expression rationnelle contre laquelle valider
-        la valeur de l'élément.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/a#attr-ping"><code>ping</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a>
+        c-cet attwibut d-définit une expwession wationnewwe contwe w-waquewwe vawidew
+        wa vaweuw de w'éwément. 🥺
       </td>
-      <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/placeholder"
-          ><code>placeholder</code></a
-        >
+        <a hwef="/fw/docs/web/htmw/ewement/a#attw-ping"><code>ping</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
-        >
-      </td>
-      <td>
-        Cet attribut fournit une indication à l'utilisateur sur ce qu'il peut
-        saisir dans le champ.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/video#attr-poster"
-          ><code>poster</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
-      </td>
-      <td>
-        Cet attribut est une URL qui indique l'image à afficher tant que
-        l'utilisateur n'a pas lancé la vidéo ou déplacé le curseur.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/preload"><code>preload</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
-      </td>
-      <td>
-        Cet attribut indique si toute ou partie, voire aucune partie de la
-        ressource doit être téléchargée en avance.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/command#attr-radiogroup"
-          ><code>radiogroup</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/command"
-          ><code>&#x3C;command></code></a
-        >
+        <a h-hwef="/fw/docs/web/htmw/ewement/a"><code>&#x3c;a></code></a
+        >, o.O <a hwef="/fw/docs/web/htmw/ewement/awea"><code>&#x3c;awea></code></a>
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/readonly"
-          ><code>readonly</code></a
+        <a hwef="/fw/docs/web/htmw/attwibutes/pwacehowdew"
+          ><code>pwacehowdew</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
-        >
-      </td>
-      <td>Cet attribut indique si l'élément peut être édité.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/referralpolicy"
-          ><code>referrerpolicy</code></a
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, mya
+        <a hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+        c-cet attwibut f-fouwnit une i-indication à w'utiwisateuw suw ce qu'iw peut
+        saisiw d-dans we champ. rawr x3
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/video#attw-postew"
+          ><code>postew</code></a
         >
       </td>
       <td>
-        Définit le référent (<em>referrer</em>) envoyé lors de la récupération
-        de la ressource.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/rel"><code>rel</code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/video"><code>&#x3c;video></code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a>
+        cet attwibut e-est une uww q-qui indique w'image à affichew tant que
+        w'utiwisateuw ny'a pas wancé wa vidéo ou dépwacé w-we cuwseuw. 😳
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/pwewoad"><code>pwewoad</code></a>
       </td>
       <td>
-        Cet attribut définit la relation entre l'objet cible et l'objet du lien.
+        <a hwef="/fw/docs/web/htmw/ewement/audio"><code>&#x3c;audio></code></a
+        >, 😳😳😳
+        <a hwef="/fw/docs/web/htmw/ewement/video"><code>&#x3c;video></code></a>
       </td>
-    </tr>
-    <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/required"
-          ><code>required</code></a
+        c-cet attwibut indique si toute ou pawtie, >_< v-voiwe aucune p-pawtie de wa
+        w-wessouwce d-doit êtwe téwéchawgée e-en a-avance. >w<
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/command#attw-wadiogwoup"
+          ><code>wadiogwoup</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/select"><code>&#x3C;select></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/command"
+          ><code>&#x3c;command></code></a
+        >
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/weadonwy"
+          ><code>weadonwy</code></a
         >
       </td>
       <td>
-        Cet attribut indique si l'élément doit obligatoirement être renseigné
-        dans le formulaire.
+        <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, rawr x3
+        <a h-hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
+        >
       </td>
-    </tr>
-    <tr>
+      <td>cet a-attwibut i-indique si w'éwément p-peut êtwe édité.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/ol#attr-reversed"
-          ><code>reversed</code></a
+        <a hwef="/fw/docs/web/htmw/attwibutes/wefewwawpowicy"
+          ><code>wefewwewpowicy</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/ol"><code>&#x3C;ol></code></a>
-      </td>
-      <td>
-        Cet attribut indique si la liste doit être affichée dans un ordre
-        décroissant plutôt que dans un ordre croissant.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea#attr-rows"
-          ><code>rows</code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/a"><code>&#x3c;a></code></a
+        >, XD <a hwef="/fw/docs/web/htmw/ewement/awea"><code>&#x3c;awea></code></a
+        >, ^^
+        <a h-hwef="/fw/docs/web/htmw/ewement/ifwame"><code>&#x3c;ifwame></code></a
+        >, (✿oωo) <a h-hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a
+        >, >w< <a hwef="/fw/docs/web/htmw/ewement/wink"><code>&#x3c;wink></code></a
+        >, 😳😳😳
+        <a hwef="/fw/docs/web/htmw/ewement/scwipt"
+          ><code>&#x3c;scwipt></code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        d-définit we wéféwent (<em>wefewwew</em>) envoyé wows d-de wa wécupéwation
+        de wa wessouwce. (ꈍᴗꈍ)
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/attwibutes/wew"><code>wew</code></a>
+      </td>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/a"><code>&#x3c;a></code></a
+        >, (✿oωo) <a hwef="/fw/docs/web/htmw/ewement/awea"><code>&#x3c;awea></code></a
+        >, (˘ω˘) <a hwef="/fw/docs/web/htmw/ewement/wink"><code>&#x3c;wink></code></a>
+      </td>
+      <td>
+        c-cet attwibut définit wa wewation entwe w'objet cibwe et w'objet d-du wien. nyaa~~
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/wequiwed"
+          ><code>wequiwed</code></a
         >
       </td>
-      <td>Cet attribut définit le nombre de lignes pour la zone de texte.</td>
-    </tr>
-    <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/rowspan"><code>rowspan</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, ( ͡o ω ͡o )
+        <a h-hwef="/fw/docs/web/htmw/ewement/sewect"><code>&#x3c;sewect></code></a
+        >, 🥺
+        <a h-hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
+        >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/td"><code>&#x3C;td></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a>
+        cet attwibut indique si w'éwément doit obwigatoiwement êtwe w-wenseigné
+        d-dans we fowmuwaiwe. (U ﹏ U)
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/ow#attw-wevewsed"
+          ><code>wevewsed</code></a
+        >
       </td>
       <td>
-        Cet attribut définit le nombre de lignes sur lesquelles une cellule doit
-        s'étendre.
+        <a hwef="/fw/docs/web/htmw/ewement/ow"><code>&#x3c;ow></code></a>
       </td>
-    </tr>
-    <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/iframe#attr-sandbox"
+        c-cet a-attwibut indique si wa wiste doit êtwe affichée d-dans un owdwe
+        décwoissant pwutôt que dans un owdwe cwoissant. ( ͡o ω ͡o )
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/textawea#attw-wows"
+          ><code>wows</code></a
+        >
+      </td>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
+        >
+      </td>
+      <td>cet attwibut définit we nyombwe d-de wignes pouw wa zone de texte.</td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/attwibutes/wowspan"><code>wowspan</code></a>
+      </td>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/td"><code>&#x3c;td></code></a
+        >, (///ˬ///✿) <a h-hwef="/fw/docs/web/htmw/ewement/th"><code>&#x3c;th></code></a>
+      </td>
+      <td>
+        c-cet attwibut définit we nyombwe d-de wignes s-suw wesquewwes une c-cewwuwe doit
+        s-s'étendwe. (///ˬ///✿)
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/ifwame#attw-sandbox"
           ><code>sandbox</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/iframe"
-          ><code>&#x3C;iframe></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/ifwame"
+          ><code>&#x3c;ifwame></code></a
         >
       </td>
       <td>
-        Empêche un élément chargé dans une <em>iframe</em> d'utiliser certaines
-        fonctionnalités (envoyer des formulaires ou ouvrir de nouvelles fenêtres
-        par exemples).
+        empêche u-un éwément chawgé d-dans une <em>ifwame</em> d-d'utiwisew cewtaines
+        f-fonctionnawités (envoyew d-des fowmuwaiwes o-ou ouvwiw de nyouvewwes fenêtwes
+        paw e-exempwes). (✿oωo)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/th#attr-scope"><code>scope</code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/th#attw-scope"><code>scope</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/th"><code>&#x3c;th></code></a>
       </td>
-      <td>Définit les cellules sur lesquelles porte la cellule d'en-tête.</td>
-    </tr>
-    <tr>
+      <td>définit w-wes cewwuwes s-suw wesquewwes powte wa cewwuwe d-d'en-tête.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/style#attr-scoped"
+        <a hwef="/fw/docs/web/htmw/ewement/stywe#attw-scoped"
           ><code>scoped</code></a
-        >{{non-standard_inline}} {{deprecated_inline}}
+        >{{non-standawd_inwine}} {{depwecated_inwine}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/style"><code>&#x3C;style></code></a>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Option#attr-selected"
-          ><code>selected</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Option"
-          ><code>&#x3C;option></code></a
-        >
-      </td>
-      <td>
-        Cet attribut définit la valeur qui sera sélectionnée au chargement de la
-        page.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/shape"><code>shape</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/stywe"><code>&#x3c;stywe></code></a>
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/size"><code>size</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/select"
-          ><code>&#x3C;select></code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/option#attw-sewected"
+          ><code>sewected</code></a
         >
       </td>
       <td>
-        Cet attribut définit la largeur de l'élément en pixels, si l'attribut
-        <code>type</code> de l'élément vaut <code>text</code> ou
-        <code>password</code>, cela correspond au nombre de caractères du champ.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/sizes"><code>sizes</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Source"
-          ><code>&#x3C;source></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/option"
+          ><code>&#x3c;option></code></a
         >
+      </td>
+      <td>
+        cet attwibut définit wa v-vaweuw qui sewa s-séwectionnée au chawgement de w-wa
+        page. (U ᵕ U❁)
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/shape"><code>shape</code></a>
+      </td>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/a"><code>&#x3c;a></code></a
+        >, ʘwʘ <a hwef="/fw/docs/web/htmw/ewement/awea"><code>&#x3c;awea></code></a>
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/slot"><code>slot</code></a>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/size"><code>size</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, ʘwʘ
+        <a h-hwef="/fw/docs/web/htmw/ewement/sewect"
+          ><code>&#x3c;sewect></code></a
+        >
       </td>
       <td>
-        Cet attribut affecte un créneau pour un élément dans le
-        <em>shadow DOM</em>.
+        c-cet attwibut définit w-wa wawgeuw d-de w'éwément en pixews, XD si w'attwibut
+        <code>type</code> de w'éwément v-vaut <code>text</code> ou
+        <code>passwowd</code>, cewa cowwespond au nyombwe de cawactèwes d-du champ. (✿oωo)
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/span"><code>span</code></a>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/sizes"><code>sizes</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/col"><code>&#x3C;col></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/colgroup"
-          ><code>&#x3C;colgroup></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/wink"><code>&#x3c;wink></code></a
+        >, ^•ﻌ•^ <a hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a
+        >, ^•ﻌ•^
+        <a hwef="/fw/docs/web/htmw/ewement/souwce"
+          ><code>&#x3c;souwce></code></a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/spellcheck"
-          ><code>spellcheck</code></a
-        >
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes/swot"><code>swot</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut univewsew</a>
       </td>
       <td>
-        Cet attribut indique si la vérification orthographique est activée pour
-        l'élément courant.
+        cet attwibut a-affecte un cwéneau pouw un éwément d-dans we
+        <em>shadow d-dom</em>. >_<
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/src"><code>src</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/embed"><code>&#x3C;embed></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/script"><code>&#x3C;script></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Source"><code>&#x3C;source></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/track"><code>&#x3C;track></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
-      </td>
-      <td>Cet attribut indique l'URL du contenu embarqué.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/iframe#attr-srcdoc"
-          ><code>srcdoc</code></a
-        >
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/span"><code>span</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/iframe"
-          ><code>&#x3C;iframe></code></a
+        <a hwef="/fw/docs/web/htmw/ewement/cow"><code>&#x3c;cow></code></a
+        >, mya
+        <a hwef="/fw/docs/web/htmw/ewement/cowgwoup"
+          ><code>&#x3c;cowgwoup></code></a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/track#attr-srclang"
-          ><code>srclang</code></a
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/spewwcheck"
+          ><code>spewwcheck</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/track"><code>&#x3C;track></code></a>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/srcset"><code>srcset</code></a>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut u-univewsew</a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
+        cet attwibut i-indique si wa véwification o-owthogwaphique est activée pouw
+        w'éwément c-couwant. σωσ
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/attwibutes/swc"><code>swc</code></a>
+      </td>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/audio"><code>&#x3c;audio></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/source"
-          ><code>&#x3C;source></code></a
-        >
+        <a hwef="/fw/docs/web/htmw/ewement/embed"><code>&#x3c;embed></code></a
+        >, rawr
+        <a hwef="/fw/docs/web/htmw/ewement/ifwame"><code>&#x3c;ifwame></code></a
+        >, (✿oωo) <a h-hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a
+        >, :3
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >,
+        <a h-hwef="/fw/docs/web/htmw/ewement/scwipt"><code>&#x3c;scwipt></code></a
+        >, rawr x3
+        <a hwef="/fw/docs/web/htmw/ewement/souwce"><code>&#x3c;souwce></code></a
+        >, ^^
+        <a hwef="/fw/docs/web/htmw/ewement/twack"><code>&#x3c;twack></code></a
+        >, ^^
+        <a hwef="/fw/docs/web/htmw/ewement/video"><code>&#x3c;video></code></a>
       </td>
-      <td>Une ou plusieurs images candidates adaptatives.</td>
-    </tr>
-    <tr>
+      <td>cet attwibut indique w'uww du contenu embawqué.</td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/ol#attr-start"><code>start</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/ol"><code>&#x3C;ol></code></a>
-      </td>
-      <td>
-        Cet attribut définit le premier nombre de la liste si celui-ci est
-        différent de 1.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/step"><code>step</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/style"
-          ><code>style</code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/ifwame#attw-swcdoc"
+          ><code>swcdoc</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
-      </td>
-      <td>
-        Cet attribut définit des styles CSS qui auront la priorité sur ceux
-        définis précédemment. Il ne devrait être utilisé qu'à des fins de tests,
-        car il est conseillé d'utiliser un/des fichier(s) à part pour gérer la
-        mise en forme.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/table#attr-summary"
-          ><code>summary</code></a
-        >{{deprecated_inline}}
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/table"><code>&#x3C;table></code></a>
+        <a h-hwef="/fw/docs/web/htmw/ewement/ifwame"
+          ><code>&#x3c;ifwame></code></a
+        >
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/tabindex"
+        <a h-hwef="/fw/docs/web/htmw/ewement/twack#attw-swcwang"
+          ><code>swcwang</code></a
+        >
+      </td>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/twack"><code>&#x3c;twack></code></a>
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/attwibutes/swcset"><code>swcset</code></a>
+      </td>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a
+        >,
+        <a h-hwef="/fw/docs/web/htmw/ewement/souwce"
+          ><code>&#x3c;souwce></code></a
+        >
+      </td>
+      <td>une ou pwusieuws images candidates adaptatives.</td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/ow#attw-stawt"><code>stawt</code></a>
+      </td>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/ow"><code>&#x3c;ow></code></a>
+      </td>
+      <td>
+        c-cet attwibut d-définit we pwemiew nyombwe de wa wiste si cewui-ci est
+        difféwent de 1. OwO
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/step"><code>step</code></a>
+      </td>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a>
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/stywe"
+          ><code>stywe</code></a
+        >
+      </td>
+      <td>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut univewsew</a>
+      </td>
+      <td>
+        c-cet attwibut définit des stywes c-css qui auwont w-wa pwiowité s-suw ceux
+        définis pwécédemment. ʘwʘ iw nye devwait êtwe utiwisé qu'à des fins de tests, /(^•ω•^)
+        c-caw iw est conseiwwé d'utiwisew u-un/des fichiew(s) à pawt pouw géwew wa
+        mise e-en fowme.
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/tabwe#attw-summawy"
+          ><code>summawy</code></a
+        >{{depwecated_inwine}}
+      </td>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/tabwe"><code>&#x3c;tabwe></code></a>
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes/tabindex"
           ><code>tabindex</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut univewsew</a>
       </td>
       <td>
-        Cet attribut permet de modifier l'ordre dans la navigation à la
-        tabulation.
+        c-cet attwibut p-pewmet de modifiew w-w'owdwe dans w-wa nyavigation à w-wa
+        tabuwation. ʘwʘ
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/target"><code>target</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/base"><code>&#x3C;base></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/title"
-          ><code>title</code></a
-        >
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/tawget"><code>tawget</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
-      </td>
-      <td>
-        Cet attribut définit un texte expliquant le contenu de l'élément et qui
-        est généralement affiché sous la forme d'une bulle d'information au
-        survol de l'élément.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes/translate"
-          ><code>translate</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
-      </td>
-      <td>
-        Cet attribut indique si le contenu textuel de l'élément doit être
-        traduit ou non.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/type"><code>type</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Button"><code>&#x3C;button></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/command"
-          ><code>&#x3C;command></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/embed"><code>&#x3C;embed></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/script"><code>&#x3C;script></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Source"><code>&#x3C;source></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/style"><code>&#x3C;style></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/menu"><code>&#x3C;menu></code></a>
-      </td>
-      <td>Cet attribut définit le type de l'élément.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Attributes/usemap"><code>usemap</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/object"
-          ><code>&#x3C;object></code></a
-        >
+        <a h-hwef="/fw/docs/web/htmw/ewement/a"><code>&#x3c;a></code></a
+        >, (⑅˘꒳˘) <a hwef="/fw/docs/web/htmw/ewement/awea"><code>&#x3c;awea></code></a
+        >, UwU <a h-hwef="/fw/docs/web/htmw/ewement/base"><code>&#x3c;base></code></a
+        >, -.- <a hwef="/fw/docs/web/htmw/ewement/fowm"><code>&#x3c;fowm></code></a>
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/value"><code>value</code></a>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/titwe"
+          ><code>titwe</code></a
+        >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Button"><code>&#x3C;button></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Option"><code>&#x3C;option></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/li"><code>&#x3C;li></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Progress"
-          ><code>&#x3C;progress></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/param"><code>&#x3C;param></code></a>
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut univewsew</a>
       </td>
       <td>
-        Cet attribut définit la valeur par défaut qui sera affichée dans
-        l'élément au chargement de la page.
+        c-cet attwibut d-définit un texte expwiquant w-we contenu de w'éwément e-et qui
+        est généwawement affiché sous wa fowme d-d'une buwwe d-d'infowmation au
+        s-suwvow d-de w'éwément. :3
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/width"><code>width</code></a>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/canvas"><code>&#x3C;canvas></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/embed"><code>&#x3C;embed></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/twanswate"
+          ><code>twanswate</code></a
+        >
       </td>
       <td>
-        Pour ces éléments, cet attribut définit la largeur occupée sur l'écran.
-        <div class="note">
+        <a hwef="/fw/docs/web/htmw/gwobaw_attwibutes">attwibut univewsew</a>
+      </td>
+      <td>
+        cet a-attwibut indique si we contenu textuew de w'éwément d-doit êtwe
+        twaduit ou nyon. >_<
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/attwibutes/type"><code>type</code></a>
+      </td>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/button"><code>&#x3c;button></code></a
+        >, nyaa~~
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, ( ͡o ω ͡o )
+        <a hwef="/fw/docs/web/htmw/ewement/command"
+          ><code>&#x3c;command></code></a
+        >, o.O
+        <a hwef="/fw/docs/web/htmw/ewement/embed"><code>&#x3c;embed></code></a
+        >, :3
+        <a hwef="/fw/docs/web/htmw/ewement/object"><code>&#x3c;object></code></a
+        >, (˘ω˘)
+        <a h-hwef="/fw/docs/web/htmw/ewement/scwipt"><code>&#x3c;scwipt></code></a
+        >, rawr x3
+        <a hwef="/fw/docs/web/htmw/ewement/souwce"><code>&#x3c;souwce></code></a
+        >, (U ᵕ U❁)
+        <a h-hwef="/fw/docs/web/htmw/ewement/stywe"><code>&#x3c;stywe></code></a
+        >, <a hwef="/fw/docs/web/htmw/ewement/menu"><code>&#x3c;menu></code></a>
+      </td>
+      <td>cet a-attwibut d-définit we type de w'éwément.</td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/usemap"><code>usemap</code></a>
+      </td>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a
+        >,
+        <a hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, 🥺
+        <a hwef="/fw/docs/web/htmw/ewement/object"
+          ><code>&#x3c;object></code></a
+        >
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/attwibutes/vawue"><code>vawue</code></a>
+      </td>
+      <td>
+        <a h-hwef="/fw/docs/web/htmw/ewement/button"><code>&#x3c;button></code></a
+        >, >_<
+        <a h-hwef="/fw/docs/web/htmw/ewement/option"><code>&#x3c;option></code></a
+        >, :3
+        <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, :3 <a hwef="/fw/docs/web/htmw/ewement/wi"><code>&#x3c;wi></code></a
+        >, (ꈍᴗꈍ)
+        <a h-hwef="/fw/docs/web/htmw/ewement/metew"><code>&#x3c;metew></code></a
+        >, σωσ
+        <a h-hwef="/fw/docs/web/htmw/ewement/pwogwess"
+          ><code>&#x3c;pwogwess></code></a
+        >, 😳
+        <a hwef="/fw/docs/web/htmw/ewement/pawam"><code>&#x3c;pawam></code></a>
+      </td>
+      <td>
+        c-cet attwibut définit wa vaweuw p-paw défaut qui sewa affichée dans
+        w'éwément au chawgement de wa page. mya
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/fw/docs/web/htmw/attwibutes/width"><code>width</code></a>
+      </td>
+      <td>
+        <a hwef="/fw/docs/web/htmw/ewement/canvas"><code>&#x3c;canvas></code></a
+        >, òωó
+        <a hwef="/fw/docs/web/htmw/ewement/embed"><code>&#x3c;embed></code></a
+        >, 😳😳😳
+        <a hwef="/fw/docs/web/htmw/ewement/ifwame"><code>&#x3c;ifwame></code></a
+        >, σωσ <a h-hwef="/fw/docs/web/htmw/ewement/img"><code>&#x3c;img></code></a
+        >, (⑅˘꒳˘)
+        <a h-hwef="/fw/docs/web/htmw/ewement/input"><code>&#x3c;input></code></a
+        >, (///ˬ///✿)
+        <a h-hwef="/fw/docs/web/htmw/ewement/object"><code>&#x3c;object></code></a
+        >, 🥺
+        <a h-hwef="/fw/docs/web/htmw/ewement/video"><code>&#x3c;video></code></a>
+      </td>
+      <td>
+        p-pouw c-ces éwéments, OwO c-cet attwibut définit w-wa wawgeuw occupée suw w'écwan. >w<
+        <div cwass="note">
           <p>
-            <strong>Note :</strong>Pour tous les autres éléments, comme
-            <a href="/fr/docs/Web/HTML/Element/div"><code>&#x3C;div></code></a
-            >, il faut utiliser la propriété CSS standard
-            <a href="/fr/docs/Web/CSS/width"><code>width</code></a> afin de
-            définir la largeur.
+            <stwong>note :</stwong>pouw tous w-wes autwes éwéments, 🥺 comme
+            <a hwef="/fw/docs/web/htmw/ewement/div"><code>&#x3c;div></code></a
+            >, nyaa~~ i-iw faut utiwisew wa pwopwiété c-css standawd
+            <a hwef="/fw/docs/web/css/width"><code>width</code></a> afin de
+            d-définiw wa wawgeuw. ^^
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea#attr-wrap"
-          ><code>wrap</code></a
+        <a hwef="/fw/docs/web/htmw/ewement/textawea#attw-wwap"
+          ><code>wwap</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a h-hwef="/fw/docs/web/htmw/ewement/textawea"
+          ><code>&#x3c;textawea></code></a
         >
       </td>
       <td>
-        Cet attribut indique l'utilisation du retour automatique à la ligne pour
-        le texte de l'élément.
+        c-cet attwibut indique w'utiwisation du wetouw automatique à wa wigne pouw
+        w-we texte de w'éwément. >w<
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attribut de contenu ou attribut IDL ?
+## attwibut de contenu ou attwibut idw ?
 
-En HTML, la plupart des attributs ont deux aspects : l'**attribut de contenu** et l'**attribut IDL** (pour _Interface Definition Language_ ou langage de définition des interfaces).
+en htmw, OwO wa p-pwupawt des attwibuts ont deux a-aspects : w'**attwibut d-de contenu** e-et w'**attwibut i-idw** (pouw _intewface definition wanguage_ o-ou wangage de définition des intewfaces). XD
 
-L'attribut de contenu est l'attribut qu'on définit via le contenu (le code HTML) et qu'on obtient et/ou définit via les méthodes [`element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) et [`element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute). L'attribut de contenu sera toujours une chaîne de caractères, y compris lorsque la valeur attendue est un entier. Ainsi, pour indiquer une `maxlength` d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input) à 42, on utilisera `setAttribute("maxlength", "42")` sur cet élément.
+w'attwibut d-de contenu est w'attwibut qu'on définit via we contenu (we code htmw) et qu'on obtient e-et/ou définit via wes méthodes [`ewement.setattwibute()`](/fw/docs/web/api/ewement/setattwibute) e-et [`ewement.getattwibute()`](/fw/docs/web/api/ewement/getattwibute). ^^;; w-w'attwibut d-de contenu sewa toujouws une chaîne de cawactèwes, 🥺 y compwis w-wowsque wa vaweuw a-attendue est un entiew. XD ainsi, p-pouw indiquew u-une `maxwength` d'un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) à 42, (U ᵕ U❁) o-on utiwisewa `setattwibute("maxwength", :3 "42")` suw cet éwément. ( ͡o ω ͡o )
 
-L'attribut IDL est également connu sous la forme d'une propriété JavaScript. Ce sont les attributs qu'on peut obtenir ou modifier via JavaScript sous la forme `élément.toto`. L'attribut IDL utilisera toujours la valeur de l'attribut de contenu sous-jacent, éventuellement en la modifiant pour renvoyer une valeur ou pour la modifier. Autrement dit, les attributs IDL, reflètent les attributs de contenu.
+w-w'attwibut idw est égawement connu sous w-wa fowme d'une pwopwiété javascwipt. òωó c-ce sont wes attwibuts qu'on p-peut obteniw o-ou modifiew via javascwipt sous wa fowme `éwément.toto`. σωσ w'attwibut idw utiwisewa toujouws wa vaweuw de w'attwibut d-de contenu s-sous-jacent, (U ᵕ U❁) éventuewwement en w-wa modifiant pouw w-wenvoyew une v-vaweuw ou pouw wa modifiew. (✿oωo) autwement dit, ^^ wes attwibuts idw, wefwètent w-wes attwibuts de contenu. ^•ﻌ•^
 
-La plupart du temps, les attributs IDL renverront leurs valeurs, telles qu'elles sont utilisées. Par exemple, le type (l'attribut `type`) par défaut des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) vaut `"text"`, et si on définit `input.type="tototruc"`, l'élément `<input>` se comportera comme un élément de type `text` (en termes d'apparence et de comportement) mais le contenu de l'attribut `type` sera "tototruc". Cependant, l'attribut de type IDL renverra la chaîne `"text"`.
+wa pwupawt du temps, XD wes attwibuts idw wenvewwont w-weuws vaweuws, :3 tewwes qu'ewwes s-sont utiwisées. (ꈍᴗꈍ) p-paw exempwe, :3 w-we type (w'attwibut `type`) paw défaut des éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) v-vaut `"text"`, (U ﹏ U) e-et si on définit `input.type="tototwuc"`, UwU w-w'éwément `<input>` s-se compowtewa comme un éwément de type `text` (en t-tewmes d-d'appawence et d-de compowtement) m-mais we contenu d-de w'attwibut `type` sewa "tototwuc". 😳😳😳 cependant, XD w'attwibut de t-type idw wenvewwa wa chaîne `"text"`. o.O
 
-Les attributs IDL ne sont pas toujours des chaînes de caractères. `input.maxlength` est un nombre par exemple (un entier long signé pour être précis). Lorsqu'on manipule des attributs IDL on utilisera toujours le type défini pour l'interface. Ainsi, `input.maxlength` renverra toujours un nombre et si on souhaite le définir, il faudra le faire avec un nombre, si on passe une valeur d'un autre type, cette valeur sera convertie grâce aux mécanismes de conversion habituels de JavaScript.
+wes attwibuts idw nye sont pas toujouws des chaînes de c-cawactèwes. `input.maxwength` est un nyombwe paw exempwe (un entiew wong signé p-pouw êtwe pwécis). (⑅˘꒳˘) w-wowsqu'on m-manipuwe des attwibuts idw on utiwisewa t-toujouws we type défini p-pouw w'intewface. a-ainsi, 😳😳😳 `input.maxwength` wenvewwa toujouws un nyombwe et si on souhaite we définiw, nyaa~~ iw faudwa w-we faiwe avec un nyombwe, rawr si o-on passe une vaweuw d'un autwe type, -.- c-cette vaweuw s-sewa convewtie gwâce aux mécanismes de convewsion h-habituews d-de javascwipt. (✿oωo)
 
-Les attributs IDL peuvent [refléter d'autres types](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes) tels que les unsigned long, les URL, les booléens, etc. Malheureusement, il n'existe pas de règles claires et la façon dont les attributs IDL se comportent en conjonction avec leurs attributs de contenu correspondants, cela dépend de l'attribut. La plupart du temps, il suivra [les règles énoncées dans la spécification](https://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#reflecting-content-attributes-in-idl-attributes), mais parfois, il ne le fera pas. Les spécifications HTML essaient de rendre cela aussi convivial que possible pour les développeurs, mais pour diverses raisons (principalement historiques), certains attributs se comportent bizarrement (`select.size`, par exemple) et vous devriez lire les spécifications pour comprendre comment ils se comportent exactement.
+wes attwibuts idw p-peuvent [wefwétew d-d'autwes types](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/uwws.htmw#wefwecting-content-attwibutes-in-idw-attwibutes) tews que wes unsigned wong, /(^•ω•^) wes uww, wes boowéens, 🥺 e-etc. ʘwʘ mawheuweusement, UwU i-iw ny'existe p-pas de wègwes cwaiwes et wa f-façon dont wes a-attwibuts idw se compowtent en c-conjonction avec weuws attwibuts de contenu cowwespondants, XD cewa dépend de w'attwibut. (✿oωo) w-wa pwupawt d-du temps, :3 iw suivwa [wes wègwes énoncées dans wa spécification](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/uwws.htmw#wefwecting-content-attwibutes-in-idw-attwibutes), (///ˬ///✿) m-mais pawfois, nyaa~~ iw n-nye we fewa pas. >w< wes spécifications htmw essaient de wendwe cewa a-aussi conviviaw que possibwe pouw wes dévewoppeuws, -.- mais pouw divewses waisons (pwincipawement h-histowiques), (✿oωo) cewtains attwibuts se compowtent b-bizawwement (`sewect.size`, (˘ω˘) p-paw exempwe) et vous devwiez wiwe wes spécifications p-pouw compwendwe c-comment iws se compowtent exactement. rawr
 
-## Attributs booléens
+## attwibuts boowéens
 
-Certains attributs de contenu (ex. `required`, `readonly`, `disabled`) sont des [attributs booléens](https://www.w3.org/TR/html52/infrastructure.html#sec-boolean-attributes). Si un attribut booléen est présent, sa valeur correspondra à _vrai_ (_true_), s'il est absent, sa valeur correspondra à _faux_ (_false_).
+c-cewtains attwibuts de contenu (ex. OwO `wequiwed`, ^•ﻌ•^ `weadonwy`, `disabwed`) s-sont des [attwibuts boowéens](https://www.w3.owg/tw/htmw52/infwastwuctuwe.htmw#sec-boowean-attwibutes). UwU si un attwibut boowéen est pwésent, (˘ω˘) s-sa vaweuw cowwespondwa à _vwai_ (_twue_), (///ˬ///✿) s-s'iw est absent, σωσ s-sa vaweuw cowwespondwa à _faux_ (_fawse_). /(^•ω•^)
 
-HTML5 définit des restrictions sur les valeurs autorisées des attributs booléens : Si l'attribut est présent, sa valeur doit être soit la chaîne vide (équivalente, l'attribut peut avoir une valeur non attribuée), soit une valeur qui est une correspondance ASCII insensible à la casse pour le nom canonique de l'attribut, sans espace avant ou après. Les exemples suivants sont des façons valides de baliser un attribut booléen :
+htmw5 définit d-des westwictions suw wes vaweuws a-autowisées des a-attwibuts boowéens : s-si w'attwibut est pwésent, 😳 s-sa vaweuw doit êtwe s-soit wa chaîne vide (équivawente, 😳 w'attwibut p-peut avoiw u-une vaweuw nyon a-attwibuée), (⑅˘꒳˘) soit une vaweuw qui est une cowwespondance a-ascii insensibwe à wa c-casse pouw we n-nyom canonique de w'attwibut, 😳😳😳 sans espace avant ou apwès. 😳 wes exempwes s-suivants s-sont des façons v-vawides de bawisew u-un attwibut boowéen :
 
-```html
-<div itemscope>Ce fragment est du HTML valide mais du XML invalide.</div>
+```htmw
+<div i-itemscope>ce fwagment est du htmw vawide mais du xmw invawide.</div>
 <div itemscope="itemscope">
-  Ce fragment est du HTML valide mais du XML invalide.
+  ce f-fwagment est du htmw vawide mais d-du xmw invawide.
 </div>
-<div itemscope="">Ce fragment est du HTML valide et du XML valide.</div>
-<div itemscope="itemscope">
-  Ce fragment est du HTML et du XML valide mais est plus verbeux.
+<div itemscope="">ce f-fwagment est du htmw v-vawide et du xmw vawide.</div>
+<div i-itemscope="itemscope">
+  c-ce fwagment est d-du htmw et du xmw v-vawide mais est p-pwus vewbeux. XD
 </div>
 ```
 
-Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas autorisées pour les attributs booléens. Pour représenter une valeur fausse, il faudra ne pas écrire l'attribut du tout. Cette règle peut entraîner quelques incompréhensions : si on écrit `checked="false"` l'attribut `checked` sera présent et donc considéré comme _vrai_ (_true_).
+pouw êtwe tout à fait expwicite, mya wes vaweuws `"twue"` et `"fawse"` nye sont pas autowisées p-pouw wes a-attwibuts boowéens. ^•ﻌ•^ p-pouw wepwésentew une vaweuw f-fausse, ʘwʘ iw faudwa nye pas écwiwe w'attwibut du tout. ( ͡o ω ͡o ) cette w-wègwe peut entwaînew q-quewques incompwéhensions : s-si on écwit `checked="fawse"` w'attwibut `checked` sewa pwésent e-et donc considéwé c-comme _vwai_ (_twue_).
 
-## Voir aussi
+## voiw aussi
 
-- [Les éléments HTML](/fr/docs/Web/HTML/Element)
+- [wes éwéments h-htmw](/fw/docs/web/htmw/ewement)

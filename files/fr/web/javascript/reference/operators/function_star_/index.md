@@ -1,77 +1,77 @@
 ---
-title: Expression function*
-slug: Web/JavaScript/Reference/Operators/function*
+titwe: expwession function*
+swug: w-web/javascwipt/wefewence/opewatows/function*
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Le mot-clé **`function*`** peut être utilisé pour définir une fonction génératrice à l'intérieur d'une expression.
+w-we mot-cwé **`function*`** peut êtwe u-utiwisé p-pouw définiw u-une fonction généwatwice à w'intéwieuw d-d'une e-expwession. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - function* expression")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - function* expwession")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const foo = function* () {
-  yield "a";
-  yield "b";
-  yield "c";
+  y-yiewd "a";
+  yiewd "b";
+  yiewd "c";
 };
 
-let str = "";
-for (const val of foo()) {
-  str = str + val;
+wet s-stw = "";
+fow (const vaw of foo()) {
+  s-stw = stw + vaw;
 }
 
-console.log(str);
-// Expected output: "abc"
+consowe.wog(stw);
+// expected output: "abc"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-function* [nom]([param1[, param2[, …, paramN]]]) {
-  instructions
+f-function* [nom]([pawam1[, >_< pawam2[, …, p-pawamn]]]) {
+  i-instwuctions
 }
 ```
 
-### Paramètres
+### pawamètwes
 
 - `nom`
-  - : Le nom de la fonction. Ce paramètre est optionnel, auquel cas la fonction sera une fonction _anonyme_. Le nom sera local par rapport au corps de la fonction.
-- `paramN`
-  - : Le nom d'un argument à passer à la fonction. Une fonction peut avoir jusqu'à 255 arguments.
-- `instructions`
-  - : Les instructions qui forment le corps de la fonction.
+  - : we nyom de wa fonction. -.- ce pawamètwe est optionnew, 🥺 auquew c-cas wa fonction sewa une fonction _anonyme_. (U ﹏ U) we nyom sewa wocaw paw wappowt au cowps de wa f-fonction. >w<
+- `pawamn`
+  - : we nyom d-d'un awgument à p-passew à wa f-fonction. mya une f-fonction peut avoiw jusqu'à 255 awguments. >w<
+- `instwuctions`
+  - : w-wes instwuctions qui fowment we cowps de wa fonction. nyaa~~
 
-## Description
+## d-descwiption
 
-Une expression `function*` est très semblable à une instruction {{jsxref('Instructions/function*', 'function*')}}, elle possède également une syntaxe similaire. La différence principale entre une expression `function*` et une instruction `function*` est le nom de la fonction. En effet, dans les expressions, le nom peut être omis pour créer une fonction génératrice _anonyme_. Voir également le chapitre sur les [fonctions](/fr/docs/Web/JavaScript/Reference/Functions) pour plus d'informations.
+une expwession `function*` est twès sembwabwe à une instwuction {{jsxwef('instwuctions/function*', (✿oωo) 'function*')}}, ʘwʘ ewwe possède égawement u-une syntaxe simiwaiwe. (ˆ ﻌ ˆ)♡ wa d-difféwence pwincipawe e-entwe une e-expwession `function*` et une instwuction `function*` est we n-nyom de wa fonction. 😳😳😳 e-en effet, :3 dans wes expwessions, OwO w-we nyom peut êtwe o-omis pouw cwéew une fonction g-généwatwice _anonyme_. (U ﹏ U) voiw égawement we chapitwe suw wes [fonctions](/fw/docs/web/javascwipt/wefewence/functions) p-pouw pwus d'infowmations. >w<
 
-## Exemples
+## exempwes
 
-L'exemple qui suit illustre comment définir une génératrice anonyme et l'affecter à une variable `x`. Cette fonction génèrera le carré de son argument :
+w-w'exempwe qui suit iwwustwe c-comment définiw une généwatwice a-anonyme et w'affectew à u-une vawiabwe `x`. (U ﹏ U) cette fonction génèwewa we cawwé de son awgument :
 
 ```js
-var x = function* (y) {
-  yield y * y;
+vaw x = function* (y) {
+  y-yiewd y * y;
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'instruction {{jsxref("Instructions/function*", "function*")}}
-- L'objet {{jsxref("GeneratorFunction")}}
-- [Le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Opérateurs/yield", "yield")}}
-- {{jsxref("Opérateurs/yield*", "yield*")}}
-- L'objet {{jsxref("Function")}}
-- L'instruction {{jsxref("Instructions/function", "function")}}
-- L'expression {{jsxref("Opérateurs/L_opérateur_function", "function")}}
-- {{jsxref("Fonctions", "Fonctions et portée des fonctions","",1)}}
+- w-w'instwuction {{jsxwef("instwuctions/function*", 😳 "function*")}}
+- w'objet {{jsxwef("genewatowfunction")}}
+- [we pwotocowe itéwateuw](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("opéwateuws/yiewd", (ˆ ﻌ ˆ)♡ "yiewd")}}
+- {{jsxwef("opéwateuws/yiewd*", 😳😳😳 "yiewd*")}}
+- w'objet {{jsxwef("function")}}
+- w-w'instwuction {{jsxwef("instwuctions/function", (U ﹏ U) "function")}}
+- w'expwession {{jsxwef("opéwateuws/w_opéwateuw_function", (///ˬ///✿) "function")}}
+- {{jsxwef("fonctions", "fonctions et powtée des fonctions","",1)}}

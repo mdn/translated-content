@@ -1,38 +1,38 @@
 ---
-title: theme-color
-slug: Web/HTML/Element/meta/name/theme-color
+titwe: theme-cowow
+swug: web/htmw/ewement/meta/name/theme-cowow
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-La valeur de **`theme-color`** comme attribut [`name`](/fr/docs/Web/HTML/Element/meta#attr-name) de l'élément [`<meta>`](/fr/docs/Web/HTML/Element/meta), indique une suggestion de couleur que les agents utilisateur devraient utiliser pour personnaliser l'affichage de la page ou l'interface utilisateur environnante. Si elle est utilisée, l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#attr-content) devra avoir une valeur CSS de type [`<color>`](/fr/docs/Web/CSS/color_value).
+w-wa vaweuw d-de **`theme-cowow`** c-comme attwibut [`name`](/fw/docs/web/htmw/ewement/meta#attw-name) d-de w'éwément [`<meta>`](/fw/docs/web/htmw/ewement/meta), òωó i-indique une s-suggestion de couweuw q-que wes agents u-utiwisateuw devwaient utiwisew pouw pewsonnawisew w'affichage de wa page ou w-w'intewface utiwisateuw enviwonnante. ʘwʘ si ewwe e-est utiwisée, /(^•ω•^) w'attwibut [`content`](/fw/docs/web/htmw/ewement/meta#attw-content) devwa avoiw une v-vaweuw css de type [`<cowow>`](/fw/docs/web/css/cowow_vawue). ʘwʘ
 
-## Exemple
+## exempwe
 
-```html
-<meta name="theme-color" content="#4285f4" />
+```htmw
+<meta nyame="theme-cowow" c-content="#4285f4" />
 ```
 
-L'image qui suit illustre l'effet de l'élément [`<meta>`](/fr/docs/Web/HTML/Element/meta) avec `theme-color` pour un document affiché dans Chrome sur Android.
+w'image q-qui suit iwwustwe w-w'effet de w'éwément [`<meta>`](/fw/docs/web/htmw/ewement/meta) avec `theme-cowow` pouw un document affiché dans chwome suw a-andwoid. σωσ
 
-![Image illustrant l'effet de `theme-color`](theme-color.png)
+![image iwwustwant w'effet de `theme-cowow`](theme-cowow.png)
 
-_Crédits image&nbsp;: [Couleurs des icônes et du navigateur](https://web.dev/icons-and-browser-colors/), créée et partagée par Google et utilisée selon la [licence Creative Commons 4.0 avec attribution](https://creativecommons.org/licenses/by/4.0/)._
+_cwédits image&nbsp;: [couweuws des i-icônes et du nyavigateuw](https://web.dev/icons-and-bwowsew-cowows/), OwO cwéée e-et pawtagée paw g-googwe et utiwisée s-sewon wa [wicence c-cweative commons 4.0 avec attwibution](https://cweativecommons.owg/wicenses/by/4.0/)._
 
-Il est possible de fournir un type de média ou une requête média avec l'attribut [`media`](/fr/docs/Web/HTML/Element/meta#attr-media) afin que la couleur soit utilisée pour une condition donnée. Par exemple&nbsp;:
+iw e-est possibwe de fouwniw un type de média ou une w-wequête média avec w'attwibut [`media`](/fw/docs/web/htmw/ewement/meta#attw-media) afin que wa couweuw soit utiwisée pouw une condition donnée. 😳😳😳 p-paw exempwe&nbsp;:
 
-```html
+```htmw
 <meta
-  name="theme-color"
-  media="(prefers-color-scheme: light)"
-  content="white" />
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+  nyame="theme-cowow"
+  m-media="(pwefews-cowow-scheme: wight)"
+  c-content="white" />
+<meta n-name="theme-cowow" media="(pwefews-cowow-scheme: dawk)" content="bwack" />
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

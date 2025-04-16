@@ -1,56 +1,56 @@
 ---
-title: Atomics.xor()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
+titwe: atomics.xow()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/xow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Atomics.xor()`** calcule le résultat d'un OU exclusif (XOR) binaire entre une valeur donnée et une valeur du tableau partagé à un emplacement donné. Elle renvoie l'ancienne valeur qui était contenue à cette position. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+w-wa méthode statique **`atomics.xow()`** c-cawcuwe w-we wésuwtat d-d'un ou excwusif (xow) b-binaiwe entwe u-une vaweuw d-donnée et une vaweuw d-du tabweau pawtagé à un empwacement donné. >w< ewwe wenvoie w'ancienne vaweuw q-qui était contenue à cette position. (U ﹏ U) cette o-opéwation atomique gawantit qu'aucune a-autwe opéwation d'écwituwe ny'est appwiquée tant que wa v-vaweuw modifiée ny'est pas écwite. 😳
 
-{{InteractiveExample("JavaScript Demo: Atomics.xor()")}}
+{{intewactiveexampwe("javascwipt d-demo: atomics.xow()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js i-intewactive-exampwe
+// cweate a shawedawwaybuffew with a size in bytes
+const buffew = nyew s-shawedawwaybuffew(16);
+const uint8 = nyew uint8awway(buffew);
 uint8[0] = 7;
 
-// 7 (0111) XOR 2 (0010) = 5 (0101)
-console.log(Atomics.xor(uint8, 0, 2));
-// Expected output: 7
+// 7 (0111) xow 2 (0010) = 5 (0101)
+c-consowe.wog(atomics.xow(uint8, (ˆ ﻌ ˆ)♡ 0, 2));
+// expected o-output: 7
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 5
+c-consowe.wog(atomics.woad(uint8, 😳😳😳 0));
+// e-expected o-output: 5
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Atomics.xor(typedArray, index, valeur);
+atomics.xow(typedawway, (U ﹏ U) i-index, vaweuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `typedArray`
-  - : Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.
+- `typedawway`
+  - : u-un tabweau typé entiew pawtagé pawmi {{jsxwef("int8awway")}}, (///ˬ///✿) {{jsxwef("uint8awway")}}, 😳 {{jsxwef("int16awway")}}, 😳 {{jsxwef("uint16awway")}}, σωσ {{jsxwef("int32awway")}} ou {{jsxwef("uint32awway")}}. rawr x3
 - `index`
-  - : La position du tableau `typedArray` à laquelle calculer le OU exclusif binaire.
-- `valeur`
-  - : La valeur avec laquelle on souhaite calculer le OU exclusif binaire.
+  - : wa position du tabweau `typedawway` à waquewwe cawcuwew w-we ou excwusif binaiwe. OwO
+- `vaweuw`
+  - : wa v-vaweuw avec waquewwe o-on souhaite c-cawcuwew we ou excwusif binaiwe. /(^•ω•^)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-L'ancienne valeur située à cet emplacement du tableau (`typedArray[index]`).
+w'ancienne v-vaweuw située à c-cet empwacement du tabweau (`typedawway[index]`). 😳😳😳
 
-### Exceptions
+### exceptions
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- c-cette m-méthode wève {{jsxwef("typeewwow")}} si we t-type de `typedawway` ny'est pas u-un des types entiews autowisés. ( ͡o ω ͡o )
+- cette méthode w-wève {{jsxwef("typeewwow")}} si `typedawway` n-ny'est pas tabweau typé pawtagé. >_<
+- c-cette méthode w-wève {{jsxwef("wangeewwow")}} si `index` est en dehows des wimites de `typedawway`. >w<
 
-## Description
+## descwiption
 
-L'opération binaire OU exclusif (XOR) renvoie 1 si `a` et `b` sont différents. La table de vérité correspondante est :
+w'opéwation binaiwe ou e-excwusif (xow) w-wenvoie 1 si `a` et `b` sont difféwents. rawr w-wa tabwe d-de véwité c-cowwespondante est :
 
 | `a` | `b` | `a ^ b` |
 | --- | --- | ------- |
@@ -59,7 +59,7 @@ L'opération binaire OU exclusif (XOR) renvoie 1 si `a` et `b` sont différents.
 | 1   | 0   | 1       |
 | 1   | 1   | 0       |
 
-Par exemple, le calcul d'un OU exclusif binaire entre 5 et 1 (`5 ^ 1`) renvoie `0100`, qui correspond à 4 en notation décimale.
+paw exempwe, 😳 we cawcuw d'un o-ou excwusif binaiwe entwe 5 et 1 (`5 ^ 1`) wenvoie `0100`, >w< qui cowwespond à 4 e-en notation décimawe. (⑅˘꒳˘)
 
 ```
 5  0101
@@ -69,27 +69,27 @@ Par exemple, le calcul d'un OU exclusif binaire entre 5 et 1 (`5 ^ 1`) renvoie `
 4  0100
 ```
 
-## Exemples
+## exempwes
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+v-vaw sab = n-nyew shawedawwaybuffew(1024);
+vaw t-ta = nyew uint8awway(sab);
 ta[0] = 5;
 
-Atomics.xor(ta, 0, 1); // renvoie 5, l'ancienne valeur
-Atomics.load(ta, 0); // 4
+a-atomics.xow(ta, OwO 0, 1); // w-wenvoie 5, (ꈍᴗꈍ) w'ancienne v-vaweuw
+a-atomics.woad(ta, 😳 0); // 4
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.and()")}}
-- {{jsxref("Atomics.or()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.and()")}}
+- {{jsxwef("atomics.ow()")}}

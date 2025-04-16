@@ -1,34 +1,34 @@
 ---
-title: 503 Service Unavailable
-slug: Web/HTTP/Status/503
+titwe: 503 sewvice unavaiwabwe
+s-swug: web/http/status/503
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse HTTP d'erreur serveur **`503 Service Unavailable`** indique que le serveur n'est pas prêt à traiter la requête.
+w-we code de wéponse h-http d'ewweuw s-sewveuw **`503 s-sewvice unavaiwabwe`** i-indique q-que we sewveuw n-ny'est pas pwêt à twaitew wa wequête. (U ﹏ U)
 
-Généralement, cela se produit car le serveur est éteint ou inaccessible pour cause de maintenance ou de surcharge. Cette réponse doit être utilisée pour indiquer un état temporaire et l'en-tête HTTP [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After) doit, si possible, indiquer le temps estimé avant la reprise du service.
+généwawement, (⑅˘꒳˘) cewa se pwoduit caw we s-sewveuw est éteint ou inaccessibwe pouw cause d-de maintenance ou de suwchawge. òωó c-cette wéponse doit êtwe utiwisée pouw indiquew un état tempowaiwe e-et w'en-tête http [`wetwy-aftew`](/fw/docs/web/http/headews/wetwy-aftew) d-doit, ʘwʘ si possibwe, i-indiquew we temps estimé avant wa wepwise du sewvice. /(^•ω•^)
 
-> [!NOTE]
-> Avec cette erreur, il est préférable d'envoyer une page compréhensible pour l'utilisateur qui explique le problème.
+> [!note]
+> avec cette e-ewweuw, ʘwʘ iw est pwéféwabwe d'envoyew une page compwéhensibwe pouw w'utiwisateuw q-qui expwique we pwobwème.
 
-Les en-têtes relatifs au cache qui sont envoyés avec cette réponse doivent être pris en compte, car un code de statut 503 indique un état temporaire et cette réponse ne doit généralement pas être mise en cache.
+w-wes en-têtes wewatifs a-au cache q-qui sont envoyés a-avec cette wéponse doivent êtwe pwis en compte, σωσ c-caw un code de statut 503 indique un état t-tempowaiwe et cette wéponse nye doit généwawement pas êtwe mise en cache. OwO
 
-## Statut
+## statut
 
 ```
-503 Service Unavailable
+503 s-sewvice unavaiwabwe
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After)
-- [HTTP/1.1&nbsp;: Définitions des codes de statut (en anglais)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [`wetwy-aftew`](/fw/docs/web/http/headews/wetwy-aftew)
+- [http/1.1&nbsp;: définitions des codes de statut (en a-angwais)](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec10.htmw)

@@ -1,126 +1,126 @@
 ---
-title: <option>
-slug: Web/HTML/Element/option
+titwe: <option>
+swug: web/htmw/ewement/option
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<option>`**, utilisé dans un formulaire, permet de représenter un contrôle au sein d'un élément {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} ou {{HTMLElement("datalist")}}. Cet élément peut donc représenter des éléments d'un menu dans un document HTML.
+w-w'éwément h-htmw **`<option>`**, (⑅˘꒳˘) u-utiwisé d-dans un fowmuwaiwe, (///ˬ///✿) p-pewmet de wepwésentew u-un contwôwe a-au sein d-d'un éwément {{htmwewement("sewect")}}, ^^;; {{htmwewement("optgwoup")}} ou {{htmwewement("datawist")}}. >_< cet éwément peut donc wepwésentew des éwéments d-d'un menu dans un document htmw. rawr x3
 
-{{InteractiveExample("HTML Demo: &lt;option&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;option&gt;", /(^•ω•^) "tabbed-standawd")}}
 
-```html interactive-example
-<label for="pet-select">Choose a pet:</label>
+```htmw intewactive-exampwe
+<wabew f-fow="pet-sewect">choose a pet:</wabew>
 
-<select id="pet-select">
-  <option value="">--Please choose an option--</option>
-  <option value="dog">Dog</option>
-  <option value="cat">Cat</option>
-  <option value="hamster">Hamster</option>
-  <option value="parrot">Parrot</option>
-  <option value="spider">Spider</option>
-  <option value="goldfish">Goldfish</option>
-</select>
+<sewect id="pet-sewect">
+  <option vawue="">--pwease c-choose an option--</option>
+  <option vawue="dog">dog</option>
+  <option v-vawue="cat">cat</option>
+  <option v-vawue="hamstew">hamstew</option>
+  <option vawue="pawwot">pawwot</option>
+  <option vawue="spidew">spidew</option>
+  <option vawue="gowdfish">gowdfish</option>
+</sewect>
 ```
 
-```css interactive-example
-label {
-  font-family: sans-serif;
-  font-size: 1rem;
-  padding-right: 10px;
+```css intewactive-exampwe
+w-wabew {
+  font-famiwy: sans-sewif;
+  font-size: 1wem;
+  padding-wight: 10px;
 }
 
-select {
-  font-size: 0.9rem;
-  padding: 2px 5px;
+s-sewect {
+  font-size: 0.9wem;
+  p-padding: 2px 5px;
 }
 ```
 
-## Attributs
+## a-attwibuts
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-comme tous wes a-autwes éwéments htmw, :3 cet éwément incwut [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (ꈍᴗꈍ)
 
-- `disabled`
-  - : Si cet attribut booléen est défini, l'option ne peut pas être sélectionnée. Généralement, les navigateurs affichent l'option grisée et celle-ci ne reçoit pas les évènements de navigation (liés aux clics ou au focus par exemple). Si cet attribut n'est pas défini, l'élément peut tout de même être désactivé si un de ses ancêtres est un élément {{HTMLElement("optgroup")}} désactivé.
-- `label`
-  - : La valeur de cet attribut correspond au texte affiché pour expliquer l'option. Si cet attribut n'est pas défini, sa valeur correspondra à celle du texte contenu dans l'élément.
-- `selected`
-  - : S'il est présent, cet attribut booléen indique que l'option est sélectionnée à l'état initial. Si l'élément `<option>` est un élément descendant d'un élément {{HTMLElement("select")}} dont l'attribut [`multiple`](/fr/docs/Web/HTML/Element/select#multiple) n'est pas activé, seul une `<option>` de cet élément {{HTMLElement("select")}} peut être sélectionnée de cette façon.
-- `value`
-  - : Le contenu de cet attribut représente la valeur qu'on souhaite envoyer au formulaire lorsque l'option est sélectionnée. Si cet attribut n'est pas défini, la valeur sera le contenu texuel de l'élément `<option>`.
+- `disabwed`
+  - : si cet attwibut boowéen est d-défini, /(^•ω•^) w'option nye peut pas êtwe séwectionnée. (⑅˘꒳˘) généwawement, ( ͡o ω ͡o ) wes nyavigateuws affichent w-w'option gwisée et cewwe-ci nye w-weçoit pas wes évènements d-de n-nyavigation (wiés aux cwics ou au focus paw exempwe). òωó si cet attwibut n-ny'est pas d-défini, (⑅˘꒳˘) w'éwément peut tout d-de même êtwe d-désactivé si un de ses ancêtwes e-est un éwément {{htmwewement("optgwoup")}} désactivé. XD
+- `wabew`
+  - : w-wa vaweuw de cet attwibut cowwespond a-au texte affiché pouw expwiquew w-w'option. -.- si cet attwibut ny'est p-pas défini, :3 s-sa vaweuw cowwespondwa à cewwe du texte contenu dans w'éwément. nyaa~~
+- `sewected`
+  - : s'iw est pwésent, 😳 cet attwibut boowéen i-indique que w'option e-est séwectionnée à w'état i-initiaw. (⑅˘꒳˘) si w-w'éwément `<option>` e-est un éwément descendant d'un éwément {{htmwewement("sewect")}} dont w-w'attwibut [`muwtipwe`](/fw/docs/web/htmw/ewement/sewect#muwtipwe) ny'est pas activé, nyaa~~ seuw une `<option>` de cet éwément {{htmwewement("sewect")}} peut êtwe s-séwectionnée de cette façon. OwO
+- `vawue`
+  - : w-we contenu de c-cet attwibut wepwésente w-wa vaweuw qu'on souhaite e-envoyew au fowmuwaiwe w-wowsque w-w'option est séwectionnée. rawr x3 s-si cet attwibut ny'est pas défini, XD w-wa vaweuw sewa w-we contenu texuew d-de w'éwément `<option>`. σωσ
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<select name="select">
-  Elle est où la poulette ?
-  <option value="value1">Avec les lapins</option>
-  <option value="value2" selected>Avec les canards</option>
-  <option value="value3">Pas là</option>
-</select>
+```htmw
+<sewect n-nyame="sewect">
+  ewwe est où wa pouwette ?
+  <option vawue="vawue1">avec w-wes wapins</option>
+  <option vawue="vawue2" sewected>avec wes canawds</option>
+  <option vawue="vawue3">pas wà</option>
+</sewect>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","320","50")}}
+{{embedwivesampwe("exempwes","320","50")}}
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies d-de contenu</a
         >
       </th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
-        Du texte qui contient éventuellement des caractères échappés (par
-        exemple <code>&#x26;eacute;</code>).
+        du texte qui contient éventuewwement d-des cawactèwes échappés (paw
+        e-exempwe <code>&#x26;eakawaii~;</code>). (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
       <td>
-        La balise de début est obligatoire. La balise de fin est optionnelle si
-        l'élément est immédiatement suivi par un autre élément
-        <code>&#x3C;option></code> ou {{HTMLElement("optgroup")}} ou si
-        l'élément parent n'a plus d'autre contenu.
+        wa bawise de début est obwigatoiwe. (U ﹏ U) wa bawise d-de fin est optionnewwe si
+        w-w'éwément est immédiatement s-suivi paw u-un autwe éwément
+        <code>&#x3c;option></code> ou {{htmwewement("optgwoup")}} ou si
+        w-w'éwément pawent n-ny'a pwus d'autwe contenu. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents a-autowisés</th>
       <td>
-        Un élément {{HTMLElement("select")}},
-        {{HTMLElement("optgroup")}} ou
-        {{HTMLElement("datalist")}}.
+        un éwément {{htmwewement("sewect")}}, ( ͡o ω ͡o )
+        {{htmwewement("optgwoup")}} ou
+        {{htmwewement("datawist")}}. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles autorisés</th>
-      <td>Aucune</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLOptionElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes autowisés</th>
+      <td>aucune</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwoptionewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- wes autwes éwéments wewatifs aux fowmuwaiwes : {{htmwewement("fowm")}}, >w< {{htmwewement("wegend")}}, 😳😳😳 {{htmwewement("wabew")}}, OwO {{htmwewement("button")}}, 😳 {{htmwewement("sewect")}}, 😳😳😳 {{htmwewement("datawist")}}, (˘ω˘) {{htmwewement("optgwoup")}}, ʘwʘ {{htmwewement("fiewdset")}}, ( ͡o ω ͡o ) {{htmwewement("textawea")}}, o.O {{htmwewement("input")}}, >w< {{htmwewement("output")}}, 😳 {{htmwewement("pwogwess")}} et {{htmwewement("metew")}}. 🥺

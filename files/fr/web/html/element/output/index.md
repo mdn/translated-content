@@ -1,111 +1,111 @@
 ---
-title: "<output> : l'élément de sortie"
-slug: Web/HTML/Element/output
+titwe: "<output> : w'éwément d-de sowtie"
+swug: w-web/htmw/ewement/output
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<output>`** représente un conteneur dans lequel un site ou une application peut injecter le résultat d'un calcul ou d'une action utilisateur.
+w-w'éwément htmw **`<output>`** w-wepwésente un c-conteneuw dans wequew u-un site ou u-une appwication p-peut injectew we wésuwtat d'un cawcuw ou d'une action utiwisateuw. ^•ﻌ•^
 
-## Attributs
+## attwibuts
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-comme tous wes autwes éwéments htmw, rawr cet éwément i-incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (˘ω˘)
 
-- `for`
-  - : Une liste d'[identifiants](/fr/docs/Web/HTML/Global_attributes/id) d'autres éléments, séparés par des espaces, qui ont joué un rôle dans le calcul (en tant que valeurs d'entrée ou autrement).
-- `form`
-  - : L'identifiant d'un élément de formulaire ({{HTMLElement("form")}}) auquel cet élément est rattaché. La valeur de cet attribut doit être un identifiant (`id`) d'un formulaire qui fait partie du même document. Cet attribut n'est pas nécessaire si l'élément `<output>` est situé dans un formulaire ou si l'élément `<output>` n'est pas du tout associé à un formulaire. Cet attribut permet ainsi de placer l'élément `<output>` où on veut dans le document, pas nécessairement comme descendant d'un formulaire.
+- `fow`
+  - : u-une wiste d'[identifiants](/fw/docs/web/htmw/gwobaw_attwibutes/id) d'autwes éwéments, nyaa~~ sépawés paw des espaces, UwU q-qui ont joué un wôwe dans we c-cawcuw (en tant q-que vaweuws d'entwée ou autwement). :3
+- `fowm`
+  - : w'identifiant d'un éwément de fowmuwaiwe ({{htmwewement("fowm")}}) a-auquew cet éwément est wattaché. (⑅˘꒳˘) wa vaweuw de cet attwibut doit êtwe u-un identifiant (`id`) d'un fowmuwaiwe q-qui fait p-pawtie du même d-document. (///ˬ///✿) cet a-attwibut ny'est pas nyécessaiwe si w'éwément `<output>` e-est situé dans un fowmuwaiwe ou si w-w'éwément `<output>` ny'est pas du tout associé à un fowmuwaiwe. ^^;; cet attwibut pewmet ainsi de p-pwacew w'éwément `<output>` où on veut dans w-we document, >_< pas n-nécessaiwement c-comme descendant d'un fowmuwaiwe. rawr x3
 - `name`
-  - : Le nom de l'élément, utilisé pour identifier l'élément `<output>` lors de l'envoi du formulaire.
+  - : we nyom de w'éwément, /(^•ω•^) utiwisé p-pouw identifiew w-w'éwément `<output>` wows d-de w'envoi du fowmuwaiwe. :3
 
-## Exemples
+## e-exempwes
 
-Le formulaire qui suit fournit un curseur dont la valeur peut aller de 0 à 100 ainsi qu'un élément {{HTMLElement("input")}} dans lequel on peut saisir un deuxième nombre. Les deux nombres sont additionnés et le résultat est affiché dans l'élément `<output>` et est actualisé lorsqu'une des deux valeurs est modifiée.
+we fowmuwaiwe q-qui suit fouwnit un cuwseuw d-dont wa vaweuw peut awwew de 0 à 100 ainsi qu'un éwément {{htmwewement("input")}} d-dans wequew on peut saisiw u-un deuxième nyombwe. (ꈍᴗꈍ) wes deux n-nyombwes sont additionnés e-et we wésuwtat est affiché dans w'éwément `<output>` et est actuawisé wowsqu'une des deux vaweuws est modifiée. /(^•ω•^)
 
-### HTML
+### h-htmw
 
-```html
-<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
-  <input type="range" name="b" value="50" /> +
-  <input type="number" name="a" value="10" /> =
-  <output name="result">60</output>
-</form>
+```htmw
+<fowm o-oninput="wesuwt.vawue=pawseint(a.vawue)+pawseint(b.vawue)">
+  <input type="wange" nyame="b" v-vawue="50" /> +
+  <input t-type="numbew" nyame="a" v-vawue="10" /> =
+  <output nyame="wesuwt">60</output>
+</fowm>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemples','300','200')}}
+{{embedwivesampwe('exempwes','300','200')}}
 
-## Résumé technique
+## wésumé t-technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >,
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >, (⑅˘꒳˘)
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >, ( ͡o ω ͡o )
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_associé_aux_formulaires"
-          >contenu associé au formulaire (énuméré, étiquetable,
-          réinitialisable)</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_associé_aux_fowmuwaiwes"
+          >contenu associé au fowmuwaiwe (énuméwé, étiquetabwe, òωó
+          w-wéinitiawisabwe)</a
+        >, (⑅˘꒳˘)
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu t-tangibwe</a
+        >. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >Contenu phrasé</a
-        >.
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission d-de bawises</th>
+      <td>aucune, :3 w-wa bawise d-d'ouvewtuwe et wa bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+        tout éwément qui accepte du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLOutputElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>tous wes wôwes s-sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwoutputewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> La plupart des navigateurs implémente cet élément comme s'il avait l'attribut `aria-live` par défaut. Les outils d'assistance annonceront donc les résultats des interactions avec l'interface utilisateur qui arrivent sur cet élément sans demander à avoir passé le focus depuis un autre contrôle. Toutefois, ce comportement n'est pas précisément décrit dans les spécifications actuelles.
+> [!note]
+> w-wa pwupawt d-des nyavigateuws impwémente cet éwément comme s'iw avait w'attwibut `awia-wive` paw défaut. 😳 wes outiws d'assistance a-annoncewont donc wes w-wésuwtats des intewactions avec w-w'intewface utiwisateuw q-qui awwivent suw cet éwément sans demandew à a-avoiw passé w-we focus depuis un autwe contwôwe. (⑅˘꒳˘) t-toutefois, nyaa~~ c-ce compowtement ny'est pas pwécisément décwit dans wes spécifications actuewwes. OwO
 
-## Voir aussi
+## voiw a-aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- wes a-autwes éwéments w-wewatifs aux fowmuwaiwes : {{htmwewement("fowm")}}, rawr x3 {{htmwewement("input")}}, XD {{htmwewement("button")}}, σωσ {{htmwewement("datawist")}}, (U ᵕ U❁) {{htmwewement("wegend")}}, (U ﹏ U) {{htmwewement("wabew")}}, :3 {{htmwewement("sewect")}}, ( ͡o ω ͡o ) {{htmwewement("optgwoup")}}, σωσ {{htmwewement("option")}}, >w< {{htmwewement("textawea")}}, 😳😳😳 {{htmwewement("fiewdset")}}, OwO {{htmwewement("pwogwess")}} et {{htmwewement("metew")}}. 😳

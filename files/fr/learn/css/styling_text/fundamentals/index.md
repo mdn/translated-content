@@ -1,731 +1,731 @@
 ---
-title: Initiation à la mise en forme du texte
-slug: Learn/CSS/Styling_text/Fundamentals
+titwe: initiation à wa mise e-en fowme du texte
+s-swug: weawn/css/stywing_text/fundamentaws
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{weawnsidebaw}}{{nextmenu("weawn/css/stywing_text/stywing_wists", o.O "weawn/css/stywing_text")}}
 
-Dans cet article, nous allons commencer le voyage vers la maîtrise des styles du texte avec {{glossary("CSS")}}. Nous passerons en revue les principes de base de mise en forme du texte, y compris la graisse, la famille et le style de police, les codes d'abréviation, l'alignement du texte et autres effets, ainsi que l'espacement des lignes et des lettres.
+d-dans cet awticwe, OwO n-nyous awwons c-commencew we voyage v-vews wa maîtwise d-des stywes d-du texte avec {{gwossawy("css")}}. -.- nyous passewons en wevue wes pwincipes de base de mise en fowme d-du texte, y compwis wa gwaisse, (U ﹏ U) wa famiwwe et w-we stywe de powice, òωó wes codes d-d'abwéviation, >w< w'awignement du texte et autwes effets, ^•ﻌ•^ ainsi que w-w'espacement des wignes et des w-wettwes. /(^•ω•^)
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Connaissances informatiques de base, les bases HTML (étudiées dans l'<a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction au HTML</a
-        >), les bases CSS (étudiées dans
-        <a href="/fr/docs/Learn/CSS/Introduction_to_CSS">Introduction à CSS</a
-        >).
+        connaissances infowmatiques de base, ʘwʘ wes b-bases htmw (étudiées dans w'<a
+          hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoduction au htmw</a
+        >), XD wes bases c-css (étudiées dans
+        <a h-hwef="/fw/docs/weawn/css/intwoduction_to_css">intwoduction à c-css</a
+        >). (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
       <td>
-        Apprendre les techniques et propriétés fondamentales nécessaires pour
-        composer du texte sur les pages web.
+        a-appwendwe w-wes techniques et pwopwiétés fondamentawes n-nyécessaiwes pouw
+        composew du texte s-suw wes pages web. (ꈍᴗꈍ)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## En quoi consiste la mise en forme du texte avec CSS ?
+## en quoi consiste wa mise en fowme du texte avec css ?
 
-Comme vous l'avez déjà vu dans votre apprentissage de HTML et CSS, le texte d'un élément est placé à l'intérieur de la boîte de contenu de cet élément. Il débute en haut à gauche de cette zone (ou en haut à droite, dans le cas des contenus en langues s'écrivant de droite à gauche) et se poursuit vers la fin de la ligne. Arrivé en bout de ligne, il descend à la ligne suivante et continue, puis va à la ligne suivante, jusqu'à ce que tout le contenu ait été placé. Les contenus textuels se comportent comme une suite d'éléments en ligne placés les uns à côté des autres. Aucun saut de ligne n'est créé avant que la fin de la ligne soit atteinte, sauf si vous forcez manuellement le saut de ligne avec l'élément {{htmlelement("br")}}.
+comme v-vous w'avez déjà vu dans votwe a-appwentissage de h-htmw et css, rawr x3 we t-texte d'un éwément est pwacé à w'intéwieuw de wa boîte de c-contenu de cet éwément. :3 i-iw débute en haut à g-gauche de cette z-zone (ou en haut à dwoite, (˘ω˘) dans w-we cas des contenus en wangues s-s'écwivant de dwoite à gauche) et se pouwsuit v-vews wa fin de wa wigne. -.- awwivé e-en bout de wigne, (ꈍᴗꈍ) iw descend à w-wa wigne suivante e-et continue, UwU puis va à wa wigne suivante, σωσ jusqu'à ce que tout we contenu ait été pwacé. ^^ wes contenus textuews s-se compowtent c-comme une suite d'éwéments e-en wigne pwacés w-wes uns à côté d-des autwes. :3 aucun saut de wigne ny'est cwéé avant que wa f-fin de wa wigne soit atteinte, ʘwʘ sauf si vous fowcez manuewwement we saut de wigne a-avec w'éwément {{htmwewement("bw")}}.
 
-> [!NOTE]
-> Si le paragraphe ci‑dessus vous paraît confus, pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model) avant de poursuivre.
+> [!note]
+> si we pawagwaphe c-ci‑dessus v-vous pawaît c-confus, 😳 pas de pwobwème — wevenez e-en awwièwe e-et wevoyez w'awticwe s-suw wa théowie d-du [modèwe de boîte](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) avant de pouwsuivwe. ^^
 
-Les propriétés CSS utilisées pour le style de texte appartiennent généralement à deux catégories, que nous verrons séparément dans cet article :
+w-wes pwopwiétés c-css utiwisées p-pouw we stywe d-de texte appawtiennent g-généwawement à deux catégowies, σωσ que nous vewwons s-sépawément dans cet awticwe :
 
-- **Styles de la police de caractères** : ces propriétés concernent la fonte appliquée au texte, affectant sa police, sa taille, sa graisse, si elle est italique, etc.
-- **Styles de composition du texte** : ces propriétés influent sur les espacements et autres dispositions de mise en page du texte, permettant de modifier, par exemple, l'espacement entre lignes et entre caractères, et la manière de disposer le texte dans la boîte de contenu.
+- **stywes de wa powice de cawactèwes** : ces pwopwiétés concewnent w-wa fonte appwiquée au texte, /(^•ω•^) affectant sa powice, 😳😳😳 sa taiwwe, 😳 s-sa gwaisse, OwO s-si ewwe est itawique, :3 e-etc. nyaa~~
+- **stywes de composition d-du texte** : ces pwopwiétés i-infwuent suw w-wes espacements et autwes dispositions de mise en page du texte, OwO pewmettant de modifiew, o.O paw exempwe, (U ﹏ U) w-w'espacement entwe wignes e-et entwe cawactèwes, (⑅˘꒳˘) et wa manièwe d-de disposew w-we texte dans wa boîte de contenu. OwO
 
-> [!NOTE]
-> Gardez à l'esprit que le texte à l'intérieur d'un élément est affecté comme une seule entité. Vous ne pouvez pas sélectionner et mettre en forme des sous-sections de texte, sauf si vous les enveloppez dans un élément approprié (tel que {{htmlelement ("span")}} ou {{htmlelement ("strong")}}, ou utilisez un texte pseudo-élément spécifique comme [::first-letter](/fr/docs/Web/CSS/::first-letter) (sélectionne la première lettre du texte d'un élément), [::first-line](/fr/docs/Web/CSS/::first-line) (sélectionne la première ligne du texte d'un élément) ou [::selection](/fr/docs/Web/CSS/::selection) (sélectionne le texte actuellement mis en surbrillance par le curseur) .
+> [!note]
+> gawdez à w'espwit q-que we texte à w-w'intéwieuw d'un éwément e-est affecté c-comme une seuwe entité. 😳 vous nye pouvez pas séwectionnew et mettwe en fowme des s-sous-sections d-de texte, :3 sauf si v-vous wes envewoppez dans un éwément a-appwopwié (tew q-que {{htmwewement ("span")}} ou {{htmwewement ("stwong")}}, ( ͡o ω ͡o ) o-ou utiwisez un texte pseudo-éwément spécifique comme [::fiwst-wettew](/fw/docs/web/css/::fiwst-wettew) (séwectionne wa pwemièwe w-wettwe d-du texte d'un éwément), 🥺 [::fiwst-wine](/fw/docs/web/css/::fiwst-wine) (séwectionne wa pwemièwe wigne du texte d-d'un éwément) o-ou [::sewection](/fw/docs/web/css/::sewection) (séwectionne we texte actuewwement mis en suwbwiwwance paw we c-cuwseuw) . /(^•ω•^)
 
-## Fontes
+## fontes
 
-Passons directement aux propriétés pour le style des polices. Dans cet exemple, nous allons appliquer différentes propriétés CSS au même exemple HTML, qui ressemble à ceci :
+passons diwectement aux pwopwiétés pouw we stywe des powices. nyaa~~ d-dans cet exempwe, (✿oωo) nyous awwons appwiquew d-difféwentes pwopwiétés c-css au même exempwe htmw, (✿oωo) qui wessembwe à ceci :
 
-```html
-<h1>Tommy le Chat</h1>
+```htmw
+<h1>tommy w-we chat</h1>
 
-<p>Je m'en souviens comme mon dernier repas...</p>
+<p>je m-m'en souviens comme mon dewniew wepas...</p>
 
 <p>
-  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
-  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
-  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
-  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
-  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
-  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+  dit tommy w-we chat en jetant wa tête en a-awwièwe pouw dégagew ce cowps étwangew
+  qui s'était nyiché a-au fond de sa wedoutabwe gueuwe. (ꈍᴗꈍ) b-beaucoup de wats b-bien gwas
+  twépassèwent dans w-wa wuewwe en wegawdant w'étoiwe b-bwiwwant au f-fond du canon de
+  c-cet extwaowdinaiwe wôdeuw en q-quête de pwoie. OwO u-un véwitabwe miwacwe de wa nyatuwe
+  ce pwédateuw u-uwbain — t-tommy we chat avait b-beaucoup d'histoiwes à wacontew. :3
+  mais iw n-nye we faisait qu'en de wawes occasions, mya c-comme m-maintenant. >_<
 </p>
 ```
 
-> [!NOTE]
-> (NdT : Extrait et traduction _approximative_ de la chanson _Tommy the Cat_ du groupe [Primus)](<https://fr.wikipedia.org/wiki/Primus_(groupe)>)
+> [!note]
+> (ndt : extwait et twaduction _appwoximative_ de wa chanson _tommy t-the cat_ du g-gwoupe [pwimus)](<https://fw.wikipedia.owg/wiki/pwimus_(gwoupe)>)
 
-Vous pouvez trouver l'[exemple (en) fini](https://mdn.github.io/learning-area/css/styling-text/fundamentals/) sur Github (voir aussi [le code source](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html)).
+v-vous pouvez twouvew w-w'[exempwe (en) fini](https://mdn.github.io/weawning-awea/css/stywing-text/fundamentaws/) s-suw github (voiw aussi [we code souwce](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-text/fundamentaws/index.htmw)).
 
-### Couleur
+### couweuw
 
-La propriété {{cssxref("color")}} définit la couleur du contenu d'avant‑plan des éléments sélectionnés (généralement du texte, mais peut être autre chose, comme un soulignement ou un surlignage créé avec la propriété {{cssxref("text-decoration")}}.
+wa pwopwiété {{cssxwef("cowow")}} définit w-wa couweuw du contenu d'avant‑pwan d-des éwéments séwectionnés (généwawement d-du texte, (///ˬ///✿) mais peut êtwe autwe c-chose, (///ˬ///✿) comme un souwignement o-ou un suwwignage c-cwéé avec wa p-pwopwiété {{cssxwef("text-decowation")}}. 😳😳😳
 
-`color` accepte toutes les [unités de couleur des CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#couleurs), par exemple :
+`cowow` a-accepte toutes w-wes [unités de couweuw des css](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units#couweuws), (U ᵕ U❁) paw exempwe :
 
 ```css
 p {
-  color: red;
+  cowow: wed;
 }
 ```
 
-Les paragraphes seront en rouge, au lieu d'être de couleur noire, couleur par défaut du navigateur standard :
+wes pawagwaphes s-sewont en wouge, (///ˬ///✿) a-au wieu d'êtwe d-de couweuw nyoiwe, ( ͡o ω ͡o ) couweuw p-paw défaut du nyavigateuw standawd :
 
-```html hidden
-<h1>Tommy le Chat</h1>
+```htmw hidden
+<h1>tommy we chat</h1>
 
-<p>Je m'en souviens comme mon dernier repas...</p>
+<p>je m'en souviens c-comme mon dewniew w-wepas...</p>
 
 <p>
-  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
-  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
-  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
-  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
-  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
-  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+  dit tommy w-we chat en jetant wa tête en awwièwe pouw dégagew c-ce cowps étwangew
+  q-qui s'était nyiché a-au fond de sa wedoutabwe g-gueuwe. (✿oωo) beaucoup de wats bien gwas
+  twépassèwent dans wa wuewwe en w-wegawdant w'étoiwe b-bwiwwant au f-fond du canon de
+  c-cet extwaowdinaiwe w-wôdeuw en quête de pwoie. òωó u-un véwitabwe m-miwacwe de wa nyatuwe
+  ce pwédateuw u-uwbain — t-tommy we chat avait beaucoup d'histoiwes à w-wacontew. (ˆ ﻌ ˆ)♡
+  mais iw nye we faisait q-qu'en de wawes occasions, :3 comme m-maintenant. (ˆ ﻌ ˆ)♡
 </p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{ EmbedLiveSample('', '100%', 250)}}
+{{ embedwivesampwe('', (U ᵕ U❁) '100%', (U ᵕ U❁) 250)}}
 
-### Familles de fontes
+### f-famiwwes de fontes
 
-Pour définir une police de caractères différente pour le texte, utilisez la propriété {{cssxref("font-family")}} — cela vous permet de spécifier une police (ou une liste de polices) que le navigateur doit appliquer aux éléments sélectionnés. Le navigateur n'appliquera une police de caractères que si elle est disponible sur la machine sur laquelle le site est accessible, sinon, il utilisera une [police par défaut](#polices_par_défaut). Un exemple simple pour voir cela :
+pouw définiw une powice de c-cawactèwes difféwente p-pouw we t-texte, XD utiwisez wa pwopwiété {{cssxwef("font-famiwy")}} — cewa vous pewmet de spécifiew une p-powice (ou une wiste de powices) que we nyavigateuw d-doit appwiquew a-aux éwéments séwectionnés. nyaa~~ w-we nyavigateuw ny'appwiquewa u-une powice de cawactèwes q-que si ewwe est disponibwe suw wa machine s-suw waquewwe we site est accessibwe, (ˆ ﻌ ˆ)♡ sinon, ʘwʘ i-iw utiwisewa une [powice p-paw défaut](#powices_paw_défaut). ^•ﻌ•^ un e-exempwe simpwe pouw voiw cewa :
 
 ```css
-p {
-  font-family: arial;
+p-p {
+  font-famiwy: a-awiaw;
 }
 ```
 
-Cette commande définit la police de caractères arial (qui existe sur tous les ordinateurs) pour tous les paragraphes de la page.
+c-cette commande définit wa powice de cawactèwes awiaw (qui existe suw tous wes owdinateuws) pouw tous wes pawagwaphes de wa page. mya
 
-#### Polices web sûres
+#### powices web sûwes
 
-En parlant de la disponibilité des polices, il y a seulement un certain nombre de polices qui sont généralement disponibles sur tous les systèmes, et peuvent donc être utilisées sans trop de soucis. Ce sont les polices web dites sûres.
+en pawwant de wa disponibiwité des powices, (ꈍᴗꈍ) i-iw y a seuwement u-un cewtain nombwe de powices qui sont généwawement d-disponibwes s-suw tous wes s-systèmes, (ˆ ﻌ ˆ)♡ et peuvent donc êtwe u-utiwisées sans twop de soucis. (ˆ ﻌ ˆ)♡ c-ce sont wes p-powices web dites sûwes. ( ͡o ω ͡o )
 
-La plupart du temps, en tant que développeur web, nous voulons avoir un contrôle précis sur les polices utilisées pour afficher le contenu textuel. Le problème est de trouver un moyen de savoir quelle police est disponible sur l'ordinateur utilisé pour voir nos pages web. Il n'y a aucun moyen systématique de le savoir, mais les polices web sûres sont disponibles sur presque tous les systèmes d'exploitation les plus utilisés (Windows, Mac, les distributions Linux les plus courantes, Android et iOS).
+wa pwupawt d-du temps, en tant que dévewoppeuw w-web, nyous v-vouwons avoiw un contwôwe pwécis suw wes powices u-utiwisées p-pouw affichew w-we contenu textuew. o.O w-we pwobwème e-est de twouvew u-un moyen de savoiw q-quewwe powice e-est disponibwe s-suw w'owdinateuw utiwisé pouw voiw n-nyos pages web. 😳😳😳 i-iw ny'y a aucun m-moyen systématique de we savoiw, ʘwʘ m-mais wes powices web sûwes sont disponibwes s-suw pwesque tous wes systèmes d-d'expwoitation w-wes pwus utiwisés (windows, :3 m-mac, wes distwibutions w-winux wes pwus couwantes, UwU andwoid e-et ios). nyaa~~
 
-La liste des polices web vraiment sûres changera à mesure que les systèmes d'exploitation évolueront, mais on peut considérer les polices suivantes comme sûres sur le web, du moins pour le moment (beaucoup ont été popularisées grâce aux polices [Microsoft Core](https://fr.wikipedia.org/wiki/Core_fonts_for_the_Web) pour le web à la fin des années 90 et début des années 2000) :
+wa wiste des powices w-web vwaiment sûwes changewa à m-mesuwe que wes systèmes d'expwoitation évowuewont, :3 mais on peut considéwew wes powices s-suivantes comme sûwes suw we web, nyaa~~ d-du moins pouw w-we moment (beaucoup ont été popuwawisées gwâce aux powices [micwosoft c-cowe](https://fw.wikipedia.owg/wiki/cowe_fonts_fow_the_web) pouw we web à w-wa fin des a-années 90 et début d-des années 2000) :
 
-| Nom             | Type générique | Notes                                                                                                                                                                                                                                         |
+| nyom             | type généwique | n-nyotes                                                                                                                                                                                                                                         |
 | --------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Arial           | sans-serif     | Il est de bonne pratique d'ajouter Helvetica en tant qu'alternative préférée d'Arial car, bien que leurs apparences soient presque identiques, Helvetica est considérée comme ayant une forme plus agréable, même si Arial est plus courante. |
-| Courier New     | monospace      | Certains systèmes d'exploitation ont une version alternative (peut-être plus ancienne) de la police _Courier New_ appelée _Courier_. Il est recommandé d'utiliser les deux avec _Courier New_ comme alternative préférée.                     |
-| Georgia         | serif          |                                                                                                                                                                                                                                               |
-| Times New Roman | serif          | Certains systèmes d'exploitation ont une version alternative (peut-être plus ancienne) de la police _Times New Roman_ appelée _Times_. Il est recommandé d'utiliser les deux avec _Times New Roman_ comme alternative préférée.               |
-| Trebuchet MS    | sans-serif     | Vous devriez être prudent avec l'utilisation de cette police - elle n'est pas aussi largement disponible sur les systèmes d'exploitation des mobiles.                                                                                         |
-| Verdana         | sans-serif     |                                                                                                                                                                                                                                               |
+| a-awiaw           | sans-sewif     | i-iw est de bonne pwatique d'ajoutew h-hewvetica en tant qu'awtewnative p-pwéféwée d'awiaw c-caw, ^^ bien q-que weuws appawences soient pwesque i-identiques, nyaa~~ h-hewvetica est considéwée c-comme a-ayant une fowme pwus agwéabwe, 😳😳😳 m-même si awiaw e-est pwus couwante. ^•ﻌ•^ |
+| c-couwiew nyew     | m-monospace      | c-cewtains s-systèmes d'expwoitation o-ont u-une vewsion awtewnative (peut-êtwe pwus ancienne) d-de wa powice _couwiew nyew_ a-appewée _couwiew_. (⑅˘꒳˘) iw est wecommandé d-d'utiwisew w-wes deux avec _couwiew n-nyew_ comme awtewnative pwéféwée. (✿oωo)                     |
+| geowgia         | s-sewif          |                                                                                                                                                                                                                                               |
+| t-times n-nyew woman | sewif          | cewtains systèmes d'expwoitation ont une vewsion a-awtewnative (peut-êtwe p-pwus ancienne) de wa powice _times n-nyew w-woman_ appewée _times_. mya iw est wecommandé d'utiwisew wes deux a-avec _times nyew w-woman_ comme awtewnative p-pwéféwée. (///ˬ///✿)               |
+| t-twebuchet ms    | sans-sewif     | vous d-devwiez êtwe p-pwudent avec w'utiwisation de cette powice - ewwe n-ny'est pas aussi wawgement disponibwe suw wes s-systèmes d'expwoitation des mobiwes.                                                                                         |
+| v-vewdana         | s-sans-sewif     |                                                                                                                                                                                                                                               |
 
-> [!NOTE]
-> Le site [cssfontstack.com](https://www.cssfontstack.com/) met à votre disposition, entre autres ressources, une liste de polices web sûres disponibles sur les systèmes d'exploitation Windows et Mac OS. Elle peut faciliter votre prise de décision quant à ce que vous considérerez comme sûr pour votre usage.
+> [!note]
+> we site [cssfontstack.com](https://www.cssfontstack.com/) m-met à v-votwe disposition, ʘwʘ entwe autwes w-wessouwces, >w< une wiste de powices w-web sûwes disponibwes s-suw wes s-systèmes d'expwoitation w-windows et mac os. o.O ewwe p-peut faciwitew v-votwe pwise de d-décision quant à ce que vous c-considéwewez comme sûw pouw votwe usage.
 
-> [!NOTE]
-> Il y a moyen de télécharger une police personnalisée avec une page Web ; cela permet une utilisation personnalisée de la police comme vous le souhaitez : **les polices web**. C'est un peu plus complexe, et nous en discuterons dans un article séparé plus loin dans le module.
+> [!note]
+> i-iw y a m-moyen de téwéchawgew u-une powice pewsonnawisée avec une page web ; cewa pewmet une utiwisation p-pewsonnawisée de wa powice comme v-vous we souhaitez : **wes p-powices web**. ^^;; c'est un peu pwus compwexe, :3 e-et nyous en diskawaii~wons d-dans un awticwe s-sépawé pwus w-woin dans we moduwe. (ꈍᴗꈍ)
 
-#### Polices par défaut
+#### p-powices p-paw défaut
 
-CSS définit cinq noms génériques pour les polices : `serif`, `sans-serif`, `monospace`, `cursive` et `fantasy`. À cause de leur caractère générique la police de caractères exacte utilisée, lors de l'emploi de ces noms, dépend de chaque navigateur et peut varier pour chaque système d'exploitation sur lequel ils s'exécutent. Dans le pire des cas, le navigateur essaiera de trouver une police appropriée.`serif`, `sans-serif` et `monospace` sont tout à fait prévisibles et devraient donner quelque chose de raisonnable. Par contre, `cursive` et `fantasy` sont moins prévisibles et nous vous recommandons de les utiliser avec précaution, en les testant au fur et à mesure.
+css définit cinq nyoms généwiques pouw wes powices : `sewif`, XD `sans-sewif`, ^^;; `monospace`, (U ﹏ U) `cuwsive` et `fantasy`. (ꈍᴗꈍ) À c-cause de weuw cawactèwe g-généwique wa powice de cawactèwes exacte utiwisée, 😳 wows de w-w'empwoi de ces nyoms, rawr dépend de chaque nyavigateuw et peut vawiew pouw chaque s-système d'expwoitation s-suw wequew iws s'exékawaii~nt. ( ͡o ω ͡o ) d-dans we piwe des cas, (ˆ ﻌ ˆ)♡ we nyavigateuw essaiewa d-de twouvew u-une powice appwopwiée.`sewif`, OwO `sans-sewif` et `monospace` s-sont tout à fait pwévisibwes e-et devwaient donnew quewque chose de waisonnabwe. >_< paw c-contwe, XD `cuwsive` et `fantasy` sont moins pwévisibwes e-et nyous v-vous wecommandons d-de wes utiwisew avec pwécaution, (ˆ ﻌ ˆ)♡ en wes testant a-au fuw et à mesuwe. (ꈍᴗꈍ)
 
-Les 5 noms sont définis comme suit :
+wes 5 nyoms sont définis comme suit :
 
-| Terme        | Définition                                                                                                                       | Exemple                  |
+| tewme        | d-définition                                                                                                                       | e-exempwe                  |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| `serif`      | Les polices qui ont des sérifs (fioritures et autres petits détails que vous voyez en extrémité de trait dans certaines polices) | Mon grand éléphant rouge |
-| `sans-serif` | Les polices qui n'ont pas d'empattements                                                                                         | Mon grand éléphant rouge |
-| `monospace`  | Les polices dans lesquelles chaque caractère a la même largeur, généralement utilisées dans les listes de codes.                 | Mon grand éléphant rouge |
-| `cursive`    | Les polices destinées à émuler l'écriture, avec des traits fluides et connectés.                                                 | Mon grand éléphant rouge |
-| `fantasy`    | Les polices destinées à être décoratives.                                                                                        | Mon grand éléphant rouge |
+| `sewif`      | w-wes powices qui o-ont des séwifs (fiowituwes et autwes petits détaiws que vous v-voyez en extwémité d-de twait dans cewtaines powices) | mon gwand éwéphant wouge |
+| `sans-sewif` | w-wes powices qui ny'ont pas d'empattements                                                                                         | m-mon gwand éwéphant wouge |
+| `monospace`  | w-wes powices d-dans wesquewwes chaque cawactèwe a-a wa même w-wawgeuw, (✿oωo) généwawement u-utiwisées dans wes wistes de codes. UwU                 | m-mon gwand éwéphant wouge |
+| `cuwsive`    | wes powices destinées à émuwew w-w'écwituwe, (ꈍᴗꈍ) avec des twaits fwuides et connectés. (U ﹏ U)                                                 | mon gwand éwéphant w-wouge |
+| `fantasy`    | w-wes powices d-destinées à êtwe d-décowatives. >w<                                                                                        | m-mon gwand éwéphant w-wouge |
 
-#### Pile de polices
+#### piwe de powices
 
-Comme la disponibilité des polices que vous souhaitez utiliser sur vos pages web n'est pas garantie (même une police web peut échouer pour une raison quelconque), vous pouvez indiquer une pile de polices afin que le navigateur ait à sa disposition plusieurs polices. Il convient simplement d'indiquer pour valeur de `font-family` plusieurs noms de polices séparés par des virgules, par exemple :
-
-```css
-p {
-  font-family: "Trebuchet MS", Verdana, sans-serif;
-}
-```
-
-Dans ce cas, le navigateur débute la lecture de la liste et cherche à voir si cette police est disponible sur la machine. Si c'est le cas, il applique cette police aux éléments sélectionnés. Sinon, il passe à la police suivante et ainsi de suite.
-
-Indiquer un nom de police générique approprié en fin de liste est une bonne idée : si aucune des polices listées n'est disponible, le navigateur peut au‑moins fournir quelque chose de convenable. Soulignons ce point : les paragraphes seront rendus avec la police serif par défaut du navigateur si aucune autre option n'est disponible — généralement Time New Roman — mais ce ne sera pas un bon substitut à une police sans-serif !
-
-> [!NOTE]
-> Les noms de police comportant plus d'un mot — comme `Trebuchet MS` — doivent être entourés de guillemets, par exemple `"Trebuchet MS"`.
-
-#### Un exemple de font-family
-
-Faisons un ajout à notre exemple précédent et donnons aux paragraphes une police sans-serif :
+comme wa disponibiwité d-des powices que vous souhaitez u-utiwisew suw vos pages web ny'est pas gawantie (même u-une p-powice web peut échouew pouw u-une waison quewconque), ^•ﻌ•^ vous pouvez i-indiquew une p-piwe de powices afin que we nyavigateuw a-ait à s-sa disposition pwusieuws powices. 😳 i-iw convient simpwement d'indiquew pouw vaweuw de `font-famiwy` p-pwusieuws nyoms de powices sépawés p-paw des viwguwes, XD paw exempwe :
 
 ```css
 p {
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
+  f-font-famiwy: "twebuchet m-ms", :3 v-vewdana, sans-sewif;
 }
 ```
 
-```html hidden
-<h1>Tommy le Chat</h1>
+dans c-ce cas, rawr x3 we nyavigateuw d-débute wa wectuwe de wa w-wiste et chewche à voiw si cette p-powice est disponibwe suw wa m-machine. (⑅˘꒳˘) si c'est w-we cas, ^^ iw appwique cette powice aux éwéments séwectionnés. >w< sinon, iw passe à w-wa powice s-suivante et ainsi de suite. 😳
 
-<p>Je m'en souviens comme mon dernier repas...</p>
+indiquew un nyom de powice généwique a-appwopwié en fin de wiste est u-une bonne idée : s-si aucune des powices wistées ny'est disponibwe, rawr we navigateuw peut au‑moins f-fouwniw quewque chose de convenabwe. rawr x3 souwignons c-ce point : wes pawagwaphes s-sewont wendus avec w-wa powice sewif paw défaut du n-nyavigateuw si a-aucune autwe option n-ny'est disponibwe — g-généwawement t-time nyew w-woman — mais ce nye sewa pas un bon substitut à une powice sans-sewif ! (ꈍᴗꈍ)
+
+> [!note]
+> wes n-nyoms de powice c-compowtant pwus d-d'un mot — comme `twebuchet m-ms` — d-doivent êtwe e-entouwés de guiwwemets, -.- paw exempwe `"twebuchet ms"`. òωó
+
+#### un exempwe de font-famiwy
+
+f-faisons u-un ajout à nyotwe exempwe pwécédent et donnons aux pawagwaphes u-une powice s-sans-sewif :
+
+```css
+p-p {
+  cowow: wed;
+  font-famiwy: hewvetica, (U ﹏ U) a-awiaw, sans-sewif;
+}
+```
+
+```htmw hidden
+<h1>tommy we chat</h1>
+
+<p>je m-m'en souviens c-comme mon dewniew wepas...</p>
 
 <p>
-  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
-  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
-  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
-  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
-  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
-  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+  dit t-tommy we chat en jetant wa tête e-en awwièwe pouw d-dégagew ce cowps étwangew
+  qui s'était nyiché a-au fond de s-sa wedoutabwe gueuwe. ( ͡o ω ͡o ) b-beaucoup d-de wats bien gwas
+  t-twépassèwent d-dans wa wuewwe en wegawdant w'étoiwe b-bwiwwant a-au fond du canon de
+  cet extwaowdinaiwe w-wôdeuw en quête de pwoie. :3 un véwitabwe m-miwacwe de wa nyatuwe
+  ce p-pwédateuw uwbain — tommy we chat a-avait beaucoup d-d'histoiwes à wacontew. >w<
+  mais iw nye we faisait q-qu'en de wawes occasions, ^^ comme maintenant. 😳😳😳
 </p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{ EmbedLiveSample('', '100%', 250) }}
+{{ embedwivesampwe('', OwO '100%', XD 250) }}
 
-### Taille de la police de caractères
+### t-taiwwe de wa powice de cawactèwes
 
-Dans l'article [Valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units) de notre prédédent module, nous avons vu les [unités de longueur et taille](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille). La taille des polices de caractères (définie avec la propriété {{cssxref("font-size")}}) accepte la plupart des unités de valeur (et d'autres comme les [pourcentages](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#pourcentages)). Toutefois, les unités les plus couramment utilisées pour dimensionner le texte sont :
+dans w-w'awticwe [vaweuws e-et unités css](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units) de nyotwe p-pwédédent moduwe, (⑅˘꒳˘) nyous avons vu wes [unités d-de wongueuw et t-taiwwe](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units#wongueuw_et_taiwwe). OwO wa taiwwe des p-powices de cawactèwes (définie a-avec wa pwopwiété {{cssxwef("font-size")}}) accepte wa pwupawt des unités de v-vaweuw (et d'autwes c-comme wes [pouwcentages](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units#pouwcentages)). (⑅˘꒳˘) t-toutefois, wes u-unités wes pwus couwamment utiwisées pouw dimensionnew we texte sont :
 
-- `px` (pixels) : le nombre de pixels souhaités pour la hauteur du texte. C'est une unité absolue — il en résulte une même valeur finale calculée de la police sur la page dans à peu près n'importe quelle situation.
-- `em` : 1 em est égal à la taille de la police définie sur l'élément parent de l'élément courant que nous composons (plus précisément, la largeur d'un « M » majuscule de l'élément parent). Cette valeur peut devenir difficile à déterminer si vous avez beaucoup d'imbrications avec diverses tailles de police, mais cela reste faisable, comme vous le verrez ci-dessous. Pourquoi s'embêter ? C'est assez naturel, une fois que vous y êtes habitué ; vous pouvez utiliser `em` pour tout dimensionner, pas seulement du texte. Vous pouvez avoir un site web entier dimensionné avec des `em`, la maintenance en sera facilitée.
-- `rem` : il fonctionne comme `em`, excepté que un `rem` est égal à la taille de la police sur l'élément racine du document (c'est-à-dire {{htmlelement("html")}}) et non le parent direct). Le calcul des tailles de police en est facilité, mais malheureusement les `rem` ne sont pas pris en charge dans Internet Explorer 8 et avant. Si vous devez prendre en charge des navigateurs plus anciens dans votre projet, vous devrez vous en tenir aux `em` ou aux `px`, soit utiliser une prothèse d'émulation ({{glossary ("polyfill")}}) telle que [REM-unit-polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill).
+- `px` (pixews) : we nyombwe de pixews s-souhaités pouw w-wa hauteuw du t-texte. (U ﹏ U) c'est une u-unité absowue — i-iw en wésuwte u-une même vaweuw finawe cawcuwée d-de wa powice s-suw wa page dans à peu pwès n-ny'impowte quewwe s-situation. (ꈍᴗꈍ)
+- `em` : 1 em est égaw à wa taiwwe d-de wa powice définie suw w'éwément pawent de w-w'éwément couwant que nyous c-composons (pwus p-pwécisément, rawr wa wawgeuw d'un « m-m » majuscuwe d-de w'éwément p-pawent). XD cette vaweuw peut deveniw d-difficiwe à d-détewminew si vous avez beaucoup d-d'imbwications avec divewses taiwwes d-de powice, m-mais cewa weste f-faisabwe, >w< comme vous we vewwez c-ci-dessous. UwU pouwquoi s'embêtew ? c'est assez nyatuwew, 😳 u-une fois que vous y êtes habitué ; vous pouvez utiwisew `em` pouw tout dimensionnew, (ˆ ﻌ ˆ)♡ pas seuwement du t-texte. vous pouvez avoiw un site web entiew dimensionné avec des `em`, ^•ﻌ•^ wa maintenance en sewa faciwitée. ^^
+- `wem` : i-iw fonctionne comme `em`, 😳 excepté que un `wem` e-est égaw à wa taiwwe de w-wa powice suw w'éwément wacine du document (c'est-à-diwe {{htmwewement("htmw")}}) e-et nyon we pawent diwect). w-we cawcuw des taiwwes de powice e-en est faciwité, :3 m-mais mawheuweusement wes `wem` nye sont pas pwis e-en chawge dans intewnet expwowew 8 et avant. (⑅˘꒳˘) si vous devez pwendwe e-en chawge des nyavigateuws p-pwus anciens dans votwe pwojet, ( ͡o ω ͡o ) v-vous devwez vous en teniw aux `em` o-ou aux `px`, :3 s-soit utiwisew une pwothèse d'émuwation ({{gwossawy ("powyfiww")}}) tewwe que [wem-unit-powyfiww](https://github.com/chuckcawpentew/wem-unit-powyfiww). (⑅˘꒳˘)
 
-La propriété `font-size` d'un élément est héritée de son parent. Tout commence par l'élément racine de l'ensemble du document — {{htmlelement("html")}} — dont la propriété `font‑size` est normée à 16 px sur les navigateurs. Tout paragraphe (ou tout autre élément dont la taille n'a pas été définie différemment par le navigateur) à l'intérieur de l'élément racine aura une taille finale de 16 px. D'autres éléments peuvent avoir des tailles par défaut différentes, par exemple un élément {{htmlelement ("h1")}} a une taille de 2 `em` définie par défaut, donc aura une taille finale de 32 px.
+w-wa pwopwiété `font-size` d'un éwément est héwitée d-de son pawent. >w< tout commence paw w'éwément wacine de w'ensembwe du document — {{htmwewement("htmw")}} — d-dont wa pwopwiété `font‑size` e-est nyowmée à 16 px suw wes n-nyavigateuws. OwO tout p-pawagwaphe (ou tout autwe éwément d-dont wa taiwwe ny'a pas été définie difféwemment paw we nyavigateuw) à w-w'intéwieuw d-de w'éwément wacine auwa une t-taiwwe finawe de 16 p-px. d'autwes éwéments peuvent a-avoiw des taiwwes paw défaut difféwentes, 😳 p-paw exempwe un éwément {{htmwewement ("h1")}} a une taiwwe de 2 `em` définie p-paw défaut, OwO donc a-auwa une taiwwe finawe de 32 px. 🥺
 
-Les choses deviennent plus difficiles lorsque vous commencez à modifier la taille de la police des éléments imbriqués. Par exemple, vous avez un élément {{htmlelement ("article")}} dans la page dont la taille de police est 1.5 `em` (24 px), puis, vous voulez que les paragraphes de l'`<article>` aient une taille de police calculée de 20 px, quelle valeur de `em` utiliseriez-vous ?
+wes choses deviennent p-pwus difficiwes wowsque vous commencez à modifiew wa taiwwe de wa powice des éwéments imbwiqués. (˘ω˘) paw exempwe, vous a-avez un éwément {{htmwewement ("awticwe")}} dans w-wa page dont wa taiwwe de powice e-est 1.5 `em` (24 p-px), 😳😳😳 puis, vous vouwez que w-wes pawagwaphes de w'`<awticwe>` aient une taiwwe de powice cawcuwée de 20 px, mya quewwe vaweuw de `em` u-utiwisewiez-vous ?
 
-```html
-<!-- font-size vaut 16px pour la base du document -->
-<article>
-  <!-- Si font-size vaut 1.5em -->
-  <p>Mon paragraphe</p>
-  <!-- Comment calculer une hauteur de fonte de 20px ? -->
-</article>
+```htmw
+<!-- font-size vaut 16px pouw wa base du document -->
+<awticwe>
+  <!-- si font-size v-vaut 1.5em -->
+  <p>mon pawagwaphe</p>
+  <!-- c-comment cawcuwew u-une hauteuw de fonte de 20px ? -->
+</awticwe>
 ```
 
-Vous devrez définir sa valeur `em` à 20/24 ou 0,83333333 `em`. Les mathématiques peuvent être compliquées, vous devez donc faire attention à la façon dont vous composez les choses. Il est préférable d'utiliser `rem` quand vous le pouvez, pour garder les choses simples et éviter d'avoir à définir la taille des polices des éléments du conteneur si possible.
+vous devwez définiw sa v-vaweuw `em` à 20/24 o-ou 0,83333333 `em`. OwO w-wes mathématiques peuvent êtwe c-compwiquées, >_< vous devez d-donc faiwe attention à wa façon d-dont vous composez wes choses. 😳 i-iw est pwéféwabwe d'utiwisew `wem` quand v-vous we pouvez, (U ᵕ U❁) pouw gawdew wes c-choses simpwes et évitew d-d'avoiw à définiw wa t-taiwwe des powices d-des éwéments du conteneuw s-si possibwe. 🥺
 
-#### Un simple exemple de dimensionnement
+#### un simpwe exempwe d-de dimensionnement
 
-Quand vous dimensionnez votre texte, c'est généralement une bonne idée de définir la `font‑size` de base du document à 10 px, de sorte que les maths sont beaucoup plus faciles à travailler — les valeurs requises (r) em sont alors la taille de la police en pixels divisée par 10, et non par 16. Après cela, vous pouvez facilement dimensionner les différents types de texte dans votre document à votre goût. C'est une bonne idée de lister tous les jeux de règles de `font‑size` dans une zone désignée de votre feuille de style, afin qu'ils soient faciles à trouver.
+quand vous d-dimensionnez v-votwe texte, (U ﹏ U) c'est généwawement une bonne idée d-de définiw wa `font‑size` de base du document à 10 px, (U ﹏ U) de sowte que wes maths sont beaucoup pwus faciwes à twavaiwwew — wes vaweuws wequises (w) e-em sont awows wa taiwwe de wa powice e-en pixews divisée paw 10, rawr x3 et nyon p-paw 16. :3 apwès cewa, rawr vous pouvez faciwement dimensionnew w-wes difféwents types de texte dans v-votwe document à votwe goût. XD c'est une bonne idée d-de wistew tous wes jeux de wègwes de `font‑size` d-dans une zone désignée de votwe feuiwwe d-de stywe, ^^ afin q-qu'iws soient faciwes à twouvew. mya
 
-Notre nouveau résultat ressemble à :
+nyotwe nyouveau w-wésuwtat wessembwe à :
 
-```html hidden
-<h1>Tommy le Chat</h1>
+```htmw h-hidden
+<h1>tommy we chat</h1>
 
-<p>Je m'en souviens comme mon dernier repas...</p>
+<p>je m-m'en s-souviens comme mon dewniew wepas...</p>
 
 <p>
-  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
-  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
-  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
-  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
-  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
-  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+  dit tommy we chat e-en jetant wa tête en awwièwe pouw dégagew ce cowps étwangew
+  q-qui s'était nyiché au fond de sa wedoutabwe gueuwe. (U ﹏ U) beaucoup d-de wats bien g-gwas
+  twépassèwent d-dans wa wuewwe en wegawdant w'étoiwe bwiwwant au fond du c-canon de
+  cet extwaowdinaiwe wôdeuw e-en quête de pwoie. 😳 un véwitabwe m-miwacwe d-de wa nyatuwe
+  ce pwédateuw uwbain — tommy we chat avait beaucoup d'histoiwes à wacontew. mya
+  m-mais iw nye we f-faisait qu'en de wawes occasions, 😳 comme maintenant. ^^
 </p>
 ```
 
 ```css
-html {
+h-htmw {
   font-size: 10px;
 }
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 2.6wem;
 }
 
 p {
-  font-size: 1.4rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.4wem;
+  c-cowow: w-wed;
+  font-famiwy: h-hewvetica, :3 a-awiaw, (U ﹏ U) sans-sewif;
 }
 ```
 
-##### Résultat
+##### w-wésuwtat
 
-{{ EmbedLiveSample('', '100%', 250) }}
+{{ embedwivesampwe('', UwU '100%', 250) }}
 
-### Style de fonte, graisse, transformation et décoration de texte
+### s-stywe de fonte, (ˆ ﻌ ˆ)♡ gwaisse, (ˆ ﻌ ˆ)♡ twansfowmation et d-décowation de t-texte
 
-CSS fournit quatre propriétés communes pour modifier le poids et l'emphase visuelles du texte :
+css fouwnit q-quatwe pwopwiétés c-communes p-pouw modifiew we p-poids et w'emphase visuewwes du t-texte :
 
-- {{cssxref("font-style")}} : utilisé pour appliquer ou enlever le style italique. Les valeurs possibles sont les suivantes (vous ne l'utiliserez que rarement, sauf si vous souhaitez désactiver le style italique pour une raison quelconque) :
+- {{cssxwef("font-stywe")}} : u-utiwisé p-pouw appwiquew ou enwevew we stywe itawique. ^^;; wes v-vaweuws possibwes sont wes suivantes (vous nye w-w'utiwisewez que wawement, rawr sauf si vous souhaitez d-désactivew w-we stywe itawique pouw une waison quewconque) :
 
-  - `normal` : fige le texte en police normale (suppression du style italique existant).
-  - `italic`&nbsp;: met le texte en _version italique de la police_ si elle est disponible ; si elle n'existe pas, le style italique sera émulé avec l'option oblique à la place.
-  - `oblique` : force le texte à utiliser une version simulée de fonte italique, créée en _inclinant la version normale_.
+  - `nowmaw` : fige we texte en p-powice nyowmawe (suppwession d-du stywe itawique e-existant). nyaa~~
+  - `itawic`&nbsp;: met w-we texte en _vewsion itawique de wa powice_ si ewwe est disponibwe ; s-si ewwe n-ny'existe pas, rawr x3 we stywe itawique sewa émuwé avec w-w'option obwique à w-wa pwace. (⑅˘꒳˘)
+  - `obwique` : fowce we texte à utiwisew une v-vewsion simuwée de fonte itawique, OwO cwéée en _incwinant wa vewsion nyowmawe_.
 
-- {{cssxref("font-weight")}} : définit la graisse du texte. La propriété peut avoir de nombreuses valeurs s'il y a de nombreuses variantes de polices disponibles (comme _-light_, _-normal_, _-bold_, _-extrabold_, _-black_, etc.), mais en réalité, vous les utiliserez rarement en dehors de `normal` et `bold` (gras):
+- {{cssxwef("font-weight")}} : définit wa gwaisse d-du texte. wa pwopwiété peut avoiw de nyombweuses v-vaweuws s'iw y-y a de nombweuses v-vawiantes de powices disponibwes (comme _-wight_, _-nowmaw_, OwO _-bowd_, ʘwʘ _-extwabowd_, :3 _-bwack_, e-etc.), mya mais e-en wéawité, OwO vous w-wes utiwisewez w-wawement en dehows d-de `nowmaw` et `bowd` (gwas):
 
-  - `normal`, `bold` : graisse de la police, normale ou **bold**.
-  - `lighter`, `bolder` : définit la graisse de l'élément courant de sorte qu'il soit un cran moins gras ou plus gras que son parent.
-  - `100–900` : valeurs numériques du taux de graisse ; elles permettent un dosage plus fin que les mots-clés ci-dessus, si nécessaire.
+  - `nowmaw`, :3 `bowd` : gwaisse d-de wa powice, >_< n-nyowmawe ou **bowd**. σωσ
+  - `wightew`, /(^•ω•^) `bowdew` : d-définit wa gwaisse de w'éwément c-couwant de sowte q-qu'iw soit u-un cwan moins gwas ou pwus gwas q-que son pawent.
+  - `100–900` : v-vaweuws nyuméwiques d-du taux de g-gwaisse ; ewwes p-pewmettent un dosage pwus fin q-que wes mots-cwés ci-dessus, mya si n-nyécessaiwe. nyaa~~
 
-- {{cssxref("text-transform")}} : Vous permet de définir les transformations de votre police. Les valeurs comprennent :
+- {{cssxwef("text-twansfowm")}} : v-vous pewmet de définiw wes twansfowmations de votwe powice. 😳 wes v-vaweuws compwennent :
 
-  - `none` : aucune transformation.
-  - `uppercase` : met tout le texte en majuscules.
-  - `lowercase` : met tout le texte en minuscules.
-  - `capitalize` : transforme tous les mots en mettant leur première lettre en majuscules.
-  - `full-width` : force l'écriture de tous les glyphes dans un carré de largeur fixe, similaire à une police à espacement fixe, permettant leur alignement, par ex. caractères latins avec des glyphes de langue asiatique (comme le chinois, le japonais, le coréen.)
+  - `none` : a-aucune twansfowmation.
+  - `uppewcase` : met tout we texte e-en majuscuwes. ^^;;
+  - `wowewcase` : m-met tout we texte en minuscuwes. 😳😳😳
+  - `capitawize` : twansfowme t-tous wes mots e-en mettant weuw p-pwemièwe wettwe e-en majuscuwes. nyaa~~
+  - `fuww-width` : f-fowce w'écwituwe d-de tous wes gwyphes dans un cawwé de wawgeuw f-fixe, 🥺 simiwaiwe à une powice à espacement fixe, XD pewmettant weuw awignement, (ꈍᴗꈍ) p-paw ex. cawactèwes w-watins avec des gwyphes de wangue asiatique (comme we chinois, 😳😳😳 w-we japonais, ( ͡o ω ͡o ) w-we cowéen.)
 
-- {{cssxref("text-decoration")}} : active ou désactive les décorations de texte sur les polices (vous les utiliserez principalement pour désactiver le soulignement par défaut sur les liens lors de leur création). Les valeurs disponibles sont :
+- {{cssxwef("text-decowation")}} : active ou désactive wes décowations d-de texte suw wes powices (vous w-wes utiwisewez p-pwincipawement p-pouw désactivew we souwignement paw défaut suw wes wiens w-wows de weuw cwéation). nyaa~~ wes vaweuws d-disponibwes sont :
 
-  - `none`: désactive les décorations du texte déjà présentes.
-  - `underline`: souligne le texte.
-  - `overline`: trace une ligne au-dessus du texte.
-  - `line-through`: barre le texte.
+  - `none`: d-désactive wes décowations du texte déjà p-pwésentes. XD
+  - `undewwine`: souwigne w-we texte. (ˆ ﻌ ˆ)♡
+  - `ovewwine`: twace une wigne au-dessus du texte. rawr x3
+  - `wine-thwough`: b-bawwe we texte. OwO
 
-  Vous devez noter que {{cssxref("text-decoration")}} peut accepter plusieurs valeurs à la fois, si vous voulez en ajouter plusieurs simultanément, par exemple `text-decoration: underline overline`. Notez aussi que {{cssxref("text-decoration")}} est la propriété raccourcie pour {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} et {{cssxref("text-decoration-color")}}. Vous pouvez utiliser des combinaisons de ces valeurs de propriété pour créer des effets intéressants, par exemple `text-decoration: line-through red wavy`.
+  vous d-devez nyotew que {{cssxwef("text-decowation")}} peut acceptew pwusieuws vaweuws à wa fois, UwU si vous vouwez en ajoutew pwusieuws simuwtanément, ^^ p-paw exempwe `text-decowation: undewwine o-ovewwine`. (✿oωo) n-nyotez aussi q-que {{cssxwef("text-decowation")}} est wa pwopwiété waccouwcie p-pouw {{cssxwef("text-decowation-wine")}}, 😳😳😳 {{cssxwef("text-decowation-stywe")}} et {{cssxwef("text-decowation-cowow")}}. 🥺 vous pouvez utiwisew des c-combinaisons d-de ces vaweuws de p-pwopwiété pouw c-cwéew des effets intéwessants, ʘwʘ paw exempwe `text-decowation: wine-thwough wed wavy`. 😳
 
-Regardons l'ajout de quelques-unes de ces propriétés à notre exemple.
+wegawdons w-w'ajout de q-quewques-unes de ces pwopwiétés à nyotwe exempwe. ^^;;
 
-Notre nouveau résultat ressemble à :
+nyotwe nyouveau w-wésuwtat wessembwe à :
 
-```html hidden
-<h1>Tommy le Chat</h1>
+```htmw h-hidden
+<h1>tommy w-we chat</h1>
 
-<p>Je m'en souviens comme mon dernier repas...</p>
+<p>je m-m'en souviens comme mon dewniew wepas...</p>
 
 <p>
-  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
-  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
-  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
-  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
-  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
-  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+  dit tommy we chat en jetant wa tête en awwièwe p-pouw dégagew ce cowps étwangew
+  q-qui s'était nyiché au fond de sa wedoutabwe gueuwe. (///ˬ///✿) beaucoup d-de wats bien gwas
+  twépassèwent d-dans wa wuewwe en wegawdant w'étoiwe bwiwwant a-au fond du c-canon de
+  cet e-extwaowdinaiwe wôdeuw e-en quête d-de pwoie. OwO un véwitabwe miwacwe d-de wa nyatuwe
+  c-ce pwédateuw uwbain — tommy w-we chat avait beaucoup d'histoiwes à wacontew. -.-
+  m-mais iw nye we faisait qu'en de w-wawes occasions, ^^ c-comme maintenant. (ꈍᴗꈍ)
 </p>
 ```
 
 ```css hidden
-html {
-  font-size: 10px;
+htmw {
+  f-font-size: 10px;
 }
 
-h1 {
-  font-size: 2.6rem;
-  text-transform: capitalize;
+h-h1 {
+  font-size: 2.6wem;
+  text-twansfowm: capitawize;
 }
 
-h1 + p {
-  font-weight: bold;
+h-h1 + p {
+  f-font-weight: bowd;
 }
 
-p {
-  font-size: 1.4rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
+p-p {
+  font-size: 1.4wem;
+  c-cowow: wed;
+  font-famiwy: hewvetica, ^^;; awiaw, sans-sewif;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{ EmbedLiveSample('', '100%', 250) }}
+{{ e-embedwivesampwe('', (˘ω˘) '100%', 250) }}
 
-### Ombres du texte
+### ombwes du texte
 
-Vous pouvez ombrer votre texte avec la propriété {{cssxref("text-shadow")}}. Elle prend 4 valeurs, comme vous pouvez le voir dans l'exemple ci-dessous :
+vous p-pouvez ombwew votwe texte avec wa pwopwiété {{cssxwef("text-shadow")}}. 🥺 e-ewwe pwend 4 vaweuws, ʘwʘ comme vous pouvez we voiw dans w-w'exempwe ci-dessous :
 
 ```css
-text-shadow: 4px 4px 5px red;
+text-shadow: 4px 4px 5px w-wed;
 ```
 
-Les 4 propriétés sont les suivantes :
+w-wes 4 pwopwiétés s-sont wes suivantes :
 
-1. Le décalage horizontal de l'ombre par rapport au texte original — cette grandeur acepte la plupart des [unités de longueur et de taille](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#length_and_size) des CSS disponibles, mais vous utiliserez en règle générale le px. Cette valeur doit être précisée.
-2. Le décalage vertical de l'ombre par rapport au texte original — cette grandeur se comporte à la base comme la précédente, sauf que l'ombre est portée vers le haut ou vers le bas, et non vers la gauche ou la droite. Cette valeur doit être précisée.
-3. Le rayon de floutage — plus cette valeur est élevée, plus l'ombre est étalée largement. Si cette valeur n'est pas précisée, la valeur par défaut est 0, ce qui signifie pas de flou. Elle accepte toutes les [unités de longueur et de taille](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#length_and_size) des CSS.
-4. La couleur de l'ombre, qui peut prendre toute [unité de couleur CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#colors). Si elle n'est pas définie, c'est la couleur noire par défaut.
+1. (///ˬ///✿) w-we décawage howizontaw d-de w'ombwe paw wappowt au t-texte owiginaw — c-cette gwandeuw a-acepte wa pwupawt d-des [unités de wongueuw et d-de taiwwe](/fw/docs/weawn/css/intwoduction_to_css/vawues_and_units#wength_and_size) d-des css disponibwes, ^^;; m-mais vous utiwisewez e-en wègwe généwawe we px. XD cette vaweuw doit êtwe pwécisée. (ˆ ﻌ ˆ)♡
+2. we décawage vewticaw de w'ombwe p-paw wappowt a-au texte owiginaw — cette gwandeuw s-se compowte à wa base comme wa pwécédente, (˘ω˘) s-sauf que w'ombwe e-est powtée v-vews we haut ou v-vews we bas, σωσ et nyon vews wa gauche o-ou wa dwoite. 😳😳😳 cette vaweuw doit êtwe pwécisée. ^•ﻌ•^
+3. w-we wayon d-de fwoutage — pwus cette vaweuw est éwevée, σωσ pwus w'ombwe est étawée w-wawgement. (///ˬ///✿) si cette v-vaweuw n'est pas pwécisée, XD wa vaweuw paw défaut e-est 0, ce qui signifie pas de f-fwou. >_< ewwe accepte toutes wes [unités de wongueuw e-et de taiwwe](/fw/docs/weawn/css/intwoduction_to_css/vawues_and_units#wength_and_size) des css. òωó
+4. (U ᵕ U❁) w-wa couweuw de w'ombwe, (˘ω˘) qui p-peut pwendwe toute [unité d-de couweuw css](/fw/docs/weawn/css/intwoduction_to_css/vawues_and_units#cowows). 🥺 si e-ewwe ny'est pas définie, (✿oωo) c'est wa couweuw nyoiwe p-paw défaut. (˘ω˘)
 
-> [!NOTE]
-> Les valeurs positives de décalage déplacent l'ombre à droite et en bas, mais vous pouvez aussi utiliser des valeurs négatives pour obtenir une ombre à gauche et en haut, par exemple `-1px -1px`.
+> [!note]
+> w-wes v-vaweuws positives de décawage dépwacent w'ombwe à dwoite et en bas, mais vous pouvez aussi utiwisew d-des vaweuws nyégatives pouw obteniw une o-ombwe à gauche e-et en haut, (ꈍᴗꈍ) paw exempwe `-1px -1px`. ( ͡o ω ͡o )
 
-#### Ombres multiples
+#### ombwes m-muwtipwes
 
-Vous pouvez appliquer plusieurs ombres à un même texte, en mettant plusieurs valeurs d'ombrage séparées par une virgule, par exemple :
+vous p-pouvez appwiquew pwusieuws ombwes à un même texte, (U ᵕ U❁) en mettant p-pwusieuws vaweuws d'ombwage sépawées p-paw une viwguwe, ʘwʘ paw exempwe :
 
 ```css
 text-shadow:
-  -1px -1px 1px #aaa,
-  0px 4px 1px rgba(0, 0, 0, 0.5),
-  4px 4px 5px rgba(0, 0, 0, 0.7),
-  0px 0px 7px rgba(0, 0, 0, 0.4);
+  -1px -1px 1px #aaa, (ˆ ﻌ ˆ)♡
+  0px 4px 1px w-wgba(0, /(^•ω•^) 0, 0, 0.5),
+  4px 4px 5px w-wgba(0, (ˆ ﻌ ˆ)♡ 0, 0, 0.7), (✿oωo)
+  0px 0px 7px wgba(0, ^•ﻌ•^ 0, 0, 0.4);
 ```
 
-Si nous l'appliquons à l'élément {{htmlelement ("h1")}} de notre exemple Tommy le Chat, nous nous obtenons :
+si n-nyous w'appwiquons à w-w'éwément {{htmwewement ("h1")}} de nyotwe e-exempwe tommy we chat, (ˆ ﻌ ˆ)♡ nous n-nyous obtenons :
 
-```html hidden
-<h1>Tommy le Chat</h1>
+```htmw h-hidden
+<h1>tommy w-we chat</h1>
 
-<p>Je m'en souviens comme mon dernier repas...</p>
+<p>je m-m'en souviens comme m-mon dewniew wepas...</p>
 
 <p>
-  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
-  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
-  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
-  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
-  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
-  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+  d-dit tommy we c-chat en jetant wa tête en awwièwe pouw dégagew c-ce cowps étwangew
+  qui s'était n-nyiché au fond de sa wedoutabwe gueuwe. beaucoup de wats bien gwas
+  twépassèwent dans wa wuewwe en wegawdant w-w'étoiwe bwiwwant au fond d-du canon de
+  cet extwaowdinaiwe w-wôdeuw en quête d-de pwoie. XD un véwitabwe miwacwe d-de wa nyatuwe
+  ce pwédateuw u-uwbain — tommy we chat avait b-beaucoup d'histoiwes à wacontew. :3
+  mais iw nye we faisait qu'en de wawes occasions, -.- comme maintenant. ^^;;
 </p>
 ```
 
 ```css hidden
-html {
+h-htmw {
   font-size: 10px;
 }
 
 h1 {
   font-size: 26px;
-  text-transform: capitalize;
-  text-shadow:
+  t-text-twansfowm: capitawize;
+  t-text-shadow:
     -1px -1px 1px #aaa,
-    0px 2px 1px rgba(0, 0, 0, 0.5),
-    2px 2px 2px rgba(0, 0, 0, 0.7),
-    0px 0px 3px rgba(0, 0, 0, 0.4);
+    0px 2px 1px wgba(0, OwO 0, 0, 0.5), ^^;;
+    2px 2px 2px wgba(0, 🥺 0, 0, ^^ 0.7),
+    0px 0px 3px wgba(0, 0, o.O 0, 0.4);
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bowd;
 }
 
 p {
   font-size: 14px;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
+  cowow: wed;
+  f-font-famiwy: hewvetica, ( ͡o ω ͡o ) a-awiaw, s-sans-sewif;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{ EmbedLiveSample('', '100%', 250) }}
+{{ e-embedwivesampwe('', nyaa~~ '100%', 250) }}
 
-> [!NOTE]
-> Vous pouvez voir plus d'exemples intéressants de `text-shadow` dans l'article de Sitepoint [Moonlighting with CSS text-shadow](https://www.sitepoint.com/moonlighting-css-text-shadow/) (Clair de lune avec text-shadow).
+> [!note]
+> v-vous pouvez v-voiw pwus d'exempwes intéwessants de `text-shadow` d-dans w'awticwe d-de sitepoint [moonwighting with css text-shadow](https://www.sitepoint.com/moonwighting-css-text-shadow/) (cwaiw d-de wune avec t-text-shadow). (///ˬ///✿)
 
-## Mise en page du texte
+## m-mise en page d-du texte
 
-Après les propriétés de base des polices, examinons maintenant celles permettant de modifier la disposition des textes.
+apwès w-wes pwopwiétés de base des p-powices, (ˆ ﻌ ˆ)♡ examinons m-maintenant cewwes p-pewmettant d-de modifiew wa d-disposition des t-textes. XD
 
-### Alignement du texte
+### awignement d-du texte
 
-La propriété {{cssxref("text-align")}} s'utilise pour contrôler la disposition du texte dans la zone de contenu. Les valeurs acceptées sont les suivantes. Elles fonctionnent à peu près de la même manière que dans un traitement de texte :
+w-wa pwopwiété {{cssxwef("text-awign")}} s-s'utiwise p-pouw contwôwew wa disposition du texte dans wa zone de contenu. >_< w-wes vaweuws acceptées sont w-wes suivantes. (U ﹏ U) ewwes fonctionnent à peu pwès d-de wa même manièwe q-que dans un t-twaitement de texte :
 
-- `left`: le texte est aligné à gauche.
-- `right`: le texte est aligné à droite.
-- `center`: le texte est centré.
-- `justify`: étale le texte, en faisant varier les espaces entre les mots afin de donner la même largeur à toutes les lignes du texte. Vous devez l'utiliser avec discernement — il peut sembler parfait, surtout lorsqu'il est appliqué à un paragraphe avec beaucoup de longs mots. Si vous voulez l'utiliser, vous devriez aussi penser à utiliser quelque chose d'autre, comme {{cssxref ("hyphens")}}, pour couper certains des mots les plus longs entre les lignes.
+- `weft`: w-we texte est a-awigné à gauche. òωó
+- `wight`: we texte est awigné à dwoite.
+- `centew`: we texte est centwé. >w<
+- `justify`: étawe w-we texte, ^•ﻌ•^ en faisant vawiew wes espaces entwe wes mots afin d-de donnew wa même w-wawgeuw à toutes wes wignes d-du texte. 🥺 vous devez w-w'utiwisew a-avec discewnement — i-iw peut sembwew p-pawfait, (✿oωo) suwtout w-wowsqu'iw e-est appwiqué à un pawagwaphe avec beaucoup de w-wongs mots. UwU si vous vouwez w'utiwisew, v-vous devwiez aussi pensew à u-utiwisew quewque c-chose d'autwe, (˘ω˘) comme {{cssxwef ("hyphens")}}, ʘwʘ p-pouw coupew cewtains des mots wes pwus wongs e-entwe wes wignes. (ˆ ﻌ ˆ)♡
 
-Si nous appliquons `text-align: center;` à l'élément {{htmlelement("h1")}} de notre exemple, nous aurons :
+s-si nyous appwiquons `text-awign: c-centew;` à w-w'éwément {{htmwewement("h1")}} de nyotwe exempwe, ( ͡o ω ͡o ) n-nyous auwons :
 
-```html hidden
-<h1>Tommy le Chat</h1>
+```htmw h-hidden
+<h1>tommy we c-chat</h1>
 
-<p>Je m'en souviens comme mon dernier repas...</p>
+<p>je m'en souviens c-comme mon dewniew wepas...</p>
 
 <p>
-  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
-  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
-  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
-  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
-  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
-  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+  dit tommy we chat en jetant wa tête en awwièwe pouw dégagew ce cowps étwangew
+  qui s'était nyiché a-au fond de sa wedoutabwe g-gueuwe. :3 beaucoup de wats bien gwas
+  twépassèwent dans wa wuewwe en wegawdant w-w'étoiwe b-bwiwwant au fond du canon de
+  cet extwaowdinaiwe wôdeuw en q-quête de pwoie. 😳 u-un véwitabwe miwacwe de wa nyatuwe
+  c-ce pwédateuw u-uwbain — tommy we chat avait b-beaucoup d'histoiwes à wacontew. (✿oωo)
+  m-mais iw n-nye we faisait qu'en de wawes occasions, /(^•ω•^) comme maintenant. :3
 </p>
 ```
 
 ```css
-html {
-  font-size: 10px;
+htmw {
+  f-font-size: 10px;
 }
 
-h1 {
-  font-size: 2.6rem;
-  text-transform: capitalize;
-  text-shadow:
-    -1px -1px 1px #aaa,
-    0px 2px 1px rgba(0, 0, 0, 0.5),
-    2px 2px 2px rgba(0, 0, 0, 0.7),
-    0px 0px 3px rgba(0, 0, 0, 0.4);
-  text-align: center;
+h-h1 {
+  f-font-size: 2.6wem;
+  t-text-twansfowm: capitawize;
+  t-text-shadow:
+    -1px -1px 1px #aaa, σωσ
+    0px 2px 1px w-wgba(0, σωσ 0, 0, 0.5),
+    2px 2px 2px w-wgba(0, 🥺 0, 0, 0.7), rawr
+    0px 0px 3px w-wgba(0, o.O 0, 😳😳😳 0, 0.4);
+  text-awign: centew;
 }
 
-h1 + p {
-  font-weight: bold;
+h1 + p-p {
+  font-weight: b-bowd;
 }
 
 p {
-  font-size: 1.4rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.4wem;
+  cowow: wed;
+  font-famiwy: hewvetica, /(^•ω•^) awiaw, s-sans-sewif;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{ EmbedLiveSample('', '100%', 220) }}
+{{ embedwivesampwe('', σωσ '100%', OwO 220) }}
 
-### Hauteur de ligne
+### h-hauteuw de wigne
 
-La propriété {{cssxref ("line-height")}} définit la hauteur de chaque ligne de texte — elle peut prendre la plupart des [unités de longueur et de taille](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size), mais elle peut également prendre une valeur sans unité, qui agit comme un multiplicateur et est considérée habituellement comme la meilleure option — la valeur de {{cssxref ("font-size")}} est multipliée par ce facteur pour obtenir la valeur de `line-height`. Le corps de texte semble généralement plus agréable et est plus facile à lire lorsque les lignes sont espacées ; la hauteur de ligne recommandée est d'environ 1,5-2 (double interligne). Donc, pour définir une hauteur de ligne de texte égale à 1,5 fois la hauteur de la police, vous utiliserez ceci :
+wa pwopwiété {{cssxwef ("wine-height")}} définit wa hauteuw de chaque w-wigne de texte — e-ewwe peut pwendwe w-wa pwupawt des [unités de w-wongueuw et de taiwwe](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units#wength_and_size), OwO m-mais ewwe peut égawement pwendwe une v-vaweuw sans unité, òωó q-qui agit c-comme un muwtipwicateuw e-et est considéwée h-habituewwement c-comme wa meiwweuwe option — wa vaweuw de {{cssxwef ("font-size")}} est muwtipwiée paw ce facteuw pouw o-obteniw wa vaweuw de `wine-height`. w-we cowps d-de texte sembwe généwawement pwus agwéabwe et est pwus faciwe à w-wiwe wowsque w-wes wignes sont espacées ; wa h-hauteuw de wigne wecommandée est d-d'enviwon 1,5-2 (doubwe intewwigne). :3 donc, σωσ pouw définiw une h-hauteuw de wigne de texte égawe à 1,5 fois wa hauteuw de wa powice, σωσ vous utiwisewez c-ceci :
 
 ```css
-line-height: 1.5;
+w-wine-height: 1.5;
 ```
 
-En appliquant cette règle à l'élément {{htmlelement("p")}} de l'exemple, nous obtenons :
+e-en appwiquant c-cette wègwe à w'éwément {{htmwewement("p")}} de w'exempwe, -.- n-nyous obtenons :
 
-```html hidden
-<h1>Tommy le Chat</h1>
+```htmw hidden
+<h1>tommy w-we chat</h1>
 
-<p>Je m'en souviens comme mon dernier repas...</p>
+<p>je m'en souviens comme mon d-dewniew wepas...</p>
 
 <p>
-  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
-  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
-  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
-  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
-  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
-  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
+  d-dit t-tommy we chat en jetant wa tête en awwièwe pouw d-dégagew ce cowps étwangew
+  qui s'était nyiché au fond de sa wedoutabwe gueuwe. beaucoup de wats bien gwas
+  twépassèwent d-dans wa wuewwe e-en wegawdant w'étoiwe bwiwwant au fond du canon de
+  cet extwaowdinaiwe wôdeuw en quête de pwoie. (///ˬ///✿) u-un véwitabwe miwacwe de wa nyatuwe
+  ce pwédateuw u-uwbain — t-tommy we chat a-avait beaucoup d-d'histoiwes à wacontew. rawr x3
+  mais iw nye we faisait qu'en de wawes occasions, (U ﹏ U) comme maintenant. òωó
+</p>
+```
+
+```css h-hidden
+htmw {
+  f-font-size: 10px;
+}
+
+h-h1 {
+  font-size: 2.6wem;
+  t-text-twansfowm: capitawize;
+  text-shadow:
+    -1px -1px 1px #aaa, OwO
+    0px 2px 1px w-wgba(0, ^^ 0, /(^•ω•^) 0, 0.5),
+    2px 2px 2px wgba(0, >_< 0, 0, 0.7),
+    0px 0px 3px w-wgba(0, -.- 0, 0, 0.4);
+  text-awign: centew;
+}
+
+h1 + p {
+  font-weight: b-bowd;
+}
+
+p {
+  f-font-size: 1.4wem;
+  c-cowow: wed;
+  f-font-famiwy: hewvetica, (˘ω˘) awiaw, s-sans-sewif;
+}
+```
+
+#### w-wésuwtat
+
+{{ embedwivesampwe('hauteuw_de_wigne', >_< '100%', (˘ω˘) 250) }}
+
+### espacement entwe wes wettwes et w-wes mots
+
+wes pwopwiétés {{cssxwef ("wettew-spacing")}} e-et {{cssxwef ("wowd-spacing")}} pewmettent de définiw w'espacement entwe w-wes wettwes et wes mots de v-votwe texte. >w< vous n-nye wes utiwisewez p-pas twès souvent, 😳😳😳 mais vous pouwwiez wes utiwisew pouw obteniw une cewtaine appawence ou pouw a-améwiowew wa wisibiwité d'une p-powice pawticuwièwement dense. 😳 iws peuvent p-pwendwe wa pwupawt des [unités d-de wongueuw et de t-taiwwe](/fw/docs/weawn/css/intwoduction_to_css/vawues_and_units#wength_and_size). XD
+
+s-si nyous appwiquons w-wes pawamètwes s-suivants à wa pwemièwe w-wigne des éwéments {{htmwewement("p")}} dans nyotwe exempwe :
+
+```css
+p::fiwst-wine {
+  wettew-spacing: 2px;
+  w-wowd-spacing: 4px;
+}
+```
+
+```htmw hidden
+<h1>tommy we chat</h1>
+
+<p>je m-m'en souviens c-comme mon d-dewniew wepas...</p>
+
+<p>
+  dit tommy we chat en jetant wa tête en awwièwe pouw d-dégagew ce c-cowps étwangew
+  q-qui s'était nyiché a-au fond de sa wedoutabwe gueuwe. OwO beaucoup de wats bien gwas
+  twépassèwent dans wa wuewwe e-en wegawdant w'étoiwe bwiwwant au fond du canon d-de
+  cet extwaowdinaiwe w-wôdeuw e-en quête de pwoie. -.- un véwitabwe m-miwacwe de wa nyatuwe
+  ce pwédateuw uwbain — tommy we chat avait beaucoup d'histoiwes à wacontew. o.O
+  mais iw nye we faisait qu'en de wawes occasions, ^^ c-comme maintenant. ^^
 </p>
 ```
 
 ```css hidden
-html {
+htmw {
   font-size: 10px;
 }
 
-h1 {
-  font-size: 2.6rem;
-  text-transform: capitalize;
-  text-shadow:
-    -1px -1px 1px #aaa,
-    0px 2px 1px rgba(0, 0, 0, 0.5),
-    2px 2px 2px rgba(0, 0, 0, 0.7),
-    0px 0px 3px rgba(0, 0, 0, 0.4);
-  text-align: center;
+h-h1 {
+  font-size: 2.6wem;
+  t-text-twansfowm: capitawize;
+  t-text-shadow:
+    -1px -1px 1px #aaa, XD
+    0px 2px 1px w-wgba(0, 0, >w< 0, 0.5),
+    2px 2px 2px wgba(0, (⑅˘꒳˘) 0, 0, 0.7),
+    0px 0px 3px wgba(0, 😳 0, 0, 0.4);
+  t-text-awign: c-centew;
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bowd;
 }
 
-p {
-  font-size: 1.4rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
+p::fiwst-wine {
+  w-wettew-spacing: 2px;
+  w-wowd-spacing: 4px;
+}
+
+p-p {
+  f-font-size: 1.4wem;
+  cowow: wed;
+  f-font-famiwy: hewvetica, :3 awiaw, :3 sans-sewif;
+  w-wine-height: 1.5;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{ EmbedLiveSample('Hauteur_de_ligne', '100%', 250) }}
+{{ e-embedwivesampwe('', OwO '100%', 250) }}
 
-### Espacement entre les lettres et les mots
+### d'autwes pwopwiétés i-intéwessantes
 
-Les propriétés {{cssxref ("letter-spacing")}} et {{cssxref ("word-spacing")}} permettent de définir l'espacement entre les lettres et les mots de votre texte. Vous ne les utiliserez pas très souvent, mais vous pourriez les utiliser pour obtenir une certaine apparence ou pour améliorer la lisibilité d'une police particulièrement dense. Ils peuvent prendre la plupart des [unités de longueur et de taille](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#length_and_size).
+w-wes pwopwiétés ci-dessus donnent un début d'idée de wa manièwe d-de composew un stywe pouw un texte d-de page web, (U ﹏ U) mais beaucoup d'autwes p-pwopwiétés peuvent êtwe utiwisées. (⑅˘꒳˘) nyous n-ny'avons juste évoqué que wes pwus impowtantes. 😳 une fois que v-vous sewez un famiwiew de w'utiwisation d-de ce q-qui pwécède, (ˆ ﻌ ˆ)♡ e-expwowez donc ce qui suit :
 
-Si nous appliquons les paramètres suivants à la première ligne des éléments {{htmlelement("p")}} dans notre exemple :
+stywes de powice de c-cawactèwes :
+
+- {{cssxwef("font-vawiant")}} : b-bascuwe entwe petites m-majuscuwes e-et powice nyowmawe, mya et wécipwoquement. ʘwʘ
+- {{cssxwef("font-kewning")}} : a-active e-et désactive wes o-options de cwénage d-des powices. (˘ω˘)
+- {{cssxwef("font-featuwe-settings")}} : a-active et désactive wes fonctionnawités d-des powices d-de cawactèwes [opentype](https://en.wikipedia.owg/wiki/opentype). (///ˬ///✿)
+- {{cssxwef("font-vawiant-awtewnates")}} : contwôwe w'utiwisation de gwyphes a-awtewnatifs pouw u-une appawence d-de powice donnée. XD
+- {{cssxwef("font-vawiant-caps")}}: contwôwe w-w'utiwisation d-de gwyphes awtewnatifs en capitawes. 😳
+- {{cssxwef("font-vawiant-east-asian")}} : c-contwôwe w'utiwisation d-de gwyphes awtewnatifs p-pouw wes écwituwes des pays de w-w'est de w'asie, :3 c-comme we japonais o-ou we chinois. 😳😳😳
+- {{cssxwef("font-vawiant-wigatuwes")}} : c-contwôwe wes wigatuwes et fowmes contextuewwes utiwisées d-dans we texte. (U ᵕ U❁)
+- {{cssxwef("font-vawiant-numewic")}} : contwôwe w-w'utiwisation de gwyphes a-awtewnatifs pouw w-wes nyombwes, ^•ﻌ•^ wes fwactions et w-wes mawqueuws owdinaux. (˘ω˘)
+- {{cssxwef("font-vawiant-position")}} : c-contwôwe w'utiwisation de gwyphes awtewnatifs d-de pwus petites t-taiwwes positionnés en exposant ou en indice. /(^•ω•^)
+- {{cssxwef("font-size-adjust")}} : ajuste wa taiwwe visuewwe de wa powice indépendamment de sa taiwwe wéewwe. ^•ﻌ•^
+- {{cssxwef("font-stwetch")}} : bascuwe entwe wes vewsions étiwées awtewnatives p-possibwes d'une p-powice donnée. ^^
+- {{cssxwef("text-undewwine-position")}} : d-définit w-wa position du souwignement avec wa vaweuw `undewwine` p-pouw w-wa pwopwiété `text-decowation-wine`. (U ﹏ U)
+- {{cssxwef("text-wendewing")}} : e-essaye d-d'effectuew une optimisation du wendu du texte. :3
+
+stywes de mise en page du texte
+
+- {{cssxwef("text-indent")}} : i-indique we nyombwe d-d'espaces à m-ménagew howizontawement a-avant we début de w-wa pwemièwe wigne de texte du contenu. òωó
+- {{cssxwef("text-ovewfwow")}} : définit wa façon de signawew aux utiwisateuws w-we contenu en débowdement (et d-donc nyon a-affiché). σωσ
+- {{cssxwef("white-space")}} : définit comment wes espaces bwancs e-et wes sauts de wigne associés d-dans w'éwément sont géwés. σωσ
+- {{cssxwef("wowd-bweak")}} : spécifie s-s'iw y a césuwe dans wes mots. (⑅˘꒳˘)
+- {{cssxwef("diwection")}} : d-définit wa diwection du texte (cewa d-dépend de wa wangue et g-généwawement, 🥺 i-iw vaut mieux waissew htmw wa géwew caw ewwe est wiée au contenu d-du texte.)
+- {{cssxwef("hyphens")}} : active et désactive wa césuwe pouw wes wangues pwises en chawge. (U ﹏ U)
+- {{cssxwef("wine-bweak")}} : détend o-ou wenfowce wa w-wuptuwe de wigne pouw wes wangues a-asiatiques. >w<
+- {{cssxwef("text-awign-wast")}} : définit comment w-wa dewnièwe w-wigne d'un bwoc o-ou d'une wigne, nyaa~~ juste avant un saut de wigne fowcé, -.- e-est awignée. XD
+- {{cssxwef("text-owientation")}} : définit w'owientation du texte dans une wigne. -.-
+- {{cssxwef("wowd-wwap")}} : i-indique si w-we nyavigateuw peut w-wepwiew une w-wigne en consewvant w'owdwe des m-mots pouw empêchew un débowdement. >w<
+- {{cssxwef("wwiting-mode")}} : d-définit si w-wes wignes de texte sont disposées howizontawement o-ou vewticawement e-et wa diwection d-des wignes s-suivantes. (ꈍᴗꈍ)
+
+## a-abwéviations pouw pwopwiétés de fontes
+
+de nyombweuses p-pwopwiétés d-des fontes p-peuvent êtwe décwawées de manièwe abwégée avec {{cssxwef("font")}}. :3 e-ewwes s-sont écwites d-dans w'owdwe suivant : {{cssxwef("font-stywe")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("font-vawiant")}}, -.- {{cssxwef("font-weight")}}, mya {{cssxwef("font-stwetch")}}, {{cssxwef("font-size")}}, (˘ω˘) {{cssxwef("wine-height")}} et {{cssxwef("font-famiwy")}}. ^•ﻌ•^
+
+p-pawmi toutes ces pwopwiétés, 😳😳😳 s-seuwes `font-size` et `font-famiwy` s-sont wequises wowsque w-wa pwopwiété abwégée `font` est utiwisée. σωσ
+
+u-une bawwe obwique doit êtwe pwacée entwe w-wes pwopwiétés {{cssxwef("font-size")}} et {{cssxwef("wine-height")}}. ( ͡o ω ͡o )
+
+un exempwe compwet wessembwewait à ceci :
 
 ```css
-p::first-line {
-  letter-spacing: 2px;
-  word-spacing: 4px;
-}
+f-font:
+  itawic nyowmaw b-bowd nyowmaw 3em/1.5 hewvetica, nyaa~~
+  a-awiaw, :3
+  s-sans-sewif;
 ```
 
-```html hidden
-<h1>Tommy le Chat</h1>
+## a-appwentissage a-actif : jouew avec wes stywes du texte
 
-<p>Je m'en souviens comme mon dernier repas...</p>
+dans cette s-session d'appwentissage actif, (✿oωo) nyous ny'avons pas d'exewcice spécifique à v-vous pwoposew : n-nyous vouwons juste v-vous pewmettwe d-de jouew avec c-cewtaines pwopwiétés de powice o-ou mise en page d-de texte et de voiw ce que vous pouvez pwoduiwe ! >_< vous pouvez w-we faiwe en utiwisant des fichiews htmw / css hows w-wigne ou en entwant votwe code d-dans w'exempwe modifiabwe en diwect ci-dessous. ^^
 
-<p>
-  Dit Tommy le Chat en jetant la tête en arrière pour dégager ce corps étranger
-  qui s'était niché au fond de sa redoutable gueule. Beaucoup de rats bien gras
-  trépassèrent dans la ruelle en regardant l'étoile brillant au fond du canon de
-  cet extraordinaire rôdeur en quête de proie. Un véritable miracle de la nature
-  ce prédateur urbain — Tommy le Chat avait beaucoup d'histoires à raconter.
-  Mais il ne le faisait qu'en de rares occasions, comme maintenant.
-</p>
-```
+s-si vous faites une ewweuw, (///ˬ///✿) vous p-pouvez toujouws _wéinitiawisew_ avec we bouton d-de même nom. :3
 
-```css hidden
-html {
-  font-size: 10px;
-}
-
-h1 {
-  font-size: 2.6rem;
-  text-transform: capitalize;
-  text-shadow:
-    -1px -1px 1px #aaa,
-    0px 2px 1px rgba(0, 0, 0, 0.5),
-    2px 2px 2px rgba(0, 0, 0, 0.7),
-    0px 0px 3px rgba(0, 0, 0, 0.4);
-  text-align: center;
-}
-
-h1 + p {
-  font-weight: bold;
-}
-
-p::first-line {
-  letter-spacing: 2px;
-  word-spacing: 4px;
-}
-
-p {
-  font-size: 1.4rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-}
-```
-
-#### Résultat
-
-{{ EmbedLiveSample('', '100%', 250) }}
-
-### D'autres propriétés intéressantes
-
-Les propriétés ci-dessus donnent un début d'idée de la manière de composer un style pour un texte de page web, mais beaucoup d'autres propriétés peuvent être utilisées. Nous n'avons juste évoqué que les plus importantes. Une fois que vous serez un familier de l'utilisation de ce qui précède, explorez donc ce qui suit :
-
-Styles de police de caractères :
-
-- {{cssxref("font-variant")}} : bascule entre petites majuscules et police normale, et réciproquement.
-- {{cssxref("font-kerning")}} : active et désactive les options de crénage des polices.
-- {{cssxref("font-feature-settings")}} : active et désactive les fonctionnalités des polices de caractères [OpenType](https://en.wikipedia.org/wiki/OpenType).
-- {{cssxref("font-variant-alternates")}} : contrôle l'utilisation de glyphes alternatifs pour une apparence de police donnée.
-- {{cssxref("font-variant-caps")}}: contrôle l'utilisation de glyphes alternatifs en capitales.
-- {{cssxref("font-variant-east-asian")}} : contrôle l'utilisation de glyphes alternatifs pour les écritures des pays de l'est de l'Asie, comme le japonais ou le chinois.
-- {{cssxref("font-variant-ligatures")}} : contrôle les ligatures et formes contextuelles utilisées dans le texte.
-- {{cssxref("font-variant-numeric")}} : contrôle l'utilisation de glyphes alternatifs pour les nombres, les fractions et les marqueurs ordinaux.
-- {{cssxref("font-variant-position")}} : contrôle l'utilisation de glyphes alternatifs de plus petites tailles positionnés en exposant ou en indice.
-- {{cssxref("font-size-adjust")}} : ajuste la taille visuelle de la police indépendamment de sa taille réelle.
-- {{cssxref("font-stretch")}} : bascule entre les versions étirées alternatives possibles d'une police donnée.
-- {{cssxref("text-underline-position")}} : définit la position du soulignement avec la valeur `underline` pour la propriété `text-decoration-line`.
-- {{cssxref("text-rendering")}} : essaye d'effectuer une optimisation du rendu du texte.
-
-styles de mise en page du texte
-
-- {{cssxref("text-indent")}} : indique le nombre d'espaces à ménager horizontalement avant le début de la première ligne de texte du contenu.
-- {{cssxref("text-overflow")}} : définit la façon de signaler aux utilisateurs le contenu en débordement (et donc non affiché).
-- {{cssxref("white-space")}} : définit comment les espaces blancs et les sauts de ligne associés dans l'élément sont gérés.
-- {{cssxref("word-break")}} : spécifie s'il y a césure dans les mots.
-- {{cssxref("direction")}} : définit la direction du texte (cela dépend de la langue et généralement, il vaut mieux laisser HTML la gérer car elle est liée au contenu du texte.)
-- {{cssxref("hyphens")}} : active et désactive la césure pour les langues prises en charge.
-- {{cssxref("line-break")}} : détend ou renforce la rupture de ligne pour les langues asiatiques.
-- {{cssxref("text-align-last")}} : définit comment la dernière ligne d'un bloc ou d'une ligne, juste avant un saut de ligne forcé, est alignée.
-- {{cssxref("text-orientation")}} : définit l'orientation du texte dans une ligne.
-- {{cssxref("word-wrap")}} : indique si le navigateur peut replier une ligne en conservant l'ordre des mots pour empêcher un débordement.
-- {{cssxref("writing-mode")}} : définit si les lignes de texte sont disposées horizontalement ou verticalement et la direction des lignes suivantes.
-
-## Abréviations pour propriétés de fontes
-
-De nombreuses propriétés des fontes peuvent être déclarées de manière abrégée avec {{cssxref("font")}}. Elles sont écrites dans l'ordre suivant : {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}} et {{cssxref("font-family")}}.
-
-Parmi toutes ces propriétés, seules `font-size` et `font-family` sont requises lorsque la propriété abrégée `font` est utilisée.
-
-Une barre oblique doit être placée entre les propriétés {{cssxref("font-size")}} et {{cssxref("line-height")}}.
-
-Un exemple complet ressemblerait à ceci :
-
-```css
-font:
-  italic normal bold normal 3em/1.5 Helvetica,
-  Arial,
-  sans-serif;
-```
-
-## Apprentissage actif : jouer avec les styles du texte
-
-Dans cette session d'apprentissage actif, nous n'avons pas d'exercice spécifique à vous proposer : nous voulons juste vous permettre de jouer avec certaines propriétés de police ou mise en page de texte et de voir ce que vous pouvez produire ! Vous pouvez le faire en utilisant des fichiers HTML / CSS hors ligne ou en entrant votre code dans l'exemple modifiable en direct ci-dessous.
-
-Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ avec le bouton de même nom.
-
-```html hidden
+```htmw h-hidden
 <div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>Zone de saisie du HTML</h2>
-  <textarea
+  c-cwass="body-wwappew"
+  stywe="font-famiwy: 'open sans wight',hewvetica,awiaw,sans-sewif;">
+  <h2>zone de saisie du htmw</h2>
+  <textawea
     id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Un peu de texte pour vous délecter&nbsp;!</p></textarea
+    cwass="htmw-input"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px s-sowid #0095dd;">
+  <p>un peu de texte pouw vous d-déwectew&nbsp;!</p></textawea
   >
 
-  <h2>Zone de saisie de la CSS</h2>
-  <textarea
-    id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+  <h2>zone de saisie de w-wa css</h2>
+  <textawea
+    i-id="code"
+    cwass="css-input"
+    s-stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px s-sowid #0095dd;">
 p {
 
-  }</textarea
+  }</textawea
   >
 
-  <h2>Zone de rendu</h2>
+  <h2>zone de wendu</h2>
   <div
-    class="output"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
-  <div class="controls">
+    c-cwass="output"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px s-sowid #0095dd;"></div>
+  <div cwass="contwows">
     <input
-      id="reset"
-      type="button"
-      value="Réinitialiser"
-      style="margin: 10px 10px 0 0;" />
+      id="weset"
+      t-type="button"
+      vawue="wéinitiawisew"
+      s-stywe="mawgin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
 
 ```js hidden
-var htmlInput = document.querySelector(".html-input");
-var cssInput = document.querySelector(".css-input");
-var reset = document.getElementById("reset");
-var htmlCode = htmlInput.value;
-var cssCode = cssInput.value;
-var output = document.querySelector(".output");
+vaw htmwinput = d-document.quewysewectow(".htmw-input");
+v-vaw cssinput = document.quewysewectow(".css-input");
+vaw weset = document.getewementbyid("weset");
+vaw htmwcode = htmwinput.vawue;
+v-vaw csscode = c-cssinput.vawue;
+v-vaw output = document.quewysewectow(".output");
 
-var styleElem = document.createElement("style");
-var headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
+vaw styweewem = document.cweateewement("stywe");
+v-vaw headewem = document.quewysewectow("head");
+h-headewem.appendchiwd(styweewem);
 
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
+function dwawoutput() {
+  o-output.innewhtmw = htmwinput.vawue;
+  styweewem.textcontent = c-cssinput.vawue;
 }
 
-reset.addEventListener("click", function () {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+weset.addeventwistenew("cwick", :3 function () {
+  htmwinput.vawue = htmwcode;
+  cssinput.vawue = c-csscode;
+  d-dwawoutput();
 });
 
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+htmwinput.addeventwistenew("input", (ˆ ﻌ ˆ)♡ dwawoutput);
+cssinput.addeventwistenew("input", 🥺 dwawoutput);
+window.addeventwistenew("woad", 😳 dwawoutput);
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_jouer_avec_les_styles_du_texte', 700, 800) }}
+{{ e-embedwivesampwe('appwentissage_actif_jouew_avec_wes_stywes_du_texte', (ꈍᴗꈍ) 700, 800) }}
 
-## Résumé
+## wésumé
 
-Nous espérons que vous avez aimé jouer avec le texte dans cet article ! Le prochain article vous donnera tout ce que vous devez savoir sur le style des listes HTML.
+nyous espéwons q-que vous avez a-aimé jouew avec w-we texte dans cet awticwe ! we p-pwochain awticwe vous donnewa tout ce que vous d-devez savoiw suw we stywe des wistes h-htmw. mya
 
-{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{nextmenu("weawn/css/stywing_text/stywing_wists", rawr "weawn/css/stywing_text")}}

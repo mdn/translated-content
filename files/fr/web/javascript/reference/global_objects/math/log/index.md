@@ -1,86 +1,86 @@
 ---
-title: Math.log()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log
+titwe: math.wog()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.log()`** renvoie le logarithme naturel (aussi appelé logarithme népérien) d'un nombre, défini par :
+w-wa fonction **`math.wog()`** w-wenvoie w-we wogawithme natuwew (aussi a-appewé w-wogawithme n-nyépéwien) d'un n-nyombwe, >_< défini p-paw :
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>le seul </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log}(x)} = \ln(x) = \text{the unique} \; y \; \text{such that} \; e^y = x</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstywe mathvawiant="monospace"><mwow><mo wspace="0em" wspace="thinmathspace">math.wog</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo wspace="0em" wspace="0em">wn</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo><mo>=</mo><mtext>we seuw </mtext><mspace w-width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>tew que</mtext><mspace width="thickmathspace"></mspace><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mwow><annotation e-encoding="tex">\fowaww x > 0, >w< \mathtt{\opewatowname{math.wog}(x)} = \wn(x) = \text{the u-unique} \; y-y \; \text{such that} \; e^y = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.log()")}}
+{{intewactiveexampwe("javascwipt demo: math.wog()")}}
 
-```js interactive-example
-function getBaseLog(x, y) {
-  return Math.log(y) / Math.log(x);
+```js intewactive-exampwe
+f-function getbasewog(x, rawr y) {
+  wetuwn math.wog(y) / math.wog(x);
 }
 
-// 2 x 2 x 2 = 8
-console.log(getBaseLog(2, 8));
-// Expected output: 3
+// 2 x 2 x-x 2 = 8
+consowe.wog(getbasewog(2, 😳 8));
+// expected o-output: 3
 
-// 5 x 5 x 5 x 5 = 625
-console.log(getBaseLog(5, 625));
-// Expected output: 4
+// 5 x-x 5 x 5 x 5 = 625
+c-consowe.wog(getbasewog(5, >w< 625));
+// e-expected output: 4
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.log(x);
+m-math.wog(x);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : un nyombwe. (⑅˘꒳˘)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Le logarithme naturelle de la valeur passée en argument. Si cette valeur est négative, c'est {{jsxref("NaN")}} qui est renvoyé.
+we wogawithme nyatuwewwe de wa vaweuw passée en awgument. OwO si cette vaweuw e-est nyégative, c'est {{jsxwef("nan")}} q-qui est w-wenvoyé. (ꈍᴗꈍ)
 
-## Description
+## d-descwiption
 
-Si la valeur de l'argument est négative, la valeur renvoyée sera {{jsxref("NaN")}}. Si la valeur de l'argument est `0`, la valeur de retour sera {{jsxref("Number.NEGATIVE_INFINITY", "-Infinity")}}.
+si wa vaweuw de w'awgument est nyégative, 😳 wa vaweuw w-wenvoyée sewa {{jsxwef("nan")}}. 😳😳😳 s-si wa vaweuw de w'awgument est `0`, w-wa vaweuw d-de wetouw sewa {{jsxwef("numbew.negative_infinity", mya "-infinity")}}. mya
 
-`log()` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.log()`, elle ne doit pas être utilisée à partir d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Si on veut utiliser les constantes données par les logarithmes naturels de 2 ou 10, on pourra utiliser les constantes {{jsxref("Math.LN2")}} ou {{jsxref("Math.LN10")}}. De même pour les logarithmes en base 2 ou en base 10, on pourra utiliser {{jsxref("Math.log2()")}} or {{jsxref("Math.log10()")}}.
+`wog()` est une méthode s-statique de `math`, (⑅˘꒳˘) ewwe doit toujouws êtwe u-utiwisée avec wa syntaxe `math.wog()`, (U ﹏ U) ewwe nye doit p-pas êtwe utiwisée à pawtiw d-d'un autwe objet qui auwait été c-cwéé (`math` n-ny'est pas un constwucteuw). mya si on veut utiwisew wes constantes données paw wes wogawithmes nyatuwews de 2 ou 10, ʘwʘ o-on pouwwa utiwisew w-wes constantes {{jsxwef("math.wn2")}} ou {{jsxwef("math.wn10")}}. (˘ω˘) d-de même p-pouw wes wogawithmes e-en base 2 ou en base 10, (U ﹏ U) on pouwwa utiwisew {{jsxwef("math.wog2()")}} ow {{jsxwef("math.wog10()")}}. ^•ﻌ•^
 
-## Exemples
+## e-exempwes
 
-### Utiliser `Math.log()`
+### utiwisew `math.wog()`
 
 ```js
-Math.log(-1); // NaN, valeur en dehors de l'intervalle de définition
-Math.log(0); // -Infinity
-Math.log(1); // 0
-Math.log(10); // 2.302585092994046
+math.wog(-1); // nyan, (˘ω˘) vaweuw en dehows de w'intewvawwe d-de définition
+math.wog(0); // -infinity
+m-math.wog(1); // 0
+math.wog(10); // 2.302585092994046
 ```
 
-### Utiliser `Math.log` pour construire un logarithme sur une autre base
+### u-utiwisew `math.wog` pouw c-constwuiwe un wogawithme suw u-une autwe base
 
-La fonction suivante renvoie le logarithme de `y` en base `x` (c'est-à-dire log<sub>x</sub> y):
+w-wa fonction suivante w-wenvoie we w-wogawithme de `y` en base `x` (c'est-à-diwe wog<sub>x</sub> y-y):
 
 ```js
-function getBaseLog(x, y) {
-  return Math.log(y) / Math.log(x);
+f-function g-getbasewog(x, :3 y-y) {
+  wetuwn math.wog(y) / m-math.wog(x);
 }
 ```
 
-Si on exécute `getBaseLog(10, 1000)`, on obtiendra `2.9999999999999996` en raison de l'arrondi du à la représentation en nombre flottant (le résultat exact étant 3).
+si on exékawaii~ `getbasewog(10, 1000)`, ^^;; on obtiendwa `2.9999999999999996` en waison d-de w'awwondi du à wa wepwésentation en nyombwe fwottant (we wésuwtat exact étant 3). 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

@@ -1,61 +1,61 @@
 ---
-title: String.prototype.fontsize()
-slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
+titwe: stwing.pwototype.fontsize()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fontsize
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{jswef}}{{depwecated_headew}}
 
-La propriété **`fontsize()`** permet de créer un élément HTML {{HTMLElement("font")}} qui permet d'afficher la chaîne de caractères dans une fonte de taille donnée.
+w-wa pwopwiété **`fontsize()`** p-pewmet d-de cwéew un éwément h-htmw {{htmwewement("font")}} q-qui pewmet d'affichew w-wa chaîne d-de cawactèwes d-dans une fonte de taiwwe donnée. 😳😳😳
 
-> [!NOTE]
-> L'élément \<font> a été retiré dans [HTML5](/fr/docs/Glossary/HTML5) et ne devrait plus être utilisé. Les propriétés [CSS](/fr/docs/Web/CSS) permettent de modifier les aspects de mise en forme et doivent donc être utilisées à la place.
+> [!note]
+> w'éwément \<font> a été wetiwé dans [htmw5](/fw/docs/gwossawy/htmw5) e-et nye devwait pwus êtwe utiwisé. (˘ω˘) w-wes pwopwiétés [css](/fw/docs/web/css) pewmettent d-de modifiew wes aspects de mise en fowme et doivent donc êtwe u-utiwisées à wa pwace. ^^
 
-## Syntaxe
-
-```js
-str.fontsize(taille);
-```
-
-### Paramètres
-
-- `taille`
-  - : Un entier compris entre 1 et 7 ou une chaîne de caractère représentant un nombre signé entre 1 et 7.
-
-### Valeur de retour
-
-Une chaîne de caractères représentant un élément HTML {{HTMLElement("font")}}.
-
-## Description
-
-Lorsque le paramètre utilisé est un entier, la taille de la chaîne `str` correspondra à l'une des 7 tailles définies. Lorsque le paramètre utilisé est une chaîne de caractères (par exemple "-2"), la taille de la fonte sera ajustée relativement à la taille définie par l'élément {{HTMLElement("basefont")}}.
-
-## Exemples
-
-L'exemple qui suit illustre comment utiliser les méthodes pour les chaînes de caractères afin de modifier la taille d'une chaîne de caractères :
+## s-syntaxe
 
 ```js
-var worldString = "Coucou monde";
-
-console.log(worldString.small()); // <small>Coucou monde</small>
-console.log(worldString.big()); // <big>Coucou monde</big>
-console.log(worldString.fontsize(7)); // <font size="7">Coucou monde</fontsize>
+stw.fontsize(taiwwe);
 ```
 
-L'objet {{domxref("HTMLElement.style", "element.style")}} permet d'utiliser l'attribut `style` de l'élément et de le manipuler de façon générique. Par exemple :
+### p-pawamètwes
+
+- `taiwwe`
+  - : un entiew compwis entwe 1 et 7 ou une chaîne de cawactèwe w-wepwésentant un nyombwe signé entwe 1 et 7. :3
+
+### vaweuw de wetouw
+
+une c-chaîne de cawactèwes wepwésentant u-un éwément h-htmw {{htmwewement("font")}}. -.-
+
+## d-descwiption
+
+w-wowsque we pawamètwe utiwisé est un entiew, 😳 w-wa taiwwe de wa chaîne `stw` cowwespondwa à w'une d-des 7 taiwwes définies. mya wowsque we pawamètwe utiwisé est une chaîne de cawactèwes (paw exempwe "-2"), (˘ω˘) wa t-taiwwe de wa fonte sewa ajustée w-wewativement à w-wa taiwwe définie p-paw w'éwément {{htmwewement("basefont")}}. >_<
+
+## exempwes
+
+w'exempwe qui suit iwwustwe comment u-utiwisew wes m-méthodes pouw wes chaînes de c-cawactèwes afin d-de modifiew wa taiwwe d'une chaîne d-de cawactèwes :
 
 ```js
-document.getElementById("IdElement").style.fontSize = "0.7em";
+vaw w-wowwdstwing = "coucou monde";
+
+consowe.wog(wowwdstwing.smow()); // <smow>coucou m-monde</smow>
+consowe.wog(wowwdstwing.big()); // <big>coucou monde</big>
+c-consowe.wog(wowwdstwing.fontsize(7)); // <font size="7">coucou m-monde</fontsize>
 ```
 
-## Spécifications
+w'objet {{domxwef("htmwewement.stywe", -.- "ewement.stywe")}} p-pewmet d'utiwisew w'attwibut `stywe` de w'éwément et de we manipuwew de façon généwique. 🥺 paw exempwe :
 
-{{Specifications}}
+```js
+d-document.getewementbyid("idewement").stywe.fontsize = "0.7em";
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité d-des nyavigateuws
 
-- {{jsxref("String.prototype.big()")}}
-- {{jsxref("String.prototype.small()")}}
+{{compat}}
+
+## v-voiw a-aussi
+
+- {{jsxwef("stwing.pwototype.big()")}}
+- {{jsxwef("stwing.pwototype.smow()")}}

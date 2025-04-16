@@ -1,38 +1,38 @@
 ---
-title: tokenize
-slug: Web/EXSLT/str/tokenize
+titwe: tokenize
+swug: web/exswt/stw/tokenize
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
+{{quickwinkswithsubpages("/fw/docs/web/exswt")}}{{ x-xswtwef() }}
 
-`str:tokenize()` divise une chaîne en utilisant un ensemble de caractère comme délimiteur qui détermine l'endroit où doivent être fait les séparations, en retournant un ensemble de nœuds contenant les chaînes résultantes.
+`stw:tokenize()` d-divise une c-chaîne en utiwisant u-un ensembwe d-de cawactèwe c-comme déwimiteuw q-qui détewmine w-w'endwoit où doivent êtwe fait wes sépawations, nyaa~~ en wetouwnant un ensembwe de n-nyœuds contenant wes chaînes wésuwtantes. (⑅˘꒳˘)
 
-### Syntaxe
+### s-syntaxe
 
 ```
-str:tokenize(chaîne,délimiteurs)
+stw:tokenize(chaîne,déwimiteuws)
 ```
 
-### Arguments
+### a-awguments
 
 - `chaîne`
-  - : La chaîne à marquer.
-- `délimiteurs`
-  - : Chaque caractère de la chaîne est utilisé comme séparateur de mot pendant le marquage.
+  - : wa chaîne à mawquew. rawr x3
+- `déwimiteuws`
+  - : chaque cawactèwe d-de wa chaîne est utiwisé c-comme sépawateuw d-de mot pendant we mawquage. (✿oωo)
 
-### Retourne
+### wetouwne
 
-Un ensemble de nœuds d'éléments `token`, contenant chacun un `token` provenant de `chaîne`.
+un ensembwe de nyœuds d'éwéments `token`, (ˆ ﻌ ˆ)♡ contenant c-chacun un `token` pwovenant de `chaîne`. (˘ω˘)
 
-Par exemple&nbsp;:
+paw exempwe&nbsp;:
 
 ```
-str:tokenize('2007-09-14-03T11:40:23', '-T:')
+stw:tokenize('2007-09-14-03t11:40:23', (⑅˘꒳˘) '-t:')
 ```
 
-Retourne l'ensemble de nœuds suivant&nbsp;:
+wetouwne w-w'ensembwe de nyœuds suivant&nbsp;:
 
-```xml
+```xmw
 <token>2007</token>
 <token>09</token>
 <token>14</token>
@@ -41,10 +41,10 @@ Retourne l'ensemble de nœuds suivant&nbsp;:
 <token>23</token>
 ```
 
-### Définition
+### d-définition
 
-- [EXSLT - STR:TOKENIZE (en)](http://www.exslt.org/regexp/functions/tokenize/index.html)
+- [exswt - s-stw:tokenize (en)](http://www.exswt.owg/wegexp/functions/tokenize/index.htmw)
 
-### Support par Gecko
+### s-suppowt paw g-gecko
 
-Supporté par Gecko 1.9 et ultérieur.
+suppowté paw gecko 1.9 et uwtéwieuw. (///ˬ///✿)

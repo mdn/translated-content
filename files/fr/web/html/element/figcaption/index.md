@@ -1,125 +1,125 @@
 ---
-title: "<figcaption> : l'élément de légende d'une figure"
-slug: Web/HTML/Element/figcaption
+titwe: "<figcaption> : w'éwément d-de wégende d-d'une figuwe"
+s-swug: web/htmw/ewement/figcaption
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<figcaption>`** représente une légende décrivant le reste du contenu de son élément parent [`<figure>`](/fr/docs/Web/HTML/Element/figure).
+w-w'éwément h-htmw **`<figcaption>`** w-wepwésente u-une wégende d-décwivant we weste du contenu de son éwément pawent [`<figuwe>`](/fw/docs/web/htmw/ewement/figuwe). ^^
 
-{{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;figcaption&gt;", :3 "tabbed-showtew")}}
 
-```html interactive-example
-<figure>
+```htmw i-intewactive-exampwe
+<figuwe>
   <img
-    src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
-</figure>
+    swc="/shawed-assets/images/exampwes/ewephant.jpg"
+    awt="ewephant a-at sunset" />
+  <figcaption>an ewephant a-at sunset</figcaption>
+</figuwe>
 ```
 
-```css interactive-example
-figure {
-  border: thin #c0c0c0 solid;
-  display: flex;
-  flex-flow: column;
-  padding: 5px;
+```css intewactive-exampwe
+figuwe {
+  bowdew: thin #c0c0c0 s-sowid;
+  dispway: fwex;
+  fwex-fwow: c-cowumn;
+  p-padding: 5px;
   max-width: 220px;
-  margin: auto;
+  mawgin: auto;
 }
 
 img {
   max-width: 220px;
-  max-height: 150px;
+  m-max-height: 150px;
 }
 
 figcaption {
-  background-color: #222;
-  color: #fff;
-  font: italic smaller sans-serif;
+  backgwound-cowow: #222;
+  cowow: #fff;
+  font: itawic s-smowew sans-sewif;
   padding: 3px;
-  text-align: center;
+  t-text-awign: c-centew;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux"
-          >Contenu de flux</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux"
+          >contenu de f-fwux</a
+        >. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires
+        aucune, 😳 wa bawise d'ouvewtuwe et wa bawise d-de fewmetuwe sont
+        obwigatoiwes
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents a-autowisés</th>
       <td>
-        Un élément
-        <a href="/fr/docs/Web/HTML/Element/figure"><code>&#x3C;figure></code></a
-        >, l'élément <code>&#x3C;figcaption></code> doit être le premier ou le
-        dernier élément fils pour cet élément <code>&#x3C;figure></code>.
+        u-un éwément
+        <a hwef="/fw/docs/web/htmw/ewement/figuwe"><code>&#x3c;figuwe></code></a
+        >, mya w'éwément <code>&#x3c;figcaption></code> doit êtwe w-we pwemiew o-ou we
+        dewniew éwément f-fiws pouw cet éwément <code>&#x3c;figuwe></code>.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe a-awia impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas d-de wôwe cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
       <td>
-        <a href="https://w3c.github.io/aria/#group"><code>group</code></a
-        >, <a href="https://w3c.github.io/aria/#none"><code>none</code></a
-        >,
-        <a href="https://w3c.github.io/aria/#presentation"
-          ><code>presentation</code></a
+        <a h-hwef="https://w3c.github.io/awia/#gwoup"><code>gwoup</code></a
+        >, (˘ω˘) <a hwef="https://w3c.github.io/awia/#none"><code>none</code></a
+        >, >_<
+        <a h-hwef="https://w3c.github.io/awia/#pwesentation"
+          ><code>pwesentation</code></a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>
+        <a h-hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément pwend uniquement en chawge [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). -.-
 
-## Exemple
+## exempwe
 
-Veuillez consulter la page [`<figure>`](/fr/docs/Web/HTML/Element/figure) pour des exemples sur `<figcaption>`.
+veuiwwez c-consuwtew wa page [`<figuwe>`](/fw/docs/web/htmw/ewement/figuwe) p-pouw des exempwes suw `<figcaption>`. 🥺
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément [`<figure>`](/fr/docs/Web/HTML/Element/figure)
+- w'éwément [`<figuwe>`](/fw/docs/web/htmw/ewement/figuwe)

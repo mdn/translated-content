@@ -1,56 +1,56 @@
 ---
-title: Affectation après OU exclusif binaire (^=)
-slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
+titwe: affectation apwès ou e-excwusif binaiwe (^=)
+s-swug: web/javascwipt/wefewence/opewatows/bitwise_xow_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'affectation après OU exclusif (XOR) binaire (`^=`) utilise la représentation binaire des deux opérandes, effectue un OU exclusif entre chaque puis affecte le résultat obtenu à la variable représentée par l'opérande gauche.
+w-w'opéwateuw d-d'affectation a-apwès ou excwusif (xow) b-binaiwe (`^=`) u-utiwise w-wa wepwésentation binaiwe des deux opéwandes, 🥺 effectue un ou excwusif entwe c-chaque puis affecte we wésuwtat obtenu à wa vawiabwe w-wepwésentée paw w'opéwande g-gauche. mya
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR assignment")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - bitwise xow assignment")}}
 
-```js interactive-example
-let a = 5; // 00000000000000000000000000000101
+```js intewactive-exampwe
+w-wet a = 5; // 00000000000000000000000000000101
 a ^= 3; // 00000000000000000000000000000011
 
-console.log(a); // 00000000000000000000000000000110
-// Expected output: 6
+c-consowe.wog(a); // 00000000000000000000000000000110
+// e-expected output: 6
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur: x ^= y;
-Signification: x = x ^ y;
+opéwateuw: x ^= y;
+signification: x-x = x ^ y;
 ```
 
-## Exemples
+## exempwes
 
-### Utiliser l'affectation après OU exclusif binaire
+### utiwisew w'affectation apwès ou excwusif b-binaiwe
 
 ```js
-let a = 5; // 00000000000000000000000000000101
-a ^= 3; // 00000000000000000000000000000011
+wet a = 5; // 00000000000000000000000000000101
+a-a ^= 3; // 00000000000000000000000000000011
 
-console.log(a); // 00000000000000000000000000000110
+consowe.wog(a); // 00000000000000000000000000000110
 // 6
 
-let b = 5; // 00000000000000000000000000000101
-b ^= 0; // 00000000000000000000000000000000
+w-wet b = 5; // 00000000000000000000000000000101
+b-b ^= 0; // 00000000000000000000000000000000
 
-console.log(b); // 00000000000000000000000000000101
+c-consowe.wog(b); // 00000000000000000000000000000101
 // 5
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
-- [L'opérateur OU exclusif binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)
+- [wes opéwateuws d'affectation dans we guide javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment)
+- [w'opéwateuw ou excwusif binaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_xow)

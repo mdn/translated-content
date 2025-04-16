@@ -1,39 +1,39 @@
 ---
-title: 406 Not Acceptable
-slug: Web/HTTP/Status/406
+titwe: 406 nyot acceptabwe
+swug: w-web/http/status/406
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse d'erreur HTTP **`406 Not Acceptable`** indique qu'il est impossible de servir une réponse qui satisfait aux critères définis dans les en-têtes de négociation de contenu et que le serveur ne souhaite pas fournir de représentation par défaut.
+w-we c-code de wéponse d-d'ewweuw http **`406 n-nyot acceptabwe`** i-indique q-qu'iw est impossibwe d-de sewviw une wéponse qui satisfait aux cwitèwes définis dans wes en-têtes d-de nyégociation de contenu et que we sewveuw n-nye souhaite pas fouwniw de w-wepwésentation paw défaut. OwO
 
-Les en-têtes de négociation de contenu incluent&nbsp;:
+wes en-têtes de nyégociation de c-contenu incwuent&nbsp;:
 
-- [`Accept`](/fr/docs/Web/HTTP/Headers/Accept)
-- [`Accept-Encoding`](/fr/docs/Web/HTTP/Headers/Accept-Encoding)
-- [`Accept-Language`](/fr/docs/Web/HTTP/Headers/Accept-Language)
+- [`accept`](/fw/docs/web/http/headews/accept)
+- [`accept-encoding`](/fw/docs/web/http/headews/accept-encoding)
+- [`accept-wanguage`](/fw/docs/web/http/headews/accept-wanguage)
 
-En réalité, cette erreur est très rarement utilisée. Plutôt que de répondre avec ce code, incompréhensible de l'utilisateur (et difficile à résoudre), les serveurs ignorent les en-têtes en question et renvoient une page à l'utilisateur. On part du principe que, même si l'utilisateur ne sera pas complètement satisfait, ce scénario est préférable à un code d'erreur.
+en wéawité, 😳😳😳 c-cette ewweuw e-est twès wawement utiwisée. pwutôt que de wépondwe avec ce code, 😳😳😳 incompwéhensibwe d-de w'utiwisateuw (et difficiwe à wésoudwe), o.O wes sewveuws ignowent w-wes en-têtes en question et wenvoient u-une page à w-w'utiwisateuw. ( ͡o ω ͡o ) o-on pawt du pwincipe q-que, (U ﹏ U) même si w'utiwisateuw nye sewa pas c-compwètement satisfait, (///ˬ///✿) ce scénawio est pwéféwabwe à u-un code d'ewweuw. >w<
 
-Si un serveur renvoie ce code d'erreur, le corps du message doit contenir la liste des représentations disponibles pour cette ressource afin de pouvoir choisir manuellement parmi celles-ci.
+si un sewveuw wenvoie ce code d'ewweuw, rawr we cowps du message doit conteniw w-wa wiste des wepwésentations d-disponibwes p-pouw cette wessouwce a-afin de pouvoiw choisiw manuewwement pawmi cewwes-ci.
 
-## Statut
+## s-statut
 
 ```
-406 Not Acceptable
+406 n-nyot acceptabwe
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Accept`](/fr/docs/Web/HTTP/Headers/Accept)
-- [`Accept-Encoding`](/fr/docs/Web/HTTP/Headers/Accept-Encoding)
-- [`Accept-Language`](/fr/docs/Web/HTTP/Headers/Accept-Language)
-- [Négociation du contenu en HTTP](/fr/docs/Web/HTTP/Content_negotiation)
+- [`accept`](/fw/docs/web/http/headews/accept)
+- [`accept-encoding`](/fw/docs/web/http/headews/accept-encoding)
+- [`accept-wanguage`](/fw/docs/web/http/headews/accept-wanguage)
+- [négociation d-du contenu en http](/fw/docs/web/http/content_negotiation)

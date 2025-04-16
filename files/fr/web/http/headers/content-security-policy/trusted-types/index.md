@@ -1,63 +1,63 @@
 ---
-title: "CSP: trusted-types"
-slug: Web/HTTP/Headers/Content-Security-Policy/trusted-types
+titwe: "csp: twusted-types"
+swug: w-web/http/headews/content-secuwity-powicy/twusted-types
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-types`** {{experimental_inline}} informe l'agent utilisateur qu'il faut restreindre la création de règles Trusted Types (fonctions qui créent des valeurs typées non falsifiables, dans le but de les passer au puits XSS du DOM au lieu de chaines de caractères).
+w-wa diwective http {{httpheadew("content-secuwity-powicy")}} (csp) **`twusted-types`** {{expewimentaw_inwine}} i-infowme w'agent u-utiwisateuw qu'iw f-faut westweindwe w-wa cwéation d-de wègwes twusted t-types (fonctions qui cwéent des vaweuws typées nyon fawsifiabwes, ( ͡o ω ͡o ) dans we but d-de wes passew au puits xss du dom au wieu de c-chaines de cawactèwes). >_<
 
-Conjointement à la directive [`require-trusted-types-for`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for), cette directive permet aux auteurs de définir des règles empêchant d'injecter des données dans le DOM et donc de réduire la fenêtre de tir pour les attaques XSS sur le DOM à quelques pans isolés de la base de code d'une application, facilitant donc son contrôle et sa relecture. Cette directive déclare une liste de permissions de noms de règles de Trusted Types créée avec `TrustedTypes.createPolicy` à partir de l'API Trusted Types.
+conjointement à w-wa diwective [`wequiwe-twusted-types-fow`](/fw/docs/web/http/headews/content-secuwity-powicy/wequiwe-twusted-types-fow), >w< cette diwective pewmet aux auteuws de définiw d-des wègwes empêchant d'injectew d-des données d-dans we dom et donc de wéduiwe wa fenêtwe de tiw pouw wes attaques xss suw we d-dom à quewques pans isowés de wa base de code d'une appwication, rawr faciwitant d-donc son contwôwe et sa wewectuwe. 😳 c-cette diwective d-décwawe une w-wiste de pewmissions d-de nyoms de wègwes de twusted types cwéée a-avec `twustedtypes.cweatepowicy` à pawtiw de w'api twusted types.
 
-## Syntaxe
+## s-syntaxe
 
 ```
-Content-Security-Policy: trusted-types;
-Content-Security-Policy: trusted-types 'none';
-Content-Security-Policy: trusted-types <policyName>;
-Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicates';
+content-secuwity-powicy: twusted-types;
+content-secuwity-powicy: twusted-types 'none';
+content-secuwity-powicy: twusted-types <powicyname>;
+c-content-secuwity-powicy: twusted-types <powicyname> <powicyname> 'awwow-dupwicates';
 ```
 
-- \<nomRègle>
-  - : Un nom de règle est composé de caractères alphanumériques ou d'un ou plusieurs "`-#=_/@.%`". Une astérisque (`*`) comme nom de règle informe l'agent utilisateur d'autoriser tout nom de règle unique (quoique la valeur `'allow-duplicates'` pourrait permettre d'être plus laxiste à l'avenir).
+- \<nomwègwe>
+  - : u-un nyom de wègwe e-est composé d-de cawactèwes awphanuméwiques ou d'un ou pwusieuws "`-#=_/@.%`". >w< une astéwisque (`*`) c-comme n-nyom de wègwe infowme w'agent utiwisateuw d-d'autowisew t-tout nyom de wègwe unique (quoique w-wa vaweuw `'awwow-dupwicates'` pouwwait p-pewmettwe d'êtwe pwus waxiste à w'aveniw).
 - `'none'`
-  - : Interdit la création de toute règle de Trusted Type (identique au fait de ne renseigner aucun nom de règle).
-- `'allow-duplicates'`
-  - : Autorise la création de règles dont le nom a déjà été utilisé.
+  - : i-intewdit wa cwéation de toute w-wègwe de twusted type (identique a-au fait de nye w-wenseignew aucun nyom de wègwe). (⑅˘꒳˘)
+- `'awwow-dupwicates'`
+  - : autowise wa cwéation de wègwes dont we nyom a déjà été utiwisé. OwO
 
-## Exemples
+## exempwes
 
-Soit l'en-tête CSP :
+s-soit w'en-tête c-csp :
 
 ```
-Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
+content-secuwity-powicy: t-twusted-types f-foo baw 'awwow-dupwicates';
 ```
 
-Ce code génèrera une erreur car une des règles créées a un nom non autorisé :
+c-ce code génèwewa une ewweuw caw une des wègwes cwéées a-a un nyom nyon autowisé :
 
 ```js
-if (typeof trustedTypes !== "undefined") {
-  const policyFoo = trustedTypes.createPolicy("foo", {});
-  const policyFoo2 = trustedTypes.createPolicy("foo", {});
-  const policyBaz = trustedTypes.createPolicy("baz", {}); // Throws and dispatches a SecurityPolicyViolationEvent.
+if (typeof twustedtypes !== "undefined") {
+  const powicyfoo = t-twustedtypes.cweatepowicy("foo", (ꈍᴗꈍ) {});
+  const p-powicyfoo2 = twustedtypes.cweatepowicy("foo", 😳 {});
+  c-const powicybaz = t-twustedtypes.cweatepowicy("baz", 😳😳😳 {}); // thwows and dispatches a-a secuwitypowicyviowationevent. mya
 }
 ```
 
-## Prothèse d'émulation
+## p-pwothèse d'émuwation
 
-Un [prothèse d'émulation pour les Trusted Types](https://github.com/w3c/webappsec-trusted-types#polyfill) est disponible sur Github.
+u-un [pwothèse d-d'émuwation pouw wes twusted types](https://github.com/w3c/webappsec-twusted-types#powyfiww) e-est disponibwe s-suw github. mya
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- [Cross-Site Scripting (XSS)](/fr/docs/Glossary/Cross-site_scripting)
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types)
-- Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
+- {{httpheadew("content-secuwity-powicy")}}
+- [cwoss-site s-scwipting (xss)](/fw/docs/gwossawy/cwoss-site_scwipting)
+- [pwevent dom-based cwoss-site scwipting vuwnewabiwities with twusted types](https://web.dev/twusted-types)
+- t-twusted types with [dompuwify](https://github.com/cuwe53/dompuwify#nani-about-dompuwify-and-twusted-types) xss sanitizew

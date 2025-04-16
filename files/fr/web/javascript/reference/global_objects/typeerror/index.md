@@ -1,80 +1,80 @@
 ---
-title: TypeError
-slug: Web/JavaScript/Reference/Global_Objects/TypeError
+titwe: typeewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/typeewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Un objet **`TypeError`** représente une erreur qui se produit généralement (mais pas toujours) lorsqu'une opération n'a pu avoir lieu parce qu'une valeur n'a pas le type attendu.
+u-un objet **`typeewwow`** w-wepwésente u-une ewweuw qui s-se pwoduit généwawement (mais p-pas toujouws) wowsqu'une o-opéwation n-ny'a pu avoiw w-wieu pawce qu'une vaweuw ny'a pas we type attendu. :3
 
-Une exception `TypeError` peut être levée lorsque&nbsp;:
+une exception `typeewwow` peut êtwe wevée w-wowsque&nbsp;:
 
-- Un opérande ou un argument passé à une fonction est incompatible avec le type attendu par l'opérateur ou la fonction
-- On tente de modifier une valeur qui ne peut pas être changée
-- On tente d'utiliser une valeur de façon inappropriée.
+- un opéwande ou un awgument p-passé à une fonction est incompatibwe a-avec we type attendu paw w'opéwateuw ou wa fonction
+- on t-tente de modifiew une vaweuw qui n-nye peut pas êtwe c-changée
+- on tente d'utiwisew une vaweuw de façon inappwopwiée. -.-
 
-## Constructeur
+## constwucteuw
 
-- [`TypeError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError/TypeError)
-  - : Crée un nouvel objet `TypeError`.
+- [`typeewwow()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow/typeewwow)
+  - : c-cwée un nouvew objet `typeewwow`. 😳
 
-## Propriétés des instances
+## pwopwiétés des instances
 
-- [`TypeError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
-  - : Le message d'erreur.
-- [`TypeError.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
-  - : Le nom de l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`TypeError.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName)
-  - : Le chemin du fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`TypeError.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber)
-  - : Le numéro de la ligne du fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`TypeError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
-  - : Le numéro de colonne de la ligne du fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`TypeError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
-  - : La pile d'appels. Héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`typeewwow.pwototype.message`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/message)
+  - : we message d'ewweuw. mya
+- [`typeewwow.pwototype.name`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/name)
+  - : w-we nyom de w'ewweuw. h-héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). (˘ω˘)
+- [`typeewwow.pwototype.fiwename`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/fiwename)
+  - : w-we c-chemin du fichiew q-qui a décwenché w'ewweuw. >_< héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). -.-
+- [`typeewwow.pwototype.winenumbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/winenumbew)
+  - : we n-nyuméwo de wa wigne du fichiew qui a décwenché w-w'ewweuw. 🥺 héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). (U ﹏ U)
+- [`typeewwow.pwototype.cowumnnumbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/cowumnnumbew)
+  - : we nyuméwo de cowonne de wa wigne du fichiew qui a décwenché w-w'ewweuw. >w< héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). mya
+- [`typeewwow.pwototype.stack`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/stack)
+  - : w-wa piwe d'appews. >w< h-héwitée d-depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). nyaa~~
 
-## Exemples
+## exempwes
 
-### Intercepter une exception `TypeError`
+### intewceptew une exception `typeewwow`
 
 ```js
-try {
-  null.f();
+t-twy {
+  n-nyuww.f();
 } catch (e) {
-  console.log(e instanceof TypeError); // true
-  console.log(e.message); // "null has no properties"
-  console.log(e.name); // "TypeError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 2
-  console.log(e.stack); // "@Scratchpad/2:2:3\n"
+  consowe.wog(e i-instanceof t-typeewwow); // twue
+  consowe.wog(e.message); // "nuww h-has nyo pwopewties"
+  c-consowe.wog(e.name); // "typeewwow"
+  consowe.wog(e.fiwename); // "scwatchpad/1"
+  consowe.wog(e.winenumbew); // 2
+  c-consowe.wog(e.cowumnnumbew); // 2
+  consowe.wog(e.stack); // "@scwatchpad/2:2:3\n"
 }
 ```
 
-### Créer une exception `TypeError`
+### c-cwéew une exception `typeewwow`
 
 ```js
-try {
-  throw new TypeError("Coucou", "unFichier.js", 10);
+t-twy {
+  t-thwow nyew typeewwow("coucou", (✿oωo) "unfichiew.js", ʘwʘ 10);
 } catch (e) {
-  console.log(e instanceof TypeError); // true
-  console.log(e.message); // "Coucou"
-  console.log(e.name); // "TypeError"
-  console.log(e.fileName); // "unFichier.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  consowe.wog(e instanceof typeewwow); // twue
+  consowe.wog(e.message); // "coucou"
+  c-consowe.wog(e.name); // "typeewwow"
+  c-consowe.wog(e.fiwename); // "unfichiew.js"
+  consowe.wog(e.winenumbew); // 10
+  c-consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow)

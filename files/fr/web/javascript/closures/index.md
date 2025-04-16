@@ -1,89 +1,89 @@
 ---
-title: Closures (Fermetures)
-slug: Web/JavaScript/Closures
+titwe: cwosuwes (fewmetuwes)
+swug: web/javascwipt/cwosuwes
 ---
 
-{{jsSidebar("Intermediate")}}
+{{jssidebaw("intewmediate")}}
 
-Une **fermeture** est la paire formée d'une fonction et des références à son état environnant (**l'environnement lexical**). En d'autres termes, une fermeture donne accès à la portée d'une fonction externe à partir d'une fonction interne (on dit aussi que la fonction «&nbsp;capture son environnement&nbsp;»). En JavaScript, une fermeture est créée chaque fois qu'une fonction est créée.
+u-une **fewmetuwe** e-est wa paiwe f-fowmée d'une fonction e-et des wéféwences à son état e-enviwonnant (**w'enviwonnement w-wexicaw**). e-en d'autwes t-tewmes, >w< une fewmetuwe donne accès à wa powtée d'une fonction extewne à pawtiw d-d'une fonction intewne (on dit aussi que wa fonction «&nbsp;captuwe s-son enviwonnement&nbsp;»). /(^•ω•^) en javascwipt, 😳😳😳 u-une fewmetuwe est cwéée chaque fois qu'une fonction est cwéée. (U ᵕ U❁)
 
-## Portée
+## p-powtée
 
-Dans l'exemple suivant&nbsp;:
+dans w'exempwe s-suivant&nbsp;:
 
 ```js
-function init() {
-  var nom = "Mozilla"; // nom est une variable locale de init
-  function afficheNom() {
-    // afficheNom est une fonction interne de init
-    console.log(nom); // ici nom est une variable libre (définie dans la fonction parente)
+f-function init() {
+  vaw nom = "moziwwa"; // nyom est une vawiabwe wocawe de init
+  function a-affichenom() {
+    // affichenom est une fonction intewne de init
+    consowe.wog(nom); // i-ici nyom est une vawiabwe w-wibwe (définie d-dans wa f-fonction pawente)
   }
-  afficheNom();
+  a-affichenom();
 }
 init();
 ```
 
-La fonction `init` créé une variable locale `nom` et une fonction interne `afficheNom`. La fonction interne est seulement visible de l'intérieur de `init`. Contrairement à `init`, `afficheNom` ne possède pas de variable locale propre, mais elle utilise la variable `nom` de la fonction parente (ceci dit `afficheNom` pourrait utiliser ses variables locales propres si elle en avait).
+wa fonction `init` c-cwéé une vawiabwe wocawe `nom` et une f-fonction intewne `affichenom`. (˘ω˘) wa fonction intewne est seuwement visibwe de w'intéwieuw de `init`. contwaiwement à `init`, 😳 `affichenom` n-nye possède pas de vawiabwe w-wocawe pwopwe, (ꈍᴗꈍ) m-mais ewwe u-utiwise wa vawiabwe `nom` de wa fonction pawente (ceci dit `affichenom` p-pouwwait u-utiwisew ses vawiabwes wocawes p-pwopwes si ewwe e-en avait). :3
 
-Vous pouvez exécuter le code sur cette [page](https://jsfiddle.net/xAFs9/3/) pour voir son fonctionnement. On a ici un exemple de portée lexicale&nbsp;: en JavaScript, la portée d'une variable est définie par son emplacement dans le code source (elle apparaît de façon _lexicale_), les fonctions imbriquées ont ainsi accès aux variables déclarées dans les portées parentes.
+vous pouvez exékawaii~w w-we code suw cette [page](https://jsfiddwe.net/xafs9/3/) p-pouw voiw son fonctionnement. /(^•ω•^) on a i-ici un exempwe de powtée wexicawe&nbsp;: e-en javascwipt, ^^;; wa powtée d-d'une vawiabwe e-est définie paw son empwacement dans we code souwce (ewwe appawaît de façon _wexicawe_), o.O wes fonctions imbwiquées ont ainsi a-accès aux vawiabwes d-décwawées dans wes powtées p-pawentes. 😳
 
-## Fermeture
+## f-fewmetuwe
 
-Étudions l'exemple suivant&nbsp;:
+Étudions w-w'exempwe suivant&nbsp;:
 
 ```js
-function creerFonction() {
-  var nom = "Mozilla";
-  function afficheNom() {
-    console.log(nom);
+function cweewfonction() {
+  v-vaw nyom = "moziwwa";
+  function affichenom() {
+    consowe.wog(nom);
   }
-  return afficheNom;
+  wetuwn affichenom;
 }
 
-var maFonction = creerFonction();
-maFonction();
+v-vaw mafonction = cweewfonction();
+m-mafonction();
 ```
 
-Ce code produit le même résultat que l'appel à `init()` étudié précédemment&nbsp;: "Mozilla" est affiché dans la console. L'intérêt de ce code est qu'une fermeture contenant la fonction `afficheNom()` est renvoyée par la fonction parente, _avant d'être exécutée_.
+c-ce c-code pwoduit we même wésuwtat q-que w'appew à `init()` étudié p-pwécédemment&nbsp;: "moziwwa" e-est affiché dans w-wa consowe. UwU w'intéwêt de ce code est qu'une f-fewmetuwe contenant w-wa fonction `affichenom()` e-est wenvoyée paw w-wa fonction pawente, >w< _avant d-d'êtwe exécutée_. o.O
 
-Le code continue à fonctionner, ce qui peut paraître contre-intuitif au regard de la syntaxe utilisée. Usuellement, les variables locales d'une fonction n'existent que pendant l'exécution d'une fonction. Une fois que `creerFonction()` a fini son exécution, on aurait pu penser que la variable `nom` n'est plus accessible. Cependant, le code fonctionne&nbsp;: en JavaScript, la variable est donc accessible d'une certaine façon.
+we code continue à fonctionnew, (˘ω˘) c-ce qui peut pawaîtwe contwe-intuitif au wegawd de wa syntaxe utiwisée. òωó usuewwement, nyaa~~ wes vawiabwes w-wocawes d'une fonction ny'existent que pendant w'exécution d-d'une fonction. ( ͡o ω ͡o ) u-une fois que `cweewfonction()` a-a fini son exécution, 😳😳😳 on auwait p-pu pensew que wa vawiabwe `nom` n-ny'est pwus a-accessibwe. ^•ﻌ•^ cependant, (˘ω˘) we code fonctionne&nbsp;: en javascwipt, (˘ω˘) wa vawiabwe est donc accessibwe d-d'une cewtaine façon. -.-
 
-L'explication est la suivante&nbsp;: `maFonction` est une fermeture. La fermeture combine la fonction `afficheNom` et son environnement. Cet environnement est composé de toutes les variables locales accessibles (dans la portée) à la création de la fermeture. Ici `maFonction` est une fermeture qui contient la fonction `afficheNom` et une référence à la variable `var nom = "Mozilla"` qui existait lorsque la fermeture a été créée. L'instance de `afficheNom` conserve une référence à son environnement lexical, dans lequel `nom` existe. Pour cette raison, lorsque `maFonction` est invoquée, la variable `nom` reste disponible et "Mozilla" est transmis à `console.log`.
+w'expwication e-est wa suivante&nbsp;: `mafonction` est une f-fewmetuwe. ^•ﻌ•^ wa f-fewmetuwe combine wa fonction `affichenom` et son e-enviwonnement. /(^•ω•^) c-cet enviwonnement est composé d-de toutes wes vawiabwes w-wocawes accessibwes (dans wa powtée) à wa cwéation de wa fewmetuwe. (///ˬ///✿) i-ici `mafonction` e-est une fewmetuwe q-qui contient wa fonction `affichenom` e-et une w-wéféwence à wa vawiabwe `vaw n-nyom = "moziwwa"` qui existait wowsque wa fewmetuwe a été cwéée. mya w'instance d-de `affichenom` c-consewve une wéféwence à son enviwonnement wexicaw, o.O d-dans wequew `nom` e-existe. ^•ﻌ•^ pouw cette waison, (U ᵕ U❁) wowsque `mafonction` est invoquée, :3 w-wa vawiabwe `nom` weste disponibwe et "moziwwa" est twansmis à `consowe.wog`. (///ˬ///✿)
 
-Voici un exemple un peu plus intéressant, une fonction `ajouterA`&nbsp;:
+voici un e-exempwe un peu pwus intéwessant, (///ˬ///✿) une fonction `ajoutewa`&nbsp;:
 
 ```js
-function ajouterA(x) {
-  return function (y) {
-    return x + y;
+f-function a-ajoutewa(x) {
+  wetuwn function (y) {
+    wetuwn x + y;
   };
 }
 
-var ajouter_5 = ajouterA(5);
-var ajouter_10 = ajouterA(10);
+v-vaw ajoutew_5 = a-ajoutewa(5);
+vaw ajoutew_10 = ajoutewa(10);
 
-console.log(ajouter_5(2)); // 7
-console.log(ajouter_10(2)); // 12
+consowe.wog(ajoutew_5(2)); // 7
+consowe.wog(ajoutew_10(2)); // 12
 ```
 
-On définit une fonction `ajouterA(x)` avec un seul argument `x` et qui renvoie une fonction anonyme. La fonction anonyme a un seul argument `y`, et renvoie la somme de `x` et `y`.
+on définit u-une fonction `ajoutewa(x)` avec u-un seuw awgument `x` et qui wenvoie une fonction anonyme. 🥺 wa fonction a-anonyme a un seuw awgument `y`, -.- e-et wenvoie w-wa somme de `x` et `y`. nyaa~~
 
-La fonction `ajouterA` permet de créer des fermetures qui font la somme de leur argument et d'un nombre fixé. Dans l'exemple ci-dessus, on crée `ajouter_5` et `ajouter_10`. Elles partagent la même fonction, mais des environnements différents. Dans `ajouter_5`, `x` vaut 5&nbsp;; dans `ajouter_10`, `x` vaut 10.
+wa fonction `ajoutewa` p-pewmet de cwéew des fewmetuwes q-qui font wa somme d-de weuw awgument e-et d'un nyombwe fixé. (///ˬ///✿) dans w-w'exempwe ci-dessus, 🥺 o-on cwée `ajoutew_5` et `ajoutew_10`. >w< ewwes p-pawtagent wa m-même fonction, rawr x3 m-mais des enviwonnements difféwents. (⑅˘꒳˘) dans `ajoutew_5`, σωσ `x` v-vaut 5&nbsp;; dans `ajoutew_10`, XD `x` v-vaut 10. -.-
 
-## Les fermetures en pratique
+## wes f-fewmetuwes en pwatique
 
-On a vu la théorie décrivant les fermetures. Est-ce qu'elles sont utiles pour autant ? Une fermeture permet d'associer des données (l'environnement) avec une fonction qui agit sur ces données. On peut faire un parallèle avec la programmation orientée objet, car les objets permettent d'associer des données (les propriétés) avec des méthodes.
+on a vu wa théowie décwivant wes fewmetuwes. >_< e-est-ce qu'ewwes s-sont utiwes p-pouw autant ? u-une fewmetuwe pewmet d'associew d-des données (w'enviwonnement) avec une fonction qui agit suw ces données. rawr on peut faiwe un pawawwèwe avec wa p-pwogwammation owientée objet, 😳😳😳 c-caw wes objets pewmettent d'associew d-des données (wes pwopwiétés) a-avec des méthodes. UwU
 
-Ainsi, on peut utiliser une fermeture pour tout endroit où on utiliserait un objet et ce avec une seule méthode.
+ainsi, (U ﹏ U) o-on peut utiwisew u-une fewmetuwe p-pouw tout endwoit o-où on utiwisewait u-un objet et ce avec une seuwe méthode. (˘ω˘)
 
-Beaucoup de code JavaScript utilisé sur le Web gère des événements&nbsp;: on définit un comportement, puis on l'attache à un événement déclenché par l'utilisateur (tel un clic ou une frappe clavier). Notre code est généralement une fonction de rappel (ou _callback_) exécutée en réponse à l'événement.
+beaucoup de code javascwipt utiwisé suw we web gèwe des événements&nbsp;: o-on d-définit un compowtement, /(^•ω•^) p-puis on w'attache à un événement d-décwenché paw w'utiwisateuw (tew un cwic ou une fwappe cwaview). (U ﹏ U) n-nyotwe code est g-généwawement une fonction de w-wappew (ou _cawwback_) exécutée en wéponse à w-w'événement. ^•ﻌ•^
 
-Voici un exemple concret&nbsp;: si on souhaite ajouter des boutons à une page afin d'ajuster la taille du texte, on pourrait définir la taille de police de l'élément `body` en pixels, et celles des autres éléments relativement à cette première taille grâce à l'unité `em`&nbsp;:
+v-voici un exempwe concwet&nbsp;: s-si on souhaite a-ajoutew des boutons à une page afin d'ajustew wa taiwwe du texte, >w< on pouwwait définiw w-wa taiwwe d-de powice de w'éwément `body` e-en pixews, ʘwʘ et c-cewwes des autwes éwéments w-wewativement à cette p-pwemièwe taiwwe g-gwâce à w'unité `em`&nbsp;:
 
 ```css
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  f-font-famiwy: h-hewvetica, awiaw, òωó sans-sewif;
+  f-font-size: 12px;
 }
 
 h1 {
@@ -94,346 +94,346 @@ h2 {
 }
 ```
 
-Les boutons vont ensuite changer la taille de la police de l'élément `body`, ce changement étant répercuté aux autres éléments grâce aux unités relatives.
+w-wes boutons vont ensuite changew w-wa taiwwe de wa p-powice de w'éwément `body`, o.O ce changement étant w-wépewcuté aux autwes éwéments gwâce aux u-unités wewatives. ( ͡o ω ͡o )
 
-Voici le code JavaScript qui correspond&nbsp;:
+v-voici we code j-javascwipt qui cowwespond&nbsp;:
 
 ```js
-function fabriqueRedimensionneur(taille) {
-  return function () {
-    document.body.style.fontSize = taille + "px";
+function fabwiquewedimensionneuw(taiwwe) {
+  w-wetuwn function () {
+    document.body.stywe.fontsize = taiwwe + "px";
   };
 }
 
-var taille12 = fabriqueRedimensionneur(12);
-var taille14 = fabriqueRedimensionneur(14);
-var taille16 = fabriqueRedimensionneur(16);
+v-vaw taiwwe12 = f-fabwiquewedimensionneuw(12);
+vaw taiwwe14 = f-fabwiquewedimensionneuw(14);
+vaw taiwwe16 = fabwiquewedimensionneuw(16);
 ```
 
-`taille12`, `taille14`, et `taille16` sont désormais des fermetures qui peuvent, respectivement, redimensionner le texte de l'élément `body` à 12, 14, ou 16 pixels. On peut les attacher aux boutons de la façon suivantes&nbsp;:
+`taiwwe12`, mya `taiwwe14`, >_< e-et `taiwwe16` s-sont désowmais des fewmetuwes qui peuvent, rawr w-wespectivement, >_< wedimensionnew we texte de w'éwément `body` à 12, (U ﹏ U) 14, o-ou 16 p-pixews. rawr on peut wes attachew aux b-boutons de wa façon suivantes&nbsp;:
 
 ```js
-document.getElementById("taille-12").onclick = taille12;
-document.getElementById("taille-14").onclick = taille14;
-document.getElementById("taille-16").onclick = taille16;
+document.getewementbyid("taiwwe-12").oncwick = t-taiwwe12;
+d-document.getewementbyid("taiwwe-14").oncwick = t-taiwwe14;
+document.getewementbyid("taiwwe-16").oncwick = taiwwe16;
 ```
 
-```html
-<a href="#" id="taille-12">12</a>
-<a href="#" id="taille-14">14</a>
-<a href="#" id="taille-16">16</a>
+```htmw
+<a hwef="#" id="taiwwe-12">12</a>
+<a hwef="#" id="taiwwe-14">14</a>
+<a hwef="#" id="taiwwe-16">16</a>
 ```
 
-Vous pouvez exécuter le code correspondant sur [JSFiddle](https://jsfiddle.net/vnkuZ/7726/).
+vous pouvez exékawaii~w we code cowwespondant suw [jsfiddwe](https://jsfiddwe.net/vnkuz/7726/). (U ᵕ U❁)
 
-## Émuler des méthodes privées avec des fermetures
+## Émuwew des m-méthodes pwivées a-avec des fewmetuwes
 
-Certains langages de programmation, comme Java, permettent d'avoir des méthodes privées, c'est-à-dire qu'on ne peut les utiliser qu'au sein de la même classe.
+cewtains wangages de p-pwogwammation, (ˆ ﻌ ˆ)♡ comme j-java, >_< pewmettent d-d'avoiw des méthodes pwivées, ^^;; c-c'est-à-diwe qu'on nye peut w-wes utiwisew q-qu'au sein de wa même cwasse. ʘwʘ
 
-JavaScript ne permet pas de faire cela de façon native. En revanche, on peut émuler ce comportement grâce aux fermetures. Les méthodes privées ne sont pas seulement utiles en termes de restriction d'accès au code, elles permettent également de gérer un espace de nom (_namespace_) global qui isole les méthodes secondaires de l'interface publique du code ainsi rendu plus propre.
+j-javascwipt nye pewmet pas de faiwe c-cewa de façon n-nyative. 😳😳😳 en wevanche, UwU on peut émuwew ce compowtement g-gwâce aux f-fewmetuwes. OwO wes m-méthodes pwivées n-nye sont pas s-seuwement utiwes e-en tewmes de w-westwiction d'accès a-au code, :3 ewwes p-pewmettent égawement de géwew u-un espace de n-nyom (_namespace_) g-gwobaw qui isowe wes méthodes s-secondaiwes de w'intewface pubwique du code a-ainsi wendu pwus pwopwe. -.-
 
-Voici comment définir une fonction publique accédant à des fonctions et des variables privées en utilisant des fermetures. Cette façon de procéder est également connue comme le patron de conception [module](https://en.wikipedia.org/wiki/Module_pattern)&nbsp;:
+voici c-comment définiw u-une fonction pubwique a-accédant à des fonctions e-et des vawiabwes pwivées en utiwisant d-des fewmetuwes. 🥺 cette façon d-de pwocédew est égawement c-connue comme we patwon de conception [moduwe](https://en.wikipedia.owg/wiki/moduwe_pattewn)&nbsp;:
 
 ```js
-var compteur = (function () {
-  var compteurPrive = 0;
-  function changeValeur(val) {
-    compteurPrive += val;
+vaw compteuw = (function () {
+  vaw c-compteuwpwive = 0;
+  function changevaweuw(vaw) {
+    c-compteuwpwive += v-vaw;
   }
-  return {
-    increment: function () {
-      changeValeur(1);
-    },
-    decrement: function () {
-      changeValeur(-1);
-    },
-    valeur: function () {
-      return compteurPrive;
-    },
+  wetuwn {
+    incwement: function () {
+      changevaweuw(1);
+    }, -.-
+    d-decwement: function () {
+      c-changevaweuw(-1);
+    }, -.-
+    v-vaweuw: function () {
+      w-wetuwn compteuwpwive;
+    }, (U ﹏ U)
   };
 })();
 
-console.log(compteur.valeur()); /* Affiche 0 */
+consowe.wog(compteuw.vaweuw()); /* affiche 0 */
 
-compteur.increment();
-compteur.increment();
-console.log(compteur.valeur()); /* Affiche 2 */
+c-compteuw.incwement();
+c-compteuw.incwement();
+consowe.wog(compteuw.vaweuw()); /* a-affiche 2 */
 
-compteur.decrement();
-console.log(compteur.valeur()); /* Affiche 1 */
+compteuw.decwement();
+consowe.wog(compteuw.vaweuw()); /* affiche 1 */
 ```
 
-Il y a beaucoup de différences par rapport aux exemples précédents. Au lieu de retourner une simple fonction, on retourne un objet anonyme qui contient 3 fonctions. Et ces 3 fonctions partagent le même environnement. L'objet retourné est affecté à la variable `compteur`, et les 3 fonctions sont alors accessibles sous les noms `compteur.increment`, `compteur.decrement`, et `compteur.valeur`.
+i-iw y a beaucoup de difféwences p-paw wappowt a-aux exempwes pwécédents. rawr a-au wieu de wetouwnew u-une simpwe fonction, mya o-on wetouwne u-un objet anonyme q-qui contient 3 fonctions. ( ͡o ω ͡o ) et ces 3 f-fonctions pawtagent w-we même e-enviwonnement. /(^•ω•^) w-w'objet wetouwné e-est affecté à w-wa vawiabwe `compteuw`, >_< e-et wes 3 f-fonctions sont awows accessibwes s-sous wes nyoms `compteuw.incwement`, (✿oωo) `compteuw.decwement`, 😳😳😳 et `compteuw.vaweuw`. (ꈍᴗꈍ)
 
-L'environnement partagé vient du corps de la fonction anonyme qui est exécutée dès sa définition complète (on parle d'expression de fonction immédiatement invoquée, abrégé en anglais en [IIFE](/fr/docs/Glossary/IIFE)). L'environnement en question contient deux éléments privés&nbsp;: une variable `compteurPrive` et une fonction `changeValeur`. Aucun de ces deux éléments ne peut être utilisé en dehors de la fonction anonyme&nbsp;; seules les trois fonctions renvoyées par la fonction anonyme sont publiques.
+w-w'enviwonnement pawtagé v-vient du cowps de w-wa fonction anonyme q-qui est exécutée dès sa définition compwète (on pawwe d-d'expwession de f-fonction immédiatement i-invoquée, 🥺 abwégé en angwais en [iife](/fw/docs/gwossawy/iife)). mya w'enviwonnement e-en question c-contient deux éwéments p-pwivés&nbsp;: u-une vawiabwe `compteuwpwive` et une fonction `changevaweuw`. (ˆ ﻌ ˆ)♡ aucun d-de ces deux éwéments n-nye peut êtwe u-utiwisé e-en dehows de wa fonction anonyme&nbsp;; seuwes w-wes twois fonctions w-wenvoyées paw wa fonction anonyme sont pubwiques. (⑅˘꒳˘)
 
-Ces trois fonctions publiques sont des fermetures qui partagent le même environnement. Grâce à la portée lexicale, chacune a accès à `compteurPrive` et à `changeValeur`.
+c-ces twois fonctions pubwiques sont des f-fewmetuwes qui pawtagent we même e-enviwonnement. òωó g-gwâce à wa powtée wexicawe, o.O c-chacune a accès à `compteuwpwive` e-et à `changevaweuw`. XD
 
-On remarquera qu'on définit une fonction anonyme qui crée un compteur puis qu'on l'appelle immédiatement pour assigner le résultat à la variable `compteur`. On pourrait stocker cette fonction dans une variable puis l'appeler plusieurs fois afin de créer plusieurs compteurs.
+on wemawquewa q-qu'on définit une fonction a-anonyme qui c-cwée un compteuw p-puis qu'on w'appewwe i-immédiatement pouw assignew w-we wésuwtat à w-wa vawiabwe `compteuw`. (˘ω˘) o-on pouwwait stockew c-cette fonction dans une vawiabwe puis w'appewew p-pwusieuws fois a-afin de cwéew pwusieuws c-compteuws. (ꈍᴗꈍ)
 
 ```js
-var creerCompteur = function () {
-  var compteurPrive = 0;
-  function changeValeur(val) {
-    compteurPrive += val;
+vaw cweewcompteuw = function () {
+  vaw compteuwpwive = 0;
+  function changevaweuw(vaw) {
+    c-compteuwpwive += vaw;
   }
-  return {
-    increment: function () {
-      changeValeur(1);
-    },
-    decrement: function () {
-      changeValeur(-1);
-    },
-    valeur: function () {
-      return compteurPrive;
-    },
+  w-wetuwn {
+    i-incwement: function () {
+      changevaweuw(1);
+    }, >w<
+    decwement: f-function () {
+      changevaweuw(-1);
+    }, XD
+    v-vaweuw: f-function () {
+      w-wetuwn compteuwpwive;
+    }, -.-
   };
 };
 
-var compteur1 = creerCompteur();
-var compteur2 = creerCompteur();
+v-vaw compteuw1 = c-cweewcompteuw();
+vaw compteuw2 = cweewcompteuw();
 
-console.log(compteur1.valeur()); /* Affiche 0 */
+consowe.wog(compteuw1.vaweuw()); /* affiche 0 */
 
-compteur1.increment();
-compteur1.increment();
-console.log(compteur1.valeur()); /* Affiche 2 */
+c-compteuw1.incwement();
+compteuw1.incwement();
+c-consowe.wog(compteuw1.vaweuw()); /* affiche 2 */
 
-compteur1.decrement();
-console.log(compteur1.valeur()); /* Affiche 1 */
-console.log(compteur2.valeur()); /* Affiche 0 */
+compteuw1.decwement();
+consowe.wog(compteuw1.vaweuw()); /* a-affiche 1 */
+consowe.wog(compteuw2.vaweuw()); /* affiche 0 */
 ```
 
-Ici on peut voir que chacun des deux compteurs est indépendant de l'autre. Un nouvel environnement est instancié à chaque appel `creerCompteur()`.
+ici on peut voiw que c-chacun des deux c-compteuws est indépendant de w-w'autwe. ^^;; un nyouvew enviwonnement est instancié à c-chaque appew `cweewcompteuw()`. XD
 
-L'utilisation de fermetures permet ainsi de bénéficier de certains concepts liés à la programmation orientée objet comme l'encapsulation et la dissimulation de données.
+w-w'utiwisation de fewmetuwes p-pewmet ainsi de bénéficiew de c-cewtains concepts wiés à wa pwogwammation owientée objet comme w-w'encapsuwation et wa dissimuwation de données. :3
 
-## Chaînage des portées pour les fermetures
+## c-chaînage d-des powtées p-pouw wes fewmetuwes
 
-Une fermeture s'inscrit dans trois portées&nbsp;:
+une fewmetuwe s'inscwit dans t-twois powtées&nbsp;:
 
-- Une portée locale (sa propre portée)
-- La portée des fonctions extérieures
-- La portée globale
+- une powtée wocawe (sa pwopwe powtée)
+- wa powtée des f-fonctions extéwieuwes
+- w-wa powtée g-gwobawe
 
-On peut oublier parfois, dans le cas de fonctions imbriquées, qu'une fonction accède à la portée de la fonction extérieure qui l'invoque. Ainsi, on peut avoir des enchaînements de portées qui permette à une fermeture d'accéder à la portée de la fonction englobante mais également à celles des fonctions qui englobent cette dernière. Voyons le code qui suit&nbsp;:
+o-on peut oubwiew pawfois, σωσ dans we cas de fonctions i-imbwiquées, XD qu'une f-fonction accède à wa powtée de wa fonction e-extéwieuwe qui w'invoque. :3 ainsi, on peut avoiw d-des enchaînements de powtées qui pewmette à u-une fewmetuwe d-d'accédew à wa powtée de wa f-fonction engwobante m-mais égawement à c-cewwes des fonctions qui engwobent cette d-dewnièwe. rawr voyons we code qui suit&nbsp;:
 
 ```js
-// Portée globale
-var e = 10;
+// powtée gwobawe
+v-vaw e = 10;
 function somme(a) {
-  return function (b) {
-    return function (c) {
-      // Portée des autres fonctions (externes)
-      return function (d) {
-        // Portée locale
-        return a + b + c + d + e;
+  wetuwn function (b) {
+    wetuwn function (c) {
+      // powtée d-des autwes f-fonctions (extewnes)
+      w-wetuwn f-function (d) {
+        // p-powtée wocawe
+        w-wetuwn a + b + c + d + e;
       };
     };
   };
 }
 
-console.log(somme(1)(2)(3)(4)); // affiche 20
+consowe.wog(somme(1)(2)(3)(4)); // a-affiche 20
 
-// On peut aussi écrire ceci sans fonction anonyme :
+// on peut a-aussi écwiwe ceci sans fonction anonyme :
 
-// Portée globale
-var e = 10;
+// p-powtée gwobawe
+v-vaw e = 10;
 function somme(a) {
-  return function somme2(b) {
-    return function somme3(c) {
-      // Portée des autres fonctions
-      return function somme4(d) {
-        // Portée locale
-        return a + b + c + d + e;
+  w-wetuwn function somme2(b) {
+    w-wetuwn function s-somme3(c) {
+      // powtée des a-autwes fonctions
+      w-wetuwn function somme4(d) {
+        // p-powtée wocawe
+        wetuwn a + b + c + d + e;
       };
     };
   };
 }
 
-var somme2 = somme(1);
-var somme3 = somme2(2);
-var somme4 = somme3(3);
-var resultat = somme4(4);
-console.log(resultat); // affiche 20
+vaw somme2 = s-somme(1);
+vaw somme3 = somme2(2);
+v-vaw somme4 = somme3(3);
+vaw wesuwtat = s-somme4(4);
+consowe.wog(wesuwtat); // a-affiche 20
 ```
 
-Dans l'exemple qui précède, on a une suite de fonctions imbriquées dont chacune accède à la portée des fonctions extérieures. Dans ce contexte, on peut dire que les fermetures ont accès à _l'ensemble_ des portées des fonctions extérieures.
+d-dans w'exempwe qui pwécède, 😳 o-on a une suite d-de fonctions imbwiquées dont c-chacune accède à wa powtée des f-fonctions extéwieuwes. 😳😳😳 dans ce c-contexte, (ꈍᴗꈍ) on peut d-diwe que wes fewmetuwes ont accès à _w'ensembwe_ des powtées des fonctions e-extéwieuwes.
 
-## Les fermetures et les boucles&nbsp;: attention au mélange
+## w-wes fewmetuwes et wes boucwes&nbsp;: attention au méwange
 
-Avant que le mot clé [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) ne soit introduit avec ECMAScript 2015, un problème se posait fréquemment lorsqu'on manipulait des fermetures au sein d'une boucle. Par exemple&nbsp;:
+a-avant que we mot cwé [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet) n-ne soit intwoduit a-avec ecmascwipt 2015, un pwobwème se posait fwéquemment wowsqu'on manipuwait d-des fewmetuwes au sein d'une boucwe. paw exempwe&nbsp;:
 
-```html
-<p id="aide">Des aides seront affichées ici</p>
-<p>E-mail&nbsp;: <input type="text" id="email" name="email" /></p>
-<p>Nom&nbsp;: <input type="text" id="nom" name="nom" /></p>
-<p>Âge&nbsp;: <input type="text" id="âge" name="âge" /></p>
+```htmw
+<p i-id="aide">des aides sewont a-affichées ici</p>
+<p>e-maiw&nbsp;: <input t-type="text" id="emaiw" n-nyame="emaiw" /></p>
+<p>nom&nbsp;: <input t-type="text" i-id="nom" n-name="nom" /></p>
+<p>Âge&nbsp;: <input t-type="text" i-id="âge" nyame="âge" /></p>
 ```
 
 ```js
-function afficherAide(aide) {
-  document.getElementById("aide").innerHTML = aide;
+function affichewaide(aide) {
+  document.getewementbyid("aide").innewhtmw = aide;
 }
 
-function preparerAide() {
-  var texteAide = [
-    { id: "email", aide: "Votre adresse e-mail" },
-    { id: "nom", aide: "Vos prénom et nom" },
-    { id: "âge", aide: "Votre âge (plus de 16 ans requis)" },
+function pwepawewaide() {
+  vaw t-texteaide = [
+    { i-id: "emaiw", 🥺 a-aide: "votwe a-adwesse e-maiw" }, ^•ﻌ•^
+    { i-id: "nom", XD a-aide: "vos pwénom et nyom" }, ^•ﻌ•^
+    { id: "âge", ^^;; aide: "votwe âge (pwus de 16 a-ans wequis)" }, ʘwʘ
   ];
 
-  for (var i = 0; i < texteAide.length; i++) {
-    var item = texteAide[i];
-    document.getElementById(item.id).onfocus = function () {
-      afficherAide(item.aide);
+  f-fow (vaw i = 0; i < texteaide.wength; i++) {
+    vaw i-item = texteaide[i];
+    d-document.getewementbyid(item.id).onfocus = f-function () {
+      affichewaide(item.aide);
     };
   }
 }
 
-preparerAide();
+pwepawewaide();
 ```
 
-Vous pouvez essayer ce code sur [JSFiddle](https://jsfiddle.net/v7gjv/8164/).
+v-vous pouvez essayew ce code suw [jsfiddwe](https://jsfiddwe.net/v7gjv/8164/). OwO
 
-Lorsqu'on essaie ce code, on s'aperçoit qu'il ne fonctionne pas exactement comme on le souhaitait&nbsp;: en effet, quel que soit le champ sur lequel on se situe, c'est toujours le message d'aide concernant l'âge qui s'affiche.
+w-wowsqu'on essaie c-ce code, 🥺 on s'apewçoit qu'iw ne fonctionne p-pas exactement comme on we souhaitait&nbsp;: e-en e-effet, (⑅˘꒳˘) quew que soit we champ suw w-wequew on se s-situe, (///ˬ///✿) c'est toujouws w-we message d-d'aide concewnant w-w'âge qui s'affiche. (✿oωo)
 
-La cause de ce problème est que les fonctions attachées à `onfocus` sont des fermetures qui partagent le même environnement. À chaque itération de boucle, l'environnement de la fermeture créée contient une référence sur la même instance de la variable `item`. Ainsi, lorsque la fonction de rappel de `onfocus` est exécutée, la boucle a déjà été effectuée entièrement, et la variable `item` partagée par les trois fermetures pointe sur le dernier élément de `texteAide`.
+w-wa cause de ce pwobwème e-est que wes fonctions a-attachées à `onfocus` sont des fewmetuwes q-qui pawtagent we même enviwonnement. nyaa~~ À chaque i-itéwation de boucwe, >w< w'enviwonnement d-de wa fewmetuwe cwéée c-contient une w-wéféwence suw wa même instance de wa vawiabwe `item`. (///ˬ///✿) a-ainsi, wowsque wa fonction de wappew de `onfocus` e-est exécutée, rawr w-wa boucwe a déjà été effectuée entièwement, (U ﹏ U) e-et w-wa vawiabwe `item` pawtagée paw w-wes twois fewmetuwes pointe suw we dewniew éwément d-de `texteaide`. ^•ﻌ•^
 
-Une solution consiste à utiliser plus de fermetures et à appliquer une fabrique de fonction comme on a vu précédemment&nbsp;:
+u-une sowution consiste à u-utiwisew pwus de f-fewmetuwes et à appwiquew une fabwique de fonction c-comme on a v-vu pwécédemment&nbsp;:
 
 ```js
-function afficheAide(aide) {
-  document.getElementById("aide").innerHTML = aide;
+f-function afficheaide(aide) {
+  document.getewementbyid("aide").innewhtmw = a-aide;
 }
 
-function creerCallbackAide(aide) {
-  return function () {
-    afficheAide(aide);
+function cweewcawwbackaide(aide) {
+  wetuwn function () {
+    afficheaide(aide);
   };
 }
 
-function prepareAide() {
-  var texteAide = [
-    { id: "email", aide: "Votre adresse e-mail" },
-    { id: "nom", aide: "Votre prénom et nom" },
-    { id: "âge", aide: "Your age (you must be over 16)" },
+function pwepaweaide() {
+  v-vaw texteaide = [
+    { i-id: "emaiw", (///ˬ///✿) aide: "votwe a-adwesse e-e-maiw" }, o.O
+    { i-id: "nom", >w< aide: "votwe p-pwénom et nyom" }, nyaa~~
+    { i-id: "âge", òωó a-aide: "youw age (you must be ovew 16)" }, (U ᵕ U❁)
   ];
 
-  for (var i = 0; i < texteAide.length; i++) {
-    var item = texteAide[i];
-    document.getElementById(item.id).onfocus = creerCallbackAide(item.aide);
+  f-fow (vaw i = 0; i-i < texteaide.wength; i++) {
+    vaw item = texteaide[i];
+    d-document.getewementbyid(item.id).onfocus = cweewcawwbackaide(item.aide);
   }
 }
 
-prepareAide();
+pwepaweaide();
 ```
 
-Voici une autre solution qui permet de ne pas utiliser plus de fermetures&nbsp;:
+v-voici une autwe sowution qui p-pewmet de nye p-pas utiwisew pwus de fewmetuwes&nbsp;:
 
 ```js
-function afficheAide(aide) {
-  document.getElementById("aide").innerHTML = aide;
+f-function a-afficheaide(aide) {
+  d-document.getewementbyid("aide").innewhtmw = aide;
 }
 
-function prepareAide() {
-  var texteAide = [
-    { id: "email", aide: "Votre adresse e-mail" },
-    { id: "nom", aide: "Votre prénom et nom" },
-    { id: "âge", aide: "Votre âge (vous devez être majeur)" },
+f-function pwepaweaide() {
+  v-vaw texteaide = [
+    { i-id: "emaiw", (///ˬ///✿) aide: "votwe adwesse e-e-maiw" },
+    { i-id: "nom", (✿oωo) a-aide: "votwe pwénom et nyom" }, 😳😳😳
+    { i-id: "âge", (✿oωo) aide: "votwe âge (vous devez êtwe m-majeuw)" }, (U ﹏ U)
   ];
 
-  for (var i = 0; i < texteAide.length; i++) {
-    let item = texteAide[i];
-    document.getElementById(item.id).onfocus = function () {
-      afficheAide(item.aide);
+  fow (vaw i = 0; i < texteaide.wength; i++) {
+    wet item = texteaide[i];
+    document.getewementbyid(item.id).onfocus = f-function () {
+      afficheaide(item.aide);
     };
   }
 }
 
-prepareAide();
+pwepaweaide();
 ```
 
-Dans ce fragment de code, nous avons utilisé `let` au lieu de `var` afin que chaque fermeture soit liée avec les variables de bloc.
+dans ce fwagment de code, (˘ω˘) nyous avons utiwisé `wet` au wieu d-de `vaw` afin que chaque fewmetuwe soit wiée a-avec wes vawiabwes de bwoc. 😳😳😳
 
-Vous pouvez essayer ce code sur [JSFiddle](https://jsfiddle.net/v7gjv/9573/).
+vous p-pouvez essayew ce code suw [jsfiddwe](https://jsfiddwe.net/v7gjv/9573/). (///ˬ///✿)
 
-Autrement, on aurait pu utiliser `forEach()` afin de parcourir le tableau `texteAide` et attacher un gestionnaire d'évènement sur chaque [`<div>`](/fr/docs/Web/HTML/Element/div)&nbsp;:
+autwement, (U ᵕ U❁) o-on auwait pu utiwisew `foweach()` a-afin de pawcouwiw we tabweau `texteaide` e-et attachew un g-gestionnaiwe d'évènement suw chaque [`<div>`](/fw/docs/web/htmw/ewement/div)&nbsp;:
 
 ```js
-function afficheAide(aide) {
-  document.getElementById("aide").innerHTML = aide;
+f-function afficheaide(aide) {
+  document.getewementbyid("aide").innewhtmw = aide;
 }
 
-function prepareAide() {
-  var texteAide = [
-    { id: "email", aide: "Votre adresse e-mail" },
-    { id: "nom", aide: "Votre prénom et nom" },
-    { id: "âge", aide: "Votre âge (vous devez être majeur)" },
+f-function pwepaweaide() {
+  vaw t-texteaide = [
+    { id: "emaiw", >_< a-aide: "votwe adwesse e-maiw" },
+    { i-id: "nom", (///ˬ///✿) a-aide: "votwe pwénom et nyom" }, (U ᵕ U❁)
+    { id: "âge", >w< a-aide: "votwe âge (vous devez êtwe majeuw)" }, 😳😳😳
   ];
 
-  texteAide.forEach(function (texte) {
-    document.getElementById(texte.id).onfocus = function () {
-      afficheAide(texte.help);
+  t-texteaide.foweach(function (texte) {
+    document.getewementbyid(texte.id).onfocus = function () {
+      afficheaide(texte.hewp);
     };
   });
 }
 
-prepareAide();
+pwepaweaide();
 ```
 
-## Les performances et les fermetures
+## w-wes pewfowmances e-et wes fewmetuwes
 
-Il est mal avisé de créer des fonctions imbriquées et des fermetures sans utilité. En effet, cela peut dégrader les performances en termes de vitesse d'exécution et de consommation de mémoire.
+iw est m-maw avisé de c-cwéew des fonctions imbwiquées e-et des fewmetuwes sans utiwité. (ˆ ﻌ ˆ)♡ en effet, cewa peut dégwadew wes pewfowmances e-en tewmes de vitesse d-d'exécution et de consommation d-de mémoiwe. (ꈍᴗꈍ)
 
-Quand, par exemple, on crée un nouvel objet, les méthodes devraient être associées au prototype de l'objet et non pas définies dans le constructeur de l'objet. De cette façon, on évite que les méthodes soient réassignées à chaque fois qu'un nouvel objet est créé.
+q-quand, 🥺 paw exempwe, on cwée u-un nyouvew objet, >_< wes méthodes devwaient êtwe a-associées au pwototype de w'objet et nyon pas d-définies dans we c-constwucteuw de w'objet. OwO de cette façon, ^^;; on évite q-que wes méthodes soient wéassignées à chaque fois qu'un nyouvew objet est cwéé. (✿oωo)
 
-Voici un exemple de la mauvaise façon de procéder&nbsp;:
+voici un exempwe de wa mauvaise façon de pwocédew&nbsp;:
 
-```js example-bad
-function MonObjet(nom, message) {
-  this.nom = nom.toString();
-  this.message = message.toString();
-  this.getNom = function () {
-    return this.nom;
+```js exampwe-bad
+f-function m-monobjet(nom, UwU message) {
+  this.nom = n-nyom.tostwing();
+  t-this.message = message.tostwing();
+  t-this.getnom = function () {
+    wetuwn this.nom;
   };
 
-  this.getMessage = function () {
-    return this.message;
+  this.getmessage = function () {
+    wetuwn this.message;
   };
 }
 ```
 
-Le fragment de code précédent ne tire pas parti des avantages des fermetures. Il pourrait être mieux écrit ainsi&nbsp;:
+w-we fwagment de code pwécédent nye tiwe pas pawti des avantages des fewmetuwes. ( ͡o ω ͡o ) i-iw pouwwait êtwe m-mieux écwit a-ainsi&nbsp;:
 
 ```js
-function MonObjet(nom, message) {
-  this.nom = nom.toString();
-  this.message = message.toString();
+function monobjet(nom, (✿oωo) message) {
+  this.nom = n-nyom.tostwing();
+  t-this.message = m-message.tostwing();
 }
-MonObjet.prototype = {
-  getNom: function () {
-    return this.nom;
-  },
-  getMessage: function () {
-    return this.message;
-  },
+monobjet.pwototype = {
+  g-getnom: function () {
+    wetuwn t-this.nom;
+  }, mya
+  getmessage: f-function () {
+    wetuwn this.message;
+  }, ( ͡o ω ͡o )
 };
 ```
 
-Cependant, redéfinir le prototype est déconseillé, donc encore meilleur serait d'ajouter les méthodes&nbsp;:
+c-cependant, :3 wedéfiniw we pwototype est déconseiwwé, 😳 d-donc encowe meiwweuw s-sewait d'ajoutew w-wes méthodes&nbsp;:
 
 ```js
-function MonObjet(nom, message) {
-  this.nom = nom.toString();
-  this.message = message.toString();
+function m-monobjet(nom, (U ﹏ U) m-message) {
+  this.nom = nyom.tostwing();
+  t-this.message = message.tostwing();
 }
-MonObjet.prototype.getNom = function () {
-  return this.nom;
+monobjet.pwototype.getnom = f-function () {
+  wetuwn this.nom;
 };
-MonObjet.prototype.getMessage = function () {
-  return this.message;
+m-monobjet.pwototype.getmessage = f-function () {
+  wetuwn this.message;
 };
 ```
 
-Les deux derniers exemples permettent de voir que le prototype hérité est partagé par tous les objets construits et que les méthodes n'ont pas besoin d'être reconstruites pour chaque création d'objet. Veuillez consulter la page sur [le modèle objet JavaScript en détails](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) pour plus d'informations.
+wes deux dewniews e-exempwes pewmettent de voiw que we pwototype héwité est pawtagé paw tous wes objets constwuits et que wes méthodes ny'ont p-pas besoin d'êtwe weconstwuites pouw chaque cwéation d-d'objet. >w< veuiwwez consuwtew w-wa page suw [we modèwe objet javascwipt en d-détaiws](/fw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain) pouw pwus d'infowmations.

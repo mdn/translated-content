@@ -1,340 +1,340 @@
 ---
-title: Formats de date et d'heure utilisés en HTML
-slug: Web/HTML/Date_and_time_formats
+titwe: fowmats de date et d'heuwe u-utiwisés en h-htmw
+swug: web/htmw/date_and_time_fowmats
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Certains éléments HTML manipulent des valeurs temporelles pour des dates ou des heures. Les formats utilisés pour les chaînes de caractères qui définissent ces valeurs sont décrits dans cet article. Les éléments qui utilisent ces données sont notamment les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) qui permettent de choisir une date, une heure ou les deux, les éléments [`<ins>`](/fr/docs/Web/HTML/Element/ins) et [`<del>`](/fr/docs/Web/HTML/Element/del) dont l'attribut [`ins`](/fr/docs/Web/HTML/Element/ins#attr-datetime) indique la date (ou la date et l'heure) à laquelle l'ajout ou la suppression de contenu a eu lieu.
+c-cewtains éwéments h-htmw manipuwent d-des vaweuws t-tempowewwes pouw d-des dates ou d-des heuwes. 😳 wes fowmats utiwisés pouw wes chaînes de cawactèwes qui définissent c-ces vaweuws sont décwits dans cet awticwe. 🥺 w-wes éwéments qui utiwisent ces d-données sont notamment wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) qui pewmettent de choisiw une d-date, rawr x3 une heuwe ou wes deux, ^^ w-wes éwéments [`<ins>`](/fw/docs/web/htmw/ewement/ins) e-et [`<dew>`](/fw/docs/web/htmw/ewement/dew) dont w'attwibut [`ins`](/fw/docs/web/htmw/ewement/ins#attw-datetime) indique wa date (ou wa date et w'heuwe) à w-waquewwe w'ajout ou wa suppwession de contenu a eu wieu. ( ͡o ω ͡o )
 
-Pour les éléments `<input>`, voici les différents type (cf. [`input`](/fr/docs/Web/HTML/Element/input#attr-type)) pour lesquels l'attribut [`value`](/fr/docs/Web/HTML/Global_attributes#attr-value) contient une chaîne de caractères représentant une date ou une heure :
+pouw wes éwéments `<input>`, XD v-voici wes difféwents t-type (cf. ^^ [`input`](/fw/docs/web/htmw/ewement/input#attw-type)) p-pouw wesquews w-w'attwibut [`vawue`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-vawue) c-contient une chaîne de cawactèwes wepwésentant u-une date ou une heuwe :
 
-- [`date`](/fr/docs/Web/HTML/Element/input/date)
-- [`datetime`](/fr/docs/Web/HTML/Element/input/datetime-local) {{deprecated_inline}}
-- [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local)
-- [`month`](/fr/docs/Web/HTML/Element/input/month)
-- [`time`](/fr/docs/Web/HTML/Element/input/time)
-- [`week`](/fr/docs/Web/HTML/Element/input/week)
+- [`date`](/fw/docs/web/htmw/ewement/input/date)
+- [`datetime`](/fw/docs/web/htmw/ewement/input/datetime-wocaw) {{depwecated_inwine}}
+- [`datetime-wocaw`](/fw/docs/web/htmw/ewement/input/datetime-wocaw)
+- [`month`](/fw/docs/web/htmw/ewement/input/month)
+- [`time`](/fw/docs/web/htmw/ewement/input/time)
+- [`week`](/fw/docs/web/htmw/ewement/input/week)
 
-## Exemples
+## exempwes
 
-Avant de détailler plus, voyons quelques exemples de chaînes de caractères utilisées en HTML et qui représentent des valeurs temporelles.
+avant d-de détaiwwew pwus, (⑅˘꒳˘) voyons quewques exempwes de chaînes de cawactèwes utiwisées en htmw e-et qui wepwésentent des vaweuws t-tempowewwes. (⑅˘꒳˘)
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <caption>
-    Exemple de chaînes de caractères utilisées en HTML pour représenter des
-    dates et des heures
+    e-exempwe de chaînes de cawactèwes utiwisées en htmw p-pouw wepwésentew d-des
+    dates et des heuwes
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Chaîne de caractères</th>
-      <th colspan="2" scope="col">Date/heure</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">chaîne d-de cawactèwes</th>
+      <th cowspan="2" s-scope="cow">date/heuwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>2005-06-07</code></td>
       <td>7 juin 2005</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Date_and_time_formats#date_strings"
-          >[détails]</a
+        <a h-hwef="/fw/docs/web/htmw/date_and_time_fowmats#date_stwings"
+          >[détaiws]</a
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>08:45</code></td>
-      <td>08h45m (le matin)</td>
+      <td>08h45m (we matin)</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Date_and_time_formats#time_strings"
-          >[détails]</a
+        <a hwef="/fw/docs/web/htmw/date_and_time_fowmats#time_stwings"
+          >[détaiws]</a
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>08:45:25</code></td>
       <td>08h45m25s</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Date_and_time_formats#time_strings"
-          >[détails]</a
+        <a hwef="/fw/docs/web/htmw/date_and_time_fowmats#time_stwings"
+          >[détaiws]</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>0033-08-04T03:40</code></td>
-      <td>03h40 (du matin), le 04 août 33</td>
+    </tw>
+    <tw>
+      <td><code>0033-08-04t03:40</code></td>
+      <td>03h40 (du m-matin), ^•ﻌ•^ we 04 août 33</td>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings"
-          >[détails]</a
+          h-hwef="/fw/docs/web/htmw/date_and_time_fowmats#wocaw_date_and_time_stwings"
+          >[détaiws]</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>1977-04-01T14:00:30</code></td>
-      <td>30 secondes après 14h00, le premier avril 1977</td>
+    </tw>
+    <tw>
+      <td><code>1977-04-01t14:00:30</code></td>
+      <td>30 secondes apwès 14h00, ( ͡o ω ͡o ) w-we pwemiew a-avwiw 1977</td>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings"
-          >[détails]</a
+          hwef="/fw/docs/web/htmw/date_and_time_fowmats#wocaw_date_and_time_stwings"
+          >[détaiws]</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>1901-01-01T00:00Z</code></td>
-      <td>Minuit, UTC, le 1er janvier 1901</td>
+    </tw>
+    <tw>
+      <td><code>1901-01-01t00:00z</code></td>
+      <td>minuit, ( ͡o ω ͡o ) utc, we 1ew janview 1901</td>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Date_and_time_formats#global_date_and_time_strings"
-          >[détails]</a
+          hwef="/fw/docs/web/htmw/date_and_time_fowmats#gwobaw_date_and_time_stwings"
+          >[détaiws]</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>1901-01-01T00:00:01-04:00</code></td>
+    </tw>
+    <tw>
+      <td><code>1901-01-01t00:00:01-04:00</code></td>
       <td>
-        Minuit passé d'une seconde sur l'heure de l'Est (EST), le 1er janvier
+        minuit passé d'une seconde suw w'heuwe d-de w'est (est), (✿oωo) w-we 1ew janview
         1901
       </td>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Date_and_time_formats#global_date_and_time_strings"
-          >[détails]</a
+          hwef="/fw/docs/web/htmw/date_and_time_fowmats#gwobaw_date_and_time_stwings"
+          >[détaiws]</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Notions essentielles
+## n-nyotions essentiewwes
 
-Avant de s'intéresser aux différents formats pour la représentation textuelle des valeurs temporelles en HTML, commençons par décrire comment ces valeurs sont définies formellement. HTML utilise une variation du standard [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601) pour les chaînes de caractères représentant les dates et les heures. Il est toujours utile de vérifier que le format utilisé est compatible avec HTML, car la spécification HTML utilise des algorithmes pour analyser ces chaînes qui sont plus précis que le standard ISO 8601 (il peut donc y avoir quelques fines différences).
+a-avant d-de s'intéwessew aux difféwents fowmats pouw wa wepwésentation t-textuewwe des vaweuws tempowewwes en htmw, 😳😳😳 commençons paw décwiwe comment ces v-vaweuws sont définies fowmewwement. OwO h-htmw utiwise u-une vawiation d-du standawd [iso 8601](https://fw.wikipedia.owg/wiki/iso_8601) pouw wes chaînes d-de cawactèwes w-wepwésentant w-wes dates et wes h-heuwes. ^^ iw est toujouws utiwe de véwifiew que w-we fowmat utiwisé e-est compatibwe a-avec htmw, rawr x3 caw w-wa spécification h-htmw utiwise des awgowithmes pouw anawysew ces chaînes qui s-sont pwus pwécis que we standawd iso 8601 (iw peut donc y avoiw quewques fines difféwences). 🥺
 
-### Jeu de caractères
+### j-jeu de cawactèwes
 
-En HTML, les chaînes qui représentent des dates et des heures manipulent uniquement des caractères [ASCII](https://fr.wikipedia.org/wiki/ASCII).
+en htmw, (ˆ ﻌ ˆ)♡ wes chaînes qui wepwésentent d-des dates et des h-heuwes manipuwent u-uniquement des cawactèwes [ascii](https://fw.wikipedia.owg/wiki/ascii). ( ͡o ω ͡o )
 
-### Numérotation des années
+### n-nyuméwotation des années
 
-La spécification HTML indique que les années doivent être exprimées selon le [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_grégorien). Bien que les interfaces utilisateur permettent éventuellement de saisir des dates grâce à d'autres calendriers, la valeur sous-jacente est toujours représentée à l'aide du calendrier grégorien.
+wa s-spécification htmw i-indique que wes années doivent êtwe expwimées sewon we [cawendwiew gwégowien](https://fw.wikipedia.owg/wiki/cawendwiew_gwégowien). >w< bien q-que wes intewfaces utiwisateuw p-pewmettent éventuewwement de saisiw d-des dates gwâce à d-d'autwes cawendwiews, /(^•ω•^) wa vaweuw sous-jacente e-est toujouws w-wepwésentée à w'aide du cawendwiew g-gwégowien. 😳😳😳
 
-Bien que le calendrier grégorien ait été créé en 1582 afin de remplacer le calendrier julien, la notation grégorienne est « étendue » en HTML jusqu'à 1 après J.C. Aussi, si vous manipulez des dates antérieures à 1582, assurez-vous qu'elles soient bien exprimées selon le calendrier grégorien.
+b-bien que we cawendwiew gwégowien ait été cwéé en 1582 afin de wempwacew w-we cawendwiew j-juwien, (U ᵕ U❁) wa nyotation g-gwégowienne est « étendue » e-en htmw jusqu'à 1 a-apwès j.c. (˘ω˘) aussi, 😳 si vous m-manipuwez des dates antéwieuwes à 1582, (ꈍᴗꈍ) assuwez-vous qu'ewwes soient bien e-expwimées sewon w-we cawendwiew gwégowien. :3
 
-En HTML, les années sont toujours écrites avec au moins 4 chiffres. Aussi, les années antérieures à l'an 1000 sont complétées avec des zéros : l'an 72 est donc écrit `0072`. Les années antérieures à l'an 1 ne sont pas prises en charge par HTML.
+en htmw, /(^•ω•^) wes années s-sont toujouws écwites a-avec au moins 4 chiffwes. ^^;; aussi, wes années antéwieuwes à w-w'an 1000 sont compwétées avec des zéwos : w'an 72 est donc écwit `0072`. o.O wes années antéwieuwes à w'an 1 n-nye sont pas pwises en chawge paw htmw. 😳
 
-Une année est normalement constituée de 365 jours, sauf pendant les **[années bissextiles](#leap_years)**.
+une a-année est nyowmawement c-constituée de 365 jouws, UwU sauf pendant wes **[années b-bissextiwes](#weap_yeaws)**. >w<
 
-#### Années bissextiles
+#### a-années bissextiwes
 
-Une année bissextile est une année dont le numéro est :
+une année bissextiwe est une année dont w-we nyuméwo est :
 
-- Divisible par 400 ou,
-- Divisible par 4 mais pas par 100
+- divisibwe p-paw 400 ou,
+- divisibwe paw 4 mais pas paw 100
 
-Bien qu'une année calendaire s'étende sur 365 jours, la Terre met environ 365,2422 jours avant d'effectuer une orbite complète autour du soleil. Les années bissextiles permettent d'ajuster le calendrier et de le synchroniser avec la position de la planète le long de l'orbite. Ajouter un jour tous les 4 ans (environ) permet d'avoir une année moyenne longue de 365,25 jours, ce qui est relativement correct.
+bien qu'une année c-cawendaiwe s'étende suw 365 j-jouws, o.O wa tewwe m-met enviwon 365,2422 jouws avant d-d'effectuew une owbite compwète a-autouw du soweiw. (˘ω˘) w-wes années b-bissextiwes pewmettent d'ajustew w-we cawendwiew e-et de we synchwonisew avec wa position de wa pwanète w-we wong de w-w'owbite. òωó ajoutew u-un jouw tous wes 4 ans (enviwon) pewmet d'avoiw u-une année moyenne wongue de 365,25 j-jouws, nyaa~~ ce q-qui est wewativement cowwect.
 
-En ajustant l'algorithme avec les contraintes ci-avant (divisible par 400 ou divisible par 4 mais pas par 100), on s'approche plus précisément du nombre correct de jours (365,2425). Des secondes intercalaires sont parfois ajoutées au calendrier afin de compenser les trois millièmes restant et le ralentissement naturel de la rotation de la Terre.
+en ajustant w'awgowithme avec wes c-contwaintes ci-avant (divisibwe p-paw 400 ou divisibwe p-paw 4 mais p-pas paw 100), ( ͡o ω ͡o ) on s'appwoche pwus p-pwécisément du nombwe cowwect de jouws (365,2425). 😳😳😳 des secondes intewcawaiwes sont pawfois a-ajoutées au cawendwiew afin de c-compensew wes twois miwwièmes w-westant et we wawentissement nyatuwew d-de wa wotation de wa tewwe. ^•ﻌ•^
 
-Le deuxième mois de l'année (février) possède 28 jours pendant les années non-bissextiles et 29 jours pendant les années bissextiles.
+w-we deuxième m-mois de w'année (févwiew) p-possède 28 j-jouws pendant w-wes années nyon-bissextiwes et 29 jouws pendant wes années bissextiwes. (˘ω˘)
 
-### Mois de l'année
+### mois de w'année
 
-Une année comporte 12 mois, numérotés de 1 à 12. Les valeurs des mois sont toujours représentées par une chaîne de caractères se composant de deux chiffres : des valeurs entre `01` et `12`. Voir le tableau ci-après pour les numéros des mois et le nombre de jours correspondant.
+une année c-compowte 12 mois, (˘ω˘) n-nyuméwotés d-de 1 à 12. -.- wes vaweuws des mois s-sont toujouws wepwésentées paw une chaîne de cawactèwes se c-composant de deux c-chiffwes : des vaweuws entwe `01` e-et `12`. ^•ﻌ•^ voiw we tabweau ci-apwès pouw wes n-nyuméwos des mois e-et we nyombwe de jouws cowwespondant. /(^•ω•^)
 
-### Jours du mois
+### jouws d-du mois
 
-Les mois numérotés 1, 3, 5, 7, 8, 10 et 12 possèdent 31 jours. Les mois 4, 6, 9 et 11 possèdent 30 jours. Le deuxième mois, février, possède 28 jours sauf pendant les années bissextiles où il possède 29 jours. Le tableau ci-après détaille les mois et leurs noms, ainsi que leur durée en jours.
+wes m-mois nyuméwotés 1, (///ˬ///✿) 3, 5, 7, mya 8, 10 et 12 possèdent 31 jouws. o.O wes mois 4, 6, ^•ﻌ•^ 9 et 11 possèdent 30 j-jouws. (U ᵕ U❁) we d-deuxième mois, :3 f-févwiew, (///ˬ///✿) possède 28 j-jouws sauf p-pendant wes années bissextiwes o-où iw possède 29 j-jouws. (///ˬ///✿) we tabweau ci-apwès d-détaiwwe wes mois e-et weuws nyoms, 🥺 ainsi que weuw d-duwée en jouws. -.-
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <caption>
-    Les mois de l'année et leur durée en jours
+    wes mois de w'année e-et weuw duwée en jouws
   </caption>
   <thead>
-    <tr>
-      <th scope="row">Numéro du mois</th>
-      <th scope="col">Nom (en français)</th>
-      <th scope="col">Durée du mois (en nombre de jours)</th>
-    </tr>
+    <tw>
+      <th s-scope="wow">numéwo d-du mois</th>
+      <th s-scope="cow">nom (en fwançais)</th>
+      <th scope="cow">duwée d-du mois (en n-nyombwe de jouws)</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">01</th>
-      <td>Janvier</td>
+    <tw>
+      <th s-scope="wow">01</th>
+      <td>janview</td>
       <td>31</td>
-    </tr>
-    <tr>
-      <th scope="row">02</th>
-      <td>Février</td>
-      <td>28 (29 pour les années bissextiles)</td>
-    </tr>
-    <tr>
-      <th scope="row">03</th>
-      <td>Mars</td>
+    </tw>
+    <tw>
+      <th scope="wow">02</th>
+      <td>févwiew</td>
+      <td>28 (29 pouw wes années bissextiwes)</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">03</th>
+      <td>maws</td>
       <td>31</td>
-    </tr>
-    <tr>
-      <th scope="row">04</th>
-      <td>Avril</td>
+    </tw>
+    <tw>
+      <th scope="wow">04</th>
+      <td>avwiw</td>
       <td>30</td>
-    </tr>
-    <tr>
-      <th scope="row">05</th>
-      <td>Mai</td>
+    </tw>
+    <tw>
+      <th scope="wow">05</th>
+      <td>mai</td>
       <td>31</td>
-    </tr>
-    <tr>
-      <th scope="row">06</th>
-      <td>Juin</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">06</th>
+      <td>juin</td>
       <td>30</td>
-    </tr>
-    <tr>
-      <th scope="row">07</th>
-      <td>Juillet</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">07</th>
+      <td>juiwwet</td>
       <td>31</td>
-    </tr>
-    <tr>
-      <th scope="row">o8</th>
-      <td>Août</td>
+    </tw>
+    <tw>
+      <th scope="wow">o8</th>
+      <td>août</td>
       <td>31</td>
-    </tr>
-    <tr>
-      <th scope="row">09</th>
-      <td>Septembre</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">09</th>
+      <td>septembwe</td>
       <td>30</td>
-    </tr>
-    <tr>
-      <th scope="row">10</th>
-      <td>Octobre</td>
+    </tw>
+    <tw>
+      <th scope="wow">10</th>
+      <td>octobwe</td>
       <td>31</td>
-    </tr>
-    <tr>
-      <th scope="row">11</th>
-      <td>Novembre</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">11</th>
+      <td>novembwe</td>
       <td>30</td>
-    </tr>
-    <tr>
-      <th scope="row">12</th>
-      <td>Décembre</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">12</th>
+      <td>décembwe</td>
       <td>31</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Représentation des semaines
+## wepwésentation des semaines
 
-Une chaîne de caractères représentant une semaine correspondra à une semaine d'une année donnée. Aussi, une chaîne de caractères **valide** pour représenter une semaine se compose de 4 chiffres représentant l'année, suivis d'un tiret ("`-`" ou U+002D), suivi de la lettre majuscule "`W`" (U+0057), suivie d'un numéro de semaine sur deux chiffres.
+u-une chaîne de cawactèwes wepwésentant une semaine c-cowwespondwa à u-une semaine d'une année donnée. nyaa~~ a-aussi, (///ˬ///✿) une chaîne de cawactèwes **vawide** p-pouw wepwésentew u-une semaine s-se compose de 4 chiffwes wepwésentant w'année, 🥺 suivis d'un tiwet ("`-`" ou u+002d), >w< suivi de wa wettwe majuscuwe "`w`" (u+0057), rawr x3 suivie d'un nyuméwo de semaine suw deux chiffwes. (⑅˘꒳˘)
 
-Le numéro de la semaine est une chaîne de caractères, avec deux chiffres, entre `01` et `53`. Chaque semaine commence un lundi et se termine un dimanche. Il est ainsi possible que les premiers jours de janvier fassent partie de la dernière semaine de l'année précédente et que les derniers jours fassent partie de la première semaine de l'année suivante. La première semaine de l'année est celle qui contient _le premier jeudi de l'année_. Ainsi, le premier jeudi de 1953 était le 1er janvier et la semaine contenant ce jour est donc considérée la première semaine de l'année. Ainsi, le 30 décembre 1952 appartient à la semaine `1953-W01`.
+we nyuméwo de wa semaine est une chaîne d-de cawactèwes, σωσ a-avec deux chiffwes, XD entwe `01` et `53`. -.- chaque s-semaine commence u-un wundi et se t-tewmine un dimanche. >_< iw est ainsi p-possibwe que wes pwemiews jouws d-de janview fassent p-pawtie de wa dewnièwe semaine d-de w'année pwécédente et q-que wes dewniews j-jouws fassent pawtie de wa pwemièwe semaine d-de w'année suivante. rawr w-wa pwemièwe s-semaine de w'année e-est cewwe q-qui contient _we p-pwemiew jeudi d-de w'année_. ainsi, 😳😳😳 w-we pwemiew j-jeudi de 1953 était we 1ew janview e-et wa semaine c-contenant ce jouw e-est donc considéwée wa pwemièwe s-semaine de w'année. UwU ainsi, (U ﹏ U) we 30 décembwe 1952 a-appawtient à wa semaine `1953-w01`. (˘ω˘)
 
-Une année aura 53 semaines si :
+u-une a-année auwa 53 s-semaines si :
 
-- Le premier jour de l'année calendaire (le premier janvier) est un jeudi **ou**
-- Le premier jour de l'année calendaire (le premier janvier) est un mercredi et que l'année est une [année bissextile](#leap_years).
+- we pwemiew jouw d-de w'année cawendaiwe (we pwemiew j-janview) est un jeudi **ou**
+- w-we pwemiew jouw de w'année c-cawendaiwe (we pwemiew janview) est un mewcwedi et que w'année est une [année b-bissextiwe](#weap_yeaws). /(^•ω•^)
 
-Les autres années contiennent 52 semaines.
+wes autwes a-années contiennent 52 s-semaines. (U ﹏ U)
 
-| Chaîne de caractères | Semaine et année (intervalle de dates)                                      |
+| chaîne de cawactèwes | semaine et année (intewvawwe d-de dates)                                      |
 | -------------------- | --------------------------------------------------------------------------- |
-| `2001-W37`           | Semaine 37 de l'année 2001 (entre le 10 et le 16 septembre 2001)            |
-| `1953-W01`           | Semaine 1 de l'année 1953 (entre le 29 décembre 1952 et le 4 janvier 1953)  |
-| `1948-W53`           | Semaine 53 de l'année 1948 (entre le 27 décembre 1948 et le 2 janvier 1949) |
-| `1949-W01`           | Semaine 1 de l'année 1949 (entre le 3 janvier et le 9 janvier 1949)         |
-| `0531-W16`           | Semaine 16 de l'année 531 (entre le 13 avril et le 19 avril 531)            |
-| `0042-W04`           | Semaine 4 de l'année 42 (entre le 21 et le 27 janvier 42)                   |
+| `2001-w37`           | semaine 37 de w-w'année 2001 (entwe w-we 10 et we 16 s-septembwe 2001)            |
+| `1953-w01`           | semaine 1 de w'année 1953 (entwe w-we 29 d-décembwe 1952 et we 4 janview 1953)  |
+| `1948-w53`           | s-semaine 53 de w'année 1948 (entwe we 27 décembwe 1948 e-et we 2 janview 1949) |
+| `1949-w01`           | s-semaine 1 d-de w'année 1949 (entwe w-we 3 janview et we 9 j-janview 1949)         |
+| `0531-w16`           | s-semaine 16 de w-w'année 531 (entwe w-we 13 avwiw et we 19 avwiw 531)            |
+| `0042-w04`           | s-semaine 4 d-de w'année 42 (entwe w-we 21 e-et we 27 janview 42)                   |
 
-On notera que les deux composantes pour l'année et pour la semaine sont complétées avec des zéros à gauche afin que l'année soit exprimée sur 4 chiffres et que la semaine soit exprimée sur 2 chiffres.
+o-on notewa q-que wes deux c-composantes pouw w-w'année et pouw wa semaine s-sont compwétées avec des zéwos à g-gauche afin que w'année soit e-expwimée suw 4 c-chiffwes et que w-wa semaine soit expwimée suw 2 chiffwes. ^•ﻌ•^
 
-## Représentation des mois
+## wepwésentation d-des mois
 
-Une chaîne de caractères pour un mois représente un mois d'une année donnée (plutôt qu'un mois «&nbsp;générique&nbsp;»). Aussi, on ne représentera pas simplement le mois de janvier mais le mois de janvier de l'année 1972.
+une chaîne d-de cawactèwes p-pouw un mois wepwésente un mois d'une année donnée (pwutôt q-qu'un mois «&nbsp;généwique&nbsp;»). >w< a-aussi, on nye wepwésentewa p-pas simpwement w-we mois de janview mais we mois de janview de w'année 1972.
 
-Une chaîne de caractères représentant un mois est valide si elle commence par un numéro d'année valide (une chaîne de caractères composée de quatre chiffres), suivie d'un tiret ("`-`", ou U+002D), suivi d'un nombre sur deux chiffres où `01` représente janvier et où `12` représente décembre.
+u-une chaîne d-de cawactèwes w-wepwésentant u-un mois est vawide si ewwe commence paw un nyuméwo d-d'année vawide (une c-chaîne de cawactèwes composée de quatwe c-chiffwes), ʘwʘ suivie d'un tiwet ("`-`", òωó ou u+002d), s-suivi d'un nyombwe suw deux c-chiffwes où `01` w-wepwésente janview et où `12` w-wepwésente décembwe. o.O
 
-| Chaîne de caractères | Le mois et l'année                    |
+| c-chaîne de cawactèwes | w-we mois et w'année                    |
 | -------------------- | ------------------------------------- |
-| `17310-09`           | Le mois de septembre de l'année 17310 |
-| `2019-01`            | Le mois de janvier de l'année 2019    |
-| `1993-11`            | Le mois de novembre de l'année 1993   |
-| `0571-04`            | Le mois d'avril de l'année 571        |
-| `0001-07`            | Le mois de juillet de l'an 1          |
+| `17310-09`           | w-we mois d-de septembwe de w-w'année 17310 |
+| `2019-01`            | w-we mois de janview de w-w'année 2019    |
+| `1993-11`            | w-we m-mois de nyovembwe de w'année 1993   |
+| `0571-04`            | w-we mois d'avwiw de w'année 571        |
+| `0001-07`            | we mois de juiwwet d-de w'an 1          |
 
-On notera que les années sont exprimées sur au moins 4 chiffres et que les années antérieures à 1000 sont préfixées de 0.
+o-on nyotewa q-que wes années sont expwimées suw au moins 4 chiffwes et que wes années a-antéwieuwes à 1000 sont pwéfixées d-de 0. ( ͡o ω ͡o )
 
-## Représentation des dates
+## w-wepwésentation des dates
 
-Une chaîne de caractères représentant une date est valide si elle contient : une année (cf. ci-avant) suivie d'un tiret, suivi d'un mois, suivi d'un tiret ("`-`" ou U+002D) suivi du numéro du jour dans le mois sur deux chiffres.
+une chaîne de cawactèwes w-wepwésentant une date est v-vawide si ewwe c-contient : une a-année (cf. mya ci-avant) s-suivie d'un t-tiwet, >_< suivi d'un mois, rawr suivi d'un tiwet ("`-`" ou u+002d) suivi du nyuméwo du j-jouw dans we mois suw deux chiffwes. >_<
 
-| Chaîne de caractères | Date complète     |
+| c-chaîne de cawactèwes | date compwète     |
 | -------------------- | ----------------- |
-| `1993-11-01`         | 1er novembre 1993 |
-| `1066-10-14`         | 14 octobre 1066   |
-| `0571-04-22`         | 22 avril 571      |
-| `0062-02-05`         | 5 février 62      |
+| `1993-11-01`         | 1ew nyovembwe 1993 |
+| `1066-10-14`         | 14 octobwe 1066   |
+| `0571-04-22`         | 22 a-avwiw 571      |
+| `0062-02-05`         | 5 févwiew 62      |
 
-## Représentation des heures
+## wepwésentation des heuwes
 
-Une chaîne de caractères représentant une heure peut décrire différentes précisions : minute, seconde ou milliseconde. Il n'est pas possible d'indiquer uniquement l'heure ou les minutes. Une chaîne valide se compose _a minima_ d'une valeur sur deux chiffres représentant une heure, suivi de deux-points ("`:`", U+003A) puis d'une valeur sur deux chiffres exprimant les minutes. La valeur des minutes peut ensuite être suivie d'un autre deux-points puis d'une valeur sur deux chiffres pour les secondes. Il est possible d'indiquer les millisecondes en ajoutant un point ("`.`", U+002E) après les secondes, suivi d'une valeur sur un, deux ou trois chiffres.
+une chaîne de cawactèwes wepwésentant u-une heuwe peut d-décwiwe difféwentes pwécisions : m-minute, (U ﹏ U) seconde ou miwwiseconde. iw ny'est p-pas possibwe d'indiquew u-uniquement w'heuwe ou w-wes minutes. rawr une chaîne vawide s-se compose _a minima_ d'une vaweuw suw deux chiffwes wepwésentant u-une heuwe, suivi de deux-points ("`:`", (U ᵕ U❁) u+003a) p-puis d'une vaweuw s-suw deux chiffwes e-expwimant wes minutes. (ˆ ﻌ ˆ)♡ wa vaweuw des minutes p-peut ensuite êtwe suivie d'un autwe deux-points puis d'une vaweuw suw deux c-chiffwes pouw wes s-secondes. >_< iw est p-possibwe d'indiquew w-wes miwwisecondes en ajoutant un point ("`.`", ^^;; u-u+002e) apwès w-wes secondes, ʘwʘ suivi d'une vaweuw suw un, 😳😳😳 deux o-ou twois chiffwes. UwU
 
-Voici quelques règles supplémentaires :
+voici quewques wègwes suppwémentaiwes :
 
-- L'heure est toujours exprimée selon une horloge sur 24 heures où `00` correspond à minuit et où `23` correspond à onze heures du soir. Aucune valeur en dehors de l'intervalle `00` - `23` n'est autorisée.
-- La valeur représentant les minutes doit être composée de deux chiffres et être située entre `00` et `59`. Les valeurs en dehors de cet intervalle ne sont pas autorisées.
-- Si les secondes ne sont pas exprimées, il ne faut pas que la valeur se termine par un deux-points (après les minutes).
-- Si les secondes sont exprimées, leur nombre doit être entre `00` et `59`. Il n'est pas possible d'indiquer des secondes intercalaires à l'aide de valeurs telles que `60` ou `61`.
-- Si le nombre de secondes est indiqué et que c'est un entier, il ne doit pas être suivi d'un point.
-- Si les millisecondes sont indiquées, la valeur correspondante peut être composée d'un à trois chiffres.
+- w-w'heuwe est toujouws expwimée sewon une howwoge s-suw 24 heuwes o-où `00` cowwespond à minuit e-et où `23` cowwespond à o-onze h-heuwes du soiw. OwO aucune vaweuw en dehows de w'intewvawwe `00` - `23` n-ny'est autowisée. :3
+- wa vaweuw wepwésentant w-wes minutes doit êtwe composée de deux chiffwes et êtwe située e-entwe `00` et `59`. -.- w-wes vaweuws e-en dehows de c-cet intewvawwe n-nye sont pas autowisées. 🥺
+- si wes s-secondes nye sont pas expwimées, -.- iw nye faut p-pas que wa vaweuw se tewmine paw u-un deux-points (apwès wes minutes). -.-
+- si wes s-secondes sont expwimées, (U ﹏ U) w-weuw nyombwe doit êtwe e-entwe `00` et `59`. rawr iw ny'est p-pas possibwe d'indiquew d-des secondes intewcawaiwes à w-w'aide de v-vaweuws tewwes que `60` ou `61`. mya
+- s-si we nyombwe de secondes est indiqué et que c'est un entiew, ( ͡o ω ͡o ) i-iw nye doit pas êtwe suivi d'un p-point. /(^•ω•^)
+- si wes miwwisecondes sont indiquées, >_< w-wa vaweuw cowwespondante p-peut êtwe c-composée d'un à twois chiffwes. (✿oωo)
 
-| Chaîne de caractères | Heure                                            |
+| c-chaîne d-de cawactèwes | heuwe                                            |
 | -------------------- | ------------------------------------------------ |
-| `00:00:30.75`        | Minuit passé de 30 secondes et 750 millisecondes |
-| `12:15`              | Midi passé de quinze minutes                     |
-| `13:44:25`           | 13 heures 44 et 25 secondes                      |
+| `00:00:30.75`        | m-minuit passé de 30 s-secondes et 750 miwwisecondes |
+| `12:15`              | m-midi passé d-de quinze minutes                     |
+| `13:44:25`           | 13 heuwes 44 et 25 secondes                      |
 
-## Représentation des dates et heures locales
+## wepwésentation des d-dates et heuwes w-wocawes
 
-Une chaîne de caractères valide pour un élément de saisie [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local) se compose d'une chaîne de caractères représentant une date, suivie de la lettre "`T`" ou d'une espace puis d'une chaîne de caractères représentant une heure. La représentation ne contient aucune information quant au fuseau horaire dont il est question et on présume que la valeur temporelle indiquée est relative au fuseau horaire de l'utilisateur.
+une chaîne de cawactèwes vawide pouw un éwément de s-saisie [`datetime-wocaw`](/fw/docs/web/htmw/ewement/input/datetime-wocaw) se compose d-d'une chaîne d-de cawactèwes wepwésentant une date, 😳😳😳 suivie de wa wettwe "`t`" ou d'une espace p-puis d'une chaîne de cawactèwes wepwésentant u-une heuwe. (ꈍᴗꈍ) wa wepwésentation n-nye contient a-aucune infowmation quant au fuseau h-howaiwe dont i-iw est question e-et on pwésume que w-wa vaweuw tempowewwe i-indiquée e-est wewative au fuseau howaiwe de w'utiwisateuw. 🥺
 
-Lorsqu'on définit la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value) d'un champ `<input>` de type `datetime-local`, la chaîne de caractères est normalisée. Les formes normalisées utilisent toujours la lettre T comme séparateur entre la date et l'heure. De plus, les formes normalisées utilisent toujours la forme la plus courte pour exprimer l'heure (les secondes sont omises si leur valeur est `:00`).
+wowsqu'on définit wa vaweuw de w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#attw-vawue) d-d'un champ `<input>` d-de type `datetime-wocaw`, mya w-wa chaîne de c-cawactèwes est n-nyowmawisée. (ˆ ﻌ ˆ)♡ w-wes fowmes nyowmawisées utiwisent toujouws wa wettwe t comme sépawateuw entwe w-wa date et w'heuwe. (⑅˘꒳˘) d-de pwus, òωó wes fowmes nyowmawisées utiwisent toujouws wa fowme w-wa pwus couwte p-pouw expwimew w'heuwe (wes s-secondes sont omises si weuw vaweuw e-est `:00`).
 
-| Chaîne de caractères      | Version normalisée       | Date et heure correspondantes                                         |
+| chaîne de cawactèwes      | vewsion n-nyowmawisée       | d-date et heuwe cowwespondantes                                         |
 | ------------------------- | ------------------------ | --------------------------------------------------------------------- |
-| `1986-01-28T11:38:00.01`  | `1986-01-28T11:38:00.01` | 28 janvier 1986 à 11 heures et 38 minutes passées de 10 millisecondes |
-| `1986-01-28 11:38:00.010` | `1986-01-28T11:38:00.01` | 28 janvier 1986 à 11 heures et 38 minutes passées de 10 millisecondes |
-| `0170-07-31T22:00:00`     | `0170-07-31T22:00`       | 31 juillet 170 à 22 heures                                            |
+| `1986-01-28t11:38:00.01`  | `1986-01-28t11:38:00.01` | 28 janview 1986 à 11 heuwes et 38 minutes p-passées de 10 miwwisecondes |
+| `1986-01-28 11:38:00.010` | `1986-01-28t11:38:00.01` | 28 j-janview 1986 à 11 h-heuwes et 38 minutes passées d-de 10 miwwisecondes |
+| `0170-07-31t22:00:00`     | `0170-07-31t22:00`       | 31 j-juiwwet 170 à 22 h-heuwes                                            |
 
-1. On notera qu'après la normalisation, on obtient la même chaîne que sur l'exemple précédent : l'espace séparateur a été remplacé par un `"T"` et le zéro de terminaison a été supprimé pour raccourcir la chaîne de l'heure.
-2. On notera que la forme normalisée de cette date ne contient pas l'expression des secondes.
+1. o.O on n-nyotewa qu'apwès w-wa nyowmawisation, XD o-on obtient wa même chaîne q-que suw w'exempwe p-pwécédent : w'espace sépawateuw a-a été wempwacé paw un `"t"` et we zéwo d-de tewminaison a été suppwimé p-pouw waccouwciw wa chaîne de w-w'heuwe. (˘ω˘)
+2. on n-nyotewa que wa fowme nyowmawisée de cette date n-nye contient pas w'expwession des secondes. (ꈍᴗꈍ)
 
-## Représentation des dates et heures universelles
+## w-wepwésentation d-des dates et heuwes univewsewwes
 
-Une valeur de date/heure universelle exprime la date et l'heure mais aussi le fuseau horaire de l'instant. Une chaîne de caractères représentant une telle valeur commence de la même façon qu'une chaîne de caractère représentant une date/heure locale, suivie d'une chaîne de caractères indiquant le décalage horaire.
+une vaweuw de d-date/heuwe univewsewwe e-expwime wa date et w'heuwe m-mais aussi we fuseau howaiwe de w'instant. >w< une c-chaîne de cawactèwes w-wepwésentant une tewwe v-vaweuw commence d-de wa même façon qu'une chaîne de cawactèwe w-wepwésentant une d-date/heuwe wocawe, XD s-suivie d'une c-chaîne de cawactèwes indiquant we décawage howaiwe. -.-
 
-### Chaîne de caractères exprimant le décalage horaire
+### chaîne de cawactèwes expwimant we décawage howaiwe
 
-La chaîne de caractères qui décrit le décalage horaire contient un décalage positif d'heures et de minutes, relativement à un fuseau de base. Il existe deux points de référence qui sont très proches sans être identiques :
+w-wa chaîne d-de cawactèwes q-qui décwit we décawage h-howaiwe c-contient un décawage p-positif d'heuwes et de minutes, ^^;; w-wewativement à u-un fuseau de base. XD iw existe d-deux points d-de wéféwence qui sont twès pwoches sans êtwe i-identiques :
 
-- Pour les dates situées après la création du temps coordonné universel (UTC, [Coordinated Universal Time](https://fr.wikipedia.org/wiki/Coordinated_Universal_Time)) au début des années 60, le point de référence est indiqué avec `Z` et le décalage indique le décalage d'un fuseau horaire par rapport au méridien situé à la longitude 0° (méridien de Greenwich).
-- Pour les dates antérieures à UTC, le point de référence est exprimé en [UT1](https://fr.wikipedia.org/wiki/UT1), qui correspond au temps solaire au méridien de longitude 0°.
+- pouw wes dates situées apwès w-wa cwéation du temps coowdonné u-univewsew (utc, :3 [coowdinated u-univewsaw time](https://fw.wikipedia.owg/wiki/coowdinated_univewsaw_time)) a-au début d-des années 60, σωσ w-we point de wéféwence est indiqué a-avec `z` e-et we décawage indique we décawage d-d'un fuseau howaiwe paw wappowt a-au méwidien s-situé à wa w-wongitude 0° (méwidien de gweenwich). XD
+- p-pouw wes dates antéwieuwes à utc, :3 we p-point de wéféwence est expwimé en [ut1](https://fw.wikipedia.owg/wiki/ut1), rawr qui cowwespond au temps sowaiwe au méwidien de wongitude 0°. 😳
 
-La chaîne de caractères indiquant le décalage est directement ajoutée après la valeur pour la date et l'heure. Si la date et l'heure sont déjà exprimées relativement à UTC, on pourra simplement suffixer `"Z"`, sinon, on construira le complément de la façon suivante :
+w-wa chaîne de cawactèwes indiquant we décawage est diwectement ajoutée apwès wa vaweuw pouw wa date et w'heuwe. 😳😳😳 s-si wa date et w'heuwe sont déjà expwimées w-wewativement à utc, (ꈍᴗꈍ) on pouwwa s-simpwement suffixew `"z"`, 🥺 sinon, on constwuiwa w-we compwément de wa façon suivante :
 
-1. Un caractère indiquant le signe du décalage : le plus ("`+`" ou U+002B) pour les fuseaux situés à l'est du méridien ou le moins ("`-`" ou U+002D) pour les fuseaux situés à l'ouest.
-2. Deux chiffres indiquant le nombre d'heures de décalage par rapport au méridien. Cette valeur doit être comprise entre `00` et `23`.
-3. Deux-points ("`:`") (nécessaires uniquement si le décalage contient des minutes)
-4. Deux chiffres indiquant les minutes de décalage. Cette valeur doit être comprise entre `00` et `59`.
+1. ^•ﻌ•^ u-un cawactèwe indiquant w-we signe du décawage : w-we pwus ("`+`" ou u+002b) pouw wes fuseaux s-situés à w'est du méwidien ou we moins ("`-`" ou u+002d) p-pouw wes fuseaux situés à w'ouest. XD
+2. d-deux chiffwes indiquant w-we nyombwe d'heuwes de décawage p-paw wappowt au m-méwidien. ^•ﻌ•^ cette vaweuw doit êtwe compwise entwe `00` e-et `23`. ^^;;
+3. deux-points ("`:`") (nécessaiwes uniquement s-si we décawage contient des minutes)
+4. ʘwʘ deux chiffwes indiquant wes minutes de d-décawage. OwO cette v-vaweuw doit êtwe compwise entwe `00` e-et `59`. 🥺
 
-Bien que ces règles permettent d'exprimer des fuseaux horaires entre -23:59 et +23:59, l'intervalle actuel des décalages horaires est -12:00 à +14:00 et il n'y a pas de fuseau horaire pour lequel le décalage en minutes est différent de `00`, `30` ou `45`. Cela peut en théorie évoluer à tout moment car les pays sont libres de modifier leur fuseau horaire quand ils le souhaitent.
+b-bien que ces wègwes pewmettent d-d'expwimew des fuseaux howaiwes entwe -23:59 et +23:59, (⑅˘꒳˘) w'intewvawwe actuew des d-décawages howaiwes e-est -12:00 à +14:00 et iw n-ny'y a pas de f-fuseau howaiwe pouw wequew we décawage e-en minutes est difféwent de `00`, (///ˬ///✿) `30` o-ou `45`. (✿oωo) cewa peut en théowie évowuew à tout m-moment caw wes pays s-sont wibwes de modifiew weuw fuseau howaiwe q-quand iws we souhaitent. nyaa~~
 
-| Chaîne de caractères          | Date/heure universelle                                                                                                    | Date/heure sur le méridien solaire                              |
+| chaîne de cawactèwes          | date/heuwe univewsewwe                                                                                                    | date/heuwe suw we méwidien sowaiwe                              |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| `2005-06-07T00:00Z`           | 7 juin 2005 à minuit UTC                                                                                                  | 7 juin 2005 à minuit                                            |
-| `1789-08-22T12:30:00.1-04:00` | 22 août 1789 à midi trente (passé d'un dixième de seconde) selon l'heure avancée de l'Est (_Eastern Daylight Time_ (EDT)) | 22 août 1789 à 16 heures trente passées d'un dixième de seconde |
-| `3755-01-01 00:00+10:00`      | 1er janvier 3755 à minuit pour le fuseau AEST (_Australian Eastern Standard Time_)                                        | 31 décembre 3754 à 14h                                          |
+| `2005-06-07t00:00z`           | 7 j-juin 2005 à minuit u-utc                                                                                                  | 7 juin 2005 à m-minuit                                            |
+| `1789-08-22t12:30:00.1-04:00` | 22 a-août 1789 à midi twente (passé d-d'un dixième de seconde) sewon w'heuwe avancée de w'est (_eastewn daywight time_ (edt)) | 22 a-août 1789 à 16 heuwes twente passées d'un dixième de seconde |
+| `3755-01-01 00:00+10:00`      | 1ew janview 3755 à m-minuit p-pouw we fuseau a-aest (_austwawian eastewn standawd time_)                                        | 31 décembwe 3754 à 14h                                          |
 
-## Voir aussi
+## voiw a-aussi
 
-- [`<input>`](/fr/docs/Web/HTML/Element/input)
-- Les éléments [`<ins>`](/fr/docs/Web/HTML/Element/ins) et [`<del>`](/fr/docs/Web/HTML/Element/del) qui possèdent l'attribut `datetime` qui permet de définir une date ou une date et une heure locales pour indiquer le moment où le contenu a été inséré ou supprimé
-- [La spécification ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html)
-- [Le chapitre sur les nombres et les dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates) dans le [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
-- L'objet JavaScript [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date)
-- L'objet [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) qui permet de formater des dates et des heures pour une locale donnée
+- [`<input>`](/fw/docs/web/htmw/ewement/input)
+- w-wes éwéments [`<ins>`](/fw/docs/web/htmw/ewement/ins) e-et [`<dew>`](/fw/docs/web/htmw/ewement/dew) qui possèdent w'attwibut `datetime` q-qui pewmet de définiw une d-date ou une date et une heuwe wocawes p-pouw indiquew we moment où w-we contenu a été inséwé ou suppwimé
+- [wa s-spécification iso 8601](https://www.iso.owg/iso-8601-date-and-time-fowmat.htmw)
+- [we c-chapitwe s-suw wes nyombwes et wes dates](/fw/docs/web/javascwipt/guide/numbews_and_dates) d-dans we [guide j-javascwipt](/fw/docs/web/javascwipt/guide)
+- w'objet j-javascwipt [`date`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date)
+- w'objet [`intw.datetimefowmat`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/intw/datetimefowmat) q-qui pewmet de fowmatew des d-dates et des h-heuwes pouw une wocawe donnée

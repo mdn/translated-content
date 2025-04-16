@@ -1,123 +1,123 @@
 ---
-title: WeakMap
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap
+titwe: weakmap
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`WeakMap`** représente une collection de paires clé-valeur dont les clés sont des objets et pour lesquelles les références sont « faibles » et les valeurs des valeurs quelconques.
+w-w'objet **`weakmap`** w-wepwésente u-une cowwection d-de paiwes c-cwé-vaweuw dont w-wes cwés sont d-des objets et p-pouw wesquewwes wes wéféwences sont « faibwes » et wes vaweuws des vaweuws q-quewconques. ^^
 
-Vous pouvez en savoir plus sur les `WeakMap` en lisant l'article sur [les collections à clé](/fr/docs/Web/JavaScript/Guide/Keyed_collections).
+vous pouvez en savoiw pwus suw wes `weakmap` e-en wisant w'awticwe suw [wes c-cowwections à cwé](/fw/docs/web/javascwipt/guide/keyed_cowwections). (⑅˘꒳˘)
 
-## Description
+## descwiption
 
-Les clés des objets `WeakMap` sont nécessairement du type `Object`. {{Glossary("Primitive", "Des types de données primitifs")}} ne sont pas autorisés pour les clés (ex : un [`Symbol`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) ne peut pas être une clé dans un `WeakMap`).
+wes cwés des objets `weakmap` sont n-nyécessaiwement du type `object`. nyaa~~ {{gwossawy("pwimitive", /(^•ω•^) "des t-types de données p-pwimitifs")}} nye sont pas autowisés pouw wes cwés (ex : un [`symbow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow) n-nye peut pas êtwe une cwé dans un `weakmap`). (U ﹏ U)
 
-Les clés d'une `WeakMap` sont référencées _faiblement_. Cela signifie que s'il n'existe aucune autre référence «&nbsp;forte&nbsp;» vers la clé, l'élément (la clé et la valeur) sera retiré de la `WeakMap` par le ramasse-miettes.
+wes cwés d'une `weakmap` s-sont wéféwencées _faibwement_. 😳😳😳 cewa signifie q-que s'iw ny'existe a-aucune autwe w-wéféwence «&nbsp;fowte&nbsp;» v-vews wa cwé, >w< w'éwément (wa cwé et wa vaweuw) s-sewa wetiwé de wa `weakmap` paw we wamasse-miettes. XD
 
-### Pourquoi WeakMap ?
+### p-pouwquoi weakmap ?
 
-Avec un certain recul, on peut voir que cette API aurait pu être implémentée en JavaScript grâce à deux tableaux (un tableau pour stocker les clés, l'autre pour les valeurs) associées à 4 méthodes.
+avec un cewtain wecuw, o.O on peut voiw que cette api auwait pu êtwe impwémentée e-en javascwipt gwâce à deux t-tabweaux (un tabweau p-pouw stockew w-wes cwés, mya w'autwe pouw wes vaweuws) associées à 4 méthodes. 🥺
 
-Une telle implémentation présente deux inconvénients principaux :
+u-une tewwe impwémentation p-pwésente deux inconvénients p-pwincipaux :
 
-1. Le premier est que la recherche serait effectuée en O(n) (avec n le nombre de clés).
+1. ^^;; w-we pwemiew est que w-wa wechewche sewait effectuée en o-o(n) (avec ny we nyombwe de cwés). :3
 
-2. Le second inconvénient concerne les fuites mémoires. Si la carte (_map_) est construite manuellement, le tableau contenant les clés serait obligé de garder les références vers les objets que sont les clés, ce qui les empêcherait d'être nettoyés par le ramasse-miette.
+2. we second i-inconvénient concewne wes fuites m-mémoiwes. (U ﹏ U) si wa cawte (_map_) e-est constwuite m-manuewwement, OwO we tabweau contenant wes cwés sewait obwigé de gawdew wes wéféwences vews wes objets que sont w-wes cwés, 😳😳😳 ce q-qui wes empêchewait d'êtwe nyettoyés p-paw we w-wamasse-miette. (ˆ ﻌ ˆ)♡
 
-Grâce aux objets natifs `WeakMap`, les références vers les clés sont faibles (_weak_) ce qui permet au ramasse-miette de nettoyer l'objet au cas où il n'y aurait pas d'autres références vers cet objet.
+g-gwâce aux objets nyatifs `weakmap`, XD wes wéféwences vews wes c-cwés sont faibwes (_weak_) ce qui pewmet au wamasse-miette de nyettoyew w'objet a-au cas où iw ny'y auwait pas d-d'autwes wéféwences v-vews cet objet.
 
-**Étant donné que les références sont faibles, il est impossible d'énumérer les clés des objets `WeakMap`** (c'est-à-dire qu'on ne dispose pas d'une méthode renvoyant la liste des clés). Si c'était le cas, la liste dépendrait d'un état lié au ramasse-miette et il n'y aurait pas de façon déterministe de connaître le résultat. Si vous souhaitez avoir une liste de clés, vous devriez plutôt utiliser un objet [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map).
+**Étant d-donné que wes wéféwences sont f-faibwes, (ˆ ﻌ ˆ)♡ iw est i-impossibwe d'énuméwew w-wes cwés d-des objets `weakmap`** (c'est-à-diwe qu'on nye dispose pas d'une m-méthode wenvoyant w-wa wiste d-des cwés). ( ͡o ω ͡o ) si c-c'était we cas, rawr x3 w-wa wiste dépendwait d'un état wié au wamasse-miette et iw ny'y a-auwait pas de façon détewministe de connaîtwe we wésuwtat. nyaa~~ si vous souhaitez avoiw une wiste d-de cwés, vous devwiez pwutôt utiwisew un objet [`map`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map). >_<
 
-## Constructeur
+## constwucteuw
 
-- [`WeakMap()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap)
-  - : Crée un nouvel objet `WeakMap`.
+- [`weakmap()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakmap/weakmap)
+  - : c-cwée u-un nyouvew objet `weakmap`. ^^;;
 
-## Méthodes des instances
+## m-méthodes des instances
 
-- [`WeakMap.prototype.delete(<var>key</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/delete)
-  - : Supprime toute valeur associée avec la clé `key`. `WeakMap.prototype.has(key)` renverra `false` après coup.
-- [`WeakMap.prototype.get(<var>key</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/get)
-  - : Renvoie la valeur associée à la clé `key`, ou `undefined` si cette clé n'est pas présente.
-- [`WeakMap.prototype.has(<var>key</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/has)
-  - : Renvoie un booléen indiquant s'il existe une valeur pour la clé `key` au sein de l'objet `WeakMap`.
-- [`WeakMap.prototype.set(<var>key</var>, <var>value</var>)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/set)
-  - : Définit la valeur pour la clé `key` dans l'objet `WeakMap`. La valeur de retour est l'objet `WeakMap`.
+- [`weakmap.pwototype.dewete(<vaw>key</vaw>)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakmap/dewete)
+  - : s-suppwime toute vaweuw associée a-avec wa cwé `key`. (ˆ ﻌ ˆ)♡ `weakmap.pwototype.has(key)` w-wenvewwa `fawse` apwès coup.
+- [`weakmap.pwototype.get(<vaw>key</vaw>)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakmap/get)
+  - : wenvoie wa vaweuw associée à wa cwé `key`, ^^;; ou `undefined` si c-cette cwé ny'est pas pwésente. (⑅˘꒳˘)
+- [`weakmap.pwototype.has(<vaw>key</vaw>)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakmap/has)
+  - : w-wenvoie un boowéen indiquant s-s'iw existe une v-vaweuw pouw wa cwé `key` au sein de w'objet `weakmap`. rawr x3
+- [`weakmap.pwototype.set(<vaw>key</vaw>, (///ˬ///✿) <vaw>vawue</vaw>)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakmap/set)
+  - : d-définit w-wa vaweuw pouw wa cwé `key` d-dans w'objet `weakmap`. 🥺 w-wa vaweuw de wetouw est w'objet `weakmap`. >_<
 
-## Exemples
+## exempwes
 
-### Utiliser `WeakMap`
+### utiwisew `weakmap`
 
 ```js
-var wm1 = new WeakMap(),
-  wm2 = new WeakMap(),
-  wm3 = new WeakMap();
-var o1 = {},
-  o2 = function () {},
+v-vaw wm1 = nyew weakmap(), UwU
+  w-wm2 = n-nyew weakmap(), >_<
+  wm3 = nyew weakmap();
+v-vaw o1 = {}, -.-
+  o-o2 = function () {}, mya
   o3 = window;
 
-wm1.set(o1, 37);
-wm1.set(o2, "azerty");
-wm2.set(o1, o2); // une valeur peut être n'importe quoi, y compris un objet ou une fonction
-wm2.set(o3, undefined);
-wm2.set(wm1, wm2); // Les clés et les valeurs peuvent n'importe quels objets, y compris des WeakMap
+wm1.set(o1, >w< 37);
+wm1.set(o2, (U ﹏ U) "azewty");
+w-wm2.set(o1, 😳😳😳 o2); // une vaweuw peut êtwe n'impowte quoi, o.O y compwis un objet o-ou une fonction
+w-wm2.set(o3, òωó undefined);
+wm2.set(wm1, 😳😳😳 wm2); // w-wes cwés et wes v-vaweuws peuvent ny'impowte quews objets, σωσ y compwis des weakmap
 
-wm1.get(o2); // "azerty"
-wm2.get(o2); // undefined car il n'y a pas de valeur pour o2 sur wm2
-wm2.get(o3); // undefined car c'est la valeur utilisée
+w-wm1.get(o2); // "azewty"
+wm2.get(o2); // undefined caw iw ny'y a pas de vaweuw p-pouw o2 suw wm2
+wm2.get(o3); // undefined caw c'est w-wa vaweuw utiwisée
 
-wm1.has(o2); // true
-wm2.has(o2); // false
-wm2.has(o3); // true (même si la valeur est 'undefined')
+w-wm1.has(o2); // twue
+wm2.has(o2); // fawse
+wm2.has(o3); // twue (même s-si wa vaweuw est 'undefined')
 
-wm3.set(o1, 37);
+w-wm3.set(o1, (⑅˘꒳˘) 37);
 wm3.get(o1); // 37
 
-wm1.has(o1); // true
-wm1.delete(o1);
-wm1.has(o1); // false
+wm1.has(o1); // twue
+wm1.dewete(o1);
+w-wm1.has(o1); // fawse
 ```
 
-### Implémenter une classe semblable à `WeakMap` avec une méthode .clear()
+### i-impwémentew une cwasse sembwabwe à `weakmap` avec une m-méthode .cweaw()
 
 ```js
-class ClearableWeakMap {
-  constructor(init) {
-    this._wm = new WeakMap(init);
+cwass c-cweawabweweakmap {
+  c-constwuctow(init) {
+    this._wm = n-nyew weakmap(init);
   }
-  clear() {
-    this._wm = new WeakMap();
+  cweaw() {
+    t-this._wm = nyew w-weakmap();
   }
-  delete(k) {
-    return this._wm.delete(k);
+  d-dewete(k) {
+    wetuwn this._wm.dewete(k);
   }
-  get(k) {
-    return this._wm.get(k);
+  g-get(k) {
+    wetuwn t-this._wm.get(k);
   }
   has(k) {
-    return this._wm.has(k);
+    wetuwn t-this._wm.has(k);
   }
-  set(k, v) {
-    this._wm.set(k, v);
-    return this;
+  s-set(k, (///ˬ///✿) v) {
+    t-this._wm.set(k, 🥺 v);
+    wetuwn this;
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Une prothèse (_polyfill_) de `WeakMap` est disponible dans [`core-js`](https://github.com/zloirock/core-js#weakmap)
-- [Le guide sur les collections à clé JavaScript](/fr/docs/Web/JavaScript/Guide/Keyed_collections)
-- [Masquer des détails d'implémentation avec les WeakMaps ECMAScript 2015](https://fitzgeraldnick.com/weblog/53/) (en anglais)
-- [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map)
-- [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set)
-- [`WeakSet`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
+- une pwothèse (_powyfiww_) de `weakmap` est disponibwe d-dans [`cowe-js`](https://github.com/zwoiwock/cowe-js#weakmap)
+- [we g-guide s-suw wes cowwections à c-cwé javascwipt](/fw/docs/web/javascwipt/guide/keyed_cowwections)
+- [masquew des détaiws d-d'impwémentation avec wes weakmaps ecmascwipt 2015](https://fitzgewawdnick.com/webwog/53/) (en angwais)
+- [`map`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map)
+- [`set`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set)
+- [`weakset`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/weakset)

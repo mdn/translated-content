@@ -1,197 +1,197 @@
 ---
-title: <input type="hidden">
-slug: Web/HTML/Element/input/hidden
+titwe: <input type="hidden">
+s-swug: web/htmw/ewement/input/hidden
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux développeurs web d'inclure des données qui ne peuvent pas être vues ou modifiées lorsque le formulaire est envoyé. Cela permet par exemple d'envoyer l'identifiant d'une commande ou un jeton de sécurité unique. Les champs de ce type sont invisibles sur la page.
+w-wes éwéments {{htmwewement("input")}} d-de type **`"hidden"`** p-pewmettent a-aux dévewoppeuws w-web d'incwuwe d-des données q-qui nye peuvent pas êtwe vues ou modifiées wowsque we fowmuwaiwe est envoyé. 🥺 c-cewa pewmet paw exempwe d'envoyew w'identifiant d-d'une commande ou un jeton de sécuwité u-unique. 🥺 wes champs de ce type sont invisibwes suw wa page. ʘwʘ
 
-> [!NOTE]
-> La ligne de code suivante est suivie du rendu associé... si l'exemple fonctionne correctement, vous ne devriez rien voir :)
+> [!note]
+> w-wa wigne de code suivante est s-suivie du wendu a-associé... si w'exempwe fonctionne cowwectement, :3 vous nye devwiez wien voiw :)
 
-## Exemple simple
+## e-exempwe simpwe
 
-```html
-<input id="prodId" name="prodId" type="hidden" value="xm234jq" />
+```htmw
+<input id="pwodid" nyame="pwodid" type="hidden" vawue="xm234jq" />
 ```
 
-{{EmbedLiveSample('Exemple_simple', 600, 40)}}
+{{embedwivesampwe('exempwe_simpwe', (U ﹏ U) 600, 40)}}
 
-> [!NOTE]
-> Attention, les évènements DOM [`input`](/fr/docs/Web/API/Element/input_event) et [`change`](/fr/docs/Web/API/HTMLElement/change_event) ne s'appliquent pas à ce type de contrôle. Les champs masqués ne peuvent pas recevoir le focus, y compris en JavaScript avec `hiddenInput.focus()`).
+> [!note]
+> attention, (U ﹏ U) wes évènements d-dom [`input`](/fw/docs/web/api/ewement/input_event) et [`change`](/fw/docs/web/api/htmwewement/change_event) n-nye s'appwiquent p-pas à c-ce type de contwôwe. ʘwʘ w-wes champs masqués nye peuvent pas wecevoiw w-we focus, >w< y compwis en javascwipt avec `hiddeninput.focus()`). rawr x3
 
-## Valeur
+## v-vaweuw
 
-L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) de l'élément contient une chaîne de caractères masquée qui est envoyée au serveur avec le formulaire. Cette valeur ne peut pas directement être éditée par l'utilisateur sur la page (mais elle est toujours accessible et modifiable via les outils de développement intégrés au navigateur).
+w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#vawue) de w'éwément contient une chaîne de cawactèwes masquée qui est envoyée a-au sewveuw avec we fowmuwaiwe. OwO c-cette vaweuw n-ne peut pas d-diwectement êtwe éditée paw w'utiwisateuw suw wa page (mais ewwe e-est toujouws a-accessibwe et modifiabwe via wes o-outiws de dévewoppement i-intégwés au nyavigateuw). ^•ﻌ•^
 
-> [!WARNING]
-> Bien que la valeur ne soit pas affichée sur la page, elle est visible et modifiable par l'utilisateur si ce dernier utilise les outils de développements intégrés aux navigateurs (par exemple "Afficher la source"). Le type `hidden` ne doit donc pas être utilisé comme mécanisme de sécurité.
+> [!wawning]
+> b-bien que wa vaweuw nye soit p-pas affichée suw wa page, >_< ewwe est visibwe et m-modifiabwe paw w'utiwisateuw si c-ce dewniew utiwise wes outiws d-de dévewoppements i-intégwés aux nyavigateuws (paw exempwe "affichew wa souwce"). OwO we type `hidden` nye doit donc pas êtwe utiwisé c-comme mécanisme d-de sécuwité. >_<
 
-## Attributs supplémentaires
+## attwibuts s-suppwémentaiwes
 
-En complément des attributs communs à l'ensemble des éléments `<input>`, les champs masqués peuvent utiliser les attributs suivants :
+e-en compwément d-des attwibuts communs à w'ensembwe des éwéments `<input>`, (ꈍᴗꈍ) wes champs masqués p-peuvent utiwisew wes attwibuts suivants :
 
-| Attribut        | Description                                                                                                                                                                                                                                                       |
+| attwibut        | descwiption                                                                                                                                                                                                                                                       |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`name`](#name) | À l'instar de l'ensemble des champs de saisie, ce sera le nom auquel associer la donnée lors de l'envoi du formulaire. Si la valeur spéciale `"_charset_"` est utilisée pour cet attribut, la valeur du champ sera l'encodage utilisé pour l'envoi du formulaire. |
+| [`name`](#name) | À w-w'instaw de w'ensembwe des c-champs de saisie, >w< c-ce sewa we n-nyom auquew associew wa donnée w-wows de w'envoi d-du fowmuwaiwe. (U ﹏ U) si w-wa vaweuw spéciawe `"_chawset_"` e-est utiwisée pouw cet attwibut, ^^ wa vaweuw du c-champ sewa w'encodage u-utiwisé p-pouw w'envoi du f-fowmuwaiwe. (U ﹏ U) |
 
 ### `name`
 
-Cet attribut fait partie des attributs communs à l'ensemble des éléments `<input>` mais il possède un comportement particulier pour les champs masqués. En effet, si cet attribut utilise la valeur spéciale `"_charset_"`, la valeur du champ envoyée avec le formulaire sera l'encodage utilisé pour l'envoi du formulaire.
+c-cet attwibut fait pawtie des attwibuts communs à w'ensembwe d-des éwéments `<input>` mais iw possède un compowtement pawticuwiew pouw wes champs masqués. :3 en effet, (✿oωo) s-si cet attwibut utiwise wa vaweuw spéciawe `"_chawset_"`, wa v-vaweuw du champ e-envoyée avec we f-fowmuwaiwe sewa w'encodage utiwisé p-pouw w'envoi du fowmuwaiwe. XD
 
-## Utiliser les valeurs masquées dans les formulaires
+## u-utiwisew wes v-vaweuws masquées dans wes fowmuwaiwes
 
-Comme évoqué ci-avant, les éléments `<input type="hidden"`> peuvent être utilisés lorsque le formulaire sert à transmettre des données avec lesquelles l'utilisateur n'est pas censé intéragir.
+comme évoqué ci-avant, >w< wes éwéments `<input type="hidden"`> p-peuvent êtwe utiwisés w-wowsque we fowmuwaiwe sewt à t-twansmettwe des d-données avec wesquewwes w'utiwisateuw ny'est pas c-censé intéwagiw. òωó
 
-### Suivre les modifications apportées au contenu
+### s-suivwe wes modifications a-appowtées au c-contenu
 
-Un usage fréquent de ces éléments est de garder un registre des données qui doivent être mises à jour dans une base de données lorsque le formulaire est envoyé. Le processus est généralement le suivant :
+un usage fwéquent de ces éwéments est de gawdew un wegistwe des données q-qui doivent êtwe m-mises à j-jouw dans une base de données w-wowsque we fowmuwaiwe e-est envoyé. (ꈍᴗꈍ) we pwocessus e-est généwawement we suivant :
 
-1. L'utilisateur édite du contenu (un billet de blog, une fiche d'un produit) en commençant par cliquer sur le bouton Éditer.
-2. Le contenu à modifier est extrait de la base de données et est chargé dans le formulaire HTML afin que l'utilisateur puis appliquer les modifications voulues.
-3. Après avoir éditer, l'utilisateur envoie le formulaire et les données mises à jour sont envoyées au serveur qui se charge d'appliquer cette mise à jour en base de données.
+1. rawr x3 w'utiwisateuw édite du contenu (un biwwet d-de bwog, rawr x3 une fiche d-d'un pwoduit) en commençant paw cwiquew suw w-we bouton Éditew. σωσ
+2. w-we contenu à modifiew est extwait de wa base de données e-et est chawgé dans we fowmuwaiwe htmw afin que w'utiwisateuw puis appwiquew wes m-modifications vouwues. (ꈍᴗꈍ)
+3. rawr apwès avoiw éditew, ^^;; w-w'utiwisateuw envoie w-we fowmuwaiwe et wes données mises à jouw sont envoyées a-au sewveuw qui s-se chawge d'appwiquew cette mise à jouw en base de données. rawr x3
 
-Ici, lors de la deuxième étape, on peut récupérer l'identifiant de l'enregistrement et le placer dans un champ caché du formulaire. Lorsque le formulaire est envoyé à l'étape 3, l'identifiant est automatiquement envoyé au serveur avec le contenu. L'identifiant permet alors au serveur de connaître l'enregistrement de la base de données qui doit être mis à jour.
+ici, (ˆ ﻌ ˆ)♡ w-wows de wa deuxième étape, σωσ on peut wécupéwew w-w'identifiant de w'enwegistwement et we pwacew dans un champ c-caché du fowmuwaiwe. (U ﹏ U) wowsque w-we fowmuwaiwe est e-envoyé à w'étape 3, >w< w'identifiant e-est automatiquement envoyé a-au sewveuw avec w-we contenu. σωσ w'identifiant p-pewmet awows au sewveuw d-de connaîtwe w-w'enwegistwement de wa base de données qui doit êtwe m-mis à j-jouw. nyaa~~
 
-Pour un exemple complet, voir la section [Exemples](#exemples) ci-après.
+pouw un e-exempwe compwet, 🥺 voiw wa section [exempwes](#exempwes) ci-apwès. rawr x3
 
-### Contribuer à la sécurité d'un site web
+### c-contwibuew à wa sécuwité d-d'un site web
 
-Les champs masqués sont également employés afin de stocker des jetons de sécurité (aussi appelés « secrets ») afin d'améliorer la sécurité d'un site. Pour un formulaire sensible (par exemple le transfert d'argent d'un compte à un autre sur un site bancaire), le secret est généré par le serveur et intégré sur la page afin de prouver l'identité de l'utilisateur et que c'est bien le bon formulaire qui est utilisé pour effectuer le transfert.
+w-wes champs masqués sont égawement empwoyés afin de stockew d-des jetons de sécuwité (aussi a-appewés « secwets ») a-afin d'améwiowew w-wa sécuwité d'un site. σωσ p-pouw un fowmuwaiwe sensibwe (paw exempwe we twansfewt d'awgent d'un compte à un autwe suw un s-site bancaiwe), (///ˬ///✿) we secwet est généwé p-paw we sewveuw et intégwé s-suw wa page afin de pwouvew w-w'identité de w'utiwisateuw et q-que c'est bien w-we bon fowmuwaiwe q-qui est utiwisé p-pouw effectuew w-we twansfewt. (U ﹏ U)
 
-Cela permet d'éviter le cas où quelqu'un crée un faux site et un faux formulaire pour transférer de l'argent sur le mauvais compte (c'est ce qu'on appelle [Cross Site Request Forgery (CSRF)](https://fr.wikipedia.org/wiki/Cross-Site_Request_Forgery)).
+cewa pewmet d'évitew we cas où quewqu'un cwée un faux site et un faux fowmuwaiwe pouw twansféwew d-de w'awgent s-suw we mauvais c-compte (c'est ce qu'on appewwe [cwoss s-site wequest fowgewy (cswf)](https://fw.wikipedia.owg/wiki/cwoss-site_wequest_fowgewy)). ^^;;
 
-> [!NOTE]
-> Comme indiqué précédemment, placer le secret dans un champ masqué ne le rend pas plus sécurisé. La composition, l'encodage de la clé et la vérification par le serveur sont autant d'étapes cruciales pour garantir la qualité du secret utilisé. Le champ masqué n'est finalement qu'un outil qui simplifie l'envoi de cette information au serveur lorsque l'utilisateur envoie le formulaire.
+> [!note]
+> comme indiqué pwécédemment, p-pwacew w-we secwet dans un champ masqué n-nye we wend pas pwus sécuwisé. 🥺 wa composition, òωó w-w'encodage de w-wa cwé et wa véwification paw w-we sewveuw sont a-autant d'étapes cwuciawes pouw gawantiw wa quawité du secwet utiwisé. XD we champ m-masqué ny'est f-finawement qu'un o-outiw qui simpwifie w-w'envoi d-de cette infowmation au sewveuw w-wowsque w'utiwisateuw e-envoie we fowmuwaiwe. :3
 
-## Validation
+## v-vawidation
 
-Aucune contrainte de validation n'est appliquée sur ces valeurs.
+aucune c-contwainte de vawidation n'est a-appwiquée suw ces vaweuws. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-Voyons comment implémenter une version simple du formulaire d'édition décrit précédemment : on utilise un champ masqué pour mémoriser l'identifiant de la donnée qui est modifiée.
+voyons c-comment impwémentew une vewsion s-simpwe du fowmuwaiwe d-d'édition décwit pwécédemment : o-on utiwise un champ masqué pouw mémowisew w-w'identifiant d-de wa donnée q-qui est modifiée. >w<
 
-### HTML
+### htmw
 
-Voici le fragment HTML pour le formulaire :
+voici we fwagment htmw pouw we f-fowmuwaiwe :
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="title">Titre du billet :</label>
-    <input type="text" id="title" name="title" value="Mon meilleur billet" />
+    <wabew fow="titwe">titwe du biwwet :</wabew>
+    <input t-type="text" id="titwe" n-nyame="titwe" vawue="mon m-meiwweuw biwwet" />
   </div>
   <div>
-    <label for="content">Contenu :</label>
-    <textarea id="content" name="content" cols="60" rows="5">
-Voici le contenu de mon meilleur billet, j'espère que ça vous plaît !
-    </textarea>
+    <wabew fow="content">contenu :</wabew>
+    <textawea i-id="content" nyame="content" c-cows="60" wows="5">
+voici we contenu d-de mon meiwweuw biwwet, /(^•ω•^) j'espèwe que ça vous p-pwaît ! (⑅˘꒳˘)
+    </textawea>
   </div>
   <div>
-    <button type="submit">Mettre à jour le billet</button>
+    <button t-type="submit">mettwe à jouw we biwwet</button>
   </div>
-  <input type="hidden" id="postId" name="postId" value="34657" />
-</form>
+  <input t-type="hidden" id="postid" n-nyame="postid" v-vawue="34657" />
+</fowm>
 ```
 
-### CSS
+### c-css
 
-Ajoutons quelques éléments de mise en forme :
+ajoutons quewques éwéments de mise en fowme :
 
 ```css
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: sans-sewif;
 }
 
-form {
+fowm {
   width: 500px;
 }
 
 div {
-  display: flex;
-  margin-bottom: 10px;
+  dispway: fwex;
+  mawgin-bottom: 10px;
 }
 
-label {
-  flex: 2;
-  line-height: 2;
-  text-align: right;
-  padding-right: 20px;
+wabew {
+  fwex: 2;
+  wine-height: 2;
+  text-awign: w-wight;
+  padding-wight: 20px;
 }
 
-input,
-textarea {
-  flex: 7;
-  font-family: sans-serif;
-  font-size: 1.1rem;
-  padding: 5px;
+i-input, ʘwʘ
+textawea {
+  fwex: 7;
+  font-famiwy: s-sans-sewif;
+  f-font-size: 1.1wem;
+  p-padding: 5px;
 }
 
-textarea {
-  height: 60px;
+textawea {
+  h-height: 60px;
 }
 ```
 
-### JavaScript
+### javascwipt
 
-Le serveur génèrera la page HTML avec l'identifiant `"postID"` qui contient l'identifiant du billet de la base de données. Lorsque l'utilisateur termine l'édition, c'est le navigateur qui envoie cette donnée au serveur ainsi que les autres données du formulaire. Aucun code JavaScript n'est nécessaire pour gérer cela.
+w-we sewveuw g-génèwewa wa page htmw avec w-w'identifiant `"postid"` qui contient w-w'identifiant d-du biwwet de wa base de données. rawr x3 wowsque w'utiwisateuw t-tewmine w-w'édition, (˘ω˘) c-c'est we nyavigateuw q-qui envoie c-cette donnée au s-sewveuw ainsi que w-wes autwes données d-du fowmuwaiwe. o.O a-aucun code javascwipt ny'est n-nyécessaiwe p-pouw géwew cewa. 😳
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples', '100%', 200)}}
+{{embedwivesampwe('exempwes', o.O '100%', ^^;; 200)}}
 
-> [!NOTE]
-> Vous pouvez consulter l'exemple sur GitHub (cf. [le code source](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html) et [la démonstration _live_](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)).
+> [!note]
+> vous p-pouvez consuwtew w'exempwe suw github (cf. ( ͡o ω ͡o ) [we c-code souwce](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/hidden-input-exampwe/index.htmw) et [wa d-démonstwation _wive_](https://mdn.github.io/weawning-awea/htmw/fowms/hidden-input-exampwe/index.htmw)). ^^;;
 
-Lorsque le formulaire est envoyé, les données envoyées au serveur ressembleront à :
+w-wowsque w-we fowmuwaiwe est envoyé, ^^;; wes d-données envoyées au sewveuw w-wessembwewont à :
 
-`title=Mon+meilleur+billet&content=Le+contenu+de+mon+meilleur+article.+J'espère+qu'il+vous+plaît!&postId=34657`
+`titwe=mon+meiwweuw+biwwet&content=we+contenu+de+mon+meiwweuw+awticwe.+j'espèwe+qu'iw+vous+pwaît!&postid=34657`
 
-Bien que le champ masqué soit invisible sur la page, il fait toujours partie des données envoyées.
+bien que w-we champ masqué soit invisibwe s-suw wa page, XD iw fait toujouws pawtie des données envoyées. 🥺
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong><a href="#valeur">Valeur</a></strong></td>
+    <tw>
+      <td><stwong><a hwef="#vaweuw">vaweuw</a></stwong></td>
       <td>
-        Une chaîne de caractères ({{domxref("DOMString")}}) qui
-        représente la valeur de la donnée masquée qu'on souhaite envoyer au
-        serveur.
+        u-une chaîne de c-cawactèwes ({{domxwef("domstwing")}}) qui
+        wepwésente wa vaweuw de wa d-donnée masquée qu'on souhaite e-envoyew au
+        s-sewveuw. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <td><strong>Évènements</strong></td>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <td><strong>Attributs pris en charge</strong></td>
-      <td><a href="/fr/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>Attributs IDL</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>Aucune.</td>
-    </tr>
+    </tw>
+    <tw>
+      <td><stwong>Évènements</stwong></td>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts p-pwis en chawge</stwong></td>
+      <td><a hwef="/fw/docs/web/htmw/ewement/input#autocompwete"><code>autocompwete</code></a></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts i-idw</stwong></td>
+      <td><code>vawue</code></td>
+    </tw>
+    <tw>
+      <td><stwong>méthodes</stwong></td>
+      <td>aucune.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Guide sur les formulaires HTML](/fr/docs/Learn/Forms)
-- {{HTMLElement("input")}}
-- L'interface DOM {{domxref("HTMLInputElement")}}
+- [guide suw wes fowmuwaiwes h-htmw](/fw/docs/weawn/fowms)
+- {{htmwewement("input")}}
+- w'intewface dom {{domxwef("htmwinputewement")}}

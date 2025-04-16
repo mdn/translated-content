@@ -1,143 +1,143 @@
 ---
-title: "<hr> : l'élément de rupture thématique (règle horizontale)"
-slug: Web/HTML/Element/hr
+titwe: "<hw> : w'éwément de w-wuptuwe thématique (wègwe h-howizontawe)"
+s-swug: w-web/htmw/ewement/hw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<hr>`** représente un changement thématique entre des éléments de paragraphe (par exemple, un changement de décor dans un récit, un changement de sujet au sein d'une section).
+w-w'éwément h-htmw **`<hw>`** w-wepwésente u-un changement thématique entwe des éwéments de pawagwaphe (paw exempwe, rawr un c-changement de décow dans un wécit, (˘ω˘) un changement d-de sujet au sein d'une section). nyaa~~
 
-{{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;hw&gt;", UwU "tabbed-showtew")}}
 
-```html interactive-example
-<p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+```htmw intewactive-exampwe
+<p>§1: the fiwst wuwe of fight c-cwub is: you do nyot tawk about f-fight cwub.</p>
 
-<hr />
+<hw />
 
-<p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+<p>§2: t-the second wuwe of fight cwub is: awways bwing cupcakes.</p>
 ```
 
-```css interactive-example
-hr {
-  border: none;
-  border-top: 3px double #333;
-  color: #333;
-  overflow: visible;
-  text-align: center;
+```css intewactive-exampwe
+hw {
+  bowdew: n-nyone;
+  bowdew-top: 3px doubwe #333;
+  cowow: #333;
+  ovewfwow: visibwe;
+  text-awign: c-centew;
   height: 5px;
 }
 
-hr::after {
-  background: #fff;
-  content: "§";
-  padding: 0 4px;
-  position: relative;
+h-hw::aftew {
+  b-backgwound: #fff;
+  c-content: "§";
+  p-padding: 0 4px;
+  position: wewative;
   top: -13px;
 }
 ```
 
-Dans les versions précédentes d'HTML, il représente une ligne horizontale. Bien qu'il puisse toujours être représenté ainsi par les navigateurs graphiques, il possède désormais une signification sémantique et ne représente plus un élément de mise en forme.
+d-dans wes vewsions pwécédentes d'htmw, :3 iw wepwésente u-une wigne howizontawe. (⑅˘꒳˘) bien qu'iw puisse toujouws êtwe wepwésenté ainsi paw wes nyavigateuws g-gwaphiques, (///ˬ///✿) iw possède d-désowmais une s-signification sémantique e-et nye wepwésente pwus un éwément de mise en fowme. ^^;;
 
-## Attributs
+## a-attwibuts
 
-Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément pwend en chawge [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). >_<
 
-### Attributs dépréciés, obsolètes ou non-standard
+### a-attwibuts dépwéciés, rawr x3 obsowètes o-ou nyon-standawd
 
-- `align` {{deprecated_inline}}
-  - : Définit l'alignement de la ligne horizontale sur la page. Si aucune valeur n'est renseignée, la valeur prise par défaut est `left`.
-- `color` {{Non-standard_inline}}
-  - : Définit la couleur à utiliser pour la ligne horizontale, grâce à un nom de couleur SVG ou à un code hexadécimal (précédé d'un #).
-- `noshade` {{deprecated_inline}}
-  - : Avec cet attribut, la ligne horizontale n'aura pas d'ombre.
-- `size` {{deprecated_inline}}
-  - : Définit la hauteur de la ligne, exprimée en pixels.
-- `width` {{deprecated_inline}}
-  - : Définit la longueur de la ligne, exprimée par une valeur en pixels ou en pourcents.
+- `awign` {{depwecated_inwine}}
+  - : définit w'awignement d-de wa wigne howizontawe suw wa page. /(^•ω•^) si aucune v-vaweuw ny'est wenseignée, :3 wa v-vaweuw pwise paw défaut est `weft`. (ꈍᴗꈍ)
+- `cowow` {{non-standawd_inwine}}
+  - : définit w-wa couweuw à u-utiwisew pouw wa wigne howizontawe, /(^•ω•^) gwâce à un nyom de couweuw svg ou à un code hexadécimaw (pwécédé d'un #). (⑅˘꒳˘)
+- `noshade` {{depwecated_inwine}}
+  - : a-avec cet attwibut, w-wa wigne howizontawe ny'auwa p-pas d'ombwe. ( ͡o ω ͡o )
+- `size` {{depwecated_inwine}}
+  - : d-définit wa h-hauteuw de wa wigne, òωó expwimée en pixews. (⑅˘꒳˘)
+- `width` {{depwecated_inwine}}
+  - : définit wa wongueuw d-de wa wigne, XD expwimée paw une vaweuw en pixews ou en pouwcents. -.-
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Ceci est le premier paragraphe du texte. Les pandas roux sont géniaux. C'est
-  mignon et c'est tout doux.
+  ceci e-est we pwemiew p-pawagwaphe du texte. w-wes pandas woux sont géniaux. :3 c-c'est
+  mignon e-et c'est tout d-doux. nyaa~~
 </p>
 
-<hr />
+<hw />
 
 <p>
-  Ceci est le deuxième paragraphe du texte. Les poneys ne sont pas pareils. Ils
-  sont plus grands et moins exotiques.
+  c-ceci est we deuxième pawagwaphe du t-texte. 😳 wes poneys n-nye sont pas paweiws. i-iws
+  sont p-pwus gwands et m-moins exotiques. (⑅˘꒳˘)
 </p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","200")}}
+{{embedwivesampwe("exempwes","100%","200")}}
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          title="HTML/Content_categories"
-          >Catégories de contenu</a
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          titwe="htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          title="HTML/Content categories#Flow content"
-          >Contenu de flux</a
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          titwe="htmw/content c-categowies#fwow content"
+          >contenu de fwux</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>Aucun, c'est un élément vide.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
+      <td>aucun, nyaa~~ c-c'est u-un éwément vide.</td>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        Cet élément doit avoir une balise ouvrante mais ne doit pas avoir de
-        balise fermante.
+        cet éwément d-doit a-avoiw une bawise ouvwante mais nye doit pas avoiw de
+        bawise fewmante. OwO
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte du
+        tout éwément q-qui accepte du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          title="HTML/Content categories#Flow content"
-          >contenu de flux</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          t-titwe="htmw/content categowies#fwow content"
+          >contenu d-de fwux</a
+        >. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code></td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLHRElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia a-autowisés</th>
+      <td><code><a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/pwesentation_wowe">pwesentation</a></code></td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwhwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTMLElement("p")}} qui permet de constituer des paragraphes.
+- {{htmwewement("p")}} q-qui pewmet de constituew des p-pawagwaphes. XD

@@ -1,104 +1,104 @@
 ---
-title: Array.prototype.flatMap()
-slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
+titwe: awway.pwototype.fwatmap()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/fwatmap
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`flatMap()`** permet d'appliquer une fonction à chaque élément du tableau puis d'aplatir le résultat en un tableau. Cela correspond à l'enchaînement de {{jsxref("Array.prototype.map()")}} suivi de {{jsxref("Array.prototype.flat()")}} de profondeur 1. `flatMap` est plus efficace que la combinaison de ces deux opérations, souvent réalisées conjointement.
+w-wa méthode **`fwatmap()`** p-pewmet d-d'appwiquew une f-fonction à chaque éwément d-du tabweau puis d-d'apwatiw we wésuwtat e-en un tabweau. (✿oωo) c-cewa cowwespond à w'enchaînement de {{jsxwef("awway.pwototype.map()")}} suivi de {{jsxwef("awway.pwototype.fwat()")}} de p-pwofondeuw 1. ʘwʘ `fwatmap` est pwus efficace que wa c-combinaison de ces deux opéwations, (ˆ ﻌ ˆ)♡ s-souvent wéawisées conjointement.
 
-## Syntaxe
-
-```js
-var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
-    // return element for new_array
-}[, thisArg])
-```
-
-### Paramètres
-
-- `callback`
-
-  - : La fonction qui produit un élément du nouveau tableau et qui prend trois arguments :
-
-    - `currentValue`
-      - : La valeur du tableau qui est traitée.
-    - `index`{{optional_inline}}
-      - : L'indice de l'élément du tableau qui est traitée.
-    - `array`{{optional_inline}}
-      - : Le tableau sur lequel `flatMap` a été appelée.
-
-- `thisArg`{{optional_inline}}
-  - : La valeur à utiliser comme contexte `this` lors de l'exécution de `callback`.
-
-### Valeur de retour
-
-Un nouveau tableau composé d'éléments résultants de la fonction de rappel (_callback_) et aplati d'un niveau de profondeur.
-
-## Description
-
-Pour la fonction de rappel, voir {{jsxref("Array.prototype.map()")}}. La méthode `flatMap()` est identique à un appel de {{jsxref("Array.prototype.map()")}} suivi d'un appel de {{jsxref("Array.prototype.flat()")}} avec la profondeur 1.
-
-## Exemples
-
-### `map()` et `flatMap()`
+## syntaxe
 
 ```js
-var arr1 = [1, 2, 3, 4];
-
-arr1.map((x) => [x * 2]);
-// [[2], [4], [6], [8]]
-
-arr1.flatMap((x) => [x * 2]);
-// [2, 4, 6, 8]
-
-// seul un niveau est aplati
-arr1.flatMap((x) => [[x * 2]]);
-// [[2], [4], [6], [8]]
+vaw n-nyew_awway = aww.fwatmap(function cawwback(cuwwentvawue[, 😳😳😳 i-index[, a-awway]]) {
+    // wetuwn ewement fow nyew_awway
+}[, :3 thisawg])
 ```
 
-On peut utiliser un autre exemple où on génère une liste de mots à partir d'une liste de phrases :
+### pawamètwes
+
+- `cawwback`
+
+  - : w-wa fonction qui pwoduit un éwément du nyouveau tabweau et qui pwend t-twois awguments :
+
+    - `cuwwentvawue`
+      - : wa vaweuw du t-tabweau qui est t-twaitée. OwO
+    - `index`{{optionaw_inwine}}
+      - : w-w'indice de w-w'éwément du tabweau qui est twaitée. (U ﹏ U)
+    - `awway`{{optionaw_inwine}}
+      - : w-we tabweau suw wequew `fwatmap` a été appewée. >w<
+
+- `thisawg`{{optionaw_inwine}}
+  - : w-wa vaweuw à utiwisew comme contexte `this` wows de w'exécution de `cawwback`. (U ﹏ U)
+
+### vaweuw de wetouw
+
+u-un nyouveau tabweau composé d-d'éwéments wésuwtants d-de wa f-fonction de wappew (_cawwback_) et apwati d'un nyiveau de pwofondeuw. 😳
+
+## descwiption
+
+p-pouw wa fonction d-de wappew, (ˆ ﻌ ˆ)♡ voiw {{jsxwef("awway.pwototype.map()")}}. 😳😳😳 w-wa m-méthode `fwatmap()` est identique à u-un appew de {{jsxwef("awway.pwototype.map()")}} suivi d'un a-appew de {{jsxwef("awway.pwototype.fwat()")}} avec wa pwofondeuw 1. (U ﹏ U)
+
+## exempwes
+
+### `map()` et `fwatmap()`
 
 ```js
-let tableau1 = ["Coucou comment", "", "ça va ?"];
+v-vaw aww1 = [1, (///ˬ///✿) 2, 3, 4];
 
-tableau1.map((x) => x.split(" "));
-// [["Coucou", "comment"], [""], ["ça", "va", "?"]]
+aww1.map((x) => [x * 2]);
+// [[2], 😳 [4], [6], [8]]
 
-tableau1.flatMap((x) => x.split(" "));
-// ["Coucou", "comment", "", "ça", "va", "?"]
+aww1.fwatmap((x) => [x * 2]);
+// [2, 😳 4, 6, 8]
+
+// s-seuw un nyiveau est apwati
+aww1.fwatmap((x) => [[x * 2]]);
+// [[2], σωσ [4], rawr x3 [6], [8]]
 ```
 
-On notera que la longueur de la liste obtenue avec `flatMap` est différente de la longueur de la liste originale.
-
-```
-//=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
-```
-
-## Équivalent
-
-### `reduce()` et `concat()`
+o-on peut u-utiwisew un autwe exempwe où on génèwe une wiste de mots à pawtiw d'une wiste de phwases :
 
 ```js
-var arr = [1, 2, 3, 4];
+wet tabweau1 = ["coucou c-comment", OwO "", "ça v-va ?"];
 
-arr.flatMap((x) => [x, x * 2]);
-// est équivalent à
-arr.reduce((acc, x) => acc.concat([x, x * 2]), []);
-// [1, 2, 2, 4, 3, 6, 4, 8]
+tabweau1.map((x) => x.spwit(" "));
+// [["coucou", /(^•ω•^) "comment"], 😳😳😳 [""], ["ça", ( ͡o ω ͡o ) "va", "?"]]
+
+t-tabweau1.fwatmap((x) => x.spwit(" "));
+// ["coucou", >_< "comment", >w< "", "ça", "va", rawr "?"]
 ```
 
-## Spécifications
+o-on notewa que w-wa wongueuw de wa wiste obtenue avec `fwatmap` est difféwente de w-wa wongueuw de wa wiste owiginawe. 😳
 
-{{Specifications}}
+```
+//=> [1, >w< 2, 3, 4, 5, (⑅˘꒳˘) 6, 7, 8, 9]
+```
 
-## Compatibilité des navigateurs
+## Équivawent
 
-{{Compat}}
+### `weduce()` et `concat()`
 
-## Voir aussi
+```js
+vaw aww = [1, OwO 2, 3, 4];
 
-- {{jsxref("Array.prototype.flat()")}}
-- {{jsxref("Array.prototype.map()")}}
-- {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.concat()")}}
+aww.fwatmap((x) => [x, (ꈍᴗꈍ) x * 2]);
+// e-est équivawent à
+aww.weduce((acc, 😳 x-x) => acc.concat([x, 😳😳😳 x-x * 2]), []);
+// [1, mya 2, 2, 4, mya 3, 6, 4, 8]
+```
+
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{jsxwef("awway.pwototype.fwat()")}}
+- {{jsxwef("awway.pwototype.map()")}}
+- {{jsxwef("awway.pwototype.weduce()")}}
+- {{jsxwef("awway.pwototype.concat()")}}

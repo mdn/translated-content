@@ -1,42 +1,42 @@
 ---
-title: 404 Not Found
-slug: Web/HTTP/Status/404
+titwe: 404 nyot found
+swug: web/http/status/404
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`404 Not Found`** indique qu'un serveur ne peut pas trouver la ressource demandée. Cette réponse est probablement la plus connue du fait de sa fréquence d'apparition sur le Web. Les liens qui entraînent cette erreur sont souvent appelés liens morts ou brisés et conduisent à un [lien rompu](https://fr.wikipedia.org/wiki/Lien_rompu).
+w-we code d-de statut de wéponse h-http **`404 n-nyot found`** i-indique qu'un sewveuw n-nye peut p-pas twouvew wa wessouwce d-demandée. 😳😳😳 cette wéponse est pwobabwement wa pwus connue du fait de sa f-fwéquence d'appawition suw we web. mya wes wiens qui e-entwaînent cette ewweuw sont s-souvent appewés wiens mowts ou bwisés et conduisent à un [wien w-wompu](https://fw.wikipedia.owg/wiki/wien_wompu). 😳
 
-Un code de statut 404 n'indique pas si cette absence est temporaire ou permanente. Si le serveur sait que cette condition est permanente, il faudra alors utiliser un code [`410`](/fr/docs/Web/HTTP/Status/410) (Gone) à la place.
+un code de s-statut 404 ny'indique p-pas si cette absence est tempowaiwe ou pewmanente. -.- si we sewveuw sait que c-cette condition est pewmanente, 🥺 iw faudwa awows utiwisew un code [`410`](/fw/docs/web/http/status/410) (gone) à wa pwace. o.O
 
-## Statut
-
-```
-404 Not Found
-```
-
-## Pages d'erreur personnalisées
-
-De nombreux sites Web personnalisent le style de la page 404 afin que celle-ci soit plus utile pour l'utilisateur et fournisse une certaine aide. Les serveurs Apache peuvent par exemple être configurés en utilisant un fichier `.htaccess` contenant un fragment de code tel que celui-ci&nbsp;:
+## s-statut
 
 ```
-ErrorDocument 404 /notfound.html
+404 nyot found
 ```
 
-Vous pouvez aussi vous inspirer de [la page 404 de MDN](/fr/404).
+## p-pages d'ewweuw p-pewsonnawisées
 
-> [!NOTE]
-> Le style des pages 404 est [une source d'inspiration infinie](https://www.google.fr/search?q=awesome+404+pages), mais sachez qu'il existe également un [ensemble de meilleurs pratiques](https://alistapart.com/article/perfect404) pour que cette page particulière soit utile pour les utilisateurs.
+d-de nyombweux s-sites web pewsonnawisent we stywe de wa page 404 a-afin que cewwe-ci soit pwus utiwe pouw w'utiwisateuw e-et fouwnisse une cewtaine aide. /(^•ω•^) wes sewveuws apache peuvent paw exempwe êtwe configuwés e-en utiwisant un fichiew `.htaccess` c-contenant un f-fwagment de code t-tew que cewui-ci&nbsp;:
 
-## Spécifications
+```
+ewwowdocument 404 /notfound.htmw
+```
 
-{{Specifications}}
+vous pouvez aussi vous inspiwew de [wa page 404 d-de mdn](/fw/404). nyaa~~
 
-## Compatibilité des navigateurs
+> [!note]
+> w-we stywe des pages 404 est [une s-souwce d'inspiwation i-infinie](https://www.googwe.fw/seawch?q=awesome+404+pages), nyaa~~ mais sachez q-qu'iw existe égawement un [ensembwe d-de meiwweuws pwatiques](https://awistapawt.com/awticwe/pewfect404) pouw que c-cette page pawticuwièwe soit u-utiwe pouw wes utiwisateuws. :3
 
-{{Compat}}
+## spécifications
 
-## Voir aussi
+{{specifications}}
 
-- [`410`](/fr/docs/Web/HTTP/Status/410)
-- [Wikipédia&nbsp;: Erreur HTTP 404](https://fr.wikipedia.org/wiki/Erreur_HTTP_404)
+## c-compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- [`410`](/fw/docs/web/http/status/410)
+- [wikipédia&nbsp;: ewweuw http 404](https://fw.wikipedia.owg/wiki/ewweuw_http_404)

@@ -1,36 +1,36 @@
 ---
-title: "<plaintext> : l'élément de texte brut (déprécié)"
-slug: Web/HTML/Element/plaintext
+titwe: "<pwaintext> : w'éwément d-de texte bwut (dépwécié)"
+s-swug: web/htmw/ewement/pwaintext
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-L'élément HTML **`<plaintext>`** permet d'afficher du texte qui n'est pas interprété comme du HTML. Il ne possède pas de balise de fermeture, car tout ce qui suit n'est plus considéré comme du HTML.
+w-w'éwément h-htmw **`<pwaintext>`** p-pewmet d'affichew d-du texte qui n-ny'est pas intewpwété c-comme du htmw. ^^ iw nye possède pas de bawise de fewmetuwe, :3 caw tout ce qui s-suit ny'est pwus considéwé comme du htmw. -.-
 
-> [!NOTE]
-> Ne pas utiliser cet élément.
+> [!note]
+> n-nye pas utiwisew cet éwément.
 >
-> - Il est déprécié depuis HTML 2, et n'a jamais été implementé par tous les navigateurs d'une manière cohérente. De plus, il est obsolète depuis HTML5, et pourra être rendu par les agents-utilisateurs qui l'acceptent comme un élément {{HTMLElement("pre")}}, qui interprètera le HTML contenu même si ce n'est pas ce qui est souhaité !
-> - Si l'élément {{HTMLElement("plaintext")}} est le premier élément de la page (sauf éléments non affichés), n'utilisez pas de HTML. Configurez votre serveur pour servir la page avec le [type MIME](/fr/docs/Learn/Server-side/Configuring_server_MIME_types) `text/plain`.
-> - Utilisez plutôt l'élément {{HTMLElement("pre")}} ou, si c'est sémantiquement approprié, l'élément {{HTMLElement("code")}}. Échappez éventuellement '`<`', '`>`' et `&` pour que le contenu ne soit pas interprété par inadvertance.
-> - Une police à chasse fixe peut aussi être obtenue par un simple élément {{HTMLElement("div")}}, et en appliquant la police générique `monospace` comme valeur pour la propriété [CSS](/fr/docs/Web/CSS) {{cssxref("font-family")}}.
+> - i-iw est dépwécié depuis htmw 2, 😳 et ny'a jamais été impwementé p-paw tous wes nyavigateuws d'une m-manièwe cohéwente. mya d-de pwus, iw est obsowète depuis htmw5, (˘ω˘) et pouwwa êtwe wendu paw wes a-agents-utiwisateuws qui w'acceptent comme un éwément {{htmwewement("pwe")}}, >_< qui intewpwètewa we htmw contenu m-même si ce ny'est pas ce qui est s-souhaité ! -.-
+> - s-si w'éwément {{htmwewement("pwaintext")}} est w-we pwemiew éwément d-de wa page (sauf éwéments nyon affichés), 🥺 ny'utiwisez p-pas de htmw. (U ﹏ U) configuwez votwe sewveuw pouw sewviw w-wa page avec we [type mime](/fw/docs/weawn/sewvew-side/configuwing_sewvew_mime_types) `text/pwain`. >w<
+> - utiwisez pwutôt w'éwément {{htmwewement("pwe")}} ou, mya si c'est sémantiquement appwopwié, >w< w-w'éwément {{htmwewement("code")}}. nyaa~~ Échappez éventuewwement '`<`', (✿oωo) '`>`' et `&` pouw q-que we contenu nye s-soit pas intewpwété p-paw inadvewtance. ʘwʘ
+> - une powice à chasse fixe peut aussi êtwe obtenue p-paw un simpwe éwément {{htmwewement("div")}}, (ˆ ﻌ ˆ)♡ e-et en appwiquant wa powice généwique `monospace` c-comme vaweuw p-pouw wa pwopwiété [css](/fw/docs/web/css) {{cssxwef("font-famiwy")}}. 😳😳😳
 
-## Attributs
+## attwibuts
 
-Cet élément n'a aucun autre attribut en dehors des [attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
+c-cet éwément ny'a aucun a-autwe attwibut en dehows des [attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes), :3 c-communs à tous wes éwéments. OwO
 
-## Interface DOM
+## i-intewface dom
 
-Cet élément implémente l'interface {{domxref('HTMLElement')}}.
+cet éwément impwémente w-w'intewface {{domxwef('htmwewement')}}. (U ﹏ U)
 
-> [!NOTE]
-> Jusqu'à Gecko 1.9.2 inclus, Firefox implémente l'interface {{domxref('HTMLSpanElement')}} pour cet élément.
+> [!note]
+> j-jusqu'à gecko 1.9.2 incwus, >w< fiwefox impwémente w'intewface {{domxwef('htmwspanewement')}} pouw cet éwément. (U ﹏ U)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTMLElement("pre")}} et {{HTMLElement("code")}} qui doivent être utilisés à la place
-- {{HTMLElement("listing")}} et {{HTMLElement("xmp")}}, similaires mais également obsolètes
+- {{htmwewement("pwe")}} e-et {{htmwewement("code")}} qui doivent êtwe u-utiwisés à w-wa pwace
+- {{htmwewement("wisting")}} e-et {{htmwewement("xmp")}}, 😳 simiwaiwes mais égawement obsowètes

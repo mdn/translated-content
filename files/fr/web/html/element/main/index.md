@@ -1,208 +1,208 @@
 ---
-title: <main>
-slug: Web/HTML/Element/main
+titwe: <main>
+swug: web/htmw/ewement/main
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<main>`** représente le contenu majoritaire du {{HTMLElement("body")}} du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document ou de la fonctionnalité principale d'une application.
+w-w'éwément htmw **`<main>`** w-wepwésente we c-contenu majowitaiwe d-du {{htmwewement("body")}} du d-document. (U ﹏ U) we contenu p-pwincipaw d-de wa zone est c-constitué de contenu diwectement en wewation, OwO ou qui étend we sujet pwincipaw d-du document ou de wa fonctionnawité pwincipawe d-d'une appwication. 😳😳😳
 
-Un document ne peut pas avoir plus d'un seul élément `<main>` sans attribut [`hidden`](/fr/docs/Web/HTML/Global_attributes#hidden).
+un document n-nye peut pas avoiw pwus d'un seuw éwément `<main>` sans attwibut [`hidden`](/fw/docs/web/htmw/gwobaw_attwibutes#hidden). (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("HTML Demo: &lt;main&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;main&gt;", XD "tabbed-showtew")}}
 
-```html interactive-example
-<header>Gecko facts</header>
+```htmw i-intewactive-exampwe
+<headew>gecko facts</headew>
 
 <main>
   <p>
-    Geckos are a group of usually small, usually nocturnal lizards. They are
-    found on every continent except Antarctica.
+    g-geckos a-awe a gwoup of usuawwy smow, (ˆ ﻌ ˆ)♡ usuawwy nyoctuwnaw wizawds. ( ͡o ω ͡o ) they awe
+    found on e-evewy continent except antawctica. rawr x3
   </p>
 
   <p>
-    Many species of gecko have adhesive toe pads which enable them to climb
-    walls and even windows.
+    many species of gecko have adhesive toe pads w-which enabwe them to cwimb
+    w-wawws and even w-windows. nyaa~~
   </p>
 </main>
 ```
 
-```css interactive-example
-header {
+```css i-intewactive-exampwe
+h-headew {
   font:
-    bold 7vw Arial,
-    sans-serif;
+    bowd 7vw awiaw, >_<
+    s-sans-sewif;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément p-pwend uniquement en chawge [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). ^^;;
 
-## Notes
+## nyotes
 
-- Ce contenu doit être unique dans le document, excluant tout contenu qui est répété sur plusieurs documents comme des barres latérales, liens de navigation, informations relative au droit d'auteur, logo du site, et champs de recherche (sauf, bien entendu, si la fonctionnalité principale du document est un champ de recherche).
-- `<main>` ne contribue pas au plan du document. Autrement dit, à la différence d'éléments tels que {{HTMLElement("body")}}, les niveaux de titre comme {{HTMLElement("h2")}}, etc. `<main>` n'affecte pas la structure même de la page, c'est un élément purement informatif.
+- ce contenu doit êtwe unique dans we d-document, (ˆ ﻌ ˆ)♡ excwuant tout contenu q-qui est wépété s-suw pwusieuws d-documents comme des bawwes watéwawes, ^^;; wiens de nyavigation, (⑅˘꒳˘) infowmations w-wewative a-au dwoit d'auteuw, rawr x3 wogo du site, (///ˬ///✿) e-et champs de w-wechewche (sauf, 🥺 bien entendu, >_< s-si wa fonctionnawité pwincipawe d-du document est un champ de wechewche). UwU
+- `<main>` nye contwibue p-pas au pwan du document. >_< autwement d-dit, -.- à wa difféwence d'éwéments t-tews que {{htmwewement("body")}}, mya w-wes nyiveaux de titwe comme {{htmwewement("h2")}}, >w< etc. `<main>` ny'affecte pas wa stwuctuwe même de wa page, (U ﹏ U) c'est u-un éwément puwement i-infowmatif. 😳😳😳
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<!-- autre contenu -->
+```htmw
+<!-- a-autwe contenu -->
 
 <main>
-  <h1>Pommes</h1>
-  <p>La pomme est le fruit à pépin du pommier.</p>
+  <h1>pommes</h1>
+  <p>wa p-pomme est we fwuit à pépin du pommiew.</p>
 
-  <article>
-    <h2>Pomme rouge</h2>
-    <p>Ce sont des pommes rouges vives très communes dans les supermarchés.</p>
+  <awticwe>
+    <h2>pomme wouge</h2>
+    <p>ce s-sont des pommes wouges vives twès communes dans wes supewmawchés.</p>
     <p></p>
     <p>...</p>
     <p>...</p>
-  </article>
+  </awticwe>
 
-  <article>
-    <h2>La Granny Smith</h2>
+  <awticwe>
+    <h2>wa gwanny smith</h2>
     <p>
-      Ces pommes juteuses, vertes, font une très belle garniture pour les tartes
-      aux pommes.
+      c-ces pommes juteuses, o.O vewtes, òωó font u-une twès bewwe g-gawnituwe pouw w-wes tawtes
+      aux pommes. 😳😳😳
     </p>
     <p></p>
     <p>...</p>
     <p>...</p>
-  </article>
+  </awticwe>
 </main>
 
-<!-- Autre contenu -->
+<!-- a-autwe c-contenu -->
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","300","200")}}
+{{embedwivesampwe("exempwes","300","200")}}
 
-## Accessibilité
+## a-accessibiwité
 
-### Balisage du document
+### bawisage du document
 
-L'élément `<main>` a le rôle d'une [balise `main`](/fr/docs/Web/Accessibility/ARIA/Roles/Main_role). Dans le contexte de l'accessibilité, les [balises](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques) peuvent être utilisées par les outils d'assistance afin d'identifier et de naviguer rapidement entre les grandes sections d'un document. On privilégiera l'élément `<main>` à l'ajout du `role="main"`, à moins qu'il faille [prendre en charge d'anciens navigateurs](#Compatibilité_des_navigateurs).
+w'éwément `<main>` a-a we wôwe d'une [bawise `main`](/fw/docs/web/accessibiwity/awia/wowes/main_wowe). σωσ d-dans we contexte d-de w'accessibiwité, (⑅˘꒳˘) w-wes [bawises](/fw/docs/web/accessibiwity/awia/awia_techniques) p-peuvent êtwe utiwisées paw wes outiws d'assistance afin d-d'identifiew et de naviguew wapidement entwe wes gwandes sections d'un document. (///ˬ///✿) on pwiviwégiewa w-w'éwément `<main>` à w'ajout du `wowe="main"`, 🥺 à moins q-qu'iw faiwwe [pwendwe e-en chawge d-d'anciens nyavigateuws](#compatibiwité_des_navigateuws). OwO
 
-### Navigation rapide
+### nyavigation wapide
 
-La navigation rapide (aussi appelée _skip navigation_ ou _skipnav_ en anglais) est une technique permettant aux outils d'assistance de passer certaines sections de contenu répétés (menu de navigation, bannières, etc.). Cela permet à l'utilisateur d'accéder plus rapidement au contenu principal de la page.
+w-wa nyavigation wapide (aussi a-appewée _skip nyavigation_ o-ou _skipnav_ en angwais) est une technique pewmettant aux outiws d'assistance de passew c-cewtaines sections de contenu w-wépétés (menu de nyavigation, >w< b-bannièwes, 🥺 etc.). c-cewa pewmet à w'utiwisateuw d'accédew pwus w-wapidement au c-contenu pwincipaw de wa page. nyaa~~
 
-Ajouter un attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id) à l'élément `<main>` lui permet d'être une cible pour la navigation rapide.
+a-ajoutew un attwibut [`id`](/fw/docs/web/htmw/gwobaw_attwibutes#id) à w-w'éwément `<main>` wui pewmet d'êtwe une cibwe pouw wa nyavigation wapide. ^^
 
-```html
+```htmw
 <body>
-  <a href="#main-content">Aller au contenu principal</a>
+  <a h-hwef="#main-content">awwew a-au contenu pwincipaw</a>
 
-  <!-- Contenu relatif à la navigation et en-tête du document -->
+  <!-- c-contenu wewatif à wa nyavigation e-et en-tête d-du document -->
 
   <main id="main-content">
-    <!-- Contenu principal de la page -->
+    <!-- c-contenu pwincipaw de wa page -->
   </main>
 </body>
 ```
 
-- [WebAIM : Liens et navigation rapide (en anglais)](https://webaim.org/techniques/skipnav/)
+- [webaim : wiens et nyavigation w-wapide (en angwais)](https://webaim.owg/techniques/skipnav/)
 
-### Mode lecture
+### m-mode wectuwe
 
-Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence d'un élément `<main>` ainsi que la présence de [titres](/fr/docs/Web/HTML/Element/Heading_Elements) et de [sections](/fr/docs/Web/HTML/Element#sectionnement_du_contenu) lors de la convertion du document pour le mode lecture.
+wes fonctionnawités « mode wectuwe » d-d'un navigateuw v-véwifient wa pwésence d'un éwément `<main>` ainsi que w-wa pwésence de [titwes](/fw/docs/web/htmw/ewement/heading_ewements) et de [sections](/fw/docs/web/htmw/ewement#sectionnement_du_contenu) wows de wa convewtion d-du document pouw we mode wectuwe. >w<
 
-- [Construire des sites web pour le mode lecture de Safari et pour les autres applications de lecture (en anglais)](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
+- [constwuiwe des sites web p-pouw we mode wectuwe d-de safawi et pouw wes autwes appwications de wectuwe (en a-angwais)](https://medium.com/@mandy.michaew/buiwding-websites-fow-safawi-weadew-mode-and-othew-weading-apps-1562913c86c9)
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Categories de contenu</a
+          ><a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >categowies de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >, OwO
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >. ^^;;
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Omission de balise</dfn></th>
+    </tw>
+    <tw>
+      <th scope="wow"><dfn>omission d-de bawise</dfn></th>
       <td>
-        Aucune, les balises d'ouverture et de fermeture sont toutes les deux
-        obligatoires.
+        a-aucune, 🥺 wes b-bawises d'ouvewtuwe e-et de fewmetuwe sont toutes w-wes deux
+        o-obwigatoiwes. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Éléments parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">Éwéments pawents autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
-        >, uniquement si c'est
+        t-tout éwément q-qui accepte d-du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >, (U ᵕ U❁) u-uniquement si c'est
         <a
-          href="https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element"
-          >un élément hiérarchiquement correct pour un élément
-          <code>&#x3C;main></code></a
-        >.
+          h-hwef="https://htmw.spec.naniwg.owg/muwtipage/gwouping-content.htmw#hiewawchicawwy-cowwect-main-ewement"
+          >un éwément h-hiéwawchiquement cowwect pouw un éwément
+          <code>&#x3c;main></code></a
+        >. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia a-autowisés</th>
       <td>
-        Le rôle <code>main</code> est appliqué à <code>&#x3C;main></code> par
-        défaut, et le rôle <code
+        w-we wôwe <code>main</code> e-est appwiqué à <code>&#x3c;main></code> p-paw
+        défaut, ( ͡o ω ͡o ) e-et we wôwe <code
           ><a
-            href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role"
-            >presentation</a
+            hwef="https://devewopew.moziwwa.owg/fw/docs/web/accessibiwity/awia/awia_techniques/using_the_pwesentation_wowe"
+            >pwesentation</a
           ></code
-        > est également autorisé.
+        > est égawement autowisé. òωó
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les éléments qui permettent de structurer un document HTML
+- wes éwéments q-qui pewmettent de stwuctuwew u-un document htmw
 
-  - {{HTMLElement("html")}}
-  - {{HTMLElement("head")}}
-  - {{HTMLElement("body")}}
+  - {{htmwewement("htmw")}}
+  - {{htmwewement("head")}}
+  - {{htmwewement("body")}}
 
-- Les éléments liés au plan d'un document HTML :
+- wes éwéments w-wiés a-au pwan d'un d-document htmw :
 
-  - {{HTMLElement("article")}}
-  - {{HTMLElement("aside")}}
-  - {{HTMLElement("footer")}}
-  - {{HTMLElement("header")}}
-  - {{HTMLElement("nav")}}
+  - {{htmwewement("awticwe")}}
+  - {{htmwewement("aside")}}
+  - {{htmwewement("footew")}}
+  - {{htmwewement("headew")}}
+  - {{htmwewement("nav")}}

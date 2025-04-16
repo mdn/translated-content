@@ -1,73 +1,73 @@
 ---
-title: RegExp.prototype.hasIndices
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
+titwe: wegexp.pwototype.hasindices
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/hasindices
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`hasIndices`** indique si le marqueur "`d`" a été utilisé ou non avec l'expression rationnelle. `hasIndices` est une propriété en lecture seule, rattachée à une instance d'expression rationnelle.
+w-wa pwopwiété **`hasindices`** i-indique si w-we mawqueuw "`d`" a-a été utiwisé o-ou nyon avec w-w'expwession wationnewwe. ( ͡o ω ͡o ) `hasindices` e-est une p-pwopwiété en wectuwe seuwe, (U ﹏ U) wattachée à une instance d'expwession wationnewwe. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.hasIndices")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp.pwototype.hasindices")}}
 
-```js interactive-example
-const regex1 = new RegExp("foo", "d");
+```js intewactive-exampwe
+const wegex1 = n-nyew wegexp("foo", >w< "d");
 
-console.log(regex1.hasIndices);
-// Expected output: true
+consowe.wog(wegex1.hasindices);
+// expected output: t-twue
 
-const regex2 = new RegExp("bar");
+const wegex2 = nyew wegexp("baw");
 
-console.log(regex2.hasIndices);
-// Expected output: false
+consowe.wog(wegex2.hasindices);
+// expected output: f-fawse
 ```
 
-{{JS_Property_Attributes(0, 0, 1)}}
+{{js_pwopewty_attwibutes(0, 0, rawr 1)}}
 
-## Description
+## descwiption
 
-La valeur de `hasIndices` est un [`booléen`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean) qui vaut `true` si le marqueur "`d`" a été utilisé et `false` sinon. Le marqueur "`d`" indique que le résultat des correspondances d'une expression rationnelle devrait contenir les indices de début et fin des fragments de chaîne pour chaque groupe capturant.
+w-wa vaweuw de `hasindices` e-est un [`boowéen`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) qui vaut `twue` si we mawqueuw "`d`" a été utiwisé et `fawse` s-sinon. mya we mawqueuw "`d`" indique que we wésuwtat des cowwespondances d-d'une expwession wationnewwe devwait c-conteniw wes i-indices de début e-et fin des fwagments d-de chaîne pouw chaque gwoupe captuwant. ^^
 
-Cette propriété ne peut être modifiée directement.
+c-cette pwopwiété nye peut êtwe modifiée diwectement. 😳😳😳
 
-## Exemples
+## exempwes
 
-### Utiliser `hasIndices`
+### u-utiwisew `hasindices`
 
 ```js
-const str1 = "toto truc toto";
+const stw1 = "toto twuc toto";
 
-const regex1 = new RegExp("toto", "gd");
+const wegex1 = nyew wegexp("toto", mya "gd");
 
-console.log(regex1.hasIndices); // Affiche : true
+consowe.wog(wegex1.hasindices); // a-affiche : twue
 
-console.log(regex1.exec(str1).indices[0]); // Affiche : Array [0, 3]
-console.log(regex1.exec(str1).indices[0]); // Affiche : Array [8, 11]
+consowe.wog(wegex1.exec(stw1).indices[0]); // a-affiche : a-awway [0, 😳 3]
+consowe.wog(wegex1.exec(stw1).indices[0]); // a-affiche : awway [8, -.- 11]
 
-const str2 = "toto truc toto";
+const stw2 = "toto twuc toto";
 
-const regex2 = new RegExp("toto");
+c-const wegex2 = n-nyew wegexp("toto");
 
-console.log(regex2.hasIndices); // Affiche : false
+consowe.wog(wegex2.hasindices); // a-affiche : f-fawse
 
-console.log(regex2.exec(str2).indices); // Affiche : undefined
+consowe.wog(wegex2.exec(stw2).indices); // affiche : u-undefined
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`RegExp.lastIndex`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex)
-- [`RegExp.prototype.exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)
-- [`RegExp.prototype.dotAll`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll)
-- [`RegExp.prototype.global`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global)
-- [`RegExp.prototype.ignoreCase`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase)
-- [`RegExp.prototype.multiline`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline)
-- [`RegExp.prototype.source`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/source)
-- [`RegExp.prototype.sticky`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)
-- [`RegExp.prototype.unicode`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)
+- [`wegexp.wastindex`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wastindex)
+- [`wegexp.pwototype.exec()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec)
+- [`wegexp.pwototype.dotaww`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/dotaww)
+- [`wegexp.pwototype.gwobaw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/gwobaw)
+- [`wegexp.pwototype.ignowecase`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/ignowecase)
+- [`wegexp.pwototype.muwtiwine`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/muwtiwine)
+- [`wegexp.pwototype.souwce`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/souwce)
+- [`wegexp.pwototype.sticky`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/sticky)
+- [`wegexp.pwototype.unicode`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode)

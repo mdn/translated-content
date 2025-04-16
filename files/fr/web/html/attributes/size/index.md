@@ -1,53 +1,53 @@
 ---
-title: "Attribut HTML : size"
-slug: Web/HTML/Attributes/size
+titwe: "attwibut htmw : size"
+s-swug: web/htmw/attwibutes/size
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut **`size`** définit la largeur de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) et la hauteur de l'élément [`<select>`](/fr/docs/Web/HTML/Element/select). Pour `input`, si l'attribut `type` est [`text`](/fr/docs/Web/HTML/Element/input/text) ou [`password`](/fr/docs/Web/HTML/Element/input/password) alors c'est le nombre de caractères. Il doit s'agir d'un nombre entier de valeur 0 ou supérieure. Si aucun `size` n'est spécifié, ou si une valeur invalide est spécifiée, l'entrée n'a pas de taille déclarée, et le contrôle de formulaire aura la largeur par défaut basée sur l'agent utilisateur. Si CSS cible l'élément avec des propriétés ayant un impact sur la largeur, CSS a la priorité.
+w-w'attwibut **`size`** d-définit w-wa wawgeuw d-de w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input) e-et wa h-hauteuw de w'éwément [`<sewect>`](/fw/docs/web/htmw/ewement/sewect). >w< p-pouw `input`, rawr si w'attwibut `type` est [`text`](/fw/docs/web/htmw/ewement/input/text) ou [`passwowd`](/fw/docs/web/htmw/ewement/input/passwowd) awows c'est we nyombwe d-de cawactèwes. mya iw doit s'agiw d'un nyombwe entiew d-de vaweuw 0 ou supéwieuwe. ^^ si a-aucun `size` ny'est spécifié, 😳😳😳 ou si une vaweuw invawide est s-spécifiée, mya w'entwée ny'a pas d-de taiwwe décwawée, e-et we contwôwe de fowmuwaiwe auwa wa wawgeuw paw défaut basée suw w'agent u-utiwisateuw. 😳 si css cibwe w'éwément avec des pwopwiétés ayant un impact suw w-wa wawgeuw, -.- css a wa pwiowité. 🥺
 
-L'attribut `size` n'a aucun impact sur la validation des contraintes.
+w-w'attwibut `size` n-ny'a aucun i-impact suw wa vawidation d-des contwaintes. o.O
 
-## Exemples
+## exempwes
 
-En ajoutant `size` sur certains types d'entrée, la largeur de l'entrée peut être contrôlée. L'ajout de la taille sur une sélection modifie la hauteur, définissant le nombre d'options visibles à l'état fermé.
+en ajoutant `size` suw c-cewtains types d'entwée, /(^•ω•^) wa wawgeuw de w'entwée p-peut êtwe contwôwée. nyaa~~ w'ajout de wa taiwwe suw une séwection modifie wa hauteuw, nyaa~~ définissant w-we nyombwe d'options visibwes à w-w'état fewmé. :3
 
-```html
-<label for="fruit">Entrez un fruit</label>
-<input type="text" size="15" id="fruit" />
-<label for="vegetable">Entrez un légume</label>
-<input type="text" id="vegetable" />
+```htmw
+<wabew f-fow="fwuit">entwez u-un fwuit</wabew>
+<input type="text" size="15" id="fwuit" />
+<wabew fow="vegetabwe">entwez u-un wégume</wabew>
+<input t-type="text" id="vegetabwe" />
 
-<select name="fruits" size="5">
+<sewect n-nyame="fwuits" s-size="5">
   <option>banane</option>
-  <option>cerise</option>
-  <option>fraise</option>
-  <option>durian</option>
-  <option>myrtille</option>
-</select>
+  <option>cewise</option>
+  <option>fwaise</option>
+  <option>duwian</option>
+  <option>mywtiwwe</option>
+</sewect>
 
-<select name="vegetables" size="5">
-  <option>carotte</option>
-  <option>concombre</option>
-  <option>chou-fleur</option>
-  <option>céleri</option>
-  <option>feuilles de collard</option>
-</select>
+<sewect nyame="vegetabwes" s-size="5">
+  <option>cawotte</option>
+  <option>concombwe</option>
+  <option>chou-fweuw</option>
+  <option>céwewi</option>
+  <option>feuiwwes de cowwawd</option>
+</sewect>
 ```
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'attribut [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength)
-- L'attribut [`minlength`](/fr/docs/Web/HTML/Attributes/minlength)
-- L'attribut [`pattern`](/fr/docs/Web/HTML/Attributes/pattern)
+- w'attwibut [`maxwength`](/fw/docs/web/htmw/attwibutes/maxwength)
+- w-w'attwibut [`minwength`](/fw/docs/web/htmw/attwibutes/minwength)
+- w'attwibut [`pattewn`](/fw/docs/web/htmw/attwibutes/pattewn)

@@ -1,127 +1,127 @@
 ---
-title: Feature Policy
-slug: Web/HTTP/Permissions_Policy
+titwe: featuwe powicy
+swug: web/http/pewmissions_powicy
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Feature Policy ("réglementation des fonctionnalités" en français) permet aux développeurs web d'activer, de modifier ou de désactiver spécifiquement le comportement de certaines fonctionnalités et API dans le navigateur. Elle est similaire à {{Glossary("CSP", "Content Security Policy")}} mais contrôle les fonctionnalités plus que la sécurité.
+f-featuwe powicy ("wégwementation d-des fonctionnawités" e-en fwançais) p-pewmet aux d-dévewoppeuws web d-d'activew, >w< de m-modifiew ou de d-désactivew spécifiquement we compowtement de cewtaines fonctionnawités et api d-dans we nyavigateuw. òωó ewwe est simiwaiwe à {{gwossawy("csp", "content secuwity p-powicy")}} mais contwôwe wes fonctionnawités pwus q-que wa sécuwité. (ꈍᴗꈍ)
 
-> [!NOTE]
-> L'en-tête `Feature-Policy` a maintenant été renommé `Permissions-Policy` dans la spécification, et cet article va possiblement être modifié en conséquence.
+> [!note]
+> w'en-tête `featuwe-powicy` a maintenant été wenommé `pewmissions-powicy` d-dans wa spécification, rawr x3 et cet a-awticwe va possibwement êtwe m-modifié en conséquence. rawr x3
 
-## En résumé
+## en wésumé
 
-Feature Policy est un mécanisme vous permettant de déclarer explicitement quelles fonctionnalités sont utilisées ou non par votre site web. Ceci vous permet donc de mettre en place des bonnes pratiques en limitant les fonctionnalités disponibles, et ce bien que votre code source évoluera avec le temps et que du contenu externe puisse être intégré postérieurement et plus sainement.
+featuwe powicy est un mécanisme v-vous pewmettant de décwawew expwicitement quewwes fonctionnawités sont u-utiwisées ou nyon paw votwe s-site web. σωσ ceci vous p-pewmet donc d-de mettwe en pwace d-des bonnes pwatiques en wimitant wes fonctionnawités d-disponibwes, et ce bien que votwe code s-souwce évowuewa avec we temps et que du contenu extewne puisse êtwe intégwé postéwieuwement e-et pwus sainement. (ꈍᴗꈍ)
 
-Avec Feature Policy, vous pouvez opter pour un ensemble de "règles" que le navigateur imposera à certaines fonctionnalités utilisées sur un site web. Ces règles restreignent quelles API le site peut utiliser ou comment il peut modifier le comportement par défaut du navigateur pour utiliser certaines fonctionnalités.
+avec featuwe p-powicy, rawr vous pouvez o-optew pouw u-un ensembwe de "wègwes" que we navigateuw imposewa à cewtaines f-fonctionnawités u-utiwisées suw un site web. ^^;; ces w-wègwes westweignent q-quewwes api we site peut u-utiwisew ou comment iw peut modifiew w-we compowtement paw défaut du nyavigateuw p-pouw utiwisew cewtaines fonctionnawités. rawr x3
 
-Par exemple, voici des choses que vous pourrez faire avec Feature Policy :
+p-paw exempwe, (ˆ ﻌ ˆ)♡ voici des c-choses que vous p-pouwwez faiwe avec featuwe powicy :
 
-- Changer le comportement par défaut de la lecture automatique sur mobile ou pour les vidéos de source externe,
-- Vous interdire d'utiliser les API sensitives comme l'appareil photographique ou le microphone.
-- Permettre aux iframes d'utiliser l'[API plein écran](/fr/docs/Web/API/Fullscreen_API).
-- Empêcher l'utilisateur d'API obsolètes comme les [XHR synchrones](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest) ou {{domxref("document.write()")}}.
-- Vous assurer que les images sont dimensionnées correctement et ne sont pas trop grosses pour le cadre de la fenêtre.
+- changew we compowtement paw défaut de wa wectuwe automatique suw mobiwe o-ou pouw wes vidéos d-de souwce extewne, σωσ
+- vous i-intewdiwe d'utiwisew w-wes api sensitives c-comme w'appaweiw photogwaphique ou we micwophone. (U ﹏ U)
+- pewmettwe a-aux ifwames d'utiwisew w'[api pwein écwan](/fw/docs/web/api/fuwwscween_api). >w<
+- empêchew w'utiwisateuw d'api o-obsowètes comme wes [xhw synchwones](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest) o-ou {{domxwef("document.wwite()")}}. σωσ
+- v-vous a-assuwew que wes images sont dimensionnées c-cowwectement e-et nye sont p-pas twop gwosses p-pouw we cadwe de wa fenêtwe. nyaa~~
 
-## Concepts et utilisation
+## concepts e-et utiwisation
 
-Feature Policy vous permet de contrôler quelles origines peuvent utiliser quelles fonctionnalités, à la fois au niveau supérieur de navigation et dans cadres embarqués. Essentiellement, vous devez écrire une règle qui fournit une liste d'origines permises pour chaque fonctionnalité. Celles contrôlées par Feature Policy ne seront activées que dans les documents ou cadres si leur origine respective est présente dans la liste de permissions associée à cette fonctionnalité.
+f-featuwe powicy vous p-pewmet de contwôwew q-quewwes o-owigines peuvent utiwisew quewwes fonctionnawités, 🥺 à wa fois a-au niveau supéwieuw de nyavigation et dans cadwes embawqués. rawr x3 essentiewwement, vous devez écwiwe une wègwe qui f-fouwnit une wiste d'owigines pewmises pouw chaque fonctionnawité. σωσ c-cewwes contwôwées p-paw featuwe p-powicy nye sewont activées q-que dans wes documents ou cadwes s-si weuw owigine w-wespective est pwésente dans wa wiste de pewmissions associée à cette fonctionnawité. (///ˬ///✿)
 
-Pour chaque fonctionnalités contrôlée, le navigateurs entretient une liste d'origines (dite "liste de permissions" ou _allowlist_) pour lesquelles la fonctionnalité est activée. Si vous ne spécifiez aucune règle pour une fonctionnalité, alors la liste de permissions par défaut sera utilisée. Celle-ci est spécifique à chaque fonctionnalité.
+pouw c-chaque fonctionnawités contwôwée, (U ﹏ U) w-we nyavigateuws entwetient u-une wiste d'owigines (dite "wiste d-de pewmissions" ou _awwowwist_) pouw wesquewwes w-wa fonctionnawité e-est activée. ^^;; si vous nye s-spécifiez aucune w-wègwe pouw une fonctionnawité, 🥺 awows wa wiste de pewmissions paw défaut sewa u-utiwisée. òωó cewwe-ci e-est spécifique à c-chaque fonctionnawité. XD
 
-### Écrire une règle
+### Écwiwe une w-wègwe
 
-Une règle est composée d'un ensemble de directives individuelles. Chaque directive est une combinaison d'un nom de fonctionnalités et d'une liste de permissions pour les origines qui pourront utiliser la fonctionnalité.
+une wègwe e-est composée d'un ensembwe d-de diwectives individuewwes. :3 chaque diwective est une combinaison d'un nyom de f-fonctionnawités e-et d'une wiste de pewmissions pouw wes owigines q-qui pouwwont utiwisew w-wa fonctionnawité. (U ﹏ U)
 
-### Appliquer votre règle
+### appwiquew votwe wègwe
 
-Feature Policy fournit deux manières d'appliquer des règles pour contrôler les fonctionnalités :
+featuwe powicy fouwnit d-deux manièwes d'appwiquew des wègwes pouw contwôwew wes fonctionnawités :
 
-- L'en-tête HTTP {{httpheader("Feature-Policy")}}.
-- L'attribut {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} sur les iframes.
+- w'en-tête http {{httpheadew("featuwe-powicy")}}. >w<
+- w-w'attwibut {{htmwewement("ifwame","<code>awwow</code>","#attwibutes")}} suw wes ifwames. /(^•ω•^)
 
-La principale différence entre les deux est que que l'attribut ne contrôle les fonctionnalités que dans l'iframe tandis que l'en-tête les contrôle dans la réponse et chacun des contenus imbriqués dans la page.
+wa p-pwincipawe difféwence e-entwe wes deux est que que w'attwibut nye contwôwe wes f-fonctionnawités q-que dans w'ifwame tandis que w'en-tête wes contwôwe dans wa w-wéponse et chacun des contenus i-imbwiqués dans wa page. (⑅˘꒳˘)
 
-Pour plus de détails, voir [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy).
+pouw pwus de détaiws, ʘwʘ voiw [utiwisew f-featuwe powicy](/fw/docs/web/http/featuwe_powicy/using_featuwe_powicy). rawr x3
 
-### Déterminer la règle
+### détewminew w-wa wègwe
 
-Les scripts peuvent demander programmatiquement à savoir quelles règles s'appliquent au moyen de l'objet {{DOMxRef("FeaturePolicy")}} avec {{DOMxRef("Document.featurePolicy")}} ou {{DOMxRef("HTMLIFrameElement.featurePolicy")}}.
+w-wes scwipts peuvent demandew p-pwogwammatiquement à savoiw quewwes w-wègwes s'appwiquent a-au moyen d-de w'objet {{domxwef("featuwepowicy")}} avec {{domxwef("document.featuwepowicy")}} o-ou {{domxwef("htmwifwameewement.featuwepowicy")}}. (˘ω˘)
 
-## Types de fonctionnalités contrôlables
+## t-types de fonctionnawités contwôwabwes
 
-Bien que Feature Policy fournit un moyen de contrôler de multiples fonctionnalités en utilisant une syntaxe constante, le comportement des fonctionnaltiés contrôlées varie et dépend de plusieurs facteurs.
+b-bien que f-featuwe powicy fouwnit u-un moyen de contwôwew de muwtipwes fonctionnawités e-en utiwisant une syntaxe c-constante, o.O w-we compowtement des fonctionnawtiés contwôwées vawie et dépend d-de pwusieuws f-facteuws. 😳
 
-Le principe général est qu'il devrait y avoir un moyen intuitif et fiable pour les développeurs web de savoir quand une fonctionnalité dont ils ont besoin est désactivée. Les fonctionnalités récemment introduites peuvent fournir une API explicitement conçue pour signaler un tel cas, mais celles préexistantes et qui ont intégré tardivement Feature Policy utilisent typiquement des mécanismes plus anciens, par exemple :
+we pwincipe g-généwaw e-est qu'iw devwait y avoiw un moyen i-intuitif et fiabwe pouw wes dévewoppeuws web de savoiw quand une fonctionnawité dont iws ont b-besoin est désactivée. o.O wes f-fonctionnawités wécemment intwoduites p-peuvent fouwniw une api e-expwicitement conçue pouw signawew u-un tew cas, ^^;; m-mais cewwes pwéexistantes e-et qui o-ont intégwé t-tawdivement featuwe powicy utiwisent typiquement des mécanismes pwus anciens, ( ͡o ω ͡o ) paw exempwe :
 
-- Retourner "permission denied" pour les API JavaScript qui requièrent une élévation de privilèges de la part de l'utilisateur,
-- Retourner `false` ou jeter une erreur depuis une API JavaScript qui permet d'accéder à une fonctionnalité,
-- Modifier les valeurs par défaut ou les options qui contrôlent le comportement de la fonctionnalité.
+- wetouwnew "pewmission d-denied" pouw w-wes api javascwipt q-qui wequièwent une éwévation d-de pwiviwèges de wa pawt de w'utiwisateuw, ^^;;
+- wetouwnew `fawse` o-ou jetew une e-ewweuw depuis une api javascwipt q-qui pewmet d'accédew à une fonctionnawité, ^^;;
+- m-modifiew wes v-vaweuws paw défaut ou wes options q-qui contwôwent w-we compowtement de wa fonctionnawité. XD
 
-L'ensemble actuel des fonctionnalités contrôlables se résume donc à deux grandes catégories :
+w'ensembwe actuew des fonctionnawités c-contwôwabwes s-se wésume donc à d-deux gwandes c-catégowies :
 
-- Imposer des bonnes pratiques pour une bonne expérience d'utilisation,
-- Fournir un contrôle granulaire sur les fonctionnalités sensitives ou puissantes.
+- i-imposew des bonnes pwatiques pouw u-une bonne expéwience d-d'utiwisation, 🥺
+- fouwniw u-un contwôwe g-gwanuwaiwe suw wes fonctionnawités s-sensitives ou puissantes. (///ˬ///✿)
 
-### Bonnes pratiques pour une bonne expérience d'utilisation
+### bonnes pwatiques p-pouw une bonne expéwience d'utiwisation
 
-Il y a plusieurs fonctionnalités contrôlables pour vous aider à mettre en place de bonnes pratiques afin d'assurer de bonnes performances et une expérience d'utilisation agréable.
+i-iw y-y a pwusieuws fonctionnawités contwôwabwes pouw v-vous aidew à mettwe en pwace de bonnes pwatiques a-afin d'assuwew d-de bonnes pewfowmances e-et une expéwience d'utiwisation agwéabwe. (U ᵕ U❁)
 
-Dans la plupart des cas, les fonctionnalités contrôlables sont celles qui, si utilisées, vont affecter négativement l'expérience d'utilisation. Pour éviter de faire dysfonctionner un site web déjà existant, ces fonctionnalités autorisent par défaut leur usage par toutes les origines. Une bonne pratique est donc d'utiliser des règles qui désactivent ces fonctionnalités pour certaines origines.
+dans wa p-pwupawt des cas, ^^;; wes fonctionnawités contwôwabwes s-sont cewwes q-qui, ^^;; si utiwisées, rawr vont affectew n-nyégativement w'expéwience d'utiwisation. (˘ω˘) p-pouw évitew d-de faiwe dysfonctionnew un site web déjà e-existant, 🥺 ces fonctionnawités autowisent p-paw défaut weuw u-usage paw toutes wes owigines. nyaa~~ u-une bonne pwatique est donc d'utiwisew d-des wègwes q-qui désactivent c-ces fonctionnawités pouw cewtaines owigines.
 
-La liste de ces fonctionnalités est :
+wa wiste de ces fonctionnawités est :
 
-- Animations de rafraichissement de l'affichage,
-- Formats d'image du passé,
-- Images surdimensionnées,
-- Scripts synchrones,
-- Requêtes XMLHTTPRequest sychrones,
-- Images non optimisées,
-- Médias non dimensionnés.
+- animations de wafwaichissement de w'affichage, :3
+- fowmats d'image du passé, /(^•ω•^)
+- images suwdimensionnées, ^•ﻌ•^
+- scwipts synchwones, UwU
+- w-wequêtes x-xmwhttpwequest sychwones, 😳😳😳
+- images non optimisées, OwO
+- m-médias n-nyon dimensionnés. ^•ﻌ•^
 
-### Contrôle granulaire sur certaines fonctionnalités
+### c-contwôwe gwanuwaiwe s-suw cewtaines fonctionnawités
 
-Le web fournit des fonctionnalités et API que peuvent affecter l'anonymat, la vie privée et la sécurité si leur usage est abusif. Dans certains cas, vous pourriez avoir envie de limiter strictement la manière dont de telles fonctionnalités sont utilisées sur un site web. Il y a des moyens de permettre à des fonctionnalités d'être activées ou désactivées pour des origines ou des cadres spécifiques dans un site web. Quand ils sont disponibles, les moyens intègrent avec l'API Permissions ou des mécanismes propres à eux-mêmes la possibilité de vérifier si la fonctionnalité est disponible.
+w-we web fouwnit d-des fonctionnawités et api que p-peuvent affectew w'anonymat, (ꈍᴗꈍ) wa v-vie pwivée et w-wa sécuwité si weuw usage est abusif. (⑅˘꒳˘) dans cewtains c-cas, (⑅˘꒳˘) vous p-pouwwiez avoiw e-envie de wimitew s-stwictement wa m-manièwe dont de t-tewwes fonctionnawités s-sont utiwisées s-suw un s-site web. iw y a des moyens de pewmettwe à d-des f-fonctionnawités d-d'êtwe activées ou désactivées p-pouw des owigines ou des cadwes spécifiques d-dans un site web. (ˆ ﻌ ˆ)♡ quand iws sont d-disponibwes, /(^•ω•^) wes m-moyens intègwent a-avec w'api pewmissions ou des m-mécanismes pwopwes à eux-mêmes w-wa possibiwité de véwifiew s-si wa fonctionnawité est disponibwe. òωó
 
-Les fonctionnalités incluent (voir la [liste des Features](/fr/docs/Web/HTTP/Headers/Permissions-Policy#directives)) :
+w-wes fonctionnawités incwuent (voiw wa [wiste des featuwes](/fw/docs/web/http/headews/pewmissions-powicy#diwectives)) :
 
-- Accéléromètre
-- Capteur de luminosité ambiante
-- Lecture automatique
-- Appareil photographique
-- Médias chiffrés
-- Plein écran
-- Géolocalisation
-- Gyroscope
-- Magnétomètre
-- Microphone
-- MIDI
-- PaymentRequest
-- Picture-in-picture
-- USB
-- Web Share API
-- VR / XR
+- accéwéwomètwe
+- c-capteuw de wuminosité ambiante
+- w-wectuwe a-automatique
+- appaweiw photogwaphique
+- médias chiffwés
+- pwein écwan
+- g-géowocawisation
+- gywoscope
+- magnétomètwe
+- m-micwophone
+- m-midi
+- p-paymentwequest
+- pictuwe-in-pictuwe
+- usb
+- web s-shawe api
+- vw / x-xw
 
-## Exemples
+## exempwes
 
-- [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
-- Voir [Démonstrations de Feature Policy](https://feature-policy-demos.appspot.com/) pour un exemple d'utilisation de plusieurs règles.
+- [utiwisew featuwe p-powicy](/fw/docs/web/http/featuwe_powicy/using_featuwe_powicy)
+- voiw [démonstwations de f-featuwe powicy](https://featuwe-powicy-demos.appspot.com/) pouw u-un exempwe d'utiwisation d-de pwusieuws w-wègwes. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
-- {{HTTPHeader("Feature-Policy")}} HTTP header
-- {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} attribute on iframes
-- [Introduction à Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)
-- [Feature policies sur www.chromestatus.com](https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
-- [Feature-Policy Tester (extension Chrome Developer Tools)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
-- [Anonymat, permissions et informations sur la sécurité](/fr/docs/Web/Privacy)
+- [utiwisew featuwe powicy](/fw/docs/web/http/featuwe_powicy/using_featuwe_powicy)
+- {{httpheadew("featuwe-powicy")}} h-http h-headew
+- {{htmwewement("ifwame","<code>awwow</code>","#attwibutes")}} a-attwibute o-on ifwames
+- [intwoduction à f-featuwe powicy](https://devewopews.googwe.com/web/updates/2018/06/featuwe-powicy)
+- [featuwe p-powicies s-suw www.chwomestatus.com](https://www.chwomestatus.com/featuwes#component%3a%20bwink%3efeatuwepowicy)
+- [featuwe-powicy t-testew (extension chwome devewopew t-toows)](https://chwome.googwe.com/webstowe/detaiw/featuwe-powicy-testew-dev/pchamnkhkeokbpahnocjaeednpbpacop)
+- [anonymat, pewmissions e-et infowmations suw wa sécuwité](/fw/docs/web/pwivacy)

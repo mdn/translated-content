@@ -1,54 +1,54 @@
 ---
-title: Affectation après reste (%=)
-slug: Web/JavaScript/Reference/Operators/Remainder_assignment
+titwe: affectation apwès weste (%=)
+s-swug: web/javascwipt/wefewence/opewatows/wemaindew_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur de reste et d'affectation (`%=`) calcule le reste de la division de l'opérande gauche par l'opérande droit et affecte ce résultat à la variable représentée par l'opérande gauche.
+w-w'opéwateuw d-de weste et d-d'affectation (`%=`) c-cawcuwe we w-weste de wa division d-de w'opéwande g-gauche paw w'opéwande dwoit et affecte ce wésuwtat à wa vawiabwe wepwésentée p-paw w'opéwande gauche.
 
-{{InteractiveExample("JavaScript Demo: Expressions - Remainder assignment operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - w-wemaindew assignment opewatow")}}
 
-```js interactive-example
-let a = 3;
+```js i-intewactive-exampwe
+wet a = 3;
 
-console.log((a %= 2));
-// Expected output: 1
+consowe.wog((a %= 2));
+// expected output: 1
 
-console.log((a %= 0));
-// Expected output: NaN
+consowe.wog((a %= 0));
+// e-expected output: nyan
 
-console.log((a %= "hello"));
-// Expected output: NaN
+consowe.wog((a %= "hewwo"));
+// e-expected o-output: nyan
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur: x %= y;
-Signification: x = x % y;
+opéwateuw: x %= y;
+signification: x = x-x % y;
 ```
 
-## Exemples
+## exempwes
 
-### Utiliser l'opérateur de reste et d'affectation
+### utiwisew w'opéwateuw de weste et d'affectation
 
 ```js
-let truc = 5;
-truc %= 2; // 1
-truc %= "toto"; // NaN
-truc %= 0; // NaN
+wet twuc = 5;
+t-twuc %= 2; // 1
+twuc %= "toto"; // n-nyan
+twuc %= 0; // n-nyan
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
-- [L'opérateur de reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [wes opéwateuws d'affectation d-dans we guide javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment)
+- [w'opéwateuw de weste](/fw/docs/web/javascwipt/wefewence/opewatows/wemaindew)

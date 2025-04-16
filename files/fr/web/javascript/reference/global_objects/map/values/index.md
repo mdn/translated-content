@@ -1,65 +1,65 @@
 ---
-title: Map.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Map/values
+titwe: map.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`values()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators) qui contient les valeurs de chacun des éléments contenu dans l'objet `Map` donné, dans leur ordre d'insertion.
+w-wa méthode **`vawues()`** w-wenvoie un o-objet [`itewatow`](/fw/docs/web/javascwipt/guide/itewatows_and_genewatows) q-qui contient w-wes vaweuws d-de chacun des éwéments c-contenu d-dans w'objet `map` donné, dans weuw owdwe d'insewtion. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.values")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype.vawues")}}
 
-```js interactive-example
-const map1 = new Map();
+```js i-intewactive-exampwe
+const map1 = nyew map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+m-map1.set("0", (˘ω˘) "foo");
+map1.set(1, (⑅˘꒳˘) "baw");
 
-const iterator1 = map1.values();
+c-const itewatow1 = map1.vawues();
 
-console.log(iterator1.next().value);
-// Expected output: "foo"
+consowe.wog(itewatow1.next().vawue);
+// e-expected output: "foo"
 
-console.log(iterator1.next().value);
-// Expected output: "bar"
+c-consowe.wog(itewatow1.next().vawue);
+// e-expected output: "baw"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-maMap.values();
+mamap.vawues();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nouvel objet `Iterator` {{jsxref("Map")}}.
+u-un nyouvew objet `itewatow` {{jsxwef("map")}}. (///ˬ///✿)
 
-## Exemple
+## exempwe
 
-### Utiliser `values()`
+### utiwisew `vawues()`
 
 ```js
-var maMap = new Map();
-maMap.set("0", "toto");
-maMap.set(1, "truc");
-maMap.set({}, "licorne");
+vaw mamap = nyew map();
+m-mamap.set("0", 😳😳😳 "toto");
+mamap.set(1, 🥺 "twuc");
+m-mamap.set({}, mya "wicowne");
 
-var mapIter = maMap.values();
+v-vaw m-mapitew = mamap.vawues();
 
-console.log(mapIter.next().value); // "toto"
-console.log(mapIter.next().value); // "truc"
-console.log(mapIter.next().value); // "licorne"
+c-consowe.wog(mapitew.next().vawue); // "toto"
+consowe.wog(mapitew.next().vawue); // "twuc"
+consowe.wog(mapitew.next().vawue); // "wicowne"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.keys()")}}

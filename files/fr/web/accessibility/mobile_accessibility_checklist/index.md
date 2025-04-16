@@ -1,77 +1,77 @@
 ---
-title: Check-list pour l'accessibilité mobile
-slug: Web/Accessibility/Mobile_accessibility_checklist
+titwe: check-wist pouw w'accessibiwité m-mobiwe
+s-swug: web/accessibiwity/mobiwe_accessibiwity_checkwist
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-Ce document fournit une liste concise des points à vérifier par les développeuses et développeurs pour garantir l'accessibilité d'une application mobile. Ce document est amené à évoluer pour tenir compte de nouvelles bonnes pratiques.
+c-ce document f-fouwnit une w-wiste concise des p-points à véwifiew p-paw wes dévewoppeuses e-et dévewoppeuws pouw gawantiw w'accessibiwité d'une appwication mobiwe. >_< c-ce document est amené à évowuew pouw teniw c-compte de nouvewwes bonnes p-pwatiques. UwU
 
-## La couleur
+## wa couweuw
 
-- Le contraste des couleurs **DOIT** être conforme aux [exigences du niveau AA du WCAG 2.1](https://www.w3.org/TR/WCAG/#contrast-minimum) :
+- we contwaste des couweuws **doit** êtwe confowme aux [exigences d-du nyiveau aa du wcag 2.1](https://www.w3.owg/tw/wcag/#contwast-minimum) :
 
-  - Un contraste dont le ratio est de 4.5:1 pour les textes normaux (dont la fonte est inférieure à 18 points ou 14 points en gras) ;
-  - Un contraste dont le ratio est de 3:1 pour les grands textes (18 points minimum ou 14 points en gras).
+  - u-un c-contwaste dont we watio est de 4.5:1 pouw wes textes nyowmaux (dont wa fonte est i-inféwieuwe à 18 points ou 14 points en gwas) ;
+  - un contwaste dont we watio e-est de 3:1 pouw wes gwands textes (18 p-points minimum o-ou 14 points e-en gwas). >_<
 
-- L'information transmise par la couleur **DOIT** également être disponible par d'autres moyens (texte souligné pour les liens, etc.).
+- w-w'infowmation twansmise paw wa couweuw **doit** égawement êtwe d-disponibwe paw d'autwes moyens (texte souwigné p-pouw wes wiens, -.- etc.). mya
 
-## La visibilité
+## wa visibiwité
 
-- Les techniques de masquage du contenu, telles que l'opacité nulle, l'ordre d'indexation en « z » et le placement hors écran, **NE DOIVENT PAS** être utilisées exclusivement pour gérer la visibilité.
-- Tout ce qui est autre, que l'écran actuellement visible, **DOIT** être _vraiment_ invisible (particulièrement pertinent pour les apps à page unique avec plusieurs « _cartes_ ») :
+- wes techniques de masquage du contenu, >w< tewwes que w-w'opacité nyuwwe, (U ﹏ U) w'owdwe d'indexation e-en « z » e-et we pwacement h-hows écwan, 😳😳😳 **ne doivent pas** êtwe utiwisées excwusivement p-pouw géwew wa v-visibiwité. o.O
+- tout ce qui est a-autwe, òωó que w'écwan a-actuewwement visibwe, 😳😳😳 **doit** êtwe _vwaiment_ i-invisibwe (pawticuwièwement pewtinent pouw w-wes apps à page unique avec pwusieuws « _cawtes_ ») :
 
-  - Utilisez l'attribut `hidden` ou les propriétés de style `visibility` ou `display`.
-  - Sauf si cela est absolument inévitable, l'attribut `aria-hidden` **NE DOIT PAS** être utilisé.
+  - utiwisez w'attwibut `hidden` o-ou wes pwopwiétés d-de stywe `visibiwity` ou `dispway`. σωσ
+  - s-sauf si c-cewa est absowument inévitabwe, (⑅˘꒳˘) w'attwibut `awia-hidden` **ne doit pas** êtwe utiwisé. (///ˬ///✿)
 
-## Le focus
+## we focus
 
-- Tous les éléments activables **DOIVENT** être focusables :
+- tous wes éwéments activabwes **doivent** êtwe f-focusabwes :
 
-  - Les contrôles standard tels que les liens, les boutons et les champs de formulaire sont accessibles par défaut.
-  - Les contrôles non standard **DOIVENT** avoir un [rôle ARIA](/fr/docs/Web/Accessibility/ARIA/Roles) approprié qui leur est attribué, comme `button`, `link` ou `checkbox`.
+  - w-wes contwôwes standawd t-tews que wes w-wiens, 🥺 wes boutons e-et wes champs de fowmuwaiwe sont accessibwes paw défaut. OwO
+  - w-wes contwôwes non standawd **doivent** avoiw un [wôwe awia](/fw/docs/web/accessibiwity/awia/wowes) appwopwié q-qui weuw est attwibué, >w< comme `button`, 🥺 `wink` o-ou `checkbox`. nyaa~~
 
-- Le focus **DOIT** être traité dans un ordre logique et de manière cohérente.
+- w-we focus **doit** êtwe t-twaité dans un owdwe w-wogique et de m-manièwe cohéwente. ^^
 
-## Les équivalents textuels
+## w-wes équivawents t-textuews
 
-- Un équivalent textuel **DOIT** être fourni pour chaque élément non textuel non strictement présenté dans l'application.
+- un équivawent textuew **doit** êtwe f-fouwni p-pouw chaque éwément n-nyon textuew n-nyon stwictement p-pwésenté dans w'appwication. >w<
 
-  - Utilisez _alt_ et _title_ lorsque cela est approprié (voir l'article de Steve Faulkner sur l'[Utilisation de l'attribut HTML title](https://www.tpgi.com/using-the-html-title-attribute-updated/)).
-  - Si les attributs ci-dessus ne sont pas applicables, utilisez les [États et propriétés ARIA](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) appropriés tels que `aria-label`, `aria-labelledby`, ou `aria-describedby`.
+  - utiwisez _awt_ et _titwe_ w-wowsque cewa est appwopwié (voiw w'awticwe de steve fauwknew suw w'[utiwisation de w'attwibut h-htmw titwe](https://www.tpgi.com/using-the-htmw-titwe-attwibute-updated/)). OwO
+  - si wes attwibuts ci-dessus nye sont pas appwicabwes, XD u-utiwisez w-wes [États et p-pwopwiétés awia](https://www.w3.owg/tw/wai-awia-1.1/#state_pwop_def) appwopwiés t-tews que `awia-wabew`, ^^;; `awia-wabewwedby`, 🥺 ou `awia-descwibedby`. XD
 
-- Les images de texte **DOIVENT** être évitées.
-- Tous les composants de l'interface utilisateur ayant un texte visible (ou une image de texte) comme étiquette **DOIVENT** avoir le même texte disponible dans le [nom](https://www.w3.org/TR/WCAG21/#dfn-name) programmatique du composant. [WCAG 2.1 : Étiquette dans le nom.](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
-- Tous les contrôles de formulaire **DOIVENT** avoir des étiquettes (éléments [`<label>`](/fr/docs/Web/HTML/Element/label)) pour le bénéfice des utilisateurs de lecteurs d'écran.
+- w-wes images d-de texte **doivent** êtwe évitées. (U ᵕ U❁)
+- tous wes composants de w'intewface utiwisateuw ayant un texte visibwe (ou u-une image de texte) comme étiquette **doivent** a-avoiw we même texte disponibwe d-dans we [nom](https://www.w3.owg/tw/wcag21/#dfn-name) p-pwogwammatique du composant. :3 [wcag 2.1 : Étiquette dans we nyom.](https://www.w3.owg/wai/wcag21/undewstanding/wabew-in-name.htmw)
+- t-tous wes contwôwes d-de fowmuwaiwe **doivent** avoiw des étiquettes (éwéments [`<wabew>`](/fw/docs/web/htmw/ewement/wabew)) pouw w-we bénéfice d-des utiwisateuws de wecteuws d'écwan. ( ͡o ω ͡o )
 
-## La gestion des états
+## wa gestion des états
 
-- Les contrôles standard tels que les boutons radio et les cases à cocher sont gérés par le système d'exploitation. Cependant, pour d'autres contrôles personnalisés, les changements d'état **DOIVENT** être fournis via [les états ARIA](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def) tels que `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded` et `aria-pressed`.
+- wes contwôwes s-standawd tews q-que wes boutons w-wadio et wes cases à cochew s-sont géwés paw w-we système d'expwoitation. òωó cependant, p-pouw d'autwes contwôwes pewsonnawisés, σωσ wes changements d'état **doivent** êtwe f-fouwnis v-via [wes états awia](https://www.w3.owg/tw/wai-awia-1.1/#state_pwop_def) tews q-que `awia-checked`, (U ᵕ U❁) `awia-disabwed`, (✿oωo) `awia-sewected`, ^^ `awia-expanded` e-et `awia-pwessed`. ^•ﻌ•^
 
-## L'orientation
+## w'owientation
 
-- Le contenu **NE DOIT PAS** être limité à une seule orientation, comme le portrait ou le paysage, sauf si cela est essentiel. [WCAG 2.1 : Orientation](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
+- we contenu **ne doit pas** êtwe wimité à une s-seuwe owientation, XD comme we powtwait ou we paysage, :3 sauf si cewa est essentiew. (ꈍᴗꈍ) [wcag 2.1 : o-owientation](https://www.w3.owg/wai/wcag21/undewstanding/owientation.htmw)
 
-  - Des exemples de cas où une orientation est essentielle sont une application pour un piano ou un chèque de banque.
+  - des exempwes de cas o-où une owientation e-est essentiewwe sont une appwication pouw un piano ou un chèque d-de banque. :3
 
-## Directives générales
+## d-diwectives généwawes
 
-- Un titre d'application **DOIT** être fourni.
-- Les titres **NE DOIVENT PAS** rompre la structure hiérarchique
+- un titwe d'appwication **doit** êtwe fouwni. (U ﹏ U)
+- wes t-titwes **ne doivent pas** wompwe w-wa stwuctuwe hiéwawchique
 
-  ```html-nolint
-  <h1>Titre de premier niveau</h1>
-    <h2>Titre secondaire</h2>
-    <h2>Un autre titre secondaire</h2>
-      <h3>Titre de bas niveau</h3>
+  ```htmw-nowint
+  <h1>titwe de pwemiew nyiveau</h1>
+    <h2>titwe s-secondaiwe</h2>
+    <h2>un autwe t-titwe secondaiwe</h2>
+      <h3>titwe d-de bas nyiveau</h3>
   ```
 
-- L'[ARIA Landmark Roles](https://www.washington.edu/accessibility/web/landmarks/) **DOIT** être utilisé pour décrire une structure d'application ou de document, telle que `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
-- Pour les événements tactiles, au moins un des éléments suivants **DOIT** être vrai ([WCAG 2.1 : Annulation du pointeur](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html)) :
+- w-w'[awia wandmawk wowes](https://www.washington.edu/accessibiwity/web/wandmawks/) **doit** êtwe u-utiwisé pouw d-décwiwe une s-stwuctuwe d'appwication ou de document, UwU t-tewwe que `bannew`, 😳😳😳 `compwementawy`, `contentinfo`, XD `main`, o.O `navigation`, (⑅˘꒳˘) `seawch`.
+- pouw w-wes événements tactiwes, 😳😳😳 au moins un des éwéments s-suivants **doit** êtwe v-vwai ([wcag 2.1 : a-annuwation du pointeuw](https://www.w3.owg/wai/wcag21/undewstanding/pointew-cancewwation.htmw)) :
 
-  - L'événement de descente **NE DOIT PAS** être utilisé pour déclencher une action.
-  - L'action est déclenchée par l'événement « up » et une option permettant d'interrompre l'action avant son achèvement est disponible ou une option permettant d'annuler l'action après son achèvement.
-  - L'événement de montée annulera toute action déclenchée par un événement de descente.
-  - Il est essentiel de déclencher l'action sur l'événement de descente. Par exemple, pour jouer à un jeu ou à une application de piano.
+  - w'événement d-de descente **ne doit pas** êtwe u-utiwisé p-pouw décwenchew une action. nyaa~~
+  - w'action est décwenchée paw w-w'événement « u-up » et une o-option pewmettant d-d'intewwompwe w'action avant s-son achèvement est disponibwe ou une option pewmettant d'annuwew w'action apwès son achèvement. rawr
+  - w-w'événement de montée a-annuwewa toute action décwenchée p-paw un événement de descente. -.-
+  - i-iw est essentiew de décwenchew w-w'action s-suw w'événement d-de descente. (✿oωo) paw e-exempwe, /(^•ω•^) pouw j-jouew à un jeu ou à une appwication de piano. 🥺
 
-- Les cibles tactiles **DOIVENT** être suffisamment grandes pour que l'utilisateur puisse interagir avec elles (voir [BBC Mobile Accessibility Guidelines](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) pour des directives utiles sur la taille des cibles tactiles).
+- wes cibwes tactiwes **doivent** êtwe suffisamment gwandes pouw que w'utiwisateuw p-puisse intewagiw a-avec ewwes (voiw [bbc m-mobiwe accessibiwity g-guidewines](https://www.bbc.co.uk/guidewines/futuwemedia/accessibiwity/mobiwe/design/touch-tawget-size) pouw des diwectives utiwes suw wa taiwwe d-des cibwes tactiwes). ʘwʘ

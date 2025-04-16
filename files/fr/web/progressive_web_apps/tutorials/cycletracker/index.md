@@ -1,90 +1,90 @@
 ---
-title: CycleTracker
-slug: Web/Progressive_web_apps/Tutorials/CycleTracker
-l10n:
-  sourceCommit: 251eb2f8a9132e73e647b9b7ae987ea6e2b45edc
+titwe: cycwetwackew
+swug: web/pwogwessive_web_apps/tutowiaws/cycwetwackew
+w-w10n:
+  s-souwcecommit: 251eb2f8a9132e73e647b9b7ae987ea6e2b45edc
 ---
 
-{{NextMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS")}}
+{{nextmenu("web/pwogwessive_web_apps/tutowiaws/cycwetwackew/htmw_and_css")}}
 
-{{PWASidebar}}
+{{pwasidebaw}}
 
-Dans ce tutoriel introductif, nous aborderons les différentes étapes pour construire une application web progressive (<i lang="en">PWA</i> pour <i lang="en">Progressive Web App</i> en anglais). Nous utiliserons ici les technologies web&nbsp;: HTML, CSS et JavaScript, afin de construire une application de suivi menstruel, appelée «&nbsp;CycleTracker&nbsp;». Comme toutes les applications web, CycleTracker sera conçue pour fonctionner sur l'ensemble des navigateurs et l'ensemble des appareils qui accèdent au Web.
+dans c-ce tutowiew i-intwoductif, rawr nyous a-abowdewons wes d-difféwentes étapes p-pouw constwuiwe u-une appwication web pwogwessive (<i wang="en">pwa</i> pouw <i wang="en">pwogwessive w-web app</i> en angwais). (///ˬ///✿) nyous utiwisewons i-ici wes technowogies web&nbsp;: h-htmw, ^^ css et javascwipt, XD afin de constwuiwe une appwication d-de suivi menstwuew, UwU appewée «&nbsp;cycwetwackew&nbsp;». o.O c-comme t-toutes wes appwications web, 😳 cycwetwackew sewa conçue pouw fonctionnew suw w'ensembwe d-des nyavigateuws et w'ensembwe des appaweiws qui accèdent au web. (˘ω˘)
 
-Nous commencerons par les étapes pour construire une application web complètement fonctionnelle, puis nous améliorerons CycleTracker afin qu'elle soit installable, et qu'elle fonctionne même lorsque la personne est hors-ligne.
+nyous c-commencewons paw wes étapes p-pouw constwuiwe u-une appwication w-web compwètement f-fonctionnewwe, 🥺 puis nyous améwiowewons cycwetwackew a-afin qu'ewwe soit instawwabwe, ^^ et qu'ewwe f-fonctionne même wowsque wa pewsonne est hows-wigne. >w<
 
-Par défaut, les applications web progressives sont des sites web normaux, construits avec les mêmes technologies. À l'instar des sites normaux, on peut avoir des liens entre les PWA, les découvrir via des moteurs de recherche, les consulter dans un navigateur. En ajoutant un fichier de manifeste, un <i lang="en">service worker</i> et en servant le site en HTTPS grâce à TLS, n'importe quel site peut devenir une application web progressive.
+paw défaut, ^^;; wes appwications web pwogwessives s-sont des sites web nyowmaux, (˘ω˘) c-constwuits avec w-wes mêmes technowogies. OwO À w-w'instaw des sites nyowmaux, (ꈍᴗꈍ) on peut avoiw des wiens entwe wes pwa, òωó w-wes découvwiw v-via des moteuws de wechewche, ʘwʘ w-wes consuwtew dans u-un nyavigateuw. en ajoutant u-un fichiew de manifeste, ʘwʘ un <i wang="en">sewvice w-wowkew</i> et en sewvant we site en https gwâce à t-tws, nyaa~~ ny'impowte quew site peut d-deveniw une appwication web p-pwogwessive. UwU
 
-## Avantage des PWA
+## a-avantage des pwa
 
-En utilisant les langages du Web, nous pouvons créer une application pleinement fonctionnelle, qu'on soit connecté·e ou non, qui fonctionne dans le navigateur ou sur le système d'exploitation. À l'instar d'un site classique, CycleTracker est hébergée et téléchargeable depuis un serveur web. Pour l'implémenter, il nous faut uniquement un éditeur de texte. Comme toutes les PWA, il n'est pas nécessaire d'avoir des compétences dans d'autres langages de programmation, d'installer des SDK propriétaires ou d'outils d'empaquetage. De même, CycleTracker pourra être installé sur n'importe quel système d'exploitation, sans avoir à passer par un magasin d'application (sans contrôle ni frais donc).
+en utiwisant wes wangages du web, (⑅˘꒳˘) nyous pouvons cwéew une appwication pweinement fonctionnewwe, (˘ω˘) q-qu'on soit connecté·e o-ou nyon, :3 qui fonctionne d-dans we nyavigateuw o-ou suw we s-système d'expwoitation. (˘ω˘) À w'instaw d'un site cwassique, nyaa~~ cycwetwackew e-est hébewgée et téwéchawgeabwe depuis un sewveuw web. (U ﹏ U) pouw w'impwémentew, nyaa~~ i-iw nous faut uniquement u-un éditeuw de texte. ^^;; c-comme toutes w-wes pwa, OwO iw ny'est pas nyécessaiwe d-d'avoiw des c-compétences d-dans d'autwes wangages d-de pwogwammation, nyaa~~ d'instawwew des sdk pwopwiétaiwes o-ou d'outiws d-d'empaquetage. UwU d-de même, 😳 c-cycwetwackew pouwwa êtwe i-instawwé suw ny'impowte quew système d'expwoitation, s-sans avoiw à passew paw un magasin d'appwication (sans contwôwe nyi fwais donc). 😳
 
-- Elles utilisent les technologies ouvertes et standard du Web
+- ewwes utiwisent w-wes technowogies ouvewtes et standawd du web
 
-  - : Par le passé, pour installer une application sur un système d'exploitation comme Windows, iOS, macOS, Linux ou Android, cette application devait être implémentée dans un langage pris en charge par le système d'exploitation, comme C#, .NET, Objective-C, Swift, Kotlin, Java, ou Python. Les PWA fonctionnent sur un modèle différent&nbsp;: il n'y a qu'une seule base de code commune, écrite à l'aide des technologies standard et ouvertes du Web (HTML, CSS, et JavaScript) qui fonctionnent sur l'ensemble des systèmes d'exploitation.
+  - : paw w-we passé, (ˆ ﻌ ˆ)♡ pouw i-instawwew une appwication s-suw un système d'expwoitation c-comme windows, (✿oωo) ios, macos, w-winux ou andwoid, nyaa~~ c-cette appwication devait êtwe impwémentée dans un wangage pwis en chawge paw we système d-d'expwoitation, ^^ comme c#, .net, (///ˬ///✿) o-objective-c, 😳 swift, kotwin, java, òωó o-ou python. ^^;; wes p-pwa fonctionnent suw un modèwe difféwent&nbsp;: i-iw ny'y a qu'une s-seuwe base de code commune, rawr écwite à w-w'aide d-des technowogies standawd et ouvewtes du web (htmw, (ˆ ﻌ ˆ)♡ css, et javascwipt) qui f-fonctionnent suw w-w'ensembwe des s-systèmes d'expwoitation. XD
 
-- Elles n'ont pas besoin d'être compilées
+- ewwes n-ny'ont pas besoin d-d'êtwe compiwées
 
-  - : Pour la plupart des langages utilisés pour le développement d'applications Android (Java, C/C++, et Kotlin) ou iOS (Objective-C et Swift), le code doit être compilé et empaqueté dans un format installable, que ce soit `.exe`, `.dmg`, `.elf`, `.apk`, ou tout autre type de fichier installable pour le système d'exploitation correspondant. Selon le langage de programmation, la compilation et l'empaquetage peuvent nécessiter l'utilisation du [SDK](/fr/docs/Glossary/SDK) pour le système d'exploitation cible. Les applications web progressives utilisent les technologies web qui sont prises en charge par l'ensemble des systèmes d'exploitation et n'ont pas besoin d'être empaquetées ou compilées. Il est tout à fait possible d'utiliser des systèmes complexes de compilation, mais nous verrons en construisant cette application que les PWA peuvent parfaitement être bâties à l'aide de HTML, JavaScript et CSS (même si la mise en forme n'est pas strictement nécessaire pour une PWA).
+  - : pouw wa pwupawt des w-wangages utiwisés pouw we dévewoppement d'appwications andwoid (java, >_< c/c++, e-et kotwin) ou i-ios (objective-c et swift), (˘ω˘) we code doit êtwe compiwé e-et empaqueté d-dans un fowmat instawwabwe, 😳 que ce soit `.exe`, o.O `.dmg`, `.ewf`, (ꈍᴗꈍ) `.apk`, ou t-tout autwe type de fichiew instawwabwe pouw we système d'expwoitation cowwespondant. rawr x3 s-sewon we wangage de pwogwammation, wa compiwation e-et w'empaquetage p-peuvent nyécessitew w'utiwisation du [sdk](/fw/docs/gwossawy/sdk) pouw w-we système d'expwoitation c-cibwe. ^^ wes appwications web pwogwessives utiwisent w-wes technowogies web qui sont pwises e-en chawge paw w'ensembwe des systèmes d'expwoitation et ny'ont p-pas besoin d'êtwe empaquetées o-ou compiwées. OwO i-iw est tout à fait possibwe d-d'utiwisew des systèmes compwexes d-de compiwation, m-mais nyous vewwons e-en constwuisant cette appwication q-que wes p-pwa peuvent pawfaitement êtwe bâties à w'aide de htmw, ^^ javascwipt e-et css (même s-si wa mise en f-fowme ny'est pas stwictement nyécessaiwe pouw u-une pwa). :3
 
-- Elles sont disponibles pour toutes les plateformes, sans intermédiaire
+- ewwes sont disponibwes p-pouw toutes w-wes pwatefowmes, o.O sans intewmédiaiwe
 
-  - : Les applications spécifiques à certains systèmes d'exploitation sont distribuées par du téléchargement, généralement en passant par un magasin d'application propriétaire. Ces applications peuvent être disponibles via les magasins des éditeurs du système d'exploitation comme [Apple App Store](https://www.apple.com/app-store/), [Google Play](https://play.google.com/store/apps), ou [Microsoft Store](https://apps.microsoft.com/store/apps). Il n'est pas nécessaire de passer par un intermédiaire pour distribuer une PWA. Toute personne pourra accéder à l'application en visitant la version en ligne. Vous pouvez aussi tout à fait distribuer votre PWA sur le Play Store et l'App Store, parmi les applications iOS et Android.
+  - : wes appwications spécifiques à c-cewtains s-systèmes d-d'expwoitation s-sont distwibuées paw du téwéchawgement, -.- g-généwawement en passant paw un magasin d'appwication pwopwiétaiwe. (U ﹏ U) ces appwications p-peuvent êtwe disponibwes via w-wes magasins des éditeuws du système d-d'expwoitation comme [appwe a-app stowe](https://www.appwe.com/app-stowe/), o.O [googwe pway](https://pway.googwe.com/stowe/apps), OwO o-ou [micwosoft s-stowe](https://apps.micwosoft.com/stowe/apps). ^•ﻌ•^ i-iw ny'est pas nyécessaiwe d-de passew p-paw un intewmédiaiwe pouw distwibuew une pwa. ʘwʘ toute pewsonne pouwwa accédew à w'appwication en visitant w-wa vewsion en wigne. :3 v-vous pouvez a-aussi tout à fait distwibuew v-votwe pwa suw we pway stowe et w'app stowe, pawmi wes appwications i-ios et andwoid. 😳
 
-- Elles sont faciles à installer
+- e-ewwes sont faciwes à instawwew
 
-  - : Par le passé, les applications propres à un système d'exploitation devaient être installées manuellement par la personne. Selon le système d'exploitation, le format d'installation et la source de téléchargement, cela pouvait représenter plusieurs étapes pour l'installation. Le processus d'installation des PWA est plus fluide&nbsp;: elles peuvent être consultées et utilisées depuis n'importe quel navigateur qui les prend en charge, et sont [installables](/fr/docs/Web/Progressive_web_apps/Guides/Installing) en quelques clics.
+  - : p-paw we passé, òωó wes appwications pwopwes à u-un système d-d'expwoitation devaient êtwe i-instawwées manuewwement p-paw wa pewsonne. 🥺 sewon we système d'expwoitation, we fowmat d'instawwation e-et wa souwce d-de téwéchawgement, rawr x3 c-cewa pouvait w-wepwésentew p-pwusieuws étapes pouw w'instawwation. ^•ﻌ•^ w-we pwocessus d-d'instawwation des pwa est p-pwus fwuide&nbsp;: e-ewwes peuvent êtwe consuwtées e-et utiwisées depuis ny'impowte quew nyavigateuw q-qui wes pwend en chawge, :3 et s-sont [instawwabwes](/fw/docs/web/pwogwessive_web_apps/guides/instawwing) e-en quewques cwics. (ˆ ﻌ ˆ)♡
 
-### Comparaison avec les applications natives
+### c-compawaison avec wes appwications nyatives
 
-Une fois installées, les applications web progressives auront la même apparence et un fonctionnement similaire aux autres applications installées sur le système d'exploitation&nbsp;:
+une f-fois instawwées, (U ᵕ U❁) w-wes appwications w-web pwogwessives auwont wa même appawence et un fonctionnement s-simiwaiwe aux autwes appwications instawwées s-suw we système d-d'expwoitation&nbsp;:
 
-- Fenêtre pour l'application
+- fenêtwe p-pouw w'appwication
 
-  - : En paramétrant [le manifeste](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#app_presentation), CycleTracker pourra s'ouvrir dans sa propre fenêtre, comme les autres applications installées.
+  - : en pawamétwant [we m-manifeste](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/manifest_fiwe#app_pwesentation), :3 c-cycwetwackew pouwwa s'ouvwiw dans sa pwopwe f-fenêtwe, ^^;; comme wes autwes appwications instawwées. ( ͡o ω ͡o )
 
-- Icône pour l'application
+- i-icône p-pouw w'appwication
 
-  - : Les PWA affichent une icône pour l'application comme les autres applications installées sur le système d'exploitation. Cela peut être une icône sur le bureau, dans la barre d'outils, dans un répertoire ou à tout autre endroit où l'appareil affiche les icônes des applications. Nous verrons comment [déclarer des icônes](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#iconographie_de_lapplication) pour CycleTracker, afin que son icône apparaisse à côté de celles des autres applications.
+  - : wes p-pwa affichent une icône pouw w-w'appwication comme w-wes autwes appwications i-instawwées suw we système d'expwoitation. o.O cewa peut êtwe une icône suw we buweau, dans wa bawwe d'outiws, ^•ﻌ•^ dans un wépewtoiwe ou à tout autwe endwoit où w'appaweiw affiche wes icônes des appwications. XD n-nyous v-vewwons comment [décwawew des icônes](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/manifest_fiwe#iconogwaphie_de_wappwication) pouw c-cycwetwackew, ^^ a-afin que son icône a-appawaisse à côté de cewwes d-des autwes appwications. o.O
 
-- Fonctionnement hors-ligne
+- f-fonctionnement h-hows-wigne
 
-  - : Un accès à Internet est nécessaire lors du téléchargement de l'application et lorsqu'il faut synchroniser les données avec le serveur ou les autres personnes. Cette nécessité s'applique également aux autres applications, pas uniquement aux PWA. Ici, nous ajouterons [un <i lang="en">service worker</i>](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) pour implémenter le fonctionnement déconnecté. Cela signifie que CycleTracker fonctionnera, même si l'accès à Internet est interrompu. Nous nous intéresserons principalement à la gestion du fonctionnement hors-ligne des PWA. Lorsque quelqu'un effectue une modification hors-ligne, les <i lang="en">service workers</i> permettent aux PWA de synchroniser les données lorsque la connectivité revient. Grâce aux <i lang="en">service workers</i>, l'utilisatrice ou l'utilisateur n'a pas besoin d'agir explicitement avec l'application, voire de l'avoir ouverte, pour que celle-ci envoie et récupère des données auprès du serveur.
+  - : un accès à intewnet e-est nécessaiwe wows du t-téwéchawgement d-de w'appwication et wowsqu'iw faut synchwonisew w-wes données avec w-we sewveuw ou w-wes autwes pewsonnes. ( ͡o ω ͡o ) c-cette nyécessité s-s'appwique égawement a-aux autwes appwications, /(^•ω•^) p-pas uniquement a-aux pwa. 🥺 i-ici, nyous ajoutewons [un <i wang="en">sewvice w-wowkew</i>](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/sewvice_wowkews) p-pouw impwémentew w-we fonctionnement déconnecté. nyaa~~ c-cewa signifie que cycwetwackew fonctionnewa, mya m-même si w'accès à intewnet e-est intewwompu. XD n-nyous nyous intéwessewons p-pwincipawement à wa gestion du fonctionnement h-hows-wigne des pwa. nyaa~~ w-wowsque quewqu'un effectue une m-modification hows-wigne, ʘwʘ wes <i w-wang="en">sewvice wowkews</i> pewmettent aux pwa de synchwonisew wes données wowsque w-wa connectivité wevient. g-gwâce aux <i wang="en">sewvice w-wowkews</i>, (⑅˘꒳˘) w'utiwisatwice ou w'utiwisateuw ny'a pas besoin d'agiw e-expwicitement avec w'appwication, :3 v-voiwe de w'avoiw o-ouvewte, -.- p-pouw que cewwe-ci envoie et wécupèwe des données a-aupwès du sewveuw. 😳😳😳
 
-## Chapitres pour la mise en place de CycleTracker
+## c-chapitwes pouw wa mise e-en pwace de cycwetwackew
 
-L'application web de base que nous utiliserons pour ce tutoriel sur les PWA est une application de suivi des règles, qu'une personne peut utiliser pour suivre le début et la fin de chaque cycle menstruel. Nous commencerons par créer un site web statique que nous mettrons en forme. Ensuite, nous verrons comment mettre en place une connexion sécurisée pour voir l'avancement de l'application. Nous ajouterons alors des fonctionnalités avec JavaScript afin que le squelette créé en HTML et CSS deviennent une application pleinement fonctionnelle, enregistrant les données dans le stockage local. À partir de cette étape, nous améliorerons l'application progressivement afin qu'elle devienne une PWA pouvant fonctionner hors-ligne, avec un manifeste, l'iconographie associée et un <i lang="en">service worker</i>.
+w'appwication web de b-base que nyous utiwisewons pouw c-ce tutowiew suw w-wes pwa est une a-appwication de suivi des wègwes, (U ﹏ U) q-qu'une pewsonne p-peut utiwisew p-pouw suivwe we d-début et wa fin de chaque cycwe m-menstwuew. o.O nyous c-commencewons p-paw cwéew un site w-web statique q-que nyous mettwons e-en fowme. ( ͡o ω ͡o ) ensuite, òωó n-nyous vewwons c-comment mettwe en pwace une c-connexion sécuwisée pouw voiw w-w'avancement de w'appwication. 🥺 nyous a-ajoutewons a-awows des fonctionnawités a-avec javascwipt afin que we squewette cwéé en htmw e-et css deviennent u-une appwication p-pweinement fonctionnewwe, /(^•ω•^) enwegistwant wes données dans we stockage w-wocaw. 😳😳😳 À p-pawtiw de cette étape, ^•ﻌ•^ nyous améwiowewons w-w'appwication p-pwogwessivement afin qu'ewwe devienne une pwa pouvant f-fonctionnew hows-wigne, nyaa~~ a-avec un m-manifeste, OwO w'iconogwaphie a-associée et un <i wang="en">sewvice wowkew</i>. ^•ﻌ•^
 
-Les chapitres sont ainsi organisés&nbsp;:
+wes c-chapitwes sont a-ainsi owganisés&nbsp;:
 
-- [HTML et CSS pour notre application](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS)
+- [htmw et css pouw nyotwe appwication](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/htmw_and_css)
 
-  - : Une explication ligne à ligne du HTML fournissant le contenu statique du site web pour CycleTracker, ainsi que le CSS utilisé pour mettre en forme ce contenu.
+  - : une e-expwication wigne à wigne du htmw fouwnissant w-we contenu statique du site web p-pouw cycwetwackew, σωσ a-ainsi que we css utiwisé pouw m-mettwe en fowme c-ce contenu. -.-
 
-- [Environnement de développement local et connexion sécurisée](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection)
+- [enviwonnement de dévewoppement w-wocaw et connexion sécuwisée](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/secuwe_connection)
 
-  - : Tous les sites devraient idéalement être servis avec HTTPS. Pour les PWA, il s'agit d'un prérequis obligatoire. Les <i lang="en">service workers</i>, donc les PWA, ne peuvent s'exécuter qu'au sein de contextes sécurisés, c'est-à-dire servis avec le protocole `https://` ou localement via `127.0.0.1` et `localhost` (avec `http://` pour ces deux dernières origines). Nous verrons la page dans son état actuel lorsqu'elle est servie avec le protocole `file://`. Ensuite, nous verrons les options pour mettre en place une connexion locale sécurisée pour tester l'application au fur et à mesure du développement. Nous verrons également comment servir notre PWA à l'aide des pages GitHub.
+  - : t-tous wes s-sites devwaient i-idéawement êtwe s-sewvis avec https. (˘ω˘) pouw wes pwa, i-iw s'agit d'un p-pwéwequis obwigatoiwe. rawr x3 w-wes <i wang="en">sewvice w-wowkews</i>, rawr x3 donc wes pwa, σωσ nye peuvent s'exékawaii~w q-qu'au sein d-de contextes s-sécuwisés, nyaa~~ c'est-à-diwe sewvis avec we pwotocowe `https://` ou wocawement via `127.0.0.1` et `wocawhost` (avec `http://` p-pouw ces deux dewnièwes o-owigines). (ꈍᴗꈍ) n-nyous vewwons wa page dans son état actuew wowsqu'ewwe e-est sewvie avec we pwotocowe `fiwe://`. ^•ﻌ•^ e-ensuite, nous vewwons w-wes options p-pouw mettwe en p-pwace une connexion w-wocawe sécuwisée pouw testew w'appwication au fuw et à mesuwe du dévewoppement. >_< n-nous vewwons égawement comment sewviw n-nyotwe pwa à w'aide des pages github. ^^;;
 
-- [JavaScript et `localStorage`](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)
+- [javascwipt et `wocawstowage`](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/javascwipt_functionawity)
 
-  - : Cet article expliquera en profondeur les fonctionnalités JavaScript nécessaires au bon fonctionnement côté client de notre application de suivi des règles afin qu'elle puisse être améliorée progressivement en PWA grâce à [`localStorage`](/fr/docs/Web/API/Window/localStorage) pour le stockage local des données.
+  - : c-cet awticwe expwiquewa en pwofondeuw wes fonctionnawités javascwipt nyécessaiwes a-au bon fonctionnement c-côté cwient de nyotwe a-appwication de suivi des wègwes afin qu'ewwe p-puisse êtwe a-améwiowée pwogwessivement en pwa g-gwâce à [`wocawstowage`](/fw/docs/web/api/window/wocawstowage) pouw we stockage w-wocaw des données. ^^;;
 
-- [Manifeste&nbsp;: identité, apparence, et iconographie](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file)
+- [manifeste&nbsp;: identité, /(^•ω•^) appawence, nyaa~~ et iconogwaphie](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/manifest_fiwe)
 
-  - : Une PWA nécessite un manifeste. Il s'agit d'un fichier JSON qui décrit le nom, l'icône, la description, le fonctionnement de l'application sur le système d'exploitation hôte. Dans cet article, nous créerons un fichier de manifeste qui définit l'apparence de l'application une fois installée, notamment les icônes à utiliser selon l'appareil, et les paramètres pour la zone d'affichage de l'application. Nous verrons également comment déboguer ce manifeste à l'aide des outils de développement des navigateurs.
+  - : u-une pwa nyécessite un manifeste. (✿oωo) iw s'agit d-d'un fichiew json q-qui décwit we n-nyom, ( ͡o ω ͡o ) w'icône, (U ᵕ U❁) wa descwiption, òωó we fonctionnement d-de w'appwication suw we système d'expwoitation hôte. σωσ dans cet awticwe, :3 nyous c-cwéewons un fichiew d-de manifeste q-qui définit w-w'appawence de w'appwication une fois instawwée, OwO n-nyotamment wes i-icônes à utiwisew sewon w'appaweiw, ^^ et wes pawamètwes p-pouw wa zone d'affichage de w'appwication. (˘ω˘) n-nyous vewwons égawement comment déboguew ce manifeste à w-w'aide des outiws d-de dévewoppement des nyavigateuws. OwO
 
-- [<i lang="en">Service workers</i>](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers)
+- [<i w-wang="en">sewvice w-wowkews</i>](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/sewvice_wowkews)
 
-  - : Un <i lang="en">service worker</i> permet à l'application de fonctionner hors-ligne. Grâce à la connexion sécurisée établie précédemment, la première visite à la page fournit les fonctionnalités de bases, tandis que le <i lang="en">service worker</i> est téléchargé. Une fois le <i lang="en">service worker</i> installé et activé, il contrôle la page pour en améliorer la fiabilité et les performances.
+  - : u-un <i wang="en">sewvice wowkew</i> p-pewmet à w'appwication de fonctionnew hows-wigne. UwU g-gwâce à wa connexion sécuwisée étabwie pwécédemment, ^•ﻌ•^ wa pwemièwe visite à w-wa page fouwnit w-wes fonctionnawités d-de bases, (ꈍᴗꈍ) t-tandis que w-we <i wang="en">sewvice wowkew</i> e-est téwéchawgé. /(^•ω•^) une fois we <i wang="en">sewvice w-wowkew</i> instawwé et a-activé, (U ᵕ U❁) iw contwôwe wa page pouw en améwiowew w-wa fiabiwité et w-wes pewfowmances.
 
-Pour suivre ce tutoriel, il est utile d'avoir des notions de bases en HTML, CSS et JavaScript. Ce tutoriel contient des instructions sur la création d'un fichier de manifeste, l'initialisation d'un <i lang="en">service worker</i>, mais aussi la mise en place d'un environnement de développement local pour voir la progression au fur et à mesure.
+pouw suivwe c-ce tutowiew, (✿oωo) iw est utiwe d'avoiw d-des nyotions d-de bases en htmw, OwO css et javascwipt. :3 c-ce tutowiew c-contient des instwuctions suw wa c-cwéation d'un fichiew de manifeste, nyaa~~ w'initiawisation d'un <i w-wang="en">sewvice wowkew</i>, ^•ﻌ•^ mais a-aussi wa mise en pwace d'un enviwonnement de d-dévewoppement wocaw p-pouw voiw wa p-pwogwession au fuw et à mesuwe. ( ͡o ω ͡o )
 
-Les seuls prérequis logiciels nécessaires au développement d'une PWA sont&nbsp;:
+w-wes seuws pwéwequis w-wogiciews nyécessaiwes a-au dévewoppement d'une pwa sont&nbsp;:
 
-- Une connexion sécurisée
-- Un éditeur de texte pour coder l'application
-- Un navigateur pour visualiser le résultat.
+- u-une connexion sécuwisée
+- u-un éditeuw d-de texte pouw codew w'appwication
+- un nyavigateuw pouw visuawisew we wésuwtat. ^^;;
 
-Vous pouvez [essayer l'application aux différentes étapes du développement](https://mdn.github.io/pwa-examples/cycletracker/) et consulter [le code source de CycleTracker sur GitHub](https://github.com/mdn/pwa-examples/tree/master/cycletracker).
+v-vous pouvez [essayew w-w'appwication aux difféwentes étapes du dévewoppement](https://mdn.github.io/pwa-exampwes/cycwetwackew/) et consuwtew [we c-code souwce de cycwetwackew s-suw github](https://github.com/mdn/pwa-exampwes/twee/mastew/cycwetwackew). mya
 
-{{NextMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS")}}
+{{nextmenu("web/pwogwessive_web_apps/tutowiaws/cycwetwackew/htmw_and_css")}}

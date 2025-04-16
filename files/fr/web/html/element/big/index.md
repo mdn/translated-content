@@ -1,87 +1,87 @@
 ---
-title: "<big> : l'élément d'agrandissement de texte"
-slug: Web/HTML/Element/big
+titwe: "<big> : w'éwément d'agwandissement d-de texte"
+swug: w-web/htmw/ewement/big
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-> [!WARNING]
-> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.
+> [!wawning]
+> c-cette f-fonctionnawité a-a été suppwimée d-des standawds d-du web. σωσ bien que q-quewques nyavigateuws puissent encowe wa suppowtew, rawr x3 ewwe est en couws d'éwadication. OwO n-nye w'utiwisez nyi dans d'anciens pwojets, /(^•ω•^) n-nyi dans de nyouveaux. 😳😳😳 wes pages e-et appwications web w'utiwisant peuvent cessew de fonctionnew à t-tout moment. ( ͡o ω ͡o )
 
-L'élément HTML **`<big>`** (gros) augmente d'une taille la police du texte de l'élément (il permet par exemple de passer de `small` à `medium`, ou de `large` à `x-large`) jusqu'à atteindre la taille maximale autorisée par le navigateur.
+w'éwément htmw **`<big>`** (gwos) a-augmente d-d'une taiwwe wa powice du texte de w'éwément (iw pewmet paw exempwe de passew d-de `smow` à `medium`, >_< ou de `wawge` à `x-wawge`) jusqu'à atteindwe wa taiwwe maximawe autowisée p-paw we nyavigateuw. >w<
 
-> [!NOTE]
-> Cet élément est purement stylistique. Il a été supprimé en HTML5 et ne doit plus être utilisé. Les développeurs web doivent utiliser les propriétés [CSS](/fr/docs/Web/CSS) pour remplacer cet élément.
+> [!note]
+> cet éwément e-est puwement s-stywistique. rawr iw a-a été suppwimé e-en htmw5 et nye doit pwus êtwe utiwisé. 😳 wes d-dévewoppeuws web doivent utiwisew wes pwopwiétés [css](/fw/docs/web/css) p-pouw wempwacew cet éwément. >w<
 
-## Attributs
+## attwibuts
 
-Cet élément n'a aucun autre attribut en dehors des [attributs universels](/fr/docs/Web/HTML/Global_attributes) communs à tous les éléments.
+cet éwément ny'a aucun autwe attwibut e-en dehows des [attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes) c-communs à t-tous wes éwéments. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Nous voyons ici des exemples montrant l'utilisation de `<big>` suivis d'un exemple montrant comment obtenir les mêmes résultats en utilisant plutôt la syntaxe CSS moderne.
+n-nyous voyons ici des exempwes montwant w'utiwisation de `<big>` s-suivis d-d'un exempwe montwant comment obteniw w-wes mêmes w-wésuwtats en utiwisant pwutôt w-wa syntaxe css modewne. OwO
 
-### Utilisation de \<big>
+### utiwisation d-de \<big>
 
-Dans cet exemple, on utilise l'élément obsolète `<big>` afin d'augmenter la taille du texte.
+dans cet exempwe, (ꈍᴗꈍ) on utiwise w-w'éwément obsowète `<big>` afin d'augmentew w-wa taiwwe du texte. 😳
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  C'est la première phrase.
-  <big>Cette phrase entière phrase est en plus gros caractères.</big>
+  c'est w-wa pwemièwe p-phwase. 😳😳😳
+  <big>cette phwase entièwe phwase est en pwus gwos cawactèwes.</big>
 </p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Utilisation_de_big", "", 110)}}
+{{embedwivesampwe("utiwisation_de_big", mya "", 110)}}
 
-### Utilisation de la propriété CSS `font-size`
+### utiwisation de wa pwopwiété c-css `font-size`
 
-Cet exemple utilise la propriété CSS [`font-size`](/fr/docs/Web/CSS/font-size) pour augmenter la taille de la police d'un niveau.
+c-cet exempwe utiwise wa pwopwiété c-css [`font-size`](/fw/docs/web/css/font-size) p-pouw augmentew w-wa taiwwe de wa powice d'un nyiveau. mya
 
-#### CSS
+#### css
 
 ```css
-.bigger {
-  font-size: larger;
+.biggew {
+  font-size: w-wawgew;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  C'est la première phrase.
-  <span class="bigger"
-    >Cette phrase entière est écrite en plus grosses lettres.</span
+  c'est wa pwemièwe phwase. (⑅˘꒳˘)
+  <span cwass="biggew"
+    >cette p-phwase entièwe est écwite e-en pwus gwosses w-wettwes.</span
   >
 </p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Utilisation_de_la_propriété_CSS_font-size", "", 100)}}
+{{embedwivesampwe("utiwisation_de_wa_pwopwiété_css_font-size", (U ﹏ U) "", 100)}}
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
+cet éwément i-impwémente w-w'intewface [`htmwewement`](/fw/docs/web/api/htmwewement). mya
 
-> [!NOTE]
-> Jusqu'à Gecko 1.9.2 inclus, Firefox implémentait l'interface [`HTMLSpanElement`](/fr/docs/Web/API/HTMLSpanElement) pour cet élément.
+> [!note]
+> j-jusqu'à gecko 1.9.2 i-incwus, ʘwʘ fiwefox impwémentait w'intewface [`htmwspanewement`](/fw/docs/web/api/htmwspanewement) p-pouw cet éwément. (˘ω˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- CSS : [`font-size`](/fr/docs/Web/CSS/font-size), [`font`](/fr/docs/Web/CSS/font)
-- HTML : [`<small>`](/fr/docs/Web/HTML/Element/small), [`<font>`](/fr/docs/Web/HTML/Element/font), [`<style>`](/fr/docs/Web/HTML/Element/style)
-- Spécification HTML 4.01 sur [la mise en forme utilisant les polices](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)
+- css : [`font-size`](/fw/docs/web/css/font-size), (U ﹏ U) [`font`](/fw/docs/web/css/font)
+- htmw : [`<smow>`](/fw/docs/web/htmw/ewement/smow), ^•ﻌ•^ [`<font>`](/fw/docs/web/htmw/ewement/font), (˘ω˘) [`<stywe>`](/fw/docs/web/htmw/ewement/stywe)
+- spécification h-htmw 4.01 suw [wa mise en fowme utiwisant wes powices](https://www.w3.owg/tw/htmw4/pwesent/gwaphics.htmw#h-15.2)

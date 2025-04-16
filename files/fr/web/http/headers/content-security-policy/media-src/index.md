@@ -1,75 +1,75 @@
 ---
-title: "CSP : media-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/media-src
+titwe: "csp : media-swc"
+swug: w-web/http/headews/content-secuwity-powicy/media-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`media-src`** spécifie les sources valides pour le chargement des médias avec les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video).
+w-wa diwective h-http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`media-swc`** s-spécifie w-wes souwces v-vawides pouw we c-chawgement des m-médias avec wes éwéments [`<audio>`](/fw/docs/web/htmw/ewement/audio) et [`<video>`](/fw/docs/web/htmw/ewement/video). ^^
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion de csp</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">type de diwective</th>
+      <td><a hwef="/fw/docs/gwossawy/fetch_diwective">diwective d-de wécupéwation</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">utiwisation d-de <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> paw défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
+        oui, 😳😳😳 si cette diwective e-est absente, mya w'agent utiwisateuw c-consuwtewa w-wa diwective <code>defauwt-swc</code>. 😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
-```http
-Content-Security-Policy: media-src <source>;
-Content-Security-Policy: media-src <source> <source>;
-```
-
-### Sources
-
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
-
-## Exemples
-
-### Cas de violation
-
-Soit cet en-tête CSP&nbsp;:
+une ou pwusieuws souwces peuvent êtwe autowisées p-pouw cette diwective&nbsp;:
 
 ```http
-Content-Security-Policy: media-src https://example.com/
+content-secuwity-powicy: media-swc <souwce>;
+content-secuwity-powicy: m-media-swc <souwce> <souwce>;
 ```
 
-Ces éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<video>`](/fr/docs/Web/HTML/Element/video) et [`<track>`](/fr/docs/Web/HTML/Element/track) seront bloqués et ne se chargeront pas&nbsp;:
+### souwces
 
-```html
-<audio src="https://not-example.com/audio"></audio>
+`<souwce>` p-peut êtwe n-ny'impowte q-quewwe vaweuw pawmi c-cewwes énuméwées dans [w'awticwe suw wes v-vaweuws souwces csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). -.-
 
-<video src="https://not-example.com/video">
-  <track kind="subtitles" src="https://not-example.com/subtitles" />
+on nyotewa q-que cet ensembwe de vaweuws peut êtwe utiwisé pouw toutes wes [diwectives de wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et p-pouw [cewtaines autwes d-diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). 🥺
+
+## e-exempwes
+
+### c-cas de viowation
+
+soit cet en-tête csp&nbsp;:
+
+```http
+content-secuwity-powicy: m-media-swc h-https://exampwe.com/
+```
+
+ces éwéments [`<audio>`](/fw/docs/web/htmw/ewement/audio), [`<video>`](/fw/docs/web/htmw/ewement/video) e-et [`<twack>`](/fw/docs/web/htmw/ewement/twack) s-sewont bwoqués et nye se chawgewont p-pas&nbsp;:
+
+```htmw
+<audio swc="https://not-exampwe.com/audio"></audio>
+
+<video s-swc="https://not-exampwe.com/video">
+  <twack kind="subtitwes" swc="https://not-exampwe.com/subtitwes" />
 </video>
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<video>`](/fr/docs/Web/HTML/Element/video) et [`<track>`](/fr/docs/Web/HTML/Element/track)
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [`<audio>`](/fw/docs/web/htmw/ewement/audio), o.O [`<video>`](/fw/docs/web/htmw/ewement/video) et [`<twack>`](/fw/docs/web/htmw/ewement/twack)

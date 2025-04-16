@@ -1,72 +1,72 @@
 ---
-title: Constructeur ReferenceError()
-slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
+titwe: constwucteuw wefewenceewwow()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow/wefewenceewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`ReferenceError()`** permet de créer des objets représentant une erreur qui se produit lorsque le code fait référence à une variable qui n'existe pas.
+w-we constwucteuw **`wefewenceewwow()`** p-pewmet d-de cwéew des o-objets wepwésentant u-une ewweuw q-qui se pwoduit wowsque w-we code fait wéféwence à une vawiabwe qui ny'existe pas. OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-new ReferenceError();
-new ReferenceError(message);
-new ReferenceError(message, nomFichier);
-new ReferenceError(message, nomFichier, numeroLigne);
+n-nyew wefewenceewwow();
+nyew wefewenceewwow(message);
+n-nyew wefewenceewwow(message, 😳😳😳 n-nyomfichiew);
+nyew wefewenceewwow(message, 😳😳😳 nyomfichiew, o.O nyumewowigne);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `message` {{optional_inline}}
-  - : Une description de l'erreur, compréhensible par un humain.
-- `nomFichier` {{optional_inline}}
-  - : Le nom du fichier contenant le code qui a déclenché l'exception.
-- `numeroLigne` {{optional_inline}}
-  - : Le numéro de la ligne du code qui a déclenché l'exception.
+- `message` {{optionaw_inwine}}
+  - : une descwiption d-de w'ewweuw, ( ͡o ω ͡o ) c-compwéhensibwe paw un humain. (U ﹏ U)
+- `nomfichiew` {{optionaw_inwine}}
+  - : we nyom du fichiew contenant we code qui a décwenché w-w'exception. (///ˬ///✿)
+- `numewowigne` {{optionaw_inwine}}
+  - : we nyuméwo de wa wigne du code qui a décwenché w-w'exception. >w<
 
-## Exemples
+## exempwes
 
-### Intercepter une exception `ReferenceError`
+### intewceptew u-une exception `wefewenceewwow`
 
 ```js
-try {
-  let a = variableIndefinie;
-} catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "variableIndefinie is not defined"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 2
-  console.log(e.columnNumber); // 6
-  console.log(e.stack); // "@Scratchpad/2:2:7\n"
+t-twy {
+  wet a = v-vawiabweindefinie;
+} c-catch (e) {
+  consowe.wog(e instanceof wefewenceewwow); // t-twue
+  consowe.wog(e.message); // "vawiabweindefinie is not defined"
+  consowe.wog(e.name); // "wefewenceewwow"
+  c-consowe.wog(e.fiwename); // "scwatchpad/1"
+  consowe.wog(e.winenumbew); // 2
+  consowe.wog(e.cowumnnumbew); // 6
+  consowe.wog(e.stack); // "@scwatchpad/2:2:7\n"
 }
 ```
 
-### Créer une exception `ReferenceError`
+### cwéew une exception `wefewenceewwow`
 
 ```js
-try {
-  throw new ReferenceError("Coucou", "unFichier.js", 10);
-} catch (e) {
-  console.log(e instanceof ReferenceError); // true
-  console.log(e.message); // "Coucou"
-  console.log(e.name); // "ReferenceError"
-  console.log(e.fileName); // "unFichier.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+twy {
+  t-thwow nyew wefewenceewwow("coucou", rawr "unfichiew.js", mya 10);
+} c-catch (e) {
+  consowe.wog(e i-instanceof w-wefewenceewwow); // twue
+  consowe.wog(e.message); // "coucou"
+  consowe.wog(e.name); // "wefewenceewwow"
+  c-consowe.wog(e.fiwename); // "unfichiew.js"
+  c-consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // "@scwatchpad/2:2:9\n"
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow)

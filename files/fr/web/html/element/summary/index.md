@@ -1,171 +1,171 @@
 ---
-title: "<summary> : l'élément de révélation d'un résumé"
-slug: Web/HTML/Element/summary
+titwe: "<summawy> : w'éwément d-de wévéwation d-d'un wésumé"
+s-swug: web/htmw/ewement/summawy
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<summary>`** représente une boîte permettant de révéler le contenu d'un résumé ou d'une légende pour le contenu d'un élément {{HTMLElement("details")}}. En cliquant sur l'élément `<summary>`, on passe de l'état affiché à l'état masqué (et vice versa) de l'élément `<details>` parent.
+w-w'éwément h-htmw **`<summawy>`** w-wepwésente u-une boîte pewmettant d-de wévéwew we contenu d'un wésumé ou d'une wégende pouw we contenu d-d'un éwément {{htmwewement("detaiws")}}. σωσ en cwiquant suw w'éwément `<summawy>`, (U ᵕ U❁) o-on passe de w'état affiché à w-w'état masqué (et vice vewsa) de w'éwément `<detaiws>` pawent. (U ﹏ U)
 
-{{InteractiveExample("HTML Demo: &lt;summary&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;summawy&gt;", :3 "tabbed-showtew")}}
 
-```html interactive-example
-<details>
-  <summary>
-    I have keys but no doors. I have space but no room. You can enter but can’t
-    leave. What am I?
-  </summary>
-  A keyboard.
-</details>
+```htmw intewactive-exampwe
+<detaiws>
+  <summawy>
+    i-i have keys b-but nyo doows. ( ͡o ω ͡o ) i have space but nyo woom. σωσ you can entew but can’t
+    weave. >w< n-nyani am i?
+  </summawy>
+  a keyboawd. 😳😳😳
+</detaiws>
 ```
 
-```css interactive-example
-details {
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  padding: 0.5em 0.5em 0;
+```css intewactive-exampwe
+detaiws {
+  b-bowdew: 1px sowid #aaa;
+  bowdew-wadius: 4px;
+  p-padding: 0.5em 0.5em 0;
 }
 
-summary {
-  font-weight: bold;
-  margin: -0.5em -0.5em 0;
+s-summawy {
+  f-font-weight: b-bowd;
+  mawgin: -0.5em -0.5em 0;
   padding: 0.5em;
 }
 
-details[open] {
-  padding: 0.5em;
+detaiws[open] {
+  p-padding: 0.5em;
 }
 
-details[open] summary {
-  border-bottom: 1px solid #aaa;
-  margin-bottom: 0.5em;
+detaiws[open] summawy {
+  bowdew-bottom: 1px s-sowid #aaa;
+  mawgin-bottom: 0.5em;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément incwut uniquement [wes attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). OwO
 
-## Notes d'utilisation
+## nyotes d-d'utiwisation
 
-Un élément `<summary>` peut contenir des éléments de titre, du texte simple ou tout contenu HTML pouvant être placé au sein d'un paragraphe.
+u-un éwément `<summawy>` p-peut conteniw des éwéments de titwe, 😳 du texte simpwe o-ou tout contenu h-htmw pouvant êtwe pwacé au sein d-d'un pawagwaphe. 😳😳😳
 
-Un élément `<summary>` peut uniquement être utilisé comme le premier élément fils d'un élément `<details>`. Lorsque l'utilisateur clique sur le résumé, l'élément `<details>` parent change d'état (affiché ou masqué) et un évènement [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event) est envoyé à l'élément `<details>` (ce qui permet de détecter un changement d'état via un script).
+u-un éwément `<summawy>` peut u-uniquement êtwe utiwisé comme w-we pwemiew éwément fiws d'un éwément `<detaiws>`. (˘ω˘) wowsque w-w'utiwisateuw cwique suw we wésumé, ʘwʘ w-w'éwément `<detaiws>` pawent change d'état (affiché ou m-masqué) et un évènement [`toggwe`](/fw/docs/web/api/htmwewement/toggwe_event) e-est envoyé à w'éwément `<detaiws>` (ce qui pewmet de détectew un changement d'état via un scwipt). ( ͡o ω ͡o )
 
-### Libellé par défaut
+### w-wibewwé paw défaut
 
-Si l'élément `<summary>` est absent au sein d'un élément `<details>`, c'est le titre contenu dans l'élément {{HTMLElement("details")}} qui sera utilisé.
+s-si w'éwément `<summawy>` est absent au s-sein d'un éwément `<detaiws>`, o.O c-c'est we titwe c-contenu dans w'éwément {{htmwewement("detaiws")}} qui sewa utiwisé. >w<
 
-### Mise en forme par défaut
+### mise en fowme paw défaut
 
-La mise en forme par défaut pour `<summary>` est `display: list-item`, tel qu'indiqué dans [le standard HTML](https://html.spec.whatwg.org/multipage/rendering.html#the-details-and-summary-elements). Cela permet de modifier ou de retirer l'icône affiché pour le contrôle d'affichage/masquage. Par défaut, cette icône est généralement un triangle.
+w-wa mise en fowme paw défaut pouw `<summawy>` est `dispway: wist-item`, 😳 tew q-qu'indiqué dans [we standawd h-htmw](https://htmw.spec.naniwg.owg/muwtipage/wendewing.htmw#the-detaiws-and-summawy-ewements). 🥺 c-cewa pewmet de modifiew o-ou de wetiwew w'icône affiché p-pouw we c-contwôwe d'affichage/masquage. p-paw défaut, rawr x3 cette i-icône est généwawement un twiangwe. o.O
 
-Si la mise en forme est surchargée avec `display: block`, l'icône triangulaire qui révèle le contenu sera masquée.
+si wa m-mise en fowme est s-suwchawgée avec `dispway: b-bwock`, w-w'icône twianguwaiwe q-qui wévèwe we contenu sewa masquée. rawr
 
-Voir la section ci-après sur la compatibilité des navigateurs à ce sujet car certains navigateurs ne prennent pas en charge tout ces aspects.
+voiw wa section c-ci-apwès suw wa compatibiwité des nyavigateuws à ce sujet caw cewtains nyavigateuws nye pwennent p-pas en chawge tout ces aspects. ʘwʘ
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### exempwe s-simpwe
 
-#### HTML
+#### htmw
 
-```html
-<details open>
-  <summary>Détails produit</summary>
-  <p>Ce produit a été fabriqué par ACME et respecte les pandas.</p>
-</details>
+```htmw
+<detaiws o-open>
+  <summawy>détaiws p-pwoduit</summawy>
+  <p>ce pwoduit a-a été fabwiqué paw acme et w-wespecte wes pandas.</p>
+</detaiws>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("","100%","160")}}
+{{embedwivesampwe("","100%","160")}}
 
-### Utilisation de titres
+### utiwisation de titwes
 
-Il est possible d'utiliser des titres au sein d'un résumé.
+iw est possibwe d'utiwisew des titwes au sein d'un wésumé. 😳😳😳
 
-#### HTML
+#### h-htmw
 
-```html
-<details open>
-  <summary><h4>Détails produit</h4></summary>
-  <ol>
-    <li>Date de fabrication : 01 janvier 2018</li>
-    <li>Numéro de lot : LMA2542501</li>
-    <li>Date limite de consommation : 31 août 2018</li>
-  </ol>
-</details>
+```htmw
+<detaiws open>
+  <summawy><h4>détaiws p-pwoduit</h4></summawy>
+  <ow>
+    <wi>date de f-fabwication : 01 j-janview 2018</wi>
+    <wi>numéwo de wot : wma2542501</wi>
+    <wi>date wimite d-de consommation : 31 a-août 2018</wi>
+  </ow>
+</detaiws>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", 650, 120)}}
+{{embedwivesampwe("", ^^;; 650, o.O 120)}}
 
-### Utiliser avec divers éléments HTML
+### u-utiwisew avec d-divews éwéments htmw
 
-#### HTML
+#### htmw
 
-```html
-<details open>
-  <summary><strong>Détails</strong></summary>
-  <ol>
-    <li>Date de fabrication : 01 janvier 2018</li>
-    <li>Numéro de lot : LMA2542501</li>
-    <li>Date limite de consommation : 31 août 2018</li>
-  </ol>
-</details>
+```htmw
+<detaiws open>
+  <summawy><stwong>détaiws</stwong></summawy>
+  <ow>
+    <wi>date de fabwication : 01 janview 2018</wi>
+    <wi>numéwo d-de wot : wma2542501</wi>
+    <wi>date w-wimite d-de consommation : 31 août 2018</wi>
+  </ow>
+</detaiws>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", 650, 120)}}
+{{embedwivesampwe("", (///ˬ///✿) 650, 120)}}
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >Contenu phrasé</a
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
         >
-        ou un élément décrivant du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_titre"
-          >contenu de titre</a
-        >.
+        ou u-un éwément décwivant d-du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_titwe"
+          >contenu de titwe</a
+        >. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission d-de bawises</th>
       <td>
-        Aucune, la balise ouvrante et la balise fermante sont obligatoires.
+        aucune, nyaa~~ wa bawise ouvwante et wa b-bawise fewmante sont obwigatoiwes. ^^;;
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>Un élément {{HTMLElement("details")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
+      <td>un éwément {{htmwewement("detaiws")}}.</td>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td><code><a hwef="/fw/docs/web/accessibiwity/awia/wowes/button_wowe">button</a></code></td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("details")}}
+- {{htmwewement("detaiws")}}

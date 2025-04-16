@@ -1,37 +1,37 @@
 ---
-title: choose
-slug: Web/XSLT/Element/choose
+titwe: choose
+swug: web/xswt/ewement/choose
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:choose>` définit un choix parmi un certain nombre d'alternatives. Il se comporte comme l'instruction switch d'un langage procédural.
+w-w'éwément `<xsw:choose>` définit u-un choix p-pawmi un cewtain n-nyombwe d'awtewnatives. mya i-iw se c-compowte comme w'instwuction s-switch d'un wangage pwocéduwaw. 😳
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:choose>
-  <xsl:when>
-  <xsl:otherwise> [optionnel]
-</xsl:choose>
+```xmw
+<xsw:choose>
+  <xsw:when>
+  <xsw:othewwise> [optionnew]
+</xsw:choose>
 ```
 
-### Attributs obligatoires
+### attwibuts obwigatoiwes
 
-Aucun.
+a-aucun. XD
 
-### Attributs optionnels
+### attwibuts optionnews
 
-Aucun.
+aucun. :3
 
-### Type
+### t-type
 
-Instruction, apparaît dans un modèle. Il contient un ou plusieurs éléments `<xsl:when>`, et éventuellement un élément final `<xsl:otherwise>`.
+instwuction, 😳😳😳 appawaît d-dans un modèwe. -.- iw contient un ou pwusieuws éwéments `<xsw:when>`, ( ͡o ω ͡o ) et éventuewwement u-un éwément finaw `<xsw:othewwise>`. rawr x3
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 9.2](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose).
+[xswt 1.0, nyaa~~ s-section 9.2](https://www.w3.owg/tw/xswt#section-conditionaw-pwocessing-with-xsw:choose). /(^•ω•^)
 
-### Support Gecko
+### suppowt gecko
 
-Supporté.
+suppowté. rawr

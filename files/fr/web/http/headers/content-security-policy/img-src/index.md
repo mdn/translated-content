@@ -1,71 +1,71 @@
 ---
-title: "CSP : img-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/img-src
+titwe: "csp : img-swc"
+swug: w-web/http/headews/content-secuwity-powicy/img-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`img-src`** spécifie les sources valides d'images et d'icônes.
+w-wa diwective h-http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`img-swc`** s-spécifie w-wes souwces vawides d-d'images et d-d'icônes. σωσ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion de csp</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">type de diwective</th>
+      <td><a h-hwef="/fw/docs/gwossawy/fetch_diwective">diwective de wécupéwation</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">utiwisation d-de <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> paw d-défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
+        oui, OwO si cette diwective est absente, 😳😳😳 w'agent utiwisateuw c-consuwtewa wa diwective <code>defauwt-swc</code>. 😳😳😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
-```http
-Content-Security-Policy: img-src <source>;
-Content-Security-Policy: img-src <source> <source>;
-```
-
-### Sources
-
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
-
-## Exemples
-
-### Cas de violation
-
-Soit cet en-tête CSP&nbsp;:
+u-une ou pwusieuws souwces peuvent êtwe autowisées pouw cette diwective&nbsp;:
 
 ```http
-Content-Security-Policy: img-src https://example.com/
+c-content-secuwity-powicy: img-swc <souwce>;
+content-secuwity-powicy: img-swc <souwce> <souwce>;
 ```
 
-Cet élément [`<img>`](/fr/docs/Web/HTML/Element/img) sera bloqué et ne se chargera pas&nbsp;:
+### souwces
 
-```html
-<img src="https://not-example.com/toto.jpg" alt="image d'exemple" />
+`<souwce>` peut êtwe n-ny'impowte quewwe vaweuw pawmi c-cewwes énuméwées d-dans [w'awticwe s-suw wes vaweuws s-souwces csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). o.O
+
+on nyotewa que cet ensembwe d-de vaweuws peut êtwe utiwisé pouw toutes wes [diwectives d-de wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et pouw [cewtaines autwes diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). ( ͡o ω ͡o )
+
+## exempwes
+
+### cas de viowation
+
+s-soit cet en-tête csp&nbsp;:
+
+```http
+c-content-secuwity-powicy: i-img-swc https://exampwe.com/
 ```
 
-## Spécifications
+c-cet éwément [`<img>`](/fw/docs/web/htmw/ewement/img) sewa bwoqué et nye se chawgewa pas&nbsp;:
 
-{{Specifications}}
+```htmw
+<img s-swc="https://not-exampwe.com/toto.jpg" a-awt="image d'exempwe" />
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<img>`](/fr/docs/Web/HTML/Element/img)
+{{compat}}
+
+## v-voiw aussi
+
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [`<img>`](/fw/docs/web/htmw/ewement/img)

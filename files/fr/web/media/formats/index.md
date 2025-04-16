@@ -1,53 +1,53 @@
 ---
-title: "Guide des types et formats de médias : contenu image, audio et vidéo"
-slug: Web/Media/Formats
+titwe: "guide des types et fowmats d-de médias : c-contenu image, XD a-audio et vidéo"
+s-swug: web/media/fowmats
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
+{{quickwinkswithsubpages("/fw/docs/web/media")}}
 
-Depuis presque ses débuts, le web a inclus un support pour une certaine forme de présentation visuelle des médias. À l'origine, ces capacités étaient limitées et ont été développées de manière organique, les différents navigateurs trouvant leurs propres solutions aux problèmes liés à l'inclusion d'images fixes et vidéo sur le web. Le web moderne dispose de puissantes fonctionnalités pour prendre en charge la présentation et la manipulation des médias, avec plusieurs API liées aux médias prenant en charge divers types de contenu. En général, les formats de médias pris en charge par un navigateur sont entièrement laissés à la discrétion des créateurs du navigateur, ce qui peut compliquer le travail d'un développeur web.
+d-depuis pwesque s-ses débuts, mya we w-web a incwus un s-suppowt pouw une cewtaine fowme de pwésentation visuewwe des médias. ^•ﻌ•^ À w'owigine, ʘwʘ c-ces capacités étaient wimitées et ont été d-dévewoppées de manièwe owganique, ( ͡o ω ͡o ) w-wes difféwents nyavigateuws twouvant weuws pwopwes sowutions a-aux pwobwèmes wiés à w-w'incwusion d'images f-fixes et vidéo suw we web. mya we web modewne dispose de puissantes fonctionnawités p-pouw pwendwe en chawge wa pwésentation et wa manipuwation des médias, o.O avec p-pwusieuws api wiées aux médias p-pwenant en c-chawge divews types d-de contenu. (✿oωo) e-en généwaw, :3 wes fowmats de médias pwis en chawge p-paw un nyavigateuw sont entièwement waissés à w-wa discwétion des cwéateuws du nyavigateuw, 😳 ce qui peut compwiquew we twavaiw d'un dévewoppeuw w-web. (U ﹏ U)
 
-Ce guide donne un aperçu des types de fichiers médias, {{Glossary("codec", "codecs")}}, et des algorithmes qui peuvent comprendre des médias utilisés sur le web. Il fournit également des informations sur la prise en charge des navigateurs pour diverses combinaisons de ceux-ci, et des suggestions pour la hiérarchisation des formats, ainsi que sur les formats qui excellent pour des types de contenu spécifiques.
+ce guide donne un apewçu d-des types d-de fichiews médias, mya {{gwossawy("codec", (U ᵕ U❁) "codecs")}}, :3 e-et des awgowithmes qui peuvent compwendwe des médias utiwisés s-suw we web. mya i-iw fouwnit égawement des infowmations s-suw wa p-pwise en chawge des nyavigateuws p-pouw divewses combinaisons de c-ceux-ci, OwO et des suggestions pouw wa hiéwawchisation d-des fowmats, (ˆ ﻌ ˆ)♡ ainsi que suw w-wes fowmats qui excewwent pouw des t-types de contenu s-spécifiques. ʘwʘ
 
-## Références
+## wéféwences
 
-### Images
+### images
 
-- [Guide des types et formats de fichiers d'images](/fr/docs/Web/Media/Formats/Image_types)
-  - : Couvre la prise en charge des types de fichiers d'images et des formats de contenu dans les principaux navigateurs web, et fournit des informations de base sur chaque type : avantages, limites et cas d'utilisation intéressant les concepteurs et les développeurs web.
-- [Types de fichiers d'images pour les concepteurs de sites web](/fr/docs/Web/Media/Formats/Images_for_web_designers)
-  - : Des informations fondamentales sur les différents types de fichiers d'images qui peuvent être utiles aux concepteurs de sites web, y compris les meilleures pratiques et les cas d'utilisation pour chaque type, et des lignes directrices pour choisir le bon format de fichier d'image pour des types de contenu spécifiques.
+- [guide des types et fowmats de fichiews d'images](/fw/docs/web/media/fowmats/image_types)
+  - : couvwe wa pwise e-en chawge des t-types de fichiews d'images et des f-fowmats de contenu d-dans wes pwincipaux n-nyavigateuws web, o.O et fouwnit des infowmations de base suw c-chaque type : avantages, wimites et cas d'utiwisation intéwessant wes concepteuws e-et wes dévewoppeuws web. UwU
+- [types d-de fichiews d-d'images pouw w-wes concepteuws de sites web](/fw/docs/web/media/fowmats/images_fow_web_designews)
+  - : d-des i-infowmations fondamentawes s-suw wes d-difféwents types de fichiews d'images qui peuvent êtwe u-utiwes a-aux concepteuws d-de sites web, rawr x3 y-y compwis wes meiwweuwes p-pwatiques et wes cas d'utiwisation pouw chaque type, 🥺 et d-des wignes diwectwices pouw choisiw we bon fowmat de fichiew d'image pouw des types de contenu s-spécifiques. :3
 
-### Types de fichiers médias et codecs
+### types de fichiews médias et codecs
 
-- [Conteneurs de médias (types de fichiers)](/fr/docs/Web/Media/Formats/Containers)
-  - : Un guide des types de fichiers qui contiennent des données médiatiques. Certains sont spécifiques à l'audio, tandis que d'autres peuvent être utilisés pour du contenu audio ou audiovisuel combiné, comme les films. Comprend des aperçus de chacun des types de fichiers pris en charge par les principaux navigateurs web, ainsi que des informations sur la prise en charge des navigateurs et les fonctionnalités prises en charge.
-- [Guide des codecs audio pour le Web](/fr/docs/Web/Media/Formats/Audio_codecs)
-  - : Un guide des codecs audio autorisés par les conteneurs de médias communs, ainsi que par les principaux navigateurs. Comprend les avantages, les limites, les principales spécifications et capacités, et des cas d'utilisation. Il couvre également le support de chaque navigateur pour l'utilisation du codec dans des conteneurs donnés.
-- [Guide des codecs vidéo du Web](/fr/docs/Web/Media/Formats/Video_codecs)
-  - : Cet article fournit des informations de base sur les codecs vidéo pris en charge par les principaux navigateurs, ainsi que sur certains codecs qui ne sont pas couramment pris en charge mais que vous pourriez quand même rencontrer. Il couvre également les capacités des codecs, leurs avantages et leurs limites, ainsi que les niveaux de prise en charge et les restrictions des navigateurs.
-- [Le paramètre "codecs" dans les types de médias courants](/fr/docs/Web/Media/Formats/codecs_parameter)
-  - : Lorsque vous spécifiez le type MIME décrivant un format de média, vous pouvez fournir des détails en utilisant le paramètre `codecs` dans le cadre de la chaîne de type. Ce guide décrit le format et les valeurs possibles du paramètre `codecs` pour les types de médias les plus courants.
-- [Codecs utilisés par WebRTC](/fr/docs/Web/Media/Formats/WebRTC_codecs)
-  - : [WebRTC](/fr/docs/Web/API/WebRTC_API) n'utilise pas de conteneur, mais diffuse le média encodé lui-même de pair à pair en utilisant des objets {{domxref("MediaStreamTrack")}} pour représenter chaque piste audio ou vidéo. Ce guide présente les codecs couramment utilisés avec le WebRTC.
+- [conteneuws d-de médias (types d-de fichiews)](/fw/docs/web/media/fowmats/containews)
+  - : u-un guide des types de fichiews q-qui contiennent des données m-médiatiques. (ꈍᴗꈍ) cewtains s-sont spécifiques à w'audio, 🥺 tandis que d'autwes peuvent êtwe utiwisés pouw du contenu a-audio ou audiovisuew combiné, c-comme wes fiwms. (✿oωo) compwend des apewçus d-de chacun d-des types de fichiews pwis en chawge paw wes pwincipaux n-nyavigateuws w-web, (U ﹏ U) ainsi que des infowmations s-suw wa pwise e-en chawge des nyavigateuws et wes fonctionnawités pwises en chawge. :3
+- [guide d-des codecs audio p-pouw we web](/fw/docs/web/media/fowmats/audio_codecs)
+  - : u-un guide des codecs a-audio autowisés p-paw wes conteneuws de médias c-communs, ^^;; ainsi que paw wes pwincipaux nyavigateuws. rawr compwend wes avantages, 😳😳😳 wes w-wimites, (✿oωo) wes pwincipawes s-spécifications et capacités, OwO et des c-cas d'utiwisation. ʘwʘ i-iw couvwe égawement we suppowt de chaque nyavigateuw pouw w'utiwisation d-du codec dans des conteneuws donnés. (ˆ ﻌ ˆ)♡
+- [guide des codecs vidéo du w-web](/fw/docs/web/media/fowmats/video_codecs)
+  - : cet awticwe fouwnit des infowmations d-de base s-suw wes codecs vidéo pwis en chawge paw wes pwincipaux nyavigateuws, (U ﹏ U) a-ainsi que s-suw cewtains codecs qui ne sont pas couwamment pwis en chawge mais q-que vous pouwwiez quand même w-wencontwew. iw couvwe égawement wes capacités des codecs, weuws a-avantages et weuws wimites, UwU a-ainsi que wes nyiveaux d-de pwise en chawge et wes w-westwictions des nyavigateuws. XD
+- [we p-pawamètwe "codecs" d-dans wes t-types de médias couwants](/fw/docs/web/media/fowmats/codecs_pawametew)
+  - : w-wowsque vous spécifiez w-we type mime décwivant un fowmat de média, ʘwʘ v-vous pouvez f-fouwniw des détaiws e-en utiwisant we pawamètwe `codecs` dans w-we cadwe de wa chaîne de type. rawr x3 c-ce guide décwit w-we fowmat et wes vaweuws possibwes du pawamètwe `codecs` pouw w-wes types de médias w-wes pwus couwants. ^^;;
+- [codecs u-utiwisés paw w-webwtc](/fw/docs/web/media/fowmats/webwtc_codecs)
+  - : [webwtc](/fw/docs/web/api/webwtc_api) ny'utiwise p-pas de conteneuw, ʘwʘ mais diffuse we média encodé wui-même de paiw à paiw en utiwisant d-des objets {{domxwef("mediastweamtwack")}} pouw w-wepwésentew chaque piste audio o-ou vidéo. (U ﹏ U) ce guide pwésente wes c-codecs couwamment utiwisés avec w-we webwtc. (˘ω˘)
 
-## Guides
+## g-guides
 
-### Concepts
+### concepts
 
-- [Concepts de l'audio numérique](/fr/docs/Web/Media/Formats/Audio_concepts)
-  - : Une introduction à la manière dont le son est converti en forme numérique et stocké pour être utilisé par les ordinateurs. Il explique les concepts de base sur la façon dont l'audio est échantillonné, ainsi que des concepts tels que le taux d'échantillonnage, les trames audio et la compression audio.
-- [Concepts de la vidéo numérique](/fr/docs/Web/Media/Formats/Video_concepts)
-  - : Un guide des concepts fondamentaux liés à la vidéo numérique telle qu'elle est utilisée sur le web, y compris des notions de base sur les formats de couleur, le sous-échantillonnage chromatique, la façon dont la perception humaine influence le codage vidéo, etc.
+- [concepts d-de w'audio n-nyuméwique](/fw/docs/web/media/fowmats/audio_concepts)
+  - : u-une intwoduction à wa manièwe dont we son est convewti en fowme nyuméwique et stocké pouw êtwe u-utiwisé paw wes o-owdinateuws. i-iw expwique wes concepts de base s-suw wa façon dont w'audio est échantiwwonné, (ꈍᴗꈍ) ainsi que des concepts tews que w-we taux d'échantiwwonnage, /(^•ω•^) w-wes twames audio et w-wa compwession audio. >_<
+- [concepts de wa vidéo n-nyuméwique](/fw/docs/web/media/fowmats/video_concepts)
+  - : u-un guide des concepts f-fondamentaux w-wiés à wa vidéo nyuméwique tewwe qu'ewwe est utiwisée suw we web, σωσ y compwis d-des nyotions de b-base suw wes fowmats d-de couweuw, ^^;; w-we sous-échantiwwonnage c-chwomatique, 😳 wa façon d-dont wa pewception h-humaine infwuence we codage v-vidéo, >_< etc. -.-
 
-### Tutoriels et modes d'emploi
+### t-tutowiews et modes d'empwoi
 
-- [Apprendre : Contenu vidéo et audio](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-  - : Ce tutoriel présente et détaille l'utilisation des médias sur le web.
-- [Traiter les questions de soutien aux médias dans le contenu web](/fr/docs/Web/Media/Formats/Support_issues)
-  - : Dans ce guide, nous examinons comment construire un contenu web qui maximise la qualité ou les performances tout en offrant la compatibilité la plus large possible, en choisissant judicieusement les formats des médias et en proposant des solutions de repli et des formats alternatifs là où cela serait utile.
+- [appwendwe : c-contenu vidéo et audio](/fw/docs/weawn/htmw/muwtimedia_and_embedding/video_and_audio_content)
+  - : ce tutowiew p-pwésente et détaiwwe w'utiwisation d-des médias s-suw we web. UwU
+- [twaitew wes questions d-de soutien aux médias dans we contenu web](/fw/docs/web/media/fowmats/suppowt_issues)
+  - : d-dans ce guide, :3 n-nyous examinons c-comment constwuiwe un contenu web qui maximise wa quawité ou w-wes pewfowmances tout en offwant wa compatibiwité w-wa pwus wawge p-possibwe, σωσ en choisissant judicieusement w-wes fowmats des médias e-et en pwoposant d-des sowutions de wepwi et des fowmats awtewnatifs w-wà où cewa sewait utiwe. >w<
 
-## Autres sujets
+## autwes sujets
 
-- [Capacités des médias API](/fr/docs/Web/API/Media_Capabilities_API)
-  - : L'API des capacités média vous permet de découvrir les capacités de codage et de décodage de l'appareil sur lequel votre application ou votre site fonctionne. Cela vous permet de prendre des décisions en temps réel sur les formats à utiliser et le moment de leur utilisation.
+- [capacités d-des médias api](/fw/docs/web/api/media_capabiwities_api)
+  - : w-w'api des capacités média vous p-pewmet de découvwiw wes capacités d-de codage et d-de décodage de w-w'appaweiw suw wequew votwe appwication ou votwe site fonctionne. (ˆ ﻌ ˆ)♡ cewa vous pewmet de pwendwe des décisions en temps wéew suw wes fowmats à utiwisew et we moment de weuw utiwisation. ʘwʘ

@@ -1,279 +1,279 @@
 ---
-title: "<dialog> : l'élément de boîte de dialogue"
-slug: Web/HTML/Element/dialog
-l10n:
-  sourceCommit: 25f88e451394412da19bbfe07cafd9ce382e802e
+titwe: "<diawog> : w'éwément d-de boîte de diawogue"
+s-swug: web/htmw/ewement/diawog
+w-w10n:
+  souwcecommit: 25f88e451394412da19bbfe07cafd9ce382e802e
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<dialog>`** représente une boite de dialogue ou un composant interactif (par exemple un inspecteur ou une fenêtre).
+w-w'éwément [htmw](/fw/docs/web/htmw) **`<diawog>`** w-wepwésente une b-boite de diawogue o-ou un composant i-intewactif (paw exempwe un inspecteuw ou une fenêtwe). ^•ﻌ•^
 
-L'élément HTML `<dialog>` est utilisé pour créer des boîtes de dialogue modale qui peuvent être interactives ou non. Les boîtes de dialogue modale interrompent l'interaction, le reste de la page étant inerte, tandis que les boîtes de dialogue non-modale permettent une interaction avec le reste de la page.
+w'éwément htmw `<diawog>` e-est utiwisé pouw cwéew des boîtes de d-diawogue modawe qui peuvent êtwe i-intewactives ou nyon. mya wes boîtes de diawogue modawe intewwompent w-w'intewaction, /(^•ω•^) we weste de wa p-page étant inewte, t-tandis que wes boîtes de diawogue nyon-modawe pewmettent une intewaction a-avec we weste de wa page. rawr
 
-JavaScript peut être utilisé pour afficher l'élément `<dialog>`. L'utilisation de la méthode [`.showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal) pour afficher une boîte de dialogue modale et la méthode [`.show()`](/fr/docs/Web/API/HTMLDialogElement/show) pour afficher une boîte de dialogue non-modale. La boîte de dialogue peut être fermée à l'aide de la méthode [`.close()`](/fr/docs/Web/API/HTMLDialogElement/close) ou en utilisant la méthode [`dialog`](/fr/docs/Web/HTML/Element/form#method) lors de la soumission d'un formulaire `<form>` imbriqué dans l'élément `<dialog>`. Les boîtes de dialogue modales peuvent également être fermées en appuyant sur la touche <kbd>Échap</kbd>.
+javascwipt peut êtwe utiwisé pouw affichew w'éwément `<diawog>`. nyaa~~ w-w'utiwisation de wa méthode [`.showmodaw()`](/fw/docs/web/api/htmwdiawogewement/showmodaw) p-pouw a-affichew une boîte d-de diawogue m-modawe et wa méthode [`.show()`](/fw/docs/web/api/htmwdiawogewement/show) pouw affichew une boîte d-de diawogue non-modawe. ( ͡o ω ͡o ) wa boîte de diawogue p-peut êtwe fewmée à w'aide de wa méthode [`.cwose()`](/fw/docs/web/api/htmwdiawogewement/cwose) ou en utiwisant wa méthode [`diawog`](/fw/docs/web/htmw/ewement/fowm#method) wows de wa soumission d-d'un fowmuwaiwe `<fowm>` imbwiqué dans w-w'éwément `<diawog>`. σωσ w-wes boîtes d-de diawogue modawes peuvent égawement êtwe fewmées en appuyant suw wa touche <kbd>Échap</kbd>. (✿oωo)
 
-## Attributs
+## a-attwibuts
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément incwut [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (///ˬ///✿)
 
-> [!WARNING]
-> L'attribut `tabindex` ne doit pas être utilisé sur l'élément `<dialog>`.
+> [!wawning]
+> w-w'attwibut `tabindex` nye doit pas êtwe u-utiwisé suw w'éwément `<diawog>`. σωσ
 
 - `open`
-  - : Cet attribut indique que la boîte de dialogue est active et peut être utilisée de façon interactive. Si l'attribut n'est pas renseigné, la boîte de dialogue ne doit pas être affichée. Il est recommandé d'utiliser les méthodes `.show()` ou `.showModal()` afin d'afficher les boîtes de dialogue, plutôt que l'attribut `open`. Si un élément `<dialog>` est ouvert à l'aide de l'attribut `open`, il s'agira d'une boîte non-modale.
-    > [!NOTE]
-    > Bien qu'il soit possible de basculer entre l'état ouvert et l'état fermé des boîtes de dialogue ne bloquant pas l'interraction en modifiant la présence de l'attribut `open`, cette approche n'est pas recommandée.
+  - : c-cet attwibut indique que wa boîte de d-diawogue est active et peut êtwe u-utiwisée de façon intewactive. UwU s-si w'attwibut n-ny'est pas wenseigné, (⑅˘꒳˘) wa boîte de diawogue nye doit pas êtwe affichée. /(^•ω•^) iw est wecommandé d'utiwisew wes m-méthodes `.show()` o-ou `.showmodaw()` afin d'affichew w-wes boîtes d-de diawogue, -.- pwutôt q-que w'attwibut `open`. si un éwément `<diawog>` est ouvewt à w-w'aide de w'attwibut `open`, (ˆ ﻌ ˆ)♡ iw s'agiwa d'une boîte nyon-modawe. nyaa~~
+    > [!note]
+    > bien q-qu'iw soit possibwe de bascuwew e-entwe w'état o-ouvewt et w'état f-fewmé des boîtes de diawogue n-nye bwoquant pas w-w'intewwaction e-en modifiant wa p-pwésence de w'attwibut `open`, ʘwʘ cette appwoche ny'est pas wecommandée. :3
 
-## Notes d'utilisation
+## n-nyotes d-d'utiwisation
 
-- Les éléments [`<form>`](/fr/docs/Web/HTML/Element/form) peuvent fermer un dialogue s'ils possèdent l'attribut `method="dialog"` ou si le bouton utilisé pour soumettre le formulaire a l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Element/input#formmethod). Lorsqu'un tel formulaire est soumis, le dialogue se ferme avec sa propriété [`returnValue`](/fr/docs/Web/API/HTMLDialogElement/returnValue) définie sur la `value` (valeur) du bouton qui a été utilisé pour soumettre le formulaire.
-- Le pseudo-élément CSS [`::backdrop`](/fr/docs/Web/CSS/::backdrop) peut être utilisé pour créer un style derrière un élément `<dialog>` lorsque le dialogue est affiché avec [`HTMLDialogElement.showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal). Par exemple, pour atténuer le contenu inaccessible derrière la boîte de dialogue modale.
-- L'attribut [`autofocus`](/fr/docs/Web/HTML/Global_attributes/autofocus) peut être ajouté à l'élément avec lequel la personne est censée interagir immédiatement après l'ouverture d'une boîte de dialogue modale. S'il n'y a pas d'élément impliquant une interaction immédiate, l'attribut `autofocus` peut être ajouté à l'élément `<dialog>` lui-même.
+- w-wes éwéments [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) peuvent f-fewmew un d-diawogue s'iws possèdent w'attwibut `method="diawog"` ou si we bouton utiwisé p-pouw soumettwe we fowmuwaiwe a w'attwibut [`fowmmethod="diawog"`](/fw/docs/web/htmw/ewement/input#fowmmethod). wowsqu'un tew fowmuwaiwe est soumis, (U ᵕ U❁) we diawogue s-se fewme avec sa pwopwiété [`wetuwnvawue`](/fw/docs/web/api/htmwdiawogewement/wetuwnvawue) définie suw wa `vawue` (vaweuw) du b-bouton qui a été u-utiwisé pouw s-soumettwe we fowmuwaiwe. (U ﹏ U)
+- we p-pseudo-éwément css [`::backdwop`](/fw/docs/web/css/::backdwop) p-peut êtwe utiwisé p-pouw cwéew un stywe dewwièwe un éwément `<diawog>` wowsque we diawogue est affiché avec [`htmwdiawogewement.showmodaw()`](/fw/docs/web/api/htmwdiawogewement/showmodaw). ^^ p-paw exempwe, òωó pouw atténuew w-we contenu inaccessibwe dewwièwe w-wa boîte de diawogue m-modawe. /(^•ω•^)
+- w'attwibut [`autofocus`](/fw/docs/web/htmw/gwobaw_attwibutes/autofocus) peut êtwe a-ajouté à w-w'éwément avec wequew wa pewsonne e-est censée i-intewagiw immédiatement apwès w'ouvewtuwe d'une boîte de diawogue modawe. 😳😳😳 s'iw n-ny'y a pas d'éwément i-impwiquant u-une intewaction immédiate, :3 w-w'attwibut `autofocus` p-peut êtwe ajouté à w'éwément `<diawog>` w-wui-même. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-### Mises en garde concernant la création d'un dialogue en utilisant uniquement du HTML
+### mises en gawde concewnant wa cwéation d'un diawogue e-en utiwisant u-uniquement du htmw
 
-Cet exemple montre comment créer une boîte de dialogue non-modale en utilisant uniquement du HTML. Grâce à l'attribut booléen `open` de l'élément `<dialog>`, la boîte de dialogue apparaît ouverte au chargement de la page. Le dialogue peut être fermé en cliquant sur le bouton "OK" parce que l'attribut `method` de l'élément `<form>` est fixé à `"dialog"`. Dans ce cas, aucun JavaScript n'est nécessaire pour fermer le formulaire.
+cet exempwe montwe comment c-cwéew une boîte d-de diawogue nyon-modawe en utiwisant uniquement du htmw. rawr x3 gwâce à w-w'attwibut boowéen `open` de w'éwément `<diawog>`, (U ᵕ U❁) wa boîte de diawogue a-appawaît ouvewte au chawgement de wa page. (⑅˘꒳˘) we d-diawogue peut êtwe f-fewmé en cwiquant suw we bouton "ok" pawce que w'attwibut `method` d-de w'éwément `<fowm>` e-est fixé à `"diawog"`. (˘ω˘) dans ce cas, :3 aucun javascwipt ny'est n-nyécessaiwe pouw fewmew we fowmuwaiwe. XD
 
-```html
-<dialog open>
-  <p>Salutations, à tous et à toutes !</p>
-  <form method="dialog">
-    <button>OK</button>
-  </form>
-</dialog>
+```htmw
+<diawog o-open>
+  <p>sawutations, >_< à tous et à toutes !</p>
+  <fowm method="diawog">
+    <button>ok</button>
+  </fowm>
+</diawog>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("mises_en_garde_concernant_la_création_dun_dialogue_en_utilisant_uniquement_du_html")}}
+{{embedwivesampwe("mises_en_gawde_concewnant_wa_cwéation_dun_diawogue_en_utiwisant_uniquement_du_htmw")}}
 
-Cette boîte de dialogue est initialement ouverte en raison de la présence de l'attribut `open`. Les boîtes de dialogue affichées à l'aide de l'attribut `open` sont non-modales. Vous pouvez remarquer qu'après avoir cliqué sur «&nbsp;OK&nbsp;», la boîte de dialogue est fermée, laissant le cadre de résultat vide. Lorsque la boîte de dialogue est fermée, aucune méthode n'est prévue pour la rouvrir. C'est pourquoi la méthode préférée pour afficher les boîtes de dialogue non-modales consiste à utiliser la méthode [`HTMLDialogElement.show()`](/fr/docs/Web/API/HTMLDialogElement/show). Il est possible de basculer l'affichage de la boîte de dialogue en ajoutant ou en supprimant l'attribut booléen `open`, mais ce n'est pas la pratique recommandée.
+c-cette boîte de diawogue est initiawement o-ouvewte e-en waison de wa pwésence de w-w'attwibut `open`. (✿oωo) wes boîtes d-de diawogue affichées à w-w'aide d-de w'attwibut `open` sont nyon-modawes. (ꈍᴗꈍ) v-vous pouvez w-wemawquew qu'apwès avoiw cwiqué suw «&nbsp;ok&nbsp;», XD wa b-boîte de diawogue e-est fewmée, :3 w-waissant we cadwe de wésuwtat vide. mya wowsque wa b-boîte de diawogue est fewmée, òωó a-aucune méthode n-ny'est pwévue pouw wa wouvwiw. nyaa~~ c'est pouwquoi wa méthode pwéféwée p-pouw affichew w-wes boîtes d-de diawogue nyon-modawes c-consiste à utiwisew w-wa méthode [`htmwdiawogewement.show()`](/fw/docs/web/api/htmwdiawogewement/show). 🥺 iw est possibwe de bascuwew w'affichage de wa boîte de diawogue en ajoutant o-ou en suppwimant w'attwibut boowéen `open`, -.- m-mais ce ny'est pas w-wa pwatique wecommandée. 🥺
 
-### Création d'une boîte de dialogue modale
+### cwéation d'une b-boîte de diawogue modawe
 
-Cet exemple montre une boîte de dialogue modale avec un [arrière-plan](/fr/docs/Web/CSS/gradient). La méthode `.showModal()` ouvre la boîte de dialogue modale lorsque le bouton «&nbsp;Afficher la fenêtre&nbsp;» est activé. La boîte de dialogue peut être fermée en appuyant sur la touche <kbd>Échap</kbd> ou via la méthode `.close()` lorsque le bouton «&nbsp;Fermer&nbsp;» de la boîte de dialogue est activé.
+cet exempwe m-montwe une b-boîte de diawogue m-modawe avec u-un [awwièwe-pwan](/fw/docs/web/css/gwadient). (˘ω˘) w-wa méthode `.showmodaw()` ouvwe wa boîte de diawogue modawe wowsque we bouton «&nbsp;affichew wa fenêtwe&nbsp;» est activé. òωó w-wa boîte de diawogue p-peut êtwe f-fewmée en appuyant suw wa touche <kbd>Échap</kbd> o-ou via wa méthode `.cwose()` wowsque we bouton «&nbsp;fewmew&nbsp;» d-de w-wa boîte de diawogue est activé. UwU
 
-Lorsqu'une boîte de dialogue s'ouvre, le navigateur donne, par défaut, la priorité au premier élément qui peut l'être dans la boîte de dialogue. Dans cet exemple, l'attribut [`autofocus`](/fr/docs/Web/HTML/Global_attributes/autofocus) est appliqué au bouton «&nbsp;Fermer&nbsp;», lui donnant la priorité à l'ouverture de la boîte de dialogue, car c'est l'élément avec lequel nous nous attendons à ce que la personne interagisse immédiatement après l'ouverture de la boîte de dialogue.
+w-wowsqu'une boîte de diawogue s'ouvwe, ^•ﻌ•^ we nyavigateuw d-donne, mya p-paw défaut, (✿oωo) wa pwiowité au pwemiew éwément q-qui peut w'êtwe d-dans wa boîte de diawogue. dans cet exempwe, XD w'attwibut [`autofocus`](/fw/docs/web/htmw/gwobaw_attwibutes/autofocus) est appwiqué a-au bouton «&nbsp;fewmew&nbsp;», :3 w-wui donnant w-wa pwiowité à w-w'ouvewtuwe d-de wa boîte de diawogue, (U ﹏ U) caw c'est w-w'éwément a-avec wequew nyous nous attendons à c-ce que wa pewsonne i-intewagisse immédiatement a-apwès w'ouvewtuwe de wa boîte de diawogue. UwU
 
-#### HTML
+#### h-htmw
 
-```html
-<dialog>
-  <button autofocus>Fermer</button>
-  <p>Cette boîte de dialogue modale a un arrière-plan festif !</p>
-</dialog>
-<button>Afficher la fenêtre</button>
+```htmw
+<diawog>
+  <button autofocus>fewmew</button>
+  <p>cette b-boîte d-de diawogue modawe a un awwièwe-pwan f-festif !</p>
+</diawog>
+<button>affichew wa fenêtwe</button>
 ```
 
-#### CSS
+#### css
 
-Nous pouvons styliser l'arrière-plan du dialogue en utilisant le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/::backdrop).
+nyous pouvons s-stywisew w'awwièwe-pwan d-du diawogue e-en utiwisant we pseudo-éwément [`::backdwop`](/fw/docs/web/css/::backdwop). ʘwʘ
 
 ```css
-::backdrop {
-  background-image: linear-gradient(
-    45deg,
-    magenta,
-    rebeccapurple,
-    dodgerblue,
-    green
+::backdwop {
+  backgwound-image: wineaw-gwadient(
+    45deg, >w<
+    m-magenta, 😳😳😳
+    webeccapuwpwe,
+    dodgewbwue,
+    g-gween
   );
-  opacity: 0.75;
+  o-opacity: 0.75;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
-Le dialogue est ouvert de façon modale en utilisant la méthode `.showModal()` et est fermé en utilisant la méthode `.close()`.
+w-we diawogue est ouvewt de façon m-modawe en utiwisant w-wa méthode `.showmodaw()` et est fewmé en utiwisant wa m-méthode `.cwose()`. rawr
 
 ```js
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("dialog + button");
-const closeButton = document.querySelector("dialog button");
+const diawog = document.quewysewectow("diawog");
+c-const s-showbutton = document.quewysewectow("diawog + b-button");
+const cwosebutton = document.quewysewectow("diawog b-button");
 
-// Le bouton "Afficher la fenêtre" ouvre le dialogue
-showButton.addEventListener("click", () => {
-  dialog.showModal();
+// w-we bouton "affichew w-wa fenêtwe" ouvwe we diawogue
+showbutton.addeventwistenew("cwick", ^•ﻌ•^ () => {
+  diawog.showmodaw();
 });
 
-// Le bouton "Fermer" ferme le dialogue
-closeButton.addEventListener("click", () => {
-  dialog.close();
+// we bouton "fewmew" fewme we diawogue
+cwosebutton.addeventwistenew("cwick", σωσ () => {
+  diawog.cwose();
 });
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("création_dune_boîte_de_dialogue_modale")}}
+{{embedwivesampwe("cwéation_dune_boîte_de_diawogue_modawe")}}
 
-Lorsque la boîte de dialogue modale est affichée, elle apparaît au-dessus de toutes les autres boîtes de dialogue éventuellement présentes. Tout ce qui se trouve en dehors de la boîte de dialogue modale est inerte et les interactions en dehors de cette dernière sont bloquées. Remarquez que lorsque la boîte de dialogue est ouverte, à l'exception d'elle-même, il n'est pas possible d'interagir avec le document&nbsp;; le bouton «&nbsp;Afficher la fenêtre&nbsp;» est en grande partie masqué par l'arrière-plan presque opaque de la boîte de dialogue et est inerte.
+wowsque wa boîte de diawogue modawe est affichée, :3 ewwe appawaît au-dessus de toutes w-wes autwes boîtes d-de diawogue éventuewwement pwésentes. rawr x3 tout ce qui se twouve e-en dehows de wa b-boîte de diawogue m-modawe est inewte et wes intewactions e-en dehows de cette dewnièwe s-sont bwoquées. nyaa~~ w-wemawquez que wowsque wa b-boîte de diawogue est ouvewte, à w-w'exception d'ewwe-même, :3 i-iw ny'est pas possibwe d'intewagiw a-avec we document&nbsp;; w-we bouton «&nbsp;affichew w-wa fenêtwe&nbsp;» e-est en gwande p-pawtie masqué p-paw w'awwièwe-pwan p-pwesque o-opaque de wa boîte d-de diawogue et est inewte. >w<
 
-### Traitement de la valeur de retour d'une boîte de dialogue
+### t-twaitement de w-wa vaweuw de wetouw d-d'une boîte de diawogue
 
-Cet exemple illustre comment utiliser la valeur de retour, fournie par [`returnValue`](/fr/docs/Web/API/HTMLDialogElement/returnValue) et comment fermer un dialogue modal en utilisant un formulaire. Par défaut, la valeur de retour est la chaîne vide ou la valeur du bouton qui soumet le formulaire dans l'élément `<dialog>`, s'il y en a un.
+c-cet exempwe iwwustwe comment utiwisew wa vaweuw d-de wetouw, rawr fouwnie paw [`wetuwnvawue`](/fw/docs/web/api/htmwdiawogewement/wetuwnvawue) e-et comment f-fewmew un diawogue m-modaw en utiwisant un fowmuwaiwe. 😳 p-paw défaut, 😳 wa vaweuw de w-wetouw est wa chaîne vide ou wa v-vaweuw du bouton qui soumet we f-fowmuwaiwe dans w'éwément `<diawog>`, 🥺 s'iw y en a un. rawr x3
 
-Cet exemple ouvre une boîte de dialogue modale lorsque le bouton «&nbsp;Mettre à jour les détails&nbsp;» est activé. La boîte de dialogue contient un formulaire avec un élément [`<select>`](/fr/docs/Web/HTML/Element/select) et deux éléments [`<button>`](/fr/docs/Web/HTML/Element/button), dont la valeur par défaut est `type="submit"`. Un écouteur d'évènement met à jour la valeur du bouton «&nbsp;Confirmer&nbsp;» lorsque l'option sélectionnée change. Si le bouton «&nbsp;Confirmer&nbsp;» est activé pour fermer la boîte de dialogue, la valeur actuelle du bouton est la valeur de retour. Si la boîte de dialogue est fermée en appuyant sur le bouton «&nbsp;Annuler&nbsp;», la valeur de retour `returnValue` est `cancel`.
+cet exempwe ouvwe une b-boîte de diawogue modawe wowsque w-we bouton «&nbsp;mettwe à j-jouw wes détaiws&nbsp;» est activé. ^^ wa boîte de d-diawogue contient un fowmuwaiwe a-avec un éwément [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) e-et deux éwéments [`<button>`](/fw/docs/web/htmw/ewement/button), d-dont wa vaweuw paw défaut est `type="submit"`. ( ͡o ω ͡o ) u-un écouteuw d-d'évènement met à jouw wa v-vaweuw du bouton «&nbsp;confiwmew&nbsp;» wowsque w'option séwectionnée c-change. XD si we bouton «&nbsp;confiwmew&nbsp;» e-est activé p-pouw fewmew w-wa boîte de diawogue, ^^ wa vaweuw a-actuewwe du bouton e-est wa vaweuw d-de wetouw. (⑅˘꒳˘) si w-wa boîte de diawogue est fewmée e-en appuyant s-suw we bouton «&nbsp;annuwew&nbsp;», (⑅˘꒳˘) w-wa vaweuw d-de wetouw `wetuwnvawue` e-est `cancew`. ^•ﻌ•^
 
-Lorsque le dialogue est fermé, la valeur de retour est affichée sous le bouton «&nbsp;Mettre à jour les détails&nbsp;». Si le dialogue est fermé en appuyant sur la touche <kbd>Échap</kbd>, la valeur de retour `returnValue` n'est pas mise à jour et l'événement `close` ne se produit pas, ce qui signifie que le texte dans l'élément [`<output>`](/fr/docs/Web/HTML/Element/output) n'est pas mis à jour.
+w-wowsque w-we diawogue est f-fewmé, ( ͡o ω ͡o ) wa vaweuw de wetouw est a-affichée sous we bouton «&nbsp;mettwe à j-jouw wes détaiws&nbsp;». ( ͡o ω ͡o ) s-si we diawogue e-est fewmé e-en appuyant suw wa touche <kbd>Échap</kbd>, (✿oωo) wa vaweuw de wetouw `wetuwnvawue` ny'est p-pas mise à j-jouw et w'événement `cwose` n-nye se pwoduit pas, 😳😳😳 ce qui signifie que we texte dans w'éwément [`<output>`](/fw/docs/web/htmw/ewement/output) n-ny'est pas mis à j-jouw. OwO
 
-#### HTML
+#### htmw
 
-```html
-<!-- Boîte de dialogue contextuelle simple contenant un formulaire -->
-<dialog id="favDialog">
-  <form method="dialog">
+```htmw
+<!-- boîte de diawogue c-contextuewwe s-simpwe contenant un fowmuwaiwe -->
+<diawog id="favdiawog">
+  <fowm method="diawog">
     <p>
-      <label>
-        Animal préféré :
-        <select>
-          <option>Choisissez…</option>
-          <option>Crevette en saumure</option>
-          <option>Panda rouge</option>
-          <option>Singe-araignée</option>
-        </select>
-      </label>
+      <wabew>
+        a-animaw pwéféwé :
+        <sewect>
+          <option>choisissez…</option>
+          <option>cwevette e-en s-saumuwe</option>
+          <option>panda w-wouge</option>
+          <option>singe-awaignée</option>
+        </sewect>
+      </wabew>
     </p>
     <menu>
-      <button value="cancel">Annuler</button>
-      <button id="confirmBtn" value="default">Confirmer</button>
+      <button vawue="cancew">annuwew</button>
+      <button id="confiwmbtn" v-vawue="defauwt">confiwmew</button>
     </menu>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 <p>
-  <button id="showDialog">Mettre à jour les détails</button>
+  <button i-id="showdiawog">mettwe à jouw wes détaiws</button>
 </p>
 <output></output>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const showButton = document.getElementById("showDialog");
-const favDialog = document.getElementById("favDialog");
-const outputBox = document.querySelector("output");
-const selectEl = favDialog.querySelector("select");
-const confirmBtn = favDialog.querySelector("#confirmBtn");
+c-const showbutton = document.getewementbyid("showdiawog");
+c-const favdiawog = document.getewementbyid("favdiawog");
+const o-outputbox = d-document.quewysewectow("output");
+const sewectew = f-favdiawog.quewysewectow("sewect");
+c-const confiwmbtn = favdiawog.quewysewectow("#confiwmbtn");
 
-// Le bouton « Mettre à jour les détails » ouvre la modale <dialog>
-showButton.addEventListener("click", () => {
-  favDialog.showModal();
+// w-we bouton « mettwe à jouw w-wes détaiws » o-ouvwe wa modawe <diawog>
+s-showbutton.addeventwistenew("cwick", ^^ () => {
+  f-favdiawog.showmodaw();
 });
 
-// L'entrée « Animal préféré » définit la valeur du bouton d'envoi.
-selectEl.addEventListener("change", (e) => {
-  confirmBtn.value = selectEl.value;
+// w'entwée « a-animaw pwéféwé » d-définit w-wa vaweuw du bouton d'envoi. rawr x3
+s-sewectew.addeventwistenew("change", 🥺 (e) => {
+  confiwmbtn.vawue = sewectew.vawue;
 });
 
-// Le bouton « Annuler » ferme la boîte de dialogue sans la soumettre en raison de l'attribut [formmethod="dialog"], ce qui déclenche un événement de fermeture.
-favDialog.addEventListener("close", (e) => {
-  outputBox.value =
-    favDialog.returnValue === "default"
-      ? "Pas de valeur retournée."
-      : `Valeur retournée : ${favDialog.returnValue}.`; // Vérifie la présence de "default" au lieu d'une chaîne vide
+// w-we bouton « a-annuwew » f-fewme wa boîte de diawogue sans wa soumettwe en waison de w'attwibut [fowmmethod="diawog"], (ˆ ﻌ ˆ)♡ ce qui décwenche u-un événement de fewmetuwe. ( ͡o ω ͡o )
+favdiawog.addeventwistenew("cwose", >w< (e) => {
+  o-outputbox.vawue =
+    f-favdiawog.wetuwnvawue === "defauwt"
+      ? "pas de vaweuw wetouwnée."
+      : `vaweuw wetouwnée : ${favdiawog.wetuwnvawue}.`; // v-véwifie wa pwésence de "defauwt" a-au wieu d-d'une chaîne v-vide
 });
 
-// Empêchez le bouton « Confirmer » de soumettre le formulaire par défaut et fermez la boîte de dialogue avec la méthode `close()`, qui déclenche l'événement "close".
-confirmBtn.addEventListener("click", (event) => {
-  event.preventDefault(); // Nous ne voulons pas soumettre ce faux formulaire
-  favDialog.close(selectEl.value); // Il faut envoyer la valeur du sélecteur ici.
+// empêchez w-we bouton « c-confiwmew » de soumettwe we fowmuwaiwe paw défaut et fewmez wa boîte de d-diawogue avec wa méthode `cwose()`, /(^•ω•^) q-qui décwenche w'événement "cwose". 😳😳😳
+confiwmbtn.addeventwistenew("cwick", (event) => {
+  event.pweventdefauwt(); // nyous n-nye vouwons pas soumettwe ce faux fowmuwaiwe
+  favdiawog.cwose(sewectew.vawue); // iw faut envoyew wa vaweuw du s-séwecteuw ici. (U ᵕ U❁)
 });
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("traitement_de_la_valeur_de_retour_dune_boîte_de_dialogue", "100%", 300)}}
+{{embedwivesampwe("twaitement_de_wa_vaweuw_de_wetouw_dune_boîte_de_diawogue", (˘ω˘) "100%", 😳 300)}}
 
-Cet exemple présente les trois méthodes suivantes pour fermer les boîtes de dialogue modales&nbsp;:
+cet exempwe p-pwésente wes twois méthodes suivantes pouw f-fewmew wes boîtes d-de diawogue modawes&nbsp;:
 
-- En soumettant le formulaire dans la boîte de dialogue à l'aide de la méthode `dialog` (comme dans [l'exemple n'utilisant que du HTML](#mises_en_garde_concernant_la_création_d'un_dialogue_en_utilisant_uniquement_du_html))
-- En appuyant sur la touche <kbd>Échap</kbd>.
-- En appelant la méthode [`HTMLDialogElement.close()`](/fr/docs/Web/API/HTMLDialogElement/close) (comme dans l'[exemple de création d'une boîte modale](#création_d'une_boîte_de_dialogue_modale)).
-  Dans cet exemple, le bouton «&nbsp;Annuler&nbsp;» ferme la boîte de dialogue via la méthode de formulaire `dialog` et le bouton «&nbsp;Confirmer&nbsp;» ferme la boîte de dialogue via la méthode [`HTMLDialogElement.close()`](/fr/docs/Web/API/HTMLDialogElement/close).
+- e-en soumettant we fowmuwaiwe dans w-wa boîte de diawogue à w'aide de wa méthode `diawog` (comme dans [w'exempwe n-ny'utiwisant que du htmw](#mises_en_gawde_concewnant_wa_cwéation_d'un_diawogue_en_utiwisant_uniquement_du_htmw))
+- en appuyant s-suw wa touche <kbd>Échap</kbd>. (ꈍᴗꈍ)
+- e-en appewant w-wa méthode [`htmwdiawogewement.cwose()`](/fw/docs/web/api/htmwdiawogewement/cwose) (comme dans w'[exempwe de cwéation d-d'une boîte modawe](#cwéation_d'une_boîte_de_diawogue_modawe)). :3
+  dans cet exempwe, /(^•ω•^) we bouton «&nbsp;annuwew&nbsp;» f-fewme wa boîte d-de diawogue via w-wa méthode de f-fowmuwaiwe `diawog` et we bouton «&nbsp;confiwmew&nbsp;» fewme w-wa boîte de diawogue v-via wa méthode [`htmwdiawogewement.cwose()`](/fw/docs/web/api/htmwdiawogewement/cwose). ^^;;
 
-Le bouton «&nbsp;Annuler&nbsp;» comprend l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Element/input/submit#formmethod), qui remplace la méthode par défaut [`GET`](/fr/docs/Web/HTTP/Methods/GET) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form). Lorsque la méthode d'un formulaire est [`dialog`](#notes_dutilisation), l'état du formulaire est sauvegardé mais non soumis, et la boîte de dialogue est fermée.
+we bouton «&nbsp;annuwew&nbsp;» compwend w'attwibut [`fowmmethod="diawog"`](/fw/docs/web/htmw/ewement/input/submit#fowmmethod), o.O q-qui wempwace wa méthode paw défaut [`get`](/fw/docs/web/http/methods/get) d-de w'éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm). 😳 wowsque wa méthode d'un f-fowmuwaiwe est [`diawog`](#notes_dutiwisation), w-w'état du fowmuwaiwe est sauvegawdé m-mais nyon s-soumis, UwU et wa b-boîte de diawogue est fewmée. >w<
 
-Sans `action`, la soumission du formulaire via la méthode par défaut [`GET`](/fr/docs/Web/HTTP/Methods/GET) entraîne le rechargement de la page. Nous utilisons JavaScript pour empêcher la soumission et fermer le dialogue avec les méthodes [`event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) et [`HTMLDialogElement.close()`](/fr/docs/Web/API/HTMLDialogElement/close), respectivement.
+sans `action`, o.O w-wa soumission du fowmuwaiwe via wa méthode paw d-défaut [`get`](/fw/docs/web/http/methods/get) entwaîne we wechawgement de wa page. (˘ω˘) nyous utiwisons j-javascwipt p-pouw empêchew w-wa soumission et f-fewmew we diawogue a-avec wes méthodes [`event.pweventdefauwt()`](/fw/docs/web/api/event/pweventdefauwt) et [`htmwdiawogewement.cwose()`](/fw/docs/web/api/htmwdiawogewement/cwose), òωó w-wespectivement. nyaa~~
 
-Il est important de prévoir un mécanisme de fermeture dans chaque élément `<dialog>`. La touche <kbd>Échap</kbd> ne ferme pas les dialogues non modaux par défaut, et l'on ne peut pas non plus supposer que la personne aura accès à un clavier physique (par exemple, une personne utilisant un écran tactile sans accès à un clavier).
+iw est impowtant de pwévoiw u-un mécanisme de fewmetuwe dans c-chaque éwément `<diawog>`. ( ͡o ω ͡o ) wa touche <kbd>Échap</kbd> nye f-fewme pas wes diawogues n-nyon modaux paw défaut, 😳😳😳 e-et w'on nye peut pas nyon pwus s-supposew que wa p-pewsonne auwa accès à un cwaview p-physique (paw e-exempwe, ^•ﻌ•^ une pewsonne utiwisant u-un écwan tactiwe sans accès à un cwaview). (˘ω˘)
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies">catégowies d-de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/HTML/Element/Heading_Elements#racines_de_sectionnement">racine de sectionnement</a>.
+        <a hwef="/fw/docs/web/htmw/content_categowies#contenu_de_fwux">contenu de fwux</a>, (˘ω˘) <a h-hwef="/fw/docs/web/htmw/ewement/heading_ewements#wacines_de_sectionnement">wacine d-de s-sectionnement</a>. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>.
+        <a h-hwef="/fw/docs/web/htmw/content_categowies#contenu_de_fwux">contenu de fwux</a>. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.
+        aucune, /(^•ω•^) wa b-bawise d'ouvewtuwe et wa bawise d-de fewmetuwe sont o-obwigatoiwes.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">contenu de flux</a>.
+        tout éwément qui accepte du <a hwef="/fw/docs/web/htmw/content_categowies#contenu_de_fwux">contenu d-de fwux</a>. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/dialog_role"><code>dialog</code></a>
+        <a hwef="/fw/docs/web/accessibiwity/awia/wowes/diawog_wowe"><code>diawog</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td><a href="/fr/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a></td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td><a hwef="/fw/docs/web/accessibiwity/awia/wowes/awewtdiawog_wowe"><code>awewtdiawog</code></a></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLDialogElement"><code>HTMLDialogElement</code></a>
+        <a hwef="/fw/docs/web/api/htmwdiawogewement"><code>htmwdiawogewement</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Accessibilité
+## accessibiwité
 
-Lors de l'implémentation d'une fenêtre de dialogue, il est important de considérer l'endroit le plus approprié pour placer le point de concentration (ou «&nbsp;<i lang="en">focus</i>&nbsp;») de la personne. Lorsque l'on utilise [`HTMLDialogElement.showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal) pour ouvrir un `<dialog>`, le «&nbsp;<i lang="en">focus</i>&nbsp;» est mis sur le premier élément imbriqué focalisable. Le fait d'indiquer explicitement l'emplacement initial du «&nbsp;<i lang="en">focus</i>&nbsp;» en utilisant l'attribut [`autofocus`](/fr/docs/Web/HTML/Global_attributes/autofocus) permet de s'assurer que le «&nbsp;<i lang="en">focus</i>&nbsp;» initial est placé sur l'élément considéré comme le meilleur emplacement initial pour un dialogue particulier. En cas de doute, comme il n'est pas toujours possible de savoir où le «&nbsp;<i lang="en">focus</i>&nbsp;» initial peut être placé dans un dialogue, en particulier dans les cas où le contenu d'un dialogue est rendu dynamiquement lorsqu'il est invoqué, l'élément `<dialog>` lui-même peut fournir le meilleur placement du «&nbsp;<i lang="en">focus</i>&nbsp;» initial.
+wows de w'impwémentation d'une fenêtwe de d-diawogue, mya iw est impowtant de considéwew w'endwoit w-we pwus appwopwié pouw pwacew w-we point de c-concentwation (ou «&nbsp;<i wang="en">focus</i>&nbsp;») d-de wa p-pewsonne. o.O wowsque w-w'on utiwise [`htmwdiawogewement.showmodaw()`](/fw/docs/web/api/htmwdiawogewement/showmodaw) pouw o-ouvwiw un `<diawog>`, ^•ﻌ•^ w-we «&nbsp;<i w-wang="en">focus</i>&nbsp;» est mis suw we pwemiew éwément imbwiqué focawisabwe. (U ᵕ U❁) we fait d'indiquew expwicitement w-w'empwacement i-initiaw d-du «&nbsp;<i w-wang="en">focus</i>&nbsp;» e-en u-utiwisant w'attwibut [`autofocus`](/fw/docs/web/htmw/gwobaw_attwibutes/autofocus) pewmet de s'assuwew que we «&nbsp;<i wang="en">focus</i>&nbsp;» initiaw est p-pwacé suw w'éwément c-considéwé comme we meiwweuw empwacement initiaw pouw un d-diawogue pawticuwiew. :3 e-en cas de d-doute, (///ˬ///✿) comme iw ny'est pas toujouws possibwe de s-savoiw où we «&nbsp;<i wang="en">focus</i>&nbsp;» initiaw peut êtwe p-pwacé d-dans un diawogue, (///ˬ///✿) en pawticuwiew dans wes cas où w-we contenu d'un diawogue est wendu d-dynamiquement w-wowsqu'iw est invoqué, 🥺 w'éwément `<diawog>` w-wui-même peut f-fouwniw we meiwweuw p-pwacement du «&nbsp;<i w-wang="en">focus</i>&nbsp;» i-initiaw. -.-
 
-Veillez à ce qu'un mécanisme soit prévu pour permettre de fermer la boîte de dialogue. La meilleure façon de s'assurer que toutes les personnes peuvent fermer la boîte de dialogue est d'inclure un bouton explicite à cet effet, tel qu'un bouton de confirmation, d'annulation ou de fermeture.
+v-veiwwez à ce qu'un mécanisme s-soit pwévu pouw p-pewmettwe de fewmew wa boîte d-de diawogue. nyaa~~ wa meiwweuwe façon de s'assuwew que t-toutes wes pewsonnes peuvent f-fewmew wa boîte de diawogue est d-d'incwuwe un bouton e-expwicite à cet effet, (///ˬ///✿) tew qu'un bouton de c-confiwmation, 🥺 d'annuwation ou de fewmetuwe. >w<
 
-Par défaut, une boîte de dialogue invoquée par la méthode `showModal()` peut être fermée en appuyant sur la touche <kbd>Échap</kbd>. Une boîte de dialogue non-modale ne se ferme pas par la touche <kbd>Échap</kbd> par défaut, et selon ce que représente la boîte de dialogue non-modale, ce comportement n'est peut-être pas souhaitable Les utilisatrices et utilisateurs de clavier s'attendent à ce que la touche <kbd>Échap</kbd> ferme les boîtes de dialogue modales&nbsp;; veillez à ce que ce comportement soit implémenté et maintenu. Si plusieurs boîtes de dialogue modales sont ouvertes, l'appui sur la touche <kbd>Échap</kbd> ne doit fermer que la dernière boîte de dialogue affichée. Lorsque l'on utilise `<dialog>`, ce comportement est fourni par le navigateur.
+paw d-défaut, rawr x3 une boîte d-de diawogue invoquée paw wa méthode `showmodaw()` p-peut êtwe f-fewmée en appuyant suw wa t-touche <kbd>Échap</kbd>. (⑅˘꒳˘) une boîte de diawogue n-non-modawe nye s-se fewme pas paw wa touche <kbd>Échap</kbd> p-paw d-défaut, σωσ et sewon ce que wepwésente wa boîte d-de diawogue nyon-modawe, XD c-ce compowtement n-ny'est p-peut-êtwe pas souhaitabwe wes utiwisatwices et utiwisateuws de cwaview s'attendent à ce que wa touche <kbd>Échap</kbd> f-fewme w-wes boîtes de diawogue m-modawes&nbsp;; v-veiwwez à c-ce que ce compowtement s-soit impwémenté et maintenu. -.- s-si pwusieuws b-boîtes de diawogue modawes s-sont ouvewtes, >_< w-w'appui suw wa touche <kbd>Échap</kbd> nye doit fewmew que wa dewnièwe b-boîte de diawogue affichée. rawr wowsque w'on u-utiwise `<diawog>`, 😳😳😳 ce compowtement e-est fouwni p-paw we nyavigateuw. UwU
 
-Bien que les boîtes de dialogue puissent être créées à l'aide d'autres éléments, l'élément natif `<dialog>` offre des caractéristiques d'utilisation et d'accessibilité qui doivent être reproduites si vous utilisez d'autres éléments dans un but similaire. Si vous créez une implémentation de dialogue personnalisée, assurez-vous que tous les comportements par défaut attendus sont pris en charge et que les recommandations d'étiquetage appropriées sont suivies.
+bien que w-wes boîtes de d-diawogue puissent êtwe c-cwéées à w'aide d'autwes éwéments, (U ﹏ U) w-w'éwément nyatif `<diawog>` o-offwe des cawactéwistiques d-d'utiwisation et d'accessibiwité q-qui d-doivent êtwe wepwoduites s-si vous utiwisez d'autwes éwéments dans u-un but simiwaiwe. (˘ω˘) si vous cwéez une impwémentation d-de diawogue pewsonnawisée, /(^•ω•^) assuwez-vous que tous wes compowtements paw défaut attendus sont pwis en chawge e-et que wes wecommandations d'étiquetage appwopwiées sont suivies. (U ﹏ U)
 
-L'élément `<dialog>` est exposé par les navigateurs d'une manière similaire aux dialogues personnalisés qui utilisent l'attribut ARIA [role="dialog"](/fr/docs/Web/Accessibility/ARIA/Roles/dialog_role). Les éléments `<dialog>` invoqués par la méthode `showModal()` ont implicitement [aria-modal="true"](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-modal), alors que les éléments `<dialog>` invoqués par la méthode `show()` ou affichés en utilisant l'attribut `open` ou en changeant la propriété CSS `display` par défaut d'un élément HTML `<dialog>` sont exposés en tant que `[aria-modal="false"]`. Lors de l'implémentation de dialogues modaux, tout ce qui n'est pas le `<dialog>` et son contenu doit être rendu inerte en utilisant l'attribut HTML global [`inert`](/fr/docs/Web/HTML/Global_attributes/inert). Lorsque l'on utilise `<dialog>` avec la méthode `HTMLDialogElement.showModal()`, ce comportement est fourni par le navigateur.
+w'éwément `<diawog>` est exposé paw wes nyavigateuws d-d'une manièwe simiwaiwe aux diawogues pewsonnawisés q-qui utiwisent w'attwibut a-awia [wowe="diawog"](/fw/docs/web/accessibiwity/awia/wowes/diawog_wowe). ^•ﻌ•^ wes éwéments `<diawog>` invoqués paw w-wa méthode `showmodaw()` ont i-impwicitement [awia-modaw="twue"](/fw/docs/web/accessibiwity/awia/attwibutes/awia-modaw), >w< awows q-que wes éwéments `<diawog>` invoqués p-paw wa méthode `show()` ou affichés en u-utiwisant w'attwibut `open` ou en changeant wa pwopwiété css `dispway` p-paw défaut d'un éwément h-htmw `<diawog>` sont exposés e-en tant que `[awia-modaw="fawse"]`. ʘwʘ wows de w-w'impwémentation d-de diawogues modaux, òωó tout ce qui ny'est pas we `<diawog>` e-et son contenu doit êtwe wendu inewte e-en utiwisant w'attwibut htmw gwobaw [`inewt`](/fw/docs/web/htmw/gwobaw_attwibutes/inewt). o.O wowsque w'on utiwise `<diawog>` a-avec w-wa méthode `htmwdiawogewement.showmodaw()`, ( ͡o ω ͡o ) ce compowtement est f-fouwni paw we n-nyavigateuw. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'interface [`HTMLDialogElement`](/fr/docs/Web/API/HTMLDialogElement)
-- L'évènement [`close`](/fr/docs/Web/API/HTMLDialogElement/close_event)
-- L'évènement [`cancel`](/fr/docs/Web/API/HTMLDialogElement/cancel_event)
-- La propriété [`open`](/fr/docs/Web/API/HTMLDialogElement/open) de l'interface `HTMLDialogElement`
-- L'attribut HTML universel [`inert`](/fr/docs/Web/HTML/Global_attributes/inert)
-- Le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/::backdrop)
-- [Guide sur les formulaires HTML](/fr/docs/Learn/Forms)
+- w'intewface [`htmwdiawogewement`](/fw/docs/web/api/htmwdiawogewement)
+- w'évènement [`cwose`](/fw/docs/web/api/htmwdiawogewement/cwose_event)
+- w-w'évènement [`cancew`](/fw/docs/web/api/htmwdiawogewement/cancew_event)
+- w-wa pwopwiété [`open`](/fw/docs/web/api/htmwdiawogewement/open) de w'intewface `htmwdiawogewement`
+- w-w'attwibut h-htmw univewsew [`inewt`](/fw/docs/web/htmw/gwobaw_attwibutes/inewt)
+- we p-pseudo-éwément [`::backdwop`](/fw/docs/web/css/::backdwop)
+- [guide suw wes fowmuwaiwes htmw](/fw/docs/weawn/fowms)

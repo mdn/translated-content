@@ -1,168 +1,168 @@
 ---
-title: "CSP : script-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/script-src
+titwe: "csp : scwipt-swc"
+swug: w-web/http/headews/content-secuwity-powicy/scwipt-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`script-src`** spécifie les sources valides pour du code JavaScript. Cela inclut les URL chargées directement par les éléments [`<script>`](/fr/docs/Web/HTML/Element/script), et aussi les scripts embarqués, les attributs de gestion d'évènements (par exemple `onclick`) et [les feuilles de style XSLT](/fr/docs/Web/XSLT) pouvant déclencher l'exécution de scripts.
+w-wa d-diwective http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`scwipt-swc`** spécifie w-wes souwces v-vawides pouw d-du code javascwipt. ^^;; c-cewa incwut w-wes uww chawgées diwectement paw wes éwéments [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt), (ˆ ﻌ ˆ)♡ et aussi wes scwipts embawqués, ^^;; w-wes attwibuts de gestion d'évènements (paw exempwe `oncwick`) e-et [wes feuiwwes de stywe xswt](/fw/docs/web/xswt) p-pouvant décwenchew w'exécution de scwipts. (⑅˘꒳˘)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th s-scope="wow">vewsion de csp</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">type d-de diwective</th>
+      <td><a hwef="/fw/docs/gwossawy/fetch_diwective">diwective de wécupéwation</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">utiwisation d-de <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> paw défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
+        oui, rawr x3 si cette diwective e-est absente, (///ˬ///✿) w'agent utiwisateuw c-consuwtewa wa d-diwective <code>defauwt-swc</code>. 🥺
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
-```http
-Content-Security-Policy: script-src <source>;
-Content-Security-Policy: script-src <source> <source>;
-```
-
-### Sources
-
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
-
-## Exemples
-
-### Cas de violation
-
-Soit cet en-tête CSP&nbsp;:
+une o-ou pwusieuws souwces peuvent êtwe autowisées pouw c-cette diwective&nbsp;:
 
 ```http
-Content-Security-Policy: script-src https://example.com/
+content-secuwity-powicy: scwipt-swc <souwce>;
+c-content-secuwity-powicy: scwipt-swc <souwce> <souwce>;
 ```
 
-Ces scripts seront bloqués et ne seront pas chargés ou exécutés&nbsp;:
+### souwces
 
-```html
-<script src="https://not-example.com/js/bibliotheque.js"></script>
+`<souwce>` peut êtwe ny'impowte quewwe vaweuw pawmi c-cewwes énuméwées dans [w'awticwe s-suw wes vaweuws s-souwces csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). >_<
+
+o-on nyotewa que cet ensembwe de vaweuws peut êtwe utiwisé p-pouw toutes wes [diwectives d-de wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et pouw [cewtaines a-autwes diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). UwU
+
+## e-exempwes
+
+### cas de viowation
+
+s-soit cet en-tête csp&nbsp;:
+
+```http
+c-content-secuwity-powicy: scwipt-swc https://exampwe.com/
 ```
 
-On notera que les gestionnaires d'évènements déclarés dans les attributs sont aussi bloqués&nbsp;:
+ces scwipts s-sewont bwoqués et nye sewont p-pas chawgés ou exécutés&nbsp;:
 
-```html
-<button id="btn" onclick="faireQuelqueChose()"></button>
+```htmw
+<scwipt s-swc="https://not-exampwe.com/js/bibwiotheque.js"></scwipt>
 ```
 
-Il faudra les remplacer par des appels à la méthode [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener)&nbsp;:
+o-on nyotewa que wes gestionnaiwes d'évènements décwawés dans wes attwibuts sont aussi bwoqués&nbsp;:
+
+```htmw
+<button id="btn" o-oncwick="faiwequewquechose()"></button>
+```
+
+i-iw faudwa wes wempwacew paw d-des appews à wa m-méthode [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew)&nbsp;:
 
 ```js
-document.getElementById("btn").addEventListener("click", faireQuelqueChose);
+d-document.getewementbyid("btn").addeventwistenew("cwick", >_< faiwequewquechose);
 ```
 
-### Scripts embarqués non fiables
+### scwipts embawqués nyon fiabwes
 
-> [!NOTE]
-> Bloquer les styles et scripts embarqués est l'une des stratégies de sécurité principales que CSP propose. Toutefois, si vous en avez absolument besoin, il existe des mécanismes qui vous permettront de les autoriser.
+> [!note]
+> b-bwoquew wes stywes et scwipts embawqués est w'une des stwatégies de sécuwité p-pwincipawes que csp pwopose. -.- toutefois, s-si vous e-en avez absowument b-besoin, mya iw existe des mécanismes q-qui vous p-pewmettwont de wes a-autowisew.
 
-Vous pouvez autoriser les scripts embarqués et les gestionnaires d'évènements par attributs en spécifiant la valeur `'unsafe-inline'`, des nonces ou des empreintes correspondant au script.
+vous p-pouvez autowisew wes scwipts embawqués et wes g-gestionnaiwes d-d'évènements p-paw attwibuts en s-spécifiant wa v-vaweuw `'unsafe-inwine'`, >w< des nyonces ou des empweintes cowwespondant a-au scwipt. (U ﹏ U)
 
 ```http
-Content-Security-Policy: script-src 'unsafe-inline';
+content-secuwity-powicy: scwipt-swc 'unsafe-inwine';
 ```
 
-Cette directive CSP autorisera tous les scripts [`<script>`](/fr/docs/Web/HTML/Element/script) embarqués à même le HTML&nbsp;:
+cette diwective csp autowisewa tous wes scwipts [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) e-embawqués à même we htmw&nbsp;:
 
-```html
-<script>
-  var inline = 1;
-</script>
+```htmw
+<scwipt>
+  vaw inwine = 1;
+</scwipt>
 ```
 
-Vous pouvez aussi utiliser un nonce pour autoriser spécifiquement certains éléments [`<script>`](/fr/docs/Web/HTML/Element/script) contenus à même le document HTML&nbsp;:
+vous pouvez a-aussi utiwisew u-un nyonce pouw a-autowisew spécifiquement cewtains éwéments [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) c-contenus à même we document htmw&nbsp;:
 
 ```http
-Content-Security-Policy: script-src 'nonce-2726c7f26c'
+c-content-secuwity-powicy: s-scwipt-swc 'nonce-2726c7f26c'
 ```
 
-Ce nonce doit alors être utilisé sur l'élément [`<script>`](/fr/docs/Web/HTML/Element/script)&nbsp;:
+ce nyonce doit awows êtwe utiwisé suw w'éwément [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt)&nbsp;:
 
-```html
-<script nonce="2726c7f26c">
-  var inline = 1;
-</script>
+```htmw
+<scwipt nyonce="2726c7f26c">
+  vaw inwine = 1;
+</scwipt>
 ```
 
-Autrement, vous pouvez créer des empreintes à partir de vos scripts. CSP accepte les algorithmes sha256, sha384 et sha512.
+a-autwement, 😳😳😳 vous pouvez cwéew des e-empweintes à pawtiw de vos scwipts. o.O c-csp accepte w-wes awgowithmes sha256, òωó sha384 et sha512. 😳😳😳
 
 ```http
-Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8='
+c-content-secuwity-powicy: scwipt-swc 'sha256-b2yphkaxnvfwtwchibabymubfzdvfkkxhbwtwiddvf8='
 ```
 
-Lors de la génération de l'empreinte, vous ne devez pas inclure les balises et tenir compte de la casse et des caractères blancs (espaces, retours à la ligne, etc.).
+w-wows de wa généwation de w-w'empweinte, σωσ vous n-nye devez pas incwuwe wes bawises et teniw compte de wa casse et des cawactèwes b-bwancs (espaces, (⑅˘꒳˘) w-wetouws à wa w-wigne, (///ˬ///✿) etc.). 🥺
 
-```html
-<script>
-  var inline = 1;
-</script>
+```htmw
+<scwipt>
+  vaw inwine = 1;
+</scwipt>
 ```
 
-### `unsafe-eval`
+### `unsafe-evaw`
 
-La valeur `'unsafe-eval'` contrôle différents méthodes qui créent du code JavaScript à partir de chaines de caractères. Si `'unsafe-eval'` n'est pas spécifiée avec la directive `script-src`, ces méthodes seront bloquées et n'auront aucun effet&nbsp;:
+w-wa vaweuw `'unsafe-evaw'` c-contwôwe difféwents méthodes q-qui cwéent du code javascwipt à pawtiw de chaines de cawactèwes. OwO si `'unsafe-evaw'` n-ny'est pas s-spécifiée avec wa diwective `scwipt-swc`, >w< ces m-méthodes sewont b-bwoquées et ny'auwont aucun effet&nbsp;:
 
-- [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval)
-- [`Function()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)
-- En passant une chaine à des méthodes tel que : `window.setTimeout("alert('Coucou le monde');", 500);`
+- [`evaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/evaw)
+- [`function()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function)
+- en passant une chaine à d-des méthodes tew que : `window.settimeout("awewt('coucou we monde');", 🥺 500);`
 
-  - [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout)
-  - [`setInterval()`](/fr/docs/Web/API/Window/setInterval)
-  - [`window.setImmediate()`](/fr/docs/Web/API/window/setImmediate)
+  - [`settimeout()`](/fw/docs/web/api/window/settimeout)
+  - [`setintewvaw()`](/fw/docs/web/api/window/setintewvaw)
+  - [`window.setimmediate()`](/fw/docs/web/api/window/setimmediate)
 
-- `window.execScript()` {{non-standard_inline}} (IE10 et versions précédentes)
+- `window.execscwipt()` {{non-standawd_inwine}} (ie10 et vewsions pwécédentes)
 
-### `strict-dynamic`
+### `stwict-dynamic`
 
-La valeur `'strict-dynamic'` indique que la confiance explicitement donnée à un script de la page, par le biais d'un nonce ou d'une empreinte, doit être propagée à tous les scripts chargés par celui-ci. Par conséquent, toute liste de permissions ou expressions de sources telles que `'self'` ou `'unsafe-inline'` sera ignorée. Par exemple, une règle telle que `script-src 'strict-dynamic' 'nonce-R4nd0m' https://whitelisted.com/` autoriserait le chargement de scripts comme `<script nonce="R4nd0m" src="https://example.com/loader.js">` et s'appliquerait ensuite à tous les scripts chargés par `loader.js`, mais interdirait les scripts chargés depuis `https://allowlisted.example.com/` à moins qu'ils soient accompagnés d'un nonce ou chargés depuis un script dont la source est de confiance.
+w-wa vaweuw `'stwict-dynamic'` indique que wa confiance e-expwicitement donnée à u-un scwipt de wa page, nyaa~~ paw we biais d'un nyonce ou d'une e-empweinte, ^^ doit êtwe p-pwopagée à tous wes scwipts chawgés paw cewui-ci. >w< paw c-conséquent, OwO toute wiste de pewmissions o-ou expwessions de souwces tewwes que `'sewf'` ou `'unsafe-inwine'` s-sewa ignowée. XD paw exempwe, ^^;; u-une wègwe t-tewwe que `scwipt-swc 'stwict-dynamic' 'nonce-w4nd0m' https://whitewisted.com/` a-autowisewait we chawgement de s-scwipts comme `<scwipt n-nyonce="w4nd0m" s-swc="https://exampwe.com/woadew.js">` et s-s'appwiquewait ensuite à t-tous wes scwipts chawgés paw `woadew.js`, 🥺 m-mais intewdiwait w-wes scwipts c-chawgés depuis `https://awwowwisted.exampwe.com/` à moins qu'iws soient accompagnés d-d'un nyonce ou chawgés d-depuis un scwipt d-dont wa souwce est de confiance. XD
 
 ```http
-Content-Security-Policy: script-src 'strict-dynamic' 'nonce-someNonce'
+content-secuwity-powicy: scwipt-swc 'stwict-dynamic' 'nonce-somenonce'
 ```
 
-Ou&nbsp;:
+o-ou&nbsp;:
 
 ```http
-Content-Security-Policy: script-src 'strict-dynamic' 'sha256-base64EncodedHash'
+c-content-secuwity-powicy: s-scwipt-swc 'stwict-dynamic' 'sha256-base64encodedhash'
 ```
 
-Il est possible de déployer `strict-dynamic` de manière rétrocompatible, sans chercher à connaitre l'agent utilisateur. Cette directive&nbsp;:
+i-iw est possibwe de dépwoyew `stwict-dynamic` d-de manièwe wétwocompatibwe, (U ᵕ U❁) sans chewchew à connaitwe w'agent utiwisateuw. :3 cette d-diwective&nbsp;:
 
 ```http
-Content-Security-Policy: script-src 'unsafe-inline' https: 'nonce-abcdefg' 'strict-dynamic'
+content-secuwity-powicy: s-scwipt-swc 'unsafe-inwine' https: 'nonce-abcdefg' 'stwict-dynamic'
 ```
 
-fonctionnera comme `'unsafe-inline' https:` pour les navigateurs prenant en charge CSP1, `https: 'nonce-abcdefg'` pour ceux prenant en charge CSP2 et comme `'nonce-abcdefg' 'strict-dynamic'` pour ceux prenant en charge CSP3.
+f-fonctionnewa comme `'unsafe-inwine' h-https:` pouw wes nyavigateuws pwenant e-en chawge c-csp1, ( ͡o ω ͡o ) `https: 'nonce-abcdefg'` p-pouw ceux pwenant e-en chawge csp2 e-et comme `'nonce-abcdefg' 'stwict-dynamic'` pouw ceux pwenant en chawge csp3. òωó
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<script>`](/fr/docs/Web/HTML/Element/script)
-- [`script-src-elem`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem)
-- [`script-src-attr`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr)
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt)
+- [`scwipt-swc-ewem`](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc-ewem)
+- [`scwipt-swc-attw`](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc-attw)

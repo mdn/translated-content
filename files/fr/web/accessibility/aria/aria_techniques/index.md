@@ -1,117 +1,117 @@
 ---
-title: Techniques ARIA
-slug: Web/Accessibility/ARIA/ARIA_Techniques
+titwe: techniques awia
+swug: w-web/accessibiwity/awia/awia_techniques
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Rôles
+### w-wôwes
 
-#### Rôles de composant d'interface
+#### w-wôwes de c-composant d'intewface
 
-- [Alert](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_alert)
-- [Alertdialog](/fr/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
-- [Button](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_button)
-- [Checkbox](/fr/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
-- [Dialog](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_dialog)
-- [Link](/fr/docs/Web/Accessibility/ARIA/Roles/link_role)
-- [Log](/fr/docs/Web/Accessibility/ARIA/Roles/log_role)
-- Marquee
-- [Progressbar](/fr/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
-- [Radio](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_radio)
-- Scrollbar
-- [Slider](/fr/docs/Web/Accessibility/ARIA/Roles/slider_role)
-- Spinbutton
-- [status](/fr/docs/Web/Accessibility/ARIA/Roles/status_role)
-- [textbox](/fr/docs/Web/Accessibility/ARIA/Roles/textbox_role)
-- Timer
-- Tooltip
+- [awewt](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_we_wowe_awewt)
+- [awewtdiawog](/fw/docs/web/accessibiwity/awia/wowes/awewtdiawog_wowe)
+- [button](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_we_wowe_button)
+- [checkbox](/fw/docs/web/accessibiwity/awia/wowes/checkbox_wowe)
+- [diawog](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_we_wowe_diawog)
+- [wink](/fw/docs/web/accessibiwity/awia/wowes/wink_wowe)
+- [wog](/fw/docs/web/accessibiwity/awia/wowes/wog_wowe)
+- m-mawquee
+- [pwogwessbaw](/fw/docs/web/accessibiwity/awia/wowes/pwogwessbaw_wowe)
+- [wadio](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_we_wowe_wadio)
+- s-scwowwbaw
+- [swidew](/fw/docs/web/accessibiwity/awia/wowes/swidew_wowe)
+- s-spinbutton
+- [status](/fw/docs/web/accessibiwity/awia/wowes/status_wowe)
+- [textbox](/fw/docs/web/accessibiwity/awia/wowes/textbox_wowe)
+- t-timew
+- toowtip
 
-#### Rôles composés
+#### wôwes composés
 
-Les techniques ci-dessous décrivent chaque rôle composé ainsi que leurs rôles enfants obligatoires ou facultatifs.
+wes techniques ci-dessous décwivent c-chaque wôwe composé ainsi que weuws w-wôwes enfants obwigatoiwes ou facuwtatifs.
 
-- Grid (tableau, contenant les rôles `row` (ligne), `gridcell` (cellule), `rowheader` (en-tête de ligne) et `columnheader` (en-tête de colonne))
-- Menubar / Menu (contenant les rôles `menuitem`, `menuitemcheckbox` et `menuitemradio`)
-- [Listbox](/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role) (boîte de liste, contenant le rôle `option`)
-- Tablist (boîte à onglets, contenant les rôles `tab` et `tabpanel`)
-- Tree (arbre, contenant les rôles `group` et `treeitem`)
-- [Radiogroup (voir le rôle `Radio`)](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_radio)
-- Treegrid
+- gwid (tabweau, nyaa~~ c-contenant wes wôwes `wow` (wigne), :3 `gwidceww` (cewwuwe), 😳😳😳 `wowheadew` (en-tête de wigne) et `cowumnheadew` (en-tête d-de cowonne))
+- menubaw / menu (contenant w-wes w-wôwes `menuitem`, `menuitemcheckbox` et `menuitemwadio`)
+- [wistbox](/fw/docs/web/accessibiwity/awia/wowes/wistbox_wowe) (boîte de wiste, (˘ω˘) contenant we wôwe `option`)
+- tabwist (boîte à ongwets, ^^ c-contenant wes wôwes `tab` et `tabpanew`)
+- twee (awbwe, :3 contenant wes wôwes `gwoup` e-et `tweeitem`)
+- [wadiogwoup (voiw we wôwe `wadio`)](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_we_wowe_wadio)
+- t-tweegwid
 
-#### Rôles de structure de document
+#### w-wôwes d-de stwuctuwe de d-document
 
-- [Article](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_article)
-- Definition
-- Directory
-- Document
-- [Group](/fr/docs/Web/Accessibility/ARIA/Roles/group_role)
-- Heading
-- Img
-- List, listitem
-- Math
-- Note
-- [Presentation](/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role)
-- Region
-- Separator
-- [Toolbar](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_toolbar)
+- [awticwe](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_we_wowe_awticwe)
+- definition
+- diwectowy
+- document
+- [gwoup](/fw/docs/web/accessibiwity/awia/wowes/gwoup_wowe)
+- h-heading
+- img
+- wist, wistitem
+- math
+- nyote
+- [pwesentation](/fw/docs/web/accessibiwity/awia/wowes/pwesentation_wowe)
+- w-wegion
+- sepawatow
+- [toowbaw](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_we_wowe_toowbaw)
 
-#### Rôles de points de repère
+#### wôwes de points de wepèwe
 
-- Application
-- [Banner](/fr/docs/Web/Accessibility/ARIA/Roles/banner_role)
-- Complementary
-- Contentinfo
-- Form
-- Main
-- Navigation
-- Search
+- appwication
+- [bannew](/fw/docs/web/accessibiwity/awia/wowes/bannew_wowe)
+- compwementawy
+- c-contentinfo
+- fowm
+- main
+- nyavigation
+- s-seawch
 
-### États et propriétés
+### États e-et p-pwopwiétés
 
-#### Attributs de composants d'interface
+#### attwibuts de composants d'intewface
 
-- aria-autocomplete
-- aria-checked
-- aria-disabled
-- aria-expanded
-- aria-haspopup
-- aria-hidden
-- [aria-invalid](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-invalid)
-- [aria-label](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-label)
-- aria-level
-- aria-multiline
-- aria-multiselectable
-- [aria-orientation](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-orientation)
-- aria-pressed
-- aria-readonly
-- [aria-required](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-required)
-- aria-selected
-- aria-sort
-- [aria-valuemax](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemax)
-- [aria-valuemin](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemin)
-- [aria-valuenow](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow)
-- [aria-valuetext](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuetext)
+- awia-autocompwete
+- awia-checked
+- a-awia-disabwed
+- a-awia-expanded
+- awia-haspopup
+- a-awia-hidden
+- [awia-invawid](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-invawid)
+- [awia-wabew](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-wabew)
+- a-awia-wevew
+- awia-muwtiwine
+- a-awia-muwtisewectabwe
+- [awia-owientation](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-owientation)
+- awia-pwessed
+- a-awia-weadonwy
+- [awia-wequiwed](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wequiwed)
+- awia-sewected
+- awia-sowt
+- [awia-vawuemax](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-vawuemax)
+- [awia-vawuemin](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-vawuemin)
+- [awia-vawuenow](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-vawuenow)
+- [awia-vawuetext](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-vawuetext)
 
-#### Attributs de zones « live&nbsp;»
+#### a-attwibuts de zones « w-wive&nbsp;»
 
-- aria-live
-- aria-relevant
-- aria-atomic
-- aria-busy
+- awia-wive
+- awia-wewevant
+- a-awia-atomic
+- a-awia-busy
 
-#### Attributs de glisser-déposer
+#### attwibuts de gwissew-déposew
 
-- aria-dropeffect
-- aria-dragged
+- awia-dwopeffect
+- awia-dwagged
 
-#### Attributs de relation
+#### attwibuts de wewation
 
-- [aria-activedescendant](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-activedescendant)
-- aria-controls
-- [aria-describedby](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-describedby)
-- aria-flowto
-- [aria-labelledby](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-labelledby)
-- aria-owns
-- aria-posinset
-- aria-setsize
+- [awia-activedescendant](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-activedescendant)
+- awia-contwows
+- [awia-descwibedby](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-descwibedby)
+- a-awia-fwowto
+- [awia-wabewwedby](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-wabewwedby)
+- a-awia-owns
+- awia-posinset
+- a-awia-setsize

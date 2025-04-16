@@ -1,235 +1,235 @@
 ---
-title: <label>
-slug: Web/HTML/Element/label
+titwe: <wabew>
+swug: web/htmw/ewement/wabew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<label>`** représente une légende pour un objet d'une interface utilisateur. Il peut être associé à un contrôle en utilisant l'attribut `for` ou en plaçant l'élément du contrôle à l'intérieur de l'élément `<label>`. Un tel contrôle est appelé _contrôle étiqueté_ par l'élément `<label>`.
+w-w'éwément h-htmw **`<wabew>`** w-wepwésente u-une wégende pouw u-un objet d'une i-intewface utiwisateuw. (˘ω˘) i-iw peut êtwe a-associé à un contwôwe en utiwisant w'attwibut `fow` ou en pwaçant w'éwément d-du contwôwe à w'intéwieuw de w'éwément `<wabew>`. (ꈍᴗꈍ) un t-tew contwôwe est appewé _contwôwe étiqueté_ p-paw w'éwément `<wabew>`. /(^•ω•^)
 
-{{InteractiveExample("HTML Demo: &lt;label&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;wabew&gt;", >_< "tabbed-showtew")}}
 
-```html interactive-example
-<div class="preference">
-  <label for="cheese">Do you like cheese?</label>
-  <input type="checkbox" name="cheese" id="cheese" />
+```htmw intewactive-exampwe
+<div cwass="pwefewence">
+  <wabew f-fow="cheese">do you wike cheese?</wabew>
+  <input t-type="checkbox" n-nyame="cheese" id="cheese" />
 </div>
 
-<div class="preference">
-  <label for="peas">Do you like peas?</label>
-  <input type="checkbox" name="peas" id="peas" />
+<div cwass="pwefewence">
+  <wabew fow="peas">do you wike p-peas?</wabew>
+  <input type="checkbox" nyame="peas" id="peas" />
 </div>
 ```
 
-```css interactive-example
-.preference {
-  display: flex;
-  justify-content: space-between;
+```css intewactive-exampwe
+.pwefewence {
+  d-dispway: fwex;
+  justify-content: s-space-between;
   width: 60%;
-  margin: 0.5rem;
+  m-mawgin: 0.5wem;
 }
 ```
 
-Rattacher un libellé à un élément de saisie ({{HTMLElement("input")}}) offre différents avantages :
+w-wattachew un w-wibewwé à un éwément de saisie ({{htmwewement("input")}}) offwe difféwents a-avantages :
 
-- Le texte du libellé n'est pas seulement associé visuellement au champ, il est _techniquement_ associé avec le champ. Ainsi, lorsque l'utilisateur a le focus sur le champ, un lecteur d'écran pourra énoncer le contenu du libellé et permettre à l'utilisateur de disposer d'un meilleur contexte.
-- Vous pouvez cliquer sur le libellé pour passer le focus voire activer le champ. De cette façon, on dispose d'une meilleure ergonomie car la surface d'utilisation du champ est agrandie, ce qui s'avère utile sur les petits appareils comme les téléphones portables.
+- we texte du wibewwé ny'est pas s-seuwement associé visuewwement au champ, σωσ iw est _techniquement_ associé avec we champ. ^^;; ainsi, wowsque w'utiwisateuw a-a we focus suw we champ, 😳 un w-wecteuw d'écwan p-pouwwa énoncew w-we contenu du wibewwé et pewmettwe à w'utiwisateuw de disposew d-d'un meiwweuw c-contexte. >_<
+- vous pouvez cwiquew s-suw we wibewwé p-pouw passew we focus voiwe activew w-we champ. -.- de cette façon, UwU o-on dispose d'une meiwweuwe ewgonomie caw wa suwface d-d'utiwisation du champ est agwandie, :3 c-ce qui s'avèwe utiwe suw w-wes petits appaweiws c-comme wes téwéphones powtabwes. σωσ
 
-Pour associer un élément `<label>` avec un élément `<input>`, il faut fournir un identifiant à l'élément `<input>` sous la forme d'un attribut `id`. Ensuite, on peut renseigner l'attribut `for` de l'élément `<label>` avec la valeur de cet identifiant.
+pouw associew un éwément `<wabew>` avec un éwément `<input>`, >w< iw faut fouwniw un i-identifiant à w'éwément `<input>` s-sous wa fowme d'un attwibut `id`. (ˆ ﻌ ˆ)♡ e-ensuite, o-on peut wenseignew w-w'attwibut `fow` de w'éwément `<wabew>` avec wa vaweuw de cet i-identifiant. ʘwʘ
 
-On peut également créer un lien implicite en imbriquant l'élément `<input>` directement au sein d'un élément `<label>` . Dans ce cas, les attributs `for` et `id` ne sont plus nécessaires.
+on peut égawement cwéew un wien impwicite en imbwiquant w'éwément `<input>` d-diwectement au sein d'un éwément `<wabew>` . :3 d-dans ce cas, (˘ω˘) wes a-attwibuts `fow` e-et `id` nye sont pwus nyécessaiwes. 😳😳😳
 
-```html
-<label
-  >Aimez-vous les petits pois ?
-  <input type="checkbox" name="petits_pois" />
-</label>
+```htmw
+<wabew
+  >aimez-vous w-wes petits pois ?
+  <input type="checkbox" nyame="petits_pois" />
+</wabew>
 ```
 
-## Attributs
+## a-attwibuts
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément i-incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). rawr x3
 
-- `for`
+- `fow`
 
-  - : L'identifiant (la valeur de l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id)) de l'élément de formulaire associé, appartenant au même document que l'élément label. Le premier élément du document dont l'identifiant correspond est alors le contrôle étiqueté par l'élément.
+  - : w'identifiant (wa v-vaweuw d-de w'attwibut [`id`](/fw/docs/web/htmw/gwobaw_attwibutes#id)) de w-w'éwément de f-fowmuwaiwe associé, (✿oωo) a-appawtenant au même document que w'éwément wabew. (ˆ ﻌ ˆ)♡ we pwemiew éwément d-du document dont w'identifiant cowwespond est awows we contwôwe étiqueté paw w'éwément. :3
 
-    > [!NOTE]
-    > Un élément label peut simultanément avoir un attribut `for` et contenir un élément de contrôle tant que l'attribut `for` pointe vers l'élément contenu.
+    > [!note]
+    > u-un éwément wabew peut simuwtanément avoiw un attwibut `fow` e-et conteniw un éwément d-de contwôwe t-tant que w'attwibut `fow` p-pointe vews w'éwément contenu. (U ᵕ U❁)
 
-- `form`
+- `fowm`
 
-  - : L'élément de formulaire auquel l'élément label est associé (son formulaire propriétaire). La valeur de cet attribut doit être l'identifiant d'un élément {{HTMLElement("form")}} contenu au sein du même document. Si l'attribut n'est pas renseigné, cet élément \<label> doit être le descendant d'un élément {{HTMLElement("form")}}. Cet attribut permet de placer des éléments label dans le document sans qu'ils soient nécessairement imbriqués dans un formulaire.
+  - : w-w'éwément de f-fowmuwaiwe auquew w'éwément wabew est associé (son fowmuwaiwe pwopwiétaiwe). ^^;; wa vaweuw de c-cet attwibut doit êtwe w'identifiant d-d'un éwément {{htmwewement("fowm")}} contenu a-au sein du m-même document. mya si w'attwibut ny'est pas wenseigné, 😳😳😳 c-cet éwément \<wabew> d-doit êtwe we descendant d-d'un éwément {{htmwewement("fowm")}}. OwO c-cet attwibut pewmet de pwacew des éwéments wabew dans we document s-sans qu'iws soient n-nyécessaiwement i-imbwiqués dans un fowmuwaiwe. rawr
 
-    > [!NOTE]
-    > La spécification HTML a été mise à jour le 28 avril 2016 afin de déprécier l'attribut [`form`](/fr/docs/Web/HTML/Global_attributes#form). Celui-ci est toujours disponible dans les scripts mais sa définition a changé, il renvoie désormais le contrôle associé au formulaire ou `null` s'il n'y a pas de contrôle associé (autrement dit si {{domxref("HTMLLabelElement.control")}} vaut `null`).
+    > [!note]
+    > w-wa spécification h-htmw a été mise à j-jouw we 28 avwiw 2016 afin de dépwéciew w'attwibut [`fowm`](/fw/docs/web/htmw/gwobaw_attwibutes#fowm). XD cewui-ci est toujouws disponibwe d-dans wes s-scwipts mais sa définition a changé, (U ﹏ U) iw wenvoie d-désowmais w-we contwôwe associé au fowmuwaiwe ou `nuww` s'iw ny'y a pas de c-contwôwe associé (autwement dit si {{domxwef("htmwwabewewement.contwow")}} vaut `nuww`).
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-- Un élément `<label>` peut être associé à un contrôle en plaçant l'élément du contrôle dans l'élément `<label>` ou en utilisant l'attribut [`for`](/fr/docs/Web/HTML/Global_attributes#for). Un tel contrôle sera appelé le contrôle _étiqueté_ par l'élément `<label>`. Un contrôle peut être associé à plusieurs `<label>`.
-- Les étiquettes ne sont pas directement associées aux formulaires. Elles le sont indirectement via le contrôle auquel elles sont rattachées.
-- Lorsqu'on clique ou touche un élément `<label>` et que celui-ci est associé à un contrôle d'un formulaire, l'évènement `click` est également déclenché pour le contrôle.
+- un éwément `<wabew>` peut êtwe a-associé à un contwôwe en pwaçant w'éwément d-du contwôwe d-dans w'éwément `<wabew>` ou en utiwisant w'attwibut [`fow`](/fw/docs/web/htmw/gwobaw_attwibutes#fow). (˘ω˘) un tew contwôwe s-sewa appewé we c-contwôwe _étiqueté_ paw w'éwément `<wabew>`. UwU un contwôwe peut êtwe associé à p-pwusieuws `<wabew>`. >_<
+- wes étiquettes n-nye sont pas diwectement associées aux fowmuwaiwes. σωσ e-ewwes we sont indiwectement via w-we contwôwe a-auquew ewwes sont wattachées. 🥺
+- w-wowsqu'on cwique ou touche un éwément `<wabew>` e-et que cewui-ci e-est associé à u-un contwôwe d'un fowmuwaiwe, 🥺 w-w'évènement `cwick` e-est égawement décwenché pouw we contwôwe. ʘwʘ
 
-## Mise en forme avec CSS
+## m-mise en f-fowme avec css
 
-Il n'existe pas de spécificité relative à la mise en forme des éléments `<label>`. Par défaut, ce sont des éléments _inline_ et ils peuvent être mis en forme de la même façon que {{HTMLElement("span")}} et {{HTMLElement("a")}}.
+i-iw ny'existe pas de spécificité wewative à wa m-mise en fowme des éwéments `<wabew>`. :3 p-paw défaut, (U ﹏ U) c-ce sont des éwéments _inwine_ et iws peuvent êtwe mis en fowme de wa même f-façon que {{htmwewement("span")}} e-et {{htmwewement("a")}}. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-### Exemple simple
+### e-exempwe simpwe
 
-#### HTML
+#### htmw
 
-```html
-<label>Cliquez ici<input type="text" id="Utilisateur" name="Nom" /></label>
+```htmw
+<wabew>cwiquez i-ici<input type="text" id="utiwisateuw" nyame="nom" /></wabew>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemple_simple', '200', '50', '')}}
+{{embedwivesampwe('exempwe_simpwe', ʘwʘ '200', '50', >w< '')}}
 
-### Utiliser l'attribut `for`
+### utiwisew w'attwibut `fow`
 
-#### HTML
+#### htmw
 
-```html
-<label for="Utilisateur">Cliquez ici</label>
-<input type="text" id="Utilisateur" name="Nom" />
+```htmw
+<wabew f-fow="utiwisateuw">cwiquez ici</wabew>
+<input t-type="text" id="utiwisateuw" n-nyame="nom" />
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Utiliser_l'attribut_for", '200', '50', '')}}
+{{embedwivesampwe("utiwisew_w'attwibut_fow", rawr x3 '200', '50', OwO '')}}
 
-## Accessibilité
+## a-accessibiwité
 
-### Contenu interactif
+### contenu intewactif
 
-Il ne faut pas placer d'éléments interactifs (tels que les ancres ({{HTMLElement("a")}}) ou les boutons ({{HTMLElement("button")}})) dans un élément `label` sinon il sera difficile d'activer le contrôle associé à ce libellé.
+i-iw nye faut pas p-pwacew d'éwéments i-intewactifs (tews q-que wes a-ancwes ({{htmwewement("a")}}) ou wes boutons ({{htmwewement("button")}})) dans un éwément `wabew` sinon iw sewa difficiwe d'activew we contwôwe a-associé à c-ce wibewwé. ^•ﻌ•^
 
-#### Mauvaise pratique
+#### m-mauvaise pwatique
 
-```html example-bad
-<label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions" />
-  J'accepte <a href="terms-and-conditions.html">les conditions d'utilisation</a>
-</label>
+```htmw exampwe-bad
+<wabew f-fow="tac">
+  <input id="tac" type="checkbox" name="tewms-and-conditions" />
+  j'accepte <a hwef="tewms-and-conditions.htmw">wes c-conditions d'utiwisation</a>
+</wabew>
 ```
 
-#### Bonne pratique
+#### b-bonne pwatique
 
-```html example-good
-<label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions" />
-  J'accepte les conditions d'utilisation
-</label>
+```htmw exampwe-good
+<wabew f-fow="tac">
+  <input id="tac" type="checkbox" nyame="tewms-and-conditions" />
+  j-j'accepte w-wes conditions d'utiwisation
+</wabew>
 <p>
-  <a href="terms-and-conditions.html">Lire les conditions d'utilisation</a>
+  <a h-hwef="tewms-and-conditions.htmw">wiwe w-wes conditions d'utiwisation</a>
 </p>
 ```
 
-### Titres
+### titwes
 
-Placer des [éléments de titres](/fr/docs/Web/HTML/Element/Heading_Elements) à l'intérieur d'un élément `label` causera des interférences avec de nombreux outils d'assistance car les titres sont généralement utilisés comme [une aide à la navigation](/fr/docs/Web/HTML/Element/Heading_Elements#navigation). Si le texte du libellé doit être ajusté visuellement, on utilisera une mise en forme via CSS.
+pwacew des [éwéments de titwes](/fw/docs/web/htmw/ewement/heading_ewements) à w-w'intéwieuw d-d'un éwément `wabew` c-causewa des i-intewféwences a-avec de nyombweux outiws d'assistance c-caw wes t-titwes sont généwawement utiwisés c-comme [une a-aide à wa nyavigation](/fw/docs/web/htmw/ewement/heading_ewements#navigation). >_< si we texte du wibewwé d-doit êtwe ajusté visuewwement, OwO on utiwisewa u-une mise en fowme via css. >_<
 
-S'il faut associer un titre à un formulaire ou à une section d'un formulaire, on utilisera l'élément {{HTMLElement("legend")}} au sein d'un élément {{HTMLElement("fieldset")}}.
+s-s'iw faut associew u-un titwe à un fowmuwaiwe ou à u-une section d'un fowmuwaiwe, on utiwisewa w'éwément {{htmwewement("wegend")}} a-au sein d'un éwément {{htmwewement("fiewdset")}}. (ꈍᴗꈍ)
 
-#### Mauvaise pratique
+#### mauvaise p-pwatique
 
-```html example-bad
-<label for="votre-nom">
-  <h3>Votre nom</h3>
-  <input id="votre-nom" name="votre-nom" type="text" />
-</label>
+```htmw e-exampwe-bad
+<wabew fow="votwe-nom">
+  <h3>votwe nyom</h3>
+  <input id="votwe-nom" n-nyame="votwe-nom" type="text" />
+</wabew>
 ```
 
-#### Bonne pratique
+#### bonne pwatique
 
-```html example-good
-<label class="label-grand" for="votre-nom">
-  Votre nom
-  <input id="votre-nom" name="votre-nom" type="text" />
-</label>
+```htmw e-exampwe-good
+<wabew c-cwass="wabew-gwand" fow="votwe-nom">
+  v-votwe nyom
+  <input id="votwe-nom" n-nyame="votwe-nom" t-type="text" />
+</wabew>
 ```
 
-### Boutons
+### boutons
 
-Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value` valide ne nécessite pas l'ajout d'un libellé. Rajouter un libellé inutile pourra créer des interférences avec les outils d'assistance. Il en va de même pour l'élément {{HTMLElement("button")}}.
+un éwément {{htmwewement("input")}} a-avec `type="button"` et un attwibut `vawue` v-vawide nye nyécessite p-pas w'ajout d'un wibewwé. >w< w-wajoutew un wibewwé inutiwe p-pouwwa cwéew d-des intewféwences a-avec wes outiws d'assistance. iw en va de même pouw w'éwément {{htmwewement("button")}}. (U ﹏ U)
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >, ^^
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >,
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >, (U ﹏ U)
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_associ.C3.A9_aux_formulaires"
-          >contenu associé aux formulaires</a
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_associ.c3.a9_aux_fowmuwaiwes"
+          >contenu a-associé aux fowmuwaiwes</a
         >
-        (listed, submittable, resettable),
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >, contenu interactif.
+        (wisted, :3 submittabwe, (✿oωo) wesettabwe), XD
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu tangibwe</a
+        >, >w< c-contenu intewactif.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >Contenu phrasé</a
+        <a h-hwef="/fw/docs/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
         >
-        sans éléments <code>label</code> descendants. À l'exception du contrôle
-        lié à la légende, pas d'autres éléments pouvant contenir un élément
-        <code>label</code>.
+        s-sans éwéments <code>wabew</code> d-descendants. òωó À w'exception d-du contwôwe
+        wié à wa wégende, (ꈍᴗꈍ) p-pas d'autwes éwéments p-pouvant conteniw un éwément
+        <code>wabew</code>. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balise</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawise</th>
+      <td>aucune, rawr x3 w-wa bawise d'ouvewtuwe e-et wa b-bawise de fewmetuwe s-sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément acceptant du
+        t-tout éwément a-acceptant du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLLabelElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes a-awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwwabewewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- wes autwes éwéments w-wewatifs a-aux fowmuwaiwes : {{htmwewement("fowm")}}, (ꈍᴗꈍ) {{htmwewement("input")}}, {{htmwewement("button")}}, rawr {{htmwewement("datawist")}}, ^^;; {{htmwewement("wegend")}}, rawr x3 {{htmwewement("sewect")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("optgwoup")}}, σωσ {{htmwewement("option")}}, (U ﹏ U) {{htmwewement("textawea")}}, >w< {{htmwewement("fiewdset")}}, {{htmwewement("output")}}, σωσ {{htmwewement("pwogwess")}} e-et {{htmwewement("metew")}}. nyaa~~

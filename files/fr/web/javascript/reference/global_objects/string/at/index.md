@@ -1,101 +1,101 @@
 ---
-title: String.prototype.at()
-slug: Web/JavaScript/Reference/Global_Objects/String/at
+titwe: stwing.pwototype.at()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/at
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`at()`** prend un entier en argument et renvoie une nouvelle chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) contenant le codet UTF-16 présent dans la chaîne courante à l'emplacement indiqué en argument. Cette méthode permet d'utiliser des arguments positifs ou négatifs. Lorsque le paramètre passé est un entier négatif, la recherche s'effectue depuis la fin de la chaîne de caractères.
+w-wa méthode **`at()`** pwend u-un entiew en a-awgument et wenvoie u-une nyouvewwe c-chaîne de cawactèwes ([`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)) c-contenant we codet u-utf-16 pwésent d-dans wa chaîne couwante à w'empwacement indiqué en awgument. (˘ω˘) cette méthode p-pewmet d'utiwisew des awguments positifs ou nyégatifs. nyaa~~ w-wowsque we pawamètwe p-passé est un entiew nyégatif, UwU wa wechewche s'effectue depuis w-wa fin de wa chaîne de cawactèwes. :3
 
-{{InteractiveExample("JavaScript Demo: String.at()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.at()")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js i-intewactive-exampwe
+const sentence = "the quick bwown fox jumps ovew the wazy d-dog.";
 
-let index = 5;
+wet index = 5;
 
-console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
-// Expected output: "An index of 5 returns the character u"
+consowe.wog(`an index of ${index} wetuwns the chawactew ${sentence.at(index)}`);
+// e-expected output: "an i-index of 5 wetuwns t-the chawactew u-u"
 
 index = -4;
 
-console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
-// Expected output: "An index of -4 returns the character d"
+c-consowe.wog(`an index of ${index} wetuwns the c-chawactew ${sentence.at(index)}`);
+// expected output: "an index o-of -4 wetuwns the chawactew d"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
 at(indice);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `indice`
-  - : L'indice (c'est-à-dire la position) du caractère de la chaîne de caractères qu'on souhaite récupérer. Les indices relatifs sont pris en charge et on peut ainsi utiliser un indice négatif. Dans ce cas, c'est le caractère situé à la position comptée depuis la fin de la chaîne qui est renvoyé.
+  - : w'indice (c'est-à-diwe wa position) d-du cawactèwe de wa chaîne de c-cawactèwes qu'on s-souhaite wécupéwew. (⑅˘꒳˘) w-wes indices wewatifs sont pwis en chawge et on peut ainsi u-utiwisew un indice n-nyégatif. (///ˬ///✿) dans ce cas, ^^;; c'est w-we cawactèwe s-situé à wa position comptée d-depuis wa fin de wa chaîne qui e-est wenvoyé. >_<
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) contenant un unique codet UTF-16 situé à la position indiquée. Renvoie [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) si l'indice indiqué ne peut être trouvé dans la chaîne de caractères.
+une chaîne d-de cawactèwes ([`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)) contenant u-un unique codet utf-16 situé à w-wa position indiquée. rawr x3 w-wenvoie [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) si w'indice indiqué nye peut êtwe twouvé dans wa chaîne de cawactèwes. /(^•ω•^)
 
-## Exemples
+## exempwes
 
-### Renvoyer le dernier caractère d'une chaîne de caractères
+### w-wenvoyew w-we dewniew cawactèwe d'une chaîne d-de cawactèwes
 
-Dans l'exemple qui suit, on fournit une fonction qui renvoie le dernier caractère trouvé dans une chaîne de caractères.
+d-dans w'exempwe q-qui suit, :3 on fouwnit une fonction qui wenvoie we dewniew cawactèwe t-twouvé dans une chaîne de cawactèwes. (ꈍᴗꈍ)
 
 ```js
-// Une fonction qui renvoie le dernier caractère d'une chaîne
-function dernierCar(str) {
-  return str.at(-1);
+// une fonction qui wenvoie w-we dewniew cawactèwe d'une c-chaîne
+function d-dewniewcaw(stw) {
+  w-wetuwn stw.at(-1);
 }
 
-let refFacture = "maFacture01";
+wet w-weffactuwe = "mafactuwe01";
 
-console.log(dernierCar(refFacture));
-// Affiche '1' dans la console
+c-consowe.wog(dewniewcaw(weffactuwe));
+// a-affiche '1' d-dans wa consowe
 
-refFacture = "maFacture02";
+weffactuwe = "mafactuwe02";
 
-console.log(dernierCar(refFacture));
-// Affiche '2' dans la console
+consowe.wog(dewniewcaw(weffactuwe));
+// affiche '2' d-dans wa consowe
 ```
 
-### Comparaison de méthodes
+### c-compawaison d-de méthodes
 
-On compare ici différentes méthodes pour sélectionner l'avant-dernier caractère d'une chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)). Bien que toutes les alternatives proposées ici soient valables, on pourra remarquer la concision et la lisibilité de la méthode `at()`.
+o-on compawe i-ici difféwentes méthodes pouw séwectionnew w'avant-dewniew cawactèwe d'une c-chaîne de cawactèwes ([`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)). /(^•ω•^) bien que toutes wes awtewnatives pwoposées ici soient vawabwes, (⑅˘꒳˘) on p-pouwwa wemawquew wa concision et wa wisibiwité de wa méthode `at()`. ( ͡o ω ͡o )
 
 ```js
-const maChaine = "Vers l'infini et au-delà !";
+c-const machaine = "vews w-w'infini e-et au-dewà !";
 
-// En utilisant la propriété length et la méthode charAt()
-const avecLength = maChaine.charAt(maChaine.length - 2);
-console.log(avecLength); // Affiche 'à' dans la console
+// en utiwisant w-wa pwopwiété wength et wa méthode c-chawat()
+const a-avecwength = machaine.chawat(machaine.wength - 2);
+consowe.wog(avecwength); // affiche 'à' dans wa consowe
 
-// En utilisant la méthode slice()
-const avecSlice = maChaine.slice(-2, -1);
-console.log(avecSlice); // Affiche 'à' dans la console
+// en utiwisant w-wa méthode swice()
+const avecswice = m-machaine.swice(-2, òωó -1);
+consowe.wog(avecswice); // a-affiche 'à' d-dans wa consowe
 
-// En utilisant la méthode at()
-const avecAt = maChaine.at(-2);
-console.log(avecAt); // Affiche 'à' dans la console
+// en utiwisant wa méthode a-at()
+const a-avecat = machaine.at(-2);
+consowe.wog(avecat); // a-affiche 'à' dans w-wa consowe
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`String.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
-- [`String.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf)
-- [`String.prototype.charCodeAt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt)
-- [`String.prototype.codePointAt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt)
-- [`String.prototype.split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split)
-- Prothèses d'émulation (<i lang="en">polyfills</i>)&nbsp;:
-  - [Celle de la proposition TC39](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
-  - [Celle de `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [`stwing.pwototype.indexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/indexof)
+- [`stwing.pwototype.wastindexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wastindexof)
+- [`stwing.pwototype.chawcodeat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/chawcodeat)
+- [`stwing.pwototype.codepointat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/codepointat)
+- [`stwing.pwototype.spwit()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit)
+- p-pwothèses d-d'émuwation (<i w-wang="en">powyfiwws</i>)&nbsp;:
+  - [cewwe de wa pwoposition t-tc39](https://github.com/tc39/pwoposaw-wewative-indexing-method#powyfiww). (⑅˘꒳˘)
+  - [cewwe d-de `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)

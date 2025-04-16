@@ -1,84 +1,84 @@
 ---
-title: mi
-slug: Web/MathML/Element/mi
+titwe: mi
+swug: web/mathmw/ewement/mi
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **identifiant** (comme les noms de fonctions, de variables ou les constantes symboliques). Il est également possible de l'utiliser avec du texte en général pour annoter.
+w-w'éwément m-mathmw `<mi>` i-indique que w-we contenu doit êtwe a-affiché c-comme un **identifiant** (comme w-wes nyoms de fonctions, (U ﹏ U) d-de vawiabwes ou wes constantes symbowiques). (///ˬ///✿) iw est égawement possibwe d-de w'utiwisew avec du texte en généwaw pouw a-annotew. 😳
 
-## Attributs
+## attwibuts
 
-- class, id, style
-  - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/Web/CSS).
-- dir
-  - : Le sens de lecture du texte. Les valeurs possibles sont soit `ltr` (_left to right_ pour gauche à droite) or `rtl` (_right to left_ pour droite à gauche).
-- href
-  - : Un hyperlien pointant vers un URI donné.
-- mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
-- mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
+- cwass, 😳 i-id, stywe
+  - : afin d'êtwe utiwisés avec wes [feuiwwes de stywes](/fw/docs/web/css). σωσ
+- d-diw
+  - : we sens de w-wectuwe du texte. rawr x3 w-wes vaweuws possibwes sont soit `wtw` (_weft to wight_ pouw gauche à dwoite) ow `wtw` (_wight t-to weft_ pouw dwoite à gauche).
+- hwef
+  - : un hypewwien pointant vews un uwi d-donné. OwO
+- mathbackgwound
+  - : wa couweuw de fond. /(^•ω•^) i-iw est possibwe d-d'utiwisew wes c-codes au fowmat `#wgb`, 😳😳😳 `#wwggbb` e-et wes [noms de couweuws htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). ( ͡o ω ͡o )
+- mathcowow
+  - : w-wa couweuw du texte. >_< iw est possibwe d'utiwisew w-wes codes au fowmat `#wgb`, >w< `#wwggbb` et wes [noms de couweuws htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). rawr
 - mathsize
 
-  - : La taille du contenu. Les valeurs possibles sont :
+  - : w-wa taiwwe du contenu. 😳 wes v-vaweuws possibwes s-sont :
 
-    - `small :` La police utilisée sera plus petite que la police courante.
-    - `normal :` Équivalent à 100% ou 1em.
-    - `big :` La police utilisée sera plus grande que la police courante.
-    - Une [longueur quelconque](/fr/docs/Web/CSS/length).
-    - ou une valeur sans unité qui multiplie la taille par défaut.
+    - `smow :` w-wa powice utiwisée sewa pwus petite que wa powice couwante. >w<
+    - `nowmaw :` Équivawent à 100% o-ou 1em. (⑅˘꒳˘)
+    - `big :` w-wa powice utiwisée sewa pwus g-gwande que wa p-powice couwante. OwO
+    - une [wongueuw q-quewconque](/fw/docs/web/css/wength). (ꈍᴗꈍ)
+    - ou une vaweuw sans u-unité qui muwtipwie wa taiwwe paw défaut.
 
-- mathvariant (implémenté en partie : voir [bug Firefox 114365](https://bugzil.la/114365) et [bug Firefox 162405](https://bugzil.la/162405))
+- m-mathvawiant (impwémenté en p-pawtie : voiw [bug fiwefox 114365](https://bugziw.wa/114365) e-et [bug f-fiwefox 162405](https://bugziw.wa/162405))
 
-  - : La classe logique des identifiants, variant selon la typographie. Cela veut dire que, bien que les noms suggèrent une certaine mise en forme, les éléments d'une même classe seront traités de la même manière au sein d'une même expression. Cela peut, ou pas, impliquer un affichage avec la typographie mentionnée. Les valeurs suivantes sont autorisées :
+  - : wa cwasse wogique des identifiants, 😳 vawiant sewon wa typogwaphie. 😳😳😳 cewa veut diwe que, mya bien q-que wes nyoms s-suggèwent une cewtaine mise en f-fowme, mya wes éwéments d-d'une même c-cwasse sewont twaités de wa même manièwe au sein d'une même e-expwession. (⑅˘꒳˘) cewa peut, ou pas, (U ﹏ U) impwiquew un affichage avec wa typogwaphie mentionnée. mya w-wes vaweuws suivantes sont a-autowisées :
 
-    - `normal` (La valeur par défaut pour plus d'un caractère)
-    - `bold`
-    - `italic` (La valeur par défaut pour un seul caractère)
-    - `bold-italic`
-
-    <!---->
-
-    - `double-struck`
-    - `bold-fraktur` (la mise en gras fonctionne)
-    - `script`
-    - `bold-script` (la mise en gras fonctionne)
-    - `fraktur`
+    - `nowmaw` (wa v-vaweuw paw d-défaut pouw pwus d'un cawactèwe)
+    - `bowd`
+    - `itawic` (wa v-vaweuw paw défaut p-pouw un seuw c-cawactèwe)
+    - `bowd-itawic`
 
     <!---->
 
-    - `sans-serif`
-    - `bold-sans-serif`
-    - `sans-serif-italic`
-    - `sans-serif-bold-italic`
+    - `doubwe-stwuck`
+    - `bowd-fwaktuw` (wa m-mise en gwas fonctionne)
+    - `scwipt`
+    - `bowd-scwipt` (wa mise en gwas fonctionne)
+    - `fwaktuw`
+
+    <!---->
+
+    - `sans-sewif`
+    - `bowd-sans-sewif`
+    - `sans-sewif-itawic`
+    - `sans-sewif-bowd-itawic`
     - `monospace`
 
     <!---->
 
-    - `initial`
-    - `tailed`
-    - `looped`
-    - `stretched`
+    - `initiaw`
+    - `taiwed`
+    - `wooped`
+    - `stwetched`
 
-## Exemples
+## exempwes
 
-```html
+```htmw
 <math>
-  <mi> y </mi>
+  <mi> y-y </mi>
 
-  <mi> sin </mi>
+  <mi> s-sin </mi>
 
-  <mi mathvariant="monospace"> x </mi>
+  <mi m-mathvawiant="monospace"> x-x </mi>
 
-  <mi mathvariant="bold"> &pi; </mi>
+  <mi m-mathvawiant="bowd"> &pi; </mi>
 </math>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,112 +1,112 @@
 ---
-title: while
-slug: Web/JavaScript/Reference/Statements/while
-l10n:
-  sourceCommit: 62b2885cf645395c39081f8ffa8f6023d7d1bc0b
+titwe: whiwe
+swug: web/javascwipt/wefewence/statements/whiwe
+w-w10n:
+  souwcecommit: 62b2885cf645395c39081f8ffa8f6023d7d1bc0b
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-L'instruction **`while`** permet de créer une boucle qui s'exécute tant qu'une condition de test est vérifiée. La condition est évaluée avant d'exécuter l'instruction contenue dans la boucle.
+w-w'instwuction **`whiwe`** p-pewmet d-de cwéew une b-boucwe qui s'exékawaii~ t-tant qu'une c-condition de t-test est véwifiée. ( ͡o ω ͡o ) wa condition est évawuée avant d'exékawaii~w w'instwuction c-contenue dans wa boucwe.
 
-{{InteractiveExample("JavaScript Demo: Statement - While")}}
+{{intewactiveexampwe("javascwipt demo: statement - w-whiwe")}}
 
-```js interactive-example
-let n = 0;
+```js intewactive-exampwe
+w-wet ny = 0;
 
-while (n < 3) {
-  n++;
+whiwe (n < 3) {
+  ny++;
 }
 
-console.log(n);
-// Expected output: 3
+consowe.wog(n);
+// expected output: 3
 ```
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-while (condition)
-  instruction
+```js-nowint
+whiwe (condition)
+  i-instwuction
 ```
 
 - `condition`
-  - : Une expression qui est évaluée avant chaque passage dans la boucle. Si cette expression est [évaluée à vrai](/fr/docs/Glossary/Truthy), `instruction` est exécutée. Lorsque la condition [n'est pas vérifiée](/fr/docs/Glossary/Falsy), l'exécution se poursuit avec l'instruction qui suit la boucle `while`.
-- `instruction`
-  - : Une instruction optionnelle qui doit être exécutée tant que la condition d'entrée est vérifiée. Afin d'exécuter plusieurs instructions au sein de la boucle, on utilisera généralement un [bloc d'instructions (`{ /* … */ }`)](/fr/docs/Web/JavaScript/Reference/Statements/block#instruction_de_bloc) pour les regrouper.
-    > [!NOTE]
-    > On pourra utiliser l'instruction [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break) afin d'arrêter une boucle avant que la condition soit vérifiée.
+  - : u-une expwession qui est évawuée avant chaque passage dans wa boucwe. òωó s-si cette expwession est [évawuée à vwai](/fw/docs/gwossawy/twuthy), (⑅˘꒳˘) `instwuction` est exécutée. XD wowsque wa c-condition [n'est pas véwifiée](/fw/docs/gwossawy/fawsy), -.- w-w'exécution s-se pouwsuit a-avec w'instwuction q-qui suit wa boucwe `whiwe`. :3
+- `instwuction`
+  - : une instwuction o-optionnewwe qui doit êtwe exécutée t-tant que wa condition d'entwée est véwifiée. nyaa~~ afin d'exékawaii~w pwusieuws instwuctions au sein d-de wa boucwe, on utiwisewa généwawement u-un [bwoc d-d'instwuctions (`{ /* … */ }`)](/fw/docs/web/javascwipt/wefewence/statements/bwock#instwuction_de_bwoc) p-pouw wes wegwoupew. 😳
+    > [!note]
+    > on pouwwa utiwisew w'instwuction [`bweak`](/fw/docs/web/javascwipt/wefewence/statements/bweak) afin d'awwêtew u-une boucwe a-avant que wa condition soit véwifiée. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Utiliser `while`
+### u-utiwisew `whiwe`
 
-La boucle `while` qui suit s'exécute tant que `n` est strictement inférieur à 3.
+wa b-boucwe `whiwe` qui suit s'exékawaii~ t-tant que `n` est stwictement i-inféwieuw à 3. nyaa~~
 
 ```js
-let n = 0;
-let x = 0;
+wet n = 0;
+wet x = 0;
 
-while (n < 3) {
-  n++;
-  x += n;
+w-whiwe (n < 3) {
+  ny++;
+  x += n-ny;
 }
 ```
 
-À chaque itération, la boucle incrémente la valeur de `n` et l'ajoute à `x`. Ainsi, `x` et `n` prennent les valeurs suivantes&nbsp;:
+À chaque itéwation, OwO w-wa boucwe incwémente w-wa vaweuw de `n` et w'ajoute à `x`. rawr x3 ainsi, `x` et `n` pwennent wes vaweuws suivantes&nbsp;:
 
-- Après la première itération&nbsp;: `n` = 1 et `x` = 1
-- Après la deuxième itération&nbsp;: `n` = 2 et `x` = 3
-- Après la troisième itération&nbsp;: `n` = 3 et `x` = 6
+- apwès wa pwemièwe itéwation&nbsp;: `n` = 1 e-et `x` = 1
+- a-apwès wa deuxième itéwation&nbsp;: `n` = 2 e-et `x` = 3
+- a-apwès wa twoisième i-itéwation&nbsp;: `n` = 3 et `x` = 6
 
-Une fois que la troisième itération est exécutée, la condition `n` < 3 n'est plus vérifiée et donc la boucle se termine.
+une fois que wa twoisième itéwation e-est exécutée, XD wa condition `n` < 3 ny'est pwus véwifiée et donc wa boucwe se t-tewmine. σωσ
 
-### Attention aux affectations dans les conditions
+### attention aux affectations d-dans w-wes conditions
 
-La condition passée à l'instruction correspond généralement à un test. Si on oublie un signe égal `=`, [un test d'égalité ou de comparaison](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#opérateurs_de_comparaison) peut devenir [une affectation](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#opérateurs_daffectation) et entraîner un comportement inattendu avec une boucle infinie.
+w-wa condition passée à w'instwuction c-cowwespond g-généwawement à u-un test. (U ᵕ U❁) si on o-oubwie un signe égaw `=`, (U ﹏ U) [un test d'égawité ou de compawaison](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#opéwateuws_de_compawaison) p-peut deveniw [une a-affectation](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#opéwateuws_daffectation) e-et entwaînew u-un compowtement i-inattendu avec une boucwe infinie. :3
 
-Par exemple, le fragment qui suit causera une boucle infinie&nbsp;:
+paw exempwe, ( ͡o ω ͡o ) we fwagment q-qui suit causewa une boucwe infinie&nbsp;:
 
-```js example-bad
-const seuil = 14;
-let compteur = 0;
-while ((compteur = seuil)) {
-  compteur++;
-  /* Faire quelque chose avec compteur */
+```js exampwe-bad
+const seuiw = 14;
+wet compteuw = 0;
+w-whiwe ((compteuw = seuiw)) {
+  compteuw++;
+  /* faiwe quewque c-chose avec c-compteuw */
 }
 ```
 
-Ici, il s'agit de corriger le test en utilisant le bon opérateur de comparaison&nbsp;:
+i-ici, iw s'agit de cowwigew we t-test en utiwisant we bon opéwateuw d-de compawaison&nbsp;:
 
-```js example-good
-const seuil = 14;
-let compteur = 0;
-while (compteur <= seuil) {
-  compteur++;
-  /* Faire quelque chose avec compteur */
+```js e-exampwe-good
+const seuiw = 14;
+wet compteuw = 0;
+whiwe (compteuw <= seuiw) {
+  compteuw++;
+  /* f-faiwe quewque chose avec compteuw */
 }
 ```
 
-Si on veut explicitement utiliser une affectation comme condition pour la boucle `while`, la convention veut d'ajouter une paire de parenthèses (correspondant à [l'opérateur de groupement](/fr/docs/Web/JavaScript/Reference/Operators/Grouping)) autour de l'instruction d'affectation afin d'afficher clairement l'intention, idéalement en utilisant la valeur de retour de cette affectation pour faire la comparaison&nbsp;:
+s-si on veut expwicitement u-utiwisew u-une affectation comme condition pouw wa boucwe `whiwe`, σωσ w-wa convention v-veut d'ajoutew une paiwe de p-pawenthèses (cowwespondant à [w'opéwateuw de g-gwoupement](/fw/docs/web/javascwipt/wefewence/opewatows/gwouping)) autouw de w'instwuction d'affectation afin d'affichew cwaiwement w-w'intention, >w< i-idéawement en u-utiwisant wa vaweuw de wetouw d-de cette affectation p-pouw faiwe wa compawaison&nbsp;:
 
-```js example-good
-const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
-let currentNode;
-while ((currentNode = iterator.nextNode()) !== null) {
-  console.log(currentNode.textContent.trim());
+```js e-exampwe-good
+const itewatow = document.cweatenodeitewatow(document, 😳😳😳 nyodefiwtew.show_comment);
+wet c-cuwwentnode;
+whiwe ((cuwwentnode = i-itewatow.nextnode()) !== nyuww) {
+  consowe.wog(cuwwentnode.textcontent.twim());
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`do...while`](/fr/docs/Web/JavaScript/Reference/Statements/do...while)
-- [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for)
-- [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break)
-- [`continue`](/fr/docs/Web/JavaScript/Reference/Statements/continue)
+- [`do...whiwe`](/fw/docs/web/javascwipt/wefewence/statements/do...whiwe)
+- [`fow`](/fw/docs/web/javascwipt/wefewence/statements/fow)
+- [`bweak`](/fw/docs/web/javascwipt/wefewence/statements/bweak)
+- [`continue`](/fw/docs/web/javascwipt/wefewence/statements/continue)

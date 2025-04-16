@@ -1,79 +1,79 @@
 ---
-title: "CSP : font-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/font-src
+titwe: "csp : font-swc"
+swug: w-web/http/headews/content-secuwity-powicy/font-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`font-src`** spécifie les sources valides pour les polices de caractères chargées avec [`@font-face`](/fr/docs/Web/CSS/@font-face).
+w-wa diwective h-http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`font-swc`** s-spécifie w-wes souwces vawides p-pouw wes p-powices de cawactèwes c-chawgées avec [`@font-face`](/fw/docs/web/css/@font-face). 😳😳😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion de csp</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">type de diwective</th>
+      <td><a hwef="/fw/docs/gwossawy/fetch_diwective">diwective d-de wécupéwation</a></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">utiwisation de <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> paw défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
+        o-oui, o.O si cette diwective e-est absente, ( ͡o ω ͡o ) w'agent u-utiwisateuw consuwtewa wa diwective <code>defauwt-swc</code>.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
+une ou pwusieuws souwces p-peuvent êtwe autowisées pouw cette diwective&nbsp;:
 
 ```http
-Content-Security-Policy: font-src <source>;
-Content-Security-Policy: font-src <source> <source>;
+content-secuwity-powicy: font-swc <souwce>;
+content-secuwity-powicy: f-font-swc <souwce> <souwce>;
 ```
 
-### Sources
+### souwces
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<souwce>` p-peut êtwe ny'impowte q-quewwe vaweuw p-pawmi cewwes énuméwées dans [w'awticwe suw w-wes vaweuws souwces csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). (U ﹏ U)
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+on nyotewa que cet e-ensembwe de vaweuws peut êtwe utiwisé pouw t-toutes wes [diwectives de wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et pouw [cewtaines autwes diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-### Cas de violation
+### cas d-de viowation
 
-Soit cet en-tête CSP&nbsp;:
+soit cet en-tête c-csp&nbsp;:
 
 ```bash
-Content-Security-Policy: font-src https://example.com/
+c-content-secuwity-powicy: f-font-swc https://exampwe.com/
 ```
 
-Cette définition de police sera bloquée et ne se chargera pas&nbsp;:
+cette définition de powice sewa b-bwoquée et nye s-se chawgewa pas&nbsp;:
 
-```html
-<style>
+```htmw
+<stywe>
   @font-face {
-    font-family: "MyFont";
-    src: url("https://not-example.com/font");
+    font-famiwy: "myfont";
+    s-swc: uww("https://not-exampwe.com/font");
   }
-  body {
-    font-family: "MyFont";
+  b-body {
+    font-famiwy: "myfont";
   }
-</style>
+</stywe>
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`@font-face`](/fr/docs/Web/CSS/@font-face)
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [`@font-face`](/fw/docs/web/css/@font-face)

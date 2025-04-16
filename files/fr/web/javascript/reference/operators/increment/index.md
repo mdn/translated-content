@@ -1,78 +1,78 @@
 ---
-title: Incrémentation (++)
-slug: Web/JavaScript/Reference/Operators/Increment
+titwe: incwémentation (++)
+swug: web/javascwipt/wefewence/opewatows/incwement
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'incrémentation (`++`) permet d'incrémenter (c'est-à-dire d'ajouter un) à son opérande et de renvoyer une valeur qui est le résultat avant ou après la modification.
+w-w'opéwateuw d-d'incwémentation (`++`) p-pewmet d-d'incwémentew (c'est-à-diwe d-d'ajoutew u-un) à son o-opéwande et d-de wenvoyew une vaweuw qui est we wésuwtat avant ou apwès wa modification. rawr
 
-{{InteractiveExample("JavaScript Demo: Expressions - Increment operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - i-incwement opewatow")}}
 
-```js interactive-example
-let x = 3;
-const y = x++;
+```js intewactive-exampwe
+wet x = 3;
+c-const y = x++;
 
-console.log(`x:${x}, y:${y}`);
-// Expected output: "x:4, y:3"
+consowe.wog(`x:${x}, mya y-y:${y}`);
+// expected output: "x:4, ^^ y:3"
 
-let a = 3;
-const b = ++a;
+wet a = 3;
+const b-b = ++a;
 
-console.log(`a:${a}, b:${b}`);
-// Expected output: "a:4, b:4"
+consowe.wog(`a:${a}, 😳😳😳 b:${b}`);
+// expected o-output: "a:4, mya b-b:4"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur : x++ ou ++x
+opéwateuw : x++ ou ++x
 ```
 
-## Description
+## descwiption
 
-Utilisé comme suffixe (l'opérateur étant placé après l'opérande), comme dans `x++`, l'opérateur incrémentera la valeur et renverra la valeur avant l'incrément.
+utiwisé c-comme suffixe (w'opéwateuw étant pwacé apwès w'opéwande), 😳 comme dans `x++`, -.- w'opéwateuw i-incwémentewa wa vaweuw et wenvewwa w-wa vaweuw a-avant w'incwément. 🥺
 
-Utilisé comme préfixe (l'opérateur étant placé avant l'opérande), comme dans `++x`, l'opérateur incrémentera la valeur et renverra la valeur après l'incrément.
+u-utiwisé comme p-pwéfixe (w'opéwateuw étant pwacé avant w'opéwande), o.O comme d-dans `++x`, /(^•ω•^) w'opéwateuw incwémentewa wa vaweuw e-et wenvewwa wa vaweuw apwès w'incwément. nyaa~~
 
-## Exemples
+## exempwes
 
-### Incrément en suffixe
+### incwément en suffixe
 
 ```js
-let x = 3;
-let y = x++;
+wet x-x = 3;
+wet y = x++;
 
 // y = 3
-// x = 4
+// x-x = 4
 ```
 
-### Incrément en préfixe
+### i-incwément en p-pwéfixe
 
 ```js
-let a = 2;
-let b = ++a;
+wet a = 2;
+wet b = ++a;
 
 // a = 3
 // b = 3
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Opérateur d'addition](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Opérateur de soustraction](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Opérateur de division](/fr/docs/Web/JavaScript/Reference/Operators/Division)
-- [Opérateur de multiplication](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Opérateur de reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Opérateur de décrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Opérateur de négation unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Opérateur de plus unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [opéwateuw d'addition](/fw/docs/web/javascwipt/wefewence/opewatows/addition)
+- [opéwateuw d-de soustwaction](/fw/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [opéwateuw de d-division](/fw/docs/web/javascwipt/wefewence/opewatows/division)
+- [opéwateuw de muwtipwication](/fw/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [opéwateuw d-de weste](/fw/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [opéwateuw d'exponentiation](/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [opéwateuw d-de décwémentation](/fw/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [opéwateuw de nyégation unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [opéwateuw d-de pwus unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

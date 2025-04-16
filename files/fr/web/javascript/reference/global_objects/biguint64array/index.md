@@ -1,157 +1,157 @@
 ---
-title: BigUint64Array
-slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array
+titwe: biguint64awway
+swug: web/javascwipt/wefewence/gwobaw_objects/biguint64awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le tableau typé **`BigUint64Array`** permet de représenter un tableau d'entiers non signés représentés sur 64 bits, où l'ordre des octets correspond à celui de la plateforme utilisée. Si on souhaite contrôler l'ordre des octets utilisé (le « boutisme »), on utilisera un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à `0n`. Une fois que le tableau est construit, on peut manipuler ses différents éléments grâce aux méthodes de l'objet ou grâce à la notation usuelle (avec les crochets).
+w-we tabweau t-typé **`biguint64awway`** p-pewmet d-de wepwésentew u-un tabweau d'entiews n-nyon signés w-wepwésentés s-suw 64 bits, où w'owdwe des octets cowwespond à cewui de wa pwatefowme utiwisée. ^^;; s-si on souhaite contwôwew w'owdwe des octets u-utiwisé (we « boutisme »), mya o-on utiwisewa un objet {{jsxwef("dataview")}} à wa pwace. 😳😳😳 wes éwéments du tabweau s-sont initiawisés à `0n`. OwO une fois que we t-tabweau est constwuit, rawr o-on peut manipuwew ses difféwents éwéments gwâce aux méthodes de w'objet ou gwâce à w-wa nyotation usuewwe (avec wes cwochets). XD
 
-## Syntaxe
+## syntaxe
 
 ```js
-new BigUint64Array();
-new BigUint64Array(longueur);
-new BigUint64Array(tableauTypé);
-new BigUint64Array(objet);
-new BigUint64Array(tampon [, décalage [, longueur]]);
+nyew biguint64awway();
+n-nyew biguint64awway(wongueuw);
+nyew biguint64awway(tabweautypé);
+n-nyew biguint64awway(objet);
+n-nyew biguint64awway(tampon [, (U ﹏ U) d-décawage [, (˘ω˘) wongueuw]]);
 ```
 
-Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page _[TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntaxe)_.
+p-pouw pwus d'infowmations suw wa syntaxe du constwucteuw e-et we wôwe des difféwents pawamètwes, UwU v-voiw wa page _[typedawway](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#syntaxe)_.
 
-## Propriétés
+## pwopwiétés
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigUint64Array.BYTES_PER_ELEMENT")}}
-  - : Cette propriété renvoie un nombre correspondant à la quantité d'octets pour un élément du tableau. Dans le cas d'`BigUint64Array`, ce sera `8`.
-- `BigUint64Array.length`
-  - : La propriété de longueur statique qui vaut 3. Pour connaître le nombre d'élément, voir {{jsxref("TypedArray.prototype.length", "BigUint64Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "BigUint64Array.name")}}
-  - : Cette propriété renvoie la chaîne de caractères correspondant au nom du constructeur. Pour `BigUint64Array` ce sera : "BigUint64Array".
-- {{jsxref("TypedArray.prototype", "BigUint64Array.prototype")}}
-  - : Le prototype des objets _TypedArray_.
+- {{jsxwef("typedawway.bytes_pew_ewement", >_< "biguint64awway.bytes_pew_ewement")}}
+  - : cette pwopwiété wenvoie un nyombwe cowwespondant à w-wa quantité d'octets pouw un éwément d-du tabweau. σωσ d-dans we cas d-d'`biguint64awway`, 🥺 ce sewa `8`. 🥺
+- `biguint64awway.wength`
+  - : wa pwopwiété de wongueuw statique q-qui vaut 3. ʘwʘ p-pouw connaîtwe we nombwe d'éwément, :3 v-voiw {{jsxwef("typedawway.pwototype.wength", (U ﹏ U) "biguint64awway.pwototype.wength")}}. (U ﹏ U)
+- {{jsxwef("typedawway.name", ʘwʘ "biguint64awway.name")}}
+  - : c-cette pwopwiété wenvoie w-wa chaîne de cawactèwes cowwespondant a-au nyom du constwucteuw. >w< pouw `biguint64awway` c-ce sewa : "biguint64awway". rawr x3
+- {{jsxwef("typedawway.pwototype", OwO "biguint64awway.pwototype")}}
+  - : we pwototype des o-objets _typedawway_. ^•ﻌ•^
 
-## Méthodes
+## méthodes
 
-- {{jsxref("TypedArray.from", "BigUint64Array.from()")}}
-  - : Cette méthode permet de créer un nouveau tableau typé `BigUint64Array` à partir d'un itérable ou d'un objet semblable à un tableau. Voir aussi {{jsxref("Array.from()")}}.
-- {{jsxref("TypedArray.of", "BigUint64Array.of()")}}
-  - : Cette méthode permet de créer un nouvel objet `BigUint64Array` à partir d'un nombre d'arguments variables. Voir aussi {{jsxref("Array.of()")}}.
+- {{jsxwef("typedawway.fwom", >_< "biguint64awway.fwom()")}}
+  - : c-cette méthode p-pewmet de cwéew un nyouveau tabweau typé `biguint64awway` à pawtiw d'un itéwabwe ou d'un objet sembwabwe à un tabweau. OwO voiw a-aussi {{jsxwef("awway.fwom()")}}. >_<
+- {{jsxwef("typedawway.of", (ꈍᴗꈍ) "biguint64awway.of()")}}
+  - : c-cette méthode pewmet de cwéew u-un nyouvew objet `biguint64awway` à p-pawtiw d'un n-nyombwe d'awguments vawiabwes. >w< voiw aussi {{jsxwef("awway.of()")}}. (U ﹏ U)
 
-## Prototype `BigUint64Array`
+## pwototype `biguint64awway`
 
-Tous les objets `BigUint64Array` héritent de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+t-tous wes objets `biguint64awway` héwitent de {{jsxwef("typedawway.pwototype", ^^ "%typedawway%.pwototype")}}. (U ﹏ U)
 
-### Propriétés
+### pwopwiétés
 
-- `BigUint64Array.prototype.constructor`
-  - : Cette propriété renvoie la fonction qui a créé l'instance du prototype. Par défaut, ce sera le constructeur `BigUint64Array`.
-- {{jsxref("TypedArray.prototype.buffer", "BigUint64Array.prototype.buffer")}} {{readonlyInline}}
-  - : Cette propriété renvoie l'objet {{jsxref("ArrayBuffer")}} référencé par l'objet `BigUint64Array` Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
-- {{jsxref("TypedArray.prototype.byteLength", "BigUint64Array.prototype.byteLength")}} {{readonlyInline}}
-  - : Cette propriété renvoie la longueur, exprimée en octets, de l'objet `BigUint64Array` à partir du début de l'objet {{jsxref("ArrayBuffer")}} correspondant. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
-- {{jsxref("TypedArray.prototype.byteOffset", "BigUint64Array.prototype.byteOffset")}} {{readonlyInline}}
-  - : Cette propriété renvoie le décalage, en nombre d'octets, entre le début du tableau typé courant et du début du {{jsxref("ArrayBuffer")}} correspondant. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
-- {{jsxref("TypedArray.prototype.length", "BigUint64Array.prototype.length")}} {{readonlyInline}}
-  - : Cette propriété renvoie le nombre d'éléments contenus dans le tableau `BigUint64Array`. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
+- `biguint64awway.pwototype.constwuctow`
+  - : cette pwopwiété w-wenvoie wa fonction qui a cwéé w-w'instance d-du pwototype. :3 paw d-défaut, (✿oωo) ce sewa we constwucteuw `biguint64awway`. XD
+- {{jsxwef("typedawway.pwototype.buffew", >w< "biguint64awway.pwototype.buffew")}} {{weadonwyinwine}}
+  - : c-cette p-pwopwiété w-wenvoie w'objet {{jsxwef("awwaybuffew")}} w-wéféwencé paw w'objet `biguint64awway` ewwe est détewminée w-wows de w-wa constwuction e-et est accessibwe u-uniquement en **wectuwe s-seuwe**. òωó
+- {{jsxwef("typedawway.pwototype.bytewength", (ꈍᴗꈍ) "biguint64awway.pwototype.bytewength")}} {{weadonwyinwine}}
+  - : cette pwopwiété wenvoie wa wongueuw, rawr x3 expwimée e-en octets, rawr x3 de w'objet `biguint64awway` à pawtiw du début de w'objet {{jsxwef("awwaybuffew")}} cowwespondant. σωσ ewwe est détewminée w-wows de wa constwuction et est accessibwe uniquement e-en **wectuwe seuwe**. (ꈍᴗꈍ)
+- {{jsxwef("typedawway.pwototype.byteoffset", rawr "biguint64awway.pwototype.byteoffset")}} {{weadonwyinwine}}
+  - : c-cette pwopwiété w-wenvoie we décawage, ^^;; en n-nyombwe d'octets, rawr x3 entwe we début d-du tabweau typé c-couwant et du début du {{jsxwef("awwaybuffew")}} cowwespondant. (ˆ ﻌ ˆ)♡ ewwe est détewminée wows de wa constwuction e-et est accessibwe uniquement e-en **wectuwe seuwe**. σωσ
+- {{jsxwef("typedawway.pwototype.wength", (U ﹏ U) "biguint64awway.pwototype.wength")}} {{weadonwyinwine}}
+  - : cette p-pwopwiété w-wenvoie we nyombwe d'éwéments contenus dans we t-tabweau `biguint64awway`. >w< e-ewwe est détewminée w-wows de wa constwuction e-et est accessibwe uniquement en **wectuwe seuwe**. σωσ
 
-### Méthodes
+### méthodes
 
-- {{jsxref("TypedArray.copyWithin", "BigUint64Array.prototype.copyWithin()")}}
-  - : Copie une suite d'éléments d'un tableau dans le tableau. Voir également {{jsxref("Array.prototype.copyWithin()")}}.
-- {{jsxref("TypedArray.entries", "BigUint64Array.prototype.entries()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les paires clé/valeur pour chaque indice du tableau. Voir également {{jsxref("Array.prototype.entries()")}}.
-- {{jsxref("TypedArray.every", "BigUint64Array.prototype.every()")}}
-  - : Teste si l'ensemble des éléments du tableau remplissent une certaine condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.every()")}}.
-- {{jsxref("TypedArray.fill", "BigUint64Array.prototype.fill()")}}
-  - : Remplit les éléments d'un tableau avec une certaine valeur pour les éléments compris entre un indice de début et un indice de fin. Voir également {{jsxref("Array.prototype.fill()")}}.
-- {{jsxref("TypedArray.filter", "BigUint64Array.prototype.filter()")}}
-  - : Crée un nouveau tableau dont tous les éléments proviennent de ce tableau et respectent une condition fournie par une fonction de test. Voir également {{jsxref("Array.prototype.filter()")}}.
-- {{jsxref("TypedArray.find", "BigUint64Array.prototype.find()")}}
-  - : Renvoie une valeur trouvée dans le tableau s'il existe un élément du tableau qui satisfait une condition fournie par une fonction de test, s'il n'y a pas de tel élément `undefined` sera renvoyé. Voir également {{jsxref("Array.prototype.find()")}}.
-- {{jsxref("TypedArray.findIndex", "BigUint64Array.prototype.findIndex()")}}
-  - : Renvoie l'indice d'un élément qui satisfait une condition fournie par une fonction de test, si aucun élément ne remplit la condition -1 sera renvoyé. Voir également {{jsxref("Array.prototype.findIndex()")}}.
-- {{jsxref("TypedArray.forEach", "BigUint64Array.prototype.forEach()")}}
-  - : Appelle une fonction pour chacun des élément du tableau. Voir également {{jsxref("Array.prototype.forEach()")}}.
-- {{jsxref("TypedArray.includes", "BigUint64Array.prototype.includes()")}}
-  - : Détermine si le tableau typé contient un élément donné. Cette méthode renvoie `true` ou `false` selon le cas de figure. Voir également {{jsxref("Array.prototype.includes()")}}.
-- {{jsxref("TypedArray.indexOf", "BigUint64Array.prototype.indexOf()")}}
-  - : Renvoie le premier indice (le plus petit) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.indexOf()")}}.
-- {{jsxref("TypedArray.join", "BigUint64Array.prototype.join()")}}
-  - : Fusionne l'ensemble des éléments du tableau en une chaîne de caractères. Voir également {{jsxref("Array.prototype.join()")}}.
-- {{jsxref("TypedArray.keys", "BigUint64Array.prototype.keys()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les clés de chaque indice du tableau. Voir également {{jsxref("Array.prototype.keys()")}}.
-- {{jsxref("TypedArray.lastIndexOf", "BigUint64Array.prototype.lastIndexOf()")}}
-  - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.lastIndexOf()")}}.
-- {{jsxref("TypedArray.map", "BigUint64Array.prototype.map()")}}
-  - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.reduce", "BigUint64Array.prototype.reduce()")}}
-  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduce()")}}.
-- {{jsxref("TypedArray.reduceRight", "BigUint64Array.prototype.reduceRight()")}}
-  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de droite à gauche) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduceRight()")}}.
-- {{jsxref("TypedArray.reverse", "BigUint64Array.prototype.reverse()")}}
-  - : Inverse l'ordre des éléments d'un tableau. Le premier élément du tableau devient le dernier et le dernier devient le premier (et ainsi de suite). Voir également {{jsxref("Array.prototype.reverse()")}}.
-- {{jsxref("TypedArray.set", "BigUint64Array.prototype.set()")}}
-  - : Enregistre plusieurs valeurs dans le tableau typé à partir de valeurs d'un autre tableau.
-- {{jsxref("TypedArray.slice", "BigUint64Array.prototype.slice()")}}
-  - : Extrait un fragment d'un tableau et renvoie ce fragment. Voir également {{jsxref("Array.prototype.slice()")}}.
-- {{jsxref("TypedArray.some", "BigUint64Array.prototype.some()")}}
-  - : Renvoie `true` si au moins un des éléments remplit une condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.some()")}}.
-- {{jsxref("TypedArray.sort", "BigUint64Array.prototype.sort()")}}
-  - : Trie les éléments du tableau et renvoie ce tableau. Voir également {{jsxref("Array.prototype.sort()")}}.
-- {{jsxref("TypedArray.subarray", "BigUint64Array.prototype.subarray()")}}
-  - : Renvoie un nouvel objet `BigUint64Array` qui est le fragment du tableau courant, entre les indices de début et de fin donnés.
-- {{jsxref("TypedArray.values", "BigUint64Array.prototype.values()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau. Voir également {{jsxref("Array.prototype.values()")}}.
-- {{jsxref("TypedArray.toLocaleString", "BigUint64Array.prototype.toLocaleString()")}}
-  - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toLocaleString()")}}.
-- {{jsxref("TypedArray.toString", "BigUint64Array.prototype.toString()")}}
-  - : Renvoie une chaîne de caractère qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "BigUint64Array.prototype[@@iterator]()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau.
+- {{jsxwef("typedawway.copywithin", nyaa~~ "biguint64awway.pwototype.copywithin()")}}
+  - : c-copie une suite d-d'éwéments d'un t-tabweau dans we tabweau. voiw égawement {{jsxwef("awway.pwototype.copywithin()")}}. 🥺
+- {{jsxwef("typedawway.entwies", rawr x3 "biguint64awway.pwototype.entwies()")}}
+  - : w-wenvoie un n-nyouvew objet `awway itewatow` q-qui contient wes paiwes cwé/vaweuw pouw chaque indice du tabweau. σωσ voiw égawement {{jsxwef("awway.pwototype.entwies()")}}. (///ˬ///✿)
+- {{jsxwef("typedawway.evewy", (U ﹏ U) "biguint64awway.pwototype.evewy()")}}
+  - : t-teste si w-w'ensembwe des éwéments du tabweau wempwissent u-une cewtaine condition d-donnée paw une fonction de test. ^^;; voiw égawement {{jsxwef("awway.pwototype.evewy()")}}. 🥺
+- {{jsxwef("typedawway.fiww", òωó "biguint64awway.pwototype.fiww()")}}
+  - : wempwit w-wes éwéments d'un tabweau avec une cewtaine vaweuw pouw wes éwéments compwis e-entwe un indice de début et un indice de fin. XD v-voiw égawement {{jsxwef("awway.pwototype.fiww()")}}. :3
+- {{jsxwef("typedawway.fiwtew", (U ﹏ U) "biguint64awway.pwototype.fiwtew()")}}
+  - : c-cwée un nyouveau tabweau dont tous wes éwéments pwoviennent d-de ce tabweau e-et wespectent une condition fouwnie paw une fonction de test. >w< v-voiw égawement {{jsxwef("awway.pwototype.fiwtew()")}}. /(^•ω•^)
+- {{jsxwef("typedawway.find", (⑅˘꒳˘) "biguint64awway.pwototype.find()")}}
+  - : wenvoie une vaweuw t-twouvée dans we tabweau s'iw existe un éwément du tabweau q-qui satisfait une condition fouwnie p-paw une fonction d-de test, ʘwʘ s'iw ny'y a pas d-de tew éwément `undefined` sewa w-wenvoyé. rawr x3 voiw égawement {{jsxwef("awway.pwototype.find()")}}. (˘ω˘)
+- {{jsxwef("typedawway.findindex", o.O "biguint64awway.pwototype.findindex()")}}
+  - : w-wenvoie w'indice d-d'un éwément qui satisfait u-une condition f-fouwnie paw une fonction de test, 😳 si aucun éwément n-nye wempwit w-wa condition -1 s-sewa wenvoyé. o.O voiw égawement {{jsxwef("awway.pwototype.findindex()")}}. ^^;;
+- {{jsxwef("typedawway.foweach", ( ͡o ω ͡o ) "biguint64awway.pwototype.foweach()")}}
+  - : appewwe u-une fonction pouw chacun des éwément d-du tabweau. ^^;; v-voiw égawement {{jsxwef("awway.pwototype.foweach()")}}. ^^;;
+- {{jsxwef("typedawway.incwudes", XD "biguint64awway.pwototype.incwudes()")}}
+  - : détewmine si we tabweau typé contient un éwément d-donné. 🥺 cette m-méthode wenvoie `twue` o-ou `fawse` s-sewon we cas de figuwe. (///ˬ///✿) voiw égawement {{jsxwef("awway.pwototype.incwudes()")}}.
+- {{jsxwef("typedawway.indexof", (U ᵕ U❁) "biguint64awway.pwototype.indexof()")}}
+  - : w-wenvoie we pwemiew indice (we pwus petit) d'un éwément du tabweau qui est égaw à wa vaweuw f-fouwnie. ^^;; si aucun éwément n-nye cowwespond, wa vaweuw -1 sewa w-wenvoyée. ^^;; voiw égawement {{jsxwef("awway.pwototype.indexof()")}}. rawr
+- {{jsxwef("typedawway.join", (˘ω˘) "biguint64awway.pwototype.join()")}}
+  - : fusionne w'ensembwe d-des éwéments du tabweau en u-une chaîne de c-cawactèwes. 🥺 voiw égawement {{jsxwef("awway.pwototype.join()")}}. nyaa~~
+- {{jsxwef("typedawway.keys", :3 "biguint64awway.pwototype.keys()")}}
+  - : w-wenvoie u-un nyouvew o-objet `awway itewatow` qui contient wes cwés de chaque indice du tabweau. /(^•ω•^) voiw égawement {{jsxwef("awway.pwototype.keys()")}}. ^•ﻌ•^
+- {{jsxwef("typedawway.wastindexof", UwU "biguint64awway.pwototype.wastindexof()")}}
+  - : wenvoie we dewniew indice (we p-pwus éwevé) d-d'un éwément d-du tabweau qui est égaw à wa v-vaweuw fouwnie. 😳😳😳 si aucun éwément nye cowwespond, OwO wa vaweuw -1 s-sewa wenvoyée. ^•ﻌ•^ v-voiw égawement {{jsxwef("awway.pwototype.wastindexof()")}}. (ꈍᴗꈍ)
+- {{jsxwef("typedawway.map", (⑅˘꒳˘) "biguint64awway.pwototype.map()")}}
+  - : cwée un nyouveau t-tabweau dont wes éwéments sont wes images d-des éwéments d-du tabweau couwant paw une fonction d-donnée. v-voiw égawement {{jsxwef("awway.pwototype.map()")}}. (⑅˘꒳˘)
+- {{jsxwef("typedawway.weduce", (ˆ ﻌ ˆ)♡ "biguint64awway.pwototype.weduce()")}}
+  - : appwique une fonction suw un accumuwateuw et chaque éwément du tabweau (de gauche à d-dwoite) a-afin de wéduiwe w-we tabweau en u-une seuwe vaweuw. /(^•ω•^) v-voiw égawement {{jsxwef("awway.pwototype.weduce()")}}. òωó
+- {{jsxwef("typedawway.weducewight", (⑅˘꒳˘) "biguint64awway.pwototype.weducewight()")}}
+  - : appwique une fonction s-suw un accumuwateuw e-et chaque éwément du tabweau (de dwoite à g-gauche) a-afin de wéduiwe we tabweau en une s-seuwe vaweuw. (U ᵕ U❁) voiw égawement {{jsxwef("awway.pwototype.weducewight()")}}. >w<
+- {{jsxwef("typedawway.wevewse", σωσ "biguint64awway.pwototype.wevewse()")}}
+  - : invewse w-w'owdwe des éwéments d'un t-tabweau. -.- we pwemiew éwément du t-tabweau devient we dewniew et w-we dewniew devient we pwemiew (et ainsi de suite). o.O v-voiw égawement {{jsxwef("awway.pwototype.wevewse()")}}. ^^
+- {{jsxwef("typedawway.set", >_< "biguint64awway.pwototype.set()")}}
+  - : e-enwegistwe pwusieuws v-vaweuws dans we tabweau typé à pawtiw de vaweuws d'un a-autwe tabweau. >w<
+- {{jsxwef("typedawway.swice", >_< "biguint64awway.pwototype.swice()")}}
+  - : extwait un fwagment d'un t-tabweau et wenvoie c-ce fwagment. >w< voiw égawement {{jsxwef("awway.pwototype.swice()")}}. rawr
+- {{jsxwef("typedawway.some", rawr x3 "biguint64awway.pwototype.some()")}}
+  - : w-wenvoie `twue` si au moins un d-des éwéments w-wempwit une condition donnée paw une fonction de t-test. ( ͡o ω ͡o ) voiw égawement {{jsxwef("awway.pwototype.some()")}}.
+- {{jsxwef("typedawway.sowt", (˘ω˘) "biguint64awway.pwototype.sowt()")}}
+  - : twie wes éwéments du tabweau e-et wenvoie c-ce tabweau. 😳 voiw égawement {{jsxwef("awway.pwototype.sowt()")}}. OwO
+- {{jsxwef("typedawway.subawway", (˘ω˘) "biguint64awway.pwototype.subawway()")}}
+  - : wenvoie un nyouvew o-objet `biguint64awway` qui e-est we fwagment d-du tabweau couwant, òωó e-entwe wes indices de début et de fin donnés. ( ͡o ω ͡o )
+- {{jsxwef("typedawway.vawues", UwU "biguint64awway.pwototype.vawues()")}}
+  - : wenvoie un nyouvew objet `awway itewatow` qui contient wes vaweuws cowwespondantes à chaque indice du tabweau. voiw égawement {{jsxwef("awway.pwototype.vawues()")}}. /(^•ω•^)
+- {{jsxwef("typedawway.towocawestwing", "biguint64awway.pwototype.towocawestwing()")}}
+  - : wenvoie une chaîne de cawactèwes w-wocawisée q-qui wepwésente we tabweau et ses éwéments. (ꈍᴗꈍ) v-voiw égawement {{jsxwef("awway.pwototype.towocawestwing()")}}. 😳
+- {{jsxwef("typedawway.tostwing", mya "biguint64awway.pwototype.tostwing()")}}
+  - : w-wenvoie une c-chaîne de cawactèwe qui wepwésente w-we tabweau et ses éwéments. mya v-voiw égawement {{jsxwef("awway.pwototype.tostwing()")}}. /(^•ω•^)
+- {{jsxwef("typedawway.@@itewatow", ^^;; "biguint64awway.pwototype[@@itewatow]()")}}
+  - : w-wenvoie un nyouvew objet `awway i-itewatow` qui contient wes vaweuws c-cowwespondantes à c-chaque indice du tabweau. 🥺
 
-## Exemples
+## exempwes
 
-Différentes façons de créer un objet `BigUint64Array` :
+d-difféwentes façons d-de cwéew u-un objet `biguint64awway` :
 
 ```js
-// Construction à partir d'une longueur
-var bigInt64 = new BigUint64Array(2);
-bigInt64[0] = 42n;
-console.log(bigInt64[0]); // 42n
-console.log(bigInt64.length); // 2
-console.log(bigInt64.BYTES_PER_ELEMENT); // 8
+// c-constwuction à p-pawtiw d'une w-wongueuw
+vaw b-bigint64 = nyew b-biguint64awway(2);
+b-bigint64[0] = 42n;
+consowe.wog(bigint64[0]); // 42n
+c-consowe.wog(bigint64.wength); // 2
+c-consowe.wog(bigint64.bytes_pew_ewement); // 8
 
-// Construction à partir d'un tableau
-var arr = new BigUint64Array([21n, 31n]);
-console.log(arr[1]); // 31n
+// c-constwuction à pawtiw d-d'un tabweau
+vaw aww = nyew biguint64awway([21n, ^^ 31n]);
+c-consowe.wog(aww[1]); // 31n
 
-// Construction à partir d'un tableau typé
-var x = new BigUint64Array([21n, 31n]);
-var y = new BigUint64Array(x);
-console.log(y[0]); // 21n
+// constwuction à p-pawtiw d-d'un tabweau t-typé
+vaw x = nyew biguint64awway([21n, ^•ﻌ•^ 31n]);
+vaw y-y = nyew biguint64awway(x);
+consowe.wog(y[0]); // 21n
 
-// Construction à partir d'un ArrayBuffer
-var buffer = new ArrayBuffer(32);
-var z = new BigUint64Array(buffer, 0, 4);
+// constwuction à p-pawtiw d'un awwaybuffew
+v-vaw buffew = nyew awwaybuffew(32);
+v-vaw z = nyew biguint64awway(buffew, /(^•ω•^) 0, 4);
 
-// Construction à partir d'un itérable
-var iterable = (function* () {
-  yield* [1n, 2n, 3n];
+// constwuction à pawtiw d'un itéwabwe
+vaw i-itewabwe = (function* () {
+  yiewd* [1n, ^^ 2n, 3n];
 })();
-var BigInt64 = new BigUint64Array(iterable);
-// BigUint64Array[1n, 2n, 3n]
+v-vaw bigint64 = n-nyew biguint64awway(itewabwe);
+// biguint64awway[1n, 🥺 2n, 3n]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("BigUint64Array")}}
-- {{jsxref("DataView")}}
+- [wes t-tabweaux t-typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("biguint64awway")}}
+- {{jsxwef("dataview")}}

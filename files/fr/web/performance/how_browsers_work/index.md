@@ -1,219 +1,219 @@
 ---
-title: "Remplir la page: comment fonctionnent les navigateurs"
-slug: Web/Performance/How_browsers_work
+titwe: "wempwiw wa page: comment f-fonctionnent w-wes nyavigateuws"
+s-swug: web/pewfowmance/how_bwowsews_wowk
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{quickwinkswithsubpages("web/pewfowmance")}}
 
-Les utilisateurs veulent des expériences Web avec un contenu rapide à charger et une interaction fluide. Par conséquent, un développeur doit s'efforcer d'atteindre ces deux objectifs.
+wes u-utiwisateuws v-veuwent des expéwiences w-web avec u-un contenu wapide à c-chawgew et une intewaction fwuide. (✿oωo) paw conséquent, (U ᵕ U❁) un dévewoppeuw doit s-s'effowcew d'atteindwe ces deux objectifs. ʘwʘ
 
-Pour comprendre comment améliorer les performances et les performances perçues, il est utile de comprendre le fonctionnement du navigateur.
+pouw c-compwendwe comment améwiowew wes p-pewfowmances et wes pewfowmances pewçues, ʘwʘ iw est utiwe de compwendwe w-we fonctionnement du nyavigateuw. XD
 
-## Vue générale
+## vue g-généwawe
 
-Les sites rapides offrent une meilleure expérience utilisateur. Les utilisateurs veulent et s'attendent à des expériences Web avec un contenu rapide à charger et à interagir avec fluidité.
+wes s-sites wapides offwent une meiwweuwe expéwience utiwisateuw. (✿oωo) wes utiwisateuws v-veuwent et s'attendent à des expéwiences web avec un contenu wapide à chawgew e-et à intewagiw avec fwuidité. ^•ﻌ•^
 
-La compréhension des problèmes liés 1) à la latence et 2) les problèmes liés au fait que, dans la plupart des cas, les navigateurs fonctionné à un seul thread. Cela sont deux problèmes majeurs dans les performances Web.
+w-wa compwéhension d-des pwobwèmes w-wiés 1) à w-wa watence et 2) wes pwobwèmes wiés au fait que, ^•ﻌ•^ d-dans wa pwupawt des cas, >_< wes nyavigateuws fonctionné à u-un seuw thwead. mya cewa sont deux pwobwèmes majeuws dans wes pewfowmances web. σωσ
 
-La latence est notre principale menace à surmonter pour assurer une charge rapide. Pour être rapides à charger, les objectifs des développeurs incluent l'envoi des informations demandées aussi rapidement que possible, ou du moins, cela semble super rapide. La latence du réseau est le temps nécessaire pour transmettre des octets par liaison radio aux ordinateurs. La performance Web est ce que nous devons faire pour que le chargement de la page se fasse le plus rapidement possible.
+wa watence e-est nyotwe pwincipawe menace à s-suwmontew pouw a-assuwew une c-chawge wapide. rawr pouw êtwe wapides à chawgew, (✿oωo) wes objectifs des d-dévewoppeuws incwuent w-w'envoi des infowmations d-demandées aussi w-wapidement que possibwe, :3 ou du m-moins, rawr x3 cewa sembwe supew wapide. ^^ w-wa watence du wéseau est we temps nyécessaiwe p-pouw twansmettwe des octets paw w-wiaison wadio aux owdinateuws. ^^ w-wa pewfowmance web e-est ce que nyous devons faiwe pouw que we chawgement de wa page se fasse we pwus wapidement possibwe. OwO
 
-Pour la plupart, les navigateurs sont considérés comme un seul thread. Pour que les interactions se déroulent sans heurt, l'objectif du développeur est d'assurer des interactions de site performantes, du défilement en douceur à la réactivité au touchers Le temps de rendu est essentiel, car il permet de s'assurer que le fil principal peut effectuer tout le travail que nous lui faisons, tout en restant disponible pour gérer les interactions de l'utilisateur.
+pouw wa p-pwupawt, ʘwʘ wes nyavigateuws s-sont considéwés comme u-un seuw thwead. /(^•ω•^) p-pouw que wes i-intewactions se déwouwent sans heuwt, ʘwʘ w'objectif du dévewoppeuw e-est d'assuwew des intewactions de site pewfowmantes, (⑅˘꒳˘) du défiwement en douceuw à w-wa wéactivité au touchews w-we temps de wendu e-est essentiew, UwU c-caw iw pewmet de s'assuwew que w-we fiw pwincipaw p-peut effectuew t-tout we twavaiw q-que nyous wui faisons, -.- tout en westant disponibwe p-pouw géwew wes i-intewactions d-de w'utiwisateuw. :3
 
-Les performances Web peuvent être améliorées en comprenant le caractère mono-thread du navigateur et en minimisant les responsabilités du thread principal, lorsque cela est possible et approprié, pour assurer un rendu fluide et des réponses aux interactions immédiates.
+w-wes pewfowmances w-web peuvent êtwe améwiowées en compwenant we cawactèwe mono-thwead d-du nyavigateuw et en minimisant wes wesponsabiwités du thwead pwincipaw, >_< wowsque cewa est possibwe et a-appwopwié, pouw assuwew un wendu fwuide et des wéponses aux i-intewactions immédiates. nyaa~~
 
-## Navigation
+## n-nyavigation
 
-La navigation est la première étape du chargement d'une page Web. Cela se produit chaque fois qu'un utilisateur demande une page en saisissant une URL dans la barre d'adresse, en cliquant sur un lien, en soumettant un formulaire, ainsi que d'autres actions.
+w-wa nyavigation est wa p-pwemièwe étape du chawgement d-d'une page web. ( ͡o ω ͡o ) c-cewa se pwoduit chaque fois qu'un utiwisateuw demande une page en saisissant une uww dans wa bawwe d-d'adwesse, o.O en cwiquant suw un w-wien, :3 en soumettant un fowmuwaiwe, (˘ω˘) a-ainsi que d'autwes a-actions. rawr x3
 
-L'un des objectifs de la performance Web est de minimiser le temps de navigation. Dans des conditions idéales, cela ne prend généralement pas trop de temps, mais la latence et la bande passante sont des ennemis qui peuvent causer des retards.
+w'un des objectifs de wa pewfowmance w-web est de m-minimisew we temps de nyavigation. (U ᵕ U❁) d-dans des conditions i-idéawes, cewa nye pwend généwawement pas twop de temps, 🥺 mais wa watence e-et wa bande passante s-sont des e-ennemis qui peuvent causew des w-wetawds. >_<
 
-### Recherche DNS
+### wechewche d-dns
 
-La première étape de la navigation vers une page Web consiste à rechercher l'emplacement des actifs de cette page. Si vous accédez à `https://example.com`, la page HTML se trouve sur le serveur avec l'adresse IP de `93.184.216.34`. Si vous n'avez jamais visité ce site, une recherche DNS doit être effectuée.
+wa pwemièwe étape d-de wa nyavigation vews une page web consiste à wechewchew w'empwacement des actifs d-de cette page. s-si vous accédez à `https://exampwe.com`, :3 wa page htmw se twouve suw we sewveuw a-avec w'adwesse i-ip de `93.184.216.34`. :3 si vous ny'avez jamais visité ce site, (ꈍᴗꈍ) u-une wechewche dns doit êtwe effectuée.
 
-Votre navigateur demande une recherche DNS, qui est éventuellement effectuée par un serveur de noms, qui lui-même répond avec une adresse IP. Après cette demande initiale, l'adresse IP sera probablement mise en cache pendant un certain temps, ce qui accélérera les demandes suivantes en récupérant l'adresse IP du cache au lieu de contacter à nouveau un serveur de noms.<
+votwe nyavigateuw demande une wechewche d-dns, qui est éventuewwement effectuée paw un sewveuw de noms, σωσ q-qui wui-même w-wépond avec une adwesse ip. 😳 apwès cette demande initiawe, mya w'adwesse i-ip sewa p-pwobabwement mise en cache pendant un cewtain temps, (///ˬ///✿) ce qui accéwéwewa w-wes demandes suivantes e-en wécupéwant w'adwesse ip du cache au wieu de contactew à nouveau u-un sewveuw de nyoms.<
 
-Les recherches DNS ne doivent généralement être effectuées qu'une fois par nom d'hôte pour le chargement d'une page. Cependant, des recherches DNS doivent être effectuées pour chaque nom d'hôte unique référencé par la page demandée.
+wes w-wechewches dns n-nye doivent généwawement êtwe effectuées qu'une f-fois paw nyom d'hôte pouw w-we chawgement d'une p-page. ^^ cependant, (✿oωo) d-des wechewches dns doivent êtwe e-effectuées p-pouw chaque nyom d'hôte unique wéféwencé paw w-wa page demandée. ( ͡o ω ͡o )
 
-Si vos fichier de police, images, scripts, publicites/annonces et métriques ont tous un nom d'hôte différent, une recherche DNS devra être effectuée pour chacun d'eux.
+s-si vos fichiew d-de powice, ^^;; images, :3 scwipts, pubwicites/annonces e-et métwiques ont tous un n-nyom d'hôte difféwent, 😳 u-une wechewche dns devwa êtwe effectuée pouw chacun d'eux. XD
 
-![](latency.jpg)
+![](watency.jpg)
 
-Cela peut être problématique pour les performances, en particulier sur les réseaux mobiles. Lorsqu'un utilisateur est sur un réseau mobile, chaque recherche DNS doit aller du téléphone à la tour cellulaire pour atteindre un serveur DNS faisant autorité. La distance entre un téléphone, une tour de téléphonie cellulaire et le serveur de noms peut ajouter une latence significative.
+c-cewa peut êtwe p-pwobwématique p-pouw wes p-pewfowmances, (///ˬ///✿) en pawticuwiew suw w-wes wéseaux mobiwes. o.O wowsqu'un utiwisateuw est suw un wéseau mobiwe, o.O chaque wechewche dns doit a-awwew du téwéphone à wa touw c-cewwuwaiwe pouw atteindwe un sewveuw d-dns faisant autowité. XD wa d-distance entwe un téwéphone, ^^;; u-une touw de téwéphonie c-cewwuwaiwe e-et we sewveuw d-de nyoms peut a-ajoutew une watence significative. 😳😳😳
 
-### TCP Handshake
+### tcp handshake
 
-Une fois que l'adresse IP est connue, le navigateur établit une connexion avec le serveur via un {{glossary('TCP handshake','négociation de liaison TCP à trois voies')}}. TCe mécanisme est conçu pour que deux entités essayant de communiquer, dans ce cas le navigateur et le serveur Web, puissent négocier les paramètres de la connexion de socket TCP sur le réseau avant de transmettre des données, souvent sur {{glossary('HTTPS')}}.
+une fois que w'adwesse ip est connue, (U ᵕ U❁) we nyavigateuw étabwit u-une connexion a-avec we sewveuw v-via un {{gwossawy('tcp handshake','négociation d-de wiaison tcp à twois voies')}}. /(^•ω•^) tce mécanisme est conçu p-pouw que deux entités e-essayant de communiquew, 😳😳😳 d-dans ce cas we nyavigateuw et we sewveuw web, rawr x3 puissent n-négociew w-wes pawamètwes de wa connexion d-de socket tcp suw w-we wéseau avant de twansmettwe des données, ʘwʘ souvent suw {{gwossawy('https')}}. UwU
 
-La technique de négociation à trois voies de TCP est souvent appelée "SYN-SYN-ACK", ou plus précisément SYN, SYN-ACK, ACK, car trois messages sont transmis par TCP pour négocier et démarrer une session TCP entre deux ordinateurs. Oui, cela signifie trois messages supplémentaires entre chaque serveur et la demande doit encore être faite.
+wa technique d-de nyégociation à t-twois voies d-de tcp est souvent a-appewée "syn-syn-ack", (⑅˘꒳˘) o-ou pwus pwécisément s-syn, ^^ syn-ack, a-ack, 😳😳😳 caw twois messages sont twansmis p-paw tcp pouw n-nyégociew et démawwew une s-session tcp entwe deux owdinateuws. òωó oui, cewa signifie t-twois messages suppwémentaiwes e-entwe chaque s-sewveuw et wa demande doit encowe êtwe f-faite. ^^;;
 
-### Negotiation TLS
+### nyegotiation tws
 
-Pour les connexions sécurisées établies via HTTPS, une autre "liaison" est requise. Cette négociation, ou plutôt la négociation {{glossary('TLS')}}, détermine quel chiffrement sera utilisé pour chiffrer la communication, vérifie le serveur et établit qu'une connexion sécurisée est en place avant de commencer le transfert effectif des données. Cela nécessite encore trois allers-retours vers le serveur avant que la demande de contenu ne soit réellement envoyée.
+pouw wes c-connexions sécuwisées étabwies v-via https, (✿oωo) u-une autwe "wiaison" est wequise. rawr cette nyégociation, XD ou pwutôt w-wa nyégociation {{gwossawy('tws')}}, 😳 détewmine quew chiffwement s-sewa utiwisé p-pouw chiffwew wa communication, (U ᵕ U❁) v-véwifie we sewveuw et étabwit q-qu'une connexion s-sécuwisée est en pwace avant de commencew we t-twansfewt effectif des données. UwU cewa nyécessite e-encowe twois a-awwews-wetouws vews we sewveuw avant q-que wa demande de contenu nye s-soit wéewwement e-envoyée. OwO
 
-![](ssl.jpg)
+![](ssw.jpg)
 
-Bien que sécuriser la connexion ajoute du temps au chargement de la page, une connexion sécurisée vaut la dépense en latence, car les données transmises entre le navigateur et le serveur Web ne peuvent pas être déchiffrées par un tiers.
+b-bien que sécuwisew wa connexion ajoute du temps au chawgement de wa page, 😳 une connexion sécuwisée vaut wa dépense en watence, (˘ω˘) caw wes données twansmises entwe we nyavigateuw et we sewveuw web n-nye peuvent pas êtwe d-déchiffwées paw un tiews. òωó
 
-Après les 8 allers-retours, le navigateur est enfin en mesure de faire la demande.
+apwès wes 8 a-awwews-wetouws, OwO w-we nyavigateuw e-est enfin en mesuwe de faiwe wa d-demande. (✿oωo)
 
-## Response
+## wesponse
 
-Une fois la connexion établie avec un serveur Web établie, le navigateur envoie une [demande HTTP `GET`](/fr/docs/Web/HTTP/Methods) initiale au nom de l'utilisateur, qui pour les sites Web est le plus souvent un fichier HTML. Dès que le serveur reçoit la demande, il répond avec les en-têtes de réponse pertinents et le contenu du code HTML.
+une fois w-wa connexion étabwie a-avec un sewveuw web étabwie, (⑅˘꒳˘) w-we nyavigateuw envoie une [demande h-http `get`](/fw/docs/web/http/methods) initiawe a-au nyom de w'utiwisateuw, /(^•ω•^) qui pouw wes sites w-web est we p-pwus souvent un f-fichiew htmw. 🥺 dès q-que we sewveuw w-weçoit wa demande, -.- i-iw wépond a-avec wes en-têtes d-de wéponse p-pewtinents et we contenu du code h-htmw. ( ͡o ω ͡o )
 
-```html
-<!doctype html>
-<html lang="fr">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="fw">
   <head>
-    <meta charset="UTF-8" />
-    <title>Une page simple</title>
-    <link rel="stylesheet" src="styles.css" />
-    <script src="monscript.js"></script>
+    <meta chawset="utf-8" />
+    <titwe>une p-page simpwe</titwe>
+    <wink wew="stywesheet" swc="stywes.css" />
+    <scwipt s-swc="monscwipt.js"></scwipt>
   </head>
   <body>
-    <h1 class="heading">Ma Page</h1>
-    <p>Un paragraph avec in <a href="https://example.com/about">lien</a></p>
+    <h1 cwass="heading">ma p-page</h1>
+    <p>un p-pawagwaph avec i-in <a hwef="https://exampwe.com/about">wien</a></p>
     <div>
-      <img src="monImage.jpg" alt="description de l'image" />
+      <img swc="monimage.jpg" awt="descwiption d-de w'image" />
     </div>
-    <script src="unautrescript.js"></script>
+    <scwipt swc="unautwescwipt.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-La réponse pour cette demande initiale contient le premier octet de données reçu. {{glossary('Time to First Byte')}} (TTFB) est le temps écoulé entre le moment où l'utilisateur a fait la demande (disons en cliquant sur un lien) et la réception du premier paquet HTML. Le premier bloc de contenu est généralement constitué de 14 Kb de données.
+w-wa wéponse pouw cette d-demande initiawe contient we p-pwemiew octet de données weçu. 😳😳😳 {{gwossawy('time to fiwst byte')}} (ttfb) est we temps écouwé e-entwe we moment où w'utiwisateuw a-a fait wa demande (disons en c-cwiquant suw un wien) et wa wéception du pwemiew paquet htmw. (˘ω˘) w-we pwemiew bwoc de contenu est g-généwawement constitué d-de 14 k-kb de données. ^^
 
-Dans notre exemple ci-dessus, la demande est nettement inférieure à 14 Kb, mais les ressources liées ne sont pas demandées tant que le navigateur n'a pas rencontré les liens lors de l'analyse, décrit ci-dessous.
+dans nyotwe exempwe ci-dessus, σωσ w-wa demande est nyettement i-inféwieuwe à 14 kb, m-mais wes wessouwces wiées nye sont pas demandées t-tant que we nyavigateuw ny'a p-pas wencontwé wes w-wiens wows de w-w'anawyse, 🥺 décwit ci-dessous. 🥺
 
-### TCP Slow Start / 14kb rule
+### t-tcp swow stawt / 14kb w-wuwe
 
-Le premier paquet de réponse sera de 14 Kb. Cela fait partie de {{glossary('TCP slow start')}}, un algorithme qui équilibre la vitesse d'une connexion réseau. Le démarrage lent augmente progressivement la quantité de données transmises jusqu'à ce que la bande passante maximale du réseau puisse être déterminée.
+w-we pwemiew paquet d-de wéponse sewa de 14 kb. cewa f-fait pawtie de {{gwossawy('tcp s-swow stawt')}}, /(^•ω•^) u-un awgowithme q-qui équiwibwe wa v-vitesse d'une c-connexion wéseau. (⑅˘꒳˘) w-we démawwage w-went augmente pwogwessivement wa quantité de données t-twansmises jusqu'à ce que w-wa bande passante maximawe du w-wéseau puisse êtwe d-détewminée. -.-
 
-Avec un {{glossary('TCP slow start')}}, après la réception du paquet initial, le serveur double la taille du paquet suivant, pour atteindre environ 28 Kb. La taille des paquets suivants augmente jusqu'à atteindre un seuil prédéterminé ou jusqu'à ce qu'un encombrement se produise.
+a-avec un {{gwossawy('tcp swow stawt')}}, 😳 apwès wa wéception d-du paquet initiaw, 😳😳😳 w-we sewveuw d-doubwe wa taiwwe du paquet suivant, >w< pouw atteindwe enviwon 28 kb. UwU w-wa taiwwe des p-paquets suivants augmente jusqu'à a-atteindwe un s-seuiw pwédétewminé ou jusqu'à ce qu'un encombwement se pwoduise. /(^•ω•^)
 
-![](congestioncontrol.jpg)
+![](congestioncontwow.jpg)
 
-Si vous avez déjà entendu parler de la règle de 14 Kb pour le chargement de page initial, c'est le démarrage lent de TCP qui explique pourquoi la réponse initiale est de 14 Ko et pourquoi l'optimisation des performances Web appelle à l'optimisation de la focalisation avec cette réponse initiale à l'esprit. Le démarrage lent TCP augmente progressivement les vitesses de transmission en fonction des capacités du réseau afin d'éviter les encombrements.
+s-si vous avez déjà e-entendu pawwew d-de wa wègwe d-de 14 kb pouw we chawgement de page initiaw, 🥺 c'est w-we démawwage w-went de tcp qui expwique pouwquoi wa wéponse i-initiawe est de 14 ko et pouwquoi w'optimisation d-des pewfowmances web appewwe à w-w'optimisation d-de wa focawisation avec cette wéponse i-initiawe à w-w'espwit. we démawwage went t-tcp augmente pwogwessivement wes v-vitesses de twansmission e-en fonction d-des capacités d-du wéseau afin d'évitew w-wes encombwements. >_<
 
-### Contrôle congestion
+### c-contwôwe c-congestion
 
-Lorsque le serveur envoie des données sous forme de paquets TCP, le client de l'utilisateur confirme la livraison en renvoyant des accusés de réception, ou ACK. La connexion a une capacité limitée en fonction des conditions matérielles et du réseau. Si le serveur envoie trop de paquets trop rapidement, ils seront supprimés. Sens, il n'y aura pas de reconnaissance. Le serveur l'enregistre comme ACK manquant. Les algorithmes de contrôle d'encombrement utilisent ce flux de paquets envoyés et d'accusés de réception pour déterminer un débit d'envoi.
+wowsque we sewveuw e-envoie des données sous fowme de paquets tcp, rawr w-we cwient de w'utiwisateuw c-confiwme w-wa wivwaison en wenvoyant des accusés de wéception, (ꈍᴗꈍ) ou ack. wa connexion a u-une capacité wimitée en fonction d-des conditions m-matéwiewwes et du wéseau. -.- si we sewveuw envoie t-twop de paquets twop wapidement, ( ͡o ω ͡o ) i-iws sewont s-suppwimés. (⑅˘꒳˘) sens, i-iw ny'y auwa pas d-de weconnaissance. w-we sewveuw w'enwegistwe comme ack manquant. mya wes awgowithmes de contwôwe d'encombwement u-utiwisent ce fwux d-de paquets envoyés et d'accusés de wéception pouw détewminew u-un débit d'envoi. rawr x3
 
-## Parsing
+## pawsing
 
-Une fois que le navigateur a reçu le premier bloc de données, il peut commencer à analyser les informations reçues. L'analyse, our {{glossary('speculative parsing', 'parsing')}}, est l'étape par laquelle le navigateur prend pour transformer les données qu'il reçoit sur le réseau en {{glossary('DOM')}} et {{glossary('CSSOM' )}}, qui est utilisé par le moteur de rendu pour peindre une page à l'écran.
+une fois que we nyavigateuw a weçu we pwemiew b-bwoc de données, (ꈍᴗꈍ) i-iw peut commencew à anawysew w-wes infowmations weçues. ʘwʘ w'anawyse, ouw {{gwossawy('specuwative p-pawsing', :3 'pawsing')}}, o.O e-est w'étape paw waquewwe w-we nyavigateuw pwend pouw twansfowmew w-wes données qu'iw weçoit suw we wéseau en {{gwossawy('dom')}} e-et {{gwossawy('cssom' )}}, /(^•ω•^) qui est utiwisé paw we moteuw d-de wendu pouw p-peindwe une page à w-w'écwan. OwO
 
-Le DOM est la représentation interne du balisage pour le navigateur. Le DOM est également exposé et peut être manipulé via diverses API en JavaScript.
+we dom est wa wepwésentation intewne du bawisage p-pouw we navigateuw. σωσ we dom est égawement exposé et peut êtwe manipuwé via d-divewses api en j-javascwipt. (ꈍᴗꈍ)
 
-Même si le code HTML de la page de demande est plus volumineux que le paquet initial de 14 Kb, le navigateur commencera à analyser et à tenter de restituer une expérience en fonction des données dont il dispose. C'est pourquoi il est important pour l'optimisation des performances Web d'inclure tout ce dont le navigateur a besoin pour commencer le rendu d'une page, ou du moins d'un modèle de page - les CSS et HTML nécessaires au premier rendu - dans les 14 premiers kilo-octets. Mais avant que tout ne soit rendu à l'écran, le HTML, CSS et JavaScript doivent être analysés.
+même s-si we code htmw d-de wa page de demande est pwus vowumineux que w-we paquet initiaw d-de 14 kb, ( ͡o ω ͡o ) we nyavigateuw commencewa à anawysew e-et à tentew de westituew une expéwience en f-fonction des données dont iw dispose. rawr x3 c'est pouwquoi i-iw est impowtant p-pouw w'optimisation des p-pewfowmances web d-d'incwuwe tout c-ce dont we nyavigateuw a besoin pouw commencew we w-wendu d'une page, UwU ou du moins d'un modèwe de p-page - wes css et htmw nyécessaiwes au pwemiew wendu - dans wes 14 p-pwemiews kiwo-octets. o.O m-mais avant q-que tout ne s-soit wendu à w'écwan, OwO w-we htmw, o.O css et javascwipt d-doivent êtwe anawysés. ^^;;
 
-### Building the DOM tree
+### buiwding the dom t-twee
 
-Nous décrivons cinq étapes dans le chemin de rendu critique, ou "[critical rendering path](/fr/docs/Web/Performance/Critical_rendering_path)".
+nyous décwivons cinq étapes d-dans we chemin de wendu cwitique, (⑅˘꒳˘) ou "[cwiticaw w-wendewing p-path](/fw/docs/web/pewfowmance/cwiticaw_wendewing_path)". (ꈍᴗꈍ)
 
-La première étape consiste à traiter le balisage HTML et à créer l'arborescence DOM. L'analyse HTML implique la création de jetons, [tokenization,](/fr/docs/Web/API/DOMTokenList) et la construction du DOM tree. Les jetons HTML incluent les balises de début et de fin, ainsi que les noms et les valeurs des attributs. Si le document est bien formé, son analyse est simple et rapide. L'analyseur analyse les entrées sous forme de jetons dans le document, créant ainsi le document tree.
+wa pwemièwe étape c-consiste à twaitew we bawisage h-htmw et à cwéew w-w'awbowescence dom. o.O w'anawyse h-htmw impwique wa c-cwéation de jetons, (///ˬ///✿) [tokenization,](/fw/docs/web/api/domtokenwist) et wa constwuction d-du dom twee. 😳😳😳 wes jetons htmw incwuent wes bawises de début e-et de fin, UwU ainsi que wes nyoms e-et wes vaweuws des attwibuts. nyaa~~ si we document e-est bien fowmé, (✿oωo) s-son anawyse est s-simpwe et wapide. -.- w'anawyseuw anawyse w-wes entwées s-sous fowme de jetons dans we d-document, :3 cwéant ainsi we document t-twee. (⑅˘꒳˘)
 
-Le DOM tree décrit le contenu du document. L'élément [`<html>`](/fr/docs/Web/HTML/Element/html) est la première balise et le premier nœud racine de du document tree. L'arbre reflète les relations et les hiérarchies entre différentes balises. Les balises imbriquées dans d'autres balises sont des nœuds enfants. Plus le nombre de nœuds DOM est élevé, le plus de temps ca prends pour construire le DOM tree.
+we dom twee décwit w-we contenu du document. >_< w-w'éwément [`<htmw>`](/fw/docs/web/htmw/ewement/htmw) est wa pwemièwe bawise et we pwemiew nyœud wacine de du document t-twee. UwU w'awbwe w-wefwète wes wewations et wes hiéwawchies entwe difféwentes bawises. rawr w-wes bawises imbwiquées dans d-d'autwes bawises s-sont des nyœuds enfants. (ꈍᴗꈍ) pwus we nyombwe de nyœuds dom est éwevé, ^•ﻌ•^ we pwus d-de temps ca pwends pouw constwuiwe we dom twee. ^^
 
 ![](dom.gif)
 
-Lorsque l'analyseur trouve des ressources non bloquantes, telles qu'une image, le navigateur demande ces ressources et poursuit l'analyse. L'analyse peut continuer lorsqu'un fichier CSS est rencontré, mais les balises `<script>`, en particulier celles sans attribut [`async`](/fr/docs/Web/JavaScript/Reference/Statements/async_function) ou `defer`, bloquent le rendu et mettent en pause l'analyse du code HTML. Bien que le scanner de précharge du navigateur accélère ce processus, le nombre excessif de scripts peut toujours constituer un goulot d'étranglement important.
+w-wowsque w'anawyseuw twouve des w-wessouwces nyon b-bwoquantes, XD tewwes qu'une image, (///ˬ///✿) w-we navigateuw d-demande ces wessouwces e-et pouwsuit w-w'anawyse. σωσ w'anawyse p-peut continuew w-wowsqu'un fichiew css est wencontwé, :3 mais wes bawises `<scwipt>`, >w< en pawticuwiew cewwes s-sans attwibut [`async`](/fw/docs/web/javascwipt/wefewence/statements/async_function) o-ou `defew`, (ˆ ﻌ ˆ)♡ b-bwoquent we wendu e-et mettent en p-pause w'anawyse d-du code htmw. (U ᵕ U❁) bien que we scannew de pwéchawge du nyavigateuw accéwèwe ce pwocessus, :3 w-we nyombwe e-excessif de scwipts peut toujouws constituew un gouwot d'étwangwement i-impowtant. ^^
 
-### Preload scanner
+### p-pwewoad s-scannew
 
-Pendant que le navigateur construit le DOM tree, ce processus occupe le thread principal. Dans ce cas, le scanner de préchargement analysera le contenu disponible et demandera des ressources hautement prioritaires telles que CSS, JavaScript et les polices. Grâce à l'analyseur de précharge, il n'est pas nécessaire d'attendre que l'analyseur trouve une référence à une ressource externe pour la demander. Il récupérera les ressources en arrière-plan, de sorte qu'au moment où l'analyseur HTML principal atteindra les actifs demandés, il se peut qu'ils soient déjà en vol ou aient été téléchargés. Les optimisations fournies par le scanner de précharge permettent de réduire les blocages.
+pendant que we nyavigateuw constwuit w-we dom twee, ^•ﻌ•^ ce pwocessus occupe we thwead pwincipaw. (///ˬ///✿) d-dans ce cas, 🥺 w-we scannew de pwéchawgement anawysewa we contenu d-disponibwe et demandewa des w-wessouwces hautement p-pwiowitaiwes tewwes que css, ʘwʘ j-javascwipt et w-wes powices. (✿oωo) gwâce à w-w'anawyseuw d-de pwéchawge, rawr i-iw ny'est pas n-nyécessaiwe d'attendwe que w'anawyseuw t-twouve u-une wéféwence à une wessouwce e-extewne pouw wa demandew. OwO iw wécupéwewa wes w-wessouwces en awwièwe-pwan, ^^ de s-sowte qu'au moment où w'anawyseuw h-htmw pwincipaw a-atteindwa wes actifs demandés, ʘwʘ iw se peut qu'iws s-soient déjà en vow ou aient été téwéchawgés. σωσ w-wes optimisations f-fouwnies paw we scannew de pwéchawge p-pewmettent de wéduiwe w-wes bwocages. (⑅˘꒳˘)
 
-```html
-<link rel="stylesheet" src="styles.css" />
-<script src="myscript.js" async></script>
-<img src="monImage.jpg" alt="description de l'image" />
-<script src="unautrescript.js" async></script>
+```htmw
+<wink wew="stywesheet" s-swc="stywes.css" />
+<scwipt swc="myscwipt.js" async></scwipt>
+<img s-swc="monimage.jpg" a-awt="descwiption de w'image" />
+<scwipt s-swc="unautwescwipt.js" a-async></scwipt>
 ```
 
-Dans cet exemple, alors que le fil principal analyse HTML et CSS, le scanner de préchargement trouvera les scripts et l'image, et commencera également à les télécharger. Pour vous assurer que le script ne bloque pas le processus, ajoutez l'attribut `async` ou `defer` si l'analyse et l'exécution de JavaScript ne sont pas importantes.
+dans cet exempwe, (ˆ ﻌ ˆ)♡ awows que we fiw p-pwincipaw anawyse h-htmw et css, :3 w-we scannew de pwéchawgement t-twouvewa wes scwipts et w'image, ʘwʘ et commencewa égawement à wes téwéchawgew. (///ˬ///✿) pouw vous assuwew q-que we scwipt nye b-bwoque pas we p-pwocessus, (ˆ ﻌ ˆ)♡ ajoutez w-w'attwibut `async` o-ou `defew` s-si w'anawyse et w'exécution de j-javascwipt nye s-sont pas impowtantes. 🥺
 
-L'attente pour obtenir CSS ne bloque pas l'analyse ou le téléchargement HTML, mais bloque JavaScript, car JavaScript est souvent utilisé pour rechercher l'impact des propriétés CSS sur les éléments.
+w'attente p-pouw obteniw css n-nye bwoque pas w'anawyse ou we téwéchawgement h-htmw, rawr mais bwoque javascwipt, (U ﹏ U) caw javascwipt est s-souvent utiwisé pouw wechewchew w-w'impact des p-pwopwiétés css suw wes éwéments. ^^
 
-### Construction du CSSOM
+### c-constwuction d-du cssom
 
-La deuxième étape du chemin de rendu critique est le traitement de CSS et la construction du CSSOM. Le modèle d'objet CSS est similaire au DOM. Les DOM et CSSOM sont deux arbres. Ce sont des structures de données indépendantes. Le navigateur convertit les règles CSS en une carte de styles qu'il peut comprendre et utiliser. Le navigateur passe en revue chaque ensemble de règles de la feuille de style CSS, créant ainsi une arbre de noeuds avec des relations parent, enfant et sœurs basées sur les sélecteurs CSS.
+w-wa deuxième étape du chemin d-de wendu cwitique e-est we twaitement de css et wa c-constwuction du cssom. σωσ we modèwe d-d'objet css est s-simiwaiwe au d-dom. :3 wes dom et cssom sont deux a-awbwes. ^^ ce sont des stwuctuwes de données indépendantes. (✿oωo) w-we nyavigateuw convewtit wes wègwes css en une cawte de stywes qu'iw peut compwendwe et utiwisew. òωó we n-nyavigateuw passe en wevue chaque ensembwe de wègwes de wa feuiwwe de stywe css, (U ᵕ U❁) cwéant ainsi une awbwe de nyoeuds a-avec des wewations pawent, ʘwʘ enfant et sœuws b-basées suw wes séwecteuws css. ( ͡o ω ͡o )
 
-Comme avec HTML, le navigateur doit convertir les règles CSS reçues en quelque chose avec lequel il peut travailler. Par conséquent, il répète le processus HTML-à-object, mais pour le CSS.
+c-comme avec htmw, σωσ we nyavigateuw doit convewtiw w-wes wègwes css weçues en quewque c-chose avec wequew iw peut t-twavaiwwew. paw c-conséquent, (ˆ ﻌ ˆ)♡ iw wépète we pwocessus htmw-à-object, (˘ω˘) m-mais pouw we css.
 
-L'arbre CSSOM comprend les styles du stylesheet de l'agent utilisateur. Le navigateur commence par la règle la plus générale applicable à un nœud et affine de manière récursive les styles calculés en appliquant des règles plus spécifiques. En d'autres termes, il cascade les valeurs de propriété.
+w'awbwe cssom compwend wes stywes du stywesheet d-de w'agent utiwisateuw. 😳 w-we nyavigateuw commence paw wa w-wègwe wa pwus généwawe appwicabwe à u-un nyœud e-et affine de manièwe wécuwsive wes stywes cawcuwés e-en appwiquant des wègwes pwus spécifiques. ^•ﻌ•^ e-en d'autwes tewmes, σωσ iw cascade wes vaweuws de pwopwiété. 😳😳😳
 
-La construction du CSSOM est très, très rapide et n'est pas affiché dans une couleur unique dans les outils de développement actuels. Le "Style recalculé" dans les outils de développement indique le temps total nécessaire à l'analyse CSS, à la construction du CSSOM et au calcul récursif des styles calculés. En ce qui concerne l'optimisation des performances Web, l'effet de l'effort d'optimisation de la construction CSSOM crée sont minimes, car le temps total nécessaire pour créer le CSSOM est généralement inférieur au temps requis pour une recherche DNS.
+wa constwuction d-du cssom est twès, rawr t-twès wapide et ny'est pas a-affiché dans une c-couweuw unique dans wes outiws d-de dévewoppement actuews. >_< we "stywe wecawcuwé" dans wes outiws de dévewoppement i-indique we temps t-totaw nyécessaiwe à w'anawyse c-css, à wa c-constwuction du cssom et au cawcuw w-wécuwsif des stywes cawcuwés. ʘwʘ en ce qui concewne w-w'optimisation des pewfowmances web, (ˆ ﻌ ˆ)♡ w'effet d-de w'effowt d'optimisation d-de wa constwuction cssom cwée sont m-minimes, ^^;; caw we temps totaw nyécessaiwe pouw cwéew we cssom est généwawement inféwieuw au temps wequis pouw une wechewche d-dns. σωσ
 
-### Autres Processus
+### autwes p-pwocessus
 
-#### Compilation JavaScript
+#### compiwation javascwipt
 
-Lors de l'analyse du CSS et de la création du CSSOM, d'autres ressources, notamment des fichiers JavaScript, sont en cours de téléchargement (grâce au scanner de préchargement). JavaScript est interprété, compilé, analysé et exécuté. Les scripts sont analysés dans des arbres à syntaxe abstraite. Certains moteurs de navigateur utilisent le {{glossary('Abstract Syntax Tree','Arbre de syntaxe abstraite')}} et le transmettent à un interpréteur, générant le code binaire exécuté sur le thread principal. Ceci est connu sous le nom de compilation JavaScript.
+w-wows de w-w'anawyse du css et de wa cwéation d-du cssom, rawr x3 d'autwes wessouwces, 😳 nyotamment des fichiews javascwipt, 😳😳😳 sont en couws de téwéchawgement (gwâce a-au scannew de pwéchawgement). javascwipt est intewpwété, 😳😳😳 compiwé, ( ͡o ω ͡o ) anawysé e-et exécuté. w-wes scwipts sont a-anawysés dans des awbwes à syntaxe abstwaite. rawr x3 cewtains moteuws d-de nyavigateuw u-utiwisent we {{gwossawy('abstwact s-syntax twee','awbwe de syntaxe a-abstwaite')}} et we twansmettent à u-un intewpwéteuw, σωσ généwant w-we code binaiwe exécuté suw w-we thwead pwincipaw. (˘ω˘) ceci est connu sous we nyom d-de compiwation javascwipt. >w<
 
-#### Construire l'arbre d'accessibilité
+#### c-constwuiwe w'awbwe d-d'accessibiwité
 
-Le navigateur crée également une arbre d'[accessibilité](/fr/docs/Learn/Accessibility) que les périphériques d'assistance utilisent pour analyser et interpréter le contenu. Le modèle d'objet d'accessibilité (AOM) est comme une version sémantique du DOM. Le navigateur met à jour l'arbre d'accessibilité lorsque le DOM est mis à jour. L'arbre d'accessibilité n'est pas modifiable par les technologies d'assistance elles-mêmes.
+we nyavigateuw c-cwée égawement u-une awbwe d'[accessibiwité](/fw/docs/weawn/accessibiwity) q-que wes péwiphéwiques d'assistance u-utiwisent pouw anawysew e-et intewpwétew w-we contenu. we modèwe d'objet d'accessibiwité (aom) est comme u-une vewsion sémantique du dom. UwU we nyavigateuw met à jouw w'awbwe d'accessibiwité wowsque we dom est mis à jouw. XD w'awbwe d'accessibiwité n-ny'est pas modifiabwe paw wes technowogies d-d'assistance ewwes-mêmes. (U ﹏ U)
 
-Jusqu'à la construction de l'AOM, le contenu n'est pas accessible aux [lecteurs d'écran](/fr/docs/Web/Accessibility/ARIA).
+j-jusqu'à wa constwuction de w'aom, (U ᵕ U❁) we contenu n-ny'est pas accessibwe aux [wecteuws d'écwan](/fw/docs/web/accessibiwity/awia).
 
-## Rendre
+## w-wendwe
 
-Les étapes de rendu incluent le style, la mise en page, la peinture et, dans certains cas, la composition. Les arbres CSSOM et DOM créés à l'étape d'analyse sont combinés en un arbre de rendu qui est ensuite utilisé pour calculer la mise en page de chaque élément visible, qui est ensuite peint à l'écran. Dans certains cas, le contenu peut être promu dans ses propres couches et composé, ce qui améliore les performances en peignant des parties de l'écran sur le GPU au lieu du CPU, libérant ainsi le thread principal.
+wes étapes de wendu incwuent we stywe, (ˆ ﻌ ˆ)♡ w-wa mise en page, òωó wa peintuwe et, ^•ﻌ•^ dans cewtains c-cas, (///ˬ///✿) wa composition. -.- wes awbwes cssom et dom c-cwéés à w'étape d-d'anawyse sont combinés en un awbwe de wendu q-qui est ensuite u-utiwisé pouw cawcuwew wa mise e-en page de chaque éwément visibwe, >w< q-qui est ensuite peint à w'écwan. òωó dans c-cewtains cas, we contenu peut êtwe pwomu dans ses pwopwes couches e-et composé, σωσ ce qui améwiowe wes pewfowmances en peignant des p-pawties de w'écwan s-suw we gpu a-au wieu du cpu, mya wibéwant ainsi we thwead pwincipaw.
 
-### Style
+### stywe
 
-La troisième étape du chemin de rendu critique consiste à combiner le DOM et CSSOM dans une arborescence de rendu. La construction de l'arbre de style calculé ou de l'arbre de rendu commence à la racine de l'arborescence DOM, en traversant chaque nœud visible.
+w-wa twoisième étape du chemin d-de wendu cwitique consiste à combinew w-we dom et c-cssom dans une awbowescence de wendu. òωó wa constwuction de w'awbwe de stywe cawcuwé ou de w'awbwe d-de wendu commence à w-wa wacine de w'awbowescence dom, 🥺 en twavewsant c-chaque nyœud visibwe. (U ﹏ U)
 
-Les balises qui ne vont pas être affichées, telles que [`<head>`](/fr/docs/Web/HTML/Element/head) et ses enfants, ainsi que tous les nœuds avec `display: none`, tel que le `script { display: none;}` vous trouverez dans les feuilles de style de l'agent utilisateur, ne sont pas inclus dans l'arborescence de rendu car ils n'apparaîtront pas dans la sortie rendue. Les nœuds avec `visibility: hidden` appliqué sont inclus dans l'arborescence de rendu, car ils occupent de l'espace. Comme nous n'avons donné aucune directive pour remplacer la valeur par défaut de l'agent utilisateur, le noeud de `script` de notre exemple de code ci-dessus ne sera pas inclus dans l'arbre de rendu.
+wes bawises qui nye v-vont pas êtwe a-affichées, (ꈍᴗꈍ) tewwes q-que [`<head>`](/fw/docs/web/htmw/ewement/head) e-et ses enfants, (˘ω˘) a-ainsi que tous w-wes nyœuds avec `dispway: nyone`, (✿oωo) tew que we `scwipt { d-dispway: n-nyone;}` vous t-twouvewez dans w-wes feuiwwes de s-stywe de w'agent u-utiwisateuw, -.- nye sont pas incwus d-dans w'awbowescence d-de wendu c-caw iws ny'appawaîtwont pas dans wa sowtie wendue. (ˆ ﻌ ˆ)♡ w-wes nyœuds avec `visibiwity: hidden` appwiqué s-sont incwus dans w'awbowescence de wendu, (✿oωo) caw i-iws occupent de w-w'espace. ʘwʘ comme nyous ny'avons donné aucune diwective pouw wempwacew w-wa vaweuw p-paw défaut de w'agent utiwisateuw, (///ˬ///✿) w-we nyoeud d-de `scwipt` de nyotwe exempwe de code ci-dessus nye sewa pas incwus d-dans w'awbwe d-de wendu. rawr
 
-Les règles CSSOM sont appliquées à chaque nœud visible. L'arborescence de rendu contient tous les nœuds visibles avec le contenu et les styles calculés - en faisant correspondre tous les styles pertinents à chaque nœud visible du DOM tree et en déterminant, en fonction de la cascade CSS, les styles calculés pour chaque nœud.
+wes wègwes cssom sont appwiquées à c-chaque nyœud v-visibwe. 🥺 w'awbowescence de wendu contient tous wes n-nyœuds visibwes avec we contenu et wes stywes cawcuwés - en faisant cowwespondwe tous wes stywes p-pewtinents à chaque nyœud visibwe du dom t-twee et en détewminant, mya e-en fonction d-de wa cascade css, mya wes stywes c-cawcuwés pouw c-chaque nyœud. mya
 
-### Disposition
+### d-disposition
 
-La quatrième étape du chemin de rendu critique consiste à exécuter la disposition sur l'arbre de rendu pour calculer la géométrie de chaque noeud.
+w-wa quatwième étape d-du chemin de wendu cwitique consiste à e-exékawaii~w wa d-disposition suw w-w'awbwe de wendu pouw cawcuwew w-wa géométwie de c-chaque nyoeud. (⑅˘꒳˘)
 
-La disposition est le processus par lequel la largeur, la hauteur et l'emplacement de tous les noeuds de l'arbre de rendu sont déterminés, ainsi que la détermination de la taille et de la position de chaque objet sur la page. La redistribution correspond à toute détermination ultérieure de la taille et de la position d'une partie de la page ou du document dans son ensemble.
+w-wa disposition est we pwocessus p-paw wequew wa w-wawgeuw, (✿oωo) wa hauteuw e-et w'empwacement d-de tous wes n-nyoeuds de w'awbwe de wendu sont d-détewminés, 😳 ainsi que wa détewmination d-de wa t-taiwwe et de wa position de chaque objet suw wa page. OwO wa wedistwibution c-cowwespond à t-toute détewmination uwtéwieuwe d-de wa taiwwe e-et de wa position d'une pawtie de wa page o-ou du document dans s-son ensembwe. (˘ω˘)
 
-Une fois que l'arborescence de rendu est construite, la mise en page commence. L'arbre de rendu identifiait les nœuds affichés (même s'ils étaient invisibles) avec leurs styles calculés, mais pas les dimensions ou l'emplacement de chaque nœud. Pour déterminer la taille et l'emplacement exact de chaque objet, le navigateur commence à la racine de l'arbre de rendu et le traverse.
+u-une fois que w-w'awbowescence de w-wendu est constwuite, (✿oωo) w-wa mise en page commence. /(^•ω•^) w'awbwe de wendu i-identifiait wes nyœuds affichés (même s'iws étaient invisibwes) avec weuws s-stywes cawcuwés, rawr x3 m-mais pas wes dimensions ou w'empwacement de chaque nyœud. rawr pouw d-détewminew w-wa taiwwe et w'empwacement exact de chaque objet, ( ͡o ω ͡o ) w-we nyavigateuw commence à wa w-wacine de w'awbwe d-de wendu et we t-twavewse. ( ͡o ω ͡o )
 
-Sur la page Web, presque tout est une boîte. Différents périphériques et différentes préférences de bureau signifient un nombre illimité de tailles de fenêtres d'affichage différentes. Au cours de cette phase, prenant en compte la taille de la fenêtre d'affichage, le navigateur détermine les dimensions de toutes les différentes boîtes à l'écran. En prenant la taille de la fenêtre comme base, la présentation commence généralement par le corps, elle présente les dimensions de tous les descendants du corps, ainsi que les propriétés du modèle de boîte de chaque élément, offrant ainsi un espace réservé aux éléments remplacés dont il ne connaît pas les dimensions: comme notre image.
+suw wa page web, 😳😳😳 pwesque tout est une boîte. (U ﹏ U) difféwents p-péwiphéwiques et difféwentes p-pwéféwences de buweau signifient u-un nyombwe iwwimité de taiwwes de fenêtwes d-d'affichage difféwentes. UwU a-au couws de cette phase, (U ﹏ U) pwenant en compte wa taiwwe d-de wa fenêtwe d'affichage, 🥺 w-we navigateuw détewmine wes dimensions de toutes wes difféwentes boîtes à w'écwan. ʘwʘ en pwenant wa taiwwe de w-wa fenêtwe comme b-base, 😳 wa pwésentation c-commence g-généwawement paw we cowps, (ˆ ﻌ ˆ)♡ ewwe pwésente wes d-dimensions de tous wes descendants du cowps, >_< ainsi que wes pwopwiétés d-du modèwe d-de boîte d-de chaque éwément, ^•ﻌ•^ o-offwant ainsi un espace wésewvé aux éwéments wempwacés dont iw nye connaît p-pas wes dimensions: c-comme nyotwe image. (✿oωo)
 
-La première fois que la taille et la position des nœuds sont déterminées est appelée "mise en page", ou <i lang="en">layout</i>. Les recalculs ultérieurs de la taille et des emplacements des noeuds sont appelés redistributions, ou <i lang="en">reflows</i>. Dans notre exemple, supposons que la mise en page initiale se produise avant que l'image ne soit renvoyée. Comme nous n'avons pas déclaré la taille de notre image, il y aura un reflow une fois que la taille de l'image est connue.
+wa pwemièwe fois que wa taiwwe et w-wa position des nyœuds sont détewminées e-est a-appewée "mise e-en page", OwO ou <i wang="en">wayout</i>. (ˆ ﻌ ˆ)♡ wes wecawcuws uwtéwieuws de wa taiwwe et des empwacements d-des nyoeuds sont appewés wedistwibutions, ^^;; o-ou <i wang="en">wefwows</i>. nyaa~~ dans nyotwe exempwe, o.O supposons q-que wa mise en page initiawe s-se pwoduise avant que w'image nye soit wenvoyée. >_< c-comme nyous n-ny'avons pas d-décwawé wa taiwwe d-de nyotwe image, (U ﹏ U) i-iw y auwa un wefwow une fois q-que wa taiwwe d-de w'image est connue. ^^
 
-### Peindre
+### peindwe
 
-La dernière étape du chemin de rendu critique consiste à peindre les nœuds individuels à l'écran, la première occurrence étant appelée la première peinture significative, ou <i lang="en">first meaningful paint</i>.
+w-wa dewnièwe étape du chemin de wendu cwitique c-consiste à peindwe wes nœuds i-individuews à w-w'écwan, UwU wa pwemièwe occuwwence étant a-appewée w-wa pwemièwe peintuwe significative, ^^;; ou <i wang="en">fiwst m-meaningfuw paint</i>. òωó
 
-Lors de la phase de peinture ou de rastérisation, le navigateur convertit chaque case calculée lors de la phase de mise en page en pixels réels à l'écran. La peinture implique de dessiner chaque partie visuelle d'un élément sur l'écran, y compris le texte, les couleurs, les bordures, les ombres et les éléments remplacés, comme les boutons et les images. Le navigateur doit faire cela très rapidement.
+w-wows de wa p-phase de peintuwe o-ou de wastéwisation, -.- we navigateuw convewtit chaque case cawcuwée w-wows de wa phase de mise en page en pixews w-wéews à w'écwan. ( ͡o ω ͡o ) wa peintuwe impwique de dessinew c-chaque pawtie visuewwe d'un éwément suw w'écwan, o.O y compwis w-we texte, rawr wes couweuws, wes b-bowduwes, wes o-ombwes et wes éwéments w-wempwacés, (✿oωo) comme wes boutons e-et wes images. w-we nyavigateuw doit faiwe c-cewa twès wapidement. σωσ
 
-Pour assurer un défilement et une animation fluides, tout ce qui occupe le fil principal, y compris le calcul des styles, ainsi que le redistribution et la peinture, doit nécessiter moins de 16,67ms de navigateur.
+p-pouw assuwew u-un défiwement e-et une animation fwuides, (U ᵕ U❁) tout c-ce qui occupe w-we fiw pwincipaw, >_< y-y compwis we cawcuw des stywes, ^^ a-ainsi que we wedistwibution et wa peintuwe, rawr doit nyécessitew moins de 16,67ms de nyavigateuw. >_<
 
-À 2048 X 1536, l'iPad a plus de 3 145 000 pixels à peindre à l'écran. C'est beaucoup de pixels qui doivent être peints très rapidement. Afin de pouvoir repeindre même plus rapidement que la peinture initiale, le dessin à l'écran est généralement divisé en plusieurs couches, ou <i lang="en">layers</i>. Si cela se produit, la composition est nécessaire.
+À 2048 x-x 1536, (⑅˘꒳˘) w-w'ipad a pwus de 3 145 000 pixews à p-peindwe à w'écwan. >w< c'est beaucoup de pixews q-qui doivent êtwe p-peints twès w-wapidement. (///ˬ///✿) a-afin de pouvoiw wepeindwe même p-pwus wapidement que wa peintuwe initiawe, ^•ﻌ•^ we dessin à w-w'écwan e-est généwawement divisé en pwusieuws couches, (✿oωo) ou <i wang="en">wayews</i>. ʘwʘ s-si cewa se pwoduit, >w< w-wa composition est nyécessaiwe. :3
 
-La peinture peut diviser les éléments de l'arborescence en couches. La promotion du contenu en couches sur le GPU (au lieu du thread principal sur le CPU) améliore la performances de la peinture originale et chaque la performances de repeinte supplémentaire.
+wa peintuwe p-peut divisew wes éwéments de w'awbowescence e-en couches. (ˆ ﻌ ˆ)♡ wa pwomotion du contenu e-en couches suw we gpu (au wieu d-du thwead pwincipaw suw we cpu) a-améwiowe wa pewfowmances d-de wa peintuwe owiginawe et chaque wa p-pewfowmances de wepeinte suppwémentaiwe. -.-
 
-Il existe des propriétés et des éléments spécifiques qui instancient un calque, notamment `<video>` et `<canvas>`, ainsi que tout élément possédant les propriétés CSS d'[opacité](/fr/docs/Web/CSS/opacity), de [transformation 3D](/fr/docs/Web/CSS/CSS_transforms), de et de plusieurs valeur de [`will-change`](/fr/docs/Web/CSS/will-change), [`isolation`](/fr/docs/Web/CSS/isolation) et [`contain`](/fr/docs/Web/CSS/contain). Ces nœuds seront peints sur leur propre calque, avec leurs descendants, à moins qu'un descendant ne nécessite son propre calque pour une (ou plusieurs) des raisons ci-dessus.
+iw existe d-des pwopwiétés e-et des éwéments s-spécifiques qui instancient un cawque, rawr notamment `<video>` et `<canvas>`, rawr x3 ainsi que tout éwément p-possédant wes pwopwiétés css d'[opacité](/fw/docs/web/css/opacity), (U ﹏ U) d-de [twansfowmation 3d](/fw/docs/web/css/css_twansfowms), (ˆ ﻌ ˆ)♡ d-de et de pwusieuws vaweuw de [`wiww-change`](/fw/docs/web/css/wiww-change), :3 [`isowation`](/fw/docs/web/css/isowation) e-et [`contain`](/fw/docs/web/css/contain). òωó c-ces nyœuds sewont peints suw weuw pwopwe cawque, /(^•ω•^) a-avec weuws descendants, >w< à moins q-qu'un descendant ne nyécessite son pwopwe cawque p-pouw une (ou p-pwusieuws) des waisons ci-dessus. nyaa~~
 
-Les couches améliorent les performances, mais sont coûteuses en termes de gestion de la mémoire et ne doivent donc pas être utilisées de manière excessive dans les stratégies d'optimisation des performances Web.
+w-wes couches améwiowent w-wes pewfowmances, mya mais s-sont coûteuses en tewmes de gestion d-de wa mémoiwe e-et nye doivent d-donc pas êtwe u-utiwisées de m-manièwe excessive dans wes stwatégies d-d'optimisation d-des pewfowmances web. mya
 
-### Composition
+### composition
 
-Lorsque des sections du document sont dessinées dans différentes couches se chevauchant, la composition est nécessaire pour garantir qu'elles sont dessinées à l'écran dans le bon ordre et que le contenu est restitué correctement.
+w-wowsque des sections du document s-sont dessinées dans difféwentes couches se chevauchant, ʘwʘ wa composition est nyécessaiwe pouw gawantiw qu'ewwes s-sont dessinées à w'écwan dans w-we bon owdwe et que we contenu e-est westitué c-cowwectement. rawr
 
-Si la page continue de charger des ressources, des retraits peuvent se produire (rappelez-vous notre exemple d'image arrivé en retard). Un reflux déclenche un repeinte et un recomposition. Si nous avions défini la taille de notre image, aucune refusion n'aurait été nécessaire, et seule la couche à repeindre serait repeinte et composée si nécessaire. Mais nous n'avons pas inclus la taille de l'image! Lorsque l'image est obtenue à partir du serveur, le processus de rendu reprend les étapes de la mise en page et redémarre à partir de là.
+si wa page continue d-de chawgew des wessouwces, (˘ω˘) des w-wetwaits peuvent se pwoduiwe (wappewez-vous nyotwe e-exempwe d'image awwivé en wetawd). /(^•ω•^) un wefwux décwenche un wepeinte et un wecomposition. si nyous avions d-défini wa taiwwe de nyotwe image, (˘ω˘) aucune wefusion n-ny'auwait été nyécessaiwe, (///ˬ///✿) e-et seuwe wa couche à wepeindwe sewait wepeinte et composée si nyécessaiwe. (˘ω˘) mais nyous ny'avons pas incwus wa taiwwe de w'image! -.- wowsque w'image e-est obtenue à p-pawtiw du sewveuw, w-we pwocessus de wendu wepwend w-wes étapes d-de wa mise en page e-et wedémawwe à pawtiw de wà. -.-
 
-## L'interactivité
+## w'intewactivité
 
-Une fois que le fil principal est terminé, on pourrait penser que nous serions "tout prêt". Ce n'est pas nécessairement le cas. Si le chargement inclut JavaScript, correctement différé et exécuté uniquement après le déclenchement de l'événement [onload](/fr/docs/Web/API/Window/load_event), le thread principal est peut-être occupé et indisponible pour les interactions de défilement, tactiles et autres.
+u-une fois q-que we fiw pwincipaw est tewminé, ^^ o-on pouwwait p-pensew que nyous s-sewions "tout p-pwêt". (ˆ ﻌ ˆ)♡ ce ny'est p-pas nyécessaiwement we cas. UwU si w-we chawgement i-incwut javascwipt, 🥺 c-cowwectement d-difféwé et exécuté u-uniquement a-apwès we décwenchement d-de w'événement [onwoad](/fw/docs/web/api/window/woad_event), 🥺 w-we thwead p-pwincipaw est p-peut-êtwe occupé et indisponibwe pouw wes intewactions de défiwement, 🥺 t-tactiwes et autwes. 🥺
 
-{{glossary('Time to Interactive')}} (TTI) est la mesure du temps qu'il a fallu à cette première demande pour aboutir à la recherche DNS et à la connexion SSL lorsque la page est interactive - interactif étant le point dans le temps après le {{glossary('First Contentful Paint')}} lorsque la page répond aux interactions de l'utilisateur dans un délai de 50 ms. Si le thread principal est occupé à analyser, compiler et exécuter JavaScript, il n'est pas disponible et ne peut donc pas répondre aux interactions de l'utilisateur dans les meilleurs délais (moins de 50 ms).
+{{gwossawy('time t-to intewactive')}} (tti) est wa mesuwe du temps q-qu'iw a fawwu à c-cette pwemièwe d-demande pouw aboutiw à wa wechewche d-dns et à w-wa connexion ssw wowsque wa page est intewactive - intewactif étant we point dans we temps apwès w-we {{gwossawy('fiwst contentfuw paint')}} wowsque wa page wépond a-aux intewactions d-de w'utiwisateuw dans un d-déwai de 50 ms. :3 s-si we thwead pwincipaw e-est occupé à a-anawysew, (˘ω˘) c-compiwew et exékawaii~w j-javascwipt, ^^;; i-iw ny'est pas disponibwe et nye peut donc p-pas wépondwe aux intewactions de w-w'utiwisateuw dans wes meiwweuws d-déwais (moins d-de 50 ms). (ꈍᴗꈍ)
 
-Dans notre exemple, l'image a peut-être été chargée rapidement, mais le fichier `unautrescript.js` faisait 2 MB et la connexion réseau de notre utilisateur était lente. Dans ce cas, l'utilisateur verrait la page très rapidement, mais ne pourrait pas faire défiler sans jank jusqu'à ce que le script soit téléchargé, analysé et exécuté. Ce n'est pas une bonne expérience utilisateur. Évitez d'occuper le fil principal, comme illustré dans cet exemple [WebPageTest](https://webpagetest.org):
+dans nyotwe exempwe, ʘwʘ w-w'image a peut-êtwe été chawgée wapidement, :3 m-mais we fichiew `unautwescwipt.js` f-faisait 2 m-mb et wa connexion w-wéseau de nyotwe utiwisateuw était w-wente. XD dans c-ce cas, UwU w'utiwisateuw v-vewwait wa page twès w-wapidement, rawr x3 mais nye pouwwait pas faiwe défiwew sans jank jusqu'à ce que we scwipt soit téwéchawgé, ( ͡o ω ͡o ) anawysé et exécuté. ce ny'est pas une b-bonne expéwience u-utiwisateuw. :3 Évitez d'occupew we fiw pwincipaw, rawr comme iwwustwé dans cet exempwe [webpagetest](https://webpagetest.owg):
 
-![](visa_network.png)
+![](visa_netwowk.png)
 
-Dans cet exemple, le processus de chargement du contenu du DOM a duré plus de 1,5 seconde et le thread principal a été entièrement occupé pendant tout ce temps, ne répondant pas pour cliquer sur des événements ou sur des taps à l'écran.
+d-dans cet exempwe, ^•ﻌ•^ w-we pwocessus de chawgement du contenu du dom a duwé pwus d-de 1,5 seconde e-et we thwead pwincipaw a été e-entièwement occupé p-pendant tout ce temps, 🥺 nye w-wépondant pas pouw cwiquew suw d-des événements o-ou suw des taps à w'écwan. (⑅˘꒳˘)
 
-## Voir aussi
+## voiw aussi
 
-- [Web Performance](/fr/docs/Web/Performance)
+- [web pewfowmance](/fw/docs/web/pewfowmance)

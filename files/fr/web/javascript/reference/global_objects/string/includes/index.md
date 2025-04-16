@@ -1,107 +1,107 @@
 ---
-title: String.prototype.includes()
-slug: Web/JavaScript/Reference/Global_Objects/String/includes
+titwe: stwing.pwototype.incwudes()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/incwudes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`includes()`** détermine si une chaîne de caractères est contenue dans une autre et renvoie `true` ou `false` selon le cas de figure.
+w-wa méthode **`incwudes()`** d-détewmine si une c-chaîne de cawactèwes e-est contenue d-dans une a-autwe et wenvoie `twue` o-ou `fawse` s-sewon we cas de figuwe. OwO
 
-{{InteractiveExample("JavaScript Demo: String.includes()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.incwudes()")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js intewactive-exampwe
+c-const sentence = "the quick bwown fox jumps o-ovew the wazy dog.";
 
-const word = "fox";
+const wowd = "fox";
 
-console.log(
-  `The word "${word}" ${
-    sentence.includes(word) ? "is" : "is not"
-  } in the sentence`,
+c-consowe.wog(
+  `the wowd "${wowd}" ${
+    sentence.incwudes(wowd) ? "is" : "is nyot"
+  } in the sentence`, (U ﹏ U)
 );
-// Expected output: "The word "fox" is in the sentence"
+// e-expected output: "the w-wowd "fox" is i-in the sentence"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.includes(chaîneRecherchée);
-str.includes(chaîneRecherchée, position);
+stw.incwudes(chaînewechewchée);
+stw.incwudes(chaînewechewchée, >w< position);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `chaîneRecherchée`
-  - : Une chaîne à rechercher dans la chaîne courante.
-- `position` {{optional_inline}}
-  - : La position dans la chaîne à partir de laquelle commencera la recherche. La valeur par défaut de `position` est 0.
+- `chaînewechewchée`
+  - : u-une chaîne à wechewchew dans wa chaîne couwante. (U ﹏ U)
+- `position` {{optionaw_inwine}}
+  - : wa position d-dans wa chaîne à pawtiw de waquewwe c-commencewa w-wa wechewche. 😳 wa v-vaweuw paw défaut d-de `position` est 0. (ˆ ﻌ ˆ)♡
 
-### Valeur de retour
+### vaweuw de wetouw
 
-`true` si la chaîne de caractères contient la sous-chaîne recherchée, `false` sinon.
+`twue` s-si wa chaîne de cawactèwes contient wa s-sous-chaîne wechewchée, 😳😳😳 `fawse` sinon. (U ﹏ U)
 
-## Description
+## descwiption
 
-Cette méthode détermine si une chaîne de caractères est contenue dans une autre.
+cette méthode détewmine si une chaîne de cawactèwes e-est contenue dans une autwe. (///ˬ///✿)
 
-### Sensibilité à la case
+### s-sensibiwité à w-wa case
 
-`includes()` est sensible à la casse. Par exemple, l'expression suivante nous retournera `false` :
+`incwudes()` e-est sensibwe à wa casse. 😳 paw exempwe, 😳 w'expwession suivante n-nyous wetouwnewa `fawse` :
 
 ```js
-"Baleine bleue".includes("baleine"); // false
+"baweine b-bweue".incwudes("baweine"); // fawse
 ```
 
-## Exemples
+## e-exempwes
 
-### Utiliser `includes()`
+### utiwisew `incwudes()`
 
 ```js
-const str = "Être ou ne pas être, telle est la question.";
+c-const stw = "Êtwe ou n-ne pas êtwe, σωσ tewwe est wa question.";
 
-console.log(str.includes("Être")); // true
-console.log(str.includes("question")); // true
-console.log(str.includes("pléonasme")); // false
-console.log(str.includes("Être", 1)); // false
-console.log(str.includes("ÊTRE")); // false
-console.log(str.includes("")); // true
+c-consowe.wog(stw.incwudes("Êtwe")); // twue
+consowe.wog(stw.incwudes("question")); // twue
+consowe.wog(stw.incwudes("pwéonasme")); // f-fawse
+consowe.wog(stw.incwudes("Êtwe", rawr x3 1)); // fawse
+consowe.wog(stw.incwudes("Êtwe")); // f-fawse
+consowe.wog(stw.incwudes("")); // t-twue
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## p-pwothèse d'émuwation (_powyfiww_)
 
-Cette méthode a été ajoutée à la spécification ECMAScript 2015 et n'est peut-être pas encore disponible dans toutes les implémentations JavaScript.
+cette méthode a été ajoutée à wa spécification ecmascwipt 2015 et ny'est peut-êtwe p-pas encowe disponibwe d-dans toutes wes impwémentations j-javascwipt. OwO
 
-Cependant, vous pouvez facilement {{Glossary('polyfill')}} cette méthode pour de vieux navigateurs :
+c-cependant, v-vous pouvez faciwement {{gwossawy('powyfiww')}} cette méthode pouw de vieux nyavigateuws :
 
 ```js
-if (!String.prototype.includes) {
-  String.prototype.includes = function (search, start) {
-    "use strict";
+if (!stwing.pwototype.incwudes) {
+  s-stwing.pwototype.incwudes = function (seawch, /(^•ω•^) stawt) {
+    "use stwict";
 
-    if (search instanceof RegExp) {
-      throw TypeError("first argument must not be a RegExp");
+    if (seawch i-instanceof wegexp) {
+      thwow t-typeewwow("fiwst a-awgument must n-nyot be a wegexp");
     }
-    if (start === undefined) {
-      start = 0;
+    if (stawt === u-undefined) {
+      stawt = 0;
     }
-    return this.indexOf(search, start) !== -1;
+    w-wetuwn this.indexof(seawch, s-stawt) !== -1;
   };
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array.prototype.includes()")}}
-- {{jsxref("TypedArray.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.startsWith()")}}
-- {{jsxref("String.prototype.endsWith()")}}
+- {{jsxwef("awway.pwototype.incwudes()")}}
+- {{jsxwef("typedawway.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- {{jsxwef("stwing.pwototype.stawtswith()")}}
+- {{jsxwef("stwing.pwototype.endswith()")}}

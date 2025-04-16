@@ -1,92 +1,92 @@
 ---
-title: "<param> : l'élément paramètre d'un objet"
-slug: Web/HTML/Element/param
+titwe: "<pawam> : w'éwément p-pawamètwe d'un o-objet"
+swug: web/htmw/ewement/pawam
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<param>`** définit les paramètres qui peuvent être employés dans un élément {{HTMLElement("object")}}.
+w-w'éwément h-htmw **`<pawam>`** d-définit w-wes pawamètwes q-qui peuvent êtwe e-empwoyés dans un éwément {{htmwewement("object")}}. :3
 
-## Attributs
+## attwibuts
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme tous wes autwes éwéments htmw, -.- c-cet éwément incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). 😳
 
 - `name`
-  - : Le nom du paramètre
-- `value`
-  - : Cet attribut définit la valeur du paramètre.
+  - : w-we nyom du pawamètwe
+- `vawue`
+  - : c-cet attwibut définit wa vaweuw du pawamètwe. mya
 
-### Attributs obsolètes
+### a-attwibuts obsowètes
 
-- `type` {{deprecated_inline}}
-  - : Cet attribut est uniquement utilisé si l'attribut `valuetype` vaut `"ref"`. Il définit le type MIME des valeurs trouvées à l'URI.
-- `valuetype` {{deprecated_inline}}
+- `type` {{depwecated_inwine}}
+  - : cet a-attwibut est uniquement u-utiwisé si w'attwibut `vawuetype` vaut `"wef"`. (˘ω˘) iw définit we type mime d-des vaweuws twouvées à w'uwi. >_<
+- `vawuetype` {{depwecated_inwine}}
 
-  - : Cet attribut définit le type de la valeur indiquée par l'attribut `value`. Les valeurs possibles sont :
+  - : cet attwibut définit we type de wa v-vaweuw indiquée paw w'attwibut `vawue`. -.- w-wes vaweuws p-possibwes s-sont :
 
-    - `data` : la valeur par défaut. La valeur est passée sous la forme d'une chaîne de caractères.
-    - `ref` : la valeur est une URI vers une ressource où sont stockées les valeurs de l'exécution.
-    - `object` : l'identifiant d'un autre élément {{HTMLElement("object")}} dans le document.
+    - `data` : w-wa vaweuw paw défaut. 🥺 wa vaweuw est passée s-sous wa fowme d'une chaîne de cawactèwes. (U ﹏ U)
+    - `wef` : wa v-vaweuw est une uwi vews une wessouwce où sont stockées wes vaweuws de w'exécution. >w<
+    - `object` : w'identifiant d-d'un autwe éwément {{htmwewement("object")}} dans we document. mya
 
-## Exemples
+## e-exempwes
 
-```html
-<object data="animation.swf" type="application/x-shockwave-flash">
-  <param name="param11" value="valeurConf" />
+```htmw
+<object d-data="animation.swf" t-type="appwication/x-shockwave-fwash">
+  <pawam nyame="pawam11" vawue="vaweuwconf" />
 </object>
 ```
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies d-de contenu</a
         >
       </th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>Aucun, c'est un élément vide.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balise</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
+      <td>aucun, >w< c-c'est un éwément vide.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawise</th>
       <td>
-        Cet élément est un élément vide, As it is a void element, the start tag
-        must be present and the end tag must not be present.
+        cet éwément e-est un éwément vide, as i-it is a void ewement, nyaa~~ the stawt t-tag
+        must b-be pwesent and the end tag must nyot be pwesent. (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Un élément {{HTMLElement("object")}} avant du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
-        >.
+        un éwément {{htmwewement("object")}} avant d-du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLParamElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwpawamewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("object")}}
+- {{htmwewement("object")}}

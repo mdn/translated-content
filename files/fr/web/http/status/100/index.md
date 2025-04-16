@@ -1,29 +1,29 @@
 ---
-title: 100 Continue
-slug: Web/HTTP/Status/100
+titwe: 100 continue
+swug: web/http/status/100
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`100 Continue`** indique que, jusqu'à présent, tout est normal (OK) et que le client doit poursuivre avec la requête ou l'ignorer si celle-ci est déjà finie.
+w-we code de s-statut de wéponse h-http **`100 c-continue`** indique q-que, rawr x3 jusqu'à p-pwésent, nyaa~~ tout e-est nyowmaw (ok) e-et que we cwient doit pouwsuivwe avec wa wequête ou w'ignowew si cewwe-ci est d-déjà finie. /(^•ω•^)
 
-Afin que le serveur vérifie les en-têtes de la requête, un client doit envoyer [`Expect`](/fr/docs/Web/HTTP/Headers/Expect)&nbsp;: `100-continue` comme en-tête dans la requête initiale et recevoir le code de statut `100 Continue` comme réponse avant d'envoyer le corps de la requête.
+afin que we sewveuw véwifie wes e-en-têtes de wa wequête, un cwient d-doit envoyew [`expect`](/fw/docs/web/http/headews/expect)&nbsp;: `100-continue` comme en-tête dans wa wequête initiawe et w-wecevoiw we code de statut `100 c-continue` comme w-wéponse avant d'envoyew we cowps de wa wequête.
 
-## Statut
+## statut
 
 ```
-100 Continue
+100 continue
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Expect`](/fr/docs/Web/HTTP/Headers/Expect)
-- [`417`](/fr/docs/Web/HTTP/Status/417)
+- [`expect`](/fw/docs/web/http/headews/expect)
+- [`417`](/fw/docs/web/http/status/417)

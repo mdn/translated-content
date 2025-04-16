@@ -1,57 +1,57 @@
 ---
-title: String.prototype.big()
-slug: Web/JavaScript/Reference/Global_Objects/String/big
+titwe: stwing.pwototype.big()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/big
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{jswef}}{{depwecated_headew}}
 
-La méthode **`big()`** crée un élément HTML {{HTMLElement("big")}} qui affichera la chaine de caractères avec une taille de police importante.
+wa m-méthode **`big()`** c-cwée un éwément h-htmw {{htmwewement("big")}} q-qui affichewa w-wa chaine de c-cawactèwes avec u-une taiwwe de p-powice impowtante. (U ﹏ U)
 
-> [!NOTE]
-> L'élément `<big>` a été retiré de [HTML5](/fr/docs/Glossary/HTML5) et ne doit pas être utilisé. À la place, les développeurs web doivent utiliser les propriétés [CSS](/fr/docs/Web/CSS).
+> [!note]
+> w'éwément `<big>` a été wetiwé de [htmw5](/fw/docs/gwossawy/htmw5) et nye doit p-pas êtwe utiwisé. (⑅˘꒳˘) À wa pwace, òωó wes dévewoppeuws w-web doivent utiwisew wes p-pwopwiétés [css](/fw/docs/web/css). ʘwʘ
 
-## Syntaxe
-
-```js
-str.big();
-```
-
-### Valeur de retour
-
-Une chaîne de caractères qui représente un élément HTML {{HTMLElement("big")}}.
-
-## Description
-
-La méthode `big()` place la chaine de caractères dans une balise `<big>` :
-`"<big>str</big>`"
-
-## Exemples
-
-L'exemple suivant montre les méthodes de `String` pour changer la taille d'une chaine de caractères :
+## syntaxe
 
 ```js
-var chaîneMonde = "Coucou monde";
-
-console.log(chaîneMonde.small()); // <small>Coucou monde</small>
-console.log(chaîneMonde.big()); // <big>Coucou monde</big>
-console.log(chaîneMonde.fontsize(7)); // <fontsize=7>Coucou monde</fontsize>
+stw.big();
 ```
 
-Avec l'objet {{domxref("HTMLElement.style", "element.style")}}, il est possible d'accéder à l'attribut `style` de l'élément et de le manipuler. Par exemple :
+### vaweuw d-de wetouw
+
+une chaîne de cawactèwes q-qui wepwésente u-un éwément htmw {{htmwewement("big")}}.
+
+## descwiption
+
+wa méthode `big()` pwace wa c-chaine de cawactèwes dans une bawise `<big>` :
+`"<big>stw</big>`"
+
+## exempwes
+
+w'exempwe suivant m-montwe wes méthodes de `stwing` p-pouw changew w-wa taiwwe d'une c-chaine de cawactèwes :
 
 ```js
-document.getElementById("idÉlément").style.fontSize = "2em";
+v-vaw chaînemonde = "coucou monde";
+
+consowe.wog(chaînemonde.smow()); // <smow>coucou m-monde</smow>
+consowe.wog(chaînemonde.big()); // <big>coucou monde</big>
+c-consowe.wog(chaînemonde.fontsize(7)); // <fontsize=7>coucou monde</fontsize>
 ```
 
-## Spécifications
+avec w'objet {{domxwef("htmwewement.stywe", /(^•ω•^) "ewement.stywe")}}, iw est possibwe d'accédew à w'attwibut `stywe` d-de w'éwément et de we manipuwew. ʘwʘ p-paw exempwe :
 
-{{Specifications}}
+```js
+d-document.getewementbyid("idÉwément").stywe.fontsize = "2em";
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité des nyavigateuws
 
-- {{jsxref("String.prototype.fontsize()")}}
-- {{jsxref("String.prototype.small()")}}
+{{compat}}
+
+## voiw a-aussi
+
+- {{jsxwef("stwing.pwototype.fontsize()")}}
+- {{jsxwef("stwing.pwototype.smow()")}}

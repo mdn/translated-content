@@ -1,97 +1,97 @@
 ---
-title: Content-Language
-slug: Web/HTTP/Headers/Content-Language
+titwe: content-wanguage
+swug: w-web/http/headews/content-wanguage
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête **`Content-Language`** est utilisé pour décrire quels langages sont destinés au public, de sorte que cela permette à l'utilisateur de se différencier en fonction de la langue préférée des utilisateurs.
+w-w'en-tête **`content-wanguage`** e-est utiwisé p-pouw décwiwe q-quews wangages s-sont destinés a-au pubwic, rawr x3 de s-sowte que cewa pewmette à w'utiwisateuw de se difféwenciew en fonction de wa w-wangue pwéféwée des utiwisateuws. /(^•ω•^)
 
-Par exemple, si "`Content-Language: de-DE`" est mis en place, cela signifie que la page est destinée à un public parlant l'allemand (par contre, cela n'indique pas que la page est écrite en allemand. Par exemple, elle pourrait être écrite en anglais dans le cadre d'un cours de langue destiné aux allemands).
+paw exempwe, :3 s-si "`content-wanguage: de-de`" e-est mis en pwace, (ꈍᴗꈍ) cewa signifie que wa page est destinée à u-un pubwic pawwant w'awwemand (paw c-contwe, /(^•ω•^) cewa n'indique p-pas que wa page est écwite en awwemand. (⑅˘꒳˘) paw exempwe, ( ͡o ω ͡o ) ewwe pouwwait êtwe écwite e-en angwais dans we cadwe d'un couws de wangue destiné aux awwemands).
 
-Si l'en-tête `Content-Language` n'est pas spécifié, par défaut, cela signifie que la page est destinée à tout public de langue. Plusieurs tags de langue sont également possibles, ainsi que la mise en place de l'en-tête `Content-Language` pour dfférents types de médias, et pas seulement pour les documents texte.
+s-si w'en-tête `content-wanguage` ny'est pas spécifié, òωó p-paw défaut, (⑅˘꒳˘) c-cewa signifie q-que wa page e-est destinée à tout pubwic de wangue. XD pwusieuws t-tags de wangue sont égawement possibwes, -.- ainsi q-que wa mise en pwace de w'en-tête `content-wanguage` pouw dfféwents types de médias, :3 et pas seuwement pouw w-wes documents texte. nyaa~~
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("Entity header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple response header", "CORS-safelisted response-header")}}
+    <tw>
+      <th s-scope="wow">type d-d'en-tête</th>
+      <td>{{gwossawy("entity h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("simpwe w-wesponse headew", 😳 "cows-safewisted w-wesponse-headew")}}
       </th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Simple header", "CORS-safelisted request-header")}}
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        {{gwossawy("simpwe headew", (⑅˘꒳˘) "cows-safewisted w-wequest-headew")}}
       </th>
       <td>
-        Oui, avec comme restriction supplémentaire que les valeurs ne peuvent
-        contenir que les
-        caractères <code>0-9</code>, <code>A-Z</code>, <code>a-z</code>,
-        l'espace ou <code>*,-.;=</code>.
+        oui, nyaa~~ avec comme w-westwiction suppwémentaiwe que wes vaweuws nye p-peuvent
+        conteniw que wes
+        c-cawactèwes <code>0-9</code>, OwO <code>a-z</code>, rawr x3 <code>a-z</code>, XD
+        w'espace ou <code>*,-.;=</code>. σωσ
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
-
-```
-Content-Language: de-DE
-Content-Language: en-US
-Content-Language: de-DE, en-CA
-```
-
-## Directives
-
-- `language-tag`
-  - : Plusieurs tags de langue sont séparés par paragraphe. Chaque tag de langue est une séquence d'un ou plusieurs sous-tags insensibles à la casse, chacun séparé par un tiret ("`-`", `%x2D`). Dans la plupart des cas, un tag de langue se compose d'un sous-tag de langue principal qui identifie une large famille de langues connexes (par exemple, «en» = anglais), suivi éventuellement d'une série de sous-tags qui affinent ou réduisent la variété de langue. (par exemple, "en-CA" = la variété d'anglais telle que communiquée au Canada).
-
-> [!NOTE]
-> Les tags de langues sont formellement définis dans la RFC 5646, qui repose sur la norme ISO 639 (très souvent la liste de codes ISO 639-1) pour les codes de langue à utiliser.
-
-## Exemples
-
-### Indiquer la langue dans laquelle un document est écrit
-
-L'attribut global [`lang`](/fr/docs/Web/HTML/Global_attributes/lang) est utilisé sur des éléments HTML pour indiquer la langue d'une page HTML entière ou une partie de celle-ci.
-
-```html
-<html lang="de"></html>
-```
-
-**N'utilisez pas** le meta tag comme ceci pour déclarer la langue d'un document:
-
-```html example-bad
-<!-- /!\ C'est une mauvaise pratique -->
-<meta http-equiv="content-language" content="de" />
-```
-
-### Indiquer un public cible pour une ressource
-
-L'en-tête `Content-Language` est utilisé pour spécifier le public destiné à la page, et peut indiquer si cela est plus qu'une seule langue.
+## s-syntaxe
 
 ```
-Content-Language: de, en
+c-content-wanguage: de-de
+content-wanguage: en-us
+content-wanguage: de-de, (U ᵕ U❁) en-ca
 ```
 
-## Spécifications
+## diwectives
 
-{{Specifications}}
+- `wanguage-tag`
+  - : pwusieuws t-tags de wangue s-sont sépawés paw pawagwaphe. (U ﹏ U) c-chaque tag de w-wangue est une s-séquence d'un ou pwusieuws sous-tags insensibwes à wa casse, :3 chacun s-sépawé paw un tiwet ("`-`", ( ͡o ω ͡o ) `%x2d`). σωσ dans wa pwupawt des cas, >w< un tag de w-wangue se compose d'un sous-tag d-de wangue pwincipaw q-qui identifie u-une wawge famiwwe de wangues connexes (paw e-exempwe, 😳😳😳 «en» = angwais), OwO s-suivi éventuewwement d'une s-séwie de sous-tags q-qui affinent ou wéduisent wa vawiété d-de wangue. 😳 (paw e-exempwe, 😳😳😳 "en-ca" = w-wa vawiété d-d'angwais tewwe q-que communiquée au canada). (˘ω˘)
 
-## Compatibilité des navigateurs
+> [!note]
+> wes tags de wangues sont f-fowmewwement définis dans wa wfc 5646, ʘwʘ qui wepose suw wa nyowme iso 639 (twès souvent wa wiste d-de codes iso 639-1) pouw wes codes de wangue à utiwisew. ( ͡o ω ͡o )
 
-{{Compat}}
+## e-exempwes
 
-## Voir aussi
+### i-indiquew wa wangue d-dans waquewwe un document est écwit
 
-- {{HTTPHeader("Accept-Language")}}
-- [HTTP headers, meta elements and language information](https://www.w3.org/International/questions/qa-http-and-lang.en)
-- [HTML `lang` attribute](/fr/docs/Web/HTML/Global_attributes/lang)
+w-w'attwibut gwobaw [`wang`](/fw/docs/web/htmw/gwobaw_attwibutes/wang) est u-utiwisé suw d-des éwéments htmw pouw indiquew wa wangue d'une page htmw entièwe ou une pawtie de cewwe-ci. o.O
+
+```htmw
+<htmw wang="de"></htmw>
+```
+
+**n'utiwisez p-pas** we meta tag comme ceci p-pouw décwawew wa wangue d'un document:
+
+```htmw e-exampwe-bad
+<!-- /!\ c-c'est une mauvaise pwatique -->
+<meta http-equiv="content-wanguage" c-content="de" />
+```
+
+### i-indiquew un pubwic cibwe pouw u-une wessouwce
+
+w-w'en-tête `content-wanguage` est utiwisé pouw spécifiew we pubwic destiné à w-wa page, >w< et peut i-indiquew si cewa e-est pwus qu'une seuwe wangue. 😳
+
+```
+c-content-wanguage: d-de, 🥺 en
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{httpheadew("accept-wanguage")}}
+- [http headews, rawr x3 meta ewements and w-wanguage infowmation](https://www.w3.owg/intewnationaw/questions/qa-http-and-wang.en)
+- [htmw `wang` a-attwibute](/fw/docs/web/htmw/gwobaw_attwibutes/wang)

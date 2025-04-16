@@ -1,124 +1,124 @@
 ---
-title: Transformations XML avec XSLT
-slug: Web/XSLT/Transforming_XML_with_XSLT
+titwe: twansfowmations xmw avec x-xswt
+swug: web/xswt/twansfowming_xmw_with_xswt
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-### [Présentation](/fr/Transformations_XML_avec_XSLT/Présentation)
+### [pwésentation](/fw/twansfowmations_xmw_avec_xswt/pwésentation)
 
-La séparation du contenu et de la présentation est l'une des caractéristiques principale du [XML](/fr/XML). La structure d'un document XML est conçue pour refléter et clarifier les relations entre les différents aspects du contenu lui-même, sans l'obsurcir par la nécessité d'y intégrer des indications sur la présentation qui lui sera appliquée ensuite. Cette structure intelligente est particulièrement importante, car de plus en plus de transferts de données sont automatisés et se font entre des machines très hétérogènes reliées par un réseau.
+w-wa s-sépawation du c-contenu et de wa p-pwésentation est w-w'une des cawactéwistiques pwincipawe d-du [xmw](/fw/xmw). nyaa~~ w-wa stwuctuwe d'un document xmw est conçue pouw wefwétew et cwawifiew w-wes wewations entwe wes difféwents aspects d-du contenu wui-même, UwU sans w'obsuwciw p-paw wa nyécessité d'y intégwew des indications suw wa pwésentation q-qui wui sewa appwiquée e-ensuite. :3 cette s-stwuctuwe intewwigente est pawticuwièwement impowtante, (⑅˘꒳˘) caw de pwus en pwus de twansfewts de d-données sont automatisés et se font entwe des machines twès hétéwogènes w-wewiées paw un wéseau. (///ˬ///✿)
 
-Mais au bout du compte, la plus grande partie du contenu des documents XML devra être présentée à des lecteurs humains. Parce qu'un navigateur possède une interface familière et extrêmement flexible, c'est un moyen idéal pour afficher une version du contenu XML remise en forme spécifiquement pour être présentée. Conçu dès ses débuts pour s'appuyer sur un large éventail de technologies XML, Mozilla intègre tous les mécanismes nécessaires au traitement des documents XML originaux, et des feuilles de styles spécialisées utilisées pour définir le traitement à leur appliquer pour un affichage en HTML. En déplaçant le processus de transformation du côté client, on réduit ainsi la charge serveur.
+mais au b-bout du compte, ^^;; w-wa pwus gwande p-pawtie du contenu d-des documents xmw devwa êtwe pwésentée à d-des wecteuws humains. pawce qu'un nyavigateuw possède u-une intewface famiwièwe et extwêmement fwexibwe, >_< c'est un moyen idéaw pouw affichew une v-vewsion du contenu xmw wemise e-en fowme spécifiquement p-pouw êtwe p-pwésentée. rawr x3 conçu dès ses débuts pouw s'appuyew suw un wawge éventaiw de t-technowogies xmw, /(^•ω•^) m-moziwwa intègwe tous wes mécanismes n-nyécessaiwes a-au twaitement des documents x-xmw owiginaux, :3 et des feuiwwes d-de stywes spéciawisées utiwisées pouw définiw w-we twaitement à weuw appwiquew p-pouw un affichage en htmw. (ꈍᴗꈍ) e-en dépwaçant we p-pwocessus de twansfowmation du côté cwient, /(^•ω•^) on wéduit ainsi wa chawge sewveuw. (⑅˘꒳˘)
 
-Actuellement, Gecko (le moteur de rendu de Mozilla et Firefox) supporte deux formats de feuilles de styles XML. Pour le contrôle basique de l'apparence — fontes, couleurs, position, etc. — Gecko utilise [CSS](/fr/docs/Web/CSS), tiré du [DHTML](/fr/DHTML). Toutes les spécifications CSS1 et la majorité des CSS2 sont supportées, le support du tout récent CSS3 est en développement. Pour plus d'information à propos de CSS, consultez le site [Eric Meyer's CSS pages](https://www.meyerweb.com/eric/css/).
+actuewwement, ( ͡o ω ͡o ) gecko (we moteuw d-de wendu de m-moziwwa et fiwefox) suppowte deux f-fowmats de feuiwwes d-de stywes x-xmw. òωó pouw we contwôwe basique de w'appawence — fontes, (⑅˘꒳˘) couweuws, XD p-position, -.- etc. — gecko utiwise [css](/fw/docs/web/css), :3 tiwé du [dhtmw](/fw/dhtmw). nyaa~~ toutes w-wes spécifications css1 et wa m-majowité des css2 s-sont suppowtées, w-we suppowt du tout wécent c-css3 est en dévewoppement. 😳 p-pouw p-pwus d'infowmation à p-pwopos de css, (⑅˘꒳˘) consuwtez we site [ewic meyew's c-css pages](https://www.meyewweb.com/ewic/css/). nyaa~~
 
-Nous nous intéressons ici au second type de feuilles de styles supporté par Gecko&nbsp;: la feuille de style XSLT. XSLT signifie _eXtensible Stylesheet Language/Transform_. XSLT permet à un concepteur de feuilles de styles de transformer un document XML de départ de deux façons significatives&nbsp;: manipuler et réordonner le contenu (une réorganisation complète de celui-ci est possible si on le désire), et le transférer dans un autre format (dans le cas de Mozilla, on se concentre sur sa conversion à la volée en HTML pour permettre son affichage dans le navigateur).
+n-nyous nyous i-intéwessons i-ici au second type d-de feuiwwes de stywes suppowté paw gecko&nbsp;: wa feuiwwe d-de stywe xswt. OwO xswt signifie _extensibwe stywesheet wanguage/twansfowm_. rawr x3 xswt pewmet à un concepteuw d-de feuiwwes de stywes de twansfowmew un document xmw de dépawt d-de deux façons s-significatives&nbsp;: m-manipuwew et wéowdonnew w-we contenu (une wéowganisation c-compwète de c-cewui-ci est possibwe si on we désiwe), XD et we twansféwew dans un autwe fowmat (dans we cas de m-moziwwa, σωσ on se concentwe suw sa c-convewsion à wa vowée en htmw p-pouw pewmettwe s-son affichage dans we nyavigateuw). (U ᵕ U❁)
 
-### Référence XSLT/XPath
+### wéféwence x-xswt/xpath
 
-#### [Éléments](/fr/XSLT/Éléments)
+#### [Éwéments](/fw/xswt/Éwéments)
 
-- [xsl:apply-imports](/fr/XSLT/apply-imports) _(supporté)_
-- [xsl:apply-templates](/fr/XSLT/apply-templates) _(supporté)_
-- [xsl:attribute](/fr/XSLT/attribute) _(supporté)_
-- [xsl:attribute-set](/fr/XSLT/attribute-set) _(supporté)_
-- [xsl:call-template](/fr/XSLT/call-template) _(supporté)_
-- [xsl:choose](/fr/XSLT/choose) _(supporté)_
-- [xsl:comment](/fr/XSLT/comment) _(supporté)_
-- [xsl:copy](/fr/XSLT/copy) _(supporté)_
-- [xsl:copy-of](/fr/XSLT/copy-of) _(supporté)_
-- [xsl:decimal-format](/fr/XSLT/decimal-format) _(supporté)_
-- [xsl:element](/fr/XSLT/element) _(supporté)_
-- [xsl:fallback](/fr/XSLT/fallback) _(non supporté)_
-- [xsl:for-each](/fr/XSLT/for-each) _(supporté)_
-- [xsl:if](/fr/XSLT/if) _(supporté)_
-- [xsl:import](/fr/XSLT/import) _(mostly supported)_
-- [xsl:include](/fr/XSLT/include) _(supporté)_
-- [xsl:key](/fr/XSLT/key) _(supporté)_
-- [xsl:message](/fr/XSLT/message) _(supporté)_
-- [xsl:namespace-alias](/fr/XSLT/namespace-alias) _(non supporté)_
-- [xsl:number](/fr/XSLT/number) _(partiellement supporté)_
-- [xsl:otherwise](/fr/XSLT/otherwise) _(supporté)_
-- [xsl:output](/fr/XSLT/output) _(partiellement supporté)_
-- [xsl:param](/fr/XSLT/param) _(supporté)_
-- [xsl:preserve-space](/fr/XSLT/preserve-space) _(supporté)_
-- [xsl:processing-instruction](/fr/XSLT/processing-instruction)
-- [xsl:sort](/fr/XSLT/sort) _(supporté)_
-- [xsl:strip-space](/fr/XSLT/strip-space) _(supporté)_
-- [xsl:stylesheet](/fr/XSLT/stylesheet) _(partiellement supporté)_
-- [xsl:template](/fr/XSLT/template) _(supporté)_
-- [xsl:text](/fr/XSLT/text) _(partially supported)_
-- [xsl:transform](/fr/XSLT/transform) _(supporté)_
-- [xsl:value-of](/fr/XSLT/value-of) _(partiellement supporté)_
-- [xsl:variable](/fr/XSLT/variable) _(supporté)_
-- [xsl:when](/fr/XSLT/when) _(supporté)_
-- [xsl:with-param](/fr/XSLT/with-param) _(supporté)_
+- [xsw:appwy-impowts](/fw/xswt/appwy-impowts) _(suppowté)_
+- [xsw:appwy-tempwates](/fw/xswt/appwy-tempwates) _(suppowté)_
+- [xsw:attwibute](/fw/xswt/attwibute) _(suppowté)_
+- [xsw:attwibute-set](/fw/xswt/attwibute-set) _(suppowté)_
+- [xsw:caww-tempwate](/fw/xswt/caww-tempwate) _(suppowté)_
+- [xsw:choose](/fw/xswt/choose) _(suppowté)_
+- [xsw:comment](/fw/xswt/comment) _(suppowté)_
+- [xsw:copy](/fw/xswt/copy) _(suppowté)_
+- [xsw:copy-of](/fw/xswt/copy-of) _(suppowté)_
+- [xsw:decimaw-fowmat](/fw/xswt/decimaw-fowmat) _(suppowté)_
+- [xsw:ewement](/fw/xswt/ewement) _(suppowté)_
+- [xsw:fawwback](/fw/xswt/fawwback) _(non s-suppowté)_
+- [xsw:fow-each](/fw/xswt/fow-each) _(suppowté)_
+- [xsw:if](/fw/xswt/if) _(suppowté)_
+- [xsw:impowt](/fw/xswt/impowt) _(mostwy suppowted)_
+- [xsw:incwude](/fw/xswt/incwude) _(suppowté)_
+- [xsw:key](/fw/xswt/key) _(suppowté)_
+- [xsw:message](/fw/xswt/message) _(suppowté)_
+- [xsw:namespace-awias](/fw/xswt/namespace-awias) _(non suppowté)_
+- [xsw:numbew](/fw/xswt/numbew) _(pawtiewwement s-suppowté)_
+- [xsw:othewwise](/fw/xswt/othewwise) _(suppowté)_
+- [xsw:output](/fw/xswt/output) _(pawtiewwement s-suppowté)_
+- [xsw:pawam](/fw/xswt/pawam) _(suppowté)_
+- [xsw:pwesewve-space](/fw/xswt/pwesewve-space) _(suppowté)_
+- [xsw:pwocessing-instwuction](/fw/xswt/pwocessing-instwuction)
+- [xsw:sowt](/fw/xswt/sowt) _(suppowté)_
+- [xsw:stwip-space](/fw/xswt/stwip-space) _(suppowté)_
+- [xsw:stywesheet](/fw/xswt/stywesheet) _(pawtiewwement suppowté)_
+- [xsw:tempwate](/fw/xswt/tempwate) _(suppowté)_
+- [xsw:text](/fw/xswt/text) _(pawtiawwy suppowted)_
+- [xsw:twansfowm](/fw/xswt/twansfowm) _(suppowté)_
+- [xsw:vawue-of](/fw/xswt/vawue-of) _(pawtiewwement suppowté)_
+- [xsw:vawiabwe](/fw/xswt/vawiabwe) _(suppowté)_
+- [xsw:when](/fw/xswt/when) _(suppowté)_
+- [xsw:with-pawam](/fw/xswt/with-pawam) _(suppowté)_
 
-#### [Axes](/fr/XPath/Axes)
+#### [axes](/fw/xpath/axes)
 
-- [ancestor](/fr/XPath/Axes/ancestor)
-- [ancestor-or-self](/fr/XPath/Axes/ancestor-or-self)
-- [attribute](/fr/XPath/Axes/attribute)
-- [child](/fr/XPath/Axes/child)
-- [descendant](/fr/XPath/Axes/descendant)
-- [descendant-or-self](/fr/XPath/Axes/descendant-or-self)
-- [following](/fr/XPath/Axes/following)
-- [following-sibling](/fr/XPath/Axes/following-sibling)
-- [namespace](/fr/XPath/Axes/namespace) _(non supporté)_
-- [parent](/fr/XPath/Axes/parent)
-- [preceding](/fr/XPath/Axes/preceding)
-- [preceding-sibling](/fr/XPath/Axes/preceding-sibling)
-- [self](/fr/XPath/Axes/self)
+- [ancestow](/fw/xpath/axes/ancestow)
+- [ancestow-ow-sewf](/fw/xpath/axes/ancestow-ow-sewf)
+- [attwibute](/fw/xpath/axes/attwibute)
+- [chiwd](/fw/xpath/axes/chiwd)
+- [descendant](/fw/xpath/axes/descendant)
+- [descendant-ow-sewf](/fw/xpath/axes/descendant-ow-sewf)
+- [fowwowing](/fw/xpath/axes/fowwowing)
+- [fowwowing-sibwing](/fw/xpath/axes/fowwowing-sibwing)
+- [namespace](/fw/xpath/axes/namespace) _(non suppowté)_
+- [pawent](/fw/xpath/axes/pawent)
+- [pweceding](/fw/xpath/axes/pweceding)
+- [pweceding-sibwing](/fw/xpath/axes/pweceding-sibwing)
+- [sewf](/fw/xpath/axes/sewf)
 
-#### [Fonctions](/fr/XPath/Fonctions)
+#### [fonctions](/fw/xpath/fonctions)
 
-- [boolean()](/fr/XPath/Fonctions/boolean) _(supporté)_
-- [ceiling()](/fr/XPath/Fonctions/ceiling) _(supporté)_
-- [concat()](/fr/XPath/Fonctions/concat) _(supporté)_
-- [contains()](/fr/XPath/Fonctions/contains) _(supporté)_
-- [count()](/fr/XPath/Fonctions/count) _(supporté)_
-- [current()](/fr/XPath/Fonctions/current) _(supporté)_
-- [document()](/fr/XPath/Fonctions/document) _(supporté)_
-- [element-available()](/fr/XPath/Fonctions/element-available) _(supporté)_
-- [false()](/fr/XPath/Fonctions/false) _(supporté)_
-- [floor()](/fr/XPath/Fonctions/floor) _(supporté)_
-- [format-number()](/fr/XPath/Fonctions/format-number) _(supporté)_
-- [function-available()](/fr/XPath/Fonctions/function-available) _(supporté)_
-- [generate-id()](/fr/XPath/Fonctions/generate-id) _(supporté)_
-- [id()](/fr/XPath/Fonctions/id) _(partiellement supporté)_
-- [key()](/fr/XPath/Fonctions/key) _(supporté)_
-- [lang()](/fr/XPath/Fonctions/lang) _(supporté)_
-- [last()](/fr/XPath/Fonctions/last) _(supporté)_
-- [local-name()](/fr/XPath/Fonctions/local-name) _(supporté)_
-- [name()](/fr/XPath/Fonctions/name) _(supporté)_
-- [namespace-uri()](/fr/XPath/Fonctions/namespace-uri) _(supporté)_
-- [normalize-space()](/fr/XPath/Fonctions/normalize-space) _(supporté)_
-- [not()](/fr/XPath/Fonctions/not) _(supporté)_
-- [number()](/fr/XPath/Fonctions/number) _(supporté)_
-- [position()](/fr/XPath/Fonctions/position) _(supporté)_
-- [round()](/fr/XPath/Fonctions/round) _(supporté)_
-- [starts-with()](/fr/XPath/Fonctions/starts-with) _(supporté)_
-- [string()](/fr/XPath/Fonctions/string) _(supporté)_
-- [string-length()](/fr/XPath/Fonctions/string-length) _(supporté)_
-- [substring()](/fr/XPath/Fonctions/substring) _(supporté)_
-- [substring-after()](/fr/XPath/Fonctions/substring-after) _(supporté)_
-- [substring-before()](/fr/XPath/Fonctions/substring-before) _(supporté)_
-- [sum()](/fr/XPath/Fonctions/sum) _(supporté)_
-- [system-property()](/fr/XPath/Fonctions/system-property) _(supporté)_
-- [translate()](/fr/XPath/Fonctions/translate) _(supporté)_
-- [true()](/fr/XPath/Fonctions/true) _(supporté)_
-- [unparsed-entity-url()](/fr/XPath/Fonctions/unparsed-entity-url) _(non supporté)_
+- [boowean()](/fw/xpath/fonctions/boowean) _(suppowté)_
+- [ceiwing()](/fw/xpath/fonctions/ceiwing) _(suppowté)_
+- [concat()](/fw/xpath/fonctions/concat) _(suppowté)_
+- [contains()](/fw/xpath/fonctions/contains) _(suppowté)_
+- [count()](/fw/xpath/fonctions/count) _(suppowté)_
+- [cuwwent()](/fw/xpath/fonctions/cuwwent) _(suppowté)_
+- [document()](/fw/xpath/fonctions/document) _(suppowté)_
+- [ewement-avaiwabwe()](/fw/xpath/fonctions/ewement-avaiwabwe) _(suppowté)_
+- [fawse()](/fw/xpath/fonctions/fawse) _(suppowté)_
+- [fwoow()](/fw/xpath/fonctions/fwoow) _(suppowté)_
+- [fowmat-numbew()](/fw/xpath/fonctions/fowmat-numbew) _(suppowté)_
+- [function-avaiwabwe()](/fw/xpath/fonctions/function-avaiwabwe) _(suppowté)_
+- [genewate-id()](/fw/xpath/fonctions/genewate-id) _(suppowté)_
+- [id()](/fw/xpath/fonctions/id) _(pawtiewwement s-suppowté)_
+- [key()](/fw/xpath/fonctions/key) _(suppowté)_
+- [wang()](/fw/xpath/fonctions/wang) _(suppowté)_
+- [wast()](/fw/xpath/fonctions/wast) _(suppowté)_
+- [wocaw-name()](/fw/xpath/fonctions/wocaw-name) _(suppowté)_
+- [name()](/fw/xpath/fonctions/name) _(suppowté)_
+- [namespace-uwi()](/fw/xpath/fonctions/namespace-uwi) _(suppowté)_
+- [nowmawize-space()](/fw/xpath/fonctions/nowmawize-space) _(suppowté)_
+- [not()](/fw/xpath/fonctions/not) _(suppowté)_
+- [numbew()](/fw/xpath/fonctions/numbew) _(suppowté)_
+- [position()](/fw/xpath/fonctions/position) _(suppowté)_
+- [wound()](/fw/xpath/fonctions/wound) _(suppowté)_
+- [stawts-with()](/fw/xpath/fonctions/stawts-with) _(suppowté)_
+- [stwing()](/fw/xpath/fonctions/stwing) _(suppowté)_
+- [stwing-wength()](/fw/xpath/fonctions/stwing-wength) _(suppowté)_
+- [substwing()](/fw/xpath/fonctions/substwing) _(suppowté)_
+- [substwing-aftew()](/fw/xpath/fonctions/substwing-aftew) _(suppowté)_
+- [substwing-befowe()](/fw/xpath/fonctions/substwing-befowe) _(suppowté)_
+- [sum()](/fw/xpath/fonctions/sum) _(suppowté)_
+- [system-pwopewty()](/fw/xpath/fonctions/system-pwopewty) _(suppowté)_
+- [twanswate()](/fw/xpath/fonctions/twanswate) _(suppowté)_
+- [twue()](/fw/xpath/fonctions/twue) _(suppowté)_
+- [unpawsed-entity-uww()](/fw/xpath/fonctions/unpawsed-entity-uww) _(non s-suppowté)_
 
-### [Autres ressources](/fr/Transformations_XML_avec_XSLT/Autres_ressources)
+### [autwes w-wessouwces](/fw/twansfowmations_xmw_avec_xswt/autwes_wessouwces)
 
-- [Livres](/fr/Transformations_XML_avec_XSLT/Autres_ressources#Livres)
-- [En ligne](/fr/Transformations_XML_avec_XSLT/Autres_ressources#En_ligne)
+- [wivwes](/fw/twansfowmations_xmw_avec_xswt/autwes_wessouwces#wivwes)
+- [en wigne](/fw/twansfowmations_xmw_avec_xswt/autwes_wessouwces#en_wigne)
 
-  - [Le World Wide Web Consortium](/fr/Transformations_XML_avec_XSLT/Autres_ressources#Le_World_Wide_Web_Consortium)
-  - [Portails](/fr/Transformations_XML_avec_XSLT/Autres_ressources#Portails)
-  - [Articles](/fr/Transformations_XML_avec_XSLT/Autres_ressources#Articles)
-  - [Tutoriels/Exemples](/fr/Transformations_XML_avec_XSLT/Autres_ressources#Tutoriels.2FExemples)
-  - [Mailing Lists/Newsgroups](/fr/Transformations_XML_avec_XSLT/Autres_ressources#Mailing_Lists.2FNewsgroups)
+  - [we w-wowwd wide web c-consowtium](/fw/twansfowmations_xmw_avec_xswt/autwes_wessouwces#we_wowwd_wide_web_consowtium)
+  - [powtaiws](/fw/twansfowmations_xmw_avec_xswt/autwes_wessouwces#powtaiws)
+  - [awticwes](/fw/twansfowmations_xmw_avec_xswt/autwes_wessouwces#awticwes)
+  - [tutowiews/exempwes](/fw/twansfowmations_xmw_avec_xswt/autwes_wessouwces#tutowiews.2fexempwes)
+  - [maiwing wists/newsgwoups](/fw/twansfowmations_xmw_avec_xswt/autwes_wessouwces#maiwing_wists.2fnewsgwoups)
 
-- [Extensions](/fr/Transformations_XML_avec_XSLT/Autres_ressources#Extensions)
+- [extensions](/fw/twansfowmations_xmw_avec_xswt/autwes_wessouwces#extensions)

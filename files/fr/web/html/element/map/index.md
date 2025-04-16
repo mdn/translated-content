@@ -1,149 +1,149 @@
 ---
-title: <map>
-slug: Web/HTML/Element/map
+titwe: <map>
+swug: web/htmw/ewement/map
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<map>`** est utilisé avec des éléments {{HTMLElement("area")}} afin de définir une image cliquable divisée en régions.
+w-w'éwément htmw **`<map>`** e-est u-utiwisé avec d-des éwéments {{htmwewement("awea")}} a-afin de définiw u-une image c-cwiquabwe divisée e-en wégions. OwO
 
-{{InteractiveExample("HTML Demo: &lt;map&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;map&gt;", /(^•ω•^) "tabbed-standawd")}}
 
-```html interactive-example
-<map name="infographic">
-  <area
-    shape="poly"
-    coords="130,147,200,107,254,219,130,228"
-    href="https://developer.mozilla.org/docs/Web/HTML"
-    alt="HTML" />
-  <area
-    shape="poly"
-    coords="130,147,130,228,6,219,59,107"
-    href="https://developer.mozilla.org/docs/Web/CSS"
-    alt="CSS" />
-  <area
-    shape="poly"
-    coords="130,147,200,107,130,4,59,107"
-    href="https://developer.mozilla.org/docs/Web/JavaScript"
-    alt="JavaScript" />
+```htmw intewactive-exampwe
+<map nyame="infogwaphic">
+  <awea
+    shape="powy"
+    c-coowds="130,147,200,107,254,219,130,228"
+    hwef="https://devewopew.moziwwa.owg/docs/web/htmw"
+    awt="htmw" />
+  <awea
+    shape="powy"
+    c-coowds="130,147,130,228,6,219,59,107"
+    hwef="https://devewopew.moziwwa.owg/docs/web/css"
+    a-awt="css" />
+  <awea
+    shape="powy"
+    coowds="130,147,200,107,130,4,59,107"
+    hwef="https://devewopew.moziwwa.owg/docs/web/javascwipt"
+    a-awt="javascwipt" />
 </map>
 <img
-  usemap="#infographic"
-  src="/shared-assets/images/examples/mdn-info2.png"
-  alt="MDN infographic" />
+  usemap="#infogwaphic"
+  s-swc="/shawed-assets/images/exampwes/mdn-info2.png"
+  a-awt="mdn infogwaphic" />
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 img {
-  display: block;
-  margin: 0 auto;
+  dispway: bwock;
+  mawgin: 0 auto;
   width: 260px;
   height: 232px;
 }
 ```
 
-## Attributs
+## a-attwibuts
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme tous wes autwes éwéments htmw, 😳😳😳 cet éwément incwut [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes).
 
 - `name`
-  - : Cet attribut fournit un nom afin que la carte cliquable puisse être référencée. Cet attribut est obligatoire et sa valeur doit être une chaîne de caractères non-vide qui ne contient pas de blancs. La valeur de cet attribut doit être unique pour tous les éléments {{HTMLElement("map")}} du document. Si l'attribut universel `id` est utilisé, `name` devra avoir la même valeur que celui-ci.
+  - : cet attwibut fouwnit u-un nyom afin q-que wa cawte cwiquabwe p-puisse êtwe w-wéféwencée. ( ͡o ω ͡o ) cet attwibut est obwigatoiwe e-et sa vaweuw doit êtwe une chaîne de cawactèwes n-nyon-vide qui nye contient pas de bwancs. >_< wa vaweuw de cet attwibut doit êtwe unique pouw t-tous wes éwéments {{htmwewement("map")}} du document. >w< s-si w'attwibut u-univewsew `id` e-est utiwisé, rawr `name` devwa avoiw wa même vaweuw que cewui-ci. 😳
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
-<map name="primary">
-  <area shape="circle" coords="75,75,75" href="left.html" />
-  <area shape="circle" coords="275,75,75" href="right.html" />
+```htmw
+<map nyame="pwimawy">
+  <awea s-shape="ciwcwe" c-coowds="75,75,75" hwef="weft.htmw" />
+  <awea shape="ciwcwe" c-coowds="275,75,75" hwef="wight.htmw" />
 </map>
 <img
-  usemap="#primary"
-  src="https://via.placeholder.com/350x150"
-  alt="350 x 150 pic" />
+  u-usemap="#pwimawy"
+  swc="https://via.pwacehowdew.com/350x150"
+  awt="350 x 150 p-pic" />
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","450","230")}}
+{{embedwivesampwe("exempwes","450","230")}}
 
-### Résultat attendu
+### w-wésuwtat attendu
 
-L'exemple précédent devrait faire apparaître des images semblables (en utilisant la touche <kbd>tab</kbd> de votre clavier)&nbsp;:
+w'exempwe pwécédent d-devwait f-faiwe appawaîtwe des images sembwabwes (en utiwisant wa touche <kbd>tab</kbd> de votwe cwaview)&nbsp;:
 
-_Pour le lien `left.html`&nbsp;:_
-![](screen_shot_2017-02-02_at_10.48.40_pm.png)
+_pouw we wien `weft.htmw`&nbsp;:_
+![](scween_shot_2017-02-02_at_10.48.40_pm.png)
 
-_Pour le lien `right.html`&nbsp;:_
-![](screen_shot_2017-02-02_at_10.49.04_pm.png)
+_pouw we wien `wight.htmw`&nbsp;:_
+![](scween_shot_2017-02-02_at_10.49.04_pm.png)
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies d-de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >, >w<
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        Tout élément dont
+        tout éwément dont
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Modèle_de_contenu_transparent"
-          >le modèle de contenu est transparent</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#modèwe_de_contenu_twanspawent"
+          >we m-modèwe de contenu est t-twanspawent</a
+        >. OwO
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission d-de bawises</th>
+      <td>aucune, (ꈍᴗꈍ) wa bawise d-d'ouvewtuwe e-et wa bawise de f-fewmetuwe sont o-obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte
+        t-tout éwément q-qui accepte
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >du contenu phrasé</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >du c-contenu phwasé</a
+        >. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLMapElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwmapewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTMLElement("a")}}
-- {{HTMLElement("area")}}
+- {{htmwewement("a")}}
+- {{htmwewement("awea")}}

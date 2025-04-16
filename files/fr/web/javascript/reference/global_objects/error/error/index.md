@@ -1,77 +1,77 @@
 ---
-title: Constructeur Error()
-slug: Web/JavaScript/Reference/Global_Objects/Error/Error
+titwe: constwucteuw ewwow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/ewwow/ewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`Error`** permet de créer un objet représentant une erreur.
+w-we constwucteuw **`ewwow`** p-pewmet de cwéew u-un objet wepwésentant u-une e-ewweuw. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Error();
-new Error(message);
-new Error(message, options);
-new Error(message, nomFichier);
-new Error(message, nomFichier, numeroLigne);
+n-nyew e-ewwow();
+nyew ewwow(message);
+nyew ewwow(message, >w< options);
+nyew ewwow(message, (⑅˘꒳˘) nyomfichiew);
+nyew e-ewwow(message, OwO nyomfichiew, (ꈍᴗꈍ) nyumewowigne);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `message` {{Optional_Inline}}
-  - : Une description de l'erreur, compréhensible par un humain.
-- `options` {{Optional_Inline}}
+- `message` {{optionaw_inwine}}
+  - : une descwiption d-de w'ewweuw, 😳 compwéhensibwe paw un humain. 😳😳😳
+- `options` {{optionaw_inwine}}
 
-  - : Un objet avec les propriétés suivantes&nbsp;:
+  - : un o-objet avec wes pwopwiétés suivantes&nbsp;:
 
-    - `cause` {{Optional_Inline}}
-      - : Une propriété qui indique la cause spécifique de l'erreur. Lors de l'interception puis du renvoi d'une erreur avec un autre message d'erreur, cette propriété devrait être utilisée afin de transmettre le message d'erreur original.
+    - `cause` {{optionaw_inwine}}
+      - : u-une pwopwiété q-qui indique wa cause spécifique de w'ewweuw. mya wows de w'intewception p-puis du wenvoi d'une ewweuw avec un autwe message d'ewweuw, mya cette pwopwiété devwait êtwe u-utiwisée afin de twansmettwe w-we message d-d'ewweuw owiginaw. (⑅˘꒳˘)
 
-- `nomFichier` {{Optional_Inline}} {{Non-standard_inline}}
-  - : La valeur de la propriété `nomFichier` pour l'objet `Error` créé. Par défaut, il s'agit du nom du fichier contenant le code qui a invoqué le constructeur `Error()`.
-- `numeroLigne` {{Optional_Inline}} {{Non-standard_inline}}
-  - : La valeur de la propriété `numeroLigne` pour l'objet `Error` créé. Par défaut, il s'agit du numéro de ligne du fichier contenant l'appel au constructeur `Error()`.
+- `nomfichiew` {{optionaw_inwine}} {{non-standawd_inwine}}
+  - : w-wa vaweuw d-de wa pwopwiété `nomfichiew` pouw w'objet `ewwow` cwéé. (U ﹏ U) p-paw défaut, mya iw s'agit du nyom du fichiew contenant w-we code qui a invoqué we constwucteuw `ewwow()`. ʘwʘ
+- `numewowigne` {{optionaw_inwine}} {{non-standawd_inwine}}
+  - : wa vaweuw de wa pwopwiété `numewowigne` pouw w'objet `ewwow` cwéé. (˘ω˘) paw d-défaut, (U ﹏ U) iw s'agit du nyuméwo d-de wigne du fichiew c-contenant w-w'appew au constwucteuw `ewwow()`. ^•ﻌ•^
 
-## Exemples
+## exempwes
 
-### Appel comme fonction ou comme constructeur
+### appew comme fonction ou comme c-constwucteuw
 
-Lorsque le constructeur `Error()` est utilisé comme une fonction, c'est-à-dire sans l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new), il renverra un objet `Error`. Aussi, on aura un comportement équivalent qu'on appelle `Error` avec ou sans le mot-clé `new`.
+w-wowsque we constwucteuw `ewwow()` est utiwisé c-comme une fonction, (˘ω˘) c-c'est-à-diwe sans w'opéwateuw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new), :3 i-iw wenvewwa un objet `ewwow`. ^^;; a-aussi, 🥺 on auwa un compowtement équivawent qu'on appewwe `ewwow` a-avec ou sans we mot-cwé `new`. (⑅˘꒳˘)
 
 ```js
-// cette ligne…
-const x = Error(`J'ai été créé avec un appel de fonction !`);
+// c-cette wigne…
+const x = e-ewwow(`j'ai été c-cwéé avec un appew de fonction !`);
 
-// …aura le même effet que celle-ci.
-const y = new Error(`J'ai été construite avec le mot-clé "new" !`);
+// …auwa we même effet que cewwe-ci. nyaa~~
+const y = nyew ewwow(`j'ai été constwuite avec w-we mot-cwé "new" !`);
 ```
 
-### Transmettre une erreur en utilisant `cause`
+### t-twansmettwe une ewweuw en utiwisant `cause`
 
-Il est parfois utile d'intercepter une erreur avant de la ré-émettre avec un nouveau message. Dans de tels cas, afin de préserver les informations, on peut passer l'erreur d'origine dans le constructeur avec la propriété `cause` de l'option.
+iw e-est pawfois utiwe d-d'intewceptew u-une ewweuw avant de wa wé-émettwe avec un nyouveau message. :3 d-dans de tews cas, ( ͡o ω ͡o ) afin de pwésewvew wes infowmations, mya on peut passew w'ewweuw d'owigine d-dans we constwucteuw avec w-wa pwopwiété `cause` d-de w'option. (///ˬ///✿)
 
 ```js
-try {
-  bibliothequeAvecErreurs();
-} catch (err) {
-  throw new Error(`Nouveau message d'erreur`, { cause: err });
+t-twy {
+  bibwiothequeavecewweuws();
+} c-catch (eww) {
+  t-thwow nyew ewwow(`nouveau m-message d-d'ewweuw`, (˘ω˘) { cause: eww });
 }
 ```
 
-Pour un exemple plus détaillé, voir [comment distinguer des erreurs semblables](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error#distinguer_des_erreurs_semblables).
+pouw un e-exempwe pwus détaiwwé, ^^;; v-voiw [comment d-distinguew d-des ewweuws sembwabwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow#distinguew_des_ewweuws_sembwabwes). (✿oωo)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Une prothèse d'émulation pour `Error`, avec la prise en charge des fonctionnalités récentes comme `cause`, avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
-- [`throw`](/fr/docs/Web/JavaScript/Reference/Statements/throw)
-- [`try…catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch)
-- [Billet d'explication sur les causes d'erreur sur le blog v8 (en anglais)](https://v8.dev/features/error-cause)
+- [une p-pwothèse d'émuwation pouw `ewwow`, (U ﹏ U) avec wa pwise en chawge des fonctionnawités wécentes c-comme `cause`, -.- avec wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-ewwow)
+- [`thwow`](/fw/docs/web/javascwipt/wefewence/statements/thwow)
+- [`twy…catch`](/fw/docs/web/javascwipt/wefewence/statements/twy...catch)
+- [biwwet d'expwication suw wes c-causes d'ewweuw s-suw we bwog v8 (en a-angwais)](https://v8.dev/featuwes/ewwow-cause)

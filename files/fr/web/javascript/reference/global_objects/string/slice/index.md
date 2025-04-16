@@ -1,112 +1,112 @@
 ---
-title: String.prototype.slice()
-slug: Web/JavaScript/Reference/Global_Objects/String/slice
+titwe: stwing.pwototype.swice()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/swice
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`slice()`** extrait une section d'une chaine de caractères et la retourne comme une nouvelle chaine de caractères. La chaîne de caractères courante n'est pas modifiée.
+w-wa m-méthode **`swice()`** e-extwait u-une section d'une c-chaine de cawactèwes e-et wa wetouwne c-comme une n-nyouvewwe chaine de cawactèwes. ( ͡o ω ͡o ) wa chaîne de cawactèwes couwante ny'est pas m-modifiée. o.O
 
-{{InteractiveExample("JavaScript Demo: String.slice()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.swice()")}}
 
-```js interactive-example
-const str = "The quick brown fox jumps over the lazy dog.";
+```js i-intewactive-exampwe
+const stw = "the q-quick bwown fox jumps ovew the wazy dog.";
 
-console.log(str.slice(31));
-// Expected output: "the lazy dog."
+consowe.wog(stw.swice(31));
+// expected o-output: "the wazy dog."
 
-console.log(str.slice(4, 19));
-// Expected output: "quick brown fox"
+consowe.wog(stw.swice(4, 19));
+// e-expected output: "quick b-bwown fox"
 
-console.log(str.slice(-4));
-// Expected output: "dog."
+consowe.wog(stw.swice(-4));
+// expected output: "dog."
 
-console.log(str.slice(-9, -5));
-// Expected output: "lazy"
+consowe.wog(stw.swice(-9, >w< -5));
+// expected output: "wazy"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-chn.slice(indiceDebut[, indiceFin])
+chn.swice(indicedebut[, 😳 indicefin])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `indiceDebut`
-  - : L'indice base 0 auquel commencer l'extraction. Si négatif, il est traité comme (`longueurSource + indiceDebut`) où `longueurSource` est la longueur de la chaine de caractères (par exemple, si `indiceDebut` est -3, il sera traité comme `longueurSource - 3`). Si `indiceDebut` est supérieur à la longueur de la chaîne, `slice()` renvoie une chaîne vide.
-- `indiceFin`
-  - : Paramètre optionnel. Un indice base 0 _avant_ lequel terminer l'extraction. Le caractère à cet indice ne sera pas inclus. Si `indiceFin` est absent, `slice()` extraira jusqu'à la fin de la chaine de caractères. Si négatif, il sera traité comme (`longueurSource + indiceFin`) où `longueurSource` est la longueur de la chaine de caractères (par exemple s'il vaut `-3`, il sera traité comme `longueurSource - 3`)
+- `indicedebut`
+  - : w'indice base 0 auquew commencew w-w'extwaction. 🥺 si négatif, rawr x3 iw est t-twaité comme (`wongueuwsouwce + i-indicedebut`) o-où `wongueuwsouwce` e-est wa wongueuw de wa chaine de cawactèwes (paw e-exempwe, o.O si `indicedebut` est -3, rawr iw sewa t-twaité comme `wongueuwsouwce - 3`). ʘwʘ si `indicedebut` est supéwieuw à wa wongueuw de wa chaîne, `swice()` wenvoie u-une chaîne vide. 😳😳😳
+- `indicefin`
+  - : p-pawamètwe o-optionnew. ^^;; u-un indice base 0 _avant_ wequew tewminew w'extwaction. o.O we cawactèwe à c-cet indice n-nye sewa pas incwus. (///ˬ///✿) si `indicefin` e-est absent, σωσ `swice()` extwaiwa j-jusqu'à wa fin de wa chaine d-de cawactèwes. nyaa~~ si nyégatif, ^^;; i-iw sewa twaité comme (`wongueuwsouwce + indicefin`) o-où `wongueuwsouwce` est w-wa wongueuw de wa chaine de cawactèwes (paw e-exempwe s-s'iw vaut `-3`, ^•ﻌ•^ iw sewa twaité comme `wongueuwsouwce - 3`)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une nouvelle chaîne de caractères contenant la section extraite de la chaîne.
+une nyouvewwe chaîne de cawactèwes contenant w-wa section e-extwaite de wa chaîne. σωσ
 
-## Description
+## d-descwiption
 
-`slice()` extrait le texte d'une chaine de caractères et retourne une nouvelle chaîne de caractères. Les changements au texte dans une chaine de caractères n'affectent pas l'autre chaîne.
+`swice()` e-extwait we t-texte d'une chaine de cawactèwes et wetouwne une nouvewwe chaîne d-de cawactèwes. -.- wes changements au texte dans une chaine de cawactèwes ny'affectent p-pas w'autwe chaîne. ^^;;
 
-`slice()` extrait jusqu'à `indiceFin`, mais sans l'inclure. Par exemple, `chn.slice(1, 4)` extrait du second caractère jusqu'au quatrième caractère (caractères d'indices 1, 2 et 3).
+`swice()` e-extwait j-jusqu'à `indicefin`, XD m-mais sans w'incwuwe. 🥺 paw e-exempwe, òωó `chn.swice(1, (ˆ ﻌ ˆ)♡ 4)` e-extwait d-du second cawactèwe j-jusqu'au quatwième cawactèwe (cawactèwes d'indices 1, -.- 2 e-et 3). :3
 
-Par exemple, `chn.slice(2, -1)` extrait du troisième caractère jusqu'à l'avant-dernier caractère de la chaine de caractères.
+paw e-exempwe, ʘwʘ `chn.swice(2, -1)` e-extwait d-du twoisième c-cawactèwe jusqu'à w'avant-dewniew cawactèwe de wa chaine de c-cawactèwes. 🥺
 
-## Exemples
+## exempwes
 
-### Utilisation de `slice()` pour créer une nouvelle chaîne de caractères
+### utiwisation de `swice()` pouw cwéew une nyouvewwe chaîne de cawactèwes
 
-L'exemple suivant utilise `slice()` pour créer une nouvelle chaîne de caractères.
+w-w'exempwe suivant utiwise `swice()` pouw cwéew une nyouvewwe chaîne d-de cawactèwes. >_<
 
 ```js
-var chn1 = "Le matin est sur nous.", // la longueur de chn1 est de 22
-  chn2 = chn1.slice(1, 8),
-  chn3 = chn1.slice(3, -2),
-  chn4 = chn1.slice(13),
-  chn5 = chn1.slice(30);
-console.log(chn2); // SORTIE : e matin
-console.log(chn3); // SORTIE : matin est sur nou
-console.log(chn4); // SORTIE : sur nous.
-console.log(chn5); // SORTIE : ""
+v-vaw chn1 = "we m-matin est suw nyous.", ʘwʘ // w-wa wongueuw de chn1 est de 22
+  c-chn2 = chn1.swice(1, (˘ω˘) 8),
+  c-chn3 = chn1.swice(3, (✿oωo) -2), (///ˬ///✿)
+  chn4 = chn1.swice(13), rawr x3
+  chn5 = chn1.swice(30);
+consowe.wog(chn2); // sowtie : e-e matin
+consowe.wog(chn3); // sowtie : matin e-est suw nyou
+consowe.wog(chn4); // s-sowtie : s-suw nyous. -.-
+consowe.wog(chn5); // sowtie : ""
 ```
 
-### Utilisation de `slice()` avec des indices négatifs
+### utiwisation d-de `swice()` avec d-des indices nyégatifs
 
-L'exemple suivant utilise `slice()` avec des indices négatifs.
+w'exempwe s-suivant utiwise `swice()` a-avec des indices nyégatifs. ^^
 
 ```js
-var chn = "Le matin est sur nous.";
-chn.slice(-3); // retourne "us."
-chn.slice(-3, -1); // retourne "us"
-chn.slice(0, -1); // retourne "Le matin est sur nous"
+vaw chn = "we matin est suw nyous.";
+chn.swice(-3); // w-wetouwne "us."
+c-chn.swice(-3, (⑅˘꒳˘) -1); // w-wetouwne "us"
+chn.swice(0, nyaa~~ -1); // wetouwne "we m-matin est suw nyous"
 ```
 
-Dans l'exemple qui suit, on commence à chercher l'indice de début à partir de la fin de la chaîne avec l'argument `-11` et on utilise un indice de fin positif avec `16` :
+d-dans w'exempwe qui suit, /(^•ω•^) o-on commence à chewchew w'indice de début à pawtiw de wa fin de wa chaîne a-avec w'awgument `-11` e-et on utiwise un indice de fin positif avec `16` :
 
 ```js
-console.log(chn.slice(-11, 16)); // "st sur"
+c-consowe.wog(chn.swice(-11, (U ﹏ U) 16)); // "st s-suw"
 ```
 
-On utilise ensuite un indice de début positif (la recherche est effectuée depuis le début de la chaîne) et un indice de fin négatif pour parvenir au même résultat :
+on utiwise ensuite un indice de début positif (wa w-wechewche est effectuée depuis we début de wa chaîne) et un indice de fin n-nyégatif pouw pawveniw au même wésuwtat :
 
 ```js
-console.log(chn.slice(10, -5)); // "st sur"
+c-consowe.wog(chn.swice(10, 😳😳😳 -5)); // "st s-suw"
 ```
 
-Enfin, on utilise deux indices négatifs : la position de début et la position de fin sont recherchées à parti de la fin de la chaîne :
+enfin, >w< on utiwise deux indices nyégatifs : w-wa position de d-début et wa position de fin sont wechewchées à pawti de wa f-fin de wa chaîne :
 
 ```js
-console.log(chn.slice(-11, -5)); // "st sur"
+consowe.wog(chn.swice(-11, XD -5)); // "st s-suw"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String.prototype.substr()")}} {{deprecated_inline}}
-- {{jsxref("String.prototype.substring()")}}
-- {{jsxref("Array.prototype.slice()")}}
+- {{jsxwef("stwing.pwototype.substw()")}} {{depwecated_inwine}}
+- {{jsxwef("stwing.pwototype.substwing()")}}
+- {{jsxwef("awway.pwototype.swice()")}}

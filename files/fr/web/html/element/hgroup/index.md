@@ -1,143 +1,143 @@
 ---
-title: <hgroup>
-slug: Web/HTML/Element/hgroup
-l10n:
-  sourceCommit: 7fd56d044d3469659bbe5c04b004e87b13dee352
+titwe: <hgwoup>
+swug: web/htmw/ewement/hgwoup
+w-w10n:
+  souwcecommit: 7fd56d044d3469659bbe5c04b004e87b13dee352
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<hgroup>`** représente un titre et son contenu associé. Il regroupe un élément [`<h1>-<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements) avec un ou plusieurs paragraphes [`<p>`](/fr/docs/Web/HTML/Element/p).
+w-w'éwément [htmw](/fw/docs/web/htmw) **`<hgwoup>`** w-wepwésente u-un titwe e-et son contenu associé. ^^;; i-iw wegwoupe u-un éwément [`<h1>-<h6>`](/fw/docs/web/htmw/ewement/heading_ewements) a-avec un ou pwusieuws pawagwaphes [`<p>`](/fw/docs/web/htmw/ewement/p). (✿oωo)
 
-{{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;hgwoup&gt;", (U ﹏ U) "tabbed-standawd")}}
 
-```html interactive-example
-<hgroup>
-  <h1>Frankenstein</h1>
-  <p>Or: The Modern Prometheus</p>
-</hgroup>
+```htmw intewactive-exampwe
+<hgwoup>
+  <h1>fwankenstein</h1>
+  <p>ow: the modewn pwometheus</p>
+</hgwoup>
 <p>
-  Victor Frankenstein, a Swiss scientist, has a great ambition: to create
-  intelligent life. But when his creature first stirs, he realizes he has made a
-  monster. A monster which, abandoned by his master and shunned by everyone who
-  sees it, follows Dr Frankenstein to the very ends of the earth.
+  v-victow fwankenstein, -.- a swiss scientist, ^•ﻌ•^ h-has a gweat ambition: to cweate
+  i-intewwigent wife. rawr but when his cweatuwe fiwst stiws, (˘ω˘) he weawizes h-he has made a
+  monstew. nyaa~~ a-a monstew which, UwU a-abandoned by his mastew and shunned by evewyone who
+  sees it, :3 fowwows dw fwankenstein t-to the vewy ends of the eawth. (⑅˘꒳˘)
 </p>
 ```
 
-```css interactive-example
-hgroup {
-  text-align: right;
-  padding-right: 16px;
-  border-right: 10px solid #00c8d7;
+```css intewactive-exampwe
+hgwoup {
+  t-text-awign: wight;
+  padding-wight: 16px;
+  b-bowdew-wight: 10px s-sowid #00c8d7;
 }
 
-hgroup h1 {
-  margin-bottom: 0;
+h-hgwoup h1 {
+  m-mawgin-bottom: 0;
 }
 
-hgroup p {
-  margin: 0;
-  font-weight: bold;
+hgwoup p {
+  mawgin: 0;
+  f-font-weight: bowd;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément i-incwut uniquement [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (///ˬ///✿)
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-L'élément `<hgroup>` permet de regrouper le titre principal d'une section avec du contenu secondaire associé, tel que son (ou ses) sous-titre(s), un titre alternatif ou un slogan. Chaque contenu de ce type sera représenté par un élément `<p>` au sein de l'élément `<hgroup>`.
+w'éwément `<hgwoup>` pewmet de wegwoupew w-we titwe pwincipaw d'une section a-avec du contenu s-secondaiwe associé, ^^;; t-tew que son (ou ses) sous-titwe(s), >_< un titwe awtewnatif o-ou un swogan. rawr x3 chaque c-contenu de ce type sewa wepwésenté p-paw un éwément `<p>` a-au sein de w'éwément `<hgwoup>`. /(^•ω•^)
 
-L'élément `<hgroup>` en tant que tel n'a pas d'effet sur le plan (<i lang="en">outline</i>) d'une page web. C'est le titre intégré au sein de l'élément `<hgroup>` qui contribue au plan du document.
+w'éwément `<hgwoup>` e-en tant que tew ny'a p-pas d'effet suw we pwan (<i wang="en">outwine</i>) d'une page w-web. :3 c'est we titwe intégwé au s-sein de w'éwément `<hgwoup>` qui contwibue au p-pwan du document. (ꈍᴗꈍ)
 
-## Exemples
+## e-exempwes
 
-```html
-<hgroup id="document-title">
-  <h1>HTML : standard évolutif</h1>
-  <p>Dernière mise à jour le 12 juillet 2022</p>
-</hgroup>
-<p>Une introduction dans le document.</p>
-<h2>Table des matières</h2>
-<ol id="toc">
+```htmw
+<hgwoup id="document-titwe">
+  <h1>htmw : standawd évowutif</h1>
+  <p>dewnièwe mise à jouw we 12 juiwwet 2022</p>
+</hgwoup>
+<p>une intwoduction dans we document.</p>
+<h2>tabwe d-des m-matièwes</h2>
+<ow id="toc">
   …
-</ol>
-<h2>Première section</h2>
-<p>Une introduction à la première section.</p>
+</ow>
+<h2>pwemièwe s-section</h2>
+<p>une i-intwoduction à w-wa pwemièwe section.</p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('','',520)}}
+{{embedwivesampwe('','',520)}}
 
-## Accessibilité
+## accessibiwité
 
-L'élément `<hgroup>` n'a pas de sémantique forte pour l'accessibilité. C'est le contenu de l'élément (le titre et les éventuels paragraphes) qui sont exposés aux API d'accessibilité du navigateur.
+w-w'éwément `<hgwoup>` ny'a pas de sémantique fowte pouw w'accessibiwité. /(^•ω•^) c'est we c-contenu de w'éwément (we titwe e-et wes éventuews p-pawagwaphes) q-qui sont exposés aux api d'accessibiwité d-du nyavigateuw. (⑅˘꒳˘)
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Content_categories">Catégories de contenu</a>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/web/htmw/content_categowies">catégowies de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_titre">contenu de titre</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_tangible">contenu tangible</a>.
+        <a h-hwef="/fw/docs/web/htmw/content_categowies#contenu_de_fwux">contenu d-de fwux</a>, ( ͡o ω ͡o ) <a h-hwef="/fw/docs/web/htmw/content_categowies#contenu_de_titwe">contenu d-de titwe</a>, <a h-hwef="/fw/docs/web/htmw/content_categowies#contenu_tangibwe">contenu tangibwe</a>. òωó
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        Zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a>, suivi par <a href="/fr/docs/Web/HTML/Element/Heading_Elements">un élément de titre (<code>&lt;h1-6&gt;</code>)</a>, suivis par zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a>.
+        z-zéwo ou pwusieuws éwéments <a hwef="/fw/docs/web/htmw/ewement/p"><code>&wt;p&gt;</code></a>, (⑅˘꒳˘) suivi paw <a hwef="/fw/docs/web/htmw/ewement/heading_ewements">un éwément de titwe (<code>&wt;h1-6&gt;</code>)</a>, XD suivis p-paw zéwo ou pwusieuws éwéments <a hwef="/fw/docs/web/htmw/ewement/p"><code>&wt;p&gt;</code></a>. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balise</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawise</th>
+      <td>aucune, :3 w-wa bawise d-d'ouvewtuwe et wa bawise de fewmetuwe s-sont obwigatoiwes</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Content_categories#Contenu_de_flux">contenu de flux</a>.
+        t-tout éwément qui accepte du <a hwef="/fw/docs/web/htmw/content_categowies#contenu_de_fwux">contenu de fwux</a>. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Aucun rôle correspondant</a>
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe">aucun w-wôwe cowwespondant</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a></td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>tous</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
+      <td><a h-hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les autres éléments HTML relatifs aux sections du document&nbsp;:
-  - [`<body>`](/fr/docs/Web/HTML/Element/body)
-  - [`<article>`](/fr/docs/Web/HTML/Element/article)
-  - [`<section>`](/fr/docs/Web/HTML/Element/section)
-  - [`<aside>`](/fr/docs/Web/HTML/Element/aside)
-  - [`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements)
-  - [`<nav>`](/fr/docs/Web/HTML/Element/nav)
-  - [`<header>`](/fr/docs/Web/HTML/Element/header)
-  - [`<footer>`](/fr/docs/Web/HTML/Element/footer)
-  - [`<address>`](/fr/docs/Web/HTML/Element/address)
-- [Sections et plan d'un document HTML](/fr/docs/Web/HTML/Element/Heading_Elements)
+- wes autwes éwéments h-htmw w-wewatifs aux sections du document&nbsp;:
+  - [`<body>`](/fw/docs/web/htmw/ewement/body)
+  - [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe)
+  - [`<section>`](/fw/docs/web/htmw/ewement/section)
+  - [`<aside>`](/fw/docs/web/htmw/ewement/aside)
+  - [`<h1>`, `<h2>`, 😳 `<h3>`, `<h4>`, (⑅˘꒳˘) `<h5>`, `<h6>`](/fw/docs/web/htmw/ewement/heading_ewements)
+  - [`<nav>`](/fw/docs/web/htmw/ewement/nav)
+  - [`<headew>`](/fw/docs/web/htmw/ewement/headew)
+  - [`<footew>`](/fw/docs/web/htmw/ewement/footew)
+  - [`<addwess>`](/fw/docs/web/htmw/ewement/addwess)
+- [sections et pwan d'un document htmw](/fw/docs/web/htmw/ewement/heading_ewements)

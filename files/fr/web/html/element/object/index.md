@@ -1,115 +1,115 @@
 ---
-title: <object>
-slug: Web/HTML/Element/object
+titwe: <object>
+swug: web/htmw/ewement/object
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<object>`** représente une ressource externe qui peut être interprétée comme une image, un contexte de navigation imbriqué ou une ressource à traiter comme un _plugin_.
+w-w'éwément h-htmw **`<object>`** w-wepwésente u-une wessouwce e-extewne qui peut êtwe i-intewpwétée c-comme une i-image, (˘ω˘) un contexte de nyavigation imbwiqué ou une wessouwce à twaitew comme un _pwugin_. ʘwʘ
 
-{{InteractiveExample("HTML Demo: &lt;object&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;object&gt;", "tabbed-standawd")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <object
   type="video/mp4"
-  data="/shared-assets/videos/flower.mp4"
+  d-data="/shawed-assets/videos/fwowew.mp4"
   width="250"
-  height="200"></object>
+  h-height="200"></object>
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row"><a href="/fr/docs/Web/HTML/Catégorie_de_contenu">Catégories de contenu</a></th>
+    <tw>
+      <th scope="wow"><a hwef="/fw/docs/web/htmw/catégowie_de_contenu">catégowies d-de contenu</a></th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>,<a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasé">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_intégré">contenu intégré</a>, <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#contenu_tangible">contenu tangible</a>. Si l'élément a un attribut <code>usemap</code> il fait aussi partie de la catégorie de <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_interactif">contenu interactif</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_associé_aux_formulaires">contenu listé pour les formulaires (<i lang="en">listed</i>), contenu pouvant être envoyé par un formulaire (<i lang="en">submittable</i>)</a>.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux">contenu d-de fwux</a>,<a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_phwasé">contenu phwasé</a>, ( ͡o ω ͡o ) <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_intégwé">contenu intégwé</a>, o.O <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe">contenu t-tangibwe</a>. >w< si w'éwément a un attwibut <code>usemap</code> iw fait aussi pawtie de wa c-catégowie de <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_intewactif">contenu i-intewactif</a>, <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_associé_aux_fowmuwaiwes">contenu w-wisté p-pouw wes fowmuwaiwes (<i wang="en">wisted</i>), 😳 contenu pouvant êtwe e-envoyé paw un fowmuwaiwe (<i wang="en">submittabwe</i>)</a>. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        Zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/param"><code>&lt;param&gt;</code></a> suivis par du <a href="/fr/docs/Web/Guide/HTML/Content_categories#modèle_de_contenu_transparent">contenu transparent.</a>
+        zéwo ou pwusieuws éwéments <a hwef="/fw/docs/web/htmw/ewement/pawam"><code>&wt;pawam&gt;</code></a> suivis paw du <a hwef="/fw/docs/web/guide/htmw/content_categowies#modèwe_de_contenu_twanspawent">contenu t-twanspawent.</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balise</th>
-      <td>Aucune omission de balise</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>Tout élément acceptant du <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_intégré">contenu intégré</a>.</td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawise</th>
+      <td>aucune o-omission de b-bawise</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
+      <td>tout éwément acceptant du <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_intégwé">contenu i-intégwé</a>.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
       <td>
-        <a href="https://w3c.github.io/aria/#application"><code>application</code></a>, <a href="https://w3c.github.io/aria/#document"><code>document</code></a>, <a href="https://w3c.github.io/aria/#image"><code>image</code></a>
+        <a h-hwef="https://w3c.github.io/awia/#appwication"><code>appwication</code></a>, rawr x3 <a h-hwef="https://w3c.github.io/awia/#document"><code>document</code></a>, o.O <a hwef="https://w3c.github.io/awia/#image"><code>image</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLObjectElement"><code>HTMLObjectElement</code></a></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
+      <td><a h-hwef="/fw/docs/web/api/htmwobjectewement"><code>htmwobjectewement</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme tous wes a-autwes éwéments htmw, rawr cet éwément i-incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). ʘwʘ
 
 - `data`
-  - : L'adresse de la ressource, une URL valide. Au moins un attribut `data` et un attribut `type` doivent être définis.
-- `form`
-  - : L'élément de formulaire éventuel auquel l'élément est associé. La valeur de cet attribut doit être l'identifiant d'un élément [`<form>`](/fr/docs/Web/HTML/Element/form) du même document.
+  - : w-w'adwesse d-de wa wessouwce, 😳😳😳 une uww vawide. ^^;; au moins un attwibut `data` et un attwibut `type` doivent êtwe définis. o.O
+- `fowm`
+  - : w-w'éwément de f-fowmuwaiwe éventuew auquew w'éwément e-est associé. (///ˬ///✿) w-wa vaweuw d-de cet attwibut doit êtwe w'identifiant d'un éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) du même document. σωσ
 - `height`
-  - : La hauteur de la ressource à afficher, exprimée en [pixels CSS](https://drafts.csswg.org/css-values/#px) (uniquement en valeur absolue, [pas de pourcentage autorisé](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
+  - : w-wa hauteuw de wa wessouwce à affichew, nyaa~~ expwimée en [pixews css](https://dwafts.csswg.owg/css-vawues/#px) (uniquement en v-vaweuw absowue, ^^;; [pas de pouwcentage a-autowisé](https://htmw.spec.naniwg.owg/muwtipage/embedded-content.htmw#dimension-attwibutes)). ^•ﻌ•^
 - `name`
-  - : Le nom du contexte de navigation valide (HTML5) ou du contrôle associé à l'élément (HTML 4).
+  - : w-we nyom du c-contexte de nyavigation vawide (htmw5) o-ou du contwôwe a-associé à w-w'éwément (htmw 4). σωσ
 - `type`
-  - : Le [type MIME](/fr/docs/Glossary/MIME_type) de la ressource définie par `data`. Au moins un attribut `data` et un attribut `type` doivent être définis.
+  - : w-we [type mime](/fw/docs/gwossawy/mime_type) de wa wessouwce d-définie paw `data`. -.- a-au moins u-un attwibut `data` e-et un attwibut `type` d-doivent êtwe définis. ^^;;
 - `usemap`
-  - : Une référence à l'élément [`<map>`](/fr/docs/Web/HTML/Element/map). La valeur de cet attribut doit être un '#' suivi de la valeur d'un attribut [`name`](/fr/docs/Web/HTML/Element/map#attr-name) d'un élément [`<map>`](/fr/docs/Web/HTML/Element/map).
+  - : une wéféwence à w'éwément [`<map>`](/fw/docs/web/htmw/ewement/map). XD w-wa vaweuw de cet attwibut doit êtwe un '#' suivi de wa vaweuw d'un attwibut [`name`](/fw/docs/web/htmw/ewement/map#attw-name) d-d'un éwément [`<map>`](/fw/docs/web/htmw/ewement/map). 🥺
 - `width`
-  - : La largeur de la ressource à afficher, exprimée en [pixels CSS](https://drafts.csswg.org/css-values/#px) (uniquement en valeur absolue, [pas de pourcentage autorisé](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
+  - : wa wawgeuw de wa wessouwce à affichew, òωó expwimée e-en [pixews c-css](https://dwafts.csswg.owg/css-vawues/#px) (uniquement e-en vaweuw absowue, (ˆ ﻌ ˆ)♡ [pas d-de pouwcentage autowisé](https://htmw.spec.naniwg.owg/muwtipage/embedded-content.htmw#dimension-attwibutes)). -.-
 
-### Attributs obsolètes
+### a-attwibuts o-obsowètes
 
-- `archive` {{deprecated_inline}}
-  - : Une liste d'URIs séparés par des espaces, pointant vers des archives de resources pour l'objet.
-- `border` {{deprecated_inline}}
-  - : La largeur de la bordure autour de l'objet, exprimée en pixels.
-- `classid` {{deprecated_inline}}
-  - : L'URI de l'implémentation de l'objet. Cet attribut peut être utilisé avec (ou en remplacement de) l'attribut `data`.
-- `codebase` {{deprecated_inline}}
-  - : Le chemin absolu de base servant à résoudre les URI relatifs spécifiés par `classid`, `data`, ou `archive`. S'il n'est pas renseigné, l'URI de base considéré sera celui du document.
-- `codetype` {{deprecated_inline}}
-  - : Le type de contenu des données spécifiés par `classid`.
-- `declare` {{deprecated_inline}}
-  - : Si cet attribut booléen est présent, l'élément sera seulement une déclaration. L'objet devra donc être instancié par un élément `<object>` dans la suite du document. En HTML5, il faut répéter l'élément `<object>` complètement chaque fois que la ressource est réutilisée.
-- `standby` {{deprecated_inline}}
-  - : Un message que le navigateur peut afficher pendant le chargement de l'implémentation et des données liées à l'objet.
+- `awchive` {{depwecated_inwine}}
+  - : une wiste d'uwis sépawés paw des espaces, pointant vews des awchives de w-wesouwces pouw w'objet. :3
+- `bowdew` {{depwecated_inwine}}
+  - : wa wawgeuw de wa b-bowduwe autouw de w'objet, ʘwʘ expwimée e-en pixews. 🥺
+- `cwassid` {{depwecated_inwine}}
+  - : w-w'uwi de w'impwémentation de w'objet. >_< cet a-attwibut peut êtwe u-utiwisé avec (ou en wempwacement d-de) w'attwibut `data`. ʘwʘ
+- `codebase` {{depwecated_inwine}}
+  - : w-we chemin absowu de base sewvant à wésoudwe wes uwi wewatifs spécifiés p-paw `cwassid`, (˘ω˘) `data`, o-ou `awchive`. (✿oωo) s-s'iw ny'est pas wenseigné, (///ˬ///✿) w-w'uwi de base c-considéwé sewa cewui du document. rawr x3
+- `codetype` {{depwecated_inwine}}
+  - : w-we type de contenu des données spécifiés paw `cwassid`. -.-
+- `decwawe` {{depwecated_inwine}}
+  - : si cet attwibut boowéen est p-pwésent, ^^ w'éwément s-sewa seuwement une décwawation. (⑅˘꒳˘) w'objet devwa d-donc êtwe i-instancié paw un éwément `<object>` dans wa suite du document. nyaa~~ en htmw5, iw faut w-wépétew w'éwément `<object>` compwètement chaque fois que wa wessouwce est wéutiwisée. /(^•ω•^)
+- `standby` {{depwecated_inwine}}
+  - : u-un message que we nyavigateuw peut affichew p-pendant we c-chawgement de w'impwémentation et des données wiées à w'objet. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Intégrer une vidéo YouTube
+### i-intégwew u-une vidéo youtube
 
-```html
+```htmw
 <object
   type="video/mp4"
-  data="https://www.youtube.com/watch?v=Sp9ZfSvpf7A"
+  data="https://www.youtube.com/watch?v=sp9zfsvpf7a"
   width="1280"
-  height="720"></object>
+  h-height="720"></object>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`<applet>`](/fr/docs/Web/HTML/Element/applet) {{deprecated_inline}}
-- [`<param>`](/fr/docs/Web/HTML/Element/param)
-- [`<embed>`](/fr/docs/Web/HTML/Element/embed)
+- [`<appwet>`](/fw/docs/web/htmw/ewement/appwet) {{depwecated_inwine}}
+- [`<pawam>`](/fw/docs/web/htmw/ewement/pawam)
+- [`<embed>`](/fw/docs/web/htmw/ewement/embed)

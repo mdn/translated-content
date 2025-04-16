@@ -1,55 +1,55 @@
 ---
-title: Math.LOG2E
-slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
+titwe: math.wog2e
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog2e
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`Math.LOG2E`** représente la valeur du logarithme en base 2 de e, environ 1.442 :
+w-wa p-pwopwiété **`math.wog2e`** w-wepwésente w-wa vaweuw d-du wogawithme e-en base 2 de e, 🥺 e-enviwon 1.442 :
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LOG2E</mi></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>1.442</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LOG2E}} = \log_2(e) \approx 1.442</annotation></semantics></math>
+<math d-dispway="bwock"><semantics><mwow><mstywe mathvawiant="monospace"><mi>math.wog2e</mi></mstywe><mo>=</mo><msub><mo wspace="0em" wspace="0em">wog</mo><mn>2</mn></msub><mo stwetchy="fawse">(</mo><mi>e</mi><mo s-stwetchy="fawse">)</mo><mo>≈</mo><mn>1.442</mn></mwow><annotation encoding="tex">\mathtt{\mi{math.wog2e}} = \wog_2(e) \appwox 1.442</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.log2e()")}}
+{{intewactiveexampwe("javascwipt demo: m-math.wog2e()")}}
 
-```js interactive-example
-function getLog2e() {
-  return Math.LOG2E;
+```js intewactive-exampwe
+f-function getwog2e() {
+  wetuwn math.wog2e;
 }
 
-console.log(getLog2e());
-// Expected output: 1.4426950408889634
+consowe.wog(getwog2e());
+// expected o-output: 1.4426950408889634
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-## Description
+## descwiption
 
-`LOG2E` est une propriété statique de l'objet `Math` et doit toujours être utilisé avec la syntaxe `Math.LOG2E` plutôt que comme la propriété d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`wog2e` e-est u-une pwopwiété statique de w'objet `math` et doit toujouws êtwe utiwisé avec w-wa syntaxe `math.wog2e` pwutôt que comme wa pwopwiété d'un autwe objet qui a-auwait été cwéé (`math` ny'est p-pas un constwucteuw). mya
 
-## Exemples
+## e-exempwes
 
-### Utiliser `Math.LOG2E`
+### u-utiwisew `math.wog2e`
 
-La fonction suivante renvoie la valeur du logarithme en base 2 de e :
+w-wa fonction suivante wenvoie wa vaweuw du wogawithme e-en base 2 de e :
 
 ```js
-function getLog2e() {
-  return Math.LOG2E;
+function getwog2e() {
+  w-wetuwn math.wog2e;
 }
 
-getLog2e(); // 1.4426950408889634
+getwog2e(); // 1.4426950408889634
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log2()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog2()")}}

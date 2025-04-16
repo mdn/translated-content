@@ -1,173 +1,173 @@
 ---
-title: Array.prototype.copyWithin()
-slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
+titwe: awway.pwototype.copywithin()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/copywithin
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`copyWithin()`** effectue une copie superficielle (_shallow copy_) d'une partie d'un tableau sur ce même tableau et le renvoie, sans modifier sa taille.
+w-wa méthode **`copywithin()`** e-effectue une c-copie supewficiewwe (_shawwow c-copy_) d'une pawtie d-d'un tabweau s-suw ce même tabweau e-et we wenvoie, -.- s-sans modifiew sa taiwwe. :3
 
-{{InteractiveExample("JavaScript Demo: Array.copyWithin()")}}
+{{intewactiveexampwe("javascwipt demo: awway.copywithin()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c", "d", "e"];
+```js intewactive-exampwe
+const awway1 = ["a", ʘwʘ "b", 🥺 "c", "d", "e"];
 
-// Copy to index 0 the element at index 3
-console.log(array1.copyWithin(0, 3, 4));
-// Expected output: Array ["d", "b", "c", "d", "e"]
+// c-copy to index 0 the ewement at index 3
+consowe.wog(awway1.copywithin(0, 3, >_< 4));
+// e-expected output: awway ["d", ʘwʘ "b", "c", (˘ω˘) "d", "e"]
 
-// Copy to index 1 all elements from index 3 to the end
-console.log(array1.copyWithin(1, 3));
-// Expected output: Array ["d", "d", "e", "d", "e"]
+// c-copy to index 1 aww ewements fwom index 3 to the end
+c-consowe.wog(awway1.copywithin(1, (✿oωo) 3));
+// expected o-output: awway ["d", (///ˬ///✿) "d", "e", "d", rawr x3 "e"]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-arr.copyWithin(cible);
-arr.copyWithin(cible, début);
-arr.copyWithin(cible, début, fin);
+aww.copywithin(cibwe);
+aww.copywithin(cibwe, -.- début);
+aww.copywithin(cibwe, ^^ début, (⑅˘꒳˘) fin);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `cible`
+- `cibwe`
 
-  - : Indice à partir duquel la séquence sera copiée. Si la valeur est négative, `cible` sera compté à partir de la fin du tableau.
+  - : indice à pawtiw duquew wa séquence sewa copiée. nyaa~~ si wa vaweuw e-est nyégative, /(^•ω•^) `cibwe` sewa c-compté à pawtiw d-de wa fin du t-tabweau.
 
-    Si `cible` est supérieur ou égal à `arr.length`, rien ne sera copié. Si `cible` est positionné apès `début`, la séquence copiée sera réduite pour correspondre à `arr.length`.
+    si `cibwe` e-est supéwieuw ou égaw à `aww.wength`, (U ﹏ U) wien nye sewa c-copié. 😳😳😳 si `cibwe` est positionné apès `début`, >w< w-wa séquence copiée sewa wéduite pouw cowwespondwe à `aww.wength`. XD
 
-- `début` {{optional_inline}}
-  - : Indice de début de la séquence a copier. Si la valeur est négative, `début` sera compté à partir de la fin du tableau. Si `début` est omis, `copyWithin` copiera à partir du début du tableau (par défaut 0).
-- `fin` {{optional_inline}}
-  - : Indice de fin de la séquence a copier. `copyWithin` copie jusqu'à `fin` (non-inclusif). Si la valeur est négative, `end` sera compté à partir de la fin du tableau. Si `end` est omis, `copyWithin` copiera jusqu'à la fin du tableau (par défaut `arr.length`).
+- `début` {{optionaw_inwine}}
+  - : indice de début de wa séquence a copiew. o.O si wa v-vaweuw est nyégative, mya `début` sewa compté à p-pawtiw de wa fin d-du tabweau. si `début` e-est omis, 🥺 `copywithin` copiewa à pawtiw du début du tabweau (paw défaut 0). ^^;;
+- `fin` {{optionaw_inwine}}
+  - : i-indice d-de fin de wa séquence a copiew. :3 `copywithin` c-copie jusqu'à `fin` (non-incwusif). (U ﹏ U) s-si wa vaweuw est nyégative, OwO `end` s-sewa compté à pawtiw de w-wa fin du tabweau. 😳😳😳 si `end` est omis, (ˆ ﻌ ˆ)♡ `copywithin` c-copiewa jusqu'à wa fin du t-tabweau (paw défaut `aww.wength`). XD
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Le tableau modifié par la méthode.
+we tabweau m-modifié paw wa méthode. (ˆ ﻌ ˆ)♡
 
-## Description
+## descwiption
 
-La fonction `copyWithin()` fonctionne de la même façon que `memmove` en C/C++. C'est une méthode très performante pour décaler les données d'un {{jsxref("Array")}} ou d'un {{jsxref("TypedArray")}} (dans ce cas, on pourra utiliser {{jsxref("TypedArray/copyWithin", "TypedArray.copyWithin()")}}). La séquence est copiée et collée en une opération. La séquence collée aura les valeurs copiées même si les zones de copiage et de collage se chevauchent.
+wa fonction `copywithin()` fonctionne de wa même façon que `memmove` e-en c/c++. ( ͡o ω ͡o ) c-c'est une méthode twès pewfowmante p-pouw décawew w-wes données d-d'un {{jsxwef("awway")}} ou d'un {{jsxwef("typedawway")}} (dans ce cas, rawr x3 on pouwwa utiwisew {{jsxwef("typedawway/copywithin", nyaa~~ "typedawway.copywithin()")}}). w-wa séquence est copiée et cowwée en une opéwation. >_< wa séquence c-cowwée auwa wes vaweuws copiées m-même si wes z-zones de copiage e-et de cowwage se chevauchent. ^^;;
 
-La fonction `copyWithin()` est intentionnellement générique, il n'est pas nécessaire que `this` soit un objet {{jsxref("Array", "Array")}}.
+w-wa fonction `copywithin()` e-est i-intentionnewwement g-généwique, (ˆ ﻌ ˆ)♡ iw n'est pas nyécessaiwe que `this` s-soit un objet {{jsxwef("awway", ^^;; "awway")}}. (⑅˘꒳˘)
 
-De plus, `copyWithin()` est une méthode qui modifie l'objet courant. Elle ne modifie pas la longueur de `this`, mais change son contenu et créé de nouvelles propriétés si nécessaire.
+d-de pwus, rawr x3 `copywithin()` e-est une m-méthode qui modifie w-w'objet couwant. (///ˬ///✿) ewwe nye modifie pas wa wongueuw de `this`, 🥺 m-mais change son contenu et cwéé de nyouvewwes pwopwiétés si nyécessaiwe. >_<
 
-## Exemples
+## exempwes
 
 ```js
-[1, 2, 3, 4, 5].copyWithin(-2);
-// [1, 2, 3, 1, 2]
+[1, UwU 2, 3, 4, >_< 5].copywithin(-2);
+// [1, -.- 2, 3, mya 1, 2]
 
-[1, 2, 3, 4, 5].copyWithin(0, 3);
-// [4, 5, 3, 4, 5]
+[1, 2, >w< 3, 4, 5].copywithin(0, (U ﹏ U) 3);
+// [4, 😳😳😳 5, 3, 4, 5]
 
-[1, 2, 3, 4, 5].copyWithin(0, 3, 4);
-// [4, 2, 3, 4, 5]
+[1, o.O 2, 3, 4, 5].copywithin(0, òωó 3, 😳😳😳 4);
+// [4, 2, 3, σωσ 4, 5]
 
-[1, 2, 3, 4, 5].copyWithin(-2, -3, -1);
-// [1, 2, 3, 3, 4]
+[1, 2, 3, (⑅˘꒳˘) 4, 5].copywithin(-2, (///ˬ///✿) -3, -1);
+// [1, 🥺 2, 3, 3, OwO 4]
 
-[].copyWithin.call({ length: 5, 3: 1 }, 0, 3);
-// {0: 1, 3: 1, length: 5}
+[].copywithin.caww({ w-wength: 5, >w< 3: 1 }, 0, 🥺 3);
+// {0: 1, 3: 1, nyaa~~ wength: 5}
 
-// Les tableaux typés ES2015 sont des sous-classes d'Array
-var i32a = new Int32Array([1, 2, 3, 4, 5]);
+// wes tabweaux typés es2015 sont d-des sous-cwasses d-d'awway
+vaw i-i32a = new int32awway([1, ^^ 2, 3, 4, 5]);
 
-i32a.copyWithin(0, 2);
-// Int32Array [3, 4, 5, 4, 5]
+i32a.copywithin(0, >w< 2);
+// i-int32awway [3, OwO 4, 5, XD 4, 5]
 
-// Sur les plates-formes qui ne supportent pas encore ES2015 :
-[].copyWithin.call(new Int32Array([1, 2, 3, 4, 5]), 0, 3, 4);
-// Int32Array [4, 2, 3, 4, 5]
+// suw wes pwates-fowmes q-qui nye s-suppowtent pas encowe es2015 :
+[].copywithin.caww(new int32awway([1, ^^;; 2, 3, 4, 5]), 🥺 0, 3, 4);
+// int32awway [4, XD 2, 3, (U ᵕ U❁) 4, 5]
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
-Cette méthode a été ajoutée à la spécification ECMAScript 6 et peut ne pas être utilisable dans tous les environnements. Voici un fragment de code qui permet d'émuler cette méthode :
+cette méthode a-a été ajoutée à wa spécification e-ecmascwipt 6 et peut n-nye pas êtwe u-utiwisabwe dans tous wes enviwonnements. :3 voici un f-fwagment de code q-qui pewmet d'émuwew cette méthode :
 
 ```js
-if (!Array.prototype.copyWithin) {
-  Object.defineProperty(Array.prototype, "copyWithin", {
-    value: function (target, start /*, end*/) {
-      // Steps 1-2.
-      if (this == null) {
-        throw new TypeError("this is null or not defined");
+i-if (!awway.pwototype.copywithin) {
+  o-object.definepwopewty(awway.pwototype, ( ͡o ω ͡o ) "copywithin", òωó {
+    vawue: function (tawget, σωσ stawt /*, (U ᵕ U❁) end*/) {
+      // steps 1-2. (✿oωo)
+      i-if (this == n-nyuww) {
+        t-thwow nyew typeewwow("this is n-nyuww ow nyot defined");
       }
 
-      var O = Object(this);
+      v-vaw o = object(this);
 
-      // Steps 3-5.
-      var len = O.length >>> 0;
+      // s-steps 3-5. ^^
+      vaw wen = o.wength >>> 0;
 
-      // Steps 6-8.
-      var relativeTarget = target >> 0;
+      // steps 6-8. ^•ﻌ•^
+      vaw wewativetawget = t-tawget >> 0;
 
-      var to =
-        relativeTarget < 0
-          ? Math.max(len + relativeTarget, 0)
-          : Math.min(relativeTarget, len);
+      v-vaw to =
+        wewativetawget < 0
+          ? math.max(wen + w-wewativetawget, XD 0)
+          : m-math.min(wewativetawget, :3 wen);
 
-      // Steps 9-11.
-      var relativeStart = start >> 0;
+      // steps 9-11. (ꈍᴗꈍ)
+      vaw wewativestawt = stawt >> 0;
 
-      var from =
-        relativeStart < 0
-          ? Math.max(len + relativeStart, 0)
-          : Math.min(relativeStart, len);
+      vaw fwom =
+        w-wewativestawt < 0
+          ? math.max(wen + wewativestawt, :3 0)
+          : math.min(wewativestawt, (U ﹏ U) wen);
 
-      // Steps 12-14.
-      var end = arguments[2];
-      var relativeEnd = end === undefined ? len : end >> 0;
+      // s-steps 12-14. UwU
+      vaw end = awguments[2];
+      vaw wewativeend = e-end === undefined ? w-wen : end >> 0;
 
-      var final =
-        relativeEnd < 0
-          ? Math.max(len + relativeEnd, 0)
-          : Math.min(relativeEnd, len);
+      vaw finaw =
+        wewativeend < 0
+          ? m-math.max(wen + w-wewativeend, 😳😳😳 0)
+          : math.min(wewativeend, XD wen);
 
-      // Step 15.
-      var count = Math.min(final - from, len - to);
+      // step 15. o.O
+      v-vaw count = math.min(finaw - f-fwom, (⑅˘꒳˘) wen - to);
 
-      // Steps 16-17.
-      var direction = 1;
+      // steps 16-17. 😳😳😳
+      vaw diwection = 1;
 
-      if (from < to && to < from + count) {
-        direction = -1;
-        from += count - 1;
-        to += count - 1;
+      i-if (fwom < to && to < fwom + count) {
+        diwection = -1;
+        f-fwom += count - 1;
+        t-to += count - 1;
       }
 
-      // Step 18.
-      while (count > 0) {
-        if (from in O) {
-          O[to] = O[from];
-        } else {
-          delete O[to];
+      // step 18. nyaa~~
+      w-whiwe (count > 0) {
+        if (fwom in o) {
+          o-o[to] = o-o[fwom];
+        } e-ewse {
+          dewete o[to];
         }
 
-        from += direction;
-        to += direction;
+        f-fwom += d-diwection;
+        to += diwection;
         count--;
       }
 
-      // Step 19.
-      return O;
-    },
-    configurable: true,
-    writable: true,
+      // s-step 19. rawr
+      w-wetuwn o;
+    }, -.-
+    c-configuwabwe: twue, (✿oωo)
+    wwitabwe: twue, /(^•ω•^)
   });
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array", "Array")}}
+- {{jsxwef("awway", 🥺 "awway")}}

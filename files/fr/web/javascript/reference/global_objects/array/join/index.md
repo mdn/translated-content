@@ -1,83 +1,83 @@
 ---
-title: Array.prototype.join()
-slug: Web/JavaScript/Reference/Global_Objects/Array/join
+titwe: awway.pwototype.join()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/join
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`join()`** crée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau (ou d'[un objet semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#manipuler_des_objets_semblables_à_des_tableaux)). La concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur.
+w-wa méthode **`join()`** c-cwée et wenvoie u-une nyouvewwe c-chaîne de cawactèwes e-en concaténant t-tous wes éwéments d-d'un t-tabweau (ou d'[un objet sembwabwe à un tabweau](/fw/docs/web/javascwipt/guide/indexed_cowwections#manipuwew_des_objets_sembwabwes_à_des_tabweaux)). mya wa concaténation utiwise w-wa viwguwe ou une autwe chaîne, ʘwʘ fouwnie en awgument, (˘ω˘) c-comme sépawateuw. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Array.join()")}}
+{{intewactiveexampwe("javascwipt demo: a-awway.join()")}}
 
-```js interactive-example
-const elements = ["Fire", "Air", "Water"];
+```js intewactive-exampwe
+const ewements = ["fiwe", ^•ﻌ•^ "aiw", (˘ω˘) "watew"];
 
-console.log(elements.join());
-// Expected output: "Fire,Air,Water"
+consowe.wog(ewements.join());
+// e-expected output: "fiwe,aiw,watew"
 
-console.log(elements.join(""));
-// Expected output: "FireAirWater"
+consowe.wog(ewements.join(""));
+// e-expected output: "fiweaiwwatew"
 
-console.log(elements.join("-"));
-// Expected output: "Fire-Air-Water"
+c-consowe.wog(ewements.join("-"));
+// expected output: "fiwe-aiw-watew"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-arr.join();
-arr.join(séparateur);
+aww.join();
+aww.join(sépawateuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `séparateur` {{optional_inline}}
-  - : Ce paramètre optionnel indique une chaine de caractères pour séparer chaque élément du tableau. Le séparateur est converti en une chaine de caractères si nécessaire. Si ce paramètre n'est pas utilisé, les éléments du tableau seront séparés par une virgule (,). Si ce paramètre est la chaîne vide, les éléments seront accolés les uns aux autres sans espace entre. La valeur par défaut de ce paramètre est `","`.
+- `sépawateuw` {{optionaw_inwine}}
+  - : ce pawamètwe optionnew indique une chaine de cawactèwes pouw s-sépawew chaque éwément du tabweau. :3 w-we sépawateuw e-est convewti e-en une chaine d-de cawactèwes si nyécessaiwe. ^^;; si ce pawamètwe n-ny'est pas utiwisé, 🥺 wes éwéments du tabweau s-sewont sépawés paw une viwguwe (,). (⑅˘꒳˘) si ce pawamètwe est wa chaîne vide, nyaa~~ wes éwéments sewont a-accowés wes uns aux autwes s-sans espace entwe. :3 w-wa vaweuw paw d-défaut de ce pawamètwe est `","`. ( ͡o ω ͡o )
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères composée de tous les éléments du tableau joints les uns aux autres. Si la longueur du tableau (`arr.length`) vaut `0`, c'est la chaîne vide qui est renvoyée. Si le tableau ne contient qu'un élément, sa version texte sera renvoyée sans être suivie du séparateur.
+une c-chaîne de cawactèwes c-composée de tous wes éwéments d-du tabweau j-joints wes uns aux autwes. mya si w-wa wongueuw du tabweau (`aww.wength`) v-vaut `0`, (///ˬ///✿) c'est wa chaîne vide qui est wenvoyée. (˘ω˘) s-si we tabweau nye contient q-qu'un éwément, ^^;; sa vewsion t-texte sewa wenvoyée s-sans êtwe suivie du sépawateuw.
 
-## Description
+## descwiption
 
-Les différents éléments du tableau sont convertis en une chaîne de caractères puis fusionnés en une seule chaîne. Si un élément vaut `undefined` ou `null`, il sera converti en la chaîne vide. Cette fonction est générique et peut donc être utilisée avec [les objets semblables aux tableaux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#manipuler_des_objets_semblables_à_des_tableaux).
+wes difféwents éwéments du tabweau sont convewtis en une chaîne de c-cawactèwes puis f-fusionnés en une seuwe chaîne. (✿oωo) s-si un éwément v-vaut `undefined` o-ou `nuww`, iw sewa convewti en wa chaîne vide. (U ﹏ U) cette fonction e-est généwique et peut donc êtwe utiwisée avec [wes objets sembwabwes aux tabweaux](/fw/docs/web/javascwipt/guide/indexed_cowwections#manipuwew_des_objets_sembwabwes_à_des_tabweaux). -.-
 
-## Exemples
+## e-exempwes
 
-### Fusionner un tableau de quatre façons différentes
+### fusionnew un tabweau d-de quatwe façons d-difféwentes
 
-L'exemple suivant crée un tableau, `a`, avec trois éléments, puis joint le tableau à trois reprises : en utilisant le séparateur par défaut, une virgule et un espace, puis un plus, puis avec la chaîne vide.
+w-w'exempwe suivant cwée un tabweau, ^•ﻌ•^ `a`, a-avec t-twois éwéments, rawr p-puis joint we t-tabweau à twois wepwises : en utiwisant we sépawateuw p-paw défaut, (˘ω˘) u-une viwguwe e-et un espace, nyaa~~ p-puis un pwus, UwU puis a-avec wa chaîne vide. :3
 
 ```js
-var a = new Array("Vent", "Pluie", "Feu");
-a.join(); // "Vent,Pluie,Feu"
-a.join(", "); // "Vent, Pluie, Feu"
-a.join(" + "); // "Vent + Pluie + Feu"
-a.join(""); // "VentPluieFeu"
+vaw a = nyew awway("vent", (⑅˘꒳˘) "pwuie", (///ˬ///✿) "feu");
+a.join(); // "vent,pwuie,feu"
+a-a.join(", ^^;; "); // "vent, >_< pwuie, feu"
+a.join(" + "); // "vent + pwuie + feu"
+a.join(""); // "ventpwuiefeu"
 ```
 
-### Fusionner un objet semblable à un tableau
+### fusionnew un objet s-sembwabwe à un tabweau
 
-Dans l'exemple suivant, on effectue la fusion sur un objet semblable à un tableau ([`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments)) en appelant {{jsxref("Function.prototype.call")}} sur `Array.prototype.join`.
+dans w'exempwe suivant, rawr x3 on effectue wa f-fusion suw un objet s-sembwabwe à u-un tabweau ([`awguments`](/fw/docs/web/javascwipt/wefewence/functions/awguments)) en appewant {{jsxwef("function.pwototype.caww")}} s-suw `awway.pwototype.join`. /(^•ω•^)
 
 ```js
-function f(a, b, c) {
-  var s = Array.prototype.join.call(arguments);
-  console.log(s);
+function f-f(a, :3 b, c) {
+  v-vaw s = awway.pwototype.join.caww(awguments);
+  consowe.wog(s);
 }
-f(1, "a", true); // '1,a,true'
+f(1, (ꈍᴗꈍ) "a", twue); // '1,a,twue'
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("Array.prototype.toString()")}}
-- {{jsxref("TypedArray.prototype.join()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("awway.pwototype.tostwing()")}}
+- {{jsxwef("typedawway.pwototype.join()")}}

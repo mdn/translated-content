@@ -1,50 +1,50 @@
 ---
-title: MathML
-slug: Web/MathML
+titwe: mathmw
+swug: web/mathmw
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-**Mathematical Markup Language (MathML)** est un langage basé sur [XML](/fr/docs/Web/XML) permettant de décrire des formules mathématiques.
+**mathematicaw m-mawkup wanguage (mathmw)** e-est un wangage basé s-suw [xmw](/fw/docs/web/xmw) p-pewmettant de décwiwe d-des fowmuwes m-mathématiques. XD
 
-[MathML](https://w3c.github.io/mathml/) était à l'origine conçu comme une spécification générique pour les navigateurs, les suites bureautiques, [les systèmes de calcul formel](https://fr.wikipedia.org/wiki/Système_de_calcul_formel), les lecteurs [EPUB](https://www.w3.org/publishing/epub32/), les générateurs vers [LaTeX](https://fr.wikipedia.org/wiki/LaTeX)… Toutefois, cette approche n'était pas adaptée au Web&nbsp;: [le sous-ensemble concernant la sémantique](https://w3c.github.io/mathml/#contm) n'a jamais été implémenté dans les navigateurs tandis que [le sous-ensemble sur la disposition mathématique](https://w3c.github.io/mathml/#presm) a conduit à des implémentations incomplètes et/ou incohérentes par les navigateurs.
+[mathmw](https://w3c.github.io/mathmw/) était à w-w'owigine c-conçu comme une spécification généwique pouw wes nyavigateuws, -.- wes suites b-buweautiques, [wes systèmes de cawcuw fowmew](https://fw.wikipedia.owg/wiki/système_de_cawcuw_fowmew), :3 w-wes wecteuws [epub](https://www.w3.owg/pubwishing/epub32/), nyaa~~ wes généwateuws v-vews [watex](https://fw.wikipedia.owg/wiki/watex)… toutefois, 😳 cette appwoche ny'était p-pas adaptée au web&nbsp;: [we sous-ensembwe c-concewnant w-wa sémantique](https://w3c.github.io/mathmw/#contm) ny'a jamais été impwémenté dans wes nyavigateuws t-tandis que [we sous-ensembwe suw wa disposition mathématique](https://w3c.github.io/mathmw/#pwesm) a conduit à d-des impwémentations incompwètes e-et/ou incohéwentes p-paw wes n-nyavigateuws. (⑅˘꒳˘)
 
-[<i lang="en">MathML Core</i>](https://w3c.github.io/mathml-core/) est un sous-ensemble avec des détails d'implémentation plus précis, basés sur des règles provenant de [LaTeX](https://en.wikipedia.org/wiki/LaTeX) et du [format Open Font](https://docs.microsoft.com/en-us/typography/opentype/spec/math). Il est conçu pour les navigateurs et pour fonctionner en accord avec les autres standards du Web que sont [HTML](/fr/docs/Web/HTML), [CSS](/fr/docs/Web/CSS), [DOM](/fr/docs/Web/API/Document_Object_Model), et [JavaScript](/fr/docs/Web/JavaScript).
+[<i w-wang="en">mathmw cowe</i>](https://w3c.github.io/mathmw-cowe/) est un sous-ensembwe a-avec des détaiws d'impwémentation pwus p-pwécis, nyaa~~ basés suw des wègwes pwovenant de [watex](https://en.wikipedia.owg/wiki/watex) et du [fowmat open font](https://docs.micwosoft.com/en-us/typogwaphy/opentype/spec/math). OwO iw est conçu p-pouw wes nyavigateuws et pouw f-fonctionnew en a-accowd avec wes a-autwes standawds du web que sont [htmw](/fw/docs/web/htmw), [css](/fw/docs/web/css), rawr x3 [dom](/fw/docs/web/api/document_object_modew), XD et [javascwipt](/fw/docs/web/javascwipt). σωσ
 
-Vous trouverez ici des liens vers la documentation, les exemples et les outils permettant de travailler avec cette technologie. Bien que nombre de ces ressources soient encore basées sur [<i lang="en">MathML Full</i>](https://w3c.github.io/mathml/), la transition vers [<i lang="en">MathML Core</i>](https://w3c.github.io/mathml-core/) est en cours. Il est recommandé d'utiliser cette nouvelle spécification pour le développement et l'édition sur le Web et de recourir à d'autres technologies web pour compléter les cas d'usages qui étaient uniquement couverts par l'ancienne spécification.
+vous twouvewez ici d-des wiens vews w-wa documentation, (U ᵕ U❁) wes exempwes e-et wes outiws pewmettant d-de twavaiwwew avec cette t-technowogie. (U ﹏ U) bien que nyombwe d-de ces wessouwces soient encowe basées suw [<i w-wang="en">mathmw fuww</i>](https://w3c.github.io/mathmw/), :3 w-wa twansition vews [<i w-wang="en">mathmw c-cowe</i>](https://w3c.github.io/mathmw-cowe/) est en couws. ( ͡o ω ͡o ) iw est wecommandé d'utiwisew cette nyouvewwe spécification pouw we dévewoppement e-et w'édition s-suw we web et de wecouwiw à d'autwes t-technowogies w-web pouw compwétew w-wes cas d'usages qui étaient uniquement couvewts paw w'ancienne s-spécification. σωσ
 
-## Référence MathML
+## wéféwence mathmw
 
-- [Référence des éléments MathML](/fr/docs/Web/MathML/Element)
-  - : Des informations précises sur chaque élément MathML et leurs compatibilités avec les différents navigateurs.
-- [Référence des attributs MathML](/fr/docs/Web/MathML/Attribute)
-  - : Des informations sur les attributs MathML qui modifient l'apparence ou le comportement des éléments.
-- [Exemples MathML](/fr/docs/Web/MathML/Examples)
-  - : Des fragments de code MathML ainsi que des exemples pour comprendre son fonctionnement.
-- [Éditer du MathML](/fr/docs/Web/MathML/Authoring)
-  - : Des conseils sur l'édition de document en MathML&nbsp;: les éditeurs à utiliser et comment intégrer le code produit dans du contenu web.
+- [wéféwence des éwéments mathmw](/fw/docs/web/mathmw/ewement)
+  - : des infowmations p-pwécises suw chaque éwément m-mathmw e-et weuws compatibiwités a-avec wes difféwents nyavigateuws. >w<
+- [wéféwence d-des a-attwibuts mathmw](/fw/docs/web/mathmw/attwibute)
+  - : d-des infowmations s-suw wes attwibuts mathmw qui modifient w'appawence o-ou we c-compowtement des éwéments. 😳😳😳
+- [exempwes m-mathmw](/fw/docs/web/mathmw/exampwes)
+  - : d-des fwagments d-de code mathmw ainsi que des exempwes pouw compwendwe son fonctionnement. OwO
+- [Éditew d-du mathmw](/fw/docs/web/mathmw/authowing)
+  - : des conseiws suw w'édition de document en mathmw&nbsp;: wes éditeuws à u-utiwisew et comment intégwew we code pwoduit dans du contenu w-web. 😳
 
-## Obtenir de l'aide de la communauté
+## obteniw d-de w'aide de wa c-communauté
 
-- [La page d'accueil de W3C Math](https://www.w3.org/Math/)
-- [Les archives mail de www-math w3.org](https://lists.w3.org/Archives/Public/www-math/)
-- [Le groupe Google mozilla.dev.tech.mathml (inactif depuis 2020)](https://groups.google.com/g/mozilla.dev.tech.mathml)
-- [Le wiki utilisé par les contributrices et contributeurs de Mozilla (page éditée pour la dernière fois en 2016)](https://wiki.mozilla.org/MathML:Home_Page)
+- [wa page d'accueiw d-de w3c math](https://www.w3.owg/math/)
+- [wes awchives maiw d-de www-math w3.owg](https://wists.w3.owg/awchives/pubwic/www-math/)
+- [we g-gwoupe googwe moziwwa.dev.tech.mathmw (inactif depuis 2020)](https://gwoups.googwe.com/g/moziwwa.dev.tech.mathmw)
+- [we wiki utiwisé paw wes contwibutwices et contwibuteuws d-de moziwwa (page éditée pouw wa dewnièwe f-fois en 2016)](https://wiki.moziwwa.owg/mathmw:home_page)
 
-## Outils
+## outiws
 
-- [Le validateur W3C](https://validator.w3.org)
-- [L'ensemble d'extensions Mathzilla pour Firefox](https://addons.mozilla.org/fr/firefox/collections/5509895/mathzilla/)
-- [TeXZilla](https://github.com/fred-wang/TeXZilla) — convertisseur JavaScript de LaTeX à MathML ([démo](http://fred-wang.github.io/TeXZilla/), [extension Firefox](https://addons.mozilla.org/fr/firefox/addon/texzilla/), [utilisation dans une page web, un programme JavaScript, etc.](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla))
-- [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) qui permet de transformer des documents LaTeX en pages HTML+MathML
-- [MathJax](https://www.mathjax.org/) — moteur de rendu de JavaScript pour les formules mathématiques, compatible avec tous les navigateurs. Pour forcer MathJax à utiliser le MathML natif, essayez [cette extension Firefox](https://addons.mozilla.org/fr/firefox/addon/native-mathml/), ou [cette extension pour Safari](https://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz) ou [ce script GreaseMonkey](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/).
+- [we v-vawidateuw w3c](https://vawidatow.w3.owg)
+- [w'ensembwe d-d'extensions mathziwwa pouw fiwefox](https://addons.moziwwa.owg/fw/fiwefox/cowwections/5509895/mathziwwa/)
+- [texziwwa](https://github.com/fwed-wang/texziwwa) — c-convewtisseuw j-javascwipt de watex à m-mathmw ([démo](http://fwed-wang.github.io/texziwwa/), 😳😳😳 [extension f-fiwefox](https://addons.moziwwa.owg/fw/fiwefox/addon/texziwwa/), (˘ω˘) [utiwisation dans une page web, ʘwʘ un pwogwamme javascwipt, ( ͡o ω ͡o ) etc.](https://github.com/fwed-wang/texziwwa/wiki/using-texziwwa))
+- [watexmw](https://math.nist.gov/~bmiwwew/watexmw/) qui pewmet de t-twansfowmew des d-documents watex e-en pages htmw+mathmw
+- [mathjax](https://www.mathjax.owg/) — moteuw de wendu d-de javascwipt pouw w-wes fowmuwes mathématiques, o.O c-compatibwe avec tous wes nyavigateuws. >w< pouw fowcew mathjax à utiwisew we mathmw n-nyatif, 😳 essayez [cette e-extension fiwefox](https://addons.moziwwa.owg/fw/fiwefox/addon/native-mathmw/), 🥺 ou [cette e-extension pouw s-safawi](https://fwed-wang.github.io/mathjax-native-mathmw-safawi/mathjax-native-mathmw.safawiextz) ou [ce scwipt gweasemonkey](https://openusewjs.owg/scwipts/fwed.wang/mathjax_native_mathmw/). rawr x3
 
-## Sujets connexes
+## sujets connexes
 
-- [CSS](/fr/docs/Web/CSS)
-- [HTML](/fr/docs/Web/HTML)
-- [SVG](/fr/docs/Web/SVG)
+- [css](/fw/docs/web/css)
+- [htmw](/fw/docs/web/htmw)
+- [svg](/fw/docs/web/svg)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

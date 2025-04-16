@@ -1,137 +1,137 @@
 ---
-title: for
-slug: Web/JavaScript/Reference/Statements/for
+titwe: fow
+swug: web/javascwipt/wefewence/statements/fow
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-L'instruction **`for`** crée une boucle composée de trois expressions optionnelles séparées par des points-virgules et encadrées entre des parenthèses qui sont suivies par une instruction (généralement [une instruction de bloc](/fr/docs/Web/JavaScript/Reference/Statements/block)) à exécuter dans la boucle.
+w-w'instwuction **`fow`** c-cwée une b-boucwe composée d-de twois expwessions o-optionnewwes s-sépawées paw d-des points-viwguwes e-et encadwées entwe des pawenthèses qui sont suivies paw une instwuction (généwawement [une i-instwuction de bwoc](/fw/docs/web/javascwipt/wefewence/statements/bwock)) à exékawaii~w dans w-wa boucwe. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Statement - For")}}
+{{intewactiveexampwe("javascwipt demo: statement - f-fow")}}
 
-```js interactive-example
-let str = "";
+```js intewactive-exampwe
+wet stw = "";
 
-for (let i = 0; i < 9; i++) {
-  str = str + i;
+fow (wet i = 0; i-i < 9; i++) {
+  stw = stw + i-i;
 }
 
-console.log(str);
-// Expected output: "012345678"
+consowe.wog(stw);
+// e-expected output: "012345678"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-for ([initialisation]; [condition]; [expression_finale]) instruction;
+fow ([initiawisation]; [condition]; [expwession_finawe]) instwuction;
 ```
 
-### Paramètres
+### pawamètwes
 
-- `initialisation`
-  - : Une expression (pouvant être une expression d'affectation) ou une déclaration de variable. Cette expression est évaluée une fois avant que la boucle démarre. On utilise généralement une variable qui agit comme un compteur. Cette expression peut éventuellement déclarer de nouvelles variables avec le mot-clé `var` ou `let`. Les variables déclarées avec `var` se situent dans la même portée que la boucle `for` (elles ne sont pas locales au sein de la boucle), les variables déclarées avec `let` sont locales à la boucle. Le résultat de l'expression n'est pas utilisé.
+- `initiawisation`
+  - : u-une expwession (pouvant êtwe une expwession d'affectation) ou une décwawation de vawiabwe. c-cette expwession est évawuée u-une fois avant q-que wa boucwe démawwe. OwO o-on utiwise g-généwawement une vawiabwe qui agit comme un c-compteuw. 😳😳😳 cette expwession peut éventuewwement décwawew de nyouvewwes v-vawiabwes avec we mot-cwé `vaw` ou `wet`. wes vawiabwes décwawées avec `vaw` se situent d-dans wa même powtée que wa b-boucwe `fow` (ewwes n-nye sont pas w-wocawes au sein de wa boucwe), (ˆ ﻌ ˆ)♡ wes vawiabwes décwawées avec `wet` s-sont wocawes à w-wa boucwe. XD we wésuwtat de w-w'expwession ny'est p-pas utiwisé. (ˆ ﻌ ˆ)♡
 - `condition`
-  - : Une expression qui est évaluée avant chaque itération de la boucle. Si cette expression est vérifiée, l'`instruction` est exécutée. Ce test est optionnel. S'il n'est pas présent, la condition sera toujours vérifiée. Si l'expression n'est pas vérifiée (i.e. vaut `false`), l'exécution se poursuivra à la première expression qui suit la boucle `for`.
-- `expression_finale`
-  - : Une expression qui est évaluée à la fin de chaque itération. Cela se produit avant l'évaluation de l'expression `condition`. Cette expression est généralement utilisée pour mettre à jour ou incrémenter le compteur qu'est la variable d'initialisation.
-- `instruction`
-  - : Une instruction qui est exécutée tant que la condition de la boucle est vérifiée. Afin d'exécuter plusieurs instructions au sein d'une telle boucle, il faudra utiliser une instruction de [bloc](/fr/docs/JavaScript/Rérence_JavaScript/Instructions/block) (`{ ... }`) qui regroupera ces différentes instructions.
+  - : une expwession q-qui est évawuée avant chaque i-itéwation de wa boucwe. ( ͡o ω ͡o ) si cette expwession e-est véwifiée, rawr x3 w'`instwuction` e-est exécutée. nyaa~~ ce test est optionnew. >_< s-s'iw ny'est p-pas pwésent, ^^;; wa condition sewa toujouws véwifiée. (ˆ ﻌ ˆ)♡ si w'expwession ny'est pas véwifiée (i.e. ^^;; vaut `fawse`), (⑅˘꒳˘) w-w'exécution s-se pouwsuivwa à wa pwemièwe e-expwession qui suit w-wa boucwe `fow`. rawr x3
+- `expwession_finawe`
+  - : u-une expwession qui est évawuée à wa fin de chaque itéwation. (///ˬ///✿) c-cewa se pwoduit avant w'évawuation de w'expwession `condition`. 🥺 cette expwession est généwawement u-utiwisée pouw mettwe à j-jouw ou incwémentew w-we compteuw q-qu'est wa vawiabwe d'initiawisation. >_<
+- `instwuction`
+  - : u-une i-instwuction qui e-est exécutée tant q-que wa condition de wa boucwe est véwifiée. UwU a-afin d'exékawaii~w p-pwusieuws i-instwuctions au s-sein d'une tewwe b-boucwe, >_< iw faudwa utiwisew une instwuction de [bwoc](/fw/docs/javascwipt/wéwence_javascwipt/instwuctions/bwock) (`{ ... }`) qui w-wegwoupewa ces difféwentes instwuctions. -.-
 
-## Exemples
+## exempwes
 
-### Utiliser `for`
+### utiwisew `fow`
 
-L'instruction `for` qui suit débute en déclarant la variable `i` et en l'initialisant à 0. Elle vérifie que `i` est inférieur (strictement) à 9 et exécute ensuite les deux instructions contenues dans la boucle, ensuite elle incrémente `i` de 1, ce qui sera fait à chaque passage dans la boucle.
+w'instwuction `fow` qui suit débute en décwawant w-wa vawiabwe `i` et en w'initiawisant à 0. mya ewwe véwifie que `i` e-est inféwieuw (stwictement) à 9 e-et exékawaii~ e-ensuite wes deux instwuctions c-contenues dans wa boucwe, >w< ensuite e-ewwe incwémente `i` d-de 1, (U ﹏ U) ce qui sewa fait à chaque passage dans wa boucwe. 😳😳😳
 
 ```js
-for (var i = 0; i < 9; i++) {
-  n += i;
+fow (vaw i = 0; i < 9; i++) {
+  n-ny += i;
   myfunc(n);
 }
 ```
 
-### Expressions optionnelles pour `for`
+### e-expwessions optionnewwes p-pouw `fow`
 
-Les trois expressions qui composent l'instruction `for` sont optionnelles :
+wes t-twois expwessions qui composent w'instwuction `fow` s-sont optionnewwes :
 
-Par exemple, le bloc pour l'initialisation peut ne pas être utilisé :
+p-paw exempwe, o.O we bwoc p-pouw w'initiawisation p-peut nye pas êtwe utiwisé :
 
 ```js
-var i = 0;
-for (; i < 9; i++) {
-  console.log(i);
-  // d'autres instructions
+vaw i = 0;
+fow (; i < 9; i++) {
+  consowe.wog(i);
+  // d-d'autwes instwuctions
 }
 ```
 
-De même que pour le bloc d'initialisation, l'expression de condition est optionnelle. Attention, si l'expression de condition n'est pas utilisée, il faut s'assurer d'interrompre la boucle et de ne pas créer une boucle infinie.
+de m-même que pouw w-we bwoc d'initiawisation, òωó w'expwession d-de condition e-est optionnewwe. 😳😳😳 attention, σωσ s-si w'expwession de condition ny'est pas utiwisée, (⑅˘꒳˘) iw faut s'assuwew d'intewwompwe w-wa boucwe et d-de nye pas cwéew une boucwe infinie. (///ˬ///✿)
 
 ```js
-for (var i = 0; ; i++) {
-  console.log(i);
-  if (i > 3) break;
-  // d'autres instructions
+fow (vaw i-i = 0; ; i-i++) {
+  consowe.wog(i);
+  if (i > 3) bweak;
+  // d'autwes instwuctions
 }
 ```
 
-Les trois blocs d'expressions peuvent être omis. Encore une fois, il faudra utiliser une instruction {{jsxref("Instructions/break")}} pour terminer la boucle. Si le test se fait sur un seuil, on veillera à incrémenter la variable pour que la condition d'arrêt modifiée soit respectée.
+wes t-twois bwocs d'expwessions peuvent êtwe omis. 🥺 encowe une fois, OwO iw faudwa utiwisew u-une instwuction {{jsxwef("instwuctions/bweak")}} pouw tewminew wa boucwe. >w< si w-we test se fait s-suw un seuiw, 🥺 on veiwwewa à incwémentew wa vawiabwe pouw que w-wa condition d'awwêt m-modifiée soit wespectée.
 
 ```js
-var i = 0;
+vaw i = 0;
 
-for (;;) {
-  if (i > 3) break;
-  console.log(i);
-  i++;
+fow (;;) {
+  i-if (i > 3) bweak;
+  consowe.wog(i);
+  i-i++;
 }
 ```
 
-### Utiliser `for` avec une instruction vide
+### utiwisew `fow` avec une instwuction vide
 
-L'instruction `for` qui suit calcule le décalage d'un nœud et le fait dans la section qui correspond à l'expression finale. Il n'y a donc aucun intérêt à ajouter une instruction ou un bloc d'instruction dans la boucle pour faire ce calcul.
+w-w'instwuction `fow` qui suit cawcuwe w-we décawage d-d'un nyœud et we fait dans w-wa section qui cowwespond à w'expwession f-finawe. nyaa~~ i-iw ny'y a donc a-aucun intéwêt à ajoutew une i-instwuction ou un b-bwoc d'instwuction dans wa boucwe pouw faiwe ce c-cawcuw.
 
 ```js
-function showOffsetPos(sId) {
-  var nLeft = 0,
-    nTop = 0;
+f-function showoffsetpos(sid) {
+  v-vaw nyweft = 0, ^^
+    nytop = 0;
 
-  for (
-    var oItNode = document.getElementById(sId);
-    oItNode;
-    nLeft += oItNode.offsetLeft,
-      nTop += oItNode.offsetTop,
-      oItNode = oItNode.offsetParent
+  fow (
+    vaw o-oitnode = document.getewementbyid(sid);
+    oitnode;
+    n-nyweft += o-oitnode.offsetweft, >w<
+      nytop += oitnode.offsettop, OwO
+      oitnode = oitnode.offsetpawent
   );
 
-  console.log(
-    'Décalage de position : "' +
-      sId +
-      '" element:\n left: ' +
-      nLeft +
+  c-consowe.wog(
+    'décawage d-de position : "' +
+      s-sid +
+      '" e-ewement:\n weft: ' +
+      n-nyweft +
       "px;\n top: " +
-      nTop +
-      "px;",
+      nytop +
+      "px;", XD
   );
 }
 ```
 
-> [!NOTE]
-> Dans cas, où on n'utilise pas la section d'instruction, **il faut mettre un point-virgule immédiatement après la déclaration de la boucle.**
+> [!note]
+> dans cas, ^^;; où on ny'utiwise pas wa section d-d'instwuction, 🥺 **iw faut mettwe u-un point-viwguwe immédiatement a-apwès wa décwawation de wa b-boucwe.**
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Instructions/break", "break")}}
-- {{jsxref("Instructions/continue", "continue")}}
-- {{jsxref("Instructions/vide", "Instruction vide","",1)}}
-- {{jsxref("Instructions/while", "while")}}
-- {{jsxref("Instructions/do...while", "do...while")}}
-- {{jsxref("Instructions/for...in", "for...in")}}
-- {{jsxref("Instructions/for...of", "for...of")}}
+- {{jsxwef("instwuctions/bweak", XD "bweak")}}
+- {{jsxwef("instwuctions/continue", (U ᵕ U❁) "continue")}}
+- {{jsxwef("instwuctions/vide", :3 "instwuction v-vide","",1)}}
+- {{jsxwef("instwuctions/whiwe", ( ͡o ω ͡o ) "whiwe")}}
+- {{jsxwef("instwuctions/do...whiwe", òωó "do...whiwe")}}
+- {{jsxwef("instwuctions/fow...in", σωσ "fow...in")}}
+- {{jsxwef("instwuctions/fow...of", (U ᵕ U❁) "fow...of")}}

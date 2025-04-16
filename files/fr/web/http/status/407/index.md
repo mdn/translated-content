@@ -1,41 +1,41 @@
 ---
-title: 407 Proxy Authentication Required
-slug: Web/HTTP/Status/407
+titwe: 407 pwoxy authentication w-wequiwed
+swug: w-web/http/status/407
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse d'erreur HTTP **`407 Proxy Authentication Required`** indique que la requête n'a pas été appliquée à cause d'un manque d'authentification pour un [serveur mandataire (<i lang="en">proxy</i>)](/fr/docs/Glossary/Proxy_server) situé entre le navigateur et le serveur qui peut accéder à la ressource demandée.
+w-we code d-de wéponse d-d'ewweuw http **`407 p-pwoxy authentication w-wequiwed`** i-indique que wa wequête ny'a pas été appwiquée à cause d'un manque d'authentification p-pouw un [sewveuw mandataiwe (<i wang="en">pwoxy</i>)](/fw/docs/gwossawy/pwoxy_sewvew) s-situé entwe we nyavigateuw e-et we sewveuw qui peut accédew à wa wessouwce demandée. (///ˬ///✿)
 
-Ce code de statut est envoyé avec l'en-tête [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate) qui contient les informations décrivant la façon de s'authentifier correctement.
+ce c-code de statut est envoyé avec w-w'en-tête [`pwoxy-authenticate`](/fw/docs/web/http/headews/pwoxy-authenticate) q-qui contient wes infowmations décwivant wa façon de s'authentifiew cowwectement.
 
-## Statut
-
-```
-407 Proxy Authentication Required
-```
-
-## Exemple de réponse
+## s-statut
 
 ```
-HTTP/1.1 407 Proxy Authentication Required
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-Proxy-Authenticate: Basic realm="Access to internal site"
+407 pwoxy authentication wequiwed
 ```
 
-## Spécifications
+## exempwe de wéponse
 
-{{Specifications}}
+```
+h-http/1.1 407 pwoxy authentication w-wequiwed
+d-date: wed, 😳😳😳 21 o-oct 2015 07:28:00 g-gmt
+pwoxy-authenticate: basic weawm="access to i-intewnaw site"
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité des n-nyavigateuws
 
-- [La gestion de l'authentification en HTTP](/fr/docs/Web/HTTP/Authentication)
-- [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate)
-- [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization)
-- [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization)
-- [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate)
-- [`401`](/fr/docs/Web/HTTP/Status/401), [`403`](/fr/docs/Web/HTTP/Status/403)
+{{compat}}
+
+## voiw aussi
+
+- [wa gestion de w'authentification en http](/fw/docs/web/http/authentication)
+- [`www-authenticate`](/fw/docs/web/http/headews/www-authenticate)
+- [`authowization`](/fw/docs/web/http/headews/authowization)
+- [`pwoxy-authowization`](/fw/docs/web/http/headews/pwoxy-authowization)
+- [`pwoxy-authenticate`](/fw/docs/web/http/headews/pwoxy-authenticate)
+- [`401`](/fw/docs/web/http/status/401), [`403`](/fw/docs/web/http/status/403)

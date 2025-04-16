@@ -1,521 +1,521 @@
 ---
-title: "<a> : l'élément d'ancre"
-slug: Web/HTML/Element/a
+titwe: "<a> : w'éwément d'ancwe"
+s-swug: web/htmw/ewement/a
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<a>`** (pour ancre ou _anchor_ en anglais), avec [son attribut `href`](#href), crée un lien hypertexte vers des pages web, des fichiers, des adresses e-mail, des emplacements se trouvant dans la même page, ou tout ce qu'une URL peut adresser. Le contenu de chaque élément `<a>` **doit** indiquer la destination du lien. Si [l'attribut `href`](#href) est présent, appuyer sur la touche entrée en se concentrant sur l'élément `<a>` l'activera.
+w-w'éwément h-htmw **`<a>`** (pouw a-ancwe ou _anchow_ e-en angwais), rawr x3 a-avec [son attwibut `hwef`](#hwef), 🥺 c-cwée un w-wien hypewtexte vews des pages web, (ˆ ﻌ ˆ)♡ des fichiews, ( ͡o ω ͡o ) des adwesses e-maiw, >w< des empwacements s-se twouvant dans wa même page, /(^•ω•^) ou tout c-ce qu'une uww peut adwessew. 😳😳😳 we c-contenu de chaque éwément `<a>` **doit** indiquew wa destination du wien. (U ᵕ U❁) si [w'attwibut `hwef`](#hwef) e-est pwésent, (˘ω˘) appuyew s-suw wa touche entwée e-en se concentwant suw w'éwément `<a>` w'activewa. 😳
 
-{{InteractiveExample("HTML Demo: &lt;a&gt;")}}
+{{intewactiveexampwe("htmw demo: &wt;a&gt;")}}
 
-```html interactive-example
-<p>You can reach Michael at:</p>
+```htmw intewactive-exampwe
+<p>you can weach michaew a-at:</p>
 
-<ul>
-  <li><a href="https://example.com">Website</a></li>
-  <li><a href="mailto:m.bluth@example.com">Email</a></li>
-  <li><a href="tel:+123456789">Phone</a></li>
-</ul>
+<uw>
+  <wi><a hwef="https://exampwe.com">website</a></wi>
+  <wi><a hwef="maiwto:m.bwuth@exampwe.com">emaiw</a></wi>
+  <wi><a hwef="tew:+123456789">phone</a></wi>
+</uw>
 ```
 
-```css interactive-example
-li {
-  margin-bottom: 0.5rem;
+```css intewactive-exampwe
+w-wi {
+  mawgin-bottom: 0.5wem;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément i-incwut wes [attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (ꈍᴗꈍ)
 
-- **`download`**
+- **`downwoad`**
 
-  - : Sans valeur, le navigateur proposera un nom de fichier/extension, généré à partir de diverses sources :
+  - : s-sans vaweuw, :3 we nyavigateuw pwoposewa un nyom d-de fichiew/extension, /(^•ω•^) généwé à pawtiw de divewses s-souwces :
 
-    - L'en-tête HTTP [`Content-Disposition`](/fr/docs/Web/HTTP/Headers/Content-Disposition)
-    - Le segment final dans l'URL : [path](/fr/docs/Web/API/URL/pathname)
-    - Le [Type MIME](/fr/docs/Glossary/MIME_type) (de l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type), le début d'une URL [`data:`](/fr/docs/Web/URI/Schemes/data), ou [`Blob.type`](/fr/docs/Web/API/Blob/type) pour une URL [`blob:`](/fr/docs/Web/API/URL/createObjectURL_static)).
+    - w'en-tête http [`content-disposition`](/fw/docs/web/http/headews/content-disposition)
+    - we segment finaw dans w'uww : [path](/fw/docs/web/api/uww/pathname)
+    - we [type mime](/fw/docs/gwossawy/mime_type) (de w-w'en-tête [`content-type`](/fw/docs/web/http/headews/content-type), ^^;; we début d'une u-uww [`data:`](/fw/docs/web/uwi/schemes/data), o.O o-ou [`bwob.type`](/fw/docs/web/api/bwob/type) p-pouw une uww [`bwob:`](/fw/docs/web/api/uww/cweateobjectuww_static)). 😳
 
-    La définition d'une valeur la suggère comme nom de fichier. Les caractères `/` et `\` sont convertis en caractères de soulignement (`_`). Les systèmes de fichiers peuvent interdire d'autres caractères dans les noms de fichiers, les navigateurs ajusteront donc le nom suggéré si nécessaire.
+    wa définition d'une vaweuw wa suggèwe c-comme nyom de f-fichiew. UwU wes cawactèwes `/` et `\` s-sont convewtis e-en cawactèwes de souwignement (`_`). >w< w-wes systèmes de fichiews p-peuvent intewdiwe d'autwes cawactèwes dans w-wes nyoms de fichiews, o.O wes nyavigateuws a-ajustewont donc we nyom s-suggéwé si nyécessaiwe. (˘ω˘)
 
-    > [!NOTE]
+    > [!note]
     >
-    > - `download` ne fonctionne que pour [les URLs de même origine](/fr/docs/Web/Security/Same-origin_policy), ou les schémas `blob:` et `data:`.
-    > - Si l'en-tête `Content-Disposition` comporte des informations différentes de celles de l'attribut `download`, le comportement résultant peut différer :
+    > - `downwoad` n-nye fonctionne que pouw [wes uwws de même owigine](/fw/docs/web/secuwity/same-owigin_powicy), òωó ou wes schémas `bwob:` et `data:`. nyaa~~
+    > - si w'en-tête `content-disposition` c-compowte des infowmations d-difféwentes de cewwes d-de w'attwibut `downwoad`, ( ͡o ω ͡o ) w-we c-compowtement wésuwtant peut difféwew :
     >
-    >   - Si l'en-tête spécifie un `nom de fichier`, il a priorité sur un nom de fichier spécifié dans l'attribut `download`.
-    >   - Si l'en-tête spécifie une disposition de `inline`, Chrome, et Firefox 82+, donnent la priorité à l'attribut et le traitent comme un téléchargement. Les versions de Firefox antérieures à 82 donnent la priorité à l'en-tête et affichent le contenu en ligne.
+    >   - si w'en-tête spécifie u-un `nom de fichiew`, 😳😳😳 iw a pwiowité suw un nyom de fichiew spécifié dans w'attwibut `downwoad`. ^•ﻌ•^
+    >   - s-si w'en-tête spécifie u-une disposition d-de `inwine`, (˘ω˘) c-chwome, (˘ω˘) et fiwefox 82+, -.- donnent w-wa pwiowité à w-w'attwibut et w-we twaitent comme u-un téwéchawgement. ^•ﻌ•^ wes vewsions de fiwefox antéwieuwes à 82 d-donnent wa pwiowité à w-w'en-tête e-et affichent w-we contenu en w-wigne. /(^•ω•^)
 
-- **`href`**
+- **`hwef`**
 
-  - : L'URL vers laquelle pointe l'hyperlien. Les liens ne sont pas limités aux URL basées sur HTTP - ils peuvent utiliser n'importe quel schéma d'URL pris en charge par les navigateurs :
+  - : w'uww vews waquewwe pointe w'hypewwien. (///ˬ///✿) w-wes wiens nye sont pas wimités aux uww basées suw http - iws peuvent utiwisew ny'impowte quew s-schéma d'uww pwis en chawge paw wes nyavigateuws :
 
-    - Sections d'une page avec des fragments d'URL
-    - Des morceaux de fichiers médias avec des fragments de médias
-    - Les numéros de téléphone avec l'URL `tel:`.
-    - Les adresses électroniques avec l'URL `mailto:`.
-    - Bien que les navigateurs web puissent ne pas prendre en charge d'autres schémas d'URL, les sites web le peuvent avec [`registerProtocolHandler()`](/fr/docs/Web/API/Navigator/registerProtocolHandler).
+    - sections d'une page a-avec des fwagments d-d'uww
+    - d-des mowceaux de fichiews médias a-avec des fwagments de médias
+    - w-wes numéwos d-de téwéphone avec w'uww `tew:`. mya
+    - wes adwesses éwectwoniques avec w'uww `maiwto:`. o.O
+    - bien que wes n-nyavigateuws web puissent nye pas p-pwendwe en chawge d'autwes schémas d-d'uww, ^•ﻌ•^ wes s-sites web we peuvent avec [`wegistewpwotocowhandwew()`](/fw/docs/web/api/navigatow/wegistewpwotocowhandwew). (U ᵕ U❁)
 
-- **`hreflang`**
-  - : Donne des indications sur le langage humain de l'URL liée. Aucune fonctionnalité intégrée. Les valeurs autorisées sont les mêmes que [l'attribut global `lang`](/fr/docs/Web/HTML/Global_attributes/lang).
+- **`hwefwang`**
+  - : donne des i-indications suw w-we wangage humain de w'uww wiée. :3 a-aucune fonctionnawité i-intégwée. (///ˬ///✿) wes vaweuws autowisées sont wes mêmes que [w'attwibut gwobaw `wang`](/fw/docs/web/htmw/gwobaw_attwibutes/wang). (///ˬ///✿)
 - **`ping`**
-  - : Contient une liste d'URL séparées par des espaces vers lesquelles sont envoyées des requêtes [`POST`](/fr/docs/Web/HTTP/Methods/POST) avec le corps `PING` lorsque l'utilisateur suit le lien. Cet attribut est généralement utilisé pour tracer un utilisateur.
-- **`referrerpolicy`** {{experimental_inline}}
-  - : La portion du [referrer](/fr/docs/Web/HTTP/Headers/Referer) envoyer lors du suivi du lien. Voir [`Referrer-Policy`](/fr/docs/Web/HTTP/Headers/Referrer-Policy) pour les valeurs possibles et leurs effets.
-- **`rel`**
-  - : Cet attribut indique la relation entre la cible du lien et l'objet faisant le lien. La valeur est une liste de [types de liens](/fr/docs/Web/HTML/Attributes/rel) séparés par des espaces.
-- **`target`**
+  - : c-contient u-une wiste d'uww s-sépawées paw des espaces vews w-wesquewwes sont e-envoyées des wequêtes [`post`](/fw/docs/web/http/methods/post) a-avec we cowps `ping` wowsque w'utiwisateuw suit we wien. 🥺 cet attwibut est généwawement u-utiwisé p-pouw twacew un utiwisateuw. -.-
+- **`wefewwewpowicy`** {{expewimentaw_inwine}}
+  - : wa powtion d-du [wefewwew](/fw/docs/web/http/headews/wefewew) e-envoyew wows du suivi du wien. nyaa~~ voiw [`wefewwew-powicy`](/fw/docs/web/http/headews/wefewwew-powicy) pouw wes v-vaweuws possibwes et weuws effets. (///ˬ///✿)
+- **`wew`**
+  - : cet attwibut indique wa wewation entwe wa cibwe d-du wien et w'objet faisant we wien. 🥺 wa vaweuw e-est une wiste d-de [types de wiens](/fw/docs/web/htmw/attwibutes/wew) sépawés paw des espaces. >w<
+- **`tawget`**
 
-  - : Où afficher l'URL liée, comme nom d'un _contexte de navigation_ (un onglet, une fenêtre ou un [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)). Les mots-clés suivants ont des significations spéciales pour l'endroit où charger l'URL :
+  - : où affichew w-w'uww wiée, rawr x3 c-comme nyom d'un _contexte de nyavigation_ (un ongwet, (⑅˘꒳˘) une fenêtwe ou un [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame)). σωσ w-wes mots-cwés suivants o-ont des significations spéciawes pouw w'endwoit où chawgew w-w'uww :
 
-    - `_self` : le contexte de navigation actuel. (Par défaut)
-    - `_blank` : généralement un nouvel onglet, mais les utilisateurs peuvent configurer les navigateurs pour ouvrir une nouvelle fenêtre à la place.
-    - `_parent` : le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, il se comporte comme `_self`.
-    - `_top` : le contexte de navigation le plus haut (le contexte "le plus haut" qui est un ancêtre du contexte actuel). S'il n'a aucun ancêtre, il se comporte comme `_self`.
+    - `_sewf` : we contexte d-de nyavigation a-actuew. XD (paw défaut)
+    - `_bwank` : g-généwawement un nyouvew o-ongwet, -.- mais w-wes utiwisateuws p-peuvent configuwew wes nyavigateuws p-pouw ouvwiw u-une nyouvewwe fenêtwe à wa pwace. >_<
+    - `_pawent` : w-we contexte d-de nyavigation p-pawent de cewui en couws. rawr s'iw n'y a pas de p-pawent, 😳😳😳 iw se compowte comme `_sewf`. UwU
+    - `_top` : w-we contexte d-de nyavigation we pwus haut (we contexte "we pwus haut" qui est u-un ancêtwe du c-contexte actuew). (U ﹏ U) s-s'iw ny'a aucun a-ancêtwe, (˘ω˘) iw se compowte comme `_sewf`. /(^•ω•^)
 
-    > [!NOTE]
-    > Définir `target="_blank"` sur les éléments `<a>` fournit implicitement le même comportement `rel` que définir [`rel="noopener"`](/fr/docs/Web/HTML/Attributes/rel/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour le support.
+    > [!note]
+    > d-définiw `tawget="_bwank"` suw wes éwéments `<a>` fouwnit impwicitement we même compowtement `wew` que définiw [`wew="noopenew"`](/fw/docs/web/htmw/attwibutes/wew/noopenew) q-qui nye définit pas `window.openew`. (U ﹏ U) v-voiw wa [compatibiwité des nyavigateuws](#bwowsew_compatibiwity) p-pouw we suppowt. ^•ﻌ•^
 
 - **`type`**
-  - : Donne des indications sur le format de l'URL liée avec un [Type MIME](/fr/docs/Glossary/MIME_type). Aucune fonctionnalité intégrée.
+  - : d-donne des indications s-suw we fowmat d-de w'uww wiée a-avec un [type mime](/fw/docs/gwossawy/mime_type). >w< a-aucune fonctionnawité i-intégwée. ʘwʘ
 
-### Attributs obsolètes
+### attwibuts obsowètes
 
-- **`charset`** {{Deprecated_Inline}}
+- **`chawset`** {{depwecated_inwine}}
 
-  - : Fait allusion aux [encodages des caractères](/fr/docs/Glossary/Character_encoding) de l'URL liée.
+  - : fait awwusion aux [encodages des cawactèwes](/fw/docs/gwossawy/chawactew_encoding) de w'uww wiée. òωó
 
-    > [!NOTE]
-    > Cet attribut est déprécié et **ne doit pas être utilisé par les auteurs**. Utilisez l'en-tête HTTP [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) sur l'URL liée.
+    > [!note]
+    > c-cet attwibut e-est dépwécié e-et **ne doit pas êtwe utiwisé p-paw wes auteuws**. o.O utiwisez w'en-tête http [`content-type`](/fw/docs/web/http/headews/content-type) suw w'uww w-wiée.
 
-- **`coords`** {{Deprecated_Inline}}
-  - : Utilisé avec [l'attribut `shape`](#shape). Une liste de coordonnées séparées par des virgules.
-- **`name`** {{Deprecated_Inline}}
+- **`coowds`** {{depwecated_inwine}}
+  - : u-utiwisé avec [w'attwibut `shape`](#shape). ( ͡o ω ͡o ) une wiste de coowdonnées s-sépawées paw des viwguwes. mya
+- **`name`** {{depwecated_inwine}}
 
-  - : Était nécessaire pour définir un emplacement cible possible dans une page. En HTML 4.01, `id` et `name` pouvaient tous deux être utilisés sur `<a>`, pour autant qu'ils aient des valeurs identiques.
+  - : Était nyécessaiwe p-pouw définiw u-un empwacement cibwe possibwe d-dans une page. >_< e-en htmw 4.01, rawr `id` et `name` pouvaient tous deux êtwe utiwisés suw `<a>`, pouw a-autant qu'iws a-aient des vaweuws i-identiques. >_<
 
-    > [!NOTE]
-    > Utilisez l'attribut universel [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) à la place.
+    > [!note]
+    > u-utiwisez w'attwibut u-univewsew [`id`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-id) à wa pwace. (U ﹏ U)
 
-- **`rev`** {{Deprecated_Inline}}
-  - : Spécifiait un lien inverse ; l'opposé de [l'attribut `rel`](#rel). Déprécié pour avoir été très confus.
-- **`shape`** {{Deprecated_Inline}}
+- **`wev`** {{depwecated_inwine}}
+  - : s-spécifiait u-un wien invewse ; w'opposé d-de [w'attwibut `wew`](#wew). rawr d-dépwécié pouw avoiw été twès c-confus. (U ᵕ U❁)
+- **`shape`** {{depwecated_inwine}}
 
-  - : La forme de la région de l'hyperlien dans une carte d'image.
+  - : wa fowme de wa wégion de w-w'hypewwien dans une cawte d'image. (ˆ ﻌ ˆ)♡
 
-    > [!NOTE]
-    > Utilisez plutôt l'élément [`<area>`](/fr/docs/Web/HTML/Element/area) pour les cartes d'images.
+    > [!note]
+    > u-utiwisez p-pwutôt w'éwément [`<awea>`](/fw/docs/web/htmw/ewement/awea) pouw wes cawtes d-d'images. >_<
 
-## Propriétés
+## pwopwiétés
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies d-de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu du flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#interactive_content"
-          >contenu interactif</a
-        >, contenu palpable.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu du fwux</a
+        >, ^^;;
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu p-phwasé</a
+        >, ʘwʘ
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#intewactive_content"
+          >contenu intewactif</a
+        >, 😳😳😳 c-contenu p-pawpabwe. UwU
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
-          >Transparent</a
-        >, contenant soit le
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu du flux</a
+          hwef="/fw/docs/web/guide/htmw/content_categowies#twanspawent_content_modew"
+          >twanspawent</a
+        >, OwO c-contenant s-soit we
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu du fwux</a
         >
-        (à l'exclusion du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#interactive_content"
-          >contenu interactif</a
-        >), soit
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >.
+        (à w-w'excwusion du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#intewactive_content"
+          >contenu intewactif</a
+        >), :3 s-soit
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
+        >. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        aucune, 🥺 wa b-bawise d'ouvewtuwe e-et wa bawise d-de fewmetuwe sont
+        obwigatoiwes. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >la formulation du contenu</a
-        >, ou tout élément qui accepte
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >le contenu du flux</a
-        >, mais pas les autres éléments <code>&#x3C;a></code>.
+        tout éwément qui accepte
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >wa fowmuwation du contenu</a
+        >, -.- ou tout éwément qui accepte
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >we contenu du fwux</a
+        >, (U ﹏ U) mais pas w-wes autwes éwéments <code>&#x3c;a></code>. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="https://w3c.github.io/aria/#link">lien</a> lorsque l'attribut
-        <code>href</code> est présent, sinon
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >pas de rôle correspondant</a
-        >.
+        <a hwef="https://w3c.github.io/awia/#wink">wien</a> w-wowsque w'attwibut
+        <code>hwef</code> e-est pwésent, mya s-sinon
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas d-de wôwe cowwespondant</a
+        >. ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
       <td>
-        <p>Lorsque l'attribut <code>href</code> est présent :</p>
-        <ul>
-          <li><a href="https://w3c.github.io/aria/#button">button</a></li>
-          <li><a href="https://w3c.github.io/aria/#checkbox">checkbox</a></li>
-          <li><a href="https://w3c.github.io/aria/#menuitem">menuitem</a></li>
-          <li>
-            <a href="https://w3c.github.io/aria/#menuitemcheckbox"
+        <p>wowsque w-w'attwibut <code>hwef</code> est pwésent :</p>
+        <uw>
+          <wi><a h-hwef="https://w3c.github.io/awia/#button">button</a></wi>
+          <wi><a hwef="https://w3c.github.io/awia/#checkbox">checkbox</a></wi>
+          <wi><a hwef="https://w3c.github.io/awia/#menuitem">menuitem</a></wi>
+          <wi>
+            <a h-hwef="https://w3c.github.io/awia/#menuitemcheckbox"
               >menuitemcheckbox</a
             >
-          </li>
-          <li>
-            <a href="https://w3c.github.io/aria/#menuitemradio"
-              >menuitemradio</a
+          </wi>
+          <wi>
+            <a h-hwef="https://w3c.github.io/awia/#menuitemwadio"
+              >menuitemwadio</a
             >
-          </li>
-          <li><a href="https://w3c.github.io/aria/#option">option</a></li>
-          <li><a href="https://w3c.github.io/aria/#radio">radio</a></li>
-          <li><a href="https://w3c.github.io/aria/#switch">switch</a></li>
-          <li><a href="https://w3c.github.io/aria/#tab">tab</a></li>
-          <li><a href="https://w3c.github.io/aria/#treeitem">treeitem</a></li>
-        </ul>
-        <p>Lorsque l'attribut <code>href</code> n'est pas présent :</p>
-        <ul>
-          <li>tout</li>
-        </ul>
+          </wi>
+          <wi><a hwef="https://w3c.github.io/awia/#option">option</a></wi>
+          <wi><a hwef="https://w3c.github.io/awia/#wadio">wadio</a></wi>
+          <wi><a h-hwef="https://w3c.github.io/awia/#switch">switch</a></wi>
+          <wi><a h-hwef="https://w3c.github.io/awia/#tab">tab</a></wi>
+          <wi><a h-hwef="https://w3c.github.io/awia/#tweeitem">tweeitem</a></wi>
+        </uw>
+        <p>wowsque w-w'attwibut <code>hwef</code> n-ny'est p-pas pwésent :</p>
+        <uw>
+          <wi>tout</wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLAnchorElement"
-          ><code>HTMLAnchorElement</code></a
+        <a h-hwef="/fw/docs/web/api/htmwanchowewement"
+          ><code>htmwanchowewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-### Créer un lien vers une URL absolue
+### c-cwéew un wien v-vews une uww a-absowue
 
-#### HTML
+#### htmw
 
-```html
-<a href="https://www.mozilla.com"> Mozilla </a>
+```htmw
+<a hwef="https://www.moziwwa.com"> m-moziwwa </a>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Créer_un_lien_vers_une_URL_absolue", "100%", 50)}}
+{{embedwivesampwe("cwéew_un_wien_vews_une_uww_absowue", /(^•ω•^) "100%", >_< 50)}}
 
-### Créer des liens vers des URL relatives
+### cwéew d-des wiens vews des uww wewatives
 
-#### HTML
+#### h-htmw
 
-```html
-<a href="//example.com">URL relative au schéma</a>
-<a href="/fr/docs/Web/HTML">URL relative à l'origine</a>
-<a href="./p">URL relative au répertoire</a>
+```htmw
+<a h-hwef="//exampwe.com">uww w-wewative au schéma</a>
+<a h-hwef="/fw/docs/web/htmw">uww wewative à w-w'owigine</a>
+<a hwef="./p">uww w-wewative au wépewtoiwe</a>
 ```
 
-```css hidden
+```css h-hidden
 a {
-  display: block;
-  margin-bottom: 0.5em;
+  dispway: bwock;
+  mawgin-bottom: 0.5em;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-### Créer un lien vers un élément de la même page
+### cwéew u-un wien vews un éwément de wa m-même page
 
-```html
-<!-- <a> élément liens vers la section ci-dessous -->
-<p><a href="#section_further_down"> Passez à la rubrique ci-dessous </a></p>
+```htmw
+<!-- <a> éwément w-wiens vews wa section ci-dessous -->
+<p><a hwef="#section_fuwthew_down"> passez à wa wubwique c-ci-dessous </a></p>
 
-<!-- Rubrique à relier -->
-<h2 id="section_further_down">Section plus bas</h2>
+<!-- wubwique à wewiew -->
+<h2 i-id="section_fuwthew_down">section pwus b-bas</h2>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-> [!NOTE]
-> Vous pouvez utiliser `href="#top"` ou le fragment vide (`href="#"`) pour créer un lien vers le haut de la page actuelle, [comme défini dans la spécification HTML](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
+> [!note]
+> vous pouvez utiwisew `hwef="#top"` o-ou we f-fwagment vide (`hwef="#"`) pouw c-cwéew un wien vews we haut de wa page actuewwe, (✿oωo) [comme d-défini dans wa spécification h-htmw](https://htmw.spec.naniwg.owg/muwtipage/bwowsing-the-web.htmw#scwoww-to-the-fwagment-identifiew). 😳😳😳
 
-### Créer un lien avec une adresse électronique
+### c-cwéew un wien a-avec une adwesse éwectwonique
 
-Pour créer des liens qui s'ouvrent dans le programme de messagerie de l'utilisateur, pour lui permettre d'envoyer un nouveau message, utilisez le schéma `mailto:` :
+pouw cwéew des w-wiens qui s'ouvwent d-dans we pwogwamme d-de messagewie d-de w'utiwisateuw, (ꈍᴗꈍ) pouw wui p-pewmettwe d'envoyew u-un nyouveau m-message, 🥺 utiwisez w-we schéma `maiwto:` :
 
-```html
-<a href="mailto:nowhere@mozilla.org">Envoyer un courriel nulle part</a>
+```htmw
+<a h-hwef="maiwto:nowhewe@moziwwa.owg">envoyew u-un couwwiew nyuwwe p-pawt</a>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-Pour plus de détails sur les URL `mailto:`, comme l'inclusion d'un sujet ou d'un corps de message, voir [Liens de courrier électronique](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#e-mail_links) ou [RFC 6068](https://tools.ietf.org/html/rfc6068).
+pouw pwus d-de détaiws suw wes uww `maiwto:`, mya c-comme w'incwusion d'un sujet o-ou d'un cowps d-de message, (ˆ ﻌ ˆ)♡ voiw [wiens d-de couwwiew éwectwonique](/fw/docs/weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks#e-maiw_winks) ou [wfc 6068](https://toows.ietf.owg/htmw/wfc6068).
 
-### Créer un lien avec les numéros de téléphone
+### cwéew un wien avec wes n-nyuméwos de téwéphone
 
-```html
-<a href="tel:+49.157.0156">+49 157 0156</a>
-<a href="tel:+1(555)5309">(555) 5309</a>
+```htmw
+<a h-hwef="tew:+49.157.0156">+49 157 0156</a>
+<a h-hwef="tew:+1(555)5309">(555) 5309</a>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-`tel:` le comportement du lien varie en fonction des capacités du périphérique :
+`tew:` we compowtement du w-wien vawie en fonction d-des capacités du péwiphéwique :
 
-- Les appareils cellulaires composent automatiquement le numéro.
-- La plupart des systèmes d'exploitation disposent de programmes permettant de passer des appels, comme Skype ou FaceTime.
-- Les sites web peuvent passer des appels téléphoniques avec [`registerProtocolHandler`](/fr/docs/Web/API/Navigator/registerProtocolHandler), comme `web.skype.com`.
-- Les autres comportements comprennent l'enregistrement du numéro dans les contacts, ou l'envoi du numéro à un autre appareil.
+- w-wes a-appaweiws cewwuwaiwes composent automatiquement we nyuméwo. (⑅˘꒳˘)
+- w-wa pwupawt des systèmes d-d'expwoitation d-disposent d-de pwogwammes pewmettant de passew des appews, òωó c-comme skype ou f-facetime.
+- wes sites web peuvent passew des appews t-téwéphoniques avec [`wegistewpwotocowhandwew`](/fw/docs/web/api/navigatow/wegistewpwotocowhandwew), o.O comme `web.skype.com`. XD
+- w-wes autwes compowtements compwennent w-w'enwegistwement d-du nyuméwo dans wes contacts, (˘ω˘) o-ou w'envoi d-du nyuméwo à un autwe appaweiw. (ꈍᴗꈍ)
 
-Voir [RFC 3966](https://tools.ietf.org/html/rfc3966) pour la syntaxe, les fonctionnalités supplémentaires et d'autres détails sur le schéma URL `tel:`.
+v-voiw [wfc 3966](https://toows.ietf.owg/htmw/wfc3966) pouw w-wa syntaxe, >w< wes f-fonctionnawités s-suppwémentaiwes e-et d'autwes détaiws suw we schéma u-uww `tew:`.
 
-### Utilisation de l'attribut de téléchargement pour enregistrer un \<canvas> au format PNG
+### u-utiwisation d-de w'attwibut de téwéchawgement p-pouw enwegistwew un \<canvas> au fowmat png
 
-Pour enregistrer le contenu d'un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sous forme d'image, vous pouvez créer un lien avec un attribut `download` et les données du canvas sous forme d'une URL `data:` :
+p-pouw enwegistwew w-we contenu d'un éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) s-sous fowme d'image, XD vous pouvez cwéew un wien avec un attwibut `downwoad` e-et wes données du canvas s-sous fowme d'une u-uww `data:` :
 
-#### Exemple d'application de peinture avec lien de sauvegarde
+#### exempwe d'appwication de peintuwe a-avec wien de sauvegawde
 
-##### HTML
+##### h-htmw
 
-```html
+```htmw
 <p>
-  Peignez en maintenant le bouton de la souris enfoncé et en le déplaçant.
-  <a href="" download="my_painting.png">Télécharger ma peinture</a>
+  p-peignez e-en maintenant w-we bouton de wa s-souwis enfoncé et en we dépwaçant. -.-
+  <a hwef="" downwoad="my_painting.png">téwéchawgew ma p-peintuwe</a>
 </p>
 
-<canvas width="300" height="300"></canvas>
+<canvas width="300" h-height="300"></canvas>
 ```
 
-##### CSS
+##### css
 
 ```css
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: sans-sewif;
 }
-canvas {
-  background: #fff;
-  border: 1px dashed;
+c-canvas {
+  backgwound: #fff;
+  bowdew: 1px dashed;
 }
 a {
-  display: inline-block;
-  background: #69c;
-  color: #fff;
+  dispway: inwine-bwock;
+  b-backgwound: #69c;
+  c-cowow: #fff;
   padding: 5px 10px;
 }
 ```
 
-##### JavaScript
+##### j-javascwipt
 
 ```js
-var canvas = document.querySelector("canvas"),
-  c = canvas.getContext("2d");
-c.fillStyle = "hotpink";
+vaw canvas = document.quewysewectow("canvas"), ^^;;
+  c = canvas.getcontext("2d");
+c-c.fiwwstywe = "hotpink";
 
-function draw(x, y) {
-  if (isDrawing) {
-    c.beginPath();
-    c.arc(x, y, 10, 0, Math.PI * 2);
-    c.closePath();
-    c.fill();
+f-function dwaw(x, XD y) {
+  i-if (isdwawing) {
+    c.beginpath();
+    c-c.awc(x, :3 y, 10, 0, math.pi * 2);
+    c.cwosepath();
+    c.fiww();
   }
 }
 
-canvas.addEventListener("mousemove", (event) =>
-  draw(event.offsetX, event.offsetY),
+canvas.addeventwistenew("mousemove", σωσ (event) =>
+  d-dwaw(event.offsetx, XD event.offsety), :3
 );
-canvas.addEventListener("mousedown", () => (isDrawing = true));
-canvas.addEventListener("mouseup", () => (isDrawing = false));
+canvas.addeventwistenew("mousedown", rawr () => (isdwawing = t-twue));
+canvas.addeventwistenew("mouseup", 😳 () => (isdwawing = f-fawse));
 
 document
-  .querySelector("a")
-  .addEventListener(
-    "click",
-    (event) => (event.target.href = canvas.toDataURL()),
+  .quewysewectow("a")
+  .addeventwistenew(
+    "cwick", 😳😳😳
+    (event) => (event.tawget.hwef = c-canvas.todatauww()), (ꈍᴗꈍ)
   );
 ```
 
-##### Résultat
+##### wésuwtat
 
-{{EmbedLiveSample("Exemple_d'application_de_peinture_avec_lien_de_sauvegarde", '100%', '420')}}
+{{embedwivesampwe("exempwe_d'appwication_de_peintuwe_avec_wien_de_sauvegawde", 🥺 '100%', '420')}}
 
-## Sécurité et vie privée
+## sécuwité e-et vie pwivée
 
-Les éléments `<a>` peuvent avoir des conséquences sur la sécurité et la vie privée des utilisateurs. Voir [`Referer` header : privacy and security concerns](/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns) pour plus d'informations.
+wes éwéments `<a>` peuvent avoiw des conséquences suw wa sécuwité e-et wa vie p-pwivée des utiwisateuws. ^•ﻌ•^ v-voiw [`wefewew` h-headew : pwivacy and secuwity concewns](/fw/docs/web/secuwity/wefewew_headew:_pwivacy_and_secuwity_concewns) p-pouw pwus d-d'infowmations. XD
 
-L'utilisation de `target="_blank"` sans [`rel="noreferrer"`](/fr/docs/Web/HTML/Attributes/rel/noreferrer) et [`rel="noopener"`](/fr/docs/Web/HTML/Attributes/rel/noopener) rend le site web vulnérable aux attaques d'exploitation de l'API [`window.opener`](/fr/docs/Web/API/Window/opener) ([description de la vulnérabilité](https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/)), bien qu'il faille noter que, dans les versions plus récentes du navigateur, la définition de `target="_blank"` fournit implicitement la même protection que la définition de `rel="noopener"`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour plus de détails.
+w'utiwisation de `tawget="_bwank"` s-sans [`wew="nowefewwew"`](/fw/docs/web/htmw/attwibutes/wew/nowefewwew) et [`wew="noopenew"`](/fw/docs/web/htmw/attwibutes/wew/noopenew) wend w-we site web vuwnéwabwe aux attaques d'expwoitation d-de w'api [`window.openew`](/fw/docs/web/api/window/openew) ([descwiption d-de wa vuwnéwabiwité](https://www.jitbit.com/awexbwog/256-tawgetbwank---the-most-undewestimated-vuwnewabiwity-evew/)), ^•ﻌ•^ bien qu'iw f-faiwwe nyotew q-que, ^^;; dans wes vewsions p-pwus wécentes du nyavigateuw, ʘwʘ wa définition d-de `tawget="_bwank"` fouwnit impwicitement w-wa même pwotection que wa définition de `wew="noopenew"`. OwO voiw w-wa [compatibiwité d-des nyavigateuws](#bwowsew_compatibiwity) pouw p-pwus de détaiws. 🥺
 
-## Accessibilité
+## a-accessibiwité
 
-### Texte de lien fort
+### t-texte de wien fowt
 
-**Le contenu d'un lien doit indiquer où va le lien**, même hors contexte.
+**we c-contenu d'un wien doit indiquew où va we w-wien**, (⑅˘꒳˘) même hows contexte. (///ˬ///✿)
 
-#### Texte inaccessible, lien faible
+#### t-texte inaccessibwe, wien faibwe
 
-Une erreur tristement courante consiste à ne relier que les mots « cliquez ici » ou « ici » :
+une ewweuw t-twistement couwante c-consiste à nye wewiew que wes m-mots « cwiquez ici » ou « i-ici » :
 
-```html example-bad
-<p>En savoir plus sur nos produits <a href="/products">ici</a>.</p>
+```htmw e-exampwe-bad
+<p>en savoiw pwus s-suw nos pwoduits <a h-hwef="/pwoducts">ici</a>.</p>
 ```
 
-##### Résultat
+##### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-#### Texte de lien fort
+#### t-texte de wien fowt
 
-Heureusement, il s'agit d'une solution facile, et elle est en fait plus courte que la version inaccessible !
+heuweusement, iw s'agit d'une sowution f-faciwe, (✿oωo) et ewwe est en fait pwus c-couwte que wa vewsion inaccessibwe ! nyaa~~
 
-```html example-good
-<p>En savoir plus <a href="/products">à propos de nos produits</a>.</p>
+```htmw exampwe-good
+<p>en s-savoiw pwus <a h-hwef="/pwoducts">à p-pwopos de nyos pwoduits</a>.</p>
 ```
 
-##### Résultat
+##### w-wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-Les logiciels d'assistance disposent de raccourcis permettant de lister tous les liens d'une page. Cependant, un texte de lien fort profite à tous les utilisateurs − le raccourci « liste de tous les liens » imite la façon dont les utilisateurs voyants parcourent rapidement les pages.
+w-wes wogiciews d'assistance d-disposent de waccouwcis pewmettant d-de wistew tous wes wiens d'une p-page. >w< cependant, u-un texte de wien fowt pwofite à tous wes utiwisateuws − we waccouwci « wiste de tous wes w-wiens » imite w-wa façon dont wes utiwisateuws voyants pawcouwent wapidement wes p-pages. (///ˬ///✿)
 
-### Évènements `onclick`
+### Évènements `oncwick`
 
-Les ancres sont souvent détournées avec l'évènement `onclick` afin de créer des pseudo-boutons avec l'attribut `href` qui vaut `"#"` ou `"javascript:void(0)"` pour empêcher le rafraîchissement de la page.
+wes ancwes s-sont souvent détouwnées a-avec w'évènement `oncwick` afin de cwéew des pseudo-boutons avec w'attwibut `hwef` q-qui vaut `"#"` ou `"javascwipt:void(0)"` pouw empêchew w-we wafwaîchissement de w-wa page. rawr
 
-Ces valeurs produisent des résultats inadéquats lorsqu'on copie/déplace des liens, qu'on ouvre des liens dans de nouveaux onglets ou fenêtres, qu'on ajoute des marque-pages ou lorsque le JavaScript est encore en train d'être téléchargé. De plus, la sémantique exposée par le document, utilisée par les outils d'assistance, est incorrecte.
+ces vaweuws p-pwoduisent des wésuwtats i-inadéquats wowsqu'on c-copie/dépwace d-des wiens, (U ﹏ U) q-qu'on ouvwe des w-wiens dans de nyouveaux o-ongwets ou fenêtwes, ^•ﻌ•^ qu'on ajoute des mawque-pages ou wowsque we javascwipt est encowe e-en twain d'êtwe t-téwéchawgé. (///ˬ///✿) d-de pwus, wa sémantique e-exposée p-paw we document, o.O u-utiwisée paw wes outiws d'assistance, >w< est incowwecte. nyaa~~
 
-Dans ces cas, on privilégiera plutôt l'utilisation d'un bouton [`<button>`](/fr/docs/Web/HTML/Element/button). De façon générale, une ancre ne doit être utilisée que pour naviguer vers une URL correcte.
+dans ces cas, òωó on pwiviwégiewa p-pwutôt w-w'utiwisation d'un bouton [`<button>`](/fw/docs/web/htmw/ewement/button). (U ᵕ U❁) de façon généwawe, (///ˬ///✿) u-une ancwe nye d-doit êtwe utiwisée q-que pouw nyaviguew vews une uww cowwecte. (✿oωo)
 
-### Liens externes, liens vers des ressources non-HTML
+### w-wiens extewnes, 😳😳😳 wiens vews des wessouwces nyon-htmw
 
-Les liens qui ouvrent un nouvel onglet ou une nouvelle fenêtre grâce à `target="_blank"`, ainsi que les liens qui ouvrent des fichiers devraient fournir une indication sur ce qui se produira lorsqu'on cliquera sur ces liens.
+w-wes wiens q-qui ouvwent un nyouvew ongwet ou une nyouvewwe f-fenêtwe gwâce à `tawget="_bwank"`, (✿oωo) ainsi que w-wes wiens qui o-ouvwent des fichiews devwaient fouwniw u-une indication s-suw ce qui s-se pwoduiwa wowsqu'on c-cwiquewa s-suw ces wiens. (U ﹏ U)
 
-Les personnes qui utilisent des outils d'assistance à la navigation comme des lecteurs d'écran et/ou qui souffrent de troubles de la vision, cognitifs peuvent être confuses lorsqu'un nouvel onglet, fichier ou une nouvelle fenêtre s'ouvre de façon inattendue. Les anciennes versions des lecteurs d'écran peuvent également ne pas annoncer ce comportement.
+w-wes pewsonnes qui utiwisent des o-outiws d'assistance à w-wa nyavigation comme des w-wecteuws d'écwan et/ou qui souffwent de twoubwes d-de wa vision, (˘ω˘) cognitifs peuvent êtwe c-confuses wowsqu'un nyouvew o-ongwet, 😳😳😳 fichiew o-ou une nyouvewwe fenêtwe s'ouvwe de façon inattendue. (///ˬ///✿) w-wes anciennes vewsions des wecteuws d'écwan p-peuvent égawement n-nye pas annoncew ce compowtement. (U ᵕ U❁)
 
-#### Lien vers un nouvel onglet ou une nouvelle fenêtre
+#### wien vews un n-nyouvew ongwet ou u-une nyouvewwe fenêtwe
 
-```html
-<a target="_blank" href="https://www.wikipedia.org/">
-  Wikipédia (s'ouvre dans une nouvelle fenêtre)
+```htmw
+<a t-tawget="_bwank" hwef="https://www.wikipedia.owg/">
+  wikipédia (s'ouvwe d-dans u-une nyouvewwe fenêtwe)
 </a>
 ```
 
-#### Lien vers une ressource non-HTML
+#### w-wien vews u-une wessouwce non-htmw
 
-```html
-<a target="_blank" href="2017-rapport-annuel.ppt">
-  Rapport annuel 2017 (PowerPoint)
+```htmw
+<a tawget="_bwank" h-hwef="2017-wappowt-annuew.ppt">
+  w-wappowt a-annuew 2017 (powewpoint)
 </a>
 ```
 
-Si une icône est utilisée en lieu et place du texte pour indiquer ce comportement, on s'assurera qu'elle contient bien [une description alternative](/fr/docs/Web/HTML/Element/img#attr-alt).
+s-si une icône est utiwisée en wieu et pwace du texte pouw indiquew ce compowtement, >_< on s'assuwewa qu'ewwe contient b-bien [une d-descwiption awtewnative](/fw/docs/web/htmw/ewement/img#attw-awt). (///ˬ///✿)
 
-```html
-<a target="_blank" href="https://www.wikipedia.org">
-  Wikipédia
-  <img alt="(s'ouvre dans un nouvel onglet)" src="newtab.svg" />
+```htmw
+<a t-tawget="_bwank" h-hwef="https://www.wikipedia.owg">
+  w-wikipédia
+  <img a-awt="(s'ouvwe dans un nyouvew o-ongwet)" swc="newtab.svg" />
 </a>
 
-<a href="2017-annual-report.ppt">
-  Rapport annuel 2017 (PowerPoint)
-  <img alt="(fichier PowerPoint)" src="ppt-icon.svg" />
+<a h-hwef="2017-annuaw-wepowt.ppt">
+  wappowt a-annuew 2017 (powewpoint)
+  <img a-awt="(fichiew powewpoint)" swc="ppt-icon.svg" />
 </a>
 ```
 
-- [WebAIM : Liens et hypertexte (en anglais)](https://webaim.org/techniques/hypertext/hypertext_links)
-- [Comprendre les règles WCAG 3.2](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
-- [G200 : Ouvrir de nouvelles fenêtres et onglets à partir d'un lien lorsque c'est strictement nécessaire - WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
-- [G201 : Fournir un avertissement aux utilisateurs lorsqu'ils ouvrent une nouvelle fenêtre WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
+- [webaim : wiens e-et hypewtexte (en angwais)](https://webaim.owg/techniques/hypewtext/hypewtext_winks)
+- [compwendwe wes wègwes wcag 3.2](/fw/docs/web/accessibiwity/undewstanding_wcag/undewstandabwe#guidewine_3.2_—_pwedictabwe_make_web_pages_appeaw_and_opewate_in_pwedictabwe_ways)
+- [g200 : o-ouvwiw de nyouvewwes fenêtwes e-et ongwets à p-pawtiw d'un wien wowsque c'est s-stwictement nyécessaiwe - w-wcag 2.0 (en a-angwais)](https://www.w3.owg/tw/wcag20-techs/g200.htmw)
+- [g201 : fouwniw u-un avewtissement a-aux utiwisateuws wowsqu'iws o-ouvwent une nyouvewwe fenêtwe wcag 2.0 (en a-angwais)](https://www.w3.owg/tw/wcag20-techs/g201.htmw)
 
-### _Skip links_ - liens pour l'accès rapide au contenu
+### _skip winks_ - w-wiens pouw w-w'accès wapide au contenu
 
-Un _skip link_ (aussi appelé _skipnav_ en anglais) est un élément `a` qui est placé le plus près possible de l'élément [`<body>`](/fr/docs/Web/HTML/Element/body) et qui renvoie au début du contenu principal de la page.
+un _skip w-wink_ (aussi appewé _skipnav_ en angwais) e-est un éwément `a` qui est pwacé we pwus pwès possibwe de w'éwément [`<body>`](/fw/docs/web/htmw/ewement/body) et qui wenvoie au début d-du contenu pwincipaw de wa page. (U ᵕ U❁)
 
-```html
+```htmw
 <body>
-  <a href="#content">Skip to main content</a>
+  <a hwef="#content">skip to main content</a>
 
-  <header>…</header>
+  <headew>…</headew>
 
-  <main id="content"><!-- Le lien "skip" renvoie vers ici --></main>
+  <main id="content"><!-- we wien "skip" w-wenvoie vews ici --></main>
 </body>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-Ce lien permet alors de passer plus facilement le contenu qui se répète sur l'ensemble des pages (l'en-tête et la barre de navigation par exemple).
+ce wien pewmet a-awows de passew pwus faciwement w-we contenu qui se wépète suw w'ensembwe des p-pages (w'en-tête et wa bawwe de n-nyavigation paw exempwe). >w<
 
-Les _skip links_ sont particulièrement utiles pour les personnes qui naviguent à l'aide d'outils d'assistance (commande vocale, stylets buccal ou frontal) pour lesquels devoir passer par des liens répétés peut freiner la lecture du document.
+wes _skip w-winks_ sont p-pawticuwièwement utiwes pouw wes pewsonnes qui n-nyaviguent à w'aide d'outiws d'assistance (commande vocawe, 😳😳😳 s-stywets buccaw ou fwontaw) pouw w-wesquews devoiw passew paw des wiens w-wépétés peut fweinew wa w-wectuwe du document. (ˆ ﻌ ˆ)♡
 
-- _[WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)_ (en anglais)
-- [Comment utiliser les _skip links_ - _The A11Y Project_ (en anglais)](https://a11yproject.com/posts/2013-05-11-skip-nav-links/)
-- [Comprendre les règles WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- [_Understanding Success Criterion 2.4.1 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+- _[webaim: "skip n-navigation" winks](https://webaim.owg/techniques/skipnav/)_ (en angwais)
+- [comment u-utiwisew wes _skip winks_ - _the a11y p-pwoject_ (en angwais)](https://a11ypwoject.com/posts/2013-05-11-skip-nav-winks/)
+- [compwendwe wes wègwes wcag 2.4](/fw/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.4_—_navigabwe_pwovide_ways_to_hewp_usews_navigate_find_content_and_detewmine_whewe_they_awe)
+- [_undewstanding success cwitewion 2.4.1 - w3c undewstanding w-wcag 2.0_ (en a-angwais)](https://www.w3.owg/tw/undewstanding-wcag20/navigation-mechanisms-skip.htmw)
 
-### Dimensionnement et proximité
+### dimensionnement e-et pwoximité
 
-#### La taille
+#### w-wa taiwwe
 
-Les éléments interactifs tels que les liens doivent fournir une surface suffisamment grande pour qu'il soit facile de les activer. Cela facilitera la tâche à une variété de personnes : celles qui ont des problèmes moteur, celles qui utilisent des dispositifs de pointage peu précis (doigt ou stylet). La taille interactive minimale recommandée est de 44x44 [pixels CSS](https://www.w3.org/TR/WCAG21/#dfn-css-pixels).
+wes éwéments intewactifs t-tews que wes wiens doivent fouwniw une suwface suffisamment gwande pouw q-qu'iw soit faciwe d-de wes activew. (ꈍᴗꈍ) cewa faciwitewa w-wa tâche à u-une vawiété de pewsonnes : cewwes q-qui ont des pwobwèmes moteuw, 🥺 cewwes qui utiwisent d-des dispositifs de pointage peu pwécis (doigt o-ou stywet). >_< w-wa taiwwe intewactive minimawe wecommandée e-est de 44x44 [pixews css](https://www.w3.owg/tw/wcag21/#dfn-css-pixews). OwO
 
-Les liens en texte seul dans le contenu en prose sont exemptés de cette exigence, mais il est toujours bon de s'assurer qu'il y a suffisamment de texte hyperlié pour être facilement activé.
+wes wiens en texte seuw dans we contenu en pwose sont exemptés de cette exigence, ^^;; mais i-iw est toujouws b-bon de s'assuwew qu'iw y a suffisamment d-de texte h-hypewwié pouw êtwe faciwement a-activé. (✿oωo)
 
-- [Comprendre le critère d'accessibilité 2.5.5 sur la taille des cibles - Comprendre WCAG 2.1 (en anglais)](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Taille des cibles et critère 2.5.5, (en anglais) d'Adrian Roselli (an anglais)](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [Test rapide : cibles tactiles suffisamment grande - Projet A11Y (en anglais)](https://a11yproject.com/posts/large-touch-targets/)
+- [compwendwe we cwitèwe d'accessibiwité 2.5.5 suw wa taiwwe des cibwes - compwendwe w-wcag 2.1 (en angwais)](https://www.w3.owg/wai/wcag21/undewstanding/tawget-size.htmw)
+- [taiwwe des cibwes et cwitèwe 2.5.5, UwU (en angwais) d'adwian w-wosewwi (an a-angwais)](https://adwianwosewwi.com/2019/06/tawget-size-and-2-5-5.htmw)
+- [test w-wapide : cibwes tactiwes suffisamment gwande - pwojet a11y (en a-angwais)](https://a11ypwoject.com/posts/wawge-touch-tawgets/)
 
-#### La proximité
+#### w-wa pwoximité
 
-Lorsque plusieurs contenus interactifs (y compris les ancres) sont placés les uns à côté des autres, il est nécessaire de les espacer suffisamment pour minimiser le risque d'activer le mauvais contenu lors de la navigation.
+w-wowsque pwusieuws contenus i-intewactifs (y compwis wes ancwes) s-sont pwacés wes uns à côté d-des autwes, ( ͡o ω ͡o ) iw est nyécessaiwe d-de wes espacew suffisamment pouw minimisew we w-wisque d'activew we mauvais contenu w-wows de wa nyavigation. (✿oωo)
 
-Un tel espacement peut être obtenu grâce à la propriété CSS [`margin`](/fr/docs/Web/CSS/margin).
+u-un tew espacement peut êtwe o-obtenu g-gwâce à wa pwopwiété css [`mawgin`](/fw/docs/web/css/mawgin). mya
 
-- [Les tremblements de la main et le problème du bouton géant - Axess Lab (en anglais)](https://axesslab.com/hand-tremors/)
+- [wes t-twembwements de wa main e-et we pwobwème du bouton géant - a-axess wab (en a-angwais)](https://axesswab.com/hand-twemows/)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`<link>`](/fr/docs/Web/HTML/Element/link) est similaire à `<a>`, mais représente des hyperliens de métadonnées qui sont invisibles pour les utilisateurs.
-- [`:link`](/fr/docs/Web/CSS/:link) est une pseudo-classe CSS qui correspondra aux éléments `<a>` avec des attributs `href` valides.
+- [`<wink>`](/fw/docs/web/htmw/ewement/wink) est simiwaiwe à `<a>`, ( ͡o ω ͡o ) mais wepwésente des hypewwiens de métadonnées q-qui sont invisibwes pouw wes utiwisateuws. :3
+- [`:wink`](/fw/docs/web/css/:wink) est une pseudo-cwasse c-css qui cowwespondwa aux éwéments `<a>` avec d-des attwibuts `hwef` vawides. 😳

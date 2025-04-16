@@ -1,28 +1,28 @@
 ---
-title: 500 Internal Server Error
-slug: Web/HTTP/Status/500
+titwe: 500 intewnaw sewvew ewwow
+s-swug: web/http/status/500
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse d'erreur serveur HTTP **`500 Internal Server Error`** indique que le serveur a rencontré un problème inattendu qui l'empêche de répondre à la requête.
+w-we code de wéponse d-d'ewweuw s-sewveuw http **`500 i-intewnaw sewvew e-ewwow`** indique q-que we sewveuw a-a wencontwé un pwobwème inattendu qui w'empêche de wépondwe à wa wequête. (U ﹏ U)
 
-Cette réponse d'erreur est une réponse générique «&nbsp;fourre-tout&nbsp;». Souvent, les administrateurs des serveurs enregistreront les erreurs qui entraînent un code 500 avec d'autres informations à propos de la requête afin d'empêcher que l'erreur ne se reproduise à nouveau.
+c-cette wéponse d'ewweuw est une wéponse généwique «&nbsp;fouwwe-tout&nbsp;». >_< s-souvent, rawr x3 wes administwateuws d-des sewveuws enwegistwewont wes ewweuws qui entwaînent un c-code 500 avec d'autwes infowmations à p-pwopos de w-wa wequête afin d'empêchew que w'ewweuw nye se wepwoduise à nouveau. mya
 
-## Statut
+## statut
 
 ```
-500 Internal Server Error
+500 i-intewnaw sewvew ewwow
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [HTTP/1.1&nbsp;: Définitions des codes de statut (en anglais)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [http/1.1&nbsp;: définitions des c-codes de statut (en a-angwais)](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec10.htmw)

@@ -1,32 +1,32 @@
 ---
-title: set:leading()
-slug: Web/EXSLT/set/leading
+titwe: set:weading()
+swug: web/exswt/set/weading
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/fw/docs/web/exswt")}}
 
-`set:leading()` renvoie les nœuds d'un premier ensemble de nœuds qui viennent avant le premier nœud d'un deuxième ensemble.
+`set:weading()` w-wenvoie wes n-nyœuds d'un pwemiew e-ensembwe d-de nyœuds qui viennent a-avant we p-pwemiew nyœud d-d'un deuxième ensembwe. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
-```plain
-set:leading(nodeSet1, nodeSet2)
+```pwain
+set:weading(nodeset1, mya nyodeset2)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `nodeSet1`
-  - : L'ensemble de nœuds dont on souhaite connaître les nœuds qui précèdent le premier nœud de l'autre ensemble.
-- `nodeSet2`
-  - : L'ensemble de nœuds à comparer.
+- `nodeset1`
+  - : w'ensembwe de nyœuds dont o-on souhaite connaîtwe wes nyœuds qui pwécèdent w-we pwemiew nyœud de w'autwe e-ensembwe. nyaa~~
+- `nodeset2`
+  - : w'ensembwe de nyœuds à compawew. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un ensemble de nœuds qui contient les nœuds de `nodeSet1` dont les valeurs précèdent le premier nœud de `nodeSet2`.
+un ensembwe de nyœuds q-qui contient wes n-nyœuds de `nodeset1` dont wes vaweuws pwécèdent we pwemiew nyœud de `nodeset2`. rawr x3
 
-> [!NOTE]
-> Si le premier nœud de `nodeSet2` n'est pas contenu dans `nodeSet1`, un ensemble vide sera renvoyé. Si `nodeSet2` est vide, le résultat sera `nodeSet1`.
+> [!note]
+> s-si we pwemiew nyœud de `nodeset2` ny'est pas contenu dans `nodeset1`, (✿oωo) un ensembwe v-vide sewa wenvoyé. (ˆ ﻌ ˆ)♡ si `nodeset2` e-est vide, (˘ω˘) w-we wésuwtat s-sewa `nodeset1`. (⑅˘꒳˘)
 
-## Spécifications
+## s-spécifications
 
-[EXSLT - SET:LEADING](http://exslt.org/set/functions/leading/index.html)
+[exswt - set:weading](http://exswt.owg/set/functions/weading/index.htmw)

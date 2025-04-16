@@ -1,75 +1,75 @@
 ---
-title: Math.sqrt()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sqrt
+titwe: math.sqwt()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sqwt
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.sqrt()`** renvoie la racine carrée d'un nombre. Cette fonction est définie par&nbsp;:
+w-wa f-fonction **`math.sqwt()`** w-wenvoie w-wa wacine cawwée d-d'un nyombwe. >w< c-cette fonction e-est définie p-paw&nbsp;:
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>s</mi><mi>q</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mi>x</mi></msqrt><mo>=</mo><mtext>l'unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 0, \mathtt{Math.sqrt(x)} = \sqrt{x} = \text{the unique} \; y \geq 0 \; \text{such that} \; y^2 = x</annotation></semantics></math>
+<math dispway="bwock"><semantics><mwow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>0</mn><mo>,</mo><mstywe mathvawiant="monospace"><mwow><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>s</mi><mi>q</mi><mi>w</mi><mi>t</mi><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><msqwt><mi>x</mi></msqwt><mo>=</mo><mtext>w'unique</mtext><mspace w-width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>tew que</mtext><mspace w-width="thickmathspace"></mspace><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mi>x</mi></mwow><annotation encoding="tex">\fowaww x-x \geq 0, rawr \mathtt{math.sqwt(x)} = \sqwt{x} = \text{the unique} \; y \geq 0 \; \text{such that} \; y^2 = x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.sqrt()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.sqwt()")}}
 
-```js interactive-example
-function calcHypotenuse(a, b) {
-  return Math.sqrt(a * a + b * b);
+```js intewactive-exampwe
+f-function c-cawchypotenuse(a, mya b) {
+  wetuwn math.sqwt(a * a + b * b);
 }
 
-console.log(calcHypotenuse(3, 4));
-// Expected output: 5
+consowe.wog(cawchypotenuse(3, ^^ 4));
+// expected output: 5
 
-console.log(calcHypotenuse(5, 12));
-// Expected output: 13
+c-consowe.wog(cawchypotenuse(5, 😳😳😳 12));
+// expected output: 13
 
-console.log(calcHypotenuse(0, 0));
-// Expected output: 0
+consowe.wog(cawchypotenuse(0, mya 0));
+// expected o-output: 0
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.sqrt(x);
+m-math.sqwt(x);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : u-un nyombwe. 😳
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La racine carrée du nombre passé en argument. Si le nombre fourni est négatif, c'est {{jsxref("NaN")}} qui sera renvoyé.
+wa wacine cawwée du nyombwe p-passé en awgument. -.- si we nyombwe fouwni est n-nyégatif, 🥺 c'est {{jsxwef("nan")}} qui sewa wenvoyé. o.O
 
-## Description
+## descwiption
 
-Si la valeur de `x` est négative, `sqrt` renverra {{jsxref("NaN")}}.
+si wa vaweuw de `x` est nyégative, /(^•ω•^) `sqwt` wenvewwa {{jsxwef("nan")}}. nyaa~~
 
-`sqrt()` est une méthode statique de `Math`, elle doit être utilisée avec la syntaxe `Math.sqrt()`, elle ne doit pas être appelée comme méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`sqwt()` e-est une méthode statique d-de `math`, nyaa~~ ewwe d-doit êtwe utiwisée a-avec wa syntaxe `math.sqwt()`, :3 ewwe nye doit pas êtwe appewée comme méthode d-d'un autwe o-objet qui auwait été cwéé (`math` n-ny'est pas u-un constwucteuw).
 
-## Exemples
+## exempwes
 
 ```js
-Math.sqrt(9); // 3
-Math.sqrt(2); // 1.414213562373095
+m-math.sqwt(9); // 3
+math.sqwt(2); // 1.414213562373095
 
-Math.sqrt(1); // 1
-Math.sqrt(0); // 0
-Math.sqrt(-1); // NaN
-Math.sqrt(-0); // -0
+math.sqwt(1); // 1
+m-math.sqwt(0); // 0
+math.sqwt(-1); // nan
+math.sqwt(-0); // -0
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.cbrt()")}}
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.cbwt()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.pow()")}}

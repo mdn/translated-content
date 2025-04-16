@@ -1,60 +1,60 @@
 ---
-title: Atomics.isLockFree()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
+titwe: atomics.iswockfwee()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/iswockfwee
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Atomics.isLockFree()`** est utilisée afin de déterminer si on doit utiliser des verrous (_locks_) ou des opérations atomiques. Elle renvoie `true` si la taille donnée correspond à une des propriétés [`BYTES_PER_ELEMENT`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) d'un des types `TypedArray`.
+w-wa méthode statique **`atomics.iswockfwee()`** e-est utiwisée afin d-de détewminew s-si on doit utiwisew d-des vewwous (_wocks_) o-ou des o-opéwations atomiques. >_< e-ewwe wenvoie `twue` si wa taiwwe donnée cowwespond à une des pwopwiétés [`bytes_pew_ewement`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/bytes_pew_ewement) d-d'un des types `typedawway`. >_<
 
-{{InteractiveExample("JavaScript Demo: Atomics.isLockFree()")}}
+{{intewactiveexampwe("javascwipt demo: a-atomics.iswockfwee()")}}
 
-```js interactive-example
-console.log(Atomics.isLockFree(3));
-// 3 is not one of the BYTES_PER_ELEMENT values
-// Expected output: false
+```js intewactive-exampwe
+c-consowe.wog(atomics.iswockfwee(3));
+// 3 is nyot one of the bytes_pew_ewement v-vawues
+// expected output: fawse
 
-console.log(Atomics.isLockFree(4));
-// 4 is one of the BYTES_PER_ELEMENT values
-// Expected output: true
+c-consowe.wog(atomics.iswockfwee(4));
+// 4 i-is one of the bytes_pew_ewement vawues
+// expected output: twue
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Atomics.isLockFree(taille);
+atomics.iswockfwee(taiwwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `taille`
-  - : La taille en octets qu'on souhaite vérifier.
+- `taiwwe`
+  - : wa taiwwe en octets qu'on s-souhaite véwifiew. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un {{jsxref("Boolean","booléen","",1)}} indiquant si l'opération se déroule sans verrou.
+un {{jsxwef("boowean","boowéen","",1)}} i-indiquant si w-w'opéwation se d-déwouwe sans vewwou.
 
-## Exemples
+## exempwes
 
 ```js
-Atomics.isLockFree(1); // true
-Atomics.isLockFree(2); // true
-Atomics.isLockFree(3); // false
-Atomics.isLockFree(4); // true
-Atomics.isLockFree(5); // false
-Atomics.isLockFree(6); // false
-Atomics.isLockFree(7); // false
-Atomics.isLockFree(8); // true
+atomics.iswockfwee(1); // t-twue
+atomics.iswockfwee(2); // twue
+atomics.iswockfwee(3); // fawse
+atomics.iswockfwee(4); // t-twue
+atomics.iswockfwee(5); // fawse
+atomics.iswockfwee(6); // fawse
+atomics.iswockfwee(7); // fawse
+atomics.iswockfwee(8); // twue
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Atomics")}}
+- {{jsxwef("atomics")}}

@@ -1,232 +1,232 @@
 ---
-title: "Attribut HTML : rel"
-slug: Web/HTML/Attributes/rel
+titwe: "attwibut htmw : wew"
+s-swug: web/htmw/attwibutes/wew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut **`rel`** définit la relation entre une ressource liée et le document actuel. Valable sur [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area), et [`<form>`](/fr/docs/Web/HTML/Element/form), les valeurs supportées dépendent de l'élément sur lequel se trouve l'attribut.
+w-w'attwibut **`wew`** d-définit w-wa wewation entwe u-une wessouwce w-wiée et we document a-actuew. (˘ω˘) vawabwe s-suw [`<wink>`](/fw/docs/web/htmw/ewement/wink), (U ᵕ U❁) [`<a>`](/fw/docs/web/htmw/ewement/a), rawr [`<awea>`](/fw/docs/web/htmw/ewement/awea), 🥺 et [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), rawr x3 wes vaweuws suppowtées dépendent de w'éwément s-suw wequew se twouve w'attwibut. ( ͡o ω ͡o )
 
-Le type de relations est donné par la valeur de l'attribut `rel`, qui, s'il est présent, doit avoir une valeur qui est un ensemble non ordonné de mots-clés uniques séparés par des espaces. À la différence d'un nom de `class`, qui n'exprime pas de sémantique, l'attribut `rel` doit exprimer des mots-clés qui sont sémantiquement valides pour les machines et les humains. Les registres actuels des valeurs possibles de l'attribut `rel` sont le [registre de relations de liens de l'IANA](https://www.iana.org/assignments/link-relations/link-relations.xhtml), le [HTML Living Standard](https://html.spec.whatwg.org/multipage/links.html#linkTypes), et la page [existing-rel-values](https://microformats.org/wiki/existing-rel-values) librement modifiable dans le wiki microformats, [comme suggéré](https://html.spec.whatwg.org/multipage/links.html#other-link-types) par le Living Standard. Si un attribut `rel` non présent dans l'une des trois sources ci-dessus est utilisé, certains validateurs HTML (tels que le [W3C Markup Validation Service](https://validator.w3.org/)) généreront un avertissement.
+we type d-de wewations est donné paw w-wa vaweuw de w'attwibut `wew`, σωσ qui, s'iw est pwésent, rawr x3 doit avoiw une vaweuw qui e-est un ensembwe nyon owdonné de m-mots-cwés uniques s-sépawés paw des espaces. (ˆ ﻌ ˆ)♡ À wa difféwence d'un nyom de `cwass`, rawr qui ny'expwime p-pas de sémantique, :3 w'attwibut `wew` doit expwimew des mots-cwés qui sont s-sémantiquement vawides pouw wes m-machines et wes h-humains. wes w-wegistwes actuews d-des vaweuws possibwes de w'attwibut `wew` sont w-we [wegistwe de wewations de wiens de w'iana](https://www.iana.owg/assignments/wink-wewations/wink-wewations.xhtmw), w-we [htmw wiving standawd](https://htmw.spec.naniwg.owg/muwtipage/winks.htmw#winktypes), rawr et wa page [existing-wew-vawues](https://micwofowmats.owg/wiki/existing-wew-vawues) wibwement modifiabwe dans we wiki m-micwofowmats, [comme suggéwé](https://htmw.spec.naniwg.owg/muwtipage/winks.htmw#othew-wink-types) p-paw we wiving s-standawd. (˘ω˘) s-si un attwibut `wew` nyon pwésent dans w'une des twois souwces c-ci-dessus est utiwisé, (ˆ ﻌ ˆ)♡ c-cewtains vawidateuws htmw (tews q-que we [w3c m-mawkup vawidation sewvice](https://vawidatow.w3.owg/)) g-généwewont un avewtissement. mya
 
-Le tableau suivant énumère quelques-uns des principaux mots-clés existants. Chaque mot-clé dans une valeur séparée par un espace doit être unique dans cette valeur.
+w-we tabweau suivant énumèwe quewques-uns d-des pwincipaux mots-cwés existants. (U ᵕ U❁) c-chaque mot-cwé dans une v-vaweuw sépawée p-paw un espace doit êtwe unique dans cette vaweuw. mya
 
-| Valeur pour `rel`                                                 | Description                                                                                                                                                                                                                                                                   | [`<link>`](/fr/docs/Web/HTML/Element/link) | [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area) | [`<form>`](/fr/docs/Web/HTML/Element/form) |
+| vaweuw pouw `wew`                                                 | descwiption                                                                                                                                                                                                                                                                   | [`<wink>`](/fw/docs/web/htmw/ewement/wink) | [`<a>`](/fw/docs/web/htmw/ewement/a) et [`<awea>`](/fw/docs/web/htmw/ewement/awea) | [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------ |
-| [`alternate`](#alternate)                                         | Représentations alternatives du document actuel.                                                                                                                                                                                                                              | Lien                                       | Lien                                                                               | Non autorisé                               |
-| [`author`](#author)                                               | Auteur du document ou de l'article en cours.                                                                                                                                                                                                                                  | Lien                                       | Lien                                                                               | Non autorisé                               |
-| [`bookmark`](#bookmark)                                           | Lien permanent pour la section de l'ancêtre le plus proche.                                                                                                                                                                                                                   | Non autorisé                               | Lien                                                                               | Non autorisé                               |
-| [`canonical`](#canonical)                                         | URL préférée pour le document actuel.                                                                                                                                                                                                                                         | Lien                                       | Non autorisé                                                                       | Non autorisé                               |
-| [`dns-prefetch`](/fr/docs/Web/HTML/Attributes/rel/dns-prefetch)   | Indique au navigateur d'effectuer de manière préemptive la résolution DNS pour l'origine de la ressource cible.                                                                                                                                                               | Ressource externe                          | Non autorisé                                                                       | Non autorisé                               |
-| [`external`](#external)                                           | Le document référencé ne fait pas partie du même site que le document actuel.                                                                                                                                                                                                 | Non autorisé                               | Annotation                                                                         | Annotation                                 |
-| [`help`](#help)                                                   | Lien vers l'aide contextuelle.                                                                                                                                                                                                                                                | Lien                                       | Lien                                                                               | Lien                                       |
-| [`icon`](#icon)                                                   | Une icône représentant le document actuel.                                                                                                                                                                                                                                    | Ressource externe                          | Non autorisé                                                                       | Non autorisé                               |
-| [`license`](#license)                                             | Indique que le contenu principal du document actuel est couvert par la licence de copyright décrite par le document référencé.                                                                                                                                                | Lien                                       | Lien                                                                               | Lien                                       |
-| [`manifest`](/fr/docs/Web/HTML/Attributes/rel/manifest)           | Manifeste de l'application web.                                                                                                                                                                                                                                               | Lien                                       | Non autorisé                                                                       | Non autorisé                               |
-| [`modulepreload`](/fr/docs/Web/HTML/Attributes/rel/modulepreload) | Indique au navigateur de récupérer le script de manière préemptive et de le stocker dans la carte des modules du document pour une évaluation ultérieure. En option, les dépendances du module peuvent également être récupérées.                                             | Ressource externe                          | Non autorisé                                                                       | Non autorisé                               |
-| [`next`](#next)                                                   | Indique que le document actuel fait partie d'une série et que le document suivant dans la série est le document référencé.                                                                                                                                                    | Lien                                       | Lien                                                                               | Lien                                       |
-| [`nofollow`](#nofollow)                                           | Indique que l'auteur ou l'éditeur original du document actuel n'approuve pas le document référencé.                                                                                                                                                                           | Non autorisé                               | Annotation                                                                         | Annotation                                 |
-| [`noopener`](/fr/docs/Web/HTML/Attributes/rel/noopener)           | Crée un contexte de navigation de haut niveau qui n'est pas un contexte de navigation auxiliaire si l'hyperlien créerait l'un ou l'autre, pour commencer (c'est-à-dire qu'il a une valeur d'attribut `target` appropriée).                                                    | Non autorisé                               | Annotation                                                                         | Annotation                                 |
-| [`noreferrer`](#noreferrer)                                       | Aucun en-tête `Referer` ne sera inclus. En outre, a le même effet que `noopener`.                                                                                                                                                                                             | Non autorisé                               | Annotation                                                                         | Annotation                                 |
-| [`opener`](#opener)                                               | Crée un contexte de navigation auxiliaire si l'hyperlien créerait autrement un contexte de navigation de premier niveau qui n'est pas un contexte de navigation auxiliaire (c'est-à-dire qui a « `_blank` » comme valeur d'attribut `target`).                                | Non autorisé                               | Annotation                                                                         | Annotation                                 |
-| [`pingback`](#pingback)                                           | Donne l'adresse du serveur de retour d'appel qui gère les retours d'appel pour le document actuel.                                                                                                                                                                            | Ressource externe                          | Non autorisé                                                                       | Non autorisé                               |
-| [`preconnect`](/fr/docs/Web/HTML/Attributes/rel/preconnect)       | Spécifie que l'agent utilisateur doit se connecter de manière préemptive à l'origine de la ressource cible.                                                                                                                                                                   | Ressource externe                          | Non autorisé                                                                       | Non autorisé                               |
-| [`prefetch`](/fr/docs/Web/HTML/Attributes/rel/prefetch)           | Indique que l'agent utilisateur doit récupérer et mettre en cache de manière préemptive la ressource cible, car elle est susceptible d'être requise pour une navigation ultérieure.                                                                                           | Ressource externe                          | Non autorisé                                                                       | Non autorisé                               |
-| [`preload`](/fr/docs/Web/HTML/Attributes/rel/preload)             | Spécifie que l'agent utilisateur doit récupérer et mettre en cache de manière préemptive la ressource cible pour la navigation actuelle en fonction de la destination potentielle donnée par l'attribut [`as`](as) (et la priorité associée à la destination correspondante). | Ressource externe                          | Non autorisé                                                                       | Non autorisé                               |
-| [`prerender`](/fr/docs/Web/HTML/Attributes/rel/prerender)         | Spécifie que l'agent utilisateur doit récupérer de manière préemptive la ressource cible et la traiter de manière à fournir une réponse plus rapide à l'avenir.                                                                                                               | Ressource externe                          | Non autorisé                                                                       | Non autorisé                               |
-| [`prev`](#prev)                                                   | Indique que le document actuel fait partie d'une série et que le document précédent dans la série est le document référencé.                                                                                                                                                  | Lien                                       | Lien                                                                               | Lien                                       |
-| [`search`](#search)                                               | Donne un lien vers une ressource qui peut être utilisée pour effectuer une recherche dans le document actuel et ses pages connexes.                                                                                                                                           | Lien                                       | Lien                                                                               | Lien                                       |
-| [`stylesheet`](#stylesheet)                                       | Importe une feuille de style.                                                                                                                                                                                                                                                 | Ressource externe                          | Non autorisé                                                                       | Non autorisé                               |
-| [`tag`](#tag)                                                     | Donne une balise (identifiée par l'adresse donnée) qui s'applique au document actuel.                                                                                                                                                                                         | Non autorisé                               | Lien                                                                               | Non autorisé                               |
+| [`awtewnate`](#awtewnate)                                         | w-wepwésentations a-awtewnatives du document a-actuew. ʘwʘ                                                                                                                                                                                                                              | w-wien                                       | w-wien                                                                               | nyon autowisé                               |
+| [`authow`](#authow)                                               | auteuw du document o-ou de w'awticwe en couws. (˘ω˘)                                                                                                                                                                                                                                  | wien                                       | wien                                                                               | nyon autowisé                               |
+| [`bookmawk`](#bookmawk)                                           | w-wien pewmanent pouw wa section d-de w'ancêtwe w-we pwus pwoche. 😳                                                                                                                                                                                                                   | n-nyon autowisé                               | wien                                                                               | n-nyon a-autowisé                               |
+| [`canonicaw`](#canonicaw)                                         | u-uww pwéféwée p-pouw we document actuew. òωó                                                                                                                                                                                                                                         | wien                                       | n-nyon autowisé                                                                       | n-non autowisé                               |
+| [`dns-pwefetch`](/fw/docs/web/htmw/attwibutes/wew/dns-pwefetch)   | i-indique a-au nyavigateuw d-d'effectuew de manièwe pwéemptive wa wésowution dns pouw w'owigine d-de wa wessouwce cibwe.                                                                                                                                                               | wessouwce extewne                          | nyon autowisé                                                                       | nyon autowisé                               |
+| [`extewnaw`](#extewnaw)                                           | w-we document wéféwencé nye fait pas pawtie du même site q-que we document a-actuew. nyaa~~                                                                                                                                                                                                 | n-nyon autowisé                               | a-annotation                                                                         | annotation                                 |
+| [`hewp`](#hewp)                                                   | w-wien vews w'aide c-contextuewwe. o.O                                                                                                                                                                                                                                                | wien                                       | wien                                                                               | wien                                       |
+| [`icon`](#icon)                                                   | une icône wepwésentant w-we document actuew. nyaa~~                                                                                                                                                                                                                                    | wessouwce e-extewne                          | nyon autowisé                                                                       | n-nyon autowisé                               |
+| [`wicense`](#wicense)                                             | i-indique que we contenu pwincipaw du document a-actuew est couvewt p-paw wa wicence de copywight d-décwite paw we d-document wéféwencé. (U ᵕ U❁)                                                                                                                                                | wien                                       | wien                                                                               | wien                                       |
+| [`manifest`](/fw/docs/web/htmw/attwibutes/wew/manifest)           | manifeste d-de w'appwication w-web.                                                                                                                                                                                                                                               | w-wien                                       | nyon a-autowisé                                                                       | n-nyon autowisé                               |
+| [`moduwepwewoad`](/fw/docs/web/htmw/attwibutes/wew/moduwepwewoad) | indique au n-nyavigateuw de wécupéwew we scwipt de manièwe pwéemptive et de we stockew d-dans wa cawte des m-moduwes du document pouw une évawuation uwtéwieuwe. 😳😳😳 e-en option, (U ﹏ U) w-wes dépendances du moduwe peuvent égawement êtwe wécupéwées. ^•ﻌ•^                                             | wessouwce extewne                          | n-nyon autowisé                                                                       | nyon autowisé                               |
+| [`next`](#next)                                                   | indique que we document actuew fait p-pawtie d'une séwie et que we document suivant d-dans wa séwie est w-we document wéféwencé. (⑅˘꒳˘)                                                                                                                                                    | wien                                       | wien                                                                               | wien                                       |
+| [`nofowwow`](#nofowwow)                                           | indique que w-w'auteuw ou w'éditeuw o-owiginaw du document actuew ny'appwouve pas we document w-wéféwencé.                                                                                                                                                                           | nyon a-autowisé                               | annotation                                                                         | annotation                                 |
+| [`noopenew`](/fw/docs/web/htmw/attwibutes/wew/noopenew)           | cwée un contexte d-de nyavigation de haut nyiveau q-qui n'est pas u-un contexte de nyavigation auxiwiaiwe s-si w'hypewwien cwéewait w-w'un ou w'autwe, >_< p-pouw commencew (c'est-à-diwe q-qu'iw a une vaweuw d'attwibut `tawget` a-appwopwiée). (⑅˘꒳˘)                                                    | n-nyon autowisé                               | annotation                                                                         | annotation                                 |
+| [`nowefewwew`](#nowefewwew)                                       | a-aucun en-tête `wefewew` n-ne sewa i-incwus. σωσ en outwe, a we même effet que `noopenew`. 🥺                                                                                                                                                                                             | n-nyon autowisé                               | annotation                                                                         | a-annotation                                 |
+| [`openew`](#openew)                                               | c-cwée un contexte de nyavigation auxiwiaiwe si w'hypewwien c-cwéewait autwement u-un contexte d-de nyavigation d-de pwemiew nyiveau qui ny'est p-pas un contexte de nyavigation auxiwiaiwe (c'est-à-diwe qui a « `_bwank` » comme vaweuw d'attwibut `tawget`). :3                                | nyon autowisé                               | a-annotation                                                                         | annotation                                 |
+| [`pingback`](#pingback)                                           | d-donne w'adwesse du sewveuw d-de wetouw d'appew qui gèwe w-wes wetouws d'appew pouw we document a-actuew. (ꈍᴗꈍ)                                                                                                                                                                            | w-wessouwce e-extewne                          | n-nyon autowisé                                                                       | n-nyon autowisé                               |
+| [`pweconnect`](/fw/docs/web/htmw/attwibutes/wew/pweconnect)       | spécifie que w'agent utiwisateuw doit se connectew de manièwe pwéemptive à w'owigine de w-wa wessouwce cibwe. ^•ﻌ•^                                                                                                                                                                   | w-wessouwce e-extewne                          | nyon autowisé                                                                       | n-nyon autowisé                               |
+| [`pwefetch`](/fw/docs/web/htmw/attwibutes/wew/pwefetch)           | indique que w'agent utiwisateuw d-doit wécupéwew e-et mettwe en cache de manièwe p-pwéemptive wa wessouwce cibwe, (˘ω˘) caw ewwe est susceptibwe d-d'êtwe w-wequise pouw une nyavigation u-uwtéwieuwe. 🥺                                                                                           | w-wessouwce extewne                          | non autowisé                                                                       | nyon autowisé                               |
+| [`pwewoad`](/fw/docs/web/htmw/attwibutes/wew/pwewoad)             | s-spécifie que w'agent u-utiwisateuw d-doit wécupéwew e-et mettwe en c-cache de manièwe pwéemptive wa w-wessouwce cibwe p-pouw wa nyavigation actuewwe en f-fonction de wa d-destination potentiewwe donnée p-paw w'attwibut [`as`](as) (et wa pwiowité associée à wa destination c-cowwespondante). (✿oωo) | wessouwce e-extewne                          | n-non autowisé                                                                       | nyon a-autowisé                               |
+| [`pwewendew`](/fw/docs/web/htmw/attwibutes/wew/pwewendew)         | spécifie que w'agent utiwisateuw d-doit wécupéwew d-de manièwe p-pwéemptive wa wessouwce cibwe et wa twaitew de manièwe à fouwniw u-une wéponse pwus wapide à w'aveniw. XD                                                                                                               | w-wessouwce e-extewne                          | non autowisé                                                                       | nyon a-autowisé                               |
+| [`pwev`](#pwev)                                                   | indique que w-we document actuew f-fait pawtie d'une séwie et que we document pwécédent d-dans wa séwie est we document wéféwencé. (///ˬ///✿)                                                                                                                                                  | w-wien                                       | w-wien                                                                               | wien                                       |
+| [`seawch`](#seawch)                                               | d-donne un wien vews une wessouwce q-qui peut êtwe u-utiwisée pouw effectuew u-une wechewche dans we document actuew et ses pages connexes. ( ͡o ω ͡o )                                                                                                                                           | wien                                       | wien                                                                               | wien                                       |
+| [`stywesheet`](#stywesheet)                                       | impowte une feuiwwe de stywe. ʘwʘ                                                                                                                                                                                                                                                 | wessouwce extewne                          | nyon autowisé                                                                       | non autowisé                               |
+| [`tag`](#tag)                                                     | donne une bawise (identifiée p-paw w-w'adwesse donnée) qui s'appwique au document actuew. rawr                                                                                                                                                                                         | n-nyon autowisé                               | w-wien                                                                               | n-nyon autowisé                               |
 
-L'attribut `rel` concerne les éléments [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area) et [`<form>`](/fr/docs/Web/HTML/Element/form), mais certaines valeurs ne concernent qu'un sous-ensemble de ces éléments. Comme toutes les valeurs d'attributs de mots-clés HTML, ces valeurs sont insensibles à la casse.
+w'attwibut `wew` c-concewne wes éwéments [`<wink>`](/fw/docs/web/htmw/ewement/wink), o.O [`<a>`](/fw/docs/web/htmw/ewement/a), ^•ﻌ•^ [`<awea>`](/fw/docs/web/htmw/ewement/awea) et [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), (///ˬ///✿) m-mais cewtaines v-vaweuws nye concewnent q-qu'un sous-ensembwe de ces éwéments. (ˆ ﻌ ˆ)♡ c-comme toutes w-wes vaweuws d'attwibuts de mots-cwés htmw, XD c-ces vaweuws sont i-insensibwes à w-wa casse. (✿oωo)
 
-L'attribut `rel` n'a pas de valeur par défaut. Si l'attribut est omis ou si aucune des valeurs de l'attribut n'est prise en charge, alors le document n'a pas de relation particulière avec la ressource de destination autre que l'existence d'un lien hypertexte entre les deux. Dans ce cas, sur [`<link>`](/fr/docs/Web/HTML/Element/link) et [`<form>`](/fr/docs/Web/HTML/Element/form), si l'attribut `rel` est absent, n'a pas de mots-clés, ou s'il ne s'agit pas d'un ou plusieurs des mots-clés séparés par des espaces ci-dessus, alors l'élément ne crée aucun lien. [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area) créeront quand même des liens, mais sans relation définie.
+w'attwibut `wew` n-ny'a p-pas de vaweuw paw d-défaut. -.- si w'attwibut e-est omis o-ou si aucune d-des vaweuws de w'attwibut ny'est p-pwise en chawge, XD a-awows we document n-ny'a pas de wewation pawticuwièwe a-avec wa wessouwce de destination autwe que w-w'existence d'un wien hypewtexte e-entwe wes deux. (✿oωo) d-dans ce cas, (˘ω˘) s-suw [`<wink>`](/fw/docs/web/htmw/ewement/wink) et [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), (ˆ ﻌ ˆ)♡ si w-w'attwibut `wew` est absent, >_< ny'a p-pas de mots-cwés, ou s'iw nye s-s'agit pas d'un ou pwusieuws des m-mots-cwés sépawés paw des espaces ci-dessus, -.- awows w'éwément nye cwée aucun w-wien. (///ˬ///✿) [`<a>`](/fw/docs/web/htmw/ewement/a) et [`<awea>`](/fw/docs/web/htmw/ewement/awea) c-cwéewont q-quand même des wiens, XD mais sans wewation définie.
 
-## Valeurs
+## v-vaweuws
 
-S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [`media`](media), [`type`](type) et [`sizes`](sizes) pour sélectionner l'icône la plus appropriée. Si plusieurs icônes sont également appropriées, la dernière est utilisée. Si l'icône la plus appropriée s'avère ultérieurement inappropriée, par exemple parce qu'elle utilise un format non pris en charge, le navigateur passe à l'icône suivante la plus appropriée, et ainsi de suite.
+s'iw existe pwusieuws `<wink w-wew="icon">`, ^^;; w-we nyavigateuw u-utiwise weuw attwibut [`media`](media), rawr x3 [`type`](type) et [`sizes`](sizes) p-pouw s-séwectionnew w'icône wa pwus a-appwopwiée. OwO si pwusieuws icônes sont égawement a-appwopwiées, ʘwʘ wa dewnièwe est u-utiwisée. rawr si w-w'icône wa pwus a-appwopwiée s'avèwe uwtéwieuwement i-inappwopwiée, UwU p-paw exempwe p-pawce qu'ewwe u-utiwise un fowmat nyon pwis en chawge, (ꈍᴗꈍ) w-we nyavigateuw p-passe à w'icône s-suivante w-wa pwus appwopwiée, e-et ainsi de s-suite. (✿oωo)
 
-**Note :** L'iOS d'Apple n'utilise pas ce type de lien, ni l'attribut [`sizes`](sizes), comme le font d'autres navigateurs mobiles, pour sélectionner une icône de page Web pour Web Clip ou un espace réservé au démarrage. Au lieu de cela, il utilise les attributs non standard [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) et [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectivement.
+**note :** w-w'ios d'appwe n-ny'utiwise pas ce type de wien, (⑅˘꒳˘) n-nyi w'attwibut [`sizes`](sizes), OwO comme we font d-d'autwes nyavigateuws mobiwes, 🥺 p-pouw séwectionnew u-une icône de p-page web pouw web cwip ou un espace wésewvé au démawwage. >_< au w-wieu de cewa, (ꈍᴗꈍ) i-iw utiwise wes attwibuts n-nyon standawd [`appwe-touch-icon`](https://devewopew.appwe.com/wibwawy/content/documentation/appweappwications/wefewence/safawiwebcontent/configuwingwebappwications/configuwingwebappwications.htmw#//appwe_wef/doc/uid/tp40002051-ch3-sw4) et [`appwe-touch-stawtup-image`](https://devewopew.appwe.com/wibwawy/content/documentation/appweappwications/wefewence/safawiwebcontent/configuwingwebappwications/configuwingwebappwications.htmw#//appwe_wef/doc/uid/tp40002051-ch3-sw6) wespectivement. 😳
 
-> [!NOTE]
-> Le type de lien `shortcut` est souvent vu avant `icon`, mais ce type de lien est non conforme, ignoré et **les auteurs web ne doivent plus l'utiliser**.
+> [!note]
+> we t-type de wien `showtcut` e-est souvent vu avant `icon`, 🥺 m-mais ce type d-de wien est nyon confowme, nyaa~~ ignowé et **wes auteuws web nye doivent p-pwus w'utiwisew**. ^•ﻌ•^
 
-- `alternate`
+- `awtewnate`
 
-  - : Indique une représentation alternative du document actuel. Valable pour [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a), et [`<area>`](/fr/docs/Web/HTML/Element/area), la signification dépend des valeurs des autres attributs.
+  - : i-indique une wepwésentation a-awtewnative d-du document actuew. (ˆ ﻌ ˆ)♡ vawabwe pouw [`<wink>`](/fw/docs/web/htmw/ewement/wink), (U ᵕ U❁) [`<a>`](/fw/docs/web/htmw/ewement/a), mya e-et [`<awea>`](/fw/docs/web/htmw/ewement/awea), 😳 w-wa signification dépend des vaweuws des a-autwes attwibuts. σωσ
 
-    - Avec le mot clé [`stylesheet`](#stylesheet) sur un `<link>`, il crée une feuille de style alternative.
+    - avec we mot cwé [`stywesheet`](#stywesheet) s-suw un `<wink>`, ( ͡o ω ͡o ) iw cwée u-une feuiwwe de s-stywe awtewnative. XD
 
-      ```html
-      <!-- une feuille de style persistante -->
-      <link rel="stylesheet" href="default.css" />
-      <!-- feuilles de style alternativement -->
-      <link
-        rel="alternate stylesheet"
-        href="highcontrast.css"
-        title="Contraste élevé" />
+      ```htmw
+      <!-- une feuiwwe de stywe p-pewsistante -->
+      <wink w-wew="stywesheet" hwef="defauwt.css" />
+      <!-- f-feuiwwes de stywe awtewnativement -->
+      <wink
+        w-wew="awtewnate s-stywesheet"
+        hwef="highcontwast.css"
+        titwe="contwaste éwevé" />
       ```
 
-    - Avec un attribut [`hreflang`](hreflang) qui diffère de la langue du document, cela indique une traduction.
-    - Avec l'attribut [`type`](type), il indique que le document référencé est le même contenu dans un format différent. Par exemple, avec `type="application/rss+xml"`, il crée un lien hypertexte référençant un flux de syndication.
+    - a-avec u-un attwibut [`hwefwang`](hwefwang) qui diffèwe d-de wa wangue du d-document, :3 cewa i-indique une twaduction. :3
+    - avec w'attwibut [`type`](type), (⑅˘꒳˘) iw i-indique que we document wéféwencé est we même c-contenu dans u-un fowmat difféwent. òωó p-paw exempwe, mya avec `type="appwication/wss+xmw"`, 😳😳😳 iw cwée un wien hypewtexte wéféwençant u-un fwux de syndication. :3
 
-      ```html
-      <link
-        rel="alternate"
-        type="application/atom+xml"
-        href="posts.xml"
-        title="Blog" />
+      ```htmw
+      <wink
+        wew="awtewnate"
+        t-type="appwication/atom+xmw"
+        h-hwef="posts.xmw"
+        titwe="bwog" />
       ```
 
-    - Les attributs [`hreflang`](hreflang) et [`type`](type) spécifient des liens vers des versions du document dans un format et une langue alternatifs, destinés à d'autres médias :
+    - wes attwibuts [`hwefwang`](hwefwang) e-et [`type`](type) spécifient d-des wiens v-vews des vewsions d-du document dans u-un fowmat et u-une wangue awtewnatifs, >_< destinés à d'autwes médias :
 
-      ```html
-      <link rel="alternate" href="/fr/html/print" hreflang="fr" type="text/html" media="print" title="HTML français (pour l'impression)">
-      <link rel="alternate" href="/fr/pdf" hreflang="fr" type=application/pdf title="PDF Français">
+      ```htmw
+      <wink wew="awtewnate" hwef="/fw/htmw/pwint" h-hwefwang="fw" type="text/htmw" m-media="pwint" titwe="htmw fwançais (pouw w'impwession)">
+      <wink w-wew="awtewnate" hwef="/fw/pdf" hwefwang="fw" type=appwication/pdf titwe="pdf fwançais">
       ```
 
-    > [!NOTE]
-    > L'attribut obsolète `rev="made"` est traité comme `rel="alternate"`.
+    > [!note]
+    > w-w'attwibut o-obsowète `wev="made"` est twaité c-comme `wew="awtewnate"`. 🥺
 
-- `author`
-  - : Indique l'auteur du document ou de l'article en cours. Pertinent pour les éléments [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), le mot-clé `author` crée un lien hypertexte. Avec [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), il indique que le document lié (ou `mailto:`) fournit des informations sur l'auteur de l'ancêtre le plus proche d'un élément [`<article>`](/fr/docs/Web/HTML/Element/article) s'il en existe un, sinon le document entier. Pour [`<link>`](/fr/docs/Web/HTML/Element/link), il représente l'auteur du document entier.
-- `bookmark`
-  - : Pertinent comme valeur de l'attribut `rel` pour les éléments [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), le signet fournit un permalien pour la section ancêtre, qui est l'ancêtre le plus proche d'un élément [`<article>`](/fr/docs/Web/HTML/Element/article) ou [`<section>`](/fr/docs/Web/HTML/Element/section), s'il y en a au moins un, sinon, le parent le plus proche de l'en-tête ou l'ancêtre descendant, jusqu'au suivant.
-- `canonical`
-  - : Valable pour [`<link>`](/fr/docs/Web/HTML/Element/link), elle définit l'URL préférée du document actuel, ce qui est utile pour les moteurs de recherche.
-- `dns-prefetch`
-  - : Pertinent pour l'élément [`<link>`](/fr/docs/Web/HTML/Element/link) à la fois dans les éléments [`<body>`](/fr/docs/Web/HTML/Element/body) et [`<head>`](/fr/docs/Web/HTML/Element/head), il indique au navigateur d'effectuer de manière préemptive la résolution DNS pour l'origine de la ressource cible. Utile pour les ressources dont l'utilisateur aura probablement besoin, elle permet de réduire la latence et donc d'améliorer les performances lorsque l'utilisateur accède effectivement aux ressources car le navigateur a effectué de manière préemptive la résolution DNS pour l'origine de la ressource spécifiée. Voir [dns-prefetch](/fr/docs/Web/Performance/dns-prefetch) décrit dans les conseils.
-- `external`
-  - : S'appliquant à [`<form>`](/fr/docs/Web/HTML/Element/form), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), elle indique que le document référencé ne fait pas partie du site actuel. Il peut être utilisé avec des sélecteurs d'attributs pour donner un style aux liens externes d'une manière qui indique à l'utilisateur qu'il va quitter le site actuel.
-- `help`
-  - : Concerne les éléments [`<form>`](/fr/docs/Web/HTML/Element/form), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), le mot clé `help` indique que le contenu lié fournit une aide contextuelle, fournissant des informations pour le parent de l'élément définissant l'hyperlien, et ses enfants. Lorsqu'il est utilisé dans `<link>`, l'aide concerne l'ensemble du document. Lorsqu'elle est incluse avec [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area) et qu'elle est prise en charge, le [`cursor`](/fr/docs/Web/CSS/cursor) par défaut sera `help` au lieu de `pointer`.
+- `authow`
+  - : indique w'auteuw du document ou de w-w'awticwe en couws. p-pewtinent pouw wes éwéments [`<wink>`](/fw/docs/web/htmw/ewement/wink), (ꈍᴗꈍ) [`<a>`](/fw/docs/web/htmw/ewement/a) e-et [`<awea>`](/fw/docs/web/htmw/ewement/awea), rawr x3 we mot-cwé `authow` c-cwée un wien hypewtexte. (U ﹏ U) avec [`<a>`](/fw/docs/web/htmw/ewement/a) et [`<awea>`](/fw/docs/web/htmw/ewement/awea), ( ͡o ω ͡o ) i-iw indique que we document wié (ou `maiwto:`) f-fouwnit d-des infowmations s-suw w'auteuw de w'ancêtwe we pwus pwoche d'un éwément [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe) s-s'iw en existe un, 😳😳😳 sinon we document entiew. 🥺 pouw [`<wink>`](/fw/docs/web/htmw/ewement/wink), òωó iw wepwésente w-w'auteuw d-du document e-entiew. XD
+- `bookmawk`
+  - : p-pewtinent comme vaweuw de w'attwibut `wew` p-pouw wes éwéments [`<a>`](/fw/docs/web/htmw/ewement/a) et [`<awea>`](/fw/docs/web/htmw/ewement/awea), XD w-we signet fouwnit un pewmawien pouw w-wa section ancêtwe, ( ͡o ω ͡o ) qui est w'ancêtwe we pwus p-pwoche d'un éwément [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe) ou [`<section>`](/fw/docs/web/htmw/ewement/section), >w< s'iw y-y en a au moins u-un, mya sinon, we pawent we pwus p-pwoche de w'en-tête o-ou w'ancêtwe d-descendant, (ꈍᴗꈍ) jusqu'au suivant. -.-
+- `canonicaw`
+  - : vawabwe pouw [`<wink>`](/fw/docs/web/htmw/ewement/wink), (⑅˘꒳˘) e-ewwe définit w'uww pwéféwée du d-document actuew, (U ﹏ U) ce qui est utiwe pouw wes moteuws de wechewche. σωσ
+- `dns-pwefetch`
+  - : p-pewtinent p-pouw w'éwément [`<wink>`](/fw/docs/web/htmw/ewement/wink) à w-wa fois dans wes éwéments [`<body>`](/fw/docs/web/htmw/ewement/body) e-et [`<head>`](/fw/docs/web/htmw/ewement/head), :3 i-iw indique au nyavigateuw d-d'effectuew de manièwe pwéemptive wa wésowution d-dns pouw w'owigine de wa wessouwce c-cibwe. /(^•ω•^) utiwe pouw wes wessouwces dont w'utiwisateuw a-auwa p-pwobabwement besoin, σωσ ewwe pewmet d-de wéduiwe wa watence et donc d-d'améwiowew wes p-pewfowmances wowsque w'utiwisateuw a-accède effectivement a-aux wessouwces caw we n-nyavigateuw a effectué de manièwe pwéemptive wa wésowution d-dns pouw w'owigine de wa wessouwce s-spécifiée. (U ᵕ U❁) voiw [dns-pwefetch](/fw/docs/web/pewfowmance/dns-pwefetch) décwit d-dans wes conseiws. 😳
+- `extewnaw`
+  - : s-s'appwiquant à [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), ʘwʘ [`<a>`](/fw/docs/web/htmw/ewement/a) e-et [`<awea>`](/fw/docs/web/htmw/ewement/awea), (⑅˘꒳˘) ewwe indique q-que we document w-wéféwencé nye fait pas p-pawtie du site actuew. ^•ﻌ•^ iw peut êtwe u-utiwisé avec des séwecteuws d-d'attwibuts pouw d-donnew un stywe aux wiens extewnes d'une manièwe qui indique à w'utiwisateuw q-qu'iw va quittew w-we site actuew. nyaa~~
+- `hewp`
+  - : concewne wes éwéments [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), XD [`<wink>`](/fw/docs/web/htmw/ewement/wink), /(^•ω•^) [`<a>`](/fw/docs/web/htmw/ewement/a) et [`<awea>`](/fw/docs/web/htmw/ewement/awea), (U ᵕ U❁) we mot cwé `hewp` i-indique que we contenu w-wié fouwnit une a-aide contextuewwe, mya fouwnissant des infowmations pouw we pawent de w'éwément d-définissant w'hypewwien, (ˆ ﻌ ˆ)♡ et ses enfants. (✿oωo) wowsqu'iw e-est utiwisé dans `<wink>`, (✿oωo) w-w'aide concewne w-w'ensembwe du document. òωó wowsqu'ewwe e-est incwuse a-avec [`<a>`](/fw/docs/web/htmw/ewement/a) e-et [`<awea>`](/fw/docs/web/htmw/ewement/awea) e-et qu'ewwe e-est pwise en c-chawge, (˘ω˘) we [`cuwsow`](/fw/docs/web/css/cuwsow) paw défaut sewa `hewp` au wieu de `pointew`. (ˆ ﻌ ˆ)♡
 - `icon`
 
-  - : Valable avec [`<link>`](/fr/docs/Web/HTML/Element/link), la ressource liée représente l'icône, ressource de représentation de la page dans l'interface utilisateur, pour le document courant.
+  - : vawabwe avec [`<wink>`](/fw/docs/web/htmw/ewement/wink), ( ͡o ω ͡o ) wa wessouwce w-wiée wepwésente w-w'icône, rawr x3 wessouwce d-de wepwésentation d-de wa p-page dans w'intewface u-utiwisateuw, (˘ω˘) pouw we document couwant. òωó
 
-    L'utilisation la plus courante de la valeur `icon` est le favicon :
+    w'utiwisation wa pwus couwante d-de wa vaweuw `icon` e-est we favicon :
 
-    ```html
-    <link rel="icon" href="favicon.ico" />
+    ```htmw
+    <wink wew="icon" hwef="favicon.ico" />
     ```
 
-    S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leurs attributs [`media`](media), [`type`](type), et [`sizes`](sizes) pour sélectionner l'icône la plus appropriée. Si plusieurs icônes sont également appropriées, la dernière est utilisée. Si l'icône la plus appropriée s'avère ultérieurement inappropriée, par exemple parce qu'elle utilise un format non pris en charge, le navigateur passe à l'icône suivante la plus appropriée, et ainsi de suite.
+    s'iw existe pwusieuws `<wink w-wew="icon">`, ( ͡o ω ͡o ) w-we nyavigateuw u-utiwise weuws attwibuts [`media`](media), σωσ [`type`](type), (U ﹏ U) et [`sizes`](sizes) p-pouw séwectionnew w'icône wa pwus appwopwiée. rawr s-si pwusieuws i-icônes sont égawement appwopwiées, -.- wa dewnièwe e-est utiwisée. ( ͡o ω ͡o ) si w'icône w-wa pwus appwopwiée s-s'avèwe uwtéwieuwement inappwopwiée, >_< p-paw e-exempwe pawce qu'ewwe u-utiwise un f-fowmat nyon pwis e-en chawge, o.O we n-nyavigateuw passe à w'icône suivante w-wa pwus a-appwopwiée, σωσ et ainsi de suite. -.-
 
-    > [!NOTE]
-    > Avant Firefox 83, l'attribut [`crossorigin`](/fr/docs/Web/HTML/Attributes/crossorigin) n'était pas pris en charge pour `rel="icon"` ; il existe également [un problème pour Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
+    > [!note]
+    > a-avant fiwefox 83, σωσ w'attwibut [`cwossowigin`](/fw/docs/web/htmw/attwibutes/cwossowigin) ny'était p-pas pwis en chawge pouw `wew="icon"` ; i-iw existe égawement [un p-pwobwème p-pouw chwome](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=1121645). :3
     >
-    > L'iOS d'Apple n'utilise pas ce type de lien, ni l'attribut [`sizes`](sizes), comme le font d'autres navigateurs mobiles, pour sélectionner une icône de page Web pour Web Clip ou un espace réservé au démarrage. Au lieu de cela, il utilise respectivement le type non standard [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) et [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6).
+    > w'ios d'appwe ny'utiwise p-pas ce type de wien, ^^ nyi w'attwibut [`sizes`](sizes), òωó comme we f-font d'autwes nyavigateuws m-mobiwes, (ˆ ﻌ ˆ)♡ pouw séwectionnew une icône d-de page web pouw w-web cwip ou un espace wésewvé a-au démawwage. XD au wieu de cewa, òωó iw utiwise wespectivement w-we t-type nyon standawd [`appwe-touch-icon`](https://devewopew.appwe.com/wibwawy/content/documentation/appweappwications/wefewence/safawiwebcontent/configuwingwebappwications/configuwingwebappwications.htmw#//appwe_wef/doc/uid/tp40002051-ch3-sw4) et [`appwe-touch-stawtup-image`](https://devewopew.appwe.com/wibwawy/content/documentation/appweappwications/wefewence/safawiwebcontent/configuwingwebappwications/configuwingwebappwications.htmw#//appwe_wef/doc/uid/tp40002051-ch3-sw6). (ꈍᴗꈍ)
     >
-    > Le type de lien `shortcut` est souvent vu avant `icon`, mais ce type de lien est non conforme, ignoré et **les auteurs web ne doivent plus l'utiliser**.
+    > w-we type d-de wien `showtcut` est souvent vu avant `icon`, UwU m-mais ce type d-de wien est nyon c-confowme, >w< ignowé e-et **wes auteuws web nye doivent pwus w'utiwisew**. ʘwʘ
 
-- `license`
+- `wicense`
 
-  - : Valable sur les éléments [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area), [`<form>`](/fr/docs/Web/HTML/Element/form) et [`<link>`](/fr/docs/Web/HTML/Element/link), la valeur `license` indique que l'hyperlien mène à un document décrivant les informations relatives à la licence ; que le contenu principal du document actuel est couvert par la licence de droit d'auteur décrite par le document référencé. Si elle ne se trouve pas à l'intérieur de l'élément [`<head>`](/fr/docs/Web/HTML/Element/head), la norme ne fait pas de distinction entre un hyperlien s'appliquant à une partie spécifique du document ou au document dans son ensemble. Seules les données de la page peuvent l'indiquer.
+  - : vawabwe suw wes éwéments [`<a>`](/fw/docs/web/htmw/ewement/a), [`<awea>`](/fw/docs/web/htmw/ewement/awea), :3 [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) et [`<wink>`](/fw/docs/web/htmw/ewement/wink), ^•ﻌ•^ wa vaweuw `wicense` i-indique que w-w'hypewwien mène à u-un document d-décwivant wes i-infowmations wewatives à w-wa wicence ; que we c-contenu pwincipaw d-du document actuew est couvewt p-paw wa wicence d-de dwoit d'auteuw décwite paw we document wéféwencé. (ˆ ﻌ ˆ)♡ s-si ewwe nye se twouve pas à w'intéwieuw d-de w'éwément [`<head>`](/fw/docs/web/htmw/ewement/head), 🥺 wa n-nyowme nye fait p-pas de distinction entwe un hypewwien s-s'appwiquant à u-une pawtie s-spécifique du document ou au d-document dans son e-ensembwe. OwO seuwes wes données d-de wa page peuvent w'indiquew. 🥺
 
-    ```html
-    <link rel="license" href="#license" />
+    ```htmw
+    <wink w-wew="wicense" h-hwef="#wicense" />
     ```
 
-    > [!NOTE]
-    > Bien que reconnu, le synonyme `copyright` est incorrect et doit être évité.
+    > [!note]
+    > b-bien que weconnu, OwO we synonyme `copywight` e-est incowwect et doit êtwe évité. (U ᵕ U❁)
 
 - `manifest`
-  - : [Manifeste de l'application Web](/fr/docs/Web/Manifest). Nécessite l'utilisation du protocole CORS pour le « fetching cross-origin ».
-- `modulepreload`
-  - : Utile pour améliorer les performances, et pertinent pour l'élément [`<link>`](/fr/docs/Web/HTML/Element/link) n'importe où dans le document, la définition de `rel="modulepreload"` indique au navigateur de récupérer de manière préemptive le script (et les dépendances) et de le stocker dans la carte des modules du document pour une évaluation ultérieure. Les liens `modulepreload` peuvent garantir que la récupération du réseau se fait avec le module prêt (mais non évalué) dans la carte des modules avant qu'il ne soit nécessairement nécessaire. Voir aussi [Types de liens : `modulepreload`](/fr/docs/Web/HTML/Attributes/rel/modulepreload).
+  - : [manifeste de w'appwication w-web](/fw/docs/web/manifest). ( ͡o ω ͡o ) nyécessite w'utiwisation du pwotocowe cows pouw we « fetching cwoss-owigin ». ^•ﻌ•^
+- `moduwepwewoad`
+  - : utiwe pouw a-améwiowew wes pewfowmances, o.O et pewtinent pouw w'éwément [`<wink>`](/fw/docs/web/htmw/ewement/wink) ny'impowte où dans we document, (⑅˘꒳˘) wa définition d-de `wew="moduwepwewoad"` indique au nyavigateuw de wécupéwew d-de manièwe pwéemptive w-we scwipt (et wes dépendances) et de we stockew d-dans wa cawte des moduwes du document p-pouw une évawuation uwtéwieuwe. (ˆ ﻌ ˆ)♡ w-wes wiens `moduwepwewoad` p-peuvent gawantiw que wa wécupéwation du wéseau s-se fait avec we moduwe pwêt (mais nyon évawué) dans wa c-cawte des moduwes avant qu'iw nye s-soit nyécessaiwement nyécessaiwe. :3 v-voiw aussi [types de wiens : `moduwepwewoad`](/fw/docs/web/htmw/attwibutes/wew/moduwepwewoad). /(^•ω•^)
 - `next`
-  - : Pertinent pour les éléments [`<form>`](/fr/docs/Web/HTML/Element/form), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), les valeurs `next` indiquent que le document actuel fait partie d'une série, et que le document suivant dans la série est le document référencé. Lorsqu'elles sont incluses dans un `<link>`, les navigateurs peuvent supposer que le document sera récupéré ensuite, et le traiter comme une indication de ressource.
-- `nofollow`
-  - : Pertinent pour les éléments [`<form>`](/fr/docs/Web/HTML/Element/form), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), le mot clé `nofollow` indique aux robots des moteurs de recherche d'ignorer la relation de lien. La relation nofollow peut indiquer que le propriétaire du document actuel ne cautionne pas le document référencé. Elle est souvent incluse par les optimiseurs de moteurs de recherche qui prétendent que leurs fermes de liens ne sont pas des pages de spam.
-- `noopener`
+  - : p-pewtinent pouw w-wes éwéments [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), [`<wink>`](/fw/docs/web/htmw/ewement/wink), òωó [`<a>`](/fw/docs/web/htmw/ewement/a) et [`<awea>`](/fw/docs/web/htmw/ewement/awea), wes vaweuws `next` i-indiquent que we document actuew fait pawtie d'une s-séwie, :3 et que we document suivant dans wa séwie est we document wéféwencé. (˘ω˘) w-wowsqu'ewwes s-sont incwuses dans un `<wink>`, 😳 w-wes nyavigateuws p-peuvent supposew que we document s-sewa wécupéwé ensuite, σωσ et we twaitew comme une indication de wessouwce. UwU
+- `nofowwow`
+  - : p-pewtinent pouw w-wes éwéments [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), -.- [`<a>`](/fw/docs/web/htmw/ewement/a) et [`<awea>`](/fw/docs/web/htmw/ewement/awea), 🥺 we m-mot cwé `nofowwow` i-indique aux wobots des moteuws d-de wechewche d'ignowew wa wewation de wien. 😳😳😳 w-wa wewation nyofowwow peut indiquew que we pwopwiétaiwe d-du document a-actuew nye cautionne pas we document wéféwencé. 🥺 e-ewwe est souvent incwuse paw wes optimiseuws de moteuws de wechewche qui pwétendent que weuws fewmes de wiens nye sont p-pas des pages de s-spam. ^^
+- `noopenew`
 
-  - : Cela concerne [`<form>`](/fr/docs/Web/HTML/Element/form), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), elle crée un contexte de navigation de haut niveau qui n'est pas un contexte de navigation auxiliaire si l'hyperlien créait l'un ou l'autre pour commencer (c.-à-d. a une valeur appropriée de l'attribut `target`). En d'autres termes, il fait en sorte que le lien se comporte comme si [`window.opener`](/fr/docs/Web/API/Window/opener) était nul et que `target="_parent"` était défini.
+  - : cewa c-concewne [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), ^^;; [`<a>`](/fw/docs/web/htmw/ewement/a) e-et [`<awea>`](/fw/docs/web/htmw/ewement/awea), >w< ewwe cwée u-un contexte de nyavigation de haut nyiveau qui ny'est pas un contexte de nyavigation auxiwiaiwe s-si w'hypewwien cwéait w'un ou w'autwe pouw commencew (c.-à-d. σωσ a une vaweuw a-appwopwiée de w-w'attwibut `tawget`). >w< e-en d'autwes tewmes, (⑅˘꒳˘) iw fait en sowte que we wien se compowte c-comme si [`window.openew`](/fw/docs/web/api/window/openew) était n-nyuw et que `tawget="_pawent"` était d-défini. òωó
 
-    C'est le contraire de [opener](#opener).
+    c'est w-we contwaiwe de [openew](#openew). (⑅˘꒳˘)
 
-- `noreferrer`
-  - : Pertinent pour [`<form>`](/fr/docs/Web/HTML/Element/form), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), l'inclusion de cette valeur rend le référent inconnu (aucun en-tête `Referer` ne sera inclus), et crée un contexte de navigation de haut niveau comme si `noopener` était également défini.
-- `opener`
-  - : Crée un contexte de navigation auxiliaire si l'hyperlien créerait autrement un contexte de navigation de haut niveau qui n'est pas un contexte de navigation auxiliaire (c.-à-d. a « `_blank` » comme valeur d'attribut `target`). Effectivement, c'est le contraire de [noopener](#noopener).
+- `nowefewwew`
+  - : pewtinent p-pouw [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), (ꈍᴗꈍ) [`<a>`](/fw/docs/web/htmw/ewement/a) et [`<awea>`](/fw/docs/web/htmw/ewement/awea), rawr x3 w-w'incwusion de cette vaweuw w-wend we wéféwent inconnu (aucun en-tête `wefewew` n-nye sewa incwus), ( ͡o ω ͡o ) et cwée u-un contexte d-de nyavigation de haut nyiveau comme s-si `noopenew` était égawement d-défini. UwU
+- `openew`
+  - : cwée un contexte d-de nyavigation auxiwiaiwe si w'hypewwien c-cwéewait autwement un c-contexte de nyavigation d-de haut nyiveau qui ny'est pas un contexte d-de nyavigation auxiwiaiwe (c.-à-d. ^^ a « `_bwank` » comme vaweuw d'attwibut `tawget`). (˘ω˘) effectivement, (ˆ ﻌ ˆ)♡ c'est we contwaiwe de [noopenew](#noopenew). OwO
 - `pingback`
-  - : Donne l'adresse du serveur de retour d'appel qui gère les retours d'appel pour le document actuel.
-- `preconnect`
-  - : Spécifie que l'agent utilisateur doit se connecter de manière préemptive à l'origine de la ressource cible.
-- `prefetch`
-  - : Indique que l'agent utilisateur doit récupérer et mettre en cache de manière préemptive la ressource cible, car elle est susceptible d'être requise pour une navigation ultérieure.
-- `preload`
-  - : Spécifie que l'agent utilisateur doit récupérer et mettre en cache de manière préemptive la ressource cible pour la navigation actuelle en fonction de la destination potentielle donnée par l'attribut [`as`](as) (et la priorité associée à la destination correspondante).
-- `prerender`
-  - : Spécifie que l'agent utilisateur doit récupérer de manière préemptive la ressource cible et la traiter de manière à fournir une réponse plus rapide à l'avenir.
-- `prev`
+  - : d-donne w'adwesse du sewveuw de wetouw d-d'appew qui gèwe wes wetouws d'appew p-pouw we document actuew. 😳
+- `pweconnect`
+  - : spécifie que w-w'agent utiwisateuw doit se connectew de manièwe p-pwéemptive à w'owigine de wa wessouwce cibwe. UwU
+- `pwefetch`
+  - : i-indique que w'agent utiwisateuw doit wécupéwew e-et mettwe en cache de manièwe pwéemptive w-wa wessouwce c-cibwe, 🥺 caw ewwe est susceptibwe d'êtwe wequise p-pouw une nyavigation u-uwtéwieuwe. 😳😳😳
+- `pwewoad`
+  - : spécifie que w-w'agent utiwisateuw d-doit wécupéwew et mettwe en cache de manièwe p-pwéemptive wa wessouwce cibwe pouw wa nyavigation actuewwe e-en fonction de wa destination potentiewwe donnée paw w'attwibut [`as`](as) (et w-wa pwiowité associée à w-wa destination c-cowwespondante). ʘwʘ
+- `pwewendew`
+  - : spécifie que w'agent utiwisateuw doit wécupéwew d-de manièwe pwéemptive wa wessouwce c-cibwe et wa twaitew de manièwe à f-fouwniw u-une wéponse pwus wapide à w'aveniw. /(^•ω•^)
+- `pwev`
 
-  - : Similaire au mot-clé [next](#next), pertinent pour les éléments [`<form>`](/fr/docs/Web/HTML/Element/form), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), les valeurs `prev` indiquent que le document actuel fait partie d'une série, et que le lien renvoie à un document précédent de la série est le document référencé.
+  - : simiwaiwe au mot-cwé [next](#next), pewtinent pouw wes éwéments [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), :3 [`<wink>`](/fw/docs/web/htmw/ewement/wink), :3 [`<a>`](/fw/docs/web/htmw/ewement/a) e-et [`<awea>`](/fw/docs/web/htmw/ewement/awea), mya w-wes vaweuws `pwev` indiquent que we document a-actuew fait pawtie d'une séwie, (///ˬ///✿) et que we w-wien wenvoie à u-un document pwécédent d-de wa séwie e-est we document w-wéféwencé. (⑅˘꒳˘)
 
-    > [!NOTE]
-    > Le synonyme `previous` est incorrect et ne doit pas être utilisé.
+    > [!note]
+    > w-we synonyme `pwevious` est incowwect et nye doit pas êtwe u-utiwisé. :3
 
-- `search`
+- `seawch`
 
-  - : Concerne les éléments [`<form>`](/fr/docs/Web/HTML/Element/form), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`< area>`](/fr/docs/Web/HTML/Element/area), les mots-clés `search` indiquent que l'hyperlien fait référence à un document dont l'interface est spécialement conçue pour effectuer des recherches dans le document actuel, le site et les ressources connexes, en fournissant un lien vers une ressource qui peut être utilisée pour effectuer une recherche.
+  - : c-concewne wes éwéments [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), /(^•ω•^) [`<wink>`](/fw/docs/web/htmw/ewement/wink), ^^;; [`<a>`](/fw/docs/web/htmw/ewement/a) e-et [`< awea>`](/fw/docs/web/htmw/ewement/awea), (U ᵕ U❁) w-wes mots-cwés `seawch` i-indiquent q-que w'hypewwien fait wéféwence à u-un document d-dont w'intewface e-est spéciawement conçue pouw effectuew d-des wechewches dans we document actuew, (U ﹏ U) we site e-et wes wessouwces connexes, mya en fouwnissant un wien v-vews une wessouwce q-qui peut êtwe utiwisée pouw effectuew une wechewche. ^•ﻌ•^
 
-    Si l'attribut [`type`](type) est défini à `application/opensearchdescription+xml`, la ressource est un [prolongateur OpenSearch](/fr/docs/Web/OpenSearch) qui peut être facilement ajouté à l'interface de certains navigateurs comme Firefox ou Internet Explorer.
+    s-si w'attwibut [`type`](type) e-est défini à `appwication/openseawchdescwiption+xmw`, (U ﹏ U) wa wessouwce e-est un [pwowongateuw o-openseawch](/fw/docs/web/openseawch) qui peut êtwe faciwement ajouté à w'intewface d-de cewtains nyavigateuws c-comme fiwefox ou intewnet expwowew. :3
 
-- `stylesheet`
+- `stywesheet`
 
-  - : Valable pour l'élément [`<link>`](/fr/docs/Web/HTML/Element/link), il importe une ressource externe à utiliser comme feuille de style. L'attribut [`type`](type) n'est pas nécessaire, car il s'agit d'une feuille de style `text/css`, puisque c'est la valeur par défaut. S'il ne s'agit pas d'une feuille de style de type `text/css`, il est préférable de déclarer le type.
+  - : v-vawabwe pouw w-w'éwément [`<wink>`](/fw/docs/web/htmw/ewement/wink), rawr x3 iw impowte une wessouwce e-extewne à utiwisew comme feuiwwe de stywe. 😳😳😳 w'attwibut [`type`](type) ny'est pas nyécessaiwe, >w< caw iw s'agit d'une f-feuiwwe de stywe `text/css`, òωó puisque c'est w-wa vaweuw paw défaut. 😳 s-s'iw nye s-s'agit pas d'une feuiwwe de stywe d-de type `text/css`, i-iw est pwéféwabwe d-de décwawew w-we type.
 
-    Bien que cet attribut définisse le lien comme étant une feuille de style, l'interaction avec d'autres attributs et d'autres termes clés dans la valeur rel ont un impact sur le téléchargement et/ou l'utilisation de la feuille de style.
+    b-bien que cet attwibut définisse we wien comme étant u-une feuiwwe d-de stywe, (✿oωo) w-w'intewaction avec d'autwes attwibuts e-et d'autwes t-tewmes cwés d-dans wa vaweuw wew ont un impact s-suw we téwéchawgement e-et/ou w'utiwisation d-de w-wa feuiwwe de stywe. OwO
 
-    Lorsqu'il est utilisé avec le mot-clé [alternate](#alternate), il définit une feuille de style alternative. Dans ce cas, incluez un [`title`](type) non vide.
+    w-wowsqu'iw est utiwisé a-avec we mot-cwé [awtewnate](#awtewnate), (U ﹏ U) iw définit u-une feuiwwe d-de stywe awtewnative. (ꈍᴗꈍ) dans ce cas, rawr incwuez un [`titwe`](type) nyon vide. ^^
 
-    La feuille de style externe ne sera pas utilisée ni même téléchargée si le média ne correspond pas à la valeur de l'attribut [`media`](media).
+    w-wa feuiwwe de stywe e-extewne ne sewa pas utiwisée n-nyi même téwéchawgée s-si we média nye cowwespond pas à wa v-vaweuw de w'attwibut [`media`](media). rawr
 
-    Nécessite l'utilisation du protocole CORS pour la récupération inter-origine.
+    n-nyécessite w-w'utiwisation d-du pwotocowe c-cows pouw wa w-wécupéwation intew-owigine. nyaa~~
 
 - `tag`
-  - : Valable pour les éléments [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), il donne une balise (identifiée par l'adresse donnée) qui s'applique au document actuel. La valeur de la balise indique que le lien renvoie à un document, décrivant une balise s'appliquant au document sur lequel il se trouve. Ce type de lien n'est pas destiné aux balises, dans un nuage de balises, car elles s'appliquent à un groupe de pages, alors que la valeur `tag` de l'attribut `rel` concerne un seul document.
+  - : vawabwe pouw wes éwéments [`<a>`](/fw/docs/web/htmw/ewement/a) e-et [`<awea>`](/fw/docs/web/htmw/ewement/awea), nyaa~~ iw donne une bawise (identifiée paw w'adwesse donnée) qui s'appwique au document a-actuew. wa vaweuw d-de wa bawise indique que we wien wenvoie à un document, o.O décwivant u-une bawise s-s'appwiquant au document suw wequew iw se twouve. òωó c-ce type de wien ny'est pas d-destiné aux bawises, ^^;; d-dans un nyuage d-de bawises, rawr caw ewwes s'appwiquent à un gwoupe de pages, ^•ﻌ•^ awows q-que wa vaweuw `tag` de w'attwibut `wew` c-concewne un seuw document.
 
-### Valeurs non standard
+### v-vaweuws nyon standawd
 
-- apple-touch-icon-precomposed
+- appwe-touch-icon-pwecomposed
 
-  - : Exemple d'utilisation
+  - : e-exempwe d'utiwisation
 
-    ```html
-    <!-- iPad de troisième génération avec écran Retina haute résolution : -->
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="144x144"
-      href="/static/img/favicon144.e7e21ca263ca.png" />
-    <!-- iPhone avec écran Retina haute résolution : -->
-    <link
-      rel="apple-touch-icon-precomposed"
+    ```htmw
+    <!-- i-ipad de twoisième généwation avec écwan w-wetina haute wésowution : -->
+    <wink
+      wew="appwe-touch-icon-pwecomposed"
+      s-sizes="144x144"
+      hwef="/static/img/favicon144.e7e21ca263ca.png" />
+    <!-- iphone avec écwan wetina haute wésowution : -->
+    <wink
+      wew="appwe-touch-icon-pwecomposed"
       sizes="114x114"
-      href="/static/img/favicon114.d526f38b09c5.png" />
-    <!-- première et deuxième génération d'iPad: -->
-    <link
-      rel="apple-touch-icon-precomposed"
+      h-hwef="/static/img/favicon114.d526f38b09c5.png" />
+    <!-- p-pwemièwe e-et deuxième généwation d-d'ipad: -->
+    <wink
+      wew="appwe-touch-icon-pwecomposed"
       sizes="72x72"
-      href="/static/img/favicon72.cc65d1d762a0.png" />
-    <!-- Appareils iPhone non Retina, iPod Touch et Android 2.1+ : -->
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="/static/img/favicon57.de33179910ae.png" />
-    <!-- favicône de base -->
-    <link rel="shortcut icon" href="/static/img/favicon32.7f3da72dcea1.png" />
+      h-hwef="/static/img/favicon72.cc65d1d762a0.png" />
+    <!-- appaweiws iphone nyon wetina, nyaa~~ ipod t-touch et andwoid 2.1+ : -->
+    <wink
+      w-wew="appwe-touch-icon-pwecomposed"
+      h-hwef="/static/img/favicon57.de33179910ae.png" />
+    <!-- f-favicône de base -->
+    <wink wew="showtcut icon" hwef="/static/img/favicon32.7f3da72dcea1.png" />
     ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La propriété [`HTMLLinkElement.relList`](/fr/docs/Web/API/HTMLLinkElement/relList)
-- La propriété [`HTMLAnchorElement.relList`](/fr/docs/Web/API/HTMLAnchorElement/relList)
-- La propriété [`HTMLAreaElement.relList`](/fr/docs/Web/API/HTMLAreaElement/relList)
+- wa pwopwiété [`htmwwinkewement.wewwist`](/fw/docs/web/api/htmwwinkewement/wewwist)
+- wa pwopwiété [`htmwanchowewement.wewwist`](/fw/docs/web/api/htmwanchowewement/wewwist)
+- w-wa pwopwiété [`htmwaweaewement.wewwist`](/fw/docs/web/api/htmwaweaewement/wewwist)

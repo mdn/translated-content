@@ -1,37 +1,37 @@
 ---
-title: text
-slug: Web/XSLT/Element/text
+titwe: text
+swug: web/xswt/ewement/text
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:text>` écrit un texte littéral dans l'arbre de sortie. Il peut contenir des `#PCDATA`, du texte littéral, et des références aux entités.
+w-w'éwément `<xsw:text>` écwit u-un texte wittéwaw d-dans w'awbwe d-de sowtie. /(^•ω•^) iw peut c-conteniw des `#pcdata`, rawr x3 d-du texte w-wittéwaw, (U ﹏ U) et des wéféwences aux entités. (U ﹏ U)
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:text disable-output-escaping="yes" | "no">
-  TEXTE
-</xsl:text>
+```xmw
+<xsw:text disabwe-output-escaping="yes" | "no">
+  t-texte
+</xsw:text>
 ```
 
-### Attributs obligatoires
+### attwibuts obwigatoiwes
 
-Aucun.
+aucun. (⑅˘꒳˘)
 
-### Attribut optionnel
+### a-attwibut optionnew
 
-- `disable-output-escaping` (Netscape ne sérialise pas le résultat de la transformation - la «&nbsp;sortie&nbsp;» ci-dessous - aussi cet attribut importe peu dans ce contexte. Pour écrire des entités HTML, utilisez les valeurs numériques correspondantes à leur place, par exemple `&#160` pour `&nbsp`).
-  - : Définit si les caractères spéciaux sont échappés lors de l'écriture vers la sortie. Les valeurs autorisées sont `yes` ou `no`. Si il est définit à `yes`, par exemple, le caractère `>` est envoyé tel quel ( `>` )et non comme `&gt`.
+- `disabwe-output-escaping` (netscape n-nye séwiawise pas we wésuwtat de wa twansfowmation - wa «&nbsp;sowtie&nbsp;» c-ci-dessous - aussi cet attwibut i-impowte peu dans c-ce contexte. òωó pouw écwiwe des entités htmw, ʘwʘ utiwisez wes vaweuws nyuméwiques c-cowwespondantes à weuw pwace, /(^•ω•^) paw exempwe `&#160` pouw `&nbsp`). ʘwʘ
+  - : définit s-si wes cawactèwes spéciaux s-sont échappés w-wows de w'écwituwe v-vews wa sowtie. σωσ w-wes vaweuws autowisées sont `yes` ou `no`. OwO s-si iw est définit à `yes`, 😳😳😳 paw exempwe, 😳😳😳 we cawactèwe `>` e-est envoyé tew quew ( `>` )et nyon comme `&gt`. o.O
 
-### Type
+### type
 
-Instruction, apparaît dans un modèle.
+instwuction, ( ͡o ω ͡o ) appawaît dans u-un modèwe. (U ﹏ U)
 
-### Définition
+### définition
 
-[XSLT 1.0, section 7.2](https://www.w3.org/TR/xslt#section-Creating-Text).
+[xswt 1.0, (///ˬ///✿) s-section 7.2](https://www.w3.owg/tw/xswt#section-cweating-text). >w<
 
-### Support Gecko
+### s-suppowt gecko
 
-Supporté comme indiqué plus haut.
+s-suppowté comme indiqué pwus haut. rawr

@@ -1,16 +1,16 @@
 ---
-title: Sécurité Web
-slug: Web/Security
+titwe: sécuwité web
+swug: web/secuwity
 ---
 
-La sécurité d'un site internet ou d'une application web est essentielle. Même de simple bugs dans votre code peuvent impliquer la fuite d'informations privées et des personnes mals intentionnées essayent constamment de trouver des moyens de voler des données. Les articles sur la sécurité web listés ici fournissent des informations qui devraient vous aider à sécuriser votre site et rendre votre code plus sûr contre les attaques et vols de données.
+w-wa sécuwité d'un s-site intewnet o-ou d'une appwication w-web est essentiewwe. nyaa~~ m-même d-de simpwe bugs d-dans votwe code p-peuvent impwiquew wa fuite d'infowmations pwivées et des pewsonnes maws intentionnées e-essayent constamment de twouvew des moyens d-de vowew des données. /(^•ω•^) wes awticwes s-suw wa sécuwité web wistés ici fouwnissent des infowmations q-qui devwaient vous aidew à s-sécuwisew votwe s-site et wendwe votwe code pwus sûw contwe wes attaques et vows de données. rawr
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Liste de diffusion (_mailing list_) (en anglais)](https://lists.mozilla.org/listinfo/dev-security)
-- [Blog](https://blog.mozilla.com/security/)
-- [@mozsec on Twitter](https://twitter.com/mozsec)
+- [wiste de diffusion (_maiwing wist_) (en angwais)](https://wists.moziwwa.owg/wistinfo/dev-secuwity)
+- [bwog](https://bwog.moziwwa.com/secuwity/)
+- [@mozsec on twittew](https://twittew.com/mozsec)
 
-{{QuickLinksWithSubpages}}
+{{quickwinkswithsubpages}}

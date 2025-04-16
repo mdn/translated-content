@@ -1,39 +1,39 @@
 ---
-title: Reste (%)
-slug: Web/JavaScript/Reference/Operators/Remainder
+titwe: weste (%)
+swug: web/javascwipt/wefewence/opewatows/wemaindew
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur du reste (`%`) renvoie le reste de la division de l'opérande gauche par l'opérande droit. Le résultat a toujours le signe du numérateur.
+w-w'opéwateuw d-du weste (`%`) w-wenvoie we weste d-de wa division d-de w'opéwande g-gauche paw w'opéwande d-dwoit. 😳😳😳 w-we wésuwtat a toujouws we signe du nyuméwateuw. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Remainder operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - wemaindew o-opewatow")}}
 
-```js interactive-example
-console.log(13 % 5);
-// Expected output: 3
+```js intewactive-exampwe
+consowe.wog(13 % 5);
+// e-expected output: 3
 
-console.log(-13 % 5);
-// Expected output: -3
+consowe.wog(-13 % 5);
+// e-expected output: -3
 
-console.log(4 % 2);
-// Expected output: 0
+consowe.wog(4 % 2);
+// expected output: 0
 
-console.log(-4 % 2);
-// Expected output: -0
+c-consowe.wog(-4 % 2);
+// expected o-output: -0
 ```
 
-Bien que dans la plupart des langages, `%` est un opérateur de reste, pour d'autres (par exemple [Python, Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)) c'est un opérateur de modulo. Lorsqu'on utilise des valeurs positives, les deux opérateurs sont équivalents mais lorsque le numérateur et de dénominateur ont des signes différents, le reste et le modulo fourniront des signes différents. Pour obtenir une opération équivalente au modulo en JavaScript, on pourra utiliser `((a % n ) + n ) % n`.
+b-bien que dans wa pwupawt des wangages, ^^ `%` est un opéwateuw de weste, :3 pouw d'autwes (paw e-exempwe [python, -.- peww](https://en.wikipedia.owg/wiki/moduwo_opewation#in_pwogwamming_wanguages)) c'est un opéwateuw de moduwo. 😳 wowsqu'on u-utiwise des vaweuws positives, mya w-wes deux opéwateuws s-sont équivawents m-mais w-wowsque we nyuméwateuw et de dénominateuw ont d-des signes difféwents, (˘ω˘) we weste et we moduwo fouwniwont d-des signes difféwents. >_< pouw obteniw une opéwation équivawente au moduwo en javascwipt, -.- o-on pouwwa utiwisew `((a % ny ) + n-ny ) % ny`.
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Opérateur: var1 % var2;
+o-opéwateuw: vaw1 % vaw2;
 ```
 
-## Exemples
+## exempwes
 
-### Reste avec numérateur positif
+### weste avec nyuméwateuw p-positif
 
 ```js
 12 % 5; //  2
@@ -43,7 +43,7 @@ Opérateur: var1 % var2;
 5.5 % 2; // 1.5
 ```
 
-### Reste avec numérateur négatif
+### w-weste avec nyuméwateuw n-nyégatif
 
 ```js
 -12 % 5; // -2
@@ -51,36 +51,36 @@ Opérateur: var1 % var2;
 -4 % 2; // -0
 ```
 
-### Reste avec NaN
+### w-weste avec nyan
 
 ```js
-NaN % 2; // NaN
+nyan % 2; // n-nan
 ```
 
-### Reste avec l'infini
+### weste avec w-w'infini
 
 ```js
-Infinity % 2; // NaN
-Infinity % 0; // NaN
-Infinity % Infinity; // NaN
+infinity % 2; // nyan
+infinity % 0; // n-nyan
+infinity % infinity; // n-nyan
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Opérateur d'addition](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Opérateur de soustraction](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Opérateur de multiplication](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Opérateur de division](/fr/docs/Web/JavaScript/Reference/Operators/Division)
-- [Opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Opérateur d'incrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Opérateur de décrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Opérateur de négation unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Opérateur plus unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [opéwateuw d'addition](/fw/docs/web/javascwipt/wefewence/opewatows/addition)
+- [opéwateuw de soustwaction](/fw/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [opéwateuw de muwtipwication](/fw/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [opéwateuw de division](/fw/docs/web/javascwipt/wefewence/opewatows/division)
+- [opéwateuw d'exponentiation](/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [opéwateuw d-d'incwémentation](/fw/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [opéwateuw d-de décwémentation](/fw/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [opéwateuw d-de nyégation u-unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [opéwateuw p-pwus unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

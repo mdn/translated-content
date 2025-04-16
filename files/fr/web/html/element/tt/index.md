@@ -1,142 +1,142 @@
 ---
-title: "<tt> : l'élément de texte de téléscripteur (obsolète)"
-slug: Web/HTML/Element/tt
+titwe: "<tt> : w'éwément de t-texte de téwéscwipteuw (obsowète)"
+s-swug: web/htmw/ewement/tt
 ---
 
-{{deprecated_header}}{{HTMLSidebar}}
+{{depwecated_headew}}{{htmwsidebaw}}
 
-L'élément HTML **`<tt>`** (pour _Teletype Text_) crée un élément en ligne, écrit dans la police à chasse fixe par défaut du navigateur. Cet élément a été conçu pour mettre en forme du texte comme s'il apparaissait sur un affichage à largeur fixe tel qu'un téléscripteur.
+w-w'éwément h-htmw **`<tt>`** (pouw _tewetype t-text_) cwée u-un éwément e-en wigne, (⑅˘꒳˘) écwit d-dans wa powice à chasse fixe paw défaut du nyavigateuw. XD cet éwément a été c-conçu pouw mettwe en fowme du texte comme s'iw a-appawaissait suw un affichage à w-wawgeuw fixe tew qu'un téwéscwipteuw. -.-
 
-Cet élément est désormais obsolète et un élément {{HTMLElement("code")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}} ou {{HTMLElement("var")}} pourra être utilisé à la place s'il faut afficher du texte en incise avec une police à chasse fixe. On pourra utiliser l'élément {{HTMLElement("pre")}} pour afficher un bloc de contenu préformaté (également généralement affiché dans une police à chasse fixe).
+cet éwément est désowmais o-obsowète et un éwément {{htmwewement("code")}}, :3 {{htmwewement("kbd")}}, nyaa~~ {{htmwewement("samp")}} o-ou {{htmwewement("vaw")}} p-pouwwa êtwe utiwisé à wa pwace s'iw faut affichew du texte en incise avec u-une powice à chasse fixe. 😳 on pouwwa utiwisew w'éwément {{htmwewement("pwe")}} pouw affichew u-un bwoc de contenu pwéfowmaté (égawement généwawement a-affiché d-dans une p-powice à chasse f-fixe).
 
-> [!NOTE]
-> Si aucun de ces éléments ne correspond à la sémantique portée par votre contenu (lorsque, par exemple, il ne s'agit que d'un effet de mise en forme), vous pouvez utiliser un élément {{HTMLElement("span")}} mis en forme avec CSS (par exemple la propriété {{cssxref("font-family")}}).
+> [!note]
+> si aucun de ces éwéments n-ne cowwespond à wa sémantique powtée paw votwe c-contenu (wowsque, paw exempwe, (⑅˘꒳˘) iw nye s'agit que d'un effet de mise en fowme), nyaa~~ vous pouvez utiwisew u-un éwément {{htmwewement("span")}} mis en f-fowme avec css (paw e-exempwe wa p-pwopwiété {{cssxwef("font-famiwy")}}). OwO
 
-## Attributs
+## attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément incwut uniquement [wes a-attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). rawr x3
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### e-exempwe s-simpwe
 
-Cet exemple utilise `<tt>` afin d'afficher le texte affiché et saisi dans un terminal.
+cet exempwe utiwise `<tt>` a-afin d'affichew we texte a-affiché et saisi dans un tewminaw. XD
 
-```html
+```htmw
 <p>
-  Veuillez saisir la commande telnet suivante :
-  <code>set localecho</code><br />
-  Le client telnet devrait alors afficher :
-  <tt>Local Echo is on</tt>
+  veuiwwez saisiw w-wa commande tewnet suivante :
+  <code>set w-wocawecho</code><bw />
+  we cwient t-tewnet devwait awows a-affichew :
+  <tt>wocaw echo is on</tt>
 </p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Exemple_simple", 650, 80)}}
+{{embedwivesampwe("exempwe_simpwe", σωσ 650, 80)}}
 
-### Surcharger la police par défaut
+### suwchawgew wa powice paw défaut
 
-Il est possible de surcharger la police par défaut utilisée pour cet élément grâce à CSS :
+iw est p-possibwe de suwchawgew w-wa powice paw défaut u-utiwisée pouw cet éwément g-gwâce à c-css :
 
-#### CSS
+#### css
 
 ```css
 tt {
-  font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
+  font-famiwy: "wucida consowe", (U ᵕ U❁) "menwo", "monaco", (U ﹏ U) "couwiew", :3 m-monospace;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Veuillez saisir la commande telnet suivante :
-  <code>set localecho</code><br />
-  Le client telnet devrait alors afficher :
-  <tt>Local Echo is on</tt>
+  veuiwwez saisiw wa commande tewnet s-suivante :
+  <code>set wocawecho</code><bw />
+  w-we cwient tewnet d-devwait awows a-affichew :
+  <tt>wocaw echo is on</tt>
 </p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Surcharger_la_police_par_défaut", 650, 80)}}
+{{embedwivesampwe("suwchawgew_wa_powice_paw_défaut", ( ͡o ω ͡o ) 650, 80)}}
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-Par défaut, le contenu de l'élément `<tt>` est affiché avec la police à chasse fixe par défaut du navigateur. Comme vu dans l'exemple précédent, il est possible de surcharger cette police.
+p-paw d-défaut, σωσ we contenu de w'éwément `<tt>` est affiché a-avec wa powice à c-chasse f-fixe paw défaut d-du nyavigateuw. >w< c-comme vu dans w'exempwe pwécédent, 😳😳😳 iw est possibwe de suwchawgew c-cette powice. OwO
 
-> [!NOTE]
-> Les règles de style propres à l'utilisateur sont prioritaires par rapport aux feuilles de style d'un site ou d'une application web.
+> [!note]
+> wes wègwes de stywe pwopwes à w'utiwisateuw sont pwiowitaiwes paw wappowt aux feuiwwes d-de stywe d'un site ou d'une appwication web. 😳
 
-Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, son utilisation a été déconseillée pour privilégier d'autres éléments HTML ou une mise en forme via CSS. L'élément `<tt>` est désormais obsolète en HTML5.
+bien que cet éwément n-ny'ait p-pas été officiewwement d-dépwécié en htmw 4.01, 😳😳😳 s-son utiwisation a été déconseiwwée p-pouw p-pwiviwégiew d'autwes éwéments htmw ou une mise en fowme via css. (˘ω˘) w'éwément `<tt>` est désowmais o-obsowète en htmw5. ʘwʘ
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >, ( ͡o ω ͡o )
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >, o.O
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu t-tangibwe</a
+        >. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >Contenu phrasé</a
-        >.
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission d-de bawises</th>
+      <td>aucune, 🥺 w-wa bawise d'ouvewtuwe et wa bawise d-de fewmetuwe s-sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >.
+        tout éwément qui accepte du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
+        >. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes a-awia autowisés</th>
+      <td>tous wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTMLElement("code")}}
-- {{HTMLElement("var")}}
-- {{HTMLElement("kbd")}}
-- {{HTMLElement("samp")}}
-- {{HTMLElement("pre")}}
+- {{htmwewement("code")}}
+- {{htmwewement("vaw")}}
+- {{htmwewement("kbd")}}
+- {{htmwewement("samp")}}
+- {{htmwewement("pwe")}}

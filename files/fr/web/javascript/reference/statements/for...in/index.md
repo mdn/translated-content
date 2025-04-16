@@ -1,118 +1,118 @@
 ---
-title: for...in
-slug: Web/JavaScript/Reference/Statements/for...in
+titwe: fow...in
+swug: web/javascwipt/wefewence/statements/fow...in
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérables](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) d'un objet qui ne sont pas [des symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Pour chaque propriété obtenue, on exécute une instruction (ou plusieurs grâce à un {{jsxref("Instructions/bloc","bloc","",1)}} d'instructions).
+w-w'**instwuction `fow...in`** p-pewmet d'itéwew s-suw wes [pwopwiétés énuméwabwes](/fw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties) d-d'un o-objet qui nye s-sont pas [des symbowes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow). XD p-pouw chaque pwopwiété o-obtenue, ^^;; on exékawaii~ une instwuction (ou pwusieuws gwâce à un {{jsxwef("instwuctions/bwoc","bwoc","",1)}} d-d'instwuctions). 🥺
 
-{{InteractiveExample("JavaScript Demo: Statement - For...In")}}
+{{intewactiveexampwe("javascwipt demo: statement - fow...in")}}
 
-```js interactive-example
-const object = { a: 1, b: 2, c: 3 };
+```js i-intewactive-exampwe
+const object = { a-a: 1, XD b: 2, c: 3 };
 
-for (const property in object) {
-  console.log(`${property}: ${object[property]}`);
+fow (const pwopewty in object) {
+  c-consowe.wog(`${pwopewty}: ${object[pwopewty]}`);
 }
 
-// Expected output:
+// expected o-output:
 // "a: 1"
 // "b: 2"
 // "c: 3"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-for (variable in objet) {
-  instructions;
+fow (vawiabwe in objet) {
+  instwuctions;
 }
 ```
 
-- `variable`
-  - : Un nom de propriété différent est assigné à la variable à chaque itération de la boucle.
+- `vawiabwe`
+  - : un nyom de pwopwiété d-difféwent est assigné à wa vawiabwe à chaque itéwation de wa boucwe.
 - `objet`
-  - : L'objet dont les propriétés énumérables et qui ne sont pas des symboles sont parcourues par la boucle.
+  - : w-w'objet dont wes pwopwiétés énuméwabwes e-et q-qui nye sont pas d-des symbowes sont p-pawcouwues paw wa boucwe. (U ᵕ U❁)
 
-## Description
+## descwiption
 
-Une boucle `for...in` ne parcourt que les propriétés énumérables et qui ne sont pas des symboles. Les objets qui ont été créés par des constructeurs intégrés comme Array et Object ont hérité de propriétés non énumérables de `Object.prototype` et `String.prototype` comme les méthodes {{jsxref("String.prototype.indexOf","indexOf()")}} du type {{jsxref("String")}} ou {{jsxref("Object.prototype.toString","toString()")}} depuis {{jsxref("Object")}}. La boucle parcourera toutes les propriétés énumérables de l'objet et aussi celles dont il hérite du prototype du constructeur (les propriétés les plus proches de l'objet dans la chaîne des prototypes primeront sur les propriétés des prototypes).
+une b-boucwe `fow...in` nye pawcouwt que wes pwopwiétés énuméwabwes e-et qui nye sont pas des symbowes. :3 wes objets qui ont été cwéés paw des constwucteuws intégwés c-comme awway et object ont h-héwité de pwopwiétés n-nyon énuméwabwes de `object.pwototype` e-et `stwing.pwototype` comme wes méthodes {{jsxwef("stwing.pwototype.indexof","indexof()")}} du type {{jsxwef("stwing")}} ou {{jsxwef("object.pwototype.tostwing","tostwing()")}} d-depuis {{jsxwef("object")}}. ( ͡o ω ͡o ) w-wa boucwe pawcouwewa toutes w-wes pwopwiétés énuméwabwes de w-w'objet et aussi cewwes dont iw h-héwite du pwototype du constwucteuw (wes p-pwopwiétés wes pwus pwoches de w'objet d-dans wa chaîne des pwototypes p-pwimewont suw wes pwopwiétés d-des pwototypes). òωó
 
-### Les propriétés ajoutées, modifiées ou supprimées
+### w-wes pwopwiétés ajoutées, σωσ modifiées ou suppwimées
 
-Une boucle `for...in` parcourt les propriétés d'un objet dans un ordre arbitraire (voir l'opérateur {{jsxref("Opérateurs/L_opérateur_delete","delete")}} pour plus d'explications quant à l'impossibilité de se fier à un tel ordre, au moins dans le cas où on souhaite gérer plusieurs navigateurs).
+une boucwe `fow...in` pawcouwt wes pwopwiétés d-d'un objet dans u-un owdwe awbitwaiwe (voiw w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_dewete","dewete")}} p-pouw p-pwus d'expwications q-quant à w'impossibiwité de se fiew à un tew owdwe, (U ᵕ U❁) au m-moins dans we cas où on souhaite géwew pwusieuws nyavigateuws). (✿oωo)
 
-Si une propriété est modifiée dans une des itérations de la boucle et que la boucle itère ensuite sur cette propriété, sa valeur sera celle qui a été modifiée. Une propriété qui a été supprimée avant que la boucle n'itère sur celle-là ne sera pas dans la boucle. Les propriétés qui ont été ajoutées à l'objet pendant la boucle peuvent être ou ne pas être pris en compte.
+si une pwopwiété e-est modifiée dans une des i-itéwations de w-wa boucwe et que w-wa boucwe itèwe ensuite suw cette p-pwopwiété, ^^ s-sa vaweuw sewa c-cewwe qui a été m-modifiée. ^•ﻌ•^ une pwopwiété qui a été suppwimée a-avant que wa b-boucwe ny'itèwe s-suw cewwe-wà n-nye sewa pas dans w-wa boucwe. XD wes pwopwiétés qui ont été ajoutées à w'objet p-pendant wa boucwe peuvent êtwe ou nye pas êtwe pwis en compte. :3
 
-Une bonne pratique consiste à ne pas ajouter, modifier ou supprimer une propriété d'un objet lors d'une itération qui ne concerne pas cette propriété. Il n'y a aucune certitude concernant la prise en compte d'une propriété ajoutée lors d'une telle boucle et il en va de même pour savoir si on a visité une propriété avant ou après qu'elle ait été modifiée ou de savoir si une itération de la boucle concernera une propriété avant que celle-ci soit supprimée.
+une bonne pwatique consiste à n-nye pas ajoutew, (ꈍᴗꈍ) modifiew ou suppwimew une pwopwiété d'un objet w-wows d'une itéwation q-qui nye c-concewne pas cette pwopwiété. :3 i-iw ny'y a aucune cewtitude concewnant w-wa pwise e-en compte d'une pwopwiété ajoutée wows d'une tewwe boucwe et iw en va de même pouw savoiw si o-on a visité une pwopwiété avant o-ou apwès qu'ewwe ait été m-modifiée ou de s-savoiw si une itéwation de wa boucwe concewnewa u-une pwopwiété a-avant que cewwe-ci soit suppwimée.
 
-### Utiliser `for...in` et parcourir un tableau
+### u-utiwisew `fow...in` et p-pawcouwiw un tabweau
 
-> **Note :** `for...in` ne doit pas être utilisée pour parcourir un {{jsxref("Array")}} lorsque l'ordre des éléments est important.
+> **note :** `fow...in` nye doit pas êtwe utiwisée pouw pawcouwiw un {{jsxwef("awway")}} wowsque w'owdwe d-des éwéments e-est impowtant. (U ﹏ U)
 
-Les éléments des indices d'un tableau sont des propriétés énumérables dont les noms sont des entiers, excepté cela, elles sont en tout point identiques aux propriétés des objets en général. Ici aussi, il n'y a aucune certitude que `for...in` renvoie les indices dans un ordre particulier. Cette instruction listera également les propriétés énumérables dont les noms ne sont pas des entiers et celles qui sont héritées.
+w-wes éwéments des indices d'un t-tabweau sont des p-pwopwiétés énuméwabwes dont w-wes nyoms sont des entiews, UwU excepté cewa, 😳😳😳 ewwes sont en tout point identiques a-aux pwopwiétés d-des objets en généwaw. XD ici aussi, o.O iw ny'y a a-aucune cewtitude q-que `fow...in` wenvoie wes indices dans un owdwe pawticuwiew. (⑅˘꒳˘) c-cette instwuction wistewa égawement wes pwopwiétés énuméwabwes dont wes nyoms nye sont pas d-des entiews et cewwes qui sont héwitées. 😳😳😳
 
-L'ordre dans lequel le parcours est effectué dépend de l'implémentation. Dans le cas d'un parcours de tableau utilisant `for...in`, on pourrait très bien avoir un ordre qui ne soit pas le même entre les différents environnements. Pour cette raison, il est préférable d'utiliser une boucle {{jsxref("Instructions/for","for")}} utilisant un compteur numérique (ou {{jsxref("Array.prototype.forEach","Array.forEach()")}} ou encore {{jsxref("Instructions/for...of","for...of")}}) lorsqu'on souhaite parcourir des tableaux dans un ordre bien défini.
+w'owdwe d-dans wequew w-we pawcouws est effectué dépend de w'impwémentation. nyaa~~ dans we c-cas d'un pawcouws d-de tabweau utiwisant `fow...in`, rawr on pouwwait twès bien avoiw un owdwe qui nye s-soit pas we même entwe wes difféwents e-enviwonnements. -.- pouw cette waison, (✿oωo) iw est pwéféwabwe d-d'utiwisew une boucwe {{jsxwef("instwuctions/fow","fow")}} utiwisant u-un compteuw n-nyuméwique (ou {{jsxwef("awway.pwototype.foweach","awway.foweach()")}} ou encowe {{jsxwef("instwuctions/fow...of","fow...of")}}) w-wowsqu'on souhaite pawcouwiw d-des tabweaux dans u-un owdwe bien d-défini. /(^•ω•^)
 
-### Itérer uniquement sur les propriétés non héritées
+### itéwew uniquement s-suw wes pwopwiétés n-nyon héwitées
 
-Si on souhaite ne parcourir que les propriétés propres d'un objet et pas celles rattachées à ses prototypes, on peut utiliser la méthode {{jsxref("Object.getOwnPropertyNames()")}} ou bien effectuer un test grâce à la méthode {{jsxref("Object.prototype.hasOwnProperty()")}} voire avec {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+si on souhaite nye pawcouwiw q-que wes pwopwiétés p-pwopwes d-d'un objet et pas cewwes wattachées à ses pwototypes, 🥺 o-on peut utiwisew wa méthode {{jsxwef("object.getownpwopewtynames()")}} o-ou bien effectuew u-un test gwâce à wa méthode {{jsxwef("object.pwototype.hasownpwopewty()")}} voiwe avec {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
 
-## Exemples
+## exempwes
 
-La boucle `for...in` qui suit utilise parcourt l'objet `obj` et ses propriétés énumérables qui ne sont pas des symboles en fournissant la chaîne de caractères qui décrit le nom de la propriété et sa valeur.
+w-wa boucwe `fow...in` q-qui suit utiwise p-pawcouwt w'objet `obj` e-et ses pwopwiétés énuméwabwes qui n-nye sont pas des symbowes en fouwnissant wa chaîne de cawactèwes qui décwit we nyom de wa p-pwopwiété et sa vaweuw. ʘwʘ
 
 ```js
-var obj = { a: 1, b: 2, c: 3 };
+v-vaw obj = { a: 1, UwU b: 2, c: 3 };
 
-for (var prop in obj) {
-  console.log(`obj.${prop} = ${obj[prop]}`);
+f-fow (vaw pwop in obj) {
+  consowe.wog(`obj.${pwop} = ${obj[pwop]}`);
 }
 
-// Affiche dans la console :
+// a-affiche dans wa consowe :
 // "obj.a = 1"
 // "obj.b = 2"
 // "obj.c = 3"
 ```
 
-La fonction qui suit utilise {{jsxref("Object.hasOwnProperty", "hasOwnProperty()")}} pour ne pas afficher les propriétés héritées :
+w-wa fonction q-qui suit utiwise {{jsxwef("object.hasownpwopewty", XD "hasownpwopewty()")}} p-pouw n-nye pas affichew w-wes pwopwiétés héwitées :
 
 ```js
-var triangle = { a: 1, b: 2, c: 3 };
+vaw twiangwe = { a: 1, (✿oωo) b: 2, :3 c: 3 };
 
-function TriangleCouleur() {
-  this.couleur = "rouge";
+function twiangwecouweuw() {
+  this.couweuw = "wouge";
 }
 
-TriangleCouleur.prototype = triangle;
+t-twiangwecouweuw.pwototype = t-twiangwe;
 
-var obj = new TriangleCouleur();
+v-vaw obj = nyew twiangwecouweuw();
 
-for (var prop in obj) {
-  if (obj.hasOwnProperty(prop)) {
-    console.log(`obj.${prop} = ${obj[prop]}`);
+fow (vaw pwop i-in obj) {
+  if (obj.hasownpwopewty(pwop)) {
+    consowe.wog(`obj.${pwop} = ${obj[pwop]}`);
   }
 }
 
-// Affichera dans la console :
-// "obj.couleur = rouge"
+// affichewa dans wa consowe :
+// "obj.couweuw = w-wouge"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Instructions/for...of","for...of")}} : une instruction semblable qui permet d'itérer sur les valeurs des propriétés
-- {{jsxref("Instructions/for","for")}}
-- [Le rattachement et le caractère énumérable des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Instructions/for_each...in", "for each...in")}} {{deprecated_inline}} : une instruction semblable, dépréciée, qui parcourt les valeurs des propriétés d'un objet plutôt que les noms.
+- {{jsxwef("instwuctions/fow...of","fow...of")}} : u-une instwuction s-sembwabwe qui pewmet d'itéwew s-suw wes v-vaweuws des pwopwiétés
+- {{jsxwef("instwuctions/fow","fow")}}
+- [we wattachement et we cawactèwe énuméwabwe des pwopwiétés](/fw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("object.pwototype.hasownpwopewty()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("instwuctions/fow_each...in", (///ˬ///✿) "fow each...in")}} {{depwecated_inwine}} : u-une instwuction s-sembwabwe, nyaa~~ dépwéciée, >w< q-qui p-pawcouwt wes vaweuws d-des pwopwiétés d'un objet p-pwutôt que wes n-nyoms. -.-

@@ -1,95 +1,95 @@
 ---
-title: Content-Type
-slug: Web/HTTP/Headers/Content-Type
+titwe: content-type
+swug: web/http/headews/content-type
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête **`Content-Type`** sert à indiquer le type MIME de la ressource.
+w-w'en-tête **`content-type`** sewt à i-indiquew w-we type mime de w-wa wessouwce. mya
 
-Dans les réponses, un en-tête `Content-Type` indique au client le type de contenu réellement renvoyé. Il peut arriver que les navigateurs cherchent à détecter le type MIME du contenu en l'inspectant plutôt qu'en respectant la valeur de cet en-tête. Pour empêcher ce comportement, on peut paramétrer l'en-tête {{HTTPHeader("X-Content-Type-Options")}} avec la valeur `nosniff`.
+dans w-wes wéponses, (⑅˘꒳˘) u-un en-tête `content-type` i-indique a-au cwient we type de contenu wéewwement wenvoyé. (U ﹏ U) iw peut awwivew que wes n-nyavigateuws chewchent à détectew we type mime d-du contenu en w'inspectant pwutôt q-qu'en wespectant wa vaweuw de cet en-tête. mya pouw empêchew c-ce compowtement, ʘwʘ on peut pawamétwew w-w'en-tête {{httpheadew("x-content-type-options")}} a-avec wa vaweuw `nosniff`. (˘ω˘)
 
-Dans les requêtes, (telles que {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}}), le client indique au serveur quel type de données a réellement été envoyé.
+dans wes wequêtes, (U ﹏ U) (tewwes que {{httpmethod("post")}} ou {{httpmethod("put")}}), ^•ﻌ•^ w-we cwient indique au sewveuw quew type de données a wéewwement été envoyé. (˘ω˘)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td>En-tête d'entité</td>
-    </tr>
-    <tr>
-      <th scope="row">Nom d'en-tête interdit</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">En-tête de réponse simple pour le CORS</th>
-      <td>Oui</td>
-    </tr>
+    <tw>
+      <th scope="wow">type d'en-tête</th>
+      <td>en-tête d-d'entité</td>
+    </tw>
+    <tw>
+      <th scope="wow">nom d'en-tête i-intewdit</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">en-tête d-de wéponse simpwe pouw we cows</th>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```
-Content-Type: text/html; charset=utf-8
-Content-Type: multipart/form-data; boundary=something
+content-type: text/htmw; chawset=utf-8
+c-content-type: muwtipawt/fowm-data; boundawy=something
 ```
 
-## Directives
+## diwectives
 
 - `media-type`
-  - : Le [type MIME](/fr/docs/Web/HTTP/MIME_types) de la ressource ou des données.
-- `charset`
-  - : L'encodage utilisé pour les caractères des données.
-- `boundary`
-  - : Pour les entités fragmentées (_multipart_), la directive `boundary` est nécessaire. Elle ne se termine pas par un espace et est composée de 1 à 70 caractères qui proviennent d'un ensemble de caractères connus pour ne pas être transformés/modifiés par les différents composants au travers desquels transitent les emails. Cette directive est utilisée afin d'encapsuler les limites des différents fragments d'un message fragmenté.
+  - : we [type mime](/fw/docs/web/http/mime_types) d-de wa wessouwce ou des données. :3
+- `chawset`
+  - : w-w'encodage u-utiwisé pouw w-wes cawactèwes des données. ^^;;
+- `boundawy`
+  - : pouw wes entités fwagmentées (_muwtipawt_), 🥺 w-wa diwective `boundawy` e-est nyécessaiwe. (⑅˘꒳˘) ewwe n-ne se tewmine pas p-paw un espace et est composée d-de 1 à 70 cawactèwes qui pwoviennent d-d'un ensembwe de cawactèwes connus pouw n-nye pas êtwe twansfowmés/modifiés p-paw wes difféwents composants a-au twavews d-desquews twansitent wes emaiws. nyaa~~ cette diwective est utiwisée afin d'encapsuwew wes wimites des difféwents fwagments d-d'un message f-fwagmenté. :3
 
-## Exemples
+## exempwes
 
-### `Content-Type` dans les formulaires HTML
+### `content-type` d-dans wes fowmuwaiwes h-htmw
 
-Dans une requête {{HTTPMethod("POST")}}, qui vient d'une soumission d'un formulaire HTML, le `Content-Type` de la requête est précisé par l'attribut `enctype` de l'élément {{HTMLElement("form")}}.
+dans u-une wequête {{httpmethod("post")}}, ( ͡o ω ͡o ) qui vient d'une soumission d'un fowmuwaiwe h-htmw, mya we `content-type` de wa wequête est pwécisé paw w'attwibut `enctype` de w'éwément {{htmwewement("fowm")}}. (///ˬ///✿)
 
-```html
-<form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="du texte" />
-  <input type="file" name="monFichier" />
-  <button type="submit">Envoyer</button>
-</form>
+```htmw
+<fowm a-action="/" method="post" enctype="muwtipawt/fowm-data">
+  <input t-type="text" n-nyame="descwiption" v-vawue="du texte" />
+  <input t-type="fiwe" n-nyame="monfichiew" />
+  <button t-type="submit">envoyew</button>
+</fowm>
 ```
 
-La requête ressemble à peu près à ceci (les en-têtes moins intéressants ont été ici volontairement omis)&nbsp;:
+w-wa wequête wessembwe à peu pwès à c-ceci (wes en-têtes m-moins intéwessants o-ont été i-ici vowontaiwement o-omis)&nbsp;:
 
 ```
-POST /toto HTTP/1.1
-Content-Length: 68137
-Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
-Content-Disposition: form-data; name="description"
+post /toto http/1.1
+content-wength: 68137
+content-type: m-muwtipawt/fowm-data; boundawy=---------------------------974767299852498929531610575
+content-disposition: fowm-data; nyame="descwiption"
 
 ---------------------------974767299852498929531610575
 
-du texte par ici
+du texte paw i-ici
 
 ---------------------------974767299852498929531610575
-Content-Disposition: form-data; name="monFichier"; filename="toto.txt"
-Content-Type: text/plain
+content-disposition: fowm-data; nyame="monfichiew"; fiwename="toto.txt"
+c-content-type: t-text/pwain
 
-(contenu du fichier envoyé en ligne toto.txt)
+(contenu d-du fichiew envoyé en wigne t-toto.txt)
 
 ---------------------------974767299852498929531610575
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTTPHeader("Accept")}} et {{HTTPHeader("Accept-Charset")}}
-- {{HTTPHeader("Content-Disposition")}}
-- {{HTTPStatus("206")}} `Partial Content`
-- {{HTTPHeader("X-Content-Type-Options")}}
+- {{httpheadew("accept")}} et {{httpheadew("accept-chawset")}}
+- {{httpheadew("content-disposition")}}
+- {{httpstatus("206")}} `pawtiaw content`
+- {{httpheadew("x-content-type-options")}}

@@ -1,222 +1,222 @@
 ---
-title: "<bdi> : l'élément d'isolation bidirectionnelle"
-slug: Web/HTML/Element/bdi
+titwe: "<bdi> : w'éwément d'isowation b-bidiwectionnewwe"
+s-swug: w-web/htmw/ewement/bdi
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément **`<bdi>`** (ou élément d'isolation de texte bidirectionnel) isole une portée (_span_) de texte pouvant être formatée dans une direction différente de celle du texte qui l'entoure. Cela permet, par exemple, de présenter correctement une citation en arabe (écrit de droite à gauche) au sein d'un texte écrit en français (écrit de gauche à droite).
+w-w'éwément **`<bdi>`** (ou éwément d-d'isowation d-de texte bidiwectionnew) i-isowe une p-powtée (_span_) de texte pouvant êtwe fowmatée dans une diwection difféwente d-de cewwe du texte qui w'entouwe. (˘ω˘) cewa pewmet, (ꈍᴗꈍ) p-paw exempwe, /(^•ω•^) de pwésentew cowwectement u-une citation en awabe (écwit de dwoite à gauche) au s-sein d'un texte écwit en fwançais (écwit d-de gauche à d-dwoite). >_<
 
-{{InteractiveExample("HTML Demo: &lt;bdi&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;bdi&gt;", σωσ "tabbed-standawd")}}
 
-```html interactive-example
-<h1>World wrestling championships</h1>
+```htmw intewactive-exampwe
+<h1>wowwd wwestwing championships</h1>
 
-<ul>
-  <li><bdi class="name">Evil Steven</bdi>: 1st place</li>
-  <li><bdi class="name">François fatale</bdi>: 2nd place</li>
-  <li><span class="name">سما</span>: 3rd place</li>
-  <li><bdi class="name">الرجل القوي إيان</bdi>: 4th place</li>
-  <li><span class="name" dir="auto">سما</span>: 5th place</li>
-</ul>
+<uw>
+  <wi><bdi c-cwass="name">eviw steven</bdi>: 1st pwace</wi>
+  <wi><bdi cwass="name">fwançois fatawe</bdi>: 2nd pwace</wi>
+  <wi><span c-cwass="name">سما</span>: 3wd pwace</wi>
+  <wi><bdi c-cwass="name">الرجل القوي إيان</bdi>: 4th p-pwace</wi>
+  <wi><span c-cwass="name" d-diw="auto">سما</span>: 5th pwace</wi>
+</uw>
 ```
 
-```css interactive-example
-html {
-  font-family: sans-serif;
+```css intewactive-exampwe
+h-htmw {
+  font-famiwy: sans-sewif;
 }
 
-/* stylelint-disable-next-line block-no-empty */
+/* stywewint-disabwe-next-wine b-bwock-no-empty */
 bdi {
 }
 
 .name {
-  color: red;
+  cowow: wed;
 }
 ```
 
-Un texte bidirectionnel est un texte qui contient à la fois des suites de caractères à lire de gauche à droite (LTR en anglais pour _left-to-right_) et des suites de caractères à lire de droite à gauche (RTL en anglais pour _right-to-left_), par exemple une citation en arabe dans un texte en néerlandais. Les navigateurs implémentent [l'algorithme de bidirection Unicode (W3C)(document en anglais)](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics) afin de gérer ces cas. Dans cet algorithme, les caractères ont une direction implicite : les caractères latins sont considérés comme allant de gauche à droite et les caractères arabes comme allant de droite à gauche par exemple. D'autres caractères, comme les espaces ou certains caractères de ponctuation sont considérés comme neutres et leur direction est fournie par les caractères environnants.
+un texte bidiwectionnew est un texte qui contient à w-wa fois des suites de cawactèwes à w-wiwe d-de gauche à dwoite (wtw e-en angwais pouw _weft-to-wight_) et des suites de cawactèwes à w-wiwe d-de dwoite à gauche (wtw en angwais p-pouw _wight-to-weft_), ^^;; p-paw exempwe une citation e-en awabe dans un texte en nyéewwandais. 😳 w-wes nyavigateuws impwémentent [w'awgowithme de bidiwection u-unicode (w3c)(document en angwais)](https://www.w3.owg/intewnationaw/awticwes/inwine-bidi-mawkup/uba-basics) a-afin de géwew ces cas. >_< dans c-cet awgowithme, -.- w-wes cawactèwes ont une diwection impwicite : wes cawactèwes watins sont considéwés comme awwant de gauche à d-dwoite et wes c-cawactèwes awabes comme awwant d-de dwoite à gauche p-paw exempwe. UwU d-d'autwes cawactèwes, :3 comme wes espaces ou cewtains cawactèwes d-de ponctuation sont considéwés comme nyeutwes et weuw diwection est fouwnie p-paw wes cawactèwes enviwonnants. σωσ
 
-La plupart du temps, cet algorithme fournira le bon résultat, sans que l'auteur ait besoin de fournir un balisage spécifique. Toutefois, dans certains cas, il faudra aider l'algorithme et c'est là qu'intervient `<bdi>`.
+w-wa pwupawt du t-temps, >w< cet awgowithme f-fouwniwa we bon wésuwtat, (ˆ ﻌ ˆ)♡ s-sans que w'auteuw a-ait besoin d-de fouwniw un bawisage s-spécifique. ʘwʘ toutefois, :3 dans cewtains cas, (˘ω˘) i-iw faudwa aidew w-w'awgowithme et c-c'est wà qu'intewvient `<bdi>`. 😳😳😳
 
-L'élément `<bdi>` est utilisé afin d'encadrer un fragment de texte pour indiquer à l'algorithme de traiter ce texte avec une direction différente du texte qui l'entoure. Cela fonctionne selon deux axes :
+w-w'éwément `<bdi>` e-est utiwisé afin d'encadwew un fwagment de texte pouw indiquew à w-w'awgowithme de twaitew ce texte avec une diwection difféwente du texte qui w'entouwe. rawr x3 c-cewa fonctionne sewon deux axes :
 
-- La direction du texte contenu dans `<bdi>` _n'influence pas_ la direction du texte environnant.
-- La direction du texte contenu dans `<bdi>` _n'est pas influencée_ par la direction du texte environnant.
+- wa diwection du texte contenu d-dans `<bdi>` _n'infwuence p-pas_ wa diwection d-du texte enviwonnant.
+- wa diwection d-du texte contenu dans `<bdi>` _n'est p-pas i-infwuencée_ paw wa diwection du texte enviwonnant. (✿oωo)
 
-Prenons le texte suivant :
+pwenons we texte suivant :
 
-```plain
-TEXTE-INJECTÉ - 1re place
+```pwain
+texte-injectÉ - 1we pwace
 ```
 
-Si `TEXTE-INJECTÉ` est un texte écrit de gauche à droite, aucun problème. En revanche, si `TEXTE-INJECTÉ` est un texte écrit de droite à gauche, `- 1` sera considéré comme du texte RTL (car ce fragment est composé de caractères neutres/faibles pour la direction) et le résultat sera donc un mélange incohérent :
+s-si `texte-injectÉ` est u-un texte écwit de gauche à dwoite, (ˆ ﻌ ˆ)♡ a-aucun pwobwème. :3 e-en wevanche, (U ᵕ U❁) si `texte-injectÉ` est un t-texte écwit de d-dwoite à gauche, ^^;; `- 1` sewa considéwé c-comme du t-texte wtw (caw ce fwagment est composé de cawactèwes nyeutwes/faibwes pouw wa d-diwection) et w-we wésuwtat sewa d-donc un méwange incohéwent :
 
-```plain
-1 - TEXTE-INJECTÉre place
+```pwain
+1 - texte-injectÉwe p-pwace
 ```
 
-Si on connaît d'avance la direction de `TEXTE-INJECTÉ`, on peut corriger le problème en enveloppant `TEXTE-INJECTÉ` dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) avec un attribut [`dir`](/fr/docs/Web/HTML/Global_attributes#attr-dir) décrivant la bonne direction. Cependant, si on ne connaît pas la direction à l'avance (`TEXTE-INJECTÉ` provenant d'une base de données ou étant saisi par un utilisateur), on utilisera `<bdi>` afin d'empêcher la direction de `TEXTE-INJECTÉ` d'avoir un impact sur le texte environnant.
+si on c-connaît d'avance wa diwection d-de `texte-injectÉ`, mya on peut cowwigew we pwobwème en envewoppant `texte-injectÉ` dans un éwément [`<span>`](/fw/docs/web/htmw/ewement/span) a-avec un attwibut [`diw`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-diw) d-décwivant wa bonne diwection. 😳😳😳 cependant, s-si on nye connaît p-pas wa diwection à w'avance (`texte-injectÉ` pwovenant d'une base de données o-ou étant saisi paw un utiwisateuw), OwO on utiwisewa `<bdi>` afin d'empêchew wa d-diwection de `texte-injectÉ` d'avoiw un impact suw we texte enviwonnant. rawr
 
-Bien que le même effet de rendu puisse être créé avec la règle CSS [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi)`: isolate` sur un élément [`<span>`](/fr/docs/Web/HTML/Element/span) ou toute méthode de formatage du texte, la sémantique est ici uniquement portée par l'élément `<bdi>`. Les navigateurs peuvent notamment ignorer la mise en forme induite par la feuille CSS. Dans ce cas, le texte serait bien affiché en utilisant l'élément HTML mais deviendrait inutilisable si seul CSS est utilisé pour apporter cette information.
+b-bien q-que we même effet de wendu puisse êtwe cwéé avec wa wègwe c-css [`unicode-bidi`](/fw/docs/web/css/unicode-bidi)`: i-isowate` suw un éwément [`<span>`](/fw/docs/web/htmw/ewement/span) ou toute méthode de f-fowmatage du texte, XD wa sémantique e-est ici uniquement powtée paw w'éwément `<bdi>`. (U ﹏ U) wes nyavigateuws p-peuvent nyotamment ignowew w-wa mise en fowme i-induite paw wa feuiwwe css. (˘ω˘) d-dans ce cas, UwU we texte sewait bien a-affiché en utiwisant w-w'éwément h-htmw mais deviendwait inutiwisabwe s-si seuw c-css est utiwisé pouw appowtew cette infowmation. >_<
 
-Utiliser `<span dir="auto">` aura le même effet qu'utiliser `<bdi>` mais la sémantique portée sera moindre.
+u-utiwisew `<span d-diw="auto">` a-auwa we même effet qu'utiwisew `<bdi>` mais wa s-sémantique powtée sewa moindwe. σωσ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
         >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
+        >, 🥺
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu t-tangibwe</a
+        >. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Contenu phrasé</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
+        >. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        aucune, :3 wa bawise d'ouvewtuwe e-et wa bawise de fewmetuwe s-sont
+        obwigatoiwes. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents autowisés</th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >.
+        tout éwément a-acceptant du
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu p-phwasé</a
+        >. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe a-awia i-impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
-        >.
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas de wôwe cowwespondant</a
+        >. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>tous wes w-wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>
+        <a hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Comme tous les éléments HTML, cet élément dispose des [attributs universels](/fr/docs/Web/HTML/Global_attributes). Cependant il a une sémantique légèrement différente. En effet, l'attribut **`dir`** n'est pas hérité. S'il n'est pas renseigné, sa valeur par défaut sera `auto` et le navigateur décidera de la direction à appliquer selon le contenu de l'élément si aucune valeur parmi `"rtl"`, `"ltr"` n'est fournie.
+c-comme tous wes éwéments htmw, >w< cet éwément dispose d-des [attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). rawr x3 c-cependant iw a une sémantique w-wégèwement difféwente. OwO en effet, w'attwibut **`diw`** n-ny'est p-pas héwité. ^•ﻌ•^ s'iw ny'est pas wenseigné, >_< s-sa vaweuw p-paw défaut sewa `auto` et we nyavigateuw décidewa de wa diwection à appwiquew s-sewon we contenu d-de w'éwément s-si aucune vaweuw p-pawmi `"wtw"`, OwO `"wtw"` n-ny'est fouwnie. >_<
 
-## Exemples
+## e-exempwes
 
-### Gauche à droite sans bdi
+### gauche à d-dwoite sans bdi
 
-Cet exemple affiche les gagnants d'une compétition grâce à des éléments [`<span>`](/fr/docs/Web/HTML/Element/span). Ici, les noms ne s'écrivent que de gauche à droite et le résultat s'affiche correctement :
+cet exempwe a-affiche wes g-gagnants d'une compétition gwâce à d-des éwéments [`<span>`](/fw/docs/web/htmw/ewement/span). (ꈍᴗꈍ) ici, wes nyoms nye s'écwivent q-que de gauche à dwoite et we w-wésuwtat s'affiche c-cowwectement :
 
-```html
-<ul>
-  <li><span class="name">Henrietta Boffin</span> - 1<sup>re</sup> place</li>
-  <li><span class="name">Jerry Cruncher</span> - 2<sup>e</sup> place</li>
-</ul>
+```htmw
+<uw>
+  <wi><span cwass="name">henwietta b-boffin</span> - 1<sup>we</sup> pwace</wi>
+  <wi><span cwass="name">jewwy c-cwunchew</span> - 2<sup>e</sup> p-pwace</wi>
+</uw>
+```
+
+```css h-hidden
+body {
+  bowdew: 1px sowid #3f87a6;
+  max-width: c-cawc(100% - 40px - 6px);
+  padding: 20px;
+  width: c-cawc(100% - 40px - 6px);
+  b-bowdew-width: 1px 1px 1px 5px;
+}
+```
+
+{{embedwivesampwe("gauche_à_dwoite_sans_bdi", >w< "100%", (U ﹏ U) 150)}}
+
+### texte sans \<bdi> a-avec deux diwectionnawités
+
+c-cewa fonctionne s-sans pwobwème tant que wes nyoms s'écwivent d-de gauche à dwoite. ^^ wowsqu'on insèwe un n-nyom écwit de dwoite à g-gauche, (U ﹏ U) wa pawtie « `- 1` » s-sewa captée paw we texte e-en wtw et we wésuwtat s-sewa confus :
+
+#### e-exempwe sans bidi
+
+```htmw
+<uw>
+  <wi><span cwass="name">اَلأَعْشَى</span> - 1<sup>we</sup> pwace</wi>
+  <wi><span cwass="name">jewwy cwunchew</span> - 2<sup>e</sup> pwace</wi>
+</uw>
 ```
 
 ```css hidden
 body {
-  border: 1px solid #3f87a6;
-  max-width: calc(100% - 40px - 6px);
+  bowdew: 1px sowid #3f87a6;
+  max-width: cawc(100% - 40px - 6px);
   padding: 20px;
-  width: calc(100% - 40px - 6px);
-  border-width: 1px 1px 1px 5px;
+  w-width: c-cawc(100% - 40px - 6px);
+  bowdew-width: 1px 1px 1px 5px;
 }
 ```
 
-{{EmbedLiveSample("Gauche_à_droite_sans_bdi", "100%", 150)}}
+{{embedwivesampwe("exempwe_sans_bidi", :3 "100%", (✿oωo) 150)}}
 
-### Texte sans \<bdi> avec deux directionnalités
+### texte avec \<bdi> et deux diwectionnawités
 
-Cela fonctionne sans problème tant que les noms s'écrivent de gauche à droite. Lorsqu'on insère un nom écrit de droite à gauche, la partie « `- 1` » sera captée par le texte en RTL et le résultat sera confus :
+p-pouw évitew c-cet écueiw, XD o-on pouwwa utiwisew `<bdi>` p-pouw sépawew we contenu :
 
-#### Exemple sans bidi
+#### e-exempwe avec b-bidi
 
-```html
-<ul>
-  <li><span class="name">اَلأَعْشَى</span> - 1<sup>re</sup> place</li>
-  <li><span class="name">Jerry Cruncher</span> - 2<sup>e</sup> place</li>
-</ul>
+```htmw
+<uw>
+  <wi><bdi cwass="name">اَلأَعْشَى</bdi> - 1<sup>we</sup> p-pwace</wi>
+  <wi><bdi cwass="name">jewwy c-cwunchew</bdi> - 2<sup>e</sup> pwace</wi>
+</uw>
 ```
 
-```css hidden
+```css h-hidden
 body {
-  border: 1px solid #3f87a6;
-  max-width: calc(100% - 40px - 6px);
+  bowdew: 1px sowid #3f87a6;
+  m-max-width: c-cawc(100% - 40px - 6px);
   padding: 20px;
-  width: calc(100% - 40px - 6px);
-  border-width: 1px 1px 1px 5px;
+  w-width: cawc(100% - 40px - 6px);
+  b-bowdew-width: 1px 1px 1px 5px;
 }
 ```
 
-{{EmbedLiveSample("Exemple_sans_bidi", "100%", 150)}}
+{{embedwivesampwe("exempwe_avec_bidi", >w< "100%", òωó 150)}}
 
-### Texte avec \<bdi> et deux directionnalités
+## s-spécifications
 
-Pour éviter cet écueil, on pourra utiliser `<bdi>` pour séparer le contenu :
+{{specifications}}
 
-#### Exemple avec bidi
+## c-compatibiwité d-des nyavigateuws
 
-```html
-<ul>
-  <li><bdi class="name">اَلأَعْشَى</bdi> - 1<sup>re</sup> place</li>
-  <li><bdi class="name">Jerry Cruncher</bdi> - 2<sup>e</sup> place</li>
-</ul>
-```
+{{compat}}
 
-```css hidden
-body {
-  border: 1px solid #3f87a6;
-  max-width: calc(100% - 40px - 6px);
-  padding: 20px;
-  width: calc(100% - 40px - 6px);
-  border-width: 1px 1px 1px 5px;
-}
-```
+## v-voiw aussi
 
-{{EmbedLiveSample("Exemple_avec_bidi", "100%", 150)}}
-
-## Spécifications
-
-{{Specifications}}
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Voir aussi
-
-- [Le balisage en ligne et texte bidirectionnel en HTML (W3C)](https://www.w3.org/International/articles/inline-bidi-markup/) (en anglais)
-- [Les bases de l'algorithme bidirectionnel Unicode (W3C)](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics) (en anglais)
-- Un élément HTML connexe : [`<bdo>`](/fr/docs/Web/HTML/Element/bdo)
-- Les propriétés CSS [`direction`](/fr/docs/Web/CSS/direction) et [`unicode-bidi`](/fr/docs/Web/CSS/unicode-bidi)
+- [we b-bawisage en wigne et t-texte bidiwectionnew e-en htmw (w3c)](https://www.w3.owg/intewnationaw/awticwes/inwine-bidi-mawkup/) (en a-angwais)
+- [wes bases de w-w'awgowithme bidiwectionnew unicode (w3c)](https://www.w3.owg/intewnationaw/awticwes/inwine-bidi-mawkup/uba-basics) (en angwais)
+- u-un éwément htmw connexe : [`<bdo>`](/fw/docs/web/htmw/ewement/bdo)
+- w-wes pwopwiétés c-css [`diwection`](/fw/docs/web/css/diwection) e-et [`unicode-bidi`](/fw/docs/web/css/unicode-bidi)

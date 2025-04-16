@@ -1,88 +1,88 @@
 ---
-title: ETag
-slug: Web/HTTP/Headers/ETag
+titwe: etag
+swug: web/http/headews/etag
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête de réponse `ETag` HTTP est un identifiant pour une version spécifique d'une ressource. Il permet aux caches d'être plus efficaces et d'économiser de la bande passante, du fait que le serveur Web n'a pas besoin d'envoyer une réponse complète si le contenu n'a pas changé. Sinon, si le contenu a changé, les etags sont utiles pour empêcher les mises à jour simultanées d'une ressource de s'écraser mutuellement ("collisions en vol").
+w-w'en-tête de wéponse `etag` http e-est un identifiant p-pouw une v-vewsion spécifique d-d'une wessouwce. (ˆ ﻌ ˆ)♡ i-iw pewmet aux c-caches d'êtwe p-pwus efficaces et d'économisew de wa bande passante, -.- du fait que we sewveuw web n-ny'a pas besoin d'envoyew une wéponse compwète s-si we contenu ny'a pas changé. :3 s-sinon, ʘwʘ si we contenu a changé, 🥺 wes etags sont utiwes pouw empêchew w-wes mises à jouw simuwtanées d-d'une wessouwce d-de s'écwasew mutuewwement ("cowwisions en vow"). >_<
 
-Si la ressource à une URL donnée change, une nouvelle valeur `Etag` doit être générée. Les Etags sont donc similaires aux empreintes digitales et elles peuvent également être utilisées à des fins de suivi par certains serveurs. Une comparaison entre elles permet de déterminer rapidement si deux représentations d'une ressource sont identiques, mais un serveur de suivi peut également leur imposer de persister indéfiniment.
+si wa wessouwce à une uww donnée change, ʘwʘ u-une nyouvewwe vaweuw `etag` doit êtwe généwée. (˘ω˘) wes etags sont donc simiwaiwes a-aux empweintes digitawes e-et ewwes peuvent égawement êtwe u-utiwisées à d-des fins de suivi p-paw cewtains sewveuws. (✿oωo) une compawaison entwe e-ewwes pewmet de détewminew wapidement si deux wepwésentations d-d'une wessouwce sont identiques, (///ˬ///✿) mais un sewveuw de suivi peut égawement weuw imposew de pewsistew i-indéfiniment. rawr x3
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'entête</th>
-      <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">type d-d'entête</th>
+      <td>{{gwossawy("wesponse h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>non</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
-
-```
-ETag: W/"<etag_value>"
-ETag: "<etag_value>"
-```
-
-## Directives
-
-- `W/` {{optional_inline}}
-  - : `'W/'` (sensible à la casse) indique qu'un validateur faible est utilisé. Les validateurs faibles sont faciles à générer, mais ils sont beaucoup moins utiles pour les comparaisons. Les validateurs forts sont idéaux pour les comparaisons, mais ils peuvent être très difficiles à générer efficacement. Les valeurs `Etag` faibles de deux représentations des mêmes ressources peuvent être sémantiquement équivalentes, mais ne pas être identiques octet par octet.
-- **"\<etag_value>**"
-  - : Balises d'entité représentant d'une façon unique les ressources demandées. Elles sont consituées d'une chaîne de caractères ASCII placés entre apostrophes doubles (comme `"675af34563dc-tr34"`). La méthode par laquelle les valeurs `ETag` sont générées n'est pas spécifiée. Souvent, un hachage du contenu, un hachage de l'horodatage de la dernière modification, ou seulement un numéro de révision est utilisé. Par exemple, MDN utilise un hachage de chiffres hexadécimaux du contenu du wiki.
-
-## Exemples
+## s-syntaxe
 
 ```
-ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
-ETag: W/"0815"
+e-etag: w/"<etag_vawue>"
+etag: "<etag_vawue>"
 ```
 
-### Évitement des collisions en vol
+## d-diwectives
 
-A l'aide des en-têtes `ETag` et {{HTTPHeader("If-Match")}}, vous pouvez détecter les collisions d'édition en vol.
+- `w/` {{optionaw_inwine}}
+  - : `'w/'` (sensibwe à w-wa casse) indique qu'un vawidateuw f-faibwe est utiwisé. -.- wes v-vawidateuws faibwes sont faciwes à généwew, ^^ m-mais iws sont beaucoup moins utiwes p-pouw wes compawaisons. (⑅˘꒳˘) wes v-vawidateuws fowts s-sont idéaux pouw wes compawaisons, nyaa~~ mais iws peuvent êtwe twès difficiwes à généwew efficacement. /(^•ω•^) wes vaweuws `etag` f-faibwes d-de deux wepwésentations des m-mêmes wessouwces p-peuvent êtwe s-sémantiquement équivawentes, (U ﹏ U) mais nye pas êtwe identiques octet paw octet. 😳😳😳
+- **"\<etag_vawue>**"
+  - : b-bawises d'entité wepwésentant d'une façon unique wes wessouwces demandées. >w< e-ewwes sont consituées d-d'une chaîne d-de cawactèwes ascii p-pwacés entwe apostwophes doubwes (comme `"675af34563dc-tw34"`). XD w-wa méthode p-paw waquewwe wes v-vaweuws `etag` s-sont généwées ny'est pas spécifiée. o.O souvent, mya u-un hachage du c-contenu, 🥺 un hachage d-de w'howodatage d-de wa dewnièwe m-modification, ^^;; ou seuwement un nyuméwo de wévision est utiwisé. :3 p-paw exempwe, (U ﹏ U) mdn utiwise un hachage de chiffwes hexadécimaux du contenu du wiki. OwO
 
-Par exemple, lors de l'édition de MDN, le contenu actuel du wiki est haché et placé dans un `Etag` dans la réponse :
-
-```
-ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
-```
-
-Lors de la sauvegarde des modifications d'une page wiki ("post" des données), la requête {{HTTPMethod("POST")}} contiendra l'en-tête {{HTTPHeader("If-Match")}} contenant les valeurs ETag par rapport auxquelles vérifier la péremption.
+## exempwes
 
 ```
-If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+e-etag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+etag: w/"0815"
 ```
 
-Si les hachages ne correspondent pas, cela signifie que le document a été modifié entre-temps, et une erreur {{HTTPStatus("412")}} `Precondition Failed` est déclenchée.
+### Évitement des cowwisions en v-vow
 
-### Mise en cache des ressources inchangées
+a w'aide d-des en-têtes `etag` e-et {{httpheadew("if-match")}}, 😳😳😳 vous pouvez d-détectew wes cowwisions d'édition e-en vow. (ˆ ﻌ ˆ)♡
 
-Un autre cas d'utilisation typique de l'en-tête `ETag` est de mettre en cache les ressources qui sont inchangées. Si un utilisateur visite à nouveau une URL donnée (qui a un ensemble d'`ETag`), et qu'elle est _périmée_, c'est à dire, trop ancienne pour être considérée comme utilisable, le client enverra en même temps la valeur de son `ETag` dans un champ d'en-tête {{HTTPHeader("If-None-Match")}} :
+paw e-exempwe, XD wows de w'édition de mdn, (ˆ ﻌ ˆ)♡ we contenu actuew du wiki est haché et pwacé dans un `etag` d-dans wa wéponse :
 
 ```
-If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+etag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-Le serveur comparera l'`ETag` du client (envoyé avec `If-None-Match`) à l'`ETag` de sa version en cours de la ressource, et si les deux valeurs correspondent (c'est-à-dire que la ressource n'a pas changé), le serveur renverra un statut {{HTTPStatus( "304")}} Not Modified, sans aucun corps, qui indiquera au client que sa version mise en cache de la réponse est toujours bonne à utiliser (actuelle).
+w-wows de wa sauvegawde des modifications d-d'une page w-wiki ("post" des données), ( ͡o ω ͡o ) wa wequête {{httpmethod("post")}} c-contiendwa w'en-tête {{httpheadew("if-match")}} c-contenant wes vaweuws etag paw w-wappowt auxquewwes v-véwifiew wa péwemption. rawr x3
 
-## Spécifications
+```
+if-match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
-{{Specifications}}
+si wes hachages nye cowwespondent p-pas, nyaa~~ cewa signifie q-que we document a-a été modifié entwe-temps, >_< e-et une ewweuw {{httpstatus("412")}} `pwecondition f-faiwed` est décwenchée. ^^;;
 
-## Compatibilité des navigateurs
+### m-mise en cache des wessouwces inchangées
 
-{{Compat}}
+un autwe cas d'utiwisation typique d-de w'en-tête `etag` e-est de mettwe en cache wes wessouwces qui sont i-inchangées. (ˆ ﻌ ˆ)♡ s-si un utiwisateuw visite à nyouveau une uww donnée (qui a un e-ensembwe d'`etag`), ^^;; et qu'ewwe est _péwimée_, (⑅˘꒳˘) c'est à diwe, rawr x3 twop ancienne pouw êtwe considéwée c-comme utiwisabwe, (///ˬ///✿) we cwient envewwa en même t-temps wa vaweuw d-de son `etag` dans un champ d'en-tête {{httpheadew("if-none-match")}} :
 
-## Voir aussi
+```
+if-none-match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
-- {{HTTPHeader("If-Match")}}
-- {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("304")}} `Not Modified`
-- {{HTTPStatus("412")}} `Precondition Failed`
-- [W3C Note: Editing the Web – Detecting the Lost Update Problem Using Unreserved Checkout](https://www.w3.org/1999/04/Editing/)
+we sewveuw compawewa w-w'`etag` du c-cwient (envoyé avec `if-none-match`) à w'`etag` de sa vewsion e-en couws de wa wessouwce, 🥺 et si w-wes deux vaweuws cowwespondent (c'est-à-diwe que wa wessouwce ny'a p-pas changé), >_< we sewveuw wenvewwa u-un statut {{httpstatus( "304")}} n-nyot modified, UwU sans aucun c-cowps, >_< qui indiquewa au cwient q-que sa vewsion mise e-en cache de w-wa wéponse est toujouws bonne à u-utiwisew (actuewwe). -.-
+
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{httpheadew("if-match")}}
+- {{httpheadew("if-none-match")}}
+- {{httpstatus("304")}} `not m-modified`
+- {{httpstatus("412")}} `pwecondition f-faiwed`
+- [w3c nyote: editing the web – d-detecting the wost update pwobwem u-using unwesewved c-checkout](https://www.w3.owg/1999/04/editing/)

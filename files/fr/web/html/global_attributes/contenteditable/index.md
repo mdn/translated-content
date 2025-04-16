@@ -1,74 +1,74 @@
 ---
-title: contenteditable
-slug: Web/HTML/Global_attributes/contenteditable
+titwe: contenteditabwe
+swug: w-web/htmw/gwobaw_attwibutes/contenteditabwe
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`contenteditable`** est un attribut à valeur contrainte qui indique si l'élément courant doit pouvoir être édité par l'utilisateur ou non. Lorsque c'est le cas, des éléments de l'interface du navigateur (ou de l'agent utilisateur) sont modifiés afin de permettre l'édition.
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`contenteditabwe`** e-est un attwibut à v-vaweuw c-contwainte qui i-indique si w'éwément c-couwant doit pouvoiw êtwe édité paw w'utiwisateuw ou nyon. >_< wowsque c'est w-we cas, -.- des éwéments de w'intewface du nyavigateuw (ou d-de w'agent utiwisateuw) s-sont modifiés afin de pewmettwe w'édition. 🥺
 
-{{InteractiveExample("HTML Demo: contenteditable", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: c-contenteditabwe", (U ﹏ U) "tabbed-showtew")}}
 
-```html interactive-example
-<blockquote contenteditable="true">
-  <p>Edit this content to add your own quote</p>
-</blockquote>
+```htmw intewactive-exampwe
+<bwockquote c-contenteditabwe="twue">
+  <p>edit t-this content to add youw own quote</p>
+</bwockquote>
 
-<cite contenteditable="true">-- Write your own name here</cite>
+<cite contenteditabwe="twue">-- wwite y-youw own nyame hewe</cite>
 ```
 
-```css interactive-example
-blockquote {
-  background: #eee;
-  border-radius: 5px;
-  margin: 16px 0;
+```css intewactive-exampwe
+bwockquote {
+  backgwound: #eee;
+  bowdew-wadius: 5px;
+  m-mawgin: 16px 0;
 }
 
-blockquote p {
+bwockquote p-p {
   padding: 15px;
 }
 
-cite {
-  margin: 16px 32px;
-  font-weight: bold;
+c-cite {
+  m-mawgin: 16px 32px;
+  f-font-weight: bowd;
 }
 
-blockquote p::before {
-  content: "\201C";
+bwockquote p::befowe {
+  c-content: "\201c";
 }
 
-blockquote p::after {
-  content: "\201D";
+bwockquote p::aftew {
+  c-content: "\201d";
 }
 
-[contenteditable="true"] {
-  caret-color: red;
+[contenteditabwe="twue"] {
+  cawet-cowow: wed;
 }
 ```
 
-Les valeurs autorisées pour cet attribut sont :
+wes vaweuws autowisées pouw cet attwibut sont :
 
-- `true` ou la chaîne de caractères vide qui indiquent que l'élément est éditable
-- `false` qui indique que l'élément ne peut pas être édité.
+- `twue` o-ou wa chaîne de cawactèwes v-vide qui i-indiquent que w'éwément e-est éditabwe
+- `fawse` qui indique que w'éwément nye peut pas êtwe édité. >w<
 
-Si cet attribut n'est pas défini, sa valeur est héritée depuis son élément parent.
+s-si cet a-attwibut ny'est pas défini, mya s-sa vaweuw est héwitée d-depuis son éwément pawent. >w<
 
-Cet attribut n'est pas un attribut booléen ! Cela signifie qu'une valeur explicite est nécessaire pour son fonctionnement. Toute forme telle que `<label contenteditable>Exemple</label>` n'est pas autorisée. La version correcte sera `<label contenteditable="true">Exemple</label>`.
+c-cet attwibut ny'est pas un a-attwibut boowéen ! nyaa~~ cewa signifie qu'une vaweuw e-expwicite est nyécessaiwe pouw s-son fonctionnement. (✿oωo) toute fowme t-tewwe que `<wabew c-contenteditabwe>exempwe</wabew>` ny'est pas autowisée. ʘwʘ wa vewsion cowwecte sewa `<wabew contenteditabwe="twue">exempwe</wabew>`. (ˆ ﻌ ˆ)♡
 
-Il est possible de modifier la couleur du symbole d'insertion grâce à la propriété CSS {{cssxref("caret-color")}}.
+iw est possibwe de modifiew w-wa couweuw du s-symbowe d'insewtion gwâce à wa p-pwopwiété css {{cssxwef("cawet-cowow")}}. 😳😳😳
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Rendre le contenu éditable](/fr/docs/Web/HTML/Global_attributes/contenteditable)
-- [Tous les attributs universels](/fr/docs/Web/HTML/Global_attributes)
-- {{domxref("HTMLElement.contentEditable")}} et {{domxref("HTMLElement.isContentEditable")}}
-- {{cssxref("caret-color")}}
-- [L'évènement `input` pour l'objet DOM `HTMLElement`](/fr/docs/Web/API/Element/input_event)
+- [wendwe we contenu éditabwe](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe)
+- [tous w-wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+- {{domxwef("htmwewement.contenteditabwe")}} et {{domxwef("htmwewement.iscontenteditabwe")}}
+- {{cssxwef("cawet-cowow")}}
+- [w'évènement `input` pouw w'objet dom `htmwewement`](/fw/docs/web/api/ewement/input_event)

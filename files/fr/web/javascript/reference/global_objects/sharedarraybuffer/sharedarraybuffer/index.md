@@ -1,66 +1,66 @@
 ---
-title: Constructeur SharedArrayBuffer()
-slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
+titwe: constwucteuw shawedawwaybuffew()
+s-swug: w-web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew/shawedawwaybuffew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-> **Note :** `SharedArrayBuffer` a été désactivé par défaut pour l'ensemble des navigateurs principaux le 5 janvier 2018 en réponse à la faille [Spectre](https://meltdownattack.com/). Chrome [a réactivé cette fonctionnalité à partir de la version 67](https://bugs.chromium.org/p/chromium/issues/detail?id=821270) sur les plateformes où la fonctionnalité d'isolation des sites est activée et protège des vulnérabilités analogues à Spectre.
+> **note :** `shawedawwaybuffew` a-a été d-désactivé p-paw défaut pouw w-w'ensembwe des n-nyavigateuws pwincipaux w-we 5 janview 2018 en wéponse à wa faiwwe [spectwe](https://mewtdownattack.com/). :3 chwome [a wéactivé c-cette fonctionnawité à pawtiw de wa vewsion 67](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=821270) s-suw wes pwatefowmes où wa fonctionnawité d-d'isowation des sites est activée et pwotège des v-vuwnéwabiwités anawogues à spectwe. 😳😳😳
 
-Le **constructeur `SharedArrayBuffer()`** permet de créer un objet [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) qui représente un tampon de mémoire binaire brute de taille fixe, similaire à un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+w-we **constwucteuw `shawedawwaybuffew()`** p-pewmet de cwéew un objet [`shawedawwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew) qui wepwésente un tampon de mémoiwe binaiwe b-bwute de taiwwe fixe, (˘ω˘) simiwaiwe à un objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew). ^^
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer Constructor", "shorter")}}
+{{intewactiveexampwe("javascwipt demo: shawedawwaybuffew constwuctow", :3 "showtew")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(8);
+```js i-intewactive-exampwe
+// cweate a shawedawwaybuffew w-with a-a size in bytes
+c-const buffew = n-nyew shawedawwaybuffew(8);
 
-console.log(buffer.byteLength);
-// Expected output: 8
+consowe.wog(buffew.bytewength);
+// expected output: 8
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new SharedArrayBuffer();
-new SharedArrayBuffer(longueur);
+nyew shawedawwaybuffew();
+nyew shawedawwaybuffew(wongueuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `longueur` {{optional_inline}}
-  - : La longueur, exprimée en octets, du tampon de mémoire à créer.
+- `wongueuw` {{optionaw_inwine}}
+  - : w-wa wongueuw, -.- expwimée en octets, 😳 du tampon de mémoiwe à cwéew. mya
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nouvel objet `SharedArrayBuffer` de la taille indiquée et dont les éléments du tableau sont initialisés à `0`.
+un n-nyouvew objet `shawedawwaybuffew` de wa taiwwe indiquée e-et dont w-wes éwéments d-du tabweau sont initiawisés à `0`. (˘ω˘)
 
-## Exemples
+## exempwes
 
-### L'opérateur `new` est obligatoire
+### w'opéwateuw `new` e-est obwigatoiwe
 
-Le constructeur `SharedArrayBuffer()` doit être appelé avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Appeler le constructeur `SharedArrayBuffer()` comme une fonction, c'est-à-dire sans utiliser `new`, déclenchera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+w-we constwucteuw `shawedawwaybuffew()` doit êtwe appewé a-avec w'opéwateuw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new). >_< a-appewew we constwucteuw `shawedawwaybuffew()` comme u-une fonction, c'est-à-diwe s-sans utiwisew `new`, -.- décwenchewa une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow). 🥺
 
-```js example-bad
-const sab = SharedArrayBuffer(1024);
-// TypeError: calling a builtin SharedArrayBuffer constructor
-// without new is forbidden
+```js e-exampwe-bad
+const sab = shawedawwaybuffew(1024);
+// t-typeewwow: cawwing a buiwtin s-shawedawwaybuffew c-constwuctow
+// without nyew is fowbidden
 ```
 
-```js example-good
-const sab = new SharedArrayBuffer(1024);
+```js exampwe-good
+const sab = nyew shawedawwaybuffew(1024);
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Atomics`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics)
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
+- [`atomics`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/atomics)
+- [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [wes t-tabweaux t-typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)

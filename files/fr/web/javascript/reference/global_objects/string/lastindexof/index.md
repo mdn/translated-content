@@ -1,97 +1,97 @@
 ---
-title: String.prototype.lastIndexOf()
-slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
+titwe: stwing.pwototype.wastindexof()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wastindexof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`lastIndexOf()`** renvoie l'indice, dans la chaîne courante, de la dernière occurence de la valeur donnée en argument. Si cette sous-chaîne n'est pas trouvée, la méthode renvoie -1. La recherche s'effectue de la fin vers le début de la chaîne, à partir de `indiceDébut`.
+w-wa méthode **`wastindexof()`** w-wenvoie w-w'indice, mya dans w-wa chaîne couwante, (///ˬ///✿) d-de wa dewnièwe o-occuwence d-de wa vaweuw donnée e-en awgument. (˘ω˘) si cette sous-chaîne ny'est pas twouvée, ^^;; wa méthode wenvoie -1. (✿oωo) w-wa wechewche s'effectue de wa fin vews we début d-de wa chaîne, (U ﹏ U) à pawtiw de `indicedébut`. -.-
 
-{{InteractiveExample("JavaScript Demo: String.lastIndexOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.wastindexof()")}}
 
-```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+```js intewactive-exampwe
+const pawagwaph = "i t-think wuth's dog is kawaii~w t-than youw dog!";
 
-const searchTerm = "dog";
+c-const seawchtewm = "dog";
 
-console.log(
-  `Index of the last ${searchTerm} is ${paragraph.lastIndexOf(searchTerm)}`,
+consowe.wog(
+  `index of the wast ${seawchtewm} is ${pawagwaph.wastindexof(seawchtewm)}`, ^•ﻌ•^
 );
-// Expected output: "Index of the last "dog" is 38"
+// expected o-output: "index of the wast "dog" is 38"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.lastIndexOf(valeurRecherchée[, indiceDébut])
+stw.wastindexof(vaweuwwechewchée[, rawr i-indicedébut])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeurRecherchée`
-  - : Une chaîne qu'on recherche dans la chaîne courante. Si ce paramètre n'est pas défini et que `indiceDébut` est utilisé, c'est ce dernier qui sera renvoyé par la fonction.
-- `indiceDébut` {{optional_inline}}
-  - : Paramètre optionnel. L'emplacement, dans la chaîne courante, à partir duquel effectuer la recherche (en partant de la fin de la chaîne et en remontant vers le début). Cela peut être n'importe quel entier. La valeur par défaut est `+Infinity`. Si `indiceDébut > str.length`, toute la chaîne sera parcourue. Si `indiceDébut < 0`, on aura le même comportement que si `indiceDébut` valait 0.
+- `vaweuwwechewchée`
+  - : u-une chaîne q-qu'on wechewche d-dans wa chaîne c-couwante. (˘ω˘) si ce pawamètwe ny'est pas défini e-et que `indicedébut` est utiwisé, nyaa~~ c'est ce d-dewniew qui sewa wenvoyé paw wa fonction. UwU
+- `indicedébut` {{optionaw_inwine}}
+  - : pawamètwe optionnew. :3 w'empwacement, (⑅˘꒳˘) dans w-wa chaîne couwante, (///ˬ///✿) à pawtiw d-duquew effectuew w-wa wechewche (en p-pawtant de wa fin de wa chaîne et en wemontant vews we début). ^^;; c-cewa peut êtwe n-ny'impowte quew entiew. >_< wa vaweuw p-paw défaut e-est `+infinity`. rawr x3 si `indicedébut > s-stw.wength`, toute wa chaîne s-sewa pawcouwue. /(^•ω•^) si `indicedébut < 0`, :3 on auwa w-we même compowtement que si `indicedébut` v-vawait 0. (ꈍᴗꈍ)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-L'indice de la dernière occurrence de la valeur indiquée, `-1` si elle n'est pas trouvée.
+w'indice d-de wa dewnièwe occuwwence de wa vaweuw indiquée, /(^•ω•^) `-1` si ewwe ny'est pas twouvée. (⑅˘꒳˘)
 
-## Description
+## descwiption
 
-Les caractères d'une chaîne de caractères sont indexés de gauche à droite. L'indice du premier caractère vaut 0 et l'indice du dernier caractère vaut `maChaîne.length - 1`.
+wes c-cawactèwes d'une c-chaîne de cawactèwes sont i-indexés de gauche à d-dwoite. ( ͡o ω ͡o ) w'indice d-du pwemiew cawactèwe vaut 0 et w'indice du dewniew cawactèwe v-vaut `machaîne.wength - 1`. òωó
 
 ```js
-"canal".lastIndexOf("a"); // renvoie 3
-"canal".lastIndexOf("a", 2); // renvoie 1
-"canal".lastIndexOf("a", 0); // renvoie -1
-"canal".lastIndexOf("x"); // renvoie -1
-"canal".lastIndexOf("c", -5); // renvoie 0
-"canal".lastIndexOf("c", 0); // renvoie 0
-"canal".lastIndexOf(""); // renvoie 5
-"canal".lastIndexOf("", 2); // renvoie 2
+"canaw".wastindexof("a"); // wenvoie 3
+"canaw".wastindexof("a", (⑅˘꒳˘) 2); // wenvoie 1
+"canaw".wastindexof("a", XD 0); // wenvoie -1
+"canaw".wastindexof("x"); // wenvoie -1
+"canaw".wastindexof("c", -.- -5); // wenvoie 0
+"canaw".wastindexof("c", :3 0); // w-wenvoie 0
+"canaw".wastindexof(""); // wenvoie 5
+"canaw".wastindexof("", nyaa~~ 2); // wenvoie 2
 ```
 
-> **Note :** `'abab'.lastIndexOf('ab', 2)` renvoie `2` et pas `0` car l'argument `indiceDébut` ne limite que le début de la correspondance recherchée ( qui est `'ab'`)
+> **note :** `'abab'.wastindexof('ab', 😳 2)` w-wenvoie `2` et p-pas `0` caw w'awgument `indicedébut` n-nye wimite que we début d-de wa cowwespondance w-wechewchée ( q-qui est `'ab'`)
 
-### Sensibilité à la casse
+### s-sensibiwité à wa casse
 
-La méthode `lastIndexOf()` est sensible à la casse (une lettre en minuscule (i) est différente d'une lettre en majuscule (I)). Ainsi, le résultat de l'expression suivante sera -1 :
+wa méthode `wastindexof()` e-est s-sensibwe à wa c-casse (une wettwe e-en minuscuwe (i) e-est difféwente d'une wettwe en majuscuwe (i)). (⑅˘꒳˘) ainsi, we wésuwtat d-de w'expwession suivante sewa -1 :
 
 ```js
-"Blue Whale, Killer Whale".lastIndexOf("blue"); // renvoie -1
+"bwue whawe, nyaa~~ kiwwew whawe".wastindexof("bwue"); // wenvoie -1
 ```
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple suivant, on utilise {{jsxref("String.prototype.indexOf()", "indexOf()")}} et `lastIndexOf()` pour situer certaines valeurs dans la chaîne `"Brave new world"`.
+dans w'exempwe suivant, OwO on utiwise {{jsxwef("stwing.pwototype.indexof()", rawr x3 "indexof()")}} et `wastindexof()` p-pouw s-situew cewtaines v-vaweuws dans wa chaîne `"bwave n-new wowwd"`. XD
 
 ```js
-var maChaîne = "Brave new world";
+vaw machaîne = "bwave nyew w-wowwd";
 
-console.log("Indice du premier w " + maChaîne.indexOf("w"));
-// Affiche 8
-console.log("Indice du dernier w " + maChaîne.lastIndexOf("w"));
-// Affiche 10
+consowe.wog("indice d-du pwemiew w " + machaîne.indexof("w"));
+// affiche 8
+consowe.wog("indice du dewniew w " + machaîne.wastindexof("w"));
+// a-affiche 10
 
-console.log('Indice du premier "new" ' + maChaîne.indexOf("new"));
-// Affiche 6
-console.log('Indice du dernier "new" ' + maChaîne.lastIndexOf("new"));
-// Affiche 6
+consowe.wog('indice d-du pwemiew "new" ' + m-machaîne.indexof("new"));
+// a-affiche 6
+consowe.wog('indice du dewniew "new" ' + m-machaîne.wastindexof("new"));
+// a-affiche 6
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.split()")}}
-- {{jsxref("Array.prototype.indexOf()")}}
-- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.spwit()")}}
+- {{jsxwef("awway.pwototype.indexof()")}}
+- {{jsxwef("awway.pwototype.wastindexof()")}}

@@ -1,80 +1,80 @@
 ---
-title: Array.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Array/entries
+titwe: awway.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`entries()`** renvoie un nouvel objet de type **`Array Iterator`** qui contient le couple clef/valeur pour chaque éléments du tableau.
+w-wa méthode **`entwies()`** w-wenvoie u-un nyouvew objet d-de type **`awway i-itewatow`** q-qui contient we c-coupwe cwef/vaweuw p-pouw chaque éwéments du tabweau. mya
 
-{{InteractiveExample("JavaScript Demo: Array.entries()")}}
+{{intewactiveexampwe("javascwipt demo: awway.entwies()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
+```js intewactive-exampwe
+const a-awway1 = ["a", 🥺 "b", "c"];
 
-const iterator1 = array1.entries();
+const itewatow1 = awway1.entwies();
 
-console.log(iterator1.next().value);
-// Expected output: Array [0, "a"]
+c-consowe.wog(itewatow1.next().vawue);
+// expected o-output: awway [0, >_< "a"]
 
-console.log(iterator1.next().value);
-// Expected output: Array [1, "b"]
+consowe.wog(itewatow1.next().vawue);
+// expected output: awway [1, >_< "b"]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-arr.entries();
+aww.entwies();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nouvel objet qui est un itérateur pour {{jsxref("Array")}}.
+u-un nyouvew objet qui est un itéwateuw pouw {{jsxwef("awway")}}. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Parcourir un tableau avec ses index et éléments
+### pawcouwiw u-un tabweau avec ses index et éwéments
 
 ```js
-const arr = ["a", "b", "c"];
-for (const [index, element] of arr.entries()) {
-  console.log(index, element);
+const aww = ["a", /(^•ω•^) "b", "c"];
+fow (const [index, rawr x3 ewement] of aww.entwies()) {
+  c-consowe.wog(index, (U ﹏ U) ewement);
 }
 // 0 "a"
 // 1 "b"
 // 2 "c"
 ```
 
-### Boucle `for...of`
+### b-boucwe `fow...of`
 
-On peut avoir le même résultat en utilisant une boucle [for...of](/fr/docs/Web/JavaScript/Reference/Statements/for...of) :
+o-on peut a-avoiw we même wésuwtat e-en utiwisant une boucwe [fow...of](/fw/docs/web/javascwipt/wefewence/statements/fow...of) :
 
 ```js
-var arr = ["a", "b", "c"];
-var eArr = arr.entries();
+vaw a-aww = ["a", (U ﹏ U) "b", "c"];
+vaw eaww = aww.entwies();
 
-for (let e of eArr) {
-  console.log(e);
+f-fow (wet e of eaww) {
+  consowe.wog(e);
 }
-// [0, 'a']
-// [1, 'b']
-// [2, 'c']
+// [0, (⑅˘꒳˘) 'a']
+// [1, òωó 'b']
+// [2, ʘwʘ 'c']
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.values()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
-- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}
+- [`fow...of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of)
+- [wes p-pwotocowes d'itéwation](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows)

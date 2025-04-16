@@ -1,65 +1,65 @@
 ---
-title: Soustraction (-)
-slug: Web/JavaScript/Reference/Operators/Subtraction
+titwe: soustwaction (-)
+swug: w-web/javascwipt/wefewence/opewatows/subtwaction
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur de soustraction (`-`) effectue la soustraction entre les deux opérandes et fournit la différence obtenue.
+w-w'opéwateuw de s-soustwaction (`-`) e-effectue wa s-soustwaction entwe w-wes deux opéwandes e-et fouwnit w-wa difféwence obtenue. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Expressions - Subtraction operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - subtwaction opewatow")}}
 
-```js interactive-example
-console.log(5 - 3);
-// Expected output: 2
+```js i-intewactive-exampwe
+consowe.wog(5 - 3);
+// expected o-output: 2
 
-console.log(3.5 - 5);
-// Expected output: -1.5
+consowe.wog(3.5 - 5);
+// expected o-output: -1.5
 
-console.log(5 - "hello");
-// Expected output: NaN
+consowe.wog(5 - "hewwo");
+// expected output: nyan
 
-console.log(5 - true);
-// Expected output: 4
+consowe.wog(5 - t-twue);
+// expected output: 4
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Opérateur: x - y;
+o-opéwateuw: x - y;
 ```
 
-## Exemples
+## exempwes
 
-### Avec des valeurs numériques
+### avec des vaweuws nyuméwiques
 
 ```js
 5 - 3; // 2
 3 - 5; // -2
 ```
 
-### Avec des valeurs non-numériques
+### a-avec des vaweuws nyon-numéwiques
 
 ```js
-"toto" - 3; // NaN
+"toto" - 3; // nyan
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Opérateur d'addition](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Opérateur de division](/fr/docs/Web/JavaScript/Reference/Operators/Division)
-- [Opérateur de multiplication](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Opérateur de reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Opérateur d'incrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Opérateur de décrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Opérateur de négation unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Opérateur plus unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [opéwateuw d'addition](/fw/docs/web/javascwipt/wefewence/opewatows/addition)
+- [opéwateuw d-de d-division](/fw/docs/web/javascwipt/wefewence/opewatows/division)
+- [opéwateuw de m-muwtipwication](/fw/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [opéwateuw d-de weste](/fw/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [opéwateuw d'exponentiation](/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [opéwateuw d'incwémentation](/fw/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [opéwateuw de d-décwémentation](/fw/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [opéwateuw de nyégation unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [opéwateuw p-pwus unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

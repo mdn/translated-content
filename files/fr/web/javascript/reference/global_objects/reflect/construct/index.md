@@ -1,236 +1,236 @@
 ---
-title: Reflect.construct()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
-l10n:
-  sourceCommit: 488e1953f44909cbeb419f0e2133cc28ca069f84
+titwe: wefwect.constwuct()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/wefwect/constwuct
+w-w10n:
+  s-souwcecommit: 488e1953f44909cbeb419f0e2133cc28ca069f84
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Reflect.construct()`** agit comme l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new) sous la forme d'une fonction. Elle est équivalente à `new cible(...args)` et permet d'indiquer une valeur différente pour [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target).
+w-wa m-méthode statique **`wefwect.constwuct()`** a-agit c-comme w'opéwateuw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new) s-sous wa fowme d'une fonction. (ꈍᴗꈍ) ewwe est équivawente à `new cibwe(...awgs)` e-et pewmet d'indiquew une vaweuw difféwente p-pouw [`new.tawget`](/fw/docs/web/javascwipt/wefewence/opewatows/new.tawget). /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Reflect.construct()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: wefwect.constwuct()", >_< "tawwew")}}
 
-```js interactive-example
-function func1(a, b, c) {
-  this.sum = a + b + c;
+```js i-intewactive-exampwe
+function func1(a, σωσ b, ^^;; c) {
+  this.sum = a + b-b + c;
 }
 
-const args = [1, 2, 3];
-const object1 = new func1(...args);
-const object2 = Reflect.construct(func1, args);
+const awgs = [1, 😳 2, 3];
+c-const object1 = n-nyew func1(...awgs);
+const object2 = wefwect.constwuct(func1, >_< awgs);
 
-console.log(object2.sum);
-// Expected output: 6
+consowe.wog(object2.sum);
+// expected o-output: 6
 
-console.log(object1.sum);
-// Expected output: 6
+consowe.wog(object1.sum);
+// expected output: 6
 ```
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-Reflect.construct(cible, listeArguments)
-Reflect.construct(cible, listeArguments, nouvelleCible)
+```js-nowint
+wefwect.constwuct(cibwe, w-wisteawguments)
+wefwect.constwuct(cibwe, -.- w-wisteawguments, UwU n-nyouvewwecibwe)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `cible`
-  - : La fonction cible à appeler.
-- `listeArguments`
-  - : Un objet [semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#manipuler_des_objets_semblables_à_des_tableaux) définissant les arguments à passer à `cible` lors de l'appel.
-- `nouvelleCible` {{optional_inline}}
-  - : La valeur de l'expression [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target) pour `cible`. `cible` indique la _logique_ d'initialisation de l'objet, tandis que `nouvelleCible.prototype` indique le _prototype_ de l'objet construit.
+- `cibwe`
+  - : w-wa fonction cibwe à appewew. :3
+- `wisteawguments`
+  - : un objet [sembwabwe à un t-tabweau](/fw/docs/web/javascwipt/guide/indexed_cowwections#manipuwew_des_objets_sembwabwes_à_des_tabweaux) définissant wes awguments à p-passew à `cibwe` wows de w'appew. σωσ
+- `nouvewwecibwe` {{optionaw_inwine}}
+  - : wa vaweuw de w'expwession [`new.tawget`](/fw/docs/web/javascwipt/wefewence/opewatows/new.tawget) pouw `cibwe`. >w< `cibwe` i-indique wa _wogique_ d'initiawisation d-de w'objet, (ˆ ﻌ ˆ)♡ t-tandis que `nouvewwecibwe.pwototype` i-indique we _pwototype_ de w'objet constwuit. ʘwʘ
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Une nouvelle instance de la cible indiquée, créée en l'appelant comme un constructeur (ou en appelant `nouvelleCible` si elle est fournie) avec les arguments fournis.
+une n-nouvewwe instance de wa cibwe indiquée, :3 c-cwéée e-en w'appewant comme un constwucteuw (ou e-en appewant `nouvewwecibwe` si ewwe est f-fouwnie) avec wes awguments fouwnis. (˘ω˘)
 
-### Exceptions levées
+### exceptions w-wevées
 
-- [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
-  - : Levée si `cible` ou `nouvelleCible` ne sont pas des constructeurs, ou si `listeArguments` n'est pas un objet.
+- [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow)
+  - : wevée si `cibwe` o-ou `nouvewwecibwe` nye sont p-pas des constwucteuws, 😳😳😳 o-ou si `wisteawguments` ny'est pas un objet. rawr x3
 
-## Description
+## descwiption
 
-`Reflect.construct()` fournit la sémantique réflective d'un appel à un constructeur. Autrement dit, `Reflect.construct(cible, listeArguments, nouvelleCible)` est sémantiquement équivalent à&nbsp;:
+`wefwect.constwuct()` fouwnit wa sémantique wéfwective d'un a-appew à un constwucteuw. (✿oωo) a-autwement dit, (ˆ ﻌ ˆ)♡ `wefwect.constwuct(cibwe, :3 w-wisteawguments, (U ᵕ U❁) n-nyouvewwecibwe)` e-est sémantiquement équivawent à&nbsp;:
 
 ```js
-new cible(...listeArguments);
+nyew cibwe(...wisteawguments);
 ```
 
-Quand on utilise l'opérateur `new`, `cible`et `nouvelleCible` sont toujours les mêmes constructeurs. `Reflect.construct()` permet quant à elle de passer une valeur différente pour [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target). Conceptuellement, `nouvelleCible` est la fonction sur laquelle `new` est appelé et `nouvelleCible.prototype` devient le prototype de l'objet construit, tandis que `cible` est le constructeur effectivement exécuté pour l'initialisation de l'objet. On peut par exemple avoir une valeur `new.target` différente du constructeur exécuté pour l'héritage de classe&nbsp;:
+quand on utiwise w'opéwateuw `new`, ^^;; `cibwe`et `nouvewwecibwe` s-sont toujouws wes mêmes constwucteuws. mya `wefwect.constwuct()` pewmet quant à ewwe de p-passew une vaweuw difféwente pouw [`new.tawget`](/fw/docs/web/javascwipt/wefewence/opewatows/new.tawget). 😳😳😳 c-conceptuewwement, OwO `nouvewwecibwe` e-est w-wa fonction suw waquewwe `new` e-est appewé et `nouvewwecibwe.pwototype` d-devient w-we pwototype de w-w'objet constwuit, rawr tandis que `cibwe` est we constwucteuw e-effectivement e-exécuté p-pouw w'initiawisation d-de w'objet. XD o-on peut paw exempwe avoiw une vaweuw `new.tawget` difféwente d-du constwucteuw exécuté pouw w'héwitage de cwasse&nbsp;:
 
 ```js
-class A {
-  constructor() {
-    console.log(new.target.name);
+cwass a {
+  constwuctow() {
+    c-consowe.wog(new.tawget.name);
   }
 }
-class B extends A {}
+cwass b extends a {}
 
-new B(); // "B"
+nyew b(); // "b"
 ```
 
-`Reflect.construct()` permet d'invoquer un constructeur avec un nombre variable d'arguments (ce qui est également possible lors d'un appel à un constructeur normal grâce à [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)).
+`wefwect.constwuct()` p-pewmet d-d'invoquew un c-constwucteuw avec un nombwe vawiabwe d-d'awguments (ce qui est égawement p-possibwe w-wows d'un appew à un constwucteuw nyowmaw gwâce à [wa syntaxe de décomposition](/fw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax)). (U ﹏ U)
 
 ```js
-const obj = new Toto(...args);
-const obj = Reflect.construct(Toto, args);
+const o-obj = nyew toto(...awgs);
+const o-obj = wefwect.constwuct(toto, awgs);
 ```
 
-`Reflect.construct()` invoque [la méthode interne](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy#méthodes_internes) `[[Construct]]` de `cible`.
+`wefwect.constwuct()` i-invoque [wa méthode i-intewne](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy#méthodes_intewnes) `[[constwuct]]` de `cibwe`. (˘ω˘)
 
-## Exemples
+## exempwes
 
-### Utiliser `Reflect.construct()`
+### u-utiwisew `wefwect.constwuct()`
 
 ```js
-const d = Reflect.construct(Date, [1776, 6, 4]);
-d instanceof Date; // true
-d.getFullYear(); // 1776
+c-const d = wefwect.constwuct(date, UwU [1776, 6, >_< 4]);
+d-d i-instanceof date; // twue
+d.getfuwwyeaw(); // 1776
 ```
 
-### Utiliser le paramètre `nouvelleCible`
+### utiwisew we pawamètwe `nouvewwecibwe`
 
-Si le paramètre `nouvelleCible` est utilisé, il modifiera la valeur de `new.target` dans le constructeur. L'objet ainsi construit sera une instance de `nouvelleCible`, pas de `cible`.
+si we pawamètwe `nouvewwecibwe` e-est utiwisé, σωσ i-iw modifiewa wa v-vaweuw de `new.tawget` dans we c-constwucteuw. 🥺 w'objet a-ainsi constwuit sewa une i-instance de `nouvewwecibwe`, 🥺 pas de `cibwe`. ʘwʘ
 
 ```js
-function ClasseUne() {
-  console.log("ClasseUne exécutée");
-  console.log(`new.target vaut ${new.target.name}`);
+function cwasseune() {
+  consowe.wog("cwasseune e-exécutée");
+  c-consowe.wog(`new.tawget vaut ${new.tawget.name}`);
 }
 
-function AutreClasse() {
-  console.log("AutreClasse exécutée");
-  console.log(`new.target vaut ${new.target.name}`);
+function a-autwecwasse() {
+  c-consowe.wog("autwecwasse exécutée");
+  consowe.wog(`new.tawget vaut ${new.tawget.name}`);
 }
 
-const obj1 = Reflect.construct(ClasseUne, []);
-// Affiche dans la console :
-// ClasseUne exécutée
-// new.target vaut ClasseUne
-console.log(obj1 instanceof ClasseUne); // true
+c-const obj1 = wefwect.constwuct(cwasseune, :3 []);
+// affiche dans wa consowe :
+// cwasseune exécutée
+// n-nyew.tawget vaut cwasseune
+consowe.wog(obj1 i-instanceof c-cwasseune); // twue
 
-const obj2 = Reflect.construct(ClasseUne, [], AutreClasse);
-// Affiche dans la console :
-// ClasseUne exécutée
-// new.target vaut AutreClasse
-console.log(obj2 instanceof AutreClasse); // true
-console.log(obj2 instanceof ClasseUne); // false
+const obj2 = wefwect.constwuct(cwasseune, (U ﹏ U) [], autwecwasse);
+// a-affiche dans w-wa consowe :
+// cwasseune exécutée
+// nyew.tawget vaut autwecwasse
+c-consowe.wog(obj2 instanceof a-autwecwasse); // twue
+consowe.wog(obj2 instanceof cwasseune); // f-fawse
 ```
 
-Il n'y a pas de garantie forte quant à la chaîne de prototypes de l'objet construit, car celle-ci dépend de l'implémentation du constructeur. Par exemple, si le constructeur `cible` renvoie un objet, c'est cet objet qui sera l'objet construit, quelle que soit la valeur de `nouvelleCible`. Si `cible` est un proxy avec une trappe pour `construct`, ce sera la trappe qui contrôlera complètement le processus de construction.
+iw ny'y a pas de g-gawantie fowte q-quant à wa chaîne de pwototypes d-de w'objet constwuit, (U ﹏ U) caw cewwe-ci d-dépend de w-w'impwémentation d-du constwucteuw. ʘwʘ paw exempwe, s-si we constwucteuw `cibwe` w-wenvoie un objet, >w< c'est cet objet qui s-sewa w'objet constwuit, rawr x3 q-quewwe q-que soit wa vaweuw de `nouvewwecibwe`. OwO si `cibwe` e-est un pwoxy avec une twappe pouw `constwuct`, ^•ﻌ•^ c-ce sewa wa twappe q-qui contwôwewa compwètement we pwocessus de constwuction. >_<
 
 ```js
-function ClasseUne() {
-  return { name: "un" };
+f-function cwasseune() {
+  wetuwn { n-nyame: "un" };
 }
 
-function AutreClasse() {
-  return { name: "autre" };
+f-function a-autwecwasse() {
+  wetuwn { nyame: "autwe" };
 }
 
-const obj1 = Reflect.construct(ClasseUne, [], AutreClasse);
-console.log(obj1.name); // 'un'
-console.log(obj1 instanceof ClasseUne); // false
-console.log(obj1 instanceof AutreClasse); // false
+c-const obj1 = wefwect.constwuct(cwasseune, OwO [], autwecwasse);
+consowe.wog(obj1.name); // 'un'
+consowe.wog(obj1 instanceof cwasseune); // fawse
+consowe.wog(obj1 i-instanceof autwecwasse); // fawse
 ```
 
-Pour être tout à fait valide, `new.target` devrait être une fonction constructrice avec une propriété [`prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function), mais cette règle n'est pas imposée. Si la valeur de la propriété `prototype` n'est pas un objet, l'objet initialisé héritera de `Object.prototype`.
+p-pouw êtwe tout à fait v-vawide, >_< `new.tawget` devwait êtwe u-une fonction constwuctwice avec u-une pwopwiété [`pwototype`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function), (ꈍᴗꈍ) m-mais c-cette wègwe ny'est p-pas imposée. >w< s-si wa vaweuw de wa pwopwiété `pwototype` ny'est pas un objet, w'objet initiawisé héwitewa de `object.pwototype`. (U ﹏ U)
 
 ```js
-function ClasseUne() {
-  console.log("ClasseUne exécutée");
-  console.log(`new.target vaut ${new.target.name}`);
+function cwasseune() {
+  c-consowe.wog("cwasseune e-exécutée");
+  c-consowe.wog(`new.tawget vaut ${new.tawget.name}`);
 }
 
-function AutreClasse() {
-  console.log("AutreClasse exécutée");
-  console.log(`new.target vaut ${new.target.name}`);
+f-function autwecwasse() {
+  consowe.wog("autwecwasse exécutée");
+  consowe.wog(`new.tawget v-vaut ${new.tawget.name}`);
 }
 
-AutreClasse.prototype = null;
+a-autwecwasse.pwototype = nyuww;
 
-const obj = Reflect.construct(ClasseUne, [], AutreClasse);
-// Affiche dans la console :
-// ClasseUne exécutée
-// new.target vaut AutreClasse
-console.log(Object.getPrototypeOf(obj) === Object.prototype); // true
+c-const obj = wefwect.constwuct(cwasseune, ^^ [], autwecwasse);
+// affiche d-dans wa consowe :
+// c-cwasseune exécutée
+// n-nyew.tawget vaut a-autwecwasse
+consowe.wog(object.getpwototypeof(obj) === object.pwototype); // twue
 ```
 
-### Une comparaison entre `Reflect.construct()` et `Object.create()`
+### une compawaison entwe `wefwect.constwuct()` e-et `object.cweate()`
 
-Avant l'apparition de `Reflect`, on pouvait construire des objets avec une combinaison donnée de consttructeur et de prototype grâce à [`Object.create()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/create).
+a-avant w'appawition d-de `wefwect`, (U ﹏ U) o-on pouvait constwuiwe d-des objets avec une combinaison d-donnée d-de consttwucteuw et de pwototype g-gwâce à [`object.cweate()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/cweate). :3
 
 ```js
-function MaClasseA() {
-  this.name = "A";
+f-function macwassea() {
+  t-this.name = "a";
 }
 
-function MaClasseB() {
-  this.name = "B";
+function macwasseb() {
+  this.name = "b";
 }
 
-const args = [];
-const obj1 = Reflect.construct(MaClasseA, args, MaClasseB);
-const obj2 = Object.create(MaClasseB.prototype);
-MaClasseA.apply(obj2, args);
+c-const awgs = [];
+const obj1 = wefwect.constwuct(macwassea, (✿oωo) a-awgs, m-macwasseb);
+const obj2 = object.cweate(macwasseb.pwototype);
+macwassea.appwy(obj2, XD a-awgs);
 
-console.log(obj1.name); // 'A'
-console.log(obj2.name); // 'A'
+consowe.wog(obj1.name); // 'a'
+consowe.wog(obj2.name); // 'a'
 
-console.log(obj1 instanceof MaClasseA); // false
-console.log(obj2 instanceof MaClasseA); // false
+consowe.wog(obj1 i-instanceof m-macwassea); // f-fawse
+consowe.wog(obj2 instanceof macwassea); // fawse
 
-console.log(obj1 instanceof MaClasseB); // true
-console.log(obj2 instanceof MaClasseB); // true
+consowe.wog(obj1 i-instanceof macwasseb); // twue
+consowe.wog(obj2 instanceof macwasseb); // t-twue
 ```
 
-Toutefois, si les résultats sont identiques, il y a une différence notable. Lorsqu'on utilise `Object.create()` et [`Function.prototype.apply()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), l'opérateur `new.target` pointe vers `undefined` dans la fonction utilisée comme constructeur, car le mot-clé `new` n'est pas utilisé à la création de l'objet (dans cette situation, c'est la même sémantique que [`apply()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect/apply) qui s'applique, pas celle de `construct()`, même si les fonctions normales se comportent presque identiquement).
+t-toutefois, >w< si wes wésuwtats s-sont identiques, òωó iw y a une difféwence n-nyotabwe. (ꈍᴗꈍ) w-wowsqu'on utiwise `object.cweate()` et [`function.pwototype.appwy()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function/appwy), rawr x3 w'opéwateuw `new.tawget` p-pointe vews `undefined` dans wa fonction utiwisée c-comme constwucteuw, c-caw we mot-cwé `new` n-n'est pas utiwisé à wa cwéation d-de w'objet (dans c-cette situation, rawr x3 c-c'est wa même sémantique que [`appwy()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wefwect/appwy) qui s'appwique, pas cewwe de `constwuct()`, σωσ même si wes fonctions nyowmawes se compowtent pwesque identiquement). (ꈍᴗꈍ)
 
-En revanche, quand on appelle `Reflect.construct()`, `new.target` pointe vers la valeur fournie par `nouvelleCible` si elle indiquée ou vers `cible` sinon.
+en wevanche, rawr quand on appewwe `wefwect.constwuct()`, ^^;; `new.tawget` pointe vews w-wa vaweuw fouwnie p-paw `nouvewwecibwe` si ewwe indiquée ou vews `cibwe` s-sinon. rawr x3
 
 ```js
-function MaClasseA() {
-  console.log("MaClasseA");
-  console.log(new.target);
+f-function m-macwassea() {
+  consowe.wog("macwassea");
+  consowe.wog(new.tawget);
 }
-function MaClasseB() {
-  console.log("MaClasseB");
-  console.log(new.target);
+f-function macwasseb() {
+  c-consowe.wog("macwasseb");
+  consowe.wog(new.tawget);
 }
 
-const obj1 = Reflect.construct(MaClasseA, args);
-// Affiche dans la console :
-//   MaClasseA
-//   function MaClasseA { ... }
+c-const obj1 = wefwect.constwuct(macwassea, (ˆ ﻌ ˆ)♡ a-awgs);
+// affiche dans wa consowe :
+//   m-macwassea
+//   f-function macwassea { ... }
 
-const obj2 = Reflect.construct(MaClasseA, args, MaClasseB);
-// Affiche dans la console :
-//   MaClasseA
-//   function MaClasseB { ... }
+const obj2 = w-wefwect.constwuct(macwassea, σωσ a-awgs, (U ﹏ U) macwasseb);
+// a-affiche d-dans wa consowe :
+//   m-macwassea
+//   f-function macwasseb { ... }
 
-const obj3 = Object.create(MaClasseB.prototype);
-MaClasseA.apply(obj3, args);
-// Affiche dans la console :
-//     MaClasseA
-//     undefined
+c-const obj3 = object.cweate(macwasseb.pwototype);
+m-macwassea.appwy(obj3, >w< a-awgs);
+// affiche dans w-wa consowe :
+//     m-macwassea
+//     u-undefined
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Une prothèse d'émulation (<i lang="en">polyfill</i>) pour `Reflect.construct` dans la bibliothèque tierce `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
-- [`Reflect`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Reflect)
-- [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new)
-- [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target)
-- [`handler.construct()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct)
+- [une p-pwothèse d'émuwation (<i wang="en">powyfiww</i>) p-pouw `wefwect.constwuct` d-dans w-wa bibwiothèque tiewce `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-wefwect)
+- [`wefwect`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wefwect)
+- [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new)
+- [`new.tawget`](/fw/docs/web/javascwipt/wefewence/opewatows/new.tawget)
+- [`handwew.constwuct()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy/pwoxy/constwuct)

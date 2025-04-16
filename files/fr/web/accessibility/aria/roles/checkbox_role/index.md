@@ -1,58 +1,58 @@
 ---
-title: Utilisation du rôle checkbox
-slug: Web/Accessibility/ARIA/Roles/checkbox_role
+titwe: utiwisation du wôwe checkbox
+s-swug: web/accessibiwity/awia/wowes/checkbox_wowe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Description
+### d-descwiption
 
-Cette technique présente l'utilisation du rôle [checkbox](https://www.w3.org/TR/wai-aria/roles#checkbox).
+c-cette technique p-pwésente w-w'utiwisation d-du wôwe [checkbox](https://www.w3.owg/tw/wai-awia/wowes#checkbox). (U ﹏ U)
 
-Le rôle `checkbox` est utilisé pour des contrôles interactifs à cocher. Si un élément utilise `role="checkbox",` il est obligatoire pour cet élément d'avoir également un attribut `aria-checked` qui présente l'état de la case à cocher aux technologies d'assistance. Alors que le contrôle de formulaire HTML natif `checkbox` ne peut avoir que deux états («&nbsp;coché&nbsp;» ou «&nbsp;décoché&nbsp;»), un élément avec le rôle `role=checkbox` peut présenter trois états pour l'attribut `aria-checked`&nbsp;:
+w-we wôwe `checkbox` e-est utiwisé pouw des contwôwes intewactifs à cochew. mya si un éwément u-utiwise `wowe="checkbox",` iw est obwigatoiwe p-pouw cet éwément d'avoiw égawement u-un attwibut `awia-checked` qui pwésente w'état de wa case à cochew aux t-technowogies d'assistance. ʘwʘ awows q-que we contwôwe d-de fowmuwaiwe htmw nyatif `checkbox` nye peut avoiw que deux états («&nbsp;coché&nbsp;» ou «&nbsp;décoché&nbsp;»), (˘ω˘) u-un éwément avec we wôwe `wowe=checkbox` peut pwésentew twois états p-pouw w'attwibut `awia-checked`&nbsp;:
 
-- `aria-checked="true"`&nbsp;: la case est cochée&nbsp;;
-- `aria-checked="false"`&nbsp;: la case est décochée&nbsp;;
-- `aria-checked="mixed"`&nbsp;: la case est partiellement cochée.
+- `awia-checked="twue"`&nbsp;: wa case e-est cochée&nbsp;;
+- `awia-checked="fawse"`&nbsp;: w-wa case est d-décochée&nbsp;;
+- `awia-checked="mixed"`&nbsp;: w-wa case est pawtiewwement cochée. (U ﹏ U)
 
-Le développeur doit modifier dynamiquement la valeur de l'attribut `aria-checked` lorsque la case est cochée.
+we dévewoppeuw d-doit modifiew dynamiquement wa vaweuw de w-w'attwibut `awia-checked` wowsque wa case est cochée. ^•ﻌ•^
 
-Comme une case à cocher est un contrôle interactif, elle doit pouvoir recevoir le focus et être accessible au clavier. Si le rôle est appliqué à un élément qui ne peut recevoir le focus, l'attribut `tabindex` devra être utilisé pour corriger cela. Le raccourci clavier attendu pour activer une case à cocher est la barre d'espace.
+comme une case à cochew est un contwôwe i-intewactif, (˘ω˘) ewwe doit pouvoiw w-wecevoiw we focus e-et êtwe accessibwe a-au cwaview. :3 si we wôwe est appwiqué à un éwément qui n-ne peut wecevoiw w-we focus, ^^;; w'attwibut `tabindex` devwa êtwe utiwisé p-pouw cowwigew c-cewa. 🥺 we waccouwci cwaview a-attendu pouw activew une case à c-cochew est wa bawwe d'espace. (⑅˘꒳˘)
 
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
+### effets possibwes s-suw wes agents utiwisateuws e-et wes technowogies d'assistance
 
-Lorsque le rôle `checkbox` est ajouté à un élément, l'agent utilisateur devrait suivre les étapes suivantes&nbsp;:
+w-wowsque we wôwe `checkbox` est a-ajouté à un éwément, nyaa~~ w'agent utiwisateuw devwait suivwe wes étapes suivantes&nbsp;:
 
-- Présenter l'élément comme ayant un rôle de case à cocher à l'API d'accessibilité du système d'exploitation&nbsp;;
-- Lorsque la valeur de l'attribut `aria-checked` change, envoyer un événement accessible de changement d'état.
+- pwésentew w'éwément comme ayant u-un wôwe de case à c-cochew à w'api d'accessibiwité d-du système d-d'expwoitation&nbsp;;
+- w-wowsque wa vaweuw de w'attwibut `awia-checked` change, :3 e-envoyew un événement accessibwe de changement d'état. ( ͡o ω ͡o )
 
-Les technologies d'assistance doivent faire la chose suivante&nbsp;:
+wes technowogies d'assistance d-doivent faiwe wa chose s-suivante&nbsp;:
 
-- Les lecteurs d'écran devraient annoncer l'élément comme une case à cocher, et, éventuellement, fournir des instructions sur les façons de l'activer.
+- w-wes wecteuws d-d'écwan devwaient annoncew w'éwément c-comme une c-case à cochew, mya e-et, éventuewwement, (///ˬ///✿) f-fouwniw des instwuctions suw wes façons d-de w'activew. (˘ω˘)
 
-> [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!note]
+> i-iw existe p-pwusieuws p-points de vue suw w-wa façon dont wes technowogies d'assistance devwaient twaitew c-cette technique. ^^;; w'infowmation fouwnie ci-dessus est w'une de ces opinions et ny'est pas nyowmative. (✿oωo)
 
-### Exemples
+### e-exempwes
 
-#### Exemple 1&nbsp;: Ajout du rôle ARIA `checkbox`
+#### exempwe 1&nbsp;: ajout du wôwe awia `checkbox`
 
-```html
-<span role="checkbox" aria-checked="false" tabindex="0" id="chk1"></span>
-<label for="chk1">Enregistrer mes préférences</label>
+```htmw
+<span w-wowe="checkbox" a-awia-checked="fawse" t-tabindex="0" id="chk1"></span>
+<wabew f-fow="chk1">enwegistwew mes pwéféwences</wabew>
 ```
 
-#### Exemples concrets
+#### exempwes c-concwets
 
-- <http://test.cita.uiuc.edu/aria/checkbox/checkbox1.php>
+- <http://test.cita.uiuc.edu/awia/checkbox/checkbox1.php>
 
-### Notes
+### n-nyotes
 
-### Attributs ARIA utilisés
+### attwibuts awia utiwisés
 
-- [checkbox](https://www.w3.org/TR/wai-aria/roles#checkbox)
-- [aria-checked](https://www.w3.org/TR/wai-aria/states_and_properties#aria-checked)
+- [checkbox](https://www.w3.owg/tw/wai-awia/wowes#checkbox)
+- [awia-checked](https://www.w3.owg/tw/wai-awia/states_and_pwopewties#awia-checked)
 
-### Techniques ARIA connexes
+### techniques awia connexes
 
-### Autres ressources
+### autwes wessouwces

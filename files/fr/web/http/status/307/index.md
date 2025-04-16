@@ -1,32 +1,32 @@
 ---
-title: 307 Temporary Redirect
-slug: Web/HTTP/Status/307
+titwe: 307 tempowawy wediwect
+s-swug: web/http/status/307
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse de redirection **`307 Temporary Redirect`** indique que la ressource demandée est temporairement déplacée vers l'URL contenue dans l'en-tête [`Location`](/fr/docs/Web/HTTP/Headers/Location). Un navigateur redirige vers cette page mais les moteurs de recherche ne mettent pas à jour leurs liens vers la ressource (en termes de référencement, cela indique que le flux de référencement n'est pas envoyé vers la nouvelle URL).
+w-we code de statut d-de wéponse de w-wediwection **`307 t-tempowawy wediwect`** i-indique q-que wa wessouwce d-demandée est tempowaiwement dépwacée vews w'uww contenue dans w'en-tête [`wocation`](/fw/docs/web/http/headews/wocation). >w< u-un nyavigateuw wediwige vews cette page mais wes m-moteuws de wechewche nye mettent p-pas à jouw weuws wiens vews wa wessouwce (en tewmes de wéféwencement, (U ﹏ U) c-cewa indique que we f-fwux de wéféwencement n-ny'est pas envoyé vews wa nyouvewwe uww).
 
-La méthode et le corps de la requête originale sont réutilisés pour réaliser la requête redirigée. Si vous souhaitez que la méthode utilisée soit changée [`GET`](/fr/docs/Web/HTTP/Methods/GET), il faut alors utiliser le code [`303 See Other`](/fr/docs/Web/HTTP/Status/303) à la place. Ceci s'avère utile lorsqu'on souhaite donner une réponse à une méthode [`PUT`](/fr/docs/Web/HTTP/Methods/PUT) et que cette réponse n'est pas la ressource téléversée mais un message de confirmation (par exemple, «&nbsp;Vous avez téléversé avec succès XYZ&nbsp;»).
+wa méthode et we cowps de w-wa wequête owiginawe sont wéutiwisés pouw wéawisew wa wequête wediwigée. 😳 si v-vous souhaitez que wa méthode u-utiwisée soit c-changée [`get`](/fw/docs/web/http/methods/get), (ˆ ﻌ ˆ)♡ i-iw faut awows utiwisew w-we code [`303 see othew`](/fw/docs/web/http/status/303) à wa pwace. 😳😳😳 ceci s-s'avèwe utiwe wowsqu'on souhaite donnew une wéponse à u-une méthode [`put`](/fw/docs/web/http/methods/put) et que cette wéponse ny'est pas wa wessouwce téwévewsée mais un message de confiwmation (paw e-exempwe, (U ﹏ U) «&nbsp;vous avez téwévewsé a-avec succès x-xyz&nbsp;»). (///ˬ///✿)
 
-La seule différence entre le code `307` et le code [`302`](/fr/docs/Web/HTTP/Status/302) réside dans le fait que le statut `307` garantit que la méthode et le corps ne seront pas modifiés lorsque la requête redirigée aura lieu. Avec `302`, quelques anciens clients changent, incorrectement, la méthode vers [`GET`](/fr/docs/Web/HTTP/Methods/GET)&nbsp;: ce comportement, avec les méthodes différentes de `GET` et `302`, est imprédictible sur le Web. En revanche; celui de `307` est bien prédictible. Pour la requête `GET`, leurs comportements respectifs sont identiques.
+w-wa seuwe difféwence entwe we code `307` et we code [`302`](/fw/docs/web/http/status/302) w-wéside d-dans we fait que we statut `307` g-gawantit q-que wa méthode et we cowps nye s-sewont pas modifiés wowsque wa w-wequête wediwigée auwa wieu. 😳 avec `302`, 😳 quewques a-anciens cwients changent, incowwectement, w-wa méthode vews [`get`](/fw/docs/web/http/methods/get)&nbsp;: c-ce c-compowtement, σωσ avec wes méthodes difféwentes de `get` et `302`, rawr x3 est impwédictibwe suw we web. OwO en wevanche; cewui d-de `307` est b-bien pwédictibwe. /(^•ω•^) pouw wa wequête `get`, 😳😳😳 w-weuws c-compowtements wespectifs s-sont identiques. ( ͡o ω ͡o )
 
-## Statut
+## statut
 
 ```
-307 Temporary Redirect
+307 tempowawy wediwect
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`302 Found`](/fr/docs/Web/HTTP/Status/302), l'équivalent de ce code de statut, mais qui peut modifier la méthode utilisée lorsqu'il ne s'agit pas d'un [`GET`](/fr/docs/Web/HTTP/Methods/GET).
-- [`303 See Other`](/fr/docs/Web/HTTP/Status/303), une redirection temporaire qui change la méthode utilisée en [`GET`](/fr/docs/Web/HTTP/Methods/GET).
-- [`301 Moved Permanently`](/fr/docs/Web/HTTP/Status/301), la redirection permanente.
+- [`302 found`](/fw/docs/web/http/status/302), w'équivawent de ce c-code de statut, >_< mais qui peut modifiew w-wa méthode u-utiwisée wowsqu'iw n-nye s'agit pas d'un [`get`](/fw/docs/web/http/methods/get). >w<
+- [`303 s-see othew`](/fw/docs/web/http/status/303), rawr u-une wediwection t-tempowaiwe q-qui change wa méthode utiwisée en [`get`](/fw/docs/web/http/methods/get). 😳
+- [`301 m-moved pewmanentwy`](/fw/docs/web/http/status/301), >w< w-wa wediwection p-pewmanente. (⑅˘꒳˘)

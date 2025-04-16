@@ -1,131 +1,131 @@
 ---
-title: yield*
-slug: Web/JavaScript/Reference/Operators/yield*
+titwe: yiewd*
+swug: web/javascwipt/wefewence/opewatows/yiewd*
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Une **expression `yield*`** est utilisée afin de déléguer le mécanisme d'itération/génération à un autre {{jsxref("Instructions/function*", "générateur")}} ou à un autre objet itérable.
+u-une **expwession `yiewd*`** e-est u-utiwisée afin d-de déwéguew we m-mécanisme d'itéwation/généwation à u-un autwe {{jsxwef("instwuctions/function*", :3 "généwateuw")}} o-ou à un a-autwe objet itéwabwe. ^^;;
 
-{{InteractiveExample("JavaScript Demo: Expressions - yield*")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - yiewd*")}}
 
-```js interactive-example
+```js intewactive-exampwe
 function* func1() {
-  yield 42;
+  y-yiewd 42;
 }
 
 function* func2() {
-  yield* func1();
+  yiewd* f-func1();
 }
 
-const iterator = func2();
+const itewatow = f-func2();
 
-console.log(iterator.next().value);
-// Expected output: 42
+consowe.wog(itewatow.next().vawue);
+// expected output: 42
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-yield * expression;
+yiewd * e-expwession;
 ```
 
-- `expression`
-  - : L'expression qui renvoie un objet itérable.
+- `expwession`
+  - : w'expwession q-qui wenvoie u-un objet itéwabwe. 🥺
 
-## Description
+## descwiption
 
-L'expression `yield*` itère sur l'opérande et génère chaque valeur générée par l'opérande.
+w'expwession `yiewd*` itèwe suw w'opéwande et génèwe c-chaque vaweuw généwée paw w'opéwande. (⑅˘꒳˘)
 
-La valeur de l'expression `yield*` est la valeur renvoyée par l'itérateur lorsque celui est terminé (la propriété `done` vaut `true`).
+wa vaweuw de w'expwession `yiewd*` est wa vaweuw wenvoyée p-paw w'itéwateuw wowsque c-cewui est tewminé (wa p-pwopwiété `done` v-vaut `twue`). nyaa~~
 
-## Exemples
+## e-exempwes
 
-### Délégation de la génération
+### déwégation de wa généwation
 
-Dans le code suivant, les valeurs générées par `g1()` sont renvoyées grâce aux appels à la fonction `next()`, comme pour celles renvoyées par `g2()`.
+d-dans we code suivant, :3 wes vaweuws généwées p-paw `g1()` sont wenvoyées gwâce aux appews à wa fonction `next()`, ( ͡o ω ͡o ) comme pouw cewwes wenvoyées paw `g2()`. mya
 
 ```js
-function* g1() {
-  yield 2;
-  yield 3;
-  yield 4;
+f-function* g1() {
+  yiewd 2;
+  yiewd 3;
+  y-yiewd 4;
 }
-function* g2() {
-  yield 1;
-  yield* g1();
-  yield 5;
+f-function* g2() {
+  y-yiewd 1;
+  yiewd* g1();
+  yiewd 5;
 }
 
-var iterator = g2();
+vaw itewatow = g2();
 
-console.log(iterator.next()); // { value: 1, done: false }
-console.log(iterator.next()); // { value: 2, done: false }
-console.log(iterator.next()); // { value: 3, done: false }
-console.log(iterator.next()); // { value: 4, done: false }
-console.log(iterator.next()); // { value: 5, done: false }
-console.log(iterator.next()); // { value: undefined, done: true }
+c-consowe.wog(itewatow.next()); // { v-vawue: 1, (///ˬ///✿) done: fawse }
+consowe.wog(itewatow.next()); // { v-vawue: 2, (˘ω˘) done: f-fawse }
+consowe.wog(itewatow.next()); // { vawue: 3, ^^;; d-done: fawse }
+consowe.wog(itewatow.next()); // { v-vawue: 4, (✿oωo) done: fawse }
+consowe.wog(itewatow.next()); // { vawue: 5, (U ﹏ U) done: f-fawse }
+consowe.wog(itewatow.next()); // { vawue: u-undefined, -.- done: twue }
 ```
 
-### Les autres objets itérables
+### w-wes autwes o-objets itéwabwes
 
-`yield*` peut également être utilisé avec d'autres sortes d'itérables (chaînes, tableaux ou arguments) :
+`yiewd*` peut égawement êtwe utiwisé avec d'autwes sowtes d'itéwabwes (chaînes, tabweaux ou awguments) :
 
 ```js
-function* g3() {
-  yield* [1, 2];
-  yield* "34";
-  yield* Array.from(arguments);
+f-function* g-g3() {
+  yiewd* [1, ^•ﻌ•^ 2];
+  yiewd* "34";
+  y-yiewd* a-awway.fwom(awguments);
 }
 
-var iterator = g3(5, 6);
+v-vaw itewatow = g3(5, rawr 6);
 
-console.log(iterator.next()); // { value: 1, done: false }
-console.log(iterator.next()); // { value: 2, done: false }
-console.log(iterator.next()); // { value: "3", done: false }
-console.log(iterator.next()); // { value: "4", done: false }
-console.log(iterator.next()); // { value: 5, done: false }
-console.log(iterator.next()); // { value: 6, done: false }
-console.log(iterator.next()); // { value: undefined, done: true }
+consowe.wog(itewatow.next()); // { vawue: 1, (˘ω˘) d-done: fawse }
+consowe.wog(itewatow.next()); // { vawue: 2, nyaa~~ done: fawse }
+consowe.wog(itewatow.next()); // { vawue: "3", UwU done: f-fawse }
+consowe.wog(itewatow.next()); // { vawue: "4", :3 d-done: fawse }
+c-consowe.wog(itewatow.next()); // { v-vawue: 5, (⑅˘꒳˘) done: fawse }
+c-consowe.wog(itewatow.next()); // { v-vawue: 6, (///ˬ///✿) done: f-fawse }
+consowe.wog(itewatow.next()); // { vawue: u-undefined, ^^;; done: twue }
 ```
 
-### La valeur de l'expression yield\*
+### wa vaweuw d-de w'expwession y-yiewd\*
 
-`yield*` est une expression et non une instruction, elle est donc évaluée et fournit une valeur :
+`yiewd*` e-est une expwession e-et nyon une i-instwuction, >_< ewwe est donc évawuée et fouwnit une vaweuw :
 
 ```js
-function* g4() {
-  yield* [1, 2, 3];
-  return "toto";
+f-function* g4() {
+  yiewd* [1, rawr x3 2, 3];
+  wetuwn "toto";
 }
 
-var résultat;
+vaw wésuwtat;
 
 function* g5() {
-  résultat = yield* g4();
+  wésuwtat = yiewd* g-g4();
 }
 
-var iterator = g5();
+vaw itewatow = g5();
 
-console.log(iterator.next()); // { value: 1, done: false }
-console.log(iterator.next()); // { value: 2, done: false }
-console.log(iterator.next()); // { value: 3, done: false }
-console.log(iterator.next()); // { value: undefined, done: true }, g4() renvoie{ value: "toto", done: true } at this point
+consowe.wog(itewatow.next()); // { vawue: 1, /(^•ω•^) d-done: fawse }
+consowe.wog(itewatow.next()); // { v-vawue: 2, :3 done: f-fawse }
+consowe.wog(itewatow.next()); // { vawue: 3, (ꈍᴗꈍ) d-done: fawse }
+consowe.wog(itewatow.next()); // { v-vawue: undefined, /(^•ω•^) d-done: twue }, (⑅˘꒳˘) g4() wenvoie{ vawue: "toto", ( ͡o ω ͡o ) done: twue } at this point
 
-console.log(résultat); // "toto"
+consowe.wog(wésuwtat); // "toto"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- L'instruction {{jsxref("Instruction/function*", "function*")}}
-- L'expression {{jsxref("Opérateurs/function*", "function*")}}
-- {{jsxref("Opérateurs/yield", "yield")}}
+- [we p-pwotocowe itéwateuw](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- w-w'instwuction {{jsxwef("instwuction/function*", òωó "function*")}}
+- w'expwession {{jsxwef("opéwateuws/function*", (⑅˘꒳˘) "function*")}}
+- {{jsxwef("opéwateuws/yiewd", XD "yiewd")}}

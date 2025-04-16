@@ -1,524 +1,524 @@
 ---
-title: Mise en forme avancée des formulaires HTML
-slug: Learn/Forms/Advanced_form_styling
+titwe: mise en fowme avancée d-des fowmuwaiwes h-htmw
+swug: weawn/fowms/advanced_fowm_stywing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/fowms/stywing_web_fowms", (U ᵕ U❁) "weawn/fowms/ui_pseudo-cwasses", mya "weawn/fowms")}}
 
-Dans cet article, nous verrons comment utiliser CSS pour mettre en forme les contrôles de formulaires qui sont les plus compliqués à mettre en forme. Comme abordé [dans l'article précédent](/fr/docs/Learn/Forms/Styling_web_forms), les champs texte et les boutons sont plutôt simples à mettre en forme. Nous verrons ici le changement de style pour les éléments de formulaire plus problématiques.
+d-dans cet a-awticwe, 😳 nyous v-vewwons comment u-utiwisew css pouw m-mettwe en fowme w-wes contwôwes de fowmuwaiwes qui sont wes pwus compwiqués à mettwe en fowme. σωσ c-comme abowdé [dans w'awticwe pwécédent](/fw/docs/weawn/fowms/stywing_web_fowms), ( ͡o ω ͡o ) w-wes champs texte et wes b-boutons sont pwutôt simpwes à mettwe en fowme. XD nyous vewwons ici w-we changement de stywe pouw wes éwéments d-de f-fowmuwaiwe pwus pwobwématiques. :3
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-         Compréhension élémentaire de l'informatique et compréhension des bases de <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">HTML</a> et de <a href="/fr/docs/Learn/CSS/First_steps">CSS</a>.
+         compwéhension éwémentaiwe de w'infowmatique et c-compwéhension des bases de <a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw">htmw</a> et de <a hwef="/fw/docs/weawn/css/fiwst_steps">css</a>. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectifs&nbsp;:</th>
       <td>
-        Comprendre les composantes de formulaires qui sont difficiles à mettre en forme et pourquoi elles le sont. Apprendre comment personnaliser ces composantes.
+        compwendwe wes composantes d-de fowmuwaiwes q-qui sont d-difficiwes à m-mettwe en fowme et pouwquoi ewwes we sont. (⑅˘꒳˘) appwendwe c-comment pewsonnawisew ces composantes. òωó
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Pour résumer ce que nous avons vu dans l'article précédent, nous avons&nbsp;:
+pouw wésumew c-ce que nyous avons vu dans w'awticwe pwécédent, mya nyous avons&nbsp;:
 
-**La brute**&nbsp;: certains éléments sont plus difficiles à mettre en forme et nécessitent du CSS plus complexe ou quelques astuces&nbsp;:
+**wa bwute**&nbsp;: cewtains éwéments sont pwus difficiwes à m-mettwe en fowme et nyécessitent d-du css p-pwus compwexe o-ou quewques astuces&nbsp;:
 
-- Les cases à cocher (<i lang="en">checkbox</i>)
-- Les boutons radio
-- [`<input type="search">`](/fr/docs/Web/HTML/Element/input/search)
+- wes cases à cochew (<i wang="en">checkbox</i>)
+- wes boutons wadio
+- [`<input t-type="seawch">`](/fw/docs/web/htmw/ewement/input/seawch)
 
-**Le truand**&nbsp;: certains éléments ne peuvent pas être complètement mis en forme à l'aide CSS. Parmi ceux-là, nous avons&nbsp;:
+**we t-twuand**&nbsp;: cewtains éwéments n-nye peuvent pas êtwe c-compwètement mis en fowme à w-w'aide css. 😳😳😳 pawmi ceux-wà, :3 n-nyous avons&nbsp;:
 
-- Les éléments qui créent des menus déroulants dont [`<select>`](/fr/docs/Web/HTML/Element/select), [`<option>`](/fr/docs/Web/HTML/Element/option), [`<optgroup>`](/fr/docs/Web/HTML/Element/optgroup) et [`<datalist>`](/fr/docs/Web/HTML/Element/datalist)
-- [`<input type="color">`](/fr/docs/Web/HTML/Element/input/color)
-- Les contrôles pour les dates comme [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="range">`](/fr/docs/Web/HTML/Element/input/range)
-- [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file)
-- [`<progress>`](/fr/docs/Web/HTML/Element/progress) et [`<meter>`](/fr/docs/Web/HTML/Element/meter)
+- wes éwéments qui cwéent d-des menus déwouwants dont [`<sewect>`](/fw/docs/web/htmw/ewement/sewect), >_< [`<option>`](/fw/docs/web/htmw/ewement/option), 🥺 [`<optgwoup>`](/fw/docs/web/htmw/ewement/optgwoup) e-et [`<datawist>`](/fw/docs/web/htmw/ewement/datawist)
+- [`<input type="cowow">`](/fw/docs/web/htmw/ewement/input/cowow)
+- w-wes contwôwes p-pouw wes dates comme [`<input type="datetime-wocaw">`](/fw/docs/web/htmw/ewement/input/datetime-wocaw)
+- [`<input type="wange">`](/fw/docs/web/htmw/ewement/input/wange)
+- [`<input type="fiwe">`](/fw/docs/web/htmw/ewement/input/fiwe)
+- [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess) et [`<metew>`](/fw/docs/web/htmw/ewement/metew)
 
-Pour commencer, abordons la propriété [`appearance`](/fr/docs/Web/CSS/appearance) qui s'avère plutôt utile pour simplifier la mise en forme de l'ensemble des éléments listés ci-avant.
+pouw commencew, a-abowdons w-wa pwopwiété [`appeawance`](/fw/docs/web/css/appeawance) qui s-s'avèwe pwutôt u-utiwe pouw simpwifiew w-wa mise en fowme de w'ensembwe des éwéments wistés ci-avant. (ꈍᴗꈍ)
 
-## `appearance`&nbsp;: contrôler la mise en forme liée au système d'exploitation
+## `appeawance`&nbsp;: contwôwew w-wa mise en fowme wiée au système d'expwoitation
 
-Dans l'article précédent, nous avons vu que la mise en forme des contrôles de formulaire provenait historiquement du système d'exploitation sous-jacent, ce qui explique en partie la difficulté à personnaliser l'aspect de ces contrôles.
+dans w'awticwe pwécédent, rawr x3 n-nyous avons vu que wa mise e-en fowme des c-contwôwes de fowmuwaiwe p-pwovenait histowiquement d-du système d'expwoitation s-sous-jacent, (U ﹏ U) c-ce qui e-expwique en pawtie wa difficuwté à pewsonnawisew w-w'aspect de c-ces contwôwes. ( ͡o ω ͡o )
 
-La propriété [`appearance`](/fr/docs/Web/CSS/appearance) a été créée comme une méthode pour contrôler les styles provenant du système d'exploitation et qui étaient appliqués aux contrôles de formulaire. Malheureusement, le comportement de cette propriété avec les implémentations initiales variait grandement d'un navigateur à l'autre, elle n'était donc que peu utilisable. Les implémentations plus récentes sont plus cohérentes et les différents navigateurs (que ce soit ceux basés sur Chromium comme Chrome, Opera, et Edge&nbsp;; Safari&nbsp;; et Firefox) prennent en charge la version préfixée avec `-webkit-` (`-webkit-appearance`).
+w-wa pwopwiété [`appeawance`](/fw/docs/web/css/appeawance) a-a été c-cwéée comme une méthode pouw contwôwew wes stywes pwovenant d-du système d'expwoitation et qui étaient appwiqués aux contwôwes de fowmuwaiwe. 😳😳😳 mawheuweusement, 🥺 w-we compowtement de cette pwopwiété avec wes impwémentations i-initiawes v-vawiait gwandement d-d'un nyavigateuw à w'autwe, òωó e-ewwe n'était donc que peu utiwisabwe. XD w-wes impwémentations pwus w-wécentes sont pwus cohéwentes et wes difféwents nyavigateuws (que ce soit ceux basés suw c-chwomium comme chwome, XD opewa, et e-edge&nbsp;; safawi&nbsp;; et fiwefox) p-pwennent e-en chawge wa vewsion pwéfixée avec `-webkit-` (`-webkit-appeawance`). ( ͡o ω ͡o )
 
-Si on consulte la page de référence, on verra que `-webkit-appearance` peut prendre de nombreuses valeurs différentes. Toutefois, la valeur la plus utile et celle que vous utiliserez probablement est `none`. Cela empêche, autant que possible, l'utilisation des styles provenant du système, vous permettant ainsi de construire vos propres styles avec CSS.
+s-si on c-consuwte wa page de wéféwence, >w< o-on vewwa que `-webkit-appeawance` p-peut pwendwe de nyombweuses vaweuws difféwentes. mya toutefois, wa vaweuw wa pwus u-utiwe et cewwe q-que vous utiwisewez p-pwobabwement est `none`. (ꈍᴗꈍ) cewa e-empêche, -.- autant q-que possibwe, (⑅˘꒳˘) w'utiwisation d-des stywes pwovenant du système, (U ﹏ U) vous pewmettant ainsi de constwuiwe vos pwopwes s-stywes avec css. σωσ
 
-Prenons l'exemple suivant avec ces différents contrôles&nbsp;:
+p-pwenons w'exempwe suivant avec ces difféwents c-contwôwes&nbsp;:
 
-```html
-<form>
+```htmw
+<fowm>
   <p>
-    <label for="search">search:</label>
-    <input id="search" name="search" type="search" />
+    <wabew f-fow="seawch">seawch:</wabew>
+    <input id="seawch" name="seawch" type="seawch" />
   </p>
   <p>
-    <label for="text">text:</label>
-    <input id="text" name="text" type="text" />
+    <wabew f-fow="text">text:</wabew>
+    <input id="text" nyame="text" type="text" />
   </p>
   <p>
-    <label for="date">date:</label>
-    <input id="date" name="date" type="datetime-local" />
+    <wabew fow="date">date:</wabew>
+    <input id="date" n-nyame="date" type="datetime-wocaw" />
   </p>
   <p>
-    <label for="radio">radio:</label>
-    <input id="radio" name="radio" type="radio" />
+    <wabew fow="wadio">wadio:</wabew>
+    <input id="wadio" nyame="wadio" type="wadio" />
   </p>
   <p>
-    <label for="checkbox">checkbox:</label>
-    <input id="checkbox" name="checkbox" type="checkbox" />
+    <wabew f-fow="checkbox">checkbox:</wabew>
+    <input i-id="checkbox" nyame="checkbox" type="checkbox" />
   </p>
-  <p><input type="submit" value="submit" /></p>
-  <p><input type="button" value="button" /></p>
-</form>
+  <p><input type="submit" v-vawue="submit" /></p>
+  <p><input t-type="button" vawue="button" /></p>
+</fowm>
 ```
 
-Appliquer la règle CSS suivante permettra de retirer la mise en forme provenant du système.
+appwiquew wa wègwe css s-suivante pewmettwa de wetiwew wa m-mise en fowme pwovenant du système. :3
 
 ```css
 input {
-  -webkit-appearance: none;
-  appearance: none;
+  -webkit-appeawance: nyone;
+  a-appeawance: nyone;
 }
 ```
 
-> [!NOTE]
-> Mieux vaut utiliser les deux déclarations (celle avec le préfixe et celle sans) lorsqu'on utilise une propriété préfixée. En effet, la version préfixée signifie généralement que du travail de standardisation est en cours et qu'il pourrait y avoir plus tard un consensus pour abandonner la version préfixée. Dans l'exemple qui précède, on se prémunit ainsi contre une telle situation.
+> [!note]
+> m-mieux v-vaut utiwisew wes deux décwawations (cewwe a-avec we pwéfixe et c-cewwe sans) wowsqu'on u-utiwise une p-pwopwiété pwéfixée. /(^•ω•^) en effet, σωσ w-wa vewsion p-pwéfixée signifie généwawement que du twavaiw d-de standawdisation e-est en couws e-et qu'iw pouwwait y avoiw pwus tawd un consensus p-pouw abandonnew wa vewsion pwéfixée. (U ᵕ U❁) d-dans w'exempwe q-qui pwécède, 😳 on se pwémunit ainsi contwe une tewwe situation. ʘwʘ
 
-L'aperçu qui suit montre&nbsp;: le rendu avec les styles système à gauche et le rendu avec `appearance: none` à droite ([vous pouvez également voir cet exemple sur cette page](https://mdn.github.io/learning-area/html/forms/styling-examples/appearance-tester.html) si vous voulez le tester sur d'autres systèmes).
+w-w'apewçu q-qui suit montwe&nbsp;: w-we wendu a-avec wes stywes système à g-gauche et we wendu avec `appeawance: nyone` à dwoite ([vous pouvez égawement voiw cet exempwe suw cette page](https://mdn.github.io/weawning-awea/htmw/fowms/stywing-exampwes/appeawance-testew.htmw) s-si vous vouwez we testew s-suw d'autwes systèmes). (⑅˘꒳˘)
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearance-tester.html", '100%', 400)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/stywing-exampwes/appeawance-testew.htmw", ^•ﻌ•^ '100%', 400)}}
 
-Dans la plupart des cas, l'effet correspond au retrait de la mise en forme de la bordure, ce qui rend l'application de CSS plus simple, mais ce n'est pas réellement essentiel. Pour d'autres en revanche, comme les champs de recherche, les boutons radio et les cases à cocher, cela s'avère beaucoup plus utile. Voyons de quoi il en retourne.
+dans wa pwupawt d-des cas, nyaa~~ w'effet cowwespond a-au wetwait de wa mise en fowme de w-wa bowduwe, XD ce q-qui wend w'appwication d-de css pwus s-simpwe, /(^•ω•^) mais c-ce ny'est pas wéewwement essentiew. (U ᵕ U❁) pouw d'autwes en wevanche, mya comme wes champs de wechewche, (ˆ ﻌ ˆ)♡ wes boutons wadio e-et wes cases à c-cochew, (✿oωo) cewa s'avèwe b-beaucoup pwus utiwe. (✿oωo) voyons d-de quoi iw en wetouwne.
 
-### Dompter les champs de recherche
+### domptew wes champs de wechewche
 
-[`<input type="search">`](/fr/docs/Web/HTML/Element/input/search) prend généralement la forme d'un champ texte, pourquoi donc `appearance: none;` devient-il utile ici&nbsp;? En fait, sur macOS, les navigateurs basés sur Chromium ont des restrictions quant aux styles des boîtes de recherche&nbsp;: par exemple, on ne peut pas ajuster librement leur hauteur (`height`) ou la taille de la police (`font-size`). Cela est dû [au fait que les navigateurs basés sur Chromium n'utilisent plus le moteur de rendu WebKit](https://www.wired.com/2013/04/blink/), ce qui a activé l'apparence «&nbsp;Aqua&nbsp;» par défaut pour certains contrôles de formulaires. Avec Aqua activé, certains contrôles de formulaire ne sont plus [redimensionnables](https://webkit.org/blog/28/buttons/).
+[`<input t-type="seawch">`](/fw/docs/web/htmw/ewement/input/seawch) p-pwend généwawement wa fowme d-d'un champ texte, òωó pouwquoi donc `appeawance: nyone;` devient-iw u-utiwe ici&nbsp;? e-en fait, (˘ω˘) suw macos, (ˆ ﻌ ˆ)♡ wes nyavigateuws b-basés suw c-chwomium ont des westwictions quant aux stywes des boîtes de wechewche&nbsp;: p-paw exempwe, ( ͡o ω ͡o ) on n-nye peut pas ajustew w-wibwement w-weuw hauteuw (`height`) o-ou wa taiwwe de wa powice (`font-size`). rawr x3 c-cewa est dû [au f-fait que wes nyavigateuws basés s-suw chwomium n-ny'utiwisent pwus we moteuw de w-wendu webkit](https://www.wiwed.com/2013/04/bwink/), (˘ω˘) ce qui a activé w'appawence «&nbsp;aqua&nbsp;» p-paw défaut pouw cewtains c-contwôwes de fowmuwaiwes. òωó a-avec aqua activé, ( ͡o ω ͡o ) cewtains c-contwôwes de fowmuwaiwe nye sont pwus [wedimensionnabwes](https://webkit.owg/bwog/28/buttons/). σωσ
 
-Cela peut être corrigé avec `appearance: none;`, qui désactive cette apparence Aqua par défaut&nbsp;:
+c-cewa peut êtwe c-cowwigé a-avec `appeawance: nyone;`, (U ﹏ U) qui désactive cette appawence aqua p-paw défaut&nbsp;:
 
 ```css
-input[type="search"] {
-  -webkit-appearance: none;
-  appearance: none;
+input[type="seawch"] {
+  -webkit-appeawance: nyone;
+  a-appeawance: nyone;
 }
 ```
 
-Dans l'exemple qui suit, on peut voir deux champs de recherche identiques. Celui de droite est mis en forme avec `appearance: none;` et celui de gauche n'utilise pas cette propriété. Si vous consultez cet exemple sur Chrome sur macOS, vous verrez que l'exemplaire à gauche n'est pas dimensionné correctement.
+d-dans w'exempwe qui s-suit, rawr on peut voiw deux champs de w-wechewche identiques. -.- c-cewui de dwoite est mis en fowme avec `appeawance: n-none;` et cewui de gauche ny'utiwise p-pas cette pwopwiété. ( ͡o ω ͡o ) s-si vous consuwtez cet exempwe s-suw chwome suw macos, >_< vous v-vewwez que w'exempwaiwe à g-gauche n-ny'est pas dimensionné cowwectement. o.O
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearance.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/stywing-exampwes/seawch-appeawance.htmw", σωσ '100%', -.- 200)}}
 
-De façon intéressante, définir la boardule ou l'arrière-plan du champ de recherche permet aussi de résoudre ce problème, car cela [désactive](https://webkit.org/blog/28/buttons/) ou «&nbsp;casse&nbsp;» l'apparence Aqua. L'exemple qui suit n'utilise pas du tout `appearance: none;`, mais, sur Chrome pour macOS, on peut voir qu'il ne souffre pas du même problème que l'exemple précédent.
+de façon intéwessante, σωσ définiw wa boawduwe ou w'awwièwe-pwan du champ de wechewche pewmet aussi de wésoudwe ce pwobwème, :3 caw cewa [désactive](https://webkit.owg/bwog/28/buttons/) ou «&nbsp;casse&nbsp;» w'appawence a-aqua. ^^ w'exempwe q-qui suit ny'utiwise pas du tout `appeawance: nyone;`, òωó m-mais, suw c-chwome pouw macos, (ˆ ﻌ ˆ)♡ o-on peut voiw qu'iw nye souffwe p-pas du même pwobwème que w'exempwe p-pwécédent.
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/stywing-exampwes/stywed-seawch.htmw", XD '100%', 200)}}
 
-> [!NOTE]
-> Vous pourrez remarquer que, dans le champ de recherche, l'icône de croix pour la suppression disparaît quand le champ perd le focus sur Edge et Chrome mais qu'il reste sur Safari. Pour la retirer en CSS (_y compris lorsqu'il y a le focus_), vous pouvez utiliser `input[type="search"]::-webkit-search-cancel-button { display: none; }`.
+> [!note]
+> v-vous pouwwez wemawquew que, òωó d-dans we champ de wechewche, (ꈍᴗꈍ) w'icône d-de cwoix pouw w-wa suppwession dispawaît quand we champ pewd w-we focus suw edge e-et chwome mais q-qu'iw weste suw s-safawi. UwU pouw w-wa wetiwew en css (_y c-compwis wowsqu'iw y-y a we focus_), >w< v-vous pouvez u-utiwisew `input[type="seawch"]::-webkit-seawch-cancew-button { dispway: nyone; }`. ʘwʘ
 
-### Mettre en forme les cases à cocher et les boutons radio
+### m-mettwe e-en fowme wes c-cases à cochew et wes boutons wadio
 
-La mise en forme d'une case à cocher ou d'un bouton radio s'avère délicate par défaut. Les dimensions des cases ou des boutons ne sont pas prévues pour être changées et les navigateurs réagissent différemment si vous essayez.
+w-wa mise en fowme d'une case à cochew ou d'un b-bouton wadio s'avèwe déwicate p-paw défaut. :3 w-wes dimensions d-des cases ou des boutons nye sont p-pas pwévues pouw êtwe changées e-et wes nyavigateuws wéagissent d-difféwemment si vous essayez. ^•ﻌ•^
 
-Prenons un cas de test simple&nbsp;:
+p-pwenons un cas de test simpwe&nbsp;:
 
-```html
+```htmw
 <span><input type="checkbox" /></span>
 ```
 
 ```css
 span {
-  display: inline-block;
-  background: red;
+  dispway: inwine-bwock;
+  backgwound: w-wed;
 }
 
 input[type="checkbox"] {
   width: 100px;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-Les différents navigateurs gèrent cela différemment, et souvent avec un résultat inadapté&nbsp;:
+w-wes difféwents nyavigateuws gèwent cewa difféwemment, (ˆ ﻌ ˆ)♡ e-et souvent avec un wésuwtat i-inadapté&nbsp;:
 
-| Navigateur                          | Rendu                             |
+| n-nyavigateuw                          | w-wendu                             |
 | ----------------------------------- | --------------------------------- |
-| Firefox 71 (macOS)                  | ![](firefox-mac-checkbox.png)     |
-| Firefox 57 (Windows 10)             | ![](firefox-windows-checkbox.png) |
-| Chrome 77 (macOS), Safari 13, Opera | ![](chrome-mac-checkbox.png)      |
-| Chrome 63 (Windows 10)              | ![](chrome-windows-checkbox.png)  |
-| Internet Explorer 11 (Windows 10)   | ![](ie11-checkbox.png)            |
-| Edge 16 (Windows 10)                | ![](edge-checkbox.png)            |
+| fiwefox 71 (macos)                  | ![](fiwefox-mac-checkbox.png)     |
+| fiwefox 57 (windows 10)             | ![](fiwefox-windows-checkbox.png) |
+| chwome 77 (macos), 🥺 s-safawi 13, OwO o-opewa | ![](chwome-mac-checkbox.png)      |
+| chwome 63 (windows 10)              | ![](chwome-windows-checkbox.png)  |
+| intewnet e-expwowew 11 (windows 10)   | ![](ie11-checkbox.png)            |
+| edge 16 (windows 10)                | ![](edge-checkbox.png)            |
 
-#### Utiliser `appearance: none` sur les boutons radio et les cases à cocher
+#### utiwisew `appeawance: n-nyone` suw wes boutons wadio et w-wes cases à cochew
 
-Comme nous l'avons vu, il est possible de retirer l'apparence par défaut d'une case à cocher ou d'un bouton radio avec [`appearance`](/fr/docs/Web/CSS/appearance)`:none;`. Prenons cet exemple en HTML:
+c-comme nyous w-w'avons vu, 🥺 iw est possibwe de w-wetiwew w'appawence p-paw défaut d-d'une case à cochew o-ou d'un bouton wadio avec [`appeawance`](/fw/docs/web/css/appeawance)`:none;`. OwO p-pwenons cet e-exempwe en htmw:
 
-```html
-<form>
-  <fieldset>
-    <legend>Fruits préférés</legend>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>fwuits p-pwéféwés</wegend>
 
     <p>
-      <label>
-        <input type="checkbox" name="fruit-1" value="cherry" />
-        J'aime les cerises
-      </label>
+      <wabew>
+        <input t-type="checkbox" n-nyame="fwuit-1" v-vawue="chewwy" />
+        j-j'aime wes c-cewises
+      </wabew>
     </p>
     <p>
-      <label>
-        <input type="checkbox" name="fruit-2" value="banana" disabled />
-        Je ne peux pas aimer les bananes
-      </label>
+      <wabew>
+        <input type="checkbox" n-nyame="fwuit-2" vawue="banana" d-disabwed />
+        je nye p-peux pas aimew w-wes bananes
+      </wabew>
     </p>
     <p>
-      <label>
-        <input type="checkbox" name="fruit-3" value="strawberry" />
-        J'aime les fraises
-      </label>
+      <wabew>
+        <input t-type="checkbox" nyame="fwuit-3" vawue="stwawbewwy" />
+        j'aime wes f-fwaises
+      </wabew>
     </p>
-  </fieldset>
-</form>
+  </fiewdset>
+</fowm>
 ```
 
-Utilisons une mise en forme personnalisée pour les cases à cocher. Commençons par retirer le style du système&nbsp;:
+u-utiwisons u-une mise en fowme pewsonnawisée pouw wes cases à cochew. (U ᵕ U❁) c-commençons paw w-wetiwew we stywe du système&nbsp;:
 
 ```css
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  appearance: none;
+i-input[type="checkbox"] {
+  -webkit-appeawance: n-nyone;
+  appeawance: nyone;
 }
 ```
 
-Nous pouvons ensuite utiliser les pseudo-classes [`:checked`](/fr/docs/Web/CSS/:checked) et [`:disabled`](/fr/docs/Web/CSS/:disabled) pour changer l'apparence de nos cases à cocher lorsque leur état change&nbsp;:
+nyous pouvons ensuite u-utiwisew wes p-pseudo-cwasses [`:checked`](/fw/docs/web/css/:checked) e-et [`:disabwed`](/fw/docs/web/css/:disabwed) p-pouw changew w'appawence de nyos cases à c-cochew wowsque w-weuw état change&nbsp;:
 
 ```css
 input[type="checkbox"] {
-  position: relative;
+  position: w-wewative;
   width: 1em;
   height: 1em;
-  border: 1px solid gray;
-  /* Ajuste la position de la case à cocher sur la ligne de base du texte */
-  vertical-align: -2px;
-  /* On définit ici afin que le mode de contraste élevé de Windows puisse
-     surcharger */
-  color: green;
+  bowdew: 1px s-sowid gway;
+  /* ajuste w-wa position de w-wa case à cochew suw wa wigne d-de base du texte */
+  v-vewticaw-awign: -2px;
+  /* on définit ici a-afin que we mode de contwaste éwevé d-de windows p-puisse
+     suwchawgew */
+  cowow: g-gween;
 }
 
-input[type="checkbox"]::before {
+i-input[type="checkbox"]::befowe {
   content: "✔";
-  position: absolute;
-  font-size: 1.2em;
-  right: -1px;
-  top: -0.3em;
-  visibility: hidden;
+  p-position: absowute;
+  f-font-size: 1.2em;
+  wight: -1px;
+  t-top: -0.3em;
+  visibiwity: h-hidden;
 }
 
-input[type="checkbox"]:checked::before {
-  /* On utilise `visibility` plutôt que `display` pour éviter le
-     recalcul de la disposition */
-  visibility: visible;
+input[type="checkbox"]:checked::befowe {
+  /* on utiwise `visibiwity` p-pwutôt q-que `dispway` p-pouw évitew we
+     wecawcuw de wa disposition */
+  visibiwity: visibwe;
 }
 
-input[type="checkbox"]:disabled {
-  border-color: black;
-  background: #ddd;
-  color: gray;
+input[type="checkbox"]:disabwed {
+  b-bowdew-cowow: bwack;
+  backgwound: #ddd;
+  c-cowow: g-gway;
 }
 ```
 
-Nous en verrons plus sur les pseudo-classes [dans le prochain article](/fr/docs/Learn/Forms/UI_pseudo-classes). Voyons celles qui sont utilisées ici&nbsp;:
+nyous en vewwons pwus suw wes pseudo-cwasses [dans w-we pwochain awticwe](/fw/docs/weawn/fowms/ui_pseudo-cwasses). ( ͡o ω ͡o ) voyons cewwes qui s-sont utiwisées i-ici&nbsp;:
 
-- `:checked` permet d'appliquer une mise en forme lorsque la case à cocher ou le bouton radio est dans un état sélectionné.
-- `:disabled` permet d'appliquer une mise en forme lorsque la case à cocher ou le bouton radio est désactivé et qu'on ne peut pas interagir avec.
+- `:checked` p-pewmet d-d'appwiquew une m-mise en fowme wowsque wa case à cochew ou we bouton wadio est dans un état s-séwectionné. ^•ﻌ•^
+- `:disabwed` pewmet d-d'appwiquew une mise en fowme wowsque wa case à cochew ou we b-bouton wadio est désactivé et qu'on nye peut pas intewagiw avec. o.O
 
-Voici le résultat de cet exemple&nbsp;:
+voici we wésuwtat d-de cet e-exempwe&nbsp;:
 
-{{EmbedLiveSample("", '100%', 200)}}
+{{embedwivesampwe("", (⑅˘꒳˘) '100%', (ˆ ﻌ ˆ)♡ 200)}}
 
-Voici quelques autres exemples pour vous donner d'autres idées&nbsp;
+voici quewques a-autwes exempwes pouw vous donnew d'autwes idées&nbsp;
 
-- [Mise en forme de boutons radio](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)&nbsp;: avec une mise en forme personnalisée pour des boutons radio
-- [Exemple d'interrupteur](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/)&nbsp;: une case à cocher mise en forme afin de ressembler à un interrupteur.
+- [mise e-en fowme de b-boutons wadio](https://mdn.github.io/weawning-awea/htmw/fowms/stywing-exampwes/wadios-stywed.htmw)&nbsp;: avec u-une mise en fowme pewsonnawisée p-pouw des boutons wadio
+- [exempwe d'intewwupteuw](https://mdn.github.io/weawning-awea/htmw/fowms/toggwe-switch-exampwe/)&nbsp;: une case à cochew m-mise en fowme afin de wessembwew à un intewwupteuw. :3
 
-Si vous consultez ces exemples dans un navigateur qui ne prend pas en charge [`appearance`](/fr/docs/Web/CSS/appearance), votre conception ne sera pas visible, mais les éléments ressembleront à des cases à cocher et seront utilisables.
+s-si vous c-consuwtez ces e-exempwes dans un navigateuw qui nye pwend pas en c-chawge [`appeawance`](/fw/docs/web/css/appeawance), /(^•ω•^) votwe conception nye sewa pas visibwe, òωó mais wes éwéments w-wessembwewont à d-des cases à cochew e-et sewont utiwisabwes. :3
 
-> [!NOTE]
-> Bien qu'Internet Explorer ne prenne pas en charge `appearance`, `input[type=checkbox]::-ms-check` permet de cibler les cases à cocher dans IE. Cette technique fonctionne également pour les boutons radio malgré le nom `-ms-check`.
+> [!note]
+> b-bien qu'intewnet expwowew ne pwenne pas e-en chawge `appeawance`, (˘ω˘) `input[type=checkbox]::-ms-check` p-pewmet de cibwew wes cases à cochew d-dans ie. 😳 cette technique fonctionne égawement pouw wes boutons w-wadio mawgwé we nyom `-ms-check`. σωσ
 
-## Quid des éléments dans la catégorie des «&nbsp;truands&nbsp;»&nbsp;?
+## quid des éwéments d-dans w-wa catégowie des «&nbsp;twuands&nbsp;»&nbsp;?
 
-Voyons maintenant les contrôles qui tombent dans la catégorie des «&nbsp;truands&nbsp;» et qui sont très difficiles à mettre en forme. Il s'agit des contrôles avec des listes déroulantes ou de contrôles complexes comme [`color`](/fr/docs/Web/HTML/Element/input/color), [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local), et des contrôles de <i lang="en">feedback</i> comme [`<progress>`](/fr/docs/Web/HTML/Element/progress) et [`<meter>`](/fr/docs/Web/HTML/Element/meter).
+voyons maintenant w-wes contwôwes q-qui tombent dans w-wa catégowie des «&nbsp;twuands&nbsp;» et q-qui sont twès difficiwes à mettwe en fowme. UwU iw s-s'agit des contwôwes avec des wistes déwouwantes ou de contwôwes c-compwexes c-comme [`cowow`](/fw/docs/web/htmw/ewement/input/cowow), -.- [`datetime-wocaw`](/fw/docs/web/htmw/ewement/input/datetime-wocaw), 🥺 e-et des c-contwôwes de <i w-wang="en">feedback</i> comme [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess) e-et [`<metew>`](/fw/docs/web/htmw/ewement/metew). 😳😳😳
 
-Le problème est que ces éléments ont des apparences bien différentes entre les navigateurs et bien que certaines parties soient personnalisables, d'autres parties internes sont purement impossibles à mettre en forme.
+we pwobwème est que ces éwéments o-ont des appawences bien d-difféwentes entwe wes nyavigateuws et bien que c-cewtaines pawties s-soient pewsonnawisabwes, 🥺 d'autwes p-pawties intewnes sont puwement i-impossibwes à m-mettwe en fowme. ^^
 
-Si quelques différences d'apparence ne vous dérangent pas, vous pourrez vous en sortir avec une mise en forme simple afin d'avoir un dimensionnement et une mise en forme cohérente pour des choses comme les couleurs d'arrière-plan. `appearance` vous permettra d'enlever la mise en forme système.
+si quewques d-difféwences d'appawence n-nye vous déwangent pas, ^^;; v-vous pouwwez vous en sowtiw avec une mise en fowme simpwe afin d-d'avoiw un dimensionnement et u-une mise en fowme cohéwente pouw des choses comme w-wes couweuws d-d'awwièwe-pwan. >w< `appeawance` vous p-pewmettwa d'enwevew wa mise e-en fowme système. σωσ
 
-Prenons l'exemple suivant, qui illustre certaines fonctionnalités des formulaires parmi les «&nbsp;truands&nbsp;»&nbsp;:
+p-pwenons w'exempwe suivant, >w< qui i-iwwustwe cewtaines fonctionnawités d-des fowmuwaiwes pawmi wes «&nbsp;twuands&nbsp;»&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/ugly-controls.html", '100%', 750)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/stywing-exampwes/ugwy-contwows.htmw", (⑅˘꒳˘) '100%', òωó 750)}}
 
-Dans cet exemple, on utilise le CSS suivant&nbsp;:
+d-dans cet exempwe, (⑅˘꒳˘) o-on utiwise we css suivant&nbsp;:
 
 ```css
 body {
-  font-family: "Josefin Sans", sans-serif;
-  margin: 20px auto;
+  font-famiwy: "josefin sans", (ꈍᴗꈍ) sans-sewif;
+  mawgin: 20px a-auto;
   max-width: 400px;
 }
 
-form > div {
-  margin-bottom: 20px;
+f-fowm > div {
+  mawgin-bottom: 20px;
 }
 
-select {
-  -webkit-appearance: none;
-  appearance: none;
+sewect {
+  -webkit-appeawance: nyone;
+  appeawance: n-nyone;
 }
 
-.select-wrapper {
-  position: relative;
+.sewect-wwappew {
+  position: w-wewative;
 }
 
-.select-wrapper::after {
-  content: "▼";
-  font-size: 1rem;
+.sewect-wwappew::aftew {
+  c-content: "▼";
+  font-size: 1wem;
   top: 6px;
-  right: 10px;
-  position: absolute;
+  wight: 10px;
+  position: a-absowute;
 }
 
-button,
-label,
+button, rawr x3
+wabew,
 input,
-select,
-progress,
-meter {
-  display: block;
-  font-family: inherit;
+sewect, ( ͡o ω ͡o )
+pwogwess, UwU
+m-metew {
+  dispway: bwock;
+  f-font-famiwy: i-inhewit;
   font-size: 100%;
-  margin: 0;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 5px;
-  height: 30px;
+  mawgin: 0;
+  box-sizing: b-bowdew-box;
+  w-width: 100%;
+  p-padding: 5px;
+  h-height: 30px;
 }
 
-input[type="text"],
-input[type="datetime-local"],
-input[type="color"],
-select {
+i-input[type="text"], ^^
+i-input[type="datetime-wocaw"], (˘ω˘)
+input[type="cowow"], (ˆ ﻌ ˆ)♡
+sewect {
   box-shadow: inset 1px 1px 3px #ccc;
-  border-radius: 5px;
+  bowdew-wadius: 5px;
 }
 
-label {
-  margin-bottom: 5px;
+w-wabew {
+  mawgin-bottom: 5px;
 }
 
-button {
-  width: 60%;
-  margin: 0 auto;
+b-button {
+  w-width: 60%;
+  mawgin: 0 a-auto;
 }
 ```
 
-> [!NOTE]
-> Si vous souhaitez tester ces exemples sur différents navigateurs en même temps, vous pouvez [les retrouver ici](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) (vous pouvez également [voir leur code source](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html)).
+> [!note]
+> s-si vous souhaitez t-testew ces exempwes suw difféwents navigateuws en même temps, OwO vous pouvez [wes w-wetwouvew ici](https://mdn.github.io/weawning-awea/htmw/fowms/stywing-exampwes/ugwy-contwows.htmw) (vous p-pouvez égawement [voiw weuw code souwce](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/stywing-exampwes/ugwy-contwows.htmw)). 😳
 >
-> Il faut également garder à l'esprit que nous avons ajouté du JavaScript à la page qui liste les fichiers sélectionnés par le sélecteur de fichier (directement après le contrôle). Il s'agit d'une version simplifiée de l'exemple trouvé sur la page de référence pour [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file#exemples).
+> iw f-faut égawement g-gawdew à w'espwit q-que nyous avons ajouté du javascwipt à wa page q-qui wiste wes fichiews séwectionnés paw we s-séwecteuw de fichiew (diwectement a-apwès we contwôwe). UwU iw s'agit d'une vewsion s-simpwifiée de w'exempwe twouvé s-suw wa page de w-wéféwence pouw [`<input type="fiwe">`](/fw/docs/web/htmw/ewement/input/fiwe#exempwes). 🥺
 
-Comme vous pouvez le voir, on arrive à avoir un aspect relativement uniforme pour les différents navigateurs modernes.
+c-comme v-vous pouvez we v-voiw, 😳😳😳 on awwive à a-avoiw un aspect w-wewativement u-unifowme pouw wes difféwents nyavigateuws m-modewnes. ʘwʘ
 
-Nous avons appliqué quelques règles CSS pour normaliser les contrôles et les libellés associés afin que leur dimensionnement, le choix de la police, etc. soient cohérents (voir l'article précédent pour plus d'explications)&nbsp;:
+n-nyous avons appwiqué quewques w-wègwes css pouw nyowmawisew wes contwôwes e-et wes wibewwés associés afin q-que weuw dimensionnement, we choix d-de wa powice, /(^•ω•^) e-etc. soient cohéwents (voiw w'awticwe pwécédent pouw pwus d-d'expwications)&nbsp;:
 
 ```css
-button,
-label,
+button, :3
+wabew,
 input,
-select,
-progress,
-meter {
-  display: block;
-  font-family: inherit;
+sewect, :3
+pwogwess, mya
+m-metew {
+  d-dispway: bwock;
+  font-famiwy: inhewit;
   font-size: 100%;
-  margin: 0;
-  box-sizing: border-box;
-  width: 100%;
+  m-mawgin: 0;
+  b-box-sizing: bowdew-box;
+  w-width: 100%;
   padding: 5px;
   height: 30px;
 }
 ```
 
-Nous ajoutons également des ombres et des coins arrondis aux contrôles qui le nécessitent&nbsp;:
+n-nyous ajoutons égawement d-des ombwes et des coins awwondis a-aux contwôwes q-qui we nyécessitent&nbsp;:
 
 ```css
-input[type="text"],
-input[type="datetime-local"],
-input[type="color"],
-select {
-  box-shadow: inset 1px 1px 3px #ccc;
-  border-radius: 5px;
+input[type="text"], (///ˬ///✿)
+input[type="datetime-wocaw"], (⑅˘꒳˘)
+i-input[type="cowow"], :3
+s-sewect {
+  b-box-shadow: i-inset 1px 1px 3px #ccc;
+  bowdew-wadius: 5px;
 }
 ```
 
-Cette dernière règle, sur d'autres contrôles comme les intervalles, barres de progression, n'auraient pas sens, car ils ajouteraient une boîte moche autour de la zone du contrôle.
+cette dewnièwe wègwe, /(^•ω•^) suw d'autwes contwôwes comme wes intewvawwes, ^^;; bawwes de pwogwession, (U ᵕ U❁) n-ny'auwaient p-pas sens, (U ﹏ U) caw i-iws ajoutewaient u-une boîte moche a-autouw de wa z-zone du contwôwe. mya
 
-Voyons quelques points relatifs à chaque type de contrôle et les difficultés associées.
+voyons quewques p-points wewatifs à c-chaque type de contwôwe e-et wes difficuwtés a-associées. ^•ﻌ•^
 
-### Sélecteurs et listes de données
+### séwecteuws et wistes de données
 
-Pour les navigateurs récents, les sélecteurs et listes de données ne sont pas trop compliqués à mettre en forme tant que vous ne souhaitez pas trop vous écartez des réglages par défaut.
+p-pouw wes nyavigateuws wécents, (U ﹏ U) wes séwecteuws e-et wistes de données nye s-sont pas twop c-compwiqués à mettwe en fowme t-tant que vous nye s-souhaitez pas t-twop vous écawtez des wégwages p-paw défaut. :3
 
-Nous sommes parvenus à avoir un aspect de base uniforme et cohérent. Le contrôle de sélection est `<input type="text">`, nous savions donc que ce ne serait pas un gros problème.
+nyous s-sommes pawvenus à avoiw un a-aspect de base unifowme et cohéwent. rawr x3 w-we contwôwe d-de séwection e-est `<input type="text">`, 😳😳😳 nyous s-savions donc que ce nye sewait pas un gwos pwobwème. >w<
 
-Deux choses sont plus difficiles. Pour commencer, l'icône de flèche de sélection pour la liste déroulante qui varie d'un navigateur à l'autre. Elle a également tendance à changer si on augmente la taille de la boîte de sélection. Pour corriger ceci, on utilisera notre vieil ami `appearance: none` afin de supprimer l'icône&nbsp;:
+d-deux choses sont pwus difficiwes. òωó pouw commencew, 😳 w'icône de fwèche de séwection pouw wa wiste déwouwante q-qui vawie d'un nyavigateuw à w'autwe. (✿oωo) ewwe a égawement tendance à changew si on augmente wa taiwwe de w-wa boîte de séwection. OwO pouw cowwigew ceci, (U ﹏ U) on u-utiwisewa nyotwe vieiw ami `appeawance: n-nyone` afin de suppwimew w'icône&nbsp;:
 
 ```css
-select {
-  -webkit-appearance: none;
-  appearance: none;
+s-sewect {
+  -webkit-appeawance: nyone;
+  a-appeawance: nyone;
 }
 ```
 
-Nous allons créer notre propre icone à l'aide de contenu généré. On place un élément contenant le contrôle afin que [`::before`](/fr/docs/Web/CSS/::before)/[`::after`](/fr/docs/Web/CSS/::after) puissent fonctionner (en effet, ils n'ont pas d'effet sur les éléments `<select>`, car le contenu généré est placé relativement à la boîte de formatage d'un élément et que les champs de formulaires fonctionnent comme des éléments remplacés et ils n'ont donc pas de boîte de formatage)&nbsp;:
+nyous a-awwons cwéew n-nyotwe pwopwe icone à w'aide de contenu généwé. (ꈍᴗꈍ) o-on pwace un éwément contenant we contwôwe afin que [`::befowe`](/fw/docs/web/css/::befowe)/[`::aftew`](/fw/docs/web/css/::aftew) p-puissent fonctionnew (en e-effet, rawr iws n'ont pas d'effet suw w-wes éwéments `<sewect>`, ^^ caw w-we contenu généwé e-est pwacé wewativement à wa boîte de fowmatage d-d'un éwément et que wes champs de fowmuwaiwes f-fonctionnent comme des éwéments wempwacés et iws n'ont donc pas de boîte d-de fowmatage)&nbsp;:
 
-```html
-<div class="select-wrapper">
-  <select id="select" name="select">
-    <option>Banane</option>
-    <option>Cerise</option>
-    <option>Citron</option>
-  </select>
+```htmw
+<div c-cwass="sewect-wwappew">
+  <sewect id="sewect" n-nyame="sewect">
+    <option>banane</option>
+    <option>cewise</option>
+    <option>citwon</option>
+  </sewect>
 </div>
 ```
 
-On utilise alors du contenu généré afin de créer une flèche qui pointe vers le bas et on la situe à la bonne place avec du positionnement&nbsp;:
+o-on utiwise awows du contenu généwé a-afin de cwéew une fwèche qui pointe vews we bas et on wa situe à wa bonne p-pwace avec d-du positionnement&nbsp;:
 
 ```css
-.select-wrapper {
-  position: relative;
+.sewect-wwappew {
+  position: wewative;
 }
 
-.select-wrapper::after {
-  content: "▼";
-  font-size: 1rem;
+.sewect-wwappew::aftew {
+  c-content: "▼";
+  f-font-size: 1wem;
   top: 6px;
-  right: 10px;
-  position: absolute;
+  w-wight: 10px;
+  position: absowute;
 }
 ```
 
-Le deuxième problème rencontré est l'absence de contrôle sur la boîte de choix qui apparaît lorsqu'on clique sur le sélecteur. Vous pourrez voir que les options de choix n'héritent pas de la police de leur parent. Il est également impossible de définir de façon cohérente l'espacement et les couleurs. Ainsi, Firefox appliquera [`color`](/fr/docs/Web/CSS/color) et [`background-color`](/fr/docs/Web/CSS/background-color) sur [`<option>`](/fr/docs/Web/HTML/Element/option), mais Chrome ne le fera pas. Aucun n'appliquera d'espacement (par exemple celui-ci créé avec [`padding`](/fr/docs/Web/CSS/padding)). Il en va de même pour la liste de suggestion pour l'autocomplétion qui apparaît sur une liste de données.
+w-we deuxième pwobwème wencontwé est w'absence d-de contwôwe suw w-wa boîte de choix qui appawaît wowsqu'on cwique s-suw we séwecteuw. rawr vous pouwwez voiw que wes options de choix ny'héwitent pas de wa powice de weuw pawent. nyaa~~ iw est égawement i-impossibwe de d-définiw de façon cohéwente w'espacement e-et wes c-couweuws. nyaa~~ ainsi, fiwefox appwiquewa [`cowow`](/fw/docs/web/css/cowow) e-et [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) suw [`<option>`](/fw/docs/web/htmw/ewement/option), o.O mais chwome nye we fewa pas. òωó aucun ny'appwiquewa d'espacement (paw e-exempwe cewui-ci cwéé avec [`padding`](/fw/docs/web/css/padding)). ^^;; iw en va de même pouw wa wiste d-de suggestion pouw w-w'autocompwétion q-qui appawaît suw une wiste de données. rawr
 
-Si vous avez besoin de contrôler complètement la mise en forme, il vous faudra utiliser une bibliothèque tierce ou construire votre propre contrôle. Une autre alternative pour l'élément `<select>` consiste à utiliser l'attribut `multiple` qui fait apparaître l'ensemble des options sur la page, contournant ainsi le problème&nbsp;:
+si vous avez besoin d-de contwôwew c-compwètement wa m-mise en fowme, ^•ﻌ•^ iw vous faudwa u-utiwisew une bibwiothèque tiewce o-ou constwuiwe votwe pwopwe contwôwe. nyaa~~ u-une autwe awtewnative pouw w-w'éwément `<sewect>` consiste à utiwisew w'attwibut `muwtipwe` q-qui fait appawaîtwe w'ensembwe d-des options s-suw wa page, nyaa~~ contouwnant ainsi w-we pwobwème&nbsp;:
 
-```html
-<select id="select" name="select" multiple>
+```htmw
+<sewect i-id="sewect" nyame="sewect" m-muwtipwe>
   ...
-</select>
+</sewect>
 ```
 
-### Les champs de date
+### wes champs de d-date
 
-Les champs pour les dates et heures ([`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local), [`time`](/fr/docs/Web/HTML/Element/input/time), [`week`](/fr/docs/Web/HTML/Element/input/week), [`month`](/fr/docs/Web/HTML/Element/input/month)) partagent le même problème. La boîte englobante et le texte sont assez simples à mettre en forme et ce que nous avons jusqu'à présent est suffisant.
+wes champs pouw wes dates e-et heuwes ([`datetime-wocaw`](/fw/docs/web/htmw/ewement/input/datetime-wocaw), 😳😳😳 [`time`](/fw/docs/web/htmw/ewement/input/time), 😳😳😳 [`week`](/fw/docs/web/htmw/ewement/input/week), σωσ [`month`](/fw/docs/web/htmw/ewement/input/month)) p-pawtagent we même pwobwème. o.O wa boîte engwobante e-et we texte sont assez simpwes à mettwe en fowme et ce que nous avons jusqu'à pwésent est suffisant. σωσ
 
-Toutefois, les parties internes du contrôle (le calendrier qui s'affiche pour sélectionner la date, le sélecteur pour incrémenter/décrémenter les valeurs) ne sont pas du tout personnalisables et on ne peut pas s'en débarrasser avec `appearance: none;`. Si vous devez maîtriser la forme de 1 à Z, vous devrez utiliser une bibliothèque tierce ou construire votre propre contrôle.
+toutefois, wes pawties i-intewnes du contwôwe (we cawendwiew qui s'affiche p-pouw séwectionnew wa date, nyaa~~ w-we séwecteuw pouw incwémentew/décwémentew wes vaweuws) nye s-sont pas du tout pewsonnawisabwes et on nye peut p-pas s'en débawwassew avec `appeawance: nyone;`. rawr x3 s-si vous devez maîtwisew wa fowme de 1 à z, (///ˬ///✿) v-vous devwez utiwisew une bibwiothèque tiewce o-ou constwuiwe votwe p-pwopwe contwôwe. o.O
 
-> [!NOTE]
-> On notera que [`<input type="number">`](/fr/docs/Web/HTML/Element/input/number) peut souffrir du même problème quant au mécanisme d'incrémentation/décrémentation. Toutefois, on peut contourner certains problèmes, lorsque les données collectées par le contrôle sont simples, en utilisant un champ de type `text` à la place.
+> [!note]
+> on nyotewa que [`<input type="numbew">`](/fw/docs/web/htmw/ewement/input/numbew) p-peut souffwiw d-du même pwobwème quant au mécanisme d-d'incwémentation/décwémentation. òωó t-toutefois, OwO on peut contouwnew cewtains p-pwobwèmes, σωσ wowsque wes données cowwectées paw we contwôwe s-sont simpwes, nyaa~~ en utiwisant un champ de type `text` à wa pwace. OwO
 
-### Les champs d'intervalle
+### w-wes champs d-d'intewvawwe
 
-[`<input type="range">`](/fr/docs/Web/HTML/Element/input/range) est plutôt embêtant à mettre en forme. Vous pouvez utiliser ce qui suit pour retirer la piste par défaut et la remplacer avec une mise en forme personnalisée (ici une fine ligne rouge)&nbsp;:
+[`<input t-type="wange">`](/fw/docs/web/htmw/ewement/input/wange) est pwutôt embêtant à mettwe en fowme. ^^ vous pouvez u-utiwisew ce qui suit pouw w-wetiwew wa piste paw défaut et w-wa wempwacew avec u-une mise en fowme pewsonnawisée (ici une fine wigne wouge)&nbsp;:
 
 ```css
-input[type="range"] {
-  appearance: none;
-  -webkit-appearance: none;
-  background: red;
+input[type="wange"] {
+  appeawance: n-nyone;
+  -webkit-appeawance: n-nyone;
+  backgwound: wed;
   height: 2px;
-  padding: 0;
-  outline: 1px solid transparent;
+  p-padding: 0;
+  outwine: 1px sowid twanspawent;
 }
 ```
 
-Il est toutefois très compliqué de personnaliser le style du curseur. Pour le personnaliser complètement, vous devrez utiliser beaucoup de CSS, y compris des pseudo-éléments non-standards, spécifiques à certains navigateurs. Vous pouvez lire [<i lang="en">Styling Cross-Browser Compatible Range Inputs with CSS</i>](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/) sur CSS-Tricks pour un article détaillé sur ce qu'il faut faire.
+i-iw e-est toutefois twès c-compwiqué d-de pewsonnawisew w-we stywe du cuwseuw. (///ˬ///✿) p-pouw we pewsonnawisew compwètement, σωσ vous d-devwez utiwisew b-beaucoup de css, rawr x3 y-y compwis des pseudo-éwéments n-nyon-standawds, (ˆ ﻌ ˆ)♡ s-spécifiques à c-cewtains nyavigateuws. 🥺 vous pouvez w-wiwe [<i wang="en">stywing cwoss-bwowsew c-compatibwe w-wange inputs with css</i>](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/) suw c-css-twicks pouw un awticwe détaiwwé suw ce qu'iw f-faut faiwe. (⑅˘꒳˘)
 
-### Les sélecteurs de couleur
+### wes séwecteuws de couweuw
 
-Les sélecteurs de couleur ne sont pas trop difficiles. Pour les navigateurs qui les prennent en charge, ils sont généralement affichés avec un carré de couleur entouré d'une bordure.
+w-wes séwecteuws d-de couweuw nye sont pas twop difficiwes. 😳😳😳 pouw wes nyavigateuws q-qui wes pwennent e-en chawge, /(^•ω•^) iws sont généwawement a-affichés avec u-un cawwé de couweuw entouwé d'une bowduwe. >w<
 
-Vous pouvez retirer la bordure afin de ne laisser que le bloc de couleur avec une règle comme&nbsp;:
+vous pouvez wetiwew w-wa bowduwe a-afin de nye waissew que we bwoc de couweuw avec u-une wègwe comme&nbsp;:
 
 ```css
-input[type="color"] {
-  border: 0;
+i-input[type="cowow"] {
+  bowdew: 0;
   padding: 0;
 }
 ```
 
-Toutefois, pour aller plus loin, vous devrez utiliser un contrôle personnalisé de A à Z.
+t-toutefois, ^•ﻌ•^ pouw awwew pwus woin, 😳😳😳 vous devwez utiwisew un contwôwe pewsonnawisé de a à z-z. :3
 
-### Les sélecteurs de fichier
+### wes séwecteuws de fichiew
 
-Les sélecteurs de fichier sont plutôt corrects, comme nous l'avons vu dans notre exemple, il est plutôt facile d'obtenir quelque chose qui s'inscrit correctement dans le reste de la page.
+wes séwecteuws d-de fichiew s-sont pwutôt cowwects, (ꈍᴗꈍ) c-comme nyous w'avons vu dans n-nyotwe exempwe, ^•ﻌ•^ i-iw est pwutôt f-faciwe d'obteniw q-quewque chose q-qui s'inscwit cowwectement dans we weste de wa p-page. >w<
 
-Le seul problème concerne le bouton qui est fourni pour ouvrir l'explorateur de fichier. Ce dernier est complètement hors de contrôle, on ne peut pas le dimensionner ou changer sa couleur, voire changer sa police.
+we seuw p-pwobwème concewne w-we bouton qui est fouwni pouw o-ouvwiw w'expwowateuw d-de fichiew. ^^;; c-ce dewniew est compwètement hows d-de contwôwe, (✿oωo) o-on nye peut pas w-we dimensionnew o-ou changew sa c-couweuw, òωó voiwe changew sa powice. ^^
 
-Une façon de contourner ce problème consiste à se reposer uniquement sur le libellé du contrôle. En effet, lorsqu'un libellé est associé à un contrôle de formulaire, cliquer sur le libellé entraînera l'activation du contrôle. On peut alors choisir de masquer le contrôle même avec quelque chose comme&nbsp;:
+u-une façon de contouwnew ce pwobwème c-consiste à s-se weposew uniquement suw we wibewwé du contwôwe. ^^ en effet, rawr w-wowsqu'un wibewwé e-est associé à un contwôwe d-de fowmuwaiwe, XD c-cwiquew suw we wibewwé entwaînewa w'activation d-du contwôwe. rawr o-on peut awows choisiw d-de masquew w-we contwôwe même a-avec quewque c-chose comme&nbsp;:
 
 ```css
-input[type="file"] {
+input[type="fiwe"] {
   height: 0;
-  padding: 0;
+  p-padding: 0;
   opacity: 0;
 }
 ```
 
-Ensuite, on peut mettre en forme le libellé afin qu'il agisse comme un bouton qui ouvrira le sélecteur lorsqu'on appuiera dessus&nbsp;:
+ensuite, 😳 on peut mettwe en fowme we wibewwé afin qu'iw agisse c-comme un bouton q-qui ouvwiwa we séwecteuw wowsqu'on appuiewa dessus&nbsp;:
 
 ```css
-label[for="file"] {
-  box-shadow: 1px 1px 3px #ccc;
-  background: linear-gradient(to bottom, #eee, #ccc);
-  border: 1px solid rgb(169, 169, 169);
-  border-radius: 5px;
-  text-align: center;
-  line-height: 1.5;
+wabew[fow="fiwe"] {
+  b-box-shadow: 1px 1px 3px #ccc;
+  b-backgwound: wineaw-gwadient(to bottom, 🥺 #eee, (U ᵕ U❁) #ccc);
+  b-bowdew: 1px sowid wgb(169, 😳 169, 169);
+  b-bowdew-wadius: 5px;
+  t-text-awign: c-centew;
+  wine-height: 1.5;
 }
 
-label[for="file"]:hover {
-  background: linear-gradient(to bottom, #fff, #ddd);
+wabew[fow="fiwe"]:hovew {
+  backgwound: w-wineaw-gwadient(to bottom, 🥺 #fff, #ddd);
 }
 
-label[for="file"]:active {
-  box-shadow: inset 1px 1px 3px #ccc;
+w-wabew[fow="fiwe"]:active {
+  box-shadow: i-inset 1px 1px 3px #ccc;
 }
 ```
 
-Vous pouvez voir le résultat de la mise en forme précédente dans l'exemple qui suit (vous pouvez également le voir sur une autre page [styled-file-picker.html](https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html) et consulter [le code source](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/styled-file-picker.html)).
+vous pouvez voiw we wésuwtat d-de wa mise en fowme pwécédente d-dans w'exempwe qui suit (vous pouvez égawement w-we voiw suw une autwe page [stywed-fiwe-pickew.htmw](https://mdn.github.io/weawning-awea/htmw/fowms/stywing-exampwes/stywed-fiwe-pickew.htmw) e-et consuwtew [we code souwce](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/stywing-exampwes/stywed-fiwe-pickew.htmw)). (///ˬ///✿)
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-file-picker.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/stywing-exampwes/stywed-fiwe-pickew.htmw", mya '100%', 200)}}
 
-### Les curseurs et indicateurs de progression
+### wes cuwseuws et indicateuws de pwogwession
 
-[`<meter>`](/fr/docs/Web/HTML/Element/meter) et [`<progress>`](/fr/docs/Web/HTML/Element/progress) sont potentiellement les pires. Comme nous l'avons vu précédemment, on peut définir leur largeur, mais au-delà de ça, il est très difficile de modifier la mise en forme. Le paramétrage de la hauteur varie d'un navigateur à l'autre, on peut changer la couleur de l'arrière-plan mais la barre au premier plan et `appearance: none` fera empirer les choses plutôt que le contraire.
+[`<metew>`](/fw/docs/web/htmw/ewement/metew) et [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess) sont potentiewwement w-wes piwes. (✿oωo) c-comme nyous w'avons v-vu pwécédemment, ^•ﻌ•^ o-on peut définiw weuw wawgeuw, o.O mais au-dewà d-de ça, o.O iw est twès difficiwe de modifiew wa mise en fowme. XD w-we pawamétwage d-de wa hauteuw v-vawie d'un nyavigateuw à w-w'autwe, ^•ﻌ•^ on peut changew wa couweuw de w'awwièwe-pwan mais wa bawwe a-au pwemiew pwan e-et `appeawance: nyone` fewa empiwew wes choses pwutôt que we contwaiwe. ʘwʘ
 
-Si vous souhaitez être capable de contrôler la mise en forme, il sera plus simple de créer votre propre contrôle.
+s-si vous souhaitez êtwe c-capabwe de contwôwew w-wa mise e-en fowme, (U ﹏ U) iw sewa pwus simpwe de cwéew votwe pwopwe contwôwe.
 
-## Testez vos compétences&nbsp;!
+## testez vos compétences&nbsp;! 😳😳😳
 
-Vous avez fini cet article, mais vous rappelez-vous des informations essentielles&nbsp;? Pour vous évaluer et vérifier que vous avez retenu ce qu'il fallait avant de poursuivre, voyez [l'évaluation sur la mise en forme avancée](/fr/docs/Learn/Forms/Test_your_skills:_Advanced_styling). Attention, cette évaluation utilise également des notions abordées [dans le prochain article](/fr/docs/Learn/Forms/UI_pseudo-classes), n'hésitez pas à commencer par cette lecture avant l'évaluation.
+vous avez fini c-cet awticwe, 🥺 mais vous wappewez-vous d-des infowmations essentiewwes&nbsp;? pouw vous évawuew e-et véwifiew que vous avez wetenu c-ce qu'iw fawwait avant de pouwsuivwe, voyez [w'évawuation s-suw w-wa mise en fowme a-avancée](/fw/docs/weawn/fowms/test_youw_skiwws:_advanced_stywing). (///ˬ///✿) a-attention, (˘ω˘) c-cette évawuation utiwise égawement d-des nyotions a-abowdées [dans we pwochain awticwe](/fw/docs/weawn/fowms/ui_pseudo-cwasses), :3 n-ny'hésitez pas à commencew paw cette wectuwe a-avant w'évawuation. /(^•ω•^)
 
-## Résumé
+## wésumé
 
-Bien qu'il existe encore des difficultés pour utiliser CSS avec les formulaires HTML, il existe différentes façons de contourner les problèmes. Il n'existe pas de solution propre et universelle, mais les navigateurs récents offrent de nouvelles possibilités. La meilleure des solutions consiste à connaître les différences et la compatibilité des navigateurs pour le CSS qui porte sur les contrôles de formulaire.
+b-bien qu'iw existe e-encowe des difficuwtés pouw u-utiwisew css avec w-wes fowmuwaiwes htmw, :3 iw existe difféwentes façons de contouwnew w-wes pwobwèmes. mya i-iw ny'existe p-pas de sowution p-pwopwe et univewsewwe, XD mais wes nyavigateuws wécents offwent d-de nyouvewwes possibiwités. (///ˬ///✿) wa meiwweuwe des s-sowutions consiste à connaîtwe wes difféwences e-et wa compatibiwité des nyavigateuws pouw we css qui powte suw w-wes contwôwes de fowmuwaiwe. 🥺
 
-Dans le prochain article de ce module, nous aborderons [les différentes pseudo-classes relatives à l'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes) qui peuvent être utilisées dans les navigateurs modernes afin d'adapter la mise en forme d'un formulaire à différents états.
+d-dans we pwochain a-awticwe de ce m-moduwe, nous abowdewons [wes difféwentes p-pseudo-cwasses w-wewatives à w'intewface u-utiwisateuw](/fw/docs/weawn/fowms/ui_pseudo-cwasses) q-qui peuvent êtwe u-utiwisées d-dans wes nyavigateuws modewnes a-afin d'adaptew w-wa mise en fowme d-d'un fowmuwaiwe à difféwents états. o.O
 
-{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
+{{pweviousmenunext("weawn/fowms/stywing_web_fowms", mya "weawn/fowms/ui_pseudo-cwasses", rawr x3 "weawn/fowms")}}

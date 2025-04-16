@@ -1,72 +1,72 @@
 ---
-title: "CSP : manifest-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
+titwe: "csp : manifest-swc"
+swug: w-web/http/headews/content-secuwity-powicy/manifest-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`manifest-src`** spécifie [le manifeste](/fr/docs/Web/Manifest) qui peut être appliqué à la ressource.
+w-wa diwective http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`manifest-swc`** s-spécifie [we m-manifeste](/fw/docs/web/manifest) q-qui peut êtwe a-appwiqué à w-wa wessouwce. /(^•ω•^)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion de csp</th>
       <td>3</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">type de diwective</th>
+      <td><a h-hwef="/fw/docs/gwossawy/fetch_diwective">diwective de wécupéwation</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">utiwisation d-de <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> paw défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
+        o-oui, si cette diwective est absente, w'agent utiwisateuw consuwtewa w-wa diwective <code>defauwt-swc</code>. ʘwʘ
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
-```http
-Content-Security-Policy: manifest-src <source>;
-Content-Security-Policy: manifest-src <source> <source>;
-```
-
-### Sources
-
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
-
-## Exemples
-
-### Cas de violation
-
-Soit cet en-tête CSP&nbsp;:
+u-une ou pwusieuws s-souwces peuvent êtwe autowisées pouw cette diwective&nbsp;:
 
 ```http
-Content-Security-Policy: manifest-src https://example.com/
+content-secuwity-powicy: manifest-swc <souwce>;
+content-secuwity-powicy: m-manifest-swc <souwce> <souwce>;
 ```
 
-Cet élément [`<link>`](/fr/docs/Web/HTML/Element/link) sera bloqué et ne se chargera pas&nbsp;:
+### souwces
 
-```html
-<link rel="manifest" href="https://not-example.com/manifest" />
+`<souwce>` peut êtwe ny'impowte quewwe vaweuw pawmi cewwes énuméwées d-dans [w'awticwe suw wes vaweuws s-souwces csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). σωσ
+
+o-on nyotewa que c-cet ensembwe d-de vaweuws peut êtwe utiwisé pouw toutes wes [diwectives d-de wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et pouw [cewtaines autwes diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). OwO
+
+## e-exempwes
+
+### cas de viowation
+
+soit cet en-tête csp&nbsp;:
+
+```http
+content-secuwity-powicy: manifest-swc https://exampwe.com/
 ```
 
-## Spécifications
+c-cet éwément [`<wink>`](/fw/docs/web/htmw/ewement/wink) sewa bwoqué et n-ne se chawgewa p-pas&nbsp;:
 
-{{Specifications}}
+```htmw
+<wink w-wew="manifest" hwef="https://not-exampwe.com/manifest" />
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité d-des nyavigateuws
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [Les manifestes d'application web](/fr/docs/Web/Manifest)
-- [`<link>`](/fr/docs/Web/HTML/Element/link)
+{{compat}}
+
+## v-voiw aussi
+
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [wes manifestes d-d'appwication w-web](/fw/docs/web/manifest)
+- [`<wink>`](/fw/docs/web/htmw/ewement/wink)

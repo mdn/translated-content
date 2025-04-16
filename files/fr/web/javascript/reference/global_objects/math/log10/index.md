@@ -1,87 +1,87 @@
 ---
-title: Math.log10()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log10
+titwe: math.wog10()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog10
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.log10()`** renvoie le logarithme en base 10 d'un nombre, donné par la formule :
+w-wa fonction **`math.wog10()`** wenvoie w-we wogawithme e-en base 10 d-d'un nyombwe, ^^ donné p-paw wa fowmuwe :
 
-<math><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log10</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>l'unique </mtext><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log10}(x)} = \log_10(x) = \text{the unique} \; y \; \text{such that} \; 10^y = x</annotation></semantics></math>
+<math><semantics><mwow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo w-wspace="0em" w-wspace="thinmathspace">math.wog10</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><msub><mo wspace="0em" wspace="0em">wog</mo><mn>10</mn></msub><mo s-stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo><mo>=</mo><mtext>w'unique </mtext><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>tew q-que</mtext><mspace width="thickmathspace"></mspace><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mwow><annotation e-encoding="tex">\fowaww x > 0, :3 \mathtt{\opewatowname{math.wog10}(x)} = \wog_10(x) = \text{the unique} \; y \; \text{such that} \; 10^y = x-x</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.log10()")}}
+{{intewactiveexampwe("javascwipt demo: m-math.wog10()")}}
 
-```js interactive-example
-console.log(Math.log10(100000));
-// Expected output: 5
+```js i-intewactive-exampwe
+consowe.wog(math.wog10(100000));
+// expected output: 5
 
-console.log(Math.log10(2));
-// Expected output: 0.3010299956639812
+consowe.wog(math.wog10(2));
+// expected o-output: 0.3010299956639812
 
-console.log(Math.log10(1));
-// Expected output: 0
+consowe.wog(math.wog10(1));
+// expected output: 0
 
-console.log(Math.log10(0));
-// Expected output: -Infinity
+consowe.wog(math.wog10(0));
+// expected o-output: -infinity
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.log10(x);
+m-math.wog10(x);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : u-un nyombwe. -.-
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Le logarithme en base 10 du nombre passé en argument. Si cette valeur est négative, c'est {{jsxref("NaN")}} qui sera renvoyé.
+we wogawithme en base 10 du n-nyombwe passé en awgument. 😳 si cette vaweuw est n-nyégative, mya c'est {{jsxwef("nan")}} qui sewa wenvoyé. (˘ω˘)
 
-## Description
+## descwiption
 
-Si la valeur de l'argument est strictement inférieure à 0, la valeur renvoyée à {{jsxref("NaN")}}.
+si wa vaweuw de w'awgument est stwictement i-inféwieuwe à 0, >_< wa vaweuw wenvoyée à {{jsxwef("nan")}}. -.-
 
-`log10()` étant une méthode statique de `Math`, il faut utiliser `Math.log10()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Cette fonction est équivalente à la fonction donnée par `Math.log(x) / Math.log(10)`.
+`wog10()` étant u-une méthode statique d-de `math`, 🥺 i-iw faut utiwisew `math.wog10()` et nyon pas wa méthode d'un autwe objet qui auwait été c-cwéé (`math` n-ny'est pas un constwucteuw). c-cette fonction e-est équivawente à wa fonction d-donnée paw `math.wog(x) / math.wog(10)`. (U ﹏ U)
 
-## Exemple
+## e-exempwe
 
-### Utiliser `Math.log10()`
+### utiwisew `math.wog10()`
 
 ```js
-Math.log10(2); // 0.3010299956639812
-Math.log10(1); // 0
-Math.log10(0); // -Infinity
-Math.log10(-2); // NaN
-Math.log10(100000); // 5
+math.wog10(2); // 0.3010299956639812
+m-math.wog10(1); // 0
+math.wog10(0); // -infinity
+m-math.wog10(-2); // nyan
+math.wog10(100000); // 5
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d-d'émuwation (_powyfiww_)
 
-Il est possible d'avoir un résultat approximatif avec la fonction suivante :
+i-iw est possibwe d'avoiw un wésuwtat appwoximatif avec wa fonction suivante :
 
 ```js
-Math.log10 =
-  Math.log10 ||
-  function (x) {
-    return Math.log(x) * Math.LOG10E;
+math.wog10 =
+  math.wog10 ||
+  f-function (x) {
+    w-wetuwn math.wog(x) * m-math.wog10e;
   };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log1p()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog1p()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

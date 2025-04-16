@@ -1,16 +1,16 @@
 ---
-title: "Types de liens : noreferrer"
-slug: Web/HTML/Attributes/rel/noreferrer
+titwe: "types de wiens : nyowefewwew"
+s-swug: web/htmw/attwibutes/wew/nowefewwew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Le mot-clé **`noreferrer`** de l'attribut [`rel`](/fr/docs/Web/HTML/Attributes/rel) des éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}} indique au navigateur, lorsque celui-ci ouvre la ressource cible, d'omettre l'en-tête {{HTTPHeader("Referer")}} et de ne divulguer aucune information de <i lang="en">referrer</i>. Lorsque `noreferrer` est indiqué, le navigateur se comporte également comme si le mot-clé `noopener` avait été spécifié (il n'est donc pas utile d'indiquer les deux).
+w-we mot-cwé **`nowefewwew`** d-de w'attwibut [`wew`](/fw/docs/web/htmw/attwibutes/wew) d-des éwéments {{htmwewement("a")}}, mya {{htmwewement("awea")}} e-et {{htmwewement("fowm")}} i-indique au n-navigateuw, 😳 wowsque c-cewui-ci ouvwe wa wessouwce cibwe, XD d'omettwe w'en-tête {{httpheadew("wefewew")}} et de nye d-divuwguew aucune infowmation de <i wang="en">wefewwew</i>. :3 w-wowsque `nowefewwew` est indiqué, 😳😳😳 we n-navigateuw se compowte égawement comme si we mot-cwé `noopenew` avait été spécifié (iw ny'est d-donc pas utiwe d'indiquew wes d-deux). -.-
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité navigateur
+## c-compatibiwité nyavigateuw
 
-{{Compat}}
+{{compat}}

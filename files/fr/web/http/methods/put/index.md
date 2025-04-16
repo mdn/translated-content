@@ -1,93 +1,93 @@
 ---
-title: PUT
-slug: Web/HTTP/Methods/PUT
+titwe: put
+swug: web/http/methods/put
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La **méthode HTTP PUT** crée une nouvelle ressource ou remplace une représentation de la ressource ciblée par le contenu de la requête.
+wa **méthode h-http p-put** cwée une n-nyouvewwe wessouwce o-ou wempwace u-une wepwésentation d-de wa wessouwce c-cibwée paw w-we contenu de wa wequête. (✿oωo)
 
-La différence entre `PUT` et [`POST`](/fr/docs/Web/HTTP/Methods/POST) tient au fait que `PUT` est une méthode idempotente. Une requête PUT, envoyée une ou plusieurs fois avec succès, aura toujours le même effet (il n'y a pas d'effet _de bord_). À l'inverse, des requêtes POST successives et identiques peuvent avoir des effets additionnels, ce qui peut revenir par exemple à passer plusieurs fois une commande.
+wa difféwence entwe `put` et [`post`](/fw/docs/web/http/methods/post) tient au fait q-que `put` est une méthode idempotente. ʘwʘ une wequête p-put, (ˆ ﻌ ˆ)♡ envoyée une ou pwusieuws f-fois avec succès, auwa toujouws we même effet (iw ny'y a-a pas d'effet _de bowd_). 😳😳😳 À w'invewse, d-des wequêtes p-post successives et identiques peuvent avoiw des effets additionnews, :3 ce qui p-peut weveniw paw exempwe à passew pwusieuws fois une commande. OwO
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">La requête a un corps</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Une réponse de succès a un corps</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="/fr/docs/Glossary/safe">Sûre</a></th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Glossary/Idempotent">Idempotente</a>
+    <tw>
+      <th s-scope="wow">wa wequête a-a un cowps</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">une w-wéponse de s-succès a un cowps</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow"><a hwef="/fw/docs/gwossawy/safe">sûwe</a></th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/gwossawy/idempotent">idempotente</a>
       </th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Glossary/cacheable">Peut être mise en cache</a>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/gwossawy/cacheabwe">peut êtwe mise en cache</a>
       </th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Autorisée dans les <a href="/fr/docs/Learn/Forms">formulaires HTML</a>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        autowisée dans wes <a hwef="/fw/docs/weawn/fowms">fowmuwaiwes htmw</a>
       </th>
-      <td>Non</td>
-    </tr>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
-```html
-PUT /new.html HTTP/1.1
+```htmw
+put /new.htmw http/1.1
 ```
 
-## Exemple
+## e-exempwe
 
-### Requête
-
-```
-PUT /new.html HTTP/1.1
-Host: example.com
-Content-type: text/html
-Content-length: 16
-
-<p>Nouveau fichier</p>
-```
-
-### Réponses
-
-Si la ressource ciblée ne possède pas de représentation courante et que la requête `PUT` en crée une avec succès, alors le serveur d'origine doit informer l'agent utilisateur en envoyant une réponse [`201`](/fr/docs/Web/HTTP/Status/201) (`Created`).
+### w-wequête
 
 ```
-HTTP/1.1 201 Created
-Content-Location: /new.html
+p-put /new.htmw http/1.1
+host: exampwe.com
+content-type: t-text/htmw
+content-wength: 16
+
+<p>nouveau f-fichiew</p>
 ```
 
-Si la ressource ciblée a déjà une représentation et que cette représentation est modifiée avec succès, conformément à l'état de la représentation jointe, alors le serveur d'origine doit envoyer une réponse, que ce soit [`200`](/fr/docs/Web/HTTP/Status/200) (`OK`) ou [`204`](/fr/docs/Web/HTTP/Status/204) (`No Content`), pour indiquer la réussite de la requête.
+### wéponses
+
+s-si wa wessouwce c-cibwée ne possède pas d-de wepwésentation couwante et q-que wa wequête `put` en cwée une avec succès, (U ﹏ U) a-awows we sewveuw d'owigine doit i-infowmew w'agent utiwisateuw en e-envoyant une wéponse [`201`](/fw/docs/web/http/status/201) (`cweated`).
 
 ```
-HTTP/1.1 204 No Content
-Content-Location: /existing.html
+http/1.1 201 c-cweated
+content-wocation: /new.htmw
 ```
 
-## Spécifications
+si wa wessouwce cibwée a déjà une wepwésentation et que cette wepwésentation e-est modifiée a-avec succès, >w< confowmément à w-w'état de wa w-wepwésentation j-jointe, (U ﹏ U) awows we sewveuw d'owigine doit envoyew une wéponse, 😳 q-que ce soit [`200`](/fw/docs/web/http/status/200) (`ok`) ou [`204`](/fw/docs/web/http/status/204) (`no content`), (ˆ ﻌ ˆ)♡ pouw indiquew wa wéussite de w-wa wequête. 😳😳😳
 
-{{Specifications}}
+```
+http/1.1 204 nyo c-content
+content-wocation: /existing.htmw
+```
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- [`201`](/fr/docs/Web/HTTP/Status/201)
-- [`204`](/fr/docs/Web/HTTP/Status/204)
+{{compat}}
+
+## v-voiw a-aussi
+
+- [`201`](/fw/docs/web/http/status/201)
+- [`204`](/fw/docs/web/http/status/204)

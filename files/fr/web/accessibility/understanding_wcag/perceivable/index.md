@@ -1,467 +1,467 @@
 ---
-title: Perceptible
-slug: Web/Accessibility/Understanding_WCAG/Perceivable
-l10n:
-  sourceCommit: 96f68b50c1eac0af56f185d82c17c9ccaf212b67
+titwe: pewceptibwe
+swug: web/accessibiwity/undewstanding_wcag/pewceivabwe
+w-w10n:
+  s-souwcecommit: 96f68b50c1eac0af56f185d82c17c9ccaf212b67
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-Dans cet article, nous verrons des conseils pratiques pour écrire du contenu web qui respecte le principe de **perceptibilité** décrit dans les règles pour l'accessibilité des contenus web (WCAG) 2.0 et 2.1. Les états du contenu doivent pouvoir être perçus par les utilisatrices et utilisateurs d'une façon ou d'une autre en utilisant un de leurs sens.
+d-dans c-cet awticwe, XD nyous v-vewwons des conseiws p-pwatiques p-pouw écwiwe du c-contenu web qui wespecte we pwincipe de **pewceptibiwité** décwit dans wes wègwes p-pouw w'accessibiwité des contenus web (wcag) 2.0 e-et 2.1. -.- wes états du contenu d-doivent pouvoiw êtwe pewçus paw wes utiwisatwices et utiwisateuws d-d'une façon ou d'une a-autwe en utiwisant u-un de weuws sens. o.O
 
-> [!NOTE]
-> Les définitions du W3C pour cette catégorie, les règles associées et les critères de réussite sont présentes sur la page [Principe 1&nbsp;: l'information et les composants de l'interface utilisateur doivent être présentés à l'utilisatrice ou à l'utilisateur de façon à ce qu'il puisse les percevoir](https://www.w3.org/Translations/WCAG21-fr/#perceivable).
+> [!note]
+> wes définitions du w3c pouw cette catégowie, (˘ω˘) w-wes wègwes associées et wes cwitèwes de wéussite sont pwésentes suw wa page [pwincipe 1&nbsp;: w-w'infowmation et wes composants d-de w'intewface u-utiwisateuw d-doivent êtwe pwésentés à w-w'utiwisatwice ou à w'utiwisateuw d-de façon à ce qu'iw puisse wes pewcevoiw](https://www.w3.owg/twanswations/wcag21-fw/#pewceivabwe).
 
-## Règle 1.1 — Des équivalents textuels doivent être fournis pour tout contenu non textuel
+## w-wègwe 1.1 — des équivawents textuews doivent êtwe fouwnis pouw tout contenu nyon t-textuew
 
-L'information principale à retenir ici est que le texte peut être converti sous d'autres formes que les personnes avec un handicap peuvent utiliser. Il pourra ainsi être vocalisé par un lecteur d'écran, converti en grands caractères ou représenté sur un affichage en braille. Le contenu non textuel fait référence au multimédia comme les images, les fichiers audio et les vidéos.
+w'infowmation pwincipawe à w-weteniw ici e-est que we texte p-peut êtwe convewti sous d'autwes fowmes que wes pewsonnes avec u-un handicap peuvent u-utiwisew. (U ᵕ U❁) iw pouwwa ainsi êtwe v-vocawisé p-paw un wecteuw d'écwan, rawr convewti e-en gwands cawactèwes ou wepwésenté s-suw un affichage en bwaiwwe. 🥺 we contenu n-nyon textuew fait wéféwence au m-muwtimédia comme wes images, rawr x3 wes f-fichiews audio e-et wes vidéos. ( ͡o ω ͡o )
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Critère de réussite</th>
-      <th scope="col">Comment respecter ce critère</th>
-      <th scope="col">Ressources pratiques</th>
-    </tr>
+    <tw>
+      <th scope="cow">cwitèwe de wéussite</th>
+      <th scope="cow">comment wespectew ce cwitèwe</th>
+      <th scope="cow">wessouwces p-pwatiques</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td rowspan="5">1.1.1 Fournir des équivalents textuels (A)</td>
+    <tw>
+      <td w-wowspan="5">1.1.1 fouwniw des équivawents t-textuews (a)</td>
       <td>
-        Toutes les images qui ont un contenu significatif devraient avoir un texte alternatif approprié.
+        t-toutes wes images q-qui ont un contenu significatif devwaient avoiw un texte awtewnatif a-appwopwié. σωσ
       </td>
       <td>
-        <a href="/fr/docs/Learn/Accessibility/HTML#alternatives_textuelles">Alternatives textuelles</a>
+        <a hwef="/fw/docs/weawn/accessibiwity/htmw#awtewnatives_textuewwes">awtewnatives textuewwes</a>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Les images ou graphiques devraient avoir une alternative accessible de fournie, qu'elle soit située sur la même page ou accessible via un lien. On utilisera un lien normal plutôt qu'un attribut <code>longdesc</code>.
-      </td>
-      <td>
-        <p>
-          Une description textuelle peut fonctionner, on peut aussi écrire un tableau de données accessible (voir <a href="/fr/docs/Learn/HTML/Tables/Advanced">Fonctionnalités avancées des tableaux HTML et accessibilité</a>). Voir <a href="/fr/docs/Learn/Accessibility/HTML#autres_mécanismes_alternatifs_de_texte">la section sur les autres mécanismes alternatifs au texte</a> pour un argument contre l'utilisation de <code>longdesc</code>.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Le contenu multimédia (c'est-à-dire audio ou vidéo) devrait au moins avoir une identification descriptive disponible, telle qu'une légende ou quelque chose de similaire.
+        wes images ou gwaphiques devwaient a-avoiw une awtewnative accessibwe d-de fouwnie, rawr x3 q-qu'ewwe soit s-située suw wa même page ou accessibwe v-via un w-wien. (ˆ ﻌ ˆ)♡ on utiwisewa u-un wien nyowmaw p-pwutôt qu'un attwibut <code>wongdesc</code>. rawr
       </td>
       <td>
         <p>
-          Voir <a href="/fr/docs/Learn/Accessibility/HTML#alternatives_textuelles">les alternatives textuelles</a> pour les options de légendes statiques, <a href="/fr/docs/Learn/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a>, <a href="/fr/docs/Learn/Accessibility/Multimedia#pistes_de_texte_vidéo">les pistes de texte vidéo</a>, et <a href="/fr/docs/Learn/Accessibility/Multimedia#autre_contenu_multimédia">les autres contenus multimédia</a> pour d'autres alternatives.
+          une d-descwiption textuewwe p-peut fonctionnew, :3 o-on peut a-aussi écwiwe u-un tabweau de données accessibwe (voiw <a hwef="/fw/docs/weawn/htmw/tabwes/advanced">fonctionnawités avancées d-des tabweaux htmw et accessibiwité</a>). rawr voiw <a hwef="/fw/docs/weawn/accessibiwity/htmw#autwes_mécanismes_awtewnatifs_de_texte">wa section suw wes autwes mécanismes a-awtewnatifs au texte</a> pouw un awgument contwe w'utiwisation d-de <code>wongdesc</code>. (˘ω˘)
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Les contrôles qui forment l'interface utilisateur comme les éléments de formulaire et les boutons devraient disposer de libellés textuels qui décrivent leur objectif.
-      </td>
-      <td>
-        Pour les boutons, il s'agit de s'assurer que le texte du bouton décrit la fonction du bouton (par exemple, <code>&lt;button&gt;Téléverser l'image&lt;/button&gt;</code>). Pour plus d'informations sur les autres contrôles participant à l'interface utilisateur, voir <a href="/fr/docs/Learn/Accessibility/HTML#contrôles_de_linterface_utilisateur">les contrôles de l'interface utilisateur</a>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        On implémentera les médias décoratifs (qui ne participent pas au contenu) (images, vidéos, etc.) afin qu'ils soient invisibles aux technologies d'assistance pour ne pas être source de confusion envers les utilisatrices et utilisateurs.
+        w-we contenu muwtimédia (c'est-à-diwe a-audio ou vidéo) devwait a-au moins avoiw une identification d-descwiptive disponibwe, (ˆ ﻌ ˆ)♡ t-tewwe qu'une wégende ou quewque chose de simiwaiwe. mya
       </td>
       <td>
         <p>
-          Les images décoratives devraient être implémentées à l'aide des images d'arrière-plan CSS (voir <a href="/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Arrières-plans en CSS</a>). Si vous devez inclure une image décorative avec <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a>, fournissez un texte alternatif explicitement vide avec l'attribut <code>alt</code> (<code>alt=""</code>). Sinon, les lecteurs d'écran pourraient vocaliser le chemin du fichier, etc.
-        </p>
-        <p>
-          Si vous incluez des vidéos ou des sons en arrière-plan avec une lecture automatique, assurez-vous qu'ils soient aussi discrets que possible et qu'ils ne puissent pas être confondus avec le contenu essentiel de la page. Un contrôle pour les suspendre doit être disponible. Idéalement, on évitera simplement d'inclure ce type de contenu.
+          voiw <a hwef="/fw/docs/weawn/accessibiwity/htmw#awtewnatives_textuewwes">wes a-awtewnatives textuewwes</a> p-pouw wes options de wégendes s-statiques, (U ᵕ U❁) <a h-hwef="/fw/docs/weawn/accessibiwity/muwtimedia#twanscwiptions_audio">wes twanscwiptions audio</a>, mya <a h-hwef="/fw/docs/weawn/accessibiwity/muwtimedia#pistes_de_texte_vidéo">wes p-pistes de texte vidéo</a>, ʘwʘ et <a h-hwef="/fw/docs/weawn/accessibiwity/muwtimedia#autwe_contenu_muwtimédia">wes a-autwes contenus muwtimédia</a> pouw d'autwes awtewnatives. (˘ω˘)
         </p>
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <td>
+        wes contwôwes qui fowment w-w'intewface u-utiwisateuw comme w-wes éwéments de fowmuwaiwe e-et wes boutons d-devwaient disposew de wibewwés t-textuews qui décwivent weuw objectif. 😳
+      </td>
+      <td>
+        pouw wes boutons, òωó iw s'agit de s'assuwew que w-we texte du bouton d-décwit wa fonction du bouton (paw exempwe, <code>&wt;button&gt;téwévewsew w-w'image&wt;/button&gt;</code>). nyaa~~ p-pouw pwus d'infowmations suw wes autwes contwôwes pawticipant à w-w'intewface utiwisateuw, o.O voiw <a hwef="/fw/docs/weawn/accessibiwity/htmw#contwôwes_de_wintewface_utiwisateuw">wes contwôwes de w'intewface u-utiwisateuw</a>. nyaa~~
+      </td>
+    </tw>
+    <tw>
+      <td>
+        on impwémentewa wes médias d-décowatifs (qui n-ne pawticipent pas au contenu) (images, (U ᵕ U❁) vidéos, etc.) afin qu'iws s-soient invisibwes a-aux technowogies d'assistance pouw nye pas êtwe souwce d-de confusion envews wes utiwisatwices e-et utiwisateuws. 😳😳😳
+      </td>
+      <td>
+        <p>
+          wes images décowatives devwaient êtwe impwémentées à w-w'aide des images d-d'awwièwe-pwan c-css (voiw <a hwef="/fw/docs/weawn/css/buiwding_bwocks/backgwounds_and_bowdews">awwièwes-pwans en css</a>). (U ﹏ U) si vous d-devez incwuwe une image décowative a-avec <a h-hwef="/fw/docs/web/htmw/ewement/img"><code>&wt;img&gt;</code></a>, ^•ﻌ•^ f-fouwnissez un texte awtewnatif e-expwicitement v-vide avec w'attwibut <code>awt</code> (<code>awt=""</code>). (⑅˘꒳˘) sinon, wes wecteuws d-d'écwan pouwwaient v-vocawisew we c-chemin du fichiew, >_< etc. (⑅˘꒳˘)
+        </p>
+        <p>
+          si v-vous incwuez des vidéos ou des s-sons en awwièwe-pwan a-avec une wectuwe automatique, σωσ assuwez-vous qu'iws soient aussi d-discwets que p-possibwe et qu'iws n-nye puissent p-pas êtwe confondus avec we contenu e-essentiew de wa page. 🥺 un contwôwe pouw wes suspendwe doit êtwe disponibwe. :3 idéawement, (ꈍᴗꈍ) o-on évitewa simpwement d'incwuwe c-ce type de contenu. ^•ﻌ•^
+        </p>
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Voir aussi [la description du WCAG pour la règle 1.1 sur les alternatives textuelles](https://www.w3.org/Translations/WCAG21-fr/#text-alternatives).
+> [!note]
+> voiw aussi [wa d-descwiption du wcag pouw w-wa wègwe 1.1 suw wes awtewnatives t-textuewwes](https://www.w3.owg/twanswations/wcag21-fw/#text-awtewnatives). (˘ω˘)
 
-## Règle 1.2 — Fournir des alternatives textuelles aux médias temporels
+## w-wègwe 1.2 — f-fouwniw des awtewnatives t-textuewwes a-aux médias tempowews
 
-Les médias temporels sont les médias qui ont une durée comme les fichiers audio ou vidéo. On notera que si le fichier audio/vidéo est utilisé comme alternative à du contenu textuel déjà présent, il n'est pas nécessaire de fournir une autre alternative textuelle.
+wes médias tempowews sont wes médias qui ont une duwée comme wes fichiews audio o-ou vidéo. 🥺 on nyotewa q-que si we f-fichiew audio/vidéo est utiwisé c-comme awtewnative à du contenu textuew déjà pwésent, (✿oωo) iw ny'est p-pas nyécessaiwe d-de fouwniw une autwe awtewnative t-textuewwe. XD
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col">Critère de réussite</th>
-      <th scope="col">Comment respecter ce critère</th>
-      <th scope="col">Ressources pratiques</th>
-    </tr>
+    <tw>
+      <th scope="cow">cwitèwe de w-wéussite</th>
+      <th s-scope="cow">comment wespectew c-ce cwitèwe</th>
+      <th s-scope="cow">wessouwces pwatiques</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-       <td>1.2.1 Fournir des alternatives au contenu pré-enregistré seulement audio ou seulement vidéo (A)</td>
-       <td>Une transcription devrait être fournie pour les médias pré-enregistrés qui sont uniquement audio. Une transcription ou une description audio devrait être fournie pour les médias pré-enregistrés qui sont uniquement vidéo (par exemple, une vidéo muette).</td>
-       <td>Voir <a href="/fr/docs/Learn/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a> pour des informations à ce sujet.</td>
-    </tr>
-    <tr>
-       <td>1.2.2 Fournir des sous-titres pour les vidéos web (A)</td>
-       <td>Des sous-titres devraient être fournis pour les vidéos web (par exemple celles qui utilisent l'élément HTML <code>&lt;video&gt;</code>). Cela rend la vidéo accessible aux personnes qui ne peuvent pas entendre le son de la vidéo.</td>
-       <td>Voir <a href="/fr/docs/Learn/Accessibility/Multimedia#pistes_de_texte_vidéo">les pistes textuelles pour les vidéos</a> pour les sous-titres des vidéos HTML et <a href="/fr/docs/Learn/Accessibility/Multimedia#autre_contenu_multimédia">les autres contenus multimédias</a> pour les autres technologies. Voir aussi <a href="https://support.google.com/youtube/answer/2734796?hl=fr">Ajouter des sous-titres sur YouTube</a>.</td>
-    </tr>
-    <tr>
-       <td>1.2.3 Fournir des transcriptions textuelles ou une description audio pour les vidéos web (A)</td>
-       <td>Des transcriptions textuelles ou des descriptions audio pour les vidéos web (par exemple celles qui utilisent l'élément HTML <code>&lt;video&gt;</code>) doivent être fournies afin que la vidéo soit accessible aux personnes qui ne peuvent pas voir la vidéo et/ou qui ne peuvent pas connaître le contenu à partir de la seule bande son.</td>
-       <td>Voir <a href="/fr/docs/Learn/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a> pour des informations à ce sujet.</td>
-    </tr>
-    <tr>
-       <td>1.2.4 Fournir des sous-titres pour l'audio en direct (AA)</td>
-       <td>Des sous-titres synchronisés devraient être fournis pour l'ensemble des médias en direct qui contiennent de l'audio (par exemple des conférences vidéo, des diffusions sonores en direct).</td>
+    <tw>
+       <td>1.2.1 fouwniw des awtewnatives au contenu pwé-enwegistwé s-seuwement a-audio ou seuwement v-vidéo (a)</td>
+       <td>une t-twanscwiption d-devwait êtwe fouwnie pouw wes médias p-pwé-enwegistwés q-qui sont uniquement audio. (///ˬ///✿) u-une twanscwiption o-ou une descwiption audio devwait êtwe f-fouwnie pouw wes médias pwé-enwegistwés q-qui sont uniquement vidéo (paw e-exempwe, ( ͡o ω ͡o ) u-une vidéo muette).</td>
+       <td>voiw <a hwef="/fw/docs/weawn/accessibiwity/muwtimedia#twanscwiptions_audio">wes t-twanscwiptions audio</a> pouw des infowmations à c-ce sujet.</td>
+    </tw>
+    <tw>
+       <td>1.2.2 f-fouwniw d-des sous-titwes pouw wes vidéos web (a)</td>
+       <td>des sous-titwes devwaient êtwe f-fouwnis pouw wes vidéos web (paw exempwe c-cewwes qui u-utiwisent w'éwément htmw <code>&wt;video&gt;</code>). ʘwʘ c-cewa wend wa vidéo accessibwe a-aux pewsonnes q-qui nye peuvent pas entendwe we son de wa vidéo.</td>
+       <td>voiw <a hwef="/fw/docs/weawn/accessibiwity/muwtimedia#pistes_de_texte_vidéo">wes p-pistes textuewwes pouw wes vidéos</a> p-pouw wes sous-titwes d-des vidéos htmw et <a hwef="/fw/docs/weawn/accessibiwity/muwtimedia#autwe_contenu_muwtimédia">wes a-autwes contenus muwtimédias</a> p-pouw wes a-autwes technowogies. rawr v-voiw aussi <a hwef="https://suppowt.googwe.com/youtube/answew/2734796?hw=fw">ajoutew des sous-titwes suw youtube</a>.</td>
+    </tw>
+    <tw>
+       <td>1.2.3 fouwniw des twanscwiptions textuewwes ou une descwiption audio pouw wes vidéos web (a)</td>
+       <td>des twanscwiptions textuewwes ou d-des descwiptions a-audio pouw wes vidéos web (paw exempwe cewwes q-qui utiwisent w'éwément h-htmw <code>&wt;video&gt;</code>) d-doivent êtwe fouwnies a-afin que wa vidéo soit accessibwe a-aux pewsonnes q-qui nye peuvent pas voiw wa vidéo e-et/ou qui nye peuvent pas c-connaîtwe we contenu à p-pawtiw de wa seuwe bande son.</td>
+       <td>voiw <a hwef="/fw/docs/weawn/accessibiwity/muwtimedia#twanscwiptions_audio">wes t-twanscwiptions a-audio</a> p-pouw des infowmations à c-ce sujet.</td>
+    </tw>
+    <tw>
+       <td>1.2.4 f-fouwniw d-des sous-titwes p-pouw w'audio e-en diwect (aa)</td>
+       <td>des s-sous-titwes synchwonisés devwaient êtwe f-fouwnis p-pouw w'ensembwe d-des médias en diwect qui c-contiennent de w'audio (paw exempwe des conféwences v-vidéo, o.O des diffusions sonowes e-en diwect).</td>
        <td></td>
-    </tr>
-    <tr>
-       <td>1.2.5 Fournir des descriptions audio pour les vidéos pré-enregistrées (AA)</td>
-       <td>Des descriptions audio devraient être fournies pour les vidéos pré-enregistrées, uniquement lorsque l'audio existant ne suffit pas à exprimer pleinement la vidéo.</td>
+    </tw>
+    <tw>
+       <td>1.2.5 f-fouwniw d-des descwiptions audio pouw wes v-vidéos pwé-enwegistwées (aa)</td>
+       <td>des descwiptions a-audio devwaient êtwe fouwnies p-pouw wes vidéos pwé-enwegistwées, ^•ﻌ•^ u-uniquement wowsque w'audio existant ne suffit pas à expwimew pweinement w-wa vidéo.</td>
        <td></td>
-    </tr>
-    <tr>
-       <td>1.2.6 Fournir un équivalent en langue des signes pour l'audio pré-enregistré (AAA)</td>
-       <td>Une vidéo équivalente en langue des signes devrait être fournie pour tout contenu pré-enregistré contenant de l'audio.</td>
+    </tw>
+    <tw>
+       <td>1.2.6 fouwniw un équivawent e-en wangue d-des signes pouw w'audio pwé-enwegistwé (aaa)</td>
+       <td>une vidéo équivawente en w-wangue des signes devwait êtwe f-fouwnie pouw tout c-contenu pwé-enwegistwé c-contenant de w'audio.</td>
        <td></td>
-    </tr>
-    <tr>
-       <td>1.2.7 Fournir une vidéo plus longue avec des descriptions audio (AAA)</td>
-       <td>Lorsqu'il n'est pas possible de fournir des descriptions audio (voir 1.2.5) en raison des limites de temps (par exemple lorsqu'il n'y a pas suffisamment de pauses dans le contenu où insérer les descriptions audio), une version alternative de la vidéo devrait être fournie et contenir des pauses insérées, avec les descriptions audio.</td>
+    </tw>
+    <tw>
+       <td>1.2.7 fouwniw u-une vidéo pwus w-wongue avec des descwiptions a-audio (aaa)</td>
+       <td>wowsqu'iw ny'est pas possibwe de fouwniw d-des descwiptions audio (voiw 1.2.5) e-en waison d-des wimites de t-temps (paw exempwe wowsqu'iw ny'y a-a pas suffisamment d-de pauses d-dans we contenu o-où inséwew wes descwiptions audio), (///ˬ///✿) u-une vewsion a-awtewnative de w-wa vidéo devwait êtwe f-fouwnie e-et conteniw des p-pauses inséwées, (ˆ ﻌ ˆ)♡ a-avec wes descwiptions a-audio.</td>
        <td></td>
-    </tr>
-    <tr>
-       <td>1.2.8 Fournir une alternative aux médias pré-enregistrés (AAA)</td>
-       <td>Pour tous les contenus utilisant une vidéo, une transcription textuelle descriptive devrait être fournie, par exemple le script d'un film. Il s'agit de rendre accessible le contenu pour les personnes qui ne peuvent pas l'entendre.</td>
-       <td>Voir <a href="/fr/docs/Learn/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a> pour plus d'informations à ce sujet.</td>
-    </tr>
-    <tr>
-       <td>1.2.9 Fournir une transcription pour les diffusions audio en direct (AAA)</td>
-       <td>Pour toute diffusion audio en direct, un texte descriptif devrait être fourni, tel qu'un script de la pièce ou les paroles de la chanson diffusée. Il s'agit de rendre accessible le contenu pour les personnes qui ne peuvent pas l'entendre.</td>
-       <td>Voir <a href="/fr/docs/Learn/Accessibility/Multimedia#transcriptions_audio">les transcriptions audio</a> pour plus d'informations à ce sujet.</td>
-    </tr>
+    </tw>
+    <tw>
+       <td>1.2.8 fouwniw u-une awtewnative aux médias p-pwé-enwegistwés (aaa)</td>
+       <td>pouw tous w-wes contenus utiwisant u-une vidéo, XD u-une twanscwiption textuewwe descwiptive devwait êtwe fouwnie, p-paw exempwe w-we scwipt d'un fiwm. (✿oωo) i-iw s'agit de wendwe accessibwe we contenu pouw wes pewsonnes q-qui nye peuvent p-pas w'entendwe.</td>
+       <td>voiw <a hwef="/fw/docs/weawn/accessibiwity/muwtimedia#twanscwiptions_audio">wes t-twanscwiptions a-audio</a> pouw pwus d'infowmations à ce sujet.</td>
+    </tw>
+    <tw>
+       <td>1.2.9 fouwniw u-une twanscwiption p-pouw wes diffusions a-audio en d-diwect (aaa)</td>
+       <td>pouw toute diffusion audio en diwect, -.- u-un texte descwiptif d-devwait êtwe fouwni, XD tew qu'un scwipt de w-wa pièce ou wes pawowes de wa chanson diffusée. (✿oωo) i-iw s'agit de wendwe accessibwe w-we contenu pouw w-wes pewsonnes qui nye peuvent p-pas w'entendwe.</td>
+       <td>voiw <a h-hwef="/fw/docs/weawn/accessibiwity/muwtimedia#twanscwiptions_audio">wes twanscwiptions a-audio</a> pouw pwus d'infowmations à c-ce sujet.</td>
+    </tw>
  </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Voir aussi [la description du WCAG pour la règle 1.2 sur les alternatives aux médias temporels](https://www.w3.org/Translations/WCAG21-fr/#time-based-media).
+> [!note]
+> voiw a-aussi [wa descwiption d-du wcag p-pouw wa wègwe 1.2 suw wes awtewnatives a-aux médias t-tempowews](https://www.w3.owg/twanswations/wcag21-fw/#time-based-media). (˘ω˘)
 
-## Règle 1.3 — Créer du contenu pouvant être présenté de différentes façons
+## w-wègwe 1.3 — cwéew du contenu p-pouvant êtwe pwésenté de difféwentes façons
 
-Cette règle correspond à la capacité à pouvoir utiliser du contenu de plusieurs façons, afin que chaque personne puisse en disposer selon ses besoins et capacités.
+c-cette wègwe c-cowwespond à w-wa capacité à pouvoiw utiwisew du contenu de pwusieuws façons, (ˆ ﻌ ˆ)♡ afin que chaque p-pewsonne puisse en disposew sewon s-ses besoins e-et capacités.
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="col">Critère de réussite</th>
-      <th scope="col">Comment respecter ce critère</th>
-      <th scope="col">Ressources pratiques</th>
-    </tr>
-    <tr>
-      <td>1.3.1 Informations et relations (A)</td>
+    <tw>
+      <th scope="cow">cwitèwe d-de wéussite</th>
+      <th scope="cow">comment w-wespectew ce cwitèwe</th>
+      <th s-scope="cow">wessouwces p-pwatiques</th>
+    </tw>
+    <tw>
+      <td>1.3.1 i-infowmations et w-wewations (a)</td>
       <td>
         <p>
-          Toute relation portant sur la structure du contenu ou présentée visuellement doit pouvoir être déterminée par un programme informatique ou déduite de la description textuelle. Cette situation s'applique notamment pour&nbsp;:
+          toute wewation powtant suw wa stwuctuwe du contenu ou pwésentée v-visuewwement doit pouvoiw êtwe d-détewminée paw un pwogwamme infowmatique ou déduite de w-wa descwiption textuewwe. >_< cette situation s'appwique nyotamment pouw&nbsp;:
         </p>
-        <ul>
-          <li>
-            Les libellés textuels et les éléments de formulaire auxquels ils correspondent. Cette association est construite de façon non-ambigüe avec l'élément <a href="/fr/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a>, qui pourra être utilisé par les lecteurs d'écran.
-          </li>
-          <li>
-            Inclure des textes alternatifs pour les images. Le contenu sous forme d'image devrait avoir un texte disponible qui décrit de façon claire le contenu de l'image et ce texte doit pouvoir être associé à l'image par un programme informatique (par exemple avec le texte porté par l'attribut <code>alt</code>), ou pouvoir facilement y être associé (la description est par exemple à côté de l'image). De cette façon, on peut connaître l'intégralité du contenu, même sans pouvoir voir l'image.
-          </li>
-          <li>
-            Pour les listes, si l'ordre des éléments est important, on utilisera une liste ordonnée (<a href="/fr/docs/Web/HTML/Element/ol"><code>&lt;ol&gt;</code></a>).
-          </li>
-        </ul>
+        <uw>
+          <wi>
+            w-wes wibewwés textuews e-et wes éwéments de fowmuwaiwe a-auxquews iws cowwespondent. -.- cette association e-est constwuite d-de façon nyon-ambigüe avec w-w'éwément <a hwef="/fw/docs/web/htmw/ewement/wabew"><code>&wt;wabew&gt;</code></a>, (///ˬ///✿) q-qui pouwwa êtwe utiwisé paw wes wecteuws d'écwan. XD
+          </wi>
+          <wi>
+            i-incwuwe des textes awtewnatifs pouw wes i-images. ^^;; we contenu s-sous fowme d'image d-devwait avoiw un texte disponibwe qui décwit d-de façon cwaiwe we contenu de w'image et ce texte doit pouvoiw êtwe associé à w-w'image paw u-un pwogwamme infowmatique (paw e-exempwe avec we t-texte powté paw w'attwibut <code>awt</code>), rawr x3 ou pouvoiw faciwement y-y êtwe associé (wa d-descwiption est paw exempwe à côté d-de w'image). OwO de cette façon, ʘwʘ on peut connaîtwe w-w'intégwawité du contenu, rawr même sans pouvoiw v-voiw w'image. UwU
+          </wi>
+          <wi>
+            p-pouw wes wistes, (ꈍᴗꈍ) si w'owdwe d-des éwéments e-est impowtant, (✿oωo) o-on utiwisewa une wiste owdonnée (<a hwef="/fw/docs/web/htmw/ewement/ow"><code>&wt;ow&gt;</code></a>). (⑅˘꒳˘)
+          </wi>
+        </uw>
       </td>
       <td>
-        L'article <a href="/fr/docs/Learn/Accessibility/HTML">HTML&nbsp;: une bonne base pour l'accessibilité</a> contient de nombreuses informations à ce propos, on pourra notamment consulter <a href="/fr/docs/Learn/Accessibility/HTML#une_bonne_sémantique">une bonne sémantique</a>, <a href="/fr/docs/Learn/Accessibility/HTML#contrôles_de_linterface_utilisateur">les contrôles de l'interface utilisateur</a>, et <a href="/fr/docs/Learn/Accessibility/HTML#alternatives_textuelles">les alternatives textuelles</a>.
+        w-w'awticwe <a hwef="/fw/docs/weawn/accessibiwity/htmw">htmw&nbsp;: une bonne b-base pouw w'accessibiwité</a> contient de nyombweuses infowmations à ce pwopos, OwO o-on pouwwa n-nyotamment consuwtew <a h-hwef="/fw/docs/weawn/accessibiwity/htmw#une_bonne_sémantique">une b-bonne s-sémantique</a>, 🥺 <a hwef="/fw/docs/weawn/accessibiwity/htmw#contwôwes_de_wintewface_utiwisateuw">wes c-contwôwes de w'intewface utiwisateuw</a>, >_< e-et <a hwef="/fw/docs/weawn/accessibiwity/htmw#awtewnatives_textuewwes">wes awtewnatives t-textuewwes</a>. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <td>1.3.2 Ordre séquentiel logique (A)</td>
+    </tw>
+    <tw>
+      <td>1.3.2 owdwe séquentiew wogique (a)</td>
       <td>
-        Un ordre de lecture pertinent et logique devrait pouvoir être déterminé facilement pour tout contenu, même si ce dernier est présenté visuellement de façon inhabituelle. L'ordre devrait être clair grâce à l'utilisation d'éléments sémantiques (titres, paragraphes, etc.), le CSS étant utilisé pour toute mise en forme.
+        un o-owdwe de wectuwe p-pewtinent et wogique devwait p-pouvoiw êtwe détewminé faciwement p-pouw tout contenu, 😳 m-même si ce dewniew est p-pwésenté visuewwement d-de façon inhabituewwe. 🥺 w-w'owdwe devwait êtwe cwaiw gwâce à w'utiwisation d'éwéments s-sémantiques (titwes, nyaa~~ pawagwaphes, e-etc.), ^•ﻌ•^ we css étant utiwisé pouw toute mise e-en fowme. (ˆ ﻌ ˆ)♡
       </td>
       <td>
-        Là encore, voir <a href="/fr/docs/Learn/Accessibility/HTML">HTML&nbsp;: une bonne base pour l'accessibilité</a>.
+        w-wà encowe, (U ᵕ U❁) v-voiw <a hwef="/fw/docs/weawn/accessibiwity/htmw">htmw&nbsp;: une bonne base p-pouw w'accessibiwité</a>. mya
       </td>
-    </tr>
-    <tr>
-      <td>1.3.3 Caractéristiques sensorielles (A)</td>
+    </tw>
+    <tw>
+      <td>1.3.3 c-cawactéwistiques sensowiewwes (a)</td>
       <td>
         <p>
-          Les instructions pour manipuler des contrôles ou comprendre le contenu ne doivent pas reposer sur un seul sens. Le contraire pourrait rendre le contenu inaccessible aux personnes ayant un handicap sur ce sens ou qui utilisent un appareil sans interface pour ce sens. Par exemple&nbsp;:
+          wes instwuctions p-pouw manipuwew des contwôwes o-ou compwendwe we contenu nye d-doivent pas weposew s-suw un seuw sens. 😳 we contwaiwe pouwwait wendwe we contenu inaccessibwe aux p-pewsonnes ayant u-un handicap suw ce sens ou qui utiwisent un appaweiw sans intewface p-pouw ce sens. σωσ paw exempwe&nbsp;:
         </p>
-        <ul>
-          <li>
-            <p>«&nbsp;Cliquez sur le bouton rond afin de continuer&nbsp;»</p>
-            <p>Le bouton devrait être libellé de façon claire afin qu'on puisse clairement identifier le bouton sur lequel il faut appuyer. S'il y a plusieurs boutons, on s'assurera que leurs libellés sont clairs et permettent de distinguer leurs fonctions.</p>
-          </li>
-          <li>
-            <p>«&nbsp;Écoutez les instructions audio pour de l'aide&nbsp;»</p>
-            <p>Un exemple problématique&nbsp;: l'audio ne sera pas accessible aux personnes ayant un handicap auditif, alors que le texte peut être lu par un lecteur d'écran si nécessaire.</p>
-          </li>
-          <li>
-            <p>«&nbsp;Balayez sur le côté droit de l'écran afin de révéler le menu&nbsp;»<p/>
-            <p>Certaines personnes ne peuvent pas effectuer ce geste à l'écran, en raison d'un handicap ou parce que leur appareil ne dispose pas d'une interface tactile. Une méthode alternative doit être fournie, comme un raccourci clavier ou un bouton qui puisse être activé au clavier ou d'une autre façon.</p>
-          </li>
-        </ul>
-        <div class="note">
+        <uw>
+          <wi>
+            <p>«&nbsp;cwiquez s-suw w-we bouton wond afin de continuew&nbsp;»</p>
+            <p>we bouton devwait êtwe wibewwé de façon cwaiwe a-afin qu'on puisse cwaiwement identifiew we bouton s-suw wequew iw faut appuyew. ( ͡o ω ͡o ) s'iw y-y a pwusieuws b-boutons, XD on s'assuwewa que weuws w-wibewwés sont c-cwaiws et pewmettent d-de distinguew w-weuws fonctions.</p>
+          </wi>
+          <wi>
+            <p>«&nbsp;Écoutez w-wes instwuctions a-audio pouw de w'aide&nbsp;»</p>
+            <p>un exempwe pwobwématique&nbsp;: w'audio nye sewa pas accessibwe a-aux pewsonnes a-ayant un h-handicap auditif, :3 a-awows que we t-texte peut êtwe w-wu paw un wecteuw d'écwan si nyécessaiwe.</p>
+          </wi>
+          <wi>
+            <p>«&nbsp;bawayez suw we côté dwoit de w'écwan afin de wévéwew w-we menu&nbsp;»<p/>
+            <p>cewtaines p-pewsonnes nye peuvent pas effectuew ce geste à w'écwan, :3 e-en waison d-d'un handicap o-ou pawce que weuw appaweiw nye dispose pas d'une i-intewface tactiwe. (⑅˘꒳˘) une méthode awtewnative doit êtwe f-fouwnie, òωó c-comme un waccouwci cwaview ou un bouton qui puisse êtwe a-activé au cwaview ou d-d'une autwe façon.</p>
+          </wi>
+        </uw>
+        <div c-cwass="note">
           <p>
-            <strong>Note :</strong> Le fait de communiquer des instructions à la seule aide de couleurs est connexe, mais abordé dans une règle différente&nbsp;: 1.4.1.
+            <stwong>note :</stwong> we fait de communiquew d-des instwuctions à w-wa s-seuwe aide de couweuws e-est connexe, mya m-mais abowdé d-dans une wègwe difféwente&nbsp;: 1.4.1. 😳😳😳
           </p>
         </div>
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        1.3.4 Orientation (AA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
+        1.3.4 o-owientation (aa) <em><a h-hwef="https://www.w3.owg/twanswations/wcag21-fw/#new-featuwes-in-wcag-2-1">ajouté dans w-wa vewsion 2.1</a></em>
       </td>
       <td>
-        La vue et l'utilisation du contenu n'est pas restreinte à une seule orientation, paysage ou portrait, à moins que cette orientation d'affichage soit essentielle.
+        wa vue et w'utiwisation d-du contenu ny'est pas westweinte à u-une seuwe owientation, paysage o-ou powtwait, :3 à m-moins que cette owientation d'affichage soit e-essentiewwe. >_<
       </td>
       <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">Comprendre l'orientation (en anglais)</a>
+        <a hwef="https://www.w3.owg/wai/wcag21/undewstanding/owientation.htmw">compwendwe w'owientation (en angwais)</a>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        1.3.5 Identifier la finalité des champs (AA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
-      </td>
-      <td>
-        Se référer à la liste des <a href="https://www.w3.org/Translations/WCAG21-fr/#input-purposes">53 types de champs</a> afin d'identifier la finalité d'un champ donné.
+        1.3.5 i-identifiew w-wa finawité des champs (aa) <em><a hwef="https://www.w3.owg/twanswations/wcag21-fw/#new-featuwes-in-wcag-2-1">ajouté d-dans wa v-vewsion 2.1</a></em>
       </td>
       <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html">Comprendre la finalité d'un champ de saisie (en anglais)</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        1.3.6 Identifier la fonction (AAA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
+        se wéféwew à w-wa wiste des <a hwef="https://www.w3.owg/twanswations/wcag21-fw/#input-puwposes">53 types de c-champs</a> afin d-d'identifiew wa finawité d'un c-champ donné. 🥺
       </td>
       <td>
-        Pour le contenu implémenté avec un langage à balises, la fonction d'un composant d'interface utilisateur, des icônes et des régions peut être déterminée par un programme informatique.
+        <a h-hwef="https://www.w3.owg/wai/wcag21/undewstanding/identify-input-puwpose.htmw">compwendwe wa finawité d'un champ d-de saisie (en a-angwais)</a>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        1.3.6 i-identifiew w-wa fonction (aaa) <em><a hwef="https://www.w3.owg/twanswations/wcag21-fw/#new-featuwes-in-wcag-2-1">ajouté dans wa vewsion 2.1</a></em>
       </td>
       <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-purpose.html">Comprendre l'identification de la fonction (en anglais)</a>
+        pouw we contenu impwémenté avec un wangage à b-bawises, (ꈍᴗꈍ) w-wa fonction d'un c-composant d'intewface u-utiwisateuw, rawr x3 d-des icônes e-et des wégions peut êtwe détewminée p-paw un p-pwogwamme infowmatique. (U ﹏ U)
       </td>
-    </tr>
+      <td>
+        <a hwef="https://www.w3.owg/wai/wcag21/undewstanding/identify-puwpose.htmw">compwendwe w-w'identification de w-wa fonction (en angwais)</a>
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Voir aussi [la description du WCAG pour la règle 1.3 sur le contenu adaptable, qui peut être présenté de différentes façons sans perte d'information ou de structure](https://www.w3.org/Translations/WCAG21-fr/#adaptable).
+> [!note]
+> voiw aussi [wa d-descwiption du wcag pouw wa wègwe 1.3 suw w-we contenu adaptabwe, ( ͡o ω ͡o ) qui peut êtwe p-pwésenté d-de difféwentes façons sans pewte d-d'infowmation o-ou de stwuctuwe](https://www.w3.owg/twanswations/wcag21-fw/#adaptabwe). 😳😳😳
 
-## Règle 1.4 — Faciliter la perception visuelle et auditive du contenu, notamment en séparant le premier plan de l'arrière-plan
+## w-wègwe 1.4 — faciwitew w-wa pewception v-visuewwe et auditive du contenu, 🥺 n-nyotamment en sépawant we p-pwemiew pwan de w-w'awwièwe-pwan
 
-Cette règle consiste à s'assurer que le contenu principal peut facilement se distinguer de l'arrière-plan et des autres décorations. Un exemple classique porte sur la couleur (tant sur le contraste entre les couleurs que sur l'utilisation de couleurs pour véhiculer des informations), mais cela s'applique à d'autres situations également.
+c-cette wègwe consiste à s'assuwew q-que we contenu pwincipaw peut faciwement se d-distinguew de w'awwièwe-pwan et des autwes décowations. un exempwe cwassique powte suw wa couweuw (tant suw we c-contwaste entwe wes couweuws que suw w'utiwisation de couweuws pouw véhicuwew des infowmations), òωó mais cewa s'appwique à d-d'autwes situations égawement. XD
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Critère de réussite</th>
-      <th scope="col">Comment respecter ce critère</th>
-      <th scope="col">Ressources pratiques</th>
-    </tr>
-    <tr>
-      <td>1.4.1 Utilisation de la couleur (A)</td>
+    <tw>
+      <th s-scope="cow">cwitèwe de w-wéussite</th>
+      <th scope="cow">comment wespectew c-ce cwitèwe</th>
+      <th scope="cow">wessouwces p-pwatiques</th>
+    </tw>
+    <tw>
+      <td>1.4.1 utiwisation d-de wa couweuw (a)</td>
       <td>
-          La couleur ne devrait pas être utilisée seule pour véhiculer des informations. Ainsi, pour un formulaire, on ne marquera pas un champ obligatoire avec seulement une couleur (comme le rouge). En complément ou à la place, on pourra utiliser un astérisque avec un libellé «&nbsp;obligatoire&nbsp;», qui sera plus approprié.
+          w-wa couweuw nye devwait pas êtwe utiwisée seuwe p-pouw véhicuwew des infowmations. XD ainsi, ( ͡o ω ͡o ) pouw un fowmuwaiwe, >w< o-on nye mawquewa pas un champ obwigatoiwe a-avec seuwement une couweuw (comme w-we wouge). mya en compwément o-ou à wa pwace, (ꈍᴗꈍ) o-on pouwwa utiwisew un astéwisque avec un w-wibewwé «&nbsp;obwigatoiwe&nbsp;», -.- qui sewa pwus appwopwié. (⑅˘꒳˘)
       </td>
       <td>
-        Voir <a href="/fr/docs/Learn/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur">Couleurs et contraste de couleurs</a> et <a href="/fr/docs/Learn/Forms/How_to_structure_a_web_form#étiquettes_multiples">Les étiquettes multiples</a>.
+        voiw <a h-hwef="/fw/docs/weawn/accessibiwity/css_and_javascwipt#couweuw_et_contwaste_de_couweuw">couweuws et contwaste de couweuws</a> et <a hwef="/fw/docs/weawn/fowms/how_to_stwuctuwe_a_web_fowm#étiquettes_muwtipwes">wes étiquettes muwtipwes</a>. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <td>1.4.2 Contrôles audio (A)</td>
+    </tw>
+    <tw>
+      <td>1.4.2 c-contwôwes a-audio (a)</td>
       <td>
-        Pour tout média audio dont la lecture dure plus de trois secondes, on fournira des contrôles accessibles afin de suspendre/reprendre la lecture et pour mettre en sourdine/ajuster le volume.
-      </td>
-      <td>
-        On utilisera des éléments <code>&lt;button&gt;</code> natifs afin de fournir des contrôles accessibles au clavier, comme montré dans <a href="/fr/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics">Fondamentaux pour la mise en forme d'un lecteur vidéo</a>.
-      </td>
-    </tr>
-    <tr>
-      <td>1.4.3 Contraste minimal (AA)</td>
-      <td>
-        <p>
-          Le contraste des couleurs entre l'arrière-plan et le contenu de premier plan doit respecter un niveau minimal afin de garantir la lisibilité&nbsp;:
-        </p>
-        <ul>
-          <li>
-            Le texte et son arrière-plan doivent avoir un ratio de contraste supérieur à 4.5:1.
-          </li>
-          <li>
-            Les titres (ou le texte plus grand) doivent avoir un ratio de contraste supérieur à 3:1 par rapport à l'arrière-plan. Le texte plus grand est défini comme ayant une taille supérieure ou égale à 18pt, ou 14pt en gras.
-          </li>
-        </ul>
+        pouw tout média a-audio dont wa w-wectuwe duwe pwus de twois secondes, σωσ o-on fouwniwa des contwôwes accessibwes afin de suspendwe/wepwendwe wa wectuwe e-et pouw mettwe e-en souwdine/ajustew we vowume. :3
       </td>
       <td>
-        Voir <a href="/fr/docs/Learn/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur">Couleurs et contraste de couleurs</a>.
+        o-on utiwisewa des éwéments <code>&wt;button&gt;</code> n-nyatifs afin de fouwniw d-des contwôwes accessibwes au cwaview, /(^•ω•^) comme montwé d-dans <a hwef="/fw/docs/web/guide/audio_and_video_dewivewy/video_pwayew_stywing_basics">fondamentaux pouw wa mise en fowme d-d'un wecteuw vidéo</a>. σωσ
       </td>
-    </tr>
-    <tr>
-      <td>1.4.4 Redimensionnement du texte (AA)</td>
-      <td>
-        La page devrait être lisible et utilisable lorsque la taille du texte est doublée. Cela signifie que la disposition doit être adaptative afin que, lorsque la taille du texte est augmentée, le contenu soit toujours accessible.
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>1.4.5 Texte sous forme d'image (AA)</td>
-      <td>
-        Les images ne devraient <strong>pas</strong> être utilisées pour présenter du contenu où du texte simple aurait suffi. Ainsi, si une image est principalement constituée de texte, on utilisera plutôt ce texte.
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>1.4.6 Contraste amélioré (AAA)</td>
-      <td>
-        <p>Cela suit et reprend le critère 1.4.3.</p>
-        <ul>
-          <li>
-            Le texte et son arrière-plan devrait avoir un ratio de contraste supérieur à 7:1.
-          </li>
-          <li>
-            Les titres (ou les textes plus grands) devraient avoir un ratio de contraste supérieur à 4.5:1. Le texte plus grand est défini comme ayant une taille supérieure ou égale à 18pt, ou 14pt en gras.
-          </li>
-        </ul>
-      </td>
-      <td>
-        Voir <a href="/fr/docs/Learn/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur">Couleurs et contraste de couleurs</a>.
-      </td>
-    </tr>
-    <tr>
-      <td>1.4.7 Arrière-plan sonore faible ou absent (AAA)</td>
-      <td>
-        Les enregistrements audio pré-enregistrés qui portent principalement sur des dialogues doivent avoir un bruit de fond minimal afin que le contenu puisse être facilement compris.
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>1.4.8 Présentation visuelle (AAA)</td>
-      <td>
-        <p>Pour la présentation du contenu textuel, les règles suivantes devraient être respectées&nbsp;:</p>
-        <ul>
-          <li>Les couleurs de premier plan et d'arrière-plan devraient pouvoir être sélectionnées par l'utilisatrice ou l'utilisateur.</li>
-          <li>
-            Les blocs de texte ne devraient pas être plus larges que 80 caractères ou glyphes pour garantir une lisibilité maximale.
-          </li>
-          <li>
-            Le texte ne devrait pas être justifié (<code>text-align: justify;</code>).
-          </li>
-          <li>
-            La hauteur des lignes devrait être supérieure ou égale à 1,5 fois la taille du texte au sein des paragraphes (par exemple `line-height: 1.5;`), et au moins 2,25 fois la taille du texte entre les paragraphes (par exemple <code>padding: 2.25rem;</code>).
-          </li>
-          <li>
-            Lorsque la taille du texte est doublée, le contenu ne devrait pas avoir besoin du défilement.
-          </li>
-        </ul>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>1.4.9 Texte sous forme d'image (sans exception) (AAA)</td>
-      <td>
-        Le texte ne devrait pas être présenté comme partie d'une image à moins qu'il s'agisse uniquement d'une décoration (c'est-à-dire qu'il ne véhicule aucun contenu) ou qu'il ne puisse être présenté d'une autre façon.
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        1.4.10 Redistribution (AA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
-      </td>
-      <td>
-        <ul>
-          <li>
-            Aucun défilement horizontal pour les langues écrites de gauche à droite (comme le français) ou de droite à gauche (comme l'arabe).
-          </li>
-          <li>
-            Aucun défilement vertical pour les langues écrites de haut en bas (telles que le japonais).
-          </li>
-          <li>
-            Exception faite du contenu pour lequel une disposition en deux dimensions est nécessaire à l'usage ou pour sa signification (comme un grand tableau de données).
-          </li>
-        </ul>
-      </td>
-      <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html">Comprendre la redistribution (en anglais)</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        1.4.11 Contraste du contenu non-textuel (AA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
-      </td>
-      <td>
-        On doit avoir un ratio de contraste minimal de 3:1 entre les couleurs des éléments d'interface utilisateur et des objets graphiques.
-      </td>
-      <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">Comprendre le contraste du contenu non-textuel (en anglais)</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        1.4.12 Espacement du texte (AA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
-      </td>
+    </tw>
+    <tw>
+      <td>1.4.3 c-contwaste minimaw (aa)</td>
       <td>
         <p>
-          Aucune perte de contenu ou de fonctionnalité ne doit avoir lieu lorsque les styles suivants sont appliqués&nbsp;:
+          we contwaste d-des couweuws entwe w'awwièwe-pwan et we contenu de pwemiew pwan doit wespectew un nyiveau minimaw afin de gawantiw wa wisibiwité&nbsp;:
         </p>
-        <ul>
-          <li>
-            La hauteur des lignes vaut au moins 1,5 fois la taille de la police.
-          </li>
-          <li>
-            L'espacement suivant les paragraphes vaut au moins 2 fois la taille de la police.
-          </li>
-          <li>
-            L'espacement entre les lettres vaut au moins 0,12 fois la taille de la police.
-          </li>
-          <li>
-            L'espacement entre les mots vaut au moins 0,16 fois la taille de la police.
-          </li>
-        </ul>
+        <uw>
+          <wi>
+            w-we texte et son a-awwièwe-pwan doivent avoiw un w-watio de contwaste s-supéwieuw à 4.5:1. (U ᵕ U❁)
+          </wi>
+          <wi>
+            wes titwes (ou w-we texte pwus gwand) doivent avoiw un watio de contwaste supéwieuw à 3:1 paw wappowt à w'awwièwe-pwan. 😳 w-we texte pwus gwand est défini comme ayant une taiwwe supéwieuwe o-ou égawe à 18pt, ʘwʘ o-ou 14pt en gwas. (⑅˘꒳˘)
+          </wi>
+        </uw>
       </td>
       <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html">Comprendre l'espacement du texte (en anglais)</a>
+        v-voiw <a hwef="/fw/docs/weawn/accessibiwity/css_and_javascwipt#couweuw_et_contwaste_de_couweuw">couweuws et contwaste de couweuws</a>. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <td>1.4.13 Contenu au survol ou au focus (AA) <em><a href="https://www.w3.org/Translations/WCAG21-fr/#new-features-in-wcag-2-1">ajouté dans la version 2.1</a></em>
+    </tw>
+    <tw>
+      <td>1.4.4 wedimensionnement d-du texte (aa)</td>
+      <td>
+        wa p-page devwait êtwe w-wisibwe et utiwisabwe wowsque w-wa taiwwe du texte est doubwée. c-cewa signifie que wa disposition d-doit êtwe adaptative afin q-que, nyaa~~ wowsque wa taiwwe du texte est augmentée, XD w-we contenu soit toujouws accessibwe. /(^•ω•^)
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td>1.4.5 t-texte sous fowme d-d'image (aa)</td>
+      <td>
+        wes images n-nye devwaient <stwong>pas</stwong> êtwe u-utiwisées pouw pwésentew d-du contenu où du texte s-simpwe auwait suffi. (U ᵕ U❁) ainsi, si u-une image est pwincipawement c-constituée de texte, mya on utiwisewa p-pwutôt ce texte. (ˆ ﻌ ˆ)♡
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td>1.4.6 contwaste améwiowé (aaa)</td>
+      <td>
+        <p>cewa suit et wepwend we cwitèwe 1.4.3.</p>
+        <uw>
+          <wi>
+            we texte et son awwièwe-pwan devwait avoiw un watio d-de contwaste supéwieuw à 7:1. (✿oωo)
+          </wi>
+          <wi>
+            wes titwes (ou wes textes p-pwus gwands) devwaient avoiw u-un watio de contwaste supéwieuw à 4.5:1. (✿oωo) we t-texte pwus gwand est défini comme ayant une taiwwe s-supéwieuwe ou égawe à 18pt, òωó ou 14pt en gwas. (˘ω˘)
+          </wi>
+        </uw>
+      </td>
+      <td>
+        v-voiw <a hwef="/fw/docs/weawn/accessibiwity/css_and_javascwipt#couweuw_et_contwaste_de_couweuw">couweuws et contwaste de couweuws</a>. (ˆ ﻌ ˆ)♡
+      </td>
+    </tw>
+    <tw>
+      <td>1.4.7 a-awwièwe-pwan sonowe faibwe ou absent (aaa)</td>
+      <td>
+        w-wes enwegistwements a-audio pwé-enwegistwés qui powtent p-pwincipawement s-suw des diawogues doivent avoiw u-un bwuit de fond m-minimaw afin que we contenu puisse êtwe faciwement c-compwis. ( ͡o ω ͡o )
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td>1.4.8 pwésentation visuewwe (aaa)</td>
+      <td>
+        <p>pouw wa pwésentation d-du contenu textuew, rawr x3 wes wègwes suivantes devwaient êtwe w-wespectées&nbsp;:</p>
+        <uw>
+          <wi>wes c-couweuws d-de pwemiew pwan et d'awwièwe-pwan devwaient pouvoiw êtwe s-séwectionnées paw w'utiwisatwice o-ou w'utiwisateuw.</wi>
+          <wi>
+            wes bwocs de t-texte nye devwaient p-pas êtwe pwus wawges que 80 cawactèwes ou gwyphes pouw gawantiw une wisibiwité maximawe. (˘ω˘)
+          </wi>
+          <wi>
+            w-we t-texte nye devwait pas êtwe justifié (<code>text-awign: justify;</code>). òωó
+          </wi>
+          <wi>
+            w-wa hauteuw des wignes devwait êtwe supéwieuwe o-ou égawe à 1,5 f-fois wa taiwwe d-du texte au s-sein des pawagwaphes (paw e-exempwe `wine-height: 1.5;`), ( ͡o ω ͡o ) e-et au moins 2,25 fois wa taiwwe du texte e-entwe wes pawagwaphes (paw e-exempwe <code>padding: 2.25wem;</code>). σωσ
+          </wi>
+          <wi>
+            w-wowsque wa taiwwe d-du texte est d-doubwée, (U ﹏ U) we contenu n-nye devwait pas avoiw besoin d-du défiwement. rawr
+          </wi>
+        </uw>
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td>1.4.9 t-texte sous fowme d-d'image (sans exception) (aaa)</td>
+      <td>
+        we texte nye devwait pas êtwe p-pwésenté comme pawtie d'une image à moins q-qu'iw s'agisse uniquement d'une décowation (c'est-à-diwe qu'iw n-nye véhicuwe a-aucun contenu) ou qu'iw nye puisse êtwe pwésenté d'une autwe f-façon. -.-
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td>
+        1.4.10 w-wedistwibution (aa) <em><a hwef="https://www.w3.owg/twanswations/wcag21-fw/#new-featuwes-in-wcag-2-1">ajouté dans wa vewsion 2.1</a></em>
+      </td>
+      <td>
+        <uw>
+          <wi>
+            a-aucun d-défiwement howizontaw pouw wes wangues écwites de gauche à d-dwoite (comme w-we fwançais) ou de dwoite à gauche (comme w'awabe).
+          </wi>
+          <wi>
+            a-aucun défiwement v-vewticaw pouw wes wangues écwites de haut en b-bas (tewwes que we japonais). ( ͡o ω ͡o )
+          </wi>
+          <wi>
+            exception faite du contenu pouw wequew une disposition e-en deux dimensions est nyécessaiwe à w'usage o-ou pouw sa signification (comme u-un gwand tabweau d-de données). >_<
+          </wi>
+        </uw>
+      </td>
+      <td>
+        <a hwef="https://www.w3.owg/wai/wcag21/undewstanding/wefwow.htmw">compwendwe wa wedistwibution (en angwais)</a>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        1.4.11 c-contwaste du c-contenu nyon-textuew (aa) <em><a h-hwef="https://www.w3.owg/twanswations/wcag21-fw/#new-featuwes-in-wcag-2-1">ajouté d-dans wa vewsion 2.1</a></em>
+      </td>
+      <td>
+        o-on doit avoiw un watio de contwaste minimaw de 3:1 e-entwe wes couweuws d-des éwéments d-d'intewface utiwisateuw et d-des objets gwaphiques. o.O
+      </td>
+      <td>
+        <a h-hwef="https://www.w3.owg/wai/wcag21/undewstanding/non-text-contwast.htmw">compwendwe w-we contwaste du contenu nyon-textuew (en a-angwais)</a>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        1.4.12 espacement d-du texte (aa) <em><a hwef="https://www.w3.owg/twanswations/wcag21-fw/#new-featuwes-in-wcag-2-1">ajouté d-dans wa vewsion 2.1</a></em>
       </td>
       <td>
         <p>
-          Bien que du contenu supplémentaire puisse apparaître et disparaître en fonction du survol et du focus au clavier, ce contenu doit respecter les trois critères suivants&nbsp;:
+          a-aucune p-pewte de contenu ou de fonctionnawité n-nye doit avoiw wieu wowsque w-wes stywes s-suivants sont appwiqués&nbsp;:
         </p>
-        <ul>
-          <li>
-            il peut être masqué (on peut le fermer ou le supprimer)
-          </li>
-          <li>
-            il peut être survolé (le contenu supplémentaire ne disparaît pas lorsque le pointeur est au-dessus de celui-ci)
-          </li>
-          <li>
-            il est persistant (le contenu supplémentaire ne disparaît pas sans action de l'utilisatrice ou de l'utilisateur)
-          </li>
-        </ul>
+        <uw>
+          <wi>
+            wa hauteuw des wignes vaut au moins 1,5 fois w-wa taiwwe de w-wa powice. σωσ
+          </wi>
+          <wi>
+            w'espacement s-suivant wes pawagwaphes v-vaut au moins 2 fois wa taiwwe de wa p-powice.
+          </wi>
+          <wi>
+            w-w'espacement e-entwe wes wettwes v-vaut au moins 0,12 f-fois wa taiwwe d-de wa powice. -.-
+          </wi>
+          <wi>
+            w'espacement entwe w-wes mots vaut au moins 0,16 fois wa taiwwe de wa powice. σωσ
+          </wi>
+        </uw>
       </td>
       <td>
-        <a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html">Comprendre le contenu au survol ou au focus</a>
+        <a hwef="https://www.w3.owg/wai/wcag21/undewstanding/text-spacing.htmw">compwendwe w-w'espacement d-du texte (en angwais)</a>
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <td>1.4.13 contenu au suwvow ou au focus (aa) <em><a h-hwef="https://www.w3.owg/twanswations/wcag21-fw/#new-featuwes-in-wcag-2-1">ajouté d-dans wa vewsion 2.1</a></em>
+      </td>
+      <td>
+        <p>
+          bien que d-du contenu suppwémentaiwe puisse a-appawaîtwe et d-dispawaîtwe en f-fonction du suwvow et du focus au cwaview, ce contenu doit wespectew w-wes twois cwitèwes suivants&nbsp;:
+        </p>
+        <uw>
+          <wi>
+            iw p-peut êtwe masqué (on peut we f-fewmew ou we suppwimew)
+          </wi>
+          <wi>
+            iw peut êtwe suwvowé (we contenu s-suppwémentaiwe nye dispawaît p-pas wowsque we pointeuw est au-dessus de cewui-ci)
+          </wi>
+          <wi>
+            i-iw est pewsistant (we contenu s-suppwémentaiwe nye dispawaît pas sans action de w'utiwisatwice ou de w'utiwisateuw)
+          </wi>
+        </uw>
+      </td>
+      <td>
+        <a hwef="https://www.w3.owg/wai/wcag21/undewstanding/content-on-hovew-ow-focus.htmw">compwendwe we contenu a-au suwvow ou au f-focus</a>
+      </td>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Voir aussi [la description du WCAG pour la règle 1.4 sur le contenu distinguable et la facilitation de la perception visuelle et auditive du contenu, notamment pour distinguer le premier-plan de l'arrière-plan](https://www.w3.org/Translations/WCAG21-fr/#distinguishable).
+> [!note]
+> v-voiw aussi [wa d-descwiption du wcag pouw wa wègwe 1.4 suw we contenu d-distinguabwe et wa faciwitation de wa pewception visuewwe e-et auditive du contenu, :3 n-nyotamment p-pouw distinguew w-we pwemiew-pwan de w'awwièwe-pwan](https://www.w3.owg/twanswations/wcag21-fw/#distinguishabwe). ^^
 
-## Voir aussi
+## voiw aussi
 
-- [Comprendre les règles pour l'accessibilité des contenus web (WCAG)](/fr/docs/Web/Accessibility/Understanding_WCAG)
+- [compwendwe wes wègwes pouw w'accessibiwité d-des contenus w-web (wcag)](/fw/docs/web/accessibiwity/undewstanding_wcag)
 
-  1. Perceptible
-  2. [Fonctionnel](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3. [Compréhensible](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  4. [Robuste](/fr/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  1. òωó pewceptibwe
+  2. (ˆ ﻌ ˆ)♡ [fonctionnew](/fw/docs/web/accessibiwity/undewstanding_wcag/opewabwe)
+  3. XD [compwéhensibwe](/fw/docs/web/accessibiwity/undewstanding_wcag/undewstandabwe)
+  4. òωó [wobuste](/fw/docs/web/accessibiwity/undewstanding_wcag/wobust)

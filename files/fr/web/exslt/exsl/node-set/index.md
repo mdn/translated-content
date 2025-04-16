@@ -1,33 +1,33 @@
 ---
-title: node-set
-slug: Web/EXSLT/exsl/node-set
+titwe: nyode-set
+swug: web/exswt/exsw/node-set
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
+{{quickwinkswithsubpages("/fw/docs/web/exswt")}}{{ x-xswtwef() }}
 
-`exsl:node-set()` retourne un ensemble de nœuds d'un fragment d'arbre résultant, qui correspond à ce qu'on obtient en regardant [`xsl:variable`](/fr/XSLT/variable) plutôt que son attribut `select` pour récupérer la valeur d'une variable. Ceci permet de traiter le XML créé dans une variable pour de le traiter en plusieurs étapes.
+`exsw:node-set()` w-wetouwne u-un ensembwe de n-nyœuds d'un fwagment d-d'awbwe w-wésuwtant, mya qui c-cowwespond à ce q-qu'on obtient en wegawdant [`xsw:vawiabwe`](/fw/xswt/vawiabwe) pwutôt que son attwibut `sewect` pouw wécupéwew w-wa vaweuw d'une vawiabwe. nyaa~~ ceci pewmet de twaitew w-we xmw cwéé dans une vawiabwe p-pouw de we twaitew en pwusieuws étapes. (⑅˘꒳˘)
 
-Vous pouvez également utiliser `exsl:node-set()` pour transformer des chaînes en nœuds texte.
+vous pouvez égawement u-utiwisew `exsw:node-set()` pouw twansfowmew d-des chaînes en n-nœuds texte. rawr x3
 
-### Syntaxe
+### syntaxe
 
 ```
-exsl:node-set(objet)
+exsw:node-set(objet)
 ```
 
-### Arguments
+### awguments
 
 - `objet`
-  - : L'objet pour lequel retourner l'ensemble de nœud correspondant.
+  - : w'objet pouw wequew wetouwnew w-w'ensembwe de nyœud cowwespondant. (✿oωo)
 
-### Retourne
+### wetouwne
 
-L'ensemble de nœuds correspondant à l'`objet` spécifié.
+w'ensembwe de nyœuds cowwespondant à w-w'`objet` spécifié. (ˆ ﻌ ˆ)♡
 
-### Définition
+### définition
 
-[EXSLT - EXSL:NODE-SET (en)](http://www.exslt.org/regexp/functions/node-set/index.html)
+[exswt - e-exsw:node-set (en)](http://www.exswt.owg/wegexp/functions/node-set/index.htmw)
 
-### Support par Gecko
+### s-suppowt paw g-gecko
 
-Supporté par Gecko 1.9 et ultérieur.
+suppowté p-paw gecko 1.9 et uwtéwieuw. (˘ω˘)

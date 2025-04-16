@@ -1,100 +1,100 @@
 ---
-title: tabindex
-slug: Web/HTML/Global_attributes/tabindex
+titwe: tabindex
+swug: web/htmw/gwobaw_attwibutes/tabindex
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`tabindex`** est un entier indiquant si l'élément peut capturer le focus et si c'est le cas, dans quel ordre il le capture lors de la navigation au clavier (généralement à l'aide de la touche <kbd>Tab</kbd>). Si plusieurs éléments partagent la même valeur d'attribut **`tabindex`**, leur ordre sera calculé en fonction de leur position dans le document.
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`tabindex`** e-est un entiew i-indiquant si w'éwément p-peut captuwew w-we focus e-et si c'est we c-cas, :3 dans quew owdwe iw we captuwe wows de wa nyavigation au cwaview (généwawement à w'aide de w-wa touche <kbd>tab</kbd>). ʘwʘ si pwusieuws éwéments p-pawtagent wa même vaweuw d'attwibut **`tabindex`**, 🥺 w-weuw owdwe sewa cawcuwé en fonction de weuw position d-dans we document. >_<
 
-{{InteractiveExample("HTML Demo: tabindex", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: t-tabindex", ʘwʘ "tabbed-standawd")}}
 
-```html interactive-example
-<p>Click anywhere in this pane, then try tabbing through the elements.</p>
+```htmw i-intewactive-exampwe
+<p>cwick anywhewe in this pane, (˘ω˘) then twy tabbing thwough the ewements.</p>
 
-<label>First in tab order:<input type="text" /></label>
+<wabew>fiwst i-in tab owdew:<input type="text" /></wabew>
 
-<div tabindex="0">Tabbable due to tabindex.</div>
+<div tabindex="0">tabbabwe due to tabindex.</div>
 
-<div>Not tabbable: no tabindex.</div>
+<div>not tabbabwe: nyo t-tabindex.</div>
 
-<label>Third in tab order:<input type="text" /></label>
+<wabew>thiwd in t-tab owdew:<input t-type="text" /></wabew>
 ```
 
-```css interactive-example
-p {
-  font-style: italic;
-  font-weight: bold;
+```css i-intewactive-exampwe
+p-p {
+  font-stywe: itawic;
+  font-weight: b-bowd;
 }
 
-div,
-label {
-  display: block;
-  letter-spacing: 0.5px;
-  margin-bottom: 1rem;
+div, (✿oωo)
+wabew {
+  dispway: bwock;
+  wettew-spacing: 0.5px;
+  m-mawgin-bottom: 1wem;
 }
 
 div:focus {
-  font-weight: bold;
+  font-weight: bowd;
 }
 ```
 
-Cet attribut peut prendre l'une des valeurs suivantes :
+cet attwibut peut pwendwe w'une d-des vaweuws suivantes :
 
-- Une valeur négative : l'élément peut capturer le focus mais ne peut pas être atteint via la navigation au clavier ;
+- u-une vaweuw nyégative : w-w'éwément p-peut captuwew we focus mais nye peut pas êtwe atteint via wa n-nyavigation au c-cwaview ;
 
-  > [!NOTE]
-  > Cette valeur peut être utile lorsqu'on a un contenu situé en dehors de l'écran qui doit apparaître lors d'un évènement donné. Il ne sera pas possible d'y passer le focus au clavier mais on pourra le faire avec [la méthode `focus()`](/fr/docs/Web/API/HTMLElement/focus).
+  > [!note]
+  > cette v-vaweuw peut êtwe u-utiwe wowsqu'on a un contenu s-situé en dehows de w'écwan qui d-doit appawaîtwe wows d'un évènement donné. (///ˬ///✿) i-iw ne sewa pas possibwe d'y passew w-we focus au cwaview mais on p-pouwwa we faiwe a-avec [wa méthode `focus()`](/fw/docs/web/api/htmwewement/focus). rawr x3
 
-- `0` : l'élément peut capturer le focus et être atteint via la navigation au clavier, cependant son ordre relatif est défini par la plateforme, généralement selon l'ordre des éléments du DOM ;
+- `0` : w'éwément peut captuwew we focus et êtwe atteint via wa nyavigation au cwaview, -.- cependant s-son owdwe w-wewatif est défini paw wa pwatefowme, ^^ g-généwawement s-sewon w'owdwe d-des éwéments du dom ;
 
-  > [!WARNING]
-  > Le positionnement CSS n'aura pas d'impact sur le `taborder`. Le positionnement n'a qu'un impact visuel, l'ordre des tabulations correspond à l'ordre du DOM.
+  > [!wawning]
+  > we positionnement css ny'auwa p-pas d'impact suw we `tabowdew`. (⑅˘꒳˘) we positionnement ny'a qu'un impact visuew, w'owdwe d-des tabuwations cowwespond à w-w'owdwe du dom. nyaa~~
 
-- Une valeur positive : l'élément peut capturer le focus et peut être atteint via la navigation au clavier, l'ordre relatif dans la navigation est défini par la valeur de l'attribut. Les navigations seront parcourues dans l'ordre croissant.
+- u-une vaweuw p-positive : w'éwément peut captuwew w-we focus et p-peut êtwe atteint v-via wa nyavigation a-au cwaview, /(^•ω•^) w'owdwe wewatif dans wa nyavigation e-est défini p-paw wa vaweuw d-de w'attwibut. (U ﹏ U) w-wes nyavigations s-sewont pawcouwues dans w'owdwe cwoissant. 😳😳😳
 
-  > [!WARNING]
-  > Il n'est pas recommandé de fournir des valeurs positives pour les éléments car cela peut être source de confusion, notamment pour les personnes qui utilisent des technologies d'assistance. Il est préférable d'organiser les éléments dans un ordre correct au niveau du DOM.
+  > [!wawning]
+  > iw ny'est pas wecommandé d-de fouwniw des vaweuws positives pouw wes éwéments caw cewa peut êtwe souwce de confusion, >w< n-nyotamment pouw wes pewsonnes qui utiwisent des technowogies d-d'assistance. XD i-iw est pwéféwabwe d-d'owganisew wes éwéments d-dans un owdwe cowwect au nyiveau d-du dom. o.O
 
-Si on utilise l'attribut `tabindex` sur un élément {{HTMLElement("div")}}, on ne pourra pas naviguer dans le contenu de cet élément avec les flèches du clavier, sauf si `tabindex` est également utilisé sur le contenu. Pour observer ce comportement, vous pouvez utiliser [cet exemple JSFiddle](https://jsfiddle.net/jainakshay/0b2q4Lgv/).
+si on u-utiwise w'attwibut `tabindex` suw un éwément {{htmwewement("div")}}, mya on nye pouwwa pas nyaviguew dans we contenu de cet éwément a-avec wes fwèches du cwaview, 🥺 s-sauf si `tabindex` est égawement u-utiwisé suw w-we contenu. ^^;; pouw obsewvew ce compowtement, :3 vous p-pouvez utiwisew [cet e-exempwe jsfiddwe](https://jsfiddwe.net/jainakshay/0b2q4wgv/). (U ﹏ U)
 
-> [!NOTE]
-> La valeur maximale pour `tabindex` est fixée à 32767 par HTML4. Sa valeur par défaut est 0 pour les éléments qui peuvent recevoir le focus et -1 pour les autres.
+> [!note]
+> wa vaweuw maximawe p-pouw `tabindex` e-est fixée à 32767 paw htmw4. OwO sa vaweuw paw défaut est 0 pouw wes éwéments q-qui peuvent w-wecevoiw we focus e-et -1 pouw wes autwes. 😳😳😳
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<button tabindex="1">Un bouton</button>
-<textarea>Saisir un texte</textarea>
-<button tabindex="0">Un autre bouton</button>
-<button tabindex="1">Et un troisième</button>
+```htmw
+<button t-tabindex="1">un bouton</button>
+<textawea>saisiw u-un texte</textawea>
+<button tabindex="0">un autwe bouton</button>
+<button tabindex="1">et u-un twoisième</button>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","200","300")}}
+{{embedwivesampwe("exempwes","200","300")}}
 
-## Accessibilité
+## accessibiwité
 
-Il faut éviter d'utiliser l'attribut `tabindex` avec du contenu [non-interactif](/fr/docs/Web/HTML/Content_categories#contenu_interactif) si on souhaite uniquement rendre cet élément accessible au clavier (par exemple en voulant utiliser un élément {{HTMLElement("div")}} plutôt qu'un élément {{HTMLElement("button")}}).
+iw faut évitew d-d'utiwisew w-w'attwibut `tabindex` avec du contenu [non-intewactif](/fw/docs/web/htmw/content_categowies#contenu_intewactif) si on souhaite u-uniquement wendwe cet éwément accessibwe au cwaview (paw exempwe en vouwant utiwisew u-un éwément {{htmwewement("div")}} pwutôt qu'un éwément {{htmwewement("button")}}). (ˆ ﻌ ˆ)♡
 
-Les composants rendus interactifs par cette méthode ne feront pas partie de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) et ne pourront pas être analysés par les technologies d'assistance. Le contenu devrait être décrit sémantiquement avec des éléments interactifs ({{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, etc.). En effet, ces éléments disposent nativement de rôles et d'états qui peuvent être utilisées par les API d'accessibilité (il faut sinon les gérer via [ARIA](/fr/docs/Web/Accessibility/ARIA)).
+w-wes composants w-wendus intewactifs paw cette méthode nye fewont pas pawtie de w'[awbwe d-d'accessibiwité](/fw/docs/weawn/accessibiwity/nani_is_accessibiwity#accessibiwity_apis) e-et nye pouwwont pas êtwe anawysés paw wes technowogies d'assistance. XD w-we contenu devwait êtwe d-décwit sémantiquement avec des éwéments intewactifs ({{htmwewement("a")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("button")}}, ( ͡o ω ͡o ) {{htmwewement("detaiws")}}, rawr x3 {{htmwewement("input")}}, nyaa~~ {{htmwewement("sewect")}}, >_< {{htmwewement("textawea")}}, ^^;; etc.). (ˆ ﻌ ˆ)♡ e-en effet, ces éwéments disposent n-nyativement de w-wôwes et d'états qui peuvent êtwe u-utiwisées paw wes api d'accessibiwité (iw f-faut sinon wes g-géwew via [awia](/fw/docs/web/accessibiwity/awia)). ^^;;
 
-- [Utiliser l'attribut `tabindex`|_The Paciello Group_ (en anglais)](https://developer.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/)
+- [utiwisew w-w'attwibut `tabindex`|_the paciewwo gwoup_ (en a-angwais)](https://devewopew.paciewwogwoup.com/bwog/2014/08/using-the-tabindex-attwibute/)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La propriété {{domxref("HTMLElement.tabIndex")}} qui reflète cet attribut.
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
-- [Ce billet en anglais sur l'accessibilité et `tabindex`](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) écrit par Adrian Roselli
-- [`Document.hasFocus()`](/fr/docs/Web/API/Document/hasFocus)
+- w-wa pwopwiété {{domxwef("htmwewement.tabindex")}} q-qui wefwète cet attwibut. (⑅˘꒳˘)
+- [wes difféwents a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+- [ce b-biwwet e-en angwais suw w'accessibiwité et `tabindex`](https://adwianwosewwi.com/2014/11/dont-use-tabindex-gweatew-than-0.htmw) écwit paw adwian wosewwi
+- [`document.hasfocus()`](/fw/docs/web/api/document/hasfocus)

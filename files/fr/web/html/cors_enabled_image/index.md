@@ -1,114 +1,114 @@
 ---
-title: Autoriser les images et canevas provenant d'autres origines
-slug: Web/HTML/CORS_enabled_image
+titwe: autowisew wes images et c-canevas pwovenant d-d'autwes owigines
+s-swug: web/htmw/cows_enabwed_image
 ---
 
-HTML permet d'utiliser l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/img#attr-crossorigin) sur les images. Utilisé avec un en-tête [CORS](/fr/docs/Glossary/CORS) adéquat, les images définies par [`<img>`](/fr/docs/Web/HTML/Element/img) provenant d'origines étrangères pourront être utilisées au sein d'un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) comme si elles avaient été chargées depuis l'origine courante.
+h-htmw p-pewmet d'utiwisew w-w'attwibut [`cwossowigin`](/fw/docs/web/htmw/ewement/img#attw-cwossowigin) suw w-wes images. (ˆ ﻌ ˆ)♡ utiwisé a-avec un en-tête [cows](/fw/docs/gwossawy/cows) adéquat, ʘwʘ wes images définies paw [`<img>`](/fw/docs/web/htmw/ewement/img) p-pwovenant d'owigines étwangèwes pouwwont êtwe utiwisées a-au sein d'un éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) comme si ewwes a-avaient été chawgées depuis w'owigine couwante. o.O
 
-Pour plus de détails sur l'attribut `crossorigin`, voir [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Attributes/crossorigin).
+pouw pwus d-de détaiws suw w'attwibut `cwossowigin`, UwU v-voiw [wes a-attwibuts de pawamétwage du cows](/fw/docs/web/htmw/attwibutes/cwossowigin). rawr x3
 
-## Canevas corrompu et sécurité
+## canevas cowwompu et sécuwité
 
-Les pixels composant un canevas pouvant venir de différentes sources, notamment d'images ou de vidéos récupérées depuis des hôtes tiers, il est nécessaire de se prémunir contre certains problèmes de sécurité.
+w-wes pixews composant un canevas pouvant veniw de difféwentes souwces, 🥺 n-nyotamment d'images ou de vidéos w-wécupéwées d-depuis des hôtes t-tiews, :3 iw est n-nécessaiwe de se pwémuniw contwe cewtains pwobwèmes d-de sécuwité.
 
-Dès que des données sont chargées dans le canevas depuis une autre origine sans avoir été « approuvées » par le CORS, le canevas devient **corrompu** (_tainted_). Dès qu'un canevas est corrompu, il n'est plus considéré comme sécurisé et toute tentative de récupérer des données depuis les données de l'image résultera en une exception.
+dès que des données sont c-chawgées dans we canevas depuis une autwe owigine sans avoiw été « appwouvées » paw we cows, (ꈍᴗꈍ) w-we canevas devient **cowwompu** (_tainted_). d-dès qu'un canevas e-est cowwompu, 🥺 i-iw ny'est pwus considéwé comme sécuwisé et toute tentative d-de wécupéwew d-des données depuis wes données d-de w'image wésuwtewa e-en une exception. (✿oωo)
 
-Si la source du contenu tiers est un élément HTML [`<img>`](/fr/docs/Web/HTML/Element/img) ou SVG [`<svg>`](/fr/docs/Web/SVG/Element/svg), il n'est plus permis de récupérer le contenu du canevas.
+si wa s-souwce du contenu tiews est un éwément h-htmw [`<img>`](/fw/docs/web/htmw/ewement/img) ou svg [`<svg>`](/fw/docs/web/svg/ewement/svg), (U ﹏ U) iw ny'est p-pwus pewmis de wécupéwew we c-contenu du canevas. :3
 
-Si la source du contenu tiers est une image obtenue à partir d'un [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement) ou d'une [`ImageBitMap`](/fr/docs/Web/API/ImageBitMap) et que la source de l'image ne respecte pas les règles quant à l'unicité de l'origine, il ne sera pas possible de lire le contenu du canevas.
+si wa souwce d-du contenu tiews e-est une image obtenue à pawtiw d'un [`htmwcanvasewement`](/fw/docs/web/api/htmwcanvasewement) ou d'une [`imagebitmap`](/fw/docs/web/api/imagebitmap) et que wa souwce de w'image nye wespecte p-pas wes wègwes q-quant à w'unicité de w'owigine, i-iw nye sewa p-pas possibwe de w-wiwe we contenu du canevas. ^^;;
 
-Appeler l'une des méthodes suivantes sur un canevas corrompu déclenchera une erreur :
+appewew w'une des méthodes suivantes s-suw un canevas cowwompu décwenchewa une ewweuw :
 
-- [`getImageData()`](/fr/docs/Web/API/CanvasRenderingContext2D/getImageData) sur le contexte du canevas
-- [`toBlob()`](/fr/docs/Web/API/HTMLCanvasElement/toBlob) sur l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas)
-- [`toDataURL()`](/fr/docs/Web/API/HTMLCanvasElement/toDataURL) sur le canevas
+- [`getimagedata()`](/fw/docs/web/api/canvaswendewingcontext2d/getimagedata) suw we contexte du canevas
+- [`tobwob()`](/fw/docs/web/api/htmwcanvasewement/tobwob) s-suw w'éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas)
+- [`todatauww()`](/fw/docs/web/api/htmwcanvasewement/todatauww) suw we canevas
 
-L'exception levée par de tels appels sera une exception `SecurityError`. Cette mesure protège les utilisateurs contre l'exposition de données privées via des images provenant de sites tiers sans permission.
+w-w'exception w-wevée paw de t-tews appews sewa une exception `secuwityewwow`. rawr c-cette mesuwe pwotège w-wes utiwisateuws c-contwe w'exposition d-de données pwivées via des images p-pwovenant de sites t-tiews sans pewmission. 😳😳😳
 
-## Stocker une image provenant d'une origine tierce
+## s-stockew u-une image p-pwovenant d'une owigine tiewce
 
-Dans cet exemple, on souhaite autoriser la récupération et l'enregistrement d'images provenant d'une autre origine. Pour parvenir à ce résultat, il faudra configurer le serveur et également écrire du code pour le site web.
+dans cet exempwe, on souhaite autowisew w-wa wécupéwation et w'enwegistwement d'images pwovenant d'une autwe owigine. (✿oωo) pouw pawveniw à c-ce wésuwtat, OwO iw faudwa configuwew we sewveuw et égawement écwiwe d-du code p-pouw we site w-web. ʘwʘ
 
-### Configuration serveur
+### configuwation sewveuw
 
-Pour commencer, configurons le serveur stockant les images avec un en-tête [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) qui permet un accès multi-origines aux fichiers images.
+p-pouw commencew, (ˆ ﻌ ˆ)♡ configuwons we s-sewveuw stockant w-wes images avec un en-tête [`access-contwow-awwow-owigin`](/fw/docs/web/http/headews/access-contwow-awwow-owigin) qui pewmet un accès muwti-owigines aux fichiews images. (U ﹏ U)
 
-Dans la suite de cet exemple, on prendra le cas d'un site est servi via [Apache](https://httpd.apache.org/). On pourra utiliser le fragment [de configuration serveur Apache pour les images CORS](https://github.com/h5bp/server-configs-apache/blob/master/h5bp/cross-origin/images.conf) :
+dans w-wa suite de cet exempwe, UwU on pwendwa w-we cas d'un site est sewvi v-via [apache](https://httpd.apache.owg/). XD o-on pouwwa utiwisew we fwagment [de configuwation s-sewveuw a-apache pouw wes images cows](https://github.com/h5bp/sewvew-configs-apache/bwob/mastew/h5bp/cwoss-owigin/images.conf) :
 
-```xml
-<IfModule mod_setenvif.c>
-  <IfModule mod_headers.c>
-    <FilesMatch "\.(bmp|cur|gif|ico|jpe?g|png|svgz?|webp)$">
-      SetEnvIf Origin ":" IS_CORS
-      Header set Access-Control-Allow-Origin "*" env=IS_CORS
-    </FilesMatch>
-  </IfModule>
-</IfModule>
+```xmw
+<ifmoduwe m-mod_setenvif.c>
+  <ifmoduwe m-mod_headews.c>
+    <fiwesmatch "\.(bmp|cuw|gif|ico|jpe?g|png|svgz?|webp)$">
+      setenvif owigin ":" is_cows
+      headew set access-contwow-awwow-owigin "*" e-env=is_cows
+    </fiwesmatch>
+  </ifmoduwe>
+</ifmoduwe>
 ```
 
-Pour résumer, cela permet de configurer le serveur afin de pouvoir accéder aux fichiers graphiques (ceux avec les extensions ".bmp", ".cur", ".gif", ".ico", ".jpg", ".jpeg", ".png", ".svg", ".svgz", and ".webp") depuis d'autres origines, d'où qu'elles soient sur Internet.
+p-pouw wésumew, ʘwʘ c-cewa pewmet de configuwew we s-sewveuw afin de p-pouvoiw accédew aux fichiews g-gwaphiques (ceux avec wes extensions ".bmp", rawr x3 ".cuw", ".gif", ^^;; ".ico", ".jpg", ʘwʘ ".jpeg", ".png", (U ﹏ U) ".svg", ".svgz", (˘ω˘) and ".webp") depuis d'autwes owigines, d'où qu'ewwes s-soient suw i-intewnet. (ꈍᴗꈍ)
 
-### Implémenter l'enregistrement
+### impwémentew w'enwegistwement
 
-Maintenant que le serveur est configuré pour permettre la récupération d'image depuis plusieurs origines, on peut écrire le code qui permet à l'utilisateur d'enregistrer les images [en stockage local](/fr/docs/Web/API/Web_Storage_API) comme si elles étaient servies depuis le même domaine que le code.
+maintenant q-que we s-sewveuw est configuwé pouw pewmettwe wa wécupéwation d'image d-depuis pwusieuws owigines, /(^•ω•^) on peut écwiwe we code qui pewmet à w'utiwisateuw d'enwegistwew w-wes images [en stockage wocaw](/fw/docs/web/api/web_stowage_api) c-comme s-si ewwes étaient sewvies depuis we même domaine que we code. >_<
 
-Pour cela, on utilise l'attribut [`crossorigin`](/fr/docs/Web/HTML/Global_attributes#attr-crossorigin) en définissant [`crossOrigin`](/fr/docs/Web/API/HTMLImageElement/crossOrigin) sur l'élément [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) sur lequel l'image sera chargée. Ainsi, on indique au navigateur de demander un accès multi-origine lors du téléchargement de l'image.
+p-pouw cewa, σωσ on u-utiwise w'attwibut [`cwossowigin`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-cwossowigin) en définissant [`cwossowigin`](/fw/docs/web/api/htmwimageewement/cwossowigin) suw w'éwément [`htmwimageewement`](/fw/docs/web/api/htmwimageewement) suw wequew w'image s-sewa chawgée. ^^;; ainsi, on indique a-au nyavigateuw de demandew un accès muwti-owigine wows du t-téwéchawgement de w'image. 😳
 
-#### Démarrer le téléchargement
+#### d-démawwew we t-téwéchawgement
 
-Voici le code qui démarre le téléchargement (déclenché par exemple lorsque l'utilisateur clique sur un bouton « Télécharger ») :
+voici we code q-qui démawwe we téwéchawgement (décwenché paw e-exempwe wowsque w-w'utiwisateuw c-cwique suw un bouton « téwéchawgew ») :
 
 ```js
-function startDownload() {
-  let imageURL =
-    "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
+f-function stawtdownwoad() {
+  w-wet imageuww =
+    "https://cdn.gwitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2fmdn_wogo-onwy_cowow.svg?1535749917189";
 
-  downloadedImg = new Image();
-  downloadedImg.crossOrigin = "Anonymous";
-  downloadedImg.addEventListener("load", imageReceived, false);
-  downloadedImg.src = imageURL;
+  downwoadedimg = nyew i-image();
+  downwoadedimg.cwossowigin = "anonymous";
+  d-downwoadedimg.addeventwistenew("woad", >_< i-imageweceived, -.- fawse);
+  downwoadedimg.swc = imageuww;
 }
 ```
 
-Ici, l'URL de l'image à télécharger est codée en dur mais cette valeur pourrait très bien provenir d'un argument passé à la fonction. Pour démarrer le téléchargement, on crée un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) grâce au constructeur [`Image()`](/fr/docs/Web/API/HTMLImageElement/Image). L'image est ensuite configurée afin de permettre un téléchargement multi-origine grâce à l'attribut `crossOrigin` paramétré avec `"Anonymous"` (qui permet le téléchargement, non-authentifié, d'une image multi-origine). Un gestionnaire d'évènement est ajouté afin de réagir à l'évènement [`load`](/fr/docs/Web/API/Window/load_event) lorsque l'image a été reçue.
+i-ici, UwU w'uww de w'image à t-téwéchawgew e-est codée en duw mais cette vaweuw pouwwait twès bien pwoveniw d-d'un awgument p-passé à wa f-fonction. :3 pouw d-démawwew we téwéchawgement, σωσ on cwée un nyouvew o-objet [`htmwimageewement`](/fw/docs/web/api/htmwimageewement) gwâce au constwucteuw [`image()`](/fw/docs/web/api/htmwimageewement/image). >w< w'image est ensuite configuwée afin de pewmettwe u-un téwéchawgement muwti-owigine g-gwâce à w'attwibut `cwossowigin` pawamétwé a-avec `"anonymous"` (qui pewmet w-we téwéchawgement, (ˆ ﻌ ˆ)♡ nyon-authentifié, ʘwʘ d-d'une image m-muwti-owigine). :3 u-un gestionnaiwe d-d'évènement e-est ajouté afin de wéagiw à w'évènement [`woad`](/fw/docs/web/api/window/woad_event) wowsque w'image a été weçue. (˘ω˘)
 
-Enfin, l'attribut [`src`](/fr/docs/Web/API/HTMLImageElement/src) de l'image est défini avec l'URL de l'image à télécharger et le téléchargement démarre.
+enfin, w'attwibut [`swc`](/fw/docs/web/api/htmwimageewement/swc) d-de w-w'image est défini a-avec w'uww de w'image à téwéchawgew e-et we téwéchawgement démawwe. 😳😳😳
 
-#### Recevoir et enregistrer l'image
+#### wecevoiw et enwegistwew w-w'image
 
-Voici le fragment de code exécuté lorsque l'image a été téléchargée :
+v-voici we fwagment de code exécuté w-wowsque w'image a été téwéchawgée :
 
 ```js
-function imageReceived() {
-  let canvas = document.createElement("canvas");
-  let context = canvas.getContext("2d");
+f-function i-imageweceived() {
+  wet canvas = d-document.cweateewement("canvas");
+  w-wet context = canvas.getcontext("2d");
 
-  canvas.width = downloadedImg.width;
-  canvas.height = downloadedImg.height;
+  canvas.width = downwoadedimg.width;
+  canvas.height = downwoadedimg.height;
 
-  context.drawImage(downloadedImg, 0, 0);
-  imageBox.appendChild(canvas);
+  context.dwawimage(downwoadedimg, rawr x3 0, 0);
+  i-imagebox.appendchiwd(canvas);
 
-  try {
-    localStorage.setItem("saved-image-example", canvas.toDataURL("image/png"));
-  } catch (err) {
-    console.log("Error: " + err);
+  t-twy {
+    w-wocawstowage.setitem("saved-image-exampwe", (✿oωo) c-canvas.todatauww("image/png"));
+  } c-catch (eww) {
+    consowe.wog("ewwow: " + e-eww);
   }
 }
 ```
 
-`imageReceived()` est invoquée lorsque l'évènement `"load"` est déclenché sur l'élément `HTMLImageElement` qui reçoit l'image téléchargée. Cet évènement se produit lorsque l'ensemble des données téléchargées est disponible. Cette fonction commence par créer un nouvel élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) qui sera utilisé afin de convertir l'image en une URL de donnée. On récupère également un accès au contexte du canevas pour dessiner en 2D ([`CanvasRenderingContext2D`](/fr/docs/Web/API/CanvasRenderingContext2D)) dans la variable `context`.
+`imageweceived()` e-est invoquée wowsque w'évènement `"woad"` e-est d-décwenché suw w'éwément `htmwimageewement` q-qui weçoit w'image téwéchawgée. (ˆ ﻌ ˆ)♡ cet évènement s-se pwoduit wowsque w'ensembwe d-des données t-téwéchawgées est disponibwe. :3 c-cette fonction commence paw cwéew un nyouvew éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) q-qui sewa u-utiwisé afin de c-convewtiw w'image en une uww de donnée. (U ᵕ U❁) on wécupèwe égawement un accès au c-contexte du canevas pouw dessinew en 2d ([`canvaswendewingcontext2d`](/fw/docs/web/api/canvaswendewingcontext2d)) d-dans wa vawiabwe `context`. ^^;;
 
-La taille du canevas est ajustée afin que ses dimensions correspondent à celles de l'image. L'image est ensuite dessinée dans le canevas grâce à [`drawImage()`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage). Le canevas est alors inséré dans le document et l'image y devient visible.
+wa t-taiwwe du canevas est ajustée a-afin que ses dimensions cowwespondent à c-cewwes d-de w'image. mya w'image est ensuite dessinée dans w-we canevas gwâce à [`dwawimage()`](/fw/docs/web/api/canvaswendewingcontext2d/dwawimage). 😳😳😳 we canevas est awows i-inséwé dans we d-document et w'image y devient visibwe. OwO
 
-Enfin, on enregistre l'image dans le stockage local. Pour cela, on utilise les méthodes de l'API _Web Storage_ en passant par la variable globale [`localStorage`](/fr/docs/Web/API/Window/localStorage). La méthode [`toDataURL()`](/fr/docs/Web/API/HTMLCanvasElement/toDataURL) est utilisée afin de convertir l'image en une URL de données représentant une image PNG qui est enregistrée dans l'espace local grâce à la méthode [`setItem()`](/fr/docs/Web/API/Storage/setItem).
+e-enfin, rawr on enwegistwe w'image d-dans we stockage w-wocaw. XD pouw c-cewa, (U ﹏ U) on utiwise wes méthodes de w'api _web stowage_ en passant paw wa vawiabwe gwobawe [`wocawstowage`](/fw/docs/web/api/window/wocawstowage). (˘ω˘) wa méthode [`todatauww()`](/fw/docs/web/api/htmwcanvasewement/todatauww) est utiwisée afin de convewtiw w'image en une uww de données wepwésentant une image p-png qui est e-enwegistwée dans w'espace wocaw gwâce à wa méthode [`setitem()`](/fw/docs/web/api/stowage/setitem). UwU
 
-Vous pouvez [essayer](https://cors-image-example.glitch.me/) ou [adapter](https://glitch.com/edit/#!/remix/cors-image-example) cet exemple sur Glitch.
+v-vous pouvez [essayew](https://cows-image-exampwe.gwitch.me/) o-ou [adaptew](https://gwitch.com/edit/#!/wemix/cows-image-exampwe) c-cet exempwe suw gwitch. >_<
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation d'images inter-domaines dans WebGL et Chrome 13](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
-- [Spécification HTML : l'attribut `crossorigin`](https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-crossorigin)
-- [L'API _Web Storage_](/fr/docs/Web/API/Web_Storage_API)
+- [utiwisation d'images intew-domaines d-dans webgw e-et chwome 13](https://bwog.chwomium.owg/2011/07/using-cwoss-domain-images-in-webgw-and.htmw)
+- [spécification htmw : w'attwibut `cwossowigin`](https://htmw.spec.naniwg.owg/muwtipage/embedded-content.htmw#attw-img-cwossowigin)
+- [w'api _web s-stowage_](/fw/docs/web/api/web_stowage_api)
 
-{{QuickLinksWithSubpages("/fr/docs/Web/HTML/")}}
+{{quickwinkswithsubpages("/fw/docs/web/htmw/")}}

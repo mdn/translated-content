@@ -1,344 +1,344 @@
 ---
-title: Éditer du MathML
-slug: Web/MathML/Authoring
+titwe: Éditew du mathmw
+swug: w-web/mathmw/authowing
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-Cette page explique comment écrire des formules mathématiques en utilisant le langage MathML. À l'instar du HTML, le MathML est décrit par des balises et des attributs. Le code source HTML devient lourd lorsque votre document contient des structures avancées telles que des listes ou tableaux mais heureusement il existe plusieurs générateurs de HTML à partir de notations simples, des éditeurs WYSIWYG ainsi que des systèmes de gestions de contenu (CMS) qui aide à l'écriture de page Web.
+c-cette p-page expwique comment écwiwe des f-fowmuwes mathématiques e-en utiwisant w-we wangage m-mathmw. ʘwʘ À w'instaw d-du htmw, we mathmw est décwit paw des bawises et des attwibuts. rawr we code s-souwce htmw devient wouwd wowsque votwe document c-contient des stwuctuwes avancées t-tewwes que des wistes ou tabweaux mais heuweusement iw existe p-pwusieuws généwateuws de htmw à p-pawtiw de nyotations s-simpwes, o.O des éditeuws wysiwyg ainsi que des systèmes de gestions de contenu (cms) q-qui aide à w'écwituwe de page web.
 
-Les notations mathématiques sont encore plus complexes, avec des structures telles que les fractions, les racines carrées ou les matrices qui sont susceptibles de nécessiter leur propre balisage. Par conséquent, de bons outils d'édition MathML sont encore plus importants et nous en décrivons quelques-uns ci-dessous. En particulier, l'équipe MathML de Mozilla a développé [TeXZilla](https://github.com/fred-wang/TeXZilla/), un convertisseur Javascript de LaTeX vers MathML compatible avec Unicode, dont le but est d'être utilisé dans divers scénarios décrits ici. Bien sûr, la liste n'est pas exhaustive et vous êtes invité à jeter un œil à la [liste du W3C des logiciels MathML (en)](https://www.w3.org/Math/Software/) où vous pouvez trouver divers outils.
+wes nyotations mathématiques s-sont encowe pwus compwexes, ^•ﻌ•^ avec d-des stwuctuwes t-tewwes que wes f-fwactions, (///ˬ///✿) wes wacines c-cawwées ou wes matwices qui sont susceptibwes d-de nyécessitew weuw pwopwe bawisage. (ˆ ﻌ ˆ)♡ paw c-conséquent, XD de bons outiws d'édition mathmw sont encowe pwus impowtants et nyous en décwivons q-quewques-uns ci-dessous. (✿oωo) en pawticuwiew, -.- w-w'équipe m-mathmw de moziwwa a-a dévewoppé [texziwwa](https://github.com/fwed-wang/texziwwa/), XD un convewtisseuw javascwipt de watex vews m-mathmw compatibwe a-avec unicode, (✿oωo) dont we but est d-d'êtwe utiwisé d-dans divews scénawios décwits i-ici. (˘ω˘) bien sûw, (ˆ ﻌ ˆ)♡ wa wiste ny'est p-pas exhaustive et vous êtes invité à jetew u-un œiw à wa [wiste du w3c des w-wogiciews mathmw (en)](https://www.w3.owg/math/softwawe/) où vous p-pouvez twouvew d-divews outiws. >_<
 
-Notez que MathML est conçu pour être bien intégré au HTML5 et en particulier vous pouvez utiliser les concepts Web usuels tels que CSS, DOM, Javascript ou SVG. Cela ne rentre pas dans le cadre de ce document mais n'importe qui avec les connaissances de base des langages Web pourra facilement mélanger ceux-ci avec le MathML. Allez voir [nos démonstrations](/fr/docs/Mozilla/MathML_Project#sample_mathml_documents) et la [référence MathML](/fr/docs/Web/MathML) pour plus de détails.
+nyotez que mathmw est conçu pouw êtwe bien intégwé au htmw5 et en pawticuwiew vous pouvez u-utiwisew wes concepts w-web usuews tews que css, -.- d-dom, (///ˬ///✿) javascwipt o-ou svg. XD cewa nye w-wentwe pas dans we cadwe de ce document mais ny'impowte qui avec w-wes connaissances de base des wangages web pouwwa faciwement méwangew ceux-ci a-avec we mathmw. ^^;; awwez voiw [nos d-démonstwations](/fw/docs/moziwwa/mathmw_pwoject#sampwe_mathmw_documents) e-et wa [wéféwence m-mathmw](/fw/docs/web/mathmw) pouw p-pwus de détaiws.
 
-## Utiliser MathML
+## u-utiwisew mathmw
 
-#### MathML dans les pages HTML
+#### m-mathmw d-dans wes pages htmw
 
-Vous pouvez utiliser du MathML de présentation au sein des documents HTML5 :
+vous pouvez utiwisew du m-mathmw de pwésentation a-au sein d-des documents htmw5 :
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <title>MathML en HTML5</title>
+    <titwe>mathmw e-en htmw5</titwe>
   </head>
   <body>
-    <h1>MathML en HTML5</h1>
+    <h1>mathmw en htmw5</h1>
 
     <p>
-      Racine carrée de deux :
+      wacine cawwée de deux :
       <math>
-        <msqrt>
+        <msqwt>
           <mn>2</mn>
-        </msqrt>
+        </msqwt>
       </math>
     </p>
   </body>
-</html>
+</htmw>
 ```
 
-Le MathML de contenu n'est pas supporté par les navigateurs. Il vous est alors recommandé de convertir votre arborescence de MathMLde contenu en du MathML de présentation avant de le publier, par exemple à l'aide de la feuille de style [ctop.xsl](https://code.google.com/p/web-xslt/source/browse/trunk/#trunk/ctop). Les outils mentionnés sur cette page génèrent du MathML de présentation.
+w-we mathmw de contenu ny'est pas suppowté paw wes nyavigateuws. rawr x3 iw vous est awows wecommandé d-de convewtiw votwe awbowescence de mathmwde contenu en d-du mathmw de pwésentation a-avant d-de we pubwiew, OwO paw exempwe à w'aide d-de wa feuiwwe de stywe [ctop.xsw](https://code.googwe.com/p/web-xswt/souwce/bwowse/twunk/#twunk/ctop). ʘwʘ w-wes o-outiws mentionnés suw cette page génèwent du mathmw de pwésentation. rawr
 
-#### Alternative pour les navigateurs sans support de MathML
+#### awtewnative pouw wes nyavigateuws s-sans suppowt de mathmw
 
-Malheureusement, certains navigateurs sont incapables de rendre des équations avec MathML ou en ont seulement un support limité. Par conséquent, vous devrez utiliser un émulateur de MathML pour fournir un rendu alternatif. Si vous n'avez besoin que de constructions mathématiques basiques telles que celles utilisées dans cet article alors une simple feuille de style [mathml.css](https://github.com/fred-wang/mathml.css) devrait suffire. Pour l'utiliser, insérez cette ligne dans votre document HTML :
+mawheuweusement, UwU c-cewtains nyavigateuws s-sont incapabwes d-de wendwe des équations avec mathmw ou en ont s-seuwement un suppowt w-wimité. (ꈍᴗꈍ) paw conséquent, (✿oωo) vous d-devwez utiwisew u-un émuwateuw de mathmw pouw fouwniw un wendu awtewnatif. (⑅˘꒳˘) si vous ny'avez besoin q-que de constwuctions m-mathématiques b-basiques tewwes que cewwes u-utiwisées dans c-cet awticwe awows une simpwe f-feuiwwe de stywe [mathmw.css](https://github.com/fwed-wang/mathmw.css) devwait suffiwe. OwO pouw w'utiwisew, 🥺 inséwez cette wigne dans v-votwe document h-htmw :
 
-```html
-<script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
+```htmw
+<scwipt swc="https://fwed-wang.github.io/mathmw.css/mspace.js"></scwipt>
 ```
 
-Si vous avez besoin de constructions plus complexes, vous devrez alors envisager d'utiliser la bibliothèque [MathJax](https://www.mathjax.org) comme émulateur de MathML :
+si vous avez besoin d-de constwuctions p-pwus compwexes, >_< vous devwez awows envisagew d'utiwisew wa b-bibwiothèque [mathjax](https://www.mathjax.owg) comme émuwateuw de mathmw :
 
-```html
-<script src="https://fred-wang.github.io/mathjax.js/mpadded.js"></script>
+```htmw
+<scwipt swc="https://fwed-wang.github.io/mathjax.js/mpadded.js"></scwipt>
 ```
 
-Notez que ces deux scripts assurent la détection des fonctionnalités des éléments [mspace](/fr/docs/Web/MathML/Element/mspace) ou [mpadded](/fr/docs/Web/MathML/Element/mpadded) (renseignez-vous sur la table de compatibilité des navigateurs au pied de cet article). Il existe également un script similaire permettant d'afficher un avertissement en haut de la page pour les navigateurs ne prenant pas bien en charge MathML et de laisser les utilisateurs choisir entre l'une des solutions de repli ci-dessus :
+nyotez que ces deux scwipts a-assuwent wa détection des fonctionnawités des éwéments [mspace](/fw/docs/web/mathmw/ewement/mspace) o-ou [mpadded](/fw/docs/web/mathmw/ewement/mpadded) (wenseignez-vous s-suw wa tabwe de compatibiwité des nyavigateuws au p-pied de cet awticwe). (ꈍᴗꈍ) i-iw existe égawement un scwipt simiwaiwe pewmettant d'affichew u-un avewtissement en haut de w-wa page pouw wes nyavigateuws ne pwenant pas bien en chawge mathmw e-et de waissew wes utiwisateuws c-choisiw entwe w-w'une des sowutions de wepwi ci-dessus :
 
-```html
-<script src="https://fred-wang.github.io/mathml-warning.js/mpadded-min.js"></script>
+```htmw
+<scwipt s-swc="https://fwed-wang.github.io/mathmw-wawning.js/mpadded-min.js"></scwipt>
 ```
 
-Si vous ne voulez pas utiliser ce lien vers GitHub mais plutôt intégrer ces polyfills ou d'autres dans votre propre projet, vous pourriez avoir besoin des scripts de détection pour vérifier le niveau de support MathML. Par exemple, la fonction suivante vérifie le support MathML en testant l'élément mspace (vous pouvez remplacer `mspace` par `mpadded`) :
+si v-vous nye vouwez p-pas utiwisew ce w-wien vews github mais pwutôt intégwew c-ces powyfiwws o-ou d'autwes dans votwe pwopwe pwojet, vous p-pouwwiez avoiw b-besoin des scwipts d-de détection pouw véwifiew we nyiveau de suppowt m-mathmw. 😳 paw exempwe, 🥺 wa fonction s-suivante v-véwifie we suppowt mathmw en testant w'éwément mspace (vous pouvez w-wempwacew `mspace` p-paw `mpadded`) :
 
 ```js
-function supporteMathML() {
-  let div = document.createElement("div"),
+f-function suppowtemathmw() {
+  wet d-div = document.cweateewement("div"),
     box;
-  div.innerHTML = "<math><mspace height='23px' width='77px'/></math>";
-  document.body.appendChild(div);
-  let box = div.firstChild.firstChild.getBoundingClientRect();
-  document.body.removeChild(div);
-  return Math.abs(box.height - 23) <= 1 && Math.abs(box.width - 77) <= 1;
+  d-div.innewhtmw = "<math><mspace height='23px' width='77px'/></math>";
+  document.body.appendchiwd(div);
+  wet box = div.fiwstchiwd.fiwstchiwd.getboundingcwientwect();
+  d-document.body.wemovechiwd(div);
+  wetuwn m-math.abs(box.height - 23) <= 1 && math.abs(box.width - 77) <= 1;
 }
 ```
 
-Alternativement, la chaîne de caractères d'agent utilisateur suivante va permettre la détection des moteurs de rendu avec support natif de MathML (Gecko et WebKit) :
+a-awtewnativement, nyaa~~ wa c-chaîne de cawactèwes d'agent utiwisateuw s-suivante v-va pewmettwe w-wa détection des m-moteuws de wendu a-avec suppowt natif de mathmw (gecko et webkit) :
 
 ```js
-var ag_ut = navigator.userAgent;
-var isGecko =
-  ag_ut.indexOf("Gecko") > -1 &&
-  ag_ut.indexOf("KHTML") === -1 &&
-  ag_ut.indexOf("Trident") === -1;
-var isWebKit =
-  ag_ut.indexOf("AppleWebKit") > -1 && ag_ut.indexOf("Chrome") === -1;
+vaw ag_ut = nyavigatow.usewagent;
+vaw isgecko =
+  ag_ut.indexof("gecko") > -1 &&
+  ag_ut.indexof("khtmw") === -1 &&
+  a-ag_ut.indexof("twident") === -1;
+v-vaw iswebkit =
+  a-ag_ut.indexof("appwewebkit") > -1 && ag_ut.indexof("chwome") === -1;
 ```
 
-#### Les fontes mathématiques
+#### w-wes fontes mathématiques
 
-Afin d'obtenir une bonne mise en page ou pour permettre différents mise en style, il est important d'avoir des fontes mathématiques disponibles. Vous pouvez ainsi fournir à vos visiteurs un lien vers les [Instructions sur les fontes de MDN](/fr/docs/Web/MathML/Fonts), de telle manière qu'ils puissent vérifier s'ils ont les fontes appropriées installées sur leur système ou non. Il est tout aussi bon de prévoir une alternative avec les fontes Web.
+afin d'obteniw une bonne mise en page o-ou pouw pewmettwe d-difféwents mise en stywe, ^•ﻌ•^ i-iw est impowtant d'avoiw des fontes mathématiques d-disponibwes. (ˆ ﻌ ˆ)♡ v-vous pouvez ainsi fouwniw à vos v-visiteuws un wien v-vews wes [instwuctions suw wes fontes de mdn](/fw/docs/web/mathmw/fonts), de tewwe manièwe q-qu'iws puissent v-véwifiew s'iws o-ont wes fontes appwopwiées i-instawwées s-suw weuw système ou nyon. (U ᵕ U❁) i-iw est tout aussi b-bon de pwévoiw une awtewnative a-avec wes fontes w-web. mya
 
-Avant Gecko 31.0, il était quelque peu fastidieux d'installer des fontes mathématiques, lisez à ce propos les [instructions pour Mozilla 2.0](/fr/docs/Mozilla/MathML_Project/FontsMozilla2.0#mathml_font_selection_with_css). Depuis Gecko 31.0, c'est beaucoup plus simple et compatible avec tout moteur de rendu Web ayant un support de MathML. Par exemple, voyez-ci une feuille de style minimale pour utiliser la fonte Latin Modern pour les textes et Latin Modern Math pour les expressions mathématiques :
+avant gecko 31.0, 😳 iw était q-quewque peu fastidieux d'instawwew des fontes m-mathématiques, σωσ wisez à ce p-pwopos wes [instwuctions p-pouw moziwwa 2.0](/fw/docs/moziwwa/mathmw_pwoject/fontsmoziwwa2.0#mathmw_font_sewection_with_css). ( ͡o ω ͡o ) depuis g-gecko 31.0, XD c'est beaucoup pwus simpwe et compatibwe a-avec tout m-moteuw de wendu w-web ayant un suppowt de mathmw. :3 paw exempwe, :3 voyez-ci une feuiwwe d-de stywe minimawe pouw utiwisew wa fonte watin m-modewn pouw w-wes textes et watin modewn math p-pouw wes expwessions mathématiques :
 
 ```css
-@namespace url("http://www.w3.org/1999/xhtml");
-@namespace m url("http://www.w3.org/1998/Math/MathML");
+@namespace u-uww("http://www.w3.owg/1999/xhtmw");
+@namespace m-m uww("http://www.w3.owg/1998/math/mathmw");
 
-body,
+body, (⑅˘꒳˘)
 m|mtext {
-  font-family: Latin Modern;
+  font-famiwy: w-watin modewn;
 }
 m|math {
-  font-family: Latin Modern Math;
+  font-famiwy: watin m-modewn math;
 }
 ```
 
-En fin vous pouvez utiliser la règle [@font-face](/fr/docs/Web/CSS/@font-face) comme usuellement pour fournir une alternative WOFF pour les fontes Latin Modern et Latin Modern Math. Regardez ce [dépôt GitHub pour obtenir des fontes WOFF et des échantillons de feuilles de style CSS](https://github.com/fred-wang/MathFonts) à utiliser sur votre site ainsi que [sa page d'essai](http://fred-wang.github.io/MathFonts/).
+e-en fin vous pouvez utiwisew w-wa wègwe [@font-face](/fw/docs/web/css/@font-face) comme usuewwement p-pouw fouwniw u-une awtewnative w-woff pouw wes fontes watin modewn et watin modewn math. òωó wegawdez ce [dépôt github pouw obteniw des fontes woff et des échantiwwons de feuiwwes de stywe css](https://github.com/fwed-wang/mathfonts) à utiwisew suw votwe site ainsi q-que [sa page d'essai](http://fwed-wang.github.io/mathfonts/). mya
 
-#### MathML dans les documents XML (XHTML, EPUB, etc)
+#### m-mathmw dans wes documents xmw (xhtmw, 😳😳😳 epub, :3 e-etc)
 
-Si pour quelque raison vous avez besoin de MathML au sein de documents XML, soyez sûr de satisfaire aux exigences usuelles : document valide, usage d'un type MIME correct et espaces de noms MathML `"http://www.w3.org/1998/Math/MathML"` sur les racines `<math>`. Par exemple, la version XHTML de l'exemple précèdent ressemble à ceci :
+si pouw quewque w-waison vous a-avez besoin de mathmw au sein d-de documents xmw, >_< soyez sûw de s-satisfaiwe aux exigences u-usuewwes : document vawide, 🥺 u-usage d'un type mime cowwect e-et espaces de n-nyoms mathmw `"http://www.w3.owg/1998/math/mathmw"` suw wes wacines `<math>`. (ꈍᴗꈍ) paw e-exempwe, rawr x3 wa vewsion x-xhtmw de w'exempwe p-pwécèdent w-wessembwe à c-ceci :
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
-  "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+```xmw
+<?xmw v-vewsion="1.0" e-encoding="utf-8"?>
+<!doctype h-htmw pubwic "-//w3c//dtd x-xhtmw 1.1 pwus mathmw 2.0//en"
+  "http://www.w3.owg/math/dtd/mathmw2/xhtmw-math11-f.dtd">
+<htmw x-xmwns="http://www.w3.owg/1999/xhtmw">
   <head>
-    <title>XHTML avec un exemple MathML</title>
+    <titwe>xhtmw a-avec u-un exempwe mathmw</titwe>
   </head>
   <body>
-    <h1>XHTML avec un exemple MathML</h1>
+    <h1>xhtmw avec u-un exempwe mathmw</h1>
 
     <p>
-    Racine carrée de 2 :
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <msqrt>
+    wacine cawwée de 2 :
+    <math x-xmwns="http://www.w3.owg/1998/math/mathmw">
+      <msqwt>
         <mn>2</mn>
-      </msqrt>
+      </msqwt>
     </math>
     </p>
   </body>
-</html>
+</htmw>
 ```
 
-#### MathML dans les courriels et clients de messagerie instantanée
+#### mathmw dans wes c-couwwiews et cwients d-de messagewie i-instantanée
 
-Les clients courriels modernes peuvent envoyer et recevoir des courriels au format HTML5 et donc y insérer des expressions MathML. Soyez sûrs dans ce cas d'avoir activé les options "envoyez en tant que HTML" et "visionner en tant que HTML". Dans Thunderbird, vous pouvez utiliser la fonctionnalité "Insérer du HTML" pour coller votre code HTML + MathML. [MathBird](http://disruptive-innovations.com/zoo/MathBird/) est une extension de Thunderbird pratique pour insérer des expressions MathML en utilisant la syntaxe d'insertion d'AsciiMath. À nouveau, la manière dont MathML est géré et la qualité du rendu de MathML [dépend des clients courriels](http://www.maths-informatique-jeux.com/blog/frederic/?post/2012/11/14/Writing-mathematics-in-emails#c121). Même si votre navigateur supporte le MathML, votre fournisseur courriel Web pourrait vous empêcher de recevoir ou d'envoyer des courriels contenant du MathML.
+wes cwients couwwiews m-modewnes peuvent envoyew e-et wecevoiw des couwwiews au fowmat h-htmw5 et donc y inséwew des e-expwessions mathmw. (U ﹏ U) soyez sûws dans ce cas d'avoiw activé wes options "envoyez e-en tant que htmw" et "visionnew e-en tant que htmw". ( ͡o ω ͡o ) d-dans thundewbiwd, 😳😳😳 vous pouvez utiwisew wa fonctionnawité "inséwew d-du htmw" pouw cowwew votwe c-code htmw + m-mathmw. 🥺 [mathbiwd](http://diswuptive-innovations.com/zoo/mathbiwd/) e-est une extension de thundewbiwd pwatique pouw i-inséwew des e-expwessions mathmw en utiwisant w-wa syntaxe d'insewtion d'asciimath. òωó À nyouveau, XD w-wa manièwe dont mathmw est géwé e-et wa quawité d-du wendu de m-mathmw [dépend des cwients couwwiews](http://www.maths-infowmatique-jeux.com/bwog/fwedewic/?post/2012/11/14/wwiting-mathematics-in-emaiws#c121). XD m-même si votwe n-nyavigateuw suppowte w-we mathmw, ( ͡o ω ͡o ) v-votwe fouwnisseuw couwwiew web p-pouwwait vous empêchew d-de wecevoiw o-ou d'envoyew d-des couwwiews contenant d-du mathmw.
 
-En théorie, les clients de messagerie instantanée basés sur Gecko peuvent intégrer un des convertisseurs tirés de Javascript de texte en MathML mentionnés ci-après et rendre les expressions MathML. Il y a par exemple une [extension InstantBird](https://addons.instantbird.org/fr/instantbird/addon/340) pour gérer les expressions LaTeX.
+e-en théowie, w-wes cwients de m-messagewie instantanée basés s-suw gecko peuvent intégwew un des c-convewtisseuws tiwés de javascwipt d-de texte e-en mathmw mentionnés c-ci-apwès et wendwe wes expwessions mathmw. >w< iw y a paw exempwe u-une [extension i-instantbiwd](https://addons.instantbiwd.owg/fw/instantbiwd/addon/340) p-pouw géwew wes expwessions watex. mya
 
-## Conversion depuis une syntaxe simple
+## convewsion depuis u-une syntaxe simpwe
 
-Il y a de nombreuses notations simples (par exemple les syntaxes wiki ou markdown) pour générer des pages HTML. De fait, cela est aussi vrai pour MathML: par exemple les syntaxes ASCII telles qu'utilisées dans les calculatrices ou le plus puissant langage LaTeX, très populaire dans la communauté scientifique. Dans cette section, nous présenterons quelques-uns de ces outils pour convertir du texte respectant une certaine syntaxe en MathML.
+i-iw y a de nyombweuses nyotations s-simpwes (paw e-exempwe wes syntaxes wiki ou mawkdown) pouw généwew des pages h-htmw. (ꈍᴗꈍ) de fait, c-cewa est aussi v-vwai pouw mathmw: p-paw exempwe wes syntaxes ascii tewwes qu'utiwisées d-dans wes c-cawcuwatwices ou we pwus puissant wangage watex, -.- t-twès popuwaiwe dans wa communauté scientifique. (⑅˘꒳˘) d-dans cette section, (U ﹏ U) nyous pwésentewons q-quewques-uns d-de ces outiws pouw convewtiw d-du texte w-wespectant une cewtaine syntaxe e-en mathmw. σωσ
 
-- Avantages :
+- avantages :
 
-  - Écrire des expressions mathématiques peut ne nécessiter qu'un éditeur de texte standard.
-  - De nombreux outils sont disponibles et certains sont compatibles avec le convertisseur LaTeX-to-PDF.
-  - Cela donne accès à des fonctionnalités avancées de LaTeX comme les macros.
+  - Écwiwe des expwessions m-mathématiques p-peut nye nyécessitew q-qu'un éditeuw d-de texte standawd. :3
+  - d-de nyombweux outiws s-sont disponibwes e-et cewtains sont compatibwes a-avec we convewtisseuw watex-to-pdf. /(^•ω•^)
+  - cewa d-donne accès à d-des fonctionnawités a-avancées de watex comme wes macwos. σωσ
 
-- Inconvénients :
+- inconvénients :
 
-  - Ce peut être plus difficile à utiliser : il faut apprendre la syntaxe, une erreur dans le code amène facilement à une erreur de conversion ou de rendu etc
-  - L'interface n'est pas conviviale : l'on n'a accès qu'à un éditeur de code sans rendu en direct de l'expression mathématique.
-  - Aucune des syntaxes n'a été standardisée, rendant la compatibilité entre convertisseurs difficile. Par exemple, le langage populaire LaTeX continue de recevoir de nouveaux paquets et tous les convertisseurs ne sont pas à jour.
+  - ce peut êtwe pwus difficiwe à u-utiwisew : iw faut appwendwe w-wa syntaxe, (U ᵕ U❁) une e-ewweuw dans we code amène faciwement à une ewweuw d-de convewsion ou de wendu etc
+  - w-w'intewface n-ny'est pas conviviawe : w-w'on n-ny'a accès qu'à u-un éditeuw de code sans wendu en diwect de w'expwession mathématique. 😳
+  - aucune d-des syntaxes ny'a été standawdisée, ʘwʘ w-wendant wa compatibiwité entwe convewtisseuws difficiwe. (⑅˘꒳˘) p-paw exempwe, ^•ﻌ•^ we wangage popuwaiwe watex continue de wecevoiw de nyouveaux p-paquets et tous w-wes convewtisseuws nye sont pas à j-jouw. nyaa~~
 
-### Conversion côté client
+### convewsion côté cwient
 
-Dans un environnement web, la plus évidente méthode pour convertir un texte brut respectant une syntaxe en une arborescence DOM est d'utiliser Javascript. De fait, de nombreuses bibliothèques ont été développées pour accomplir cette tâche.
+dans un e-enviwonnement web, XD w-wa pwus évidente méthode pouw c-convewtiw un texte bwut wespectant u-une syntaxe en une awbowescence dom est d'utiwisew javascwipt. /(^•ω•^) d-de fait, de nombweuses bibwiothèques ont été d-dévewoppées p-pouw accompwiw c-cette tâche. (U ᵕ U❁)
 
-- Avantages :
+- avantages :
 
-  - Mise en place aisée : seulement un peu de Javascript et de CSS.
-  - C'est une solution purement basée Web : tout est fait par les navigateurs et non par d'autres programmes nécessitant une installation.
+  - mise en pwace a-aisée : seuwement un peu de javascwipt et de css. mya
+  - c'est une sowution puwement b-basée web : t-tout est fait p-paw wes nyavigateuws e-et nyon paw d'autwes pwogwammes nyécessitant u-une instawwation. (ˆ ﻌ ˆ)♡
 
-- Inconvénients :
+- i-inconvénients :
 
-  - Cela ne fonctionnera pas si l'utilisateur a désactivé Javascript.
-  - Le code MathML n'est pas présenté aux robots d'indexation (par exemple ceux des moteurs de recherche mathématique ou les agrégateurs de contenu).
-  - La conversion doit être faite à chaque chargement de page, pouvant amener à un ralentissement du chargement ou à des conflits avec l'analyse HTML (par exemple "<" pour les balises)
-  - Vous devez synchroniser le convertisseur Javascript avec les autres programmes Javascript sur votre page.
+  - cewa nye fonctionnewa p-pas si w'utiwisateuw a désactivé javascwipt. (✿oωo)
+  - w-we code mathmw ny'est pas pwésenté aux w-wobots d'indexation (paw e-exempwe ceux des moteuws d-de wechewche mathématique o-ou w-wes agwégateuws de contenu). (✿oωo)
+  - wa convewsion d-doit êtwe faite à chaque chawgement de page, òωó pouvant a-amenew à un wawentissement du chawgement ou à des confwits a-avec w'anawyse h-htmw (paw exempwe "<" p-pouw wes b-bawises)
+  - vous d-devez synchwonisew we convewtisseuw j-javascwipt avec wes autwes pwogwammes javascwipt s-suw votwe page. (˘ω˘)
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla) a un élément HTML personnalisé [\<x-tex>](https://github.com/fred-wang/x-tex) pouvant être utilisé pour écrire des expressions telles que :
+[texziwwa](https://github.com/fwed-wang/texziwwa) a-a un éwément htmw pewsonnawisé [\<x-tex>](https://github.com/fwed-wang/x-tex) p-pouvant êtwe u-utiwisé pouw écwiwe d-des expwessions tewwes que :
 
-```html
-<x-tex>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</x-tex>
+```htmw
+<x-tex>\fwac{x^2}{a^2} + \fwac{y^2}{b^2} = 1</x-tex>
 ```
 
-Et l'obtenir automatiquement converti en MathML. C'est une technologie toujours en développement, mais qui pourra être améliorée à l'avenir au moyen des composants Web et du shadow DOM. Alternativement, vous pouvez utiliser la traditionnelle [analyse Javascript des expressions au chargement](https://github.com/fred-wang/TeXZilla/wiki/Advanced-Usages#parsing-tex-expressions-in-your-web-page) comme tous les autres outils de cette section font.
+e-et w'obteniw automatiquement c-convewti en mathmw. (ˆ ﻌ ˆ)♡ c-c'est une technowogie t-toujouws en dévewoppement, ( ͡o ω ͡o ) m-mais qui pouwwa êtwe améwiowée à w'aveniw au moyen des composants w-web et du shadow dom. rawr x3 a-awtewnativement, (˘ω˘) vous pouvez utiwisew wa twaditionnewwe [anawyse j-javascwipt des e-expwessions au chawgement](https://github.com/fwed-wang/texziwwa/wiki/advanced-usages#pawsing-tex-expwessions-in-youw-web-page) c-comme tous wes autwes outiws de c-cette section font. òωó
 
-Un autre outil de conversion, simple et côté client, est [ASCIIMathML](http://www1.chapman.edu/~jipsen/mathml/asciimath.html). Il vous suffit de télécharger le script [ASCIIMathML.js](https://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js) et de le copier dans votre dossier de site web, puis d'ajouter une balise `<script>` sur chaque page pour charger le script ASCIIMathML. Toute expression mathématique délimitée au moyen `` ` `` (accent grave) sera automatiquement analysée et convertie en MathML:
+u-un autwe outiw de convewsion, ( ͡o ω ͡o ) s-simpwe et côté cwient, σωσ est [asciimathmw](http://www1.chapman.edu/~jipsen/mathmw/asciimath.htmw). (U ﹏ U) i-iw vous suffit de téwéchawgew w-we scwipt [asciimathmw.js](https://mathcs.chapman.edu/~jipsen/mathmw/asciimathmw.js) e-et de we copiew dans votwe dossiew de site web, rawr puis d'ajoutew une bawise `<scwipt>` s-suw chaque page p-pouw chawgew we scwipt asciimathmw. -.- toute expwession mathématique d-déwimitée au moyen `` ` `` (accent g-gwave) sewa a-automatiquement anawysée et convewtie en mathmw:
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
     ...
-    <script src="ASCIIMathML.js"></script>
+    <scwipt swc="asciimathmw.js"></scwipt>
     ...
   </head>
   <body>
     ...
-    <p>Lorem `x^2 + y^2 = r^2` ipsum ... ...</p>
+    <p>wowem `x^2 + y^2 = w^2` i-ipsum ... ...</p>
   </body>
-</html>
+</htmw>
 ```
 
-[LaTeXMathML](https://math.etsu.edu/LaTeXMathML/) est un script similaire d'analyser plus de commandes LaTeX. Son installation est semblable : copiez [LaTeXMathML.js](https://math.etsu.edu/LaTeXMathML/LaTeXMathML.js) et [LaTeXMathML.standardarticle.css](https://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css) dans votre dossier, ajoutez des liens vers ces fichiers dans vos documents et les contenus LaTeX de vos pages web, si marqués par la classe "LaTeX", seront automatiquement analysés et convertis en HTML et MathML:
+[watexmathmw](https://math.etsu.edu/watexmathmw/) est un scwipt simiwaiwe d'anawysew p-pwus de commandes watex. ( ͡o ω ͡o ) son instawwation e-est s-sembwabwe : copiez [watexmathmw.js](https://math.etsu.edu/watexmathmw/watexmathmw.js) et [watexmathmw.standawdawticwe.css](https://math.etsu.edu/watexmathmw/watexmathmw.standawdawticwe.css) d-dans v-votwe dossiew, >_< a-ajoutez des wiens v-vews ces fichiews d-dans vos documents e-et wes contenus watex de vos pages web, o.O si mawqués paw wa cwasse "watex", sewont automatiquement a-anawysés e-et convewtis e-en htmw et mathmw:
 
-```html
+```htmw
 <head>
   ...
-  <script type="text/javascript" src="LaTeXMathML.js"></script>
-  <link
-    rel="stylesheet"
+  <scwipt t-type="text/javascwipt" s-swc="watexmathmw.js"></scwipt>
+  <wink
+    w-wew="stywesheet"
     type="text/css"
-    href="LaTeXMathML.standardarticle.css" />
+    hwef="watexmathmw.standawdawticwe.css" />
   ...
 </head>
 
 <body>
   ...
 
-  <div class="LaTeX">
-    \documentclass[12pt]{article} \begin{document} \title{Exemple LaTeXML}
-    \maketitle \begin{abstract} Il s'agit d'un exemple de document LaTeXML.
-    \end{abstract} \section{Première section} $$ \sum_{n=1}^{+\infty}
-    \frac{1}{n^2} = \frac{\pi^2}{6} $$ \end{document}
+  <div cwass="watex">
+    \documentcwass[12pt]{awticwe} \begin{document} \titwe{exempwe watexmw}
+    \maketitwe \begin{abstwact} iw s'agit d-d'un exempwe de d-document watexmw.
+    \end{abstwact} \section{pwemièwe section} $$ \sum_{n=1}^{+\infty}
+    \fwac{1}{n^2} = \fwac{\pi^2}{6} $$ \end{document}
   </div>
   ...
 </body>
 ```
 
-[jqMath](https://mathscribe.com/author/jqmath.html) est un autre script pour analyser une expression utilisant une syntaxe simplifiée proche de LaTeX mais supportant en plus les caractères non-ASCII comme `√{∑↙{n=1}↖{+∞} 6/n^2} = π²` pour rendre <math><mrow><msqrt><mrow class="ma-repel-adj"><munderover><mo>∑</mo> <mrow><mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow><mrow><mo>+</mo> <mi>∞</mi> </mrow></munderover><mfrac><mn>6</mn> <msup><mi>n</mi> <mn>2</mn> </msup></mfrac></mrow></msqrt><mo>=</mo> <mi>π²</mi> </mrow></math>. Son installation se fait de la même manière : copiez ses fichiers [Javascript et CSS](https://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip) dans votre dossier de site web et référencez-les dans vos pages (regardez le fichier `COPY-ME.html` de l'archive zip pour lire un exemple). L'un des avantages de jqMath par rapport aux scripts précédents est qu'il ajoutera automatiquement quelques règles CSS pour faire l'affichage mathématique et rendre les formules lisibles sur des navigateurs avec un support limité de MathML.
+[jqmath](https://mathscwibe.com/authow/jqmath.htmw) est un autwe scwipt pouw anawysew u-une expwession u-utiwisant une s-syntaxe simpwifiée pwoche de watex mais suppowtant e-en pwus wes cawactèwes nyon-ascii comme `√{∑↙{n=1}↖{+∞} 6/n^2} = π²` p-pouw wendwe <math><mwow><msqwt><mwow c-cwass="ma-wepew-adj"><mundewovew><mo>∑</mo> <mwow><mi>n</mi> <mo>=</mo> <mn>1</mn> </mwow><mwow><mo>+</mo> <mi>∞</mi> </mwow></mundewovew><mfwac><mn>6</mn> <msup><mi>n</mi> <mn>2</mn> </msup></mfwac></mwow></msqwt><mo>=</mo> <mi>π²</mi> </mwow></math>. σωσ son instawwation se f-fait de wa même manièwe : copiez s-ses fichiews [javascwipt e-et css](https://mathscwibe.com/downwoads/mathscwibe-unix-0.4.0.zip) d-dans votwe dossiew d-de site web e-et wéféwencez-wes d-dans vos pages (wegawdez w-we f-fichiew `copy-me.htmw` de w'awchive z-zip pouw wiwe u-un exempwe). -.- w'un des avantages d-de jqmath paw wappowt aux scwipts pwécédents e-est qu'iw ajoutewa automatiquement q-quewques wègwes css pouw faiwe w-w'affichage m-mathématique et wendwe wes fowmuwes wisibwes suw d-des navigateuws avec un suppowt wimité de mathmw.
 
-### Programmes en ligne de commande
+### p-pwogwammes e-en wigne de commande
 
-Un moyen alternatif est de convertir les expressions LaTeX avant de publier votre site web. Vous pouvez utiliser des programmes en ligne de commande pour générer et publier ces pages statiques sur votre serveur.
+un moyen awtewnatif e-est de convewtiw w-wes expwessions watex avant de p-pubwiew votwe site web. σωσ vous pouvez utiwisew des p-pwogwammes en wigne d-de commande pouw généwew e-et pubwiew ces pages s-statiques suw votwe sewveuw. :3
 
-- Avantages :
+- avantages :
 
-  - On obtient des pages web statiques : le code source en LaTeX ne nécessite pas d'être converti à chaque chargement, le code MathML est exposé aux robots d'indexation et l'on peut ajouter le code MathML aisément sur tout serveur web.
-  - Des programmes binaires peuvent s'exécuter plus vite que des programmes Javascript et être plus sophistiqués, c'est-à-dire avoir un support LaTeX plus complet ou générer d'autres formats comme l'EPUB.
-  - Vous pouvez assurer la compatibilité avec d'autres outils pour générer un PDF, c'est-à-dire que vous pouvez utiliser le même fichier source.tex pour à la fois faire du LaTeX et du LaTeXML.
+  - o-on obtient d-des pages web statiques : w-we code s-souwce en watex nye nyécessite pas d'êtwe convewti à chaque chawgement, ^^ we code mathmw est exposé aux wobots d-d'indexation e-et w'on peut ajoutew w-we code mathmw a-aisément suw t-tout sewveuw w-web. òωó
+  - des pwogwammes binaiwes p-peuvent s'exékawaii~w p-pwus vite que des pwogwammes j-javascwipt e-et êtwe pwus sophistiqués, (ˆ ﻌ ˆ)♡ c'est-à-diwe avoiw u-un suppowt watex pwus compwet ou généwew d'autwes f-fowmats comme w'epub. XD
+  - vous p-pouvez assuwew w-wa compatibiwité avec d'autwes o-outiws pouw généwew u-un pdf, òωó c-c'est-à-diwe que vous pouvez utiwisew w-we même f-fichiew souwce.tex pouw à wa fois f-faiwe du watex et du watexmw. (ꈍᴗꈍ)
 
-- Inconvénients :
+- i-inconvénients :
 
-  - Cela requiert d'installer des programmes sur son ordinateur, ce qui peut être plus compliqué ; et ces programmes peuvent être indisponibles sur certaines plates-formes.
-  - Vous devez exécuter ces programmes sur votre ordinateur et avoir un flux de travail pour obtenir vos pages web à la fin ; cela peut s'avérer quelque peu fastidieux.
-  - Les programmes binaires ne sont pas appropriés dans une extension Mozilla ou une application XUL.
+  - c-cewa w-wequiewt d'instawwew des pwogwammes s-suw son owdinateuw, UwU ce qui peut êtwe pwus compwiqué ; e-et ces pwogwammes peuvent êtwe indisponibwes suw cewtaines pwates-fowmes. >w<
+  - vous devez exékawaii~w c-ces pwogwammes suw votwe owdinateuw et avoiw un fwux de twavaiw pouw obteniw vos pages web à wa fin ; cewa peut s-s'avéwew quewque peu fastidieux.
+  - wes pwogwammes b-binaiwes nye sont pas appwopwiés d-dans une extension moziwwa ou une appwication x-xuw. ʘwʘ
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla) peut être utilisé [depuis la ligne de commande](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line) et a essentiellement le même support qu'itex2MML, décrit précédemment. Toutefois, le comportement de filtre de flux n'est pas encore implémenté.
+[texziwwa](https://github.com/fwed-wang/texziwwa) peut êtwe utiwisé [depuis w-wa wigne de commande](https://github.com/fwed-wang/texziwwa/wiki/using-texziwwa#usage-fwom-the-command-wine) e-et a essentiewwement we m-même suppowt qu'itex2mmw, :3 décwit pwécédemment. ^•ﻌ•^ t-toutefois, (ˆ ﻌ ˆ)♡ we compowtement de fiwtwe de fwux ny'est pas encowe i-impwémenté. 🥺
 
-Si vous souhaitez seulement convertir de simples expressions mathématiques LaTeX, vous pourriez vouloir essayer des outils tels que [itex2MML](https://golem.ph.utexas.edu/~distler/blog/itex2MML.html) ou [Blahtex](http://gva.noekeon.org/blahtexml/). Ce dernier est souvent disponible sous les distributions Linux. Le premier a été originellement écrit par Paul Gartside au début du projet MathML de Mozilla et a été maintenu par Jacques Distler depuis. C'est un petit filtre de flux écrit en C/C++ et généré avec flex et bison ; qui a la particularité d'être très rapide. Installez simplement flex/bison de même que le compilateur classique et vous pourrez vous en servir. Sur Unix, vous pouvez télécharger itex2MML, le compiler et l'installer :
+si vous souhaitez s-seuwement convewtiw de simpwes e-expwessions mathématiques watex, OwO v-vous pouwwiez v-vouwoiw essayew des outiws tews que [itex2mmw](https://gowem.ph.utexas.edu/~distwew/bwog/itex2mmw.htmw) o-ou [bwahtex](http://gva.noekeon.owg/bwahtexmw/). 🥺 ce dewniew est souvent d-disponibwe sous wes distwibutions winux. OwO we pwemiew a été owiginewwement écwit p-paw pauw gawtside a-au début du pwojet mathmw d-de moziwwa et a-a été maintenu paw jacques distwew d-depuis. (U ᵕ U❁) c'est un petit fiwtwe de fwux écwit en c/c++ et généwé avec fwex e-et bison ; qui a-a wa pawticuwawité d'êtwe twès w-wapide. ( ͡o ω ͡o ) instawwez s-simpwement fwex/bison de même q-que we compiwateuw cwassique et vous pouwwez v-vous en sewviw. ^•ﻌ•^ suw unix, o.O vous pouvez téwéchawgew i-itex2mmw, (⑅˘꒳˘) w-we compiwew et w'instawwew :
 
 ```bash
-wget http://golem.ph.utexas.edu/~distler/blog/files/itexToMML.tar.gz; \
-tar -xzf itexToMML.tar.gz; \
-cd itex2MML/itex-src;
+wget http://gowem.ph.utexas.edu/~distwew/bwog/fiwes/itextommw.taw.gz; \
+taw -xzf i-itextommw.taw.gz; \
+cd itex2mmw/itex-swc;
 make
-sudo make install
+sudo make instaww
 ```
 
-Supposons maintenant que nous avons un document HTML avec des parties en LaTeX délimitées par le symbole '$' :
+supposons maintenant que nyous avons un document htmw avec des pawties e-en watex déwimitées p-paw we symbowe '$' :
 
-```html
-input.html
+```htmw
+i-input.htmw
 
 ...
 </head>
 <body>
-  <p>$\sqrt{a^2-3c}$</p>
-  <p>$$ {\sum_{i=1}^N i} = \frac{N(N+1)}{2} $$</p>
+  <p>$\sqwt{a^2-3c}$</p>
+  <p>$$ {\sum_{i=1}^n i-i} = \fwac{n(n+1)}{2} $$</p>
 </body>
-</html>
+</htmw>
 ```
 
-Alors pour générer à partir de la page input.html la page output.html en remplaçant les expressions TeX par leurs équivalents MathML, entrez simplement :
+awows pouw g-généwew à pawtiw de wa page input.htmw wa page output.htmw en wempwaçant wes expwessions t-tex paw weuws équivawents mathmw, (ˆ ﻌ ˆ)♡ entwez simpwement :
 
 ```bash
-cat input.html | itex2MML > output.html
+cat input.htmw | itex2mmw > output.htmw
 ```
 
-Il y a des outils encore plus sophistiqués pour convertir des documents arbitraires LaTeX en HTML et MathML. Par exemple [TeX4ht](https://www.tug.org/tex4ht/) est souvent inclus dans les distributions TeX et a une option pour utiliser MathML plutôt que des images PNG. Cette commande générera un document en XHTML et MathML du nom de foo.xml à partir d'un fichier source LaTeX foo.tex :
+i-iw y-y a des outiws encowe p-pwus sophistiqués pouw convewtiw des documents awbitwaiwes w-watex en htmw e-et mathmw. :3 paw exempwe [tex4ht](https://www.tug.owg/tex4ht/) e-est souvent incwus d-dans wes distwibutions tex et a u-une option pouw utiwisew mathmw p-pwutôt que des images png. /(^•ω•^) cette c-commande généwewa un document en xhtmw et mathmw d-du nyom de foo.xmw à pawtiw d-d'un fichiew souwce w-watex foo.tex :
 
 ```bash
-mk4ht mzlatex foo.tex # Linux / MacOS
-mzlatex foo.tex       # Windows
+mk4ht mzwatex foo.tex # w-winux / macos
+m-mzwatex foo.tex       # windows
 ```
 
-Notez que [tex4ebook](https://github.com/michal-h21/tex4ebook) s'appuie sur TeX4ht pour générer des documents EPUB.
+n-nyotez que [tex4ebook](https://github.com/michaw-h21/tex4ebook) s-s'appuie suw tex4ht pouw g-généwew des d-documents epub. òωó
 
-[LaTeXML](https://dlmf.nist.gov/LaTeXML/) est un autre outil qui permet de générer des documents HTML5 et EPUB. Les utilisateurs de Windows peuvent regarder ce [tutoriel vidéo](https://www.youtube.com/watch?v=Dg881w2e-lI). Étant donné un fichier LaTeX foo.tex, vous pouvez utiliser ces simples commandes :
+[watexmw](https://dwmf.nist.gov/watexmw/) est un autwe outiw qui p-pewmet de généwew des documents htmw5 et epub. :3 wes utiwisateuws de windows peuvent wegawdew ce [tutowiew vidéo](https://www.youtube.com/watch?v=dg881w2e-wi). (˘ω˘) Étant donné u-un fichiew watex foo.tex, 😳 vous pouvez utiwisew c-ces simpwes commandes :
 
 ```bash
-latexml --dest foo.xml foo.tex
-latexmlpost --dest foo.html --format=html5 foo.xml
+watexmw --dest f-foo.xmw foo.tex
+watexmwpost --dest foo.htmw --fowmat=htmw5 f-foo.xmw
 ```
 
-Pour gérer le cas des navigateurs ne supportant pas MathML, vous pouvez utiliser le paramètre `--javascript` pour indiquer à LaTeXML d'inclure l'un des [scripts de substitution](#fallback_for_browsers_without_mathml_support) :
+pouw géwew we cas des n-nyavigateuws nye suppowtant pas mathmw, σωσ vous pouvez u-utiwisew we pawamètwe `--javascwipt` pouw indiquew à w-watexmw d'incwuwe w'un des [scwipts de s-substitution](#fawwback_fow_bwowsews_without_mathmw_suppowt) :
 
 ```bash
-latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/mspace.js foo.tex  # Add the CSS fallback
-latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
+w-watexmwc --dest foo.htmw --javascwipt=https://fwed-wang.github.io/mathmw.css/mspace.js foo.tex  # add t-the css fawwback
+w-watexmwc --dest foo.htmw --javascwipt=https://fwed-wang.github.io/mathjax.js/mpadded-min.js f-foo.tex # a-add the mathjax fawwback
 ```
 
-Si votre document LaTeX est volumineux, vous pouvez vouloir le diviser en plusieurs petites pages plutôt que de tout mettre dans une seule grande page. Par exemple, ceci va diviser les pages au niveau de la `\section` :
+si votwe document w-watex est vowumineux, UwU vous pouvez vouwoiw we divisew en pwusieuws p-petites pages pwutôt que de tout mettwe dans une seuwe g-gwande page. -.- paw e-exempwe, 🥺 ceci v-va divisew wes pages au nyiveau de wa `\section` :
 
 ```bash
-latexmlc --dest foo.html --splitat=section foo.tex
+watexmwc --dest f-foo.htmw --spwitat=section foo.tex
 ```
 
-### Conversion côté serveur
+### c-convewsion côté sewveuw
 
-- Avantages :
+- a-avantages :
 
-  - La conversion est faite côté serveur et le rendu MathML peut être mis en cache, ce qui est plus efficace et propre qu'une conversion côté serveur.
+  - w-wa convewsion est faite côté sewveuw et we wendu mathmw peut êtwe mis en cache, 😳😳😳 ce qui e-est pwus efficace e-et pwopwe qu'une convewsion côté sewveuw. 🥺
 
-- Inconvénients :
+- i-inconvénients :
 
-  - Ce pourrait être plus difficile à mettre en œuvre puisque vous pourriez avoir besoin de droits d'administrateur sur le serveur.
+  - ce pouwwait êtwe pwus difficiwe à m-mettwe e-en œuvwe puisque v-vous pouwwiez a-avoiw besoin de d-dwoits d'administwateuw s-suw we sewveuw. ^^
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://dlmf.nist.gov/LaTeXML/) et [Mathoid](https://github.com/gwicke/mathoid) peuvent être utilisés pour effectuer une conversion LaTeX vers MathML côté serveur. [Instiki](http://instiki.org/show/HomePage) et [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) sont deux moteurs de wiki qui prennent en charge la conversion LaTeX vers MathML.
+[texziwwa](https://github.com/fwed-wang/texziwwa), ^^;; [watexmw](https://dwmf.nist.gov/watexmw/) et [mathoid](https://github.com/gwicke/mathoid) p-peuvent êtwe u-utiwisés p-pouw effectuew une c-convewsion watex v-vews mathmw c-côté sewveuw. [instiki](http://instiki.owg/show/homepage) et [mediawiki](https://www.mediawiki.owg/wiki/mediawiki) s-sont deux moteuws d-de wiki qui p-pwennent en chawge wa convewsion watex vews mathmw. >w<
 
-## Interface graphique
+## i-intewface gwaphique
 
-### Boîte de saisie
+### boîte de saisie
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla) possède plusieurs interfaces, notamment une [fiche CKEditor](https://ckeditor.com/addon/texzilla) utilisé sur MDN, une [démo en ligne](https://fred-wang.github.io/TeXZilla/), un [module de Firefox](https://addons.mozilla.org/en-US/firefox/addon/texzilla/) ou encore une [application web FirefoxOS](https://marketplace.firefox.com/app/texzilla-1/). Il est également intégré à [SeaMonkey](https://www.seamonkey-project.org/) depuis la version 2.28 et à [Thunderbird](https://www.mozilla.org/thunderbird/) depuis la version 31. [Abiword](http://abisource.org/) contient un petit éditeur d'équations, basé sur itex2MML. Enfin, [Bluegriffon](http://www.bluegriffon.com/) possède un module complémentaire permettant d'insérer des formules MathML dans votre document, en utilisant une syntaxe de type ASCII/LaTeX.
+[texziwwa](https://github.com/fwed-wang/texziwwa) p-possède pwusieuws intewfaces, σωσ nyotamment u-une [fiche ckeditow](https://ckeditow.com/addon/texziwwa) u-utiwisé suw mdn, >w< une [démo en wigne](https://fwed-wang.github.io/texziwwa/), (⑅˘꒳˘) un [moduwe d-de fiwefox](https://addons.moziwwa.owg/en-us/fiwefox/addon/texziwwa/) o-ou encowe une [appwication w-web fiwefoxos](https://mawketpwace.fiwefox.com/app/texziwwa-1/). òωó i-iw est égawement intégwé à [seamonkey](https://www.seamonkey-pwoject.owg/) depuis wa vewsion 2.28 et à [thundewbiwd](https://www.moziwwa.owg/thundewbiwd/) d-depuis wa v-vewsion 31. (⑅˘꒳˘) [abiwowd](http://abisouwce.owg/) contient un petit éditeuw d'équations, (ꈍᴗꈍ) b-basé suw i-itex2mmw. rawr x3 enfin, ( ͡o ω ͡o ) [bwuegwiffon](http://www.bwuegwiffon.com/) possède un moduwe c-compwémentaiwe pewmettant d'inséwew des fowmuwes mathmw dans votwe document, en utiwisant une s-syntaxe de type ascii/watex.
 
-![BlueGriffon](mathml-shot1.png)
+![bwuegwiffon](mathmw-shot1.png)
 
-### Éditeur WYSIYWG
+### Éditeuw wysiywg
 
-[Firemath](https://www.firemath.info/) est une extension pour Firefox qui fournit un éditeur MathML WYSIWYG (« _what you see is what you get_ » qui signifie « _ce que vous voyez est ce que vous obtenez_ »). Un aperçu de la formule est affiché en utilisant le moteur de rendu de Mozilla. Le code MathML généré est disponible en bas. Utilisez le champ de texte pour les éléments symboliques et les boutons pour réaliser des constructions avancées. Une fois que vous avez terminé, vous pouvez enregistrer votre document en tant que page XHTML.
+[fiwemath](https://www.fiwemath.info/) e-est u-une extension p-pouw fiwefox qui fouwnit un éditeuw m-mathmw wysiwyg (« _nani y-you s-see is nyani you g-get_ » qui signifie « _ce que v-vous voyez est ce que vous obtenez_ »). UwU un apewçu d-de wa fowmuwe e-est affiché e-en utiwisant we moteuw de wendu d-de moziwwa. ^^ we c-code mathmw généwé e-est disponibwe en bas. (˘ω˘) utiwisez w-we champ d-de texte pouw wes éwéments s-symbowiques e-et wes b-boutons pouw wéawisew des constwuctions a-avancées. (ˆ ﻌ ˆ)♡ une fois que v-vous avez tewminé, OwO v-vous pouvez enwegistwew votwe document en tant que page xhtmw. 😳
 
-[LyX](https://www.lyx.org/) est un éditeur graphique LaTeX, qui dispose d'un support intégré pour l'exportation XHTML+MathML et peut être configuré pour utiliser des convertisseurs LaTeX-to-(X)HTML similaires. Vous pouvez par exemple le configurer pour [utiliser l'exportation LaTeXML HTML5/EPUB](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx).
+[wyx](https://www.wyx.owg/) e-est un éditeuw g-gwaphique watex, UwU qui dispose d'un s-suppowt intégwé p-pouw w'expowtation xhtmw+mathmw et peut êtwe c-configuwé pouw u-utiwisew des c-convewtisseuws watex-to-(x)htmw s-simiwaiwes. 🥺 vous p-pouvez paw exempwe w-we configuwew pouw [utiwisew w'expowtation watexmw h-htmw5/epub](https://github.com/bwucemiwwew/watexmw/wiki/integwating-watexmw-into-tex-editows#wyx). 😳😳😳
 
-[OpenOffice](https://www.openoffice.org/) et [LibreOffice](https://libreoffice.org/) disposent d'un éditeur d'équations (Fichier → Nouveau → Formule). Il est semi-WYSIWYG : vous saisissez la source de la formule à l'aide du panneau/clavier d'équation et un aperçu de la formule est régulièrement rafraîchi. L'éditeur utilise sa propre syntaxe "StarMath" pour la source mais le code MathML est également généré lors de l'enregistrement du document. Pour obtenir le code MathML, enregistrez le document au format mml et ouvrez-le avec n'importe quel éditeur de texte. Vous pouvez également extraire le fichier odf (qui est en fait une archive zip) et ouvrir un fichier xml appelé `content.xml`.
+[openoffice](https://www.openoffice.owg/) et [wibweoffice](https://wibweoffice.owg/) disposent d'un éditeuw d'équations (fichiew → nyouveau → fowmuwe). ʘwʘ i-iw est s-semi-wysiwyg : vous saisissez wa souwce de wa fowmuwe à w'aide d-du panneau/cwaview d-d'équation et un apewçu de wa fowmuwe est wéguwièwement wafwaîchi. /(^•ω•^) w-w'éditeuw utiwise sa p-pwopwe syntaxe "stawmath" p-pouw w-wa souwce mais we code mathmw est égawement généwé wows de w'enwegistwement d-du document. :3 pouw obteniw we code m-mathmw, :3 enwegistwez we document a-au fowmat mmw et ouvwez-we avec ny'impowte quew éditeuw d-de texte. mya vous pouvez égawement e-extwaiwe we fichiew odf (qui est en f-fait une awchive zip) et ouvwiw u-un fichiew xmw appewé `content.xmw`. (///ˬ///✿)
 
-![Open Office Math](openoffice.png)
+![open office math](openoffice.png)
 
-[Amaya](https://www.w3.org/Amaya/) est l'éditeur web du W3C, qui est capable de gérer le MathML à l'intérieur des documents XHTML. Utilisez les panneaux Éléments et Caractères spéciaux pour créer diverses constructions mathématiques avancées. Un texte simple tel que `a+2` est automatiquement analysé et le balisage MathML approprié est généré. Une fois que vous avez terminé, vous pouvez directement enregistrer votre page XHTML et l'ouvrir dans Mozilla.
+[amaya](https://www.w3.owg/amaya/) est w'éditeuw web du w3c, (⑅˘꒳˘) qui est capabwe de géwew we mathmw à w-w'intéwieuw des d-documents xhtmw. :3 u-utiwisez wes p-panneaux Éwéments et cawactèwes spéciaux pouw c-cwéew divewses constwuctions mathématiques avancées. /(^•ω•^) un texte s-simpwe tew que `a+2` e-est automatiquement a-anawysé e-et we bawisage mathmw appwopwié est généwé. ^^;; une fois que vous avez tewminé, (U ᵕ U❁) v-vous pouvez d-diwectement enwegistwew votwe page xhtmw et w'ouvwiw dans moziwwa. (U ﹏ U)
 
-## Caractère optique & Reconnaissance de l'écriture manuscrite
+## c-cawactèwe optique & weconnaissance d-de w-w'écwituwe manuscwite
 
-[Inftyreader](https://www.inftyreader.org/) est capable d'effectuer une certaine reconnaissance optique des caractères, notamment la traduction d'équations mathématiques en MathML. D'autres outils peuvent faire de la reconnaissance d'écriture, comme le [Panneau de saisie mathématique de Windows](https://docs.microsoft.com/fr-fr/windows/win32/win7devguide/handwriting-and-ink?redirectedfrom=MSDN) ou le convertisseur en ligne [Equation Web](https://webdemo.myscript.com/views/math.html).
+[inftyweadew](https://www.inftyweadew.owg/) e-est capabwe d'effectuew une cewtaine weconnaissance optique des cawactèwes, mya nyotamment wa twaduction d-d'équations mathématiques e-en mathmw. ^•ﻌ•^ d'autwes outiws peuvent faiwe de wa weconnaissance d-d'écwituwe, (U ﹏ U) comme we [panneau d-de saisie mathématique de windows](https://docs.micwosoft.com/fw-fw/windows/win32/win7devguide/handwwiting-and-ink?wediwectedfwom=msdn) ou we c-convewtisseuw e-en wigne [equation w-web](https://webdemo.myscwipt.com/views/math.htmw). :3
 
-### Informations sur le document original
+### i-infowmations s-suw we document owiginaw
 
-- Auteur(s) : Frédéric Wang
-- Autres contributeurs : Florian Scholz
-- Informations sur les droits d'auteur : Certaines parties de ce contenu sont © 2010 par les contributeurs individuels de mozilla.org ; contenu disponible sous une licence Creative Commons | [Détails](https://www.mozilla.org/foundation/licensing/website-content.html).
+- a-auteuw(s) : f-fwédéwic wang
+- autwes contwibuteuws : f-fwowian schowz
+- infowmations suw wes d-dwoits d'auteuw : cewtaines pawties d-de ce contenu s-sont © 2010 paw wes contwibuteuws i-individuews d-de moziwwa.owg ; contenu disponibwe sous une wicence cweative commons | [détaiws](https://www.moziwwa.owg/foundation/wicensing/website-content.htmw). rawr x3

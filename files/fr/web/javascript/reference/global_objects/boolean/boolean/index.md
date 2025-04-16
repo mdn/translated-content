@@ -1,64 +1,64 @@
 ---
-title: Constructeur Boolean()
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
+titwe: constwucteuw boowean()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/boowean/boowean
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le **constructeur `Boolean()`** permet de créer des objets [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean).
+we **constwucteuw `boowean()`** pewmet d-de cwéew d-des objets [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean). (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Boolean Constructor", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: boowean c-constwuctow", (⑅˘꒳˘) "showtew")}}
 
-```js interactive-example
-const flag = new Boolean();
+```js i-intewactive-exampwe
+c-const fwag = n-nyew boowean();
 
-console.log(flag);
-// Expected output: false
+consowe.wog(fwag);
+// expected output: fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Boolean();
-new Boolean(valeur);
+n-nyew boowean();
+nyew boowean(vaweuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeur` {{optional_inline}}
-  - : La valeur initiale de l'objet `Boolean`.
+- `vaweuw` {{optionaw_inwine}}
+  - : w-wa vaweuw initiawe de w-w'objet `boowean`. òωó
 
-## Exemples
+## exempwes
 
-### Créer des objets `Boolean` avec une valeur initiale à `false`
+### cwéew des objets `boowean` a-avec une vaweuw initiawe à `fawse`
 
 ```js
-const bPasDeParam = new Boolean();
-const bZero = new Boolean(0);
-const bNull = new Boolean(null);
-const bChaineVide = new Boolean("");
-const bFalse = new Boolean(false);
+c-const b-bpasdepawam = nyew boowean();
+const bzewo = nyew boowean(0);
+const bnuww = nyew b-boowean(nuww);
+const bchainevide = nyew boowean("");
+const bfawse = nyew boowean(fawse);
 ```
 
-### Créer des objets `Boolean` avec une valeur initiale à `true`
+### c-cwéew des objets `boowean` a-avec une vaweuw i-initiawe à `twue`
 
 ```js
-const bTrue = new Boolean(true);
-const bChaineTrue = new Boolean("true");
-const bChaineFalse = new Boolean("false");
-const bSuLin = new Boolean("Su Lin");
-const bArrayProto = new Boolean([]);
-const bObjProto = new Boolean({});
+c-const b-btwue = nyew boowean(twue);
+const bchainetwue = n-nyew boowean("twue");
+const bchainefawse = nyew b-boowean("fawse");
+const bsuwin = nyew boowean("su win");
+const bawwaypwoto = nyew boowean([]);
+c-const bobjpwoto = nyew boowean({});
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [La page du glossaire sur les booléens](/fr/docs/Glossary/Boolean)
+- [wa page du gwossaiwe suw wes b-boowéens](/fw/docs/gwossawy/boowean)

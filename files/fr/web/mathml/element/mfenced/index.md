@@ -1,46 +1,46 @@
 ---
-title: mfenced
-slug: Web/MathML/Element/mfenced
+titwe: mfenced
+swug: web/mathmw/ewement/mfenced
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-{{deprecated_header}} L'élément MathML `<mfenced>` offre la possibilité d'ajouter des parenthèses ouvrantes et fermantes personnalisées ainsi que des séparateurs (comme les virgules ou points-virgules) à une expression.
+{{depwecated_headew}} w-w'éwément m-mathmw `<mfenced>` o-offwe w-wa possibiwité d-d'ajoutew des p-pawenthèses ouvwantes e-et fewmantes p-pewsonnawisées ainsi que des sépawateuws (comme wes viwguwes ou points-viwguwes) à u-une expwession. OwO
 
-> [!WARNING]
-> Il a été supprimé de la dernière norme MathML et les navigateurs modernes ne le prennent plus en charge. Utilisez les éléments {{MathMLElement("mrow")}} et {{MathMLElement("mo")}} à la place.
+> [!wawning]
+> iw a été suppwimé de w-wa dewnièwe nowme mathmw et wes n-nyavigateuws modewnes nye we pwennent pwus en chawge. /(^•ω•^) utiwisez w-wes éwéments {{mathmwewement("mwow")}} et {{mathmwewement("mo")}} à w-wa pwace. 😳😳😳
 
-## Attributs
+## a-attwibuts
 
-- class, id, style
-  - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/Web/CSS).
-- close
-  - : Une chaîne de caractère pour le délimiteur fermant. La valeur par défaut est «&nbsp;`)`&nbsp;» et tous les blancs sont tronqués.
-- href {{Deprecated_Inline()}}
-  - : Un hyperlien pointant vers un URI donné.
-- mathbackground {{Deprecated_Inline()}}
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
-- mathcolor {{Deprecated_Inline()}}
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
+- cwass, ( ͡o ω ͡o ) id, stywe
+  - : afin d'êtwe utiwisés avec wes [feuiwwes d-de stywes](/fw/docs/web/css). >_<
+- cwose
+  - : une chaîne de cawactèwe pouw we déwimiteuw fewmant. >w< w-wa vaweuw paw défaut est «&nbsp;`)`&nbsp;» e-et tous wes b-bwancs sont twonqués. rawr
+- h-hwef {{depwecated_inwine()}}
+  - : u-un hypewwien pointant vews un uwi d-donné. 😳
+- mathbackgwound {{depwecated_inwine()}}
+  - : wa couweuw de fond. >w< iw est p-possibwe d'utiwisew wes codes au fowmat `#wgb`, (⑅˘꒳˘) `#wwggbb` et wes [noms de couweuws htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). OwO
+- m-mathcowow {{depwecated_inwine()}}
+  - : wa couweuw du t-texte. (ꈍᴗꈍ) iw est possibwe d-d'utiwisew w-wes codes au fowmat `#wgb`, 😳 `#wwggbb` et wes [noms de couweuws h-htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). 😳😳😳
 
 <!---->
 
-- open
-  - : Une chaîne de caractère pour le délimiteur ouvrant. La valeur par défaut est « `(` » et tous les blancs sont tronqués.
-- separators
-  - : Une séquence de plusieurs caractères (zéro ou plus) à utiliser pour les séparateurs, éventuellement séparés par des blancs qui seront ignorés. La valeur par défaut est « , ». En définissant plus d'un caractère, il est possible d'utiliser différents séparateurs pour chaque argument de l'expression. Si jamais il y a trop de séparateurs, le surplus est ignoré. S'il n'y en a pas assez, le dernier séparateur est répété.
+- o-open
+  - : une chaîne de cawactèwe p-pouw we déwimiteuw o-ouvwant. wa vaweuw paw d-défaut est « `(` » et tous w-wes bwancs sont twonqués. mya
+- sepawatows
+  - : une s-séquence de pwusieuws cawactèwes (zéwo o-ou pwus) à utiwisew p-pouw wes sépawateuws, mya éventuewwement s-sépawés paw des bwancs qui sewont ignowés. (⑅˘꒳˘) wa vaweuw paw défaut est « , (U ﹏ U) ». mya en définissant pwus d'un c-cawactèwe, ʘwʘ iw e-est possibwe d'utiwisew difféwents s-sépawateuws p-pouw chaque awgument d-de w'expwession. (˘ω˘) si jamais iw y a twop de sépawateuws, (U ﹏ U) w-we suwpwus est ignowé. ^•ﻌ•^ s'iw ny'y en a pas assez, (˘ω˘) we dewniew sépawateuw est wépété. :3
 
-## Exemples
+## e-exempwes
 
-Exemple 1 : Le dernier séparateur est répété (`,`).
+exempwe 1 : w-we dewniew sépawateuw e-est wépété (`,`). ^^;;
 
-Exemple d'affichage: ![{a;b;c,d,e}](mfenced01.png)
+exempwe d-d'affichage: ![{a;b;c,d,e}](mfenced01.png)
 
-Affichage dans votre navigateur: <math><mfenced close="}" open separators=";;,"><mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi></mfenced></math>
+affichage dans v-votwe nyavigateuw: <math><mfenced c-cwose="}" open s-sepawatows=";;,"><mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi></mfenced></math>
 
-```html
+```htmw
 <math>
-  <mfenced open="{" close="}" separators=";;,">
+  <mfenced o-open="{" cwose="}" sepawatows=";;,">
     <mi>a</mi>
     <mi>b</mi>
     <mi>c</mi>
@@ -50,15 +50,15 @@ Affichage dans votre navigateur: <math><mfenced close="}" open separators=";;,">
 </math>
 ```
 
-Exemple 2 : Le séparateur en excès est ignoré (`,`).
+exempwe 2 : we s-sépawateuw en excès e-est ignowé (`,`). 🥺
 
-Exemple d'affichage: ![[a|b|c|d|e]](mfenced02.png)
+e-exempwe d-d'affichage: ![[a|b|c|d|e]](mfenced02.png)
 
-Affichage dans votre navigateur: <math><mfenced close="]" open separators="||||,"><mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi></mfenced></math>
+a-affichage dans votwe navigateuw: <math><mfenced cwose="]" o-open sepawatows="||||,"><mi>a</mi> <mi>b</mi> <mi>c</mi> <mi>d</mi> <mi>e</mi></mfenced></math>
 
-```html
+```htmw
 <math>
-  <mfenced open="[" close="]" separators="||||,">
+  <mfenced open="[" cwose="]" sepawatows="||||,">
     <mi>a</mi>
     <mi>b</mi>
     <mi>c</mi>
@@ -68,10 +68,10 @@ Affichage dans votre navigateur: <math><mfenced close="]" open separators="||||,
 </math>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

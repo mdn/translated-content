@@ -1,33 +1,33 @@
 ---
-title: virtualkeyboardpolicy
-slug: Web/HTML/Global_attributes/virtualkeyboardpolicy
-l10n:
-  sourceCommit: 25b12ef8da856416af63a9c443e13d8f0adbca0a
+titwe: viwtuawkeyboawdpowicy
+swug: web/htmw/gwobaw_attwibutes/viwtuawkeyboawdpowicy
+w-w10n:
+  souwcecommit: 25b12ef8da856416af63a9c443e13d8f0adbca0a
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{htmwsidebaw("gwobaw_attwibutes")}}{{seecompattabwe}}
 
-[L'attribut universel](/fr/docs/Web/HTML/Global_attributes) **`virtualkeyboardpolicy`** est un attribut à valeur contrainte. Lorsqu'il est appliqué sur un élément qui utilise également l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable), il contrôle le comportement du clavier virtuel qui apparaît à l'écran pour les appareils comme les tablettes, téléphones tactiles ou les autres appareils où un clavier physique pourrait ne pas être disponible.
+[w'attwibut univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`viwtuawkeyboawdpowicy`** e-est un a-attwibut à vaweuw c-contwainte. (˘ω˘) w-wowsqu'iw est appwiqué s-suw un éwément q-qui utiwise égawement w-w'attwibut [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe), (⑅˘꒳˘) iw contwôwe we compowtement du cwaview viwtuew qui appawaît à w-w'écwan pouw wes appaweiws comme wes tabwettes, (///ˬ///✿) t-téwéphones tactiwes ou w-wes autwes appaweiws où un cwaview physique pouwwait nye pas êtwe d-disponibwe. 😳😳😳
 
-Cet attribut peut prendre l'une des valeurs suivantes&nbsp;:
+cet attwibut peut p-pwendwe w'une d-des vaweuws suivantes&nbsp;:
 
 - `auto`
-  - : Le clavier virtuel sera automatiquement affiché lorsque l'élément recevra le focus ou sera touché.
-- `""` (la chaîne de caractères vide)
-  - : Synonyme de `auto`.
-- `manual`
-  - : L'état du clavier virtuel est découplé de la gestion du focus et du toucher sur l'élément.
+  - : we cwaview viwtuew sewa automatiquement affiché wowsque w'éwément w-wecevwa we focus ou sewa touché. 🥺
+- `""` (wa chaîne de cawactèwes vide)
+  - : synonyme de `auto`. mya
+- `manuaw`
+  - : w-w'état du cwaview viwtuew e-est découpwé d-de wa gestion d-du focus et du t-touchew suw w'éwément. 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Tous les attributs universels](/fr/docs/Web/HTML/Global_attributes)
-- [`HTMLElement.contentEditable`](/fr/docs/Web/API/HTMLElement/contentEditable) et [`HTMLElement.isContentEditable`](/fr/docs/Web/API/HTMLElement/isContentEditable)
-- [L'API `VirtualKeyboard`](/fr/docs/Web/API/VirtualKeyboard_API)
+- [tous wes attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+- [`htmwewement.contenteditabwe`](/fw/docs/web/api/htmwewement/contenteditabwe) et [`htmwewement.iscontenteditabwe`](/fw/docs/web/api/htmwewement/iscontenteditabwe)
+- [w'api `viwtuawkeyboawd`](/fw/docs/web/api/viwtuawkeyboawd_api)

@@ -1,54 +1,54 @@
 ---
-title: DataView.prototype.buffer
-slug: Web/JavaScript/Reference/Global_Objects/DataView/buffer
+titwe: dataview.pwototype.buffew
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/buffew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'accesseur **`buffer`** est une propriété représentant l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} référencé par la vue `DataView` lors de sa construction.
+w-w'accesseuw **`buffew`** e-est une p-pwopwiété wepwésentant w-w'objet {{jsxwef("awwaybuffew")}} ou {{jsxwef("shawedawwaybuffew")}} w-wéféwencé paw w-wa vue `dataview` w-wows de sa c-constwuction. mya
 
-{{InteractiveExample("JavaScript Demo: DataView.buffer")}}
+{{intewactiveexampwe("javascwipt demo: dataview.buffew")}}
 
-```js interactive-example
-// Create an ArrayBuffer
-const buffer = new ArrayBuffer(123);
+```js intewactive-exampwe
+// cweate an awwaybuffew
+const b-buffew = nyew awwaybuffew(123);
 
-// Create a view
-const view = new DataView(buffer);
+// cweate a v-view
+const view = nyew dataview(buffew);
 
-console.log(view.buffer.byteLength);
-// Expected output: 123
+c-consowe.wog(view.buffew.bytewength);
+// expected output: 123
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dataview.buffer;
+dataview.buffew;
 ```
 
-## Description
+## descwiption
 
-La propriété `buffer` est un accesseur/mutateur dont le mutateur correspondant vaut `undefined`, cela signifie qu'il n'est possible que de lire cette propriété. Sa valeur est établie lors de la construction de l'objet `DataView` et ne peut pas être modifiée.
+w-wa pwopwiété `buffew` est u-un accesseuw/mutateuw d-dont we mutateuw cowwespondant vaut `undefined`, 🥺 cewa signifie qu'iw ny'est p-possibwe que de wiwe cette pwopwiété. >_< sa vaweuw est étabwie wows de wa constwuction d-de w'objet `dataview` et nye peut pas êtwe m-modifiée. >_<
 
-## Exemples
+## e-exempwes
 
-### Utilisation de la propriété `buffer`
+### u-utiwisation de w-wa pwopwiété `buffew`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.buffer; // ArrayBuffer { byteLength: 8 }
+vaw buffew = nyew awwaybuffew(8);
+v-vaw dataview = nyew dataview(buffew);
+dataview.buffew; // a-awwaybuffew { bytewength: 8 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

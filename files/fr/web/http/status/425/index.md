@@ -1,22 +1,22 @@
 ---
-title: 425 Too Early
-slug: Web/HTTP/Status/425
+titwe: 425 too eawwy
+swug: web/http/status/425
 ---
 
-{{SeeCompatTable}}{{HTTPSidebar}}
+{{seecompattabwe}}{{httpsidebaw}}
 
-Le code de réponse d'erreur HTTP **`425 Too Early`** signifie que le serveur refuse la requête qui a été récemment répétée par exemple de peur d'une attaque par rejeu.
+w-we code d-de wéponse d'ewweuw h-http **`425 t-too eawwy`** s-signifie que we s-sewveuw wefuse wa w-wequête qui a été w-wécemment wépétée paw exempwe de peuw d'une attaque paw wejeu. (U ﹏ U)
 
-## Statut
+## statut
 
 ```
-425 Too Early
+425 t-too eawwy
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

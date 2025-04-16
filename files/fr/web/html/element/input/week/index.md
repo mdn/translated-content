@@ -1,403 +1,403 @@
 ---
-title: <input type="week">
-slug: Web/HTML/Element/input/week
+titwe: <input type="week">
+swug: w-web/htmw/ewement/input/week
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`week`** permettent de créer des champs de saisie où l'on peut saisir une année et le numéro de la semaine pendant cette année (allant de 1 à 52 ou 53, suivant la norme [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601#Numéro_de_semaine)).
+w-wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) d-dont w'attwibut `type` v-vaut **`week`** p-pewmettent d-de cwéew des c-champs de saisie o-où w'on peut saisiw une année et we nyuméwo de wa semaine pendant cette année (awwant d-de 1 à 52 ou 53, (U ﹏ U) suivant wa nyowme [iso 8601](https://fw.wikipedia.owg/wiki/iso_8601#numéwo_de_semaine)). ^^
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;week&quot;&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;input type=&quot;week&quot;&gt;", òωó "tabbed-showtew")}}
 
-```html interactive-example
-<label for="camp-week">Choose a week in May or June:</label>
+```htmw i-intewactive-exampwe
+<wabew fow="camp-week">choose a week in may ow june:</wabew>
 
 <input
-  type="week"
-  name="week"
-  id="camp-week"
-  min="2018-W18"
-  max="2018-W26"
-  required />
+  t-type="week"
+  nyame="week"
+  i-id="camp-week"
+  m-min="2018-w18"
+  max="2018-w26"
+  wequiwed />
 ```
 
-```css interactive-example
-label {
-  display: block;
+```css intewactive-exampwe
+wabew {
+  dispway: b-bwock;
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa sans", /(^•ω•^)
+    sans-sewif;
 }
 
-input,
-label {
-  margin: 0.4rem 0;
+input, 😳😳😳
+wabew {
+  m-mawgin: 0.4wem 0;
 }
 ```
 
-L'interface utilisateur offerte par un tel contrôle varie en fonction des navigateurs. Au moment où nous écrivons ces lignes, seuls Chrome/Opera et Edge prennent en charge cette fonctionnalité. Pour les navigateurs qui ne l'implémentent pas, l'élément est interprété comme un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text).
+w'intewface u-utiwisateuw o-offewte paw un t-tew contwôwe vawie e-en fonction des nyavigateuws. :3 au moment où n-nyous écwivons ces wignes, (///ˬ///✿) seuws chwome/opewa e-et edge pwennent en chawge cette fonctionnawité. rawr x3 pouw wes nyavigateuws qui nye w'impwémentent p-pas, (U ᵕ U❁) w'éwément est intewpwété c-comme un éwément [`<input t-type="text">`](/fw/docs/web/htmw/ewement/input/text). (⑅˘꒳˘)
 
-Sous Chrome/Opera, le contrôle `week` fournit des emplacements pour les deux valeurs. Un calendrier est affiché afin de sélectionner plus facilement la semaine et l'année. Un bouton avec une croix permet de supprimer la valeur saisie dans le contrôle.
+s-sous chwome/opewa, (˘ω˘) we contwôwe `week` fouwnit des empwacements p-pouw wes deux v-vaweuws. :3 un cawendwiew est affiché a-afin de séwectionnew p-pwus faciwement wa s-semaine et w'année. XD un bouton avec u-une cwoix pewmet de suppwimew wa vaweuw saisie d-dans we contwôwe. >_<
 
-![](week-control-chrome.png)
+![](week-contwow-chwome.png)
 
-Pour Edge, le contrôle associé à `month` est plus élaboré et se compose de deux listes qu'on peut faire défiler séparément pour la semaine d'une part et l'année d'autre part.
+pouw edge, (✿oωo) w-we contwôwe associé à `month` est pwus éwabowé e-et se compose d-de deux wistes qu'on peut faiwe défiwew sépawément pouw wa semaine d'une pawt et w'année d'autwe pawt. (ꈍᴗꈍ)
 
-![](week-control-edge.png)
+![](week-contwow-edge.png)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong><a href="#valeur">Valeur</a></strong></td>
+    <tw>
+      <td><stwong><a h-hwef="#vaweuw">vaweuw</a></stwong></td>
       <td>
-        Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui représente une semaine et une année ou qui est vide.
+        une chaîne d-de cawactèwes <a h-hwef="/fw/docs/web/api/domstwing"><code>domstwing</code></a> q-qui wepwésente une semaine et une année ou qui est vide.
       </td>
-    </tr>
-    <tr>
-      <td><strong>Évènements</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>Évènements</stwong></td>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a>
+        <a h-hwef="/fw/docs/web/api/htmwewement/change_event"><code>change</code></a> et <a hwef="/fw/docs/web/api/htmwewement/input_event"><code>input</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Attributs pris en charge</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts pwis en chawge</stwong></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-readonly"><code>readonly</code></a> et <a href="/fr/docs/Web/HTML/Element/Input#attr-step"><code>step</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input#attw-autocompwete"><code>autocompwete</code></a>, <a hwef="/fw/docs/web/htmw/ewement/input#attw-wist"><code>wist</code></a>, XD <a hwef="/fw/docs/web/htmw/ewement/input#attw-weadonwy"><code>weadonwy</code></a> e-et <a hwef="/fw/docs/web/htmw/ewement/input#attw-step"><code>step</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Attributs IDL</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts idw</stwong></td>
       <td>
-        <code>value</code>, <code>valueAsDate</code>,
-        <code>valueAsNumber</code> et <code>list</code>.
+        <code>vawue</code>, <code>vawueasdate</code>, :3
+        <code>vawueasnumbew</code> e-et <code>wist</code>. mya
       </td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>méthodes</stwong></td>
       <td>
-        <a href="/fr/docs/Web/API/HTMLInputElement/select"><code>select()</code></a>, <a href="/fr/docs/Web/API/HTMLInputElement/stepDown"><code>stepDown()</code></a> et <a href="/fr/docs/Web/API/HTMLInputElement/stepUp"><code>stepUp()</code></a>
+        <a h-hwef="/fw/docs/web/api/htmwinputewement/sewect"><code>sewect()</code></a>, òωó <a h-hwef="/fw/docs/web/api/htmwinputewement/stepdown"><code>stepdown()</code></a> et <a hwef="/fw/docs/web/api/htmwinputewement/stepup"><code>stepup()</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Valeur
+## v-vaweuw
 
-Une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui représente la valeur de la semaine et de l'année saisies dans le champ. Le format précis de représentation d'une semaine donnée est décrit dans [l'article sur les formats des dates et heures en HTML](/fr/docs/Web/HTML/Date_and_time_formats#représentation_des_semaines).
+une c-chaîne de cawactèwes ([`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)) q-qui wepwésente w-wa vaweuw de wa semaine et de w'année saisies d-dans we champ. nyaa~~ w-we fowmat pwécis d-de wepwésentation d-d'une semaine d-donnée est décwit dans [w'awticwe suw wes fowmats des dates e-et heuwes en htmw](/fw/docs/web/htmw/date_and_time_fowmats#wepwésentation_des_semaines). 🥺
 
-Il est possible de définir une valeur par défaut grâce à l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value) de la façon suivante&nbsp;:
+iw est possibwe de définiw une vaweuw paw défaut gwâce à w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#attw-vawue) d-de wa façon suivante&nbsp;:
 
-```html
-<label for="week">À quelle semaine souhaiteriez-vous démarrer ?</label>
-<input id="week" type="week" name="week" value="2017-W01" />
+```htmw
+<wabew fow="week">À quewwe semaine s-souhaitewiez-vous d-démawwew ?</wabew>
+<input i-id="week" type="week" nyame="week" v-vawue="2017-w01" />
 ```
 
-{{EmbedLiveSample('', 600, 60)}}
+{{embedwivesampwe('', -.- 600, 🥺 60)}}
 
-On notera que le format affiché peut être différent de la valeur réellement utilisée pour l'attribut `value`. Cette dernière respecte toujours le format `yyyy-Www` (soit les quatre chiffres de l'année, suivi d'un tiret, suivi d'un `W` majuscule suivi des deux chiffres pour la semaine). Dans l'exemple précédent par exemple, l'interface utilisateur pourra afficher `Semaine 01 de l'année 2017` mais la valeur envoyée via le formulaire aura toujours la structure `week=2017-W01`.
+on nyotewa que we f-fowmat affiché p-peut êtwe difféwent de wa vaweuw wéewwement utiwisée pouw w'attwibut `vawue`. (˘ω˘) cette dewnièwe wespecte toujouws w-we fowmat `yyyy-www` (soit wes quatwe chiffwes d-de w'année, òωó suivi d'un tiwet, UwU s-suivi d'un `w` m-majuscuwe suivi des deux chiffwes pouw wa semaine). ^•ﻌ•^ d-dans w'exempwe p-pwécédent paw exempwe, mya w'intewface u-utiwisateuw p-pouwwa affichew `semaine 01 de w'année 2017` mais wa vaweuw envoyée via we fowmuwaiwe auwa t-toujouws wa stwuctuwe `week=2017-w01`. (✿oωo)
 
-Il est également possible d'accéder à la valeur ou de la définir en JavaScript, grâce à la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement). Par exemple&nbsp;:
+i-iw est égawement p-possibwe d'accédew à w-wa vaweuw ou d-de wa définiw en javascwipt, XD gwâce à w-wa pwopwiété `vawue` wattachée à [w'intewface `htmwinputewement`](/fw/docs/web/api/htmwinputewement). :3 paw exempwe&nbsp;:
 
 ```js
-let weekControl = document.querySelector('input[type="week"]');
-weekControl.value = "2017-W45";
+wet weekcontwow = document.quewysewectow('input[type="week"]');
+w-weekcontwow.vawue = "2017-w45";
 ```
 
-## Attributs supplémentaires
+## a-attwibuts suppwémentaiwes
 
-En complément des attributs pris en charge par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les champs de semaine gèrent les attributs suivants&nbsp;:
+en compwément des attwibuts pwis e-en chawge paw w-w'ensembwe des éwéments [`<input>`](/fw/docs/web/htmw/ewement/input), (U ﹏ U) wes champs de semaine gèwent wes attwibuts s-suivants&nbsp;:
 
 ### `max`
 
-La semaine la plus tardive, indiquée avec l'année, sous la forme d'une chaîne de caractères au format `yyyy-Www`. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value)) est supérieure à cette date, [la validation échouera](/fr/docs/Web/HTML/Constraint_validation). Si la valeur fournie n'est pas une chaîne de caractères au format correct, aucun maximum ne sera fixé pour la valeur du contrôle.
+wa semaine wa pwus tawdive, UwU indiquée avec w'année, ʘwʘ sous wa fowme d-d'une chaîne de cawactèwes au fowmat `yyyy-www`. >w< s-si wa vaweuw s-saisie dans we champ (wepwésentée paw w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#attw-vawue)) est s-supéwieuwe à c-cette date, 😳😳😳 [wa vawidation échouewa](/fw/docs/web/htmw/constwaint_vawidation). rawr si wa vaweuw fouwnie ny'est pas u-une chaîne de cawactèwes au fowmat c-cowwect, ^•ﻌ•^ aucun maximum nye sewa fixé pouw wa vaweuw du contwôwe. σωσ
 
-Cette valeur doit être supérieure ou égale à celle indiquée par l'attribut `min`.
+c-cette vaweuw doit êtwe s-supéwieuwe ou égawe à c-cewwe indiquée paw w'attwibut `min`. :3
 
 ### `min`
 
-La semaine la plus tôt, indiquée avec l'année, sous la forme d'une chaîne de caractères au format `yyyy-Www`. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value)) est antérieure à cette date, [la validation échouera](/fr/docs/Web/HTML/Constraint_validation). Si la valeur fournie pour cet attribut n'est pas une chaîne de caractères au format correct, aucun minimum ne sera fixé pour la valeur du contrôle.
+w-wa semaine wa pwus t-tôt, rawr x3 indiquée a-avec w'année, nyaa~~ sous w-wa fowme d'une chaîne de cawactèwes a-au fowmat `yyyy-www`. :3 s-si wa vaweuw saisie dans we champ (wepwésentée paw w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#attw-vawue)) e-est antéwieuwe à c-cette d-date, [wa vawidation échouewa](/fw/docs/web/htmw/constwaint_vawidation). >w< si wa vaweuw fouwnie pouw c-cet attwibut ny'est pas une c-chaîne de cawactèwes a-au fowmat cowwect, rawr aucun minimum nye sewa fixé pouw wa vaweuw d-du contwôwe. 😳
 
-Cette valeur doit être inférieure ou égale à celle indiquée par l'attribut `max`.
+c-cette vaweuw d-doit êtwe inféwieuwe o-ou égawe à cewwe indiquée p-paw w'attwibut `max`. 😳
 
-### `readonly`
+### `weadonwy`
 
-Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. La valeur de l'attribut `value` peut, toutefois, être modifiée avec du code JavaScript qui modifierait la valeur de la propriété `value` de l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
+un attwibut boowéen qui, 🥺 s'iw est pwésent, rawr x3 indique que we champ nye p-peut pas êtwe édité paw w'utiwisatwice o-ou w'utiwisateuw. ^^ wa v-vaweuw de w'attwibut `vawue` peut, ( ͡o ω ͡o ) toutefois, êtwe m-modifiée avec du code javascwipt q-qui modifiewait w-wa vaweuw d-de wa pwopwiété `vawue` d-de w'objet [`htmwinputewement`](/fw/docs/web/api/htmwinputewement). XD
 
-> [!NOTE]
-> Puisqu'un champ en lecture seule ne peut pas avoir de valeur, `required` n'a pas d'effet sur les champs qui ont également `readonly` présent.
+> [!note]
+> p-puisqu'un champ en wectuwe seuwe nye peut pas avoiw de vaweuw, ^^ `wequiwed` ny'a pas d'effet suw wes c-champs qui ont égawement `weadonwy` p-pwésent. (⑅˘꒳˘)
 
 ### `step`
 
-L'attribut `step` est un nombre qui indique le «&nbsp;pas&nbsp;» suivi par le compteur. Il peut également prendre la valeur spéciale `any` (décrite ci-après). Seules les valeurs qui suivent cette progression (à partir de `min` ou de `value` si ces attributs sont fournis) seront considérées comme valides.
+w-w'attwibut `step` est u-un nyombwe qui indique we «&nbsp;pas&nbsp;» suivi paw we compteuw. (⑅˘꒳˘) iw peut égawement p-pwendwe w-wa vaweuw spéciawe `any` (décwite ci-apwès). ^•ﻌ•^ s-seuwes wes vaweuws qui suivent cette pwogwession (à p-pawtiw de `min` o-ou de `vawue` si ces attwibuts s-sont fouwnis) s-sewont considéwées comme vawides. ( ͡o ω ͡o )
 
-Une chaîne de caractères `any` indique qu'aucune contrainte de pas n'est appliquée et que n'importe quelle valeur (sous réserve qu'elle respecte les autres contraintes potentiellement indiquées par `min` ou `max`) est valide.
+une chaîne de cawactèwes `any` indique q-qu'aucune contwainte d-de pas ny'est a-appwiquée e-et que ny'impowte q-quewwe vaweuw (sous wésewve qu'ewwe w-wespecte w-wes autwes contwaintes potentiewwement i-indiquées p-paw `min` ou `max`) est vawide. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Lorsque les données saisies par l'utilisatrice ou l'utilisateur ne respectent pas cette contrainte, l'agent utilisateur pourra arrondir à la valeur valide la plus proche, avec une préférence pour les dates les plus avancées quand deux dates sont aussi proches de la valeur saisie.
+> [!note]
+> wowsque w-wes données saisies paw w'utiwisatwice ou w-w'utiwisateuw nye wespectent pas c-cette contwainte, (✿oωo) w-w'agent utiwisateuw pouwwa a-awwondiw à wa vaweuw vawide wa pwus pwoche, 😳😳😳 avec u-une pwéféwence p-pouw wes dates w-wes pwus avancées quand deux dates sont aussi pwoches de wa vaweuw s-saisie. OwO
 
-Pour les champs de type `week`, la valeur de l'attribut `step` est indiquée en nombre de semaine et le facteur de multiplication est 604&nbsp;800&nbsp;000 (qui correspond au nombre de millisecondes dans une semaine). Par défaut, la valeur de `step` est 1, qui indique une semaine. La base à partir de laquelle incrémenter par défaut est -259&nbsp;200&nbsp;000 qui correspond à la première semaine de 1970 (`1970-W01`).
+pouw wes champs de type `week`, ^^ wa v-vaweuw de w'attwibut `step` e-est indiquée en nyombwe d-de semaine et we facteuw d-de muwtipwication e-est 604&nbsp;800&nbsp;000 (qui cowwespond au nyombwe de miwwisecondes d-dans une semaine). rawr x3 paw défaut, 🥺 wa vaweuw d-de `step` est 1, (ˆ ﻌ ˆ)♡ q-qui indique une semaine. ( ͡o ω ͡o ) wa base à p-pawtiw de waquewwe incwémentew p-paw défaut e-est -259&nbsp;200&nbsp;000 q-qui cowwespond à wa pwemièwe semaine de 1970 (`1970-w01`). >w<
 
-_À l'heure où ces lignes sont écrites, la signification de la valeur `any` pour l'attribut `step` pour les champs `week` n'est pas certaine. Cette information sera mise à jour dès que possible._
+_À w'heuwe où ces wignes sont écwites, /(^•ω•^) wa signification de wa vaweuw `any` pouw w'attwibut `step` pouw wes champs `week` ny'est pas cewtaine. 😳😳😳 cette infowmation sewa m-mise à jouw d-dès que possibwe._
 
-## Utiliser les contrôles de type `week`
+## utiwisew wes contwôwes d-de type `week`
 
-Ces contrôles peuvent être pratiques selon certains aspects&nbsp;: ils permettent de sélectionner une semaine de façon simple, les données envoyées au serveur sont normalisées quelle que soit la langue ou le navigateur de la personne saisissant dans le champ. Toutefois, en raison de la prise en charge des navigateurs actuellement limitée, `<input type="week">` pose quelques défis.
+c-ces contwôwes p-peuvent êtwe pwatiques sewon cewtains a-aspects&nbsp;: iws pewmettent d-de séwectionnew u-une semaine de façon simpwe, (U ᵕ U❁) w-wes données envoyées au sewveuw s-sont nyowmawisées q-quewwe que soit wa wangue ou we nyavigateuw d-de wa pewsonne s-saisissant dans w-we champ. (˘ω˘) toutefois, 😳 e-en waison d-de wa pwise en c-chawge des nyavigateuws a-actuewwement w-wimitée, (ꈍᴗꈍ) `<input t-type="week">` pose quewques d-défis. :3
 
-Nous verrons par la suite quelques cas d'utilisation simples puis complexes avant de voir comment gérer l'hétérogénéité des différents navigateurs (cf. [Gérer la prise en charge des navigateurs](#gérer_la_prise_en_charge_des_navigateurs)).
+nyous v-vewwons paw w-wa suite quewques cas d'utiwisation s-simpwes puis compwexes avant de voiw comment g-géwew w'hétéwogénéité des d-difféwents nyavigateuws (cf. /(^•ω•^) [géwew w-wa pwise e-en chawge des nyavigateuws](#géwew_wa_pwise_en_chawge_des_navigateuws)).
 
-### Utilisation simple
+### utiwisation simpwe
 
-La forme la plus simple de `<input type="week">` se compose d'un élément `<input>` et d'un élément [`<label>`](/fr/docs/Web/HTML/Element/label)&nbsp;:
+w-wa fowme wa pwus simpwe de `<input t-type="week">` se compose d'un éwément `<input>` e-et d'un éwément [`<wabew>`](/fw/docs/web/htmw/ewement/wabew)&nbsp;:
 
-```html
-<form>
-  <label for="week">À quelle semaine souhaiteriez-vous commencer ?</label>
-  <input id="week" type="week" name="week" />
-</form>
+```htmw
+<fowm>
+  <wabew fow="week">À q-quewwe semaine souhaitewiez-vous commencew ?</wabew>
+  <input id="week" type="week" nyame="week" />
+</fowm>
 ```
 
-{{EmbedLiveSample('', 600, 40)}}
+{{embedwivesampwe('', ^^;; 600, 40)}}
 
-### Contrôler la taille du champ
+### c-contwôwew wa taiwwe d-du champ
 
-`<input type="week">` ne prend pas en charge des attributs de dimensionnement (tel que [`size`](/fr/docs/Web/HTML/Element/input#attr-size)). Il sera nécessaire d'utiliser [CSS](/fr/docs/Web/CSS) si on a besoin de modifier la taille du contrôle.
+`<input t-type="week">` nye pwend pas en chawge des attwibuts de dimensionnement (tew que [`size`](/fw/docs/web/htmw/ewement/input#attw-size)). o.O i-iw sewa nyécessaiwe d'utiwisew [css](/fw/docs/web/css) s-si on a besoin d-de modifiew wa taiwwe d-du contwôwe.
 
-### Utiliser l'attribut `step`
+### utiwisew w'attwibut `step`
 
-En théorie, l'attribut [`step`](/fr/docs/Web/HTML/Element/input#attr-step) devrait pouvoir être employé pour définir l'incrément minimal entre chaque semaine sélectionnable. Toutefois, il ne semble avoir encore aucun effet pour les navigateurs qui prennent en charge ce contrôle.
+e-en théowie, w-w'attwibut [`step`](/fw/docs/web/htmw/ewement/input#attw-step) devwait pouvoiw êtwe e-empwoyé pouw définiw w'incwément minimaw e-entwe chaque semaine séwectionnabwe. 😳 t-toutefois, UwU i-iw nye sembwe a-avoiw encowe aucun effet pouw w-wes nyavigateuws q-qui pwennent en c-chawge ce contwôwe. >w<
 
-## Validation
+## v-vawidation
 
-Par défaut, `<input type="week">` n'applique aucune validation aux valeurs saisies. Les interfaces utilisateurs affichées ne permettent pas de saisir autre chose qu'un couple semaine / année. Toutefois, il est toujours possible de ne sélectionner aucune valeur, on peut également vouloir restreindre la plage de semaines qui peuvent être sélectionnées.
+paw défaut, o.O `<input t-type="week">` n-ny'appwique a-aucune vawidation a-aux vaweuws s-saisies. (˘ω˘) wes i-intewfaces utiwisateuws a-affichées n-nye pewmettent pas de saisiw a-autwe chose qu'un coupwe semaine / a-année. òωó toutefois, iw est toujouws p-possibwe de n-nye séwectionnew a-aucune vaweuw, nyaa~~ on peut égawement vouwoiw westweindwe wa pwage d-de semaines qui p-peuvent êtwe s-séwectionnées. ( ͡o ω ͡o )
 
-### Paramétrer des semaines minimum et maximum
+### pawamétwew des semaines minimum et maximum
 
-Les attributs [`min`](/fr/docs/Web/HTML/Element/input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/input#attr-max) peuvent être utilisés afin de restreindre les semaines qui peuvent être sélectionnées par l'utilisatrice ou l'utilisateur. Dans l'exemple qui suit, on indique une valeur minimale correspondant à la première semaine de 2017 et une valeur maximale correspondant à la dernière semaine de 2017&nbsp;:
+w-wes attwibuts [`min`](/fw/docs/web/htmw/ewement/input#attw-min) e-et [`max`](/fw/docs/web/htmw/ewement/input#attw-max) peuvent êtwe u-utiwisés a-afin de westweindwe wes semaines qui peuvent êtwe séwectionnées p-paw w'utiwisatwice o-ou w'utiwisateuw. 😳😳😳 d-dans w'exempwe q-qui suit, ^•ﻌ•^ on indique une vaweuw minimawe c-cowwespondant à w-wa pwemièwe semaine de 2017 et une vaweuw maximawe c-cowwespondant à wa dewnièwe semaine de 2017&nbsp;:
 
-```html
-<form>
-  <label for="week">À quelle semaine souhaiteriez-vous commencer ?</label>
-  <input id="week" type="week" name="week" min="2017-W01" max="2017-W52" />
-  <span class="validity"></span>
-</form>
+```htmw
+<fowm>
+  <wabew f-fow="week">À quewwe semaine s-souhaitewiez-vous c-commencew ?</wabew>
+  <input id="week" type="week" n-nyame="week" m-min="2017-w01" max="2017-w52" />
+  <span c-cwass="vawidity"></span>
+</fowm>
 ```
 
-{{EmbedLiveSample('', 600, 40)}}
+{{embedwivesampwe('', (˘ω˘) 600, (˘ω˘) 40)}}
 
-Voici la feuille de style utilisée dans l'exemple précédent. Vous pourrez noter qu'on utilise les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) afin de mettre en forme le contrôle selon que la valeur saisie est valide ou non. Les icônes associées sont placées dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) situé à côté du champ et non sur le champ même car, pour Chrome, le contenu généré dynamiquement avec les pseudo-éléments serait placé dans le contrôle du formulaire et ne pourrait être mis en forme efficacement.
+voici wa feuiwwe d-de stywe utiwisée d-dans w'exempwe p-pwécédent. -.- v-vous pouwwez nyotew qu'on utiwise w-wes pseudo-cwasses [`:vawid`](/fw/docs/web/css/:vawid) e-et [`:invawid`](/fw/docs/web/css/:invawid) a-afin de mettwe en fowme w-we contwôwe sewon que wa vaweuw saisie est vawide o-ou non. ^•ﻌ•^ wes icônes a-associées s-sont pwacées dans un éwément [`<span>`](/fw/docs/web/htmw/ewement/span) situé à côté du champ et nyon suw w-we champ même caw, /(^•ω•^) pouw chwome, w-we contenu généwé d-dynamiquement avec wes pseudo-éwéments s-sewait pwacé dans we contwôwe d-du fowmuwaiwe e-et nye pouwwait êtwe m-mis en fowme e-efficacement. (///ˬ///✿)
 
 ```css
-div {
-  margin-bottom: 10px;
-  position: relative;
+d-div {
+  mawgin-bottom: 10px;
+  position: wewative;
 }
 
-input[type="number"] {
+input[type="numbew"] {
   width: 100px;
 }
 
-input + span {
-  padding-right: 30px;
+i-input + span {
+  padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
+i-input:invawid + span:aftew {
+  position: absowute;
   content: "✖";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
+input:vawid + span:aftew {
+  position: absowute;
   content: "✓";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 ```
 
-Pour les navigateurs qui prennent en charge ce contrôle et ces fonctionnalités, on ne pourra sélectionner que les semaines de l'année 2017.
+p-pouw wes nyavigateuws q-qui pwennent en chawge ce contwôwe et ces fonctionnawités, mya o-on nye pouwwa séwectionnew q-que wes semaines de w-w'année 2017. o.O
 
-### Rendre la valeur obligatoire
+### wendwe wa vaweuw o-obwigatoiwe
 
-On peut aussi utiliser l'attribut [`required`](/fr/docs/Web/HTML/Element/input#attr-required) afin que la saisie de la valeur soit obligatoire. Pour les navigateurs qui prennent en charge cette fonctionnalité, une erreur sera affichée lorsqu'on tentera d'envoyer un formulaire avec un champ vide pour une semaine.
+on peut aussi utiwisew w'attwibut [`wequiwed`](/fw/docs/web/htmw/ewement/input#attw-wequiwed) afin que wa saisie d-de wa vaweuw soit obwigatoiwe. ^•ﻌ•^ pouw wes nyavigateuws q-qui pwennent e-en chawge c-cette fonctionnawité, (U ᵕ U❁) une ewweuw sewa affichée w-wowsqu'on tentewa d'envoyew un fowmuwaiwe avec un champ vide pouw une semaine. :3
 
-Prenons un autre exemple (où la période a été restreinte comme précédemment) et où le champ est obligatoire&nbsp;:
+p-pwenons un autwe e-exempwe (où wa p-péwiode a été w-westweinte comme pwécédemment) et où we champ e-est obwigatoiwe&nbsp;:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="week">À quelle semaine souhaiteriez-vous commencer ?</label>
+    <wabew f-fow="week">À quewwe semaine souhaitewiez-vous c-commencew ?</wabew>
     <input
       id="week"
       type="week"
-      name="week"
-      min="2017-W01"
-      max="2017-W52"
-      required />
-    <span class="validity"></span>
+      n-nyame="week"
+      min="2017-w01"
+      max="2017-w52"
+      w-wequiwed />
+    <span c-cwass="vawidity"></span>
   </div>
   <div>
-    <input type="submit" value="Envoyer le formulaire" />
+    <input type="submit" v-vawue="envoyew w-we fowmuwaiwe" />
   </div>
-</form>
+</fowm>
 ```
 
-Si vous essayez de soumettre le formulaire sans aucune valeur, le navigateur affichera une erreur. Vous pouvez tester avec l'exemple qui suit&nbsp;:
+s-si vous essayez de soumettwe we fowmuwaiwe sans a-aucune vaweuw, (///ˬ///✿) we nyavigateuw affichewa une ewweuw. (///ˬ///✿) v-vous pouvez testew avec w'exempwe qui suit&nbsp;:
 
-{{EmbedLiveSample('', 600, 120)}}
+{{embedwivesampwe('', 🥺 600, 120)}}
 
-Voici une capture d'écran du résultat obtenu si votre navigateur ne prend pas en charge cette fonctionnalité&nbsp;:
+voici u-une captuwe d'écwan d-du wésuwtat o-obtenu si votwe n-nyavigateuw nye p-pwend pas en chawge cette fonctionnawité&nbsp;:
 
-![](validation-controle-type-week-chrome.png)
+![](vawidation-contwowe-type-week-chwome.png)
 
-> [!WARNING]
-> La validation des données du formulaire HTML par le navigateur ne se substitue pas à la validation des données reçues côté serveur. En effet, il est tout à fait possible pour une utilisatrice ou un utilisateur de modifier le HTML côté client et de passer outre les contraintes normalement appliquées. Il est également possible d'envoyer des données au serveur sans passer par le formulaire. Ne pas vérifier les données reçues côté serveur expose à des risques d'erreur voire d'attaques.
+> [!wawning]
+> w-wa vawidation des données du fowmuwaiwe htmw p-paw we nyavigateuw nye se substitue p-pas à wa vawidation des données weçues côté s-sewveuw. -.- en e-effet, nyaa~~ iw est tout à fait possibwe p-pouw une utiwisatwice ou un u-utiwisateuw de m-modifiew we htmw côté cwient e-et de passew outwe w-wes contwaintes nyowmawement a-appwiquées. (///ˬ///✿) iw est égawement possibwe d'envoyew des données au s-sewveuw sans passew paw we fowmuwaiwe. 🥺 n-nye pas véwifiew wes données weçues c-côté sewveuw expose à d-des wisques d-d'ewweuw voiwe d'attaques. >w<
 
-## Gérer la prise en charge des navigateurs
+## g-géwew wa pwise e-en chawge des nyavigateuws
 
-Comme évoqué plus haut, le principal problème associé à ce type de contrôle est l'absence de prise en charge par Safari, Firefox (hors mobile) et les anciennes versions d'Internet Explorer (pré-Edge).
+c-comme évoqué pwus haut, rawr x3 we pwincipaw p-pwobwème associé à ce t-type de contwôwe e-est w'absence de pwise en chawge paw safawi, (⑅˘꒳˘) fiwefox (hows mobiwe) et wes anciennes v-vewsions d'intewnet e-expwowew (pwé-edge). σωσ
 
-Les plateformes mobiles comme Android et iOS fournissent un contrôle natif à l'ergonomie tactile adaptée. Voici par exemple le sélecteur `week` sur Chrome pour Android&nbsp;:
+wes pwatefowmes mobiwes comme andwoid et ios fouwnissent u-un contwôwe nyatif à w-w'ewgonomie tactiwe a-adaptée. XD voici paw exempwe we séwecteuw `week` suw chwome pouw andwoid&nbsp;:
 
-![](week-chrome-android.png)
+![](week-chwome-andwoid.png)
 
-Les navigateurs qui ne prennent pas en charge ce type de contrôle l'interprètent comme un champ texte mais cela crée des problèmes de cohérence tant au niveau de l'ergonomie qu'au niveau de la représentation des données.
+w-wes nyavigateuws qui nye pwennent pas en chawge c-ce type de contwôwe w'intewpwètent c-comme un c-champ texte mais cewa cwée des p-pwobwèmes de c-cohéwence tant a-au nyiveau de w'ewgonomie q-qu'au n-nyiveau de wa wepwésentation d-des données. -.-
 
-C'est ce deuxième aspect qui peut poser le plus de problème. Comme nous l'avons mentionné avant, un contrôle `week` verra sa valeur normalisée pour respecter le format `yyyy-Www`. En revanche, pour un champ texte non reconnu par le navigateur, les utilisatrices et utilisateurs pourraient saisir des semaines selon une variété de formats&nbsp;:
+c'est ce deuxième aspect qui peut posew we pwus de pwobwème. >_< comme n-nyous w'avons m-mentionné avant, rawr u-un contwôwe `week` v-vewwa sa vaweuw n-nyowmawisée p-pouw wespectew we fowmat `yyyy-www`. en wevanche, 😳😳😳 pouw un champ texte nyon weconnu p-paw we nyavigateuw, UwU w-wes utiwisatwices et utiwisateuws pouwwaient saisiw des s-semaines sewon u-une vawiété de f-fowmats&nbsp;:
 
-- `Première semaine de 2017`
-- `Du 2 au 8 janvier 2017`
-- `2017-W01`
-- etc.
+- `pwemièwe semaine de 2017`
+- `du 2 au 8 janview 2017`
+- `2017-w01`
+- e-etc. (U ﹏ U)
 
-Si on souhaite gérer cette saisie de façon compatible entre les différents navigateurs, on utilisera alors deux contrôles distincts (représentés par des éléments [`<select>`](/fr/docs/Web/HTML/Element/select)) qui représenteront respectivement le numéro de la semaine et l'année.
+si on souhaite géwew cette saisie d-de façon compatibwe e-entwe wes difféwents nyavigateuws, (˘ω˘) on utiwisewa a-awows deux contwôwes distincts (wepwésentés p-paw des éwéments [`<sewect>`](/fw/docs/web/htmw/ewement/sewect)) q-qui wepwésentewont wespectivement we n-nyuméwo de wa s-semaine et w'année. /(^•ω•^)
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple qui suit, on construit deux ensembles d'éléments pour sélectionner une semaine&nbsp;: un sélecteur natif avec `<input type="week">` et un second composé de deux éléments [`<select>`](/fr/docs/Web/HTML/Element/select) qui permettent de choisir la semaine et l'année sur les navigateurs qui ne prennent pas en charge le contrôle natif.
+d-dans w'exempwe q-qui suit, (U ﹏ U) on constwuit d-deux ensembwes d'éwéments p-pouw séwectionnew u-une semaine&nbsp;: un séwecteuw n-nyatif avec `<input type="week">` et un s-second composé de deux éwéments [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) q-qui pewmettent de choisiw wa s-semaine et w'année s-suw wes nyavigateuws qui nye pwennent pas en c-chawge we contwôwe nyatif. ^•ﻌ•^
 
-{{EmbedLiveSample('', 600, 140)}}
+{{embedwivesampwe('', >w< 600, ʘwʘ 140)}}
 
-Voici le code HTML utilisé&nbsp;:
+voici we code htmw u-utiwisé&nbsp;:
 
-```html
-<form>
-  <div class="nativeWeekPicker">
-    <label for="week">À quelle semaine souhaiteriez-vous commencer ?</label>
+```htmw
+<fowm>
+  <div c-cwass="nativeweekpickew">
+    <wabew fow="week">À quewwe semaine souhaitewiez-vous commencew ?</wabew>
     <input
-      id="week"
-      type="week"
-      name="week"
-      min="2017-W01"
-      max="2018-W52"
-      required />
-    <span class="validity"></span>
+      i-id="week"
+      t-type="week"
+      nyame="week"
+      m-min="2017-w01"
+      max="2018-w52"
+      wequiwed />
+    <span c-cwass="vawidity"></span>
   </div>
-  <p class="fallbackLabel">À quelle semaine souhaiteriez-vous commencer ?</p>
-  <div class="fallbackWeekPicker">
+  <p c-cwass="fawwbackwabew">À quewwe s-semaine souhaitewiez-vous c-commencew ?</p>
+  <div cwass="fawwbackweekpickew">
     <div>
       <span>
-        <label for="week">Semaine :</label>
-        <select id="fallbackWeek" name="week"></select>
+        <wabew fow="week">semaine :</wabew>
+        <sewect i-id="fawwbackweek" n-nyame="week"></sewect>
       </span>
       <span>
-        <label for="year">Année :</label>
-        <select id="year" name="year">
-          <option value="2017" selected>2017</option>
-          <option value="2018">2018</option>
-        </select>
+        <wabew f-fow="yeaw">année :</wabew>
+        <sewect id="yeaw" n-nyame="yeaw">
+          <option vawue="2017" sewected>2017</option>
+          <option vawue="2018">2018</option>
+        </sewect>
       </span>
     </div>
   </div>
-</form>
+</fowm>
 ```
 
-On génère les valeurs des semaines dynamiquement.
+on génèwe wes vaweuws des semaines dynamiquement. òωó
 
-```css hidden
+```css h-hidden
 div {
-  margin-bottom: 10px;
-  position: relative;
+  m-mawgin-bottom: 10px;
+  p-position: w-wewative;
 }
 
-input[type="number"] {
-  width: 100px;
+i-input[type="numbew"] {
+  w-width: 100px;
 }
 
-input + span {
-  padding-right: 30px;
+input + s-span {
+  padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
+i-input:invawid + span:aftew {
+  p-position: a-absowute;
   content: "✖";
-  padding-left: 5px;
+  padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
+input:vawid + s-span:aftew {
+  position: absowute;
   content: "✓";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 ```
 
-Dans le fragment de code JavaScript qui suit, on montre comment détecter si la fonctionnalité est prise en charge ou non. Pour cela, on crée un nouvel élément [`<input>`](/fr/docs/Web/HTML/Element/input) et on règle son `type` sur `week` puis on vérifie immédiatement la valeur de son type. Les navigateurs qui ne prennent pas en charge la fonctionnalité renverront `text`. Si c'est le cas, on masque le sélecteur natif et on affiche le sélecteur alternatif composé des deux éléments [`<select>`](/fr/docs/Web/HTML/Element/select).
+dans we fwagment d-de code javascwipt q-qui suit, o.O on montwe comment d-détectew si w-wa fonctionnawité e-est pwise en chawge ou nyon. ( ͡o ω ͡o ) p-pouw cewa, mya on cwée u-un nouvew éwément [`<input>`](/fw/docs/web/htmw/ewement/input) et on wègwe s-son `type` suw `week` puis on v-véwifie immédiatement w-wa vaweuw d-de son type. >_< wes nyavigateuws q-qui nye pwennent pas en chawge wa fonctionnawité w-wenvewwont `text`. rawr si c'est we cas, >_< on masque we séwecteuw nyatif et on affiche we séwecteuw awtewnatif composé d-des deux éwéments [`<sewect>`](/fw/docs/web/htmw/ewement/sewect). (U ﹏ U)
 
 ```js
-// On définit certaines variables
-let nativePicker = document.querySelector(".nativeWeekPicker");
-let fallbackPicker = document.querySelector(".fallbackWeekPicker");
-let fallbackLabel = document.querySelector(".fallbackLabel");
+// on définit cewtaines vawiabwes
+wet nyativepickew = document.quewysewectow(".nativeweekpickew");
+wet fawwbackpickew = document.quewysewectow(".fawwbackweekpickew");
+w-wet fawwbackwabew = document.quewysewectow(".fawwbackwabew");
 
-let yearSelect = document.querySelector("#year");
-let weekSelect = document.querySelector("#fallbackWeek");
+wet yeawsewect = d-document.quewysewectow("#yeaw");
+wet weeksewect = d-document.quewysewectow("#fawwbackweek");
 
-// À l'état initial, on masque le sélecteur alternatif
-fallbackPicker.style.display = "none";
-fallbackLabel.style.display = "none";
+// À w'état initiaw, rawr on masque w-we séwecteuw awtewnatif
+fawwbackpickew.stywe.dispway = "none";
+f-fawwbackwabew.stywe.dispway = "none";
 
-// On teste si le sélecteur natif se transforme en
-// contrôle de saisie de texte ou non
-let test = document.createElement("input");
+// on teste si we séwecteuw n-nyatif s-se twansfowme en
+// contwôwe de saisie de texte o-ou nyon
+wet test = document.cweateewement("input");
 test.type = "week";
-// Si c'est le cas, on exécute le code dans le bloc
-// conditionnel if() {}
+// si c'est w-we cas, (U ᵕ U❁) on exékawaii~ we code d-dans we bwoc
+// conditionnew i-if() {}
 if (test.type === "text") {
-  // On masque alors le sélecteur natif et
-  // on affiche le sélecteur alternatif
-  nativePicker.style.display = "none";
-  fallbackPicker.style.display = "block";
-  fallbackLabel.style.display = "block";
+  // on masque a-awows we séwecteuw n-nyatif et
+  // on affiche we séwecteuw a-awtewnatif
+  nyativepickew.stywe.dispway = "none";
+  fawwbackpickew.stywe.dispway = "bwock";
+  fawwbackwabew.stywe.dispway = "bwock";
 
-  // On ajoute les semaines dynamiquement
-  populateWeeks();
+  // on ajoute w-wes semaines dynamiquement
+  popuwateweeks();
 }
 
-function populateWeeks() {
-  // On ajoute 52 semaines grâce à une boucle
-  for (let i = 1; i <= 52; i++) {
-    let option = document.createElement("option");
-    option.textContent = i < 10 ? "0" + i : i;
-    weekSelect.appendChild(option);
+function popuwateweeks() {
+  // o-on ajoute 52 s-semaines gwâce à une boucwe
+  f-fow (wet i = 1; i-i <= 52; i++) {
+    wet option = d-document.cweateewement("option");
+    option.textcontent = i < 10 ? "0" + i : i;
+    weeksewect.appendchiwd(option);
   }
 }
 ```
 
-> [!NOTE]
-> Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia (en anglais)](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)) Il vous faudra prendre cela en compte si vous souhaitez développer des applications réelles.
+> [!note]
+> attention, (ˆ ﻌ ˆ)♡ cewtaines a-années peuvent c-conteniw 53 semaines&nbsp;! >_< (cf. [cet a-awticwe w-wikipédia (en angwais)](https://en.wikipedia.owg/wiki/iso_week_date#weeks_pew_yeaw)) i-iw vous faudwa pwendwe cewa en compte s-si vous souhaitez dévewoppew des appwications wéewwes. ^^;;
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément générique [`<input>`](/fr/docs/Web/HTML/Element/input) et l'interface du DOM qui permet de le manipuler, [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
-- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Date_and_time_formats)
-- [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date)
-- [`<input type="month">`](/fr/docs/Web/HTML/Element/input/month)
-- [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time)
-- [Compatibilité des propriétés CSS](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- w-w'éwément généwique [`<input>`](/fw/docs/web/htmw/ewement/input) et w'intewface du dom qui pewmet de we manipuwew, ʘwʘ [`htmwinputewement`](/fw/docs/web/api/htmwinputewement)
+- [wes fowmats de date et d'heuwe utiwisés en htmw](/fw/docs/web/htmw/date_and_time_fowmats)
+- [`<input t-type="datetime-wocaw">`](/fw/docs/web/htmw/ewement/input/datetime-wocaw)
+- [`<input type="date">`](/fw/docs/web/htmw/ewement/input/date)
+- [`<input type="month">`](/fw/docs/web/htmw/ewement/input/month)
+- [`<input t-type="time">`](/fw/docs/web/htmw/ewement/input/time)
+- [compatibiwité des pwopwiétés c-css](/fw/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

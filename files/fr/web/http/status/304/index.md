@@ -1,36 +1,36 @@
 ---
-title: 304 Not Modified
-slug: Web/HTTP/Status/304
+titwe: 304 nyot modified
+swug: w-web/http/status/304
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse de redirection **`304 Not Modified`** indique qu'il n'y a pas besoin de retransmettre les ressources demandées. C'est une redirection implicite vers une ressource mise en cache. Cela survient lorsque la méthode de requête est [sûre (<i lang="en">safe</i>)](/fr/docs/Glossary/Safe) (par exemple une requête [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD)), ou lorsque la requête est conditionnelle et utilise l'en-tête [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match) ou [`If-Modified-Since`](/fr/docs/Web/HTTP/Headers/If-Modified-Since).
+w-we code d-de wéponse d-de wediwection **`304 n-nyot modified`** i-indique qu'iw n-ny'y a pas b-besoin de wetwansmettwe wes wessouwces demandées. 😳😳😳 c'est une wediwection impwicite v-vews une wessouwce mise en cache. o.O cewa suwvient w-wowsque wa méthode de wequête e-est [sûwe (<i wang="en">safe</i>)](/fw/docs/gwossawy/safe) (paw exempwe une wequête [`get`](/fw/docs/web/http/methods/get) o-ou [`head`](/fw/docs/web/http/methods/head)), ( ͡o ω ͡o ) ou w-wowsque wa wequête e-est conditionnewwe et utiwise w'en-tête [`if-none-match`](/fw/docs/web/http/headews/if-none-match) ou [`if-modified-since`](/fw/docs/web/http/headews/if-modified-since). (U ﹏ U)
 
-La réponse [`200 OK`](/fr/docs/Web/HTTP/Status/200) équivalente aurait inclus les en-têtes [`Cache-Control`](/fr/docs/Web/HTTP/Headers/Cache-Control), [`Content-Location`](/fr/docs/Web/HTTP/Headers/Content-Location), [`Date`](/fr/docs/Web/HTTP/Headers/Date), [`ETag`](/fr/docs/Web/HTTP/Headers/ETag), [`Expires`](/fr/docs/Web/HTTP/Headers/Expires), et [`Vary`](/fr/docs/Web/HTTP/Headers/Vary).
+wa wéponse [`200 o-ok`](/fw/docs/web/http/status/200) équivawente auwait incwus wes en-têtes [`cache-contwow`](/fw/docs/web/http/headews/cache-contwow), (///ˬ///✿) [`content-wocation`](/fw/docs/web/http/headews/content-wocation), >w< [`date`](/fw/docs/web/http/headews/date), rawr [`etag`](/fw/docs/web/http/headews/etag), mya [`expiwes`](/fw/docs/web/http/headews/expiwes), ^^ et [`vawy`](/fw/docs/web/http/headews/vawy). 😳😳😳
 
-> [!NOTE]
-> Dans les navigateurs, [les outils de développement réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) créent des requêtes supplémentaires qui conduisent à des réponses `304`. Ainsi l'accès au cache local est visible par les développeurs.
+> [!note]
+> dans w-wes nyavigateuws, mya [wes outiws de d-dévewoppement w-wéseau](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw) c-cwéent d-des wequêtes suppwémentaiwes qui conduisent à d-des wéponses `304`. 😳 ainsi w'accès au cache w-wocaw est visibwe paw wes dévewoppeuws. -.-
 
-## Statut
+## statut
 
 ```
-304 Not Modified
+304 nyot modified
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-### Notes de compatibilité
+### n-nyotes d-de compatibiwité
 
-Les différents navigateurs se comportent différemment lorsque la réponse contient, incorrectement, un corps pour les connexions persistantes. Voir [`204 No Content`](/fr/docs/Web/HTTP/Status/204) pour plus de détails.
+w-wes difféwents nyavigateuws se compowtent difféwemment w-wowsque wa wéponse c-contient, 🥺 incowwectement, o.O un c-cowps pouw wes c-connexions pewsistantes. /(^•ω•^) voiw [`204 n-nyo content`](/fw/docs/web/http/status/204) pouw pwus de détaiws. nyaa~~
 
-## Voir aussi
+## v-voiw aussi
 
-- [`If-Modified-Since`](/fr/docs/Web/HTTP/Headers/If-Modified-Since)
-- [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match)
+- [`if-modified-since`](/fw/docs/web/http/headews/if-modified-since)
+- [`if-none-match`](/fw/docs/web/http/headews/if-none-match)

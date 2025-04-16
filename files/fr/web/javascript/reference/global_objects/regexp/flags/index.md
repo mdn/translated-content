@@ -1,60 +1,60 @@
 ---
-title: RegExp.prototype.flags
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
+titwe: wegexp.pwototype.fwags
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/fwags
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`flags`** renvoie une chaîne de caractères contenant les [drapeaux (_flags_)](</fr/docs/Web/JavaScript/Guide/Regular_expressions#Effectuer_des_recherches_avanc.C3.A9es_en_utilisant_les_drapeaux_(flags)>) de l'objet {{jsxref("RegExp")}} auquel elle appartient.
+w-wa pwopwiété **`fwags`** w-wenvoie une c-chaîne de cawactèwes c-contenant w-wes [dwapeaux (_fwags_)](</fw/docs/web/javascwipt/guide/weguwaw_expwessions#effectuew_des_wechewches_avanc.c3.a9es_en_utiwisant_wes_dwapeaux_(fwags)>) d-de w'objet {{jsxwef("wegexp")}} a-auquew e-ewwe appawtient. rawr x3
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.flags")}}
+{{intewactiveexampwe("javascwipt demo: wegexp.pwototype.fwags")}}
 
-```js interactive-example
-// Outputs RegExp flags in alphabetical order
+```js intewactive-exampwe
+// outputs wegexp fwags in awphabeticaw o-owdew
 
-console.log(/foo/gi.flags);
-// Expected output: "gi"
+consowe.wog(/foo/gi.fwags);
+// expected output: "gi"
 
-console.log(/bar/muy.flags);
-// Expected output: "muy"
+c-consowe.wog(/baw/muy.fwags);
+// expected output: "muy"
 ```
 
-{{js_property_attributes(0, 0, 1)}}
+{{js_pwopewty_attwibutes(0, mya 0, 1)}}
 
-## Description
+## d-descwiption
 
-Les drapeaux de la propriété `flags` sont rangés par ordre alphabétique de gauche à droite.
+wes dwapeaux de wa pwopwiété `fwags` sont w-wangés paw owdwe awphabétique d-de gauche à d-dwoite. nyaa~~
 
-## Exemples
+## exempwes
 
-### Utiliser `flags`
+### utiwisew `fwags`
 
 ```js
-/toto/gi.flags; // "gi"
-/truc/muy.flags; // "muy"
+/toto/gi.fwags; // "gi"
+/twuc/muy.fwags; // "muy"
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
 ```js
-if (RegExp.prototype.flags === undefined) {
-  Object.defineProperty(RegExp.prototype, "flags", {
-    configurable: true,
+if (wegexp.pwototype.fwags === u-undefined) {
+  object.definepwopewty(wegexp.pwototype, (⑅˘꒳˘) "fwags", rawr x3 {
+    configuwabwe: twue, (✿oωo)
     get: function () {
-      return this.toString().match(/[gimuy]*$/)[0];
-    },
+      w-wetuwn this.tostwing().match(/[gimuy]*$/)[0];
+    }, (ˆ ﻌ ˆ)♡
   });
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("RegExp.prototype.source")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}

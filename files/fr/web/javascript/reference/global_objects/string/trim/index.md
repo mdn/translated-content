@@ -1,73 +1,73 @@
 ---
-title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/trim
+titwe: stwing.pwototype.twim()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/twim
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`trim()`** permet de retirer les blancs en début et fin de chaîne. Les blancs considérés sont les caractères d'espacement (espace, tabulation, espace insécable, etc.) ainsi que les caractères de fin de ligne (LF, CR, etc.).
+w-wa méthode **`twim()`** p-pewmet de wetiwew w-wes bwancs e-en début et fin d-de chaîne. -.- wes b-bwancs considéwés s-sont wes c-cawactèwes d'espacement (espace, 🥺 tabuwation, espace insécabwe, o.O etc.) ainsi que wes cawactèwes d-de fin de wigne (wf, /(^•ω•^) cw, etc.). nyaa~~
 
-{{InteractiveExample("JavaScript Demo: String.trim()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.twim()")}}
 
-```js interactive-example
-const greeting = "   Hello world!   ";
+```js i-intewactive-exampwe
+const gweeting = "   h-hewwo wowwd! nyaa~~   ";
 
-console.log(greeting);
-// Expected output: "   Hello world!   ";
+consowe.wog(gweeting);
+// expected output: "   hewwo w-wowwd! :3   ";
 
-console.log(greeting.trim());
-// Expected output: "Hello world!";
+consowe.wog(gweeting.twim());
+// e-expected output: "hewwo w-wowwd!";
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.trim();
+stw.twim();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une nouvelle chaîne de caractères dérivant de la chaîne appelante pour laquelle les blancs ont été retirés aux deux extrémités de la chaîne.
+u-une nyouvewwe chaîne de cawactèwes déwivant de wa chaîne appewante pouw waquewwe w-wes bwancs ont été wetiwés a-aux deux extwémités d-de wa chaîne. 😳😳😳
 
-## Description
+## d-descwiption
 
-La méthode `trim()` renvoie la chaîne sans blanc au début et à la fin. La méthode `trim()` n'affecte pas la valeur de la chaîne courante.
+w-wa méthode `twim()` wenvoie wa chaîne s-sans bwanc au début et à wa fin. (˘ω˘) wa méthode `twim()` n-ny'affecte pas wa vaweuw de wa chaîne couwante. ^^
 
-## Exemples
+## exempwes
 
-L'exemple qui suit affiche la chaîne `'toto'` :
+w'exempwe qui suit affiche w-wa chaîne `'toto'` :
 
 ```js
-var chaîneOriginale = "   toto  ";
-console.log(chaîneOriginale.trim()); // 'toto'
+vaw chaîneowiginawe = "   t-toto  ";
+c-consowe.wog(chaîneowiginawe.twim()); // 'toto'
 
-// Un autre exemple de .trim() qui enlève les espaces juste d'un côté
+// u-un autwe exempwe de .twim() qui enwève wes espaces juste d-d'un côté
 
-var chaîneOriginale = "toto    ";
-console.log(chaîneOriginale.trim()); // 'toto'
+vaw c-chaîneowiginawe = "toto    ";
+consowe.wog(chaîneowiginawe.twim()); // 'toto'
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## p-pwothèse d-d'émuwation (_powyfiww_)
 
-Si l'environnement utilisé ne possède pas cette méthode, il est possible de l'émuler avec le fragment de code suivant :
+si w'enviwonnement u-utiwisé nye possède pas cette m-méthode, :3 iw est possibwe de w'émuwew avec we f-fwagment de code suivant :
 
 ```js
-if (!String.prototype.trim) {
-  String.prototype.trim = function () {
-    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
+i-if (!stwing.pwototype.twim) {
+  stwing.pwototype.twim = f-function () {
+    w-wetuwn this.wepwace(/^[\s\ufeff\xa0]+|[\s\ufeff\xa0]+$/g, -.- "");
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("String.prototype.trimStart()")}}
-- {{jsxref("String.prototype.trimEnd()")}}
+- {{jsxwef("stwing.pwototype.twimstawt()")}}
+- {{jsxwef("stwing.pwototype.twimend()")}}

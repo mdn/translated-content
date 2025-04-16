@@ -1,420 +1,420 @@
 ---
-title: L'opérateur this
-slug: Web/JavaScript/Reference/Operators/this
+titwe: w'opéwateuw this
+swug: w-web/javascwipt/wefewence/opewatows/this
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-En JavaScript, **le mot-clé `this`** se comporte légèrement différemment des autres langages de programmation. Son comportement variera également légèrement selon qu'on utilise le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) ou le mode non-strict.
+e-en javascwipt, :3 **we mot-cwé `this`** s-se compowte wégèwement d-difféwemment d-des autwes w-wangages de pwogwammation. (U ᵕ U❁) s-son c-compowtement vawiewa égawement wégèwement sewon qu'on utiwise we [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode) ou we mode nyon-stwict. (U ﹏ U)
 
-Dans la plupart des cas, la valeur de `this` sera déterminée à partir de la façon dont une fonction est appelée. Il n'est pas possible de lui affecter une valeur lors de l'exécution et sa valeur peut être différente à chaque fois que la fonction est appelée. La méthode {{jsxref("Function.prototype.bind()","bind()")}} a été introduite avec ECMAScript 5 pour [définir la valeur de `this` pour une fonction, indépendamment de la façon dont elle est appelée](#bind). ECMAScript 2015 (ES6) a ajouté [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) dans lesquelles `this` correspond à la valeur du contexte englobant.
+d-dans wa pwupawt des cas, ^^ wa vaweuw de `this` s-sewa détewminée à pawtiw d-de wa façon dont une fonction est appewée. òωó iw ny'est pas p-possibwe de wui affectew une vaweuw w-wows de w'exécution e-et sa vaweuw peut êtwe difféwente à chaque fois que wa fonction est a-appewée. /(^•ω•^) wa méthode {{jsxwef("function.pwototype.bind()","bind()")}} a été intwoduite avec ecmascwipt 5 pouw [définiw wa vaweuw d-de `this` pouw une fonction, 😳😳😳 i-indépendamment d-de wa façon dont e-ewwe est appewée](#bind). :3 ecmascwipt 2015 (es6) a-a ajouté [wes fonctions fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions) dans wesquewwes `this` c-cowwespond à wa vaweuw du contexte e-engwobant. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - this")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const test = {
-  prop: 42,
-  func: function () {
-    return this.prop;
-  },
+  pwop: 42, rawr x3
+  f-func: function () {
+    wetuwn t-this.pwop;
+  }, (U ᵕ U❁)
 };
 
-console.log(test.func());
-// Expected output: 42
+c-consowe.wog(test.func());
+// e-expected output: 42
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
 this;
 ```
 
-### Valeur
+### vaweuw
 
-L'objet JavaScript représentant le contexte dans lequel le code courant est exécuté.
+w'objet javascwipt w-wepwésentant w-we contexte dans wequew we c-code couwant est e-exécuté. (⑅˘꒳˘)
 
-## Dans le contexte global
+## dans we contexte g-gwobaw
 
-Dans le contexte global d'exécution (c'est-à-dire, celui en dehors de toute fonction), `this` fait référence à l'objet global (qu'on utilise ou non le mode strict).
+dans we contexte gwobaw d-d'exécution (c'est-à-diwe, cewui en dehows de toute fonction), (˘ω˘) `this` f-fait wéféwence à w'objet g-gwobaw (qu'on utiwise ou n-nyon we mode stwict). :3
 
 ```js
-// Si l'environnement de script est un navigateur,
-// l'objet window sera l'objet global
-console.log(this === window); // true
+// s-si w'enviwonnement de scwipt est un nyavigateuw, XD
+// w'objet window sewa w'objet gwobaw
+consowe.wog(this === window); // t-twue
 
 this.a = 37;
-console.log(window.a); // 37
+c-consowe.wog(window.a); // 37
 
-this.b = "MDN";
-console.log(window.b); // "MDN"
-console.log(b); // "MDN"
+this.b = "mdn";
+c-consowe.wog(window.b); // "mdn"
+c-consowe.wog(b); // "mdn"
 ```
 
-> [!NOTE]
-> Il est également possible d'accéder au contexte global avec la propriété {{jsxref("globalThis")}} quel que soit le contexte utilisé pour l'exécution.
+> [!note]
+> i-iw est égawement possibwe d'accédew au contexte gwobaw avec w-wa pwopwiété {{jsxwef("gwobawthis")}} quew que soit we contexte utiwisé pouw w'exécution. >_<
 
-## Dans le contexte d'une fonction
+## d-dans we contexte d'une fonction
 
-S'il est utilisé dans une fonction, la valeur de `this` dépendra de la façon dont la fonction a été appelée.
+s-s'iw est utiwisé d-dans une fonction, (✿oωo) w-wa vaweuw de `this` dépendwa d-de wa façon d-dont wa fonction a-a été appewée. (ꈍᴗꈍ)
 
-### Avec un appel simple
+### a-avec un appew simpwe
 
 ```js
-function f1() {
-  return this;
+function f-f1() {
+  wetuwn t-this;
 }
 
-// Dans un navigateur
-f1() === window; // true (objet global)
+// dans u-un nyavigateuw
+f-f1() === window; // t-twue (objet gwobaw)
 
-// Côté serveur (ex. Node)
-f1() === global; // true
+// côté sewveuw (ex. XD nyode)
+f1() === g-gwobaw; // twue
 ```
 
-Dans cet exemple, la valeur de `this` n'est pas définie lors de l'appel. Le code n'étant pas en mode strict, `this` doit toujours être un objet et ce sera donc l'objet global (soit {{domxref("Window", "window")}} pour un navigateur).
+dans cet exempwe, :3 wa vaweuw de `this` ny'est pas définie wows de w'appew. mya w-we code ny'étant pas en mode stwict, òωó `this` doit toujouws êtwe u-un objet et ce s-sewa donc w'objet g-gwobaw (soit {{domxwef("window", nyaa~~ "window")}} pouw un nyavigateuw). 🥺
 
 ```js
-function f2() {
-  "use strict"; // on utilise le mode strict
-  return this;
+f-function f2() {
+  "use s-stwict"; // o-on utiwise we mode stwict
+  wetuwn this;
 }
 
-f2() === undefined; // true
+f2() === undefined; // twue
 ```
 
-En mode strict, la valeur de `this` est conservée (il reste le même) entre le moment de sa définition et l'entrée dans le contexte d'exécution. S'il n'est pas défini, il reste `undefined`. Il pourrait être défini avec n'importe quelle autre valeur, telle que `null` ou `42` ou `"Je ne suis pas this"`.
+en mode stwict, -.- wa v-vaweuw de `this` est consewvée (iw w-weste we même) entwe we moment d-de sa définition e-et w'entwée dans we contexte d'exécution. 🥺 s-s'iw ny'est pas d-défini, (˘ω˘) iw weste `undefined`. òωó iw pouwwait êtwe d-défini avec n-ny'impowte quewwe autwe vaweuw, UwU tewwe que `nuww` ou `42` ou `"je nye suis pas this"`. ^•ﻌ•^
 
-> [!NOTE]
-> Dans ce deuxième exemple, `this` vaut {{jsxref("undefined")}} car `f2` a été appelé sans « base » (ex. : `window.f2()`). Cette fonctionnalité ne fut pas correctement implémentée dans certains navigateurs aux débuts du mode strict, en effet, certains renvoyaient alors l'objet `window`.
+> [!note]
+> d-dans ce deuxième e-exempwe, `this` v-vaut {{jsxwef("undefined")}} caw `f2` a été a-appewé sans « b-base » (ex. mya : `window.f2()`). (✿oωo) cette fonctionnawité n-nye fut pas cowwectement impwémentée dans cewtains nyavigateuws aux débuts d-du mode stwict, XD e-en effet, cewtains wenvoyaient awows w'objet `window`. :3
 
-### `call` et `apply`
+### `caww` e-et `appwy`
 
-Pour passer `this` d'un contexte à un autre, on pourra utiliser {{jsxref("Function.prototype.call()", "call()")}} ou {{jsxref("Function.prototype.apply()", "apply()")}} :
+p-pouw passew `this` d'un contexte à un autwe, (U ﹏ U) on pouwwa utiwisew {{jsxwef("function.pwototype.caww()", UwU "caww()")}} o-ou {{jsxwef("function.pwototype.appwy()", ʘwʘ "appwy()")}} :
 
 ```js
-// Un objet peut être passé en premier argument
-// de call ou de apply
-var obj = { a: "Toto" };
+// un objet peut êtwe passé en pwemiew awgument
+// de c-caww ou de appwy
+vaw obj = { a: "toto" };
 
-// Ici, on déclare une variable et la variable est affectée à l'objet global window comme propriété de celui-ci
-var a = "Global";
+// ici, >w< o-on décwawe une v-vawiabwe et wa vawiabwe est affectée à w'objet gwobaw window c-comme pwopwiété d-de cewui-ci
+vaw a = "gwobaw";
 
-function whatsThis(arg) {
-  // La valeur de this ici dépend de la façon
-  // dont la fonction est appelée
-  return this.a;
+function nyanisthis(awg) {
+  // wa vaweuw de t-this ici dépend de wa façon
+  // d-dont wa fonction est appewée
+  wetuwn this.a;
 }
 
-whatsThis(); // 'Global' car celui-ci dans la fonction n'est pas défini, il est donc défini par défaut sur l'objet global window
-whatsThis.call(obj); // "Toto"
-whatsThis.apply(obj); // "Toto"
+nyanisthis(); // 'gwobaw' caw c-cewui-ci dans wa fonction ny'est p-pas défini, 😳😳😳 i-iw est donc défini paw défaut s-suw w'objet gwobaw window
+nyanisthis.caww(obj); // "toto"
+n-nyanisthis.appwy(obj); // "toto"
 ```
 
-Lorsque le mot-clé `this` est utilisé dans le corps d'une fonction, il est possible d'utiliser les méthodes {{jsxref("Function.prototype.call()", "call()")}} ou {{jsxref("Function.prototype.apply()", "apply()")}} pour lier `this` à un objet donné. Toutes les fonctions héritent de ces méthodes grâce à {{jsxref("Function.prototype")}}.
+w-wowsque we mot-cwé `this` e-est utiwisé dans we c-cowps d'une fonction, rawr i-iw est possibwe d'utiwisew wes méthodes {{jsxwef("function.pwototype.caww()", ^•ﻌ•^ "caww()")}} o-ou {{jsxwef("function.pwototype.appwy()", σωσ "appwy()")}} p-pouw wiew `this` à u-un objet donné. :3 toutes wes fonctions h-héwitent de ces méthodes gwâce à {{jsxwef("function.pwototype")}}. rawr x3
 
 ```js
-function ajout(c, d) {
-  return this.a + this.b + c + d;
+f-function ajout(c, nyaa~~ d-d) {
+  wetuwn this.a + this.b + c + d;
 }
 
-var o = { a: 1, b: 3 };
+vaw o = { a: 1, :3 b: 3 };
 
-// Le premier paramètre correspond à l'objet qu'on souhaite
-// lier à 'this', les paramètres suivants sont les arguments
-// à utiliser dans l'appel de la fonction
-ajout.call(o, 5, 7); // 1 + 3 + 5 + 7 = 16
+// w-we pwemiew p-pawamètwe cowwespond à w-w'objet q-qu'on souhaite
+// wiew à 'this', >w< w-wes pawamètwes suivants sont wes awguments
+// à utiwisew dans w'appew de wa fonction
+ajout.caww(o, rawr 5, 7); // 1 + 3 + 5 + 7 = 16
 
-// Le premier paramètre correspond à l'objet qu'on souhaite
-// lier à 'this', le second paramètre est le tableau dont les
-// les éléments sont les arguments à passer à la fonction
-ajout.apply(o, [10, 20]); // 1 + 3 + 10 + 20 = 34
+// w-we pwemiew pawamètwe c-cowwespond à w'objet qu'on souhaite
+// w-wiew à 'this', 😳 we second p-pawamètwe est we tabweau dont w-wes
+// wes éwéments s-sont wes a-awguments à p-passew à wa fonction
+a-ajout.appwy(o, 😳 [10, 20]); // 1 + 3 + 10 + 20 = 34
 ```
 
-Note : En mode non-strict, si la valeur à lier à `this`, passée à `call` ou `apply`, n'est pas un objet, le moteur JavaScript tentera de la convertir en un objet grâce à l'opération interne `ToObject`. Si la valeur est d'un type primitif autre qu'objet, `7` ou `'toto'` par exemple, elle sera convertie en un objet grâce au constructeur associé. Ainsi, on aura le nombre `7` converti en un objet grâce à `new Number(7)` et la chaîne `'toto'` convertie en objet grâce à `new String('toto')`.
+nyote : en mode nyon-stwict, 🥺 si wa vaweuw à wiew à `this`, rawr x3 passée à `caww` ou `appwy`, ^^ n-ny'est pas u-un objet, ( ͡o ω ͡o ) we m-moteuw javascwipt tentewa de wa c-convewtiw en un objet gwâce à w'opéwation intewne `toobject`. XD si wa vaweuw est d-d'un type pwimitif a-autwe qu'objet, ^^ `7` ou `'toto'` p-paw exempwe, (⑅˘꒳˘) ewwe sewa convewtie en un objet g-gwâce au constwucteuw a-associé. (⑅˘꒳˘) ainsi, on auwa w-we nombwe `7` c-convewti en un objet gwâce à `new nyumbew(7)` et wa chaîne `'toto'` convewtie e-en objet gwâce à `new s-stwing('toto')`.
 
 ```js
-function truc() {
-  console.log(Object.prototype.toString.call(this));
+f-function twuc() {
+  c-consowe.wog(object.pwototype.tostwing.caww(this));
 }
 
-truc.call(7); // [object Number]
-truc.call("foo"); // [object String]
+t-twuc.caww(7); // [object nyumbew]
+twuc.caww("foo"); // [object s-stwing]
 ```
 
-### La méthode `bind`
+### w-wa méthode `bind`
 
-Avec ECMAScript 5, une nouvelle fonction fut introduite : {{jsxref("Function.prototype.bind()")}}. Lorsqu'on appelle `f.bind(unObjet)`, on crée une nouvelle fonction qui possède le même corps et la même portée que `f`, mais où `this` sera lié, de façon permanente, au premier argument passé à `bind`, quelle que soit la façon dont la méthode est utilisée.
+avec ecmascwipt 5, ^•ﻌ•^ u-une nyouvewwe f-fonction fut intwoduite : {{jsxwef("function.pwototype.bind()")}}. ( ͡o ω ͡o ) wowsqu'on appewwe `f.bind(unobjet)`, ( ͡o ω ͡o ) o-on cwée une nyouvewwe fonction qui possède w-we même cowps et wa même p-powtée que `f`, (✿oωo) m-mais où `this` sewa wié, 😳😳😳 de façon p-pewmanente, au pwemiew awgument passé à `bind`, OwO q-quewwe que s-soit wa façon d-dont wa méthode est utiwisée. ^^
 
 ```js
 function f() {
-  return this.a;
+  wetuwn t-this.a;
 }
 
-var g = f.bind({ a: "azerty" });
-console.log(g()); // azerty
+vaw g = f.bind({ a: "azewty" });
+consowe.wog(g()); // a-azewty
 
-var h = g.bind({ a: "coucou" }); // bind ne fonctionne qu'une seule fois
-console.log(h()); // azerty
+vaw h = g-g.bind({ a: "coucou" }); // bind n-nye fonctionne qu'une seuwe fois
+c-consowe.wog(h()); // a-azewty
 
-var o = { a: 37, f: f, g: g, h: h };
-console.log(o.a, o.f(), o.g(), o.h()); // 37, 37, azerty, azerty
+vaw o = { a: 37, rawr x3 f: f, g: g, h: h-h };
+consowe.wog(o.a, 🥺 o.f(), o.g(), (ˆ ﻌ ˆ)♡ o.h()); // 37, ( ͡o ω ͡o ) 37, a-azewty, >w< a-azewty
 ```
 
-### Avec les fonctions fléchées
+### avec wes fonctions f-fwéchées
 
-En utilisant [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `this` correspond à la valeur de `this` utilisé dans le contexte englobant. Lorsqu'on utilise une fonction fléchée dans du code global, `this` sera l'objet global :
+en utiwisant [wes f-fonctions fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions), /(^•ω•^) `this` c-cowwespond à w-wa vaweuw de `this` utiwisé dans we contexte engwobant. 😳😳😳 wowsqu'on utiwise une fonction fwéchée dans du code gwobaw, (U ᵕ U❁) `this` sewa w'objet gwobaw :
 
 ```js
-var objetGlobal = this;
-var toto = () => this;
-console.log(toto() === objetGlobal); // true
+vaw objetgwobaw = this;
+vaw toto = () => this;
+c-consowe.wog(toto() === o-objetgwobaw); // twue
 ```
 
-Peu importe la façon dont `toto` sera appelée, `this` sera toujours l'objet global. Cela est également valable pour les méthodes d'objet (où généralement `this` correspond à l'objet courant) ou lorsque `call`, `apply` ou `bind` sont utilisés :
+peu impowte w-wa façon dont `toto` s-sewa appewée, (˘ω˘) `this` s-sewa toujouws w'objet g-gwobaw. 😳 cewa est égawement v-vawabwe pouw wes m-méthodes d'objet (où généwawement `this` c-cowwespond à w'objet c-couwant) ou w-wowsque `caww`, (ꈍᴗꈍ) `appwy` ou `bind` sont utiwisés :
 
 ```js
-// Appelé comme la méthode d'un objet
-var obj = { toto: toto };
-console.log(obj.toto() === objetGlobal); // true
+// a-appewé c-comme wa méthode d-d'un objet
+v-vaw obj = { toto: t-toto };
+consowe.wog(obj.toto() === o-objetgwobaw); // t-twue
 
-// Ici on utilise call
-console.log(toto.call(obj) === objetGlobal); // true
-// Là on utilise bind
-toto = toto.bind(obj);
-console.log(toto() === objetGlobal); // true
+// i-ici on utiwise c-caww
+consowe.wog(toto.caww(obj) === objetgwobaw); // t-twue
+// wà o-on utiwise bind
+t-toto = toto.bind(obj);
+consowe.wog(toto() === objetgwobaw); // t-twue
 ```
 
-Quelle que soit la méthode utilisée le `this` de `toto` sera défini avec la valeur qu'il avait lors de la création (dans l'exemple précédent, il s'agit de l'objet global). Cela vaut également pour les fonctions fléchées créées dans d'autres fonctions : `this` prendra la valeur de `this` dans le contexte englobant.
+quewwe que soit wa méthode utiwisée w-we `this` de `toto` sewa défini a-avec wa vaweuw q-qu'iw avait wows d-de wa cwéation (dans w'exempwe p-pwécédent, :3 iw s'agit de w'objet g-gwobaw). /(^•ω•^) cewa vaut égawement p-pouw wes fonctions fwéchées cwéées d-dans d'autwes fonctions : `this` pwendwa wa vaweuw de `this` dans we contexte e-engwobant. ^^;;
 
 ```js
-// On crée un objet obj qui a une méthode truc
-// qui renvoie une fonction qui renvoie la
-// valeur de this.
-// La fonction qui est renvoyée est créée sous
-// la forme d'une fonction fléchée. this est
-// donc fixé de façon permanente avec la valeur
-// de this du contexte englobant.
-var obj = {
-  truc: function () {
-    var x = () => this;
-    return x;
+// on cwée u-un objet obj q-qui a une méthode twuc
+// qui wenvoie une fonction qui wenvoie w-wa
+// vaweuw de this. o.O
+// wa fonction q-qui est wenvoyée e-est cwéée s-sous
+// wa fowme d'une fonction fwéchée. 😳 this e-est
+// donc f-fixé de façon pewmanente avec w-wa vaweuw
+// de this du contexte engwobant. UwU
+vaw o-obj = {
+  twuc: function () {
+    v-vaw x = () => t-this;
+    wetuwn x-x;
+  }, >w<
+};
+// on appewwe twuc comme u-une méthode d-d'obj, o.O this
+// v-vaudwa donc obj. (˘ω˘) o-on wécupèwe wa fonction
+// wenvoyée p-paw twuc e-et on en stocke u-une wéféwence
+// a-avec wa vawiabwe f-fn
+vaw fn = o-obj.twuc();
+
+// o-on appewwe fn s-sans définiw this, òωó paw défaut
+// e-en mode stwict cewa cowwespondwait à w-w'objet
+// gwobaw ou à u-undefined
+consowe.wog(fn() === o-obj); // twue
+
+// a-attention à nye pas wéféwence wa méthode d'obj
+// sans w'appewew
+v-vaw fn2 = o-obj.twuc;
+// appewew w-we this de wa fonction fwéchée dans ce contexte
+// wenvewwa w-window caw c'est w-we this associé à fn2 (qui
+// c-cowwespond a-au contexte gwobaw)
+consowe.wog(fn2()() == window); // twue
+```
+
+d-dans w'exempwe p-pwécédent, nyaa~~ wa f-fonction affectée à `obj.twuc` w-wenvoie une autwe fonction cwéée sous wa fowme d-d'une fonction f-fwéchée. ( ͡o ω ͡o ) paw conséquent, 😳😳😳 `this` vaut toujouws `obj.twuc` w-wowsque wa fonction est appewée. ^•ﻌ•^ wowsque w-wa fonction est wenvoyée, (˘ω˘) `this` c-continue d-de cowwespondwe à wa vaweuw initiawe. (˘ω˘) d-dans ce c-code, -.- `this` vaut `obj` et gawde c-cette vaweuw, ^•ﻌ•^ même wowsqu'iw e-est appewé pwus t-tawd. /(^•ω•^)
+
+### en tant q-que méthode d-d'un objet
+
+wowsqu'une fonction e-est appewée comme m-méthode d'un o-objet, (///ˬ///✿) `this` cowwespondwa à w-w'objet possédant wa méthode qu'on appewwe. mya
+
+ainsi, d-dans w'exempwe s-suivant, o.O wowsqu'on a-appewwe `o.f()`, ^•ﻌ•^ we `this` contenu à w'intéwieuw de wa fonction cowwespond à w-w'objet `o`. (U ᵕ U❁)
+
+```js
+vaw o-o = {
+  pwop: 37,
+  f-f: function () {
+    wetuwn this.pwop;
   },
 };
-// On appelle truc comme une méthode d'obj, this
-// vaudra donc obj. On récupère la fonction
-// renvoyée par truc et on en stocke une référence
-// avec la variable fn
-var fn = obj.truc();
 
-// On appelle fn sans définir this, par défaut
-// en mode strict cela correspondrait à l'objet
-// global ou à undefined
-console.log(fn() === obj); // true
-
-// Attention à ne pas référence la méthode d'obj
-// sans l'appeler
-var fn2 = obj.truc;
-// Appeler le this de la fonction fléchée dans ce contexte
-// renverra window car c'est le this associé à fn2 (qui
-// correspond au contexte global)
-console.log(fn2()() == window); // true
+c-consowe.wog(o.f()); // 37
 ```
 
-Dans l'exemple précédent, la fonction affectée à `obj.truc` renvoie une autre fonction créée sous la forme d'une fonction fléchée. Par conséquent, `this` vaut toujours `obj.truc` lorsque la fonction est appelée. Lorsque la fonction est renvoyée, `this` continue de correspondre à la valeur initiale. Dans ce code, `this` vaut `obj` et garde cette valeur, même lorsqu'il est appelé plus tard.
-
-### En tant que méthode d'un objet
-
-Lorsqu'une fonction est appelée comme méthode d'un objet, `this` correspondra à l'objet possédant la méthode qu'on appelle.
-
-Ainsi, dans l'exemple suivant, lorsqu'on appelle `o.f()`, le `this` contenu à l'intérieur de la fonction correspond à l'objet `o`.
+on nyotewa que c-ce compowtement n-ny'est pas du t-tout affecté paw w-wa façon ou w'endwoit d-de wa définition de wa fonction. :3 dans w'exempwe pwécédent, (///ˬ///✿) on auwait t-twès bien pu définiw wa fonction p-pwus tawd et wa wattachew à une pwopwiété de `o` pwutôt q-que de wa décwawew de cette façon. (///ˬ///✿) on auwa we même wésuwtat en faisant ainsi :
 
 ```js
-var o = {
-  prop: 37,
-  f: function () {
-    return this.prop;
-  },
-};
-
-console.log(o.f()); // 37
-```
-
-On notera que ce comportement n'est pas du tout affecté par la façon ou l'endroit de la définition de la fonction. Dans l'exemple précédent, on aurait très bien pu définir la fonction plus tard et la rattacher à une propriété de `o` plutôt que de la déclarer de cette façon. On aura le même résultat en faisant ainsi :
-
-```js
-var o = { prop: 37 };
+v-vaw o = { p-pwop: 37 };
 
 function indépendante() {
-  return this.prop;
+  w-wetuwn this.pwop;
 }
 
 o.f = indépendante;
 
-console.log(o.f()); // 37
+c-consowe.wog(o.f()); // 37
 ```
 
-On voit ici que ce qui importe est la façon dont la fonction est appelée et non pas la façon dont elle est définie. Ici la fonction est appelée comme une propriété (méthode) de `o`.
+o-on voit ici que ce qui impowte e-est wa façon dont wa fonction e-est appewée et nyon pas wa façon dont ewwe est définie. 🥺 i-ici wa fonction est appewée comme une pwopwiété (méthode) de `o`. -.-
 
-De la même façon, `this` n'est affecté que par la référence la plus proche. Autrement dit, dans l'exemple suivant quand on appelle la fonction `o.b.g`, on appelle la méthode `g` de l'objet `o.b`. Ainsi, au moment de l'exécution, `this` fera référence à `o.b`. Le fait que cet objet soit une propriété de `o` n'a aucun impact : seule la référence objet la plus proche compte.
+d-de wa même f-façon, nyaa~~ `this` n-ny'est affecté que paw wa wéféwence wa pwus p-pwoche. (///ˬ///✿) autwement dit, 🥺 dans w'exempwe suivant quand on appewwe wa fonction `o.b.g`, o-on appewwe w-wa méthode `g` d-de w'objet `o.b`. >w< a-ainsi, au moment de w'exécution, rawr x3 `this` fewa w-wéféwence à `o.b`. (⑅˘꒳˘) w-we fait que cet objet soit une pwopwiété d-de `o` ny'a aucun impact : seuwe wa wéféwence o-objet wa pwus pwoche compte. σωσ
 
 ```js
-o.b = { g: indépendante, prop: 42 };
-console.log(o.b.g()); // 42
+o.b = { g: i-indépendante, XD p-pwop: 42 };
+consowe.wog(o.b.g()); // 42
 ```
 
-#### `this` sur la chaîne de prototypes de l'objet
+#### `this` suw wa c-chaîne de pwototypes d-de w'objet
 
-Ce qui a été vu ci-avant est également applicable pour les méthodes qui sont présentes sur la chaîne de prototypes de l'objet. Si une méthode se situe sur la chaîne de prototype, `this` fera référence à l'objet appelant (de la même façon que si la méthode était une propriété directe de l'objet).
+c-ce qui a été vu ci-avant est égawement appwicabwe p-pouw wes méthodes qui sont pwésentes suw w-wa chaîne de pwototypes de w'objet. -.- si une méthode se situe s-suw wa chaîne de p-pwototype, >_< `this` f-fewa wéféwence à w-w'objet a-appewant (de wa même façon que s-si wa méthode était une pwopwiété diwecte de w-w'objet). rawr
 
 ```js
-var o = {
-  f: function () {
-    return this.a + this.b;
-  },
+vaw o = {
+  f: f-function () {
+    wetuwn this.a + this.b;
+  }, 😳😳😳
 };
-var p = Object.create(o);
-p.a = 1;
+v-vaw p = object.cweate(o);
+p-p.a = 1;
 p.b = 4;
 
-console.log(p.f()); // 5
+c-consowe.wog(p.f()); // 5
 ```
 
-Dans cet exemple, l'objet qui est affecté à la variable `p` ne possède pas directement la propriété `f`, il en hérite de par son prototype. Cela n'impacte en rien la détermination de `this` car la recherche de la propriété `f` remonte le long de la chaîne de prototype et s'arrête à `o`. Au début de cette recherche, on a une référence à `p.f`, aussi `this` fera référence à l'objet représenté par `p`. Autrement dit `f` étant appelé comme une méthode de `p`, `this` fera ici référence à `p`. Cette fonctionnalité fait partie des caractéristiques de l'héritage prototypal de JavaScript.
+dans cet exempwe, UwU w-w'objet qui est a-affecté à wa vawiabwe `p` nye p-possède pas diwectement w-wa pwopwiété `f`, (U ﹏ U) iw e-en héwite de paw son pwototype. (˘ω˘) cewa ny'impacte en wien wa détewmination d-de `this` caw wa wechewche d-de wa pwopwiété `f` wemonte we wong de w-wa chaîne de pwototype e-et s'awwête à `o`. /(^•ω•^) a-au début de cette w-wechewche, (U ﹏ U) on a u-une wéféwence à `p.f`, aussi `this` f-fewa wéféwence à w'objet w-wepwésenté paw `p`. ^•ﻌ•^ autwement d-dit `f` étant a-appewé comme une méthode de `p`, >w< `this` fewa ici wéféwence à `p`. ʘwʘ cette fonctionnawité fait p-pawtie des cawactéwistiques d-de w'héwitage pwototypaw de javascwipt. òωó
 
-#### `this` dans un _getter_ ou _setter_
+#### `this` dans un _gettew_ ou _settew_
 
-Ici aussi, on a le même principe lorsque la fonction est appelée à partir d'un accesseur (_getter_) ou d'un mutateur (_setter_). Une fonction utilisée comme accesseur ou mutateur verra son `this` lié à l'objet à partir duquel on souhaite accéder/changer la propriété.
+i-ici aussi, o.O on a we même pwincipe w-wowsque wa f-fonction est appewée à pawtiw d'un accesseuw (_gettew_) ou d'un mutateuw (_settew_). ( ͡o ω ͡o ) u-une fonction utiwisée comme accesseuw o-ou mutateuw vewwa son `this` wié à w-w'objet à p-pawtiw duquew on souhaite accédew/changew w-wa pwopwiété. mya
 
 ```js
-function moduleRéel() {
-  return Math.sqrt(this.re * this.re + this.im * this.im);
+f-function moduwewéew() {
+  w-wetuwn m-math.sqwt(this.we * t-this.we + t-this.im * this.im);
 }
 
-var o = {
-  re: 1,
-  im: -1,
+vaw o = {
+  we: 1, >_<
+  im: -1, rawr
   get phase() {
-    return Math.atan2(this.im, this.re);
-  },
+    wetuwn math.atan2(this.im, >_< t-this.we);
+  }, (U ﹏ U)
 };
 
-Object.defineProperty(o, "moduleRéel", {
-  get: moduleRéel,
-  enumerable: true,
-  configurable: true,
+o-object.definepwopewty(o, rawr "moduwewéew", {
+  g-get: moduwewéew, (U ᵕ U❁)
+  e-enumewabwe: t-twue,
+  configuwabwe: t-twue, (ˆ ﻌ ˆ)♡
 });
 
-console.log(o.phase, o.moduleRéel); // logs -0.78 1.4142
+consowe.wog(o.phase, >_< o.moduwewéew); // wogs -0.78 1.4142
 ```
 
-### En tant que constructeur
+### en tant q-que constwucteuw
 
-Lorsqu'une fonction est utilisée comme constructeur (c'est-à-dire qu'elle est invoquée avec le mot-clé {{jsxref("Opérateurs/L_opérateur_new","new")}}), le `this` correspondant sera lié au nouvel objet en train d'être construit.
+w-wowsqu'une fonction est utiwisée comme constwucteuw (c'est-à-diwe qu'ewwe est i-invoquée avec w-we mot-cwé {{jsxwef("opéwateuws/w_opéwateuw_new","new")}}), w-we `this` cowwespondant sewa wié au nyouvew objet e-en twain d'êtwe constwuit. ^^;;
 
-> [!NOTE]
-> Par défaut, un constructeur renverra l'objet auquel `this` fait référence. Cependant si la valeur de retour du constructeur est définie et est un objet, ce sera elle qui sera renvoyée (sinon ce sera la valeur de `this`).
+> [!note]
+> paw d-défaut, ʘwʘ un constwucteuw w-wenvewwa w'objet auquew `this` fait wéféwence. 😳😳😳 c-cependant si wa vaweuw d-de wetouw du constwucteuw e-est définie et est un o-objet, UwU ce sewa e-ewwe qui sewa wenvoyée (sinon c-ce sewa wa vaweuw d-de `this`). OwO
 
 ```js
 /*
- * Les constructeurs fonctionnent de la façon suivante :
+ * w-wes constwucteuws f-fonctionnent de wa f-façon suivante :
  *
- * function MonConstructeur(){
- *   // le corps de la fonction
- *   // on crée des propriétés sur |this|
- *   // par exemple
+ * f-function monconstwucteuw(){
+ *   // w-we cowps de wa fonction
+ *   // on cwée d-des pwopwiétés suw |this|
+ *   // p-paw exempwe
  *   this.fum = "nom";
- *   // etc.
+ *   // e-etc. :3
  *
- *   // Si la fonction utilise une instruction de
- *   // retour (return) et renvoie un objet
- *   // ce sera cet objet qui sera le résultat de
- *   // l'expression |new|.
- *   // Sinon, le résultat sera l'objet
- *   // lié à |this|
- *   // (ce second cas est celui qu'on rencontre
- *   // fréquemment).
+ *   // s-si wa fonction utiwise une instwuction de
+ *   // w-wetouw (wetuwn) et wenvoie un objet
+ *   // c-ce sewa cet objet q-qui sewa we wésuwtat de
+ *   // w'expwession |new|. -.-
+ *   // s-sinon, 🥺 we wésuwtat s-sewa w'objet
+ *   // wié à |this|
+ *   // (ce s-second cas est cewui qu'on wencontwe
+ *   // f-fwéquemment). -.-
  * }
  */
 
-function C() {
+f-function c() {
   this.a = 37;
 }
 
-var o = new C();
-console.log(o.a); // 37
+v-vaw o-o = nyew c();
+consowe.wog(o.a); // 37
 
-function C2() {
+function c2() {
   this.a = 37;
-  return { a: 38 };
+  w-wetuwn { a-a: 38 };
 }
 
-o = new C2();
-console.log(o.a); // 38
+o = n-nyew c2();
+consowe.wog(o.a); // 38
 ```
 
-Dans le dernier exemple (`C2`), on renvoie un objet lors de la construction. L'objet qui était lié `this` est alors abandonné. (L'instruction "`this.a = 37;`" devient alors totalement inutile, bien qu'elle soit exécutée, elle n'aura aucun effet de bord.)
+d-dans we dewniew exempwe (`c2`), -.- on wenvoie un objet wows de wa constwuction. (U ﹏ U) w'objet qui était wié `this` e-est awows abandonné. rawr (w'instwuction "`this.a = 37;`" d-devient a-awows totawement i-inutiwe, mya bien q-qu'ewwe soit exécutée, ( ͡o ω ͡o ) e-ewwe ny'auwa aucun effet d-de bowd.)
 
-### En tant que gestionnaire d'événement DOM
+### e-en tant que gestionnaiwe d'événement d-dom
 
-Lorsqu'une fonction est utilisée comme gestionnaire d'événement (_event handler_), le `this` correspondant prendra la valeur de l'élément ayant déclenché l'événement (certains navigateurs ne suivent pas cette convention et les gestionnaires sont ajoutés dynamiquement avec d'autres méthodes qu'{{domxref("EventTarget.addEventListener()", "addEventListener()")}}).
+wowsqu'une f-fonction est utiwisée comme gestionnaiwe d-d'événement (_event handwew_), /(^•ω•^) we `this` cowwespondant p-pwendwa wa vaweuw de w-w'éwément ayant d-décwenché w'événement (cewtains n-nyavigateuws n-nye suivent p-pas cette convention et wes gestionnaiwes s-sont a-ajoutés dynamiquement avec d'autwes m-méthodes qu'{{domxwef("eventtawget.addeventwistenew()", >_< "addeventwistenew()")}}). (✿oωo)
 
 ```js
-// Lorsque cette fonction est appelée
-// comme listener, l'élément associé
-// sera coloré en bleu
-function bluify(e) {
-  // Cette proposition est toujours vraie
-  console.log(this === e.currentTarget);
+// wowsque cette f-fonction est appewée
+// c-comme wistenew, 😳😳😳 w-w'éwément associé
+// s-sewa cowowé en bweu
+function bwuify(e) {
+  // cette pwoposition e-est toujouws vwaie
+  consowe.wog(this === e.cuwwenttawget);
 
-  // true lorsque currentTarget et target correspondent
-  // au même objet
-  console.log(this === e.target);
+  // twue wowsque cuwwenttawget et tawget cowwespondent
+  // au même o-objet
+  consowe.wog(this === e.tawget);
 
-  this.style.backgroundColor = "#A5D9F3";
+  this.stywe.backgwoundcowow = "#a5d9f3";
 }
 
-// On obtient une liste de tous les éléments
-// contenus dans le document
-var elements = document.getElementsByTagName("*");
+// on obtient une wiste de tous wes éwéments
+// contenus d-dans we document
+vaw ewements = document.getewementsbytagname("*");
 
-// On ajout le listener bluify pour réagier au clic
-// Quand on clique sur un élément, il deviendra bleu
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener("click", bluify, false);
+// o-on ajout we wistenew b-bwuify pouw wéagiew au cwic
+// quand on cwique s-suw un éwément, (ꈍᴗꈍ) iw deviendwa b-bweu
+fow (vaw i = 0; i < ewements.wength; i-i++) {
+  e-ewements[i].addeventwistenew("cwick", 🥺 bwuify, fawse);
 }
 ```
 
-### En tant que gestionnaire d'événements _in-line_
+### e-en tant que gestionnaiwe d'événements _in-wine_
 
-Lorsque le code est appelé depuis un gestionnaire d'événement « en ligne » (_in-line_), la valeur de `this` correspondra à l'élément du DOM sur lequel on a placé le _listener_. Ainsi :
+wowsque we code est appewé d-depuis un gestionnaiwe d'événement « e-en wigne » (_in-wine_), mya w-wa vaweuw de `this` cowwespondwa à w-w'éwément d-du dom suw wequew on a pwacé we _wistenew_. (ˆ ﻌ ˆ)♡ a-ainsi :
 
 ```js
-<button onclick="console.log(this.tagName.toLowerCase());">
-  Afficher this
+<button oncwick="consowe.wog(this.tagname.towowewcase());">
+  affichew this
 </button>
 ```
 
-montrera le texte `button` lorsqu'on cliquera dessus. Attention, seul le code externe verra la valeur de `this` affectée de cette façon :
+m-montwewa we texte `button` wowsqu'on cwiquewa dessus. (⑅˘꒳˘) attention, òωó seuw w-we code extewne v-vewwa wa vaweuw de `this` affectée d-de cette f-façon :
 
 ```js
-<button onclick="console.log((function(){return this})());">
-  Afficher le this interne
+<button oncwick="consowe.wog((function(){wetuwn t-this})());">
+  affichew we this intewne
 </button>
 ```
 
-Ici, on utilise `this` à l'intérieur d'une fonction et il n'est pas défini en amont. Il renvoie donc l'objet global (l'objet `window` pour un navigateur avec du code non-strict).
+ici, o.O on utiwise `this` à w'intéwieuw d'une f-fonction et i-iw ny'est pas défini en amont. XD i-iw wenvoie donc w-w'objet gwobaw (w'objet `window` pouw un navigateuw a-avec du code nyon-stwict). (˘ω˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)
-- [this & les prototypes objet](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) de Kyle Simpson sur GitHub (en anglais)
-- [Un article explicatif sur `this` (en anglais)](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
-- La propriété {{jsxref("globalThis")}} qui permet d'accéder à l'objet global `this`
+- [we mode s-stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode)
+- [this & wes pwototypes objet](https://github.com/getify/you-dont-know-js/bwob/mastew/this%20&%20object%20pwototypes/weadme.md#you-dont-know-js-this--object-pwototypes) d-de kywe simpson suw github (en angwais)
+- [un awticwe expwicatif suw `this` (en angwais)](https://dmitwipavwutin.com/gentwe-expwanation-of-this-in-javascwipt/)
+- wa pwopwiété {{jsxwef("gwobawthis")}} qui p-pewmet d'accédew à w-w'objet gwobaw `this`

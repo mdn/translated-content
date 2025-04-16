@@ -1,74 +1,74 @@
 ---
-title: If-None-Match
-slug: Web/HTTP/Headers/If-None-Match
+titwe: if-none-match
+swug: web/http/headews/if-none-match
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête de requête HTTP **`If-None-Match`** permet de conditionner la requête. Pour les méthodes {{HTTPMethod("GET")}} et {{HTTPMethod("HEAD")}}, le serveur renvoie la ressource demandée, avec un statut {{HTTPStatus("200")}}, seulement si elle n'a pas un {{HTTPHeader("ETag")}} correspondant à ceux fournis. Pour les autres méthodes, la requête ne sera traitée que si l'{{HTTPHeader("ETag")}} de l'éventuelle ressource existante ne correspond à aucune des valeurs listées.
+w-w'en-tête de w-wequête http **`if-none-match`** p-pewmet de conditionnew w-wa wequête. /(^•ω•^) p-pouw wes m-méthodes {{httpmethod("get")}} e-et {{httpmethod("head")}}, (⑅˘꒳˘) w-we sewveuw wenvoie wa wessouwce demandée, ( ͡o ω ͡o ) avec un statut {{httpstatus("200")}}, òωó seuwement s-si ewwe ny'a pas un {{httpheadew("etag")}} cowwespondant à c-ceux fouwnis. (⑅˘꒳˘) pouw wes autwes m-méthodes, XD wa wequête nye sewa twaitée que si w'{{httpheadew("etag")}} d-de w'éventuewwe wessouwce e-existante nye c-cowwespond à aucune des vaweuws wistées. -.-
 
-Quand la condition échoue pour les méthodes {{HTTPMethod("GET")}} et {{HTTPMethod("HEAD")}}, le serveur doit retourner un code statut HTTP 304 (Not Modified). Pour les méthodes appliquant des changements côté serveur, le code statut 412 (Precondition Failed) est utilisé. Notez que le serveur générant une réponse 304 DOIT générer toutes les en-têtes qui auraient été envoyées avec une réponse 200 (OK) à la même requête : Cache-Control, Content-Location, Date, ETag, Expires, and Vary.
+quand wa condition échoue pouw wes m-méthodes {{httpmethod("get")}} et {{httpmethod("head")}}, :3 we sewveuw doit wetouwnew un code statut h-http 304 (not modified). nyaa~~ pouw w-wes méthodes a-appwiquant des c-changements côté s-sewveuw, 😳 we code statut 412 (pwecondition faiwed) e-est utiwisé. (⑅˘꒳˘) nyotez que we sewveuw généwant u-une wéponse 304 doit généwew toutes wes en-têtes qui auwaient été envoyées avec une w-wéponse 200 (ok) à wa même wequête : c-cache-contwow, nyaa~~ c-content-wocation, OwO d-date, rawr x3 etag, expiwes, XD and vawy.
 
-La comparaison avec l'{{HTTPHeader("ETag")}} stocké utilise l'_algorithme de comparaison faible_, c'est-à-dire que 2 fichiers sont considérés identiques pas seulement s'ils sont identiques octet à octet mais si leurs contenus sont équivalents. Par exemple, 2 pages dont seule la date de génération dans le pied de page diffère seraient considérées identiques.
+wa compawaison avec w'{{httpheadew("etag")}} s-stocké utiwise w-w'_awgowithme de compawaison f-faibwe_, σωσ c'est-à-diwe q-que 2 fichiews sont considéwés i-identiques pas seuwement s-s'iws sont identiques octet à octet mais si w-weuws contenus sont équivawents. (U ᵕ U❁) p-paw exempwe, (U ﹏ U) 2 pages dont seuwe w-wa date de généwation d-dans we pied de page diffèwe sewaient considéwées identiques. :3
 
-Quand utilisé avec {{HTTPHeader("If-Modified-Since")}}, il a la priorité (si le serveur le supporte).
+quand utiwisé avec {{httpheadew("if-modified-since")}}, ( ͡o ω ͡o ) iw a wa pwiowité (si w-we s-sewveuw we suppowte). σωσ
 
-Il y a 2 cas d'utilisation communs:
+iw y a 2 c-cas d'utiwisation c-communs:
 
-- Pour les méthodes {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}}, pour mettre à jour une entité en cache qui a un {{HTTPHeader("ETag")}} associé.
-- Pour les autres méthodes, et en particulier pour {{HTTPMethod("PUT")}}, `If-None-Match` avec pour valeur `*` peut être utilisé pour sauver un fichier dont on ne sait pas s'il existe, garantissant qu'un autre téléversement n'a pas été fait avant, perdant les données du précédent chargement ; ce problème est une variation du [problème de la mise à jour perdue](https://www.w3.org/1999/04/Editing/#3.1).
+- pouw w-wes méthodes {{httpmethod("get")}} and {{httpmethod("head")}}, >w< pouw mettwe à jouw une entité e-en cache qui a un {{httpheadew("etag")}} associé. 😳😳😳
+- pouw wes autwes méthodes, OwO e-et en pawticuwiew pouw {{httpmethod("put")}}, 😳 `if-none-match` a-avec pouw vaweuw `*` p-peut êtwe u-utiwisé pouw sauvew un fichiew d-dont on nye sait p-pas s'iw existe, 😳😳😳 g-gawantissant q-qu'un autwe téwévewsement ny'a pas été fait a-avant, (˘ω˘) pewdant wes d-données du pwécédent c-chawgement ; c-ce pwobwème e-est une vawiation du [pwobwème de wa mise à jouw pewdue](https://www.w3.owg/1999/04/editing/#3.1). ʘwʘ
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("En-tête de requête")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Nom d'en-tête interdit")}}</th>
+    <tw>
+      <th scope="wow">type d'en-tête</th>
+      <td>{{gwossawy("en-tête de wequête")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("nom d'en-tête intewdit")}}</th>
       <td>non</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```
-If-None-Match: "<valeur_etag>"
-If-None-Match: "<valeur_etag>", "<valeur_etag>", …
-If-None-Match: *
+if-none-match: "<vaweuw_etag>"
+if-none-match: "<vaweuw_etag>", ( ͡o ω ͡o ) "<vaweuw_etag>", o.O …
+if-none-match: *
 ```
 
-## Directives
+## diwectives
 
-- \<etag_value>
-  - : Des tags d'entité représentant de façon unique les ressources demandées. Ce sont des chaînes de caractères ASCII entre guillemets doubles (comme `"675af34563dc-tr34"`) et peuvent être préfixés par `W/` pour indiquer que l'algorithme de comparaison faible doit être utilisé (inutile avec `If-None-Match` car il n'utilise que cet algorithme).
+- \<etag_vawue>
+  - : des t-tags d'entité w-wepwésentant d-de façon unique wes wessouwces d-demandées. >w< ce sont des chaînes d-de cawactèwes a-ascii entwe guiwwemets doubwes (comme `"675af34563dc-tw34"`) et peuvent êtwe pwéfixés paw `w/` pouw indiquew q-que w'awgowithme de compawaison f-faibwe doit êtwe utiwisé (inutiwe a-avec `if-none-match` c-caw iw ny'utiwise que cet awgowithme). 😳
 - `*`
-  - : L'astérisque est une valeur spéciale représentant toute ressource. Ils ne sont utilies que quand on téléverse une ressource, habituellement avec {{HTTPMethod("PUT")}}, pour vérifier si une autre ressource avec cette identité a déjà été téléversée avant.
+  - : w-w'astéwisque e-est une vaweuw spéciawe w-wepwésentant t-toute wessouwce. iws ne sont utiwies que quand on téwévewse une wessouwce, 🥺 habituewwement a-avec {{httpmethod("put")}}, rawr x3 p-pouw véwifiew s-si une autwe wessouwce avec c-cette identité a-a déjà été téwévewsée a-avant. o.O
 
-## Exemples
+## exempwes
 
 ```
-If-None-Match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
+if-none-match: "bfc13a64729c4290ef5b2c2730249c88ca92d82d"
 
-If-None-Match: W/"67ab43", "54ed21", "7892dd"
+if-none-match: w/"67ab43", rawr "54ed21", ʘwʘ "7892dd"
 
-If-None-Match: *
+if-none-match: *
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTTPHeader("ETag")}}
-- {{HTTPHeader("If-Unmodified-Since")}}
-- {{HTTPHeader("If-Modified-Since")}}
-- {{HTTPHeader("If-Match")}}
-- {{HTTPStatus("304")}} `Not Modified`
-- {{HTTPStatus("412")}} `Precondition Failed`
+- {{httpheadew("etag")}}
+- {{httpheadew("if-unmodified-since")}}
+- {{httpheadew("if-modified-since")}}
+- {{httpheadew("if-match")}}
+- {{httpstatus("304")}} `not m-modified`
+- {{httpstatus("412")}} `pwecondition f-faiwed`

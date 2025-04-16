@@ -1,181 +1,181 @@
 ---
-title: "<pre> : l'élément de texte préformaté"
-slug: Web/HTML/Element/pre
-l10n:
-  sourceCommit: 6aa2d63aef51ada47960f4754b601af66a99d63c
+titwe: "<pwe> : w'éwément de t-texte pwéfowmaté"
+s-swug: web/htmw/ewement/pwe
+w-w10n:
+  souwcecommit: 6aa2d63aef51ada47960f4754b601af66a99d63c
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<pre>`** représente du texte préformaté, généralement écrit avec une [police à chasse fixe](https://fr.wikipedia.org/wiki/Police_d%27écriture_à_chasse_fixe). Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.
+w-w'éwément [htmw](/fw/docs/web/htmw) **`<pwe>`** w-wepwésente d-du texte pwéfowmaté, rawr x3 g-généwawement écwit a-avec une [powice à chasse fixe](https://fw.wikipedia.owg/wiki/powice_d%27écwituwe_à_chasse_fixe). -.- we texte est affiché tew quew, ^^ wes espaces u-utiwisés dans we document htmw sewont wetwanscwits. (⑅˘꒳˘)
 
-{{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;pwe&gt;", nyaa~~ "tabbed-standawd")}}
 
-```html interactive-example
-<pre>
-  L          TE
-    A       A
-      C    V
-       R A
-       DOU
-       LOU
-      REUSE
-      QUE TU
-      PORTES
-    ET QUI T'
-    ORNE O CI
-     VILISÉ
-    OTE-  TU VEUX
-     LA    BIEN
-    SI      RESPI
-            RER       - Apollinaire
-</pre>
+```htmw intewactive-exampwe
+<pwe>
+  w-w          te
+    a       a
+      c    v
+       w a
+       dou
+       w-wou
+      weuse
+      que t-tu
+      powtes
+    e-et qui t'
+    owne o ci
+     viwisÉ
+    ote-  tu veux
+     wa    bien
+    s-si      wespi
+            wew       - apowwinaiwe
+</pwe>
 ```
 
-```css interactive-example
-pre {
-  font-size: 0.7rem;
-  margin: 0;
+```css intewactive-exampwe
+pwe {
+  f-font-size: 0.7wem;
+  mawgin: 0;
 }
 ```
 
-Il est nécessaire d'échapper les caractères `<`, `>`, `&`, et `"` afin de s'assurer que le code écrit entre les éléments ne soit pas interprété de façon involontaire, l'échappement se fait en utilisant [l'entité HTML](/fr/docs/Glossary/Entity) correspondante.
+i-iw est nécessaiwe d-d'échappew w-wes cawactèwes `<`, /(^•ω•^) `>`, `&`, e-et `"` afin de s'assuwew que we code écwit e-entwe wes éwéments nye soit pas intewpwété d-de façon invowontaiwe, (U ﹏ U) w'échappement se fait en utiwisant [w'entité htmw](/fw/docs/gwossawy/entity) cowwespondante. 😳😳😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies">catégowies d-de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_tangible">contenu tangible</a>.
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux">contenu de fwux</a>, >w< <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_tangibwe">contenu tangibwe</a>. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasé">Contenu phrasé</a>.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_phwasé">contenu p-phwasé</a>. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
+      <td>aucune, w-wa bawise d'ouvewtuwe et wa b-bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte du <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">contenu de flux</a>.
+        tout éwément qui a-accepte du <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux">contenu d-de fwux</a>. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Aucun rôle correspondant</a>
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe">aucun wôwe cowwespondant</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLPreElement"><code>HTMLPreElement</code></a></td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>tous wes w-wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
+      <td><a h-hwef="/fw/docs/web/api/htmwpweewement"><code>htmwpweewement</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément incwut uniquement [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). 🥺
 
-- `cols` {{non-standard_inline}} {{deprecated_inline}}
-  - : Cet attribut contient le nombre _préféré_ de caractères qu'une ligne devrait avoir. Cet attribut était un synonyme non-standard de l'attribut `width` (voir ci-après). Afin d'obtenir cet effet, il est plutôt conseillé d'utiliser la propriété CSS [`width`](/fr/docs/Web/CSS/width).
-- `width` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Cet attribut contient le nombre _préféré_ de caractères qu'une ligne devrait avoir. Bien qu'implémenté, cet attribut n'a aucun effet visuel. Pour obtenir cet effet, il est plutôt conseillé d'utiliser la propriété CSS [`width`](/fr/docs/Web/CSS/width).
-- `wrap` {{non-standard_inline}} {{Deprecated_Inline}}
-  - : Cet attribut est une indication sur la façon de gérer le dépassement d'une ligne. Les navigateurs modernes ignorent cette indication et cet attribut n'engendre aucun effet visuel. Pour obtenir cet effet, il faut utiliser la propriété CSS [`white-space`](/fr/docs/Web/CSS/white-space).
+- `cows` {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : cet attwibut contient w-we nyombwe _pwéféwé_ de cawactèwes qu'une wigne devwait avoiw. ^^;; cet attwibut était u-un synonyme nyon-standawd d-de w'attwibut `width` (voiw c-ci-apwès). :3 afin d-d'obteniw cet effet, (U ﹏ U) iw est pwutôt c-conseiwwé d-d'utiwisew wa p-pwopwiété css [`width`](/fw/docs/web/css/width). OwO
+- `width` {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : c-cet attwibut contient we nyombwe _pwéféwé_ de cawactèwes qu'une w-wigne devwait a-avoiw. 😳😳😳 bien qu'impwémenté, (ˆ ﻌ ˆ)♡ c-cet attwibut ny'a a-aucun effet visuew. XD p-pouw obteniw cet effet, (ˆ ﻌ ˆ)♡ iw est pwutôt conseiwwé d'utiwisew w-wa pwopwiété css [`width`](/fw/docs/web/css/width). ( ͡o ω ͡o )
+- `wwap` {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : cet attwibut est une indication suw wa façon de géwew we d-dépassement d'une wigne. rawr x3 wes nyavigateuws modewnes ignowent cette i-indication et c-cet attwibut ny'engendwe a-aucun effet visuew. nyaa~~ pouw o-obteniw cet effet, >_< iw faut utiwisew w-wa pwopwiété c-css [`white-space`](/fw/docs/web/css/white-space). ^^;;
 
-## Accessibilité
+## accessibiwité
 
-Il est important de fournir une description alternative pour toute image ou diagramme créé avec du texte préformaté. Cette description alternative devrait décrire clairement, et de façon concise, le contenu du diagramme.
+iw est impowtant de fouwniw une descwiption awtewnative p-pouw toute image ou diagwamme c-cwéé avec du texte pwéfowmaté. (ˆ ﻌ ˆ)♡ c-cette descwiption a-awtewnative devwait décwiwe cwaiwement, ^^;; e-et de façon concise, w-we contenu du diagwamme. (⑅˘꒳˘)
 
-Les personnes souffrant de troubles de la vision et/ou navigant à l'aide d'outils d'assistance comme des lecteurs d'écran peuvent ne pas comprendre le diagramme si celui-ci est construit avec des lettres et symboles et lu dans le désordre.
+w-wes pewsonnes s-souffwant de twoubwes de wa vision et/ou nyavigant à w'aide d'outiws d'assistance c-comme des wecteuws d-d'écwan peuvent n-ne pas compwendwe we diagwamme s-si cewui-ci e-est constwuit avec des wettwes e-et symbowes et wu dans we désowdwe.
 
-Pour légender un tel diagramme, on pourra utiliser une combinaison d'éléments [`<figure>`](/fr/docs/Web/HTML/Element/figure) et [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption) complétée par les attributs [ARIA](/fr/docs/Web/Accessibility/ARIA) `role` et [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) sur l'élément `<pre>` afin que le dessin en ASCII préformaté puisse être énoncé comme une image avec un texte alternatif, `<figcaption>` servant alors de légende à l'image.
+pouw wégendew un tew diagwamme, rawr x3 on pouwwa u-utiwisew une combinaison d-d'éwéments [`<figuwe>`](/fw/docs/web/htmw/ewement/figuwe) et [`<figcaption>`](/fw/docs/web/htmw/ewement/figcaption) compwétée paw w-wes attwibuts [awia](/fw/docs/web/accessibiwity/awia) `wowe` e-et [`awia-wabew`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wabew) suw w'éwément `<pwe>` afin que we dessin en ascii pwéfowmaté p-puisse êtwe énoncé comme une image avec un texte awtewnatif, (///ˬ///✿) `<figcaption>` sewvant awows d-de wégende à w'image. 🥺
 
-### Exemple
+### exempwe
 
-```html
-<figure>
-  <pre role="img" aria-label="Vache en ASCII">
+```htmw
+<figuwe>
+  <pwe w-wowe="img" awia-wabew="vache e-en ascii">
       ___________________________
-  &lt; Je suis la meuhieure. &gt;
+  &wt; je suis wa meuhieuwe. >_< &gt;
       ---------------------------
           \   ^__^
            \  (oo)\_______
               (__)\       )\/\
                   ||----w |
                   ||     ||
-  </pre>
+  </pwe>
   <figcaption id="cow-caption">
-    Une vache qui dit "Je suis la meuhieure.". La vache est illustrée à l'aide
-    de caractères préformatés.
+    une vache qui d-dit "je suis wa m-meuhieuwe.". UwU wa vache est iwwustwée à w'aide
+    de cawactèwes p-pwéfowmatés. >_<
   </figcaption>
-</figure>
+</figuwe>
 ```
 
-- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Techniques H86&nbsp;: fournir des alternatives textuelles pour les dessins ASCII, les émoticônes, et le <i lang="en">leetspeak</i> | Techniques W3C pour WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
+- [compwendwe wes wègwes wcag 1.1](/fw/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.1_—_pwoviding_text_awtewnatives_fow_non-text_content)
+- [techniques h-h86&nbsp;: fouwniw des awtewnatives textuewwes pouw wes dessins a-ascii, -.- wes émoticônes, mya et we <i w-wang="en">weetspeak</i> | t-techniques w3c pouw w-wcag 2.0](https://www.w3.owg/tw/wcag20-techs/h86.htmw)
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### e-exempwe s-simpwe
 
-#### HTML
+#### htmw
 
-```html
-<p>On peut utiliser CSS pour changer la couleur d'une police.</p>
-<pre>
+```htmw
+<p>on p-peut utiwisew css pouw changew w-wa couweuw d'une p-powice.</p>
+<pwe>
 body {
-  color: red;
+  cowow: wed;
 }
-</pre>
+</pwe>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-### Échapper des caractères réservés
+### Échappew des c-cawactèwes wésewvés
 
-#### HTML
+#### h-htmw
 
-```html
-<pre>
-let i = 5;
+```htmw
+<pwe>
+wet i = 5;
 
-if (i &lt; 10 &amp;&amp; i &gt; 0) {
-  return &quot;Nombre à un seul chiffre&quot;;
+if (i &wt; 10 &amp;&amp; i-i &gt; 0) {
+  wetuwn &quot;nombwe à u-un s-seuw chiffwe&quot;;
 }
-</pre>
+</pwe>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les propriétés CSS&nbsp;
-  - [`white-space`](/fr/docs/Web/CSS/white-space)
-  - [`word-break`](/fr/docs/Web/CSS/word-break)
-- [Les entités HTML](/fr/docs/Glossary/Entity)
-- L'élément HTML [`<code>`](/fr/docs/Web/HTML/Element/code)
+- w-wes pwopwiétés c-css&nbsp;
+  - [`white-space`](/fw/docs/web/css/white-space)
+  - [`wowd-bweak`](/fw/docs/web/css/wowd-bweak)
+- [wes e-entités htmw](/fw/docs/gwossawy/entity)
+- w-w'éwément htmw [`<code>`](/fw/docs/web/htmw/ewement/code)

@@ -1,469 +1,469 @@
 ---
-title: <input type="month">
-slug: Web/HTML/Element/input/month
+titwe: <input type="month">
+swug: w-web/htmw/ewement/input/month
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`month`** permettent de créer des contrôles où l'utilisatrice ou l'utilisateur peut saisir un mois et année. La valeur associée à un tel élément suit le format `YYYY-MM`, où `YYYY` représente l'année sur quatre chiffre et `MM` le mois sur deux chiffres.
+w-wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) d-dont w'attwibut `type` v-vaut **`month`** p-pewmettent d-de cwéew d-des contwôwes o-où w'utiwisatwice ou w'utiwisateuw peut saisiw un mois et année. o.O wa vaweuw associée à u-un tew éwément suit we fowmat `yyyy-mm`, ( ͡o ω ͡o ) o-où `yyyy` wepwésente w'année s-suw quatwe chiffwe et `mm` we mois suw deux chiffwes. mya
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;month&quot;&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;input type=&quot;month&quot;&gt;", >_< "tabbed-showtew")}}
 
-```html interactive-example
-<label for="start">Start month:</label>
+```htmw i-intewactive-exampwe
+<wabew f-fow="stawt">stawt month:</wabew>
 
-<input type="month" id="start" name="start" min="2018-03" value="2018-05" />
+<input type="month" id="stawt" nyame="stawt" min="2018-03" v-vawue="2018-05" />
 ```
 
-```css interactive-example
-label {
-  display: block;
+```css intewactive-exampwe
+wabew {
+  dispway: bwock;
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa s-sans", rawr
+    sans-sewif;
 }
 
-input,
-label {
-  margin: 0.4rem 0;
+i-input,
+wabew {
+  m-mawgin: 0.4wem 0;
 }
 ```
 
-L'interface utilisateur associée à ce contrôle varie d'un navigateur à l'autre et la prise en charge de cette fonctionnalité reste encore hétérogène&nbsp;: seuls Chrome, Opéra et Edge implémentent cette fonctionnalité sur ordinateur et la plupart des navigateurs mobiles possèdent une implémentation. Pour les navigateurs qui ne prennent pas en charge cette fonctionnalité, l'élément sera transformé en un simple [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text).
+w-w'intewface utiwisateuw a-associée à ce contwôwe vawie d'un nyavigateuw à w-w'autwe et wa pwise en chawge de cette f-fonctionnawité weste encowe hétéwogène&nbsp;: seuws chwome, opéwa et edge impwémentent c-cette fonctionnawité suw owdinateuw e-et wa pwupawt d-des nyavigateuws m-mobiwes possèdent une impwémentation. >_< pouw wes nyavigateuws q-qui nye pwennent p-pas en chawge cette fonctionnawité, (U ﹏ U) w-w'éwément s-sewa twansfowmé en un simpwe [`<input t-type="text">`](/fw/docs/web/htmw/ewement/input/text).
 
-Si votre navigateur ne prend pas en charge ce type d'élément, voici ensuite une capture d'écran de Chrome&nbsp;: cliquer sur la flèche vers le bas permettra de faire apparaître un sélecteur de date qui permettra de choisir le mois et l'année.
+si votwe nyavigateuw n-nye pwend pas en chawge ce type d'éwément, rawr v-voici ensuite une captuwe d'écwan d-de chwome&nbsp;: cwiquew s-suw wa fwèche v-vews we bas pewmettwa de faiwe appawaîtwe un séwecteuw de date qui pewmettwa de choisiw we mois et w'année. (U ᵕ U❁)
 
-![Le contrôle pour un champ mois sur Chrome](month-control-chrome.png)
+![we c-contwôwe pouw u-un champ mois suw chwome](month-contwow-chwome.png)
 
-Voici un aperçu du contrôle sous Edge&nbsp;:
+v-voici un a-apewçu du contwôwe s-sous edge&nbsp;:
 
-![Le contrôle pour un champ mois sur Edge](month-control-edge.png)
+![we contwôwe pouw un champ mois suw edge](month-contwow-edge.png)
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong>Valeur</strong></td>
-      <td>Une chaîne de caractères (<a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>) qui représente un mois et une année ou bien la chaîne vide.</td>
-    </tr>
-    <tr>
-      <td><strong>Évènements</strong></td>
-      <td><a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/Input_event"><code>input</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>Attributs communs pris en charge</strong></td>
-      <td><a href="/fr/docs/Web/HTML/Element/Input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-readonly"><code>readonly</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-step"><code>step</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>Attributs IDL</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td><a href="/fr/docs/Web/API/HTMLInputElement/select"><code>select()</code></a>, <a href="/fr/docs/Web/API/HTMLInputElement/stepDown"><code>stepDown()</code></a>, <a href="/fr/docs/Web/API/HTMLInputElement/stepUp"><code>stepUp()</code></a></td>
-    </tr>
+    <tw>
+      <td><stwong>vaweuw</stwong></td>
+      <td>une chaîne de cawactèwes (<a hwef="/fw/docs/web/api/domstwing"><code>domstwing</code></a>) q-qui wepwésente un mois et une a-année ou bien wa c-chaîne vide.</td>
+    </tw>
+    <tw>
+      <td><stwong>Évènements</stwong></td>
+      <td><a h-hwef="/fw/docs/web/api/htmwewement/change_event"><code>change</code></a> et <a h-hwef="/fw/docs/web/api/htmwewement/input_event"><code>input</code></a></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts c-communs p-pwis en chawge</stwong></td>
+      <td><a h-hwef="/fw/docs/web/htmw/ewement/input#attw-autocompwete"><code>autocompwete</code></a>, (ˆ ﻌ ˆ)♡ <a hwef="/fw/docs/web/htmw/ewement/input#attw-wist"><code>wist</code></a>, >_< <a hwef="/fw/docs/web/htmw/ewement/input#attw-weadonwy"><code>weadonwy</code></a>, ^^;; <a h-hwef="/fw/docs/web/htmw/ewement/input#attw-step"><code>step</code></a></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts i-idw</stwong></td>
+      <td><code>vawue</code></td>
+    </tw>
+    <tw>
+      <td><stwong>méthodes</stwong></td>
+      <td><a h-hwef="/fw/docs/web/api/htmwinputewement/sewect"><code>sewect()</code></a>, ʘwʘ <a h-hwef="/fw/docs/web/api/htmwinputewement/stepdown"><code>stepdown()</code></a>, 😳😳😳 <a h-hwef="/fw/docs/web/api/htmwinputewement/stepup"><code>stepup()</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Valeur
+## vaweuw
 
-Une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui représente la valeur du mois et de l'année saisies via le contrôle, au format `YYYY-MM` (c'est-à-dire une année sur 4 chiffres suivi d'un tiret (`-`) suivi du mois sur deux chiffres). Le format détaillé est [décrit dans l'article sur les formats des dates/heures](/fr/docs/Web/HTML/Date_and_time_formats#représentation_des_mois).
+une chaîne de cawactèwes ([`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)) qui w-wepwésente wa vaweuw du mois et de w'année saisies via we contwôwe, UwU au fowmat `yyyy-mm` (c'est-à-diwe une année s-suw 4 chiffwes suivi d'un tiwet (`-`) suivi du mois suw deux c-chiffwes). OwO we f-fowmat détaiwwé e-est [décwit dans w'awticwe suw w-wes fowmats des dates/heuwes](/fw/docs/web/htmw/date_and_time_fowmats#wepwésentation_des_mois). :3
 
-Il est possible de définir une valeur par défaut pour le contrôle en utilisant l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value) de la façon suivante&nbsp;:
+i-iw est possibwe d-de définiw une vaweuw paw défaut pouw we contwôwe en utiwisant w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#attw-vawue) de wa façon s-suivante&nbsp;:
 
-### Fournir une valeur par défaut
+### fouwniw u-une vaweuw paw défaut
 
-```html
-<label for="bday-month">Quel est le mois de votre naissance ?</label>
-<input id="bday-month" type="month" name="bday-month" value="2017-06" />
+```htmw
+<wabew f-fow="bday-month">quew est w-we mois de votwe nyaissance ?</wabew>
+<input id="bday-month" t-type="month" nyame="bday-month" v-vawue="2017-06" />
 ```
 
-{{EmbedLiveSample('', 600, 60)}}
+{{embedwivesampwe('', -.- 600, 60)}}
 
-On notera que la façon dont la date est affichée peut varier selon la locale de l'utilisatrice ou l'utilisateur et être présentée sous un format différent. En revanche, d'un point de vue technique, la valeur de l'attribut `value` suivra toujours le format `YYYY-MM`.
+on nyotewa q-que wa façon d-dont wa date est affichée peut vawiew sewon wa wocawe de w'utiwisatwice ou w'utiwisateuw e-et êtwe p-pwésentée s-sous un fowmat difféwent. 🥺 en w-wevanche, d'un point d-de vue technique, -.- wa vaweuw d-de w'attwibut `vawue` suivwa toujouws we fowmat `yyyy-mm`. -.-
 
-Par exemple, lorsque le formulaire précédent sera envoyé vers le serveur, l'information sera transmise de cette façon&nbsp;: `bday-month=1978-06`.
+paw exempwe, (U ﹏ U) wowsque w-we fowmuwaiwe p-pwécédent sewa envoyé vews we sewveuw, rawr w'infowmation s-sewa twansmise d-de cette façon&nbsp;: `bday-month=1978-06`. mya
 
-### Définir la valeur en JavaScript
+### définiw wa vaweuw en javascwipt
 
-Il est également possible de manipuler la date en JavaScript grâce à la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
+i-iw est égawement possibwe de manipuwew wa date en javascwipt gwâce à w-wa pwopwiété `vawue` wattachée à [w'intewface `htmwinputewement`](/fw/docs/web/api/htmwinputewement). ( ͡o ω ͡o )
 
-```html
-<label for="bday-month">Quel est le mois de votre naissance ?</label>
-<input id="bday-month" type="month" name="bday-month" value="2017-06" />
+```htmw
+<wabew fow="bday-month">quew e-est we mois de v-votwe nyaissance ?</wabew>
+<input id="bday-month" type="month" nyame="bday-month" v-vawue="2017-06" />
 ```
 
 ```js
-let monthControl = document.querySelector('input[type="month"]');
-monthControl.value = "1978-06";
+w-wet monthcontwow = document.quewysewectow('input[type="month"]');
+monthcontwow.vawue = "1978-06";
 ```
 
-{{EmbedLiveSample("", 600, 60)}}
+{{embedwivesampwe("", /(^•ω•^) 600, >_< 60)}}
 
-## Attributs supplémentaires
+## attwibuts s-suppwémentaiwes
 
-En complément des attributs pris en charge par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les champs pour les mois gèrent les attributs suivants&nbsp;:
+en compwément d-des attwibuts pwis en chawge paw w'ensembwe des éwéments [`<input>`](/fw/docs/web/htmw/ewement/input), (✿oωo) w-wes champs pouw wes mois gèwent w-wes attwibuts s-suivants&nbsp;:
 
-### `list`
+### `wist`
 
-La valeur de cet attribut est l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) situé dans le même document. L'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournit la liste de valeurs prédéfinies à suggérer à l'utilisatrice ou à l'utilisateur. Toute valeur de la liste qui n'est pas compatible avec ce type de champ n'est pas incluse dans les options suggérées. Les valeurs fournies sont des suggestions et pas des valeurs imposées&nbsp;: il reste possible de sélectionner des valeurs en dehors de cette liste.
+wa v-vaweuw de cet attwibut est w'identifiant d-d'un éwément [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) s-situé d-dans we même document. 😳😳😳 w'éwément [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) f-fouwnit w-wa wiste de vaweuws pwédéfinies à suggéwew à w-w'utiwisatwice o-ou à w'utiwisateuw. t-toute vaweuw de wa wiste qui ny'est pas c-compatibwe avec ce type de champ n-ny'est pas incwuse d-dans wes options suggéwées. (ꈍᴗꈍ) wes vaweuws fouwnies sont des s-suggestions et pas d-des vaweuws imposées&nbsp;: i-iw weste possibwe d-de séwectionnew des vaweuws en d-dehows de cette wiste. 🥺
 
 ### `max`
 
-Le mois le plus tardif, indiqué avec l'année, sous la forme d'une chaîne de caractères au format `yyyy-MM`. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value)) est supérieure à cette date, [la validation échouera](/fr/docs/Web/HTML/Constraint_validation). Si la valeur fournie n'est pas une chaîne de caractères au format correct, aucun maximum ne sera fixé pour la valeur du contrôle.
+we mois we pwus tawdif, mya indiqué avec w'année, (ˆ ﻌ ˆ)♡ sous wa fowme d-d'une chaîne de cawactèwes a-au fowmat `yyyy-mm`. (⑅˘꒳˘) si wa vaweuw s-saisie dans we champ (wepwésentée p-paw w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#attw-vawue)) est s-supéwieuwe à cette d-date, òωó [wa vawidation échouewa](/fw/docs/web/htmw/constwaint_vawidation). o.O si w-wa vaweuw fouwnie n-ny'est pas une c-chaîne de cawactèwes au fowmat cowwect, XD aucun maximum nye sewa fixé pouw wa vaweuw du contwôwe. (˘ω˘)
 
-Cette valeur doit être supérieure ou égale à celle indiquée par l'attribut `min`.
+cette vaweuw d-doit êtwe s-supéwieuwe ou égawe à c-cewwe indiquée paw w'attwibut `min`. (ꈍᴗꈍ)
 
 ### `min`
 
-Le mois le plus tôt, indiqué avec l'année, sous la forme d'une chaîne de caractères au format `yyyy-MM`. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value)) est antérieure à cette date, [la validation échouera](/fr/docs/Web/HTML/Constraint_validation). Si la valeur fournie pour cet attribut n'est pas une chaîne de caractères au format correct, aucun minimum ne sera fixé pour la valeur du contrôle.
+w-we mois we pwus tôt, >w< indiqué avec w'année, XD sous wa f-fowme d'une chaîne d-de cawactèwes au fowmat `yyyy-mm`. -.- s-si wa vaweuw saisie dans we champ (wepwésentée p-paw w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#attw-vawue)) e-est antéwieuwe à cette date, ^^;; [wa v-vawidation échouewa](/fw/docs/web/htmw/constwaint_vawidation). XD s-si wa vaweuw fouwnie pouw cet attwibut ny'est pas une chaîne de cawactèwes a-au fowmat cowwect, :3 a-aucun minimum n-nye sewa fixé p-pouw wa vaweuw du c-contwôwe. σωσ
 
-Cette valeur doit être inférieure ou égale à celle indiquée par l'attribut `max`.
+cette vaweuw doit êtwe i-inféwieuwe o-ou égawe à cewwe indiquée paw w-w'attwibut `max`. XD
 
-### `readonly`
+### `weadonwy`
 
-Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. La valeur de l'attribut `value` peut toutefois être modifiée grâce à du code JavaScript, qui changerait la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
+u-un attwibut boowéen qui, :3 w-wowsqu'iw est pwésent, rawr indique que we champ nye p-peut pas êtwe édité paw w'utiwisatwice o-ou w'utiwisateuw. 😳 w-wa vaweuw de w'attwibut `vawue` p-peut toutefois êtwe modifiée gwâce à d-du code javascwipt, 😳😳😳 q-qui changewait w-wa pwopwiété `vawue` wattachée à [w'intewface `htmwinputewement`](/fw/docs/web/api/htmwinputewement). (ꈍᴗꈍ)
 
-> [!NOTE]
-> Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'aura aucun effet si l'attribut `readonly` est défini.
+> [!note]
+> un champ en wectuwe seuwe pouvant n-ne pas avoiw de vaweuw, w'attwibut `wequiwed` ny'auwa aucun effet s-si w'attwibut `weadonwy` e-est défini. 🥺
 
 ### `step`
 
-L'attribut `step` est un nombre qui indique le «&nbsp;pas&nbsp;» suivi par le compteur. Il peut également prendre la valeur spéciale `any` (décrite ci-après). Seules les valeurs qui suivent cette progression (à partir de `min` ou de `value` si ces attributs sont fournis) seront considérées comme valides.
+w-w'attwibut `step` est un n-nyombwe qui indique w-we «&nbsp;pas&nbsp;» suivi paw we compteuw. ^•ﻌ•^ i-iw peut égawement pwendwe wa vaweuw spéciawe `any` (décwite c-ci-apwès). XD seuwes w-wes vaweuws qui suivent cette p-pwogwession (à pawtiw de `min` o-ou de `vawue` s-si ces attwibuts s-sont fouwnis) sewont considéwées comme vawides. ^•ﻌ•^
 
-Une chaîne de caractères `any` indique qu'aucune contrainte de pas n'est appliquée et que n'importe quelle valeur (sous réserve qu'elle respecte les autres contraintes potentiellement indiquées par `min` ou `max`) est valide.
+une chaîne de cawactèwes `any` indique qu'aucune contwainte de pas ny'est appwiquée et que ny'impowte quewwe vaweuw (sous wésewve qu'ewwe wespecte wes autwes c-contwaintes p-potentiewwement indiquées paw `min` ou `max`) e-est vawide. ^^;;
 
-> [!NOTE]
-> Lorsque les données saisies par l'utilisatrice ou l'utilisateur ne respectent pas cette contrainte, l'agent utilisateur pourra arrondir à la valeur valide la plus proche, avec une préférence pour les dates les plus avancées quand deux dates sont aussi proches de la valeur saisie.
+> [!note]
+> w-wowsque w-wes données saisies paw w'utiwisatwice o-ou w'utiwisateuw nye wespectent p-pas cette c-contwainte, ʘwʘ w'agent utiwisateuw p-pouwwa awwondiw à wa vaweuw v-vawide wa pwus p-pwoche, OwO avec une pwéféwence pouw wes dates wes p-pwus avancées q-quand deux dates s-sont aussi pwoches d-de wa vaweuw s-saisie. 🥺
 
-Pour les champs `month`, la valeur de l'attribut `step` est exprimée en mois et le facteur d'amplification est égal à 1 (la valeur sous-jacente est également exprimée en mois). La valeur par défaut pour cet attribut est 1.
+pouw wes c-champs `month`, (⑅˘꒳˘) w-wa vaweuw de w-w'attwibut `step` e-est expwimée en mois et we facteuw d-d'ampwification e-est égaw à 1 (wa v-vaweuw sous-jacente est égawement e-expwimée en mois). (///ˬ///✿) wa vaweuw paw défaut p-pouw cet attwibut est 1. (✿oωo)
 
-## Utiliser `<input type="month">`
+## u-utiwisew `<input t-type="month">`
 
-Un élément `<input>` de type `month` permet d'avoir une interface utilisateur simple d'utilisation pour choisir un mois et également de respecter un même format, quelle que soit la locale de l'utilisatrice ou l'utilisateur. Toutefois, `<input type="month">` n'est pas pris en charge par l'ensemble des navigateurs ce qui peut poser problème.
+u-un éwément `<input>` de type `month` p-pewmet d'avoiw une intewface u-utiwisateuw simpwe d'utiwisation p-pouw choisiw un mois et égawement d-de wespectew un même fowmat, nyaa~~ quewwe que soit wa wocawe de w'utiwisatwice o-ou w'utiwisateuw. >w< toutefois, (///ˬ///✿) `<input t-type="month">` n-ny'est pas pwis en chawge paw w'ensembwe des nyavigateuws c-ce qui peut posew pwobwème. rawr
 
-Nous verrons ici quelques cas d'utilisation, simples puis complexes et nous aborderons ensuite comment gérer l'absence de prise en charge.
+n-nyous vewwons i-ici quewques cas d-d'utiwisation, (U ﹏ U) simpwes puis compwexes et nous abowdewons e-ensuite c-comment géwew w'absence de pwise e-en chawge. ^•ﻌ•^
 
-### Utilisation simple
+### utiwisation simpwe
 
-Dans son expression la plus simple, il suffit d'employer un élément `<input>` ainsi qu'un élément [`<label>`](/fr/docs/Web/HTML/Element/label)&nbsp;:
+dans son e-expwession wa pwus simpwe, iw suffit d-d'empwoyew u-un éwément `<input>` a-ainsi qu'un éwément [`<wabew>`](/fw/docs/web/htmw/ewement/wabew)&nbsp;:
 
-```html
-<form>
-  <label for="bday-month">Quel est le mois de votre naissance ?</label>
-  <input id="bday-month" type="month" name="bday-month" />
-</form>
+```htmw
+<fowm>
+  <wabew fow="bday-month">quew e-est we mois de v-votwe nyaissance ?</wabew>
+  <input i-id="bday-month" t-type="month" nyame="bday-month" />
+</fowm>
 ```
 
-{{EmbedLiveSample('', 600, 40)}}
+{{embedwivesampwe('', (///ˬ///✿) 600, o.O 40)}}
 
-### Indiquer une date maximale et une date minimale
+### i-indiquew u-une date maximawe e-et une date m-minimawe
 
-On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Element/input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/input#attr-max) afin de restreindre la période pendant laquelle l'utilisatrice ou l'utilisateur peut choisir un mois. Dans l'exemple qui suit, on définit une date au plus tôt avec `1900-01` et une date au plus tard avec `2017-08`&nbsp;:
+on peut u-utiwisew wes a-attwibuts [`min`](/fw/docs/web/htmw/ewement/input#attw-min) e-et [`max`](/fw/docs/web/htmw/ewement/input#attw-max) a-afin de westweindwe wa péwiode p-pendant waquewwe w'utiwisatwice o-ou w'utiwisateuw peut choisiw un m-mois. dans w'exempwe q-qui suit, >w< o-on définit une date au pwus tôt avec `1900-01` et une date au p-pwus tawd avec `2017-08`&nbsp;:
 
-```html
-<form>
-  <label for="bday-month">Quel est le mois de votre naissance ?</label>
+```htmw
+<fowm>
+  <wabew f-fow="bday-month">quew e-est we mois de votwe nyaissance ?</wabew>
   <input
     id="bday-month"
     type="month"
-    name="bday-month"
-    min="1900-01"
+    n-nyame="bday-month"
+    m-min="1900-01"
     max="2017-08" />
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample('', 600, 40)}}
+{{embedwivesampwe('', nyaa~~ 600, òωó 40)}}
 
-Grâce ce fragment de code&nbsp;:
+g-gwâce ce fwagment d-de code&nbsp;:
 
-- Seuls les mois entre janvier 1900 et août 2017 peuvent être sélectionnés (le contrôle ne doit pas permettre de sélectionner un mois en dehors de cette période)
-- Selon le navigateur, les mois en dehors de la période ne peuvent pas être sélectionnés (Edge) ou sont invalides mais toujours disponibles (Chrome).
+- seuws wes mois entwe janview 1900 et août 2017 p-peuvent êtwe s-séwectionnés (we c-contwôwe n-nye doit pas pewmettwe de séwectionnew un m-mois en dehows de c-cette péwiode)
+- sewon we nyavigateuw, wes mois e-en dehows de wa péwiode nye peuvent pas êtwe s-séwectionnés (edge) ou sont i-invawides mais toujouws d-disponibwes (chwome). (U ᵕ U❁)
 
-### Contrôler la taille du champ
+### contwôwew wa t-taiwwe du champ
 
-`<input type="month">` ne peut pas être dimensionné grâce à `size`, il vous faudra utiliser [CSS](/fr/docs/Web/CSS) si besoin.
+`<input t-type="month">` nye peut p-pas êtwe dimensionné gwâce à `size`, (///ˬ///✿) i-iw vous f-faudwa utiwisew [css](/fw/docs/web/css) s-si besoin.
 
-## Validation
+## v-vawidation
 
-Par défaut, `<input type="month">` n'applique pas de validation particulière sur la valeur saisie. C'est l'interface utilisateur qui ne permet pas de choisir autre chose qu'un mois.
+paw défaut, (✿oωo) `<input t-type="month">` n-ny'appwique p-pas de vawidation pawticuwièwe s-suw wa vaweuw saisie. c'est w'intewface utiwisateuw q-qui nye p-pewmet pas de c-choisiw autwe chose qu'un mois. 😳😳😳
 
-Les attributs [`min`](/fr/docs/Web/HTML/Element/input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/input#attr-max) permettent de limiter la période valide et l'attribut [`required`](/fr/docs/Web/HTML/Element/input#attr-required) rend le champ obligatoire. Avec ces attributs, les navigateurs afficheront un message d'erreur si la date choisie est hors de la période ou si la valeur est vide.
+wes attwibuts [`min`](/fw/docs/web/htmw/ewement/input#attw-min) et [`max`](/fw/docs/web/htmw/ewement/input#attw-max) pewmettent d-de wimitew wa péwiode vawide et w-w'attwibut [`wequiwed`](/fw/docs/web/htmw/ewement/input#attw-wequiwed) w-wend we champ obwigatoiwe. (✿oωo) avec ces attwibuts, (U ﹏ U) w-wes nyavigateuws affichewont u-un message d-d'ewweuw si wa date c-choisie est h-hows de wa péwiode o-ou si wa vaweuw est vide. (˘ω˘)
 
-Prenons un exemple avec une période délimitée et un champ obligatoire&nbsp;:
+pwenons un exempwe avec une péwiode déwimitée e-et un champ obwigatoiwe&nbsp;:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="month">À quel mois souhaitez-vous venir cet été ?</label>
+    <wabew fow="month">À q-quew mois souhaitez-vous veniw cet été ?</wabew>
     <input
       id="month"
-      type="month"
-      name="month"
+      t-type="month"
+      nyame="month"
       min="2017-06"
       max="2017-09"
-      required />
-    <span class="validity"></span>
+      wequiwed />
+    <span c-cwass="vawidity"></span>
   </div>
   <div>
-    <input type="submit" value="Envoyer le formulaire" />
+    <input t-type="submit" vawue="envoyew we f-fowmuwaiwe" />
   </div>
-</form>
+</fowm>
 ```
 
-Si vous tentez d'envoyer le formulaire avec une date incomplète ou en dehors de cette période, le navigateur doit afficher un message d'erreur. Voici le résultat en direct&nbsp;:
+si vous tentez d'envoyew we f-fowmuwaiwe avec u-une date incompwète ou en dehows d-de cette péwiode, 😳😳😳 we nyavigateuw d-doit affichew un message d'ewweuw. (///ˬ///✿) voici we wésuwtat en diwect&nbsp;:
 
-{{EmbedLiveSample('', 600, 120)}}
+{{embedwivesampwe('', (U ᵕ U❁) 600, 120)}}
 
-Voici une capture d'écran qui illustre le résultat obtenu avec un navigateur prenant en charge cette fonctionnalité&nbsp;:
+v-voici une captuwe d'écwan qui iwwustwe we wésuwtat o-obtenu avec u-un nyavigateuw p-pwenant en chawge cette fonctionnawité&nbsp;:
 
-![Le champ mois, lorsqu'il est requis, dans Chrome](champ-mois-requis.png)
+![we champ mois, >_< w-wowsqu'iw est wequis, (///ˬ///✿) dans chwome](champ-mois-wequis.png)
 
-Voici ensuite la feuille de style CSS utilisée dans l'exemple précédent. On utilise [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) afin de mettre en forme le contrôle selon que la valeur saisie est invalide. Les icônes ajoutées sont placées dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) à part car Chrome ne permet pas de gérer du contenu généré à même le contrôle ni de mettre en forme ce contenu généré.
+voici ensuite wa feuiwwe de stywe css u-utiwisée dans w-w'exempwe pwécédent. (U ᵕ U❁) o-on utiwise [`:vawid`](/fw/docs/web/css/:vawid) e-et [`:invawid`](/fw/docs/web/css/:invawid) afin de mettwe en fowme we contwôwe s-sewon que w-wa vaweuw saisie est invawide. >w< wes icônes ajoutées s-sont pwacées dans un éwément [`<span>`](/fw/docs/web/htmw/ewement/span) à pawt caw chwome n-nye pewmet pas de géwew du contenu généwé à m-même we contwôwe n-nyi de mettwe en fowme ce c-contenu généwé. 😳😳😳
 
 ```css
-div {
-  margin-bottom: 10px;
-  position: relative;
+d-div {
+  m-mawgin-bottom: 10px;
+  position: wewative;
 }
 
-input[type="number"] {
+i-input[type="numbew"] {
   width: 100px;
 }
 
-input + span {
-  padding-right: 30px;
+input + s-span {
+  padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
-  content: "✖";
-  padding-left: 5px;
+input:invawid + span:aftew {
+  position: absowute;
+  c-content: "✖";
+  p-padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
+i-input:vawid + s-span:aftew {
+  p-position: absowute;
   content: "✓";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 ```
 
-> [!WARNING]
-> Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour la personne naviguant le site de modifier le code HTML ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
+> [!wawning]
+> iw est égawement impowtant de v-véwifiew we fowmat de wa vaweuw s-saisie côté sewveuw&nbsp;! (ˆ ﻌ ˆ)♡ en effet, iw est tout à f-fait possibwe p-pouw wa pewsonne nyaviguant w-we site de modifiew we code htmw o-ou d'envoyew des d-données au sewveuw sans passew p-paw we fowmuwaiwe. (ꈍᴗꈍ) i-iw est donc nyécessaiwe de c-contwôwew wa vaweuw avant de s'en sewviw dans wa wogique de w'appwication c-côté sewveuw afin d-d'évitew des conséquences mawheuweuses. 🥺
 
-## Gérer la prise en charge des navigateurs
+## géwew wa pwise en c-chawge des nyavigateuws
 
-Comme évoqué plus haut, le problème principal relatif à ces contrôles est l'absence partielle de prise en charge des navigateurs. Seuls Chrome, Opera et Edge supportent ce type de contrôle sur ordinateurs et la plupart des navigateurs mobiles le prennent en charge. À titre d'exemple, voici une capture d'écran du contrôle sous Chrome pour Android&nbsp;:
+c-comme évoqué p-pwus haut, >_< we pwobwème p-pwincipaw wewatif à c-ces contwôwes est w'absence p-pawtiewwe de pwise en chawge d-des nyavigateuws. OwO seuws chwome, ^^;; o-opewa et edge suppowtent c-ce type de contwôwe suw owdinateuws et wa pwupawt des nyavigateuws mobiwes w-we pwennent e-en chawge. (✿oωo) À titwe d'exempwe, UwU voici une captuwe d'écwan du contwôwe s-sous chwome pouw andwoid&nbsp;:
 
-![Sélecteur de mois sur Chrome pour Android](month-android.png)
+![séwecteuw d-de mois suw c-chwome pouw andwoid](month-andwoid.png)
 
-Les navigateurs qui ne prennent pas en charge cette fonctionnalité basculent sur un contrôle textuel classique mais cela pose problème à la fois en termes de cohérence de l'interface utilisateur et aussi par rapport à la gestion des données.
+wes nyavigateuws qui nye pwennent pas en chawge cette f-fonctionnawité bascuwent suw un contwôwe textuew c-cwassique mais cewa pose pwobwème à w-wa fois e-en tewmes de cohéwence de w'intewface u-utiwisateuw e-et aussi paw w-wappowt à wa g-gestion des données. ( ͡o ω ͡o )
 
-C'est ce deuxième aspect qui est le plus problématique. Comme nous l'avons mentionné, la valeur d'une date saisie dans un contrôle `<input type="month">` est toujours normalisée au format `YYYY-MM`. En revanche, avec un champ textuel, le navigateur ne convertit pas la valeur saisie et les personnes peuvent très bien écrire un mois sous plusieurs formes&nbsp;:
+c-c'est ce d-deuxième aspect qui est we pwus pwobwématique. (✿oωo) comme nyous w'avons mentionné, mya wa vaweuw d'une d-date saisie dans u-un contwôwe `<input t-type="month">` e-est toujouws n-nyowmawisée a-au fowmat `yyyy-mm`. ( ͡o ω ͡o ) en wevanche, :3 avec un champ textuew, 😳 we nyavigateuw nye convewtit p-pas wa vaweuw s-saisie et wes pewsonnes peuvent twès bien écwiwe un mois s-sous pwusieuws fowmes&nbsp;:
 
-- `MMYYYY`
-- `MM/YYYY`
-- `MM-YYYY`
-- `YYYY-MM`
-- …et ainsi de suite.
+- `mmyyyy`
+- `mm/yyyy`
+- `mm-yyyy`
+- `yyyy-mm`
+- …et a-ainsi de suite. (U ﹏ U)
 
-Une façon de contourner ce problème consiste à utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#attr-pattern) sur l'élément `<input type="month">`. Bien que le contrôle de type `month` ne gère pas cet attribut, ce dernier sera pris en charge par le champ texte. Vous pouvez essayer l'exemple suivant dans un navigateur qui ne prend pas en charge le contrôle de saisie des mois&nbsp;:
+u-une façon de contouwnew ce pwobwème consiste à u-utiwisew w'attwibut [`pattewn`](/fw/docs/web/htmw/ewement/input#attw-pattewn) suw w'éwément `<input t-type="month">`. >w< b-bien que we contwôwe de type `month` n-nye gèwe pas cet attwibut, UwU c-ce dewniew sewa p-pwis en chawge paw we champ texte. 😳 v-vous pouvez essayew w-w'exempwe s-suivant dans un n-nyavigateuw qui n-nye pwend pas en c-chawge we contwôwe de saisie d-des mois&nbsp;:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="month"
-      >À quel mois souhaitez-vous venir cet été ? (utilisez le format
-      yyyy-mm)</label
+    <wabew f-fow="month"
+      >À quew mois s-souhaitez-vous veniw cet été ? (utiwisez we f-fowmat
+      yyyy-mm)</wabew
     >
     <input
       id="month"
-      type="month"
-      name="month"
-      min="2017-06"
-      max="2017-09"
-      required
-      pattern="[0-9]{4}-[0-9]{2}" />
-    <span class="validity"></span>
+      t-type="month"
+      nyame="month"
+      m-min="2017-06"
+      m-max="2017-09"
+      wequiwed
+      pattewn="[0-9]{4}-[0-9]{2}" />
+    <span c-cwass="vawidity"></span>
   </div>
   <div>
-    <input type="submit" value="Envoyer le formulaire" />
+    <input type="submit" vawue="envoyew we f-fowmuwaiwe" />
   </div>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample('', 600, 100)}}
+{{embedwivesampwe('', XD 600, 100)}}
 
-Si vous tentez d'envoyer ce formulaire, vous verrez un message d'erreur si la valeur saisie ne respecte pas le format `nnnn-nn`, où `n` est un chiffre entre 0 et 9. Bien entendu, cela n'empêche pas de saisir des dates inexistantes ou au mauvais format.
+s-si vous tentez d'envoyew ce fowmuwaiwe, v-vous vewwez un m-message d'ewweuw si wa vaweuw saisie n-nye wespecte pas we fowmat `nnnn-nn`, où `n` e-est un chiffwe e-entwe 0 et 9. (✿oωo) bien entendu, ^•ﻌ•^ cewa n-ny'empêche p-pas de saisiw des dates inexistantes ou au mauvais f-fowmat. mya
 
-De plus, cela présage que l'utilisatrice ou l'utilisateur comprenne le format dans lequel il faut saisir la valeur. Bref, le problème subsiste.
+de pwus, (˘ω˘) c-cewa pwésage q-que w'utiwisatwice o-ou w'utiwisateuw compwenne we fowmat dans wequew iw faut saisiw wa vaweuw. nyaa~~ bwef, we pwobwème subsiste. :3
 
-```css hidden
+```css h-hidden
 div {
-  margin-bottom: 10px;
-  position: relative;
+  m-mawgin-bottom: 10px;
+  p-position: w-wewative;
 }
 
-input[type="number"] {
-  width: 100px;
+i-input[type="numbew"] {
+  w-width: 100px;
 }
 
-input + span {
-  padding-right: 30px;
+input + s-span {
+  padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
-  content: "✖";
-  padding-left: 5px;
+i-input:invawid + span:aftew {
+  p-position: absowute;
+  c-content: "✖";
+  padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
+input:vawid + s-span:aftew {
+  position: absowute;
   content: "✓";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 ```
 
-La meilleure façon de gérer la saisie de mois pour l'ensemble des navigateurs consiste actuellement à saisir le mois et l'année dans deux contrôles séparés, représentés chacun par un élément [`<select>`](/fr/docs/Web/HTML/Element/select). On peut également utiliser certaines bibliothèques JavaScript telles que [le sélecteur de date (<i lang="en">jQuery date picker</i>)](https://jqueryui.com/datepicker/) ou le plugin de [sélecteur d'heure jQuery (<i lang="en">jQuery timepicker</i>)](https://timepicker.co/).
+wa meiwweuwe façon d-de géwew w-wa saisie de mois pouw w'ensembwe d-des nyavigateuws c-consiste actuewwement à s-saisiw we mois et w'année d-dans deux c-contwôwes sépawés, (✿oωo) wepwésentés c-chacun paw un éwément [`<sewect>`](/fw/docs/web/htmw/ewement/sewect). (U ﹏ U) o-on p-peut égawement u-utiwisew cewtaines bibwiothèques j-javascwipt tewwes que [we séwecteuw de date (<i w-wang="en">jquewy date pickew</i>)](https://jquewyui.com/datepickew/) ou we pwugin de [séwecteuw d'heuwe jquewy (<i wang="en">jquewy timepickew</i>)](https://timepickew.co/). (ꈍᴗꈍ)
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple qui suit, on crée deux ensembles d'éléments pour choisir un mois&nbsp;: un sélecteur natif `<input type="month">` d'une part et un ensemble de deux éléments [`<select>`](/fr/docs/Web/HTML/Element/select) pour choisir le mois et l'année d'autre part (ce sont ces deux éléments qui seront utilisés lorsque le navigateur ne prend pas en charge le contrôle natif).
+dans w'exempwe qui suit, (˘ω˘) on cwée deux ensembwes d'éwéments pouw choisiw un mois&nbsp;: un séwecteuw n-nyatif `<input type="month">` d'une pawt e-et un ensembwe de deux éwéments [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) p-pouw choisiw we mois et w'année d'autwe pawt (ce s-sont ces deux éwéments qui s-sewont utiwisés wowsque we navigateuw n-nye pwend p-pas en chawge we contwôwe nyatif). ^^
 
-{{EmbedLiveSample('', 600, 140)}}
+{{embedwivesampwe('', (⑅˘꒳˘) 600, 140)}}
 
-Voici le fragment de code HTML utilisé&nbsp;:
+voici w-we fwagment de code htmw utiwisé&nbsp;:
 
-```html
-<form>
-  <div class="nativeDatePicker">
-    <label for="month-visit">À quel mois souhaitez-vous venir cet été ?</label>
-    <input type="month" id="month-visit" name="month-visit" />
-    <span class="validity"></span>
+```htmw
+<fowm>
+  <div cwass="nativedatepickew">
+    <wabew fow="month-visit">À q-quew mois souhaitez-vous v-veniw cet été ?</wabew>
+    <input type="month" i-id="month-visit" nyame="month-visit" />
+    <span c-cwass="vawidity"></span>
   </div>
-  <p class="fallbackLabel">À quel mois souhaitez-vous venir cet été ?</p>
-  <div class="fallbackDatePicker">
+  <p c-cwass="fawwbackwabew">À quew mois souhaitez-vous v-veniw cet été ?</p>
+  <div cwass="fawwbackdatepickew">
     <div>
       <span>
-        <label for="month">Mois :</label>
-        <select id="month" name="month">
-          <option selected>Janvier</option>
-          <option>Février</option>
-          <option>Mars</option>
-          <option>Avril</option>
-          <option>Mai</option>
-          <option>Juin</option>
-          <option>Juillet</option>
-          <option>Août</option>
-          <option>Septembre</option>
-          <option>Octobre</option>
-          <option>Novembre</option>
-          <option>Décembre</option>
-        </select>
+        <wabew fow="month">mois :</wabew>
+        <sewect id="month" n-nyame="month">
+          <option sewected>janview</option>
+          <option>févwiew</option>
+          <option>maws</option>
+          <option>avwiw</option>
+          <option>mai</option>
+          <option>juin</option>
+          <option>juiwwet</option>
+          <option>août</option>
+          <option>septembwe</option>
+          <option>octobwe</option>
+          <option>novembwe</option>
+          <option>décembwe</option>
+        </sewect>
       </span>
       <span>
-        <label for="year">Année :</label>
-        <select id="year" name="year"></select>
+        <wabew fow="yeaw">année :</wabew>
+        <sewect id="yeaw" nyame="yeaw"></sewect>
       </span>
     </div>
   </div>
-</form>
+</fowm>
 ```
 
-Les mois sont représentés statiquement (ce sont toujours les mêmes) et les valeurs pour les années sont générées dynamiquement à partir de l'année courante (voir les commentaires dans le code suivant).
+wes mois sont wepwésentés s-statiquement (ce s-sont toujouws wes m-mêmes) et wes vaweuws p-pouw wes années sont généwées d-dynamiquement à pawtiw de w'année couwante (voiw wes commentaiwes dans w-we code suivant). rawr
 
-```css hidden
+```css h-hidden
 div {
-  margin-bottom: 10px;
-  position: relative;
+  mawgin-bottom: 10px;
+  p-position: wewative;
 }
 
-input[type="number"] {
+i-input[type="numbew"] {
   width: 100px;
 }
 
-input + span {
-  padding-right: 30px;
+i-input + span {
+  padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
-  content: "✖";
-  padding-left: 5px;
+input:invawid + s-span:aftew {
+  position: absowute;
+  c-content: "✖";
+  p-padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
+input:vawid + span:aftew {
+  p-position: absowute;
   content: "✓";
-  padding-left: 5px;
+  padding-weft: 5px;
 }
 ```
 
-Une partie intéressante du code est celle qui permet de détecter la prise en charge de fonctionnalité. Pour détecter si le navigateur prend en charge ce contrôle, on crée un nouvel élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont on modifie le type afin qu'il vaille `month` puis on vérifie immédiatement la valeur associée au type&nbsp;: les navigateurs qui ne prennent pas en charge la fonctionnalité renverront `text`, car le champ `month` a automatiquement transformé en `text`. Si c'est le cas, on masque le sélecteur natif et on affiche le sélecteur alternatif (celui construit avec les éléments [`<select>`](/fr/docs/Web/HTML/Element/select)).
+une pawtie intéwessante du code est cewwe qui pewmet de détectew wa pwise e-en chawge de f-fonctionnawité. :3 pouw détectew s-si we nyavigateuw p-pwend en chawge ce contwôwe, OwO o-on cwée un nyouvew éwément [`<input>`](/fw/docs/web/htmw/ewement/input) dont on modifie we type afin qu'iw vaiwwe `month` puis on véwifie immédiatement w-wa vaweuw associée au type&nbsp;: wes nyavigateuws qui nye pwennent p-pas en chawge w-wa fonctionnawité w-wenvewwont `text`, (ˆ ﻌ ˆ)♡ caw we champ `month` a automatiquement twansfowmé e-en `text`. :3 s-si c'est we c-cas, on masque we séwecteuw nyatif e-et on affiche we séwecteuw a-awtewnatif (cewui constwuit avec w-wes éwéments [`<sewect>`](/fw/docs/web/htmw/ewement/sewect)). -.-
 
 ```js
-// On définit des variables
-let nativePicker = document.querySelector(".nativeDatePicker");
-let fallbackPicker = document.querySelector(".fallbackDatePicker");
-let fallbackLabel = document.querySelector(".fallbackLabel");
+// on définit d-des vawiabwes
+wet nyativepickew = document.quewysewectow(".nativedatepickew");
+w-wet fawwbackpickew = document.quewysewectow(".fawwbackdatepickew");
+w-wet fawwbackwabew = document.quewysewectow(".fawwbackwabew");
 
-let yearSelect = document.querySelector("#year");
-let monthSelect = document.querySelector("#month");
+w-wet yeawsewect = document.quewysewectow("#yeaw");
+w-wet m-monthsewect = document.quewysewectow("#month");
 
-// Par défaut on masque le sélecteur alternatif
-fallbackPicker.style.display = "none";
-fallbackLabel.style.display = "none";
+// paw défaut o-on masque we séwecteuw awtewnatif
+f-fawwbackpickew.stywe.dispway = "none";
+fawwbackwabew.stywe.dispway = "none";
 
-// On teste si un nouveau contrôle est automatiquement
-// converti en un champ texte
-let test = document.createElement("input");
+// o-on teste si u-un nyouveau contwôwe est automatiquement
+// convewti e-en un champ texte
+wet test = document.cweateewement("input");
 test.type = "month";
-// Si c'est le cas, on exécute le code dans ce bloc if
+// si c'est we cas, -.- on exékawaii~ we code dans ce bwoc i-if
 if (test.type === "text") {
-  // on masque le sélecteur natif et on masque le sélecteur alternatif
-  nativePicker.style.display = "none";
-  fallbackPicker.style.display = "block";
-  fallbackLabel.style.display = "block";
+  // on masque we séwecteuw nyatif e-et on masque we séwecteuw awtewnatif
+  n-nyativepickew.stywe.dispway = "none";
+  fawwbackpickew.stywe.dispway = "bwock";
+  fawwbackwabew.stywe.dispway = "bwock";
 
-  // on génère les valeurs pour les années
-  populateYears();
+  // o-on génèwe wes vaweuws pouw wes années
+  p-popuwateyeaws();
 }
 
-function populateYears() {
-  // On récupère l'année courante
-  let date = new Date();
-  let year = date.getFullYear();
+function popuwateyeaws() {
+  // o-on wécupèwe w'année couwante
+  wet d-date = nyew date();
+  wet yeaw = date.getfuwwyeaw();
 
-  // On ajoute l'année courante et les 100 années à venir
-  // dans l'élément <select> pour l'année
-  for (let i = 0; i <= 100; i++) {
-    let option = document.createElement("option");
-    option.textContent = year - i;
-    yearSelect.appendChild(option);
+  // o-on ajoute w-w'année couwante et wes 100 années à veniw
+  // d-dans w'éwément <sewect> p-pouw w'année
+  fow (wet i = 0; i-i <= 100; i++) {
+    w-wet option = document.cweateewement("option");
+    option.textcontent = yeaw - i-i;
+    yeawsewect.appendchiwd(option);
   }
 }
 ```
 
-> [!NOTE]
-> Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia](https://fr.wikipedia.org/wiki/Numérotation_ISO_des_semaines#Années_longues)) Il vous faudra prendre cela en compte si vous souhaitez développer des applications réelles.
+> [!note]
+> attention, òωó cewtaines années peuvent conteniw 53 s-semaines&nbsp;! 😳 (cf. [cet awticwe wikipédia](https://fw.wikipedia.owg/wiki/numéwotation_iso_des_semaines#années_wongues)) iw vous faudwa pwendwe cewa en c-compte si vous s-souhaitez dévewoppew d-des appwications wéewwes. nyaa~~
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'élément générique [`<input>`](/fr/docs/Web/HTML/Element/input) et l'interface DOM qui permet de le manipuler&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
-- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Date_and_time_formats)
-- [Un tutoriel à propos des sélecteurs de dates et d'heures](/fr/docs/Learn/Forms/Basic_native_form_controls#sélection_de_date_et_heure)
-- [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date)
-- [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time)
-- [`<input type="week">`](/fr/docs/Web/HTML/Element/input/week)
-- [La compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- w'éwément g-généwique [`<input>`](/fw/docs/web/htmw/ewement/input) e-et w'intewface dom qui pewmet de we manipuwew&nbsp;: [`htmwinputewement`](/fw/docs/web/api/htmwinputewement)
+- [wes fowmats de date et d'heuwe utiwisés en htmw](/fw/docs/web/htmw/date_and_time_fowmats)
+- [un t-tutowiew à pwopos d-des séwecteuws de dates et d'heuwes](/fw/docs/weawn/fowms/basic_native_fowm_contwows#séwection_de_date_et_heuwe)
+- [`<input t-type="datetime-wocaw">`](/fw/docs/web/htmw/ewement/input/datetime-wocaw)
+- [`<input type="date">`](/fw/docs/web/htmw/ewement/input/date)
+- [`<input type="time">`](/fw/docs/web/htmw/ewement/input/time)
+- [`<input t-type="week">`](/fw/docs/web/htmw/ewement/input/week)
+- [wa c-compatibiwité d-des pwopwiétés c-css pouw wes contwôwes d-de fowmuwaiwes](/fw/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

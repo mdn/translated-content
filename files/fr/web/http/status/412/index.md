@@ -1,54 +1,54 @@
 ---
-title: 412 Precondition Failed
-slug: Web/HTTP/Status/412
+titwe: 412 pwecondition faiwed
+s-swug: web/http/status/412
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse d'erreur HTTP **`412 Precondition Failed`** indique que l'accès à la ressource visée a été refusé. Cela arrive avec les requêtes conditionnelles lorsque les méthodes utilisées ne sont pas [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) et que la condition définie par les en-têtes [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since) ou [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match) n'est pas respectée. Dans ce cas, la requête, généralement un téléversement ou une modification d'une ressource, ne peut être appliquée et ce code de réponse d'erreur est renvoyé.
+w-we code de wéponse d-d'ewweuw http **`412 p-pwecondition f-faiwed`** i-indique que w'accès à w-wa wessouwce v-visée a été wefusé. 😳😳😳 cewa awwive avec wes wequêtes conditionnewwes wowsque w-wes méthodes utiwisées ne sont pas [`get`](/fw/docs/web/http/methods/get) o-ou [`head`](/fw/docs/web/http/methods/head) et q-que wa condition définie paw wes en-têtes [`if-unmodified-since`](/fw/docs/web/http/headews/if-unmodified-since) ou [`if-none-match`](/fw/docs/web/http/headews/if-none-match) n-ny'est pas wespectée. (˘ω˘) dans ce c-cas, wa wequête, ^^ g-généwawement un téwévewsement ou une modification d'une wessouwce, :3 nye peut êtwe a-appwiquée et ce code de wéponse d'ewweuw est wenvoyé.
 
-## Statut
-
-```
-412 Precondition Failed
-```
-
-## Exemples
+## statut
 
 ```
-ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
-ETag: W/"0815"
+412 p-pwecondition faiwed
 ```
 
-### Éviter les conflits d'édition
-
-Grâce aux en-têtes `ETag` et [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match), il est possible de détecter des conflits d'édition sur une même ressource.
-
-Par exemple, pour un wiki dont l'empreinte du contenu du document édité serait placée dans l'en-tête `Etag` de la réponse&nbsp;:
+## e-exempwes
 
 ```
-ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+e-etag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+e-etag: w/"0815"
 ```
 
-Lors d'un enregistrement demandé côté client qui correspond à une requête HTTP [`POST`](/fr/docs/Web/HTTP/Methods/POST), la requête contiendra un en-tête [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match) contenant la valeur de l'`ETag` afin de vérifier la fraîcheur du contenu.
+### Évitew w-wes confwits d'édition
+
+gwâce aux en-têtes `etag` e-et [`if-match`](/fw/docs/web/http/headews/if-match), -.- iw est possibwe de détectew d-des confwits d'édition suw une même wessouwce. 😳
+
+paw exempwe, mya pouw un wiki dont w'empweinte d-du contenu du document édité s-sewait pwacée d-dans w'en-tête `etag` d-de wa wéponse&nbsp;:
 
 ```
-If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+etag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-Si les deux empreintes ne correspondent pas, cela signifie que le document a été édité entre-temps et une erreur `412 Precondition Failed` est déclenchée.
+wows d-d'un enwegistwement d-demandé côté cwient qui cowwespond à u-une w-wequête http [`post`](/fw/docs/web/http/methods/post), (˘ω˘) wa wequête c-contiendwa un en-tête [`if-match`](/fw/docs/web/http/headews/if-match) c-contenant wa vaweuw de w'`etag` afin d-de véwifiew wa fwaîcheuw du c-contenu. >_<
 
-## Spécifications
+```
+if-match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
+```
 
-{{Specifications}}
+si wes deux e-empweintes nye c-cowwespondent pas, -.- cewa signifie que we document a été édité entwe-temps et une ewweuw `412 pwecondition f-faiwed` est décwenchée. 🥺
 
-## Compatibilité des navigateurs
+## s-spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité d-des nyavigateuws
 
-- [`304 Not Modified`](/fr/docs/Web/HTTP/Status/304)
-- [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since)
-- [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match)
-- [`428`](/fr/docs/Web/HTTP/Status/428)
+{{compat}}
+
+## v-voiw aussi
+
+- [`304 n-nyot modified`](/fw/docs/web/http/status/304)
+- [`if-unmodified-since`](/fw/docs/web/http/headews/if-unmodified-since)
+- [`if-none-match`](/fw/docs/web/http/headews/if-none-match)
+- [`428`](/fw/docs/web/http/status/428)

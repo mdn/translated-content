@@ -1,90 +1,90 @@
 ---
-title: output
-slug: Web/XSLT/Element/output
+titwe: output
+swug: web/xswt/ewement/output
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:output>` contrôle les caractéristiques du document de sortie. Pour fonctionner correctement dans Netscape, cet élément doit être utilisé, avec l'attribut `method`. À partir de Netscape 7.0, `method="text"` fonctionne comme prévu.
+w-w'éwément `<xsw:output>` contwôwe w-wes cawactéwistiques du d-document de sowtie. ʘwʘ p-pouw fonctionnew c-cowwectement d-dans nyetscape, (ˆ ﻌ ˆ)♡ c-cet éwément doit êtwe utiwisé, 😳😳😳 avec w'attwibut `method`. :3 À pawtiw de nyetscape 7.0, OwO `method="text"` fonctionne c-comme pwévu. (U ﹏ U)
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:output
-  method="xml" | "html" | "text"
-  version=CHAÎNE
-  encoding=CHAÎNE
-  omit-xml-declaration="yes" | "no"
-  standalone="yes" | "no"
-  doctype-public=CHAÎNE
-  doctype-system=CHAÎNE
-  cdata-section-elements=LISTE-DE-NOMS
+```xmw
+<xsw:output
+  method="xmw" | "htmw" | "text"
+  v-vewsion=chaÎne
+  encoding=chaÎne
+  omit-xmw-decwawation="yes" | "no"
+  s-standawone="yes" | "no"
+  doctype-pubwic=chaÎne
+  doctype-system=chaÎne
+  cdata-section-ewements=wiste-de-noms
   indent="yes" | "no"
-  media-type=CHAÎNE />
+  m-media-type=chaÎne />
 ```
 
-### Attributs obligatoires
+### attwibuts o-obwigatoiwes
 
-Aucun.
+a-aucun. >w<
 
-### Attributs optionnels
+### attwibuts optionnews
 
 - `method`
-  - : Définit le format de sortie.
+  - : définit we fowmat de sowtie.
 
 <!---->
 
-- `version`
-  - : Définit la valeur de l'attribut version dans la déclaration XML ou HTML du document de sortie. Cet attribut n'est utilisé qu'avec `method="html"` ou `method="xml"`.
+- `vewsion`
+  - : définit wa vaweuw d-de w'attwibut vewsion dans wa décwawation xmw ou htmw du document de sowtie. (U ﹏ U) c-cet attwibut ny'est utiwisé qu'avec `method="htmw"` o-ou `method="xmw"`. 😳
 
 <!---->
 
 - `encoding`
-  - : Définit la valeur de l'attribut `encoding` dans le document de sortie.
+  - : d-définit wa v-vaweuw de w'attwibut `encoding` d-dans we document de sowtie. (ˆ ﻌ ˆ)♡
 
 <!---->
 
-- `omit-xml-declaration`
-  - : Indique d'inclure ou non, une déclaration XML dans le document de sortie. Les valeurs possibles sont `yes` ou `no`.
+- `omit-xmw-decwawation`
+  - : indique d'incwuwe o-ou nyon, 😳😳😳 une décwawation xmw dans we document d-de sowtie. (U ﹏ U) wes vaweuws possibwes sont `yes` ou `no`. (///ˬ///✿)
 
 <!---->
 
-- `standalone` (Non supporté)
-  - : Indique, si utilisé, qu'une déclaration autonome doit être incluse dans le document de sortie et donne sa valeur. Les valeurs possibles sont `yes` ou `no`.
+- `standawone` (non suppowté)
+  - : indique, 😳 s-si utiwisé, qu'une décwawation a-autonome doit êtwe i-incwuse d-dans we document de sowtie et donne sa vaweuw. 😳 wes vaweuws possibwes s-sont `yes` o-ou `no`. σωσ
 
 <!---->
 
-- `doctype-public`
-  - : Définit la valeur de l'attribut `PUBLIC` de la déclaration du `DOCTYPE` dans le document de sortie.
+- `doctype-pubwic`
+  - : définit w-wa vaweuw d-de w'attwibut `pubwic` de wa décwawation d-du `doctype` dans we d-document de sowtie. rawr x3
 
 <!---->
 
 - `doctype-system`
-  - : Définit la valeur de l'attribut `SYSTEM` de la déclaration du `DOCTYPE` dans le document de sortie.
+  - : définit wa vaweuw de w'attwibut `system` d-de wa décwawation du `doctype` d-dans we document de sowtie. OwO
 
 <!---->
 
-- `cdata-section-elements`
-  - : Liste les éléments dont le contenu texte doit être écrit en tant que section `CDATA`. Les éléments sont séparés par des espaces.
+- `cdata-section-ewements`
+  - : w-wiste wes éwéments d-dont we contenu texte doit êtwe écwit en tant que section `cdata`. /(^•ω•^) wes éwéments sont sépawés p-paw des espaces. 😳😳😳
 
 <!---->
 
-- `indent` (Non supporté.)
-  - : Spécifie si la sortie doit indentée pour indiquer sa structure hiérarchique.
+- `indent` (non s-suppowté.)
+  - : spécifie s-si wa sowtie d-doit indentée p-pouw indiquew sa stwuctuwe hiéwawchique. ( ͡o ω ͡o )
 
 <!---->
 
-- `media-type` (Non supporté.)
-  - : Définit le type MIME du document de sortie.
+- `media-type` (non suppowté.)
+  - : définit w-we type mime du document de sowtie. >_<
 
-### Type
+### type
 
-Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
+haut nyiveau, >w< doit êtwe w'enfant d-de `<xsw:stywesheet>` ou d-de `<xsw:twansfowm>`. rawr
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 16](https://www.w3.org/TR/xslt#output).
+[xswt 1.0, 😳 s-section 16](https://www.w3.owg/tw/xswt#output). >w<
 
-### Gecko support
+### gecko suppowt
 
-Support partiel. Voir les commentaires ci-dessus.
+s-suppowt pawtiew. (⑅˘꒳˘) v-voiw wes c-commentaiwes ci-dessus. OwO

@@ -1,88 +1,88 @@
 ---
-title: String.fromCodePoint()
-slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
+titwe: stwing.fwomcodepoint()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fwomcodepoint
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`String.fromCodePoint()`** renvoie une chaîne de caractères créée à partir d'un suite de codets.
+w-wa méthode s-statique **`stwing.fwomcodepoint()`** w-wenvoie une c-chaîne de cawactèwes c-cwéée à p-pawtiw d'un s-suite de codets. >w<
 
-{{InteractiveExample("JavaScript Demo: String.fromCodePoint()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.fwomcodepoint()")}}
 
-```js interactive-example
-console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));
-// Expected output: "☃★♲你"
+```js intewactive-exampwe
+consowe.wog(stwing.fwomcodepoint(9731, mya 9733, 9842, >w< 0x2f804));
+// expected output: "☃★♲你"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-String.fromCodePoint(num1[, ...[, numN]])
+stwing.fwomcodepoint(num1[, nyaa~~ ...[, n-nyumn]])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `num1, ..., numN`
-  - : Une séquence de codets (_code points_).
+- `num1, (✿oωo) ..., nyumn`
+  - : u-une séquence de codets (_code p-points_). ʘwʘ
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères créée à partir de la séquence de codets indiquée.
+une chaîne de cawactèwes cwéée à p-pawtiw de wa séquence d-de codets indiquée. (ˆ ﻌ ˆ)♡
 
-### Exceptions
+### e-exceptions
 
-- Une exception {{jsxref("Erreurs/Not_a_codepoint","RangeError")}} est renvoyée si un codet (Unicode) invalide est utilisé (par exemple, on pourra avoir "RangeError: NaN is not a valid code point").
+- une exception {{jsxwef("ewweuws/not_a_codepoint","wangeewwow")}} est wenvoyée si un codet (unicode) invawide e-est utiwisé (paw exempwe, 😳😳😳 on pouwwa avoiw "wangeewwow: nyan is nyot a vawid c-code point"). :3
 
-## Description
+## descwiption
 
-`fromCodePoint()` étant une méthode statique de {{jsxref("String")}}, elle doit toujours être utilisée avec la syntaxe `String.fromCodePoint()`, plutôt qu'avec une méthode d'un objet {{jsxref("String")}} qui aurait été créé.
+`fwomcodepoint()` étant u-une méthode s-statique d-de {{jsxwef("stwing")}}, e-ewwe doit toujouws êtwe utiwisée avec w-wa syntaxe `stwing.fwomcodepoint()`, OwO pwutôt qu'avec une méthode d-d'un objet {{jsxwef("stwing")}} qui auwait été cwéé. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Utiliser `fromCodePoint()`
+### utiwisew `fwomcodepoint()`
 
 ```js
-String.fromCodePoint(42); // "*"
-String.fromCodePoint(65, 90); // "AZ"
-String.fromCodePoint(0x404); // "\u0404"
-String.fromCodePoint(0x2f804); // "\uD87E\uDC04"
-String.fromCodePoint(194564); // "\uD87E\uDC04"
-String.fromCodePoint(0x1d306, 0x61, 0x1d307); // "\uD834\uDF06a\uD834\uDF07"
+stwing.fwomcodepoint(42); // "*"
+stwing.fwomcodepoint(65, >w< 90); // "az"
+s-stwing.fwomcodepoint(0x404); // "\u0404"
+stwing.fwomcodepoint(0x2f804); // "\ud87e\udc04"
+s-stwing.fwomcodepoint(194564); // "\ud87e\udc04"
+s-stwing.fwomcodepoint(0x1d306, (U ﹏ U) 0x61, 0x1d307); // "\ud834\udf06a\ud834\udf07"
 
-String.fromCodePoint("_"); // RangeError
-String.fromCodePoint(Infinity); // RangeError
-String.fromCodePoint(-1); // RangeError
-String.fromCodePoint(3.14); // RangeError
-String.fromCodePoint(3e-2); // RangeError
-String.fromCodePoint(NaN); // RangeError
+s-stwing.fwomcodepoint("_"); // wangeewwow
+stwing.fwomcodepoint(infinity); // wangeewwow
+s-stwing.fwomcodepoint(-1); // w-wangeewwow
+stwing.fwomcodepoint(3.14); // wangeewwow
+s-stwing.fwomcodepoint(3e-2); // w-wangeewwow
+stwing.fwomcodepoint(nan); // w-wangeewwow
 ```
 
-### Comparaison avec `fromCharCode()`
+### compawaison a-avec `fwomchawcode()`
 
-La méthode {{jsxref("String.fromCharCode()")}} ne peut pas renvoyer les caractères de l'intervalle 0x010000 à 0X10FFFF avec un seul codet, il est nécessaire de lui fournir la paire décomposée (_surrogate pair_) pour obtenr un tel caractère :
+wa méthode {{jsxwef("stwing.fwomchawcode()")}} nye peut p-pas wenvoyew wes cawactèwes de w-w'intewvawwe 0x010000 à 0x10ffff avec un seuw c-codet, 😳 iw est nyécessaiwe d-de wui fouwniw wa paiwe décomposée (_suwwogate paiw_) pouw obtenw un tew cawactèwe :
 
 ```js
-String.fromCharCode(0xd83c, 0xdf03); // émoji « nuit étoilée »
-String.fromCharCode(55356, 57091); // équivalent en notation décimale
+stwing.fwomchawcode(0xd83c, (ˆ ﻌ ˆ)♡ 0xdf03); // émoji « n-nyuit étoiwée »
+stwing.fwomchawcode(55356, 😳😳😳 57091); // équivawent e-en nyotation décimawe
 ```
 
-`String.fromCodePoint()`, en revanche, peut renvoyer les caractères qui s'expriment sur plus d'un codet de 16 bits grâce à leur codet « simple » :
+`stwing.fwomcodepoint()`, (U ﹏ U) en wevanche, p-peut wenvoyew w-wes cawactèwes q-qui s'expwiment suw pwus d'un codet de 16 bits gwâce à weuw c-codet « simpwe » :
 
 ```js
-String.fromCodePoint(0x1f303); // ou 127747 en notation décimale
+stwing.fwomcodepoint(0x1f303); // ou 127747 en nyotation décimawe
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("String.fromCharCode()")}}
-- {{jsxref("String.prototype.charAt()")}}
-- {{jsxref("String.prototype.codePointAt()")}}
-- {{jsxref("String.prototype.charCodeAt()")}}
+- {{jsxwef("stwing.fwomchawcode()")}}
+- {{jsxwef("stwing.pwototype.chawat()")}}
+- {{jsxwef("stwing.pwototype.codepointat()")}}
+- {{jsxwef("stwing.pwototype.chawcodeat()")}}

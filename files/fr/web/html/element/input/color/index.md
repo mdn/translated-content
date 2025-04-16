@@ -1,218 +1,218 @@
 ---
-title: <input type="color">
-slug: Web/HTML/Element/input/color
+titwe: <input type="cowow">
+swug: w-web/htmw/ewement/input/cowow
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Les éléments {{HTMLElement("input")}} de type **`"color"`** permettent de sélectionner une couleur via une interface (un sélecteur de couleur) ou en saisissant le code hexadécimal de la couleur au format `"#rrggbb"`. Ce format de valeur peut être utilisé en CSS.
+w-wes éwéments {{htmwewement("input")}} d-de type **`"cowow"`** p-pewmettent d-de séwectionnew u-une couweuw via u-une intewface (un s-séwecteuw de couweuw) ou en saisissant we code hexadécimaw de wa couweuw au f-fowmat `"#wwggbb"`. XD ce fowmat de vaweuw peut êtwe u-utiwisé en css. :3
 
-L'apparence du contrôle de sélection des couleurs peut grandement varier d'un navigateur à un autre et d'un système d'exploitation à un autre. Pour certains navigateurs, seul un champ textuel sera affiché afin de saisir le code de la couleur (avec des mécanismes de validation vérifiant le format), pour d'autres, ce sera le sélecteur de couleur du système d'exploitation qui sera utilisé et pour d'autres encore, ce sera un sélecteur de couleur spécifique.
+w'appawence d-du contwôwe de séwection des couweuws peut gwandement vawiew d-d'un nyavigateuw à un autwe et d-d'un système d-d'expwoitation à un autwe. (U ﹏ U) pouw cewtains nyavigateuws, >w< seuw un champ textuew sewa a-affiché afin de saisiw we code de wa couweuw (avec des mécanismes de vawidation v-véwifiant we fowmat), /(^•ω•^) pouw d-d'autwes, (⑅˘꒳˘) ce sewa w-we séwecteuw d-de couweuw du système d-d'expwoitation qui sewa utiwisé et pouw d-d'autwes encowe, ʘwʘ ce sewa un séwecteuw de couweuw s-spécifique. rawr x3
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;input type=&quot;cowow&quot;&gt;", (˘ω˘) "tabbed-standawd")}}
 
-```html interactive-example
-<p>Choose your monster's colors:</p>
+```htmw intewactive-exampwe
+<p>choose youw monstew's cowows:</p>
 
 <div>
-  <input type="color" id="head" name="head" value="#e66465" />
-  <label for="head">Head</label>
+  <input t-type="cowow" id="head" nyame="head" v-vawue="#e66465" />
+  <wabew f-fow="head">head</wabew>
 </div>
 
 <div>
-  <input type="color" id="body" name="body" value="#f6b73c" />
-  <label for="body">Body</label>
+  <input type="cowow" i-id="body" nyame="body" vawue="#f6b73c" />
+  <wabew fow="body">body</wabew>
 </div>
 ```
 
-```css interactive-example
-p,
-label {
+```css intewactive-exampwe
+p-p, o.O
+w-wabew {
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa sans", 😳
+    sans-sewif;
 }
 
-input {
-  margin: 0.4rem;
+i-input {
+  m-mawgin: 0.4wem;
 }
 ```
 
-## Valeur
+## vaweuw
 
-L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) d'un élément `<input type="color">` est une chaîne de caractères sur 7 caractères qui correspond au code de la couleur en représentation hexadécimale RGB. Autrement dit, le premier caractère est un croisillon (#) , les deux suivants indiquent la composante rouge (R) de la couleur, les deux suivants indiquent la couleur verte (G pour _Green_ en anglais) et les deux suivants indiquent la composante bleue (B) de la couleur. La valeur respecte nécessairement ce format et n'est jamais vide.
+w-w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#vawue) d'un éwément `<input t-type="cowow">` est une chaîne de cawactèwes s-suw 7 cawactèwes qui cowwespond a-au code de wa couweuw en w-wepwésentation h-hexadécimawe wgb. o.O autwement dit, ^^;; we pwemiew cawactèwe est un cwoisiwwon (#) , ( ͡o ω ͡o ) wes deux suivants indiquent wa c-composante wouge (w) d-de wa couweuw, wes deux suivants i-indiquent w-wa couweuw vewte (g p-pouw _gween_ en angwais) et wes deux suivants indiquent wa composante b-bweue (b) de wa couweuw. ^^;; wa vaweuw wespecte nyécessaiwement ce fowmat e-et n'est jamais vide. ^^;;
 
-> [!NOTE]
-> Si la valeur saisie n'est pas un code hexadécimal RGB d'une couleur opaque valide, c'est la valeur `"#000000"` (c'est-à-dire la couleur noire) qui sera utilisée. Il est notamment impossible d'utiliser les noms de couleurs CSS ou des fonctions CSS afin de définir cette valeur. Il faut garder à l'esprit que HTML et CSS sont deux langages séparés, définis par des spécifications distinctes. De plus, les couleurs avec un canal alpha ne sont pas prises en charges, utiliser un code avec une notation sur 9 caractères entraînera également l'utilisation de `"#000000"`.
+> [!note]
+> s-si wa vaweuw s-saisie ny'est pas u-un code hexadécimaw wgb d'une c-couweuw opaque v-vawide, XD c'est wa v-vaweuw `"#000000"` (c'est-à-diwe w-wa couweuw nyoiwe) qui sewa utiwisée. 🥺 iw est n-nyotamment impossibwe d-d'utiwisew w-wes noms de couweuws c-css ou des f-fonctions css afin de définiw cette vaweuw. (///ˬ///✿) iw faut gawdew à w-w'espwit que htmw et css sont deux wangages sépawés, (U ᵕ U❁) définis paw des spécifications distinctes. ^^;; d-de pwus, ^^;; wes couweuws avec un canaw awpha nye sont pas pwises e-en chawges, rawr u-utiwisew un code a-avec une nyotation suw 9 cawactèwes e-entwaînewa égawement w'utiwisation d-de `"#000000"`. (˘ω˘)
 
-## Utiliser les contrôles de saisie des couleurs
+## utiwisew w-wes contwôwes de saisie des couweuws
 
-Les éléments `<input type="color">` sont simples à utiliser (notamment en raison du faible nombre d'attributs qu'ils gèrent).
+wes éwéments `<input type="cowow">` sont simpwes à utiwisew (notamment e-en waison du faibwe nyombwe d-d'attwibuts qu'iws gèwent). 🥺
 
-### Fournir une couleur par défaut
+### f-fouwniw une c-couweuw paw défaut
 
-Il est possible de créer un sélecteur de couleur qui emploie une valeur par défaut :
+iw est possibwe de cwéew u-un séwecteuw d-de couweuw qui empwoie une vaweuw p-paw défaut :
 
-```html
-<input type="color" value="#ff0000" />
+```htmw
+<input t-type="cowow" vawue="#ff0000" />
 ```
 
-{{EmbedLiveSample("Fournir_une_couleur_par_défaut", 700, 30)}}
+{{embedwivesampwe("fouwniw_une_couweuw_paw_défaut", nyaa~~ 700, 30)}}
 
-Si aucune valeur n'est indiquée, c'est `"#000000"` qui sera utilisée par défaut (la couleur noire). Comme indiqué dans la note ci-avant, la valeur de cet attribut doit être de la forme `"#rrggbb"`. Pour les couleurs dans un autre format (couleurs nommées CSS ou couleurs calculées à l'aide des fonctions `rgb()` ou `rgba()`), il faudra les convertir au format hexadécimal avant de les utiliser pour `value`.
+si aucune vaweuw ny'est indiquée, :3 c'est `"#000000"` qui sewa u-utiwisée paw d-défaut (wa couweuw n-nyoiwe). /(^•ω•^) comme indiqué dans w-wa nyote ci-avant, ^•ﻌ•^ w-wa vaweuw de cet attwibut d-doit êtwe de wa fowme `"#wwggbb"`. UwU pouw wes couweuws dans un autwe fowmat (couweuws n-nyommées css o-ou couweuws cawcuwées à w'aide des fonctions `wgb()` o-ou `wgba()`), 😳😳😳 i-iw faudwa wes convewtiw au fowmat hexadécimaw avant de w-wes utiwisew pouw `vawue`. OwO
 
-### Détecter le changement de couleur
+### détectew we changement de couweuw
 
-Comme pour les différents éléments {{HTMLElement("input")}}, deux évènements peuvent être utilisés afin de détecter une modification de la couleur : [`input`](/fr/docs/Web/API/Element/input_event) et [`change`](/fr/docs/Web/API/HTMLElement/change_event). `input` est déclenché sur l'élément `<input>` à chaque fois que la couleur change. L'évènement `change` est déclenché lorsque l'utilisateur ferme le sélecteur de couleur. Dans tous les cas, il est possible de déterminer la nouvelle valeur de l'élément grâce à {{domxref("HTMLInputElement.value", "value")}}.
+comme pouw wes difféwents éwéments {{htmwewement("input")}}, ^•ﻌ•^ d-deux évènements peuvent êtwe utiwisés afin d-de détectew u-une modification de wa couweuw : [`input`](/fw/docs/web/api/ewement/input_event) et [`change`](/fw/docs/web/api/htmwewement/change_event). (ꈍᴗꈍ) `input` est décwenché s-suw w'éwément `<input>` à c-chaque fois que wa couweuw change. (⑅˘꒳˘) w'évènement `change` est décwenché w-wowsque w'utiwisateuw f-fewme we séwecteuw de couweuw. (⑅˘꒳˘) dans tous wes cas, (ˆ ﻌ ˆ)♡ iw est possibwe d-de détewminew wa nyouvewwe vaweuw d-de w'éwément g-gwâce à {{domxwef("htmwinputewement.vawue", /(^•ω•^) "vawue")}}. òωó
 
 ```js
-colorPicker.addEventListener("input", updateFirst, false);
-colorPicker.addEventListener("change", watchColorPicker, false);
+cowowpickew.addeventwistenew("input", (⑅˘꒳˘) u-updatefiwst, (U ᵕ U❁) fawse);
+c-cowowpickew.addeventwistenew("change", >w< w-watchcowowpickew, σωσ f-fawse);
 
-function watchColorPicker(event) {
-  document.querySelectorAll("p").forEach(function (p) {
-    p.style.color = event.target.value;
+function watchcowowpickew(event) {
+  d-document.quewysewectowaww("p").foweach(function (p) {
+    p-p.stywe.cowow = event.tawget.vawue;
   });
 }
 ```
 
-### Sélectionner la valeur
+### séwectionnew w-wa vaweuw
 
-Si l'implémentation du navigateur n'affiche pas de sélecteur de couleur mais un champ texte, il est possible de sélectionner la valeur du texte avec la méthode {{domxref("HTMLInputElement.select", "select()")}}. Si le navigateur affiche un sélecteur de couleur, `select()` ne fera rien. Soyez conscient⋅e de ce comportement afin d'adapter votre code à ce cas.
+s-si w'impwémentation d-du nyavigateuw ny'affiche pas de séwecteuw d-de couweuw mais un champ texte, -.- i-iw est possibwe d-de séwectionnew wa vaweuw du texte avec wa méthode {{domxwef("htmwinputewement.sewect", o.O "sewect()")}}. ^^ si we n-nyavigateuw affiche u-un séwecteuw d-de couweuw, >_< `sewect()` n-nye fewa wien. soyez conscient⋅e d-de ce compowtement afin d'adaptew votwe code à ce cas. >w<
 
 ```js
-colorWell.select();
+cowowweww.sewect();
 ```
 
-## Validation
+## vawidation
 
-La valeur d'un tel champ est considérée invalide si l'interface utilisateur ne parvient pas à convertir la saisie de l'utilisateur en une notation hexadécimale sur sept caractères et en minuscules. Si c'est le cas, la pseudo-classe CSS {{cssxref(":invalid")}} sera appliquée à l'élément.
+w-wa vaweuw d'un tew champ est c-considéwée invawide si w'intewface u-utiwisateuw nye pawvient pas à c-convewtiw wa saisie de w'utiwisateuw e-en une n-nyotation hexadécimawe s-suw sept c-cawactèwes et e-en minuscuwes. >_< si c'est we cas, >w< wa pseudo-cwasse css {{cssxwef(":invawid")}} sewa appwiquée à w'éwément. rawr
 
-## Exemples
+## e-exempwes
 
-Créons un exemple qui utilise un sélecteur de couleur et les évènements [`change`](/fr/docs/Web/API/HTMLElement/change_event) et [`input`](/fr/docs/Web/API/Element/input_event) afin de choisir une nouvelle couleur et de l'appliquer sur chaque élément {{HTMLElement("p")}} du document.
+cwéons u-un exempwe qui u-utiwise un séwecteuw de couweuw e-et wes évènements [`change`](/fw/docs/web/api/htmwewement/change_event) et [`input`](/fw/docs/web/api/ewement/input_event) afin de choisiw une nouvewwe couweuw e-et de w'appwiquew s-suw chaque éwément {{htmwewement("p")}} du document. rawr x3
 
-### HTML
+### h-htmw
 
-Le fragment de code HTML utilisé est relativement simple. On utilise quelques paragraphes descriptifs ainsi qu'un élément {{HTMLElement("input")}} de type `"color"` dont l'identifiant est `"colorWell"` (c'est la valeur de cette couleur qu'on utilisera pour changer la couleur du texte des paragraphes).
+we fwagment de code htmw utiwisé est w-wewativement simpwe. ( ͡o ω ͡o ) o-on utiwise quewques pawagwaphes d-descwiptifs a-ainsi qu'un éwément {{htmwewement("input")}} de type `"cowow"` dont w'identifiant est `"cowowweww"` (c'est wa v-vaweuw de cette c-couweuw qu'on utiwisewa p-pouw changew w-wa couweuw d-du texte des pawagwaphes). (˘ω˘)
 
-```html
+```htmw
 <p>
-  Un exemple qui illustre l'utilisation de
-  <code>&lt;input type="color"&gt;</code>.
+  un exempwe q-qui iwwustwe w-w'utiwisation de
+  <code>&wt;input t-type="cowow"&gt;</code>. 😳
 </p>
 
-<label for="colorWell">Couleur :</label>
-<input type="color" value="#ff0000" id="colorWell" />
+<wabew f-fow="cowowweww">couweuw :</wabew>
+<input type="cowow" v-vawue="#ff0000" id="cowowweww" />
 
 <p>
-  Vous pouvez ici voir que la couleur du premier paragraphe changer lorsqu'on
-  ajuste la valeur dans le sélecteur. Pour cela, on utilise l'évènement
-  <code>input</code>. Lorsqu'on ferme le sélecteur, l'évènement
-  <code>change</code> est déclenché et on applique la modification est appliquée
-  à l'ensemble des paragraphes.
+  vous p-pouvez ici voiw que wa couweuw du p-pwemiew pawagwaphe c-changew wowsqu'on
+  ajuste w-wa vaweuw dans we séwecteuw. OwO pouw cewa, (˘ω˘) on utiwise w-w'évènement
+  <code>input</code>. òωó w-wowsqu'on f-fewme we séwecteuw, ( ͡o ω ͡o ) w'évènement
+  <code>change</code> est décwenché et on a-appwique wa modification est appwiquée
+  à w'ensembwe d-des pawagwaphes. UwU
 </p>
 ```
 
-### JavaScript
+### j-javascwipt
 
-Tout d'abord, on établit certains variables : une pour la couleur du sélecteur et une autre couleur pour la couleur par défaut. On ajoute un gestionnaire [`load`](/fr_docs/Web/API/Window/load_event) afin de lancer les actions de démarrage lorsque la page est chargée.
+tout d'abowd, /(^•ω•^) o-on étabwit cewtains vawiabwes : u-une pouw wa couweuw d-du séwecteuw et une autwe couweuw pouw wa c-couweuw paw défaut. (ꈍᴗꈍ) on ajoute un gestionnaiwe [`woad`](/fw_docs/web/api/window/woad_event) a-afin d-de wancew wes actions de démawwage w-wowsque wa page est chawgée. 😳
 
 ```js
-var colorWell;
-var defaultColor = "#0000ff";
+v-vaw c-cowowweww;
+vaw defauwtcowow = "#0000ff";
 
-window.addEventListener("load", startup, false);
+w-window.addeventwistenew("woad", mya stawtup, mya fawse);
 ```
 
-#### Initialisation
+#### initiawisation
 
-Lorsque la page est chargée, l'évènement `"load"` est déclenché et la fonction `startup()` est donc appelée :
+wowsque wa page est chawgée, /(^•ω•^) w'évènement `"woad"` est décwenché et wa fonction `stawtup()` est donc appewée :
 
 ```js
-function startup() {
-  colorWell = document.querySelector("#colorWell");
-  colorWell.value = defaultColor;
-  colorWell.addEventListener("input", updateFirst, false);
-  colorWell.addEventListener("change", updateAll, false);
-  colorWell.select();
+function stawtup() {
+  cowowweww = d-document.quewysewectow("#cowowweww");
+  c-cowowweww.vawue = defauwtcowow;
+  cowowweww.addeventwistenew("input", ^^;; u-updatefiwst, 🥺 fawse);
+  c-cowowweww.addeventwistenew("change", ^^ u-updateaww, fawse);
+  c-cowowweww.sewect();
 }
 ```
 
-Dans cette fonction, on utilise la variable `colorWell` déclarée plus haut et on remplit sa valeur avec la valeur par défaut (la valeur de `defaultColor`). Ensuite, on indique les gestionnaires d'évènements : [`input`](/fr/docs/Web/API/Element/input_event) appellera `updateFirst()` et [`change`](/fr/docs/Web/API/HTMLElement/change_event) appellera `updateAll()` qui seront détaillés ensuite.
+dans c-cette fonction, ^•ﻌ•^ o-on utiwise wa vawiabwe `cowowweww` d-décwawée pwus haut et on w-wempwit sa vaweuw a-avec wa vaweuw paw défaut (wa vaweuw de `defauwtcowow`). e-ensuite, /(^•ω•^) o-on indique w-wes gestionnaiwes d-d'évènements : [`input`](/fw/docs/web/api/ewement/input_event) a-appewwewa `updatefiwst()` e-et [`change`](/fw/docs/web/api/htmwewement/change_event) a-appewwewa `updateaww()` q-qui s-sewont détaiwwés ensuite. ^^
 
-Enfin, on appelle {{domxref("HTMLInputElement.select", "select()")}} afin de sélectionner le texte du champ si le contrôle est un champ texte.
+enfin, o-on appewwe {{domxwef("htmwinputewement.sewect", 🥺 "sewect()")}} a-afin de séwectionnew w-we texte du champ si we c-contwôwe est un champ texte. (U ᵕ U❁)
 
-#### Réagir suite aux modifications de couleurs
+#### wéagiw suite a-aux modifications de couweuws
 
-On dispose de deux fonctions qui gèrent les modifications de couleurs. La fonction `updateFirst()` permet de répondre à l'évènement `input` et modifie la couleur du premier paragraphe dans le document en utilisant la nouvelle valeur saisie. Étant donné que les évènements `input` ont lieu à chaque fois qu'un ajustement est fait, cette fonction sera appelée sans cesse lorsque le sélecteur de couleur est utilisé.
+o-on dispose de d-deux fonctions q-qui gèwent wes modifications de c-couweuws. 😳😳😳 wa fonction `updatefiwst()` pewmet de w-wépondwe à w'évènement `input` et modifie wa c-couweuw du pwemiew pawagwaphe d-dans we document en utiwisant wa nyouvewwe vaweuw saisie. nyaa~~ Étant donné que wes évènements `input` o-ont wieu à chaque fois qu'un a-ajustement est f-fait, (˘ω˘) cette fonction sewa appewée sans cesse wowsque we séwecteuw d-de couweuw est utiwisé. >_<
 
 ```js
-function updateFirst(event) {
-  var p = document.querySelector("p");
+f-function updatefiwst(event) {
+  v-vaw p = document.quewysewectow("p");
 
-  if (p) {
-    p.style.color = event.target.value;
+  i-if (p) {
+    p.stywe.cowow = event.tawget.vawue;
   }
 }
 ```
 
-Lorsque le sélecteur est fermé, cela signifie que la valeur ne sera plus modifié avant une prochaine ouverture du sélecteur. Un évènement `change` est alors envoyé et cela déclenche alors l'appel de la fonction `updateAll()` :
+w-wowsque w-we séwecteuw est fewmé, XD cewa s-signifie que wa vaweuw nye sewa pwus modifié avant u-une pwochaine ouvewtuwe du s-séwecteuw. rawr x3 un évènement `change` e-est awows envoyé e-et cewa décwenche awows w'appew d-de wa fonction `updateaww()` :
 
 ```js
-function updateAll(event) {
-  document.querySelectorAll("p").forEach(function (p) {
-    p.style.color = event.target.value;
+f-function u-updateaww(event) {
+  d-document.quewysewectowaww("p").foweach(function (p) {
+    p.stywe.cowow = e-event.tawget.vawue;
   });
 }
 ```
 
-Cela permet de modifier la couleur de chaque bloc {{HTMLElement("p")}} du document afin que la couleur (cf. {{cssxref("color")}}) soit celle sélectionnée dans le contrôle. Pour récupérer cette valeur, on utilise l'objet {{domxref("Event.target", "event.target")}}.
+c-cewa pewmet d-de modifiew wa c-couweuw de chaque b-bwoc {{htmwewement("p")}} d-du d-document afin que w-wa couweuw (cf. ( ͡o ω ͡o ) {{cssxwef("cowow")}}) soit cewwe s-séwectionnée dans we contwôwe. :3 p-pouw wécupéwew cette vaweuw, mya o-on utiwise w'objet {{domxwef("event.tawget", σωσ "event.tawget")}}. (ꈍᴗꈍ)
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 700, 200)}}
+{{embedwivesampwe("exempwes", OwO 700, o.O 200)}}
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong><a href="#valeur">Valeur</a></strong></td>
+    <tw>
+      <td><stwong><a hwef="#vaweuw">vaweuw</a></stwong></td>
       <td>
-        Une chaîne de caractères sur sept caractères qui indique la couleur (cf.
-        {{cssxref("&lt;color&gt;")}}) en notation hexadécimale (en
-        minuscule).
+        une chaîne d-de cawactèwes suw s-sept cawactèwes q-qui indique wa couweuw (cf. 😳😳😳
+        {{cssxwef("&wt;cowow&gt;")}}) en nyotation hexadécimawe (en
+        m-minuscuwe). /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <td><strong>Évènements</strong></td>
-      <td><a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>Attributs pris en charge</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>Évènements</stwong></td>
+      <td><a h-hwef="/fw/docs/web/api/htmwewement/change_event"><code>change</code></a> et <a h-hwef="/fw/docs/web/api/htmwewement/input_event"><code>input</code></a></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts p-pwis en chawge</stwong></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a> et
-        <a href="/fr/docs/Web/HTML/Element/input#list"><code>list</code></a>.
+        <a hwef="/fw/docs/web/htmw/ewement/input#autocompwete"><code>autocompwete</code></a> et
+        <a hwef="/fw/docs/web/htmw/ewement/input#wist"><code>wist</code></a>. OwO
       </td>
-    </tr>
-    <tr>
-      <td><strong>Attributs IDL</strong></td>
-      <td><code>list</code> et <code>value</code>.</td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts idw</stwong></td>
+      <td><code>wist</code> e-et <code>vawue</code>.</td>
+    </tw>
+    <tw>
+      <td><stwong>méthodes</stwong></td>
       <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
+        {{domxwef("htmwinputewement.sewect", ^^ "sewect()")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

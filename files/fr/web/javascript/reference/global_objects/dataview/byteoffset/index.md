@@ -1,57 +1,57 @@
 ---
-title: DataView.prototype.byteOffset
-slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
+titwe: dataview.pwototype.byteoffset
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/byteoffset
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`byteOffset`** est un accesseur représentant le décalage, exprimé en octets, entre la vue et le début de l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} correspondant.
+w-wa pwopwiété **`byteoffset`** e-est un a-accesseuw wepwésentant w-we décawage, σωσ e-expwimé e-en octets, OwO entwe w-wa vue et we début d-de w'objet {{jsxwef("awwaybuffew")}} ou {{jsxwef("shawedawwaybuffew")}} cowwespondant. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: DataView.byteOffset")}}
+{{intewactiveexampwe("javascwipt demo: dataview.byteoffset")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js i-intewactive-exampwe
+// cweate an awwaybuffew w-with a size in bytes
+const buffew = n-nyew awwaybuffew(16);
 
-const view = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+const view = nyew dataview(buffew, 😳😳😳 12, 4); // fwom byte 12 f-fow the nyext 4 bytes
 
-console.log(view.byteOffset);
-// Expected output: 12
+consowe.wog(view.byteoffset);
+// e-expected o-output: 12
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dataview.byteOffset;
+dataview.byteoffset;
 ```
 
-## Description
+## descwiption
 
-La propriété `byteOffset` est un accesseur/mutateur dont la fonction du mutateur vaut `undefined`. Cela signifie que la propriété n'est accesssible qu'en lecture seule. La valeur de la propriété est définie lors de la construction de l'objet `DataView` et ne peut pas être modifiée.
+wa pwopwiété `byteoffset` est u-un accesseuw/mutateuw dont wa fonction du mutateuw vaut `undefined`. o.O cewa signifie q-que wa pwopwiété ny'est a-accesssibwe qu'en w-wectuwe seuwe. ( ͡o ω ͡o ) w-wa vaweuw de wa p-pwopwiété est définie wows de wa constwuction d-de w'objet `dataview` et nye peut pas êtwe modifiée. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-### Utilisation de la propriété `byteOffset`
+### utiwisation de wa pwopwiété `byteoffset`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.byteOffset; // 0 (aucun décalage)
+vaw buffew = nyew awwaybuffew(8);
+vaw dataview = nyew d-dataview(buffew);
+dataview.byteoffset; // 0 (aucun d-décawage)
 
-var dataview2 = new DataView(buffer, 3);
-dataview2.byteOffset; // 3 (décalage défini lors de la construction de la vue)
+v-vaw dataview2 = n-nyew dataview(buffew, (///ˬ///✿) 3);
+dataview2.byteoffset; // 3 (décawage défini wows de wa constwuction d-de wa vue)
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("SharedArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("shawedawwaybuffew")}}

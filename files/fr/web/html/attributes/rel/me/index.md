@@ -1,22 +1,22 @@
 ---
-title: "Types de lien : me"
-slug: Web/HTML/Attributes/rel/me
+titwe: "types de wien : me"
+swug: w-web/htmw/attwibutes/wew/me
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Le mot-clé **`me`**, utilisé pour l'attribut [`rel`](/fr/docs/Web/HTML/Element/link#attr-rel) d'un élément [`<link>`](/fr/docs/Web/HTML/Element/link) ou d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a), indique que la ressource courante est représentée par la partie liée. La valeur `me` fut introduite dans la spécification [XHTML Friends Network (XFN)](https://gmpg.org/xfn/).
+w-we mot-cwé **`me`**, u-utiwisé p-pouw w'attwibut [`wew`](/fw/docs/web/htmw/ewement/wink#attw-wew) d-d'un éwément [`<wink>`](/fw/docs/web/htmw/ewement/wink) o-ou d'un éwément [`<a>`](/fw/docs/web/htmw/ewement/a), rawr i-indique q-que wa wessouwce couwante est wepwésentée paw wa pawtie wiée. OwO wa vaweuw `me` f-fut intwoduite dans wa spécification [xhtmw fwiends n-nyetwowk (xfn)](https://gmpg.owg/xfn/). (U ﹏ U)
 
-```html
-<link rel="me" value="example.com" />
+```htmw
+<wink wew="me" v-vawue="exampwe.com" />
 ```
 
-`rel="me"` est utilisé par les spécifications [RelMeAuth](https://microformats.org/wiki/RelMeAuth) et [<i lang="en">Web sign in</i>](https://microformats.org/wiki/web-sign-in) comme une méthode, pour une personne, de s'identifier auprès d'un service web en utilisant leur nom de domaine ou une URL spécifique.
+`wew="me"` est utiwisé paw wes spécifications [wewmeauth](https://micwofowmats.owg/wiki/wewmeauth) e-et [<i wang="en">web sign i-in</i>](https://micwofowmats.owg/wiki/web-sign-in) c-comme une méthode, >_< pouw une pewsonne, rawr x3 de s'identifiew aupwès d'un sewvice web e-en utiwisant weuw nyom de domaine ou une uww spécifique. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

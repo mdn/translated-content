@@ -1,37 +1,37 @@
 ---
-title: when
-slug: Web/XSLT/Element/when
+titwe: when
+swug: web/xswt/ewement/when
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:when>` apparaît toujours dans un élément `<xsl:choose>`, et se comporte comme une structure conditionelle 'case'.
+w-w'éwément `<xsw:when>` a-appawaît t-toujouws dans u-un éwément `<xsw:choose>`, -.- e-et s-se compowte comme u-une stwuctuwe conditionewwe 'case'. ( ͡o ω ͡o )
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:when test=EXPRESSION>
-  MODÈLE
-</xsl:when>
+```xmw
+<xsw:when test=expwession>
+  modÈwe
+</xsw:when>
 ```
 
-### Attribut obligatoire
+### a-attwibut obwigatoiwe
 
 - `test`
-  - : Définit une expression booléenne à évaluer. Si elle est vraie, le contenu de l'élément est exécuté&nbsp;; sinon, il est ignoré.
+  - : définit une expwession b-boowéenne à évawuew. rawr x3 si ewwe e-est vwaie, nyaa~~ we contenu de w'éwément est exécuté&nbsp;; sinon, /(^•ω•^) i-iw est ignowé. rawr
 
-### Attributs obligatoires
+### attwibuts o-obwigatoiwes
 
-Aucun.
+a-aucun. OwO
 
-### Type
+### type
 
-Sous-instruction, apparaît toujours dans un élément `<xsl:choose>`.
+sous-instwuction, (U ﹏ U) appawaît toujouws dans un éwément `<xsw:choose>`. >_<
 
-### Définition
+### définition
 
-[XSLT 1.0, section 9.2](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose).
+[xswt 1.0, rawr x3 section 9.2](https://www.w3.owg/tw/xswt#section-conditionaw-pwocessing-with-xsw:choose). mya
 
-### Support Gecko
+### s-suppowt gecko
 
-Supporté.
+suppowté. nyaa~~

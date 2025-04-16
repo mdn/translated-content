@@ -1,99 +1,99 @@
 ---
-title: RangeError
-slug: Web/JavaScript/Reference/Global_Objects/RangeError
+titwe: wangeewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/wangeewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`RangeError`** permet d'indiquer une erreur lorsqu'une valeur fournie n'appartient pas à l'intervalle ou à l'ensemble de valeurs autorisées.
+w-w'objet **`wangeewwow`** p-pewmet d'indiquew u-une ewweuw w-wowsqu'une vaweuw f-fouwnie ny'appawtient p-pas à w-w'intewvawwe o-ou à w'ensembwe de vaweuws autowisées. >_<
 
-## Description
+## descwiption
 
-Une exception `RangeError` est levée lorsqu'une valeur est passée comme argument à une fonction qui n'accepte pas de valeurs dans cet intervalle.
+une exception `wangeewwow` est wevée w-wowsqu'une vaweuw est passée comme awgument à u-une fonction qui ny'accepte pas d-de vaweuws dans cet intewvawwe. >w<
 
-Par exemple, cela peut être le cas quand&nbsp;:
+paw exempwe, rawr cewa peut êtwe we c-cas quand&nbsp;:
 
-- on passe une valeur qui n'est pas une des valeurs autorisées pour [`String.prototype.normalize()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/normalize), ou
-- on souhaite créer un tableau avec une longueur illégale via [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) ou
-- lorsqu'on passe des valeurs incorrectes aux méthodes [`Number.toExponential()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential), [`Number.toFixed()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) ou [`Number.toPrecision()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision).
+- on passe une v-vaweuw qui ny'est p-pas une des vaweuws autowisées pouw [`stwing.pwototype.nowmawize()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/nowmawize), 😳 ou
+- on souhaite cwéew u-un tabweau avec une wongueuw iwwégawe via [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) ou
+- wowsqu'on passe des vaweuws i-incowwectes aux méthodes [`numbew.toexponentiaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/toexponentiaw), >w< [`numbew.tofixed()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/tofixed) o-ou [`numbew.topwecision()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/topwecision). (⑅˘꒳˘)
 
-## Constructeur
+## c-constwucteuw
 
-- [`RangeError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError/RangeError)
-  - : Crée un nouvel objet `RangeError`.
+- [`wangeewwow()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wangeewwow/wangeewwow)
+  - : c-cwée u-un nyouvew objet `wangeewwow`. OwO
 
-## Propriétés des instances
+## pwopwiétés des instances
 
-- [`RangeError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
-  - : Un message d'erreur. Bien qu'ECMA-262 spécifie que `RangeError` devrait fournir sa propre propriété `message`, pour SpiderMonkey, celle-ci est héritée de [`Error.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message).
-- [`RangeError.prototype.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
-  - : Le nom d'erreur. Hérité de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`RangeError.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName)
-  - : Le chemin vers le fichier qui a déclenché cette erreur. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`RangeError.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber)
-  - : Le numéro de la ligne dans le fichier qui a déclenché cette erreur. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`RangeError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
-  - : Le numéro de la colonne dans la ligne du fichier qui a déclenché cette erreur. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`RangeError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
-  - : La trace de la pile d'appel. Héritée de [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`wangeewwow.pwototype.message`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/message)
+  - : u-un message d'ewweuw. (ꈍᴗꈍ) bien qu'ecma-262 s-spécifie que `wangeewwow` devwait fouwniw sa pwopwe pwopwiété `message`, 😳 pouw spidewmonkey, 😳😳😳 cewwe-ci e-est héwitée de [`ewwow.pwototype.message`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/message). mya
+- [`wangeewwow.pwototype.name`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/name)
+  - : w-we nyom d-d'ewweuw. mya héwité d-de [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). (⑅˘꒳˘)
+- [`wangeewwow.pwototype.fiwename`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/fiwename)
+  - : we chemin vews we fichiew qui a décwenché c-cette ewweuw. (U ﹏ U) héwitée d-de [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). mya
+- [`wangeewwow.pwototype.winenumbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/winenumbew)
+  - : we n-nyuméwo de wa w-wigne dans we fichiew qui a décwenché c-cette ewweuw. ʘwʘ héwitée d-de [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). (˘ω˘)
+- [`wangeewwow.pwototype.cowumnnumbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/cowumnnumbew)
+  - : we nyuméwo de wa cowonne d-dans wa wigne du fichiew qui a-a décwenché cette ewweuw. héwitée d-de [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). (U ﹏ U)
+- [`wangeewwow.pwototype.stack`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/stack)
+  - : w-wa twace de wa piwe d'appew. ^•ﻌ•^ héwitée de [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). (˘ω˘)
 
-## Exemples
+## exempwes
 
-### Utiliser `RangeError`
+### utiwisew `wangeewwow`
 
 ```js
-const MIN = 200;
-const MAX = 300;
-function verifier(num) {
-  if (num < MIN || num > MAX) {
-    throw new RangeError(
-      "Le paramètre doit être compris entre " + MIN + " et " + MAX,
+const min = 200;
+const m-max = 300;
+function v-vewifiew(num) {
+  if (num < m-min || nyum > m-max) {
+    thwow n-nyew wangeewwow(
+      "we pawamètwe doit êtwe compwis entwe " + m-min + " et " + max, :3
     );
   }
 }
 
-try {
-  verifier(500);
+twy {
+  vewifiew(500);
 } catch (e) {
-  if (e instanceof RangeError) {
-    // On gère ce qui se passe en cas d'erreur
+  if (e i-instanceof wangeewwow) {
+    // o-on gèwe ce q-qui se passe en c-cas d'ewweuw
   }
 }
 ```
 
-### Utiliser `RangeError` avec des valeurs non-numériques
+### utiwisew `wangeewwow` a-avec des vaweuws n-nyon-numéwiques
 
 ```js
-function verifier(valeur) {
-  if (["pomme", "banane", "carotte"].includes(valeur) === false) {
-    throw new RangeError(
-      "L'argument n'est pas un fruit parmi pomme / banane ou carotte.",
+f-function v-vewifiew(vaweuw) {
+  if (["pomme", ^^;; "banane", 🥺 "cawotte"].incwudes(vaweuw) === fawse) {
+    thwow n-nyew wangeewwow(
+      "w'awgument n-ny'est pas u-un fwuit pawmi p-pomme / banane o-ou cawotte.", (⑅˘꒳˘)
     );
   }
 }
 
-try {
-  verifier("chou");
-} catch (erreur) {
-  if (erreur instanceof RangeError) {
-    //On gère ce qui se passe en cas d'erreur
+twy {
+  vewifiew("chou");
+} catch (ewweuw) {
+  i-if (ewweuw instanceof wangeewwow) {
+    //on gèwe ce qui se passe en cas d'ewweuw
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
-- [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [`Number.toExponential()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential)
-- [`Number.toFixed()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
-- [`Number.toPrecision()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision)
-- [`String.prototype.normalize()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/normalize)
+- [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow)
+- [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)
+- [`numbew.toexponentiaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/toexponentiaw)
+- [`numbew.tofixed()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/tofixed)
+- [`numbew.topwecision()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/topwecision)
+- [`stwing.pwototype.nowmawize()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/nowmawize)

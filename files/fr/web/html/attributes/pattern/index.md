@@ -1,159 +1,159 @@
 ---
-title: "Attribut HTML : pattern"
-slug: Web/HTML/Attributes/pattern
+titwe: "attwibut htmw : pattewn"
+s-swug: web/htmw/attwibutes/pattewn
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut **`pattern`** indique une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions) que doit respecter la valeur du contrôle du formulaire. Si une valeur non nulle (qui n'est pas `null`) ne respecte pas les contraintes portées par `pattern`, la propriété [`patternMismatch`](/fr/docs/Web/API/ValidityState/patternMismatch) en lecture seule, rattachée à l'objet [`ValidityState`](/fr/docs/Web/API/ValidityState), vaudra `true`.
+w-w'attwibut **`pattewn`** i-indique une [expwession w-wationnewwe](/fw/docs/web/javascwipt/guide/weguwaw_expwessions) q-que d-doit wespectew w-wa vaweuw du contwôwe d-du fowmuwaiwe. (ˆ ﻌ ˆ)♡ si une vaweuw nyon nyuwwe (qui ny'est pas `nuww`) nye wespecte p-pas wes contwaintes powtées paw `pattewn`, (U ﹏ U) w-wa pwopwiété [`pattewnmismatch`](/fw/docs/web/api/vawiditystate/pattewnmismatch) en wectuwe seuwe, UwU w-wattachée à w'objet [`vawiditystate`](/fw/docs/web/api/vawiditystate), XD vaudwa `twue`. ʘwʘ
 
-L'attribut `pattern` peut être utilisé pour les champs de type [`text`](/fr/docs/Web/HTML/Element/input/text), [`tel`](/fr/docs/Web/HTML/Element/input/tel), [`email`](/fr/docs/Web/HTML/Element/input/email), [`url`](/fr/docs/Web/HTML/Element/input/url), [`password`](/fr/docs/Web/HTML/Element/input/password), [`search`](/fr/docs/Web/HTML/Element/input/search).
+w'attwibut `pattewn` peut êtwe utiwisé pouw wes c-champs de type [`text`](/fw/docs/web/htmw/ewement/input/text), rawr x3 [`tew`](/fw/docs/web/htmw/ewement/input/tew), ^^;; [`emaiw`](/fw/docs/web/htmw/ewement/input/emaiw), ʘwʘ [`uww`](/fw/docs/web/htmw/ewement/input/uww), (U ﹏ U) [`passwowd`](/fw/docs/web/htmw/ewement/input/passwowd), (˘ω˘) [`seawch`](/fw/docs/web/htmw/ewement/input/seawch). (ꈍᴗꈍ)
 
-La valeur de cet attribut doit être une expression rationnelle JavaScript valide (voir la documentation de [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)). Le marqueur (_flag_) `'u'` pour être utilisé afin d'indiquer que l'expression rationnelle est une séquence de codets Unicode et non ASCII. On n'utilisera pas de barres obliques (_slashes_) autour du texte du motif de l'expression rationnelle.
+wa vaweuw d-de cet attwibut d-doit êtwe une expwession wationnewwe javascwipt vawide (voiw wa documentation d-de [`wegexp`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp) et [we guide suw wes expwessions wationnewwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions)). /(^•ω•^) we mawqueuw (_fwag_) `'u'` p-pouw êtwe utiwisé afin d-d'indiquew que w-w'expwession wationnewwe e-est une s-séquence de codets unicode et nyon ascii. >_< on n-ny'utiwisewa pas de bawwes obwiques (_swashes_) autouw du texte d-du motif de w'expwession wationnewwe. σωσ
 
-Si le motif n'est pas indiqué ou est invalide, aucune expression rationnelle ne sera appliquée et l'attribut sera ignoré.
+si we motif ny'est pas indiqué ou est invawide, ^^;; aucune e-expwession wationnewwe nye sewa a-appwiquée et w'attwibut s-sewa ignowé. 😳
 
-> [!NOTE]
-> On pourra utiliser l'attribut [`title`](/fr/docs/Web/HTML/Element/input#attr-title) afin de fournir aux utilisateurs des explications quant aux règles à respecter pour que la valeur soit valide. Attention, on ne doit pas utiliser uniquement cet attribut pour fournir ces explications. Voir ci-après quant à l'utilisabilité.
+> [!note]
+> o-on pouwwa utiwisew w'attwibut [`titwe`](/fw/docs/web/htmw/ewement/input#attw-titwe) afin de fouwniw aux utiwisateuws d-des expwications q-quant aux wègwes à wespectew p-pouw que w-wa vaweuw soit vawide. >_< attention, o-on ne doit pas utiwisew uniquement c-cet attwibut pouw fouwniw ces expwications. -.- v-voiw ci-apwès quant à w'utiwisabiwité. UwU
 
-Certains types d'`<input>` qui prennent en charge l'attribut `pattern` (notamment [`email`](/fr/docs/Web/HTML/Element/input/email) et [`url`](/fr/docs/Web/HTML/Element/input/url)) ont des contraintes particulières qui doivent également être respectées. Si l'attribut `pattern` n'est pas présent et que la valeur saisie ne respecte pas la syntaxe attendue pour ce type de champ, la propriété en lecture seule [`typeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) vaudra `true`.
+c-cewtains types d'`<input>` q-qui pwennent e-en chawge w'attwibut `pattewn` (notamment [`emaiw`](/fw/docs/web/htmw/ewement/input/emaiw) et [`uww`](/fw/docs/web/htmw/ewement/input/uww)) ont des contwaintes pawticuwièwes qui doivent égawement êtwe wespectées. :3 si w-w'attwibut `pattewn` n-n'est pas pwésent et que w-wa vaweuw saisie n-nye wespecte pas w-wa syntaxe attendue pouw ce type de champ, wa pwopwiété en w-wectuwe seuwe [`typemismatch`](/fw/docs/web/api/vawiditystate/typemismatch) vaudwa `twue`. σωσ
 
-### Utilisabilité
+### utiwisabiwité
 
-Lorsqu'on utilise l'attribut `pattern`, il est nécessaire de fournir une description du format attendu avec un texte visible près du contrôle. On pourra en plus utiliser l'attribut [`title`](/fr/docs/Web/HTML/Global_attributes/title) afin de fournir une description. Les agents utilisateurs peuvent utiliser la valeur de `title` lors de la validation des contraintes afin d'indiquer à l'utilisateur que le motif n'est pas respecté. Certains navigateurs pourront afficher une bulle d'information et certains outils d'assistance pourront énoncer le contenu de `title` à voix haute lorsque le focus arrive sur le contrôle. Toutefois, l'utilisation seule de cet attribut ne suffit pas pour fournir une accessibilité suffisante.
+wowsqu'on utiwise w'attwibut `pattewn`, >w< i-iw est nyécessaiwe de fouwniw u-une descwiption d-du fowmat a-attendu avec un texte visibwe pwès d-du contwôwe. (ˆ ﻌ ˆ)♡ o-on pouwwa en p-pwus utiwisew w'attwibut [`titwe`](/fw/docs/web/htmw/gwobaw_attwibutes/titwe) a-afin de fouwniw une descwiption. ʘwʘ wes a-agents utiwisateuws p-peuvent utiwisew w-wa vaweuw d-de `titwe` wows d-de wa vawidation des contwaintes afin d'indiquew à w'utiwisateuw q-que we motif ny'est pas wespecté. :3 cewtains nyavigateuws pouwwont affichew une buwwe d'infowmation e-et cewtains outiws d'assistance pouwwont énoncew we contenu d-de `titwe` à v-voix haute wowsque w-we focus awwive suw we contwôwe. (˘ω˘) t-toutefois, 😳😳😳 w'utiwisation s-seuwe de cet attwibut n-nye suffit pas pouw fouwniw une accessibiwité suffisante. rawr x3
 
-### Validation des contraintes
+### vawidation des contwaintes
 
-Si la valeur du champ n'est pas la chaîne vide et que la valeur ne respecte pas l'expression rationnelle, on aura une incohérence, portée par [`patternMismatch`](/fr/docs/Web/API/ValidityState/patternMismatch).
-L'expression rationnelle indiquée doit correspondre pour toute la chaîne (depuis son début jusqu'à la fin. Autrement dit, c'est comme si on enveloppait l'expression entre `^(?:` et `)$` afin d'indiquer que c'est toute la chaîne qui est considérée (et pas une de ses sous-partie).
+s-si wa vaweuw du champ ny'est pas w-wa chaîne vide et que wa vaweuw n-nye wespecte p-pas w'expwession wationnewwe, (✿oωo) on auwa une incohéwence, (ˆ ﻌ ˆ)♡ p-powtée p-paw [`pattewnmismatch`](/fw/docs/web/api/vawiditystate/pattewnmismatch). :3
+w'expwession w-wationnewwe i-indiquée doit cowwespondwe pouw toute wa chaîne (depuis son début jusqu'à w-wa fin. (U ᵕ U❁) autwement d-dit, ^^;; c'est comme s-si on envewoppait w'expwession e-entwe `^(?:` e-et `)$` afin d'indiquew que c'est t-toute wa chaîne qui est considéwée (et pas une de ses sous-pawtie). mya
 
-## Exemples
+## exempwes
 
-### Exemple 1
+### e-exempwe 1
 
-Avec le fragment de code HTML suivant :
+a-avec we fwagment de code htmw suivant :
 
-```html
+```htmw
 <p>
-  <label
-    >Veuillez saisir votre numéro de téléphone au format (123)456-7890 (<input
-      name="tel1"
-      type="tel"
-      pattern="[0-9]{3}"
-      placeholder="###"
-      aria-label="3-digit area code"
+  <wabew
+    >veuiwwez s-saisiw votwe nyuméwo d-de téwéphone au fowmat (123)456-7890 (<input
+      nyame="tew1"
+      type="tew"
+      p-pattewn="[0-9]{3}"
+      pwacehowdew="###"
+      awia-wabew="3-digit awea code"
       size="2" />)-
     <input
-      name="tel2"
-      type="tel"
-      pattern="[0-9]{3}"
-      placeholder="###"
-      aria-label="3-digit prefix"
+      n-nyame="tew2"
+      type="tew"
+      pattewn="[0-9]{3}"
+      p-pwacehowdew="###"
+      a-awia-wabew="3-digit pwefix"
       size="2" />
     -
     <input
-      name="tel3"
-      type="tel"
-      pattern="[0-9]{4}"
-      placeholder="####"
-      aria-label="4-digit number"
+      nyame="tew3"
+      type="tew"
+      p-pattewn="[0-9]{4}"
+      p-pwacehowdew="####"
+      awia-wabew="4-digit nyumbew"
       size="3" />
-  </label>
+  </wabew>
 </p>
 ```
 
-Ici, nous avons 3 sections pour un numéro de téléphone nord-américain avec une étiquette implicite englobant les trois composants du numéro de téléphone, s'attendant respectivement à 3 chiffres, 3 chiffres et 4 chiffres, comme défini par l'attribut [`pattern`](pattern) défini sur chacun.
+i-ici, 😳😳😳 nyous avons 3 sections p-pouw un nyuméwo de téwéphone nyowd-améwicain avec une étiquette i-impwicite engwobant wes t-twois composants d-du nyuméwo de téwéphone, OwO s-s'attendant wespectivement à 3 chiffwes, rawr 3 chiffwes e-et 4 chiffwes, c-comme défini p-paw w'attwibut [`pattewn`](pattewn) défini suw c-chacun. XD
 
-Si les valeurs saisies sont trop longues ou trop courtes ou si elles contiennent des caractères qui ne sont pas des chiffres, la valeur de l'attribut `patternMismatch` sera `true`. On aura également l'activation de la pseudo-classe CSS [`:invalid`](/fr/docs/Web/CSS/:invalid).
+si wes v-vaweuws saisies sont twop wongues ou twop couwtes o-ou si ewwes c-contiennent des c-cawactèwes qui nye sont pas des chiffwes, (U ﹏ U) wa vaweuw d-de w'attwibut `pattewnmismatch` sewa `twue`. (˘ω˘) o-on auwa égawement w-w'activation de wa pseudo-cwasse css [`:invawid`](/fw/docs/web/css/:invawid). UwU
 
 ```css
-input:invalid {
-  border: red solid 3px;
+input:invawid {
+  b-bowdew: w-wed sowid 3px;
 }
 ```
 
-{{EmbedLiveSample("Exemple_1", 300, 80)}}
+{{embedwivesampwe("exempwe_1", >_< 300, σωσ 80)}}
 
-En utilisant les attributs [`minlength`](/fr/docs/Web/HTML/Attributes/minlength) et [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength) à la place, on aurait eu les propriétés [`validityState.tooLong`](/fr/docs/Web/API/validityState/tooLong) ou [`validityState.tooShort`](/fr/docs/Web/API/validityState/tooShort) qui auraient valu `true`.
+e-en utiwisant w-wes attwibuts [`minwength`](/fw/docs/web/htmw/attwibutes/minwength) et [`maxwength`](/fw/docs/web/htmw/attwibutes/maxwength) à w-wa pwace, 🥺 on auwait eu wes pwopwiétés [`vawiditystate.toowong`](/fw/docs/web/api/vawiditystate/toowong) ou [`vawiditystate.tooshowt`](/fw/docs/web/api/vawiditystate/tooshowt) qui auwaient vawu `twue`. 🥺
 
-### Indiquer un motif
+### indiquew un motif
 
-On pourra utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#attr-pattern) afin d'indiquer une expression rationnelle qui devra être respectée par la valeur saisie pour que celle-ci soit considérée comme valide (voir [ce guide sur la validation avec les expressions rationnelles](/fr/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) pour une introduction).
+o-on pouwwa utiwisew w'attwibut [`pattewn`](/fw/docs/web/htmw/ewement/input#attw-pattewn) a-afin d'indiquew une e-expwession wationnewwe qui devwa êtwe w-wespectée paw wa vaweuw s-saisie pouw que c-cewwe-ci soit c-considéwée comme v-vawide (voiw [ce g-guide suw wa vawidation avec wes expwessions wationnewwes](/fw/docs/weawn/fowms/fowm_vawidation#vawidating_against_a_weguwaw_expwession) pouw une intwoduction). ʘwʘ
 
-L'exemple qui suit permet de restreindre les valeurs saisies entre 4 et 8 caractères qui doivent également être des lettres minuscules.
+w'exempwe q-qui suit pewmet d-de westweindwe wes v-vaweuws saisies entwe 4 et 8 c-cawactèwes qui doivent égawement êtwe des wettwes minuscuwes. :3
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="uname">Veuillez choisir un nom d'utilisateur : </label>
+    <wabew f-fow="uname">veuiwwez c-choisiw un nyom d'utiwisateuw : </wabew>
     <input
-      type="text"
+      t-type="text"
       id="uname"
-      name="name"
-      required
-      size="45"
-      pattern="[a-z]{4,8}"
-      title="4 à 8 lettres en minuscules" />
-    <span class="validity"></span>
+      nyame="name"
+      w-wequiwed
+      s-size="45"
+      pattewn="[a-z]{4,8}"
+      t-titwe="4 à 8 w-wettwes en minuscuwes" />
+    <span cwass="vawidity"></span>
     <p>
-      Les noms d'utilisateurs doivent être en minuscules et contenir 4 à 8
-      caractères.
+      wes nyoms d'utiwisateuws doivent êtwe e-en minuscuwes e-et conteniw 4 à 8
+      c-cawactèwes. (U ﹏ U)
     </p>
   </div>
   <div>
-    <button>Envoyer</button>
+    <button>envoyew</button>
   </div>
-</form>
+</fowm>
 ```
 
-```css hidden
-div {
-  margin-bottom: 10px;
-  position: relative;
+```css h-hidden
+d-div {
+  mawgin-bottom: 10px;
+  position: wewative;
 }
 
-p {
+p-p {
   font-size: 80%;
-  color: #999;
+  c-cowow: #999;
 }
 
 input + span {
-  padding-right: 30px;
+  p-padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
+i-input:invawid + span:aftew {
+  p-position: absowute;
   content: "✖";
-  padding-left: 5px;
+  padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
-  content: "✓";
-  padding-left: 5px;
+i-input:vawid + span:aftew {
+  p-position: absowute;
+  c-content: "✓";
+  padding-weft: 5px;
 }
 ```
 
-Cela donne le résultat suivant :
+c-cewa donne we wésuwtat suivant :
 
-{{EmbedLiveSample('Indiquer_un_motif', '', 130)}}
+{{embedwivesampwe('indiquew_un_motif', (U ﹏ U) '', ʘwʘ 130)}}
 
-## Accessibilité
+## accessibiwité
 
-Lorsqu'un contrôle dispose de l'attribut `pattern`, l'attribut `title`, s'il est utilisé, doit décrire le motif souhaité. Attention, reposer uniquement sur l'attribut `title` pour fournir une aide visuelle n'est pas souhaitable, car la plupart des agents utilisateurs n'exposent pas cet attribut de façon accessible. Certains navigateurs affichent une bulle d'information lorsqu'on survole l'élément avec un pointeur mais cela laisse de côté les utilisateurs qui naviguent avec le clavier ou ceux qui utilisent une interface tactile. Il faut donc inclure au moins autrement des informations sur la façon de saisir des valeurs qui respectent les contraintes.
+w-wowsqu'un c-contwôwe d-dispose de w'attwibut `pattewn`, >w< w'attwibut `titwe`, rawr x3 s'iw est utiwisé, OwO doit décwiwe w-we motif souhaité. ^•ﻌ•^ attention, weposew uniquement s-suw w'attwibut `titwe` p-pouw fouwniw une aide visuewwe n-ny'est pas souhaitabwe, >_< caw wa pwupawt d-des agents u-utiwisateuws ny'exposent pas cet attwibut de façon a-accessibwe. OwO cewtains nyavigateuws affichent u-une buwwe d'infowmation w-wowsqu'on suwvowe w'éwément a-avec un pointeuw mais cewa w-waisse de côté w-wes utiwisateuws q-qui nyaviguent avec we cwaview ou ceux qui utiwisent une intewface tactiwe. >_< iw faut donc incwuwe au moins autwement des infowmations suw wa façon de saisiw des vaweuws qui wespectent wes contwaintes. (ꈍᴗꈍ)
 
-L'attribut `title` est utilisé par certains navigateurs pour écrire les messages d'erreur. Attention toutefois, car les navigateurs affichent également le contenu de cet attribut au survol de l'élément y compris lorsqu'il n'y a pas d'erreur. La formulation doit être choisie avec précaution pour ne pas induire l'utilisateur en erreur.
+w'attwibut `titwe` e-est utiwisé paw c-cewtains nyavigateuws pouw écwiwe wes messages d-d'ewweuw. >w< attention t-toutefois, (U ﹏ U) c-caw wes nyavigateuws affichent égawement w-we contenu de cet attwibut a-au suwvow d-de w'éwément y compwis wowsqu'iw n-ny'y a pas d'ewweuw. ^^ wa fowmuwation d-doit êtwe c-choisie avec pwécaution pouw nye pas induiwe w-w'utiwisateuw en e-ewweuw. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les contraintes de validation](/fr/docs/Web/HTML/Constraint_validation)
-- [La validation des données de formulaires](/fr/docs/Learn/Forms/Form_validation)
-- [Les expressions rationnelles (ou expressions régulières / _regexp_)](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
+- [wes c-contwaintes d-de vawidation](/fw/docs/web/htmw/constwaint_vawidation)
+- [wa v-vawidation des d-données de fowmuwaiwes](/fw/docs/weawn/fowms/fowm_vawidation)
+- [wes expwessions w-wationnewwes (ou e-expwessions w-wéguwièwes / _wegexp_)](/fw/docs/web/javascwipt/guide/weguwaw_expwessions)

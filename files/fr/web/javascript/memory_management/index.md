@@ -1,212 +1,212 @@
 ---
-title: Gestion de la mémoire
-slug: Web/JavaScript/Memory_management
+titwe: gestion de wa mémoiwe
+s-swug: web/javascwipt/memowy_management
 ---
 
-{{JsSidebar("Advanced")}}
+{{jssidebaw("advanced")}}
 
-Les langages de bas niveau, tels que C, possèdent des primitives permettant de gérer la mémoire : [`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) et [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions) par exemple. En revanche, lorsqu'on utilise JavaScript, la mémoire est allouée lors de la création des objets puis libérée « automatiquement » lorsque ceux-ci ne sont plus utilisés. Cette libération automatique est appelée _garbage collection_ en anglais ou ramasse-miettes. Le fait que ce processus soit automatique est souvent source de confusion et donne parfois l'impression que JavaScript (ou d'autres langages de haut niveau) ne permet pas de gérer la mémoire : nous allons voir que ce n'est pas le cas.
+w-wes wangages d-de bas nyiveau, σωσ t-tews que c, (ˆ ﻌ ˆ)♡ p-possèdent des p-pwimitives pewmettant d-de géwew w-wa mémoiwe : [`mawwoc()`](https://pubs.opengwoup.owg/onwinepubs/009695399/functions/mawwoc.htmw) et [`fwee()`](https://en.wikipedia.owg/wiki/c_dynamic_memowy_awwocation#ovewview_of_functions) paw exempwe. nyaa~~ en wevanche, ʘwʘ wowsqu'on utiwise javascwipt, ^•ﻌ•^ w-wa mémoiwe est awwouée wows de wa cwéation d-des objets puis wibéwée « a-automatiquement » wowsque ceux-ci nye sont pwus utiwisés. rawr x3 c-cette wibéwation automatique est a-appewée _gawbage c-cowwection_ en angwais ou wamasse-miettes. 🥺 we fait que ce pwocessus soit automatique est souvent s-souwce de confusion et donne pawfois w'impwession que javascwipt (ou d'autwes w-wangages de haut nyiveau) nye p-pewmet pas de géwew w-wa mémoiwe : n-nyous awwons v-voiw que ce ny'est pas we cas. ʘwʘ
 
-## Le cycle de vie de la mémoire
+## we cycwe de v-vie de wa mémoiwe
 
-Quel que soit le langage de programmation, le cycle de vie de la mémoire ressemblera à :
+quew que soit we wangage de p-pwogwammation, (˘ω˘) we cycwe de vie de wa mémoiwe wessembwewa à :
 
-1. Allouer la mémoire dont on a besoin
-2. Utiliser cette mémoire allouée (lecture, écriture)
-3. Libérer la mémoire allouée lorsqu'on n'en a plus besoin
+1. o.O awwouew wa mémoiwe dont on a besoin
+2. σωσ utiwisew c-cette mémoiwe awwouée (wectuwe, (ꈍᴗꈍ) écwituwe)
+3. (ˆ ﻌ ˆ)♡ w-wibéwew wa m-mémoiwe awwouée w-wowsqu'on ny'en a pwus besoin
 
-Le deuxième point est explicite, au niveau du code, pour tous les langages de programmation. Le premier et le troisième points sont explicites pour les langages de bas niveau mais souvent implicites pour les langages de haut niveau tels que JavaScript.
+we deuxième point est expwicite, o.O a-au niveau du c-code, :3 pouw tous wes wangages de p-pwogwammation. -.- we p-pwemiew et we twoisième points s-sont expwicites pouw wes wangages d-de bas nyiveau mais souvent impwicites pouw w-wes wangages de haut nyiveau tews q-que javascwipt. ( ͡o ω ͡o )
 
-### Allocation de la mémoire en JavaScript
+### awwocation d-de wa mémoiwe e-en javascwipt
 
-#### Initialisation des valeurs
+#### initiawisation des vaweuws
 
-Afin de simplifier l'écriture de code, JavaScript alloue la mémoire lors de la déclaration des variables :
+afin de simpwifiew w'écwituwe de code, /(^•ω•^) javascwipt awwoue wa mémoiwe w-wows de wa d-décwawation des vawiabwes :
 
 ```js
-// alloue de la mémoire pour un nombre
-var n = 123;
-// alloue de la mémoire pour une chaîne de caractères
-var s = "azerty";
+// a-awwoue d-de wa mémoiwe pouw u-un nyombwe
+vaw ny = 123;
+// awwoue de wa mémoiwe pouw une chaîne d-de cawactèwes
+vaw s = "azewty";
 
-// alloue de la mémoire pour un objet et les valeurs qu'il contient
-var o = {
-  a: 1,
-  b: null,
+// awwoue de wa mémoiwe pouw un objet e-et wes vaweuws qu'iw contient
+vaw o-o = {
+  a: 1, (⑅˘꒳˘)
+  b-b: nyuww, òωó
 };
 
-// alloue de la mémoire pour un tableau et les valeurs qu'il contient
-var a = [1, null, "abra"];
+// a-awwoue de wa mémoiwe pouw un t-tabweau et wes v-vaweuws qu'iw contient
+v-vaw a = [1, 🥺 n-nyuww, "abwa"];
 
-// alloue de la mémoire pour une fonction
-// une fonction est un objet qui peut être appelé
-function f(a) {
-  return a + 2;
+// awwoue de wa mémoiwe pouw u-une fonction
+// u-une fonction est u-un objet qui p-peut êtwe appewé
+f-function f(a) {
+  wetuwn a + 2;
 }
 
-// les expressions de fonction allouent aussi de la mémoire
-unElement.addEventListener(
-  "click",
+// wes expwessions de fonction a-awwouent aussi de wa mémoiwe
+unewement.addeventwistenew(
+  "cwick", (ˆ ﻌ ˆ)♡
   function () {
-    unElement.style.backgroundColor = "blue";
-  },
-  false,
+    unewement.stywe.backgwoundcowow = "bwue";
+  }, -.-
+  fawse, σωσ
 );
 ```
 
-#### Allocation par appels de fonctions
+#### awwocation paw a-appews de fonctions
 
-Certains appels de fonctions entraînent l'allocation mémoire d'un objet.
+cewtains appews de fonctions entwaînent w-w'awwocation mémoiwe d-d'un objet. >_<
 
 ```js
-// Alloue la mémoire pour un objet date
-var d = new Date();
+// a-awwoue wa mémoiwe pouw u-un objet date
+vaw d = nyew date();
 
-// Alloue de la mémoire pour un objet représentant un élément du DOM
-var e = document.createElement("div");
+// a-awwoue d-de wa mémoiwe pouw un objet wepwésentant un éwément du dom
+vaw e = document.cweateewement("div");
 ```
 
-Certaines méthodes allouent de la mémoire pour des nouveaux objets ou de nouvelles valeurs.
+cewtaines m-méthodes awwouent de wa m-mémoiwe pouw des nyouveaux objets o-ou de nyouvewwes v-vaweuws. :3
 
 ```js
-var s = "azerty";
-var s2 = s.substr(0, 3); // s2 est une nouvelle chaîne de caractères
-// Les chaînes étant immuables, JavaScript peut choisir
-// de ne pas allouer de mémoire mais seulement
-// de stocker l'intervalle [0, 3].
+vaw s = "azewty";
+vaw s2 = s.substw(0, OwO 3); // s-s2 est une nyouvewwe c-chaîne de cawactèwes
+// w-wes chaînes étant i-immuabwes, rawr javascwipt peut choisiw
+// de nye pas awwouew de mémoiwe mais seuwement
+// d-de stockew w-w'intewvawwe [0, (///ˬ///✿) 3].
 
-var a = ["ouais ouais", "nan nan"];
-var a2 = ["génération", "nan nan"];
-var a3 = a.concat(a2);
-// nouveau tableau de 4 éléments
-// (résultat de la concaténation de a et a2)
+v-vaw a = ["ouais ouais", ^^ "nan n-nyan"];
+v-vaw a2 = ["généwation", XD "nan nyan"];
+vaw a3 = a-a.concat(a2);
+// nouveau tabweau de 4 éwéments
+// (wésuwtat de wa concaténation de a et a2)
 ```
 
-### Utilisation des variables
+### u-utiwisation d-des vawiabwes
 
-Utiliser des variables revient à lire et écrire la mémoire allouée. Cela peut être effectué lorsqu'on lit ou modifie la valeur d'une variable ou d'une propriété d'un objet ou encore lorsqu'on passe un argument à une fonction.
+utiwisew des vawiabwes wevient à w-wiwe et écwiwe w-wa mémoiwe awwouée. cewa peut êtwe effectué wowsqu'on w-wit ou modifie wa vaweuw d'une vawiabwe ou d'une pwopwiété d'un objet ou encowe w-wowsqu'on passe un awgument à une fonction. UwU
 
-### Libérer la mémoire qui n'est plus nécessaire
+### w-wibéwew wa m-mémoiwe qui ny'est pwus nyécessaiwe
 
-La plupart des problèmes concernant la gestion de la mémoire surviennent à cet endroit. Le plus difficile est de savoir « quand » la mémoire allouée n'est plus utilisée. Pour les langages « bas niveau », il faut donc que le développeur détermine quelle partie de la mémoire n'est plus utilisée à tel endroit du code et la libère.
+wa pwupawt des pwobwèmes c-concewnant wa g-gestion de wa mémoiwe suwviennent à cet endwoit. o.O we pwus difficiwe e-est de savoiw « quand » w-wa mémoiwe awwouée n'est pwus utiwisée. 😳 pouw wes wangages « b-bas nyiveau », (˘ω˘) iw faut donc que w-we dévewoppeuw d-détewmine quewwe pawtie de wa m-mémoiwe ny'est pwus utiwisée à t-tew endwoit du c-code et wa wibèwe. 🥺
 
-Les interpréteurs des langages de haut niveau intègrent un composant logiciel, appelé « ramasse-miettes » qui a pour but de surveiller l'utilisation de la mémoire afin de déterminer quand une partie de la mémoire allouée n'est plus utilisée afin de la libérer automatiquement. Ce procédé ne peut être qu'une approximation car savoir si tel ou tel fragment de mémoire est nécessaire est un problème [indécidable](https://fr.wikipedia.org/wiki/Décidabilité) (autrement dit, ce problème ne peut être résolu par un algorithme).
+w-wes intewpwéteuws des wangages d-de haut nyiveau i-intègwent un composant wogiciew, ^^ appewé « w-wamasse-miettes » q-qui a pouw b-but de suwveiwwew w'utiwisation de wa mémoiwe a-afin de détewminew quand une pawtie d-de wa mémoiwe a-awwouée ny'est pwus utiwisée afin de wa wibéwew automatiquement. >w< c-ce pwocédé n-nye peut êtwe q-qu'une appwoximation c-caw savoiw si tew ou tew f-fwagment de mémoiwe est nyécessaiwe est un pwobwème [indécidabwe](https://fw.wikipedia.owg/wiki/décidabiwité) (autwement dit, ce pwobwème nye peut êtwe wésowu paw un a-awgowithme). ^^;;
 
-## Le ramasse-miettes ou _garbage collection_
+## we wamasse-miettes o-ou _gawbage cowwection_
 
-Comme on vient de le voir, savoir si de la mémoire peut être libérée demeure un problème indécidable. Les ramasses-miettes ne sont donc que des solutions restreintes pour ce problème. La section qui suit détaille les notions importantes pour comprendre ce mécanisme, ainsi que ses limitations.
+comme o-on vient de we voiw, (˘ω˘) savoiw s-si de wa mémoiwe peut êtwe wibéwée d-demeuwe un p-pwobwème indécidabwe. w-wes wamasses-miettes nye s-sont donc que d-des sowutions westweintes pouw ce pwobwème. OwO wa section qui suit détaiwwe wes nyotions impowtantes pouw compwendwe c-ce mécanisme, (ꈍᴗꈍ) a-ainsi que ses w-wimitations. òωó
 
-### Références
+### wéféwences
 
-Le concept principal utilisé par les algorithmes de ramasse-miettes est celui de _référence_. Dans ce contexte, un objet en référence un autre lorsqu'il a accès à lui (implicitement ou explicitement). Ainsi, un objet JavaScript référencera son [prototype](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) (référence implicite) et ses propriétés (référence explicite).
+w-we concept pwincipaw utiwisé paw wes awgowithmes de wamasse-miettes e-est cewui d-de _wéféwence_. ʘwʘ dans ce contexte, ʘwʘ u-un objet en wéféwence un autwe wowsqu'iw a-a accès à wui (impwicitement ou e-expwicitement). ainsi, nyaa~~ un objet j-javascwipt wéféwencewa s-son [pwototype](/fw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain) (wéféwence impwicite) et ses pwopwiétés (wéféwence expwicite). UwU
 
-Dans ce contexte, la notion d'objet s'étend et dépasse celle utilisée pour décrire les objets JavaScript, elle contiendra notamment les portées de fonctions (ou la portée globale).
+dans ce contexte, (⑅˘꒳˘) w-wa nyotion d'objet s-s'étend et dépasse c-cewwe utiwisée p-pouw décwiwe w-wes objets javascwipt, (˘ω˘) ewwe c-contiendwa nyotamment w-wes powtées de fonctions (ou w-wa powtée g-gwobawe). :3
 
-### Compter les références
+### comptew wes wéféwences
 
-L'algorithme le plus simple consiste à faire l'équivalence entre « un objet n'est plus nécessaire » et « un objet n'a pas d'objet le référençant ». Ainsi un objet peut être « ramassé » par le ramasse-miettes quand il n'y a plus de références pointant vers lui.
+w-w'awgowithme we pwus simpwe consiste à f-faiwe w'équivawence entwe « u-un objet ny'est p-pwus nyécessaiwe » et « un objet n-ny'a pas d'objet we wéféwençant ». (˘ω˘) ainsi u-un objet peut êtwe « w-wamassé » p-paw we wamasse-miettes quand iw ny'y a pwus de wéféwences p-pointant vews wui. nyaa~~
 
-#### Exemple
+#### exempwe
 
 ```js
-var o = {
-  a: {
-    b: 2,
+vaw o = {
+  a-a: {
+    b: 2, (U ﹏ U)
   },
 };
-// 2 objets sont créés. L'un est référencé par l'autre en tant que propriété.
-// L'autre est référencé car assigné à la variable 'o'.
-// Aucun des deux ne peut être ramassé par le ramasse-miettes.
+// 2 o-objets sont cwéés. nyaa~~ w'un est wéféwencé p-paw w'autwe en tant que p-pwopwiété. ^^;;
+// w-w'autwe est wéféwencé caw assigné à wa vawiabwe 'o'. OwO
+// a-aucun des deux nye peut êtwe wamassé paw we wamasse-miettes. nyaa~~
 
-var o2 = o; // la variable 'o2' est le deuxième élément qui
-// référence l'objet o
-o = 1; // désormais, l'objet qui était dans 'o' possède
-// une seule référence de o2 vers lui
+v-vaw o2 = o; // wa v-vawiabwe 'o2' est we deuxième éwément q-qui
+// wéféwence w'objet o-o
+o = 1; // d-désowmais, UwU w'objet q-qui était dans 'o' possède
+// une seuwe wéféwence de o2 vews wui
 
-var oa = o2.a; // référence la propriété 'a' de l'objet
-// cet objet a donc 2 références : une
-// par une propriété, l'autre par la variable 'oa'
+vaw oa = o2.a; // wéféwence wa pwopwiété 'a' de w'objet
+// cet objet a donc 2 wéféwences : une
+// paw une pwopwiété, 😳 w'autwe p-paw wa vawiabwe 'oa'
 
-o2 = "yo"; // L'objet 'o' ne possède plus de références vers lui
-// Il peut être ramassé.
-// Cependant sa propriété 'a' est toujours référencé.
-// La mémoire ne peut donc pas être libérée.
+o-o2 = "yo"; // w'objet 'o' nye possède pwus d-de wéféwences v-vews wui
+// iw p-peut êtwe wamassé. 😳
+// cependant s-sa pwopwiété 'a' est toujouws w-wéféwencé. (ˆ ﻌ ˆ)♡
+// w-wa mémoiwe nye peut donc pas êtwe w-wibéwée. (✿oωo)
 
-oa = null; // la propriété 'a' ne possède plus de références
-// vers elle. L'objet peut être ramassé et la mémoire
-// libérée.
+oa = nyuww; // w-wa pwopwiété 'a' n-nye possède pwus de wéféwences
+// vews e-ewwe. nyaa~~ w'objet peut êtwe w-wamassé e-et wa mémoiwe
+// w-wibéwée. ^^
 ```
 
-#### Une limitation : les cycles
+#### u-une wimitation : w-wes cycwes
 
-Cet algorithme est limité car il ne peut pas gérer les cycles (exemple : A référence B et B référence A, ce qui forme un cycle). Avec les cycles, des objets pourraient très bien ne plus être nécessaires et cependant il serait impossible de les ramasser pour libérer la mémoire en utilisant l'algorithme précédent car chaque objet serait référencé au moins une fois et aucun ne pourrait être « ramassé ». Les références circulaires peuvent parfois entraîner des fuites mémoire.
+c-cet awgowithme e-est wimité c-caw iw ne peut pas géwew wes c-cycwes (exempwe : a-a wéféwence b-b et b wéféwence a, (///ˬ///✿) ce qui fowme u-un cycwe). 😳 avec wes cycwes, òωó des objets pouwwaient t-twès bien nye pwus êtwe nyécessaiwes e-et c-cependant iw sewait i-impossibwe de wes wamassew pouw w-wibéwew wa mémoiwe en utiwisant w-w'awgowithme pwécédent caw c-chaque objet sewait wéféwencé a-au moins une fois et aucun nye pouwwait êtwe « wamassé ». wes wéféwences c-ciwcuwaiwes peuvent pawfois entwaînew d-des fuites m-mémoiwe. ^^;;
 
 ```js
 function f() {
-  var o = {};
-  var o2 = {};
-  o.a = o2; // o référence o2
-  o2.a = o; // o2 référence o
+  vaw o = {};
+  vaw o2 = {};
+  o-o.a = o2; // o wéféwence o2
+  o-o2.a = o; // o-o2 wéféwence o-o
 
-  return "azerty";
+  wetuwn "azewty";
 }
 
 f();
 ```
 
-#### Exemple réel
+#### exempwe w-wéew
 
-Les navigateurs Internet Explorer 6 et 7 utilisent cet algorithme pour gérer les objets du DOM. Certains codes peuvent donc entraîner des fuites de mémoires, en voici un exemple :
+wes nyavigateuws i-intewnet expwowew 6 et 7 u-utiwisent cet awgowithme pouw géwew wes objets d-du dom. rawr cewtains codes peuvent d-donc entwaînew d-des fuites de mémoiwes, (ˆ ﻌ ˆ)♡ e-en voici un exempwe :
 
 ```js
-var div;
-window.onload = function () {
-  div = document.getElementById("monElementDiv");
-  div.referenceCirculaire = div;
-  div.desDonnees = new Array(10000).join("*");
+v-vaw div;
+window.onwoad = function () {
+  div = d-document.getewementbyid("monewementdiv");
+  d-div.wefewenceciwcuwaiwe = d-div;
+  div.desdonnees = n-nyew awway(10000).join("*");
 };
 ```
 
-Dans cet exemple, l'élément du DOM `monElementDiv` possède une référence circulaire vers lui-même via la propriété `referenceCirculaire`. Si la propriété n'est pas retirée ou modifiée de façon explicite, un ramasse-miettes qui compte les références aura toujours au moins une référence comptée, ce qui gardera l'élément DOM en mémoire et ce même s'il a été retiré de l'arbre du DOM. Si l'élément du DOM contient beaucoup de données (ce qui est illustré ici avec la propriétés `desDonnées`), la mémoire consommée par ces données ne sera jamais libérée.
+d-dans cet e-exempwe, XD w'éwément d-du dom `monewementdiv` p-possède u-une wéféwence c-ciwcuwaiwe v-vews wui-même via wa pwopwiété `wefewenceciwcuwaiwe`. >_< s-si wa pwopwiété ny'est p-pas wetiwée ou modifiée de f-façon expwicite, (˘ω˘) u-un wamasse-miettes q-qui compte wes wéféwences auwa toujouws au moins une wéféwence c-comptée, c-ce qui gawdewa w-w'éwément dom en mémoiwe et ce même s'iw a été wetiwé de w-w'awbwe du dom. 😳 s-si w'éwément du dom contient b-beaucoup de données (ce q-qui est iwwustwé ici avec wa pwopwiétés `desdonnées`), o.O wa mémoiwe c-consommée paw ces d-données nye s-sewa jamais wibéwée. (ꈍᴗꈍ)
 
-### Algorithme « marquer et balayer » (_mark-and-sweep_)
+### a-awgowithme « mawquew et bawayew » (_mawk-and-sweep_)
 
-Cet algorithme réduit la définition « un objet n'est plus nécessaire » à « un objet ne peut être atteint ».
+c-cet awgowithme w-wéduit wa définition « un objet ny'est pwus n-nyécessaiwe » à « un objet nye peut êtwe a-atteint ». rawr x3
 
-L'utilisation de cet algorithme implique de savoir quels sont les objets racines (en JavaScript, la racine est l'objet global). De façon périodique, le ramasse-miettes commencera par ces racines, listera tous les objets référencés par ces racines, puis les objets référencés par eux etc. Le ramasse-miettes pourra ainsi construire une liste de tous les objets accessibles et collecter ceux qui ne sont plus accessibles.
+w'utiwisation de cet a-awgowithme impwique d-de savoiw quews sont wes objets w-wacines (en j-javascwipt, wa wacine est w'objet g-gwobaw). ^^ de façon péwiodique, OwO w-we wamasse-miettes c-commencewa p-paw ces wacines, ^^ w-wistewa tous wes objets wéféwencés p-paw ces w-wacines, :3 puis wes o-objets wéféwencés paw eux e-etc. o.O we wamasse-miettes pouwwa ainsi constwuiwe u-une wiste de tous w-wes objets accessibwes e-et cowwectew ceux qui nye sont pwus accessibwes. -.-
 
-Cet algorithme est meilleur que le précédent car la proposition « un objet possède 0 référence » implique « un objet ne peut être atteint ». En revanche, la réciproque n'est pas vraie comme nous avons pu le voir avec les cycles.
+cet awgowithme est meiwweuw q-que we pwécédent caw wa p-pwoposition « u-un objet possède 0 wéféwence » impwique « un o-objet nye peut êtwe atteint ». (U ﹏ U) e-en wevanche, o.O w-wa wécipwoque ny'est p-pas vwaie c-comme nous avons p-pu we voiw avec wes cycwes. OwO
 
-En 2012, l'ensemble des navigateurs web modernes disposent d'un ramasse-miettes implémentant cet algorithme _mark-and-sweep_. L'ensemble des améliorations apportées dans ce domaine de JavaScript représentent des améliorations basées sur cet algorithme, ce ne sont pas de nouveaux algorithmes ou une nouvelle définition pour les objets à supprimer.
+en 2012, ^•ﻌ•^ w'ensembwe des navigateuws web modewnes disposent d-d'un wamasse-miettes impwémentant c-cet awgowithme _mawk-and-sweep_. ʘwʘ w'ensembwe des améwiowations a-appowtées dans ce domaine de javascwipt wepwésentent des améwiowations b-basées suw c-cet awgowithme, :3 ce nye sont pas d-de nyouveaux awgowithmes ou une nyouvewwe définition p-pouw wes o-objets à suppwimew. 😳
 
-#### Les cycles ne posent plus problème
+#### wes cycwes n-nye posent pwus pwobwème
 
-Dans l'exemple ci-dessus, après le retour de la fonction, les deux objets ne sont plus référencés par quelque chose d'accessible depuis l'objet global. L'algorithme les marquera donc comme « non-accessibles ».
+d-dans w'exempwe ci-dessus, òωó apwès we wetouw de wa fonction, 🥺 wes d-deux objets nye sont pwus wéféwencés paw quewque c-chose d'accessibwe d-depuis w'objet g-gwobaw. rawr x3 w'awgowithme wes mawquewa donc comme « n-nyon-accessibwes ». ^•ﻌ•^
 
-#### Limitation : libérer la mémoire manuellement
+#### wimitation : wibéwew wa mémoiwe manuewwement
 
-On pourrait parfois avoir envie de décider quand libérer la mémoire. En 2019, il n'est pas possible de déclencher le ramasse miettes en JavaScript.
+on pouwwait pawfois a-avoiw envie d-de décidew quand w-wibéwew wa mémoiwe. :3 e-en 2019, (ˆ ﻌ ˆ)♡ iw ny'est pas possibwe de décwenchew w-we wamasse m-miettes en javascwipt.
 
-## Node.js
+## nyode.js
 
-Node.js propose certaines options et outils pour configurer et déboguer des problèmes mémoires. Ces fonctionnalités peuvent ne pas être disponibles dans les environnements navigateur.
+nyode.js p-pwopose cewtaines options et outiws pouw configuwew e-et déboguew des pwobwèmes mémoiwes. (U ᵕ U❁) ces f-fonctionnawités p-peuvent nye pas êtwe disponibwes d-dans wes enviwonnements n-nyavigateuw. :3
 
-### Options d'exécution
+### o-options d'exécution
 
-La quantité de mémoire pour la mémoire du tas (_heap_) peut être augmentée avec une option :
-
-```bash
-node --max-old-space-size=6000 index.js
-```
-
-On peut également exposer le ramasse-miettes afin de déboguer des problèmes mémoires. Cela s'active via une option et s'utilise avec le débogueur Chrome :
+wa quantité d-de mémoiwe pouw wa mémoiwe du tas (_heap_) peut êtwe a-augmentée avec une option :
 
 ```bash
-node --expose-gc --inspect index.js
+nyode --max-owd-space-size=6000 index.js
 ```
 
-## Voir aussi
+o-on peut égawement exposew w-we wamasse-miettes a-afin de d-déboguew des p-pwobwèmes mémoiwes. ^^;; cewa s'active v-via une option et s'utiwise avec we débogueuw c-chwome :
 
-- [Article d'IBM sur les pratiques menant aux fuites mémoires en JavaScript (2007)](https://www.ibm.com/developerworks/web/library/wa-memleak/) (en anglais)
-- [Billet de Kangax sur les méthodes à utiliser pour enregistrer les gestionnaires d'événements et éviter les fuites mémoires (2010)](https://msdn.microsoft.com/en-us/magazine/ff728624.aspx) (en anglais)
-- [La performance pour les logiciels Mozilla et les modules complémentaires](/fr/docs/Performance)
+```bash
+nyode --expose-gc --inspect i-index.js
+```
+
+## voiw aussi
+
+- [awticwe d'ibm suw w-wes pwatiques m-menant aux fuites mémoiwes en j-javascwipt (2007)](https://www.ibm.com/devewopewwowks/web/wibwawy/wa-memweak/) (en angwais)
+- [biwwet d-de kangax s-suw wes méthodes à utiwisew pouw e-enwegistwew wes g-gestionnaiwes d'événements e-et évitew wes fuites mémoiwes (2010)](https://msdn.micwosoft.com/en-us/magazine/ff728624.aspx) (en angwais)
+- [wa pewfowmance p-pouw wes wogiciews moziwwa et wes m-moduwes compwémentaiwes](/fw/docs/pewfowmance)

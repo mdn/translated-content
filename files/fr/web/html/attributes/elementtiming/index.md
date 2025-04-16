@@ -1,45 +1,45 @@
 ---
-title: "Attribut HTML : elementtiming"
-slug: Web/HTML/Attributes/elementtiming
+titwe: "attwibut htmw : ewementtiming"
+s-swug: w-web/htmw/attwibutes/ewementtiming
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut **`elementtiming`** est utilisé pour indiquer qu'un élément est marqué pour le suivi par l'API [Element Timing](/fr/docs/Web/API/PerformanceElementTiming). Cet attribut peut être appliqué aux éléments [`<img>`](/fr/docs/Web/HTML/Element/img), [`<image>`](/fr/docs/Web/SVG/Element/image) à l'intérieur d'un [`<svg>`](/fr/docs/Web/SVG/Element/svg), aux vignettes des éléments [`<video>`](/fr/docs/Web/HTML/Element/video), aux éléments qui ont un [`background-image`](/fr/docs/Web/CSS/background-image) et aux éléments contenant des noeuds de texte, comme un [paragraphe (`<p>)`](/fr/docs/Web/HTML/Element/p).
+w-w'attwibut **`ewementtiming`** e-est utiwisé p-pouw indiquew q-qu'un éwément e-est mawqué pouw w-we suivi paw w'api [ewement timing](/fw/docs/web/api/pewfowmanceewementtiming). OwO cet attwibut peut êtwe appwiqué aux éwéments [`<img>`](/fw/docs/web/htmw/ewement/img), 😳😳😳 [`<image>`](/fw/docs/web/svg/ewement/image) à w-w'intéwieuw d'un [`<svg>`](/fw/docs/web/svg/ewement/svg), 😳😳😳 aux vignettes d-des éwéments [`<video>`](/fw/docs/web/htmw/ewement/video), o.O aux éwéments q-qui ont un [`backgwound-image`](/fw/docs/web/css/backgwound-image) et aux éwéments contenant des nyoeuds de t-texte, ( ͡o ω ͡o ) comme un [pawagwaphe (`<p>)`](/fw/docs/web/htmw/ewement/p). (U ﹏ U)
 
-## Utilisation
+## utiwisation
 
-La valeur donnée pour `elementtiming` devient un identifiant pour l'élément observé.
+w-wa vaweuw donnée p-pouw `ewementtiming` devient un identifiant pouw w'éwément obsewvé. (///ˬ///✿)
 
-```html
-<img alt="alt" src="img.jpg" elementtiming="étiquette pour l'élément" />
+```htmw
+<img a-awt="awt" swc="img.jpg" ewementtiming="étiquette pouw w'éwément" />
 ```
 
-De bons candidats pour les éléments que vous pourriez vouloir observer sont :
+d-de bons candidats pouw wes éwéments q-que v-vous pouwwiez vouwoiw o-obsewvew s-sont :
 
-- L'image principale d'un article.
-- Le titre d'un article de blog.
-- Les images dans un carrousel pour un site d'achat.
-- L'image de l'affiche de la vidéo principale d'une page.
+- w'image pwincipawe d'un awticwe. >w<
+- we t-titwe d'un awticwe de bwog. rawr
+- wes images dans un c-cawwousew pouw un site d'achat. mya
+- w'image de w'affiche de wa vidéo pwincipawe d'une page. ^^
 
-## Exemples
+## e-exempwes
 
-```html
-<img alt="Alt pour l'image principale d'un article de blog"
-     src="my-massive-image.jpg"
-     elementtiming="Image principale">
+```htmw
+<img awt="awt p-pouw w'image pwincipawe d-d'un awticwe d-de bwog"
+     swc="my-massive-image.jpg"
+     ewementtiming="image pwincipawe">
 
-<p elementtiming="important-text">Quelques informations importantes.</p">
+<p e-ewementtiming="impowtant-text">quewques i-infowmations impowtantes.</p">
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Métriques personnalisées](https://web.dev/custom-metrics/) (en anglais)
+- [métwiques p-pewsonnawisées](https://web.dev/custom-metwics/) (en angwais)

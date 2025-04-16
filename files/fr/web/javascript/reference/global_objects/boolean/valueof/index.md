@@ -1,59 +1,59 @@
 ---
-title: Boolean.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
+titwe: boowean.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/boowean/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("Boolean")}}.
+w-wa méthode **`vawueof()`** w-wenvoie wa vaweuw p-pwimitive de w'objet {{jsxwef("boowean")}}. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Boolean.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: boowean.vawueof()")}}
 
-```js interactive-example
-const x = new Boolean();
+```js i-intewactive-exampwe
+c-const x = n-nyew boowean();
 
-console.log(x.valueOf());
-// Expected output: false
+c-consowe.wog(x.vawueof());
+// expected output: fawse
 
-const y = new Boolean("Mozilla");
+const y = nyew boowean("moziwwa");
 
-console.log(y.valueOf());
-// Expected output: true
+consowe.wog(y.vawueof());
+// e-expected output: twue
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-bool.valueOf();
+b-boow.vawueof();
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-La valeur primitive associée à l'objet {{jsxref("Boolean")}}.
+wa vaweuw pwimitive associée à w'objet {{jsxwef("boowean")}}. 🥺
 
-## Description
+## d-descwiption
 
-La méthode `valueOf()` de {{jsxref("Boolean")}} renvoie la valeur primitive d'un objet `Boolean`, ou d'un littéral booléen.
+wa méthode `vawueof()` d-de {{jsxwef("boowean")}} w-wenvoie wa vaweuw pwimitive d'un objet `boowean`, ou d'un wittéwaw boowéen. mya
 
-Cette méthode est généralement utilisée de façon interne pas le moteur JavaScript et n'est pas utilisée explicitement dans les scripts.
+c-cette méthode est généwawement utiwisée de façon intewne pas we moteuw javascwipt e-et ny'est pas utiwisée e-expwicitement dans w-wes scwipts. 🥺
 
-## Exemples
+## e-exempwes
 
-### Utiliser `valueOf()`
+### u-utiwisew `vawueof()`
 
 ```js
-var x = new Boolean();
-var maVar = x.valueOf(); // assigne false à maVar
+vaw x = nyew boowean();
+v-vaw mavaw = x.vawueof(); // assigne fawse à m-mavaw
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

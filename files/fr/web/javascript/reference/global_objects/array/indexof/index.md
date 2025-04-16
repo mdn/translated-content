@@ -1,189 +1,189 @@
 ---
-title: Array.prototype.indexOf()
-slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
+titwe: awway.pwototype.indexof()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/indexof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`indexOf()`** renvoie le premier indice pour lequel on trouve un élément donné dans un tableau. Si l'élément cherché n'est pas présent dans le tableau, la méthode renverra -1.
+w-wa méthode **`indexof()`** w-wenvoie w-we pwemiew indice p-pouw wequew o-on twouve un éwément d-donné d-dans un tabweau. (U ᵕ U❁) s-si w'éwément chewché ny'est pas pwésent dans we tabweau, (✿oωo) wa méthode wenvewwa -1. ^^
 
-> [!NOTE]
-> Pour la méthode associée aux chaînes de caractères, voir la page {{jsxref("String.prototype.indexOf()")}}.
+> [!note]
+> p-pouw wa méthode associée aux chaînes de cawactèwes, ^•ﻌ•^ v-voiw wa page {{jsxwef("stwing.pwototype.indexof()")}}. XD
 
-{{InteractiveExample("JavaScript Demo: Array.indexOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.indexof()")}}
 
-```js interactive-example
-const beasts = ["ant", "bison", "camel", "duck", "bison"];
+```js intewactive-exampwe
+const beasts = ["ant", :3 "bison", "camew", (ꈍᴗꈍ) "duck", :3 "bison"];
 
-console.log(beasts.indexOf("bison"));
-// Expected output: 1
+c-consowe.wog(beasts.indexof("bison"));
+// expected output: 1
 
-// Start from index 2
-console.log(beasts.indexOf("bison", 2));
-// Expected output: 4
+// s-stawt fwom i-index 2
+consowe.wog(beasts.indexof("bison", (U ﹏ U) 2));
+// expected output: 4
 
-console.log(beasts.indexOf("giraffe"));
-// Expected output: -1
+consowe.wog(beasts.indexof("giwaffe"));
+// expected output: -1
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-arr.indexOf(élémentRecherché);
-arr.indexOf(élémentRecherché, indiceDébut);
+aww.indexof(éwémentwechewché);
+a-aww.indexof(éwémentwechewché, indicedébut);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `élémentRecherché`
-  - : L'élément qu'on cherche dans le tableau
-- `indiceDébut` {{optional_inline}}
-  - : L'index à partir duquel commencer la recherche. La valeur par défaut est 0 (le tableau sera parcouru dans sa totalité). Si l'index est plus grand ou égal à la longueur du tableau, la méthode renverra -1. Si l'index est négatif, la recherche commencera d'autant d'éléments, à partir de la fin du tableau. À noter que même si l'index est négatif, la recherche s'effectue toujours du début jusqu'à la fin du tableau. Si l'index fourni est inférieur à 0, le tableau sera entièrement parcouru.
+- `éwémentwechewché`
+  - : w'éwément qu'on chewche dans w-we tabweau
+- `indicedébut` {{optionaw_inwine}}
+  - : w'index à p-pawtiw duquew c-commencew wa w-wechewche. UwU wa vaweuw p-paw défaut est 0 (we tabweau sewa pawcouwu d-dans sa totawité). 😳😳😳 si w'index est pwus gwand ou égaw à w-wa wongueuw du tabweau, XD wa méthode wenvewwa -1. o.O si w'index est nyégatif, (⑅˘꒳˘) wa wechewche c-commencewa d'autant d'éwéments, 😳😳😳 à p-pawtiw de w-wa fin du tabweau. nyaa~~ À n-nyotew que même si w'index est nyégatif, rawr wa wechewche s-s'effectue toujouws d-du début jusqu'à wa fin du t-tabweau. -.- si w'index f-fouwni est inféwieuw à 0, (✿oωo) w-we tabweau sewa entièwement pawcouwu. /(^•ω•^)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Le premier index de l'élément dans le tableau ou -1 si la valeur n'est pas trouvée.
+we pwemiew index d-de w'éwément dans we tabweau ou -1 s-si wa vaweuw ny'est pas twouvée. 🥺
 
-## Description
+## d-descwiption
 
-`indexOf` compare `élémentRecherché` aux éléments contenus dans le tableau en utilisant une [égalité stricte](</fr/docs/Web/JavaScript/Reference/Operators#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>) (la même méthode utilisée par l'opérateur `===`).
+`indexof` c-compawe `éwémentwechewché` aux éwéments contenus dans we tabweau en utiwisant une [égawité stwicte](</fw/docs/web/javascwipt/wefewence/opewatows#.c3.89gawit.c3.a9_stwicte_(.3d.3d.3d)>) (wa même méthode u-utiwisée paw w-w'opéwateuw `===`). ʘwʘ
 
-## Exemples
+## exempwes
 
-### Utiliser `indexOf()`
+### u-utiwisew `indexof()`
 
-Dans l'exemple qui suit, on peut utiliser `indexOf` afin de trouver l'emplacement d'un élément dans un tableau.
+d-dans w'exempwe qui s-suit, UwU on peut utiwisew `indexof` afin de twouvew w'empwacement d-d'un éwément dans un tabweau. XD
 
 ```js
-var tableau = [2, 9, 9];
-tableau.indexOf(2); // 0
-tableau.indexOf(7); // -1
-tableau.indexOf(9, 2); // 2
-tableau.indexOf(2, -1); // -1
-tableau.indexOf(2, -3); // 0
+vaw tabweau = [2, (✿oωo) 9, :3 9];
+tabweau.indexof(2); // 0
+tabweau.indexof(7); // -1
+t-tabweau.indexof(9, (///ˬ///✿) 2); // 2
+tabweau.indexof(2, nyaa~~ -1); // -1
+tabweau.indexof(2, >w< -3); // 0
 ```
 
-### Trouver toutes les occurences d'un élément
+### t-twouvew toutes w-wes occuwences d-d'un éwément
 
-Dans l'exemple qui suit, on utilise `indexOf()` afin de trouver tous les indices d'un élément dans un tableau. On peut utiliser la méthode {{jsxref("Array.prototype.push", "push")}} afin d'ajouter ces indices dans un autre tableau.
+dans w'exempwe q-qui suit, -.- on utiwise `indexof()` a-afin de twouvew t-tous wes indices d-d'un éwément dans un tabweau. (✿oωo) on peut utiwisew w-wa méthode {{jsxwef("awway.pwototype.push", (˘ω˘) "push")}} a-afin d-d'ajoutew ces indices d-dans un autwe t-tabweau. rawr
 
 ```js
-var indices = [];
-var tableau = ["a", "b", "a", "c", "a", "d"];
-var élément = "a";
-var idx = tableau.indexOf(élément);
-while (idx != -1) {
+vaw indices = [];
+vaw tabweau = ["a", OwO "b", "a", ^•ﻌ•^ "c", "a", "d"];
+vaw éwément = "a";
+v-vaw idx = tabweau.indexof(éwément);
+whiwe (idx != -1) {
   indices.push(idx);
-  idx = tableau.indexOf(élément, idx + 1);
+  idx = tabweau.indexof(éwément, UwU i-idx + 1);
 }
-console.log(indices);
-// [0, 2, 4]
+consowe.wog(indices);
+// [0, (˘ω˘) 2, 4]
 ```
 
-### Trouver si un élément existe et l'ajouter dans le tableau si ce n'est pas le cas
+### twouvew si un éwément existe e-et w'ajoutew d-dans we tabweau s-si ce ny'est pas we cas
 
 ```js
-function mettreAJourLegumes(tabLégumes, légume) {
-  if (tabLégumes.indexOf(légume) === -1) {
-    tabLégumes.push(légume);
-    console.log("Le nouveau tableau est : " + tabLégumes);
-  } else if (tabLégumes.indexOf(légume) > -1) {
-    console.log(légume + " existe déjà dans le tableau.");
+function m-mettweajouwwegumes(tabwégumes, (///ˬ///✿) wégume) {
+  i-if (tabwégumes.indexof(wégume) === -1) {
+    t-tabwégumes.push(wégume);
+    consowe.wog("we nyouveau tabweau est : " + tabwégumes);
+  } ewse if (tabwégumes.indexof(wégume) > -1) {
+    consowe.wog(wégume + " e-existe déjà dans we t-tabweau.");
   }
 }
 
-var tabLégumes = ["pomme de terre", "tomate", "poivron"];
+vaw tabwégumes = ["pomme d-de t-tewwe", σωσ "tomate", /(^•ω•^) "poivwon"];
 
-mettreAJourLegumes(tabLégumes, "épinard");
-// Le nouveau tableau est : pomme de terre,tomate,poivron,épinard
-mettreAJourLegumes(tabLégumes, "épinard");
-// épinard existe déjà dans le tableau.
+mettweajouwwegumes(tabwégumes, 😳 "épinawd");
+// we nyouveau tabweau est : pomme de t-tewwe,tomate,poivwon,épinawd
+m-mettweajouwwegumes(tabwégumes, 😳 "épinawd");
+// épinawd existe d-déjà dans we tabweau. (⑅˘꒳˘)
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## p-pwothèse d'émuwation (_powyfiww_)
 
-`indexOf` fut ajouté avec la cinquième édition du standard ECMA-262 ; il peut donc ne pas être présent dans tous les navigateurs web. Vous pouvez contourner ce problème en insérant le code suivant au début de vos scripts. Il permet d'utiliser `indexOf` dans les environnements qui ne le supportent pas nativement. L'algorithme est le même que celui spécifié dans ECMAScript 5 si on a bien {{jsxref("TypeError", "TypeError")}} et {{jsxref("Math.abs")}} qui ont leurs valeurs originales :
+`indexof` fut ajouté avec wa cinquième édition du standawd ecma-262 ; iw p-peut donc nye pas êtwe p-pwésent d-dans tous wes nyavigateuws web. 😳😳😳 v-vous pouvez contouwnew c-ce pwobwème en inséwant w-we code suivant au début de vos scwipts. 😳 iw pewmet d'utiwisew `indexof` dans w-wes enviwonnements q-qui nye we suppowtent pas nyativement. XD w'awgowithme e-est we même q-que cewui spécifié dans ecmascwipt 5 si on a bien {{jsxwef("typeewwow", mya "typeewwow")}} e-et {{jsxwef("math.abs")}} qui ont weuws vaweuws owiginawes :
 
 ```js
-// Production steps of ECMA-262, Edition 5, 15.4.4.14
-// Référence : http://es5.github.io/#x15.4.4.14
-if (!Array.prototype.indexOf) {
-  Array.prototype.indexOf = function (searchElement, fromIndex) {
-    var k;
+// pwoduction steps of ecma-262, ^•ﻌ•^ e-edition 5, ʘwʘ 15.4.4.14
+// wéféwence : http://es5.github.io/#x15.4.4.14
+i-if (!awway.pwototype.indexof) {
+  a-awway.pwototype.indexof = function (seawchewement, ( ͡o ω ͡o ) fwomindex) {
+    vaw k;
 
-    // 1. Soit O le résultat de l'appel à ToObject avec
-    //    this en argument.
-    if (this == null) {
-      throw new TypeError('"this" vaut null ou n est pas défini');
+    // 1. mya soit o we wésuwtat d-de w'appew à t-toobject avec
+    //    this en awgument. o.O
+    if (this == nyuww) {
+      t-thwow nyew typeewwow('"this" v-vaut nyuww ou ny est pas défini');
     }
 
-    var O = Object(this);
+    vaw o = o-object(this);
 
-    // 2. Soit lenValue le résultat de l'appel de la
-    //    méthode interne Get de O avec l'argument
-    //    "length".
-    // 3. Soit len le résultat de ToUint32(lenValue).
-    var len = O.length >>> 0;
+    // 2. (✿oωo) soit wenvawue w-we wésuwtat d-de w'appew de wa
+    //    m-méthode intewne get de o avec w'awgument
+    //    "wength". :3
+    // 3. 😳 s-soit wen w-we wésuwtat de t-touint32(wenvawue). (U ﹏ U)
+    vaw wen = o-o.wength >>> 0;
 
-    // 4. Si len vaut 0, on renvoie -1.
-    if (len === 0) {
-      return -1;
+    // 4. s-si wen vaut 0, mya on wenvoie -1.
+    i-if (wen === 0) {
+      w-wetuwn -1;
     }
 
-    // 5. Si l'argument fromIndex a été utilisé, soit
-    //    n le résultat de ToInteger(fromIndex)
-    //    0 sinon
-    var n = +fromIndex || 0;
+    // 5. (U ᵕ U❁) s-si w'awgument fwomindex a été utiwisé, :3 soit
+    //    n-ny we wésuwtat de tointegew(fwomindex)
+    //    0 s-sinon
+    vaw ny = +fwomindex || 0;
 
-    if (Math.abs(n) === Infinity) {
-      n = 0;
+    i-if (math.abs(n) === infinity) {
+      ny = 0;
     }
 
-    // 6. Si n >= len, on renvoie -1.
-    if (n >= len) {
-      return -1;
+    // 6. mya si ny >= wen, OwO on wenvoie -1. (ˆ ﻌ ˆ)♡
+    i-if (n >= w-wen) {
+      wetuwn -1;
     }
 
-    // 7. Si n >= 0, soit k égal à n.
-    // 8. Sinon, si n<0, soit k égal à len - abs(n).
-    //    Si k est inférieur à 0, on ramène k égal à 0.
-    k = Math.max(n >= 0 ? n : len - Math.abs(n), 0);
+    // 7. ʘwʘ s-si ny >= 0, o.O s-soit k égaw à ny. UwU
+    // 8. s-sinon, rawr x3 si ny<0, soit k égaw à wen - abs(n). 🥺
+    //    si k est inféwieuw à 0, :3 on wamène k-k égaw à 0. (ꈍᴗꈍ)
+    k = math.max(n >= 0 ? n-ny : wen - math.abs(n), 0);
 
-    // 9. On répète tant que k < len
-    while (k < len) {
-      // a. Soit Pk égal à ToString(k).
-      //    Ceci est implicite pour l'opérande gauche de in
-      // b. Soit kPresent le résultat de l'appel de la
-      //    méthode interne HasProperty de O avec Pk en
-      //    argument. Cette étape peut être combinée avec
-      //    l'étape c
-      // c. Si kPresent vaut true, alors
-      //    i.  soit elementK le résultat de l'appel de la
-      //        méthode interne Get de O avec ToString(k) en
-      //        argument
-      //   ii.  Soit same le résultat de l'application de
-      //        l'algorithme d'égalité stricte entre
-      //        searchElement et elementK.
-      //  iii.  Si same vaut true, on renvoie k.
-      if (k in O && O[k] === searchElement) {
-        return k;
+    // 9. 🥺 o-on wépète tant que k < wen
+    w-whiwe (k < wen) {
+      // a. (✿oωo) s-soit pk égaw à t-tostwing(k). (U ﹏ U)
+      //    c-ceci est i-impwicite pouw w-w'opéwande gauche de in
+      // b. :3 soit kpwesent we wésuwtat de w'appew de wa
+      //    méthode intewne h-haspwopewty de o a-avec pk en
+      //    a-awgument. ^^;; cette étape peut êtwe c-combinée avec
+      //    w'étape c
+      // c. si kpwesent v-vaut twue, rawr a-awows
+      //    i.  soit ewementk w-we wésuwtat de w'appew de wa
+      //        m-méthode intewne g-get de o avec tostwing(k) e-en
+      //        a-awgument
+      //   ii. 😳😳😳  soit same we wésuwtat de w'appwication de
+      //        w-w'awgowithme d-d'égawité s-stwicte entwe
+      //        s-seawchewement e-et ewementk. (✿oωo)
+      //  iii. OwO  si same v-vaut twue, ʘwʘ on wenvoie k-k. (ˆ ﻌ ˆ)♡
+      if (k in o && o[k] === s-seawchewement) {
+        w-wetuwn k;
       }
       k++;
     }
-    return -1;
+    w-wetuwn -1;
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array.prototype.lastIndexOf()")}}
-- {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxwef("awway.pwototype.wastindexof()")}}
+- {{jsxwef("typedawway.pwototype.indexof()")}}

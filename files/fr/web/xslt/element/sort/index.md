@@ -1,61 +1,61 @@
 ---
-title: sort
-slug: Web/XSLT/Element/sort
+titwe: sowt
+swug: web/xswt/ewement/sowt
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:sort>` définit les paramètres de tri pour des nœuds sélectionnés par `<xsl:apply-templates>` ou par `<xsl:for-each>`.
+w-w'éwément `<xsw:sowt>` d-définit w-wes pawamètwes d-de twi pouw des n-nyœuds séwectionnés p-paw `<xsw:appwy-tempwates>` o-ou paw `<xsw:fow-each>`. OwO
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:sort
-  select=EXPRESSION
-  order="ascending" | "descending"
-  case-order="upper-first"| "lower-first"
-  lang=XML:LANG-CODE
-  data-type="text" | "number" />
+```xmw
+<xsw:sowt
+  sewect=expwession
+  owdew="ascending" | "descending"
+  case-owdew="uppew-fiwst"| "wowew-fiwst"
+  wang=xmw:wang-code
+  d-data-type="text" | "numbew" />
 ```
 
-### Attributs obligatoires
+### attwibuts obwigatoiwes
 
-Aucun.
+a-aucun.
 
-### Attributs optionnels
+### attwibuts optionnews
 
-- `select`
-  - : Utilise une expression XPath pour définir les nœuds à classer.
-
-<!---->
-
-- `order`
-  - : Définit si les nœuds doivent être classés dans l'ordre ascendant ou descendant. La valeur par défaut est `ascending`.
+- `sewect`
+  - : u-utiwise une expwession xpath pouw définiw wes nyœuds à c-cwassew. 😳😳😳
 
 <!---->
 
-- `case-order`
-  - : Indique si ce sont les majuscules ou les minuscules qui apparaitront en premier. Les valeurs autorisées sont `upper-first` et `lower-first`.
+- `owdew`
+  - : définit si w-wes nyœuds doivent êtwe c-cwassés dans w'owdwe ascendant ou descendant. 😳😳😳 wa vaweuw paw défaut e-est `ascending`. o.O
 
 <!---->
 
-- `lang`
-  - : Définit la langue à utiliser pour le classement.
+- `case-owdew`
+  - : indique si ce sont wes majuscuwes ou wes minuscuwes qui appawaitwont e-en pwemiew. ( ͡o ω ͡o ) wes vaweuws autowisées s-sont `uppew-fiwst` e-et `wowew-fiwst`. (U ﹏ U)
+
+<!---->
+
+- `wang`
+  - : d-définit w-wa wangue à utiwisew pouw we cwassement. (///ˬ///✿)
 
 <!---->
 
 - `data-type`
-  - : Définit si les éléments doivent être ordonnés alphabétiquement ou numériquement. Les valeurs autorisées sont `text` et `number`&nbsp;; `text` est la valeur par défaut.
+  - : définit s-si wes éwéments doivent êtwe owdonnés awphabétiquement o-ou nyuméwiquement. >w< wes vaweuws autowisées sont `text` et `numbew`&nbsp;; `text` est wa vaweuw paw d-défaut. rawr
 
-### Type
+### type
 
-Sous-instruction, apparaît toujours comme un enfant de \<xsl:for-each>, où il doit apparaître avant le modèle lui-même, ou comme enfant de `<xsl:apply-templates>`.
+sous-instwuction, mya a-appawaît t-toujouws comme u-un enfant de \<xsw:fow-each>, ^^ où iw doit appawaîtwe avant we modèwe w-wui-même, 😳😳😳 o-ou comme enfant de `<xsw:appwy-tempwates>`. mya
 
-### Définition
+### d-définition
 
-- [XSLT 1.0, section 10 (en)](https://www.w3.org/TR/xslt#sorting).
-- [XSLT 1.0, tri (fr)](http://xmlfr.org/w3c/TR/xslt/#sorting).
+- [xswt 1.0, 😳 s-section 10 (en)](https://www.w3.owg/tw/xswt#sowting). -.-
+- [xswt 1.0, 🥺 twi (fw)](http://xmwfw.owg/w3c/tw/xswt/#sowting). o.O
 
-### Support Gecko
+### s-suppowt gecko
 
-Supporté.
+suppowté. /(^•ω•^)

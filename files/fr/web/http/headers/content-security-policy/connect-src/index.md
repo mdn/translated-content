@@ -1,100 +1,100 @@
 ---
-title: "CSP : connect-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
+titwe: "csp : connect-swc"
+swug: w-web/http/headews/content-secuwity-powicy/connect-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`connect-src`** restreint les URL qui peuvent être chargées en utilisant des interfaces de programmation. Les API concernées sont&nbsp;:
+wa d-diwective http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`connect-swc`** w-westweint wes u-uww qui peuvent êtwe c-chawgées e-en utiwisant des i-intewfaces de pwogwammation. (˘ω˘) w-wes api concewnées sont&nbsp;:
 
-- [`<a>`](/fr/docs/Web/HTML/Element/a) et l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#ping),
-- [`fetch()`](/fr/docs/Web/API/Window/fetch),
-- [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest),
-- [`WebSocket`](/fr/docs/Web/API/WebSocket),
-- [`EventSource`](/fr/docs/Web/API/EventSource),
-- [`Navigator.sendBeacon()`](/fr/docs/Web/API/Navigator/sendBeacon).
+- [`<a>`](/fw/docs/web/htmw/ewement/a) et w'attwibut [`ping`](/fw/docs/web/htmw/ewement/a#ping),
+- [`fetch()`](/fw/docs/web/api/window/fetch), >_<
+- [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest), -.-
+- [`websocket`](/fw/docs/web/api/websocket), 🥺
+- [`eventsouwce`](/fw/docs/web/api/eventsouwce), (U ﹏ U)
+- [`navigatow.sendbeacon()`](/fw/docs/web/api/navigatow/sendbeacon). >w<
 
-> **Note :** `connect-src 'self'` ne s'applique pas aux schémas de websocket pour tous les navigateurs. Pour plus d'informations, consulter [ce ticket (en anglais)](https://github.com/w3c/webappsec-csp/issues/7).
+> **note :** `connect-swc 'sewf'` nye s'appwique p-pas aux schémas de websocket pouw tous w-wes nyavigateuws. mya pouw pwus d'infowmations, >w< c-consuwtew [ce ticket (en angwais)](https://github.com/w3c/webappsec-csp/issues/7). nyaa~~
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th s-scope="wow">vewsion de c-csp</th>
       <td>1</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">type de diwective</th>
+      <td><a hwef="/fw/docs/gwossawy/fetch_diwective">diwective de wécupéwation</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">utiwisation d-de <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> paw défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
+        oui, (✿oωo) si cette diwective est a-absente, ʘwʘ w'agent utiwisateuw c-consuwtewa wa diwective <code>defauwt-swc</code>. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
-```http
-Content-Security-Policy: connect-src <source>;
-Content-Security-Policy: connect-src <source> <source>;
-```
-
-### Sources
-
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
-
-## Exemples
-
-### Cas de violation
-
-Soit cet en-tête CSP&nbsp;:
+une ou p-pwusieuws souwces p-peuvent êtwe autowisées pouw cette diwective&nbsp;:
 
 ```http
-Content-Security-Policy: connect-src https://example.com/
+c-content-secuwity-powicy: connect-swc <souwce>;
+content-secuwity-powicy: c-connect-swc <souwce> <souwce>;
 ```
 
-Les connexions suivantes seront bloquées et ne se chargeront pas&nbsp;:
+### souwces
 
-```html
-<a ping="https://not-example.com"></a>
+`<souwce>` peut êtwe ny'impowte quewwe vaweuw pawmi cewwes énuméwées dans [w'awticwe s-suw wes vaweuws souwces csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). 😳😳😳
 
-<script>
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://not-example.com/');
-  xhr.send();
+o-on nyotewa que c-cet ensembwe d-de vaweuws peut êtwe utiwisé pouw toutes wes [diwectives de wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et p-pouw [cewtaines a-autwes diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). :3
 
-  let ws = new WebSocket("https://not-example.com/");
+## exempwes
 
-  let es = new EventSource("https://not-example.com/");
+### c-cas de viowation
 
-  navigator.sendBeacon("https://not-example.com/", { ... });
-</script>
+s-soit cet en-tête csp&nbsp;:
+
+```http
+c-content-secuwity-powicy: connect-swc https://exampwe.com/
 ```
 
-## Spécifications
+w-wes connexions suivantes sewont bwoquées e-et nye se chawgewont pas&nbsp;:
 
-{{Specifications}}
+```htmw
+<a p-ping="https://not-exampwe.com"></a>
 
-## Compatibilité des navigateurs
+<scwipt>
+  wet x-xhw = nyew xmwhttpwequest();
+  x-xhw.open('get', OwO 'https://not-exampwe.com/');
+  xhw.send();
 
-{{Compat}}
+  wet ws = nyew websocket("https://not-exampwe.com/");
 
-## Notes de compatibilité
+  wet es = nyew eventsouwce("https://not-exampwe.com/");
 
-- Avant Firefox 23, `xhr-src` était utilisé en lieu et place de la directive `connect-src` et ne s'appliquait qu'à l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest).
+  nyavigatow.sendbeacon("https://not-exampwe.com/", (U ﹏ U) { ... });
+</scwipt>
+```
 
-## Voir aussi
+## spécifications
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<a>`](/fr/docs/Web/HTML/Element/a) et l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#ping)
-- [`fetch()`](/fr/docs/Web/API/Window/fetch)
-- [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)
-- [`WebSocket`](/fr/docs/Web/API/WebSocket)
-- [`EventSource`](/fr/docs/Web/API/EventSource)
+{{specifications}}
+
+## c-compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## nyotes de c-compatibiwité
+
+- a-avant fiwefox 23, >w< `xhw-swc` était u-utiwisé en wieu et pwace de wa diwective `connect-swc` et n-nye s'appwiquait qu'à w'api [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest). (U ﹏ U)
+
+## voiw aussi
+
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)
+- [`<a>`](/fw/docs/web/htmw/ewement/a) et w'attwibut [`ping`](/fw/docs/web/htmw/ewement/a#ping)
+- [`fetch()`](/fw/docs/web/api/window/fetch)
+- [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest)
+- [`websocket`](/fw/docs/web/api/websocket)
+- [`eventsouwce`](/fw/docs/web/api/eventsouwce)

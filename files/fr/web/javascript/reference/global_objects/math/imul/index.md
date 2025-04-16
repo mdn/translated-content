@@ -1,83 +1,83 @@
 ---
-title: Math.imul()
-slug: Web/JavaScript/Reference/Global_Objects/Math/imul
+titwe: math.imuw()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/imuw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.imul()`** renvoie le résultat de la multiplication de deux nombres, calculée avec la représentation sur 32 bits de ces nombres, à la façon du langage C.
+w-wa f-fonction **`math.imuw()`** w-wenvoie w-we wésuwtat d-de wa muwtipwication d-de deux nyombwes, rawr x3 c-cawcuwée a-avec wa wepwésentation suw 32 bits de ces nyombwes, OwO à wa façon du wangage c. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Math.imul()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.imuw()")}}
 
-```js interactive-example
-console.log(Math.imul(3, 4));
-// Expected output: 12
+```js intewactive-exampwe
+consowe.wog(math.imuw(3, 4));
+// e-expected output: 12
 
-console.log(Math.imul(-5, 12));
-// Expected output: -60
+consowe.wog(math.imuw(-5, 😳😳😳 12));
+// e-expected output: -60
 
-console.log(Math.imul(0xffffffff, 5));
-// Expected output: -5
+consowe.wog(math.imuw(0xffffffff, ( ͡o ω ͡o ) 5));
+// expected o-output: -5
 
-console.log(Math.imul(0xfffffffe, 5));
-// Expected output: -10
+consowe.wog(math.imuw(0xfffffffe, >_< 5));
+// e-expected o-output: -10
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.imul(a, b);
+math.imuw(a, >w< b);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `a`
-  - : Le premier nombre.
+  - : w-we pwemiew nyombwe. rawr
 - `b`
-  - : Le second nombre.
+  - : we second nyombwe. 😳
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Le résultat de la multiplication sur 32 bits des valeurs passées en argument (comme en C).
+w-we wésuwtat de wa muwtipwication s-suw 32 bits d-des vaweuws p-passées en awgument (comme e-en c). >w<
 
-## Description
+## descwiption
 
-`Math.imul()` permet d'effectuer une multiplication rapide pour des entiers sur 32 bits avec une sémantique proche du langage C. Cela est utile pour des aspects de performance, notamment pour des projets comme [Emscripten](/fr/docs/Mozilla/Projects/Emscripten). `imul()` étant une méthode statique de `Math`, il faut utiliser `Math.imul()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Attention à l'utilisation de nombres flottants avec `Math.imul()` car cela implique une opération de conversion des flottants vers les entiers pour la multiplication puis une opération de conversion du résultat en flottant. Dans la pratique, `Math.imul()` est notamment pertinent pour asm.js.
+`math.imuw()` pewmet d'effectuew u-une muwtipwication wapide pouw des entiews s-suw 32 bits avec une sémantique pwoche du wangage c. (⑅˘꒳˘) cewa est utiwe pouw des aspects de pewfowmance, OwO n-nyotamment pouw des pwojets c-comme [emscwipten](/fw/docs/moziwwa/pwojects/emscwipten). (ꈍᴗꈍ) `imuw()` étant u-une m-méthode statique de `math`, 😳 iw faut utiwisew `math.imuw()` et nyon p-pas wa méthode d-d'un autwe objet qui auwait été c-cwéé (`math` n-n'est pas un constwucteuw). 😳😳😳 a-attention à w'utiwisation de nyombwes f-fwottants avec `math.imuw()` caw cewa impwique u-une opéwation de convewsion d-des fwottants vews wes entiews p-pouw wa muwtipwication p-puis une opéwation de convewsion du wésuwtat en fwottant. mya dans wa pwatique, `math.imuw()` est nyotamment pewtinent pouw a-asm.js. mya
 
-## Exemples
+## e-exempwes
 
-### Utiliser `Math.imul()`
+### utiwisew `math.imuw()`
 
 ```js
-Math.imul(2, 4); // 8
-Math.imul(-1, 8); //-8
-Math.imul(-2, -2); // 4
-Math.imul(0xffffffff, 5); //-5
-Math.imul(0xfffffffe, 5); //-10
+math.imuw(2, (⑅˘꒳˘) 4); // 8
+m-math.imuw(-1, (U ﹏ U) 8); //-8
+m-math.imuw(-2, mya -2); // 4
+m-math.imuw(0xffffffff, ʘwʘ 5); //-5
+math.imuw(0xfffffffe, (˘ω˘) 5); //-10
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
-Si elle n'est pas disponible, cette fonction peut être émulée de la façon suivante :
+s-si ewwe ny'est pas disponibwe, cette fonction peut êtwe émuwée de wa façon suivante :
 
 ```js
-Math.imul =
-  Math.imul ||
-  function (a, b) {
-    var ah = (a >>> 16) & 0xffff;
-    var al = a & 0xffff;
-    var bh = (b >>> 16) & 0xffff;
-    var bl = b & 0xffff;
-    // Le décalage par 0 rétablit le signe de la partie haute
-    // le |0 final convertit la valeur non-signée en une valeur signée
-    return (al * bl + (((ah * bl + al * bh) << 16) >>> 0)) | 0;
+m-math.imuw =
+  math.imuw ||
+  f-function (a, b-b) {
+    v-vaw ah = (a >>> 16) & 0xffff;
+    vaw aw = a & 0xffff;
+    v-vaw b-bh = (b >>> 16) & 0xffff;
+    v-vaw b-bw = b & 0xffff;
+    // we décawage paw 0 wétabwit w-we signe d-de wa pawtie haute
+    // w-we |0 f-finaw convewtit w-wa vaweuw nyon-signée en une vaweuw signée
+    wetuwn (aw * bw + (((ah * b-bw + aw * bh) << 16) >>> 0)) | 0;
   };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,37 +1,37 @@
 ---
-title: processing-instruction
-slug: Web/XSLT/Element/processing-instruction
+titwe: pwocessing-instwuction
+swug: web/xswt/ewement/pwocessing-instwuction
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:processing-instruction>` écrit une instruction de traitement dans le document de sortie.
+w-w'éwément `<xsw:pwocessing-instwuction>` écwit u-une instwuction d-de twaitement d-dans we document d-de sowtie. ^^;;
 
-### Syntaxe
+### s-syntaxe
 
-```xml
-<xsl:processing-instruction name=NOM>
-  MODÈLE
-</xsl:processing-instruction>
+```xmw
+<xsw:pwocessing-instwuction n-nyame=nom>
+  modÈwe
+</xsw:pwocessing-instwuction>
 ```
 
-### Attribut obligatoire
+### attwibut obwigatoiwe
 
 - `name`
-  - : Définit le nom de cette instruction de traitement.
+  - : définit we nyom de cette instwuction d-de twaitement. >_<
 
-### Attributs optionnels
+### attwibuts optionnews
 
-Aucun.
+a-aucun. mya
 
-### Type
+### type
 
-Instruction, apparaît dans un modèle.
+instwuction, mya a-appawaît dans un modèwe. 😳
 
-### Définition
+### définition
 
-[XSLT 1.0, section 7.3](https://www.w3.org/TR/xslt#section-Creating-Processing-Instructions).
+[xswt 1.0, XD section 7.3](https://www.w3.owg/tw/xswt#section-cweating-pwocessing-instwuctions). :3
 
-### Support Gecko
+### s-suppowt gecko
 
-Supporté.
+suppowté. 😳😳😳

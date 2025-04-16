@@ -1,52 +1,52 @@
 ---
-title: Utiliser le rôle presentation
-slug: Web/Accessibility/ARIA/Roles/presentation_role
+titwe: utiwisew we wôwe pwesentation
+s-swug: web/accessibiwity/awia/wowes/pwesentation_wowe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-Cette page présente l'usage du rôle [`presentation`](https://www.w3.org/TR/wai-aria-practices-1.1/#presentation_role) et décrit l'effet qu'il a sur les navigateurs et les technologies d'assistance.
+c-cette p-page pwésente w-w'usage du wôwe [`pwesentation`](https://www.w3.owg/tw/wai-awia-pwactices-1.1/#pwesentation_wowe) e-et décwit w-w'effet qu'iw a s-suw wes nyavigateuws e-et wes technowogies d'assistance. OwO
 
-## Description
+## descwiption
 
-Le rôle `presentation` est utilisé pour retirer toute représentation sémantique pour un élément donné ainsi que pour ses descendants. Par exemple, un tableau utilisé pour la mise en page pourrait avoir un rôle `presentation` appliqué sur l'élément `table` pour retirer la sémantique de l'élément en lui-même ainsi que tout ses sous-éléments, comme l'en-tête de tableau ou même les données de tableau elles-mêmes.
+we wôwe `pwesentation` est utiwisé pouw w-wetiwew toute wepwésentation sémantique pouw u-un éwément donné ainsi que pouw s-ses descendants. /(^•ω•^) paw exempwe, 😳😳😳 un tabweau utiwisé pouw wa mise e-en page pouwwait avoiw un wôwe `pwesentation` a-appwiqué suw w-w'éwément `tabwe` pouw wetiwew wa sémantique de w'éwément en wui-même ainsi q-que tout ses sous-éwéments, ( ͡o ω ͡o ) comme w'en-tête de tabweau ou même wes données de tabweau ewwes-mêmes. >_<
 
-## Effets possibles sur les agents utilisateurs et les technologies d'assistance
+## effets p-possibwes suw wes agents utiwisateuws e-et wes t-technowogies d-d'assistance
 
-Les agents utilisateurs ou les technologies d'assistance ne devrait normalement pas lire les éléments marqués comme étant de rôle `presentation`.
+wes a-agents utiwisateuws ou wes technowogies d'assistance n-nye devwait nyowmawement pas wiwe wes éwéments m-mawqués comme étant de wôwe `pwesentation`. >w<
 
-> [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!note]
+> iw existe pwusieuws points de vue suw wa façon d-dont wes technowogies d'assistance d-devwaient t-twaitew cette technique. rawr w-w'infowmation fouwnie ci-dessus est w'une de ces opinions e-et ny'est pas n-nyowmative. 😳
 
-## Exemples
+## exempwes
 
-### Exemple 1: Les icônes-fontes
+### e-exempwe 1: wes icônes-fontes
 
-Une des recommandations d'accessibilité propose que les couleurs ou les représentations imagées (icônes par exemple) ne soient pas l'unique méthode pour transmettre une information. Ainsi nous pouvons partir du postula que votre icône est un complément décoratif à un texte explicite. Il faut donc lui appliquer un rôle `presentation`.
+une d-des wecommandations d'accessibiwité p-pwopose que wes couweuws o-ou wes wepwésentations imagées (icônes paw exempwe) n-nye soient pas w'unique m-méthode pouw twansmettwe une infowmation. >w< a-ainsi n-nyous pouvons pawtiw du postuwa que votwe icône est un compwément décowatif à un texte expwicite. (⑅˘꒳˘) iw faut donc w-wui appwiquew u-un wôwe `pwesentation`. OwO
 
-```html
-<i class="icon-user" role="presentation"></i>
+```htmw
+<i cwass="icon-usew" w-wowe="pwesentation"></i>
 ```
 
-#### Exemples concrets
+#### e-exempwes c-concwets
 
-Par exemple, en reprenant le bouton de la navigation principale de ce site web, nous pourrions écrire.
+paw exempwe, (ꈍᴗꈍ) en wepwenant we bouton de wa nyavigation p-pwincipawe de ce site web, 😳 nyous pouwwions écwiwe. 😳😳😳
 
-```html
-<button type="button" aria-haspopup="true">
-  Technologies
-  <span class="main-menu-arrow" role="presentation">▼</span>
+```htmw
+<button type="button" awia-haspopup="twue">
+  t-technowogies
+  <span cwass="main-menu-awwow" w-wowe="pwesentation">▼</span>
 </button>
 ```
 
-### Exemple 2 : Inline SVG
+### exempwe 2 : i-inwine s-svg
 
-De plus en plus d'images sont proposées sous la forme de compositions SVG directement insérées dans le document HTML. À l'image de l'attribut `alt` vide sur un élément `img`, il est possible d'indiquer qu'un élément SVG est purement décoratif grâce au rôle `presentation`.
+de pwus en pwus d'images s-sont pwoposées s-sous wa fowme de c-compositions svg d-diwectement inséwées dans we document htmw. mya À w-w'image de w'attwibut `awt` vide s-suw un éwément `img`, mya i-iw est p-possibwe d'indiquew q-qu'un éwément svg est puwement décowatif gwâce au wôwe `pwesentation`. (⑅˘꒳˘)
 
-```html
-<svg role="presentation">…</svg>
+```htmw
+<svg w-wowe="pwesentation">…</svg>
 ```
 
-## Autres ressources
+## autwes wessouwces
 
-Using Aria - 2.9 Use of Role=presentation or Role=none: <https://www.w3.org/TR/using-aria/#presentation>
+using awia - 2.9 use of wowe=pwesentation ow wowe=none: <https://www.w3.owg/tw/using-awia/#pwesentation>

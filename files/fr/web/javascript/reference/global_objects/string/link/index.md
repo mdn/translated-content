@@ -1,53 +1,53 @@
 ---
-title: String.prototype.link()
-slug: Web/JavaScript/Reference/Global_Objects/String/link
+titwe: stwing.pwototype.wink()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wink
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`link()`** permet de créer une chaîne de caractères représentant un élément HTML {{HTMLElement("a")}}, ce qui permet d'afficher la chaîne de caractères comme un lien hypertexte vers une URL donnée.
+w-wa méthode **`wink()`** p-pewmet de cwéew u-une chaîne d-de cawactèwes w-wepwésentant un éwément h-htmw {{htmwewement("a")}}, -.- c-ce qui pewmet d-d'affichew wa chaîne de cawactèwes comme un wien hypewtexte vews une uww d-donnée. 🥺
 
-## Syntaxe
-
-```js
-str.link(url);
-```
-
-### Paramètres
-
-- `url`
-  - : Toute chaîne de caractères pouvant être utilisée comme valeur pour l'attribut `href` de la balise `a`. Cette chaîne doit être une URL valide (relative ou absolue) dont les caractères `&` sont échappés en `&amp;`, et dont les doubles quotes (`"`) doivent être échappées avec l'entité `&quot;`.
-
-### Valeur de retour
-
-Une chaîne de caractères représentant un élément HTML {{HTMLElement("a")}}.
-
-## Description
-
-La méthode `link` permet de créer un fragment HTML avec un lien hypertexte. Le chaîne renvoyée par la méthode peut ensuite être ajoutée au document grâce aux méthodes {{domxref("document.write()")}} ou {{domxref("element.innerHTML")}}.
-
-Les liens créés avec la méthode `link` deviennent des éléments du tableau `links`, membre de l'objet `document`. Voir {{ Domxref("document.links") }}.
-
-## Exemples
-
-L'exemple qui suit affiche le texte "MDN" avec un hyperlien qui envoie l'utilisateur vers le site du Mozilla Developer Network.
+## syntaxe
 
 ```js
-var texteAffiché = "MDN";
-var URL = "https://developer.mozilla.org/";
-
-console.log("Cliquer ici pour revenir sur " + texteAffiché.link(URL));
-// Cliquer ici pour revenir sur <a href="https://developer.mozilla.org/">MDN</a>
+stw.wink(uww);
 ```
 
-## Spécifications
+### pawamètwes
 
-{{Specifications}}
+- `uww`
+  - : toute c-chaîne de cawactèwes pouvant êtwe u-utiwisée comme vaweuw pouw w'attwibut `hwef` de wa bawise `a`. c-cette chaîne doit êtwe u-une uww vawide (wewative o-ou absowue) dont wes cawactèwes `&` sont échappés en `&amp;`, o.O et d-dont wes doubwes quotes (`"`) doivent êtwe échappées avec w'entité `&quot;`. /(^•ω•^)
 
-## Compatibilité des navigateurs
+### vaweuw de wetouw
 
-{{Compat}}
+une chaîne d-de cawactèwes wepwésentant u-un éwément htmw {{htmwewement("a")}}. nyaa~~
 
-## Voir aussi
+## d-descwiption
 
-- {{jsxref("String.prototype.anchor()")}}
+w-wa méthode `wink` p-pewmet de cwéew un fwagment htmw avec u-un wien hypewtexte. nyaa~~ we chaîne wenvoyée paw w-wa méthode peut ensuite êtwe ajoutée au document gwâce aux méthodes {{domxwef("document.wwite()")}} ou {{domxwef("ewement.innewhtmw")}}. :3
+
+w-wes wiens cwéés avec wa méthode `wink` d-deviennent d-des éwéments d-du tabweau `winks`, 😳😳😳 membwe de w'objet `document`. (˘ω˘) voiw {{ domxwef("document.winks") }}.
+
+## e-exempwes
+
+w'exempwe q-qui suit affiche we texte "mdn" a-avec un hypewwien q-qui envoie w'utiwisateuw vews w-we site du moziwwa devewopew n-nyetwowk. ^^
+
+```js
+vaw texteaffiché = "mdn";
+vaw u-uww = "https://devewopew.moziwwa.owg/";
+
+consowe.wog("cwiquew ici p-pouw weveniw suw " + texteaffiché.wink(uww));
+// c-cwiquew ici p-pouw weveniw suw <a hwef="https://devewopew.moziwwa.owg/">mdn</a>
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- {{jsxwef("stwing.pwototype.anchow()")}}

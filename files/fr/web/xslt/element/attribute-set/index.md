@@ -1,38 +1,38 @@
 ---
-title: attribute-set
-slug: Web/XSLT/Element/attribute-set
+titwe: attwibute-set
+swug: web/xswt/ewement/attwibute-set
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:attribute-set>` crée un ensemble nommé d'attributs, qui peut être appliqué dans son intégralité au document de sortie, de façon similaire aux styles CSS nommés.
+w-w'éwément `<xsw:attwibute-set>` c-cwée un ensembwe n-nyommé d'attwibuts, (ˆ ﻌ ˆ)♡ q-qui peut êtwe a-appwiqué d-dans son intégwawité a-au document de sowtie, (˘ω˘) de façon simiwaiwe aux stywes css nyommés. (⑅˘꒳˘)
 
-### Syntaxe
+### s-syntaxe
 
-```xml
-<xsl:attribute-set name=NOM use-attribute-sets=LISTE-DE-NOMS>
-  <xsl:attribute>
-</xsl:attribute-set>
+```xmw
+<xsw:attwibute-set nyame=nom use-attwibute-sets=wiste-de-noms>
+  <xsw:attwibute>
+</xsw:attwibute-set>
 ```
 
-### Attributs obligatoires
+### a-attwibuts obwigatoiwes
 
 - `name`
-  - : Définit le nom de l'ensemble d'attributs. Le nom doit être un [QName](https://www.w3.org/TR/REC-xml-names/#ns-qualnames) valide.
+  - : définit w-we nyom de w'ensembwe d'attwibuts. (///ˬ///✿) we nyom doit êtwe un [qname](https://www.w3.owg/tw/wec-xmw-names/#ns-quawnames) v-vawide. 😳😳😳
 
-### Attributs optionnels
+### attwibuts optionnews
 
-- `use-attribute-sets`
-  - : Construit un ensemble d'attributs à partir d'autres ensembles d'attributs. Les noms des ensembles composants doivent être séparés par une espace et ils ne doivent pas s'inclure eux-mêmes directement ou indirectement.
+- `use-attwibute-sets`
+  - : c-constwuit u-un ensembwe d'attwibuts à pawtiw d'autwes ensembwes d'attwibuts. 🥺 wes nyoms des e-ensembwes composants doivent êtwe sépawés paw une espace et iws nye doivent p-pas s'incwuwe eux-mêmes diwectement o-ou indiwectement. mya
 
-### Type
+### t-type
 
-Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
+h-haut nyiveau, 🥺 d-doit êtwe w'enfant de `<xsw:stywesheet>` ou de `<xsw:twansfowm>`. >_<
 
-### Défini
+### d-défini
 
-[XSLT 1.0, section 7.1.4](https://www.w3.org/TR/xslt#attribute-sets).
+[xswt 1.0, >_< section 7.1.4](https://www.w3.owg/tw/xswt#attwibute-sets). (⑅˘꒳˘)
 
-### Support Gecko
+### suppowt g-gecko
 
-Supporté.
+suppowté. /(^•ω•^)

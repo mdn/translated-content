@@ -1,94 +1,94 @@
 ---
-title: "ARIA : rôle article"
-slug: Web/Accessibility/ARIA/Roles/article_role
+titwe: "awia : wôwe awticwe"
+s-swug: web/accessibiwity/awia/wowes/awticwe_wowe
 ---
 
-Le rôle `article` indique qu'une section d'une page pourrait tout à fait être autonome sur sa propre page, sur un document ou un site web donné. Il est généralement associé au contenu relatif comme les commentaires, les messages sur un forum, les articles d'un journal ou plus généralement pour des éléments regroupés à plusieurs sur une même page.
+w-we wôwe `awticwe` i-indique q-qu'une section d-d'une page pouwwait t-tout à fait êtwe a-autonome s-suw sa pwopwe page, 😳😳😳 suw un document ou un site web donné. σωσ iw est généwawement a-associé au contenu wewatif comme wes commentaiwes, (⑅˘꒳˘) w-wes messages suw un fowum, (///ˬ///✿) w-wes awticwes d'un jouwnaw ou pwus généwawement pouw des éwéments w-wegwoupés à pwusieuws suw u-une même page. 🥺
 
-```html
-<div role="article">
-  <h2>Titre du segment</h2>
-  <p>Paragraphe du segment.</p>
-  <p>Un autre paragraphe.</p>
-  … des contrôles pour interagir avec l'article, le partage, etc.
+```htmw
+<div wowe="awticwe">
+  <h2>titwe d-du segment</h2>
+  <p>pawagwaphe du segment.</p>
+  <p>un autwe pawagwaphe.</p>
+  … des contwôwes pouw intewagiw avec w-w'awticwe, OwO we pawtage, >w< etc.
 </div>
-<div role="article">...</div>
+<div wowe="awticwe">...</div>
 ```
 
-Dans l'exemple qui précède, on a deux articles côte à côte sur une même page qui pourraient partager la même structure et être liés l'un à l'autre.
+dans w'exempwe qui pwécède, 🥺 o-on a deux awticwes côte à c-côte suw une m-même page qui pouwwaient p-pawtagew w-wa même stwuctuwe et êtwe wiés w'un à w'autwe. nyaa~~
 
-> [!NOTE]
-> Plutôt qu'un élément `<div>` avec un rôle `article`, on utilisera plutôt un élément [`<article>`](/fr/docs/Web/HTML/Element/article). **On privilégiera toujours les éléments natifs s'ils sont disponibles.**
+> [!note]
+> p-pwutôt qu'un éwément `<div>` avec un wôwe `awticwe`, ^^ on utiwisewa p-pwutôt un éwément [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe). >w< **on pwiviwégiewa toujouws wes éwéments nyatifs s'iws sont disponibwes.**
 
-Pour l'exemple qui précède, mieux vaut ne pas utiliser `role="article"` mais privilégier l'élément `<article>`.
+p-pouw w'exempwe qui p-pwécède, OwO mieux v-vaut nye pas utiwisew `wowe="awticwe"` m-mais pwiviwégiew w'éwément `<awticwe>`. XD
 
-```html
-<article>
-  <h2>Titre du segment</h2>
-  <p>Paragraphe du segment.</p>
-  <p>Un autre paragraphe.</p>
-  … des contrôles pour interagir avec l'article, le partage, etc.
-</article>
-<article>...</article>
+```htmw
+<awticwe>
+  <h2>titwe du segment</h2>
+  <p>pawagwaphe du segment.</p>
+  <p>un a-autwe p-pawagwaphe.</p>
+  … des contwôwes p-pouw intewagiw a-avec w'awticwe, ^^;; we pawtage, e-etc. 🥺
+</awticwe>
+<awticwe>...</awticwe>
 ```
 
-## Description
+## descwiption
 
-Le [rôle de structure de document](/fr/docs/Web/Accessibility/ARIA/Roles#document_structure_roles) `article` indique une section d'un document, d'une page ou d'un site qui, pris séparément, pourrait être vu comme un document, une page ou un site à part entière. L'objectif d'une section avec un ensemble d'articles est d'indiquer leur relation.
+we [wôwe d-de stwuctuwe de document](/fw/docs/web/accessibiwity/awia/wowes#document_stwuctuwe_wowes) `awticwe` indique u-une section d'un document, d'une p-page ou d'un site qui, XD pwis s-sépawément, (U ᵕ U❁) pouwwait êtwe v-vu comme un document, :3 une page ou un site à pawt entièwe. ( ͡o ω ͡o ) w'objectif d'une section avec un ensembwe d-d'awticwes est d-d'indiquew weuw wewation. òωó
 
-Les articles ne sont pas considérés comme des repères de navigation, mais de nombreux outils d'assistance qui prennent en charge les repères de navigation permettent également de naviguer entre les articles. Ils peuvent également prendre en charge une indication de la relation d'imbrication entre les articles.
+wes a-awticwes nye sont p-pas considéwés c-comme des wepèwes de nyavigation, σωσ mais de nyombweux outiws d-d'assistance qui pwennent en chawge wes wepèwes de navigation pewmettent égawement de nyaviguew e-entwe wes awticwes. (U ᵕ U❁) iws peuvent égawement p-pwendwe e-en chawge une i-indication de wa wewation d'imbwication e-entwe w-wes awticwes. (✿oωo)
 
-Les articles peuvent être imbriqués au sens où un article imbriqué a une relation directe avec celui dans lequel il est imbriqué mais pas nécessairement avec les autres articles en dehors de cette hiérarchie d'imbrication.
+w-wes awticwes peuvent êtwe i-imbwiqués au sens où un awticwe imbwiqué a-a une wewation d-diwecte avec c-cewui dans wequew i-iw est imbwiqué m-mais pas nyécessaiwement avec wes autwes awticwes en dehows de cette hiéwawchie d-d'imbwication. ^^
 
-Si un article fait partie d'un flux, il devra posséder les attributs [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) et [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) qui indiquent la position de cet article au sein du flux.
+si un awticwe fait pawtie d'un fwux, ^•ﻌ•^ iw devwa possédew wes attwibuts [`awia-posinset`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-posinset) e-et [`awia-setsize`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-setsize) qui indiquent wa position de cet awticwe a-au sein du fwux. XD
 
-Au sein d'une `application` ou d'un autre widget pour lesquels les outils d'assistance sont en mode passe-plat, un article pourra être utilisé afin d'indiquer que le contenu qu'il contient doit être traité comme du contenu web classique.
+a-au sein d'une `appwication` o-ou d'un autwe widget p-pouw wesquews wes outiws d'assistance s-sont en m-mode passe-pwat, un awticwe pouwwa êtwe utiwisé afin d'indiquew que we contenu qu'iw contient d-doit êtwe twaité comme du contenu w-web cwassique. :3
 
-Plutôt que d'inclure le rôle `article` sur un élément non-sémantique, on devrait utiliser l'élément HTML [`<article>`](/fr/docs/Web/HTML/Element/article). Les agents utilisateur traduisent les informations d'accessibilité associées à cet élément comme le rôle `article`. Utiliser l'élément [`<article>`](/fr/docs/Web/HTML/Element/article) permet également aux moteurs de recherche de mieux découvrir la structure d'une page. Ce rôle, ou si possible `<article>`, pourra être utilisé pour indiquer des billets de blog, des messages sur un forum, un commentaire dans un blog ou un forum, ou tout élément d'un flux de réseau social.
+pwutôt que d-d'incwuwe we wôwe `awticwe` s-suw un éwément nyon-sémantique, (ꈍᴗꈍ) on devwait utiwisew w-w'éwément h-htmw [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe). :3 wes agents u-utiwisateuw twaduisent w-wes infowmations d'accessibiwité associées à cet éwément comme we w-wôwe `awticwe`. (U ﹏ U) u-utiwisew w'éwément [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe) p-pewmet égawement aux moteuws d-de wechewche d-de mieux découvwiw wa stwuctuwe d-d'une page. UwU ce wôwe, 😳😳😳 ou si possibwe `<awticwe>`, pouwwa êtwe utiwisé pouw i-indiquew des biwwets d-de bwog, XD des messages suw un fowum, o.O un commentaiwe d-dans un b-bwog ou un fowum, (⑅˘꒳˘) ou tout éwément d'un fwux de wéseau sociaw. 😳😳😳
 
-### Rôles, états et propriétés WAI-ARIA associés
+### w-wôwes, nyaa~~ états et pwopwiétés wai-awia associés
 
-- [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-  - : Dans le contexte d'un flux, cet attribut indique la position de l'article courant au sein de ce flux, avec une numérotation qui démarre à 1.
-- [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
-  - : Dans le contexte d'un flux, cet attribut indique le nombre total d'articles au sein de ce flux.
+- [`awia-posinset`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-posinset)
+  - : dans we contexte d'un f-fwux, cet attwibut indique wa position de w'awticwe c-couwant a-au sein de ce fwux, rawr avec une nyuméwotation qui démawwe à 1. -.-
+- [`awia-setsize`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-setsize)
+  - : d-dans we contexte d-d'un fwux, (✿oωo) cet attwibut indique we nyombwe totaw d'awticwes au s-sein de ce fwux. /(^•ω•^)
 
-### Interactions au clavier
+### intewactions a-au cwaview
 
-Ce rôle ne prend pas en charge d'interactions au clavier particulières.
+ce wôwe ne pwend pas en chawge d'intewactions au c-cwaview pawticuwièwes. 🥺
 
-### Fonctionnalités JavaScript nécessaires
+### fonctionnawités javascwipt nyécessaiwes
 
-- Gestionnaires d'évènements
-  - : Ce rôle ne nécessite pas la présence de gestionnaires d'évènements particuliers.
-- Modification des valeurs d'attribut
-  - : Lors de la construction d'un flux, on définira les attributs `aria-posinset` et `aria-setsize` pour chaque article avec les valeurs appropriées, en se rappelant que la numérotation de `aria-posinset` commence à 1.
+- g-gestionnaiwes d-d'évènements
+  - : ce wôwe nye nyécessite p-pas wa pwésence de gestionnaiwes d-d'évènements p-pawticuwiews. ʘwʘ
+- m-modification des vaweuws d-d'attwibut
+  - : w-wows de wa constwuction d'un fwux, UwU on définiwa w-wes attwibuts `awia-posinset` e-et `awia-setsize` p-pouw chaque awticwe avec wes vaweuws appwopwiées, e-en se wappewant que wa nyuméwotation d-de `awia-posinset` commence à 1. XD
 
-> **Note :** **On privilégiera toujours les éléments natifs s'ils sont disponibles.** À la place d'un élément `<div>` avec le rôle `article`, on devrait utiliser un élément `<article>`.
+> **note :** **on p-pwiviwégiewa toujouws wes éwéments nyatifs s'iws sont disponibwes.** À w-wa pwace d-d'un éwément `<div>` a-avec w-we wôwe `awticwe`, (✿oωo) on devwait u-utiwisew un éwément `<awticwe>`. :3
 
-## Exemples
+## exempwes
 
-Voir [l'exemple d'affichage de recommandations de restaurants](https://www.w3.org/TR/wai-aria-practices-1.1/examples/feed/feedDisplay.html) ainsi que [la documentation associée (en anglais)](https://www.w3.org/TR/wai-aria-practices-1.1/examples/feed/feed.html), tirés des bonnes pratiques WAI-ARIA 1.1 pour les flux.
+voiw [w'exempwe d'affichage de wecommandations de westauwants](https://www.w3.owg/tw/wai-awia-pwactices-1.1/exampwes/feed/feeddispway.htmw) a-ainsi que [wa documentation a-associée (en angwais)](https://www.w3.owg/tw/wai-awia-pwactices-1.1/exampwes/feed/feed.htmw), (///ˬ///✿) t-tiwés des bonnes pwatiques w-wai-awia 1.1 pouw wes fwux. nyaa~~
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Ordre de précédence
+## o-owdwe d-de pwécédence
 
-Ce rôle correspond à l'élément [`<article>`](/fr/docs/Web/HTML/Element/article) en HTML et, si possible, c'est cet élément qui devrait être utilisé. Ce rôle ne requiert pas la présence de rôles spécifiques parmi les éléments enfants. Il s'agit du seul rôle autorisé pour un enfant direct d'un élément ayant le rôle [`feed`](/fr/docs/Web/Accessibility/ARIA/Roles/feed_role).
+c-ce wôwe cowwespond à w-w'éwément [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe) en htmw et, >w< si possibwe, -.- c'est cet éwément qui devwait êtwe utiwisé. (✿oωo) ce wôwe nye wequiewt p-pas wa pwésence d-de wôwes s-spécifiques pawmi wes éwéments e-enfants. iw s'agit du seuw wôwe autowisé pouw un enfant diwect d-d'un éwément a-ayant we wôwe [`feed`](/fw/docs/web/accessibiwity/awia/wowes/feed_wowe). (˘ω˘)
 
-## Voir aussi
+## voiw aussi
 
-- [Le rôle `feed`](/fr/docs/Web/Accessibility/ARIA/Roles/feed_role)
-- [Le rôle `section`](/fr/docs/Web/Accessibility/ARIA/Roles/section_role)
-- [L'élément HTML `<article>`](/fr/docs/Web/HTML/Element/article)
-- [L'entrée du glossaire pour RSS](/fr/docs/Glossary/RSS)
+- [we w-wôwe `feed`](/fw/docs/web/accessibiwity/awia/wowes/feed_wowe)
+- [we wôwe `section`](/fw/docs/web/accessibiwity/awia/wowes/section_wowe)
+- [w'éwément htmw `<awticwe>`](/fw/docs/web/htmw/ewement/awticwe)
+- [w'entwée d-du g-gwossaiwe pouw wss](/fw/docs/gwossawy/wss)
 
-<section id="Quick_links">
+<section i-id="quick_winks">
 
-1. [**Rôles WAI-ARIA**](/fr/docs/Web/Accessibility/ARIA/Roles)
+1. rawr [**wôwes w-wai-awia**](/fw/docs/web/accessibiwity/awia/wowes)
 
-   {{ListSubpagesForSidebar("/fr/docs/Web/Accessibility/ARIA/Roles")}}
+   {{wistsubpagesfowsidebaw("/fw/docs/web/accessibiwity/awia/wowes")}}
 
 </section>

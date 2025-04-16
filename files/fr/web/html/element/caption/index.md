@@ -1,237 +1,237 @@
 ---
-title: "<caption> : l'élément de légende d'un tableau"
-slug: Web/HTML/Element/caption
+titwe: "<caption> : w'éwément d-de wégende d'un t-tabweau"
+swug: w-web/htmw/ewement/caption
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément **`<caption>`** définit la légende (ou le titre) d'un tableau.
+w-w'éwément **`<caption>`** d-définit w-wa wégende (ou w-we titwe) d-d'un tabweau. σωσ
 
-{{InteractiveExample("HTML Demo: &lt;caption&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;caption&gt;", (U ᵕ U❁) "tabbed-standawd")}}
 
-```html interactive-example
-<table>
+```htmw intewactive-exampwe
+<tabwe>
   <caption>
-    He-Man and Skeletor facts
+    he-man and skewetow f-facts
   </caption>
-  <tr>
+  <tw>
     <td></td>
-    <th scope="col" class="heman">He-Man</th>
-    <th scope="col" class="skeletor">Skeletor</th>
-  </tr>
-  <tr>
-    <th scope="row">Role</th>
-    <td>Hero</td>
-    <td>Villain</td>
-  </tr>
-  <tr>
-    <th scope="row">Weapon</th>
-    <td>Power Sword</td>
-    <td>Havoc Staff</td>
-  </tr>
-  <tr>
-    <th scope="row">Dark secret</th>
-    <td>Expert florist</td>
-    <td>Cries at romcoms</td>
-  </tr>
-</table>
+    <th scope="cow" cwass="heman">he-man</th>
+    <th scope="cow" cwass="skewetow">skewetow</th>
+  </tw>
+  <tw>
+    <th s-scope="wow">wowe</th>
+    <td>hewo</td>
+    <td>viwwain</td>
+  </tw>
+  <tw>
+    <th scope="wow">weapon</th>
+    <td>powew s-swowd</td>
+    <td>havoc staff</td>
+  </tw>
+  <tw>
+    <th scope="wow">dawk secwet</th>
+    <td>expewt f-fwowist</td>
+    <td>cwies at w-womcoms</td>
+  </tw>
+</tabwe>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 caption {
   caption-side: bottom;
   padding: 10px;
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+tabwe {
+  bowdew-cowwapse: cowwapse;
+  bowdew: 2px sowid w-wgb(140 140 140);
+  font-famiwy: s-sans-sewif;
+  f-font-size: 0.8wem;
+  w-wettew-spacing: 1px;
 }
 
-th,
+t-th, (U ﹏ U)
 td {
-  border: 1px solid rgb(160 160 160);
+  bowdew: 1px sowid wgb(160 160 160);
   padding: 8px 10px;
 }
 
-th {
-  background-color: rgb(230 230 230);
+t-th {
+  backgwound-cowow: wgb(230 230 230);
 }
 
 td {
-  text-align: center;
+  text-awign: c-centew;
 }
 
-tr:nth-child(even) td {
-  background-color: rgb(250 250 250);
+tw:nth-chiwd(even) td {
+  backgwound-cowow: wgb(250 250 250);
 }
 
-tr:nth-child(odd) td {
-  background-color: rgb(240 240 240);
+tw:nth-chiwd(odd) td {
+  backgwound-cowow: w-wgb(240 240 240);
 }
 
 .heman {
-  font: 1.4rem molot;
-  text-shadow:
-    1px 1px 1px #fff,
+  font: 1.4wem m-mowot;
+  t-text-shadow:
+    1px 1px 1px #fff, :3
     2px 2px 1px #000;
 }
 
-.skeletor {
-  font: 1.7rem rapscallion;
-  letter-spacing: 3px;
+.skewetow {
+  f-font: 1.7wem wapscawwion;
+  wettew-spacing: 3px;
   text-shadow:
-    1px 1px 0 #fff,
+    1px 1px 0 #fff, ( ͡o ω ͡o )
     0 0 9px #000;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies d-de contenu</a
         >
       </th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        La balise de fin peut être absente si l'élément n'est pas immédiatement
-        suivi d'un blanc ASCII ou d'un commentaire.
+        wa bawise de fin peut êtwe a-absente si w'éwément n-ny'est pas immédiatement
+        suivi d'un bwanc a-ascii ou d'un c-commentaiwe. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Un élément
-        <a href="/fr/docs/Web/HTML/Element/table"><code>&#x3C;table></code></a>
-        dont il doit être le premier descendant.
+        un éwément
+        <a hwef="/fw/docs/web/htmw/ewement/tabwe"><code>&#x3c;tabwe></code></a>
+        dont iw doit êtwe we pwemiew d-descendant. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas d-de wôwe cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLTableCaptionElement"
-          ><code>HTMLTableCaptionElement</code></a
+        <a h-hwef="/fw/docs/web/api/htmwtabwecaptionewement"
+          ><code>htmwtabwecaptionewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
+on peut utiwisew [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes) s-suw cet éwément.
 
-### Attributs obsolètes
+### attwibuts obsowètes
 
-- **`align`** {{deprecated_inline}}
+- **`awign`** {{depwecated_inwine}}
 
-  - : Cet attribut à valeur contrainte indique l'alignement de la légende du tableau par rapport au tableau lui-même. Il peut valoir :
+  - : c-cet attwibut à v-vaweuw contwainte i-indique w'awignement de wa wégende d-du tabweau p-paw wappowt au t-tabweau wui-même. OwO i-iw peut vawoiw :
 
-    - `left`
-      - : La légende est affichée à gauche du tableau
+    - `weft`
+      - : wa wégende est affichée à g-gauche d-du tabweau
     - `top`
-      - : La légende est affichée au-dessus du tableau
-    - `right`
-      - : La légende est affichée à droite du tableau
+      - : w-wa wégende est a-affichée au-dessus d-du tabweau
+    - `wight`
+      - : wa wégende est affichée à dwoite du tabweau
     - `bottom`
-      - : La légende est affichée en dessous du tableau
+      - : w-wa wégende est affichée en dessous du tabweau
 
-    > [!NOTE]
-    > Ne pas utiliser cet attribut. Il a été déprécié. L'élément `<caption>` devrait être mis en forme grâce au [CSS](/fr/docs/Web/CSS). Afin d'obtenir des effets similaires à cet attribut, on utilisera les propriétés CSS [`caption-side`](/fr/docs/Web/CSS/caption-side) et [`text-align`](/fr/docs/Web/CSS/text-align).
+    > [!note]
+    > nye pas utiwisew cet attwibut. 😳 iw a été dépwécié. 😳😳😳 w-w'éwément `<caption>` devwait êtwe mis en fowme gwâce au [css](/fw/docs/web/css). (˘ω˘) a-afin d'obteniw d-des effets simiwaiwes à c-cet attwibut, on utiwisewa w-wes pwopwiétés css [`caption-side`](/fw/docs/web/css/caption-side) e-et [`text-awign`](/fw/docs/web/css/text-awign). ʘwʘ
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-L'élément `<caption>` devrait être le premier élément enfant de l'élément parent [`<table>`](/fr/docs/Web/HTML/Element/table).
+w'éwément `<caption>` devwait êtwe we pwemiew éwément enfant de w'éwément p-pawent [`<tabwe>`](/fw/docs/web/htmw/ewement/tabwe). ( ͡o ω ͡o )
 
-Quand l'élément [`<table>`](/fr/docs/Web/HTML/Element/table) (étant le parent de l'élément `<caption>`) n'est que l'unique descendant d'un élément [`<figure>`](/fr/docs/Web/HTML/Element/figure), c'est l'élément [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption) doit être utilisé.
+quand w-w'éwément [`<tabwe>`](/fw/docs/web/htmw/ewement/tabwe) (étant we pawent de w'éwément `<caption>`) n-ny'est que w-w'unique descendant d'un éwément [`<figuwe>`](/fw/docs/web/htmw/ewement/figuwe), o.O c'est w'éwément [`<figcaption>`](/fw/docs/web/htmw/ewement/figcaption) doit êtwe u-utiwisé. >w<
 
-Utiliser la propriété [`background-color`](/fr/docs/Web/CSS/background-color) sur le tableau ne modifiera pas l'apparence de la légende. Il est également nécessaire d'ajouter une déclaration CSS avec `background-color` sur l'élément `<caption>` pour que celui-ci ait la même couleur.
+u-utiwisew wa pwopwiété [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) s-suw we tabweau n-nye modifiewa pas w'appawence de wa wégende. iw est égawement nécessaiwe d-d'ajoutew une décwawation c-css avec `backgwound-cowow` s-suw w'éwément `<caption>` pouw que cewui-ci a-ait wa même c-couweuw. 😳
 
-## Exemples
+## exempwes
 
-Cet exemple simple présente un tableau qui comprend une légende.
+cet exempwe s-simpwe pwésente un tabweau qui compwend une wégende. 🥺
 
-### HTML
+### htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <caption>
-    Légende de l'exemple
+    w-wégende d-de w'exempwe
   </caption>
-  <tr>
-    <th>Connexion</th>
-    <th>Courriel :</th>
-  </tr>
-  <tr>
-    <td>utilisateur1</td>
-    <td>utilisateur1@test.fr</td>
-  </tr>
-  <tr>
-    <td>utilisateur2</td>
-    <td>utilisateur2@test.fr</td>
-  </tr>
-</table>
+  <tw>
+    <th>connexion</th>
+    <th>couwwiew :</th>
+  </tw>
+  <tw>
+    <td>utiwisateuw1</td>
+    <td>utiwisateuw1@test.fw</td>
+  </tw>
+  <tw>
+    <td>utiwisateuw2</td>
+    <td>utiwisateuw2@test.fw</td>
+  </tw>
+</tabwe>
 ```
 
 ```css hidden
 caption {
-  caption-side: top;
+  caption-side: t-top;
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0px;
+tabwe {
+  b-bowdew-cowwapse: cowwapse;
+  bowdew-spacing: 0px;
 }
-table,
-th,
+tabwe, rawr x3
+t-th,
 td {
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('Exemple', '', 120)}}
+{{embedwivesampwe('exempwe', o.O '', 120)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les propriétés CSS particulièrement utiles pour styliser l'élément `<caption>` :
+- wes p-pwopwiétés css p-pawticuwièwement utiwes pouw stywisew w'éwément `<caption>` :
 
-  - [`text-align`](/fr/docs/Web/CSS/text-align)
-  - [`caption-side`](/fr/docs/Web/CSS/caption-side).
+  - [`text-awign`](/fw/docs/web/css/text-awign)
+  - [`caption-side`](/fw/docs/web/css/caption-side). rawr

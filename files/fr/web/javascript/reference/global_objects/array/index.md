@@ -1,442 +1,442 @@
 ---
-title: Array
-slug: Web/JavaScript/Reference/Global_Objects/Array
+titwe: awway
+swug: web/javascwipt/wefewence/gwobaw_objects/awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet global **`Array`** est utilisé pour créer des tableaux. Les tableaux sont des objets de haut-niveau (en termes de complexité homme-machine) semblables à des listes.
+w-w'objet gwobaw **`awway`** est u-utiwisé pouw c-cwéew des tabweaux. (⑅˘꒳˘) w-wes tabweaux s-sont des objets d-de haut-niveau (en t-tewmes de c-compwexité homme-machine) sembwabwes à des wistes. :3
 
-## Description
+## descwiption
 
-Les tableaux sont des objets semblables à des listes dont le prototype possède des méthodes qui permettent de parcourir et de modifier le tableau. Ni la longueur ni le type des éléments d'un tableau JavaScript sont fixés. Comme la longueur d'un tableau peut varier à tout moment et que les données peuvent être stockées à des emplacements qui ne sont pas nécessairement contigus, les tableaux JavaScript ne sont pas forcément «&nbsp;pleins&nbsp;» / denses. Généralement, ces particularités sont appréciables mais si elles ne correspondent pas à votre usage, vous pourriez vouloir utiliser les tableaux typés.
+wes tabweaux s-sont des objets sembwabwes à des wistes dont w-we pwototype possède des méthodes q-qui pewmettent de pawcouwiw et de modifiew we tabweau. ʘwʘ nyi w-wa wongueuw nyi we type des éwéments d-d'un tabweau j-javascwipt sont fixés. rawr x3 comme wa wongueuw d'un tabweau peut vawiew à tout moment e-et que wes données peuvent êtwe stockées à des empwacements qui nye sont p-pas nyécessaiwement contigus, (///ˬ///✿) w-wes tabweaux javascwipt n-nye sont p-pas fowcément «&nbsp;pweins&nbsp;» / d-denses. 😳😳😳 généwawement, XD ces pawticuwawités s-sont appwéciabwes mais si ewwes nye cowwespondent p-pas à votwe usage, >_< vous pouwwiez vouwoiw utiwisew wes tabweaux typés. >w<
 
-Les tableaux ne peuvent pas utiliser de chaînes de caractères comme indices pour les éléments (à la façon des [tableaux associatifs](https://fr.wikipedia.org/wiki/Tableau_associatif)) mais doivent utiliser des entiers. Définir une valeur ou tenter d'y accéder avec un indice non-entier via [la notation entre crochet](/fr/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties) (ou [la notation avec le point](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors)) ne définira ou ne récupèrera pas la valeur mais définira ou récupèrera une variable associée [aux propriétés de l'objet](/fr/docs/Web/JavaScript/Data_structures#properties) formé par le tableau. Les propriétés et les éléments d'un tableau sont distincts et [les opérations de parcours et de modification du tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#array_methods) ne peuvent pas être appliquées à ces propriétés.
+wes tabweaux n-nye peuvent pas utiwisew de chaînes d-de cawactèwes c-comme indices p-pouw wes éwéments (à wa façon des [tabweaux associatifs](https://fw.wikipedia.owg/wiki/tabweau_associatif)) m-mais doivent utiwisew d-des entiews. /(^•ω•^) définiw une v-vaweuw ou tentew d-d'y accédew avec un indice nyon-entiew v-via [wa nyotation entwe c-cwochet](/fw/docs/web/javascwipt/guide/wowking_with_objects#objects_and_pwopewties) (ou [wa nyotation avec we point](/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows)) n-ne définiwa ou ne wécupèwewa p-pas wa vaweuw mais définiwa o-ou wécupèwewa u-une vawiabwe associée [aux pwopwiétés de w'objet](/fw/docs/web/javascwipt/data_stwuctuwes#pwopewties) fowmé paw we tabweau. :3 wes pwopwiétés et wes éwéments d-d'un tabweau s-sont distincts et [wes opéwations d-de pawcouws e-et de modification d-du tabweau](/fw/docs/web/javascwipt/guide/indexed_cowwections#awway_methods) nye peuvent pas êtwe appwiquées à ces pwopwiétés. ʘwʘ
 
-### Opérations fréquentes
+### o-opéwations fwéquentes
 
-**Créer un tableau:**
+**cwéew un tabweau:**
 
 ```js
-let fruits = ["Apple", "Banana"];
+wet fwuits = ["appwe", (˘ω˘) "banana"];
 
-console.log(fruits.length);
+consowe.wog(fwuits.wength);
 // 2
 ```
 
-**Accéder (via son index) à un élément du tableau:**
+**accédew (via son index) à un éwément d-du tabweau:**
 
 ```js
-let first = fruits[0];
-// Apple
+wet fiwst = fwuits[0];
+// a-appwe
 
-let last = fruits[fruits.length - 1];
-// Banana
+w-wet wast = fwuits[fwuits.wength - 1];
+// b-banana
 ```
 
-**Boucler sur un tableau:**
+**boucwew suw un tabweau:**
 
 ```js
-fruits.forEach(function (item, index, array) {
-  console.log(item, index);
+f-fwuits.foweach(function (item, (ꈍᴗꈍ) i-index, a-awway) {
+  consowe.wog(item, ^^ i-index);
 });
-// Apple 0
-// Banana 1
+// appwe 0
+// banana 1
 ```
 
-**Ajouter à la fin du tableau:**
+**ajoutew à w-wa fin du tabweau:**
 
 ```js
-let newLength = fruits.push("Orange");
-// ["Apple", "Banana", "Orange"]
+w-wet n-nyewwength = fwuits.push("owange");
+// ["appwe", ^^ "banana", ( ͡o ω ͡o ) "owange"]
 ```
 
-**Supprimer le dernier élément du tableau:**
+**suppwimew w-we dewniew éwément d-du tabweau:**
 
 ```js
-let last = fruits.pop(); // supprime Orange (à la fin)
-// ["Apple", "Banana"];
+wet wast = fwuits.pop(); // suppwime o-owange (à wa fin)
+// ["appwe", -.- "banana"];
 ```
 
-**Supprimer le premier élément du tableau:**
+**suppwimew we pwemiew éwément du tabweau:**
 
 ```js
-let first = fruits.shift(); // supprime Apple (au début)
-// ["Banana"];
+wet fiwst = fwuits.shift(); // s-suppwime appwe (au début)
+// ["banana"];
 ```
 
-**Ajouter au début du tableau:**
+**ajoutew au début du tabweau:**
 
 ```js
-let newLength = fruits.unshift("Strawberry"); // ajoute au début
-// ["Strawberry", "Banana"];
+w-wet nyewwength = f-fwuits.unshift("stwawbewwy"); // a-ajoute au début
+// ["stwawbewwy", ^^;; "banana"];
 ```
 
-**Trouver l'index d'un élément dans le tableau:**
+**twouvew w-w'index d'un éwément dans we t-tabweau:**
 
 ```js
-fruits.push("Mango");
-// ["Strawberry", "Banana", "Mango"]
+f-fwuits.push("mango");
+// ["stwawbewwy", ^•ﻌ•^ "banana", (˘ω˘) "mango"]
 
-let pos = fruits.indexOf("Banana");
+wet pos = fwuits.indexof("banana");
 // 1
 ```
 
-**Supprimer un élément par son index:**
+**suppwimew un éwément paw son index:**
 
 ```js
-let removedItem = fruits.splice(pos, 1); // supprime 1 élément à la position pos
+wet wemoveditem = fwuits.spwice(pos, o.O 1); // s-suppwime 1 éwément à wa position pos
 
-// ["Strawberry", "Mango"]
+// ["stwawbewwy", (✿oωo) "mango"]
 ```
 
-**Supprimer des éléments à partir d'un index:**
+**suppwimew d-des éwéments à pawtiw d'un index:**
 
 ```js
-let vegetables = ["Cabbage", "Turnip", "Radish", "Carrot"];
-console.log(vegetables);
-// ["Cabbage", "Turnip", "Radish", "Carrot"]
+w-wet v-vegetabwes = ["cabbage", 😳😳😳 "tuwnip", "wadish", (ꈍᴗꈍ) "cawwot"];
+consowe.wog(vegetabwes);
+// ["cabbage", σωσ "tuwnip", UwU "wadish", "cawwot"]
 
-let pos = 1,
-  n = 2;
+wet pos = 1, ^•ﻌ•^
+  n-ny = 2;
 
-let removedItems = vegetables.splice(pos, n);
-// n définit le nombre d'éléments à supprimer,
-// à partir de la position pos
+wet wemoveditems = v-vegetabwes.spwice(pos, mya ny);
+// ny définit w-we nyombwe d-d'éwéments à suppwimew, /(^•ω•^)
+// à pawtiw de wa position pos
 
-console.log(vegetables);
-// ["Cabbage", "Carrot"] (le tableau d'origine est changé)
+consowe.wog(vegetabwes);
+// ["cabbage", rawr "cawwot"] (we tabweau d'owigine e-est changé)
 
-console.log(removedItems);
-// ["Turnip", "Radish"] (splice retourne la liste des éléments supprimés)
+c-consowe.wog(wemoveditems);
+// ["tuwnip", nyaa~~ "wadish"] (spwice wetouwne w-wa wiste des éwéments s-suppwimés)
 ```
 
-**Copier un tableau:**
+**copiew u-un tabweau:**
 
 ```js
-let shallowCopy = fruits.slice(); // crée un nouveau tableau qui contient les éléments de fruits
-// ["Strawberry", "Mango"]
+wet shawwowcopy = f-fwuits.swice(); // cwée un nyouveau tabweau qui contient wes éwéments de fwuits
+// ["stwawbewwy", "mango"]
 ```
 
-### Accéder aux éléments d'un tableau
+### a-accédew a-aux éwéments d'un tabweau
 
-Les tableaux sont indexés à partir de zéro: le premier élément d'un tableau a pour indice `0`, et la position du dernier élément est donnée par [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length) moins 1. Si on utilise un indice en dehors de cet intervalle, le résultat sera [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) (sous réserve qu'aucune propriété n'ait été ajoutée au préalable avec cet indice).
+wes tabweaux sont i-indexés à pawtiw d-de zéwo: we pwemiew éwément d'un tabweau a pouw indice `0`, ( ͡o ω ͡o ) e-et wa position du dewniew éwément est donnée paw [`wength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wength) moins 1. σωσ si on utiwise u-un indice en dehows de cet intewvawwe, (✿oωo) we w-wésuwtat sewa [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) (sous w-wésewve qu'aucune pwopwiété ny'ait été ajoutée au pwéawabwe a-avec cet indice). (///ˬ///✿)
 
 ```js
-let arr = ["le premier élément", "le deuxième élément", "le dernier élément"];
-console.log(arr[0]); // affiche "le premier élément"
-console.log(arr[1]); // affiche "le deuxième élément"
-console.log(arr[arr.length - 1]); // affiche "le dernier élément"
+w-wet aww = ["we pwemiew éwément", σωσ "we deuxième éwément", UwU "we dewniew éwément"];
+c-consowe.wog(aww[0]); // affiche "we p-pwemiew éwément"
+consowe.wog(aww[1]); // affiche "we deuxième éwément"
+consowe.wog(aww[aww.wength - 1]); // a-affiche "we dewniew éwément"
 ```
 
-Les éléments d'un tableau sont des propriétés d'objets de la même manière que `toString` est une propriété. Cependant, essayer d'accéder à un élément du tableau comme suit renverra une erreur, car le nom de la propriété utilisé est invalide :
+w-wes éwéments d-d'un tabweau sont des p-pwopwiétés d'objets de wa même m-manièwe que `tostwing` e-est une p-pwopwiété. (⑅˘꒳˘) cependant, /(^•ω•^) essayew d-d'accédew à u-un éwément du tabweau comme suit wenvewwa une e-ewweuw, -.- caw we nyom d-de wa pwopwiété u-utiwisé est invawide :
 
 ```js
-console.log(arr.0); // erreur de syntaxe
+consowe.wog(aww.0); // e-ewweuw de syntaxe
 ```
 
-Ce comportement est tout à fait normal. En effet, il n'est pas possible d'accéder aux propriétés dont le nom commence par un chiffre avec cette notation (le point). Il est nécessaire d'utiliser la syntaxe avec les crochets pour accéder à ces propriétés. Ainsi, si pour un objet quelconque, on avait une propriété nommée '`3d`', on ne pourra y faire référence qu'en utilisant les crochets. Exemple :
+c-ce compowtement e-est tout à fait nyowmaw. (ˆ ﻌ ˆ)♡ en effet, nyaa~~ iw ny'est pas possibwe d'accédew a-aux pwopwiétés d-dont we n-nyom commence p-paw un chiffwe avec cette nyotation (we p-point). ʘwʘ iw est nécessaiwe d'utiwisew wa syntaxe avec wes cwochets pouw accédew à ces p-pwopwiétés. :3 ainsi, (U ᵕ U❁) si pouw un o-objet quewconque, on avait une pwopwiété n-nyommée '`3d`', (U ﹏ U) on nye p-pouwwa y faiwe wéféwence qu'en u-utiwisant wes c-cwochets. ^^ exempwe :
 
 ```js
-let années = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
+w-wet a-années = [1950, òωó 1960, /(^•ω•^) 1970, 1980, 1990, 😳😳😳 2000, 2010];
 
-console.log(années.0);  // erreur de syntaxe
-console.log(années[0]); // fonctionne correctement
+c-consowe.wog(années.0);  // ewweuw de syntaxe
+consowe.wog(années[0]); // fonctionne cowwectement
 ```
 
 ```js
-renderer.3d.setTexture(model, "personnage.png");   // erreur de syntaxe
-renderer["3d"].setTexture(model, "personnage.png");// fonctionne correctement
+wendewew.3d.settextuwe(modew, :3 "pewsonnage.png");   // ewweuw de syntaxe
+wendewew["3d"].settextuwe(modew, (///ˬ///✿) "pewsonnage.png");// f-fonctionne cowwectement
 ```
 
-Dans cet exemple, on utilise des doubles quotes autour de `3d`. On peut aussi utiliser les doubles quotes pour accéder aux éléments d'un tableau (ex. : `années["2"]` au lieu de `années[2]`), mais ce n'est pas obligatoire. Dans l'instruction `années[2]`, le nombre sera converti en une chaîne de caractères par le moteur JavaScript. Pour cette raison, si on utilise les noms de propriété "2" et "02", on fera référence à deux propriétés différentes, et le fragment de code suivant renvoie donc `true`:
+d-dans cet exempwe, rawr x3 o-on utiwise des doubwes quotes a-autouw de `3d`. (U ᵕ U❁) on peut aussi utiwisew wes doubwes quotes pouw accédew a-aux éwéments d-d'un tabweau (ex. (⑅˘꒳˘) : `années["2"]` au wieu d-de `années[2]`), (˘ω˘) mais ce ny'est pas obwigatoiwe. :3 d-dans w'instwuction `années[2]`, XD w-we nyombwe sewa convewti en u-une chaîne de c-cawactèwes paw we moteuw javascwipt. >_< pouw cette waison, (✿oωo) si on utiwise wes noms d-de pwopwiété "2" e-et "02", (ꈍᴗꈍ) on fewa w-wéféwence à d-deux pwopwiétés d-difféwentes, XD et we fwagment d-de code suivant w-wenvoie donc `twue`:
 
 ```js
-console.log(années["2"] != années["02"]);
+consowe.wog(années["2"] != a-années["02"]);
 ```
 
-De manière similaire, les propriétés nommées avec des mots-clés réservés ne peuvent être consultées qu'en utilisant la syntaxe avec crochets :
+de m-manièwe simiwaiwe, :3 wes pwopwiétés n-nyommées avec des mots-cwés wésewvés n-nye peuvent êtwe consuwtées qu'en u-utiwisant wa s-syntaxe avec cwochets :
 
 ```js
-let promise = {
-  var: "text",
-  array: [1, 2, 3, 4],
+wet pwomise = {
+  v-vaw: "text", mya
+  awway: [1, òωó 2, 3, 4], nyaa~~
 };
 
-console.log(promise["var"]);
+consowe.wog(pwomise["vaw"]);
 ```
 
-### Relation entre `length` et les propriétés numériques
+### w-wewation entwe `wength` e-et wes pwopwiétés n-nyuméwiques
 
-La propriété [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length) d'un tableau est liée aux propriétés numériques du tableau. Plusieurs méthodes natives utilisent cette propriété : [`join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join), [`slice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf), etc. D'autres méthodes comme [`push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push) et [`splice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) modifient le tableau et la propriété [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length).
+wa pwopwiété [`wength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wength) d'un tabweau est wiée aux pwopwiétés n-nyuméwiques du tabweau. 🥺 pwusieuws méthodes n-nyatives u-utiwisent cette pwopwiété : [`join()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/join), -.- [`swice()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/swice), 🥺 [`indexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/indexof), (˘ω˘) e-etc. òωó d'autwes méthodes comme [`push()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/push) e-et [`spwice()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/spwice) m-modifient we tabweau et wa pwopwiété [`wength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wength). UwU
 
 ```js
-let fruits = [];
-fruits.push("banane", "pomme", "pêche");
+w-wet fwuits = [];
+fwuits.push("banane", ^•ﻌ•^ "pomme", mya "pêche");
 
-console.log(fruits.length); // 3
+consowe.wog(fwuits.wength); // 3
 ```
 
-Lorsqu'on définit une nouvelle propriété numérique pour un tableau, que l'index utilisé est valide et que celui-ci est dehors des limites actuelles du tableau, le moteur JavaScript mettra à jour la propriété [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length) :
+w-wowsqu'on définit u-une nyouvewwe pwopwiété nyuméwique p-pouw un tabweau, (✿oωo) que w-w'index utiwisé e-est vawide et que c-cewui-ci est dehows des wimites actuewwes du tabweau, XD we moteuw javascwipt mettwa à jouw wa pwopwiété [`wength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wength) :
 
 ```js
-fruits[5] = "mangue";
-console.log(fruits[5]); // "mangue"
-console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
-console.log(fruits.length); // 6
+fwuits[5] = "mangue";
+consowe.wog(fwuits[5]); // "mangue"
+consowe.wog(object.keys(fwuits)); // ['0', :3 '1', '2', '5']
+consowe.wog(fwuits.wength); // 6
 ```
 
-On peut également modifier la propriété directement (cela n'ajoutera pas de nouveaux éléments) :
+on peut égawement modifiew wa pwopwiété d-diwectement (cewa n-ny'ajoutewa pas de nyouveaux éwéments) :
 
 ```js
-fruits.length = 10;
-console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
-console.log(fruits.length); // 10
+fwuits.wength = 10;
+c-consowe.wog(object.keys(fwuits)); // ['0', (U ﹏ U) '1', '2', UwU '5']
+c-consowe.wog(fwuits.wength); // 10
 ```
 
-En revanche, si on diminue la valeur de [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length), cela supprimera des éléments :
+e-en wevanche, ʘwʘ si on d-diminue wa vaweuw de [`wength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wength), >w< c-cewa suppwimewa d-des éwéments :
 
 ```js
-fruits.length = 2;
-console.log(Object.keys(fruits)); // ['0', '1']
-console.log(fruits.length); // 2
+fwuits.wength = 2;
+c-consowe.wog(object.keys(fwuits)); // ['0', 😳😳😳 '1']
+consowe.wog(fwuits.wength); // 2
 ```
 
-Pour plus d'informations sur le comportement de cette propriété, voir la page [`Array.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length).
+p-pouw pwus d'infowmations s-suw we compowtement de cette pwopwiété, rawr v-voiw wa page [`awway.wength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wength). ^•ﻌ•^
 
-### Création d'un tableau utilisant le résultat d'une correspondance
+### c-cwéation d-d'un tabweau utiwisant w-we wésuwtat d-d'une cowwespondance
 
-Le résultat d'une correspondance entre une expression rationnelle et une chaîne peut créer un tableau. Ce tableau possède des propriétés et des éléments qui fournissent des informations sur cette correspondance. Il est possible d'obtenir un tableau grâce aux méthodes [`RegExp.exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match), et [`String.replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace). Pour mieux comprendre le fonctionnement de ces propriétés et de ces éléments, on pourra utiliser l'exemple et le tableau qui suivent :
+w-we wésuwtat d-d'une cowwespondance e-entwe u-une expwession wationnewwe et u-une chaîne peut c-cwéew un tabweau. σωσ c-ce tabweau possède des pwopwiétés e-et des éwéments qui fouwnissent des i-infowmations suw cette cowwespondance. :3 i-iw est possibwe d-d'obteniw u-un tabweau gwâce aux méthodes [`wegexp.exec()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec), rawr x3 [`stwing.match()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match), nyaa~~ e-et [`stwing.wepwace()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace). :3 pouw mieux compwendwe w-we fonctionnement de ces pwopwiétés e-et de ces éwéments, >w< o-on pouwwa utiwisew w'exempwe et we tabweau qui suivent :
 
 ```js
-// Matche un "d" suivit par un ou plusieurs "b" et suivit d'un "d"
-// Capture les "b" et le "d" qui suit
-// Ignore la casse
+// matche un "d" s-suivit paw un ou pwusieuws "b" e-et suivit d'un "d"
+// c-captuwe wes "b" et we "d" qui suit
+// ignowe wa casse
 
-let maRegexp = /d(b+)(d)/i;
-let monTableau = maRegexp.exec("cdbBdbsbz");
+wet m-mawegexp = /d(b+)(d)/i;
+wet montabweau = m-mawegexp.exec("cdbbdbsbz");
 
-console.log(monTableau);
-// [ 0:"dbBd", 1:"bB", 2:"d", index:1, input:"cdbBdbsbz", length:3 ]
+c-consowe.wog(montabweau);
+// [ 0:"dbbd", rawr 1:"bb", 😳 2:"d", index:1, 😳 i-input:"cdbbdbsbz", 🥺 wength:3 ]
 ```
 
-Les propriétés et les éléments retournés depuis cette correspondance sont les suivants :
+wes pwopwiétés e-et wes éwéments w-wetouwnés depuis c-cette cowwespondance sont wes suivants :
 
-<table class="fullwidth-table standard-table">
+<tabwe cwass="fuwwwidth-tabwe s-standawd-tabwe">
   <thead>
-    <tr>
-      <th class="header" scope="col">Propriété/Élément</th>
-      <th class="header" scope="col">Description</th>
-      <th class="header" scope="col">Exemple</th>
-    </tr>
+    <tw>
+      <th cwass="headew" s-scope="cow">pwopwiété/Éwément</th>
+      <th c-cwass="headew" s-scope="cow">descwiption</th>
+      <th cwass="headew" s-scope="cow">exempwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>input</code></td>
       <td>
-        Une propriété en lecture seule qui reflète la chaîne originale sur
-        laquelle l'expression rationnelle a été appliquée.
+        u-une pwopwiété e-en wectuwe seuwe q-qui wefwète wa chaîne owiginawe s-suw
+        w-waquewwe w'expwession w-wationnewwe a-a été appwiquée.
       </td>
-      <td>cdbBdbsbz</td>
-    </tr>
-    <tr>
+      <td>cdbbdbsbz</td>
+    </tw>
+    <tw>
       <td><code>index</code></td>
       <td>
-        Une propriété en lecture seule qui est l'indice de la correspondance
-        dans la chaîne (les indices commencent à 0)
+        u-une pwopwiété e-en wectuwe seuwe q-qui est w'indice d-de wa cowwespondance
+        dans wa chaîne (wes i-indices commencent à 0)
       </td>
       <td>1</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>[0]</code></td>
       <td>
-        Une propriété en lecture seule qui spécifie les derniers caractères
-        correspondants.
+        une pwopwiété e-en wectuwe seuwe qui spécifie w-wes dewniews cawactèwes
+        c-cowwespondants. rawr x3
       </td>
-      <td>dbBd</td>
-    </tr>
-    <tr>
-      <td><code>[1], ...[n]</code></td>
+      <td>dbbd</td>
+    </tw>
+    <tw>
+      <td><code>[1], ^^ ...[n]</code></td>
       <td>
-        Des éléments en lecture seule qui contiennent les groupes capturés, s'il
-        y en a dans l'expression régulière. Le nombre de groupes capturés
-        possibles est illimité.
+        d-des éwéments en wectuwe seuwe qui contiennent wes gwoupes captuwés, ( ͡o ω ͡o ) s-s'iw
+        y-y en a dans w-w'expwession wéguwièwe. XD we nyombwe de gwoupes captuwés
+        p-possibwes est i-iwwimité. ^^
       </td>
-      <td>[1]: bB<br />[2]: d</td>
-    </tr>
+      <td>[1]: bb<bw />[2]: d-d</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Constructeur
+## c-constwucteuw
 
-- [`Array()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
-  - : Crée un nouvel objet `Array`.
+- [`awway()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/awway)
+  - : cwée un nyouvew objet `awway`. (⑅˘꒳˘)
 
-## Propriétés statiques
+## pwopwiétés statiques
 
-- [`get Array[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
-  - : La fonction de construction utilisée pour créer les objets dérivés.
+- [`get a-awway[@@species]`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.species)
+  - : w-wa fonction de c-constwuction utiwisée p-pouw cwéew wes objets déwivés. (⑅˘꒳˘)
 
-## Méthodes statiques
+## méthodes s-statiques
 
-- [`Array.from()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
-  - : Cette méthode permet de créer une nouvelle instance d'`Array` à partir d'un objet semblable à un tableau ou d'un itérable.
-- [`Array.isArray()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray)
-  - : Cette méthode renvoie `true` si la variable est un tableau, `false` sinon.
-- [`Array.of()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/of)
-  - : Cette méthode permet de créer une nouvelle instance d'`Array` à partir d'un nombre variable d'arguments (peu importe la quantité ou le type des arguments utilisés).
+- [`awway.fwom()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fwom)
+  - : c-cette méthode pewmet de cwéew une nyouvewwe i-instance d'`awway` à pawtiw d'un objet sembwabwe à u-un tabweau ou d'un itéwabwe. ^•ﻌ•^
+- [`awway.isawway()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/isawway)
+  - : c-cette méthode w-wenvoie `twue` si wa vawiabwe e-est un tabweau, ( ͡o ω ͡o ) `fawse` s-sinon. ( ͡o ω ͡o )
+- [`awway.of()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/of)
+  - : cette méthode p-pewmet de cwéew une nouvewwe i-instance d'`awway` à p-pawtiw d'un n-nyombwe vawiabwe d-d'awguments (peu impowte wa quantité o-ou we type d-des awguments u-utiwisés).
 
-## Propriétés des instances
+## pwopwiétés des i-instances
 
-- [`Array.prototype.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
-  - : La propriété de longueur pour le constructeur `Array`, elle vaut 1.
-- [`Array.prototype[@@unscopables]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)
-  - : Un symbole contenant les noms des propriétés à exclure d'une portée de liaison avec [`with`](/fr/docs/Web/JavaScript/Reference/Statements/with).
+- [`awway.pwototype.wength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wength)
+  - : wa pwopwiété de wongueuw pouw w-we constwucteuw `awway`, (✿oωo) e-ewwe vaut 1. 😳😳😳
+- [`awway.pwototype[@@unscopabwes]`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/symbow.unscopabwes)
+  - : u-un symbowe contenant wes nyoms des pwopwiétés à excwuwe d'une powtée de wiaison a-avec [`with`](/fw/docs/web/javascwipt/wefewence/statements/with). OwO
 
-## Méthodes des instances
+## méthodes d-des instances
 
-- [`Array.prototype.at()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/at){{Experimental_Inline}}
-  - : Renvoie l'élément du tableau à l'indice indiqué. Les entiers négatifs sont acceptés en argument et, dans ce cas, la recherche de l'élément se fait depuis la fin du tableau.
-- [`Array.prototype.concat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
-  - : Renvoie un nouveau tableau qui est le tableau courant, joint avec d'autres tableaux ou valeurs.
-- [`Array.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin)
-  - : Copie une séquence d'élément d'un tableau au sein du tableau courant.
-- [`Array.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/entries)
-  - : Renvoie un nouvel _itérateur de tableau_ qui contient les paires de clés/valeurs pour chaque indice dans le tableau.
-- [`Array.prototype.every()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
-  - : Renvoie `true` si chaque élément du tableau vérifie la condition fixée par la fonction passée en argument.
-- [`Array.prototype.fill()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/fill)
-  - : Remplit tous les éléments d'un tableau à partir d'un indice de début jusqu'à un indice de fin avec une valeur statique.
-- [`Array.prototype.filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-  - : Renvoie un nouveau tableau qui contient tous les éléments du tableau courant pour lesquels la fonction de filtre passée en argument a renvoyé `true`.
-- [`Array.prototype.find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
-  - : Renvoie l'élément trouvé dans le tableau si un des éléments satisfait la condition fixée par la fonction passée en paramètre. Renvoie `undefined` si aucun élément correspondant n'est trouvé.
-- [`Array.prototype.findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
-  - : Renvoie l'indice de l'élément trouvé dans le tableau si un élément du tableau satisfait la condition fixée par la fonction passée en argument ou `-1` si aucun élément n'est trouvé.
-- [`Array.prototype.flat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
-  - : Renvoie un nouveau tableau avec l'ensemble des sous-éléments concaténés récursivement dans le tableau jusqu'à une profondeur indiquée.
-- [`Array.prototype.flatMap()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)
-  - : Renvoie un nouveau tableau formé en appliquant une fonction de rappel donnée à chaque élément du tableau puis en «&nbsp;aplatissant&nbsp;» le tableau d'un niveau.
-- [`Array.prototype.forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-  - : Appelle une fonction pour chaque élément du tableau.
-- [`Array.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
-  - : Détermine si le tableau contient une valeur et renvoie `true` ou `false` selon le cas de figure.
-- [`Array.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
-  - : Renvoie l'indice le plus petit d'un élément du tableau égal à la valeur passée en argument ou `-1` si aucun élément n'est trouvé.
-- [`Array.prototype.join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
-  - : Fusionne tous les éléments du tableau en une chaîne de caractères.
-- [`Array.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/keys)
-  - : Renvoie un nouvel _itérateur de tableau_ qui contient les clés de chaque indice du tableau.
-- [`Array.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf)
-  - : Renvoie le plus grand indice d'un élément du tableau égal à la valeur passée en argument ou `-1` si aucun élément n'est trouvé.
-- [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-  - : Renvoie un nouveau tableau contenant les résultats de l'appel de la fonction passée en argument sur chaque élément du tableau.
-- [`Array.prototype.pop()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
-  - : Retire le dernier élément du tableau et renvoie cet élément.
-- [`Array.prototype.push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
-  - : Ajoute un ou plusieurs éléments à la fin du tableau et renvoie la nouvelle longueur (`length`) du tableau.
-- [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
-  - : Applique une fonction sur un accumulateur et chaque valeur du tableau (de gauche à droite) afin de réduire le tableau à une seule valeur.
-- [`Array.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight)
-  - : Applique une fonction sur un accumulateur et chaque valeur du tableau (de droite à gauche) afin de réduire le tableau à une seule valeur.
-- [`Array.prototype.reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
-  - : Inverse l'ordre des éléments du tableau _à même le tableau_ (le premier élément devient le dernier, le dernier devient le premier, etc.).
-- [`Array.prototype.shift()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
-  - : Retire le premier élément du tableau et renvoie cet élément.
-- [`Array.prototype.slice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
-  - : Extrait une section du tableau courant et renvoie un nouveau tableau.
-- [`Array.prototype.some()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
-  - : Renvoie `true` si au moins un des éléments du tableau satisfait la condition fournie par la fonction passée en paramètre.
-- [`Array.prototype.sort()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-  - : Trie les éléments du tableau à même le tableau et renvoie le tableau.
-- [`Array.prototype.splice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
-  - : Ajoute et/ou retire des éléments du tableau.
-- [`Array.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString)
-  - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Cette méthode surcharge la méthode [`Object.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString).
-- [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString)
-  - : Renvoie une chaîne de caractères qui représente le tableau et ses éléments. Cette méthode surcharge la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
-- [`Array.prototype.unshift()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
-  - : Ajoute un ou plusieurs éléments à l'avant du tableau et renvoie la nouvelle longueur du tableau.
-- [`Array.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/values)
-  - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs pour chaque indice du tableau.
-- <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator()"><code>Array.prototype[@@iterator]()</code></a>
-  - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs pour chaque indice du tableau.
+- [`awway.pwototype.at()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/at){{expewimentaw_inwine}}
+  - : w-wenvoie w'éwément du tabweau à w'indice indiqué. ^^ w-wes entiews nyégatifs sont a-acceptés en a-awgument et, rawr x3 dans c-ce cas, 🥺 wa wechewche d-de w'éwément s-se fait depuis wa fin du tabweau. (ˆ ﻌ ˆ)♡
+- [`awway.pwototype.concat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/concat)
+  - : wenvoie un nyouveau tabweau qui est w-we tabweau couwant, ( ͡o ω ͡o ) joint avec d'autwes t-tabweaux ou vaweuws. >w<
+- [`awway.pwototype.copywithin()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/copywithin)
+  - : copie une séquence d'éwément d-d'un tabweau au sein du tabweau couwant. /(^•ω•^)
+- [`awway.pwototype.entwies()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/entwies)
+  - : wenvoie un nyouvew _itéwateuw d-de tabweau_ q-qui contient wes paiwes de cwés/vaweuws p-pouw chaque indice dans we tabweau. 😳😳😳
+- [`awway.pwototype.evewy()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/evewy)
+  - : w-wenvoie `twue` s-si chaque éwément du tabweau v-véwifie wa condition fixée paw w-wa fonction passée en awgument. (U ᵕ U❁)
+- [`awway.pwototype.fiww()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fiww)
+  - : wempwit tous wes éwéments d'un t-tabweau à pawtiw d'un indice de début jusqu'à u-un indice de f-fin avec une vaweuw s-statique. (˘ω˘)
+- [`awway.pwototype.fiwtew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fiwtew)
+  - : wenvoie un nyouveau tabweau qui c-contient tous wes éwéments du tabweau couwant pouw wesquews wa fonction de f-fiwtwe passée en a-awgument a wenvoyé `twue`. 😳
+- [`awway.pwototype.find()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/find)
+  - : w-wenvoie w-w'éwément twouvé dans we tabweau si un d-des éwéments satisfait w-wa condition fixée paw wa fonction passée e-en pawamètwe. (ꈍᴗꈍ) wenvoie `undefined` si aucun éwément c-cowwespondant ny'est twouvé. :3
+- [`awway.pwototype.findindex()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/findindex)
+  - : w-wenvoie w'indice d-de w'éwément twouvé dans w-we tabweau si un éwément d-du tabweau s-satisfait wa condition fixée paw wa fonction p-passée en awgument ou `-1` si aucun éwément n-ny'est twouvé. /(^•ω•^)
+- [`awway.pwototype.fwat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fwat)
+  - : wenvoie un nyouveau tabweau avec w'ensembwe des s-sous-éwéments c-concaténés w-wécuwsivement dans w-we tabweau jusqu'à u-une pwofondeuw indiquée. ^^;;
+- [`awway.pwototype.fwatmap()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fwatmap)
+  - : w-wenvoie un nyouveau tabweau fowmé en appwiquant u-une fonction de wappew d-donnée à chaque éwément du tabweau puis en «&nbsp;apwatissant&nbsp;» w-we tabweau d-d'un nyiveau.
+- [`awway.pwototype.foweach()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach)
+  - : appewwe u-une fonction pouw chaque éwément d-du tabweau. o.O
+- [`awway.pwototype.incwudes()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/incwudes)
+  - : d-détewmine si we tabweau c-contient une vaweuw e-et wenvoie `twue` ou `fawse` s-sewon we cas de figuwe. 😳
+- [`awway.pwototype.indexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/indexof)
+  - : wenvoie w'indice we pwus petit d-d'un éwément du tabweau égaw à w-wa vaweuw passée en awgument ou `-1` si aucun éwément n-ny'est t-twouvé. UwU
+- [`awway.pwototype.join()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/join)
+  - : f-fusionne tous wes éwéments d-du tabweau e-en une chaîne de cawactèwes. >w<
+- [`awway.pwototype.keys()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/keys)
+  - : w-wenvoie un nyouvew _itéwateuw de tabweau_ qui c-contient wes cwés de chaque indice d-du tabweau. o.O
+- [`awway.pwototype.wastindexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wastindexof)
+  - : w-wenvoie we pwus gwand indice d'un éwément du tabweau égaw à wa vaweuw passée en awgument ou `-1` s-si aucun éwément n-ny'est twouvé. (˘ω˘)
+- [`awway.pwototype.map()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map)
+  - : wenvoie un nyouveau tabweau c-contenant wes wésuwtats de w'appew d-de wa fonction p-passée en awgument suw chaque éwément du tabweau. òωó
+- [`awway.pwototype.pop()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/pop)
+  - : wetiwe we dewniew éwément d-du tabweau et wenvoie cet éwément. nyaa~~
+- [`awway.pwototype.push()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/push)
+  - : ajoute u-un ou pwusieuws éwéments à wa fin du tabweau e-et wenvoie wa nyouvewwe w-wongueuw (`wength`) du t-tabweau. ( ͡o ω ͡o )
+- [`awway.pwototype.weduce()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/weduce)
+  - : a-appwique u-une fonction s-suw un accumuwateuw e-et chaque v-vaweuw du tabweau (de gauche à dwoite) afin de wéduiwe we tabweau à une seuwe vaweuw. 😳😳😳
+- [`awway.pwototype.weducewight()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/weducewight)
+  - : a-appwique u-une fonction suw u-un accumuwateuw e-et chaque vaweuw d-du tabweau (de d-dwoite à gauche) afin de wéduiwe we tabweau à une seuwe vaweuw. ^•ﻌ•^
+- [`awway.pwototype.wevewse()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wevewse)
+  - : invewse w-w'owdwe des éwéments d-du tabweau _à même we tabweau_ (we pwemiew éwément devient we dewniew, (˘ω˘) w-we dewniew d-devient we pwemiew, (˘ω˘) e-etc.).
+- [`awway.pwototype.shift()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/shift)
+  - : wetiwe we pwemiew éwément d-du tabweau et wenvoie cet éwément. -.-
+- [`awway.pwototype.swice()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/swice)
+  - : extwait une section d-du tabweau couwant e-et wenvoie un nyouveau tabweau. ^•ﻌ•^
+- [`awway.pwototype.some()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/some)
+  - : wenvoie `twue` s-si au moins un des éwéments d-du tabweau satisfait w-wa condition fouwnie paw w-wa fonction passée e-en pawamètwe. /(^•ω•^)
+- [`awway.pwototype.sowt()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/sowt)
+  - : t-twie wes éwéments d-du tabweau à m-même we t-tabweau et wenvoie we tabweau. (///ˬ///✿)
+- [`awway.pwototype.spwice()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/spwice)
+  - : a-ajoute et/ou w-wetiwe des éwéments du tabweau.
+- [`awway.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/towocawestwing)
+  - : w-wenvoie une chaîne de cawactèwes wocawisée q-qui wepwésente we tabweau et s-ses éwéments. mya cette méthode s-suwchawge wa méthode [`object.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/towocawestwing). o.O
+- [`awway.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/tostwing)
+  - : w-wenvoie une chaîne de cawactèwes q-qui wepwésente we tabweau et ses éwéments. ^•ﻌ•^ cette méthode suwchawge w-wa méthode [`object.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing). (U ᵕ U❁)
+- [`awway.pwototype.unshift()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/unshift)
+  - : a-ajoute un ou pwusieuws éwéments à w'avant du tabweau e-et wenvoie w-wa nyouvewwe wongueuw du tabweau. :3
+- [`awway.pwototype.vawues()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/vawues)
+  - : w-wenvoie un nyouvew _itéwateuw de tabweau_ q-qui contient wes v-vaweuws pouw chaque indice du t-tabweau. (///ˬ///✿)
+- <a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/@@itewatow()"><code>awway.pwototype[@@itewatow]()</code></a>
+  - : w-wenvoie un nyouvew _itéwateuw de t-tabweau_ qui contient w-wes vaweuws p-pouw chaque indice d-du tabweau. (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-### Créer un tableau
+### cwéew un tabweau
 
-Dans l'exemple suivant, on crée un tableau `tableauMsg`, d'une longueur nulle. Ensuite, on lui affecte des valeurs pour `tableauMsg[0]` et `tableauMsg[99]`, ce qui aura pour effet de modifier la propriété `length` (qui vaudra alors 100).
+dans w'exempwe suivant, 🥺 on cwée un tabweau `tabweaumsg`, -.- d'une wongueuw nyuwwe. nyaa~~ e-ensuite, (///ˬ///✿) o-on wui affecte des v-vaweuws pouw `tabweaumsg[0]` e-et `tabweaumsg[99]`, 🥺 c-ce qui auwa p-pouw effet de modifiew wa pwopwiété `wength` (qui v-vaudwa awows 100). >w<
 
 ```js
-let tableauMsg = [];
-tableauMsg[0] = "Coucou";
-tableauMsg[99] = "monde";
+wet t-tabweaumsg = [];
+tabweaumsg[0] = "coucou";
+t-tabweaumsg[99] = "monde";
 
-if (tableauMsg.length === 100) {
-  console.log("La longueur du tableau vaut 100.");
+i-if (tabweaumsg.wength === 100) {
+  consowe.wog("wa wongueuw d-du tabweau vaut 100.");
 }
 ```
 
-### Créer un tableau à deux dimensions
+### cwéew un t-tabweau à deux dimensions
 
-Dans l'exemple qui suit, on crée un plateau d'échec grâce à un tableau en deux dimensions qui contient des caractères. Le premier mouvement est effectué en copiant 'p' de (6,4) vers (4,4). La position anciennement occupée par le pion (6,4) devient vide.
+dans w-w'exempwe qui s-suit, rawr x3 on cwée un pwateau d'échec g-gwâce à un t-tabweau en deux d-dimensions qui contient des cawactèwes. w-we pwemiew m-mouvement est effectué en c-copiant 'p' de (6,4) vews (4,4). (⑅˘꒳˘) w-wa position anciennement o-occupée p-paw we pion (6,4) devient vide. σωσ
 
 ```js
-let plateau = [
-  ["T", "C", "F", "R", "K", "F", "C", "T"],
-  ["P", "P", "P", "P", "P", "P", "P", "P"],
-  [" ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " "],
-  [" ", " ", " ", " ", " ", " ", " ", " "],
-  ["p", "p", "p", "p", "p", "p", "p", "p"],
-  ["t", "c", "f", "k", "r", "f", "c", "t"],
+w-wet pwateau = [
+  ["t", XD "c", "f", "w", -.- "k", "f", "c", >_< "t"],
+  ["p", rawr "p", "p", "p", 😳😳😳 "p", "p", "p", "p"], UwU
+  [" ", " ", (U ﹏ U) " ", " ", " ", (˘ω˘) " ", " ", " "], /(^•ω•^)
+  [" ", " ", " ", (U ﹏ U) " ", " ", " ", ^•ﻌ•^ " ", " "],
+  [" ", >w< " ", " ", " ", ʘwʘ " ", " ", " ", òωó " "],
+  [" ", o.O " ", " ", " ", ( ͡o ω ͡o ) " ", " ", " ", " "], mya
+  ["p", "p", >_< "p", "p", "p", rawr "p", "p", "p"], >_<
+  ["t", "c", "f", (U ﹏ U) "k", "w", "f", rawr "c", "t"],
 ];
 
-console.log(plateau.join("\n") + "\n\n");
+consowe.wog(pwateau.join("\n") + "\n\n");
 
-// On déplace le pion de deux cases en avant 2
-plateau[4][4] = plateau[6][4];
-plateau[6][4] = " ";
-console.log(plateau.join("\n"));
+// on dépwace w-we pion de deux cases en avant 2
+pwateau[4][4] = pwateau[6][4];
+pwateau[6][4] = " ";
+consowe.wog(pwateau.join("\n"));
 ```
 
-Voici le résultat affiché :
+voici we wésuwtat a-affiché :
 
 ```
-T,C,F,R,K,F,C,T
-P,P,P,P,P,P,P,P
-  , , , , , , ,
-  , , , , , , ,
-  , , , , , , ,
-  , , , , , , ,
+t,c,f,w,k,f,c,t
 p,p,p,p,p,p,p,p
-t,c,f,k,r,f,c,t
+  , (U ᵕ U❁) , , , , , ,
+  , (ˆ ﻌ ˆ)♡ , , , , , ,
+  , >_< , , , , , ,
+  , ^^;; , , , , , ,
+p,p,p,p,p,p,p,p
+t,c,f,k,w,f,c,t
 
-T,C,F,R,K,F,C,T
-P,P,P,P,P,P,P,P
-  , , , , , , ,
-  , , , , , , ,
-  , , , ,p, , ,
-  , , , , , , ,
-p,p,p,p, ,p,p,p
-t,c,f,k,r,f,c,t
+t,c,f,w,k,f,c,t
+p,p,p,p,p,p,p,p
+  , ʘwʘ , , , , , ,
+  , 😳😳😳 , , , , , ,
+  , UwU , , ,p, , ,
+  , OwO , , , , , ,
+p-p,p,p,p, :3 ,p,p,p
+t,c,f,k,w,f,c,t
 ```
 
-### Utiliser un tableau pour tabuler un ensemble de valeurs
+### utiwisew un tabweau p-pouw tabuwew un ensembwe de v-vaweuws
 
 ```js
-values = [];
-for (let x = 0; x < 10; x++) {
-  values.push([2 ** x, 2 * x ** 2]);
+vawues = [];
+fow (wet x = 0; x < 10; x-x++) {
+  vawues.push([2 ** x, -.- 2 * x ** 2]);
 }
-console.table(values);
+c-consowe.tabwe(vawues);
 ```
 
-Résulte en
+wésuwte e-en
 
-```plain
+```pwain
 0  1  0
 1  2  2
 2  4  8
@@ -449,20 +449,20 @@ Résulte en
 9  512  162
 ```
 
-(Le première colonne est l'index)
+(we pwemièwe c-cowonne est w'index)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Chapitres du guide JavaScript
-  - [Guide JavaScript : indexer les propriétés d'un objet](/fr/docs/Web/JavaScript/Guide/Working_with_objects#indexing_object_properties)
-  - [Guide JavaScript : Les objets natifs : l'objet `Array`](/fr/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
-- [Les tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- [RangeError: invalid array length](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
+- chapitwes d-du guide javascwipt
+  - [guide javascwipt : indexew w-wes pwopwiétés d'un objet](/fw/docs/web/javascwipt/guide/wowking_with_objects#indexing_object_pwopewties)
+  - [guide j-javascwipt : wes objets n-nyatifs : w'objet `awway`](/fw/docs/web/javascwipt/guide/indexed_cowwections#awway_object)
+- [wes t-tabweaux typés](/fw/docs/web/javascwipt/guide/typed_awways)
+- [wangeewwow: invawid awway w-wength](/fw/docs/web/javascwipt/wefewence/ewwows/invawid_awway_wength)

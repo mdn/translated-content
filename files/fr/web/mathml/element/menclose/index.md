@@ -1,61 +1,61 @@
 ---
-title: menclose
-slug: Web/MathML/Element/menclose
+titwe: mencwose
+swug: web/mathmw/ewement/mencwose
 ---
 
-{{MathMLRef}}
+{{mathmwwef}}
 
-L'élément MathML `<menclose>` permet d'afficher son contenu groupé au sein d'une même notation, définie par l'attribut `notation`.
+w-w'éwément m-mathmw `<mencwose>` p-pewmet d-d'affichew son contenu g-gwoupé au s-sein d'une même n-nyotation, (U ﹏ U) définie p-paw w'attwibut `notation`. >w<
 
-## Attributs
+## attwibuts
 
-- class, id, style
-  - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/Web/CSS).
-- href
-  - : Un hyperlien pointant vers un URI donné.
-- mathbackground
-  - : La couleur de fond. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
-- mathcolor
-  - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
-- notation
+- cwass, (U ﹏ U) id, stywe
+  - : afin d'êtwe utiwisés a-avec wes [feuiwwes de stywes](/fw/docs/web/css). 😳
+- hwef
+  - : un h-hypewwien pointant vews un uwi d-donné. (ˆ ﻌ ˆ)♡
+- mathbackgwound
+  - : wa couweuw de fond. 😳😳😳 iw est possibwe d'utiwisew wes c-codes au fowmat `#wgb`, (U ﹏ U) `#wwggbb` et wes [noms d-de couweuws htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). (///ˬ///✿)
+- m-mathcowow
+  - : wa couweuw du texte. 😳 iw est possibwe d'utiwisew wes codes au f-fowmat `#wgb`, 😳 `#wwggbb` et wes [noms de couweuws htmw](/fw/docs/web/css/cowow_vawue#mots-cw.c3.a9s). σωσ
+- nyotation
 
-  - : Une liste de notations à appliquer aux éléments fils, séparées par des blancs. Les symboles sont dessinés indépendamment et peuvent donc parfois se superposer. Les valeurs possibles sont :
+  - : u-une wiste de nyotations à a-appwiquew aux éwéments f-fiws, rawr x3 s-sépawées paw d-des bwancs. OwO wes symbowes sont dessinés indépendamment e-et peuvent donc pawfois se supewposew. /(^•ω•^) w-wes vaweuws possibwes sont :
 
-    | Valeur                        | Affichage                                     | Affichage dans votre navigateur                                                                                                                | Description                                                                                                                  |
+    | vaweuw                        | affichage                                     | affichage dans votwe nyavigateuw                                                                                                                | d-descwiption                                                                                                                  |
     | ----------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-    | `longdiv` (valeur par défaut) | ![longdiv](default.png)                       | <math><menclose notation="longdiv"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>            | Symbole de division longue                                                                                                   |
-    | `actuarial`                   | ![actuarial](actuarial.png)                   | <math><menclose notation="actuarial"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>          | [Symbole actuaire](http://en.wikipedia.org/wiki/Actuarial_notation)                                                          |
-    | `radical`                     | ![radical](radical.png)                       | <math><menclose notation="radical"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>            | Symbole de la racine carrée                                                                                                  |
-    | `box`                         | ![box](box.png)                               | <math><menclose notation="box"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>                | Boîte                                                                                                                        |
-    | `roundedbox`                  | ![roundedbox](roundedbox.png)                 | <math><menclose notation="roundedbox"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>         | Boîte arrondie                                                                                                               |
-    | `circle`                      | ![circle](circle.png)                         | <math><menclose notation="circle"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>             | Cercle                                                                                                                       |
-    | `left`                        | ![left](left.png)                             | <math><menclose notation="left"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>               | Ligne à la gauche du contenu                                                                                                 |
-    | `right`                       | ![right](right.png)                           | <math><menclose notation="right"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>              | Ligne à la droite du contenu                                                                                                 |
-    | `top`                         | ![top](top.png)                               | <math><menclose notation="top"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>                | Ligne au-dessus du contenu                                                                                                   |
-    | `bottom`                      | ![bottom](bottom.png)                         | <math><menclose notation="bottom"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>             | Ligne en-dessous du contenu                                                                                                  |
-    | `updiagonalstrike`            | ![updiagonalstrike](updiagonalstrike.png)     | <math><menclose notation="updiagonalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>   | Ligne de rayure allant du coin bas-gauche au coin haut-droit                                                                 |
-    | `downdiagonalstrike`          | ![downdiagonalstrike](downdiagonalstrike.png) | <math><menclose notation="downdiagonalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math> | Ligne de rayure allant du coin haut-gauche au coin bas-droit                                                                 |
-    | `verticalstrike`              | ![verticalstrike](verticalstrike.png)         | <math><menclose notation="verticalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>     | Ligne de rayure verticale à travers le contenu                                                                               |
-    | `horizontalstrike`            | ![horizontalstrike](horizontalstrike.png)     | <math><menclose notation="horizontalstrike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>   | Ligne de rayure horizontale à travers le contenu                                                                             |
-    | `madruwb`                     | ![madruwb](madruwb.png)                       | <math><menclose notation="madruwb"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>            | [Symbole arabe pour la factorielle](http://en.wikipedia.org/wiki/Modern_Arabic_mathematical_notation#Arithmetic_and_algebra) |
-    | `updiagonalarrow`             | ![](updiagonalarrow.png)                      | <math><menclose notation="updiagonalarrow"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></menclose></math>    | flèche diagonale                                                                                                             |
+    | `wongdiv` (vaweuw paw défaut) | ![wongdiv](defauwt.png)                       | <math><mencwose n-nyotation="wongdiv"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>            | s-symbowe de d-division wongue                                                                                                   |
+    | `actuawiaw`                   | ![actuawiaw](actuawiaw.png)                   | <math><mencwose nyotation="actuawiaw"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>          | [symbowe actuaiwe](http://en.wikipedia.owg/wiki/actuawiaw_notation)                                                          |
+    | `wadicaw`                     | ![wadicaw](wadicaw.png)                       | <math><mencwose nyotation="wadicaw"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>            | s-symbowe de wa w-wacine cawwée                                                                                                  |
+    | `box`                         | ![box](box.png)                               | <math><mencwose nyotation="box"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>                | b-boîte                                                                                                                        |
+    | `woundedbox`                  | ![woundedbox](woundedbox.png)                 | <math><mencwose n-nyotation="woundedbox"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>         | boîte awwondie                                                                                                               |
+    | `ciwcwe`                      | ![ciwcwe](ciwcwe.png)                         | <math><mencwose n-nyotation="ciwcwe"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>             | cewcwe                                                                                                                       |
+    | `weft`                        | ![weft](weft.png)                             | <math><mencwose n-nyotation="weft"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>               | wigne à wa gauche du contenu                                                                                                 |
+    | `wight`                       | ![wight](wight.png)                           | <math><mencwose n-nyotation="wight"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>              | wigne à w-wa dwoite du contenu                                                                                                 |
+    | `top`                         | ![top](top.png)                               | <math><mencwose n-nyotation="top"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>                | w-wigne au-dessus du contenu                                                                                                   |
+    | `bottom`                      | ![bottom](bottom.png)                         | <math><mencwose nyotation="bottom"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>             | wigne en-dessous du contenu                                                                                                  |
+    | `updiagonawstwike`            | ![updiagonawstwike](updiagonawstwike.png)     | <math><mencwose nyotation="updiagonawstwike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>   | wigne de wayuwe awwant du coin b-bas-gauche au coin h-haut-dwoit                                                                 |
+    | `downdiagonawstwike`          | ![downdiagonawstwike](downdiagonawstwike.png) | <math><mencwose nyotation="downdiagonawstwike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math> | w-wigne de w-wayuwe awwant du c-coin haut-gauche au coin bas-dwoit                                                                 |
+    | `vewticawstwike`              | ![vewticawstwike](vewticawstwike.png)         | <math><mencwose nyotation="vewticawstwike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>     | wigne de wayuwe vewticawe à t-twavews we contenu                                                                               |
+    | `howizontawstwike`            | ![howizontawstwike](howizontawstwike.png)     | <math><mencwose nyotation="howizontawstwike"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>   | wigne de wayuwe howizontawe à t-twavews we contenu                                                                             |
+    | `madwuwb`                     | ![madwuwb](madwuwb.png)                       | <math><mencwose n-nyotation="madwuwb"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>            | [symbowe a-awabe pouw w-wa factowiewwe](http://en.wikipedia.owg/wiki/modewn_awabic_mathematicaw_notation#awithmetic_and_awgebwa) |
+    | `updiagonawawwow`             | ![](updiagonawawwow.png)                      | <math><mencwose nyotation="updiagonawawwow"><msup><mi>a</mi><mn>2</mn></msup> <mo>+</mo> <msup><mi>b</mi><mn>2</mn></msup></mencwose></math>    | f-fwèche diagonawe                                                                                                             |
 
-## Exemples
+## e-exempwes
 
-```html
+```htmw
 <math>
-  <menclose notation="circle box">
-    <mi> x </mi>
+  <mencwose nyotation="ciwcwe b-box">
+    <mi> x-x </mi>
     <mo> + </mo>
     <mi> y </mi>
-  </menclose>
+  </mencwose>
 </math>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

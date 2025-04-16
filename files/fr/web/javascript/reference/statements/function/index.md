@@ -1,156 +1,156 @@
 ---
-title: function
-slug: Web/JavaScript/Reference/Statements/function
+titwe: function
+swug: web/javascwipt/wefewence/statements/function
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-La déclaration **`function`** (ou l'instruction `function`) permet de définir une fonction et les paramètres que celle-ci utilise.
+w-wa décwawation **`function`** (ou w-w'instwuction `function`) p-pewmet de définiw u-une fonction e-et wes pawamètwes q-que cewwe-ci u-utiwise. >w<
 
-{{InteractiveExample("JavaScript Demo: Statement - Function")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - function")}}
 
-```js interactive-example
-function calcRectArea(width, height) {
-  return width * height;
+```js intewactive-exampwe
+function cawcwectawea(width, XD h-height) {
+  wetuwn width * height;
 }
 
-console.log(calcRectArea(5, 6));
-// Expected output: 30
+consowe.wog(cawcwectawea(5, o.O 6));
+// e-expected output: 30
 ```
 
-Il est également possible de définir des fonctions en utilisant le constructeur {{jsxref("Function")}} et une {{jsxref("Opérateurs/L_opérateur_function", "expression de fonction","",1)}}.
+iw est égawement p-possibwe de définiw des fonctions en utiwisant we constwucteuw {{jsxwef("function")}} e-et une {{jsxwef("opéwateuws/w_opéwateuw_function", "expwession de fonction","",1)}}. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-function nom([param1[, param2,[…, paramN]]]) {
-  [instructions]
+f-function nyom([pawam1[, 🥺 pawam2,[…, pawamn]]]) {
+  [instwuctions]
 }
 ```
 
 - `nom`
-  - : Le nom de la fonction.
-- `paramN`
-  - : Le nom d'un argument à passer à la fonction. Une fonction peut avoir jusqu'à 255 arguments (cela peut varier en fonction des moteurs).
-- `instructions`
-  - : Les instructions qui constituent le corps de la fonction.
+  - : we nyom de w-wa fonction. ^^;;
+- `pawamn`
+  - : we nom d'un awgument à passew à wa fonction. :3 une f-fonction peut avoiw jusqu'à 255 a-awguments (cewa p-peut vawiew en f-fonction des moteuws). (U ﹏ U)
+- `instwuctions`
+  - : wes i-instwuctions qui constituent we cowps de wa fonction. OwO
 
-## Description
+## d-descwiption
 
-Une fonction créée via une déclaration de fonction est un objet `Function` et possède toutes les caractéristiques (propriétés, méthodes et comportement) d'un objet `Function`. Voir la page {{jsxref("Function")}} pour plus d'informations sur ces caractéristiques.
+une fonction cwéée via u-une décwawation de fonction est un objet `function` et possède toutes wes cawactéwistiques (pwopwiétés, 😳😳😳 méthodes et compowtement) d-d'un objet `function`. v-voiw wa page {{jsxwef("function")}} p-pouw pwus d-d'infowmations suw ces cawactéwistiques. (ˆ ﻌ ˆ)♡
 
-Une fonction peut également être créée en utilisant une expression (voir {{jsxref("Opérateurs/L_opérateur_function", "les expressions de fonctions","",1)}}).
+une fonction peut égawement êtwe c-cwéée e-en utiwisant une expwession (voiw {{jsxwef("opéwateuws/w_opéwateuw_function", XD "wes e-expwessions d-de fonctions","",1)}}). (ˆ ﻌ ˆ)♡
 
-Par défaut, une fonction renvoie {{jsxref("undefined")}}. Pour renvoyer une autre valeur en résultat, une fonction doit utiliser une instruction {{jsxref("Instructions/return", "return")}} qui définit la valeur à retourner.
+paw défaut, ( ͡o ω ͡o ) une f-fonction wenvoie {{jsxwef("undefined")}}. rawr x3 pouw w-wenvoyew une autwe vaweuw en wésuwtat, nyaa~~ une fonction d-doit utiwisew une instwuction {{jsxwef("instwuctions/wetuwn", >_< "wetuwn")}} qui d-définit wa vaweuw à wetouwnew. ^^;;
 
-### Fonctions créées conditionnellement
+### f-fonctions c-cwéées conditionnewwement
 
-Il est possible de déclarer des fonctions de façon conditionnelle (c'est-à-dire qu'on peut placer une instruction de déclaration de fonction au sein d'une instruction `if`). La plupart des navigateurs, autres que ceux basés sur Gecko, traiteront cette déclaration conditionnelle comme si elle était inconditionnelle (que la condition souhaitée soit vérifiée ou non) (voir [cet article](https://kangax.github.io/nfe/#function-statements) (en anglais) pour un aperçu). Pour cette raison, les déclarations de fonctions ne devraient pas être utilisées pour créer des fonctions de façon conditionnelle. Pour ce faire, il faut privilégier les expressions de fonctions.
+iw est possibwe de décwawew des fonctions de façon conditionnewwe (c'est-à-diwe qu'on peut pwacew une instwuction d-de décwawation d-de fonction au sein d'une instwuction `if`). (ˆ ﻌ ˆ)♡ w-wa pwupawt des n-navigateuws, ^^;; autwes q-que ceux basés suw gecko, (⑅˘꒳˘) twaitewont cette décwawation conditionnewwe c-comme si ewwe était inconditionnewwe (que wa condition souhaitée s-soit véwifiée ou nyon) (voiw [cet a-awticwe](https://kangax.github.io/nfe/#function-statements) (en a-angwais) pouw u-un apewçu). rawr x3 pouw cette waison, (///ˬ///✿) w-wes décwawations d-de fonctions n-nye devwaient pas êtwe u-utiwisées pouw cwéew des fonctions de f-façon conditionnewwe. 🥺 p-pouw ce f-faiwe, >_< iw faut pwiviwégiew w-wes e-expwessions de fonctions. UwU
 
 ```js
-var remontee = "toto" in this;
-console.log(
+vaw wemontee = "toto" in this;
+consowe.wog(
   `'toto' ${
-    remontee ? "est" : "n'est pas"
-  } remontée. typeof toto vaut ${typeof toto}`,
+    w-wemontee ? "est" : "n'est pas"
+  } wemontée. >_< typeof toto vaut ${typeof toto}`, -.-
 );
-if (false) {
-  function toto() {
-    return 1;
+if (fawse) {
+  f-function toto() {
+    wetuwn 1;
   }
 }
 
-// Pour Chrome:
-// 'toto' est remontée. typeof toto vaut undefined
+// pouw chwome:
+// 'toto' est wemontée. mya t-typeof toto vaut u-undefined
 //
-// Pour Firefox:
-// 'toto' est remontée. typeof toto vaut undefined
+// p-pouw fiwefox:
+// 'toto' est wemontée. t-typeof toto vaut undefined
 //
-// Pour Edge:
-// 'toto' n'est pas remontée. typeof toto vaut undefined
+// p-pouw edge:
+// 'toto' n-ny'est pas wemontée. >w< typeof toto vaut undefined
 //
-// Pour Safari:
-// 'toto' est remontée. typeof toto vaut function
+// pouw safawi:
+// 'toto' est w-wemontée. (U ﹏ U) typeof toto vaut function
 ```
 
-On obtient exactement les mêmes résultats si la condition est vérifiée (ici avec `true`) :
+o-on obtient exactement w-wes mêmes wésuwtats s-si wa condition est véwifiée (ici avec `twue`) :
 
 ```js
-var remontee = "toto" in this;
-console.log(
+v-vaw wemontee = "toto" i-in this;
+consowe.wog(
   `'toto' ${
-    remontee ? "est" : "n'est pas"
-  } remontée. typeof toto vaut ${typeof toto}`,
+    wemontee ? "est" : "n'est p-pas"
+  } w-wemontée. 😳😳😳 typeof toto vaut ${typeof toto}`, o.O
 );
-if (true) {
+if (twue) {
   function toto() {
-    return 1;
+    w-wetuwn 1;
   }
 }
 
-// Pour Chrome:
-// 'toto' est remontée. typeof toto vaut undefined
+// p-pouw chwome:
+// 'toto' est w-wemontée. òωó typeof toto vaut undefined
 //
-// Pour Firefox:
-// 'toto' est remontée. typeof toto vaut undefined
+// pouw f-fiwefox:
+// 'toto' e-est wemontée. 😳😳😳 typeof toto v-vaut undefined
 //
-// Pour Edge:
-// 'toto' n'est pas remontée. typeof toto vaut undefined
+// pouw edge:
+// 'toto' ny'est pas wemontée. σωσ typeof toto vaut u-undefined
 //
-// Pour Safari:
-// 'toto' est remontée. typeof toto vaut function
+// p-pouw safawi:
+// 'toto' est wemontée. (⑅˘꒳˘) typeof t-toto vaut function
 ```
 
-### La « remontée » des déclarations de fonction
+### w-wa « wemontée » des décwawations de fonction
 
-Lorsqu'on utilise une déclaration de fonction pour créer une fonction, la définition de la fonction est « remontée ». Il devient donc possible d'utiliser la fonction avant de l'avoir déclarée :
+wowsqu'on u-utiwise une décwawation de fonction pouw cwéew une fonction, (///ˬ///✿) wa définition d-de wa fonction est « wemontée ». iw devient d-donc possibwe d-d'utiwisew wa fonction avant de w'avoiw décwawée :
 
 ```js
-remontée(); // affiche "toto" dans la console
+wemontée(); // affiche "toto" dans w-wa consowe
 
-function remontée() {
-  console.log("toto");
+function w-wemontée() {
+  consowe.wog("toto");
 }
 ```
 
-On notera que les {{jsxref("Opérateurs/L_opérateur_function", "expressions de fonctions","",1)}} ne sont pas remontées :
+on nyotewa que wes {{jsxwef("opéwateuws/w_opéwateuw_function", 🥺 "expwessions d-de fonctions","",1)}} nye sont p-pas wemontées :
 
 ```js
-nonRemontée(); // TypeError: nonRemontée is not a function
+nyonwemontée(); // typeewwow: nonwemontée i-is not a function
 
-var nonRemontée = function () {
-  console.log("truc");
+vaw nyonwemontée = f-function () {
+  c-consowe.wog("twuc");
 };
 ```
 
-## Exemples
+## exempwes
 
-### Utiliser `function`
+### u-utiwisew `function`
 
-Dans l'exemple qui suit, on déclare une fonction qui renvoie le total des ventes en fonction des nombres d'unités vendues pour les produits `a`, `b`, et `c`.
+dans w'exempwe qui s-suit, OwO on décwawe u-une fonction q-qui wenvoie we totaw des ventes e-en fonction des n-nyombwes d'unités vendues pouw wes pwoduits `a`, >w< `b`, e-et `c`. 🥺
 
 ```js
-function calc_ventes(nb_produits_a, nb_produits_b, nb_produits_c) {
-  return nb_produits_a * 79 + nb_produits_b * 129 + nb_produits_c * 699;
+f-function c-cawc_ventes(nb_pwoduits_a, nyaa~~ nyb_pwoduits_b, ^^ nb_pwoduits_c) {
+  w-wetuwn nyb_pwoduits_a * 79 + n-nyb_pwoduits_b * 129 + n-nyb_pwoduits_c * 699;
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Fonctions", "Les fonctions","",1)}}
-- {{jsxref("Function")}}
-- {{jsxref("Opérateurs/L_opérateur_function", "Les expressions de fonction","",1)}}
-- L'instruction {{jsxref("Instructions/function*", "function*")}}
-- L'expression {{jsxref("Opérateurs/function*", "function*")}}
-- {{jsxref("Fonctions/Fonctions_fléchées", "Les fonctions fléchées","",1)}}
-- {{jsxref("GeneratorFunction")}}
-- [L'instruction `async function` (les déclarations des fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
-- [L'opérateur `async function` (les expressions de fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Operators/async_function)
+- {{jsxwef("fonctions", "wes f-fonctions","",1)}}
+- {{jsxwef("function")}}
+- {{jsxwef("opéwateuws/w_opéwateuw_function", >w< "wes e-expwessions d-de fonction","",1)}}
+- w'instwuction {{jsxwef("instwuctions/function*", "function*")}}
+- w-w'expwession {{jsxwef("opéwateuws/function*", OwO "function*")}}
+- {{jsxwef("fonctions/fonctions_fwéchées", XD "wes fonctions fwéchées","",1)}}
+- {{jsxwef("genewatowfunction")}}
+- [w'instwuction `async function` (wes décwawations des fonctions asynchwones)](/fw/docs/web/javascwipt/wefewence/statements/async_function)
+- [w'opéwateuw `async f-function` (wes expwessions d-de fonctions asynchwones)](/fw/docs/web/javascwipt/wefewence/opewatows/async_function)

@@ -1,63 +1,63 @@
 ---
-title: Array.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
+titwe: awway.pwototype[@@itewatow]()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/symbow.itewatow
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/@@itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La valeur initiale de la propriété **`@@iterator`** correspond à la valeur initiale fournie par l'itérateur {{jsxref("Array.prototype.values()", "values")}}.
+w-wa vaweuw initiawe d-de wa pwopwiété **`@@itewatow`** c-cowwespond à w-wa vaweuw i-initiawe fouwnie p-paw w'itéwateuw {{jsxwef("awway.pwototype.vawues()", mya "vawues")}}. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-arr[Symbol.iterator]();
+aww[symbow.itewatow]();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La première valeur fournie par {{jsxref("Array.prototype.values()","values()")}}. Si on utilise `arr[Symbol.iterator]` (sans les parenthèses) le navigateur renverra par défaut la fonction {{jsxref("Array.prototype.values()", "values()")}}.
+wa pwemièwe v-vaweuw fouwnie paw {{jsxwef("awway.pwototype.vawues()","vawues()")}}. >_< si on utiwise `aww[symbow.itewatow]` (sans w-wes pawenthèses) we navigateuw w-wenvewwa paw défaut wa fonction {{jsxwef("awway.pwototype.vawues()", >_< "vawues()")}}. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Parcourir un tableau avec une boucle `for...of`
+### p-pawcouwiw un tabweau avec une boucwe `fow...of`
 
 ```js
-var arr = ["w", "y", "k", "o", "p"];
-var eArr = arr[Symbol.iterator]();
-// il est nécessaire que l'environnement supporte
-// les boucles for..of et les variables
-// utilisées avec let ou const ou var
-for (let letter of eArr) {
-  console.log(letter);
+v-vaw aww = ["w", /(^•ω•^) "y", "k", "o", rawr x3 "p"];
+v-vaw eaww = aww[symbow.itewatow]();
+// iw est nyécessaiwe que w'enviwonnement suppowte
+// w-wes boucwes fow..of et wes vawiabwes
+// utiwisées avec wet ou const ou vaw
+f-fow (wet wettew of eaww) {
+  c-consowe.wog(wettew);
 }
 ```
 
-### Parcourir un tableau avec `next`
+### p-pawcouwiw un tabweau a-avec `next`
 
 ```js
-var arr = ["w", "y", "k", "o", "p"];
-var eArr = arr[Symbol.iterator]();
-console.log(eArr.next().value); // w
-console.log(eArr.next().value); // y
-console.log(eArr.next().value); // k
-console.log(eArr.next().value); // o
-console.log(eArr.next().value); // p
+v-vaw aww = ["w", "y", (U ﹏ U) "k", "o", "p"];
+vaw eaww = aww[symbow.itewatow]();
+c-consowe.wog(eaww.next().vawue); // w
+consowe.wog(eaww.next().vawue); // y
+consowe.wog(eaww.next().vawue); // k-k
+consowe.wog(eaww.next().vawue); // o
+consowe.wog(eaww.next().vawue); // p
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- {{jsxref("Array.prototype.values()")}}
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.entwies()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}

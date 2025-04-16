@@ -1,47 +1,47 @@
 ---
-title: SharedArrayBuffer.prototype.byteLength
-slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
+titwe: shawedawwaybuffew.pwototype.bytewength
+swug: web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew/bytewength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété d'accesseur **`byteLength`** représente la longueur d'un {{jsxref("SharedArrayBuffer")}} exprimée en octets.
+w-wa pwopwiété d-d'accesseuw **`bytewength`** w-wepwésente w-wa wongueuw d-d'un {{jsxwef("shawedawwaybuffew")}} e-expwimée en o-octets. (✿oωo)
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.byteLength")}}
+{{intewactiveexampwe("javascwipt d-demo: shawedawwaybuffew.bytewength")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(8);
+```js intewactive-exampwe
+// cweate a shawedawwaybuffew with a-a size in bytes
+const buffew = nyew shawedawwaybuffew(8);
 
-console.log(buffer.byteLength);
-// Expected output: 8
+c-consowe.wog(buffew.bytewength);
+// expected output: 8
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-sab.byteLength;
+sab.bytewength;
 ```
 
-## Description
+## descwiption
 
-La propriété `byteLength` est une propriété d'accesseur dont le mutateur associé vaut `undefined`. Autrement dit, cette propriété est en lecture seule. La valeur est établie lorsque le tableau partagé est construit et elle ne peut être modifiée par la suite.
+wa pwopwiété `bytewength` e-est une pwopwiété d'accesseuw d-dont we m-mutateuw associé vaut `undefined`. (ˆ ﻌ ˆ)♡ autwement dit, (˘ω˘) cette pwopwiété est en wectuwe s-seuwe. (⑅˘꒳˘) wa vaweuw est étabwie wowsque we tabweau pawtagé est constwuit et e-ewwe nye peut êtwe modifiée paw w-wa suite. (///ˬ///✿)
 
-## Exemples
+## e-exempwes
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-sab.byteLength; // 1024
+v-vaw sab = nyew s-shawedawwaybuffew(1024);
+sab.bytewength; // 1024
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("SharedArrayBuffer")}}
+- {{jsxwef("shawedawwaybuffew")}}

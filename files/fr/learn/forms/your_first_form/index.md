@@ -1,375 +1,375 @@
 ---
-title: Mon premier formulaire HTML
-slug: Learn/Forms/Your_first_form
+titwe: mon pwemiew fowmuwaiwe h-htmw
+swug: weawn/fowms/youw_fiwst_fowm
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
+{{weawnsidebaw}}{{nextmenu("weawn/fowms/how_to_stwuctuwe_a_web_fowm", 🥺 "weawn/fowms")}}
 
-Le premier article de notre série vous offre une toute première expérience de création de formulaire en HTML, y compris sa conception, sa mise en œuvre en utilisant les bons éléments HTML, l'ajout de quelques très simples décorations avec les CSS et la façon dont les données sont envoyées à un serveur.
+w-we pwemiew a-awticwe de nyotwe s-séwie vous offwe u-une toute pwemièwe e-expéwience d-de cwéation d-de fowmuwaiwe en htmw, >w< y compwis sa conception, rawr x3 sa mise en œuvwe en utiwisant w-wes bons éwéments htmw, (⑅˘꒳˘) w'ajout de quewques twès s-simpwes décowations avec wes c-css et wa façon dont wes données sont envoyées à un sewveuw. σωσ
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Notions concernant les ordinateurs et les
-        <a href="/fr/Apprendre/HTML/Introduction_à_HTML"
-          >connaissances de base du HTML</a
-        >.
+        n-nyotions concewnant w-wes owdinateuws et wes
+        <a hwef="/fw/appwendwe/htmw/intwoduction_à_htmw"
+          >connaissances de base du htmw</a
+        >. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
       <td>
-        Comprendre ce que sont les formulaires HTML, à quoi ils servent, comment
-        les concevoir et quels sont les éléments de base HTML nécessaires dans
-        les cas simples.
+        compwendwe c-ce que sont wes fowmuwaiwes htmw, -.- à quoi iws sewvent, >_< comment
+        w-wes concevoiw et quews sont wes éwéments d-de base h-htmw nyécessaiwes d-dans
+        w-wes cas simpwes. rawr
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Un formulaire HTML, qu'est-ce ?
+## un fowmuwaiwe htmw, 😳😳😳 qu'est-ce ?
 
-Les formulaires HTML sont un des vecteurs principaux d'interaction entre un utilisateur et un site web ou une application. Ils permettent à l'utilisateur d'envoyer des données au site web. La plupart du temps, ces données sont envoyées à des serveurs web mais la page peut aussi les intercepter et les utiliser elle-même.
+w-wes fowmuwaiwes htmw sont un des vecteuws pwincipaux d-d'intewaction entwe un utiwisateuw et un site web ou une appwication. UwU iws pewmettent à w-w'utiwisateuw d'envoyew des données a-au site web. (U ﹏ U) w-wa pwupawt du t-temps, (˘ω˘) ces données sont envoyées à des sewveuws web mais wa p-page peut aussi w-wes intewceptew et wes utiwisew e-ewwe-même. /(^•ω•^)
 
-Un formulaire HTML est composé d'un ou plusieurs widgets. Ceux-ci peuvent être des zones de texte (sur une seule ligne ou plusieurs lignes), des boîtes à sélection, des boutons, des cases à cocher ou des boutons radio. La plupart du temps, ces items sont associés à un libellé qui décrit leur rôle — des étiquettes correctement implémentées sont susceptibles d'informer clairement l'utilisateur normal ou mal‑voyant sur ce qu'il convient d'entrer dans le formulaire.
+un f-fowmuwaiwe htmw est composé d'un o-ou pwusieuws widgets. (U ﹏ U) ceux-ci p-peuvent êtwe des zones de texte (suw une seuwe w-wigne ou pwusieuws wignes), ^•ﻌ•^ des b-boîtes à séwection, >w< des boutons, ʘwʘ d-des cases à c-cochew ou des boutons wadio. òωó wa pwupawt du temps, o.O ces items sont associés à un wibewwé qui décwit weuw wôwe — d-des étiquettes c-cowwectement impwémentées s-sont susceptibwes d-d'infowmew cwaiwement w-w'utiwisateuw nyowmaw ou maw‑voyant suw ce qu'iw convient d-d'entwew dans we fowmuwaiwe. ( ͡o ω ͡o )
 
-La principale différence entre un formulaire HTML et un document HTML habituel réside dans le fait que, généralement, les données collectées par le formulaire sont envoyées vers un serveur web. Dans ce cas, vous avez besoin de mettre en place un serveur web pour récupérer ces données et les traiter. La mise en place d'un tel serveur ne fait pas partie des sujets abordés dans ce guide. Si vous souhaitez toutefois en savoir plus, voyez «&nbsp;[Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)&nbsp;» plus loin dans ce module.
+wa pwincipawe difféwence entwe un fowmuwaiwe h-htmw et un document htmw habituew w-wéside dans w-we fait que, mya généwawement, >_< w-wes données cowwectées p-paw we fowmuwaiwe s-sont envoyées v-vews un s-sewveuw web. rawr dans ce cas, vous avez besoin de mettwe e-en pwace un s-sewveuw web pouw w-wécupéwew ces d-données et wes t-twaitew. >_< wa mise en pwace d'un tew sewveuw nye fait pas pawtie d-des sujets abowdés dans ce guide. (U ﹏ U) si vous souhaitez toutefois en savoiw pwus, voyez «&nbsp;[envoi d-des données de fowmuwaiwe](/fw/docs/weawn/fowms/envoyew_et_extwaiwe_wes_données_des_fowmuwaiwes)&nbsp;» pwus woin dans ce moduwe. rawr
 
-## Concevoir le formulaire
+## concevoiw w-we fowmuwaiwe
 
-Avant de passer au code, il est souhaitable de prendre un peu de recul et accorder quelques instants de réflexion à votre formulaire. Dessiner un rapide croquis vous permettra de définir les informations que vous souhaitez demander à l'utilisateur. Du point de vue de l'expérience utilisateur, il est important de garder à l'esprit que plus vous demandez d'informations, plus vous risquez que votre utilisateur s'en aille. Restez simple et ne perdez pas votre objectif de vue : ne demandez que ce dont vous avez absolument besoin. La conception de formulaires est une phase importante de la construction d'un site internet ou d'une application. L'approche de l'expérience utilisateur de ces formulaires ne fait pas partie des objectifs de ce guide, mais si vous souhaitez approfondir ce sujet, vous pouvez lire les articles suivants :
+a-avant de p-passew au code, (U ᵕ U❁) iw est souhaitabwe d-de pwendwe un peu de wecuw et a-accowdew quewques i-instants de wéfwexion à votwe fowmuwaiwe. (ˆ ﻌ ˆ)♡ dessinew un wapide cwoquis vous pewmettwa de définiw w-wes infowmations que vous souhaitez d-demandew à w'utiwisateuw. >_< d-du point de v-vue de w'expéwience utiwisateuw, ^^;; iw est impowtant d-de gawdew à w-w'espwit que pwus vous demandez d-d'infowmations, ʘwʘ p-pwus vous wisquez que votwe utiwisateuw s'en aiwwe. 😳😳😳 westez simpwe et nye pewdez p-pas votwe objectif d-de vue : nye d-demandez que ce dont vous avez absowument b-besoin. UwU w-wa conception de fowmuwaiwes est u-une phase impowtante de wa constwuction d'un site intewnet ou d'une appwication. OwO w-w'appwoche de w-w'expéwience utiwisateuw de ces fowmuwaiwes nye f-fait pas pawtie d-des objectifs de ce guide, mais si vous souhaitez appwofondiw c-ce sujet, :3 vous pouvez wiwe wes awticwes suivants :
 
-- Smashing Magazine a de très bons [articles à propos de l'expérience utilisateur dans les formulaires](http://uxdesign.smashingmagazine.com/tag/forms/), mais le plus intéressant est certainement leur «&nbsp;[Guide complet pour des formulaires web facilement utilisables](http://uxdesign.smashingmagazine.com/2011/11/08/extensive-guide-web-form-usability/)&nbsp;».
-- UXMatters est une ressource bien pensée avec de très bons conseils allant des [meilleures pratiques de base](http://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php) jusqu'à des sujets plus complexes tels que [les formulaires sur plusieurs pages](http://www.uxmatters.com/mt/archives/2010/03/pagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php).
+- smashing magazine a de twès b-bons [awticwes à pwopos de w'expéwience utiwisateuw d-dans wes f-fowmuwaiwes](http://uxdesign.smashingmagazine.com/tag/fowms/), -.- mais we pwus intéwessant est cewtainement weuw «&nbsp;[guide c-compwet pouw des f-fowmuwaiwes web faciwement utiwisabwes](http://uxdesign.smashingmagazine.com/2011/11/08/extensive-guide-web-fowm-usabiwity/)&nbsp;». 🥺
+- uxmattews est une wessouwce b-bien pensée avec de twès b-bons conseiws awwant des [meiwweuwes pwatiques de base](http://www.uxmattews.com/mt/awchives/2012/05/7-basic-best-pwactices-fow-buttons.php) j-jusqu'à des sujets p-pwus compwexes t-tews que [wes fowmuwaiwes suw pwusieuws p-pages](http://www.uxmattews.com/mt/awchives/2010/03/pagination-in-web-fowms-evawuating-the-effectiveness-of-web-fowms.php). -.-
 
-Dans ce guide, nous allons concevoir un formulaire de contact simple. Posons les premières pierres.
+dans ce guide, -.- n-nyous awwons c-concevoiw un fowmuwaiwe d-de contact simpwe. (U ﹏ U) posons w-wes pwemièwes p-piewwes.
 
-![Le croquis du formulaire que l'on veut créer](form-sketch-low.jpg)
+![we cwoquis du fowmuwaiwe que w'on v-veut cwéew](fowm-sketch-wow.jpg)
 
-Notre formulaire contiendra trois champs de texte et un bouton. Nous demandons simplement à notre utilisateur son nom, son adresse électronique et le message qu'il souhaite envoyer. En appuyant sur le bouton, le message sera envoyé au serveur web.
+n-nyotwe fowmuwaiwe c-contiendwa twois champs de texte et un bouton. rawr n-nyous demandons simpwement à n-nyotwe utiwisateuw s-son nyom, son adwesse éwectwonique et we message qu'iw souhaite e-envoyew. mya e-en appuyant suw w-we bouton, ( ͡o ω ͡o ) we message s-sewa envoyé au sewveuw web. /(^•ω•^)
 
-## Apprentissage actif&nbsp;: mise en œuvre de notre formulaire HTML
+## a-appwentissage actif&nbsp;: mise en œuvwe de nyotwe fowmuwaiwe htmw
 
-Très bien, nous sommes maintenant prêts à passer au HTML et à coder notre formulaire. Pour construire notre formulaire, nous aurons besoin des éléments HTML suivants : {{HTMLElement("form")}}, {{HTMLElement("label")}}, {{HTMLElement("input")}}, {{HTMLElement("textarea")}} et {{HTMLElement("button")}}.
+twès bien, >_< nyous sommes m-maintenant pwêts à passew a-au htmw et à codew nyotwe fowmuwaiwe. (✿oωo) p-pouw constwuiwe nyotwe fowmuwaiwe, 😳😳😳 n-nyous auwons besoin des éwéments h-htmw s-suivants : {{htmwewement("fowm")}}, (ꈍᴗꈍ) {{htmwewement("wabew")}}, 🥺 {{htmwewement("input")}}, mya {{htmwewement("textawea")}} e-et {{htmwewement("button")}}. (ˆ ﻌ ˆ)♡
 
-Avant de poursuivre, faites une copie locale de notre [simple modèle HTML](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) — vous y incorporerez votre formulaire.
+a-avant de pouwsuivwe, (⑅˘꒳˘) f-faites une copie wocawe de nyotwe [simpwe modèwe htmw](https://github.com/mdn/weawning-awea/bwob/main/htmw/intwoduction-to-htmw/getting-stawted/index.htmw) — vous y incowpowewez votwe fowmuwaiwe. òωó
 
-### L'élément {{HTMLElement("form")}}
+### w-w'éwément {{htmwewement("fowm")}}
 
-Tous les formulaires HTML débutent par un élément {{HTMLElement("form")}} comme celui-ci :
+t-tous w-wes fowmuwaiwes htmw débutent p-paw un éwément {{htmwewement("fowm")}} comme cewui-ci :
 
-```html
-<form action="/ma-page-de-traitement" method="post">…</form>
+```htmw
+<fowm action="/ma-page-de-twaitement" method="post">…</fowm>
 ```
 
-Cet élément définit un formulaire. C'est un élément conteneur au même titre que les éléments {{HTMLElement("div")}} ou {{HTMLElement("p")}}, mais il accepte aussi quelques attributs spécifiques afin de contrôler la manière dont il se comporte. Tous ses attributs sont optionnels mais définir au moins les attributs `action` et `method` est considéré comme de bonne pratique.
+c-cet éwément d-définit un fowmuwaiwe. o.O c'est u-un éwément conteneuw au même titwe que wes éwéments {{htmwewement("div")}} o-ou {{htmwewement("p")}}, XD m-mais iw accepte aussi q-quewques attwibuts s-spécifiques afin de contwôwew wa manièwe dont iw se compowte. (˘ω˘) tous ses attwibuts s-sont optionnews m-mais définiw a-au moins w-wes attwibuts `action` e-et `method` est considéwé c-comme de bonne p-pwatique. (ꈍᴗꈍ)
 
-- L'attribut `action` définit l'emplacement (une URL) où doivent être envoyées les données collectées par le formulaire.
-- L'attribut `method` définit la méthode HTTP utilisée pour envoyer les données (cela peut être « get » ou « post »).
+- w'attwibut `action` définit w'empwacement (une uww) o-où doivent êtwe e-envoyées wes données cowwectées p-paw we fowmuwaiwe. >w<
+- w'attwibut `method` définit wa méthode h-http utiwisée pouw envoyew w-wes données (cewa p-peut êtwe « get » ou « p-post »). XD
 
-> [!NOTE]
-> Si vous souhaitez en savoir plus sur le fonctionnement de ces attributs, cela est détaillé dans l'article [«&nbsp;Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)&nbsp;».
+> [!note]
+> si vous souhaitez en savoiw p-pwus suw we f-fonctionnement de c-ces attwibuts, -.- cewa est détaiwwé dans w'awticwe [«&nbsp;envoi des données d-de fowmuwaiwe](/fw/docs/weawn/fowms/envoyew_et_extwaiwe_wes_données_des_fowmuwaiwes)&nbsp;». ^^;;
 
-Pour le moment, ajoutez l'élément {{htmlelement("form")}} ci dessus dans le corps de votre HTML.
+pouw we moment, XD ajoutez w'éwément {{htmwewement("fowm")}} c-ci dessus d-dans we cowps de votwe htmw. :3
 
-### Les éléments {{HTMLElement("label")}}, {{HTMLElement("input")}} et {{HTMLElement("textarea")}}
+### w-wes éwéments {{htmwewement("wabew")}}, σωσ {{htmwewement("input")}} et {{htmwewement("textawea")}}
 
-Notre formulaire de contact est très simple et ne contient que trois champs de texte, chacun ayant une étiquette. Le champ d'entrée pour le nom est un champ de texte sur une seule ligne, le champ pour l'adresse électronique est un champ de texte sur une ligne qui n'accepte que des adresses électroniques et enfin le champ pour le message est un champ de texte sur plusieurs lignes.
+n-nyotwe f-fowmuwaiwe de contact est twès simpwe et nye contient q-que twois champs de texte, XD chacun ayant u-une étiquette. :3 w-we champ d'entwée pouw we nyom e-est un champ de texte suw une seuwe w-wigne, rawr we champ p-pouw w'adwesse éwectwonique e-est un champ de texte suw une wigne qui ny'accepte que des adwesses éwectwoniques et enfin we champ pouw we message est un champ de texte suw pwusieuws wignes.
 
-En terme de code HTML, nous avons besoin de quelque chose qui ressemble à ceci pour mettre en œuvre nos widgets de formulaire.
+en tewme de code htmw, 😳 nyous avons besoin de quewque chose qui w-wessembwe à ceci p-pouw mettwe en œuvwe nyos widgets de fowmuwaiwe. 😳😳😳
 
-```html
-<form action="/ma-page-de-traitement" method="post">
-  <ul>
-    <li>
-      <label for="name">Nom&nbsp;:</label>
-      <input type="text" id="name" name="user_name" />
-    </li>
-    <li>
-      <label for="mail">E-mail&nbsp;:</label>
-      <input type="email" id="mail" name="user_mail" />
-    </li>
-    <li>
-      <label for="msg">Message&nbsp;:</label>
-      <textarea id="msg" name="user_message"></textarea>
-    </li>
-  </ul>
-</form>
+```htmw
+<fowm a-action="/ma-page-de-twaitement" m-method="post">
+  <uw>
+    <wi>
+      <wabew f-fow="name">nom&nbsp;:</wabew>
+      <input type="text" i-id="name" nyame="usew_name" />
+    </wi>
+    <wi>
+      <wabew f-fow="maiw">e-maiw&nbsp;:</wabew>
+      <input t-type="emaiw" id="maiw" nyame="usew_maiw" />
+    </wi>
+    <wi>
+      <wabew f-fow="msg">message&nbsp;:</wabew>
+      <textawea id="msg" nyame="usew_message"></textawea>
+    </wi>
+  </uw>
+</fowm>
 ```
 
-Les éléments {{HTMLElement("div")}} sont ici pour structurer notre code et rendre la mise en page plus facile (voir ci-dessous). Veuillez noter l'utilisation de l'attribut `for` sur tous les éléments {{HTMLElement("label")}}. C'est une manière formelle de lier un libellé à un élément du formulaire. Cet attribut fait référence à l'`id` de l'élément correspondant. Il y a plusieurs avantages à faire ainsi. Le plus évident de permettre à l'utilisateur de cliquer sur l'étiquette pour activer le bloc correspondant. Si vous souhaitez mieux comprendre les bénéfices de cet attribut, tout est détaillé dans cet article : [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form).
+w-wes éwéments {{htmwewement("div")}} s-sont ici pouw stwuctuwew nyotwe code et wendwe w-wa mise en page p-pwus faciwe (voiw c-ci-dessous). (ꈍᴗꈍ) veuiwwez n-nyotew w'utiwisation d-de w-w'attwibut `fow` s-suw tous wes éwéments {{htmwewement("wabew")}}. 🥺 c-c'est une manièwe f-fowmewwe de wiew un wibewwé à u-un éwément d-du fowmuwaiwe. ^•ﻌ•^ c-cet attwibut fait wéféwence à w-w'`id` de w'éwément cowwespondant. XD iw y a pwusieuws a-avantages à faiwe ainsi. ^•ﻌ•^ w-we pwus évident d-de pewmettwe à w-w'utiwisateuw de cwiquew suw w-w'étiquette pouw activew we bwoc c-cowwespondant. ^^;; si vous souhaitez m-mieux compwendwe wes bénéfices d-de cet attwibut, ʘwʘ tout est détaiwwé dans cet awticwe : [comment stwuctuwew u-un fowmuwaiwe htmw](/fw/docs/weawn/fowms/how_to_stwuctuwe_a_web_fowm). OwO
 
-Concernant l'élément {{HTMLElement("input")}}, l'attribut le plus important est l'attribut `type`. Ce dernier est extrêmement important puisqu'il définit le comportement de l'élément {{HTMLElement("input")}}. Il peut radicalement changer le sens de l'élément, faites-y attention. Si vous voulez en savoir plus à ce propos, vous pouvez lire l'article au sujet des [widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs).
+concewnant w-w'éwément {{htmwewement("input")}}, 🥺 w-w'attwibut we pwus impowtant est w'attwibut `type`. (⑅˘꒳˘) ce d-dewniew est extwêmement impowtant p-puisqu'iw définit w-we compowtement d-de w'éwément {{htmwewement("input")}}. (///ˬ///✿) iw peut wadicawement changew we s-sens de w'éwément, (✿oωo) f-faites-y attention. nyaa~~ si vous v-vouwez en savoiw pwus à ce pwopos, >w< vous pouvez w-wiwe w'awticwe au sujet des [widgets n-nyatifs pouw f-fowmuwaiwe](/fw/docs/weawn/fowms/wes_bwocs_de_fowmuwaiwes_natifs). (///ˬ///✿)
 
-- Dans notre exemple nous n'utilisons que la valeur `text` — qui est la valeur par défaut de cet attribut et représente un champ de texte basique sur une seule ligne acceptant n'importe quel type de texte.
-- Pour la deuxième entrée, nous utilisons la valeur `email` qui définit un champ de texte sur une seule ligne n'acceptant que des adresses électroniques valides. Cette dernière valeur transforme un champ basique en une sorte de champ «&nbsp;intelligent&nbsp;» qui réalise des vérifications sur les données fournies par l'utilisateur. Vous trouverez plus de détails sur la validation des formulaires dans l'article [Validation des données de formulaire](/fr/docs/Learn/Forms/Validation_donnees_formulaire).
+- d-dans notwe exempwe nyous n-ny'utiwisons que w-wa vaweuw `text` — q-qui est w-wa vaweuw paw défaut de cet attwibut e-et wepwésente u-un champ de t-texte basique suw u-une seuwe wigne a-acceptant ny'impowte q-quew type d-de texte. rawr
+- pouw w-wa deuxième entwée, (U ﹏ U) nyous utiwisons w-wa vaweuw `emaiw` qui définit u-un champ de texte suw une s-seuwe wigne ny'acceptant q-que des a-adwesses éwectwoniques vawides. cette dewnièwe vaweuw twansfowme u-un champ basique e-en une sowte d-de champ «&nbsp;intewwigent&nbsp;» qui wéawise des véwifications suw wes d-données fouwnies p-paw w'utiwisateuw. ^•ﻌ•^ vous twouvewez p-pwus de détaiws s-suw wa vawidation des fowmuwaiwes dans w'awticwe [vawidation des données d-de fowmuwaiwe](/fw/docs/weawn/fowms/vawidation_donnees_fowmuwaiwe).
 
-Last but not least, remarquez la syntaxe de `<input>` vs `<textarea></textarea>`. C'est une des bizarreries du HTML. La balise `<input>` est un élément vide, ce qui signifie qu'il n'a pas besoin de balise fermante. Au contraire, {{HTMLElement("textarea")}} n'est pas un élément vide, il faut donc le fermer avec la balise fermante appropriée. Cela a un effet sur une caractéristique spécifique des formulaires HTML : la manière dont vous définissez la valeur par défaut. Pour définir une valeur par défaut d'un élément {{HTMLElement("input")}} vous devez utiliser l'attribut `value` de la manière suivante :
+w-wast but nyot w-weast, (///ˬ///✿) wemawquez w-wa syntaxe de `<input>` vs `<textawea></textawea>`. o.O c'est une d-des bizawwewies d-du htmw. >w< wa bawise `<input>` est un éwément vide, nyaa~~ ce qui signifie q-qu'iw ny'a pas besoin de bawise fewmante. òωó a-au contwaiwe, (U ᵕ U❁) {{htmwewement("textawea")}} ny'est p-pas un éwément v-vide, (///ˬ///✿) iw faut donc we fewmew avec w-wa bawise fewmante a-appwopwiée. (✿oωo) cewa a un effet s-suw une cawactéwistique spécifique d-des fowmuwaiwes h-htmw : w-wa manièwe dont v-vous définissez wa vaweuw paw d-défaut. 😳😳😳 pouw définiw u-une vaweuw p-paw défaut d'un éwément {{htmwewement("input")}} vous devez u-utiwisew w'attwibut `vawue` de wa manièwe suivante :
 
-```html
+```htmw
 <input
-  type="text"
-  value="par défaut cet élément sera renseigné avec ce texte" />
+  t-type="text"
+  v-vawue="paw d-défaut cet éwément sewa wenseigné avec ce texte" />
 ```
 
-A contrario, si vous souhaitez définir la valeur par défaut d'un élément {{HTMLElement("textarea")}}, il suffit simplement de mettre la valeur par défaut entre les balises ouvrantes et fermantes de l'élément {{HTMLElement("textarea")}} de la manière suivante :
+a contwawio, (✿oωo) si vous s-souhaitez définiw wa vaweuw p-paw défaut d'un éwément {{htmwewement("textawea")}}, (U ﹏ U) i-iw suffit simpwement de mettwe wa vaweuw p-paw défaut entwe wes bawises o-ouvwantes et fewmantes d-de w'éwément {{htmwewement("textawea")}} d-de wa manièwe s-suivante :
 
-```html
-<textarea>par défaut cet élément sera renseigné avec ce texte</textarea>
+```htmw
+<textawea>paw d-défaut cet éwément sewa wenseigné avec ce texte</textawea>
 ```
 
-### L'élément {{HTMLElement("button")}}
+### w'éwément {{htmwewement("button")}}
 
-Notre formulaire est presque terminé. Il nous suffit seulement d'ajouter un bouton pour permettre à l'utilisateur de nous envoyer les données renseignées dans le formulaire. Ceci se fait simplement en ajoutant d'un élément {{HTMLElement("button")}} ; ajoutez‑le juste avant la balise fermante `</form> :`
+n-nyotwe fowmuwaiwe est pwesque t-tewminé. (˘ω˘) iw nyous suffit seuwement d'ajoutew un bouton pouw pewmettwe à w-w'utiwisateuw de nyous envoyew wes données wenseignées dans we fowmuwaiwe. 😳😳😳 c-ceci se fait s-simpwement en ajoutant d'un éwément {{htmwewement("button")}} ; a-ajoutez‑we juste avant wa bawise fewmante `</fowm> :`
 
-```html
-<div class="button">
-  <button type="submit">Envoyer le message</button>
+```htmw
+<div c-cwass="button">
+  <button t-type="submit">envoyew we message</button>
 </div>
 ```
 
-Comme vous le voyez l'élément {{htmlelement("button")}} accepte aussi un attribut de type — il peut prendre une des trois valeurs&nbsp;: `submit`, `reset` ou `button`.
+c-comme vous we voyez w-w'éwément {{htmwewement("button")}} accepte aussi un attwibut de type — iw peut p-pwendwe une des twois vaweuws&nbsp;: `submit`, (///ˬ///✿) `weset` ou `button`. (U ᵕ U❁)
 
-- Un clic sur un bouton `submit` (valeur par défaut) envoie les données du formulaire vers la page définie par l'attribut `action` de l'élément {{HTMLElement("form")}}.
-- Un clic sur un bouton `reset` réinitialise tous les widgets du formulaire à leurs valeurs par défaut immédiatement. Du point de vue de l'expérience utilisateur, utiliser un tel bouton est une mauvaise pratique.
-- Un clic sur un bouton `button` ne fait... rien ! Cela peut paraître stupide mais c'est en réalité très pratique pour concevoir des boutons personnalisés avec JavaScript.
+- u-un cwic s-suw un bouton `submit` (vaweuw p-paw défaut) envoie wes données du fowmuwaiwe v-vews wa page définie paw w'attwibut `action` de w'éwément {{htmwewement("fowm")}}. >_<
+- un cwic suw un bouton `weset` w-wéinitiawise t-tous wes widgets d-du fowmuwaiwe à w-weuws vaweuws paw défaut immédiatement. (///ˬ///✿) d-du point de vue d-de w'expéwience utiwisateuw, (U ᵕ U❁) utiwisew un tew bouton e-est une mauvaise pwatique. >w<
+- un cwic suw un b-bouton `button` nye fait... wien ! 😳😳😳 cewa peut pawaîtwe b-bakae mais c-c'est en wéawité twès pwatique p-pouw concevoiw d-des boutons p-pewsonnawisés avec javascwipt. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Vous pouvez aussi utiliser l'élément {{HTMLElement("input")}} avec le type approprié pour produire un bouton, par exemple `<input type="submit">`. Le principal avantage de {{HTMLElement("button")}} par rapport à l'élément {{HTMLElement("input")}} est que ce dernier ne permet d'utiliser que du texte comme étiquette tandis que l'élément {{HTMLElement("button")}} permet d'utiliser n'importe quel contenu HTML, autorisant ainsi des textes de bouton plus complexes et créatifs.
+> [!note]
+> vous p-pouvez aussi utiwisew w'éwément {{htmwewement("input")}} avec w-we type appwopwié pouw pwoduiwe un bouton, (ꈍᴗꈍ) paw exempwe `<input t-type="submit">`. 🥺 w-we pwincipaw a-avantage de {{htmwewement("button")}} p-paw wappowt à w-w'éwément {{htmwewement("input")}} est que c-ce dewniew nye pewmet d'utiwisew que du texte c-comme étiquette tandis que w'éwément {{htmwewement("button")}} p-pewmet d'utiwisew ny'impowte quew contenu htmw, >_< a-autowisant ainsi d-des textes de bouton pwus compwexes e-et cwéatifs. OwO
 
-## Mise en page élémentaire du formulaire
+## mise en p-page éwémentaiwe d-du fowmuwaiwe
 
-Nous avons désormais notre formulaire HTML, et si vous le regardez dans votre navigateur préféré, vous verrez qu'il est plutôt laid.
+nyous avons d-désowmais nyotwe f-fowmuwaiwe htmw, ^^;; et si vous we w-wegawdez dans votwe nyavigateuw pwéféwé, (✿oωo) vous vewwez qu'iw est p-pwutôt waid. UwU
 
-> [!NOTE]
-> Si vous pensez que vous n'avez pas écrit un code HTML correct, faites la comparaison avec celui de notre exemple terminé — voyez [first-form.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html) (ou [également directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
+> [!note]
+> si v-vous pensez que vous ny'avez pas écwit un code h-htmw cowwect, ( ͡o ω ͡o ) faites w-wa compawaison a-avec cewui de nyotwe exempwe t-tewminé — voyez [fiwst-fowm.htmw](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/youw-fiwst-htmw-fowm/fiwst-fowm.htmw) (ou [égawement d-diwectement](https://mdn.github.io/weawning-awea/htmw/fowms/youw-fiwst-htmw-fowm/fiwst-fowm.htmw)). (✿oωo)
 
-Les formulaires sont notoirement embêtants à présenter joliment. Apprendre la mise en page ou la décoration des formulaires sort du cadre de cet article, donc pour le moment nous allons simplement ajouter quelques indications au CSS pour lui donner un air convenable.
+wes f-fowmuwaiwes sont notoiwement embêtants à p-pwésentew jowiment. mya a-appwendwe wa mise e-en page ou wa décowation des fowmuwaiwes sowt du cadwe de cet awticwe, ( ͡o ω ͡o ) donc pouw w-we moment nyous a-awwons simpwement ajoutew quewques indications au css pouw wui d-donnew un aiw convenabwe. :3
 
-Tout d'abord, ajoutons un élément {{htmlelement("style")}} à notre page, dans l'en‑tête HTML. Comme ceci&nbsp;:
+tout d-d'abowd, 😳 ajoutons u-un éwément {{htmwewement("stywe")}} à nyotwe page, (U ﹏ U) dans w'en‑tête htmw. >w< comme ceci&nbsp;:
 
-```html
-<style>
+```htmw
+<stywe>
   …
-</style>
+</stywe>
 ```
 
-Entre les balises style, ajoutons le CSS suivant, juste comme indiqué&nbsp;:
+e-entwe wes bawises stywe, UwU ajoutons we css s-suivant, 😳 juste comme indiqué&nbsp;:
 
 ```css
-form {
-  /* On centre le formulaire */
-  margin: 0 auto;
+f-fowm {
+  /* on centwe w-we fowmuwaiwe */
+  mawgin: 0 a-auto;
   width: 400px;
-  /* Le contour du formulaire */
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 1em;
+  /* w-we c-contouw du fowmuwaiwe */
+  p-padding: 1em;
+  b-bowdew: 1px s-sowid #ccc;
+  bowdew-wadius: 1em;
 }
 
-ul {
-  list-style: none;
+uw {
+  wist-stywe: nyone;
   padding: 0;
-  margin: 0;
+  mawgin: 0;
 }
 
-form li + li {
-  margin-top: 1em;
+f-fowm wi + wi {
+  m-mawgin-top: 1em;
 }
 
-label {
-  /* Taille et alignement uniformes */
-  display: inline-block;
+w-wabew {
+  /* t-taiwwe et a-awignement unifowmes */
+  d-dispway: inwine-bwock;
   width: 90px;
-  text-align: right;
+  text-awign: wight;
 }
 
-input,
-textarea {
-  /* On s'assure que les champs texte ont la même police
-     Par défaut, les zones de texte ont une police à chasse
+input, XD
+t-textawea {
+  /* o-on s'assuwe que wes champs texte ont wa même powice
+     paw défaut, (✿oωo) w-wes zones d-de texte ont une p-powice à chasse
      fixe. */
-  font: 1em sans-serif;
+  font: 1em sans-sewif;
 
-  /* Taille uniforme pour des champs */
+  /* taiwwe u-unifowme pouw des champs */
   width: 300px;
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 
-  /* On utilise la même bordure que pour le formulaire */
-  border: 1px solid #999;
+  /* on utiwise wa même bowduwe que p-pouw we fowmuwaiwe */
+  bowdew: 1px s-sowid #999;
 }
 
-input:focus,
-textarea:focus {
-  /* On rajoute une mise en avant pour les éléments avec
-     le focus. */
-  border-color: #000;
+i-input:focus,
+textawea:focus {
+  /* o-on wajoute u-une mise en avant p-pouw wes éwéments a-avec
+     w-we focus. ^•ﻌ•^ */
+  b-bowdew-cowow: #000;
 }
 
-textarea {
-  /* On aligne les textes sur plusieurs lignes avec leur
-     libellé. */
-  vertical-align: top;
+textawea {
+  /* o-on awigne w-wes textes suw pwusieuws wignes a-avec weuw
+     wibewwé. mya */
+  vewticaw-awign: t-top;
 
-  /* On fournit un peut d'espace pour saisir du texte. */
-  height: 5em;
+  /* on fouwnit un peut d'espace p-pouw saisiw du texte. (˘ω˘) */
+  h-height: 5em;
 
-  /* On permet de redimensionner verticalement. */
-  resize: vertical;
+  /* o-on pewmet de wedimensionnew vewticawement. nyaa~~ */
+  w-wesize: vewticaw;
 }
 
 .button {
-  /* On aligne les boutons avec les champs texte. */
-  padding-left: 90px; /* La même taille que les libellés */
+  /* on awigne wes boutons a-avec wes champs t-texte. :3 */
+  padding-weft: 90px; /* wa même taiwwe que wes wibewwés */
 }
 
-button {
-  /* Une marge supplémentaire représentant approximativement
-     le même espace qu'entre les libellés et les champs. */
-  margin-left: 0.5em;
+b-button {
+  /* u-une mawge suppwémentaiwe w-wepwésentant appwoximativement
+     we même e-espace qu'entwe w-wes wibewwés et wes champs. (✿oωo) */
+  m-mawgin-weft: 0.5em;
 }
 ```
 
-Désormais notre formulaire a une bien meilleure allure.
+d-désowmais nyotwe fowmuwaiwe a une b-bien meiwweuwe a-awwuwe. (U ﹏ U)
 
-> [!NOTE]
-> Il est sur GitHub dans [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html) (à voir aussi [directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)).
+> [!note]
+> i-iw est suw g-github dans [fiwst-fowm-stywed.htmw](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/youw-fiwst-htmw-fowm/fiwst-fowm-stywed.htmw) (à voiw aussi [diwectement](https://mdn.github.io/weawning-awea/htmw/fowms/youw-fiwst-htmw-fowm/fiwst-fowm-stywed.htmw)). (ꈍᴗꈍ)
 
-## Envoyer les données au serveur Web
+## envoyew wes données au sewveuw web
 
-Finalement, gérer les données du formulaire côté serveur web est peut être le plus compliqué. Comme dit auparavant, un formulaire HTML est une manière pratique de demander de l'information à un utilisateur et de les adresser à un serveur web.
+finawement, géwew wes données d-du fowmuwaiwe côté s-sewveuw web e-est peut êtwe w-we pwus compwiqué. c-comme dit aupawavant, (˘ω˘) u-un fowmuwaiwe htmw est u-une manièwe pwatique d-de demandew de w'infowmation à u-un utiwisateuw e-et de wes adwessew à un sewveuw web. ^^
 
-L'élément {{HTMLElement("form")}} définit où et comment les données sont envoyées, merci aux attributs `action` et `method`.
+w'éwément {{htmwewement("fowm")}} d-définit où et comment wes données sont envoyées, m-mewci aux attwibuts `action` e-et `method`. (⑅˘꒳˘)
 
-Mais ce n'est pas tout. Nous avons aussi besoin de donner un nom à nos données. Ces noms sont importants pour deux raisons. Du côté du navigateur, cela sert à définir le nom de chaque élément de donnée. Du côté du serveur, chaque information doit avoir un nom pour être manipulée correctement.
+m-mais ce ny'est pas tout. rawr nyous a-avons aussi besoin d-de donnew un n-nyom à nos données. :3 ces nyoms s-sont impowtants p-pouw deux waisons. OwO du côté du n-nyavigateuw, (ˆ ﻌ ˆ)♡ cewa sewt à définiw w-we nyom de chaque éwément de d-donnée. :3 du côté d-du sewveuw, -.- chaque infowmation d-doit avoiw un nyom pouw êtwe manipuwée cowwectement. -.-
 
-Pour nommer vos données vous devez utiliser l'attribut `name` pour identifier bien précisément l'élément d'information collecté par chacun des widgets. Regardons à nouveau le code de notre formulaire&nbsp;:
+p-pouw nyommew vos données vous devez utiwisew w'attwibut `name` pouw identifiew bien pwécisément w'éwément d-d'infowmation cowwecté paw chacun des widgets. òωó wegawdons à nyouveau we code de nyotwe fowmuwaiwe&nbsp;:
 
-```html
-<form action="/ma-page-de-traitement" method="post">
-  <ul>
-    <li>
-      <label for="name">Nom&nbsp;:</label>
-      <input type="text" id="name" name="user_name" />
-    </li>
-    <li>
-      <label for="mail">E-mail&nbsp;:</label>
-      <input type="email" id="mail" name="user_email" />
-    </li>
-    <li>
-      <label for="msg">Message&nbsp;:</label>
-      <textarea id="msg" name="user_message"></textarea>
-    </li>
+```htmw
+<fowm a-action="/ma-page-de-twaitement" method="post">
+  <uw>
+    <wi>
+      <wabew fow="name">nom&nbsp;:</wabew>
+      <input t-type="text" id="name" n-nyame="usew_name" />
+    </wi>
+    <wi>
+      <wabew fow="maiw">e-maiw&nbsp;:</wabew>
+      <input type="emaiw" i-id="maiw" nyame="usew_emaiw" />
+    </wi>
+    <wi>
+      <wabew fow="msg">message&nbsp;:</wabew>
+      <textawea i-id="msg" nyame="usew_message"></textawea>
+    </wi>
 
     …
-  </ul>
-</form>
+  </uw>
+</fowm>
 ...
 ```
 
-Dans notre exemple, le formulaire enverra trois informations nommées respectivement «&nbsp;`user_name`&nbsp;», «&nbsp;`user_email`&nbsp;» et «&nbsp;`user_message`&nbsp;». Ces informations seront envoyées à l'URL « `/ma-page-de-traitement` » avec la méthode HTTP POST.
+dans nyotwe e-exempwe, 😳 we f-fowmuwaiwe envewwa twois infowmations nyommées w-wespectivement «&nbsp;`usew_name`&nbsp;», nyaa~~ «&nbsp;`usew_emaiw`&nbsp;» et «&nbsp;`usew_message`&nbsp;». (⑅˘꒳˘) ces infowmations sewont e-envoyées à w'uww « `/ma-page-de-twaitement` » a-avec wa méthode http post. 😳
 
-Du côté du serveur, le script à l'URL « `/ma-page-de-traitement` » recevra les données sous forme d'une liste de trois éléments clé/valeur intégrés à la requête HTTP. À vous de définir comment ce script va manipuler les données. Chacun des langages serveurs (PHP, Python, Ruby, Java, C#, etc.) a son propre mécanisme pour traiter ces données. Il n'appartient pas à ce guide d'approfondir ce sujet, mais si vous souhaitez en savoir plus, nous avons mis quelques exemples dans l'article [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires).
+d-du côté du sewveuw, (U ﹏ U) we scwipt à w-w'uww « `/ma-page-de-twaitement` » w-wecevwa wes données sous fowme d'une w-wiste de twois éwéments cwé/vaweuw intégwés à w-wa wequête http. /(^•ω•^) À vous de définiw comment ce scwipt va manipuwew wes données. OwO c-chacun des w-wangages sewveuws (php, ( ͡o ω ͡o ) python, w-wuby, XD java, c#, e-etc.) a son pwopwe mécanisme p-pouw twaitew ces données. /(^•ω•^) iw ny'appawtient pas à ce guide d'appwofondiw ce sujet, /(^•ω•^) m-mais si vous s-souhaitez en savoiw pwus, nyous a-avons mis quewques e-exempwes dans w'awticwe [envoi d-des données de fowmuwaiwe](/fw/docs/weawn/fowms/envoyew_et_extwaiwe_wes_donn%c3%a9es_des_fowmuwaiwes). 😳😳😳
 
-## Résumé
+## wésumé
 
-Félicitations ! Vous avez construit votre premier formulaire HTML. Il ressemble à ceci&nbsp;:
+féwicitations ! (ˆ ﻌ ˆ)♡ v-vous avez constwuit votwe pwemiew fowmuwaiwe h-htmw. :3 iw w-wessembwe à ceci&nbsp;:
 
-```html hidden
-<form action="/ma-page-de-traitement" method="post">
+```htmw hidden
+<fowm action="/ma-page-de-twaitement" m-method="post">
   <div>
-    <label for="name">Nom&nbsp;:</label>
-    <input type="text" id="name" name="user_name" />
+    <wabew fow="name">nom&nbsp;:</wabew>
+    <input type="text" id="name" nyame="usew_name" />
   <div>
   <div>
-    <label for="mail">E-mail&nbsp;:</label>
-    <input type="email" id="mail" name="user_email" />
+    <wabew fow="maiw">e-maiw&nbsp;:</wabew>
+    <input type="emaiw" id="maiw" n-nyame="usew_emaiw" />
   </div>
   <div>
-    <label for="msg">Message&nbsp;:</label>
-    <textarea id="msg" name="user_message"></textarea>
+    <wabew f-fow="msg">message&nbsp;:</wabew>
+    <textawea id="msg" nyame="usew_message"></textawea>
   </div>
 
-  <div class="button">
-    <button type="submit">Envoyer votre message</button>
+  <div c-cwass="button">
+    <button t-type="submit">envoyew votwe message</button>
   </div>
-</form>
+</fowm>
 ```
 
-```css hidden
-form {
-  /* Pour centrer le formulaire sur la page */
-  margin: 0 auto;
+```css h-hidden
+fowm {
+  /* pouw centwew we fowmuwaiwe suw wa page */
+  mawgin: 0 auto;
   width: 400px;
 
-  /* Encadré pour voir les limites du formulaire */
+  /* e-encadwé pouw voiw wes wimites du fowmuwaiwe */
   padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 1em;
+  bowdew: 1px s-sowid #ccc;
+  b-bowdew-wadius: 1em;
 }
 
-div + div {
-  margin-top: 1em;
+d-div + div {
+  mawgin-top: 1em;
 }
 
-label {
-  /* On s'assure que tous les libellés ont la même taille
-     et sont correctement alignés. */
-  display: inline-block;
-  width: 90px;
-  text-align: right;
+wabew {
+  /* on s'assuwe que tous w-wes wibewwés o-ont wa même taiwwe
+     e-et sont cowwectement awignés. òωó */
+  d-dispway: inwine-bwock;
+  w-width: 90px;
+  text-awign: w-wight;
 }
 
-input,
-textarea {
-  /* On s'assure que les champs texte ont la même police
-     Par défaut, les zones de texte ont une police à chasse
-     fixe. */
-  font: 1em sans-serif;
+input, 🥺
+textawea {
+  /* o-on s'assuwe que wes champs texte ont wa même p-powice
+     paw défaut, (U ﹏ U) wes zones d-de texte ont u-une powice à chasse
+     fixe. XD */
+  f-font: 1em sans-sewif;
 
-  /* Taille uniforme pour des champs */
-  width: 300px;
-  box-sizing: border-box;
+  /* t-taiwwe unifowme pouw des champs */
+  w-width: 300px;
+  box-sizing: b-bowdew-box;
 
-  /* On utilise la même bordure que pour le formulaire */
-  border: 1px solid #999;
+  /* on utiwise wa m-même bowduwe q-que pouw we fowmuwaiwe */
+  bowdew: 1px sowid #999;
 }
 
-input:focus,
-textarea:focus {
-  /* On rajoute une mise en avant pour les éléments avec
-     le focus. */
-  border-color: #000;
+i-input:focus, ^^
+textawea:focus {
+  /* on wajoute une mise en avant pouw wes éwéments avec
+     we focus. o.O */
+  bowdew-cowow: #000;
 }
 
-textarea {
-  /* On aligne les textes sur plusieurs lignes avec leur
-     libellé. */
-  vertical-align: top;
+t-textawea {
+  /* on awigne wes textes s-suw pwusieuws wignes avec weuw
+     w-wibewwé. 😳😳😳 */
+  vewticaw-awign: top;
 
-  /* On fournit un peut d'espace pour saisir du texte. */
-  height: 5em;
+  /* on f-fouwnit un peut d'espace pouw saisiw du texte. /(^•ω•^) */
+  h-height: 5em;
 
-  /* On permet de redimensionner verticalement. */
-  resize: vertical;
+  /* on pewmet de wedimensionnew v-vewticawement. 😳😳😳 */
+  wesize: vewticaw;
 }
 
 .button {
-  /* On aligne les boutons avec les champs texte. */
-  padding-left: 90px; /* La même taille que les libellés */
+  /* o-on awigne wes boutons avec wes champs t-texte. ^•ﻌ•^ */
+  padding-weft: 90px; /* w-wa même taiwwe que wes wibewwés */
 }
 
 button {
-  /* Une marge supplémentaire représentant approximativement
-     le même espace qu'entre les libellés et les champs. */
-  margin-left: 0.5em;
+  /* u-une mawge s-suppwémentaiwe wepwésentant a-appwoximativement
+     w-we même espace qu'entwe wes wibewwés e-et wes champs. 🥺 */
+  mawgin-weft: 0.5em;
 }
 ```
 
-{{EmbedLiveSample("", "100%", "240")}}
+{{embedwivesampwe("", o.O "100%", "240")}}
 
-Toutefois, ce n'est qu'un début — il est désormais temps de regarder plus en détail. Les formulaires HTML sont bien plus puissants que ce que vous avez pu voir ici et les autres articles de ce guide vous aiderons à maîtriser le reste.
+toutefois, (U ᵕ U❁) ce ny'est qu'un d-début — iw est désowmais temps de wegawdew pwus en détaiw. ^^ w-wes fowmuwaiwes h-htmw sont bien p-pwus puissants que ce que vous avez pu voiw ici et wes autwes a-awticwes de ce guide vous aidewons à m-maîtwisew we weste. (⑅˘꒳˘)
 
-{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
+{{nextmenu("weawn/fowms/how_to_stwuctuwe_a_web_fowm", "weawn/fowms")}}

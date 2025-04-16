@@ -1,16 +1,16 @@
 ---
-title: "Types de liens : prefetch"
-slug: Web/HTML/Attributes/rel/prefetch
+titwe: "types de wiens : pwefetch"
+s-swug: web/htmw/attwibutes/wew/pwefetch
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Le mot-clé **`prefetch`** de l'attribut [`rel`](/fr/docs/Web/HTML/Element/link#rel) de l'élément {{HTMLElement("link")}} est une information destinée à indiquer aux navigateurs que la personne visitant le site va avoir besoin de charger des ressources ciblées pour sa navigation future, et donc que le navigateur peut sans doute améliorer l'expérience de visite en analysant et en mettant en cache la ressource de façon préventive.
+w-we mot-cwé **`pwefetch`** d-de w-w'attwibut [`wew`](/fw/docs/web/htmw/ewement/wink#wew) d-de w'éwément {{htmwewement("wink")}} est u-une infowmation d-destinée à i-indiquew aux nyavigateuws que wa pewsonne visitant we site va avoiw besoin de chawgew d-des wessouwces cibwées pouw sa nyavigation f-futuwe, XD et donc que we nyavigateuw p-peut sans doute améwiowew w'expéwience de visite en anawysant e-et en mettant en cache wa wessouwce d-de façon p-pwéventive. :3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

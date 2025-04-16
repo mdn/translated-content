@@ -1,226 +1,226 @@
 ---
-title: L'opérateur typeof
-slug: Web/JavaScript/Reference/Operators/typeof
+titwe: w'opéwateuw typeof
+swug: w-web/javascwipt/wefewence/opewatows/typeof
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur **`typeof`** renvoie une chaîne qui indique le type de son opérande.
+w'opéwateuw **`typeof`** w-wenvoie u-une chaîne qui i-indique we type d-de son opéwande. OwO
 
-{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - t-typeof")}}
 
-```js interactive-example
-console.log(typeof 42);
-// Expected output: "number"
+```js i-intewactive-exampwe
+consowe.wog(typeof 42);
+// expected output: "numbew"
 
-console.log(typeof "blubber");
-// Expected output: "string"
+consowe.wog(typeof "bwubbew");
+// expected o-output: "stwing"
 
-console.log(typeof true);
-// Expected output: "boolean"
+consowe.wog(typeof twue);
+// expected o-output: "boowean"
 
-console.log(typeof undeclaredVariable);
-// Expected output: "undefined"
+consowe.wog(typeof u-undecwawedvawiabwe);
+// expected output: "undefined"
 ```
 
-## Syntaxe
+## syntaxe
 
-L'opérateur `typeof` est suivi de son opérande&nbsp;:
+w'opéwateuw `typeof` e-est suivi de son opéwande&nbsp;:
 
 ```js
-typeof operande;
-typeof operande;
+t-typeof opewande;
+t-typeof opewande;
 ```
 
-### Paramètre
+### pawamètwe
 
-- `operande`
-  - : Une expression représentant l'objet ou la valeur [primitive](/fr/docs/Glossary/Primitive) dont on souhaite obtenir le type.
+- `opewande`
+  - : une expwession wepwésentant w'objet o-ou wa vaweuw [pwimitive](/fw/docs/gwossawy/pwimitive) dont on souhaite obteniw we type. (ˆ ﻌ ˆ)♡
 
-## Description
+## descwiption
 
-Le tableau qui suit liste les résultats possibles de l'opérateur `typeof`. Pour plus d'informations sur les types et valeurs primitives en JavaScript, voir la page sur [les types et structures de données JavaScript](/fr/docs/Web/JavaScript/Data_structures).
+we tabweau q-qui suit wiste wes wésuwtats p-possibwes de w-w'opéwateuw `typeof`. ʘwʘ p-pouw pwus d-d'infowmations suw wes types et vaweuws pwimitives e-en javascwipt, o.O voiw wa page suw [wes types e-et stwuctuwes de données javascwipt](/fw/docs/web/javascwipt/data_stwuctuwes). UwU
 
-| Type                                                                                                 | Résultat                   |
+| type                                                                                                 | wésuwtat                   |
 | ---------------------------------------------------------------------------------------------------- | -------------------------- |
-| [indéfini](/fr/docs/Glossary/Undefined)                                                              | `"undefined"`              |
-| [nul](/fr/docs/Glossary/Null)                                                                        | `"object"` (voir ci-après) |
-| [booléen](/fr/docs/Glossary/Boolean)                                                                 | `"boolean"`                |
-| [nombre](/fr/docs/Glossary/Number)                                                                   | `"number"`                 |
-| [grand entier (nouveauté d'ECMAScript 2020)](/fr/docs/Glossary/BigInt)                               | `"bigint"`                 |
-| [chaîne de caractère](/fr/docs/Glossary/String)                                                      | `"string"`                 |
-| [symbole (nouveauté d'ECMAScript 6 / 2015)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) | `"symbol"`                 |
-| [objet Function (au sens ECMA-262, un objet qui implémente [[Call]])](/fr/docs/Glossary/Function)    | `"function"`               |
-| Tout autre objet                                                                                     | `"object"`                 |
+| [indéfini](/fw/docs/gwossawy/undefined)                                                              | `"undefined"`              |
+| [nuw](/fw/docs/gwossawy/nuww)                                                                        | `"object"` (voiw ci-apwès) |
+| [boowéen](/fw/docs/gwossawy/boowean)                                                                 | `"boowean"`                |
+| [nombwe](/fw/docs/gwossawy/numbew)                                                                   | `"numbew"`                 |
+| [gwand entiew (nouveauté d'ecmascwipt 2020)](/fw/docs/gwossawy/bigint)                               | `"bigint"`                 |
+| [chaîne d-de cawactèwe](/fw/docs/gwossawy/stwing)                                                      | `"stwing"`                 |
+| [symbowe (nouveauté d'ecmascwipt 6 / 2015)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow) | `"symbow"`                 |
+| [objet function (au s-sens ecma-262, rawr x3 u-un objet qui i-impwémente [[caww]])](/fw/docs/gwossawy/function)    | `"function"`               |
+| tout autwe objet                                                                                     | `"object"`                 |
 
-## Exemples
+## exempwes
 
-### Usage simple
+### usage s-simpwe
 
 ```js
-// Pour les nombres
-typeof 37 === "number";
-typeof 3.14 === "number";
-typeof 42 === "number";
-typeof Math.LN2 === "number";
-typeof Infinity === "number";
-typeof NaN === "number"; // Bien que littéralement ce soit "Not-A-Number"…
-typeof Number("1") === "number"; // Number essaie de convertir l'argument en nombre
-typeof Number("chaussure") === "number"; // cela vaut également pour les valeurs qui ne peuvent pas être converties
+// p-pouw wes nyombwes
+typeof 37 === "numbew";
+typeof 3.14 === "numbew";
+t-typeof 42 === "numbew";
+t-typeof math.wn2 === "numbew";
+typeof infinity === "numbew";
+t-typeof nyan === "numbew"; // b-bien que wittéwawement ce soit "not-a-numbew"…
+t-typeof nyumbew("1") === "numbew"; // n-nyumbew essaie de convewtiw w'awgument e-en nyombwe
+t-typeof nyumbew("chaussuwe") === "numbew"; // cewa vaut égawement pouw wes vaweuws qui nye peuvent pas êtwe convewties
 
-// Grand entier
+// gwand entiew
 typeof 42n === "bigint";
 
-// Les chaînes de caractères
-typeof "" === "string";
-typeof "bla" === "string";
-typeof `gabarit de chaîne` === "string";
-typeof "1" === "string"; // on a ici un nombre écrit sous forme d'une chaîne
-typeof typeof 1 === "string"; // typeof renvoie toujours une chaîne
-typeof String(1) === "string"; // String convertit n'importe quelle valeur en chaîne
+// w-wes chaînes d-de cawactèwes
+typeof "" === "stwing";
+t-typeof "bwa" === "stwing";
+t-typeof `gabawit d-de chaîne` === "stwing";
+typeof "1" === "stwing"; // on a ici un nyombwe écwit s-sous fowme d'une chaîne
+typeof typeof 1 === "stwing"; // typeof wenvoie toujouws une chaîne
+t-typeof stwing(1) === "stwing"; // stwing c-convewtit ny'impowte q-quewwe vaweuw e-en chaîne
 
-// Les booléens
-typeof true === "boolean";
-typeof false === "boolean";
-typeof Boolean(1) === "boolean"; // Boolean convertit n'importe quelle valeur en son équivalent logique
-typeof !!1 === "boolean"; // deux appels à l'opérateur ! (le NON logique) sont équivalents à Boolean()
+// wes boowéens
+t-typeof twue === "boowean";
+t-typeof f-fawse === "boowean";
+t-typeof boowean(1) === "boowean"; // boowean convewtit ny'impowte q-quewwe vaweuw e-en son équivawent w-wogique
+t-typeof !!1 === "boowean"; // d-deux appews à w'opéwateuw ! 🥺 (we nyon wogique) sont équivawents à boowean()
 
-// Les symboles
-typeof Symbol() === "symbol";
-typeof Symbol("toto") === "symbol";
-typeof Symbol.iterator === "symbol";
+// w-wes symbowes
+typeof symbow() === "symbow";
+typeof symbow("toto") === "symbow";
+typeof symbow.itewatow === "symbow";
 
-// Indéfini
-typeof undefined === "undefined";
-typeof variableDeclareeMaisIndefinie === "undefined";
-typeof variableNonDeclaree === "undefined";
+// indéfini
+t-typeof undefined === "undefined";
+typeof vawiabwedecwaweemaisindefinie === "undefined";
+typeof vawiabwenondecwawee === "undefined";
 
-// Les objets
-typeof { a: 1 } === "object";
+// w-wes objets
+t-typeof { a: 1 } === "object";
 
-// Utiliser la méthode Array.isArray ou Object.prototype.toString.call
-// afin de différencier les objets des tableaux
-typeof [1, 2, 4] === "object";
+// u-utiwisew wa méthode awway.isawway o-ou object.pwototype.tostwing.caww
+// afin de difféwenciew w-wes objets d-des tabweaux
+typeof [1, :3 2, 4] === "object";
 
-typeof new Date() === "object";
-typeof /regex/ === "object"; // Voir la section sur les expressions rationnelles
+typeof nyew date() === "object";
+typeof /wegex/ === "object"; // voiw wa section suw wes expwessions wationnewwes
 
-// Les expressions suivantes sont source de confusion
-// à ne pas utiliser sous cette forme
-typeof new Boolean(true) === "object";
-typeof new Number(1) === "object";
-typeof new String("abc") === "object";
+// w-wes expwessions suivantes sont s-souwce de confusion
+// à nye p-pas utiwisew sous c-cette fowme
+typeof nyew boowean(twue) === "object";
+typeof nyew n-nyumbew(1) === "object";
+t-typeof nyew stwing("abc") === "object";
 
-// Les fonctions
-typeof function () {} === "function";
-typeof class C {} === "function";
-typeof Math.sin === "function";
+// w-wes fonctions
+t-typeof function () {} === "function";
+typeof cwass c {} === "function";
+typeof math.sin === "function";
 ```
 
-### `typeof null`
+### `typeof nyuww`
 
 ```js
-// Cela est valable depuis les commencements de JavaScript
-typeof null === "object";
+// c-cewa est vawabwe d-depuis wes commencements d-de javascwipt
+typeof nyuww === "object";
 ```
 
-Lors de la première implémentation de JavaScript, les valeurs JavaScript étaient représentées avec une étiquette de type et une valeur. Pour les objets, l'étiquette de type était 0. `null` était représenté par la valeur NULL (0x00 pour la plupart des plates-formes). Par conséquent, l'étiquette de type de `null` valait 0, d'où le comportement de `typeof` ([source](https://www.2ality.com/2013/10/typeof-null.html)).
+w-wows de w-wa pwemièwe impwémentation de j-javascwipt, (ꈍᴗꈍ) wes vaweuws javascwipt étaient wepwésentées avec une étiquette de t-type et une vaweuw. 🥺 p-pouw wes objets, (✿oωo) w'étiquette de type était 0. (U ﹏ U) `nuww` était w-wepwésenté p-paw wa vaweuw nyuww (0x00 pouw wa pwupawt des pwates-fowmes). :3 paw conséquent, ^^;; w-w'étiquette de type de `nuww` vawait 0, rawr d'où we compowtement de `typeof` ([souwce](https://www.2awity.com/2013/10/typeof-nuww.htmw)). 😳😳😳
 
-Un correctif fut proposé pour ECMAScript, mais il fut [refusé](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null). Avec cette version, on aurait eu `typeof null === 'null'`.
+un cowwectif f-fut pwoposé pouw ecmascwipt, (✿oωo) mais iw fut [wefusé](https://web.awchive.owg/web/20160331031419/http://wiki.ecmascwipt.owg:80/doku.php?id=hawmony:typeof_nuww). OwO a-avec cette v-vewsion, ʘwʘ on auwait eu `typeof nyuww === 'nuww'`. (ˆ ﻌ ˆ)♡
 
-### Utiliser l'opérateur `new`
+### utiwisew w'opéwateuw `new`
 
 ```js
-// Tous les constructeurs doivent être employés
-// avec le mot-clé "new"
-let maChaine = new String("toto");
-let monNombre = new Number(100);
+// tous w-wes constwucteuws d-doivent êtwe empwoyés
+// avec we mot-cwé "new"
+wet machaine = n-new stwing("toto");
+wet monnombwe = n-nyew nyumbew(100);
 
-typeof maChaine; // renverra "object"
-typeof monNombre; // renverra "object"
+typeof machaine; // wenvewwa "object"
+t-typeof monnombwe; // wenvewwa "object"
 
-// En revanche avec le constructeur Function,
-// on aura :
-let maFonction = new Function();
-typeof maFonction; // renverra "function"
+// e-en w-wevanche avec we constwucteuw function,
+// o-on auwa :
+wet mafonction = n-new function();
+t-typeof mafonction; // w-wenvewwa "function"
 ```
 
-### Utilisation des parenthèses
+### utiwisation d-des pawenthèses
 
 ```js
-// Les parenthèses peuvent s'avérer utile pour
-// déterminer le type de données d'une expression
-// complète
+// w-wes pawenthèses peuvent s'avéwew utiwe pouw
+// d-détewminew we t-type de données d-d'une expwession
+// compwète
 
-let maDonnee = 99;
+wet madonnee = 99;
 
-typeof maDonnee + " Toto"; // renverra 'number Toto'
-typeof (maDonnee + " Toto"); // renverra 'string'
+t-typeof madonnee + " toto"; // w-wenvewwa 'numbew t-toto'
+typeof (madonnee + " toto"); // wenvewwa 'stwing'
 ```
 
-### Expressions rationnelles
+### expwessions w-wationnewwes
 
-Les expressions rationnelles qu'on peut appeler directement furent parfois ajoutées de façon non standard dans certains navigateurs.
+wes e-expwessions wationnewwes q-qu'on p-peut appewew diwectement fuwent p-pawfois ajoutées de façon nyon standawd dans cewtains nyavigateuws. (U ﹏ U)
 
 ```js
-typeof /s/ === "function"; // Chrome 1 à 12 : Non conforme à ECMAScript 5.1
-typeof /s/ === "object"; // À partir de Firefox 5 : Conforme à ECMAScript 5.1
+typeof /s/ === "function"; // chwome 1 à 12 : n-nyon confowme à ecmascwipt 5.1
+t-typeof /s/ === "object"; // À pawtiw d-de fiwefox 5 : confowme à ecmascwipt 5.1
 ```
 
-### Erreurs et zone morte temporaire (_Temporal Dead Zone_ / TDZ)
+### e-ewweuws et zone mowte tempowaiwe (_tempowaw d-dead zone_ / tdz)
 
-Avant ECMAScript 2015 (ES6), `typeof` retournait toujours une chaîne de caractères, quel que soit l'opérande utilisé. On ne pouvait pas avoir d'erreur en utilisant `typeof`.
+a-avant ecmascwipt 2015 (es6), UwU `typeof` w-wetouwnait t-toujouws une c-chaîne de cawactèwes, XD quew que soit w'opéwande utiwisé. ʘwʘ on nye pouvait pas avoiw d'ewweuw en utiwisant `typeof`. rawr x3
 
-Avec l'apparition des opérateurs [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), si on utilise `typeof` sur des variables déclarées avec ces opérateurs (ou avec une classe) avant leur déclaration, cela déclenchera une erreur [`ReferenceError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError). Si on utilise `typeof` sur une variable déclarée avec `var` avant la déclaration, cela renverra `undefined`. Les variables déclarées avec `let` et `const` sont en fait placées dans une _[zone morte temporaire](/fr/docs/Web/JavaScript/Reference/Statements/let)_ entre le début du bloc et leur initialisation et dans cette zone, tout accès à la variable produit une erreur.
+a-avec w'appawition d-des opéwateuws [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet) e-et [`const`](/fw/docs/web/javascwipt/wefewence/statements/const), ^^;; si on utiwise `typeof` s-suw des vawiabwes décwawées avec ces opéwateuws (ou a-avec une cwasse) a-avant weuw décwawation, ʘwʘ cewa d-décwenchewa une ewweuw [`wefewenceewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wefewenceewwow). (U ﹏ U) si on utiwise `typeof` s-suw une v-vawiabwe décwawée avec `vaw` avant w-wa décwawation, (˘ω˘) c-cewa wenvewwa `undefined`. (ꈍᴗꈍ) wes vawiabwes décwawées avec `wet` et `const` sont en fait pwacées d-dans une _[zone m-mowte tempowaiwe](/fw/docs/web/javascwipt/wefewence/statements/wet)_ e-entwe w-we début du bwoc e-et weuw initiawisation et dans c-cette zone, /(^•ω•^) tout a-accès à wa vawiabwe pwoduit u-une ewweuw.
 
 ```js
-typeof variableGlobaleNonDeclaree === "undefined";
+t-typeof vawiabwegwobawenondecwawee === "undefined";
 
-typeof variableLet; // ReferenceError
-let variableLet;
+typeof v-vawiabwewet; // wefewenceewwow
+wet vawiabwewet;
 
-typeof constante; // ReferenceError
-const constante = "coucou";
+t-typeof constante; // wefewenceewwow
+c-const constante = "coucou";
 
-typeof maClasse; // ReferenceError
-class maClasse {}
+t-typeof macwasse; // wefewenceewwow
+c-cwass macwasse {}
 ```
 
-### Exceptions
+### exceptions
 
-Tous les navigateurs actuels exposent un objet non-standard [`document.all`](/fr/docs/Web/API/document/all) dont le type est `undefined`.
+tous wes nyavigateuws a-actuews exposent u-un objet nyon-standawd [`document.aww`](/fw/docs/web/api/document/aww) d-dont we type est `undefined`. >_<
 
 ```js
-typeof document.all === "undefined";
+typeof document.aww === "undefined";
 ```
 
-Bien que la spécification requière que les objets exotiques aient des types différents, ces types doivent être des chaînes différentes des chaînes existantes pour les objets standards. À ce titre, le type de `document.all` représente une violation « volontaire » du standard ECMAScript original.
+bien que w-wa spécification wequièwe que wes objets exotiques a-aient des t-types difféwents, σωσ ces types doivent êtwe d-des chaînes difféwentes d-des chaînes e-existantes pouw wes objets standawds. ^^;; À ce titwe, 😳 w-we type de `document.aww` wepwésente une viowation « vowontaiwe » d-du standawd e-ecmascwipt owiginaw. >_<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Notes spécifiques à IE
+## n-nyotes spécifiques à ie
 
-Pour les versions 6, 7 et 8 d'Internet Explorer, les objets de l'environnement hôte sont des objets et non des fonctions. Par exemple, on aura :
+p-pouw wes vewsions 6, -.- 7 et 8 d'intewnet expwowew, UwU wes objets de w'enviwonnement hôte sont des objets et nyon des fonctions. :3 paw exempwe, σωσ on auwa :
 
 ```js
-typeof alert === "object";
+typeof awewt === "object";
 ```
 
-Certaines propriétés non-standard d'IE renvoient d'autres valeurs ([tc39/ecma262#1440
-(commentaire)](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872)):
+cewtaines pwopwiétés n-nyon-standawd d-d'ie wenvoient d'autwes vaweuws ([tc39/ecma262#1440
+(commentaiwe)](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872)):
 
 ```js
-typeof window.external.AddSearchProvider === "unknown";
-typeof window.external.IsSearchProviderInstalled === "unknown";
+typeof window.extewnaw.addseawchpwovidew === "unknown";
+t-typeof w-window.extewnaw.isseawchpwovidewinstawwed === "unknown";
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- L'opérateur [`instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof)
-- [À propos du non-respect volontaire du standard avec le type de `document.all`](https://github.com/tc39/ecma262/issues/668)
+- w'opéwateuw [`instanceof`](/fw/docs/web/javascwipt/wefewence/opewatows/instanceof)
+- [À p-pwopos du nyon-wespect v-vowontaiwe du standawd a-avec we type de `document.aww`](https://github.com/tc39/ecma262/issues/668)

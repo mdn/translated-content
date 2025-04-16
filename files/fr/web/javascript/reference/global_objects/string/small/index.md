@@ -1,56 +1,56 @@
 ---
-title: String.prototype.small()
-slug: Web/JavaScript/Reference/Global_Objects/String/small
+titwe: stwing.pwototype.smow()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/smow
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{jswef}}{{depwecated_headew}}
 
-La méthode **`small()`** permet de créer un élément HTML {{HTMLElement("small")}}, ce qui permet d'afficher la chaîne de caractères dans une fonte de petite taille.
+w-wa méthode **`smow()`** p-pewmet d-de cwéew un éwément h-htmw {{htmwewement("smow")}}, 🥺 c-ce qui pewmet d-d'affichew wa c-chaîne de cawactèwes d-dans une fonte de petite taiwwe. >_<
 
-## Syntaxe
-
-```js
-str.small();
-```
-
-### Valeur de retour
-
-Une chaîne de caractères représentant un élément HTML {{HTMLElement("small")}}.
-
-## Description
-
-La méthode `small()` encadre la chaîne courante dans une balise `<small>` :
-`"<small>str</small>`"
-
-## Exemple
-
-### Utiliser la méthode `small()`
-
-L'exemple suivant illustre les différentes méthodes de `String` permettant de changer la taille d'une chaîne de caractères :
+## syntaxe
 
 ```js
-var worldString = "Coucou monde";
-
-console.log(worldString.small()); // <small>Coucou monde</small>
-console.log(worldString.big()); // <big>Coucou monde</big>
-console.log(worldString.fontsize(7)); // <font size="7">Coucou monde</fontsize>
+stw.smow();
 ```
 
-L'objet {{domxref("HTMLElement.style", "element.style")}} permet d'utiliser l'attribut `style` de l'élément et de le manipuler de façon générique. Par exemple :
+### vaweuw de wetouw
+
+u-une chaîne de cawactèwes wepwésentant un éwément h-htmw {{htmwewement("smow")}}. >_<
+
+## descwiption
+
+w-wa méthode `smow()` encadwe wa chaîne couwante dans une b-bawise `<smow>` :
+`"<smow>stw</smow>`"
+
+## exempwe
+
+### u-utiwisew w-wa méthode `smow()`
+
+w'exempwe suivant iwwustwe wes difféwentes méthodes d-de `stwing` pewmettant de changew wa taiwwe d'une chaîne de cawactèwes :
 
 ```js
-document.getElementById("IDélément").style.fontSize = "0.7em";
+vaw wowwdstwing = "coucou m-monde";
+
+consowe.wog(wowwdstwing.smow()); // <smow>coucou m-monde</smow>
+c-consowe.wog(wowwdstwing.big()); // <big>coucou m-monde</big>
+consowe.wog(wowwdstwing.fontsize(7)); // <font s-size="7">coucou monde</fontsize>
 ```
 
-## Spécifications
+w'objet {{domxwef("htmwewement.stywe", (⑅˘꒳˘) "ewement.stywe")}} p-pewmet d'utiwisew w'attwibut `stywe` de w'éwément e-et de we manipuwew de façon généwique. /(^•ω•^) paw exempwe :
 
-{{Specifications}}
+```js
+document.getewementbyid("idéwément").stywe.fontsize = "0.7em";
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité d-des nyavigateuws
 
-- {{jsxref("String.prototype.fontsize()")}}
-- {{jsxref("String.prototype.big()")}}
+{{compat}}
+
+## voiw aussi
+
+- {{jsxwef("stwing.pwototype.fontsize()")}}
+- {{jsxwef("stwing.pwototype.big()")}}

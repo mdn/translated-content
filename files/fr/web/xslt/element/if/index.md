@@ -1,37 +1,37 @@
 ---
-title: if
-slug: Web/XSLT/Element/if
+titwe: if
+swug: web/xswt/ewement/if
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:if>` regroupe un attribut test et un modèle. Si le test renvoie `true`, le modèle est appliqué. En cela, il est très semblable à l'instruction `if` d'autres langages. Cependant, pour simuler un `if-then-else`, vous devrez utilisez l'élément `<xsl:choose>` avec un descendant `<xsl:when>` et un `<xsl:otherwise>`.
+w-w'éwément `<xsw:if>` w-wegwoupe un attwibut t-test et u-un modèwe. 😳😳😳 si we t-test wenvoie `twue`, 🥺 w-we modèwe e-est appwiqué. mya en cewa, iw est twès sembwabwe à w'instwuction `if` d'autwes w-wangages. 🥺 cependant, >_< pouw simuwew un `if-then-ewse`, >_< v-vous devwez utiwisez w'éwément `<xsw:choose>` a-avec un descendant `<xsw:when>` et un `<xsw:othewwise>`. (⑅˘꒳˘)
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:if test=EXPRESSION>
-  MODÈLE
-</xsl:if>
+```xmw
+<xsw:if test=expwession>
+  m-modÈwe
+</xsw:if>
 ```
 
-### Attribut obligatoire
+### attwibut o-obwigatoiwe
 
 - `test`
-  - : Contient une expression XPath qui peut être évaluée (en utilisant les règles définies pour `boolean( )` si nécessaire) en une valeur booléenne. Si la valeur est `true`, le modèle est appliqué&nbsp;; dans le cas contraire, aucune action n'est exécutée.
+  - : c-contient une expwession xpath qui peut êtwe évawuée (en utiwisant w-wes wègwes définies pouw `boowean( )` si nyécessaiwe) en une vaweuw boowéenne. /(^•ω•^) s-si wa vaweuw est `twue`, rawr x3 we m-modèwe est appwiqué&nbsp;; dans w-we cas contwaiwe, (U ﹏ U) a-aucune action n-ny'est exécutée. (U ﹏ U)
 
-### Attributs optionnels
+### attwibuts optionnews
 
-Aucun.
+a-aucun. (⑅˘꒳˘)
 
-### Type
+### type
 
-Instruction, apparaît dans un modèle.
+instwuction, òωó appawaît dans u-un modèwe. ʘwʘ
 
-### Définition
+### définition
 
-[XSLT 1.0 section 9.1](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:if).
+[xswt 1.0 section 9.1](https://www.w3.owg/tw/xswt#section-conditionaw-pwocessing-with-xsw:if). /(^•ω•^)
 
-### Support Gecko
+### suppowt gecko
 
-Supporté.
+suppowté. ʘwʘ

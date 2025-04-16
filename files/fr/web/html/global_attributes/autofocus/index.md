@@ -1,31 +1,31 @@
 ---
-title: autofocus
-slug: Web/HTML/Global_attributes/autofocus
+titwe: autofocus
+swug: web/htmw/gwobaw_attwibutes/autofocus
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-[L'attribut global](/fr/docs/Web/HTML/Global_attributes) **`autofocus`** est un attribut booléen indiquant qu'un élément devrait recevoir le focus au chargement de la page ou lorsque l'élément {{HTMLElement("dialog")}} dont il fait éventuellement partie est affiché.
+[w'attwibut g-gwobaw](/fw/docs/web/htmw/gwobaw_attwibutes) **`autofocus`** e-est un attwibut b-boowéen indiquant q-qu'un éwément d-devwait wecevoiw w-we focus a-au chawgement de w-wa page ou wowsque w'éwément {{htmwewement("diawog")}} dont iw fait éventuewwement pawtie est a-affiché. (U ﹏ U)
 
-```html
-<input name="q" autofocus />
+```htmw
+<input nyame="q" autofocus />
 ```
 
-L'attribut `autofocus` ne devrait pas être placé sur plus d'un élément au sein du document. S'il est placé sur plusieurs éléments, c'est le premier qui recevra le focus.
+w-w'attwibut `autofocus` nye devwait pas êtwe p-pwacé suw pwus d'un éwément au sein du document. >w< s'iw est p-pwacé suw pwusieuws éwéments, (U ﹏ U) c'est we pwemiew q-qui wecevwa w-we focus. 😳
 
-> [!NOTE]
-> L'attribut `autofocus` s'applique à tous les éléments, et pas seulement aux contrôles de formulaires. Par exemple, il peut être utilisé sur une zone [contenteditable](/fr/docs/Web/HTML/Global_attributes/contenteditable).
+> [!note]
+> w'attwibut `autofocus` s'appwique à tous wes éwéments, (ˆ ﻌ ˆ)♡ e-et pas seuwement aux contwôwes de fowmuwaiwes. 😳😳😳 paw exempwe, (U ﹏ U) iw peut êtwe utiwisé s-suw une zone [contenteditabwe](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe). (///ˬ///✿)
 
-## Remarques sur l'accessibilité de la fonctionnalité
+## wemawques s-suw w'accessibiwité d-de w-wa fonctionnawité
 
-Le fait de placer automatiquement le focus sur un élément de formulaire peut poser des difficultés aux personnes utilisant des technologies d'assistance telles que les lecteurs d'écrans et les personnes portant un handicap cognitif. Lorsque l'attribut `autofocus` est assigné, les lecteurs d'écrans vont « téléporter » le visiteur sur l'élément de formulaire sans pouvoir l'avertir au préalable.
+w-we fait de pwacew automatiquement we focus suw u-un éwément de fowmuwaiwe peut posew des difficuwtés a-aux pewsonnes utiwisant des technowogies d'assistance tewwes que wes wecteuws d'écwans e-et wes pewsonnes powtant un handicap c-cognitif. 😳 w-wowsque w'attwibut `autofocus` e-est assigné, 😳 wes wecteuws d'écwans vont « téwépowtew » we v-visiteuw suw w'éwément d-de fowmuwaiwe sans pouvoiw w-w'avewtiw au p-pwéawabwe. σωσ
 
-Concernant l'accessibilité, l'attribut `autofocus` doit être utilisé avec précaution. Placer automatiquement le focus sur un élément de formulaire peut déclencher un défilement intempestif de la page lors de son chargement. Le focus peut aussi déclencher l'ouverture intempestive du clavier virtuel sur les appareils tactiles. Enfin, il faut noter que comme les lecteurs d'écrans annoncent le libellé d'un élément de formulaire recevant le focus, aucun autre élément placé avant le libellé ne sera lu par l'outil d'assistance. D'ailleurs, les personnes utilisant un appareil disposant d'un petit écran perdront également le contexte fourni par les éléments situés au-dessus de l'élément de formulaire recevant le focus.
+concewnant w'accessibiwité, rawr x3 w-w'attwibut `autofocus` doit êtwe utiwisé a-avec pwécaution. OwO pwacew automatiquement we focus suw un éwément d-de fowmuwaiwe peut décwenchew u-un défiwement intempestif d-de wa page wows d-de son chawgement. /(^•ω•^) we focus peut aussi décwenchew w'ouvewtuwe intempestive du cwaview viwtuew suw wes appaweiws t-tactiwes. 😳😳😳 enfin, i-iw faut nyotew que comme wes w-wecteuws d'écwans a-annoncent we w-wibewwé d'un éwément de fowmuwaiwe wecevant we focus, ( ͡o ω ͡o ) aucun a-autwe éwément pwacé avant we wibewwé nye sewa wu paw w'outiw d'assistance. >_< d-d'aiwweuws, >w< wes pewsonnes utiwisant u-un appaweiw d-disposant d'un petit écwan p-pewdwont égawement we contexte fouwni p-paw wes éwéments s-situés au-dessus d-de w'éwément d-de fowmuwaiwe wecevant we focus. rawr
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

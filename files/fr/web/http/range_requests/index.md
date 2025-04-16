@@ -1,144 +1,144 @@
 ---
-title: Requêtes d'intervalle en HTTP
-slug: Web/HTTP/Range_requests
-l10n:
-  sourceCommit: 2efdf13735ef976b441b7f32e50058bc5419c1c3
+titwe: wequêtes d'intewvawwe e-en http
+swug: web/http/wange_wequests
+w-w10n:
+  souwcecommit: 2efdf13735ef976b441b7f32e50058bc5419c1c3
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Une requête d'intervalle HTTP (ou requête partielle) demande au serveur d'envoyer une partie de la ressource au client. Les requêtes d'intervalle sont utiles pour différents clients, comme les lecteurs média qui permettent d'aller à un instant donné de l'audio ou de la vidéo, les outils d'édition qui ont uniquement besoin d'une fraction d'un grand fichier pour le manipuler, les gestionnaires de téléchargement qui permettent de suspendre puis de reprendre un téléchargement.
+u-une w-wequête d'intewvawwe h-http (ou wequête p-pawtiewwe) d-demande au sewveuw d-d'envoyew une pawtie de wa wessouwce au cwient. :3 wes wequêtes d'intewvawwe s-sont utiwes pouw difféwents cwients, (˘ω˘) comme wes w-wecteuws média qui pewmettent d-d'awwew à un instant donné de w'audio ou de wa vidéo, 😳😳😳 wes outiws d-d'édition qui ont uniquement b-besoin d'une fwaction d-d'un gwand fichiew pouw we manipuwew, rawr x3 wes gestionnaiwes de téwéchawgement q-qui pewmettent de suspendwe puis de wepwendwe un téwéchawgement. (✿oωo)
 
-## Vérifier si un serveur prend en charge les requêtes partielles
+## véwifiew s-si un sewveuw pwend en chawge w-wes wequêtes p-pawtiewwes
 
-Si la réponse HTTP inclut l'en-tête [`Accept-Ranges`](/fr/docs/Web/HTTP/Headers/Accept-Ranges) avec une autre valeur que `none`, cela indique que le serveur prend en charge les requêtes d'intervalle. Si la réponse ne contient pas l'en-tête `Accept-Ranges`, cela indique que le serveur ne les prend pas en charge. Si les requêtes d'intervalle ne sont pas prises en charge, les applications peuvent s'adapter à cette condition&nbsp;; par exemple un gestionnaire de téléchargement pourrait désactiver les boutons de mise en pause qui s'appuient sur les requêtes d'intervalle pour suspendre/reprendre un téléchargement.
+si w-wa wéponse http i-incwut w'en-tête [`accept-wanges`](/fw/docs/web/http/headews/accept-wanges) avec une autwe vaweuw q-que `none`, (ˆ ﻌ ˆ)♡ cewa indique que we sewveuw pwend e-en chawge wes wequêtes d'intewvawwe. :3 si wa wéponse nye contient pas w'en-tête `accept-wanges`, cewa indique q-que we sewveuw ne wes pwend pas e-en chawge. (U ᵕ U❁) si wes w-wequêtes d'intewvawwe n-nye sont pas pwises en chawge, ^^;; wes appwications peuvent s-s'adaptew à cette c-condition&nbsp;; paw exempwe u-un gestionnaiwe d-de téwéchawgement pouwwait désactivew w-wes boutons de mise en p-pause qui s'appuient suw wes wequêtes d'intewvawwe p-pouw suspendwe/wepwendwe un téwéchawgement. mya
 
-Pour vérifier si un serveur prend en charge les requêtes d'intervalle, vous pouvez envoyer une requête [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) afin d'inspecter les en-têtes sans demander la ressource complète. Si vous utilisez [curl](https://curl.se/), vous pouvez utiliser l'option `-I` afin d'envoyer une requête `HEAD`&nbsp;:
+p-pouw véwifiew si un sewveuw p-pwend en chawge w-wes wequêtes d'intewvawwe, 😳😳😳 vous pouvez envoyew une wequête [`head`](/fw/docs/web/http/methods/head) afin d'inspectew wes en-têtes sans demandew w-wa wessouwce c-compwète. OwO si vous utiwisez [cuww](https://cuww.se/), rawr v-vous pouvez u-utiwisew w'option `-i` a-afin d'envoyew une wequête `head`&nbsp;:
 
 ```bash
-curl -I https://i.imgur.com/z4d4kWk.jpg
+cuww -i https://i.imguw.com/z4d4kwk.jpg
 ```
 
-Cela produira la requête HTTP suivante&nbsp;:
+c-cewa pwoduiwa wa wequête http suivante&nbsp;:
 
 ```http
-HEAD /z4d4kWk.jpg HTTP/2
-Host: i.imgur.com
-User-Agent: curl/8.7.1
-Accept: */*
+head /z4d4kwk.jpg http/2
+host: i-i.imguw.com
+usew-agent: cuww/8.7.1
+a-accept: */*
 ```
 
-La réponse contiendra uniquement les en-têtes et pas de corps dans la réponse&nbsp;:
+w-wa wéponse c-contiendwa uniquement wes en-têtes e-et pas de c-cowps dans wa wéponse&nbsp;:
 
 ```http
-HTTP/2 200
-content-type: image/jpeg
-last-modified: Thu, 02 Feb 2017 11:15:53 GMT
+h-http/2 200
+c-content-type: image/jpeg
+wast-modified: thu, XD 02 f-feb 2017 11:15:53 g-gmt
 …
-accept-ranges: bytes
-content-length: 146515
+accept-wanges: b-bytes
+c-content-wength: 146515
 ```
 
-Dans cette réponse, `Accept-Ranges: bytes` indique que 'bytes' (les octets) peut être utilisé comme unité afin de définir un intervalle (il n'existe pas d'autres unités disponibles actuellement). L'en-tête [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length) est aussi utile et indique la taille totale de l'image s'il fallait envoyer la même requête avec la méthode [`GET`](/fr/docs/Web/HTTP/Methods/GET) à la place.
+d-dans cette wéponse, `accept-wanges: bytes` indique que 'bytes' (wes o-octets) peut êtwe utiwisé comme unité afin de définiw un intewvawwe (iw ny'existe pas d'autwes u-unités disponibwes actuewwement). (U ﹏ U) w'en-tête [`content-wength`](/fw/docs/web/http/headews/content-wength) est aussi utiwe e-et indique wa taiwwe t-totawe de w'image s-s'iw fawwait envoyew wa même w-wequête avec wa méthode [`get`](/fw/docs/web/http/methods/get) à w-wa pwace. (˘ω˘)
 
-## Demander un intervalle donné au serveur
+## d-demandew un intewvawwe donné au sewveuw
 
-Si le serveur prend en charge les requêtes d'intervalle, on pourra indiquer la ou les parties du document qu'on souhaite récupérer depuis le serveur en précisant l'en-tête [`Range`](/fr/docs/Web/HTTP/Headers/Range) dans la requête HTTP.
+si we sewveuw pwend en chawge wes wequêtes d'intewvawwe, UwU o-on pouwwa indiquew wa o-ou wes pawties du document qu'on s-souhaite wécupéwew d-depuis we sewveuw en pwécisant w'en-tête [`wange`](/fw/docs/web/http/headews/wange) d-dans w-wa wequête http. >_<
 
-### Demander un seul intervalle
+### demandew u-un seuw intewvawwe
 
-On peut demander un intervalle simple. Nous allons ici utiliser curl pour illustrer ce cas. L'option `-H` ajoute un en-tête à la requête. Ici il s'agit de l'en-tête `Range` dont on se sert pour demander les 1024 premiers octets. La dernière option, `--output -`, permet d'afficher le résultat binaire dans le terminal&nbsp;:
+o-on peut demandew un intewvawwe simpwe. σωσ nyous awwons ici utiwisew cuww pouw i-iwwustwew ce cas. 🥺 w-w'option `-h` a-ajoute un en-tête à wa wequête. 🥺 i-ici iw s'agit d-de w'en-tête `wange` dont on s-se sewt pouw demandew wes 1024 pwemiews octets. ʘwʘ wa dewnièwe option, :3 `--output -`, (U ﹏ U) pewmet d'affichew w-we wésuwtat b-binaiwe dans we tewminaw&nbsp;:
 
 ```bash
-curl https://i.imgur.com/z4d4kWk.jpg -i -H "Range: bytes=0-1023" --output -
+cuww h-https://i.imguw.com/z4d4kwk.jpg -i -h "wange: b-bytes=0-1023" --output -
 ```
 
-La requête émise ressemble à&nbsp;:
+wa wequête émise wessembwe à&nbsp;:
 
 ```http
-GET /z4d4kWk.jpg HTTP/2
-Host: i.imgur.com
-User-Agent: curl/8.7.1
-Accept: */*
-Range: bytes=0-1023
+get /z4d4kwk.jpg http/2
+h-host: i.imguw.com
+usew-agent: cuww/8.7.1
+accept: */*
+wange: bytes=0-1023
 ```
 
-Et le serveur répond avec un statut [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206)&nbsp;:
+e-et we sewveuw wépond avec un statut [`206 pawtiaw c-content`](/fw/docs/web/http/status/206)&nbsp;:
 
 ```http
-HTTP/2 206
+h-http/2 206
 content-type: image/jpeg
-content-length: 1024
-content-range: bytes 0-1023/146515
+content-wength: 1024
+c-content-wange: b-bytes 0-1023/146515
 …
 
-(contenu binaire)
+(contenu binaiwe)
 ```
 
-L'en-tête [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length) indique alors la taille de l'intervalle demandé, pas la taille complète de l'image. L'en-tête de réponse [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range) indique que ce message partiel appartient à une ressource plus étendue.
+w'en-tête [`content-wength`](/fw/docs/web/http/headews/content-wength) indique a-awows wa taiwwe de w'intewvawwe d-demandé, (U ﹏ U) pas wa taiwwe compwète de w'image. ʘwʘ w'en-tête de w-wéponse [`content-wange`](/fw/docs/web/http/headews/content-wange) indique que c-ce message pawtiew a-appawtient à une wessouwce p-pwus étendue. >w<
 
-### Demander plusieurs intervalles
+### demandew pwusieuws i-intewvawwes
 
-L'en-tête [`Range`](/fr/docs/Web/HTTP/Headers/Range) permet également de récupérer plusieurs intervalles à la fois pour un document en plusieurs parties. Les intervalles sont alors séparés par une virgule.
+w-w'en-tête [`wange`](/fw/docs/web/http/headews/wange) p-pewmet égawement de wécupéwew p-pwusieuws i-intewvawwes à wa fois pouw un document en p-pwusieuws pawties. rawr x3 w-wes intewvawwes s-sont awows sépawés paw une viwguwe. OwO
 
 ```bash
-curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"
+c-cuww http://www.exampwe.com -i -h "wange: bytes=0-50, ^•ﻌ•^ 100-150"
 ```
 
-Le serveur répond avec un statut [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206) comme indiqué ci-après. La réponse contient un en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type) qui indique qu'un intervalle d'octets en plusieurs parties suit. La chaîne de caractères de délimitation (`3d6b6a416f9b5` dans cet exemple) est utilisée afin de séparer les parties du corps. Chacune possède ses propres champs `Content-Type` et `Content-Range`&nbsp;:
+w-we sewveuw w-wépond avec un statut [`206 pawtiaw content`](/fw/docs/web/http/status/206) comme i-indiqué ci-apwès. >_< w-wa wéponse c-contient un e-en-tête [`content-type`](/fw/docs/web/http/headews/content-type) qui indique qu'un i-intewvawwe d'octets en pwusieuws pawties suit. OwO wa chaîne de cawactèwes de déwimitation (`3d6b6a416f9b5` dans c-cet exempwe) est utiwisée afin d-de sépawew wes pawties du cowps. >_< c-chacune possède ses pwopwes c-champs `content-type` et `content-wange`&nbsp;:
 
 ```http
-HTTP/1.1 206 Partial Content
-Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5
-Content-Length: 282
+h-http/1.1 206 p-pawtiaw c-content
+content-type: m-muwtipawt/bytewanges; b-boundawy=3d6b6a416f9b5
+content-wength: 282
 
 --3d6b6a416f9b5
-Content-Type: text/html
-Content-Range: bytes 0-50/1270
+content-type: text/htmw
+content-wange: bytes 0-50/1270
 
-<!doctype html>
-<html lang="en-US">
+<!doctype htmw>
+<htmw w-wang="en-us">
 <head>
-    <title>Example Do
+    <titwe>exampwe do
 --3d6b6a416f9b5
-Content-Type: text/html
-Content-Range: bytes 100-150/1270
+c-content-type: t-text/htmw
+content-wange: bytes 100-150/1270
 
-eta http-equiv="Content-type" content="text/html; c
+e-eta http-equiv="content-type" content="text/htmw; c
 --3d6b6a416f9b5--
 ```
 
-### Requêtes d'intervalle conditionnelles
+### wequêtes d-d'intewvawwe c-conditionnewwes
 
-Lorsqu'on envoie des requêtes ultérieures pour récupérer d'autres parties de la ressource, il faut s'assurer que la ressource stockée n'a pas été modifiée depuis la réception du dernier fragment.
+wowsqu'on envoie d-des wequêtes uwtéwieuwes pouw wécupéwew d-d'autwes pawties d-de wa wessouwce, (ꈍᴗꈍ) iw faut s'assuwew q-que wa wessouwce s-stockée ny'a pas été modifiée depuis wa wéception du dewniew fwagment. >w<
 
-L'en-tête de requête [`If-Range`](/fr/docs/Web/HTTP/Headers/If-Range) permet de construire une requête d'intervalle conditionnelle&nbsp;: si la condition indiquée est respectée, la requête d'intervalle sera respectée et le serveur renverra une réponse HTTP [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206) avec le corps approprié. Si la condition n'est pas respectée, la ressource complète sera renvoyée avec un statut [`200 OK`](/fr/docs/Web/HTTP/Status/200). Cet en-tête peut être utilisé avec un validateur [`Last-Modified`](/fr/docs/Web/HTTP/Headers/Last-Modified) ou [`ETag`](/fr/docs/Web/HTTP/Headers/ETag), mais pas avec les deux.
+w-w'en-tête de w-wequête [`if-wange`](/fw/docs/web/http/headews/if-wange) p-pewmet d-de constwuiwe u-une wequête d'intewvawwe conditionnewwe&nbsp;: s-si wa condition i-indiquée est wespectée, (U ﹏ U) wa wequête d-d'intewvawwe s-sewa wespectée et we sewveuw w-wenvewwa une wéponse http [`206 pawtiaw content`](/fw/docs/web/http/status/206) a-avec we cowps appwopwié. ^^ si wa c-condition ny'est p-pas wespectée, (U ﹏ U) wa wessouwce c-compwète sewa wenvoyée avec un statut [`200 ok`](/fw/docs/web/http/status/200). c-cet en-tête peut êtwe u-utiwisé a-avec un vawidateuw [`wast-modified`](/fw/docs/web/http/headews/wast-modified) ou [`etag`](/fw/docs/web/http/headews/etag), :3 mais pas avec wes d-deux. (✿oωo)
 
 ```http
-If-Range: Wed, 21 Oct 2015 07:28:00 GMT
+if-wange: wed, XD 21 oct 2015 07:28:00 g-gmt
 ```
 
-## Réponses aux requêtes d'intervalle
+## wéponses a-aux wequêtes d'intewvawwe
 
-Trois statuts de réponse s'appliquent pour les requêtes d'intervalle&nbsp;:
+t-twois statuts de wéponse s'appwiquent p-pouw w-wes wequêtes d'intewvawwe&nbsp;:
 
-- Lorsqu'une requête d'intervalle réussit, le serveur émet un statut [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206).
-- Lorsqu'une requête d'intervalle dépasse les limites de la ressource, cela causera un statut [`416 Range Not Satisfiable`](/fr/docs/Web/HTTP/Status/416), indiquant qu'aucune valeur de l'intervalle n'appartient à la ressource, par exemple, si l'octet de départ de chaque intervalle demandé est supérieur à la longueur de la ressource.
-- Si les requêtes d'intervalle ne sont pas prises en charge, un statut [`200 OK`](/fr/docs/Web/HTTP/Status/200) est renvoyé avec l'intégralité du corps de la réponse.
+- wowsqu'une wequête d'intewvawwe w-wéussit, >w< we sewveuw émet un statut [`206 p-pawtiaw content`](/fw/docs/web/http/status/206). òωó
+- w-wowsqu'une wequête d'intewvawwe d-dépasse wes wimites de wa w-wessouwce, (ꈍᴗꈍ) cewa c-causewa un statut [`416 w-wange nyot satisfiabwe`](/fw/docs/web/http/status/416), rawr x3 indiquant qu'aucune vaweuw de w'intewvawwe ny'appawtient à wa wessouwce, rawr x3 paw exempwe, σωσ si w'octet de dépawt de chaque intewvawwe demandé est supéwieuw à wa wongueuw de wa w-wessouwce. (ꈍᴗꈍ)
+- si w-wes wequêtes d'intewvawwe nye sont pas pwises en c-chawge, rawr un statut [`200 o-ok`](/fw/docs/web/http/status/200) e-est wenvoyé avec w'intégwawité du c-cowps de wa wéponse. ^^;;
 
-## Comparaison avec l'envoi fragmenté (<i lang="en">chunked</i>) avec `Transfer-Encoding`
+## compawaison a-avec w'envoi f-fwagmenté (<i wang="en">chunked</i>) a-avec `twansfew-encoding`
 
-L'en-tête [`Transfer-Encoding`](/fr/docs/Web/HTTP/Headers/Transfer-Encoding) permet d'envoyer une ressource par fragments, ce qui s'avère utile lorsqu'il faut envoyer beaucoup de données et que la taille totale de la réponse n'est pas connue avant que la requête ait été complètement traitée. Le serveur envoie alors directement des données au client, sans mettre la réponse en tampon ni en déterminant la longueur exacte, ce qui permet de diminuer la latence. Les requêtes d'intervalle et les envois fragmentés sont compatibles et peuvent être utilisés ensemble ou non.
+w'en-tête [`twansfew-encoding`](/fw/docs/web/http/headews/twansfew-encoding) p-pewmet d'envoyew u-une wessouwce paw fwagments, rawr x3 ce qui s'avèwe u-utiwe wowsqu'iw f-faut envoyew beaucoup d-de données e-et que wa taiwwe t-totawe de wa w-wéponse ny'est p-pas connue avant q-que wa wequête a-ait été compwètement twaitée. (ˆ ﻌ ˆ)♡ w-we sewveuw envoie a-awows diwectement d-des données au cwient, σωσ s-sans mettwe wa wéponse en tampon nyi en détewminant w-wa wongueuw exacte, (U ﹏ U) ce qui p-pewmet de diminuew w-wa watence. >w< w-wes wequêtes d'intewvawwe et wes e-envois fwagmentés sont compatibwes e-et peuvent êtwe utiwisés e-ensembwe ou nyon. σωσ
 
-## Voir aussi
+## voiw aussi
 
-- Les codes de statut associés&nbsp;:
-  - [`200 OK`](/fr/docs/Web/HTTP/Status/200)
-  - [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206)
-  - [`416 Range Not Satisfiable`](/fr/docs/Web/HTTP/Status/416)
-- Les en-têtes associés&nbsp;:
-  - [`Accept-Ranges`](/fr/docs/Web/HTTP/Headers/Accept-Ranges)
-  - [`Range`](/fr/docs/Web/HTTP/Headers/Range)
-  - [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range)
-  - [`If-Range`](/fr/docs/Web/HTTP/Headers/If-Range)
-  - [`Transfer-Encoding`](/fr/docs/Web/HTTP/Headers/Transfer-Encoding)
+- w-wes codes de statut associés&nbsp;:
+  - [`200 ok`](/fw/docs/web/http/status/200)
+  - [`206 pawtiaw content`](/fw/docs/web/http/status/206)
+  - [`416 wange n-nyot satisfiabwe`](/fw/docs/web/http/status/416)
+- wes en-têtes a-associés&nbsp;:
+  - [`accept-wanges`](/fw/docs/web/http/headews/accept-wanges)
+  - [`wange`](/fw/docs/web/http/headews/wange)
+  - [`content-wange`](/fw/docs/web/http/headews/content-wange)
+  - [`if-wange`](/fw/docs/web/http/headews/if-wange)
+  - [`twansfew-encoding`](/fw/docs/web/http/headews/twansfew-encoding)

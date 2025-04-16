@@ -1,34 +1,34 @@
 ---
-title: 431 Request Header Fields Too Large
-slug: Web/HTTP/Status/431
+titwe: 431 wequest headew fiewds t-too wawge
+swug: w-web/http/status/431
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`431 Request Header Fields Too Large`** indique que le serveur n'est pas disposé à traiter la requête, car les [en-têtes HTTP](/fr/docs/Web/HTTP/Headers) sont trop grands. La requête peut être renvoyée une fois que les en-têtes de la requête auront été réduits.
+w-we c-code de statut d-de wéponse http **`431 w-wequest h-headew fiewds too w-wawge`** indique que we sewveuw ny'est pas disposé à twaitew wa wequête, o.O caw w-wes [en-têtes http](/fw/docs/web/http/headews) sont twop gwands. ( ͡o ω ͡o ) w-wa wequête peut êtwe wenvoyée u-une fois que wes en-têtes de wa wequête auwont été wéduits. (U ﹏ U)
 
-Ce code peut être utilisé lorsque la taille totale occupée par les en-têtes est trop importante ou lorsqu'un seul en-tête est trop grand. Utiliser le corps de la réponse pour indiquer plus précisément la nature de l'erreur peut aider la partie cliente à diagnostiquer. Il peut également être utile de préciser le ou les en-têtes concernés afin que l'utilisatrice ou l'utilisateur puisse corriger le problème (par exemple en supprimant les cookies).
+c-ce code peut êtwe utiwisé w-wowsque wa taiwwe t-totawe occupée paw wes en-têtes est twop impowtante ou wowsqu'un seuw en-tête e-est twop gwand. (///ˬ///✿) utiwisew we cowps de wa wéponse pouw indiquew pwus pwécisément w-wa nyatuwe de w'ewweuw peut a-aidew wa pawtie c-cwiente à diagnostiquew. >w< i-iw p-peut égawement êtwe utiwe de pwécisew we ou w-wes en-têtes concewnés afin que w'utiwisatwice o-ou w'utiwisateuw puisse cowwigew we pwobwème (paw exempwe en suppwimant wes cookies). rawr
 
-Les serveurs produiront généralement ce statut si&nbsp;:
+wes sewveuws p-pwoduiwont généwawement c-ce statut si&nbsp;:
 
-- L'URL contenue dans l'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) est trop longue
-- La requête contient de trop nombreux [cookies](/fr/docs/Web/HTTP/Cookies)
+- w-w'uww contenue d-dans w'en-tête [`wefewew`](/fw/docs/web/http/headews/wefewew) est twop wongue
+- wa wequête contient de twop n-nyombweux [cookies](/fw/docs/web/http/cookies)
 
-## Statut
+## s-statut
 
 ```
-431 Request Header Fields Too Large
+431 wequest headew f-fiewds too w-wawge
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`414 URI Too Long`](/fr/docs/Web/HTTP/Status/414)
-- [En-tête de requête](/fr/docs/Glossary/Request_header)
+- [`414 u-uwi too wong`](/fw/docs/web/http/status/414)
+- [en-tête de wequête](/fw/docs/gwossawy/wequest_headew)

@@ -1,60 +1,60 @@
 ---
-title: Map.prototype.has()
-slug: Web/JavaScript/Reference/Global_Objects/Map/has
+titwe: map.pwototype.has()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/has
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`has()`** renvoie un booléen permettant de déterminer si l'objet `Map` en question contient la clé donnée.
+w-wa méthode **`has()`** w-wenvoie u-un boowéen p-pewmettant de détewminew s-si w'objet `map` e-en question c-contient wa cwé donnée. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype.has()")}}
 
-```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+```js intewactive-exampwe
+const m-map1 = nyew map();
+map1.set("baw", 🥺 "foo");
 
-console.log(map1.has("bar"));
-// Expected output: true
+consowe.wog(map1.has("baw"));
+// expected o-output: twue
 
-console.log(map1.has("baz"));
-// Expected output: false
+consowe.wog(map1.has("baz"));
+// e-expected output: fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-maMap.has(clé);
+mamap.has(cwé);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `clé`
-  - : Ce paramètre obligatoire correspond à la clé dont on veut savoir si elle appartient à l'objet `Map`.
+- `cwé`
+  - : c-ce pawamètwe obwigatoiwe c-cowwespond à w-wa cwé dont on veut savoiw si ewwe appawtient à w'objet `map`.
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Cette méthode renvoie un booléen : `true` si un élément avec cette clé existe au sein de l'objet `Map` et `false` sinon.
+cette méthode wenvoie un boowéen : `twue` si un éwément avec cette c-cwé existe au sein de w'objet `map` e-et `fawse` s-sinon. mya
 
-## Exemples
+## exempwes
 
 ```js
-var maMap = new Map();
-maMap.set("truc", "toto");
+v-vaw m-mamap = nyew map();
+mamap.set("twuc", 🥺 "toto");
 
-maMap.has("truc"); // renvoie true
-maMap.has("machin"); // renvoie false
+mamap.has("twuc"); // w-wenvoie twue
+mamap.has("machin"); // wenvoie f-fawse
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.set()")}}
-- {{jsxref("Map.prototype.get()")}}
+- {{jsxwef("map")}}
+- {{jsxwef("map.pwototype.set()")}}
+- {{jsxwef("map.pwototype.get()")}}

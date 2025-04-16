@@ -1,252 +1,252 @@
 ---
-title: "<kbd> : l'élément de saisie clavier"
-slug: Web/HTML/Element/kbd
+titwe: "<kbd> : w'éwément de s-saisie cwaview"
+s-swug: web/htmw/ewement/kbd
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<kbd>`** représente une plage de texte en ligne indiquant la saisie de texte par l'utilisateur à partir d'un clavier, d'une saisie vocale ou de tout autre dispositif de saisie de texte. Par convention, le {{Glossary("user agent")}} rend par défaut le contenu d'un élément `<kbd>` en utilisant sa police monospace, bien que cela ne soit pas requis par le standard HTML.
+w-w'éwément htmw **`<kbd>`** w-wepwésente une p-pwage de texte en w-wigne indiquant w-wa saisie de texte p-paw w'utiwisateuw à pawtiw d'un cwaview, ^•ﻌ•^ d'une saisie vocawe ou de tout autwe d-dispositif de saisie de texte. UwU paw convention, (˘ω˘) w-we {{gwossawy("usew agent")}} w-wend paw défaut we contenu d'un éwément `<kbd>` en utiwisant sa powice monospace, (///ˬ///✿) b-bien que cewa nye soit pas w-wequis paw we standawd h-htmw. σωσ
 
-`<kbd>` peut être imbriqué dans diverses combinaisons avec {{HTMLElement("samp")}} (Sample Output) pour représenter diverses formes d'entrée ou d'entrée basées sur des repères visuels.
+`<kbd>` peut êtwe imbwiqué dans divewses combinaisons avec {{htmwewement("samp")}} (sampwe o-output) pouw wepwésentew divewses fowmes d'entwée ou d'entwée basées s-suw des wepèwes visuews. /(^•ω•^)
 
-{{InteractiveExample("HTML Demo: &lt;kbd&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;kbd&gt;", 😳 "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an
-  MDN page.
+  p-pwease pwess <kbd>ctww</kbd> + <kbd>shift</kbd> + <kbd>w</kbd> t-to we-wendew an
+  mdn page. 😳
 </p>
 ```
 
-```css interactive-example
-kbd {
-  background-color: #eee;
-  border-radius: 3px;
-  border: 1px solid #b4b4b4;
+```css intewactive-exampwe
+k-kbd {
+  backgwound-cowow: #eee;
+  bowdew-wadius: 3px;
+  bowdew: 1px s-sowid #b4b4b4;
   box-shadow:
-    0 1px 1px rgba(0, 0, 0, 0.2),
-    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
-  color: #333;
-  display: inline-block;
+    0 1px 1px wgba(0, (⑅˘꒳˘) 0, 0, 0.2), 😳😳😳
+    0 2px 0 0 wgba(255, 😳 255, XD 255, 0.7) inset;
+  cowow: #333;
+  dispway: i-inwine-bwock;
   font-size: 0.85em;
-  font-weight: 700;
-  line-height: 1;
-  padding: 2px 4px;
-  white-space: nowrap;
+  f-font-weight: 700;
+  w-wine-height: 1;
+  p-padding: 2px 4px;
+  white-space: nyowwap;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément ne contient que [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément nye contient q-que [wes attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). mya
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-D'autres éléments peuvent être utilisés en association avec `<kbd>` afin de représenter certains scénarios plus spécifiques :
+d-d'autwes éwéments p-peuvent êtwe utiwisés e-en association avec `<kbd>` afin d-de wepwésentew cewtains scénawios pwus spécifiques :
 
-- Imbriquer un élément `<kbd>` dans un autre élément `<kbd>` représente une touche ou une unité de saisie au sein d'une saisie plus grande. Cf. [Représenter les frappes de touches dans une saisie](#représenter_les_frappes_de_touches_dans_une_saisie) ci-après.
-- Imbriquer un élément `<kbd>` dans un élément {{HTMLElement("samp")}} permet d'indiquer que la saisie a été restituée (_echo_) à l'utilisateur. Cf. [Saisie restituée](#saisie_restituée), ci-après.
-- Imbriquer un élément `<samp>` dans un élément `<kbd>` permet de représenter des saisies basées sur le texte présenté par le système (cela peut être le nom de menus, d'éléments de menu ou le nom de bouttons affichés à l'écran). Cf. [Représenter les options de saisies à l'écran](#représenter_les_options_de_saisies_à_l'écran) ci-après.
+- i-imbwiquew un éwément `<kbd>` d-dans un autwe éwément `<kbd>` w-wepwésente u-une touche ou une unité de saisie au sein d'une saisie pwus gwande. ^•ﻌ•^ cf. [wepwésentew wes fwappes de touches dans une saisie](#wepwésentew_wes_fwappes_de_touches_dans_une_saisie) c-ci-apwès. ʘwʘ
+- i-imbwiquew un éwément `<kbd>` d-dans un éwément {{htmwewement("samp")}} p-pewmet d'indiquew q-que wa saisie a été westituée (_echo_) à w'utiwisateuw. ( ͡o ω ͡o ) cf. [saisie westituée](#saisie_westituée), c-ci-apwès. mya
+- imbwiquew un éwément `<samp>` dans un éwément `<kbd>` p-pewmet de wepwésentew des s-saisies basées s-suw we texte pwésenté p-paw we système (cewa peut êtwe w-we nyom d-de menus, o.O d'éwéments d-de menu o-ou we nyom de bouttons affichés à w'écwan). (✿oωo) cf. [wepwésentew w-wes options de s-saisies à w'écwan](#wepwésentew_wes_options_de_saisies_à_w'écwan) c-ci-apwès. :3
 
-> [!NOTE]
-> Il est possible de définir un style pour surcharger la mise en forme par défaut du navigateur pour l'élément `<kbd>`. À ce titre, on gardera à l'esprit que les préférences et feuilles de style de l'utilisateur peuvent surcharger la mise en forme du site.
+> [!note]
+> iw e-est possibwe de d-définiw un stywe pouw suwchawgew wa mise en fowme paw défaut d-du nyavigateuw pouw w'éwément `<kbd>`. 😳 À ce titwe, (U ﹏ U) on gawdewa à w'espwit que wes pwéféwences e-et feuiwwes de stywe de w'utiwisateuw peuvent suwchawgew wa m-mise en fowme du s-site. mya
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### e-exempwe simpwe
 
-```html
+```htmw
 <p>
-  Utilisez la commande <kbd>help macommande</kbd> afin de consulter la
-  documentation pour la commande "macommande".
+  u-utiwisez wa commande <kbd>hewp m-macommande</kbd> a-afin de consuwtew wa
+  documentation pouw wa commande "macommande". (U ᵕ U❁)
 </p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemple_simple', 350, 80)}}
+{{embedwivesampwe('exempwe_simpwe', :3 350, 80)}}
 
-### Représenter les frappes de touches dans une saisie
+### wepwésentew w-wes fwappes de touches dans u-une saisie
 
-Afin de décrire une saisie constituée de plusieurs touches, on imbriquera plusieurs élément `<kbd>` dans un élément `<kbd>` englobant qui représente la saisie dans son ensemble. Chaque frappe clavier qui le constitue sera représentée par son propre élément `<kbd>`.
+afin de décwiwe une s-saisie constituée d-de pwusieuws touches, mya on imbwiquewa pwusieuws éwément `<kbd>` d-dans un éwément `<kbd>` e-engwobant qui wepwésente wa saisie d-dans son ensembwe. OwO c-chaque fwappe cwaview qui we constitue sewa wepwésentée paw son pwopwe éwément `<kbd>`. (ˆ ﻌ ˆ)♡
 
-#### Sans mise en forme
+#### s-sans mise e-en fowme
 
-Commençons par analyser le code HTML.
+commençons p-paw anawysew we code htmw. ʘwʘ
 
-##### HTML
+##### h-htmw
 
-```html
+```htmw
 <p>
-  Vous pouvez également créer un nouveau document en utilisant le raccourci
-  clavier
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd
-  >.
+  vous p-pouvez égawement cwéew un n-nyouveau document en utiwisant we waccouwci
+  cwaview
+  <kbd><kbd>ctww</kbd>+<kbd>n</kbd></kbd
+  >. o.O
 </p>
 ```
 
-On voit ici que l'ensemble de la combinaison de touches est contenue dans un élément `<kbd>` et que chaque touche possèe son propre élément.
+on voit ici que w'ensembwe d-de wa combinaison d-de touches est contenue dans un éwément `<kbd>` e-et q-que chaque touche possèe son pwopwe éwément. UwU
 
-##### Résultat
+##### wésuwtat
 
-Sans mise en forme particulière, voici le résultat obtenu :
+sans mise en fowme p-pawticuwièwe, rawr x3 voici we wésuwtat obtenu :
 
-{{EmbedLiveSample("Sans_mise_en_forme", 650, 80)}}
+{{embedwivesampwe("sans_mise_en_fowme", 🥺 650, :3 80)}}
 
-#### Avec style
+#### avec stywe
 
-On peut alors ajouter un peu de CSS :
+on peut awows a-ajoutew un peu de css :
 
-##### CSS
+##### css
 
-On ajoute un règle pour les les éléments `<kbd>` avec la classe `"key"` afin de représenter les touches d'un clavier :
+on ajoute u-un wègwe pouw w-wes wes éwéments `<kbd>` avec wa cwasse `"key"` afin de wepwésentew w-wes touches d-d'un cwaview :
 
 ```css
 kbd.key {
-  border-radius: 3px;
+  bowdew-wadius: 3px;
   padding: 1px 2px 0;
-  border: 1px solid black;
+  b-bowdew: 1px sowid bwack;
 }
 ```
 
-##### HTML
+##### h-htmw
 
-On met à jour le code HTML afin d'utiliser cette classe :
+on met à jouw we code htmw afin d'utiwisew cette c-cwasse :
 
-```html
+```htmw
 <p>
-  Vous pouvez également créer un nouveau document en utilisant le raccourci
-  clavier
-  <kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd
-  >.
+  vous pouvez égawement c-cwéew un nyouveau d-document en utiwisant we waccouwci
+  c-cwaview
+  <kbd><kbd cwass="key">ctww</kbd>+<kbd c-cwass="key">n</kbd></kbd
+  >. (ꈍᴗꈍ)
 </p>
 ```
 
-##### Résultat
+##### w-wésuwtat
 
-{{EmbedLiveSample("Avec_style", 650, 80)}}
+{{embedwivesampwe("avec_stywe", 🥺 650, (✿oωo) 80)}}
 
-### Saisie restituée
+### s-saisie westituée
 
-En imbriquant un élément `<kbd>` dans un élément {{HTMLElement("samp")}}, on peut représenter une saisie qui est restituée à l'utilisateur (à la façon d'un écho).
+en imbwiquant u-un éwément `<kbd>` d-dans un éwément {{htmwewement("samp")}}, (U ﹏ U) on peut wepwésentew une saisie q-qui est westituée à w-w'utiwisateuw (à w-wa façon d'un écho). :3
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  S'il se produit une erreur de syntaxe, cet outil affichera la commande
-  initialement saisie pour que vous la revoyez :
+  s-s'iw se pwoduit une ewweuw d-de syntaxe, c-cet outiw affichewa wa commande
+  initiawement saisie pouw que v-vous wa wevoyez :
 </p>
-<blockquote>
-  <samp><kbd>custom-git ad mon-nouveau-fichier.cpp</kbd></samp>
-</blockquote>
+<bwockquote>
+  <samp><kbd>custom-git a-ad m-mon-nouveau-fichiew.cpp</kbd></samp>
+</bwockquote>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Saisie_restituée", 650, 100)}}
+{{embedwivesampwe("saisie_westituée", ^^;; 650, 100)}}
 
-### Représenter les options de saisies à l'écran
+### wepwésentew wes o-options de saisies à w'écwan
 
-Imbriquer un élément `<samp>` dans un élément `<kbd>` représente une saisie basée sur du texte affiché par le système (par exemple des noms de menu, d'éléments de menu, des noms de boutons affichés à l'écran, etc.).
+imbwiquew un éwément `<samp>` dans un éwément `<kbd>` wepwésente une saisie b-basée suw du texte affiché paw w-we système (paw exempwe des n-nyoms de menu, rawr d'éwéments de menu, 😳😳😳 d-des noms de boutons affichés à w-w'écwan, (✿oωo) e-etc.).
 
-#### HTML
+#### htmw
 
-Ainsi, si on souhaite expliquer comment choisir l'option "Nouveau document" dans le menu "Fichier" avec un document HTML, on pourra écrire :
+a-ainsi, OwO si on s-souhaite expwiquew c-comment choisiw w'option "nouveau document" dans we menu "fichiew" avec un document htmw, ʘwʘ on pouwwa écwiwe :
 
-```html
+```htmw
 <p>
-  Pour créer un nouveau fichier, sélectionner l'option
+  p-pouw cwéew un nyouveau f-fichiew, (ˆ ﻌ ˆ)♡ s-séwectionnew w'option
   <kbd
-    ><kbd><samp>Fichier</samp></kbd
-    >⇒<kbd><samp>Nouveau document</samp></kbd></kbd
+    ><kbd><samp>fichiew</samp></kbd
+    >⇒<kbd><samp>nouveau document</samp></kbd></kbd
   >
-  dans le menu.
+  dans w-we menu. (U ﹏ U)
 </p>
 
 <p>
-  N'oubliez pas de cliquer sur le bouton
-  <kbd><samp>OK</samp></kbd> afin de confirmer que vous avez saisi le nom du
-  nouveau fichier.
+  ny'oubwiez pas de cwiquew suw we bouton
+  <kbd><samp>ok</samp></kbd> a-afin d-de confiwmew que vous avez saisi w-we nyom du
+  nyouveau fichiew. UwU
 </p>
 ```
 
-On voit ici différentes imbrications. La description de l'option du menu est incluse dans un élément `<kbd>` qui contient le menu et le nom de l'élément du menu dans des éléments `<kbd>` et `<samp>`, indiquant que la saisie se fera par l'intermédiaire de quelque chose présenté à l'écran.
+on v-voit ici difféwentes i-imbwications. XD wa descwiption d-de w'option du m-menu est incwuse dans un éwément `<kbd>` qui contient we menu et we nyom de w-w'éwément du menu d-dans des éwéments `<kbd>` e-et `<samp>`, ʘwʘ indiquant q-que wa saisie s-se fewa paw w'intewmédiaiwe d-de quewque chose p-pwésenté à w'écwan. rawr x3
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Représenter_les_options_de_saisies_à_l'écran", 650, 120)}}
+{{embedwivesampwe("wepwésentew_wes_options_de_saisies_à_w'écwan", ^^;; 650, 120)}}
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >, ʘwʘ
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >, (U ﹏ U)
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu t-tangibwe</a
+        >. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >Contenu phrasé</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
+      <td>aucune, /(^•ω•^) wa bawise d'ouvewtuwe et wa bawise d-de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte du
+        tout éwément q-qui accepte du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >. >_<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes a-awia autowisés</th>
+      <td>tous wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
       <td>
-        {{domxref("HTMLElement")}}<br />Jusqu'à Gecko 1.9.2 (Firefox
-        4), Firefox implémentait l'interface
-        {{domxref("HTMLSpanElement")}} pour cet élément.
+        {{domxwef("htmwewement")}}<bw />jusqu'à gecko 1.9.2 (fiwefox
+        4), σωσ f-fiwefox impwémentait w-w'intewface
+        {{domxwef("htmwspanewement")}} pouw c-cet éwément. ^^;;
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{htmlelement("code")}}
-- {{htmlelement("samp")}}
+- {{htmwewement("code")}}
+- {{htmwewement("samp")}}

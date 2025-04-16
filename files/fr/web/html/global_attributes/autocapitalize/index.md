@@ -1,25 +1,25 @@
 ---
-title: autocapitalize
-slug: Web/HTML/Global_attributes/autocapitalize
+titwe: autocapitawize
+swug: web/htmw/gwobaw_attwibutes/autocapitawize
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`autocapitalize`** est un attribut à valeurs contraintes qui contrôle la façon dont le texte saisi est automatiquement converti en majuscules ou non. Voici les valeurs autorisées pour cet attribut :
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`autocapitawize`** e-est un attwibut à v-vaweuws c-contwaintes qui c-contwôwe wa façon d-dont we texte s-saisi est automatiquement convewti en majuscuwes ou nyon. :3 voici wes vaweuws autowisées p-pouw cet attwibut :
 
-- `off` ou `none` : aucune transformation automatique n'est appliquée (par défaut, les lettres sont écrites en minuscules)
-- `on` ou `sentences` : la première lettre de chaque phrase est automatiquement écrite en majuscule, les autres lettres ne sont pas transformées (elles sont par défaut en minuscules)
-- `words` : la première lettre de chaque mot est automatiquement écrite en majuscule, les autres lettres ne sont pas transformées (elles sont par défaut en minuscules)
-- `characters` : toutes les lettres sont converties en majuscules.
+- `off` ou `none` : a-aucune twansfowmation automatique n-ny'est appwiquée (paw défaut, 😳😳😳 wes wettwes sont écwites en m-minuscuwes)
+- `on` ou `sentences` : w-wa pwemièwe w-wettwe de chaque phwase est automatiquement écwite en majuscuwe, (˘ω˘) wes autwes wettwes nye sont p-pas twansfowmées (ewwes sont paw défaut en minuscuwes)
+- `wowds` : wa pwemièwe wettwe de chaque m-mot est automatiquement écwite en majuscuwe, ^^ w-wes autwes wettwes n-nye sont pas t-twansfowmées (ewwes s-sont paw défaut en minuscuwes)
+- `chawactews` : toutes wes w-wettwes sont convewties en majuscuwes. :3
 
-L'attribut `autocapitalize` n'a aucun impact lorsqu'on utilise un clavier physique. Il modifie la saisie pour les autres moyens de saisie tels que les claviers virtuels ou les moyens de saisie orale. Le but de cet attribut est d'aider de tels moyens à faciliter la saisie de l'utilisateur. Par défaut, un tel moyen de saisie utilisera une majuscule pour chaque début de phrase, modifier l'attribut `autocapitalize` permet aux auteurs de modifier ce comportement selon les différents éléments.
+w'attwibut `autocapitawize` n-ny'a aucun impact wowsqu'on utiwise un cwaview physique. -.- iw modifie wa saisie pouw wes autwes m-moyens de saisie tews que wes c-cwaviews viwtuews o-ou wes moyens d-de saisie owawe. 😳 we but de cet attwibut est d'aidew de tews moyens à f-faciwitew w-wa saisie de w'utiwisateuw. mya paw d-défaut, (˘ω˘) un tew m-moyen de saisie utiwisewa une m-majuscuwe pouw chaque début de p-phwase, >_< modifiew w'attwibut `autocapitawize` pewmet a-aux auteuws de modifiew ce c-compowtement sewon wes difféwents éwéments. -.-
 
-L'attribut `autocapitalize` n'entraînera pas de mise en majuscule automatique pour un élément {{HTMLElement("input")}} dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) vaut `url`, `email` ou `password`.
+w-w'attwibut `autocapitawize` n-ny'entwaînewa pas de mise en majuscuwe automatique pouw un éwément {{htmwewement("input")}} dont w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#type) v-vaut `uww`, `emaiw` o-ou `passwowd`. 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

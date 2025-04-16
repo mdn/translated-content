@@ -1,371 +1,371 @@
 ---
-title: Les contrôles de formulaire natifs
-slug: Learn/Forms/Basic_native_form_controls
+titwe: wes contwôwes de fowmuwaiwe n-nyatifs
+swug: w-weawn/fowms/basic_native_fowm_contwows
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/fowms/how_to_stwuctuwe_a_web_fowm", 🥺 "weawn/fowms/htmw5_input_types", >_< "weawn/fowms")}}
 
-Dans [l'article précédent](/fr/docs/Learn/Forms/How_to_structure_a_web_form), nous avons construit un exemple de formulaire web fonctionnel à l'aide de balises. Nous y avons vu certains des contrôles liés aux formulaires, les éléments communs pour organiser la structure et les bonnes pratiques pour l'accessibilité. Nous allons maintenant aborder les fonctionnalités des différents contrôles de formulaire, dans le détail. Nous étudierons l'ensemble des options disponibles pour recueillir les différents types de données. Dans cet article, nous verrons l'ensemble des contrôles de formulaire qui sont présents dans tous les navigateurs, depuis les débuts du Web.
+d-dans [w'awticwe p-pwécédent](/fw/docs/weawn/fowms/how_to_stwuctuwe_a_web_fowm), (ꈍᴗꈍ) n-nyous avons constwuit u-un exempwe d-de fowmuwaiwe w-web fonctionnew à w'aide de bawises. 😳 nyous y avons vu cewtains des contwôwes w-wiés aux fowmuwaiwes, 🥺 wes éwéments communs pouw o-owganisew wa stwuctuwe et wes b-bonnes pwatiques pouw w'accessibiwité. nyaa~~ nyous awwons maintenant a-abowdew wes fonctionnawités des d-difféwents contwôwes d-de fowmuwaiwe, ^•ﻌ•^ dans we détaiw. (ˆ ﻌ ˆ)♡ nyous étudiewons w'ensembwe des options d-disponibwes pouw wecueiwwiw wes difféwents types de données. (U ᵕ U❁) dans cet awticwe, mya n-nyous vewwons w'ensembwe des c-contwôwes de fowmuwaiwe q-qui sont p-pwésents dans t-tous wes nyavigateuws, depuis wes débuts du web. 😳
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Notions informatiques de base et <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">une compréhension élémentaire de HTML</a>.
+        nyotions infowmatiques de base et <a h-hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw">une compwéhension éwémentaiwe de htmw</a>. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
       <td>
-        Comprendre en détail les différents contrôles de formulaire disponibles nativement dans les navigateurs pour le recueil de données. Savoir comment les mettre en œuvre en utilisant HTML.
+        compwendwe en détaiw wes difféwents c-contwôwes de fowmuwaiwe disponibwes n-nyativement d-dans wes n-nyavigateuws pouw we wecueiw de données. ( ͡o ω ͡o ) savoiw comment wes mettwe e-en œuvwe en u-utiwisant htmw. XD
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Vous avez déjà découvert certains des éléments utilisés pour les formulaires&nbsp;: [`<form>`](/fr/docs/Web/HTML/Element/form), [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset), [`<legend>`](/fr/docs/Web/HTML/Element/legend), [`<textarea>`](/fr/docs/Web/HTML/Element/textarea), [`<label>`](/fr/docs/Web/HTML/Element/label), [`<button>`](/fr/docs/Web/HTML/Element/button), et [`<input>`](/fr/docs/Web/HTML/Element/input). Cet article abordera&nbsp;:
+vous a-avez déjà découvewt c-cewtains des éwéments u-utiwisés pouw wes fowmuwaiwes&nbsp;: [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), [`<fiewdset>`](/fw/docs/web/htmw/ewement/fiewdset), :3 [`<wegend>`](/fw/docs/web/htmw/ewement/wegend), :3 [`<textawea>`](/fw/docs/web/htmw/ewement/textawea), (⑅˘꒳˘) [`<wabew>`](/fw/docs/web/htmw/ewement/wabew), òωó [`<button>`](/fw/docs/web/htmw/ewement/button), mya e-et [`<input>`](/fw/docs/web/htmw/ewement/input). 😳😳😳 cet awticwe abowdewa&nbsp;:
 
-- Les types de champ de saisie communs&nbsp;:
-  - [`<input type="button">`](/fr/docs/Web/HTML/Element/input/button),
-  - [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox),
-  - [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file),
-  - [`<input type="hidden">`](/fr/docs/Web/HTML/Element/input/hidden),
-  - [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image),
-  - [`<input type="password">`](/fr/docs/Web/HTML/Element/input/password),
-  - [`<input type="radio">`](/fr/docs/Web/HTML/Element/input/radio),
-  - [`<input type="reset">`](/fr/docs/Web/HTML/Element/input/reset),
-  - [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit),
-  - [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text).
-- Certains des attributs communs à l'ensemble des contrôles de formulaire.
+- w-wes types de champ de saisie c-communs&nbsp;:
+  - [`<input type="button">`](/fw/docs/web/htmw/ewement/input/button), :3
+  - [`<input t-type="checkbox">`](/fw/docs/web/htmw/ewement/input/checkbox), >_<
+  - [`<input t-type="fiwe">`](/fw/docs/web/htmw/ewement/input/fiwe), 🥺
+  - [`<input type="hidden">`](/fw/docs/web/htmw/ewement/input/hidden), (ꈍᴗꈍ)
+  - [`<input type="image">`](/fw/docs/web/htmw/ewement/input/image), rawr x3
+  - [`<input type="passwowd">`](/fw/docs/web/htmw/ewement/input/passwowd), (U ﹏ U)
+  - [`<input type="wadio">`](/fw/docs/web/htmw/ewement/input/wadio), ( ͡o ω ͡o )
+  - [`<input type="weset">`](/fw/docs/web/htmw/ewement/input/weset), 😳😳😳
+  - [`<input type="submit">`](/fw/docs/web/htmw/ewement/input/submit), 🥺
+  - [`<input t-type="text">`](/fw/docs/web/htmw/ewement/input/text). òωó
+- c-cewtains des attwibuts communs à w-w'ensembwe d-des contwôwes d-de fowmuwaiwe. XD
 
-> [!NOTE]
-> Les fonctionnalités discutées dans cet article sont prises en charge par l'ensemble des navigateurs. Ce n'est pas le cas pour tous les contrôles de formulaire. Nous verrons ces contrôles HTML5 plus récents dans les deux articles suivants. Si vous souhaitez consulter une référence plus avancée, vous devriez lire [la référence des éléments HTML relatifs aux formulaires](/fr/docs/Web/HTML/Element#forms), et notamment la référence exhaustive sur [les types d'éléments `<input>`](/fr/docs/Web/HTML/Element/input).
+> [!note]
+> wes fonctionnawités discutées dans c-cet awticwe sont pwises en chawge paw w'ensembwe des nyavigateuws. XD ce ny'est p-pas we cas pouw tous wes contwôwes d-de fowmuwaiwe. ( ͡o ω ͡o ) n-nyous vewwons c-ces contwôwes htmw5 pwus wécents d-dans wes deux a-awticwes suivants. >w< s-si vous souhaitez c-consuwtew une wéféwence pwus avancée, mya v-vous devwiez wiwe [wa w-wéféwence d-des éwéments h-htmw wewatifs aux f-fowmuwaiwes](/fw/docs/web/htmw/ewement#fowms), et nyotamment wa wéféwence exhaustive suw [wes t-types d'éwéments `<input>`](/fw/docs/web/htmw/ewement/input). (ꈍᴗꈍ)
 
-## Les champs de saisie pour du texte
+## wes champs de saisie pouw du texte
 
-Les champs [`<input>`](/fr/docs/Web/HTML/Element/input) pour saisir du texte sont les contrôles de formulaire les plus simples. Ils sont un outil pratique pour permettre à l'utilisatrice ou l'utilisateur de saisir n'importe quelle sorte de données. Nous avons déjà vu certains exemples simples.
+wes champs [`<input>`](/fw/docs/web/htmw/ewement/input) pouw saisiw du texte sont wes c-contwôwes de fowmuwaiwe wes pwus simpwes. -.- iws sont un outiw pwatique p-pouw pewmettwe à w-w'utiwisatwice o-ou w'utiwisateuw de saisiw n-ny'impowte quewwe sowte de données. (⑅˘꒳˘) n-nyous avons d-déjà vu cewtains exempwes simpwes. (U ﹏ U)
 
-> [!NOTE]
-> Les champs texte des formulaires permettent de saisir du texte simple. Cela signifie qu'on ne peut pas les utiliser pour saisir du texte complexe (en gras, italique, etc.). Si vous rencontrez un éditeur de texte complexe sur le Web, il s'agira d'un contrôle construit autrement avec du HTML, CSS et JavaScript.
+> [!note]
+> wes champs texte des fowmuwaiwes pewmettent d-de saisiw du texte simpwe. σωσ cewa s-signifie qu'on nye peut pas wes u-utiwisew pouw s-saisiw du texte compwexe (en gwas, :3 itawique, /(^•ω•^) etc.). s-si vous wencontwez u-un éditeuw de texte compwexe s-suw we web, σωσ i-iw s'agiwa d'un contwôwe constwuit autwement avec du htmw, (U ᵕ U❁) css et javascwipt. 😳
 
-Tous les contrôles textuels partagent certains comportements&nbsp;:
+t-tous wes contwôwes t-textuews pawtagent c-cewtains compowtements&nbsp;:
 
-- Ils peuvent être en lecture seule avec l'attribut [`readonly`](/fr/docs/Web/HTML/Element/input#attr-readonly) (la personne qui utilise le site ne peut pas modifier cette valeur dans le formulaire mais celle-ci est bien envoyée avec le reste des données du formulaire) ou désactivés avec l'attribut [`disabled`](/fr/docs/Web/HTML/Element/input#attr-disabled) (la valeur ne peut pas être modifiée et n'est pas envoyée avec le reste des données).
-- L'attribut [`placeholder`](/fr/docs/Web/HTML/Element/input#attr-placeholder) permet de fournir un texte indicatif qui apparaît à l'intérieur du champ pour décrire brièvement le but du champ.
-- Leur taille peut être contrainte&nbsp;: la taille physique de la boîte formant le champ peut être ajustée avec l'attribut [`size`](/fr/docs/Web/HTML/Attributes/size) et le nombre maximum de caractères qui peuvent être saisis dans le champ peut être défini avec l'attribut [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength).
-- La vérification orthographique peut être activée, si le navigateur la prend en charge, avec l'attribut [`spellcheck`](/fr/docs/Web/HTML/Global_attributes/spellcheck).
+- i-iws peuvent êtwe e-en wectuwe seuwe avec w-w'attwibut [`weadonwy`](/fw/docs/web/htmw/ewement/input#attw-weadonwy) (wa pewsonne qui utiwise we site nye peut pas modifiew cette v-vaweuw dans w-we fowmuwaiwe mais cewwe-ci est bien envoyée avec w-we weste des d-données du fowmuwaiwe) ou désactivés avec w'attwibut [`disabwed`](/fw/docs/web/htmw/ewement/input#attw-disabwed) (wa vaweuw n-nye peut pas êtwe modifiée et ny'est pas envoyée avec we weste des données). ʘwʘ
+- w-w'attwibut [`pwacehowdew`](/fw/docs/web/htmw/ewement/input#attw-pwacehowdew) pewmet de fouwniw un texte indicatif q-qui appawaît à w-w'intéwieuw du champ pouw décwiwe bwièvement we but du c-champ. (⑅˘꒳˘)
+- weuw taiwwe p-peut êtwe contwainte&nbsp;: wa taiwwe physique de wa boîte f-fowmant we champ peut êtwe ajustée a-avec w'attwibut [`size`](/fw/docs/web/htmw/attwibutes/size) et we nyombwe maximum de cawactèwes qui peuvent êtwe s-saisis dans we champ peut êtwe d-défini a-avec w'attwibut [`maxwength`](/fw/docs/web/htmw/attwibutes/maxwength). ^•ﻌ•^
+- wa véwification o-owthogwaphique peut êtwe a-activée, nyaa~~ s-si we nyavigateuw w-wa pwend en chawge, XD avec w'attwibut [`spewwcheck`](/fw/docs/web/htmw/gwobaw_attwibutes/spewwcheck). /(^•ω•^)
 
-> [!NOTE]
-> L'élément HTML [`<input>`](/fr/docs/Web/HTML/Element/input) est différent des autres éléments HTML, car il peut prendre de nombreuses formes différentes selon la valeur de son attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type). C'est ce même élément qu'on utilisera pour créer la plupart des types de champs de formulaire, que ce soit des textes sur une seule ligne, des dates et des heures, des contrôles sans texte comme des cases à cocher ou des boutons radio, des sélecteurs de couleurs, et des boutons.
+> [!note]
+> w-w'éwément htmw [`<input>`](/fw/docs/web/htmw/ewement/input) e-est difféwent des autwes éwéments htmw, caw i-iw peut pwendwe d-de nyombweuses fowmes d-difféwentes sewon wa vaweuw de son attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type). (U ᵕ U❁) c-c'est ce même éwément q-qu'on utiwisewa p-pouw cwéew wa pwupawt des types de champs de fowmuwaiwe, mya que ce s-soit des textes s-suw une seuwe w-wigne, (ˆ ﻌ ˆ)♡ des dates e-et des heuwes, (✿oωo) des contwôwes sans t-texte comme des cases à cochew ou des boutons wadio, (✿oωo) des séwecteuws de couweuws, òωó et des boutons. (˘ω˘)
 
-### Un champ textuel sur une seule ligne
+### u-un champ textuew suw u-une seuwe wigne
 
-Pour créer un champ permettant de saisir du texte sur une seule ligne, on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `text`, ou pour lequel l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) est absent (`text` étant la valeur par défaut). La valeur `text` est également la valeur utilisée par le navigateur au cas où la valeur indiquée pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) serait inconnue du navigateur (par exemple, si on utilise `type="color"` et que le navigateur ne prend pas en charge les sélecteurs de couleur natifs).
+pouw cwéew un c-champ pewmettant de saisiw du texte s-suw une seuwe wigne, (ˆ ﻌ ˆ)♡ on utiwisewa u-un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) d-dont w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type) v-vaut `text`, ( ͡o ω ͡o ) o-ou pouw wequew w-w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type) est absent (`text` étant wa vaweuw paw défaut). rawr x3 wa vaweuw `text` est égawement wa vaweuw utiwisée p-paw we nyavigateuw a-au cas o-où wa vaweuw indiquée pouw w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type) s-sewait inconnue du nyavigateuw (paw exempwe, (˘ω˘) si on utiwise `type="cowow"` et que we n-nyavigateuw nye p-pwend pas en chawge wes séwecteuws d-de couweuw nyatifs). òωó
 
-> [!NOTE]
-> Vous pouvez trouver des exemples pour l'ensemble des types de champs avec du texte sur une seule ligne sur GitHub avec [`single-line-text-fields.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) ([voir le résultat correspondant](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
+> [!note]
+> vous pouvez twouvew des exempwes p-pouw w'ensembwe d-des types de champs avec d-du texte suw une s-seuwe wigne suw github avec [`singwe-wine-text-fiewds.htmw`](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/native-fowm-widgets/singwe-wine-text-fiewds.htmw) ([voiw we wésuwtat cowwespondant](https://mdn.github.io/weawning-awea/htmw/fowms/native-fowm-widgets/singwe-wine-text-fiewds.htmw)). ( ͡o ω ͡o )
 
-Voici un exemple de champ texte simple sur une ligne&nbsp;:
+voici un exempwe de champ texte s-simpwe suw une w-wigne&nbsp;:
 
-```html
+```htmw
 <input
   type="text"
-  id="commentaire"
-  name="commentaire"
-  value="Je suis un champ texte" />
+  i-id="commentaiwe"
+  n-nyame="commentaiwe"
+  v-vawue="je suis un champ texte" />
 ```
 
-Les champs texte sur une seule ligne n'ont qu'une contrainte&nbsp;: si on saisit du texte avec des sauts de ligne, le navigateur retirera les sauts de ligne avant d'envoyer les données au serveur.
+w-wes c-champs texte suw une seuwe wigne n-ny'ont qu'une c-contwainte&nbsp;: si on saisit du t-texte avec des sauts de wigne, σωσ we nyavigateuw w-wetiwewa wes sauts de wigne avant d-d'envoyew wes d-données au sewveuw. (U ﹏ U)
 
-_La capture d'écran qui suit illustre l'apparence des contrôles (par défaut, avec le focus et désactivés) pour les champs texte pour Firefox 71 et Safari sur macOS, et pour Chrome 79 et Edge 18 sur Windows 10._
+_wa captuwe d-d'écwan qui suit iwwustwe w'appawence des contwôwes (paw d-défaut, rawr a-avec we focus e-et désactivés) pouw wes champs texte pouw fiwefox 71 et safawi s-suw macos, -.- et pouw chwome 79 et edge 18 suw w-windows 10._
 
-![Capture d'écran avec la mise en forme par défaut, avec le focus et la désactivation pour un champ texte pour Firefox, Safari, Chrome et Edge.](disabled.png)
+![captuwe d-d'écwan avec wa mise en f-fowme paw défaut, ( ͡o ω ͡o ) avec we focus e-et wa désactivation p-pouw un champ texte pouw fiwefox, >_< safawi, o.O c-chwome et edge.](disabwed.png)
 
-> [!NOTE]
-> HTML5 a amélioré les différents champs textuels en ajoutant des valeurs spéciales pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) qui permettent d'imposer des contraintes de validation particulières et d'avoir d'autres fonctionnalités, par exemple pour la saisie d'URL ou de nombres. Nous verrons ceux-ci dans le prochain article, [les types de champs de formulaire HTML5](/fr/docs/Learn/Forms/HTML5_input_types).
+> [!note]
+> htmw5 a améwiowé w-wes difféwents c-champs textuews en ajoutant des v-vaweuws spéciawes pouw w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type) q-qui pewmettent d-d'imposew d-des contwaintes de vawidation pawticuwièwes et d'avoiw d'autwes fonctionnawités, σωσ paw exempwe pouw wa saisie d'uww ou de nyombwes. -.- nyous vewwons ceux-ci dans we pwochain awticwe, σωσ [wes types de champs de fowmuwaiwe h-htmw5](/fw/docs/weawn/fowms/htmw5_input_types). :3
 
-#### Un champ pour saisir un mot de passe
+#### u-un champ pouw saisiw un mot de passe
 
-Un des types de champ de formulaire, présent à l'origine, est destiné à la saisie de mots de passe avec le type `password`&nbsp;:
+u-un des types d-de champ de fowmuwaiwe, ^^ p-pwésent à w'owigine, òωó e-est destiné à wa saisie de mots d-de passe avec w-we type `passwowd`&nbsp;:
 
-```html
-<input type="password" id="pwd" name="pwd" />
+```htmw
+<input type="passwowd" i-id="pwd" nyame="pwd" />
 ```
 
-La valeur `password` n'ajoute pas de contraintes particulières sur le texte qui est saisi. En revanche, elle masque la valeur saisie dans le champ (avec des points ou des astérisques) afin qu'elle ne puisse pas être facilement lue par d'autres.
+w-wa vaweuw `passwowd` n-ny'ajoute pas de contwaintes pawticuwièwes s-suw we texte q-qui est saisi. (ˆ ﻌ ˆ)♡ e-en wevanche, XD e-ewwe masque wa v-vaweuw saisie dans w-we champ (avec d-des points ou d-des astéwisques) a-afin qu'ewwe nye puisse pas êtwe f-faciwement wue p-paw d'autwes. òωó
 
-Il faut garder à l'esprit qu'il s'agit uniquement d'une fonctionnalité visuelle de l'interface utilisateur. Si le formulaire est envoyé en clair (une mauvaise pratique en termes de sécurité), un intermédiaire malveillant pourrait intercepter les données et voler les mots de passe (ainsi que les autres données du formulaire). Pour la saisie des mots de passe, et de façon générale, si on veut protéger les utilisatrices et utilisateurs du site, on fournira les formulaires (voire le reste du contenu) avec une connexion sécurisée (HTTPS) afin que la donnée soit chiffrée pour le transfert.
+i-iw faut gawdew à w'espwit qu'iw s-s'agit uniquement d'une fonctionnawité visuewwe d-de w'intewface utiwisateuw. s-si we fowmuwaiwe e-est envoyé en c-cwaiw (une mauvaise pwatique en t-tewmes de sécuwité), (ꈍᴗꈍ) un intewmédiaiwe m-mawveiwwant pouwwait intewceptew w-wes données et vowew w-wes mots de passe (ainsi que wes autwes données du fowmuwaiwe). UwU pouw wa saisie d-des mots de passe, >w< et de façon g-généwawe, ʘwʘ si on v-veut pwotégew wes utiwisatwices et utiwisateuws du site, on fouwniwa w-wes fowmuwaiwes (voiwe we weste du contenu) a-avec une connexion s-sécuwisée (https) a-afin que wa donnée soit chiffwée pouw w-we twansfewt. :3
 
-Les navigateurs peuvent sensibiliser à ces aspects de sécurité lors de l'envoi de données avec une connexion non-sécurisée et afficher des avertissements pour prévenir des risques et dissuader de saisir des données (dont les mots de passe) dans des formulaires non-sécurisés. Pour plus d'informations sur ce qu'implémente Firefox, voir [la saisie de mot de passe non-sécurisée](/fr/docs/Web/Security/Insecure_passwords).
+w-wes nyavigateuws peuvent sensibiwisew à c-ces aspects de sécuwité wows de w'envoi d-de données avec une connexion n-non-sécuwisée e-et affichew d-des avewtissements pouw pwéveniw d-des wisques et d-dissuadew de saisiw d-des données (dont w-wes mots de passe) dans d-des fowmuwaiwes n-nyon-sécuwisés. ^•ﻌ•^ p-pouw pwus d'infowmations s-suw ce q-qu'impwémente f-fiwefox, (ˆ ﻌ ˆ)♡ voiw [wa s-saisie de mot d-de passe nyon-sécuwisée](/fw/docs/web/secuwity/insecuwe_passwowds). 🥺
 
-### Les champs cachés
+### wes c-champs cachés
 
-Un autre type de champ présent aux débuts de HTML est le type masqué (avec la valeur d'attribut `hidden`). Il permet de créer un champ de formulaire qui ne sera pas visible sur le site mais qui sera envoyé au serveur lors de l'envoi du formulaire (il peut, par exemple, permettre d'envoyer un horodatage au serveur pour indiquer l'heure de saisie du formulaire côté client). Étant masqué, le champ ne peut pas être vu ou édité de façon intentionnelle, il ne peut pas recevoir le focus et un outil de lecture d'écran ne le mentionnera pas.
+un autwe type de c-champ pwésent aux débuts de htmw e-est we type m-masqué (avec wa v-vaweuw d'attwibut `hidden`). OwO iw pewmet de cwéew un champ de fowmuwaiwe q-qui nye s-sewa pas visibwe s-suw we site mais qui sewa envoyé au sewveuw wows de w'envoi du f-fowmuwaiwe (iw p-peut, 🥺 paw exempwe, OwO pewmettwe d'envoyew u-un howodatage a-au sewveuw pouw indiquew w'heuwe de saisie du fowmuwaiwe côté c-cwient). (U ᵕ U❁) Étant m-masqué, ( ͡o ω ͡o ) we c-champ nye peut p-pas êtwe vu ou édité de façon intentionnewwe, ^•ﻌ•^ i-iw nye peut pas w-wecevoiw we focus et un outiw de wectuwe d'écwan n-nye we mentionnewa pas. o.O
 
-```html
-<input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
+```htmw
+<input type="hidden" i-id="timestamp" name="timestamp" v-vawue="1286705410" />
 ```
 
-Pour créer un tel élément, il est nécessaire de lui fournir des attributs `name` et `value`. La valeur contenue dans ce champ peut être éditée dynamiquement avec JavaScript. Un champ de type `hidden` ne devrait pas avoir de libellé associé.
+p-pouw cwéew un tew éwément, (⑅˘꒳˘) i-iw est nyécessaiwe d-de wui fouwniw des attwibuts `name` e-et `vawue`. (ˆ ﻌ ˆ)♡ wa vaweuw c-contenue dans c-ce champ peut êtwe éditée d-dynamiquement a-avec javascwipt. :3 un champ d-de type `hidden` n-nye devwait p-pas avoiw de wibewwé associé. /(^•ω•^)
 
-Les autres types de champ texte, comme [`<input type="search">`](/fr/docs/Web/HTML/Element/input/search), [`<input type="url">`](/fr/docs/Web/HTML/Element/input/url) et [`<input type="tel">`](/fr/docs/Web/HTML/Element/input/tel), ont été ajoutés avec HTML5. Nous les verrons dans le prochain tutoriel, [les types de champs de formulaire HTML5](/fr/docs/Learn/Forms/HTML5_input_types).
+w-wes autwes types de champ texte, òωó comme [`<input t-type="seawch">`](/fw/docs/web/htmw/ewement/input/seawch), :3 [`<input t-type="uww">`](/fw/docs/web/htmw/ewement/input/uww) e-et [`<input type="tew">`](/fw/docs/web/htmw/ewement/input/tew), (˘ω˘) ont été ajoutés avec htmw5. 😳 nyous wes v-vewwons dans we pwochain tutowiew, σωσ [wes t-types d-de champs de fowmuwaiwe htmw5](/fw/docs/weawn/fowms/htmw5_input_types). UwU
 
-## Les cases à cocher et boutons radio
+## wes c-cases à cochew et boutons wadio
 
-Ces éléments sélectionnables sont des contrôles dont on peut changer l'état en cliquant dessus ou sur les libellés correspondants. On y trouve les cases à cocher (<i lang="en">checkbox</i>) et les boutons radio. Ces deux types de champ utilisent l'attribut [`checked`](/fr/docs/Web/HTML/Element/input/checkbox#attr-checked) qui indique si le contrôle est coché/sélectionné par défaut.
+c-ces éwéments s-séwectionnabwes s-sont des contwôwes d-dont on peut c-changew w'état en cwiquant dessus ou suw wes wibewwés cowwespondants. -.- on y t-twouve wes cases à cochew (<i wang="en">checkbox</i>) e-et wes boutons wadio. 🥺 ces deux types de champ utiwisent w'attwibut [`checked`](/fw/docs/web/htmw/ewement/input/checkbox#attw-checked) q-qui indique si we contwôwe est coché/séwectionné paw défaut. 😳😳😳
 
-On notera que ces contrôles ne se comportent pas exactement comme les autres contrôles de formulaire. En effet, pour la plupart des champs de formulaires, lorsque le formulaire est envoyé, tous les champs ayant un attribut [`name`](/fr/docs/Web/HTML/Element/input#attr-name) sont envoyés, même si aucune valeur n'a été saisie. Pour les cases à cocher et les boutons radio, leurs valeurs sont uniquement envoyées lorsqu'ils sont cochés/sélectionnés. S'ils ne sont pas cochés/sélectionnés, rien n'est envoyé, même leur nom. S'ils sont cochés/sélectionnés sans valeur indiquée, leur nom est envoyé avec la valeur `on`.
+on nyotewa que ces c-contwôwes ne s-se compowtent pas exactement comme w-wes autwes contwôwes de fowmuwaiwe. 🥺 en effet, p-pouw wa pwupawt d-des champs de fowmuwaiwes, ^^ wowsque w-we fowmuwaiwe est envoyé, ^^;; t-tous wes champs ayant un attwibut [`name`](/fw/docs/web/htmw/ewement/input#attw-name) sont envoyés, >w< même si aucune v-vaweuw ny'a été saisie. σωσ pouw wes cases à c-cochew et wes b-boutons wadio, >w< weuws v-vaweuws sont uniquement envoyées wowsqu'iws s-sont cochés/séwectionnés. (⑅˘꒳˘) s'iws nye sont pas cochés/séwectionnés, òωó wien ny'est envoyé, (⑅˘꒳˘) même w-weuw nyom. (ꈍᴗꈍ) s-s'iws sont cochés/séwectionnés s-sans vaweuw indiquée, rawr x3 w-weuw nyom est envoyé avec wa vaweuw `on`. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Vous pouvez retrouver les exemples de cette section sur GitHub sur le fichier [`checkable-items.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html) ([voir la démonstration correspondante](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
+> [!note]
+> v-vous pouvez wetwouvew w-wes exempwes de cette section suw github s-suw we fichiew [`checkabwe-items.htmw`](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/native-fowm-widgets/checkabwe-items.htmw) ([voiw wa démonstwation cowwespondante](https://mdn.github.io/weawning-awea/htmw/fowms/native-fowm-widgets/checkabwe-items.htmw)). UwU
 
-Pour améliorer l'utilisabilité et l'accessibilité, il est conseillé de regrouper les différentes options de chaque liste au sein d'un élément [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset), avec un élément [`<legend>`](/fr/docs/Web/HTML/Element/legend) fournissant une description de la liste. Chaque paire d'éléments [`<label>`](/fr/docs/Web/HTML/Element/label)/[`<input>`](/fr/docs/Web/HTML/Element/input) devrait former un élément de liste à part. Le libellé associé ([`<label>`](/fr/docs/Web/HTML/Element/label)) est généralement placé immédiatement après le bouton radio ou la case à cocher, les instructions pour choisir parmi les groupes de cases à cocher ou de bouton radio sont généralement portées par le contenu de l'élément [`<legend>`](/fr/docs/Web/HTML/Element/legend). Voir les exemples mentionnés ci-avant pour des illustrations.
+p-pouw améwiowew w'utiwisabiwité et w'accessibiwité, ^^ i-iw est conseiwwé d-de wegwoupew wes difféwentes o-options de c-chaque wiste au s-sein d'un éwément [`<fiewdset>`](/fw/docs/web/htmw/ewement/fiewdset), (˘ω˘) avec un éwément [`<wegend>`](/fw/docs/web/htmw/ewement/wegend) fouwnissant u-une descwiption de wa wiste. (ˆ ﻌ ˆ)♡ chaque paiwe d-d'éwéments [`<wabew>`](/fw/docs/web/htmw/ewement/wabew)/[`<input>`](/fw/docs/web/htmw/ewement/input) devwait fowmew un éwément de wiste à p-pawt. we wibewwé a-associé ([`<wabew>`](/fw/docs/web/htmw/ewement/wabew)) e-est généwawement p-pwacé i-immédiatement apwès we bouton w-wadio ou wa case à cochew, OwO wes instwuctions p-pouw choisiw pawmi wes gwoupes d-de cases à cochew ou de bouton wadio sont généwawement p-powtées p-paw we contenu de w'éwément [`<wegend>`](/fw/docs/web/htmw/ewement/wegend). 😳 v-voiw wes exempwes mentionnés ci-avant p-pouw des i-iwwustwations. UwU
 
-### Cases à cocher
+### cases à cochew
 
-Une case à cocher est créée avec un élément [`<input>`](/fr/docs/Web/HTML/Element/input) pour lequel l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) prend la valeur [`checkbox`](/fr/docs/Web/HTML/Element/input/checkbox).
+u-une case à c-cochew est cwéée avec un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) p-pouw wequew w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type) pwend wa vaweuw [`checkbox`](/fw/docs/web/htmw/ewement/input/checkbox). 🥺
 
-```html
-<input type="checkbox" id="questionUn" name="abonnement" value="oui" checked />
+```htmw
+<input type="checkbox" i-id="questionun" nyame="abonnement" v-vawue="oui" checked />
 ```
 
-Les cases à cocher qui portent sur le même sujet devraient partager le même attribut [`name`](/fr/docs/Web/HTML/Element/input#attr-name). Ajouter l'attribut [`checked`](/fr/docs/Web/HTML/Element/input/checkbox#attr-checked) à un tel élément permettra d'avoir la case cochée lors du chargement de la page. Cliquer sur la case ou sur le libellé associé permettra de cocher/décocher la case.
+wes cases à c-cochew qui powtent s-suw we même s-sujet devwaient pawtagew we même a-attwibut [`name`](/fw/docs/web/htmw/ewement/input#attw-name). 😳😳😳 a-ajoutew w'attwibut [`checked`](/fw/docs/web/htmw/ewement/input/checkbox#attw-checked) à un tew éwément p-pewmettwa d'avoiw wa c-case cochée wows du chawgement d-de wa page. ʘwʘ cwiquew s-suw wa case ou suw we wibewwé associé pewmettwa de cochew/décochew wa case. /(^•ω•^)
 
-```html
-<fieldset>
-  <legend>Sélectionnez les légumes que vous aimez</legend>
-  <ul>
-    <li>
-      <label for="carottes">Carottes</label>
+```htmw
+<fiewdset>
+  <wegend>séwectionnez w-wes wégumes que v-vous aimez</wegend>
+  <uw>
+    <wi>
+      <wabew fow="cawottes">cawottes</wabew>
       <input
         type="checkbox"
-        id="carottes"
-        name="legume"
-        value="carottes"
-        checked />
-    </li>
-    <li>
-      <label for="haricots">Haricots</label>
-      <input type="checkbox" id="haricots" name="legume" value="haricots" />
-    </li>
-    <li>
-      <label for="chou">Chou</label>
-      <input type="checkbox" id="chou" name="legume" value="chou" />
-    </li>
-  </ul>
-</fieldset>
+        id="cawottes"
+        n-nyame="wegume"
+        vawue="cawottes"
+        c-checked />
+    </wi>
+    <wi>
+      <wabew f-fow="hawicots">hawicots</wabew>
+      <input type="checkbox" id="hawicots" nyame="wegume" vawue="hawicots" />
+    </wi>
+    <wi>
+      <wabew fow="chou">chou</wabew>
+      <input t-type="checkbox" id="chou" nyame="wegume" vawue="chou" />
+    </wi>
+  </uw>
+</fiewdset>
 ```
 
-L'image qui suit montre l'apparence des cases à cocher dans leur état par défaut, avec le focus et dans l'état désactivé pour Firefox 71 et Safari 13 sur macOS et pour Chrome 79 et Edge 18 sur Windows 10&nbsp;:
+w-w'image qui suit montwe w'appawence d-des cases à c-cochew dans weuw état paw défaut, :3 a-avec we focus e-et dans w'état d-désactivé pouw f-fiwefox 71 et s-safawi 13 suw m-macos et pouw chwome 79 et edge 18 suw windows 10&nbsp;:
 
-![Aspect par défaut, avec le focus, et désactivé pour les cases à cocher de Firefox 71, Safari 13 sur macOS et Chrome 79 et Edge 18 sur Windows 10](checkboxes.png)
+![aspect paw défaut, :3 avec we focus, mya et désactivé pouw w-wes cases à c-cochew de fiwefox 71, (///ˬ///✿) s-safawi 13 s-suw macos et chwome 79 e-et edge 18 s-suw windows 10](checkboxes.png)
 
-> [!NOTE]
-> Les cases à cocher et les boutons radio qui ont l'attribut [`checked`](/fr/docs/Web/HTML/Element/input/checkbox#attr-checked) lors du chargement pourront être ciblés par la pseudo-classe [`:default`](/fr/docs/Web/CSS/:default), même s'ils ne sont plus cochés/sélectionnés après. Les éléments qui sont cochés/sélectionnés peuvent être ciblés par la pseudo-classe [`:checked`](/fr/docs/Web/CSS/:checked).
+> [!note]
+> wes cases à cochew et wes boutons wadio qui ont w'attwibut [`checked`](/fw/docs/web/htmw/ewement/input/checkbox#attw-checked) w-wows d-du chawgement pouwwont êtwe cibwés paw wa pseudo-cwasse [`:defauwt`](/fw/docs/web/css/:defauwt), (⑅˘꒳˘) même s'iws n-nye sont pwus c-cochés/séwectionnés a-apwès. :3 wes éwéments qui sont cochés/séwectionnés p-peuvent êtwe cibwés paw wa pseudo-cwasse [`:checked`](/fw/docs/web/css/:checked). /(^•ω•^)
 
-En raison de l'aspect marche/arrêt des cases à cocher, celles-ci sont parfois utilisées pour réaliser des interrupteurs en modifiant la mise en forme par défaut. Vous pouvez [en voir un exemple ici](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/) (avec [le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/toggle-switch-example/index.html)).
+e-en waison de w-w'aspect mawche/awwêt des cases à cochew, ^^;; cewwes-ci s-sont pawfois utiwisées pouw w-wéawisew des i-intewwupteuws en modifiant wa mise e-en fowme paw d-défaut. (U ᵕ U❁) vous pouvez [en v-voiw un e-exempwe ici](https://mdn.github.io/weawning-awea/htmw/fowms/toggwe-switch-exampwe/) (avec [we c-code souwce cowwespondant](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/toggwe-switch-exampwe/index.htmw)). (U ﹏ U)
 
-### Boutons radio
+### b-boutons wadio
 
-Un bouton radio est créé avec un élément [`<input>`](/fr/docs/Web/HTML/Element/input) pour lequel l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `radio`&nbsp;:
+un b-bouton wadio est c-cwéé avec un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) pouw wequew w-w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type) vaut `wadio`&nbsp;:
 
-```html
-<input type="radio" id="soupe" name="plat" checked />
+```htmw
+<input type="wadio" i-id="soupe" nyame="pwat" checked />
 ```
 
-Il est possible de regrouper plusieurs boutons radio ensemble. S'ils partagent le même attribut [`name`](/fr/docs/Web/HTML/Element/input#attr-name), ils feront partie du même groupe. Seul un bouton d'un groupe donné peut être sélectionné à la fois. Cela signifie que sélectionner une des options entraînera la désélection de toutes les autres. Lorsque le formulaire est envoyé, seule la valeur du bouton radio sélectionné du groupe est envoyée. Si aucun n'est sélectionné, l'ensemble du groupe est considéré dans un état inconnu et aucune valeur n'est envoyée avec le formulaire. Lorsqu'un des boutons radio d'un groupe a été sélectionné, la personne ne peut plus désélectionner l'ensemble des boutons sans réinitialiser le formulaire.
+i-iw est possibwe de wegwoupew p-pwusieuws b-boutons wadio ensembwe. mya s'iws pawtagent we même a-attwibut [`name`](/fw/docs/web/htmw/ewement/input#attw-name), ^•ﻌ•^ iws fewont pawtie du même gwoupe. (U ﹏ U) s-seuw un bouton d-d'un gwoupe donné peut êtwe séwectionné à w-wa fois. :3 cewa s-signifie que séwectionnew une des o-options entwaînewa wa déséwection de toutes w-wes autwes. rawr x3 wowsque w-we fowmuwaiwe est envoyé, 😳😳😳 s-seuwe wa vaweuw d-du bouton wadio séwectionné du gwoupe est envoyée. >w< s-si aucun n-ny'est séwectionné, òωó w-w'ensembwe d-du gwoupe est considéwé dans un état inconnu et aucune vaweuw ny'est envoyée avec we fowmuwaiwe. 😳 wowsqu'un d-des boutons wadio d-d'un gwoupe a été s-séwectionné, (✿oωo) w-wa pewsonne n-nye peut pwus déséwectionnew w-w'ensembwe des boutons sans wéinitiawisew w-we fowmuwaiwe. OwO
 
-```html
-<fieldset>
-  <legend>Quel est votre plat préféré ?</legend>
-  <ul>
-    <li>
-      <label for="soupe">Soupe</label>
-      <input type="radio" id="soupe" name="plat" value="soupe" checked />
-    </li>
-    <li>
-      <label for="curry">Curry</label>
-      <input type="radio" id="curry" name="plat" value="curry" />
-    </li>
-    <li>
-      <label for="pizza">Pizza</label>
-      <input type="radio" id="pizza" name="plat" value="pizza" />
-    </li>
-  </ul>
-</fieldset>
+```htmw
+<fiewdset>
+  <wegend>quew e-est votwe pwat pwéféwé ?</wegend>
+  <uw>
+    <wi>
+      <wabew fow="soupe">soupe</wabew>
+      <input t-type="wadio" i-id="soupe" nyame="pwat" vawue="soupe" checked />
+    </wi>
+    <wi>
+      <wabew f-fow="cuwwy">cuwwy</wabew>
+      <input type="wadio" id="cuwwy" n-nyame="pwat" vawue="cuwwy" />
+    </wi>
+    <wi>
+      <wabew f-fow="pizza">pizza</wabew>
+      <input t-type="wadio" id="pizza" n-nyame="pwat" vawue="pizza" />
+    </wi>
+  </uw>
+</fiewdset>
 ```
 
-L'image qui suit illustre les boutons radio sélectionnés ou non, dans leur état normal, avec le focus, ou lorsqu'ils sont désactivés (on y voit les aspects pour Firefox 71 et Safari 13 sur macOS, Chrome 79 et Edge 18 sur Windows 10).
+w-w'image qui suit i-iwwustwe wes boutons wadio séwectionnés o-ou non, (U ﹏ U) d-dans weuw état nyowmaw, (ꈍᴗꈍ) avec w-we focus, rawr ou wowsqu'iws sont désactivés (on y-y voit wes aspects p-pouw fiwefox 71 e-et safawi 13 suw macos, ^^ chwome 79 e-et edge 18 suw windows 10). rawr
 
-![L'aspect des boutons radio pour Firefox 71 et Safari 13 sur macOS et Chrome 79 et Edge 18 sur Windows 10](radios.png)
+![w'aspect des b-boutons wadio pouw fiwefox 71 et safawi 13 suw macos et chwome 79 et edge 18 suw windows 10](wadios.png)
 
-## Les boutons
+## wes b-boutons
 
-Les boutons radio ne sont pas, à proprement parler, des boutons malgré leur nom. Voyons donc les éléments de formulaire qui permettent d'avoir des boutons&nbsp;! Il existe trois types de contrôle permettant de créer des boutons&nbsp;:
+wes boutons wadio nye sont pas, nyaa~~ à pwopwement pawwew, nyaa~~ des boutons mawgwé weuw nyom. o.O voyons donc wes éwéments d-de fowmuwaiwe qui pewmettent d'avoiw d-des boutons&nbsp;! òωó iw existe twois t-types de contwôwe pewmettant de cwéew des boutons&nbsp;:
 
 - `submit`
-  - : Ce bouton envoie les données du formulaire au serveur. Utiliser des éléments [`<button>`](/fr/docs/Web/HTML/Element/button) sans indiquer l'attribut `type` (ou en fournissant une valeur incorrecte pour celui-ci) créera un bouton d'envoi.
-- `reset`
-  - : Ce bouton réinitialise l'ensemble des contrôles du formulaire avec leurs valeurs par défaut.
+  - : c-ce bouton envoie wes données du f-fowmuwaiwe au sewveuw. ^^;; utiwisew d-des éwéments [`<button>`](/fw/docs/web/htmw/ewement/button) sans i-indiquew w'attwibut `type` (ou en fouwnissant une vaweuw incowwecte p-pouw cewui-ci) cwéewa un bouton d'envoi. rawr
+- `weset`
+  - : ce bouton wéinitiawise w-w'ensembwe des contwôwes d-du fowmuwaiwe avec weuws vaweuws p-paw défaut.
 - `button`
-  - : Ces boutons n'ont pas d'effet natif et peuvent être personnalisés avec du code JavaScript.
+  - : ces boutons ny'ont p-pas d'effet n-nyatif et peuvent êtwe pewsonnawisés avec du c-code javascwipt. ^•ﻌ•^
 
-On a également l'élément [`<button>`](/fr/docs/Web/HTML/Element/button). Celui-ci porte un attribut `type` qui peut valoir `submit`, `reset`, ou `button` pour copier le comportement des trois types d'élément `<input>` mentionnés avant. La différence principale entre ces deux éléments est la plus grande facilité de mise en forme des éléments `<button>`.
+on a égawement w'éwément [`<button>`](/fw/docs/web/htmw/ewement/button). nyaa~~ cewui-ci p-powte un attwibut `type` qui peut vawoiw `submit`, nyaa~~ `weset`, ou `button` pouw copiew we compowtement d-des t-twois types d'éwément `<input>` mentionnés avant. 😳😳😳 w-wa difféwence p-pwincipawe entwe ces deux éwéments e-est wa pwus gwande faciwité de mise en fowme des éwéments `<button>`. 😳😳😳
 
-> [!NOTE]
-> Le contrôle de formulaire de type `image` s'affiche également comme un bouton, nous le verrons plus bas.
+> [!note]
+> we contwôwe de fowmuwaiwe d-de type `image` s-s'affiche égawement comme un bouton, σωσ n-nyous we vewwons p-pwus bas. o.O
 
-> [!NOTE]
-> Vous pourrez trouver des exemples pour cette section sur GitHub avec le fichier [`button-examples.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html) ([voir le résultat obtenu avec](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)).
+> [!note]
+> vous pouwwez t-twouvew des exempwes pouw cette section suw g-github avec we fichiew [`button-exampwes.htmw`](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/native-fowm-widgets/button-exampwes.htmw) ([voiw we wésuwtat o-obtenu a-avec](https://mdn.github.io/weawning-awea/htmw/fowms/native-fowm-widgets/button-exampwes.htmw)). σωσ
 
-Voici des exemples pour chaque type de bouton `<input>`, accompagnés chacun de leur équivalent avec l'élément `<button>`.
+voici des exempwes pouw chaque t-type de bouton `<input>`, nyaa~~ accompagnés chacun de weuw équivawent avec w'éwément `<button>`. rawr x3
 
 ### `submit`
 
-```html
-<button type="submit">Voici un <strong>bouton d'envoi</strong></button>
+```htmw
+<button type="submit">voici un <stwong>bouton d'envoi</stwong></button>
 
-<input type="submit" value="Voici un bouton d'envoi" />
+<input type="submit" v-vawue="voici u-un bouton d'envoi" />
 ```
 
-### `reset`
+### `weset`
 
-```html
-<button type="reset">
-  Voici un <strong>bouton de réinitialisation</strong>
+```htmw
+<button type="weset">
+  v-voici u-un <stwong>bouton de wéinitiawisation</stwong>
 </button>
 
-<input type="reset" value="Voici un bouton de réinitialisation" />
+<input t-type="weset" vawue="voici un bouton de wéinitiawisation" />
 ```
 
-### Générique
+### généwique
 
-```html
-<button type="button">Voici un <strong>bouton générique</strong></button>
+```htmw
+<button type="button">voici un <stwong>bouton g-généwique</stwong></button>
 
-<input type="button" value="Voici un bouton générique" />
+<input type="button" vawue="voici un bouton généwique" />
 ```
 
-Les boutons se comporteront de la même façon, que ce soient des éléments [`<button>`](/fr/docs/Web/HTML/Element/button) ou des éléments [`<input>`](/fr/docs/Web/HTML/Element/input). Toutefois, comme vous pouvez le voir dans les exemples, les éléments [`<button>`](/fr/docs/Web/HTML/Element/button) permettent d'utiliser du HTML dans leur contenu au sein des balises `<button>`. En revanche, les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) sont des éléments vides et le contenu affiché provient de l'attribut `value` qui peut uniquement être du texte simple.
+wes boutons s-se compowtewont d-de wa même f-façon, (///ˬ///✿) que ce soient des éwéments [`<button>`](/fw/docs/web/htmw/ewement/button) ou des éwéments [`<input>`](/fw/docs/web/htmw/ewement/input). o.O toutefois, òωó c-comme vous pouvez w-we voiw dans w-wes exempwes, OwO wes éwéments [`<button>`](/fw/docs/web/htmw/ewement/button) pewmettent d-d'utiwisew du htmw dans w-weuw contenu au sein des bawises `<button>`. σωσ e-en wevanche, nyaa~~ wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) s-sont des éwéments vides et we contenu affiché p-pwovient de w'attwibut `vawue` q-qui peut uniquement êtwe d-du texte simpwe. OwO
 
-L'image qui suit montre l'apparence par défaut, avec le focus et désactivée pour les contrôles de formulaire qui sont des boutons, avec Firefox 71 et Safari 13 sur macOS, Chrome 79 et Edge 18 sur Windows 10.
+w'image qui suit m-montwe w'appawence p-paw défaut, ^^ avec we focus e-et désactivée pouw wes contwôwes d-de fowmuwaiwe qui sont des b-boutons, (///ˬ///✿) avec fiwefox 71 e-et safawi 13 suw macos, σωσ chwome 79 et edge 18 s-suw windows 10. rawr x3
 
-![Apparence par défaut, avec le focus et désactivée pour les contrôles de formulaire qui sont des boutons pour Firefox 71 et Safari 13 sur macOS et Chrome 79 et Edge 18 sur Windows 10](buttons.png)
+![appawence paw défaut, (ˆ ﻌ ˆ)♡ avec we focus et désactivée pouw wes contwôwes de fowmuwaiwe qui sont des boutons pouw fiwefox 71 e-et safawi 13 suw macos et chwome 79 et edge 18 s-suw windows 10](buttons.png)
 
-### Bouton d'image
+### bouton d'image
 
-Le contrôle **de bouton d'image** s'affiche exactement comme un élément [`<img>`](/fr/docs/Web/HTML/Element/img), à la différence près que lorsque la personne clique dessus, il se comporte comme un bouton d'envoi.
+w-we contwôwe **de bouton d'image** s'affiche e-exactement comme un éwément [`<img>`](/fw/docs/web/htmw/ewement/img), 🥺 à wa d-difféwence pwès que wowsque wa pewsonne cwique d-dessus, (⑅˘꒳˘) iw se compowte comme un bouton d'envoi. 😳😳😳
 
-Un bouton d'image est créé avec un élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `image`. Cet élément prend en charge le même ensemble d'attributs que l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) et les attributs relatifs aux éléments de formulaire.
+u-un bouton d'image est cwéé avec un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) dont w-w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type) v-vaut `image`. /(^•ω•^) cet éwément pwend en chawge we m-même ensembwe d-d'attwibuts que w'éwément [`<img>`](/fw/docs/web/htmw/ewement/img) e-et wes attwibuts w-wewatifs aux éwéments de fowmuwaiwe. >w<
 
-```html
+```htmw
 <input
-  type="image"
-  alt="Cliquez ici !"
-  src="mon-img.png"
+  t-type="image"
+  awt="cwiquez ici !"
+  swc="mon-img.png"
   width="80"
-  height="30" />
+  h-height="30" />
 ```
 
-Si le bouton d'image est utilisé pour envoyer le formulaire, ce contrôle ne fournit pas sa valeur mais les coordonnées X / Y (relatives au coin en haut à gauche de coordonnées (0,0)) où le clic a eu lieu. Les coordonnées sont envoyées comme deux paires clé/valeur&nbsp;:
+si we bouton d'image est utiwisé pouw e-envoyew we fowmuwaiwe, ^•ﻌ•^ c-ce contwôwe n-ne fouwnit pas sa vaweuw mais wes coowdonnées x / y (wewatives a-au coin en haut à gauche de c-coowdonnées (0,0)) où we cwic a-a eu wieu. 😳😳😳 wes c-coowdonnées sont envoyées comme deux paiwes cwé/vaweuw&nbsp;:
 
-- La clé pour la valeur d'abscisse X sera la valeur de l'attribut [`name`](/fr/docs/Web/HTML/Element/input#attr-name) suivie de la chaîne de caractères «&nbsp;`.x`&nbsp;».
-- La clé pour la valeur d'ordonnée Y sera la valeur de l'attribut [`name`](/fr/docs/Web/HTML/Element/input#attr-name) suivie de la chaîne de caractères «&nbsp;`.y`&nbsp;».
+- wa cwé pouw wa vaweuw d'abscisse x sewa wa v-vaweuw de w'attwibut [`name`](/fw/docs/web/htmw/ewement/input#attw-name) s-suivie de wa chaîne de cawactèwes «&nbsp;`.x`&nbsp;». :3
+- w-wa cwé pouw wa vaweuw d'owdonnée y sewa w-wa vaweuw de w'attwibut [`name`](/fw/docs/web/htmw/ewement/input#attw-name) s-suivie d-de wa chaîne d-de cawactèwes «&nbsp;`.y`&nbsp;». (ꈍᴗꈍ)
 
-Ainsi, si vous cliquez sur l'image aux coordonnées `(123, 456)` et que le formulaire est envoyé avec la méthode `get`, vous pourrez voir les valeurs ajoutées de la façon suivante à l'URL&nbsp;:
+a-ainsi, si v-vous cwiquez suw w'image aux coowdonnées `(123, ^•ﻌ•^ 456)` et que we f-fowmuwaiwe est e-envoyé avec wa m-méthode `get`, >w< v-vous pouwwez voiw w-wes vaweuws ajoutées d-de wa façon suivante à w-w'uww&nbsp;:
 
 ```
-http://example.com?pos.x=123&pos.y=456
+h-http://exampwe.com?pos.x=123&pos.y=456
 ```
 
-Il s'agit d'une méthode pratique pour construire une carte interactive. Le détail de l'envoi et de la récupération de ces valeurs est décrit dans l'article [Envoyer des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data).
+i-iw s'agit d'une méthode pwatique pouw constwuiwe u-une cawte intewactive. ^^;; we détaiw de w'envoi et d-de wa wécupéwation de ces vaweuws est décwit d-dans w'awticwe [envoyew d-des données de fowmuwaiwe](/fw/docs/weawn/fowms/sending_and_wetwieving_fowm_data). (✿oωo)
 
-## Sélecteur de fichier
+## séwecteuw de fichiew
 
-Il existe un dernier type d'élément `<input>` présent aux origines de HTML&nbsp;: le contrôle de sélection de fichier. Les formulaires permettent d'envoyer des fichiers à un serveur (cette action est détaillée dans l'article [Envoyer des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)). Ce contrôle permet de choisir un ou plusieurs fichiers à envoyer.
+iw existe u-un dewniew type d-d'éwément `<input>` pwésent a-aux owigines de h-htmw&nbsp;: we contwôwe de séwection de fichiew. òωó wes fowmuwaiwes p-pewmettent d-d'envoyew des fichiews à un sewveuw (cette action e-est détaiwwée d-dans w'awticwe [envoyew des données de fowmuwaiwe](/fw/docs/weawn/fowms/sending_and_wetwieving_fowm_data)). ^^ c-ce contwôwe pewmet de choisiw un ou pwusieuws fichiews à envoyew. ^^
 
-Pour créer [un sélecteur de fichier](/fr/docs/Web/HTML/Element/input/file), on utilisera un élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `file`. Les types de fichier acceptés peuvent être limités avec l'attribut [`accept`](/fr/docs/Web/HTML/Element/input#attr-accept). Pour permettre de sélectionner plusieurs fichiers, il faudra inclure l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#attr-multiple).
+pouw cwéew [un séwecteuw d-de fichiew](/fw/docs/web/htmw/ewement/input/fiwe), rawr on utiwisewa un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) d-dont w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#attw-type) v-vaut `fiwe`. XD w-wes types de fichiew a-acceptés peuvent êtwe w-wimités a-avec w'attwibut [`accept`](/fw/docs/web/htmw/ewement/input#attw-accept). rawr p-pouw pewmettwe d-de séwectionnew pwusieuws fichiews, iw f-faudwa incwuwe w-w'attwibut [`muwtipwe`](/fw/docs/web/htmw/ewement/input#attw-muwtipwe). 😳
 
-### Exemple
+### e-exempwe
 
-Dans cet exemple, on crée un sélecteur de fichier pour des images. La personne qui utilise le formulaire peut ici choisir plusieurs fichiers.
+dans cet exempwe, o-on cwée u-un séwecteuw de f-fichiew pouw des images. 🥺 wa pewsonne q-qui utiwise w-we fowmuwaiwe p-peut ici choisiw p-pwusieuws fichiews. (U ᵕ U❁)
 
-```html
-<input type="file" name="file" id="file" accept="image/*" multiple />
+```htmw
+<input t-type="fiwe" nyame="fiwe" id="fiwe" a-accept="image/*" muwtipwe />
 ```
 
-Sur certains appareils mobiles, le sélecteur de fichier peut accéder aux photos, vidéos et fichiers audios produits par l'appareil photo ou le micro en ajoutant des informations de captures avec l'attribut `accept`&nbsp;:
+s-suw cewtains a-appaweiws mobiwes, 😳 we séwecteuw de fichiew peut accédew a-aux photos, 🥺 vidéos e-et fichiews audios pwoduits p-paw w'appaweiw p-photo ou we micwo en ajoutant des infowmations d-de captuwes avec w-w'attwibut `accept`&nbsp;:
 
-```html
-<input type="file" accept="image/*;capture=camera" />
-<input type="file" accept="video/*;capture=camcorder" />
-<input type="file" accept="audio/*;capture=microphone" />
+```htmw
+<input t-type="fiwe" a-accept="image/*;captuwe=camewa" />
+<input t-type="fiwe" accept="video/*;captuwe=camcowdew" />
+<input t-type="fiwe" accept="audio/*;captuwe=micwophone" />
 ```
 
-## Attributs communs
+## attwibuts c-communs
 
-De nombreux éléments de formulaire disposent d'attributs qui leur sont spécifiques. Toutefois, il y a un ensemble d'attributs communs à tous les éléments de formulaire. Nous en avons déjà rencontré certains, mais voici une liste des attributs communs et qui pourra servir de référence&nbsp;:
+de nyombweux éwéments de fowmuwaiwe disposent d'attwibuts qui weuw sont spécifiques. (///ˬ///✿) t-toutefois, mya iw y a-a un ensembwe d'attwibuts communs à tous wes éwéments de fowmuwaiwe. (✿oωo) n-nyous en a-avons déjà wencontwé cewtains, mais voici une w-wiste des attwibuts communs et q-qui pouwwa sewviw d-de wéféwence&nbsp;:
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th scope="col">Nom de l'attribut</th>
-      <th scope="col">Valeur par défaut</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">nom de w'attwibut</th>
+      <th scope="cow">vaweuw p-paw défaut</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <code><a href="/fr/docs/Web/HTML/Global_attributes/autofocus">autofocus</a></code>
+        <code><a hwef="/fw/docs/web/htmw/gwobaw_attwibutes/autofocus">autofocus</a></code>
       </td>
-      <td><code>false<code></td>
+      <td><code>fawse<code></td>
       <td>
-        Cet attribut booléen permet d'indiquer que l'élément devrait automatiquement recevoir le focus lors du chargement de la page. Seul un élément de formulaire pour un document donné peut avoir cet attribut actif.
+        c-cet attwibut boowéen p-pewmet d'indiquew que w'éwément devwait automatiquement w-wecevoiw we focus wows d-du chawgement de wa page. ^•ﻌ•^ seuw un éwément de f-fowmuwaiwe pouw un document donné p-peut avoiw cet attwibut actif. o.O
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/fr/docs/Web/HTML/Attributes/disabled">disabled</a></code>
+        <code><a hwef="/fw/docs/web/htmw/attwibutes/disabwed">disabwed</a></code>
       </td>
-      <td><code>false</code></td>
+      <td><code>fawse</code></td>
       <td>
-        Cet attribut booléen indique que la personne ne peut pas interagir avec l'élément. Si cet attribut n'est pas indiqué, l'élément hérite du comportement de l'élément parent (par exemple, <a href="/fr/docs/Web/HTML/Element/Fieldset"><code>&lt;fieldset&gt;</code></a>). S'il n'y a pas d'élément, parmi les parents, avec l'attribut <code>disabled</code> indiqué, l'élément est actif.
+        cet attwibut boowéen indique que wa pewsonne nye peut pas intewagiw a-avec w'éwément. o.O s-si cet attwibut n-ny'est pas i-indiqué, XD w'éwément héwite du compowtement de w-w'éwément pawent (paw exempwe, ^•ﻌ•^ <a hwef="/fw/docs/web/htmw/ewement/fiewdset"><code>&wt;fiewdset&gt;</code></a>). s'iw ny'y a p-pas d'éwément, ʘwʘ p-pawmi wes pawents, (U ﹏ U) a-avec w'attwibut <code>disabwed</code> i-indiqué, 😳😳😳 w'éwément est actif. 🥺
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/fr/docs/Web/HTML/Element/Form">form</a></code>
-      </td>
-      <td></td>
-      <td>
-        L'élément <code>&lt;form&gt;</code> auquel le contrôle est associé. On utilisera cet attribut si l'élément du contrôle n'est pas un des enfants/descendants de l'élément du formulaire. La valeur de cet attribut doit être l'identifiant (la valeur de l'attribut <code>id</code>) d'un élément <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a> du même document. Cela permet d'associer un contrôle à un formulaire, même s'il est situé dans un autre élément.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/fr/docs/Web/HTML/Element/Input#attr-name">name</a></code>
+        <code><a hwef="/fw/docs/web/htmw/ewement/fowm">fowm</a></code>
       </td>
       <td></td>
-      <td>Le nom du champ de formulaire porté par l'élément. Il est envoyé avec les données du formulaire.</td>
-    </tr>
-    <tr>
       <td>
-        <code><a href="/fr/docs/Web/HTML/Element/Input#attr-value">value</a></code>
+        w'éwément <code>&wt;fowm&gt;</code> a-auquew we contwôwe e-est associé. (///ˬ///✿) on utiwisewa cet attwibut si w'éwément du contwôwe n-ny'est pas un des enfants/descendants de w-w'éwément du f-fowmuwaiwe. (˘ω˘) wa v-vaweuw de cet attwibut doit êtwe w'identifiant (wa vaweuw de w'attwibut <code>id</code>) d'un éwément <a hwef="/fw/docs/web/htmw/ewement/fowm"><code>&wt;fowm&gt;</code></a> d-du même document. :3 cewa pewmet d'associew u-un contwôwe à un fowmuwaiwe, /(^•ω•^) même s'iw est situé dans u-un autwe éwément. :3
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <code><a hwef="/fw/docs/web/htmw/ewement/input#attw-name">name</a></code>
       </td>
       <td></td>
-      <td>La valeur initiale de l'élément.</td>
-    </tr>
+      <td>we n-nyom du champ de fowmuwaiwe powté p-paw w'éwément. mya i-iw est envoyé a-avec wes données d-du fowmuwaiwe.</td>
+    </tw>
+    <tw>
+      <td>
+        <code><a h-hwef="/fw/docs/web/htmw/ewement/input#attw-vawue">vawue</a></code>
+      </td>
+      <td></td>
+      <td>wa vaweuw initiawe d-de w'éwément.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Testez vos compétences&nbsp;!
+## t-testez vos compétences&nbsp;! XD
 
-Vous avez atteint la fin de cet article, mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez vous évaluer et vérifier que vous avez mémorisé ces informations avant d'aller plus loin — voir l'évaluation [Testez vos compétences&nbsp;: contrôles de formulaire de base](/fr/docs/Learn/Forms/Test_your_skills:_Basic_controls).
+v-vous avez atteint wa fin de cet awticwe, (///ˬ///✿) m-mais avez-vous wetenu wes infowmations w-wes pwus i-impowtantes&nbsp;? vous pouvez v-vous évawuew et v-véwifiew que vous avez mémowisé ces infowmations avant d'awwew p-pwus woin — v-voiw w'évawuation [testez v-vos c-compétences&nbsp;: contwôwes de fowmuwaiwe de base](/fw/docs/weawn/fowms/test_youw_skiwws:_basic_contwows). 🥺
 
-## Résumé
+## w-wésumé
 
-Dans cet article, nous avons abordé les contrôles de formulaire présents depuis les débuts de HTML et qui sont pris en charge par l'ensemble des navigateurs. Dans la prochaine section, nous verrons les valeurs plus récentes possibles pour l'attribut `type` qui ont été ajoutées en HTML5.
+dans cet awticwe, o.O nyous avons abowdé w-wes contwôwes de fowmuwaiwe pwésents depuis w-wes débuts de htmw et qui sont pwis en chawge paw w'ensembwe des n-nyavigateuws. mya dans wa pwochaine s-section, rawr x3 nyous v-vewwons wes vaweuws p-pwus wécentes possibwes pouw w-w'attwibut `type` q-qui ont été ajoutées en h-htmw5. 😳
 
-{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
+{{pweviousmenunext("weawn/fowms/how_to_stwuctuwe_a_web_fowm", 😳😳😳 "weawn/fowms/htmw5_input_types", >_< "weawn/fowms")}}

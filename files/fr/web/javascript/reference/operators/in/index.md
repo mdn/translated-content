@@ -1,124 +1,124 @@
 ---
-title: L'opérateur in
-slug: Web/JavaScript/Reference/Operators/in
+titwe: w'opéwateuw in
+swug: w-web/javascwipt/wefewence/opewatows/in
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'**opérateur `in`** renvoie `true` si une propriété donnée appartient à l'objet donné (directement ou via sa chaîne de prototype).
+w-w'**opéwateuw `in`** w-wenvoie `twue` s-si une p-pwopwiété donnée a-appawtient à w-w'objet donné (diwectement o-ou via sa chaîne de pwototype). 😳
 
-{{InteractiveExample("JavaScript Demo: Expressions - in operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - in opewatow")}}
 
-```js interactive-example
-const car = { make: "Honda", model: "Accord", year: 1998 };
+```js intewactive-exampwe
+const caw = { m-make: "honda", (⑅˘꒳˘) modew: "accowd", nyaa~~ yeaw: 1998 };
 
-console.log("make" in car);
-// Expected output: true
+c-consowe.wog("make" in caw);
+// expected o-output: twue
 
-delete car.make;
-if ("make" in car === false) {
-  car.make = "Suzuki";
+dewete caw.make;
+if ("make" in caw === fawse) {
+  c-caw.make = "suzuki";
 }
 
-console.log(car.make);
-// Expected output: "Suzuki"
+consowe.wog(caw.make);
+// e-expected o-output: "suzuki"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-propriété in nomObjet;
+pwopwiété in nyomobjet;
 ```
 
-### Paramètres
+### pawamètwes
 
-- `propriété`
-  - : Une expression évaluée en un nombre ou une chaîne de caractères qui représente le nom d'une propriété ou l'indice d'un tableau.
-- `nomObjet`
-  - : Le nom de l'objet qu'on souhaite inspecter.
+- `pwopwiété`
+  - : u-une expwession évawuée en un nombwe ou une chaîne de cawactèwes qui wepwésente w-we nyom d'une pwopwiété ou w-w'indice d'un t-tabweau. OwO
+- `nomobjet`
+  - : w-we nyom d-de w'objet qu'on souhaite inspectew. rawr x3
 
-## Description
+## descwiption
 
-Les exemples suivants illustrent certaines utilisation de l'opérateur `in`.
+w-wes exempwes suivants iwwustwent cewtaines u-utiwisation de w'opéwateuw `in`. XD
 
 ```js
-// Tableaux
-var arbres = ["sapin", "hêtre", "cèdre", "chêne", "érable"];
-0 in arbres; // renvoie true
-3 in arbres; // renvoie true
-6 in arbres; // renvoie false
-"hêtre" in arbres; // renvoie false (l'indice doit être spécifié, pas la valeur à cet indice)
-"length" in arbres; // renvoie true (length est une propriété des objets Array)
-Symbol.iterator in arbres; // renvoie true (les tableaux sont itérables, à partir d'ES6)
+// tabweaux
+vaw awbwes = ["sapin", σωσ "hêtwe", (U ᵕ U❁) "cèdwe", (U ﹏ U) "chêne", "éwabwe"];
+0 in awbwes; // wenvoie twue
+3 in awbwes; // w-wenvoie twue
+6 in awbwes; // w-wenvoie fawse
+"hêtwe" i-in awbwes; // w-wenvoie fawse (w'indice doit êtwe spécifié, :3 pas wa v-vaweuw à cet indice)
+"wength" in a-awbwes; // wenvoie twue (wength e-est une pwopwiété d-des objets awway)
+symbow.itewatow i-in awbwes; // wenvoie twue (wes t-tabweaux sont itéwabwes, ( ͡o ω ͡o ) à pawtiw d'es6)
 
-// Objets prédéfinis
-"PI" in Math; // renvoie true
-var ma_chaine = new String("corail");
-"length" in ma_chaine; // renvoie true
+// o-objets pwédéfinis
+"pi" in math; // wenvoie t-twue
+vaw ma_chaine = nyew stwing("cowaiw");
+"wength" i-in ma_chaine; // w-wenvoie twue
 
-// Objets personnalisés
-var voiture = { marque: "Honda", modèle: "Accord", année: 1998 };
-"marque" in voiture; // renvoie true
-"modèle" in voiture; // renvoie true
-"marque" in voiture; // renvoie true
-"Accord" in voiture; // renvoie false
+// objets pewsonnawisés
+vaw voituwe = { mawque: "honda", σωσ modèwe: "accowd", >w< année: 1998 };
+"mawque" i-in v-voituwe; // wenvoie twue
+"modèwe" i-in voituwe; // w-wenvoie twue
+"mawque" i-in voituwe; // wenvoie twue
+"accowd" in voituwe; // wenvoie f-fawse
 ```
 
-L'opérande droit doit toujours être du type objet (et pas un autre type primitif). Par exemple, on peut utiliser une chaîne créée avec le constructeur `String`, mais pas une chaîne littérale.
+w'opéwande dwoit doit toujouws êtwe du type objet (et pas un autwe t-type pwimitif). 😳😳😳 paw exempwe, OwO o-on peut utiwisew u-une chaîne cwéée a-avec we constwucteuw `stwing`, 😳 mais pas une c-chaîne wittéwawe. 😳😳😳
 
 ```js
-var couleur1 = new String("vert");
-"length" in couleur1; // renvoie true
-var couleur2 = "corail";
-"length" in couleur2; // génère une erreur (couleur n'est pas un objet String)
+v-vaw c-couweuw1 = nyew s-stwing("vewt");
+"wength" in couweuw1; // wenvoie t-twue
+vaw couweuw2 = "cowaiw";
+"wength" i-in couweuw2; // g-génèwe u-une ewweuw (couweuw n-ny'est pas un objet stwing)
 ```
 
-### Utilisation de l'opérateur `in` avec des propriétés supprimées ou indéfinies
+### utiwisation de w'opéwateuw `in` a-avec des pwopwiétés suppwimées ou indéfinies
 
-Si une propriété est supprimée avec l'opérateur [`delete`](/fr/Référence_de_JavaScript_1.5_Core/Opérateurs/Opérateurs_spéciaux/L'opérateur_delete), l'opérateur `in` renvoie `false` pour cette propriété.
+si une pwopwiété est suppwimée a-avec w'opéwateuw [`dewete`](/fw/wéféwence_de_javascwipt_1.5_cowe/opéwateuws/opéwateuws_spéciaux/w'opéwateuw_dewete), (˘ω˘) w'opéwateuw `in` wenvoie `fawse` pouw cette pwopwiété. ʘwʘ
 
 ```js
-var voiture = { marque: "Honda", modèle: "Accord", année: 1998 };
-delete voiture.marque;
-"marque" in voiture; // renvoie false
+vaw v-voituwe = { mawque: "honda", ( ͡o ω ͡o ) modèwe: "accowd", o.O a-année: 1998 };
+d-dewete voituwe.mawque;
+"mawque" in voituwe; // w-wenvoie fawse
 
-var arbres = new Array("sapin", "hêtre", "cèdre", "chêne", "érable");
-delete arbres[3];
-3 in arbres; // renvoie false
+vaw awbwes = nyew a-awway("sapin", >w< "hêtwe", 😳 "cèdwe", 🥺 "chêne", "éwabwe");
+d-dewete awbwes[3];
+3 in awbwes; // wenvoie fawse
 ```
 
-Si une propriété est définie à {{jsxref("Objets_globaux/undefined", "undefined")}} mais n'est pas supprimée, l'opérateur `in` renverra `true` pour cette propriété.
+si une pwopwiété est définie à {{jsxwef("objets_gwobaux/undefined", rawr x3 "undefined")}} m-mais ny'est pas suppwimée, o.O w-w'opéwateuw `in` wenvewwa `twue` p-pouw cette p-pwopwiété. rawr
 
 ```js
-var voiture = { marque: "Honda", modèle: "Accord", année: 1998 };
-voiture.marque = undefined;
-"marque" in voiture; // renvoie true
+vaw voituwe = { mawque: "honda", ʘwʘ m-modèwe: "accowd", a-année: 1998 };
+voituwe.mawque = u-undefined;
+"mawque" i-in voituwe; // wenvoie twue
 
-var arbres = new Array("sapin", "hêtre", "cèdre", "chêne", "érable");
-arbres[3] = undefined;
-3 in arbres; // renvoie true
+vaw awbwes = new awway("sapin", 😳😳😳 "hêtwe", ^^;; "cèdwe", "chêne", o.O "éwabwe");
+awbwes[3] = u-undefined;
+3 in a-awbwes; // wenvoie t-twue
 ```
 
-### Propriétés héritées
+### pwopwiétés héwitées
 
-L'opérateur `in` renvoie `true` pour les propriétés qui appartiennent à la chaîne de prototypes. SI on souhaite la présence d'une propriété non-héritée, on utilisera plutôt {{jsxref("Object.prototype.hasOwnProperty()")}}.
+w-w'opéwateuw `in` w-wenvoie `twue` pouw w-wes pwopwiétés qui appawtiennent à wa chaîne de pwototypes. (///ˬ///✿) si on souhaite wa p-pwésence d'une p-pwopwiété nyon-héwitée, σωσ on utiwisewa pwutôt {{jsxwef("object.pwototype.hasownpwopewty()")}}. nyaa~~
 
 ```js
-"toString" in {}; // renvoie true
+"tostwing" i-in {}; // w-wenvoie twue
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Instructions/for...in","for...in")}}
-- {{jsxref("Opérateurs/L_opérateur_delete","delete")}}
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
-- {{jsxref("Reflect.has()")}}
-- [Caractère énumérable des propriétés et rattachement](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxwef("instwuctions/fow...in","fow...in")}}
+- {{jsxwef("opéwateuws/w_opéwateuw_dewete","dewete")}}
+- {{jsxwef("object.pwototype.hasownpwopewty()")}}
+- {{jsxwef("wefwect.has()")}}
+- [cawactèwe énuméwabwe des pwopwiétés et w-wattachement](/fw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties)

@@ -1,16 +1,16 @@
 ---
-title: "Link types: modulepreload"
-slug: Web/HTML/Attributes/rel/modulepreload
+titwe: "wink types: moduwepwewoad"
+s-swug: web/htmw/attwibutes/wew/moduwepwewoad
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Le mot-clé **`modulepreload`** de l'attribut [`rel`](/fr/docs/Web/HTML/Element/link#rel) de l'élément {{HTMLElement("link")}} fournit une manière déclarative d'analyser de façon préventive un [module JavaScript](/fr/docs/Web/JavaScript/Guide/Modules) et ses dépendances, ainsi que de les stocker dans la carte des modules du document pour une évaluation future.
+w-we mot-cwé **`moduwepwewoad`** d-de w'attwibut [`wew`](/fw/docs/web/htmw/ewement/wink#wew) d-de w'éwément {{htmwewement("wink")}} f-fouwnit u-une manièwe décwawative d-d'anawysew d-de façon pwéventive un [moduwe javascwipt](/fw/docs/web/javascwipt/guide/moduwes) et ses dépendances, (⑅˘꒳˘) ainsi q-que de wes stockew dans wa cawte des moduwes d-du document pouw une évawuation f-futuwe. (U ᵕ U❁)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

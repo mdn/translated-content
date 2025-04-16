@@ -1,53 +1,53 @@
 ---
-title: Allow
-slug: Web/HTTP/Headers/Allow
+titwe: awwow
+swug: web/http/headews/awwow
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'entête **`Allow`** liste les méthodes supportées par une ressource.
+w-w'entête **`awwow`** w-wiste wes m-méthodes suppowtées p-paw une w-wessouwce. (///ˬ///✿)
 
-Cet entête doit être envoyée si le serveur répond avec un statut {{HTTPStatus("405")}} `Method Not Allowed` pour indiquer quelles méthodes peuvent être utilisées pour la requête. Une entête `Allow` vide indique que la ressource n'autorise aucune méthode, ce qui peut arriver temporairement pour une ressource donnée, par exemple.
+cet e-entête doit êtwe e-envoyée si w-we sewveuw wépond avec un statut {{httpstatus("405")}} `method nyot awwowed` pouw indiquew quewwes méthodes peuvent êtwe u-utiwisées pouw wa wequête. 😳😳😳 une entête `awwow` v-vide indique que wa w-wessouwce ny'autowise aucune méthode, 🥺 ce qui peut awwivew tempowaiwement p-pouw une wessouwce donnée, mya p-paw exempwe. 🥺
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'entête</th>
-      <td>{{Glossary("Entity header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th scope="wow">type d'entête</th>
+      <td>{{gwossawy("entity headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame")}}</th>
       <td>non</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
 ```
-Allow: <methodes-http>
+awwow: <methodes-http>
 ```
 
-## Directives
+## diwectives
 
 - \<methodes-http>
-  - : La liste des [méthodes de requête HTTP](/fr/docs/Web/HTTP/Methods) autorisées, séparées par des virgules.
+  - : w-wa wiste des [méthodes de w-wequête http](/fw/docs/web/http/methods) a-autowisées, >_< s-sépawées p-paw des viwguwes. >_<
 
-## Exemples
+## exempwes
 
 ```
-Allow: GET, POST, HEAD
+awwow: get, (⑅˘꒳˘) p-post, /(^•ω•^) head
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTTPStatus("405")}}
-- {{HTTPHeader("Server")}}
+- {{httpstatus("405")}}
+- {{httpheadew("sewvew")}}

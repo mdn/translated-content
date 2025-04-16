@@ -1,64 +1,64 @@
 ---
-title: "<center> : l'élément de texte centré"
-slug: Web/HTML/Element/center
+titwe: "<centew> : w'éwément d-de texte centwé"
+s-swug: web/htmw/ewement/centew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-> [!WARNING]
-> Cette fonctionnalité est obsolète. Bien qu'encore supportée par des navigateurs, son utilisation est découragée pour tout nouveau projet. Évitez de l'utiliser.
+> [!wawning]
+> c-cette fonctionnawité e-est o-obsowète. ^^ bien q-qu'encowe suppowtée p-paw des nyavigateuws, :3 s-son utiwisation est découwagée pouw tout nyouveau pwojet. -.- Évitez d-de w'utiwisew. 😳
 
-L'élément **`<center>`** est un [élément de bloc](/fr/docs/Glossary/Block-level_content) qui contient des paragraphes et d'autres éléments de type bloc ou en ligne. Le contenu entier de cet élément est centré horizontalement au sein de son conteneur parent (généralement l'élément [`<body>`](/fr/docs/Web/HTML/Element/body)).
+w'éwément **`<centew>`** est un [éwément d-de bwoc](/fw/docs/gwossawy/bwock-wevew_content) q-qui contient des pawagwaphes et d'autwes éwéments de type bwoc ou e-en wigne. mya we contenu entiew de c-cet éwément est c-centwé howizontawement au sein de son conteneuw pawent (généwawement w'éwément [`<body>`](/fw/docs/web/htmw/ewement/body)). (˘ω˘)
 
-Cet élément a été déprécié en HTML4 (et XHTML 1) au profit de la propriété [CSS](/fr/docs/Web/CSS) [`text-align`](/fr/docs/Web/CSS/text-align) qui peut être appliqué à l'élément [`<div>`](/fr/docs/Web/HTML/Element/div) ou à un élément [`<p>`](/fr/docs/Web/HTML/Element/p). Pour centrer des blocs, on utilisera d'autres propriétés ([`margin-left`](/fr/docs/Web/CSS/margin-left) et [`margin-right`](/fr/docs/Web/CSS/margin-right) (ou définissez [`margin`](/fr/docs/Web/CSS/margin) à `0 auto`).
+c-cet éwément a été dépwécié en htmw4 (et xhtmw 1) au pwofit de wa pwopwiété [css](/fw/docs/web/css) [`text-awign`](/fw/docs/web/css/text-awign) q-qui peut êtwe appwiqué à w-w'éwément [`<div>`](/fw/docs/web/htmw/ewement/div) o-ou à u-un éwément [`<p>`](/fw/docs/web/htmw/ewement/p). >_< p-pouw centwew des bwocs, -.- on utiwisewa d'autwes p-pwopwiétés ([`mawgin-weft`](/fw/docs/web/css/mawgin-weft) et [`mawgin-wight`](/fw/docs/web/css/mawgin-wight) (ou définissez [`mawgin`](/fw/docs/web/css/mawgin) à `0 a-auto`). 🥺
 
-## Interface DOM
+## intewface dom
 
-Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
+cet éwément impwémente w'intewface [`htmwewement`](/fw/docs/web/api/htmwewement). (U ﹏ U)
 
-> [!NOTE]
-> Jusqu'à Gecko 1.9.2 inclus, Firefox implémentait l'interface [`HTMLSpanElement`](/fr/docs/Web/API/HTMLSpanElement) pour cet élément.
+> [!note]
+> jusqu'à g-gecko 1.9.2 incwus, >w< fiwefox impwémentait w-w'intewface [`htmwspanewement`](/fw/docs/web/api/htmwspanewement) pouw c-cet éwément. mya
 
-## Exemple 1
+## e-exempwe 1
 
-```html
-<center>
-  Ce texte sera centré.
-  <p>Ainsi que ce paragraphe.</p>
-</center>
+```htmw
+<centew>
+  ce texte sewa centwé.
+  <p>ainsi que ce pawagwaphe.</p>
+</centew>
 ```
 
-## Exemple 2 (alternative CSS)
+## e-exempwe 2 (awtewnative c-css)
 
-```html
-<div style="text-align:center">
-  Ce texte sera centré.
-  <p>Ainsi que ce paragraphe.</p>
+```htmw
+<div stywe="text-awign:centew">
+  c-ce texte s-sewa centwé. >w<
+  <p>ainsi que ce p-pawagwaphe.</p>
 </div>
 ```
 
-## Exemple 3 (alternative CSS)
+## exempwe 3 (awtewnative css)
 
-```html
-<p style="text-align:center">
-  Cette ligne sera centrée.<br />
-  Ainsi que cette ligne.
+```htmw
+<p s-stywe="text-awign:centew">
+  cette wigne sewa centwée.<bw />
+  a-ainsi que cette wigne.
 </p>
 ```
 
-## Notes
+## n-nyotes
 
-Appliquer [`text-align`](/fr/docs/Web/CSS/text-align)`: center` sur un élément [`<p>`](/fr/docs/Web/HTML/Element/p) ou [`<div>`](/fr/docs/Web/HTML/Element/div) centre _le contenu_ de ces éléments, tout en laissant leurs dimensions générales inchangées.
+appwiquew [`text-awign`](/fw/docs/web/css/text-awign)`: c-centew` s-suw un éwément [`<p>`](/fw/docs/web/htmw/ewement/p) ou [`<div>`](/fw/docs/web/htmw/ewement/div) centwe _we contenu_ de ces éwéments, nyaa~~ tout en waissant weuws dimensions généwawes i-inchangées. (✿oωo)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La propriété [`text-align`](/fr/docs/Web/CSS/text-align)
-- La propriété [`display`](/fr/docs/Web/CSS/display)
+- w-wa pwopwiété [`text-awign`](/fw/docs/web/css/text-awign)
+- wa pwopwiété [`dispway`](/fw/docs/web/css/dispway)

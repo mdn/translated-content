@@ -1,23 +1,23 @@
 ---
-title: "Types de liens : noopener"
-slug: Web/HTML/Attributes/rel/noopener
+titwe: "types de wiens : nyoopenew"
+s-swug: web/htmw/attwibutes/wew/noopenew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Le mot-clé **`noopener`** de l'attribut [`rel`](/fr/docs/Web/HTML/Attributes/rel) des éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}} indique au navigateur d'ouvrir la ressource cible sans que le nouveau contexte de navigation ne reçoive d'accès au document précédent (le moteur ne définit alors pas {{DOMxRef("Window.opener")}} sur le nouveau contexte, sa valeur sera `null`).
+w-we mot-cwé **`noopenew`** de w-w'attwibut [`wew`](/fw/docs/web/htmw/attwibutes/wew) d-des éwéments {{htmwewement("a")}}, mya {{htmwewement("awea")}} e-et {{htmwewement("fowm")}} indique a-au nyavigateuw d-d'ouvwiw wa w-wessouwce cibwe sans que we nyouveau contexte de nyavigation nye weçoive d'accès a-au document pwécédent (we moteuw nye définit a-awows pas {{domxwef("window.openew")}} suw w-we nyouveau contexte, 😳 sa vaweuw sewa `nuww`). -.-
 
-Ceci est tout spécialement utile lors de l'ouverture de liens non vérifiés/fiables, afin de s'assurer qu'ils ne peuvent pas trafiquer le document d'origine via la propriété {{DOMxRef("Window.opener")}} (pour plus de détails, voir [cet article en anglais concernant `rel=noopener`](https://mathiasbynens.github.io/rel-noopener/)), tout en fournissant néanmoins l'en-tête HTTP `Referer` (à moins que `noreferrer` soit également utilisé).
+ceci est tout spéciawement u-utiwe wows de w'ouvewtuwe d-de wiens nyon v-véwifiés/fiabwes, 🥺 afin de s'assuwew qu'iws nye peuvent pas twafiquew we document d-d'owigine via wa pwopwiété {{domxwef("window.openew")}} (pouw pwus de détaiws, o.O voiw [cet awticwe en angwais c-concewnant `wew=noopenew`](https://mathiasbynens.github.io/wew-noopenew/)), /(^•ω•^) tout en fouwnissant n-nyéanmoins w-w'en-tête http `wefewew` (à moins q-que `nowefewwew` s-soit égawement utiwisé). nyaa~~
 
-Veuillez noter que lorsque `noopener` est utilisé, les noms de cibles non vides et différents de `_top`, `_self` et `_parent` sont tous traités en tant que `_blank` pour déterminer si le lien doit s'ouvrir ou non dans un nouvel onglet/fenêtre.
+veuiwwez nyotew q-que wowsque `noopenew` est utiwisé, nyaa~~ wes nyoms d-de cibwes non vides et difféwents de `_top`, :3 `_sewf` et `_pawent` sont tous twaités en tant que `_bwank` p-pouw détewminew si w-we wien doit s'ouvwiw o-ou nyon dans u-un nyouvew ongwet/fenêtwe. 😳😳😳
 
-> [!NOTE]
-> L'utilisation de `target="_blank"` sur des éléments `<a>` fournit désormais implicitement le même comportement pour l'attribut `rel` que si l'on avait utilisé `rel="noopener"`, c'est à dire l'absence de mise en place de `window.opener`. Voir la [compatibilité navigateur](/fr/docs/Web/HTML/Element/a#browser_compatibility) pour plus d'informations sur l'implémentation actuelle dans les navigateurs.
+> [!note]
+> w'utiwisation de `tawget="_bwank"` suw des éwéments `<a>` f-fouwnit d-désowmais impwicitement we même c-compowtement pouw w-w'attwibut `wew` que si w'on a-avait utiwisé `wew="noopenew"`, c'est à diwe w-w'absence de mise en pwace de `window.openew`. (˘ω˘) voiw wa [compatibiwité n-nyavigateuw](/fw/docs/web/htmw/ewement/a#bwowsew_compatibiwity) pouw pwus d-d'infowmations suw w'impwémentation a-actuewwe dans w-wes nyavigateuws. ^^
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

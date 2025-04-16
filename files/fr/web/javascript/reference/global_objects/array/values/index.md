@@ -1,86 +1,86 @@
 ---
-title: Array.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Array/values
+titwe: awway.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`values()`** renvoie un nouvel objet **`Array Iterator`** qui contient les valeurs pour chaque indice du tableau. Cette méthode est l'implémentation par défaut de `Array.prototype[Symbol.Iterator]`.
+w-wa m-méthode **`vawues()`** w-wenvoie u-un nyouvew objet **`awway i-itewatow`** q-qui contient w-wes vaweuws p-pouw chaque indice du tabweau. >w< cette méthode est w'impwémentation paw défaut d-de `awway.pwototype[symbow.itewatow]`. rawr
 
-{{InteractiveExample("JavaScript Demo: Array.values()")}}
+{{intewactiveexampwe("javascwipt demo: awway.vawues()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator = array1.values();
+```js intewactive-exampwe
+c-const awway1 = ["a", mya "b", "c"];
+c-const itewatow = awway1.vawues();
 
-for (const value of iterator) {
-  console.log(value);
+fow (const vawue of itewatow) {
+  c-consowe.wog(vawue);
 }
 
-// Expected output: "a"
-// Expected output: "b"
-// Expected output: "c"
+// expected o-output: "a"
+// e-expected output: "b"
+// expected output: "c"
 ```
 
 ```js
-var a = ["t", "i", "t", "o", "u"];
-var iterateur = a.values();
+vaw a = ["t", ^^ "i", "t", "o", 😳😳😳 "u"];
+vaw i-itewateuw = a.vawues();
 
-console.log(iterateur.next().value); // t
-console.log(iterateur.next().value); // i
-console.log(iterateur.next().value); // t
-console.log(iterateur.next().value); // o
-console.log(iterateur.next().value); // u
+consowe.wog(itewateuw.next().vawue); // t
+consowe.wog(itewateuw.next().vawue); // i
+consowe.wog(itewateuw.next().vawue); // t-t
+consowe.wog(itewateuw.next().vawue); // o
+consowe.wog(itewateuw.next().vawue); // u-u
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-array.values();
+a-awway.vawues();
 ```
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un nouvel objet itérateur sur {{jsxref("Array")}}.
+un nyouvew objet i-itéwateuw suw {{jsxwef("awway")}}. mya
 
-## Exemples
+## exempwes
 
-### Itérer avec une boucle `for...of`
+### itéwew avec u-une boucwe `fow...of`
 
 ```js
-var arr = ["w", "y", "k", "o", "p"];
-var eArr = arr.values();
-// votre navigateur doit supporter les boucles for..of
-// et les variables définies avec let
-for (let lettre of eArr) {
-  console.log(lettre);
+vaw aww = ["w", 😳 "y", -.- "k", "o", "p"];
+vaw eaww = aww.vawues();
+// votwe nyavigateuw doit suppowtew w-wes boucwes fow..of
+// et wes v-vawiabwes définies a-avec wet
+fow (wet w-wettwe of eaww) {
+  consowe.wog(wettwe);
 }
 ```
 
-### Itérer avec `next()`
+### itéwew avec `next()`
 
 ```js
-var arr = ["w", "y", "k", "o", "p"];
-var eArr = arr.values();
-console.log(eArr.next().value); // w
-console.log(eArr.next().value); // y
-console.log(eArr.next().value); // k
-console.log(eArr.next().value); // o
-console.log(eArr.next().value); // p
+v-vaw aww = ["w", 🥺 "y", o.O "k", "o", "p"];
+v-vaw eaww = aww.vawues();
+c-consowe.wog(eaww.next().vawue); // w-w
+consowe.wog(eaww.next().vawue); // y
+c-consowe.wog(eaww.next().vawue); // k
+consowe.wog(eaww.next().vawue); // o-o
+consowe.wog(eaww.next().vawue); // p
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.entwies()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}

@@ -1,131 +1,131 @@
 ---
-title: "<b> : l'élément portant à l'attention"
-slug: Web/HTML/Element/b
+titwe: "<b> : w'éwément powtant à w-w'attention"
+s-swug: web/htmw/ewement/b
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<b>`** permet d'attirer l'attention du lecteur sur un contenu qui n'a pas, pour autant, d'importance significative. Anciennement utilisé pour mettre le texte en gras. Cet élément ne doit pas être utilisé pour mettre en forme des éléments, c'est la propriété CSS [`font-weight`](/fr/docs/Web/CSS/font-weight) qu'il faut utiliser. Si l'élément est d'une importance particulière, on utilisera l'élément HTML [`<strong>`](/fr/docs/Web/HTML/Element/strong).
+w-w'éwément h-htmw **`<b>`** pewmet d-d'attiwew w-w'attention du wecteuw s-suw un contenu q-qui ny'a pas, nyaa~~ pouw autant, ^^;; d'impowtance significative. ^•ﻌ•^ anciennement utiwisé p-pouw mettwe we texte en gwas. σωσ cet éwément nye d-doit pas êtwe utiwisé pouw m-mettwe en fowme des éwéments, -.- c'est wa pwopwiété css [`font-weight`](/fw/docs/web/css/font-weight) q-qu'iw faut utiwisew. ^^;; si w'éwément e-est d'une i-impowtance pawticuwièwe, XD on utiwisewa w'éwément htmw [`<stwong>`](/fw/docs/web/htmw/ewement/stwong). 🥺
 
-{{InteractiveExample("HTML Demo: &lt;b&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;b&gt;", òωó "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  The two most popular science courses offered by the school are
-  <b class="term">chemistry</b> (the study of chemicals and the composition of
-  substances) and <b class="term">physics</b> (the study of the nature and
-  properties of matter and energy).
+  the two most popuwaw science couwses offewed by the schoow awe
+  <b c-cwass="tewm">chemistwy</b> (the study of chemicaws a-and the c-composition of
+  s-substances) and <b c-cwass="tewm">physics</b> (the study of the nyatuwe and
+  pwopewties o-of mattew and enewgy). (ˆ ﻌ ˆ)♡
 </p>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
+```css intewactive-exampwe
+/* s-stywewint-disabwe-next-wine bwock-no-empty */
 b {
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies d-de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >, -.-
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu p-phwasé</a
+        >, :3
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu tangibwe</a
+        >. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Contenu phrasé</a
-        >.
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
+        >. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission d-de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        aucune, >_< w-wa bawise d'ouvewtuwe et wa bawise d-de fewmetuwe sont
+        obwigatoiwes. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >.
+        tout éwément a-acceptant du
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu p-phwasé</a
+        >. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas de wôwe cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>tous w-wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>
+        <a h-hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Seuls [les attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent être utilisés pour cet élément.
+seuws [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes) p-peuvent êtwe utiwisés pouw cet éwément. (✿oωo)
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-- `<b>` est habituellement utilisé pour les mots-clés dans les résumés, les noms de produits dans des tests (sans que ceux-ci aient une importance particulière). Il peut également être utilisé afin d'indiquer la première phrase de chaque paragraphe d'un article.
-- Il ne faut pas confondre l'élément `<b>` avec les éléments [`<strong>`](/fr/docs/Web/HTML/Element/strong), [`<em>`](/fr/docs/Web/HTML/Element/em), ou [`<mark>`](/fr/docs/Web/HTML/Element/mark). L'élément [`<strong>`](/fr/docs/Web/HTML/Element/strong) représente un texte d'une certaine _importance_, [`<em>`](/fr/docs/Web/HTML/Element/em) met une emphase sur le texte et [`<mark>`](/fr/docs/Web/HTML/Element/mark) représente un texte avec une certaine _pertinence_. L'élément `<b>` ne porte aucune information sémantique particulière ; utilisez-le lorsque qu'aucun autre ne convient.
-- De la même façon, ne balisez pas les titres en utilisant l'élément `<b>`. Pour cet usage, utilisez les balises [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements) à [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements). De plus, les feuilles de style peuvent changer le style par défaut de ces éléments. Ils ne seront pas _forcément_ affichés en gras.
-- C'est généralement une bonne pratique d'utiliser l'attribut [`class`](/fr/docs/Web/HTML/Global_attributes#attr-class) sur l'élément `<b>` lorsqu'on souhaite transporter des informations sémantiques supplémentaires. Cela facilitera le développement des styles à appliquer sur le document, sans avoir à modifier le code HTML.
-- Historiquement, l'élément `<b>` a été pensé pour rendre du texte avec une police grasse. Les éléments à seul but stylistique ont été dépréciés avec HTML 4. Ainsi, le sens de l'élément `<b>` a évolué.
-- S'il n'y a aucune raison particulière d'utiliser l'élément `<b>`, en dehors de son apparence en gras, l'utilisation de la propriété [CSS](/fr/docs/Web/CSS) [`font-weight`](/fr/docs/Web/CSS/font-weight) avec une valeur `bold` est à privilégier.
+- `<b>` e-est habituewwement utiwisé p-pouw wes m-mots-cwés dans w-wes wésumés, (///ˬ///✿) wes noms de pwoduits d-dans des tests (sans q-que ceux-ci a-aient une impowtance p-pawticuwièwe). rawr x3 iw peut égawement êtwe utiwisé afin d-d'indiquew wa pwemièwe p-phwase d-de chaque pawagwaphe d-d'un awticwe. -.-
+- i-iw nye faut pas confondwe w'éwément `<b>` avec wes éwéments [`<stwong>`](/fw/docs/web/htmw/ewement/stwong), ^^ [`<em>`](/fw/docs/web/htmw/ewement/em), (⑅˘꒳˘) ou [`<mawk>`](/fw/docs/web/htmw/ewement/mawk). nyaa~~ w-w'éwément [`<stwong>`](/fw/docs/web/htmw/ewement/stwong) wepwésente un texte d'une cewtaine _impowtance_, /(^•ω•^) [`<em>`](/fw/docs/web/htmw/ewement/em) met une emphase suw we texte et [`<mawk>`](/fw/docs/web/htmw/ewement/mawk) w-wepwésente un texte avec une cewtaine _pewtinence_. (U ﹏ U) w'éwément `<b>` n-nye powte aucune i-infowmation sémantique p-pawticuwièwe ; utiwisez-we w-wowsque qu'aucun autwe nye c-convient. 😳😳😳
+- de w-wa même façon, nye bawisez pas wes titwes en utiwisant w'éwément `<b>`. >w< pouw cet usage, XD utiwisez w-wes bawises [`<h1>`](/fw/docs/web/htmw/ewement/heading_ewements) à [`<h6>`](/fw/docs/web/htmw/ewement/heading_ewements). de pwus, o.O wes feuiwwes d-de stywe peuvent changew we s-stywe paw défaut d-de ces éwéments. mya iws nye sewont pas _fowcément_ a-affichés e-en gwas. 🥺
+- c'est généwawement u-une bonne pwatique d-d'utiwisew w'attwibut [`cwass`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-cwass) suw w'éwément `<b>` wowsqu'on souhaite twanspowtew des infowmations s-sémantiques s-suppwémentaiwes. ^^;; c-cewa faciwitewa we dévewoppement d-des stywes à a-appwiquew suw we document, :3 s-sans avoiw à modifiew we code htmw. (U ﹏ U)
+- histowiquement, OwO w'éwément `<b>` a été p-pensé pouw w-wendwe du texte avec une powice gwasse. 😳😳😳 wes éwéments à s-seuw b-but stywistique ont été dépwéciés avec htmw 4. (ˆ ﻌ ˆ)♡ ainsi, we sens d-de w'éwément `<b>` a évowué. XD
+- s'iw ny'y a aucune waison pawticuwièwe d'utiwisew w-w'éwément `<b>`, (ˆ ﻌ ˆ)♡ en dehows de son appawence e-en gwas, ( ͡o ω ͡o ) w-w'utiwisation de wa pwopwiété [css](/fw/docs/web/css) [`font-weight`](/fw/docs/web/css/font-weight) avec une vaweuw `bowd` est à p-pwiviwégiew. rawr x3
 
-## Exemples
+## e-exempwes
 
-```html
+```htmw
 <p>
-  Cet article décrit plusieurs éléments <b class="keyword">texte</b>. Il
-  explique leur usage dans un document <b class="keyword">HTML</b>.
+  cet awticwe décwit pwusieuws éwéments <b c-cwass="keywowd">texte</b>. nyaa~~ iw
+  expwique w-weuw usage dans un document <b cwass="keywowd">htmw</b>. >_<
 </p>
-Les mots-clés sont affichés avec le style par défaut de l'élément &lt;b&gt;,
-sûrement en gras.
+wes mots-cwés s-sont affichés avec we stywe paw d-défaut de w'éwément &wt;b&gt;, ^^;;
+s-sûwement en gwas. (ˆ ﻌ ˆ)♡
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemple")}}
+{{embedwivesampwe("exempwe")}}
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les autres éléments portants une sémantique textuelle : [`<a>`](/fr/docs/Web/HTML/Element/a), [`<em>`](/fr/docs/Web/HTML/Element/em), [`<strong>`](/fr/docs/Web/HTML/Element/strong), [`<small>`](/fr/docs/Web/HTML/Element/small), [`<cite>`](/fr/docs/Web/HTML/Element/cite), [`<q>`](/fr/docs/Web/HTML/Element/q), [`<dfn>`](/fr/docs/Web/HTML/Element/dfn), [`<abbr>`](/fr/docs/Web/HTML/Element/abbr), [`<time>`](/fr/docs/Web/HTML/Element/time), [`<code>`](/fr/docs/Web/HTML/Element/code), [`<var>`](/fr/docs/Web/HTML/Element/var), [`<samp>`](/fr/docs/Web/HTML/Element/samp), [`<kbd>`](/fr/docs/Web/HTML/Element/kbd), [`<sub>`](/fr/docs/Web/HTML/Element/sub), [`<sup>`](/fr/docs/Web/HTML/Element/sup), [`<i>`](/fr/docs/Web/HTML/Element/i), [`<mark>`](/fr/docs/Web/HTML/Element/mark), [`<ruby>`](/fr/docs/Web/HTML/Element/ruby), [`<rp>`](/fr/docs/Web/HTML/Element/rp), [`<rt>`](/fr/docs/Web/HTML/Element/rt), [`<bdo>`](/fr/docs/Web/HTML/Element/bdo), [`<span>`](/fr/docs/Web/HTML/Element/span), [`<br>`](/fr/docs/Web/HTML/Element/br), [`<wbr>`](/fr/docs/Web/HTML/Element/wbr).
-- [Utiliser les éléments `<b>` et `<i>` (W3C)](https://www.w3.org/International/questions/qa-b-and-i-tags)
+- w-wes autwes éwéments powtants u-une sémantique t-textuewwe : [`<a>`](/fw/docs/web/htmw/ewement/a), ^^;; [`<em>`](/fw/docs/web/htmw/ewement/em), [`<stwong>`](/fw/docs/web/htmw/ewement/stwong), [`<smow>`](/fw/docs/web/htmw/ewement/smow), (⑅˘꒳˘) [`<cite>`](/fw/docs/web/htmw/ewement/cite), rawr x3 [`<q>`](/fw/docs/web/htmw/ewement/q), (///ˬ///✿) [`<dfn>`](/fw/docs/web/htmw/ewement/dfn), 🥺 [`<abbw>`](/fw/docs/web/htmw/ewement/abbw), >_< [`<time>`](/fw/docs/web/htmw/ewement/time), [`<code>`](/fw/docs/web/htmw/ewement/code), UwU [`<vaw>`](/fw/docs/web/htmw/ewement/vaw), >_< [`<samp>`](/fw/docs/web/htmw/ewement/samp), -.- [`<kbd>`](/fw/docs/web/htmw/ewement/kbd), mya [`<sub>`](/fw/docs/web/htmw/ewement/sub), >w< [`<sup>`](/fw/docs/web/htmw/ewement/sup), [`<i>`](/fw/docs/web/htmw/ewement/i), (U ﹏ U) [`<mawk>`](/fw/docs/web/htmw/ewement/mawk), 😳😳😳 [`<wuby>`](/fw/docs/web/htmw/ewement/wuby), o.O [`<wp>`](/fw/docs/web/htmw/ewement/wp), òωó [`<wt>`](/fw/docs/web/htmw/ewement/wt), 😳😳😳 [`<bdo>`](/fw/docs/web/htmw/ewement/bdo), σωσ [`<span>`](/fw/docs/web/htmw/ewement/span), (⑅˘꒳˘) [`<bw>`](/fw/docs/web/htmw/ewement/bw), (///ˬ///✿) [`<wbw>`](/fw/docs/web/htmw/ewement/wbw). 🥺
+- [utiwisew wes éwéments `<b>` et `<i>` (w3c)](https://www.w3.owg/intewnationaw/questions/qa-b-and-i-tags)

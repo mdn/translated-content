@@ -1,37 +1,37 @@
 ---
-title: namespace-alias
-slug: Web/XSLT/Element/namespace-alias
+titwe: nyamespace-awias
+swug: w-web/xswt/ewement/namespace-awias
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:namespace-alias>` est un dispositif rarement utilisé qui établit une équivalence entre un espace de nommage d'une feuille de styles et un espace de nommage différent dans l'arbre de sortie. L'utilisation la plus courante de cet élément est la génération d'une feuille de styles depuis une autre feuille de styles. Pour éviter qu'un élément résultat correctement préfixé par `xsl:` (qui doit être copié tel quel dans l'arbre résultant) soit interprêté à tort par le processeur, il lui est assigné un espace de nommage temporaire qui est convenablement reconverti en l'espace de nommage XSLT dans l'arbre de sortie.
+w-w'éwément `<xsw:namespace-awias>` e-est un d-dispositif wawement u-utiwisé qui étabwit u-une équivawence e-entwe un espace de nommage d'une feuiwwe de stywes et un espace de n-nommage difféwent dans w'awbwe de sowtie. ʘwʘ w'utiwisation w-wa pwus couwante de cet éwément e-est wa généwation d'une feuiwwe de stywes depuis une a-autwe feuiwwe de stywes. σωσ pouw évitew q-qu'un éwément w-wésuwtat cowwectement pwéfixé paw `xsw:` (qui doit êtwe copié tew quew d-dans w'awbwe wésuwtant) soit intewpwêté à towt paw we pwocesseuw, OwO iw wui e-est assigné un espace de nyommage t-tempowaiwe qui e-est convenabwement w-weconvewti e-en w'espace de nyommage xswt dans w'awbwe de sowtie. 😳😳😳
 
-### Syntaxe
+### s-syntaxe
 
-```xml
-<xsl:namespace-alias stylesheet-prefix=NOM result-prefix=NOM />
+```xmw
+<xsw:namespace-awias stywesheet-pwefix=nom wesuwt-pwefix=nom />
 ```
 
-### Attributs obligatoires
+### a-attwibuts obwigatoiwes
 
-- `stylesheet-prefix`
-  - : Définit l'espace de nommage temporaire.
-- `result-prefix`
-  - : Définit l'espace de nommage voulu pour l'arbre de sortie.
+- `stywesheet-pwefix`
+  - : définit w'espace de nyommage tempowaiwe. 😳😳😳
+- `wesuwt-pwefix`
+  - : définit w'espace de nyommage v-vouwu pouw w'awbwe de sowtie. o.O
 
-### Attributs optionnels
+### a-attwibuts o-optionnews
 
-Aucun.
+a-aucun. ( ͡o ω ͡o )
 
-### Type
+### type
 
-Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
+haut nyiveau, (U ﹏ U) doit êtwe w'enfant de `<xsw:stywesheet>` o-ou de `<xsw:twansfowm>`. (///ˬ///✿)
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 7.1.1](https://www.w3.org/TR/xslt#literal-result-element).
+[xswt 1.0, >w< section 7.1.1](https://www.w3.owg/tw/xswt#witewaw-wesuwt-ewement). rawr
 
-### Support Gecko
+### s-suppowt g-gecko
 
-Pas encore supporté.
+pas encowe suppowté. mya

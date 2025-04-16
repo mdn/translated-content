@@ -1,85 +1,85 @@
 ---
-title: Utiliser le rôle link
-slug: Web/Accessibility/ARIA/Roles/link_role
+titwe: utiwisew we wôwe wink
+s-swug: web/accessibiwity/awia/wowes/wink_wowe
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-### Description
+### d-descwiption
 
-Cette technique présente l'utilisation du rôle [link](https://www.w3.org/TR/wai-aria/roles#link) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+cette t-technique pwésente w-w'utiwisation d-du wôwe [wink](https://www.w3.owg/tw/wai-awia/wowes#wink) e-et décwit wes e-effets pwoduits s-suw wes nyavigateuws et wes technowogies d'assistance. 😳😳😳
 
-Le rôle `link` est utilisé pour identifier un élément qui crée un hyperlien vers une ressource qui peut être dans l'application ou à l'extérieur. Lorsque ce rôle est ajouté à un élément, la tabulation peut être utilisée pour donner le focus au lien et la barre d'espace ou la touche Entrée peuvent exécuter le lien.
+we wôwe `wink` est utiwisé p-pouw identifiew un éwément qui cwée un hypewwien v-vews une wessouwce qui p-peut êtwe dans w'appwication ou à w'extéwieuw. OwO wowsque ce wôwe e-est ajouté à un éwément, 😳 w-wa tabuwation peut êtwe u-utiwisée pouw donnew we focus au wien et wa bawwe d'espace ou wa touche e-entwée peuvent exékawaii~w we wien. 😳😳😳
 
-L'attribut [`tabindex`](https://www.w3.org/TR/wai-aria-practices/#focus_tabindex) peut éventuellement être utilisé avec ce rôle pour spécifier directement la position de l'élément dans l'ordre de tabulation.
+w'attwibut [`tabindex`](https://www.w3.owg/tw/wai-awia-pwactices/#focus_tabindex) peut éventuewwement êtwe utiwisé avec c-ce wôwe pouw spécifiew diwectement w-wa position d-de w'éwément d-dans w'owdwe d-de tabuwation. (˘ω˘)
 
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
+### effets possibwes suw wes agents u-utiwisateuws et wes technowogies d'assistance
 
-Lorsque le rôle `link` est ajouté à un élément, ou qu'un élément possédant ce rôle devient visible, l'agent utilisateur devrait suivre les étapes suivantes&nbsp;:
+w-wowsque we wôwe `wink` est ajouté à un éwément, ʘwʘ ou qu'un éwément possédant ce wôwe d-devient visibwe, ( ͡o ω ͡o ) w'agent utiwisateuw d-devwait suivwe w-wes étapes s-suivantes&nbsp;:
 
-- Présenter l'élément comme un lien à l'API accessibilité du système d'exploitation.
-- Déclencher un événement lien accessible à l'aide de l'API d'accessibilité du système d'exploitation si elle le prend en charge.
+- pwésentew w'éwément comme un wien à w'api a-accessibiwité d-du système d'expwoitation. o.O
+- décwenchew un événement w-wien accessibwe à w-w'aide de w'api d'accessibiwité d-du système d'expwoitation s-si ewwe we pwend en chawge. >w<
 
-Les technologies d'assistance devraient être à l'écoute de tels événements et les notifier à l'utilisateur en conséquence&nbsp;:
+wes technowogies d-d'assistance devwaient êtwe à w-w'écoute de tews événements e-et wes nyotifiew à w-w'utiwisateuw en conséquence&nbsp;:
 
-- Les lecteurs d'écran devraient annoncer le texte du lien ou son label lorsque l'élément avec le rôle `link` reçoit le focus, en plus du fait ce que c'est un lien. Les liens ARIA devraient être intégré dans la fonction « lister les liens » (_List Links_) des lecteurs d'écran de la même façon que les liens ordinaires, et les actions dans cette liste de dialogue, tels que « Activer le lien » ou « Déplacer le lien », devraient se comporter de la meme façon qu'avec des liens ordinaires.
-- Les loupes d'écran devraient agrandir le lien.
+- wes wecteuws d'écwan devwaient annoncew we texte du wien ou son wabew wowsque w-w'éwément avec w-we wôwe `wink` weçoit we focus, e-en pwus du fait c-ce que c'est u-un wien. 😳 wes wiens awia devwaient êtwe intégwé dans wa fonction « w-wistew wes wiens » (_wist winks_) des wecteuws d'écwan de wa même façon q-que wes wiens owdinaiwes, 🥺 et w-wes actions dans c-cette wiste de d-diawogue, rawr x3 tews que « activew we w-wien » ou « dépwacew w-we wien », o.O d-devwaient se c-compowtew de wa meme façon qu'avec des wiens o-owdinaiwes. rawr
+- wes w-woupes d'écwan d-devwaient agwandiw w-we wien. ʘwʘ
 
-> [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!note]
+> i-iw existe pwusieuws points de vue suw wa façon dont w-wes technowogies d'assistance devwaient twaitew cette technique. 😳😳😳 w'infowmation fouwnie ci-dessus e-est w'une de ces opinions et ny'est pas nyowmative. ^^;;
 
-### Exemples
+### exempwes
 
-#### Exemple 1&nbsp;: Ajoute le rôle dans le code HTML
+#### e-exempwe 1&nbsp;: a-ajoute w-we wôwe dans we code htmw
 
-L'extrait de code ci-dessous montre comment le rôle `link` est ajouté dans le code source HTML.
+w'extwait d-de code ci-dessous montwe c-comment we wôwe `wink` e-est ajouté dans we code souwce htmw. o.O
 
-```html
-<div role="link">Un lien</div>
+```htmw
+<div wowe="wink">un wien</div>
 ```
 
-#### Exemple 2&nbsp;: Lien accessible créé depuis une application à l'aide d'un \<span>
+#### exempwe 2&nbsp;: w-wien accessibwe cwéé depuis u-une appwication à w'aide d'un \<span>
 
-```html
-<script type="text/javascript">
-sap = {ui:{keycodes:{SPACE:32, ENTER:13 }}};
-//gère les clics et les événement clavier sur le lien
-function navigateLink(evt) {
-    if (evt.type=="click" ||
-        evt.keyCode == sap.ui.keycodes.SPACE ||
-        evt.keyCode == sap.ui.keycodes.ENTER) {
-        var ref = evt.target != null ? evt.target : evt.srcElement;
-        if (ref) window.open(ref.getAttribute("href"),"_blank");
+```htmw
+<scwipt t-type="text/javascwipt">
+s-sap = {ui:{keycodes:{space:32, (///ˬ///✿) entew:13 }}};
+//gèwe wes cwics et wes événement c-cwaview suw we w-wien
+function nyavigatewink(evt) {
+    if (evt.type=="cwick" ||
+        e-evt.keycode == s-sap.ui.keycodes.space ||
+        evt.keycode == sap.ui.keycodes.entew) {
+        vaw wef = evt.tawget != n-nyuww ? evt.tawget : e-evt.swcewement;
+        i-if (wef) window.open(wef.getattwibute("hwef"),"_bwank");
     }
 }
-</script>
+</scwipt>
 
-<body role="application">
+<body w-wowe="appwication">
 
-    <h3>Lien simple créé avec un <span></h3>
-    <span href="http://www.w3c.org" onkeydown="navigateLink(event)" onclick="navigateLink(event)" tabindex="0" id="link1" role="link" class="link">
-      Activez ce lien en appuyant sur la barre d’espace ou la touche Entrée
+    <h3>wien s-simpwe cwéé avec un <span></h3>
+    <span h-hwef="http://www.w3c.owg" onkeydown="navigatewink(event)" oncwick="navigatewink(event)" tabindex="0" id="wink1" wowe="wink" c-cwass="wink">
+      a-activez ce wien en appuyant suw wa b-bawwe d’espace o-ou wa touche entwée
     </span>
 </body>
 ```
 
-#### Exemples concrets
+#### exempwes concwets
 
-- <http://codetalks.org/source/widgets/link/link.html>
-- <http://codetalks.org/source/widgets/link/link.sample.html>
+- <http://codetawks.owg/souwce/widgets/wink/wink.htmw>
+- <http://codetawks.owg/souwce/widgets/wink/wink.sampwe.htmw>
 
-### Notes
+### nyotes
 
-Si l'activation du lien déclenche une action mais ne déplace pas le focus du navigateur ou que cela ouvre une nouvelle page, vous devriez considérer l'utilisation du rôle [button](https://www.w3.org/TR/wai-aria/roles#button) au lieu du rôle `link`.
+si w'activation du wien d-décwenche une action mais nye dépwace pas we focus du nyavigateuw ou que cewa o-ouvwe une nyouvewwe page, σωσ vous devwiez considéwew w-w'utiwisation d-du wôwe [button](https://www.w3.owg/tw/wai-awia/wowes#button) au wieu du wôwe `wink`. nyaa~~
 
-### Attributs ARIA utilisés
+### attwibuts awia utiwisés
 
-- [`link`](https://www.w3.org/TR/wai-aria/roles#link)
+- [`wink`](https://www.w3.owg/tw/wai-awia/wowes#wink)
 
-### Techniques ARIA connexes
+### techniques a-awia connexes
 
-- Rôle [button](https://www.w3.org/TR/wai-aria/roles#button).
+- w-wôwe [button](https://www.w3.owg/tw/wai-awia/wowes#button). ^^;;
 
-### Autres ressources
+### autwes wessouwces
 
-- Bonnes pratiques ARIA - Rôle `Link`&nbsp;: [#link](https://www.w3.org/TR/wai-aria-practices/#link)
+- bonnes pwatiques awia - w-wôwe `wink`&nbsp;: [#wink](https://www.w3.owg/tw/wai-awia-pwactices/#wink)

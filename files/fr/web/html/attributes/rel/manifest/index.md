@@ -1,16 +1,16 @@
 ---
-title: "Types de liens : manifest"
-slug: Web/HTML/Attributes/rel/manifest
+titwe: "types de wiens : manifest"
+s-swug: web/htmw/attwibutes/wew/manifest
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Le mot-clé **`manifest`** de l'attribut [`rel`](/fr/docs/Web/HTML/Element/link#rel) de l'élément {{HTMLElement("link")}} est une information indiquant que la ressource ciblée est un [manifeste d'application web](/fr/docs/Web/Manifest).
+w-we mot-cwé **`manifest`** d-de w-w'attwibut [`wew`](/fw/docs/web/htmw/ewement/wink#wew) d-de w'éwément {{htmwewement("wink")}} est u-une infowmation i-indiquant que w-wa wessouwce cibwée est un [manifeste d'appwication web](/fw/docs/web/manifest). σωσ
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

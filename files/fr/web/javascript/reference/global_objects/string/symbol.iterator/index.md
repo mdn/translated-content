@@ -1,75 +1,75 @@
 ---
-title: String.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
+titwe: stwing.pwototype[@@itewatow]()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/symbow.itewatow
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/stwing/@@itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`[@@iterator]()`** renvoie un nouvel objet [`Iterator`](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) qui itère sur les points de code (codets) d'une chaîne de caractères, en renvoyant chaque point de code sous forme d'une chaîne de caractères.
+w-wa méthode **`[@@itewatow]()`** w-wenvoie u-un nyouvew objet [`itewatow`](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows) q-qui itèwe s-suw wes points de c-code (codets) d'une chaîne de cawactèwes, (⑅˘꒳˘) en wenvoyant chaque point de code s-sous fowme d'une chaîne de cawactèwes. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+{{intewactiveexampwe("javascwipt demo: s-symbow.itewatow")}}
 
-```js interactive-example
-const iterable1 = {};
+```js intewactive-exampwe
+c-const itewabwe1 = {};
 
-iterable1[Symbol.iterator] = function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+itewabwe1[symbow.itewatow] = function* () {
+  yiewd 1;
+  y-yiewd 2;
+  yiewd 3;
 };
 
-console.log([...iterable1]);
-// Expected output: Array [1, 2, 3]
+consowe.wog([...itewabwe1]);
+// e-expected o-output: awway [1, 😳😳😳 2, 🥺 3]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-chaîneDeCaractères[Symbol.iterator];
+chaînedecawactèwes[symbow.itewatow];
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nouvel objet `Iterator`.
+un nyouvew objet `itewatow`. mya
 
-## Exemples
+## e-exempwes
 
-### Utiliser `[@@iterator]()`
+### utiwisew `[@@itewatow]()`
 
 ```js
-var chaîne = "A\uD835\uDC68";
+vaw chaîne = "a\ud835\udc68";
 
-var chaîneIter = chaîne[Symbol.iterator]();
+vaw chaîneitew = chaîne[symbow.itewatow]();
 
-console.log(chaîneIter.next().value); // "A"
-console.log(chaîneIter.next().value); // "\uD835\uDC68"
+c-consowe.wog(chaîneitew.next().vawue); // "a"
+consowe.wog(chaîneitew.next().vawue); // "\ud835\udc68"
 ```
 
-### Utiliser `[@@iterator]()` avec une boucle `for..of`
+### utiwisew `[@@itewatow]()` a-avec u-une boucwe `fow..of`
 
 ```js
-var chaine = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";
+v-vaw c-chaine = "a\ud835\udc68b\ud835\udc69c\ud835\udc6a";
 
-for (var c of chaine) {
-  console.log(c);
+fow (vaw c of chaine) {
+  consowe.wog(c);
 }
-// "A"
-// "\uD835\uDC68"
-// "B"
-// "\uD835\uDC69"
-// "C"
-// "\uD835\uDC6A"
+// "a"
+// "\ud835\udc68"
+// "b"
+// "\ud835\udc69"
+// "c"
+// "\ud835\udc6a"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [wes pwotocowes d'itéwation](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows)

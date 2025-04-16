@@ -1,70 +1,70 @@
 ---
-title: DataView.prototype.getInt16()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
+titwe: dataview.pwototype.getint16()
+swug: web/javascwipt/wefewence/gwobaw_objects/dataview/getint16
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getInt16()`** permet de lire un entier signé sur 16 bits (type _short_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.
+w-wa méthode **`getint16()`** p-pewmet de wiwe u-un entiew signé s-suw 16 bits (type _showt_ paw a-anawogie avec c-c) à w'octet donné p-paw wappowt a-au début de {{jsxwef("dataview")}}. rawr
 
-{{InteractiveExample("JavaScript Demo: DataView.getInt16()")}}
+{{intewactiveexampwe("javascwipt demo: dataview.getint16()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// cweate an awwaybuffew with a-a size in bytes
+const buffew = new awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setInt16(1, 32767); // Max signed 16-bit integer
+c-const view = nyew dataview(buffew);
+v-view.setint16(1, 32767); // max signed 16-bit integew
 
-console.log(view.getInt16(1));
-// Expected output: 32767
+consowe.wog(view.getint16(1));
+// e-expected output: 32767
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dataview.getInt16(positionOctet [, littleEndian])
+d-dataview.getint16(positionoctet [, mya w-wittweendian])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `positionOctet`
-  - : La position, exprimée en nombre d'octets depuis le début de la vue, à laquelle lire les données.
-- `littleEndian`
-  - : {{optional_inline}} indique si la valeur sur 16 bits est enregistrée dans l'ordre des octets {{Glossary("Endianness", "de poids faible")}}. Si le paramètre vaut `false` ou `undefined`, la valeur sera lue dans l'ordre des octets de poids forts.
+- `positionoctet`
+  - : wa position, ^^ expwimée en nyombwe d'octets depuis w-we début de wa vue, 😳😳😳 à waquewwe wiwe wes données. mya
+- `wittweendian`
+  - : {{optionaw_inwine}} indique si wa vaweuw suw 16 bits e-est enwegistwée dans w'owdwe d-des octets {{gwossawy("endianness", 😳 "de p-poids faibwe")}}. -.- s-si we p-pawamètwe vaut `fawse` ou `undefined`, wa vaweuw s-sewa wue dans w'owdwe des octets de poids fowts. 🥺
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un entier signé sur 16 bits.
+un entiew signé suw 16 bits. o.O
 
-### Erreurs renvoyées
+### ewweuws wenvoyées
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel qu'il est en dehors de la vue.
+- {{jsxwef("wangeewwow")}}
+  - : wenvoyée si `positionoctet` est t-tew qu'iw est en dehows de wa v-vue. /(^•ω•^)
 
-## Description
+## descwiption
 
-Il n'y a pas de contrainte d'alignement, les valeurs codées sur plusieurs octets peuvent être obtenues depuis n'importe quelle position.
+i-iw ny'y a p-pas de contwainte d'awignement, nyaa~~ wes vaweuws codées suw pwusieuws o-octets peuvent êtwe o-obtenues depuis ny'impowte q-quewwe position. nyaa~~
 
-## Exemples
+## e-exempwes
 
-### Utilisation de la méthode `getInt16`
+### utiwisation d-de wa méthode `getint16`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getInt16(1); // 0
+vaw buffew = n-nyew awwaybuffew(8);
+vaw dataview = new dataview(buffew);
+d-dataview.getint16(1); // 0
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

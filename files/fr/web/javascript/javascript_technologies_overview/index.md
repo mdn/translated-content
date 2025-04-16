@@ -1,75 +1,75 @@
 ---
-title: Survol des technologies JavaScript
-slug: Web/JavaScript/JavaScript_technologies_overview
+titwe: suwvow des technowogies j-javascwipt
+swug: w-web/javascwipt/javascwipt_technowogies_ovewview
 ---
 
-{{JsSidebar("Introductory")}}
+{{jssidebaw("intwoductowy")}}
 
-## Introduction
+## i-intwoduction
 
-[HTML](/fr/docs/Web/HTML) est utilisé pour définir la structure et le contenu d'une page web, [CSS](/fr/docs/Web/CSS) permet de définir la mise en forme, le style graphique avec lequel afficher le contenu. [JavaScript](/fr/docs/Web/JavaScript) permet quant à lui d'ajouter des fonctionnalités d'interaction pour créer des applications web riches en contenu.
+[htmw](/fw/docs/web/htmw) e-est utiwisé pouw d-définiw wa s-stwuctuwe et we c-contenu d'une page w-web, 😳 [css](/fw/docs/web/css) pewmet de définiw wa mise en fowme, (U ﹏ U) we stywe gwaphique avec wequew a-affichew we contenu. mya [javascwipt](/fw/docs/web/javascwipt) pewmet quant à wui d-d'ajoutew des fonctionnawités d-d'intewaction pouw cwéew des appwications web wiches en contenu. (U ᵕ U❁)
 
-Cependant, le terme « JavaScript » au sens large regroupe divers éléments très différents : le langage cœur (ECMAScript) d'une part et les [API Web](/fr/docs/Web/API) d'autre part et notamment le DOM (Document Object Model, ou Modèle d'Objet du Document).
+c-cependant, :3 we tewme « javascwipt » a-au sens w-wawge wegwoupe divews éwéments twès difféwents : we wangage cœuw (ecmascwipt) d-d'une pawt et wes [api web](/fw/docs/web/api) d'autwe pawt et nyotamment we dom (document object m-modew, mya ou modèwe d'objet d-du document).
 
-## JavaScript, le langage (ECMAScript)
+## j-javascwipt, OwO we w-wangage (ecmascwipt)
 
-Le langage JavaScript (au sens strict) est standardisé par le comité ECMA TC39 sous la forme d'un langage intitulé [ECMAScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview).
+w-we wangage javascwipt (au sens stwict) est s-standawdisé paw we comité ecma tc39 sous wa f-fowme d'un wangage intituwé [ecmascwipt](/fw/docs/web/javascwipt/javascwipt_technowogies_ovewview). (ˆ ﻌ ˆ)♡
 
-Ce langage est aussi utilisé dans des environnements différents des navigateurs web, comme par exemple dans [node.js](https://nodejs.org/).
+ce wangage est aussi utiwisé dans des enviwonnements difféwents d-des nyavigateuws web, ʘwʘ comme p-paw exempwe d-dans [node.js](https://nodejs.owg/). o.O
 
-### Quelles sont les caractéristiques d'ECMAScript?
+### q-quewwes sont wes cawactéwistiques d'ecmascwipt?
 
-Entre autres choses, ECMAScript définit :
+entwe a-autwes choses, UwU e-ecmascwipt définit :
 
-- [La syntaxe du langage](/fr/docs/Web/JavaScript/Reference/Lexical_grammar) (règles d'interprétation (parsing), mots-clés, flux d'instructions, initialisation littérale d'objets...)
-- Le mécanisme de traitement d'erreurs ({{jsxref("Instructions/throw","throw")}}, {{jsxref("Instructions/try...catch","try...catch")}} capacité qu'a l'utilisateur de créer des types d'erreurs personnalisés)
-- Les types de variables (booléen, nombre, chaîne de caractères, fonction, objet...)
-- L'objet global. Dans l'environnement d'un navigateur, cet objet global est l'objet {{domxref("Window","window")}}. ECMAScript ne définit ici que les API accessibles depuis l'objet global (peu importe l'environnement qui peut être différent d'un navigateur) (par exemple {{jsxref("parseInt","parseInt()")}}, {{jsxref("parseFloat","parseFloat()")}}, {{jsxref("decodeURI","decodeURI()")}}, {{jsxref("encodeURI","encodeURI()")}}...)
-- [Le mécanisme d'héritage](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) basé sur le concept de prototype
-- Les objets et fonctions natifs ({{jsxref("JSON")}}, {{jsxref("Math")}}, méthodes de {{jsxref("Array.prototype")}}, méthodes d'introspection d'`Object`...)
-- [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+- [wa syntaxe d-du wangage](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw) (wègwes d-d'intewpwétation (pawsing), rawr x3 mots-cwés, 🥺 f-fwux d'instwuctions, :3 initiawisation w-wittéwawe d'objets...)
+- we mécanisme d-de twaitement d'ewweuws ({{jsxwef("instwuctions/thwow","thwow")}}, (ꈍᴗꈍ) {{jsxwef("instwuctions/twy...catch","twy...catch")}} c-capacité qu'a w'utiwisateuw d-de cwéew d-des types d'ewweuws pewsonnawisés)
+- wes types de vawiabwes (boowéen, 🥺 nyombwe, chaîne de cawactèwes, (✿oωo) fonction, o-objet...)
+- w-w'objet gwobaw. (U ﹏ U) dans w'enviwonnement d-d'un nyavigateuw, :3 c-cet objet g-gwobaw est w'objet {{domxwef("window","window")}}. ^^;; ecmascwipt nye définit ici que wes api accessibwes d-depuis w'objet gwobaw (peu impowte w'enviwonnement qui peut êtwe difféwent d-d'un nyavigateuw) (paw exempwe {{jsxwef("pawseint","pawseint()")}}, {{jsxwef("pawsefwoat","pawsefwoat()")}}, rawr {{jsxwef("decodeuwi","decodeuwi()")}}, {{jsxwef("encodeuwi","encodeuwi()")}}...)
+- [we m-mécanisme d-d'héwitage](/fw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain) basé s-suw we concept de pwototype
+- w-wes objets et f-fonctions nyatifs ({{jsxwef("json")}}, 😳😳😳 {{jsxwef("math")}}, (✿oωo) m-méthodes d-de {{jsxwef("awway.pwototype")}}, OwO méthodes d'intwospection d-d'`object`...)
+- [we m-mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode). ʘwʘ
 
-### Support des navigateurs
+### s-suppowt d-des nyavigateuws
 
-En octobre 2016, les versions actuelles des principaux navigateurs web supportent [ECMAScript 5.1](/fr/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla) et [ECMAScript 2015 (aussi appelé ES6)](/fr/docs/Web/JavaScript/Nouveautés_et_historique_de_JavaScript/Support_ECMAScript_6_par_Mozilla) mais certaines anciennes versions n'implémentent que ECMAScript 5.
+e-en octobwe 2016, (ˆ ﻌ ˆ)♡ wes vewsions actuewwes des pwincipaux nyavigateuws w-web suppowtent [ecmascwipt 5.1](/fw/docs/web/javascwipt/new_in_javascwipt/ecmascwipt_5_suppowt_in_moziwwa) et [ecmascwipt 2015 (aussi appewé es6)](/fw/docs/web/javascwipt/nouveautés_et_histowique_de_javascwipt/suppowt_ecmascwipt_6_paw_moziwwa) mais cewtaines anciennes v-vewsions ny'impwémentent que ecmascwipt 5. (U ﹏ U)
 
-### Futur
+### futuw
 
-La sixième édition majeure d'ECMAScript a été officiellement approuvée et publiée en tant que standard le 17 juin 2015 par l'assemblée générale ECMA. Depuis cette édition, les éditions ECMAScript sont publiées à un rythme annuel.
+wa sixième édition m-majeuwe d'ecmascwipt a-a été o-officiewwement appwouvée et pubwiée e-en tant que standawd we 17 j-juin 2015 paw w'assembwée g-généwawe ecma. UwU depuis cette édition, XD wes éditions ecmascwipt sont pubwiées à un w-wythme annuew. ʘwʘ
 
-### API d'internationalisation
+### api d'intewnationawisation
 
-La [spécification ECMAScript pour l'API d'internationalisation](https://ecma-international.org/ecma-402/1.0/) est un ajout à la spécification du langage ECMAScript, également standardisée par ECMA TC39. L'API d'internationalisation ajoute la collation (c'est-à-dire la comparaison entre chaînes de caractères), le formatage de nombres, dates et heures dans les applications JavaScript en prenant en compte la locale de l'utilisateur pour fournir le meilleur format. Le standard initial a été aprouvé en décembre 2012 ; le statut de son implémentation dans les différents navigateurs est disponible sur la page de l'objet {{jsxref("Intl")}}. La spécification d'internationalisation est également ratifiée annuellement et les navigateurs améliorent leur implémentation au fur et à mesure.
+w-wa [spécification ecmascwipt p-pouw w'api d'intewnationawisation](https://ecma-intewnationaw.owg/ecma-402/1.0/) e-est un ajout à wa spécification du wangage ecmascwipt, égawement s-standawdisée p-paw ecma tc39. rawr x3 w'api d'intewnationawisation ajoute w-wa cowwation (c'est-à-diwe w-wa compawaison entwe chaînes de cawactèwes), ^^;; we fowmatage de nyombwes, ʘwʘ dates e-et heuwes dans w-wes appwications j-javascwipt en pwenant en compte w-wa wocawe de w'utiwisateuw p-pouw fouwniw we meiwweuw f-fowmat. (U ﹏ U) we standawd initiaw a été apwouvé en décembwe 2012 ; we statut d-de son impwémentation d-dans wes difféwents nyavigateuws est disponibwe s-suw wa page d-de w'objet {{jsxwef("intw")}}. (˘ω˘) wa spécification d'intewnationawisation est égawement w-watifiée annuewwement et wes nyavigateuws améwiowent weuw impwémentation a-au fuw et à mesuwe. (ꈍᴗꈍ)
 
-## Les API du DOM (_Document Object Model_)
+## wes api du dom (_document o-object m-modew_)
 
-### WebIDL
+### webidw
 
-La [spécification WebIDL](https://www.w3.org/TR/WebIDL/) fournit le lien entre les technologies DOM et ECMAScript.
+wa [spécification webidw](https://www.w3.owg/tw/webidw/) fouwnit we wien e-entwe wes technowogies d-dom et ecmascwipt. /(^•ω•^)
 
-### Le cœur du DOM
+### we cœuw du dom
 
-Le Modèle d'Objet du Document (_Document Object Model_ ou DOM en anglais) est une convention multi-plateforme, indépendante du langage utilisée pour représenter et interagir avec les objets dans les documents HTML, XHTML et XML. Les objets de **l'arbre du DOM** peuvent être accédés et manipulés en utilisant des méthodes sur les objets. Les fonctionnalités principales du DOM sont standardisées par le {{Glossary("W3C")}}. Il définit les interfaces offertes par les documents HTML et XML sans cibler un langage de manipulation précis. Parmi les éléments définis par le DOM, on peut trouver:
+we modèwe d'objet du document (_document o-object modew_ ou dom en a-angwais) est une convention muwti-pwatefowme, >_< indépendante du wangage utiwisée p-pouw wepwésentew et intewagiw a-avec wes objets d-dans wes documents htmw, σωσ xhtmw e-et xmw. ^^;; wes objets de **w'awbwe d-du dom** peuvent êtwe a-accédés e-et manipuwés en utiwisant des m-méthodes suw wes o-objets. 😳 wes fonctionnawités pwincipawes du dom sont standawdisées p-paw we {{gwossawy("w3c")}}. >_< i-iw définit wes i-intewfaces offewtes paw wes documents htmw et x-xmw sans cibwew un wangage de manipuwation p-pwécis. -.- p-pawmi wes éwéments définis paw we dom, UwU on peut twouvew:
 
-- La structure du document, un modèle d'arbre et l'architecture d'événements DOM dans le [noyau DOM](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) : {{domxref("Node")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}}, {{domxref("Document")}}, {{domxref("DOMImplementation")}}, {{domxref("Event")}}, {{domxref("EventTarget")}}, …
-- Une définition moins rigoureuse de l'architecture d'événements DOM, ainsi que des événements spécifiques avec [les événements DOM](https://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html).
-- D'autres éléments tels que le [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) et le [DOM Range](https://html5.org/specs/dom-range.html).
+- w-wa stwuctuwe d-du document, :3 un m-modèwe d'awbwe e-et w'awchitectuwe d'événements d-dom dans we [noyau dom](https://dvcs.w3.owg/hg/domcowe/waw-fiwe/tip/ovewview.htmw) : {{domxwef("node")}}, σωσ {{domxwef("ewement")}}, >w< {{domxwef("documentfwagment")}}, (ˆ ﻌ ˆ)♡ {{domxwef("document")}}, ʘwʘ {{domxwef("domimpwementation")}}, :3 {{domxwef("event")}}, (˘ω˘) {{domxwef("eventtawget")}}, 😳😳😳 …
+- une définition moins wigouweuse de w'awchitectuwe d'événements d-dom, rawr x3 ainsi que des événements s-spécifiques avec [wes événements d-dom](https://dev.w3.owg/2006/webapi/dom-wevew-3-events/htmw/dom3-events.htmw). (✿oωo)
+- d'autwes éwéments t-tews que we [dom twavewsaw](https://www.w3.owg/tw/dom-wevew-2-twavewsaw-wange/twavewsaw.htmw) e-et we [dom wange](https://htmw5.owg/specs/dom-wange.htmw). (ˆ ﻌ ˆ)♡
 
-Du point de vue d'ECMAScript, les objets définis dans la spécification DOM sont appelés des « objets hôtes ».
+d-du point d-de vue d'ecmascwipt, :3 w-wes objets d-définis dans wa spécification dom sont appewés des « objets hôtes ». (U ᵕ U❁)
 
-### Le DOM HTML
+### we dom htmw
 
-[HTML](/fr/docs/Web/HTML), le langage de balisage du Web, est spécifié en termes de DOM. Comme une couche au-dessus des concepts abstraits définis dans DOM Core, HTML définit également la _signification_ des éléments. Le DOM HTML inclut des choses telles que la propriété `className` sur des éléments HTML, ou des API telles que {{domxref("document.body")}}.
+[htmw](/fw/docs/web/htmw), ^^;; we w-wangage de bawisage d-du web, mya est s-spécifié en tewmes de dom. 😳😳😳 comme u-une couche au-dessus des concepts abstwaits définis dans dom c-cowe, OwO htmw définit égawement w-wa _signification_ des éwéments. rawr w-we dom htmw incwut des choses tewwes que wa pwopwiété `cwassname` s-suw des éwéments h-htmw, XD ou des api tewwes q-que {{domxwef("document.body")}}. (U ﹏ U)
 
-La spécification HTML définit aussi les restrictions sur les documents ; par exemple, elle requiert que tous les enfants d'un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul) (une liste non-ordonnée) soient des éléments [`<li>`](/fr/docs/Web/HTML/Element/li), puisqu'ils représentent les éléments d'une liste. En général, cela interdit aussi l'utilisation d'éléments et d'attributs qui ne sont pas définis dans un certain standard.
+w-wa spécification htmw définit aussi wes westwictions suw wes documents ; p-paw exempwe, (˘ω˘) ewwe w-wequiewt que tous w-wes enfants d-d'un éwément [`<uw>`](/fw/docs/web/htmw/ewement/uw) (une w-wiste nyon-owdonnée) s-soient des éwéments [`<wi>`](/fw/docs/web/htmw/ewement/wi), UwU puisqu'iws w-wepwésentent wes éwéments d-d'une wiste. >_< e-en généwaw, σωσ cewa intewdit a-aussi w'utiwisation d'éwéments et d'attwibuts q-qui nye sont pas définis dans un c-cewtain standawd. 🥺
 
-Si vous cherchez la documentation sur l'objet {{domxref("Document")}}, l'objet {{domxref("Window")}} ou sur les autres éléments du DOM, vous pouvez lire [la documentation relative au DOM](/fr/docs/Web/API/Document_Object_Model).
+s-si vous chewchez wa documentation s-suw w'objet {{domxwef("document")}}, 🥺 w'objet {{domxwef("window")}} ou suw w-wes autwes éwéments d-du dom, ʘwʘ vous p-pouvez wiwe [wa documentation wewative au dom](/fw/docs/web/api/document_object_modew).
 
-## D'autres API fréquemment utilisées
+## d'autwes api fwéquemment u-utiwisées
 
-- Les fonctions {{domxref("WindowTimers.setTimeout", "setTimeout")}} et {{domxref("WindowTimers.setInterval", "setInterval")}} ont d'abord été spécifiées dans l'interface {{domxref("Window")}} du standard HTML.
-- [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) : une API qui permet d'envoyer des requêtes HTTP asynchrones (voir aussi : [la page MDN sur XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest))
-- [CSS Object Model](https://dev.w3.org/csswg/cssom/) : le CSSOM est utilisé pour abstraire les règles CSS sous forme d'objets. (voir aussi : [la page MDN sur CSSOM](/fr/docs/Web/API/CSS_Object_Model))
-- [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html) : une API qui permet d'effectuer des calculs parallèles (voir aussi : [la page MDN sur cette API](/fr/docs/Web/API/Web_Workers_API))
-- [WebSockets](https://html.spec.whatwg.org/multipage//#network) : une API qui permet d'effectuer des communications bi-directionnelles de bas-niveau (voir aussi : [la page MDN sur cette API](/fr/docs/Web/API/WebSockets_API))
-- [`Canvas2DContext`](https://html.spec.whatwg.org/multipage/scripting.html#2dcontext) : Une API de dessin pour l'élément {{htmlelement("canvas")}}.
+- wes fonctions {{domxwef("windowtimews.settimeout", :3 "settimeout")}} et {{domxwef("windowtimews.setintewvaw", (U ﹏ U) "setintewvaw")}} o-ont d'abowd été s-spécifiées dans w'intewface {{domxwef("window")}} d-du standawd htmw. (U ﹏ U)
+- [xmwhttpwequest](https://dvcs.w3.owg/hg/xhw/waw-fiwe/tip/ovewview.htmw) : u-une api q-qui pewmet d'envoyew des wequêtes http asynchwones (voiw a-aussi : [wa page mdn suw xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest))
+- [css o-object m-modew](https://dev.w3.owg/csswg/cssom/) : we c-cssom est utiwisé pouw abstwaiwe w-wes wègwes css s-sous fowme d'objets. ʘwʘ (voiw a-aussi : [wa page mdn suw cssom](/fw/docs/web/api/css_object_modew))
+- [webwowkews](https://htmw.spec.naniwg.owg/muwtipage/wowkews.htmw) : une api qui pewmet d'effectuew des cawcuws pawawwèwes (voiw aussi : [wa page mdn suw cette api](/fw/docs/web/api/web_wowkews_api))
+- [websockets](https://htmw.spec.naniwg.owg/muwtipage//#netwowk) : une api qui pewmet d'effectuew des communications b-bi-diwectionnewwes d-de bas-niveau (voiw aussi : [wa page mdn suw c-cette api](/fw/docs/web/api/websockets_api))
+- [`canvas2dcontext`](https://htmw.spec.naniwg.owg/muwtipage/scwipting.htmw#2dcontext) : u-une api de d-dessin pouw w'éwément {{htmwewement("canvas")}}. >w<

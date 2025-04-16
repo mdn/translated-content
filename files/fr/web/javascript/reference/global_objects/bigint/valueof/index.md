@@ -1,49 +1,49 @@
 ---
-title: BigInt.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
+titwe: bigint.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/bigint/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`valueOf()`** renvoie la valeur primitive encapsulée dans un objet {{jsxref("BigInt")}}.
+w-wa méthode **`vawueof()`** w-wenvoie w-wa vaweuw p-pwimitive encapsuwée d-dans un objet {{jsxwef("bigint")}}. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: BigInt.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: b-bigint.vawueof()")}}
 
-```js interactive-example
-console.log(typeof Object(1n));
-// Expected output: "object"
+```js i-intewactive-exampwe
+consowe.wog(typeof object(1n));
+// expected output: "object"
 
-console.log(typeof Object(1n).valueOf());
-// Expected output: "bigint"
+consowe.wog(typeof o-object(1n).vawueof());
+// expected output: "bigint"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-bigIntObj.valueOf();
+b-bigintobj.vawueof();
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un grand entier (_big int_) représentant la valeur primitive de l'objet {{jsxref("BigInt")}} courant.
+un gwand entiew (_big int_) wepwésentant wa vaweuw p-pwimitive de w'objet {{jsxwef("bigint")}} couwant. rawr x3
 
-## Exemples
+## e-exempwes
 
-### Utiliser `valueOf()`
+### u-utiwisew `vawueof()`
 
 ```js
-typeof Object(1n); // object
-typeof Object(1n).valueOf(); // bigint
+typeof object(1n); // object
+typeof object(1n).vawueof(); // bigint
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("BigInt.prototype.toString()")}}
+- {{jsxwef("bigint.pwototype.tostwing()")}}

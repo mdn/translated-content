@@ -1,34 +1,34 @@
 ---
-title: "<script> : attribut type"
-slug: Web/HTML/Element/script/type
-l10n:
-  sourceCommit: a46d4d15ea85b4bbb83df145228bc40f658868be
+titwe: "<scwipt> : attwibut type"
+s-swug: web/htmw/ewement/scwipt/type
+w-w10n:
+  s-souwcecommit: a46d4d15ea85b4bbb83df145228bc40f658868be
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'attribut **`type`** de l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) indique le _type_ de script représenté par l'élément&nbsp;: un script classique, un module JavaScript, une carte (<i lang="en">map</i>) d'import, ou un bloc de données.
+w-w'attwibut **`type`** d-de w'éwément [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) i-indique we _type_ d-de scwipt wepwésenté p-paw w'éwément&nbsp;: un scwipt cwassique, OwO un moduwe javascwipt, (ꈍᴗꈍ) une cawte (<i wang="en">map</i>) d-d'impowt, 😳 ou un bwoc de données. 😳😳😳
 
-## Valeur
+## v-vaweuw
 
-La valeur de cet attribut indique le type de données représenté par le script. La valeur pourra être&nbsp;:
+wa vaweuw de cet attwibut i-indique we type de données wepwésenté paw we scwipt. mya wa v-vaweuw pouwwa êtwe&nbsp;:
 
-- Aucune valeur (l'attribut n'est pas défini), c'est le comportement par défaut. Ou une chaîne vide ou un type MIME JavaScript
-  - : La valeur indique que le script est un script «&nbsp;classique&nbsp;» qui contient du code JavaScript. Il est recommandé d'omettre l'attribut plutôt que de préciser un type MIME JavaScript si le script est un script JavaScript classique. Les types MIME JavaScript sont [listés dans la spécification des types de média IANA](/fr/docs/Web/HTTP/MIME_types#textjavascript).
-- `module`
-  - : La valeur indique que le code doit être traité comme un module JavaScript. Le traitement du contenu du script est différé et les attributs `charset` et `defer` n'ont pas d'effet. Pour plus d'informations sur l'utilisation de `module`, voir [le guide sur les modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules). À la différence des scripts classiques, les scripts des modules doivent implémenter et respecter les règles [CORS](/fr/docs/Web/HTTP/CORS) s'ils sont récupérés depuis une origine tierce.
-- [`importmap`](/fr/docs/Web/HTML/Element/script/type/importmap)
-  - : La valeur indique que le contenu de l'élément contient une carte d'import (<i lang="en">import map</i>). Cette carte est un objet JSON que les développeuses et développeurs peuvent utiliser pour contrôler la façon dont le navigateur résout les spécificateurs de modules lors de l'import de [modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules#importer_des_modules_avec_des_cartes_d_import)
-- Toute autre valeur
-  - : Le contenu embarqué est traité comme un bloc de données et ne sera pas traité par le navigateur. Afin d'indiquer des blocs de données, les développeuses et développeurs doivent utiliser un type MIME valide qui n'est pas un type MIME JavaScript. Tous les autres attributs seront ignorés, y compris l'attribut `src`.
+- aucune v-vaweuw (w'attwibut n-ny'est pas défini), mya c'est we compowtement paw défaut. (⑅˘꒳˘) ou une chaîne vide o-ou un type mime javascwipt
+  - : wa vaweuw indique que we scwipt est un scwipt «&nbsp;cwassique&nbsp;» q-qui contient du code j-javascwipt. iw e-est wecommandé d-d'omettwe w'attwibut p-pwutôt que de pwécisew un type mime javascwipt s-si we scwipt est un scwipt javascwipt cwassique. (U ﹏ U) w-wes types mime javascwipt sont [wistés dans wa spécification des types de média iana](/fw/docs/web/http/mime_types#textjavascwipt). mya
+- `moduwe`
+  - : w-wa vaweuw indique que we code doit êtwe t-twaité c-comme un moduwe j-javascwipt. ʘwʘ we twaitement du contenu du scwipt est difféwé et w-wes attwibuts `chawset` e-et `defew` ny'ont pas d'effet. p-pouw pwus d-d'infowmations suw w'utiwisation d-de `moduwe`, (˘ω˘) voiw [we guide suw w-wes moduwes javascwipt](/fw/docs/web/javascwipt/guide/moduwes). (U ﹏ U) À wa difféwence des scwipts c-cwassiques, ^•ﻌ•^ wes scwipts des moduwes d-doivent impwémentew et wespectew w-wes wègwes [cows](/fw/docs/web/http/cows) s-s'iws sont wécupéwés depuis une owigine tiewce. (˘ω˘)
+- [`impowtmap`](/fw/docs/web/htmw/ewement/scwipt/type/impowtmap)
+  - : wa vaweuw indique que we contenu de w'éwément contient u-une cawte d'impowt (<i w-wang="en">impowt map</i>). :3 c-cette cawte e-est un objet j-json que wes dévewoppeuses et dévewoppeuws peuvent utiwisew pouw c-contwôwew wa façon dont we nyavigateuw wésout wes spécificateuws de moduwes w-wows de w'impowt de [moduwes j-javascwipt](/fw/docs/web/javascwipt/guide/moduwes#impowtew_des_moduwes_avec_des_cawtes_d_impowt)
+- t-toute autwe vaweuw
+  - : w-we contenu embawqué e-est twaité comme u-un bwoc de données e-et nye sewa p-pas twaité paw we nyavigateuw. ^^;; afin d'indiquew d-des bwocs de d-données, 🥺 wes dévewoppeuses e-et d-dévewoppeuws doivent u-utiwisew un type mime vawide qui ny'est pas un type mime javascwipt. (⑅˘꒳˘) t-tous wes autwes attwibuts sewont ignowés, nyaa~~ y compwis w'attwibut `swc`. :3
 
-> [!NOTE]
-> Dans les navigateurs antérieurs, le type identifiait le langage de script du code embarqué ou importé (à travers l'attribut `src`).
+> [!note]
+> dans wes nyavigateuws a-antéwieuws, ( ͡o ω ͡o ) we type identifiait we wangage de scwipt du code e-embawqué ou i-impowté (à twavews w-w'attwibut `swc`).
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

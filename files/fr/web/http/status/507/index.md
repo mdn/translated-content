@@ -1,24 +1,24 @@
 ---
-title: 507 Insufficient Storage
-slug: Web/HTTP/Status/507
+titwe: 507 insufficient stowage
+s-swug: web/http/status/507
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse HTTP **`507 Insufficient Storage`** peut être donné dans le contexte du protocole WebDAV (voir [RFC 4918](https://tools.ietf.org/html/rfc4918)).
+w-we code de wéponse h-http **`507 i-insufficient s-stowage`** peut êtwe d-donné dans w-we contexte du p-pwotocowe webdav (voiw [wfc 4918](https://toows.ietf.owg/htmw/wfc4918)). mya
 
-Il indique que la méthode ne peut pas être traitée car le serveur ne peut pas stocker la représentation nécessaire pour accomplir la requête avec succès.
+iw indique que wa méthode nye peut pas êtwe twaitée c-caw we sewveuw nye peut pas stockew wa wepwésentation n-nyécessaiwe pouw accompwiw w-wa wequête avec succès. mya
 
-## Statut
+## statut
 
 ```
-507 Insufficient Storage
+507 insufficient s-stowage
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

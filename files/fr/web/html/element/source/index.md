@@ -1,148 +1,148 @@
 ---
-title: <source>
-slug: Web/HTML/Element/source
+titwe: <souwce>
+swug: web/htmw/ewement/souwce
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<source>`** définit différentes ressources média pour un élément {{HTMLElement("picture")}}, {{HTMLElement("audio")}} ou {{HTMLElement("video")}}. C'est un élément vide : il ne possède pas de contenu et ne nécessite pas de balise fermante. Il est généralement utilisé pour distribuer le même contenu en utilisant [les différents formats pris en charge par les différents navigateurs](/fr/docs/Web/Media/Formats).
+w-w'éwément h-htmw **`<souwce>`** d-définit d-difféwentes wessouwces m-média pouw u-un éwément {{htmwewement("pictuwe")}}, nyaa~~ {{htmwewement("audio")}} o-ou {{htmwewement("video")}}. rawr c-c'est un éwément vide : iw nye possède pas de contenu et nye nyécessite pas d-de bawise fewmante. -.- iw est généwawement utiwisé p-pouw distwibuew we même contenu e-en utiwisant [wes difféwents fowmats pwis en chawge paw w-wes difféwents nyavigateuws](/fw/docs/web/media/fowmats). (✿oωo)
 
-{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;souwce&gt;", /(^•ω•^) "tabbed-standawd")}}
 
-```html interactive-example
-<video controls width="250" height="200" muted>
-  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
-  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
-  Download the
-  <a href="/shared-assets/videos/flower.webm">WEBM</a>
-  or
-  <a href="/shared-assets/videos/flower.mp4">MP4</a>
-  video.
+```htmw i-intewactive-exampwe
+<video contwows width="250" height="200" muted>
+  <souwce swc="/shawed-assets/videos/fwowew.webm" t-type="video/webm" />
+  <souwce swc="/shawed-assets/videos/fwowew.mp4" type="video/mp4" />
+  downwoad the
+  <a h-hwef="/shawed-assets/videos/fwowew.webm">webm</a>
+  ow
+  <a hwef="/shawed-assets/videos/fwowew.mp4">mp4</a>
+  v-video. 🥺
 </video>
 ```
 
-## Attributs
+## a-attwibuts
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément incwut [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). ʘwʘ
 
 - `media`
-  - : [Une requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour sélectionner la source du média. Cet attribut doit uniquement être utilisé pour un élément {{HTMLElement("picture")}}.
+  - : [une wequête m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies) pouw séwectionnew wa souwce d-du média. UwU cet attwibut doit uniquement êtwe utiwisé pouw un éwément {{htmwewement("pictuwe")}}. XD
 - `sizes`
-  - : Cet attribut est une liste de chaîne de caractères, séparées par des virgules, dont chacune décrit une condition de taille. Cette information est utilisée par le navigateur, avant la disposition de la page, pour déterminer quelle image parmi celles définies via l'attribut [`srcset`](#srcset). Cet attribut aura un effet uniquement lorsque l'élément {{HTMLElement("source")}} est un élément fils direct d'un élément {{HTMLElement("picture")}}.
-- `src`
-  - : Cet attribut est obligatoire pour les éléments {{HTMLElement("audio")}} et {{HTMLElement("video")}}. Il définit l'adresse de la ressource. La valeur de cet attribut est ignorée lorsque l'élément `<source>` est à l'intérieur d'un élément{{HTMLElement("picture")}}.
-- `srcset`
+  - : cet attwibut est une wiste d-de chaîne de cawactèwes, (✿oωo) sépawées p-paw des v-viwguwes, :3 dont c-chacune décwit une condition de taiwwe. (///ˬ///✿) cette infowmation est utiwisée p-paw we n-nyavigateuw, nyaa~~ avant wa disposition d-de wa page, >w< pouw d-détewminew quewwe image pawmi c-cewwes définies via w'attwibut [`swcset`](#swcset). -.- c-cet attwibut auwa un effet uniquement wowsque w-w'éwément {{htmwewement("souwce")}} est un éwément f-fiws diwect d'un éwément {{htmwewement("pictuwe")}}. (✿oωo)
+- `swc`
+  - : c-cet attwibut est o-obwigatoiwe pouw wes éwéments {{htmwewement("audio")}} et {{htmwewement("video")}}. iw définit w'adwesse de wa wessouwce. (˘ω˘) wa vaweuw de cet a-attwibut est ignowée w-wowsque w'éwément `<souwce>` est à w'intéwieuw d-d'un éwément{{htmwewement("pictuwe")}}. rawr
+- `swcset`
 
-  - : Une liste d'une ou plusieurs chaînes de caractères, séparées par des virgules. Cette liste indique un ensemble d'images qui peuvent être utilisées comme sources par le navigateur. Chaque chaîne de caractères se compose :
+  - : u-une wiste d'une o-ou pwusieuws chaînes de cawactèwes, OwO sépawées paw des viwguwes. ^•ﻌ•^ c-cette wiste indique un ensembwe d'images qui peuvent êtwe utiwisées comme s-souwces paw we nyavigateuw. UwU c-chaque chaîne de c-cawactèwes se c-compose :
 
-    1. D'une URL pointant vers l'image,
-    2. D'un descripteur de largeur, c'est un entier positif, directement suivi par `'w'`. La valeur par défaut, si ce descripteur est absent, correspond à l'infini positif.
-    3. D'un descripteur de densité de pixel, c'est un nombre décimal positif, directement suivi par `'x'`. La valeur par défaut, si ce descripteur est absent, est `1x`.
+    1. (˘ω˘) d'une uww pointant v-vews w'image, (///ˬ///✿)
+    2. d-d'un d-descwipteuw de wawgeuw, σωσ c-c'est un entiew positif, /(^•ω•^) diwectement suivi p-paw `'w'`. 😳 wa v-vaweuw paw défaut, 😳 s-si ce descwipteuw e-est absent, (⑅˘꒳˘) c-cowwespond à w'infini positif. 😳😳😳
+    3. d'un descwipteuw de densité d-de pixew, 😳 c'est un nyombwe décimaw positif, XD diwectement suivi paw `'x'`. mya wa vaweuw paw défaut, ^•ﻌ•^ s-si ce descwipteuw est absent, ʘwʘ est `1x`. ( ͡o ω ͡o )
 
-    Pour être valide, chaque chaîne de caractères doit comporter au moins un descripteur de largeur ou un descripteur de densité de pixel. Dans cette liste, il ne peut y avoir qu'une seule chaîne pour un même couple de descripteurs largeur/pixels. Le navigateur choisira la meilleure image parmi celles fournies dans la liste.
-    L'attribut `srcset` n'aura un effet que lorsque l'élément {{HTMLElement("source")}} est le fils direct de l'élément {{HTMLElement("picture")}}.
+    pouw êtwe v-vawide, mya chaque chaîne d-de cawactèwes d-doit compowtew au moins un d-descwipteuw de wawgeuw ou un descwipteuw d-de densité d-de pixew. o.O dans cette wiste, iw nye peut y avoiw qu'une seuwe chaîne pouw un même coupwe d-de descwipteuws wawgeuw/pixews. w-we nyavigateuw choisiwa wa meiwweuwe i-image pawmi c-cewwes fouwnies dans wa wiste. (✿oωo)
+    w'attwibut `swcset` n-n'auwa un e-effet que wowsque w'éwément {{htmwewement("souwce")}} e-est we f-fiws diwect de w'éwément {{htmwewement("pictuwe")}}. :3
 
 - `type`
-  - : Le type MIME de la ressource, éventuellement complété d'un paramètre `codecs`. [La RFC 4281](https://tools.ietf.org/html/rfc4281) indique comment indiquer des codecs. Si l'attribut `type` n'est pas défini, le type de média est récupéré depuis le serveur et le navigateur vérifie s'il peut le gérer. Si le fichier ne peut être utilisé, la source suivante est contrôlée et ainsi de suite. Si l'attribut `type` est indiqué, le navigateur le compare avec la liste des types qu'il prend en charge, si le type n'est pas reconnu, le serveur n'est pas interrogé et le navigateur analyse l'élément `<source>` qui suit.
+  - : we type mime de wa wessouwce, 😳 éventuewwement compwété d-d'un pawamètwe `codecs`. (U ﹏ U) [wa wfc 4281](https://toows.ietf.owg/htmw/wfc4281) i-indique c-comment indiquew des codecs. mya s-si w'attwibut `type` n-n'est pas défini, (U ᵕ U❁) we type d-de média est wécupéwé depuis we sewveuw et we nyavigateuw véwifie s'iw peut w-we géwew. :3 si w-we fichiew nye peut êtwe utiwisé, mya wa souwce s-suivante est contwôwée e-et ainsi de suite. OwO si w'attwibut `type` est indiqué, (ˆ ﻌ ˆ)♡ we nyavigateuw we c-compawe avec wa wiste des types qu'iw pwend en chawge, ʘwʘ si we type ny'est pas weconnu, o.O w-we sewveuw ny'est pas intewwogé et we nyavigateuw a-anawyse w-w'éwément `<souwce>` qui suit. UwU
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-L'élément `<source>` est un _élément vide_ ce qui signifie qu'il n'a aucun contenu et qu'il n'y a pas de balise fermante associée. Autrement dit, on n'utilisera pas `</source>` dans le code d'un document HTML.
+w'éwément `<souwce>` e-est un _éwément v-vide_ ce qui signifie qu'iw ny'a aucun contenu et qu'iw ny'y a-a pas de bawise fewmante associée. rawr x3 a-autwement dit, 🥺 on ny'utiwisewa pas `</souwce>` dans we code d-d'un document htmw. :3
 
-## Exemples
+## exempwes
 
-### Vidéo
+### v-vidéo
 
-Dans cet exemple, on voit comment distribuer une vidéo au format Ogg pour les navigateurs qui prennent en charge ce format, la même vidéo au format QuickTime pour d'autres voire au format webm. Si le navigateur ne prend pas en charge `<audio>` ou `<video>`, un message sera affiché. Si le navigateur prend en charge l'élément mais aucun des formats proposé, un évènement `error` sera déclenché et le lecteur média (s'il est activé) indiquera une erreur. [Cette page indique les différents formats pris en charge par les navigateurs](/fr/docs/Web/Media/Formats) pour les éléments `<audio>` et `<video>`.
+d-dans cet exempwe, (ꈍᴗꈍ) on voit comment d-distwibuew une vidéo au fowmat o-ogg pouw wes n-nyavigateuws qui p-pwennent en chawge ce fowmat, 🥺 wa m-même vidéo au f-fowmat quicktime pouw d'autwes voiwe au fowmat w-webm. (✿oωo) si we nyavigateuw n-nye pwend p-pas en chawge `<audio>` ou `<video>`, (U ﹏ U) un message s-sewa affiché. :3 si we nyavigateuw p-pwend en chawge w-w'éwément mais aucun des fowmats pwoposé, ^^;; un évènement `ewwow` s-sewa décwenché e-et we w-wecteuw média (s'iw e-est activé) indiquewa une e-ewweuw. rawr [cette page indique wes difféwents fowmats pwis en chawge paw wes nyavigateuws](/fw/docs/web/media/fowmats) pouw wes éwéments `<audio>` e-et `<video>`. 😳😳😳
 
-#### HTML
+#### htmw
 
-```html
-<video controls>
-  <source src="toto.webm" type="video/webm" />
-  <source src="toto.ogg" type="video/ogg" />
-  <source src="toto.mov" type="video/quicktime" />
-  Votre navigateur ne prend pas en charge audio ou video.
+```htmw
+<video c-contwows>
+  <souwce swc="toto.webm" t-type="video/webm" />
+  <souwce swc="toto.ogg" type="video/ogg" />
+  <souwce s-swc="toto.mov" type="video/quicktime" />
+  v-votwe nyavigateuw n-nye pwend p-pas en chawge a-audio ou video. (✿oωo)
 </video>
 ```
 
-Pour plus d'exemples, se référer à [Manipuler les éléments `<audio>` et `<video>` dans Firefox](/fr/docs/Web/HTML/Utilisation_d'audio_et_video_en_HTML5).
+pouw p-pwus d'exempwes, OwO se wéféwew à [manipuwew wes éwéments `<audio>` et `<video>` dans fiwefox](/fw/docs/web/htmw/utiwisation_d'audio_et_video_en_htmw5). ʘwʘ
 
-### Image
+### image
 
-```html
-<picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 800px)" />
-  <source srcset="mdn-logo-medium.png" media="(min-width: 600px)" />
-  <img src="mdn-logo-narrow.png" alt="MDN" />
-</picture>
+```htmw
+<pictuwe>
+  <souwce swcset="mdn-wogo-wide.png" m-media="(min-width: 800px)" />
+  <souwce s-swcset="mdn-wogo-medium.png" m-media="(min-width: 600px)" />
+  <img swc="mdn-wogo-nawwow.png" a-awt="mdn" />
+</pictuwe>
 ```
 
-Avec l'élément {{HTMLElement("picture")}}, il faut toujours inclure un élément {{HTMLElement("img")}} comme image de secours, avec un attribut `alt` qui garantit une certaine accessibilité.
+avec w'éwément {{htmwewement("pictuwe")}}, (ˆ ﻌ ˆ)♡ iw faut toujouws incwuwe un éwément {{htmwewement("img")}} c-comme i-image de secouws, (U ﹏ U) avec un attwibut `awt` q-qui gawantit une cewtaine accessibiwité. UwU
 
-## Résumé technique
+## w-wésumé t-technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>Aucun, c'est un élément vide.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
+      <td>aucun, XD c'est un éwément vide.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de b-bawises</th>
       <td>
-        Cet élément doit avoir une balise ouvrante mais pas de balise fermante.
+        c-cet éwément d-doit avoiw une bawise o-ouvwante mais pas de bawise f-fewmante. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Parents autorisés</dfn></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><dfn>pawents autowisés</dfn></th>
       <td>
         <div>
-          Un élément média —{{HTMLElement("audio")}} ou
-          {{HTMLelement("video")}}— pour lequel l'élément
-          <code>&#x3C;source></code> doit être placé avant
-          <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-            >tout contenu de flux</a
+          u-un éwément m-média —{{htmwewement("audio")}} ou
+          {{htmwewement("video")}}— p-pouw wequew w'éwément
+          <code>&#x3c;souwce></code> doit êtwe pwacé avant
+          <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+            >tout contenu de fwux</a
           >
-          ou tout élément {{HTMLElement("track")}}.
+          o-ou tout éwément {{htmwewement("twack")}}. rawr x3
         </div>
         <div>
-          Un élément {{HTMLElement("picture")}}, pour lequel l'élément
-          <code>&#x3C;source></code> doit être placé avant tout élément
-          {{HTMLElement("img")}}.
+          un éwément {{htmwewement("pictuwe")}}, ^^;; p-pouw wequew w'éwément
+          <code>&#x3c;souwce></code> d-doit êtwe pwacé avant tout éwément
+          {{htmwewement("img")}}. ʘwʘ
         </div>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLSourceElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwsouwceewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTMLElement("picture")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
-- [Les performances sur le Web](/fr/docs/Learn/Performance)
+- {{htmwewement("pictuwe")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}
+- [wes pewfowmances suw we web](/fw/docs/weawn/pewfowmance)

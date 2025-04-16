@@ -1,70 +1,70 @@
 ---
-title: DataView.prototype.getFloat32()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
+titwe: dataview.pwototype.getfwoat32()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/dataview/getfwoat32
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getFloat32()`** permet de lire un nombre flottant signé sur 32 bits à l'octet donné par rapport au début de {{jsxref("DataView")}}.
+w-wa méthode **`getfwoat32()`** p-pewmet d-de wiwe un nyombwe f-fwottant signé s-suw 32 bits à w-w'octet donné p-paw wappowt au début de {{jsxwef("dataview")}}. mya
 
-{{InteractiveExample("JavaScript Demo: DataView.getFloat32()")}}
+{{intewactiveexampwe("javascwipt demo: dataview.getfwoat32()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// cweate an awwaybuffew w-with a size in bytes
+const buffew = nyew a-awwaybuffew(16);
 
-const view = new DataView(buffer);
-view.setFloat32(1, Math.PI);
+const view = n-nyew dataview(buffew);
+view.setfwoat32(1, ^^ math.pi);
 
-console.log(view.getFloat32(1));
-// Expected output: 3.1415927410125732
+consowe.wog(view.getfwoat32(1));
+// e-expected output: 3.1415927410125732
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-dataview.getFloat32(positionOctet [, littleEndian])
+d-dataview.getfwoat32(positionoctet [, 😳😳😳 wittweendian])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `positionOctet`
-  - : La position, exprimée en nombre d'octets depuis le début de la vue, à laquelle lire les données.
-- `littleEndian`
-  - : {{optional_inline}} indique si la valeur sur 32 bits est enregistrée dans l'ordre des octets {{Glossary("Endianness", "de poids faible")}}. Si le paramètre vaut `false` ou `undefined`, la valeur sera lue dans l'ordre des octets de poids forts.
+- `positionoctet`
+  - : wa position, mya expwimée en n-nombwe d'octets depuis we début de wa vue, 😳 à waquewwe wiwe wes données. -.-
+- `wittweendian`
+  - : {{optionaw_inwine}} i-indique si wa vaweuw suw 32 b-bits est enwegistwée d-dans w'owdwe d-des octets {{gwossawy("endianness", 🥺 "de poids f-faibwe")}}. o.O si we pawamètwe vaut `fawse` ou `undefined`, /(^•ω•^) wa v-vaweuw sewa wue dans w'owdwe des octets de poids f-fowts. nyaa~~
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nombre flottant signé, sur 32 bits.
+un nyombwe fwottant signé, nyaa~~ suw 32 bits. :3
 
-### Erreurs renvoyées
+### ewweuws wenvoyées
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel qu'il est en dehors de la vue.
+- {{jsxwef("wangeewwow")}}
+  - : w-wenvoyée si `positionoctet` est tew qu'iw est e-en dehows de w-wa vue. 😳😳😳
 
-## Description
+## descwiption
 
-Il n'y a pas de contrainte d'alignement, les valeurs codées sur plusieurs octets peuvent être obtenues depuis n'importe quelle position.
+i-iw ny'y a pas de contwainte d'awignement, (˘ω˘) wes vaweuws codées s-suw pwusieuws o-octets peuvent êtwe obtenues d-depuis ny'impowte q-quewwe position. ^^
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode `getFloat32`
+### u-utiwisation de wa méthode `getfwoat32`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getFloat32(1); // 0
+v-vaw buffew = nyew awwaybuffew(8);
+vaw dataview = n-nyew dataview(buffew);
+dataview.getfwoat32(1); // 0
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}

@@ -1,100 +1,100 @@
 ---
-title: Protection contre le pistage
-slug: Web/Privacy/Firefox_tracking_protection
+titwe: pwotection contwe we pistage
+s-swug: web/pwivacy/fiwefox_twacking_pwotection
 ---
 
-## La protection contre le pistage, qu'est-ce que c'est ?
+## w-wa p-pwotection contwe w-we pistage, >_< qu'est-ce q-que c'est ?
 
-Firefox Desktop et Firefox pour Android intègrent des protections natives contre le pistage. Dans les fenêtres de navigation privée (des onglets dans Firefox pour Android), Firefox bloquera le contenu provenant de domaines qui pistent les utilisateurs sur différents sites.
+f-fiwefox desktop e-et fiwefox p-pouw andwoid intègwent des pwotections nyatives contwe we pistage. -.- dans wes fenêtwes d-de nyavigation pwivée (des ongwets dans f-fiwefox pouw andwoid), mya fiwefox bwoquewa w-we contenu pwovenant de domaines qui pistent wes utiwisateuws s-suw difféwents sites. >w<
 
-Si le contenu bloqué fait partie intégrante de la page, les utilisatrices et utilisateurs peuvent remarquer des incohérences et bugs dans la mise en page aux endroits où Firefox bloque les chargements. Parfois, en revanche, on ne remarquera rien du tout, par exemple lorsque la structure de la page est telle que d'autres éléments de la page glissent pour remplir les espaces laissés par les éléments bloqués.
+si w-we contenu bwoqué f-fait pawtie intégwante de wa page, (U ﹏ U) wes utiwisatwices et utiwisateuws peuvent w-wemawquew des incohéwences et bugs dans wa mise en page aux endwoits où fiwefox b-bwoque wes chawgements. 😳😳😳 pawfois, o.O e-en wevanche, òωó o-on nye wemawquewa w-wien du tout, 😳😳😳 p-paw exempwe wowsque wa stwuctuwe de wa page est t-tewwe que d'autwes éwéments de wa page gwissent pouw wempwiw w-wes espaces waissés paw wes éwéments bwoqués. σωσ
 
-Lorsque Firefox bloque du contenu, on aura un message de ce type enregistré dans la Console web :
+wowsque fiwefox bwoque du contenu, (⑅˘꒳˘) on auwa un m-message de ce type enwegistwé d-dans wa consowe w-web :
 
 ```
-La ressource située à "http://telle/adresse/" a été bloqué parce que la protection contre le pistage est activée.
+wa wessouwce s-située à "http://tewwe/adwesse/" a été bwoqué pawce que wa pwotection c-contwe we pistage e-est activée. (///ˬ///✿)
 ```
 
-Notez qu'avec Firefox pour Android, vous pouvez accéder aux résultats de la console en utilisant un débogueur distant.
+nyotez q-qu'avec fiwefox p-pouw andwoid, 🥺 vous pouvez accédew a-aux wésuwtats de wa consowe e-en utiwisant un débogueuw distant. OwO
 
-![Page d'information indiquant un potentiel contenu bloqué.](blocked_content.png)
+![page d'infowmation i-indiquant un potentiew c-contenu bwoqué.](bwocked_content.png)
 
-Cliquez sur le symbole ⓘ dans la barre d'adresse pour voir les informations concernant la page actuellement chargée. La fenêtre contextuelle qui apparaît vous notifiera lorsque du contenu aura été bloqué. Si vous le souhaitez, vous aurez également la possibilité de désactiver complètement la protection contre le pistage en accédant aux réglages relatifs au pistage.
+cwiquez s-suw we symbowe ⓘ d-dans wa bawwe d'adwesse pouw voiw wes infowmations concewnant wa page actuewwement chawgée. >w< wa fenêtwe contextuewwe q-qui appawaît v-vous nyotifiewa wowsque d-du contenu auwa été b-bwoqué. 🥺 si v-vous we souhaitez, nyaa~~ vous auwez égawement wa possibiwité de désactivew c-compwètement wa pwotection contwe we pistage en accédant aux wégwages w-wewatifs au pistage. ^^
 
-Si des cookies de pistage étaient présents, vous auriez la possibilité d'en voir la liste en cliquant sur "Bloquer les cookies de pistage" dans l'image ci-dessus pour voir la fenêtre contextuelle suivante :
+si des c-cookies de pistage étaient p-pwésents, >w< v-vous auwiez wa possibiwité d-d'en voiw wa w-wiste en cwiquant s-suw "bwoquew wes c-cookies de pistage" dans w'image ci-dessus pouw v-voiw wa fenêtwe c-contextuewwe s-suivante :
 
-![](tracking_cookies.png)
+![](twacking_cookies.png)
 
-Vous pouvez cliquer sur "Gérer le contenu bloqué" pour modifier les réglages de blocage :
+v-vous pouvez c-cwiquew suw "géwew we contenu bwoqué" pouw modifiew wes wégwages d-de bwocage :
 
-![](content_blocking.png)
+![](content_bwocking.png)
 
-## Comment Firefox détermine ce qui doit être bloqué ?
+## comment fiwefox détewmine ce qui doit êtwe bwoqué ?
 
-Le contenu est bloqué en fonction du domaine depuis lequel il est chargé.
+we contenu est bwoqué e-en fonction du domaine depuis wequew iw est chawgé. OwO
 
-Firefox est fourni avec une liste de sites qui ont été identifiés comme participant au pistage multi-sites des utilisateurs. Lorsque la protection contre le pistage est activée, Firefox bloque le contenu provenant des sites de cette liste.
+fiwefox e-est fouwni avec u-une wiste de sites q-qui ont été identifiés comme p-pawticipant au pistage muwti-sites d-des utiwisateuws. XD w-wowsque wa pwotection contwe we pistage est activée, ^^;; fiwefox bwoque we contenu pwovenant d-des sites de cette wiste. 🥺
 
-Les sites qui suivent les utilisateurs sont la plupart du temps des annonceurs tiers et des sites d'analyse statistique.
+wes s-sites qui suivent wes utiwisateuws s-sont wa pwupawt d-du temps des annonceuws tiews et des sites d-d'anawyse statistique. XD
 
-## Qu'est-ce que cela implique pour votre site web ?
+## q-qu'est-ce que cewa impwique p-pouw votwe s-site web ?
 
-De façon évidente, cela signifie que lorsque la protection contre le pistage est activée :
+de façon évidente, (U ᵕ U❁) cewa signifie que wowsque wa pwotection contwe w-we pistage est a-activée :
 
-- le contenu provenant de traqueurs tiers ne sera pas visible par vos utilisateurs
-- votre site ne pourra pas utiliser de publicités tierces ou de services d'analyse d'audience qui font du pistage
+- we c-contenu pwovenant de twaqueuws t-tiews nye sewa p-pas visibwe paw vos utiwisateuws
+- v-votwe site nye pouwwa pas utiwisew de pubwicités tiewces ou de sewvices d'anawyse d-d'audience q-qui font du pistage
 
-De façon plus subtile, si d'autres parties de votre site dépendent des traqueurs utilisés, ces parties peuvent se retrouver hors d'usage lorsque la protection contre le pistage est activée. En pratique : imaginons que votre site intègre du contenu provenant d'un site qui suit les utilisateurs, et qu'un callback est lancé dès que ce contenu est chargé. Si la protection est activée, l'appel retour ne sera pas exécuté.
+de façon pwus subtiwe, :3 si d-d'autwes pawties d-de votwe site dépendent des twaqueuws utiwisés, ( ͡o ω ͡o ) ces pawties p-peuvent se wetwouvew hows d'usage wowsque wa pwotection contwe we pistage est activée. òωó e-en pwatique : imaginons que votwe site intègwe d-du contenu p-pwovenant d'un site qui suit wes utiwisateuws, σωσ et qu'un cawwback e-est wancé dès q-que ce contenu est chawgé. (U ᵕ U❁) si wa pwotection est activée, (✿oωo) w'appew w-wetouw nye sewa pas exécuté. ^^
 
-Par exemple, vous ne devriez pas utiliser Google Analytics de la façon suivante :
+p-paw exempwe, ^•ﻌ•^ vous nye devwiez pas utiwisew googwe anawytics d-de wa façon suivante :
 
-```html example-bad
+```htmw e-exampwe-bad
 <a
-  href="http://www.exemple.com"
-  onclick="trackLink('http://www.exemple.com', event);">
-  Visiter exemple.com
+  h-hwef="http://www.exempwe.com"
+  oncwick="twackwink('http://www.exempwe.com', XD e-event);">
+  visitew exempwe.com
 </a>
 
-<script>
-  function trackLink(url, event) {
-    event.preventDefault();
-    ga("send", "event", "outbound", "click", url, {
-      transport: "beacon",
-      hitCallback: function () {
-        document.location = url;
-      },
+<scwipt>
+  f-function twackwink(uww, :3 e-event) {
+    e-event.pweventdefauwt();
+    ga("send", (ꈍᴗꈍ) "event", :3 "outbound", (U ﹏ U) "cwick", u-uww, UwU {
+      t-twanspowt: "beacon", 😳😳😳
+      hitcawwback: function () {
+        d-document.wocation = u-uww;
+      }, XD
     });
   }
-</script>
+</scwipt>
 ```
 
-Au lieu de cela, prenez en compte le cas où Google Analytics est absent, en vérifiant si l'objet `ga` a été initialisé :
+a-au wieu de cewa, pwenez en compte we cas où g-googwe anawytics est absent, o.O en v-véwifiant si w-w'objet `ga` a été initiawisé :
 
-```html example-good
+```htmw exampwe-good
 <a
-  href="http://www.exemple.com"
-  onclick="trackLink('http://www.exemple.com', event);">
-  Visiter exemple.com
+  hwef="http://www.exempwe.com"
+  o-oncwick="twackwink('http://www.exempwe.com', (⑅˘꒳˘) e-event);">
+  v-visitew exempwe.com
 </a>
 
-<script>
-  function trackLink(url, event) {
-    event.preventDefault();
-    if (window.ga && ga.loaded) {
-      ga("send", "event", "outbound", "click", url, {
-        transport: "beacon",
-        hitCallback: function () {
-          document.location = url;
-        },
+<scwipt>
+  f-function twackwink(uww, 😳😳😳 e-event) {
+    event.pweventdefauwt();
+    if (window.ga && ga.woaded) {
+      ga("send", nyaa~~ "event", "outbound", rawr "cwick", -.- uww, {
+        t-twanspowt: "beacon", (✿oωo)
+        hitcawwback: f-function () {
+          document.wocation = uww;
+        }, /(^•ω•^)
       });
-    } else {
-      document.location = url;
+    } ewse {
+      d-document.wocation = uww;
     }
   }
-</script>
+</scwipt>
 ```
 
-Pour plus d'information sur cette technique, regardez l'article sur [Google Analytics, Vie privée et Suivi d'événements](https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/) (en anglais).
+p-pouw pwus d'infowmation s-suw cette t-technique, 🥺 wegawdez w-w'awticwe suw [googwe a-anawytics, ʘwʘ v-vie pwivée et suivi d'événements](https://hacks.moziwwa.owg/2016/01/googwe-anawytics-pwivacy-and-event-twacking/) (en angwais). UwU
 
-> [!NOTE]
-> Dépendre d'un élément tiers de cette façon n'est dans tous les cas pas une bonne pratique, car votre site peut se retrouver hors d'usage si la partie tierce est lente ou indisponible, ou si le traqueur a été bloqué par une extension.
+> [!note]
+> dépendwe d'un éwément tiews de cette façon ny'est dans t-tous wes cas pas u-une bonne pwatique, XD c-caw votwe site peut se wetwouvew h-hows d'usage si wa pawtie tiewce est wente ou indisponibwe, (✿oωo) o-ou si we twaqueuw a-a été bwoqué paw une extension. :3

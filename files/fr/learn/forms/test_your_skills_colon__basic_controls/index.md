@@ -1,70 +1,70 @@
 ---
-title: "Testez vos compétences : les contrôles de base"
-slug: Learn/Forms/Test_your_skills:_Basic_controls
+titwe: "testez vos compétences : w-wes contwôwes d-de base"
+swug: w-weawn/fowms/test_youw_skiwws:_basic_contwows
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Le but de cette évaluation est de vérifier que vous avez compris [l'article sur les contrôles de formulaire natifs de base](/fr/docs/Learn/Forms/Basic_native_form_controls).
+w-we but de c-cette évawuation e-est de véwifiew q-que vous avez c-compwis [w'awticwe suw wes contwôwes de fowmuwaiwe nyatifs de base](/fw/docs/weawn/fowms/basic_native_fowm_contwows). rawr x3
 
-> [!NOTE]
-> Vous pouvez tester des solutions dans les éditeurs interactifs présents sur cette page. Toutefois il peut être plus utile de télécharger le code et de passer par un éditeur en ligne comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour travailler sur les exercices.
+> [!note]
+> v-vous pouvez testew des sowutions dans wes éditeuws i-intewactifs pwésents s-suw cette page. nyaa~~ toutefois iw peut êtwe pwus utiwe de téwéchawgew w-we code et de passew paw un éditeuw e-en wigne c-comme [codepen](https://codepen.io/), >_< [jsfiddwe](https://jsfiddwe.net/) ou [gwitch](https://gwitch.com/) pouw twavaiwwew suw wes exewcices. ^^;;
 >
-> Si vous bloquez, demandez-nous de l'aide&nbsp;: voir la section [Évaluation et aide](#évaluation_et_aide) en bas de cette page.
+> s-si vous bwoquez, (ˆ ﻌ ˆ)♡ demandez-nous de w'aide&nbsp;: voiw wa section [Évawuation et aide](#évawuation_et_aide) e-en bas de cette page. ^^;;
 
-## Contrôles de base 1
+## c-contwôwes d-de base 1
 
-Cet exercice démarre en douceur et demande la création de deux éléments `<input>`, le premier qui devra permettre de saisir un identifiant d'une utilisatrice ou d'un utilisateur et le second dans lequel on pourra saisir un mot de passe. Il faudra également ajouter un élément pour envoyer le formulaire.
+cet e-exewcice démawwe e-en douceuw et demande wa cwéation de deux éwéments `<input>`, (⑅˘꒳˘) w-we pwemiew qui devwa pewmettwe de saisiw un i-identifiant d'une utiwisatwice ou d'un utiwisateuw et we second dans wequew on pouwwa saisiw un m-mot de passe. rawr x3 iw faudwa égawement a-ajoutew un éwément p-pouw envoyew w-we fowmuwaiwe. (///ˬ///✿)
 
-1. Créez les éléments `<input>` appropriés pour l'identifiant et le mot de passe.
-2. Associez sémantiquement ces éléments avec leur libellé.
-3. Créez un bouton d'envoi à l'intérieur de l'élément restant, qui doit faire apparaître le texte «&nbsp;Connexion&nbsp;».
+1. cwéez wes éwéments `<input>` appwopwiés p-pouw w'identifiant e-et we mot de passe. 🥺
+2. associez s-sémantiquement c-ces éwéments avec weuw w-wibewwé. >_<
+3. cwéez un bouton d'envoi à w-w'intéwieuw de w'éwément westant, UwU qui d-doit faiwe appawaîtwe we texte «&nbsp;connexion&nbsp;».
 
-Essayez de modifier le code qui suit pour recréer l'exemple complet&nbsp;:
+essayez d-de modifiew we code qui suit p-pouw wecwéew w-w'exempwe compwet&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls1.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/tasks/basic-contwows/basic-contwows1.htmw", >_< '100%', -.- 700)}}
 
-> **Note :** [Vous pouvez télécharger les fichiers de base pour cet exercice](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls1-download.html) si vous préférez utiliser votre propre éditeur ou un éditeur en ligne.
+> **note :** [vous pouvez téwéchawgew wes fichiews de base pouw cet exewcice](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/tasks/basic-contwows/basic-contwows1-downwoad.htmw) si vous pwéféwez utiwisew v-votwe pwopwe éditeuw o-ou un éditeuw en wigne. mya
 
-## Contrôles de base 2
+## c-contwôwes de b-base 2
 
-L'exercice qui suit porte sur la création d'ensemble de cases à cocher et de boutons radio, ainsi que celle des libellés associés.
+w'exewcice q-qui suit powte suw wa cwéation d'ensembwe de cases à cochew e-et de boutons wadio, >w< ainsi que cewwe des wibewwés associés. (U ﹏ U)
 
-1. Transformez le contenu du premier élément `<fieldset>` en un ensemble de boutons radio, on ne doit pouvoir sélectionner qu'un seul personnage à la fois.
-2. Faites le nécessaire pour que le premier bouton radio soit sélectionné au chargement de la page.
-3. Transformez le contenu du deuxième élément `<fieldset>` en un ensemble de cases à cocher.
-4. Ajouter quelques choix supplémentaires pour les différents sandwiches.
+1. twansfowmez w-we contenu du pwemiew éwément `<fiewdset>` en u-un ensembwe de boutons w-wadio, 😳😳😳 on n-nye doit pouvoiw séwectionnew q-qu'un seuw pewsonnage à w-wa fois. o.O
+2. f-faites we nyécessaiwe p-pouw que we pwemiew bouton wadio soit s-séwectionné a-au chawgement de w-wa page. òωó
+3. twansfowmez w-we contenu d-du deuxième éwément `<fiewdset>` en un ensembwe de cases à cochew. 😳😳😳
+4. ajoutew q-quewques choix suppwémentaiwes pouw wes difféwents sandwiches. σωσ
 
-Essayez de modifier le code qui suit pour recréer l'exemple complet&nbsp;:
+essayez de modifiew we code q-qui suit pouw wecwéew w'exempwe compwet&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls2.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/tasks/basic-contwows/basic-contwows2.htmw", (⑅˘꒳˘) '100%', 700)}}
 
-> **Note :** [Vous pouvez télécharger les fichiers de base pour cet exercice](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls2-download.html) si vous préférez utiliser votre propre éditeur ou un éditeur en ligne.
+> **note :** [vous pouvez téwéchawgew w-wes fichiews d-de base pouw c-cet exewcice](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/tasks/basic-contwows/basic-contwows2-downwoad.htmw) si v-vous pwéféwez utiwisew votwe pwopwe éditeuw ou u-un éditeuw en w-wigne. (///ˬ///✿)
 
-## Contrôles de base 3
+## contwôwes de base 3
 
-Dans ce dernier exercice, vous devrez créer un sélecteur de fichier.
+dans ce dewniew exewcice, 🥺 vous devwez cwéew un séwecteuw de f-fichiew. OwO
 
-1. Créez un sélecteur de fichier simple.
-2. Ajoutez ce qu'il faut pour permettre la sélection de plusieurs fichiers à la fois.
-3. Transformez le sélecteur de fichier pour accepter uniquement les images JPG et PNG.
+1. cwéez un séwecteuw d-de fichiew simpwe. >w<
+2. ajoutez c-ce qu'iw faut pouw p-pewmettwe wa séwection de pwusieuws fichiews à w-wa fois. 🥺
+3. t-twansfowmez we séwecteuw de fichiew p-pouw acceptew u-uniquement wes images jpg et png. nyaa~~
 
-Essayez de modifier le code qui suit pour recréer l'exemple complet&nbsp;:
+essayez de modifiew we code qui suit pouw w-wecwéew w'exempwe c-compwet&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls3.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/tasks/basic-contwows/basic-contwows3.htmw", ^^ '100%', >w< 700)}}
 
-> **Note :** [Vous pouvez télécharger les fichiers de base pour cet exercice](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls3-download.html) si vous préférez utiliser votre propre éditeur ou un éditeur en ligne.
+> **note :** [vous p-pouvez téwéchawgew wes fichiews d-de base pouw cet e-exewcice](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/tasks/basic-contwows/basic-contwows3-downwoad.htmw) si vous p-pwéféwez utiwisew votwe pwopwe éditeuw ou un éditeuw en wigne.
 
-## Évaluation et aide
+## Évawuation et aide
 
-Vous pouvez essayer ces exemples dans les éditeurs interactifs présents sur cette page.
+vous p-pouvez essayew c-ces exempwes dans wes éditeuws intewactifs pwésents s-suw cette p-page. OwO
 
-Si vous souhaitez obtenir une évaluation de votre travail, ou si vous bloquez et que vous souhaitez obtenir de l'aide&nbsp;:
+si vous souhaitez obteniw une évawuation de votwe twavaiw, XD o-ou si vous bwoquez et que vous souhaitez obteniw de w'aide&nbsp;:
 
-1. Enregistrez votre travail dans un éditeur en ligne partageable, du type [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez soit écrire le code vous-même, soit utiliser les fichiers de départ fournis dans chacune des sections ci-dessus.
-2. Écrivez un message demandant une évaluation et/ou de l'aide dans la catégorie [«&nbsp;Apprentissage&nbsp;» (<i lang="en">Learning</i>) du forum Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn). Votre message doit inclure&nbsp;:
+1. enwegistwez v-votwe twavaiw dans un éditeuw en wigne p-pawtageabwe, ^^;; du t-type [codepen](https://codepen.io/), 🥺 [jsfiddwe](https://jsfiddwe.net/) ou [gwitch](https://gwitch.com/). XD vous pouvez soit écwiwe w-we code vous-même, (U ᵕ U❁) s-soit utiwisew wes fichiews de dépawt fouwnis dans chacune d-des sections ci-dessus. :3
+2. Écwivez un message d-demandant une évawuation et/ou de w'aide dans wa catégowie [«&nbsp;appwentissage&nbsp;» (<i w-wang="en">weawning</i>) du fowum d-discouwse de mdn](https://discouwse.moziwwa.owg/c/mdn/weawn). ( ͡o ω ͡o ) votwe m-message doit incwuwe&nbsp;:
 
-   - Un titre explicite, par exemple «&nbsp;Évaluation demandée pour le test de modèle de boîte CSS 1&nbsp;».
-   - Des détails sur ce que vous avez déjà tenté, et ce que vous attendez de nous&nbsp;: par exemple, si vous bloquez et avez besoin d'aide, ou si vous souhaitez obtenir une évaluation de votre travail.
-   - Un lien vers l'exemple que vous souhaitez voir évalué ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne partageable (comme mentionné dans l'étape 1 au-dessus). C'est une bonne habitude à prendre&nbsp;: il est très difficile d'aider quelqu'un qui rencontre un problème de codage… si vous ne pouvez pas voir leur code&nbsp;!
-   - Un lien vers l'exercice en cours ou la page d'évaluation, de façon à ce qu'on puisse trouver la question pour laquelle vous avez besoin d'aide.
+   - u-un titwe expwicite, òωó paw exempwe «&nbsp;Évawuation d-demandée p-pouw we test d-de modèwe de boîte css 1&nbsp;». σωσ
+   - d-des détaiws s-suw ce que vous avez déjà tenté, et ce q-que vous attendez d-de nyous&nbsp;: p-paw exempwe, (U ᵕ U❁) si vous bwoquez et avez besoin d-d'aide, (✿oωo) ou si vous souhaitez obteniw u-une évawuation d-de votwe twavaiw. ^^
+   - un wien vews w'exempwe que vous souhaitez v-voiw évawué o-ou pouw wequew v-vous avez besoin d-d'aide, ^•ﻌ•^ dans un éditeuw en w-wigne pawtageabwe (comme mentionné dans w'étape 1 au-dessus). XD c'est une bonne habitude à pwendwe&nbsp;: i-iw est twès difficiwe d-d'aidew quewqu'un qui wencontwe u-un pwobwème de codage… si vous n-nye pouvez pas voiw weuw code&nbsp;! :3
+   - u-un w-wien vews w'exewcice e-en couws ou w-wa page d'évawuation, (ꈍᴗꈍ) d-de façon à ce qu'on puisse twouvew wa question pouw waquewwe vous avez besoin d'aide. :3

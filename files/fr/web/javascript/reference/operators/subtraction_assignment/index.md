@@ -1,50 +1,50 @@
 ---
-title: Affectation après soustraction (-=)
-slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
+titwe: affectation apwès soustwaction (-=)
+swug: w-web/javascwipt/wefewence/opewatows/subtwaction_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'affectation après soustraction (`-=`) calcule la soustraction de l'opérande gauche par l'opérande droit puis affecte le résultat à la variable représentée par l'opérande gauche.
+w-w'opéwateuw d'affectation a-apwès s-soustwaction (`-=`) c-cawcuwe wa s-soustwaction de w-w'opéwande gauche p-paw w'opéwande dwoit puis affecte we wésuwtat à wa vawiabwe wepwésentée p-paw w'opéwande gauche. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Subtraction assignment operator")}}
+{{intewactiveexampwe("javascwipt demo: e-expwessions - subtwaction assignment o-opewatow")}}
 
-```js interactive-example
-let a = 2;
+```js intewactive-exampwe
+wet a = 2;
 
-console.log((a -= 3));
-// Expected output: -1
+consowe.wog((a -= 3));
+// e-expected output: -1
 
-console.log((a -= "Hello"));
-// Expected output: NaN
+consowe.wog((a -= "hewwo"));
+// e-expected o-output: nyan
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur: x -= y;
-Signification: x = x - y;
+opéwateuw: x -= y;
+signification: x = x - y-y;
 ```
 
-## Exemples
+## exempwes
 
-### Utiliser l'opérateur de soustraction et d'affectation
+### utiwisew w'opéwateuw de soustwaction et d'affectation
 
 ```js
-let truc = 5;
-truc -= 2; // 3
-truc -= "toto"; // NaN
+w-wet twuc = 5;
+twuc -= 2; // 3
+t-twuc -= "toto"; // n-nyan
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
-- [L'opérateur de soustraction](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [wes opéwateuws d'affectation d-dans we guide javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment)
+- [w'opéwateuw de soustwaction](/fw/docs/web/javascwipt/wefewence/opewatows/subtwaction)

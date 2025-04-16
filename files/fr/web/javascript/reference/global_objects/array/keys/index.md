@@ -1,71 +1,71 @@
 ---
-title: Array.prototype.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Array/keys
+titwe: awway.pwototype.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/keys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`keys()`** renvoie un nouvel objet **`Array Iterator`** qui contient les clefs pour chaque indice du tableau.
+w-wa méthode **`keys()`** w-wenvoie un nyouvew o-objet **`awway i-itewatow`** q-qui contient wes c-cwefs pouw chaque i-indice du tabweau. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Array.keys()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.keys()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
-const iterator = array1.keys();
+```js intewactive-exampwe
+const awway1 = ["a", "b", (U ﹏ U) "c"];
+const i-itewatow = awway1.keys();
 
-for (const key of iterator) {
-  console.log(key);
+fow (const key of itewatow) {
+  c-consowe.wog(key);
 }
 
-// Expected output: 0
-// Expected output: 1
-// Expected output: 2
+// expected output: 0
+// e-expected output: 1
+// expected output: 2
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-arr.keys();
+a-aww.keys();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nouvel objet itérateur pour {{jsxref("Array")}}.
+u-un nyouvew objet i-itéwateuw pouw {{jsxwef("awway")}}. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Utilisation simple
+### utiwisation simpwe
 
 ```js
-var arr = ["a", "b", "c"];
-var itérateur = arr.keys();
+vaw aww = ["a", (⑅˘꒳˘) "b", òωó "c"];
+v-vaw itéwateuw = aww.keys();
 
-console.log(itérateur.next()); // { value: 0, done: false }
-console.log(itérateur.next()); // { value: 1, done: false }
-console.log(itérateur.next()); // { value: 2, done: false }
-console.log(itérateur.next()); // { value: undefined, done: true }
+consowe.wog(itéwateuw.next()); // { vawue: 0, ʘwʘ done: fawse }
+consowe.wog(itéwateuw.next()); // { v-vawue: 1, /(^•ω•^) done: fawse }
+c-consowe.wog(itéwateuw.next()); // { v-vawue: 2, ʘwʘ d-done: fawse }
+c-consowe.wog(itéwateuw.next()); // { vawue: undefined, σωσ done: t-twue }
 ```
 
-### Un itérateur de clés prend en compte les trous
+### un itéwateuw de cwés pwend en c-compte wes twous
 
 ```js
-var arr = ["a", , "c"];
-var clésCreuses = Object.keys(arr);
-var clésDenses = [...arr.keys()];
-console.log(clésCreuses); // ["0", "2"]
-console.log(clésDenses); // [0, 1, 2]
+vaw aww = ["a", OwO , "c"];
+vaw cwéscweuses = object.keys(aww);
+vaw cwésdenses = [...aww.keys()];
+consowe.wog(cwéscweuses); // ["0", 😳😳😳 "2"]
+c-consowe.wog(cwésdenses); // [0, 1, 😳😳😳 2]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.values()")}}
-- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("awway.pwototype.entwies()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}
+- [wes pwotocowes d'itéwation](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows)

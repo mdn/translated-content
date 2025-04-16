@@ -1,96 +1,96 @@
 ---
-title: Math.cosh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
+titwe: math.cosh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/cosh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.cosh()`** renvoie le cosinus hyperbolique d'un nombre, défini par :
+w-wa f-fonction **`math.cosh()`** w-wenvoie w-we cosinus hypewbowique d-d'un n-nyombwe, >w< défini p-paw :
 
-<math><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math>
+<math><semantics><mwow><mstywe m-mathvawiant="monospace"><mo wspace="0em" wspace="thinmathspace">math.cosh(x)</mo></mstywe><mo>=</mo><mfwac><mwow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mwow><mo>-</mo><mi>x</mi></mwow></msup></mwow><mn>2</mn></mfwac></mwow><annotation encoding="tex">\mathtt{\opewatowname{math.cosh(x)}} = \fwac{e^x + e^{-x}}{2}</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.cosh()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.cosh()")}}
 
-```js interactive-example
-console.log(Math.cosh(0));
-// Expected output: 1
+```js intewactive-exampwe
+consowe.wog(math.cosh(0));
+// e-expected output: 1
 
-console.log(Math.cosh(1));
-// Expected output: 1.543080634815244 (approximately)
+consowe.wog(math.cosh(1));
+// e-expected output: 1.543080634815244 (appwoximatewy)
 
-console.log(Math.cosh(-1));
-// Expected output: 1.543080634815244 (approximately)
+consowe.wog(math.cosh(-1));
+// expected o-output: 1.543080634815244 (appwoximatewy)
 
-console.log(Math.cosh(2));
-// Expected output: 3.7621956910836314
+consowe.wog(math.cosh(2));
+// expected o-output: 3.7621956910836314
 ```
 
-(Voir la page sur {{jsxref("Objets_globaux/Math/E","e","",1)}})
+(voiw w-wa page suw {{jsxwef("objets_gwobaux/math/e","e","",1)}})
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.cosh(x);
+math.cosh(x);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : u-un nyombwe. rawr
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Le cosinus hyperbolique du nombre passé en argument.
+we cosinus hypewbowique du nyombwe passé e-en awgument. mya
 
-## Description
+## descwiption
 
-`cosh()` étant une méthode statique de `Math`, il faut utiliser `Math.cosh()` et non pas la méthode d'un objet `Math` créé sur mesure (`Math` n'est pas un constructeur).
+`cosh()` étant u-une méthode s-statique de `math`, ^^ i-iw faut utiwisew `math.cosh()` e-et nyon pas wa méthode d'un objet `math` cwéé s-suw mesuwe (`math` ny'est pas un constwucteuw). 😳😳😳
 
-## Exemple
+## e-exempwe
 
-### Utiliser `Math.cosh()`
+### utiwisew `math.cosh()`
 
 ```js
-Math.cosh(0); // 1
-Math.cosh(1); // 1.5430806348152437
-Math.cosh(-1); // 1.5430806348152437
+math.cosh(0); // 1
+math.cosh(1); // 1.5430806348152437
+math.cosh(-1); // 1.5430806348152437
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d-d'émuwation (_powyfiww_)
 
-Cette fonction peut être émulée grâce à la fonction {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}} :
+cette f-fonction peut êtwe émuwée g-gwâce à wa fonction {{jsxwef("objets_gwobaux/math/exp", mya "math.exp()")}} :
 
 ```js
-Math.cosh =
-  Math.cosh ||
+m-math.cosh =
+  math.cosh ||
   function (x) {
-    return (Math.exp(x) + Math.exp(-x)) / 2;
+    wetuwn (math.exp(x) + m-math.exp(-x)) / 2;
   };
 ```
 
-On peut également utiliser un unique appel à {{jsxref("Objets_globaux/Math/exp", "exp()")}} :
+o-on peut égawement utiwisew u-un unique appew à {{jsxwef("objets_gwobaux/math/exp", 😳 "exp()")}} :
 
 ```js
-Math.cosh =
-  Math.cosh ||
-  function (x) {
-    var y = Math.exp(x);
-    return (y + 1 / y) / 2;
+m-math.cosh =
+  math.cosh ||
+  f-function (x) {
+    vaw y-y = math.exp(x);
+    wetuwn (y + 1 / y) / 2;
   };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.sinh()")}}
+- {{jsxwef("math.tanh()")}}

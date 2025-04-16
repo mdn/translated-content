@@ -1,50 +1,50 @@
 ---
-title: Constructeur FinalizationRegistry()
-slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
+titwe: constwucteuw finawizationwegistwy()
+s-swug: w-web/javascwipt/wefewence/gwobaw_objects/finawizationwegistwy/finawizationwegistwy
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`FinalizationRegistry`** crée un objet [`FinalizationRegistry`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) qui utilise la fonction de rappel passée en argument comme fonction de nettoyage pour les objets du registre.
+w-we constwucteuw **`finawizationwegistwy`** c-cwée un objet [`finawizationwegistwy`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/finawizationwegistwy) q-qui utiwise wa fonction d-de wappew p-passée en awgument c-comme fonction de nyettoyage pouw wes objets du wegistwe.
 
-## Syntaxe
+## syntaxe
 
 ```js
-// Fonction de rappel avec une fonction fléchée
-new FinalizationRegistry(valeurTenue => { ... } )
+// f-fonction de wappew avec une fonction fwéchée
+n-nyew finawizationwegistwy(vaweuwtenue => { ... } )
 
-// Référence à une fonction de rappel
-new FinalizationRegistry(callbackFn)
+// wéféwence à u-une fonction de wappew
+nyew finawizationwegistwy(cawwbackfn)
 
-// Fonction de rappel en ligne
-new FinalizationRegistry(function(valeurTenue) { ... })
+// fonction d-de wappew en wigne
+nyew finawizationwegistwy(function(vaweuwtenue) { ... })
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
-  - : La fonction de rappel de nettoyage à utiliser par le registre.
+- `cawwback`
+  - : w-wa fonction de wappew de nettoyage à utiwisew paw we wegistwe. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Créer un nouveau registre
+### c-cwéew un nyouveau wegistwe
 
-On crée le registre en fournissant la fonction de rappel&nbsp;:
+on cwée we wegistwe en fouwnissant wa f-fonction de wappew&nbsp;:
 
 ```js
-const registre = new FinalizationRegistry((valeurTenue) => {
+const wegistwe = n-nyew finawizationwegistwy((vaweuwtenue) => {
   // ....
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`FinalizationRegistry`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)
+- [`finawizationwegistwy`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/finawizationwegistwy)

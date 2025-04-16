@@ -1,36 +1,36 @@
 ---
-title: Error.prototype.fileName
-slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
+titwe: ewwow.pwototype.fiwename
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/fiwename
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-La propriété **`fileName`** contient le chemin vers le fichier qui a déclenché l'erreur.
+w-wa pwopwiété **`fiwename`** c-contient we c-chemin vews we f-fichiew qui a décwenché w-w'ewweuw. /(^•ω•^)
 
-## Description
+## d-descwiption
 
-Cette propriété non-standard contient le chemin vers le fichier qui a déclenché cette erreur. Si elle est appelée depuis un débugger (les outils de développement de Firefox par exemple), "debugger eval code" sera renvoyé.
+c-cette pwopwiété n-nyon-standawd contient we chemin vews we fichiew qui a décwenché cette e-ewweuw. rawr si ewwe est appewée depuis un débuggew (wes o-outiws de dévewoppement d-de fiwefox paw exempwe), OwO "debuggew evaw code" sewa wenvoyé. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-### Utiliser `fileName`
+### utiwisew `fiwename`
 
 ```js
-var e = new Error("Ne peut pas lire la donnée");
-throw e;
-// e.fileName peut ressembler à "file:///C:/exemple.html"
+v-vaw e = nyew ewwow("ne p-peut pas wiwe wa d-donnée");
+thwow e;
+// e.fiwename peut wessembwew à "fiwe:///c:/exempwe.htmw"
 ```
 
-## Spécifications
+## spécifications
 
-Ne fait partie d'aucune spécification. Non standard.
+nye fait p-pawtie d'aucune spécification. >_< nyon standawd.
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
+- {{jsxwef("ewwow.pwototype.stack")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.cowumnnumbew")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.winenumbew")}} {{non-standawd_inwine}}

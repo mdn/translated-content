@@ -1,72 +1,72 @@
 ---
-title: Atomics.exchange()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
+titwe: atomics.exchange()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/atomics/exchange
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Atomics.exchange()`** permet d'enregistrer une valeur à une position donnée d'un tableau et de renvoyer l'ancienne valeur qui était contenue dans le tableau. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+w-wa méthode s-statique **`atomics.exchange()`** p-pewmet d-d'enwegistwew une v-vaweuw à une p-position donnée d-d'un tabweau et de wenvoyew w'ancienne vaweuw qui était contenue dans we tabweau. nyaa~~ c-cette opéwation atomique gawantit qu'aucune a-autwe opéwation d'écwituwe n'est a-appwiquée tant que wa vaweuw modifiée ny'est pas écwite. :3
 
-{{InteractiveExample("JavaScript Demo: Atomics.exchange()")}}
+{{intewactiveexampwe("javascwipt d-demo: atomics.exchange()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
+```js intewactive-exampwe
+// c-cweate a-a shawedawwaybuffew with a size in bytes
+const buffew = nyew shawedawwaybuffew(16);
+c-const uint8 = nyew uint8awway(buffew);
 uint8[0] = 5;
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 5
+consowe.wog(atomics.woad(uint8, 😳😳😳 0));
+// expected output: 5
 
-Atomics.exchange(uint8, 0, 2); // Returns 5
-console.log(Atomics.load(uint8, 0));
-// Expected output: 2
+atomics.exchange(uint8, (˘ω˘) 0, 2); // w-wetuwns 5
+consowe.wog(atomics.woad(uint8, ^^ 0));
+// expected o-output: 2
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Atomics.exchange(typedArray, index, valeur);
+a-atomics.exchange(typedawway, :3 i-index, -.- vaweuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `typedArray`
-  - : Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.
+- `typedawway`
+  - : un tabweau typé entiew pawtagé p-pawmi {{jsxwef("int8awway")}}, 😳 {{jsxwef("uint8awway")}}, mya {{jsxwef("int16awway")}}, (˘ω˘) {{jsxwef("uint16awway")}}, >_< {{jsxwef("int32awway")}} ou {{jsxwef("uint32awway")}}. -.-
 - `index`
-  - : La position dans le tableau `typedArray` à laquelle on veut placer `valeur`.
-- `valeur`
-  - : Le nombre qu'on souhaite échanger.
+  - : wa position d-dans we tabweau `typedawway` à waquewwe on veut pwacew `vaweuw`. 🥺
+- `vaweuw`
+  - : we nyombwe qu'on souhaite échangew. (U ﹏ U)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-L'ancienne valeur qui était contenue à (`typedArray[index]`).
+w-w'ancienne vaweuw qui était contenue à (`typedawway[index]`).
 
-### Exceptions levées
+### e-exceptions w-wevées
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- cette m-méthode wève {{jsxwef("typeewwow")}} si we type de `typedawway` ny'est pas u-un des types entiews a-autowisés. >w<
+- cette méthode w-wève {{jsxwef("typeewwow")}} s-si `typedawway` ny'est pas tabweau t-typé pawtagé. mya
+- cette méthode w-wève {{jsxwef("wangeewwow")}} si `index` est en dehows des w-wimites de `typedawway`. >w<
 
-## Exemples
+## exempwes
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+v-vaw sab = nyew shawedawwaybuffew(1024);
+v-vaw ta = nyew u-uint8awway(sab);
 
-Atomics.exchange(ta, 0, 12); // renvoie 0, l'ancienne valeur
-Atomics.load(ta, 0); // 12
+atomics.exchange(ta, nyaa~~ 0, 12); // wenvoie 0, (✿oωo) w'ancienne vaweuw
+atomics.woad(ta, ʘwʘ 0); // 12
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.compareExchange()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.compaweexchange()")}}

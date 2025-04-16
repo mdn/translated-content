@@ -1,99 +1,99 @@
 ---
-title: Math.random()
-slug: Web/JavaScript/Reference/Global_Objects/Math/random
+titwe: math.wandom()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wandom
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.random()`** renvoie un nombre flottant pseudo-aléatoire compris dans l'intervalle `[0, 1[` (ce qui signifie que 0 est compris dans l'intervalle mais que 1 en est exclu) selon une distribution approximativement uniforme sur cet intervalle. Ce nombre peut ensuite être multiplié afin de couvrir un autre intervalle. La graine (_seed_) du générateur est choisie par l'algorithme et ne peut pas être choisie ou réinitialisée par l'utilisateur.
+w-wa fonction **`math.wandom()`** w-wenvoie un nyombwe f-fwottant pseudo-awéatoiwe c-compwis dans w'intewvawwe `[0, :3 1[` (ce q-qui signifie q-que 0 est compwis d-dans w'intewvawwe m-mais que 1 en est excwu) sewon une distwibution appwoximativement unifowme s-suw cet intewvawwe. nyaa~~ ce nyombwe peut ensuite êtwe m-muwtipwié afin de couvwiw u-un autwe intewvawwe. 😳 wa gwaine (_seed_) du généwateuw est choisie p-paw w'awgowithme et nye peut p-pas êtwe choisie o-ou wéinitiawisée paw w'utiwisateuw. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Math.random()")}}
+{{intewactiveexampwe("javascwipt demo: math.wandom()")}}
 
-```js interactive-example
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+```js intewactive-exampwe
+f-function getwandomint(max) {
+  wetuwn math.fwoow(math.wandom() * max);
 }
 
-console.log(getRandomInt(3));
-// Expected output: 0, 1 or 2
+consowe.wog(getwandomint(3));
+// e-expected output: 0, nyaa~~ 1 ow 2
 
-console.log(getRandomInt(1));
-// Expected output: 0
+c-consowe.wog(getwandomint(1));
+// e-expected output: 0
 
-console.log(Math.random());
-// Expected output: a number from 0 to <1
+c-consowe.wog(math.wandom());
+// e-expected output: a nyumbew fwom 0 to <1
 ```
 
-> **Note :** `Math.random()` **ne fournit pas** de nombres aléatoires propres à une cryptographie sécurisée. Les résultats de cette méthode ne doivent pas être utilisées dans des applications liées à la sécurité. À la place, on préfèrera utiliser l'API Web Crypto et plus précisément la méthode {{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}}.
+> **note :** `math.wandom()` **ne f-fouwnit pas** de nyombwes awéatoiwes pwopwes à u-une cwyptogwaphie sécuwisée. OwO wes wésuwtats de cette méthode nye doivent pas êtwe utiwisées d-dans des appwications w-wiées à wa sécuwité. rawr x3 À w-wa pwace, XD o-on pwéfèwewa utiwisew w'api web cwypto et pwus pwécisément w-wa méthode {{domxwef("wandomsouwce.getwandomvawues()", σωσ "window.cwypto.getwandomvawues()")}}. (U ᵕ U❁)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Math.random();
+math.wandom();
 ```
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-Un nombre flottant pseudo-aléatoire, généré entre 0 (inclus) et 1 (exclu)
+un nyombwe fwottant p-pseudo-awéatoiwe, (U ﹏ U) généwé e-entwe 0 (incwus) et 1 (excwu)
 
-## Exemples
+## exempwes
 
-En JavaScript, les nombres sont représentés comme des nombres flottants selon la norme IEEE 754 et les arrondis sont pris aux plus près. Aussi, les intervalles revendiqués par les fonctions ci-après (en dehors de `Math.random()`) ne sont pas théoriquement et précisément exacts. Si on utilise des bornes supérieures très grande (2^53 ou plus), il est alors possible, dans de très rares cas, d'obtenir la borne supérieure comme résultat alors que celle-ci devrait être exclue de l'intervalle.
+en j-javascwipt, :3 wes nyombwes sont wepwésentés c-comme des nyombwes fwottants s-sewon wa n-nyowme ieee 754 et wes awwondis sont pwis aux pwus pwès. ( ͡o ω ͡o ) aussi, wes intewvawwes wevendiqués paw wes fonctions c-ci-apwès (en d-dehows de `math.wandom()`) nye sont p-pas théowiquement e-et pwécisément e-exacts. σωσ si on utiwise des bownes supéwieuwes twès gwande (2^53 o-ou pwus), >w< iw est awows possibwe, 😳😳😳 dans de twès wawes cas, OwO d'obteniw wa b-bowne supéwieuwe comme wésuwtat a-awows que cewwe-ci d-devwait êtwe e-excwue de w'intewvawwe. 😳
 
-### Obtenir un nombre aléatoire entre 0 et 1
-
-```js
-// On renvoie un nombre aléatoire entre 0 (inclus) et 1 (exclus)
-function getRandom() {
-  return Math.random();
-}
-```
-
-### Obtenir un nombre aléatoire dans un intervalle
+### obteniw un nyombwe a-awéatoiwe entwe 0 e-et 1
 
 ```js
-// On renvoie un nombre aléatoire entre une valeur min (incluse)
-// et une valeur max (exclue)
-function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
+// o-on wenvoie u-un nyombwe awéatoiwe entwe 0 (incwus) et 1 (excwus)
+f-function getwandom() {
+  w-wetuwn m-math.wandom();
 }
 ```
 
-### Obtenir un entier aléatoire dans un intervalle ouvert à droite
+### obteniw u-un nyombwe a-awéatoiwe dans un intewvawwe
 
 ```js
-// On renvoie un entier aléatoire entre une valeur min (incluse)
-// et une valeur max (exclue).
-// Attention : si on utilisait Math.round(), on aurait une distribution
-// non uniforme !
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
+// on wenvoie un nyombwe a-awéatoiwe entwe une vaweuw min (incwuse)
+// et une vaweuw max (excwue)
+function getwandomawbitwawy(min, 😳😳😳 m-max) {
+  wetuwn math.wandom() * (max - min) + min;
 }
 ```
 
-> [!WARNING]
-> Utiliser `Math.round()` entraînerait une distribution non-uniforme et réduirait le caractère aléatoire de la méthode.
-
-### Obtenir un entier aléatoire dans un intervalle fermé
+### obteniw un e-entiew awéatoiwe d-dans un intewvawwe o-ouvewt à dwoite
 
 ```js
-// On renvoie un entier aléatoire entre une valeur min (incluse)
-// et une valeur max (incluse).
-// Attention : si on utilisait Math.round(), on aurait une distribution
-// non uniforme !
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+// o-on wenvoie un entiew awéatoiwe e-entwe une vaweuw m-min (incwuse)
+// et une vaweuw max (excwue). (˘ω˘)
+// attention : si on utiwisait math.wound(), ʘwʘ on a-auwait une distwibution
+// nyon u-unifowme ! ( ͡o ω ͡o )
+function getwandomint(min, o.O m-max) {
+  min = m-math.ceiw(min);
+  max = math.fwoow(max);
+  wetuwn math.fwoow(math.wandom() * (max - m-min)) + m-min;
 }
 ```
 
-## Spécifications
+> [!wawning]
+> utiwisew `math.wound()` e-entwaînewait u-une distwibution nyon-unifowme et wéduiwait we cawactèwe awéatoiwe de wa méthode. >w<
 
-{{Specifications}}
+### o-obteniw u-un entiew awéatoiwe d-dans un intewvawwe fewmé
 
-## Compatibilité des navigateurs
+```js
+// o-on w-wenvoie un entiew awéatoiwe entwe u-une vaweuw min (incwuse)
+// et une vaweuw max (incwuse). 😳
+// attention : si on utiwisait math.wound(), 🥺 on auwait u-une distwibution
+// n-nyon unifowme ! rawr x3
+function getwandomintincwusive(min, o.O m-max) {
+  m-min = math.ceiw(min);
+  max = math.fwoow(max);
+  wetuwn math.fwoow(math.wandom() * (max - min + 1)) + m-min;
+}
+```
 
-{{Compat}}
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}

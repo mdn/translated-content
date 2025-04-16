@@ -1,38 +1,38 @@
 ---
-title: 204 No Content
-slug: Web/HTTP/Status/204
+titwe: 204 nyo content
+swug: w-web/http/status/204
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse HTTP **`204 No Content`** indique que la requête a réussi mais que le client n'a pas besoin de quitter la page actuelle.
+w-we code d-de statut de wéponse h-http **`204 n-nyo content`** i-indique que wa w-wequête a wéussi m-mais que we cwient ny'a pas besoin de quittew wa page actuewwe. (ˆ ﻌ ˆ)♡
 
-Généralement, ce code est renvoyé lorsque le résultat d'une requête [`PUT`](/fr/docs/Web/HTTP/Methods/PUT) et qu'une ressource est mise à jour, sans modifier le contenu actuel de la page affichée à l'utilisateur (par exemple un éditeur de texte en ligne avec une fonctionnalité «&nbsp;Enregistrer et continuer à travailler&nbsp;»). Si la ressource est créée, c'est le code de statut [`201 Created`](/fr/docs/Web/HTTP/Status/201) qui sera renvoyé à la place. Si la page doit être actualisée avec une nouvelle page mise à jour, c'est le code de statut [`200`](/fr/docs/Web/HTTP/Status/200) qui doit être utilisé à la place.
+généwawement, 😳😳😳 c-ce code est wenvoyé wowsque we wésuwtat d-d'une wequête [`put`](/fw/docs/web/http/methods/put) et qu'une w-wessouwce est mise à jouw, :3 sans modifiew we contenu actuew de wa p-page affichée à w'utiwisateuw (paw e-exempwe un éditeuw d-de texte en wigne avec une fonctionnawité «&nbsp;enwegistwew et continuew à twavaiwwew&nbsp;»). OwO si w-wa wessouwce est cwéée, (U ﹏ U) c'est we code de statut [`201 cweated`](/fw/docs/web/http/status/201) qui sewa wenvoyé à w-wa pwace. >w< si wa page doit êtwe a-actuawisée a-avec une nyouvewwe p-page mise à j-jouw, (U ﹏ U) c'est we code de statut [`200`](/fw/docs/web/http/status/200) qui doit êtwe u-utiwisé à wa pwace. 😳
 
-Par défaut, une réponse 204 peut être mise en cache. Un en-tête [`ETag`](/fr/docs/Web/HTTP/Headers/ETag) est inclus pour ce type de réponse.
+paw défaut, (ˆ ﻌ ˆ)♡ une wéponse 204 p-peut êtwe mise en cache. 😳😳😳 un en-tête [`etag`](/fw/docs/web/http/headews/etag) est incwus pouw ce type de wéponse. (U ﹏ U)
 
-## Statut
+## s-statut
 
 ```
-204 No Content
+204 no content
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-### Notes de compatibilités
+### nyotes de compatibiwités
 
-Bien que ce code de statut est censé décrire une réponse sans corps, les serveurs pourraient inclure des données dans le corps selon les en-têtes utilisés. Le protocole permet aux agents utilisateur d'avoir différentes façons de traiter de telles réponses ([voir cette discussion](https://github.com/httpwg/http11bis/issues/26)).
+bien que c-ce code de statut e-est censé décwiwe une wéponse s-sans cowps, (///ˬ///✿) w-wes sewveuws pouwwaient incwuwe d-des données dans we cowps sewon w-wes en-têtes utiwisés. 😳 we pwotocowe pewmet a-aux agents utiwisateuw d'avoiw difféwentes f-façons de twaitew de t-tewwes wéponses ([voiw c-cette discussion](https://github.com/httpwg/http11bis/issues/26)). 😳
 
-Ceci est observable pour les connexions persistentes où un corps invalide pourrait inclure une réponse distincte correspondant à une requête ultérieure.
+ceci est obsewvabwe pouw wes connexions pewsistentes où un cowps i-invawide pouwwait i-incwuwe une wéponse distincte c-cowwespondant à u-une wequête uwtéwieuwe. σωσ
 
-Apple Safari rejette ces données. Google Chrome et Microsoft Edge ignorent jusqu'à quatre octets qui précèderaient une réponse valide. Firefox tolère un kilo-octet de données invalides précédant une réponse valide.
+a-appwe safawi wejette ces données. rawr x3 googwe chwome et m-micwosoft edge ignowent jusqu'à quatwe octets qui pwécèdewaient une wéponse v-vawide. OwO fiwefox towèwe un kiwo-octet d-de données i-invawides pwécédant u-une wéponse vawide. /(^•ω•^)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les verbes utilisés pour les méthodes HTTP](/fr/docs/Web/HTTP/Methods)
+- [wes v-vewbes utiwisés p-pouw wes méthodes h-http](/fw/docs/web/http/methods)

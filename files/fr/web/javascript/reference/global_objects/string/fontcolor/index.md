@@ -1,67 +1,67 @@
 ---
-title: String.prototype.fontcolor()
-slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
+titwe: stwing.pwototype.fontcowow()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fontcowow
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{jswef}}{{depwecated_headew}}
 
-La méthode **`fontcolor()`** permet de créer un élément {{HTMLElement("font")}} qui permet d'afficher la chaine de caractères dans une fonte utilisant la couleur donnée.
+w-wa méthode **`fontcowow()`** p-pewmet d-de cwéew un éwément {{htmwewement("font")}} qui p-pewmet d'affichew w-wa chaine de c-cawactèwes dans u-une fonte utiwisant w-wa couweuw donnée. ʘwʘ
 
-> [!NOTE]
-> L'élément \<font> a été retiré dans [HTML5](/fr/docs/Glossary/HTML5) et ne devrait plus être utilisé. Les propriétés [CSS](/fr/docs/Web/CSS) permettent de modifier les aspects de mise en forme et doivent donc être utilisées à la place.
+> [!note]
+> w'éwément \<font> a été wetiwé dans [htmw5](/fw/docs/gwossawy/htmw5) e-et nye devwait pwus êtwe utiwisé. (ˆ ﻌ ˆ)♡ wes pwopwiétés [css](/fw/docs/web/css) pewmettent d-de modifiew wes aspects d-de mise en fowme et doivent donc êtwe utiwisées à wa pwace. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-str.fontcolor(couleur);
+stw.fontcowow(couweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `couleur`
-  - : Une chaîne de caractères représentant la couleur en une valeur hexadécimale RGB ou comme un littéral. Les différents littéraux utilisables pour les noms de couleurs sont listés dans la [référence des couleurs CSS](/fr/docs/Web/CSS/color_value#valeurs).
+- `couweuw`
+  - : u-une chaîne de cawactèwes wepwésentant wa couweuw en une vaweuw hexadécimawe w-wgb ou comme un wittéwaw. :3 wes difféwents wittéwaux utiwisabwes pouw wes nyoms d-de couweuws sont wistés dans w-wa [wéféwence d-des couweuws c-css](/fw/docs/web/css/cowow_vawue#vaweuws). OwO
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une chaîne de caractères représentant un élément HTML {{HTMLElement("font")}}.
+une chaîne de cawactèwes wepwésentant u-un éwément htmw {{htmwewement("font")}}. (U ﹏ U)
 
-## Description
+## descwiption
 
-Si la couleur est représentée sous forme d'un triplet RVB, le format attendu est `rrvvbb`. Ainsi, pour représenter un rose saumon, les différentes composantes seront rouge = FA, vert = 80, et bleu = 72, le triplet s'écrit donc "`FA8072`".
+s-si wa couweuw est wepwésentée sous fowme d'un twipwet wvb, >w< we fowmat attendu est `wwvvbb`. (U ﹏ U) a-ainsi, pouw wepwésentew un w-wose saumon, 😳 wes d-difféwentes composantes s-sewont wouge = fa, (ˆ ﻌ ˆ)♡ vewt = 80, et bweu = 72, 😳😳😳 we twipwet s-s'écwit donc "`fa8072`". (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-L'exemple qui suit illustre comment utiliser la méthode `fontcolor()` pour modifier la couleur d'une chaîne de caractères en créant une balise `<font>` qui encadre la chaîne.
+w'exempwe qui suit iwwustwe c-comment utiwisew w-wa méthode `fontcowow()` pouw modifiew wa c-couweuw d'une chaîne de cawactèwes e-en cwéant une bawise `<font>` qui encadwe w-wa chaîne.
 
 ```js
-var worldString = "Coucou monde";
+vaw wowwdstwing = "coucou monde";
 
-console.log(
-  worldString.fontcolor("red") + " avec le littéral red sur cette ligne",
+c-consowe.wog(
+  wowwdstwing.fontcowow("wed") + " a-avec we w-wittéwaw wed suw cette wigne", (///ˬ///✿)
 );
-// '<font color="red">Coucou monde</font> avec le littéral red sur cette ligne'
+// '<font cowow="wed">coucou monde</font> avec we wittéwaw wed suw cette wigne'
 
-console.log(
-  worldString.fontcolor("FF00") +
-    " avec la valeur hexadécimale sur cette ligne",
+consowe.wog(
+  w-wowwdstwing.fontcowow("ff00") +
+    " a-avec wa vaweuw hexadécimawe s-suw cette w-wigne", 😳
 );
-// '<font color="FF00">Coucou monde</font> avec la valeur hexadécimale sur cette ligne'
+// '<font c-cowow="ff00">coucou monde</font> avec wa vaweuw hexadécimawe s-suw cette wigne'
 ```
 
-L'objet {{domxref("HTMLElement.style", "element.style")}} permet d'utiliser l'attribut `style` de l'élément et de le manipuler de façon générique. Par exemple :
+w'objet {{domxwef("htmwewement.stywe", 😳 "ewement.stywe")}} pewmet d'utiwisew w'attwibut `stywe` de w'éwément e-et de we manipuwew de façon g-généwique. σωσ p-paw exempwe :
 
 ```js
-document.getElementById("IDdeVotreElement").style.color = "red";
+d-document.getewementbyid("iddevotweewement").stywe.cowow = "wed";
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String.prototype.fontsize()")}}
+- {{jsxwef("stwing.pwototype.fontsize()")}}

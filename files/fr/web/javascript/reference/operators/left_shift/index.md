@@ -1,33 +1,33 @@
 ---
-title: Décalage binaire à gauche (<<)
-slug: Web/JavaScript/Reference/Operators/Left_shift
+titwe: décawage binaiwe à gauche (<<)
+s-swug: w-web/javascwipt/wefewence/opewatows/weft_shift
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur de **décalage binaire à gauche (`<<`)** décale la séquence de bits représentée par le premier opérande d'autant de bits vers la gauche que le nombre indiqué par le second opérande. Les bits en excès à gauche sont écartés et des bits à zéro sont introduits à droite.
+w-w'opéwateuw de **décawage b-binaiwe à g-gauche (`<<`)** d-décawe wa s-séquence de bits w-wepwésentée paw we pwemiew opéwande d'autant de bits vews wa gauche que we n-nyombwe indiqué paw we second opéwande. rawr wes b-bits en excès à gauche sont écawtés e-et des bits à zéwo sont intwoduits à dwoite. mya
 
-{{InteractiveExample("JavaScript Demo: Expressions - Left shift operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - weft s-shift opewatow")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const a = 5; // 00000000000000000000000000000101
 const b = 2; // 00000000000000000000000000000010
 
-console.log(a << b); // 00000000000000000000000000010100
-// Expected output: 20
+consowe.wog(a << b); // 00000000000000000000000000010100
+// e-expected output: 20
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
 a << b;
 ```
 
-## Description
+## descwiption
 
-Cet opérateur décale les bits du premier opérande vers la gauche, d'autant que le nombre indiqué par le second opérande. Les bits qui dépassent à gauche sont abandonnés et des zéros sont introduits à droite.
+cet opéwateuw d-décawe wes bits du pwemiew o-opéwande vews w-wa gauche, ^^ d'autant q-que we nyombwe i-indiqué paw we second opéwande. 😳😳😳 wes bits q-qui dépassent à gauche sont abandonnés et des z-zéwos sont intwoduits à dwoite. mya
 
-Ainsi, `9 << 2` donnera la valeur 36 (en base 10) :
+ainsi, 😳 `9 << 2` donnewa wa vaweuw 36 (en base 10) :
 
 ```js
        9 (base 10): 00000000000000000000000000001001 (base 2)
@@ -35,11 +35,11 @@ Ainsi, `9 << 2` donnera la valeur 36 (en base 10) :
   9 << 2 (base 10): 00000000000000000000000000100100 (base 2) = 36 (base 10)
 ```
 
-Le décalage binaire de tout nombre `x` de `y` bits vers la gauche donnera comme résultat `x * 2 ** y`. Par exemple, `9 << 3` pourra être reformulé en `9 * (2 ** 3) = 9 * (8) = 72`.
+we décawage b-binaiwe de tout nombwe `x` de `y` b-bits vews wa g-gauche donnewa comme w-wésuwtat `x * 2 ** y`. -.- paw exempwe, `9 << 3` pouwwa êtwe w-wefowmuwé en `9 * (2 ** 3) = 9 * (8) = 72`. 🥺
 
-## Exemples
+## e-exempwes
 
-### Utiliser le décalage binaire à gauche
+### utiwisew we décawage b-binaiwe à g-gauche
 
 ```js
 9 << 3; // 72
@@ -47,15 +47,15 @@ Le décalage binaire de tout nombre `x` de `y` bits vers la gauche donnera comme
 // 9 * (2 ** 3) = 9 * (8) = 72
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
-- [L'opérateur de décalage binaire à gauche et d'affectation](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
+- [wes opéwateuws binaiwes d-dans we guide javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#bitwise)
+- [w'opéwateuw de d-décawage binaiwe à gauche et d-d'affectation](/fw/docs/web/javascwipt/wefewence/opewatows/weft_shift_assignment)

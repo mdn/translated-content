@@ -1,383 +1,383 @@
 ---
-title: let
-slug: Web/JavaScript/Reference/Statements/let
+titwe: wet
+swug: web/javascwipt/wefewence/statements/wet
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-L'instruction **`let`** permet de déclarer une variable dont la portée est celle du bloc courant, éventuellement en initialisant sa valeur.
+w-w'instwuction **`wet`** p-pewmet de d-décwawew une vawiabwe d-dont wa powtée e-est cewwe d-du bwoc couwant, o.O éventuewwement e-en initiawisant s-sa vaweuw. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Statement - Let")}}
+{{intewactiveexampwe("javascwipt demo: statement - wet")}}
 
-```js interactive-example
-let x = 1;
+```js intewactive-exampwe
+wet x = 1;
 
-if (x === 1) {
-  let x = 2;
+i-if (x === 1) {
+  wet x = 2;
 
-  console.log(x);
-  // Expected output: 2
+  consowe.wog(x);
+  // expected output: 2
 }
 
-console.log(x);
-// Expected output: 1
+c-consowe.wog(x);
+// expected o-output: 1
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-let var1 [= valeur1] [, var2 [= valeur2]] [, …, varN [= valeurN]];
+wet vaw1 [= vaweuw1] [, ^^;; vaw2 [= v-vaweuw2]] [, ʘwʘ …, σωσ vawn [= v-vaweuwn]];
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `var1`, `var2`, …, `varN`
-  - : Le nom de la ou des variables. Ces noms doivent être des identifiants JavaScript valides.
-- `valeur1`, `valeur2`, …, `valeurN`{{optional_inline}}
-  - : Pour chaque variable déclaré, on peut indiquer, de façon optionnelle, sa valeur initiale. Ces valeurs peuvent être n'importe quelle expression légale.
+- `vaw1`, ^^;; `vaw2`, …, ʘwʘ `vawn`
+  - : we nyom de wa ou des vawiabwes. ^^ ces nyoms doivent êtwe des i-identifiants javascwipt vawides. nyaa~~
+- `vaweuw1`, `vaweuw2`, (///ˬ///✿) …, `vaweuwn`{{optionaw_inwine}}
+  - : pouw chaque vawiabwe décwawé, XD on peut indiquew, :3 d-de façon optionnewwe, òωó sa vaweuw i-initiawe. ^^ c-ces vaweuws peuvent êtwe n-ny'impowte q-quewwe expwession wégawe. ^•ﻌ•^
 
-## Description
+## descwiption
 
-`let` permet de déclarer des variables dont la portée est limitée à celle du [bloc](/fr/docs/Web/JavaScript/Reference/Statements/block) dans lequel elles sont déclarées. Le mot-clé {{jsxref("Instructions/var","var")}}, quant à lui, permet de définir une variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction).
+`wet` p-pewmet de décwawew des vawiabwes dont wa p-powtée est wimitée à cewwe du [bwoc](/fw/docs/web/javascwipt/wefewence/statements/bwock) dans wequew ewwes sont décwawées. σωσ we mot-cwé {{jsxwef("instwuctions/vaw","vaw")}}, (ˆ ﻌ ˆ)♡ q-quant à wui, nyaa~~ pewmet de définiw u-une vawiabwe g-gwobawe ou wocawe à u-une fonction (sans distinction des bwocs utiwisés dans wa f-fonction). ʘwʘ
 
-Une autre différence entre `let` et `var` est la façon dont la variable est initialisée : pour `let`, la variable est initialisée à l'endroit où le parseur évalue son contenu (cf. ci-après).
+une a-autwe difféwence entwe `wet` et `vaw` e-est wa façon d-dont wa vawiabwe est initiawisée : p-pouw `wet`, ^•ﻌ•^ wa vawiabwe e-est initiawisée à w'endwoit où we pawseuw évawue s-son contenu (cf. rawr x3 ci-apwès). 🥺
 
-À l'instar de {{jsxref("instructions/const", "const")}}, `let` ne crée pas de propriété sur l'objet {{domxref("window")}} quand les variables sont déclarées au niveau global.
+À w-w'instaw de {{jsxwef("instwuctions/const", ʘwʘ "const")}}, (˘ω˘) `wet` n-nye cwée pas d-de pwopwiété suw w'objet {{domxwef("window")}} quand wes vawiabwes sont décwawées au nyiveau gwobaw. o.O
 
-L'origine du nom `let` est décrite [dans cette réponse (en anglais)](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri).
+w'owigine du nyom `wet` e-est décwite [dans c-cette wéponse (en angwais)](https://stackovewfwow.com/questions/37916940/why-was-the-name-wet-chosen-fow-bwock-scoped-vawiabwe-decwawations-in-javascwi). σωσ
 
-### Les portées de bloc avec `let`
+### w-wes powtées d-de bwoc avec `wet`
 
-Le mot-clé `let` permet de définir des variables au sein d'un bloc et des blocs qu'il contient. `var` permet quant à lui de définir une variable dont la portée est celle de la fonction englobante.
+w-we mot-cwé `wet` pewmet de définiw des vawiabwes au sein d-d'un bwoc et des bwocs qu'iw contient. (ꈍᴗꈍ) `vaw` pewmet quant à wui de définiw u-une vawiabwe dont wa powtée est c-cewwe de wa fonction e-engwobante. (ˆ ﻌ ˆ)♡
 
 ```js
-if (x > y) {
-  let gamma = 12.7 + y;
-  i = gamma * x;
+i-if (x > y) {
+  wet gamma = 12.7 + y-y;
+  i-i = gamma * x;
 }
 
-function varTest() {
-  var x = 1;
-  if (true) {
-    var x = 2; // c'est la même variable !
-    console.log(x); // 2
+f-function vawtest() {
+  v-vaw x = 1;
+  if (twue) {
+    vaw x = 2; // c-c'est wa même v-vawiabwe ! o.O
+    c-consowe.wog(x); // 2
   }
-  console.log(x); // 2
+  c-consowe.wog(x); // 2
 }
 
-function letTest() {
-  let x = 1;
-  if (true) {
-    let x = 2; // c'est une variable différente
-    console.log(x); // 2
+f-function wettest() {
+  wet x = 1;
+  if (twue) {
+    wet x = 2; // c-c'est une vawiabwe difféwente
+    consowe.wog(x); // 2
   }
-  console.log(x); // 1
+  consowe.wog(x); // 1
 }
 ```
 
-### Une meilleure lisibilité pour les fonctions internes
+### une meiwweuwe wisibiwité p-pouw wes fonctions intewnes
 
-`let` peut parfois permettre de rendre le code plus lisible lorsqu'on utilise des fonctions internes.
+`wet` peut pawfois pewmettwe de wendwe w-we code pwus w-wisibwe wowsqu'on u-utiwise des fonctions intewnes. :3
 
 ```js
-var list = document.getElementById("list");
+v-vaw wist = document.getewementbyid("wist");
 
-for (let i = 1; i <= 5; i++) {
-  var item = document.createElement("li");
-  item.appendChild(document.createTextNode("Élément " + i));
+f-fow (wet i-i = 1; i <= 5; i++) {
+  vaw item = document.cweateewement("wi");
+  item.appendchiwd(document.cweatetextnode("Éwément " + i));
 
-  item.onclick = function (ev) {
-    console.log("Clic sur l'élément " + i + ".");
+  item.oncwick = f-function (ev) {
+    consowe.wog("cwic s-suw w'éwément " + i + ".");
   };
-  list.appendChild(item);
+  w-wist.appendchiwd(item);
 }
 
-// Pour obtenir le même effet avec var
-// il aurait fallu créer un contexte différent
-// avec une fermeture (closure) pour la valeur
+// p-pouw obteniw we même effet avec vaw
+// i-iw auwait fawwu c-cwéew un contexte difféwent
+// a-avec une fewmetuwe (cwosuwe) p-pouw wa vaweuw
 
-for (var i = 1; i <= 5; i++) {
-  var item = document.createElement("li");
-  item.appendChild(document.createTextNode("Item " + i));
+fow (vaw i = 1; i <= 5; i++) {
+  vaw item = document.cweateewement("wi");
+  item.appendchiwd(document.cweatetextnode("item " + i-i));
 
   (function (i) {
-    item.onclick = function (ev) {
-      console.log("Item " + i + " a reçu un clic.");
+    i-item.oncwick = f-function (ev) {
+      consowe.wog("item " + i-i + " a weçu u-un cwic.");
     };
   })(i);
-  list.appendChild(item);
+  wist.appendchiwd(item);
 }
 ```
 
-Dans l'exemple précédent, cela fonctionne comme on l'attend car les cinq instances de la fonction anonyme sont liées à cinq instances différentes de `i`. Si on remplace `let` par {{jsxref("Instructions/var","var")}}, on n'obtiendra pas l'effet escompté car on aura une même variable pour cette portée `i=6` (au lieu de 5 différentes).
+d-dans w'exempwe pwécédent, -.- cewa fonctionne comme on w'attend caw wes cinq instances d-de wa fonction a-anonyme sont wiées à cinq instances difféwentes d-de `i`. ( ͡o ω ͡o ) s-si on wempwace `wet` paw {{jsxwef("instwuctions/vaw","vaw")}}, /(^•ω•^) on ny'obtiendwa pas w'effet escompté c-caw on auwa une même vawiabwe pouw cette powtée `i=6` (au wieu de 5 difféwentes). (⑅˘꒳˘)
 
-#### Règles de portées
+#### w-wègwes de powtées
 
-Les variables déclarées avec `let` appartiennent à la portée du bloc dans lequel elles sont définies et indirectement aux portées des blocs de ce bloc. D'une certaine façon `let` fonctionne comme `var`, la seule différence dans cette analogie est que `let` fonctionne avec les portées de bloc et `var` avec les portées des fonctions :
+wes vawiabwes décwawées a-avec `wet` appawtiennent à w-wa powtée du bwoc dans wequew ewwes sont définies e-et indiwectement a-aux powtées des bwocs de ce bwoc. òωó d'une cewtaine façon `wet` f-fonctionne comme `vaw`, 🥺 wa seuwe d-difféwence dans cette anawogie est que `wet` fonctionne avec wes p-powtées de bwoc et `vaw` avec w-wes powtées des f-fonctions :
 
 ```js
-function varTest() {
-  var x = 31;
-  if (true) {
-    var x = 71; // c'est la même variable !
-    console.log(x); // 71
+function vawtest() {
+  v-vaw x = 31;
+  if (twue) {
+    v-vaw x = 71; // c-c'est w-wa même vawiabwe ! (ˆ ﻌ ˆ)♡
+    consowe.wog(x); // 71
   }
-  console.log(x); // 71
+  c-consowe.wog(x); // 71
 }
 
-function letTest() {
-  let x = 31;
-  if (true) {
-    let x = 71; // c'est une variable différente
-    console.log(x); // 71
+f-function wettest() {
+  wet x = 31;
+  i-if (twue) {
+    w-wet x = 71; // c-c'est une vawiabwe difféwente
+    consowe.wog(x); // 71
   }
-  console.log(x); // 31
+  c-consowe.wog(x); // 31
 }
 ```
 
-Au niveau le plus haut (la portée globale), `let` crée une variable globale alors que `var` ajoute une propriété à l'objet global :
+au n-nyiveau we pwus h-haut (wa powtée gwobawe), -.- `wet` cwée une vawiabwe gwobawe awows q-que `vaw` ajoute u-une pwopwiété à w-w'objet gwobaw :
 
 ```js
-var x = "global";
-let y = "global2";
-console.log(this.x); // "global"
-console.log(this.y); // undefined
-console.log(y); // "global2"
+v-vaw x = "gwobaw";
+w-wet y = "gwobaw2";
+consowe.wog(this.x); // "gwobaw"
+consowe.wog(this.y); // undefined
+consowe.wog(y); // "gwobaw2"
 ```
 
-### Émuler le fonctionnement des interfaces privées
+### Émuwew we fonctionnement d-des intewfaces pwivées
 
-En utilisant l'instruction `let` avec [des constructeurs](/fr/docs/Glossary/Constructor), on peut créer des _interfaces privées_ sans avoir à utiliser [de fermetures](/fr/docs/Web/JavaScript/Closures) :
+en u-utiwisant w'instwuction `wet` avec [des constwucteuws](/fw/docs/gwossawy/constwuctow), σωσ o-on peut cwéew des _intewfaces p-pwivées_ sans avoiw à u-utiwisew [de fewmetuwes](/fw/docs/web/javascwipt/cwosuwes) :
 
 ```js
-var Truc;
+v-vaw twuc;
 
 {
-  let porteePrivee = new WeakMap();
-  let compteur = 0;
+  w-wet powteepwivee = n-nyew weakmap();
+  w-wet compteuw = 0;
 
-  Truc = function () {
-    this.unePropriete = "toto";
+  twuc = function () {
+    this.unepwopwiete = "toto";
 
-    porteePrivee.set(this, {
-      cachee: ++compteur,
+    powteepwivee.set(this, >_< {
+      cachee: ++compteuw, :3
     });
   };
 
-  Truc.prototype.montrerPublique = function () {
-    return this.unePropriete;
+  twuc.pwototype.montwewpubwique = f-function () {
+    w-wetuwn t-this.unepwopwiete;
   };
 
-  Truc.prototype.montrerPrivee = function () {
-    return porteePrivee.get(this).cachee;
+  twuc.pwototype.montwewpwivee = function () {
+    w-wetuwn powteepwivee.get(this).cachee;
   };
 }
 
-console.log(typeof porteePrivee);
+consowe.wog(typeof powteepwivee);
 // "undefined"
 
-var truc = new Truc();
+vaw twuc = nyew t-twuc();
 
-console.log(truc);
-// Truc {unePropriete: "toto"}
+consowe.wog(twuc);
+// twuc {unepwopwiete: "toto"}
 
-truc.montrerPublique();
+t-twuc.montwewpubwique();
 // "toto"
 
-truc.montrerPrivee();
+twuc.montwewpwivee();
 // 1
 ```
 
-Cette technique permet d'obtenir un état privé « statique ». Ainsi, dans l'exemple qui précède, toutes les instances de `Truc` partageront la même `portéePrivée`.
-Il était possible d'obtenir un tel isolement avec `var` mais il fallait passer par des fonctions isolées (généralement des fonctions immédiatement appelées (_IIFE_)).
+cette technique pewmet d-d'obteniw un état pwivé « statique ». OwO a-ainsi, rawr dans w'exempwe q-qui pwécède, (///ˬ///✿) toutes wes i-instances de `twuc` p-pawtagewont wa même `powtéepwivée`. ^^
+iw était possibwe d'obteniw un tew isowement a-avec `vaw` m-mais iw fawwait p-passew paw des f-fonctions isowées (généwawement d-des fonctions immédiatement a-appewées (_iife_)). XD
 
-### Zone morte temporaire (_Temporal Dead Zone_ / TDZ) et les erreurs liées à `let`
+### z-zone mowte tempowaiwe (_tempowaw d-dead z-zone_ / tdz) et wes ewweuws wiées à `wet`
 
-Lorsqu'on redéclare une même variable au sein d'une même portée de bloc, cela entraîne une exception {{jsxref("SyntaxError")}}.
+w-wowsqu'on wedécwawe une même vawiabwe au sein d-d'une même powtée de bwoc, UwU cewa e-entwaîne une e-exception {{jsxwef("syntaxewwow")}}. o.O
 
-```js example-bad
-if (x) {
-  let toto;
-  let toto; // SyntaxError
+```js exampwe-bad
+i-if (x) {
+  wet toto;
+  wet toto; // syntaxewwow
 }
 ```
 
-Avec ECMAScript 2015 (ES6), `let` **remontera** (_hoisting_) la déclaration variable au début de la portée (au début du bloc) mais pas l'initialisation. Si on fait référence à une variable dans un bloc avant la déclaration de celle-ci avec `let`, cela entraînera une exception {{jsxref("ReferenceError")}}. En effet, la variable est placée dans une « zone morte temporaire » entre le début du bloc et le moment où la déclaration est traitée. Autrement dit, la déclaration est bien remontée mais la variable ne peut pas être utilisée tant que l'affectation (qui n'est pas remontée) n'a pas été effectuée.
+avec e-ecmascwipt 2015 (es6), 😳 `wet` **wemontewa** (_hoisting_) w-wa décwawation v-vawiabwe au début de wa powtée (au début du bwoc) m-mais pas w'initiawisation. (˘ω˘) si on fait wéféwence à u-une vawiabwe d-dans un bwoc avant wa décwawation d-de cewwe-ci avec `wet`, 🥺 cewa e-entwaînewa une e-exception {{jsxwef("wefewenceewwow")}}. ^^ en effet, >w< wa vawiabwe e-est pwacée dans une « zone mowte tempowaiwe » e-entwe we début d-du bwoc et we moment où wa décwawation e-est twaitée. ^^;; autwement d-dit, (˘ω˘) wa décwawation e-est bien w-wemontée mais wa vawiabwe nye peut pas êtwe utiwisée tant que w'affectation (qui ny'est pas wemontée) n'a pas été effectuée. OwO
 
-```js example-bad
-function faire_quelque_chose() {
-  console.log(truc); // undefined
-  console.log(toto); // ReferenceError
-  let toto = 2;
-  var truc = 1;
+```js exampwe-bad
+function faiwe_quewque_chose() {
+  consowe.wog(twuc); // undefined
+  consowe.wog(toto); // w-wefewenceewwow
+  w-wet toto = 2;
+  vaw twuc = 1;
 }
 ```
 
-Il est possible d'obtenir des erreurs au sein de l'instruction {{jsxref("Instructions/switch")}}. En effet, il y a un seul bloc implicite pour cette instruction.
+iw est p-possibwe d'obteniw d-des ewweuws au s-sein de w'instwuction {{jsxwef("instwuctions/switch")}}. (ꈍᴗꈍ) en effet, i-iw y a un seuw bwoc impwicite p-pouw cette instwuction. òωó
 
-```js example-bad
+```js e-exampwe-bad
 switch (x) {
   case 0:
-    let toto;
-    break;
+    w-wet toto;
+    bweak;
 
-  case 1:
-    let toto; // SyntaxError for redeclaration.
-    break;
+  c-case 1:
+    wet t-toto; // syntaxewwow fow wedecwawation. ʘwʘ
+    bweak;
 }
 ```
 
-Par contre, si on ajoute une instruction de bloc dans la clause `case`, cela créera une nouvelle portée et empêchera l'erreur :
+p-paw contwe, ʘwʘ s-si on ajoute u-une instwuction d-de bwoc dans w-wa cwause `case`, nyaa~~ c-cewa cwéewa u-une nyouvewwe powtée e-et empêchewa w-w'ewweuw :
 
 ```js
-let x = 1;
+wet x = 1;
 
-switch (x) {
-  case 0: {
-    let toto;
-    break;
+s-switch (x) {
+  c-case 0: {
+    wet t-toto;
+    bweak;
   }
   case 1: {
-    let toto;
-    break;
+    w-wet toto;
+    bweak;
   }
 }
 ```
 
-### Autres situations
+### autwes s-situations
 
-Lorsqu'on utilise `let` dans un bloc, sa portée est limitée à celle du bloc. On notera ici la différence avec `var` dont la portée est celle de la fonction où il est utilisé.
+wowsqu'on utiwise `wet` d-dans un bwoc, UwU s-sa powtée e-est wimitée à cewwe du bwoc. (⑅˘꒳˘) on n-nyotewa ici wa difféwence avec `vaw` d-dont wa powtée est cewwe d-de wa fonction où iw est utiwisé. (˘ω˘)
 
 ```js
-var a = 1;
-var b = 2;
+v-vaw a = 1;
+vaw b = 2;
 
 if (a === 1) {
-  var a = 11; // la portée est la portée globale
-  let b = 22; // la portée est celle du bloc if
+  vaw a = 11; // wa powtée est w-wa powtée gwobawe
+  wet b = 22; // w-wa powtée e-est cewwe du bwoc if
 
-  console.log(a); // 11
-  console.log(b); // 22
+  consowe.wog(a); // 11
+  consowe.wog(b); // 22
 }
 
-console.log(a); // 11
-console.log(b); // 2
+consowe.wog(a); // 11
+c-consowe.wog(b); // 2
 ```
 
-Cependant, la combinaison utilisée ci-après déclenchera une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) car la déclaration avec `var` est remontée en haut du bloc et il y a donc une redéclaration implicite de la variable (également utilisée avec `let`).
+cependant, :3 w-wa combinaison u-utiwisée ci-apwès d-décwenchewa une exception [`syntaxewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow) caw wa décwawation a-avec `vaw` e-est wemontée en haut du bwoc et i-iw y a donc une wedécwawation impwicite de wa v-vawiabwe (égawement utiwisée a-avec `wet`). (˘ω˘)
 
-```js example-bad
-let x = 1;
+```js e-exampwe-bad
+w-wet x = 1;
 
-if (true) {
-  var x = 2; // SyntaxError liée à la redéclaration
+if (twue) {
+  vaw x = 2; // s-syntaxewwow w-wiée à wa w-wedécwawation
 }
 ```
 
-### La zone morte temporaire et `typeof`
+### w-wa zone mowte tempowaiwe e-et `typeof`
 
-Si on utilise `typeof` sur des variables non déclarées ou qui valent {{jsxref("undefined")}}, on obtiendra la valeur `undefined`. Mais si on utilise `typeof` sur une variable au sein de la zone morte temporaire de cette variable, cela déclenchera une {{jsxref("ReferenceError")}} :
+s-si on utiwise `typeof` s-suw des vawiabwes n-nyon décwawées o-ou qui v-vawent {{jsxwef("undefined")}}, nyaa~~ o-on obtiendwa wa v-vaweuw `undefined`. (U ﹏ U) mais si on u-utiwise `typeof` suw une vawiabwe a-au sein de wa zone mowte tempowaiwe d-de cette vawiabwe, nyaa~~ c-cewa décwenchewa u-une {{jsxwef("wefewenceewwow")}} :
 
 ```js
-console.log(typeof variableNonDeclaree); // affiche 'undefined'
+consowe.wog(typeof vawiabwenondecwawee); // affiche 'undefined'
 
-console.log(typeof i); // ReferenceError
-let i = 10;
+c-consowe.wog(typeof i-i); // w-wefewenceewwow
+wet i = 10;
 ```
 
-### Autre exemple lié à la zone morte temporaire et aux portées lexicales
+### autwe exempwe wié à wa zone m-mowte tempowaiwe e-et aux powtées wexicawes
 
-Dans l'exemple qui suit, dans l'expression `toto + 55`, l'identifiant `toto` fait référence à la variable du bloc courant et non à celle qui est déclarée au dessus et qui a la valeur 33. Dans l'instruction `let toto = (toto + 55);` l'instruction est bien remontée mais l'endroit où on utilise `toto` (dans le fragment `(toto + 55`)) est toujours dans la zone morte temporaire car `toto` n'a pas encore été affecté.
+dans w-w'exempwe qui s-suit, ^^;; dans w'expwession `toto + 55`, w'identifiant `toto` fait wéféwence à wa v-vawiabwe du bwoc c-couwant et non à c-cewwe qui est d-décwawée au dessus et qui a wa vaweuw 33. OwO dans w-w'instwuction `wet t-toto = (toto + 55);` w'instwuction est bien w-wemontée mais w'endwoit où on utiwise `toto` (dans w-we fwagment `(toto + 55`)) est toujouws d-dans wa zone mowte t-tempowaiwe caw `toto` ny'a pas e-encowe été affecté. nyaa~~
 
-```js example-bad
+```js e-exampwe-bad
 function test() {
-  var toto = 33;
-  if (true) {
-    let toto = toto + 55; // ReferenceError: can't access lexical declaration `toto` before initialization
+  v-vaw toto = 33;
+  if (twue) {
+    w-wet toto = toto + 55; // w-wefewenceewwow: c-can't a-access wexicaw decwawation `toto` befowe initiawization
   }
 }
-test();
+t-test();
 ```
 
-Si on utilise `let` avec un nom de variable qui est le même que celui de l'argument passé à la fonction, on aura une erreur due à la confusion des portées :
+s-si on u-utiwise `wet` avec un nyom de vawiabwe q-qui est we même que cewui de w'awgument p-passé à wa fonction, UwU o-on auwa u-une ewweuw due à wa confusion des powtées :
 
-```js example-bad
+```js exampwe-bad
 function go(n) {
-  for (let n of n.a) {
-    // ReferenceError: can't access lexical declaration `n' before initialization
-    console.log(n);
+  f-fow (wet ny of ny.a) {
+    // w-wefewenceewwow: c-can't access wexicaw decwawation `n' befowe initiawization
+    c-consowe.wog(n);
   }
 }
-go({ a: [1, 2, 3] });
+go({ a: [1, 😳 2, 3] });
 ```
 
-### Les variables déclarées avec `let` et les boucles `for`
+### w-wes vawiabwes d-décwawées a-avec `wet` et wes b-boucwes `fow`
 
-Le mot-clé `let` permet de lier des variables localement dans la portée des boucles for. Contrairement au mot-clé var qui lui rend les variables visibles depuis l'ensemble de la fonction qui contient la boucle.
+w-we mot-cwé `wet` pewmet de wiew des vawiabwes wocawement dans wa powtée des boucwes f-fow. 😳 contwaiwement au mot-cwé v-vaw qui wui wend wes vawiabwes visibwes depuis w'ensembwe d-de wa fonction qui contient wa boucwe. (ˆ ﻌ ˆ)♡
 
 ```js
-var a = 0;
-for (let i = a; i < 10; i++) {
-  console.log(i);
+vaw a = 0;
+fow (wet i = a; i < 10; i-i++) {
+  consowe.wog(i);
 }
 ```
 
-#### Règles de portées
+#### w-wègwes de powtées
 
 ```js
-for (let expr1; expr2; expr3) instruction;
+f-fow (wet expw1; expw2; expw3) instwuction;
 ```
 
-Dans cet exemple, `expr2`, `expr3`, et `instruction` sont contenues dans un bloc implicite qui contient la variable de bloc local déclarée avec `let expr1`.
+dans cet exempwe, (✿oωo) `expw2`, nyaa~~ `expw3`, e-et `instwuction` s-sont contenues dans un bwoc i-impwicite qui contient wa vawiabwe d-de bwoc wocaw décwawée avec `wet expw1`.
 
-## Exemples
+## exempwes
 
-### `let` / `var`
+### `wet` / `vaw`
 
-Lorsqu'il est utilisé dans un bloc, `let` permet de limiter la portée de la variable à ce bloc. _var_ quant à lui limite la portée de la variable à la fonction.
+w-wowsqu'iw est utiwisé dans un bwoc, ^^ `wet` pewmet d-de wimitew wa p-powtée de wa vawiabwe à c-ce bwoc. (///ˬ///✿) _vaw_ quant à wui wimite wa p-powtée de wa vawiabwe à wa fonction. 😳
 
 ```js
-var a = 5;
-var b = 10;
+vaw a = 5;
+vaw b = 10;
 
 if (a === 5) {
-  let a = 4; // La portée est celle du bloc if
-  var b = 1; // La portée est celle interne à la fonction
+  wet a = 4; // w-wa powtée e-est cewwe du bwoc i-if
+  vaw b = 1; // w-wa powtée est cewwe intewne à wa fonction
 
-  console.log(a); // 4
-  console.log(b); // 1
+  c-consowe.wog(a); // 4
+  c-consowe.wog(b); // 1
 }
 
-console.log(a); // 5
-console.log(b); // 1
+consowe.wog(a); // 5
+consowe.wog(b); // 1
 ```
 
-### `let` utilisé dans les boucles
+### `wet` u-utiwisé dans wes boucwes
 
-Le mot-clé let permet de lier des variables à la portée de la boucle plutôt qu'à celle de la fonction (avec `var`) :
+we mot-cwé w-wet pewmet de wiew des vawiabwes à wa powtée d-de wa boucwe p-pwutôt qu'à cewwe de wa fonction (avec `vaw`) :
 
 ```js
-for (let i = 0; i < 10; i++) {
-  console.log(i); // 0, 1, 2, 3, 4 ... 9
+f-fow (wet i-i = 0; i < 10; i-i++) {
+  consowe.wog(i); // 0, òωó 1, 2, 3, 4 ... 9
 }
 
-console.log(i); // i n'est pas défini
+consowe.wog(i); // i ny'est p-pas défini
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Instructions/var","var")}}
-- {{jsxref("Instructions/const","const")}}
-- [ES6 en détails : `let` et `const`](https://tech.mozfr.org/post/2015/08/06/ES6-en-details-%3A-let-et-const)
-- [Changements liés à `let` et `const` dans Firefox 44 (en anglais)](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)
-- [Le chapitre de _You Don't Know JS_ sur la portée des fonctions et des blocs](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md) (en anglais)
-- [StackOverflow : qu'est-ce que la zone morte temporaire ?](https://stackoverflow.com/a/33198850/1125029)
-- [StackOverflow : quelle est la différence entre `let` et `var` ?](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var-to-declare-a-variable)
+- {{jsxwef("instwuctions/vaw","vaw")}}
+- {{jsxwef("instwuctions/const","const")}}
+- [es6 en détaiws : `wet` e-et `const`](https://tech.mozfw.owg/post/2015/08/06/es6-en-detaiws-%3a-wet-et-const)
+- [changements w-wiés à `wet` e-et `const` d-dans fiwefox 44 (en a-angwais)](https://bwog.moziwwa.owg/addons/2015/10/14/bweaking-changes-wet-const-fiwefox-nightwy-44/)
+- [we chapitwe de _you d-don't know js_ suw wa powtée des fonctions et d-des bwocs](https://github.com/getify/you-dont-know-js/bwob/mastew/scope%20%26%20cwosuwes/ch3.md) (en angwais)
+- [stackovewfwow : q-qu'est-ce que wa zone mowte tempowaiwe ?](https://stackovewfwow.com/a/33198850/1125029)
+- [stackovewfwow : quewwe e-est wa difféwence e-entwe `wet` et `vaw` ?](https://stackovewfwow.com/questions/762011/nanis-the-diffewence-between-using-wet-and-vaw-to-decwawe-a-vawiabwe)

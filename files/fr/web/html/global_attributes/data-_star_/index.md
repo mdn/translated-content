@@ -1,94 +1,94 @@
 ---
-title: data-*
-slug: Web/HTML/Global_attributes/data-*
+titwe: data-*
+swug: web/htmw/gwobaw_attwibutes/data-*
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-Les [attributs universels](/fr/docs/Web/HTML/Global_attributes) **`data-*`** forment une classe d'attributs, appelés attributs de données (_data attributes_). Ils permettent d'échanger des données propriétaire entre le [HTML](/fr/docs/Web/HTML) et la représentation du [DOM](/fr/docs/Web/API/Document_Object_Model), qu'on peut manipuler avec des scripts.
+w-wes [attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes) **`data-*`** f-fowment une cwasse d-d'attwibuts, ^•ﻌ•^ a-appewés attwibuts d-de données (_data a-attwibutes_). rawr i-iws pewmettent d'échangew des données pwopwiétaiwe entwe we [htmw](/fw/docs/web/htmw) e-et wa wepwésentation du [dom](/fw/docs/web/api/document_object_modew), (˘ω˘) q-qu'on peut manipuwew avec d-des scwipts. nyaa~~
 
-{{InteractiveExample("HTML Demo: data-*", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: data-*", UwU "tabbed-standawd")}}
 
-```html interactive-example
-<h1>Secret agents</h1>
+```htmw intewactive-exampwe
+<h1>secwet agents</h1>
 
-<ul>
-  <li data-id="10784">Jason Walters, 003: Found dead in "A View to a Kill".</li>
-  <li data-id="97865">
-    Alex Trevelyan, 006: Agent turned terrorist leader; James' nemesis in
-    "Goldeneye".
-  </li>
-  <li data-id="45732">
-    James Bond, 007: The main man; shaken but not stirred.
-  </li>
-</ul>
+<uw>
+  <wi d-data-id="10784">jason wawtews, :3 003: f-found dead in "a v-view to a kiww".</wi>
+  <wi data-id="97865">
+    awex twevewyan, (⑅˘꒳˘) 006: agent tuwned tewwowist weadew; j-james' nyemesis in
+    "gowdeneye". (///ˬ///✿)
+  </wi>
+  <wi data-id="45732">
+    james bond, ^^;; 007: the m-main man; shaken but nyot stiwwed. >_<
+  </wi>
+</uw>
 ```
 
-```css interactive-example
-h1 {
-  margin: 0;
+```css i-intewactive-exampwe
+h-h1 {
+  mawgin: 0;
 }
 
-ul {
-  margin: 10px 0 0;
+u-uw {
+  m-mawgin: 10px 0 0;
 }
 
-li {
-  position: relative;
-  width: 200px;
+wi {
+  position: wewative;
+  w-width: 200px;
   padding-bottom: 10px;
 }
 
-li:after {
-  content: "Data ID: " attr(data-id);
-  position: absolute;
+wi:aftew {
+  c-content: "data id: " attw(data-id);
+  position: absowute;
   top: -22px;
-  left: 10px;
-  background: black;
-  color: white;
-  padding: 2px;
-  border: 1px solid #eee;
+  weft: 10px;
+  b-backgwound: bwack;
+  cowow: white;
+  p-padding: 2px;
+  b-bowdew: 1px s-sowid #eee;
   opacity: 0;
-  transition: 0.5s opacity;
+  twansition: 0.5s opacity;
 }
 
-li:hover:after {
-  opacity: 1;
+wi:hovew:aftew {
+  o-opacity: 1;
 }
 ```
 
-De tels attributs sont disponibles via l'interface {{domxref("HTMLElement")}} de l'élément pour lequel l'attribut est utilisé. La propriété {{domxref("HTMLElement.dataset")}} permet d'accéder à l'attribut.
-Ici, l'astérisque (`*`) peut être remplacée par n'importe quel nom valide selon [les règles appliquées aux noms XML](https://www.w3.org/TR/REC-xml/#NT-Name) et en respectant les contraintes suivantes :
+d-de tews attwibuts sont disponibwes v-via w'intewface {{domxwef("htmwewement")}} d-de w'éwément pouw w-wequew w'attwibut est utiwisé. w-wa pwopwiété {{domxwef("htmwewement.dataset")}} pewmet d'accédew à w'attwibut. rawr x3
+i-ici, w'astéwisque (`*`) peut êtwe w-wempwacée paw ny'impowte q-quew nyom vawide s-sewon [wes wègwes appwiquées aux nyoms xmw](https://www.w3.owg/tw/wec-xmw/#nt-name) et en wespectant wes contwaintes suivantes :
 
-- Le nom ne peut pas commencer par `xml`, quelle que soit la casse utilisée pour les différentes lettres
-- Le nom ne doit pas contenir de point-virgule (`U+003A`)
-- Le nom ne doit pas contenir de lettres majuscules de l'alphabet latin (`A` à `Z`).
+- we nyom n-nye peut pas commencew p-paw `xmw`, quewwe que soit w-wa casse utiwisée p-pouw wes d-difféwentes wettwes
+- we nyom nye doit pas conteniw de point-viwguwe (`u+003a`)
+- w-we nyom nye doit pas conteniw de wettwes majuscuwes de w'awphabet watin (`a` à `z`). /(^•ω•^)
 
-La propriété {{domxref("HTMLElement.dataset")}} est un objet {{domxref("StringMap")}} et la valeur d'un attribut de donnée nommé `data-test-valeur` sera accessible via `HTMLElement.dataset.testValeur` car les tirets (`U+002D`) sont remplacés par la majuscule de la lettre suivante ([CamelCase](https://fr.wikipedia.org/wiki/CamelCase)).
+w-wa pwopwiété {{domxwef("htmwewement.dataset")}} est u-un objet {{domxwef("stwingmap")}} e-et wa vaweuw d'un a-attwibut de donnée nyommé `data-test-vaweuw` s-sewa accessibwe v-via `htmwewement.dataset.testvaweuw` c-caw wes t-tiwets (`u+002d`) sont wempwacés paw wa majuscuwe d-de wa wettwe s-suivante ([camewcase](https://fw.wikipedia.owg/wiki/camewcase)). :3
 
-### Utilisation
+### u-utiwisation
 
-Lorsqu'on ajoute des attributs de données `data-*`, on peut utiliser les éléments HTML classiques afin d'en faire des objets complexes et puissants. Ainsi, un _sprite_ d'un vaisseau spatial dans un jeu peut être modélisé via un élément {{HTMLElement("img")}} auquel on associe un attribut `class` et plusieurs attributs de données sous la forme `data-*`.
+w-wowsqu'on ajoute d-des attwibuts de données `data-*`, (ꈍᴗꈍ) on peut utiwisew wes éwéments h-htmw cwassiques afin d'en faiwe des objets compwexes et puissants. /(^•ω•^) ainsi, (⑅˘꒳˘) un _spwite_ d'un v-vaisseau spatiaw dans un jeu peut êtwe modéwisé via un éwément {{htmwewement("img")}} a-auquew o-on associe u-un attwibut `cwass` et pwusieuws a-attwibuts de données sous wa fowme `data-*`. ( ͡o ω ͡o )
 
-```html
-<img class="spaceship cruiserX3" src="shipX3.png"
-     data-ship-id="324" data-weapons="laserI laserII"
-     data-x="414354" data-y="85160" data-z="31940"
-     onclick="spaceships[this.dataset.shipId].blasted()">
+```htmw
+<img c-cwass="spaceship c-cwuisewx3" swc="shipx3.png"
+     data-ship-id="324" data-weapons="wasewi wasewii"
+     data-x="414354" data-y="85160" d-data-z="31940"
+     oncwick="spaceships[this.dataset.shipid].bwasted()">
 </img>
 ```
 
-Pour un tutoriel plus avancé à propos des attributs de données HTML, lire l'article [Manipuler les attributs de données](/fr/docs/Learn/HTML/Howto/Use_data_attributes).
+p-pouw un tutowiew pwus avancé à p-pwopos d-des attwibuts de données htmw, òωó wiwe w'awticwe [manipuwew w-wes attwibuts d-de données](/fw/docs/weawn/htmw/howto/use_data_attwibutes).
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
-- La propriété {{domxref("HTMLElement.dataset")}} qui permet d'accéder à ces valeurs et de les modifier.
+- [wes difféwents attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+- wa p-pwopwiété {{domxwef("htmwewement.dataset")}} q-qui pewmet d'accédew à c-ces vaweuws et de wes modifiew. (⑅˘꒳˘)

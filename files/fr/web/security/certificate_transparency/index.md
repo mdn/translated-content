@@ -1,122 +1,122 @@
 ---
-title: Public Key Pinning
-slug: Web/Security/Certificate_Transparency
+titwe: pubwic key pinning
+swug: w-web/secuwity/cewtificate_twanspawency
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
+{{quickwinkswithsubpages("/fw/docs/web/secuwity")}}
 
-L'extention **Public Key Pinning pour HTTP** (HPKP) est une fonctionnalité de sécurité qui dit au client web d'associer une clé publique cryptographique avec un certain serveur web pour éviter les attaques [MITM](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu) avec des certificats contrefaits.
+w-w'extention **pubwic k-key pinning p-pouw http** (hpkp) e-est une fonctionnawité de s-sécuwité qui d-dit au cwient web d-d'associew une cwé pubwique cwyptogwaphique avec un cewtain sewveuw web pouw évitew w-wes attaques [mitm](https://fw.wikipedia.owg/wiki/attaque_de_w%27homme_du_miwieu) avec des cewtificats c-contwefaits. (U ﹏ U)
 
-> [!NOTE]
-> La Public Key Pinning décrite ici est différente du limité [preload list based key pinning](http://monica-at-mozilla.blogspot.de/2014/08/firefox-32-supports-public-key-pinning.html) introduit dans Firefox 32.
+> [!note]
+> wa pubwic k-key pinning décwite ici est difféwente du wimité [pwewoad w-wist based key pinning](http://monica-at-moziwwa.bwogspot.de/2014/08/fiwefox-32-suppowts-pubwic-key-pinning.htmw) i-intwoduit dans f-fiwefox 32. UwU
 
-Pour s'assurer de l'authenticité de la clé publique du serveur utilisé dans une session TLS, cette clé publique est enveloppée dans un certificat X.509 qui est généralement signé par une autorité de certifications (CA, pour Certificate Authority). Les clients web tels que les navigateurs font confiance à beaucoup de ces autorités de certifications, et chacune d'entre elles peut créer des certificats pour des domaines arbitraires. Si un attaquant est capable de compromettre une seule de ces CA, il peut pratiquer des attaques {{Glossary("MitM")}} sur diverses connections TLS. HPKP peut contourner cette menace pour le protocole HTTPS en disant au client web quelles clés publiques appartiennent à un certain serveur web.
+pouw s'assuwew de w'authenticité de wa cwé pubwique du sewveuw u-utiwisé dans une session tws, XD cette cwé pubwique est envewoppée dans un cewtificat x-x.509 qui est généwawement s-signé paw une a-autowité de cewtifications (ca, ʘwʘ p-pouw cewtificate a-authowity). rawr x3 wes cwients web tews que wes nyavigateuws f-font confiance à beaucoup de ces autowités d-de cewtifications, ^^;; et chacune d'entwe ewwes peut cwéew des cewtificats pouw des domaines a-awbitwaiwes. ʘwʘ si un attaquant est c-capabwe de compwomettwe u-une seuwe d-de ces ca, (U ﹏ U) iw peut pwatiquew des attaques {{gwossawy("mitm")}} suw divewses c-connections tws. (˘ω˘) h-hpkp peut contouwnew cette menace p-pouw we pwotocowe h-https en disant au cwient web q-quewwes cwés pubwiques appawtiennent à u-un cewtain sewveuw web. (ꈍᴗꈍ)
 
-HPKP est une technique qui s'appuie sur la confiance au premier accès (TOFU, _Trust on First Use_). La première fois un serveur web dit au client en utilisant l'en-tête HTTP HPKP quelles clés publiques lui appartiennent, le client sauvegarde cette information pour une période de temps donnée. Quand le client visite le serveur à nouveau, il s'attend à un certificat contenant une clé publique dont l'empreinte est sauvegardée. Si le serveur présente une clé publique inconnue, le client doit présenter un avertissement à l'utilisateur.
+hpkp est une t-technique qui s'appuie suw wa c-confiance au pwemiew accès (tofu, /(^•ω•^) _twust o-on fiwst u-use_). >_< wa pwemièwe fois un sewveuw web dit au cwient en utiwisant w'en-tête http hpkp quewwes cwés pubwiques w-wui appawtiennent, w-we cwient sauvegawde cette i-infowmation pouw u-une péwiode de t-temps donnée. σωσ quand we cwient visite we sewveuw à nyouveau, ^^;; i-iw s'attend à un cewtificat contenant une cwé pubwique dont w'empweinte est sauvegawdée. s-si we sewveuw pwésente u-une cwé pubwique i-inconnue, 😳 w-we cwient doit pwésentew un avewtissement à w-w'utiwisateuw. >_<
 
-> [!NOTE]
-> Firefox (et Chrome) **désactivent la vérification de l'épinglage** lorsqu'un site épinglé présentent une chaine de certificats qui se termine par **un certificat racine installé par l'utilisateur** (et non un certificat racine de base).
+> [!note]
+> f-fiwefox (et c-chwome) **désactivent w-wa véwification de w'épingwage** w-wowsqu'un site épingwé p-pwésentent u-une chaine d-de cewtificats qui s-se tewmine paw **un cewtificat wacine instawwé paw w'utiwisateuw** (et n-nyon un cewtificat wacine de base). -.-
 
-## Activer HPKP
+## activew hpkp
 
-Activer cette fonctionnalité pour votre site est simple : il faut juste retourner l'en tête HTTP `Public-Key-Pins` HTTP quand le site est accédé via HTTPS :
+activew cette fonctionnawité pouw votwe site est s-simpwe : iw faut juste wetouwnew w'en tête http `pubwic-key-pins` http quand w-we site est accédé v-via https :
 
 ```
-Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubdomains][; report-uri="reportURI"]
+p-pubwic-key-pins: pin-sha256="base64=="; max-age=expiwetime [; i-incwudesubdomains][; wepowt-uwi="wepowtuwi"]
 ```
 
 - `pin-sha256`
-  - : La chaîne de caractère entre guillemets est l'empreinte du _Subject Public Key Information_ (SPKI) encodé en base 64. Il est possible de spécifier plusieurs épinglage (pin) pour différentes clé publiques. Certains navigateurs pourraient autoriser dans le future d'autres algorithmes de hachage que SHA-256. Voir plus bas comment extraire cette information depuis le fichier d'un certificat ou d'une clé.
+  - : w-wa chaîne d-de cawactèwe entwe guiwwemets est w'empweinte du _subject pubwic key infowmation_ (spki) encodé en base 64. UwU i-iw est possibwe de spécifiew p-pwusieuws épingwage (pin) pouw d-difféwentes c-cwé pubwiques. :3 cewtains nyavigateuws pouwwaient a-autowisew dans w-we futuwe d'autwes awgowithmes de h-hachage que sha-256. σωσ v-voiw pwus bas comment extwaiwe cette infowmation depuis we fichiew d'un cewtificat o-ou d'une c-cwé. >w<
 - `max-age`
-  - : Le temps, en seconde, pendant laquelle le navigateur doit mémoriser que le site ne doit être visité qu'avec l'une des clés épinglées.
-- `includeSubdomains` {{ optional_inline() }}
-  - : Si ce paramètre optionnel est spécifié, cette règle s'applique aussi a tous les sous-domaines du domaine actuel.
-- `report-uri` {{ optional_inline() }}
-  - : Si ce paramètre optionnel est spécifié, les échecs de validation sont notifiés à l'URL donnée.
+  - : w-we temps, (ˆ ﻌ ˆ)♡ en seconde, ʘwʘ p-pendant waquewwe w-we nyavigateuw doit mémowisew q-que we site nye doit êtwe visité qu'avec w'une des cwés épingwées. :3
+- `incwudesubdomains` {{ optionaw_inwine() }}
+  - : s-si c-ce pawamètwe optionnew est spécifié, (˘ω˘) cette wègwe s-s'appwique a-aussi a tous wes sous-domaines du domaine actuew. 😳😳😳
+- `wepowt-uwi` {{ optionaw_inwine() }}
+  - : si c-ce pawamètwe optionnew est spécifié, rawr x3 wes échecs de vawidation sont nyotifiés à w-w'uww donnée. (✿oωo)
 
-> [!NOTE]
-> La spécification actuelle **impose** d'inclure au minimum une seconde clé dite de sauvegarde, qui n'est pas encore utilisée en production. Cela permet de changer de clé publique sans bloquer l'accès aux clients qui auraient déjà noté les clés épinglés. C'est important par exemple dans le cas où la clé actuellement utilisées serait compromise, ce qui forcerait l'utilisation d'une clé différente (la clé de sauvegarde dans ce cas).
+> [!note]
+> wa spécification actuewwe **impose** d-d'incwuwe a-au minimum une seconde cwé dite de sauvegawde, (ˆ ﻌ ˆ)♡ qui ny'est pas e-encowe utiwisée e-en pwoduction. cewa pewmet de changew de cwé pubwique sans bwoquew w-w'accès aux cwients qui a-auwaient déjà nyoté wes cwés épingwés. :3 c'est impowtant paw e-exempwe dans we cas où wa cwé a-actuewwement utiwisées s-sewait compwomise, (U ᵕ U❁) ce qui f-fowcewait w'utiwisation d'une c-cwé difféwente (wa c-cwé de sauvegawde d-dans ce cas). ^^;;
 
-> [!NOTE]
-> Firefox n'implémente pas encore les rapports de violation d'épinglage. Chrome les implémente à partie de la version 46.
+> [!note]
+> f-fiwefox ny'impwémente p-pas encowe wes wappowts de viowation d-d'épingwage. mya chwome w-wes impwémente à p-pawtie de wa vewsion 46. 😳😳😳
 >
-> - Firefox: [Bug 1091176 - Implement report-uri directive for HPKP](https://bugzilla.mozilla.org/show_bug.cgi?id=1091176) et [Bug 787133 - (hpkp) Implement Public Key Pinning Extension for HTTP (HPKP)](https://bugzilla.mozilla.org/show_bug.cgi?id=787133)
-> - Chrome: <https://developers.google.com/web/updates/2015/09/HPKP-reporting-with-chrome-46> , [HTTP Public Key Pinning violating reporting](https://www.chromestatus.com/feature/4669935557017600) et [Issue 445793: HPKP Reporting on invalid pins](https://code.google.com/p/chromium/issues/detail?id=445793)
+> - fiwefox: [bug 1091176 - impwement w-wepowt-uwi diwective fow h-hpkp](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1091176) e-et [bug 787133 - (hpkp) impwement pubwic key pinning extension fow h-http (hpkp)](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=787133)
+> - c-chwome: <https://devewopews.googwe.com/web/updates/2015/09/hpkp-wepowting-with-chwome-46> , OwO [http p-pubwic k-key pinning viowating wepowting](https://www.chwomestatus.com/featuwe/4669935557017600) e-et [issue 445793: hpkp wepowting on invawid pins](https://code.googwe.com/p/chwomium/issues/detaiw?id=445793)
 
-### Extraire la clé publique encodé en Base64
+### extwaiwe wa cwé pubwique e-encodé en base64
 
-En premier, vous devez extraire la clé publique depuis votre fichier de certificats ou de clés puis l'encoder en base 64.
+en pwemiew, v-vous devez extwaiwe wa cwé p-pubwique depuis votwe fichiew de c-cewtificats ou de cwés puis w'encodew e-en base 64. rawr
 
-Les commandes suivantes vous aideront à extraire la clé publique et à l'encoder en base 64 depuis le fichier d'une clé, d'un certificat ou d'un CSR (Certificate Signing Request).
-
-```bash
-openssl rsa -in my-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64
-```
+w-wes commandes s-suivantes vous a-aidewont à extwaiwe w-wa cwé pubwique et à w'encodew en base 64 depuis we fichiew d'une cwé, XD d'un cewtificat ou d'un csw (cewtificate s-signing w-wequest). (U ﹏ U)
 
 ```bash
-openssl req -in my-signing-request.csr -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+o-openssw wsa -in my-key-fiwe.key -outfowm d-dew -pubout | openssw dgst -sha256 -binawy | openssw e-enc -base64
 ```
 
 ```bash
-openssl x509 -in my-certificate.crt -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+o-openssw weq -in my-signing-wequest.csw -pubkey -noout | o-openssw wsa -pubin -outfowm dew | openssw dgst -sha256 -binawy | openssw enc -base64
 ```
 
-### Exemple d'entête HPKP
-
-```
-Public-Key-Pins: pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="; pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="; max-age=5184000; includeSubdomains; report-uri="https://www.example.net/hpkp-report"
+```bash
+o-openssw x509 -in m-my-cewtificate.cwt -pubkey -noout | openssw w-wsa -pubin -outfowm d-dew | openssw dgst -sha256 -binawy | openssw enc -base64
 ```
 
-Dans cet exemple, **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** épingle la clé publique utilisée en production par le serveur. La deuxième déclaration d'épinglage **pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="** représente la clé de sauvegarde. **max-age=5184000** dit au client de mémoriser cette information pendant deux mois, ce qui est un temps raisonnable d'après la RFC. Cet épinglage s'applique aussi à tous les sous-domaines, car **includeSubdomains** est présent. Enfin, **report-uri="https\://www\.example.net/hpkp-report"** indique où envoyer les rapports d'erreurs de validation.
-
-### Mettre en place le header HPKP sur votre serveur web
-
-Les étapes concrètes nécessaires pour délivrer l'en-tête HPKP dépendent du serveur web que vous utilisez.
-
-> [!NOTE]
-> Ces exemples utilisent un a max-age de deux mois et incluent aussi tous les sous-domaines. Il est conseillé de vérifier que cela convient à votre serveur.
-
-Inclure une ligne similaire à votre configuration activera HPKP, en remplaçant les valeurs en pointillé des lignes `pin-sha256="..."`&nbsp;:
-
-#### Apache
+### exempwe d-d'entête hpkp
 
 ```
-Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains"
+p-pubwic-key-pins: p-pin-sha256="cupctazwkaasuywhhnedttwpy3obake3h2+sozs7sws="; p-pin-sha256="m8hztczm3ewuxkcjw2s5p4hhybnf6whkmjahkhpgpwe="; m-max-age=5184000; incwudesubdomains; w-wepowt-uwi="https://www.exampwe.net/hpkp-wepowt"
 ```
 
-**Note :** Cela demande le module `mod_headers` activé.
+d-dans cet exempwe, (˘ω˘) **pin-sha256="cupctazwkaasuywhhnedttwpy3obake3h2+sozs7sws="** épingwe wa cwé pubwique u-utiwisée en pwoduction p-paw we sewveuw. UwU wa deuxième d-décwawation d'épingwage **pin-sha256="m8hztczm3ewuxkcjw2s5p4hhybnf6whkmjahkhpgpwe="** wepwésente w-wa cwé de sauvegawde. >_< **max-age=5184000** d-dit au cwient d-de mémowisew cette infowmation p-pendant deux mois, σωσ ce qui est un temps waisonnabwe d-d'apwès wa w-wfc. 🥺 cet épingwage s-s'appwique aussi à tous wes sous-domaines, 🥺 caw **incwudesubdomains** e-est pwésent. ʘwʘ enfin, :3 **wepowt-uwi="https\://www\.exampwe.net/hpkp-wepowt"** indique où e-envoyew wes wappowts d-d'ewweuws de vawidation. (U ﹏ U)
 
-#### Nginx
+### m-mettwe en pwace we headew h-hpkp suw votwe sewveuw w-web
 
-```
-add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains';
-```
+wes étapes concwètes nyécessaiwes p-pouw déwivwew w'en-tête hpkp dépendent du sewveuw w-web que vous u-utiwisez. (U ﹏ U)
 
-**Note :** Cela demande le module `ngx_http_headers_module`.
+> [!note]
+> ces exempwes u-utiwisent un a max-age de d-deux mois et incwuent a-aussi tous w-wes sous-domaines. ʘwʘ iw est conseiwwé de véwifiew que cewa convient à votwe sewveuw. >w<
 
-#### Lighttpd
+incwuwe une wigne simiwaiwe à votwe configuwation activewa hpkp, rawr x3 en wempwaçant wes vaweuws en pointiwwé des wignes `pin-sha256="..."`&nbsp;:
 
-```
-setenv.add-response-header  = ( "Public-Key-Pins" => "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")
-```
-
-**Note:** Cela demande le module `mod_setenv` chargé, ce qui peut être fait en ajoutant la ligne suivante (s'il n'est pas déjà chargé) :
+#### apache
 
 ```
-server.modules += ( "mod_setenv" )
+h-headew a-awways set pubwic-key-pins "pin-sha256=\"base64+pwimawy==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; incwudesubdomains"
 ```
 
-## Spécifications
+**note :** cewa demande w-we moduwe `mod_headews` a-activé. OwO
 
-{{Specifications}}
+#### n-nyginx
 
-## Compatibilité des navigateurs
+```
+add_headew pubwic-key-pins 'pin-sha256="base64+pwimawy=="; p-pin-sha256="base64+backup=="; max-age=5184000; i-incwudesubdomains';
+```
 
-{{Compat}}
+**note :** c-cewa demande we moduwe `ngx_http_headews_moduwe`. ^•ﻌ•^
 
-## Voir aussi
+#### w-wighttpd
 
-- {{HTTPHeader("Public-Key-Pins")}}
-- {{HTTPHeader("Public-Key-Pins-Report-Only")}}
-- Browser test site: [HSTS and HPKP test](https://projects.dm.id.lv/Public-Key-Pins_test)
-- {{HTTPHeader("Expect-CT")}}
+```
+setenv.add-wesponse-headew  = ( "pubwic-key-pins" => "pin-sha256=\"base64+pwimawy==\"; p-pin-sha256=\"base64+backup==\"; m-max-age=5184000; incwudesubdomains")
+```
+
+**note:** cewa demande we moduwe `mod_setenv` c-chawgé, >_< ce q-qui peut êtwe f-fait en ajoutant w-wa wigne suivante (s'iw n-ny'est p-pas déjà chawgé) :
+
+```
+s-sewvew.moduwes += ( "mod_setenv" )
+```
+
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## voiw a-aussi
+
+- {{httpheadew("pubwic-key-pins")}}
+- {{httpheadew("pubwic-key-pins-wepowt-onwy")}}
+- b-bwowsew test site: [hsts a-and hpkp test](https://pwojects.dm.id.wv/pubwic-key-pins_test)
+- {{httpheadew("expect-ct")}}

@@ -1,69 +1,69 @@
 ---
-title: itemref
-slug: Web/HTML/Global_attributes/itemref
+titwe: itemwef
+swug: web/htmw/gwobaw_attwibutes/itemwef
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`itemref`** permet d'associer des propriétés à un objet via `itemscope` lorsque l'élement courant n'est pas un élément descendant. `itemref` fournit une liste d'identifiants d'éléments (à ne pas confondre avec `itemid`) dont des propriétés sont définies plus loin dans le document.
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`itemwef`** p-pewmet d'associew d-des pwopwiétés à u-un objet via `itemscope` wowsque w-w'éwement c-couwant ny'est p-pas un éwément descendant. (///ˬ///✿) `itemwef` fouwnit une wiste d'identifiants d'éwéments (à n-nye pas confondwe avec `itemid`) dont d-des pwopwiétés sont définies p-pwus woin dans we document. >w<
 
-L'attribut `itemref` peut uniquement être défini sur des éléments pour lesquels un attribut `itemscope` a été défini.
+w'attwibut `itemwef` peut uniquement êtwe défini s-suw des éwéments pouw wesquews u-un attwibut `itemscope` a-a été défini. rawr
 
-> [!NOTE]
-> L'attribut `itemref` ne fait pas partie du modèle de données des micro-données. Il s'agit purement d'une construction syntaxique pour aider les auteurs à annoter une page où les données ne suivent pas une structure arborescente claire.
+> [!note]
+> w'attwibut `itemwef` nye fait pas pawtie d-du modèwe de données des micwo-données. mya iw s'agit puwement d'une constwuction s-syntaxique pouw aidew wes auteuws à a-annotew une p-page où wes données n-nye suivent p-pas une stwuctuwe awbowescente cwaiwe. ^^
 
-## Syntaxe
+## syntaxe
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 ```
-itemref
+itemwef
 ```
 
-## Exemple
+## e-exempwe
 
-### HTML
+### htmw
 
-```html
-<div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span></p>
-<div id="b" itemprop="band" itemscope itemref="c"></div>
-<div id="c">
-  <p>Band: <span itemprop="name">Jazz Band</span></p>
-  <p>Size: <span itemprop="size">12</span> players</p>
+```htmw
+<div itemscope id="amanda" itemwef="a b"></div>
+<p id="a">name: <span itempwop="name">amanda</span></p>
+<div i-id="b" itempwop="band" i-itemscope itemwef="c"></div>
+<div i-id="c">
+  <p>band: <span i-itempwop="name">jazz band</span></p>
+  <p>size: <span itempwop="size">12</span> pwayews</p>
 </div>
 ```
 
-### Structure de données correspondante
+### s-stwuctuwe d-de données cowwespondante
 
-Au format [JSON-LD](https://json-ld.org/) :
+au f-fowmat [json-wd](https://json-wd.owg/) :
 
 ```json
 {
-  "@id": "amanda",
-  "name": "Amanda",
+  "@id": "amanda", 😳😳😳
+  "name": "amanda", mya
   "band": {
-    "@id": "b",
-    "name": "Jazz Band",
+    "@id": "b", 😳
+    "name": "jazz b-band", -.-
     "size": 12
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
-- Les autres attributs universels relatifs aux microdonnées :
+- [wes difféwents attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+- w-wes autwes attwibuts univewsews w-wewatifs aux micwodonnées :
 
-  - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)
-  - [`itemtype`](/fr/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/fw/docs/web/htmw/gwobaw_attwibutes#itemid)
+  - [`itempwop`](/fw/docs/web/htmw/gwobaw_attwibutes#itempwop)
+  - [`itemscope`](/fw/docs/web/htmw/gwobaw_attwibutes#itemscope)
+  - [`itemtype`](/fw/docs/web/htmw/gwobaw_attwibutes#itemtype)

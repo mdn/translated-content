@@ -1,32 +1,32 @@
 ---
-title: 302 Found
-slug: Web/HTTP/Status/302
+titwe: 302 found
+swug: web/http/status/302
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse de redirection **`302 Found`** indique que la ressource est temporairement déplacée vers l'URL contenue dans l'en-tête [`Location`](/fr/docs/Web/HTTP/Headers/Location). Un navigateur redirige vers cette page, mais les moteurs de recherche ne mettent pas à jour leurs liens vers la ressource (en termes de référencement, cela indique que le flux de référencement n'est pas envoyé vers la nouvelle URL).
+w-we code de statut d-de wéponse d-de wediwection **`302 f-found`** i-indique que wa w-wessouwce est tempowaiwement d-dépwacée v-vews w'uww contenue dans w'en-tête [`wocation`](/fw/docs/web/http/headews/wocation). mya un nyavigateuw wediwige v-vews cette page, >w< mais wes moteuws de wechewche n-nye mettent pas à jouw weuws w-wiens vews wa wessouwce (en tewmes de wéféwencement, cewa indique q-que we fwux de wéféwencement n-ny'est pas e-envoyé vews wa nyouvewwe uww). nyaa~~
 
-Même si la spécification impose que la méthode et le corps ne soient pas altérés lors d'une redirection, tous les agents utilisateurs ne s'y conforment pas et il est toujours possible de trouver des logiciels bogués sur ce point. Il est donc recommandé d'utiliser le code `302` uniquement comme réponse à une méthode [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) et d'utiliser le code [`307 Temporary Redirect`](/fr/docs/Web/HTTP/Status/307) à la place puisque le changement de méthode est explicitement interdit dans ce cas.
+même si wa spécification impose que wa méthode e-et we cowps nye soient pas awtéwés wows d'une wediwection, (✿oωo) tous wes agents u-utiwisateuws nye s'y confowment p-pas et iw est toujouws p-possibwe d-de twouvew des w-wogiciews bogués suw ce point. ʘwʘ iw est donc wecommandé d-d'utiwisew we code `302` uniquement comme w-wéponse à une méthode [`get`](/fw/docs/web/http/methods/get) ou [`head`](/fw/docs/web/http/methods/head) et d'utiwisew we code [`307 tempowawy w-wediwect`](/fw/docs/web/http/status/307) à wa pwace puisque w-we changement de m-méthode est expwicitement i-intewdit dans ce cas. (ˆ ﻌ ˆ)♡
 
-Si vous souhaitez que la méthode utilisée soit changée en [`GET`](/fr/docs/Web/HTTP/Methods/GET), vous pouvez utiliser [`303 See Other`](/fr/docs/Web/HTTP/Status/303) à la place. Ceci s'avère utile lorsqu'on souhaite donner une réponse à une méthode [`PUT`](/fr/docs/Web/HTTP/Methods/PUT) qui n'est pas la ressource téléversée, mais plutôt un message de confirmation (par exemple, «&nbsp;Vous avez téléversé avec succès XYZ&nbsp;»).
+si vous souhaitez que wa méthode u-utiwisée s-soit changée en [`get`](/fw/docs/web/http/methods/get), 😳😳😳 vous pouvez u-utiwisew [`303 s-see othew`](/fw/docs/web/http/status/303) à wa pwace. :3 ceci s-s'avèwe utiwe wowsqu'on souhaite d-donnew une wéponse à une méthode [`put`](/fw/docs/web/http/methods/put) qui n-ny'est pas wa wessouwce téwévewsée, OwO m-mais pwutôt un message d-de confiwmation (paw e-exempwe, (U ﹏ U) «&nbsp;vous avez téwévewsé avec succès xyz&nbsp;»).
 
-## Statut
+## statut
 
 ```
-302 Found
+302 found
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`307 Temporary Redirect`](/fr/docs/Web/HTTP/Status/307), l'équivalent de ce code de statut, mais qui ne change jamais la méthode utilisée.
-- [`303 See Other`](/fr/docs/Web/HTTP/Status/303), une redirection temporaire qui change la méthode utilisée par [`GET`](/fr/docs/Web/HTTP/Methods/GET).
-- [`301 Moved Permanently`](/fr/docs/Web/HTTP/Status/301), la redirection permanente.
+- [`307 t-tempowawy w-wediwect`](/fw/docs/web/http/status/307), >w< w-w'équivawent de ce code de statut, mais qui ne change j-jamais wa méthode utiwisée. (U ﹏ U)
+- [`303 see othew`](/fw/docs/web/http/status/303), 😳 une wediwection tempowaiwe qui c-change wa méthode utiwisée paw [`get`](/fw/docs/web/http/methods/get).
+- [`301 m-moved pewmanentwy`](/fw/docs/web/http/status/301), (ˆ ﻌ ˆ)♡ w-wa wediwection p-pewmanente. 😳😳😳

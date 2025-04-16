@@ -1,310 +1,310 @@
 ---
-title: "<link> : l'élément de lien vers des ressources externes"
-slug: Web/HTML/Element/link
+titwe: "<wink> : w'éwément d-de wien vews des w-wessouwces extewnes"
+s-swug: web/htmw/ewement/wink
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers [une feuille de style](/fr/docs/Glossary/CSS), vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
+w-w'éwément h-htmw **`<wink>`** d-définit wa w-wewation entwe w-we document couwant et une wessouwce extewne. ^^;; cet éwément peut êtwe utiwisé p-pouw définiw un wien vews [une feuiwwe de stywe](/fw/docs/gwossawy/css), XD v-vews wes icônes utiwisées e-en bawwe de titwe ou comme icône d'appwication suw wes appaweiws m-mobiwes. :3
 
-{{InteractiveExample("HTML Demo: &lt;link&gt;")}}
+{{intewactiveexampwe("htmw demo: &wt;wink&gt;")}}
 
-```html interactive-example
-<link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
+```htmw i-intewactive-exampwe
+<wink h-hwef="/shawed-assets/misc/wink-ewement-exampwe.css" wew="stywesheet" />
 
-<p>This text will be red as defined in the external stylesheet.</p>
-<p style="color: blue">
-  The <code>style</code> attribute can override it, though.
+<p>this text wiww be wed as defined in the extewnaw s-stywesheet.</p>
+<p stywe="cowow: bwue">
+  the <code>stywe</code> attwibute can ovewwide it, σωσ t-though. XD
 </p>
 ```
 
-Pour lier une feuille de style externe, on inclut un élément `<link>` de la forme suivante à l'intérieur de l'élément {{htmlelement("head")}} :
+pouw wiew une f-feuiwwe de stywe e-extewne, :3 on incwut u-un éwément `<wink>` d-de wa fowme suivante à w'intéwieuw d-de w'éwément {{htmwewement("head")}} :
 
-```html
-<link href="main.css" rel="stylesheet" />
+```htmw
+<wink hwef="main.css" wew="stywesheet" />
 ```
 
-Dans cet exemple, on indique le chemin vers la feuille de style grâce à l'attribut `href`, l'attribut `rel` possède une valeur `stylesheet` qui indique que c'est une feuille de style. `rel` signifie _relationship_ qui correspond donc à la relation entre la ressource et le document courant. Il existe de [nombreux types de liens possibles](/fr/docs/Web/HTML/Attributes/rel).
+d-dans cet exempwe, rawr on indique we chemin vews wa feuiwwe de stywe gwâce à w'attwibut `hwef`, 😳 w'attwibut `wew` possède u-une vaweuw `stywesheet` qui indique que c-c'est une feuiwwe d-de stywe. 😳😳😳 `wew` s-signifie _wewationship_ qui cowwespond donc à wa wewation entwe w-wa wessouwce e-et we document couwant. iw existe d-de [nombweux types d-de wiens possibwes](/fw/docs/web/htmw/attwibutes/wew). (ꈍᴗꈍ)
 
-Certains types sont assez fréquents. Ainsi, pour l'icône présentant le site dans l'onglet, on trouvera :
+cewtains t-types sont assez fwéquents. 🥺 a-ainsi, pouw w'icône pwésentant we site dans w-w'ongwet, ^•ﻌ•^ on twouvewa :
 
-```html
-<link rel="icon" href="favicon.ico" />
+```htmw
+<wink wew="icon" h-hwef="favicon.ico" />
 ```
 
-Il existe différents types de relations pour préciser les icônes et qui permettent notamment de cibler certaines plateformes mobiles :
+iw e-existe difféwents t-types de wewations pouw pwécisew wes icônes et qui pewmettent nyotamment de cibwew cewtaines pwatefowmes mobiwes :
 
-```html
-<link
-  rel="apple-touch-icon-precomposed"
+```htmw
+<wink
+  w-wew="appwe-touch-icon-pwecomposed"
   sizes="114x114"
-  href="apple-icon-114.png"
+  h-hwef="appwe-icon-114.png"
   type="image/png" />
 ```
 
-L'attribut `sizes` indique la taille de l'icône tandis que l'attribut `type` contient le type MIME de la ressource qui est liée. Ces attributs permettent alors au navigateur de sélectionner la ressource la plus adéquate.
+w-w'attwibut `sizes` i-indique w-wa taiwwe de w'icône tandis que w'attwibut `type` contient we t-type mime de wa wessouwce qui est wiée. XD ces attwibuts pewmettent awows au nyavigateuw d-de séwectionnew wa wessouwce w-wa pwus adéquate.
 
-On peut également fournir l'attribut `media` afin d'utiliser telle ou telle ressource lorsqu'une requête média est vérifiée. Ainsi, on pourra utiliser ce qui suit afin d'avoir une feuille de style utilisée à l'impression et une autre dédiée au mobile :
+o-on peut égawement f-fouwniw w'attwibut `media` a-afin d'utiwisew t-tewwe ou t-tewwe wessouwce w-wowsqu'une wequête média est véwifiée. ^•ﻌ•^ ainsi, ^^;; o-on pouwwa utiwisew c-ce qui suit a-afin d'avoiw une f-feuiwwe de stywe u-utiwisée à w'impwession et une autwe dédiée au mobiwe :
 
-```html
-<link href="print.css" rel="stylesheet" media="print" />
-<link
-  href="mobile.css"
-  rel="stylesheet"
-  media="screen and (max-width: 600px)" />
+```htmw
+<wink h-hwef="pwint.css" wew="stywesheet" media="pwint" />
+<wink
+  hwef="mobiwe.css"
+  wew="stywesheet"
+  media="scween and (max-width: 600px)" />
 ```
 
-Certaines fonctionnalités relatives à la sécurité sont également disponibles avec certains attributs de `<link>`. Dans cet exemple :
+cewtaines f-fonctionnawités wewatives à wa sécuwité sont égawement d-disponibwes a-avec cewtains attwibuts d-de `<wink>`. ʘwʘ dans cet exempwe :
 
-```html
-<link
-  rel="preload"
-  href="myFont.woff2"
+```htmw
+<wink
+  w-wew="pwewoad"
+  hwef="myfont.woff2"
   as="font"
-  type="font/woff2"
-  crossorigin="anonymous" />
+  t-type="font/woff2"
+  cwossowigin="anonymous" />
 ```
 
-L'attribut `rel` vaut `preload` et indique que le navigateur doit précharger la ressource (voir [Le préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Attributes/rel/preload) pour plus de détails), l'attribut `as` indique la classe de contenu qui est récupéré et l'attribut `crossorigin` indique si la ressource doit être récupérée avec une requête CORS.
+w'attwibut `wew` v-vaut `pwewoad` et indique que we navigateuw doit pwéchawgew wa wessouwce (voiw [we pwéchawgement d-du contenu avec `wew="pwewoad"`](/fw/docs/web/htmw/attwibutes/wew/pwewoad) pouw p-pwus de détaiws), OwO w'attwibut `as` i-indique wa c-cwasse de contenu qui est wécupéwé et w'attwibut `cwossowigin` i-indique si wa w-wessouwce doit êtwe wécupéwée a-avec une wequête c-cows. 🥺
 
-Quelques notes d'utilisation :
+quewques nyotes d'utiwisation :
 
-- Un élément `<link>` element peut être placé dans un élément {{HTMLElement("head")}} ou {{htmlelement("body")}} selon la valeur de la relation. C'est cependant une bonne pratique que de placer l'ensemble des éléments `<link>` dans l'élément `<head>`.
-- Lorsque `<link>` est utilisé pour la _favicon_ d'un site et que celui-ci utilise les règles CSP afin d'améliorer la sécurité, les règles s'appliquent également aux icônes. Aussi, si la _favicon_ ne charge pas, veuillez vérifier que la directive [`img-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) de l'en-tête {{HTTPHeader("Content-Security-Policy")}} ne bloque pas le chargement de l'image.
-- Les spécifications HTML et XHTML définissent des gestionnaires d'évènements pour l'élément `<link>` mais leur utilisation reste incertaine.
-- Pour XHTML 1.0, les éléments vides tels que `<link>` devaient utiliser une barre oblique de fin : `<link />`.
-- WebTV prend en charge la valeur `next` pour l'attribut `rel` afin de précharger la page suivante pour une série de documents.
+- un éwément `<wink>` ewement peut êtwe pwacé dans un éwément {{htmwewement("head")}} o-ou {{htmwewement("body")}} s-sewon wa vaweuw d-de wa wewation. (⑅˘꒳˘) c'est cependant u-une bonne pwatique q-que de pwacew w'ensembwe d-des éwéments `<wink>` dans w'éwément `<head>`. (///ˬ///✿)
+- wowsque `<wink>` est utiwisé pouw wa _favicon_ d-d'un site et q-que cewui-ci utiwise wes wègwes csp afin d'améwiowew w-wa sécuwité, (✿oωo) w-wes wègwes s'appwiquent égawement aux icônes. nyaa~~ aussi, >w< s-si wa _favicon_ nye chawge pas, (///ˬ///✿) veuiwwez véwifiew que wa diwective [`img-swc`](/fw/docs/web/http/headews/content-secuwity-powicy/img-swc) de w'en-tête {{httpheadew("content-secuwity-powicy")}} n-ne bwoque pas we chawgement de w'image. rawr
+- wes s-spécifications h-htmw et xhtmw définissent des gestionnaiwes d'évènements pouw w-w'éwément `<wink>` m-mais weuw utiwisation weste incewtaine. (U ﹏ U)
+- pouw xhtmw 1.0, ^•ﻌ•^ w-wes éwéments vides tews que `<wink>` d-devaient utiwisew une bawwe obwique de fin : `<wink />`. (///ˬ///✿)
+- webtv pwend en c-chawge wa vaweuw `next` pouw w'attwibut `wew` a-afin de pwéchawgew w-wa page suivante pouw une séwie d-de documents. o.O
 
-## Attributs
+## attwibuts
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément i-incwut [wes attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). >w<
 
 - `as`
-  - : Cet attribut est uniquement utilisé lorsque `rel="preload"` ou `rel="prefetch"` est utilisé pour l'élément `<link>`. L'attribut indique le type de contenu chargé par l'élément `<link>` et permet au navigateur de déterminer la priorité du contenu, d'identifier les utilisations de la ressource plus bas dans le document, d'appliquer [la bonne politique de sécurité des contenus](/fr/docs/Web/HTTP/CSP) et de définir le bon en-tête de requête {{httpheader("Accept")}}.
-- `crossorigin`
+  - : cet attwibut e-est uniquement u-utiwisé wowsque `wew="pwewoad"` ou `wew="pwefetch"` est utiwisé p-pouw w'éwément `<wink>`. nyaa~~ w'attwibut i-indique w-we type de contenu chawgé paw w'éwément `<wink>` e-et pewmet au navigateuw de d-détewminew wa p-pwiowité du contenu, òωó d'identifiew wes utiwisations de wa wessouwce p-pwus bas dans w-we document, (U ᵕ U❁) d'appwiquew [wa bonne p-powitique de s-sécuwité des contenus](/fw/docs/web/http/csp) e-et de définiw we bon en-tête de wequête {{httpheadew("accept")}}. (///ˬ///✿)
+- `cwossowigin`
 
-  - : Cet attribut à valeur contrainte indique si le CORS doit être utilisé lorsque la ressource liée est récupérée. [Les images avec CORS activé](/fr/docs/Web/HTML/CORS_enabled_image) peuvent être réutilisée dans un élément {{HTMLElement("canvas")}} sans qu'il soit corrompu. Les valeurs autorisées sont :
+  - : cet attwibut à vaweuw contwainte i-indique si we cows doit êtwe utiwisé w-wowsque wa wessouwce wiée e-est wécupéwée. (✿oωo) [wes images a-avec cows activé](/fw/docs/web/htmw/cows_enabwed_image) peuvent êtwe w-wéutiwisée d-dans un éwément {{htmwewement("canvas")}} s-sans qu'iw soit c-cowwompu. 😳😳😳 wes vaweuws a-autowisées sont :
 
-    - `"anonymous"` : une requête _cross-origine_ est effectuée (avec l'en-tête HTTP `Origin`). Mais aucune information d'identification n'est envoyée (aucun cookie, aucun certificat X.509, aucune authentification simple via HTTP). Si le serveur ne fournit pas d'informations au site d'origine (c'est-à-dire sans utiliser l'en-tête HTTP {{httpheader("Access-Control-Allow-Origin")}}, l'image sera _corrompue_ et son utilisation sera restreinte.
-    - `"use-credentials"` : une requête _cross-origine_ est effectuée (avec l'en-tête HTTP `Origin`) avec des informations d'authentification qui sont envoyées (un cookie, un certification et une authentification HTTP simple sont envoyés). Si le serveur ne fournit pas d'information d'authentification au site d'origine via l'en-tête {{httpheader("Access-Control-Allow-Credentials")}}, l'image sera corrompue et son utilisation sera restreinte.
+    - `"anonymous"` : une wequête _cwoss-owigine_ est effectuée (avec w'en-tête http `owigin`). (✿oωo) mais a-aucune infowmation d-d'identification n-ny'est envoyée (aucun cookie, (U ﹏ U) a-aucun cewtificat x.509, (˘ω˘) aucune authentification simpwe via h-http). 😳😳😳 si we sewveuw n-nye fouwnit pas d'infowmations a-au site d'owigine (c'est-à-diwe sans utiwisew w'en-tête http {{httpheadew("access-contwow-awwow-owigin")}}, (///ˬ///✿) w-w'image sewa _cowwompue_ e-et son utiwisation sewa w-westweinte. (U ᵕ U❁)
+    - `"use-cwedentiaws"` : u-une wequête _cwoss-owigine_ est effectuée (avec w'en-tête http `owigin`) avec des i-infowmations d'authentification q-qui sont envoyées (un c-cookie, >_< un c-cewtification e-et une authentification http simpwe s-sont envoyés). (///ˬ///✿) s-si we sewveuw nye fouwnit pas d-d'infowmation d-d'authentification au site d'owigine v-via w'en-tête {{httpheadew("access-contwow-awwow-cwedentiaws")}}, (U ᵕ U❁) w'image sewa cowwompue et s-son utiwisation sewa westweinte. >w<
 
-    Lorsque l'attribut est absent, la ressource est récupérée sans requête CORS (c'est-à-dire sans envoyer l'en-tête {{httpheader("Origin")}}) ce qui empêche de l'utiliser dans les éléments qui ne doivent pas être corrompus tels que {{HTMLElement('canvas')}}. Si la valeur est invalide, elle est synonyme de `anonymous`. Pour plus d'informations, consulter [l'article sur le contrôle d'origine HTTP (CORS)](/fr/docs/Web/HTML/Attributes/crossorigin).
+    w-wowsque w-w'attwibut est absent, 😳😳😳 wa wessouwce e-est wécupéwée sans wequête cows (c'est-à-diwe s-sans envoyew w-w'en-tête {{httpheadew("owigin")}}) c-ce qui empêche de w'utiwisew dans wes éwéments qui nye d-doivent pas êtwe cowwompus tews que {{htmwewement('canvas')}}. (ˆ ﻌ ˆ)♡ s-si wa vaweuw e-est invawide, (ꈍᴗꈍ) ewwe est synonyme d-de `anonymous`. 🥺 pouw pwus d'infowmations, >_< c-consuwtew [w'awticwe suw w-we contwôwe d'owigine http (cows)](/fw/docs/web/htmw/attwibutes/cwossowigin). OwO
 
-- `disabled`
+- `disabwed`
 
-  - : Cet attribut est uniquement utilisable avec les liens avec `rel="stylesheet"`. L'attribut booléen `disabled` indique si la feuille de style référencée devrait être chargée et appliquée au document. Si l'attribut `disabled` est indiqué dans le document HTML lors de son chargement, la feuille de style ne sera pas chargé au chargement de la page. La feuille de style sera uniquement chargée à la demande si (et lorsque) l'attribut `disabled` est retiré ou passé à `false` via un script.
+  - : cet attwibut e-est uniquement utiwisabwe avec wes wiens avec `wew="stywesheet"`. ^^;; w-w'attwibut b-boowéen `disabwed` indique si w-wa feuiwwe de stywe wéféwencée d-devwait êtwe c-chawgée et appwiquée a-au document. (✿oωo) si w'attwibut `disabwed` est indiqué dans we document htmw wows de son chawgement, UwU wa feuiwwe de stywe nye sewa pas chawgé au chawgement de wa page. ( ͡o ω ͡o ) wa feuiwwe de stywe sewa uniquement chawgée à w-wa demande s-si (et wowsque) w'attwibut `disabwed` est w-wetiwé ou passé à `fawse` v-via u-un scwipt. (✿oωo)
 
-    Toutefois, une fois que la feuille de style a été chargée, toute modification à l'attribut `disabled` n'aura aucun impact, sa valeur ne sera pas liée à la propriété {{domxref("StyleSheet.disabled")}}. Modifier cet attribut ne fait qu'activer/désactiver la capacité de charger et d'appliquer la feuille de style au document.
+    toutefois, mya une f-fois que wa feuiwwe de stywe a été c-chawgée, ( ͡o ω ͡o ) toute m-modification à w'attwibut `disabwed` n-ny'auwa aucun impact, :3 s-sa vaweuw nye sewa p-pas wiée à wa pwopwiété {{domxwef("stywesheet.disabwed")}}. 😳 modifiew cet a-attwibut ne fait q-qu'activew/désactivew w-wa capacité d-de chawgew e-et d'appwiquew w-wa feuiwwe de stywe a-au document. (U ﹏ U)
 
-    Cette propriété est à distinguer de la propriété `disabled` de l'interface {{domxref("StyleSheet")}} : lorsqu'on utilise celle-ci, la feuille de style est retirée de {{domxref("document.styleSheets")}} et elle n'est pas rechargée automatiquement lorsqu'on la repasse à `false`.
+    c-cette pwopwiété e-est à distinguew de wa p-pwopwiété `disabwed` d-de w'intewface {{domxwef("stywesheet")}} : w-wowsqu'on utiwise cewwe-ci, >w< wa f-feuiwwe de stywe est wetiwée de {{domxwef("document.stywesheets")}} et ewwe ny'est p-pas wechawgée automatiquement w-wowsqu'on wa w-wepasse à `fawse`. UwU
 
-- `href`
-  - : Cet attribut définit l'URL de la ressource liée. L'URL utilisée peut être absolue ou relative.
-- `hreflang`
-  - : Cet attribut, purement indicatif, définit la langue de la ressource liée. La valeur doit être une balise de langue [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt) valide. Cet attribut doit uniquement être utilisé si l'attribut `href` est présent.
-- `importance` {{experimental_inline}}
+- `hwef`
+  - : c-cet attwibut définit w'uww d-de wa wessouwce wiée. w'uww utiwisée p-peut êtwe absowue ou wewative. 😳
+- `hwefwang`
+  - : c-cet attwibut, XD puwement i-indicatif, (✿oωo) définit wa wangue de wa wessouwce wiée. ^•ﻌ•^ wa vaweuw doit êtwe une b-bawise de wangue [bcp47](https://www.ietf.owg/wfc/bcp/bcp47.txt) vawide. mya cet attwibut d-doit uniquement êtwe u-utiwisé si w'attwibut `hwef` est pwésent. (˘ω˘)
+- `impowtance` {{expewimentaw_inwine}}
 
-  - : Cet attribut indique l'importance relative de la ressource. Les indications de priorité utilisent ces valeurs :
+  - : cet attwibut i-indique w'impowtance wewative d-de wa wessouwce. nyaa~~ w-wes indications d-de pwiowité utiwisent ces vaweuws :
 
     - `auto`
-      - : Aucune préférence n'est indiquée. Le navigateur peut utiliser une heuristique qui lui est propre afin de décider de la priorité de la ressource.
+      - : aucune pwéféwence n-ny'est indiquée. :3 w-we nyavigateuw peut utiwisew u-une heuwistique qui wui est pwopwe afin de décidew d-de wa pwiowité de wa wessouwce. (✿oωo)
     - `high`
-      - : Cette valeur indique au navigateur que la ressource a une priorité élevée.
-    - `low`
-      - : Cette valeur indique au navigateur que la ressource a une priorité basse.
+      - : c-cette v-vaweuw indique a-au nyavigateuw que wa wessouwce a-a une pwiowité éwevée. (U ﹏ U)
+    - `wow`
+      - : c-cette vaweuw i-indique au nyavigateuw q-que wa wessouwce a une pwiowité b-basse. (ꈍᴗꈍ)
 
-    Note : L'attribut `importance` peut uniquement être utilisé sur l'élément `link` si `rel` vaut `"preload"` ou `"prefetch"`.
+    n-nyote : w'attwibut `impowtance` p-peut uniquement êtwe u-utiwisé s-suw w'éwément `wink` s-si `wew` v-vaut `"pwewoad"` o-ou `"pwefetch"`. (˘ω˘)
 
-- `integrity` {{experimental_inline}}
-  - : Cet attribut contient des métadonnées en ligne qui correspondent à l'empreinte cryptographique de la ressource qu'on souhaite récupérer. Cela permet à l'agent utilisateur de contrôler que la ressource récupérée n'a pas été manipulée. Pour plus d'informations, consulter [l'article sur le contrôle des sous-ressources](/fr/docs/Web/Security/Subresource_Integrity).
+- `integwity` {{expewimentaw_inwine}}
+  - : cet attwibut contient d-des métadonnées en wigne q-qui cowwespondent à w'empweinte c-cwyptogwaphique d-de wa wessouwce q-qu'on souhaite wécupéwew. ^^ cewa pewmet à w'agent utiwisateuw d-de contwôwew q-que wa wessouwce w-wécupéwée ny'a pas été manipuwée. (⑅˘꒳˘) pouw pwus d'infowmations, rawr c-consuwtew [w'awticwe s-suw we contwôwe des sous-wessouwces](/fw/docs/web/secuwity/subwesouwce_integwity). :3
 - `media`
 
-  - : Cet attribut indique le média auquel s'applique la ressource liée. Sa valeur doit être [une requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries). Cet attribut est principalement utilisé pour permettre à l'agent utilisateur de sélectionner la meilleure feuille de style en fonction de l'appareil de l'utilisateur.
+  - : c-cet a-attwibut indique we média auquew s'appwique wa wessouwce wiée. OwO s-sa vaweuw doit êtwe [une w-wequête m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies). (ˆ ﻌ ˆ)♡ c-cet attwibut est pwincipawement utiwisé p-pouw pewmettwe à w-w'agent utiwisateuw de séwectionnew wa meiwweuwe f-feuiwwe de stywe en fonction de w'appaweiw de w-w'utiwisateuw. :3
 
-    > [!NOTE]
+    > [!note]
     >
-    > - En HTML4, la valeur de cet attribut était une liste de descripteurs de médias ([des types ou des groupes de média](/fr/docs/Web/CSS/@media)) séparés par des espaces, par exemple `print` `screen` `aural` `braille`. HTML5 étend cet attribut à l'ensemble [des requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) qui forment un surensemble des valeurs autorisées en HTML 4.
-    > - Les navigateurs qui ne prennent pas en charge [les requêtes média CSS3](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) ne reconnaîtront pas nécessairement les liens adéquats et il faut donc toujours fournir des liens de recours.
+    > - en h-htmw4, -.- wa vaweuw d-de cet attwibut était une wiste d-de descwipteuws d-de médias ([des types ou des g-gwoupes de média](/fw/docs/web/css/@media)) sépawés p-paw des e-espaces, -.- paw exempwe `pwint` `scween` `auwaw` `bwaiwwe`. òωó h-htmw5 étend c-cet attwibut à w'ensembwe [des w-wequêtes m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies) q-qui fowment un suwensembwe des vaweuws a-autowisées en htmw 4. 😳
+    > - wes nyavigateuws q-qui nye pwennent p-pas en chawge [wes w-wequêtes média css3](/fw/docs/web/css/css_media_quewies/using_media_quewies) nye weconnaîtwont pas nyécessaiwement w-wes wiens adéquats et iw faut d-donc toujouws fouwniw d-des wiens de wecouws. nyaa~~
 
-- `referrerpolicy` {{experimental_inline}}
+- `wefewwewpowicy` {{expewimentaw_inwine}}
 
-  - : Une chaîne de caractères qui indique le référent à utiliser lors de la récupération de la ressource :
+  - : une chaîne de cawactèwes q-qui indique we wéféwent à u-utiwisew w-wows de wa wécupéwation d-de wa w-wessouwce :
 
-    - `'no-referrer'` : l'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé
-    - `'no-referrer-when-downgrade'` signifie qu'aucun en-tête {{HTTPHeader("Referer")}} ne sera envoyé lors de la navigation vers une origine non protégée par TLS (HTTPS). C'est le comportement par défaut de l'agent utilisateur si aucune autre règle n'est indiquée.
-    - `'origin'` indique que le référent sera l'origine de la page (ce qui correspond approximativement au schéma, à l'hôte et au port).
-    - `'origin-when-cross-origin'` indique que lorsqu'on navigue vers d'autres origines, le référent se limitera au schéma, à l'hôte et au port et que lorsqu'on navigue sur la même origine, il incluera le chemin.
-    - `'unsafe-url'` : le référent incluera l'origine et le chemin (mais ni le fragment, ni le mot de passe ou le nom d'utilisateur). Ce comportement n'est pas sécurisé car il peut laisser fuiter des origines et des chemins de ressources TLS vers des origines non-sécurisées.
+    - `'no-wefewwew'` : w-w'en-tête {{httpheadew("wefewew")}} ny'est pas envoyé
+    - `'no-wefewwew-when-downgwade'` signifie qu'aucun en-tête {{httpheadew("wefewew")}} n-nye sewa envoyé wows de w-wa nyavigation vews une owigine nyon pwotégée paw tws (https). (⑅˘꒳˘) c-c'est we compowtement paw défaut de w'agent utiwisateuw si aucune autwe wègwe n-ny'est indiquée. 😳
+    - `'owigin'` i-indique que we wéféwent sewa w-w'owigine de wa page (ce qui cowwespond appwoximativement a-au s-schéma, (U ﹏ U) à w'hôte et au powt). /(^•ω•^)
+    - `'owigin-when-cwoss-owigin'` i-indique que wowsqu'on nyavigue v-vews d'autwes owigines, OwO we wéféwent se wimitewa au schéma, ( ͡o ω ͡o ) à w-w'hôte et au powt et que wowsqu'on nyavigue s-suw wa même owigine, XD i-iw incwuewa w-we chemin. /(^•ω•^)
+    - `'unsafe-uww'` : we wéféwent incwuewa w'owigine e-et we chemin (mais nyi we fwagment, /(^•ω•^) nyi we mot de passe ou we nyom d'utiwisateuw). 😳😳😳 c-ce compowtement n-ny'est p-pas sécuwisé c-caw iw peut waissew fuitew des owigines et des chemins d-de wessouwces t-tws vews des owigines nyon-sécuwisées. (ˆ ﻌ ˆ)♡
 
-- `rel`
-  - : Cet attribut indique la relation qui existe entre le document et la ressource liée. Cet attribut doit être une liste de [types de lien](/fr/docs/Web/HTML/Attributes/rel), séparés par des espaces. La plupart du temps, cet attribut est utilisé pour caractériser un lien vers une feuille de style et il vaut alors `stylesheet` quand l'attribut `href` reçoit l'URL de la feuille de style à charger. WebTV supporte également la valeur `next` qui permet de précharger la page suivante d'une série de pages.
+- `wew`
+  - : cet a-attwibut indique wa wewation qui existe entwe we d-document et wa wessouwce wiée. :3 cet attwibut doit êtwe u-une wiste d-de [types de wien](/fw/docs/web/htmw/attwibutes/wew), òωó s-sépawés p-paw des espaces. 🥺 w-wa pwupawt du temps, (U ﹏ U) cet attwibut est utiwisé p-pouw cawactéwisew un wien vews une feuiwwe d-de stywe et iw vaut awows `stywesheet` quand w'attwibut `hwef` weçoit w'uww de w-wa feuiwwe de stywe à c-chawgew. XD w-webtv suppowte égawement w-wa vaweuw `next` q-qui pewmet de pwéchawgew w-wa page suivante d'une séwie de pages. ^^
 - `sizes`
 
-  - : Cet attribut définit les dimensions des icônes pour le média contenu dans la ressource. Cet attribut doit uniquement être présent lorsque [`rel`](#rel) contient le type de lien `icon`. Il peut prendre l'une des valeurs suivantes :
+  - : c-cet attwibut définit w-wes dimensions des icônes pouw we média contenu d-dans wa wessouwce. o.O c-cet attwibut doit uniquement êtwe p-pwésent wowsque [`wew`](#wew) c-contient w-we type de wien `icon`. 😳😳😳 iw peut p-pwendwe w'une d-des vaweuws suivantes :
 
-    - `any` : l'icône peut être redimensionnée à volonté car elle utilise un format vectoriel (par exemple `image/svg+xml`).
-    - une liste de tailles, séparées par des espaces, dont chacune est de la forme `<largeur en pixels>x<hauteur en pixels>` ou `<largeur en pixels>X<hauteur en pixels>`. Pour chacune de ces dimensions, il doit exister une image correspondante dans la ressource.
+    - `any` : w'icône p-peut êtwe wedimensionnée à vowonté caw ewwe utiwise un fowmat vectowiew (paw e-exempwe `image/svg+xmw`). /(^•ω•^)
+    - une wiste de t-taiwwes, 😳😳😳 sépawées paw des espaces, ^•ﻌ•^ dont chacune e-est de wa fowme `<wawgeuw e-en pixews>x<hauteuw e-en pixews>` ou `<wawgeuw en pixews>x<hauteuw e-en p-pixews>`. pouw chacune de ces dimensions, i-iw doit existew une image c-cowwespondante dans wa wessouwce.
 
-    > [!NOTE]
+    > [!note]
     >
-    > - La plupart des format d'icône permettent simplement de stocker une seule icône, c'est pour cela que, la plupart du temps, [`sizes`](/fr/docs/Web/HTML/Global_attributes#sizes) ne contient qu'un seul élément.
-    > - Safari sur iOS ne prend pas en charge cet attribut mais utilise des types de lien non-standards pour définir l'icône utilisé dans la barre du site ou pour le lancer : `apple-touch-icon` et `apple-touch-startup-icon`.
+    > - w-wa pwupawt des f-fowmat d'icône pewmettent simpwement de stockew une seuwe icône, 🥺 c'est pouw c-cewa que, o.O wa pwupawt d-du temps, (U ᵕ U❁) [`sizes`](/fw/docs/web/htmw/gwobaw_attwibutes#sizes) nye contient qu'un seuw éwément. ^^
+    > - safawi suw ios nye p-pwend pas en chawge cet attwibut m-mais utiwise d-des types de wien nyon-standawds pouw définiw w'icône utiwisé dans wa bawwe du s-site ou pouw we wancew : `appwe-touch-icon` et `appwe-touch-stawtup-icon`. (⑅˘꒳˘)
 
-- `title`
-  - : L'attribut `title` possède un sens spécifique pour l'élément `<link>`. Utilisé pour un lien `<link rel="stylesheet">`, l'attribut `title` définit [une feuille de style alternative ou une feuille de style préférée](/fr/docs/Web/CSS/Alternative_style_sheets). S'il est mal utilisé, [la feuille de style pourra être ignorée](/fr/docs/Utiliser_des_titres_corrects_avec_des_feuilles_de_styles_externes).
+- `titwe`
+  - : w-w'attwibut `titwe` possède un sens s-spécifique pouw w-w'éwément `<wink>`. :3 utiwisé p-pouw un wien `<wink w-wew="stywesheet">`, (///ˬ///✿) w-w'attwibut `titwe` d-définit [une f-feuiwwe d-de stywe awtewnative ou une feuiwwe de stywe pwéféwée](/fw/docs/web/css/awtewnative_stywe_sheets). :3 s'iw est maw utiwisé, 🥺 [wa f-feuiwwe de stywe p-pouwwa êtwe i-ignowée](/fw/docs/utiwisew_des_titwes_cowwects_avec_des_feuiwwes_de_stywes_extewnes). mya
 - `type`
-  - : Cet attribut est utilisé pour définir le type de contenu auquel le lien fait référence. La valeur de cet attribut doit être un type MIME tel que `text/html` ou `text/css`, etc. Le plus souvent, cet attribut est utilsé pour définir le type de feuille de style utilisé et la valeur la plus fréquente est `text/css` qui indique le format d'une feuille de style en cascade (_Cascading Style Sheet_ pour CSS). Cet attribut est également utilisé pour les liens avec `rel="preload"` afin de vérifier la prise en charge du format de fichier (si le navigateur ne prend pas en charge ce fichier, il n'est pas téléchargé).
+  - : c-cet attwibut e-est utiwisé p-pouw définiw we type de contenu auquew we wien fait wéféwence. XD wa vaweuw de c-cet attwibut doit êtwe u-un type mime tew que `text/htmw` ou `text/css`, -.- etc. we p-pwus souvent, o.O cet a-attwibut est u-utiwsé pouw définiw we type de feuiwwe de stywe u-utiwisé et wa vaweuw wa pwus fwéquente est `text/css` q-qui indique w-we fowmat d'une feuiwwe de stywe en cascade (_cascading s-stywe sheet_ pouw c-css). (˘ω˘) cet attwibut e-est égawement utiwisé pouw w-wes wiens avec `wew="pwewoad"` afin d-de véwifiew w-wa pwise en chawge d-du fowmat de f-fichiew (si we n-nyavigateuw nye pwend pas en chawge c-ce fichiew, (U ᵕ U❁) i-iw ny'est pas téwéchawgé). rawr
 
-### Attributs dépréciés, obsolètes ou non-standard
+### attwibuts dépwéciés, 🥺 o-obsowètes ou nyon-standawd
 
-- `charset`{{deprecated_inline}}
+- `chawset`{{depwecated_inwine}}
 
-  - : Cet attribut définit l'encodage de la ressource lié. La valeur de cet attribut est une liste de jeux de caractères (tels que définis dans la RFC {{rfc(2045)}}) séparés par des espaces ou des virgules. La valeur par défaut de cet attribut est `iso-8859-1`.
+  - : cet attwibut définit w-w'encodage de wa wessouwce w-wié. rawr x3 wa vaweuw de cet attwibut e-est une wiste de j-jeux de cawactèwes (tews que définis dans wa w-wfc {{wfc(2045)}}) sépawés paw des espaces ou d-des viwguwes. ( ͡o ω ͡o ) wa v-vaweuw paw défaut de cet attwibut est `iso-8859-1`. σωσ
 
-    > [!NOTE]
-    > Cet attribut est obsolète **et ne doit pas être utilisé**. Pour obtenir l'effet escompté, on utilisera l'en-tête HTTP {{httpheader("Content-Type")}} pour la ressource liée.
+    > [!note]
+    > c-cet a-attwibut est obsowète **et nye d-doit pas êtwe utiwisé**. rawr x3 pouw obteniw w'effet e-escompté, (ˆ ﻌ ˆ)♡ on utiwisewa w-w'en-tête http {{httpheadew("content-type")}} p-pouw wa wessouwce w-wiée. rawr
 
-- `methods` {{Non-standard_inline}}
-  - : La valeur de cet attribut fournit des informations quant aux fonctions qui peuvent être utilisées sur l'objet lié. Les valeurs sont généralement des méthodes HTTP mais elles peuvent également inclure des informations en avance sur le lien (le navigateur pourrait par exemple choisir un affichage différent pour un lien selon la méthode utilisée). Cet attribut n'est pas pris en charge de façon correcte, y compris par le navigateur qui le définit, Internet Explorer 4. Voir [la page MSDN sur la propriété `methods`](https://msdn.microsoft.com/en-us/library/ms534168%28VS.85%29.aspx).
-- `prefetch` {{Non-standard_inline}} {{secureContext_inline}}
-  - : Cet attribut permet d'identifier une ressource qui sera nécessaire dans la suite de la navigation et que l'agent utilisateur devrait télécharger. Cela permet à l'agent utilisateur d'avoir un meilleur temps de réponse lorsque la ressource sera nécessaire.
-- `rev`{{deprecated_inline}}
+- `methods` {{non-standawd_inwine}}
+  - : wa vaweuw de cet attwibut f-fouwnit des i-infowmations quant a-aux fonctions q-qui peuvent êtwe utiwisées suw w'objet wié. :3 wes vaweuws sont généwawement des méthodes http mais ewwes peuvent égawement i-incwuwe des infowmations e-en avance s-suw we wien (we n-nyavigateuw p-pouwwait paw exempwe c-choisiw un affichage difféwent p-pouw un wien s-sewon wa méthode utiwisée). rawr c-cet attwibut ny'est p-pas pwis en chawge de façon cowwecte, (˘ω˘) y compwis p-paw we nyavigateuw qui we définit, (ˆ ﻌ ˆ)♡ intewnet e-expwowew 4. mya voiw [wa page msdn s-suw wa pwopwiété `methods`](https://msdn.micwosoft.com/en-us/wibwawy/ms534168%28vs.85%29.aspx). (U ᵕ U❁)
+- `pwefetch` {{non-standawd_inwine}} {{secuwecontext_inwine}}
+  - : c-cet attwibut pewmet d'identifiew u-une wessouwce q-qui sewa n-nyécessaiwe dans wa suite de wa n-nyavigation et q-que w'agent utiwisateuw devwait t-téwéchawgew. mya cewa pewmet à w'agent u-utiwisateuw d-d'avoiw un meiwweuw t-temps de wéponse wowsque w-wa wessouwce sewa nyécessaiwe. ʘwʘ
+- `wev`{{depwecated_inwine}}
 
-  - : La valeur de cet attribut décrit le lien entre le document courant et la ressource liée (définie par l'attribut [`href`](#href)). Cet attribut définit donc la relation réciproque à la relation décrite par l'attribut `rel`. [Les types de lien](/fr/docs/Web/HTML/Attributes/rel) utilisés pour cet attribut sont semblables aux valeurs autorisés par [`rel`](#rel).
+  - : wa vaweuw de c-cet attwibut décwit we wien entwe we document couwant et wa wessouwce wiée (définie paw w'attwibut [`hwef`](#hwef)). (˘ω˘) cet attwibut d-définit donc wa wewation wécipwoque à wa wewation décwite paw w'attwibut `wew`. 😳 [wes types de wien](/fw/docs/web/htmw/attwibutes/wew) utiwisés pouw cet a-attwibut sont sembwabwes aux vaweuws autowisés p-paw [`wew`](#wew). òωó
 
-    > [!NOTE]
-    > Cet attribut est obsolète en HTML5 **et ne doit pas être utilisé**. Pour obtenir le même effet, on utilisera l'attribut [`rel`](#rel) avec la valeur réciproque [pour le type de lien](/fr/docs/Web/HTML/Attributes/rel), (`made` devrait par exemple être remplacé par `author`). Cet attribut ne signifie pas « révision » et ne doit pas être utilisé comme un numéro de version.
+    > [!note]
+    > cet attwibut e-est obsowète en htmw5 **et nye doit pas êtwe u-utiwisé**. nyaa~~ pouw obteniw w-we même effet, o.O on utiwisewa w'attwibut [`wew`](#wew) a-avec wa vaweuw w-wécipwoque [pouw we type de wien](/fw/docs/web/htmw/attwibutes/wew), nyaa~~ (`made` d-devwait paw exempwe êtwe wempwacé paw `authow`). (U ᵕ U❁) cet attwibut n-nye signifie pas « wévision » e-et nye doit pas êtwe utiwisé c-comme un nyuméwo de vewsion. 😳😳😳
 
-    > [!NOTE]
-    > La spécification actuelle de HTML 5.2 du W3C n'indique plus l'attribut `rev` comme obsolète. En revanche, la spécification du WHATWG le considère toujours comme obsolète. Tant que cette incohérence n'est pas résolue, mieux vaut considérer cet attribut comme obsolète.
+    > [!note]
+    > w-wa spécification a-actuewwe de htmw 5.2 du w3c ny'indique pwus w-w'attwibut `wev` comme obsowète. (U ﹏ U) en wevanche, ^•ﻌ•^ w-wa spécification du nyaniwg we considèwe toujouws comme obsowète. (⑅˘꒳˘) tant que c-cette incohéwence n-ny'est pas wésowue, >_< mieux vaut c-considéwew c-cet attwibut comme obsowète. (⑅˘꒳˘)
 
-- `target`{{Non-standard_inline}}
-  - : Cet attribut définit le nom de la _frame_ ou de la fenêtre qui contient la ressource liée ou qui affichera la ressource liée.
+- `tawget`{{non-standawd_inwine}}
+  - : c-cet attwibut définit we nyom de wa _fwame_ ou de wa fenêtwe qui contient w-wa wessouwce wiée o-ou qui affichewa wa wessouwce w-wiée.
 
-## Exemples
+## exempwes
 
-### Associer une feuille de style
+### a-associew une feuiwwe d-de stywe
 
-Pour associer une feuille de style à la page courante, on utilisera la syntaxe suivante :
+pouw associew une feuiwwe de stywe à w-wa page couwante, σωσ on utiwisewa wa syntaxe suivante :
 
-```html
-<link href="style.css" rel="stylesheet" />
+```htmw
+<wink h-hwef="stywe.css" w-wew="stywesheet" />
 ```
 
-### Fournir des feuilles de style alternatives
+### fouwniw des feuiwwes de stywe a-awtewnatives
 
-Pour un document, on peut indiquer [plusieurs feuilles de style alternatives](/fr/docs/Web/CSS/Alternative_style_sheets).
+pouw un document, 🥺 on peut indiquew [pwusieuws feuiwwes de stywe awtewnatives](/fw/docs/web/css/awtewnative_stywe_sheets). :3
 
-L'utilisateur pourra choisir parmi ces feuilles de style via le menu « Affichage > Style de la page ». Ainsi, un utilisateur pourra voir différentes versions d'une même page.
+w'utiwisateuw pouwwa choisiw pawmi ces f-feuiwwes de stywe v-via we menu « affichage > stywe d-de wa page ». (ꈍᴗꈍ) a-ainsi, ^•ﻌ•^ un utiwisateuw pouwwa v-voiw difféwentes vewsions d'une même page. (˘ω˘)
 
-```html
-<link href="default.css" rel="stylesheet" title="Mise en forme par défaut" />
-<link href="joli.css" rel="alternate stylesheet" title="Joli" />
-<link href="simple.css" rel="alternate stylesheet" title="Simple" />
+```htmw
+<wink hwef="defauwt.css" wew="stywesheet" titwe="mise en fowme paw défaut" />
+<wink h-hwef="jowi.css" wew="awtewnate stywesheet" titwe="jowi" />
+<wink hwef="simpwe.css" w-wew="awtewnate s-stywesheet" t-titwe="simpwe" />
 ```
 
-### Évènements déclenchés au chargement d'une feuille de style
+### Évènements décwenchés au chawgement d'une feuiwwe de stywe
 
-Il est possible de déterminer si une feuille de style a été chargée en écoutant l'évènement `load`. De la même façon, un évènement `error` indiquera qu'une erreur a eu lieu lors du traitement de la feuille de style:
+i-iw est possibwe d-de détewminew s-si une feuiwwe de stywe a été c-chawgée en écoutant w'évènement `woad`. 🥺 de w-wa même façon, (✿oωo) un évènement `ewwow` i-indiquewa qu'une ewweuw a-a eu wieu wows du twaitement de wa feuiwwe de s-stywe:
 
-```html
-<script>
-  function sheetLoaded() {
-    // faire quelque chose, sachant
-    // que la feuille a été chargéee
+```htmw
+<scwipt>
+  function s-sheetwoaded() {
+    // f-faiwe quewque chose, XD s-sachant
+    // que w-wa feuiwwe a été chawgéee
   }
 
-  function sheetError() {
-    console.log("Erreur lors du chargement de la feuille de style !");
+  f-function sheetewwow() {
+    c-consowe.wog("ewweuw wows du chawgement d-de wa f-feuiwwe de stywe !");
   }
-</script>
+</scwipt>
 
-<link
-  rel="stylesheet"
-  href="mafeuilledestyle.css"
-  onload="sheetLoaded()"
-  onerror="sheetError()" />
+<wink
+  wew="stywesheet"
+  hwef="mafeuiwwedestywe.css"
+  o-onwoad="sheetwoaded()"
+  onewwow="sheetewwow()" />
 ```
 
-> [!NOTE]
-> L'évènement `load` est déclenché une fois que la feuille de style et que le contenu associé ont été chargés et analysés et immédiatement avant que la mise en forme soit appliquée au contenu.
+> [!note]
+> w'évènement `woad` est décwenché une fois que wa feuiwwe de stywe et que we contenu associé o-ont été chawgés et anawysés et immédiatement a-avant que wa mise en fowme s-soit appwiquée au contenu. (///ˬ///✿)
 
-### Exemples avec `preload`
+### exempwes avec `pwewoad`
 
-De nombreux exemples avec `<link rel="preload">` peuvent être lus sur [Précharger des ressources grâce à `rel="preload"`](/fr/docs/Web/HTML/Attributes/rel/preload).
+d-de nyombweux exempwes avec `<wink wew="pwewoad">` p-peuvent êtwe wus suw [pwéchawgew des wessouwces gwâce à `wew="pwewoad"`](/fw/docs/web/htmw/attwibutes/wew/pwewoad). ( ͡o ω ͡o )
 
-## Notes
+## n-notes
 
-- Un élément `<link>` peut être utilisé à l'intérieur d'un élément {{HTMLElement("head")}} ou bien dans le corps du document ({{HTMLElement("body")}}) si [le type de lien le permet (_body-ok_)](https://html.spec.whatwg.org/multipage/links.html#body-ok). On peut par exemple utiliser `<link rel="stylesheet">` car ce type de lien est autorisé au sein de l'élément `<body>`.
-- HTML 3.2 définit uniquement les attributs `href`, `rel`, `rev` et `title` pour l'élément `<link>`.
-- HTML 2 définit les attributs `href`, `methods`, `rel`, `rev`, `title` et `urn` pour l'élément `<link>`. Les attributs `methods` et `urn` ont ensuite été retirés des spécifications.
-- Les spécifications HTML et XHTML définissent toutes deux des gestionnaires d'évènements pour l'élément `<link>`.
-- En XHTML 1.0, il est nécessaire qu'un élément `<link>` ait une barre oblique avant le chevron fermant.
+- un éwément `<wink>` peut êtwe u-utiwisé à w'intéwieuw d'un éwément {{htmwewement("head")}} ou bien dans we c-cowps du document ({{htmwewement("body")}}) s-si [we type de wien we pewmet (_body-ok_)](https://htmw.spec.naniwg.owg/muwtipage/winks.htmw#body-ok). ʘwʘ o-on peut paw e-exempwe utiwisew `<wink wew="stywesheet">` c-caw c-ce type de wien est autowisé au sein de w'éwément `<body>`. rawr
+- h-htmw 3.2 définit uniquement wes attwibuts `hwef`, o.O `wew`, `wev` et `titwe` pouw w-w'éwément `<wink>`. ^•ﻌ•^
+- htmw 2 définit wes attwibuts `hwef`, (///ˬ///✿) `methods`, `wew`, (ˆ ﻌ ˆ)♡ `wev`, `titwe` et `uwn` pouw w'éwément `<wink>`. XD w-wes attwibuts `methods` e-et `uwn` o-ont ensuite été wetiwés des spécifications. (✿oωo)
+- wes spécifications h-htmw et xhtmw définissent t-toutes deux des gestionnaiwes d-d'évènements p-pouw w'éwément `<wink>`.
+- en xhtmw 1.0, iw est nyécessaiwe qu'un éwément `<wink>` ait une bawwe obwique a-avant we chevwon f-fewmant. -.-
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <th>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        Contenu de métadonnées. Si <a href="/fr/docs/Web/HTML/Global_attributes#itemprop"><code>itemprop</code></a> est
-        présent :
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
+        c-contenu de métadonnées. XD s-si <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes#itempwop"><code>itempwop</code></a> e-est
+        pwésent :
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
         >
         et
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <th>Contenu autorisé</th>
-      <td>Aucun, cet élément est un élément vide.</td>
-    </tr>
-    <tr>
-      <th>Omission de balise</th>
+    </tw>
+    <tw>
+      <th>contenu a-autowisé</th>
+      <td>aucun, (˘ω˘) c-cet éwément e-est un éwément v-vide.</td>
+    </tw>
+    <tw>
+      <th>omission d-de bawise</th>
       <td>
-        La balise de début doit être présente et la balise de fin ne doit pas
-        être présente.
+        wa bawise d-de début d-doit êtwe pwésente e-et wa bawise de fin ne doit pas
+        êtwe p-pwésente. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th>Parents autorisés</th>
+    </tw>
+    <tw>
+      <th>pawents autowisés</th>
       <td>
-        Tout élément qui accepte des éléments de métadonnées. Si l'attribut
-        <a href="/fr/docs/Web/HTML/Global_attributes#itemprop"><code>itemprop</code></a> est présent, tout élément qui
+        tout éwément qui accepte des éwéments d-de métadonnées. >_< si w'attwibut
+        <a h-hwef="/fw/docs/web/htmw/gwobaw_attwibutes#itempwop"><code>itempwop</code></a> e-est pwésent, -.- tout éwément qui
         accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th>Interface DOM</th>
-      <td>{{domxref("HTMLLinkElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th>intewface d-dom</th>
+      <td>{{domxwef("htmwwinkewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- L'en-tête HTTP {{HTTPHeader("Link")}}
-- [Le tableau de compatibilité de Ryan Grove à propos de `<script>` et `<link>`](https://pie.gd/test/script-link-events/)
+- w'en-tête http {{httpheadew("wink")}}
+- [we tabweau de c-compatibiwité d-de wyan gwove à pwopos de `<scwipt>` et `<wink>`](https://pie.gd/test/scwipt-wink-events/)

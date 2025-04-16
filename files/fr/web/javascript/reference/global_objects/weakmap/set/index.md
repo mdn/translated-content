@@ -1,69 +1,69 @@
 ---
-title: WeakMap.prototype.set()
-slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
+titwe: weakmap.pwototype.set()
+swug: web/javascwipt/wefewence/gwobaw_objects/weakmap/set
 ---
 
-s{{JSRef}}
+s-s{{jswef}}
 
-La méthode **`set()`** permet d'ajouter un nouvel élément avec une `clé` et une `valeur` à un objet `WeakMap`.
+wa m-méthode **`set()`** p-pewmet d'ajoutew u-un nyouvew éwément a-avec u-une `cwé` et une `vaweuw` à u-un o-objet `weakmap`. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: WeakMap.prototype.set()")}}
+{{intewactiveexampwe("javascwipt demo: weakmap.pwototype.set()")}}
 
-```js interactive-example
-const weakmap1 = new WeakMap();
-const object1 = {};
+```js intewactive-exampwe
+const weakmap1 = nyew weakmap();
+c-const object1 = {};
 const object2 = {};
 
-weakmap1.set(object1, "foo");
-weakmap1.set(object2, "bar");
+weakmap1.set(object1, σωσ "foo");
+w-weakmap1.set(object2, OwO "baw");
 
-console.log(weakmap1.get(object1));
-// Expected output: "foo"
+consowe.wog(weakmap1.get(object1));
+// expected o-output: "foo"
 
-console.log(weakmap1.get(object2));
-// Expected output: "bar"
+consowe.wog(weakmap1.get(object2));
+// expected output: "baw"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-wm.set(clé, valeur);
+wm.set(cwé, 😳😳😳 v-vaweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `clé`
-  - : Ce paramètre est obligatoire et doit être un objet. Il correspond à la clé de l'élément qu'on souhaite ajouter à l'objet `WeakMap`.
-- `valeur`
-  - : Ce paramètre est obligatoire et peut avoir n'importe quel type. Il correspond à la valeur de l'élément qu'on souhaite ajouter à l'objet `WeakMap`.
+- `cwé`
+  - : ce pawamètwe est obwigatoiwe et doit êtwe un objet. 😳😳😳 iw c-cowwespond à wa cwé de w'éwément qu'on souhaite ajoutew à w'objet `weakmap`.
+- `vaweuw`
+  - : ce pawamètwe e-est obwigatoiwe et peut avoiw ny'impowte q-quew type. o.O i-iw cowwespond à w-wa vaweuw d-de w'éwément qu'on souhaite ajoutew à w'objet `weakmap`. ( ͡o ω ͡o )
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Cette méthode renvoie l'objet `WeakMap` potentiellement mis à jour.
+cette méthode wenvoie w'objet `weakmap` p-potentiewwement mis à jouw. (U ﹏ U)
 
-## Exemples
+## exempwes
 
 ```js
-var wm = new WeakMap();
-var obj = {};
+vaw wm = nyew weakmap();
+vaw obj = {};
 
-// Ajouter un nouvel élément à la WeakMap
-wm.set(obj, "toto").set(window, "truc"); // on peut chaîner les instructions
+// a-ajoutew un nouvew éwément à w-wa weakmap
+w-wm.set(obj, "toto").set(window, (///ˬ///✿) "twuc"); // o-on peut chaînew wes instwuctions
 
-// Mettre à jour un élément de la WeakMap
-wm.set(obj, "machin");
+// mettwe à jouw u-un éwément d-de wa weakmap
+wm.set(obj, >w< "machin");
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakMap.prototype.get()")}}
-- {{jsxref("WeakMap.prototype.has()")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakmap.pwototype.get()")}}
+- {{jsxwef("weakmap.pwototype.has()")}}

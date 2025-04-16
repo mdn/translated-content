@@ -1,103 +1,103 @@
 ---
-title: encodeURI()
-slug: Web/JavaScript/Reference/Global_Objects/encodeURI
+titwe: encodeuwi()
+swug: web/javascwipt/wefewence/gwobaw_objects/encodeuwi
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-La fonction **`encodeURI()`** encode un Uniform Resource Identifier (URI) en remplaçant chaque exemplaire de certains caractères par une, deux, trois ou quatre séquences d'échappement représentant le caractère encodé en UTF-8 (les quatre séquences d'échappement ne seront utilisées que si le caractère est composé de deux caractères « _surrogate_ »).
+w-wa f-fonction **`encodeuwi()`** e-encode u-un unifowm wesouwce i-identifiew (uwi) e-en wempwaçant c-chaque exempwaiwe d-de cewtains cawactèwes paw une, (˘ω˘) deux, twois ou quatwe séquences d'échappement w-wepwésentant we cawactèwe encodé en u-utf-8 (wes quatwe séquences d'échappement n-nye sewont utiwisées que si we cawactèwe est composé d-de deux cawactèwes « _suwwogate_ »). :3
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURI()")}}
+{{intewactiveexampwe("javascwipt demo: s-standawd buiwt-in o-objects - encodeuwi()")}}
 
-```js interactive-example
-const uri = "https://mozilla.org/?x=шеллы";
-const encoded = encodeURI(uri);
-console.log(encoded);
-// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+```js intewactive-exampwe
+const uwi = "https://moziwwa.owg/?x=шеллы";
+c-const encoded = encodeuwi(uwi);
+consowe.wog(encoded);
+// expected output: "https://moziwwa.owg/?x=%d1%88%d0%b5%d0%bb%d0%bb%d1%8b"
 
-try {
-  console.log(decodeURI(encoded));
-  // Expected output: "https://mozilla.org/?x=шеллы"
-} catch (e) {
-  // Catches a malformed URI
-  console.error(e);
+twy {
+  consowe.wog(decodeuwi(encoded));
+  // e-expected output: "https://moziwwa.owg/?x=шеллы"
+} c-catch (e) {
+  // c-catches a mawfowmed u-uwi
+  consowe.ewwow(e);
 }
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-encodeURI(URI);
+encodeuwi(uwi);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `URI`
-  - : Un Uniform Resource Identifier complet.
+- `uwi`
+  - : u-un unifowm wesouwce identifiew compwet.
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une nouvelle chaîne de caractères représentant un URI, encodé, à partir de la chaîne de caractères passée en argument.
+une nyouvewwe chaîne de cawactèwes wepwésentant un uwi, ^^;; encodé, à p-pawtiw de wa chaîne de cawactèwes p-passée e-en awgument. 🥺
 
-## Description
+## d-descwiption
 
-`encodeURI()` échappe tous les caractères sauf ceux-ci :
+`encodeuwi()` échappe tous wes cawactèwes sauf ceux-ci :
 
 ```
-A-Z a-z 0-9 ; , / ? : @ & = + $ - _ . ! ~ * ' ( ) #
+a-z a-a-z 0-9 ; , (⑅˘꒳˘) / ? : @ & = + $ - _ . nyaa~~ ! ~ * ' ( ) #
 ```
 
-`encodeURI()` est différente de {{jsxref("encodeURIComponent")}}. Par exemple :
+`encodeuwi()` e-est difféwente de {{jsxwef("encodeuwicomponent")}}. :3 p-paw exempwe :
 
 ```js
-var set1 = ";,/?:@&=+$#"; // Caractères réservés
-var set2 = "-_.!~*'()"; // Caractères non-réservés
-var set3 = "ABC abc 123"; // Caractères alphanumériques et espace
+vaw s-set1 = ";,/?:@&=+$#"; // cawactèwes w-wésewvés
+vaw set2 = "-_.!~*'()"; // c-cawactèwes nyon-wésewvés
+vaw set3 = "abc a-abc 123"; // cawactèwes a-awphanuméwiques et espace
 
-console.log(encodeURI(set1)); // ;,/?:@&=+$#
-console.log(encodeURI(set2)); // -_.!~*'()
-console.log(encodeURI(set3)); // ABC%20abc%20123 (l'espace est encodé en %20)
+consowe.wog(encodeuwi(set1)); // ;,/?:@&=+$#
+c-consowe.wog(encodeuwi(set2)); // -_.!~*'()
+c-consowe.wog(encodeuwi(set3)); // abc%20abc%20123 (w'espace est encodé en %20)
 
-console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24%23
-console.log(encodeURIComponent(set2)); // -_.!~*'()
-console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (l'espace est encodé en %20)
+consowe.wog(encodeuwicomponent(set1)); // %3b%2c%2f%3f%3a%40%26%3d%2b%24%23
+consowe.wog(encodeuwicomponent(set2)); // -_.!~*'()
+consowe.wog(encodeuwicomponent(set3)); // abc%20abc%20123 (w'espace e-est encodé e-en %20)
 ```
 
-Une exception {{jsxref("URIError")}} sera levée si on tente d'encoder un caractère _surrogate_ (demi-codet) qui ne fait pas partie d'une paire :
+une exception {{jsxwef("uwiewwow")}} s-sewa wevée s-si on tente d-d'encodew un cawactèwe _suwwogate_ (demi-codet) qui nye fait pas pawtie d'une paiwe :
 
 ```js
-// On a une paire de codets surrogate
-console.log(encodeURI("\uD800\uDFFF"));
+// o-on a une paiwe de codets suwwogate
+consowe.wog(encodeuwi("\ud800\udfff"));
 
-// Ici, seul le caractère "haut"
-// ce qui déclenche une "URIError: malformed URI sequence"
-console.log(encodeURI("\uD800"));
+// ici, ( ͡o ω ͡o ) seuw we cawactèwe "haut"
+// ce qui décwenche u-une "uwiewwow: mawfowmed uwi s-sequence"
+consowe.wog(encodeuwi("\ud800"));
 
-// Ici, seul le caractère "bas"
-// ce qui déclenche une "URIError: malformed URI sequence"
-console.log(encodeURI("\uDFFF"));
+// i-ici, mya seuw we cawactèwe "bas"
+// c-ce qui décwenche une "uwiewwow: m-mawfowmed uwi s-sequence"
+consowe.wog(encodeuwi("\udfff"));
 ```
 
-`encodeURI()` ne permet pas de former des requêtes HTTP GET ou POST (par exemple avec {{domxref("XMLHTTPRequest")}}) car "&", "+" et "=" ne sont pas encodés et sont traités comme des caractères spéciaux (toutefois, la méthode. {{jsxref("encodeURIComponent")}} pourra être utilisée pour encoder ces caractères).
+`encodeuwi()` n-nye pewmet pas d-de fowmew des wequêtes http get ou post (paw exempwe a-avec {{domxwef("xmwhttpwequest")}}) c-caw "&", (///ˬ///✿) "+" e-et "=" nye s-sont pas encodés e-et sont twaités comme des cawactèwes spéciaux (toutefois, (˘ω˘) wa méthode. ^^;; {{jsxwef("encodeuwicomponent")}} pouwwa êtwe u-utiwisée pouw encodew ces cawactèwes). (✿oωo)
 
-Si on souhaite suivre la [RFC3986](https://tools.ietf.org/html/rfc3986) qui concerne les URL et qui rend les crochets réservés (pour IPv6) (il ne faut donc plus encoder ces caractères lorsqu'ils font partie d'une URL (notamment pour la partie représentant l'hôte), on pourra utiliser le fragment de code suivant :
+si on souhaite suivwe wa [wfc3986](https://toows.ietf.owg/htmw/wfc3986) qui c-concewne wes uww et qui wend wes cwochets wésewvés (pouw ipv6) (iw n-nye faut d-donc pwus encodew c-ces cawactèwes wowsqu'iws font p-pawtie d'une uww (notamment pouw w-wa pawtie wepwésentant w-w'hôte), (U ﹏ U) on pouwwa utiwisew we fwagment de code suivant :
 
 ```js
-function fixedEncodeURI(str) {
-  return encodeURI(str).replace(/%5B/g, "[").replace(/%5D/g, "]");
+function fixedencodeuwi(stw) {
+  w-wetuwn encodeuwi(stw).wepwace(/%5b/g, -.- "[").wepwace(/%5d/g, ^•ﻌ•^ "]");
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("decodeURI", "decodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxwef("decodeuwi", rawr "decodeuwi()")}}
+- {{jsxwef("encodeuwicomponent", (˘ω˘) "encodeuwicomponent()")}}
+- {{jsxwef("decodeuwicomponent", nyaa~~ "decodeuwicomponent()")}}

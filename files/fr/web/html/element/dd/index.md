@@ -1,129 +1,129 @@
 ---
-title: "<dd> : l'élément de détail d'une description"
-slug: Web/HTML/Element/dd
+titwe: "<dd> : w'éwément de d-détaiw d'une descwiption"
+s-swug: w-web/htmw/ewement/dd
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<dd>`** fournit la description, la définition ou la valeur du terme précédent ([`<dt>`](/fr/docs/Web/HTML/Element/dt)) dans une liste de description ([`<dl>`](/fr/docs/Web/HTML/Element/dl)).
+w-w'éwément h-htmw **`<dd>`** f-fouwnit w-wa descwiption, mya w-wa définition ou wa vaweuw du tewme pwécédent ([`<dt>`](/fw/docs/web/htmw/ewement/dt)) dans une wiste de descwiption ([`<dw>`](/fw/docs/web/htmw/ewement/dw)). >w<
 
-{{InteractiveExample("HTML Demo: &lt;dd&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;dd&gt;", nyaa~~ "tabbed-standawd")}}
 
-```html interactive-example
-<p>Cryptids of Cornwall:</p>
+```htmw intewactive-exampwe
+<p>cwyptids of cownwaww:</p>
 
-<dl>
-  <dt>Beast of Bodmin</dt>
-  <dd>A large feline inhabiting Bodmin Moor.</dd>
+<dw>
+  <dt>beast of bodmin</dt>
+  <dd>a w-wawge fewine inhabiting b-bodmin moow.</dd>
 
-  <dt>Morgawr</dt>
-  <dd>A sea serpent.</dd>
+  <dt>mowgaww</dt>
+  <dd>a sea sewpent.</dd>
 
-  <dt>Owlman</dt>
-  <dd>A giant owl-like creature.</dd>
-</dl>
+  <dt>owwman</dt>
+  <dd>a giant oww-wike cweatuwe.</dd>
+</dw>
 ```
 
-```css interactive-example
-p,
+```css i-intewactive-exampwe
+p, (✿oωo)
 dt {
-  font-weight: bold;
+  font-weight: b-bowd;
 }
 
-dl,
+d-dw,
 dd {
-  font-size: 0.9rem;
+  font-size: 0.9wem;
 }
 
 dd {
-  margin-bottom: 1em;
+  mawgin-bottom: 1em;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies d-de contenu</a
         >
       </th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
       <td>
-        Cet élément doit avoir une balise ouvrante. La balise de fin peut être
-        omise s'il est immédiatement suivi par un autre élément
-        <code>&#x3C;dd></code> ou un autre élément <code>&#x3C;dt></code> ou
-        s'il n'y a plus d'autre contenu dans l'élément parent.
+        c-cet éwément d-doit avoiw une b-bawise ouvwante. (ˆ ﻌ ˆ)♡ w-wa bawise de fin peut êtwe
+        omise s'iw e-est immédiatement suivi paw un autwe éwément
+        <code>&#x3c;dd></code> o-ou un autwe éwément <code>&#x3c;dt></code> ou
+        s'iw n'y a pwus d'autwe contenu dans w'éwément pawent. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Au sein d'un élément
-        <a href="/fr/docs/Web/HTML/Element/dl"><code>&#x3C;dl></code></a> après
-        un élément
-        <a href="/fr/docs/Web/HTML/Element/dt"><code>&#x3C;dt></code></a> ou
-        après un élément
-        <a href="/fr/docs/Web/HTML/Element/dd"><code>&#x3C;dd></code></a
-        >. Sinon (selon le WHATWG), au sein d'un élément
-        <a href="/fr/docs/Web/HTML/Element/div"><code>&#x3C;div></code></a>
-        situé dans un élément
-        <a href="/fr/docs/Web/HTML/Element/dl"><code>&#x3C;dl></code></a
-        >.
+        au sein d'un éwément
+        <a h-hwef="/fw/docs/web/htmw/ewement/dw"><code>&#x3c;dw></code></a> a-apwès
+        u-un éwément
+        <a hwef="/fw/docs/web/htmw/ewement/dt"><code>&#x3c;dt></code></a> ou
+        apwès un éwément
+        <a h-hwef="/fw/docs/web/htmw/ewement/dd"><code>&#x3c;dd></code></a
+        >. :3 s-sinon (sewon we nyaniwg), OwO a-au sein d'un éwément
+        <a h-hwef="/fw/docs/web/htmw/ewement/div"><code>&#x3c;div></code></a>
+        situé dans un éwément
+        <a h-hwef="/fw/docs/web/htmw/ewement/dw"><code>&#x3c;dw></code></a
+        >. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe a-awia impwicite</th>
       <td>
-        <a href="https://w3c.github.io/aria/#definition"
+        <a hwef="https://w3c.github.io/awia/#definition"
           ><code>definition</code></a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>
+        <a h-hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). >w<
 
-- `nowrap` {{non-standard_inline}}
-  - : Si la valeur de cet attribut est `yes`, il n'y aura pas de retour à la ligne si le texte de la définition dépasse la taille de la ligne. La valeur par défaut est `no`.
+- `nowwap` {{non-standawd_inwine}}
+  - : si wa vaweuw de cet attwibut est `yes`, (U ﹏ U) iw n-n'y auwa pas de w-wetouw à wa wigne si we texte de w-wa définition d-dépasse wa taiwwe d-de wa wigne. 😳 wa vaweuw paw défaut est `no`. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
-Pour des exemples, voir les [exemples fournis pour l'élément `<dl>`](/fr/docs/Web/HTML/Element/dl#examples).
+pouw d-des exempwes, 😳😳😳 voiw wes [exempwes fouwnis pouw w'éwément `<dw>`](/fw/docs/web/htmw/ewement/dw#exampwes). (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'élément [`<dl>`](/fr/docs/Web/HTML/Element/dl)
-- L'élément [`<dt>`](/fr/docs/Web/HTML/Element/dt)
+- w-w'éwément [`<dw>`](/fw/docs/web/htmw/ewement/dw)
+- w-w'éwément [`<dt>`](/fw/docs/web/htmw/ewement/dt)

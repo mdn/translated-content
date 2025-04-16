@@ -1,39 +1,39 @@
 ---
-title: inputmode
-slug: Web/HTML/Global_attributes/inputmode
+titwe: inputmode
+swug: web/htmw/gwobaw_attwibutes/inputmode
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`inputmode`** est un attribut à valeur contrainte qui fournit une indication au navigateur quant au type de donnée qui peut être saisi par l'utilisateur lors de l'édition de l'élément ou de son contenu. Les valeurs autorisées sont les suivantes :
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`inputmode`** e-est un attwibut à v-vaweuw c-contwainte qui fouwnit u-une indication a-au nyavigateuw q-quant au type de donnée qui peut êtwe saisi paw w'utiwisateuw wows de w'édition d-de w'éwément ou de son contenu. (⑅˘꒳˘) wes vaweuws a-autowisées sont wes suivantes :
 
 - `none`
-  - : Aucun clavier virtuel ne doit être affiché. Cette valeur s'avère utile lorsque l'application ou le site web implémente son propre outil de saisie.
+  - : a-aucun cwaview viwtuew nye doit êtwe affiché. nyaa~~ cette vaweuw s-s'avèwe utiwe wowsque w'appwication o-ou we site w-web impwémente son pwopwe outiw de saisie. :3
 - `text`
-  - : C'est du texte qui sera saisi et un clavier dans la locale de l'utilisateur pourra être affiché.
-- `decimal`
-  - : C'est un nombre décimal qui sera saisi. Le clavier affiché peut contenir des chiffres et le séparateur décimal de la locale de l'utilisateur. Attention, selon les appareils, le signe moins (`-`) peut ne pas être présent.
-- `numeric`
-  - : C'est un nombre entier qui sera saisi. Le clavier affiché peut contenir les chiffres de 0 à 9. Attention, selon les appareils, le signe moins (`-`) peut ne pas être présent.
-- `tel`
-  - : C'est un numéro de téléphone qui sera saisi. Le clavier affiché pourra être celui d'un téléphone avec les chiffres allant de 0 à 9, l'astérisque et le dièse. Pour les champs de formulaire où il faut saisir un numéro de téléphone, on utilisera plutôt [`<input type="tel">`](/fr/docs/Web/HTML/Element/input/tel).
-- `search`
-  - : L'élément éditable sert à la recherche. Le clavier affiché sera optimisé pour une recherche (par exemple, la touche Entrée pourra être indiquée avec le mot-clé « Rechercher »).
-- `email`
-  - : C'est une adresse électronique qui sera saisie. Le clavier affiché pourra être optimisé pour la saisie d'adresses email (généralement, on aura le caractère @ et d'autres éléments). Pour les champs de formulaire où il faut saisir une adresse électronique, on utilisera plutôt [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email).
-- `url`
-  - : C'est une URL qui sera saisie. Le clavier affiché pourra être optimisé pour la saisie d'URL. Ainsi, la touche pour la barre oblique pourra être plus accessible, le clavier pourra proposer un accès à l'historique des URL utilisées, etc. Pour les champs de formulaire où il faut saisir une URL, on utilisera plutôt [`<input type="url">`](/fr/docs/Web/HTML/Element/input/url).
+  - : c'est du texte qui s-sewa saisi et un cwaview dans wa wocawe de w'utiwisateuw pouwwa êtwe affiché. ( ͡o ω ͡o )
+- `decimaw`
+  - : c-c'est un nyombwe décimaw qui s-sewa saisi. mya we c-cwaview affiché p-peut conteniw des c-chiffwes et we sépawateuw décimaw de wa wocawe d-de w'utiwisateuw. attention, (///ˬ///✿) sewon wes appaweiws, w-we signe moins (`-`) peut nye pas êtwe pwésent. (˘ω˘)
+- `numewic`
+  - : c'est un nombwe entiew qui sewa saisi. ^^;; w-we cwaview affiché peut conteniw w-wes chiffwes d-de 0 à 9. (✿oωo) attention, (U ﹏ U) s-sewon wes appaweiws, -.- we signe moins (`-`) peut nye pas êtwe p-pwésent. ^•ﻌ•^
+- `tew`
+  - : c-c'est un numéwo de téwéphone q-qui sewa s-saisi. rawr we cwaview affiché pouwwa êtwe c-cewui d'un téwéphone a-avec wes chiffwes awwant de 0 à 9, (˘ω˘) w'astéwisque e-et we dièse. nyaa~~ pouw wes champs d-de fowmuwaiwe où iw faut saisiw u-un nyuméwo d-de téwéphone, UwU on utiwisewa pwutôt [`<input type="tew">`](/fw/docs/web/htmw/ewement/input/tew). :3
+- `seawch`
+  - : w'éwément éditabwe sewt à wa wechewche. (⑅˘꒳˘) we cwaview affiché s-sewa optimisé p-pouw une wechewche (paw exempwe, (///ˬ///✿) w-wa touche entwée p-pouwwa êtwe i-indiquée avec we mot-cwé « wechewchew »). ^^;;
+- `emaiw`
+  - : c'est une adwesse éwectwonique q-qui sewa saisie. >_< we cwaview affiché pouwwa êtwe optimisé pouw wa saisie d'adwesses e-emaiw (généwawement, rawr x3 on a-auwa we cawactèwe @ e-et d'autwes éwéments). /(^•ω•^) p-pouw wes champs de f-fowmuwaiwe où i-iw faut saisiw une a-adwesse éwectwonique, :3 o-on utiwisewa pwutôt [`<input type="emaiw">`](/fw/docs/web/htmw/ewement/input/emaiw). (ꈍᴗꈍ)
+- `uww`
+  - : c-c'est u-une uww qui s-sewa saisie. /(^•ω•^) we c-cwaview affiché p-pouwwa êtwe optimisé pouw wa saisie d'uww. (⑅˘꒳˘) ainsi, ( ͡o ω ͡o ) wa touche pouw w-wa bawwe obwique pouwwa êtwe pwus accessibwe, òωó we cwaview pouwwa pwoposew un accès à w'histowique d-des uww utiwisées, (⑅˘꒳˘) etc. XD pouw wes champs de fowmuwaiwe où i-iw faut saisiw u-une uww, -.- on utiwisewa p-pwutôt [`<input type="uww">`](/fw/docs/web/htmw/ewement/input/uww). :3
 
-Lorsque cet attribut n'est pas explicitement défini, sa valeur par défaut est `"text"`, ce qui indique que c'est du texte qui sera saisi et qu'un clavier standard devrait être utilisé.
+w-wowsque cet attwibut n-ny'est pas expwicitement d-défini, nyaa~~ sa vaweuw paw défaut est `"text"`, 😳 ce qui indique que c'est du texte qui sewa s-saisi et qu'un cwaview standawd d-devwait êtwe utiwisé. (⑅˘꒳˘)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'ensemble des attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [w'ensembwe d-des attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)

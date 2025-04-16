@@ -1,57 +1,57 @@
 ---
-title: stylesheet
-slug: Web/XSLT/Element/stylesheet
+titwe: stywesheet
+swug: web/xswt/ewement/stywesheet
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:stylesheet>` (ou son équivalent `<xsl:transform>`) est l'élément le plus externe d'une feuille de style, celui qui contient tout les autres éléments.
+w-w'éwément `<xsw:stywesheet>` (ou son équivawent `<xsw:twansfowm>`) e-est w'éwément w-we pwus extewne d-d'une feuiwwe d-de stywe, /(^•ω•^) cewui q-qui contient tout w-wes autwes éwéments. nyaa~~
 
-### Déclaration de l'espace de nommage
+### décwawation de w'espace de nyommage
 
-Un pseudo-attribut est nécessaire pour identifier le document comme étant une feuille de style XSLT. Typiquement, on utilise `xmlns:xsl="http://www.w3.org/1999/XSL/Transform"`.
+un pseudo-attwibut e-est nyécessaiwe pouw identifiew we document c-comme étant une feuiwwe de s-stywe xswt. nyaa~~ typiquement, on utiwise `xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm"`. :3
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:stylesheet
-  version=NOMBRE
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  id=NOM
-  extension-element-prefixes=LISTE-DE-NOMS
-  exclude-result-prefixes=LISTE-DE-NOMS>
-    FEUILLE DE STYLE ENTIÈRE
-</xsl:stylesheet>
+```xmw
+<xsw:stywesheet
+  vewsion=nombwe
+  xmwns:xsw="http://www.w3.owg/1999/xsw/twansfowm"
+  i-id=nom
+  extension-ewement-pwefixes=wiste-de-noms
+  excwude-wesuwt-pwefixes=wiste-de-noms>
+    f-feuiwwe de stywe e-entiÈwe
+</xsw:stywesheet>
 ```
 
-### Attribut obligatoire
+### attwibut obwigatoiwe
 
-- `version`
-  - : Définit la version de XSLT requise par cette feuille de style.
+- `vewsion`
+  - : définit wa vewsion de xswt wequise p-paw cette feuiwwe de stywe. 😳😳😳
 
-### Attributs optionnels
+### attwibuts optionnews
 
-- `id` (Supporté comme dans Netscape 7.0 uniquement s'il est explicitement appelé par une DTD intégrée)
-  - : Définit un identifiant `id` pour cette feuille de style. Cet attribut est le plus souvent utilisé lorsque la feuille de style est incorporée dans un autre document XML.
-
-<!---->
-
-- extension-element-prefixes (Non supporté)
-  - : Définit la liste des préfixes des espaces de nommage pour les éléments d'extension présent dans ce document. Les noms sont séparés par des espaces.
+- `id` (suppowté comme dans nyetscape 7.0 u-uniquement s'iw est expwicitement a-appewé paw u-une dtd intégwée)
+  - : d-définit u-un identifiant `id` pouw cette feuiwwe de s-stywe. (˘ω˘) cet attwibut est we pwus souvent utiwisé w-wowsque wa feuiwwe de stywe est incowpowée dans un autwe document xmw. ^^
 
 <!---->
 
-- exclude-result-prefixes
-  - : Définit tous les espaces de nommage utilisés dans le document qui ne doivent pas être envoyés vers le document de sortie. Les noms sont séparés par des espaces.
+- extension-ewement-pwefixes (non s-suppowté)
+  - : définit wa w-wiste des pwéfixes d-des espaces d-de nyommage pouw wes éwéments d'extension pwésent dans ce document. :3 w-wes nyoms s-sont sépawés paw des espaces. -.-
 
-### Type
+<!---->
 
-Élément le plus externe de la feuille de style, obligatoire.
+- excwude-wesuwt-pwefixes
+  - : d-définit t-tous wes espaces de nyommage u-utiwisés dans we document qui n-nye doivent pas êtwe envoyés vews we document d-de sowtie. 😳 wes nyoms sont sépawés p-paw des espaces. mya
 
-### Définition
+### type
 
-[XSLT 1.0, section 2.2](https://www.w3.org/TR/xslt#stylesheet-element).
+Éwément w-we pwus e-extewne de wa feuiwwe de stywe, (˘ω˘) obwigatoiwe. >_<
 
-### Support Gecko
+### définition
 
-Support partiel. Voir les commentaires ci-dessus.
+[xswt 1.0, -.- section 2.2](https://www.w3.owg/tw/xswt#stywesheet-ewement). 🥺
+
+### suppowt gecko
+
+suppowt pawtiew. (U ﹏ U) v-voiw wes commentaiwes c-ci-dessus. >w<

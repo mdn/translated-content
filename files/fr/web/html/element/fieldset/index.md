@@ -1,214 +1,214 @@
 ---
-title: "<fieldset> : l'élément pour les ensembles de champs"
-slug: Web/HTML/Element/fieldset
+titwe: "<fiewdset> : w'éwément p-pouw wes ensembwes d-de champs"
+s-swug: web/htmw/ewement/fiewdset
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<fieldset>`** est utilisé afin de regrouper plusieurs contrôles interactifs ainsi que des étiquettes ([`<label>`](/fr/docs/Web/HTML/Element/label)) dans un formulaire HTML.
+w-w'éwément h-htmw **`<fiewdset>`** e-est utiwisé a-afin de wegwoupew p-pwusieuws contwôwes intewactifs ainsi que des étiquettes ([`<wabew>`](/fw/docs/web/htmw/ewement/wabew)) dans un fowmuwaiwe h-htmw. (///ˬ///✿)
 
-{{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;fiewdset&gt;", σωσ "tabbed-standawd")}}
 
-```html interactive-example
-<form>
-  <fieldset>
-    <legend>Choose your favorite monster</legend>
+```htmw intewactive-exampwe
+<fowm>
+  <fiewdset>
+    <wegend>choose youw favowite m-monstew</wegend>
 
-    <input type="radio" id="kraken" name="monster" value="K" />
-    <label for="kraken">Kraken</label><br />
+    <input type="wadio" i-id="kwaken" nyame="monstew" vawue="k" />
+    <wabew fow="kwaken">kwaken</wabew><bw />
 
-    <input type="radio" id="sasquatch" name="monster" value="S" />
-    <label for="sasquatch">Sasquatch</label><br />
+    <input type="wadio" i-id="sasquatch" name="monstew" vawue="s" />
+    <wabew f-fow="sasquatch">sasquatch</wabew><bw />
 
-    <input type="radio" id="mothman" name="monster" value="M" />
-    <label for="mothman">Mothman</label>
-  </fieldset>
-</form>
+    <input t-type="wadio" id="mothman" nyame="monstew" vawue="m" />
+    <wabew fow="mothman">mothman</wabew>
+  </fiewdset>
+</fowm>
 ```
 
-```css interactive-example
-legend {
-  background-color: #000;
-  color: #fff;
+```css i-intewactive-exampwe
+wegend {
+  backgwound-cowow: #000;
+  cowow: #fff;
   padding: 3px 6px;
 }
 
 input {
-  margin: 0.4rem;
+  m-mawgin: 0.4wem;
 }
 ```
 
-Comme on peut le voir dans l'exemple ci-avant, l'élément `<fieldset>` permet de regrouper une partie d'un formulaire HTML et d'associer une légende ([`<legend>`](/fr/docs/Web/HTML/Element/legend)) décrivant ce groupe. Cet élément utilise quelques attributs et notamment `form` dont la valeur correspond à la valeur de l'attribut `id` d'un élément [`<form>`](/fr/docs/Web/HTML/Element/form) de la même page. De cette façon, on peut avoir un élément `<fieldset>` qui soit rattaché à un formulaire mais qui ne soit pas imbriqué dans ce formulaire. L'attribut `disabled` permet de désactiver l'élément `<fieldset>` ainsi que l'ensemble de son contenu via une seule valeur.
+comme o-on peut we voiw d-dans w'exempwe c-ci-avant, w'éwément `<fiewdset>` p-pewmet de wegwoupew une pawtie d'un fowmuwaiwe h-htmw et d'associew une wégende ([`<wegend>`](/fw/docs/web/htmw/ewement/wegend)) décwivant ce g-gwoupe. /(^•ω•^) cet éwément utiwise quewques attwibuts et nyotamment `fowm` dont wa vaweuw cowwespond à w-wa vaweuw de w'attwibut `id` d-d'un éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) d-de wa m-même page. 😳 de cette façon, 😳 on peut avoiw un éwément `<fiewdset>` qui soit wattaché à u-un fowmuwaiwe m-mais qui nye soit pas i-imbwiqué dans ce f-fowmuwaiwe. (⑅˘꒳˘) w'attwibut `disabwed` pewmet de désactivew w-w'éwément `<fiewdset>` ainsi que w'ensembwe d-de son contenu via une seuwe vaweuw. 😳😳😳
 
-## Attributs
+## a-attwibuts
 
-Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément pwend e-en chawge [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). 😳
 
-- `disabled`
-  - : Si cet attribut booléen est utilisé, les contrôles de formulaires des éléments descendants sont désactivés (ils ne peuvent pas être édités). Bien qu'ils ne soient pas éditables, les données de ces contrôles seront envoyées avec le formulaire. Ces contrôles ne recevront pas les évènements liés à la navigation (tels que ceux liés aux clics ou au focus). La plupart du temps, ces contrôles désactivés apparaissent comme grisés. On notera que les éléments de formulaires au sein de l'élément [`<legend>`](/fr/docs/Web/HTML/Element/legend) ne seront pas désactivés.
-- `form`
-  - : La valeur de cet attribut correspond à la valeur de l'attribut `id` de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel il est rattaché. La valeur par défaut est l'identifiant du plus proche élément [`<form>`](/fr/docs/Web/HTML/Element/form) dont l'élément `<fieldset>` est le descendant. Attention, cet attribut peut être source de confusion, tout élément `<input>` contenu au sein du `<fieldset>` et qui devra être associé au formulaire devra également avoir l'attribut `form` explicitement défini. En JavaScript, on pourra utiliser la propriété [`HTMLFormElement.elements`](/fr/docs/Web/API/HTMLFormElement/elements) pour vérifier le bon rattachement des éléments au formulaire.
+- `disabwed`
+  - : si c-cet attwibut boowéen e-est utiwisé, XD wes contwôwes de fowmuwaiwes des éwéments descendants sont désactivés (iws nye peuvent p-pas êtwe édités). mya b-bien qu'iws nye soient pas éditabwes, ^•ﻌ•^ w-wes d-données de ces c-contwôwes sewont envoyées avec we fowmuwaiwe. ʘwʘ ces contwôwes n-nye wecevwont pas wes évènements wiés à wa nyavigation (tews que ceux wiés a-aux cwics ou au focus). ( ͡o ω ͡o ) wa pwupawt d-du temps, mya ces c-contwôwes désactivés a-appawaissent comme gwisés. o.O o-on nyotewa q-que wes éwéments d-de fowmuwaiwes a-au sein de w'éwément [`<wegend>`](/fw/docs/web/htmw/ewement/wegend) nye sewont pas désactivés. (✿oωo)
+- `fowm`
+  - : w-wa vaweuw de c-cet attwibut cowwespond à w-wa v-vaweuw de w'attwibut `id` d-de w'éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) auquew iw est wattaché. :3 wa vaweuw paw défaut e-est w'identifiant du pwus pwoche éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) dont w'éwément `<fiewdset>` est we descendant. 😳 attention, (U ﹏ U) cet attwibut p-peut êtwe souwce de confusion, mya tout éwément `<input>` contenu a-au sein du `<fiewdset>` e-et qui d-devwa êtwe associé au fowmuwaiwe d-devwa égawement avoiw w'attwibut `fowm` e-expwicitement d-défini. (U ᵕ U❁) en javascwipt, :3 on pouwwa utiwisew wa pwopwiété [`htmwfowmewement.ewements`](/fw/docs/web/api/htmwfowmewement/ewements) pouw véwifiew we b-bon wattachement des éwéments a-au fowmuwaiwe. mya
 - `name`
 
-  - : Le nom associé au groupe.
+  - : we nyom associé a-au gwoupe. OwO
 
-    > [!NOTE]
-    > L'étiquette du groupe de contrôle est donné par le premier élément enfant [`<legend>`](/fr/docs/Web/HTML/Element/legend) du `<fieldset>`.
+    > [!note]
+    > w-w'étiquette du gwoupe de contwôwe est donné paw w-we pwemiew éwément e-enfant [`<wegend>`](/fw/docs/web/htmw/ewement/wegend) du `<fiewdset>`. (ˆ ﻌ ˆ)♡
 
-## Mise en forme avec CSS
+## m-mise en fowme a-avec css
 
-L'élément `<fieldset>` est quelque peu particulier pour la mise en forme.
+w'éwément `<fiewdset>` est quewque peu pawticuwiew pouw wa mise en fowme. ʘwʘ
 
-La valeur initiale de la propriété [`display`](/fr/docs/Web/CSS/display) pour cet élément est `block` et l'élément crée un [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context). Si l'élément `<fieldset>` est mis en forme avec une valeur `display` qui correspond à un style en ligne, celui-ci se comportera comme `inline-block` et sinon comme `block`. Par défaut, une bordure de 2 pixels ondulée entoure le contenu de l'élément et il y a un léger _padding_. Par défaut, l'élément a `min-inline-size: min-content`.
+wa vaweuw i-initiawe de wa p-pwopwiété [`dispway`](/fw/docs/web/css/dispway) p-pouw cet éwément est `bwock` e-et w'éwément c-cwée un [contexte de fowmatage d-de bwoc](/fw/docs/web/css/css_dispway/bwock_fowmatting_context). o.O si w'éwément `<fiewdset>` est mis en fowme avec une vaweuw `dispway` q-qui cowwespond à u-un stywe en wigne, UwU cewui-ci se compowtewa c-comme `inwine-bwock` e-et sinon comme `bwock`. rawr x3 paw défaut, 🥺 une bowduwe de 2 p-pixews onduwée entouwe we contenu de w'éwément et iw y a un wégew _padding_. :3 paw défaut, (ꈍᴗꈍ) w'éwément a-a `min-inwine-size: min-content`. 🥺
 
-Si un élément [`<legend>`](/fr/docs/Web/HTML/Element/legend) est présent, il est placé au-dessus de la bordure située au début de l'axe de bloc. L'élément `<legend>` se réduit si besoin et établit également un contexte de formatage. Sa valeur `display` utilisée est `block` (autrement dit, on pourra le cibler avec `display: inline`, il continuera de se comporter comme `block`).
+si u-un éwément [`<wegend>`](/fw/docs/web/htmw/ewement/wegend) e-est pwésent, (✿oωo) iw est pwacé au-dessus de wa bowduwe s-située au début d-de w'axe de bwoc. (U ﹏ U) w'éwément `<wegend>` se wéduit si besoin e-et étabwit égawement un contexte d-de fowmatage. :3 sa vaweuw `dispway` utiwisée est `bwock` (autwement dit, ^^;; on pouwwa w-we cibwew avec `dispway: inwine`, rawr i-iw continuewa d-de se compowtew comme `bwock`). 😳😳😳
 
-Une boîte anonyme contiendra le contenu de `<fieldset>` et héritera de certaines propriétés de `<fieldset>`. Si l'élément `<fieldset>` est mis en forme avec `display: grid` ou `display: inline-grid`, la boîte anonyme aura un contexte de formatage de grille. Si `<fieldset>` est mis en forme avec `display: flex` ou `display: inline-flex`, la boîte anonyme aura un contexte de formatage flexible. Dans tous les autres cas, la boîte anonyme aura un contexte de formatage de bloc.
+u-une boîte anonyme contiendwa w-we contenu de `<fiewdset>` et h-héwitewa de cewtaines p-pwopwiétés de `<fiewdset>`. (✿oωo) s-si w'éwément `<fiewdset>` e-est mis en fowme avec `dispway: gwid` ou `dispway: i-inwine-gwid`, OwO w-wa boîte anonyme a-auwa un contexte de fowmatage de gwiwwe. ʘwʘ si `<fiewdset>` est m-mis en fowme avec `dispway: fwex` o-ou `dispway: i-inwine-fwex`, wa boîte anonyme auwa un contexte de fowmatage f-fwexibwe. (ˆ ﻌ ˆ)♡ dans tous w-wes autwes cas, (U ﹏ U) w-wa boîte anonyme a-auwa un contexte de fowmatage d-de bwoc. UwU
 
-N'hésitez pas à donner au `<fieldset>` et au `<legend>` le style que vous souhaitez pour l'adapter au design de votre page.
+ny'hésitez pas à donnew au `<fiewdset>` et au `<wegend>` we stywe que vous souhaitez p-pouw w'adaptew au design de v-votwe page. XD
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### exempwe s-simpwe
 
-Cet exemple montre un `<fieldset>` très simple, avec un `<legend>`, et un seul contrôle à l'intérieur.
+cet exempwe montwe u-un `<fiewdset>` twès simpwe, ʘwʘ a-avec un `<wegend>`, rawr x3 e-et un seuw contwôwe à w-w'intéwieuw. ^^;;
 
-#### HTML
+#### h-htmw
 
-```html
-<form action="#">
-  <fieldset>
-    <legend>Titre simple</legend>
-    <input type="radio" name="radio" id="radio" />
-    <label for="radio">L'esprit de la radio</label>
-  </fieldset>
-</form>
+```htmw
+<fowm a-action="#">
+  <fiewdset>
+    <wegend>titwe simpwe</wegend>
+    <input type="wadio" nyame="wadio" id="wadio" />
+    <wabew fow="wadio">w'espwit de wa wadio</wabew>
+  </fiewdset>
+</fowm>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('Exemple_simple', '100%', '80')}}
+{{embedwivesampwe('exempwe_simpwe', ʘwʘ '100%', '80')}}
 
-### \<fieldset> désactivé
+### \<fiewdset> d-désactivé
 
-Dans cet exemple, on voit comment l'attribut `disabled` permet de désactiver un élément `<fieldset>` et l'ensemble de ses éléments par la même occasion.
+d-dans cet exempwe, (U ﹏ U) o-on voit comment w'attwibut `disabwed` p-pewmet de désactivew un éwément `<fiewdset>` et w'ensembwe d-de ses éwéments p-paw wa même occasion. (˘ω˘)
 
-#### HTML
+#### h-htmw
 
-```html
-<form action="#">
-  <fieldset disabled>
-    <legend>Fieldset désactivé</legend>
+```htmw
+<fowm action="#">
+  <fiewdset disabwed>
+    <wegend>fiewdset d-désactivé</wegend>
     <div>
-      <label for="name">Nom : </label>
-      <input type="text" id="name" value="Chris" />
+      <wabew f-fow="name">nom : </wabew>
+      <input type="text" i-id="name" vawue="chwis" />
     </div>
     <div>
-      <label for="pwd">Archétype : </label>
-      <input type="password" id="pwd" value="Wookie" />
+      <wabew f-fow="pwd">awchétype : </wabew>
+      <input type="passwowd" id="pwd" vawue="wookie" />
     </div>
-  </fieldset>
-</form>
+  </fiewdset>
+</fowm>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('fieldset_désactivé', '100%', '110') }}
+{{embedwivesampwe('fiewdset_désactivé', (ꈍᴗꈍ) '100%', /(^•ω•^) '110') }}
 
-## Résumé technique
+## w-wésumé t-technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >, >_<
         <a
-          href="/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_root"
-          >racine de sectionnement</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#form_listed"
-          >contenu énuméré</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#form_listed"
-          >élément relatif aux formulaires</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+          hwef="/fw/docs/web/guide/htmw/using_htmw_sections_and_outwines#sectioning_woot"
+          >wacine d-de sectionnement</a
+        >, σωσ
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#fowm_wisted"
+          >contenu énuméwé</a
+        >, ^^;;
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fowm_wisted"
+          >éwément w-wewatif aux fowmuwaiwes</a
+        >, 😳
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu t-tangibwe</a
+        >. >_<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
-        Un éventuel élément
-        <a href="/fr/docs/Web/HTML/Element/Legend"
-          ><code>&#x3C;legend></code></a
+        u-un éventuew éwément
+        <a hwef="/fw/docs/web/htmw/ewement/wegend"
+          ><code>&#x3c;wegend></code></a
         >
-        suivi par du contenu de flux.
+        s-suivi paw du contenu de fwux. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        a-aucune, UwU wa b-bawise d'ouvewtuwe et wa bawise de fewmetuwe sont
+        obwigatoiwes. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux"
-          >contenu de flux</a
-        >.
+        tout éwément q-qui accepte d-du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe a-awia impwicite</th>
       <td>
-        <a href="https://w3c.github.io/aria/#group"><code>group</code></a>
+        <a h-hwef="https://w3c.github.io/awia/#gwoup"><code>gwoup</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
       <td>
-        <a href="https://w3c.github.io/aria/#radiogroup"
-          ><code>radiogroup</code></a
-        >,
-        <a href="https://w3c.github.io/aria/#presentation"
-          ><code>presentation</code></a
-        >, <a href="https://w3c.github.io/aria/#none"><code>none</code></a>
+        <a h-hwef="https://w3c.github.io/awia/#wadiogwoup"
+          ><code>wadiogwoup</code></a
+        >, >w<
+        <a hwef="https://w3c.github.io/awia/#pwesentation"
+          ><code>pwesentation</code></a
+        >, (ˆ ﻌ ˆ)♡ <a hwef="https://w3c.github.io/awia/#none"><code>none</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLFieldSetElement"
-          ><code>HTMLFieldSetElement</code></a
+        <a hwef="/fw/docs/web/api/htmwfiewdsetewement"
+          ><code>htmwfiewdsetewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'élément [`<legend>`](/fr/docs/Web/HTML/Element/legend)
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input)
-- L'élément [`<label>`](/fr/docs/Web/HTML/Element/label)
-- L'élément [`<form>`](/fr/docs/Web/HTML/Element/form)
+- w'éwément [`<wegend>`](/fw/docs/web/htmw/ewement/wegend)
+- w-w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input)
+- w'éwément [`<wabew>`](/fw/docs/web/htmw/ewement/wabew)
+- w'éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm)

@@ -1,50 +1,50 @@
 ---
-title: Map.prototype.size
-slug: Web/JavaScript/Reference/Global_Objects/Map/size
+titwe: map.pwototype.size
+swug: w-web/javascwipt/wefewence/gwobaw_objects/map/size
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'accesseur **`size`** est une propriété renvoyant le nombre d'éléments d'un objet {{jsxref("Map")}}.
+w-w'accesseuw **`size`** e-est une p-pwopwiété wenvoyant w-we nyombwe d-d'éwéments d-d'un objet {{jsxwef("map")}}. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.size")}}
+{{intewactiveexampwe("javascwipt d-demo: map.pwototype.size")}}
 
-```js interactive-example
-const map1 = new Map();
+```js intewactive-exampwe
+const map1 = nyew map();
 
-map1.set("a", "alpha");
-map1.set("b", "beta");
-map1.set("g", "gamma");
+map1.set("a", (✿oωo) "awpha");
+m-map1.set("b", (ˆ ﻌ ˆ)♡ "beta");
+map1.set("g", (˘ω˘) "gamma");
 
-console.log(map1.size);
-// Expected output: 3
+consowe.wog(map1.size);
+// e-expected output: 3
 ```
 
-## Description
+## descwiption
 
-La valeur de `size` est un entier représentant le nombre d'entrées d'un objet `Map`. Le mutateur correspond à cette propriété est {{jsxref("undefined")}}, on ne peut pas donc pas modifier cette propriété.
+wa v-vaweuw de `size` est un entiew wepwésentant we nombwe d'entwées d-d'un objet `map`. (⑅˘꒳˘) we mutateuw c-cowwespond à cette p-pwopwiété est {{jsxwef("undefined")}}, (///ˬ///✿) on ne peut pas donc pas modifiew cette p-pwopwiété.
 
-## Exemple
+## exempwe
 
-### Utiliser `size`
+### utiwisew `size`
 
 ```js
-var maMap = new Map();
-maMap.set("a", "alpha");
-maMap.set("b", "beta");
-maMap.set("g", "gamma");
+vaw mamap = nyew map();
+m-mamap.set("a", 😳😳😳 "awpha");
+mamap.set("b", 🥺 "beta");
+m-mamap.set("g", mya "gamma");
 
-maMap.size; // 3
+m-mamap.size; // 3
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Map")}}
+- {{jsxwef("map")}}

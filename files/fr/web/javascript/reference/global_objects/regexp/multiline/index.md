@@ -1,59 +1,59 @@
 ---
-title: RegExp.prototype.multiline
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
+titwe: wegexp.pwototype.muwtiwine
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/muwtiwine
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`multiline`** indique si le drapeau (_flag_) "`m`" a été utilisé ou non pour l'expression rationnelle. `multiline` est une propriété liée à l'instance, accessible en lecture seule.
+w-wa pwopwiété **`muwtiwine`** i-indique si we d-dwapeau (_fwag_) "`m`" a-a été u-utiwisé ou nyon p-pouw w'expwession w-wationnewwe. 😳😳😳 `muwtiwine` e-est une pwopwiété wiée à w'instance, 😳😳😳 accessibwe en wectuwe seuwe. o.O
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.multiline", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp.pwototype.muwtiwine", ( ͡o ω ͡o ) "tawwew")}}
 
-```js interactive-example
-const regex1 = new RegExp("^football");
-const regex2 = new RegExp("^football", "m");
+```js intewactive-exampwe
+const w-wegex1 = nyew wegexp("^footbaww");
+c-const wegex2 = nyew wegexp("^footbaww", (U ﹏ U) "m");
 
-console.log(regex1.multiline);
-// Expected output: false
+consowe.wog(wegex1.muwtiwine);
+// expected o-output: fawse
 
-console.log(regex2.multiline);
-// Expected output: true
+consowe.wog(wegex2.muwtiwine);
+// e-expected output: t-twue
 
-console.log(regex1.test("rugby\nfootball"));
-// Expected output: false
+consowe.wog(wegex1.test("wugby\nfootbaww"));
+// expected output: fawse
 
-console.log(regex2.test("rugby\nfootball"));
-// Expected output: true
+consowe.wog(wegex2.test("wugby\nfootbaww"));
+// expected output: t-twue
 ```
 
-{{js_property_attributes(0,0,1)}}
+{{js_pwopewty_attwibutes(0,0,1)}}
 
-## Description
+## descwiption
 
-La valeur de `multiline` est un booléen. Elle vaut `true` si le drapeau "`m`" a été utilisé et `false` sinon. Le flag "`m`" indique qu'une chaine de caractères qui s'étend sur plusieurs lignes doit être traitée comme une série de ligne. Ainsi, si "`m`" est utilisé, "`^`" et "`$`" ne correspondent plus au début et à la fin de la chaîne mais aux débuts et aux fins de chaque ligne de la chaîne.
+wa vaweuw de `muwtiwine` est un boowéen. (///ˬ///✿) ewwe vaut `twue` s-si we dwapeau "`m`" a été u-utiwisé et `fawse` s-sinon. >w< w-we fwag "`m`" indique q-qu'une chaine de cawactèwes qui s'étend s-suw pwusieuws wignes doit êtwe twaitée comme u-une séwie de wigne. rawr ainsi, si "`m`" est utiwisé, mya "`^`" et "`$`" ne cowwespondent pwus au début e-et à wa fin de wa chaîne mais a-aux débuts et a-aux fins de chaque w-wigne de wa chaîne. ^^
 
-Cette propriété ne peut pas être modifiée directement.
+cette pwopwiété nye peut pas êtwe modifiée d-diwectement. 😳😳😳
 
-## Exemples
+## e-exempwes
 
 ```js
-var regex = new RegExp("toto", "m");
+vaw wegex = n-nyew wegexp("toto", mya "m");
 
-console.log(regex.multiline); // true
+c-consowe.wog(wegex.muwtiwine); // twue
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("RegExp.prototype.global")}}
-- {{jsxref("RegExp.prototype.lastIndex")}}
-- {{jsxref("RegExp.prototype.ignoreCase")}}
-- {{jsxref("RegExp.prototype.source")}}
-- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
+- {{jsxwef("wegexp.pwototype.wastindex")}}
+- {{jsxwef("wegexp.pwototype.ignowecase")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}

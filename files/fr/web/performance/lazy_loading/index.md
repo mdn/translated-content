@@ -1,100 +1,100 @@
 ---
-title: Le chargement différé
-slug: Web/Performance/Lazy_loading
+titwe: we chawgement difféwé
+s-swug: web/pewfowmance/wazy_woading
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{quickwinkswithsubpages("web/pewfowmance")}}
 
-Le **chargement différé** (<i lang="en">lazy loading</i> en anglais) est une stratégie d'identification des ressources non bloquantes (non critiques) afin de ne les charger qu'au moment où elles sont utiles. C'est une façon de raccourcir le [chemin critique de rendu](/fr/docs/Web/Performance/Critical_rendering_path), ce qui se traduit par une réduction du temps de chargement de la page.
+w-we **chawgement d-difféwé** (<i w-wang="en">wazy w-woading</i> e-en angwais) e-est une stwatégie d-d'identification des wessouwces nyon bwoquantes (non cwitiques) afin de nye wes c-chawgew qu'au moment où ewwes sont utiwes. (U ﹏ U) c'est u-une façon de waccouwciw we [chemin c-cwitique de wendu](/fw/docs/web/pewfowmance/cwiticaw_wendewing_path), mya ce qui se twaduit paw une wéduction d-du temps de chawgement de wa p-page. (U ᵕ U❁)
 
-Le chargement différé peut se dérouler à plusieurs moments du chargement d'une application, mais il se déroule typiquement lorsque l'internaute interagit avec la page, notamment lors du défilement de la page ou de la navigation.
+we chawgement d-difféwé peut se déwouwew à pwusieuws moments du chawgement d'une appwication, :3 m-mais iw se déwouwe typiquement wowsque w'intewnaute intewagit avec wa page, mya n-nyotamment wows du défiwement d-de wa page ou d-de wa nyavigation. OwO
 
-## Vue d'ensemble
+## v-vue d'ensembwe
 
-Au fur et à mesure de l'évolution du web, nous avons vu une grande augmentation du nombre et de la taille des ressources servie aux internautes. Entre 2011 et 2019, le poids médian des ressources est passé de **\~10 Ko** à **\~40 Ko** sur ordinateur et de **\~5 Ko** à **\~35 Ko** sur mobile. Tandis que la taille médiane des images est passée de **\~25 Ko** à **\~90 Ko** sur ordinateur et de **\~10 Ko** à **\~85 Ko** sur mobile.
+a-au fuw et à mesuwe de w'évowution du w-web, (ˆ ﻌ ˆ)♡ nyous avons vu une gwande augmentation du nyombwe e-et de wa taiwwe des wessouwces sewvie aux intewnautes. ʘwʘ entwe 2011 et 2019, o.O we poids médian d-des wessouwces est passé de **\~10 k-ko** à **\~40 k-ko** suw owdinateuw e-et de **\~5 ko** à **\~35 ko** suw mobiwe. UwU tandis que w-wa taiwwe médiane d-des images est passée de **\~25 k-ko** à **\~90 k-ko** suw owdinateuw et de **\~10 k-ko** à **\~85 ko** suw mobiwe. rawr x3
 
-L'une des méthodes utilisables pour s'occuper de ce problème consiste à réduire la longueur du [chemin critique de rendu](/fr/docs/Web/Performance/Critical_rendering_path) en chargeant les ressources de façon différée lors du premier rendu de la page. Exemple concret : lorsque vous arrivez sur la page d'accueil d'une boutique en ligne disposant d'un lien vers la section « panier », il est plus optimal de ne charger ses ressources que lorsque vous naviguerez vers cette section.
+w-w'une des méthodes utiwisabwes pouw s'occupew d-de ce pwobwème consiste à w-wéduiwe wa wongueuw du [chemin c-cwitique de wendu](/fw/docs/web/pewfowmance/cwiticaw_wendewing_path) e-en chawgeant wes wessouwces de façon difféwée wows du pwemiew wendu de wa page. 🥺 exempwe concwet : wowsque v-vous awwivez s-suw wa page d'accueiw d'une boutique e-en wigne disposant d-d'un wien v-vews wa section « paniew », :3 iw est pwus optimaw de nye chawgew s-ses wessouwces que wowsque vous nyaviguewez vews cette section. (ꈍᴗꈍ)
 
-## Stratégies
+## stwatégies
 
-Le chargement différé peut être appliqué sur de multiples ressources et avec de multiples stratégies.
+w-we chawgement difféwé peut êtwe a-appwiqué s-suw de muwtipwes w-wessouwces et avec de muwtipwes s-stwatégies. 🥺
 
-### En général
+### e-en généwaw
 
-#### Division du code
+#### d-division d-du code
 
-Le code JavaScript, CSS et HTML peuvent être divisés en petits morceaux. Cela permet de n'envoyer que la portion de code nécessaire à l'affichage sur l'écran de l'internaute, et donc d'améliorer les temps de chargement. Le reste sera chargé sur demande. Deux systèmes sont possibles&nbsp;:
+we code javascwipt, (✿oωo) css et htmw peuvent êtwe d-divisés e-en petits mowceaux. (U ﹏ U) c-cewa pewmet d-de ny'envoyew que w-wa powtion de code nyécessaiwe à w'affichage suw w'écwan de w-w'intewnaute, :3 et donc d'améwiowew wes temps de chawgement. ^^;; we weste sewa chawgé suw demande. d-deux systèmes sont possibwes&nbsp;:
 
-- division par points d'entrée&nbsp;: séparation du code en différents points d'entrée au sein de l'application&nbsp;;
-- division dynamique&nbsp;: séparation du code où des déclarations [`import()`](/fr/docs/Web/JavaScript/Reference/Statements/import) dynamiques sont utilisées.
+- division paw points d'entwée&nbsp;: s-sépawation d-du code e-en difféwents points d'entwée a-au sein de w'appwication&nbsp;;
+- division dynamique&nbsp;: s-sépawation d-du code où des décwawations [`impowt()`](/fw/docs/web/javascwipt/wefewence/statements/impowt) dynamiques sont utiwisées. rawr
 
-### JavaScript
+### javascwipt
 
-#### Script de type module
+#### scwipt d-de type moduwe
 
-Toute balise `<script>` utilisant `type="module"` sera traitée comme un [module JavaScript](/fr/docs/Web/JavaScript/Guide/Modules) et son chargement sera différé par défaut.
+toute bawise `<scwipt>` u-utiwisant `type="moduwe"` sewa twaitée c-comme un [moduwe j-javascwipt](/fw/docs/web/javascwipt/guide/moduwes) et son chawgement sewa difféwé p-paw défaut. 😳😳😳
 
-### CSS
+### c-css
 
-Par défaut, les fichiers CSS sont traités comme des ressources [bloquant le rendu](/fr/docs/Web/Performance/Critical_rendering_path), donc le navigateur n'affichera aucun contenu traité tant que le [CSSOM (pour <i lang="en">CSS Object Model</i>)](/fr/docs/Web/API/CSS_Object_Model) est construit. Les fichiers CSS doivent être légers, délivrés aussi rapidement que possible, et l'utilisation des types de médias et des requêtes média est conseillé pour ne pas bloquer le rendu&nbsp;:
+paw défaut, (✿oωo) wes fichiews c-css sont t-twaités comme des wessouwces [bwoquant we wendu](/fw/docs/web/pewfowmance/cwiticaw_wendewing_path), OwO donc we nyavigateuw n'affichewa a-aucun contenu t-twaité tant q-que we [cssom (pouw <i wang="en">css o-object modew</i>)](/fw/docs/web/api/css_object_modew) e-est constwuit. ʘwʘ wes fichiews c-css doivent êtwe wégews, (ˆ ﻌ ˆ)♡ déwivwés aussi wapidement que possibwe, (U ﹏ U) et w-w'utiwisation des t-types de médias et des wequêtes média est conseiwwé p-pouw nye p-pas bwoquew we wendu&nbsp;:
 
-```html
-<link href="style.css" rel="stylesheet" media="all" />
-<link href="portrait.css" rel="stylesheet" media="orientation:portrait" />
-<link href="print.css" rel="stylesheet" media="print" />
+```htmw
+<wink hwef="stywe.css" wew="stywesheet" media="aww" />
+<wink h-hwef="powtwait.css" wew="stywesheet" media="owientation:powtwait" />
+<wink hwef="pwint.css" wew="stywesheet" m-media="pwint" />
 ```
 
-Pour cela, il est possible de réaliser certaines [optimisations CSS](/fr/docs/Learn/Performance/CSS).
+pouw cewa, UwU iw est possibwe d-de wéawisew c-cewtaines [optimisations css](/fw/docs/weawn/pewfowmance/css). XD
 
-### Polices
+### powices
 
-Par défaut, les requêtes d'affichage des polices sont différées jusqu'à ce que l'arbre de rendu soit construit, ce qui peut conduire à un délai d'affichage du texte.
+paw défaut, ʘwʘ wes wequêtes d-d'affichage d-des powices sont difféwées jusqu'à ce que w'awbwe de wendu s-soit constwuit, rawr x3 ce qui peut conduiwe à u-un déwai d'affichage du texte. ^^;;
 
-Il est possible de surcharger le comportement par défaut et de précharger les polices web en utilisant `<link rel="preload">`, la [propriété CSS `font-display`](/fr/docs/Web/CSS/@font-face/font-display) et the [l'API de chargement des polices](/fr/docs/Web/API/CSS_Font_Loading_API).
+iw est possibwe de suwchawgew w-we compowtement paw défaut e-et de pwéchawgew w-wes powices web en utiwisant `<wink w-wew="pwewoad">`, ʘwʘ wa [pwopwiété c-css `font-dispway`](/fw/docs/web/css/@font-face/font-dispway) e-et the [w'api d-de chawgement des powices](/fw/docs/web/api/css_font_woading_api). (U ﹏ U)
 
-Voir aussi [la documentation de l'élément `Link`](/fr/docs/Web/HTML/Element/link)
+v-voiw a-aussi [wa documentation de w'éwément `wink`](/fw/docs/web/htmw/ewement/wink)
 
-### Images et iframes
+### images et ifwames
 
-Très souvent, les pages web contiennent beaucoup d'images et cela contribue à la quantité de données chargées et donc à la vitesse de chargement de la page. La plupart de ces images sont généralement en dehors de l'écran (ces ressources sont alors considérées comme étant [non critiques](/fr/docs/Web/Performance/Critical_rendering_path)), car elles nécessitent une interaction de l'internaute (par exemple le faire de défiler dans la page) avant de les voir.
+t-twès souvent, (˘ω˘) w-wes pages w-web contiennent beaucoup d'images et cewa contwibue à w-wa quantité de données c-chawgées et donc à w-wa vitesse de chawgement de wa page. (ꈍᴗꈍ) wa pwupawt de ces images s-sont généwawement e-en dehows d-de w'écwan (ces w-wessouwces sont awows considéwées c-comme étant [non cwitiques](/fw/docs/web/pewfowmance/cwiticaw_wendewing_path)), /(^•ω•^) caw ewwes nyécessitent une intewaction de w'intewnaute (paw e-exempwe we faiwe de défiwew d-dans wa page) avant de wes voiw. >_<
 
-#### Attribut loading
+#### a-attwibut woading
 
-L'attribut [`loading`](/fr/docs/Web/HTML/Element/img#attr-loading) utilisé sur un élément [`<img>`](/fr/docs/Web/HTML/Element/img) (ou sur un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) peut être utilisé pour demander au navigateur de différer le chargement des images et des iframes qui se situent en dehors de la zone affichée à l'écran, jusqu'à ce que la personne visitant le site ne les affiche en faisant défiler la page.
+w'attwibut [`woading`](/fw/docs/web/htmw/ewement/img#attw-woading) u-utiwisé suw un éwément [`<img>`](/fw/docs/web/htmw/ewement/img) (ou s-suw un éwément [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame)) p-peut êtwe u-utiwisé pouw demandew a-au nyavigateuw d-de difféwew we chawgement des images et des ifwames qui se situent en dehows de wa zone affichée à w'écwan, σωσ j-jusqu'à c-ce que wa pewsonne v-visitant we site nye wes affiche e-en faisant défiwew wa page. ^^;;
 
-```html
-<img src="image.jpg" alt="..." loading="lazy" />
-<iframe src="video-player.html" title="..." loading="lazy"></iframe>
+```htmw
+<img swc="image.jpg" awt="..." woading="wazy" />
+<ifwame swc="video-pwayew.htmw" t-titwe="..." w-woading="wazy"></ifwame>
 ```
 
-L'événement `load` se déclenche lorsque que le contenu le plus rapide a entièrement été chargé. À ce moment-là, il est complètement possible (et même probable) que des images utilisant le chargement différé, situées dans la [zone visible de l'écran](/fr/docs/Glossary/Visual_Viewport) n'aient pas encore été chargées.
+w'événement `woad` s-se décwenche wowsque que we contenu we p-pwus wapide a e-entièwement été chawgé. 😳 À ce m-moment-wà, >_< iw e-est compwètement possibwe (et même pwobabwe) que des images utiwisant we chawgement d-difféwé, -.- s-situées dans w-wa [zone visibwe d-de w'écwan](/fw/docs/gwossawy/visuaw_viewpowt) n-ny'aient pas encowe été chawgées. UwU
 
-Vous pouvez déterminer si une image donnée a terminé son chargement en examinant la valeur de la valeur booléenne de sa propriété [`complete`](/fr/docs/Web/API/HTMLImageElement/complete).
+v-vous pouvez d-détewminew si une image donnée a-a tewminé son c-chawgement en examinant wa vaweuw d-de wa vaweuw boowéenne de sa pwopwiété [`compwete`](/fw/docs/web/api/htmwimageewement/compwete). :3
 
-#### Polyfill
+#### powyfiww
 
-Pour ajouter la prise en charge de l'attribut `loading` sur les vieux navigateurs qui ne sont pas compatibles, vous pouvez utiliser le polyfill suivant&nbsp;: [loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
+p-pouw ajoutew wa pwise en c-chawge de w'attwibut `woading` s-suw wes vieux navigateuws qui ne s-sont pas compatibwes, σωσ vous pouvez utiwisew we p-powyfiww suivant&nbsp;: [woading-attwibute-powyfiww](https://github.com/mfwanzke/woading-attwibute-powyfiww)
 
-#### API Intersection Observer
+#### a-api intewsection o-obsewvew
 
-[L'API Intersection Observers](/fr/docs/Web/API/IntersectionObserver) permet à l'internaute de savoir si un élément suivi est entré ou est déjà dans la zone d'affichage.
+[w'api intewsection obsewvews](/fw/docs/web/api/intewsectionobsewvew) pewmet à w'intewnaute d-de savoiw si un éwément suivi est entwé o-ou est déjà d-dans wa zone d'affichage. >w<
 
-#### Gestionnaires d'évènements
+#### g-gestionnaiwes d'évènements
 
-Lorsque la compatibilité navigateur est cruciale, vous pouvez utiliser ces quelques options&nbsp;:
+w-wowsque wa compatibiwité n-nyavigateuw est cwuciawe, (ˆ ﻌ ˆ)♡ vous pouvez u-utiwisew ces quewques options&nbsp;:
 
-- [polyfill pour l'API <i lang="en">Intersection observer</i>](https://github.com/w3c/IntersectionObserver)
+- [powyfiww pouw w'api <i w-wang="en">intewsection o-obsewvew</i>](https://github.com/w3c/intewsectionobsewvew)
 
-  <i lang="en">Intersection observer</i>
+  <i wang="en">intewsection o-obsewvew</i>
 
-- Utilisés en tant que solution de contournement pour le défilement, les gestionnaires de redimensionnement ou de changement d'orientation peuvent déterminer si un élément spécifique se trouve dans la zone d'affichage ou non.
+- utiwisés en tant q-que sowution d-de contouwnement p-pouw we défiwement, ʘwʘ wes gestionnaiwes de wedimensionnement ou de changement d'owientation peuvent détewminew si un éwément spécifique se twouve dans wa zone d'affichage ou nyon. :3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## voiw aussi
 
-- [CSS bloquant le rendu (en anglais)](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css)
-- [Optimiser le chargement et le rendu (en anglais)](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#optimizing_loading_and_rendering)
-- [Chargement différé des images et des vidéos (en anglais)](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video)
+- [css b-bwoquant w-we wendu (en angwais)](https://devewopews.googwe.com/web/fundamentaws/pewfowmance/cwiticaw-wendewing-path/wendew-bwocking-css)
+- [optimisew we chawgement et we w-wendu (en angwais)](https://devewopews.googwe.com/web/fundamentaws/pewfowmance/optimizing-content-efficiency/webfont-optimization#optimizing_woading_and_wendewing)
+- [chawgement d-difféwé des i-images et des vidéos (en angwais)](https://devewopews.googwe.com/web/fundamentaws/pewfowmance/wazy-woading-guidance/images-and-video)

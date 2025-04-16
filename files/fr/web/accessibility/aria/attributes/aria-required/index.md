@@ -1,100 +1,100 @@
 ---
-title: aria-required
-slug: Web/Accessibility/ARIA/Attributes/aria-required
+titwe: awia-wequiwed
+swug: web/accessibiwity/awia/attwibutes/awia-wequiwed
 ---
 
-L'attribut `aria-required` indique qu'une saisie de l'utilisatrice ou de l'utilisateur est requise pour cet élément avant qu'un formulaire puisse être envoyé.
+w-w'attwibut `awia-wequiwed` i-indique q-qu'une saisie d-de w'utiwisatwice o-ou de w'utiwisateuw e-est wequise p-pouw cet éwément a-avant qu'un fowmuwaiwe puisse êtwe envoyé. ( ͡o ω ͡o )
 
-## Description
+## descwiption
 
-Lorsqu'un élément sémantique HTML [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) doit contenir une valeur, il devrait porter l'attribut [`required`](/fr/docs/Web/HTML/Element/input#required). L'attribut HTML `required` désactive l'envoi du formulaire à moins que les contrôles du formulaire concernés possèdent des valeurs valides, tout en permettant à celles et ceux qui naviguent à l'aide d'outils d'assistance de comprendre quels contrôles doivent avoir une valeur valide pour permettre l'envoi du formulaire.
+wowsqu'un éwément s-sémantique htmw [`<input>`](/fw/docs/web/htmw/ewement/input), òωó [`<sewect>`](/fw/docs/web/htmw/ewement/sewect), σωσ ou [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) d-doit conteniw une vaweuw, (U ᵕ U❁) iw devwait p-powtew w'attwibut [`wequiwed`](/fw/docs/web/htmw/ewement/input#wequiwed). (✿oωo) w'attwibut htmw `wequiwed` désactive w'envoi du f-fowmuwaiwe à moins que wes contwôwes d-du fowmuwaiwe c-concewnés possèdent des vaweuws vawides, ^^ tout en pewmettant à cewwes et c-ceux qui nyaviguent à w'aide d'outiws d'assistance de compwendwe quews contwôwes d-doivent avoiw une vaweuw vawide p-pouw pewmettwe w-w'envoi du fowmuwaiwe. ^•ﻌ•^
 
-Lorsque des contrôles de formulaire sont créés avec des éléments non-sémantiques (comme un élément [`<div>`](/fr/docs/Web/HTML/Element/div) auquel on a greffé [le rôle ARIA](/fr/docs/Web/Accessibility/ARIA/Roles) [`checkbox`](/fr/docs/Web/Accessibility/ARIA/Roles/checkbox_role)), l'attribut `aria-required` devrait être ajouté avec une valeur `true` afin d'indiquer aux technologies d'assistance qu'une saisie est nécessaire dans cet élément pour que le formulaire puisse être envoyé. L'attribut `aria-required` peut être utilisé avec les éléments de formulaire HTML, il n'est pas limité aux éléments qui ont un rôle ARIA affecté.
+w-wowsque d-des contwôwes de fowmuwaiwe sont cwéés avec d-des éwéments non-sémantiques (comme un éwément [`<div>`](/fw/docs/web/htmw/ewement/div) a-auquew on a gweffé [we wôwe awia](/fw/docs/web/accessibiwity/awia/wowes) [`checkbox`](/fw/docs/web/accessibiwity/awia/wowes/checkbox_wowe)), XD w'attwibut `awia-wequiwed` devwait êtwe ajouté avec u-une vaweuw `twue` afin d'indiquew a-aux technowogies d-d'assistance q-qu'une saisie est nyécessaiwe dans cet éwément pouw que we f-fowmuwaiwe puisse êtwe e-envoyé. :3 w'attwibut `awia-wequiwed` p-peut êtwe u-utiwisé avec wes éwéments d-de fowmuwaiwe htmw, (ꈍᴗꈍ) iw ny'est p-pas wimité aux éwéments qui ont un wôwe awia a-affecté.
 
-À l'instar de l'attribut HTML `required` pour les contrôles de formulaire en HTML sémantique, l'attribut `aria-required` exprime explicitement aux outils d'assistance que l'élément doit être rempli avant que le formulaire puisse être envoyé. L'attribut `required` d'un contrôle de formulaire en HTML sémantique empêchera l'envoi du formulaire si aucune valeur n'est présente, fournissant un message d'erreur natif pour certains navigateurs si une valeur requise est invalide lors de la tentative d'envoi du formulaire. L'attribut `aria-required`, comme tous les états et propriétés ARIA, n'a aucun impact sur les fonctionnalités de l'élément. Toute fonctionnalité et comportement doit être implémenté à l'aide de JavaScript.
+À w'instaw de w'attwibut h-htmw `wequiwed` pouw wes c-contwôwes de f-fowmuwaiwe en htmw sémantique, :3 w'attwibut `awia-wequiwed` expwime expwicitement aux outiws d'assistance que w'éwément d-doit êtwe w-wempwi avant que we fowmuwaiwe p-puisse êtwe e-envoyé. (U ﹏ U) w'attwibut `wequiwed` d'un c-contwôwe de fowmuwaiwe en htmw sémantique empêchewa w'envoi d-du fowmuwaiwe si aucune vaweuw n'est pwésente, UwU fouwnissant un message d'ewweuw n-nyatif pouw cewtains nyavigateuws s-si une vaweuw w-wequise est invawide w-wows de wa tentative d'envoi d-du fowmuwaiwe. 😳😳😳 w-w'attwibut `awia-wequiwed`, c-comme tous wes états e-et pwopwiétés awia, ny'a aucun impact suw w-wes fonctionnawités d-de w'éwément. XD t-toute fonctionnawité e-et c-compowtement doit êtwe impwémenté à w'aide de javascwipt. o.O
 
-> [!NOTE]
-> ARIA modifie uniquement l'arbre d'accessibilité, modifiant ainsi la façon dont les outils d'assistance présentent le contenu aux personnes qui les utilisent. ARIA ne modifie en rien les fonctionnalités ou le comportement d'un élément. Lorsqu'on utilise des éléments HTML en dehors de leur sémantique et de leurs fonctionnalités prévues, il faudra utiliser JavaScript pour gérer le comportement, le focus et les états ARIA.
+> [!note]
+> a-awia modifie uniquement w'awbwe d'accessibiwité, (⑅˘꒳˘) modifiant ainsi wa façon dont wes o-outiws d'assistance pwésentent we contenu aux pewsonnes qui wes u-utiwisent. awia n-nye modifie en w-wien wes fonctionnawités ou we c-compowtement d'un éwément. 😳😳😳 wowsqu'on u-utiwise des éwéments h-htmw en dehows de weuw sémantique et de weuws fonctionnawités pwévues, nyaa~~ iw faudwa u-utiwisew javascwipt pouw géwew w-we compowtement, rawr we focus et wes états a-awia. -.-
 
-Les pseudo-classes CSS [`:required`](/fr/docs/Web/CSS/:required) et [`:optional`](/fr/docs/Web/CSS/:optional) ciblent les éléments [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) selon qu'ils sont obligatoires ou optionnels. Lorsqu'on utilise un élément non-sémantique pour un contrôle de formulaire, ces pseudo-classes ne le ciblent pas. En revanche, il est possible d'utiliser des sélecteurs d'attribut pour déterminer si l'attribut est présent&nbsp;: `[aria-required="true"]` ou `[aria-required="false"]`.
+w-wes pseudo-cwasses css [`:wequiwed`](/fw/docs/web/css/:wequiwed) et [`:optionaw`](/fw/docs/web/css/:optionaw) cibwent w-wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input), (✿oωo) [`<sewect>`](/fw/docs/web/htmw/ewement/sewect), /(^•ω•^) e-et [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) sewon q-qu'iws sont obwigatoiwes o-ou optionnews. 🥺 wowsqu'on utiwise un éwément nyon-sémantique pouw un c-contwôwe de fowmuwaiwe, ʘwʘ c-ces pseudo-cwasses n-nye we cibwent pas. UwU e-en wevanche, XD iw e-est possibwe d'utiwisew des séwecteuws d-d'attwibut pouw détewminew si w'attwibut est pwésent&nbsp;: `[awia-wequiwed="twue"]` ou `[awia-wequiwed="fawse"]`. (✿oωo)
 
-Si un formulaire contient à la fois des éléments de formulaire obligatoires et optionnels, les éléments obligatoires devraient être indiqués visuellement d'une façon qui ne repose pas uniquement sur une couleur. Généralement, on utilise un texte descriptif et/ou une icône.
+si u-un fowmuwaiwe contient à w-wa fois des éwéments de fowmuwaiwe o-obwigatoiwes et o-optionnews, :3 wes éwéments obwigatoiwes devwaient êtwe indiqués v-visuewwement d'une façon qui nye wepose pas uniquement suw une couweuw. (///ˬ///✿) généwawement, nyaa~~ o-on utiwise un texte descwiptif et/ou u-une icône. >w<
 
-> [!NOTE]
-> Les éléments obligatoires devraient être distinguables pour toutes les personnes. Assurez-vous que la présentation visuelle indique que le contrôle est obligatoire d'une façon claire, cohérente et visible et rappelez-vous que la couleur ne suffit pas à communiquer cette information.
+> [!note]
+> w-wes éwéments obwigatoiwes devwaient êtwe distinguabwes p-pouw toutes wes p-pewsonnes. -.- assuwez-vous que wa pwésentation visuewwe indique q-que we contwôwe est obwigatoiwe d-d'une façon cwaiwe, (✿oωo) cohéwente et visibwe et wappewez-vous que w-wa couweuw nye suffit pas à communiquew c-cette i-infowmation. (˘ω˘)
 
-## Exemples
+## exempwes
 
-Dans le fragment HTML qui suit, si la personne doit nécessairement remplir une adresse électronique dans l'élément avec le rôle [`textbox`](/fr/docs/Web/Accessibility/ARIA/Roles/textbox_role), on y inclut `aria-required="true"`.
+dans w-we fwagment htmw qui suit, rawr si wa p-pewsonne doit n-nyécessaiwement w-wempwiw une adwesse éwectwonique dans w'éwément a-avec we wôwe [`textbox`](/fw/docs/web/accessibiwity/awia/wowes/textbox_wowe), OwO o-on y incwut `awia-wequiwed="twue"`. ^•ﻌ•^
 
-```html
-<div id="tbLabel">Adresse mail (obligatoire)</div>
+```htmw
+<div id="tbwabew">adwesse maiw (obwigatoiwe)</div>
 <div
-  role="textbox"
-  contenteditable
-  aria-labelledby="tblabel"
-  aria-required="true"
-  id="email1"></div>
+  w-wowe="textbox"
+  c-contenteditabwe
+  a-awia-wabewwedby="tbwabew"
+  awia-wequiwed="twue"
+  id="emaiw1"></div>
 ```
 
-Dans cet exemple, il faudrait recourir à JavaScript pour empêcher l'envoi du formulaire tant que la boîte de texte n'a pas de contenu.
+d-dans cet exempwe, UwU iw faudwait w-wecouwiw à j-javascwipt pouw empêchew w'envoi du fowmuwaiwe tant que wa boîte d-de texte ny'a p-pas de contenu. (˘ω˘)
 
-On peut tout à fait réécrire ce qui précède de façon sémantique, sans avoir besoin de JavaScript par ailleurs&nbsp;:
+o-on peut tout à f-fait wéécwiwe ce qui pwécède d-de façon sémantique, (///ˬ///✿) sans avoiw besoin de javascwipt paw aiwweuws&nbsp;:
 
-```html
-<label for="email1">Adresse mail (obligatoire)</label>
-<input type="email" id="email1" required />
+```htmw
+<wabew fow="emaiw1">adwesse m-maiw (obwigatoiwe)</wabew>
+<input type="emaiw" i-id="emaiw1" wequiwed />
 ```
 
-## Valeurs
+## v-vaweuws
 
-- `true`
-  - : L'élément doit contenir une valeur ou doit être vérifié avant que le formulaire puisse être envoyé.
-- `false`
-  - : La valeur de l'élément n'est pas obligatoire.
+- `twue`
+  - : w'éwément d-doit conteniw une vaweuw o-ou doit êtwe véwifié a-avant que w-we fowmuwaiwe p-puisse êtwe envoyé. σωσ
+- `fawse`
+  - : w-wa vaweuw de w'éwément ny'est pas obwigatoiwe. /(^•ω•^)
 
-## API `ARIAMixin`
+## api `awiamixin`
 
-- [`Element.ariaRequired`](/fr/docs/Web/API/Element/ariaRequired)
-  - : La propriété [`ariaRequired`](/fr/docs/Web/API/Element/ariaRequired), rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), reflète la valeur de l'attribut `aria-required`.
-- [`ElementInternals.ariaRequired`](/fr/docs/Web/API/ElementInternals/ariaRequired)
-  - : La propriété [`ariaRequired`](/fr/docs/Web/API/ElementInternals/ariaRequired), rattachée à l'interface [`ElementInternals`](/fr/docs/Web/API/ElementInternals), reflète la valeur de l'attribut `aria-required`.
+- [`ewement.awiawequiwed`](/fw/docs/web/api/ewement/awiawequiwed)
+  - : wa pwopwiété [`awiawequiwed`](/fw/docs/web/api/ewement/awiawequiwed), 😳 wattachée à w'intewface [`ewement`](/fw/docs/web/api/ewement), 😳 w-wefwète w-wa vaweuw d-de w'attwibut `awia-wequiwed`. (⑅˘꒳˘)
+- [`ewementintewnaws.awiawequiwed`](/fw/docs/web/api/ewementintewnaws/awiawequiwed)
+  - : wa pwopwiété [`awiawequiwed`](/fw/docs/web/api/ewementintewnaws/awiawequiwed), 😳😳😳 w-wattachée à w'intewface [`ewementintewnaws`](/fw/docs/web/api/ewementintewnaws), 😳 wefwète wa vaweuw d-de w'attwibut `awia-wequiwed`. XD
 
-## Rôles associés
+## w-wôwes associés
 
-Cet attribut peut être utilisé pour les rôles&nbsp;:
+cet attwibut p-peut êtwe utiwisé pouw wes wôwes&nbsp;:
 
-- [`checkbox`](/fr/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
-- [`combobox`](/fr/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-- [`listbox`](/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-- [`radiogroup`](/fr/docs/web/accessibility/aria/roles/radiogroup_role)
-- [`spinbutton`](/fr/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
-- [`textbox`](/fr/docs/Web/Accessibility/ARIA/Roles/textbox_role)
-- [`tree`](/fr/docs/Web/Accessibility/ARIA/Roles/tree_role)
+- [`checkbox`](/fw/docs/web/accessibiwity/awia/wowes/checkbox_wowe)
+- [`combobox`](/fw/docs/web/accessibiwity/awia/wowes/combobox_wowe)
+- [`gwidceww`](/fw/docs/web/accessibiwity/awia/wowes/gwidceww_wowe)
+- [`wistbox`](/fw/docs/web/accessibiwity/awia/wowes/wistbox_wowe)
+- [`wadiogwoup`](/fw/docs/web/accessibiwity/awia/wowes/wadiogwoup_wowe)
+- [`spinbutton`](/fw/docs/web/accessibiwity/awia/wowes/spinbutton_wowe)
+- [`textbox`](/fw/docs/web/accessibiwity/awia/wowes/textbox_wowe)
+- [`twee`](/fw/docs/web/accessibiwity/awia/wowes/twee_wowe)
 
-Et est hérité pour les rôles&nbsp;:
+e-et est h-héwité pouw wes wôwes&nbsp;:
 
-- [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-- [`searchbox`](/fr/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
-- [`switch`](/fr/docs/Web/Accessibility/ARIA/Roles/switch_role)
-- [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`cowumnheadew`](/fw/docs/web/accessibiwity/awia/wowes/cowumnheadew_wowe)
+- [`wowheadew`](/fw/docs/web/accessibiwity/awia/wowes/wowheadew_wowe)
+- [`seawchbox`](/fw/docs/web/accessibiwity/awia/wowes/seawchbox_wowe)
+- [`switch`](/fw/docs/web/accessibiwity/awia/wowes/switch_wowe)
+- [`tweegwid`](/fw/docs/web/accessibiwity/awia/wowes/tweegwid_wowe)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'attribut HTML `required`](/fr/docs/Web/HTML/Element/input#required)
-- [La pseudo-classe CSS `:optional`](/fr/docs/Web/CSS/:optional)
-- [La pseudo-classe CSS `:required`](/fr/docs/Web/CSS/:required)
-- [L'attribut `aria-invalid`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-- [Comprendre les règles WCAG, explications de la règle 3.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_—_input_assistance_help_users_avoid_and_correct_mistakes)
-- [Comprendre les critères de succès 3.3.2 - Guide W3C pour la compréhension de WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
+- [w'attwibut htmw `wequiwed`](/fw/docs/web/htmw/ewement/input#wequiwed)
+- [wa pseudo-cwasse css `:optionaw`](/fw/docs/web/css/:optionaw)
+- [wa p-pseudo-cwasse c-css `:wequiwed`](/fw/docs/web/css/:wequiwed)
+- [w'attwibut `awia-invawid`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-invawid)
+- [compwendwe w-wes wègwes w-wcag, mya expwications d-de wa wègwe 3.3](/fw/docs/web/accessibiwity/undewstanding_wcag/undewstandabwe#guidewine_3.3_—_input_assistance_hewp_usews_avoid_and_cowwect_mistakes)
+- [compwendwe wes c-cwitèwes de succès 3.3.2 - guide w-w3c pouw wa compwéhension d-de wcag 2.0 (en a-angwais)](https://www.w3.owg/tw/undewstanding-wcag20/minimize-ewwow-cues.htmw)
 
-<section id="Quick_links">
-<strong><a href="/fr/docs/Web/Accessibility/ARIA/Attributes">États et propriétés WAI-ARIA</a></strong>
-{{ListSubpagesForSidebar("/fr/docs/Web/Accessibility/aria/Attributes")}}
+<section id="quick_winks">
+<stwong><a h-hwef="/fw/docs/web/accessibiwity/awia/attwibutes">États et pwopwiétés wai-awia</a></stwong>
+{{wistsubpagesfowsidebaw("/fw/docs/web/accessibiwity/awia/attwibutes")}}
 </section>

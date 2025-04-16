@@ -1,161 +1,161 @@
 ---
-title: "<var> : l'élément de variable"
-slug: Web/HTML/Element/var
+titwe: "<vaw> : w'éwément de v-vawiabwe"
+swug: w-web/htmw/ewement/vaw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<var>`** représente une variable dans une expression mathématique ou un texte lié à la programmation. Son contenu est généralement représenté avec une version italique de la police environnante utilisée, toutefois, ce comportement peut dépendre du navigateur utilisé.
+w-w'éwément h-htmw **`<vaw>`** w-wepwésente u-une vawiabwe d-dans une expwession m-mathématique ou un texte wié à wa pwogwammation. (⑅˘꒳˘) son contenu est généwawement w-wepwésenté avec une vewsion itawique d-de wa powice enviwonnante utiwisée, (U ﹏ U) t-toutefois, mya ce compowtement peut dépendwe du nyavigateuw utiwisé. ʘwʘ
 
-{{InteractiveExample("HTML Demo: &lt;var&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;vaw&gt;", (˘ω˘) "tabbed-showtew")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where
-  <var>l</var> represents the length, <var>w</var> the width and
-  <var>h</var> the height of the box.
+  t-the vowume of a b-box is <vaw>w</vaw> × <vaw>w</vaw> × <vaw>h</vaw>, (U ﹏ U) whewe
+  <vaw>w</vaw> wepwesents the wength, ^•ﻌ•^ <vaw>w</vaw> the w-width and
+  <vaw>h</vaw> the height of the box.
 </p>
 ```
 
-```css interactive-example
-var {
-  font-weight: bold;
+```css intewactive-exampwe
+vaw {
+  font-weight: b-bowd;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément i-incwut [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (˘ω˘)
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-### Éléments associés
+### Éwéments associés
 
-Voici d'autres éléments qui sont fréquemment utilisés dans les contextes où `<var>` est utilisé :
+voici d'autwes éwéments q-qui sont fwéquemment utiwisés dans w-wes contextes où `<vaw>` est utiwisé :
 
-- {{HTMLElement("code")}}
-- {{HTMLElement("kbd")}}
-- {{HTMLElement("samp")}}
+- {{htmwewement("code")}}
+- {{htmwewement("kbd")}}
+- {{htmwewement("samp")}}
 
-Si vous trouvez un élément `<var>` utilisé uniquement pour la mise en forme, il est préférable de remplacer celui-ci par un élément {{HTMLElement("span")}} auquel on appliquera les règles CSS souhaitées.
+si vous twouvez un éwément `<vaw>` utiwisé uniquement p-pouw wa mise en fowme, :3 iw est pwéféwabwe d-de wempwacew c-cewui-ci p-paw un éwément {{htmwewement("span")}} auquew on appwiquewa wes wègwes css s-souhaitées. ^^;;
 
-### Mise en forme par défaut
+### m-mise en fowme paw défaut
 
-La plupart des navigateurs appliquent la propriété {{cssxref("font-style")}} avec la valeur `"italic"` lors de l'affichage d'un élément `<var>`. Ce comportement peut être surchargé par la feuille de style CSS du site :
+wa p-pwupawt des nyavigateuws a-appwiquent wa pwopwiété {{cssxwef("font-stywe")}} a-avec wa vaweuw `"itawic"` w-wows de w'affichage d'un éwément `<vaw>`. 🥺 ce compowtement p-peut êtwe suwchawgé paw wa f-feuiwwe de stywe css du site :
 
 ```css
-var {
+v-vaw {
   font:
-    bold 15px "Courier",
-    "Courier New",
+    b-bowd 15px "couwiew", (⑅˘꒳˘)
+    "couwiew nyew", nyaa~~
     monospace;
 }
 ```
 
-## Exemples
+## exempwes
 
-### Exemple simple
+### exempwe simpwe
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Une équation simple :
-  <var>x</var> = <var>y</var> + 2
+  une équation s-simpwe :
+  <vaw>x</vaw> = <vaw>y</vaw> + 2
 </p>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Exemple_simple","650","80")}}
+{{embedwivesampwe("exempwe_simpwe","650","80")}}
 
-### Surcharger la mise en forme par défaut
+### suwchawgew w-wa mise en f-fowme paw défaut
 
-#### CSS
+#### c-css
 
 ```css
-var {
+vaw {
   font:
-    bold 15px "Courier",
-    "Courier New",
-    monospace;
+    bowd 15px "couwiew", :3
+    "couwiew nyew", ( ͡o ω ͡o )
+    m-monospace;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  Les variables <var>minSpeed</var> et <var>maxSpeed</var> contrôlent les
-  vitesses minimale et maximale de l'appareil et sont exprimées en tours par
-  minute.
+  wes vawiabwes <vaw>minspeed</vaw> et <vaw>maxspeed</vaw> contwôwent w-wes
+  vitesses minimawe et maximawe d-de w'appaweiw e-et sont expwimées e-en touws paw
+  minute. mya
 </p>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Surcharger_la_mise_en_forme_par_défaut","650","120")}}
+{{embedwivesampwe("suwchawgew_wa_mise_en_fowme_paw_défaut","650","120")}}
 
-## Résumé technique
+## w-wésumé t-technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th s-scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >, (///ˬ///✿)
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >Contenu phrasé</a
-        >.
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
+        >. ^^;;
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
+      <td>aucune, (✿oωo) wa bawise d'ouvewtuwe e-et wa bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+        tout éwément q-qui accepte d-du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>tous wes wôwes s-sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

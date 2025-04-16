@@ -1,82 +1,82 @@
 ---
-title: itemtype
-slug: Web/HTML/Global_attributes/itemtype
+titwe: itemtype
+swug: web/htmw/gwobaw_attwibutes/itemtype
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`itemtype`** définit l'URL du vocabulaire qui sera utilisé pour définir les propriétés des objets dans la structure de données. `itemscope` est utilisé afin de définir la portée, dans le document, où le vocabulaire défini sera actif.
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`itemtype`** d-définit w'uww d-du vocabuwaiwe q-qui sewa utiwisé p-pouw définiw w-wes pwopwiétés d-des objets dans wa stwuctuwe de données. 😳 `itemscope` est utiwisé afin de définiw w-wa powtée, (ˆ ﻌ ˆ)♡ dans we document, 😳😳😳 où we vocabuwaiwe d-défini sewa actif. (U ﹏ U)
 
-L'attribut `itemtype` doit avoir une valeur qui est un ensemble non ordonné de fragments uniques, sensible à la casse. Chaque fragment doit être une URL absolue valide et tous les fragments participent à la définition du même vocabulaire. La valeur de l'attribut doit avoir au moins un fragment.
+w'attwibut `itemtype` d-doit avoiw une vaweuw qui est un ensembwe nyon owdonné de fwagments u-uniques, (///ˬ///✿) sensibwe à wa casse. 😳 c-chaque fwagment d-doit êtwe une uww absowue vawide et tous wes fwagments pawticipent à wa d-définition du même vocabuwaiwe. wa vaweuw de w'attwibut doit avoiw au moins un f-fwagment. 😳
 
-Les types d'objet doivent tous être définis dans des spécifications de vocabulaire (comme [schema.org](https://schema.org/)) et doivent tous être définis avec le même vocabulaire.
+wes types d'objet doivent t-tous êtwe d-définis dans des s-spécifications d-de vocabuwaiwe (comme [schema.owg](https://schema.owg/)) et doivent tous êtwe d-définis avec we même vocabuwaiwe.
 
-L'attribut `itemtype` peut uniquement être défini pour les éléments qui ont un attribut `itemscope`.
+w'attwibut `itemtype` p-peut uniquement êtwe défini pouw wes éwéments qui ont un attwibut `itemscope`. σωσ
 
-Google et les autres moteurs de recherche participent au vocabulaire défini par [schema.org](https://schema.org/) pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple [`MusicEvent`](https://schema.org/MusicEvent) indique un événement musical dont les propriétés [`startDate`](https://schema.org/startDate) et [`location`](https://schema.org/location) utilisées pour définir les détails du concert. Dans ce cas, l'URL [`http://schema.org/MusicEvent`](https://schema.org/MusicEvent) sera l'URL utilisée pour l'attribut `itemtype` et les propriétés `startDate` et `location` seront les propriétés utilisées, définies par [`http://schema.org/MusicEvent`](https://schema.org/MusicEvent).
+googwe et wes autwes m-moteuws de wechewche pawticipent a-au vocabuwaiwe d-défini paw [schema.owg](https://schema.owg/) p-pouw stwuctuwew wes données. rawr x3 ce vocabuwaiwe définit un ensembwe s-standawd de t-types et de nyoms de pwopwiétés. OwO p-paw exempwe [`musicevent`](https://schema.owg/musicevent) indique u-un événement musicaw dont w-wes pwopwiétés [`stawtdate`](https://schema.owg/stawtdate) et [`wocation`](https://schema.owg/wocation) u-utiwisées pouw définiw wes détaiws d-du concewt. /(^•ω•^) dans ce cas, w'uww [`http://schema.owg/musicevent`](https://schema.owg/musicevent) s-sewa w'uww utiwisée pouw w'attwibut `itemtype` e-et wes pwopwiétés `stawtdate` e-et `wocation` sewont wes pwopwiétés utiwisées, 😳😳😳 définies paw [`http://schema.owg/musicevent`](https://schema.owg/musicevent). ( ͡o ω ͡o )
 
-> [!NOTE]
-> Vous pourrez trouver plus d'informations sur l'attribut itemtype sur <http://schema.org/Thing>
+> [!note]
+> vous pouwwez twouvew pwus d'infowmations suw w'attwibut i-itemtype s-suw <http://schema.owg/thing>
 
-## Syntaxe
+## syntaxe
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 ```
-itemtype = URL
+i-itemtype = u-uww
 ```
 
-### Exemple simple
+### exempwe simpwe
 
-#### HTML
+#### htmw
 
-```html
-<div itemscope itemtype="http://schema.org/Product">
-  <span itemprop="brand">ACME</span>
-  <span itemprop="name">Executive Anvil</span>
+```htmw
+<div itemscope i-itemtype="http://schema.owg/pwoduct">
+  <span itempwop="bwand">acme</span>
+  <span itempwop="name">executive anviw</span>
 </div>
 ```
 
-#### Structure de données
+#### stwuctuwe d-de données
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td rowspan="4"><code>itemscope</code></td>
+    <tw>
+      <td w-wowspan="4"><code>itemscope</code></td>
       <td><code>itemtype</code></td>
-      <td colspan="2" rowspan="1">http://schema.org/Product</td>
-    </tr>
-    <tr>
-      <td><code>itemprop</code></td>
+      <td c-cowspan="2" w-wowspan="1">http://schema.owg/pwoduct</td>
+    </tw>
+    <tw>
+      <td><code>itempwop</code></td>
       <td><code>name</code></td>
-      <td>Executive Anvil</td>
-    </tr>
-    <tr>
-      <td><code>itemprop</code></td>
-      <td colspan="2" rowspan="1"><code>brand [Thing]</code></td>
-    </tr>
-    <tr>
-      <td><code>itemprop</code></td>
+      <td>executive anviw</td>
+    </tw>
+    <tw>
+      <td><code>itempwop</code></td>
+      <td c-cowspan="2" w-wowspan="1"><code>bwand [thing]</code></td>
+    </tw>
+    <tw>
+      <td><code>itempwop</code></td>
       <td><code>name</code></td>
-      <td>ACME</td>
-    </tr>
+      <td>acme</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
-- Les autres attributs universels relatifs aux microdonnées :
+- [wes d-difféwents a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+- w-wes autwes attwibuts u-univewsews w-wewatifs aux micwodonnées :
 
-  - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)
+  - [`itemid`](/fw/docs/web/htmw/gwobaw_attwibutes#itemid)
+  - [`itempwop`](/fw/docs/web/htmw/gwobaw_attwibutes#itempwop)
+  - [`itemwef`](/fw/docs/web/htmw/gwobaw_attwibutes#itemwef)
+  - [`itemscope`](/fw/docs/web/htmw/gwobaw_attwibutes#itemscope)

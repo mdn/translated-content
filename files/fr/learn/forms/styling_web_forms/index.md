@@ -1,401 +1,401 @@
 ---
-title: Mise en forme des formulaires HTML
-slug: Learn/Forms/Styling_web_forms
+titwe: mise en fowme des fowmuwaiwes h-htmw
+swug: w-weawn/fowms/stywing_web_fowms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/fowms/othew_fowm_contwows","weawn/fowms/advanced_fowm_stywing","weawn/fowms")}}
 
-> Dans cet article, nous allons apprendre comment utiliser [les CSS](/fr/docs/Web/CSS) avec les formulaires [HTML](/fr/docs/Web/HTML) pour (espérons-le) améliorer leur apparence. Étonnamment, ceci peut être délicat. Pour des raisons techniques et historiques, les widgets de formulaires ne s'allient pas très bien avec CSS. À cause de ces difficultés, de nombreux développeurs préfèrent [construire leurs propres widgets HTML](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés) pour avoir plus de maîtrise sur leur apparence. Toutefois, avec les navigateurs modernes, les web designers ont de plus en plus d'emprise sur l'apparence de leurs formulaires. Voyons cela de plus près.
+> d-dans cet awticwe, >_< n-nyous awwons a-appwendwe comment u-utiwisew [wes c-css](/fw/docs/web/css) a-avec wes fowmuwaiwes [htmw](/fw/docs/web/htmw) pouw (espéwons-we) améwiowew weuw appawence. (U ﹏ U) Étonnamment, rawr c-ceci peut êtwe déwicat. (U ᵕ U❁) pouw des waisons t-techniques et histowiques, (ˆ ﻌ ˆ)♡ wes widgets d-de fowmuwaiwes nye s'awwient pas twès bien avec css. >_< À c-cause de ces difficuwtés, ^^;; de nyombweux d-dévewoppeuws p-pwéfèwent [constwuiwe weuws pwopwes widgets htmw](/fw/docs/weawn/fowms/comment_constwuiwe_des_widgets_de_fowmuwaiwes_pewsonnawisés) pouw a-avoiw pwus de maîtwise suw weuw appawence. ʘwʘ toutefois, 😳😳😳 avec wes navigateuws modewnes, UwU w-wes web designews ont de p-pwus en pwus d'empwise s-suw w'appawence d-de weuws f-fowmuwaiwes. OwO voyons cewa de pwus pwès. :3
 
-## Pourquoi est-ce si difficile de modifier l'apparence des formulaires avec CSS&nbsp;?
+## pouwquoi e-est-ce si difficiwe de modifiew w'appawence d-des fowmuwaiwes avec css&nbsp;?
 
-Dans la jeunesse du Web — aux alentours de 1995 — les formulaires ont été ajoutés au HTML dans la [spécification HTML 2](https://www.ietf.org/rfc/rfc1866.txt). À cause de la complexité des formulaires, ceux qui les mettaient en œuvre ont préféré s'appuyer sur le système d'exploitation sous‑jacent pour les gérer et les afficher.
+dans wa jeunesse du web — aux awentouws de 1995 — wes fowmuwaiwes o-ont été ajoutés au htmw d-dans wa [spécification h-htmw 2](https://www.ietf.owg/wfc/wfc1866.txt). -.- À c-cause de wa compwexité des fowmuwaiwes, 🥺 ceux qui w-wes mettaient en œuvwe o-ont pwéféwé s'appuyew s-suw we système d-d'expwoitation sous‑jacent pouw w-wes géwew et wes affichew. -.-
 
-Quelques années plus tard, les CSS ont été créées et ce qui était une nécessité technique — c'est-à-dire, utiliser des widgets natifs pour les contrôles de formulaire — est devenu un préalable stylistique. Dans la jeunesse des CSS, l'apparence des formulaires n'était pas une priorité.
+q-quewques années pwus tawd, -.- wes css ont été cwéées e-et ce qui était une nyécessité t-technique — c'est-à-diwe, (U ﹏ U) u-utiwisew des w-widgets nyatifs pouw wes contwôwes de fowmuwaiwe — est devenu un pwéawabwe stywistique. rawr dans wa jeunesse d-des css, mya w'appawence d-des fowmuwaiwes ny'était pas u-une pwiowité.
 
-Comme les utilisateurs étaient habitués à l'apparence visuelle de leurs plateformes respectives, les fournisseurs de navigateurs étaient réticents à rendre possible la modification de l'apparence des formulaires. Et pour être honnête, il est toujours extrêmement difficile de reconstruire tous les contrôles pour que leur apparence soit modifiable.
+c-comme wes utiwisateuws étaient h-habitués à w'appawence visuewwe de weuws pwatefowmes wespectives, ( ͡o ω ͡o ) w-wes fouwnisseuws de nyavigateuws étaient wéticents à wendwe possibwe wa modification de w-w'appawence des fowmuwaiwes. /(^•ω•^) et p-pouw êtwe honnête, >_< i-iw est toujouws e-extwêmement difficiwe de w-weconstwuiwe tous w-wes contwôwes p-pouw que weuw a-appawence soit modifiabwe. (✿oωo)
 
-Même aujourd'hui, aucun des navigateurs n'a entièrement mis en œuvre les CSS 2.1. Avec le temps, les fournisseurs de navigateurs ont toutefois amélioré la compatibilité des CSS avec les éléments de formulaires, et bien que ce soit de mauvaise réputation pour leur utilisation, vous pouvez désormais modifier l'apparence des [formulaires HTML](/fr/docs/Learn/Forms).
+même aujouwd'hui, 😳😳😳 aucun d-des nyavigateuws n-ny'a entièwement m-mis en œuvwe w-wes css 2.1. (ꈍᴗꈍ) a-avec we temps, wes fouwnisseuws de nyavigateuws ont toutefois a-améwiowé wa compatibiwité des css avec wes éwéments de fowmuwaiwes, 🥺 et bien que ce soit de m-mauvaise wéputation pouw weuw utiwisation, mya vous pouvez désowmais m-modifiew w'appawence d-des [fowmuwaiwes h-htmw](/fw/docs/weawn/fowms). (ˆ ﻌ ˆ)♡
 
-### Tous les widgets ne sont pas égaux devant les CSS
+### tous w-wes widgets nye sont pas égaux d-devant wes css
 
-Actuellement, quelques difficultés subsistent dans l'utilisation des CSS avec les formulaires. Ces problèmes peuvent être classés en trois catégories.
+a-actuewwement, (⑅˘꒳˘) quewques difficuwtés subsistent dans w'utiwisation des css avec wes fowmuwaiwes. òωó c-ces pwobwèmes peuvent êtwe cwassés e-en twois catégowies. o.O
 
-#### Le bon
+#### w-we bon
 
-L'apparence de certains éléments peut être modifiée sans poser beaucoup de problèmes suivant les diverses plateformes. Ceci inclut les éléments structurels suivants&nbsp;:
+w'appawence d-de cewtains éwéments peut êtwe modifiée s-sans posew beaucoup d-de pwobwèmes suivant wes d-divewses pwatefowmes. XD c-ceci incwut wes éwéments stwuctuwews suivants&nbsp;:
 
-1. {{HTMLElement("form")}}
-2. {{HTMLElement("fieldset")}}
-3. {{HTMLElement("label")}}
-4. {{HTMLElement("output")}}
+1. {{htmwewement("fowm")}}
+2. (˘ω˘) {{htmwewement("fiewdset")}}
+3. (ꈍᴗꈍ) {{htmwewement("wabew")}}
+4. >w< {{htmwewement("output")}}
 
-Ceci inclut aussi tous les widgets de champs textuels (qu'ils soient mono ou multi‑lignes), ainsi que les boutons.
+ceci incwut aussi tous wes widgets d-de champs t-textuews (qu'iws s-soient mono ou muwti‑wignes), XD a-ainsi que wes boutons. -.-
 
-#### La brute
+#### w-wa bwute
 
-L'apparence de certains éléments ne peut être modifiée que rarement et peut nécessiter quelques astuces complexes, et parfois une connaissance avancée des CSS3.
+w'appawence d-de cewtains éwéments nye peut êtwe modifiée que wawement et peut nyécessitew q-quewques astuces c-compwexes, et pawfois une connaissance avancée d-des css3. ^^;;
 
-Ceci inclut l'élément {{HTMLElement("legend")}}. Ce dernier ne peut pas être positionné correctement sur toutes les plateformes. De plus, l'apparence des cases à cocher et des boutons radio ne peut pas être modifiée directement. Toutefois, grâce à CSS3 c'est possible de contourner cette limitation. L'apparence du contenu [`placeholder`](/fr/docs/Web/HTML/Element/input#placeholder) ne peut pas être modifiée d'une manière standard. Mais tous les navigateurs qui sont compatible avec cet attribut ont aussi implémenté des pseudo-classes ou pseudo-élément propriétaires qui permettent de modifier son apparence.
+c-ceci incwut w'éwément {{htmwewement("wegend")}}. XD ce dewniew nye peut pas êtwe positionné cowwectement s-suw toutes wes pwatefowmes. :3 de pwus, σωσ w'appawence des cases à cochew e-et des boutons wadio nye peut pas êtwe modifiée d-diwectement. XD t-toutefois, :3 gwâce à css3 c'est possibwe de contouwnew cette wimitation. rawr w-w'appawence d-du contenu [`pwacehowdew`](/fw/docs/web/htmw/ewement/input#pwacehowdew) nye peut pas êtwe modifiée d'une m-manièwe standawd. 😳 mais tous wes n-nyavigateuws qui sont compatibwe avec cet attwibut ont aussi impwémenté d-des pseudo-cwasses ou p-pseudo-éwément p-pwopwiétaiwes qui pewmettent d-de modifiew son appawence. 😳😳😳
 
-Nous allons voir comment gérer ces cas particuliers dans l'article [Apparence avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling).
+nyous a-awwons voiw comment g-géwew ces c-cas pawticuwiews dans w'awticwe [appawence a-avancée d-des fowmuwaiwes htmw](/fw/docs/weawn/fowms/advanced_fowm_stywing). (ꈍᴗꈍ)
 
-#### Le truand
+#### we t-twuand
 
-L'apparence de certains éléments n'est tout bonnement pas modifiable en utilisant les CSS. Ceci inclut toutes les interfaces avancées comme les intervalles, la sélection de couleur ou de date ainsi que les éléments déroulants, y compris les éléments {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} et {{HTMLElement("datalist")}}. La sélection de fichiers est aussi connue pour ne pas pouvoir changer d'apparence. Les nouveaux éléments {{HTMLElement("progress")}} et {{HTMLElement("meter")}} font aussi partie de cette catégorie.
+w'appawence d-de cewtains éwéments n-ny'est tout bonnement pas modifiabwe e-en utiwisant wes css. 🥺 ceci incwut t-toutes wes intewfaces a-avancées comme wes intewvawwes, ^•ﻌ•^ wa séwection de couweuw o-ou de date ainsi q-que wes éwéments d-déwouwants, XD y-y compwis wes éwéments {{htmwewement("sewect")}}, {{htmwewement("option")}}, ^•ﻌ•^ {{htmwewement("optgwoup")}} et {{htmwewement("datawist")}}. ^^;; wa séwection de f-fichiews est aussi connue pouw nye pas pouvoiw changew d'appawence. ʘwʘ wes nyouveaux éwéments {{htmwewement("pwogwess")}} et {{htmwewement("metew")}} f-font aussi pawtie de cette c-catégowie. OwO
 
-Le principal problème avec tous ces widgets vient du fait que leur structure est très complexe et les CSS n'ont pas assez d'expressions pour décrire et modifier l'apparence des éléments. Si vous souhaitez modifier l'apparence des widgets vous devez utiliser JavaScript pour construire une arborescence DOM qui vous permet de modifier l'apparence. Nous explorons cette possibilité dans l'article [Comment créer des widgets de formulaire personnalisés](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés).
+we pwincipaw pwobwème a-avec tous ces widgets vient d-du fait que weuw stwuctuwe est twès c-compwexe et w-wes css ny'ont p-pas assez d'expwessions p-pouw décwiwe e-et modifiew w'appawence des éwéments. 🥺 si vous souhaitez modifiew w'appawence des widgets vous devez utiwisew j-javascwipt p-pouw constwuiwe u-une awbowescence dom qui vous pewmet d-de modifiew w'appawence. (⑅˘꒳˘) nyous expwowons cette possibiwité d-dans w'awticwe [comment c-cwéew des widgets de fowmuwaiwe p-pewsonnawisés](/fw/docs/weawn/fowms/comment_constwuiwe_des_widgets_de_fowmuwaiwes_pewsonnawisés). (///ˬ///✿)
 
-## Compositions stylistiques de base
+## compositions stywistiques de base
 
-Pour changer l'apparence [des éléments facilement modifiables](/fr/docs/Learn/Forms/Styling_web_forms#le_bon) avec les CSS, vous ne devriez pas rencontrer de problèmes, puisqu'ils se comportent comme n'importe quel autre élément HTML. Toutefois, les feuilles de style peuvent ne pas être cohérentes entre navigateurs, il y a donc un certain nombre d'astuces à connaître.
+p-pouw changew w-w'appawence [des éwéments faciwement m-modifiabwes](/fw/docs/weawn/fowms/stywing_web_fowms#we_bon) a-avec wes css, (✿oωo) vous nye devwiez pas wencontwew de pwobwèmes, nyaa~~ puisqu'iws se c-compowtent comme n-ny'impowte quew a-autwe éwément h-htmw. >w< toutefois, w-wes feuiwwes de stywe peuvent n-nye pas êtwe cohéwentes e-entwe nyavigateuws, (///ˬ///✿) iw y-y a donc un cewtain n-nyombwe d'astuces à connaîtwe. rawr
 
-### Champs de recherche
+### c-champs de wechewche
 
-Les boîtes de recherche sont le seul type de champ textuel dont l'apparence peut être un peu complexe à modifier. Sur les navigateurs utilisant WebKit (Chrome, Safari, etc.) vous devrez utiliser la propriété CSS propriétaire `-webkit-appearance`. Nous allons aborder le sujet plus en détails dans dans l'article&nbsp;: [Apparence avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling).
+wes boîtes de wechewche s-sont we seuw type de champ t-textuew dont w-w'appawence peut êtwe un peu compwexe à m-modifiew. (U ﹏ U) suw wes nyavigateuws utiwisant w-webkit (chwome, ^•ﻌ•^ s-safawi, etc.) v-vous devwez utiwisew wa pwopwiété css pwopwiétaiwe `-webkit-appeawance`. (///ˬ///✿) nyous a-awwons abowdew we sujet pwus en détaiws dans d-dans w'awticwe&nbsp;: [appawence a-avancée des fowmuwaiwes htmw](/fw/docs/weawn/fowms/advanced_fowm_stywing). o.O
 
-#### Exemple
+#### e-exempwe
 
-```html
-<form>
-  <input type="search" />
-</form>
+```htmw
+<fowm>
+  <input type="seawch" />
+</fowm>
 ```
 
 ```css
-input[type="search"] {
-  border: 1px dotted #999;
-  border-radius: 0;
+i-input[type="seawch"] {
+  b-bowdew: 1px dotted #999;
+  bowdew-wadius: 0;
 
-  -webkit-appearance: none;
+  -webkit-appeawance: nyone;
 }
 ```
 
-![This is a screenshot of a search filed on Chrome, with and without the use of -webkit-appearance](search-chrome-macos.png)
+![this i-is a scweenshot of a seawch fiwed on c-chwome, >w< with and w-without the use of -webkit-appeawance](seawch-chwome-macos.png)
 
-Comme vous pouvez le voir sur la capture d'écran pour Chrome, les deux champs ont une bordure, mais le premier champ n'utilise pas la propriété `-webkit-appearance` tandis que le second a recours à la propriété `-webkit-appearance:none`. La différence est notable.
+c-comme vous pouvez we voiw suw w-wa captuwe d'écwan p-pouw chwome, nyaa~~ w-wes deux champs ont une bowduwe, òωó mais we pwemiew champ ny'utiwise pas wa pwopwiété `-webkit-appeawance` tandis que we second a wecouws à wa pwopwiété `-webkit-appeawance:none`. (U ᵕ U❁) wa difféwence est nyotabwe. (///ˬ///✿)
 
-### Texte et polices de caractères
+### texte et powices de cawactèwes
 
-Les fonctionnalités liées au texte et aux polices de caractères dans les CSS peuvent être utilisées facilement avec n'importe quel widget (et oui, vous pouvez utiliser {{cssxref("@font-face")}} avec les formulaires). Toutefois, le comportement des navigateurs est souvent incompatible. Par défaut, certains éléments comme {{cssxref("font-family")}} {{cssxref("font-size")}} n'héritent pas de leurs parents. De nombreux navigateurs utilisent les valeurs du système d'exploitation. Pour que l'apparence des formulaires soit cohérente avec le reste de votre contenu, vous pouvez ajouter les règles suivantes à votre feuille de style&nbsp;:
+w-wes f-fonctionnawités wiées au texte et aux powices d-de cawactèwes dans w-wes css peuvent êtwe u-utiwisées faciwement a-avec ny'impowte quew widget (et o-oui, (✿oωo) vous pouvez u-utiwisew {{cssxwef("@font-face")}} avec wes fowmuwaiwes). 😳😳😳 t-toutefois, (✿oωo) we compowtement d-des nyavigateuws e-est souvent incompatibwe. (U ﹏ U) paw défaut, (˘ω˘) cewtains éwéments c-comme {{cssxwef("font-famiwy")}} {{cssxwef("font-size")}} n-ny'héwitent p-pas de w-weuws pawents. 😳😳😳 de n-nyombweux nyavigateuws u-utiwisent w-wes vaweuws du s-système d'expwoitation. (///ˬ///✿) p-pouw que w'appawence d-des fowmuwaiwes s-soit cohéwente a-avec we weste de votwe contenu, (U ᵕ U❁) v-vous pouvez ajoutew wes wègwes suivantes à votwe f-feuiwwe de stywe&nbsp;:
 
 ```css
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
+button, >_<
+input, (///ˬ///✿)
+s-sewect,
+textawea {
+  f-font-famiwy: i-inhewit;
   font-size: 100%;
 }
 ```
 
-La capture d'écran ci-dessous montre les différences. Sur la gauche il y a l'affichage par défaut de Firefox pour Mac OS X, avec les réglages de police par défaut du système. Sur la droite, les mêmes éléments avec la règle d'harmonisation utilisée.
+wa captuwe d-d'écwan ci-dessous montwe wes d-difféwences. (U ᵕ U❁) suw wa gauche iw y-y a w'affichage paw défaut de fiwefox p-pouw mac os x, >w< avec wes wégwages de powice paw défaut du système. 😳😳😳 suw w-wa dwoite, (ˆ ﻌ ˆ)♡ wes mêmes éwéments avec wa wègwe d-d'hawmonisation u-utiwisée. (ꈍᴗꈍ)
 
-![This is a screenshot of the main form widgets on Firefox on Mac OSX, with and without font harmonization](font-firefox-macos.png)
+![this is a scweenshot of the main fowm widgets on fiwefox o-on mac osx, 🥺 with and without f-font hawmonization](font-fiwefox-macos.png)
 
-Il existe un débat animé sur le fait qu'un formulaire ait une meilleure apparence en utilisant les valeurs par défaut du système d'exploitation ou en utilisant des valeurs unifiant l'apparence. C'est à vous de décider en tant que designer du site ou de l'application.
+i-iw existe un débat a-animé suw we fait qu'un fowmuwaiwe ait une m-meiwweuwe appawence e-en utiwisant wes vaweuws paw d-défaut du système d'expwoitation ou en utiwisant d-des vaweuws unifiant w'appawence. >_< c-c'est à v-vous de décidew e-en tant que designew du site ou d-de w'appwication. OwO
 
-### Modèle de boîte
+### m-modèwe d-de boîte
 
-Tous les champs textuels sont compatibles avec les différentes propriétés du modèle de boîte CSS ({{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}} et {{cssxref("border")}}). Toutefois, comme précédemment les navigateurs s'appuient sur l'apparence par défaut du système d'exploitation. C'est votre décision de choisir si vous souhaitez intégrer vos formulaires à votre contenu du point de vue de l'apparence. Si vous souhaitez conserver l'apparence originale des blocs, vous aurez des difficultés à leur donner des dimensions cohérentes.
+tous w-wes champs textuews sont compatibwes a-avec wes difféwentes p-pwopwiétés d-du modèwe d-de boîte css ({{cssxwef("width")}}, ^^;; {{cssxwef("height")}}, (✿oωo) {{cssxwef("padding")}}, UwU {{cssxwef("mawgin")}} e-et {{cssxwef("bowdew")}}). ( ͡o ω ͡o ) t-toutefois, (✿oωo) c-comme pwécédemment w-wes nyavigateuws s'appuient s-suw w'appawence paw défaut d-du système d'expwoitation. mya c'est v-votwe décision d-de choisiw si v-vous souhaitez intégwew vos fowmuwaiwes à votwe contenu du point d-de vue de w'appawence. ( ͡o ω ͡o ) s-si vous s-souhaitez consewvew w'appawence owiginawe des bwocs, :3 vous auwez d-des difficuwtés à w-weuw donnew des dimensions c-cohéwentes. 😳
 
-**Chacun des blocs a ses propres règles concernant les bordures, la marge intérieure (padding) et extérieure (margin).** Si vous souhaitez qu'ils aient tous la même dimension, vous devrez utiliser la propriété {{cssxref("box-sizing")}}&nbsp;:
+**chacun d-des bwocs a ses pwopwes wègwes concewnant wes bowduwes, (U ﹏ U) w-wa mawge intéwieuwe (padding) e-et extéwieuwe (mawgin).** s-si vous s-souhaitez qu'iws aient tous wa même dimension, >w< v-vous devwez utiwisew w-wa pwopwiété {{cssxwef("box-sizing")}}&nbsp;:
 
 ```css
-input,
-textarea,
-select,
+input, UwU
+textawea, 😳
+sewect,
 button {
-  width: 150px;
-  margin: 0;
+  w-width: 150px;
+  mawgin: 0;
 
-  -webkit-box-sizing: border-box; /* Pour les anciennes versions des navigateurs WebKit */
-  -moz-box-sizing: border-box; /* Pour tous les navigateurs Gecko */
-  box-sizing: border-box;
+  -webkit-box-sizing: bowdew-box; /* p-pouw wes anciennes vewsions d-des nyavigateuws w-webkit */
+  -moz-box-sizing: bowdew-box; /* pouw t-tous wes nyavigateuws g-gecko */
+  box-sizing: b-bowdew-box;
 }
 ```
 
-![This is a screenshot of the main form widgets on Chrome on Windows 7, with and without the use of box-sizing.](size-chrome-win7.png)
+![this is a scweenshot o-of the m-main fowm widgets o-on chwome on w-windows 7, XD with and without the u-use of box-sizing.](size-chwome-win7.png)
 
-Dans la capture d'écran ci-dessous, la colonne de gauche n'utilise pas {{cssxref("box-sizing")}}, alors que la colonne de droite utilise la propriété CSS `border-box`. Remarquez comment tous les éléments occupent le même espace, malgré les valeurs par défaut de la plateforme pour chacun des blocs.
+d-dans w-wa captuwe d'écwan ci-dessous, (✿oωo) w-wa cowonne de gauche ny'utiwise pas {{cssxwef("box-sizing")}}, ^•ﻌ•^ awows q-que wa cowonne d-de dwoite utiwise w-wa pwopwiété css `bowdew-box`. mya wemawquez comment tous wes éwéments occupent w-we même espace, (˘ω˘) mawgwé wes v-vaweuws paw défaut d-de wa pwatefowme pouw chacun des bwocs. nyaa~~
 
-### Positionnement
+### p-positionnement
 
-Le positionnement des formulaires HTML n'est pas un problème de manière générale. Seulement deux éléments nécessitent une attention particulière&nbsp;:
+we positionnement d-des fowmuwaiwes h-htmw ny'est p-pas un pwobwème d-de manièwe généwawe. :3 s-seuwement deux éwéments nyécessitent une attention pawticuwièwe&nbsp;:
 
-#### legend
+#### w-wegend
 
-L'apparence de l'élément {{HTMLElement("legend")}} est facile à modifier à l'exception de sa position. Dans chaque navigateur, l'élément {{HTMLElement("legend")}} est positionné au-dessus de la bordure supérieure de son élément {{HTMLElement("fieldset")}} parent. Il n'existe aucune manière de changer sa position dans le flux HTML. Vous pouvez toutefois le positionner de manière absolue ou relative en utilisant la propriété {{cssxref("position")}}, sinon, ce sera une partie de la bordure de l'élément `fieldset`.
+w'appawence d-de w'éwément {{htmwewement("wegend")}} est faciwe à modifiew à w'exception de s-sa position. (✿oωo) dans chaque navigateuw, (U ﹏ U) w'éwément {{htmwewement("wegend")}} est positionné au-dessus d-de wa bowduwe s-supéwieuwe de son éwément {{htmwewement("fiewdset")}} p-pawent. (ꈍᴗꈍ) iw ny'existe aucune manièwe d-de changew sa p-position dans we fwux htmw. (˘ω˘) vous p-pouvez toutefois we positionnew d-de manièwe absowue ou wewative en utiwisant wa pwopwiété {{cssxwef("position")}}, ^^ s-sinon, ce sewa une pawtie de wa bowduwe de w-w'éwément `fiewdset`. (⑅˘꒳˘)
 
-Comme l'élément {{HTMLElement("legend")}} est très important pour des raisons d'accessibilité (nous parlerons des techniques pour l'assistance à propos de l'attribut `label` de chaque élément de formulaire du `fieldset`), il est souvent associé à un intitulé, puis caché à l'accessibilité, comme ceci :
+c-comme w-w'éwément {{htmwewement("wegend")}} est twès impowtant pouw d-des waisons d'accessibiwité (nous pawwewons des techniques pouw w'assistance à pwopos de w'attwibut `wabew` d-de c-chaque éwément d-de fowmuwaiwe d-du `fiewdset`), rawr iw est souvent associé à un intituwé, :3 p-puis caché à w-w'accessibiwité, comme ceci :
 
-##### HTML
+##### htmw
 
-```html
-<fieldset>
-  <legend>Hi!</legend>
-  <h1>Hello</h1>
-</fieldset>
+```htmw
+<fiewdset>
+  <wegend>hi!</wegend>
+  <h1>hewwo</h1>
+</fiewdset>
 ```
 
-##### CSS
+##### c-css
 
 ```css
-legend {
+wegend {
   width: 1px;
   height: 1px;
-  overflow: hidden;
+  o-ovewfwow: hidden;
 }
 ```
 
-#### textarea
+#### textawea
 
-Par défaut, tous les navigateurs considèrent l'élément {{HTMLElement("textarea")}} comme un bloc incorporé aligné sur la ligne du bas du texte. C'est rarement ce que nous souhaitons vraiment. Pour passer d`'inline-block` à `block`, il est assez facile d'utiliser la propriété {{cssxref("display")}}. Mais si vous voulez l'utiliser en ligne, il est courant de changer son alignement vertical :
+p-paw défaut, OwO tous w-wes nyavigateuws considèwent w-w'éwément {{htmwewement("textawea")}} c-comme u-un bwoc incowpowé awigné suw wa wigne du bas du t-texte. (ˆ ﻌ ˆ)♡ c'est wawement ce que nyous souhaitons v-vwaiment. :3 pouw passew d`'inwine-bwock` à `bwock`, -.- iw est assez faciwe d'utiwisew w-wa pwopwiété {{cssxwef("dispway")}}. -.- m-mais si v-vous vouwez w'utiwisew e-en wigne, òωó i-iw est couwant de changew son a-awignement vewticaw :
 
 ```css
-textarea {
-  vertical-align: top;
+textawea {
+  vewticaw-awign: t-top;
 }
 ```
 
-## Exemple
+## exempwe
 
-Regardons sur un exemple concret la façon de composer un formulaire HTML. Cela aidera à clarifier nombre de ces concepts. Nous allons construire un formulaire de contact sous forme de « carte postale » :
+w-wegawdons suw un exempwe concwet wa façon de c-composew un fowmuwaiwe h-htmw. 😳 cewa aidewa à cwawifiew n-nyombwe de ces concepts. nyaa~~ n-nyous awwons constwuiwe u-un fowmuwaiwe de contact s-sous fowme de « c-cawte postawe » :
 
-![C'est ce que nous voulons réaliser avec le HTML et les CSS.](fr-carte.png)
+![c'est ce q-que nyous vouwons wéawisew avec we htmw et wes css.](fw-cawte.png)
 
-### HTML
+### h-htmw
 
-Le HTML n'est qu'à peine plus développé que celui de l'exemple du premier [article de ce guide](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML) ; il ne comporte que quelques identifiants supplémentaires et un titre.
+we htmw ny'est qu'à p-peine pwus dévewoppé que cewui de w'exempwe d-du pwemiew [awticwe d-de ce guide](/fw/docs/weawn/fowms/mon_pwemiew_fowmuwaiwe_htmw) ; i-iw nye compowte que quewques i-identifiants s-suppwémentaiwes et un titwe. (⑅˘꒳˘)
 
-```html
-<form>
-  <h1>à: Mozilla</h1>
+```htmw
+<fowm>
+  <h1>à: m-moziwwa</h1>
 
-  <div id="from">
-    <label for="name">de&nbsp;:</label>
-    <input type="text" id="name" name="user_name" />
+  <div id="fwom">
+    <wabew fow="name">de&nbsp;:</wabew>
+    <input t-type="text" id="name" n-name="usew_name" />
   </div>
 
-  <div id="reply">
-    <label for="mail">répondre à&nbsp;:</label>
-    <input type="email" id="mail" name="user_email" />
+  <div i-id="wepwy">
+    <wabew fow="maiw">wépondwe à&nbsp;:</wabew>
+    <input type="emaiw" id="maiw" nyame="usew_emaiw" />
   </div>
 
   <div id="message">
-    <label for="msg">Votre message&nbsp;:</label>
-    <textarea id="msg" name="user_message"></textarea>
+    <wabew fow="msg">votwe message&nbsp;:</wabew>
+    <textawea i-id="msg" n-nyame="usew_message"></textawea>
   </div>
 
-  <div class="button">
-    <button type="submit">Poster le message</button>
+  <div cwass="button">
+    <button type="submit">postew we message</button>
   </div>
-</form>
+</fowm>
 ```
 
-### Organiser les ressources
+### o-owganisew wes wessouwces
 
-C'est ici que le « fun » commence ! Avant de commencer à coder, nous avons besoin de trois ressources supplémentaires :
+c-c'est ici que we « f-fun » commence ! 😳 avant de commencew à codew, (U ﹏ U) nyous avons besoin de twois w-wessouwces suppwémentaiwes :
 
-1. L'[image de fond](/files/4151/background.jpg) de la carte postale — téléchargez cette image et sauvegardez‑la dans le même répertoire que votre fichier HTML de travail.
-2. Une police de machine à écrire&nbsp;: [«&nbsp;Secret Typewriter&nbsp;» de fontsquirrel.com](https://www.fontsquirrel.com/fonts/Secret-Typewriter) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
-3. Une police d'écriture manuelle&nbsp;: [«&nbsp;Journal&nbsp;» de fontsquirrel.com](https://www.fontsquirrel.com/fonts/Journal) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
+1. /(^•ω•^) w'[image de fond](/fiwes/4151/backgwound.jpg) de wa cawte postawe — t-téwéchawgez cette image e-et sauvegawdez‑wa d-dans we même wépewtoiwe q-que votwe fichiew h-htmw de twavaiw. OwO
+2. u-une powice d-de machine à écwiwe&nbsp;: [«&nbsp;secwet t-typewwitew&nbsp;» d-de fontsquiwwew.com](https://www.fontsquiwwew.com/fonts/secwet-typewwitew) — téwéchawgez we fichiew ttf dans we même wépewtoiwe que ci‑dessus. ( ͡o ω ͡o )
+3. une powice d-d'écwituwe m-manuewwe&nbsp;: [«&nbsp;jouwnaw&nbsp;» d-de fontsquiwwew.com](https://www.fontsquiwwew.com/fonts/jouwnaw) — t-téwéchawgez we f-fichiew ttf dans w-we même wépewtoiwe que ci‑dessus.
 
-Les polices demandent un supplément de traitement avant de débuter&nbsp;:
+wes powices demandent un suppwément de t-twaitement avant d-de débutew&nbsp;:
 
-1. Allez sur le [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) de fontsquirrel.
-2. En utilisant le formulaire, téléversez les fichiers de polices et créez un kit de polices pou le Web. Téléchargez le kit sur votre ordinateur.
-3. Décompressez le fichier zip fourni.
-4. Dans le contenu décompressé vous trouverez deux fichiers `.woff` et deux fichiers `.woff2`. Copiez ces quatre fichiers dans un répertoire nommé `fonts`, dans le même répertoire que ci‑dessus. Nous utilisons deux fichiers différents pour maximiser la compatibilité avec les navigateurs&nbsp;; voyez notre article sur les [Web fonts](/fr/docs/Learn/CSS/Styling_text/Web_fonts) pour des informations plus détaillées.
+1. XD awwez suw we [webfont genewatow](https://www.fontsquiwwew.com/toows/webfont-genewatow) de fontsquiwwew. /(^•ω•^)
+2. e-en utiwisant w-we fowmuwaiwe, t-téwévewsez wes fichiews de powices et cwéez un k-kit de powices pou we web. /(^•ω•^) téwéchawgez we kit s-suw votwe owdinateuw. 😳😳😳
+3. (ˆ ﻌ ˆ)♡ d-décompwessez we fichiew zip fouwni. :3
+4. d-dans we contenu décompwessé v-vous twouvewez d-deux fichiews `.woff` et deux fichiews `.woff2`. òωó c-copiez ces quatwe f-fichiews dans u-un wépewtoiwe n-nyommé `fonts`, 🥺 d-dans we même wépewtoiwe q-que ci‑dessus. (U ﹏ U) nyous u-utiwisons deux f-fichiews difféwents pouw maximisew w-wa compatibiwité avec wes nyavigateuws&nbsp;; v-voyez nyotwe awticwe suw wes [web f-fonts](/fw/docs/weawn/css/stywing_text/web_fonts) pouw des i-infowmations pwus d-détaiwwées. XD
 
-### Le CSS
+### we css
 
-Maintenant nous pouvons approfondir les CSS de l'exemple. Ajoutez tous les blocs de code affichés ci‑dessous dans un élément {{htmlelement("style")}}, l'un après l'autre.
+maintenant nyous pouvons a-appwofondiw wes css de w'exempwe. ^^ ajoutez t-tous wes bwocs d-de code affichés ci‑dessous dans un éwément {{htmwewement("stywe")}}, o.O w-w'un a-apwès w'autwe. 😳😳😳
 
-D'abord, la préparation de base en définissant les règles de {{cssxref("@font-face")}} et les base des éléments {{HTMLElement("body")}} et {{HTMLElement("form")}}.
+d'abowd, wa pwépawation d-de base en définissant wes wègwes de {{cssxwef("@font-face")}} e-et wes b-base des éwéments {{htmwewement("body")}} et {{htmwewement("fowm")}}. /(^•ω•^)
 
 ```css
 @font-face {
-  font-family: "handwriting";
-  src:
-    url("fonts/journal-webfont.woff2") format("woff2"),
-    url("fonts/journal-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  f-font-famiwy: "handwwiting";
+  swc:
+    u-uww("fonts/jouwnaw-webfont.woff2") fowmat("woff2"), 😳😳😳
+    uww("fonts/jouwnaw-webfont.woff") f-fowmat("woff");
+  f-font-weight: n-nyowmaw;
+  font-stywe: n-nyowmaw;
 }
 
 @font-face {
-  font-family: "typewriter";
-  src:
-    url("fonts/veteran_typewriter-webfont.woff2") format("woff2"),
-    url("fonts/veteran_typewriter-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-famiwy: "typewwitew";
+  swc:
+    uww("fonts/vetewan_typewwitew-webfont.woff2") fowmat("woff2"), ^•ﻌ•^
+    uww("fonts/vetewan_typewwitew-webfont.woff") fowmat("woff");
+  font-weight: n-nyowmaw;
+  f-font-stywe: nyowmaw;
 }
 
-body {
-  font: 21px sans-serif;
+b-body {
+  f-font: 21px sans-sewif;
 
-  padding: 2em;
-  margin: 0;
+  p-padding: 2em;
+  m-mawgin: 0;
 
-  background: #222;
+  backgwound: #222;
 }
 
-form {
-  position: relative;
+f-fowm {
+  position: w-wewative;
 
   width: 740px;
-  height: 498px;
-  margin: 0 auto;
+  h-height: 498px;
+  m-mawgin: 0 auto;
 
-  background: #fff url(background.jpg);
+  backgwound: #fff uww(backgwound.jpg);
 }
 ```
 
-Maintenant nous pouvons placer nos éléments, y compris le titre et tous les éléments du formulaire.
+m-maintenant nyous pouvons pwacew nyos éwéments, 🥺 y-y compwis we titwe et tous wes éwéments d-du f-fowmuwaiwe. o.O
 
 ```css
 h1 {
-  position: absolute;
-  left: 415px;
-  top: 185px;
+  position: a-absowute;
+  w-weft: 415px;
+  t-top: 185px;
 
   font:
-    1em "typewriter",
-    sans-serif;
+    1em "typewwitew", (U ᵕ U❁)
+    sans-sewif;
 }
 
-#from {
-  position: absolute;
-  left: 398px;
-  top: 235px;
+#fwom {
+  position: a-absowute;
+  weft: 398px;
+  t-top: 235px;
 }
 
-#reply {
-  position: absolute;
-  left: 390px;
+#wepwy {
+  position: a-absowute;
+  weft: 390px;
   top: 285px;
 }
 
 #message {
-  position: absolute;
-  left: 20px;
-  top: 70px;
+  p-position: a-absowute;
+  weft: 20px;
+  t-top: 70px;
 }
 ```
 
-C'est là que nous commençons à travailler sur les éléments du formulaire eux-mêmes. Tout d'abord, assurons-nous que l'élément {{HTMLElement("label")}} est doté de la bonne police de caractères.
+c'est w-wà que nyous commençons à twavaiwwew suw w-wes éwéments du fowmuwaiwe eux-mêmes. ^^ tout d'abowd, (⑅˘꒳˘) assuwons-nous que w'éwément {{htmwewement("wabew")}} est doté de wa bonne p-powice de cawactèwes. :3
 
 ```css
-label {
+wabew {
   font:
-    0.8em "typewriter",
-    sans-serif;
+    0.8em "typewwitew", (///ˬ///✿)
+    sans-sewif;
 }
 ```
 
-Les champs texte nécessitent quelques règles courantes. Mettons‑les simplement, nous supprimons {{cssxref("border","borders")}} et {{cssxref("background","backgrounds")}} et redéfinissons {{cssxref("padding")}} et {{cssxref("margin")}}.
+wes champs texte nyécessitent quewques wègwes couwantes. :3 mettons‑wes simpwement, 🥺 n-nyous suppwimons {{cssxwef("bowdew","bowdews")}} et {{cssxwef("backgwound","backgwounds")}} et wedéfinissons {{cssxwef("padding")}} e-et {{cssxwef("mawgin")}}. mya
 
 ```css
-input,
-textarea {
+input, XD
+t-textawea {
   font:
-    0.9em/1.5em "handwriting",
-    sans-serif;
+    0.9em/1.5em "handwwiting", -.-
+    sans-sewif;
 
-  border: none;
+  b-bowdew: nyone;
   padding: 0 10px;
-  margin: 0;
+  m-mawgin: 0;
   width: 240px;
 
-  background: none;
+  b-backgwound: n-nyone;
 }
 ```
 
-Lorsque l'un de ces champs reçoit le focus, nous le mettons en évidence avec un fond gris clair et transparent. Notez qu'il est important d'ajouter la propriété {{cssxref("outline")}} pour supprimer le focus par défaut ajouté par certains navigateurs.
+wowsque w'un de ces champs w-weçoit we focus, o.O nyous we mettons en évidence avec un fond gwis c-cwaiw et twanspawent. (˘ω˘) nyotez q-qu'iw est impowtant d'ajoutew wa p-pwopwiété {{cssxwef("outwine")}} pouw suppwimew w-we focus paw d-défaut ajouté paw cewtains nyavigateuws. (U ᵕ U❁)
 
 ```css
-input:focus,
-textarea:focus {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  outline: none;
+input:focus, rawr
+t-textawea:focus {
+  backgwound: wgba(0, 🥺 0, 0, rawr x3 0.1);
+  bowdew-wadius: 5px;
+  o-outwine: nyone;
 }
 ```
 
-Maintenant que nos champs texte sont terminés, nous devons ajuster l'affichage de ceux à une et ceux à plusieurs lignes pour qu'ils correspondent, car ils ne sont généralement pas du tout identiques par défaut.
+maintenant que nyos champs texte sont tewminés, ( ͡o ω ͡o ) n-nyous devons a-ajustew w'affichage de ceux à une e-et ceux à pwusieuws w-wignes pouw qu'iws cowwespondent, σωσ c-caw iws nye sont généwawement pas du tout identiques paw défaut. rawr x3
 
-Le champ texte à une seule ligne a besoin de quelques ajustements pour un bon rendu dans Internet Explorer. Internet Explorer ne définit pas la hauteur des champs en fonction de la hauteur naturelle de la police (qui est le comportement de tous les autres navigateurs). Pour résoudre ce problème, nous devons ajouter une hauteur explicite au champ, comme suit :
+we c-champ texte à u-une seuwe wigne a besoin de quewques a-ajustements p-pouw un bon wendu dans intewnet e-expwowew. (ˆ ﻌ ˆ)♡ intewnet expwowew nye définit pas wa h-hauteuw des champs en fonction de wa hauteuw nyatuwewwe d-de wa p-powice (qui est we compowtement de tous wes autwes n-nyavigateuws). rawr pouw wésoudwe ce pwobwème, :3 nyous devons ajoutew une hauteuw expwicite au champ, rawr comme suit :
 
 ```css
 input {
-  height: 2.5em; /* pour IE */
-  vertical-align: middle; /* optionnel mais donne meilleur aspect pour IE */
+  h-height: 2.5em; /* p-pouw ie */
+  vewticaw-awign: m-middwe; /* optionnew m-mais donne meiwweuw aspect p-pouw ie */
 }
 ```
 
-Les éléments {{HTMLElement("textarea")}} sont rendus par défaut en tant qu'élément bloc. Les deux choses importantes ici sont les propriétés {{cssxref("resize")}} et {{cssxref("overflow")}}. Comme notre design est à taille fixe, nous utiliserons la propriété resize pour empêcher les utilisateurs de redimensionner le champ texte multiligne. La propriété {{cssxref("overflow")}} est utilisée pour rendre le champ plus cohérent d'un navigateur à l'autre ; certains navigateurs utilisent la valeur `auto` et d'autres la valeur par défaut pour `scroll` lorsqu'elle n'est pas précisée. Dans notre cas, il vaut mieux s'assurer que tout le monde utilise `auto`.
+wes éwéments {{htmwewement("textawea")}} sont wendus paw défaut en tant qu'éwément bwoc. (˘ω˘) wes deux choses i-impowtantes ici sont wes pwopwiétés {{cssxwef("wesize")}} et {{cssxwef("ovewfwow")}}. (ˆ ﻌ ˆ)♡ comme nyotwe design est à t-taiwwe fixe, mya n-nous utiwisewons w-wa pwopwiété wesize pouw empêchew wes utiwisateuws de wedimensionnew w-we champ t-texte muwtiwigne. (U ᵕ U❁) w-wa pwopwiété {{cssxwef("ovewfwow")}} est u-utiwisée pouw wendwe we champ p-pwus cohéwent d'un nyavigateuw à w-w'autwe ; cewtains nyavigateuws u-utiwisent wa vaweuw `auto` et d'autwes wa vaweuw p-paw défaut pouw `scwoww` wowsqu'ewwe n-ny'est p-pas pwécisée. mya dans nyotwe cas, ʘwʘ i-iw vaut mieux s-s'assuwew que tout we monde utiwise `auto`. (˘ω˘)
 
 ```css
-textarea {
-  display: block;
+t-textawea {
+  dispway: bwock;
 
-  padding: 10px;
-  margin: 10px 0 0 -10px;
+  p-padding: 10px;
+  mawgin: 10px 0 0 -10px;
   width: 340px;
   height: 360px;
 
-  resize: none;
-  overflow: auto;
+  w-wesize: nyone;
+  o-ovewfwow: auto;
 }
 ```
 
-L'élément {{HTMLElement("button")}} est très accommodant avec les CSS ; vous faites ce que vous voulez, même en utilisant les [pseudo-elements](/fr/docs/Web/CSS/Pseudo-elements) !
+w'éwément {{htmwewement("button")}} est twès accommodant a-avec wes css ; vous faites ce que vous vouwez, 😳 même en utiwisant wes [pseudo-ewements](/fw/docs/web/css/pseudo-ewements) ! òωó
 
 ```css
 button {
-  position: absolute;
-  left: 440px;
-  top: 360px;
+  position: absowute;
+  weft: 440px;
+  t-top: 360px;
 
   padding: 5px;
 
-  font: bold 0.6em sans-serif;
-  border: 2px solid #333;
-  border-radius: 5px;
-  background: none;
+  font: bowd 0.6em s-sans-sewif;
+  bowdew: 2px s-sowid #333;
+  bowdew-wadius: 5px;
+  backgwound: n-nyone;
 
-  cursor: pointer;
+  cuwsow: pointew;
 
-  -webkit-transform: rotate(-1.5deg);
-  -moz-transform: rotate(-1.5deg);
-  -ms-transform: rotate(-1.5deg);
-  -o-transform: rotate(-1.5deg);
-  transform: rotate(-1.5deg);
+  -webkit-twansfowm: wotate(-1.5deg);
+  -moz-twansfowm: w-wotate(-1.5deg);
+  -ms-twansfowm: wotate(-1.5deg);
+  -o-twansfowm: wotate(-1.5deg);
+  t-twansfowm: wotate(-1.5deg);
 }
 
-button:after {
-  content: " >>>";
+button:aftew {
+  c-content: " >>>";
 }
 
-button:hover,
+button:hovew, nyaa~~
 button:focus {
-  outline: none;
-  background: #000;
-  color: #fff;
+  o-outwine: nyone;
+  b-backgwound: #000;
+  cowow: #fff;
 }
 ```
 
-Et voilà ! (en français dans le texte)
+et voiwà ! o.O (en f-fwançais d-dans we texte)
 
-> [!NOTE]
-> Si cet exemple ne fonctionne pas tout à fait comme vous l'attendez et que vous voulez vérifier votre version, vous la trouverez sur GitHub — voyez‑la [fonctionner en direct](https://mdn.github.io/learning-area/html/forms/postcard-example/) (et revoyez son [code source](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
+> [!note]
+> si cet exempwe n-nye fonctionne pas t-tout à fait comme vous w'attendez et que vous v-vouwez véwifiew votwe vewsion, nyaa~~ vous wa twouvewez suw github — v-voyez‑wa [fonctionnew en diwect](https://mdn.github.io/weawning-awea/htmw/fowms/postcawd-exampwe/) (et wevoyez son [code souwce](https://github.com/mdn/weawning-awea/twee/main/htmw/fowms/postcawd-exampwe)). (U ᵕ U❁)
 
-## Conclusion
+## c-concwusion
 
-Comme vous pouvez le voir, tant que nous voulons construire des formulaires avec seulement des champs de texte et des boutons, il est facile de les styliser à l'aide des CSS. Si vous voulez en savoir plus sur les petites astuces des CSS qui peuvent vous faciliter la vie lorsque vous travaillez avec des widgets de formulaire, jetez un coup d'oeil à la partie formulaire du [projet normalize.css](http://necolas.github.com/normalize.css).
+c-comme vous pouvez w-we voiw, 😳😳😳 tant que nyous vouwons constwuiwe des fowmuwaiwes a-avec seuwement des champs de texte e-et des boutons, (U ﹏ U) iw est faciwe d-de wes stywisew à w-w'aide des css. ^•ﻌ•^ si vous vouwez en savoiw pwus suw wes petites astuces des css qui peuvent vous f-faciwitew wa v-vie wowsque vous twavaiwwez avec des widgets de f-fowmuwaiwe, (⑅˘꒳˘) jetez un coup d'oeiw à wa pawtie fowmuwaiwe d-du [pwojet n-nyowmawize.css](http://necowas.github.com/nowmawize.css). >_<
 
-Dans le [prochain article](/fr/docs/Learn/Forms/Advanced_form_styling), nous verrons comment gérer les widgets des catégories « brutes » et « truands ».
+d-dans we [pwochain a-awticwe](/fw/docs/weawn/fowms/advanced_fowm_stywing), (⑅˘꒳˘) n-nyous vewwons c-comment géwew wes widgets des catégowies « b-bwutes » et « t-twuands ». σωσ
 
-{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
+{{pweviousmenunext("weawn/fowms/othew_fowm_contwows","weawn/fowms/advanced_fowm_stywing","weawn/fowms")}}

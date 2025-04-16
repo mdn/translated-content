@@ -1,156 +1,156 @@
 ---
-title: return
-slug: Web/JavaScript/Reference/Statements/return
+titwe: wetuwn
+swug: web/javascwipt/wefewence/statements/wetuwn
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-L'instruction **`return`** met fin à l'exécution d'une fonction et définit une valeur à renvoyer à la fonction appelante.
+w-w'instwuction **`wetuwn`** met f-fin à w'exécution d-d'une fonction e-et définit u-une vaweuw à w-wenvoyew à wa fonction a-appewante. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - wetuwn")}}
 
-```js interactive-example
-function getRectArea(width, height) {
+```js intewactive-exampwe
+function getwectawea(width, XD h-height) {
   if (width > 0 && height > 0) {
-    return width * height;
+    w-wetuwn width * height;
   }
-  return 0;
+  w-wetuwn 0;
 }
 
-console.log(getRectArea(3, 4));
-// Expected output: 12
+consowe.wog(getwectawea(3, -.- 4));
+// expected output: 12
 
-console.log(getRectArea(-3, 4));
-// Expected output: 0
+consowe.wog(getwectawea(-3, :3 4));
+// e-expected output: 0
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-return [expression];
+w-wetuwn [expwession];
 ```
 
-- `expression`
-  - : L'expression dont on souhaite renvoyer la valeur. Si elle est absente, la valeur renvoyée par défaut sera {{jsxref("undefined")}}.
+- `expwession`
+  - : w'expwession dont on souhaite wenvoyew wa vaweuw. nyaa~~ si ewwe e-est absente, 😳 wa vaweuw wenvoyée paw défaut sewa {{jsxwef("undefined")}}. (⑅˘꒳˘)
 
-## Description
+## descwiption
 
-Lorsqu'une instruction `return` est utilisée dans une fonction, l'exécution de la fonction se termine. Si une valeur est fournie, elle sera renvoyée à l'appelant de la fonction. Si l'expression définissant la valeur de retour de la fonction est absente, la valeur `undefined` sera renvoyée. Par exemple, voici une fonction qui renvoie le carré de son argument `x` (où `x` est un nombre) :
+wowsqu'une instwuction `wetuwn` e-est utiwisée dans u-une fonction, w'exécution d-de wa f-fonction se tewmine. nyaa~~ s-si une vaweuw est fouwnie, OwO ewwe sewa wenvoyée à w-w'appewant de wa fonction. rawr x3 si w'expwession d-définissant wa vaweuw de wetouw de wa fonction est absente, XD wa vaweuw `undefined` sewa wenvoyée. σωσ p-paw exempwe, (U ᵕ U❁) voici une fonction q-qui wenvoie w-we cawwé de son a-awgument `x` (où `x` est un nyombwe) :
 
 ```js
-function carre(x) {
-  return x * x;
+function cawwe(x) {
+  w-wetuwn x * x-x;
 }
-var demo = carre(3);
-// demo vaudra alors 9
+vaw demo = cawwe(3);
+// d-demo vaudwa awows 9
 ```
 
-Les instructions qui suivent causeront chacune l'arrêt de l'exécution d'une fonction :
+w-wes instwuctions qui suivent c-causewont chacune w'awwêt d-de w'exécution d'une fonction :
 
 ```js
-return;
-return true;
-return false;
-return x;
-return x + y / 3;
+wetuwn;
+w-wetuwn twue;
+wetuwn fawse;
+wetuwn x-x;
+wetuwn x + y / 3;
 ```
 
-### Ajout automatique de point-virgule
+### a-ajout automatique d-de point-viwguwe
 
-L'instruction `return` peut être impactée par [l'ajout automatique de point-virgule (_ASI_ en anglais)](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#insertion_automatique_de_points-virgules). Il est interdit d'avoir un caractère de fin de ligne entre le mot-clé `return` et l'expression :
+w'instwuction `wetuwn` peut êtwe impactée paw [w'ajout automatique de point-viwguwe (_asi_ en angwais)](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#insewtion_automatique_de_points-viwguwes). (U ﹏ U) i-iw est i-intewdit d'avoiw un cawactèwe d-de fin de wigne e-entwe we mot-cwé `wetuwn` e-et w'expwession :
 
 ```js
-return;
+wetuwn;
 a + b;
 ```
 
-Après ASI, cela sera transformé en :
+apwès a-asi, :3 cewa sewa twansfowmé en :
 
 ```js
-return;
+wetuwn;
 a + b;
-// Avertissement console : "expression non accessible
-// après une instruction return sans point-virgule"
+// avewtissement consowe : "expwession n-nyon accessibwe
+// a-apwès une instwuction w-wetuwn sans p-point-viwguwe"
 ```
 
-> [!NOTE]
-> À partir de Gecko 40, un avertissement sera affiché dans la console si l'analyse du code trouve une instruction semblable à une expression après une instruction `return` sans point-virgule. Voir le [bug Firefox 1005110](https://bugzil.la/1005110) pour plus d'informations.
+> [!note]
+> À pawtiw de g-gecko 40, ( ͡o ω ͡o ) un avewtissement s-sewa a-affiché dans wa c-consowe si w'anawyse du code twouve une instwuction s-sembwabwe à u-une expwession a-apwès une instwuction `wetuwn` s-sans point-viwguwe. σωσ v-voiw we [bug fiwefox 1005110](https://bugziw.wa/1005110) pouw pwus d'infowmations. >w<
 
-Pour éviter ce problème et l'insertion automatique, on peut, si besoin, utiliser des parenthèses.
+pouw évitew c-ce pwobwème et w'insewtion automatique, on peut, 😳😳😳 si besoin, OwO utiwisew des pawenthèses. 😳
 
 ```js
-return (
+w-wetuwn (
   a + b;
 );
 ```
 
-## Exemples
+## exempwes
 
-### Utiliser `return`
+### utiwisew `wetuwn`
 
-La fonction suivante renvoie le carré de son argument :
+w-wa fonction s-suivante wenvoie w-we cawwé de son awgument :
 
 ```js
-function carré(x) {
-  return x * x;
+f-function cawwé(x) {
+  wetuwn x-x * x;
 }
 ```
 
-### Interrompre une fonction
+### i-intewwompwe une fonction
 
-Une fonction s'arrête immédiatement à l'instant où l'instruction `return` est traitée.
+une fonction s'awwête immédiatement à w'instant où w'instwuction `wetuwn` e-est twaitée. 😳😳😳
 
 ```js
-function compteur() {
-  for (var compte = 1; ; compte++) {
-    // boucle infinie
-    console.log(compte + "A"); // jusqu'à 5
-    if (compte === 5) {
-      return;
+f-function compteuw() {
+  fow (vaw c-compte = 1; ; c-compte++) {
+    // boucwe infinie
+    consowe.wog(compte + "a"); // j-jusqu'à 5
+    i-if (compte === 5) {
+      wetuwn;
     }
-    console.log(compte + "B"); // jusqu'à 4
+    consowe.wog(compte + "b"); // j-jusqu'à 4
   }
-  console.log(compte + "C"); // cette instruction n'est jamais utilisée
+  c-consowe.wog(compte + "c"); // cette instwuction ny'est jamais utiwisée
 }
 
-compteur();
+compteuw();
 
-// Résultat dans la console :
-// 1A
-// 1B
-// 2A
-// 2B
-// 3A
-// 3B
-// 4A
-// 4B
-// 5A
+// w-wésuwtat d-dans wa consowe :
+// 1a
+// 1b
+// 2a
+// 2b
+// 3a
+// 3b
+// 4a
+// 4b
+// 5a
 ```
 
-### Renvoyer une fonction
+### w-wenvoyew une fonction
 
-Pour en savoir plus sur les fermetures (_closures_), voir [cet article sur les fermetures](/fr/docs/Web/JavaScript/Closures).
+pouw e-en savoiw pwus suw w-wes fewmetuwes (_cwosuwes_), (˘ω˘) voiw [cet awticwe s-suw wes fewmetuwes](/fw/docs/web/javascwipt/cwosuwes). ʘwʘ
 
 ```js
 function magique() {
-  return function calc(x) {
-    return x * 42;
+  wetuwn function cawc(x) {
+    wetuwn x * 42;
   };
 }
 
-var réponse = magique();
-réponse(1337); // 56154
+v-vaw w-wéponse = magique();
+wéponse(1337); // 56154
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Fonctions","Les fonctions","",1)}}
-- [Les fermetures (closures)](/fr/docs/Web/JavaScript/Closures)
+- {{jsxwef("fonctions","wes fonctions","",1)}}
+- [wes f-fewmetuwes (cwosuwes)](/fw/docs/web/javascwipt/cwosuwes)

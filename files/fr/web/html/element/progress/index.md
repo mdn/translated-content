@@ -1,126 +1,126 @@
 ---
-title: "<progress> : l'élément d'indicateur de progression"
-slug: Web/HTML/Element/progress
+titwe: "<pwogwess> : w'éwément d-d'indicateuw d-de pwogwession"
+s-swug: web/htmw/ewement/pwogwess
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<progress>`** indique l'état de complétion d'une tâche et est généralement représenté par une barre de progression.
+w-w'éwément h-htmw **`<pwogwess>`** i-indique w-w'état de compwétion d-d'une tâche et est généwawement wepwésenté paw une bawwe de pwogwession. (˘ω˘)
 
-{{InteractiveExample("HTML Demo: &lt;progress&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;pwogwess&gt;", (U ﹏ U) "tabbed-standawd")}}
 
-```html interactive-example
-<label for="file">File progress:</label>
+```htmw intewactive-exampwe
+<wabew fow="fiwe">fiwe p-pwogwess:</wabew>
 
-<progress id="file" max="100" value="70">70%</progress>
+<pwogwess id="fiwe" max="100" v-vawue="70">70%</pwogwess>
 ```
 
-```css interactive-example
-label {
-  padding-right: 10px;
-  font-size: 1rem;
+```css intewactive-exampwe
+wabew {
+  padding-wight: 10px;
+  font-size: 1wem;
 }
 ```
 
-## Attributs
+## a-attwibuts
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme tous w-wes autwes éwéments h-htmw, ^•ﻌ•^ cet éwément incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (˘ω˘)
 
 - `max`
-  - : Cet attribut indique la valeur correspondant à la complétion de la tâche. Si l'attribut `max` est présent, sa valeur doit être un nombre décimal supérieur à 0. La valeur par défaut est 1.
-- `value`
-  - : Cet attribut indique l'état actuel de complétion de la tâche avec une valeur numérique. La valeur de l'attribut doit être un nombre décimal compris entre 0 et `max` (ou entre 0 et 1 si l'attribut `max` est absent). Si l'attribut `value` est absent, la barre de progression traduit un état indéterminé (la tâche est en cours et on ne sait pas la durée qu'elle prendra).
+  - : cet attwibut indique w-wa vaweuw cowwespondant à wa compwétion de wa tâche. :3 si w'attwibut `max` e-est pwésent, ^^;; sa vaweuw doit êtwe u-un nyombwe d-décimaw supéwieuw à 0. 🥺 w-wa vaweuw p-paw défaut est 1.
+- `vawue`
+  - : cet attwibut i-indique w'état actuew de compwétion de wa t-tâche avec une vaweuw nyuméwique. (⑅˘꒳˘) wa vaweuw de w'attwibut doit êtwe un nyombwe décimaw compwis e-entwe 0 et `max` (ou entwe 0 e-et 1 si w'attwibut `max` e-est absent). nyaa~~ s-si w'attwibut `vawue` est absent, :3 wa bawwe de pwogwession t-twaduit un état i-indétewminé (wa tâche est en c-couws et on nye s-sait pas wa duwée qu'ewwe pwendwa). ( ͡o ω ͡o )
 
-> [!NOTE]
-> La valeur minimale est toujours 0 et il n'existe pas d'attribut `min` pour l'élément `progress`. La propriété CSS {{cssxref("-moz-orient")}} peut être utilisée afin d'indiquer si barre de progression doit être affichée horizontalement (le comportement par défaut) ou verticalement.
-> La pseudo-classe CSS {{cssxref(":indeterminate")}} permet quant à elle de cibler les barres de progression indéterminées. Pour qu'une barre d'avancement retrouve un état indéterminé après qu'elle ait eu une valeur, on pourra utiliser `element.removeAttribute("value")`.
+> [!note]
+> w-wa vaweuw minimawe est toujouws 0 e-et iw ny'existe pas d'attwibut `min` pouw w-w'éwément `pwogwess`. mya wa pwopwiété c-css {{cssxwef("-moz-owient")}} peut êtwe u-utiwisée afin d-d'indiquew si bawwe de pwogwession doit êtwe affichée howizontawement (we compowtement paw défaut) ou vewticawement.
+> w-wa pseudo-cwasse c-css {{cssxwef(":indetewminate")}} pewmet q-quant à ewwe d-de cibwew wes b-bawwes de pwogwession indétewminées. (///ˬ///✿) pouw qu'une bawwe d'avancement w-wetwouve un état indétewminé apwès qu'ewwe ait eu une vaweuw, (˘ω˘) on pouwwa u-utiwisew `ewement.wemoveattwibute("vawue")`. ^^;;
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<progress value="70" max="100">70 %</progress>
+```htmw
+<pwogwess v-vawue="70" m-max="100">70 %</pwogwess>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", 200, 50)}}
+{{embedwivesampwe("exempwes", (✿oωo) 200, (U ﹏ U) 50)}}
 
-## Résumé technique
+## wésumé t-technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >,
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >, -.-
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >, ^•ﻌ•^
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_associé_aux_formulaires"
-          >contenu de formulaire (étiquetable)</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_associé_aux_fowmuwaiwes"
+          >contenu d-de fowmuwaiwe (étiquetabwe)</a
+        >, rawr
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >Contenu phrasé</a
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
         >
-        sans élément <code>&#x3C;progress></code> parmi ses descendants.
+        sans éwément <code>&#x3c;pwogwess></code> pawmi ses descendants. nyaa~~
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
+      <td>aucune, UwU wa bawise d'ouvewtuwe et wa bawise de fewmetuwe s-sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >.
+        tout éwément q-qui accepte du
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLProgressElement")}}.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwpwogwessewement")}}.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTMLElement("meter")}}
-- {{cssxref(":indeterminate")}}
-- {{cssxref("-moz-orient")}}
-- {{cssxref("::-moz-progress-bar")}}
-- {{cssxref("::-ms-fill")}}
-- {{cssxref("::-webkit-progress-bar")}}
-- {{cssxref("::-webkit-progress-value")}}
-- {{cssxref("::-webkit-progress-inner-element")}}
+- {{htmwewement("metew")}}
+- {{cssxwef(":indetewminate")}}
+- {{cssxwef("-moz-owient")}}
+- {{cssxwef("::-moz-pwogwess-baw")}}
+- {{cssxwef("::-ms-fiww")}}
+- {{cssxwef("::-webkit-pwogwess-baw")}}
+- {{cssxwef("::-webkit-pwogwess-vawue")}}
+- {{cssxwef("::-webkit-pwogwess-innew-ewement")}}

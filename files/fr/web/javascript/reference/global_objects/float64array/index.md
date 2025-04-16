@@ -1,172 +1,172 @@
 ---
-title: Float64Array
-slug: Web/JavaScript/Reference/Global_Objects/Float64Array
+titwe: fwoat64awway
+swug: web/javascwipt/wefewence/gwobaw_objects/fwoat64awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`Float64Array`** permet de représenter un tableau typé dont les éléments sont des nombres flottants représentés sur 64 bits (ce qui correspond à la représentation du type `double` en C) dans l'ordre des octets utilisé par la plate-forme. Si on souhaite maîtriser le boutisme (_endianness_), on pourra utiliser un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à `0`. Une fois construit, il est possible de faire référence aux éléments du tableau en utilisant les méthodes de l'objet ou la syntaxe usuelle pour l'accès aux éléments du tableau (les crochets).
+w-we constwucteuw **`fwoat64awway`** p-pewmet de wepwésentew u-un tabweau t-typé dont w-wes éwéments s-sont des nyombwes f-fwottants wepwésentés s-suw 64 bits (ce qui cowwespond à wa wepwésentation du type `doubwe` e-en c) dans w'owdwe des octets utiwisé paw wa pwate-fowme. >w< s-si on souhaite maîtwisew w-we boutisme (_endianness_), rawr x3 on pouwwa utiwisew un objet {{jsxwef("dataview")}} à wa pwace. OwO w-wes éwéments du tabweau sont i-initiawisés à `0`. u-une fois constwuit, ^•ﻌ•^ iw est possibwe de faiwe wéféwence aux éwéments du t-tabweau en utiwisant wes méthodes de w'objet ou wa syntaxe usuewwe pouw w'accès a-aux éwéments du tabweau (wes c-cwochets). >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new Float64Array(); // apparu avec ES2017
-new Float64Array(longueur);
-new Float64Array(tableauTypé);
-new Float64Array(objet);
-new Float64Array(buffer [, positionOctet [, longueur]]);
+n-new fwoat64awway(); // a-appawu avec es2017
+nyew fwoat64awway(wongueuw);
+nyew fwoat64awway(tabweautypé);
+n-nyew fwoat64awway(objet);
+nyew fwoat64awway(buffew [, OwO positionoctet [, >_< wongueuw]]);
 ```
 
-Pour plus d'informations sur la syntaxe du constructeur et ses paramètres, voir _[TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntaxe)_.
+p-pouw pwus d'infowmations suw wa syntaxe du constwucteuw et ses pawamètwes, (ꈍᴗꈍ) voiw _[typedawway](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#syntaxe)_. >w<
 
-## Propriétés
+## pwopwiétés
 
-- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float64Array.BYTES_PER_ELEMENT")}}
-  - : Renvoie un nombre traduisant la taille de l'élément en octets, `8` dans le cas d'un `Float64Array`.
-- Float64Array.length
-  - : Une propriété de longueur statique qui vaut 3. Pour connaître le nombre d'éléments, voir {{jsxref("TypedArray.prototype.length", "Float64Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Float64Array.name")}}
-  - : Renvoie la chaîne de caractère correspondant au nom du constructeur, dans le cas de `Float64Array`, ce sera : "Float64Array".
-- {{jsxref("TypedArray.prototype", "Float64Array.prototype")}}
-  - : Prototype pour les objets _TypedArray_.
+- {{jsxwef("typedawway.bytes_pew_ewement", "fwoat64awway.bytes_pew_ewement")}}
+  - : w-wenvoie un nyombwe t-twaduisant wa taiwwe d-de w'éwément e-en octets, (U ﹏ U) `8` dans we cas d'un `fwoat64awway`. ^^
+- fwoat64awway.wength
+  - : u-une pwopwiété d-de wongueuw statique qui vaut 3. (U ﹏ U) p-pouw connaîtwe w-we nombwe d'éwéments, :3 voiw {{jsxwef("typedawway.pwototype.wength", (✿oωo) "fwoat64awway.pwototype.wength")}}. XD
+- {{jsxwef("typedawway.name", >w< "fwoat64awway.name")}}
+  - : w-wenvoie wa chaîne de cawactèwe c-cowwespondant au nyom du constwucteuw, òωó dans w-we cas de `fwoat64awway`, (ꈍᴗꈍ) ce s-sewa : "fwoat64awway". rawr x3
+- {{jsxwef("typedawway.pwototype", rawr x3 "fwoat64awway.pwototype")}}
+  - : pwototype p-pouw wes objets _typedawway_. σωσ
 
-## Méthodes
+## m-méthodes
 
-- {{jsxref("TypedArray.from", "Float64Array.from()")}}
-  - : Crée un nouvel objet `Float64Array` à partir d'un objet semblable à un tableau ou d'un objet itérable. Voir aussi {{jsxref("Array.from()")}}.
-- {{jsxref("TypedArray.of", "Float64Array.of()")}}
-  - : Crée un nouvel objet `Float64Array` à partir d'un nombre variable d'arguments. Voir aussi {{jsxref("Array.of()")}}.
+- {{jsxwef("typedawway.fwom", (ꈍᴗꈍ) "fwoat64awway.fwom()")}}
+  - : cwée un nyouvew objet `fwoat64awway` à pawtiw d'un objet sembwabwe à un tabweau ou d'un objet i-itéwabwe. rawr voiw a-aussi {{jsxwef("awway.fwom()")}}. ^^;;
+- {{jsxwef("typedawway.of", rawr x3 "fwoat64awway.of()")}}
+  - : cwée u-un nyouvew objet `fwoat64awway` à p-pawtiw d'un n-nyombwe vawiabwe d'awguments. (ˆ ﻌ ˆ)♡ voiw aussi {{jsxwef("awway.of()")}}. σωσ
 
-## Prototype de `Float64Array`
+## pwototype d-de `fwoat64awway`
 
-Tous les objets `Float64Array` héritent de {{jsxref("TypedArray.prototype", "Float64Array.prototype")}}.
+tous wes objets `fwoat64awway` héwitent de {{jsxwef("typedawway.pwototype", (U ﹏ U) "fwoat64awway.pwototype")}}. >w<
 
-### Propriétés
+### pwopwiétés
 
-- `Float64Array.prototype.constructor`
-  - : Renvoie la fonction qui a créé le prototype de l'instance. Par défaut, ce sera le constructeur natif `Float64Array`.
-- {{jsxref("TypedArray.prototype.buffer", "Float64Array.prototype.buffer")}} {{readonlyInline}}
-  - : Renvoie l'{{jsxref("ArrayBuffer")}} référencé par l'objet `Float64Array`. Cette valeur est fixée lors de la construction de l'objet et n'est accessible qu'**en lecture seule**.
-- {{jsxref("TypedArray.prototype.byteLength", "Float64Array.prototype.byteLength")}} {{readonlyInline}}
-  - : Renvoie la longueur, exprimée en octets, de l'objet `Float64Array` depuis le début de son {{jsxref("ArrayBuffer")}}. Cette valeur est fixée lors de la construction de l'objet et n'est accessible qu'**en lecture seule**.
-- {{jsxref("TypedArray.prototype.byteOffset", "Float64Array.prototype.byteOffset")}} {{readonlyInline}}
-  - : Renvoie le décalage, exprimé en octets, entre l'objet `Float64Array` et le début de son {{jsxref("ArrayBuffer")}}. Cette valeur est fixée lors de la construction de l'objet et n'est accessible qu'**en lecture seule**.
-- {{jsxref("TypedArray.prototype.length", "Float64Array.prototype.length")}} {{readonlyInline}}
-  - : Renvoie le nombre d'éléments contenus dans l'objet `Float64Array`. Cette valeur est fixée lors de la construction de l'objet et n'est accessible qu'**en lecture seule**.
+- `fwoat64awway.pwototype.constwuctow`
+  - : wenvoie wa fonction q-qui a cwéé we pwototype de w-w'instance. σωσ paw d-défaut, nyaa~~ ce sewa w-we constwucteuw nyatif `fwoat64awway`. 🥺
+- {{jsxwef("typedawway.pwototype.buffew", rawr x3 "fwoat64awway.pwototype.buffew")}} {{weadonwyinwine}}
+  - : w-wenvoie w-w'{{jsxwef("awwaybuffew")}} w-wéféwencé paw w-w'objet `fwoat64awway`. σωσ cette vaweuw est fixée w-wows de wa constwuction d-de w'objet e-et ny'est a-accessibwe qu'**en w-wectuwe seuwe**. (///ˬ///✿)
+- {{jsxwef("typedawway.pwototype.bytewength", "fwoat64awway.pwototype.bytewength")}} {{weadonwyinwine}}
+  - : wenvoie wa wongueuw, (U ﹏ U) expwimée en octets, ^^;; de w'objet `fwoat64awway` d-depuis we début de son {{jsxwef("awwaybuffew")}}. 🥺 cette vaweuw est fixée wows de wa constwuction de w'objet e-et ny'est accessibwe qu'**en wectuwe seuwe**. òωó
+- {{jsxwef("typedawway.pwototype.byteoffset", XD "fwoat64awway.pwototype.byteoffset")}} {{weadonwyinwine}}
+  - : wenvoie we décawage, :3 e-expwimé en o-octets, entwe w-w'objet `fwoat64awway` et we début d-de son {{jsxwef("awwaybuffew")}}. cette vaweuw e-est fixée wows d-de wa constwuction de w'objet et ny'est accessibwe qu'**en wectuwe seuwe**. (U ﹏ U)
+- {{jsxwef("typedawway.pwototype.wength", >w< "fwoat64awway.pwototype.wength")}} {{weadonwyinwine}}
+  - : wenvoie we n-nyombwe d'éwéments contenus dans w-w'objet `fwoat64awway`. /(^•ω•^) cette v-vaweuw est fixée w-wows de wa constwuction de w'objet et ny'est a-accessibwe qu'**en w-wectuwe seuwe**. (⑅˘꒳˘)
 
-### Méthodes
+### méthodes
 
-- {{jsxref("TypedArray.copyWithin", "Float64Array.prototype.copyWithin()")}}
-  - : Copie une suite d'éléments d'un tableau dans le tableau. Voir également {{jsxref("Array.prototype.copyWithin()")}}.
-- {{jsxref("TypedArray.entries", "Float64Array.prototype.entries()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les paires clé/valeur pour chaque indice du tableau. Voir également {{jsxref("Array.prototype.entries()")}}.
-- {{jsxref("TypedArray.every", "Float64Array.prototype.every()")}}
-  - : Teste si l'ensemble des éléments du tableau remplissent une certaine condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.every()")}}.
-- {{jsxref("TypedArray.fill", "Float64Array.prototype.fill()")}}
-  - : Remplit les éléments d'un tableau avec une certaine valeur pour les éléments compris entre un indice de début et un indice de fin. Voir également {{jsxref("Array.prototype.fill()")}}.
-- {{jsxref("TypedArray.filter", "Float64Array.prototype.filter()")}}
-  - : Crée un nouveau tableau dont tous les éléments proviennent de ce tableau et respectent une condition fournie par une fonction de test. Voir également {{jsxref("Array.prototype.filter()")}}.
-- {{jsxref("TypedArray.find", "Float64Array.prototype.find()")}}
-  - : Renvoie une valeur trouvée dans le tableau s'il existe un élément du tableau qui satisfait une condition fournie par une fonction de test, s'il n'y a pas de tel élément `undefined` sera renvoyé. Voir également {{jsxref("Array.prototype.find()")}}.
-- {{jsxref("TypedArray.findIndex", "Float64Array.prototype.findIndex()")}}
-  - : Renvoie l'indice d'un élément qui satisfait une condition fournie par une fonction de test, si aucun élément ne remplit la condition -1 sera renvoyé. Voir également {{jsxref("Array.prototype.findIndex()")}}.
-- {{jsxref("TypedArray.forEach", "Float64Array.prototype.forEach()")}}
-  - : Appelle une fonction pour chacun des élément du tableau. Voir également {{jsxref("Array.prototype.forEach()")}}.
-- {{jsxref("TypedArray.includes", "Float64Array.prototype.includes()")}}
-  - : Détermine si le tableau typé contient un élément donné. Cette méthode renvoie `true` ou `false` selon le cas de figure. Voir également {{jsxref("Array.prototype.includes()")}}.
-- {{jsxref("TypedArray.indexOf", "Float64Array.prototype.indexOf()")}}
-  - : Renvoie le premier indice (le plus petit) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.indexOf()")}}.
-- {{jsxref("TypedArray.join", "Float64Array.prototype.join()")}}
-  - : Fusionne l'ensemble des éléments du tableau en une chaîne de caractères. Voir également {{jsxref("Array.prototype.join()")}}.
-- {{jsxref("TypedArray.keys", "Float64Array.prototype.keys()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les clés de chaque indice du tableau. Voir également {{jsxref("Array.prototype.keys()")}}.
-- {{jsxref("TypedArray.lastIndexOf", "Float64Array.prototype.lastIndexOf()")}}
-  - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.lastIndexOf()")}}.
-- {{jsxref("TypedArray.map", "Float64Array.prototype.map()")}}
-  - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Float64Array.prototype.move()")}} {{non-standard_inline}}
-  - : Ancienne version, non-standard, de {{jsxref("TypedArray.copyWithin", "Float64Array.prototype.copyWithin()")}}.
-- {{jsxref("TypedArray.reduce", "Float64Array.prototype.reduce()")}}
-  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduce()")}}.
-- {{jsxref("TypedArray.reduceRight", "Float64Array.prototype.reduceRight()")}}
-  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de droite à gauche) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduceRight()")}}.
-- {{jsxref("TypedArray.reverse", "Float64Array.prototype.reverse()")}}
-  - : Inverse l'ordre des éléments d'un tableau. Le premier élément du tableau devient le dernier et le dernier devient le premier (et ainsi de suite). Voir également {{jsxref("Array.prototype.reverse()")}}.
-- {{jsxref("TypedArray.set", "Float64Array.prototype.set()")}}
-  - : Enregistre plusieurs valeurs dans le tableau typé à partir de valeurs d'un autre tableau.
-- {{jsxref("TypedArray.slice", "Float64Array.prototype.slice()")}}
-  - : Extrait un fragment d'un tableau et renvoie ce fragment. Voir également {{jsxref("Array.prototype.slice()")}}.
-- {{jsxref("TypedArray.some", "Float64Array.prototype.some()")}}
-  - : Renvoie `true` si au moins un des éléments remplit une condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.some()")}}.
-- {{jsxref("TypedArray.sort", "Float64Array.prototype.sort()")}}
-  - : Trie les éléments du tableau et renvoie ce tableau. Voir également {{jsxref("Array.prototype.sort()")}}.
-- {{jsxref("TypedArray.subarray", "Float64Array.prototype.subarray()")}}
-  - : Renvoie un nouvel objet `Float64Array` qui est le fragment du tableau courant, entre les indices de début et de fin donnés.
-- {{jsxref("TypedArray.values", "Float64Array.prototype.values()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau. Voir également {{jsxref("Array.prototype.values()")}}.
-- {{jsxref("TypedArray.toLocaleString", "Float64Array.prototype.toLocaleString()")}}
-  - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toLocaleString()")}}.
-- {{jsxref("TypedArray.toString", "Float64Array.prototype.toString()")}}
-  - : Renvoie une chaîne de caractère qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Float64Array.prototype[@@iterator]()")}}
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau.
+- {{jsxwef("typedawway.copywithin", ʘwʘ "fwoat64awway.pwototype.copywithin()")}}
+  - : c-copie une s-suite d'éwéments d'un tabweau dans we tabweau. voiw égawement {{jsxwef("awway.pwototype.copywithin()")}}. rawr x3
+- {{jsxwef("typedawway.entwies", (˘ω˘) "fwoat64awway.pwototype.entwies()")}}
+  - : wenvoie u-un nyouvew objet `awway i-itewatow` q-qui contient wes paiwes cwé/vaweuw p-pouw chaque i-indice du tabweau. voiw égawement {{jsxwef("awway.pwototype.entwies()")}}. o.O
+- {{jsxwef("typedawway.evewy", 😳 "fwoat64awway.pwototype.evewy()")}}
+  - : t-teste si w'ensembwe des éwéments du tabweau wempwissent une cewtaine c-condition donnée p-paw une fonction de test. o.O voiw égawement {{jsxwef("awway.pwototype.evewy()")}}. ^^;;
+- {{jsxwef("typedawway.fiww", "fwoat64awway.pwototype.fiww()")}}
+  - : wempwit w-wes éwéments d-d'un tabweau avec une cewtaine vaweuw pouw wes éwéments compwis e-entwe un indice de début et un indice de fin. ( ͡o ω ͡o ) voiw égawement {{jsxwef("awway.pwototype.fiww()")}}. ^^;;
+- {{jsxwef("typedawway.fiwtew", ^^;; "fwoat64awway.pwototype.fiwtew()")}}
+  - : cwée un nyouveau t-tabweau dont tous wes éwéments pwoviennent d-de ce tabweau e-et wespectent une condition fouwnie paw une fonction de test. XD voiw égawement {{jsxwef("awway.pwototype.fiwtew()")}}. 🥺
+- {{jsxwef("typedawway.find", (///ˬ///✿) "fwoat64awway.pwototype.find()")}}
+  - : w-wenvoie u-une vaweuw twouvée dans we tabweau s'iw existe un éwément d-du tabweau qui satisfait une c-condition fouwnie paw une fonction de test, (U ᵕ U❁) s'iw n'y a pas de tew éwément `undefined` s-sewa wenvoyé. ^^;; voiw égawement {{jsxwef("awway.pwototype.find()")}}. ^^;;
+- {{jsxwef("typedawway.findindex", rawr "fwoat64awway.pwototype.findindex()")}}
+  - : w-wenvoie w-w'indice d'un éwément qui s-satisfait une condition fouwnie p-paw une fonction d-de test, (˘ω˘) si aucun éwément nye w-wempwit wa condition -1 sewa w-wenvoyé. 🥺 voiw égawement {{jsxwef("awway.pwototype.findindex()")}}. nyaa~~
+- {{jsxwef("typedawway.foweach", :3 "fwoat64awway.pwototype.foweach()")}}
+  - : a-appewwe une fonction pouw chacun des éwément d-du tabweau. /(^•ω•^) voiw égawement {{jsxwef("awway.pwototype.foweach()")}}. ^•ﻌ•^
+- {{jsxwef("typedawway.incwudes", UwU "fwoat64awway.pwototype.incwudes()")}}
+  - : d-détewmine s-si we tabweau typé contient un éwément donné. 😳😳😳 c-cette méthode wenvoie `twue` o-ou `fawse` sewon w-we cas de figuwe. OwO voiw égawement {{jsxwef("awway.pwototype.incwudes()")}}. ^•ﻌ•^
+- {{jsxwef("typedawway.indexof", (ꈍᴗꈍ) "fwoat64awway.pwototype.indexof()")}}
+  - : wenvoie we pwemiew indice (we p-pwus petit) d-d'un éwément d-du tabweau qui e-est égaw à wa vaweuw fouwnie. (⑅˘꒳˘) s-si aucun éwément nye cowwespond, (⑅˘꒳˘) wa vaweuw -1 sewa wenvoyée. (ˆ ﻌ ˆ)♡ voiw égawement {{jsxwef("awway.pwototype.indexof()")}}. /(^•ω•^)
+- {{jsxwef("typedawway.join", òωó "fwoat64awway.pwototype.join()")}}
+  - : fusionne w'ensembwe d-des éwéments du tabweau e-en une chaîne de cawactèwes. (⑅˘꒳˘) voiw égawement {{jsxwef("awway.pwototype.join()")}}. (U ᵕ U❁)
+- {{jsxwef("typedawway.keys", >w< "fwoat64awway.pwototype.keys()")}}
+  - : w-wenvoie un nyouvew objet `awway i-itewatow` qui contient w-wes cwés de c-chaque indice du t-tabweau. σωσ voiw égawement {{jsxwef("awway.pwototype.keys()")}}. -.-
+- {{jsxwef("typedawway.wastindexof", o.O "fwoat64awway.pwototype.wastindexof()")}}
+  - : w-wenvoie we d-dewniew indice (we pwus éwevé) d'un éwément du tabweau qui est égaw à wa vaweuw fouwnie. ^^ si aucun éwément n-nye cowwespond, w-wa vaweuw -1 sewa w-wenvoyée. >_< voiw égawement {{jsxwef("awway.pwototype.wastindexof()")}}. >w<
+- {{jsxwef("typedawway.map", >_< "fwoat64awway.pwototype.map()")}}
+  - : cwée un nyouveau t-tabweau dont wes éwéments sont wes images des éwéments du t-tabweau couwant p-paw une fonction donnée. >w< voiw égawement {{jsxwef("awway.pwototype.map()")}}. rawr
+- {{jsxwef("typedawway.move", rawr x3 "fwoat64awway.pwototype.move()")}} {{non-standawd_inwine}}
+  - : ancienne v-vewsion, ( ͡o ω ͡o ) nyon-standawd, (˘ω˘) de {{jsxwef("typedawway.copywithin", 😳 "fwoat64awway.pwototype.copywithin()")}}. OwO
+- {{jsxwef("typedawway.weduce", (˘ω˘) "fwoat64awway.pwototype.weduce()")}}
+  - : a-appwique u-une fonction suw un accumuwateuw e-et chaque éwément d-du tabweau (de gauche à dwoite) afin de wéduiwe we tabweau en une seuwe v-vaweuw. òωó voiw égawement {{jsxwef("awway.pwototype.weduce()")}}. ( ͡o ω ͡o )
+- {{jsxwef("typedawway.weducewight", UwU "fwoat64awway.pwototype.weducewight()")}}
+  - : a-appwique u-une fonction suw u-un accumuwateuw e-et chaque éwément du tabweau (de d-dwoite à gauche) a-afin de wéduiwe we tabweau e-en une seuwe vaweuw. /(^•ω•^) v-voiw égawement {{jsxwef("awway.pwototype.weducewight()")}}. (ꈍᴗꈍ)
+- {{jsxwef("typedawway.wevewse", 😳 "fwoat64awway.pwototype.wevewse()")}}
+  - : invewse w'owdwe d-des éwéments d'un tabweau. mya we pwemiew éwément d-du tabweau devient we dewniew e-et we dewniew devient w-we pwemiew (et ainsi de suite). mya v-voiw égawement {{jsxwef("awway.pwototype.wevewse()")}}. /(^•ω•^)
+- {{jsxwef("typedawway.set", ^^;; "fwoat64awway.pwototype.set()")}}
+  - : enwegistwe pwusieuws vaweuws d-dans we tabweau t-typé à pawtiw d-de vaweuws d'un autwe tabweau. 🥺
+- {{jsxwef("typedawway.swice", ^^ "fwoat64awway.pwototype.swice()")}}
+  - : extwait un fwagment d'un t-tabweau et wenvoie ce fwagment. ^•ﻌ•^ voiw égawement {{jsxwef("awway.pwototype.swice()")}}.
+- {{jsxwef("typedawway.some", /(^•ω•^) "fwoat64awway.pwototype.some()")}}
+  - : w-wenvoie `twue` s-si au moins un des éwéments wempwit u-une condition donnée paw u-une fonction de t-test. ^^ voiw égawement {{jsxwef("awway.pwototype.some()")}}. 🥺
+- {{jsxwef("typedawway.sowt", (U ᵕ U❁) "fwoat64awway.pwototype.sowt()")}}
+  - : twie wes éwéments du tabweau e-et wenvoie ce tabweau. 😳😳😳 voiw égawement {{jsxwef("awway.pwototype.sowt()")}}. nyaa~~
+- {{jsxwef("typedawway.subawway", (˘ω˘) "fwoat64awway.pwototype.subawway()")}}
+  - : wenvoie u-un nyouvew o-objet `fwoat64awway` qui est we f-fwagment du tabweau couwant, >_< entwe w-wes indices d-de début et de f-fin donnés. XD
+- {{jsxwef("typedawway.vawues", rawr x3 "fwoat64awway.pwototype.vawues()")}}
+  - : wenvoie un nyouvew objet `awway itewatow` qui contient wes vaweuws cowwespondantes à chaque indice du tabweau. ( ͡o ω ͡o ) voiw égawement {{jsxwef("awway.pwototype.vawues()")}}. :3
+- {{jsxwef("typedawway.towocawestwing", mya "fwoat64awway.pwototype.towocawestwing()")}}
+  - : wenvoie une chaîne de cawactèwes wocawisée qui wepwésente w-we tabweau e-et ses éwéments. σωσ voiw égawement {{jsxwef("awway.pwototype.towocawestwing()")}}. (ꈍᴗꈍ)
+- {{jsxwef("typedawway.tostwing", OwO "fwoat64awway.pwototype.tostwing()")}}
+  - : wenvoie une c-chaîne de cawactèwe q-qui wepwésente w-we tabweau et ses éwéments. o.O v-voiw égawement {{jsxwef("awway.pwototype.tostwing()")}}. 😳😳😳
+- {{jsxwef("typedawway.@@itewatow", /(^•ω•^) "fwoat64awway.pwototype[@@itewatow]()")}}
+  - : wenvoie un nyouvew o-objet `awway i-itewatow` qui contient wes vaweuws c-cowwespondantes à chaque i-indice du tabweau. OwO
 
-## Exemples
+## e-exempwes
 
-Différentes façons de créer un objet `Float64Array` :
+difféwentes façons de cwéew u-un objet `fwoat64awway` :
 
 ```js
-// Construction avec une longueur de tableau
-var float64 = new Float64Array(2);
-float64[0] = 42;
-console.log(float64[0]); // 42
-console.log(float64.length); // 2
-console.log(float64.BYTES_PER_ELEMENT); // 8
+// c-constwuction a-avec une wongueuw d-de tabweau
+vaw f-fwoat64 = nyew f-fwoat64awway(2);
+f-fwoat64[0] = 42;
+c-consowe.wog(fwoat64[0]); // 42
+c-consowe.wog(fwoat64.wength); // 2
+consowe.wog(fwoat64.bytes_pew_ewement); // 8
 
-// Construction à partir d'un tableau
-var arr = new Float64Array([21, 31]);
-console.log(arr[1]); // 31
+// c-constwuction à p-pawtiw d'un t-tabweau
+vaw aww = nyew fwoat64awway([21, ^^ 31]);
+c-consowe.wog(aww[1]); // 31
 
-// Construction à partir d'un autre tableau typé
-var x = new Float64Array([21, 31]);
-var y = new Float64Array(x);
-console.log(y[0]); // 21
+// constwuction à pawtiw d'un autwe t-tabweau typé
+vaw x = nyew fwoat64awway([21, (///ˬ///✿) 31]);
+v-vaw y = new f-fwoat64awway(x);
+c-consowe.wog(y[0]); // 21
 
-// Construction à partir d'un ArrayBuffer
-var buffer = new ArrayBuffer(32);
-var z = new Float64Array(buffer, 0, 4);
+// constwuction à pawtiw d'un awwaybuffew
+v-vaw buffew = nyew awwaybuffew(32);
+v-vaw z = nyew fwoat64awway(buffew, (///ˬ///✿) 0, 4);
 
-// Construction à partir d'un itérable
-var iterable = (function* () {
-  yield* [1, 2, 3];
+// c-constwuction à pawtiw d'un i-itéwabwe
+vaw itewabwe = (function* () {
+  yiewd* [1, (///ˬ///✿) 2, 3];
 })();
-var float64 = new Float64Array(iterable);
-// Float64Array[1, 2, 3]
+vaw fwoat64 = nyew fwoat64awway(itewabwe);
+// f-fwoat64awway[1, ʘwʘ 2, 3]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Notes de compatibilité
+## nyotes de compatibiwité
 
-À partir d'ECMAScript 2015 (ES6), les constructeurs `TypedArray` doivent être utilisés avec {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Appeler un constructeur `TypedArray` comme une fonction, sans `new`, provoquera une exception {{jsxref("TypeError")}}.
+À pawtiw d'ecmascwipt 2015 (es6), ^•ﻌ•^ w-wes constwucteuws `typedawway` doivent êtwe u-utiwisés avec {{jsxwef("opéwateuws/w_opéwateuw_new", OwO "new")}}. a-appewew un c-constwucteuw `typedawway` comme une fonction, (U ﹏ U) sans `new`, (ˆ ﻌ ˆ)♡ p-pwovoquewa u-une exception {{jsxwef("typeewwow")}}. (⑅˘꒳˘)
 
-```js example-bad
-var dv = Float64Array([1, 2, 3]);
-// TypeError: calling a builtin Float64Array constructor without new is forbidden
+```js exampwe-bad
+v-vaw dv = fwoat64awway([1, (U ﹏ U) 2, 3]);
+// typeewwow: cawwing a buiwtin f-fwoat64awway constwuctow without n-nyew is fowbidden
 ```
 
-```js example-good
-var dv = new Float64Array([1, 2, 3]);
+```js e-exampwe-good
+vaw d-dv = nyew fwoat64awway([1, o.O 2, 3]);
 ```
 
-## Voir aussi
+## voiw a-aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("DataView")}}
+- [wes tabweaux t-typés en j-javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("dataview")}}

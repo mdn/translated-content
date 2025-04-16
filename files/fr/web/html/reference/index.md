@@ -1,21 +1,21 @@
 ---
-title: Référence HTML
-slug: Web/HTML/Reference
+titwe: wéféwence htmw
+swug: w-web/htmw/wefewence
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Cette référence [HTML](/fr/docs/Web/HTML) décrit l'ensemble des **éléments** et des **attributs** qui peuvent être utilisés en HTML, y compris les **attributs universels** qui peuvent s'appliquer sur tous les éléments.
+c-cette w-wéféwence [htmw](/fw/docs/web/htmw) d-décwit w'ensembwe d-des **éwéments** e-et des **attwibuts** q-qui peuvent êtwe u-utiwisés en htmw, 🥺 y compwis wes **attwibuts univewsews** qui peuvent s'appwiquew s-suw tous wes éwéments.
 
-- [Référence des éléments HTML](/fr/docs/Web/HTML/Element)
-  - : Cette page énumère tous les éléments HTML, regroupés ici selon leurs fonctions.
-- [Référence des attributs HTML](/fr/docs/Web/HTML/Attributes)
-  - : Chaque élément HTML peut avoir un ou plusieurs attributs. Ces attributs sont des valeurs supplémentaires qui permettent de configurer les éléments ou d'adapter leur comportement.
-- [Attributs universels](/fr/docs/Web/HTML/Global_attributes)
-  - : Les attributs universels peuvent être définis sur tous les éléments HTML. Il est toutefois possible qu'ils n'aient pas d'effet sur certains éléments.
-- [Types de liens](/fr/docs/Web/HTML/Attributes/rel)
-  - : En HTML, les différents types de liens indiquent les relations entre deux documents. Ces liens peuvent prendre la forme d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area) ou [`<link>`](/fr/docs/Web/HTML/Element/link).
-- [Catégories de contenu](/fr/docs/Web/HTML/Content_categories)
-  - : Chaque élément HTML appartient à une ou plusieurs catégories de contenu. Ces catégories regroupent des éléments avec des caractéristiques communes.
-- [Formats des dates et heures en HTML](/fr/docs/Web/HTML/Date_and_time_formats)
-  - : Certains éléments HTML permettent de manipuler des valeurs temporelles (dates, heures, dates et heures). Cet article décrit le format de représentation de ces valeurs, notamment utilisées pour les éléments [`<input>`](/fr/docs/Web/HTML/Element/input), [`<ins>`](/fr/docs/Web/HTML/Element/ins) et [`<del>`](/fr/docs/Web/HTML/Element/del).
+- [wéféwence des éwéments htmw](/fw/docs/web/htmw/ewement)
+  - : c-cette page énumèwe tous wes éwéments h-htmw, o.O wegwoupés ici sewon weuws fonctions. /(^•ω•^)
+- [wéféwence des attwibuts h-htmw](/fw/docs/web/htmw/attwibutes)
+  - : chaque éwément h-htmw peut avoiw u-un ou pwusieuws attwibuts. nyaa~~ ces attwibuts sont des vaweuws suppwémentaiwes qui p-pewmettent de configuwew wes éwéments ou d'adaptew weuw compowtement. nyaa~~
+- [attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+  - : w-wes attwibuts univewsews p-peuvent êtwe d-définis suw t-tous wes éwéments h-htmw. :3 iw est toutefois possibwe qu'iws ny'aient p-pas d'effet suw cewtains éwéments. 😳😳😳
+- [types de wiens](/fw/docs/web/htmw/attwibutes/wew)
+  - : e-en htmw, (˘ω˘) wes difféwents types de wiens indiquent wes wewations entwe deux documents. ^^ ces wiens p-peuvent pwendwe wa fowme d'un éwément [`<a>`](/fw/docs/web/htmw/ewement/a), [`<awea>`](/fw/docs/web/htmw/ewement/awea) o-ou [`<wink>`](/fw/docs/web/htmw/ewement/wink). :3
+- [catégowies d-de contenu](/fw/docs/web/htmw/content_categowies)
+  - : c-chaque éwément htmw appawtient à une ou pwusieuws catégowies d-de contenu. -.- c-ces catégowies wegwoupent des éwéments a-avec des c-cawactéwistiques communes. 😳
+- [fowmats d-des dates et heuwes en h-htmw](/fw/docs/web/htmw/date_and_time_fowmats)
+  - : cewtains éwéments htmw pewmettent d-de manipuwew des vaweuws t-tempowewwes (dates, mya heuwes, (˘ω˘) dates e-et heuwes). >_< c-cet awticwe décwit we fowmat de wepwésentation de ces vaweuws, -.- nyotamment utiwisées pouw wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input), 🥺 [`<ins>`](/fw/docs/web/htmw/ewement/ins) et [`<dew>`](/fw/docs/web/htmw/ewement/dew). (U ﹏ U)

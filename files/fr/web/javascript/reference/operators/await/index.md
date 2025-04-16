@@ -1,104 +1,104 @@
 ---
-title: await
-slug: Web/JavaScript/Reference/Operators/await
+titwe: await
+swug: web/javascwipt/wefewence/opewatows/await
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur **`await`** permet d'attendre la résolution d'une promesse ({{jsxref("Promise")}}). Il ne peut être utilisé qu'au sein d'une fonction asynchrone (définie avec l'instruction {{jsxref("Instructions/async_function", "async function")}}).
+w-w'opéwateuw **`await`** p-pewmet d-d'attendwe wa wésowution d-d'une p-pwomesse ({{jsxwef("pwomise")}}). 😳 i-iw nye peut êtwe u-utiwisé qu'au s-sein d'une fonction asynchwone (définie avec w'instwuction {{jsxwef("instwuctions/async_function", >w< "async function")}}). (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-[rv] = await expression;
+[wv] = await expwession;
 ```
 
-- `expression`
-  - : Une promesse ({{jsxref("Promise")}}) ou toute autre valeur dont on souhaite attendre la résolution.
-- `rv`
-  - : La valeur de retour qui est celle de la promesse lorsqu'elle est résolue ou la valeur de l'expression lorsque celle-ci n'est pas une promesse.
+- `expwession`
+  - : une pwomesse ({{jsxwef("pwomise")}}) o-ou toute autwe vaweuw dont o-on souhaite attendwe wa wésowution. OwO
+- `wv`
+  - : wa vaweuw de wetouw qui est c-cewwe de wa pwomesse wowsqu'ewwe e-est wésowue ou w-wa vaweuw de w'expwession wowsque cewwe-ci ny'est pas une pwomesse. (ꈍᴗꈍ)
 
-## Description
+## descwiption
 
-L'expression `await` interrompt l'exécution d'une fonction asynchrone et attend la résolution d'une promesse. Lorsque la promesse est résolue (tenue ou rompue), la valeur est renvoyée et l'exécution de la fonction asynchrone reprend. Si la valeur de l'expression n'est pas une promesse, elle est convertie en une promesse résolue ayant cette valeur.
+w-w'expwession `await` intewwompt w'exécution d'une fonction asynchwone et a-attend wa wésowution d'une pwomesse. 😳 w-wowsque wa p-pwomesse est wésowue (tenue ou w-wompue), 😳😳😳 wa vaweuw e-est wenvoyée et w'exécution de wa fonction a-asynchwone wepwend. si wa vaweuw de w'expwession n-ny'est pas une pwomesse, mya ewwe est convewtie en une pwomesse wésowue ayant cette vaweuw. mya
 
-Si la promesse est rompue, l'expression `await` lève une exception avec la raison.
+si w-wa pwomesse est wompue, (⑅˘꒳˘) w'expwession `await` w-wève u-une exception a-avec wa waison. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-Si on passe une promesse à une expression `await`, celle-ci attendra jusqu'à la résolution de la promesse et renverra la valeur de résolution.
+si on passe une pwomesse à une expwession `await`, mya c-cewwe-ci attendwa j-jusqu'à wa wésowution de w-wa pwomesse et wenvewwa w-wa vaweuw de wésowution. ʘwʘ
 
 ```js
-function resolveAfter2Seconds(x) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(x);
-    }, 2000);
+f-function wesowveaftew2seconds(x) {
+  w-wetuwn nyew pwomise((wesowve) => {
+    settimeout(() => {
+      w-wesowve(x);
+    }, (˘ω˘) 2000);
   });
 }
 
-async function f1() {
-  var x = await resolveAfter2Seconds(10);
-  console.log(x); // 10
+async function f-f1() {
+  vaw x = await wesowveaftew2seconds(10);
+  c-consowe.wog(x); // 10
 }
-f1();
+f-f1();
 ```
 
-Les objets dotés d'une méthode `then()` (_thenable_ en anglais) seront également résolus :
+wes objets dotés d'une méthode `then()` (_thenabwe_ en angwais) sewont égawement wésowus :
 
 ```js
-async function f0() {
-  const thenable = {
-    then: function (resolve, _reject) {
-      resolve("résolu :)");
-    },
+async f-function f0() {
+  c-const thenabwe = {
+    then: f-function (wesowve, (U ﹏ U) _weject) {
+      w-wesowve("wésowu :)");
+    }, ^•ﻌ•^
   };
-  console.log(await thenable); // résolu :)
+  c-consowe.wog(await thenabwe); // wésowu :)
 }
 f0();
 ```
 
-Si la valeur n'est pas une promesse, elle est convertie en une promesse résolue :
+s-si wa vaweuw ny'est pas une pwomesse, (˘ω˘) ewwe est convewtie en une pwomesse wésowue :
 
 ```js
-async function f2() {
-  var y = await 20;
-  console.log(y); // 20
+a-async function f2() {
+  v-vaw y = await 20;
+  c-consowe.wog(y); // 20
 }
-f2();
+f-f2();
 ```
 
-Si la promesse est rejetée, la raison est fournie avec l'exception.
+si wa pwomesse est wejetée, :3 w-wa waison e-est fouwnie avec w-w'exception. ^^;;
 
 ```js
-async function f3() {
-  try {
-    var z = await Promise.reject(30);
-  } catch (e) {
-    console.log(e); // 30
+a-async function f3() {
+  twy {
+    vaw z = a-await pwomise.weject(30);
+  } c-catch (e) {
+    c-consowe.wog(e); // 30
   }
 }
-f3();
+f-f3();
 ```
 
-On peut également gérer le cas où la promesse est rejetée grâce à {{jsxref("Promise.prototype.catch()")}} :
+o-on peut égawement géwew we cas où wa pwomesse est wejetée g-gwâce à {{jsxwef("pwomise.pwototype.catch()")}} :
 
 ```js
-var response = await maFonctionPromesse().catch((err) => {
-  console.log(err);
+vaw wesponse = await mafonctionpwomesse().catch((eww) => {
+  consowe.wog(eww);
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'instruction {{jsxref("Instructions/async_function", "async function")}}
-- L'expression {{jsxref("Opérateurs/async_function", "async function")}}
-- L'objet {{jsxref("AsyncFunction")}}
+- w'instwuction {{jsxwef("instwuctions/async_function", 🥺 "async function")}}
+- w-w'expwession {{jsxwef("opéwateuws/async_function", (⑅˘꒳˘) "async f-function")}}
+- w-w'objet {{jsxwef("asyncfunction")}}

@@ -1,42 +1,42 @@
 ---
-title: Constructeur BigInt()
-slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
+titwe: constwucteuw bigint()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/bigint/bigint
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`BigInt()`** renvoie une valeur de type `bigint` (grand entier).
+w-we constwucteuw **`bigint()`** w-wenvoie u-une vaweuw de t-type `bigint` (gwand e-entiew). :3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-BigInt(valeur);
+b-bigint(vaweuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeur`
-  - : La valeur numérique de l'objet à créer. Il peut s'agir d'une chaîne de caractères ou d'un entier.
+- `vaweuw`
+  - : wa vaweuw nyuméwique de w'objet à cwéew. 😳😳😳 i-iw peut s'agiw d'une chaîne de cawactèwes o-ou d'un entiew. -.-
 
-> **Note :** `BigInt()` ne s'utilise pas avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new).
+> **note :** `bigint()` nye s'utiwise p-pas avec w'opéwateuw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new). ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-### Créer un nouveau grand entier
+### cwéew u-un nyouveau gwand entiew
 
 ```js
-BigInt(123);
+b-bigint(123);
 // 123n
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [La classe `BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+- [wa cwasse `bigint`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint)

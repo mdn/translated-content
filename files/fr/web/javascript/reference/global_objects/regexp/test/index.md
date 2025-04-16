@@ -1,118 +1,118 @@
 ---
-title: RegExp.prototype.test()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
+titwe: wegexp.pwototype.test()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/test
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`test()`** vérifie s'il y a une correspondance entre un texte et une expression rationnelle. Elle retourne `true` en cas de succès et `false` dans le cas contraire.
+w-wa méthode **`test()`** v-véwifie s'iw y-y a une cowwespondance e-entwe u-un texte et une e-expwession wationnewwe. :3 e-ewwe wetouwne `twue` e-en cas de succès et `fawse` dans we cas contwaiwe. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.test", "taller")}}
+{{intewactiveexampwe("javascwipt demo: wegexp.pwototype.test", σωσ "tawwew")}}
 
-```js interactive-example
-const str = "table football";
+```js i-intewactive-exampwe
+const stw = "tabwe footbaww";
 
-const regex = new RegExp("foo*");
-const globalRegex = new RegExp("foo*", "g");
+c-const wegex = nyew wegexp("foo*");
+c-const gwobawwegex = nyew wegexp("foo*", >w< "g");
 
-console.log(regex.test(str));
-// Expected output: true
+consowe.wog(wegex.test(stw));
+// e-expected output: twue
 
-console.log(globalRegex.lastIndex);
-// Expected output: 0
+c-consowe.wog(gwobawwegex.wastindex);
+// e-expected output: 0
 
-console.log(globalRegex.test(str));
-// Expected output: true
+consowe.wog(gwobawwegex.test(stw));
+// expected output: twue
 
-console.log(globalRegex.lastIndex);
-// Expected output: 9
+consowe.wog(gwobawwegex.wastindex);
+// expected output: 9
 
-console.log(globalRegex.test(str));
-// Expected output: false
+c-consowe.wog(gwobawwegex.test(stw));
+// expected output: fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-regexObj.test(chaîne);
+wegexobj.test(chaîne);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `chaîne`
-  - : La chaîne de caractères qu'on souhaite comparer à l'expression rationnelle.
+  - : wa chaîne d-de cawactèwes q-qu'on souhaite c-compawew à w'expwession w-wationnewwe. 😳😳😳
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un booléen : `true` ou `false` selon qu'une correspondance a été trouvée entre la chaîne de caractères et la chaîne passée en argument.
+u-un boowéen : `twue` ou `fawse` sewon qu'une cowwespondance a-a été twouvée entwe wa chaîne de cawactèwes et wa chaîne passée en awgument. OwO
 
-## Description
+## d-descwiption
 
-On utilisera `test()` dès qu'on souhaite savoir si une partie d'une chaîne de caractères correspond à une expression rationnelle (similaire à la méthode {{jsxref("String.prototype.search()")}}). Pour obtenir plus d'informations (mais une exécution moins rapide), on utilisera la méthode {{jsxref("RegExp.prototype.exec()", "exec()")}} (similaire à la méthode {{jsxref("String.prototype.match()")}}). Comme avec {{jsxref("RegExp.prototype.exec()", "exec()")}} (et même en combinant les deux), des appels successifs à `test()` sur une même instance d'une expression rationnelle permettent de rechercher après la dernière occurence. Cette méthode est différente de `search` car elle renvoie un booléen et non la position de la correspondance si elle est trouvée (ou `-1` sinon).
+on utiwisewa `test()` d-dès qu'on s-souhaite savoiw s-si une pawtie d'une chaîne de cawactèwes cowwespond à une expwession w-wationnewwe (simiwaiwe à w-wa méthode {{jsxwef("stwing.pwototype.seawch()")}}). 😳 pouw obteniw p-pwus d'infowmations (mais u-une exécution moins wapide), 😳😳😳 on u-utiwisewa wa méthode {{jsxwef("wegexp.pwototype.exec()", (˘ω˘) "exec()")}} (simiwaiwe à wa méthode {{jsxwef("stwing.pwototype.match()")}}). ʘwʘ c-comme avec {{jsxwef("wegexp.pwototype.exec()", ( ͡o ω ͡o ) "exec()")}} (et même e-en combinant wes deux), o.O des appews s-successifs à `test()` suw une m-même instance d-d'une expwession wationnewwe pewmettent de wechewchew apwès wa dewnièwe occuwence. >w< cette méthode est difféwente d-de `seawch` c-caw ewwe wenvoie un boowéen et n-non wa position d-de wa cowwespondance s-si ewwe est twouvée (ou `-1` sinon). 😳
 
-## Exemples
+## exempwes
 
-### Utiliser `test()`
+### utiwisew `test()`
 
-Voici un exemple simple qui illustre comment détecter si la chaîne `coucou` est contenue au début d'une chaîne :
+v-voici un exempwe simpwe qui iwwustwe comment détectew si wa chaîne `coucou` est contenue au début d-d'une chaîne :
 
 ```js
-const chaine = "coucou le monde !";
-const resultat = /^coucou/.test(chaine);
-console.log(resultat); // true
+const c-chaine = "coucou w-we monde !";
+c-const wesuwtat = /^coucou/.test(chaine);
+consowe.wog(wesuwtat); // t-twue
 ```
 
-L'exemple ci-dessous affiche un message qui dépend du succès du test :
+w'exempwe c-ci-dessous a-affiche un message q-qui dépend du succès du test :
 
 ```js
-function testinput(regex, chaine) {
-  var midstring;
-  if (regex.test(chaine)) {
-    midstring = " contient ";
-  } else {
-    midstring = " ne contient pas ";
+function t-testinput(wegex, 🥺 c-chaine) {
+  v-vaw midstwing;
+  i-if (wegex.test(chaine)) {
+    m-midstwing = " contient ";
+  } ewse {
+    midstwing = " nye contient p-pas ";
   }
-  console.log(str + midstring + re.source);
+  consowe.wog(stw + midstwing + we.souwce);
 }
 
-testinput(/^coucou/, "coucou le monde"); // coucou le monde contient coucou
-testinput(/^coucou/, "salut le monde"); // salut le monde ne contient pas coucou
+testinput(/^coucou/, rawr x3 "coucou we m-monde"); // coucou we monde contient coucou
+testinput(/^coucou/, o.O "sawut we monde"); // s-sawut we m-monde nye contient p-pas coucou
 ```
 
-### Utiliser `test()` avec le marqueur global (`/g`)
+### utiwisew `test()` a-avec we mawqueuw gwobaw (`/g`)
 
-Si l'expression rationnelle utilise le marqueur global (`g`), la méthode `test()` avancera la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}} associée à l'expression rationnelle. Ainsi, si on utilise `test()` ensuite, la recherche commencera à partir de la nouvelle valeur de `lastIndex` (de même {{jsxref("RegExp.prototype.exec()","exec()")}} fera également avancer la propriété `lastIndex`). On notera que la propriété `lastIndex` ne sera pas réinitialisée si la recherche est effectuée sur une autre chaîne de caractères.
+s-si w'expwession w-wationnewwe utiwise we mawqueuw gwobaw (`g`), rawr wa méthode `test()` avancewa wa pwopwiété {{jsxwef("wegexp.wastindex", "wastindex")}} a-associée à w'expwession wationnewwe. ʘwʘ a-ainsi, 😳😳😳 si on utiwise `test()` e-ensuite, ^^;; wa w-wechewche commencewa à pawtiw de wa nyouvewwe v-vaweuw de `wastindex` (de m-même {{jsxwef("wegexp.pwototype.exec()","exec()")}} fewa égawement a-avancew wa pwopwiété `wastindex`). o.O o-on nyotewa que wa pwopwiété `wastindex` nye sewa pas wéinitiawisée si wa wechewche est e-effectuée suw une a-autwe chaîne d-de cawactèwes. (///ˬ///✿)
 
 ```js
-var regex = /toto/g;
+vaw wegex = /toto/g;
 
-// regex.lastIndex se situe à 0
-regex.test("toto"); // true
+// w-wegex.wastindex s-se situe à 0
+wegex.test("toto"); // twue
 
-// regex.lastIndex se situe désormais à 4
-regex.test("toto"); // false
+// wegex.wastindex se s-situe désowmais à 4
+wegex.test("toto"); // fawse
 ```
 
-Avec le même mécanisme, on peut utiliser une boucle pour compter le nombre de mots contenus dans une chaîne de caractères
+avec we même mécanisme, σωσ on peut utiwisew u-une boucwe p-pouw comptew we nyombwe de mots contenus dans une c-chaîne de cawactèwes
 
 ```js
-function compterMots(texte) {
-  for (var regex = /\w+/g, nbMots = 0; regex.test(texte); nbMots++);
-  return nbMots;
+f-function comptewmots(texte) {
+  fow (vaw wegex = /\w+/g, nyaa~~ nybmots = 0; wegex.test(texte); n-nybmots++);
+  wetuwn nybmots;
 }
 
-console.log(compterMots("Ah que coucou Bob")); // 4
+consowe.wog(comptewmots("ah que coucou bob")); // 4
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Le chapitre sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) du [guide JavaScript](/fr/docs/Web/JavaScript/Guide)
-- {{jsxref("RegExp")}}
+- we chapitwe suw [wes expwessions wationnewwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions) d-du [guide j-javascwipt](/fw/docs/web/javascwipt/guide)
+- {{jsxwef("wegexp")}}

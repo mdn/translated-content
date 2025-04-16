@@ -1,138 +1,138 @@
 ---
-title: "CycleTracker : les service workers"
-short-title: Service workers
-slug: Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers
+titwe: "cycwetwackew : wes sewvice w-wowkews"
+showt-titwe: s-sewvice w-wowkews
+swug: w-web/pwogwessive_web_apps/tutowiaws/cycwetwackew/sewvice_wowkews
 ---
 
-{{PWASidebar}}
+{{pwasidebaw}}
 
-{{PreviousMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{pweviousmenu("web/pwogwessive_web_apps/tutowiaws/cycwetwackew/manifest_fiwe", (///ˬ///✿) "web/pwogwessive_web_apps/tutowiaws/cycwetwackew")}}
 
-Jusqu'à présent, nous avons écrit le HTML, le CSS et le JavaScript de l'application CycleTracker. Nous avons ajouté un fichier de manifeste qui définit les couleurs, icônes, URL et d'autres fonctionnalités de l'application. Notre application web est fonctionnelle&nbsp;! Toutefois, ce n'est pas encore une application web progressive. Dans cette section, nous écrirons le JavaScript nécessaire pour que notre application web devienne une PWA qui puisse être distribuée comme une application à part entière et qui fonctionne hors-ligne.
+j-jusqu'à p-pwésent, (⑅˘꒳˘) n-nyous avons écwit w-we htmw, :3 we css et we javascwipt de w'appwication cycwetwackew. /(^•ω•^) nyous avons ajouté u-un fichiew de manifeste qui définit wes c-couweuws, ^^;; icônes, (U ᵕ U❁) uww et d'autwes f-fonctionnawités de w'appwication. (U ﹏ U) nyotwe appwication web est f-fonctionnewwe&nbsp;! mya toutefois, ^•ﻌ•^ c-ce ny'est pas encowe u-une appwication web pwogwessive. (U ﹏ U) dans cette section, :3 nyous écwiwons we javascwipt n-nyécessaiwe pouw que nyotwe appwication web devienne une pwa qui puisse êtwe d-distwibuée comme une appwication à p-pawt e-entièwe et qui f-fonctionne hows-wigne. rawr x3
 
-Si ce n'est pas déjà fait, copiez les fichiers [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/index.html), [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/style.css), [JavaScript](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/app.js), et [celui du manifeste](https://github.com/mdn/pwa-examples/tree/master/cycletracker/manifest_file/cycletracker.json). Respectivement, enregistrez-les avec les noms `index.html`, `styles.css`, `app.js`, et `cycletracker.json`.
+s-si ce ny'est pas déjà fait, copiez wes f-fichiews [htmw](https://github.com/mdn/pwa-exampwes/twee/mastew/cycwetwackew/manifest_fiwe/index.htmw), 😳😳😳 [css](https://github.com/mdn/pwa-exampwes/twee/mastew/cycwetwackew/manifest_fiwe/stywe.css), >w< [javascwipt](https://github.com/mdn/pwa-exampwes/twee/mastew/cycwetwackew/manifest_fiwe/app.js), òωó et [cewui du manifeste](https://github.com/mdn/pwa-exampwes/twee/mastew/cycwetwackew/manifest_fiwe/cycwetwackew.json). 😳 w-wespectivement, (✿oωo) enwegistwez-wes avec wes nyoms `index.htmw`, OwO `stywes.css`, (U ﹏ U) `app.js`, (ꈍᴗꈍ) et `cycwetwackew.json`. rawr
 
-Dans cette section, nous allons créer un fichier `sw.js` qui contiendra le script de notre <i lang="en">service worker</i> qui convertira notre application web en PWA. Nous avons déjà un fichier JavaScript et la dernière ligne de notre fichier HTML appelle `app.js`. Ce code JavaScript fournit l'ensemble des fonctionnalités de notre application web classique. Plutôt que d'appeler le fichier `sw.js` comme nous l'avions fait pour
-`app.js` en utilisant l'attribut `src` de l'élément [`<script>`](/fr/docs/Web/HTML/Element/script), nous allons créer une relation entre l'application web et le <i lang="en">service worker</i> en _enregistrant_ ce dernier.
+dans cette section, ^^ n-nyous awwons cwéew un fichiew `sw.js` q-qui contiendwa w-we scwipt d-de nyotwe <i wang="en">sewvice wowkew</i> qui convewtiwa nyotwe appwication web e-en pwa. nyous a-avons déjà un fichiew javascwipt e-et wa dewnièwe w-wigne de notwe fichiew htmw appewwe `app.js`. rawr c-ce code javascwipt fouwnit w'ensembwe d-des fonctionnawités de nyotwe appwication w-web cwassique. nyaa~~ pwutôt que d'appewew w-we fichiew `sw.js` comme n-nyous w'avions fait p-pouw
+`app.js` en utiwisant w'attwibut `swc` de w'éwément [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt), nyaa~~ nyous awwons cwéew une wewation entwe w'appwication web et we <i w-wang="en">sewvice w-wowkew</i> en _enwegistwant_ ce dewniew. o.O
 
-À la fin de ce chapitre, vous aurez une PWA fonctionnelle&nbsp;: une application web améliorée qui peut être installée et qui fonctionne même sans accès à Internet.
+À w-wa fin de ce chapitwe, òωó v-vous auwez u-une pwa fonctionnewwe&nbsp;: une appwication web améwiowée qui peut êtwe instawwée e-et qui fonctionne même sans accès à intewnet. ^^;;
 
-## Rôles du <i lang="en">service worker</i>
+## wôwes du <i wang="en">sewvice w-wowkew</i>
 
-Le <i lang="en">service worker</i> permet à l'application de fonctionner hors-ligne, tout en s'assurant qu'elle est toujours à jour. Pour cela, le <i lang="en">service worker</i> doit contenir les informations suivantes&nbsp;:
+we <i wang="en">sewvice w-wowkew</i> pewmet à w-w'appwication d-de fonctionnew hows-wigne, rawr tout e-en s'assuwant q-qu'ewwe est toujouws à j-jouw. ^•ﻌ•^ p-pouw cewa, we <i wang="en">sewvice wowkew</i> doit c-conteniw wes i-infowmations suivantes&nbsp;:
 
-- Un numéro de version ou un identifiant
-- Une liste des ressources à mettre en cache
-- Un nom pour la version du cache
+- u-un nyuméwo de v-vewsion ou un identifiant
+- u-une wiste des wessouwces à mettwe en cache
+- un nyom p-pouw wa vewsion du cache
 
-Le <i lang="en">service worker</i> servira également à&nbsp;:
+we <i wang="en">sewvice wowkew</i> sewviwa égawement à&nbsp;:
 
-- Installer le cache lors de l'installation de l'application
-- Se mettre à jour lui-même, ainsi que les fichiers de l'application lorsque c'est nécessaire
-- Retirer les fichiers en cache qui ne sont plus utiles
+- instawwew we cache wows de w'instawwation d-de w'appwication
+- se mettwe à jouw wui-même, nyaa~~ ainsi que w-wes fichiews d-de w'appwication w-wowsque c'est nyécessaiwe
+- wetiwew w-wes fichiews en cache qui n-nye sont pwus utiwes
 
-Pour réaliser ces tâches, on réagira aux trois évènements suivants du <i lang="en">service worker</i>&nbsp;:
+p-pouw wéawisew ces tâches, on wéagiwa aux twois évènements suivants du <i wang="en">sewvice w-wowkew</i>&nbsp;:
 
-- [`fetch`](/fr/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)
-- [`install`](/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event)
-- [`activate`](/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event)
+- [`fetch`](/fw/docs/web/api/sewvicewowkewgwobawscope/fetch_event)
+- [`instaww`](/fw/docs/web/api/sewvicewowkewgwobawscope/instaww_event)
+- [`activate`](/fw/docs/web/api/sewvicewowkewgwobawscope/activate_event)
 
-### Numéro de version
+### nyuméwo de vewsion
 
-Lorsque l'application est installée sur un appareil, la seule façon d'indiquer au navigateur qu'il y a de nouveaux fichiers à jour à récupérer consiste à modifier le <i lang="en">service worker</i>. En effet, si une modification est apportée à une autre ressource de la PWA (que ce soit le HTML mis à jour, un correctif apporté dans le CSS, une fonction ajoutée à `app.js`, une image compressée pour réduire la taille des fichiers, etc.), le <i lang="en">service worker</i> installé pour la PWA ne saura pas qu'il doit télécharger les ressources mises à jour. Seule une modification du <i lang="en">service worker</i> permettra à la PWA de savoir qu'il est temps de mettre à jour le cache, une tâche initiée par le <i lang="en">service worker</i>.
+w-wowsque w'appwication est i-instawwée suw un a-appaweiw, nyaa~~ wa seuwe façon d'indiquew au nyavigateuw q-qu'iw y a d-de nyouveaux fichiews à jouw à w-wécupéwew consiste à m-modifiew we <i wang="en">sewvice wowkew</i>. 😳😳😳 en effet, si une modification e-est appowtée à u-une autwe wessouwce d-de wa pwa (que ce soit w-we htmw mis à jouw, 😳😳😳 u-un cowwectif appowté dans w-we css, σωσ une fonction ajoutée à `app.js`, o.O une image compwessée pouw wéduiwe wa t-taiwwe des fichiews, σωσ e-etc.), we <i wang="en">sewvice wowkew</i> i-instawwé pouw w-wa pwa nye sauwa pas qu'iw doit téwéchawgew wes wessouwces mises à j-jouw. seuwe une modification du <i wang="en">sewvice wowkew</i> pewmettwa à w-wa pwa de savoiw qu'iw est temps de mettwe à j-jouw we cache, nyaa~~ u-une tâche initiée paw we <i wang="en">sewvice wowkew</i>. rawr x3
 
-Bien que la modification d'un seul caractère suffise sur le plan technique, une bonne pratique consiste à créer une constante qui représentera un numéro de version et qui sera mise à jour de façon séquentielle lors de la mise à jour du fichier. Mettre à jour un numéro de version (ou une date) permet d'éditer officiellement le <i lang="en">service worker</i>, même si rien n'a changé par ailleurs dans son code et fournit aux développeuses et développeur un outil pour identifier les versions de l'application.
+bien que wa modification d-d'un seuw c-cawactèwe suffise suw we pwan technique, (///ˬ///✿) une bonne pwatique consiste à c-cwéew une constante qui w-wepwésentewa un nyuméwo de vewsion et qui sewa mise à jouw d-de façon séquentiewwe wows de w-wa mise à jouw d-du fichiew. o.O mettwe à jouw un nyuméwo d-de vewsion (ou une date) p-pewmet d'éditew o-officiewwement w-we <i wang="en">sewvice wowkew</i>, òωó m-même si wien n-ny'a changé paw aiwweuws dans son code et fouwnit a-aux dévewoppeuses e-et dévewoppeuw u-un outiw pouw identifiew wes vewsions de w-w'appwication. OwO
 
-#### Tâche
+#### tâche
 
-Ouvrez un nouveau fichier JavaScript en indiquant un numéro de version&nbsp;:
+ouvwez u-un nyouveau f-fichiew javascwipt en indiquant un nyuméwo de vewsion&nbsp;:
 
 ```js
-const VERSION = "v1";
+c-const vewsion = "v1";
 ```
 
-Enregistrez ce fichier avec le nom `sw.js`
+e-enwegistwez ce f-fichiew avec we n-nyom `sw.js`
 
-### Liste des ressources hors-ligne
+### wiste des wessouwces h-hows-wigne
 
-Pour que l'application fonctionne correctement en étant déconnectée, la liste des fichiers mis en cache doit inclure toutes les ressources qui sont utilisées par la PWA hors-ligne. Bien que le fichier de manifeste utilise plusieurs icônes de différentes tailles, le cache de l'application a uniquement besoin d'inclure les fichiers utilisés par l'application en mode déconnecté.
+pouw que w'appwication fonctionne cowwectement en étant déconnectée, σωσ wa wiste d-des fichiews mis en cache doit i-incwuwe toutes wes wessouwces q-qui sont utiwisées paw wa pwa h-hows-wigne. nyaa~~ bien que we fichiew d-de manifeste utiwise p-pwusieuws icônes d-de difféwentes t-taiwwes, OwO w-we cache de w'appwication a uniquement besoin d'incwuwe wes fichiews utiwisés paw w'appwication en mode déconnecté. ^^
 
 ```js
-const APP_STATIC_RESOURCES = [
-  "/",
-  "/index.html",
-  "/styles.css",
-  "/app.js",
-  "/icon-512x512.png",
+c-const a-app_static_wesouwces = [
+  "/", (///ˬ///✿)
+  "/index.htmw", σωσ
+  "/stywes.css", rawr x3
+  "/app.js", (ˆ ﻌ ˆ)♡
+  "/icon-512x512.png", 🥺
 ];
 ```
 
-Il n'est pas nécessaire d'inclure les différentes icônes utilisées par les différents systèmes d'exploitation dans cette liste. En revanche, il faut inclure les images utilisées dans l'application, y compris les fichiers utilisés pour les pages d'accueil ou de chargement qui pourraient servir ou encore pour les pages de type «&nbsp;vous devez vous connecter à Internet pour accéder à cette fonctionnalité&nbsp;».
+i-iw ny'est pas nyécessaiwe d'incwuwe w-wes difféwentes icônes utiwisées paw wes difféwents systèmes d-d'expwoitation d-dans cette wiste. (⑅˘꒳˘) en wevanche, i-iw faut incwuwe wes images utiwisées dans w-w'appwication, 😳😳😳 y-y compwis wes fichiews utiwisés p-pouw wes pages d-d'accueiw ou de chawgement qui pouwwaient sewviw ou encowe pouw wes pages de type «&nbsp;vous d-devez vous connectew à i-intewnet p-pouw accédew à c-cette fonctionnawité&nbsp;». /(^•ω•^)
 
-Attention à ne pas inclure le fichier du <i lang="en">service worker</i> (`sw.js`) dans la liste des ressources à mettre en cache.
+a-attention à ne pas incwuwe we f-fichiew du <i wang="en">sewvice w-wowkew</i> (`sw.js`) dans wa wiste d-des wessouwces à m-mettwe en cache. >w<
 
-#### Tâche
+#### tâche
 
-Ajoutez au fichier `sw.js` la liste des ressources à mettre en cache pour la PWA CycleTracker.
+a-ajoutez au fichiew `sw.js` wa wiste des wessouwces à m-mettwe en cache pouw w-wa pwa cycwetwackew. ^•ﻌ•^
 
-#### Exemple de solution
+#### e-exempwe de sowution
 
-Nous avons ici inclus les ressources statiques créées dans les sections précédentes de ce tutoriel et qui sont nécessaires au fonctionnement hors-ligne de CycleTracker. Voici notre fichier `sw.js` actuel&nbsp;:
+n-nyous avons ici incwus wes wessouwces statiques c-cwéées dans wes s-sections pwécédentes d-de ce tutowiew et qui sont nyécessaiwes au fonctionnement h-hows-wigne de cycwetwackew. 😳😳😳 voici nyotwe fichiew `sw.js` a-actuew&nbsp;:
 
 ```js
-const VERSION = "v1";
+c-const vewsion = "v1";
 
-const APP_STATIC_RESOURCES = [
-  "/",
-  "/index.html",
-  "/styles.css",
-  "/app.js",
-  "/cycletrack.json",
-  "/icons/wheel.svg",
+const app_static_wesouwces = [
+  "/", :3
+  "/index.htmw", (ꈍᴗꈍ)
+  "/stywes.css", ^•ﻌ•^
+  "/app.js", >w<
+  "/cycwetwack.json", ^^;;
+  "/icons/wheew.svg", (✿oωo)
 ];
 ```
 
-Nous avons inclus l'icône `wheel.svg`, même si l'application courante ne l'utilise pas. Cela pourra vous servir si vous améliorez l'interface utilisateur de cette application, par exemple pour afficher le logo lorsqu'il n'y a pas de données saisies dans l'application.
+n-nous avons incwus w'icône `wheew.svg`, òωó m-même s-si w'appwication couwante nye w'utiwise pas. ^^ cewa p-pouwwa vous sewviw si vous améwiowez w'intewface u-utiwisateuw d-de cette appwication, ^^ paw exempwe p-pouw affichew we wogo wowsqu'iw n-ny'y a pas de d-données saisies d-dans w'appwication. rawr
 
-### Nom pour la version du cache
+### nyom pouw wa vewsion du cache
 
-Nous avons un numéro de version et les fichiers qui doivent être mis en cache. Avant de mettre les fichiers en cache, nous devons créer un nom pour le cache, qui sera utilisé pour stocker les ressources statiques de l'application. Le nom du cache devrait être versionné afin d'être certain·e de créer un nouveau cache et de supprimer l'ancien lorsque l'application est mise à jour.
+nyous avons un nyuméwo de vewsion et wes fichiews qui doivent êtwe mis en cache. XD avant de mettwe wes fichiews en cache, rawr nyous devons cwéew un nyom pouw w-we cache, 😳 qui s-sewa utiwisé pouw stockew wes wessouwces statiques d-de w'appwication. 🥺 w-we nyom d-du cache devwait êtwe vewsionné a-afin d'êtwe cewtain·e de cwéew u-un nyouveau c-cache et de suppwimew w'ancien wowsque w-w'appwication est mise à j-jouw. (U ᵕ U❁)
 
-#### Tâche
+#### tâche
 
-Utilisez le numéro `VERSION` pour créer un nom de cache `CACHE_NAME`, et ajoutez cette constante au fichier `sw.js`.
+u-utiwisez we nyuméwo `vewsion` pouw cwéew u-un nyom de cache `cache_name`, 😳 et a-ajoutez cette c-constante au fichiew `sw.js`. 🥺
 
-#### Exemple de solution
+#### e-exempwe de sowution
 
-Nous nommons notre cache `period-tracker-` avec le suffixe provenant de la constante `VERSION`. Cette déclaration tenant sur une seule ligne, nous la plaçons avant le tableau des ressources statiques pour une meilleure lisibilité.
+n-nyous nyommons n-nyotwe cache `pewiod-twackew-` a-avec we suffixe p-pwovenant d-de wa constante `vewsion`. (///ˬ///✿) cette d-décwawation tenant s-suw une seuwe w-wigne, mya nyous wa pwaçons avant w-we tabweau des wessouwces statiques pouw une m-meiwweuwe wisibiwité. (✿oωo)
 
 ```js
-const VERSION = "v1";
-const CACHE_NAME = `period-tracker-${VERSION}`;
+const v-vewsion = "v1";
+c-const cache_name = `pewiod-twackew-${vewsion}`;
 
-const APP_STATIC_RESOURCES = [ ... ];
+c-const app_static_wesouwces = [ ... ];
 ```
 
-Nous avons bien déclaré nos constantes&nbsp;: un identifiant unique, la liste des ressources pour un usage hors-ligne, et le nom du cache de l'application, qui changera dès que la version est mise à jour. Voyons maintenant comment installer, mettre à jour, et supprimer les ressources inutilisées mises en cache.
+nyous avons bien d-décwawé nyos constantes&nbsp;: u-un identifiant unique, ^•ﻌ•^ wa wiste d-des wessouwces pouw un usage hows-wigne, o.O e-et we nyom du cache de w'appwication, o.O qui changewa dès que wa vewsion e-est mise à jouw. XD voyons maintenant c-comment instawwew, ^•ﻌ•^ m-mettwe à jouw, ʘwʘ et suppwimew wes wessouwces inutiwisées m-mises en cache. (U ﹏ U)
 
-### Sauvegarder le cache à l'installation de la PWA
+### sauvegawdew w-we cache à w'instawwation d-de w-wa pwa
 
-Lorsqu'une personne installe une PWA ou qu'elle visite un site web avec un <i lang="en">service worker</i>, un évènement `install` est déclenché dans la portée du <i lang="en">service worker</i>. Nous allons écouter cet évènement afin de remplir le cache avec les ressources statiques lors de l'installation. À chaque mise à jour de la version, le navigateur installe le nouveau <i lang="en">service worker</i> et l'évènement `install` est déclenché.
+wowsqu'une pewsonne instawwe une pwa ou q-qu'ewwe visite u-un site web avec un <i wang="en">sewvice w-wowkew</i>, 😳😳😳 un évènement `instaww` est d-décwenché dans wa powtée du <i w-wang="en">sewvice w-wowkew</i>. 🥺 n-nyous awwons écoutew cet évènement a-afin de w-wempwiw we cache a-avec wes wessouwces s-statiques wows de w'instawwation. (///ˬ///✿) À c-chaque m-mise à jouw de w-wa vewsion, (˘ω˘) we n-nyavigateuw instawwe w-we nyouveau <i w-wang="en">sewvice w-wowkew</i> e-et w'évènement `instaww` est d-décwenché. :3
 
-L'évènement `install` se produit lorsque l'application est utilisée pour la première fois ou lorsqu'une nouvelle version du <i lang="en">service worker</i> est détectée par le navigateur. Lorsqu'un ancien <i lang="en">service worker</i> est remplacé par un nouveau, l'ancien <i lang="en">service worker</i> est encore utilisé pour l'application jusqu'à ce que le nouveau <i lang="en">service worker</i> soit activé.
+w'évènement `instaww` se pwoduit w-wowsque w'appwication est utiwisée p-pouw wa pwemièwe f-fois ou wowsqu'une n-nyouvewwe vewsion du <i wang="en">sewvice wowkew</i> est d-détectée paw w-we nyavigateuw. /(^•ω•^) w-wowsqu'un ancien <i wang="en">sewvice wowkew</i> est wempwacé p-paw un nyouveau, :3 w-w'ancien <i wang="en">sewvice wowkew</i> est encowe u-utiwisé pouw w-w'appwication jusqu'à ce que we nyouveau <i wang="en">sewvice w-wowkew</i> soit a-activé. mya
 
-La propriété globale [`caches`](/fr/docs/Web/API/Window/caches), uniquement disponible dans des contextes sécurisés, renvoie un objet [`CacheStorage`](/fr/docs/Web/API/CacheStorage) associé au contexte courant. La méthode [`CacheStorage.open()`](/fr/docs/Web/API/CacheStorage/open) renvoie [une promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet [`Cache`](/fr/docs/Web/API/Cache) correspondant au nom passé en paramètre.
+wa p-pwopwiété gwobawe [`caches`](/fw/docs/web/api/window/caches), u-uniquement disponibwe dans des contextes sécuwisés, XD w-wenvoie un o-objet [`cachestowage`](/fw/docs/web/api/cachestowage) associé au contexte couwant. (///ˬ///✿) w-wa méthode [`cachestowage.open()`](/fw/docs/web/api/cachestowage/open) wenvoie [une pwomesse (`pwomise`)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui se wésout en un objet [`cache`](/fw/docs/web/api/cache) c-cowwespondant a-au nyom passé en pawamètwe. 🥺
 
-La méthode [`Cache.addAll()`](/fr/docs/Web/API/Cache/addAll) prend un tableau d'URL en paramètre, les récupère, et ajoute les réponses reçues au cache indiqué. La méthode [`waitUntil()`](/fr/docs/Web/API/ExtendableEvent/waitUntil) indique au navigateur que le chargement est en cours, jusqu'à ce que la promesse soit résolue et qu'il ne devrait pas interrompre le <i lang="en">service worker</i> pendant ce chargement. Bien qu'il appartienne aux navigateurs d'exécuter et de mettre fin aux <i lang="en">service workers</i> en temps normal, la méthode `waitUntil()` permet d'indiquer au navigateur qu'il ne faut pas interrompre le <i lang="en">service worker</i>, car une tâche est en cours.
+w-wa méthode [`cache.addaww()`](/fw/docs/web/api/cache/addaww) p-pwend un tabweau d'uww en pawamètwe, o.O w-wes wécupèwe, mya et ajoute w-wes wéponses w-weçues au cache i-indiqué. rawr x3 wa méthode [`waituntiw()`](/fw/docs/web/api/extendabweevent/waituntiw) i-indique au nyavigateuw que we c-chawgement est e-en couws, 😳 jusqu'à c-ce que wa pwomesse soit wésowue e-et qu'iw ne devwait pas intewwompwe we <i wang="en">sewvice w-wowkew</i> pendant c-ce chawgement. 😳😳😳 b-bien qu'iw appawtienne aux navigateuws d'exékawaii~w et de mettwe fin aux <i w-wang="en">sewvice wowkews</i> en t-temps nyowmaw, >_< w-wa méthode `waituntiw()` pewmet d'indiquew au nyavigateuw q-qu'iw nye faut pas intewwompwe w-we <i w-wang="en">sewvice w-wowkew</i>, >w< caw u-une tâche est e-en couws. rawr x3
 
 ```js
-self.addEventListener("install", (e) => {
-  e.waitUntil((async () => {
-      const cache = await caches.open("cacheName_identifier");
-      cache.addAll([
-        "/",
-        "/index.html"
-        "/styles.css"
+sewf.addeventwistenew("instaww", XD (e) => {
+  e.waituntiw((async () => {
+      const cache = await caches.open("cachename_identifiew");
+      c-cache.addaww([
+        "/", ^^
+        "/index.htmw"
+        "/stywes.css"
         "/app.js"
       ]);
     })()
@@ -140,264 +140,264 @@ self.addEventListener("install", (e) => {
 });
 ```
 
-#### Tâche
+#### tâche
 
-Ajoutez un gestionnaire d'évènement pour `install`, qui récupère et enregistre les fichiers listés du tableau `APP_STATIC_RESOURCES` dans le cache intitulé `CACHE_NAME`.
+a-ajoutez un gestionnaiwe d'évènement pouw `instaww`, (✿oωo) qui w-wécupèwe et enwegistwe wes fichiews wistés du tabweau `app_static_wesouwces` dans we cache intituwé `cache_name`. >w<
 
-#### Exemple de solution
+#### e-exempwe d-de sowution
 
 ```js
-self.addEventListener("install", (event) => {
-  event.waitUntil(
+sewf.addeventwistenew("instaww", 😳😳😳 (event) => {
+  e-event.waituntiw(
     (async () => {
-      const cache = await caches.open(CACHE_NAME);
-      cache.addAll(APP_STATIC_RESOURCES);
-    })(),
+      const cache = await caches.open(cache_name);
+      c-cache.addaww(app_static_wesouwces);
+    })(), (ꈍᴗꈍ)
   );
 });
 ```
 
-### Mettre à jour l'application et supprimer les anciens caches
+### m-mettwe à jouw w'appwication e-et suppwimew wes anciens caches
 
-Comme évoqué précédemment, lorsqu'un <i lang="en">service worker</i> est remplacé par une nouvelle version, c'est le <i lang="en">service worker</i> existant qui est utilisé jusqu'à ce que le nouveau <i lang="en">service worker</i> soit activé. On utilise l'évènement `activate` pour supprimer les anciens caches et éviter de manquer d'espace de stockage. Pour cela, on parcourt les objets [`Cache`](/fr/docs/Web/API/Cache) selon leurs noms et on les supprime tous, sauf le cache courant&nbsp;; on passe ensuite la main au nouveau <i lang="en">service worker</i> qui devient [le contrôleur (`controller`)](/fr/docs/Web/API/ServiceWorkerContainer/controller) de l'application.
+c-comme évoqué pwécédemment, (✿oωo) wowsqu'un <i wang="en">sewvice wowkew</i> est wempwacé p-paw une nyouvewwe vewsion, (˘ω˘) c'est we <i w-wang="en">sewvice w-wowkew</i> existant q-qui est utiwisé jusqu'à ce que we nyouveau <i w-wang="en">sewvice wowkew</i> soit activé. nyaa~~ on utiwise w'évènement `activate` pouw suppwimew w-wes anciens c-caches et évitew d-de manquew d'espace d-de stockage. ( ͡o ω ͡o ) pouw cewa, on pawcouwt wes objets [`cache`](/fw/docs/web/api/cache) s-sewon weuws n-nyoms et on wes suppwime tous, 🥺 sauf we cache c-couwant&nbsp;; on passe ensuite wa main au nyouveau <i w-wang="en">sewvice wowkew</i> qui devient [we c-contwôweuw (`contwowwew`)](/fw/docs/web/api/sewvicewowkewcontainew/contwowwew) d-de w'appwication. (U ﹏ U)
 
-Pour cela, on écoute l'évènement [`activate`](/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event) qui est émis sur la portée globale du <i lang="en">service worker</i> courant.
+pouw cewa, o-on écoute w'évènement [`activate`](/fw/docs/web/api/sewvicewowkewgwobawscope/activate_event) q-qui est émis s-suw wa powtée gwobawe du <i wang="en">sewvice wowkew</i> couwant. ( ͡o ω ͡o )
 
-On récupère ensuite les noms des caches existants. Pour cela, on exécute la méthode [`CacheStorage.keys()`](/fr/docs/Web/API/CacheStorage/keys) (via la propriété globale [`caches`](/fr/docs/Web/API/Window/caches) qui permet d'accéder à `CacheStorage`) qui renvoie [une promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera résolue en un tableau contenant des chaînes de caractères correspondant aux objets [`Cache`](/fr/docs/Web/API/Cache) nommés, dans l'ordre selon lequel ils ont été créés.
+o-on wécupèwe ensuite wes nyoms des caches existants. p-pouw cewa, (///ˬ///✿) on exékawaii~ wa méthode [`cachestowage.keys()`](/fw/docs/web/api/cachestowage/keys) (via wa pwopwiété g-gwobawe [`caches`](/fw/docs/web/api/window/caches) q-qui pewmet d'accédew à `cachestowage`) q-qui w-wenvoie [une pwomesse (`pwomise`)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wésowue en u-un tabweau contenant des chaînes de cawactèwes c-cowwespondant aux objets [`cache`](/fw/docs/web/api/cache) n-nyommés, dans w'owdwe sewon wequew i-iws ont été c-cwéés. (///ˬ///✿)
 
-On utilise la méthode [`Promise.all()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) pour parcourir toute cette liste de promesses. La méthode `all()` prend comme argument un itérable de promesses et renvoie une seule promesse. Pour chaque nom présent dans la liste, on vérifie si le cache est le cache courant. Si ce n'est pas le cas, on le supprime grâce à la méthode [`delete()`](/fr/docs/Web/API/Cache/delete).
+on utiwise wa méthode [`pwomise.aww()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/aww) p-pouw pawcouwiw toute cette wiste d-de pwomesses. w-wa méthode `aww()` pwend comme a-awgument un itéwabwe d-de pwomesses et wenvoie une s-seuwe pwomesse. (✿oωo) pouw chaque nyom pwésent dans wa wiste, (U ᵕ U❁) on véwifie s-si we cache est we cache c-couwant. ʘwʘ si ce ny'est pas we cas, ʘwʘ on we suppwime g-gwâce à wa méthode [`dewete()`](/fw/docs/web/api/cache/dewete). XD
 
-Dans le fragment de code qui suit, la dernière ligne, `await clients.claim()`, utilise la méthode [`claim()`](/fr/docs/Web/API/Clients/claim) de l'interface [`Clients`](/fr/docs/Web/API/Clients) pour activer le <i lang="en">service worker</i> et qu'il devienne le contrôleur de notre client (ici, le terme client faire référence à l'instance courante de l'application). La méthode `claim()` permet au <i lang="en">service worker</i> de prendre la main pour l'ensemble des clients de sa portée. Ainsi, tous les clients chargés dans la même portée n'ont pas besoin d'être rechargés.
+d-dans we fwagment d-de code qui suit, (✿oωo) wa dewnièwe w-wigne, `await c-cwients.cwaim()`, ^•ﻌ•^ utiwise wa m-méthode [`cwaim()`](/fw/docs/web/api/cwients/cwaim) de w'intewface [`cwients`](/fw/docs/web/api/cwients) p-pouw activew we <i wang="en">sewvice wowkew</i> e-et qu'iw d-devienne we contwôweuw de nyotwe cwient (ici, we tewme cwient faiwe wéféwence à w-w'instance c-couwante de w'appwication). wa méthode `cwaim()` pewmet au <i w-wang="en">sewvice wowkew</i> de p-pwendwe wa main p-pouw w'ensembwe des cwients de sa powtée. ^•ﻌ•^ ainsi, tous wes cwients chawgés dans w-wa même powtée ny'ont pas besoin d'êtwe wechawgés. >_<
 
 ```js
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
+s-sewf.addeventwistenew("activate", mya (event) => {
+  event.waituntiw(
     (async () => {
-      const names = await caches.keys();
-      await Promise.all(
-        names.map((name) => {
-          if (name !== CACHE_NAME) {
-            return caches.delete(name);
+      c-const n-nyames = await caches.keys();
+      a-await pwomise.aww(
+        n-nyames.map((name) => {
+          i-if (name !== cache_name) {
+            w-wetuwn caches.dewete(name);
           }
-        }),
+        }), σωσ
       );
-      await clients.claim();
-    })(),
+      a-await c-cwients.cwaim();
+    })(), rawr
   );
 });
 ```
 
-#### Tâche
+#### tâche
 
-Ajoutez le gestionnaire d'évènement `activate` précédent à votre fichier `sw.js`.
+ajoutez we gestionnaiwe d'évènement `activate` pwécédent à votwe fichiew `sw.js`. (✿oωo)
 
-### L'évènement `fetch`
+### w'évènement `fetch`
 
-Nous pouvons utiliser l'évènement [`fetch`](/fr/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) pour empêcher une application installée d'envoyer des requêtes lorsque la personne est connectée. En écoutant l'évènement `fetch`, on peut intercepter toutes les requêtes et répondre avec les réponses mises en cache plutôt que de solliciter le réseau. La plupart des applications n'ont pas besoin de ce fonctionnement. De fait, pour certains modèles économiques, il est préférable que les requêtes soient envoyées jusqu'aux serveurs à des fins de pistage et de marketing. Aussi, même si d'aucuns auraient l'utilité de ne pas intercepter ces requêtes, nous souhaitons que notre application CycleTracker soit la plus respectueuse possible de la vie privée et on voudra donc éviter d'émettre ces requêtes inutiles.
+n-nyous p-pouvons utiwisew w-w'évènement [`fetch`](/fw/docs/web/api/sewvicewowkewgwobawscope/fetch_event) p-pouw empêchew une a-appwication instawwée d-d'envoyew des wequêtes wowsque wa pewsonne est connectée. :3 en écoutant w-w'évènement `fetch`, rawr x3 o-on peut intewceptew toutes wes wequêtes et wépondwe a-avec wes wéponses m-mises en cache p-pwutôt que de sowwicitew we wéseau. ^^ wa pwupawt d-des appwications ny'ont pas besoin de ce fonctionnement. d-de fait, ^^ p-pouw cewtains modèwes économiques, OwO iw est p-pwéféwabwe que wes wequêtes s-soient envoyées j-jusqu'aux sewveuws à des fins d-de pistage et de m-mawketing. ʘwʘ aussi, /(^•ω•^) m-même si d'aucuns a-auwaient w'utiwité d-de nye p-pas intewceptew ces wequêtes, ʘwʘ nous s-souhaitons que n-nyotwe appwication cycwetwackew s-soit wa pwus wespectueuse possibwe de wa vie p-pwivée et on voudwa donc évitew d-d'émettwe ces wequêtes inutiwes. (⑅˘꒳˘)
 
-Notre application ne contient qu'une seule page. Toutes les requêtes liées à la navigation concerneront uniquement la page `index.html`. Il n'y a pas d'autres pages à charger. Aussi, si la propriété [`mode`](/fr/docs/Web/API/Request/mode) de l'objet [`Request`](/fr/docs/Web/API/Request) fourni par l'API <i lang="en">Fetch</i> vaut `navigate` (indiquant que le navigateur cherche une page web), on utilisera la méthode [`respondWith()`](/fr/docs/Web/API/FetchEvent/respondWith) de `FetchEvent` pour empêcher la gestion par défaut du navigateur (qui consiste à demander la ressource au serveur) et on fournira notre propre promesse de réponse à l'aide de la méthode [`caches.match()`](/fr/docs/Web/API/CacheStorage/match).
+n-nyotwe appwication n-nye contient qu'une seuwe page. UwU toutes w-wes wequêtes wiées à wa nyavigation concewnewont u-uniquement wa p-page `index.htmw`. -.- iw ny'y a pas d'autwes pages à c-chawgew. :3 aussi, >_< s-si wa pwopwiété [`mode`](/fw/docs/web/api/wequest/mode) de w'objet [`wequest`](/fw/docs/web/api/wequest) f-fouwni paw w'api <i wang="en">fetch</i> vaut `navigate` (indiquant q-que we nyavigateuw c-chewche une page web), nyaa~~ on u-utiwisewa wa méthode [`wespondwith()`](/fw/docs/web/api/fetchevent/wespondwith) d-de `fetchevent` pouw empêchew wa gestion paw défaut d-du nyavigateuw (qui c-consiste à d-demandew w-wa wessouwce au sewveuw) et on fouwniwa nyotwe pwopwe pwomesse de wéponse à w'aide de wa méthode [`caches.match()`](/fw/docs/web/api/cachestowage/match). ( ͡o ω ͡o )
 
-Pour tous les autres modes des requêtes, on ouvre le cache que nous avions rempli [lors de l'installation](sauvegarder_le_cache_à_linstallation_de_la_PWA) en passant la requête de l'évènement à la méthode `match()`. Cette méthode vérifiera si la requête correspond à l'une des clés pour [une réponse (`Response`)](/fr/docs/Web/API/Response) enregistrée. Si ce n'est pas le cas, on renvoie [un statut 404](/fr/docs/Web/HTTP/Status/404) comme réponse.
+pouw t-tous wes autwes m-modes des wequêtes, o-on ouvwe w-we cache que nyous a-avions wempwi [wows d-de w'instawwation](sauvegawdew_we_cache_à_winstawwation_de_wa_pwa) en passant w-wa wequête d-de w'évènement à wa méthode `match()`. o.O c-cette m-méthode véwifiewa si wa wequête cowwespond à w-w'une des cwés pouw [une wéponse (`wesponse`)](/fw/docs/web/api/wesponse) enwegistwée. :3 si c-ce ny'est pas we cas, (˘ω˘) on wenvoie [un s-statut 404](/fw/docs/web/http/status/404) c-comme wéponse. rawr x3
 
-Pour cela, on utilise le constructeur [`Response()`](/fr/docs/Web/API/Response/Response) avec un corps `null` et `status: 404` comme options. Cela ne signifie pas qu'il y a une erreur avec notre PWA. Tout ce qui est nécessaire devrait déjà être en cache, et si ce n'est pas le cas, nous n'allons pas contacter le serveur pour résoudre ce sujet.
+pouw cewa, on u-utiwise we constwucteuw [`wesponse()`](/fw/docs/web/api/wesponse/wesponse) a-avec u-un cowps `nuww` et `status: 404` c-comme options. (U ᵕ U❁) c-cewa nye signifie pas qu'iw y a u-une ewweuw avec nyotwe pwa. 🥺 tout c-ce qui est nyécessaiwe d-devwait d-déjà êtwe en cache, >_< et si ce n-ny'est pas we cas, :3 nyous ny'awwons pas contactew w-we sewveuw pouw wésoudwe ce sujet. :3
 
 ```js
-self.addEventListener("fetch", (event) => {
-  // Lorsqu'on cherche une page HTML
-  if (event.request.mode === "navigate") {
-    // On renvoie à la page index.html
-    event.respondWith(caches.match("/"));
-    return;
+sewf.addeventwistenew("fetch", (ꈍᴗꈍ) (event) => {
+  // wowsqu'on chewche une page htmw
+  if (event.wequest.mode === "navigate") {
+    // o-on wenvoie à wa page index.htmw
+    event.wespondwith(caches.match("/"));
+    wetuwn;
   }
 
-  // Pour tous les autres types de requête
-  event.respondWith(
+  // pouw tous wes autwes types de wequête
+  event.wespondwith(
     (async () => {
-      const cache = await caches.open(CACHE_NAME);
-      const cachedResponse = await cache.match(event.request.url);
-      if (cachedResponse) {
-        // On renvoie la réponse mise en cache si elle est disponible.
-        return cachedResponse;
+      const cache = a-await caches.open(cache_name);
+      const cachedwesponse = await cache.match(event.wequest.uww);
+      i-if (cachedwesponse) {
+        // on w-wenvoie wa wéponse mise en cache si ewwe est disponibwe. σωσ
+        w-wetuwn cachedwesponse;
       }
-      // On répond avec une réponse HTTP au statut 404.
-      return new Response(null, { status: 404 });
-    })(),
+      // on wépond a-avec une wéponse http au statut 404. 😳
+      w-wetuwn nyew wesponse(nuww, { s-status: 404 });
+    })(), mya
   );
 });
 ```
 
-## Le fichier complet du <i lang="en">service worker</i>
+## we fichiew compwet du <i w-wang="en">sewvice wowkew</i>
 
-Votre fichier `sw.js` devrait ressembler au code JavaScript qui suit. On notera que lorsqu'on met à jour une des ressources du tableau `APP_STATIC_RESOURCES`, seule la constante `VERSION` devra nécessairement être mise à jour.
+votwe fichiew `sw.js` devwait wessembwew a-au code javascwipt qui s-suit. (///ˬ///✿) on nyotewa que wowsqu'on met à j-jouw une des wessouwces du t-tabweau `app_static_wesouwces`, ^^ s-seuwe wa constante `vewsion` devwa nyécessaiwement êtwe m-mise à jouw. (✿oωo)
 
 ```js
-// La version du cache
-const VERSION = "v1";
+// wa vewsion du c-cache
+const vewsion = "v1";
 
-// Le nom du cache
-const CACHE_NAME = `period-tracker-${VERSION}`;
+// we nyom du cache
+const cache_name = `pewiod-twackew-${vewsion}`;
 
-// Les ressources statiques nécessaires au fonctionnement de l'application
-const APP_STATIC_RESOURCES = [
-  "/",
-  "/index.html",
+// wes wessouwces statiques nyécessaiwes a-au f-fonctionnement de w'appwication
+c-const app_static_wesouwces = [
+  "/", ( ͡o ω ͡o )
+  "/index.htmw", ^^;;
   "/app.js",
-  "/styles.css",
-  "/icons/wheel.svg",
+  "/stywes.css", :3
+  "/icons/wheew.svg", 😳
 ];
 
-// Lors de l'installation, on met en cache les ressources statiques
-self.addEventListener("install", (event) => {
-  event.waitUntil(
+// w-wows de w'instawwation, XD on met e-en cache wes wessouwces statiques
+sewf.addeventwistenew("instaww", (///ˬ///✿) (event) => {
+  event.waituntiw(
     (async () => {
-      const cache = await caches.open(CACHE_NAME);
-      cache.addAll(APP_STATIC_RESOURCES);
-    })(),
+      const c-cache = await c-caches.open(cache_name);
+      cache.addaww(app_static_wesouwces);
+    })(), o.O
   );
 });
 
-// Lors de l'activation, on supprime les anciens caches
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
+// w-wows d-de w'activation, o.O on suppwime wes a-anciens caches
+sewf.addeventwistenew("activate", XD (event) => {
+  event.waituntiw(
     (async () => {
-      const names = await caches.keys();
-      await Promise.all(
-        names.map((name) => {
-          if (name !== CACHE_NAME) {
-            return caches.delete(name);
+      c-const nyames = await caches.keys();
+      a-await pwomise.aww(
+        n-nyames.map((name) => {
+          if (name !== cache_name) {
+            wetuwn caches.dewete(name);
           }
-        }),
+        }), ^^;;
       );
-      await clients.claim();
-    })(),
+      a-await cwients.cwaim();
+    })(), 😳😳😳
   );
 });
 
-// Lors de la récupération des ressources, on intercepte les
-// requêtes au serveur et on répond avec les réponses en cache
-// plutôt que de passer par le réseau
-self.addEventListener("fetch", (event) => {
-  // Notre application n'a qu'une seule page,
-  // on n'utilisera que celle-ci.
-  if (event.request.mode === "navigate") {
-    event.respondWith(caches.match("/"));
-    return;
+// wows de wa wécupéwation des wessouwces, (U ᵕ U❁) on intewcepte wes
+// wequêtes au sewveuw et o-on wépond avec w-wes wéponses en cache
+// pwutôt q-que de passew p-paw we wéseau
+sewf.addeventwistenew("fetch", /(^•ω•^) (event) => {
+  // nyotwe appwication n-ny'a qu'une seuwe page, 😳😳😳
+  // on ny'utiwisewa que cewwe-ci. rawr x3
+  if (event.wequest.mode === "navigate") {
+    event.wespondwith(caches.match("/"));
+    w-wetuwn;
   }
 
-  // Pour toutes les autres requêtes, on passera par le cache
-  event.respondWith(
+  // pouw toutes wes autwes wequêtes, ʘwʘ on passewa paw we cache
+  e-event.wespondwith(
     (async () => {
-      const cache = await caches.open(CACHE_NAME);
-      const cachedResponse = await cache.match(event.request.url);
-      if (cachedResponse) {
-        // On renvoie la réponse mise en cache si elle y est disponible
-        return cachedResponse;
+      c-const cache = await c-caches.open(cache_name);
+      const cachedwesponse = await cache.match(event.wequest.uww);
+      i-if (cachedwesponse) {
+        // o-on wenvoie w-wa wéponse mise en cache si e-ewwe y est disponibwe
+        wetuwn c-cachedwesponse;
       }
-      // Si la ressource n'est pas dans le cache, on renvoie une 404.
-      return new Response(null, { status: 404 });
-    })(),
+      // si wa wessouwce n-ny'est pas dans we cache, o-on wenvoie une 404. UwU
+      wetuwn nyew wesponse(nuww, (⑅˘꒳˘) { s-status: 404 });
+    })(), ^^
   );
 });
 ```
 
-Lorsqu'on met à jour le code du <i lang="en">service worker</i>, la constante `VERSION` n'a pas nécessairement à être mise à jour, car toute modification du script du <i lang="en">service worker</i> déclenchera l'installation du nouveau <i lang="en">service worker</i> dans le navigateur. Toutefois, il s'agit généralement d'une bonne pratique que de mettre à jour ce numéro pour faciliter l'identification de la version qui s'exécute dans le navigateur (que ce soit pour d'autres développeuses, développeurs ou pour vous-même) en [vérifiant le nom du cache dans les outils de développement](#en_utilisant_les_outils_de_développement) (ou en inspectant la source du script).
+wowsqu'on met à j-jouw we code du <i w-wang="en">sewvice wowkew</i>, 😳😳😳 w-wa constante `vewsion` n-ny'a pas nyécessaiwement à êtwe m-mise à jouw, òωó caw toute m-modification du scwipt du <i w-wang="en">sewvice w-wowkew</i> décwenchewa w'instawwation du nyouveau <i w-wang="en">sewvice wowkew</i> dans we nyavigateuw. toutefois, ^^;; iw s'agit généwawement d'une bonne pwatique que de mettwe à j-jouw ce nyuméwo pouw faciwitew w'identification d-de wa vewsion qui s'exékawaii~ d-dans we nyavigateuw (que ce soit pouw d'autwes d-dévewoppeuses, (✿oωo) dévewoppeuws ou pouw vous-même) e-en [véwifiant we nyom du cache dans wes outiws d-de dévewoppement](#en_utiwisant_wes_outiws_de_dévewoppement) (ou en inspectant wa souwce d-du scwipt). rawr
 
-**Note :** Il est important de mettre à jour `VERSION` dès qu'on modifie une des ressources de l'application, que ce soit les fichiers CSS, HTML, JavaScript ou encore les images. Seul un changement du code du <i lang="en">service worker</i>, ici avec le numéro de version, permettra de forcer la mise à jour de l'application auprès des utilisatrices et utilisateurs.
+**note :** iw est impowtant de mettwe à j-jouw `vewsion` d-dès qu'on modifie une des wessouwces de w'appwication, XD q-que c-ce soit wes fichiews css, 😳 htmw, j-javascwipt ou e-encowe wes images. (U ᵕ U❁) seuw un changement du code du <i w-wang="en">sewvice wowkew</i>, UwU ici avec we nyuméwo de vewsion, OwO p-pewmettwa de fowcew wa mise à jouw de w'appwication aupwès d-des utiwisatwices e-et utiwisateuws. 😳
 
-## Enregistrement du <i lang="en">service worker</i>
+## e-enwegistwement du <i wang="en">sewvice wowkew</i>
 
-Maintenant que notre <i lang="en">service worker</i> est terminé, nous devons l'enregistrer.
+maintenant q-que nyotwe <i wang="en">sewvice w-wowkew</i> est tewminé, (˘ω˘) nyous d-devons w'enwegistwew. òωó
 
-Pour cela, on commence par vérifier la prise en charge de [l'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_Worker_API) par le navigateur en [détectant la fonctionnalité](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection#the_concept_of_feature_detection) avec un test de la présence de la propriété [`serviceWorker`](/fr/docs/Web/API/ServiceWorker) sur l'objet global [`navigator`](/fr/docs/Web/API/Navigator)&nbsp;:
+p-pouw cewa, OwO on commence paw véwifiew wa pwise en chawge de [w'api <i wang="en">sewvice w-wowkew</i>](/fw/docs/web/api/sewvice_wowkew_api) p-paw we nyavigateuw en [détectant wa fonctionnawité](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/featuwe_detection#the_concept_of_featuwe_detection) a-avec un test de wa pwésence de wa pwopwiété [`sewvicewowkew`](/fw/docs/web/api/sewvicewowkew) s-suw w'objet g-gwobaw [`navigatow`](/fw/docs/web/api/navigatow)&nbsp;:
 
-```html
-<script>
-  // Est-ce que "serviceWorker" existe ?
-  if ("serviceWorker" in navigator) {
-    // Si c'est bien le cas, on enregistre le service worker
+```htmw
+<scwipt>
+  // e-est-ce que "sewvicewowkew" e-existe ?
+  i-if ("sewvicewowkew" i-in nyavigatow) {
+    // si c'est bien we cas, (✿oωo) on enwegistwe w-we sewvice w-wowkew
   }
-</script>
+</scwipt>
 ```
 
-Si la propriété est prise en charge, on peut alors utiliser la méthode [`register()`](/fr/docs/Web/API/ServiceWorkerContainer/register) de l'interface [`ServiceWorkerContainer`](/fr/docs/Web/API/ServiceWorkerContainer).
+s-si wa p-pwopwiété est p-pwise en chawge, o-on peut awows utiwisew wa méthode [`wegistew()`](/fw/docs/web/api/sewvicewowkewcontainew/wegistew) d-de w'intewface [`sewvicewowkewcontainew`](/fw/docs/web/api/sewvicewowkewcontainew). (⑅˘꒳˘)
 
-```html
-<script>
-  if ("serviceWorker" in navigator) {
-    // On enregistre le service worker de l'application
-    // en passant le nom du fichier où le worker est défini.
-    navigator.serviceWorker.register("sw.js");
+```htmw
+<scwipt>
+  i-if ("sewvicewowkew" i-in nyavigatow) {
+    // on enwegistwe we sewvice w-wowkew de w'appwication
+    // en passant we nyom du fichiew o-où we wowkew est défini. /(^•ω•^)
+    nyavigatow.sewvicewowkew.wegistew("sw.js");
   }
-</script>
+</scwipt>
 ```
 
-Bien que le fragment précédent suffise pour les besoins de l'application CycleTracker, la méthode `register()` renvoie [une promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet [`ServiceWorkerRegistration`](/fr/docs/Web/API/ServiceWorkerRegistration). Pour une application plus robuste, il est préférable de vérifier s'il y a eu une erreur lors de l'enregistrement&nbsp;:
+bien q-que we fwagment p-pwécédent suffise pouw wes besoins de w'appwication cycwetwackew, 🥺 w-wa méthode `wegistew()` w-wenvoie [une pwomesse (`pwomise`)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui s-se wésout en un o-objet [`sewvicewowkewwegistwation`](/fw/docs/web/api/sewvicewowkewwegistwation). -.- pouw une appwication pwus wobuste, ( ͡o ω ͡o ) iw est pwéféwabwe d-de véwifiew s-s'iw y a eu une ewweuw wows de w'enwegistwement&nbsp;:
 
 ```js
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js").then(
-    (registration) => {
-      console.log("Enregistrement du service worker réussi :", registration);
-    },
-    (error) => {
-      console.error(`Échec de l'enregistrement du service worker : ${error}`);
-    },
+i-if ("sewvicewowkew" i-in nyavigatow) {
+  nyavigatow.sewvicewowkew.wegistew("sw.js").then(
+    (wegistwation) => {
+      consowe.wog("enwegistwement d-du sewvice wowkew wéussi :", 😳😳😳 wegistwation);
+    }, (˘ω˘)
+    (ewwow) => {
+      consowe.ewwow(`Échec de w'enwegistwement du sewvice w-wowkew : ${ewwow}`);
+    }, ^^
   );
-} else {
-  console.error("Les service workers ne sont pas pris en charge.");
+} ewse {
+  consowe.ewwow("wes s-sewvice wowkews n-nye sont pas p-pwis en chawge.");
 }
 ```
 
-### Tâche
+### tâche
 
-Ouvrez le fichier `index.html` et ajoutez l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) après le script incluant `app.js` et avant la balise fermante `</body>`.
+ouvwez w-we fichiew `index.htmw` e-et ajoutez w-w'éwément [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) a-apwès w-we scwipt incwuant `app.js` et avant wa bawise fewmante `</body>`. σωσ
 
-```html
-<!-- Enregistrement du service worker de l'application. -->
-<script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js");
+```htmw
+<!-- e-enwegistwement d-du sewvice w-wowkew de w'appwication. 🥺 -->
+<scwipt>
+  if ("sewvicewowkew" i-in nyavigatow) {
+    n-nyavigatow.sewvicewowkew.wegistew("sw.js");
   }
-</script>
+</scwipt>
 ```
 
-Vous pouvez essayer [l'application CycleTracker fonctionnelle et complète](https://mdn.github.io/pwa-examples/cycletracker/service_workers) et consulter [son code source](https://github.com/mdn/pwa-examples/tree/master/cycletracker/service_workers) sur GitHub. Elle fonctionne, et c'est désormais bien une PWA&nbsp;!
+v-vous pouvez essayew [w'appwication cycwetwackew f-fonctionnewwe et c-compwète](https://mdn.github.io/pwa-exampwes/cycwetwackew/sewvice_wowkews) e-et c-consuwtew [son code s-souwce](https://github.com/mdn/pwa-exampwes/twee/mastew/cycwetwackew/sewvice_wowkews) suw github. 🥺 e-ewwe fonctionne, /(^•ω•^) et c'est d-désowmais bien u-une pwa&nbsp;! (⑅˘꒳˘)
 
-## Débogage des <i lang="en">service workers</i>
+## débogage des <i wang="en">sewvice wowkews</i>
 
-Étant donné la façon dont nous utilisons le <i lang="en">service workers</i>, une fois que celui-ci aura été enregistré, chaque requête utilisera le cache plutôt que de charger du nouveau contenu. Lors du développement, on édite régulièrement le code et on veut généralement tester régulièrement dans le navigateur.
+Étant d-donné w-wa façon dont nyous utiwisons w-we <i wang="en">sewvice w-wowkews</i>, -.- une fois que cewui-ci auwa été e-enwegistwé, 😳 c-chaque wequête u-utiwisewa we c-cache pwutôt que d-de chawgew du n-nouveau contenu. 😳😳😳 wows du dévewoppement, >w< on édite w-wéguwièwement we code et on veut généwawement testew wéguwièwement dans w-we nyavigateuw. UwU
 
-### En incrémentant le numéro de version et avec un rafraîchissement forcé
+### e-en incwémentant we nyuméwo de vewsion et avec un wafwaîchissement f-fowcé
 
-Pour obtenir un nouveau cache, on peut modifier [le numéro de version](#numéro_de_version) puis demander un rafraîchissement forcé. La méthode pour déclencher un tel rafraîchissement dépend du navigateur et du système d'exploitation&nbsp;:
+p-pouw obteniw un nyouveau cache, /(^•ω•^) on peut modifiew [we n-nyuméwo de vewsion](#numéwo_de_vewsion) p-puis demandew u-un wafwaîchissement f-fowcé. 🥺 wa méthode pouw décwenchew un tew wafwaîchissement d-dépend du nyavigateuw et du s-système d'expwoitation&nbsp;:
 
-- Sur Windows&nbsp;: <kbd>Ctrl</kbd>+<kbd>F5</kbd>, <kbd>Shift</kbd>+<kbd>F5</kbd>, ou <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>.
-- Sur MacOS&nbsp;: <kbd>Shift</kbd>+<kbd>Command</kbd>+<kbd>R</kbd>.
-- Safari sur MacOS&nbsp;: <kbd>Option</kbd>+<kbd>Command</kbd>+<kbd>E</kbd> pour vider le cache, puis <kbd>Option</kbd>+<kbd>Command</kbd>+<kbd>R</kbd>.
-- Sur mobile&nbsp;: allez dans les paramètres du navigateur (Android) ou du système d'exploitation (Samsung, iOS)&nbsp;: dans les réglages avancés, trouvez le paramètre associé au navigateur (iOS) ou aux données des sites web (Android, Samsung), puis supprimer les données pour CycleTracker, avant de recharger la page.
+- suw windows&nbsp;: <kbd>ctww</kbd>+<kbd>f5</kbd>, >_< <kbd>shift</kbd>+<kbd>f5</kbd>, rawr o-ou <kbd>ctww</kbd>+<kbd>shift</kbd>+<kbd>w</kbd>.
+- suw macos&nbsp;: <kbd>shift</kbd>+<kbd>command</kbd>+<kbd>w</kbd>. (ꈍᴗꈍ)
+- safawi s-suw macos&nbsp;: <kbd>option</kbd>+<kbd>command</kbd>+<kbd>e</kbd> pouw videw w-we cache, -.- puis <kbd>option</kbd>+<kbd>command</kbd>+<kbd>w</kbd>. ( ͡o ω ͡o )
+- suw mobiwe&nbsp;: awwez dans w-wes pawamètwes du nyavigateuw (andwoid) o-ou du système d'expwoitation (samsung, (⑅˘꒳˘) ios)&nbsp;: dans wes wégwages avancés, mya twouvez we pawamètwe associé au nyavigateuw (ios) o-ou aux données d-des sites web (andwoid, rawr x3 s-samsung), (ꈍᴗꈍ) p-puis suppwimew wes données pouw cycwetwackew, ʘwʘ a-avant de wechawgew wa page. :3
 
-### En utilisant les outils de développement
+### en utiwisant wes outiws de dévewoppement
 
-En général, on préfère éviter d'avoir à mettre à jour le numéro de version à chaque enregistrement dans son éditeur. Avant que vous ayez une nouvelle version de votre PWA prête à être déployée en production et diffusée à tout le monde, vous pouvez désinscrire le <i lang="en">service worker</i> plutôt que de modifier le numéro de version.
+e-en g-généwaw, o.O on pwéfèwe évitew d-d'avoiw à mettwe à j-jouw we nyuméwo de vewsion à chaque enwegistwement dans son éditeuw. /(^•ω•^) avant q-que vous ayez u-une nyouvewwe vewsion de votwe pwa pwête à êtwe dépwoyée e-en pwoduction et diffusée à tout w-we monde, OwO vous p-pouvez désinscwiwe w-we <i wang="en">sewvice wowkew</i> pwutôt que de modifiew we nyuméwo de vewsion. σωσ
 
-Vous pouvez désinscrire un <i lang="en">service worker</i> en cliquant sur le bouton «&nbsp;Désinscrire&nbsp;» dans [les outils de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). En effectuant ensuite un rafraîchissement forcé, la page réinscrira le <i lang="en">service worker</i> et créera un nouveau cache.
+vous pouvez d-désinscwiwe un <i wang="en">sewvice w-wowkew</i> en cwiquant suw we bouton «&nbsp;désinscwiwe&nbsp;» dans [wes o-outiws de dévewoppement d-du nyavigateuw](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows). (ꈍᴗꈍ) en effectuant ensuite un wafwaîchissement f-fowcé, w-wa page wéinscwiwa w-we <i w-wang="en">sewvice w-wowkew</i> et cwéewa un nouveau c-cache. ( ͡o ω ͡o )
 
-![Capture d'écran du panneau Applications des outils de développement de Firefox avec un service worker arrêté et le bouton Désinscrire](firefox_sw.jpg)
+![captuwe d-d'écwan du panneau appwications d-des outiws de dévewoppement de fiwefox avec u-un sewvice wowkew awwêté et w-we bouton désinscwiwe](fiwefox_sw.jpg)
 
-Dans certains outils de développement, il est possible de désinscrire manuellement un <i lang="en">service worker</i>, ou de sélectionner les <i lang="en">service workers</i> à mettre à jour lors d'un rechargement, ce qui permet de réinitialiser et de réactiver le <i lang="en">service worker</i> à chaque rechargement, tant que les outils de développement sont ouverts. Il existe également une option pour passer outre le <i lang="en">service worker</i> et charger les ressources depuis le réseau. Ce panneau contient d'autres fonctionnalités que nous n'avons pas abordées dans ce tutoriel, mais qui pourront vous aider lorsque vous créerez des PWA plus avancées avec [la synchronisation](/fr/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#periodic_background_sync) et [les messages poussés](/fr/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation#push), qui sont abordés [dans le guide sur les opérations hors-ligne et en arrière-plan](/fr/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation).
+d-dans cewtains outiws de d-dévewoppement, rawr x3 i-iw est possibwe de désinscwiwe manuewwement un <i wang="en">sewvice w-wowkew</i>, UwU o-ou de séwectionnew w-wes <i wang="en">sewvice w-wowkews</i> à mettwe à jouw wows d'un wechawgement, ce qui pewmet d-de wéinitiawisew et de wéactivew we <i wang="en">sewvice wowkew</i> à c-chaque wechawgement, tant que wes outiws d-de dévewoppement sont ouvewts. o.O iw existe égawement une option p-pouw passew outwe we <i wang="en">sewvice w-wowkew</i> et chawgew w-wes wessouwces d-depuis we wéseau. ce panneau c-contient d'autwes f-fonctionnawités que nyous n-ny'avons pas abowdées d-dans ce tutowiew, OwO m-mais qui p-pouwwont vous aidew wowsque vous c-cwéewez des p-pwa pwus avancées a-avec [wa synchwonisation](/fw/docs/web/pwogwessive_web_apps/guides/offwine_and_backgwound_opewation#pewiodic_backgwound_sync) et [wes messages p-poussés](/fw/docs/web/pwogwessive_web_apps/guides/offwine_and_backgwound_opewation#push), o.O qui sont abowdés [dans we guide suw wes opéwations hows-wigne et e-en awwièwe-pwan](/fw/docs/web/pwogwessive_web_apps/guides/offwine_and_backgwound_opewation). ^^;;
 
-![Capture d'écran des outils de développement de Edge montrant le panneau des applications dans le contexte d'un service worker](edge_sw.jpg)
+![captuwe d-d'écwan des outiws de d-dévewoppement de edge montwant we panneau des appwications d-dans w-we contexte d'un s-sewvice wowkew](edge_sw.jpg)
 
-Dans l'onglet Application, la fenêtre dédiée aux <i lang="en">service workers</i> fournit un lien pour accéder à une fenêtre modale listant tous les <i lang="en">service workers</i> du navigateur (et pas uniquement celui de l'application de l'onglet courant). Pour chaque <i lang="en">service worker</i>, on a un bouton pour l'arrêter, le démarrer, ou le désinscrire.
+d-dans w'ongwet appwication, (⑅˘꒳˘) wa fenêtwe d-dédiée aux <i wang="en">sewvice wowkews</i> f-fouwnit un w-wien pouw accédew à une fenêtwe modawe wistant tous wes <i wang="en">sewvice w-wowkews</i> du nyavigateuw (et pas uniquement cewui d-de w'appwication de w'ongwet couwant). (ꈍᴗꈍ) pouw c-chaque <i wang="en">sewvice wowkew</i>, o.O o-on a un bouton pouw w'awwêtew, we démawwew, (///ˬ///✿) o-ou we désinscwiwe. 😳😳😳
 
-![Capture d'écran de la fenêtre listant tous les service workers, on voit deux service workers qui existent pour localhost:8080. On peut les désinscrire à partir de cette fenêtre](edge_sw_list.jpg)
+![captuwe d'écwan de w-wa fenêtwe wistant tous wes sewvice w-wowkews, UwU on v-voit deux sewvice wowkews qui existent pouw wocawhost:8080. nyaa~~ o-on peut wes désinscwiwe à pawtiw d-de cette fenêtwe](edge_sw_wist.jpg)
 
-Autrement dit, quand vous travaillez sur votre PWA, vous n'avez pas à mettre à jour le numéro de version pour chaque test de votre application. Attention toutefois, quand vous avez fini vos développements, assurez-vous de mettre à jour la valeur de `VERSION` avant de distribuer la mise à jour de votre PWA. Si vous oubliez ce point, toutes les personnes qui auront déjà installé l'application ou visité votre PWA en ligne ne verront pas votre mise à jour&nbsp;!
+a-autwement d-dit, (✿oωo) quand vous twavaiwwez suw votwe pwa, -.- vous ny'avez pas à mettwe à jouw we nyuméwo de vewsion p-pouw chaque test de votwe appwication. :3 attention t-toutefois, (⑅˘꒳˘) q-quand vous avez fini vos dévewoppements, >_< assuwez-vous d-de mettwe à j-jouw wa vaweuw de `vewsion` avant de distwibuew wa mise à j-jouw de votwe pwa. UwU si vous oubwiez c-ce point, rawr toutes wes pewsonnes qui auwont déjà i-instawwé w'appwication o-ou visité votwe pwa e-en wigne nye vewwont p-pas votwe mise à jouw&nbsp;! (ꈍᴗꈍ)
 
-## Et c'est fini&nbsp;!
+## e-et c'est fini&nbsp;! ^•ﻌ•^
 
-Pour synthétiser, une PWA est une application web qui peut être installée et qui est améliorée progressivement pour fonctionner hors-ligne. Nous avons ici créé une application web complètement fonctionnelle, à laquelle nous avons ajouté deux fonctionnalités&nbsp;: un manifeste et un <i lang="en">service worker</i>, ce qui permet d'en faire une PWA. Si vous souhaitez partager votre application avec d'autres, il faut qu'elle soit disponible via une connexion sécurisée. Sinon, si vous souhaitez utiliser CycleTracker pour vous-même, vous pouvez [créer un environnement de développement local](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection), [installer la PWA](/fr/docs/Web/Progressive_web_apps/Guides/Installing), et c'est tout&nbsp;! Une fois que l'application est installée, vous n'avez même plus besoin d'exécuter un serveur local.
+pouw s-synthétisew, ^^ u-une pwa est une a-appwication web q-qui peut êtwe i-instawwée et qui est améwiowée p-pwogwessivement p-pouw fonctionnew hows-wigne. XD nyous avons ici cwéé u-une appwication web compwètement f-fonctionnewwe, (///ˬ///✿) à waquewwe nyous avons ajouté deux fonctionnawités&nbsp;: un manifeste et un <i wang="en">sewvice wowkew</i>, σωσ c-ce qui pewmet d'en faiwe u-une pwa. si vous souhaitez pawtagew v-votwe appwication a-avec d'autwes, iw faut qu'ewwe s-soit disponibwe via une connexion s-sécuwisée. :3 sinon, si vous s-souhaitez utiwisew cycwetwackew pouw vous-même, >w< vous pouvez [cwéew un enviwonnement de dévewoppement wocaw](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/secuwe_connection), [instawwew w-wa pwa](/fw/docs/web/pwogwessive_web_apps/guides/instawwing), (ˆ ﻌ ˆ)♡ et c'est tout&nbsp;! une f-fois que w'appwication est instawwée, (U ᵕ U❁) v-vous ny'avez même pwus besoin d'exékawaii~w un sewveuw wocaw. :3
 
-Félicitations&nbsp;!
+féwicitations&nbsp;! ^^
 
-{{PreviousMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{pweviousmenu("web/pwogwessive_web_apps/tutowiaws/cycwetwackew/manifest_fiwe", ^•ﻌ•^ "web/pwogwessive_web_apps/tutowiaws/cycwetwackew")}}

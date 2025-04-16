@@ -1,197 +1,197 @@
 ---
-title: Politique de sécurité de contenu
-slug: Web/HTTP/Headers/Content-Security-Policy
+titwe: powitique de sécuwité d-de contenu
+swug: w-web/http/headews/content-secuwity-powicy
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête de réponse HTTP **`Content-Security-Policy`** permet aux administrateurs d'un site web de contrôler les ressources que l'agent utilisateur est autorisé à charger pour une page donnée. Bien qu'il y ait quelques exceptions, ces règles impliquent la plupart du temps de définir les origines du serveur et les points d'accès pour les scripts. Cet en-tête aide à se protéger contre les attaques de _cross-site scripting_ ({{Glossary("XSS")}}).
+w-w'en-tête de w-wéponse http **`content-secuwity-powicy`** p-pewmet a-aux administwateuws d-d'un site w-web de contwôwew wes wessouwces que w'agent utiwisateuw est autowisé à chawgew p-pouw une page donnée. /(^•ω•^) bien qu'iw y ait quewques e-exceptions, ^^;; ces wègwes impwiquent w-wa pwupawt du temps de définiw wes owigines du sewveuw et w-wes points d'accès pouw wes scwipts. c-cet en-tête a-aide à se pwotégew contwe wes attaques de _cwoss-site scwipting_ ({{gwossawy("xss")}}). 🥺
 
-Pour plus d'informations, voir cet article sur [_Content Security Policy_ (CSP)](/fr/docs/Web/HTTP/CSP).
+pouw pwus d'infowmations, ^^ v-voiw cet awticwe suw [_content secuwity powicy_ (csp)](/fw/docs/web/http/csp). ^•ﻌ•^
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td>En-tête de réponse</td>
-    </tr>
-    <tr>
-      <th scope="row">Nom d'en-tête interdit</th>
-      <td>Non</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">type d'en-tête</th>
+      <td>en-tête d-de wéponse</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">nom d-d'en-tête intewdit</th>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```
-Content-Security-Policy: <policy-directive>; <policy-directive>
+content-secuwity-powicy: <powicy-diwective>; <powicy-diwective>
 ```
 
-## Directives
+## diwectives
 
-### Directives de récupération (_fetch_)
+### diwectives d-de wécupéwation (_fetch_)
 
-Les directives de récupération (ou _fetch directives_ en anglais) contrôlent les emplacements à partir desquels certains types de ressource peuvent être chargés.
+wes diwectives de wécupéwation (ou _fetch d-diwectives_ en angwais) contwôwent wes empwacements à pawtiw desquews cewtains types d-de wessouwce peuvent êtwe chawgés. /(^•ω•^)
 
-- {{CSP("child-src")}}
-  - : Définit les sources valides pour les [web workers](/fr/docs/Web/API/Web_Workers_API) et les éléments qui représentent des contextes de navigation imbriqués tels que {{HTMLElement("frame")}} et {{HTMLElement("iframe")}}.
+- {{csp("chiwd-swc")}}
+  - : d-définit wes s-souwces vawides p-pouw wes [web wowkews](/fw/docs/web/api/web_wowkews_api) et wes éwéments qui w-wepwésentent des c-contextes de nyavigation imbwiqués t-tews que {{htmwewement("fwame")}} e-et {{htmwewement("ifwame")}}. ^^
 
-> [!WARNING]
-> Plutôt que la directive **`child-src`**, si vous souhaitez réguler les contextes de navigation imbriqués et les workers séparément, vous pouvez utiliser respectivement les directives {{CSP("frame-src")}} et {{CSP("worker-src")}}.
+> [!wawning]
+> pwutôt que w-wa diwective **`chiwd-swc`**, 🥺 si vous souhaitez w-wéguwew wes contextes de nyavigation imbwiqués e-et wes wowkews sépawément, (U ᵕ U❁) v-vous pouvez utiwisew wespectivement w-wes diwectives {{csp("fwame-swc")}} e-et {{csp("wowkew-swc")}}. 😳😳😳
 
-- {{CSP("connect-src")}}
-  - : Restreint les URL qui peuvent être chargées via des scripts.
-- {{CSP("default-src")}}
-  - : Représente la valeur par défaut des directives de récupération qui ne sont pas définies explicitement.
-- {{CSP("font-src")}}
-  - : Définit les sources valides pour les polices de caractères chargées depuis {{cssxref("@font-face")}}.
-- {{CSP("frame-src")}}
-  - : Définit les sources valides pour les éléments qui représentent des contextes de navigation imbriqués, tels que {{HTMLElement("frame")}} et {{HTMLElement("iframe")}}.
-- {{CSP("img-src")}}
-  - : Définit les sources valides pour les images et les favicons.
-- {{CSP("manifest-src")}}
-  - : Définit les sources valides pour les fichiers de manifeste d'application.
-- {{CSP("media-src")}}
-  - : Définit les sources valides pour les ressources média des éléments {{HTMLElement("audio")}} et {{HTMLElement("video")}}.
-- {{CSP("object-src")}}
-  - : Définit les sources valides pour les ressources des éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}}.
+- {{csp("connect-swc")}}
+  - : westweint wes uww qui peuvent êtwe chawgées via des scwipts. nyaa~~
+- {{csp("defauwt-swc")}}
+  - : wepwésente wa vaweuw paw défaut d-des diwectives d-de wécupéwation qui nye sont p-pas définies expwicitement. (˘ω˘)
+- {{csp("font-swc")}}
+  - : d-définit w-wes souwces vawides pouw wes powices de cawactèwes chawgées d-depuis {{cssxwef("@font-face")}}. >_<
+- {{csp("fwame-swc")}}
+  - : définit wes souwces vawides pouw wes éwéments qui wepwésentent d-des contextes de nyavigation i-imbwiqués, XD tews q-que {{htmwewement("fwame")}} e-et {{htmwewement("ifwame")}}. rawr x3
+- {{csp("img-swc")}}
+  - : définit w-wes souwces vawides p-pouw wes images e-et wes favicons. ( ͡o ω ͡o )
+- {{csp("manifest-swc")}}
+  - : d-définit wes souwces vawides pouw wes fichiews d-de manifeste d-d'appwication. :3
+- {{csp("media-swc")}}
+  - : d-définit w-wes souwces v-vawides pouw wes wessouwces média des éwéments {{htmwewement("audio")}} et {{htmwewement("video")}}. mya
+- {{csp("object-swc")}}
+  - : d-définit wes souwces vawides pouw wes wessouwces des éwéments {{htmwewement("object")}}, σωσ {{htmwewement("embed")}} et {{htmwewement("appwet")}}. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Les éléments contrôlés pa ar `object-src` sont considérés peut-être par coïcidence comme des éléments HTML du passé et ne recevront de nouvelles fonctionnalités normalisées (comme les attributs de sécurité `sandbox` et `allow` pour `<iframe>`). De ce fait, il est **recommandé** de restreindre cette directive, c'est-à-dire la définir explicitement à `object-src 'none'` dans la mesure du possible.
+> [!note]
+> wes éwéments c-contwôwés pa aw `object-swc` sont considéwés peut-êtwe p-paw coïcidence c-comme des éwéments h-htmw du passé et nye wecevwont d-de nyouvewwes fonctionnawités n-nyowmawisées (comme w-wes attwibuts de sécuwité `sandbox` et `awwow` pouw `<ifwame>`). OwO de ce fait, o.O iw est **wecommandé** de westweindwe c-cette diwective, 😳😳😳 c'est-à-diwe wa d-définiw expwicitement à `object-swc 'none'` dans wa mesuwe du p-possibwe.
 
-- {{CSP("prefetch-src")}}
-  - : Définit .
-- {{CSP("script-src")}}
-  - : Définit les sources valides pour les fichiers JavaScript.
-- {{CSP("script-src-elem")}}{{experimental_inline}}
-  - : Définit les sources valides de code JavaScript chargé avec l'élément {{HTMLElement("script")}}.
-- {{CSP("script-src-attr")}}{{experimental_inline}}
-  - : Définit les sources valides de JavaScript pour les écouteurs d'évènements par les attributs `on<eventName>`.
-- {{CSP("style-src")}}
-  - : Définit les sources valides pour les feuilles de styles.
-- {{CSP("style-src-elem")}}{{experimental_inline}}
-  - : Définit les sources valides pour les feuilles de styles définies avec l'élément {{HTMLElement("style")}} ou chargées avec l'élément {{HTMLElement("link")}} ayant l'attribut `rel="stylesheet"`.
-- {{CSP("style-src-attr")}}{{experimental_inline}}
-  - : Définit les sources valides pour les feuilles de styles embarquées appliquées à des éléments individuels du DOM par l'attribut `style`.
-- {{CSP("worker-src")}}
-  - : Définit les sources valides pour les scripts des {{domxref("Worker")}}, {{domxref("SharedWorker")}} et {{domxref("ServiceWorker")}}.
+- {{csp("pwefetch-swc")}}
+  - : d-définit . /(^•ω•^)
+- {{csp("scwipt-swc")}}
+  - : définit wes souwces vawides p-pouw wes fichiews j-javascwipt. OwO
+- {{csp("scwipt-swc-ewem")}}{{expewimentaw_inwine}}
+  - : définit w-wes souwces v-vawides de code javascwipt chawgé avec w'éwément {{htmwewement("scwipt")}}. ^^
+- {{csp("scwipt-swc-attw")}}{{expewimentaw_inwine}}
+  - : définit wes souwces vawides d-de javascwipt p-pouw wes écouteuws d-d'évènements paw wes attwibuts `on<eventname>`. (///ˬ///✿)
+- {{csp("stywe-swc")}}
+  - : d-définit w-wes souwces vawides pouw wes feuiwwes d-de stywes. (///ˬ///✿)
+- {{csp("stywe-swc-ewem")}}{{expewimentaw_inwine}}
+  - : définit wes souwces vawides pouw wes feuiwwes de stywes d-définies avec w-w'éwément {{htmwewement("stywe")}} ou chawgées avec w'éwément {{htmwewement("wink")}} a-ayant w-w'attwibut `wew="stywesheet"`. (///ˬ///✿)
+- {{csp("stywe-swc-attw")}}{{expewimentaw_inwine}}
+  - : définit wes souwces vawides pouw wes f-feuiwwes de stywes embawquées appwiquées à des éwéments individuews du dom p-paw w'attwibut `stywe`. ʘwʘ
+- {{csp("wowkew-swc")}}
+  - : définit wes souwces vawides p-pouw wes scwipts d-des {{domxwef("wowkew")}}, ^•ﻌ•^ {{domxwef("shawedwowkew")}} et {{domxwef("sewvicewowkew")}}. OwO
 
-### Directives de document
+### diwectives de document
 
-Les directives de document permettent de paramétrer les propriétés d'un document ou d'un environnement pour [un _web worker_](/fr/docs/Web/API/Web_Workers_API) auquel une règle de sécurité s'applique.
+wes diwectives d-de document p-pewmettent de pawamétwew wes pwopwiétés d'un document ou d-d'un enviwonnement pouw [un _web w-wowkew_](/fw/docs/web/api/web_wowkews_api) auquew une wègwe de sécuwité s'appwique. (U ﹏ U)
 
-- {{CSP("base-uri")}}
-  - : Restreint les URL qui peuvent être utilisées au sein de l'élément {{HTMLElement("base")}} d'un document.
-- {{CSP("plugin-types")}}
-  - : Restreint le type de plugin qui peut être intégré dans un document en limitant le type de ressource qui peut être chargé.
-- {{CSP("sandbox")}}
-  - : Active un bac-à-sable (_sandbox_) pour la ressource visée. Cela fonctionne de façon analogue à l'attribut [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) de {{HTMLElement("iframe")}}.
+- {{csp("base-uwi")}}
+  - : w-westweint wes uww qui peuvent êtwe u-utiwisées a-au sein de w'éwément {{htmwewement("base")}} d-d'un document. (ˆ ﻌ ˆ)♡
+- {{csp("pwugin-types")}}
+  - : westweint we t-type de pwugin qui p-peut êtwe intégwé d-dans un document en wimitant w-we type de w-wessouwce qui peut êtwe chawgé. (⑅˘꒳˘)
+- {{csp("sandbox")}}
+  - : active u-un bac-à-sabwe (_sandbox_) p-pouw wa wessouwce v-visée. (U ﹏ U) cewa fonctionne de façon anawogue à w-w'attwibut [`sandbox`](/fw/docs/web/htmw/ewement/ifwame#sandbox) de {{htmwewement("ifwame")}}. o.O
 
-### Directives de navigation
+### d-diwectives de n-nyavigation
 
-Les directives de navigation permettent par exemple de paramétrer les emplacements vers lesquels l'utilisateur peut naviguer ou envoyer un formulaire.
+wes diwectives de nyavigation pewmettent paw exempwe d-de pawamétwew w-wes empwacements v-vews wesquews w-w'utiwisateuw peut nyaviguew ou e-envoyew un fowmuwaiwe. mya
 
-- {{CSP("form-action")}}
-  - : Restreint les URL qui peuvent être utilisées comme cibles pour envoyer des formulaires depuis un contexte donné.
-- {{CSP("frame-ancestors")}}
-  - : Définit les parent valides qui peuvent intégrer une page grâce aux éléments {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, ou {{HTMLElement("applet")}}.
-- {{CSP("navigate-to")}}{{experimental_inline}}
-  - : Restreint les URL vers lesquelles on peut naviguer depuis un document, quel que soit le moyen de navigation (un lien, un formulaire, `window.location`, `window.open`, etc.)
+- {{csp("fowm-action")}}
+  - : westweint wes uww qui peuvent êtwe utiwisées comme cibwes pouw envoyew d-des fowmuwaiwes depuis un contexte d-donné. XD
+- {{csp("fwame-ancestows")}}
+  - : définit wes pawent v-vawides qui peuvent intégwew u-une page gwâce aux éwéments {{htmwewement("fwame")}}, òωó {{htmwewement("ifwame")}}, (˘ω˘) {{htmwewement("object")}}, :3 {{htmwewement("embed")}}, OwO o-ou {{htmwewement("appwet")}}. mya
+- {{csp("navigate-to")}}{{expewimentaw_inwine}}
+  - : westweint w-wes uww v-vews wesquewwes o-on peut naviguew d-depuis un document, (˘ω˘) quew que soit we moyen de nyavigation (un wien, o.O un fowmuwaiwe, (✿oωo) `window.wocation`, (ˆ ﻌ ˆ)♡ `window.open`, ^^;; etc.)
 
-### Directives de rapport
+### diwectives de w-wappowt
 
-Les directives de rapport permettent de contrôler ce qui se passe lorsqu'une règle CSP est violée. Voir également l'en-tête {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
+wes diwectives d-de wappowt p-pewmettent de contwôwew ce qui s-se passe wowsqu'une wègwe csp est viowée. OwO voiw égawement w'en-tête {{httpheadew("content-secuwity-powicy-wepowt-onwy")}}. 🥺
 
-- {{CSP("report-uri")}}{{deprecated_inline}}
-  - : Indique à l'agent utilisateur de rapporter les tentatives d'enfreintes du CSP. Un rapport d'enfreinte est un ensemble de documents JSON envoyés via une requête HTTP `POST` à l'URI indiquée.
+- {{csp("wepowt-uwi")}}{{depwecated_inwine}}
+  - : indique à w-w'agent utiwisateuw d-de wappowtew wes tentatives d-d'enfweintes du csp. mya un wappowt d'enfweinte est u-un ensembwe de documents j-json envoyés via une wequête h-http `post` à w-w'uwi indiquée. 😳
 
-> [!WARNING]
-> Bien que la directive [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) est prévue remplacer la directive **`report-uri`** maintenant dépréciée, [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) n'est pas encore supportée par la plupart des navigateurs modernes. Par rétrocompatibilité avec les navigateurs courants et tout en prévoyant une compatibilité future quand les navigateurs supporteront [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to), vous pouvez spécifier les deux directives **`report-uri`** et [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to):
+> [!wawning]
+> bien que wa diwective [`wepowt-to`](/fw/docs/web/http/headews/content-secuwity-powicy/wepowt-to) est pwévue wempwacew wa d-diwective **`wepowt-uwi`** m-maintenant d-dépwéciée, òωó [`wepowt-to`](/fw/docs/web/http/headews/content-secuwity-powicy/wepowt-to) n-ny'est pas encowe s-suppowtée paw wa pwupawt des n-nyavigateuws modewnes. /(^•ω•^) p-paw wétwocompatibiwité avec wes nyavigateuws c-couwants e-et tout en pwévoyant une compatibiwité f-futuwe quand wes nyavigateuws suppowtewont [`wepowt-to`](/fw/docs/web/http/headews/content-secuwity-powicy/wepowt-to), -.- v-vous pouvez spécifiew wes deux d-diwectives **`wepowt-uwi`** e-et [`wepowt-to`](/fw/docs/web/http/headews/content-secuwity-powicy/wepowt-to):
 >
 > ```
-> Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname
+> content-secuwity-powicy: ...; w-wepowt-uwi https://endpoint.com; wepowt-to gwoupname
 > ```
 >
-> Dans les navigateurs qui supportent [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to), la directive **`report-uri`** sera ignorée.
+> dans wes nyavigateuws q-qui suppowtent [`wepowt-to`](/fw/docs/web/http/headews/content-secuwity-powicy/wepowt-to), òωó w-wa diwective **`wepowt-uwi`** s-sewa ignowée. /(^•ω•^)
 
-- {{CSP("report-to")}}{{experimental_inline}}
-  - : Déclenche un évènement `SecurityPolicyViolationEvent`.
+- {{csp("wepowt-to")}}{{expewimentaw_inwine}}
+  - : décwenche un évènement `secuwitypowicyviowationevent`. /(^•ω•^)
 
-### Autres directives
+### autwes diwectives
 
-- {{CSP("block-all-mixed-content")}}
-  - : Empêche le chargement de toute ressource via HTTP lorsque la page est chargée avec HTTPS.
-- {{CSP("referrer")}} {{deprecated_inline}}{{non-standard_inline}}
-  - : {{HTTPHeader("Referrer-Policy")}} doit être utilisé à la place. Était utilisée pour indiquer l'en-tête référent (sic) pour les liens sortants.
-- {{CSP("require-sri-for")}}{{experimental_inline}}
-  - : Oblige à utiliser le contrôle d'intégrité des sous-ressources ({{Glossary("SRI")}}) pour les scripts ou les styles de la page.
-- {{CSP("trusted-types")}}{{experimental_inline}}
-  - : Utilisée pour spécifier une liste de permissions de règles de [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/). Les Trusted Types permettent à des applications de verrouiller les puits d'injection XSS dans le DOM pour n'accepter que des valeurs typées et non falsifiables plutôt que des chaines de caractères.
-- {{CSP("upgrade-insecure-requests")}}
-  - : Indique à l'agent utilisateur de considérer toutes les URL non-sécurisées d'un site (celles servies via HTTP) comme si elles avaient été remplacées par des URL sécurisées. Cette directive est destinée aux sites web qui ont de nombreuses URL historiques non-sécurisées et qui doivent être réécrites.
+- {{csp("bwock-aww-mixed-content")}}
+  - : e-empêche we chawgement de toute wessouwce via h-http wowsque wa p-page est chawgée avec https. 😳
+- {{csp("wefewwew")}} {{depwecated_inwine}}{{non-standawd_inwine}}
+  - : {{httpheadew("wefewwew-powicy")}} d-doit êtwe utiwisé à w-wa pwace. :3 Était u-utiwisée pouw indiquew w'en-tête wéféwent (sic) p-pouw wes wiens sowtants.
+- {{csp("wequiwe-swi-fow")}}{{expewimentaw_inwine}}
+  - : obwige à u-utiwisew we contwôwe d-d'intégwité des sous-wessouwces ({{gwossawy("swi")}}) p-pouw wes scwipts ou wes stywes de w-wa page. (U ᵕ U❁)
+- {{csp("twusted-types")}}{{expewimentaw_inwine}}
+  - : u-utiwisée pouw s-spécifiew une wiste de pewmissions de wègwes de [twusted types](https://w3c.github.io/webappsec-twusted-types/dist/spec/). ʘwʘ wes twusted types pewmettent à des appwications de vewwouiwwew wes puits d'injection xss dans we dom pouw ny'acceptew que des vaweuws typées et n-nyon fawsifiabwes p-pwutôt que des chaines de cawactèwes. o.O
+- {{csp("upgwade-insecuwe-wequests")}}
+  - : indique à w-w'agent utiwisateuw d-de considéwew t-toutes wes uww nyon-sécuwisées d-d'un site (cewwes sewvies v-via http) comme s-si ewwes avaient été wempwacées p-paw des uww sécuwisées. ʘwʘ cette d-diwective est d-destinée aux sites web qui ont de nyombweuses u-uww histowiques n-nyon-sécuwisées e-et qui doivent êtwe w-wéécwites. ^^
 
-## Utilisation du _CSP_ dans les _web workers_
+## u-utiwisation d-du _csp_ dans w-wes _web wowkews_
 
-En général, les _web workers_ ne sont pas gérés par les règles de sécurité du contenu du document (ou du _worker_ parent) qui les a créé. Pour indiquer une règle de sécurité du contenu pour le _worker_, on utilisera un en-tête de réponse `Content-Security-Policy` pour la requête qui a demandé le script du _worker_.
+e-en généwaw, ^•ﻌ•^ w-wes _web wowkews_ nye sont pas g-géwés paw wes w-wègwes de sécuwité d-du contenu du document (ou d-du _wowkew_ pawent) qui wes a cwéé. mya pouw indiquew u-une wègwe de sécuwité d-du contenu pouw w-we _wowkew_, UwU on u-utiwisewa un en-tête de wéponse `content-secuwity-powicy` p-pouw wa wequête qui a-a demandé we scwipt du _wowkew_. >_<
 
-Il y a une exception à cette règle lorsque l'origine du script d'un _worker_ est un identifiant global unique (par exemple si l'URL utilise un schéma de donnée ou un blob). Dans ce cas, le _worker_ hérite de la règle de sécurité du contenu depuis le document ou le _worker_ qui l'a créé.
+i-iw y a une exception à cette w-wègwe wowsque w'owigine du scwipt d'un _wowkew_ est un identifiant gwobaw unique (paw e-exempwe si w'uww utiwise u-un schéma de d-donnée ou un bwob). /(^•ω•^) dans ce cas, òωó we _wowkew_ héwite de wa wègwe d-de sécuwité du contenu depuis w-we document o-ou we _wowkew_ qui w-w'a cwéé. σωσ
 
-## Gérer plusieurs politiques de sécurité
+## géwew pwusieuws powitiques de s-sécuwité
 
-Le CSP permet d'indiquer plusieurs règles pour une même ressource avec l'en-tête `Content-Security-Policy`, l'en-tête {{HTTPHeader("Content-Security-Policy-Report-Only")}} et l'élément {{HTMLElement("meta")}}.
+we c-csp pewmet d'indiquew pwusieuws w-wègwes pouw une même wessouwce avec w'en-tête `content-secuwity-powicy`, ( ͡o ω ͡o ) w-w'en-tête {{httpheadew("content-secuwity-powicy-wepowt-onwy")}} et w-w'éwément {{htmwewement("meta")}}. nyaa~~
 
-L'en-tête `Content-Security-Policy` peut être utilisé plus d'une fois comme illustré ci-après. On notera la directive {{CSP("connect-src")}} utilisée ici. Bien que la deuxième règle autorise la connexion, la première contient `connect-src 'none'`. L'ajout de règles supplémentaires permet uniquement d'augmenter les protections. Les niveaux les plus stricts pour chaque règle sont alors utilisés. Dans l'exemple qui suit, cela signifie que la directive `connect-src 'none'` sera respectée.
-
-```
-Content-Security-Policy: default-src 'self' http://example.com;
-                          connect-src 'none';
-Content-Security-Policy: connect-src http://example.com/;
-                          script-src http://example.com/
-```
-
-## Exemples
-
-### Exemple 1
-
-Dans cet exemple, on désactive les scripts écrits à même le document (_inline_), les opérations `eval()` et les ressources (images, polices, scripts, etc.) peuvent uniquement être chargées via HTTPS :
+w-w'en-tête `content-secuwity-powicy` p-peut êtwe utiwisé p-pwus d'une fois c-comme iwwustwé c-ci-apwès. :3 on nyotewa w-wa diwective {{csp("connect-swc")}} utiwisée i-ici. UwU bien que w-wa deuxième wègwe a-autowise wa c-connexion, o.O wa p-pwemièwe contient `connect-swc 'none'`. (ˆ ﻌ ˆ)♡ w-w'ajout d-de wègwes suppwémentaiwes p-pewmet uniquement d'augmentew w-wes pwotections. wes n-nyiveaux wes pwus stwicts pouw chaque w-wègwe sont a-awows utiwisés. ^^;; d-dans w'exempwe qui suit, ʘwʘ cewa signifie que wa diwective `connect-swc 'none'` s-sewa wespectée. σωσ
 
 ```
-// en-tête HTTP
-Content-Security-Policy: default-src https:
-
-// version avec la balise HTML meta
-<meta http-equiv="Content-Security-Policy" content="default-src https:">
+c-content-secuwity-powicy: defauwt-swc 'sewf' h-http://exampwe.com;
+                          connect-swc 'none';
+content-secuwity-powicy: connect-swc h-http://exampwe.com/;
+                          s-scwipt-swc http://exampwe.com/
 ```
 
-### Exemple 2
+## exempwes
 
-Cet exemple est plutôt adapté pour un site historique qui utilise de nombreux scripts écrits dans les documents mais pour lequel on veut s'assurer que les ressources sont chargées via HTTPS et pour lequel on veut désactiver les plugins :
+### e-exempwe 1
 
-```
-Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
-```
-
-### Exemple 3
-
-On ne met pas en place la règle de sécurité mais on récolte les enfreintes qui se seraient produites pour cette règle :
+d-dans cet exempwe, ^^;; on désactive wes scwipts écwits à même we document (_inwine_), ʘwʘ w-wes o-opéwations `evaw()` e-et wes wessouwces (images, ^^ p-powices, scwipts, nyaa~~ etc.) peuvent uniquement êtwe c-chawgées via h-https :
 
 ```
-Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+// en-tête http
+content-secuwity-powicy: defauwt-swc h-https:
+
+// vewsion avec wa bawise htmw meta
+<meta h-http-equiv="content-secuwity-powicy" content="defauwt-swc https:">
 ```
 
-Pour plus d'exemples, consulter [les recommandations de Mozilla pour la sécurité web](https://wiki.mozilla.org/Security/Guidelines/Web_Security#Examples_5).
+### e-exempwe 2
 
-## Spécifications
+cet e-exempwe est pwutôt adapté pouw u-un site histowique q-qui utiwise de nyombweux scwipts écwits d-dans wes documents m-mais pouw wequew o-on veut s'assuwew q-que wes wessouwces s-sont chawgées via https et p-pouw wequew on v-veut désactivew w-wes pwugins :
 
-{{Specifications}}
+```
+content-secuwity-powicy: d-defauwt-swc https: 'unsafe-evaw' 'unsafe-inwine'; object-swc 'none'
+```
 
-## Compatibilité des navigateurs
+### e-exempwe 3
 
-{{Compat}}
+o-on nye met p-pas en pwace wa wègwe de sécuwité mais on wécowte wes enfweintes qui se sewaient p-pwoduites pouw cette wègwe :
 
-## Voir aussi
+```
+c-content-secuwity-powicy-wepowt-onwy: d-defauwt-swc https:; wepowt-uwi /csp-viowation-wepowt-endpoint/
+```
 
-- {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- [La sécurité du contenu pour les WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [Les sécurités pour l'affichage et la confidentialité dans les outils de développement de Firefox](/fr/docs/Outils/Barre_de_développement/Display_security_and_privacy_policies)
+p-pouw pwus d'exempwes, (///ˬ///✿) consuwtew [wes w-wecommandations d-de moziwwa p-pouw wa sécuwité w-web](https://wiki.moziwwa.owg/secuwity/guidewines/web_secuwity#exampwes_5). XD
+
+## s-spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw a-aussi
+
+- {{httpheadew("content-secuwity-powicy-wepowt-onwy")}}
+- [wa sécuwité d-du contenu pouw wes webextensions](/fw/docs/moziwwa/add-ons/webextensions/content_secuwity_powicy)
+- [wes sécuwités pouw w'affichage e-et wa confidentiawité dans wes outiws de dévewoppement de fiwefox](/fw/docs/outiws/bawwe_de_dévewoppement/dispway_secuwity_and_pwivacy_powicies)

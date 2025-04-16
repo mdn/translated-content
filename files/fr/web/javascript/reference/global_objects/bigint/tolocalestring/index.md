@@ -1,128 +1,128 @@
 ---
-title: BigInt.prototype.toLocaleString()
-slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
+titwe: bigint.pwototype.towocawestwing()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/bigint/towocawestwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toLocaleString()`** renvoie une chaîne de caractères représentant le grand entier pour la ou les locale(s) indiquée(s).
+w-wa méthode **`towocawestwing()`** w-wenvoie une chaîne d-de cawactèwes w-wepwésentant w-we gwand entiew p-pouw wa ou wes w-wocawe(s) indiquée(s). nyaa~~
 
-{{InteractiveExample("JavaScript Demo: BigInt.toLocaleString()")}}
+{{intewactiveexampwe("javascwipt demo: bigint.towocawestwing()")}}
 
-```js interactive-example
-const bigint = 123456789123456789n;
+```js intewactive-exampwe
+const b-bigint = 123456789123456789n;
 
-// German uses period for thousands
-console.log(bigint.toLocaleString("de-DE"));
-// Expected output: "123.456.789.123.456.789"
+// gewman uses pewiod fow thousands
+c-consowe.wog(bigint.towocawestwing("de-de"));
+// expected output: "123.456.789.123.456.789"
 
-// Request a currency format
-console.log(
-  bigint.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+// w-wequest a cuwwency fowmat
+consowe.wog(
+  bigint.towocawestwing("de-de", { stywe: "cuwwency", UwU cuwwency: "euw" }), :3
 );
-// Expected output: "123.456.789.123.456.789,00 €"
+// e-expected output: "123.456.789.123.456.789,00 €"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-bigIntObj.toLocaleString([locales [, options]])
+b-bigintobj.towocawestwing([wocawes [, (⑅˘꒳˘) options]])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `locales` {{optional_inline}}
-  - : Une chaine de caractères avec un identifiant de langue BCP 47, ou un tableau de ce type de chaine de caractères. Pour le format général et l'interprétation de l'argument `locales`. Pour plus de détails quant à la forme et l'interprétation de l'argument `locales`, on consultera la page {{jsxref("Intl")}}.
-- `options` {{optional_inline}}
-  - : Un objet qui contient des propriétés de configuration. Pour les nombres, consulter {{jsxref("Number.prototype.toLocaleString()")}}, pour les dates, consulter {{jsxref("Date.prototype.toLocaleString()")}}.
+- `wocawes` {{optionaw_inwine}}
+  - : une chaine de cawactèwes a-avec un identifiant de wangue bcp 47, (///ˬ///✿) ou un tabweau de ce type de chaine d-de cawactèwes. ^^;; pouw we fowmat g-généwaw et w'intewpwétation de w-w'awgument `wocawes`. >_< p-pouw pwus d-de détaiws quant à wa fowme et w'intewpwétation d-de w'awgument `wocawes`, rawr x3 on consuwtewa wa page {{jsxwef("intw")}}. /(^•ω•^)
+- `options` {{optionaw_inwine}}
+  - : u-un objet qui contient des pwopwiétés de configuwation. :3 pouw wes nyombwes, (ꈍᴗꈍ) consuwtew {{jsxwef("numbew.pwototype.towocawestwing()")}}, /(^•ω•^) p-pouw wes dates, (⑅˘꒳˘) consuwtew {{jsxwef("date.pwototype.towocawestwing()")}}. ( ͡o ω ͡o )
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une chaîne de caractères qui représente le grand entier selon la ou les locales et les options indiquées.
+u-une chaîne d-de cawactèwes qui wepwésente we gwand entiew sewon wa ou wes w-wocawes et wes options i-indiquées. òωó
 
-## Exemples
+## exempwes
 
-### Utiliser `toLocaleString()`
+### u-utiwisew `towocawestwing()`
 
-Voici un exemple d'utilisation simple, sans indiquer de locale ni d'options.
+v-voici un exempwe d'utiwisation s-simpwe, (⑅˘꒳˘) sans indiquew de wocawe n-nyi d'options.
 
 ```js
-var bigint = 3500n;
+vaw bigint = 3500n;
 
-bigint.toLocaleString();
-// Affichera "3500" en français
+bigint.towocawestwing();
+// a-affichewa "3500" en fwançais
 ```
 
-### Utiliser `locales`
+### utiwisew `wocawes`
 
-Cet exemple illustre certaines variations pour la représentation d'une même valeur en fonction des différentes locales. En fonction de la langue utilisée par l'utilisateur et par votre interface, vous pourrez utiliser `locales` pour indiquer la locale ciblée :
+c-cet exempwe iwwustwe cewtaines v-vawiations pouw w-wa wepwésentation d'une même vaweuw en fonction des difféwentes wocawes. XD en fonction de wa wangue utiwisée p-paw w'utiwisateuw e-et paw votwe intewface, -.- vous p-pouwwez utiwisew `wocawes` p-pouw i-indiquew wa wocawe cibwée :
 
 ```js
-var bigint = 123456789123456789n;
+vaw bigint = 123456789123456789n;
 
-// En allemand, on utilise les points pour séparer
-// les milliers
-console.log(bigint.toLocaleString("de-DE"));
+// en awwemand, :3 o-on utiwise wes points pouw sépawew
+// wes miwwiews
+consowe.wog(bigint.towocawestwing("de-de"));
 // → 123.456.789.123.456.789
 
-// La plupart des pays arabes utilise
-// des chiffres hindoux-arabes
-console.log(bigint.toLocaleString("ar-EG"));
+// wa pwupawt d-des pays awabes utiwise
+// d-des chiffwes hindoux-awabes
+c-consowe.wog(bigint.towocawestwing("aw-eg"));
 // → ١٢٣٬٤٥٦٬٧٨٩٬١٢٣٬٤٥٦٬٧٨٩
 
-// India utilise des séparateurs pour
-// les milliers/lakh/crore
-console.log(bigint.toLocaleString("en-IN"));
+// i-india utiwise des sépawateuws p-pouw
+// wes miwwiews/wakh/cwowe
+c-consowe.wog(bigint.towocawestwing("en-in"));
 // → 1,23,45,67,89,12,34,56,789
 
-// La clé d'extension requiert un système de numérotation
-// par exemple, le système décimal chinois
-console.log(bigint.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
+// w-wa cwé d'extension w-wequiewt un système de nyuméwotation
+// p-paw exempwe, nyaa~~ w-we système décimaw c-chinois
+consowe.wog(bigint.towocawestwing("zh-hans-cn-u-nu-hanidec"));
 // → 一二三,四五六,七八九,一二三,四五六,七八九
 
-// Lorsqu'on demande une langue qui peut ne pas être prise
-// en charge (ici le balinais), on peut ajouter une autre
-// locale qui sera utilisée en recours (ici l'indonésien)
-console.log(bigint.toLocaleString(["ban", "id"]));
+// w-wowsqu'on demande u-une wangue qui peut nye pas êtwe pwise
+// en chawge (ici w-we bawinais), 😳 on peut ajoutew une autwe
+// wocawe qui sewa utiwisée en wecouws (ici w'indonésien)
+c-consowe.wog(bigint.towocawestwing(["ban", "id"]));
 // → 123.456.789.123.456.789
 ```
 
-### Utiliser `options`
+### utiwisew `options`
 
-Ici, on personnalise le résultat fourni par `toLocaleString()` grâce à l'argument `options` :
+ici, (⑅˘꒳˘) on pewsonnawise we wésuwtat fouwni paw `towocawestwing()` g-gwâce à w'awgument `options` :
 
 ```js
-var bigint = 123456789123456789n;
+v-vaw bigint = 123456789123456789n;
 
-// On utilise un format avec une devise
-console.log(
-  bigint.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+// o-on utiwise un fowmat avec une devise
+c-consowe.wog(
+  bigint.towocawestwing("de-de", nyaa~~ { s-stywe: "cuwwency", OwO c-cuwwency: "euw" }), rawr x3
 );
 // → 123.456.789.123.456.789,00 €
 
-// Le yen japonais n'utilise pas de sous-unité
-console.log(
-  bigint.toLocaleString("ja-JP", { style: "currency", currency: "JPY" }),
+// we yen japonais ny'utiwise pas de sous-unité
+consowe.wog(
+  bigint.towocawestwing("ja-jp", XD { s-stywe: "cuwwency", σωσ cuwwency: "jpy" }), (U ᵕ U❁)
 );
 // → ￥123,456,789,123,456,789
 
-// On limite l'écriture aux trois premiers chiffres significatifs
-console.log(bigint.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
+// o-on wimite w'écwituwe aux t-twois pwemiews c-chiffwes significatifs
+consowe.wog(bigint.towocawestwing("en-in", (U ﹏ U) { maximumsignificantdigits: 3 }));
 // → 1,23,00,00,00,00,00,00,000
 ```
 
-## Performance
+## p-pewfowmance
 
-Lorsqu'on souhaite mettre en forme une grande quantité de nombres, mieux vaudra créer un objet {{jsxref("NumberFormat")}} et utiliser la fonction fournie par sa propriété {{jsxref("NumberFormat.format")}}.
+wowsqu'on s-souhaite mettwe en fowme u-une gwande quantité d-de nyombwes, mieux vaudwa cwéew un objet {{jsxwef("numbewfowmat")}} et utiwisew wa fonction f-fouwnie paw sa p-pwopwiété {{jsxwef("numbewfowmat.fowmat")}}. :3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("BigInt.toString()")}}
+- {{jsxwef("bigint.tostwing()")}}

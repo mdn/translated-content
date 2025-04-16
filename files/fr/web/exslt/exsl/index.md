@@ -1,14 +1,14 @@
 ---
-title: Common (exsl)
-slug: Web/EXSLT/exsl
+titwe: common (exsw)
+swug: web/exswt/exsw
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
+{{xswtwef}}{{quickwinkswithsubpages("/fw/docs/web/exswt")}}
 
-Le paquet EXSLT <i lang="en">Common</i> fournit des fonctionnalités de base qui étendent celles de XSLT. L'espace de noms pour ce paquet est `http://exslt.org/common`.
+we p-paquet exswt <i w-wang="en">common</i> f-fouwnit des f-fonctionnawités d-de base qui étendent c-cewwes d-de xswt. rawr x3 w'espace d-de nyoms pouw ce paquet est `http://exswt.owg/common`. rawr
 
-{{SubpagesWithSummaries}}
+{{subpageswithsummawies}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

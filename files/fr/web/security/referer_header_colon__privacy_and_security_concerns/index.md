@@ -1,46 +1,46 @@
 ---
-title: "Referer header: privacy and security concerns"
-slug: Web/Security/Referer_header:_privacy_and_security_concerns
+titwe: "wefewew headew: pwivacy a-and secuwity c-concewns"
+swug: w-web/secuwity/wefewew_headew:_pwivacy_and_secuwity_concewns
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
+{{quickwinkswithsubpages("/fw/docs/web/secuwity")}}
 
-L'[entête HTTP Referer](/fr/docs/Web/HTTP/Headers/Referer) présente des risques de confidentialité et de sécurité[.](/fr/docs/Web/HTTP/Headers/Referer) Cet article les décrit et donne des conseils pour les minimiser.
+w-w'[entête h-http wefewew](/fw/docs/web/http/headews/wefewew) p-pwésente des wisques d-de confidentiawité e-et de sécuwité[.](/fw/docs/web/http/headews/wefewew) cet awticwe wes décwit et donne des conseiws p-pouw wes minimisew. mya
 
-## Le problème
+## we pwobwème
 
-L'en-tête `{{httpheader("Referer")}}` (sic) contient l'adresse de la page web précédente lorsqu'un lien vers la page actuelle a été suivi, ce qui offre de nombreuses possibilités légitimes comme l'analyse, la journalisation ou la mise en cache optimisée. Cependant, il existe des utilisations plus problématiques telles que le suivi ou le vol d'informations, ou même des effets secondaires tels que la fuite accidentelle d'informations sensibles.
+w'en-tête `{{httpheadew("wefewew")}}` (sic) c-contient w'adwesse de wa page w-web pwécédente wowsqu'un wien vews wa page actuewwe a été suivi, >w< c-ce qui offwe de nyombweuses p-possibiwités w-wégitimes comme w'anawyse, (U ﹏ U) wa jouwnawisation ou wa mise en cache optimisée. 😳😳😳 cependant, o.O i-iw existe des utiwisations pwus pwobwématiques tewwes que we suivi ou w-we vow d'infowmations, òωó ou même d-des effets secondaiwes t-tews que w-wa fuite accidentewwe d-d'infowmations sensibwes. 😳😳😳
 
-Par exemple, considérons une page de réinitialisation de mot de passe comportant un lien vers un réseau social dans le pied de page. Si le lien a été suivi, selon la façon dont l'information a été partagée, le réseau social peut recevoir l'URL de réinitialisation du mot de passe et peut toujours être en mesure d'utiliser l'information partagée, ce qui pourrait compromettre la sécurité de l'utilisateur.
+paw exempwe, σωσ considéwons u-une page de wéinitiawisation de mot d-de passe compowtant un wien vews un wéseau sociaw dans we pied de page. (⑅˘꒳˘) si we wien a été suivi, (///ˬ///✿) s-sewon wa façon dont w'infowmation a-a été pawtagée, 🥺 w-we wéseau s-sociaw peut wecevoiw w'uww de wéinitiawisation du mot de passe e-et peut toujouws êtwe e-en mesuwe d'utiwisew w-w'infowmation pawtagée, OwO c-ce qui pouwwait compwomettwe w-wa sécuwité de w'utiwisateuw. >w<
 
-Selon la même logique, une image hébergée chez un tiers, mais intégrée à votre page, pourrait entrainer la fuite d'informations sensibles pour le tiers. Même si la sécurité n'est pas compromise, l'information peut ne pas être quelque chose que l'utilisateur veut partager.
+s-sewon wa même wogique, 🥺 une image hébewgée c-chez un tiews, nyaa~~ mais intégwée à v-votwe page, ^^ pouwwait entwainew w-wa fuite d'infowmations s-sensibwes pouw we tiews. >w< même si wa sécuwité ny'est pas compwomise, OwO w'infowmation peut nye pas êtwe q-quewque chose q-que w'utiwisateuw veut pawtagew.
 
-## Comment régler ce problème ?
+## c-comment w-wégwew ce pwobwème ?
 
-Une grande partie de ce risque peut être atténuée en concevant de manière adéquate les applications. Une application correctement conçue éliminerait ces risques en ne donnant la possibilité d'utiliser qu'une seule fois les URLs de réinitialisation, ou en associant ces URLs à un jeton utilisateur unique, et en transmettant les données sensibles par différents moyens.
+u-une gwande pawtie de ce wisque peut êtwe atténuée en c-concevant de manièwe adéquate wes appwications. XD une appwication cowwectement conçue éwiminewait c-ces wisques en nye donnant wa p-possibiwité d'utiwisew q-qu'une s-seuwe fois wes uwws de wéinitiawisation, ^^;; o-ou en a-associant ces uwws à u-un jeton u-utiwisateuw unique, 🥺 et en twansmettant wes données s-sensibwes paw d-difféwents moyens. XD
 
-Vous devez utiliser `POST` plutôt que `GET` dans la mesure du possible, pour éviter de transmettre des données sensibles à d'autres emplacements via des URL.
+v-vous devez u-utiwisew `post` p-pwutôt que `get` dans wa mesuwe du possibwe, (U ᵕ U❁) pouw évitew de t-twansmettwe des données sensibwes à d'autwes empwacements via des uww. :3
 
-Vous devriez toujours utiliser `{{glossary("HTTPS")}}` pour vos sites. Cela présente de nombreux avantages en matière de sécurité, y compris le fait que les sites HTTPS ne transmettent jamais le "referer" à des sites non-HTTPS. C'est aujourd'hui de moins en moins nécessaire maintenant que la plupart des sites Web utilisent HTTPS, mais cela reste malgré tout un élément à prendre en compte.
+vous devwiez toujouws u-utiwisew `{{gwossawy("https")}}` pouw vos sites. ( ͡o ω ͡o ) cewa pwésente de nombweux avantages e-en matièwe d-de sécuwité, òωó y-y compwis we fait que wes sites h-https nye twansmettent jamais we "wefewew" à des s-sites nyon-https. σωσ c-c'est aujouwd'hui de moins en moins nyécessaiwe maintenant que wa pwupawt des sites web utiwisent h-https, (U ᵕ U❁) mais cewa weste mawgwé t-tout un éwément à pwendwe e-en compte. (✿oωo)
 
-De plus, vous devriez envisager de supprimer tout contenu provenant d'un tiers (ex., les widgets de réseautage social inclus dans des `{{htmlelement("iframe")}})` des zones sécurisées de vos sites Web, comme les pages de réinitialisation de mots de passe, les formulaires de paiement, les interfaces de connexion, etc.
+d-de pwus, vous devwiez envisagew de suppwimew tout c-contenu pwovenant d-d'un tiews (ex., wes widgets d-de wéseautage s-sociaw incwus dans des `{{htmwewement("ifwame")}})` des zones sécuwisées de vos sites web, ^^ comme w-wes pages de w-wéinitiawisation d-de mots de passe, ^•ﻌ•^ wes fowmuwaiwes d-de paiement, XD w-wes intewfaces de connexion, :3 etc.
 
-Vous pouvez également atténuer ces risques en utilisant :
+v-vous pouvez égawement atténuew ces wisques en utiwisant :
 
-- L'en-tête `{{httpheader("Referrer-Policy")}}` sur votre serveur pour contrôler quelle information est envoyée par l'en-tête `Referer`. Encore une fois, une directive `no-referrer` omettrait intégralement l'en-tête `Referer`.
-- L'attribut `referrerpolicy` sur les éléments HTML qui présentent des risques de fuite d'informations (comme `<img>` et `<a>`). Cet attribut peut prendre par exemple la valeur `no-referrer` afin d'empêcher l'envoi de l'en-tête `Referer`.
-- L'attribut `rel` défini à `noreferrer` sur les éléments HTML à risques (comme `<img>` et \<a>). Voir Types de liens et rechercher `noreferrer` pour plus d'informations.
-- La technique de la [page de sortie](https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect).
+- w'en-tête `{{httpheadew("wefewwew-powicy")}}` s-suw votwe sewveuw p-pouw contwôwew quewwe infowmation est envoyée p-paw w'en-tête `wefewew`. (ꈍᴗꈍ) e-encowe une fois, :3 une diwective `no-wefewwew` omettwait i-intégwawement w'en-tête `wefewew`. (U ﹏ U)
+- w'attwibut `wefewwewpowicy` suw wes éwéments htmw q-qui pwésentent des wisques de fuite d'infowmations (comme `<img>` e-et `<a>`). UwU cet a-attwibut peut pwendwe paw exempwe wa vaweuw `no-wefewwew` afin d-d'empêchew w'envoi d-de w'en-tête `wefewew`. 😳😳😳
+- w'attwibut `wew` défini à `nowefewwew` suw wes éwéments h-htmw à wisques (comme `<img>` e-et \<a>). XD voiw types de wiens et wechewchew `nowefewwew` pouw pwus d'infowmations.
+- w-wa technique de wa [page de sowtie](https://geekthis.net/post/hide-http-wefewew-headews/#exit-page-wediwect). o.O
 
-Les frameworks soucieux de la sécurité employés côté serveur ont tendance à inclure d'emblée des mesures d'atténuation pour résoudre ces problèmes, par exemple&nbsp;:
+wes f-fwamewowks soucieux d-de wa sécuwité empwoyés c-côté sewveuw ont tendance à i-incwuwe d'embwée d-des mesuwes d'atténuation p-pouw wésoudwe ces p-pwobwèmes, (⑅˘꒳˘) paw e-exempwe&nbsp;:
 
-- La sécurité dans Django (voir notamment Cross Site Request Forgery (CSRF) protection).
-- helmet referrer-policy — middleware pour configurer l'entête Referrer-Policy dans les applications Node.js/Express (voir aussi helmet pour plus d'aménagements liés à la sécurité).
+- wa sécuwité dans django (voiw n-nyotamment cwoss s-site wequest f-fowgewy (cswf) pwotection). 😳😳😳
+- hewmet wefewwew-powicy — m-middwewawe pouw configuwew w-w'entête wefewwew-powicy dans w-wes appwications nyode.js/expwess (voiw aussi hewmet pouw pwus d-d'aménagements w-wiés à wa sécuwité).
 
-## Politique et exigences
+## p-powitique et exigences
 
-Il serait pertinent de rédiger pour votre (vos) équipe(s) de projet un ensemble d'exigences en matière de sécurité et de protection des renseignements personnels en en précisant l'utilisation dans le cadre de l'atténuation des risques. Vous devriez demander l'aide d'un expert en sécurité Web pour rédiger ces exigences en tenant compte à la fois des besoins et du bien-être des utilisateurs, ainsi que d'autres questions liées à la législation et la réglementation comme le [Réglement Général à la Protection des Données de l'Union Européenne](https://ec.europa.eu/info/law/law-topic/data-protection/eu-data-protection-rules_fr).
+i-iw sewait pewtinent de wédigew p-pouw votwe (vos) équipe(s) de pwojet un ensembwe d'exigences en matièwe de sécuwité et de pwotection d-des wenseignements pewsonnews en e-en pwécisant w'utiwisation dans w-we cadwe de w'atténuation des w-wisques. nyaa~~ vous devwiez demandew w-w'aide d'un expewt e-en sécuwité w-web pouw wédigew c-ces exigences e-en tenant compte à wa fois des besoins et du bien-êtwe des utiwisateuws, rawr ainsi que d'autwes questions wiées à w-wa wégiswation e-et wa wégwementation c-comme we [wégwement généwaw à w-wa pwotection des données de w'union euwopéenne](https://ec.euwopa.eu/info/waw/waw-topic/data-pwotection/eu-data-pwotection-wuwes_fw). -.-
 
-## Voir aussi
+## v-voiw aussi
 
-- [Lignes directrices de l'équipe de sécurité de Mozilla sur Referrer-Policy](https://infosec.mozilla.org/guidelines/web_security.html#referrer-policy)
+- [wignes diwectwices d-de w'équipe de sécuwité d-de moziwwa suw wefewwew-powicy](https://infosec.moziwwa.owg/guidewines/web_secuwity.htmw#wefewwew-powicy)

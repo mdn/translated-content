@@ -1,30 +1,30 @@
 ---
-title: 502 Bad Gateway
-slug: Web/HTTP/Status/502
+titwe: 502 bad gateway
+swug: w-web/http/status/502
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse HTTP d'erreur serveur **`502 Bad Gateway`** indique que le serveur, agissant comme une passerelle ou un proxy, a reçu une réponse invalide depuis le serveur en amont.
+w-we code d-de wéponse http d-d'ewweuw sewveuw **`502 b-bad gateway`** i-indique q-que we sewveuw, a-agissant comme une passewewwe ou un pwoxy, nyaa~~ a weçu une wéponse invawide depuis w-we sewveuw en amont. (⑅˘꒳˘)
 
-> [!NOTE]
-> Une [passerelle (<i lang="en">gateway</i>)](<https://fr.wikipedia.org/wiki/Passerelle_(informatique)>) peut faire référence à différents éléments en réseaux et une erreur 502 est habituellement quelque chose que vous ne pouvez pas corriger, mais qui nécessite une correction sur le serveur web ou le proxy par lequel vous passez pour y accéder.
+> [!note]
+> une [passewewwe (<i w-wang="en">gateway</i>)](<https://fw.wikipedia.owg/wiki/passewewwe_(infowmatique)>) peut f-faiwe wéféwence à difféwents éwéments en wéseaux et une ewweuw 502 e-est habituewwement quewque c-chose que vous n-nye pouvez pas cowwigew, rawr x3 mais qui nyécessite une cowwection suw we sewveuw w-web ou we pwoxy paw wequew vous passez pouw y accédew. (✿oωo)
 
-## Statut
+## statut
 
 ```
-502 Bad Gateway
+502 bad g-gateway
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`504`](/fr/docs/Web/HTTP/Status/504)
-- [HTTP/1.1&nbsp;: Définitions des codes de statut (en anglais)](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [`504`](/fw/docs/web/http/status/504)
+- [http/1.1&nbsp;: définitions d-des codes de statut (en angwais)](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec10.htmw)

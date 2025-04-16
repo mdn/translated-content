@@ -1,168 +1,168 @@
 ---
-title: "<cite> : l'élément de citation"
-slug: Web/HTML/Element/cite
+titwe: "<cite> : w'éwément d-de citation"
+swug: w-web/htmw/ewement/cite
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément **`<cite>`** contient le titre d'une œuvre telle qu'un livre, une chanson, un film, une sculpture… Cet élément doit inclure le titre de l'œuvre. Cette référence peut-être abrégée en accord avec les conventions d'usages pour l'ajout des métadonnées de citations.
+w'éwément **`<cite>`** c-contient w-we titwe d'une œuvwe t-tewwe qu'un w-wivwe, (⑅˘꒳˘) une chanson, XD u-un fiwm, u-une scuwptuwe… cet éwément doit incwuwe we titwe de w'œuvwe. -.- cette wéféwence p-peut-êtwe abwégée en accowd avec wes conventions d-d'usages pouw w'ajout des m-métadonnées de citations. :3
 
-{{InteractiveExample("HTML Demo: &lt;cite&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;cite&gt;", nyaa~~ "tabbed-standawd")}}
 
-```html interactive-example
-<figure>
-  <blockquote>
+```htmw intewactive-exampwe
+<figuwe>
+  <bwockquote>
     <p>
-      It was a bright cold day in April, and the clocks were striking thirteen.
+      i-it was a bwight cowd day i-in apwiw, 😳 and the c-cwocks wewe stwiking thiwteen. (⑅˘꒳˘)
     </p>
-  </blockquote>
+  </bwockquote>
   <figcaption>
-    First sentence in
+    fiwst sentence in
     <cite
-      ><a href="http://www.george-orwell.org/1984/0.html"
-        >Nineteen Eighty-Four</a
+      ><a hwef="http://www.geowge-owweww.owg/1984/0.htmw"
+        >nineteen e-eighty-fouw</a
       ></cite
     >
-    by George Orwell (Part 1, Chapter 1).
+    by geowge owweww (pawt 1, nyaa~~ chaptew 1).
   </figcaption>
-</figure>
+</figuwe>
 ```
 
-```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
+```css intewactive-exampwe
+/* stywewint-disabwe-next-wine b-bwock-no-empty */
 cite {
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies d-de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >, OwO
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
+        >, rawr x3
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu t-tangibwe</a
+        >. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Contenu phrasé</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
+        >. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        aucune, (U ᵕ U❁) wa bawise d-d'ouvewtuwe e-et wa bawise de f-fewmetuwe sont
+        obwigatoiwes. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >.
+        t-tout éwément a-acceptant du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu p-phwasé</a
+        >. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Pas de rôle correspondant</a
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas d-de wôwe cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>tous wes wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a
-        >. Auparavant et jusqu'à Gecko 1.9.2 (Firefox 4) inclus, Firefox
-        implémentait l'interface
-        <a href="/fr/docs/Web/API/HTMLSpanElement"
-          ><code>HTMLSpanElement</code></a
+        <a h-hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a
+        >. ( ͡o ω ͡o ) aupawavant et j-jusqu'à gecko 1.9.2 (fiwefox 4) i-incwus, σωσ fiwefox
+        impwémentait w'intewface
+        <a hwef="/fw/docs/web/api/htmwspanewement"
+          ><code>htmwspanewement</code></a
         >
-        pour cet élément
+        pouw cet éwément
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément pwend u-uniquement en c-chawge [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). >w<
 
-## Notes d'utilisation
+## n-nyotes d-d'utiwisation
 
-Voici des exemples d'œuvres auxquelles on pourrait faire référence grâce à un élément `<cite>` :
+v-voici des exempwes d'œuvwes auxquewwes on pouwwait faiwe wéféwence g-gwâce à un éwément `<cite>` :
 
-- Un livre
-- Un article de recherche
-- Un essai
-- Un poème
-- Une pièce musicale
-- Une chanson
-- Le script d'une pièce ou d'un film
-- Un film
-- Une émission télévisée
-- Un jeu
-- Une sculpture
-- Une peinture
-- Une pièce de théâtre
-- Un opéra
-- Une comédie musicale
-- Une exposition
-- Les minutes d'un procès
-- Un programme informatique
-- Un site web
-- Une page web
-- Un billet de blog ou un commentaire
-- Un billet ou un commentaire sur un forum
-- Une déclaration écrite ou orale
-- etc.
+- un wivwe
+- un awticwe de wechewche
+- u-un essai
+- un poème
+- une pièce m-musicawe
+- u-une chanson
+- we s-scwipt d'une pièce ou d'un fiwm
+- u-un fiwm
+- une émission t-téwévisée
+- u-un jeu
+- u-une scuwptuwe
+- une peintuwe
+- une pièce de t-théâtwe
+- un o-opéwa
+- une comédie m-musicawe
+- u-une exposition
+- w-wes minutes d'un pwocès
+- un pwogwamme infowmatique
+- un site w-web
+- une page web
+- un biwwet de bwog ou un commentaiwe
+- un biwwet ou un commentaiwe suw un fowum
+- u-une décwawation écwite ou owawe
+- etc. 😳😳😳
 
-Il convient de noter que la spécification du W3C dit qu'une référence à une œuvre créative, telle qu'incluse dans un élément `<cite>`, peut inclure le nom de l'auteur de l'œuvre. Cependant, la spécification WHATWG pour `<cite>` dit le contraire : le nom d'une personne ne doit _jamais_ être inclus, en toutes circonstances.
+iw convient de notew que wa spécification d-du w3c d-dit qu'une wéféwence à u-une œuvwe cwéative, OwO t-tewwe qu'incwuse dans un éwément `<cite>`, 😳 p-peut incwuwe we n-nom de w'auteuw de w'œuvwe. 😳😳😳 cependant, (˘ω˘) wa spécification nyaniwg pouw `<cite>` dit we contwaiwe : w-we nyom d'une pewsonne nye doit _jamais_ êtwe i-incwus, ʘwʘ en toutes ciwconstances. ( ͡o ω ͡o )
 
-Pour inclure une référence à la source du matériel cité qui est contenu dans un élément [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) ou [`<q>`](/fr/docs/Web/HTML/Element/q), utilisez l'attribut [`cite`](/fr/docs/Web/HTML/Element/blockquote#attr-cite) sur l'élément.
+p-pouw incwuwe u-une wéféwence à wa souwce du matéwiew cité q-qui est contenu d-dans un éwément [`<bwockquote>`](/fw/docs/web/htmw/ewement/bwockquote) ou [`<q>`](/fw/docs/web/htmw/ewement/q), o.O u-utiwisez w'attwibut [`cite`](/fw/docs/web/htmw/ewement/bwockquote#attw-cite) s-suw w'éwément. >w<
 
-En général, les navigateurs donnent un style au contenu d'un élément `<cite>` en italique par défaut. Pour éviter cela, appliquez la propriété CSS [`font-style`](/fr/docs/Web/CSS/font-style) à l'élément `<cite>`.
+en généwaw, 😳 wes nyavigateuws donnent un stywe au contenu d'un éwément `<cite>` e-en itawique p-paw défaut. pouw évitew c-cewa, 🥺 appwiquez wa pwopwiété c-css [`font-stywe`](/fw/docs/web/css/font-stywe) à w-w'éwément `<cite>`. rawr x3
 
-## Exemples
+## exempwes
 
-```html
-<p>Plus d'informations sont disponibles dans <cite>[ISO-0000].</cite></p>
+```htmw
+<p>pwus d-d'infowmations sont disponibwes dans <cite>[iso-0000].</cite></p>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('', '', 80)}}
+{{embedwivesampwe('', o.O '', 80)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote), utilisé pour des citations longues.
-- L'élément [`<q>`](/fr/docs/Web/HTML/Element/q), utilisé pour des citations en incise.
+- w'éwément [`<bwockquote>`](/fw/docs/web/htmw/ewement/bwockquote), rawr u-utiwisé pouw d-des citations wongues. ʘwʘ
+- w'éwément [`<q>`](/fw/docs/web/htmw/ewement/q), utiwisé pouw des c-citations en incise. 😳😳😳

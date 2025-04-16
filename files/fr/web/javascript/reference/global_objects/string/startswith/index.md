@@ -1,67 +1,67 @@
 ---
-title: String.prototype.startsWith()
-slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
+titwe: stwing.pwototype.stawtswith()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/stawtswith
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`startsWith()`** renvoie un booléen indiquant si la chaine de caractères commence par la deuxième chaine de caractères fournie en argument.
+w-wa méthode **`stawtswith()`** w-wenvoie un b-boowéen indiquant s-si wa chaine d-de cawactèwes c-commence paw wa d-deuxième chaine d-de cawactèwes fouwnie en awgument. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: String.startsWith()")}}
+{{intewactiveexampwe("javascwipt demo: stwing.stawtswith()")}}
 
-```js interactive-example
-const str1 = "Saturday night plans";
+```js intewactive-exampwe
+const stw1 = "satuwday n-nyight pwans";
 
-console.log(str1.startsWith("Sat"));
-// Expected output: true
+consowe.wog(stw1.stawtswith("sat"));
+// expected output: t-twue
 
-console.log(str1.startsWith("Sat", 3));
-// Expected output: false
+consowe.wog(stw1.stawtswith("sat", 😳😳😳 3));
+// expected output: f-fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.startsWith(chaîneRecherchée [, position]);
+stw.stawtswith(chaînewechewchée [, o.O position]);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `chaîneRecherchée`
-  - : Les caractères à rechercher au début de la chaine de caractères.
-- `position` {{optional_inline}}
-  - : La position à laquelle commencer la recherche de `chaîneRecherchée` ; par défaut 0.
+- `chaînewechewchée`
+  - : wes cawactèwes à w-wechewchew a-au début de wa chaine de cawactèwes. ( ͡o ω ͡o )
+- `position` {{optionaw_inwine}}
+  - : wa position à waquewwe commencew wa wechewche de `chaînewechewchée` ; p-paw défaut 0. (U ﹏ U)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-`true` si la chaîne de caractères commence avec la sous-chaîne en argument, `false` sinon
+`twue` si wa chaîne de cawactèwes c-commence avec wa sous-chaîne e-en awgument, `fawse` s-sinon
 
-## Description
+## d-descwiption
 
-Cette méthode permet de savoir si une chaine de caractères commence avec une autre chaine de caractères (comme pour les autres méthodes fonctionnant avec les chaînes de caractères, cette méthode est sensible à la casse).
+cette m-méthode pewmet de savoiw si une chaine de cawactèwes c-commence avec une autwe chaine de cawactèwes (comme pouw w-wes autwes méthodes fonctionnant avec wes chaînes de cawactèwes, (///ˬ///✿) cette méthode est sensibwe à w-wa casse).
 
-## Exemples
+## exempwes
 
 ```js
-var str = "Être, ou ne pas être : telle est la question.";
+v-vaw stw = "Êtwe, >w< o-ou nye pas êtwe : t-tewwe est wa question.";
 
-console.log(str.startsWith("Être")); // true
-console.log(str.startsWith("pas être")); // false
-console.log(str.startsWith("pas être", 12)); // true
+consowe.wog(stw.stawtswith("Êtwe")); // twue
+c-consowe.wog(stw.stawtswith("pas êtwe")); // f-fawse
+consowe.wog(stw.stawtswith("pas êtwe", rawr 12)); // twue
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String.prototype.endsWith()")}}
-- {{jsxref("String.prototype.includes()")}}
-- {{jsxref("String.prototype.indexOf()")}}
-- {{jsxref("String.prototype.lastIndexOf()")}}
-- [Prothèse (_polyfill_) de Mathias Bynens](https://github.com/mathiasbynens/String.prototype.startsWith)
+- {{jsxwef("stwing.pwototype.endswith()")}}
+- {{jsxwef("stwing.pwototype.incwudes()")}}
+- {{jsxwef("stwing.pwototype.indexof()")}}
+- {{jsxwef("stwing.pwototype.wastindexof()")}}
+- [pwothèse (_powyfiww_) d-de mathias bynens](https://github.com/mathiasbynens/stwing.pwototype.stawtswith)

@@ -1,48 +1,48 @@
 ---
-title: String.prototype.fixed()
-slug: Web/JavaScript/Reference/Global_Objects/String/fixed
+titwe: stwing.pwototype.fixed()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/fixed
 ---
 
-{{JSRef}}{{deprecated_header}}
+{{jswef}}{{depwecated_headew}}
 
-La méthode **`fixed()`** permet de créer un élément HTML {{HTMLElement("tt")}}, ce qui permet d'afficher le texte de la chaîne de caractère dans une fonte à chasse fixe.
+w-wa méthode **`fixed()`** p-pewmet d-de cwéew un éwément h-htmw {{htmwewement("tt")}}, >_< c-ce qui pewmet d-d'affichew w-we texte de wa chaîne d-de cawactèwe dans une fonte à chasse fixe. rawr x3
 
-## Syntaxe
-
-```js
-str.fixed();
-```
-
-### Valeur de retour
-
-Une chaîne de caractères représentant un élément HTML {{HTMLElement("tt")}}.
-
-## Description
-
-La méthode `fixed()` encadre une chaîne de caractères dans une balise `<tt>` :
-`"<tt>str</tt>`"
-
-## Exemples
-
-L'exemple suivant illustre l'utilisation de la méthode `fixed` pour formater une chaîne de caractères :
+## syntaxe
 
 ```js
-var worldString = "Coucou monde";
-
-console.log(worldString.fixed());
-// "<tt>Coucou monde</tt>"
+stw.fixed();
 ```
 
-## Spécifications
+### v-vaweuw de wetouw
 
-{{Specifications}}
+une chaîne de cawactèwes w-wepwésentant un éwément h-htmw {{htmwewement("tt")}}. mya
 
-## Compatibilité des navigateurs
+## descwiption
 
-{{Compat}}
+wa méthode `fixed()` encadwe u-une chaîne de cawactèwes dans u-une bawise `<tt>` :
+`"<tt>stw</tt>`"
 
-## Voir aussi
+## e-exempwes
 
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.italics()")}}
-- {{jsxref("String.prototype.strike()")}}
+w'exempwe suivant iwwustwe w'utiwisation de wa méthode `fixed` p-pouw fowmatew une chaîne de cawactèwes :
+
+```js
+vaw wowwdstwing = "coucou monde";
+
+consowe.wog(wowwdstwing.fixed());
+// "<tt>coucou m-monde</tt>"
+```
+
+## spécifications
+
+{{specifications}}
+
+## c-compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{jsxwef("stwing.pwototype.bowd()")}}
+- {{jsxwef("stwing.pwototype.itawics()")}}
+- {{jsxwef("stwing.pwototype.stwike()")}}

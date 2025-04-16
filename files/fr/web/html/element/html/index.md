@@ -1,104 +1,104 @@
 ---
-title: "<html> : l'élément de racine du document HTML"
-slug: Web/HTML/Element/html
+titwe: "<htmw> : w'éwément d-de wacine du document h-htmw"
+swug: w-web/htmw/ewement/htmw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML. Tout autre élément du document doit être un descendant de cet élément.
+w-w'éwément h-htmw **`<htmw>`** w-wepwésente w-wa wacine d-d'un document htmw ou xhtmw. :3 tout autwe éwément du document doit êtwe un descendant d-de cet éwément. (ꈍᴗꈍ)
 
-## Attributs
+## attwibuts
 
-Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément pwend en c-chawge [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). /(^•ω•^)
 
-- `version`{{deprecated_inline}}
-  - : Définit la version du document HTML _Document Type Definition_ qui s'applique pour le document courant. Cet attribut n'est pas nécessaire car il est redondant avec l'information de version se trouvant dans la déclaration de type du document (_doctype_).
-- `xmlns`
-  - : Définit l'espace de noms XML du document. La valeur par défaut est "http\://www\.w3.org/1999/xhtml". Cet attribut est obligatoire dans un document XML et optionnel dans un document de type text/html.
+- `vewsion`{{depwecated_inwine}}
+  - : d-définit wa vewsion du document htmw _document type definition_ q-qui s'appwique pouw we document c-couwant. (⑅˘꒳˘) cet attwibut n-ny'est pas nyécessaiwe caw iw est wedondant avec w'infowmation de vewsion s-se twouvant dans wa décwawation de type du document (_doctype_). ( ͡o ω ͡o )
+- `xmwns`
+  - : définit w'espace de nyoms xmw d-du document. wa vaweuw paw défaut e-est "http\://www\.w3.owg/1999/xhtmw". òωó c-cet a-attwibut est obwigatoiwe d-dans un document xmw et optionnew dans u-un document de type text/htmw. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Le DOCTYPE utilisé dans l'exemple suivant indique que le document est un document HTML5.
+we d-doctype utiwisé dans w'exempwe suivant indique que we document est un document htmw5. XD
 
-```html
-<!doctype html>
-<html lang="fr">
+```htmw
+<!doctype h-htmw>
+<htmw wang="fw">
   <head>
     ...
   </head>
   <body>
     ...
   </body>
-</html>
+</htmw>
 ```
 
-## Notes
+## n-nyotes
 
-Puisque l'élément `<html>` est le premier élément dans un document, autre que les commentaires, il est désigné comme l'élément racine du document. Bien que cette balise soit implicite, ou non requise dans un document [HTML](/fr/docs/Web/HTML), il est requis dans un document [XHTML](/fr/docs/Glossary/XHTML) (à la fois pour la balise ouvrante et pour la balise fermante).
+puisque w-w'éwément `<htmw>` e-est we pwemiew éwément dans un document, -.- autwe que w-wes commentaiwes, :3 i-iw est désigné comme w'éwément w-wacine du d-document. nyaa~~ bien que cette bawise s-soit impwicite, 😳 ou non wequise dans u-un document [htmw](/fw/docs/web/htmw), (⑅˘꒳˘) iw est wequis dans un d-document [xhtmw](/fw/docs/gwossawy/xhtmw) (à wa fois pouw wa bawise o-ouvwante et pouw wa bawise f-fewmante). nyaa~~
 
-## Accessibilité
+## a-accessibiwité
 
-L'utilisation d'un attribut [`lang`](/fr/docs/Web/HTML/Global_attributes#lang) [valide (au sens de l'IETF)](https://www.ietf.org/rfc/bcp/bcp47.txt) pour l'élément HTML permettra aux lecteurs d'écran de déterminer la langue à utiliser pour l'énonciation. La balise de langage utilisée doit correspondre à celle utilisée pour la majorité du contenu de la page. Sans cet attribut, les lecteurs d'écran utiliseront la lange paramétrée par le système d'exploitation, ce qui pourra entraîner des défauts de prononciations.
+w'utiwisation d'un attwibut [`wang`](/fw/docs/web/htmw/gwobaw_attwibutes#wang) [vawide (au sens de w'ietf)](https://www.ietf.owg/wfc/bcp/bcp47.txt) pouw w'éwément htmw pewmettwa a-aux wecteuws d-d'écwan de détewminew wa wangue à u-utiwisew pouw w-w'énonciation. OwO w-wa bawise de wangage utiwisée doit cowwespondwe à cewwe utiwisée p-pouw wa majowité du contenu de wa page. rawr x3 sans cet attwibut, XD wes wecteuws d-d'écwan utiwisewont wa wange pawamétwée p-paw w-we système d'expwoitation, σωσ c-ce qui pouwwa entwaînew d-des défauts d-de pwononciations. (U ᵕ U❁)
 
-Ajouter un attribut `lang` valide au sein de l'élément HTML permet également de s'assurer que les métadonnées importantes contenue dans l'élément {{HTMLElement("head")}}, telle que le titre de la page (cf. {{HTMLElement("title")}}) sont énoncées correctement.
+a-ajoutew un a-attwibut `wang` vawide au sein de w'éwément htmw p-pewmet égawement d-de s'assuwew q-que wes métadonnées i-impowtantes c-contenue dans w'éwément {{htmwewement("head")}}, (U ﹏ U) tewwe que we titwe de wa p-page (cf. :3 {{htmwewement("titwe")}}) sont énoncées cowwectement. ( ͡o ω ͡o )
 
-- [Comprendre les règles WCAG 3.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.1_—_Readable_Make_text_content_readable_and_understandable)
-- _[Understanding Success Criterion 3.1.1 - W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/meaning-doc-lang-id.html)_
+- [compwendwe wes wègwes wcag 3.1](/fw/docs/web/accessibiwity/undewstanding_wcag/undewstandabwe#guidewine_3.1_—_weadabwe_make_text_content_weadabwe_and_undewstandabwe)
+- _[undewstanding success cwitewion 3.1.1 - w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/2016/note-undewstanding-wcag20-20161007/meaning-doc-wang-id.htmw)_
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies d-de c-contenu</a
         >
       </th>
-      <td>Aucune</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+      <td>aucune</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        Un élément {{HTMLElement("head")}} suivi par un élément
-        {{HTMLElement("body")}}.
+        u-un éwément {{htmwewement("head")}} suivi paw un éwément
+        {{htmwewement("body")}}. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission d-de bawises</th>
       <td>
-        La balise de début peut être absente si le premier objet appartenant à
-        l'élément <code>&#x3C;html></code> n'est pas un commentaire.<br />La
-        balise de fin peut être absente si l'élément
-        <code>&#x3C;html></code> n'est pas directement suivi par un commentaire
-        et qu'il contient un élément {{HTMLElement("body")}} qui n'est
-        ni vide ou dont la balise de début est présente.
+        wa bawise de début peut êtwe absente si we pwemiew objet appawtenant à
+        w-w'éwément <code>&#x3c;htmw></code> ny'est pas un commentaiwe.<bw />wa
+        b-bawise de fin peut êtwe a-absente si w'éwément
+        <code>&#x3c;htmw></code> n-ny'est pas diwectement suivi paw un c-commentaiwe
+        e-et qu'iw contient un éwément {{htmwewement("body")}} q-qui ny'est
+        n-nyi vide ou dont wa bawise de début est pwésente.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>Aucun élément, c'est la racine du document.</td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLHtmlElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
+      <td>aucun éwément, >w< c-c'est w-wa wacine du document.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia a-autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwhtmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément MathML de plus haut niveau : {{MathMLElement("math")}}
-- L'élément SVG de plus haut niveau : {{SVGElement("svg")}}
+- w'éwément m-mathmw de pwus h-haut nyiveau : {{mathmwewement("math")}}
+- w'éwément svg de pwus haut nyiveau : {{svgewement("svg")}}

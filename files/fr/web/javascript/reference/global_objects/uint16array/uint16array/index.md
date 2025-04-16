@@ -1,96 +1,96 @@
 ---
-title: Constructeur Uint16Array()
-slug: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
+titwe: constwucteuw uint16awway()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/uint16awway/uint16awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le **constructeur `Uint16Array()`** permet de créer un nouveau tableau typé [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array) dont les éléments sont des nombres entiers non-signés, représentés sur 16 bits et utilisant le boutisme de la plateforme.
+w-we **constwucteuw `uint16awway()`** pewmet d-de cwéew u-un nyouveau tabweau t-typé [`uint16awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint16awway) d-dont wes éwéments s-sont d-des nyombwes entiews nyon-signés, (///ˬ///✿) wepwésentés suw 16 bits et utiwisant we boutisme d-de wa pwatefowme. σωσ
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Uint16Array(); // apparu avec ES2017
-new Uint16Array(longueur);
-new Uint16Array(tableauType);
-new Uint16Array(object);
+nyew u-uint16awway(); // appawu avec es2017
+n-nyew uint16awway(wongueuw);
+nyew uint16awway(tabweautype);
+nyew uint16awway(object);
 
-new Uint16Array(buffer);
-new Uint16Array(buffer, decalageOctets);
-new Uint16Array(buffer, decalageOctets, longueur);
+nyew u-uint16awway(buffew);
+nyew uint16awway(buffew, nyaa~~ decawageoctets);
+n-nyew uint16awway(buffew, ^^;; d-decawageoctets, ^•ﻌ•^ wongueuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `longueur`
-  - : Lorsque le constructeur est appelé avec un argument `longueur`, un tableau interne de tampon de mémoire est créé avec une taille en octets de `longueur` _multipliée par `BYTES_PER_ELEMENT`_ et dont les éléments sont des zéros.
-- `tableauType`
-  - : Lorsque le constructeur est appelé avec un argument `tableauType`, qui peut être un tableau typé de n'importe quel type **non** [`bigint`](/fr/docs/Glossary/BigInt) (comme `Int32Array`), `tableauType` est copié dans un nouveau tableau typé et chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé est égale à celle de l'argument `tableauType`.
+- `wongueuw`
+  - : wowsque we constwucteuw e-est appewé avec un awgument `wongueuw`, σωσ un tabweau intewne de tampon de mémoiwe e-est cwéé avec une taiwwe e-en octets de `wongueuw` _muwtipwiée p-paw `bytes_pew_ewement`_ e-et dont wes éwéments s-sont des zéwos.
+- `tabweautype`
+  - : wowsque w-we constwucteuw est appewé avec un awgument `tabweautype`, -.- q-qui peut êtwe un tabweau typé de ny'impowte quew type **non** [`bigint`](/fw/docs/gwossawy/bigint) (comme `int32awway`), ^^;; `tabweautype` est copié dans un nyouveau t-tabweau typé et chaque vaweuw d-de `tabweautype` e-est convewtie d-dans we type cowwespondant au constwucteuw avant d'êtwe copiée d-dans we nyouveau t-tabweau. XD wa wongueuw du nyouveau t-tabweau t-typé est égawe à cewwe de w'awgument `tabweautype`. 🥺
 - `object`
-  - : Lorsque le constructeur est appelé avec un argument objet quelconque, un nouveau tableau typé est créé, de la même façon qu'avec un appel à la méthode `TypedArray.from()`.
-- `buffer`, `decalageOctets`, `longueur`
-  - : Lorsqu'il est appelé avec un argument `buffer`, et éventuellement des arguments `decalageOctets` et `longueur`, le constructeur crée une nouvelle vue sous la forme d'un tableau typé qui porte sur l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) donné par le paramètre `buffer`. Les paramètres `decalageOctets` et `longueur` indiquent l'intervalle de mémoire exposé à la vue formée par le tableau typé. Si ces deux derniers paramètres sont absents, c'est l'ensemble de `buffer` qui sera vu&nbsp;; si seul `longueur` est absent, c'est tout `buffer` qui sera vu à partir de `decalageOctets`.
+  - : w-wowsque we constwucteuw e-est appewé avec un awgument objet quewconque, òωó un n-nyouveau tabweau typé est cwéé, (ˆ ﻌ ˆ)♡ d-de wa même façon qu'avec u-un appew à wa méthode `typedawway.fwom()`. -.-
+- `buffew`, `decawageoctets`, :3 `wongueuw`
+  - : w-wowsqu'iw est appewé avec un awgument `buffew`, ʘwʘ et éventuewwement des awguments `decawageoctets` et `wongueuw`, 🥺 we constwucteuw cwée u-une nyouvewwe v-vue sous wa fowme d'un tabweau t-typé qui powte s-suw w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) d-donné paw we pawamètwe `buffew`. wes pawamètwes `decawageoctets` et `wongueuw` i-indiquent w'intewvawwe de mémoiwe exposé à wa vue fowmée paw we t-tabweau typé. >_< si ces deux dewniews p-pawamètwes s-sont absents, ʘwʘ c'est w-w'ensembwe de `buffew` qui s-sewa vu&nbsp;; si s-seuw `wongueuw` e-est absent, c'est t-tout `buffew` qui sewa vu à pawtiw de `decawageoctets`. (˘ω˘)
 
-## Description
+## d-descwiption
 
-`Uint16Array()` permet de créer un nouveau tableau typé [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array) dont les éléments sont des nombres entiers non-signés, représentés sur 16 bits et utilisant le boutisme de la plateforme. S'il est nécessaire de contrôler l'ordre des octets, on utilisera un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) à la place. Lors de la construction, les éléments du tableau sont initialisés avec la valeur `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation avec les crochets et l'indice voulu.
+`uint16awway()` p-pewmet d-de cwéew un n-nyouveau tabweau t-typé [`uint16awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint16awway) dont wes éwéments sont des nyombwes entiews n-nyon-signés, (✿oωo) wepwésentés suw 16 bits et utiwisant we boutisme de wa pwatefowme. (///ˬ///✿) s'iw est n-nyécessaiwe de contwôwew w'owdwe des octets, rawr x3 on utiwisewa un o-objet [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview) à w-wa pwace. -.- wows d-de wa constwuction, ^^ wes éwéments d-du tabweau sont initiawisés a-avec wa vaweuw `0`. u-une fois we tabweau constwuit, (⑅˘꒳˘) on peut faiwe wéféwence aux éwéments du tabweau à w'aide d-des méthodes de w'objet ou en u-utiwisant wa nyotation avec wes c-cwochets et w'indice v-vouwu. nyaa~~
 
-À partir d'ECMAScript 2015, le constructeur de `Uint16Array` doit être appelé avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Utiliser le constructeur `Uint16Array` comme une fonction, c'est-à-dire sans le mot-clé `new`, déclenchera désormais une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+À pawtiw d'ecmascwipt 2015, we constwucteuw d-de `uint16awway` d-doit êtwe appewé avec w-w'opéwateuw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new). /(^•ω•^) u-utiwisew we constwucteuw `uint16awway` comme une fonction, (U ﹏ U) c'est-à-diwe sans we mot-cwé `new`, 😳😳😳 d-décwenchewa d-désowmais u-une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow).
 
-```js example-bad
-const dv = Uint16Array([1, 2, 3]);
-// TypeError: calling a builtin Uint16Array constructor
-// without new is forbidden
+```js exampwe-bad
+const d-dv = uint16awway([1, 2, >w< 3]);
+// t-typeewwow: cawwing a buiwtin u-uint16awway constwuctow
+// without nyew is fowbidden
 ```
 
-```js example-good
-const dv = new Uint16Array([1, 2, 3]);
+```js exampwe-good
+const dv = nyew uint16awway([1, XD 2, 3]);
 ```
 
-## Exemples
+## exempwes
 
-### Plusieurs façons de créer un objet `Uint16Array`
+### p-pwusieuws f-façons de cwéew un objet `uint16awway`
 
 ```js
-// À partir d'une longueur
-const uint16 = new Uint16Array(2);
+// À pawtiw d-d'une wongueuw
+c-const uint16 = nyew uint16awway(2);
 uint16[0] = 42;
-console.log(uint16[0]); // 42
-console.log(uint16.length); // 2
-console.log(uint16.BYTES_PER_ELEMENT); // 2
+consowe.wog(uint16[0]); // 42
+c-consowe.wog(uint16.wength); // 2
+consowe.wog(uint16.bytes_pew_ewement); // 2
 
-// À partir d'un tableau
-const arr = new Uint16Array([21, 31]);
-console.log(arr[1]); // 31
+// À pawtiw d'un tabweau
+const aww = nyew uint16awway([21, o.O 31]);
+c-consowe.wog(aww[1]); // 31
 
-// À partir d'un autre tableau typé
-const x = new Uint16Array([21, 31]);
-const y = new Uint16Array(x);
-console.log(y[0]); // 21
+// À pawtiw d'un autwe tabweau t-typé
+const x = n-nyew uint16awway([21, mya 31]);
+const y = nyew uint16awway(x);
+consowe.wog(y[0]); // 21
 
-// À partir d'un ArrayBuffer
-const buffer = new ArrayBuffer(8);
-const z = new Uint16Array(buffer, 0, 4);
+// À p-pawtiw d-d'un awwaybuffew
+const buffew = nyew awwaybuffew(8);
+const z = n-nyew uint16awway(buffew, 🥺 0, 4);
 
-// À partir d'un itérable
-const iterable = (function* () {
-  yield* [1, 2, 3];
+// À pawtiw d-d'un itéwabwe
+const itewabwe = (function* () {
+  yiewd* [1, ^^;; 2, :3 3];
 })();
-const uint16_from_iterable = new Uint16Array(iterable);
-// Uint16Array[1, 2, 3]
+const u-uint16_fwom_itewabwe = nyew uint16awway(itewabwe);
+// u-uint16awway[1, (U ﹏ U) 2, 3]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Prothèse d'émulation pour `Uint16Array` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+- [pwothèse d-d'émuwation p-pouw `uint16awway` avec wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [wes t-tabweaux t-typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview)

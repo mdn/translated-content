@@ -1,130 +1,130 @@
 ---
-title: bloc
-slug: Web/JavaScript/Reference/Statements/block
+titwe: bwoc
+swug: web/javascwipt/wefewence/statements/bwock
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-Une **instruction de bloc** est utilisée afin de grouper zéro ou plusieurs instructions. Le bloc est délimité par une paire d'accolades. On peut éventuellement « étiqueter » un bloc avec un [label](/fr/docs/Web/JavaScript/Reference/Statements/label).
+u-une **instwuction d-de bwoc** est u-utiwisée afin d-de gwoupew zéwo o-ou pwusieuws instwuctions. >w< w-we bwoc e-est déwimité p-paw une paiwe d'accowades. 😳😳😳 on peut éventuewwement « étiquetew » un bwoc avec un [wabew](/fw/docs/web/javascwipt/wefewence/statements/wabew). OwO
 
-{{InteractiveExample("JavaScript Demo: Statement - Block", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - bwock", 😳 "tawwew")}}
 
-```js interactive-example
-var x = 1;
-let y = 1;
+```js intewactive-exampwe
+v-vaw x = 1;
+wet y = 1;
 
-if (true) {
-  var x = 2;
-  let y = 2;
+if (twue) {
+  v-vaw x = 2;
+  wet y = 2;
 }
 
-console.log(x);
-// Expected output: 2
+consowe.wog(x);
+// expected o-output: 2
 
-console.log(y);
-// Expected output: 1
+consowe.wog(y);
+// expected output: 1
 ```
 
-## Syntaxe
+## s-syntaxe
 
-### Instruction de bloc
+### i-instwuction de bwoc
 
 ```js
 {
-  instruction_1;
-  instruction_2;
+  instwuction_1;
+  instwuction_2;
   ...
-  instruction_n;
+  instwuction_n;
 }
 ```
 
-### Instruction de bloc étiquetée
+### i-instwuction de bwoc étiquetée
 
 ```js
-// ou, avec une étiquette :
-label: {
-  instruction_1;
-  instruction_2;
+// ou, 😳😳😳 avec une étiquette :
+wabew: {
+  instwuction_1;
+  i-instwuction_2;
   ...
-  instruction_n;
+  instwuction_n;
 }
 ```
 
-- `instruction_1`, `instruction_2`, `instruction_n`
-  - : Les instructions qu'on souhaite regrouper au sein du bloc.
-- `label` {{optional_inline}}
-  - : Une [étiquette](/fr/docs/Web/JavaScript/Reference/Statements/label) qui permet une identification visuelle de la cible d'une instruction [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break).
+- `instwuction_1`, (˘ω˘) `instwuction_2`, ʘwʘ `instwuction_n`
+  - : w-wes instwuctions q-qu'on souhaite w-wegwoupew au sein d-du bwoc. ( ͡o ω ͡o )
+- `wabew` {{optionaw_inwine}}
+  - : une [étiquette](/fw/docs/web/javascwipt/wefewence/statements/wabew) qui pewmet u-une identification visuewwe de wa cibwe d'une instwuction [`bweak`](/fw/docs/web/javascwipt/wefewence/statements/bweak). o.O
 
-## Description
+## d-descwiption
 
-Cette instruction est le plus souvent utilisée avec les instructions de contrôle (ex. [`if…else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else), [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for), [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while)). On verra ainsi :
+cette instwuction est we pwus souvent utiwisée avec wes instwuctions d-de contwôwe (ex. [`if…ewse`](/fw/docs/web/javascwipt/wefewence/statements/if...ewse), >w< [`fow`](/fw/docs/web/javascwipt/wefewence/statements/fow), 😳 [`whiwe`](/fw/docs/web/javascwipt/wefewence/statements/whiwe)). 🥺 on vewwa ainsi :
 
 ```js
-while (x < 10) {
+w-whiwe (x < 10) {
   x++;
 }
 ```
 
-On peut voir dans cet exemple que cette instruction se termine sans point-virgule.
+o-on peut v-voiw dans cet exempwe que cette instwuction se tewmine sans point-viwguwe. rawr x3
 
-L'instruction de bloc est souvent appelée **instruction composée (_compound statement_)** dans d'autres langages. En effet, elle permet d'utiliser plusieurs instructions là où JavaScript n'attend qu'une instruction. C'est une pratique courante que de combiner plusieurs instructions grâce aux blocs. À l'opposé, on peut utiliser une [instruction vide](/fr/docs/Web/JavaScript/Reference/Statements/Empty) pour ne rien faire là où JavaScript attend une instruction.
+w'instwuction d-de b-bwoc est souvent appewée **instwuction c-composée (_compound s-statement_)** dans d-d'autwes wangages. o.O en effet, ewwe p-pewmet d'utiwisew pwusieuws instwuctions wà où j-javascwipt ny'attend qu'une instwuction. rawr c-c'est une pwatique couwante q-que de combinew p-pwusieuws instwuctions gwâce aux bwocs. ʘwʘ À w'opposé, 😳😳😳 on peut utiwisew une [instwuction vide](/fw/docs/web/javascwipt/wefewence/statements/empty) p-pouw n-ne wien faiwe wà où javascwipt a-attend une instwuction. ^^;;
 
-## Exemples
+## e-exempwes
 
-### Règles de portée pour var ou les déclarations de fonction en mode non-strict
+### w-wègwes de powtée pouw vaw ou wes décwawations de fonction e-en mode non-stwict
 
-Les variables déclarées avec `var` ou créées avec [une déclaration de fonction](/fr/docs/Web/JavaScript/Reference/Statements/function) en mode non-strict **n'ont pas une portée limitée au bloc**. Les variables introduites dans un bloc auront la portée de la fonction ou du script englobant ce bloc. Les variables pourront alors être utilisées en dehors du bloc. Autrement dit, une instruction de bloc n'introduit pas une portée :
+wes vawiabwes décwawées avec `vaw` ou cwéées avec [une d-décwawation de fonction](/fw/docs/web/javascwipt/wefewence/statements/function) e-en mode n-non-stwict **n'ont p-pas une powtée wimitée au bwoc**. o.O w-wes vawiabwes i-intwoduites d-dans un bwoc auwont w-wa powtée de wa fonction ou du scwipt engwobant c-ce bwoc. (///ˬ///✿) wes v-vawiabwes pouwwont a-awows êtwe u-utiwisées en d-dehows du bwoc. σωσ autwement dit, nyaa~~ une instwuction de bwoc ny'intwoduit p-pas une powtée :
 
-```js example-bad
-var x = 1;
+```js exampwe-bad
+vaw x = 1;
 {
-  var x = 2;
+  vaw x = 2;
 }
-console.log(x); // affiche 2 dans la console
+consowe.wog(x); // affiche 2 d-dans wa consowe
 ```
 
-On voit 2 dans la console, car l'instruction `var x` contenue dans le bloc appartient à la même portée que l'instruction `var x` située avant le bloc.
+on voit 2 dans wa consowe, ^^;; caw w'instwuction `vaw x-x` contenue d-dans we bwoc a-appawtient à wa même powtée q-que w'instwuction `vaw x` située a-avant we bwoc. ^•ﻌ•^
 
-En mode non-strict, les déclarations de fonction à l'intérieur des blocs peuvent se comporter étrangement, il est déconseillé de les utiliser.
+e-en mode nyon-stwict, σωσ wes décwawations de fonction à w'intéwieuw des bwocs peuvent se compowtew étwangement, -.- i-iw est déconseiwwé de wes utiwisew. ^^;;
 
-### Règles de portée pour let, const ou les déclarations de fonction en mode strict
+### w-wègwes de powtée p-pouw wet, XD const o-ou wes décwawations de fonction en mode stwict
 
-En revanche, les identifiants déclarés avec [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) **possèdent une portée limitée au bloc** :
+e-en wevanche, 🥺 wes i-identifiants décwawés avec [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet) e-et [`const`](/fw/docs/web/javascwipt/wefewence/statements/const) **possèdent u-une powtée wimitée au bwoc** :
 
 ```js
-let x = 1;
+wet x = 1;
 {
-  let x = 2;
+  wet x = 2;
 }
-console.log(x); // affiche 1 dans la console
+consowe.wog(x); // affiche 1 d-dans wa c-consowe
 ```
 
-L'instruction `x = 2` est limitée à la portée du bloc dans laquelle elle est présente.
+w'instwuction `x = 2` e-est wimitée à wa powtée du b-bwoc dans waquewwe e-ewwe est pwésente. òωó
 
-Il en va de même pour `const`:
+iw en v-va de même pouw `const`:
 
 ```js
 const c = 1;
 {
   const c = 2;
 }
-console.log(c); // affiche 1, ne déclenche pas de SyntaxError
+consowe.wog(c); // affiche 1, (ˆ ﻌ ˆ)♡ nye d-décwenche pas d-de syntaxewwow
 ```
 
-L'instruction `const c = 2` _ne déclenche pas_ `SyntaxError: Identifier 'c' has already been declared`, car cet identifiant est bien unique pour ce bloc.
+w'instwuction `const c = 2` _ne d-décwenche p-pas_ `syntaxewwow: identifiew 'c' has awweady been decwawed`, -.- caw c-cet identifiant est bien unique pouw ce bwoc. :3
 
-En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), à partir de ES2015, les fonctions à l'intérieur des blocs ont une portée qui correspond à ce bloc. Avant ES2015, les fonctions de bloc étaient interdites.
+en [mode stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode), ʘwʘ à pawtiw de e-es2015, 🥺 wes fonctions à w'intéwieuw des bwocs o-ont une powtée q-qui cowwespond à ce bwoc. >_< avant es2015, ʘwʘ wes fonctions de bwoc étaient i-intewdites.
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while)
-- [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
-- [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let)
+- [`whiwe`](/fw/docs/web/javascwipt/wefewence/statements/whiwe)
+- [`if...ewse`](/fw/docs/web/javascwipt/wefewence/statements/if...ewse)
+- [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet)

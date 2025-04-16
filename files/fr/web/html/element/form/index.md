@@ -1,256 +1,256 @@
 ---
-title: "<form> : l'élément représentant un formulaire"
-slug: Web/HTML/Element/form
+titwe: "<fowm> : w'éwément w-wepwésentant un f-fowmuwaiwe"
+swug: w-web/htmw/ewement/fowm
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<form>`** représente un formulaire, c'est-à-dire une section d'un document qui contient des contrôles interactifs permettant à un utilisateur de fournir des informations.
+w'éwément h-htmw **`<fowm>`** w-wepwésente u-un fowmuwaiwe, (U ﹏ U) c-c'est-à-diwe u-une section d'un document qui contient des contwôwes intewactifs pewmettant à u-un utiwisateuw de fouwniw des infowmations. ^^;;
 
-{{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;fowm&gt;", 🥺 "tabbed-standawd")}}
 
-```html interactive-example
-<form action="" method="get" class="form-example">
-  <div class="form-example">
-    <label for="name">Enter your name: </label>
-    <input type="text" name="name" id="name" required />
+```htmw intewactive-exampwe
+<fowm a-action="" method="get" cwass="fowm-exampwe">
+  <div cwass="fowm-exampwe">
+    <wabew fow="name">entew y-youw nyame: </wabew>
+    <input type="text" nyame="name" i-id="name" w-wequiwed />
   </div>
-  <div class="form-example">
-    <label for="email">Enter your email: </label>
-    <input type="email" name="email" id="email" required />
+  <div cwass="fowm-exampwe">
+    <wabew fow="emaiw">entew youw emaiw: </wabew>
+    <input type="emaiw" n-nyame="emaiw" id="emaiw" wequiwed />
   </div>
-  <div class="form-example">
-    <input type="submit" value="Subscribe!" />
+  <div cwass="fowm-exampwe">
+    <input type="submit" vawue="subscwibe!" />
   </div>
-</form>
+</fowm>
 ```
 
-```css interactive-example
-form.form-example {
-  display: table;
+```css i-intewactive-exampwe
+fowm.fowm-exampwe {
+  d-dispway: tabwe;
 }
 
-div.form-example {
-  display: table-row;
+d-div.fowm-exampwe {
+  d-dispway: t-tabwe-wow;
 }
 
-label,
+wabew, òωó
 input {
-  display: table-cell;
-  margin-bottom: 10px;
+  dispway: tabwe-ceww;
+  m-mawgin-bottom: 10px;
 }
 
-label {
-  padding-right: 10px;
+wabew {
+  padding-wight: 10px;
 }
 ```
 
-Il est possible d'utiliser les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) pour mettre en forme un élément `<form>` selon que le contenu des éléments du formulaire est valide ou non.
+iw est possibwe d-d'utiwisew wes pseudo-cwasses css [`:vawid`](/fw/docs/web/css/:vawid) et [`:invawid`](/fw/docs/web/css/:invawid) pouw mettwe en fowme un éwément `<fowm>` s-sewon que we contenu des éwéments d-du fowmuwaiwe e-est vawide ou n-non. XD
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >, :3
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu t-tangibwe</a
+        >. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de f-fwux</a
         >
-        qui ne contient pas d'élément <code>&#x3C;form></code>.
+        qui nye contient pas d-d'éwément <code>&#x3c;fowm></code>. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires
+        aucune, /(^•ω•^) w-wa bawise d'ouvewtuwe e-et wa bawise de fewmetuwe sont
+        obwigatoiwes
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu de flux</a
-        >.
+        tout éwément qui accepte d-du
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe a-awia impwicite</th>
       <td>
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Form_Role"
-          ><code>form</code></a
+        <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/fowm_wowe"
+          ><code>fowm</code></a
         >
-        si le formulaire a un
-        <a href="https://www.w3.org/TR/accname-1.1/#dfn-accessible-name"
-          >nom accessible</a
-        >, sinon
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >pas de rôle correspondant</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>
-        <a href="https://w3c.github.io/aria/#search"><code>search</code></a
-        >, <a href="https://w3c.github.io/aria/#none"><code>none</code></a
-        >,
-        <a href="https://w3c.github.io/aria/#presentation"
-          ><code>presentation</code></a
+        si we fowmuwaiwe a un
+        <a hwef="https://www.w3.owg/tw/accname-1.1/#dfn-accessibwe-name"
+          >nom a-accessibwe</a
+        >, ʘwʘ sinon
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas de wôwe cowwespondant</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLFormElement"
-          ><code>HTMLFormElement</code></a
+        <a h-hwef="https://w3c.github.io/awia/#seawch"><code>seawch</code></a
+        >, rawr x3 <a hwef="https://w3c.github.io/awia/#none"><code>none</code></a
+        >, (˘ω˘)
+        <a hwef="https://w3c.github.io/awia/#pwesentation"
+          ><code>pwesentation</code></a
         >
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>
+        <a hwef="/fw/docs/web/api/htmwfowmewement"
+          ><code>htmwfowmewement</code></a
+        >
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément p-pwend en chawge [wes a-attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). o.O
 
-- `accept` {{deprecated_inline}}
+- `accept` {{depwecated_inwine}}
 
-  - : Cet attribut indique quels types de contenus sont acceptés par le serveur. Il peut y en avoir plusieurs, séparés par des virgules.
+  - : c-cet attwibut indique quews types de c-contenus sont acceptés p-paw we s-sewveuw. 😳 iw peut y-y en avoiw pwusieuws, o.O s-sépawés paw des viwguwes. ^^;;
 
-    > [!NOTE]
-    > Cet attribut a été retiré dans HTML5 et ne doit plus être utilisé. À la place, il faut utiliser l'attribut [`accept`](/fr/docs/Web/HTML/Element/input#attr-accept) de l'élément `<input type=file>`.
+    > [!note]
+    > cet attwibut a été wetiwé d-dans htmw5 et ne doit pwus êtwe utiwisé. À wa pwace, ( ͡o ω ͡o ) iw faut utiwisew w'attwibut [`accept`](/fw/docs/web/htmw/ewement/input#attw-accept) de w'éwément `<input t-type=fiwe>`. ^^;;
 
-- `accept-charset`
-  - : Encodages de caractères séparés par des espaces que le serveur accepte. Le navigateur les utilise dans l'ordre dans lequel ils sont listés. La valeur par défaut signifie [le même encodage que celui de la page](/fr/docs/Web/HTTP/Headers/Content-Encoding).
-    (Dans les versions précédentes de HTML, les codages de caractères pouvaient également être délimités par des virgules).
-- `autocapitalize` {{non-standard_inline}}
+- `accept-chawset`
+  - : encodages de cawactèwes sépawés paw des espaces q-que we sewveuw a-accepte. we nyavigateuw w-wes utiwise dans w'owdwe d-dans wequew iws sont wistés. ^^;; w-wa vaweuw paw défaut s-signifie [we même encodage que cewui de wa page](/fw/docs/web/http/headews/content-encoding). XD
+    (dans wes vewsions pwécédentes de htmw, 🥺 w-wes codages de cawactèwes pouvaient égawement êtwe d-déwimités paw des viwguwes). (///ˬ///✿)
+- `autocapitawize` {{non-standawd_inwine}}
 
-  - : Cet attribut est un attribut non-standard utilisé sur iOS par Safari Mobile qui contrôle la façon dont la valeur du texte est automatiquement transcrite en majuscules lors de la saisie par l'utilisateur. Si l'attribut `autocapitalize` est défini sur un des descendants du formulaire, il surchargera la valeur de `autocapitalize` utilisée pour le formulaire. Les valeurs non-dépréciées sont disponibles pour iOS 5 et supérieurs. La valeur par défaut est `sentences`. Les valeurs possibles sont:
+  - : c-cet attwibut e-est un attwibut nyon-standawd utiwisé suw i-ios paw safawi m-mobiwe qui contwôwe wa façon d-dont wa vaweuw du t-texte est automatiquement twanscwite en majuscuwes wows de wa saisie paw w'utiwisateuw. (U ᵕ U❁) s-si w'attwibut `autocapitawize` e-est défini s-suw un des descendants du fowmuwaiwe, ^^;; i-iw suwchawgewa w-wa vaweuw de `autocapitawize` u-utiwisée pouw we fowmuwaiwe. wes vaweuws nyon-dépwéciées sont disponibwes p-pouw ios 5 e-et supéwieuws. ^^;; wa vaweuw paw défaut est `sentences`. rawr w-wes vaweuws p-possibwes sont:
 
-    - `none` : La mise en majuscules est totalement désactivée
-    - `sentences` : Les premières lettres des phrases sont automatiquement passées en majuscules.
-    - `words` : La première lettre de chaque mot est automatiquement passée en majuscule.
-    - `characters` : Tous les caractères sont automatiquement passés en majuscules.
+    - `none` : wa mise en majuscuwes est totawement désactivée
+    - `sentences` : w-wes pwemièwes wettwes des phwases sont automatiquement passées en majuscuwes. (˘ω˘)
+    - `wowds` : w-wa pwemièwe wettwe de chaque mot est a-automatiquement p-passée en majuscuwe.
+    - `chawactews` : tous wes cawactèwes sont automatiquement p-passés en m-majuscuwes. 🥺
 
-- `autocomplete`
+- `autocompwete`
 
-  - : Cet attribut énuméré est utilisé pour définir le comportement du navigateur quant à l'autocomplétion des champs. Cet attribut peut être surchargé par chacun des éléments du formulaire. Il peut prendre deux valeurs :
+  - : cet attwibut énuméwé est utiwisé pouw définiw w-we compowtement du nyavigateuw q-quant à w'autocompwétion des champs. cet attwibut peut êtwe s-suwchawgé paw chacun des éwéments d-du fowmuwaiwe. i-iw peut pwendwe deux vaweuws :
 
-    - `off` : Le navigateur ne peut pas compléter automatiquement les entrées. (Les navigateurs ont tendance à ignorer ce point pour les formulaires de connexion suspects ; voir [L'attribut autocomplete et les champs de connexion](/fr/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).)
-    - `on` : Le navigateur peut compléter automatiquement les entrées.
+    - `off` : w-we nyavigateuw nye peut p-pas compwétew automatiquement wes e-entwées. nyaa~~ (wes n-nyavigateuws ont tendance à ignowew c-ce point p-pouw wes fowmuwaiwes de connexion suspects ; voiw [w'attwibut a-autocompwete e-et wes c-champs de connexion](/fw/docs/web/secuwity/pwacticaw_impwementation_guides/tuwning_off_fowm_autocompwetion#the_autocompwete_attwibute_and_wogin_fiewds).)
+    - `on` : we nyavigateuw peut compwétew a-automatiquement wes entwées. :3
 
 - `name`
-  - : Le nom du formulaire. Il doit être unique parmi tous les formulaires d'un document, et ne doit pas être une chaîne de caractères vide.
-- `rel`
-  - : Crée un hyperlien ou une annotation en fonction de la valeur, voir l'attribut [`rel`](/fr/docs/Web/HTML/Attributes/rel) pour plus de détails.
+  - : w-we nyom du f-fowmuwaiwe. /(^•ω•^) iw doit êtwe unique pawmi tous wes fowmuwaiwes d'un d-document, ^•ﻌ•^ et nye d-doit pas êtwe u-une chaîne de c-cawactèwes vide. UwU
+- `wew`
+  - : cwée un hypewwien o-ou une annotation en fonction de wa vaweuw, 😳😳😳 voiw w'attwibut [`wew`](/fw/docs/web/htmw/attwibutes/wew) pouw pwus de détaiws. OwO
 
-### Attributs pour l'envoi de formulaires
+### a-attwibuts pouw w'envoi de f-fowmuwaiwes
 
-Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire.
+wes attwibuts suivants c-contwôwent we compowtement p-pendant w'envoi du fowmuwaiwe. ^•ﻌ•^
 
 - `action`
-  - : L'URL qui traite l'envoi du formulaire. Cette valeur peut être remplacée par un attribut [`formaction`](/fr/docs/Web/HTML/Element/button#attr-formaction) sur un [`<button>`](/fr/docs/Web/HTML/Element/button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
+  - : w-w'uww qui twaite w-w'envoi du fowmuwaiwe. (ꈍᴗꈍ) c-cette vaweuw p-peut êtwe w-wempwacée paw un attwibut [`fowmaction`](/fw/docs/web/htmw/ewement/button#attw-fowmaction) suw un [`<button>`](/fw/docs/web/htmw/ewement/button), [`<input type="submit">`](/fw/docs/web/htmw/ewement/input/submit), (⑅˘꒳˘) ou [`<input type="image">`](/fw/docs/web/htmw/ewement/input/image). (⑅˘꒳˘)
 - `enctype`
 
-  - : Lorsque la valeur de l'attribut `method` est `post`, cet attribut définit le [type MIME](https://fr.wikipedia.org/wiki/Type_MIME) qui sera utilisé pour encoder les données envoyées au serveur. C'est un attribut énuméré qui peut prendre les valeurs suivantes :
+  - : w-wowsque w-wa vaweuw d-de w'attwibut `method` est `post`, (ˆ ﻌ ˆ)♡ c-cet attwibut définit we [type mime](https://fw.wikipedia.owg/wiki/type_mime) qui sewa utiwisé p-pouw encodew w-wes données envoyées au sewveuw. /(^•ω•^) c-c'est un attwibut énuméwé qui peut pwendwe wes vaweuws suivantes :
 
-    - `application/x-www-form-urlencoded` : la valeur par défaut si l'attribut n'est pas défini
-    - `multipart/form-data` : la valeur utilisée par un élément [`<input>`](/fr/docs/Web/HTML/Element/input) avec l'attribut `type="file"`.
-    - `text/plain`, correspondant au [type MIME](https://fr.wikipedia.org/wiki/Type_MIME) éponyme et utilisé à des fins de débogage.
+    - `appwication/x-www-fowm-uwwencoded` : w-wa vaweuw p-paw défaut si w'attwibut ny'est p-pas défini
+    - `muwtipawt/fowm-data` : w-wa vaweuw utiwisée paw un éwément [`<input>`](/fw/docs/web/htmw/ewement/input) avec w'attwibut `type="fiwe"`. òωó
+    - `text/pwain`, (⑅˘꒳˘) c-cowwespondant au [type m-mime](https://fw.wikipedia.owg/wiki/type_mime) éponyme et u-utiwisé à des f-fins de débogage. (U ᵕ U❁)
 
-    Cette valeur peut être remplacée par un attribut [`formenctype`](/fr/docs/Web/HTML/Element/button#attr-formenctype) sur un [`<button>`](/fr/docs/Web/HTML/Element/button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
+    c-cette vaweuw peut êtwe w-wempwacée paw u-un attwibut [`fowmenctype`](/fw/docs/web/htmw/ewement/button#attw-fowmenctype) suw un [`<button>`](/fw/docs/web/htmw/ewement/button), >w< [`<input t-type="submit">`](/fw/docs/web/htmw/ewement/input/submit), σωσ o-ou [`<input type="image">`](/fw/docs/web/htmw/ewement/input/image). -.-
 
 - `method`
 
-  - : Cet attribut définit la méthode [HTTP](/fr/docs/Web/HTTP) qui sera utilisée pour envoyer les données au serveur. C'est un attribut énuméré qui peut prendre les valeurs suivantes :
+  - : c-cet attwibut définit wa méthode [http](/fw/docs/web/http) qui s-sewa utiwisée pouw envoyew wes d-données au sewveuw. c-c'est un attwibut énuméwé qui peut pwendwe w-wes vaweuws suivantes :
 
-    - `post` : La méthode [POST](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ; données du formulaire envoyées comme [corps de la requête](/fr/docs/Web/API/Body).
-    - `get` : La méthode [GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3) ; données du formulaire annexées à l'URL `action` avec un séparateur `?`. Utilisez cette méthode lorsque le formulaire [n'a pas d'effets secondaires](/fr/docs/Glossary/Idempotent).
-    - `dialog` : Lorsque le formulaire se trouve à l'intérieur d'un [`<dialog>`](/fr/docs/Web/HTML/Element/dialog), ferme la boîte de dialogue à la soumission.
+    - `post` : wa méthode [post](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec9.htmw#sec9.5) ; d-données du fowmuwaiwe e-envoyées c-comme [cowps de wa wequête](/fw/docs/web/api/body). o.O
+    - `get` : wa méthode [get](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec9.htmw#sec9.3) ; données d-du fowmuwaiwe annexées à w'uww `action` avec un s-sépawateuw `?`. ^^ u-utiwisez cette méthode wowsque w-we fowmuwaiwe [n'a pas d'effets s-secondaiwes](/fw/docs/gwossawy/idempotent). >_<
+    - `diawog` : w-wowsque we fowmuwaiwe se twouve à w'intéwieuw d-d'un [`<diawog>`](/fw/docs/web/htmw/ewement/diawog), >w< fewme wa boîte de diawogue à w-wa soumission. >_<
 
-    Si cet attribut n'est pas défini, la valeur par défaut utilisée est `get`. Cette valeur peut-être remplacée par un attribut [`formmethod`](/fr/docs/Web/HTML/Element/button#attr-formmethod) sur un [`<button>`](/fr/docs/Web/HTML/Element/button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
+    s-si cet attwibut ny'est pas d-défini, >w< wa vaweuw paw défaut u-utiwisée est `get`. rawr c-cette vaweuw p-peut-êtwe wempwacée paw un attwibut [`fowmmethod`](/fw/docs/web/htmw/ewement/button#attw-fowmmethod) suw un [`<button>`](/fw/docs/web/htmw/ewement/button), [`<input type="submit">`](/fw/docs/web/htmw/ewement/input/submit), rawr x3 ou [`<input type="image">`](/fw/docs/web/htmw/ewement/input/image). ( ͡o ω ͡o )
 
-- `novalidate`
-  - : Cet attribut booléen indique si le formulaire doit être validé au moment de sa soumission. S'il n'est pas défini, le formulaire sera validé lors de sa soumission. Il peut être surchargé par l'attribut [`formnovalidate`](/fr/docs/Web/HTML/Element/button#attr-formnovalidate) des éléments [`<button>`](/fr/docs/Web/HTML/Element/button) ou [`<input>`](/fr/docs/Web/HTML/Element/input) appartenant au formulaire.
-- `target`
+- `novawidate`
+  - : cet attwibut boowéen indique si we fowmuwaiwe doit êtwe vawidé au moment de sa soumission. (˘ω˘) s'iw n-ny'est pas défini, 😳 w-we fowmuwaiwe sewa vawidé wows de sa soumission. OwO i-iw peut êtwe s-suwchawgé p-paw w'attwibut [`fowmnovawidate`](/fw/docs/web/htmw/ewement/button#attw-fowmnovawidate) des éwéments [`<button>`](/fw/docs/web/htmw/ewement/button) o-ou [`<input>`](/fw/docs/web/htmw/ewement/input) appawtenant a-au fowmuwaiwe. (˘ω˘)
+- `tawget`
 
-  - : Un nom ou un mot-clé indiquant où afficher la réponse après avoir envoyé le formulaire. Dans HTML 4, c'est le nom, ou le mot-clé, d'une frame. Dans HTML5, c'est le nom, ou le mot-clé, d'un _contexte de navigation_ (onglet, fenêtre, frame). Les mots-clés suivants ont un sens particulier :
+  - : u-un nyom ou un mot-cwé indiquant o-où affichew wa wéponse apwès a-avoiw envoyé w-we fowmuwaiwe. òωó dans htmw 4, ( ͡o ω ͡o ) c'est we nyom, UwU ou w-we mot-cwé, /(^•ω•^) d'une f-fwame. (ꈍᴗꈍ) dans h-htmw5, 😳 c'est we n-nyom, mya ou we mot-cwé, mya d-d'un _contexte d-de nyavigation_ (ongwet, /(^•ω•^) f-fenêtwe, ^^;; f-fwame). 🥺 w-wes mots-cwés suivants ont un sens p-pawticuwiew :
 
-    - `_self` (par défaut) : Charger dans le même contexte de navigation que le contexte actuel.
-    - `_blank`: Chargement dans un nouveau contexte de navigation sans nom.
-    - `_parent`: Charge dans le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, se comporte de la même manière que `_self`.
-    - `_top`: Charger dans le contexte de navigation de niveau supérieur (c'est-à-dire le contexte de navigation qui est un ancêtre du contexte actuel et qui n'a pas de parent). S'il n'y a pas de parent, se comporte de la même manière que `_self`.
+    - `_sewf` (paw d-défaut) : c-chawgew dans we même contexte d-de nyavigation que we contexte actuew. ^^
+    - `_bwank`: chawgement d-dans un nyouveau contexte de nyavigation s-sans n-nyom. ^•ﻌ•^
+    - `_pawent`: c-chawge dans we contexte de n-nyavigation pawent de cewui en c-couws. /(^•ω•^) s'iw ny'y a pas de pawent, ^^ s-se compowte de wa même manièwe q-que `_sewf`. 🥺
+    - `_top`: chawgew dans we contexte de nyavigation de nyiveau supéwieuw (c'est-à-diwe w-we contexte de nyavigation q-qui est un a-ancêtwe du contexte actuew et qui ny'a pas de pawent). (U ᵕ U❁) s'iw ny'y a-a pas de pawent, 😳😳😳 se compowte d-de wa même manièwe q-que `_sewf`. nyaa~~
 
-    Cette valeur peut être remplacée par un attribut [`formtarget`](/fr/docs/Web/HTML/Element/button#attr-formtarget) sur un [`<button>`](/fr/docs/Web/HTML/Element/button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
+    c-cette vaweuw peut êtwe wempwacée paw un a-attwibut [`fowmtawget`](/fw/docs/web/htmw/ewement/button#attw-fowmtawget) s-suw un [`<button>`](/fw/docs/web/htmw/ewement/button), (˘ω˘) [`<input t-type="submit">`](/fw/docs/web/htmw/ewement/input/submit), >_< ou [`<input type="image">`](/fw/docs/web/htmw/ewement/input/image). XD
 
-    > [!NOTE]
-    > La définition de `target="_blank"` sur les éléments `<form>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Attributes/rel/noopener) qui ne définit pas `window.opener`.
+    > [!note]
+    > wa d-définition de `tawget="_bwank"` suw wes éwéments `<fowm>` fouwnit i-impwicitement w-we même compowtement `wew` q-que wa définition de [`wew="noopenew"`](/fw/docs/web/htmw/attwibutes/wew/noopenew) q-qui nye définit p-pas `window.openew`. rawr x3
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<!-- Formulaire simple qui enverra une requête GET -->
-<form>
-  <label
-    >Nom :
-    <input name="submitted-name" autocomplete="name" />
-  </label>
-  <button>Sauvegarder</button>
-</form>
+```htmw
+<!-- f-fowmuwaiwe simpwe qui envewwa une w-wequête get -->
+<fowm>
+  <wabew
+    >nom :
+    <input n-nyame="submitted-name" a-autocompwete="name" />
+  </wabew>
+  <button>sauvegawdew</button>
+</fowm>
 
-<!-- Formulaire qui enverra une requête POST à l'URL actuelle -->
-<form method="post">
-  <label
-    >Nom :
-    <input name="submitted-name" autocomplete="name" />
-  </label>
-  <button>Sauvegarder</button>
-</form>
+<!-- fowmuwaiwe q-qui envewwa u-une wequête p-post à w'uww a-actuewwe -->
+<fowm m-method="post">
+  <wabew
+    >nom :
+    <input nyame="submitted-name" a-autocompwete="name" />
+  </wabew>
+  <button>sauvegawdew</button>
+</fowm>
 
-<!-- Formulaire avec un ensemble de champs, une légende et une étiquette -->
-<form method="post">
-  <fieldset>
-    <legend>Titre</legend>
-    <label><input type="radio" name="radio" />Sélectionnez-moi</label>
-  </fieldset>
-</form>
+<!-- fowmuwaiwe a-avec un ensembwe de champs, ( ͡o ω ͡o ) une w-wégende et une étiquette -->
+<fowm m-method="post">
+  <fiewdset>
+    <wegend>titwe</wegend>
+    <wabew><input t-type="wadio" nyame="wadio" />séwectionnez-moi</wabew>
+  </fiewdset>
+</fowm>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples", "100%", 130)}}
+{{embedwivesampwe("exempwes", :3 "100%", mya 130)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Guide des formulaires HTML](/fr/docs/Learn/Forms)
-- D'autres éléments qui sont utilisés lors de la création de formulaires : [`<button>`](/fr/docs/Web/HTML/Element/button), [`<datalist>`](/fr/docs/Web/HTML/Element/datalist), [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset), [`<input>`](/fr/docs/Web/HTML/Element/input), [`<label>`](/fr/docs/Web/HTML/Element/label), [`<legend>`](/fr/docs/Web/HTML/Element/legend), [`<meter>`](/fr/docs/Web/HTML/Element/meter), [`<optgroup>`](/fr/docs/Web/HTML/Element/optgroup), [`<option>`](/fr/docs/Web/HTML/Element/option), [`<output>`](/fr/docs/Web/HTML/Element/output), [`<progress>`](/fr/docs/Web/HTML/Element/progress), [`<select>`](/fr/docs/Web/HTML/Element/select), [`<textarea>`](/fr/docs/Web/HTML/Element/textarea).
-- Obtenir une liste des éléments du formulaire : [`HTMLFormElement.elements`](/fr/docs/Web/API/HTMLFormElement/elements)
-- [ARIA : rôle `form`](/fr/docs/Web/Accessibility/ARIA/Roles/Form_Role)
-- [ARIA : rôle `search`](/fr/docs/Web/Accessibility/ARIA/Roles/Search_role)
+- [guide des fowmuwaiwes htmw](/fw/docs/weawn/fowms)
+- d'autwes éwéments q-qui sont utiwisés w-wows de wa cwéation de fowmuwaiwes : [`<button>`](/fw/docs/web/htmw/ewement/button), σωσ [`<datawist>`](/fw/docs/web/htmw/ewement/datawist), (ꈍᴗꈍ) [`<fiewdset>`](/fw/docs/web/htmw/ewement/fiewdset), OwO [`<input>`](/fw/docs/web/htmw/ewement/input), o.O [`<wabew>`](/fw/docs/web/htmw/ewement/wabew), 😳😳😳 [`<wegend>`](/fw/docs/web/htmw/ewement/wegend), /(^•ω•^) [`<metew>`](/fw/docs/web/htmw/ewement/metew), OwO [`<optgwoup>`](/fw/docs/web/htmw/ewement/optgwoup), ^^ [`<option>`](/fw/docs/web/htmw/ewement/option), (///ˬ///✿) [`<output>`](/fw/docs/web/htmw/ewement/output), (///ˬ///✿) [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess), (///ˬ///✿) [`<sewect>`](/fw/docs/web/htmw/ewement/sewect), ʘwʘ [`<textawea>`](/fw/docs/web/htmw/ewement/textawea). ^•ﻌ•^
+- o-obteniw u-une wiste des éwéments du fowmuwaiwe : [`htmwfowmewement.ewements`](/fw/docs/web/api/htmwfowmewement/ewements)
+- [awia : wôwe `fowm`](/fw/docs/web/accessibiwity/awia/wowes/fowm_wowe)
+- [awia : wôwe `seawch`](/fw/docs/web/accessibiwity/awia/wowes/seawch_wowe)

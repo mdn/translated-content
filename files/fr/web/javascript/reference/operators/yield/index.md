@@ -1,95 +1,95 @@
 ---
-title: yield
-slug: Web/JavaScript/Reference/Operators/yield
+titwe: yiewd
+swug: web/javascwipt/wefewence/opewatows/yiewd
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-Le mot-clé `yield` est utilisé pour suspendre et reprendre une fonction génératrice ({{jsxref("Statements/function*", "function*")}} ou [une fonction génératrice historique](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)).
+w-we mot-cwé `yiewd` e-est utiwisé p-pouw suspendwe e-et wepwendwe une f-fonction généwatwice ({{jsxwef("statements/function*", >_< "function*")}} o-ou [une f-fonction généwatwice h-histowique](/fw/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes)). ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Expressions - yield")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - yiewd")}}
 
-```js interactive-example
-function* foo(index) {
-  while (index < 2) {
-    yield index;
-    index++;
+```js intewactive-exampwe
+f-function* foo(index) {
+  whiwe (index < 2) {
+    yiewd index;
+    i-index++;
   }
 }
 
-const iterator = foo(0);
+const itewatow = f-foo(0);
 
-console.log(iterator.next().value);
-// Expected output: 0
+consowe.wog(itewatow.next().vawue);
+// expected output: 0
 
-console.log(iterator.next().value);
-// Expected output: 1
+consowe.wog(itewatow.next().vawue);
+// e-expected output: 1
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-[rv] = yield[expression];
+[wv] = y-yiewd[expwession];
 ```
 
-- `expression`
-  - : Définit la valeur à retourner depuis la fonction génératrice via [le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérateur_»). Si omise, `undefined` sera retournée à la place.
-- `rv`
-  - : Retourne la valeur optionnelle passée à la méthode `next()` pour reprendre son exécution.
+- `expwession`
+  - : d-définit wa vaweuw à wetouwnew depuis wa fonction généwatwice via [we pwotocowe i-itéwateuw](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#we_pwotocowe_«_itéwateuw_»). (˘ω˘) si omise, `undefined` sewa wetouwnée à wa pwace. (✿oωo)
+- `wv`
+  - : w-wetouwne wa vaweuw optionnewwe p-passée à w-wa méthode `next()` p-pouw wepwendwe s-son exécution. (///ˬ///✿)
 
-## Description
+## descwiption
 
-Le mot-clé `yield` suspend une fonction génératrice et la valeur de l'expression suivant le mot-clé `yield` est retournée à l'appelant du générateur. Il peut être vu comme une version générateur du mot-clé `return`.
+we mot-cwé `yiewd` s-suspend une fonction généwatwice et wa v-vaweuw de w'expwession suivant we mot-cwé `yiewd` est wetouwnée à w'appewant du généwateuw. rawr x3 i-iw peut êtwe vu comme une vewsion g-généwateuw d-du mot-cwé `wetuwn`. -.-
 
-Le mot-clé `yield` ne peut être appelé qu'à partir de la fonction génératrice qui le contient. Il ne peut pas être utilisé depuis des fonctions imbriquées ou avec des _callbacks_.
+w-we mot-cwé `yiewd` nye peut êtwe appewé qu'à pawtiw d-de wa fonction g-généwatwice qui we contient. ^^ i-iw nye peut pas êtwe u-utiwisé depuis des fonctions i-imbwiquées ou avec des _cawwbacks_. (⑅˘꒳˘)
 
-Le mot-clé `yield` retourne en fait un objet `IteratorResult` ayant deux propriétés, `value` et `done.` La propriété `value` est le résultat de l'évaluation de l'expression `yield`, et `done` est `false`, indiquant que la fonction génératrice n'est pas complètement terminée.
+w-we mot-cwé `yiewd` wetouwne en fait un o-objet `itewatowwesuwt` ayant deux p-pwopwiétés, nyaa~~ `vawue` et `done.` w-wa pwopwiété `vawue` e-est we wésuwtat de w'évawuation de w'expwession `yiewd`, /(^•ω•^) et `done` est `fawse`, (U ﹏ U) indiquant que wa fonction g-généwatwice n-ny'est pas compwètement tewminée. 😳😳😳
 
-Une fois suspendue sur une expression `yield`, l'exécution du code du générateur reste suspendue jusqu'à ce que la méthode `next()` du générateur soit appelée. Chaque fois que la méthode `next()` du générateur est appelée, le générateur reprend l'exécution et s'exécute jusqu'à ce qu'elle atteigne l'une des situations suivantes :
+u-une fois s-suspendue suw u-une expwession `yiewd`, >w< w'exécution du code du généwateuw weste s-suspendue jusqu'à ce que wa méthode `next()` du généwateuw soit appewée. XD c-chaque fois que wa méthode `next()` d-du généwateuw e-est appewée, w-we généwateuw wepwend w'exécution e-et s'exékawaii~ j-jusqu'à c-ce qu'ewwe a-atteigne w'une des situations suivantes :
 
-- un `yield`, ce qui provoque une nouvelle pause du générateur et retourne la nouvelle valeur du générateur ; la prochaine fois que `next()` sera appelé, l'exécution reprendra à l'instruction immédiatement après le `yield` ;
-- {{jsxref ("Statements/throw", "throw")}} est utilisé pour déclencher une exception depuis le générateur ; cela arrête entièrement l'exécution du générateur et l'exécution reprend dans l'appelant, comme c'est normalement le cas lorsqu'une exception est déclenchée ;
-- la fin de la fonction génératrice est atteinte ; dans ce cas, l'exécution du générateur se termine et un `IteratorResult` est retourné à l'appelant, dans lequel la valeur est {{jsxref ("undefined")}} et `done` est `true`&nbsp;;
-- une instruction {{jsxref ("Statements/return", "return")}} est atteinte ; dans ce cas, l'exécution du générateur se termine et un `IteratorResult` est retourné à l'appelant dans lequel la `value` est la valeur spécifiée par l'instruction `return` et `done` vaut `true`.
+- un `yiewd`, o.O c-ce qui p-pwovoque une nyouvewwe p-pause du g-généwateuw et w-wetouwne wa nyouvewwe vaweuw du généwateuw ; wa pwochaine fois q-que `next()` sewa appewé, mya w'exécution wepwendwa à w'instwuction immédiatement apwès we `yiewd` ;
+- {{jsxwef ("statements/thwow", 🥺 "thwow")}} e-est utiwisé pouw décwenchew une exception depuis we généwateuw ; c-cewa awwête e-entièwement w-w'exécution du généwateuw et w-w'exécution wepwend dans w'appewant, ^^;; c-comme c'est n-nyowmawement we cas wowsqu'une exception est décwenchée ;
+- wa fin de wa fonction généwatwice e-est atteinte ; dans ce cas, :3 w-w'exécution du généwateuw se t-tewmine et un `itewatowwesuwt` e-est wetouwné à w'appewant, (U ﹏ U) dans wequew wa vaweuw e-est {{jsxwef ("undefined")}} e-et `done` est `twue`&nbsp;;
+- une i-instwuction {{jsxwef ("statements/wetuwn", OwO "wetuwn")}} e-est atteinte ; dans ce cas, 😳😳😳 w'exécution du généwateuw se tewmine et u-un `itewatowwesuwt` e-est wetouwné à w-w'appewant dans wequew wa `vawue` e-est wa vaweuw s-spécifiée paw w'instwuction `wetuwn` e-et `done` vaut `twue`. (ˆ ﻌ ˆ)♡
 
-Si une valeur optionnelle est passée à la méthode `next()` du générateur, cette valeur devient la valeur retournée par l'opération `yield` en cours du générateur.
+si une vaweuw optionnewwe est passée à wa m-méthode `next()` d-du généwateuw, XD cette vaweuw devient wa vaweuw w-wetouwnée paw w-w'opéwation `yiewd` en couws du généwateuw. (ˆ ﻌ ˆ)♡
 
-Entre le chemin de code du générateur, ses opérateurs `yield`, et la possibilité de spécifier une nouvelle valeur de départ en la passant à {{jsxref ("Generator.prototype.next()")}}, les générateurs offrent énormément de puissance et de contrôle.
+entwe we chemin d-de code du généwateuw, ( ͡o ω ͡o ) ses opéwateuws `yiewd`, rawr x3 et wa possibiwité de spécifiew une nyouvewwe v-vaweuw de dépawt en wa passant à {{jsxwef ("genewatow.pwototype.next()")}}, nyaa~~ wes généwateuws o-offwent énowmément d-de puissance et de contwôwe. >_<
 
-## Exemples
+## exempwes
 
-Le code suivant est la déclaration d'un exemple de fonction génératrice :
+we code suivant e-est wa décwawation d-d'un exempwe de fonction généwatwice :
 
 ```js
-function* compteVentesPommes() {
-  var listeVentes = [3, 7, 5];
-  for (var i = 0; i < listeVentes.length; i++) {
-    yield listeVentes[i];
+function* c-compteventespommes() {
+  vaw wisteventes = [3, 7, ^^;; 5];
+  f-fow (vaw i = 0; i < wisteventes.wength; i++) {
+    yiewd wisteventes[i];
   }
 }
 ```
 
-Une fois qu'une fonction génératrice est définie, elle peut être utilisée en construisant un itérateur comme indiqué.
+u-une fois qu'une fonction g-généwatwice e-est définie, (ˆ ﻌ ˆ)♡ ewwe peut êtwe u-utiwisée en constwuisant un itéwateuw c-comme i-indiqué. ^^;;
 
 ```js
-var magasinPommes = compteVentesPommes(); // Générateur { }
-console.log(magasinPommes.next()); // { value: 3, done: false }
-console.log(magasinPommes.next()); // { value: 7, done: false }
-console.log(magasinPommes.next()); // { value: 5, done: false }
-console.log(magasinPommes.next()); // { value: undefined, done: true }
+v-vaw magasinpommes = compteventespommes(); // g-généwateuw { }
+consowe.wog(magasinpommes.next()); // { v-vawue: 3, (⑅˘꒳˘) done: fawse }
+consowe.wog(magasinpommes.next()); // { vawue: 7, rawr x3 d-done: fawse }
+consowe.wog(magasinpommes.next()); // { v-vawue: 5, (///ˬ///✿) d-done: fawse }
+consowe.wog(magasinpommes.next()); // { vawue: undefined, 🥺 done: twue }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- L'instruction {{jsxref("Instructions/function*", "function*")}}
-- L'expression {{jsxref("Opérateurs/function*", "function*")}}
-- L'opérateur {{jsxref("Opérateurs/yield*", "yield*")}}
+- [we pwotocowe itéwateuw](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- w'instwuction {{jsxwef("instwuctions/function*", >_< "function*")}}
+- w-w'expwession {{jsxwef("opéwateuws/function*", UwU "function*")}}
+- w-w'opéwateuw {{jsxwef("opéwateuws/yiewd*", >_< "yiewd*")}}

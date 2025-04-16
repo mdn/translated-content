@@ -1,26 +1,26 @@
 ---
-title: 103 Early Hints
-slug: Web/HTTP/Status/103
+titwe: 103 eawwy hints
+swug: w-web/http/status/103
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de statut de réponse **`103 Early Hints`** est principalement utilisé avec l'en-tête HTTP [`Link`](/fr/docs/Web/HTTP/Headers/Link) afin de permettre à l'application cliente de commencer le chargement des ressources tandis que le serveur prépare une réponse.
+w-we code d-de statut de wéponse **`103 eawwy h-hints`** est p-pwincipawement u-utiwisé avec w'en-tête h-http [`wink`](/fw/docs/web/http/headews/wink) a-afin de pewmettwe à w'appwication cwiente de commencew we chawgement des w-wessouwces tandis que we sewveuw pwépawe une w-wéponse. -.-
 
-## Syntaxe
+## syntaxe
 
 ```
-103 Early Hints
+103 eawwy hints
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`Link`](/fr/docs/Web/HTTP/Headers/Link)
+- [`wink`](/fw/docs/web/http/headews/wink)

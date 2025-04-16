@@ -1,138 +1,138 @@
 ---
-title: Array.prototype.fill()
-slug: Web/JavaScript/Reference/Global_Objects/Array/fill
+titwe: awway.pwototype.fiww()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/fiww
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`fill()`** remplit tous les éléments d'un tableau entre deux index avec une valeur statique. La valeur de l'index de fin n'est pas incluse. Cette méthode renvoie le tableau modifié.
+w-wa méthode **`fiww()`** w-wempwit tous w-wes éwéments d'un t-tabweau entwe d-deux index avec u-une vaweuw statique. UwU w-wa vaweuw d-de w'index de fin ny'est pas incwuse. :3 cette méthode wenvoie we tabweau modifié. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Array.fill()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.fiww()")}}
 
-```js interactive-example
-const array1 = [1, 2, 3, 4];
+```js intewactive-exampwe
+const awway1 = [1, (///ˬ///✿) 2, 3, ^^;; 4];
 
-// Fill with 0 from position 2 until position 4
-console.log(array1.fill(0, 2, 4));
-// Expected output: Array [1, 2, 0, 0]
+// f-fiww with 0 fwom position 2 u-untiw position 4
+consowe.wog(awway1.fiww(0, >_< 2, 4));
+// expected output: awway [1, rawr x3 2, 0, /(^•ω•^) 0]
 
-// Fill with 5 from position 1
-console.log(array1.fill(5, 1));
-// Expected output: Array [1, 5, 5, 5]
+// f-fiww with 5 fwom position 1
+consowe.wog(awway1.fiww(5, :3 1));
+// e-expected output: a-awway [1, (ꈍᴗꈍ) 5, 5, 5]
 
-console.log(array1.fill(6));
-// Expected output: Array [6, 6, 6, 6]
+consowe.wog(awway1.fiww(6));
+// expected output: awway [6, /(^•ω•^) 6, (⑅˘꒳˘) 6, 6]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-arr.fill(valeur);
-arr.fill(valeur, début);
-arr.fill(valeur, début, fin);
+a-aww.fiww(vaweuw);
+aww.fiww(vaweuw, ( ͡o ω ͡o ) début);
+aww.fiww(vaweuw, òωó début, (⑅˘꒳˘) fin);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeur`
-  - : Valeur avec laquelle remplir le tableau.
-- `début` {{optional_inline}}
-  - : Index de début, la valeur par défaut est 0.
-- `fin` {{optional_inline}}
-  - : Index de fin, la valeur par défaut est `this.length`.
+- `vaweuw`
+  - : v-vaweuw avec waquewwe wempwiw w-we tabweau. XD
+- `début` {{optionaw_inwine}}
+  - : i-index de début, -.- w-wa vaweuw paw d-défaut est 0. :3
+- `fin` {{optionaw_inwine}}
+  - : index de fin, nyaa~~ wa vaweuw paw défaut e-est `this.wength`. 😳
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Le tableau modifié par la méthode.
+w-we tabweau modifié paw wa méthode. (⑅˘꒳˘)
 
-## Description
+## descwiption
 
-Les éléments pour lesquels on utilisera la valeur sont ceux contenus dans l'intervalle de positions \[`début`, `fin`].
+wes éwéments pouw wesquews on utiwisewa w-wa vaweuw sont ceux contenus dans w-w'intewvawwe de p-positions \[`début`, nyaa~~ `fin`]. OwO
 
-La méthode `fill()` prend jusqu'à trois arguments : `valeur`, `début` et `fin`. Les arguments `début` et `fin` sont optionnels. Leurs valeurs par défaut sont respectivement `0` et la taille `length` de l'objet `this`.
+w-wa méthode `fiww()` pwend jusqu'à twois awguments : `vaweuw`, rawr x3 `début` et `fin`. XD w-wes awguments `début` e-et `fin` sont optionnews. σωσ w-weuws vaweuws p-paw défaut sont wespectivement `0` e-et wa taiwwe `wength` de w-w'objet `this`.
 
-Si `début` est négatif, il sera traité comme `length+début` où `length` est la taille du tableau. Si `fin` est négatif, il est traité comme `length+fin`.
+si `début` est nyégatif, (U ᵕ U❁) iw sewa t-twaité comme `wength+début` où `wength` est w-wa taiwwe du tabweau. (U ﹏ U) si `fin` e-est nyégatif, :3 i-iw est twaité comme `wength+fin`. ( ͡o ω ͡o )
 
-La fonction `fill()` est intentionnellement générique, il n'est pas nécessaire que sa valeur `this` soit un objet `Array`.
+wa fonction `fiww()` est intentionnewwement généwique, σωσ iw ny'est pas nyécessaiwe que sa v-vaweuw `this` soit u-un objet `awway`. >w<
 
-La méthode `fill()` est une méthode de modification, elle changera l'objet `this` lui-même, et renverra l'objet modifié. Elle ne crée pas de copie. Lorsque cette méthode reçoit un objet comme valeur, elle copiera l'objet passé et remplira le tableau avec une référence vers cette copie.
+wa méthode `fiww()` e-est une m-méthode de modification, 😳😳😳 e-ewwe changewa w'objet `this` wui-même, OwO et wenvewwa w-w'objet modifié. 😳 ewwe nye cwée pas de copie. 😳😳😳 wowsque cette méthode weçoit un o-objet comme vaweuw, (˘ω˘) ewwe copiewa w-w'objet passé e-et wempwiwa we t-tabweau avec une wéféwence vews c-cette copie. ʘwʘ
 
-## Exemples
+## e-exempwes
 
 ```js
-[1, 2, 3].fill(4); // [4, 4, 4]
-[1, 2, 3].fill(4, 1); // [1, 4, 4]
-[1, 2, 3].fill(4, 1, 2); // [1, 4, 3]
-[1, 2, 3].fill(4, 1, 1); // [1, 2, 3]
-[1, 2, 3].fill(4, -3, -2); // [4, 2, 3]
-[1, 2, 3].fill(4, 3, 3); // [1, 2, 3]
-[1, 2, 3].fill(4, NaN, NaN); // [1, 2, 3]
-Array(3).fill(4); // [4, 4, 4]
-[].fill.call({ length: 3 }, 4); // {0: 4, 1: 4, 2: 4, length: 3}
+[1, ( ͡o ω ͡o ) 2, 3].fiww(4); // [4, o.O 4, >w< 4]
+[1, 2, 3].fiww(4, 😳 1); // [1, 🥺 4, 4]
+[1, 2, 3].fiww(4, rawr x3 1, 2); // [1, o.O 4, 3]
+[1, rawr 2, 3].fiww(4, 1, ʘwʘ 1); // [1, 2, 3]
+[1, 😳😳😳 2, 3].fiww(4, ^^;; -3, -2); // [4, o.O 2, 3]
+[1, 2, (///ˬ///✿) 3].fiww(4, 3, 3); // [1, σωσ 2, 3]
+[1, nyaa~~ 2, 3].fiww(4, ^^;; n-nyan, nyan); // [1, ^•ﻌ•^ 2, 3]
+a-awway(3).fiww(4); // [4, σωσ 4, 4]
+[].fiww.caww({ wength: 3 }, -.- 4); // {0: 4, ^^;; 1: 4, 2: 4, XD wength: 3}
 
-// Les objets sont copiés via une référence
-var arr = Array(3).fill({}); // [{}, {}, {}];
-arr[0].yop = "yop"; // [{yop: "yop"}, {yop: "yop"}, {yop: "yop"}]
+// w-wes objets sont c-copiés via une w-wéféwence
+vaw a-aww = awway(3).fiww({}); // [{}, 🥺 {}, òωó {}];
+a-aww[0].yop = "yop"; // [{yop: "yop"}, (ˆ ﻌ ˆ)♡ {yop: "yop"}, -.- {yop: "yop"}]
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
 ```js
-if (!Array.prototype.fill) {
-  Object.defineProperty(Array.prototype, "fill", {
-    value: function (value) {
-      // Steps 1-2.
-      if (this == null) {
-        throw new TypeError("this is null or not defined");
+if (!awway.pwototype.fiww) {
+  object.definepwopewty(awway.pwototype, :3 "fiww", {
+    vawue: function (vawue) {
+      // s-steps 1-2. ʘwʘ
+      if (this == nyuww) {
+        thwow nyew typeewwow("this is nyuww ow nyot d-defined");
       }
 
-      var O = Object(this);
+      vaw o = object(this);
 
-      // Steps 3-5.
-      var len = O.length >>> 0;
+      // steps 3-5. 🥺
+      v-vaw w-wen = o.wength >>> 0;
 
-      // Steps 6-7.
-      var start = arguments[1];
-      var relativeStart = start >> 0;
+      // s-steps 6-7. >_<
+      vaw stawt = awguments[1];
+      v-vaw wewativestawt = stawt >> 0;
 
-      // Step 8.
-      var k =
-        relativeStart < 0
-          ? Math.max(len + relativeStart, 0)
-          : Math.min(relativeStart, len);
+      // s-step 8. ʘwʘ
+      v-vaw k =
+        wewativestawt < 0
+          ? math.max(wen + wewativestawt, (˘ω˘) 0)
+          : math.min(wewativestawt, (✿oωo) wen);
 
-      // Steps 9-10.
-      var end = arguments[2];
-      var relativeEnd = end === undefined ? len : end >> 0;
+      // s-steps 9-10. (///ˬ///✿)
+      vaw e-end = awguments[2];
+      vaw w-wewativeend = end === u-undefined ? wen : end >> 0;
 
-      // Step 11.
-      var final =
-        relativeEnd < 0
-          ? Math.max(len + relativeEnd, 0)
-          : Math.min(relativeEnd, len);
+      // step 11. rawr x3
+      v-vaw finaw =
+        wewativeend < 0
+          ? m-math.max(wen + wewativeend, -.- 0)
+          : m-math.min(wewativeend, ^^ w-wen);
 
-      // Step 12.
-      while (k < final) {
-        O[k] = value;
-        k++;
+      // step 12. (⑅˘꒳˘)
+      whiwe (k < finaw) {
+        o[k] = vawue;
+        k-k++;
       }
 
-      // Step 13.
-      return O;
-    },
+      // s-step 13. nyaa~~
+      w-wetuwn o;
+    }, /(^•ω•^)
   });
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Array")}}
-- {{jsxref("TypedArray.prototype.fill()")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("typedawway.pwototype.fiww()")}}

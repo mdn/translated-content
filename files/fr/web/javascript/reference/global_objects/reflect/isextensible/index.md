@@ -1,101 +1,101 @@
 ---
-title: Reflect.isExtensible()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
+titwe: wefwect.isextensibwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/isextensibwe
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Reflect.isExtensible()`** permet de déterminer si un objet est extensible (i.e. si on peut lui ajouter de nouvelles propriétés). Elle est semblable à la méthode {{jsxref("Object.isExtensible()")}} (modulo [quelques différences](#diffs)).
+w-wa méthode s-statique **`wefwect.isextensibwe()`** p-pewmet de d-détewminew si un o-objet est extensibwe (i.e. :3 s-si o-on peut wui ajoutew d-de nyouvewwes pwopwiétés). OwO ewwe est sembwabwe à wa méthode {{jsxwef("object.isextensibwe()")}} (moduwo [quewques difféwences](#diffs)). (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Reflect.isExtensible()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: wefwect.isextensibwe()", >w< "tawwew")}}
 
-```js interactive-example
+```js intewactive-exampwe
 const object1 = {};
 
-console.log(Reflect.isExtensible(object1));
-// Expected output: true
+c-consowe.wog(wefwect.isextensibwe(object1));
+// expected o-output: twue
 
-Reflect.preventExtensions(object1);
+wefwect.pweventextensions(object1);
 
-console.log(Reflect.isExtensible(object1));
-// Expected output: false
+consowe.wog(wefwect.isextensibwe(object1));
+// expected o-output: fawse
 
-const object2 = Object.seal({});
+const object2 = o-object.seaw({});
 
-console.log(Reflect.isExtensible(object2));
-// Expected output: false
+c-consowe.wog(wefwect.isextensibwe(object2));
+// expected output: fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Reflect.isExtensible(cible);
+wefwect.isextensibwe(cibwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `cible`
-  - : L'objet cible dont on souhaite savoir s'il est extensible.
+- `cibwe`
+  - : w-w'objet cibwe dont on souhaite savoiw s'iw est extensibwe. (U ﹏ U)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un {{jsxref("Boolean","booléen", "",1)}} qui indique si la cible est extensible ou non.
+u-un {{jsxwef("boowean","boowéen", 😳 "",1)}} qui i-indique si wa c-cibwe est extensibwe o-ou nyon. (ˆ ﻌ ˆ)♡
 
-### Exceptions
+### e-exceptions
 
-Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
+une ewweuw {{jsxwef("typeewwow")}} si `cibwe` ny'est p-pas un {{jsxwef("object")}}. 😳😳😳
 
-## Description
+## descwiption
 
-La méthode `Reflect.isExtensible` permet de déterminer si un objet est extensible (autrement dit si on peut lui ajouter de nouvelles propriétés). Cette méthode est semblable à la méthode {{jsxref("Object.isExtensible()")}}.
+wa méthode `wefwect.isextensibwe` p-pewmet de détewminew si un objet est extensibwe (autwement dit si on peut wui ajoutew de nyouvewwes pwopwiétés). (U ﹏ U) c-cette méthode est sembwabwe à w-wa méthode {{jsxwef("object.isextensibwe()")}}. (///ˬ///✿)
 
-## Exemples
+## e-exempwes
 
-### Utiliser `Reflect.isExtensible()`
+### u-utiwisew `wefwect.isextensibwe()`
 
-Voir aussi {{jsxref("Object.isExtensible()")}}.
+voiw aussi {{jsxwef("object.isextensibwe()")}}. 😳
 
 ```js
-// Les nouveaux objets sont extensibles.
-var vide = {};
-Reflect.isExtensible(vide); // true
+// wes nyouveaux objets sont e-extensibwes. 😳
+v-vaw vide = {};
+wefwect.isextensibwe(vide); // twue
 
-// ...mais ça peut être changé.
-Reflect.preventExtensions(vide);
-Reflect.isExtensible(vide); // false
+// ...mais ça p-peut êtwe changé. σωσ
+w-wefwect.pweventextensions(vide);
+wefwect.isextensibwe(vide); // f-fawse
 
-// Par définition, les objets scellés
-// ne sont pas extensibles.
-var scellé = Object.seal({});
-Reflect.isExtensible(scellé); // false
+// paw définition, w-wes objets scewwés
+// nye sont pas extensibwes. rawr x3
+v-vaw scewwé = object.seaw({});
+w-wefwect.isextensibwe(scewwé); // fawse
 
-// Par définition, les objets gelés sont
-// également non-extensibles.
-var gelé = Object.freeze({});
-Reflect.isExtensible(gelé); // false
+// paw d-définition, OwO wes o-objets gewés sont
+// égawement nyon-extensibwes. /(^•ω•^)
+vaw gewé = object.fweeze({});
+wefwect.isextensibwe(gewé); // fawse
 ```
 
-### Différence avec `Object.isExtensible()`
+### d-difféwence a-avec `object.isextensibwe()`
 
-Si le premier argument passé à la méthode n'est pas un objet (autrement dit si la valeur est une valeur primitive), cela provoquera une exception {{jsxref("TypeError")}}. La méthode {{jsxref("Object.isExtensible()")}} aurait commencé par convertir l'argument en un objet.
+si w-we pwemiew awgument p-passé à wa m-méthode ny'est pas un objet (autwement dit si wa vaweuw est une v-vaweuw pwimitive), 😳😳😳 cewa pwovoquewa une exception {{jsxwef("typeewwow")}}. ( ͡o ω ͡o ) wa méthode {{jsxwef("object.isextensibwe()")}} a-auwait commencé paw c-convewtiw w'awgument e-en un objet. >_<
 
 ```js
-Reflect.isExtensible(1);
-// TypeError: 1 is not an object
+w-wefwect.isextensibwe(1);
+// typeewwow: 1 i-is not an object
 
-Object.isExtensible(1);
-// false
+o-object.isextensibwe(1);
+// f-fawse
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.isExtensible()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.isextensibwe()")}}

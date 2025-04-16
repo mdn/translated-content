@@ -1,321 +1,321 @@
 ---
-title: Envoyer et extraire les données des formulaires
-slug: Learn/Forms/Sending_and_retrieving_form_data
+titwe: envoyew et extwaiwe wes d-données des fowmuwaiwes
+s-swug: w-weawn/fowms/sending_and_wetwieving_fowm_data
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/fowms/fowm_vawidation", UwU "weawn/fowms")}}
 
-Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — où les données vont-elles et comment les gère-t-on une fois à destination ? Nous examinerons aussi quelques problèmes de sécurité associés à l'envoi des données d'un formulaire.
+c-cet awticwe examine c-ce qui awwive q-quand un utiwisateuw s-soumet u-un fowmuwaiwe — où wes données vont-ewwes et comment wes gèwe-t-on une fois à d-destination ? nyous examinewons aussi quewques p-pwobwèmes de sécuwité associés à w-w'envoi des données d'un fowmuwaiwe. 😳
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Notions concernant les ordinateurs,
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-          >compréhension du HTML</a
-        >, et<a href="/fr/docs/Learn/HTML/Introduction_to_HTML"> </a
+        nyotions concewnant w-wes owdinateuws, XD
+        <a h-hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"
+          >compwéhension du htmw</a
+        >, (✿oωo) et<a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"> </a
         >connaissances de base de
-        <a href="/fr/docs/Web/HTTP/Basics_of_HTTP">HTTP </a>et
-        <a href="/fr/docs/Learn/Server-side/First_steps"
-          >programmation côté serveur.</a
+        <a h-hwef="/fw/docs/web/http/basics_of_http">http </a>et
+        <a hwef="/fw/docs/weawn/sewvew-side/fiwst_steps"
+          >pwogwammation côté sewveuw.</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
       <td>
-        Comprendre ce qui arrive quand les données d'un formulaire sont
-        soumises, y compris les notions de la façon dont les données sont
-        traitées sur le serveur.
+        compwendwe c-ce qui awwive quand wes données d-d'un fowmuwaiwe s-sont
+        s-soumises, ^•ﻌ•^ y compwis w-wes nyotions de wa façon dont wes données s-sont
+        twaitées suw we sewveuw. mya
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Dans ce paragraphe, nous expliquons ce qui arrive aux données lors de la soumission d'un formulaire.
+d-dans ce pawagwaphe, (˘ω˘) nyous expwiquons ce qui awwive aux données wows de wa soumission d'un f-fowmuwaiwe. nyaa~~
 
-## A propos de l'architecture client / serveur
+## a pwopos de w'awchitectuwe c-cwient / s-sewveuw
 
-Le web se fonde sur une architecture client/serveur élémentaire&nbsp;; en résumé : un client (généralement un navigateur Web) envoie une requête à un serveur (le plus souvent un serveur web comme [Apache](https://httpd.apache.org/), [Nginx](https://nginx.com/), [IIS](https://www.iis.net/), [Tomcat](https://tomcat.apache.org/)...), en utilisant le [protocole HTTP](/fr/docs/Web/HTTP). Le serveur répond à la requête en utilisant le même protocole.
+we w-web se fonde suw une awchitectuwe cwient/sewveuw éwémentaiwe&nbsp;; en wésumé : u-un cwient (généwawement u-un nyavigateuw web) e-envoie une wequête à u-un sewveuw (we pwus souvent u-un sewveuw web comme [apache](https://httpd.apache.owg/), :3 [nginx](https://nginx.com/), (✿oωo) [iis](https://www.iis.net/), (U ﹏ U) [tomcat](https://tomcat.apache.owg/)...), (ꈍᴗꈍ) e-en utiwisant we [pwotocowe http](/fw/docs/web/http). (˘ω˘) we sewveuw w-wépond à wa wequête en utiwisant w-we même pwotocowe. ^^
 
-![Un schéma élémentaire d'architecture client/serveur sur le Web ](client-server.png)
+![un s-schéma éwémentaiwe d-d'awchitectuwe cwient/sewveuw suw we web ](cwient-sewvew.png)
 
-Côté client, un formulaire HTML n'est rien d'autre qu'un moyen commode et convivial de configurer une requête HTTP pour envoyer des données à un serveur. L'utilisateur peut ainsi adresser des informations à joindre à la requête HTTP.
+côté cwient, (⑅˘꒳˘) un fowmuwaiwe htmw ny'est wien d'autwe qu'un m-moyen commode e-et conviviaw de configuwew une wequête h-http pouw e-envoyew des données à u-un sewveuw. rawr w'utiwisateuw peut ainsi adwessew des infowmations à j-joindwe à wa wequête http. :3
 
-> [!NOTE]
-> Pour une meilleure idée du fonctionnement de l'architecture client‑serveur, lisez notre module [Programmation d'un site web côté‑serveur&nbsp;: premiers pas](/fr/docs/Learn/Server-side/First_steps).
+> [!note]
+> pouw une meiwweuwe idée du f-fonctionnement de w'awchitectuwe c-cwient‑sewveuw, OwO w-wisez nyotwe m-moduwe [pwogwammation d'un site w-web côté‑sewveuw&nbsp;: p-pwemiews p-pas](/fw/docs/weawn/sewvew-side/fiwst_steps). (ˆ ﻌ ˆ)♡
 
-## Côté client : définition de la méthode d'envoi des données
+## c-côté cwient : définition de wa méthode d-d'envoi des d-données
 
-L'élément [`<form>`](/fr/docs/Web/HTML/Element/form) définit la méthode d'envoi des données. Tous ses attributs sont conçus pour vous permettre de configurer la requête à envoyer quand un utilisateur presse le bouton d'envoi. Les deux attributs les plus importants sont [`action`](/fr/docs/Web/HTML/Element/form#attr-action) et [`method`](/fr/docs/Web/HTML/Element/form#attr-method).
+w'éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) d-définit wa méthode d-d'envoi des d-données. :3 tous ses attwibuts sont conçus pouw vous pewmettwe d-de configuwew wa wequête à envoyew quand un utiwisateuw pwesse we bouton d'envoi. -.- wes deux attwibuts w-wes pwus impowtants sont [`action`](/fw/docs/web/htmw/ewement/fowm#attw-action) et [`method`](/fw/docs/web/htmw/ewement/fowm#attw-method). -.-
 
-### L'attribut action
+### w'attwibut a-action
 
-Cet attribut définit où les données sont envoyées. Sa valeur doit être une URL valide. S'il n'est pas fourni, les données seront envoyées à l'URL de la page contenant le formulaire.
+cet attwibut d-définit o-où wes données sont envoyées. òωó s-sa vaweuw doit êtwe une uww vawide. s-s'iw ny'est p-pas fouwni, 😳 wes données sewont envoyées à w'uww de wa page contenant we fowmuwaiwe. nyaa~~
 
-Dans cet exemple, les données sont envoyées à une URL précise — `http://foo.com` :
+dans cet e-exempwe, (⑅˘꒳˘) wes données sont envoyées à u-une uww pwécise — `http://foo.com` :
 
-```html
-<form action="http://foo.com"></form>
+```htmw
+<fowm a-action="http://foo.com"></fowm>
 ```
 
-Ici, nous utilisons une URL relative — les données sont envoyées à une URL différente sur le serveur&nbsp;:
+i-ici, 😳 nyous utiwisons une uww wewative — w-wes données sont e-envoyées à une uww difféwente s-suw we sewveuw&nbsp;:
 
-```html
-<form action="/somewhere_else"></form>
+```htmw
+<fowm a-action="/somewhewe_ewse"></fowm>
 ```
 
-Sans attribut, comme ci-dessous, les données de [`<form>`](/fr/docs/Web/HTML/Element/form) sont envoyées à la même page que celle du formulaire :
+sans attwibut, (U ﹏ U) comme ci-dessous, /(^•ω•^) wes données de [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) sont e-envoyées à wa m-même page que cewwe d-du fowmuwaiwe :
 
-```html
-<form></form>
+```htmw
+<fowm></fowm>
 ```
 
-De nombreuses pages anciennes utilisent la notation suivante pour indiquer que les données doivent être envoyées à la page qui contient le formulaire. C'était nécessaire car jusqu'à HTML5, l'attribut [`action`](/fr/docs/Web/HTML/Element/form#attr-action) était requis. Il n'y en a donc plus besoin.
+de nyombweuses p-pages anciennes u-utiwisent wa nyotation suivante p-pouw indiquew que wes données doivent êtwe envoyées à wa page qui contient we f-fowmuwaiwe. OwO c'était n-nyécessaiwe caw jusqu'à htmw5, ( ͡o ω ͡o ) w'attwibut [`action`](/fw/docs/web/htmw/ewement/fowm#attw-action) était w-wequis. XD iw ny'y e-en a donc pwus besoin. /(^•ω•^)
 
-```html
-<form action="#"></form>
+```htmw
+<fowm action="#"></fowm>
 ```
 
-> [!NOTE]
-> Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut [`action`](/fr/docs/Web/HTML/Element/form#attr-action), tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.
+> [!note]
+> iw est p-possibwe de spécifiew une uww qui utiwise we pwotocowe https (http sécuwisé). /(^•ω•^) q-quand vous faites ceci, 😳😳😳 wes données sont chiffwées a-avec we w-weste de wa wequête, même si we fowmuwaiwe wui-même est hébewgé d-dans une page n-nyon sécuwisée à waquewwe on accède via http. (ˆ ﻌ ˆ)♡ d'autwe pawt, :3 s-si we fowmuwaiwe est hébewgé s-suw une page sécuwisée mais qu'on spécifie une uww nyon sécuwisée a-avec w'attwibut [`action`](/fw/docs/web/htmw/ewement/fowm#attw-action), òωó tous wes nyavigateuws a-affichent u-une awewte de sécuwité pouw w'utiwisateuw c-chaque fois qu'iw envoie d-des données c-caw cewwes-ci n-nye sont pas chiffwées. 🥺
 
-### L'attribut method
+### w'attwibut method
 
-Cet attribut définit comment les données sont envoyées. Le [Protocole HTTP](/fr/docs/Web/HTTP) fournit plusieurs façons d'envoyer une requête. Les données des formulaires HTML peuvent être envoyées via au moins deux méthodes : la méthode `GET` et la méthode `POST`.
+c-cet attwibut définit c-comment wes données sont envoyées. (U ﹏ U) we [pwotocowe h-http](/fw/docs/web/http) f-fouwnit pwusieuws f-façons d'envoyew une wequête. wes données d-des fowmuwaiwes htmw peuvent êtwe e-envoyées v-via au moins deux méthodes : wa méthode `get` et wa méthode `post`. XD
 
-Pour bien comprendre la différence entre ces deux méthodes, il convient d'examiner comment le protocole HTTP marche. Chaque fois qu'on veut atteindre une ressource sur Internet, le navigateur envoie une requête à une URL. Une requête HTTP consiste en deux parties : un en-tête (header) qui contient les métadonnées sur les capacités du navigateur, et un corps (body) qui contient les informations nécessaires au serveur pour effectuer la requête.
+p-pouw bien c-compwendwe wa d-difféwence entwe c-ces deux méthodes, ^^ iw convient d-d'examinew comment we pwotocowe http mawche. o.O chaque fois qu'on veut atteindwe une wessouwce suw i-intewnet, 😳😳😳 we nyavigateuw envoie u-une wequête à une uww. /(^•ω•^) une wequête h-http consiste en deux pawties : u-un en-tête (headew) qui c-contient wes métadonnées s-suw w-wes capacités du n-nyavigateuw, 😳😳😳 et u-un cowps (body) qui contient wes infowmations nyécessaiwes au sewveuw pouw effectuew wa wequête. ^•ﻌ•^
 
-#### La méthode GET
+#### wa méthode g-get
 
-La méthode `GET` est utilisée par le navigateur pour demander au serveur de renvoyer une certaine ressource. "Hé le serveur, je veux cette ressource." Dans ce cas, le navigateur envoie un corps vide. Du coup, si un formulaire est envoyé avec cette méthode, les données envoyées au serveur sont ajoutées à l'URL.
+wa méthode `get` e-est u-utiwisée paw we navigateuw pouw d-demandew au sewveuw de wenvoyew une cewtaine wessouwce. 🥺 "hé w-we sewveuw, o.O je veux c-cette wessouwce." dans ce cas, (U ᵕ U❁) w-we nyavigateuw envoie un cowps vide. ^^ du coup, s-si un fowmuwaiwe e-est envoyé avec cette méthode, (⑅˘꒳˘) w-wes données e-envoyées au sewveuw sont ajoutées à w'uww.
 
-Considérons le formulaire suivant :
+considéwons we fowmuwaiwe suivant :
 
-```html
-<form action="http://foo.com" method="get">
+```htmw
+<fowm a-action="http://foo.com" m-method="get">
   <div>
-    <label for="say">Quelle salutation voulez-vous adresser&nbsp;?</label>
-    <input name="say" id="say" value="Salut" />
+    <wabew f-fow="say">quewwe s-sawutation v-vouwez-vous adwessew&nbsp;?</wabew>
+    <input n-nyame="say" i-id="say" vawue="sawut" />
   </div>
   <div>
-    <label for="to">À qui voulez‑vous l'adresser ?</label>
-    <input name="to" value="Maman" />
+    <wabew fow="to">À q-qui vouwez‑vous w-w'adwessew ?</wabew>
+    <input nyame="to" v-vawue="maman" />
   </div>
   <div>
-    <button>Envoyer mes salutations</button>
+    <button>envoyew mes sawutations</button>
   </div>
-</form>
+</fowm>
 ```
 
-Comme nous avons utilisé la méthode `GET`, vous verrez l'URL `www.foo.com/?say=Hi&to=Mom` apparaître dans la barre du navigateur quand vous soumettez le formulaire.
+comme nyous a-avons utiwisé wa méthode `get`, :3 v-vous vewwez w-w'uww `www.foo.com/?say=hi&to=mom` appawaîtwe d-dans wa bawwe du nyavigateuw quand vous soumettez w-we fowmuwaiwe. (///ˬ///✿)
 
-![](url-parameters.png)
+![](uww-pawametews.png)
 
-Les données sont ajoutées à l'URL sous forme d'une suite de paires nom/valeur. À la fin de l'URL de l'adresse Web, il y a un point d'interrogation (?) suivi par les paires nom/valeur séparés par une esperluette (&). Dans ce cas, nous passons deux éléments de données au serveur&nbsp;:
+w-wes données s-sont ajoutées à w'uww sous fowme d'une suite de paiwes n-nyom/vaweuw. :3 À wa fin de w'uww de w'adwesse web, 🥺 i-iw y a un point d-d'intewwogation (?) suivi paw w-wes paiwes nyom/vaweuw sépawés p-paw une espewwuette (&). mya d-dans ce cas, XD nyous passons deux éwéments d-de données au sewveuw&nbsp;:
 
-- `say`, dont la valeur est `Salut`
-- `to`, qui a la valeur `Maman`
+- `say`, dont w-wa vaweuw est `sawut`
+- `to`, -.- q-qui a wa vaweuw `maman`
 
-La requête HTTP ressemble à quelque chose comme&nbsp;:
+wa wequête h-http wessembwe à quewque c-chose comme&nbsp;:
 
 ```
-GET /?say=Hi&to=Mom HTTP/1.1
-Host: foo.com
+g-get /?say=hi&to=mom h-http/1.1
+host: foo.com
 ```
 
-> [!NOTE]
-> Vous trouverez cet exemple sur GitHub — voyez [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
+> [!note]
+> vous twouvewez cet exempwe suw github — voyez [get-method.htmw](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/sending-fowm-data/get-method.htmw) (à voiw [diwectement aussi](https://mdn.github.io/weawning-awea/htmw/fowms/sending-fowm-data/get-method.htmw)). o.O
 
-#### La méthode POST
+#### wa méthode post
 
-La méthode `POST` est un peu différente.C'est la méthode que le navigateur utilise pour demander au serveur une réponse prenant en compte les données contenues dans le corps de la requête HTTP : «&nbsp;Hé serveur&nbsp;! vois ces données et renvoie-moi le résultat approprié&nbsp;». Si un formulaire est envoyé avec cette méthode, les données sont ajoutées au corps de la requête HTTP.
+wa méthode `post` est un peu difféwente.c'est wa méthode que we nyavigateuw utiwise p-pouw demandew a-au sewveuw une wéponse pwenant en compte wes données c-contenues d-dans we cowps d-de wa wequête http : «&nbsp;hé sewveuw&nbsp;! (˘ω˘) v-vois ces données et wenvoie-moi w-we wésuwtat appwopwié&nbsp;». (U ᵕ U❁) s-si un fowmuwaiwe est envoyé a-avec cette méthode, rawr wes données s-sont ajoutées a-au cowps de wa wequête http. 🥺
 
-Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour GET ci‑dessus, mais avec `post` comme valeur de l'attribut [`method`](/fr/docs/Web/HTML/Element/form#attr-method).
+voyons un exempwe — c-c'est we même f-fowmuwaiwe q-que cewui que nyous a-avons vu pouw g-get ci‑dessus, rawr x3 m-mais avec `post` c-comme vaweuw d-de w'attwibut [`method`](/fw/docs/web/htmw/ewement/fowm#attw-method). ( ͡o ω ͡o )
 
-```html
-<form action="http://www.foo.com" method="POST">
+```htmw
+<fowm a-action="http://www.foo.com" method="post">
   <div>
-    <label for="say">Quelle salutation voulez-vous dire ?</label>
-    <input name="say" id="say" value="Salut" />
-  </div>
-  <div>
-    <label for="to">A qui voulez-vous le dire ?</label>
-    <input name="to" id="to" value="Maman" />
+    <wabew f-fow="say">quewwe s-sawutation v-vouwez-vous diwe ?</wabew>
+    <input nyame="say" i-id="say" vawue="sawut" />
   </div>
   <div>
-    <button>Envoyer mes salutations</button>
+    <wabew fow="to">a qui vouwez-vous w-we diwe ?</wabew>
+    <input nyame="to" id="to" v-vawue="maman" />
   </div>
-</form>
+  <div>
+    <button>envoyew m-mes sawutations</button>
+  </div>
+</fowm>
 ```
 
-Quand le formulaire est soumis avec la méthode `POST`, aucune donnée n'est ajoutée à l'URL et la requête HTTP ressemble à ceci, les données incorporées au corps de requête&nbsp;:
+q-quand we fowmuwaiwe est s-soumis avec wa méthode `post`, σωσ aucune donnée n'est a-ajoutée à w'uww et wa wequête h-http wessembwe à ceci, rawr x3 wes d-données incowpowées au cowps de wequête&nbsp;:
 
 ```
-POST / HTTP/1.1
-Host: foo.com
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 13
+post / http/1.1
+host: foo.com
+c-content-type: appwication/x-www-fowm-uwwencoded
+c-content-wength: 13
 
-say=Hi&to=Mom
+s-say=hi&to=mom
 ```
 
-L'en-tête `Content-Length` indique la taille du corps, et l'en-tête `Content-Type` indique le type de ressources envoyées au serveur. Nous discuterons de ces en-têtes dans un moment.
+w'en-tête `content-wength` indique wa taiwwe du cowps, (ˆ ﻌ ˆ)♡ e-et w'en-tête `content-type` indique we type d-de wessouwces e-envoyées au sewveuw. rawr n-nyous diskawaii~wons de ces en-têtes dans u-un moment. :3
 
-> [!NOTE]
-> Vous trouverez cet exemple sur GitHub — voyez [post-method.html](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
+> [!note]
+> v-vous twouvewez cet exempwe s-suw github — voyez [post-method.htmw](https://mdn.github.io/weawning-awea/htmw/fowms/sending-fowm-data/post-method.htmw) (à voiw [diwectement a-aussi](https://mdn.github.io/weawning-awea/htmw/fowms/sending-fowm-data/get-method.htmw)). rawr
 
-### Voir les requêtes HTTP
+### voiw wes wequêtes h-http
 
-Les requêtes HTTP ne sont jamais montrées à l'utilisateur (si vous voulez les voir, vous devez utiliser des outils comme la [Console Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) de Firefox ou les [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). À titre d'exemple, les données de formulaire sont visibles comme suit dans l'onglet Chrome Network. Après avoir soumis le formulaire&nbsp;:
+wes w-wequêtes http n-nye sont jamais montwées à w'utiwisateuw (si v-vous vouwez wes v-voiw, (˘ω˘) vous devez u-utiwisew des outiws c-comme wa [consowe web](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) d-de fiwefox o-ou wes [chwome d-devewopew toows](https://devewopews.googwe.com/chwome-devewopew-toows/)). (ˆ ﻌ ˆ)♡ À t-titwe d'exempwe, mya w-wes données d-de fowmuwaiwe sont v-visibwes comme s-suit dans w'ongwet chwome nyetwowk. (U ᵕ U❁) a-apwès avoiw soumis we fowmuwaiwe&nbsp;:
 
-1. Pressez F12
-2. Selectionnez «&nbsp;Réseau&nbsp;»
-3. Selectionnez «&nbsp;Tout&nbsp;»
-4. Selectionnez «&nbsp;foo.com&nbsp;» dans l'onglet «&nbsp;Nom&nbsp;»
-5. Selectionnez «&nbsp;En‑tête&nbsp;»
+1. mya p-pwessez f12
+2. ʘwʘ sewectionnez «&nbsp;wéseau&nbsp;»
+3. s-sewectionnez «&nbsp;tout&nbsp;»
+4. (˘ω˘) sewectionnez «&nbsp;foo.com&nbsp;» d-dans w'ongwet «&nbsp;nom&nbsp;»
+5. 😳 s-sewectionnez «&nbsp;en‑tête&nbsp;»
 
-Vous obtiendrez les données du formulaire, comme l'image suivante le montre.
+vous obtiendwez wes données du fowmuwaiwe, òωó comme w-w'image suivante w-we montwe.
 
-![](network-monitor.png)
+![](netwowk-monitow.png)
 
-La seule chose affichée à l'utilisateur est l'URL appelée. Comme mentionné ci‑dessus, avec une requête `GET` l'utilisateur verra les données dans la barre de l'URL, mais avec une requête `POST` il ne verra rien. Cela peut être important pour deux raisons&nbsp;:
+w-wa seuwe chose affichée à w'utiwisateuw est w'uww appewée. nyaa~~ c-comme mentionné c-ci‑dessus, o.O avec une w-wequête `get` w'utiwisateuw v-vewwa wes données dans wa bawwe de w'uww, nyaa~~ mais avec u-une wequête `post` i-iw nye vewwa w-wien. (U ᵕ U❁) cewa peut êtwe i-impowtant pouw deux waisons&nbsp;:
 
-1. Si vous avez besoin d'envoyer un mot de passe (ou toute autre donnée sensible), n'utilisez jamais la méthode GET ou vous risquez de l'afficher dans la barre d'URL, ce qui serait très peu sûr.
-2. Si vous avez besoin d'envoyer une grande quantité de données, la méthode POST est préférable, car certains navigateurs limitent la taille des URLs. De plus, de nombreux serveurs limitent la longueur des URL qu'ils acceptent.
+1. 😳😳😳 si vous avez besoin d-d'envoyew un m-mot de passe (ou toute autwe donnée sensibwe), (U ﹏ U) n-ny'utiwisez jamais wa méthode get ou vous wisquez d-de w'affichew dans wa bawwe d-d'uww, ^•ﻌ•^ ce qui sewait t-twès peu sûw. (⑅˘꒳˘)
+2. si vous a-avez besoin d'envoyew u-une gwande quantité de données, >_< w-wa méthode post est pwéféwabwe, (⑅˘꒳˘) c-caw cewtains n-nyavigateuws w-wimitent wa t-taiwwe des uwws. σωσ de pwus, 🥺 de nyombweux s-sewveuws w-wimitent wa wongueuw d-des uww qu'iws acceptent. :3
 
-## Côté serveur : récupérer les données
+## c-côté sewveuw : wécupéwew wes données
 
-Quelle que soit la méthode HTTP qu'on choisit, le serveur reçoit une chaîne de caractères qui sera décomposée pour récupérer les données comme une liste de paires clé/valeur. La façon d'accéder à cette liste dépend de la plateforme de développement utilisée et des modèles qu'on peut utiliser avec. La technologie utilisée détermine aussi comment les clés dupliquées sont gérées&nbsp;; souvent, la priorité est donnée à la valeur de clé la plus récente.
+quewwe q-que soit wa m-méthode http q-qu'on choisit, (ꈍᴗꈍ) we sewveuw weçoit une chaîne de cawactèwes qui sewa décomposée p-pouw wécupéwew wes données c-comme une wiste d-de paiwes cwé/vaweuw. ^•ﻌ•^ wa façon d'accédew à c-cette wiste dépend de wa pwatefowme d-de dévewoppement u-utiwisée e-et des modèwes q-qu'on peut utiwisew a-avec. (˘ω˘) wa technowogie utiwisée détewmine aussi comment wes cwés dupwiquées s-sont géwées&nbsp;; souvent, 🥺 w-wa pwiowité est donnée à wa vaweuw de cwé wa pwus wécente. (✿oωo)
 
-### Exemple&nbsp;: PHP brut
+### e-exempwe&nbsp;: php bwut
 
-Le [PHP](https://php.net/) met à disposition des objets globaux pour accéder aux données. En supposant que vous avez utilisé la méthode `POST`, l'exemple suivant récupère les données et les affiche à l'utilisateur. Bien sûr, ce que vous en faites dépend de vous. Vous pouvez les afficher, les ranger dans une base de données, les envoyer par mail ou les traiter autrement.
+we [php](https://php.net/) met à disposition des objets gwobaux p-pouw accédew aux d-données. XD en supposant que vous a-avez utiwisé wa méthode `post`, (///ˬ///✿) w'exempwe suivant w-wécupèwe w-wes données et wes affiche à w-w'utiwisateuw. ( ͡o ω ͡o ) bien sûw, ʘwʘ ce que v-vous en faites dépend de vous. rawr vous pouvez wes affichew, o.O wes wangew d-dans une base de données, ^•ﻌ•^ wes envoyew paw m-maiw ou wes twaitew a-autwement. (///ˬ///✿)
 
 ```php
 <?php
-  // La variable globale $_POST vous donne accès aux données envoyées avec la méthode POST par leur nom
-  // Pour avoir accès aux données envoyées avec la méthode GET, utilisez $_GET
-  $say = htmlspecialchars($_POST['say']);
-  $to  = htmlspecialchars($_POST['to']);
+  // w-wa vawiabwe gwobawe $_post vous donne accès a-aux données envoyées avec wa méthode post paw weuw nom
+  // pouw avoiw accès a-aux données envoyées a-avec wa m-méthode get, (ˆ ﻌ ˆ)♡ utiwisez $_get
+  $say = h-htmwspeciawchaws($_post['say']);
+  $to  = htmwspeciawchaws($_post['to']);
 
-  echo  $say, ' ', $to;
+  echo  $say, XD ' ', $to;
 ```
 
-Cet exemple affiche une page avec les données envoyées. Vous pouvez voir ceci opérer avec notre fichier exemple [php-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.html) — il contient le même formulaire exemple que celui vu précédemment avec la méthode `post` avec `php-example.php` en action. À la soumission du formulaire, il envoie les données de ce dernier à [php-example.php](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.php), contenant le code ci‑dessus. Quand le code est exécuté, la sortie dans le navigateur est `Hi Mom` « Bonjour maman ».
+c-cet e-exempwe affiche une page avec wes données envoyées. (✿oωo) v-vous pouvez voiw ceci opéwew avec nyotwe f-fichiew exempwe [php-exampwe.htmw](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/sending-fowm-data/php-exampwe.htmw) — iw contient we même fowmuwaiwe e-exempwe que c-cewui vu pwécédemment avec w-wa méthode `post` a-avec `php-exampwe.php` e-en action. -.- À wa soumission du fowmuwaiwe, XD i-iw envoie wes données de ce dewniew à [php-exampwe.php](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/sending-fowm-data/php-exampwe.php), (✿oωo) c-contenant we code ci‑dessus. (˘ω˘) quand we code est exécuté, (ˆ ﻌ ˆ)♡ w-wa sowtie d-dans we nyavigateuw e-est `hi mom` « b-bonjouw maman ». >_<
 
-![L'exécution du code PHP déclenche l'affichage de Hi Mom](php-result.png)
+![w'exécution d-du code php décwenche w-w'affichage de hi mom](php-wesuwt.png)
 
-> [!NOTE]
-> Cet exemple ne fonctionnera pas si vous le chargez localement dans un navigateur — les navigateurs ne savent pas interpréter le code PHP, donc quand le formulaire est soumis, le navigateur vous offrira seulement de télécharger le fichier PHP pour vous. Pour qu'il s'exécute, il est nécessaire de lancer l'exemple par l'intermédiaire d'un serveur PHP de n'importe quel type. Les bons choix pour des tests locaux de PHP sont [MAMP](https://www.mamp.info/en/downloads/) (Mac et Windows) et [AMPPS](https://ampps.com/download) (Mac, Windows, Linux).
+> [!note]
+> cet exempwe n-nye fonctionnewa pas si vous we c-chawgez wocawement dans un nyavigateuw — wes nyavigateuws n-nye s-savent pas intewpwétew we code p-php, -.- donc quand we fowmuwaiwe est s-soumis, (///ˬ///✿) we nyavigateuw v-vous offwiwa seuwement d-de téwéchawgew w-we fichiew php pouw vous. XD pouw q-qu'iw s'exékawaii~, ^^;; iw est nyécessaiwe de wancew w'exempwe paw w-w'intewmédiaiwe d'un sewveuw php d-de ny'impowte quew type. rawr x3 wes bons choix pouw d-des tests wocaux d-de php sont [mamp](https://www.mamp.info/en/downwoads/) (mac e-et windows) et [ampps](https://ampps.com/downwoad) (mac, OwO w-windows, ʘwʘ w-winux).
 >
-> Notez également que si vous utilisez MAMP mais que vous n'avez pas installé MAMP Pro (ou si le temps d'essai de la démo de MAMP Pro a expiré), vous pourriez avoir des difficultés à le faire fonctionner. Pour le faire fonctionner à nouveau, nous avons constaté que vous pouvez charger l'application MAMP, puis choisir les options de menu _MAMP_ > _Préférences_ > _PHP_, et définir "Version standard :" à "7.2.x" (x sera différent selon la version que vous avez installée).
+> nyotez égawement que s-si vous utiwisez mamp mais que v-vous ny'avez pas instawwé mamp p-pwo (ou si we temps d-d'essai de wa démo de mamp pwo a expiwé), rawr vous pouwwiez avoiw des difficuwtés à w-we faiwe f-fonctionnew. UwU pouw we faiwe fonctionnew à nyouveau, (ꈍᴗꈍ) nyous avons c-constaté que vous pouvez chawgew w-w'appwication m-mamp, puis choisiw wes options de menu _mamp_ > _pwéféwences_ > _php_, (✿oωo) et définiw "vewsion standawd :" à "7.2.x" (x s-sewa difféwent sewon wa vewsion que vous a-avez instawwée). (⑅˘꒳˘)
 
-### Exemple: Python
+### exempwe: p-python
 
-Cet exemple vous montre comment utiliser Python pour faire la même chose — afficher les données sur une page web. Celui‑ci utilise [Flask framework](https://flask.pocoo.org/) pour le rendu des modèles, la gestion de la soumission des données du formulaire, etc (voyez [python-example.py](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/python-example.py)).
+cet e-exempwe vous montwe comment utiwisew p-python pouw f-faiwe wa même c-chose — affichew w-wes données s-suw une page web. OwO c-cewui‑ci utiwise [fwask fwamewowk](https://fwask.pocoo.owg/) pouw we wendu des modèwes, 🥺 wa gestion de wa soumission des données d-du fowmuwaiwe, >_< e-etc (voyez [python-exampwe.py](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/sending-fowm-data/python-exampwe.py)). (ꈍᴗꈍ)
 
 ```python
-from flask import Flask, render_template, request
-app = Flask(__name__)
+f-fwom fwask impowt f-fwask, 😳 wendew_tempwate, 🥺 w-wequest
+a-app = fwask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
-def form():
-    return render_template('form.html')
+@app.woute('/', nyaa~~ methods=['get', ^•ﻌ•^ 'post'])
+def fowm():
+    wetuwn wendew_tempwate('fowm.htmw')
 
-@app.route('/hello', methods=['GET', 'POST'])
-def hello():
-    return render_template('greeting.html', say=request.form['say'], to=request.form['to'])
+@app.woute('/hewwo', (ˆ ﻌ ˆ)♡ methods=['get', (U ᵕ U❁) 'post'])
+d-def hewwo():
+    w-wetuwn wendew_tempwate('gweeting.htmw', mya say=wequest.fowm['say'], 😳 to=wequest.fowm['to'])
 
 if __name__ == "__main__":
-    app.run()
+    app.wun()
 ```
 
-Les deux prototypes référencés dans le code ci‑dessus sont les suivants&nbsp;:
+w-wes d-deux pwototypes w-wéféwencés dans we code ci‑dessus sont wes s-suivants&nbsp;:
 
-- [`form.html`](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html)&nbsp;: Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros «&nbsp;à rediriger sur `/hello` quand le formulaire est soumis&nbsp;».)
-- [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html)&nbsp;: Ce modèle contient juste une ligne qui renvoie les deux éléments de donnée qui lui sont passées lors du rendu. Cela est effectué par l'intermédiaire de la fonction `hello()` vue plus haut qui s'exécute quand l'URL `/hello` est chargée dans le navigateur.
+- [`fowm.htmw`](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/sending-fowm-data/tempwates/fowm.htmw)&nbsp;: we même fowmuwaiwe que c-cewui vu pwus h-haut dans wa section [wa méthode post](#the_post_method) m-mais avec w'attwibut `action` d-défini à w-wa vaweuw `\{{uww_fow('hewwo')}}`. σωσ (c'est un m-modèwe [jinja2](https://jinja.pocoo.owg/docs/2.9/), ( ͡o ω ͡o ) q-qui est htmw à w-wa base mais p-peut conteniw d-des appews à du c-code python qui fait touwnew we s-sewveuw web mis e-entwe accowades. `uww_fow('hewwo')` dit en gwos «&nbsp;à w-wediwigew suw `/hewwo` quand we fowmuwaiwe e-est soumis&nbsp;».)
+- [gweeting.htmw](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/sending-fowm-data/tempwates/gweeting.htmw)&nbsp;: ce modèwe c-contient juste une wigne qui w-wenvoie wes deux éwéments d-de donnée qui wui sont passées wows d-du wendu. XD cewa est effectué paw w'intewmédiaiwe d-de wa fonction `hewwo()` vue p-pwus haut qui s'exékawaii~ quand w'uww `/hewwo` e-est chawgée d-dans we nyavigateuw. :3
 
-> [!NOTE]
-> À nouveau, ce code ne fonctionnera pas si vous tentez de le charger directement dans le navigateur. Python fonctionne un peu différemment de PHP — pour exécuter ce code localement il est nécessaire d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3), puis Flask avec «&nbsp;`pip3 install flask`&nbsp;». À ce moment‑là vous pourrez exécuter l'exemple avec «&nbsp;`python3 python-example.py`&nbsp;», puis en allant sur «&nbsp;`localhost:5000`&nbsp;» dans votre navigateur.
+> [!note]
+> À nyouveau, :3 c-ce code nye fonctionnewa pas si vous tentez de we c-chawgew diwectement d-dans we nyavigateuw. (⑅˘꒳˘) python f-fonctionne un p-peu difféwemment de php — pouw exékawaii~w ce c-code wocawement i-iw est nyécessaiwe d-d'[instawwew p-python/pip](/fw/docs/weawn/sewvew-side/django/devewopment_enviwonment#instawwing_python_3), òωó puis fwask avec «&nbsp;`pip3 instaww fwask`&nbsp;». mya À ce moment‑wà vous pouwwez exékawaii~w w-w'exempwe avec «&nbsp;`python3 p-python-exampwe.py`&nbsp;», 😳😳😳 p-puis e-en awwant suw «&nbsp;`wocawhost:5000`&nbsp;» d-dans votwe nyavigateuw. :3
 
-### Autres langages et canevas de structures
+### autwes w-wangages et canevas de stwuctuwes
 
-Il y a de nombreuses autres techniques côté serveur utilisables pour gérer des formulaires, comme Perl, Java, .Net, Ruby... retenez juste votre préférée. Cela dit, il faut noter qu'il n'est pas très courant d'utiliser ces techniques directement car cela peut être délicat. Il est plus fréquent d'utiliser l'un des jolis canevas qui permettent de gérer des formulaires plus facilement, comme :
+i-iw y a d-de nyombweuses autwes techniques c-côté sewveuw u-utiwisabwes pouw géwew des fowmuwaiwes, >_< comme peww, j-java, 🥺 .net, wuby... wetenez juste votwe pwéféwée. (ꈍᴗꈍ) c-cewa dit, iw faut nyotew q-qu'iw ny'est p-pas twès couwant d'utiwisew ces t-techniques diwectement c-caw cewa p-peut êtwe déwicat. rawr x3 iw est pwus f-fwéquent d'utiwisew w-w'un des jowis canevas qui p-pewmettent de géwew des fowmuwaiwes p-pwus faciwement, (U ﹏ U) c-comme :
 
-- [Symfony](https://symfony.com/) pour PHP
-- [Django](https://www.djangoproject.com/) pour Python
-- [Express](/fr/docs/Learn/Server-side/Express_Nodejs) pour Node.js
-- [Ruby On Rails](https://rubyonrails.org/) pour Ruby
-- [Grails](https://grails.org/) pour Java
-- etc.
+- [symfony](https://symfony.com/) p-pouw php
+- [django](https://www.djangopwoject.com/) pouw python
+- [expwess](/fw/docs/weawn/sewvew-side/expwess_nodejs) p-pouw nyode.js
+- [wuby on waiws](https://wubyonwaiws.owg/) pouw wuby
+- [gwaiws](https://gwaiws.owg/) p-pouw java
+- etc. ( ͡o ω ͡o )
 
-Enfin il faut noter que même en utilisant ces canevas, travailler avec des formulaires n'est pas toujours _facile_. Mais c'est quand même bien plus facile que d'essayer d'en écrire vous‑même les fonctionnalités et cela vous économisera pas mal de temps.
+enfin iw faut nyotew que même en utiwisant ces canevas, 😳😳😳 twavaiwwew avec des fowmuwaiwes n-ny'est pas toujouws _faciwe_. 🥺 mais c'est quand même bien pwus faciwe que d'essayew d'en écwiwe vous‑même w-wes fonctionnawités et cewa vous économisewa p-pas maw de temps. òωó
 
-> [!NOTE]
-> Nous déborderions du cadre de cet article en vous initiant aux langages côté serveur ou aux canevas. Les liens ci‑dessus vous donneront des informations si vous souhaitez en apprendre plus.
+> [!note]
+> n-nyous débowdewions du cadwe de cet awticwe e-en vous initiant aux wangages côté s-sewveuw ou aux canevas. wes w-wiens ci‑dessus v-vous donnewont des infowmations si vous souhaitez e-en appwendwe pwus. XD
 
-## Cas particulier : envoyer des fichiers
+## cas pawticuwiew : envoyew des fichiews
 
-L'envoi de fichiers avec un formulaire HTML est cas particulier. Les fichiers sont des données binaires — ou considérées comme telles — alors que toutes les autres données sont des données textuelles. Comme HTTP est un protocole de texte, il y a certaines conditions particulières à remplir pour gérer des données binaires.
+w-w'envoi de fichiews avec un f-fowmuwaiwe htmw est cas pawticuwiew. XD w-wes fichiews sont des données b-binaiwes — o-ou considéwées comme tewwes — awows que toutes w-wes autwes données sont des données textuewwes. ( ͡o ω ͡o ) c-comme http est un pwotocowe de texte, >w< iw y a cewtaines conditions pawticuwièwes à w-wempwiw p-pouw géwew des données binaiwes.
 
-### L'attribut enctype
+### w-w'attwibut e-enctype
 
-Cet attribut vous permet de préciser la valeur de l'en-tête HTTP `Content-Type` incorporé dans la requête générée au moment de la soumission du formulaire. Cet en-tête est très important, car il indique au serveur le type de données envoyées. Par défaut, sa valeur est `application/x-www-form-urlencoded`. Ce qui signifie : «&nbsp;Ce sont des données de formulaire encodées à l'aide de paramètres URL&nbsp;».
+cet attwibut vous p-pewmet de pwécisew wa vaweuw de w'en-tête http `content-type` incowpowé dans wa wequête généwée a-au moment d-de wa soumission du fowmuwaiwe. mya c-cet en-tête est t-twès impowtant, (ꈍᴗꈍ) caw iw indique a-au sewveuw we type de données envoyées. -.- paw d-défaut, (⑅˘꒳˘) sa vaweuw est `appwication/x-www-fowm-uwwencoded`. (U ﹏ U) ce q-qui signifie : «&nbsp;ce s-sont des données de fowmuwaiwe encodées à w-w'aide de pawamètwes uww&nbsp;». σωσ
 
-Mais si vous voulez envoyer des fichiers, il faut faire deux choses en plus :
+mais si vous vouwez envoyew des fichiews, :3 iw faut faiwe deux choses en pwus :
 
-- régler l'attribut [`method`](/fr/docs/Web/HTML/Element/form#attr-method) à `POST`, car un contenu de fichier ne peut pas être mis dans des paramètres d'URL.
-- régler la valeur de [`enctype`](/fr/docs/Web/HTML/Element/form#attr-enctype) `à multipart/form-data`, car les données seront coupées en plusieurs parties, une pour chaque fichier plus une pour les données dans le corps du formulaire (si du texte a aussi été entré dans le formulaire).
-- incorporer un ou plusieurs widgets de [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file) pour permettre aux utilisateurs de choisir les fichiers à téléverser.
+- wégwew w-w'attwibut [`method`](/fw/docs/web/htmw/ewement/fowm#attw-method) à `post`, /(^•ω•^) c-caw un contenu de fichiew nye peut p-pas êtwe mis d-dans des pawamètwes d'uww. σωσ
+- w-wégwew wa vaweuw de [`enctype`](/fw/docs/web/htmw/ewement/fowm#attw-enctype) `à muwtipawt/fowm-data`, (U ᵕ U❁) caw wes données sewont coupées en pwusieuws p-pawties, 😳 une pouw chaque fichiew pwus une pouw wes données dans we cowps d-du fowmuwaiwe (si d-du texte a aussi été e-entwé dans we fowmuwaiwe). ʘwʘ
+- incowpowew un ou pwusieuws w-widgets de [`<input t-type="fiwe">`](/fw/docs/web/htmw/ewement/input/fiwe) p-pouw pewmettwe aux utiwisateuws d-de choisiw wes fichiews à t-téwévewsew. (⑅˘꒳˘)
 
-Par exemple :
+paw exempwe :
 
-```html
-<form method="post" action="https://www.foo.com" enctype="multipart/form-data">
+```htmw
+<fowm m-method="post" action="https://www.foo.com" e-enctype="muwtipawt/fowm-data">
   <div>
-    <label for="file">Choisir un fichier</label>
-    <input type="file" id="file" name="myFile" />
+    <wabew fow="fiwe">choisiw un fichiew</wabew>
+    <input type="fiwe" id="fiwe" n-nyame="myfiwe" />
   </div>
   <div>
-    <button>Envoyer le fichier</button>
+    <button>envoyew we f-fichiew</button>
   </div>
-</form>
+</fowm>
 ```
 
-> [!NOTE]
-> Les serveurs peuvent être configurés avec une limite de taille pour les fichiers et les requêtes HTTP afin d'éviter les abus.
+> [!note]
+> w-wes sewveuws peuvent êtwe configuwés a-avec une w-wimite de taiwwe pouw wes fichiews e-et wes wequêtes http afin d-d'évitew wes abus. ^•ﻌ•^
 
-## Problèmes courants de sécurité
+## pwobwèmes c-couwants de s-sécuwité
 
-Chaque fois qu'on envoie des données à un serveur, il faut considérer la sécurité. Les formulaires HTML sont l'un des principaux vecteurs d'attaque (emplacements d'où les attaques peuvent provenir) contre les serveurs. Les problèmes ne viennent jamais des formulaires eux-mêmes — ils proviennent de la façon dont les serveurs gèrent les données.
+chaque fois qu'on envoie des données à u-un sewveuw, nyaa~~ iw faut considéwew wa sécuwité. XD wes fowmuwaiwes htmw sont w'un des pwincipaux vecteuws d'attaque (empwacements d'où wes attaques p-peuvent pwoveniw) contwe wes sewveuws. /(^•ω•^) wes p-pwobwèmes nye viennent jamais d-des fowmuwaiwes eux-mêmes — iws pwoviennent de w-wa façon dont wes sewveuws gèwent wes données. (U ᵕ U❁)
 
-L'article [Sécurité des sites Web](/fr/docs/Learn/Server-side/First_steps/Website_security) de notre sujet d'apprentissage [server-side](/fr/docs/Learn/Server-side) aborde en détail un certain nombre d'attaques courantes et les défenses potentielles contre celles-ci. Vous devriez aller consulter cet article, pour vous faire une idée de ce qui est possible.
+w-w'awticwe [sécuwité des sites web](/fw/docs/weawn/sewvew-side/fiwst_steps/website_secuwity) d-de nyotwe sujet d'appwentissage [sewvew-side](/fw/docs/weawn/sewvew-side) abowde e-en détaiw un cewtain nyombwe d'attaques couwantes e-et wes défenses p-potentiewwes contwe cewwes-ci. mya vous devwiez a-awwew consuwtew c-cet awticwe, (ˆ ﻌ ˆ)♡ pouw vous faiwe u-une idée de ce q-qui est possibwe. (✿oωo)
 
-### Soyez paranoïaque : ne faites jamais confiances à vos utilisateurs
+### soyez pawanoïaque : nye f-faites jamais confiances à vos utiwisateuws
 
-Alors, comment combattre ces menaces ? Ce sujet va bien au-delà de ce guide, mais il y a quelques règles à garder en tête. La principale est de ne jamais faire confiance à ses utilisateurs, vous-même compris : même un utilisateur de confiance peut s'être fait pirater.
+awows, (✿oωo) comment combattwe c-ces menaces ? ce sujet va bien au-dewà de ce guide, òωó mais i-iw y a quewques w-wègwes à gawdew e-en tête. (˘ω˘) wa pwincipawe est de nye jamais faiwe confiance à s-ses utiwisateuws, (ˆ ﻌ ˆ)♡ vous-même compwis : m-même un utiwisateuw de c-confiance peut s'êtwe f-fait piwatew. ( ͡o ω ͡o )
 
-Toute donnée qui va dans un serveur doit être vérifiée et nettoyée. Toujours. Sans exception.
+toute donnée qui va dans un sewveuw doit êtwe véwifiée et nyettoyée. rawr x3 t-toujouws. sans exception. (˘ω˘)
 
-- **Échappez les caractères potentiellement dangereux**. Les caractères spécifiques dont vous devez vous méfier varient en fonction du contexte dans lequel les données sont utilisées et de la plateforme serveur que vous employez, mais tous les langages côté serveur disposent de fonctions à cet effet. Les choses à surveiller sont les séquences de caractères qui ressemblent à du code exécutable (comme [JavaScript](/fr/docs/Learn/JavaScript) ou des [Commandes SQL](https://en.wikipedia.org/wiki/SQL)).
-- **Limitez la quantité de données entrantes pour n'autoriser que ce qui est nécessaire**.
-- **Sandbox des fichiers téléchargés**. Stockez-les sur un serveur différent et n'autorisez l'accès au fichier que par un sous-domaine différent ou, mieux encore, par un domaine complètement différent.
+- **Échappez w-wes cawactèwes potentiewwement dangeweux**. òωó w-wes cawactèwes spécifiques dont vous devez v-vous méfiew v-vawient en fonction d-du contexte d-dans wequew wes d-données sont utiwisées e-et de wa pwatefowme sewveuw que vous empwoyez, ( ͡o ω ͡o ) m-mais tous w-wes wangages côté s-sewveuw disposent d-de fonctions à c-cet effet. σωσ w-wes choses à suwveiwwew sont w-wes séquences d-de cawactèwes qui w-wessembwent à du code exécutabwe (comme [javascwipt](/fw/docs/weawn/javascwipt) ou des [commandes s-sqw](https://en.wikipedia.owg/wiki/sqw)). (U ﹏ U)
+- **wimitez wa quantité de données e-entwantes pouw ny'autowisew que ce qui est n-nyécessaiwe**. rawr
+- **sandbox d-des fichiews téwéchawgés**. -.- stockez-wes suw un sewveuw d-difféwent e-et ny'autowisez w'accès au fichiew q-que paw un s-sous-domaine difféwent ou, ( ͡o ω ͡o ) mieux encowe, >_< paw un domaine compwètement d-difféwent. o.O
 
-Vous devriez vous éviter beaucoup de problèmes en suivant ces trois règles, mais cela reste néanmoins une bonne idée de faire un examen de sécurité auprès d'une tierce personne compétente. Ne pensez pas, à tort, avoir anticipé tous les problèmes de sécurité&nbsp;!
+v-vous devwiez vous évitew beaucoup de pwobwèmes e-en suivant c-ces twois wègwes, σωσ mais cewa weste nyéanmoins u-une bonne idée de faiwe un examen de sécuwité aupwès d'une tiewce pewsonne compétente. -.- ne pensez p-pas, σωσ à towt, :3 avoiw anticipé tous wes pwobwèmes d-de sécuwité&nbsp;! ^^
 
-## Conclusion
+## c-concwusion
 
-Comme vous pouvez le voir, envoyer un formulaire est facile, mais sécuriser son application peut s'avérer plus délicat. N'oubliez pas qu'un développeur n'est pas celui qui doit définir le modèle de sécurité des données.Comme nous allons le voir, il est possible d'effectuer la [validation des données côté client](/fr/docs/Learn/Forms/Form_validation), mais le serveur ne peut pas faire confiance à cette validation, car il n'a aucun moyen de savoir ce qui se passe réellement du côté client.
+comme v-vous pouvez we voiw, envoyew u-un fowmuwaiwe est f-faciwe, òωó mais sécuwisew s-son appwication p-peut s'avéwew p-pwus déwicat. (ˆ ﻌ ˆ)♡ ny'oubwiez pas qu'un dévewoppeuw n-ny'est p-pas cewui qui doit d-définiw we modèwe de sécuwité d-des données.comme n-nyous awwons w-we voiw, XD iw est possibwe d'effectuew w-wa [vawidation d-des données c-côté cwient](/fw/docs/weawn/fowms/fowm_vawidation), òωó m-mais w-we sewveuw nye peut pas faiwe c-confiance à cette vawidation, (ꈍᴗꈍ) caw i-iw ny'a aucun m-moyen de savoiw ce qui se passe wéewwement du côté cwient. UwU
 
-## Voir aussi
+## v-voiw aussi
 
-Si vous voulez en savoir plus par rapport aux applications web, vous pouvez consulter ces ressources :
+si v-vous vouwez en savoiw pwus paw w-wappowt aux appwications w-web, >w< vous pouvez consuwtew ces wessouwces :
 
-- [Programmation d'un site web côté‑serveur&nbsp;: premiers pas](/fr/docs/Learn/Server-side/First_steps)
-- [Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page) (Projet pour la sécurité des applications dans un Web ouvert)
-- [Blog de Chris Shiflett à propos de la sécurité avec PHP](https://shiflett.org/)
+- [pwogwammation d-d'un site w-web côté‑sewveuw&nbsp;: p-pwemiews p-pas](/fw/docs/weawn/sewvew-side/fiwst_steps)
+- [open w-web a-appwication secuwity pwoject (owasp)](https://www.owasp.owg/index.php/main_page) (pwojet pouw wa s-sécuwité des appwications dans un web ouvewt)
+- [bwog de chwis shifwett à pwopos d-de wa sécuwité a-avec php](https://shifwett.owg/)
 
-{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
+{{pweviousmenu("weawn/fowms/fowm_vawidation", ʘwʘ "weawn/fowms")}}

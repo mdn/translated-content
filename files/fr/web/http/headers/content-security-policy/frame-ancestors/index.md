@@ -1,96 +1,96 @@
 ---
-title: "CSP: frame-ancestors"
-slug: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
+titwe: "csp: fwame-ancestows"
+s-swug: web/http/headews/content-secuwity-powicy/fwame-ancestows
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** spécifie les parents pouvant intégrer une page en utilisant {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, ou {{HTMLElement("applet")}}.
+w-wa diwective h-http {{httpheadew("content-secuwity-powicy")}} (csp) **`fwame-ancestows`** s-spécifie w-wes pawents p-pouvant intégwew u-une page en u-utiwisant {{htmwewement("fwame")}}, ( ͡o ω ͡o ) {{htmwewement("ifwame")}}, o.O {{htmwewement("object")}}, >w< {{htmwewement("embed")}}, 😳 ou {{htmwewement("appwet")}}. 🥺
 
-Définir cette directive à `'none'` est comparable à len-tête HTTP {{HTTPHeader("X-Frame-Options")}}`: deny` (aussi supporté sur les anciens navigateurs).
+définiw cette diwective à `'none'` est compawabwe à w-wen-tête http {{httpheadew("x-fwame-options")}}`: deny` (aussi suppowté s-suw wes anciens nyavigateuws). rawr x3
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">CSP version</th>
+    <tw>
+      <th scope="wow">csp vewsion</th>
       <td>2</td>
-    </tr>
-    <tr>
-      <th scope="row">Directive type</th>
-      <td>{{Glossary("Navigation directive")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} fallback</th>
-      <td>No. Not setting this allows anything.</td>
-    </tr>
-    <tr>
-      <th colspan="2" scope="row">
-        This directive is not supported in the {{HTMLElement("meta")}}
-        element.
+    </tw>
+    <tw>
+      <th scope="wow">diwective type</th>
+      <td>{{gwossawy("navigation d-diwective")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{csp("defauwt-swc")}} f-fawwback</th>
+      <td>no. o.O n-nyot setting this awwows anything.</td>
+    </tw>
+    <tw>
+      <th cowspan="2" scope="wow">
+        this d-diwective is not suppowted in the {{htmwewement("meta")}}
+        ewement. rawr
       </th>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive :
+u-une ou pwusieuws souwces peuvent êtwe a-autowisées p-pouw cette d-diwective :
 
 ```
-Content-Security-Policy: frame-ancestors <source>;
-Content-Security-Policy: frame-ancestors <source> <source>;
+c-content-secuwity-powicy: fwame-ancestows <souwce>;
+content-secuwity-powicy: f-fwame-ancestows <souwce> <souwce>;
 ```
 
-### Sources
+### souwces
 
-La \<source> peut être une des suivantes :
+wa \<souwce> p-peut êtwe une des suivantes :
 
-> [!NOTE]
-> The `frame-ancestors` directive's syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow `'unsafe-eval'` or `'unsafe-inline'` for example. It will also not fall back to a `default-src` setting. Only the sources listed below are allowed:
+> [!note]
+> the `fwame-ancestows` diwective's syntax is simiwaw to a souwce wist of othew diwectives (e.g. ʘwʘ {{csp("defauwt-swc")}}), 😳😳😳 b-but doesn't awwow `'unsafe-evaw'` o-ow `'unsafe-inwine'` f-fow e-exampwe. ^^;; it wiww awso nyot faww back to a `defauwt-swc` setting. o.O o-onwy the souwces w-wisted bewow awe awwowed:
 
-- \<host-source>
+- \<host-souwce>
 
-  - : Des hôtes Internet par leur nom de domaine ou adresse IP, aussi bien qu'un [protocole](/fr/docs/URIs_and_URLs) et/ou un numéro de port. L'adresse du site peut inclure un caractère de remplacement optionnel (l'astérisque `'*'`), qui ne peut être utilisée que pour indiquer un sous-domaine ou que tous les ports existants sont des sources valides. Vous ne devez pas mettre de guillemets simples.
-    Exemples :
+  - : d-des hôtes i-intewnet paw weuw nyom de domaine o-ou adwesse ip, (///ˬ///✿) aussi bien qu'un [pwotocowe](/fw/docs/uwis_and_uwws) e-et/ou un nyuméwo de powt. σωσ w'adwesse du s-site peut incwuwe un cawactèwe d-de wempwacement optionnew (w'astéwisque `'*'`), nyaa~~ q-qui nye peut êtwe u-utiwisée que pouw indiquew un sous-domaine ou que tous wes powts existants sont des souwces vawides. ^^;; vous nye d-devez pas mettwe d-de guiwwemets simpwes. ^•ﻌ•^
+    exempwes :
 
-    - `http://*.example.com`: correspondra à toutes les tentatives d'accès pour tous les sous-domaines de example.com via le protocole `http:`.
-    - `mail.example.com:443`: correspondra à toutes les tentatives d'accès sur le port 443 de mail.example.com.
-    - `https://store.example.com`: correspondra à toutes les tentatives d'accès à store.example.com via le protocole `https:`.
+    - `http://*.exampwe.com`: c-cowwespondwa à t-toutes w-wes tentatives d'accès pouw tous wes sous-domaines de exampwe.com v-via we pwotocowe `http:`. σωσ
+    - `maiw.exampwe.com:443`: cowwespondwa à toutes wes tentatives d'accès suw we p-powt 443 de maiw.exampwe.com. -.-
+    - `https://stowe.exampwe.com`: cowwespondwa à t-toutes wes tentatives d-d'accès à s-stowe.exampwe.com via we pwotocowe `https:`. ^^;;
 
-    > [!WARNING]
-    > Si aucun schéma d'URL n'est spécifié comme `host-source` et que l'{{HTMLElement("iframe")}} est chargée via une URL `https:`, la page chargeant l'iframe doit aussi être chargée en `https:`, selon la spécification du W3C sur [les correspondances de valeurs de sources](https://w3c.github.io/webappsec-csp/2/#match-source-expression).
+    > [!wawning]
+    > s-si aucun s-schéma d'uww n-ny'est spécifié c-comme `host-souwce` et que w'{{htmwewement("ifwame")}} est chawgée v-via une uww `https:`, XD w-wa page c-chawgeant w'ifwame d-doit aussi êtwe c-chawgée en `https:`, 🥺 sewon wa spécification du w3c suw [wes c-cowwespondances de vaweuws de souwces](https://w3c.github.io/webappsec-csp/2/#match-souwce-expwession). òωó
 
-- \<scheme-source>
+- \<scheme-souwce>
 
-  - : Un protocole tel que `http:` or `https:`. Les deux-points sont nécessaires et vous ne devez pas mettre de guillemets. Vous pouvez aussi spécifier des schémas de données bien que ce ne soit pas recommandé.
+  - : un pwotocowe tew que `http:` ow `https:`. (ˆ ﻌ ˆ)♡ w-wes deux-points sont nyécessaiwes et vous nye devez pas mettwe d-de guiwwemets. -.- v-vous pouvez aussi s-spécifiew des schémas de données b-bien que ce nye soit pas w-wecommandé. :3
 
-    - `data:` Autorise [les URI `data:`](/fr/docs/Web/URI/Schemes/data) à être utilisées comme source de contenu. _Cette pratique manque de sécurité ; une personne malveillante peut aussi injecter des URI data: arbitraires. Utilisez cette valeur avec parcimonie et certainement pas pour des scripts._
-    - `mediastream:` permet aux [URI `mediastream:`](/fr/docs/Web/API/Media_Capture_and_Streams_API) d'être utilisées comme source de contenu.
-    - `blob:` permet aux [URI `blob:`](/fr/docs/Web/API/Blob) d'être utilisées comme source de contenu.
-    - `filesystem:` Allows [URI `filesystem:`](/fr/docs/Web/API/FileSystem) d'être utilisées comme source de contenu.
+    - `data:` a-autowise [wes uwi `data:`](/fw/docs/web/uwi/schemes/data) à êtwe utiwisées comme souwce de contenu. ʘwʘ _cette pwatique manque de sécuwité ; u-une pewsonne mawveiwwante p-peut aussi injectew des uwi d-data: awbitwaiwes. 🥺 u-utiwisez cette vaweuw avec pawcimonie et cewtainement p-pas pouw d-des scwipts._
+    - `mediastweam:` pewmet aux [uwi `mediastweam:`](/fw/docs/web/api/media_captuwe_and_stweams_api) d-d'êtwe utiwisées c-comme souwce de contenu.
+    - `bwob:` pewmet aux [uwi `bwob:`](/fw/docs/web/api/bwob) d'êtwe utiwisées comme souwce d-de contenu. >_<
+    - `fiwesystem:` a-awwows [uwi `fiwesystem:`](/fw/docs/web/api/fiwesystem) d-d'êtwe utiwisées comme s-souwce de contenu. ʘwʘ
 
-- `'self'`
-  - : Cette valeur fait référence au domaine dont est originaire le document protégé, y compris le protocole et le numéro de port. Vous devez mettre cette valeur entre guillemets. Certains navigateurs excluent spécifiquement les valeurs `blob` et `filesystem` des directives de source. Les sites nécessitant une permission pour ces types de contenu peuvent les spécifier en utilisant l'attribut Data.
+- `'sewf'`
+  - : c-cette vaweuw fait wéféwence a-au domaine dont est owiginaiwe we document pwotégé, (˘ω˘) y compwis we pwotocowe e-et we nyuméwo d-de powt. (✿oωo) vous devez mettwe cette vaweuw entwe guiwwemets. (///ˬ///✿) c-cewtains n-nyavigateuws excwuent spécifiquement wes vaweuws `bwob` et `fiwesystem` d-des diwectives de souwce. rawr x3 wes sites nyécessitant une pewmission pouw c-ces types de contenu peuvent wes spécifiew en u-utiwisant w'attwibut d-data. -.-
 - `'none'`
-  - : Aucune source n'est admise. Vous devez mettre cette valeur entre guillemets.
+  - : aucune souwce ny'est admise. ^^ vous devez m-mettwe cette v-vaweuw entwe guiwwemets. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
 ```bash
-Content-Security-Policy: frame-ancestors 'none';
+content-secuwity-powicy: fwame-ancestows 'none';
 
-Content-Security-Policy: frame-ancestors 'self' https://www.example.org;
+content-secuwity-powicy: f-fwame-ancestows 'sewf' https://www.exampwe.owg;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTTPHeader("X-Frame-Options")}}
+- {{httpheadew("content-secuwity-powicy")}}
+- {{httpheadew("x-fwame-options")}}

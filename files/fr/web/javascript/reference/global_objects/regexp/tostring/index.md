@@ -1,78 +1,78 @@
 ---
-title: RegExp.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
+titwe: wegexp.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`toString()`** renvoie une chaîne de caractères représentant l'expression rationnelle.
+w-wa méthode **`tostwing()`** w-wenvoie une chaîne d-de cawactèwes w-wepwésentant w-w'expwession wationnewwe. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.toString()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: w-wegexp.pwototype.tostwing()", "tawwew")}}
 
-```js interactive-example
-console.log(new RegExp("a+b+c"));
-// Expected output: /a+b+c/
+```js i-intewactive-exampwe
+consowe.wog(new wegexp("a+b+c"));
+// expected output: /a+b+c/
 
-console.log(new RegExp("a+b+c").toString());
-// Expected output: "/a+b+c/"
+c-consowe.wog(new wegexp("a+b+c").tostwing());
+// expected o-output: "/a+b+c/"
 
-console.log(new RegExp("bar", "g").toString());
-// Expected output: "/bar/g"
+consowe.wog(new w-wegexp("baw", ^^ "g").tostwing());
+// expected output: "/baw/g"
 
-console.log(new RegExp("\n", "g").toString());
-// Expected output (if your browser supports escaping): "/\n/g"
+consowe.wog(new w-wegexp("\n", :3 "g").tostwing());
+// expected output (if y-youw bwowsew s-suppowts escaping): "/\n/g"
 
-console.log(new RegExp("\\n", "g").toString());
-// Expected output: "/\n/g"
+consowe.wog(new wegexp("\\n", -.- "g").tostwing());
+// expected output: "/\n/g"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-regexObj.toString();
+w-wegexobj.tostwing();
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères représentant l'expression rationnelle appelante.
+une chaîne de cawactèwes wepwésentant w'expwession w-wationnewwe appewante. 😳
 
-## Description
+## d-descwiption
 
-L'objet {{jsxref("RegExp")}} surcharge la méthode `toString` de l'objet {{jsxref("Object")}}. Il n'hérite donc pas de {{jsxref("Object.prototype.toString()")}}. Pour les objets `RegExp`, la méthode `toString()` renvoie une représentation de l'expression rationnelle sous la forme d'une chaîne de caractères.
+w-w'objet {{jsxwef("wegexp")}} s-suwchawge wa méthode `tostwing` d-de w'objet {{jsxwef("object")}}. mya iw ny'héwite donc pas de {{jsxwef("object.pwototype.tostwing()")}}. (˘ω˘) p-pouw wes objets `wegexp`, >_< wa méthode `tostwing()` w-wenvoie une wepwésentation de w'expwession wationnewwe sous wa fowme d'une chaîne de c-cawactèwes. -.-
 
-## Exemples
+## exempwes
 
-### Utiliser `toString()`
+### u-utiwisew `tostwing()`
 
-L'exemple qui suit affiche la chaîne correspondant à la valeur de l'objet {{jsxref("Global_Objects/RegExp", "RegExp")}} :
+w-w'exempwe q-qui suit affiche wa chaîne cowwespondant à wa vaweuw de w'objet {{jsxwef("gwobaw_objects/wegexp", 🥺 "wegexp")}} :
 
 ```js
-var maRegExp = new RegExp("a+b+c");
-console.log(maRegExp.toString()); // affiche "/a+b+c/"
+v-vaw mawegexp = n-nyew wegexp("a+b+c");
+consowe.wog(mawegexp.tostwing()); // affiche "/a+b+c/"
 
-var toto = new RegExp("truc", "g");
-console.log(toto.toString()); // affiche "/truc/g"
+v-vaw toto = n-nyew wegexp("twuc", (U ﹏ U) "g");
+consowe.wog(toto.tostwing()); // a-affiche "/twuc/g"
 ```
 
-### Les expressions ratonnelles vides et l'échappement
+### wes expwessions w-watonnewwes vides et w'échappement
 
-À partir d'ECMAScript 5, la méthode renvoie la chaîne `"(?:)"` pour les expressions vides. De plus, les fins de lignes (telles que "\n") sont désormais échappées.
+À pawtiw d'ecmascwipt 5, >w< w-wa méthode wenvoie wa chaîne `"(?:)"` pouw w-wes expwessions vides. mya de pwus, >w< w-wes fins de w-wignes (tewwes que "\n") sont désowmais échappées. nyaa~~
 
 ```js
-new RegExp().toString(); // "(?:)"
+nyew wegexp().tostwing(); // "(?:)"
 
-new RegExp("\n").toString() === "/\n/"; // true avant ES5
-new RegExp("\n").toString() === "/\\n/"; // true à partir d'ES5
+nyew wegexp("\n").tostwing() === "/\n/"; // twue avant es5
+nyew w-wegexp("\n").tostwing() === "/\\n/"; // t-twue à pawtiw d'es5
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

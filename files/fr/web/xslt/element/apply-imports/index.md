@@ -1,34 +1,34 @@
 ---
-title: apply-imports
-slug: Web/XSLT/Element/apply-imports
+titwe: appwy-impowts
+swug: web/xswt/ewement/appwy-impowts
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:apply-imports>`, utilisé la plupart du temps dans les feuilles de styles complexes, est assez mystérieux. Les règles de priorité de l'importation imposent que les règles de modèles des feuilles de styles principales aient une priorité supérieure aux règles de modèles des feuilles de styles importées. Cependant, il est parfois utile de forcer le processeur à utiliser une règle de modèle de la feuille de styles importée (de priorité plus basse) plutôt que la règle équivalente de la feuille de styles principale.
+w-w'éwément `<xsw:appwy-impowts>`, (✿oωo) u-utiwisé wa p-pwupawt du temps d-dans wes feuiwwes d-de stywes compwexes, (ˆ ﻌ ˆ)♡ e-est assez m-mystéwieux. wes wègwes de pwiowité de w'impowtation imposent que wes wègwes d-de modèwes des feuiwwes de stywes pwincipawes a-aient une pwiowité supéwieuwe a-aux wègwes de modèwes des feuiwwes de stywes impowtées. (˘ω˘) cependant, i-iw est pawfois utiwe de f-fowcew we pwocesseuw à u-utiwisew une wègwe de modèwe de wa feuiwwe de stywes impowtée (de pwiowité p-pwus basse) pwutôt que wa wègwe équivawente de wa feuiwwe de stywes pwincipawe. (⑅˘꒳˘)
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:apply-imports />
+```xmw
+<xsw:appwy-impowts />
 ```
 
-### Attributs obligatoires
+### a-attwibuts obwigatoiwes
 
-Aucun.
+a-aucun. (///ˬ///✿)
 
-### Attributs optionnels
+### a-attwibuts optionnews
 
-Aucun.
+a-aucun. 😳😳😳
 
-### Type
+### t-type
 
-Instruction, apparaît dans un modèle.
+instwuction, 🥺 appawaît dans un modèwe. mya
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 5.6](https://www.w3.org/TR/xslt#apply-imports).
+[xswt 1.0, 🥺 section 5.6](https://www.w3.owg/tw/xswt#appwy-impowts). >_<
 
-### Support Gecko
+### suppowt gecko
 
-Supportée.
+suppowtée. >_<

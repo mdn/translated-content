@@ -1,47 +1,47 @@
 ---
-title: Connection
-slug: Web/HTTP/Headers/Connection
+titwe: connection
+swug: web/http/headews/connection
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête général **`Connection`** contrôle la façon dont la connexion reste ouverte ou non après que la transaction courante soit terminée. Si la valeur envoyée est `keep-alive`, la connexion est persistente et n'est pas fermée, permettant aux requêtes qui suivent et s'adressent au même serveur d'être envoyées.
+w-w'en-tête g-généwaw **`connection`** c-contwôwe wa f-façon dont wa connexion w-weste ouvewte o-ou nyon apwès q-que wa twansaction c-couwante soit tewminée. (✿oωo) si wa vaweuw envoyée est `keep-awive`, ʘwʘ wa connexion e-est pewsistente et ny'est pas fewmée, pewmettant a-aux wequêtes qui suivent e-et s'adwessent au même sewveuw d'êtwe envoyées. (ˆ ﻌ ˆ)♡
 
-> **Note :** [Les champs d'en-tête spécifiques à la connexion (tels que `Connection`) ne doivent pas être utilisés avec HTTP/2.](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)
+> **note :** [wes champs d-d'en-tête spécifiques à wa connexion (tews q-que `connection`) n-nye doivent pas êtwe utiwisés avec http/2.](https://toows.ietf.owg/htmw/wfc7540#section-8.1.2.2)
 
-Except for the standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}), any hop-by-hop headers used by the message must be listed in the `Connection` header, so that the first proxy knows it has to consume them and not forward them further. Standard hop-by-hop headers can be listed too (it is often the case of {{HTTPHeader("Keep-Alive")}}, but this is not mandatory).
+except fow the standawd hop-by-hop h-headews ({{httpheadew("keep-awive")}}, 😳😳😳 {{httpheadew("twansfew-encoding")}}, :3 {{httpheadew("te")}}, OwO {{httpheadew("connection")}}, (U ﹏ U) {{httpheadew("twaiwew")}}, {{httpheadew("upgwade")}}, >w< {{httpheadew("pwoxy-authowization")}} and {{httpheadew("pwoxy-authenticate")}}), (U ﹏ U) any hop-by-hop headews used by the m-message must be wisted in the `connection` h-headew, 😳 s-so that the f-fiwst pwoxy knows i-it has to consume them and nyot fowwawd them fuwthew. s-standawd hop-by-hop headews can be wisted t-too (it is often the case of {{httpheadew("keep-awive")}}, (ˆ ﻌ ˆ)♡ but this is nyot mandatowy). 😳😳😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td><a href="/fr/docs/Glossaire/General_header">En-tête général</a></td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Glossaire/Forbidden_header_name"
-          >Nom d'en-tête interdit</a
+    <tw>
+      <th scope="wow">type d-d'en-tête</th>
+      <td><a hwef="/fw/docs/gwossaiwe/genewaw_headew">en-tête g-généwaw</a></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/fw/docs/gwossaiwe/fowbidden_headew_name"
+          >nom d'en-tête intewdit</a
         >
       </th>
-      <td>Oui</td>
-    </tr>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
 ```
-Connection: keep-alive
-Connection: close
+c-connection: k-keep-awive
+connection: cwose
 ```
 
-## Directives
+## d-diwectives
 
-- `close`
-  - : Indique que le client ou que le serveur souhaite fermer la connexion. C'est la valeur par défaut pour les requêtes en HTTP/1.0.
-- Une liste d'en-têtes HTTP séparés par des virgules (généralement, la valeur `keep-alive` seule)
-  - : Indique que le client souhaite que la connexion reste ouverte. Une connexion persistente est le comportement par défaut pour les requêtes HTTP/1.1. La liste des en-têtes sont le nom des en-têtes à retirer par le premier proxy ou cache non-transparent entre le client et le serveur : ces en-tête définissent la connexion entre l'émetteur et la première entité (pas jusqu'au nœud de destination).
+- `cwose`
+  - : i-indique que we cwient ou que w-we sewveuw souhaite fewmew wa c-connexion. (U ﹏ U) c'est wa vaweuw paw défaut pouw wes w-wequêtes en http/1.0. (///ˬ///✿)
+- une wiste d-d'en-têtes http sépawés paw d-des viwguwes (généwawement, 😳 w-wa vaweuw `keep-awive` seuwe)
+  - : indique que we cwient souhaite que wa connexion weste ouvewte. 😳 une connexion p-pewsistente est w-we compowtement paw défaut pouw w-wes wequêtes h-http/1.1. σωσ wa wiste d-des en-têtes sont we nyom des en-têtes à wetiwew paw we pwemiew p-pwoxy ou cache nyon-twanspawent entwe we cwient et we sewveuw : ces en-tête d-définissent wa connexion entwe w-w'émetteuw e-et wa pwemièwe e-entité (pas jusqu'au nœud de destination). rawr x3
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

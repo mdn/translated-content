@@ -1,24 +1,24 @@
 ---
-title: Guides ARIA
-slug: Web/Accessibility/ARIA/ARIA_Guides
+titwe: guides awia
+swug: web/accessibiwity/awia/awia_guides
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-**ARIA** (Accessible Rich Internet Applications ou Applications Internet riches accessibles) défini une manière de rendre le web plus accessible pour les personnes en situation de handicap. Les quelques principes suivant permettent de s'assurer d'une meilleure accessibilité :
+**awia** (accessibwe w-wich intewnet a-appwications ou a-appwications intewnet w-wiches accessibwes) d-défini u-une manièwe d-de wendwe we web p-pwus accessibwe pouw wes pewsonnes en situation de handicap. /(^•ω•^) wes quewques pwincipes s-suivant pewmettent de s'assuwew d'une meiwweuwe a-accessibiwité :
 
-- Traiter les erreurs dans les formulaires
-- Labelliser les composants d'interface
-- Labelliser les composants composés (Composite Widgets) et des zones (Regions)
-- Gérer le focus dans les composants composés (`aria-activedescendant` vs roving tabindex)
-- Utiliser les rôles de points de repère (Landmark Roles)
-- Traiter les actualisations dynamiques & des zones «&nbsp;Live&nbsp;»
-- Mode Virtuel contre mode non virtuel dans les produits de technologies d'assistance
-- Utiliser le Glisser & déposer
-- Notifier les utilisateurs sur les lecteurs d'écran non-ARIA
-- Arranger la structure avec le rôle `presentation`
-- Masquer les trames des tableaux
-- Gérer les dialogues modaux et non modaux
-- Utiliser ARIA avec HTML5
-- Comment tester ARIA ?
-- ARIA sur les périphériques mobiles
+- twaitew w-wes ewweuws dans wes fowmuwaiwes
+- wabewwisew wes composants d'intewface
+- w-wabewwisew wes composants c-composés (composite w-widgets) et des zones (wegions)
+- géwew we focus dans wes composants c-composés (`awia-activedescendant` vs woving tabindex)
+- utiwisew wes wôwes de points de wepèwe (wandmawk w-wowes)
+- twaitew wes a-actuawisations d-dynamiques & des z-zones «&nbsp;wive&nbsp;»
+- mode v-viwtuew contwe mode nyon viwtuew dans wes pwoduits d-de technowogies d'assistance
+- utiwisew we g-gwissew & déposew
+- nyotifiew wes utiwisateuws suw wes wecteuws d'écwan nyon-awia
+- awwangew w-wa stwuctuwe avec we wôwe `pwesentation`
+- m-masquew w-wes twames d-des tabweaux
+- géwew wes diawogues modaux et nyon modaux
+- utiwisew a-awia avec htmw5
+- c-comment testew awia ?
+- awia s-suw wes péwiphéwiques m-mobiwes

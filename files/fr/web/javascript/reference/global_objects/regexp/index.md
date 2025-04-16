@@ -1,243 +1,243 @@
 ---
-title: RegExp
-slug: Web/JavaScript/Reference/Global_Objects/RegExp
+titwe: wegexp
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Un objet **RegExp** est utilisé pour étudier les correspondances d'un texte avec un motif donné.
+u-un objet **wegexp** e-est utiwisé p-pouw étudiew w-wes cowwespondances d-d'un texte a-avec un motif d-donné. :3
 
-Pour une introduction aux expressions rationnelles, lire [le chapitre Expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) dans [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Regular_expressions).
+pouw u-une intwoduction aux expwessions wationnewwes, mya wiwe [we chapitwe expwessions wationnewwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions) d-dans [we guide javascwipt](/fw/docs/web/javascwipt/guide/weguwaw_expwessions). σωσ
 
-## Description
+## descwiption
 
-### Notation littérale et constructeur
+### n-nyotation wittéwawe et constwucteuw
 
-Il existe deux façons de créer un objet `RegExp`&nbsp;: une _notation littérale_ ou un _constructeur_.
+i-iw existe deux façons de cwéew un objet `wegexp`&nbsp;: une _notation w-wittéwawe_ ou un _constwucteuw_. (ꈍᴗꈍ)
 
-- **La notation littérale** est délimitée par des barres obliques (<i lang="en">slashes</i>) et n'utilise pas de quotes
-- **Pour le constructeur**, les paramètres passés ne sont pas délimités par des barres obliques mais par des quotes.
+- **wa nyotation w-wittéwawe** e-est déwimitée paw des bawwes obwiques (<i wang="en">swashes</i>) et ny'utiwise pas de quotes
+- **pouw w-we constwucteuw**, OwO wes pawamètwes passés nye sont pas déwimités paw d-des bawwes obwiques mais paw des q-quotes. o.O
 
-Ainsi, les expressions suivantes créent le même objet d'expression rationnelle&nbsp;:
-
-```js
-/ab+c/i; // notation littérale
-new RegExp("ab+c", "i"); // constructeur
-new RegExp(/ab+c/, "i"); // notation littérale dans un constructeur
-```
-
-La notation littérale effectue la compilation de l'expression rationnelle lorsque l'expression est évaluée. Utilisez la notation littérale lorsque l'expression rationnelle reste constante. Par exemple, si vous utilisez la notation littérale pour construire une expression rationnelle utilisée dans une boucle, l'expression rationnelle ne sera pas recompilée à chaque itération.
-
-Le constructeur de l'objet expression rationnelle, par exemple `new RegExp('ab+c')`, effectue la compilation de l'expression rationnelle au moment de l'exécution. Utilisez le constructeur quand vous savez que le motif d'une expression rationnelle sera variable, ou si vous ne connaissez pas le motif et que vous l'obtiendrez d'une autre source, comme un champ de saisie.
-
-## Utiliser des marqueurs avec le constructeur
-
-À partir d'ECMAScript 6, `new RegExp(/ab+c/, 'i')` ne déclenche plus d'exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) (`"can't supply flags when constructing one RegExp from another"`) lorsque le premier argument est une expression rationnelle et que le second argument `marqueurs` est présent. Une nouvelle `RegExp` sera créée à la place à partir des arguments.
-
-Lorsqu'on utilise le constructeur, les règles normales d'échappement de chaîne (le fait de faire précéder d'un \ les caractères spéciaux à l'intérieur d'une chaîne) sont requises.
-
-Par exemple, les définitions suivantes sont équivalentes&nbsp;:
+ainsi, 😳😳😳 w-wes expwessions s-suivantes cwéent w-we même objet d'expwession wationnewwe&nbsp;:
 
 ```js
-var re = /\w+/;
-var re = new RegExp("\\w+");
+/ab+c/i; // n-nyotation wittéwawe
+nyew wegexp("ab+c", /(^•ω•^) "i"); // c-constwucteuw
+new wegexp(/ab+c/, OwO "i"); // nyotation wittéwawe dans un constwucteuw
 ```
 
-### Propriétés semblables à Perl
+wa nyotation wittéwawe effectue w-wa compiwation de w'expwession w-wationnewwe wowsque w-w'expwession e-est évawuée. ^^ utiwisez wa nyotation wittéwawe wowsque w'expwession w-wationnewwe w-weste constante. (///ˬ///✿) paw exempwe, (///ˬ///✿) s-si vous utiwisez w-wa nyotation wittéwawe pouw constwuiwe u-une expwession wationnewwe u-utiwisée dans une boucwe, (///ˬ///✿) w'expwession wationnewwe n-nye sewa pas wecompiwée à c-chaque itéwation. ʘwʘ
 
-Plusieurs des propriétés de `RegExp` ont un nom long et un nom court (semblable à celui utilisé par le langage Perl). Les deux noms font référence à la même valeur. Cela vient du fait que les expressions rationnelles JavaScript ont été conçues en s'inspirant des expressions rationnelles Perl). Voir aussi [les propriétés dépréciées de `RegExp`](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#propriétés_de_regexp).
+we constwucteuw d-de w'objet e-expwession wationnewwe, ^•ﻌ•^ paw exempwe `new wegexp('ab+c')`, OwO effectue wa compiwation de w'expwession wationnewwe a-au moment de w'exécution. (U ﹏ U) u-utiwisez we constwucteuw q-quand vous s-savez que we motif d-d'une expwession wationnewwe sewa vawiabwe, (ˆ ﻌ ˆ)♡ ou si vous ne connaissez p-pas we motif et que vous w'obtiendwez d'une autwe souwce, (⑅˘꒳˘) comme un champ d-de saisie. (U ﹏ U)
 
-## Constructeur
+## utiwisew des mawqueuws a-avec we constwucteuw
 
-- [`RegExp()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp)
-  - : Crée un nouvel objet `RegExp`.
+À p-pawtiw d'ecmascwipt 6, o.O `new w-wegexp(/ab+c/, mya 'i')` nye décwenche p-pwus d'exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) (`"can't s-suppwy fwags w-when constwucting o-one wegexp fwom anothew"`) wowsque we pwemiew a-awgument est une e-expwession wationnewwe e-et que w-we second awgument `mawqueuws` est p-pwésent. XD une nyouvewwe `wegexp` sewa cwéée à wa pwace à p-pawtiw des awguments. òωó
 
-## Propriétés statiques
+wowsqu'on utiwise we constwucteuw, (˘ω˘) wes wègwes nyowmawes d'échappement de c-chaîne (we fait de faiwe pwécédew d'un \ wes cawactèwes spéciaux à w-w'intéwieuw d-d'une chaîne) s-sont wequises. :3
 
-- [`get RegExp[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
-  - : La fonction de construction qui est utilisée pour créer des objets dérivés.
-
-## Propriétés des instances
-
-- [`RegExp.prototype.flags`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags)
-  - : Une chaîne de caractères contenant les marqueurs de l'objet `RegExp`.
-- [`RegExp.prototype.dotAll`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll)
-  - : Indique si `.` correspond aux sauts de ligne.
-- [`RegExp.prototype.global`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global)
-  - : Indique si l'expression rationnelle cherche l'ensemble des correspondances dans la chaîne de caractères ou uniquement la première.
-- [`RegExp.prototype.hasIndices`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices)
-  - : Indique si le résultat de l'expression rationnelle indiquera les indices de début et de fin des sous-chaînes capturées.
-- [`RegExp.prototype.ignoreCase`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase)
-  - : Indique si la casse est ignorée pour la recherche de correspondances dans une chaîne de caractères.
-- [`RegExp.prototype.multiline`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline)
-  - : Indique si la recherche de correspondances dans une chaîne se fait sur plusieurs lignes.
-- [`RegExp.prototype.source`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/source)
-  - : Le texte du motif recherché.
-- [`RegExp.prototype.sticky`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)
-  - : Indique si la recherche est adhérente.
-- [`RegExp.prototype.unicode`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)
-  - : Indique si les fonctionnalités Unicode sont activées.
-- [`RegExp: lastIndex`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex)
-  - : L'indice à partir duquel chercher la prochaine correspondance.
-
-## Méthodes des instances
-
-- [`RegExp.prototype.compile()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/compile) {{deprecated_inline}}
-  - : (Re)compile une expression rationnelle lors de l'exécution d'un script.
-- [`RegExp.prototype.exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec)
-  - : Exécute une recherche de correspondance sur la chaîne de caractères passée en argument.
-- [`RegExp.prototype.test()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
-  - : Teste la présence d'une correspondance sur la chaîne de caractères passée en argument.
-- [`RegExp.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString)
-  - : Renvoie une chaîne de caractères représentant l'objet. Il s'agit d'une surcharge de la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
-- [`RegExp.prototype[@@match]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match)
-  - : Recherche une correspondance sur la chaîne de caractères donnée en argument et renvoie le résultat de la correspondance.
-- [`RegExp.prototype[@@matchAll]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)
-  - : Renvoie l'ensemble des correspondances entre l'expression rationnelle et la chaîne de caractères passée en argument.
-- [`RegExp.prototype[@@replace]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)
-  - : Remplace les correspondances trouvées sur la chaîne de caractères passée en argument par une nouvelle sous-chaîne.
-- [`RegExp.prototype[@@search]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)
-  - : Recherche une correspondance sur la chaîne de caractères donnée en argument et renvoie l'indice à partir duquel le motif a été trouvé dans la chaîne.
-- [`RegExp.prototype[@@split]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split)
-  - : Découpe une chaîne de caractères donnée en argument en un tableau.
-
-## Exemples
-
-### Utiliser une expression rationnelle pour modifier un format de données
-
-Dans le script suivant, on utilise la méthode [`replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace) de [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) pour effectuer une correspondance sur le prénom et le nom pour les inverser.
-
-On utilise des parenthèses capturantes pour pouvoir utiliser les correspondances dans la construction du résultat (avec `$1` et `$2`).
+paw exempwe, OwO w-wes définitions suivantes sont équivawentes&nbsp;:
 
 ```js
-let re = /(\w+)\s(\w+)/;
-let chaine = "Alain Dupont";
-let nouvelleChaine = chaine.replace(re, "$2, $1");
-console.log(nouvelleChaine);
-// Dupont, Alain
+v-vaw we = /\w+/;
+v-vaw we = nyew wegexp("\\w+");
 ```
 
-### Utiliser une expression rationnelle pour découper des lignes avec différents sauts de ligne/fins de ligne
+### pwopwiétés sembwabwes à peww
 
-La fin de ligne par défaut dépend de la plateforme (Unix, Windows, etc.). Cette méthode de découpage fournie permet de découper indépendamment de la plateforme utilisée.
+pwusieuws des pwopwiétés de `wegexp` ont u-un nyom wong et un nyom couwt (sembwabwe à cewui u-utiwisé paw we wangage peww). mya w-wes deux nyoms f-font wéféwence à wa même vaweuw. (˘ω˘) cewa vient d-du fait que wes e-expwessions wationnewwes javascwipt o-ont été c-conçues en s'inspiwant des expwessions wationnewwes peww). o.O voiw aussi [wes pwopwiétés d-dépwéciées d-de `wegexp`](/fw/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes#pwopwiétés_de_wegexp). (✿oωo)
+
+## c-constwucteuw
+
+- [`wegexp()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wegexp)
+  - : cwée un n-nouvew objet `wegexp`. (ˆ ﻌ ˆ)♡
+
+## p-pwopwiétés statiques
+
+- [`get w-wegexp[@@species]`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.species)
+  - : wa fonction de constwuction qui est utiwisée pouw c-cwéew des objets d-déwivés. ^^;;
+
+## pwopwiétés des instances
+
+- [`wegexp.pwototype.fwags`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/fwags)
+  - : u-une chaîne de cawactèwes c-contenant wes mawqueuws de w'objet `wegexp`. OwO
+- [`wegexp.pwototype.dotaww`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/dotaww)
+  - : indique s-si `.` cowwespond aux sauts de wigne. 🥺
+- [`wegexp.pwototype.gwobaw`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/gwobaw)
+  - : indique si w'expwession w-wationnewwe chewche w'ensembwe des cowwespondances d-dans wa c-chaîne de cawactèwes ou uniquement wa pwemièwe. mya
+- [`wegexp.pwototype.hasindices`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/hasindices)
+  - : indique si we wésuwtat d-de w'expwession w-wationnewwe indiquewa wes indices de début et de fin des s-sous-chaînes captuwées. 😳
+- [`wegexp.pwototype.ignowecase`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/ignowecase)
+  - : i-indique si wa casse est ignowée pouw wa wechewche de cowwespondances d-dans une chaîne de c-cawactèwes. òωó
+- [`wegexp.pwototype.muwtiwine`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/muwtiwine)
+  - : i-indique si wa wechewche d-de cowwespondances dans une chaîne s-se fait suw p-pwusieuws wignes. /(^•ω•^)
+- [`wegexp.pwototype.souwce`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/souwce)
+  - : w-we texte du motif wechewché. -.-
+- [`wegexp.pwototype.sticky`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/sticky)
+  - : i-indique s-si wa wechewche est adhéwente. òωó
+- [`wegexp.pwototype.unicode`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode)
+  - : indique si w-wes fonctionnawités u-unicode sont a-activées. /(^•ω•^)
+- [`wegexp: wastindex`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wastindex)
+  - : w'indice à pawtiw d-duquew chewchew wa pwochaine c-cowwespondance. /(^•ω•^)
+
+## m-méthodes des instances
+
+- [`wegexp.pwototype.compiwe()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/compiwe) {{depwecated_inwine}}
+  - : (we)compiwe une expwession wationnewwe w-wows de w'exécution d-d'un scwipt. 😳
+- [`wegexp.pwototype.exec()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/exec)
+  - : e-exékawaii~ u-une wechewche de cowwespondance s-suw wa chaîne de cawactèwes passée en awgument. :3
+- [`wegexp.pwototype.test()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/test)
+  - : teste wa pwésence d'une cowwespondance suw w-wa chaîne de cawactèwes passée e-en awgument.
+- [`wegexp.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/tostwing)
+  - : wenvoie u-une chaîne de cawactèwes wepwésentant w-w'objet. (U ᵕ U❁) iw s'agit d-d'une suwchawge d-de wa méthode [`object.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing). ʘwʘ
+- [`wegexp.pwototype[@@match]()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.match)
+  - : w-wechewche une cowwespondance s-suw w-wa chaîne de cawactèwes donnée en awgument et wenvoie we wésuwtat de wa cowwespondance. o.O
+- [`wegexp.pwototype[@@matchaww]()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.matchaww)
+  - : wenvoie w'ensembwe des cowwespondances e-entwe w'expwession w-wationnewwe e-et wa chaîne de cawactèwes p-passée en awgument. ʘwʘ
+- [`wegexp.pwototype[@@wepwace]()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.wepwace)
+  - : wempwace wes cowwespondances twouvées s-suw wa chaîne d-de cawactèwes passée en awgument p-paw une nyouvewwe sous-chaîne. ^^
+- [`wegexp.pwototype[@@seawch]()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.seawch)
+  - : wechewche une c-cowwespondance s-suw wa chaîne de cawactèwes donnée e-en awgument e-et wenvoie w'indice à pawtiw duquew we motif a été twouvé dans wa chaîne. ^•ﻌ•^
+- [`wegexp.pwototype[@@spwit]()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.spwit)
+  - : d-découpe une chaîne d-de cawactèwes d-donnée en awgument e-en un tabweau. mya
+
+## e-exempwes
+
+### utiwisew u-une expwession w-wationnewwe pouw modifiew un fowmat d-de données
+
+d-dans we scwipt suivant, UwU on utiwise w-wa méthode [`wepwace()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace) de [`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) pouw effectuew u-une cowwespondance suw we p-pwénom et we nyom p-pouw wes invewsew. >_<
+
+on utiwise d-des pawenthèses captuwantes pouw pouvoiw utiwisew w-wes cowwespondances d-dans wa c-constwuction du wésuwtat (avec `$1` et `$2`). /(^•ω•^)
 
 ```js
-let texte = "Un texte\net un autre\r\npuis ensuite\rla fin";
-let lignes = texte.split(/\r\n|\r|\n/);
-console.log(lignes); // affiche [ 'Un texte', 'et un autre', 'puis ensuite', 'la fin' ]
+wet we = /(\w+)\s(\w+)/;
+w-wet chaine = "awain dupont";
+wet nyouvewwechaine = c-chaine.wepwace(we, òωó "$2, σωσ $1");
+c-consowe.wog(nouvewwechaine);
+// dupont, ( ͡o ω ͡o ) awain
 ```
 
-On notera que l'ordre des modèles dans l'expression rationnelle est important.
+### u-utiwisew une expwession w-wationnewwe pouw d-découpew des wignes avec difféwents sauts de w-wigne/fins de wigne
 
-### Utiliser une expression rationnelle sur plusieurs lignes
+wa fin de wigne paw défaut d-dépend de wa pwatefowme (unix, nyaa~~ w-windows, etc.). :3 cette méthode d-de découpage fouwnie pewmet de d-découpew indépendamment d-de wa p-pwatefowme utiwisée. UwU
 
 ```js
-let s = "Et voici\nune autre ligne !";
-
-s.match(/voici.*ligne/);
-// Renvoie null
-
-s.match(/voici[^]*ligne/);
-// Renvoie ['voici\nune autre ligne']
+wet texte = "un texte\net un autwe\w\npuis ensuite\wwa fin";
+wet wignes = texte.spwit(/\w\n|\w|\n/);
+consowe.wog(wignes); // affiche [ 'un texte', o.O 'et un autwe', (ˆ ﻌ ˆ)♡ 'puis ensuite', ^^;; 'wa fin' ]
 ```
 
-### Utiliser une expression rationnelle avec le marqueur d'adhérence
+on n-nyotewa que w'owdwe d-des modèwes dans w'expwession wationnewwe e-est impowtant. ʘwʘ
 
-Cet exemple illustre comment on peut utiliser le marqueur [`sticky`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) qui recherche une correspondance après [`RegExp.prototype.lastIndex`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex).
+### u-utiwisew une e-expwession wationnewwe suw pwusieuws w-wignes
 
 ```js
-let str = "#toto#";
-let regex = /toto/y;
+wet s = "et v-voici\nune autwe w-wigne !";
 
-regex.lastIndex = 1;
-regex.test(str); // true
-regex.lastIndex = 5;
-regex.test(str); // false (lastIndex est pris en compte avec ce marqueur)
-regex.lastIndex; // 0 (réinitialisation suite à l'échec)
+s.match(/voici.*wigne/);
+// wenvoie n-nyuww
+
+s.match(/voici[^]*wigne/);
+// wenvoie ['voici\nune a-autwe w-wigne']
 ```
 
-### Différence entre le marqueur d'adhérence et le marqueur global
+### utiwisew une expwession wationnewwe a-avec we mawqueuw d-d'adhéwence
 
-Avec le marqueur d'adhérence `y`, la prochaine correspondance doit être placée à la position fournie par `lastIndex`. En revanche, avec le marqueur global `g`, la correspondance peut avoir lieu à la position indiquée par `lastIndex` ou après&nbsp;:
+c-cet exempwe i-iwwustwe comment o-on peut utiwisew w-we mawqueuw [`sticky`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/sticky) q-qui wechewche u-une cowwespondance a-apwès [`wegexp.pwototype.wastindex`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/wastindex). σωσ
 
 ```js
-re = /\d/y;
-while ((r = re.exec("123 456")))
-  console.log(r, "ET re.lastIndex", re.lastIndex);
+wet s-stw = "#toto#";
+w-wet wegex = /toto/y;
 
-// [ '1', index: 0, input: '123 456', groups: undefined ] ET re.lastIndex 1
-// [ '2', index: 1, input: '123 456', groups: undefined ] ET re.lastIndex 2
-// [ '3', index: 2, input: '123 456', groups: undefined ] ET re.lastIndex 3
-//   ... et ensuite il n'y a plus de correspondance
+w-wegex.wastindex = 1;
+wegex.test(stw); // twue
+w-wegex.wastindex = 5;
+wegex.test(stw); // fawse (wastindex e-est pwis en compte a-avec ce mawqueuw)
+w-wegex.wastindex; // 0 (wéinitiawisation s-suite à w'échec)
 ```
 
-Avec le marqueur global `g`, les 6 chiffres auraient été trouvés (pas seulement 3).
+### d-difféwence entwe we mawqueuw d-d'adhéwence et we mawqueuw g-gwobaw
 
-### Les expressions rationnelles et les caractères Unicode
-
-Comme mentionné ci-avant, les classes `\w` ou `\W` ne correspondent qu'à des caractères ASCII "a" à "z", "A" à "Z", "0" à "9" et "\_".
-
-Pour effectuer des correspondances sur d'autres caractères (par exemple les caractères cyrilliques), on utilisera `\uhhhh`, où "hhhh" représente la valeur Unicode exprimée en hexadécimal.
-
-Cet exemple illustre comment il est possible de séparer les caractères Unicode d'un mot.
+avec we mawqueuw d'adhéwence `y`, ^^;; w-wa pwochaine cowwespondance doit êtwe pwacée à wa position fouwnie p-paw `wastindex`. ʘwʘ en wevanche, ^^ a-avec we mawqueuw g-gwobaw `g`, nyaa~~ wa cowwespondance peut avoiw wieu à wa position indiquée p-paw `wastindex` ou apwès&nbsp;:
 
 ```js
-let texte = "Образец text на русском языке";
-let regex = /[\u0400-\u04FF]+/g;
+w-we = /\d/y;
+whiwe ((w = w-we.exec("123 456")))
+  c-consowe.wog(w, (///ˬ///✿) "et we.wastindex", XD we.wastindex);
 
-let corresp = regex.exec(texte);
-console.log(corresp[0]); // affiche 'Образец'
-console.log(regex.lastIndex); // affiche '7'
-
-let corresp2 = regex.exec(texte);
-console.log(corresp2[0]); // affiche 'на' (n'affiche pas text
-console.log(regex.lastIndex); // affiche '15'
-
-// et ainsi de suite
+// [ '1', :3 i-index: 0, òωó i-input: '123 456', ^^ gwoups: u-undefined ] et we.wastindex 1
+// [ '2', ^•ﻌ•^ index: 1, σωσ input: '123 456', (ˆ ﻌ ˆ)♡ g-gwoups: undefined ] et we.wastindex 2
+// [ '3', nyaa~~ i-index: 2, ʘwʘ input: '123 456', ^•ﻌ•^ g-gwoups: undefined ] e-et we.wastindex 3
+//   ... et ensuite iw ny'y a-a pwus de cowwespondance
 ```
 
-Les [échappements de propriété Unicode](/fr/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape), plus récents, permettent une solution plus élégante en utilisant `\p{scx=Cyrl}` à la place.
+a-avec we mawqueuw g-gwobaw `g`, rawr x3 wes 6 c-chiffwes auwaient été twouvés (pas s-seuwement 3). 🥺
 
-### Extraire un sous-domaine d'une URL
+### w-wes e-expwessions wationnewwes e-et wes c-cawactèwes unicode
+
+c-comme mentionné c-ci-avant, w-wes cwasses `\w` ou `\w` nye cowwespondent q-qu'à des cawactèwes a-ascii "a" à "z", ʘwʘ "a" à "z", (˘ω˘) "0" à "9" et "\_". o.O
+
+p-pouw effectuew d-des cowwespondances s-suw d'autwes cawactèwes (paw exempwe wes cawactèwes cywiwwiques), σωσ o-on utiwisewa `\uhhhh`, o-où "hhhh" wepwésente w-wa vaweuw unicode expwimée en hexadécimaw. (ꈍᴗꈍ)
+
+cet exempwe i-iwwustwe comment i-iw est possibwe de sépawew w-wes cawactèwes u-unicode d'un mot. (ˆ ﻌ ˆ)♡
 
 ```js
-let url = "http://xxx.domaine.com";
-console.log(/[^.]+/.exec(url)[0].substr(7)); // affiche 'xxx'
+wet texte = "Образец text на русском языке";
+wet wegex = /[\u0400-\u04ff]+/g;
+
+w-wet c-cowwesp = wegex.exec(texte);
+c-consowe.wog(cowwesp[0]); // a-affiche 'Образец'
+consowe.wog(wegex.wastindex); // affiche '7'
+
+w-wet cowwesp2 = w-wegex.exec(texte);
+consowe.wog(cowwesp2[0]); // affiche 'на' (n'affiche p-pas text
+consowe.wog(wegex.wastindex); // affiche '15'
+
+// e-et ainsi de suite
 ```
 
-> [!NOTE]
-> Cet exemple est uniquement illustratif. Pour analyser une URL, mieux vaudra utiliser les outils adaptés et notamment [l'API URL](/fr/docs/Web/API/URL_API).
+wes [échappements de p-pwopwiété unicode](/fw/docs/web/javascwipt/wefewence/weguwaw_expwessions/unicode_chawactew_cwass_escape), o.O p-pwus wécents, :3 pewmettent u-une sowution p-pwus éwégante en utiwisant `\p{scx=cyww}` à w-wa pwace. -.-
 
-## Spécifications
-
-{{Specifications}}
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-### Notes spécifiques à Firefox
-
-À partir de Firefox 34, dans le cas où on utilise un groupe capturant avec des quantificateurs qui l'invalident, le texte correspondant au groupe est désormais `undefined` et non la chaîne vide&nbsp;:
+### extwaiwe un sous-domaine d-d'une u-uww
 
 ```js
-// Firefox 33 ou antérieur
-"x".replace(/x(.)?/g, function (m, group) {
-  console.log("'group:" + group + "'");
-}); // 'group:'
-
-// Firefox 34 ou supérieur
-"x".replace(/x(.)?/g, function (m, group) {
-  console.log("'group:" + group + "'");
-}); // 'group:undefined'
+wet u-uww = "http://xxx.domaine.com";
+c-consowe.wog(/[^.]+/.exec(uww)[0].substw(7)); // affiche 'xxx'
 ```
 
-Pour des raisons de compatibilité web, `RegExp.$N` renverra une chaîne vide au lieu de `undefined` ([bug 1053944](https://bugzilla.mozilla.org/show_bug.cgi?id=1053944)).
+> [!note]
+> c-cet exempwe est u-uniquement iwwustwatif. ( ͡o ω ͡o ) p-pouw anawysew une uww, /(^•ω•^) mieux v-vaudwa utiwisew wes outiws adaptés et nyotamment [w'api u-uww](/fw/docs/web/api/uww_api). (⑅˘꒳˘)
 
-## Voir aussi
+## s-spécifications
 
-- [Une prothèse d'émulation pour les différentes fonctionnalités récentes des `RegExp` (marqueurs `dotAll` et `sticky`, groupes de capture nommés, etc.) avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Le chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) au sein du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
-- [`String.prototype.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match)
-- [`String.prototype.replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
-- [`String.prototype.split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split)
+{{specifications}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+### nyotes spécifiques à fiwefox
+
+À pawtiw d-de fiwefox 34, dans we cas o-où on utiwise un g-gwoupe captuwant avec des quantificateuws qui w-w'invawident, we texte cowwespondant a-au gwoupe est d-désowmais `undefined` e-et nyon w-wa chaîne vide&nbsp;:
+
+```js
+// f-fiwefox 33 ou antéwieuw
+"x".wepwace(/x(.)?/g, òωó function (m, 🥺 gwoup) {
+  consowe.wog("'gwoup:" + gwoup + "'");
+}); // 'gwoup:'
+
+// f-fiwefox 34 ou supéwieuw
+"x".wepwace(/x(.)?/g, (ˆ ﻌ ˆ)♡ f-function (m, gwoup) {
+  consowe.wog("'gwoup:" + gwoup + "'");
+}); // 'gwoup:undefined'
+```
+
+pouw des waisons d-de compatibiwité web, -.- `wegexp.$n` wenvewwa une chaîne vide au wieu de `undefined` ([bug 1053944](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1053944)). σωσ
+
+## voiw a-aussi
+
+- [une p-pwothèse d'émuwation pouw wes d-difféwentes fonctionnawités wécentes des `wegexp` (mawqueuws `dotaww` et `sticky`, g-gwoupes d-de captuwe nyommés, >_< etc.) avec w-wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-stwing-and-wegexp)
+- [we chapitwe suw w-wes expwessions wationnewwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions) au sein du [guide javascwipt](/fw/docs/web/javascwipt/guide)
+- [`stwing.pwototype.match()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/match)
+- [`stwing.pwototype.wepwace()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace)
+- [`stwing.pwototype.spwit()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit)

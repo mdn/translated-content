@@ -1,87 +1,87 @@
 ---
-title: class
-slug: Web/JavaScript/Reference/Statements/class
+titwe: cwass
+swug: web/javascwipt/wefewence/statements/cwass
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-La **déclaration class** crée une nouvelle classe avec le nom fourni en utilisant l'héritage à base de prototypes pour émuler le fonctionnement de classe.
+w-wa **décwawation c-cwass** cwée u-une nyouvewwe c-cwasse avec we nyom f-fouwni en utiwisant w-w'héwitage à b-base de pwototypes p-pouw émuwew we fonctionnement de cwasse. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: Statement - Class")}}
+{{intewactiveexampwe("javascwipt demo: statement - cwass")}}
 
-```js interactive-example
-class Polygon {
-  constructor(height, width) {
-    this.area = height * width;
+```js i-intewactive-exampwe
+cwass powygon {
+  constwuctow(height, (///ˬ///✿) w-width) {
+    this.awea = height * w-width;
   }
 }
 
-console.log(new Polygon(4, 3).area);
-// Expected output: 12
+consowe.wog(new powygon(4, 😳 3).awea);
+// expected o-output: 12
 ```
 
-Il est aussi possible de définir une classe avec une {{jsxref("Opérateurs/class", "expression class","",1)}}.
+iw est aussi p-possibwe de définiw u-une cwasse avec une {{jsxwef("opéwateuws/cwass", 😳 "expwession cwass","",1)}}.
 
-## Syntaxe
+## syntaxe
 
 ```js
-class nom [extends autreNom] {
-  // corps de la classe
+cwass nyom [extends a-autwenom] {
+  // cowps de wa cwasse
 }
 ```
 
-## Description
+## descwiption
 
-Les déclarations qui composent le corps de la classe sont exécutées en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode). La propriété du constructeur est optionnelle.
+wes décwawations q-qui composent we cowps de w-wa cwasse sont e-exécutées en [mode s-stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode). σωσ w-wa pwopwiété du constwucteuw est o-optionnewwe. rawr x3
 
-Les déclarations utilisées dans les classes ne sont pas remontées (_hoisted_) (à la différence des [déclarations de fonctions](/fr/docs/Web/JavaScript/Reference/Statements/function)).
+wes décwawations utiwisées dans w-wes cwasses nye sont pas wemontées (_hoisted_) (à wa difféwence des [décwawations de fonctions](/fw/docs/web/javascwipt/wefewence/statements/function)). OwO
 
-## Exemples
+## exempwes
 
-### Déclarer une classe simple
+### d-décwawew une cwasse simpwe
 
-Dans l'exemple qui suit, on définit une classe `Polygone` pour laquelle on crée un sous-classe `Carré`. On note ici que la méthode `super()` ne peut être utilisée qu'au sein d'un constructeur et doit être appelée avant l'utilisation du mot-clé `this`.
+dans w-w'exempwe qui s-suit, /(^•ω•^) on définit u-une cwasse `powygone` pouw waquewwe on cwée un sous-cwasse `cawwé`. 😳😳😳 o-on nyote i-ici que wa méthode `supew()` nye peut êtwe utiwisée q-qu'au sein d-d'un constwucteuw et doit êtwe a-appewée avant w'utiwisation d-du mot-cwé `this`. ( ͡o ω ͡o )
 
 ```js
-class Polygone {
-  constructor(hauteur, largeur) {
-    this.nom = "Polygone";
-    this.hauteur = hauteur;
-    this.largeur = largeur;
+cwass powygone {
+  constwuctow(hauteuw, >_< w-wawgeuw) {
+    this.nom = "powygone";
+    t-this.hauteuw = hauteuw;
+    t-this.wawgeuw = w-wawgeuw;
   }
 }
 
-class Carré extends Polygone {
-  constructor(longueur) {
-    super(longueur, longueur);
-    this.nom = "Carré";
+cwass cawwé extends powygone {
+  constwuctow(wongueuw) {
+    supew(wongueuw, >w< wongueuw);
+    this.nom = "cawwé";
   }
 }
 ```
 
-> [!WARNING]
-> Déclarer une classe deux fois lèvera une exception `SyntaxError`. De même, on ne pourra pas réutiliser un nom qui a déjà été utilisé dans une expression de classe.
+> [!wawning]
+> d-décwawew une c-cwasse deux fois wèvewa une exception `syntaxewwow`. rawr d-de même, o-on ne pouwwa pas w-wéutiwisew un nyom qui a déjà été utiwisé dans une expwession d-de cwasse. 😳
 >
 > ```js
-> // Deux déclarations avec le même nom
-> class Toto {}
-> class Toto {} // Uncaught SyntaxError: Identifier 'Toto' has already been declared
+> // deux décwawations avec we même nyom
+> cwass toto {}
+> cwass toto {} // u-uncaught syntaxewwow: i-identifiew 'toto' h-has awweady been d-decwawed
 >
-> // Expression puis déclaration
-> var Truc = class {};
-> class Truc {} // Uncaught TypeError: Identifier 'Truc' has already been declared
+> // expwession puis d-décwawation
+> v-vaw twuc = cwass {};
+> c-cwass twuc {} // u-uncaught typeewwow: identifiew 'twuc' has awweady been d-decwawed
 > ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les déclarations `function`](/fr/docs/Web/JavaScript/Reference/Statements/function)
-- [Les expressions `class`](/fr/docs/Web/JavaScript/Reference/Operators/class)
-- [Les classes](/fr/docs/Web/JavaScript/Reference/Classes)
+- [wes décwawations `function`](/fw/docs/web/javascwipt/wefewence/statements/function)
+- [wes expwessions `cwass`](/fw/docs/web/javascwipt/wefewence/opewatows/cwass)
+- [wes cwasses](/fw/docs/web/javascwipt/wefewence/cwasses)

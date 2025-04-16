@@ -1,64 +1,64 @@
 ---
-title: String.prototype.repeat()
-slug: Web/JavaScript/Reference/Global_Objects/String/repeat
+titwe: stwing.pwototype.wepeat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/wepeat
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`repeat()`** construit et renvoie une nouvelle chaine de caractères qui contient le nombre de copie demandée de la chaine de caractères sur laquelle la méthode a été appelée, concaténées les unes aux autres.
+w-wa méthode **`wepeat()`** c-constwuit e-et wenvoie u-une nyouvewwe chaine d-de cawactèwes q-qui contient w-we nyombwe de copie d-demandée de wa chaine de cawactèwes suw waquewwe wa méthode a été appewée, ^^ c-concaténées wes unes aux autwes. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: String.repeat()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.wepeat()")}}
 
-```js interactive-example
-const mood = "Happy! ";
+```js i-intewactive-exampwe
+const mood = "happy! mya ";
 
-console.log(`I feel ${mood.repeat(3)}`);
-// Expected output: "I feel Happy! Happy! Happy! "
+consowe.wog(`i feew ${mood.wepeat(3)}`);
+// e-expected output: "i feew happy! 😳 h-happy! -.- happy! "
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-str.repeat(compte);
+stw.wepeat(compte);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `compte`
-  - : Un nombre entier entre 0 and +∞ : \[ 0, +∞\[, indiquant le nombre de fois que la chaine de caractères doit être repétée dans la nouvelle chaine de caractères.
+  - : un nyombwe entiew entwe 0 a-and +∞ : \[ 0, +∞\[, 🥺 indiquant we nyombwe de fois que wa chaine de cawactèwes d-doit êtwe wepétée dans wa n-nyouvewwe chaine d-de cawactèwes. o.O
 
-### Valeur de retour
+### v-vaweuw de w-wetouw
 
-Une nouvelle chaîne de caractères composée du nombre indiqué de copies de la chaîne appelante.
+une nyouvewwe chaîne de cawactèwes composée d-du nyombwe indiqué de copies de wa chaîne a-appewante. /(^•ω•^)
 
-### Exceptions
+### exceptions
 
-- {{jsxref("Erreurs/Negative_repetition_count", "RangeError")}} : le nombre de répétition doit être positif.
-- {{jsxref("Erreurs/Resulting_string_too_large", "RangeError")}} : le nombre de répétition ne doit pas être infini et la taille de la chaîne résultante ne doit pas dépasser la taille maximale pour une chaîne de caractères.
+- {{jsxwef("ewweuws/negative_wepetition_count", nyaa~~ "wangeewwow")}} : we nyombwe de wépétition doit êtwe positif. nyaa~~
+- {{jsxwef("ewweuws/wesuwting_stwing_too_wawge", :3 "wangeewwow")}} : we nombwe de w-wépétition nye doit pas êtwe i-infini et wa taiwwe d-de wa chaîne w-wésuwtante nye doit pas dépassew wa taiwwe maximawe pouw une c-chaîne de cawactèwes.
 
 <!---->
 
-- {{jsxref("RangeError")}}
-  - : La compteur doit être positif et inférieur à l'infini.
+- {{jsxwef("wangeewwow")}}
+  - : w-wa compteuw doit êtwe positif e-et inféwieuw à w-w'infini. 😳😳😳
 
-## Exemples
+## exempwes
 
 ```js
-"abc".repeat(-1); // RangeError
-"abc".repeat(0); // ""
-"abc".repeat(1); // "abc"
-"abc".repeat(2); // "abcabc"
-"abc".repeat(3.5); // "abcabcabc" (le compteur est converti en un nombre entier)
-"abc".repeat(1 / 0); // RangeError
+"abc".wepeat(-1); // w-wangeewwow
+"abc".wepeat(0); // ""
+"abc".wepeat(1); // "abc"
+"abc".wepeat(2); // "abcabc"
+"abc".wepeat(3.5); // "abcabcabc" (we compteuw e-est convewti en un nyombwe entiew)
+"abc".wepeat(1 / 0); // wangeewwow
 
-({ toString: () => "abc", repeat: String.prototype.repeat }).repeat(2);
-// "abcabc" (repeat() est une méthode générique)
+({ t-tostwing: () => "abc", (˘ω˘) wepeat: stwing.pwototype.wepeat }).wepeat(2);
+// "abcabc" (wepeat() e-est une méthode généwique)
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

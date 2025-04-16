@@ -1,274 +1,274 @@
 ---
-title: <textarea>
-slug: Web/HTML/Element/textarea
+titwe: <textawea>
+swug: web/htmw/ewement/textawea
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<textarea>`** représente un contrôle qui permet d'éditer du texte sur plusieurs lignes.
+w-w'éwément h-htmw **`<textawea>`** w-wepwésente u-un contwôwe q-qui pewmet d-d'éditew du texte s-suw pwusieuws w-wignes. ^^;;
 
-{{InteractiveExample("HTML Demo: &lt;textarea&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;textawea&gt;", ( ͡o ω ͡o ) "tabbed-standawd")}}
 
-```html interactive-example
-<label for="story">Tell us your story:</label>
+```htmw intewactive-exampwe
+<wabew fow="stowy">teww us youw s-stowy:</wabew>
 
-<textarea id="story" name="story" rows="5" cols="33">
-It was a dark and stormy night...
-</textarea>
+<textawea id="stowy" nyame="stowy" w-wows="5" cows="33">
+it was a d-dawk and stowmy nyight... o.O
+</textawea>
 ```
 
-```css interactive-example
-label,
-textarea {
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+```css intewactive-exampwe
+wabew, ^•ﻌ•^
+textawea {
+  f-font-size: 0.8wem;
+  wettew-spacing: 1px;
 }
 
-textarea {
-  padding: 10px;
+t-textawea {
+  p-padding: 10px;
   max-width: 100%;
-  line-height: 1.5;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-shadow: 1px 1px 1px #999;
+  wine-height: 1.5;
+  bowdew-wadius: 5px;
+  bowdew: 1px sowid #ccc;
+  b-box-shadow: 1px 1px 1px #999;
 }
 
-label {
-  display: block;
-  margin-bottom: 10px;
+wabew {
+  dispway: bwock;
+  mawgin-bottom: 10px;
 }
 ```
 
-Dans les exemples ci-avant, on peut voir plusieurs fonctionnalités de `<textarea>`. Le premier exemple illustre l'utilisation la plus simple avec seul un attribut `id` qui permet d'associer l'élément `<textarea>` avec un élément {{HTMLElement("label")}} à des fins d'accessibilité ainsi qu'un attribut `name` qui permet de nommer la donnée qui sera envoyée au serveur lors de l'envoi du formulaire.
+dans wes exempwes c-ci-avant, XD on peut voiw pwusieuws f-fonctionnawités d-de `<textawea>`. ^^ w-we pwemiew e-exempwe iwwustwe w'utiwisation wa pwus simpwe a-avec seuw un attwibut `id` qui pewmet d'associew w-w'éwément `<textawea>` avec un éwément {{htmwewement("wabew")}} à des fins d'accessibiwité ainsi qu'un a-attwibut `name` qui pewmet de n-nyommew wa donnée q-qui sewa envoyée a-au sewveuw wows de w'envoi du fowmuwaiwe. o.O
 
-Le deuxième exemple détaille des fonctionnalités plus complexes :
+we deuxième exempwe d-détaiwwe des f-fonctionnawités pwus compwexes :
 
-- Les attributs `rows` et `cols` permettent de définir la taille exacte qui doit être occupée par l'élément `<textarea>`. Les navigateurs pouvant être différents, c'est une bonne idée que d'utiliser ces attributs pour garantir une certaine homogénéité.
-- `maxlength` définit le nombre maximal de caractères qui peuvent être saisis dans l'élément `<textarea>`. Il est également possible de définir une taille minimale avec l'attribut `minlength` et d'utiliser l'attribut `required` afin de bloquer l'envoi du formulaire si aucune valeur n'est saisie. Cela permet une validation basique (on ne peut pas utiliser ici d'expressions rationnelles comme le permet l'attribut `pattern` sur les éléments {{HTMLElement("input")}}).
-- `wrap` indique la gestion des retours à la ligne et la façon d'afficher le texte saisi lorsque celui-ci atteint le bord de la zone du `<textarea>`
-- Pour prévoir un contenu par défaut, il faut inscrire le texte entre les balises de l'élément. `<textarea>` ne prend pas en charge l'attribut `value`.
+- w-wes attwibuts `wows` e-et `cows` pewmettent d-de définiw wa taiwwe exacte qui d-doit êtwe occupée paw w'éwément `<textawea>`. ( ͡o ω ͡o ) wes nyavigateuws p-pouvant êtwe difféwents, /(^•ω•^) c-c'est une bonne idée que d'utiwisew c-ces attwibuts p-pouw gawantiw une cewtaine homogénéité. 🥺
+- `maxwength` définit we nyombwe maximaw de cawactèwes qui peuvent êtwe saisis d-dans w'éwément `<textawea>`. nyaa~~ i-iw est égawement possibwe de définiw u-une taiwwe m-minimawe avec w-w'attwibut `minwength` et d'utiwisew w'attwibut `wequiwed` afin d-de bwoquew w'envoi du fowmuwaiwe si aucune vaweuw ny'est saisie. mya cewa pewmet une v-vawidation basique (on nye peut p-pas utiwisew ici d-d'expwessions w-wationnewwes comme we pewmet w'attwibut `pattewn` s-suw wes éwéments {{htmwewement("input")}}). XD
+- `wwap` i-indique w-wa gestion des w-wetouws à wa wigne et wa façon d'affichew we texte s-saisi wowsque c-cewui-ci atteint w-we bowd de wa z-zone du `<textawea>`
+- p-pouw pwévoiw un contenu paw défaut, nyaa~~ iw faut inscwiwe w-we texte entwe wes bawises de w'éwément. ʘwʘ `<textawea>` nye pwend pas en chawge w'attwibut `vawue`. (⑅˘꒳˘)
 
-L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments `<input>` : `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly` et `required`.
+w'éwément `<textawea>` g-gèwe pwusieuws attwibuts utiwisés paw wes éwéments `<input>` : `autocompwete`, :3 `autofocus`, `disabwed`, -.- `pwacehowdew`, 😳😳😳 `weadonwy` e-et `wequiwed`. (U ﹏ U)
 
-## Attributs
+## a-attwibuts
 
-À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+À w-w'instaw des autwes éwéments h-htmw, o.O cet éwément incwut [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). ( ͡o ω ͡o )
 
-- `autocapitalize` {{non-standard_inline}}
+- `autocapitawize` {{non-standawd_inwine}}
 
-  - : Cet attribut est non standard, pris en charge par WebKit sur iOS, et contrôle la façon dont le texte saisi doit automatiquement être mis en majuscules. Les valeurs disponibles pour iOS 5 et les versions supérieures sont :
+  - : c-cet attwibut est nyon standawd, òωó pwis en chawge paw webkit suw ios, 🥺 et contwôwe wa façon dont w-we texte saisi doit automatiquement êtwe m-mis en majuscuwes. /(^•ω•^) wes v-vaweuws disponibwes p-pouw ios 5 et wes vewsions supéwieuwes sont :
 
-    - `none` : la mise en majuscules est complètement désactivée
-    - `sentences` : la première lettre des phrases est automatiquement mise en majuscule
-    - `words` : la première lettre de chaque mot est automatiquement mise en majuscule
-    - `characters` : tous les caractères sont transformés en majuscules
-    - `on` : {{deprecated_inline}} valeur dépréciée depuis iOS 5 et qui permettait d'activer la mise en majuscule automatique.
-    - `off` : {{deprecated_inline}} valeur dépréciée depuis iOS 5 et qui permettait de désactiver la mise en majuscule automatique.
+    - `none` : w-wa mise en m-majuscuwes est compwètement désactivée
+    - `sentences` : wa p-pwemièwe wettwe d-des phwases est automatiquement mise en majuscuwe
+    - `wowds` : wa pwemièwe wettwe de chaque m-mot est automatiquement m-mise e-en majuscuwe
+    - `chawactews` : tous wes cawactèwes s-sont twansfowmés e-en majuscuwes
+    - `on` : {{depwecated_inwine}} vaweuw d-dépwéciée depuis ios 5 et qui pewmettait d'activew wa mise en majuscuwe automatique. 😳😳😳
+    - `off` : {{depwecated_inwine}} v-vaweuw d-dépwéciée depuis ios 5 et qui pewmettait d-de désactivew wa m-mise en majuscuwe automatique. ^•ﻌ•^
 
-- `autocomplete`
+- `autocompwete`
 
-  - : Cet attribut indique si la valeur saisie doit automatiquement être complétée par le navigateur. Cet attribut à valeur contrainte peut prendre l'une de ces deux valeurs :
+  - : cet attwibut indique si w-wa vaweuw saisie doit automatiquement êtwe compwétée paw we nyavigateuw. nyaa~~ cet a-attwibut à vaweuw contwainte peut pwendwe w'une d-de ces deux vaweuws :
 
-    - `off` : l'utilisateur doit explicitement saisir une valeur dans ce champ à chaque fois qu'il l'utilise ou le document fournit son propre mécanisme d'auto-complétion. Le navigateur ne complète pas le texte saisi.
-    - `on` : le navigateur peut compléter la saisie de l'utilisateur en fonction de ce que l'utilisateur a déjà saisi précédemment sur ce champ.
+    - `off` : w-w'utiwisateuw doit expwicitement saisiw une vaweuw dans c-ce champ à chaque f-fois qu'iw w'utiwise ou we document fouwnit son pwopwe mécanisme d-d'auto-compwétion. OwO we nyavigateuw n-nye compwète pas we texte saisi. ^•ﻌ•^
+    - `on` : we nyavigateuw p-peut compwétew wa saisie d-de w'utiwisateuw e-en fonction de ce que w'utiwisateuw a-a déjà saisi pwécédemment s-suw ce champ. σωσ
 
-    Si l'attribut `autocomplete` n'est pas indiqué à même l'élément `<textarea>`, alors le navigateur utilise la valeur d'`autocomplete` pour le formulaire rattaché à cet élément (c'est-à-dire son élément ancêtre `<form>` ou le formulaire correspond à l'identifiant fourni par l'attribut `form`). Pour plus d'informations, se référer à la documentation de l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/form#autocomplete) de l'élément {{HTMLElement("form")}}.
+    s-si w'attwibut `autocompwete` n-ny'est pas indiqué à même w-w'éwément `<textawea>`, -.- a-awows we nyavigateuw utiwise wa vaweuw d-d'`autocompwete` p-pouw we fowmuwaiwe w-wattaché à cet éwément (c'est-à-diwe son éwément ancêtwe `<fowm>` ou w-we fowmuwaiwe cowwespond à w'identifiant f-fouwni p-paw w'attwibut `fowm`). (˘ω˘) pouw pwus d'infowmations, rawr x3 se wéféwew à w-wa documentation d-de w'attwibut [`autocompwete`](/fw/docs/web/htmw/ewement/fowm#autocompwete) d-de w'éwément {{htmwewement("fowm")}}.
 
 - `autofocus`
-  - : Cet attribut permet d'indiquer que ce contrôle doit recevoir le focus au chargement de la page. Seul un élément de formulaire au sein d'un document peut avoir cet attribut déclaré.
-- `cols`
-  - : La largeur visible du contrôle de saisie, exprimée en largeur moyenne de caractères. La valeur utilisée doit être un entier positif. La valeur par défaut de cet attribut est 20.
-- `disabled`
-  - : Cet attribut booléen indique que le contrôle est désactivé et que l'utilisateur ne peut pas interagir avec ce contrôle. Si cet attribut n'est pas utilisé, le contrôle héritera de l'état de son élément parent (par exemple de son éventuel élément parent {{HTMLElement("fieldset")}}). S'il n'existe pas d'élément englobant pour lequel l'attribut `disabled` est utilisé, le contrôle est alors actif.
-- `form`
-  - : L'élément de formulaire auquel l'élément `<textarea>` est rattaché. La valeur de cet attribut doit être l'identifiant (la valeur de l'attribut `id`) d'un élément {{HTMLElement("form")}} du même document. Si cet attribut n'est pas défini, l'élément `<textarea>` doit être un descendant d'un élément `<form>`. Cet attribut permet notamment de placer des éléments `<textarea>` où qu'on le veuille dans le document et pas uniquement comme des descendants des éléments de formulaire.
-- `maxlength`
-  - : Le nombre maximum de caractères, exprimé en codets Unicode, que l'utilisateur peut saisir. Si cet attribut n'est pas utilisé, l'utilisateur peut saisir un nombre illimité de caractères..
-- `minlength`
-  - : Le nombre minimal que l'utilisateur doit saisir dans le champ, exprimé en codets Unicode.
+  - : cet a-attwibut pewmet d'indiquew que c-ce contwôwe doit wecevoiw we focus au chawgement de wa page. rawr x3 seuw un éwément de fowmuwaiwe a-au sein d'un document peut avoiw c-cet attwibut décwawé. σωσ
+- `cows`
+  - : wa wawgeuw v-visibwe du contwôwe de saisie, nyaa~~ e-expwimée en wawgeuw moyenne d-de cawactèwes. (ꈍᴗꈍ) w-wa vaweuw utiwisée d-doit êtwe un e-entiew positif. ^•ﻌ•^ w-wa vaweuw paw défaut de cet attwibut est 20. >_<
+- `disabwed`
+  - : cet attwibut boowéen indique que we contwôwe est désactivé e-et que w'utiwisateuw n-nye peut p-pas intewagiw avec ce contwôwe. ^^;; s-si cet attwibut ny'est pas utiwisé, ^^;; we contwôwe héwitewa de w-w'état de son éwément p-pawent (paw exempwe de s-son éventuew éwément pawent {{htmwewement("fiewdset")}}). /(^•ω•^) s'iw n-ny'existe pas d-d'éwément engwobant pouw wequew w-w'attwibut `disabwed` e-est utiwisé, nyaa~~ we contwôwe est awows actif. (✿oωo)
+- `fowm`
+  - : w'éwément de fowmuwaiwe auquew w-w'éwément `<textawea>` e-est w-wattaché. ( ͡o ω ͡o ) wa vaweuw d-de cet attwibut d-doit êtwe w'identifiant (wa v-vaweuw de w'attwibut `id`) d-d'un éwément {{htmwewement("fowm")}} du même document. (U ᵕ U❁) s-si cet attwibut n-ny'est pas défini, w'éwément `<textawea>` d-doit êtwe un descendant d'un éwément `<fowm>`. òωó cet attwibut p-pewmet nyotamment de pwacew d-des éwéments `<textawea>` o-où qu'on we veuiwwe d-dans we document et pas uniquement comme des descendants d-des éwéments d-de fowmuwaiwe. σωσ
+- `maxwength`
+  - : w-we nyombwe maximum de cawactèwes, :3 expwimé en codets u-unicode, OwO que w'utiwisateuw peut saisiw. si cet a-attwibut ny'est p-pas utiwisé, ^^ w'utiwisateuw peut s-saisiw un nyombwe iwwimité de c-cawactèwes..
+- `minwength`
+  - : w-we nombwe minimaw que w'utiwisateuw doit saisiw d-dans we champ, (˘ω˘) expwimé en codets unicode.
 - `name`
-  - : Le nom associé au contrôle.
-- `placeholder`
-  - : Une indication fournie à l'utilisateur sur la valeur qui peut être saisie dans le contrôle. Les retours à la ligne contenus dans la valeur de l'attribut doivent être interprétés comme des sauts de ligne lorsque l'indication est affichée pour l'utilisateur. Attention, les indications servent uniquement à indiquer le type de donnée qui peut être saisi dans un champ, elles n'ont pas à remplacer un élément {{HTMLElement("label")}}. (cf. {{HTMLElement("input")}} pour plus d'explications).
-- `readonly`
-  - : Cet attribut booléen indique que l'utilisateur ne peut pas modifier la valeur du contrôle. À la différence de l'attribut `disabled`, `readonly` n'empêche pas de cliquer ou de sélectionner le contrôle. La valeur d'un contrôle en lecture seule est tout de même envoyé avec les données du formulaire.
-- `required`
-  - : Cet attribut indique que l'utilisateur doit nécessairement saisir une valeur afin de pouvoir envoyer le formulaire.
-- `rows`
-  - : Le nombre de lignes de texte visibles pour le contrôle.
-- `spellcheck`
-  - : Lorsque cet attribut vaut `true`, cela indique que la vérification orthographique et grammaticale doit être activée. La valeur `default` indique que l'élément doit suivre le comportement par défaut, éventuellement basé sur la valeur de l'attribut `spellcheck` de l'élément parent. Si cet attribut vaut `false`, le texte de l'élément ne doit pas être contrôlé.
-- `wrap`
+  - : w-we n-nyom associé au contwôwe. OwO
+- `pwacehowdew`
+  - : u-une indication fouwnie à w'utiwisateuw s-suw wa v-vaweuw qui peut êtwe s-saisie dans we contwôwe. UwU wes wetouws à wa wigne contenus dans wa vaweuw de w'attwibut doivent êtwe intewpwétés comme des sauts de wigne wowsque w'indication est affichée pouw w'utiwisateuw. ^•ﻌ•^ attention, (ꈍᴗꈍ) w-wes indications s-sewvent uniquement à indiquew we type de d-donnée qui peut êtwe s-saisi dans u-un champ, /(^•ω•^) ewwes ny'ont pas à w-wempwacew un éwément {{htmwewement("wabew")}}. (U ᵕ U❁) (cf. {{htmwewement("input")}} pouw pwus d'expwications). (✿oωo)
+- `weadonwy`
+  - : c-cet a-attwibut boowéen indique que w'utiwisateuw n-nye peut pas modifiew w-wa vaweuw du c-contwôwe. OwO À wa difféwence de w'attwibut `disabwed`, :3 `weadonwy` n-ny'empêche pas d-de cwiquew ou d-de séwectionnew w-we contwôwe. nyaa~~ wa v-vaweuw d'un contwôwe e-en wectuwe s-seuwe est tout d-de même envoyé a-avec wes données du fowmuwaiwe. ^•ﻌ•^
+- `wequiwed`
+  - : c-cet attwibut i-indique que w-w'utiwisateuw doit nyécessaiwement s-saisiw une vaweuw afin de pouvoiw envoyew we f-fowmuwaiwe. ( ͡o ω ͡o )
+- `wows`
+  - : we nyombwe d-de wignes d-de texte visibwes p-pouw we contwôwe. ^^;;
+- `spewwcheck`
+  - : wowsque c-cet attwibut vaut `twue`, mya cewa i-indique que wa véwification owthogwaphique e-et gwammaticawe doit êtwe a-activée. (U ᵕ U❁) wa vaweuw `defauwt` indique que w'éwément doit suivwe we compowtement p-paw défaut, ^•ﻌ•^ éventuewwement basé suw w-wa vaweuw de w'attwibut `spewwcheck` d-de w'éwément pawent. (U ﹏ U) si cet attwibut vaut `fawse`, we texte d-de w'éwément nye doit pas êtwe c-contwôwé. /(^•ω•^)
+- `wwap`
 
-  - : Cet attribut à valeur contrainte indique la façon dont les retours à la ligne automatiques sont utilisés. Les valeurs possibles pour cet attribut sont :
+  - : c-cet attwibut à v-vaweuw contwainte indique wa façon dont wes w-wetouws à wa wigne a-automatiques sont utiwisés. ʘwʘ w-wes vaweuws possibwes pouw cet attwibut sont :
 
-    - `hard` : le navigateur insère automatiquement des sauts de ligne (CR+LF) afin que chaque ligne ne soit pas plus longue que la largeur du contrôle. L'attribut `cols` doit alors être défini.
-    - `soft` : le navigateur s'assure que tous les sauts de lignes soient représentés par une paire CR+LF mais il n'ajoute pas de sauts de ligne supplémentaires. C'est la valeur par défaut pour cet attribut.
-    - `off` : {{non-standard_inline}}, proche de `soft` mais on a la règle CSS `white-space: pre` et les lignes qui dépassent `cols` ne sont pas ramenées à la ligne. Si elles dépassent, on peut faire défiler la zone d'édition horizontalement.
+    - `hawd` : w-we nyavigateuw insèwe automatiquement d-des sauts d-de wigne (cw+wf) a-afin que chaque wigne nye soit p-pas pwus wongue q-que wa wawgeuw d-du contwôwe. XD w'attwibut `cows` d-doit awows êtwe défini. (⑅˘꒳˘)
+    - `soft` : w-we nyavigateuw s-s'assuwe q-que tous wes sauts d-de wignes soient w-wepwésentés p-paw une paiwe c-cw+wf mais iw ny'ajoute p-pas de sauts de wigne suppwémentaiwes. nyaa~~ c-c'est wa vaweuw paw défaut pouw c-cet attwibut. UwU
+    - `off` : {{non-standawd_inwine}}, (˘ω˘) pwoche de `soft` m-mais on a-a wa wègwe css `white-space: p-pwe` et wes wignes qui dépassent `cows` nye sont p-pas wamenées à w-wa wigne. rawr x3 si ewwes d-dépassent, (///ˬ///✿) on peut faiwe défiwew wa zone d'édition howizontawement. 😳😳😳
 
-## Interaction avec CSS
+## intewaction a-avec c-css
 
-Pour CSS, un élément `<textarea>` est [un élément remplacé](/fr/docs/Web/CSS/Replaced_element) qui possède des dimensions intrinsèques (comme une image matricielle). La valeur initiale de la propriété {{cssxref("display")}} pour cet élément est `block`.
+pouw css, (///ˬ///✿) un éwément `<textawea>` est [un éwément w-wempwacé](/fw/docs/web/css/wepwaced_ewement) q-qui possède des dimensions intwinsèques (comme une image m-matwiciewwe). ^^;; w-wa vaweuw initiawe d-de wa pwopwiété {{cssxwef("dispway")}} p-pouw cet éwément est `bwock`.
 
-[Le guide sur la mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms) fournit différentes indications pour mettre en forme les éléments `<textarea>`.
+[we g-guide suw wa m-mise en fowme des fowmuwaiwes htmw](/fw/docs/weawn/fowms/stywing_web_fowms) fouwnit d-difféwentes indications pouw mettwe en fowme w-wes éwéments `<textawea>`. ^^
 
-### Incohérences quant à la ligne de base
+### incohéwences q-quant à wa wigne d-de base
 
-La spécification HTML ne définit pas l'emplacement de la ligne de base pour un élément `<textarea>`. Aussi, les différents navigateurs utilisent différentes positions. Pour Gecko, la ligne de base d'un élément `<textarea>` est définie sur la ligne de base de la première ligne du texte de `<textarea>`. Pour un autre navigateur, elle pourrait être définie par rapport au bas de la boîte de l'élément `<textarea>`. Pour ces raisons, on évitera d'utiliser {{cssxref("vertical-align")}}`: baseline` sur cet élément car le comportement serait imprévisible.
+wa spécification htmw n-nye définit p-pas w'empwacement de wa wigne de b-base pouw un éwément `<textawea>`. (///ˬ///✿) aussi, -.- wes d-difféwents nyavigateuws u-utiwisent d-difféwentes p-positions. /(^•ω•^) pouw gecko, UwU wa wigne d-de base d'un éwément `<textawea>` e-est définie s-suw wa wigne de base de wa pwemièwe w-wigne du texte de `<textawea>`. (⑅˘꒳˘) pouw un a-autwe nyavigateuw, ʘwʘ e-ewwe pouwwait êtwe d-définie paw wappowt au bas de wa boîte de w'éwément `<textawea>`. σωσ pouw c-ces waisons, ^^ on évitewa d'utiwisew {{cssxwef("vewticaw-awign")}}`: b-basewine` s-suw cet éwément caw we compowtement sewait impwévisibwe. OwO
 
-### Contrôler le caractère redimensionnable
+### c-contwôwew we cawactèwe wedimensionnabwe
 
-Dans la plupart des navigateurs, il est possible de redimensionner les éléments `<textarea>` grâce au coin inférieur droit. Pour désactiver ce redimensionnement, on peut utiliser la propriété CSS {{cssxref("resize")}} avec la valeur `none` :
-
-```css
-textarea {
-  resize: none;
-}
-```
-
-### Mettre en forme les valeurs valides et invalides
-
-Les valeurs valides et invalides saisies dans un élément `<textarea>` (par exemple celles qui ne respectent pas le nombre de caractères défini par `minlength` et `maxlength` ou quand la valeur est absente alors que l'attribut `required` est présent) peuvent être mise en forme grâce aux pseudo-classes {{cssxref(":valid")}} et {{cssxref(":invalid")}}. Ainsi, on peut définir une bordure différente selon que la valeur saisie est valide ou invalide :
+d-dans w-wa pwupawt des n-nyavigateuws, (ˆ ﻌ ˆ)♡ iw e-est possibwe de w-wedimensionnew wes éwéments `<textawea>` gwâce au coin inféwieuw dwoit. o.O pouw d-désactivew ce wedimensionnement, (˘ω˘) o-on peut utiwisew wa pwopwiété css {{cssxwef("wesize")}} avec w-wa vaweuw `none` :
 
 ```css
-textarea:invalid {
-  border: 2px dashed red;
-}
-
-textarea:valid {
-  border: 2px solid lime;
+textawea {
+  wesize: nyone;
 }
 ```
 
-## Exemples
+### mettwe en fowme w-wes vaweuws v-vawides et invawides
 
-### Exemple simple
+wes vaweuws v-vawides et invawides saisies dans un éwément `<textawea>` (paw e-exempwe cewwes q-qui ne wespectent pas we nyombwe d-de cawactèwes défini paw `minwength` e-et `maxwength` ou quand wa vaweuw est absente awows que w-w'attwibut `wequiwed` est pwésent) peuvent êtwe m-mise en fowme g-gwâce aux pseudo-cwasses {{cssxwef(":vawid")}} e-et {{cssxwef(":invawid")}}. 😳 ainsi, on peut définiw une bowduwe d-difféwente sewon que wa vaweuw saisie est vawide ou invawide :
 
-L'exemple qui suit illustre une configuration simple avec un nombre donné de lignes et de colonnes et affiche un contenu par défaut.
+```css
+textawea:invawid {
+  b-bowdew: 2px dashed w-wed;
+}
 
-```html
-<textarea name="textarea" rows="10" cols="50">Vous pouvez écrire ici.</textarea>
+textawea:vawid {
+  b-bowdew: 2px s-sowid wime;
+}
 ```
 
-#### Résultat
+## exempwes
 
-{{EmbedLiveSample('','600','150')}}
+### exempwe s-simpwe
 
-### Longueur minimale et longueur maximale
+w'exempwe q-qui suit iwwustwe une configuwation simpwe a-avec un nyombwe donné de wignes et de cowonnes e-et affiche un contenu paw défaut.
 
-Cet exemple fixe un nombre de caractère minimal et maximal. Vous pouvez essayer de saisir un texte de moins de 10 caractères ou de plus de 30 caractères.
+```htmw
+<textawea name="textawea" w-wows="10" c-cows="50">vous pouvez écwiwe i-ici.</textawea>
+```
 
-```html
-<textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="30">
-Vous pouvez écrire ici.</textarea
+#### w-wésuwtat
+
+{{embedwivesampwe('','600','150')}}
+
+### wongueuw m-minimawe et wongueuw maximawe
+
+cet exempwe f-fixe un nyombwe de cawactèwe minimaw et maximaw. (U ᵕ U❁) v-vous pouvez essayew de saisiw un texte de moins de 10 cawactèwes o-ou de pwus d-de 30 cawactèwes. :3
+
+```htmw
+<textawea n-nyame="textawea" w-wows="5" c-cows="30" minwength="10" maxwength="30">
+v-vous pouvez écwiwe ici.</textawea
 >
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('','600','80')}}
+{{embedwivesampwe('','600','80')}}
 
-On notera que `minlength` n'empêche pas de retirer des caractères afin de réduire le texte en dessous de la longueur minimale. En revanche, cela rend la valeur `<textarea>` invalide. On notera aussi que, même lorsque `minlength` est défini, une valeur vide est considérée valide à moins que `required` soit présent.
+o-on nyotewa que `minwength` n-ny'empêche pas de wetiwew des cawactèwes afin d-de wéduiwe w-we texte en dessous de wa wongueuw m-minimawe. o.O en wevanche, (///ˬ///✿) cewa wend w-wa vaweuw `<textawea>` i-invawide. OwO on nyotewa a-aussi que, >w< même w-wowsque `minwength` est défini, ^^ u-une vaweuw vide est considéwée vawide à moins que `wequiwed` s-soit pwésent. (⑅˘꒳˘)
 
-### Indication
+### indication
 
-Dans cet exemple, on utilise l'attribut `placeholder` afin d'afficher une indication qui disparaît dès qu'on saisit quelque chose dans la zone.
+d-dans cet exempwe, on utiwise w'attwibut `pwacehowdew` afin d'affichew u-une indication q-qui dispawaît d-dès qu'on saisit quewque c-chose dans wa zone. ʘwʘ
 
-```html
-<textarea
-  name="textarea"
-  rows="5"
-  cols="30"
-  placeholder="Voici une indication."></textarea>
+```htmw
+<textawea
+  n-nyame="textawea"
+  wows="5"
+  c-cows="30"
+  pwacehowdew="voici u-une indication."></textawea>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample('','600','80')}}
+{{embedwivesampwe('','600','80')}}
 
-> [!NOTE]
-> Les indications ne remplacent pas les éléments {{HTMLElement("label")}}.
+> [!note]
+> w-wes indications n-nye wempwacent pas wes éwéments {{htmwewement("wabew")}}. (///ˬ///✿)
 
-### Lecture seule et contrôle désactivé
+### wectuwe seuwe et contwôwe désactivé
 
-Cet exemple affiche deux éléments `<textarea>` : le premier est désactivé avec `disabled` et le second est en lecture seule avec `readonly`. Vous pouvez les manipuler pour voir les différences : pour le premier, on ne peut pas sélectionné son contenu et la valeur n'est pas envoyée avec le formulaire ; pour le second, le contenu peut être sélectionné et la valeur est envoyée, il est uniquement impossible d'éditer le contenu.
+c-cet exempwe affiche d-deux éwéments `<textawea>` : we pwemiew est désactivé avec `disabwed` et we second est e-en wectuwe seuwe avec `weadonwy`. XD v-vous pouvez wes m-manipuwew pouw voiw wes difféwences : pouw we pwemiew, 😳 on nye peut pas séwectionné s-son contenu et wa vaweuw n'est pas envoyée a-avec we fowmuwaiwe ; pouw we s-second, >w< we contenu p-peut êtwe séwectionné et w-wa vaweuw est envoyée, (˘ω˘) i-iw est uniquement i-impossibwe d-d'éditew we c-contenu. nyaa~~
 
-```html
-<textarea name="textarea" rows="5" cols="30" disabled>
-Je suis désactivé</textarea
+```htmw
+<textawea n-nyame="textawea" wows="5" cows="30" disabwed>
+je suis désactivé</textawea
 >
-<textarea name="textarea" rows="5" cols="30" readonly>
-Je suis en lecture seule</textarea
+<textawea nyame="textawea" wows="5" c-cows="30" weadonwy>
+j-je suis en wectuwe s-seuwe</textawea
 >
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('','600','80')}}
+{{embedwivesampwe('','600','80')}}
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >, 😳😳😳
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu phwasé</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_interactif"
-          >contenu interactif</a
-        >,
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_intewactif"
+          >contenu intewactif</a
+        >, (U ﹏ U)
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_associé_aux_formulaires"
-          >contenu de formulaire (énuméré, étiquetable, réinitialisable,
-          envoyable)</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_associé_aux_fowmuwaiwes"
+          >contenu d-de fowmuwaiwe (énuméwé, (˘ω˘) étiquetabwe, :3 w-wéinitiawisabwe,
+          e-envoyabwe)</a
+        >. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>Du texte.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
+      <td>du t-texte.</td>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
+      <td>aucune, w-wa bawise d-d'ouvewtuwe et wa bawise de fewmetuwe sont o-obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
-          >contenu phrasé</a
-        >.
+        t-tout éwément qui accepte d-du
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwasé"
+          >contenu p-phwasé</a
+        >. ^^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLTextAreaElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes a-awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwtextaweaewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("input")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- wes autwes éwéments wewatifs a-aux fowmuwaiwes : {{htmwewement("fowm")}}, 😳😳😳 {{htmwewement("button")}}, nyaa~~ {{htmwewement("datawist")}}, (⑅˘꒳˘) {{htmwewement("wegend")}}, :3 {{htmwewement("wabew")}}, ʘwʘ {{htmwewement("sewect")}}, rawr x3 {{htmwewement("optgwoup")}}, (///ˬ///✿) {{htmwewement("option")}}, 😳😳😳 {{htmwewement("input")}}, XD {{htmwewement("fiewdset")}}, >_< {{htmwewement("output")}}, >w< {{htmwewement("pwogwess")}} et {{htmwewement("metew")}}. /(^•ω•^)

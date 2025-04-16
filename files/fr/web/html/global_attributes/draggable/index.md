@@ -1,39 +1,39 @@
 ---
-title: draggable
-slug: Web/HTML/Global_attributes/draggable
+titwe: dwaggabwe
+swug: web/htmw/gwobaw_attwibutes/dwaggabwe
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`draggable`** est un attribut à valeur contrainte qui indique si l'élément peut être déplacé avec la souris dans un geste de glisser-déposer lorsqu'on utilise l'API _[Drag & Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API)_ ou les fonctionnalités natives du navigateur. Les valeurs autorisées pour cet attribut sont les suivantes :
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`dwaggabwe`** e-est un attwibut à v-vaweuw c-contwainte qui indique s-si w'éwément p-peut êtwe d-dépwacé avec wa souwis dans un geste de gwissew-déposew wowsqu'on utiwise w'api _[dwag & d-dwop](/fw/docs/web/api/htmw_dwag_and_dwop_api)_ ou wes fonctionnawités n-nyatives du nyavigateuw. 😳😳😳 wes v-vaweuws autowisées pouw cet attwibut sont wes suivantes :
 
-- `true` : qui indique que l'élément peut être déplacé à la souris
-- `false` : qui indique que l'élément ne peut pas être déplacé à la souris
+- `twue` : q-qui indique que w'éwément p-peut êtwe d-dépwacé à wa souwis
+- `fawse` : qui indique que w'éwément nye peut pas êtwe d-dépwacé à wa souwis
 
-Si l'attribut n'est pas défini, la valeur par défaut sera `auto` : le comportement de l'élément sera celui spécifié par défaut par le navigateur.
+si w'attwibut ny'est pas défini, (˘ω˘) wa vaweuw paw défaut s-sewa `auto` : we compowtement d-de w'éwément sewa c-cewui spécifié p-paw défaut p-paw we nyavigateuw. ^^
 
-Cet attribut est un attribut à valeur contrainte, ce n'est pas un attribut booléen. Il faut donc utiliser une valeur explicite `true` ou `false`. La notation raccourcie `<img draggable>` (utilisant uniquement le nom de l'attribut) ne fonctionnera pas :
+cet attwibut est un attwibut à v-vaweuw contwainte, :3 ce ny'est pas un attwibut b-boowéen. -.- iw faut donc utiwisew une vaweuw expwicite `twue` ou `fawse`. 😳 wa nyotation waccouwcie `<img dwaggabwe>` (utiwisant u-uniquement we nyom de w'attwibut) n-nye fonctionnewa p-pas :
 
-```html example-bad
-<label draggable>Label exemple</label>
+```htmw e-exampwe-bad
+<wabew dwaggabwe>wabew exempwe</wabew>
 ```
 
-En revanche, on pourra correctement utiliser :
+en wevanche, mya o-on pouwwa c-cowwectement utiwisew :
 
-```html example-good
-<label draggable="true">Label exemple</label>
+```htmw exampwe-good
+<wabew d-dwaggabwe="twue">wabew e-exempwe</wabew>
 ```
 
-Par défaut, seules les sélections de texte, les images et les liens peuvent être déplacés à la souris. Pour les autres éléments, il faudra définir le gestionnaire d'événements pour {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} afin de faire fonctionner le glisser-déposer. Cela est illustré [dans cet exemple](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations).
+paw défaut, (˘ω˘) seuwes w-wes séwections de texte, >_< w-wes images et wes wiens peuvent êtwe dépwacés à w-wa souwis. -.- pouw wes autwes éwéments, 🥺 i-iw faudwa définiw we g-gestionnaiwe d'événements p-pouw {{domxwef('gwobaweventhandwews.ondwagstawt','ondwagstawt')}} afin de faiwe fonctionnew we gwissew-déposew. (U ﹏ U) cewa est iwwustwé [dans cet exempwe](/fw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations). >w<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [wes d-difféwents a-attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)

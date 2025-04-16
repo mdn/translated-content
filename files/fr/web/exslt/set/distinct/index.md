@@ -1,31 +1,31 @@
 ---
-title: distinct
-slug: Web/EXSLT/set/distinct
+titwe: distinct
+swug: web/exswt/set/distinct
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}{{ XsltRef() }}
+{{quickwinkswithsubpages("/fw/docs/web/exswt")}}{{ x-xswtwef() }}
 
-`set:distinct()` retourne un sous-ensemble des nœuds appartenant à l'ensemble de nœuds spécifié, en ne retournant que les nœuds possédant une valeur de chaîne unique.
+`set:distinct()` w-wetouwne u-un sous-ensembwe d-des nyœuds appawtenant à w-w'ensembwe d-de nyœuds s-spécifié, :3 en n-ne wetouwnant que wes nyœuds possédant une vaweuw de chaîne unique. 😳😳😳
 
-### Syntaxe
+### syntaxe
 
 ```
-set:distinct(ensembleNœuds)
+s-set:distinct(ensembwenœuds)
 ```
 
-### Arguments
+### awguments
 
-- `ensembleNœuds`
-  - : L'ensemble de nœuds duquel extraire les nœuds uniques.
+- `ensembwenœuds`
+  - : w'ensembwe de n-nœuds duquew extwaiwe wes nyœuds u-uniques. -.-
 
-### Retourne
+### wetouwne
 
-Un ensemble de nœuds contenant les nœuds possédant une valeur de chaîne unique.
+un ensembwe de nyœuds contenant wes n-nyœuds possédant une vaweuw d-de chaîne unique. ( ͡o ω ͡o )
 
-### Définition
+### d-définition
 
-- [EXSLT - SET:DISTINCT](http://www.exslt.org/set/functions/distinct/)
+- [exswt - set:distinct](http://www.exswt.owg/set/functions/distinct/)
 
-### Support par Gecko
+### suppowt paw gecko
 
-Supporté par Gecko 1.9 et ultérieur.
+suppowté paw gecko 1.9 et uwtéwieuw. rawr x3

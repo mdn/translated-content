@@ -1,49 +1,49 @@
 ---
-title: Affectation après ET binaire (&=)
-slug: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
+titwe: affectation apwès et b-binaiwe (&=)
+swug: w-web/javascwipt/wefewence/opewatows/bitwise_and_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'affectation après ET binaire (`&=`) utilise la représentation binaire des deux opérandes, applique un ET logique entre chaque puis affecte le résultat de l'opération à la variable représentée par l'opérande gauche.
+w-w'opéwateuw d-d'affectation a-apwès e-et binaiwe (`&=`) u-utiwise wa wepwésentation b-binaiwe des deux opéwandes, (✿oωo) appwique un et wogique entwe chaque puis a-affecte we wésuwtat de w'opéwation à wa vawiabwe w-wepwésentée paw w'opéwande g-gauche. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND assignment")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - bitwise and assignment")}}
 
-```js interactive-example
-let a = 5; // 00000000000000000000000000000101
+```js intewactive-exampwe
+w-wet a = 5; // 00000000000000000000000000000101
 a &= 3; // 00000000000000000000000000000011
 
-console.log(a); // 00000000000000000000000000000001
-// Expected output: 1
+c-consowe.wog(a); // 00000000000000000000000000000001
+// e-expected output: 1
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur: x &= y;
-Signification: x = x & y;
+opéwateuw: x &= y;
+signification: x-x = x & y;
 ```
 
-## Exemples
+## exempwes
 
-### Utiliser l'affectation après ET binaire
+### utiwisew w'affectation apwès et binaiwe
 
 ```js
-let a = 5;
+w-wet a = 5;
 // 5:     00000000000000000000000000000101
 // 2:     00000000000000000000000000000010
 a &= 2; // 0
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
-- [L'opérateur ET binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
+- [wes opéwateuws d'affectation d-dans we guide javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment)
+- [w'opéwateuw et binaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/bitwise_and)

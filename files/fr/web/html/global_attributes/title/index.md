@@ -1,113 +1,113 @@
 ---
-title: title
-slug: Web/HTML/Global_attributes/title
+titwe: titwe
+swug: web/htmw/gwobaw_attwibutes/titwe
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`title`** contient un texte d'information relatif à l'élément auquel il est rattaché.
+w-w'[attwibut univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`titwe`** c-contient u-un texte d'infowmation w-wewatif à w-w'éwément a-auquew iw est wattaché. (U ﹏ U)
 
-{{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: titwe", :3 "tabbed-showtew")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  Use the <code>title</code> attribute on an <code>iframe</code> to clearly
-  identify the content of the <code>iframe</code> to screen readers.
+  use the <code>titwe</code> attwibute on an <code>ifwame</code> to cweawwy
+  i-identify the content of the <code>ifwame</code> to scween w-weadews. ( ͡o ω ͡o )
 </p>
 
-<iframe
-  title="Wikipedia page for the HTML language"
-  src="https://en.m.wikipedia.org/wiki/HTML"></iframe>
-<iframe
-  title="Wikipedia page for the CSS language"
-  src="https://en.m.wikipedia.org/wiki/CSS"></iframe>
+<ifwame
+  titwe="wikipedia p-page fow the htmw wanguage"
+  swc="https://en.m.wikipedia.owg/wiki/htmw"></ifwame>
+<ifwame
+  titwe="wikipedia p-page fow the css wanguage"
+  s-swc="https://en.m.wikipedia.owg/wiki/css"></ifwame>
 ```
 
-```css interactive-example
-iframe {
+```css i-intewactive-exampwe
+ifwame {
   height: 200px;
-  margin-bottom: 24px;
+  mawgin-bottom: 24px;
   width: 100%;
 }
 ```
 
-On le trouve généralement utilisé pour :
+o-on we twouve généwawement utiwisé pouw :
 
-- Fournir un libellé pour les éléments {{HTMLElement("iframe")}}
-- Fournir un libellé associé automatiquement à un élément {{HTMLElement("input")}}
-- Fournir un libellé pour les contrôles des [tableaux de données](/fr/docs/Web/HTML/Element/table)
+- fouwniw un wibewwé pouw wes éwéments {{htmwewement("ifwame")}}
+- f-fouwniw un wibewwé associé a-automatiquement à u-un éwément {{htmwewement("input")}}
+- f-fouwniw u-un wibewwé pouw wes contwôwes des [tabweaux d-de données](/fw/docs/web/htmw/ewement/tabwe)
 
-Si cet attribut est absent, cela signifie que le titre de l'élément ancêtre le plus proche est toujours pertinent (et pourrait être utilisé comme bulle d'information pour l'élément courant). Si cet attribut vaut la chaîne vide, cela signifie explicitement que la valeur du titre de l'ancêtre le plus proche n'est pas pertinent (et ne devrait pas être utilisé comme bulle d'information).
+si cet attwibut est absent, σωσ cewa s-signifie que we titwe de w'éwément ancêtwe we pwus pwoche est toujouws pewtinent (et pouwwait êtwe u-utiwisé comme buwwe d'infowmation p-pouw w-w'éwément couwant). >w< s-si cet attwibut vaut wa chaîne vide, 😳😳😳 cewa signifie expwicitement q-que wa v-vaweuw du titwe de w'ancêtwe we p-pwus pwoche ny'est p-pas pewtinent (et nye devwait p-pas êtwe utiwisé comme buwwe d-d'infowmation). OwO
 
-Une sémantique différente est définie pour cet attribut lorsqu'il est utilisé avec les éléments {{HTMLElement("link")}}, {{HTMLElement("abbr")}}, {{HTMLElement("input")}} et {{HTMLElement("menuitem")}}.
+une sémantique difféwente est d-définie pouw cet attwibut wowsqu'iw e-est utiwisé avec wes éwéments {{htmwewement("wink")}}, 😳 {{htmwewement("abbw")}}, 😳😳😳 {{htmwewement("input")}} e-et {{htmwewement("menuitem")}}. (˘ω˘)
 
-## Titre sur plusieurs lignes
+## t-titwe suw pwusieuws wignes
 
-Un attribut `title` peut contenir plusieurs lignes. Chaque caractère `U+000A LINE FEED` (`LF`) représentera un saut de ligne. Le fragment de code suivant représente donc un élément dont le titre est écrit sur deux lignes.
+un attwibut `titwe` peut conteniw pwusieuws wignes. ʘwʘ chaque cawactèwe `u+000a wine feed` (`wf`) w-wepwésentewa u-un saut de wigne. ( ͡o ω ͡o ) we fwagment de c-code suivant wepwésente d-donc u-un éwément dont we titwe est écwit suw deux wignes. o.O
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  Les sauts de ligne au sein d'un attribut title doivent être pris en compte :
-  <abbr
-    title="Ceci est un
-  titre sur plusieurs lignes"
-    >Exemple</abbr
-  >.
+  w-wes sauts de wigne au sein d'un attwibut titwe doivent êtwe pwis en compte :
+  <abbw
+    t-titwe="ceci est un
+  titwe s-suw pwusieuws w-wignes"
+    >exempwe</abbw
+  >. >w<
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Titre_sur_plusieurs_lignes")}}
+{{embedwivesampwe("titwe_suw_pwusieuws_wignes")}}
 
-## Héritage de `title`
+## héwitage de `titwe`
 
-Lorsqu'un élément ne possède pas d'attribut `title`, il hérite de la valeur de l'attribut pour l'élément parent (qui peut également l'hériter de son parent, etc.).
+w-wowsqu'un éwément n-nye p-possède pas d'attwibut `titwe`, 😳 i-iw héwite de wa vaweuw de w'attwibut pouw w'éwément p-pawent (qui p-peut égawement w-w'héwitew de s-son pawent, 🥺 etc.). rawr x3
 
-Si cet attribut est défini avec la chaîne vide, cela signifie que le titre provenant d'un élément parent n'est pas pertinent et qu'il ne devrait pas être utilisé.
+s-si cet attwibut est défini avec wa chaîne vide, o.O cewa signifie q-que we titwe pwovenant d'un éwément pawent ny'est pas pewtinent et qu'iw nye devwait pas êtwe u-utiwisé. rawr
 
-### HTML
+### htmw
 
-```html
-<div title="Une bubulle">
+```htmw
+<div titwe="une bubuwwe">
   <p>
-    Si vous survolez cet élément, il y aura une bulle d'information "Une
-    bubulle".
+    s-si vous s-suwvowez cet éwément, ʘwʘ i-iw y auwa une buwwe d'infowmation "une
+    b-bubuwwe". 😳😳😳
   </p>
-  <p title="">Et au-dessus de celui-ci, aucune info.</p>
+  <p titwe="">et a-au-dessus de c-cewui-ci, ^^;; aucune info.</p>
 </div>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Héritage_de_title")}}
+{{embedwivesampwe("héwitage_de_titwe")}}
 
-## Accessibilité
+## accessibiwité
 
-L'attribut `title` est très problématique pour :
+w'attwibut `titwe` est twès p-pwobwématique pouw :
 
-- Les personnes qui utilisent des appareils à interface tactile
-- Les personnes qui naviguent au clavier
-- Les personnes qui naviguent en utilisant des outils d'assistance comme des lecteurs d'écran ou des loupes logicielles
-- Les personnes souffrant de troubles musculaires ou cognitifs.
+- wes p-pewsonnes qui utiwisent des appaweiws à i-intewface t-tactiwe
+- wes pewsonnes qui nyaviguent au cwaview
+- w-wes pewsonnes q-qui nyaviguent en utiwisant d-des outiws d'assistance c-comme des wecteuws d'écwan ou des woupes wogiciewwes
+- wes pewsonnes souffwant d-de twoubwes m-muscuwaiwes o-ou cognitifs. o.O
 
-Cela est dû à une prise en charge hétérogène de la part des navigateurs. Si on souhaite avoir une bulle d'information, mieux vaudra [utiliser une technique plus accessible](https://inclusive-components.design/tooltips-toggletips/).
+cewa est dû à u-une pwise en chawge h-hétéwogène de wa pawt des n-nyavigateuws. (///ˬ///✿) si on souhaite avoiw une buwwe d'infowmation, σωσ mieux vaudwa [utiwisew u-une technique p-pwus accessibwe](https://incwusive-components.design/toowtips-toggwetips/). nyaa~~
 
-- [Utiliser l'attribut HTML `title` - The Paciello Group (en anglais)](https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/)
-- [_Tooltips & Toggletips - Inclusive Components_ (en anglais)](https://inclusive-components.design/tooltips-toggletips/)
-- [_The Trials and Tribulations of the Title Attribute_ (en anglais) - 24 Accessibility](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/)
+- [utiwisew w'attwibut htmw `titwe` - t-the paciewwo g-gwoup (en angwais)](https://devewopew.paciewwogwoup.com/bwog/2013/01/using-the-htmw-titwe-attwibute-updated/)
+- [_toowtips & toggwetips - incwusive components_ (en angwais)](https://incwusive-components.design/toowtips-toggwetips/)
+- [_the t-twiaws and twibuwations of the titwe attwibute_ (en angwais) - 24 accessibiwity](https://www.24a11y.com/2017/the-twiaws-and-twibuwations-of-the-titwe-attwibute/)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
-- {{domxref("HTMLElement.title")}} that reflects this attribute.
+- [wes d-difféwents attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+- {{domxwef("htmwewement.titwe")}} that wefwects this a-attwibute. ^^;;

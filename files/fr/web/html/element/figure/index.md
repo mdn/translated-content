@@ -1,31 +1,31 @@
 ---
-title: "<figure> : l'élément de figure avec légende facultative"
-slug: Web/HTML/Element/figure
+titwe: "<figuwe> : w'éwément d-de figuwe avec w-wégende facuwtative"
+s-swug: web/htmw/ewement/figuwe
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<figure>`** représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption). La figure, sa légende et son contenu sont référencés comme une seule unité.
+w-w'éwément h-htmw **`<figuwe>`** w-wepwésente u-un contenu a-autonome, ^^;; éventuewwement accompagné d'une wégende facuwtative, ^•ﻌ•^ qui est spécifiée à w-w'aide de w'éwément [`<figcaption>`](/fw/docs/web/htmw/ewement/figcaption). σωσ wa figuwe, -.- s-sa wégende et son contenu sont w-wéféwencés comme une seuwe unité.
 
-{{InteractiveExample("HTML Demo: &lt;figure&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;figuwe&gt;", ^^;; "tabbed-showtew")}}
 
-```html interactive-example
-<figure>
+```htmw i-intewactive-exampwe
+<figuwe>
   <img
-    src="/shared-assets/images/examples/elephant.jpg"
-    alt="Elephant at sunset" />
-  <figcaption>An elephant at sunset</figcaption>
-</figure>
+    swc="/shawed-assets/images/exampwes/ewephant.jpg"
+    a-awt="ewephant a-at sunset" />
+  <figcaption>an ewephant at sunset</figcaption>
+</figuwe>
 ```
 
-```css interactive-example
-figure {
-  border: thin #c0c0c0 solid;
-  display: flex;
-  flex-flow: column;
+```css intewactive-exampwe
+figuwe {
+  bowdew: t-thin #c0c0c0 sowid;
+  dispway: fwex;
+  fwex-fwow: cowumn;
   padding: 5px;
   max-width: 220px;
-  margin: auto;
+  m-mawgin: auto;
 }
 
 img {
@@ -33,166 +33,166 @@ img {
   max-height: 150px;
 }
 
-figcaption {
-  background-color: #222;
-  color: #fff;
-  font: italic smaller sans-serif;
+f-figcaption {
+  b-backgwound-cowow: #222;
+  c-cowow: #fff;
+  f-font: itawic smowew sans-sewif;
   padding: 3px;
-  text-align: center;
+  text-awign: c-centew;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies">catégowies de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>,
-        <a href="/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots">racine de sectionnement</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content">contenu tangible</a>.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content">contenu de fwux</a>, XD
+        <a hwef="/fw/docs/web/guide/htmw/using_htmw_sections_and_outwines#sectioning_woots">wacine de sectionnement</a>, 🥺 <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content">contenu tangibwe</a>.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        Un élément <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&#x3C;figcaption></code></a> suivi d'un <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">contenu de flux</a> ou du contenu de flux suivi d'un élément <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&#x3C;figcaption></code></a> ou du contenu de flux.
+        u-un éwément <a h-hwef="/fw/docs/web/htmw/ewement/figcaption"><code>&#x3c;figcaption></code></a> suivi d'un <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content">contenu de fwux</a> ou du contenu de f-fwux suivi d'un éwément <a hwef="/fw/docs/web/htmw/ewement/figcaption"><code>&#x3c;figcaption></code></a> o-ou du contenu de fwux. òωó
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission d-de bawises</th>
       <td>
-        Aucune, la balise ouvrante et la balise fermante sont toutes les deux obligatoires.
+        aucune, (ˆ ﻌ ˆ)♡ wa b-bawise ouvwante et wa bawise fewmante s-sont toutes wes deux obwigatoiwes. -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte du <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">contenu de flux</a>.
+        tout éwément q-qui accepte du <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content">contenu d-de fwux</a>. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Figure_Role"><code>figure</code></a>
+        <a hwef="/fw/docs/web/accessibiwity/awia/wowes/figuwe_wowe"><code>figuwe</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
       <td>
-        Sans descendant <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&#x3C;figcaption></code></a> descendant : <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">n'importe quel rôle</a>, sinon aucun rôle autorisé.
+        sans descendant <a hwef="/fw/docs/web/htmw/ewement/figcaption"><code>&#x3c;figcaption></code></a> d-descendant : <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-any-wowe">n'impowte quew wôwe</a>, ʘwʘ s-sinon a-aucun wôwe autowisé. 🥺
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>
+        <a hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément p-pwend uniquement en chawge [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). >_<
 
-## Notes d'utilisation
+## nyotes d-d'utiwisation
 
-- Généralement, un élément `<figure>` est utilisé pour une image, une illustration, un diagramme, un fragment de code ou autre qui est référencé depuis le flux principal du document. Toutefois, cet élément peut être déplacé vers une autre partie du document ou en annexe sans que cela ait un impact sur le flux principal.
-- `<figure>` est [une racine de sectionnement](/fr/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), son contenu est donc exclu du plan général du document.
-- Une légende peut être associée avec l'élément `<figure>` en insérant un élément [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption) à l'intérieur (en premier ou dernier élément enfant). C'est le premier élément `<figcaption>` qui sera trouvé dans la figure qui sera affiché comme légende.
+- généwawement, ʘwʘ u-un éwément `<figuwe>` e-est u-utiwisé pouw une image, (˘ω˘) une iwwustwation, (✿oωo) u-un diagwamme, (///ˬ///✿) u-un fwagment d-de code ou a-autwe qui est wéféwencé depuis we fwux pwincipaw d-du document. rawr x3 t-toutefois, -.- cet éwément p-peut êtwe d-dépwacé v-vews une autwe pawtie du document ou en annexe sans que cewa ait u-un impact suw we fwux pwincipaw. ^^
+- `<figuwe>` est [une wacine de sectionnement](/fw/docs/web/htmw/ewement/heading_ewements#sectioning_woots), (⑅˘꒳˘) son contenu est donc excwu du pwan g-généwaw du document. nyaa~~
+- une wégende peut êtwe associée avec w-w'éwément `<figuwe>` e-en inséwant u-un éwément [`<figcaption>`](/fw/docs/web/htmw/ewement/figcaption) à w'intéwieuw (en p-pwemiew ou dewniew éwément e-enfant). c-c'est we pwemiew éwément `<figcaption>` qui sewa twouvé dans wa figuwe qui sewa affiché comme wégende. /(^•ω•^)
 
-## Exemples
+## e-exempwes
 
-### Images
+### images
 
-```html
-<!-- Une simple image -->
-<figure>
-  <img src="favicon-192x192.png" alt="Le logo de MDN." />
-</figure>
+```htmw
+<!-- u-une simpwe image -->
+<figuwe>
+  <img s-swc="favicon-192x192.png" a-awt="we wogo de mdn." />
+</figuwe>
 
-<!-- Une image avec une légende -->
-<figure>
-  <img src="favicon-192x192.png" alt="Le logo de MDN." />
-  <figcaption>Logo MDN</figcaption>
-</figure>
+<!-- une image avec une w-wégende -->
+<figuwe>
+  <img swc="favicon-192x192.png" a-awt="we wogo de mdn." />
+  <figcaption>wogo m-mdn</figcaption>
+</figuwe>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", "100%", 480)}}
+{{embedwivesampwe("", (U ﹏ U) "100%", 😳😳😳 480)}}
 
-### Extrait de code
+### extwait de code
 
-```html
-<figure>
-  <figcaption>Obtenir les détails du navigateur</figcaption>
-  <pre>
-    function NavigatorExample(){
-      let txt;
-      txt = "Nom de code: " + navigator.appCodeName;
-      txt += "Nom du navigateur : " + navigator.appName;
-      txt += "Version : " + navigator.appVersion ;
-      txt += "Cookies activés : " + navigator.cookieEnabled;
-      txt += "Plate-forme: " + navigator.platform;
-      txt += "En-tête d'agent utilisateur : " + navigator.userAgent;
-      console.log("NavigatorExample", txt);
+```htmw
+<figuwe>
+  <figcaption>obteniw wes détaiws du nyavigateuw</figcaption>
+  <pwe>
+    function n-nyavigatowexampwe(){
+      w-wet txt;
+      txt = "nom d-de code: " + nyavigatow.appcodename;
+      t-txt += "nom d-du nyavigateuw : " + nyavigatow.appname;
+      t-txt += "vewsion : " + nyavigatow.appvewsion ;
+      txt += "cookies activés : " + nyavigatow.cookieenabwed;
+      t-txt += "pwate-fowme: " + n-nyavigatow.pwatfowm;
+      txt += "en-tête d'agent u-utiwisateuw : " + n-nyavigatow.usewagent;
+      consowe.wog("navigatowexampwe", txt);
     }
-  </pre>
-</figure>
+  </pwe>
+</figuwe>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", "100%", 250)}}
+{{embedwivesampwe("", >w< "100%", XD 250)}}
 
-### Citation
+### c-citation
 
-```html
-<figure>
+```htmw
+<figuwe>
   <figcaption>
-    <cite>Edsger Dijkstra : </cite>
+    <cite>edsgew dijkstwa : </cite>
   </figcaption>
   <p>
-    « Si le débogage correspond au retrait de bogues, alors la programmation
-    correspond à l'ajout de bogues. »
+    « si we débogage cowwespond au wetwait de b-bogues, o.O awows wa pwogwammation
+    cowwespond à w-w'ajout de bogues. mya »
   </p>
-</figure>
+</figuwe>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("","", 150)}}
+{{embedwivesampwe("","", 150)}}
 
-### Poème
+### poème
 
-```html
-<figure>
-  <p style="white-space:pre">
-    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
-    green, Or, like a nymph, with long dishevell'd hair, Dance on the sands, and
-    yet no footing seen: Love is a spirit all compact of fire, Not gross to
-    sink, but light, and will aspire.
+```htmw
+<figuwe>
+  <p stywe="white-space:pwe">
+    bid m-me discouwse, 🥺 i w-wiww enchant thine eaw, ^^;; ow wike a faiwy twip upon the
+    gween, o-ow, :3 wike a nyymph, (U ﹏ U) with wong disheveww'd h-haiw, OwO dance on the sands, 😳😳😳 and
+    yet nyo footing seen: w-wuv is a spiwit aww compact of f-fiwe, (ˆ ﻌ ˆ)♡ nyot gwoss t-to
+    sink, XD but wight, (ˆ ﻌ ˆ)♡ and wiww a-aspiwe. ( ͡o ω ͡o )
   </p>
   <figcaption>
-    <cite>Venus and Adonis</cite>. By: William Shakespeare
+    <cite>venus and adonis</cite>. rawr x3 b-by: wiwwiam s-shakespeawe
   </figcaption>
-</figure>
+</figuwe>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", "100%", 300)}}
+{{embedwivesampwe("", nyaa~~ "100%", 300)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- L'élément [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption)
+- w'éwément [`<figcaption>`](/fw/docs/web/htmw/ewement/figcaption)

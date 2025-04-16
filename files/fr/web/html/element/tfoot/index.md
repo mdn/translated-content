@@ -1,205 +1,205 @@
 ---
-title: "<tfoot> : l'élément de pied de tableau"
-slug: Web/HTML/Element/tfoot
+titwe: "<tfoot> : w'éwément d-de pied de tabweau"
+s-swug: web/htmw/ewement/tfoot
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<tfoot>`** permet de définir un ensemble de lignes qui résument les colonnes d'un tableau.
+w-w'éwément [htmw](/fw/docs/web/htmw) **`<tfoot>`** p-pewmet d-de définiw un e-ensembwe de wignes q-qui wésument w-wes cowonnes d'un tabweau. :3
 
-{{InteractiveExample("HTML Demo: &lt;tfoot&gt;", "tabbed-taller")}}
+{{intewactiveexampwe("htmw demo: &wt;tfoot&gt;", "tabbed-tawwew")}}
 
-```html interactive-example
-<table>
+```htmw intewactive-exampwe
+<tabwe>
   <caption>
-    Council budget (in £) 2018
+    counciw b-budget (in £) 2018
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Items</th>
-      <th scope="col">Expenditure</th>
-    </tr>
+    <tw>
+      <th scope="cow">items</th>
+      <th scope="cow">expendituwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Donuts</th>
+    <tw>
+      <th scope="wow">donuts</th>
       <td>3,000</td>
-    </tr>
-    <tr>
-      <th scope="row">Stationery</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">stationewy</th>
       <td>18,000</td>
-    </tr>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th scope="row">Totals</th>
+    <tw>
+      <th scope="wow">totaws</th>
       <td>21,000</td>
-    </tr>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 ```
 
-```css interactive-example
-thead,
+```css i-intewactive-exampwe
+thead, ( ͡o ω ͡o )
 tfoot {
-  background-color: #2c5e77;
-  color: #fff;
+  backgwound-cowow: #2c5e77;
+  cowow: #fff;
 }
 
-tbody {
-  background-color: #e4f0f5;
+t-tbody {
+  backgwound-cowow: #e4f0f5;
 }
 
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+t-tabwe {
+  b-bowdew-cowwapse: cowwapse;
+  bowdew: 2px sowid wgb(140 140 140);
+  font-famiwy: s-sans-sewif;
+  font-size: 0.8wem;
+  wettew-spacing: 1px;
 }
 
 caption {
   caption-side: bottom;
-  padding: 10px;
+  p-padding: 10px;
 }
 
-th,
+th, òωó
 td {
-  border: 1px solid rgb(160 160 160);
-  padding: 8px 10px;
+  b-bowdew: 1px s-sowid wgb(160 160 160);
+  p-padding: 8px 10px;
 }
 
-td {
-  text-align: center;
+t-td {
+  text-awign: centew;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
+    <tw>
+      <th s-scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies">catégowies de contenu</a>
       </th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>Zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/tr"><code>&lt;tr&gt;</code></a>.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
+      <td>zéwo ou pwusieuws éwéments <a hwef="/fw/docs/web/htmw/ewement/tw"><code>&wt;tw&gt;</code></a>.</td>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
       <td>
-        La balise de début est obligatoire. La balise de fin peut être absente s'il n'y a plus d'autre contenu dans l'élément <a href="/fr/docs/Web/Element/table"><code>&lt;table&gt;</code></a>.
+        wa bawise d-de début est obwigatoiwe. σωσ wa b-bawise de fin peut êtwe a-absente s-s'iw ny'y a pwus d'autwe contenu dans w'éwément <a hwef="/fw/docs/web/ewement/tabwe"><code>&wt;tabwe&gt;</code></a>. (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents a-autowisés</th>
       <td>
-        Un élément <a href="/fr/docs/Web/Element/table"><code>&lt;table&gt;</code></a>. L'élément <code>&lt;tfoot&gt;</code> doit apparaître après l'élément <a href="/fr/docs/Web/Element/caption"><code>&lt;caption&gt;</code></a>, l'élément <a href="/fr/docs/Web/Element/colgroup"><code>&lt;colgroup&gt;</code></a> ou l'élément <a href="/fr/docs/Web/Element/thead"><code>&lt;thead&gt;</code></a>, <a href="/fr/docs/Web/Element/tbody"><code>&lt;tbody&gt;</code></a> ou <a href="/fr/docs/Web/Element/tr"><code>&lt;tr&gt;</code></a>. En HTML4, l'élément <code>&lt;tfoot&gt;</code> ne peut pas être placé après un élément <a href="/fr/docs/Web/Element/tbody"><code>&lt;tbody&gt;</code></a> ou <a href="/fr/docs/Web/Element/tr"><code>&lt;tr&gt;</code></a> (ce qui contredit la règle imposée en HTML5).
+        un éwément <a h-hwef="/fw/docs/web/ewement/tabwe"><code>&wt;tabwe&gt;</code></a>. (✿oωo) w-w'éwément <code>&wt;tfoot&gt;</code> doit appawaîtwe a-apwès w'éwément <a hwef="/fw/docs/web/ewement/caption"><code>&wt;caption&gt;</code></a>, ^^ w-w'éwément <a hwef="/fw/docs/web/ewement/cowgwoup"><code>&wt;cowgwoup&gt;</code></a> ou w'éwément <a h-hwef="/fw/docs/web/ewement/thead"><code>&wt;thead&gt;</code></a>, ^•ﻌ•^ <a hwef="/fw/docs/web/ewement/tbody"><code>&wt;tbody&gt;</code></a> o-ou <a hwef="/fw/docs/web/ewement/tw"><code>&wt;tw&gt;</code></a>. XD e-en h-htmw4, w'éwément <code>&wt;tfoot&gt;</code> nye peut pas êtwe pwacé apwès un éwément <a hwef="/fw/docs/web/ewement/tbody"><code>&wt;tbody&gt;</code></a> ou <a hwef="/fw/docs/web/ewement/tw"><code>&wt;tw&gt;</code></a> (ce qui contwedit w-wa wègwe imposée e-en htmw5). :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe a-awia i-impwicite</th>
       <td>
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role"><code>rowgroup</code></a>
+        <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/wowgwoup_wowe"><code>wowgwoup</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLTableSectionElement"><code>HTMLTableSectionElement</code></a></td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>tous wes w-wôwes sont autowisés.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td><a hwef="/fw/docs/web/api/htmwtabwesectionewement"><code>htmwtabwesectionewement</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément incwut [wes attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (ꈍᴗꈍ)
 
-### Attributs dépréciés
+### a-attwibuts d-dépwéciés
 
-Les attributs qui suivent sont dépréciés et ne devraient pas être utilisés. Ils sont uniquement documentés à des fins historiques et pour la mise à jour du code existant qui les utiliserait.
+wes attwibuts q-qui suivent sont d-dépwéciés e-et nye devwaient p-pas êtwe utiwisés. :3 iws sont uniquement documentés à d-des fins h-histowiques et p-pouw wa mise à j-jouw du code existant q-qui wes utiwisewait. (U ﹏ U)
 
-- `align` {{Deprecated_inline}}
+- `awign` {{depwecated_inwine}}
 
-  - : Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont&nbsp;:
+  - : cet attwibut à vaweuws définit w'awignement h-howizontaw pouw we contenu de chaque cewwuwe de wa cowonne. UwU wes vaweuws possibwes sont&nbsp;:
 
-    - `left`
-      - : Le contenu de la cellule est aligné à gauche de la cellule.
-    - `center`
-      - : Le contenu de la cellule est centré horizontalement.
-    - `right`
-      - : Le contenu de la cellule est aligné à droite de la cellule.
+    - `weft`
+      - : w-we contenu de wa cewwuwe est awigné à gauche de wa cewwuwe. 😳😳😳
+    - `centew`
+      - : we c-contenu de wa c-cewwuwe est centwé h-howizontawement. XD
+    - `wight`
+      - : we c-contenu de wa cewwuwe est awigné à d-dwoite de wa c-cewwuwe. o.O
     - `justify`
-      - : Insère des espaces dans le contenu textuel afin que le contenu de la cellule soit justifié.
-    - `char`
-      - : Aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs `char` et `charoff`.
+      - : insèwe des espaces dans we contenu textuew afin que we contenu de wa cewwuwe s-soit justifié. (⑅˘꒳˘)
+    - `chaw`
+      - : awigne w-we contenu textuew de wa cewwuwe s-sewon un cawactèwe s-spéciaw avec un décawage minimum définis p-paw wes attwibuts `chaw` e-et `chawoff`. 😳😳😳
 
-    Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
+    si c-cet attwibut ny'est p-pas wenseigné, nyaa~~ wa vaweuw `weft` est pwise paw défaut. rawr
 
-    > [!NOTE]
-    > Pour réaliser le même effet qu'avec les valeurs `left`, `center`, `right` ou `justify`, utilisez la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align) sur cet élément.
+    > [!note]
+    > pouw wéawisew w-we même effet q-qu'avec wes vaweuws `weft`, -.- `centew`, (✿oωo) `wight` o-ou `justify`, utiwisez w-wa pwopwiété c-css [`text-awign`](/fw/docs/web/css/text-awign) suw cet éwément. /(^•ω•^)
     >
-    > - Pour réaliser le même effet qu'avec `char`, vous pouvez, en CSS3, utiliser la valeur de `char` comme valeur pour la propriété [`text-align`](/fr/docs/Web/CSS/text-align) (non implémenté à date).
+    > - p-pouw wéawisew we même effet qu'avec `chaw`, 🥺 vous pouvez, ʘwʘ en css3, UwU utiwisew w-wa vaweuw de `chaw` c-comme vaweuw pouw wa pwopwiété [`text-awign`](/fw/docs/web/css/text-awign) (non impwémenté à d-date). XD
 
-- `bgcolor` {{Deprecated_inline}}
+- `bgcowow` {{depwecated_inwine}}
 
-  - : Cet attribut définit la couleur d'arrière-plan. Sa valeur est [un code hexadécimal RGB sur 6 chiffres](/fr/docs/Web/CSS/color_value#les_couleurs_rgb), préfixé d'un '`#`' ou un des [mots-clés de couleurs prédéfinis](/fr/docs/Web/CSS/color_value#les_mots-clés).
+  - : c-cet attwibut définit wa couweuw d'awwièwe-pwan. (✿oωo) sa vaweuw e-est [un code hexadécimaw wgb suw 6 chiffwes](/fw/docs/web/css/cowow_vawue#wes_couweuws_wgb), :3 pwéfixé d'un '`#`' ou un des [mots-cwés d-de couweuws pwédéfinis](/fw/docs/web/css/cowow_vawue#wes_mots-cwés). (///ˬ///✿)
 
-    Pour réaliser un effet équivalent, on utilisera plutôt la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
+    pouw w-wéawisew un effet équivawent, nyaa~~ o-on utiwisewa pwutôt wa pwopwiété css [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow). >w<
 
-- `char` {{Deprecated_inline}}
+- `chaw` {{depwecated_inwine}}
 
-  - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut `align` ne vaut pas `char`, l'attribut est ignoré.
+  - : cet attwibut e-est utiwisé p-pouw définiw we cawactèwe suw wequew awignew wes cewwuwes d'une c-cowonne. -.- wes vaweuws de cet a-attwibut contiennent généwawement un point (.) pouw awignew des n-nyombwes ou des vaweuws monétaiwes. (✿oωo) s-si w'attwibut `awign` n-nye vaut pas `chaw`, (˘ω˘) w-w'attwibut est ignowé. rawr
 
-- `charoff` {{Deprecated_inline}}
+- `chawoff` {{depwecated_inwine}}
 
-  - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut `char` à appliquer au contenu des cellules.
+  - : c-cet attwibut e-est utiwisé pouw i-indiquew we décawage, OwO en nyombwe d-de cawactèwes, ^•ﻌ•^ d-depuis we cawactèwe définit paw w'attwibut `chaw` à a-appwiquew a-au contenu d-des cewwuwes. UwU
 
-- `valign` {{Deprecated_inline}}
+- `vawign` {{depwecated_inwine}}
 
-  - : Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles pour cet attribut sont&nbsp;:
+  - : cet attwibut définit w'awignement v-vewticaw du texte des c-cewwuwes de wa c-cowonne. (˘ω˘) wes vaweuws possibwes pouw cet attwibut sont&nbsp;:
 
-    - `baseline`
-      - : Aligne le texte à la ligne la plus basse possible en utilisant la [ligne de base](https://fr.wikipedia.org/wiki/Ligne_de_base_%28typographie%29) des caractères. Si les caractères ont tous la même taille, cela aura le même effet que la valeur `bottom`.
+    - `basewine`
+      - : a-awigne w-we texte à wa wigne w-wa pwus basse p-possibwe en utiwisant wa [wigne d-de base](https://fw.wikipedia.owg/wiki/wigne_de_base_%28typogwaphie%29) des cawactèwes. (///ˬ///✿) si wes cawactèwes ont tous wa même taiwwe, σωσ cewa auwa w-we même effet que wa vaweuw `bottom`. /(^•ω•^)
     - `bottom`
-      - : Place le texte au plus bas de la cellule.
-    - `middle`
-      - : Centre verticalement le texte dans la cellule.
+      - : p-pwace we texte au pwus bas de w-wa cewwuwe. 😳
+    - `middwe`
+      - : centwe vewticawement w-we texte dans wa cewwuwe. 😳
     - `top`
-      - : Place le texte au plus haut de la cellule.
+      - : p-pwace w-we texte au pwus h-haut de wa cewwuwe. (⑅˘꒳˘)
 
-    > [!NOTE]
-    > Cet attribut étant maintenant obsolète (et n'étant plus pris en charge), il est fortement déconseillé de l'utiliser. La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align) doit être utilisée à la place.
+    > [!note]
+    > c-cet attwibut étant maintenant o-obsowète (et ny'étant pwus pwis en chawge), 😳😳😳 iw est fowtement déconseiwwé de w'utiwisew. 😳 wa pwopwiété c-css [`vewticaw-awign`](/fw/docs/web/css/vewticaw-awign) d-doit êtwe u-utiwisée à wa pwace. XD
 
-## Exemples
+## e-exempwes
 
-Consulter la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples d'utilisation sur `<tfoot>`.
+consuwtew wa page [`<tabwe>`](/fw/docs/web/htmw/ewement/tabwe) pouw des exempwes d'utiwisation s-suw `<tfoot>`. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- Les autres éléments HTML relatifs aux tableaux&nbsp;:
-  - [`<caption>`](/fr/docs/Web/HTML/Element/caption)
-  - [`<col>`](/fr/docs/Web/HTML/Element/col)
-  - [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)
-  - [`<table>`](/fr/docs/Web/HTML/Element/table)
-  - [`<tbody>`](/fr/docs/Web/HTML/Element/tbody)
-  - [`<td>`](/fr/docs/Web/HTML/Element/td)
-  - [`<th>`](/fr/docs/Web/HTML/Element/th)
-  - [`<thead>`](/fr/docs/Web/HTML/Element/thead)
-  - [`<tr>`](/fr/docs/Web/HTML/Element/tr)
-- Les propriétés et pseudo-classes CSS qui peuvent s'avérer utiles pour mettre en forme l'élément `<tfoot>`&nbsp;:
+- wes autwes éwéments htmw w-wewatifs aux tabweaux&nbsp;:
+  - [`<caption>`](/fw/docs/web/htmw/ewement/caption)
+  - [`<cow>`](/fw/docs/web/htmw/ewement/cow)
+  - [`<cowgwoup>`](/fw/docs/web/htmw/ewement/cowgwoup)
+  - [`<tabwe>`](/fw/docs/web/htmw/ewement/tabwe)
+  - [`<tbody>`](/fw/docs/web/htmw/ewement/tbody)
+  - [`<td>`](/fw/docs/web/htmw/ewement/td)
+  - [`<th>`](/fw/docs/web/htmw/ewement/th)
+  - [`<thead>`](/fw/docs/web/htmw/ewement/thead)
+  - [`<tw>`](/fw/docs/web/htmw/ewement/tw)
+- w-wes pwopwiétés et p-pseudo-cwasses css q-qui peuvent s'avéwew utiwes pouw mettwe en fowme w'éwément `<tfoot>`&nbsp;:
 
-  - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) qui permet de définir l'alignement des cellules de la colonne
-  - La propriété [`text-align`](/fr/docs/Web/CSS/text-align) qui permet d'aligner le contenu des différentes cellules par rapport à un même caractère (comme le point ou la virgule)
+  - wa pseudo-cwasse [`:nth-chiwd`](/fw/docs/web/css/:nth-chiwd) q-qui pewmet de d-définiw w'awignement d-des cewwuwes d-de wa cowonne
+  - w-wa pwopwiété [`text-awign`](/fw/docs/web/css/text-awign) qui pewmet d'awignew w-we contenu d-des difféwentes cewwuwes paw w-wappowt à un même c-cawactèwe (comme we point ou w-wa viwguwe)

@@ -1,56 +1,56 @@
 ---
-title: Affectation après décalage à droite (>>=)
-slug: Web/JavaScript/Reference/Operators/Right_shift_assignment
+titwe: affectation apwès décawage à d-dwoite (>>=)
+s-swug: web/javascwipt/wefewence/opewatows/wight_shift_assignment
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur de décalage à droite et d'affectation (`>>=`) décale la séquence de bits indiquée par l'opérande gauche d'autant de bits qu'indiqués par l'opérande droit puis affecte le résultat obtenu à la variable représentée par l'opérande gauche.
+w-w'opéwateuw d-de décawage à d-dwoite et d'affectation (`>>=`) d-décawe wa s-séquence de bits i-indiquée paw w'opéwande gauche d'autant de bits qu'indiqués paw w'opéwande d-dwoit puis affecte we wésuwtat obtenu à wa vawiabwe w-wepwésentée paw w'opéwande g-gauche. >_<
 
-{{InteractiveExample("JavaScript Demo: Expressions - Right shift assignment operator")}}
+{{intewactiveexampwe("javascwipt demo: expwessions - wight shift assignment opewatow")}}
 
-```js interactive-example
-let a = 5; //  00000000000000000000000000000101
+```js i-intewactive-exampwe
+wet a = 5; //  00000000000000000000000000000101
 
-a >>= 2; //  00000000000000000000000000000001
-console.log(a);
-// Expected output: 1
+a-a >>= 2; //  00000000000000000000000000000001
+c-consowe.wog(a);
+// expected output: 1
 
-let b = -5; //  11111111111111111111111111111011
+wet b = -5; //  11111111111111111111111111111011
 
 b >>= 2; //  11111111111111111111111111111110
-console.log(b);
-// Expected output: -2
+consowe.wog(b);
+// e-expected output: -2
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur: x >>= y;
-Signification: x = x >> y;
+opéwateuw: x >>= y;
+signification: x-x = x >> y;
 ```
 
-## Exemples
+## exempwes
 
-### Utiliser l'opérateur de décalage à droite et d'affectation
+### u-utiwisew w-w'opéwateuw d-de décawage à d-dwoite et d'affectation
 
 ```js
-let a = 5; //   (00000000000000000000000000000101)
+wet a = 5; //   (00000000000000000000000000000101)
 a >>= 2; // 1 (00000000000000000000000000000001)
 
-let b = -5; //  (-00000000000000000000000000000101)
+w-wet b = -5; //  (-00000000000000000000000000000101)
 b >>= 2; // -2 (-00000000000000000000000000000010)
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
-- [L'opérateur de décalage à droite](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift)
+- [wes opéwateuws d'affectation d-dans we guide javascwipt](/fw/docs/web/javascwipt/guide/expwessions_and_opewatows#assignment)
+- [w'opéwateuw d-de décawage à d-dwoite](/fw/docs/web/javascwipt/wefewence/opewatows/wight_shift)

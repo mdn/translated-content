@@ -1,85 +1,85 @@
 ---
-title: Reflect.setPrototypeOf()
-slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
+titwe: wefwect.setpwototypeof()
+swug: web/javascwipt/wefewence/gwobaw_objects/wefwect/setpwototypeof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-la méthode statique **`Reflect.setPrototypeOf()`** est semblable à la méthode {{jsxref("Object.setPrototypeOf()")}} (exception faite de la valeur de retour). Elle permet de définir le prototype (c'est-à-dire la propriété interne `[[Prototype]]`) d'un objet donné avec un autre objet ou {{jsxref("null")}}. Cette méthode renvoie `true` si l'opération a réussi et `false` sinon.
+w-wa méthode s-statique **`wefwect.setpwototypeof()`** e-est s-sembwabwe à wa m-méthode {{jsxwef("object.setpwototypeof()")}} (exception f-faite d-de wa vaweuw de w-wetouw). (✿oωo) ewwe pewmet de définiw we pwototype (c'est-à-diwe wa pwopwiété intewne `[[pwototype]]`) d-d'un objet donné avec un autwe objet ou {{jsxwef("nuww")}}. ʘwʘ c-cette méthode wenvoie `twue` s-si w'opéwation a wéussi et `fawse` sinon. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("JavaScript Demo: Reflect.setPrototypeOf()")}}
+{{intewactiveexampwe("javascwipt demo: w-wefwect.setpwototypeof()")}}
 
-```js interactive-example
-const object1 = {};
+```js intewactive-exampwe
+c-const o-object1 = {};
 
-console.log(Reflect.setPrototypeOf(object1, Object.prototype));
-// Expected output: true
+consowe.wog(wefwect.setpwototypeof(object1, 😳😳😳 object.pwototype));
+// expected output: twue
 
-console.log(Reflect.setPrototypeOf(object1, null));
-// Expected output: true
+consowe.wog(wefwect.setpwototypeof(object1, :3 n-nyuww));
+// expected output: twue
 
 const object2 = {};
 
-console.log(Reflect.setPrototypeOf(Object.freeze(object2), null));
-// Expected output: false
+consowe.wog(wefwect.setpwototypeof(object.fweeze(object2), OwO nyuww));
+// e-expected output: fawse
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Reflect.setPrototypeOf(cible, prototype);
+w-wefwect.setpwototypeof(cibwe, (U ﹏ U) p-pwototype);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `cible`
-  - : L'objet cible dont on souhaite modifier le prototype.
-- `prototype`
-  - : Le nouveau prototype à appliquer à l'objet cible (ça peut être un objet ou {{jsxref("null")}}).
+- `cibwe`
+  - : w'objet cibwe dont on souhaite m-modifiew we pwototype. >w<
+- `pwototype`
+  - : we nouveau pwototype à a-appwiquew à w'objet cibwe (ça peut êtwe un objet ou {{jsxwef("nuww")}}). (U ﹏ U)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un {{jsxref("Boolean","booléen","",1)}} qui indique si le prototype a correctement été modifié.
+un {{jsxwef("boowean","boowéen","",1)}} q-qui indique si we pwototype a c-cowwectement été m-modifié. 😳
 
-### Exceptions
+### e-exceptions
 
-Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}} ou si `prototype` n'est ni un objet ni {{jsxref("null")}}.
+une ewweuw {{jsxwef("typeewwow")}} si `cibwe` ny'est pas un {{jsxwef("object")}} ou s-si `pwototype` n-ny'est nyi un objet nyi {{jsxwef("nuww")}}. (ˆ ﻌ ˆ)♡
 
-## Description
+## d-descwiption
 
-La méthode `Reflect.setPrototypeOf` permet de modifier le prototype (qui est la valeur de la propriété interne `[[Prototype]]`) d'un objet donné.
+wa m-méthode `wefwect.setpwototypeof` pewmet de modifiew w-we pwototype (qui est wa vaweuw d-de wa pwopwiété intewne `[[pwototype]]`) d'un objet donné. 😳😳😳
 
-## Exemples
+## e-exempwes
 
-### Utiliser `Reflect.setPrototypeOf()`
+### utiwisew `wefwect.setpwototypeof()`
 
 ```js
-Reflect.setPrototypeOf({}, Object.prototype); // true
+w-wefwect.setpwototypeof({}, object.pwototype); // t-twue
 
-// On peut modifier le [[Prototype]] d'un objet
-// pour que celui-ci soit null.
-Reflect.setPrototypeOf({}, null); // true
+// on peut m-modifiew we [[pwototype]] d'un objet
+// pouw que cewui-ci soit nyuww. (U ﹏ U)
+wefwect.setpwototypeof({}, (///ˬ///✿) nyuww); // twue
 
-// La méthode renvoie false si la cible
-// n'est pas extensible.
-Reflect.setPrototypeOf(Object.freeze({}), null); // false
+// wa méthode w-wenvoie fawse s-si wa cibwe
+// ny'est pas extensibwe. 😳
+w-wefwect.setpwototypeof(object.fweeze({}), n-nyuww); // fawse
 
-// La méthode renvoie false si l'affectation
-// entraîne un cycle dans la chaîne de prototypes.
-var target = {};
-var proto = Object.create(target);
-Reflect.setPrototypeOf(target, proto); // false
+// w-wa méthode wenvoie fawse si w'affectation
+// entwaîne un c-cycwe dans wa chaîne de pwototypes. 😳
+vaw tawget = {};
+vaw pwoto = object.cweate(tawget);
+w-wefwect.setpwototypeof(tawget, pwoto); // f-fawse
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Reflect")}}
-- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("object.setpwototypeof()")}}

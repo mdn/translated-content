@@ -1,250 +1,250 @@
 ---
-title: Array.prototype.forEach()
-slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
+titwe: awway.pwototype.foweach()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/foweach
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque élément du tableau.
+w-wa méthode **`foweach()`** p-pewmet d-d'exékawaii~w u-une fonction donnée s-suw chaque éwément d-du tabweau. (U ᵕ U❁)
 
-{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+{{intewactiveexampwe("javascwipt d-demo: a-awway.foweach()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
+```js intewactive-exampwe
+const awway1 = ["a", ^^;; "b", "c"];
 
-array1.forEach((element) => console.log(element));
+awway1.foweach((ewement) => consowe.wog(ewement));
 
-// Expected output: "a"
-// Expected output: "b"
-// Expected output: "c"
+// e-expected output: "a"
+// expected output: "b"
+// e-expected output: "c"
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-arr.forEach(callback);
-arr.forEach(callback, thisArg);
+aww.foweach(cawwback);
+aww.foweach(cawwback, mya thisawg);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction à utiliser pour chaque élément du tableau. Elle prend en compte trois arguments :
+  - : wa fonction à u-utiwisew pouw c-chaque éwément du tabweau. 😳😳😳 ewwe pwend en compte twois awguments :
 
-    - `valeurCourante`
-      - : La valeur de l'élément du tableau en cours de traitement.
-    - `index` {{optional_inline}}
-      - : L'indice de l'élément du tableau en cours de traitement.
-    - `array` {{optional_inline}}
-      - : Le tableau sur lequel la méthode `forEach` est appliquée.
+    - `vaweuwcouwante`
+      - : wa vaweuw d-de w'éwément du tabweau en couws de twaitement. OwO
+    - `index` {{optionaw_inwine}}
+      - : w'indice de w'éwément du tabweau e-en couws de twaitement. rawr
+    - `awway` {{optionaw_inwine}}
+      - : we tabweau s-suw wequew wa méthode `foweach` e-est appwiquée. XD
 
-- `thisArg` {{optional_inline}}
-  - : Paramètre optionnel. La valeur à utiliser pour `this` lors de l'exécution de `callback`.
+- `thisawg` {{optionaw_inwine}}
+  - : p-pawamètwe o-optionnew. (U ﹏ U) wa vaweuw à utiwisew pouw `this` w-wows de w'exécution de `cawwback`. (˘ω˘)
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. UwU
 
-## Description
+## descwiption
 
-`forEach()` exécute la fonction `callback` une fois pour chaque élément du tableau, dans l'ordre croissant des indices. Cette fonction n'est pas appelée pour les indices pour lesquels les éléments ont été supprimés ou qui n'ont pas été définis. Attention, en revanche elle est appelée pour les éléments qui sont présents et qui valent {{jsxref("undefined")}}.
+`foweach()` exékawaii~ wa fonction `cawwback` une fois pouw chaque éwément d-du tabweau, >_< dans w'owdwe cwoissant d-des indices. σωσ c-cette fonction n-ny'est pas appewée pouw wes indices pouw wesquews wes éwéments o-ont été suppwimés o-ou qui ny'ont pas été d-définis. 🥺 attention, 🥺 e-en wevanche ewwe est appewée p-pouw wes éwéments qui sont p-pwésents et qui vawent {{jsxwef("undefined")}}. ʘwʘ
 
-`callback` est appelé avec trois arguments :
+`cawwback` est appewé avec t-twois awguments :
 
-- la valeur de l'élément
-- l'index de l'élément
-- le tableau utilisé
+- wa vaweuw de w-w'éwément
+- w'index de w'éwément
+- w-we tabweau u-utiwisé
 
-Si un paramètre `thisArg` est fourni à la méthode `forEach`, il sera utilisé en tant que valeur `this` pour chaque appel de `callback`. Sinon, ce sera la valeur `undefined` qui sera utilisée comme valeur `this`. La valeur `this` finalement prise en compte par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur de `this` utilisée dans une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
+si un pawamètwe `thisawg` est fouwni à wa méthode `foweach`, :3 iw sewa utiwisé en tant que vaweuw `this` p-pouw chaque a-appew de `cawwback`. (U ﹏ U) sinon, c-ce sewa wa vaweuw `undefined` qui s-sewa utiwisée c-comme vaweuw `this`. (U ﹏ U) wa vaweuw `this` finawement pwise en compte p-paw wa fonction `cawwback` est détewminée sewon [wes wègwes usuewwes pouw d-détewminew wa vaweuw de `this` u-utiwisée dans une f-fonction](/fw/docs/web/javascwipt/wefewence/opewatows/this). ʘwʘ
 
-L'ensemble des éléments traités par `forEach` est défini avant le premier appel à `callback`. Les éléments ajoutés au tableau après que l'appel à `forEach` ait commencé ne seront pas visités par `callback`. Si des éléments déjà présents dans le tableau sont modifiés, leur valeur telle qu'elle est passée au `callback` sera la valeur au moment du passage du `forEach` ; les éléments supprimés ne sont pas parcourus. Voir [l'exemple ci-après](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#attention_aux_modifications_en_cours).
+w-w'ensembwe des éwéments twaités p-paw `foweach` e-est défini avant w-we pwemiew appew à `cawwback`. >w< w-wes éwéments ajoutés au tabweau apwès que w-w'appew à `foweach` a-ait commencé n-nye sewont p-pas visités paw `cawwback`. rawr x3 s-si des éwéments déjà pwésents dans we tabweau s-sont modifiés, weuw vaweuw tewwe qu'ewwe est passée au `cawwback` sewa wa vaweuw au moment du p-passage du `foweach` ; wes éwéments suppwimés nye sont pas pawcouwus. OwO v-voiw [w'exempwe c-ci-apwès](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach#attention_aux_modifications_en_couws).
 
-`forEach()` exécute la fonction `callback` une fois pour chaque élément. À la différence de {{jsxref("Array.prototype.map()", "map()")}} ou de {{jsxref("Array.prototype.reduce()", "reduce()")}} il renvoie toujours la valeur {{jsxref("undefined")}} et ne peut donc pas être « enchaîné ». Généralement, l'effet voulu est de déclencher des effets de bord en fin de chaîne.
+`foweach()` e-exékawaii~ wa fonction `cawwback` u-une fois pouw chaque éwément. ^•ﻌ•^ À w-wa d-difféwence de {{jsxwef("awway.pwototype.map()", >_< "map()")}} ou de {{jsxwef("awway.pwototype.weduce()", OwO "weduce()")}} iw wenvoie toujouws wa vaweuw {{jsxwef("undefined")}} et nye peut donc pas êtwe « e-enchaîné ». >_< généwawement, (ꈍᴗꈍ) w-w'effet vouwu est de décwenchew d-des effets d-de bowd en fin de chaîne. >w<
 
-`forEach()` ne modifie pas le tableau sur lequel elle est appelée, en revanche, la fonction de retour (_callback_) utilisée peut modifier le tableau.
+`foweach()` nye m-modifie pas we tabweau s-suw wequew ewwe est appewée, (U ﹏ U) e-en wevanche, ^^ w-wa fonction de wetouw (_cawwback_) utiwisée peut modifiew we tabweau. (U ﹏ U)
 
-> [!NOTE]
-> Il n'existe aucun moyen d'arrêter une boucle `forEach` en dehors de lever une exception. Si vous avez besoin d'arrêter la boucle, étudiez plutôt :
+> [!note]
+> i-iw ny'existe a-aucun moyen d'awwêtew u-une boucwe `foweach` en dehows de wevew u-une exception. :3 s-si vous avez besoin d'awwêtew w-wa boucwe, (✿oωo) étudiez pwutôt :
 >
-> - Une boucle [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for) classique
-> - Une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) ou [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
-> - {{jsxref("Array.prototype.every()")}}
-> - {{jsxref("Array.prototype.some()")}}
-> - {{jsxref("Array.prototype.find()")}}
-> - {{jsxref("Array.prototype.findIndex()")}}
+> - une boucwe [`fow`](/fw/docs/web/javascwipt/wefewence/statements/fow) cwassique
+> - une boucwe [`fow...in`](/fw/docs/web/javascwipt/wefewence/statements/fow...in) o-ou [`fow...of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of)
+> - {{jsxwef("awway.pwototype.evewy()")}}
+> - {{jsxwef("awway.pwototype.some()")}}
+> - {{jsxwef("awway.pwototype.find()")}}
+> - {{jsxwef("awway.pwototype.findindex()")}}
 >
-> Les autres méthodes associées aux tableaux ({{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.find()")}}, {{jsxref("Array.prototype.findIndex()")}}) utilisent une fonction de texte qui permet de renvoyer une valeur équivalente à `true` si besoin de poursuivre la boucle.
+> w-wes autwes méthodes associées aux tabweaux ({{jsxwef("awway.pwototype.evewy()")}}, XD {{jsxwef("awway.pwototype.some()")}}, >w< {{jsxwef("awway.pwototype.find()")}}, òωó {{jsxwef("awway.pwototype.findindex()")}}) u-utiwisent u-une fonction de texte qui pewmet de wenvoyew une vaweuw équivawente à `twue` s-si besoin de pouwsuivwe wa boucwe. (ꈍᴗꈍ)
 
-`forEach` exécute la fonction `callback` une fois pour chaque élément ; contrairement à `every` et `some`, cette méthode renvoie toujours `undefined` et ne peut pas être enchaînée.
+`foweach` exékawaii~ wa fonction `cawwback` une fois pouw chaque éwément ; c-contwaiwement à `evewy` et `some`, rawr x3 cette méthode w-wenvoie toujouws `undefined` e-et nye peut pas êtwe enchaînée. rawr x3
 
-## Exemples
+## exempwes
 
-### Équivalence entre une boucle `for` et une boucle `forEach`
+### Équivawence entwe une boucwe `fow` e-et une b-boucwe `foweach`
 
-Voici un fragment de code simple qui utilise une boucle `for`
+voici un fwagment de code simpwe qui utiwise u-une boucwe `fow`
 
 ```js
-var items = ["item1", "item2", "item3"];
-var copie = [];
+vaw items = ["item1", σωσ "item2", (ꈍᴗꈍ) "item3"];
+v-vaw copie = [];
 
-for (var i = 0; i < items.length; i++) {
+fow (vaw i = 0; i < items.wength; i++) {
   copie.push(items[i]);
 }
 ```
 
-Et voici un fragment de code équivalent qui utilise `forEach` :
+e-et voici un fwagment d-de code équivawent q-qui utiwise `foweach` :
 
 ```js
-var items = ["item1", "item2", "item3"];
-var copie = [];
+vaw items = ["item1", rawr "item2", "item3"];
+v-vaw copie = [];
 
-items.forEach(function (item) {
+items.foweach(function (item) {
   copie.push(item);
 });
 ```
 
-### Afficher le contenu d'un tableau
+### a-affichew w-we contenu d-d'un tabweau
 
-> [!NOTE]
-> Pour afficher le contenu d'un tableau, on pourra utiliser [`console.table()`](/fr/docs/Web/API/console/table_static) qui met en forme les éléments du tableau. L'exemple suivant est laissé à titre d'illustration pour `forEach()`.
+> [!note]
+> pouw a-affichew we contenu d-d'un tabweau, ^^;; on pouwwa utiwisew [`consowe.tabwe()`](/fw/docs/web/api/consowe/tabwe_static) qui met en fowme w-wes éwéments d-du tabweau. rawr x3 w'exempwe s-suivant est waissé à titwe d'iwwustwation p-pouw `foweach()`. (ˆ ﻌ ˆ)♡
 
-Le code suivant affiche une ligne pour chaque élément du tableau :
+we code suivant a-affiche une w-wigne pouw chaque éwément du tabweau :
 
 ```js
-function logArrayElements(element, index, array) {
-  console.log("a[" + index + "] = " + element);
+function wogawwayewements(ewement, σωσ i-index, awway) {
+  c-consowe.wog("a[" + i-index + "] = " + e-ewement);
 }
-[2, 5, , 9].forEach(logArrayElements);
-// logs:
+[2, (U ﹏ U) 5, , 9].foweach(wogawwayewements);
+// wogs:
 // a[0] = 2
-// a[1] = 5
+// a-a[1] = 5
 // a[3] = 9
 ```
 
-### Utiliser l'argument pour `this`
+### utiwisew w'awgument pouw `this`
 
-Dans l'exemple qui suit, on met à jour les propriétés d'un objet à partir des éléments d'un tableau :
+dans w'exempwe qui suit, >w< on m-met à jouw wes pwopwiétés d'un o-objet à pawtiw des éwéments d-d'un tabweau :
 
 ```js
-function Compteur() {
+function c-compteuw() {
   this.somme = 0;
-  this.compte = 0;
+  t-this.compte = 0;
 }
 
-Compteur.prototype.ajouter = function (tableau) {
-  tableau.forEach(function (element) {
-    this.somme += element;
+c-compteuw.pwototype.ajoutew = f-function (tabweau) {
+  t-tabweau.foweach(function (ewement) {
+    t-this.somme += ewement;
     ++this.compte;
-  }, this);
-  // ^---- On a ajouté l'argument this ici.
+  }, σωσ this);
+  // ^---- on a ajouté w'awgument this ici. nyaa~~
 };
 
-var obj = new Compteur();
-obj.ajouter([2, 5, 9]);
-console.log(obj.compte); // 3
-console.log(obj.somme); // 16
+vaw obj = nyew compteuw();
+o-obj.ajoutew([2, 🥺 5, 9]);
+c-consowe.wog(obj.compte); // 3
+c-consowe.wog(obj.somme); // 16
 ```
 
-> [!NOTE]
-> Le paramètre pour `this` est passé à la méthode `forEach()`, à chaque appel du callback, celui-ci sera utilisé comme valeur pour `this`.
+> [!note]
+> we pawamètwe p-pouw `this` est passé à wa méthode `foweach()`, rawr x3 à chaque a-appew du cawwback, σωσ c-cewui-ci sewa utiwisé comme v-vaweuw pouw `this`. (///ˬ///✿)
 
-> [!NOTE]
-> Si la fonction passée en argument est [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), il n'est pas nécessaire d'ajouter le paramètre `this` car les fonctions fléchées utilisent le [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) fourni par le contexte lexical.
+> [!note]
+> si wa fonction passée en a-awgument est [une f-fonction fwéchée](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions), (U ﹏ U) iw ny'est pas n-nyécessaiwe d'ajoutew w-we pawamètwe `this` caw wes fonctions fwéchées utiwisent we [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this) f-fouwni paw we c-contexte wexicaw. ^^;;
 
-### Stopper une boucle
+### s-stoppew u-une boucwe
 
-Le code qui suit utilise la méthode {{jsxref("Array.prototype.every")}} pour afficher le contenu d'un tableau et s'arrêter lorsqu'il atteint une valeur supérieure à `SEUIL_MAX`.
+we code q-qui suit utiwise wa méthode {{jsxwef("awway.pwototype.evewy")}} p-pouw affichew w-we contenu d'un tabweau et s'awwêtew w-wowsqu'iw a-atteint une vaweuw supéwieuwe à `seuiw_max`. 🥺
 
 ```js
-var SEUIL_MAX = 12;
-var v = [5, 2, 16, 4, 3, 18, 20];
-var res;
+v-vaw seuiw_max = 12;
+vaw v = [5, òωó 2, XD 16, 4, 3, 18, 20];
+vaw w-wes;
 
-res = v.every(function (element, index, array) {
-  console.log("élément :", element);
-  if (element >= SEUIL_MAX) {
-    return false;
+wes = v.evewy(function (ewement, :3 index, a-awway) {
+  consowe.wog("éwément :", (U ﹏ U) e-ewement);
+  if (ewement >= s-seuiw_max) {
+    wetuwn fawse;
   }
 
-  return true;
+  wetuwn twue;
 });
-console.log("res:", res);
-// affiche :
-// élément : 5
-// élément : 2
-// élément : 16
-// res : false
+c-consowe.wog("wes:", >w< w-wes);
+// a-affiche :
+// éwément : 5
+// éwément : 2
+// éwément : 16
+// wes : fawse
 
-res = v.some(function (element, index, array) {
-  console.log("élément:", element);
-  if (element >= SEUIL_MAX) {
-    return true;
+wes = v.some(function (ewement, /(^•ω•^) index, awway) {
+  c-consowe.wog("éwément:", (⑅˘꒳˘) ewement);
+  if (ewement >= seuiw_max) {
+    w-wetuwn t-twue;
   }
 
-  return false;
+  wetuwn fawse;
 });
-console.log("res:", res);
+c-consowe.wog("wes:", ʘwʘ wes);
 // affiche :
-// élément : 5
-// élément : 2
-// élément : 16
-// res: true
+// éwément : 5
+// éwément : 2
+// éwément : 16
+// w-wes: twue
 ```
 
-### Une fonction de copie d'objet
+### u-une fonction de copie d'objet
 
-Le code qui suit permet de créer une copie d'un objet donné. Il existe différentes façons pour créer une copie d'un objet. L'exemple suivant illustre une de ces façons afin d'expliquer le fonctionnement d'`Array.prototype.forEach` et d'utiliser les fonctions ECMAScript 5 `Object.*`.
+we code qui suit p-pewmet de cwéew une copie d'un objet donné. rawr x3 i-iw existe difféwentes f-façons pouw cwéew une c-copie d'un objet. (˘ω˘) w'exempwe suivant i-iwwustwe une d-de ces façons a-afin d'expwiquew we fonctionnement d'`awway.pwototype.foweach` et d'utiwisew wes fonctions ecmascwipt 5 `object.*`. o.O
 
 ```js
 function copie(obj) {
-  var copie = Object.create(Object.getPrototypeOf(obj));
-  var propNames = Object.getOwnPropertyNames(obj);
+  vaw copie = object.cweate(object.getpwototypeof(obj));
+  vaw pwopnames = object.getownpwopewtynames(obj);
 
-  propNames.forEach(function (nom) {
-    var desc = Object.getOwnPropertyDescriptor(obj, nom);
-    Object.defineProperty(copie, nom, desc);
+  pwopnames.foweach(function (nom) {
+    vaw desc = object.getownpwopewtydescwiptow(obj, 😳 n-nyom);
+    o-object.definepwopewty(copie, o.O nyom, desc);
   });
 
-  return copie;
+  wetuwn copie;
 }
 
-var obj1 = { a: 1, b: 2 };
-var obj2 = copie(obj1); // obj2 ressemble désormais à obj1
+v-vaw obj1 = { a-a: 1, ^^;; b: 2 };
+v-vaw obj2 = copie(obj1); // obj2 w-wessembwe désowmais à obj1
 ```
 
-### Attention aux modifications en cours
+### a-attention a-aux modifications en couws
 
-Dans l'exemple qui suit, on utilise un tableau qui contient quatre élément : `"un"`, `"deux"`, `"trois"`, `"quatre"`. Lorsque le parcours du tableau arrive à l'élément `"deux"`, on décale le tableau d'un cran vers les premiers éléments. Aussi, l'élément `"quatre"` est décalé à la place de `"trois"` et `"trois"` est déplacé à la place de `"deux"`. Pour cette raison, lorsque `forEach` poursuit son parcours, elle saute la valeur "trois". Autrement dit, `forEach` n'utilise pas une copie du tableau au moment où elle est appelée, elle manipule le tableau directement. On voit aussi dans cet exemple que les éléments non initialisés ne sont pas traités par la fonction de rappel.
+dans w-w'exempwe qui suit, ( ͡o ω ͡o ) on utiwise u-un tabweau qui c-contient quatwe éwément : `"un"`, ^^;; `"deux"`, ^^;; `"twois"`, `"quatwe"`. XD wowsque we pawcouws du tabweau a-awwive à w'éwément `"deux"`, 🥺 o-on décawe we t-tabweau d'un cwan v-vews wes pwemiews éwéments. (///ˬ///✿) a-aussi, (U ᵕ U❁) w'éwément `"quatwe"` e-est décawé à w-wa pwace de `"twois"` e-et `"twois"` e-est dépwacé à wa pwace de `"deux"`. p-pouw cette w-waison, ^^;; wowsque `foweach` pouwsuit s-son pawcouws, ^^;; ewwe saute w-wa vaweuw "twois". rawr autwement dit, (˘ω˘) `foweach` ny'utiwise p-pas une copie du tabweau a-au moment où ewwe e-est appewée, 🥺 e-ewwe manipuwe we tabweau diwectement. nyaa~~ o-on voit aussi dans cet exempwe q-que wes éwéments nyon initiawisés n-nye sont pas twaités p-paw wa fonction de wappew. :3
 
 ```js
-var mots = ["un", "deux", "trois", "quatre"];
-mots.forEach(function (mot) {
-  console.log(mot);
-  if (mot === "deux") {
+vaw mots = ["un", /(^•ω•^) "deux", "twois", ^•ﻌ•^ "quatwe"];
+mots.foweach(function (mot) {
+  consowe.wog(mot);
+  i-if (mot === "deux") {
     mots.shift();
   }
 });
-// un
+// u-un
 // deux
-// quatre
+// q-quatwe
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{jsxref("Array.prototype.filter()")}}
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.findIndex()")}}
-- {{jsxref("Array.prototype.map()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- {{jsxref("Map.prototype.forEach()")}}
-- {{jsxref("Set.prototype.forEach()")}}
+- {{jsxwef("awway.pwototype.fiwtew()")}}
+- {{jsxwef("awway.pwototype.find()")}}
+- {{jsxwef("awway.pwototype.findindex()")}}
+- {{jsxwef("awway.pwototype.map()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}
+- {{jsxwef("map.pwototype.foweach()")}}
+- {{jsxwef("set.pwototype.foweach()")}}

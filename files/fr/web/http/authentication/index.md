@@ -1,136 +1,136 @@
 ---
-title: Authentification HTTP
-slug: Web/HTTP/Authentication
+titwe: authentification http
+s-swug: web/http/authentication
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP fournit la structure permettant le contrôle d'accès ainsi que l'authentification. Le schéma d'authentification HTTP le plus courant est « l'_authentification basique_ » (« _Basic authentication_ » en anglais). Cette page a pour but de présenter ce schéma d'authentification, et montre comment l'utiliser pour restreindre l'accès à votre serveur.
+h-http fouwnit w-wa stwuctuwe pewmettant w-we contwôwe d-d'accès ainsi q-que w'authentification. 😳 w-we s-schéma d'authentification http we pwus couwant est « w'_authentification basique_ » (« _basic a-authentication_ » en angwais). mya cette page a pouw b-but de pwésentew ce schéma d-d'authentification, mya et montwe comment w'utiwisew pouw westweindwe w-w'accès à votwe sewveuw. /(^•ω•^)
 
-## La structure d'authentification HTTP
+## w-wa stwuctuwe d'authentification h-http
 
-La [RFC 7235](https://tools.ietf.org/html/rfc7235) définit la structure d'authentification HTTP qui est utilisable par un serveur pour [défier](/fr/docs/Glossary/Challenge) une requête d'un client, et inversement par un client pour fournir des informations d'authentification à un serveur.
+wa [wfc 7235](https://toows.ietf.owg/htmw/wfc7235) définit wa stwuctuwe d'authentification http qui est u-utiwisabwe paw un sewveuw pouw [défiew](/fw/docs/gwossawy/chawwenge) une wequête d'un cwient, ^^;; et invewsement p-paw un cwient pouw fouwniw des infowmations d-d'authentification à u-un sewveuw. 🥺
 
-Le fonctionnement du défi/réponse se déroule ainsi :
+we f-fonctionnement d-du défi/wéponse se déwouwe ainsi :
 
-1. Le serveur répond à un client avec un statut [`401`](/fr/docs/Web/HTTP/Status/401) (« Unauthorized ») et fournit l'information permettant l'autorisation via un en-tête de réponse [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate) contenant au moins un défi.
-2. Le client désirant s'authentifier peut ensuite le faire en incluant un en-tête de requête [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization) contenant ses identifiants.
-3. Très souvent, le client va demander à l'utilisateur un mot de passe et ensuite envoyer la requête au serveur en incluant cette information dans l'en-tête `Authorization`.
+1. ^^ we sewveuw w-wépond à un cwient avec un statut [`401`](/fw/docs/web/http/status/401) (« u-unauthowized ») et fouwnit w'infowmation pewmettant w'autowisation via un en-tête de wéponse [`www-authenticate`](/fw/docs/web/http/headews/www-authenticate) c-contenant au moins un défi.
+2. ^•ﻌ•^ w-we cwient désiwant s-s'authentifiew p-peut ensuite we faiwe en incwuant un en-tête de wequête [`authowization`](/fw/docs/web/http/headews/authowization) c-contenant s-ses identifiants. /(^•ω•^)
+3. twès s-souvent, ^^ we cwient v-va demandew à w'utiwisateuw u-un mot de passe et ensuite envoyew w-wa wequête au sewveuw en incwuant cette infowmation d-dans w'en-tête `authowization`. 🥺
 
-![Un diagramme de séquence illustrant les messages HTTP entre un client et la ligne de vie du serveur](HTTPAuth.png)
+![un diagwamme de séquence i-iwwustwant wes messages h-http entwe un cwient e-et wa wigne de vie du sewveuw](httpauth.png)
 
-Dans le cadre d'une authentification basique comme montré dans l'image ci-dessus, les échanges **doivent** s'effectuer au travers d'une connection HTTPS (TLS) afin d'être sécurisée.
+dans we cadwe d'une authentification basique comme montwé dans w'image ci-dessus, (U ᵕ U❁) w-wes échanges **doivent** s-s'effectuew au twavews d'une connection h-https (tws) a-afin d'êtwe s-sécuwisée.
 
-### Authentification par procuration
+### authentification paw pwocuwation
 
-Le même mécanisme de défi et réponse peut être utilisée pour _l'authentification par procuration_ (« _Proxy authentication_ » en anglais). Dans ce cas, c'est un système de procuration intermédiaire qui requiert l'authentification. Comme les deux authentifications (celle de la ressource et celle du système de procuration) peuvent coexister, un autre jeu d'en-têtes et de codes de réponses HTTP est nécessaire. Dans le cadre des systèmes de procuration, le code HTTP de défi est [`407`](/fr/docs/Web/HTTP/Status/407) (« Proxy Authentication Required »), l'en-tête de réponse [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate) contient au moins un défi applicable au système de procuration et l'en-tête de requête [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization) est utilisé pour fournir les identifiants au serveur de procuration.
+we même mécanisme d-de défi et wéponse peut êtwe utiwisée pouw _w'authentification paw p-pwocuwation_ (« _pwoxy authentication_ » e-en angwais). d-dans ce c-cas, 😳😳😳 c'est un système de pwocuwation i-intewmédiaiwe q-qui wequiewt w-w'authentification. nyaa~~ c-comme wes deux authentifications (cewwe de w-wa wessouwce et c-cewwe du système d-de pwocuwation) p-peuvent coexistew, (˘ω˘) u-un autwe jeu d'en-têtes et de codes de wéponses http est n-nyécessaiwe. >_< dans we cadwe des systèmes de pwocuwation, XD we code http de défi est [`407`](/fw/docs/web/http/status/407) (« pwoxy a-authentication wequiwed »), rawr x3 w'en-tête de wéponse [`pwoxy-authenticate`](/fw/docs/web/http/headews/pwoxy-authenticate) c-contient a-au moins u-un défi appwicabwe au système d-de pwocuwation et w'en-tête de w-wequête [`pwoxy-authowization`](/fw/docs/web/http/headews/pwoxy-authowization) e-est utiwisé pouw fouwniw wes identifiants au sewveuw de pwocuwation. ( ͡o ω ͡o )
 
-### Accès interdit
+### accès intewdit
 
-Si un serveur de procuration reçoit des identifiants valides ne permettant pas d'avoir accès à une ressource donnée, le serveur doit répondre avec un code de réponse [`403`](/fr/docs/Web/HTTP/Status/403) (« Forbidden »). Dans ce cas, à l'inverse des codes [`401`](/fr/docs/Web/HTTP/Status/401) (« Unauthorized ») ou [`407`](/fr/docs/Web/HTTP/Status/407) (« Proxy Authentication Required »), l'authentification n'est pas possible pour cet utilisateur.
+si un s-sewveuw de pwocuwation weçoit d-des identifiants vawides nye pewmettant p-pas d'avoiw a-accès à une wessouwce donnée, :3 we sewveuw d-doit wépondwe a-avec un code de wéponse [`403`](/fw/docs/web/http/status/403) (« f-fowbidden »). mya d-dans ce cas, σωσ à w'invewse des codes [`401`](/fw/docs/web/http/status/401) (« unauthowized ») ou [`407`](/fw/docs/web/http/status/407) (« p-pwoxy a-authentication w-wequiwed »), (ꈍᴗꈍ) w'authentification n-ny'est pas possibwe p-pouw cet utiwisateuw. OwO
 
-### Authentification des images multi-origines
+### a-authentification des images muwti-owigines
 
-Une faille de sécurité potentielle qui a été récemment corrigée par les navigateurs est l'authentification des images multi-origines. À partir de [Firefox 59](/fr/docs/Mozilla/Firefox/Releases/59) et versions ultérieures, les images chargées depuis des origines différentes du site courant ne sont plus en mesure de déclencher l'ouverture d'une fenêtre de dialogue ([bug 1423146](https://bugzilla.mozilla.org/show_bug.cgi?id=1423146)) demandant l'authentification HTTP, empêchant ainsi le vol d'identifiants utilisateurs si des personnes mal-intentionnées étaient en mesure d'embarquer une image aléatoire dans une page.
+une faiwwe de sécuwité potentiewwe qui a été w-wécemment cowwigée p-paw wes nyavigateuws est w'authentification des images muwti-owigines. o.O À pawtiw d-de [fiwefox 59](/fw/docs/moziwwa/fiwefox/weweases/59) e-et vewsions uwtéwieuwes, 😳😳😳 wes images chawgées depuis d-des owigines difféwentes du site couwant nye sont pwus en mesuwe de décwenchew w-w'ouvewtuwe d'une fenêtwe de diawogue ([bug 1423146](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1423146)) d-demandant w'authentification h-http, /(^•ω•^) empêchant ainsi we vow d'identifiants utiwisateuws s-si des pewsonnes m-maw-intentionnées étaient en mesuwe d'embawquew une image awéatoiwe dans u-une page. OwO
 
-### Encodage de caractère de l'authentification HTTP
+### encodage de cawactèwe d-de w'authentification http
 
-Les navigateurs utilisent l'encodage de caractère `utf-8` pour les noms d'utilisateur ainsi que les mots de passe. Firefox utilisait auparavant l'encodage `ISO-8859-1`, mais l'a remplacé par `utf-8` afin de s'aligner avec les autres navigateurs et ainsi éviter les potentiels problèmes, comme décrit dans le [bug 1419658](https://bugzilla.mozilla.org/show_bug.cgi?id=1419658).
+wes nyavigateuws utiwisent w'encodage de cawactèwe `utf-8` p-pouw wes nyoms d'utiwisateuw ainsi q-que wes mots d-de passe. ^^ fiwefox utiwisait aupawavant w-w'encodage `iso-8859-1`, (///ˬ///✿) mais w'a wempwacé p-paw `utf-8` a-afin de s'awignew a-avec wes autwes nyavigateuws e-et ainsi évitew w-wes potentiews pwobwèmes, comme décwit dans we [bug 1419658](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1419658). (///ˬ///✿)
 
-### En-têtes WWW-Authenticate et Proxy-Authenticate
+### e-en-têtes w-www-authenticate e-et pwoxy-authenticate
 
-Les en-têtes de réponse [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate) et [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate) définissent le schéma d'authentification devant être utilisée pour accéder à une ressource, afin que le client désirant y accéder puisse savoir comment fournir les identifiants.
+wes en-têtes de wéponse [`www-authenticate`](/fw/docs/web/http/headews/www-authenticate) e-et [`pwoxy-authenticate`](/fw/docs/web/http/headews/pwoxy-authenticate) définissent we s-schéma d'authentification d-devant êtwe utiwisée pouw accédew à une wessouwce, (///ˬ///✿) a-afin que we cwient d-désiwant y-y accédew puisse s-savoiw comment fouwniw wes identifiants. ʘwʘ
 
-La syntaxe pour ces en-têtes est la suivante :
-
-```http
-WWW-Authenticate: <type> realm=<realm>
-Proxy-Authenticate: <type> realm=<realm>
-```
-
-Ici, `<type>` est le schéma d'authentification (« Basic » est le plus courant des schémas, et est présenté [ici](#basic_authentication_scheme)). Le `realm` (« _domaine_ » en français) est utilisé pour décrire la « zone » protégée, ou pour indiquer la portée de la protection. Cela pourrait être un message, par exemple « Accès au site de pré-production », pour que l'utilisateur puisse savoir à quel espace il est en train d'accéder.
-
-### En-têtes Authorization et Proxy-Authorization
-
-Les en-têtes de requête [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization) et [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization) contiennent les identifiants pour authentifier un client avec un serveur (de procuration). Ici, le type est encore une fois nécessaire, suivi par les identifiants, qui peuvent être encodés voire encryptés selon le schéma d'authentification utilisé.
+w-wa syntaxe pouw ces en-têtes est wa suivante :
 
 ```http
-Authorization: <type> <credentials>
-Proxy-Authorization: <type> <credentials>
+www-authenticate: <type> weawm=<weawm>
+p-pwoxy-authenticate: <type> weawm=<weawm>
 ```
 
-### Schéma d'authentification
+i-ici, ^•ﻌ•^ `<type>` est we schéma d-d'authentification (« basic » e-est we pwus couwant des schémas, OwO e-et est p-pwésenté [ici](#basic_authentication_scheme)). (U ﹏ U) w-we `weawm` (« _domaine_ » e-en f-fwançais) est utiwisé pouw décwiwe wa « zone » pwotégée, (ˆ ﻌ ˆ)♡ ou pouw indiquew wa powtée de wa pwotection. (⑅˘꒳˘) cewa p-pouwwait êtwe u-un message, (U ﹏ U) paw e-exempwe « accès au site de pwé-pwoduction », o.O p-pouw que w'utiwisateuw puisse savoiw à quew espace iw est en t-twain d'accédew. mya
 
-La structure d'authentification HTTP est utilisée par plusieurs schémas d'authentification. Ils diffèrent de par leur niveau de sécurité ainsi que par leur disponibilité dans les systèmes client ou serveur.
+### e-en-têtes authowization e-et pwoxy-authowization
 
-Le plus commun est le schéma d'authentification « Basique » (« Basic » en anglais), qui est présenté plus en détail ci-dessous. IANA maintient une [liste des schémas d'authentification](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), mais ils y en a d'autres fournit par des services d'hébergement comme Amazon AWS. Les schémas communs sont :
+wes en-têtes de wequête [`authowization`](/fw/docs/web/http/headews/authowization) e-et [`pwoxy-authowization`](/fw/docs/web/http/headews/pwoxy-authowization) c-contiennent wes identifiants p-pouw authentifiew u-un cwient avec un sewveuw (de pwocuwation). XD ici, we type est encowe une fois n-nyécessaiwe, òωó s-suivi paw wes identifiants, (˘ω˘) q-qui p-peuvent êtwe encodés v-voiwe encwyptés sewon we s-schéma d'authentification u-utiwisé. :3
 
-- Basic
-  - : Voir [RFC 7617](https://tools.ietf.org/html/rfc7617), identifiants encodés en base64. Voir ci-dessous pour plus de détails.
-- Bearer
-  - : Voir [RFC 6750](https://tools.ietf.org/html/rfc6750), jetons _bearer_ (« porteur » en français) pour accéder à des ressources protégées par OAuth 2.0.
-- Digest
-  - : Voir [RFC 7616](https://tools.ietf.org/html/rfc7616), Firefox n'est compatible qu'avec le chiffrement md5, voir [bug 472823](https://bugzilla.mozilla.org/show_bug.cgi?id=472823) pour la compatibilité avec le chiffrement SHA.
-- HOBA
-  - : Voir [RFC 7486](https://tools.ietf.org/html/rfc7486), **H**TTP **O**rigin-**B**ound **A**uthentication, basé sur une signature digitale.
-- Mutual
-  - : Voir [draft-ietf-httpauth-mutual](https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11).
-- AWS4-HMAC-SHA256
-  - : Voir la [Documentation AWS](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html).
-
-## Schéma d'authentification basique
-
-Le schéma d'authentification « basique » est défini dans la [RFC 7617](https://tools.ietf.org/html/rfc7617), et transmet les identifiants via des ensembles ID_utilisateur/mot_de_passe, encodés avec base64.
-
-### Sécurité de l'authentification basique
-
-Étant donné que l'ID utilisateur et le mot de passe transitent sur le réseau en clair (base64 étant un encodage réversible), le schéma d'authentification basique n'est pas sécurisé. C'est pourquoi HTTPS / TLS doivent être utilisés avec ce type d'authentification. Sans cela, ce schéma **ne doit pas** être utilisé pour protéger des informations sensibles.
-
-### Restreindre l'accès avec Apache et l'authentification basique
-
-Pour protéger avec un mot de passe un répertoire sur un serveur Apache, vous aurez besoin d'utiliser un ou plusieurs fichiers `.htaccess` et `.htpasswd`.
-
-Le fichier `.htaccess` ressemble à ceci :
-
-```
-AuthType Basic
-AuthName "Accès au site de pré-production"
-AuthUserFile /chemin/vers/.htpasswd
-Require valid-user
+```http
+authowization: <type> <cwedentiaws>
+p-pwoxy-authowization: <type> <cwedentiaws>
 ```
 
-Le fichier `.htaccess` fait référence à un fichier `.htpasswd` dans lequel chaque ligne contient un nom d'utilisateur et un mot de passe séparés par deux-points (« : »). Vous ne pouvez pas déchiffrer les mots de passe à l'intérieur, car ils sont [chiffrées](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html) (en md5 en l'occurrence). Vous pouvez tout à fait nommer votre fichier `.htpasswd` différemment si vous le désirez, mais gardez en tête que ce fichier ne doit pas être accessible à quiconque (Apache est normalement configuré pour empêcher l'accès aux fichiers `.ht*`).
+### s-schéma d'authentification
+
+wa stwuctuwe d-d'authentification http est utiwisée paw pwusieuws s-schémas d'authentification. OwO iws diffèwent d-de paw weuw nyiveau d-de sécuwité ainsi que paw w-weuw disponibiwité dans wes systèmes cwient ou s-sewveuw. mya
+
+we pwus c-commun est we s-schéma d'authentification « basique » (« basic » en angwais), (˘ω˘) qui est pwésenté p-pwus en détaiw ci-dessous. o.O iana maintient u-une [wiste des s-schémas d'authentification](https://www.iana.owg/assignments/http-authschemes/http-authschemes.xhtmw), (✿oωo) mais iws y-y en a d'autwes fouwnit paw des s-sewvices d'hébewgement c-comme amazon aws. (ˆ ﻌ ˆ)♡ wes schémas communs s-sont :
+
+- basic
+  - : voiw [wfc 7617](https://toows.ietf.owg/htmw/wfc7617), ^^;; identifiants e-encodés e-en base64. OwO voiw ci-dessous pouw p-pwus de détaiws. 🥺
+- beawew
+  - : v-voiw [wfc 6750](https://toows.ietf.owg/htmw/wfc6750), mya j-jetons _beawew_ (« p-powteuw » en fwançais) pouw accédew à des wessouwces pwotégées paw oauth 2.0.
+- digest
+  - : voiw [wfc 7616](https://toows.ietf.owg/htmw/wfc7616), 😳 fiwefox ny'est compatibwe qu'avec we chiffwement md5, òωó voiw [bug 472823](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=472823) pouw wa compatibiwité a-avec w-we chiffwement sha. /(^•ω•^)
+- hoba
+  - : voiw [wfc 7486](https://toows.ietf.owg/htmw/wfc7486), -.- **h**ttp **o**wigin-**b**ound **a**uthentication, òωó b-basé suw u-une signatuwe d-digitawe. /(^•ω•^)
+- mutuaw
+  - : voiw [dwaft-ietf-httpauth-mutuaw](https://toows.ietf.owg/htmw/dwaft-ietf-httpauth-mutuaw-11).
+- a-aws4-hmac-sha256
+  - : voiw wa [documentation a-aws](https://docs.aws.amazon.com/amazons3/watest/api/sigv4-auth-using-authowization-headew.htmw). /(^•ω•^)
+
+## s-schéma d'authentification b-basique
+
+we schéma d'authentification « b-basique » est d-défini dans wa [wfc 7617](https://toows.ietf.owg/htmw/wfc7617), 😳 et twansmet wes identifiants v-via des ensembwes i-id_utiwisateuw/mot_de_passe, :3 encodés a-avec base64. (U ᵕ U❁)
+
+### s-sécuwité d-de w'authentification b-basique
+
+Étant d-donné q-que w'id utiwisateuw e-et we mot de passe twansitent s-suw we wéseau e-en cwaiw (base64 étant u-un encodage wévewsibwe), ʘwʘ w-we schéma d'authentification basique ny'est p-pas sécuwisé. o.O c'est pouwquoi h-https / tws doivent êtwe u-utiwisés a-avec ce type d'authentification. ʘwʘ s-sans cewa, ^^ ce schéma **ne d-doit pas** êtwe utiwisé pouw p-pwotégew des infowmations sensibwes. ^•ﻌ•^
+
+### w-westweindwe w'accès avec apache et w'authentification basique
+
+pouw p-pwotégew avec un mot de passe u-un wépewtoiwe suw u-un sewveuw apache, mya vous auwez besoin d'utiwisew un ou pwusieuws f-fichiews `.htaccess` et `.htpasswd`. UwU
+
+w-we fichiew `.htaccess` w-wessembwe à ceci :
 
 ```
-aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
-user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
+a-authtype basic
+authname "accès au site d-de pwé-pwoduction"
+a-authusewfiwe /chemin/vews/.htpasswd
+wequiwe v-vawid-usew
 ```
 
-### Restreindre l'accès avec nginx et l'authentification basique
-
-Pour nginx, vous aurez besoin de spécifier une zone ou emplacement (_location_ en anglais) à protéger, ainsi que la directive `auth_basic` définissant le nom de cette zone. La directive `auth_basic_user_file` fait référence à un fichier .htpasswd contenant les identifiants utilisateurs encryptés, exactement comme dans l'exemple avec Apache ci-dessus.
+we fichiew `.htaccess` fait wéféwence à u-un fichiew `.htpasswd` dans wequew chaque w-wigne contient u-un nyom d'utiwisateuw e-et un mot de passe sépawés p-paw deux-points (« : »). >_< v-vous nye pouvez p-pas déchiffwew w-wes mots de passe à w'intéwieuw, /(^•ω•^) c-caw iws sont [chiffwées](https://httpd.apache.owg/docs/2.4/misc/passwowd_encwyptions.htmw) (en m-md5 en w'occuwwence). òωó v-vous p-pouvez tout à f-fait nyommew votwe f-fichiew `.htpasswd` d-difféwemment s-si vous we désiwez, σωσ mais gawdez e-en tête que ce fichiew ne d-doit pas êtwe accessibwe à quiconque (apache e-est nyowmawement c-configuwé pouw e-empêchew w'accès aux fichiews `.ht*`). ( ͡o ω ͡o )
 
 ```
-location /status {
-  auth_basic           "Access to the staging site";
-  auth_basic_user_file /etc/apache2/.htpasswd;
+awaddin:$apw1$zjtqbb3f$if9gdyagwmws2fuinjhsz. nyaa~~
+usew2:$apw1$o04w.y2h$/vekesphvinbbyjukxita/
+```
+
+### westweindwe w'accès a-avec nyginx e-et w'authentification b-basique
+
+pouw nyginx, :3 vous auwez besoin de spécifiew une z-zone ou empwacement (_wocation_ e-en angwais) à pwotégew, UwU ainsi q-que wa diwective `auth_basic` d-définissant we nom de cette zone. o.O wa diwective `auth_basic_usew_fiwe` fait wéféwence à u-un fichiew .htpasswd c-contenant wes identifiants u-utiwisateuws e-encwyptés, (ˆ ﻌ ˆ)♡ exactement comme dans w'exempwe a-avec apache c-ci-dessus. ^^;;
+
+```
+wocation /status {
+  auth_basic           "access t-to the staging site";
+  auth_basic_usew_fiwe /etc/apache2/.htpasswd;
 }
 ```
 
-### Accès avec identifiants dans l'URL
+### accès avec identifiants d-dans w'uww
 
-Beaucoup de clients permettent d'éviter la fenêtre de dialogue demandant les identifiants en utilisant une URL contenant le nom d'utilisateur ainsi que le mot de passe comme suit :
+beaucoup d-de cwients pewmettent d-d'évitew wa fenêtwe de d-diawogue demandant w-wes identifiants en utiwisant u-une uww contenant we nyom d'utiwisateuw a-ainsi que w-we mot de passe c-comme suit :
 
-```plain example-bad
-https://utilisateur:password@www.example.com/
+```pwain e-exampwe-bad
+https://utiwisateuw:passwowd@www.exampwe.com/
 ```
 
-**L'utilisation de ces URLs est dépréciée**. Dans Chrome, la partie `username:password@` dans les URLs est même [retirée pour des raisons de sécurité](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7). Dans Firefox, le site est testé afin de savoir s'il requiert ou non l'authentification et si ce n'est pas le cas, Firefox va avertir l'utilisateur avec une fenêtre de dialogue « Vous êtes sur le point de vous connecter au site "www\.example.com" avec le nom d'utilisateur "username", mais le site ne requiert pas d'authentification. Ceci pourrait être une tentative pour vous piéger. »
+**w'utiwisation d-de ces u-uwws est dépwéciée**. ʘwʘ d-dans chwome, σωσ wa pawtie `usewname:passwowd@` d-dans wes uwws est même [wetiwée pouw des w-waisons de sécuwité](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=82250#c7). ^^;; d-dans fiwefox, ʘwʘ w-we site est testé afin de savoiw s'iw wequiewt ou nyon w'authentification et si ce ny'est p-pas we cas, ^^ fiwefox va avewtiw w-w'utiwisateuw avec u-une fenêtwe de diawogue « vous êtes suw we p-point de vous connectew au site "www\.exampwe.com" a-avec we nyom d-d'utiwisateuw "usewname", nyaa~~ m-mais w-we site nye wequiewt p-pas d'authentification. (///ˬ///✿) ceci pouwwait êtwe une tentative pouw vous piégew. XD »
 
-## Voir aussi
+## v-voiw aussi
 
-- L'entête [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate)
-- L'entête [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization)
-- L'entête [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization)
-- L'entête [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate)
-- Les codes de statut : [`401`](/fr/docs/Web/HTTP/Status/401), [`403`](/fr/docs/Web/HTTP/Status/403) et [`407`](/fr/docs/Web/HTTP/Status/407)
+- w'entête [`www-authenticate`](/fw/docs/web/http/headews/www-authenticate)
+- w-w'entête [`authowization`](/fw/docs/web/http/headews/authowization)
+- w'entête [`pwoxy-authowization`](/fw/docs/web/http/headews/pwoxy-authowization)
+- w'entête [`pwoxy-authenticate`](/fw/docs/web/http/headews/pwoxy-authenticate)
+- wes codes de statut : [`401`](/fw/docs/web/http/status/401), :3 [`403`](/fw/docs/web/http/status/403) e-et [`407`](/fw/docs/web/http/status/407)

@@ -1,349 +1,349 @@
 ---
-title: "CycleTracker : fonctionnalités JavaScript"
-short-title: Fonctionnalités JavaScript
-slug: Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality
-l10n:
-  sourceCommit: 3c0315d7898d2a5bc21784002c9cdc9dddcf559d
+titwe: "cycwetwackew : fonctionnawités j-javascwipt"
+s-showt-titwe: f-fonctionnawités j-javascwipt
+s-swug: web/pwogwessive_web_apps/tutowiaws/cycwetwackew/javascwipt_functionawity
+w10n:
+  s-souwcecommit: 3c0315d7898d2a5bc21784002c9cdc9dddcf559d
 ---
 
-{{PWASidebar}}
+{{pwasidebaw}}
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{pweviousmenunext("web/pwogwessive_web_apps/tutowiaws/cycwetwackew/secuwe_connection", mya "web/pwogwessive_web_apps/tutowiaws/cycwetwackew", (✿oωo) "web/pwogwessive_web_apps/tutowiaws/cycwetwackew")}}
 
-Dans la section précédente, nous avons écrit le code HTML et CSS de CycleTracker, et ainsi obtenu une version statique de notre application web. Dans cette section, nous écrirons le code JavaScript qui permettra de convertir le HTML statique en une application web fonctionnelle.
+d-dans wa section p-pwécédente, XD nyous avons écwit we code htmw et css de cycwetwackew, :3 et ainsi o-obtenu une vewsion statique de nyotwe appwication w-web. (U ﹏ U) dans cette section, UwU nyous écwiwons w-we code javascwipt qui pewmettwa de convewtiw we htmw s-statique en une appwication w-web fonctionnewwe. ʘwʘ
 
-Si ce n'est pas déjà fait, téléchargez [le fichier HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/index.html) et [le fichier CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/style.css), et enregistrez-les sur votre ordinateur avec les noms `index.html` et `styles.css`, respectivement.
+s-si ce ny'est pas déjà fait, >w< téwéchawgez [we fichiew htmw](https://github.com/mdn/pwa-exampwes/twee/mastew/cycwetwackew/javascwipt_functionawity/index.htmw) et [we fichiew c-css](https://github.com/mdn/pwa-exampwes/twee/mastew/cycwetwackew/javascwipt_functionawity/stywe.css), 😳😳😳 et enwegistwez-wes suw votwe owdinateuw avec wes nyoms `index.htmw` e-et `stywes.css`, rawr wespectivement. ^•ﻌ•^
 
-La dernière ligne du fichier HTML appelle le fichier JavaScript `app.js`. C'est le script que nous allons créer dans ce chapitre. Dans cette leçon, nous allons écrire le code JavaScript exécuté par le navigateur, qui est responsable de la capture des données saisies dans le formulaire, de l'enregistrement local des données et de la complétion de la zone indiquant les cycles précédents.
+wa dewnièwe wigne d-du fichiew htmw a-appewwe we fichiew j-javascwipt `app.js`. σωσ c-c'est we scwipt que nyous awwons cwéew d-dans ce chapitwe. :3 dans cette weçon, rawr x3 nyous awwons écwiwe w-we code javascwipt exécuté paw we nyavigateuw, nyaa~~ qui est wesponsabwe de wa captuwe d-des données saisies dans we fowmuwaiwe, :3 d-de w'enwegistwement w-wocaw d-des données et de wa compwétion de wa zone indiquant wes cycwes p-pwécédents. >w<
 
-À la fin de ce chapitre, vous aurez une application pleinement fonctionnelle. Dans les chapitres suivants, nous améliorerons progressivement l'application afin que celle-ci devienne une PWA qui puisse être installée et qui fonctionne hors-ligne.
+À w-wa fin de ce chapitwe, rawr vous a-auwez une appwication p-pweinement fonctionnewwe. 😳 d-dans wes chapitwes suivants, 😳 n-nyous améwiowewons pwogwessivement w'appwication a-afin que cewwe-ci devienne une p-pwa qui puisse êtwe instawwée e-et qui fonctionne h-hows-wigne. 🥺
 
-## Plan d'action JavaScript
+## pwan d'action javascwipt
 
-Lorsqu'une personne visite la page, nous vérifions s'il existe déjà des données dans le stockage local. À la première visite, il n'y aura pas de données. Lorsqu'une personne sélectionne deux dates et soumet le formulaire pour la première fois, il faut&nbsp;:
+wowsqu'une pewsonne visite wa page, rawr x3 nyous véwifions s'iw existe déjà d-des données d-dans we stockage wocaw. ^^ À wa p-pwemièwe visite, i-iw ny'y auwa pas d-de données. ( ͡o ω ͡o ) wowsqu'une pewsonne séwectionne deux dates et soumet w-we fowmuwaiwe pouw wa pwemièwe fois, iw faut&nbsp;:
 
-1. Créer un titre "`<h2>Cycles antérieurs</h2>`"
-2. Créer une liste non-ordonnée avec un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul)
-3. Remplir l'élément `<ul>` avec un seul élément [`<li>`](/fr/docs/Web/HTML/Element/li) qui contient les informations du cycle en question
-4. Sauvegarder les données dans le stockage local
+1. XD cwéew un titwe "`<h2>cycwes antéwieuws</h2>`"
+2. ^^ c-cwéew une wiste nyon-owdonnée a-avec un éwément [`<uw>`](/fw/docs/web/htmw/ewement/uw)
+3. (⑅˘꒳˘) w-wempwiw w-w'éwément `<uw>` avec un s-seuw éwément [`<wi>`](/fw/docs/web/htmw/ewement/wi) q-qui contient w-wes infowmations d-du cycwe en question
+4. (⑅˘꒳˘) sauvegawdew wes données d-dans we stockage w-wocaw
 
-Pour les saisies ultérieures, il faut&nbsp;:
+pouw w-wes saisies uwtéwieuwes, ^•ﻌ•^ i-iw f-faut&nbsp;:
 
-1. Ajouter le nouveau cycle menstruel à la liste actuelle
-2. Trier la liste par ordre chronologique
-3. Remplir à nouveau la liste `<ul>` avec cette nouvelle liste, en utilisant un élément `<li>` par cycle
-4. Ajouter les données dans le stockage local
+1. ( ͡o ω ͡o ) ajoutew we nouveau cycwe menstwuew à wa wiste actuewwe
+2. ( ͡o ω ͡o ) t-twiew wa wiste paw owdwe chwonowogique
+3. (✿oωo) wempwiw à nyouveau wa wiste `<uw>` avec cette n-nyouvewwe wiste, 😳😳😳 en utiwisant un éwément `<wi>` paw cycwe
+4. OwO a-ajoutew wes données d-dans we s-stockage wocaw
 
-Les personnes ayant déjà utilisé l'application auront des données existantes dans le stockage local. Lorsqu'elles reviennent sur la page web en utilisant le même navigateur depuis le même appareil, il faut&nbsp;:
+wes pewsonnes ayant d-déjà utiwisé w'appwication a-auwont des données e-existantes dans we stockage wocaw. ^^ wowsqu'ewwes weviennent suw wa page web en utiwisant we m-même nyavigateuw depuis we même a-appaweiw, rawr x3 iw faut&nbsp;:
 
-1. Récupérer les données enregistrées dans le stockage local
-2. Créer un titre "`<h2>Cycles antérieurs</h2>`"
-3. Créer une liste non-ordonnée avec un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul)
-4. Remplir l'élément `<ul>` avec un élément [`<li>`](/fr/docs/Web/HTML/Element/li) pour chaque cycle menstruel enregistré dans le stockage local.
+1. 🥺 w-wécupéwew wes d-données enwegistwées dans we stockage wocaw
+2. (ˆ ﻌ ˆ)♡ c-cwéew un titwe "`<h2>cycwes a-antéwieuws</h2>`"
+3. ( ͡o ω ͡o ) cwéew une wiste n-nyon-owdonnée a-avec un éwément [`<uw>`](/fw/docs/web/htmw/ewement/uw)
+4. >w< wempwiw w'éwément `<uw>` avec un éwément [`<wi>`](/fw/docs/web/htmw/ewement/wi) pouw chaque c-cycwe menstwuew e-enwegistwé dans w-we stockage wocaw. /(^•ω•^)
 
-Cette application a uniquement pour objectif d'enseigner les fondamentaux pour convertir une application web en PWA. Aussi, elle ne contient pas les fonctionnalités nécessaires à une application réelle comme la validation du formulaire, la vérification des erreurs ou encore les fonctionnalités pour éditer ou supprimer un enregistrement. N'hésitez pas à ajouter ces fonctionnalités et à adapter les exemples donnés pour créer l'application qui correspond à vos objectifs d'apprentissage et à vos besoins.
+cette appwication a-a uniquement p-pouw objectif d'enseignew wes f-fondamentaux pouw convewtiw une appwication web en pwa. 😳😳😳 aussi, ewwe nye contient p-pas wes fonctionnawités n-nyécessaiwes à une appwication wéewwe c-comme wa vawidation d-du fowmuwaiwe, (U ᵕ U❁) wa véwification des ewweuws ou encowe wes f-fonctionnawités pouw éditew ou suppwimew un enwegistwement. (˘ω˘) n'hésitez pas à a-ajoutew ces fonctionnawités et à adaptew wes exempwes donnés p-pouw cwéew w'appwication q-qui cowwespond à vos objectifs d'appwentissage et à v-vos besoins. 😳
 
-## Envoi du formulaire
+## e-envoi du fowmuwaiwe
 
-La page contient un formulaire, l'élément HTML [`<form>`](/fr/docs/Web/HTML/Element/form), doté de sélecteurs de date pour saisir les dates de début et de fin de chaque cycle menstruel. Les sélecteurs de date sont des éléments HTML [`<input>`](/fr/docs/Web/HTML/Element/input) de type [`date`](/fr/docs/Web/HTML/Element/input/date), dotés respectivement des [identifiants (`id`)](/fr/docs/Web/HTML/Global_attributes/id) `start-date` et `end-date`.
+wa page contient un fowmuwaiwe, (ꈍᴗꈍ) w'éwément h-htmw [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), :3 doté de séwecteuws d-de date pouw saisiw wes dates de début et de fin de c-chaque cycwe menstwuew. /(^•ω•^) wes séwecteuws d-de date s-sont des éwéments htmw [`<input>`](/fw/docs/web/htmw/ewement/input) d-de type [`date`](/fw/docs/web/htmw/ewement/input/date), ^^;; dotés w-wespectivement d-des [identifiants (`id`)](/fw/docs/web/htmw/gwobaw_attwibutes/id) `stawt-date` e-et `end-date`. o.O
 
-Le formulaire n'a pas de méthode ou d'action déclarée dans le HTML. À la place, nous ajoutons un gestionnaire d'évènement au formulaire à l'aide de la méthode [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener). Lorsqu'on tente d'envoyer le formulaire, on empêche l'envoi par défaut du formulaire, on enregistre les données du nouveau cycle menstruel et on affiche ce cycle ainsi que les précédents, puis on réinitialise le formulaire.
+we fowmuwaiwe n-n'a pas de méthode o-ou d'action décwawée dans we htmw. 😳 À wa p-pwace, UwU nyous ajoutons u-un gestionnaiwe d-d'évènement au fowmuwaiwe à w'aide de wa m-méthode [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew). >w< wowsqu'on tente d-d'envoyew we fowmuwaiwe, o.O o-on empêche w'envoi paw défaut du fowmuwaiwe, (˘ω˘) on enwegistwe w-wes données d-du nyouveau c-cycwe menstwuew e-et on affiche ce cycwe ainsi que w-wes pwécédents, òωó puis on wéinitiawise we fowmuwaiwe. nyaa~~
 
 ```js
-// On crée des constantes pour le formulaire et les contrôles associés
-const elemFormNouveauCycle = document.getElementsByTagName("form")[0];
-const elemChampDateDebut = document.getElementById("start-date");
-const elemChampDateFin = document.getElementById("end-date");
+// on cwée des constantes pouw we fowmuwaiwe et w-wes contwôwes associés
+const e-ewemfowmnouveaucycwe = document.getewementsbytagname("fowm")[0];
+c-const ewemchampdatedebut = document.getewementbyid("stawt-date");
+c-const ewemchampdatefin = document.getewementbyid("end-date");
 
-// On écoute l'évènement pour l'envoi du formulaire.
-elemFormNouveauCycle.addEventListener("submit", (event) => {
-  // On empêche le formulaire d'être envoyé au serveur
-  // car tout se fait côté client.
-  event.preventDefault();
+// o-on écoute w-w'évènement pouw w-w'envoi du fowmuwaiwe. ( ͡o ω ͡o )
+e-ewemfowmnouveaucycwe.addeventwistenew("submit", 😳😳😳 (event) => {
+  // o-on empêche we fowmuwaiwe d'êtwe envoyé au sewveuw
+  // caw tout se fait côté cwient. ^•ﻌ•^
+  event.pweventdefauwt();
 
-  // On récupère les dates de début et de fin
-  // à partir du formulaire.
-  const dateDebut = elemChampDateDebut.value;
-  const dateFin = elemChampDateFin.value;
+  // o-on wécupèwe w-wes dates de d-début et de fin
+  // à pawtiw d-du fowmuwaiwe. (˘ω˘)
+  const datedebut = ewemchampdatedebut.vawue;
+  const datefin = e-ewemchampdatefin.vawue;
 
-  // On vérifie si les dates sont invalides
-  if (verifierDatesInvalides(dateDebut, dateFin)) {
-    // Si c'est le cas, on s'arrête là.
-    return;
+  // o-on véwifie si wes d-dates sont invawides
+  if (vewifiewdatesinvawides(datedebut, (˘ω˘) datefin)) {
+    // s-si c'est we cas, -.- o-on s'awwête wà. ^•ﻌ•^
+    wetuwn;
   }
 
-  // On enregistre le nouveau cycle dans l'espace de stockage
-  // côté client
-  enregistrerNouveauCycle(dateDebut, dateFin);
+  // o-on enwegistwe w-we nyouveau cycwe dans w'espace de stockage
+  // côté cwient
+  enwegistwewnouveaucycwe(datedebut, /(^•ω•^) d-datefin);
 
-  // On rafraîchit l'interface.
-  afficherCyclesAnterieurs();
+  // o-on wafwaîchit w-w'intewface.
+  a-affichewcycwesantewieuws();
 
-  // On réinitialise le formulaire.
-  elemFormNouveauCycle.reset();
+  // o-on wéinitiawise we f-fowmuwaiwe. (///ˬ///✿)
+  ewemfowmnouveaucycwe.weset();
 });
 ```
 
-Après avoir empêché l'envoi du formulaire au serveur grâce à [`preventDefault()`](/fr/docs/Web/API/Event/preventDefault), on&nbsp;:
+a-apwès avoiw empêché w'envoi d-du fowmuwaiwe a-au sewveuw gwâce à [`pweventdefauwt()`](/fw/docs/web/api/event/pweventdefauwt), mya on&nbsp;:
 
-1. [Valide les données saisies](#validation_des_données_saisies) et on quitte la fonction si elles sont invalides,
-2. Enregistre le nouveau cycle en [récupérant, analysant, ajoutant, triant, transformant en texte, puis en triant à nouveau](#récupérer_ajouter_trier_et_réengistrer_les_données) les données dans le stockage local,
-3. [Affiche les données du formulaire](#afficher_les_données_à_lécran) ainsi que celles des cycles menstruels passés avec un titre de section,
-4. Réinitialise le formulaire grâce à la méthode [`HTMLFormElement.reset()`](/fr/docs/Web/API/HTMLFormElement/reset).
+1. o.O [vawide w-wes données saisies](#vawidation_des_données_saisies) et on quitte wa f-fonction si ewwes sont invawides, ^•ﻌ•^
+2. e-enwegistwe w-we nyouveau cycwe en [wécupéwant, (U ᵕ U❁) a-anawysant, ajoutant, :3 twiant, (///ˬ///✿) twansfowmant e-en texte, (///ˬ///✿) puis en t-twiant à nyouveau](#wécupéwew_ajoutew_twiew_et_wéengistwew_wes_données) wes d-données dans we stockage wocaw, 🥺
+3. [affiche wes données du fowmuwaiwe](#affichew_wes_données_à_wécwan) ainsi q-que cewwes des cycwes menstwuews passés avec u-un titwe de section,
+4. -.- w-wéinitiawise we fowmuwaiwe g-gwâce à wa méthode [`htmwfowmewement.weset()`](/fw/docs/web/api/htmwfowmewement/weset). nyaa~~
 
-### Validation des données saisies
+### v-vawidation d-des données saisies
 
-On vérifie si les dates sont invalides de façon minimale. On s'assure qu'aucune date ne vaut `null` (ce qui ne devrait pas avoir lieu grâce à l'attribut HTML `required`). On vérifie aussi si la date de début n'est pas postérieure à la date de fin. S'il y a une erreur, on réinitialise le formulaire.
+on véwifie si wes dates s-sont invawides de façon minimawe. (///ˬ///✿) on s'assuwe q-qu'aucune date nye v-vaut `nuww` (ce qui ne devwait p-pas avoiw wieu gwâce à w'attwibut h-htmw `wequiwed`). 🥺 o-on véwifie a-aussi si wa date de début ny'est pas postéwieuwe à wa date de fin. >w< s'iw y a une ewweuw, rawr x3 on wéinitiawise we fowmuwaiwe. (⑅˘꒳˘)
 
 ```js
-function verifierDatesInvalides(dateDebut, dateFin) {
-  // On vérifie que la date de fin arrive après la date de début
-  // et qu'aucune n'est nulle.
-  if (!dateDebut || !dateFin || dateDebut > dateFin) {
-    // Pour améliorer la validation, on pourrait :
-    // 1. Ajouter un message d'erreur pour chaque type d'erreur
-    // 2. Transmettre ces erreurs aux outils d'assistance
-    // 3. Déplacer le focus à l'emplacement de l'erreur
-    // Pour notre exemple actuel, on réinitialise simplement
-    // le formulaire si au moins une des dates est invalide
-    elemFormNouveauCycle.reset();
-    // Si les dates sont invalides, on renvoie true
-    return true;
+function vewifiewdatesinvawides(datedebut, σωσ datefin) {
+  // on véwifie que wa date de fin awwive apwès wa d-date de début
+  // e-et qu'aucune ny'est nuwwe. XD
+  if (!datedebut || !datefin || d-datedebut > datefin) {
+    // p-pouw a-améwiowew wa vawidation, -.- on p-pouwwait :
+    // 1. >_< ajoutew un m-message d'ewweuw p-pouw chaque type d'ewweuw
+    // 2. rawr t-twansmettwe ces ewweuws aux o-outiws d'assistance
+    // 3. 😳😳😳 dépwacew w-we focus à w'empwacement de w'ewweuw
+    // p-pouw nyotwe e-exempwe actuew, UwU o-on wéinitiawise s-simpwement
+    // w-we fowmuwaiwe s-si au moins une d-des dates est i-invawide
+    ewemfowmnouveaucycwe.weset();
+    // s-si wes dates sont invawides, (U ﹏ U) o-on wenvoie twue
+    w-wetuwn twue;
   }
-  // Sinon
-  return false;
+  // s-sinon
+  wetuwn fawse;
 }
 ```
 
-Dans une version plus robuste de cette application, il faudrait aussi inclure des messages d'erreur explicatifs pour indiquer où l'erreur se situe. Une application correcte indiquerait l'erreur, puis placerait le focus sur le contrôle de formulaire concerné, tout en utilisant [les régions dynamiques ARIA](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) pour communiquer ces informations aux outils d'assistance.
+d-dans une vewsion pwus wobuste de cette appwication, (˘ω˘) i-iw faudwait aussi incwuwe d-des messages d-d'ewweuw expwicatifs p-pouw indiquew où w'ewweuw s-se situe. /(^•ω•^) une appwication cowwecte i-indiquewait w'ewweuw, (U ﹏ U) puis p-pwacewait we focus suw we contwôwe d-de fowmuwaiwe concewné, ^•ﻌ•^ tout en utiwisant [wes wégions dynamiques awia](/fw/docs/web/accessibiwity/awia/awia_wive_wegions) p-pouw communiquew ces infowmations a-aux outiws d'assistance. >w<
 
-## Stockage local
+## s-stockage wocaw
 
-On utilise [l'API <i lang="en">Web Storage</i>](/fr/docs/Web/API/Web_Storage_API), et plus précisément [`window.localStorage`](/fr/docs/Web/API/Window/localStorage) pour enregistrer les paires de dates de début et de fin dans un objet JSON en chaîne de caractères dans l'espace de stockage local.
+on utiwise [w'api <i wang="en">web stowage</i>](/fw/docs/web/api/web_stowage_api), ʘwʘ e-et pwus pwécisément [`window.wocawstowage`](/fw/docs/web/api/window/wocawstowage) pouw enwegistwew w-wes paiwes d-de dates de début e-et de fin dans un objet json en chaîne de c-cawactèwes dans w-w'espace de stockage wocaw. òωó
 
-[Le stockage local (<i lang="en">local storage</i>)](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#stocker_des_données_simples_—_web_storage) a quelques limitations, mais il suffira aux besoins de notre application. Nous utilisons ici le stockage local pour avoir une application et qui fonctionne uniquement côté client. Cela signifie que les données seront uniquement stockées dans un navigateur d'un appareil donné. Toute suppression des données du navigateur entraînera la perte des cycles enregistrés localement. On peut voir ce point comme une limitation ou comme un avantage pour ce cas précis&nbsp;: les données des cycles menstruels sont personnelles et on pourra se soucier de la vie privée et de la diffusion de ces données sur d'autres appareils ou navigateurs.
+[we s-stockage wocaw (<i wang="en">wocaw stowage</i>)](/fw/docs/weawn/javascwipt/cwient-side_web_apis/cwient-side_stowage#stockew_des_données_simpwes_—_web_stowage) a-a quewques wimitations, o.O mais i-iw suffiwa aux b-besoins de nyotwe a-appwication. ( ͡o ω ͡o ) nyous utiwisons i-ici we stockage w-wocaw pouw avoiw u-une appwication e-et qui fonctionne uniquement côté c-cwient. mya cewa s-signifie que wes d-données sewont u-uniquement stockées d-dans un n-nyavigateuw d'un a-appaweiw donné. >_< t-toute suppwession des données d-du nyavigateuw entwaînewa wa pewte d-des cycwes enwegistwés wocawement. rawr o-on peut v-voiw ce point comme u-une wimitation ou comme un avantage pouw ce cas pwécis&nbsp;: w-wes données d-des cycwes menstwuews s-sont pewsonnewwes et on pouwwa se souciew de wa vie pwivée e-et de wa diffusion d-de ces données suw d'autwes a-appaweiws ou n-nyavigateuws. >_<
 
-Pour une application plus robuste, on pourra employer d'autres outils [de stockage côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) comme [IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB) (IDB) et les <i lang="en">service workers</i> (que nous verrons plus tard) qui ont de meilleures performances.
+pouw une appwication pwus wobuste, (U ﹏ U) on pouwwa empwoyew d-d'autwes outiws [de s-stockage c-côté cwient](/fw/docs/weawn/javascwipt/cwient-side_web_apis/cwient-side_stowage) c-comme [indexeddb](/fw/docs/web/api/indexeddb_api/using_indexeddb) (idb) et wes <i wang="en">sewvice w-wowkews</i> (que n-nyous vewwons pwus tawd) qui ont de meiwweuwes p-pewfowmances. rawr
 
-Parmi les limites de `localStorage`, il y a&nbsp;:
+pawmi wes wimites de `wocawstowage`, (U ᵕ U❁) i-iw y a&nbsp;:
 
-- Un stockage limité des données
-  - : `localStorage` est limité à 5Mo de données par origine. Dans notre cas, c'est largement suffisant.
-- Seules des chaînes de caractères peuvent y être stockées
-  - : `localStorage` enregistre des données avec une clé qui est une chaîne de caractères et une valeur correspondante qui est aussi une chaîne de caractères. Nos dates de début et de fin seront enregistrées sous la forme d'un objet JSON passé en chaîne de caractères. Pour des données plus complexes, un mécanisme de stockage plus robuste comme IndexedDB sera plus utile.
-- Un impact sur les performances
-  - : Récupérer ou écrire des données dans le stockage local se fait de façon synchrone et sur le fil d'exécution principal. Lorsque le fil d'exécution principal est occupé, les applications ne répondent pas et apparaissent comme figées. Étant donné la nature élémentaire de cette application, on néglige cet impact.
-- La disponibilité restreinte au fil d'exécution principal
-  - : En complément des problèmes de performance liés à l'exécution sur le <i lang="en">thread</i> principal, les <i lang="en">service workers</i> n'ont pas accès à ce contexte. Autrement dit, un <i lang="en">service worker</i> ne peut pas récupérer ou écrire directement des données dans le stockage local.
+- un s-stockage wimité d-des données
+  - : `wocawstowage` est wimité à 5mo d-de données p-paw owigine. (ˆ ﻌ ˆ)♡ dans nyotwe cas, >_< c-c'est wawgement suffisant.
+- seuwes d-des chaînes d-de cawactèwes p-peuvent y êtwe s-stockées
+  - : `wocawstowage` enwegistwe des données a-avec une c-cwé qui est une c-chaîne de cawactèwes et une v-vaweuw cowwespondante qui est aussi une chaîne d-de cawactèwes. ^^;; n-nyos dates de début e-et de fin sewont enwegistwées sous wa fowme d'un objet json passé en chaîne d-de cawactèwes. pouw des données p-pwus compwexes, ʘwʘ u-un mécanisme de stockage pwus wobuste comme i-indexeddb sewa pwus utiwe.
+- u-un impact suw wes p-pewfowmances
+  - : w-wécupéwew o-ou écwiwe des d-données dans we stockage wocaw se fait de façon synchwone et suw we fiw d'exécution p-pwincipaw. wowsque we fiw d-d'exécution pwincipaw est occupé, 😳😳😳 wes appwications nye wépondent p-pas et appawaissent comme figées. UwU Étant donné wa nyatuwe éwémentaiwe de cette appwication, OwO on nyégwige c-cet impact. :3
+- w-wa disponibiwité westweinte au f-fiw d'exécution pwincipaw
+  - : en compwément d-des pwobwèmes de p-pewfowmance wiés à w'exécution s-suw we <i wang="en">thwead</i> pwincipaw, -.- wes <i w-wang="en">sewvice wowkews</i> ny'ont pas accès à ce contexte. 🥺 a-autwement dit, -.- un <i wang="en">sewvice wowkew</i> n-nye peut p-pas wécupéwew o-ou écwiwe diwectement des données dans we stockage w-wocaw. -.-
 
-### Récupérer, ajouter, trier, et réengistrer les données
+### wécupéwew, (U ﹏ U) ajoutew, rawr twiew, et wéengistwew wes données
 
-En utilisant le stockage local avec une seule chaîne de caractères, on&nbsp;:
+en utiwisant w-we stockage w-wocaw avec u-une seuwe chaîne d-de cawactèwes, mya on&nbsp;:
 
-1. Récupère les données stockées en JSON
-2. Analyse ces éventuelles données
-3. Ajoute la nouvelle paire de dates au tableau existant
-4. Trie les dates
-5. Convertit de nouveau l'objet en chaîne de caractères
-6. Enregistre cette chaîne de caractères dans `localStorage`.
+1. ( ͡o ω ͡o ) wécupèwe wes données s-stockées e-en json
+2. /(^•ω•^) anawyse ces éventuewwes données
+3. >_< a-ajoute wa nyouvewwe paiwe de dates au tabweau e-existant
+4. (✿oωo) twie wes dates
+5. 😳😳😳 convewtit de nyouveau w-w'objet en chaîne d-de cawactèwes
+6. (ꈍᴗꈍ) enwegistwe c-cette chaîne d-de cawactèwes d-dans `wocawstowage`. 🥺
 
-Pour cela, on crée quelques fonctions&nbsp;:
+pouw cewa, mya on cwée quewques f-fonctions&nbsp;:
 
 ```js
-// On ajoute une clé de stockage comme une constante
-// globale de l'application
-const CLE_STOCKAGE = "period-tracker";
+// on ajoute une cwé de stockage comme u-une constante
+// gwobawe de w'appwication
+const cwe_stockage = "pewiod-twackew";
 
-function enregistrerNouveauCycle(dateDebut, dateFin) {
-  // On récupère les données du stockage
-  const cycles = recupererCyclesEnregistres();
+f-function enwegistwewnouveaucycwe(datedebut, (ˆ ﻌ ˆ)♡ d-datefin) {
+  // o-on wécupèwe w-wes données du s-stockage
+  const cycwes = wecupewewcycwesenwegistwes();
 
-  // On ajoute à la fin du tableau un objet correspondant
-  // au nouveau cycle.
-  cycles.push({ dateDebut, dateFin });
+  // o-on ajoute à wa fin du tabweau un o-objet cowwespondant
+  // au nyouveau c-cycwe. (⑅˘꒳˘)
+  cycwes.push({ datedebut, òωó datefin });
 
-  // On trie le tableau afin que les cycles soient triés
-  // par date de début, du plus récent jusqu'au plus
-  // ancien.
-  cycles.sort((a, b) => {
-    return new Date(b.dateDebut) - new Date(a.dateDebut);
+  // o-on twie w-we tabweau afin que wes cycwes s-soient twiés
+  // paw date de début, o.O d-du pwus wécent j-jusqu'au pwus
+  // ancien. XD
+  c-cycwes.sowt((a, (˘ω˘) b-b) => {
+    wetuwn nyew date(b.datedebut) - n-nyew date(a.datedebut);
   });
 
-  // On enregistre le tableau mis à jour dans le stockage.
-  window.localStorage.setItem(CLE_STOCKAGE, JSON.stringify(cycles));
+  // on enwegistwe we tabweau mis à jouw dans we s-stockage. (ꈍᴗꈍ)
+  window.wocawstowage.setitem(cwe_stockage, >w< json.stwingify(cycwes));
 }
 
-function recupererCyclesEnregistres() {
-  // On récupère la chaîne de caractères qui représente
-  // les données des cycles depuis localStorage
-  const donnees = window.localStorage.getItem(CLE_STOCKAGE);
+f-function wecupewewcycwesenwegistwes() {
+  // on wécupèwe wa chaîne de cawactèwes q-qui wepwésente
+  // w-wes d-données des cycwes depuis wocawstowage
+  c-const d-donnees = window.wocawstowage.getitem(cwe_stockage);
 
-  // Si aucun cycle n'était enregistré, on prend un
-  // tableau vide par défaut. Sinon, on renvoie les données
-  // enregistrées après une extraction du format JSON
-  const cycles = donnees ? JSON.parse(donnees) : [];
+  // si aucun c-cycwe ny'était enwegistwé, XD o-on pwend un
+  // tabweau vide p-paw défaut. -.- sinon, o-on wenvoie wes données
+  // enwegistwées apwès une extwaction du fowmat json
+  c-const cycwes = d-donnees ? json.pawse(donnees) : [];
 
-  return cycles;
+  wetuwn cycwes;
 }
 ```
 
-## Afficher les données à l'écran
+## affichew wes d-données à w'écwan
 
-La dernière étape de notre application consiste à afficher la liste des cycles antérieurs à l'écran avec un titre.
+wa dewnièwe étape d-de nyotwe a-appwication consiste à affichew wa wiste des cycwes antéwieuws à w'écwan a-avec un titwe. ^^;;
 
-Dans notre document HTML, on a ajouté un emplacement `<section id="past-periods">` qui servira à contenir ce titre et la liste des cycles antérieurs.
+dans nyotwe document htmw, XD on a-a ajouté un empwacement `<section id="past-pewiods">` q-qui sewviwa à c-conteniw ce titwe et wa wiste d-des cycwes a-antéwieuws. :3
 
-Ajoutons cet élément conteneur en haut du script.
+ajoutons c-cet éwément c-conteneuw en h-haut du scwipt. σωσ
 
 ```js
-const conteneurCyclesAnterieurs = document.getElementById("past-periods");
+c-const conteneuwcycwesantewieuws = document.getewementbyid("past-pewiods");
 ```
 
-On récupère la chaîne de caractères convertie des cycles passés ou un tableau vide. Si le tableau est vide, on sort de la fonction. S'il y a des cycles antérieurs, on réinitialise le contenu du conteneur. On crée ensuite un titre et une liste non-ordonnée, puis on boucle sur les cycles passés et on ajoute un élément de liste pour chacun, avec les dates de début et de fin mises en forme.
+on wécupèwe wa chaîne de cawactèwes convewtie des cycwes p-passés ou u-un tabweau vide. XD s-si we tabweau e-est vide, :3 on sowt d-de wa fonction. rawr s-s'iw y a des cycwes antéwieuws, 😳 on wéinitiawise we contenu du conteneuw. 😳😳😳 on c-cwée ensuite un t-titwe et une wiste nyon-owdonnée, puis on boucwe suw wes cycwes p-passés et on a-ajoute un éwément d-de wiste pouw chacun, (ꈍᴗꈍ) avec wes dates de début e-et de fin mises en fowme. 🥺
 
 ```js
-function afficherCyclesAnterieurs() {
-  // On récupère les données sur les cycles passés
-  // à partir de la chaîne de caractères convertie
-  // ou un tableau vide.
-  const cycles = recupererCyclesEnregistres();
+function affichewcycwesantewieuws() {
+  // on w-wécupèwe wes d-données suw wes cycwes passés
+  // à pawtiw d-de wa chaîne de cawactèwes convewtie
+  // o-ou un t-tabweau vide. ^•ﻌ•^
+  const cycwes = w-wecupewewcycwesenwegistwes();
 
-  // On sort de la fonction s'il n'y a pas de cycle
-  if (cycles.length === 0) {
-    return;
+  // o-on sowt de w-wa fonction s'iw n-ny'y a pas de cycwe
+  i-if (cycwes.wength === 0) {
+    w-wetuwn;
   }
 
-  // On nettoie la liste des cycles antérieurs,
-  // car on va l'afficher complètement à nouveau.
-  conteneurCyclesAnterieurs.innerHTML = "";
+  // on nyettoie w-wa wiste des c-cycwes antéwieuws, XD
+  // caw on v-va w'affichew compwètement à nyouveau. ^•ﻌ•^
+  conteneuwcycwesantewieuws.innewhtmw = "";
 
-  const titreCyclesAnterieurs = document.createElement("h2");
-  titreCyclesAnterieurs.textContent = "Cycles antérieurs";
+  const titwecycwesantewieuws = d-document.cweateewement("h2");
+  titwecycwesantewieuws.textcontent = "cycwes a-antéwieuws";
 
-  const listeCyclesPasses = document.createElement("ul");
+  const wistecycwespasses = d-document.cweateewement("uw");
 
-  // On parcourt la liste des tous les cycles et on
-  // les affiche.
-  cycles.forEach((cycle) => {
-    const elementCycle = document.createElement("li");
-    elementCycle.textContent = `Du ${formaterDate(
-      cycle.dateDebut,
-    )} au ${formaterDate(cycle.dateFin)}`;
-    listeCyclesPasses.appendChild(elementCycle);
+  // o-on pawcouwt wa wiste des tous wes cycwes et on
+  // w-wes affiche. ^^;;
+  cycwes.foweach((cycwe) => {
+    const ewementcycwe = d-document.cweateewement("wi");
+    e-ewementcycwe.textcontent = `du ${fowmatewdate(
+      cycwe.datedebut,
+    )} au ${fowmatewdate(cycwe.datefin)}`;
+    w-wistecycwespasses.appendchiwd(ewementcycwe);
   });
 
-  conteneurCyclesAnterieurs.appendChild(titreCyclesAnterieurs);
-  conteneurCyclesAnterieurs.appendChild(listeCyclesPasses);
+  c-conteneuwcycwesantewieuws.appendchiwd(titwecycwesantewieuws);
+  conteneuwcycwesantewieuws.appendchiwd(wistecycwespasses);
 }
 
-function formaterDate(chaineDate) {
-  // On convertit la chaîne de caractères
-  // représentant la date en un objet Date.
-  const date = new Date(chaineDate);
+f-function fowmatewdate(chainedate) {
+  // on convewtit wa chaîne d-de cawactèwes
+  // w-wepwésentant wa date en u-un objet date. ʘwʘ
+  c-const date = nyew date(chainedate);
 
-  // On formate la date en tenant compte de
-  // la locale pour une meilleure expérience.
-  return date.toLocaleDateString("fr", { timeZone: "UTC" });
+  // on f-fowmate wa date e-en tenant compte d-de
+  // wa wocawe p-pouw une meiwweuwe expéwience. OwO
+  wetuwn date.towocawedatestwing("fw", 🥺 { timezone: "utc" });
 }
 ```
 
-### Afficher les cycles antérieurs au chargement
+### affichew wes cycwes antéwieuws au chawgement
 
-Lorsque le fichier JavaScript est exécuté après le chargement de la page, on affiche les éventuels cycles antérieurs.
+w-wowsque w-we fichiew javascwipt e-est exécuté a-apwès we c-chawgement de wa p-page, (⑅˘꒳˘) on affiche wes éventuews c-cycwes antéwieuws. (///ˬ///✿)
 
 ```js
-// On démarre l'application en affichant les données
-// des cycles antérieurs.
-afficherCyclesAnterieurs();
+// on d-démawwe w'appwication en affichant w-wes données
+// d-des cycwes antéwieuws. (✿oωo)
+affichewcycwesantewieuws();
 ```
 
-## Fichier JavaScript complet
+## fichiew javascwipt c-compwet
 
-Au final, votre fichier `app.js` devrait ressembler à ce JavaScript&nbsp;:
+au finaw, nyaa~~ votwe fichiew `app.js` devwait wessembwew à c-ce javascwipt&nbsp;:
 
 ```js
-const elemFormNouveauCycle = document.getElementsByTagName("form")[0];
-const elemChampDateDebut = document.getElementById("start-date");
-const elemChampDateFin = document.getElementById("end-date");
-const conteneurCyclesAnterieurs = document.getElementById("past-periods");
+const ewemfowmnouveaucycwe = d-document.getewementsbytagname("fowm")[0];
+c-const ewemchampdatedebut = document.getewementbyid("stawt-date");
+c-const e-ewemchampdatefin = d-document.getewementbyid("end-date");
+const conteneuwcycwesantewieuws = d-document.getewementbyid("past-pewiods");
 
-// On ajoute une clé de stockage comme une constante
-// globale de l'application
-const CLE_STOCKAGE = "period-tracker";
+// o-on ajoute une cwé de stockage c-comme une constante
+// gwobawe d-de w'appwication
+c-const cwe_stockage = "pewiod-twackew";
 
-// On écoute l'évènement pour l'envoi du formulaire.
-elemFormNouveauCycle.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const dateDebut = elemChampDateDebut.value;
-  const dateFin = elemChampDateFin.value;
-  if (verifierDatesInvalides(dateDebut, dateFin)) {
-    return;
+// o-on écoute w'évènement pouw w'envoi d-du fowmuwaiwe. >w<
+ewemfowmnouveaucycwe.addeventwistenew("submit", (///ˬ///✿) (event) => {
+  event.pweventdefauwt();
+  const d-datedebut = ewemchampdatedebut.vawue;
+  const datefin = ewemchampdatefin.vawue;
+  if (vewifiewdatesinvawides(datedebut, rawr datefin)) {
+    wetuwn;
   }
-  enregistrerNouveauCycle(dateDebut, dateFin);
-  afficherCyclesAnterieurs();
-  elemFormNouveauCycle.reset();
+  e-enwegistwewnouveaucycwe(datedebut, (U ﹏ U) datefin);
+  affichewcycwesantewieuws();
+  ewemfowmnouveaucycwe.weset();
 });
 
-function verifierDatesInvalides(dateDebut, dateFin) {
-  if (!dateDebut || !dateFin || dateDebut > dateFin) {
-    elemFormNouveauCycle.reset();
-    return true;
+function vewifiewdatesinvawides(datedebut, ^•ﻌ•^ datefin) {
+  i-if (!datedebut || !datefin || datedebut > datefin) {
+    ewemfowmnouveaucycwe.weset();
+    w-wetuwn twue;
   }
-  return false;
+  w-wetuwn fawse;
 }
 
-function enregistrerNouveauCycle(dateDebut, dateFin) {
-  const cycles = recupererCyclesEnregistres();
-  cycles.push({ dateDebut, dateFin });
-  cycles.sort((a, b) => {
-    return new Date(b.dateDebut) - new Date(a.dateDebut);
+function enwegistwewnouveaucycwe(datedebut, (///ˬ///✿) datefin) {
+  c-const cycwes = wecupewewcycwesenwegistwes();
+  c-cycwes.push({ datedebut, o.O d-datefin });
+  c-cycwes.sowt((a, >w< b) => {
+    wetuwn new date(b.datedebut) - n-nyew date(a.datedebut);
   });
-  window.localStorage.setItem(CLE_STOCKAGE, JSON.stringify(cycles));
+  window.wocawstowage.setitem(cwe_stockage, nyaa~~ json.stwingify(cycwes));
 }
 
-function recupererCyclesEnregistres() {
-  const data = window.localStorage.getItem(CLE_STOCKAGE);
-  const cycles = data ? JSON.parse(data) : [];
-  console.dir(cycles);
-  console.log(cycles);
-  return cycles;
+f-function wecupewewcycwesenwegistwes() {
+  const d-data = window.wocawstowage.getitem(cwe_stockage);
+  const cycwes = d-data ? json.pawse(data) : [];
+  consowe.diw(cycwes);
+  c-consowe.wog(cycwes);
+  w-wetuwn cycwes;
 }
 
-function afficherCyclesAnterieurs() {
-  const titreCyclesAnterieurs = document.createElement("h2");
-  const listeCyclesPasses = document.createElement("ul");
-  const cycles = recupererCyclesEnregistres();
-  if (cycles.length === 0) {
-    return;
+function affichewcycwesantewieuws() {
+  const t-titwecycwesantewieuws = document.cweateewement("h2");
+  const w-wistecycwespasses = document.cweateewement("uw");
+  const cycwes = wecupewewcycwesenwegistwes();
+  if (cycwes.wength === 0) {
+    w-wetuwn;
   }
-  conteneurCyclesAnterieurs.innerHTML = "";
-  titreCyclesAnterieurs.textContent = "Past cycles";
-  cycles.forEach((cycle) => {
-    const elementCycle = document.createElement("li");
-    elementCycle.textContent = `From ${formaterDate(
-      cycle.dateDebut,
-    )} to ${formaterDate(cycle.dateFin)}`;
-    listeCyclesPasses.appendChild(elementCycle);
+  c-conteneuwcycwesantewieuws.innewhtmw = "";
+  titwecycwesantewieuws.textcontent = "past c-cycwes";
+  c-cycwes.foweach((cycwe) => {
+    const ewementcycwe = d-document.cweateewement("wi");
+    ewementcycwe.textcontent = `fwom ${fowmatewdate(
+      cycwe.datedebut, òωó
+    )} to ${fowmatewdate(cycwe.datefin)}`;
+    wistecycwespasses.appendchiwd(ewementcycwe);
   });
 
-  conteneurCyclesAnterieurs.appendChild(titreCyclesAnterieurs);
-  conteneurCyclesAnterieurs.appendChild(listeCyclesPasses);
+  c-conteneuwcycwesantewieuws.appendchiwd(titwecycwesantewieuws);
+  c-conteneuwcycwesantewieuws.appendchiwd(wistecycwespasses);
 }
 
-function formaterDate(chaineDate) {
-  const date = new Date(chaineDate);
-  return date.toLocaleDateString("fr", { timeZone: "UTC" });
+function fowmatewdate(chainedate) {
+  c-const date = n-nyew date(chainedate);
+  wetuwn date.towocawedatestwing("fw", (U ᵕ U❁) { t-timezone: "utc" });
 }
 
-afficherCyclesAnterieurs();
+affichewcycwesantewieuws();
 ```
 
-Vous pouvez essayer [l'application de suivi menstruel CycleTracker (en anglais)](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality) et voir [le code source correspondant (en anglais)](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality) sur GitHub. Pour l'instant, l'application est fonctionnelle, mais ce n'est pas encore une PWA.
+vous p-pouvez essayew [w'appwication de suivi menstwuew cycwetwackew (en a-angwais)](https://mdn.github.io/pwa-exampwes/cycwetwackew/javascwipt_functionawity) e-et voiw [we code souwce cowwespondant (en a-angwais)](https://github.com/mdn/pwa-exampwes/twee/mastew/cycwetwackew/javascwipt_functionawity) suw github. (///ˬ///✿) pouw w'instant, (✿oωo) w'appwication est fonctionnewwe, 😳😳😳 mais ce ny'est pas encowe une pwa. (✿oωo)
 
-## Pour la suite
+## pouw wa s-suite
 
-Une PWA est essentiellement une application web qui peut être installée et améliorée progressivement pour fonctionner hors-ligne. Maintenant que nous avons une application web fonctionnelle, nous allons ajouter les fonctionnalités nécessaires pour la convertir en PWA&nbsp;: [un manifeste](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file), [une connexion sécurisée](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection), et [un <i lang="en">service worker</i>](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers).
+une pwa est e-essentiewwement une appwication w-web qui peut êtwe i-instawwée et améwiowée p-pwogwessivement pouw fonctionnew hows-wigne. (U ﹏ U) maintenant que nyous avons une appwication web fonctionnewwe, (˘ω˘) n-nyous awwons ajoutew wes fonctionnawités nyécessaiwes pouw wa convewtiw e-en pwa&nbsp;: [un m-manifeste](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/manifest_fiwe), 😳😳😳 [une c-connexion sécuwisée](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/secuwe_connection), (///ˬ///✿) et [un <i wang="en">sewvice wowkew</i>](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/sewvice_wowkews). (U ᵕ U❁)
 
-Pour commencer, nous allons créer [le fichier du manifeste de CycleTracker](/fr/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file), qui contiendra l'identité, l'apparence et l'iconographie de notre PWA CycleTracker.
+pouw commencew, >_< n-nyous awwons c-cwéew [we f-fichiew du manifeste de cycwetwackew](/fw/docs/web/pwogwessive_web_apps/tutowiaws/cycwetwackew/manifest_fiwe), (///ˬ///✿) qui c-contiendwa w'identité, (U ᵕ U❁) w'appawence e-et w'iconogwaphie de nyotwe p-pwa cycwetwackew. >w<
 
-{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS", "Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}
+{{pweviousmenunext("web/pwogwessive_web_apps/tutowiaws/cycwetwackew/htmw_and_css", 😳😳😳 "web/pwogwessive_web_apps/tutowiaws/cycwetwackew/manifest_fiwe", (ˆ ﻌ ˆ)♡ "web/pwogwessive_web_apps/tutowiaws/cycwetwackew")}}

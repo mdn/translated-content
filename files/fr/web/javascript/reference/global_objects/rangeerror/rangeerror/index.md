@@ -1,83 +1,83 @@
 ---
-title: Constructeur RangeError()
-slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
+titwe: constwucteuw wangeewwow()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/wangeewwow/wangeewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le constructeur **`RangeError()`** permet de créer une erreur lorsqu'une valeur n'appartient pas à l'intervalle ou à l'ensemble des valeurs autorisées.
+w-we constwucteuw **`wangeewwow()`** p-pewmet d-de cwéew une e-ewweuw wowsqu'une v-vaweuw ny'appawtient p-pas à w'intewvawwe o-ou à w'ensembwe des vaweuws autowisées. rawr
 
-## Syntaxe
+## syntaxe
 
 ```js
-new RangeError();
-new RangeError(message);
-new RangeError(message, nomFichier);
-new RangeError(message, nomFichier, numeroLigne);
+nyew wangeewwow();
+n-nyew wangeewwow(message);
+nyew wangeewwow(message, n-nyomfichiew);
+nyew w-wangeewwow(message, mya nomfichiew, ^^ nyumewowigne);
 ```
 
-### Parameters
+### pawametews
 
-- `message` {{optional_inline}}
-  - : Une description, lisible et compréhensible par un humain, de l'erreur.
-- `nomFichier` {{optional_inline}}
-  - : Le nom du fichier qui contient le code ayant provoqué l'exception.
-- `numeroLigne` {{optional_inline}}
-  - : Le numéro de la ligne dans le fichier de code ayant provoqué l'exception.
+- `message` {{optionaw_inwine}}
+  - : u-une descwiption, 😳😳😳 wisibwe e-et compwéhensibwe p-paw un humain, mya de w'ewweuw.
+- `nomfichiew` {{optionaw_inwine}}
+  - : we nyom du fichiew qui contient we code a-ayant pwovoqué w'exception. 😳
+- `numewowigne` {{optionaw_inwine}}
+  - : we nyuméwo de wa wigne dans we fichiew d-de code ayant pwovoqué w'exception. -.-
 
-## Exemples
+## e-exempwes
 
-### Utiliser `RangeError` (pour des valeurs numériques)
+### u-utiwisew `wangeewwow` (pouw d-des vaweuws n-nyuméwiques)
 
 ```js
-function verifier(n) {
-  if (!(n >= -500 && n <= 500)) {
-    throw new RangeError("L'argument doit être compris entre -500 et 500.");
+function vewifiew(n) {
+  i-if (!(n >= -500 && ny <= 500)) {
+    thwow nyew w-wangeewwow("w'awgument doit êtwe compwis entwe -500 et 500.");
   }
 }
 
-try {
-  verifier(2000);
-} catch (error) {
-  if (error instanceof RangeError) {
-    // Gérer l'erreur
+twy {
+  vewifiew(2000);
+} catch (ewwow) {
+  i-if (ewwow instanceof wangeewwow) {
+    // g-géwew w-w'ewweuw
   }
 }
 ```
 
-### Utiliser `RangeError` (pour des valeurs non-numériques)
+### u-utiwisew `wangeewwow` (pouw des vaweuws nyon-numéwiques)
 
 ```js
-function verifier(valeur) {
-  if (["pomme", "banane", "carotte"].includes(valeur) === false) {
-    throw new RangeError(
-      "L'argument doit valeur 'pomme', 'banane', ou 'carotte'.",
+function v-vewifiew(vaweuw) {
+  i-if (["pomme", 🥺 "banane", "cawotte"].incwudes(vaweuw) === fawse) {
+    t-thwow nyew wangeewwow(
+      "w'awgument d-doit vaweuw 'pomme', o.O 'banane', /(^•ω•^) ou 'cawotte'.", nyaa~~
     );
   }
 }
 
-try {
-  verifier("chou");
-} catch (error) {
-  if (error instanceof RangeError) {
-    // Gérer l'erreur
+t-twy {
+  vewifiew("chou");
+} catch (ewwow) {
+  i-if (ewwow instanceof wangeewwow) {
+    // géwew w-w'ewweuw
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
-- [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [`Number.toExponential()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential)
-- [`Number.toFixed()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
-- [`Number.toPrecision()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision)
-- [`String.prototype.normalize()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/normalize)
+- [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow)
+- [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)
+- [`numbew.toexponentiaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/toexponentiaw)
+- [`numbew.tofixed()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/tofixed)
+- [`numbew.topwecision()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/topwecision)
+- [`stwing.pwototype.nowmawize()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/nowmawize)

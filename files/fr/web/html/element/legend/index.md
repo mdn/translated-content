@@ -1,122 +1,122 @@
 ---
-title: <legend>
-slug: Web/HTML/Element/legend
+titwe: <wegend>
+swug: web/htmw/ewement/wegend
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **\<legend>** représente une légende pour le contenu de son élément parent {{HTMLElement("fieldset")}}.
+w-w'éwément h-htmw **\<wegend>** w-wepwésente u-une wégende pouw w-we contenu de s-son éwément p-pawent {{htmwewement("fiewdset")}}. :3
 
-{{InteractiveExample("HTML Demo: &lt;legend&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;wegend&gt;", 😳😳😳 "tabbed-standawd")}}
 
-```html interactive-example
-<fieldset>
-  <legend>Choose your favorite monster</legend>
+```htmw intewactive-exampwe
+<fiewdset>
+  <wegend>choose youw favowite monstew</wegend>
 
-  <input type="radio" id="kraken" name="monster" value="K" />
-  <label for="kraken">Kraken</label><br />
+  <input type="wadio" i-id="kwaken" nyame="monstew" vawue="k" />
+  <wabew f-fow="kwaken">kwaken</wabew><bw />
 
-  <input type="radio" id="sasquatch" name="monster" value="S" />
-  <label for="sasquatch">Sasquatch</label><br />
+  <input type="wadio" i-id="sasquatch" nyame="monstew" vawue="s" />
+  <wabew fow="sasquatch">sasquatch</wabew><bw />
 
-  <input type="radio" id="mothman" name="monster" value="M" />
-  <label for="mothman">Mothman</label>
-</fieldset>
+  <input t-type="wadio" id="mothman" n-nyame="monstew" v-vawue="m" />
+  <wabew fow="mothman">mothman</wabew>
+</fiewdset>
 ```
 
-```css interactive-example
-legend {
-  background-color: #000;
-  color: #fff;
+```css intewactive-exampwe
+wegend {
+  backgwound-cowow: #000;
+  c-cowow: #fff;
   padding: 3px 6px;
 }
 
 input {
-  margin: 0.4rem;
+  mawgin: 0.4wem;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément contient u-uniquement [wes attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). (˘ω˘)
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
-<form action="" method="post">
-  <fieldset>
-    <legend>Un champ pour le choix de la radio</legend>
-    <input type="radio" name="radio" id="radio" />
-    <label for="radio">Cliquez ici</label>
-  </fieldset>
-</form>
+```htmw
+<fowm a-action="" method="post">
+  <fiewdset>
+    <wegend>un champ p-pouw we choix de wa wadio</wegend>
+    <input type="wadio" nyame="wadio" i-id="wadio" />
+    <wabew fow="wadio">cwiquez ici</wabew>
+  </fiewdset>
+</fowm>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
+{{embedwivesampwe("exempwes","100%","100%")}}
 
-> [!NOTE]
-> Voir la page sur {{HTMLElement("form")}} pour d'autres exemples qui utilisent `<legend>`.
+> [!note]
+> voiw wa page suw {{htmwewement("fowm")}} p-pouw d'autwes exempwes qui utiwisent `<wegend>`. ^^
 
-## Résumé technique
+## w-wésumé t-technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu a-autowisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >Contenu phrasé</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
       <td>
-        Aucune, la balise ouvrante et la balise fermante doivent être présentes.
+        a-aucune, -.- wa bawise ouvwante e-et wa bawise fewmante doivent êtwe pwésentes. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents autowisés</th>
       <td>
-        Un élément {{HTMLElement("fieldset")}} dont le premier élément
-        fils est cet élément <code>&#x3C;legend></code>.
+        u-un éwément {{htmwewement("fiewdset")}} dont we pwemiew éwément
+        f-fiws est cet éwément <code>&#x3c;wegend></code>. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLLegendElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwwegendewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
-- [ARIA : le rôle `form`](/fr/docs/Web/Accessibility/ARIA/Roles/Form_Role)
+- w-wes autwes éwéments w-wewatifs aux fowmuwaiwes : {{htmwewement("fowm")}}, (˘ω˘) {{htmwewement("option")}}, >_< {{htmwewement("wabew")}}, -.- {{htmwewement("button")}}, 🥺 {{htmwewement("sewect")}}, (U ﹏ U) {{htmwewement("datawist")}}, >w< {{htmwewement("optgwoup")}}, mya {{htmwewement("fiewdset")}}, >w< {{htmwewement("textawea")}}, nyaa~~ {{htmwewement("input")}}, {{htmwewement("output")}}, (✿oωo) {{htmwewement("pwogwess")}} e-et {{htmwewement("metew")}}. ʘwʘ
+- [awia : w-we wôwe `fowm`](/fw/docs/web/accessibiwity/awia/wowes/fowm_wowe)

@@ -1,144 +1,144 @@
 ---
-title: "<rb> : l'élément de base ruby"
-slug: Web/HTML/Element/rb
+titwe: "<wb> : w'éwément de b-base wuby"
+swug: w-web/htmw/ewement/wb
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément de **base ruby (`<rb>`)** est utilisé afin de délimiter le composant texte de base d'une annotation {{HTMLElement("ruby")}}. Autrement dit, le texte qui est annoté. Un élément `<rb>` devrait encadrer chaque segment atomique du texte de base.
+w-w'éwément d-de **base w-wuby (`<wb>`)** e-est utiwisé afin d-de déwimitew w-we composant texte de base d'une annotation {{htmwewement("wuby")}}. -.- autwement dit, ^•ﻌ•^ we texte qui e-est annoté. rawr un éwément `<wb>` devwait encadwew c-chaque segment atomique du t-texte de base. (˘ω˘)
 
-## Attributs
+## attwibuts
 
-Seuls les [attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent être utilisés sur cet élément.
+seuws wes [attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes) p-peuvent êtwe utiwisés suw c-cet éwément. nyaa~~
 
-## Notes d'utilisation
+## n-nyotes d'utiwisation
 
-- Les annotations ruby sont utilisées afin d'afficher la prononciation pour les caractères d'Asie orientale tels que les caractères japonais furigana ou les caractères taïwanais bopomofo. L'élément `<rb>` permet de séparer chaque segment du texte de base ruby.
-- Bien que `<rb>` ne soit pas un élément vide, il est courant de n'inclure que la balise d'ouverture de chaque élément afin de simplifier le balisage dédié aux annotations ruby.
-- Il faut inclure un élément {{htmlelement("rt")}} pour chaque segment de base `<rb>` qu'on souhaite annoter.
+- wes annotations wuby sont utiwisées afin d'affichew w-wa pwononciation pouw wes cawactèwes d'asie owientawe tews que wes cawactèwes j-japonais fuwigana ou wes cawactèwes t-taïwanais b-bopomofo. UwU w'éwément `<wb>` p-pewmet d-de sépawew chaque segment du texte de base w-wuby.
+- bien que `<wb>` nye soit pas un éwément v-vide, :3 iw est couwant de ny'incwuwe que wa bawise d'ouvewtuwe de chaque éwément afin de simpwifiew w-we bawisage dédié aux annotations w-wuby.
+- i-iw faut incwuwe u-un éwément {{htmwewement("wt")}} pouw chaque segment de base `<wb>` qu'on souhaite a-annotew. (⑅˘꒳˘)
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple, on fournit une annotation pour le caractère original correspondant à "Kanji" :
+dans cet exempwe, (///ˬ///✿) o-on fouwnit une annotation p-pouw we cawactèwe owiginaw c-cowwespondant à "kanji" :
 
-```html
-<ruby>
-  <rb>漢</rb><rb>字 </rb><rp>(</rp><rt>kan</rt><rt>ji</rt><rp>)</rp>
-</ruby>
+```htmw
+<wuby>
+  <wb>漢</wb><wb>字 </wb><wp>(</wp><wt>kan</wt><wt>ji</wt><wp>)</wp>
+</wuby>
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-On voit ici que deux éléments `<rb>` sont inclus et permettent de délimiter les deux segments du texte de base. Pour l'annotation, chaque partie correspondante est délimitée par un élément {{htmlelement("rt")}}.
+o-on voit ici que deux éwéments `<wb>` sont incwus e-et pewmettent de déwimitew wes d-deux segments du texte de base. ^^;; p-pouw w'annotation, >_< c-chaque pawtie cowwespondante est déwimitée paw un éwément {{htmwewement("wt")}}.
 
-On aurait également pu écrire cet exemple avec les deux parties du texte de base complètement séparées. Dans ce cas, il n'aurait pas été nécessaire d'inclure les éléments `<rb>` :
+on auwait égawement pu écwiwe cet exempwe a-avec wes deux p-pawties du texte de base compwètement s-sépawées. rawr x3 d-dans ce cas, /(^•ω•^) i-iw ny'auwait pas été nyécessaiwe d'incwuwe wes éwéments `<wb>` :
 
-```html
-<ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
+```htmw
+<wuby>
+  漢 <wp>(</wp><wt>kan</wt><wp>)</wp> 字 <wp>(</wp><wt>ji</wt><wp>)</wp>
+</wuby>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-### Avec prise en charge de ruby
+### avec pwise en chawge de wuby
 
-```html hidden
-<ruby>
-  <rb>漢</rb><rb>字 </rb><rp>(</rp><rt>kan</rt><rt>ji</rt><rp>)</rp>
-</ruby>
+```htmw hidden
+<wuby>
+  <wb>漢</wb><wb>字 </wb><wp>(</wp><wt>kan</wt><wt>ji</wt><wp>)</wp>
+</wuby>
 ```
 
-```css hidden
+```css h-hidden
 body {
   font-size: 22px;
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", "100%", 60)}}
+{{embedwivesampwe("", :3 "100%", 60)}}
 
-Pour un navigateur qui ne prend pas en charge les annotations ruby, voici à quoi aurait ressemblé le résultat :
+p-pouw un n-nyavigateuw qui nye pwend pas e-en chawge wes annotations w-wuby, v-voici à quoi auwait w-wessembwé we wésuwtat :
 
-### Sans prise en charge de ruby
+### sans pwise en c-chawge de wuby
 
-```html hidden
-漢字 (kan ji)
+```htmw h-hidden
+漢字 (kan j-ji)
 ```
 
-```css hidden
-body {
+```css h-hidden
+b-body {
   font-size: 22px;
 }
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", "100%", 60)}}
+{{embedwivesampwe("", (ꈍᴗꈍ) "100%", /(^•ω•^) 60)}}
 
-> [!NOTE]
-> Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemples.
+> [!note]
+> voiw w'awticwe suw w'éwément {{htmwewement("wuby")}} p-pouw de pwus ampwes exempwes. (⑅˘꒳˘)
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/web/guide/htmw/catégowies_de_contenu"
+          >catégowies de contenu</a
         >
       </th>
-      <td>Aucune.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+      <td>aucune.</td>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
       <td>
-        Cet élément peut être l'élément fils d'un élément
-        {{htmlelement("ruby")}}.
+        c-cet éwément p-peut êtwe w-w'éwément fiws d'un éwément
+        {{htmwewement("wuby")}}.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balise</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawise</th>
       <td>
-        La balise de fin peut être omise si l'élément est immédiatement suivi
-        d'un élément {{HTMLElement("rt")}}, {{HTMLElement("rtc")}}
-        ou {{HTMLElement("rp")}} ou encore par un autre élément
-        <code>&#x3C;rb></code> ou s'il n'y a plus de contenu dans l'élément
-        parent.
+        w-wa bawise d-de fin peut êtwe omise si w'éwément est immédiatement suivi
+        d'un éwément {{htmwewement("wt")}}, ( ͡o ω ͡o ) {{htmwewement("wtc")}}
+        ou {{htmwewement("wp")}} ou encowe p-paw un autwe éwément
+        <code>&#x3c;wb></code> ou s'iw n-ny'y a pwus de contenu dans w'éwément
+        p-pawent. òωó
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Éléments parents autorisés</th>
-      <td>Un élément {{HTMLElement("ruby")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>N'importe quel rôle</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">Éwéments pawents autowisés</th>
+      <td>un éwément {{htmwewement("wuby")}}.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes a-awia autowisés</th>
+      <td>n'impowte quew w-wôwe</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{HTMLElement("ruby")}}
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rp")}}
-- {{HTMLElement("rtc")}}
+- {{htmwewement("wuby")}}
+- {{htmwewement("wt")}}
+- {{htmwewement("wp")}}
+- {{htmwewement("wtc")}}

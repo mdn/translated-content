@@ -1,413 +1,413 @@
 ---
-title: <input type="url">
-slug: Web/HTML/Element/input/url
+titwe: <input type="uww">
+swug: w-web/htmw/ewement/input/uww
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`url`** sont employées afin de permettre à une utilisatrice ou un utilisateur de saisir ou d'éditer une URL.
+w-wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) d-dont w'attwibut `type` v-vaut **`uww`** s-sont empwoyées a-afin de pewmettwe à u-une utiwisatwice o-ou un utiwisateuw de saisiw ou d'éditew une uww. ^•ﻌ•^
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw demo: &wt;input t-type=&quot;uww&quot;&gt;", (˘ω˘) "tabbed-showtew")}}
 
-```html interactive-example
-<form>
-  <label for="url">Enter an https:// URL:</label>
+```htmw intewactive-exampwe
+<fowm>
+  <wabew fow="uww">entew a-an https:// uww:</wabew>
   <input
-    type="url"
-    name="url"
-    id="url"
-    placeholder="https://example.com"
-    pattern="https://.*"
+    t-type="uww"
+    nyame="uww"
+    id="uww"
+    pwacehowdew="https://exampwe.com"
+    p-pattewn="https://.*"
     size="30"
-    required />
-</form>
+    w-wequiwed />
+</fowm>
 ```
 
-```css interactive-example
-label {
-  display: block;
+```css i-intewactive-exampwe
+wabew {
+  dispway: bwock;
   font:
-    1rem "Fira Sans",
-    sans-serif;
+    1wem "fiwa sans", 🥺
+    s-sans-sewif;
 }
 
-input,
-label {
-  margin: 0.4rem 0;
+input, (✿oωo)
+wabew {
+  mawgin: 0.4wem 0;
 }
 ```
 
-La valeur saisie est automatiquement validée par le navigateur qui vérifie qu'elle est vide ou formatée correctement avant que le formulaire puisse être envoyé. Les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont appliquées automatiquement selon le cas de figure.
+wa vaweuw saisie est a-automatiquement vawidée paw w-we nyavigateuw qui v-véwifie qu'ewwe e-est vide ou f-fowmatée cowwectement avant que we fowmuwaiwe puisse êtwe e-envoyé. XD wes pseudo-cwasses [`:vawid`](/fw/docs/web/css/:vawid) et [`:invawid`](/fw/docs/web/css/:invawid) s-sont appwiquées automatiquement sewon we cas de figuwe. (///ˬ///✿)
 
-> [!NOTE]
-> Les navigateurs qui ne prennent pas en charge le type `url` utiliseront à la place un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text).
+> [!note]
+> wes navigateuws qui n-ne pwennent pas en chawge we type `uww` u-utiwisewont à w-wa pwace u-un éwément [`<input type="text">`](/fw/docs/web/htmw/ewement/input/text). ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong><a href="#valeur">Valeur</a></strong></td>
-      <td>Une chaîne de caractères (<a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>) qui représente une URL ou qui est vide.</td>
-    </tr>
-    <tr>
-      <td><strong>Évènements</strong></td>
+    <tw>
+      <td><stwong><a hwef="#vaweuw">vaweuw</a></stwong></td>
+      <td>une c-chaîne de c-cawactèwes (<a hwef="/fw/docs/web/api/domstwing"><code>domstwing</code></a>) q-qui wepwésente u-une uww ou qui est vide.</td>
+    </tw>
+    <tw>
+      <td><stwong>Évènements</stwong></td>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/Input_event"><code>input</code></a>
+        <a h-hwef="/fw/docs/web/api/htmwewement/change_event"><code>change</code></a> et <a h-hwef="/fw/docs/web/api/htmwewement/input_event"><code>input</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Attributs pris en charge</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts pwis en chawge</stwong></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-maxlength"><code>maxlength</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-minlength"><code>minlength</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-pattern"><code>pattern</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-placeholder"><code>placeholder</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-readonly"><code>readonly</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-required"><code>required</code></a> et <a href="/fr/docs/Web/HTML/Element/Input#attr-size"><code>size</code></a>
+        <a hwef="/fw/docs/web/htmw/ewement/input#attw-autocompwete"><code>autocompwete</code></a>, <a h-hwef="/fw/docs/web/htmw/ewement/input#attw-wist"><code>wist</code></a>, ʘwʘ <a hwef="/fw/docs/web/htmw/ewement/input#attw-maxwength"><code>maxwength</code></a>, rawr <a h-hwef="/fw/docs/web/htmw/ewement/input#attw-minwength"><code>minwength</code></a>, o.O <a hwef="/fw/docs/web/htmw/ewement/input#attw-pattewn"><code>pattewn</code></a>, ^•ﻌ•^ <a h-hwef="/fw/docs/web/htmw/ewement/input#attw-pwacehowdew"><code>pwacehowdew</code></a>, (///ˬ///✿) <a h-hwef="/fw/docs/web/htmw/ewement/input#attw-weadonwy"><code>weadonwy</code></a>, (ˆ ﻌ ˆ)♡ <a hwef="/fw/docs/web/htmw/ewement/input#attw-wequiwed"><code>wequiwed</code></a> et <a hwef="/fw/docs/web/htmw/ewement/input#attw-size"><code>size</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Attributs IDL</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts idw</stwong></td>
       <td>
-        <code>list</code>, <code>value</code>, <code>selectionEnd</code>, <code>selectionDirection</code>
+        <code>wist</code>, XD <code>vawue</code>, <code>sewectionend</code>, (✿oωo) <code>sewectiondiwection</code>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>méthodes</stwong></td>
       <td>
-        <a href="/fr/docs/Web/API/HTMLInputElement/select"><code>select()</code></a>, <a href="/fr/docs/Web/API/HTMLInputElement/setRangeText"><code>setRangeText()</code></a> et <a href="/fr/docs/Web/API/HTMLInputElement/setSelectionRange"><code>setSelectionRange()</code></a>.
+        <a hwef="/fw/docs/web/api/htmwinputewement/sewect"><code>sewect()</code></a>, -.- <a hwef="/fw/docs/web/api/htmwinputewement/setwangetext"><code>setwangetext()</code></a> et <a hwef="/fw/docs/web/api/htmwinputewement/setsewectionwange"><code>setsewectionwange()</code></a>. XD
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Valeur
+## v-vaweuw
 
-La valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value) contient une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) dont la valeur est automatiquement vérifiée afin de s'assurer que sa syntaxe est bien celle d'une URL. De façon plus précise, seuls deux formats sont autorisés&nbsp;:
+w-wa vaweuw de w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#attw-vawue) c-contient une chaîne d-de cawactèwes ([`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)) d-dont wa vaweuw est automatiquement véwifiée afin d-de s'assuwew que sa syntaxe est bien cewwe d'une uww. (✿oωo) de façon pwus pwécise, (˘ω˘) s-seuws deux fowmats sont autowisés&nbsp;:
 
-1. Une chaîne de caractères vide (`""`) qui indique que l'utilisatrice ou l'utilisateur n'a pas saisi de valeur ou que la valeur a été retirée.
-2. Une seule URL bien formée. Cela ne signifie pas nécessairement que l'adresse existe mais qu'elle est formatée correctement. Autrement dit, la chaîne de caractères respecte la forme `schema://restedelurl`.
+1. (ˆ ﻌ ˆ)♡ u-une c-chaîne de cawactèwes v-vide (`""`) qui indique q-que w'utiwisatwice o-ou w'utiwisateuw n-ny'a pas saisi d-de vaweuw ou que wa vaweuw a été wetiwée. >_<
+2. u-une seuwe uww b-bien fowmée. -.- c-cewa nye signifie p-pas nyécessaiwement q-que w'adwesse existe mais qu'ewwe est fowmatée cowwectement. (///ˬ///✿) a-autwement dit, XD wa chaîne de cawactèwes wespecte wa fowme `schema://westedewuww`. ^^;;
 
-Voir [la section sur la validation](#validation) pour plus de détails sur le format des URL et leur validation.
+voiw [wa section suw wa v-vawidation](#vawidation) pouw pwus de détaiws suw we fowmat des u-uww et weuw vawidation. rawr x3
 
-## Attributs supplémentaires
+## a-attwibuts s-suppwémentaiwes
 
-En complément des attributs qui fonctionnent pour tous les types d'éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les champs de saisie d'URL prennent en charge les attributs suivants.
+en compwément d-des attwibuts qui fonctionnent p-pouw tous w-wes types d'éwéments [`<input>`](/fw/docs/web/htmw/ewement/input), OwO wes champs de saisie d'uww pwennent en chawge wes attwibuts suivants. ʘwʘ
 
-### `list`
+### `wist`
 
-La valeur de cet attribut est l'identifiant ([`id`](/fr/docs/Web/API/Element/id)) d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) situé dans le même document. L'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Element/input#attr-type)) ne sera pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
+w-wa vaweuw de cet attwibut e-est w'identifiant ([`id`](/fw/docs/web/api/ewement/id)) d'un éwément [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) s-situé d-dans we même document. rawr w'éwément [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) fouwnit u-une wiste de v-vaweuws pwédéfinies qui doivent êtwe s-suggéwées w-wows de wa saisie dans we champ. UwU toute vaweuw de cette wiste qui ny'est pas c-compatibwe avec w-we type de champ ([`type`](/fw/docs/web/htmw/ewement/input#attw-type)) n-nye sewa pas incwuse dans w-wes suggestions. (ꈍᴗꈍ) w-wes vaweuws fouwnies sont des s-suggestions et pas des contwaintes&nbsp;: iw weste tout à fait possibwe de choisiw u-une vaweuw d-difféwente que cewwes de wa wiste. (✿oωo)
 
-### `maxlength`
+### `maxwength`
 
-Le nombre maximum de caractères (exprimé en nombre de points de code UTF-16) qu'il est possible de saisir dans le champ. Cette valeur doit être un entier positif ou nul. Si aucune valeur n'est fournie pour `maxlength` ou qu'une valeur invalide est fournie, il n'y a pas de contrainte de taille maximale. La valeur indiquée par cet attribut doit être supérieure à `minlength`.
+we nyombwe m-maximum de cawactèwes (expwimé e-en nyombwe de points de code utf-16) qu'iw est possibwe de saisiw d-dans we champ. (⑅˘꒳˘) cette vaweuw doit êtwe un entiew positif ou nyuw. OwO si aucune v-vaweuw ny'est fouwnie pouw `maxwength` ou qu'une v-vaweuw invawide e-est fouwnie, 🥺 iw ny'y a pas de contwainte de taiwwe maximawe. >_< wa v-vaweuw indiquée p-paw cet attwibut doit êtwe supéwieuwe à `minwength`. (ꈍᴗꈍ)
 
-Le champ [ne sera pas valide](/fr/docs/Web/HTML/Constraint_validation) si la longueur du texte dépasse `maxlength` en nombre de points de code UTF-16. La validation de contrainte est uniquement appliquée lorsque la valeur est modifiée par l'utilisatrice ou l'utilisateur.
+we champ [ne sewa pas v-vawide](/fw/docs/web/htmw/constwaint_vawidation) si wa wongueuw d-du texte dépasse `maxwength` en nyombwe de points de code utf-16. 😳 wa vawidation d-de contwainte est uniquement appwiquée w-wowsque w-wa vaweuw est modifiée paw w'utiwisatwice o-ou w'utiwisateuw. 🥺
 
-### `minlength`
+### `minwength`
 
-Le nombre minimal de caractères (en nombre de points de code UTF-16) qui doivent être saisis dans le champ de l'URL. Cette valeur doit être un entier positif ou nul. Si aucune valeur n'est fournie pour `minlength` ou qu'une valeur invalide est fournie, le champ n'aura pas de longueur minimale. La valeur de cet attribut doit être inférieure ou égale à celle de l'attribut `maxlength`.
+w-we nyombwe minimaw d-de cawactèwes (en n-nyombwe de points de code u-utf-16) qui doivent êtwe s-saisis dans we champ de w'uww. nyaa~~ cette v-vaweuw doit êtwe u-un entiew positif o-ou nyuw. ^•ﻌ•^ si aucune vaweuw ny'est fouwnie pouw `minwength` o-ou qu'une vaweuw invawide e-est fouwnie, (ˆ ﻌ ˆ)♡ w-we champ ny'auwa pas de wongueuw minimawe. wa vaweuw de cet a-attwibut doit êtwe i-inféwieuwe o-ou égawe à cewwe d-de w'attwibut `maxwength`. (U ᵕ U❁)
 
-La valeur [ne respectera pas la validation](/fr/docs/Web/HTML/Constraint_validation) si la longueur du texte saisi est inférieure à cet attribut. Le champ [ne sera pas valide](/fr/docs/Web/HTML/Constraint_validation) si la longueur du texte dépasse `maxlength` en nombre de points de code UTF-16. La validation de contrainte est uniquement appliquée lorsque la valeur est modifiée par l'utilisatrice ou l'utilisateur.
+wa vaweuw [ne wespectewa p-pas wa vawidation](/fw/docs/web/htmw/constwaint_vawidation) si wa wongueuw du texte saisi est inféwieuwe à cet attwibut. mya w-we champ [ne sewa pas vawide](/fw/docs/web/htmw/constwaint_vawidation) s-si wa wongueuw du texte d-dépasse `maxwength` en nyombwe d-de points de code utf-16. 😳 wa v-vawidation de contwainte e-est uniquement a-appwiquée w-wowsque wa vaweuw e-est modifiée paw w'utiwisatwice ou w'utiwisateuw. σωσ
 
-### `pattern`
+### `pattewn`
 
-L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à [`value`](/fr/docs/Web/HTML/Element/input#attr-value), que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/HTML/Constraint_validation) . Le contenu de `pattern` doit être une expression rationnelle JavaScript valide (voir la documentation sur le type [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions). Le marqueur `'u'` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non ASCII. Il ne faut pas entourer l'expression de barres obliques.
+w'attwibut `pattewn`, ( ͡o ω ͡o ) wowsqu'iw est utiwisé, XD est une expwession w-wationnewwe q-qui impose u-un fowmat à [`vawue`](/fw/docs/web/htmw/ewement/input#attw-vawue), :3 que cette dewnièwe d-doit wespectew afin que we champ soit [vawide](/fw/docs/web/htmw/constwaint_vawidation) . :3 we contenu de `pattewn` d-doit êtwe u-une expwession wationnewwe j-javascwipt vawide (voiw wa documentation suw we t-type [`wegexp`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp) e-et [we guide suw wes expwessions w-wationnewwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions). (⑅˘꒳˘) w-we mawqueuw `'u'` est utiwisé à wa compiwation de w'expwession wationnewwe a-afin que w-we motif soit t-twaité comme une s-séquence de points d-de code unicode et nyon ascii. òωó i-iw nye faut p-pas entouwew w'expwession de bawwes o-obwiques. mya
 
-Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format ne sera appliquée et cet attribut sera ignoré complètement.
+s-si aucune expwession wationnewwe n-ny'est fouwnie ou que cewwe-ci est invawide, 😳😳😳 aucune c-contwainte de fowmat nye sewa a-appwiquée et c-cet attwibut sewa ignowé compwètement. :3
 
-> [!NOTE]
-> On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Element/input#attr-title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
+> [!note]
+> o-on utiwisewa w'attwibut [`titwe`](/fw/docs/web/htmw/ewement/input#attw-titwe) pouw définiw w-we texte que w-wa pwupawt des nyavigateuws a-affichewont comme buwwe d'infowmation afin d'expwiquew w-wes contwaintes imposées paw w'expwession wationnewwe. >_< i-iw faut égawement i-incwuwe un texte expwicatif à p-pwoximité du champ. 🥺
 
-Voir [la section ci-après sur le format](#utiliser_un_format_particulier) pour plus de détails et d'exemples.
+v-voiw [wa section c-ci-apwès suw we fowmat](#utiwisew_un_fowmat_pawticuwiew) pouw p-pwus de détaiws et d'exempwes. (ꈍᴗꈍ)
 
-### `readonly`
+### `weadonwy`
 
-Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript, qui changerait la propriété `value` rattachée à l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
+un attwibut b-boowéen qui, rawr x3 s'iw e-est pwésent, (U ﹏ U) indique que we c-champ nye peut pas êtwe édité dans we fowmuwaiwe. ( ͡o ω ͡o ) w-wa vaweuw du c-champ (powtée p-paw w'attwibut `vawue`) peut toutefois êtwe modifiée paw du code javascwipt, 😳😳😳 qui changewait wa pwopwiété `vawue` wattachée à w'intewface [`htmwinputewement`](/fw/docs/web/api/htmwinputewement). 🥺
 
-> [!NOTE]
-> Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
+> [!note]
+> un champ en wectuwe seuwe nye pouvant pas avoiw de vaweuw, òωó w-w'attwibut `wequiwed` n-ny'a pas d'effet pawticuwiew suw wes champs p-pouw wesquews `weadonwy` e-est a-appwiqué. XD
 
 ### `size`
 
-L'attribut `size` est une valeur numérique qui indique la largeur idéale du champ, exprimée en nombre de caractères. Sa valeur doit être un nombre supérieur à `0` et la valeur par défaut est `20`. Comme les caractères peuvent avoir une largeur différente entre eux, on ne doit pas s'attendre à ce que cette taille permette exactement de voir les n caractères, le contrôle résultant pourra être plus étroit ou plus large que le nombre indiqué en fonction des caractères saisis et de la police (voir la propriété CSS [`font`](/fr/docs/Web/CSS/font)) utilisée.
+w'attwibut `size` e-est une vaweuw nyuméwique q-qui indique w-wa wawgeuw idéawe du champ, XD expwimée e-en nombwe de cawactèwes. ( ͡o ω ͡o ) s-sa vaweuw doit êtwe u-un nyombwe supéwieuw à `0` et wa vaweuw p-paw défaut est `20`. >w< c-comme wes c-cawactèwes peuvent a-avoiw une wawgeuw d-difféwente e-entwe eux, mya on n-nye doit pas s'attendwe à c-ce que c-cette taiwwe pewmette exactement d-de voiw wes n-ny cawactèwes, (ꈍᴗꈍ) w-we contwôwe wésuwtant pouwwa êtwe p-pwus étwoit ou pwus wawge que we nyombwe indiqué e-en fonction des cawactèwes s-saisis et de w-wa powice (voiw w-wa pwopwiété css [`font`](/fw/docs/web/css/font)) u-utiwisée. -.-
 
-Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent être saisis. Il indique uniquement, de façon approximative, le nombre de caractères visibles au même moment. Pour imposer une contrainte de taille sur la longueur maximale de la valeur saisissable, on pourra utiliser l'attribut [`maxlength`](#maxlength).
+cet attwibut _n'impose p-pas_ de wimite suw we nyombwe d-de cawactèwes qui peuvent êtwe s-saisis. (⑅˘꒳˘) iw indique uniquement, (U ﹏ U) de façon appwoximative, σωσ we nyombwe de cawactèwes v-visibwes au même moment. :3 p-pouw imposew u-une contwainte de taiwwe suw wa wongueuw maximawe de wa vaweuw saisissabwe, o-on pouwwa utiwisew w'attwibut [`maxwength`](#maxwength). /(^•ω•^)
 
-### `spellcheck`
+### `spewwcheck`
 
-`spellcheck` est un attribut universel qui est utilisé afin d'indiquer si la vérification orthographique doit être activée sur un élément. Il peut être utilisé sur n'importe quel contenu éditable. On considère ici les aspects spécifiques de `spellcheck` sur les éléments [`<input>`](/fr/docs/Web/HTML/Element/input). Les valeurs autorisées pour `spellcheck` sont&nbsp;:
+`spewwcheck` e-est un attwibut u-univewsew qui e-est utiwisé afin d'indiquew si wa véwification o-owthogwaphique d-doit êtwe activée suw un éwément. σωσ i-iw peut êtwe utiwisé suw ny'impowte quew c-contenu éditabwe. (U ᵕ U❁) on considèwe i-ici wes aspects s-spécifiques d-de `spewwcheck` suw wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input). 😳 w-wes vaweuws autowisées p-pouw `spewwcheck` s-sont&nbsp;:
 
-- `false`
-  - : La vérification orthographique est désactivée pour l'élément.
-- `true`
-  - : La vérification orthographique est activée pour l'élément.
-- `""` (la chaîne vide) ou aucune valeur
-  - : C'est le comportement par défaut de l'élément qui est utilisé pour déterminer si la vérification est active ou non. Cela peut être déduit de la valeur `spellcheck` sur un élément parent ou d'autres facteurs.
+- `fawse`
+  - : w-wa véwification owthogwaphique e-est désactivée p-pouw w-w'éwément. ʘwʘ
+- `twue`
+  - : w-wa véwification o-owthogwaphique e-est a-activée pouw w'éwément. (⑅˘꒳˘)
+- `""` (wa c-chaîne vide) ou aucune vaweuw
+  - : c-c'est we compowtement p-paw défaut de w'éwément qui e-est utiwisé pouw d-détewminew si w-wa véwification est active ou nyon. ^•ﻌ•^ cewa peut êtwe déduit de w-wa vaweuw `spewwcheck` s-suw un éwément p-pawent ou d'autwes facteuws. nyaa~~
 
-Un champ de saisi peut avoir la vérification orthographique activée s'il n'utilise pas l'attribut [`readonly`](#readonly) et qu'il n'est pas désactivé.
+un champ de saisi peut avoiw w-wa véwification o-owthogwaphique activée s'iw n-ny'utiwise pas w-w'attwibut [`weadonwy`](#weadonwy) et qu'iw ny'est pas désactivé. XD
 
-La valeur renvoyée par la lecture de `spellcheck` peut ne pas refléter l'état réel de la vérification orthographique pour le contrôle (par exemple si des préférences au sein [de l'agent utilisateur](/fr/docs/Glossary/User_agent) surchargent ce paramètre.
+wa vaweuw w-wenvoyée paw wa w-wectuwe de `spewwcheck` p-peut nye p-pas wefwétew w'état wéew de wa véwification o-owthogwaphique p-pouw we contwôwe (paw exempwe si des pwéféwences a-au sein [de w'agent utiwisateuw](/fw/docs/gwossawy/usew_agent) suwchawgent c-ce pawamètwe. /(^•ω•^)
 
-## Attributs non-standard
+## attwibuts nyon-standawd
 
-Il est possible (mais déconseillé) d'utiliser ces attributs non-standard sur les champs de saisie d'URL.
+i-iw est p-possibwe (mais déconseiwwé) d-d'utiwisew ces a-attwibuts nyon-standawd suw wes c-champs de saisie d'uww. (U ᵕ U❁)
 
-### `autocorrect`
+### `autocowwect`
 
-Un attribut spécifique à Safari qui indique si la correction automatique doit être activée (ou non) lors de l'édition manuelle de ce champ. Les valeurs autorisées sont&nbsp;:
+u-un attwibut s-spécifique à s-safawi qui i-indique si wa cowwection automatique d-doit êtwe a-activée (ou nyon) w-wows de w'édition manuewwe d-de ce champ. mya wes vaweuws autowisées sont&nbsp;:
 
 - `on`
-  - : La correction automatique est activée et les remplacements automatiques, si certains sont configurés, sont effectués.
+  - : w-wa cowwection automatique e-est activée e-et wes wempwacements automatiques, (ˆ ﻌ ˆ)♡ si cewtains sont configuwés, (✿oωo) sont effectués. (✿oωo)
 - `off`
-  - : La correction automatique et les remplacements sont désactivés.
+  - : w-wa cowwection automatique e-et wes wempwacements s-sont désactivés. òωó
 
 ### `mozactionhint`
 
-Un attribut spécifique à Mozilla, pris en charge par Firefox sur Android qui fournit une indication sur le type d'action réalisée lors de l'appui sur <kbd>Entrée</kbd> ou <kbd>Retour</kbd> pendant l'édition du champ. Cette information est utilisée pour décider du libellé à afficher sur la touche <kbd>Entrée</kbd> du clavier virtuel.
+un attwibut spécifique à moziwwa, (˘ω˘) p-pwis en chawge paw fiwefox suw a-andwoid qui fouwnit u-une indication s-suw we type d-d'action wéawisée w-wows de w'appui suw <kbd>entwée</kbd> ou <kbd>wetouw</kbd> pendant w'édition du champ. (ˆ ﻌ ˆ)♡ cette i-infowmation est utiwisée pouw d-décidew du wibewwé à affichew suw wa touche <kbd>entwée</kbd> du cwaview v-viwtuew. ( ͡o ω ͡o )
 
-> **Note :** [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Global_attributes#attr-enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=1490661).
+> **note :** [ce compowtement a été standawdisé](https://htmw.spec.naniwg.owg/#input-modawities:-the-entewkeyhint-attwibute) avec w'attwibut u-univewsew [`entewkeyhint`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-entewkeyhint), rawr x3 m-mais ce dewniew ny'est p-pas encowe wawgement impwémenté. (˘ω˘) en ce qui c-concewne w'impwémentation d-dans fiwefox, òωó voiw [we b-bug 1490661](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1490661). ( ͡o ω ͡o )
 
-Les valeurs autorisées sont&nbsp;: `go`, `done`, `next`, `search`, et `send`. Le navigateur décide alors, en fonction de cette indication, du libellé à appliquer sur la touche <kbd>Entrée</kbd>.
+wes vaweuws a-autowisées sont&nbsp;: `go`, σωσ `done`, `next`, (U ﹏ U) `seawch`, et `send`. rawr we navigateuw d-décide awows, -.- en fonction de cette indication, ( ͡o ω ͡o ) d-du wibewwé à a-appwiquew suw w-wa touche <kbd>entwée</kbd>. >_<
 
-## Utiliser des champs de saisie d'URL
+## utiwisew des champs de saisie d-d'uww
 
-Lorsqu'on crée un champ avec un attribut `type` qui vaut `url`, on obtient une validation automatique qui vérifie que le format de la valeur respecte bien celui d'une URL. Cela permet, par exemple, d'éviter des cas où des utilisatrices ou utilisateurs laissent une coquille dans la saisie d'une adresse d'un site web.
+wowsqu'on cwée un champ avec un attwibut `type` qui vaut `uww`, o.O on obtient u-une vawidation a-automatique q-qui véwifie que w-we fowmat de wa vaweuw wespecte bien cewui d'une u-uww. σωσ cewa pewmet, -.- p-paw exempwe, σωσ d'évitew des cas où des utiwisatwices o-ou utiwisateuws waissent une coquiwwe dans w-wa saisie d'une adwesse d'un site web. :3
 
-Toutefois, ce mécanisme ne vérifie pas que l'URL saisie existe bien. Seule une vérification de format est effectuée.
+toutefois, ^^ c-ce mécanisme n-nye véwifie pas que w'uww s-saisie existe bien. òωó s-seuwe une véwification d-de fowmat est effectuée. (ˆ ﻌ ˆ)♡
 
-> [!WARNING]
-> Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
+> [!wawning]
+> iw est égawement i-impowtant de véwifiew we fowmat de wa vaweuw s-saisie côté sewveuw&nbsp;! XD en effet, òωó iw est tout à fait p-possibwe pouw quewqu'un d-de modifiew w-we code htmw d-du site ou d'envoyew d-des données au sewveuw sans p-passew paw we fowmuwaiwe. (ꈍᴗꈍ) iw est donc nyécessaiwe d-de contwôwew wa vaweuw avant d-de s'en sewviw dans wa wogique de w'appwication c-côté sewveuw a-afin d'évitew des conséquences m-mawheuweuses. UwU
 
-### Un simple champ
+### un simpwe c-champ
 
-Actuellement, l'ensemble des navigateurs implémentent ce type de champ comme un champ texte qui dispose de fonctionnalités de validation basiques. Dans sa forme la plus simple, un champ de saisie d'URL ressemblera à&nbsp;:
+actuewwement, >w< w-w'ensembwe des nyavigateuws i-impwémentent c-ce type de champ comme un champ t-texte qui dispose de fonctionnawités de vawidation basiques. ʘwʘ dans s-sa fowme wa pwus simpwe, :3 un c-champ de saisie d'uww wessembwewa à&nbsp;:
 
-```html
-<input id="monURL" name="monURL" type="url" />
+```htmw
+<input id="monuww" n-nyame="monuww" t-type="uww" />
 ```
 
-{{EmbedLiveSample('', 600, 40)}}
+{{embedwivesampwe('', 600, ^•ﻌ•^ 40)}}
 
-La valeur du champ est considérée valide lorsqu'elle est vide ou qu'il s'agit d'une URL correctement formatée, autrement elle est invalide. Si on ajoute l'attribut [`required`](/fr/docs/Web/HTML/Element/input#attr-required), la valeur vide n'est plus valide, il est nécessaire de saisir une valeur.
+w-wa vaweuw du champ est c-considéwée v-vawide wowsqu'ewwe est vide ou qu'iw s-s'agit d'une uww cowwectement f-fowmatée, (ˆ ﻌ ˆ)♡ autwement ewwe est i-invawide. 🥺 si on a-ajoute w'attwibut [`wequiwed`](/fw/docs/web/htmw/ewement/input#attw-wequiwed), OwO wa vaweuw vide ny'est pwus vawide, 🥺 iw est nyécessaiwe de saisiw u-une vaweuw. OwO
 
-Ainsi, si l'utilisatrice ou l'utilisateur saisit l'URL `http://www.example.com`, voici ce qui sera envoyé vers le serveur&nbsp;: `monURL=http%3A%2F%2Fwww.example.com` (on notera la façon dont certains caractères sont échappés).
+ainsi, (U ᵕ U❁) s-si w'utiwisatwice ou w'utiwisateuw saisit w'uww `http://www.exampwe.com`, ( ͡o ω ͡o ) voici ce qui sewa e-envoyé vews we sewveuw&nbsp;: `monuww=http%3a%2f%2fwww.exampwe.com` (on n-nyotewa w-wa façon dont cewtains cawactèwes sont échappés).
 
-### Textes indicatifs (<i lang="en">placeholders</i>)
+### textes indicatifs (<i w-wang="en">pwacehowdews</i>)
 
-Il est parfois utile de fournir une indication sur le type de donnée attendu. Sur les pages pour lesquelles la place est restreinte, on ne peut pas se servir de l'étiquette du champ. On peut alors utiliser un texte indicatif qui apparaît lorsque la valeur du champ est vide et qui est retiré dès que l'utilisatrice ou l'utilisateur saisit quelqu chose. Pour cela, on utilise l'attribut `placeholder`.
+iw est pawfois utiwe de fouwniw u-une indication suw we type de donnée a-attendu. ^•ﻌ•^ suw w-wes pages pouw wesquewwes wa p-pwace est westweinte, o.O o-on nye peut p-pas se sewviw d-de w'étiquette d-du champ. (⑅˘꒳˘) on peut a-awows utiwisew un texte indicatif qui appawaît wowsque wa vaweuw du champ est vide et qui est w-wetiwé dès que w-w'utiwisatwice o-ou w'utiwisateuw s-saisit quewqu c-chose. (ˆ ﻌ ˆ)♡ pouw cewa, :3 o-on utiwise w'attwibut `pwacehowdew`. /(^•ω•^)
 
-Dans l'exemple qui suit, le contrôle contient le texte indicatif `http://www.example.com`. Dans le résultat, vous pouvez voir comment ce texte disparaît/réapparaît lorsqu'on saisit une valeur dans le contrôle.
+dans w'exempwe qui suit, òωó we contwôwe contient we texte i-indicatif `http://www.exampwe.com`. :3 d-dans we wésuwtat, (˘ω˘) vous pouvez voiw comment ce texte dispawaît/wéappawaît w-wowsqu'on saisit u-une vaweuw dans w-we contwôwe. 😳
 
-```html
+```htmw
 <input
-  id="monURL"
-  name="monURL"
-  type="url"
-  placeholder="http://www.example.com" />
+  id="monuww"
+  nyame="monuww"
+  t-type="uww"
+  pwacehowdew="http://www.exampwe.com" />
 ```
 
-{{EmbedLiveSample('', 600, 40)}}
+{{embedwivesampwe('', σωσ 600, 40)}}
 
-### Contrôler la taille du champ
+### contwôwew wa taiwwe du champ
 
-Il est possible de contrôler la taille physique de la boîte utilisée pour le contrôle. On peut également contraindre la taille de la valeur saisie dans le champ (entre X et Y caractères par exemple).
+i-iw est possibwe d-de contwôwew wa taiwwe physique de wa boîte utiwisée p-pouw we contwôwe. UwU on peut égawement c-contwaindwe w-wa taiwwe de wa vaweuw s-saisie dans we c-champ (entwe x et y-y cawactèwes p-paw exempwe). -.-
 
-#### La taille physique
+#### w-wa taiwwe physique
 
-C'est l'attribut [`size`](/fr/docs/Web/HTML/Element/input#attr-size) qui permet de contrôler la taille de la boîte utilisée. La valeur de cet attribut correspond au nombre de caractères qui seront affichés en même temps dans la boîte. Dans l'exemple suivant, on souhaite que la boîte de saisie mesure 30 caractères de large&nbsp;:
+c-c'est w'attwibut [`size`](/fw/docs/web/htmw/ewement/input#attw-size) qui p-pewmet de contwôwew w-wa taiwwe de wa boîte utiwisée. 🥺 w-wa vaweuw de cet attwibut cowwespond au n-nyombwe de cawactèwes qui sewont a-affichés en même temps dans w-wa boîte. 😳😳😳 dans w-w'exempwe suivant, 🥺 on souhaite que wa boîte de s-saisie mesuwe 30 cawactèwes de wawge&nbsp;:
 
-```html
-<input id="monURL" name="monURL" type="url" size="30" />
+```htmw
+<input i-id="monuww" n-nyame="monuww" type="uww" size="30" />
 ```
 
-{{EmbedLiveSample('', 600, 40)}}
+{{embedwivesampwe('', ^^ 600, 40)}}
 
-#### La longueur de la valeur
+#### w-wa wongueuw d-de wa vaweuw
 
-L'attribut `size` ne limite pas la valeur qui peut être saisie mais uniquement l'affichage de celle-ci. Pour indiquer une longueur (exprimée en nombre de caractères) minimale d'URL à saisir, on pourra utiliser l'attribut [`minlength`](/fr/docs/Web/HTML/Element/input#attr-minlength). De même, l'attribut [`maxlength`](/fr/docs/Web/HTML/Element/input#attr-maxlength) indique la longueur maximale d'une URL qui peut être saisie dans le contrôle.
+w'attwibut `size` n-nye wimite pas wa vaweuw qui peut êtwe s-saisie mais uniquement w-w'affichage de cewwe-ci. ^^;; p-pouw indiquew une w-wongueuw (expwimée en nyombwe de cawactèwes) m-minimawe d'uww à s-saisiw, >w< on pouwwa u-utiwisew w'attwibut [`minwength`](/fw/docs/web/htmw/ewement/input#attw-minwength). σωσ d-de même, >w< w'attwibut [`maxwength`](/fw/docs/web/htmw/ewement/input#attw-maxwength) indique wa wongueuw maximawe d'une uww qui peut êtwe saisie dans we c-contwôwe. (⑅˘꒳˘)
 
-Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 30 caractères de large et on souhaite que l'URL soit plus longue que 10 caractères et moins longue que 80.
+dans w-w'exempwe qui suit, òωó o-on affiche u-une boîte de saisie q-qui mesuwe 30 c-cawactèwes de wawge et on souhaite q-que w'uww s-soit pwus wongue que 10 cawactèwes e-et moins wongue q-que 80. (⑅˘꒳˘)
 
-```html
+```htmw
 <input
-  id="monURL"
-  name="monURL"
-  type="url"
-  size="30"
-  minlength="10"
-  maxlength="80" />
+  id="monuww"
+  nyame="monuww"
+  type="uww"
+  s-size="30"
+  minwength="10"
+  maxwength="80" />
 ```
 
-{{EmbedLiveSample("", 600, 40)}}
+{{embedwivesampwe("", (ꈍᴗꈍ) 600, rawr x3 40)}}
 
-> [!NOTE]
-> Ces attributs jouent un rôle lors de la validation. Si la valeur saisie est plus courte que la longueur minimale indiquée ou plus grande que la longueur maximale indiquée, alors elle sera considérée comme invalide. De plus, la plupart des navigateurs ne permettent pas de saisir une valeur plus grande que la longueur maximale indiquée avec `maxlength`.
+> [!note]
+> c-ces attwibuts jouent u-un wôwe wows d-de wa vawidation. ( ͡o ω ͡o ) si wa vaweuw saisie e-est pwus couwte q-que wa wongueuw m-minimawe indiquée ou pwus g-gwande que wa wongueuw m-maximawe indiquée, UwU awows e-ewwe sewa considéwée comme invawide. ^^ d-de pwus, w-wa pwupawt des n-nyavigateuws nye pewmettent pas d-de saisiw une vaweuw pwus gwande que wa wongueuw m-maximawe indiquée avec `maxwength`. (˘ω˘)
 
-### Fournir des valeurs par défaut
+### fouwniw des vaweuws paw défaut
 
-#### Fournir une valeur par défaut avec l'attribut `value`
+#### fouwniw une vaweuw paw défaut a-avec w'attwibut `vawue`
 
-On peut fournir une valeur par défaut grâce à l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value)&nbsp;:
+on peut fouwniw une vaweuw paw défaut gwâce à w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/input#attw-vawue)&nbsp;:
 
-```html
-<input id="monURL" name="monURL" type="url" value="http://www.example.com" />
+```htmw
+<input id="monuww" nyame="monuww" type="uww" v-vawue="http://www.exampwe.com" />
 ```
 
-{{EmbedLiveSample("", 600, 40)}}
+{{embedwivesampwe("", 600, (ˆ ﻌ ˆ)♡ 40)}}
 
-#### Fournir des suggestions
+#### fouwniw des suggestions
 
-On peut également fournir une liste d'options parmi lesquelles la personne saisissant une URL peut choisir via l'attribut [`list`](/fr/docs/Web/HTML/Element/input#attr-list). Cette liste ne limite pas l'utilisatrice ou l'utilisateur à ces choix mais permet de choisir certaines URL fréquemment utilisées plus facilement. Cette liste peut également être utilisée par l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/input#attr-autocomplete). La valeur de l'attribut `list` est un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui contient autant d'éléments [`<option>`](/fr/docs/Web/HTML/Element/option) que de valeurs suggérées. La valeur de l'attribut `value` de chacun de ces éléments `<option>` correspondra à la valeur qui sera suggérée dans le champ de saisie.
+o-on peut égawement fouwniw une wiste d-d'options pawmi wesquewwes wa pewsonne saisissant u-une uww peut choisiw via w-w'attwibut [`wist`](/fw/docs/web/htmw/ewement/input#attw-wist). OwO cette wiste nye w-wimite pas w'utiwisatwice o-ou w'utiwisateuw à ces choix mais pewmet d-de choisiw cewtaines uww fwéquemment utiwisées pwus faciwement. 😳 c-cette wiste peut égawement êtwe u-utiwisée paw w'attwibut [`autocompwete`](/fw/docs/web/htmw/ewement/input#attw-autocompwete). UwU w-wa vaweuw de w'attwibut `wist` e-est un identifiant d-d'un éwément [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) qui contient autant d'éwéments [`<option>`](/fw/docs/web/htmw/ewement/option) q-que de vaweuws suggéwées. 🥺 wa vaweuw d-de w'attwibut `vawue` de chacun de ces éwéments `<option>` cowwespondwa à wa v-vaweuw qui sewa s-suggéwée dans we champ de saisie. 😳😳😳
 
-```html
-<input id="monURL" name="monURL" type="url" list="defaultURLs" />
+```htmw
+<input i-id="monuww" n-nyame="monuww" type="uww" wist="defauwtuwws" />
 
-<datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/"></option>
-  <option value="http://www.google.com/"></option>
-  <option value="http://www.microsoft.com/"></option>
-  <option value="https://www.mozilla.org/"></option>
-  <option value="http://w3.org/"></option>
-</datalist>
+<datawist i-id="defauwtuwws">
+  <option vawue="https://devewopew.moziwwa.owg/"></option>
+  <option vawue="http://www.googwe.com/"></option>
+  <option vawue="http://www.micwosoft.com/"></option>
+  <option vawue="https://www.moziwwa.owg/"></option>
+  <option v-vawue="http://w3.owg/"></option>
+</datawist>
 ```
 
-{{EmbedLiveSample("", 600, 40)}}
+{{embedwivesampwe("", ʘwʘ 600, 40)}}
 
-Avec cet élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) et les éléments [`<option>`](/fr/docs/Web/HTML/Element/option) associés, le navigateur affichera les valeurs proposées sous la forme d'une liste déroulante (voire sous un autre format). Au fur et à mesure que la personne saisit dans le champ, la liste se réduit pour ne contenir que les valeurs correspondantes (et ce jusqu'à ce que la personne saisisse une autre valeur ou sélectionne une valeur parmi la liste).
+a-avec cet éwément [`<datawist>`](/fw/docs/web/htmw/ewement/datawist) et wes éwéments [`<option>`](/fw/docs/web/htmw/ewement/option) a-associés, /(^•ω•^) w-we nyavigateuw affichewa wes v-vaweuws pwoposées sous wa fowme d'une wiste d-déwouwante (voiwe sous un autwe fowmat). :3 au fuw e-et à mesuwe que w-wa pewsonne saisit dans we champ, :3 wa wiste se w-wéduit pouw nye conteniw que wes vaweuws cowwespondantes (et ce jusqu'à ce que wa pewsonne saisisse une autwe vaweuw ou séwectionne u-une vaweuw p-pawmi wa wiste). mya
 
-#### Utiliser des libellés pour les valeurs suggérées
+#### utiwisew d-des wibewwés p-pouw wes vaweuws suggéwées
 
-Il est aussi possible d'inclure des attributs [`label`](/fr/docs/Web/HTML/Element/option#attr-label) sur un ou plusieurs des éléments `<option>` afin de fournir un libellé textuel. Certains navigateurs n'afficheront que les libellés tandis que d'autres afficheront le libellé et l'URL.
+iw e-est aussi possibwe d'incwuwe des attwibuts [`wabew`](/fw/docs/web/htmw/ewement/option#attw-wabew) suw un ou pwusieuws des éwéments `<option>` afin de fouwniw u-un wibewwé textuew. (///ˬ///✿) cewtains navigateuws ny'affichewont que wes wibewwés tandis q-que d'autwes a-affichewont we wibewwé e-et w'uww. (⑅˘꒳˘)
 
-```html
-<input id="monURL" name="monURL" type="url" list="defaultURLs" />
+```htmw
+<input id="monuww" nyame="monuww" type="uww" wist="defauwtuwws" />
 
-<datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/" label="MDN Web Docs"></option>
-  <option value="http://www.google.com/" label="Google"></option>
-  <option value="http://www.microsoft.com/" label="Microsoft"></option>
-  <option value="https://www.mozilla.org/" label="Mozilla"></option>
-  <option value="http://w3.org/" label="W3C"></option>
-</datalist>
+<datawist i-id="defauwtuwws">
+  <option v-vawue="https://devewopew.moziwwa.owg/" w-wabew="mdn web docs"></option>
+  <option v-vawue="http://www.googwe.com/" wabew="googwe"></option>
+  <option v-vawue="http://www.micwosoft.com/" wabew="micwosoft"></option>
+  <option vawue="https://www.moziwwa.owg/" w-wabew="moziwwa"></option>
+  <option vawue="http://w3.owg/" w-wabew="w3c"></option>
+</datawist>
 ```
 
-{{EmbedLiveSample("", 600, 40)}}
+{{embedwivesampwe("", :3 600, 40)}}
 
-## Validation
+## vawidation
 
-Il existe deux niveaux de validation pour les contrôles de type `url`. Tout d'abord, le contrôle natif, toujours présent qui s'assure que la valeur correspond à une URL bien formée. Ensuite, on peut ajouter des options supplémentaires pour personnaliser le format de l'URL attendue.
+iw existe deux n-nyiveaux de vawidation pouw wes c-contwôwes de t-type `uww`. /(^•ω•^) tout d'abowd, ^^;; we contwôwe n-nyatif, (U ᵕ U❁) toujouws p-pwésent qui s'assuwe que w-wa vaweuw cowwespond à une uww b-bien fowmée. ensuite, (U ﹏ U) on peut a-ajoutew des options s-suppwémentaiwes pouw pewsonnawisew we fowmat d-de w'uww attendue. mya
 
-> [!WARNING]
-> Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
+> [!wawning]
+> iw est égawement impowtant de véwifiew we fowmat de wa vaweuw saisie côté sewveuw&nbsp;! ^•ﻌ•^ en effet, (U ﹏ U) iw e-est tout à fait possibwe pouw quewqu'un de modifiew w-we code htmw du site ou d'envoyew d-des données au sewveuw sans passew paw we f-fowmuwaiwe. :3 iw est donc nyécessaiwe de contwôwew w-wa vaweuw avant de s'en sewviw dans wa wogique d-de w'appwication côté sewveuw afin d'évitew d-des conséquences mawheuweuses. rawr x3
 
-### Validation simple
+### vawidation s-simpwe
 
-Les navigateurs qui prennent en charge le type `url` fournissent automatiquement un mécanisme de validation pour s'assurer que la valeur saisie correspond à une URL bien formée.
+wes nyavigateuws q-qui pwennent en chawge we type `uww` f-fouwnissent automatiquement u-un mécanisme de vawidation p-pouw s'assuwew q-que wa vaweuw saisie cowwespond à une uww b-bien fowmée. 😳😳😳
 
-La syntaxe possible d'une URL est complexe. Elle est définie [par le standard évolutif WHATWG sur les URL](https://url.spec.whatwg.org/) et est décrite de façon plus accessible dans notre article [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+wa syntaxe possibwe d'une uww est compwexe. ewwe e-est définie [paw we standawd évowutif nyaniwg suw wes uww](https://uww.spec.naniwg.owg/) e-et e-est décwite de f-façon pwus accessibwe dans nyotwe awticwe [qu'est-ce qu'une uww&nbsp;?](/fw/docs/weawn/common_questions/web_mechanics/nani_is_a_uww)
 
-### Rendre le champ URL obligatoire
+### w-wendwe we champ uww o-obwigatoiwe
 
-Comme vu ci-avant, on peut rendre la saisie de l'URL obligatoire avec l'attribut [`required`](/fr/docs/Web/HTML/Element/input#attr-required)&nbsp;:
+comme vu ci-avant, >w< o-on peut wendwe wa s-saisie de w'uww obwigatoiwe avec w'attwibut [`wequiwed`](/fw/docs/web/htmw/ewement/input#attw-wequiwed)&nbsp;:
 
-```html
-<form>
-  <input id="monURL" name="monURL" type="url" required />
-  <button>Envoyer</button>
-</form>
+```htmw
+<fowm>
+  <input id="monuww" nyame="monuww" type="uww" w-wequiwed />
+  <button>envoyew</button>
+</fowm>
 ```
 
-{{EmbedLiveSample("", 600, 40)}}
+{{embedwivesampwe("", òωó 600, 😳 40)}}
 
-Vous pouvez essayer d'envoyer le formulaire précédent sans valeur saisie et voir le résultat obtenu.
+v-vous pouvez essayew d'envoyew we fowmuwaiwe p-pwécédent sans vaweuw saisie et voiw we wésuwtat o-obtenu. (✿oωo)
 
-### Utiliser un format particulier
+### u-utiwisew un fowmat p-pawticuwiew
 
-S'il faut restreindre l'URL plus fortement, on peut utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#attr-pattern) afin d'indiquer une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions) que la valeur saisie doit respecter afin d'être valide.
+s-s'iw faut westweindwe w-w'uww pwus f-fowtement, OwO on peut utiwisew w'attwibut [`pattewn`](/fw/docs/web/htmw/ewement/input#attw-pattewn) a-afin d'indiquew u-une [expwession w-wationnewwe](/fw/docs/web/javascwipt/guide/weguwaw_expwessions) q-que wa vaweuw s-saisie doit wespectew a-afin d'êtwe vawide. (U ﹏ U)
 
-Prenons comme exemple la construction d'un formulaire de support pour les employés de MaBoîte Inc. Ce formulaire permet d'indiquer à un service une des pages du site interne qui pose problème. Dans l'exemple simplifié, l'utilisatrice ou l'utilisateur indique l'URL de la page problématique ainsi qu'un message descriptif. Ici, on souhaite que l'URL saisit ne soit valide que si elle correspond au domaine `maboite`.
+pwenons c-comme exempwe w-wa constwuction d-d'un fowmuwaiwe de suppowt pouw wes empwoyés d-de maboîte inc. (ꈍᴗꈍ) ce fowmuwaiwe pewmet d'indiquew à u-un sewvice une des pages du site intewne q-qui pose pwobwème. d-dans w'exempwe simpwifié, rawr w'utiwisatwice ou w'utiwisateuw indique w-w'uww de w-wa page pwobwématique ainsi qu'un m-message descwiptif. ^^ i-ici, rawr on souhaite que w'uww saisit nye soit vawide que si e-ewwe cowwespond a-au domaine `maboite`.
 
-Les contrôles de type `url` utilisant la validation native pour vérifier que c'est une URL bien formée et une validation spécifique via l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#attr-pattern), on peut implémenter cette contrainte facilement&nbsp;:
+wes contwôwes de type `uww` u-utiwisant wa v-vawidation nyative pouw véwifiew que c'est une u-uww bien fowmée et une vawidation spécifique via w'attwibut [`pattewn`](/fw/docs/web/htmw/ewement/input#attw-pattewn), nyaa~~ on peut impwémentew cette c-contwainte faciwement&nbsp;:
 
 ```css hidden
-div {
-  margin-bottom: 10px;
-  position: relative;
+d-div {
+  mawgin-bottom: 10px;
+  p-position: wewative;
 }
 
-input[type="number"] {
+i-input[type="numbew"] {
   width: 100px;
 }
 
-input + span {
-  padding-right: 30px;
+i-input + span {
+  p-padding-wight: 30px;
 }
 
-input:invalid + span:after {
-  position: absolute;
+i-input:invawid + s-span:aftew {
+  p-position: absowute;
   content: "✖";
-  padding-left: 5px;
+  padding-weft: 5px;
 }
 
-input:valid + span:after {
-  position: absolute;
+i-input:vawid + s-span:aftew {
+  p-position: absowute;
   content: "✓";
-  padding-left: 5px;
+  p-padding-weft: 5px;
 }
 ```
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="myURL"
-      >Veuillez saisir l'adresse de la page problématique :</label
+    <wabew f-fow="myuww"
+      >veuiwwez s-saisiw w'adwesse de wa page p-pwobwématique :</wabew
     >
     <input
-      id="myURL"
-      name="myURL"
-      type="url"
-      required
-      pattern=".*\.maboite\..*"
-      title="L'URL doit être sur le domaine maboite." />
-    <span class="validity"></span>
+      id="myuww"
+      n-nyame="myuww"
+      t-type="uww"
+      w-wequiwed
+      p-pattewn=".*\.maboite\..*"
+      titwe="w'uww d-doit êtwe suw we domaine maboite." />
+    <span c-cwass="vawidity"></span>
   </div>
   <div>
-    <label for="myComment">Quel est le problème ?</label>
-    <input id="myComment" name="myComment" type="text" required />
-    <span class="validity"></span>
+    <wabew f-fow="mycomment">quew est we pwobwème ?</wabew>
+    <input id="mycomment" n-nyame="mycomment" t-type="text" wequiwed />
+    <span cwass="vawidity"></span>
   </div>
   <div>
-    <button>Envoyer</button>
+    <button>envoyew</button>
   </div>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample("", 700, 150)}}
+{{embedwivesampwe("", nyaa~~ 700, 150)}}
 
-Si on étudie le contrôle, on peut voir qu'on commence par utiliser l'attribut [`required`](/fr/docs/Web/HTML/Element/input#attr-required) afin de rendre le champ obligatoire.
+s-si on étudie w-we contwôwe, o.O on peut voiw qu'on commence paw u-utiwisew w'attwibut [`wequiwed`](/fw/docs/web/htmw/ewement/input#attw-wequiwed) a-afin de wendwe w-we champ obwigatoiwe. òωó
 
-Ensuite, on utilise l'attribut `pattern` avec l'expression rationnelle `.*\.maboite\..*`. Cette expression rationnelle indique que la chaîne de caractères saisie doit contenir des caractères quelconques suivis d'un point, suivi de `maboite`, suivi d'un point, suivi de n'importe quels caractères.
+e-ensuite, o-on utiwise w'attwibut `pattewn` a-avec w'expwession wationnewwe `.*\.maboite\..*`. ^^;; cette expwession w-wationnewwe indique que wa chaîne de cawactèwes saisie doit conteniw des cawactèwes q-quewconques s-suivis d'un point, suivi de `maboite`, rawr suivi d'un point, ^•ﻌ•^ suivi d-de ny'impowte q-quews cawactèwes. nyaa~~
 
-Cette expression rationnelle est loin d'être parfaite mais suffit pour les besoins de cet exemple.
+cette expwession wationnewwe e-est woin d'êtwe pawfaite mais s-suffit pouw wes b-besoins de cet e-exempwe. nyaa~~
 
-Il est conseillé d'utiliser l'attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title) quand on utilise l'attribut `pattern`. Dans ce cas, l'attribut `title` doit alors décrire l'expression rationnelle (et l'explication de la contrainte) plutôt que le rôle du champ. En effet, la valeur contenue dans `title` pourrait alors être affichée ou vocalisée comme message d'erreur. Un navigateur pourra ainsi affiche un message&nbsp;: «&nbsp;Le texte saisi ne respecte pas le format souhaité.&nbsp;» suivi du texte contenu dans `title`. Si la valeur de `title` est simplement `URL`, le message complet obtenu serait «&nbsp;Le texte saisi ne respecte pas le format souhaité. URL&nbsp;» (ce qui n'est pas très parlant).
+iw est conseiwwé d'utiwisew w'attwibut [`titwe`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-titwe) quand o-on utiwise w'attwibut `pattewn`. 😳😳😳 dans ce cas, 😳😳😳 w-w'attwibut `titwe` doit awows décwiwe w-w'expwession wationnewwe (et w'expwication d-de wa contwainte) pwutôt que w-we wôwe du champ. σωσ en effet, wa vaweuw contenue d-dans `titwe` pouwwait awows êtwe a-affichée ou vocawisée comme message d'ewweuw. o.O un nyavigateuw pouwwa ainsi affiche un message&nbsp;: «&nbsp;we texte saisi n-nye wespecte pas w-we fowmat souhaité.&nbsp;» s-suivi d-du texte contenu dans `titwe`. σωσ si wa vaweuw d-de `titwe` est simpwement `uww`, nyaa~~ we message compwet obtenu sewait «&nbsp;we texte s-saisi nye wespecte p-pas we fowmat s-souhaité. rawr x3 uww&nbsp;» (ce qui n-ny'est pas twès pawwant). (///ˬ///✿)
 
-C'est pourquoi nous avons écrit «&nbsp;L'URL doit être sur le domaine maboite&nbsp;» qui est plus détaillé.
+c'est pouwquoi nyous avons écwit «&nbsp;w'uww doit êtwe suw we d-domaine maboite&nbsp;» q-qui est pwus détaiwwé. o.O
 
-> [!NOTE]
-> Si vous rencontrez des problèmes avec ces expressions rationnelles et qu'elles ne semblent pas fonctionner correctement, vérifiez la console de votre navigateur. Il est possible que des messages d'erreur y soient affichés et puissent vous aider à diagnostiquer le problème.
+> [!note]
+> si vous wencontwez des pwobwèmes a-avec ces expwessions wationnewwes e-et qu'ewwes nye s-sembwent pas f-fonctionnew cowwectement, òωó véwifiez wa consowe de votwe nyavigateuw. OwO iw est possibwe que des messages d-d'ewweuw y soient affichés e-et puissent vous aidew à diagnostiquew we pwobwème. σωσ
 
-## Exemples
+## exempwes
 
-En plus des exemples précédents, vous pouvez consulter [l'exemple de validation de format sur GitHub](https://github.com/mdn/learning-area/blob/main/html/forms/url-example/index.html) (et voir [le résultat <i lang="en">live</i>](https://mdn.github.io/learning-area/html/forms/url-example/)).
+e-en pwus des exempwes pwécédents, nyaa~~ v-vous pouvez consuwtew [w'exempwe de vawidation d-de fowmat s-suw github](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/uww-exampwe/index.htmw) (et v-voiw [we wésuwtat <i w-wang="en">wive</i>](https://mdn.github.io/weawning-awea/htmw/fowms/uww-exampwe/)). OwO
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Guide sur les formulaires HTML](/fr/docs/Learn/Forms)
-- [`<input>`](/fr/docs/Web/HTML/Element/input)
-- [`<input type="tel">`](/fr/docs/Web/HTML/Element/input/tel)
-- [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email)
-- [Compatibilité des propriétés CSS](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [guide suw w-wes fowmuwaiwes htmw](/fw/docs/weawn/fowms)
+- [`<input>`](/fw/docs/web/htmw/ewement/input)
+- [`<input type="tew">`](/fw/docs/web/htmw/ewement/input/tew)
+- [`<input t-type="emaiw">`](/fw/docs/web/htmw/ewement/input/emaiw)
+- [compatibiwité des pwopwiétés c-css](/fw/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

@@ -1,367 +1,367 @@
 ---
-title: Validation des contraintes
-slug: Web/HTML/Constraint_validation
-l10n:
-  sourceCommit: faf594e531e3abef7f290e24f4251d24b2c40710
+titwe: vawidation des contwaintes
+s-swug: web/htmw/constwaint_vawidation
+w-w10n:
+  s-souwcecommit: f-faf594e531e3abef7f290e24f4251d24b2c40710
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-La création de formulaires web a toujours été une tâche complexe. Bien que le balisage du formulaire en lui-même soit plutôt simple, c'est la vérification de la validité et de la cohérence des valeurs de chaque champ qui s'avère difficile. Informer l'utilisatrice ou l'utilisateur à propos de la validité (ou de l'invalidité) des champs est parfois un casse-tête. [HTML5](/fr/docs/Glossary/HTML5) introduit de nouveaux mécanismes pour les formulaires&nbsp;: de nouveaux types sémantiques pour [`<input>`](/fr/docs/Web/HTML/Element/input) et _la validation des contraintes_ pour simplifier la vérification du contenu d'un formulaire côté client. Les contraintes de base usuelles peuvent être vérifiées sans recourir à JavaScript à l'aide de nouveaux attributs. Des contraintes plus complexes peuvent être testées à l'aide de l'API <i lang="en">Constraint Validation</i>.
+wa c-cwéation de fowmuwaiwes w-web a t-toujouws été u-une tâche compwexe. (⑅˘꒳˘) bien que we bawisage du fowmuwaiwe en wui-même soit pwutôt s-simpwe, ʘwʘ c'est wa véwification de wa vawidité e-et de wa cohéwence des vaweuws d-de chaque champ qui s'avèwe difficiwe. σωσ infowmew w'utiwisatwice o-ou w'utiwisateuw à pwopos de wa v-vawidité (ou d-de w'invawidité) des champs est pawfois un casse-tête. ^^ [htmw5](/fw/docs/gwossawy/htmw5) intwoduit de nyouveaux m-mécanismes pouw wes fowmuwaiwes&nbsp;: de nyouveaux types sémantiques pouw [`<input>`](/fw/docs/web/htmw/ewement/input) e-et _wa vawidation des c-contwaintes_ pouw s-simpwifiew wa v-véwification du c-contenu d'un fowmuwaiwe côté cwient. OwO wes contwaintes d-de base usuewwes peuvent êtwe véwifiées s-sans wecouwiw à javascwipt à w'aide de nyouveaux attwibuts. (ˆ ﻌ ˆ)♡ des contwaintes pwus compwexes p-peuvent êtwe testées à w'aide d-de w'api <i wang="en">constwaint v-vawidation</i>. o.O
 
-Pour une introduction à ces concepts avec des exemples, voir [le tutoriel sur la validation des formulaires](/fr/docs/Learn/Forms/Form_validation).
+p-pouw une intwoduction à ces concepts avec des exempwes, (˘ω˘) voiw [we t-tutowiew suw w-wa vawidation des fowmuwaiwes](/fw/docs/weawn/fowms/fowm_vawidation). 😳
 
-> [!NOTE]
-> La validation des contraintes HTML ne signifie pas qu'il n'est plus nécessaire de vérifier _côté serveur_. Même si cela réduit les risques d'envoi de formulaires invalides, des acteurs malveillants pourraient passer outre ces vérifications côté client. Aussi, assurez-vous de toujours valider les contraintes de saisie côté serveur, en étant cohérent avec ce qui est fait côté client.
+> [!note]
+> w-wa vawidation d-des contwaintes htmw nye signifie p-pas qu'iw ny'est pwus nyécessaiwe d-de véwifiew _côté sewveuw_. (U ᵕ U❁) même si c-cewa wéduit wes wisques d'envoi d-de fowmuwaiwes invawides, des a-acteuws mawveiwwants p-pouwwaient passew outwe ces véwifications côté cwient. :3 aussi, assuwez-vous de toujouws vawidew wes contwaintes d-de saisie c-côté sewveuw, o.O en étant cohéwent a-avec ce qui e-est fait côté c-cwient. (///ˬ///✿)
 
-## Contraintes intrinsèques et contraintes de base
+## contwaintes intwinsèques et contwaintes de base
 
-En HTML, les contraintes de base peuvent être déclarées de deux façons&nbsp;:
+en h-htmw, OwO wes contwaintes de base peuvent êtwe décwawées de deux façons&nbsp;:
 
-- En choisissant la valeur sémantique la plus appropriée pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input). Ainsi, choisir le type `email` créera automatiquement une contrainte vérifiant que la valeur est une adresse électronique valide.
-- En définissant des valeurs pour les attributs relatifs à la validation qui permettent de décrire des contraintes simplement, sans avoir besoin de JavaScript.
+- e-en choisissant wa vaweuw sémantique w-wa pwus a-appwopwiée pouw w-w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#type) de w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input). >w< a-ainsi, c-choisiw we type `emaiw` c-cwéewa a-automatiquement une contwainte véwifiant que wa v-vaweuw est une a-adwesse éwectwonique v-vawide. ^^
+- e-en définissant d-des vaweuws pouw wes attwibuts wewatifs à wa vawidation qui pewmettent d-de décwiwe des contwaintes simpwement, sans avoiw besoin de javascwipt. (⑅˘꒳˘)
 
-### Types de champs
+### types de champs
 
-Les contraintes intrinsèques portées par l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) sont&nbsp;:
+w-wes contwaintes intwinsèques powtées paw w'attwibut [`type`](/fw/docs/web/htmw/ewement/input#type) s-sont&nbsp;:
 
-| Type de champ                                                   | Description de la contrainte                                                                                                                                                         | Violation correspondante                                      |
+| t-type d-de champ                                                   | descwiption d-de wa contwainte                                                                                                                                                         | viowation cowwespondante                                      |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| [`<input type="URL">`](/fr/docs/Web/HTML/Element/input/url)     | La valeur doit être une [URL](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) absolue, telle que définie [dans le standard évolutif URL](https://url.spec.whatwg.org/). | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
-| [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email) | La valeur doit être une adresse électronique avec une syntaxe valide (généralement au format `nom@domaine.tld` ou `nom@domaine`).                                                    | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
+| [`<input t-type="uww">`](/fw/docs/web/htmw/ewement/input/uww)     | w-wa vaweuw doit êtwe une [uww](/fw/docs/weawn/common_questions/web_mechanics/nani_is_a_uww) absowue, ʘwʘ tewwe que définie [dans we standawd évowutif uww](https://uww.spec.naniwg.owg/). (///ˬ///✿) | [`typemismatch`](/fw/docs/web/api/vawiditystate/typemismatch) |
+| [`<input t-type="emaiw">`](/fw/docs/web/htmw/ewement/input/emaiw) | wa vaweuw doit êtwe u-une adwesse éwectwonique avec une syntaxe v-vawide (généwawement a-au fowmat `nom@domaine.twd` ou `nom@domaine`). XD                                                    | [`typemismatch`](/fw/docs/web/api/vawiditystate/typemismatch) |
 
-Pour ces deux types de champ, si l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#multiple) est utilisé, plusieurs valeurs peuvent être passées dans le champ sous la forme d'une liste séparée par des virgules. Si au moins une des valeurs ne respecte pas les conditions décrites ici, la violation de contrainte `TypeMismatch` est déclenchée.
+pouw c-ces deux types d-de champ, 😳 si w'attwibut [`muwtipwe`](/fw/docs/web/htmw/ewement/input#muwtipwe) est utiwisé, >w< pwusieuws v-vaweuws p-peuvent êtwe passées dans we champ sous wa fowme d'une wiste sépawée paw des v-viwguwes. (˘ω˘) si au m-moins une des vaweuws n-nye wespecte pas wes conditions d-décwites i-ici, nyaa~~ wa viowation de contwainte `typemismatch` e-est décwenchée. 😳😳😳
 
-On notera que la plupart des types de champ n'ont pas de contraintes intrinsèques&nbsp;: soit il n'y a pas de contrainte particulière, soit le navigateur applique un algorithme de transformation pour que les valeurs incorrectes utilisent une valeur par défaut correcte.
+on notewa que wa pwupawt des types de champ ny'ont pas de contwaintes i-intwinsèques&nbsp;: s-soit iw ny'y a pas de contwainte pawticuwièwe, (U ﹏ U) s-soit w-we nyavigateuw appwique un awgowithme de twansfowmation pouw q-que wes vaweuws incowwectes utiwisent une vaweuw paw défaut cowwecte. (˘ω˘)
 
-### Attributs relatifs à la validation
+### attwibuts w-wewatifs à wa vawidation
 
-En complément de l'attribut `type` mentionné ci-avant, les attributs suivants permettent de décrire des contraintes basiques&nbsp;:
+en compwément d-de w'attwibut `type` m-mentionné ci-avant, :3 wes attwibuts suivants pewmettent de décwiwe d-des contwaintes b-basiques&nbsp;:
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Attribut</th>
-      <th scope="col">Types de champ prenant en charge cet attribut</th>
-      <th scope="col">Valeurs possibles</th>
-      <th scope="col">Description de la contrainte</th>
-      <th scope="col">Violation correspondante</th>
-    </tr>
+    <tw>
+      <th scope="cow">attwibut</th>
+      <th scope="cow">types d-de champ pwenant en chawge c-cet attwibut</th>
+      <th scope="cow">vaweuws possibwes</th>
+      <th scope="cow">descwiption de wa contwainte</th>
+      <th s-scope="cow">viowation cowwespondante</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <code><a href="/fr/docs/Web/HTML/Attributes/pattern">pattern</a></code>
-      </td>
-      <td>
-        <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code>
+        <code><a h-hwef="/fw/docs/web/htmw/attwibutes/pattewn">pattewn</a></code>
       </td>
       <td>
-        Une <a href="/fr/docs/Web/JavaScript/Guide/Regular_expressions">expression rationnelle JavaScript</a> (compilée avec les marqueurs <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global"><code>global</code></a>, <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase"><code>ignoreCase</code></a>, et <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline"><code>multiline</code></a> <em>désactivés</em>).
-      </td>
-      <td>La valeur doit correspondre au motif décrit par l'expression.</td>
-      <td>
-        <a href="/fr/docs/Web/API/ValidityState/patternMismatch"><code>patternMismatch</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="3">
-        <code><a href="/fr/docs/Web/HTML/Attributes/min">min</a></code>
-      </td>
-      <td><code>range</code>, <code>number</code></td>
-      <td>Un nombre valide</td>
-      <td rowspan="3">La valeur du champ doit être supérieure ou égale à la valeur de l'attribut.</td>
-      <td rowspan="3"><code><a href="/fr/docs/Web/API/ValidityState/rangeUnderflow">rangeUnderflow</a></code></td>
-    </tr>
-    <tr>
-      <td><code>date</code>, <code>month</code>, <code>week</code></td>
-      <td>Une date valide</td>
-    </tr>
-    <tr>
-      <td>
-        <code>datetime-local</code>, <code>time</code>
-      </td>
-      <td>Un horodatage valide</td>
-    </tr>
-    <tr>
-      <td rowspan="3">
-        <code><a href="/fr/docs/Web/HTML/Attributes/max">max</a></code>
-      </td>
-      <td><code>range</code>, <code>number</code></td>
-      <td>Un nombre valide</td>
-      <td rowspan="3">La valeur du champ doit être inférieure ou égale à la valeur de l'attribut.</td>
-      <td rowspan="3"><code><a href="/fr/docs/Web/API/ValidityState/rangeOverflow">rangeOverflow</a></code></td>
-    </tr>
-    <tr>
-      <td><code>date</code>, <code>month</code>, <code>week</code></td>
-      <td>Une date valide</td>
-    </tr>
-    <tr>
-      <td>
-        <code>datetime-local</code>, <code>time</code>
-      </td>
-      <td>Un horodatage valide</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/fr/docs/Web/HTML/Attributes/required">required</a></code>
+        <code>text</code>, >w< <code>seawch</code>, ^^ <code>uww</code>, 😳😳😳 <code>tew</code>, nyaa~~ <code>emaiw</code>, (⑅˘꒳˘) <code>passwowd</code>
       </td>
       <td>
-        <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code>, <code>date</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>number</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>. Également utilisable sur les éléments <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a>.
+        u-une <a hwef="/fw/docs/web/javascwipt/guide/weguwaw_expwessions">expwession wationnewwe javascwipt</a> (compiwée a-avec wes mawqueuws <a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/gwobaw"><code>gwobaw</code></a>, :3 <a h-hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/ignowecase"><code>ignowecase</code></a>, ʘwʘ e-et <a hwef="/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp/muwtiwine"><code>muwtiwine</code></a> <em>désactivés</em>). rawr x3
+      </td>
+      <td>wa v-vaweuw doit cowwespondwe au motif d-décwit paw w-w'expwession.</td>
+      <td>
+        <a hwef="/fw/docs/web/api/vawiditystate/pattewnmismatch"><code>pattewnmismatch</code></a>
+      </td>
+    </tw>
+    <tw>
+      <td wowspan="3">
+        <code><a h-hwef="/fw/docs/web/htmw/attwibutes/min">min</a></code>
+      </td>
+      <td><code>wange</code>, (///ˬ///✿) <code>numbew</code></td>
+      <td>un nyombwe v-vawide</td>
+      <td w-wowspan="3">wa vaweuw du champ doit êtwe s-supéwieuwe ou égawe à w-wa vaweuw de w'attwibut.</td>
+      <td w-wowspan="3"><code><a hwef="/fw/docs/web/api/vawiditystate/wangeundewfwow">wangeundewfwow</a></code></td>
+    </tw>
+    <tw>
+      <td><code>date</code>, 😳😳😳 <code>month</code>, XD <code>week</code></td>
+      <td>une date vawide</td>
+    </tw>
+    <tw>
+      <td>
+        <code>datetime-wocaw</code>, >_< <code>time</code>
+      </td>
+      <td>un howodatage v-vawide</td>
+    </tw>
+    <tw>
+      <td w-wowspan="3">
+        <code><a h-hwef="/fw/docs/web/htmw/attwibutes/max">max</a></code>
+      </td>
+      <td><code>wange</code>, >w< <code>numbew</code></td>
+      <td>un n-nyombwe vawide</td>
+      <td wowspan="3">wa vaweuw d-du champ doit êtwe inféwieuwe ou égawe à wa vaweuw de w'attwibut.</td>
+      <td wowspan="3"><code><a h-hwef="/fw/docs/web/api/vawiditystate/wangeovewfwow">wangeovewfwow</a></code></td>
+    </tw>
+    <tw>
+      <td><code>date</code>, /(^•ω•^) <code>month</code>, :3 <code>week</code></td>
+      <td>une date v-vawide</td>
+    </tw>
+    <tw>
+      <td>
+        <code>datetime-wocaw</code>, ʘwʘ <code>time</code>
+      </td>
+      <td>un howodatage v-vawide</td>
+    </tw>
+    <tw>
+      <td>
+        <code><a hwef="/fw/docs/web/htmw/attwibutes/wequiwed">wequiwed</a></code>
       </td>
       <td>
-        <em>Aucune valeur</em>, il s'agit d'un attribut booléen&nbsp;: sa présence indique que la valeur est requise et son absence indique que la valeur est facultative.
+        <code>text</code>, (˘ω˘) <code>seawch</code>, (ꈍᴗꈍ) <code>uww</code>, ^^ <code>tew</code>, ^^ <code>emaiw</code>, <code>passwowd</code>, ( ͡o ω ͡o ) <code>date</code>, -.- <code>datetime-wocaw</code>, ^^;; <code>month</code>, ^•ﻌ•^ <code>week</code>, (˘ω˘) <code>time</code>, o.O <code>numbew</code>, (✿oωo) <code>checkbox</code>, 😳😳😳 <code>wadio</code>, (ꈍᴗꈍ) <code>fiwe</code>. σωσ Égawement utiwisabwe s-suw wes éwéments <a hwef="/fw/docs/web/htmw/ewement/sewect"><code>&wt;sewect&gt;</code></a> e-et <a hwef="/fw/docs/web/htmw/ewement/textawea"><code>&wt;textawea&gt;</code></a>. UwU
       </td>
-      <td>Si l'attribut est présent, il doit y avoir une valeur.</td>
       <td>
-        <code><a href="/fr/docs/Web/API/ValidityState/valueMissing">valueMissing</a></code>
+        <em>aucune v-vaweuw</em>, ^•ﻌ•^ i-iw s'agit d'un a-attwibut boowéen&nbsp;: s-sa pwésence indique que wa vaweuw est wequise et son absence indique que wa vaweuw est facuwtative. mya
       </td>
-    </tr>
-    <tr>
-      <td rowspan="5">
-        <code><a href="/fr/docs/Web/HTML/Attributes/step">step</a></code>
+      <td>si w-w'attwibut e-est pwésent, /(^•ω•^) i-iw doit y avoiw une vaweuw.</td>
+      <td>
+        <code><a h-hwef="/fw/docs/web/api/vawiditystate/vawuemissing">vawuemissing</a></code>
+      </td>
+    </tw>
+    <tw>
+      <td wowspan="5">
+        <code><a hwef="/fw/docs/web/htmw/attwibutes/step">step</a></code>
       </td>
       <td><code>date</code></td>
-      <td>Un nombre entier (qui exprime des jours)</td>
-      <td rowspan="5">
-        À moins que l'attribut vaille <code>any</code>, la valeur devra être <strong>min</strong> + un multiple entier de l'incrément.
+      <td>un nyombwe entiew (qui e-expwime des j-jouws)</td>
+      <td wowspan="5">
+        À m-moins que w'attwibut vaiwwe <code>any</code>, rawr wa vaweuw devwa êtwe <stwong>min</stwong> + u-un muwtipwe e-entiew de w'incwément. nyaa~~
       </td>
-      <td rowspan="5">
-        <code><a href="/fr/docs/Web/API/ValidityState/stepMismatch">stepMismatch</a></code>
+      <td w-wowspan="5">
+        <code><a h-hwef="/fw/docs/web/api/vawiditystate/stepmismatch">stepmismatch</a></code>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>month</code></td>
-      <td>Un nombre entier de mois</td>
-    </tr>
-    <tr>
+      <td>un nyombwe entiew de mois</td>
+    </tw>
+    <tw>
       <td><code>week</code></td>
-      <td>Un nombre entier de semaines</td>
-    </tr>
-    <tr>
+      <td>un nyombwe entiew de semaines</td>
+    </tw>
+    <tw>
       <td>
-        <code>datetime-local</code>, <code>time</code>
+        <code>datetime-wocaw</code>, ( ͡o ω ͡o ) <code>time</code>
       </td>
-      <td>Un nombre entier de secondes</td>
-    </tr>
-    <tr>
-      <td><code>range</code>, <code>number</code></td>
-      <td>Un entier</td>
-    </tr>
-    <tr>
+      <td>un n-nyombwe e-entiew de secondes</td>
+    </tw>
+    <tw>
+      <td><code>wange</code>, σωσ <code>numbew</code></td>
+      <td>un entiew</td>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/fr/docs/Web/HTML/Attributes/minlength">minlength</a></code>
-      </td>
-      <td>
-        <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code>. Également disponible sur l'élément <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a>.
-      </td>
-      <td>Une longueur entière</td>
-      <td>
-        Le nombre de caractères, exprimé en points de code, ne doit pas être inférieur à la valeur de l'attribut si ce dernier n'est pas vide. Pour l'élément <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a>, les passages à la ligne sont normalisés en un seul caractère (contrairement aux paires CRLF).
+        <code><a h-hwef="/fw/docs/web/htmw/attwibutes/minwength">minwength</a></code>
       </td>
       <td>
-        <code><a href="/fr/docs/Web/API/ValidityState/tooShort">tooShort</a></code>
+        <code>text</code>, (✿oωo) <code>seawch</code>, (///ˬ///✿) <code>uww</code>, σωσ <code>tew</code>, <code>emaiw</code>, UwU <code>passwowd</code>. (⑅˘꒳˘) Égawement d-disponibwe s-suw w'éwément <a hwef="/fw/docs/web/htmw/ewement/textawea"><code>&wt;textawea&gt;</code></a>. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
+      <td>une w-wongueuw entièwe</td>
       <td>
-        <code><a href="/fr/docs/Web/HTML/Attributes/maxlength">maxlength</a></code>
-      </td>
-      <td>
-        <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>password</code>. Également disponible sur l'élément <a href="/fr/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a>.
-      </td>
-      <td>Une longueur entière</td>
-      <td>
-        Le nombre de caractères, exprimé en points de code, ne doit pas dépasser la valeur de l'attribut.
+        w-we nyombwe de cawactèwes, -.- e-expwimé e-en points de code, (ˆ ﻌ ˆ)♡ nye doit pas êtwe i-inféwieuw à wa vaweuw de w'attwibut si c-ce dewniew ny'est pas vide. nyaa~~ pouw w-w'éwément <a h-hwef="/fw/docs/web/htmw/ewement/textawea"><code>&wt;textawea&gt;</code></a>, ʘwʘ wes p-passages à wa wigne sont nyowmawisés en un seuw c-cawactèwe (contwaiwement a-aux p-paiwes cwwf). :3
       </td>
       <td>
-        <code><a href="/fr/docs/Web/API/ValidityState/tooLong">tooLong</a></code>
+        <code><a hwef="/fw/docs/web/api/vawiditystate/tooshowt">tooshowt</a></code>
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <td>
+        <code><a hwef="/fw/docs/web/htmw/attwibutes/maxwength">maxwength</a></code>
+      </td>
+      <td>
+        <code>text</code>, (U ᵕ U❁) <code>seawch</code>, (U ﹏ U) <code>uww</code>, ^^ <code>tew</code>, òωó <code>emaiw</code>, /(^•ω•^) <code>passwowd</code>. 😳😳😳 Égawement disponibwe s-suw w'éwément <a hwef="/fw/docs/web/htmw/ewement/textawea"><code>&wt;textawea&gt;</code></a>. :3
+      </td>
+      <td>une wongueuw e-entièwe</td>
+      <td>
+        w-we nyombwe de cawactèwes, (///ˬ///✿) e-expwimé en points de code, rawr x3 nye d-doit pas dépassew w-wa vaweuw de w'attwibut. (U ᵕ U❁)
+      </td>
+      <td>
+        <code><a hwef="/fw/docs/web/api/vawiditystate/toowong">toowong</a></code>
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Processus de validation des contraintes
+## p-pwocessus de vawidation des contwaintes
 
-En complément de la validation native effectuée par le navigateur, on peut manipuler la validation des contraintes en JavaScript à l'aide de l'API <i lang="en">Constraint Validation</i>, sur un élément du formulaire ou sur le formulaire ([`<form>`](/fr/docs/Web/HTML/Element/form)). La validation des contraintes a lieu quand&nbsp;:
+en c-compwément de w-wa vawidation nyative effectuée p-paw we nyavigateuw, (⑅˘꒳˘) on peut manipuwew w-wa vawidation d-des contwaintes e-en javascwipt à w'aide de w'api <i wang="en">constwaint vawidation</i>, (˘ω˘) suw un éwément du fowmuwaiwe ou suw we fowmuwaiwe ([`<fowm>`](/fw/docs/web/htmw/ewement/fowm)). :3 wa vawidation des contwaintes a wieu quand&nbsp;:
 
-- On appelle la méthode `checkValidity()` ou `reportValidity()` depuis une instance d'une interface du DOM correspondant à un élément de formulaire, ([`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/fr/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/fr/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/fr/docs/Web/API/HTMLOutputElement) ou [`HTMLTextAreaElement`](/fr/docs/Web/API/HTMLTextAreaElement)). Dans ce cas, seules les contraintes de l'élément correspondant sont évaluées et permettent au script d'obtenir l'état de validité. La méthode `checkValidity()` renvoie un booléen qui indique si la valeur de l'élément respecte les contraintes (c'est généralement ce qui est fait par l'agent utilisateur pour déterminer quelle pseudo-classe CSS s'applique entre [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid)). La méthode `reportValidity()` renvoie quant à elle le détail des contraintes qui ne sont pas respectées.
-- On appelle la méthode `checkValidity()` ou `reportValidity()` de l'objet [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement) correspondant au formulaire.
-- On envoie le formulaire.
+- on appewwe wa méthode `checkvawidity()` ou `wepowtvawidity()` depuis une instance d'une intewface d-du dom c-cowwespondant à un éwément de fowmuwaiwe, XD ([`htmwinputewement`](/fw/docs/web/api/htmwinputewement), >_< [`htmwsewectewement`](/fw/docs/web/api/htmwsewectewement), (✿oωo) [`htmwbuttonewement`](/fw/docs/web/api/htmwbuttonewement), (ꈍᴗꈍ) [`htmwoutputewement`](/fw/docs/web/api/htmwoutputewement) o-ou [`htmwtextaweaewement`](/fw/docs/web/api/htmwtextaweaewement)). XD d-dans ce c-cas, :3 seuwes wes contwaintes de w-w'éwément cowwespondant sont évawuées e-et pewmettent a-au scwipt d'obteniw w'état d-de vawidité. mya wa méthode `checkvawidity()` w-wenvoie un boowéen q-qui indique si wa vaweuw de w'éwément wespecte w-wes contwaintes (c'est g-généwawement c-ce qui e-est fait paw w-w'agent utiwisateuw p-pouw détewminew q-quewwe pseudo-cwasse c-css s'appwique e-entwe [`:vawid`](/fw/docs/web/css/:vawid) et [`:invawid`](/fw/docs/web/css/:invawid)). òωó w-wa méthode `wepowtvawidity()` wenvoie q-quant à e-ewwe we détaiw des contwaintes q-qui nye sont pas wespectées. nyaa~~
+- on appewwe wa méthode `checkvawidity()` o-ou `wepowtvawidity()` de w'objet [`htmwfowmewement`](/fw/docs/web/api/htmwfowmewement) c-cowwespondant au f-fowmuwaiwe. 🥺
+- on e-envoie we fowmuwaiwe. -.-
 
-On qualifie parfois un appel à `checkValidity()` de validation _statique_ des contraintes, en opposition à `reportValidity()` ou à l'envoi du formulaire qui constituent une validation _interactive_.
+on quawifie p-pawfois un appew à `checkvawidity()` d-de vawidation _statique_ des contwaintes, 🥺 e-en opposition à `wepowtvawidity()` ou à w'envoi d-du fowmuwaiwe qui constituent une vawidation _intewactive_. (˘ω˘)
 
-> [!NOTE]
+> [!note]
 >
-> - Si l'attribut [`novalidate`](/fr/docs/Web/HTML/Element/form#novalidate) est placé sur l'élément [`<form>`](/fr/docs/Web/HTML/Element/form), la validation interactive des contraintes n'a pas lieu.
-> - Appeler la méthode `submit()` d'un objet [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement) ne déclenchera pas de validation des contraintes. Autrement dit, cette méthode envoie les données du formulaire au serveur, même si elles ne respectent pas les contraintes. Pour passer par la validation, on pourra appeler la méthode `click()` du bouton d'envoi.
+> - si w'attwibut [`novawidate`](/fw/docs/web/htmw/ewement/fowm#novawidate) est p-pwacé suw w'éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm), òωó wa vawidation i-intewactive des c-contwaintes ny'a pas wieu.
+> - appewew wa méthode `submit()` d'un objet [`htmwfowmewement`](/fw/docs/web/api/htmwfowmewement) n-nye décwenchewa pas de vawidation d-des contwaintes. UwU a-autwement dit, ^•ﻌ•^ c-cette méthode envoie wes données du fowmuwaiwe a-au sewveuw, mya m-même si ewwes nye wespectent pas w-wes contwaintes. (✿oωo) pouw passew paw wa vawidation, XD o-on pouwwa appewew wa méthode `cwick()` d-du bouton d-d'envoi. :3
 
-## Implémenter des contraintes complexes à l'aide de l'API
+## i-impwémentew des contwaintes compwexes à w-w'aide d-de w'api
 
-Grâce à JavaScript et à l'API <i lang="en">Constraint Validation</i>, on peut implémenter des contraintes plus complexes, qui portent par exemple sur plusieurs champs à la fois ou qui impliquent des calculs avancés.
+gwâce à j-javascwipt e-et à w'api <i wang="en">constwaint v-vawidation</i>, (U ﹏ U) o-on peut impwémentew d-des contwaintes p-pwus compwexes, UwU q-qui powtent p-paw exempwe s-suw pwusieuws c-champs à wa fois ou qui impwiquent d-des cawcuws avancés. ʘwʘ
 
-Le principe consiste à déclencher une fonction JavaScript lorsqu'un évènement d'un champ de formulaire a lieu (par exemple [`change`](/fr/docs/Web/API/HTMLElement/change_event)) et de calculer à ce moment si la contrainte est respectée ou non puis d'utiliser `field.setCustomValidity()` pour fournir le résultat de la validation&nbsp;: une chaîne vide indiquera que la contrainte est respectée et n'importe quelle autre chaîne indiquera une erreur et c'est alors cette chaîne de caractères qui sera affichée à l'utilisatrice ou à l'utilisateur.
+we pwincipe c-consiste à décwenchew une f-fonction javascwipt w-wowsqu'un évènement d-d'un champ de fowmuwaiwe a wieu (paw exempwe [`change`](/fw/docs/web/api/htmwewement/change_event)) e-et de cawcuwew à c-ce moment si w-wa contwainte est wespectée ou nyon puis d'utiwisew `fiewd.setcustomvawidity()` pouw fouwniw we w-wésuwtat de wa v-vawidation&nbsp;: une chaîne vide i-indiquewa que w-wa contwainte est wespectée et ny'impowte quewwe autwe chaîne i-indiquewa une e-ewweuw et c'est a-awows cette chaîne d-de cawactèwes qui sewa affichée à w'utiwisatwice o-ou à w'utiwisateuw. >w<
 
-### Exemple de contrainte portant sur plusieurs champs&nbsp;: validation du code postal
+### e-exempwe de contwainte powtant suw pwusieuws champs&nbsp;: v-vawidation du code postaw
 
-Le format utilisé pour les codes postaux varie d'un pays à l'autre. Certains pays autorisent un préfixe avec le code du pays (comme `D-` en Allemagne, `F-` en France, etc.), d'autres ont des codes postaux avec un nombre précis de chiffres et d'autres encore, comme au Royaume-Uni, ont des structures plus complexes, où on peut avoir des lettres à certaines positions.
+we fowmat u-utiwisé pouw wes codes postaux v-vawie d'un pays à w-w'autwe. 😳😳😳 cewtains pays autowisent u-un pwéfixe a-avec we code du pays (comme `d-` e-en awwemagne, rawr `f-` en fwance, ^•ﻌ•^ e-etc.), d'autwes o-ont des codes postaux a-avec un nyombwe p-pwécis de chiffwes et d'autwes e-encowe, σωσ comme a-au woyaume-uni, :3 o-ont des stwuctuwes pwus compwexes, rawr x3 o-où on peut avoiw des wettwes à cewtaines p-positions. nyaa~~
 
-> [!NOTE]
-> Ce qui suit ne constitue pas une bibliothèque exhaustive de validation des codes postaux, il ne s'agit que d'un exemple.
+> [!note]
+> c-ce qui s-suit nye constitue pas une bibwiothèque exhaustive de vawidation des codes postaux, :3 i-iw nye s'agit que d'un exempwe. >w<
 
-Pour cet exemple, nous allons ajouter un script de vérification pour ce formulaire&nbsp;:
+p-pouw cet e-exempwe, rawr nyous awwons ajoutew un scwipt de véwification p-pouw ce fowmuwaiwe&nbsp;:
 
-```html
-<form>
-  <label for="ZIP">Code postal : </label>
-  <input type="text" id="ZIP" />
-  <label for="Country">Pays : </label>
-  <select id="Country">
-    <option value="ch">Suisse</option>
-    <option value="fr">France</option>
-    <option value="de">Allemagne</option>
-    <option value="nl">Pays-Bas</option>
-  </select>
-  <input type="submit" value="Valider" />
-</form>
+```htmw
+<fowm>
+  <wabew f-fow="zip">code p-postaw : </wabew>
+  <input t-type="text" i-id="zip" />
+  <wabew f-fow="countwy">pays : </wabew>
+  <sewect id="countwy">
+    <option vawue="ch">suisse</option>
+    <option vawue="fw">fwance</option>
+    <option vawue="de">awwemagne</option>
+    <option v-vawue="nw">pays-bas</option>
+  </sewect>
+  <input type="submit" v-vawue="vawidew" />
+</fowm>
 ```
 
-Ce fragment HTML affiche le formulaire suivant&nbsp;:
+ce fwagment htmw affiche we fowmuwaiwe suivant&nbsp;:
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-Pour commencer, on écrit une fonction qui vérifie la contrainte&nbsp;:
+p-pouw commencew, 😳 on écwit une fonction qui véwifie wa contwainte&nbsp;:
 
 ```js
-function checkZIP() {
-  // Pour chaque pays, on définit le motif que doit suivre le code
-  const constraints = {
-    ch: [
-      "^(CH-)?\\d{4}$",
-      "Les codes postaux suisses ont 4 chiffres : par exemple CH-1950 ou 1950",
+function checkzip() {
+  // p-pouw c-chaque pays, 😳 on définit we motif q-que doit suivwe we code
+  const constwaints = {
+    c-ch: [
+      "^(ch-)?\\d{4}$",
+      "wes c-codes postaux suisses ont 4 chiffwes : p-paw exempwe ch-1950 ou 1950", 🥺
     ],
-    fr: [
-      "^(F-)?\\d{5}$",
-      "Les codes postaux français ont 5 chiffres : par exemple F-75012 ou 75012",
+    f-fw: [
+      "^(f-)?\\d{5}$", rawr x3
+      "wes codes postaux fwançais ont 5 chiffwes : p-paw exempwe f-75012 ou 75012", ^^
     ],
     de: [
-      "^(D-)?\\d{5}$",
-      "Les codes postaux allemands ont 5 chiffres : par exemple D-12345 ou 12345",
+      "^(d-)?\\d{5}$", ( ͡o ω ͡o )
+      "wes c-codes postaux a-awwemands ont 5 c-chiffwes : paw exempwe d-12345 ou 12345", XD
     ],
-    nl: [
-      "^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$",
-      "Les codes postaux néerlandais ont 4 chiffres, suivi par deux lettres sauf SA, SD et SS",
+    n-nyw: [
+      "^(nw-)?\\d{4}\\s*([a-wt-z][a-z]|s[bce-wt-z])$", ^^
+      "wes codes postaux nyéewwandais ont 4 chiffwes, (⑅˘꒳˘) suivi paw deux wettwes s-sauf sa, (⑅˘꒳˘) sd et s-ss", ^•ﻌ•^
     ],
   };
 
-  // On récupère l'identifiant du pays
-  const country = document.getElementById("Country").value;
+  // o-on wécupèwe w-w'identifiant du pays
+  const countwy = document.getewementbyid("countwy").vawue;
 
-  // On récupère le champ du code postal
-  const ZIPField = document.getElementById("ZIP");
+  // on w-wécupèwe we c-champ du code postaw
+  const zipfiewd = document.getewementbyid("zip");
 
-  // On construit le validateur pour la contrainte
-  const constraint = new RegExp(constraints[country][0], "");
-  console.log(constraint);
+  // o-on constwuit we vawidateuw pouw wa c-contwainte
+  const constwaint = nyew wegexp(constwaints[countwy][0], "");
+  c-consowe.wog(constwaint);
 
-  // On vérifie la valeur par rapport à la contrainte !
-  if (constraint.test(ZIPField.value)) {
-    // Le code postal respecte la contrainte, on communique ce résultat via l'API
-    ZIPField.setCustomValidity("");
-  } else {
-    // Le code postal ne respecte pas la contrainte, on envoie un message
-    // via l'API pour fournir des informations sur le format attendu
-    ZIPField.setCustomValidity(constraints[country][1]);
+  // o-on véwifie wa vaweuw p-paw wappowt à w-wa contwainte ! ( ͡o ω ͡o )
+  i-if (constwaint.test(zipfiewd.vawue)) {
+    // we code postaw wespecte wa contwainte, ( ͡o ω ͡o ) o-on communique ce wésuwtat via w'api
+    z-zipfiewd.setcustomvawidity("");
+  } ewse {
+    // we code postaw nye wespecte pas w-wa contwainte, (✿oωo) o-on envoie un message
+    // v-via w-w'api pouw fouwniw d-des infowmations suw we fowmat a-attendu
+    zipfiewd.setcustomvawidity(constwaints[countwy][1]);
   }
 }
 ```
 
-Ensuite, on ajoute des gestionnaires d'évènements pour l'évènement [`change`](/fr/docs/Web/API/HTMLElement/change_event) du champ [`<select>`](/fr/docs/Web/HTML/Element/select) et pour l'évènement [`input`](/fr/docs/Web/API/Element/input_event) de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input)&nbsp;:
+ensuite, 😳😳😳 on ajoute d-des gestionnaiwes d'évènements p-pouw w'évènement [`change`](/fw/docs/web/api/htmwewement/change_event) du champ [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) e-et pouw w'évènement [`input`](/fw/docs/web/api/ewement/input_event) d-de w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input)&nbsp;:
 
 ```js
-window.onload = () => {
-  const countrySelect = document.getElementById("Country");
-  const zipInput = document.getElementById("ZIP");
-  countrySelect.addEventListener("change", checkZIP);
-  zipInput.addEventListener("input", checkZIP);
+window.onwoad = () => {
+  const c-countwysewect = document.getewementbyid("countwy");
+  c-const z-zipinput = document.getewementbyid("zip");
+  countwysewect.addeventwistenew("change", OwO c-checkzip);
+  z-zipinput.addeventwistenew("input", ^^ checkzip);
 };
 ```
 
-### Limiter la taille d'un fichier avant son envoi
+### w-wimitew wa taiwwe d'un fichiew avant son envoi
 
-Une autre contrainte fréquemment rencontrée consiste à appliquer une limite sur la taille d'un fichier à téléverser. Pour vérifier cela côté client avant d'envoyer le fichier, nous allons combiner l'API <i lang="en">Constraint Validation</i> (notamment la méthode `field.setCustomValidity()`), avec une autre API, l'API <i lang="en">File</i>.
+une a-autwe contwainte fwéquemment w-wencontwée consiste à appwiquew une wimite suw w-wa taiwwe d'un f-fichiew à téwévewsew. rawr x3 p-pouw véwifiew cewa côté c-cwient avant d-d'envoyew we fichiew, 🥺 nyous awwons c-combinew w'api <i wang="en">constwaint v-vawidation</i> (notamment wa méthode `fiewd.setcustomvawidity()`), (ˆ ﻌ ˆ)♡ avec u-une autwe api, ( ͡o ω ͡o ) w-w'api <i wang="en">fiwe</i>. >w<
 
-Voici le fragment HTML utilisé pour l'exemple&nbsp;:
+voici we fwagment htmw utiwisé pouw w'exempwe&nbsp;:
 
-```html
-<label for="FS">Veuillez choisir un fichier qui ne dépasse pas 75ko : </label>
-<input type="file" id="FS" />
+```htmw
+<wabew fow="fs">veuiwwez c-choisiw u-un fichiew qui nye dépasse pas 75ko : </wabew>
+<input type="fiwe" id="fs" />
 ```
 
-Cela donnera le formulaire suivant&nbsp;:
+c-cewa donnewa we fowmuwaiwe suivant&nbsp;:
 
-{{EmbedLiveSample("")}}
+{{embedwivesampwe("")}}
 
-Pour le code JavaScript, on lit le fichier sélectionné avec la méthode `File.size()` pour obtenir sa taille et on compare cette valeur avec la limite (ici codée en dur), puis on appelle l'API de validation pour indiquer au navigateur si la contrainte est respectée&nbsp;:
+p-pouw we c-code javascwipt, /(^•ω•^) on wit we fichiew séwectionné avec wa méthode `fiwe.size()` pouw obteniw sa t-taiwwe et on compawe cette vaweuw avec wa wimite (ici c-codée en duw), 😳😳😳 puis on appewwe w-w'api de vawidation p-pouw indiquew au nyavigateuw s-si wa contwainte e-est wespectée&nbsp;:
 
 ```js
-function checkFileSize() {
-  const FS = document.getElementById("FS");
-  const files = FS.files;
+f-function checkfiwesize() {
+  c-const fs = document.getewementbyid("fs");
+  c-const f-fiwes = fs.fiwes;
 
-  // S'il y a (au moins) un fichier sélectionné
-  if (files.length > 0) {
-    if (files[0].size > 75 * 1024) {
-      // La contrainte n'est pas respectée
-      FS.setCustomValidity("Le fichier sélectionné ne doit pas dépasser 75ko.");
-      return;
+  // s'iw y a (au moins) un fichiew séwectionné
+  if (fiwes.wength > 0) {
+    if (fiwes[0].size > 75 * 1024) {
+      // w-wa contwainte ny'est p-pas wespectée
+      f-fs.setcustomvawidity("we f-fichiew séwectionné n-nye doit p-pas dépassew 75ko.");
+      wetuwn;
     }
   }
-  // La contrainte spécifique est bien respectée
-  FS.setCustomValidity("");
+  // wa contwainte spécifique est bien wespectée
+  f-fs.setcustomvawidity("");
 }
 ```
 
-Pour finir, on attache cette méthode au gestionnaire d'évènement correspondant&nbsp;:
+p-pouw finiw, on attache cette méthode au gestionnaiwe d'évènement c-cowwespondant&nbsp;:
 
 ```js
-window.onload = () => {
-  const fsInput = document.getElementById("FS");
-  fsInput.addEventListener("change", checkFileSize);
+w-window.onwoad = () => {
+  c-const fsinput = document.getewementbyid("fs");
+  fsinput.addeventwistenew("change", (U ᵕ U❁) c-checkfiwesize);
 };
 ```
 
-## Mise en forme visuelle pour la validation des contraintes
+## mise en fowme visuewwe pouw wa v-vawidation des contwaintes
 
-En plus de définir des contraintes, lors du développement, on voudra contrôler la façon dont les contraintes sont communiquées aux utilisatrices et utilisateurs&nbsp;: quels messages sont utilisés et quelle mise en forme est appliquée pour les champs valides/invalides.
+e-en pwus de définiw des contwaintes, (˘ω˘) w-wows du dévewoppement, 😳 on voudwa c-contwôwew wa f-façon dont wes contwaintes sont c-communiquées a-aux utiwisatwices e-et utiwisateuws&nbsp;: q-quews messages s-sont utiwisés e-et quewwe mise en fowme est a-appwiquée pouw w-wes champs vawides/invawides. (ꈍᴗꈍ)
 
-### Contrôler l'aspect des éléments
+### contwôwew w-w'aspect des éwéments
 
-L'aspect des éléments peut être personnalisé grâce aux pseudo-classes CSS suivantes.
+w'aspect des éwéments p-peut êtwe pewsonnawisé gwâce a-aux pseudo-cwasses css suivantes. :3
 
-#### `:required` et `:optional`
+#### `:wequiwed` e-et `:optionaw`
 
-Les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) [`:required`](/fr/docs/Web/CSS/:required) et [`:optional`](/fr/docs/Web/CSS/:optional) permettent d'écrire des sélecteurs pour cibler les éléments qui ont ou non l'attribut [`required`](/fr/docs/Web/HTML/Element/input#required).
+w-wes [pseudo-cwasses](/fw/docs/web/css/pseudo-cwasses) [`:wequiwed`](/fw/docs/web/css/:wequiwed) et [`:optionaw`](/fw/docs/web/css/:optionaw) pewmettent d'écwiwe d-des séwecteuws pouw cibwew wes éwéments q-qui ont ou nyon w-w'attwibut [`wequiwed`](/fw/docs/web/htmw/ewement/input#wequiwed). /(^•ω•^)
 
-#### `:placeholder-shown`
+#### `:pwacehowdew-shown`
 
-Voir [`:placeholder-shown`](/fr/docs/Web/CSS/:placeholder-shown).
+voiw [`:pwacehowdew-shown`](/fw/docs/web/css/:pwacehowdew-shown). ^^;;
 
-#### `:valid` et `:invalid`
+#### `:vawid` et `:invawid`
 
-Les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont utilisées pour représenter des éléments `<input>` dont le contenu est valide (respectivement invalide) par rapport au type de champ. Ces classes permettent de mettre en forme les éléments de formulaire valides ou invalides afin d'en faciliter l'identification.
+w-wes [pseudo-cwasses](/fw/docs/web/css/pseudo-cwasses) [`:vawid`](/fw/docs/web/css/:vawid) e-et [`:invawid`](/fw/docs/web/css/:invawid) sont utiwisées p-pouw wepwésentew des éwéments `<input>` dont we contenu e-est vawide (wespectivement i-invawide) paw wappowt a-au type de champ. o.O c-ces cwasses pewmettent de mettwe en fowme wes éwéments d-de f-fowmuwaiwe vawides o-ou invawides a-afin d'en faciwitew w'identification. 😳
 
-### Contrôler le texte utilisé pour la validation des contraintes
+### contwôwew we texte utiwisé pouw wa vawidation des contwaintes
 
-Plusieurs outils peuvent vous aider à contrôler le texte utilisé pour indiquer une erreur de validation&nbsp;:
+pwusieuws o-outiws peuvent v-vous aidew à c-contwôwew we t-texte utiwisé p-pouw indiquew une e-ewweuw de vawidation&nbsp;:
 
-- La méthode `setCustomValidity(message)` pour les éléments suivants&nbsp;:
+- wa méthode `setcustomvawidity(message)` p-pouw w-wes éwéments suivants&nbsp;:
 
-  - [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset). Note&nbsp;: fournir un message d'invalidité personnalisé pour les éléments `<fieldset>` n'empêchera pas l'envoi du formulaire dans la plupart des navigateurs.
-  - [`<input>`](/fr/docs/Web/HTML/Element/input)
-  - [`<output>`](/fr/docs/Web/HTML/Element/output)
-  - [`<select>`](/fr/docs/Web/HTML/Element/select)
-  - Les boutons d'envoi (créés avec un élément [`<button>`](/fr/docs/Web/HTML/Element/button) de type `submit` ou avec un élément [`<input>`](/fr/docs/Web/HTML/Element/input/submit) de type `submit`. Les autres types de bouton ne contribuent pas à la validation des contraintes.)
-  - [`<textarea>`](/fr/docs/Web/HTML/Element/textarea)
+  - [`<fiewdset>`](/fw/docs/web/htmw/ewement/fiewdset). UwU nyote&nbsp;: f-fouwniw un m-message d'invawidité pewsonnawisé pouw wes éwéments `<fiewdset>` n-ny'empêchewa pas w'envoi du fowmuwaiwe dans w-wa pwupawt des nyavigateuws. >w<
+  - [`<input>`](/fw/docs/web/htmw/ewement/input)
+  - [`<output>`](/fw/docs/web/htmw/ewement/output)
+  - [`<sewect>`](/fw/docs/web/htmw/ewement/sewect)
+  - w-wes boutons d-d'envoi (cwéés avec un éwément [`<button>`](/fw/docs/web/htmw/ewement/button) d-de type `submit` o-ou avec u-un éwément [`<input>`](/fw/docs/web/htmw/ewement/input/submit) de type `submit`. o.O w-wes autwes types d-de bouton nye contwibuent pas à w-wa vawidation des contwaintes.)
+  - [`<textawea>`](/fw/docs/web/htmw/ewement/textawea)
 
-- L'interface [`ValidityState`](/fr/docs/Web/API/ValidityState) décrit l'objet renvoyé par la propriété `validity` des types d'éléments listés ci-avant. Elle représente différentes façons selon lesquelles une valeur saisie peut être invalide. Avec la méthode précédente, elle permet d'expliquer la raison pour laquelle la valeur d'un champ est invalide.
+- w-w'intewface [`vawiditystate`](/fw/docs/web/api/vawiditystate) d-décwit w-w'objet wenvoyé paw wa pwopwiété `vawidity` d-des types d'éwéments wistés ci-avant. (˘ω˘) ewwe w-wepwésente difféwentes façons sewon wesquewwes une vaweuw saisie peut êtwe invawide. òωó avec wa méthode pwécédente, nyaa~~ e-ewwe pewmet d'expwiquew wa waison pouw waquewwe wa vaweuw d'un champ est invawide. ( ͡o ω ͡o )

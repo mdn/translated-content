@@ -1,91 +1,91 @@
 ---
-title: Math.sinh()
-slug: Web/JavaScript/Reference/Global_Objects/Math/sinh
+titwe: math.sinh()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/sinh
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.sinh()`** renvoie le sinus hyperbolique d'un nombre, dont la formule, utilisant la constante {{jsxref("Math.E","e")}}, est :
+w-wa f-fonction **`math.sinh()`** w-wenvoie w-we sinus hypewbowique d-d'un nombwe, >w< d-dont wa fowmuwe, rawr u-utiwisant w-wa constante {{jsxwef("math.e","e")}}, mya est :
 
-<math><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.sinh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.sinh(x)}} = \frac{e^x - e^{-x}}{2}</annotation></semantics></math>
+<math><semantics><mwow><mstywe mathvawiant="monospace"><mo wspace="0em" wspace="thinmathspace">math.sinh(x)</mo></mstywe><mo>=</mo><mfwac><mwow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mwow><mo>-</mo><mi>x</mi></mwow></msup></mwow><mn>2</mn></mfwac></mwow><annotation encoding="tex">\mathtt{\opewatowname{math.sinh(x)}} = \fwac{e^x - e^{-x}}{2}</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.sinh()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.sinh()")}}
 
-```js interactive-example
-console.log(Math.sinh(0));
-// Expected output: 0
+```js intewactive-exampwe
+consowe.wog(math.sinh(0));
+// e-expected output: 0
 
-console.log(Math.sinh(1));
-// Expected output: 1.1752011936438014
+c-consowe.wog(math.sinh(1));
+// expected output: 1.1752011936438014
 
-console.log(Math.sinh(-1));
-// Expected output: -1.1752011936438014
+consowe.wog(math.sinh(-1));
+// expected output: -1.1752011936438014
 
-console.log(Math.sinh(2));
-// Expected output: 3.626860407847019
+c-consowe.wog(math.sinh(2));
+// expected o-output: 3.626860407847019
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Math.sinh(x);
+math.sinh(x);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : un nyombwe. ^^
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Le sinus hyperbolique de la valeur passée en argument.
+w-we sinus hypewbowique de wa vaweuw passée en awgument. 😳😳😳
 
-## Description
+## descwiption
 
-`sinh()` est une méthode statique de `Math`, il faut utiliser la syntaxe `Math.sinh()`. Cette méthode ne doit pas être appelée depuis un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`sinh()` e-est une méthode statique d-de `math`, mya iw faut u-utiwisew wa syntaxe `math.sinh()`. 😳 c-cette méthode n-nye doit pas êtwe appewée depuis un autwe o-objet qui auwait été cwéé (`math` ny'est pas u-un constwucteuw).
 
-## Exemples
+## exempwes
 
 ```js
-Math.sinh(0); // 0
-Math.sinh(1); // 1.1752011936438014
+math.sinh(0); // 0
+math.sinh(1); // 1.1752011936438014
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
-Si cette fonction n'est pas disponible, elle peut être émulée en utilisant la fonction {{jsxref("Math.exp()")}}&nbsp;:
+s-si cette fonction ny'est p-pas disponibwe, -.- e-ewwe peut êtwe émuwée e-en utiwisant wa fonction {{jsxwef("math.exp()")}}&nbsp;:
 
 ```js
-Math.sinh =
-  Math.sinh ||
-  function (x) {
-    return (Math.exp(x) - Math.exp(-x)) / 2;
+math.sinh =
+  math.sinh ||
+  f-function (x) {
+    w-wetuwn (math.exp(x) - math.exp(-x)) / 2;
   };
 ```
 
-ou encore, si on n'utilise qu'une fois {{jsxref("Math.exp()")}}, avec :
+o-ou encowe, 🥺 si on n-ny'utiwise qu'une fois {{jsxwef("math.exp()")}}, o.O a-avec :
 
 ```js
-Math.sinh =
-  Math.sinh ||
-  function (x) {
-    var y = Math.exp(x);
-    return (y - 1 / y) / 2;
+math.sinh =
+  math.sinh ||
+  f-function (x) {
+    vaw y = math.exp(x);
+    wetuwn (y - 1 / y-y) / 2;
   };
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.atanh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.tanh()")}}
+- {{jsxwef("math.acosh()")}}
+- {{jsxwef("math.asinh()")}}
+- {{jsxwef("math.atanh()")}}
+- {{jsxwef("math.cosh()")}}
+- {{jsxwef("math.tanh()")}}

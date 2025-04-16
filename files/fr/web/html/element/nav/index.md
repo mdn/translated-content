@@ -1,149 +1,149 @@
 ---
-title: "<nav> : l'élément de section de navigation"
-slug: Web/HTML/Element/nav
+titwe: "<nav> : w'éwément de s-section de nyavigation"
+s-swug: w-web/htmw/ewement/nav
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **\<nav>** représente une section d'une page ayant des liens vers d'autres pages ou des fragments de cette page. Autrement dit, c'est une section destinée à la navigation dans un document (avec des menus, des tables des matières, des index, etc.).
+w-w'éwément h-htmw **\<nav>** w-wepwésente u-une section d'une p-page ayant des wiens vews d'autwes pages ou des fwagments de cette page. (˘ω˘) autwement d-dit, ^^;; c'est une section destinée à wa nyavigation d-dans un document (avec d-des menus, (✿oωo) des tabwes des matièwes, (U ﹏ U) des index, -.- etc.).
 
-{{InteractiveExample("HTML Demo: &lt;nav&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;nav&gt;", ^•ﻌ•^ "tabbed-standawd")}}
 
-```html interactive-example
-<nav class="crumbs">
-  <ol>
-    <li class="crumb"><a href="#">Bikes</a></li>
-    <li class="crumb"><a href="#">BMX</a></li>
-    <li class="crumb">Jump Bike 3000</li>
-  </ol>
+```htmw intewactive-exampwe
+<nav c-cwass="cwumbs">
+  <ow>
+    <wi cwass="cwumb"><a h-hwef="#">bikes</a></wi>
+    <wi cwass="cwumb"><a hwef="#">bmx</a></wi>
+    <wi cwass="cwumb">jump bike 3000</wi>
+  </ow>
 </nav>
 
-<h1>Jump Bike 3000</h1>
+<h1>jump bike 3000</h1>
 <p>
-  This BMX bike is a solid step into the pro world. It looks as legit as it
-  rides and is built to polish your skills.
+  this b-bmx bike is a sowid step into the pwo wowwd. rawr it wooks as wegit as it
+  wides a-and is buiwt to powish youw skiwws. (˘ω˘)
 </p>
 ```
 
-```css interactive-example
-nav {
-  border-bottom: 1px solid black;
+```css i-intewactive-exampwe
+n-nyav {
+  b-bowdew-bottom: 1px s-sowid bwack;
 }
 
-.crumbs ol {
-  list-style-type: none;
-  padding-left: 0;
+.cwumbs ow {
+  wist-stywe-type: n-nyone;
+  padding-weft: 0;
 }
 
-.crumb {
-  display: inline-block;
+.cwumb {
+  dispway: inwine-bwock;
 }
 
-.crumb a::after {
-  display: inline-block;
-  color: #000;
+.cwumb a::aftew {
+  d-dispway: inwine-bwock;
+  cowow: #000;
   content: ">";
   font-size: 80%;
-  font-weight: bold;
+  font-weight: b-bowd;
   padding: 0 3px;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément nye p-possède que [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). nyaa~~
 
-## Notes d'utilisation
+## notes d'utiwisation
 
-- Tous les liens d'un document ne doivent pas faire partie d'un élément `<nav>`. Ce dernier est fait pour créer des blocs conséquents contenants des liens de navigations au sein du document. L'élément {{HTMLElement("footer")}} possède souvent différents liens, il n'a pour autant pas besoin d'être dans un élément {{HTMLElement("nav")}}.
-- Un document peut avoir plusieurs éléments {{HTMLElement("nav")}}, par exemple un pour la navigation sur le site et un autre pour la navigation au sein de la page. L'attribut [`aria-labelledby`](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-labelledby) pourra être utilisé afin d'améliorer l'accessibilité.
-- Les agents utilisateurs, tels que les lecteurs d'écrans assistant les utilisateurs handicapés, peuvent utiliser cet élément pour déterminer s'il faut omettre ou non le rendu initial du contenu relatif uniquement à la navigation.
+- tous wes wiens d'un document n-nye doivent p-pas faiwe pawtie d'un éwément `<nav>`. UwU c-ce d-dewniew est fait pouw cwéew des b-bwocs conséquents contenants des w-wiens de nyavigations au sein du document. :3 w'éwément {{htmwewement("footew")}} p-possède souvent difféwents w-wiens, (⑅˘꒳˘) iw ny'a pouw autant pas b-besoin d'êtwe dans u-un éwément {{htmwewement("nav")}}. (///ˬ///✿)
+- un document peut avoiw pwusieuws éwéments {{htmwewement("nav")}}, ^^;; paw exempwe un pouw wa nyavigation suw we site et u-un autwe pouw wa n-nyavigation au sein de wa page. >_< w-w'attwibut [`awia-wabewwedby`](/fw/docs/accessibiwité/awia/techniques_awia/utiwisew_w_attwibut_awia-wabewwedby) p-pouwwa êtwe u-utiwisé afin d'améwiowew w'accessibiwité. rawr x3
+- wes agents utiwisateuws, /(^•ω•^) tews que w-wes wecteuws d'écwans assistant wes utiwisateuws handicapés, :3 peuvent utiwisew c-cet éwément pouw détewminew s-s'iw faut omettwe o-ou nyon we wendu i-initiaw du contenu wewatif uniquement à w-wa nyavigation. (ꈍᴗꈍ)
 
-## Exemples
+## e-exempwes
 
-### HTML
+### htmw
 
-```html
-<nav class="menu">
-  <ul>
-    <li><a href="#Accueil">Accueil</a></li>
-    <li><a href="#Apropos">À propos</a></li>
-    <li><a href="#Contact">Contact</a></li>
-  </ul>
+```htmw
+<nav c-cwass="menu">
+  <uw>
+    <wi><a h-hwef="#accueiw">accueiw</a></wi>
+    <wi><a hwef="#apwopos">À pwopos</a></wi>
+    <wi><a h-hwef="#contact">contact</a></wi>
+  </uw>
 </nav>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
+{{embedwivesampwe("exempwes","100%","100%")}}
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th s-scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
+        <a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_sectionnant"
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_sectionnant"
           >contenu sectionnant</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        >, /(^•ω•^)
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Contenu autorisé</dfn></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><dfn>contenu autowisé</dfn></th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >.
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >. ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Omission de balises</dfn></th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row"><dfn>Parents autorisés</dfn></th>
+    </tw>
+    <tw>
+      <th s-scope="wow"><dfn>omission d-de bawises</dfn></th>
+      <td>aucune, w-wa bawise d'ouvewtuwe e-et wa bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow"><dfn>pawents a-autowisés</dfn></th>
       <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
-        >.
+        t-tout éwément acceptant du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu de fwux</a
+        >. òωó
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia a-autowisés</th>
+      <td>aucun</td>
+    </tw>
+    <tw>
+      <th scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les autres éléments HTML en relation avec les sections : {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [Plan et section d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA : le rôle `navigation`](/fr/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)
+- wes autwes éwéments h-htmw en w-wewation avec wes sections : {{htmwewement("body")}}, (⑅˘꒳˘) {{htmwewement("awticwe")}}, XD {{htmwewement("section")}}, -.- {{htmwewement("aside")}}, :3 {{htmwewement("h1")}}, nyaa~~ {{htmwewement("h2")}}, 😳 {{htmwewement("h3")}}, (⑅˘꒳˘) {{htmwewement("h4")}}, {{htmwewement("h5")}}, nyaa~~ {{htmwewement("h6")}}, OwO {{htmwewement("hgwoup")}}, rawr x3 {{htmwewement("headew")}}, XD {{htmwewement("footew")}}, σωσ {{htmwewement("addwess")}}
+- [pwan e-et section d-d'un document htmw5](/fw/docs/web/htmw/ewement/heading_ewements)
+- [awia : we wôwe `navigation`](/fw/docs/web/accessibiwity/awia/wowes/navigation_wowe)

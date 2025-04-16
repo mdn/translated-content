@@ -1,56 +1,56 @@
 ---
-title: get Array[@@species]
-slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
-original_slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
+titwe: get awway[@@species]
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/symbow.species
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/@@species
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété d'accesseur **`Array[@@species]`** renvoie le constructeur `Array`.
+w-wa pwopwiété d-d'accesseuw **`awway[@@species]`** w-wenvoie w-we constwucteuw `awway`. /(^•ω•^)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Array[Symbol.species];
+awway[symbow.species];
 ```
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Le constructeur {{jsxref("Array")}}.
+we constwucteuw {{jsxwef("awway")}}. rawr x3
 
-## Description
+## descwiption
 
-L'accesseur `species` renvoie le constructeur par défaut pour les objets `Array`. Les constructeurs des sous-classes peuvent le surcharger afin de modifier l'affectation du constructeur.
+w'accesseuw `species` wenvoie w-we constwucteuw paw défaut pouw wes objets `awway`. (U ﹏ U) w-wes constwucteuws des s-sous-cwasses peuvent we suwchawgew afin de modifiew w'affectation d-du constwucteuw. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-La propriété renvoie le constructeur par défaut, dans le cas des objets `Array`, c'est le constructeur `Array` :
+w-wa pwopwiété w-wenvoie we constwucteuw paw défaut, (⑅˘꒳˘) dans we cas des objets `awway`, òωó c'est we constwucteuw `awway` :
 
 ```js
-Array[Symbol.species]; // function Array()
+a-awway[symbow.species]; // function awway()
 ```
 
-Pour un objet dérivé, la valeur de `species` pour une classe `MonArray` sera le constructeur de cette classe. Vous pouvez surcharger ce comportement afin de renvoyer le constructeur `Array` :
+pouw un objet déwivé, ʘwʘ wa vaweuw de `species` p-pouw une cwasse `monawway` s-sewa we constwucteuw d-de cette c-cwasse. /(^•ω•^) vous p-pouvez suwchawgew ce compowtement afin de wenvoyew w-we constwucteuw `awway` :
 
 ```js
-class MonArray extends Array {
-  // On surcharge le symbole species
-  // pour renvoyer le constructeur Array parent
-  static get [Symbol.species]() {
-    return Array;
+cwass monawway extends awway {
+  // o-on suwchawge we symbowe species
+  // pouw wenvoyew we constwucteuw awway pawent
+  static g-get [symbow.species]() {
+    wetuwn awway;
   }
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array")}}
-- {{jsxref("Symbol.species")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("symbow.species")}}

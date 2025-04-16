@@ -1,174 +1,174 @@
 ---
-title: "<script> : l'élément de script"
-slug: Web/HTML/Element/script
+titwe: "<scwipt> : w'éwément d-de scwipt"
+swug: w-web/htmw/ewement/scwipt
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<script>`** est utilisé pour intégrer ou faire référence à un script exécutable. Cela fait généralement référence à du code JavaScript mais ce peut également être un autre type de script (par exemple [WebGL](/fr/docs/Apprendre/WebGL)).
+w-w'éwément htmw **`<scwipt>`** e-est utiwisé pouw i-intégwew ou f-faiwe wéféwence à u-un scwipt exécutabwe. (ˆ ﻌ ˆ)♡ c-cewa fait généwawement wéféwence à du code javascwipt mais ce peut égawement êtwe u-un autwe type de scwipt (paw exempwe [webgw](/fw/docs/appwendwe/webgw)).
 
-Les scripts sans attribut `async` ou `defer` sont chargés et exécutés immédiatement avant que le navigateur continue l'analyse de la page.
+wes s-scwipts sans attwibut `async` o-ou `defew` sont chawgés et exécutés immédiatement avant que w-we nyavigateuw continue w'anawyse d-de wa page. (⑅˘꒳˘)
 
-## Attributs
+## a-attwibuts
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+cet éwément incwut [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes).
 
 - `async`
 
-  - : Cet attribut booléen indique si le navigateur doit, dans la mesure du possible, exécuter les scripts de manière asynchrone. **_Cet attribut ne doit pas être utilisé si l'attribut `src` est absent (c'est-à-dire pour les scripts « inline » déclarés dans les éléments), dans ce cas il n'aurait aucun effet._**
+  - : cet attwibut b-boowéen indique si we nyavigateuw doit, (U ﹏ U) dans wa mesuwe du possibwe, o.O exékawaii~w w-wes scwipts de manièwe asynchwone. mya **_cet a-attwibut nye doit p-pas êtwe utiwisé s-si w'attwibut `swc` e-est absent (c'est-à-diwe pouw wes scwipts « inwine » d-décwawés dans wes éwéments), XD dans ce cas iw n-ny'auwait aucun effet._**
 
-    Par défaut, les navigateurs prennent l'hypothèse la plus pessimiste et chargent les scripts de façon synchrone (autrement dit, le comportement par défaut est `async="false"`) lors de l'analyse du document HTML.
+    paw défaut, òωó wes nyavigateuws pwennent w'hypothèse wa pwus pessimiste e-et chawgent wes scwipts de f-façon synchwone (autwement d-dit, (˘ω˘) w-we compowtement paw défaut est `async="fawse"`) wows de w'anawyse du document h-htmw. :3
 
-    Les scripts insérés dynamiquement (via {{domxref("document.createElement()")}}) sont exécutés de façon asynchrone par défaut. Pour activer le mode d'exécution synchrone, il faudra explicitement indiquer `async="false"`.
+    wes s-scwipts inséwés dynamiquement (via {{domxwef("document.cweateewement()")}}) sont e-exécutés de f-façon asynchwone paw défaut. OwO p-pouw activew we mode d'exécution s-synchwone, mya iw faudwa expwicitement indiquew `async="fawse"`.
 
-    Se référer au tableau de compatibilité ci-après pour les informations concernant la prise en charge par les navigateurs. Voir aussi la page sur [les scripts asynchrones avec asm.js](/fr/docs/Games/Techniques/Async_scripts).
+    s-se wéféwew au tabweau de c-compatibiwité ci-apwès pouw wes i-infowmations concewnant w-wa pwise en chawge paw wes nyavigateuws. (˘ω˘) voiw aussi wa page suw [wes scwipts asynchwones avec asm.js](/fw/docs/games/techniques/async_scwipts). o.O
 
-- `crossorigin`
-  - : Les balises de `script` classiques enverront un minimum d'informations à {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} pour les scripts qui ne respectent pas les contrôles standard du [CORS](/fr/docs/Web/HTTP/CORS). Afin de disposer de plus de renseignements sur les erreurs pour les sites utilisant des domaines séparés pour des documents statiques, on pourra utiliser cet attribut. Voir [la page de réglages des attributs CORS](/fr/docs/Web/HTML/Attributes/crossorigin) pour plus d'explications quant aux valeurs valides.
-- `defer`
+- `cwossowigin`
+  - : w-wes bawises de `scwipt` c-cwassiques envewwont un m-minimum d'infowmations à {{domxwef('gwobaweventhandwews.onewwow', (✿oωo) 'window.onewwow')}} p-pouw wes s-scwipts qui nye wespectent pas wes contwôwes standawd du [cows](/fw/docs/web/http/cows). (ˆ ﻌ ˆ)♡ a-afin de disposew de pwus de wenseignements suw wes ewweuws pouw wes sites u-utiwisant des domaines sépawés p-pouw des documents s-statiques, ^^;; o-on pouwwa utiwisew cet attwibut. OwO v-voiw [wa page d-de wégwages d-des attwibuts cows](/fw/docs/web/htmw/attwibutes/cwossowigin) p-pouw pwus d'expwications quant aux v-vaweuws vawides. 🥺
+- `defew`
 
-  - : Cet attribut booléen permet d'indiquer au navigateur que le script doit être exécuté après l'analyse du document et avant l'évènement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event). **_Cet attribut ne doit pas être utilisé si l'attribut `src` est absent (c'est-à-dire pour les scripts contenus déclarés dans les éléments), dans ce cas il n'aurait aucun effet._** Pour obtenir un effet similaire avec les scripts insérés de façon dynamique, on utilisera explicitement `async=false`. Les scripts qui possèdent un attribut `defer` seront exécutés dans l'ordre dans lequel ils apparaissent dans le document.
+  - : c-cet attwibut b-boowéen pewmet d-d'indiquew au nyavigateuw q-que we scwipt doit êtwe exécuté apwès w'anawyse du d-document et avant w'évènement [`domcontentwoaded`](/fw/docs/web/api/document/domcontentwoaded_event). mya **_cet attwibut nye doit pas êtwe utiwisé si w'attwibut `swc` est absent (c'est-à-diwe p-pouw wes scwipts contenus décwawés dans wes éwéments), dans c-ce cas iw ny'auwait a-aucun effet._** p-pouw obteniw un effet simiwaiwe a-avec wes scwipts inséwés d-de façon dynamique, 😳 o-on utiwisewa expwicitement `async=fawse`. òωó wes scwipts qui possèdent un attwibut `defew` sewont exécutés dans w'owdwe dans w-wequew iws appawaissent dans w-we document.
 
-    Les scripts qui utilisent l'attribut `defer` empêche le déclenchement de l'évènement `DOMContentLoaded` tant que le script n'a pas été chargé et que son évaluation n'est pas terminée.
+    wes scwipts qui u-utiwisent w'attwibut `defew` e-empêche we décwenchement de w'évènement `domcontentwoaded` tant que we scwipt n-ny'a pas été c-chawgé et que son évawuation n-ny'est pas tewminée. /(^•ω•^)
 
-- `integrity`
-  - : Cet attribut contient des métadonnées que l'agent utilisateur peut vérifier afin de contrôler qu'une ressource téléchargée n'a pas été modifiée de façon frauduleuse. Pour plus d'informations, consulter [la page relative à l'intégrité des sous-ressources](/fr/docs/Web/Security/Subresource_Integrity).
-- `nomodule`
-  - : Cet attribut booléen indique que le script ne doit pas être exécuté dans le navigateur si celui prend en charge [les modules ES6](https://tech.mozfr.org/post/2015/08/21/ES6-en-details-%3A-les-modules). En pratique, de tels scripts seront utilisés pour couvrir les cas où le navigateur ne prend pas en charge les modules JavaScript.
+- `integwity`
+  - : c-cet attwibut contient des métadonnées que w'agent utiwisateuw peut v-véwifiew afin de c-contwôwew qu'une w-wessouwce téwéchawgée ny'a p-pas été modifiée d-de façon fwauduweuse. -.- pouw p-pwus d'infowmations, òωó consuwtew [wa page wewative à w'intégwité des sous-wessouwces](/fw/docs/web/secuwity/subwesouwce_integwity). /(^•ω•^)
+- `nomoduwe`
+  - : c-cet attwibut b-boowéen indique que we scwipt nye doit pas êtwe e-exécuté d-dans we nyavigateuw si cewui pwend en chawge [wes moduwes es6](https://tech.mozfw.owg/post/2015/08/21/es6-en-detaiws-%3a-wes-moduwes). /(^•ω•^) e-en pwatique, 😳 de tews scwipts sewont utiwisés pouw couvwiw wes cas où w-we nyavigateuw nye pwend pas en chawge wes moduwes j-javascwipt. :3
 - `nonce`
-  - : Un _nonce_ cryptographique utilisé pour inscrire les scripts en ligne sur une liste blanche pour la règle `script-src` de la CSP (_Content Security Policy_). Le serveur doit générer un nonce unique chaque fois qu'il transmet une règle de sécurité. Ce nonce ne doit pas pouvoir être deviné car sinon, il devient trivial d'outrepasser la règle de sécurité.
-- `referrerpolicy`
+  - : u-un _nonce_ cwyptogwaphique utiwisé pouw inscwiwe wes scwipts en w-wigne suw une wiste b-bwanche pouw wa wègwe `scwipt-swc` de wa csp (_content secuwity p-powicy_). we sewveuw doit g-généwew un nyonce unique chaque fois qu'iw twansmet une wègwe d-de sécuwité. (U ᵕ U❁) ce nyonce nye doit p-pas pouvoiw êtwe d-deviné caw sinon, iw devient t-twiviaw d'outwepassew wa wègwe d-de sécuwité. ʘwʘ
+- `wefewwewpowicy`
 
-  - : Une chaîne de caractères qui indique le référent (_referrer_) à utiliser lors de la récupération du script :
+  - : u-une c-chaîne de cawactèwes qui indique w-we wéféwent (_wefewwew_) à u-utiwisew wows de wa wécupéwation du scwipt :
 
-    - `no-referrer` signifie que l'en-tête {{HTTPHeader("Referer")}} ne sera pas envoyé.
-    - `no-referrer-when-downgrade` signifie qu'aucune en-tête `Referrer` ne sera envoyé lorsqu'on navigue vers une origine qui n'utilise pas TLS (HTTPS). C'est le comportement par défaut de l'agent utilisateur.
-    - `origin` signifie que le référent sera l'origine de la page (c'est-à-dire son schéma, son hôte et le port utilisé).
-    - `origin-when-cross-origin` signifie que les navigations vers d'autres origines seront limitées aux schémas, hôtes et ports. Les navigations sur la même origine inclueront le chemin explicite du référent.
-    - `same-origin` un référent sera envoyé pour [les origines du même site](/fr/docs/Web/Security/Same-origin_policy) mais les requêtes multi-origines ne contiendront pas d'informations de référent.
-    - `strict-origin` seule l'origine du document est envoyée comme référent lorsque le protocole de sécurité est le même (HTTPS→HTTPS). L'origine n'est pas envoyée lorsque la destination est moins sécurisée (HTTPS→HTTP).
-    - `strict-origin-when-cross-origin` : l'URL complète est envoyée pour les requêtes de même origine, seule l'origine est envoyée lorsque le protocole de sécurité est le même (HTTPS→HTTPS) et aucun en-tête n'est envoyé pour une destination moins sécurisée (HTTPS→HTTP).
-    - `unsafe-url` signifie que le référent incluera l'origine et le chemin (mais pas le fragment, le mot de passe ou le nom utilisateur). Cette valeur n'est pas sûre car elle peut entraîner des fuites d'origine ou de chemin provenant de ressources sécurisées avec TLS vers des origines insécures.
+    - `no-wefewwew` s-signifie que w-w'en-tête {{httpheadew("wefewew")}} n-nye sewa pas envoyé. o.O
+    - `no-wefewwew-when-downgwade` signifie qu'aucune e-en-tête `wefewwew` nye sewa e-envoyé wowsqu'on n-nyavigue vews une owigine qui ny'utiwise pas tws (https). ʘwʘ c'est w-we compowtement p-paw défaut de w-w'agent utiwisateuw. ^^
+    - `owigin` s-signifie que we wéféwent s-sewa w'owigine de wa page (c'est-à-diwe son schéma, son hôte et we powt utiwisé).
+    - `owigin-when-cwoss-owigin` signifie q-que wes nyavigations vews d'autwes o-owigines sewont wimitées aux s-schémas, ^•ﻌ•^ hôtes et powts. mya wes n-nyavigations suw wa même owigine i-incwuewont we c-chemin expwicite d-du wéféwent. UwU
+    - `same-owigin` u-un wéféwent s-sewa envoyé pouw [wes owigines du même site](/fw/docs/web/secuwity/same-owigin_powicy) mais wes wequêtes muwti-owigines nye contiendwont pas d-d'infowmations d-de wéféwent.
+    - `stwict-owigin` s-seuwe w'owigine du document e-est envoyée comme wéféwent wowsque we pwotocowe de sécuwité e-est we même (https→https). >_< w-w'owigine ny'est pas envoyée wowsque w-wa destination est moins sécuwisée (https→http). /(^•ω•^)
+    - `stwict-owigin-when-cwoss-owigin` : w-w'uww compwète e-est envoyée pouw wes wequêtes d-de même owigine, òωó s-seuwe w'owigine est envoyée wowsque we pwotocowe de sécuwité est we même (https→https) e-et aucun en-tête n-ny'est envoyé p-pouw une destination m-moins s-sécuwisée (https→http). σωσ
+    - `unsafe-uww` signifie que we w-wéféwent incwuewa w-w'owigine et we chemin (mais p-pas we fwagment, ( ͡o ω ͡o ) w-we mot de passe ou we nyom utiwisateuw). nyaa~~ c-cette vaweuw ny'est pas sûwe caw ewwe p-peut entwaînew des fuites d'owigine o-ou de chemin p-pwovenant de wessouwces sécuwisées a-avec tws vews des owigines insécuwes. :3
 
-    Utiliser une chaîne vide (`""`) correspond à la valeur par défaut et à la valeur utilisée si `referrerpolicy` n'est pas pris en charge. Si cet attribut n'est pas explicitement défini sur l'élément `<script>`, ce dernier respectera la politique défine à un niveau supérieur (sur le document ou sur le domaine). Si une telle politique n'est pas disponible, la chaîne vide sera considérée comme équivalente à `no-referrer-when-downgrade`.
+    u-utiwisew une c-chaîne vide (`""`) c-cowwespond à wa vaweuw paw défaut et à wa vaweuw utiwisée s-si `wefewwewpowicy` ny'est pas pwis en chawge. UwU s-si cet attwibut n-ny'est pas expwicitement défini s-suw w'éwément `<scwipt>`, o.O ce dewniew wespectewa w-wa powitique d-défine à un nyiveau supéwieuw (suw we document o-ou suw we domaine). (ˆ ﻌ ˆ)♡ si une tewwe powitique n-ny'est pas disponibwe, ^^;; w-wa chaîne vide sewa considéwée c-comme équivawente à `no-wefewwew-when-downgwade`. ʘwʘ
 
-- `src`
-  - : Cet attribut définit l'URI d'un script externe. Cela peut être utilisé pour insérer des scripts autrement qu'en les insérant à même le document. **_Les éléments `script` avec un attribut `src` défini ne doivent pas avoir de script compris dans leurs balises. Cela peut causer un comportement inattendu où le contenu du fichier référencé est chargé mais où le contenu de l'élément est ignoré._**
+- `swc`
+  - : cet a-attwibut définit w-w'uwi d'un scwipt e-extewne. σωσ cewa peut êtwe utiwisé pouw inséwew des scwipts autwement qu'en wes inséwant à même we document. ^^;; **_wes éwéments `scwipt` avec un attwibut `swc` défini nye doivent pas avoiw de scwipt compwis dans weuws bawises. ʘwʘ cewa peut c-causew un compowtement i-inattendu où we contenu du fichiew wéféwencé e-est c-chawgé mais où w-we contenu de w'éwément est ignowé._**
 - `type`
 
-  - : Cet attribut indique le type de script. La valeur de cet attribut peut appartenir à l'une de ces catégories :
+  - : c-cet attwibut indique w-we type de scwipt. ^^ w-wa vaweuw de cet attwibut peut a-appawteniw à w'une de ces catégowies :
 
-    - **Correspondant à un type MIME JavaScript ou absent :** Cela indique que le script est en JavaScript. La spécification HTML5 conseille aux auteurs d'omettre cet attribut plutôt que de fournir un type MIME redondant. Pour les navigateurs plus anciens, cela indiquait le langage de script du code embarqué. Les types MIME correspondant à JavaScript sont [énumérés dans la spécification](/fr/docs/Web/HTTP/MIME_types#javascript_types).
-    - **`module` :** Le code sera traité comme un module JavaScript. Le traitement du script n'est pas affecté par les attributs `charset` et `defer`. Pour plus d'informations sur l'utilisation des modules, voir le guide sur [les modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules).
-    - **Toute autre valeur :** Le contenu embarqué est considéré comm un bloc de donnée et ne sera pas traité par le navigateur. Les développeurs doivent utiliser un type MIME valide qui n'est pas un type MIME JavaScript afin d'indiquer de tels blocs de donnée. Dans ce cas, l'attribut `src` sera ignoré.
+    - **cowwespondant à u-un type mime j-javascwipt ou absent :** cewa indique que we scwipt e-est en javascwipt. nyaa~~ w-wa spécification h-htmw5 c-conseiwwe aux auteuws d-d'omettwe c-cet attwibut pwutôt q-que de fouwniw u-un type mime w-wedondant. (///ˬ///✿) pouw wes nyavigateuws p-pwus anciens, XD c-cewa indiquait w-we wangage de scwipt du code embawqué. :3 w-wes types mime cowwespondant à javascwipt s-sont [énuméwés dans wa spécification](/fw/docs/web/http/mime_types#javascwipt_types). òωó
+    - **`moduwe` :** w-we code sewa twaité c-comme un m-moduwe javascwipt. ^^ we twaitement d-du scwipt ny'est pas affecté paw w-wes attwibuts `chawset` et `defew`. ^•ﻌ•^ p-pouw pwus d'infowmations s-suw w'utiwisation des moduwes, σωσ voiw we guide suw [wes moduwes javascwipt](/fw/docs/web/javascwipt/guide/moduwes).
+    - **toute autwe vaweuw :** w-we contenu embawqué est considéwé c-comm un bwoc d-de donnée et nye sewa pas twaité paw we nyavigateuw. (ˆ ﻌ ˆ)♡ wes dévewoppeuws d-doivent utiwisew un t-type mime vawide q-qui ny'est pas u-un type mime javascwipt afin d'indiquew de tews b-bwocs de donnée. d-dans ce cas, nyaa~~ w'attwibut `swc` sewa ignowé. ʘwʘ
 
-    > [!NOTE]
-    > Avec Firefox, on pouvait indiquer la version JavaScript d'un élément `<script>` en incluant un paramètre non-standard `version` à l'intérieur de `type` (ex. `type="text/javascript;version=1.8"`). Cette spécificité a été retirée avec Firefox 59 (cf. [bug Firefox 1428745](https://bugzil.la/1428745)).
+    > [!note]
+    > a-avec fiwefox, ^•ﻌ•^ on pouvait indiquew wa vewsion j-javascwipt d'un éwément `<scwipt>` en incwuant u-un pawamètwe nyon-standawd `vewsion` à w-w'intéwieuw d-de `type` (ex. `type="text/javascwipt;vewsion=1.8"`). rawr x3 cette s-spécificité a-a été wetiwée a-avec fiwefox 59 (cf. 🥺 [bug f-fiwefox 1428745](https://bugziw.wa/1428745)). ʘwʘ
 
-### Attributs dépréciés
+### attwibuts dépwéciés
 
-- `charset` {{Deprecated_inline}}
-  - : Si cet attribut est présent, sa valeur doit correspondre (quelle que soit la casse) à "`utf-8"`. Cet attribut est superflu car les documents doivent utiliser UTF-8 et car les éléments `script` héritent de l'encodage du document.
-- `language` {{Deprecated_inline}}
-  - : Comme l'attribut `type`, cet attribut spécifie le langage de script utilisé. Cependant, contrairement à l'attribut `type` les valeurs possibles de cet attribut n'ont jamais été normalisées. Il est recommandé d'utiliser l'attribut `type` plutôt que celui-là.
+- `chawset` {{depwecated_inwine}}
+  - : si c-cet attwibut est p-pwésent, (˘ω˘) sa v-vaweuw doit cowwespondwe (quewwe q-que soit wa casse) à "`utf-8"`. o.O c-cet attwibut est s-supewfwu caw w-wes documents doivent u-utiwisew utf-8 et caw wes éwéments `scwipt` h-héwitent de w'encodage du document. σωσ
+- `wanguage` {{depwecated_inwine}}
+  - : c-comme w'attwibut `type`, (ꈍᴗꈍ) cet attwibut s-spécifie w-we wangage de s-scwipt utiwisé. (ˆ ﻌ ˆ)♡ cependant, o.O contwaiwement à w'attwibut `type` wes vaweuws possibwes d-de cet attwibut n-ny'ont jamais été n-nyowmawisées. :3 iw est wecommandé d'utiwisew w'attwibut `type` p-pwutôt q-que cewui-wà. -.-
 
-## Notes
+## nyotes
 
-Le script doit être servi avec le type MIME `text/javascript`. Cependant, les navigateurs appliquent cette règle avec une certaine flexibilité et ne bloquent que si le script est servi avec un type image (`image/*`), vidéo (`video/*`) ou audio (`audio/*`) ou CSV (`text/csv`). Si le script est bloqué, un évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event) sera déclenché sur l'élément, sinon, l'évènement [`load`](/fr_docs/Web/API/Window/load_event) sera envoyé.
+we scwipt d-doit êtwe s-sewvi avec we type mime `text/javascwipt`. ( ͡o ω ͡o ) cependant, wes nyavigateuws a-appwiquent c-cette wègwe avec u-une cewtaine f-fwexibiwité et nye bwoquent que si we scwipt est s-sewvi avec un t-type image (`image/*`), /(^•ω•^) vidéo (`video/*`) ou audio (`audio/*`) o-ou csv (`text/csv`). (⑅˘꒳˘) si we scwipt est bwoqué, òωó u-un évènement [`ewwow`](/fw/docs/web/api/htmwewement/ewwow_event) sewa décwenché s-suw w'éwément, 🥺 s-sinon, w'évènement [`woad`](/fw_docs/web/api/window/woad_event) sewa envoyé. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## e-exempwes
 
-### Exemple simple
+### e-exempwe simpwe
 
-```html
-<!-- HTML4 et (x)HTML -->
-<script type="text/javascript" src="javascript.js"></script>
+```htmw
+<!-- htmw4 et (x)htmw -->
+<scwipt t-type="text/javascwipt" swc="javascwipt.js"></scwipt>
 
-<!-- HTML5 -->
-<script src="javascript.js"></script>
+<!-- h-htmw5 -->
+<scwipt s-swc="javascwipt.js"></scwipt>
 ```
 
-### Utilisation des modules et d'une alternative
+### u-utiwisation d-des moduwes et d'une awtewnative
 
-Les navigateurs qui prennent en charge le type `module` prennent également en charge un attribut `nomodule` qui permet aux navigateurs qui ne gèrent pas les modules d'utiliser un autre script.
+w-wes nyavigateuws q-qui pwennent e-en chawge we type `moduwe` pwennent égawement e-en chawge un attwibut `nomoduwe` qui pewmet aux nyavigateuws qui n-nye gèwent pas w-wes moduwes d'utiwisew u-un autwe scwipt. -.-
 
-```html
-<script type="module" src="main.mjs"></script>
-<script nomodule src="fallback.js"></script>
+```htmw
+<scwipt type="moduwe" swc="main.mjs"></scwipt>
+<scwipt nyomoduwe s-swc="fawwback.js"></scwipt>
 ```
 
-## Résumé technique
+## wésumé t-technique
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies d-de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >, σωσ
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >,
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >, >_<
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_m.C3.A9ta-donn.C3.A9es"
-          >contenu de méta-données</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_m.c3.a9ta-donn.c3.a9es"
+          >contenu d-de méta-données</a
+        >. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>Script dynamique tel que <code>text/javascript</code>.</td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu autowisé</th>
+      <td>scwipt dynamique tew que <code>text/javascwipt</code>.</td>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
+      <td>aucune, OwO wa bawise d-d'ouvewtuwe et wa bawise de fewmetuwe sont obwigatoiwes.</td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        Tout élément acceptant du
+        t-tout éwément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_m.C3.A9ta-donn.C3.A9es"
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_m.c3.a9ta-donn.c3.a9es"
           >contenu de méta-données</a
         >
-        ou tout élément acceptant du
+        ou t-tout éwément a-acceptant du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >.
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLScriptElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwscwiptewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{domxref("document.currentScript")}}
-- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Date_and_time_formats)
-- [Guide sur les modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules)
-- [Tableau de compatibilité de Ryan Grove pour les évènements liés aux éléments `<script>` et `<link>`](https://pie.gd/test/script-link-events/)
-- [Un article de Flavio Copes sur le chargement de ressources JavaScript et les différences entre `async` et `defer` (en anglais)](https://flaviocopes.com/javascript-async-defer/)
+- {{domxwef("document.cuwwentscwipt")}}
+- [wes fowmats de date et d'heuwe u-utiwisés en htmw](/fw/docs/web/htmw/date_and_time_fowmats)
+- [guide suw wes moduwes javascwipt](/fw/docs/web/javascwipt/guide/moduwes)
+- [tabweau d-de compatibiwité d-de wyan gwove p-pouw wes évènements wiés aux éwéments `<scwipt>` e-et `<wink>`](https://pie.gd/test/scwipt-wink-events/)
+- [un awticwe de fwavio copes suw we chawgement de wessouwces javascwipt e-et wes d-difféwences entwe `async` e-et `defew` (en a-angwais)](https://fwaviocopes.com/javascwipt-async-defew/)

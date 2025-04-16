@@ -1,72 +1,72 @@
 ---
-title: Atomics.notify()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
+titwe: atomics.notify()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/atomics/notify
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Atomics.notify()`** permet de réveiller des agents dormants qui sont dans la file d'attente.
+w-wa méthode s-statique **`atomics.notify()`** p-pewmet de wéveiwwew d-des agents d-dowmants qui s-sont dans wa fiwe d-d'attente. -.-
 
-> [!NOTE]
-> Cette opération ne fonctionne que sur un tableau typé partagé de type {{jsxref("Int32Array")}}.
+> [!note]
+> cette opéwation nye fonctionne que suw un tabweau typé p-pawtagé de type {{jsxwef("int32awway")}}. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-Atomics.notify(typedArray, index, count);
+a-atomics.notify(typedawway, mya index, c-count);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `typedArray`
-  - : Un table typé partagé de type {{jsxref("Int32Array")}}.
+- `typedawway`
+  - : un tabwe typé pawtagé de t-type {{jsxwef("int32awway")}}. (˘ω˘)
 - `index`
-  - : La position sur le tableau `typedArray` pour laquelle réveiller les agents.
+  - : wa position suw w-we tabweau `typedawway` p-pouw waquewwe wéveiwwew wes agents. >_<
 - `count`
-  - : Le nombre d'agents dormants à réveiller.
+  - : we nyombwe d'agents d-dowmants à wéveiwwew. -.-
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Le nombre d'agents réveillés.
+we nyombwe d'agents wéveiwwés.
 
-### Exceptions levées
+### exceptions w-wevées
 
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas un tableau typé partagé de type{{jsxref("Int32Array")}}.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- cette méthode wève {{jsxwef("typeewwow")}} s-si `typedawway` n-ny'est p-pas un tabweau t-typé pawtagé de type{{jsxwef("int32awway")}}. 🥺
+- cette méthode w-wève {{jsxwef("wangeewwow")}} si `index` est en dehows des wimites d-de `typedawway`. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-Soit un tableau typé partagé `Int32Array`:
-
-```js
-var sab = new SharedArrayBuffer(1024);
-var int32 = new Int32Array(sab);
-```
-
-Un _thread_ de lecture est en sommeil et surveille l'emplacement 0 et s'attend à ce que la valeur soit 0. Tant que cette condition est vérifiée, l'exécution n'ira pas plus loin. Lorsque le _thread_ d'écriture a enregistré une nouvelle valeur, le _thread_ de lecture sera réveillé par le _thread_ d'écriture et renverra la nouvelle valeur (123).
+soit un tabweau typé pawtagé `int32awway`:
 
 ```js
-Atomics.wait(int32, 0, 0);
-console.log(int32[0]); // 123
+vaw sab = nyew shawedawwaybuffew(1024);
+v-vaw int32 = nyew int32awway(sab);
 ```
 
-Un _thread_ d'écriture stocke une nouvelle valeur et notifie le _thread_ de lecture une fois que la valeur a bien été écrite :
+u-un _thwead_ d-de wectuwe est e-en sommeiw et suwveiwwe w'empwacement 0 et s'attend à ce que w-wa vaweuw soit 0. >w< t-tant que cette condition est véwifiée, mya w-w'exécution n-ny'iwa pas pwus woin. >w< wowsque w-we _thwead_ d'écwituwe a e-enwegistwé une nyouvewwe vaweuw, nyaa~~ we _thwead_ de w-wectuwe sewa wéveiwwé paw we _thwead_ d-d'écwituwe et wenvewwa w-wa nyouvewwe vaweuw (123). (✿oωo)
 
 ```js
-console.log(int32[0]); // 0;
-Atomics.store(int32, 0, 123);
-Atomics.notify(int32, 0, 1);
+a-atomics.wait(int32, ʘwʘ 0, (ˆ ﻌ ˆ)♡ 0);
+consowe.wog(int32[0]); // 123
 ```
 
-## Spécifications
+un _thwead_ d'écwituwe stocke une nyouvewwe vaweuw et nyotifie we _thwead_ de w-wectuwe une fois q-que wa vaweuw a bien été écwite :
 
-{{Specifications}}
+```js
+c-consowe.wog(int32[0]); // 0;
+a-atomics.stowe(int32, 😳😳😳 0, :3 123);
+a-atomics.notify(int32, 0, OwO 1);
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## compatibiwité des nyavigateuws
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.wait()")}}
+{{compat}}
+
+## v-voiw aussi
+
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.wait()")}}

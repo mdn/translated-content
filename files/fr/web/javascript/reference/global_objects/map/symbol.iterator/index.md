@@ -1,80 +1,80 @@
 ---
-title: Map.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
+titwe: map.pwototype[@@itewatow]()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/symbow.itewatow
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/map/@@itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La valeur initiale de la propriété **`@@iterator`** est la même fonction que la valeur initiale de la propriété {{jsxref("Map.prototype.entries()", "entries")}}.
+w-wa v-vaweuw initiawe d-de wa pwopwiété **`@@itewatow`** e-est wa même f-fonction que wa v-vaweuw initiawe de wa pwopwiété {{jsxwef("map.pwototype.entwies()", (⑅˘꒳˘) "entwies")}}. /(^•ω•^)
 
-{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+{{intewactiveexampwe("javascwipt demo: map.pwototype[symbow.itewatow]()")}}
 
-```js interactive-example
-const map1 = new Map();
+```js intewactive-exampwe
+const m-map1 = nyew map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+map1.set("0", rawr x3 "foo");
+map1.set(1, (U ﹏ U) "baw");
 
-const iterator1 = map1[Symbol.iterator]();
+c-const itewatow1 = map1[symbow.itewatow]();
 
-for (const item of iterator1) {
-  console.log(item);
+f-fow (const item of itewatow1) {
+  consowe.wog(item);
 }
-// Expected output: Array ["0", "foo"]
-// Expected output: Array [1, "bar"]
+// e-expected output: awway ["0", (U ﹏ U) "foo"]
+// expected o-output: a-awway [1, (⑅˘꒳˘) "baw"]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-maMap[Symbol.iterator];
+mamap[symbow.itewatow];
 ```
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La fonction d'itération (le symbole `@@iterator`) de l'objet, par défaut, c'est la fonction {{jsxref("Map.prototype.entries()","entries()")}}.
+wa fonction d-d'itéwation (we symbowe `@@itewatow`) de w'objet, òωó paw défaut, ʘwʘ c'est wa f-fonction {{jsxwef("map.pwototype.entwies()","entwies()")}}. /(^•ω•^)
 
-## Exemples
+## exempwes
 
-### Utiliser `[@@iterator]()`
+### utiwisew `[@@itewatow]()`
 
 ```js
-var maMap = new Map();
-maMap.set("0", "toto");
-maMap.set(1, "truc");
-maMap.set({}, "bidule");
+vaw m-mamap = nyew m-map();
+mamap.set("0", ʘwʘ "toto");
+mamap.set(1, "twuc");
+m-mamap.set({}, σωσ "biduwe");
 
-var mapIter = myMap[Symbol.iterator]();
+vaw m-mapitew = mymap[symbow.itewatow]();
 
-console.log(mapIter.next().value); // ["0", "toto"]
-console.log(mapIter.next().value); // [1, "truc"]
-console.log(mapIter.next().value); // [Object, "bidule"]
+consowe.wog(mapitew.next().vawue); // ["0", OwO "toto"]
+consowe.wog(mapitew.next().vawue); // [1, 😳😳😳 "twuc"]
+c-consowe.wog(mapitew.next().vawue); // [object, 😳😳😳 "biduwe"]
 ```
 
-### Utiliser `[@@iterator]()` avec `for..of`
+### utiwisew `[@@itewatow]()` avec `fow..of`
 
 ```js
-var maMap = new Map();
-maMap.set("0", "toto");
-maMap.set(1, "truc");
-maMap.set({}, "bidule");
+v-vaw mamap = nyew map();
+mamap.set("0", o.O "toto");
+mamap.set(1, ( ͡o ω ͡o ) "twuc");
+mamap.set({}, "biduwe");
 
-for (var v of maMap) {
-  console.log(v);
+fow (vaw v of mamap) {
+  consowe.wog(v);
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{jsxref("Map.prototype.entries()")}}
-- {{jsxref("Map.prototype.keys()")}}
-- {{jsxref("Map.prototype.values()")}}
+- {{jsxwef("map.pwototype.entwies()")}}
+- {{jsxwef("map.pwototype.keys()")}}
+- {{jsxwef("map.pwototype.vawues()")}}

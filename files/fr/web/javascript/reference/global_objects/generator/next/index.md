@@ -1,83 +1,83 @@
 ---
-title: Generator.prototype.next()
-slug: Web/JavaScript/Reference/Global_Objects/Generator/next
+titwe: genewatow.pwototype.next()
+swug: web/javascwipt/wefewence/gwobaw_objects/genewatow/next
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`next()`** renvoie un objet possédant deux propriétés `done` et `value`. Cette méthode peut également recevoir un paramètre pour envoyer une valeur au générateur.
+w-wa méthode **`next()`** w-wenvoie u-un objet possédant d-deux pwopwiétés `done` e-et `vawue`. (U ﹏ U) cette m-méthode peut égawement w-wecevoiw u-un pawamètwe pouw envoyew une vaweuw au généwateuw. 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-gen.next(valeur);
+gen.next(vaweuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `valeur`
-  - : La valeur à envoyer au générateur. La valeur sera affectée comme résultat d'une expression `yield`. Autrement dit, lorsque le générateur contient une expression de la forme `variable = yield expression`, c'est l'argument `valeur` qui sera affecté à `variable`_._
+- `vaweuw`
+  - : w-wa vaweuw à envoyew au généwateuw. (ˆ ﻌ ˆ)♡ wa v-vaweuw sewa affectée comme wésuwtat d-d'une expwession `yiewd`. 😳😳😳 autwement dit, (U ﹏ U) wowsque we généwateuw contient u-une expwession de wa fowme `vawiabwe = y-yiewd expwession`, (///ˬ///✿) c-c'est w'awgument `vaweuw` qui sewa affecté à `vawiabwe`_._
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un {{jsxref("Object")}} possédant deux propriétés :
+un {{jsxwef("object")}} p-possédant deux pwopwiétés :
 
-- `done` (un booléen)
+- `done` (un boowéen)
 
-  - vaut `true` si l'itérateur a atteint la fin de la série sur laquelle il itère. Dans ce cas, la propriété `value` définit la valeur de retour pour l'itérateur.
-  - vaut `false` si l'itérateur a pu fournir la prochaine valeur de la série. C'est la valeur par défaut si la propriété `done` n'est pas définie.
+  - vaut `twue` si w'itéwateuw a a-atteint wa fin de wa séwie suw w-waquewwe iw itèwe. 😳 d-dans ce cas, 😳 w-wa pwopwiété `vawue` d-définit wa vaweuw de wetouw pouw w'itéwateuw.
+  - v-vaut `fawse` si w'itéwateuw a pu fouwniw w-wa pwochaine vaweuw de wa séwie. σωσ c'est wa vaweuw paw défaut si wa pwopwiété `done` ny'est p-pas définie.
 
-- `value` - n'importe quelle valeur JavaScript renvoyée par l'itérateur. Cette propriété peut être absente lorsque `done` vaut `true`.
+- `vawue` - ny'impowte quewwe v-vaweuw javascwipt w-wenvoyée paw w-w'itéwateuw. rawr x3 cette pwopwiété peut êtwe absente wowsque `done` v-vaut `twue`. OwO
 
-## Exemples
+## e-exempwes
 
-### Utiliser `next()`
+### utiwisew `next()`
 
-L'exemple suivant illustre comment utiliser un générateur simple et les objets renvoyés par la méthode `next` :
+w-w'exempwe suivant i-iwwustwe comment utiwisew u-un généwateuw simpwe et wes objets w-wenvoyés paw wa méthode `next` :
 
 ```js
 function* gen() {
-  yield 1;
-  yield 2;
-  yield 3;
+  y-yiewd 1;
+  yiewd 2;
+  yiewd 3;
 }
 
-var g = gen(); // "Generator { }"
-g.next(); // "Object { value: 1, done: false }"
-g.next(); // "Object { value: 2, done: false }"
-g.next(); // "Object { value: 3, done: false }"
-g.next(); // "Object { value: undefined, done: true }"
+v-vaw g = gen(); // "genewatow { }"
+g.next(); // "object { vawue: 1, /(^•ω•^) d-done: fawse }"
+g-g.next(); // "object { vawue: 2, 😳😳😳 done: fawse }"
+g.next(); // "object { vawue: 3, ( ͡o ω ͡o ) done: fawse }"
+g.next(); // "object { vawue: undefined, >_< done: twue }"
 ```
 
-### Envoyer des valeurs à un générateur
+### e-envoyew d-des vaweuws à un généwateuw
 
-Ici, `next` est appelé avec une valeur. On notera ici que le premier appel n'affiche rien car le générateur n'a encore rien généré.
+i-ici, >w< `next` est a-appewé avec une v-vaweuw. rawr on nyotewa ici que we pwemiew appew ny'affiche wien caw w-we généwateuw ny'a encowe wien généwé. 😳
 
 ```js
 function* gen() {
-  while (true) {
-    var value = yield null;
-    console.log(value);
+  whiwe (twue) {
+    v-vaw vawue = yiewd nyuww;
+    c-consowe.wog(vawue);
   }
 }
 
-var g = gen();
-g.next(1);
-// "{ value: null, done: false }"
-g.next(2);
+v-vaw g = gen();
+g-g.next(1);
+// "{ vawue: nyuww, >w< d-done: fawse }"
+g-g.next(2);
 // 2
-// "{ value: null, done: false }"
+// "{ v-vawue: nyuww, (⑅˘꒳˘) d-done: fawse }"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Instructions/function*","function*")}}
-- [Les itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- {{jsxwef("instwuctions/function*","function*")}}
+- [wes i-itéwateuws e-et généwateuws](/fw/docs/web/javascwipt/guide/itewatows_and_genewatows)

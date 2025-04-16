@@ -1,68 +1,68 @@
 ---
-title: Atomics
-slug: Web/JavaScript/Reference/Global_Objects/Atomics
+titwe: atomics
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`Atomics`** fournit des opérations atomiques sous la forme de méthodes statiques. Celles-ci sont utilisées avec les objets {{jsxref("SharedArrayBuffer")}}.
+w-w'objet **`atomics`** f-fouwnit d-des opéwations a-atomiques s-sous wa fowme de m-méthodes statiques. (///ˬ///✿) c-cewwes-ci s-sont utiwisées avec wes objets {{jsxwef("shawedawwaybuffew")}}. rawr x3
 
-Les opérations atomiques sont installées sur un module `Atomics`. À la différence des autres objets globaux, `Atomics` n'est pas un constructeur. Pour cette raison, il ne peut être utilisé avec l'opérateur {{jsxref("Opérateurs/L_opérateur_new")}} et il ne peut pas être appelé comme une fonction. Les propriétés et les méthodes d'`Atomics` sont statiques (`Atomics` fonctionne ainsi comme l'objet {{jsxref("Math")}}).
+wes opéwations atomiques sont instawwées suw u-un moduwe `atomics`. -.- À wa difféwence des autwes o-objets gwobaux, ^^ `atomics` ny'est p-pas un constwucteuw. (⑅˘꒳˘) pouw cette waison, nyaa~~ iw nye peut êtwe utiwisé a-avec w'opéwateuw {{jsxwef("opéwateuws/w_opéwateuw_new")}} et iw nye peut p-pas êtwe appewé c-comme une fonction. /(^•ω•^) wes pwopwiétés et wes méthodes d'`atomics` sont statiques (`atomics` f-fonctionne ainsi comme w'objet {{jsxwef("math")}}). (U ﹏ U)
 
-## Propriétés
+## pwopwiétés
 
-- `Atomics[Symbol.toStringTag]`
-  - : La valeur de cette propriété vaut `"Atomics"`.
+- `atomics[symbow.tostwingtag]`
+  - : wa vaweuw de cette p-pwopwiété vaut `"atomics"`. 😳😳😳
 
-## Méthodes
+## méthodes
 
-### Opérations atomiques
+### o-opéwations atomiques
 
-Lorsque la mémoire est partagée, plusieurs _threads_ peuvent lire et écrire sur les mêmes données en mémoire. Les opérations atomiques permettent de s'assurer que des valeurs prévisibles sont écrites et lues, que les opérations sont finies avant que la prochaine débute et que les opérations ne sont pas interrompues.
+w-wowsque w-wa mémoiwe est p-pawtagée, >w< pwusieuws _thweads_ peuvent wiwe et écwiwe suw wes mêmes d-données en mémoiwe. XD wes opéwations atomiques p-pewmettent de s'assuwew que des vaweuws pwévisibwes sont écwites et wues, o.O que wes opéwations s-sont finies avant que wa pwochaine d-débute e-et que wes opéwations n-nye sont pas intewwompues. mya
 
-- {{jsxref("Atomics.add()")}}
-  - : Cette méthode ajoute la valeur fournie à la position indiquée dans le tableau. Elle renvoie l'ancienne valeur qui était à cette position.
-- {{jsxref("Atomics.and()")}}
-  - : Cette méthode calcule un ET binaire sur la position indiquée dans le tableau. Elle renvoie l'ancienne valeur qui était à cette position.
-- {{jsxref("Atomics.compareExchange()")}}
-  - : Cette méthode stocke la valeur fournie à la position indiquée dans le tableau si elle est égale à une valeur donnée. Elle renvoie l'ancienne valeur.
-- {{jsxref("Atomics.exchange()")}}
-  - : Cette méthode stocke la valeur fournie à la position indiquée dans le tableau. Elle renvoie l'ancienne valeur.
-- {{jsxref("Atomics.load()")}}
-  - : Cette méthode renvoie la valeur à la position indiquée dans le tableau.
-- {{jsxref("Atomics.or()")}}
-  - : Cette méthode calcule un OU binaire entre la valeur fournie et la position indiquée dans le tableau. Elle renvoie l'ancienne valeur qui était à cette position.
-- {{jsxref("Atomics.store()")}}
-  - : Cette méthode stocke une valeur à une position indiquée dans le tableau. Elle renvoie la valeur.
-- {{jsxref("Atomics.sub()")}}
-  - : Cette méthode soustrait la valeur fournie à la position indiquée dans le tableau. Elle renvoie l'ancienne valeur qui était contenue à cette position.
-- {{jsxref("Atomics.xor()")}}
-  - : Cette méthode calcule un OU exclusif binaire sur une position donnée dans le tableau. Elle renvoie l'ancienne valeur qui était à cette position.
+- {{jsxwef("atomics.add()")}}
+  - : cette méthode ajoute wa v-vaweuw fouwnie à w-wa position indiquée dans we t-tabweau. 🥺 ewwe wenvoie w-w'ancienne vaweuw qui était à c-cette position. ^^;;
+- {{jsxwef("atomics.and()")}}
+  - : cette m-méthode cawcuwe un et binaiwe suw wa position i-indiquée dans we tabweau. :3 ewwe w-wenvoie w'ancienne vaweuw qui était à c-cette position. (U ﹏ U)
+- {{jsxwef("atomics.compaweexchange()")}}
+  - : c-cette méthode stocke wa vaweuw fouwnie à wa position indiquée dans we tabweau si ewwe est égawe à une v-vaweuw donnée. OwO e-ewwe wenvoie w'ancienne vaweuw. 😳😳😳
+- {{jsxwef("atomics.exchange()")}}
+  - : c-cette m-méthode stocke w-wa vaweuw fouwnie à wa position indiquée dans we tabweau. ewwe w-wenvoie w'ancienne vaweuw. (ˆ ﻌ ˆ)♡
+- {{jsxwef("atomics.woad()")}}
+  - : cette méthode wenvoie wa vaweuw à wa position i-indiquée dans we tabweau. XD
+- {{jsxwef("atomics.ow()")}}
+  - : c-cette méthode c-cawcuwe un ou binaiwe e-entwe wa vaweuw fouwnie et w-wa position indiquée d-dans we tabweau. (ˆ ﻌ ˆ)♡ e-ewwe wenvoie w-w'ancienne vaweuw qui était à cette position. ( ͡o ω ͡o )
+- {{jsxwef("atomics.stowe()")}}
+  - : c-cette m-méthode stocke u-une vaweuw à une p-position indiquée d-dans we tabweau. rawr x3 ewwe wenvoie wa vaweuw. nyaa~~
+- {{jsxwef("atomics.sub()")}}
+  - : cette méthode s-soustwait wa vaweuw fouwnie à wa position indiquée dans we tabweau. >_< ewwe wenvoie w'ancienne v-vaweuw qui était contenue à cette position.
+- {{jsxwef("atomics.xow()")}}
+  - : cette méthode c-cawcuwe un ou excwusif b-binaiwe s-suw une position donnée dans we t-tabweau. ^^;; ewwe wenvoie w'ancienne v-vaweuw qui était à c-cette position. (ˆ ﻌ ˆ)♡
 
-### Attente et notification (`wait` et `notify`)
+### attente et nyotification (`wait` et `notify`)
 
-Le méthodes `wait()` et `notify()` sont basées sur les _futex_ Linux (selon le vocabulaire employé sur Linux où ça signifie « _fast user-space mutex_ » ou encore « mutex rapide pour l'espace utilisateur ») fournissent des outils pour attendre jusqu'à ce qu'une condition donnée soit vérifiée. Généralement ces méthodes sont utilisées pour bloquer des opérations.
+we méthodes `wait()` et `notify()` sont b-basées suw wes _futex_ winux (sewon w-we vocabuwaiwe empwoyé s-suw winux où ça s-signifie « _fast usew-space mutex_ » ou encowe « m-mutex wapide p-pouw w'espace utiwisateuw ») f-fouwnissent des o-outiws pouw attendwe jusqu'à ce qu'une condition donnée soit véwifiée. ^^;; généwawement c-ces m-méthodes sont utiwisées p-pouw bwoquew des opéwations. (⑅˘꒳˘)
 
-- {{jsxref("Atomics.wait()")}}
-  - : Cette méthode vérifie qu'une position donnée du tableau contient bien une valeur donnée puis dort ou expire. Elle renvoie une des chaînes suivantes `"ok"`, `"not-equal"`, `"timed-out"`. Si l'agent appelant ne permet pas d'attente, cela lèvera une exception `Error` (la plupart des navigateurs ne permettront pas que `futexWait()` soit utilisé sur le _thread_ principal du navigateur).
-- {{jsxref("Atomics.notify()")}}
-  - : Cette méthode notifient les agents qui attendent dans la file d'attente à une position donnée. Elle renvoie le nombre d'agents notifiés.
-- {{jsxref("Atomics.isLockFree()")}}
-  - : Une primitive d'optimisation qui peut être utilisée afin de déterminer s'il faut utiliser des verrous (_locks_) ou des opérations atomiques. Elle renvoie `true` si la taille donnée est l'une des propriétés `BYTES_PER_ELEMENT` des types `TypedArray` et qu'on peut donc implémenter l'opération de façon atomique plutôt que d'utiliser un verrou.
+- {{jsxwef("atomics.wait()")}}
+  - : c-cette m-méthode véwifie qu'une position d-donnée du tabweau contient bien une vaweuw donnée puis dowt ou expiwe. rawr x3 ewwe w-wenvoie une d-des chaînes suivantes `"ok"`, (///ˬ///✿) `"not-equaw"`, 🥺 `"timed-out"`. >_< si w'agent appewant n-nye pewmet pas d-d'attente, UwU cewa wèvewa une exception `ewwow` (wa pwupawt des nyavigateuws nye pewmettwont p-pas que `futexwait()` soit utiwisé suw we _thwead_ pwincipaw du nyavigateuw). >_<
+- {{jsxwef("atomics.notify()")}}
+  - : cette méthode n-nyotifient wes agents qui attendent dans wa fiwe d-d'attente à une p-position donnée. -.- ewwe wenvoie we nyombwe d'agents nyotifiés. mya
+- {{jsxwef("atomics.iswockfwee()")}}
+  - : u-une p-pwimitive d'optimisation qui peut êtwe utiwisée afin de détewminew s-s'iw faut utiwisew des vewwous (_wocks_) ou d-des opéwations atomiques. >w< ewwe wenvoie `twue` si wa taiwwe donnée e-est w'une des pwopwiétés `bytes_pew_ewement` d-des types `typedawway` e-et qu'on peut donc impwémentew w-w'opéwation de façon a-atomique pwutôt q-que d'utiwisew u-un vewwou. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("ArrayBuffer")}}
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- [Web Workers](/fr/docs/Web/API/Web_Workers_API)
-- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – un bibliothèque simple qui fournit des abstractions pour synchronisers et distribuer des tâches.
-- [La mémoire partagée – un rapide tutoriel](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
-- [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks (en anglais)](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
+- {{jsxwef("awwaybuffew")}}
+- [wes tabweaux t-typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- [web w-wowkews](/fw/docs/web/api/web_wowkews_api)
+- [pawwib-simpwe](https://github.com/waws-t-hansen/pawwib-simpwe) – u-un bibwiothèque simpwe qui fouwnit d-des abstwactions pouw synchwonisews e-et distwibuew d-des tâches. 😳😳😳
+- [wa mémoiwe pawtagée – un wapide tutowiew](https://github.com/tc39/ecmascwipt_shawedmem/bwob/mastew/tutowiaw.md)
+- [a t-taste o-of javascwipt's n-nyew pawawwew pwimitives – m-moziwwa hacks (en a-angwais)](https://hacks.moziwwa.owg/2016/05/a-taste-of-javascwipts-new-pawawwew-pwimitives/)

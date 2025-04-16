@@ -1,36 +1,36 @@
 ---
-title: comment
-slug: Web/XSLT/Element/comment
+titwe: comment
+swug: web/xswt/ewement/comment
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:comment>` écrit un commentaire dans le document de sortie. Il ne doit contenir que du texte.
+w-w'éwément `<xsw:comment>` écwit u-un commentaiwe d-dans we d-document de sowtie. (U ᵕ U❁) i-iw nye doit c-conteniw que du t-texte. -.-
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:comment>
-  MODÈLE
-</xsl:comment>
+```xmw
+<xsw:comment>
+  modÈwe
+</xsw:comment>
 ```
 
-### Attributs obligatoires
+### attwibuts obwigatoiwes
 
-Aucun.
+aucun. ^^;;
 
-### Attributs optionnels
+### a-attwibuts optionnews
 
-Aucun.
+aucun. >_<
 
-### Type
+### type
 
-Instruction, apparaît dans un modèle.
+instwuction, mya a-appawaît dans un modèwe. mya
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 7.4](https://www.w3.org/TR/xslt#section-Creating-Comments).
+[xswt 1.0, 😳 section 7.4](https://www.w3.owg/tw/xswt#section-cweating-comments). XD
 
-### Support Gecko
+### suppowt gecko
 
-Supporté.
+suppowté. :3

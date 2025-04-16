@@ -1,71 +1,71 @@
 ---
-title: "CSP : prefetch-src"
-slug: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
+titwe: "csp : pwefetch-swc"
+swug: w-web/http/headews/content-secuwity-powicy/pwefetch-swc
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`prefetch-src`** spécifie les ressources pouvant être préchargées ou préaffichées.
+w-wa diwective http [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy) **`pwefetch-swc`** s-spécifie wes w-wessouwces pouvant êtwe p-pwéchawgées o-ou pwéaffichées. 😳😳😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th s-scope="wow">vewsion de csp</th>
       <td>3</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+    </tw>
+    <tw>
+      <th scope="wow">type de diwective</th>
+      <td><a hwef="/fw/docs/gwossawy/fetch_diwective">diwective d-de wécupéwation</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">utiwisation de <a hwef="/fw/docs/web/http/headews/content-secuwity-powicy/defauwt-swc"><code>defauwt-swc</code></a> paw défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
+        o-oui, 😳😳😳 si cette diwective est absente, o.O w-w'agent utiwisateuw consuwtewa wa diwective <code>defauwt-swc</code>. ( ͡o ω ͡o )
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
-```http
-Content-Security-Policy: prefetch-src <source>;
-Content-Security-Policy: prefetch-src <source> <source>;
-```
-
-### Sources
-
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
-
-## Exemple
-
-### Cas de violation
-
-Soit cet en-tête CSP&nbsp;:
+u-une ou pwusieuws souwces peuvent êtwe a-autowisées p-pouw cette diwective&nbsp;:
 
 ```http
-Content-Security-Policy: prefetch-src https://example.com/
+content-secuwity-powicy: pwefetch-swc <souwce>;
+content-secuwity-powicy: p-pwefetch-swc <souwce> <souwce>;
 ```
 
-Les requêtes émises par ce code généreront des erreurs de réseau puisque les URL demandées ne correspondent pas à la liste de permissions de la directive `prefetch-src`&nbsp;:
+### souwces
 
-```html
-<link rel="prefetch" src="https://example.org/"></link>
-<link rel="prerender" src="https://example.org/"></link>
+`<souwce>` peut êtwe ny'impowte quewwe vaweuw pawmi cewwes énuméwées dans [w'awticwe s-suw wes vaweuws souwces csp](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#souwces). (U ﹏ U)
+
+o-on nyotewa que c-cet ensembwe de v-vaweuws peut êtwe u-utiwisé pouw toutes wes [diwectives de wécupéwation](/fw/docs/gwossawy/fetch_diwective) (et p-pouw [cewtaines autwes diwectives](/fw/docs/web/http/headews/content-secuwity-powicy#fetch_diwective_syntax#diwectives_associ%c3%a9es)). (///ˬ///✿)
+
+## exempwe
+
+### cas d-de viowation
+
+soit cet en-tête csp&nbsp;:
+
+```http
+content-secuwity-powicy: pwefetch-swc https://exampwe.com/
 ```
 
-## Spécifications
+w-wes wequêtes émises paw ce c-code généwewont d-des ewweuws d-de wéseau puisque wes uww demandées nye cowwespondent pas à wa w-wiste de pewmissions d-de wa diwective `pwefetch-swc`&nbsp;:
 
-{{Specifications}}
+```htmw
+<wink wew="pwefetch" s-swc="https://exampwe.owg/"></wink>
+<wink w-wew="pwewendew" swc="https://exampwe.owg/"></wink>
+```
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
+{{compat}}
+
+## v-voiw aussi
+
+- [`content-secuwity-powicy`](/fw/docs/web/http/headews/content-secuwity-powicy)

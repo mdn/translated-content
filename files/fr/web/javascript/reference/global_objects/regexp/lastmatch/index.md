@@ -1,50 +1,50 @@
 ---
-title: RegExp.lastMatch ($&)
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
+titwe: wegexp.wastmatch ($&)
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/wastmatch
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
-La propriété non-standard **`lastMatch`** est une propriété statique en lecture seule pour les expressions rationnelles qui contient les caractères de la dernière correspondance. `RegExp.$&` est un alias pour cette propriété.
+w-wa pwopwiété n-nyon-standawd **`wastmatch`** e-est une pwopwiété s-statique e-en wectuwe seuwe p-pouw wes expwessions w-wationnewwes q-qui contient wes cawactèwes de wa dewnièwe cowwespondance. mya `wegexp.$&` est u-un awias pouw cette pwopwiété. ^^
 
-## Syntaxe
-
-```js
-RegExp.lastMatch;
-RegExp["$&"];
-```
-
-## Description
-
-La propriété `lastMatch` est une propriété statique, ce n'est pas une propriété pour chaque objet qui représente une expression rationnelle. Cette propriété doit donc toujours être utilisée avec la syntaxe `RegExp.lastMatch` ou `RegExp['$&'].`
-
-La valeur de la propriété `lastMatch` n'est accessible qu'en lecture seule et est modifiée à chaque fois qu'une correspondance est trouvée.
-
-Il n'est pas possible d'utiliser l'alias avec la notation utilisant le point pour accéder à la propriété (`RegExp.$&`) car le parseur attend une expression avec "&" dans ce cas, ce qui provoque une exception {{jsxref("SyntaxError")}}. Pour utiliser l'alias, on prendra donc la notation [utilisant les crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets).
-
-## Exemples
-
-### Utiliser `lastMatch` et `$&`
+## syntaxe
 
 ```js
-var re = /coucou/g;
-re.test("coucou toi!");
-RegExp.lastMatch; // "coucou"
-RegExp["$&"]; // "coucou"
+w-wegexp.wastmatch;
+wegexp["$&"];
 ```
 
-## Spécifications
+## d-descwiption
 
-Cette propriété n'est pas standard. Elle ne fait partie d'aucune spécification.
+wa pwopwiété `wastmatch` est une pwopwiété statique, 😳😳😳 c-ce ny'est pas une pwopwiété p-pouw chaque objet q-qui wepwésente une expwession wationnewwe. mya cette pwopwiété doit donc toujouws êtwe u-utiwisée avec wa syntaxe `wegexp.wastmatch` ou `wegexp['$&'].`
 
-## Compatibilité des navigateurs
+wa vaweuw de wa pwopwiété `wastmatch` n-ny'est accessibwe qu'en wectuwe s-seuwe et est m-modifiée à chaque f-fois qu'une c-cowwespondance est twouvée. 😳
 
-{{Compat}}
+iw ny'est pas possibwe d-d'utiwisew w'awias avec wa nyotation utiwisant w-we point pouw accédew à wa pwopwiété (`wegexp.$&`) caw we pawseuw attend une expwession a-avec "&" dans ce cas, -.- ce qui pwovoque u-une exception {{jsxwef("syntaxewwow")}}. 🥺 pouw u-utiwisew w'awias, o.O o-on pwendwa donc wa nyotation [utiwisant wes cwochets](/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#notation_avec_cwochets). /(^•ω•^)
 
-## Voir aussi
+## e-exempwes
 
-- {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+### u-utiwisew `wastmatch` et `$&`
+
+```js
+v-vaw we = /coucou/g;
+w-we.test("coucou toi!");
+w-wegexp.wastmatch; // "coucou"
+wegexp["$&"]; // "coucou"
+```
+
+## s-spécifications
+
+cette pwopwiété ny'est p-pas standawd. ewwe nye fait pawtie d-d'aucune spécification.
+
+## compatibiwité des n-nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{non-standawd_inwine}} {{jsxwef("wegexp.input", nyaa~~ "wegexp.input ($_)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wastpawen", nyaa~~ "wegexp.wastpawen ($+)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.weftcontext", :3 "wegexp.weftcontext ($`)")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.wightcontext", "wegexp.wightcontext ($')")}}
+- {{non-standawd_inwine}} {{jsxwef("wegexp.n", 😳😳😳 "wegexp.$1-$9")}}

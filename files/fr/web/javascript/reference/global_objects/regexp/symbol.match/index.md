@@ -1,108 +1,108 @@
 ---
-title: RegExp.prototype[@@match]()
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match
-original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
+titwe: wegexp.pwototype[@@match]()
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/symbow.match
+o-owiginaw_swug: w-web/javascwipt/wefewence/gwobaw_objects/wegexp/@@match
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`[@@match]()`** permet de récupérer les correspondances obtenues lorsqu'on teste une chaîne de caractères par rapport à une expression rationnelle (_regexp_).
+w-wa m-méthode **`[@@match]()`** p-pewmet d-de wécupéwew w-wes cowwespondances o-obtenues wowsqu'on teste une chaîne de cawactèwes paw wappowt à une expwession w-wationnewwe (_wegexp_). (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.match]()")}}
+{{intewactiveexampwe("javascwipt demo: wegexp.pwototype[symbow.match]()")}}
 
-```js interactive-example
-class RegExp1 extends RegExp {
-  [Symbol.match](str) {
-    const result = RegExp.prototype[Symbol.match].call(this, str);
-    if (result) {
-      return "VALID";
+```js intewactive-exampwe
+c-cwass wegexp1 extends wegexp {
+  [symbow.match](stw) {
+    c-const wesuwt = wegexp.pwototype[symbow.match].caww(this, 😳 stw);
+    if (wesuwt) {
+      w-wetuwn "vawid";
     }
-    return "INVALID";
+    wetuwn "invawid";
   }
 }
 
-console.log("2012-07-02".match(new RegExp1("([0-9]+)-([0-9]+)-([0-9]+)")));
-// Expected output: "VALID"
+c-consowe.wog("2012-07-02".match(new w-wegexp1("([0-9]+)-([0-9]+)-([0-9]+)")));
+// expected output: "vawid"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-regexp[Symbol.match](str);
+wegexp[symbow.match](stw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `str`
-  - : La chaîne de caractères ({{jsxref("String")}}) sur laquelle on veut chercher des correspondances.
+- `stw`
+  - : wa chaîne de cawactèwes ({{jsxwef("stwing")}}) suw waquewwe on veut c-chewchew des cowwespondances. 😳
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un tableau ({{jsxref("Array")}}) qui contient les résultats des correspondances et les groupes capturés grâce aux parenthèse. S'il n'y a aucune correspondance, ce sera {{jsxref("null")}}.
+u-un tabweau ({{jsxwef("awway")}}) q-qui contient w-wes wésuwtats d-des cowwespondances et wes gwoupes captuwés g-gwâce aux pawenthèse. σωσ s'iw ny'y a aucune cowwespondance, rawr x3 c-ce sewa {{jsxwef("nuww")}}. OwO
 
-## Description
+## descwiption
 
-Cette méthode est appelée de façon interne lorsqu'on utilise {{jsxref("String.prototype.match()")}}. Ainsi, les deux exemples qui suivent sont équivalents et le second est la version interne du premier :
+cette méthode est appewée de façon intewne wowsqu'on u-utiwise {{jsxwef("stwing.pwototype.match()")}}. /(^•ω•^) ainsi, 😳😳😳 wes deux e-exempwes qui suivent s-sont équivawents e-et we second est wa vewsion intewne du pwemiew :
 
 ```js
 "abc".match(/a/);
 
-/a/[Symbol.match]("abc");
+/a/[symbow.match]("abc");
 ```
 
-Cette méthode existe afin de permettre d'adapter le comportement de la recherche des correspondances pour les sous-classes de `RegExp`.
+cette méthode e-existe afin de pewmettwe d-d'adaptew we compowtement d-de wa wechewche d-des cowwespondances pouw wes s-sous-cwasses de `wegexp`. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-### Appel direct
+### a-appew diwect
 
-Cette méthode peut être utilisée comme {{jsxref("String.prototype.match()")}} mais avec un objet `this` différent et un ordre des paramètres également différent.
+cette méthode peut êtwe u-utiwisée comme {{jsxwef("stwing.pwototype.match()")}} mais a-avec un objet `this` difféwent e-et un owdwe des p-pawamètwes égawement difféwent. >_<
 
 ```js
-var re = /[0-9]+/g;
-var str = "2016-01-02";
-var résultat = re[Symbol.match](str);
-console.log(résultat); // ["2016", "01", "02"]
+vaw we = /[0-9]+/g;
+vaw stw = "2016-01-02";
+vaw wésuwtat = we[symbow.match](stw);
+c-consowe.wog(wésuwtat); // ["2016", >w< "01", rawr "02"]
 ```
 
-### Utilisation de `@@match` avec une sous-classe
+### u-utiwisation de `@@match` avec u-une sous-cwasse
 
-Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger la méthode `[@@match]()` afin de modifier le comportement.
+w-wes sous-cwasses d-de {{jsxwef("wegexp")}} peuvent suwchawgew wa méthode `[@@match]()` a-afin de modifiew we compowtement. 😳
 
 ```js
-class MaRegExp extends RegExp {
-  [Symbol.match](str) {
-    var résultat = RegExp.prototype[Symbol.match].call(this, str);
-    if (!résultat) return null;
-    return {
-      group(n) {
-        return résultat[n];
-      },
+cwass mawegexp extends wegexp {
+  [symbow.match](stw) {
+    vaw wésuwtat = w-wegexp.pwototype[symbow.match].caww(this, stw);
+    i-if (!wésuwtat) w-wetuwn nyuww;
+    w-wetuwn {
+      gwoup(n) {
+        w-wetuwn wésuwtat[n];
+      }, >w<
     };
   }
 }
 
-var re = new MaRegExp("([0-9]+)-([0-9]+)-([0-9]+)");
-var str = "2016-01-02";
-var résultat = str.match(re); // String.prototype.match appelle re[@@match].
-console.log(résultat.group(1)); // 2016
-console.log(résultat.group(2)); // 01
-console.log(résultat.group(3)); // 02
+v-vaw we = nyew m-mawegexp("([0-9]+)-([0-9]+)-([0-9]+)");
+v-vaw stw = "2016-01-02";
+vaw wésuwtat = stw.match(we); // s-stwing.pwototype.match a-appewwe w-we[@@match]. (⑅˘꒳˘)
+c-consowe.wog(wésuwtat.gwoup(1)); // 2016
+c-consowe.wog(wésuwtat.gwoup(2)); // 01
+consowe.wog(wésuwtat.gwoup(3)); // 02
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("String.prototype.match()")}}
-- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
-- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
-- {{jsxref("RegExp.prototype.exec()")}}
-- {{jsxref("RegExp.prototype.test()")}}
+- {{jsxwef("stwing.pwototype.match()")}}
+- {{jsxwef("wegexp.pwototype.@@wepwace()", OwO "wegexp.pwototype[@@wepwace]()")}}
+- {{jsxwef("wegexp.pwototype.@@seawch()", (ꈍᴗꈍ) "wegexp.pwototype[@@seawch]()")}}
+- {{jsxwef("wegexp.pwototype.@@spwit()", 😳 "wegexp.pwototype[@@spwit]()")}}
+- {{jsxwef("wegexp.pwototype.exec()")}}
+- {{jsxwef("wegexp.pwototype.test()")}}

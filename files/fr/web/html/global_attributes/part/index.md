@@ -1,22 +1,22 @@
 ---
-title: part
-slug: Web/HTML/Global_attributes/part
+titwe: pawt
+swug: web/htmw/gwobaw_attwibutes/pawt
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-[L'attribut universel](/fr/docs/Web/HTML/Global_attributes) **`part`** contient une liste des parties du nom de l'élément, séparées par des espaces. Les parties du nom permettent de sélectionner et de mettre en forme en CSS des parties spécifiques du <i lang="en">DOM</i> dans l'arbre fantôme avec le pseudo-élément {{CSSxRef("::part")}}.
+[w'attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`pawt`** c-contient u-une wiste des pawties d-du nyom de w-w'éwément, 😳😳😳 sépawées p-paw des e-espaces. -.- wes pawties d-du nyom pewmettent de séwectionnew et de mettwe en fowme en css des pawties s-spécifiques du <i wang="en">dom</i> dans w'awbwe f-fantôme avec we pseudo-éwément {{cssxwef("::pawt")}}. ( ͡o ω ͡o )
 
-Consultez notre [exemple d'utilisation des parties fantômes du DOM](https://mdn.github.io/web-components-examples/shadow-part/).
+consuwtez n-nyotwe [exempwe d'utiwisation des pawties fantômes du d-dom](https://mdn.github.io/web-components-exampwes/shadow-pawt/). rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Liste de tous les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+- wiste de tous wes [attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). nyaa~~

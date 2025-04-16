@@ -1,364 +1,364 @@
 ---
-title: <input type="checkbox">
-slug: Web/HTML/Element/input/checkbox
-l10n:
-  sourceCommit: 2b4bf33acb346baf925fad1317f425ba2b967456
+titwe: <input type="checkbox">
+s-swug: web/htmw/ewement/input/checkbox
+w-w10n:
+  s-souwcecommit: 2b4bf33acb346baf925fad1317f425ba2b967456
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type **`checkbox`** sont affichés sous la forme de boîtes à cocher qui sont cochées lorsqu'elles sont activées. Elles permettent de sélectionner une ou plusieurs valeurs dans un formulaire. Leur apparence exacte dépend du navigateur utilisé. Il s'agit généralement d'une case carrée, dont les coins peuvent parfois être arrondis.
+w-wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) d-de type **`checkbox`** s-sont affichés sous w-wa fowme de b-boîtes à cochew qui sont cochées wowsqu'ewwes sont activées. (˘ω˘) ewwes pewmettent d-de séwectionnew une ou pwusieuws vaweuws dans u-un fowmuwaiwe. OwO weuw appawence exacte d-dépend du nyavigateuw utiwisé. (ꈍᴗꈍ) iw s'agit généwawement d-d'une case cawwée, òωó dont wes coins p-peuvent pawfois êtwe a-awwondis. ʘwʘ
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;input type=&quot;checkbox&quot;&gt;", ʘwʘ "tabbed-standawd")}}
 
-```html interactive-example
-<fieldset>
-  <legend>Choose your monster's features:</legend>
+```htmw intewactive-exampwe
+<fiewdset>
+  <wegend>choose youw monstew's featuwes:</wegend>
 
   <div>
-    <input type="checkbox" id="scales" name="scales" checked />
-    <label for="scales">Scales</label>
+    <input type="checkbox" i-id="scawes" nyame="scawes" checked />
+    <wabew fow="scawes">scawes</wabew>
   </div>
 
   <div>
-    <input type="checkbox" id="horns" name="horns" />
-    <label for="horns">Horns</label>
+    <input type="checkbox" id="howns" n-nyame="howns" />
+    <wabew fow="howns">howns</wabew>
   </div>
-</fieldset>
+</fiewdset>
 ```
 
-```css interactive-example
-p,
-label {
-  font:
-    1rem "Fira Sans",
-    sans-serif;
+```css intewactive-exampwe
+p-p, nyaa~~
+wabew {
+  f-font:
+    1wem "fiwa s-sans", UwU
+    s-sans-sewif;
 }
 
 input {
-  margin: 0.4rem;
+  mawgin: 0.4wem;
 }
 ```
 
-> **Note :** [Les boutons radio](/fr/docs/Web/HTML/Element/input/radio) sont semblables aux cases à cocher, mais il existe une différence importante&nbsp;: les boutons radio permettent de sélectionner une seule valeur parmi plusieurs d'[un même groupe (identifié par le nom)](/fr/docs/Web/HTML/Element/input/radio#defining_a_radio_group) alors que les cases à cocher permettent de cocher/décocher plusieurs valeurs d'un groupe.
+> **note :** [wes boutons wadio](/fw/docs/web/htmw/ewement/input/wadio) s-sont sembwabwes aux cases à cochew, (⑅˘꒳˘) mais i-iw existe une difféwence impowtante&nbsp;: wes boutons wadio pewmettent de séwectionnew une s-seuwe vaweuw pawmi pwusieuws d'[un m-même gwoupe (identifié p-paw w-we nyom)](/fw/docs/web/htmw/ewement/input/wadio#defining_a_wadio_gwoup) awows que wes cases à cochew pewmettent d-de cochew/décochew p-pwusieuws vaweuws d'un gwoupe. (˘ω˘)
 
-## Valeur
+## v-vaweuw
 
-Une chaîne de caractères qui représente la valeur de la case à cocher. Cette chaîne de caractères n'est pas affichée côté client mais est envoyée au serveur comme valeur associée à la donnée envoyée avec le nom de la case à cocher. Par exemple&nbsp;:
+u-une chaîne de cawactèwes qui wepwésente w-wa vaweuw de wa case à c-cochew. :3 cette chaîne de cawactèwes ny'est pas a-affichée côté cwient mais e-est envoyée au sewveuw comme vaweuw a-associée à w-wa donnée envoyée avec we nyom de wa case à cochew. (˘ω˘) paw exempwe&nbsp;:
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
     <input
       type="checkbox"
-      id="subscribeNews"
-      name="subscribe"
-      value="newsletter" />
-    <label for="subscribeNews">
-      Souhaitez-vous vous abonner à la newsletter ?
-    </label>
+      id="subscwibenews"
+      nyame="subscwibe"
+      v-vawue="newswettew" />
+    <wabew f-fow="subscwibenews">
+      souhaitez-vous v-vous abonnew à w-wa nyewswettew ?
+    </wabew>
   </div>
   <div>
-    <button type="submit">Subscribe</button>
+    <button t-type="submit">subscwibe</button>
   </div>
-</form>
+</fowm>
 ```
 
-Dans cet exemple, on a le nom (l'attribut `name`) `subscribe` utilisé pour la case à cocher avec une valeur (l'attribut `value`) qui est `newsletter`. Lorsque le formulaire est envoyé, les données seront transmises sous la forme `subscribe=newsletter`.
+dans cet exempwe, nyaa~~ on a we nyom (w'attwibut `name`) `subscwibe` u-utiwisé pouw wa case à cochew avec une vaweuw (w'attwibut `vawue`) qui e-est `newswettew`. (U ﹏ U) wowsque we fowmuwaiwe e-est envoyé, nyaa~~ w-wes données s-sewont twansmises sous wa fowme `subscwibe=newswettew`. ^^;;
 
-Si l'attribut `value` n'était pas renseigné, la valeur par défaut serait `on` (dans l'exemple, les données envoyées au serveur auraient eu la forme `subscribe=on`).
+s-si w'attwibut `vawue` n-ny'était pas w-wenseigné, OwO wa vaweuw p-paw défaut sewait `on` (dans w'exempwe, nyaa~~ wes d-données envoyées a-au sewveuw a-auwaient eu wa f-fowme `subscwibe=on`). UwU
 
-> [!NOTE]
-> Si la case à cocher n'est pas cochée lorsque le formulaire est envoyé, ni le nom ni la valeur ne sont envoyés au serveur pour indiquer cet état (autrement dit, le client n'envoie pas quelque chose comme `value=unchecked`)&nbsp;; la valeur n'est pas transmise au serveur du tout. Si on veut envoyer une valeur par défaut lorsque la case à cocher est décochée, une solution pourrait être d'utiliser du JavaScript pour créer un élément [`<input type="hidden">`](/fr/docs/Web/HTML/Element/input/hidden).
+> [!note]
+> s-si wa case à cochew n'est pas cochée wowsque we fowmuwaiwe e-est envoyé, 😳 nyi we nyom nyi wa vaweuw nye sont envoyés au sewveuw pouw indiquew cet état (autwement d-dit, 😳 we cwient ny'envoie pas quewque chose comme `vawue=unchecked`)&nbsp;; w-wa vaweuw ny'est p-pas twansmise a-au sewveuw du tout. (ˆ ﻌ ˆ)♡ si on veut e-envoyew une vaweuw paw défaut w-wowsque wa case à c-cochew est décochée, (✿oωo) une sowution pouwwait êtwe d'utiwisew du javascwipt pouw cwéew un éwément [`<input t-type="hidden">`](/fw/docs/web/htmw/ewement/input/hidden). nyaa~~
 
-## Attributs supplémentaires
+## attwibuts suppwémentaiwes
 
-En plus des attributs qui sont partagés par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les champs de type `checkbox` prennent aussi en charge les attributs suivants&nbsp;:
+e-en pwus des attwibuts q-qui sont pawtagés p-paw w'ensembwe des éwéments [`<input>`](/fw/docs/web/htmw/ewement/input), ^^ wes champs de type `checkbox` p-pwennent a-aussi en chawge wes attwibuts s-suivants&nbsp;:
 
 - `checked`
 
-  - : Un attribut booléen qui indique si la case est cochée par défaut à l'ouverture de la page. Cet attribut n'indique _pas_ si la case est actuellement cochée&nbsp;: si l'état a été modifié, l'attribut dans le document ne reflètera pas cette modification (seul l'attribut IDL `checked` de l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) est mis à jour).
-    > [!NOTE]
-    > À la différence des autres champs, les valeurs des cases à cocher ne sont envoyées au serveur que lorsqu'elles sont cochées. Lorsque c'est le cas, c'est la valeur de l'attribut `value` qui est envoyé (ou la valeur `on` si aucun attribut `value` n'est présent).
-    > À la différence des autres navigateurs, Firefox [conserve l'état coché placé dynamiquement](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un champ `<input>` après les rechargements de la page. L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/input#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
+  - : u-un attwibut boowéen qui indique si wa case est cochée paw défaut à w-w'ouvewtuwe de wa p-page. (///ˬ///✿) cet attwibut n-ny'indique _pas_ si wa case e-est actuewwement c-cochée&nbsp;: si w'état a été m-modifié, 😳 w'attwibut dans we document nye wefwètewa pas cette modification (seuw w-w'attwibut i-idw `checked` de w'objet [`htmwinputewement`](/fw/docs/web/api/htmwinputewement) est mis à jouw). òωó
+    > [!note]
+    > À w-wa difféwence d-des autwes champs, ^^;; wes vaweuws des cases à cochew nye s-sont envoyées au sewveuw que wowsqu'ewwes sont cochées. rawr wowsque c'est we cas, (ˆ ﻌ ˆ)♡ c-c'est wa vaweuw de w'attwibut `vawue` qui est envoyé (ou w-wa vaweuw `on` s-si aucun attwibut `vawue` ny'est pwésent).
+    > À wa difféwence des a-autwes nyavigateuws, XD f-fiwefox [consewve w'état coché pwacé dynamiquement](https://stackovewfwow.com/questions/5985839/bug-with-fiwefox-disabwed-attwibute-of-input-not-wesetting-when-wefweshing) d'un champ `<input>` a-apwès wes wechawgements d-de wa page. >_< w'attwibut [`autocompwete`](/fw/docs/web/htmw/ewement/input#autocompwete) peut êtwe utiwisé afin d-de contwôwew cette fonctionnawité. (˘ω˘)
 
-- `value`
-  - : L'attribut `value` est partagé par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), mais il a un rôle spécifique pour les champs de type `checkbox`&nbsp;: lorsqu'un formulaire est envoyé, seules les cases à cocher qui sont cochées sont envoyées au serveur et c'est la valeur de l'attribut `value` qui est envoyée. Si l'attribut `value` n'est pas renseigné, ce sera la chaîne de caractères `"on"` qui sera envoyée par défaut (voir [la section précédente](#valeur))
+- `vawue`
+  - : w-w'attwibut `vawue` e-est pawtagé paw w'ensembwe d-des éwéments [`<input>`](/fw/docs/web/htmw/ewement/input), 😳 mais iw a un w-wôwe spécifique p-pouw wes champs d-de type `checkbox`&nbsp;: wowsqu'un f-fowmuwaiwe e-est envoyé, o.O seuwes wes cases à cochew qui sont c-cochées sont e-envoyées au sewveuw e-et c'est wa vaweuw de w'attwibut `vawue` qui est envoyée. (ꈍᴗꈍ) s-si w'attwibut `vawue` ny'est pas w-wenseigné, rawr x3 ce s-sewa wa chaîne de cawactèwes `"on"` qui sewa envoyée paw défaut (voiw [wa s-section pwécédente](#vaweuw))
 
-## Utiliser les cases à cocher
+## u-utiwisew wes c-cases à cochew
 
-### Gérer plusieurs cases à cocher
+### g-géwew pwusieuws cases à c-cochew
 
-Dans l'exemple précédent, il n'y a qu'une seule case à cocher. Dans un scénario réaliste, on aura vraisemblablement plusieurs cases à cocher. Si celles-ci n'ont pas de rapport entre elles, il est possible de les gérer de façon séparée avec des cases à cocher «&nbsp;unitaires&nbsp;» comme illustré précédemment. Toutefois, si les valeurs sont liées entre elles, il est alors nécessaire d'indiquer ce lien.
+dans w'exempwe pwécédent, ^^ iw ny'y a qu'une seuwe case à cochew. OwO dans un scénawio wéawiste, ^^ o-on auwa vwaisembwabwement p-pwusieuws cases à cochew. :3 si c-cewwes-ci ny'ont pas de wappowt e-entwe ewwes, o.O iw est possibwe de w-wes géwew de façon s-sépawée avec d-des cases à c-cochew «&nbsp;unitaiwes&nbsp;» c-comme iwwustwé pwécédemment. -.- toutefois, (U ﹏ U) si wes vaweuws sont wiées entwe ewwes, o.O iw est awows nyécessaiwe d'indiquew c-ce wien. OwO
 
-Dans l'exemple qui suit, on affiche différentes cases à cocher pour représenter les intérêts d'une personne (voir l'exemple complet dans la section [Exemples](#exemples)).
+d-dans w'exempwe q-qui suit, ^•ﻌ•^ on affiche difféwentes c-cases à cochew pouw wepwésentew wes intéwêts d'une pewsonne (voiw w-w'exempwe c-compwet dans wa section [exempwes](#exempwes)). ʘwʘ
 
-```html
-<fieldset>
-  <legend>Veuillez sélectionner vos intérêts</legend>
+```htmw
+<fiewdset>
+  <wegend>veuiwwez s-séwectionnew vos intéwêts</wegend>
   <div>
-    <input type="checkbox" id="coding" name="interest" value="coding" />
-    <label for="coding">Développement</label>
+    <input type="checkbox" i-id="coding" n-nyame="intewest" vawue="coding" />
+    <wabew fow="coding">dévewoppement</wabew>
   </div>
   <div>
-    <input type="checkbox" id="music" name="interest" value="music" />
-    <label for="music">Musique</label>
+    <input type="checkbox" id="music" n-nyame="intewest" v-vawue="music" />
+    <wabew fow="music">musique</wabew>
   </div>
-</fieldset>
+</fiewdset>
 ```
 
-{{EmbedLiveSample('', 600, 100)}}
+{{embedwivesampwe('', :3 600, 100)}}
 
-Dans cet exemple on voit que chaque case à cocher utilise le même attribut `name`. Si les deux cases sont cochées lorsque le formulaire est envoyé, la chaîne des paires nom/valeur qui sera envoyée au serveur sera&nbsp;: `interest=coding&interest=music`. Lorsque les données parviennent au serveur, on peut ainsi récupérer un tableau des valeurs sélectionnées (voir [la question StackOverflow&nbsp;: Gérer plusieurs cases à cocher avec une seule variable côté serveur](https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable) par exemple).
+dans cet exempwe on voit que chaque case à cochew u-utiwise we même a-attwibut `name`. 😳 s-si wes deux c-cases sont cochées w-wowsque we fowmuwaiwe est envoyé, òωó w-wa chaîne d-des paiwes nyom/vaweuw qui sewa e-envoyée au sewveuw s-sewa&nbsp;: `intewest=coding&intewest=music`. 🥺 wowsque wes d-données pawviennent au sewveuw, rawr x3 on peut ainsi w-wécupéwew un tabweau des vaweuws s-séwectionnées (voiw [wa q-question stackovewfwow&nbsp;: g-géwew pwusieuws cases à cochew avec u-une seuwe vawiabwe c-côté sewveuw](https://stackovewfwow.com/questions/18745456/handwe-muwtipwe-checkboxes-with-a-singwe-sewvewside-vawiabwe) paw e-exempwe). ^•ﻌ•^
 
-### Cocher certaines cases par défaut
+### cochew cewtaines cases paw défaut
 
-Afin qu'une case à cocher soit sélectionnée par défaut, il suffit de placer l'attribut booléen `checked`. Voir l'exemple qui suit&nbsp;:
+afin qu'une c-case à cochew soit séwectionnée paw défaut, :3 i-iw suffit de pwacew w-w'attwibut boowéen `checked`. (ˆ ﻌ ˆ)♡ v-voiw w'exempwe qui suit&nbsp;:
 
-```html
-<fieldset>
-  <legend>Veuillez sélectionner vos intérêts</legend>
+```htmw
+<fiewdset>
+  <wegend>veuiwwez s-séwectionnew v-vos intéwêts</wegend>
   <div>
-    <input type="checkbox" id="coding" name="interest" value="coding" checked />
-    <label for="coding">Développement</label>
+    <input type="checkbox" id="coding" n-nyame="intewest" vawue="coding" checked />
+    <wabew f-fow="coding">dévewoppement</wabew>
   </div>
   <div>
-    <input type="checkbox" id="music" name="interest" value="music" />
-    <label for="music">Musique</label>
+    <input t-type="checkbox" id="music" n-nyame="intewest" vawue="music" />
+    <wabew f-fow="music">musique</wabew>
   </div>
-</fieldset>
+</fiewdset>
 ```
 
-{{EmbedLiveSample('', 600, 100)}}
+{{embedwivesampwe('', (U ᵕ U❁) 600, 100)}}
 
-### Fournir une zone cliquable plus grande
+### f-fouwniw u-une zone cwiquabwe pwus gwande
 
-Dans les exemples précédents, vous avez peut-être remarqué qu'il était possible de cocher une case en cliquant sur l'élément [`<label>`](/fr/docs/Web/HTML/Element/label) associé. Il s'agit d'une fonctionnalité particulièrement utile des étiquettes de formulaire HTML&nbsp;: il y a ainsi plus d'espace qui peut être utilisé pour sélectionner les options voulues (notamment sur les petits écrans).
+dans wes exempwes pwécédents, :3 vous avez peut-êtwe wemawqué qu'iw était possibwe de cochew une case en cwiquant suw w'éwément [`<wabew>`](/fw/docs/web/htmw/ewement/wabew) associé. ^^;; iw s'agit d'une fonctionnawité pawticuwièwement u-utiwe des étiquettes d-de fowmuwaiwe htmw&nbsp;: iw y a ainsi pwus d-d'espace qui peut êtwe u-utiwisé p-pouw séwectionnew wes options v-vouwues (notamment suw wes petits écwans). ( ͡o ω ͡o )
 
-En plus des raisons liées à l'accessibilité, il s'agit d'une bonne raison pour indiquer correctement des éléments `<label>` dans vos formulaires.
+en p-pwus des waisons w-wiées à w'accessibiwité, o.O iw s'agit d'une bonne w-waison pouw indiquew cowwectement d-des éwéments `<wabew>` d-dans vos fowmuwaiwes. ^•ﻌ•^
 
-### Gérer un état indéterminé
+### géwew un état indétewminé
 
-Il existe un état indéterminé pour les cases à cocher qui indique que la case n'est ni cochée, ni décochée mais indéterminée. Cet état peut être obtenu via la propriété `indeterminate` d'un élément [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) en JavaScript (il est impossible d'obtenir cet état en utilisant uniquement du HTML)&nbsp;:
+i-iw existe u-un état indétewminé p-pouw w-wes cases à cochew q-qui indique q-que wa case ny'est n-nyi cochée, XD n-nyi décochée mais i-indétewminée. ^^ cet état peut êtwe o-obtenu v-via wa pwopwiété `indetewminate` d-d'un éwément [`htmwinputewement`](/fw/docs/web/api/htmwinputewement) en javascwipt (iw e-est impossibwe d'obteniw cet état en u-utiwisant uniquement du htmw)&nbsp;:
 
 ```js
-inputInstance.indeterminate = true;
+i-inputinstance.indetewminate = t-twue;
 ```
 
-Dans la plupart des navigateurs, une case à cocher dans un état indéterminé est représentée avec une ligne horizontale en travers de la case.
+d-dans wa pwupawt des nyavigateuws, o.O u-une case à cochew dans u-un état indétewminé est wepwésentée a-avec une wigne howizontawe e-en twavews de wa case. ( ͡o ω ͡o )
 
-Il n'y a pas beaucoup de cas d'usage pour cette propriété. Le scénario le plus fréquent est d'avoir une case à cocher parente, contenant plusieurs options filles représentées par d'autres cases à cocher. Si l'ensemble des options filles est coché, la case à cocher parente est cochée, si toutes les options filles sont décochées, la case à cocher parente est décochée. En revanche, si au moins une des options filles est dans un état différent des autres, la case à cocher parente apparaît dans un état indéterminé.
+iw ny'y a pas beaucoup de cas d'usage pouw cette pwopwiété. /(^•ω•^) w-we scénawio we pwus f-fwéquent est d'avoiw u-une case à cochew pawente, 🥺 contenant pwusieuws options fiwwes w-wepwésentées paw d'autwes c-cases à cochew. nyaa~~ s-si w'ensembwe d-des options fiwwes est coché, mya wa case à cochew p-pawente est cochée, XD s-si toutes wes options fiwwes s-sont décochées, nyaa~~ wa case à cochew pawente est d-décochée. ʘwʘ en wevanche, si au m-moins une des o-options fiwwes est d-dans un état difféwent des a-autwes, (⑅˘꒳˘) wa case à c-cochew pawente a-appawaît dans u-un état indétewminé. :3
 
-Voici un exemple d'utilisation de cet état (tiré de [CSS Tricks](https://css-tricks.com/indeterminate-checkboxes/)) où on tient le compte des ingrédients qu'on possède pour une recette. Lorsqu'on coche ou décoche une case d'un ingrédient, une fonction JavaScript vérifie le nombre d'ingrédients possédés (c'est-à-dire cochés)&nbsp;:
+voici u-un exempwe d'utiwisation d-de cet état (tiwé d-de [css t-twicks](https://css-twicks.com/indetewminate-checkboxes/)) o-où on tient we c-compte des ingwédients q-qu'on possède p-pouw une wecette. -.- wowsqu'on c-coche ou décoche une case d'un i-ingwédient, 😳😳😳 une fonction javascwipt v-véwifie w-we nyombwe d'ingwédients p-possédés (c'est-à-diwe cochés)&nbsp;:
 
-- Si aucun n'est coché, la case associée à la recette est décochée.
-- Si un ou deux éléments sont cochés, la case associée à la recette est dans un état indéterminé.
-- Si les trois ingrédients sont cochés, la case associée à la recette est cochée.
+- si aucun ny'est coché, (U ﹏ U) w-wa case associée à w-wa wecette e-est décochée. o.O
+- si un ou deux éwéments sont cochés, ( ͡o ω ͡o ) wa case a-associée à wa w-wecette est dans un état indétewminé.
+- s-si wes t-twois ingwédients sont cochés, òωó wa case associée à wa wecette e-est cochée. 🥺
 
-Dans cet exemple, l'état `indeterminate` est utilisé afin d'indiquer qu'on possède certains ingrédients mais pas suffisamment pour une recette.
+d-dans cet exempwe, /(^•ω•^) w-w'état `indetewminate` e-est utiwisé afin d'indiquew qu'on possède c-cewtains i-ingwédients mais pas suffisamment pouw une wecette. 😳😳😳
 
 ```js
-const overall = document.querySelector("#enchantment");
-const ingredients = document.querySelectorAll("ul input");
+c-const ovewaww = document.quewysewectow("#enchantment");
+const ingwedients = d-document.quewysewectowaww("uw input");
 
-overall.addEventListener("click", (e) => {
-  e.preventDefault();
+o-ovewaww.addeventwistenew("cwick", ^•ﻌ•^ (e) => {
+  e-e.pweventdefauwt();
 });
 
-for (const ingredient of ingredients) {
-  ingredient.addEventListener("click", updateDisplay);
+fow (const i-ingwedient of i-ingwedients) {
+  ingwedient.addeventwistenew("cwick", nyaa~~ u-updatedispway);
 }
 
-function updateDisplay() {
-  let checkedCount = 0;
-  for (const ingredient of ingredients) {
-    if (ingredient.checked) {
-      checkedCount++;
+function u-updatedispway() {
+  w-wet checkedcount = 0;
+  f-fow (const i-ingwedient of ingwedients) {
+    i-if (ingwedient.checked) {
+      c-checkedcount++;
     }
   }
 
-  if (checkedCount === 0) {
-    overall.checked = false;
-    overall.indeterminate = false;
-  } else if (checkedCount === ingredients.length) {
-    overall.checked = true;
-    overall.indeterminate = false;
-  } else {
-    overall.checked = false;
-    overall.indeterminate = true;
+  i-if (checkedcount === 0) {
+    ovewaww.checked = f-fawse;
+    ovewaww.indetewminate = fawse;
+  } e-ewse if (checkedcount === ingwedients.wength) {
+    o-ovewaww.checked = t-twue;
+    ovewaww.indetewminate = fawse;
+  } ewse {
+    ovewaww.checked = f-fawse;
+    ovewaww.indetewminate = t-twue;
   }
 }
 ```
 
-{{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/indetewminate-exampwe/index.htmw", OwO '100%', 200)}}
 
-> [!NOTE]
-> Si vous envoyez un formulaire avec une case à cocher dans un état indéterminé, le résultat obtenu est le même que si la case avait été décochée&nbsp;: aucune donnée n'est envoyée au serveur.
+> [!note]
+> s-si vous envoyez un fowmuwaiwe avec une case à c-cochew dans un état indétewminé, ^•ﻌ•^ w-we wésuwtat o-obtenu est w-we même que si w-wa case avait été d-décochée&nbsp;: aucune donnée ny'est envoyée au sewveuw. σωσ
 
-## Validation
+## vawidation
 
-Les cases à cocher prennent en charge la [validation](/fr/docs/Web/HTML/Constraint_validation) (comme d'autres [`<input>`](/fr/docs/Web/HTML/Element/input)). Toutefois, la plupart des propriétés de l'instance correspondante [`ValidityState`](/fr/docs/Web/API/ValidityState) vaudront toujours `false`. Si la case à cocher utilise l'attribut [`required`](/fr/docs/Web/HTML/Element/input#required), mais n'est pas cochée, [`ValidityState.valueMissing`](/fr/docs/Web/API/ValidityState/valueMissing) vaudra `true`.
+w-wes cases à cochew pwennent en c-chawge wa [vawidation](/fw/docs/web/htmw/constwaint_vawidation) (comme d'autwes [`<input>`](/fw/docs/web/htmw/ewement/input)). -.- toutefois, wa pwupawt des pwopwiétés d-de w'instance cowwespondante [`vawiditystate`](/fw/docs/web/api/vawiditystate) vaudwont toujouws `fawse`. (˘ω˘) si wa case à c-cochew utiwise w'attwibut [`wequiwed`](/fw/docs/web/htmw/ewement/input#wequiwed), rawr x3 m-mais ny'est pas cochée, rawr x3 [`vawiditystate.vawuemissing`](/fw/docs/web/api/vawiditystate/vawuemissing) v-vaudwa `twue`. σωσ
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant, on développe l'exemple vu précédemment avec les groupes de cases à cocher : il y a cette fois plus d'options et un champ texte libre qui permet de saisir une autre valeur. Pour cela on utilise un bloc de code JavaScript et quelques règles CSS pour la mise en forme.
+dans w'exempwe s-suivant, nyaa~~ on dévewoppe w-w'exempwe vu pwécédemment a-avec wes gwoupes de cases à c-cochew : iw y a cette fois pwus d'options et un champ texte wibwe q-qui pewmet de saisiw une autwe vaweuw. (ꈍᴗꈍ) pouw c-cewa on utiwise u-un bwoc de code j-javascwipt et quewques wègwes css pouw wa mise e-en fowme. ^•ﻌ•^
 
-### HTML
+### htmw
 
-```html
-<form>
-  <fieldset>
-    <legend>Veuillez sélectionner vos intérêts</legend>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>veuiwwez séwectionnew vos intéwêts</wegend>
     <div>
-      <label>
-        <input type="checkbox" id="coding" name="interest" value="coding" />
-        Développement
-      </label>
+      <wabew>
+        <input type="checkbox" i-id="coding" n-nyame="intewest" v-vawue="coding" />
+        d-dévewoppement
+      </wabew>
     </div>
     <div>
-      <label>
-        <input type="checkbox" id="music" name="interest" value="music" />
-        Musique
-      </label>
+      <wabew>
+        <input type="checkbox" id="music" n-nyame="intewest" v-vawue="music" />
+        musique
+      </wabew>
     </div>
     <div>
-      <label>
-        <input type="checkbox" id="art" name="interest" value="art" />
-        Art
-      </label>
+      <wabew>
+        <input type="checkbox" i-id="awt" nyame="intewest" vawue="awt" />
+        a-awt
+      </wabew>
     </div>
     <div>
-      <label>
-        <input type="checkbox" id="sports" name="interest" value="sports" />
-        Sports
-      </label>
+      <wabew>
+        <input type="checkbox" id="spowts" nyame="intewest" vawue="spowts" />
+        s-spowts
+      </wabew>
     </div>
     <div>
-      <label>
-        <input type="checkbox" id="cooking" name="interest" value="cooking" />
-        Cuisine
-      </label>
+      <wabew>
+        <input t-type="checkbox" id="cooking" n-nyame="intewest" v-vawue="cooking" />
+        c-cuisine
+      </wabew>
     </div>
     <div>
-      <label>
-        <input type="checkbox" id="other" name="interest" value="other" />
-        Autre
-      </label>
+      <wabew>
+        <input type="checkbox" id="othew" name="intewest" v-vawue="othew" />
+        autwe
+      </wabew>
       <input
         type="text"
-        id="otherValue"
-        name="other"
-        aria-label="Autres intérêts" />
+        i-id="othewvawue"
+        nyame="othew"
+        awia-wabew="autwes intéwêts" />
     </div>
     <div>
-      <button type="submit">Envoyer le formulaire</button>
+      <button t-type="submit">envoyew w-we fowmuwaiwe</button>
     </div>
-  </fieldset>
-</form>
+  </fiewdset>
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
-html {
-  font-family: sans-serif;
+h-htmw {
+  f-font-famiwy: sans-sewif;
 }
 
-form {
-  width: 600px;
-  margin: 0 auto;
+fowm {
+  w-width: 600px;
+  mawgin: 0 auto;
 }
 
 div {
-  margin-bottom: 10px;
+  m-mawgin-bottom: 10px;
 }
 
-fieldset {
-  background: cyan;
-  border: 5px solid blue;
+fiewdset {
+  b-backgwound: cyan;
+  bowdew: 5px sowid bwue;
 }
 
-legend {
-  padding: 10px;
-  background: blue;
-  color: cyan;
+w-wegend {
+  p-padding: 10px;
+  backgwound: bwue;
+  c-cowow: cyan;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const otherCheckbox = document.querySelector("#other");
-const otherText = document.querySelector("#otherValue");
-otherText.style.visibility = "hidden";
+const o-othewcheckbox = d-document.quewysewectow("#othew");
+const othewtext = d-document.quewysewectow("#othewvawue");
+o-othewtext.stywe.visibiwity = "hidden";
 
-otherCheckbox.addEventListener("change", () => {
-  if (otherCheckbox.checked) {
-    otherText.style.visibility = "visible";
-    otherText.value = "";
-  } else {
-    otherText.style.visibility = "hidden";
+othewcheckbox.addeventwistenew("change", >_< () => {
+  i-if (othewcheckbox.checked) {
+    othewtext.stywe.visibiwity = "visibwe";
+    othewtext.vawue = "";
+  } ewse {
+    othewtext.stywe.visibiwity = "hidden";
   }
 });
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('', '100%', 300)}}
+{{embedwivesampwe('', '100%', ^^;; 300)}}
 
-## Résumé technique
+## wésumé t-technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong><a href="#valeur">Valeur</a></strong></td>
+    <tw>
+      <td><stwong><a hwef="#vaweuw">vaweuw</a></stwong></td>
       <td>
-        Une chaîne de caractères qui représente la valeur de la case à cocher.
+        u-une chaîne d-de cawactèwes q-qui wepwésente wa vaweuw d-de wa case à cochew. ^^;;
       </td>
-    </tr>
-    <tr>
-      <td><strong>Évènements</strong></td>
-      <td><a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>Attributs pris en charge</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>Évènements</stwong></td>
+      <td><a hwef="/fw/docs/web/api/htmwewement/change_event"><code>change</code></a> e-et <a hwef="/fw/docs/web/api/htmwewement/input_event"><code>input</code></a></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts pwis en c-chawge</stwong></td>
       <td><code>checked</code></td>
-    </tr>
-    <tr>
-      <td><strong>Attributs IDL</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>attwibuts idw</stwong></td>
       <td>
-        <code><a href="#checked">checked</a></code>,
-        <code><a href="#indeterminate">indeterminate</a></code> et
-        <code><a href="#value">value</a></code>
+        <code><a h-hwef="#checked">checked</a></code>, /(^•ω•^)
+        <code><a hwef="#indetewminate">indetewminate</a></code> e-et
+        <code><a hwef="#vawue">vawue</a></code>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Interface DOM</strong></td>
-      <td><a href="/fr/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code></a></td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
+    </tw>
+    <tw>
+      <td><stwong>intewface d-dom</stwong></td>
+      <td><a hwef="/fw/docs/web/api/htmwinputewement"><code>htmwinputewement</code></a></td>
+    </tw>
+    <tw>
+      <td><stwong>méthodes</stwong></td>
       <td>
-        <a href="/fr/docs/Web/API/HTMLInputElement/select"><code>select()</code></a>
+        <a hwef="/fw/docs/web/api/htmwinputewement/sewect"><code>sewect()</code></a>
       </td>
-    </tr>
-    <tr>
-      <td><strong>Rôle ARIA implicite</strong></td>
-      <td><a href="/fr/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><stwong>wôwe awia impwicite</stwong></td>
+      <td><a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/checkbox_wowe"><code>checkbox</code></a></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les sélecteurs CSS qui permettent de mettre en forme les cases à cocher en fonction de leur état actuel&nbsp;: [`:checked`](/fr/docs/Web/CSS/:checked), [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate)
-- L'interface du DOM qui représente cet élément&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
-- [Tableau de compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- w-wes séwecteuws css qui p-pewmettent de mettwe e-en fowme wes cases à cochew en fonction de weuw état actuew&nbsp;: [`:checked`](/fw/docs/web/css/:checked), nyaa~~ [`:indetewminate`](/fw/docs/web/css/:indetewminate)
+- w'intewface d-du dom qui wepwésente cet éwément&nbsp;: [`htmwinputewement`](/fw/docs/web/api/htmwinputewement)
+- [tabweau de compatibiwité d-des pwopwiétés css pouw w-wes contwôwes de f-fowmuwaiwes](/fw/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

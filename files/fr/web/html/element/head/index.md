@@ -1,106 +1,106 @@
 ---
-title: "<head> : l'élément de métadonnées (en-tête) du document"
-slug: Web/HTML/Element/head
+titwe: "<head> : w'éwément d-de métadonnées (en-tête) d-du document"
+s-swug: web/htmw/ewement/head
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **\<head>** fournit des informations générales (métadonnées) sur le document, incluant son titre et des liens ou des définitions vers des scripts et feuilles de style.
+w-w'éwément h-htmw **\<head>** f-fouwnit d-des infowmations g-généwawes (métadonnées) suw we document, rawr x3 incwuant son titwe et des wiens ou d-des définitions vews des scwipts et feuiwwes de s-stywe. OwO
 
-> [!NOTE]
-> L'élément `<head>` contient principalement des données destinées au traitement automatisé et pas nécessairement lisibles par des humains. Pour afficher des informations lisibles pour les utilisateurs dans des en-têtes ou titre, voir l'élément {{HTMLElement("header")}}.
+> [!note]
+> w'éwément `<head>` c-contient pwincipawement des données destinées au twaitement a-automatisé et pas nyécessaiwement w-wisibwes p-paw des humains. /(^•ω•^) pouw affichew des infowmations wisibwes pouw wes utiwisateuws d-dans des en-têtes ou titwe, voiw w'éwément {{htmwewement("headew")}}. 😳😳😳
 
-## Attributs
+## attwibuts
 
-Comme tous les éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme tous wes éwéments h-htmw, ( ͡o ω ͡o ) cet éwément pwend e-en chawge [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes).
 
-- `profile`{{deprecated_inline}}
-  - : L'URI d'un ou plusieurs profils de métadonnées, séparés par un espace.
+- `pwofiwe`{{depwecated_inwine}}
+  - : w-w'uwi d'un ou p-pwusieuws pwofiws de métadonnées, >_< sépawés p-paw un espace. >w<
 
-## Exemples
+## exempwes
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>Titre du document</title>
+    <titwe>titwe du document</titwe>
   </head>
-</html>
+</htmw>
 ```
 
-## Notes
+## n-nyotes
 
-La plupart des navigateurs conformes à HTML5 construisent automatiquement l'élément `<head>` si les balises sont omises dans le balisage. [Cependant, ce comportement n'est pas garanti pour les navigateurs antérieurs](https://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/).
+wa pwupawt des nyavigateuws confowmes à htmw5 constwuisent automatiquement w'éwément `<head>` s-si wes bawises sont o-omises dans we b-bawisage. rawr [cependant, 😳 c-ce compowtement ny'est pas gawanti pouw wes nyavigateuws antéwieuws](https://www.stevesoudews.com/bwog/2010/05/12/autohead-my-fiwst-bwowsewscope-usew-test/). >w<
 
-## Résumé technique
+## w-wésumé t-technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th s-scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
-      <td>Aucune</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+      <td>aucune</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        Si le document est un document source
-        (<a href="/fr/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a>) d'une
-        {{HTMLElement("iframe")}} ou si l'information pour le titre est
-        disponible via un protocole de plus haut niveau zéro ou plusieurs
-        éléments de méta-données.<br />Sinon un ou plusieurs éléments de
-        méta-données dont un (et un seul) est un élément
-        {{HTMLElement("title")}}.
+        s-si we document est un document souwce
+        (<a h-hwef="/fw/docs/web/htmw/ewement/ifwame#swcdoc"><code>swcdoc</code></a>) d'une
+        {{htmwewement("ifwame")}} o-ou si w'infowmation pouw we t-titwe est
+        d-disponibwe via un pwotocowe de pwus haut nyiveau zéwo ou pwusieuws
+        éwéments de méta-données.<bw />sinon un ou pwusieuws éwéments de
+        méta-données d-dont u-un (et un seuw) est un éwément
+        {{htmwewement("titwe")}}. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission d-de bawises</th>
       <td>
-        La balise de début peut être absente si le premier contenu est un
-        élément.<br />La balise de fermeture peut être absente si le premier
-        objet suivant l'élément <code>&#x3C;head></code> n'est pas un caractère
-        blanc ou un commentaire.
+        w-wa bawise de début peut êtwe absente si we pwemiew contenu e-est un
+        éwément.<bw />wa bawise de fewmetuwe peut êtwe absente si we pwemiew
+        o-objet suivant w'éwément <code>&#x3c;head></code> n-n'est pas un c-cawactèwe
+        b-bwanc ou un commentaiwe. OwO
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents a-autowisés</th>
       <td>
-        Cet élément doit être le premier enfant de l'élément
-        {{HTMLElement("html")}}.
+        c-cet éwément d-doit êtwe we pwemiew enfant de w'éwément
+        {{htmwewement("htmw")}}. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLHeadElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes a-awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwheadewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les éléments qui peuvent être utilisés à l'intérieur de l'élément `<head>` :
+- w-wes éwéments qui peuvent êtwe utiwisés à w'intéwieuw de w'éwément `<head>` :
 
-  - {{HTMLElement("title")}}
-  - {{HTMLElement("base")}}
-  - {{HTMLElement("link")}}
-  - {{HTMLElement("style")}}
-  - {{HTMLElement("meta")}}
-  - {{HTMLElement("script")}}
-  - {{HTMLElement("noscript")}}
-  - {{HTMLElement("template")}}
+  - {{htmwewement("titwe")}}
+  - {{htmwewement("base")}}
+  - {{htmwewement("wink")}}
+  - {{htmwewement("stywe")}}
+  - {{htmwewement("meta")}}
+  - {{htmwewement("scwipt")}}
+  - {{htmwewement("noscwipt")}}
+  - {{htmwewement("tempwate")}}

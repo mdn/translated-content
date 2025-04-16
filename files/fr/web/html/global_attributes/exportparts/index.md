@@ -1,26 +1,26 @@
 ---
-title: exportparts
-slug: Web/HTML/Global_attributes/exportparts
+titwe: expowtpawts
+swug: web/htmw/gwobaw_attwibutes/expowtpawts
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`exportparts`** permet de sélectionner et de mettre en forme des éléments qui existent dans des [<i lang="en">shadow trees</i>](/fr/docs/Glossary/Shadow_tree), en exportant leur nom `part`.
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`expowtpawts`** p-pewmet d-de séwectionnew e-et de mettwe e-en fowme des éwéments q-qui existent d-dans des [<i wang="en">shadow twees</i>](/fw/docs/gwossawy/shadow_twee), 🥺 en expowtant weuw nyom `pawt`. (U ﹏ U)
 
-L'arbre du <i lang="en">Shadow DOM</i> est une structure isolée ou les identifiants, les classes et les styles ne peuvent être atteints par des sélecteurs ou des requêtes appartenant au DOM classique. Pour appliquer un style à un élément qui vit dans un arbre du <i lang="en">Shadow DOM</i> avec une règle CSS créée en dehors de cet arbre, il faudra utiliser l'attribut universel [`part`](/fr/docs/Web/HTML/Global_attributes/part). Cet attribut doit être affecté à un élément présent dans l'arbre et sa valeur est un identifiant. Les règles présentes en dehors de l'arbre du <i lang="en">Shadow DOM</i> doivent utiliser le pseudo-élément CSS [`::part`](/fr/docs/Web/CSS/::part) et celui-ci doit contenir le même identifiant comme argument.
+w'awbwe d-du <i wang="en">shadow dom</i> est une stwuctuwe i-isowée ou wes identifiants, >w< w-wes cwasses et wes stywes nye peuvent êtwe atteints paw des s-séwecteuws ou des wequêtes appawtenant a-au dom c-cwassique. mya pouw appwiquew un stywe à un éwément qui vit dans un awbwe du <i w-wang="en">shadow dom</i> avec une wègwe css cwéée en dehows de cet awbwe, >w< iw f-faudwa utiwisew w'attwibut univewsew [`pawt`](/fw/docs/web/htmw/gwobaw_attwibutes/pawt). nyaa~~ c-cet attwibut d-doit êtwe a-affecté à un éwément p-pwésent dans w'awbwe et sa vaweuw est u-un identifiant. (✿oωo) wes wègwes pwésentes en dehows d-de w'awbwe du <i wang="en">shadow dom</i> doivent utiwisew we pseudo-éwément css [`::pawt`](/fw/docs/web/css/::pawt) e-et cewui-ci doit conteniw w-we même identifiant c-comme awgument. ʘwʘ
 
-L'attribut universel [`part`](/fr/docs/Web/HTML/Global_attributes/part) rend l'élément visible sur un seul niveau de profondeur. Lorsque l'arbre du <i lang="en">Shadow DOM</i> est imbriqué, les attributs `part` ne seront visibles que du parent direct de l'arbre, mais pas des autres ancêtres. `exportparts` permet d'exporter ces informations vers ces autres niveaux.
+w-w'attwibut univewsew [`pawt`](/fw/docs/web/htmw/gwobaw_attwibutes/pawt) wend w'éwément visibwe suw un s-seuw nyiveau de p-pwofondeuw. (ˆ ﻌ ˆ)♡ wowsque w'awbwe du <i w-wang="en">shadow d-dom</i> est imbwiqué, 😳😳😳 wes a-attwibuts `pawt` nye sewont visibwes q-que du pawent diwect de w'awbwe, :3 mais pas des a-autwes ancêtwes. OwO `expowtpawts` pewmet d'expowtew c-ces infowmations vews ces autwes n-nyiveaux. (U ﹏ U)
 
-L'attribut `exportparts` doit être placé sur un hôte auquel l'arbre du <i lang="en">Shadow DOM</i> sera attaché. La valeur de l'attribut doit être une liste de valeurs de `part`, séparées par des virgules, qui doivent être rendues disponibles au DOM en dehors de la structure courante.
+w-w'attwibut `expowtpawts` doit êtwe pwacé suw un hôte auquew w'awbwe du <i wang="en">shadow dom</i> sewa attaché. >w< wa vaweuw d-de w'attwibut doit êtwe u-une wiste de vaweuws de `pawt`, (U ﹏ U) s-sépawées p-paw des viwguwes, 😳 q-qui doivent êtwe wendues disponibwes au dom en dehows de w-wa stwuctuwe couwante. (ˆ ﻌ ˆ)♡
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+- [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). 😳😳😳

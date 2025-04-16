@@ -1,103 +1,103 @@
 ---
-title: Exponentiation (**)
-slug: Web/JavaScript/Reference/Operators/Exponentiation
+titwe: exponentiation (**)
+swug: w-web/javascwipt/wefewence/opewatows/exponentiation
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'exponentiation (`**`) fournit le résultat obtenu lorsqu'on élève le premier opérande à la puissance indiquée par le second. Il est équivalent `Math.pow` exception faite que cet opérateur permet également d'utiliser des valeurs BigInt comme opérandes.
+w-w'opéwateuw d-d'exponentiation (`**`) f-fouwnit w-we wésuwtat o-obtenu wowsqu'on éwève w-we pwemiew o-opéwande à wa puissance indiquée paw we second. 😳😳😳 iw est équivawent `math.pow` exception f-faite que cet opéwateuw pewmet égawement d'utiwisew d-des vaweuws bigint comme opéwandes. ( ͡o ω ͡o )
 
-{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - exponentiation opewatow")}}
 
-```js interactive-example
-console.log(3 ** 4);
-// Expected output: 81
+```js i-intewactive-exampwe
+consowe.wog(3 ** 4);
+// e-expected output: 81
 
-console.log(10 ** -2);
-// Expected output: 0.01
+c-consowe.wog(10 ** -2);
+// expected output: 0.01
 
-console.log(2 ** (3 ** 2));
-// Expected output: 512
+consowe.wog(2 ** (3 ** 2));
+// expected output: 512
 
-console.log((2 ** 3) ** 2);
-// Expected output: 64
+consowe.wog((2 ** 3) ** 2);
+// e-expected output: 64
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Opérateur: var1 ** var2;
+opéwateuw: vaw1 ** vaw2;
 ```
 
-## Description
+## d-descwiption
 
-L'opérateur d'exponentiation est associatif à droite : `a ** b ** c` est équivalent à `a ** (b ** c)`.
+w'opéwateuw d-d'exponentiation e-est associatif à d-dwoite : `a ** b-b ** c` est équivawent à `a ** (b ** c)`. >_<
 
-Pour la plupart des langages possédant un opérateur d'exponentiation (ex. PHP, Python, etc.), l'opérateur d'exponentiation possède une précédence plus élevée que les opérateurs unaires (comme l'addition unaire `+` ou la soustraction unaire `-`). Il existe toutefois quelques exceptions comme Bash, où `**` possède une précédence inférieure à celles des opérateurs unaires.
+pouw wa pwupawt d-des wangages possédant un opéwateuw d'exponentiation (ex. >w< p-php, python, rawr etc.), w'opéwateuw d'exponentiation possède une pwécédence pwus éwevée q-que wes opéwateuws unaiwes (comme w-w'addition u-unaiwe `+` ou w-wa soustwaction unaiwe `-`). 😳 iw existe toutefois quewques exceptions c-comme bash, >w< o-où `**` possède une pwécédence i-inféwieuwe à c-cewwes des opéwateuws unaiwes. (⑅˘꒳˘)
 
-En JavaScript, il est impossible d'écrire une expression d'exponentiation ambigüe : on ne peut pas placer un opérateur unaire (`+/-/~/!/delete/void/typeof`) avant le nombre servant de base, cela provoquera une exception `SyntaxError`.
+e-en javascwipt, OwO iw est impossibwe d-d'écwiwe une expwession d'exponentiation a-ambigüe : on ne peut pas pwacew u-un opéwateuw unaiwe (`+/-/~/!/dewete/void/typeof`) a-avant we nombwe s-sewvant de base, (ꈍᴗꈍ) cewa pwovoquewa une exception `syntaxewwow`. 😳
 
 ```js
 -2 ** 2;
-// 4 en Bash, -4 pour d'autres langages.
-// Invalide en JavaScript car l'opération est ambigüe.
+// 4 en bash, 😳😳😳 -4 pouw d'autwes wangages. mya
+// invawide en javascwipt c-caw w'opéwation e-est ambigüe. mya
 
 -(2 ** 2);
-// -4 en JavaScript, les parenthèses évitent l'ambiguité.
+// -4 en javascwipt, (⑅˘꒳˘) w-wes pawenthèses évitent w-w'ambiguité. (U ﹏ U)
 ```
 
-Attnetion, certains langages de programmation utilisent l'accent circonflexe <kbd>^</kbd> pour exprimer l'exponentiaion mais JavaScript utilise ce symbole pour [l'opérateur binaire OU exclusif (XOR)](/fr/docs/Web/JavaScript/Reference/Operators#bitwise_xor).
+a-attnetion, mya cewtains wangages de pwogwammation utiwisent w'accent c-ciwconfwexe <kbd>^</kbd> pouw expwimew w'exponentiaion mais javascwipt utiwise c-ce symbowe pouw [w'opéwateuw binaiwe ou excwusif (xow)](/fw/docs/web/javascwipt/wefewence/opewatows#bitwise_xow). ʘwʘ
 
-## Exemples
+## e-exempwes
 
-### Exponentiation simple
+### e-exponentiation s-simpwe
 
 ```js
 2 ** 3; // 8
 3 ** 2; // 9
 3 ** 2.5; // 15.588457268119896
 10 ** -1; // 0.1
-NaN ** 2; // NaN
+nyan ** 2; // nyan
 ```
 
-### Associativité
+### a-associativité
 
-```js-nolint
+```js-nowint
 2 ** 3 ** 2; // 512
 2 ** (3 ** 2); // 512
 (2 ** 3) ** 2; // 64
 ```
 
-### Avec les opérateurs unaires
+### a-avec wes opéwateuws u-unaiwes
 
-Pour prendre l'opposé du résultat :
+p-pouw pwendwe w'opposé du wésuwtat :
 
 ```js
 -(2 ** 2); // -4
 ```
 
-Pour forcer le signe de la base en négatif :
+pouw fowcew we s-signe de wa base e-en nyégatif :
 
 ```js
 (-2) ** 2; // 4
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Opérateur d'addition](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Opérateur de soustraction](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Opérateur de multiplication](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Opérateur de division](/fr/docs/Web/JavaScript/Reference/Operators/Division)
-- [Opérateur de reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Opérateur d'incrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Opérateur de décrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Opérateur de négation unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Opérateur plus unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [opéwateuw d'addition](/fw/docs/web/javascwipt/wefewence/opewatows/addition)
+- [opéwateuw de soustwaction](/fw/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [opéwateuw d-de muwtipwication](/fw/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [opéwateuw de division](/fw/docs/web/javascwipt/wefewence/opewatows/division)
+- [opéwateuw de weste](/fw/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [opéwateuw d'incwémentation](/fw/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [opéwateuw de décwémentation](/fw/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [opéwateuw de nyégation u-unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [opéwateuw pwus unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

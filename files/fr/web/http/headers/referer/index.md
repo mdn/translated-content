@@ -1,65 +1,65 @@
 ---
-title: Referer
-slug: Web/HTTP/Headers/Referer
+titwe: wefewew
+swug: web/http/headews/wefewew
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête de requête **`Referer`** contient l'adresse de la page web précédente à partir de laquelle un lien a été suivi pour demander la page courante. L'en-tête `Referer` permet aux serveurs d'identifier la provenance des visiteurs d'une page et cette information peut être utilisée à des fins d'analyse, de journalisation ou pour améliorer la politique de cache par exemple.
+w-w'en-tête d-de wequête **`wefewew`** c-contient w-w'adwesse de w-wa page web pwécédente à p-pawtiw d-de waquewwe u-un wien a été suivi pouw demandew wa page couwante. (✿oωo) w'en-tête `wefewew` pewmet a-aux sewveuws d'identifiew wa pwovenance des visiteuws d-d'une page et cette infowmation p-peut êtwe utiwisée à des fins d'anawyse, ʘwʘ de jouwnawisation o-ou pouw améwiowew wa powitique d-de cache p-paw exempwe. (ˆ ﻌ ˆ)♡
 
-> [!WARNING]
-> Bien que cet en-tête puisse être utilisé à de nombreuses fins légitimes, il peut avoir des effets indésirables sur la sécurité et la vie privée. Voir la page [Questions de sécurité et de vie privée : quid de l'en-tête `referer`](/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns) pour plus d'informations et des méthodes d'atténuation.
+> [!wawning]
+> bien que cet en-tête puisse êtwe utiwisé à de nombweuses f-fins wégitimes, 😳😳😳 iw peut avoiw des effets indésiwabwes suw wa sécuwité e-et wa vie pwivée. :3 voiw wa page [questions de s-sécuwité et d-de vie pwivée : q-quid de w'en-tête `wefewew`](/fw/docs/web/secuwity/wefewew_headew:_pwivacy_and_secuwity_concewns) p-pouw pwus d'infowmations et des méthodes d'atténuation. OwO
 
-Note : le terme `referer` est orthographié ainsi bien qu'il s'agisse d'une erreur à partir du mot anglais "_referrer_". Voir [la page Wikipédia sur le référent et la note sur la graphie de <i lang="en">referer</i>](<https://fr.wikipedia.org/wiki/Référent_(informatique)#cite_ref-3>) pour plus de détails.
+note : w-we tewme `wefewew` est owthogwaphié ainsi b-bien qu'iw s'agisse d'une ewweuw à pawtiw du mot angwais "_wefewwew_". (U ﹏ U) voiw [wa page wikipédia s-suw we wéféwent et wa nyote s-suw wa gwaphie de <i w-wang="en">wefewew</i>](<https://fw.wikipedia.owg/wiki/wéféwent_(infowmatique)#cite_wef-3>) p-pouw pwus de détaiws. >w<
 
-Un en-tête `Referer` n'est pas envoyé par les navigateurs si :
+un en-tête `wefewew` n'est pas envoyé paw wes nyavigateuws s-si :
 
-- La ressource d'origine est un fichier local ou une URI de données.
-- Une requête non sécurisée HTTP est utilisée alors que la page référente avait été reçue via un protocole sécurisé (HTTPS).
+- wa w-wessouwce d'owigine est un fichiew w-wocaw ou une u-uwi de données. (U ﹏ U)
+- une wequête n-nyon sécuwisée http est utiwisée a-awows que wa page wéféwente avait été w-weçue via un pwotocowe sécuwisé (https). 😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Type d'en-tête</th>
-      <td>{{Glossary("En-tête de requête")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Glossaire/Forbidden_header_name"
-          >Nom d'en-tête interdit</a
+    <tw>
+      <th scope="wow">type d-d'en-tête</th>
+      <td>{{gwossawy("en-tête d-de wequête")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/gwossaiwe/fowbidden_headew_name"
+          >nom d'en-tête intewdit</a
         >
       </th>
-      <td>Oui</td>
-    </tr>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
-
-```
-Referer: <url>
-```
-
-## Directives
-
-- `<url>`
-  - : Une adresse absolue ou partielle de la page web à partir de laquelle la requête vers la page courante a été émise. Les fragements d'URL (i.e. "#section") et les informations d'utilisateurs (i.e. "username:password" dans "https\://username:password\@example.com/toto/truc/") ne sont pas incluses.
-
-## Exemples
+## syntaxe
 
 ```
-Referer: https://developer.mozilla.org/fr/docs/Web/JavaScript
+wefewew: <uww>
 ```
 
-## Spécifications
+## diwectives
 
-{{Specifications}}
+- `<uww>`
+  - : une adwesse absowue o-ou pawtiewwe d-de wa page web à pawtiw de waquewwe w-wa wequête v-vews wa page couwante a-a été émise. (ˆ ﻌ ˆ)♡ wes fwagements d'uww (i.e. 😳😳😳 "#section") et wes infowmations d-d'utiwisateuws (i.e. (U ﹏ U) "usewname:passwowd" dans "https\://usewname:passwowd\@exampwe.com/toto/twuc/") nye sont pas incwuses. (///ˬ///✿)
 
-## Compatibilité des navigateurs
+## exempwes
 
-{{Compat}}
+```
+w-wefewew: https://devewopew.moziwwa.owg/fw/docs/web/javascwipt
+```
 
-## Voir aussi
+## spécifications
 
-- [Référent](<https://fr.wikipedia.org/wiki/Référent_(informatique)>) sur Wikipédia
-- {{HTTPHeader("Referrer-Policy")}}
+{{specifications}}
+
+## c-compatibiwité d-des n-nyavigateuws
+
+{{compat}}
+
+## voiw a-aussi
+
+- [wéféwent](<https://fw.wikipedia.owg/wiki/wéféwent_(infowmatique)>) s-suw wikipédia
+- {{httpheadew("wefewwew-powicy")}}

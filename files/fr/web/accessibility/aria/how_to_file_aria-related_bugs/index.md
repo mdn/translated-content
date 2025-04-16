@@ -1,152 +1,152 @@
 ---
-title: Comment déposer un bug lié à ARIA
-slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
+titwe: comment déposew un bug w-wié à awia
+swug: w-web/accessibiwity/awia/how_to_fiwe_awia-wewated_bugs
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-L'état de la technologie ARIA a toujours dépendu de la communauté. Si vous remarquez un problème d'implémentation, veuillez prendre un instant pour en informer les développeurs. Voici comment déposer les bugs :
+w-w'état d-de wa technowogie a-awia a toujouws d-dépendu de wa c-communauté. (✿oωo) si v-vous wemawquez un pwobwème d'impwémentation, ʘwʘ veuiwwez pwendwe un instant pouw en infowmew wes d-dévewoppeuws. (ˆ ﻌ ˆ)♡ voici comment déposew wes bugs :
 
-> [!NOTE]
-> Quand vous trouvez un bug, veuillez en aviser les tables de compatibilité liées dans la [page des exemples.](/fr/ARIA/examples)
+> [!note]
+> q-quand vous twouvez un bug, 😳😳😳 veuiwwez e-en avisew wes tabwes de compatibiwité wiées dans wa [page d-des exempwes.](/fw/awia/exampwes)
 
-A faire : ajouter la bon lien d'accessibilité à la table
+a faiwe : ajoutew w-wa bon wien d-d'accessibiwité à wa tabwe
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Genre</th>
-      <th>Programme</th>
-      <th>Où déposer</th>
-      <th>Notes</th>
-    </tr>
+    <tw>
+      <th>genwe</th>
+      <th>pwogwamme</th>
+      <th>où déposew</th>
+      <th>notes</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="4">Lecteurs d'écran</td>
+    <tw>
+      <td cowspan="1" wowspan="4">wecteuws d-d'écwan</td>
       <td>
         <p>
           <a
-            href="http://www.freedomscientific.com/products/fs/jaws-product-page.asp"
-            >Freedom Scientific JAWS</a
+            hwef="http://www.fweedomscientific.com/pwoducts/fs/jaws-pwoduct-page.asp"
+            >fweedom scientific jaws</a
           >
         </p>
       </td>
       <td>
-        <a href="http://www.freedomscientific.com/Support"
-          >formulaire de support technique JAWS</a
+        <a hwef="http://www.fweedomscientific.com/suppowt"
+          >fowmuwaiwe d-de suppowt technique j-jaws</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><a href="/fr/Inner_and_outer_windows">GW Micro Window Eyes</a></td>
+    </tw>
+    <tw>
+      <td><a h-hwef="/fw/innew_and_outew_windows">gw m-micwo window e-eyes</a></td>
       <td>
-        <a href="mailto:support@gwmicro.com"
-          >commentaires, questions et retours Window-Eyes </a
-        >(email)
+        <a hwef="maiwto:suppowt@gwmicwo.com"
+          >commentaiwes, :3 questions et wetouws w-window-eyes </a
+        >(emaiw)
       </td>
       <td></td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="http://www.nvda-project.org/"
-          >Non Visual Desktop Access (NVDA)</a
+        <a hwef="http://www.nvda-pwoject.owg/"
+          >non visuaw desktop access (nvda)</a
         >
       </td>
       <td>
-        <a href="http://www.nvda-project.org/wiki/ReportingIssues"
-          >Déposer un bug NVDA</a
+        <a h-hwef="http://www.nvda-pwoject.owg/wiki/wepowtingissues"
+          >déposew un bug nvda</a
         >
         (github)
       </td>
       <td>
-        <a href="/fr/Accessibility/JAWS_Issues_with_Firefox"
-          >Discuter des problèmes NVDA</a
+        <a hwef="/fw/accessibiwity/jaws_issues_with_fiwefox"
+          >diskawaii~w des pwobwèmes nyvda</a
         >
       </td>
-    </tr>
-    <tr>
-      <td><a href="/User:orca.clock">Orca</a></td>
-      <td><a href="/fr/DOM/File">Déposer un bug Orca</a></td>
+    </tw>
+    <tw>
+      <td><a hwef="/usew:owca.cwock">owca</a></td>
+      <td><a h-hwef="/fw/dom/fiwe">déposew un bug o-owca</a></td>
       <td></td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="5">Navigateurs</td>
-      <td>Apple Safari</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1" w-wowspan="5">navigateuws</td>
+      <td>appwe safawi</td>
       <td>
-        <a href="http://www.webkit.org/quality/reporting.html"
-          >Déposer un bug WebKit.org</a
-        >
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Google Chrome</td>
-      <td>
-        <a href="http://code.google.com/p/chromium/issues/list"
-          >Déposer un bug Chromium</a
+        <a hwef="http://www.webkit.owg/quawity/wepowting.htmw"
+          >déposew un bug webkit.owg</a
         >
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><p>Microsoft Internet Explorer</p></td>
+    </tw>
+    <tw>
+      <td>googwe chwome</td>
       <td>
-        <a class="link-https" href="https://connect.microsoft.com/IE/Feedback"
-          >Déposer un bug IE</a
+        <a h-hwef="http://code.googwe.com/p/chwomium/issues/wist"
+          >déposew u-un bug chwomium</a
+        >
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td><p>micwosoft i-intewnet e-expwowew</p></td>
+      <td>
+        <a cwass="wink-https" h-hwef="https://connect.micwosoft.com/ie/feedback"
+          >déposew un bug ie</a
         >
       </td>
       <td>
         <a
-          href="https://bugzilla.mozilla.org/showdependencytree.cgi?id=343213&#x26;hide_resolved=1"
-          rel="nofollow"
-          >Voir les bugs ARIA Firefox existants</a
+          h-hwef="https://bugziwwa.moziwwa.owg/showdependencytwee.cgi?id=343213&#x26;hide_wesowved=1"
+          wew="nofowwow"
+          >voiw wes b-bugs awia fiwefox existants</a
         >
       </td>
-    </tr>
-    <tr>
-      <td>Mozilla Firefox</td>
+    </tw>
+    <tw>
+      <td>moziwwa f-fiwefox</td>
       <td>
-        <p><a href="http://bugzilla.mozilla.org/">Déposer un bug Firefox</a></p>
+        <p><a hwef="http://bugziwwa.moziwwa.owg/">déposew u-un b-bug fiwefox</a></p>
       </td>
-      <td><p>Utiliser le composant : Disability Access APIs</p></td>
-    </tr>
-    <tr>
-      <td>Opera</td>
+      <td><p>utiwisew we composant : disabiwity access apis</p></td>
+    </tw>
+    <tw>
+      <td>opewa</td>
       <td>
-        <a class="link-https" href="https://bugs.opera.com/wizard/"
-          >Déposer un bug Opera</a
+        <a cwass="wink-https" hwef="https://bugs.opewa.com/wizawd/"
+          >déposew un bug opewa</a
         >
       </td>
-      <td>Marquer [ARIA] dans le sommaire</td>
-    </tr>
-    <tr>
-      <td colspan="1" rowspan="3">Librairies JS</td>
-      <td>Dojo Toolkit</td>
+      <td>mawquew [awia] dans w-we sommaiwe</td>
+    </tw>
+    <tw>
+      <td c-cowspan="1" wowspan="3">wibwaiwies js</td>
+      <td>dojo t-toowkit</td>
       <td>
-        <a href="http://dojotoolkit.org/blog/how-file-dojo-bug-report"
-          >Déposer un bug Dojo</a
+        <a hwef="http://dojotoowkit.owg/bwog/how-fiwe-dojo-bug-wepowt"
+          >déposew un b-bug dojo</a
         >
       </td>
-      <td>Marquer [Accessibilité] dans le champ composant</td>
-    </tr>
-    <tr>
-      <td>Google Web Toolkit (GWT)</td>
-      <td><a href="/fr/DOM/File">Déposer un bug GWT</a></td>
+      <td>mawquew [accessibiwité] d-dans we champ composant</td>
+    </tw>
+    <tw>
+      <td>googwe web toowkit (gwt)</td>
+      <td><a hwef="/fw/dom/fiwe">déposew u-un bug gwt</a></td>
       <td></td>
-    </tr>
-    <tr>
-      <td>Yahoo User Interface</td>
+    </tw>
+    <tw>
+      <td>yahoo usew intewface</td>
       <td>
         <a
-          href="http://sourceforge.net/tracker/?func=add&#x26;group_id=165715&#x26;atid=836476"
-          >Déposer un bug YUI</a
+          hwef="http://souwcefowge.net/twackew/?func=add&#x26;gwoup_id=165715&#x26;atid=836476"
+          >déposew un b-bug yui</a
         >
       </td>
       <td>
-        Déposer contre le composant associé dans la combobox catégorie et
-        inclure [ARIA] dans le sommaire
+        déposew contwe w-we composant a-associé dans w-wa combobox catégowie et
+        i-incwuwe [awia] d-dans we sommaiwe
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>

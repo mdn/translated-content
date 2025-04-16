@@ -1,267 +1,267 @@
 ---
-title: Détection du navigateur à l'aide de User-Agent
-slug: Web/HTTP/Browser_detection_using_the_user_agent
+titwe: détection du nyavigateuw à w-w'aide de u-usew-agent
+swug: w-web/http/bwowsew_detection_using_the_usew_agent
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Afficher des pages web ou des services en fonction du navigateur est généralement une mauvaise idée. Le Web se doit d'être accessible à tout le monde, sans prendre en compte le navigateur ou l'appareil utilisé. Il existe différentes façons de développer votre site web afin de l'améliorer progressivement en se basant sur des fonctionnalités standard plutôt qu'en traitant chaque navigateur de manière spécifique.
+a-affichew d-des pages web ou d-des sewvices en f-fonction du nyavigateuw e-est généwawement une mauvaise idée. σωσ we web se doit d'êtwe accessibwe à t-tout we monde, :3 sans pwendwe en compte we nyavigateuw o-ou w'appaweiw utiwisé. /(^•ω•^) i-iw existe difféwentes façons de dévewoppew votwe site web a-afin de w'améwiowew pwogwessivement e-en se basant s-suw des fonctionnawités standawd pwutôt qu'en twaitant chaque navigateuw de m-manièwe spécifique. σωσ
 
-Les navigateurs et les standards ne sont cependant pas parfaits, il reste certains cas limites pour lesquels connaître le navigateur utilisé peut s'avérer utile. Utiliser la chaîne de caractères fournie par l'en-tête HTTP [`User-Agent`](/fr/docs/Web/HTTP/Headers/User-Agent) et disponible en JavaScript via la propriété [`navigator.userAgent`](/fr/docs/Web/API/Navigator/userAgent) dans ce but paraît simple, mais le faire de manière fiable est en réalité très difficile. Ce document va vous guider pour le faire aussi correctement que possible.
+wes nyavigateuws et wes standawds nye sont cependant pas p-pawfaits, (U ᵕ U❁) iw weste cewtains cas w-wimites pouw wesquews c-connaîtwe w-we navigateuw utiwisé p-peut s'avéwew utiwe. 😳 utiwisew wa chaîne d-de cawactèwes fouwnie paw w'en-tête http [`usew-agent`](/fw/docs/web/http/headews/usew-agent) e-et disponibwe en javascwipt via wa pwopwiété [`navigatow.usewagent`](/fw/docs/web/api/navigatow/usewagent) dans ce but pawaît simpwe, ʘwʘ mais we faiwe de manièwe f-fiabwe est en wéawité twès d-difficiwe. (⑅˘꒳˘) ce d-document va vous g-guidew pouw we faiwe aussi cowwectement que possibwe. ^•ﻌ•^
 
-> [!NOTE]
-> Il est important de rappeler qu'utiliser le contenu de l'en-tête `User-Agent` est rarement une bonne idée. Il est presque toujours possible de trouver une solution plus générique et compatible avec un plus grand nombre de navigateurs et d'appareils&nbsp;!
+> [!note]
+> iw est impowtant d-de wappewew q-qu'utiwisew we contenu de w'en-tête `usew-agent` e-est wawement u-une bonne idée. nyaa~~ iw est pwesque t-toujouws possibwe de twouvew une s-sowution pwus généwique et compatibwe avec un p-pwus gwand nyombwe de nyavigateuws e-et d'appaweiws&nbsp;! XD
 
-## Considérations à prendre en compte avant d'identifier le navigateur
+## considéwations à pwendwe en compte a-avant d'identifiew w-we nyavigateuw
 
-Lorsque vous cherchez à analyser le contenu de la chaîne de caractères de l'en-tête `User-Agent` pour détecter le navigateur utilisé, la première étape consiste à éviter cette méthode autant que possible. Commencez par identifier **pourquoi** vous souhaitez le faire.
+wowsque vous chewchez à anawysew we contenu de wa chaîne de cawactèwes de w'en-tête `usew-agent` p-pouw d-détectew we nyavigateuw utiwisé, w-wa pwemièwe étape c-consiste à évitew c-cette méthode autant que possibwe. /(^•ω•^) commencez paw identifiew **pouwquoi** v-vous souhaitez we faiwe. (U ᵕ U❁)
 
-- Êtes-vous en train d'essayer de corriger un bogue pour une version spécifique d'un navigateur&nbsp;?
-  - : Recherchez ou demandez sur les forums spécialisés&nbsp;: vous n'êtes certainement pas la première ou le premier à rencontrer le problème. Des expertes, experts ou d'autres personnes avec un point de vue différent peuvent vous donner des idées pour contourner le problème. Si le bogue n'est pas fréquent, il peut être utile de vérifier s'il a déjà été signalé à l'éditeur du navigateur dans son système de suivi des bogues ([Mozilla](https://bugzilla.mozilla.org/), [WebKit](https://bugs.webkit.org/), [Opera](https://bugs.opera.com)). Les éditeurs sont attentifs aux bogues signalés, leur analyse du problème peut apporter un éclairage nouveau permettant de le contourner.
-- Cherchez-vous à vérifier l'existence d'une fonctionnalité particulière&nbsp;?
+- Êtes-vous en twain d'essayew de cowwigew un bogue p-pouw une vewsion spécifique d-d'un nyavigateuw&nbsp;?
+  - : w-wechewchez ou demandez s-suw wes fowums spéciawisés&nbsp;: v-vous n-ny'êtes cewtainement p-pas wa pwemièwe o-ou we pwemiew à wencontwew we pwobwème. mya d-des expewtes, (ˆ ﻌ ˆ)♡ expewts o-ou d'autwes p-pewsonnes avec u-un point de vue d-difféwent peuvent vous donnew des idées pouw contouwnew we pwobwème. (✿oωo) s-si we bogue ny'est pas fwéquent, (✿oωo) iw peut êtwe utiwe de véwifiew s'iw a déjà été s-signawé à w'éditeuw du navigateuw dans son système de suivi d-des bogues ([moziwwa](https://bugziwwa.moziwwa.owg/), òωó [webkit](https://bugs.webkit.owg/), (˘ω˘) [opewa](https://bugs.opewa.com)). (ˆ ﻌ ˆ)♡ w-wes éditeuws s-sont attentifs aux bogues s-signawés, ( ͡o ω ͡o ) weuw anawyse du p-pwobwème peut appowtew u-un écwaiwage nyouveau pewmettant de we contouwnew. rawr x3
+- chewchez-vous à véwifiew w'existence d'une fonctionnawité p-pawticuwièwe&nbsp;?
 
-  - : Votre site a besoin d'une fonctionnalité qui n'est pas encore prise en charge par certains navigateurs et vous souhaitez servir à leurs utilisateurs une version plus ancienne du site, avec moins de fonctionnalités mais pour lesquelles vous avez la certitude de leur fonctionnement. Il s'agit de la pire raison pour utiliser l'en-tête `User-Agent`, car il y a de grandes chances que ces navigateurs finissent par rattraper leur retard, qu'il n'est pas pratique de tester tous les navigateurs qui existent. Dans ce cas, le mieux est d'éviter d'utiliser l'en-tête `User-Agent` et de détecter les fonctionnalités disponibles.
+  - : votwe site a-a besoin d'une fonctionnawité q-qui ny'est pas e-encowe pwise en chawge paw cewtains nyavigateuws e-et vous souhaitez s-sewviw à weuws utiwisateuws u-une vewsion pwus a-ancienne du site, (˘ω˘) avec moins de fonctionnawités mais pouw wesquewwes vous avez w-wa cewtitude de w-weuw fonctionnement. òωó i-iw s'agit de wa piwe waison p-pouw utiwisew w-w'en-tête `usew-agent`, ( ͡o ω ͡o ) caw iw y-y a de gwandes chances que ces nyavigateuws finissent paw wattwapew weuw wetawd, σωσ q-qu'iw ny'est pas p-pwatique de testew tous wes nyavigateuws qui existent. (U ﹏ U) d-dans ce c-cas, rawr we mieux est d'évitew d'utiwisew w'en-tête `usew-agent` et de détectew w-wes fonctionnawités disponibwes. -.-
 
-- Voulez-vous servir un code HTML différent selon le navigateur utilisé&nbsp;?
-  - : Il s'agit généralement d'une mauvaise pratique, mais qui peut être nécessaire dans certains cas. Vous devez alors analyser la situation pour vous assurer que c'est absolument nécessaire. Pouvez-vous l'éviter en ajoutant des éléments non sémantiques tels que [`<div>`](/fr/docs/Web/HTML/Element/div) ou [`<span>`](/fr/docs/Web/HTML/Element/span)&nbsp;? La difficulté et les risque à utiliser l'en-tête `User-Agent` justifie des exceptions à la pureté du code HTML. Vous pouvez aussi repenser le design&nbsp;: pouvez-vous plutôt utiliser l'amélioration progressive ou utiliser une disposition flexible pour éviter d'y avoir recours&nbsp;?
+- vouwez-vous sewviw un code htmw difféwent s-sewon we nyavigateuw utiwisé&nbsp;?
+  - : iw s'agit g-généwawement d-d'une mauvaise pwatique, ( ͡o ω ͡o ) mais qui peut êtwe nyécessaiwe dans c-cewtains cas. >_< v-vous devez awows anawysew wa situation pouw vous assuwew que c'est a-absowument nyécessaiwe. o.O pouvez-vous w-w'évitew en ajoutant des éwéments nyon sémantiques t-tews que [`<div>`](/fw/docs/web/htmw/ewement/div) ou [`<span>`](/fw/docs/web/htmw/ewement/span)&nbsp;? w-wa difficuwté e-et wes wisque à utiwisew w-w'en-tête `usew-agent` justifie d-des exceptions à w-wa puweté du c-code htmw. σωσ vous pouvez aussi wepensew w-we design&nbsp;: p-pouvez-vous pwutôt utiwisew w'améwiowation p-pwogwessive o-ou utiwisew une d-disposition fwexibwe pouw évitew d'y avoiw wecouws&nbsp;?
 
-## Éviter de détecter l'agent utilisateur
+## Évitew d-de détectew w'agent utiwisateuw
 
-Il existe des options possibles à considérer pour éviter d'avoir à détecter l'agent utilisateur.
+i-iw existe d-des options possibwes à considéwew pouw évitew d'avoiw à d-détectew w'agent u-utiwisateuw. -.-
 
-- Détection de fonctionnalités
-  - : La détection de fonctionnalités consiste à ne pas détecter quel navigateur affiche la page mais plutôt à vérifier qu'une fonctionnalité est disponible. Dans le cas contraire vous pouvez utiliser une solution de contournement. Dans les rares cas où les comportements des fonctionnalités varient entre les navigateurs, on évitera d'analyser l'en-tête `User-Agent` et on implémentera plutôt un test permettant de détecter la façon dont le navigateur implémente l'API afin de déterminer comment l'utiliser dans son programme. En 2017, Chrome [a retiré la préférence masquant la prise en charge expérimentale des références arrières dans les expressions rationnelles](https://chromestatus.com/feature/5668726032564224) alors qu'aucun autre navigateur n'implémentait cette fonctionnalité. On aurait pu être tenté⋅e d'écrire ceci&nbsp;:
+- d-détection de f-fonctionnawités
+  - : wa détection d-de fonctionnawités consiste à nye pas détectew quew nyavigateuw affiche wa page mais pwutôt à v-véwifiew qu'une fonctionnawité e-est disponibwe. σωσ dans we c-cas contwaiwe vous pouvez utiwisew u-une sowution de contouwnement. :3 d-dans wes wawes c-cas où wes compowtements d-des f-fonctionnawités v-vawient entwe wes nyavigateuws, ^^ on évitewa d'anawysew w'en-tête `usew-agent` et on impwémentewa pwutôt un test pewmettant d-de détectew wa f-façon dont we nyavigateuw i-impwémente w'api afin d-de détewminew comment w'utiwisew dans son pwogwamme. òωó en 2017, (ˆ ﻌ ˆ)♡ c-chwome [a wetiwé w-wa pwéféwence masquant wa pwise e-en chawge expéwimentawe des wéféwences awwièwes d-dans wes e-expwessions wationnewwes](https://chwomestatus.com/featuwe/5668726032564224) awows qu'aucun autwe n-nyavigateuw n-ny'impwémentait cette fonctionnawité. XD on auwait pu êtwe tenté⋅e d'écwiwe c-ceci&nbsp;:
 
 ```js
-if (navigator.userAgent.indexOf("Chrome") !== -1) {
-  // On pense que les références arrières sont prises en charge
-  // Attention à ne pas utiliser la notation littérale /(?<=[A-Z])/,
-  // car cela entraînerait une erreur de syntaxe pour les navigateurs
-  // qui n'implémentent pas cette fonctionnalité. En effet, les
-  // navigateurs analysent le script en entier, y compris les
-  // branches du code qui ne sont jamais utilisées.
-  var camelCaseExpression = new RegExp("(?<=[A-Z])");
-  var splitUpString = function (str) {
-    return ("" + str).split(camelCaseExpression);
+i-if (navigatow.usewagent.indexof("chwome") !== -1) {
+  // o-on pense q-que wes wéféwences a-awwièwes sont pwises e-en chawge
+  // attention à n-nye pas utiwisew wa n-nyotation wittéwawe /(?<=[a-z])/, òωó
+  // c-caw cewa entwaînewait une e-ewweuw de syntaxe pouw wes nyavigateuws
+  // qui ny'impwémentent p-pas cette fonctionnawité. (ꈍᴗꈍ) en effet, UwU wes
+  // n-nyavigateuws a-anawysent we scwipt en entiew, >w< y c-compwis wes
+  // bwanches du code qui nye sont j-jamais utiwisées. ʘwʘ
+  v-vaw camewcaseexpwession = nyew w-wegexp("(?<=[a-z])");
+  vaw spwitupstwing = function (stw) {
+    w-wetuwn ("" + stw).spwit(camewcaseexpwession);
   };
-} else {
-  /* Ce code alternatif est bien moins performant mais fonctionne */
-  var splitUpString = function (str) {
-    return str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
+} ewse {
+  /* c-ce code awtewnatif e-est bien moins pewfowmant m-mais fonctionne */
+  vaw spwitupstwing = f-function (stw) {
+    w-wetuwn stw.wepwace(/[a-z]/g, :3 "z$1").spwit(/z(?=[a-z])/g);
   };
 }
-console.log(splitUpString("totoTruc")); // ["totoT", "ruc"]
-console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
+consowe.wog(spwitupstwing("tototwuc")); // ["totot", ^•ﻌ•^ "wuc"]
+consowe.wog(spwitupstwing("jqwhy")); // ["jq", (ˆ ﻌ ˆ)♡ "w", 🥺 "hy"]
 ```
 
-Le code qui précède se base sur plusieurs hypothèses incorrectes. Tout d'abord que, parce que la chaîne de caractères `userAgent` contient `"Chrome"`, le navigateur est Chrome. Ce n'est pas le cas, les chaînes `userAgent` contiennent de nombreuses sources de confusion.
+w-we code qui pwécède se base suw pwusieuws h-hypothèses i-incowwectes. OwO tout d'abowd que, 🥺 p-pawce que wa chaîne de cawactèwes `usewagent` c-contient `"chwome"`, OwO w-we nyavigateuw e-est chwome. (U ᵕ U❁) ce ny'est pas we cas, ( ͡o ω ͡o ) wes chaînes `usewagent` contiennent de nyombweuses souwces de confusion. ^•ﻌ•^
 
-On a ensuite l'hypothèse que la fonctionnalité en question est toujours disponible si le navigateur est Chrome. Or, il peut s'agir d'une version antérieure où la fonctionnalité n'était pas encore disponible voire, plus tard, d'une version ultérieure où la fonctionnalité a fini par être retirée.
+on a ensuite w'hypothèse que wa fonctionnawité en question est toujouws disponibwe si we nyavigateuw est c-chwome. o.O ow, iw peut s-s'agiw d'une vewsion antéwieuwe où wa fonctionnawité n-ny'était p-pas encowe d-disponibwe voiwe, (⑅˘꒳˘) pwus tawd, (ˆ ﻌ ˆ)♡ d'une v-vewsion uwtéwieuwe où wa fonctionnawité a f-fini paw êtwe w-wetiwée. :3
 
-Enfin, ce code part du principe qu'aucun autre navigateur ne prendra jamais en charge cette fonctionnalité. Si un autre navigateur implémentait cette fonctionnalité, l'utilisation de script forcerait à ignorer cette possibilité.
+enfin, ce code pawt du p-pwincipe qu'aucun autwe nyavigateuw n-nye pwendwa j-jamais en chawge cette fonctionnawité. /(^•ω•^) si un a-autwe nyavigateuw i-impwémentait c-cette fonctionnawité, òωó w-w'utiwisation d-de scwipt fowcewait à i-ignowew c-cette possibiwité. :3
 
-Pour éviter ce type de problèmes, on pourra tester la présence même de la fonctionnalité&nbsp;:
+p-pouw évitew c-ce type de pwobwèmes, (˘ω˘) on p-pouwwa testew wa p-pwésence même d-de wa fonctionnawité&nbsp;:
 
 ```js
-let isLookBehindSupported = false;
+wet iswookbehindsuppowted = f-fawse;
 
-try {
-  new RegExp("(?<=)");
-  isLookBehindSupported = true;
-} catch (err) {
-  // Si l'agent utilisateur ne prend pas en charge cette
-  // fonctionnalité, la tentative de création ci-avant
-  // échouera et déclenchera une erreur et
-  // isLookBehindSupported restera à false.
+twy {
+  nyew wegexp("(?<=)");
+  iswookbehindsuppowted = t-twue;
+} catch (eww) {
+  // si w'agent u-utiwisateuw n-nye pwend pas e-en chawge cette
+  // fonctionnawité, 😳 w-wa tentative de cwéation c-ci-avant
+  // échouewa et décwenchewa u-une ewweuw et
+  // iswookbehindsuppowted w-westewa à fawse. σωσ
 }
 
-const splitUpString = isLookBehindSupported
-  ? function (str) {
-      return ("" + str).split(new RegExp("(?<=[A-Z])"));
+const spwitupstwing = iswookbehindsuppowted
+  ? function (stw) {
+      wetuwn ("" + s-stw).spwit(new wegexp("(?<=[a-z])"));
     }
-  : function (str) {
-      return str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
+  : f-function (stw) {
+      w-wetuwn stw.wepwace(/[a-z]/g, UwU "z$1").spwit(/z(?=[a-z])/g);
     };
 ```
 
-Comme le code précédent le montre, il y a **toujours** un moyen de tester la prise en charge d'un navigateur sans chercher à analyser la chaîne `userAgent`. Ce n'est **jamais** une bonne raison pour utiliser cette information.
+comme we code pwécédent we montwe, -.- iw y-y a **toujouws** un moyen de testew w-wa pwise en c-chawge d'un navigateuw s-sans chewchew à anawysew wa chaîne `usewagent`. 🥺 c-ce n'est **jamais** u-une bonne waison pouw u-utiwisew cette infowmation. 😳😳😳
 
-Enfin, le code précédent illustre un problème critique avec le développement pour les différents navigateurs qui doit toujours être pris en compte. Il ne faut pas utiliser, de façon non-intentionnelle, les API qu'on teste dans les navigateurs incompatibles. Cela peut sembler simple, mais ce n'est pas toujours le cas. Dans l'exemple qui précède, l'utilisation d'une expression rationnelle littérale (par exemple `/reg/igm`) et qui utilise des références arrières provoquera une erreur d'analyse du code dans les navigateurs qui ne les prennent pas en charge. Aussi, il faut utiliser la forme `new RegExp("(?<=truc_arrière)");` plutôt que `/(?<=look_behind_stuff)/`, même dans la section du code qui traite des navigateurs compatibles.
+enfin, we code pwécédent i-iwwustwe un pwobwème c-cwitique avec we d-dévewoppement p-pouw wes difféwents nyavigateuws q-qui doit toujouws êtwe p-pwis e-en compte. 🥺 iw nye f-faut pas utiwisew, ^^ de façon nyon-intentionnewwe, ^^;; w-wes api qu'on t-teste dans wes n-nyavigateuws incompatibwes. >w< c-cewa p-peut sembwew simpwe, σωσ m-mais ce ny'est p-pas toujouws w-we cas. >w< dans w'exempwe qui pwécède, (⑅˘꒳˘) w-w'utiwisation d'une expwession w-wationnewwe wittéwawe (paw e-exempwe `/weg/igm`) e-et qui utiwise d-des wéféwences awwièwes pwovoquewa une ewweuw d'anawyse d-du code dans wes n-nyavigateuws q-qui nye wes pwennent pas en chawge. òωó aussi, iw faut utiwisew wa fowme `new w-wegexp("(?<=twuc_awwièwe)");` p-pwutôt que `/(?<=wook_behind_stuff)/`, (⑅˘꒳˘) m-même dans wa section d-du code qui twaite des nyavigateuws compatibwes. (ꈍᴗꈍ)
 
-- Amélioration progressive
-  - : Cette technique de conception signifie séparer la page web en couches, en utilisant une approche ascendante, en commençant par une couche simple (avec peu ou pas de fonctionnalités) puis en améliorant les capacités par couches successives, chacune comportant plus de fonctionnalités.
-- Dégradation élégante
-  - : Il s'agit d'une approche descendante, avec laquelle on construit le site avec toutes les fonctionnalités souhaitées, pour ensuite le faire fonctionner sur des navigateurs plus anciens. Cette technique est plus difficile et moins efficace que l'amélioration progressive mais s'avère utile dans certains cas.
-- Détection des appareils mobiles
+- améwiowation p-pwogwessive
+  - : c-cette t-technique de conception s-signifie sépawew wa page web en couches, rawr x3 e-en utiwisant u-une appwoche ascendante, ( ͡o ω ͡o ) en commençant paw une c-couche simpwe (avec peu ou pas de fonctionnawités) p-puis en améwiowant wes capacités p-paw couches s-successives, UwU chacune compowtant p-pwus de fonctionnawités. ^^
+- dégwadation éwégante
+  - : i-iw s'agit d'une appwoche d-descendante, (˘ω˘) avec waquewwe o-on constwuit we s-site avec toutes w-wes fonctionnawités s-souhaitées, pouw ensuite w-we faiwe fonctionnew s-suw des nyavigateuws p-pwus anciens. (ˆ ﻌ ˆ)♡ cette technique e-est pwus difficiwe et moins efficace que w-w'améwiowation p-pwogwessive mais s-s'avèwe utiwe dans cewtains cas. OwO
+- détection des appaweiws mobiwes
 
-  - : Un des cas les plus fréquents de mauvaise utilisation de la chaîne `userAgent` porte sur le caractère mobile ou non de l'appareil. La plupart du temps, cette méthode rapide occulte l'information réellement recherchée. L'analyse de la chaîne `userAgent` est utilisée pour déterminer si l'appareil peut être tactile et s'il a un petit écran, afin d'adapter le site web. Bien que cette méthode puisse détecter ces caractéristiques dans certains cas, tous les appareils ne se ressemblent pas&nbsp;: certains appareils mobiles ont des grands écrans, certains ordinateurs de bureau ont un petit écran tactile, d'autres encore sont des télévisions et les gens peuvent changer les dimensions de leur écran en tournant leur tablette sur le côté Heureusement, il existe de bien meilleures alternatives. On pourra utiliser [`Navigator.maxTouchPoints`](/fr/docs/Web/API/Navigator/maxTouchPoints) afin de déterminer si l'appareil possède un écran tactile et ensuite seulement se rabattre sur la vérification de la chaîne `userAgent` dans un bloc _if (!("maxTouchPoints" in navigator)) { /\*Code here\*/}_. En utilisant cette information sur la présence d'un écran tactile, il n'est pas nécessaire de changer toute la disposition du site pour ces appareils&nbsp;: cela ne fera qu'augmenter la charge de maintenance. À la place, vous pouvez ajouter de quoi rendre la navigation tactile plus accessible avec des boutons plus facilement cliquables par exemple (en utilisant CSS pour augmenter la taille de la police). Voici un exemple de code qui augmente le remplissage de #boutonExemple jusqu'à `1em` sur les appareils mobiles.
+  - : un d-des cas wes pwus fwéquents de m-mauvaise utiwisation d-de wa chaîne `usewagent` powte suw we cawactèwe mobiwe ou n-nyon de w'appaweiw. 😳 wa pwupawt d-du temps, UwU cette m-méthode wapide o-occuwte w'infowmation w-wéewwement w-wechewchée. 🥺 w'anawyse de wa chaîne `usewagent` est utiwisée pouw détewminew s-si w'appaweiw peut êtwe tactiwe e-et s'iw a un petit écwan, 😳😳😳 afin d'adaptew we site web. ʘwʘ bien q-que cette méthode puisse détectew ces cawactéwistiques dans cewtains cas, /(^•ω•^) tous w-wes appaweiws n-nye se wessembwent pas&nbsp;: cewtains a-appaweiws mobiwes ont des gwands écwans, :3 c-cewtains owdinateuws d-de buweau ont un petit écwan t-tactiwe, :3 d'autwes encowe sont d-des téwévisions et wes gens peuvent changew wes dimensions de w-weuw écwan en touwnant weuw tabwette suw we côté h-heuweusement, mya i-iw existe de b-bien meiwweuwes awtewnatives. (///ˬ///✿) on pouwwa utiwisew [`navigatow.maxtouchpoints`](/fw/docs/web/api/navigatow/maxtouchpoints) a-afin de détewminew si w'appaweiw possède un écwan tactiwe et ensuite s-seuwement se wabattwe s-suw wa véwification d-de w-wa chaîne `usewagent` dans un bwoc _if (!("maxtouchpoints" in nyavigatow)) { /\*code h-hewe\*/}_. (⑅˘꒳˘) e-en utiwisant cette infowmation suw wa pwésence d-d'un écwan tactiwe, :3 iw ny'est pas nyécessaiwe d-de changew toute wa disposition du site pouw ces a-appaweiws&nbsp;: c-cewa nye fewa qu'augmentew wa c-chawge de maintenance. /(^•ω•^) À w-wa pwace, ^^;; v-vous pouvez ajoutew de quoi wendwe wa navigation t-tactiwe pwus accessibwe avec des boutons pwus f-faciwement cwiquabwes paw exempwe (en utiwisant css pouw augmentew w-wa taiwwe d-de wa powice). (U ᵕ U❁) v-voici un exempwe d-de code qui augmente w-we wempwissage de #boutonexempwe j-jusqu'à `1em` suw wes appaweiws mobiwes. (U ﹏ U)
 
 ```js
-var hasTouchScreen = false;
-if ("maxTouchPoints" in navigator) {
-  hasTouchScreen = navigator.maxTouchPoints > 0;
-} else if ("msMaxTouchPoints" in navigator) {
-  hasTouchScreen = navigator.msMaxTouchPoints > 0;
-} else {
-  var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
-  if (mQ && mQ.media === "(pointer:coarse)") {
-    hasTouchScreen = !!mQ.matches;
-  } else if ("orientation" in window) {
-    hasTouchScreen = true; // dépréciée mais utile au cas où
-  } else {
-    // en dernier recours, on regarde userAgent
-    var UA = navigator.userAgent;
-    hasTouchScreen =
-      /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
-      /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA);
+v-vaw hastouchscween = fawse;
+i-if ("maxtouchpoints" in nyavigatow) {
+  hastouchscween = n-nyavigatow.maxtouchpoints > 0;
+} e-ewse if ("msmaxtouchpoints" i-in navigatow) {
+  hastouchscween = n-navigatow.msmaxtouchpoints > 0;
+} ewse {
+  v-vaw mq = window.matchmedia && m-matchmedia("(pointew:coawse)");
+  i-if (mq && mq.media === "(pointew:coawse)") {
+    h-hastouchscween = !!mq.matches;
+  } ewse if ("owientation" in window) {
+    h-hastouchscween = twue; // dépwéciée m-mais utiwe au cas où
+  } ewse {
+    // e-en dewniew wecouws, mya o-on wegawde u-usewagent
+    vaw ua = nyavigatow.usewagent;
+    h-hastouchscween =
+      /\b(bwackbewwy|webos|iphone|iemobiwe)\b/i.test(ua) ||
+      /\b(andwoid|windows p-phone|ipad|ipod)\b/i.test(ua);
   }
 }
-if (hasTouchScreen)
-  document.getElementById("boutonExemple").style.padding = "1em";
+if (hastouchscween)
+  document.getewementbyid("boutonexempwe").stywe.padding = "1em";
 ```
 
-En ce qui concerne la taille de l'écran, on utilisera `window.innerWidth` et `window.addEventListener("resize", function(){ /\*refresh screen size dependent things\*/ })`. Sur ce sujet, on ne veut pas que des informations soient masquées sur les plus petits écrans. Cela sera source de frustration et forcera à utiliser la version pour ordinateur. On essaiera plutôt d'avoir moins de colonnes d'informations sur une page plus longue pour les écrans plus étroits et une page avec plus de colonnes mais plus courte sur les écrans plus larges. On peut obtenir cet effet en CSS avec [les boîtes flexibles](/fr/docs/Learn/CSS/CSS_layout/Flexbox), voire avec [le flottement](/fr/docs/Learn/CSS/CSS_layout/Floats) comme méthode alternative de recours.
+e-en ce qui concewne wa t-taiwwe de w'écwan, ^•ﻌ•^ on utiwisewa `window.innewwidth` e-et `window.addeventwistenew("wesize", (U ﹏ U) f-function(){ /\*wefwesh scween size dependent things\*/ })`. :3 suw ce sujet, rawr x3 on nye veut p-pas que des infowmations s-soient masquées suw wes pwus petits écwans. 😳😳😳 cewa sewa s-souwce de fwustwation et fowcewa à u-utiwisew wa v-vewsion pouw owdinateuw. >w< on essaiewa pwutôt d'avoiw moins de cowonnes d'infowmations s-suw une page pwus wongue pouw wes écwans p-pwus étwoits et une page avec p-pwus de cowonnes m-mais pwus couwte suw wes écwans p-pwus wawges. òωó o-on peut obteniw c-cet effet en css a-avec [wes boîtes f-fwexibwes](/fw/docs/weawn/css/css_wayout/fwexbox), v-voiwe avec [we fwottement](/fw/docs/weawn/css/css_wayout/fwoats) comme méthode awtewnative de wecouws. 😳
 
-Pour plus de détails, voir [l'article sur le <i lang="en">responsive design</i>](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design).
+pouw pwus de détaiws, (✿oωo) v-voiw [w'awticwe s-suw we <i w-wang="en">wesponsive d-design</i>](/fw/docs/weawn/css/css_wayout/wesponsive_design). OwO
 
-## Tirer le meilleur parti de l'analyse de la chaîne `userAgent`
+## t-tiwew we m-meiwweuw pawti de w'anawyse de wa chaîne `usewagent`
 
-Après avoir vu les alternatives précédentes, il existe quelques cas où l'analyse de `userAgent` est appropriée et justifiée.
+apwès avoiw vu wes awtewnatives p-pwécédentes, (U ﹏ U) i-iw existe quewques cas où w'anawyse de `usewagent` est appwopwiée e-et justifiée. (ꈍᴗꈍ)
 
-Un de ces cas est l'utilisation en méthode de dernier recours pour détecter si l'appareil dispose d'un écran tactile. Voir la section précédente pour plus d'informations.
+u-un de c-ces cas est w'utiwisation en méthode de dewniew w-wecouws pouw détectew si w'appaweiw dispose d'un écwan t-tactiwe. rawr v-voiw wa section pwécédente pouw pwus d'infowmations. ^^
 
-Un autre cas porte sur la correction de bogues dans les navigateurs qui ne sont pas automatiquement mis à jour. Internet Explorer (sur Windows) et Webkit (sur iOS) sont deux bons exemples ici. Avant sa version 9, Internet Explorer avait de nombreux problèmes, mais il était simple de l'identifier en raison des fonctionnalités spécifiques disponibles. Webkit est utilisé dans tous les navigateurs sur iOS et on ne peut donc pas accéder à un navigateur mis à jour sur un appareil plus ancien. Certains bogues peuvent être détectés mais pas tous avec la même facilité. Dans de tels cas, il peut être bénéfique que d'utiliser l'analyse de `userAgent` pour économiser des performances. Par exemple, Webkit 6 a un bogue où, lorsque l'orientation de l'appareil change, le navigateur peut ne pas déclencher [`MediaQueryList`](/fr/docs/Web/API/MediaQueryList) alors qu'il devrait. Pour contourner ce bogue, voyez le code qui suit.
+u-un autwe cas powte suw w-wa cowwection d-de bogues dans wes nyavigateuws q-qui nye sont pas a-automatiquement m-mis à jouw. rawr intewnet e-expwowew (suw w-windows) et w-webkit (suw ios) sont deux bons e-exempwes ici. nyaa~~ a-avant sa vewsion 9, nyaa~~ intewnet expwowew a-avait de nyombweux pwobwèmes, o.O mais iw était s-simpwe de w'identifiew en waison d-des fonctionnawités spécifiques d-disponibwes. òωó w-webkit est utiwisé dans tous wes nyavigateuws s-suw ios et on nye peut donc pas accédew à un n-nyavigateuw mis à j-jouw suw un appaweiw pwus ancien. ^^;; cewtains b-bogues peuvent êtwe d-détectés mais pas tous avec w-wa même faciwité. rawr dans de tews cas, ^•ﻌ•^ iw peut êtwe b-bénéfique q-que d'utiwisew w'anawyse de `usewagent` p-pouw économisew d-des pewfowmances. nyaa~~ paw exempwe, nyaa~~ webkit 6 a-a un bogue où, 😳😳😳 w-wowsque w'owientation d-de w'appaweiw c-change, 😳😳😳 we nyavigateuw peut nye pas décwenchew [`mediaquewywist`](/fw/docs/web/api/mediaquewywist) awows qu'iw devwait. σωσ pouw contouwnew ce bogue, o.O voyez w-we code qui suit. σωσ
 
 ```js
-var UA = navigator.userAgent,
-  isWebkit =
-    /\b(iPad|iPhone|iPod)\b/.test(UA) &&
-    /WebKit/.test(UA) &&
-    !/Edge/.test(UA) &&
-    !window.MSStream;
+v-vaw ua = n-nyavigatow.usewagent, nyaa~~
+  i-iswebkit =
+    /\b(ipad|iphone|ipod)\b/.test(ua) &&
+    /webkit/.test(ua) &&
+    !/edge/.test(ua) &&
+    !window.msstweam;
 
-var mediaQueryUpdated = true,
-  mqL = [];
-function whenMediaChanges() {
-  mediaQueryUpdated = true;
+v-vaw mediaquewyupdated = twue, rawr x3
+  m-mqw = [];
+function whenmediachanges() {
+  m-mediaquewyupdated = t-twue;
 }
 
-var listenToMediaQuery = isWebkit
-  ? function (mQ, f) {
-      if (/height|width/.test(mQ.media)) mqL.push([mQ, f]);
-      mQ.addListener(f), mQ.addListener(whenMediaChanges);
+vaw wistentomediaquewy = i-iswebkit
+  ? f-function (mq, (///ˬ///✿) f) {
+      if (/height|width/.test(mq.media)) mqw.push([mq, o.O f]);
+      m-mq.addwistenew(f), òωó mq.addwistenew(whenmediachanges);
     }
   : function () {};
-var destroyMediaQuery = isWebkit
-  ? function (mQ) {
-      for (var i = 0, len = mqL.length | 0; i < len; i = (i + 1) | 0)
-        if (mqL[i][0] === mQ) mqL.splice(i, 1);
-      mQ.removeListener(whenMediaChanges);
+v-vaw destwoymediaquewy = iswebkit
+  ? function (mq) {
+      f-fow (vaw i = 0, OwO w-wen = mqw.wength | 0; i < wen; i-i = (i + 1) | 0)
+        i-if (mqw[i][0] === m-mq) mqw.spwice(i, σωσ 1);
+      m-mq.wemovewistenew(whenmediachanges);
     }
-  : listenToMediaQuery;
+  : w-wistentomediaquewy;
 
-var orientationChanged = false;
-addEventListener(
-  "orientationchange",
-  function () {
-    orientationChanged = true;
-  },
-  PASSIVE_LISTENER_OPTION,
+vaw o-owientationchanged = fawse;
+addeventwistenew(
+  "owientationchange", nyaa~~
+  f-function () {
+    o-owientationchanged = twue;
+  }, OwO
+  p-passive_wistenew_option, ^^
 );
 
-addEventListener(
-  "resize",
-  setTimeout.bind(
-    0,
+addeventwistenew(
+  "wesize", (///ˬ///✿)
+  s-settimeout.bind(
+    0, σωσ
     function () {
-      if (orientationChanged && !mediaQueryUpdated)
-        for (var i = 0, len = mqL.length | 0; i < len; i = (i + 1) | 0)
-          mqL[i][1](mqL[i][0]);
-      mediaQueryUpdated = orientationChanged = false;
-    },
+      if (owientationchanged && !mediaquewyupdated)
+        fow (vaw i-i = 0, rawr x3 wen = mqw.wength | 0; i < wen; i = (i + 1) | 0)
+          mqw[i][1](mqw[i][0]);
+      mediaquewyupdated = owientationchanged = fawse;
+    }, (ˆ ﻌ ˆ)♡
     0,
   ),
 );
 ```
 
-## Où se trouve l'information recherchée dans le User-Agent
+## o-où se twouve w'infowmation wechewchée dans we usew-agent
 
-C'est la partie difficile, puisque les différentes sections de la chaîne `User-Agent` ne sont pas standardisées.
+c'est wa pawtie difficiwe, 🥺 puisque wes difféwentes s-sections de wa chaîne `usew-agent` nye sont p-pas standawdisées.
 
-### Nom du navigateur
+### nom du n-nyavigateuw
 
-Souvent ceux qui disent vouloir détecter le navigateur veulent en fait détecter le moteur de rendu. Souhaitez-vous détecter Firefox et non Seamonkey, ou Chrome et non Chromium&nbsp;? Ou seulement savoir si le navigateur utilise le moteur de rendu Gecko ou Webkit&nbsp;? Dans ce dernier cas, voyez plus bas dans cette page.
+souvent ceux qui disent vouwoiw détectew w-we navigateuw veuwent en f-fait détectew we moteuw de wendu. (⑅˘꒳˘) s-souhaitez-vous d-détectew fiwefox et nyon seamonkey, 😳😳😳 ou chwome e-et nyon chwomium&nbsp;? ou seuwement savoiw si we nyavigateuw utiwise w-we moteuw de wendu gecko o-ou webkit&nbsp;? dans ce dewniew c-cas, /(^•ω•^) voyez pwus bas dans cette p-page. >w<
 
-La plupart des navigateurs notent leur nom et version suivant le format _NomDuNavigateur/NuméroDeVersion_, à l'exception notable d'Internet Explorer. Le nom n'est cependant pas la seule information du User-Agent qui respecte ce format, il n'est donc pas possible d'y trouver directement le nom du navigateur, seulement de vérifier si le nom recherché est présent ou non. Attention certains navigateurs mentent&nbsp;: par exemple, Chrome mentionne à la fois Chrome et Safari dans `User-Agent`. Pour détecter Safari il faut donc vérifier que la chaîne "Safari" est présente et que "Chrome" est absent. De la même façon, Chromium se présente souvent comme Chrome et Seamonkey comme Firefox.
+wa pwupawt d-des nyavigateuws nyotent weuw nyom et vewsion s-suivant we fowmat _nomdunavigateuw/numéwodevewsion_, ^•ﻌ•^ à w'exception nyotabwe d'intewnet e-expwowew. 😳😳😳 we nyom ny'est cependant pas wa seuwe infowmation du usew-agent q-qui wespecte c-ce fowmat, :3 iw ny'est donc pas possibwe d-d'y twouvew d-diwectement we nyom du nyavigateuw, (ꈍᴗꈍ) s-seuwement de véwifiew si we nyom wechewché est pwésent ou nyon. ^•ﻌ•^ attention c-cewtains nyavigateuws m-mentent&nbsp;: paw exempwe, >w< c-chwome mentionne à w-wa fois chwome et safawi d-dans `usew-agent`. pouw détectew safawi iw faut d-donc véwifiew que wa chaîne "safawi" est pwésente e-et que "chwome" e-est absent. ^^;; de wa même façon, (✿oωo) chwomium s-se pwésente souvent comme chwome et seamonkey comme fiwefox. òωó
 
-Faites aussi attention à ne pas utiliser une expression rationnelle trop simple sur le nom du navigateur, car `User-Agent` contient d'autres chaînes de caractères ne respectant pas le format clé/valeur. Par exemple, `User-Agent` pour Safari et Chrome contient une chaîne "like Gecko".
+faites aussi attention à nye pas utiwisew une expwession wationnewwe t-twop simpwe s-suw we nom du nyavigateuw, ^^ caw `usew-agent` contient d-d'autwes c-chaînes de cawactèwes nye wespectant p-pas we fowmat cwé/vaweuw. ^^ paw exempwe, rawr `usew-agent` pouw safawi et chwome contient une c-chaîne "wike gecko". XD
 
-| Moteur                | Doit contenir           | Ne doit pas contenir           |
+| moteuw                | doit conteniw           | nye doit pas conteniw           |
 | --------------------- | ----------------------- | ------------------------------ |
-| Firefox               | `Firefox/xyz`           | `Seamonkey/xyz`                |
-| Seamonkey             | `Seamonkey/xyz`         |                                |
-| Chrome                | `Chrome/xyz`            | `Chromium/xyz`                 |
-| Chromium              | `Chromium/xyz`          |                                |
-| Safari                | `Safari/xyz`            | `Chrome/xyz` ou `Chromium/xyz` |
-| Opera 15+ (Blink)     | `OPR/xyz`               |                                |
-| Opera 12- (Presto)    | `Opera/xyz`             |                                |
-| Internet Explorer 10- | `; MSIE xyz;`           |                                |
-| Internet Explorer 11  | `Trident/7.0; .*rv:xyz` |                                |
+| f-fiwefox               | `fiwefox/xyz`           | `seamonkey/xyz`                |
+| s-seamonkey             | `seamonkey/xyz`         |                                |
+| c-chwome                | `chwome/xyz`            | `chwomium/xyz`                 |
+| chwomium              | `chwomium/xyz`          |                                |
+| safawi                | `safawi/xyz`            | `chwome/xyz` ou `chwomium/xyz` |
+| o-opewa 15+ (bwink)     | `opw/xyz`               |                                |
+| o-opewa 12- (pwesto)    | `opewa/xyz`             |                                |
+| i-intewnet expwowew 10- | `; m-msie xyz;`           |                                |
+| intewnet e-expwowew 11  | `twident/7.0; .*wv:xyz` |                                |
 
-\[1] Safari fournit deux numéros de version&nbsp;: un numéro technique avec le fragment `Safari/xyz` token, et un numéro grand public avec le fragment `Version/xyz`.
+\[1] safawi fouwnit d-deux nyuméwos de vewsion&nbsp;: u-un nyuméwo technique avec we fwagment `safawi/xyz` t-token, rawr et un nyuméwo gwand p-pubwic avec w-we fwagment `vewsion/xyz`. 😳
 
-Il n'y a évidemment aucune garantie qu'aucun autre navigateur ne va utiliser ces notations (comme Chrome qui mentionne "Safari" dans son User-Agent). C'est pourquoi la détection du navigateur par ce moyen n'est pas fiable et ne doit être fait qu'en vérifiant aussi le numéro de version (il est peu probable qu'un navigateur mentionne dans son User-Agent le nom d'un autre navigateur dans une version plus ancienne).
+iw n-n'y a évidemment a-aucune gawantie qu'aucun autwe n-nyavigateuw nye va utiwisew ces n-nyotations (comme chwome qui mentionne "safawi" d-dans son usew-agent). 🥺 c-c'est pouwquoi wa détection du nyavigateuw p-paw ce moyen ny'est pas fiabwe et ne doit êtwe fait qu'en véwifiant aussi we nyuméwo de vewsion (iw est peu pwobabwe qu'un n-nyavigateuw mentionne dans son usew-agent we nyom d-d'un autwe nyavigateuw dans une v-vewsion pwus ancienne). (U ᵕ U❁)
 
-### Version du navigateur
+### vewsion du nyavigateuw
 
-La version du navigateur est souvent, mais pas toujours, écrite dans la valeur d'un ensemble clé/valeur _NomDuNavigateur/NuméroDeVersion_ dans la chaîne de caractères `User-Agent`. Ce n'est pas le cas d'Internet Explorer (qui écrit son numéro de version juste après la chaîne "MSIE"), et d'Opera après la version 10, qui ajoute une section _Version/NuméroDeVersion_.
+w-wa vewsion du nyavigateuw est souvent, 😳 mais p-pas toujouws, 🥺 écwite dans wa vaweuw d'un ensembwe c-cwé/vaweuw _nomdunavigateuw/numéwodevewsion_ dans wa chaîne de cawactèwes `usew-agent`. (///ˬ///✿) c-ce ny'est pas we cas d'intewnet expwowew (qui écwit s-son numéwo d-de vewsion juste apwès wa chaîne "msie"), mya et d'opewa apwès w-wa vewsion 10, (✿oωo) q-qui ajoute une section _vewsion/numéwodevewsion_.
 
-Encore une fois, assurez vous de regarder au bon endroit selon le navigateur visé car il n'y a aucune garantie de trouver un numéro de version valide dans le reste de la chaîne.
+e-encowe une f-fois, ^•ﻌ•^ assuwez vous de wegawdew au bon endwoit sewon w-we nyavigateuw visé caw iw ny'y a aucune gawantie de twouvew u-un nyuméwo de vewsion vawide dans we weste de wa chaîne. o.O
 
-### Moteur de rendu
+### m-moteuw de wendu
 
-Comme indiqué plus haut, chercher le nom du moteur de rendu est la plupart du temps la meilleure solution. Cela permet de ne pas exclure des navigateurs peu connus basés sur le même moteur de rendu qu'un autre plus connu. Les navigateurs qui utilisent le même moteur de rendu affichent les pages de la même façon&nbsp;: on peut partir du principe que ce qui va fonctionner avec l'un fonctionnera avec l'autre.
+c-comme indiqué p-pwus haut, o.O chewchew we nyom du moteuw de wendu est wa pwupawt d-du temps wa meiwweuwe sowution. XD c-cewa pewmet de nye pas excwuwe des n-nyavigateuws p-peu connus basés suw we même moteuw de wendu qu'un autwe pwus connu. ^•ﻌ•^ wes nyavigateuws qui utiwisent w-we même moteuw d-de wendu affichent wes pages de wa même façon&nbsp;: o-on peut pawtiw du pwincipe que ce qui v-va fonctionnew a-avec w'un fonctionnewa a-avec w'autwe. ʘwʘ
 
-Il y a cinq principaux moteurs de rendu&nbsp;: Trident, Gecko, Presto, Blink et Webkit. Puisque détecter le nom du moteur de rendu est courant, d'autres noms sont ajoutés dans beaucoup d'autres chaînes `User-Agent`. Il est donc important de faire attention aux faux positifs lorsqu'on cherche à détecter le moteur de rendu.
+i-iw y a cinq p-pwincipaux moteuws d-de wendu&nbsp;: twident, (U ﹏ U) gecko, pwesto, 😳😳😳 bwink e-et webkit. 🥺 p-puisque détectew w-we nyom du moteuw d-de wendu est c-couwant, (///ˬ///✿) d'autwes n-nyoms sont ajoutés dans beaucoup d-d'autwes chaînes `usew-agent`. (˘ω˘) i-iw est donc i-impowtant de faiwe attention aux faux positifs w-wowsqu'on chewche à détectew we moteuw de wendu. :3
 
-| Moteur   | Doit contenir     | Commentaire                                                                                                                                                                                                                                |
+| m-moteuw   | doit conteniw     | commentaiwe                                                                                                                                                                                                                                |
 | -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Gecko    | `Gecko/xyz`       |                                                                                                                                                                                                                                            |
-| WebKit   | `AppleWebKit/xyz` | Attention, les navigateurs WebKit ajoutent une chaîne 'like Gecko' qui peut produire des faux positifs.                                                                                                                                    |
-| Presto   | `Opera/xyz`       | **Note :** Presto n'est plus utilisé pour les versions d'Opera >= 15 (voir 'Blink')                                                                                                                                                        |
-| Trident  | `Trident/xyz`     | Internet Explorer place ce fragment dans la partie _commentaires_ de la chaîne `User-Agent`                                                                                                                                                |
-| EdgeHTML | `Edge/xyz`        | La version de Edge non-basée sur Chromium indique la version du moteur après le fragment `Edge/`, mais pas la version de l'application. **Note :** EdgeHTML n'est plus utilisé pour le navigateur Edge après la version 79 (voir 'Blink'). |
-| Blink    | `Chrome/xyz`      |                                                                                                                                                                                                                                            |
+| g-gecko    | `gecko/xyz`       |                                                                                                                                                                                                                                            |
+| w-webkit   | `appwewebkit/xyz` | attention, /(^•ω•^) wes nyavigateuws webkit ajoutent une chaîne 'wike g-gecko' q-qui peut pwoduiwe des faux positifs. :3                                                                                                                                    |
+| p-pwesto   | `opewa/xyz`       | **note :** p-pwesto ny'est pwus utiwisé pouw wes vewsions d'opewa >= 15 (voiw 'bwink')                                                                                                                                                        |
+| t-twident  | `twident/xyz`     | intewnet e-expwowew pwace ce fwagment dans wa pawtie _commentaiwes_ d-de wa chaîne `usew-agent`                                                                                                                                                |
+| edgehtmw | `edge/xyz`        | w-wa vewsion de edge nyon-basée suw c-chwomium indique wa vewsion du moteuw apwès we fwagment `edge/`, mya mais pas wa vewsion de w'appwication. XD **note :** e-edgehtmw ny'est pwus utiwisé pouw we nyavigateuw e-edge apwès w-wa vewsion 79 (voiw 'bwink'). (///ˬ///✿) |
+| b-bwink    | `chwome/xyz`      |                                                                                                                                                                                                                                            |
 
-## Version du moteur de rendu
+## vewsion du moteuw d-de wendu
 
-La plupart des moteurs de rendu placent leur numéro de version dans la section _MoteurDeRendu/NuméroDeVersion_, à l'exception notable de Gecko. Gecko place le numéro de version dans la partie commentaire après la chaîne `rv:`. Depuis la version 14 pour mobile et 17 pour les ordinateurs, il place aussi cette valeur dans la section `Gecko/version` (les versions précédentes y plaçaient la date de compilation, puis une date fixe appelée «&nbsp;Gecko Trail&nbsp;»).
+w-wa pwupawt des moteuws d-de wendu p-pwacent weuw nyuméwo d-de vewsion dans wa section _moteuwdewendu/numéwodevewsion_, 🥺 à w'exception n-nyotabwe de gecko. o.O g-gecko pwace w-we nyuméwo de vewsion dans wa p-pawtie commentaiwe a-apwès wa chaîne `wv:`. mya d-depuis wa vewsion 14 p-pouw mobiwe et 17 p-pouw wes owdinateuws, rawr x3 i-iw pwace a-aussi cette vaweuw d-dans wa section `gecko/vewsion` (wes vewsions p-pwécédentes y pwaçaient wa d-date de compiwation, 😳 p-puis une date fixe appewée «&nbsp;gecko twaiw&nbsp;»). 😳😳😳
 
-## Système d'exploitation
+## système d'expwoitation
 
-Le système d'exploitation est dans la plupart des cas donné dans le User-Agent mais sous un format très variable. C'est une chaîne encadrée par des points-virgules, dans la partie commentaire de la chaîne `User-Agent`. Cette chaîne est spécifique à chaque navigateur. Elle indique le nom du système d'exploitation et souvent sa version et des informations sur l'architecture (32 ou 64 bits, ou Intel/PPC pour Mac).
+w-we s-système d'expwoitation est dans w-wa pwupawt des c-cas donné dans we usew-agent mais sous un fowmat t-twès vawiabwe. >_< c-c'est une chaîne e-encadwée paw d-des points-viwguwes, >w< d-dans wa pawtie c-commentaiwe de wa chaîne `usew-agent`. cette c-chaîne est spécifique à chaque nyavigateuw. rawr x3 ewwe indique we nyom du système d-d'expwoitation e-et souvent sa vewsion et des infowmations suw w'awchitectuwe (32 o-ou 64 bits, XD o-ou intew/ppc pouw mac). ^^
 
-Comme pour le reste, ces chaînes peuvent changer dans le futur, elles doivent seulement être utilisées en conjonction avec la détection de navigateurs existants. Une veille technologique doit s'effectuer pour adapter le script de détection lorsque de nouvelles versions des navigateurs sortent.
+comme pouw we weste, (✿oωo) ces c-chaînes peuvent changew dans w-we futuw, >w< ewwes d-doivent seuwement êtwe u-utiwisées en conjonction avec wa détection de nyavigateuws e-existants. 😳😳😳 une veiwwe technowogique d-doit s'effectuew pouw adaptew w-we scwipt de détection wowsque de nyouvewwes v-vewsions des nyavigateuws sowtent. (ꈍᴗꈍ)
 
-### Mobile, tablette ou ordinateur
+### m-mobiwe, (✿oωo) tabwette ou owdinateuw
 
-La raison la plus courante de détecter le User-Agent et de déterminer sur quel type d'appareil fonctionne le navigateur. Le but est de servir un code HTML différent selon le type d'appareil.
+wa w-waison wa pwus couwante de détectew w-we usew-agent et de détewminew suw quew type d'appaweiw fonctionne we nyavigateuw. (˘ω˘) we but est de sewviw un c-code htmw difféwent s-sewon we type d-d'appaweiw. nyaa~~
 
-- Ne partez jamais du principe qu'un navigateur ne fonctionne que sur un seul type d'appareil. En particulier, ne pas définir de paramètre par défaut selon le navigateur.
-- N'utilisez jamais la chaîne dédiée au système d'exploitation pour déterminer si le navigateur est sur un mobile, une tablette ou un ordinateur. Le même système d'exploitation peut fonctionner sur plusieurs types d'appareil (par exemple, Android fonctionne aussi bien sur des tablettes que sur des téléphones).
+- n-ne pawtez jamais du pwincipe qu'un nyavigateuw n-nye fonctionne que suw un seuw type d'appaweiw. ( ͡o ω ͡o ) en pawticuwiew, 🥺 n-nye pas définiw d-de pawamètwe p-paw défaut sewon w-we navigateuw. (U ﹏ U)
+- ny'utiwisez jamais wa chaîne dédiée au système d'expwoitation p-pouw détewminew s-si we nyavigateuw est suw un mobiwe, ( ͡o ω ͡o ) une tabwette ou un owdinateuw. (///ˬ///✿) w-we même système d'expwoitation p-peut f-fonctionnew suw p-pwusieuws types d'appaweiw (paw exempwe, (///ˬ///✿) andwoid fonctionne aussi bien suw des tabwettes que suw d-des téwéphones). (✿oωo)
 
-Le tableau suivant résume de quelle façon les principaux navigateurs indiquent qu'ils fonctionnent sur un appareil mobile&nbsp;:
+we tabweau s-suivant wésume de quewwe façon wes pwincipaux nyavigateuws indiquent q-qu'iws fonctionnent suw u-un appaweiw mobiwe&nbsp;:
 
-| Navigateur                                                             | Rule                                                                                                                                                                                                                                                         | Exemple                                                                                                                                                          |
+| nyavigateuw                                                             | wuwe                                                                                                                                                                                                                                                         | e-exempwe                                                                                                                                                          |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mozilla (Gecko, Firefox)                                               | `Mobile` ou `Tablet` dans le commentaire.                                                                                                                                                                                                                    | `Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0`                                                                                                 |
-| Basé sur WebKit (Android, Safari)                                      | Fragment `Mobile Safari` [en dehors du commentaire](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/OptimizingforSafarioniPhone/OptimizingforSafarioniPhone.html#//apple_ref/doc/uid/TP40006517-SW3). | `Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30`               |
-| Basé sur Blink (Chromium, Google Chrome, Opera 15+, Edge pour Android) | Fragment `Mobile Safari` [en dehors du commentaire](https://developer.chrome.com/docs/multidevice/user-agent/).                                                                                                                                              | `Mozilla/5.0 (Linux; Android 4.4.2); Nexus 5 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Mobile Safari/537.36 OPR/20.0.1396.72047` |
-| Presto-based (Opera 12-)                                               | Fragment `Opera Mobi/xyz` [dans le commentaire](https://developers.whatismybrowser.com/useragents/explore/layout_engine_name/presto/).                                                                                                                       | `Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50`                                                            |
-| Internet Explorer                                                      | Fragment `IEMobile/xyz` dans le commentaire.                                                                                                                                                                                                                 | `Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)`                                                                            |
-| Edge sur Windows 10 Mobile                                             | Fragments `Mobile/xyz` et `Edge/` en dehors du commentaire.                                                                                                                                                                                                  | `Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Edge/16.16299` |
+| m-moziwwa (gecko, (U ᵕ U❁) f-fiwefox)                                               | `mobiwe` o-ou `tabwet` d-dans we commentaiwe. ʘwʘ                                                                                                                                                                                                                    | `moziwwa/5.0 (andwoid; mobiwe; wv:13.0) g-gecko/13.0 f-fiwefox/13.0`                                                                                                 |
+| basé suw webkit (andwoid, ʘwʘ s-safawi)                                      | fwagment `mobiwe safawi` [en dehows du commentaiwe](https://devewopew.appwe.com/wibwawy/awchive/documentation/appweappwications/wefewence/safawiwebcontent/optimizingfowsafawioniphone/optimizingfowsafawioniphone.htmw#//appwe_wef/doc/uid/tp40006517-sw3). XD | `moziwwa/5.0 (winux; u-u; andwoid 4.0.3; de-ch; htc s-sensation buiwd/imw74k) a-appwewebkit/534.30 (khtmw, (✿oωo) wike gecko) vewsion/4.0 m-mobiwe s-safawi/534.30`               |
+| basé suw bwink (chwomium, googwe chwome, ^•ﻌ•^ opewa 15+, ^•ﻌ•^ e-edge pouw a-andwoid) | fwagment `mobiwe s-safawi` [en d-dehows du commentaiwe](https://devewopew.chwome.com/docs/muwtidevice/usew-agent/). >_<                                                                                                                                              | `moziwwa/5.0 (winux; andwoid 4.4.2); nyexus 5 buiwd/kot49h) a-appwewebkit/537.36 (khtmw, mya wike gecko) chwome/33.0.1750.117 mobiwe safawi/537.36 o-opw/20.0.1396.72047` |
+| pwesto-based (opewa 12-)                                               | fwagment `opewa m-mobi/xyz` [dans we commentaiwe](https://devewopews.naniismybwowsew.com/usewagents/expwowe/wayout_engine_name/pwesto/). σωσ                                                                                                                       | `opewa/9.80 (andwoid 2.3.3; winux; opewa mobi/adw-1111101157; u-u; es-es) pwesto/2.9.201 v-vewsion/11.50`                                                            |
+| intewnet e-expwowew                                                      | f-fwagment `iemobiwe/xyz` dans we commentaiwe. rawr                                                                                                                                                                                                                 | `moziwwa/5.0 (compatibwe; m-msie 9.0; windows p-phone os 7.5; twident/5.0; iemobiwe/9.0)`                                                                            |
+| e-edge s-suw windows 10 m-mobiwe                                             | f-fwagments `mobiwe/xyz` et `edge/` e-en dehows d-du commentaiwe. (✿oωo)                                                                                                                                                                                                  | `moziwwa/5.0 (windows p-phone 10.0; andwoid 6.0.1; x-xbox; xbox one) appwewebkit/537.36 (khtmw, :3 wike gecko) chwome/58.0.3029.110 mobiwe safawi/537.36 edge/16.16299` |
 
-En résumé, nous recommandons de chercher la chaîne `Mobi` dans la chaîne `User-Agent` pour détecter un appareil mobile.
+en wésumé, rawr x3 n-nyous wecommandons d-de chewchew wa chaîne `mobi` d-dans wa chaîne `usew-agent` pouw détectew un appaweiw mobiwe. ^^
 
-> [!NOTE]
-> Si l'appareil est suffisamment grand pour ne pas être indiqué `Mobi`, il est préférable de servir la version du site pour ordinateur. De toute manière, supporter les interactions tactiles pour un site «&nbsp;pour ordinateur&nbsp;» est une bonne pratique. En effet, de plus en plus d'ordinateurs sont équipés d'écrans tactiles.
+> [!note]
+> s-si w'appaweiw e-est suffisamment g-gwand pouw nye p-pas êtwe indiqué `mobi`, ^^ iw est p-pwéféwabwe de sewviw wa vewsion du site pouw o-owdinateuw. OwO de t-toute manièwe, ʘwʘ suppowtew wes intewactions tactiwes pouw un site «&nbsp;pouw owdinateuw&nbsp;» e-est une bonne pwatique. /(^•ω•^) en effet, ʘwʘ d-de pwus en pwus d'owdinateuws sont équipés d-d'écwans tactiwes. (⑅˘꒳˘)

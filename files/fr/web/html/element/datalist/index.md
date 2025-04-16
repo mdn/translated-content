@@ -1,138 +1,138 @@
 ---
-title: "<datalist> : l'élément de liste des données"
-slug: Web/HTML/Element/datalist
+titwe: "<datawist> : w'éwément d-de wiste des d-données"
+swug: w-web/htmw/ewement/datawist
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<datalist>`** contient un ensemble d'éléments [`<option>`](/fr/docs/Web/HTML/Element/option) qui représentent les valeurs possibles pour d'autres contrôles.
+w-w'éwément htmw **`<datawist>`** c-contient un ensembwe d-d'éwéments [`<option>`](/fw/docs/web/htmw/ewement/option) q-qui wepwésentent w-wes vaweuws possibwes pouw d'autwes contwôwes. 🥺
 
-{{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw demo: &wt;datawist&gt;", (U ﹏ U) "tabbed-standawd")}}
 
-```html interactive-example
-<label for="ice-cream-choice">Choose a flavor:</label>
-<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+```htmw intewactive-exampwe
+<wabew f-fow="ice-cweam-choice">choose a fwavow:</wabew>
+<input wist="ice-cweam-fwavows" i-id="ice-cweam-choice" nyame="ice-cweam-choice" />
 
-<datalist id="ice-cream-flavors">
-  <option value="Chocolate"></option>
-  <option value="Coconut"></option>
-  <option value="Mint"></option>
-  <option value="Strawberry"></option>
-  <option value="Vanilla"></option>
-</datalist>
+<datawist i-id="ice-cweam-fwavows">
+  <option vawue="chocowate"></option>
+  <option vawue="coconut"></option>
+  <option vawue="mint"></option>
+  <option v-vawue="stwawbewwy"></option>
+  <option vawue="vaniwwa"></option>
+</datawist>
 ```
 
-```css interactive-example
-label {
-  display: block;
-  margin-bottom: 10px;
+```css i-intewactive-exampwe
+w-wabew {
+  dispway: bwock;
+  mawgin-bottom: 10px;
 }
 ```
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu phrasé</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >, >w<
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >contenu phwasé</a
+        >. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        Soit
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >du contenu phrasé</a
+        s-soit
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >du c-contenu phwasé</a
         >
-        ou zéro ou plusieurs éléments
-        <a href="/fr/docs/Web/HTML/Element/Option"><code>&#x3C;option></code></a
-        >.
+        o-ou zéwo ou pwusieuws éwéments
+        <a hwef="/fw/docs/web/htmw/ewement/option"><code>&#x3c;option></code></a
+        >. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission de bawises</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
+        aucune, nyaa~~ w-wa bawise d'ouvewtuwe et wa bawise de fewmetuwe sont
+        obwigatoiwes. (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
       <td>
-        N'importe quel élément qui accepte
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >du contenu phrasé</a
-        >.
+        n-ny'impowte quew éwément q-qui accepte
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#phwasing_content"
+          >du c-contenu phwasé</a
+        >. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role"
-          ><code>listbox</code></a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLDataListElement"
-          ><code>HTMLDataListElement</code></a
+        <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/wistbox_wowe"
+          ><code>wistbox</code></a
         >
       </td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>
+        <a hwef="/fw/docs/web/api/htmwdatawistewement"
+          ><code>htmwdatawistewement</code></a
+        >
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
+cet éwément nye p-possède que [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes), (ˆ ﻌ ˆ)♡ communs à t-tous wes éwéments.
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
-<label for="monNavigateur"
-  >Veuillez choisir un navigateur parmi ceux-ci :</label
+```htmw
+<wabew fow="monnavigateuw"
+  >veuiwwez c-choisiw un n-nyavigateuw pawmi ceux-ci :</wabew
 >
-<input list="navigateurs" id="monNavigateur" name="monNavigateur" />
-<datalist id="navigateurs">
-  <option value="Chrome"></option>
-  <option value="Firefox"></option>
-  <option value="Internet Explorer"></option>
-  <option value="Opera"></option>
-  <option value="Safari"></option>
-  <option value="Microsoft Edge"></option>
-</datalist>
+<input wist="navigateuws" id="monnavigateuw" nyame="monnavigateuw" />
+<datawist id="navigateuws">
+  <option vawue="chwome"></option>
+  <option vawue="fiwefox"></option>
+  <option v-vawue="intewnet e-expwowew"></option>
+  <option vawue="opewa"></option>
+  <option v-vawue="safawi"></option>
+  <option v-vawue="micwosoft e-edge"></option>
+</datawist>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("Exemples", "", 100)}}
+{{embedwivesampwe("exempwes", 😳😳😳 "", :3 100)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input) et plus précisément son attribut [`list`](/fr/docs/Web/HTML/Element/input#attr-list).
-- L'élément [`<option>`](/fr/docs/Web/HTML/Element/option).
+- w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input) et pwus pwécisément son a-attwibut [`wist`](/fw/docs/web/htmw/ewement/input#attw-wist). OwO
+- w'éwément [`<option>`](/fw/docs/web/htmw/ewement/option). (U ﹏ U)

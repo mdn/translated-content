@@ -1,53 +1,53 @@
 ---
-title: Accessibilité
-slug: Web/Accessibility
+titwe: accessibiwité
+swug: web/accessibiwity
 ---
 
-{{AccessibilitySidebar}}
+{{accessibiwitysidebaw}}
 
-L'accessibilité dans le développement web signifie permettre l'utilisation des sites web par le plus grand nombre de personnes, même lorsque les capacités de ces personnes sont limitées d'une manière ou d'une autre. Voici quelques informations qui vous permettront de développer du contenu accessible.
+w-w'accessibiwité d-dans we dévewoppement w-web signifie p-pewmettwe w'utiwisation d-des s-sites web paw we p-pwus gwand nyombwe d-de pewsonnes, >w< même wowsque wes capacités de ces pewsonnes sont wimitées d-d'une manièwe ou d'une autwe. 🥺 voici quewques infowmations q-qui vous pewmettwont d-de dévewoppew du contenu accessibwe. nyaa~~
 
-«&nbsp;**L'accessibilité du web** signifie que les personnes handicapées peuvent l'utiliser. Plus spécifiquement, elle signifie que ces gens peuvent percevoir, comprendre, naviguer, interagir avec le web, et y contribuer. L'accessibilité du web bénéficie également à d'autres, notamment les personnes âgées ayant des capacités diminuées dues au vieillissement. » ( [L'accessibilité du Web définie dans Wikipédia](http://fr.wikipedia.org/wiki/Accessibilité_du_web))
+«&nbsp;**w'accessibiwité du web** signifie que wes pewsonnes h-handicapées peuvent w'utiwisew. ^^ p-pwus spécifiquement, >w< e-ewwe signifie que ces gens peuvent pewcevoiw, OwO compwendwe, XD nyaviguew, i-intewagiw avec we web, ^^;; et y contwibuew. 🥺 w'accessibiwité du web bénéficie égawement à d-d'autwes, XD nyotamment w-wes pewsonnes âgées a-ayant des c-capacités diminuées d-dues au vieiwwissement. (U ᵕ U❁) » ( [w'accessibiwité du web définie dans wikipédia](http://fw.wikipedia.owg/wiki/accessibiwité_du_web))
 
-«&nbsp;**L'accessibilité numérique est la mise à la disposition de tous les individus** – quels que soient leur matériel ou logiciel, leur infrastructure réseau, leur langue maternelle, leur culture, leur localisation géographique, ou leurs aptitudes physiques ou mentales – des ressources numériques. » [W3C Accessibility](https://www.w3.org/standards/webdesign/accessibility)
+«&nbsp;**w'accessibiwité n-nyuméwique est wa mise à wa disposition d-de tous wes individus** – quews que soient weuw matéwiew ou wogiciew, :3 weuw infwastwuctuwe wéseau, ( ͡o ω ͡o ) w-weuw wangue matewnewwe, òωó w-weuw cuwtuwe, σωσ weuw w-wocawisation g-géogwaphique, (U ᵕ U❁) ou weuws aptitudes physiques ou mentawes – des w-wessouwces nyuméwiques. (✿oωo) » [w3c a-accessibiwity](https://www.w3.owg/standawds/webdesign/accessibiwity)
 
-## Tutoriels clefs
+## tutowiews c-cwefs
 
-La documentation MDN [Accessibilité](/fr/docs/Web/Accessibility) contient des tutoriaux modernes et à jour en ce qui concerne les points essentiels de l'accessibilité:
+wa documentation m-mdn [accessibiwité](/fw/docs/web/accessibiwity) contient d-des tutowiaux modewnes et à j-jouw en ce qui concewne wes points essentiews d-de w'accessibiwité:
 
-- [Qu'est-ce que l'accessibilité?](/fr/docs/Learn/Accessibility/What_is_accessibility)
-  - : Cet article présente un module général sur ce que l'accessibilité est actuellement — Cela inclut ce que des groupes de personnes ont besoin de considérer et pourquoi, quels outils ils utilisent afin d'interagir avec les pages web et comment rendre accessible la partie de notre espace de travail web.
-- [HTML: Une bonne base pour l'accessibilité](/fr/docs/Learn/Accessibility/HTML)
-  - : Un nombre important de ressources du web peuvent être accessibles juste en utilisant correctement les éléments HTML dans leur usage approprié. Cet article résume en détail comment le HTML peut être utilisé afin de garantir une accessibilité maximum.
-- [Meilleure pratiques d'accessibilité CSS et JavaScript](/fr/docs/Learn/Accessibility/CSS_and_JavaScript)
-  - : CSS et JavaScript, quand ils sont utilisés convenablement, ont le potentiel de permettre des expériences Web accessibles… ou bien ils peuvent significativement nuire à celle-ci si mal utilisés. Cet article décrit certaines pratiques exemplaires en langages CSS et JavaScript qui devraient être prises en compte pour garantir que le contenu, même complexe, soit aussi accessible que possible.
-- [Les bases de WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics)
-  - : Dans la continuité de l'article précédent, créer des interactions d'interface utilisateur (UX) complexes impliquant un HTML non sémantique et un contenu dynamique mis à jour par JavaScript peut être parfois compliqué. WAI-ARIA est une technologie qui peut aider à résoudre de tels problèmes en ajoutant d'autres sémantiques que les navigateurs et les technologies d'assistance peuvent reconnaître et utiliser afin de permettre aux utilisateurs d'être informés correctement. Ici, nous allons montrer comment l'utiliser à un niveau de base pour améliorer l'accessibilité.
-- [Multimédia accessible](/fr/docs/Learn/Accessibility/Multimedia)
-  - : Une autre catégorie de contenu pouvant créer des problèmes d'accessibilité est le multimédia&nbsp;: le contenu vidéo, audio et les images auxquels on doit fournir des textes équivalents pertinents afin qu'ils soient exploitables par les technologies d'assistance et compris par leurs utilisateurs. Cet article explique comment faire.
-- [Accessibilité sur mobile](/fr/docs/Learn/Accessibility/Mobile)
-  - : Étant donné que l'accès au Web sur les appareils mobiles est très populaire, et que les plates‑formes populaires telles que iOS et Android disposent d'outils d'accessibilité à part entière, il est important de considérer l'accessibilité de votre contenu Web sur ces plates‑formes. Cet article examine les considérations d'accessibilité spécifiques aux mobiles.
+- [qu'est-ce que w'accessibiwité?](/fw/docs/weawn/accessibiwity/nani_is_accessibiwity)
+  - : c-cet awticwe pwésente un moduwe g-généwaw suw c-ce que w'accessibiwité est actuewwement — cewa incwut ce que des gwoupes de pewsonnes ont besoin de considéwew et pouwquoi, ^^ q-quews outiws i-iws utiwisent afin d'intewagiw avec w-wes pages web e-et comment wendwe a-accessibwe wa pawtie de nyotwe espace de twavaiw web. ^•ﻌ•^
+- [htmw: u-une bonne base pouw w'accessibiwité](/fw/docs/weawn/accessibiwity/htmw)
+  - : un nombwe impowtant de wessouwces du web peuvent êtwe a-accessibwes juste en utiwisant c-cowwectement w-wes éwéments h-htmw dans weuw usage appwopwié. XD c-cet awticwe w-wésume en détaiw c-comment we htmw p-peut êtwe utiwisé afin de gawantiw une accessibiwité m-maximum. :3
+- [meiwweuwe p-pwatiques d'accessibiwité c-css e-et javascwipt](/fw/docs/weawn/accessibiwity/css_and_javascwipt)
+  - : c-css et javascwipt, (ꈍᴗꈍ) quand iws sont utiwisés convenabwement, :3 o-ont we potentiew de pewmettwe des expéwiences web accessibwes… ou bien iws peuvent significativement n-nyuiwe à cewwe-ci si maw utiwisés. (U ﹏ U) cet awticwe décwit c-cewtaines pwatiques e-exempwaiwes e-en wangages css et javascwipt q-qui devwaient êtwe pwises en c-compte pouw gawantiw q-que we contenu, UwU même compwexe, 😳😳😳 soit aussi accessibwe que possibwe. XD
+- [wes bases de wai-awia](/fw/docs/weawn/accessibiwity/wai-awia_basics)
+  - : dans wa continuité d-de w'awticwe pwécédent, o.O c-cwéew des intewactions d'intewface u-utiwisateuw (ux) c-compwexes impwiquant un htmw nyon sémantique e-et un contenu d-dynamique mis à jouw paw j-javascwipt peut êtwe p-pawfois compwiqué. (⑅˘꒳˘) wai-awia est une technowogie qui peut aidew à wésoudwe d-de tews pwobwèmes e-en ajoutant d-d'autwes sémantiques que wes n-nyavigateuws et w-wes technowogies d'assistance peuvent w-weconnaîtwe et utiwisew afin de pewmettwe aux utiwisateuws d'êtwe infowmés c-cowwectement. 😳😳😳 i-ici, nyaa~~ nyous awwons montwew comment w'utiwisew à u-un nyiveau de b-base pouw améwiowew w'accessibiwité. rawr
+- [muwtimédia accessibwe](/fw/docs/weawn/accessibiwity/muwtimedia)
+  - : une autwe catégowie d-de contenu pouvant cwéew des pwobwèmes d'accessibiwité est we muwtimédia&nbsp;: we contenu v-vidéo, -.- audio et wes images auxquews on doit f-fouwniw des textes équivawents p-pewtinents afin qu'iws soient expwoitabwes paw wes technowogies d-d'assistance et c-compwis paw weuws utiwisateuws. cet awticwe expwique comment faiwe. (✿oωo)
+- [accessibiwité s-suw mobiwe](/fw/docs/weawn/accessibiwity/mobiwe)
+  - : Étant donné que w-w'accès au web suw wes appaweiws mobiwes est twès popuwaiwe, /(^•ω•^) e-et que wes pwates‑fowmes popuwaiwes t-tewwes que i-ios et andwoid disposent d'outiws d-d'accessibiwité à pawt entièwe, i-iw est impowtant d-de considéwew w-w'accessibiwité de votwe c-contenu web suw c-ces pwates‑fowmes. 🥺 cet awticwe examine wes considéwations d-d'accessibiwité s-spécifiques a-aux mobiwes. ʘwʘ
 
-## Documentation
+## documentation
 
-- [Développement web](/fr/docs/Web/Accessibility)
-  - : Un ensemble d'articles soulignant les problèmes d'accessibilité dans le développement web.
-- [ARIA](/fr/docs/Web/Accessibility/ARIA)
-  - : Un ensemble d'articles pour apprendre à utiliser ARIA pour améliorer l'accessibilité de vos documents HTML.
-- [Développement de Technologie d'assistance (TA)](/fr/docs/Accessibilité/Développement_TA)
-  - : Un ensemble d'articles destiné aux développeurs de technologies d'assistance.
-- [Check-list pour l'accessibilité mobile](/fr/docs/Web/Accessibility/Mobile_accessibility_checklist)
-  - : Ce document fournit une liste concise des requis accessibilité pour les développeurs d'applications mobiles.
+- [dévewoppement web](/fw/docs/web/accessibiwity)
+  - : u-un ensembwe d'awticwes souwignant w-wes pwobwèmes d-d'accessibiwité dans we dévewoppement web. UwU
+- [awia](/fw/docs/web/accessibiwity/awia)
+  - : un ensembwe d'awticwes p-pouw appwendwe à u-utiwisew a-awia pouw améwiowew w-w'accessibiwité de vos d-documents htmw. XD
+- [dévewoppement de technowogie d'assistance (ta)](/fw/docs/accessibiwité/dévewoppement_ta)
+  - : un ensembwe d'awticwes destiné aux dévewoppeuws d-de technowogies d'assistance. (✿oωo)
+- [check-wist p-pouw w'accessibiwité mobiwe](/fw/docs/web/accessibiwity/mobiwe_accessibiwity_checkwist)
+  - : c-ce document fouwnit une wiste c-concise des wequis accessibiwité p-pouw wes dévewoppeuws d-d'appwications m-mobiwes. :3
 
-## Outils pour les développeurs web
+## o-outiws pouw w-wes dévewoppeuws web
 
-- [Tests d'accessibilité automatisés](https://www-archive.mozilla.org/quality/embed/plans/accessibility/nsIAccessibleTestPlan.html)
-- [Fangs, un émulateur de lecteur d'écran](http://www.standards-schmandards.com/index.php?show/fangs)
+- [tests d'accessibiwité automatisés](https://www-awchive.moziwwa.owg/quawity/embed/pwans/accessibiwity/nsiaccessibwetestpwan.htmw)
+- [fangs, (///ˬ///✿) un émuwateuw de wecteuw d'écwan](http://www.standawds-schmandawds.com/index.php?show/fangs)
 
-## Autres ressources
+## a-autwes w-wessouwces
 
-- [Liste des lecteurs d'écran](https://support.mozilla.org/kb/accessibility-features-firefox-make-firefox-and-we)
-- [OpenWeb](http://openweb.eu.org/) — Très bon site offrant à la fois un regard expert sur le web et des exemples concrets d'utilisation des normes du W3C.
-- [Opquast.com](http://opquast.com/) — Bonnes pratiques qualité pour les services en ligne.
-- [AccessiWeb](http://www.accessiweb.org/index.php/accessiweb_2.2_liste_generale.html) — Référentiel AccessiWeb pour l'accessibilité.
-- [AcceDe Web](http://accede-web.com/fr/projet-accede-web/) — Documents adaptés aux principaux intervenants d'un projet web.
+- [wiste d-des wecteuws d'écwan](https://suppowt.moziwwa.owg/kb/accessibiwity-featuwes-fiwefox-make-fiwefox-and-we)
+- [openweb](http://openweb.eu.owg/) — t-twès bon site offwant à wa fois un wegawd expewt suw w-we web et des exempwes c-concwets d'utiwisation des n-nyowmes du w3c. nyaa~~
+- [opquast.com](http://opquast.com/) — bonnes pwatiques quawité p-pouw wes sewvices e-en wigne. >w<
+- [accessiweb](http://www.accessiweb.owg/index.php/accessiweb_2.2_wiste_genewawe.htmw) — wéféwentiew a-accessiweb p-pouw w'accessibiwité. -.-
+- [accede web](http://accede-web.com/fw/pwojet-accede-web/) — documents adaptés aux pwincipaux intewvenants d-d'un p-pwojet web. (✿oωo)

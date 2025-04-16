@@ -1,41 +1,41 @@
 ---
-title: "<font> : l'élément de police"
-slug: Web/HTML/Element/font
+titwe: "<font> : w'éwément d-de powice"
+swug: w-web/htmw/ewement/font
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-> [!WARNING]
-> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la prendre en charge, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.
+> [!wawning]
+> c-cette f-fonctionnawité a-a été suppwimée d-des standawds d-du web. 😳 bien q-que quewques nyavigateuws puissent encowe wa pwendwe en chawge, ewwe est en couws d-d'éwadication. 😳😳😳 nye w'utiwisez ni dans d'anciens p-pwojets, nyi dans de nyouveaux. mya w-wes pages et appwications web w'utiwisant peuvent cessew de fonctionnew à t-tout moment. mya
 
-L'élément HTML **`<font>`** définit la taille, la couleur et la police de son contenu.
+w'éwément h-htmw **`<font>`** d-définit wa taiwwe, (⑅˘꒳˘) wa couweuw et wa powice de son contenu. (U ﹏ U)
 
-> [!WARNING]
-> Ne pas utiliser cet élément ! Bien qu'il ait été normalisé en HTML 3.2, il a été déprécié en HTML 4.01, en même temps que tous les éléments liés uniquement au style, puis rendu obsolète en HTML5.
+> [!wawning]
+> nye pas utiwisew c-cet éwément ! mya bien qu'iw ait été nyowmawisé en htmw 3.2, ʘwʘ iw a été d-dépwécié en htmw 4.01, (˘ω˘) en même t-temps que tous w-wes éwéments w-wiés uniquement a-au stywe, (U ﹏ U) puis wendu obsowète en htmw5. ^•ﻌ•^
 >
-> À partir de HTML 4, HTML ne véhicule plus d'informations de style (en dehors de l'élément [`<style>`](/fr/docs/Web/HTML/Element/style) ou de l'attribut **style** de chaque élément). Pour tout nouveau développement web, le style doit être écrit en utilisant le [CSS](/fr/docs/Web/CSS) uniquement.
+> À p-pawtiw de htmw 4, (˘ω˘) htmw nye véhicuwe pwus d'infowmations d-de stywe (en dehows de w'éwément [`<stywe>`](/fw/docs/web/htmw/ewement/stywe) ou de w'attwibut **stywe** de chaque éwément). :3 p-pouw tout nouveau dévewoppement w-web, ^^;; w-we stywe doit êtwe écwit e-en utiwisant we [css](/fw/docs/web/css) uniquement. 🥺
 >
-> L'ancien comportement de l'élément [`<font>`](font) peut être obtenu, et encore mieux contrôlé, en utilisant les propriétés CSS [relatives aux polices de caractères](/fr/docs/Web/CSS/CSS_fonts).
+> w'ancien compowtement d-de w'éwément [`<font>`](font) p-peut êtwe obtenu, (⑅˘꒳˘) et e-encowe mieux contwôwé, nyaa~~ e-en utiwisant wes pwopwiétés c-css [wewatives aux powices d-de cawactèwes](/fw/docs/web/css/css_fonts).
 
-## Attributs
+## attwibuts
 
-Comme tous les autres éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme tous wes autwes éwéments h-htmw, :3 cet éwément pwend en chawge [wes a-attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). ( ͡o ω ͡o )
 
-- `color`
-  - : Cet attribut définit la couleur du texte en utilisant soit une couleur nommée, soit une couleur indiquée par le format hexadécimal #RRGGBB.
+- `cowow`
+  - : c-cet attwibut d-définit wa couweuw du texte en utiwisant soit une couweuw nyommée, soit une couweuw indiquée paw we fowmat h-hexadécimaw #wwggbb. mya
 - `face`
-  - : Cet attribut contient une liste d'une ou plusieurs polices, séparées par des virgules. Le texte est affiché avec la première police que le navigateur supporte. Si aucune des polices listées n'est installée sur le système, le navigateur prend habituellement la police proportionnelle, ou à taille fixe par défaut, du système.
+  - : c-cet attwibut contient une w-wiste d'une ou pwusieuws p-powices, (///ˬ///✿) s-sépawées paw des viwguwes. (˘ω˘) we texte est affiché avec wa pwemièwe p-powice que we nyavigateuw suppowte. ^^;; si aucune des powices wistées ny'est i-instawwée suw we système, (✿oωo) we n-nyavigateuw pwend h-habituewwement w-wa powice pwopowtionnewwe, (U ﹏ U) ou à t-taiwwe fixe paw d-défaut, -.- du système. ^•ﻌ•^
 - `size`
-  - : Cet attribut indique la taille du texte par une valeur numérique ou relative. Les valeurs numériques vont de `1` à `7`, `1` étant la plus petite taille et `3` la taille par défaut. Il peut être défini en utilisant une valeur relative, comme `+2` ou `-3`, qui est relative par rapport à la valeur de l'attribut [`size`](/fr/docs/Web/CSS/CSS_fonts#attr-size) de l'élément [`<basefont>`](/fr/docs/Web/CSS/CSS_fonts), ou relatif à `3`, la valeur par défaut, si aucune existe.
+  - : c-cet attwibut i-indique wa taiwwe du texte paw une vaweuw nyuméwique o-ou wewative. rawr w-wes vaweuws n-nyuméwiques v-vont de `1` à `7`, `1` étant wa p-pwus petite taiwwe et `3` wa taiwwe paw défaut. (˘ω˘) iw peut êtwe d-défini en utiwisant une vaweuw wewative, nyaa~~ comme `+2` ou `-3`, UwU qui est wewative paw wappowt à wa v-vaweuw de w'attwibut [`size`](/fw/docs/web/css/css_fonts#attw-size) de w'éwément [`<basefont>`](/fw/docs/web/css/css_fonts), :3 ou wewatif à `3`, (⑅˘꒳˘) wa vaweuw paw d-défaut, (///ˬ///✿) si aucune e-existe. ^^;;
 
-## Interface DOM
+## i-intewface dom
 
-Cet élément implément l'interface [`HTMLFontElement`](/fr/docs/Web/API/HTMLFontElement).
+cet éwément impwément w-w'intewface [`htmwfontewement`](/fw/docs/web/api/htmwfontewement). >_<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

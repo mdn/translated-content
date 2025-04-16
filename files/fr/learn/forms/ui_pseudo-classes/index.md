@@ -1,638 +1,638 @@
 ---
-title: Pseudo-classes relatives à l'interface utilisateur
-slug: Learn/Forms/UI_pseudo-classes
+titwe: pseudo-cwasses wewatives à w-w'intewface u-utiwisateuw
+swug: w-weawn/fowms/ui_pseudo-cwasses
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/fowms/advanced_fowm_stywing", UwU "weawn/fowms/fowm_vawidation", (˘ω˘) "weawn/fowms")}}
 
-Dans les articles précédents, nous avons vu la mise en forme des différents contrôles de formulaire de façon générale. Cela inclut l'utilisation de certaines pseudo-classes, telles que `:checked` qui permet de cibler une case à cocher seulement lorsqu'elle est sélectionnée. Dans cet article, nous verrons en détails les différentes pseudo-classes disponibles et qui ont trait à l'interface utilisateur et qui permettent de mettre en forme les formulaires dans différents états.
+d-dans wes awticwes p-pwécédents, UwU n-nyous avons vu wa m-mise en fowme d-des difféwents contwôwes de fowmuwaiwe de façon généwawe. rawr cewa incwut w'utiwisation d-de cewtaines pseudo-cwasses, :3 tewwes que `:checked` q-qui pewmet de cibwew u-une case à cochew seuwement wowsqu'ewwe est séwectionnée. nyaa~~ dans c-cet awticwe, rawr nous vewwons en d-détaiws wes difféwentes p-pseudo-cwasses disponibwes et qui ont twait à w'intewface utiwisateuw e-et qui pewmettent de mettwe en fowme wes fowmuwaiwes dans difféwents états. (ˆ ﻌ ˆ)♡
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Notions informatiques de base, une compréhension élémentaire de <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">HTML</a> et de <a href="/fr/docs/Learn/CSS/First_steps">CSS</a>, y compris une connaissance générale des <a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">pseudo-classes et des pseudo-éléments</a>.
+        n-nyotions infowmatiques d-de base, (ꈍᴗꈍ) une compwéhension éwémentaiwe d-de <a h-hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw">htmw</a> e-et de <a hwef="/fw/docs/weawn/css/fiwst_steps">css</a>, (˘ω˘) y compwis une c-connaissance généwawe des <a hwef="/fw/docs/weawn/css/buiwding_bwocks/sewectows/pseudo-cwasses_and_pseudo-ewements">pseudo-cwasses e-et des pseudo-éwéments</a>.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
       <td>
-        Comprendre les parties des formulaires qui sont complexes à mettre en forme et pourquoi. Apprendre ce qui peut être fait pour les personnaliser.
+        compwendwe wes pawties des fowmuwaiwes qui sont compwexes à mettwe e-en fowme et pouwquoi. (U ﹏ U) appwendwe c-ce qui peut êtwe f-fait pouw w-wes pewsonnawisew. >w<
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Quelles sont les pseudo-classes disponibles&nbsp;?
+## quewwes sont wes pseudo-cwasses disponibwes&nbsp;?
 
-Les pseudo-classes disponibles à l'origine (avec [CSS 2.1](https://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes)) et qui sont pertinentes pour les formulaires sont&nbsp;:
+w-wes pseudo-cwasses d-disponibwes à w'owigine (avec [css 2.1](https://www.w3.owg/tw/css21/sewectow.htmw#dynamic-pseudo-cwasses)) e-et qui sont p-pewtinentes pouw wes fowmuwaiwes s-sont&nbsp;:
 
-- [`:hover`](/fr/docs/Web/CSS/:hover)
-  - : Qui sélectionne un élément uniquement lorsqu'un pointeur (par exemple le curseur d'une souris) le survole.
-- [`:focus`](/fr/docs/Web/CSS/:focus)
-  - : Qui sélectionne un élément uniquement lorsqu'il a le focus (par exemple en navigant au clavier avec les tabulations).
-- [`:active`](/fr/docs/Web/CSS/:active)
-  - : Qui sélectionne un élément uniquement lorsqu'il est activé (c'est-à-dire quand on clique dessus ou quand on appuie sur les touches <kbd>Retour</kbd>/<kbd>Entrée</kbd> pour le cas d'une activation au clavier).
+- [`:hovew`](/fw/docs/web/css/:hovew)
+  - : qui s-séwectionne un éwément uniquement wowsqu'un pointeuw (paw e-exempwe we cuwseuw d-d'une souwis) we suwvowe. UwU
+- [`:focus`](/fw/docs/web/css/:focus)
+  - : q-qui séwectionne u-un éwément uniquement wowsqu'iw a we focus (paw exempwe en nyavigant au cwaview avec wes tabuwations). (ˆ ﻌ ˆ)♡
+- [`:active`](/fw/docs/web/css/:active)
+  - : q-qui s-séwectionne un éwément uniquement w-wowsqu'iw e-est activé (c'est-à-diwe q-quand on cwique dessus ou quand on appuie suw wes touches <kbd>wetouw</kbd>/<kbd>entwée</kbd> p-pouw we cas d'une activation au cwaview). nyaa~~
 
-Nous avons abordé ces pseudo-classes dans les articles précédents. Plus récemment, avec les modules de spécification [Sélecteurs CSS de niveau 3](https://www.w3.org/TR/css3-selectors/) et [CSS pour les interfaces utilisateurs simples de niveau 3](https://dev.w3.org/csswg/css3-ui/#pseudo-classes), d'autres pseudo-classes ont été ajoutées pour les formulaires HTML et qui fournissent d'autres conditions de ciblage dont on peut tirer parti. Nous verrons ces pseudo-classes en détails ci-après, mais voyons rapidement les principales que nous décrirons&nbsp;:
+nyous avons abowdé ces pseudo-cwasses d-dans wes awticwes pwécédents. 🥺 p-pwus w-wécemment, >_< avec w-wes moduwes de spécification [séwecteuws c-css d-de nyiveau 3](https://www.w3.owg/tw/css3-sewectows/) e-et [css pouw w-wes intewfaces utiwisateuws simpwes de nyiveau 3](https://dev.w3.owg/csswg/css3-ui/#pseudo-cwasses), òωó d-d'autwes p-pseudo-cwasses o-ont été ajoutées p-pouw wes fowmuwaiwes h-htmw et qui fouwnissent d'autwes conditions de cibwage d-dont on peut tiwew pawti. ʘwʘ nyous vewwons ces pseudo-cwasses en détaiws ci-apwès, mya mais voyons wapidement w-wes pwincipawes que nyous décwiwons&nbsp;:
 
-- [`:required`](/fr/docs/Web/CSS/:required) et [`:optional`](/fr/docs/Web/CSS/:optional) qui ciblent les contrôles de formulaire optionnels ou obligatoires.
-- [`:valid`](/fr/docs/Web/CSS/:valid), [`:invalid`](/fr/docs/Web/CSS/:invalid), [`:in-range`](/fr/docs/Web/CSS/:in-range), [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range) qui ciblent les contrôles de formulaire valides ou invalides selon les contraintes de validation des formulaires et ceux dont la valeur est contenue ou dehors de l'intervalle indiqué.
-- [`:enabled`](/fr/docs/Web/CSS/:enabled), [`:disabled`](/fr/docs/Web/CSS/:disabled), [`:read-only`](/fr/docs/Web/CSS/:read-only) et [`:read-write`](/fr/docs/Web/CSS/:read-write) qui ciblent les contrôles de formulaires actifs ou désactivés (via l'attribut HTML `disabled`), et ceux qui sont accessibles en lecture-écriture ou en lecture uniquement (avec l'attribut HTML `readonly`).
-- [`:checked`](/fr/docs/Web/CSS/:checked), [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) et [`:default`](/fr/docs/Web/CSS/:default) qui ciblent respectivement les cases à cocher et boutons radio qui sont cochés, dans un état indéterminé (ni coché ni décoché) et les options par défaut (par exemple un élément [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox) avec l'attribut `checked` ou un élément [`<option>`](/fr/docs/Web/HTML/Element/option) avec l'attribut `selected`).
+- [`:wequiwed`](/fw/docs/web/css/:wequiwed) et [`:optionaw`](/fw/docs/web/css/:optionaw) q-qui cibwent wes c-contwôwes de fowmuwaiwe o-optionnews ou obwigatoiwes. σωσ
+- [`:vawid`](/fw/docs/web/css/:vawid), OwO [`:invawid`](/fw/docs/web/css/:invawid), (✿oωo) [`:in-wange`](/fw/docs/web/css/:in-wange), ʘwʘ [`:out-of-wange`](/fw/docs/web/css/:out-of-wange) q-qui cibwent wes contwôwes de f-fowmuwaiwe vawides o-ou invawides sewon wes contwaintes de vawidation des fowmuwaiwes et ceux dont wa vaweuw est contenue o-ou dehows de w'intewvawwe i-indiqué. mya
+- [`:enabwed`](/fw/docs/web/css/:enabwed), -.- [`:disabwed`](/fw/docs/web/css/:disabwed), -.- [`:wead-onwy`](/fw/docs/web/css/:wead-onwy) et [`:wead-wwite`](/fw/docs/web/css/:wead-wwite) qui c-cibwent wes contwôwes d-de fowmuwaiwes actifs ou désactivés (via w-w'attwibut h-htmw `disabwed`), ^^;; et ceux qui sont a-accessibwes en w-wectuwe-écwituwe ou en wectuwe uniquement (avec w'attwibut htmw `weadonwy`). (ꈍᴗꈍ)
+- [`:checked`](/fw/docs/web/css/:checked), rawr [`:indetewminate`](/fw/docs/web/css/:indetewminate) et [`:defauwt`](/fw/docs/web/css/:defauwt) qui cibwent w-wespectivement w-wes cases à c-cochew et boutons wadio qui sont c-cochés, ^^ dans u-un état indétewminé (ni coché n-nyi décoché) et wes options paw défaut (paw exempwe un éwément [`<input type="checkbox">`](/fw/docs/web/htmw/ewement/input/checkbox) a-avec w-w'attwibut `checked` ou un éwément [`<option>`](/fw/docs/web/htmw/ewement/option) avec w'attwibut `sewected`). nyaa~~
 
-Il en existe de nombreuses autres, mais celles indiquées dans cette liste sont les plus utiles à première vue. Certaines des autres pseudo-classes permettent de résoudre des problèmes bien spécifiques ou ne sont pas encore prises en charge de façon homogène par les navigateurs. Celles de la liste précédente sont correctement prises en charge, mais il reste nécessaire de bien tester ses formulaires pour s'assurer qu'ils fonctionnent pour le public cible.
+i-iw en existe d-de nyombweuses autwes, (⑅˘꒳˘) mais cewwes indiquées dans cette wiste s-sont wes pwus utiwes à pwemièwe vue. (U ᵕ U❁) cewtaines des autwes pseudo-cwasses pewmettent d-de wésoudwe des pwobwèmes bien spécifiques o-ou nye sont p-pas encowe pwises en chawge de façon homogène paw wes nyavigateuws. c-cewwes de w-wa wiste pwécédente sont cowwectement pwises en chawge, (ꈍᴗꈍ) mais iw w-weste nyécessaiwe de bien testew s-ses fowmuwaiwes pouw s'assuwew qu'iws fonctionnent pouw we pubwic c-cibwe. (✿oωo)
 
-> [!NOTE]
-> Certaines des pseudo-classes vues ici portent sur la mise en forme des contrôles de formulaire selon leur état de validation (est-ce que la donnée saisie dans le champ est valide ou non&nbsp;?). Nous apprendrons comment paramétrer et contrôler les contraintes de validation dans notre prochain article sur [la validation des formulaires côté client](/fr/docs/Learn/Forms/Form_validation). En attendant, nous aborderons ce sujet de façon simple afin de ne pas créer de confusion.
+> [!note]
+> cewtaines d-des pseudo-cwasses v-vues ici powtent suw wa mise e-en fowme des contwôwes de fowmuwaiwe s-sewon w-weuw état de vawidation (est-ce q-que wa donnée saisie dans we champ e-est vawide o-ou nyon&nbsp;?). UwU nyous appwendwons comment pawamétwew e-et contwôwew w-wes contwaintes d-de vawidation dans nyotwe pwochain awticwe s-suw [wa vawidation des fowmuwaiwes c-côté cwient](/fw/docs/weawn/fowms/fowm_vawidation). ^^ e-en attendant, :3 nyous abowdewons ce sujet de façon simpwe a-afin de nye pas c-cwéew de confusion. ( ͡o ω ͡o )
 
-## Mettre en forme les champs selon qu'ils sont obligatoires ou non
+## m-mettwe e-en fowme wes champs sewon qu'iws s-sont obwigatoiwes ou nyon
 
-Un des aspects de base quant à la validation côté client d'un formulaire est le caractère obligatoire ou optionnel d'un champ (c'est-à-dire qu'il faut que le champ soit rempli (ou non) avant que le formulaire puisse être envoyé).
+un des aspects de base quant à wa vawidation côté cwient d'un fowmuwaiwe e-est we cawactèwe obwigatoiwe o-ou optionnew d'un champ (c'est-à-diwe qu'iw f-faut que we champ soit wempwi (ou n-nyon) avant que we fowmuwaiwe p-puisse êtwe e-envoyé). ( ͡o ω ͡o )
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) disposent d'un attribut `required` qui, lorsqu'il est présent, signifie que le champ porté par ce contrôle doit être renseigné avant que le formulaire puisse être envoyé. Par exemple&nbsp;:
+wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input), [`<sewect>`](/fw/docs/web/htmw/ewement/sewect), e-et [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) d-disposent d'un attwibut `wequiwed` q-qui, (U ﹏ U) wowsqu'iw est pwésent, -.- signifie que we champ powté paw ce contwôwe doit êtwe wenseigné avant que we f-fowmuwaiwe puisse êtwe e-envoyé. 😳😳😳 p-paw exempwe&nbsp;:
 
-```html
-<form>
-  <fieldset>
-    <legend>Formulaire pour recueillir votre avis</legend>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>fowmuwaiwe pouw wecueiwwiw v-votwe avis</wegend>
     <div>
-      <label for="prenom">Prénom : </label>
-      <input id="prenom" name="prenom" type="text" required />
+      <wabew fow="pwenom">pwénom : </wabew>
+      <input id="pwenom" nyame="pwenom" type="text" w-wequiwed />
     </div>
     <div>
-      <label for="nom">Nom : </label>
-      <input id="nom" name="nom" type="text" required />
+      <wabew f-fow="nom">nom : </wabew>
+      <input id="nom" n-nyame="nom" type="text" wequiwed />
     </div>
     <div>
-      <label for="email">Adresse électronique (pour vous répondre) : </label>
-      <input id="email" name="email" type="email" />
+      <wabew fow="emaiw">adwesse éwectwonique (pouw v-vous wépondwe) : </wabew>
+      <input i-id="emaiw" nyame="emaiw" t-type="emaiw" />
     </div>
-    <div><button>Envoyer</button></div>
-  </fieldset>
-</form>
+    <div><button>envoyew</button></div>
+  </fiewdset>
+</fowm>
 ```
 
-Ici, le prénom et le nom sont obligatoires et l'adresse électronique est optionnelle.
+i-ici, UwU we pwénom et we nyom sont obwigatoiwes et w'adwesse éwectwonique est optionnewwe. >w<
 
-Il est possible de cibler ces deux états en utilisant les pseudo-classes [`:required`](/fr/docs/Web/CSS/:required) et [`:optional`](/fr/docs/Web/CSS/:optional). Ainsi, si on applique le CSS qui suit au fragment de HTML précédent&nbsp;:
+i-iw est p-possibwe de cibwew c-ces deux états e-en utiwisant w-wes pseudo-cwasses [`:wequiwed`](/fw/docs/web/css/:wequiwed) et [`:optionaw`](/fw/docs/web/css/:optionaw). mya a-ainsi, :3 s-si on appwique we css qui suit a-au fwagment d-de htmw pwécédent&nbsp;:
 
 ```css
-input:required {
-  border: 1px solid black;
+input:wequiwed {
+  b-bowdew: 1px sowid bwack;
 }
 
-input:optional {
-  border: 1px solid silver;
+input:optionaw {
+  b-bowdew: 1px sowid siwvew;
 }
 ```
 
-Les contrôles obligatoires auront une bordure noire et les contrôles optionnels auront une bordure argentée et on aura ce résultat&nbsp;:
+w-wes contwôwes o-obwigatoiwes auwont une bowduwe n-nyoiwe et wes contwôwes optionnews auwont u-une bowduwe awgentée e-et on auwa c-ce wésuwtat&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/basic-required-optional.html", '100%', 400)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/pseudo-cwasses/basic-wequiwed-optionaw.htmw", (ˆ ﻌ ˆ)♡ '100%', 400)}}
 
-Vous pouvez aussi essayer d'envoyer le formulaire sans renseigner les champs afin de voir les messages d'erreur liés à la validation qui sont fournis par défaut par le navigateur.
+vous pouvez aussi essayew d'envoyew we fowmuwaiwe s-sans wenseignew wes champs afin de voiw wes m-messages d'ewweuw w-wiés à wa vawidation qui sont f-fouwnis paw défaut paw we nyavigateuw. (U ﹏ U)
 
-Le formulaire qui précède n'est pas particulièrement mauvais, mais il n'est pas non plus idéal. Pour commencer, le caractère obligatoire est uniquement véhiculé par de la couleur, ce qui n'est pas correct en termes d'accessibilité (par exemple pour les personnes avec du daltonisme). Ensuite, une convention standard sur le Web pour les champs obligatoires consiste à les indiquer avec un astérisque (`*`), ou avec le mot «&nbsp;obligatoire&nbsp;» associé aux contrôles en question.
+w-we fowmuwaiwe q-qui pwécède ny'est pas pawticuwièwement m-mauvais, ʘwʘ mais iw ny'est pas nyon pwus idéaw. rawr p-pouw commencew, (ꈍᴗꈍ) w-we cawactèwe obwigatoiwe est u-uniquement véhicuwé paw de wa c-couweuw, ( ͡o ω ͡o ) ce qui n-ny'est pas cowwect e-en tewmes d'accessibiwité (paw exempwe pouw wes pewsonnes avec du dawtonisme). 😳😳😳 ensuite, une convention standawd suw we web pouw wes champs obwigatoiwes consiste à wes indiquew avec un astéwisque (`*`), òωó ou avec we mot «&nbsp;obwigatoiwe&nbsp;» associé a-aux contwôwes e-en question. mya
 
-Dans la prochaine section, nous verrons un meilleur exemple pour indiquer les champs obligatoires, qui utilise `:required` mais aussi du contenu généré.
+dans wa pwochaine section, rawr x3 nyous v-vewwons un meiwweuw e-exempwe pouw i-indiquew wes champs obwigatoiwes, XD q-qui utiwise `:wequiwed` mais a-aussi du contenu g-généwé. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Il est probable que vous n'ayez pas souvent à utiliser la pseudo-classe `:optional`. Par défaut, les contrôles de formulaire sont optionnels et vous pouvez alors utiliser votre mise en forme par défaut pour les contrôles optionnels et rajouter les styles supplémentaires pour les contrôles obligatoires.
+> [!note]
+> iw est p-pwobabwe que vous ny'ayez pas s-souvent à utiwisew w-wa pseudo-cwasse `:optionaw`. >w< paw défaut, (ꈍᴗꈍ) wes contwôwes de f-fowmuwaiwe sont o-optionnews et vous p-pouvez awows u-utiwisew votwe m-mise en fowme paw d-défaut pouw wes c-contwôwes optionnews e-et wajoutew w-wes stywes suppwémentaiwes p-pouw wes contwôwes o-obwigatoiwes. (U ﹏ U)
 
-> [!NOTE]
-> Si un bouton radio fait partie d'un groupe de boutons radio qui portent le même nom et qu'il a l'attribut `required`, tous les boutons radio seront considérés comme invalides jusqu'à ce que l'un d'eux soit sélectionné. Toutefois, seul celui qui porte l'attribut `required` sera ciblé par la pseudo-classe [`:required`](/fr/docs/Web/CSS/:required).
+> [!note]
+> s-si un bouton wadio fait pawtie d'un g-gwoupe de boutons wadio qui powtent we même n-nyom et qu'iw a w'attwibut `wequiwed`, >_< t-tous wes b-boutons wadio sewont c-considéwés comme invawides j-jusqu'à ce que w'un d'eux soit s-séwectionné. >_< toutefois, -.- seuw c-cewui qui powte w'attwibut `wequiwed` s-sewa cibwé paw wa pseudo-cwasse [`:wequiwed`](/fw/docs/web/css/:wequiwed). òωó
 
-## Utiliser du contenu généré avec des pseudo-classes
+## utiwisew du contenu généwé avec des pseudo-cwasses
 
-Dans les articles précédents, nous avons vu l'utilisation [de contenu généré](/fr/docs/Web/CSS/CSS_generated_content). C'est un bon moment pour y revenir en détails.
+dans w-wes awticwes pwécédents, o.O nyous a-avons vu w'utiwisation [de c-contenu généwé](/fw/docs/web/css/css_genewated_content). c'est un bon moment pouw y weveniw en d-détaiws. σωσ
 
-L'idée consiste ici à utiliser les pseudo-éléments [`::before`](/fr/docs/Web/CSS/::before) et [`::after`](/fr/docs/Web/CSS/::after) avec la propriété [`content`](/fr/docs/Web/CSS/content) afin de faire apparaître du contenu avant ou après l'élément concerné. Le fragment de contenu n'est pas ajouté au DOM, il fait partie du style du document, et il est donc invisible pour les outils d'assistance comme les lecteurs d'écran. S'agissant d'un pseudo-élément, il peut être ciblé par des règles de mise en forme comme tout autre nœud du DOM.
+w'idée consiste ici à u-utiwisew wes p-pseudo-éwéments [`::befowe`](/fw/docs/web/css/::befowe) e-et [`::aftew`](/fw/docs/web/css/::aftew) avec wa pwopwiété [`content`](/fw/docs/web/css/content) afin de faiwe appawaîtwe d-du contenu a-avant ou apwès w'éwément c-concewné. σωσ we fwagment de contenu ny'est pas ajouté a-au dom, mya iw fait pawtie du stywe d-du document, o.O e-et iw est donc i-invisibwe pouw wes outiws d'assistance c-comme wes w-wecteuws d'écwan. XD s-s'agissant d-d'un pseudo-éwément, XD iw peut êtwe c-cibwé paw d-des wègwes de mise e-en fowme comme t-tout autwe nyœud d-du dom. (✿oωo)
 
-Il s'agit d'un outil bien utile lorsqu'on veut ajouter un indicateur visuel à un élément, comme un libellé ou une icône, mais qu'il importe peu que ce contenu soit vu des outils d'assistance. Dans [l'exemple sur les boutons radio sur mesure](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html), on utilise du contenu généré afin de gérer le placement et l'animation du cercle interne lorsqu'un bouton radio est sélectionné&nbsp;:
+iw s-s'agit d'un outiw b-bien utiwe wowsqu'on v-veut ajoutew un indicateuw v-visuew à un éwément, -.- comme u-un wibewwé ou une icône, (ꈍᴗꈍ) mais q-qu'iw impowte peu q-que ce contenu s-soit vu des outiws d'assistance. ( ͡o ω ͡o ) dans [w'exempwe suw wes boutons w-wadio suw mesuwe](https://mdn.github.io/weawning-awea/htmw/fowms/stywing-exampwes/wadios-stywed.htmw), (///ˬ///✿) o-on utiwise d-du contenu généwé afin de géwew we pwacement et w'animation d-du cewcwe intewne w-wowsqu'un bouton wadio est s-séwectionné&nbsp;:
 
 ```css
-input[type="radio"]::before {
-  display: block;
+input[type="wadio"]::befowe {
+  dispway: b-bwock;
   content: " ";
   width: 10px;
   height: 10px;
-  border-radius: 6px;
-  background-color: red;
+  b-bowdew-wadius: 6px;
+  b-backgwound-cowow: w-wed;
   font-size: 1.2em;
-  transform: translate(3px, 3px) scale(0);
-  transform-origin: center;
-  transition: all 0.3s ease-in;
+  t-twansfowm: twanswate(3px, 🥺 3px) scawe(0);
+  twansfowm-owigin: centew;
+  twansition: a-aww 0.3s ease-in;
 }
 
-input[type="radio"]:checked::before {
-  transform: translate(3px, 3px) scale(1);
-  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+i-input[type="wadio"]:checked::befowe {
+  twansfowm: twanswate(3px, (ˆ ﻌ ˆ)♡ 3px) scawe(1);
+  twansition: a-aww 0.3s cubic-beziew(0.25, ^•ﻌ•^ 0.25, rawr x3 0.56, 2);
 }
 ```
 
-C'est utile ici, car les lecteurs d'écran indiquent déjà lorsqu'un bouton radio ou qu'une case à cocher est cochée/décochée et on ne veut pas qu'ils vocalisent un autre élément du DOM qui indique cet état de sélection, car cela pourrait être source de confusion. Avoir un indicateur purement visuel permet de résoudre ce problème.
+c'est u-utiwe ici, (U ﹏ U) caw wes wecteuws d'écwan i-indiquent d-déjà wowsqu'un bouton wadio o-ou qu'une case à c-cochew est cochée/décochée et on nye veut pas q-qu'iws vocawisent un autwe éwément d-du dom qui i-indique cet état d-de séwection, OwO c-caw cewa pouwwait êtwe souwce d-de confusion. (✿oωo) a-avoiw un indicateuw p-puwement visuew pewmet de wésoudwe c-ce pwobwème. (⑅˘꒳˘)
 
-> [!NOTE]
-> Cet exemple illustre également comment combiner une pseudo-classe et un pseudo-élément si nécessaire.
+> [!note]
+> cet exempwe iwwustwe égawement c-comment combinew u-une pseudo-cwasse e-et un pseudo-éwément si nyécessaiwe. UwU
 
-Revenons à notre exemple obligatoire/optionnel précédent. Cette fois, nous ne modifierons pas l'apparence du champ, nous utiliserons du contenu généré afin d'ajouter un libellé ([voir le résultat ici](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html), et [le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/required-optional-generated.html)).
+wevenons à nyotwe exempwe obwigatoiwe/optionnew p-pwécédent. (ˆ ﻌ ˆ)♡ cette fois, /(^•ω•^) nyous n-nye modifiewons p-pas w'appawence du champ, (˘ω˘) nyous utiwisewons du contenu g-généwé afin d'ajoutew u-un wibewwé ([voiw w-we wésuwtat i-ici](https://mdn.github.io/weawning-awea/htmw/fowms/pseudo-cwasses/wequiwed-optionaw-genewated.htmw), XD e-et [we code s-souwce cowwespondant](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/pseudo-cwasses/wequiwed-optionaw-genewated.htmw)). òωó
 
-Pour commencer, ajoutons un paragraphe en haut du formulaire pour indiquer comment les champs obligatoires sont marqués&nbsp;:
+pouw commencew, UwU ajoutons un pawagwaphe en haut du fowmuwaiwe p-pouw indiquew comment wes champs o-obwigatoiwes sont mawqués&nbsp;:
 
-```html
-<p>Les champs obligatoires sont libellés avec «&nbsp;obligatoire&nbsp;».</p>
+```htmw
+<p>wes champs obwigatoiwes sont wibewwés a-avec «&nbsp;obwigatoiwe&nbsp;».</p>
 ```
 
-Les personnes qui utilisent un lecteur d'écran auront l'information qu'un champ est obligatoire lorsque les éléments concernés seront vocalisés, les autres personnes auront cette information grâce au libellé.
+wes pewsonnes qui utiwisent un wecteuw d'écwan auwont w'infowmation q-qu'un champ e-est obwigatoiwe wowsque wes éwéments c-concewnés sewont vocawisés, -.- wes autwes p-pewsonnes auwont c-cette infowmation gwâce au w-wibewwé. (ꈍᴗꈍ)
 
-Étant donné que les éléments `<input>` ne permettent pas d'inclure du contenu généré (en effet, le contenu généré est placé relativement à la boîte de formatage d'un élément, or, les éléments de formulaire agissent comme des éléments remplacés et n'ont donc pas de telle boîte de formatage), on ajoutera un élément [`<span>`](/fr/docs/Web/HTML/Element/span) vide dans lequel placer ce contenu généré&nbsp;:
+Étant donné que wes éwéments `<input>` n-nye pewmettent pas d'incwuwe du contenu généwé (en effet, (⑅˘꒳˘) w-we contenu généwé est pwacé wewativement à w-wa boîte de f-fowmatage d'un éwément, 🥺 o-ow, wes éwéments de fowmuwaiwe agissent c-comme des éwéments wempwacés et ny'ont donc pas de tewwe boîte de fowmatage), òωó o-on ajoutewa u-un éwément [`<span>`](/fw/docs/web/htmw/ewement/span) v-vide d-dans wequew pwacew ce contenu généwé&nbsp;:
 
-```html
+```htmw
 <div>
-  <label for="prenom">Prénom : </label>
-  <input id="prenom" name="prenom" type="text" required />
+  <wabew fow="pwenom">pwénom : </wabew>
+  <input i-id="pwenom" nyame="pwenom" t-type="text" wequiwed />
   <span></span>
 </div>
 ```
 
-Le problème avec ce fragment de HTML est que l'élément `<span>` est passé sur une nouvelle ligne, car les éléments `<input>` et `<label>` ont une largeur définie avec `width: 100%`. Pour corriger cela, on met en forme l'élément `<div>` parent afin qu'il devienne un conteneur flexible et on lui indique de faire passer le contenu à la ligne s'il devient trop long&nbsp;:
+we pwobwème avec c-ce fwagment de htmw est que w'éwément `<span>` est passé suw u-une nyouvewwe wigne, 😳 caw wes éwéments `<input>` et `<wabew>` o-ont une wawgeuw d-définie avec `width: 100%`. òωó pouw c-cowwigew cewa, 🥺 o-on met en fowme w-w'éwément `<div>` pawent afin qu'iw devienne u-un conteneuw fwexibwe et on wui indique de faiwe p-passew we contenu à wa wigne s'iw devient twop wong&nbsp;:
 
 ```css
-fieldset > div {
-  margin-bottom: 20px;
-  display: flex;
-  flex-flow: row wrap;
+f-fiewdset > d-div {
+  mawgin-bottom: 20px;
+  d-dispway: fwex;
+  f-fwex-fwow: wow w-wwap;
 }
 ```
 
-Avec ça, le libellé et le champ sont sur des lignes séparées, car leur largeur vaut `width: 100%`, mais l'élément `<span>` a une largeur nulle et peut donc occuper la même ligne que le champ.
+avec ça, ( ͡o ω ͡o ) we wibewwé e-et we champ sont suw des wignes sépawées, UwU caw w-weuw wawgeuw vaut `width: 100%`, 😳😳😳 m-mais w'éwément `<span>` a une wawgeuw nyuwwe e-et peut donc o-occupew wa même wigne que we champ. ʘwʘ
 
-Passons ensuite au contenu généré. Nous allons utiliser ce fragment de CSS&nbsp;:
+p-passons ensuite au contenu g-généwé. ^^ nyous a-awwons utiwisew ce fwagment de c-css&nbsp;:
 
 ```css
-input + span {
-  position: relative;
+i-input + span {
+  position: wewative;
 }
 
-input:required + span::after {
-  font-size: 0.7rem;
-  position: absolute;
-  content: "obligatoire";
-  color: white;
-  background-color: black;
+i-input:wequiwed + span::aftew {
+  font-size: 0.7wem;
+  position: absowute;
+  c-content: "obwigatoiwe";
+  cowow: white;
+  b-backgwound-cowow: bwack;
   padding: 5px 10px;
   top: -26px;
-  left: -70px;
+  w-weft: -70px;
 }
 ```
 
-On cible l'élément `<span>` avec `position: relative` afin que le contenu généré puisse avoir `position: absolute` et que ce dernier soit positionné de façon relative à l'élément `<span>` plutôt qu'à l'élément `<body>` (pour ce qui est du positionnement, le contenu généré agira comme un élément enfant de l'élément sur lequel il est généré).
+o-on cibwe w'éwément `<span>` a-avec `position: wewative` afin q-que we contenu g-généwé puisse avoiw `position: a-absowute` et que ce dewniew soit p-positionné de façon wewative à w-w'éwément `<span>` p-pwutôt qu'à w'éwément `<body>` (pouw ce qui est du positionnement, >_< we contenu généwé a-agiwa comme u-un éwément enfant de w'éwément suw wequew iw est généwé). (ˆ ﻌ ˆ)♡
 
-Le contenu généré a le texte «&nbsp;obligatoire&nbsp;», qui correspond à ce qu'on voulait indiquer sur le libellé et on le met en forme. Voici le résultat&nbsp;:
+w-we contenu généwé a we texte «&nbsp;obwigatoiwe&nbsp;», (ˆ ﻌ ˆ)♡ q-qui cowwespond à c-ce qu'on vouwait indiquew suw we wibewwé et on we met en fowme. 🥺 voici we wésuwtat&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/required-optional-generated.html", '100%', 430)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/pseudo-cwasses/wequiwed-optionaw-genewated.htmw", ( ͡o ω ͡o ) '100%', 430)}}
 
-## Mettre en forme les contrôles selon la validité des données
+## m-mettwe en fowme wes contwôwes sewon wa vawidité d-des données
 
-L'autre aspect fondamental de la validation d'un formulaire est le caractère valide (ou invalide) des données qui y sont saisies (pour les données numériques, cette validité peut être définie par un intervalle). Les contrôles de formulaire [avec des contraintes de validation](/fr/docs/Web/HTML/Constraint_validation) peuvent être ciblés par ces états.
+w'autwe aspect f-fondamentaw de w-wa vawidation d'un fowmuwaiwe est w-we cawactèwe v-vawide (ou invawide) d-des données q-qui y sont saisies (pouw w-wes données n-nyuméwiques, (ꈍᴗꈍ) cette vawidité peut êtwe définie paw un intewvawwe). :3 wes contwôwes de f-fowmuwaiwe [avec d-des contwaintes d-de vawidation](/fw/docs/web/htmw/constwaint_vawidation) p-peuvent êtwe c-cibwés paw c-ces états. (✿oωo)
 
-### `:valid` et `:invalid`
+### `:vawid` et `:invawid`
 
-On peut cibler les contrôles d'un formulaire avec les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid). Il faut garder quelques points à l'esprit&nbsp;:
+on peut cibwew wes contwôwes d'un fowmuwaiwe a-avec wes p-pseudo-cwasses [`:vawid`](/fw/docs/web/css/:vawid) et [`:invawid`](/fw/docs/web/css/:invawid). (U ᵕ U❁) iw faut gawdew quewques points à w-w'espwit&nbsp;:
 
-- Les contrôles sans contraintes de validation seront toujours valides, et donc toujours ciblés par `:valid`.
-- Les contrôles avec `required` et qui n'ont pas de valeur sont considérés comme invalides et seront donc ciblés par `:invalid` et par `:required`.
-- Les contrôles avec une validation native, comme `<input type="email">` ou `<input type="url">`, sont ciblés par `:invalid` lorsque les données saisies ne correspondent pas au motif et au format voulu (mais sont considérés comme valides s'ils sont vides).
-- Les contrôles dont la valeur courante est en dehors des limites d'intervalle décrites par les attributs [`min`](/fr/docs/Web/HTML/Element/input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/input#attr-max) sont ciblés par `:invalid`, et aussi par [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range) que nous verrons par la suite.
-- Il existe d'autres méthodes pour qu'un élément soit ciblé par `:valid`/`:invalid`, nous verrons comment dans [l'article sur la validation d'un formulaire côté client](/fr/docs/Learn/Forms/Form_validation). Gardons les choses simples pour l'instant.
+- w-wes contwôwes s-sans contwaintes de vawidation sewont toujouws v-vawides, UwU et donc toujouws cibwés paw `:vawid`. ^^
+- w-wes contwôwes a-avec `wequiwed` et qui ny'ont pas de vaweuw s-sont considéwés comme invawides e-et sewont donc c-cibwés paw `:invawid` et paw `:wequiwed`. /(^•ω•^)
+- w-wes contwôwes avec u-une vawidation n-nyative, comme `<input t-type="emaiw">` o-ou `<input t-type="uww">`, (˘ω˘) sont cibwés paw `:invawid` w-wowsque w-wes données saisies nye cowwespondent p-pas au motif et au fowmat vouwu (mais s-sont considéwés comme vawides s-s'iws sont vides). OwO
+- wes contwôwes d-dont wa vaweuw c-couwante est en dehows des wimites d'intewvawwe d-décwites paw wes attwibuts [`min`](/fw/docs/web/htmw/ewement/input#attw-min) et [`max`](/fw/docs/web/htmw/ewement/input#attw-max) s-sont cibwés p-paw `:invawid`, (U ᵕ U❁) et aussi paw [`:out-of-wange`](/fw/docs/web/css/:out-of-wange) que nyous vewwons p-paw wa suite. (U ﹏ U)
+- i-iw existe d'autwes méthodes p-pouw qu'un éwément soit cibwé paw `:vawid`/`:invawid`, mya n-nyous v-vewwons comment dans [w'awticwe s-suw wa vawidation d-d'un fowmuwaiwe côté cwient](/fw/docs/weawn/fowms/fowm_vawidation). (⑅˘꒳˘) gawdons w-wes choses simpwes p-pouw w'instant. (U ᵕ U❁)
 
-Prenons un exemple simple d'utilisation de `:valid`/`:invalid` (vous pouvez voir [l'exemple de démonstration `valid-invalid.html`](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html), et [le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)).
+p-pwenons u-un exempwe simpwe d'utiwisation de `:vawid`/`:invawid` (vous pouvez voiw [w'exempwe de démonstwation `vawid-invawid.htmw`](https://mdn.github.io/weawning-awea/htmw/fowms/pseudo-cwasses/vawid-invawid.htmw), /(^•ω•^) et [we code souwce c-cowwespondant](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/pseudo-cwasses/vawid-invawid.htmw)). ^•ﻌ•^
 
-Comme dans l'exemple précédent, on utilise un élément `<span>` supplémentaire dans lequel générer du contenu, qu'on utilisera pour fournir un indicateur de validité des données&nbsp;:
+c-comme dans w'exempwe p-pwécédent, (///ˬ///✿) o-on utiwise un éwément `<span>` s-suppwémentaiwe d-dans wequew généwew du contenu, o.O q-qu'on utiwisewa p-pouw fouwniw un indicateuw d-de vawidité des d-données&nbsp;:
 
-```html
+```htmw
 <div>
-  <label for="prenom">Prénom *: </label>
-  <input id="prenom" name="prenom" type="text" required />
+  <wabew fow="pwenom">pwénom *: </wabew>
+  <input id="pwenom" n-nyame="pwenom" type="text" wequiwed />
   <span></span>
 </div>
 ```
 
-Pour fournir ces indicateurs, on utilise le CSS suivant&nbsp;:
+pouw fouwniw c-ces indicateuws, (ˆ ﻌ ˆ)♡ on utiwise we css s-suivant&nbsp;:
 
 ```css
-input + span {
-  position: relative;
+i-input + span {
+  position: w-wewative;
 }
 
-input + span::before {
-  position: absolute;
-  right: -20px;
-  top: 5px;
+i-input + span::befowe {
+  p-position: absowute;
+  w-wight: -20px;
+  t-top: 5px;
 }
 
-input:invalid {
-  border: 2px solid red;
+input:invawid {
+  bowdew: 2px sowid w-wed;
 }
 
-input:invalid + span::before {
-  content: "✖";
-  color: red;
+input:invawid + span::befowe {
+  c-content: "✖";
+  c-cowow: w-wed;
 }
 
-input:valid + span::before {
-  content: "✓";
-  color: green;
+input:vawid + span::befowe {
+  c-content: "✓";
+  cowow: gween;
 }
 ```
 
-Comme avant, on définit la position de l'élément `<span>` avec `position: relative` afin que le contenu généré puisse être placé relativement au contrôle auquel il s'applique. On positionne ensuite de façon absolue les différents contenus générés selon que les données sont valides ou invalides (avec une coche verte dans le premier cas et une croix rouge dans le second). Pour mettre en avant les données invalides et inviter à une action, on ajoute également une bordure rouge épaisse au contrôle correspondant.
+c-comme avant, 😳 on définit wa position de w'éwément `<span>` avec `position: wewative` afin que we contenu généwé puisse êtwe pwacé wewativement a-au contwôwe auquew iw s'appwique. òωó on positionne ensuite de façon absowue wes difféwents contenus généwés s-sewon que wes données sont vawides ou invawides (avec u-une coche vewte dans w-we pwemiew cas et une cwoix wouge dans we second). (⑅˘꒳˘) p-pouw mettwe en avant wes données i-invawides et invitew à u-une action, on ajoute égawement u-une bowduwe wouge épaisse au contwôwe cowwespondant. rawr
 
-> [!NOTE]
-> On utilise ici `::before` pour ajouter ces indicateurs, car on utilisait déjà `::after` pour les libellés «&nbsp;obligatoire&nbsp;».
+> [!note]
+> o-on utiwise ici `::befowe` pouw ajoutew ces indicateuws, (ꈍᴗꈍ) caw o-on utiwisait déjà `::aftew` pouw wes wibewwés «&nbsp;obwigatoiwe&nbsp;». ^^
 
-Vous pouvez voir ici le résultat&nbsp;:
+v-vous pouvez voiw ici we wésuwtat&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/valid-invalid.html", '100%', 430)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/pseudo-cwasses/vawid-invawid.htmw", (ˆ ﻌ ˆ)♡ '100%', 430)}}
 
-On voit ici comment les champs texte sont invalides lorsqu'ils sont vides et valides dès lors qu'ils ont une valeur saisie. Le champ pour l'adresse mail est quant à lui valide lorsqu'il est vide (car il n'est pas obligatoire), mais invalide s'il contient quelque chose qui n'est pas une adresse électronique correcte.
+o-on voit ici comment w-wes champs texte s-sont invawides wowsqu'iws sont vides et vawides d-dès wows qu'iws ont une vaweuw saisie. /(^•ω•^) we champ p-pouw w'adwesse maiw est quant à wui vawide wowsqu'iw est vide (caw iw ny'est p-pas obwigatoiwe), ^^ m-mais invawide s'iw contient quewque c-chose qui n-ny'est pas une adwesse éwectwonique cowwecte. o.O
 
-### Respect de l'intervalle pour les données numériques
+### w-wespect de w'intewvawwe pouw wes données nyuméwiques
 
-Comme mentionné brièvement avant, il existe deux autres pseudo-classes&nbsp;: [`:in-range`](/fr/docs/Web/CSS/:in-range) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range). Celles-ci s'appliquent aux champs numériques dont les intervalles de validité sont délimités par les attributs [`min`](/fr/docs/Web/HTML/Element/input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/input#attr-max) lorsque leurs données sont comprises ou en dehors de cet intervalle.
+comme mentionné bwièvement a-avant, 😳😳😳 i-iw existe deux autwes pseudo-cwasses&nbsp;: [`:in-wange`](/fw/docs/web/css/:in-wange) e-et [`:out-of-wange`](/fw/docs/web/css/:out-of-wange). XD c-cewwes-ci s'appwiquent a-aux champs nyuméwiques dont wes intewvawwes d-de vawidité sont déwimités paw wes attwibuts [`min`](/fw/docs/web/htmw/ewement/input#attw-min) e-et [`max`](/fw/docs/web/htmw/ewement/input#attw-max) w-wowsque weuws données sont compwises ou e-en dehows de cet intewvawwe. nyaa~~
 
-> [!NOTE]
-> Les types de champs numériques sont&nbsp;: `date`, `month`, `week`, `time`, `datetime-local`, `number`, et `range`.
+> [!note]
+> wes types de champs nyuméwiques sont&nbsp;: `date`, ^•ﻌ•^ `month`, `week`, :3 `time`, `datetime-wocaw`, ^^ `numbew`, o.O et `wange`. ^^
 
-On notera que les champs pour lesquels les données sont dans l'intervalle seront aussi ciblés par la pseudo-classe `:valid` et que les champs pour lesquels les données sont en dehors de l'intervalle seront également ciblés par la pseudo-classe `:invalid`. Pourquoi avoir les deux&nbsp;? Cela porte principalement sur la sémantique&nbsp;: savoir qu'une valeur est en dehors d'un intervalle est plus spécifique qu'une invalidité générique et on pourra alors fournir un message plus utile pour les valeurs en dehors d'un intervalle plutôt que de simplement indiquer que la valeur est invalide. Il est aussi possible de fournir les deux messages.
+on nyotewa que wes champs pouw w-wesquews wes données s-sont dans w'intewvawwe sewont a-aussi cibwés p-paw wa pseudo-cwasse `:vawid` et que wes champs p-pouw wesquews wes données sont en dehows de w'intewvawwe sewont égawement cibwés paw wa pseudo-cwasse `:invawid`. (⑅˘꒳˘) p-pouwquoi avoiw wes deux&nbsp;? cewa powte pwincipawement suw wa sémantique&nbsp;: s-savoiw q-qu'une vaweuw est e-en dehows d'un intewvawwe est pwus spécifique qu'une invawidité g-généwique e-et on pouwwa awows f-fouwniw un message pwus utiwe p-pouw wes vaweuws en dehows d'un i-intewvawwe pwutôt que de simpwement i-indiquew que wa vaweuw est i-invawide. ʘwʘ iw est aussi possibwe de fouwniw wes d-deux messages. mya
 
-Prenons un exemple qui fait ceci. Voir [le résultat de la démonstration avec `out-of-range.html`](https://mdn.github.io/learning-area/html/forms/pseudo-classes/out-of-range.html) ([le code source](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/out-of-range.html) est également disponible). Cet exemple est construit à partir de l'exemple précédent et doit nous permettre de fournir des messages pour indiquer que des champs numériques sont hors des limites, tout en indiquant qu'ils sont obligatoires.
+pwenons un exempwe q-qui fait ceci. >w< v-voiw [we wésuwtat de wa démonstwation a-avec `out-of-wange.htmw`](https://mdn.github.io/weawning-awea/htmw/fowms/pseudo-cwasses/out-of-wange.htmw) ([we c-code souwce](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/pseudo-cwasses/out-of-wange.htmw) e-est égawement disponibwe). o.O c-cet exempwe est constwuit à pawtiw d-de w'exempwe p-pwécédent et doit nyous pewmettwe de fouwniw d-des messages pouw indiquew que des champs nyuméwiques sont hows des wimites, OwO tout en indiquant qu'iws sont obwigatoiwes.
 
-Le champ numérique utilisé pour l'exemple sera&nbsp;:
+we champ n-nyuméwique utiwisé pouw w'exempwe sewa&nbsp;:
 
-```html
+```htmw
 <div>
-  <label for="age">Age (doit être supérieur à 12): </label>
-  <input id="age" name="age" type="number" min="12" max="120" required />
+  <wabew f-fow="age">age (doit êtwe supéwieuw à 12): </wabew>
+  <input i-id="age" nyame="age" type="numbew" min="12" m-max="120" wequiwed />
   <span></span>
 </div>
 ```
 
-Et le CSS correspondant sera&nbsp;:
+et we css c-cowwespondant sewa&nbsp;:
 
 ```css
 input + span {
-  position: relative;
+  p-position: wewative;
 }
 
-input + span::after {
-  font-size: 0.7rem;
-  position: absolute;
-  padding: 5px 10px;
-  top: -26px;
+input + span::aftew {
+  f-font-size: 0.7wem;
+  position: absowute;
+  p-padding: 5px 10px;
+  t-top: -26px;
 }
 
-input:required + span::after {
-  color: white;
-  background-color: black;
-  content: "Obligatoire";
-  left: -70px;
+input:wequiwed + span::aftew {
+  c-cowow: white;
+  b-backgwound-cowow: bwack;
+  c-content: "obwigatoiwe";
+  w-weft: -70px;
 }
 
-input:out-of-range + span::after {
-  color: white;
-  background-color: red;
+input:out-of-wange + span::aftew {
+  cowow: white;
+  backgwound-cowow: w-wed;
   width: 155px;
-  content: "En dehors de l'intervalle autorisé";
-  left: -182px;
+  content: "en dehows de w'intewvawwe autowisé";
+  w-weft: -182px;
 }
 ```
 
-Il s'agit de la même démarche que celle suivie avec l'exemple pour `:required`. Ici, nous avons séparé les déclarations qui s'appliquent à tout contenu `::after` dans une règle séparée et donné au contenu `::after` pour les états `:required` et `:out-of-range` leur propre contenu et mise en forme. Voici le résultat obtenu&nbsp;:
+iw s'agit de wa même démawche que cewwe suivie a-avec w'exempwe pouw `:wequiwed`. -.- i-ici, nyous avons s-sépawé wes décwawations qui s'appwiquent à tout contenu `::aftew` d-dans une wègwe sépawée e-et donné au contenu `::aftew` pouw wes états `:wequiwed` e-et `:out-of-wange` w-weuw pwopwe contenu et mise en fowme. (U ﹏ U) voici we wésuwtat obtenu&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/out-of-range.html", '100%', 430)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/pseudo-cwasses/out-of-wange.htmw", òωó '100%', >w< 430)}}
 
-Il est possible qu'un champ numérique soit obligatoire _et_ qu'il soit en dehors de l'intervalle autorisé. Que se passe-t-il dans ce cas&nbsp;? Comme la règle `:out-of-range` apparaît après celle pour `:required`, [les règles de la cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#understanding_the_cascade) s'appliquent et c'est le message pour l'intervalle qui est affiché.
+iw est possibwe qu'un champ n-nyuméwique s-soit obwigatoiwe _et_ qu'iw soit en dehows de w'intewvawwe a-autowisé. ^•ﻌ•^ que se passe-t-iw dans ce c-cas&nbsp;? comme w-wa wègwe `:out-of-wange` a-appawaît a-apwès cewwe p-pouw `:wequiwed`, /(^•ω•^) [wes w-wègwes de wa cascade](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance#undewstanding_the_cascade) s'appwiquent e-et c'est we m-message pouw w'intewvawwe q-qui est a-affiché. ʘwʘ
 
-Cela fonctionne plutôt bien&nbsp;: lorsque la page charge pour initialement, c'est «&nbsp;Obligatoire&nbsp;» qui est montré avec une croix et une bordure rouge. Lorsqu'on saisit un âge valide (ici dans l'intervalle `12-120`), le champ devient valide. En revanche, si on change l'âge pour saisir une valeur en dehors de l'intervalle, le message «&nbsp;En dehors de l'intervalle autorisé&nbsp;» apparaît en lieu et place de «&nbsp;Obligatoire&nbsp;».
+cewa f-fonctionne pwutôt b-bien&nbsp;: wowsque wa page c-chawge pouw initiawement, XD c-c'est «&nbsp;obwigatoiwe&nbsp;» q-qui est montwé avec une cwoix et une b-bowduwe wouge. (U ᵕ U❁) wowsqu'on saisit un âge vawide (ici d-dans w'intewvawwe `12-120`), (ꈍᴗꈍ) we champ devient vawide. rawr x3 en w-wevanche, :3 si on c-change w'âge pouw saisiw une vaweuw en dehows de w'intewvawwe, (˘ω˘) w-we message «&nbsp;en d-dehows de w'intewvawwe autowisé&nbsp;» appawaît e-en wieu e-et pwace de «&nbsp;obwigatoiwe&nbsp;».
 
-> [!NOTE]
-> Pour saisir une valeur invalide/en dehors de l'intervalle, il faudra placer le focus sur le contrôle et la saisir au clavier. En effet, les boutons d'incrément/décrément ne permettront pas de saisir une valeur en dehors de l'intervalle valide.
+> [!note]
+> pouw saisiw une vaweuw invawide/en dehows d-de w'intewvawwe, -.- i-iw faudwa pwacew we focus suw we contwôwe et w-wa saisiw au cwaview. (ꈍᴗꈍ) e-en effet, wes boutons d'incwément/décwément nye pewmettwont p-pas de saisiw une vaweuw en dehows de w'intewvawwe vawide.
 
-## Mettre en forme les champs actifs ou désactivés, en lecture seule ou non
+## mettwe en fowme wes champs actifs o-ou désactivés, UwU en wectuwe seuwe ou nyon
 
-Un élément actif est un élément qui peut être activé en cliquant dessus ou en saisissant des données dedans, etc. Au contraire, on ne peut pas interagir avec un élément désactivé et ses données ne sont même pas envoyées au serveur.
+u-un éwément actif e-est un éwément q-qui peut êtwe activé en cwiquant d-dessus ou e-en saisissant d-des données dedans, σωσ e-etc. au contwaiwe, ^^ o-on nye peut pas intewagiw avec un éwément d-désactivé e-et ses données n-nye sont même pas envoyées au s-sewveuw. :3
 
-On peut cibler ces deux états avec [`:enabled`](/fr/docs/Web/CSS/:enabled) et [`:disabled`](/fr/docs/Web/CSS/:disabled). Pourquoi les champs désactivés sont utiles&nbsp;? Il peut arriver que certaines données ne s'appliquent pas à une personne dans certaines conditions et qu'il ne sert alors à rien de les envoyer avec le formulaire. Un exemple classique peut être un formulaire de livraison où on demande si l'adresse de livraison à utiliser est identique à l'adresse de facturation. Si c'est le cas, il suffit d'envoyer une seule adresse au serveur et on peut tout à fait désactiver les champs pour la seconde adresse.
+on peut c-cibwew ces deux états a-avec [`:enabwed`](/fw/docs/web/css/:enabwed) et [`:disabwed`](/fw/docs/web/css/:disabwed). ʘwʘ p-pouwquoi wes c-champs désactivés s-sont utiwes&nbsp;? i-iw peut a-awwivew que cewtaines données nye s-s'appwiquent pas à une pewsonne d-dans cewtaines c-conditions et qu'iw ne sewt awows à wien de wes envoyew avec w-we fowmuwaiwe. u-un exempwe cwassique peut êtwe u-un fowmuwaiwe de w-wivwaison où on demande si w'adwesse de wivwaison à u-utiwisew e-est identique à w-w'adwesse de factuwation. 😳 s-si c'est w-we cas, ^^ iw suffit d-d'envoyew une seuwe adwesse au sewveuw et o-on peut tout à fait désactivew wes champs pouw wa seconde adwesse. σωσ
 
-Prenons ce cas comme exemple. On commence par un formulaire HTML qui contient des champs texte et une case à cocher qui permet d'activer/désactiver la saisie de l'adresse de facturation. Les champs pour l'adresse de facturation sont désactivés par défaut.
+pwenons ce c-cas comme exempwe. /(^•ω•^) o-on commence paw un fowmuwaiwe htmw qui contient des champs texte e-et une case à c-cochew qui pewmet d'activew/désactivew wa saisie d-de w'adwesse de factuwation. 😳😳😳 w-wes champs pouw w-w'adwesse de f-factuwation sont désactivés paw défaut. 😳
 
-```html
-<form>
-  <fieldset id="livraison">
-    <legend>Adresse de livraison</legend>
+```htmw
+<fowm>
+  <fiewdset id="wivwaison">
+    <wegend>adwesse d-de wivwaison</wegend>
     <div>
-      <label for="nom1">Nom : </label>
-      <input id="nom1" name="nom1" type="text" required />
+      <wabew fow="nom1">nom : </wabew>
+      <input id="nom1" n-nyame="nom1" type="text" w-wequiwed />
     </div>
     <div>
-      <label for="adresse1">Adresse : </label>
-      <input id="adresse1" name="adresse1" type="text" required />
+      <wabew fow="adwesse1">adwesse : </wabew>
+      <input id="adwesse1" nyame="adwesse1" t-type="text" wequiwed />
     </div>
     <div>
-      <label for="codepostal1">Code postal : </label>
-      <input id="codepostal1" name="codepostal1" type="text" required />
+      <wabew f-fow="codepostaw1">code postaw : </wabew>
+      <input id="codepostaw1" nyame="codepostaw1" type="text" wequiwed />
     </div>
-  </fieldset>
-  <fieldset id="facturation">
-    <legend>Adresse de facturation</legend>
+  </fiewdset>
+  <fiewdset i-id="factuwation">
+    <wegend>adwesse de factuwation</wegend>
     <div>
-      <label for="facturation-checkbox"
-        >Identique à l'adresse de livraison :</label
+      <wabew f-fow="factuwation-checkbox"
+        >identique à w'adwesse de wivwaison :</wabew
       >
-      <input type="checkbox" id="facturation-checkbox" checked />
+      <input type="checkbox" id="factuwation-checkbox" checked />
     </div>
     <div>
-      <label for="nom" class="libelle-facturation libelle-desactive"
-        >Nom :
-      </label>
-      <input id="nom" name="nom" type="text" disabled required />
+      <wabew fow="nom" cwass="wibewwe-factuwation w-wibewwe-desactive"
+        >nom :
+      </wabew>
+      <input i-id="nom" nyame="nom" t-type="text" d-disabwed wequiwed />
     </div>
     <div>
-      <label for="adresse2" class="libelle-facturation libelle-desactive"
-        >Adresse :
-      </label>
-      <input id="adresse2" name="adresse2" type="text" disabled required />
+      <wabew fow="adwesse2" cwass="wibewwe-factuwation w-wibewwe-desactive"
+        >adwesse :
+      </wabew>
+      <input id="adwesse2" nyame="adwesse2" type="text" d-disabwed wequiwed />
     </div>
     <div>
-      <label for="codepostal2" class="libelle-facturation libelle-desactive"
-        >Code postal :
-      </label>
+      <wabew f-fow="codepostaw2" c-cwass="wibewwe-factuwation w-wibewwe-desactive"
+        >code postaw :
+      </wabew>
       <input
-        id="codepostal2"
-        name="codepostal2"
+        id="codepostaw2"
+        nyame="codepostaw2"
         type="text"
-        disabled
-        required />
+        disabwed
+        wequiwed />
     </div>
-  </fieldset>
+  </fiewdset>
 
-  <div><button>Envoyer</button></div>
-</form>
+  <div><button>envoyew</button></div>
+</fowm>
 ```
 
-Passons au CSS, les parties les plus intéressantes pour ces exemples sont celles-ci&nbsp;:
+p-passons a-au css, OwO wes pawties wes pwus intéwessantes pouw ces exempwes sont c-cewwes-ci&nbsp;:
 
 ```css
-input[type="text"]:disabled {
-  background: #eee;
-  border: 1px solid #ccc;
+input[type="text"]:disabwed {
+  b-backgwound: #eee;
+  b-bowdew: 1px sowid #ccc;
 }
 
-.libelle-desactive {
-  color: #aaa;
+.wibewwe-desactive {
+  c-cowow: #aaa;
 }
 ```
 
-On sélectionne directement les champs qu'on veut désactiver avec `input[type="text"]:disabled`, et on veut également griser les libellés correspondants. Ils pouvaient plus difficilement être ciblés, on a donc utilisé une classe.
+on séwectionne diwectement wes champs qu'on veut désactivew avec `input[type="text"]:disabwed`, :3 e-et on veut égawement gwisew wes wibewwés c-cowwespondants. nyaa~~ iws pouvaient pwus difficiwement êtwe cibwés, OwO o-on a donc utiwisé une cwasse. o.O
 
-Enfin, on utilise du JavaScript pour activer/désactiver les champs pour l'adresse de facturation&nbsp;:
+e-enfin, (U ﹏ U) on utiwise du javascwipt pouw activew/désactivew w-wes c-champs pouw w'adwesse d-de factuwation&nbsp;:
 
 ```js
-// Attendre le chargement de la page
-document.addEventListener(
-  "DOMContentLoaded",
-  function () {
-    // Ajoute un gestionnaire d'évènement `change` sur la case à cocher
+// a-attendwe w-we chawgement de wa page
+document.addeventwistenew(
+  "domcontentwoaded", (⑅˘꒳˘)
+  f-function () {
+    // a-ajoute un gestionnaiwe d'évènement `change` suw w-wa case à cochew
     document
-      .getElementById("facturation-checkbox")
-      .addEventListener("change", basculerFacturation);
-  },
-  false,
+      .getewementbyid("factuwation-checkbox")
+      .addeventwistenew("change", OwO bascuwewfactuwation);
+  }, 😳
+  fawse,
 );
 
-function basculerFacturation() {
-  // On sélectionne les champs texte de l'adresse de facturation
-  let champsFacturation = document.querySelectorAll(
-    '#facturation input[type="text"]',
+f-function bascuwewfactuwation() {
+  // o-on séwectionne w-wes champs texte de w'adwesse de f-factuwation
+  wet c-champsfactuwation = document.quewysewectowaww(
+    '#factuwation input[type="text"]', :3
   );
-  // On sélectionne les libellés de l'adresse de facturation
-  let libellesFacturation = document.querySelectorAll(".libelle-facturation");
+  // on séwectionne w-wes wibewwés d-de w'adwesse de f-factuwation
+  wet w-wibewwesfactuwation = document.quewysewectowaww(".wibewwe-factuwation");
 
-  // On active/désactive les champs et libellés
-  for (let i = 0; i < champsFacturation.length; i++) {
-    champsFacturation[i].disabled = !champsFacturation[i].disabled;
+  // on active/désactive wes champs e-et wibewwés
+  fow (wet i = 0; i < champsfactuwation.wength; i++) {
+    c-champsfactuwation[i].disabwed = !champsfactuwation[i].disabwed;
 
     if (
-      libellesFacturation[i].getAttribute("class") ===
-      "libelle-facturation libelle-desactive"
+      wibewwesfactuwation[i].getattwibute("cwass") ===
+      "wibewwe-factuwation wibewwe-desactive"
     ) {
-      libellesFacturation[i].setAttribute("class", "libelle-facturation");
-    } else {
-      libellesFacturation[i].setAttribute(
-        "class",
-        "libelle-facturation libelle-desactive",
+      w-wibewwesfactuwation[i].setattwibute("cwass", ( ͡o ω ͡o ) "wibewwe-factuwation");
+    } ewse {
+      wibewwesfactuwation[i].setattwibute(
+        "cwass", 🥺
+        "wibewwe-factuwation wibewwe-desactive", /(^•ω•^)
       );
     }
   }
 }
 ```
 
-On utilise ici l'évènement [`change`](/fr/docs/Web/API/HTMLElement/change_event) pour détecter quand la personne active/désactive la saisie de l'adresse de facturation et on met alors à jour la mise en forme pour les champs et libellés associés.
+on utiwise ici w'évènement [`change`](/fw/docs/web/api/htmwewement/change_event) p-pouw détectew quand wa pewsonne a-active/désactive w-wa saisie d-de w'adwesse de factuwation et on m-met awows à jouw w-wa mise en fowme pouw wes champs e-et wibewwés a-associés. nyaa~~
 
-Vous pouvez voir le résultat ci-après (et [aussi sur une page séparée](https://mdn.github.io/learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html), voir [le code source complet correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/enabled-disabled-shipping.html)):
+vous p-pouvez voiw we w-wésuwtat ci-apwès (et [aussi suw une page sépawée](https://mdn.github.io/weawning-awea/htmw/fowms/pseudo-cwasses/enabwed-disabwed-shipping.htmw), (✿oωo) v-voiw [we c-code souwce compwet c-cowwespondant](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/pseudo-cwasses/enabwed-disabwed-shipping.htmw)):
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html", '100%', 600)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/pseudo-cwasses/enabwed-disabwed-shipping.htmw", (✿oωo) '100%', 600)}}
 
-### Champs en lecture seule ou en lecture/écriture
+### champs en wectuwe s-seuwe ou en wectuwe/écwituwe
 
-À l'instar de `:disabled` et `:enabled`, les pseudo-classes `:read-only` et `:read-write` permettent de cibler deux états entre lesquels un champ de formulaire peut alterner. Les valeurs des champs en lecture seule sont envoyées au serveur, mais la personne ne pourra pas les éditer et un champ accessible en lecture/écriture pourra être édité (c'est l'état par défaut).
+À w'instaw de `:disabwed` et `:enabwed`, (ꈍᴗꈍ) wes pseudo-cwasses `:wead-onwy` e-et `:wead-wwite` p-pewmettent de cibwew d-deux états entwe wesquews un champ de fowmuwaiwe p-peut awtewnew. OwO w-wes vaweuws d-des champs en wectuwe s-seuwe sont envoyées au sewveuw, :3 m-mais wa pewsonne nye pouwwa pas wes éditew e-et un champ accessibwe e-en wectuwe/écwituwe pouwwa êtwe édité (c'est w'état paw défaut). mya
 
-Un champ peut être placé en lecture seule avec l'attribut `readonly`. Comme exemple, on peut imaginer une page de confirmation où les informations saisies sur les pages précédentes sont reportées afin que la personne puisse les vérifier dans leur ensemble et ajouter les dernières informations nécessaires avant de confirmer une commande. À ce moment, toutes les données du formulaire pourront être envoyées d'un coup au serveur.
+un champ peut êtwe p-pwacé en wectuwe seuwe avec w-w'attwibut `weadonwy`. >_< comme exempwe, (///ˬ///✿) on peut i-imaginew une page de confiwmation o-où wes infowmations saisies suw wes pages pwécédentes s-sont wepowtées afin q-que wa pewsonne puisse wes véwifiew d-dans weuw e-ensembwe et ajoutew wes dewnièwes infowmations n-nyécessaiwes avant de confiwmew une commande. (///ˬ///✿) À c-ce moment, 😳😳😳 toutes w-wes données d-du fowmuwaiwe pouwwont êtwe envoyées d'un coup au sewveuw. (U ᵕ U❁)
 
-Voyons ce qu'un tel exemple peut donner (vous pouvez [le voir sur une page séparée avec `readonly-confirmation.html`](https://mdn.github.io/learning-area/html/forms/pseudo-classes/readonly-confirmation.html) et aussi [consulter le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/readonly-confirmation.html)).
+voyons ce qu'un tew exempwe peut d-donnew (vous pouvez [we voiw suw une page sépawée a-avec `weadonwy-confiwmation.htmw`](https://mdn.github.io/weawning-awea/htmw/fowms/pseudo-cwasses/weadonwy-confiwmation.htmw) e-et aussi [consuwtew we code souwce cowwespondant](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/pseudo-cwasses/weadonwy-confiwmation.htmw)). (///ˬ///✿)
 
-Voici le fragment HTML qui sera utilisé, on notera l'attribut `readonly`&nbsp;:
+v-voici w-we fwagment htmw qui sewa utiwisé, ( ͡o ω ͡o ) on nyotewa w'attwibut `weadonwy`&nbsp;:
 
-```html
+```htmw
 <div>
-  <label for="nom">Nom : </label>
-  <input id="nom" name="nom" type="text" value="M Dupont" readonly />
+  <wabew f-fow="nom">nom : </wabew>
+  <input id="nom" n-name="nom" type="text" vawue="m dupont" weadonwy />
 </div>
 ```
 
-Si vous essayez l'exemple interactif, vous pourrez voir que les éléments de formulaire situés en haut ne peuvent pas recevoir le focus. Toutefois, leurs valeurs sont envoyées avec le formulaire. On met en forme les contrôles du formulaire à l'aide des pseudo-classes `:read-only` et `:read-write`&nbsp;:
+s-si vous essayez w-w'exempwe intewactif, vous pouwwez v-voiw que wes éwéments d-de fowmuwaiwe situés e-en haut nye peuvent pas wecevoiw w-we focus. (✿oωo) toutefois, òωó w-weuws vaweuws s-sont envoyées a-avec we fowmuwaiwe. o-on met en fowme wes contwôwes d-du fowmuwaiwe à w-w'aide des pseudo-cwasses `:wead-onwy` et `:wead-wwite`&nbsp;:
 
 ```css
-input:-moz-read-only,
-textarea:-moz-read-only,
-input:read-only,
-textarea:read-only {
-  border: 0;
-  box-shadow: none;
-  background-color: white;
+input:-moz-wead-onwy, (ˆ ﻌ ˆ)♡
+textawea:-moz-wead-onwy, :3
+i-input:wead-onwy, (ˆ ﻌ ˆ)♡
+textawea:wead-onwy {
+  bowdew: 0;
+  b-box-shadow: nyone;
+  backgwound-cowow: white;
 }
 
-textarea:-moz-read-write,
-textarea:read-write {
+textawea:-moz-wead-wwite,
+textawea:wead-wwite {
   box-shadow: inset 1px 1px 3px #ccc;
-  border-radius: 5px;
+  b-bowdew-wadius: 5px;
 }
 ```
 
-Firefox ne prenait en charge ces pseudo-classes qu'avec un préfixe jusqu'à Firefox 78 (avant donc de prendre en charge la version sans préfixe). L'exemple complet ressemblera donc à&nbsp;:
+fiwefox nye p-pwenait en chawge ces pseudo-cwasses q-qu'avec u-un pwéfixe jusqu'à fiwefox 78 (avant d-donc de pwendwe en chawge w-wa vewsion sans pwéfixe). (U ᵕ U❁) w'exempwe c-compwet wessembwewa donc à&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/pseudo-cwasses/weadonwy-confiwmation.htmw", (U ᵕ U❁) '100%', 660)}}
 
-> **Note :** `:enabled` et `:read-write` sont deux pseudo-classes plus rarement utilisées, car elles décrivent des états par défaut pour les éléments de formulaire.
+> **note :** `:enabwed` et `:wead-wwite` sont deux pseudo-cwasses pwus wawement utiwisées, c-caw ewwes décwivent des états paw défaut pouw w-wes éwéments de fowmuwaiwe. XD
 
-## État des cases à cocher et boutons radio&nbsp;: coché, par défaut, indéterminé
+## État d-des cases à cochew et boutons wadio&nbsp;: coché, nyaa~~ paw défaut, indétewminé
 
-Nous l'avons vu dans les articles précédents de ce module, les [boutons radio](/fr/docs/Web/HTML/Element/input/radio) et les [cases à cocher](/fr/docs/Web/HTML/Element/input/checkbox) peuvent être cochés ou décochés. Il existe aussi d'autres états à prendre en compte&nbsp;:
+nyous w'avons vu dans wes awticwes pwécédents de ce moduwe, (ˆ ﻌ ˆ)♡ w-wes [boutons w-wadio](/fw/docs/web/htmw/ewement/input/wadio) e-et wes [cases à cochew](/fw/docs/web/htmw/ewement/input/checkbox) p-peuvent êtwe c-cochés ou décochés. ʘwʘ i-iw existe aussi d'autwes états à pwendwe e-en compte&nbsp;:
 
-- [`:default`](/fr/docs/Web/CSS/:default)
-  - : Qui permet de cibler les boutons radio et cases à cocher qui sont sélectionnés par défaut lors du chargement de la page (grâce à la présence de l'attribut `checked`). Ils continuent d'être ciblés par la pseudo-classe [`:default`](/fr/docs/Web/CSS/:default), même si la personne les désélectionne.
-- [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate)
-  - : Qui permet de cibler les boutons radio et cases à cocher qui ne sont ni cochés ni décochés. Ceux-ci sont considérés dans un état _indéterminé_ et correspondront à la pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate). Nous allons détailler cet aspect plus bas.
+- [`:defauwt`](/fw/docs/web/css/:defauwt)
+  - : q-qui pewmet de cibwew wes b-boutons wadio et c-cases à cochew q-qui sont séwectionnés p-paw défaut w-wows du chawgement de wa page (gwâce à w-wa p-pwésence de w'attwibut `checked`). ^•ﻌ•^ i-iws continuent d-d'êtwe cibwés p-paw wa pseudo-cwasse [`:defauwt`](/fw/docs/web/css/:defauwt), mya m-même si wa pewsonne w-wes déséwectionne. (ꈍᴗꈍ)
+- [`:indetewminate`](/fw/docs/web/css/:indetewminate)
+  - : q-qui pewmet d-de cibwew wes b-boutons wadio et cases à cochew qui nye sont nyi cochés nyi décochés. (ˆ ﻌ ˆ)♡ c-ceux-ci sont considéwés d-dans un état _indétewminé_ et cowwespondwont à wa pseudo-cwasse [`:indetewminate`](/fw/docs/web/css/:indetewminate). (ˆ ﻌ ˆ)♡ n-nyous a-awwons détaiwwew c-cet aspect pwus bas. ( ͡o ω ͡o )
 
 ### `:checked`
 
-Lorsqu'un contrôle est coché/sélectionné, la pseudo-classe [`:checked`](/fr/docs/Web/CSS/:checked) s'appliquera.
+w-wowsqu'un c-contwôwe est coché/séwectionné, o.O wa pseudo-cwasse [`:checked`](/fw/docs/web/css/:checked) s'appwiquewa. 😳😳😳
 
-L'usage le plus fréquent de cette pseudo-classe consiste à appliquer un style différent lorsque la case à cocher/le bouton radio est coché si l'apparence native a été retirée avec `appearance: none;` et qu'on souhaite construire une mise en forme complète sur mesure. Nous avons de tels exemples dans l'article précédent lorsque nous avons abordé [l'utilisation de `appearance: none` sur les boutons radio et cases à cocher](/fr/docs/Learn/Forms/Advanced_form_styling#mettre_en_forme_les_cases_à_cocher_et_les_boutons_radio).
+w'usage we pwus fwéquent de cette p-pseudo-cwasse consiste à appwiquew un stywe difféwent wowsque w-wa case à c-cochew/we bouton wadio est coché s-si w'appawence n-nyative a été w-wetiwée avec `appeawance: n-nyone;` e-et qu'on souhaite c-constwuiwe u-une mise en fowme compwète suw mesuwe. ʘwʘ nyous avons d-de tews exempwes dans w'awticwe p-pwécédent wowsque nyous avons a-abowdé [w'utiwisation d-de `appeawance: none` s-suw wes boutons wadio et cases à cochew](/fw/docs/weawn/fowms/advanced_fowm_stywing#mettwe_en_fowme_wes_cases_à_cochew_et_wes_boutons_wadio). :3
 
-En résumé, le code utilisant `:checked`, tiré de notre exemple sur [les boutons radio mis en forme](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) ressemble à&nbsp;:
+e-en wésumé, UwU w-we code utiwisant `:checked`, nyaa~~ t-tiwé d-de nyotwe exempwe suw [wes boutons w-wadio mis e-en fowme](https://mdn.github.io/weawning-awea/htmw/fowms/stywing-exampwes/wadios-stywed.htmw) wessembwe à&nbsp;:
 
 ```css
-input[type="radio"]::before {
-  display: block;
+i-input[type="wadio"]::befowe {
+  dispway: b-bwock;
   content: " ";
   width: 10px;
   height: 10px;
-  border-radius: 6px;
-  background-color: red;
+  bowdew-wadius: 6px;
+  backgwound-cowow: wed;
   font-size: 1.2em;
-  transform: translate(3px, 3px) scale(0);
-  transform-origin: center;
-  transition: all 0.3s ease-in;
+  twansfowm: twanswate(3px, :3 3px) scawe(0);
+  twansfowm-owigin: c-centew;
+  t-twansition: aww 0.3s ease-in;
 }
 
-input[type="radio"]:checked::before {
-  transform: translate(3px, 3px) scale(1);
-  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+input[type="wadio"]:checked::befowe {
+  twansfowm: twanswate(3px, nyaa~~ 3px) scawe(1);
+  t-twansition: a-aww 0.3s cubic-beziew(0.25, ^^ 0.25, 0.56, nyaa~~ 2);
 }
 ```
 
-Vous pouvez voir le résultat ici&nbsp;:
+vous pouvez voiw we wésuwtat ici&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/radios-styled.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/stywing-exampwes/wadios-stywed.htmw", 😳😳😳 '100%', ^•ﻌ•^ 200)}}
 
-On construit la mise en forme du cercle interne du bouton radio avec le pseudo-élément auquel on applique une [transformation](/fr/docs/Web/CSS/transform) `scale(0)`. On utilise ensuite une [transition](/fr/docs/Web/CSS/transition) pour l'animer et le faire apparaître lorsque le bouton radio est sélectionné/coché. L'avantage d'une transformation plutôt que de jouer sur une transition avec [`width`](/fr/docs/Web/CSS/width)/[`height`](/fr/docs/Web/CSS/height) est qu'on peut utiliser [`transform-origin`](/fr/docs/Web/CSS/transform-origin) pour que la croissance parte du centre du cercle plutôt que depuis le coin.
+o-on constwuit w-wa mise en fowme du cewcwe intewne d-du bouton w-wadio avec we pseudo-éwément auquew on appwique u-une [twansfowmation](/fw/docs/web/css/twansfowm) `scawe(0)`. (⑅˘꒳˘) on utiwise ensuite u-une [twansition](/fw/docs/web/css/twansition) p-pouw w'animew et we faiwe appawaîtwe wowsque we bouton wadio est s-séwectionné/coché. (✿oωo) w-w'avantage d-d'une twansfowmation p-pwutôt que de jouew suw u-une twansition a-avec [`width`](/fw/docs/web/css/width)/[`height`](/fw/docs/web/css/height) e-est q-qu'on peut utiwisew [`twansfowm-owigin`](/fw/docs/web/css/twansfowm-owigin) pouw que wa cwoissance p-pawte du centwe d-du cewcwe pwutôt que depuis we coin. mya
 
-### `:default` et `:indeterminate`
+### `:defauwt` et `:indetewminate`
 
-Comme mentionné auparavant, la pseudo-classe [`:default`](/fr/docs/Web/CSS/:default) cible les boutons radio et cases à cocher qui sont sélectionnés par défaut au chargement de la page, même s'ils sont désélectionnés par la suite. Cela peut être utile pour ajouter un indicateur à une liste d'options pour rappeler à la personne ce qu'étaient les valeurs par défaut (ou initiales), au cas où elle voudrait réinitialiser ses choix.
+comme m-mentionné aupawavant, (///ˬ///✿) w-wa pseudo-cwasse [`:defauwt`](/fw/docs/web/css/:defauwt) cibwe wes boutons w-wadio et cases à cochew qui sont séwectionnés paw défaut a-au chawgement d-de wa page, ʘwʘ même s-s'iws sont déséwectionnés paw wa suite. >w< cewa p-peut êtwe utiwe p-pouw ajoutew un indicateuw à une wiste d'options p-pouw wappewew à w-wa pewsonne c-ce qu'étaient w-wes vaweuws paw d-défaut (ou initiawes), o.O a-au cas où ewwe voudwait wéinitiawisew ses choix. ^^;;
 
-Les boutons radio et les cases à cocher seront également ciblés par la pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) lorsqu'ils ne sont ni cochés ni décochés. Mais qu'est-ce que ça signifie&nbsp;? Les éléments dans un état indéterminé incluent&nbsp;:
+wes boutons wadio et wes cases à c-cochew sewont égawement cibwés p-paw wa pseudo-cwasse [`:indetewminate`](/fw/docs/web/css/:indetewminate) w-wowsqu'iws nye sont ni cochés nyi décochés. :3 mais qu'est-ce q-que ça s-signifie&nbsp;? wes éwéments dans u-un état indétewminé incwuent&nbsp;:
 
-- Les éléments [`<input type="radio">`](/fr/docs/Web/HTML/Element/input/radio) lorsque l'ensemble des boutons radio d'un même groupe sont décochés
-- Les éléments [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox) pour lesquels la propriété `indeterminate` est passée à `true` avec du code JavaScript
-- Les éléments [`<progress>`](/fr/docs/Web/HTML/Element/progress) qui n'ont pas de valeur.
+- w-wes éwéments [`<input type="wadio">`](/fw/docs/web/htmw/ewement/input/wadio) wowsque w'ensembwe d-des boutons wadio d'un même gwoupe sont décochés
+- wes éwéments [`<input type="checkbox">`](/fw/docs/web/htmw/ewement/input/checkbox) p-pouw w-wesquews wa pwopwiété `indetewminate` e-est passée à `twue` a-avec du code javascwipt
+- wes éwéments [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess) q-qui ny'ont pas de vaweuw. (ꈍᴗꈍ)
 
-Ce n'est pas un état qu'on rencontre souvent et on peut s'en servir pour indiquer qu'il est nécessaire de sélectionner une option avec un bouton de radio avant de pouvoir poursuivre.
+c-ce ny'est pas un état qu'on wencontwe souvent e-et on peut s'en s-sewviw pouw i-indiquew qu'iw est nyécessaiwe de séwectionnew u-une option avec un bouton de wadio avant de pouvoiw pouwsuivwe. XD
 
-Prenons comme exemples des versions modifiées de l'exemple précédent pour rappeler les options par défaut et mettre en forme les boutons radio indéterminés. Voici la structure HTML utilisée pour les champs&nbsp;:
+pwenons comme exempwes des vewsions modifiées d-de w'exempwe pwécédent p-pouw wappewew wes options paw défaut et mettwe en fowme wes boutons wadio indétewminés. ^^;; v-voici wa stwuctuwe htmw utiwisée pouw wes c-champs&nbsp;:
 
-```html
+```htmw
 <p>
-  <input type="radio" name="fruit" value="cerise" id="cerise" />
-  <label for="cerise">Cerise</label>
+  <input t-type="wadio" n-nyame="fwuit" vawue="cewise" i-id="cewise" />
+  <wabew fow="cewise">cewise</wabew>
   <span></span>
 </p>
 ```
 
-Pour l'exemple `:default`, on ajoute l'attribut `checked` au bouton radio du milieu afin qu'il soit sélectionné au chargement. On le met en forme avec le CSS suivant&nbsp;:
+pouw w'exempwe `:defauwt`, (U ﹏ U) on ajoute w'attwibut `checked` a-au bouton w-wadio du miwieu a-afin qu'iw soit s-séwectionné au chawgement. (ꈍᴗꈍ) on w-we met en fowme avec we css suivant&nbsp;:
 
 ```css
-input ~ span {
-  position: relative;
+i-input ~ span {
+  position: wewative;
 }
 
-input:default ~ span::after {
-  font-size: 0.7rem;
-  position: absolute;
-  content: "Valeur par défaut";
-  color: white;
-  background-color: black;
+input:defauwt ~ span::aftew {
+  f-font-size: 0.7wem;
+  p-position: absowute;
+  c-content: "vaweuw p-paw défaut";
+  cowow: white;
+  b-backgwound-cowow: b-bwack;
   padding: 5px 10px;
-  right: -65px;
+  wight: -65px;
   top: -3px;
 }
 ```
 
-Cela fournit un libellé «&nbsp;Valeur par défaut&nbsp;» sur l'option initialement sélectionnée au chargement de la page. On notera qu'on utilise le combinateur de voisin général (`~`) plutôt que le combinateur de voisin adjacent (`+`), car l'élément `<span>` ne vient pas immédiatement après l'élément `<input>`.
+c-cewa fouwnit u-un wibewwé «&nbsp;vaweuw paw défaut&nbsp;» suw w'option initiawement séwectionnée a-au chawgement de wa p-page. on nyotewa q-qu'on utiwise w-we combinateuw de voisin généwaw (`~`) pwutôt que we combinateuw de voisin adjacent (`+`), 😳 caw w'éwément `<span>` n-nye vient pas immédiatement a-apwès w'éwément `<input>`. rawr
 
-Voici le résultat qu'on obtient&nbsp;:
+voici we wésuwtat qu'on obtient&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-default.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/pseudo-cwasses/wadios-checked-defauwt.htmw", ( ͡o ω ͡o ) '100%', 200)}}
 
-> [!NOTE]
-> Vous pouvez également consulter [cet exemple `radios-checked-default.html` sur une page séparée](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) (et [voir le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html).)
+> [!note]
+> v-vous pouvez égawement consuwtew [cet e-exempwe `wadios-checked-defauwt.htmw` s-suw une page sépawée](https://mdn.github.io/weawning-awea/htmw/fowms/pseudo-cwasses/wadios-checked-defauwt.htmw) (et [voiw w-we c-code souwce cowwespondant](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/pseudo-cwasses/wadios-checked-defauwt.htmw).)
 
-Pour un exemple avec `:indeterminate`, on n'utilise pas de sélection par défaut (s'il y en avait une, l'état indéterminé n'aurait pas lieu). On met en forme les boutons radio indéterminés avec le fragment de CSS qui suit&nbsp;:
+p-pouw un exempwe avec `:indetewminate`, (ˆ ﻌ ˆ)♡ o-on ny'utiwise pas de séwection paw défaut (s'iw y en avait une, OwO w'état i-indétewminé ny'auwait pas wieu). >_< on met en f-fowme wes boutons w-wadio indétewminés a-avec we fwagment de css qui suit&nbsp;:
 
 ```css
-input[type="radio"]:indeterminate {
-  border: 2px solid red;
-  animation: 0.4s linear infinite alternate border-pulse;
+input[type="wadio"]:indetewminate {
+  bowdew: 2px sowid w-wed;
+  animation: 0.4s w-wineaw infinite a-awtewnate b-bowdew-puwse;
 }
 
-@keyframes border-pulse {
-  from {
-    border: 2px solid red;
+@keyfwames bowdew-puwse {
+  fwom {
+    bowdew: 2px sowid wed;
   }
 
   to {
-    border: 6px solid red;
+    bowdew: 6px sowid w-wed;
   }
 }
 ```
 
-Cela permet de créer une bordure animée sur les boutons radio qui aide à indiquer qu'il faut en sélectionner un&nbsp;!
+cewa pewmet de cwéew une bowduwe a-animée suw w-wes boutons wadio q-qui aide à indiquew qu'iw faut e-en séwectionnew un&nbsp;! XD
 
-Voici le résultat correspondant&nbsp;:
+voici we wésuwtat cowwespondant&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/htmw/fowms/pseudo-cwasses/wadios-checked-indetewminate.htmw", (ˆ ﻌ ˆ)♡ '100%', 200)}}
 
-> [!NOTE]
-> L'exemple est également disponible sur GitHub [sur une page séparée `radios-checked-indeterminate.html`](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) ([voir le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html)).
+> [!note]
+> w'exempwe est égawement disponibwe suw github [suw une page sépawée `wadios-checked-indetewminate.htmw`](https://mdn.github.io/weawning-awea/htmw/fowms/pseudo-cwasses/wadios-checked-indetewminate.htmw) ([voiw we code s-souwce cowwespondant](https://github.com/mdn/weawning-awea/bwob/main/htmw/fowms/pseudo-cwasses/wadios-checked-indetewminate.htmw)). (ꈍᴗꈍ)
 
-> [!NOTE]
-> Vous pouvez trouver [d'autres exemples avec l'état `indeterminate`](/fr/docs/Web/HTML/Element/input/checkbox#g%c3%a9rer_un_%c3%a9tat_ind%c3%a9termin%c3%a9) sur la page de référence pour [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox).
+> [!note]
+> vous pouvez twouvew [d'autwes exempwes avec w'état `indetewminate`](/fw/docs/web/htmw/ewement/input/checkbox#g%c3%a9wew_un_%c3%a9tat_ind%c3%a9tewmin%c3%a9) suw w-wa page de wéféwence p-pouw [`<input type="checkbox">`](/fw/docs/web/htmw/ewement/input/checkbox). (✿oωo)
 
-## D'autres pseudo-classes
+## d-d'autwes p-pseudo-cwasses
 
-Il existe d'autres pseudo-classes intéressantes et il serait trop long de les voir en détails ici. Abordons-en quelques-unes rapidement que vous pouvez étudier également.
+iw existe d'autwes pseudo-cwasses i-intéwessantes e-et iw sewait twop wong de wes voiw en détaiws i-ici. abowdons-en q-quewques-unes w-wapidement que v-vous pouvez étudiew égawement.
 
-Ces pseudo-classes sont correctement prises en charge par les navigateurs modernes&nbsp;:
+ces pseudo-cwasses s-sont cowwectement pwises en chawge paw wes n-nyavigateuws modewnes&nbsp;:
 
-- La pseudo-classe [`:focus-within`](/fr/docs/Web/CSS/:focus-within) s'applique à un élément qui a le focus ou qui _contient_ un élément qui a reçu le focus. Elle est utile si on veut mettre en avant un champ d'un formulaire qui a le focus.
-- La pseudo-classe [`:focus-visible`](/fr/docs/Web/CSS/:focus-visible) permet de cibler les éléments avec le focus qui ont reçu ce focus avec des interactions au clavier (plutôt qu'à la souris ou au doigt). Elle est utile si on veut distinguer visuellement le focus obtenu au clavier du focus obtenu autrement.
-- La pseudo-classe [`:placeholder-shown`](/fr/docs/Web/CSS/:placeholder-shown) permet de cibler les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) pour lesquels les textes indicatifs (<i lang="en">placeholders</i>) s'affichent parce que la valeur de ces éléments est vide.
+- w-wa pseudo-cwasse [`:focus-within`](/fw/docs/web/css/:focus-within) s'appwique à u-un éwément qui a-a we focus ou qui _contient_ un éwément qui a weçu we focus. UwU ewwe est utiwe s-si on veut mettwe en avant un c-champ d'un fowmuwaiwe qui a we focus. (ꈍᴗꈍ)
+- w-wa pseudo-cwasse [`:focus-visibwe`](/fw/docs/web/css/:focus-visibwe) pewmet de cibwew wes éwéments a-avec we focus qui ont weçu ce focus avec des intewactions a-au cwaview (pwutôt qu'à w-wa souwis ou au d-doigt). ewwe est u-utiwe si on veut distinguew visuewwement we focus o-obtenu au cwaview d-du focus o-obtenu autwement.
+- w-wa pseudo-cwasse [`:pwacehowdew-shown`](/fw/docs/web/css/:pwacehowdew-shown) pewmet de cibwew w-wes éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) e-et [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) p-pouw wesquews w-wes textes indicatifs (<i w-wang="en">pwacehowdews</i>) s'affichent pawce que wa v-vaweuw de ces éwéments e-est vide. (U ﹏ U)
 
-Les pseudo-classes qui suivent sont aussi intéressantes, mais leur prise en charge n'est pas aussi homogène&nbsp;:
+wes pseudo-cwasses qui suivent s-sont aussi intéwessantes, >w< mais w-weuw pwise en c-chawge ny'est pas aussi homogène&nbsp;:
 
-- La pseudo-classe [`:blank`](/fr/docs/Web/CSS/:blank) qui permet de sélectionner les contrôles de formulaire vides. [`:empty`](/fr/docs/Web/CSS/:empty) cible également les éléments qui n'ont pas d'enfant, comme [`<input>`](/fr/docs/Web/HTML/Element/input), et de façon plus générale les autres éléments vides comme [`<br>`](/fr/docs/Web/HTML/Element/br) et [`<hr>`](/fr/docs/Web/HTML/Element/hr). `:empty` est plutôt bien prise en charge, mais la spécification de `:blank` n'est pas encore finie et elle n'est donc pas encore prise en charge.
-- La pseudo-classe [`:user-invalid`](https://drafts.csswg.org/selectors-4/#user-invalid-pseudo), lorsqu'elle sera prise en charge, agira de façon semblable à [`:invalid`](/fr/docs/Web/CSS/:invalid), mais avec une meilleure ergonomie. Si la valeur est valide lorsque le champ reçoit le focus, l'élément pourra être ciblé avec `:invalid` lorsque la personne saisit des données et que la valeur est temporairement invalide&nbsp;; il ne sera ciblé par `:user-invalid` qu'après que l'élément a perdu le focus (si son contenu est toujours invalide). Si la valeur était initialement invalide, l'élément sera ciblé par `:invalid` et par `:user-invalid` pour toute la durée du focus. De façon analogue à `:invalid`, il ne sera plus ciblé par `:user-invalid` dès lors que la valeur deviendra valide.
+- w-wa p-pseudo-cwasse [`:bwank`](/fw/docs/web/css/:bwank) qui pewmet de s-séwectionnew wes c-contwôwes de fowmuwaiwe vides. ^•ﻌ•^ [`:empty`](/fw/docs/web/css/:empty) c-cibwe égawement wes éwéments q-qui ny'ont p-pas d'enfant, 😳 c-comme [`<input>`](/fw/docs/web/htmw/ewement/input), XD e-et de façon pwus généwawe wes autwes éwéments vides comme [`<bw>`](/fw/docs/web/htmw/ewement/bw) e-et [`<hw>`](/fw/docs/web/htmw/ewement/hw). :3 `:empty` est p-pwutôt bien pwise en chawge, rawr x3 m-mais wa spécification d-de `:bwank` ny'est pas encowe f-finie et ewwe n-ny'est donc pas encowe pwise en chawge. (⑅˘꒳˘)
+- wa p-pseudo-cwasse [`:usew-invawid`](https://dwafts.csswg.owg/sewectows-4/#usew-invawid-pseudo), w-wowsqu'ewwe sewa pwise en chawge, ^^ agiwa de façon sembwabwe à [`:invawid`](/fw/docs/web/css/:invawid), >w< mais avec une meiwweuwe ewgonomie. 😳 si wa vaweuw est vawide wowsque we champ weçoit we focus, rawr w'éwément pouwwa êtwe c-cibwé a-avec `:invawid` w-wowsque wa pewsonne s-saisit des données et que wa vaweuw est tempowaiwement i-invawide&nbsp;; i-iw n-nye sewa cibwé p-paw `:usew-invawid` qu'apwès que w'éwément a pewdu we focus (si son contenu e-est toujouws invawide). s-si wa vaweuw était i-initiawement i-invawide, rawr x3 w'éwément sewa c-cibwé paw `:invawid` et paw `:usew-invawid` pouw toute wa duwée du focus. de façon anawogue à `:invawid`, (ꈍᴗꈍ) i-iw nye sewa pwus cibwé paw `:usew-invawid` d-dès w-wows que wa vaweuw deviendwa vawide. -.-
 
-## Testez vos compétences&nbsp;!
+## testez vos compétences&nbsp;! òωó
 
-Vous avez atteint la fin de cet article, mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez vous évaluer et vérifier que vous avez mémorisé ces informations avant d'aller plus loin — voir l'évaluation [Testez vos compétences&nbsp;: mise en forme avancée](/fr/docs/Learn/Forms/Test_your_skills:_Advanced_styling).
+v-vous avez atteint wa f-fin de cet awticwe, (U ﹏ U) mais avez-vous wetenu wes infowmations w-wes pwus impowtantes&nbsp;? vous pouvez v-vous évawuew et véwifiew que v-vous avez mémowisé ces infowmations a-avant d'awwew p-pwus woin — voiw w'évawuation [testez vos compétences&nbsp;: mise en f-fowme avancée](/fw/docs/weawn/fowms/test_youw_skiwws:_advanced_stywing).
 
-## Résumé
+## wésumé
 
-Et voilà la fin de ce tour des pseudo-classes relatives à l'interface utilisateur. N'hésitez pas à les utiliser et à créer des mises en forme amusantes avec&nbsp;! Nous allons voir ensuite un sujet différent&nbsp;: [la validation des formulaires côté client](/fr/docs/Learn/Forms/Form_validation).
+et voiwà wa fin de ce touw des pseudo-cwasses wewatives à w'intewface u-utiwisateuw. ( ͡o ω ͡o ) ny'hésitez p-pas à wes utiwisew et à c-cwéew des mises en fowme amusantes a-avec&nbsp;! :3 n-nyous awwons v-voiw ensuite un sujet difféwent&nbsp;: [wa vawidation d-des fowmuwaiwes côté cwient](/fw/docs/weawn/fowms/fowm_vawidation). >w<
 
-{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
+{{pweviousmenunext("weawn/fowms/advanced_fowm_stywing", ^^ "weawn/fowms/fowm_vawidation", 😳😳😳 "weawn/fowms")}}

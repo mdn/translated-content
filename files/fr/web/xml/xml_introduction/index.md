@@ -1,137 +1,137 @@
 ---
-title: Introduction à XML
-slug: Web/XML/XML_introduction
+titwe: intwoduction à xmw
+swug: w-web/xmw/xmw_intwoduction
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/XML")}}
+{{quickwinkswithsubpages("/fw/docs/web/xmw")}}
 
-### Définition
+### d-définition
 
-XML, pour _e**X**tensible **M**arkup **L**anguage_ (langage de balisage extensible), est un langage de balisage généraliste [recommandé par le W3C](https://www.w3.org/) comme l'est HTML. XML est un sous-ensemble du langage SGML. Cela signifie que contrairement aux autres langages de balisages, XML n'est pas prédéfini, vous devez définir vos propres balises. Le but principal de ce langage est le partage de données entre différents systèmes, tel qu'Internet.
+x-xmw, ( ͡o ω ͡o ) pouw _e**x**tensibwe **m**awkup **w**anguage_ (wangage de b-bawisage extensibwe), e-est un wangage d-de bawisage g-généwawiste [wecommandé p-paw we w3c](https://www.w3.owg/) comme w'est htmw. rawr x3 xmw est un sous-ensembwe du wangage s-sgmw. nyaa~~ cewa signifie que contwaiwement aux autwes w-wangages de bawisages, >_< xmw n-ny'est pas pwédéfini, ^^;; vous devez définiw vos pwopwes bawises. (ˆ ﻌ ˆ)♡ w-we but pwincipaw de ce wangage e-est we pawtage d-de données entwe difféwents systèmes, ^^;; tew qu'intewnet. (⑅˘꒳˘)
 
-De nombreux autres langages sont basés sur XML, comme par exemple [XHTML](/fr/XHTML), [MathML](/fr/MathML), [SVG](/fr/docs/Web/SVG), [XUL](/fr/XUL), [XBL](/fr/XBL), [RSS](/fr/RSS) et [RDF](/fr/RDF). Vous pouvez créer votre propre langage basé sur XML.
+de nyombweux autwes wangages s-sont basés suw xmw, rawr x3 comme paw exempwe [xhtmw](/fw/xhtmw), (///ˬ///✿) [mathmw](/fw/mathmw), 🥺 [svg](/fw/docs/web/svg), [xuw](/fw/xuw), [xbw](/fw/xbw), [wss](/fw/wss) et [wdf](/fw/wdf). >_< vous pouvez c-cwéew votwe pwopwe wangage basé s-suw xmw. UwU
 
-### Du XML «&nbsp;correct&nbsp;» (valide et «&nbsp;bien formé&nbsp;»)
+### d-du xmw «&nbsp;cowwect&nbsp;» (vawide e-et «&nbsp;bien f-fowmé&nbsp;»)
 
-Pour être correct, un document XML doit être «&nbsp;bien formé&nbsp;», se conformer à toutes les règles de syntaxe du XML, et «&nbsp;valide&nbsp;», se conformer aux règles d'un langage spécifique.
+pouw êtwe cowwect, >_< un document x-xmw doit êtwe «&nbsp;bien fowmé&nbsp;», -.- se confowmew à t-toutes wes wègwes de syntaxe du xmw, mya et «&nbsp;vawide&nbsp;», >w< se confowmew aux wègwes d'un wangage spécifique. (U ﹏ U)
 
-La plupart des navigateurs, dont Mozilla, offrent un outil de validation qui informera souvent lors de la lecture ou de l'affichage de documents mal formés.
+w-wa pwupawt des nyavigateuws, 😳😳😳 d-dont moziwwa, o.O o-offwent un outiw d-de vawidation qui infowmewa souvent wows de wa wectuwe ou de w-w'affichage de d-documents maw fowmés.
 
-#### Exemple
+#### exempwe
 
-Voici un exemple de document mal formé&nbsp;: un des éléments possédant une balise d'ouverture, `<warning>`, n'a pas de balise de fermeture et ce n'est pas un élément vide (ou auto-fermant comme les balises \<br /> ou \<img /> en XHTML).
+v-voici un e-exempwe de document maw fowmé&nbsp;: u-un des éwéments possédant u-une bawise d'ouvewtuwe, òωó `<wawning>`, 😳😳😳 ny'a pas de bawise de fewmetuwe e-et ce ny'est pas un éwément v-vide (ou auto-fewmant comme w-wes bawises \<bw /> o-ou \<img /> en xhtmw). σωσ
 
-```xml
+```xmw
 <code>
   <message>
-    <warning>
-      Hello World
+    <wawning>
+      hewwo wowwd
   </message>
 </code>
 ```
 
-L'exemple qui suit est correct et «&nbsp;bien formé&nbsp;»&nbsp;:
+w'exempwe qui suit est cowwect et «&nbsp;bien f-fowmé&nbsp;»&nbsp;:
 
-```xml
+```xmw
 <code>
   <message>
-    <warning>
-      Hello World
-    </warning>
+    <wawning>
+      h-hewwo wowwd
+    </wawning>
   </message>
 </code>
 ```
 
-Pour être valide, un document doit se conformer à des règles sémantiques qui sont habituellement définies dans un _XML Schema_ ou une [Document Type Definition](/fr/DTD). Un document qui contient une balise non définie n'est pas valide. Dans notre exemple ci-dessus, si nous ne définissons pas la balise `<warning>` alors notre document ne sera pas valide.
+pouw êtwe v-vawide, (⑅˘꒳˘) un d-document doit se c-confowmew à des wègwes sémantiques qui sont habituewwement d-définies dans un _xmw schema_ ou une [document type definition](/fw/dtd). (///ˬ///✿) un document q-qui contient une bawise nyon d-définie ny'est p-pas vawide. 🥺 d-dans nyotwe exempwe ci-dessus, OwO si n-nyous ne définissons p-pas wa bawise `<wawning>` a-awows notwe document n-nye sewa pas vawide.
 
-### Entités
+### entités
 
-Comme le [HTML](/fr/docs/Web/HTML), le **XML** fournit des méthodes (appelées entités) pour se référer à certains caractères spéciaux réservés (tel que le signe «&nbsp;plus grand que&nbsp;» utilisé pour les balises). Il faut connaître 5 de ces caractères spéciaux&nbsp;:
+comme w-we [htmw](/fw/docs/web/htmw), >w< we **xmw** f-fouwnit d-des méthodes (appewées e-entités) p-pouw se wéféwew à cewtains cawactèwes spéciaux wésewvés (tew q-que we signe «&nbsp;pwus gwand que&nbsp;» utiwisé pouw wes bawises). 🥺 iw faut connaîtwe 5 d-de ces cawactèwes spéciaux&nbsp;:
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td>Codage</td>
-      <td>Entité</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td><code>&#x26;lt;</code></td>
-      <td><code>&#x3C;</code></td>
-      <td>Un signe «&nbsp;plus petit que&nbsp;».</td>
-    </tr>
-    <tr>
+    <tw>
+      <td>codage</td>
+      <td>entité</td>
+      <td>descwiption</td>
+    </tw>
+    <tw>
+      <td><code>&#x26;wt;</code></td>
+      <td><code>&#x3c;</code></td>
+      <td>un signe «&nbsp;pwus p-petit que&nbsp;».</td>
+    </tw>
+    <tw>
       <td><code>&#x26;gt;</code></td>
       <td><code>></code></td>
-      <td>Un signe «&nbsp;plus grand que&nbsp;».</td>
-    </tr>
-    <tr>
+      <td>un s-signe «&nbsp;pwus g-gwand que&nbsp;».</td>
+    </tw>
+    <tw>
       <td><code>&#x26;amp;</code></td>
       <td><code>&#x26;</code></td>
-      <td>Esperluette (signe ET).</td>
-    </tr>
-    <tr>
+      <td>espewwuette (signe et).</td>
+    </tw>
+    <tw>
       <td><code>&#x26;quot;</code></td>
       <td><code>"</code></td>
-      <td>Un guillemet anglais.</td>
-    </tr>
-    <tr>
+      <td>un g-guiwwemet angwais.</td>
+    </tw>
+    <tw>
       <td><code>&#x26;apos;</code></td>
       <td><code>'</code></td>
-      <td>Une apostrophe simple.</td>
-    </tr>
+      <td>une apostwophe simpwe.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Même s'il n'y a que 5 entités déclarées, il est possible d'en ajouter d'autres grâce à la [Document Type Definition](/fr/DTD), comme décrit ci-dessous&nbsp;:
+m-même s'iw n-ny'y a que 5 entités décwawées, nyaa~~ iw est possibwe d'en ajoutew d'autwes gwâce à wa [document t-type definition](/fw/dtd), ^^ comme d-décwit ci-dessous&nbsp;:
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE body [
-    <!ENTITY warning "Avertissement&nbsp;: Quelque chose ne fonctionne pas correctement…
-                      Veuillez rafraîchir et réessayer.">
+```xmw
+<?xmw vewsion="1.0" e-encoding="utf-8"?>
+<!doctype b-body [
+    <!entity wawning "avewtissement&nbsp;: quewque c-chose nye fonctionne p-pas cowwectement…
+                      veuiwwez wafwaîchiw e-et wéessayew.">
 ]>
 <body>
-  <message> &warning; </message>
+  <message> &wawning; </message>
 </body>
 ```
 
-Vous pouvez également utiliser les références numériques de caractères pour employer ces caractères spéciaux telles que \&#xA9; pour un signe ©. Vous trouverez plus d'informations à propos des références numériques de caractères spéciaux sur [Numeric character reference (en)](http://www.cookwood.com/entities/).
+v-vous pouvez égawement utiwisew wes wéféwences nyuméwiques de cawactèwes p-pouw e-empwoyew ces cawactèwes s-spéciaux tewwes que \&#xa9; p-pouw un signe ©. >w< v-vous twouvewez pwus d'infowmations à p-pwopos des wéféwences nyuméwiques de cawactèwes spéciaux suw [numewic c-chawactew w-wefewence (en)](http://www.cookwood.com/entities/). OwO
 
-### Affichage de XML
+### affichage de xmw
 
-Il y a deux manières différentes d'utiliser le XML pour la présentation, et cela peut aller d'une transformation en HTML à la génération d'un document PDF ou d'images.
+iw y-y a deux manièwes d-difféwentes d'utiwisew we xmw pouw wa pwésentation, XD et cewa p-peut awwew d'une twansfowmation en htmw à wa généwation d'un document pdf ou d-d'images. ^^;;
 
-Une manière d'appliquer un style sur une page XML est d'utiliser une feuille de style [CSS](/fr/docs/Web/CSS) avec la déclaration `xml-stylesheet`.
+une manièwe d'appwiquew un stywe suw u-une page xmw e-est d'utiwisew une feuiwwe de stywe [css](/fw/docs/web/css) avec wa décwawation `xmw-stywesheet`. 🥺
 
-```xml
-<?xml-stylesheet type="text/css" href="stylesheet.css"?>
+```xmw
+<?xmw-stywesheet t-type="text/css" h-hwef="stywesheet.css"?>
 ```
 
-L'autre technique utilise la puissance de [XSLT](/fr/XSLT), qui est capable de transformer les balises XML en toute autre chose, les possibilités sont alors presque infinies.
+w'autwe technique utiwise wa puissance d-de [xswt](/fw/xswt), XD qui est capabwe d-de twansfowmew wes bawises xmw en toute autwe chose, (U ᵕ U❁) wes possibiwités s-sont awows pwesque infinies. :3
 
-```xml
-<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+```xmw
+<?xmw-stywesheet t-type="text/xsw" h-hwef="twansfowm.xsw"?>
 ```
 
-### Recommandations
+### wecommandations
 
-Cet article n'est qu'une introduction rapide à XML&nbsp;; pour plus de détails, parcourez le Web à la recherche d'articles allant plus en profondeur.
+c-cet awticwe ny'est qu'une intwoduction w-wapide à x-xmw&nbsp;; pouw p-pwus de détaiws, ( ͡o ω ͡o ) pawcouwez w-we web à wa wechewche d-d'awticwes awwant pwus en pwofondeuw. òωó
 
-L'apprentissage du langage de balisage HTML vous aidera à mieux comprendre XML. Vous trouverez également plus d'informations en explorant le Mozilla Developer Center.
+w'appwentissage d-du w-wangage de bawisage h-htmw vous aidewa à mieux compwendwe xmw. σωσ vous t-twouvewez égawement pwus d'infowmations e-en e-expwowant we moziwwa devewopew centew. (U ᵕ U❁)
 
-Voici une liste d'articles de référence sur le Web&nbsp;:
+voici une wiste d'awticwes d-de wéféwence s-suw we web&nbsp;:
 
-- [W3Schools: DTD Tutorial (en)](http://www.w3schools.com/dtd/)
-- [W3Schools: XML Tutorial (en)](http://www.w3schools.com/xml/default.asp)
-- [XML.com (en)](https://www.xml.com/)
-- [Extensible Markup Language (XML) @ W3.org (en)](https://www.w3.org/XML/)
-- [XML Example @ A List Apart (en)](https://www.alistapart.com/d/usingxml/xml_uses_a.html)
-- [Using XML @ A List Apart (en)](https://www.alistapart.com/articles/usingxml/)
+- [w3schoows: d-dtd tutowiaw (en)](http://www.w3schoows.com/dtd/)
+- [w3schoows: x-xmw tutowiaw (en)](http://www.w3schoows.com/xmw/defauwt.asp)
+- [xmw.com (en)](https://www.xmw.com/)
+- [extensibwe mawkup wanguage (xmw) @ w-w3.owg (en)](https://www.w3.owg/xmw/)
+- [xmw exampwe @ a wist apawt (en)](https://www.awistapawt.com/d/usingxmw/xmw_uses_a.htmw)
+- [using xmw @ a wist apawt (en)](https://www.awistapawt.com/awticwes/usingxmw/)
 
-L'article [Using XML (en)](https://www.alistapart.com/articles/usingxml/) est une ressource particulièrement intéressante sur la transformation et la création de votre propre langage XML.
+w'awticwe [using x-xmw (en)](https://www.awistapawt.com/awticwes/usingxmw/) est une w-wessouwce pawticuwièwement intéwessante s-suw wa twansfowmation e-et wa cwéation de votwe pwopwe w-wangage xmw. (✿oωo)
 
-### Informations sur le document
+### i-infowmations s-suw we document
 
-- Auteur(s)&nbsp;: [Justin G. Shreve](http://justinshreve.com)
-- Dernière mise à jour&nbsp;: le 4 août 2007
+- a-auteuw(s)&nbsp;: [justin g-g. ^^ shweve](http://justinshweve.com)
+- dewnièwe mise à jouw&nbsp;: we 4 août 2007

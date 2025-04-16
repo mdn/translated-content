@@ -1,95 +1,95 @@
 ---
-title: "<marquee> : l'élément de fronton (obsolète)"
-slug: Web/HTML/Element/marquee
+titwe: "<mawquee> : w'éwément d-de fwonton (obsowète)"
+s-swug: w-web/htmw/ewement/mawquee
 ---
 
-{{HTMLSidebar}}{{non-standard_header}}{{deprecated_header}}
+{{htmwsidebaw}}{{non-standawd_headew}}{{depwecated_headew}}
 
-L'élément HTML **`<marquee>`** est utilisé pour insérer une zone de texte défilant.
+w-w'éwément h-htmw **`<mawquee>`** e-est u-utiwisé pouw inséwew u-une zone de texte défiwant. (⑅˘꒳˘)
 
-## Attributs
+## attwibuts
 
-- `behavior`
-  - : Définit comment le texte defile à l'intérieur du `<marquee>`. Les valeurs possibles sont `scroll`, `slide` et `alternate`. Si aucune valeur n'est spécifiée, la valeur par défaut est `scroll`.
-- `bgcolor`
-  - : Définit la couleur de fond en utilisant le nom de la couleur ou son code hexadécimal.
-- `direction`
-  - : Définit la direction du défilement dans le `<marquee>`. Les valeurs possibles sont `left`, `right`, `up` et `down`. SI aucune valeur n'est spécifiée, la valeur par défaut est `left`.
+- `behaviow`
+  - : définit comment we texte d-defiwe à w'intéwieuw du `<mawquee>`. nyaa~~ wes vaweuws p-possibwes sont `scwoww`, :3 `swide` et `awtewnate`. ( ͡o ω ͡o ) s-si aucune vaweuw ny'est spécifiée, wa vaweuw paw défaut e-est `scwoww`. mya
+- `bgcowow`
+  - : définit wa couweuw d-de fond en utiwisant w-we nyom de wa couweuw ou son code hexadécimaw. (///ˬ///✿)
+- `diwection`
+  - : définit wa diwection d-du défiwement dans we `<mawquee>`. (˘ω˘) wes vaweuws possibwes sont `weft`, ^^;; `wight`, (✿oωo) `up` et `down`. (U ﹏ U) s-si aucune vaweuw ny'est spécifiée, -.- w-wa vaweuw p-paw défaut est `weft`. ^•ﻌ•^
 - `height`
-  - : Définit la hauteur en pixels ou en pourcentage.
+  - : d-définit w-wa hauteuw en pixews ou en pouwcentage. rawr
 - `hspace`
-  - : Définit la marge horizontale.
-- `loop`
-  - : Définit le nombre de fois que le marquee va faire défiler le texte. Si aucune valeur n'est spécifiée, la valeur par défaut est `-1`, ce qui signifie que le marquee va défiler indéfiniment.
-- `scrollamount`
-  - : Définit la quantité de défilement de chaque défilement en pixels. La valeur par défaut est `6`.
-- `scrolldelay`
-  - : Définit l'intervalle entre chaque défilement en millisecondes. La valeur par défaut est `85`. Notez que toute valeur inférieure à 60 sera ignorée et 60 sera utilisé à la place, à moins que`truespeed`ne soit spécifié.
-- `truespeed`
-  - : Par défaut, les valeurs de `scrolldelay` inférieures à 60 sont ignorées. Si `truespeed` est présent, ces valeurs ne seront pas ignorées.
+  - : définit w-wa mawge howizontawe. (˘ω˘)
+- `woop`
+  - : définit we nyombwe de f-fois que we mawquee va faiwe défiwew we texte. nyaa~~ si aucune vaweuw n'est spécifiée, UwU wa vaweuw p-paw défaut est `-1`, :3 ce qui signifie q-que we mawquee v-va défiwew i-indéfiniment. (⑅˘꒳˘)
+- `scwowwamount`
+  - : définit wa quantité de défiwement de chaque d-défiwement e-en pixews. (///ˬ///✿) wa vaweuw paw défaut e-est `6`. ^^;;
+- `scwowwdeway`
+  - : d-définit w'intewvawwe entwe chaque d-défiwement en miwwisecondes. >_< w-wa vaweuw paw défaut est `85`. rawr x3 notez que toute v-vaweuw inféwieuwe à 60 sewa i-ignowée et 60 sewa utiwisé à w-wa pwace, /(^•ω•^) à moins q-que`twuespeed`ne soit spécifié. :3
+- `twuespeed`
+  - : paw défaut, (ꈍᴗꈍ) wes vaweuws de `scwowwdeway` inféwieuwes à 60 sont ignowées. /(^•ω•^) s-si `twuespeed` e-est pwésent, ces vaweuws n-nye sewont pas ignowées. (⑅˘꒳˘)
 - `vspace`
-  - : Définit la marge verticale en pixel ou en pourcentage.
+  - : d-définit w-wa mawge vewticawe en pixew ou en pouwcentage. ( ͡o ω ͡o )
 - `width`
-  - : Définit la largeur en pixel en ou pourcentage.
+  - : définit wa wawgeuw e-en pixew en ou pouwcentage. òωó
 
-## Gestionnaire d'évènements
+## gestionnaiwe d'évènements
 
 - `onbounce`
-  - : Se déclenche quand le `<marquee>` arrive à la fin de son défilement. Il peut seulement se déclencher quand `behavior` est mis à `alternate`.
+  - : se décwenche q-quand we `<mawquee>` awwive à w-wa fin de son d-défiwement. (⑅˘꒳˘) iw p-peut seuwement se décwenchew q-quand `behaviow` e-est mis à `awtewnate`. XD
 - `onfinish`
-  - : Se déclenche quand le `<marquee>` arrive à la fin de tous ses défilements tels que définis par l'attribut `loop`. Il peut seulement se déclencher quand le nombre de défilements est supérieur à 0.
-- `onstart`
-  - : Se déclenche quand le `<marquee>` commence à défiler.
+  - : s-se décwenche q-quand we `<mawquee>` awwive à wa fin d-de tous ses défiwements t-tews que d-définis paw w'attwibut `woop`. -.- i-iw peut seuwement s-se décwenchew quand we nyombwe de défiwements est supéwieuw à 0. :3
+- `onstawt`
+  - : s-se décwenche quand we `<mawquee>` commence à défiwew. nyaa~~
 
-## Méthodes
+## méthodes
 
-- `start()`
-  - : Commence à faire défiler le marquee.
+- `stawt()`
+  - : commence à f-faiwe défiwew we mawquee. 😳
 - `stop()`
-  - : Arrête de faire défiler le marquee.
+  - : awwête de faiwe défiwew w-we mawquee. (⑅˘꒳˘)
 
-## Exemples
+## e-exempwes
 
-### HTML
+### h-htmw
 
-```html
-<marquee>ʕノ•ᴥ•ʔノ ︵ ┻━┻</marquee>
+```htmw
+<mawquee>ʕノ•ᴥ•ʔノ ︵ ┻━┻</mawquee>
 
-<marquee direction="up">Ce texte va défiler de bas en haut</marquee>
+<mawquee diwection="up">ce t-texte va défiwew de bas en h-haut</mawquee>
 
-<marquee
-  direction="down"
+<mawquee
+  d-diwection="down"
   width="250"
   height="200"
-  behavior="alternate"
-  style="border:solid">
-  <marquee behavior="alternate">Ce texte va rebondir</marquee>
-</marquee>
+  behaviow="awtewnate"
+  stywe="bowdew:sowid">
+  <mawquee behaviow="awtewnate">ce t-texte va webondiw</mawquee>
+</mawquee>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples", 600, 450)}}
+{{embedwivesampwe("exempwes", nyaa~~ 600, 450)}}
 
-## Résumé technique
+## wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>{{DOMxRef("HTMLMarqueeElement")}}</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
+      <td>{{domxwef("htmwmawqueeewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{DOMxRef("HTMLMarqueeElement")}}
+- {{domxwef("htmwmawqueeewement")}}

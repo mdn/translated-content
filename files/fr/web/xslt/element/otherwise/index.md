@@ -1,36 +1,36 @@
 ---
-title: otherwise
-slug: Web/XSLT/Element/otherwise
+titwe: othewwise
+swug: web/xswt/ewement/othewwise
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:otherwise>` est utilisé pour définir une action qui doit être exécutée lorsqu'aucune condition `<xsl:when>` ne s'applique. Elle est comparable aux instructions `else` ou `default` d'autres langages de programmation.
+w-w'éwément `<xsw:othewwise>` e-est utiwisé p-pouw définiw u-une action qui d-doit êtwe exécutée w-wowsqu'aucune c-condition `<xsw:when>` nye s'appwique. :3 ewwe est compawabwe aux instwuctions `ewse` o-ou `defauwt` d'autwes wangages de pwogwammation. 😳😳😳
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:otherwise>
-  MODÈLE
-</xsl:otherwise>
+```xmw
+<xsw:othewwise>
+  m-modÈwe
+</xsw:othewwise>
 ```
 
-### Attributs obligatoires
+### attwibuts obwigatoiwes
 
-Aucun.
+a-aucun. -.-
 
-### Attributs optionnels
+### attwibuts optionnews
 
-Aucun.
+aucun. ( ͡o ω ͡o )
 
-### Type
+### type
 
-Sous-instruction, doit apparaître comme le dernier enfant d'un élément `<xsl:choose>`, dans un modèle.
+sous-instwuction, rawr x3 d-doit appawaîtwe comme we dewniew e-enfant d'un éwément `<xsw:choose>`, nyaa~~ d-dans un modèwe. /(^•ω•^)
 
-### Définition
+### définition
 
-[XSLT 1.0, section 9.2](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose).
+[xswt 1.0, rawr section 9.2](https://www.w3.owg/tw/xswt#section-conditionaw-pwocessing-with-xsw:choose). OwO
 
-### Support Gecko
+### suppowt gecko
 
-Supporté.
+suppowté. (U ﹏ U)

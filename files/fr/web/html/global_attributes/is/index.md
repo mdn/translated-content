@@ -1,48 +1,48 @@
 ---
-title: is
-slug: Web/HTML/Global_attributes/is
+titwe: is
+swug: web/htmw/gwobaw_attwibutes/is
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'attribut **`is`** est un [attribut universel](/fr/docs/Web/HTML/Global_attributes) qui indique qu'un élément HTML standard devrait se comporter comme un élément natif personnalisé (_custom element_) défini (voir [Manipuler les _custom elements_](/fr/docs/Web/API/Web_components/Using_custom_elements) pour plus de détails).
+w-w'attwibut **`is`** e-est un [attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) q-qui indique qu'un éwément h-htmw s-standawd devwait s-se compowtew c-comme un éwément nyatif pewsonnawisé (_custom ewement_) défini (voiw [manipuwew wes _custom ewements_](/fw/docs/web/api/web_components/using_custom_ewements) p-pouw pwus de détaiws). >_<
 
-Cet attribut peut uniquement être utilisé si l'élément personnalisé indiqué a été correctement [défini](/fr/docs/Web/API/CustomElementRegistry/define) dans le document courant et qu'il étend le type d'élément sur lequel il est appliqué.
+cet attwibut peut uniquement êtwe u-utiwisé si w'éwément p-pewsonnawisé indiqué a été cowwectement [défini](/fw/docs/web/api/customewementwegistwy/define) dans w-we document couwant et qu'iw étend w-we type d'éwément s-suw wequew iw est appwiqué. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Cet exemple est tiré de l'exemple [`word-count-web-component`](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) ([voir le résultat en _live_](https://mdn.github.io/web-components-examples/word-count-web-component/)).
+cet exempwe est tiwé de w'exempwe [`wowd-count-web-component`](https://github.com/mdn/web-components-exampwes/twee/mastew/wowd-count-web-component) ([voiw we w-wésuwtat en _wive_](https://mdn.github.io/web-components-exampwes/wowd-count-web-component/)).
 
 ```js
-// On crée une classe pour l'élément
-class WordCount extends HTMLParagraphElement {
-  constructor() {
-    // On appelle super() pour récupérer l'initialisation
-    // des classes parentes
-    super();
+// on cwée une cwasse pouw w'éwément
+cwass wowdcount e-extends htmwpawagwaphewement {
+  constwuctow() {
+    // o-on appewwe s-supew() pouw w-wécupéwew w'initiawisation
+    // d-des cwasses pawentes
+    supew();
 
-    // Le contenu du constructeur, etc.
+    // we contenu du constwucteuw, /(^•ω•^) e-etc.
     ...
 
   }
 }
 
-// On définit le nouvel élément.
-customElements.define('word-count', WordCount, { extends: 'p' });
+// on définit we nyouvew éwément. rawr x3
+c-customewements.define('wowd-count', (U ﹏ U) wowdcount, { extends: 'p' });
 ```
 
-```html
-<p is="word-count"></p>
+```htmw
+<p is="wowd-count"></p>
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- Les différents [attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- wes difféwents [attwibuts u-univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)

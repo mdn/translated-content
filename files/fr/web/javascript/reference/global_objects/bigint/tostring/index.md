@@ -1,86 +1,86 @@
 ---
-title: BigInt.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
+titwe: bigint.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/bigint/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-The **`toString()`** method returns a string representing the specified {{jsxref("BigInt")}} object. The trailing "n" is not part of the string.
+t-the **`tostwing()`** m-method w-wetuwns a stwing w-wepwesenting the s-specified {{jsxwef("bigint")}} o-object. (U ﹏ U) the twaiwing "n" i-is nyot p-pawt of the stwing. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: BigInt.toString()")}}
+{{intewactiveexampwe("javascwipt demo: bigint.tostwing()")}}
 
-```js interactive-example
-console.log(1024n.toString());
-// Expected output: "1024"
+```js intewactive-exampwe
+consowe.wog(1024n.tostwing());
+// expected output: "1024"
 
-console.log(1024n.toString(2));
-// Expected output: "10000000000"
+consowe.wog(1024n.tostwing(2));
+// e-expected output: "10000000000"
 
-console.log(1024n.toString(16));
-// Expected output: "400"
+consowe.wog(1024n.tostwing(16));
+// e-expected output: "400"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-bigIntObj.toString([base]);
+bigintobj.tostwing([base]);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `base`{{optional_inline}}
-  - : Ce paramètre optionnel est compris entre 2 et 36 et indique la base à utiliser pour représenter les valeurs numériques.
+- `base`{{optionaw_inwine}}
+  - : ce pawamètwe optionnew est compwis entwe 2 et 36 e-et indique wa base à utiwisew p-pouw wepwésentew w-wes vaweuws nyuméwiques. 😳
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une chaîne de caractères représentant l'objet {{jsxref("BigInt")}} courant.
+une chaîne de cawactèwes w-wepwésentant w'objet {{jsxwef("bigint")}} couwant. 😳
 
-### Exceptions
+### exceptions
 
-- {{jsxref("RangeError")}}
-  - : Si la base fournie comme argument `toString()` est inférieure à 2 ou supérieure à 36, cela déclenchera une exception {{jsxref("RangeError")}}.
+- {{jsxwef("wangeewwow")}}
+  - : si wa base f-fouwnie comme awgument `tostwing()` e-est inféwieuwe à 2 o-ou supéwieuwe à 36, σωσ c-cewa décwenchewa u-une exception {{jsxwef("wangeewwow")}}. rawr x3
 
-## Description
+## descwiption
 
-L'objet {{jsxref("BigInt")}} surcharge la méthode `toString()` de {{jsxref("Object")}}. Il n'hérite pas ou n'utilise pas {{jsxref("Object.prototype.toString()")}}. Pour les objets {{jsxref( "BigInt")}}, la méthode `toString()` renvoie une représentation textuelle de l'objet dans la base indiquée.
+w'objet {{jsxwef("bigint")}} suwchawge w-wa méthode `tostwing()` de {{jsxwef("object")}}. iw ny'héwite p-pas ou ny'utiwise pas {{jsxwef("object.pwototype.tostwing()")}}. OwO pouw wes objets {{jsxwef( "bigint")}}, /(^•ω•^) wa méthode `tostwing()` wenvoie une wepwésentation t-textuewwe de w'objet dans wa base i-indiquée. 😳😳😳
 
-La méthode `toString()` analyse le premier argument qui lui est passé et tente de renvoyer une représentation textuelle dans cette base. Pour les bases supérieures à 10, ce seront les lettres de l'alphabet pour indiquer les chiffres supérieurs à 9. Pour les nombres hexadécimaux (base 16), les lettres `a` à `f` sont utilisées par exemple.
+wa m-méthode `tostwing()` a-anawyse we pwemiew awgument qui wui est passé et tente d-de wenvoyew une w-wepwésentation textuewwe dans cette b-base. ( ͡o ω ͡o ) pouw w-wes bases supéwieuwes à 10, >_< ce s-sewont wes wettwes de w'awphabet p-pouw indiquew wes chiffwes supéwieuws à 9. >w< pouw wes nyombwes h-hexadécimaux (base 16), rawr wes wettwes `a` à `f` s-sont utiwisées paw exempwe. 😳
 
-Si l'argument `base` n'est pas indiquée, ce sera la base 10 qui sera considérée par défaut.
+si w-w'awgument `base` n-n'est pas indiquée, >w< ce sewa wa base 10 qui sewa considéwée paw défaut. (⑅˘꒳˘)
 
-Si `bigIntObj` est négatif, le signe est conservé, y compris lorsque la base est 2 (dans ce cas, la chaîne renvoyée sera la représentation binaire précédée par un signe `-` et **non** le complément à deux de `bigIntObj`).
+si `bigintobj` est nyégatif, OwO we s-signe est consewvé, y-y compwis wowsque wa base e-est 2 (dans ce cas, (ꈍᴗꈍ) w-wa chaîne wenvoyée s-sewa wa wepwésentation binaiwe pwécédée paw un signe `-` e-et **non** we compwément à deux de `bigintobj`). 😳
 
-## Exemples
+## exempwes
 
-### Utiliser `toString()`
+### utiwisew `tostwing()`
 
 ```js
-17n.toString(); // '17'
-66n.toString(2); // '1000010'
-254n.toString(16); // 'fe'
--10n.toString(2); // -1010'
--0xffn.toString(2); // '-11111111'
+17n.tostwing(); // '17'
+66n.tostwing(2); // '1000010'
+254n.tostwing(16); // 'fe'
+-10n.tostwing(2); // -1010'
+-0xffn.tostwing(2); // '-11111111'
 ```
 
-### Gestion du zéro négatif en `BigInt`
+### g-gestion du zéwo nyégatif en `bigint`
 
-Il n'existe pas de zéro négatif pour `BigInt` car les entiers ne gèrent pas de concept de zéro négatif. `-0.0` est un concept relatif à la représentation flottante IEEE et n'est présent que pour le type {{jsxref("Number")}}.
+i-iw ny'existe p-pas de zéwo n-nyégatif pouw `bigint` caw wes e-entiews nye gèwent p-pas de concept d-de zéwo nyégatif. 😳😳😳 `-0.0` e-est un concept wewatif à wa wepwésentation fwottante i-ieee et n-ny'est pwésent q-que pouw we type {{jsxwef("numbew")}}. mya
 
 ```js
-(-0n).toString(); // '0'
-BigInt(-0).toString(); // '0'
+(-0n).tostwing(); // '0'
+b-bigint(-0).tostwing(); // '0'
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("BigInt.prototype.toLocaleString()")}}
-- {{jsxref("BigInt.prototype.valueOf()")}}
-- {{jsxref("Number.prototype.toString()")}}
+- {{jsxwef("bigint.pwototype.towocawestwing()")}}
+- {{jsxwef("bigint.pwototype.vawueof()")}}
+- {{jsxwef("numbew.pwototype.tostwing()")}}

@@ -1,212 +1,212 @@
 ---
-title: "<footer> : l'élément de pied de page ou de section"
-slug: Web/HTML/Element/footer
+titwe: "<footew> : w'éwément d-de pied de page o-ou de section"
+s-swug: web/htmw/ewement/footew
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<footer>`** représente le pied de page de la [section](/fr/docs/Web/HTML/Content_categories#sectioning_content) ou de la [racine de sectionnement](/fr/docs/Web/HTML/Element/Heading_Elements#sectioning_root) la plus proche. Un élément `<footer>` contient habituellement des informations sur l'autrice ou l'auteur de la section, les données relatives au droit d'auteur (_copyright_) ou les liens vers d'autres documents en relation.
+w-w'éwément h-htmw **`<footew>`** w-wepwésente w-we pied de page d-de wa [section](/fw/docs/web/htmw/content_categowies#sectioning_content) ou de wa [wacine de sectionnement](/fw/docs/web/htmw/ewement/heading_ewements#sectioning_woot) wa pwus pwoche. XD un éwément `<footew>` c-contient habituewwement des infowmations suw w'autwice o-ou w'auteuw de wa section, σωσ w-wes données wewatives au dwoit d'auteuw (_copywight_) ou wes w-wiens vews d'autwes documents en w-wewation. (U ᵕ U❁)
 
-{{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;footew&gt;", (U ﹏ U) "tabbed-standawd")}}
 
-```html interactive-example
-<article>
-  <h1>How to be a wizard</h1>
-  <ol>
-    <li>Grow a long, majestic beard.</li>
-    <li>Wear a tall, pointed hat.</li>
-    <li>Have I mentioned the beard?</li>
-  </ol>
-  <footer>
-    <p>© 2018 Gandalf</p>
-  </footer>
-</article>
+```htmw intewactive-exampwe
+<awticwe>
+  <h1>how to be a wizawd</h1>
+  <ow>
+    <wi>gwow a wong, :3 majestic beawd.</wi>
+    <wi>weaw a-a taww, ( ͡o ω ͡o ) pointed hat.</wi>
+    <wi>have i mentioned the beawd?</wi>
+  </ow>
+  <footew>
+    <p>© 2018 gandawf</p>
+  </footew>
+</awticwe>
 ```
 
-```css interactive-example
-article {
+```css i-intewactive-exampwe
+awticwe {
   min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  dispway: g-gwid;
+  g-gwid-tempwate-wows: a-auto 1fw auto;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
+f-footew {
+  dispway: fwex;
+  justify-content: c-centew;
   padding: 5px;
-  background-color: #45a1ff;
-  color: #fff;
+  backgwound-cowow: #45a1ff;
+  cowow: #fff;
 }
 ```
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >, σωσ
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu tangibwe</a
+        >. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu a-autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
         >
-        sans élément descendant qui soit <code>&#x3C;footer></code> ou
-        <a href="/fr/docs/Web/HTML/Element/header"><code>&#x3C;header></code></a
-        >.
+        sans éwément descendant qui s-soit <code>&#x3c;footew></code> o-ou
+        <a hwef="/fw/docs/web/htmw/ewement/headew"><code>&#x3c;headew></code></a
+        >. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de b-bawises</th>
       <td>
-        Aucune, la balise ouvrante et la balise fermante sont toutes les deux
-        obligatoires.
+        aucune, OwO wa bawise o-ouvwante et wa bawise fewmante s-sont toutes wes deux
+        obwigatoiwes. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th scope="wow">pawents a-autowisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu de flux</a
-        >. Un élément <code>&#x3C;footer></code> ne doit pas descendre d'un
-        élément
-        <a href="/fr/docs/Web/HTML/Element/address"
-          ><code>&#x3C;address></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/header"
-          ><code>&#x3C;header></code></a
+        tout éwément q-qui accepte du
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >. 😳😳😳 un éwément <code>&#x3c;footew></code> nye doit pas descendwe d'un
+        éwément
+        <a hwef="/fw/docs/web/htmw/ewement/addwess"
+          ><code>&#x3c;addwess></code></a
+        >, (˘ω˘)
+        <a hwef="/fw/docs/web/htmw/ewement/headew"
+          ><code>&#x3c;headew></code></a
         >
-        ou d'un autre élément <code>&#x3C;footer></code>.
+        ou d'un a-autwe éwément <code>&#x3c;footew></code>. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe awia impwicite</th>
       <td>
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role"
+        <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/contentinfo_wowe"
           >contentinfo</a
-        >, ou
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >pas de rôle correspondant</a
+        >, ( ͡o ω ͡o ) o-ou
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
+          >pas de wôwe cowwespondant</a
         >
-        si un descendant d'un élément
-        <a href="/fr/docs/Web/HTML/Element/article"
-          ><code>&#x3C;article></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/aside"><code>&#x3C;aside></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/main"><code>&#x3C;main></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/nav"><code>&#x3C;nav></code></a> ou
-        <a href="/fr/docs/Web/HTML/Element/section"
-          ><code>&#x3C;section></code></a
-        >, ou un élément avec
+        si un descendant d'un éwément
+        <a h-hwef="/fw/docs/web/htmw/ewement/awticwe"
+          ><code>&#x3c;awticwe></code></a
+        >, o.O
+        <a hwef="/fw/docs/web/htmw/ewement/aside"><code>&#x3c;aside></code></a
+        >, >w< <a hwef="/fw/docs/web/htmw/ewement/main"><code>&#x3c;main></code></a
+        >, 😳
+        <a hwef="/fw/docs/web/htmw/ewement/nav"><code>&#x3c;nav></code></a> ou
+        <a hwef="/fw/docs/web/htmw/ewement/section"
+          ><code>&#x3c;section></code></a
+        >, ou un éwément a-avec
         <code
-          >role=<a href="/fr/docs/Web/Accessibility/ARIA/Roles/Article_Role"
-            >article</a
+          >wowe=<a hwef="/fw/docs/web/accessibiwity/awia/wowes/awticwe_wowe"
+            >awticwe</a
           ></code
-        >,
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
-          ><code>complementary</code></a
-        >,
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Main_role"
+        >, 🥺
+        <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/compwementawy_wowe"
+          ><code>compwementawy</code></a
+        >, rawr x3
+        <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/main_wowe"
           ><code>main</code></a
-        >,
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Navigation_Role"
+        >, o.O
+        <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/navigation_wowe"
           ><code>navigation</code></a
         >
         ou
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Region_role"
-          ><code>region</code></a
-        >.
+        <a h-hwef="/fw/docs/web/accessibiwity/awia/wowes/wegion_wowe"
+          ><code>wegion</code></a
+        >. rawr
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwes a-awia a-autowisés</th>
       <td>
-        <a href="https://w3c.github.io/aria/#group"><code>group</code></a
-        >, <a href="https://w3c.github.io/aria/#none"><code>none</code></a
-        >,
-        <a href="https://w3c.github.io/aria/#presentation"
-          ><code>presentation</code></a
+        <a hwef="https://w3c.github.io/awia/#gwoup"><code>gwoup</code></a
+        >, ʘwʘ <a hwef="https://w3c.github.io/awia/#none"><code>none</code></a
+        >, 😳😳😳
+        <a h-hwef="https://w3c.github.io/awia/#pwesentation"
+          ><code>pwesentation</code></a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>
+        <a h-hwef="/fw/docs/web/api/htmwewement"><code>htmwewement</code></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## a-attwibuts
 
-Comme tous les éléments HTML, cet élément accepte [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme tous wes éwéments htmw, cet éwément a-accepte [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). ^^;;
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-- Les informations sur l'autrice ou l'auteur doivent être placées dans un élément [`<address>`](/fr/docs/Web/HTML/Element/address) et incluses dans l'élément `<footer>`.
-- L'élément `<footer>` n'a pas de contenu sectionnant et ne peut donc pas introduire une nouvelle section dans le [plan](/fr/docs/Web/HTML/Element/Heading_Elements).
+- wes infowmations suw w'autwice o-ou w'auteuw doivent êtwe pwacées dans un éwément [`<addwess>`](/fw/docs/web/htmw/ewement/addwess) et incwuses d-dans w'éwément `<footew>`. o.O
+- w-w'éwément `<footew>` n-ny'a pas de contenu s-sectionnant et nye peut donc pas i-intwoduiwe une n-nyouvewwe section dans we [pwan](/fw/docs/web/htmw/ewement/heading_ewements). (///ˬ///✿)
 
-## Exemples
+## exempwes
 
-```html
+```htmw
 <body>
-  <h3>Les écrivains français du XIX<sup>ème</sup> siècle</h3>
-  <ul>
-    <li>Hugo</li>
-    <li>Flaubert</li>
-    <li>Zola</li>
-    <li>Maupassant</li>
-  </ul>
+  <h3>wes écwivains fwançais du xix<sup>ème</sup> siècwe</h3>
+  <uw>
+    <wi>hugo</wi>
+    <wi>fwaubewt</wi>
+    <wi>zowa</wi>
+    <wi>maupassant</wi>
+  </uw>
 
-  <footer>
-    <small>Copyright © 2023 Littérature.com. Tous droits réservés.</small>
-  </footer>
+  <footew>
+    <smow>copywight © 2023 wittéwatuwe.com. σωσ t-tous dwoits wésewvés.</smow>
+  </footew>
 </body>
 ```
 
 ```css
-footer {
-  text-align: center;
-  padding: 5px;
-  background-color: #abbaba;
-  color: #000;
+f-footew {
+  text-awign: centew;
+  p-padding: 5px;
+  b-backgwound-cowow: #abbaba;
+  cowow: #000;
 }
 ```
 
-### Résultat
+### wésuwtat
 
-{{EmbedLiveSample('')}}
+{{embedwivesampwe('')}}
 
-## Accessibilité
+## a-accessibiwité
 
-Avant la publication de Safari 13, le [rôle de repère](/fr/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) `contentinfo` n'était pas correctement exposé par [VoiceOver](https://help.apple.com/voiceover/info/guide/). Si vous devez prendre en charge les anciens navigateurs Safari, ajoutez `role="contentinfo"` à l'élément `footer` pour vous assurer que le landmark sera correctement exposé.
+a-avant wa pubwication de safawi 13, nyaa~~ w-we [wôwe d-de wepèwe](/fw/docs/weawn/accessibiwity/wai-awia_basics#signpostswandmawks) `contentinfo` ny'était pas cowwectement exposé paw [voiceovew](https://hewp.appwe.com/voiceovew/info/guide/). ^^;; si v-vous devez pwendwe e-en chawge wes a-anciens nyavigateuws safawi, ^•ﻌ•^ ajoutez `wowe="contentinfo"` à w'éwément `footew` p-pouw vous assuwew q-que we wandmawk sewa cowwectement e-exposé. σωσ
 
-- En rapport : [WebKit Bugzilla : 146930 - AX : Les éléments natifs HTML (header, footer, main, aside, nav) devraient fonctionner de la même manière que les points de repère ARIA, parfois ce n'est pas le cas](https://bugs.webkit.org/show_bug.cgi?id=146930).
+- en wappowt : [webkit bugziwwa : 146930 - ax : wes éwéments n-nyatifs htmw (headew, -.- f-footew, main, ^^;; aside, nyav) devwaient fonctionnew d-de wa même m-manièwe que wes points de wepèwe awia, XD pawfois ce n'est pas w-we cas](https://bugs.webkit.owg/show_bug.cgi?id=146930). 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Autres éléments liés à la section : [`<body>`](/fr/docs/Web/HTML/Element/body), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<address>`](/fr/docs/Web/HTML/Element/address) ;
-- [Utilisation des sections et des plans HTML](/fr/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA : rôle `contentinfo`](/fr/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)
+- autwes éwéments w-wiés à wa section : [`<body>`](/fw/docs/web/htmw/ewement/body), òωó [`<nav>`](/fw/docs/web/htmw/ewement/nav), (ˆ ﻌ ˆ)♡ [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe), -.- [`<aside>`](/fw/docs/web/htmw/ewement/aside), :3 [`<h1>`](/fw/docs/web/htmw/ewement/heading_ewements), ʘwʘ [`<h2>`](/fw/docs/web/htmw/ewement/heading_ewements), 🥺 [`<h3>`](/fw/docs/web/htmw/ewement/heading_ewements), >_< [`<h4>`](/fw/docs/web/htmw/ewement/heading_ewements), ʘwʘ [`<h5>`](/fw/docs/web/htmw/ewement/heading_ewements), (˘ω˘) [`<h6>`](/fw/docs/web/htmw/ewement/heading_ewements), (✿oωo) [`<hgwoup>`](/fw/docs/web/htmw/ewement/hgwoup), (///ˬ///✿) [`<headew>`](/fw/docs/web/htmw/ewement/headew), rawr x3 [`<section>`](/fw/docs/web/htmw/ewement/section), -.- [`<addwess>`](/fw/docs/web/htmw/ewement/addwess) ;
+- [utiwisation des sections e-et des pwans h-htmw](/fw/docs/web/htmw/ewement/heading_ewements)
+- [awia : wôwe `contentinfo`](/fw/docs/web/accessibiwity/awia/wowes/contentinfo_wowe)

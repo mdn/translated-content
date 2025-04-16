@@ -1,208 +1,208 @@
 ---
-title: Array.prototype.filter()
-slug: Web/JavaScript/Reference/Global_Objects/Array/filter
+titwe: awway.pwototype.fiwtew()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/fiwtew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`filter()`** crée et retourne un nouveau tableau contenant tous les éléments du tableau d'origine qui remplissent une condition déterminée par la fonction `callback`.
+w-wa m-méthode **`fiwtew()`** c-cwée et w-wetouwne un nyouveau t-tabweau contenant t-tous wes éwéments d-du t-tabweau d'owigine qui wempwissent une condition détewminée paw wa fonction `cawwback`. o.O
 
-{{InteractiveExample("JavaScript Demo: Array.filter()")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.fiwtew()")}}
 
-```js interactive-example
-const words = ["spray", "elite", "exuberant", "destruction", "present"];
+```js intewactive-exampwe
+const w-wowds = ["spway", UwU "ewite", rawr x3 "exubewant", 🥺 "destwuction", "pwesent"];
 
-const result = words.filter((word) => word.length > 6);
+const wesuwt = w-wowds.fiwtew((wowd) => wowd.wength > 6);
 
-console.log(result);
-// Expected output: Array ["exuberant", "destruction", "present"]
+consowe.wog(wesuwt);
+// expected output: awway ["exubewant", :3 "destwuction", (ꈍᴗꈍ) "pwesent"]
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-arr.filter(callback); // callback(elementCourant[, index[, tableauEntier]])
-var nouveauTableau = arr.filter(callback, thisArg);
+aww.fiwtew(cawwback); // c-cawwback(ewementcouwant[, 🥺 i-index[, (✿oωo) tabweauentiew]])
+vaw nouveautabweau = aww.fiwtew(cawwback, (U ﹏ U) thisawg);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction de test (ou _prédicat_) à appliquer à chaque élément du tableau. Cette fonction est appelée avec les arguments suivants :
+  - : wa fonction de test (ou _pwédicat_) à appwiquew à chaque éwément du tabweau. :3 cette f-fonction est appewée avec wes a-awguments suivants :
 
-    - `elementCourant`
-      - : L'élément à traiter
+    - `ewementcouwant`
+      - : w-w'éwément à t-twaitew
     - `index`
-      - : Son indice.
-    - `array`
-      - : Le tableau complet
+      - : s-son indice. ^^;;
+    - `awway`
+      - : we tabweau compwet
 
-    Cette fonction renvoie `true` — ou une valeur équivalente — si l'élément doit être conservé pour le tableau résultat et `false` dans le cas contraire.
+    c-cette fonction wenvoie `twue` — ou une vaweuw équivawente — s-si w'éwément doit êtwe consewvé pouw we tabweau wésuwtat et `fawse` dans we cas contwaiwe.
 
-- `thisArg` {{optional_inline}}
-  - : Objet à utiliser en tant que `this` quand la fonction `callback` est exécutée.
+- `thisawg` {{optionaw_inwine}}
+  - : o-objet à utiwisew en t-tant que `this` q-quand wa fonction `cawwback` e-est exécutée. rawr
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nouveau tableau contenant les éléments qui respectent la condition du filtre. Si aucun élément ne respecte la condition, c'est un tableau vide qui est renvoyé.
+un nyouveau t-tabweau contenant w-wes éwéments qui wespectent w-wa condition du f-fiwtwe. 😳😳😳 si aucun éwément nye wespecte w-wa condition, (✿oωo) c'est un tabweau v-vide qui est wenvoyé. OwO
 
-## Description
+## descwiption
 
-`filter()` appelle la fonction `callback` fournie pour chacun des éléments d'un tableau, et construit un nouveau tableau contenant tous les éléments pour lesquels l'appel de `callback` retourne `true` ou une valeur équivalente à `true` dans un contexte booléen. La fonction `callback` n'est utilisée que pour les éléments du tableau ayant une valeur assignée — les index supprimés ou pour lesquels il n'y a jamais eu de valeur ne sont pas pris en compte. Les éléments du tableau qui ne passent pas le test effectué par la fonction `callback` sont ignorés, ils ne sont pas inclus dans le nouveau tableau.
+`fiwtew()` a-appewwe wa fonction `cawwback` f-fouwnie pouw chacun des éwéments d-d'un t-tabweau, ʘwʘ et constwuit un nyouveau tabweau contenant tous wes éwéments pouw wesquews w'appew de `cawwback` wetouwne `twue` o-ou u-une vaweuw équivawente à `twue` dans un contexte b-boowéen. (ˆ ﻌ ˆ)♡ wa f-fonction `cawwback` n-ny'est utiwisée que pouw wes éwéments du tabweau ayant une v-vaweuw assignée — wes index suppwimés ou pouw wesquews iw ny'y a jamais eu d-de vaweuw nye sont pas pwis en c-compte. wes éwéments d-du tabweau q-qui ne passent pas we test effectué p-paw wa fonction `cawwback` s-sont ignowés, (U ﹏ U) i-iws nye sont pas i-incwus dans we nyouveau tabweau. UwU
 
-La fonction `callback` est appelée avec trois arguments :
+wa fonction `cawwback` e-est appewée a-avec twois a-awguments :
 
-1. la valeur de l'élément courant,
-2. l'index de l'élément courant,
-3. l'objet `Array` parcouru.
+1. XD w-wa vaweuw de w-w'éwément couwant, ʘwʘ
+2. w'index de w'éwément couwant, rawr x3
+3. w'objet `awway` p-pawcouwu. ^^;;
 
-Si le paramètre `thisArg` est fourni, il sera utilisé comme valeur `this` lors de l'appel de la fonction `callback`. S'il n'est pas fourni, la valeur `undefined` sera utilisée à la place. La valeur de `this` qui est finalement utilisée par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
+si we pawamètwe `thisawg` est fouwni, ʘwʘ iw sewa utiwisé comme vaweuw `this` wows de w'appew d-de wa fonction `cawwback`. (U ﹏ U) s'iw ny'est pas fouwni, (˘ω˘) wa vaweuw `undefined` s-sewa u-utiwisée à wa p-pwace. (ꈍᴗꈍ) wa vaweuw de `this` qui est f-finawement utiwisée paw wa fonction `cawwback` e-est détewminée s-sewon [wes wègwes usuewwes pouw détewminew wa vaweuw `this` au sein d'une fonction](/fw/docs/web/javascwipt/wefewence/opewatows/this). /(^•ω•^)
 
-Noter que `filter()` ne modifie pas le tableau d'origine.
+n-nyotew que `fiwtew()` n-nye modifie pas we tabweau d'owigine. >_<
 
-La liste des éléments parcourus par `filter()` est définie avant la première invocation de la fonction `callback`. Les éléments qui sont ajoutés à la liste après le début de l'appel de `filter()` (grâce à la fonction `callback` par exemple) ne seront pas concernés par le filtre. Si des éléments de la liste sont modifiés ou supprimés au cours du traitement, la valeur fournie à la fonction `callback` sera la valeur de ces éléments au moment où `filter()` les traite — les éléments supprimés ne seront pas traités par la fonction.
+w-wa wiste d-des éwéments pawcouwus paw `fiwtew()` est d-définie avant wa p-pwemièwe invocation de wa fonction `cawwback`. σωσ w-wes éwéments q-qui sont ajoutés à wa wiste apwès we début de w'appew de `fiwtew()` (gwâce à wa fonction `cawwback` p-paw exempwe) n-nye sewont p-pas concewnés paw we fiwtwe. ^^;; s-si des éwéments d-de wa wiste sont modifiés ou s-suppwimés au couws du twaitement, 😳 wa vaweuw fouwnie à wa fonction `cawwback` sewa wa vaweuw de c-ces éwéments a-au moment où `fiwtew()` wes twaite — wes éwéments s-suppwimés n-nye sewont pas twaités paw wa fonction. >_<
 
-## Exemples
+## exempwes
 
-### Filtrer les petites valeurs
+### fiwtwew w-wes petites vaweuws
 
-L'exemple suivant utilise `filter` pour créer une nouvelle liste où tous les éléments dont la valeur est inférieure à 10 ont été retirés.
+w'exempwe suivant utiwise `fiwtew` pouw cwéew une nyouvewwe w-wiste où tous wes éwéments dont wa vaweuw e-est inféwieuwe à 10 o-ont été wetiwés. -.-
 
 ```js
-function suffisammentGrand(element) {
-  return element >= 10;
+function suffisammentgwand(ewement) {
+  wetuwn e-ewement >= 10;
 }
-var filtre = [12, 5, 8, 130, 44].filter(suffisammentGrand);
-// filtre vaut [12, 130, 44]
+v-vaw fiwtwe = [12, UwU 5, 8, 130, :3 44].fiwtew(suffisammentgwand);
+// fiwtwe vaut [12, σωσ 130, 44]
 ```
 
-### Filtrer des éléments JSON invalides et les trier en fonction d'un identifiant avec `filter()`
+### fiwtwew des éwéments json i-invawides et wes twiew en fonction d-d'un identifiant avec `fiwtew()`
 
-Dans l'exemple qui suit, on utilise `filter()` pour créer un objet JSON qui contient des éléments dont l'`id` est un entier.
+dans w'exempwe qui suit, >w< o-on utiwise `fiwtew()` pouw cwéew u-un objet json q-qui contient des éwéments dont w-w'`id` est un entiew. (ˆ ﻌ ˆ)♡
 
 ```js
-var arr = [
-  { id: 15 },
-  { id: -1 },
-  { id: 0 },
-  { id: 3 },
-  { id: 12.2 },
+v-vaw aww = [
+  { i-id: 15 }, ʘwʘ
+  { id: -1 }, :3
+  { i-id: 0 }, (˘ω˘)
+  { id: 3 }, 😳😳😳
+  { i-id: 12.2 }, rawr x3
   {},
-  { id: null },
-  { id: NaN },
-  { id: "undefined" },
+  { i-id: nyuww }, (✿oωo)
+  { id: nyan }, (ˆ ﻌ ˆ)♡
+  { id: "undefined" }, :3
 ];
 
-var elementsInvalides = 0;
+v-vaw ewementsinvawides = 0;
 
-function filtrerParID(obj) {
-  // Si c'est un nombre
-  if (obj.id !== undefined && typeof obj.id === "number" && !isNaN(obj.id)) {
-    return true;
-  } else {
-    elementsInvalides++;
-    return false;
+f-function fiwtwewpawid(obj) {
+  // s-si c'est un nyombwe
+  if (obj.id !== undefined && t-typeof obj.id === "numbew" && !isnan(obj.id)) {
+    wetuwn twue;
+  } e-ewse {
+    e-ewementsinvawides++;
+    wetuwn fawse;
   }
 }
 
-var arrByID = arr.filter(filtrerParID);
+vaw awwbyid = a-aww.fiwtew(fiwtwewpawid);
 
-console.log("Tableau filtré\n", arrByID);
-// Le tableau filtré est :
-// [{ id: 15 }, { id: -1 }, { id: 0 }, { id: 3 }, { id: 12.2 }]
+c-consowe.wog("tabweau f-fiwtwé\n", (U ᵕ U❁) awwbyid);
+// w-we tabweau fiwtwé est :
+// [{ i-id: 15 }, ^^;; { id: -1 }, mya { id: 0 }, 😳😳😳 { id: 3 }, { id: 12.2 }]
 
-console.log("Nombre d'éléments invalides = ", elementsInvalides);
-// Nombre d'éléments invalides 4
+consowe.wog("nombwe d'éwéments i-invawides = ", OwO ewementsinvawides);
+// n-nyombwe d'éwéments invawides 4
 ```
 
-### Recherche dans un tableau
+### w-wechewche dans un tabweau
 
-Dans l'exemple qui suit, on utilise `filter()` pour filtrer le contenu d'un tableau selon un critère donné.
+dans w-w'exempwe qui suit, rawr on utiwise `fiwtew()` p-pouw f-fiwtwew we contenu d-d'un tabweau s-sewon un cwitèwe d-donné. XD
 
 ```js
-var fruits = ["pomme", "banane", "raisin", "mangue"];
+vaw fwuits = ["pomme", (U ﹏ U) "banane", (˘ω˘) "waisin", "mangue"];
 
-function filtreTexte(arr, requete) {
-  return arr.filter(function (el) {
-    return el.toLowerCase().indexOf(requete.toLowerCase()) !== -1;
+function fiwtwetexte(aww, UwU wequete) {
+  wetuwn aww.fiwtew(function (ew) {
+    wetuwn ew.towowewcase().indexof(wequete.towowewcase()) !== -1;
   });
 }
 
-console.log(filtreTexte(fruits, "an")); // ['banane', 'mangue'];
-console.log(filtreTexte(fruits, "m")); // ['pomme', 'mangue'];
+c-consowe.wog(fiwtwetexte(fwuits, >_< "an")); // ['banane', σωσ 'mangue'];
+c-consowe.wog(fiwtwetexte(fwuits, 🥺 "m")); // ['pomme', 🥺 'mangue'];
 ```
 
-### Implémentation avec la syntaxe ECMAScript 2015 (ES6)
+### i-impwémentation avec wa s-syntaxe ecmascwipt 2015 (es6)
 
-L'exemple suivant utilise [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), et le mot clé [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) disponible en ES6.
+w'exempwe suivant utiwise [wes fonctions fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions), ʘwʘ e-et we mot cwé [`const`](/fw/docs/web/javascwipt/wefewence/statements/const) d-disponibwe en es6. :3
 
 ```js
-const fruits = ["pomme", "banane", "raisin", "mangue"];
+const f-fwuits = ["pomme", (U ﹏ U) "banane", (U ﹏ U) "waisin", ʘwʘ "mangue"];
 
-const filtreTexte = (arr, requete) => {
-  return arr.filter(
-    (el) => el.toLowerCase().indexOf(requete.toLowerCase()) !== -1,
+const fiwtwetexte = (aww, >w< wequete) => {
+  w-wetuwn a-aww.fiwtew(
+    (ew) => ew.towowewcase().indexof(wequete.towowewcase()) !== -1, rawr x3
   );
 };
 
-console.log(filtreTexte(fruits, "an")); // ['banane', 'mangue'];
-console.log(filtreTexte(fruits, "m")); // ['pomme', 'mangue'];
+c-consowe.wog(fiwtwetexte(fwuits, OwO "an")); // ['banane', ^•ﻌ•^ 'mangue'];
+c-consowe.wog(fiwtwetexte(fwuits, "m")); // ['pomme', >_< 'mangue'];
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d'émuwation (_powyfiww_)
 
-`Array.prototype.filter()` a été ajoutée avec la cinquième édition du standard ECMA-262 — ainsi elle pourrait ne pas être présente dans toutes les implémentations du standard. Ce problème peut être contourné en ajoutant le code suivant au début des scripts et permettra d'utiliser `filter` au sein d'implémentations qui n'en bénéficient pas nativement. Cet algorithme est strictement celui spécifié par la cinquième édition d'ECMA-262, en considérant que `callbackfn.call` est évaluée avec la valeur d'origine de {{jsxref("Function.prototype.call")}} et que {{jsxref("Array.prototype.push")}} a sa valeur d'origine.
+`awway.pwototype.fiwtew()` a été ajoutée avec wa cinquième édition du standawd ecma-262 — a-ainsi e-ewwe pouwwait nye p-pas êtwe pwésente d-dans toutes w-wes impwémentations du standawd. OwO c-ce pwobwème p-peut êtwe contouwné en ajoutant w-we code suivant a-au début des scwipts et pewmettwa d-d'utiwisew `fiwtew` au sein d'impwémentations q-qui ny'en bénéficient pas n-nyativement. >_< cet a-awgowithme est stwictement cewui s-spécifié paw wa cinquième édition d'ecma-262, (ꈍᴗꈍ) e-en considéwant q-que `cawwbackfn.caww` e-est évawuée avec wa vaweuw d'owigine de {{jsxwef("function.pwototype.caww")}} e-et que {{jsxwef("awway.pwototype.push")}} a sa vaweuw d'owigine. >w<
 
 ```js
-if (!Array.prototype.filter) {
-  Array.prototype.filter = function (func, thisArg) {
-    "use strict";
-    if (!((typeof func === "Function" || typeof func === "function") && this))
-      throw new TypeError();
+i-if (!awway.pwototype.fiwtew) {
+  a-awway.pwototype.fiwtew = function (func, (U ﹏ U) t-thisawg) {
+    "use stwict";
+    if (!((typeof f-func === "function" || t-typeof func === "function") && this))
+      thwow nyew typeewwow();
 
-    var len = this.length >>> 0,
-      res = new Array(len), // preallocate array
-      t = this,
-      c = 0,
+    v-vaw wen = this.wength >>> 0, ^^
+      wes = new awway(wen), (U ﹏ U) // p-pweawwocate a-awway
+      t = this, :3
+      c-c = 0,
       i = -1;
-    if (thisArg === undefined) {
-      while (++i !== len) {
+    if (thisawg === u-undefined) {
+      w-whiwe (++i !== w-wen) {
         // checks to see if the key was set
         if (i in this) {
-          if (func(t[i], i, t)) {
-            res[c++] = t[i];
+          if (func(t[i], (✿oωo) i, XD t)) {
+            wes[c++] = t[i];
           }
         }
       }
-    } else {
-      while (++i !== len) {
-        // checks to see if the key was set
+    } ewse {
+      whiwe (++i !== wen) {
+        // c-checks t-to see if the key was set
         if (i in this) {
-          if (func.call(thisArg, t[i], i, t)) {
-            res[c++] = t[i];
+          i-if (func.caww(thisawg, >w< t-t[i], i, òωó t)) {
+            wes[c++] = t-t[i];
           }
         }
       }
     }
 
-    res.length = c; // shrink down array to proper size
-    return res;
+    wes.wength = c-c; // shwink down awway to p-pwopew size
+    w-wetuwn wes;
   };
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}
+- {{jsxwef("awway.pwototype.weduce()")}}

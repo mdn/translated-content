@@ -1,94 +1,94 @@
 ---
-title: Constructeur Float64Array()
-slug: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
+titwe: constwucteuw fwoat64awway()
+s-swug: web/javascwipt/wefewence/gwobaw_objects/fwoat64awway/fwoat64awway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le **constructeur `Float64Array()`** permet de créer un nouveau tableau typé [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array) dont les éléments sont des nombres flottants représentés sur 64 bits (ce qui correspond au type de données `double` du langage C), utilisant le boutisme de la plateforme. S'il est nécessaire de contrôler l'ordre des octets, on utilisera un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) à la place. Lors de la construction, les éléments du tableau sont initialisés avec la valeur `0`. Une fois le tableau construit, on peut faire référence aux éléments du tableau à l'aide des méthodes de l'objet ou en utilisant la notation avec les crochets et l'indice voulu.
+w-we **constwucteuw `fwoat64awway()`** p-pewmet de cwéew u-un nyouveau t-tabweau typé [`fwoat64awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/fwoat64awway) d-dont w-wes éwéments s-sont des nyombwes fwottants wepwésentés suw 64 bits (ce qui cowwespond au type d-de données `doubwe` du wangage c), o.O utiwisant w-we boutisme de wa pwatefowme. >w< s'iw e-est nyécessaiwe de contwôwew w'owdwe des octets, 😳 on utiwisewa u-un objet [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview) à wa pwace. 🥺 w-wows de wa constwuction, rawr x3 w-wes éwéments du tabweau sont initiawisés avec wa vaweuw `0`. o.O une fois w-we tabweau constwuit, rawr on peut faiwe wéféwence aux éwéments du tabweau à w-w'aide des méthodes de w'objet o-ou en utiwisant w-wa nyotation avec w-wes cwochets e-et w'indice vouwu. ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Float64Array(); // apparu avec ES2017
-new Float64Array(longueur);
-new Float64Array(tableauType);
-new Float64Array(object);
+nyew fwoat64awway(); // a-appawu avec es2017
+nyew fwoat64awway(wongueuw);
+n-nyew fwoat64awway(tabweautype);
+nyew fwoat64awway(object);
 
-new Float64Array(buffer);
-new Float64Array(buffer, decalageOctets);
-new Float64Array(buffer, decalageOctets, longueur);
+nyew fwoat64awway(buffew);
+nyew fwoat64awway(buffew, 😳😳😳 decawageoctets);
+n-nyew fwoat64awway(buffew, ^^;; decawageoctets, o.O w-wongueuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `longueur`
-  - : Lorsque le constructeur est appelé avec un argument `longueur`, un tableau interne de tampon de mémoire est créé avec une taille en octets de `longueur` _multipliée par `BYTES_PER_ELEMENT`_ et dont les éléments sont des zéros.
-- `tableauType`
-  - : Lorsque le constructeur est appelé avec un argument `tableauType`, qui peut être un tableau typé de n'importe quel type **non** [`bigint`](/fr/docs/Glossary/BigInt) (comme `Int32Array`), `tableauType` est copié dans un nouveau tableau typé et chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé est égale à celle de l'argument `tableauType`.
+- `wongueuw`
+  - : w-wowsque we constwucteuw est appewé avec un awgument `wongueuw`, (///ˬ///✿) un t-tabweau intewne d-de tampon de mémoiwe est cwéé a-avec une taiwwe e-en octets de `wongueuw` _muwtipwiée paw `bytes_pew_ewement`_ e-et dont wes éwéments sont des z-zéwos. σωσ
+- `tabweautype`
+  - : wowsque we constwucteuw est appewé a-avec un awgument `tabweautype`, nyaa~~ qui peut êtwe u-un tabweau typé de ny'impowte q-quew type **non** [`bigint`](/fw/docs/gwossawy/bigint) (comme `int32awway`), ^^;; `tabweautype` e-est copié dans un nyouveau tabweau typé et chaque vaweuw de `tabweautype` est convewtie dans we type c-cowwespondant a-au constwucteuw avant d'êtwe copiée d-dans we nyouveau t-tabweau. ^•ﻌ•^ w-wa wongueuw du nyouveau tabweau typé est égawe à cewwe de w'awgument `tabweautype`. σωσ
 - `object`
-  - : Lorsque le constructeur est appelé avec un argument objet quelconque, un nouveau tableau typé est créé, de la même façon qu'avec un appel à la méthode `TypedArray.from()`.
-- `buffer`, `decalageOctets`, `longueur`
-  - : Lorsqu'il est appelé avec un argument `buffer`, et éventuellement des arguments `decalageOctets` et `longueur`, le constructeur crée une nouvelle vue sous la forme d'un tableau typé qui porte sur l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) donné par le paramètre `buffer`. Les paramètres `decalageOctets` et `longueur` indiquent l'intervalle de mémoire exposé à la vue formée par le tableau typé. Si ces deux derniers paramètres sont absents, c'est l'ensemble de `buffer` qui sera vu&nbsp;; si seul `longueur` est absent, c'est tout `buffer` qui sera vu à partir de `decalageOctets`.
+  - : w-wowsque we constwucteuw est appewé avec un awgument objet quewconque, -.- u-un nyouveau tabweau typé est cwéé, ^^;; d-de wa même f-façon qu'avec u-un appew à wa méthode `typedawway.fwom()`. XD
+- `buffew`, 🥺 `decawageoctets`, òωó `wongueuw`
+  - : w-wowsqu'iw e-est appewé a-avec un awgument `buffew`, e-et éventuewwement des awguments `decawageoctets` et `wongueuw`, (ˆ ﻌ ˆ)♡ we c-constwucteuw cwée u-une nyouvewwe v-vue sous wa fowme d-d'un tabweau t-typé qui powte suw w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) donné paw we pawamètwe `buffew`. -.- wes p-pawamètwes `decawageoctets` et `wongueuw` indiquent w'intewvawwe de mémoiwe exposé à wa vue fowmée paw we t-tabweau typé. :3 si ces deux dewniews pawamètwes sont absents, ʘwʘ c-c'est w'ensembwe d-de `buffew` qui s-sewa vu&nbsp;; si seuw `wongueuw` e-est absent, 🥺 c'est tout `buffew` q-qui sewa vu à p-pawtiw de `decawageoctets`. >_<
 
-## Exemples
+## exempwes
 
-### Plusieurs façons de créer un objet `Float64Array`
+### pwusieuws façons de cwéew un objet `fwoat64awway`
 
 ```js
-// À partir d'une longueur
-let float64 = new Float64Array(2);
-float64[0] = 42;
-console.log(float64[0]); // 42
-console.log(float64.length); // 2
-console.log(float64.BYTES_PER_ELEMENT); // 8
+// À pawtiw d'une wongueuw
+wet fwoat64 = n-nyew fwoat64awway(2);
+fwoat64[0] = 42;
+c-consowe.wog(fwoat64[0]); // 42
+consowe.wog(fwoat64.wength); // 2
+c-consowe.wog(fwoat64.bytes_pew_ewement); // 8
 
-// À partir d'un tableau
-const arr = new Float64Array([21, 31]);
-console.log(arr[1]); // 31
+// À p-pawtiw d'un tabweau
+const aww = new fwoat64awway([21, ʘwʘ 31]);
+c-consowe.wog(aww[1]); // 31
 
-// À partir d'un autre tableau typé
-const x = new Float64Array([21, 31]);
-const y = new Float64Array(x);
-console.log(y[0]); // 21
+// À pawtiw d-d'un autwe tabweau typé
+const x-x = nyew fwoat64awway([21, (˘ω˘) 31]);
+c-const y = nyew fwoat64awway(x);
+consowe.wog(y[0]); // 21
 
-// À partir d'un ArrayBuffer
-const buffer = new ArrayBuffer(32);
-const z = new Float64Array(buffer, 0, 4);
+// À pawtiw d'un awwaybuffew
+const b-buffew = nyew a-awwaybuffew(32);
+c-const z = nyew fwoat64awway(buffew, (✿oωo) 0, 4);
 
-// À partir d'un itérable
-const iterable = (function* () {
-  yield* [1, 2, 3];
+// À p-pawtiw d'un i-itéwabwe
+const itewabwe = (function* () {
+  y-yiewd* [1, (///ˬ///✿) 2, 3];
 })();
-const float64 = new Float64Array(iterable);
-// Float64Array[1, 2, 3]
+const fwoat64 = nyew fwoat64awway(itewabwe);
+// fwoat64awway[1, 2, rawr x3 3]
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-### Notes de compatibilité
+### nyotes de compatibiwité
 
-À partir d'ECMAScript 2015, le constructeur de `Float64Array` doit être appelé avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Utiliser le constructeur `Float64Array` comme une fonction, c'est-à-dire sans le mot-clé `new`, déclenchera désormais une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+À p-pawtiw d-d'ecmascwipt 2015, -.- we constwucteuw de `fwoat64awway` doit êtwe a-appewé avec w'opéwateuw [`new`](/fw/docs/web/javascwipt/wefewence/opewatows/new). ^^ utiwisew we constwucteuw `fwoat64awway` comme une fonction, (⑅˘꒳˘) c-c'est-à-diwe sans we mot-cwé `new`, nyaa~~ décwenchewa d-désowmais une e-exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow). /(^•ω•^)
 
-```js example-bad
-let dv = Float64Array([1, 2, 3]);
-// TypeError: calling a builtin Float64Array constructor
-// without new is forbidden
+```js exampwe-bad
+wet dv = fwoat64awway([1, (U ﹏ U) 2, 😳😳😳 3]);
+// typeewwow: cawwing a-a buiwtin fwoat64awway c-constwuctow
+// without nyew is fowbidden
 ```
 
-```js example-good
-let dv = new Float64Array([1, 2, 3]);
+```js exampwe-good
+w-wet dv = nyew fwoat64awway([1, >w< 2, 3]);
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [Prothèse d'émulation pour `Float64Array` avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+- [pwothèse d'émuwation pouw `fwoat64awway` avec wa bibwiothèque `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [wes t-tabweaux typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview)

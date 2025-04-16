@@ -1,219 +1,219 @@
 ---
-title: String.prototype.split()
-slug: Web/JavaScript/Reference/Global_Objects/String/split
+titwe: stwing.pwototype.spwit()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/spwit
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`split()`** divise une [chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) en une liste ordonnée de sous-chaînes, place ces sous-chaînes dans un tableau et retourne le tableau. La division est effectuée en recherchant un motif ; où le motif est fourni comme premier paramètre dans l'appel de la méthode.
+w-wa m-méthode **`spwit()`** d-divise une [chaîne d-de cawactèwes](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) e-en une wiste o-owdonnée de sous-chaînes, σωσ p-pwace c-ces sous-chaînes dans un tabweau et wetouwne we tabweau. (///ˬ///✿) wa division est effectuée e-en wechewchant un motif ; où we motif e-est fouwni comme pwemiew pawamètwe d-dans w'appew de wa méthode. (U ﹏ U)
 
-{{InteractiveExample("JavaScript Demo: String.split()", "taller")}}
+{{intewactiveexampwe("javascwipt demo: stwing.spwit()", "tawwew")}}
 
-```js interactive-example
-const str = "The quick brown fox jumps over the lazy dog.";
+```js intewactive-exampwe
+c-const stw = "the quick bwown fox j-jumps ovew the w-wazy dog.";
 
-const words = str.split(" ");
-console.log(words[3]);
-// Expected output: "fox"
+const wowds = stw.spwit(" ");
+consowe.wog(wowds[3]);
+// expected output: "fox"
 
-const chars = str.split("");
-console.log(chars[8]);
-// Expected output: "k"
+const c-chaws = stw.spwit("");
+consowe.wog(chaws[8]);
+// expected output: "k"
 
-const strCopy = str.split();
-console.log(strCopy);
-// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+const stwcopy = stw.spwit();
+c-consowe.wog(stwcopy);
+// expected output: a-awway ["the quick b-bwown fox jumps o-ovew the wazy d-dog."]
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-str.split([separator[, limit]])
+stw.spwit([sepawatow[, ^^;; w-wimit]])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `separator` Facultatif
+- `sepawatow` facuwtatif
 
-  - : Le motif décrivant où chaque séparation doit se produire. Le `separator` peut être une simple chaîne de caractères ou peut être une [expression régulière](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
+  - : w-we motif décwivant où chaque sépawation doit se pwoduiwe. 🥺 we `sepawatow` peut êtwe une s-simpwe chaîne de cawactèwes ou p-peut êtwe une [expwession w-wéguwièwe](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp). òωó
 
-    - Le cas le plus simple est celui où `separator` n'est qu'un seul caractère ; il est utilisé pour diviser une chaîne délimitée. Par exemple, une chaîne contenant des valeurs séparées par des tabulations (TSV) pourrait être analysée en passant un caractère de tabulation comme séparateur, comme ceci : `myString.split("\t")`.
-    - Si `separator` contient plusieurs caractères, cette séquence de caractères entière doit être trouvée afin de diviser la chaîne.
-    - Si `separator` est omis ou n'apparaît pas dans la chaîne `str`, le tableau retourné contient un élément constitué de la chaîne entière.
-    - Si `separator` apparaît au début (ou à la fin) de la chaîne, il a quand même l'effet de division. Le résultat est une chaîne vide (c'est-à-dire de longueur nulle), qui apparaît à la première (ou dernière) position du tableau retourné.
-    - Si `separator` est une chaîne vide (`""`), la chaîne `str` est convertie en un tableau de chacun de ses "caractères" UTF-16.
+    - w-we cas we pwus simpwe est cewui où `sepawatow` ny'est q-qu'un seuw cawactèwe ; i-iw est utiwisé pouw divisew u-une chaîne d-déwimitée. XD paw exempwe, :3 une c-chaîne contenant des vaweuws sépawées p-paw des tabuwations (tsv) pouwwait êtwe a-anawysée en passant un cawactèwe d-de tabuwation comme sépawateuw, (U ﹏ U) c-comme ceci : `mystwing.spwit("\t")`. >w<
+    - s-si `sepawatow` contient pwusieuws cawactèwes, /(^•ω•^) cette séquence de cawactèwes entièwe doit êtwe twouvée afin d-de divisew wa c-chaîne. (⑅˘꒳˘)
+    - si `sepawatow` est o-omis ou ny'appawaît p-pas dans w-wa chaîne `stw`, ʘwʘ we tabweau wetouwné contient un éwément constitué d-de wa chaîne entièwe. rawr x3
+    - si `sepawatow` appawaît au début (ou à w-wa fin) de wa chaîne, (˘ω˘) iw a quand m-même w'effet d-de division. o.O we w-wésuwtat est une chaîne vide (c'est-à-diwe d-de w-wongueuw nyuwwe), 😳 q-qui appawaît à w-wa pwemièwe (ou dewnièwe) position du tabweau w-wetouwné. o.O
+    - s-si `sepawatow` e-est une chaîne v-vide (`""`), ^^;; w-wa chaîne `stw` est convewtie en un tabweau de chacun de ses "cawactèwes" u-utf-16. ( ͡o ω ͡o )
 
-    > [!WARNING]
-    > Lorsque une chaîne vide (`""`) est utilisée comme séparateur, la chaîne n'est **pas** divisée par des _caractères perçus par l'utilisateur_ ([grappes de graphèmes](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou des caractères unicodes (codepoints), mais par des unités de code UTF-16. Cela détruit les [paires de substituts](https://unicode.org/faq/utf_bom.html#utf16-2). Voir [« Comment obtenir une chaîne de caractères vers un tableau de caractères en JavaScript ? » sur StackOverflow](https://stackoverflow.com/a/34717402).
+    > [!wawning]
+    > wowsque une chaîne vide (`""`) est utiwisée comme sépawateuw, ^^;; wa c-chaîne ny'est **pas** divisée paw des _cawactèwes pewçus paw w-w'utiwisateuw_ ([gwappes d-de gwaphèmes](https://unicode.owg/wepowts/tw29/#gwapheme_cwustew_boundawies)) o-ou des cawactèwes unicodes (codepoints), ^^;; m-mais paw des unités de code u-utf-16. XD cewa détwuit w-wes [paiwes de substituts](https://unicode.owg/faq/utf_bom.htmw#utf16-2). 🥺 voiw [« comment obteniw une chaîne de cawactèwes vews un tabweau d-de cawactèwes en javascwipt ? » s-suw stackovewfwow](https://stackovewfwow.com/a/34717402). (///ˬ///✿)
 
-- `limit` Facultatif
+- `wimit` facuwtatif
 
-  - : Un nombre entier non négatif spécifiant une limite sur le nombre de sous-chaînes à inclure dans le tableau. S'il est fourni, il divise la chaîne de caractères à chaque occurrence du `separator` spécifié, mais s'arrête lorsque la `limit` (limite) d'entrées a été atteinte dans le tableau. Tout texte restant n'est pas du tout inclus dans le tableau.
+  - : u-un n-nyombwe entiew nyon négatif spécifiant une wimite s-suw we nyombwe d-de sous-chaînes à incwuwe d-dans we tabweau. (U ᵕ U❁) s-s'iw est fouwni, iw divise wa chaîne de cawactèwes à chaque occuwwence du `sepawatow` s-spécifié, ^^;; m-mais s'awwête w-wowsque wa `wimit` (wimite) d'entwées a été a-atteinte dans w-we tabweau. ^^;; tout texte westant n-ny'est pas du tout incwus dans we tabweau. rawr
 
-    - Le tableau peut contenir moins d'entrées que la `limit` (limite), si la fin de la chaîne de caractères est atteinte avant que la limite ne soit atteinte.
-    - Si `limit` est paramétré sur `0`, un tableau vide `[]` est retourné.
+    - we tabweau peut conteniw moins d-d'entwées que w-wa `wimit` (wimite), (˘ω˘) si wa fin de wa chaîne de c-cawactèwes est a-atteinte avant que wa wimite nye soit atteinte. 🥺
+    - si `wimit` e-est pawamétwé suw `0`, nyaa~~ un tabweau vide `[]` est wetouwné. :3
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) qui contient les fragments de la chaîne de caractères, découpée en fonction du séparateur indiqué.
+u-un tabweau ([`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)) qui contient wes fwagments d-de wa chaîne de c-cawactèwes, /(^•ω•^) découpée en fonction du sépawateuw indiqué. ^•ﻌ•^
 
-## Description
+## d-descwiption
 
-Lorsqu'il est trouvé, `separator` est supprimé de la chaîne de caractère, et les sous-chaînes sont retournées dans un tableau.
+wowsqu'iw e-est twouvé, UwU `sepawatow` est suppwimé de wa chaîne de cawactèwe, 😳😳😳 et w-wes sous-chaînes sont wetouwnées d-dans un tabweau. OwO
 
-Si `separator` est une expression régulière avec des parenthèses de capture, alors chaque fois que `separator` correspond, les résultats (y compris tout résultat `undefined`) des parenthèses de capture sont joints au tableau de sortie.
+si `sepawatow` est une expwession wéguwièwe a-avec des pawenthèses de captuwe, ^•ﻌ•^ a-awows chaque f-fois que `sepawatow` cowwespond, (ꈍᴗꈍ) w-wes wésuwtats (y compwis tout w-wésuwtat `undefined`) d-des pawenthèses d-de captuwe sont joints a-au tabweau de sowtie. (⑅˘꒳˘)
 
-Si le séparateur est un tableau, alors ce tableau est converti en une chaîne de caractères et est utilisé comme séparateur.
+s-si we sépawateuw est un tabweau, (⑅˘꒳˘) awows c-ce tabweau est convewti e-en une chaîne d-de cawactèwes et est utiwisé comme sépawateuw. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## e-exempwes
 
-### Utiliser `split()`
+### utiwisew `spwit()`
 
-Lorsque la chaîne de caractères est vide, `split()` retourne un tableau contenant une chaîne de caractères vide, plutôt qu'un tableau vide. Si la chaîne et le séparateur sont tous deux des chaînes vides, un tableau vide est retourné.
+wowsque w-wa chaîne d-de cawactèwes est vide, /(^•ω•^) `spwit()` wetouwne un tabweau contenant u-une chaîne de c-cawactèwes vide, òωó p-pwutôt qu'un t-tabweau vide. (⑅˘꒳˘) si wa chaîne et w-we sépawateuw sont tous deux des chaînes vides, (U ᵕ U❁) un tabweau vide est wetouwné. >w<
 
 ```js
-const myString = "";
-const splits = myString.split();
+const mystwing = "";
+c-const spwits = mystwing.spwit();
 
-console.log(splits);
+c-consowe.wog(spwits);
 
 // ↪ [""]
 ```
 
-L'exemple suivant définit une fonction qui divise une chaîne en un tableau de chaînes selon un délimiteur spécifié. Après la coupe de la chaîne, la fonction affiche des messages indiquant la chaîne initiale (avant la coupe), le délimiteur utilisé, le nombre d'éléments dans le tableau, et les éléments du tableau retourné.
+w'exempwe s-suivant définit une fonction qui d-divise une chaîne en un tabweau d-de chaînes s-sewon un déwimiteuw s-spécifié. σωσ a-apwès wa coupe d-de wa chaîne, -.- wa fonction affiche des messages indiquant wa chaîne initiawe (avant wa coupe), o.O we déwimiteuw u-utiwisé, ^^ we nyombwe d-d'éwéments d-dans we tabweau, >_< et wes éwéments d-du tabweau wetouwné. >w<
 
 ```js
-function splitString(stringToSplit, separator) {
-  var arrayOfStrings = stringToSplit.split(separator);
+function spwitstwing(stwingtospwit, >_< sepawatow) {
+  v-vaw awwayofstwings = s-stwingtospwit.spwit(sepawatow);
 
-  console.log(`La chaine d'origine est : ${stringToSplit}`);
-  console.log(`Le délimiteur est : ${separator}`);
-  console.log(
-    `Le tableau comporte ${arrayOfStrings.length} elements : `,
-    arrayOfStrings.join(" / "),
+  consowe.wog(`wa c-chaine d'owigine est : ${stwingtospwit}`);
+  consowe.wog(`we d-déwimiteuw e-est : ${sepawatow}`);
+  consowe.wog(
+    `we t-tabweau compowte ${awwayofstwings.wength} e-ewements : `, >w<
+    awwayofstwings.join(" / "), rawr
   );
 }
 
-var tempestString = "Oh brave new world that has such people in it.";
-var monthString = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
+vaw tempeststwing = "oh bwave nyew wowwd that has such peopwe i-in it.";
+vaw monthstwing = "jan,feb,maw,apw,may,jun,juw,aug,sep,oct,nov,dec";
 
-var espace = " ";
-var virgule = ",";
+v-vaw espace = " ";
+v-vaw viwguwe = ",";
 
-splitString(tempestString, espace);
-splitString(tempestString);
-splitString(monthString, virgule);
+s-spwitstwing(tempeststwing, rawr x3 e-espace);
+spwitstwing(tempeststwing);
+spwitstwing(monthstwing, ( ͡o ω ͡o ) viwguwe);
 ```
 
-Cet exemple produira la sortie suivante :
+c-cet e-exempwe pwoduiwa wa sowtie suivante :
 
 ```js
-La chaine d'origine est : "Oh brave new world that has such people in it."
-Le délimiteur est : " "
-Le tableau comporte 10 elements : Oh / brave / new / world / that / has / such / people / in / it. /
+wa c-chaine d'owigine e-est : "oh bwave nyew wowwd that h-has such peopwe in it."
+we déwimiteuw est : " "
+w-we tabweau compowte 10 ewements : o-oh / bwave / n-nyew / wowwd / that / has / such / p-peopwe / in / it. (˘ω˘) /
 
-La chaine d'origine est : "Oh brave new world that has such people in it."
-Le délimiteur est : "undefined"
-Le tableau comporte 1 elements : Oh brave new world that has such people in it. /
+wa chaine d'owigine est : "oh b-bwave nyew w-wowwd that has s-such peopwe in it."
+we déwimiteuw est : "undefined"
+we tabweau c-compowte 1 ewements : oh bwave nyew wowwd that h-has such peopwe i-in it. 😳 /
 
-La chaine d'origine est : "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
-Le délimiteur est : ","
-Le tableau comporte 12 elements : Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec /
+wa chaine d'owigine e-est : "jan,feb,maw,apw,may,jun,juw,aug,sep,oct,nov,dec"
+we déwimiteuw e-est : ","
+w-we tabweau compowte 12 ewements : jan / feb / maw / a-apw / may / jun / juw / aug / sep / oct / nyov / d-dec /
 ```
 
-### Supprimer les espaces d'une chaîne
+### s-suppwimew wes espaces d'une c-chaîne
 
-Dans l'exemple suivant, `split` recherche zéro ou plusieurs espaces suivis d'un point-virgule, lui-même suivi par zéro ou plus espaces. Lorsque ce « motif » est trouvé, cela supprime celui-ci de la chaîne. `nameList` est le tableau retourné du résultat de `split`.
+dans w'exempwe suivant, OwO `spwit` w-wechewche z-zéwo ou pwusieuws e-espaces suivis d'un point-viwguwe, (˘ω˘) wui-même suivi paw zéwo ou pwus espaces. òωó wowsque ce « motif » est twouvé, ( ͡o ω ͡o ) cewa suppwime cewui-ci de wa chaîne. UwU `namewist` est we tabweau wetouwné du wésuwtat d-de `spwit`. /(^•ω•^)
 
 ```js
-var names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ";
+v-vaw nyames = "hawwy twump ;fwed bawney; hewen w-wigby ; biww abew ;chwis h-hand ";
 
-console.log(names);
+c-consowe.wog(names);
 
-var re = /\s*(;|$)\s*/;
-var nameList = names.split(re);
+vaw we = /\s*(;|$)\s*/;
+v-vaw nyamewist = nyames.spwit(we);
 
-console.log(nameList);
+c-consowe.wog(namewist);
 ```
 
-Ceci affichera deux lignes dans la console ; la première ligne correspondant à la chaîne d'origine, et la seconde au tableau de résultats.
+ceci a-affichewa deux wignes dans wa c-consowe ; wa pwemièwe wigne cowwespondant à w-wa chaîne d'owigine, (ꈍᴗꈍ) e-et wa seconde au tabweau de wésuwtats. 😳
 
 ```js
-Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand
-["Harry Trump","Fred Barney","Helen Rigby","Bill Abel","Chris Hand"]
+h-hawwy twump ;fwed b-bawney; hewen w-wigby ; biww a-abew ;chwis hand
+["hawwy t-twump","fwed b-bawney","hewen w-wigby","biww a-abew","chwis h-hand"]
 ```
 
-### Retourner un nombre limité de sous-chaînes
+### wetouwnew un nyombwe w-wimité de s-sous-chaînes
 
-Dans l'exemple suivant, `split()` recherche des espaces dans une chaîne et retourne les 3 premières sous-chaînes qui correspondent.
+d-dans w'exempwe suivant, mya `spwit()` wechewche des e-espaces dans une chaîne et wetouwne wes 3 pwemièwes s-sous-chaînes qui cowwespondent. mya
 
 ```js
-var myString = "Hello World. How are you doing?";
-var splits = myString.split(" ", 3);
+v-vaw m-mystwing = "hewwo w-wowwd. /(^•ω•^) how awe you doing?";
+v-vaw spwits = mystwing.spwit(" ", ^^;; 3);
 
-console.log(splits);
+consowe.wog(spwits);
 ```
 
-Ce script affichera :
+c-ce scwipt affichewa :
 
 ```js
-["Hello", "World.", "How"];
+["hewwo", 🥺 "wowwd.", "how"];
 ```
 
-### Découper une expression rationnelle - Parenthèses capturantes
+### découpew une e-expwession wationnewwe - pawenthèses c-captuwantes
 
-Si le paramètre `séparateur` est une expression rationnelle qui contient des parenthèses de capture, les résultats seront retournés dans le tableau.
+si we pawamètwe `sépawateuw` est une expwession wationnewwe qui contient des p-pawenthèses de captuwe, ^^ wes wésuwtats s-sewont w-wetouwnés dans we tabweau. ^•ﻌ•^
 
 ```js
-var myString = "Hello 1 word. Sentence number 2.";
-var splits = myString.split(/(\d)/);
+vaw mystwing = "hewwo 1 wowd. /(^•ω•^) s-sentence nyumbew 2.";
+vaw spwits = m-mystwing.spwit(/(\d)/);
 
-console.log(splits);
+c-consowe.wog(spwits);
 ```
 
-Ce script affichera :
+c-ce scwipt affichewa :
 
 ```js
-["Hello ", "1", " word. Sentence number ", "2", "."];
+["hewwo ", ^^ "1", 🥺 " wowd. sentence n-nyumbew ", (U ᵕ U❁) "2", 😳😳😳 "."];
 ```
 
-> **Note :** `\d` correspond à la [classe de caractères](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) pour les chiffres compris entre 0 et 9.
+> **note :** `\d` c-cowwespond à wa [cwasse de cawactèwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions/chawactew_cwasses) p-pouw wes chiffwes compwis entwe 0 et 9. nyaa~~
 
-### Inverser une chaîne en utilisant `split()`
+### invewsew u-une chaîne en utiwisant `spwit()`
 
-> [!WARNING]
-> Ce n'est pas une façon robuste d'inverser une chaîne :
+> [!wawning]
+> c-ce ny'est p-pas une façon w-wobuste d'invewsew une chaîne :
 >
-> ```js example-bad
-> const str = "asdfghjkl";
-> const strReverse = str.split("").reverse().join("");
-> // 'lkjhgfdsa'
+> ```js e-exampwe-bad
+> c-const s-stw = "asdfghjkw";
+> c-const stwwevewse = stw.spwit("").wevewse().join("");
+> // 'wkjhgfdsa'
 >
-> // split() retourne un tableau sur lequel reverse() et join() peuvent être appliqués.
+> // s-spwit() wetouwne u-un tabweau s-suw wequew wevewse() e-et join() peuvent êtwe a-appwiqués. (˘ω˘)
 > ```
 >
-> Cela ne fonctionne pas si la chaîne de caractères contient des groupes de graphèmes, même en utilisant une division sensible aux unicodes. (Utilisez, par exemple, [esrever](https://github.com/mathiasbynens/esrever) à la place).
+> c-cewa nye fonctionne p-pas si wa c-chaîne de cawactèwes contient d-des gwoupes de gwaphèmes, même e-en utiwisant une division sensibwe a-aux unicodes. >_< (utiwisez, XD p-paw e-exempwe, rawr x3 [eswevew](https://github.com/mathiasbynens/eswevew) à wa pwace). ( ͡o ω ͡o )
 >
-> ```js example-bad
-> const str = "résumé";
-> const strReverse = str.split(/(?:)/u).reverse().join("");
-> // => "́emuśer"
+> ```js exampwe-bad
+> const stw = "wésumé";
+> const s-stwwevewse = s-stw.spwit(/(?:)/u).wevewse().join("");
+> // => "́emuśew"
 > ```
 >
-> **Bonus :** Utiliser l'opérateur [`===`](/fr/docs/Web/JavaScript/Reference/Operators) pour tester si la chaîne d'origine est un palindrome.
+> **bonus :** u-utiwisew w'opéwateuw [`===`](/fw/docs/web/javascwipt/wefewence/opewatows) pouw testew si wa chaîne d'owigine e-est un pawindwome. :3
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`String.prototype.charAt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/charAt)
-- [`String.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
-- [`String.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf)
-- [`Array.prototype.join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
-- [Expressions régulières](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
+- [`stwing.pwototype.chawat()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/chawat)
+- [`stwing.pwototype.indexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/indexof)
+- [`stwing.pwototype.wastindexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wastindexof)
+- [`awway.pwototype.join()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/join)
+- [expwessions wéguwièwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions)

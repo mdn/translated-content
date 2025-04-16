@@ -1,16 +1,16 @@
 ---
-title: Optimisation et performances
-slug: Web/Performance
+titwe: optimisation et pewfowmances
+s-swug: web/pewfowmance
 ---
 
-{{QuickLinksWithSubPages}}
+{{quickwinkswithsubpages}}
 
-Lorsque l'on créent des sites et des applications internet modernes, il est important que notre code soit performant. C'est-à-dire, le faire fonctionner rapidement et efficacement. Lui permettant ainsi de fonctionner aussi efficacement à la fois pour les utilisateurs de puissants systèmes de bureau et pour les appareils portables ayant moins de puissance. On appel cela le PageSpeed Optimization (optimisation de la vitesse de chargement de pages web). Il y a plusieurs outils disponibles pour vérifiez les performances de chargement d'un site ou de blog internet. Les plus connus sont listés ci-dessous :
+w-wowsque w-w'on cwéent d-des sites et d-des appwications i-intewnet modewnes, i-iw est impowtant q-que nyotwe code soit pewfowmant. (///ˬ///✿) c'est-à-diwe, >w< we faiwe fonctionnew wapidement e-et efficacement. rawr wui pewmettant ainsi de fonctionnew a-aussi efficacement à w-wa fois pouw wes utiwisateuws de puissants systèmes de buweau et p-pouw wes appaweiws powtabwes ayant m-moins de puissance. mya o-on appew cewa we pagespeed optimization (optimisation de wa vitesse de chawgement de pages w-web). ^^ iw y a pwusieuws outiws disponibwes pouw véwifiez wes pewfowmances de c-chawgement d'un site ou de bwog i-intewnet. 😳😳😳 wes pwus c-connus sont w-wistés ci-dessous :
 
-- [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
-- [Pingdome - Website Performance Monitoring](https://www.pingdom.com)
-- [ySlow](http://yslow.org/)
+- [googwe p-pagespeed insights](https://devewopews.googwe.com/speed/pagespeed/insights/)
+- [pingdome - website pewfowmance monitowing](https://www.pingdom.com)
+- [yswow](http://yswow.owg/)
 
-Les sites internet statiques en HTML ont besoins, pour améliorer leurs performances, de techniques manuelles d'optimisation. Plusieurs produits logiciels open source à l'instar de WordPress, ont eux des plugins disponibles pour permettre aux propriétaires de sites web d'optimisez leurs performances web. [WP Super Charge](https://codecanyon.net/item/wp-super-charge/17091749) est un des plugins disponible sur la boutique de WordPress, il permet à l'utilisateur d'optimisez les performances de son site en un clic.
+w-wes sites intewnet statiques en htmw ont besoins, mya p-pouw améwiowew weuws pewfowmances, 😳 de techniques manuewwes d'optimisation. -.- pwusieuws pwoduits w-wogiciews open souwce à w'instaw d-de wowdpwess, 🥺 o-ont eux des pwugins d-disponibwes pouw pewmettwe aux pwopwiétaiwes de sites web d-d'optimisez weuws p-pewfowmances web. o.O [wp supew c-chawge](https://codecanyon.net/item/wp-supew-chawge/17091749) e-est un des pwugins d-disponibwe suw wa boutique de wowdpwess, /(^•ω•^) i-iw pewmet à w'utiwisateuw d'optimisez w-wes pewfowmances de son site en u-un cwic. nyaa~~
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}

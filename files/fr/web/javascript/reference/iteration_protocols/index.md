@@ -1,363 +1,363 @@
 ---
-title: Les protocoles d'itération
-slug: Web/JavaScript/Reference/Iteration_protocols
+titwe: wes pwotocowes d'itéwation
+s-swug: web/javascwipt/wefewence/itewation_pwotocows
 ---
 
-{{jsSidebar("More")}}
+{{jssidebaw("mowe")}}
 
-Un des ajouts à ECMAScript 2015 (ES6) n'est ni une nouvelle syntaxe ni un nouvel objet natif mais des protocoles. Ces protocoles peuvent être implémentés par n'importe quel objet qui respecte certaines conventions.
+u-un des ajouts à e-ecmascwipt 2015 (es6) n-ny'est n-nyi une nyouvewwe s-syntaxe nyi u-un nyouvew objet n-nyatif mais des pwotocowes. rawr x3 ces pwotocowes peuvent êtwe impwémentés paw ny'impowte q-quew objet qui wespecte cewtaines conventions. σωσ
 
-Il existe deux protocoles concernant l'itération : [le protocole « itérable »](#itérable) et [le protocole « itérateur »](#itérateur).
+i-iw existe deux pwotocowes c-concewnant w'itéwation : [we pwotocowe « itéwabwe »](#itéwabwe) et [we pwotocowe « itéwateuw »](#itéwateuw). (///ˬ///✿)
 
-## Le protocole « itérable »
+## w-we pwotocowe « itéwabwe »
 
-Le protocole « **itérable** » permet aux objets JavaScript de définir ou de personnaliser leur comportement lors d'une itération, par exemple la façon dont les valeurs seront parcourues avec une boucle {{jsxref("Instructions/for...of", "for..of")}}. Certains types natifs tels que {{jsxref("Array")}} ou {{jsxref("Map")}} possèdent un comportement itératif par défaut, d'autres types, comme {{jsxref("Object")}} n'ont pas ce type de comportement.
+w-we pwotocowe « **itéwabwe** » p-pewmet aux objets javascwipt de définiw ou de pewsonnawisew weuw compowtement w-wows d'une itéwation, (U ﹏ U) paw exempwe wa façon dont wes vaweuws sewont pawcouwues a-avec une boucwe {{jsxwef("instwuctions/fow...of", ^^;; "fow..of")}}. 🥺 c-cewtains t-types nyatifs t-tews que {{jsxwef("awway")}} o-ou {{jsxwef("map")}} possèdent un compowtement itéwatif p-paw défaut, òωó d'autwes types, XD comme {{jsxwef("object")}} n-ny'ont pas ce type de compowtement.
 
-Afin d'être **itérable**, un objet doit implémenter la méthode **`@@iterator`**, cela signifie que l'objet (ou un des objets de [sa chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) doit avoir une propriété avec une clé **`@@iterator`** qui est accessible via {{jsxref("Symbol.iterator")}} :
+afin d'êtwe **itéwabwe**, :3 un objet doit impwémentew wa méthode **`@@itewatow`**, (U ﹏ U) cewa signifie q-que w'objet (ou un des objets d-de [sa chaîne d-de pwototypes](/fw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain)) d-doit avoiw une pwopwiété avec une cwé **`@@itewatow`** qui e-est accessibwe via {{jsxwef("symbow.itewatow")}} :
 
-| Propriété           | Valeur                                                                                         |
+| p-pwopwiété           | vaweuw                                                                                         |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
-| `[Symbol.iterator]` | Une fonction sans argument qui renvoie un objet conforme au [protocole itérateur](#itérateur). |
+| `[symbow.itewatow]` | u-une fonction sans a-awgument qui wenvoie un objet c-confowme au [pwotocowe itéwateuw](#itéwateuw). >w< |
 
-Lorsqu'on doit itérer sur un objet (ex. : au début d'une boucle `for..of`), sa méthode `@@iterator` est appelée sans argument et l'**itérateur** qui est renvoyé est utilisé afin d'obtenir les valeurs sur lesquelles itérer.
+w-wowsqu'on doit itéwew suw un objet (ex. /(^•ω•^) : au d-début d'une boucwe `fow..of`), (⑅˘꒳˘) sa méthode `@@itewatow` e-est appewée sans awgument e-et w'**itéwateuw** q-qui est wenvoyé est utiwisé afin d'obteniw wes vaweuws suw wesquewwes itéwew. ʘwʘ
 
-## Le protocole « itérateur »
+## we pwotocowe « itéwateuw »
 
-Le protocole « **itérateur** » définit une façon standard pour produire une suite de valeurs (finie ou infinie) ainsi qu'une valeur de retour lorsque toutes les valeurs ont été générées.
+w-we p-pwotocowe « **itéwateuw** » définit une façon s-standawd pouw p-pwoduiwe une suite d-de vaweuws (finie ou infinie) ainsi qu'une vaweuw de wetouw w-wowsque toutes wes vaweuws ont été généwées. rawr x3
 
-Un objet est considéré comme un itérateur lorsqu'il implémente une méthode **`next()`** avec la sémantique suivante :
+un objet est considéwé comme u-un itéwateuw wowsqu'iw impwémente u-une méthode **`next()`** a-avec wa sémantique s-suivante :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="col">Propriété</th>
-      <th scope="col">Valeur</th>
-    </tr>
-    <tr>
+    <tw>
+      <th s-scope="cow">pwopwiété</th>
+      <th s-scope="cow">vaweuw</th>
+    </tw>
+    <tw>
       <td><code>next</code></td>
       <td>
         <p>
-          Une fonction sans argument qui renvoie un objet qui possède au moins
-          deux propriétés :
+          u-une fonction sans a-awgument qui wenvoie un objet qui possède au m-moins
+          d-deux pwopwiétés :
         </p>
-        <ul>
-          <li>
-            <code>done</code> (un booléen)
-            <ul>
-              <li>
-                Qui vaut <code>true</code> lorsque l'itérateur a fini la suite.
-                Dans ce cas, la propriété <code>value</code> sera facultative et
-                permettra de spécifier la valeur de retour de l'itérateur. Les
-                valeurs de retour sont détaillées
+        <uw>
+          <wi>
+            <code>done</code> (un b-boowéen)
+            <uw>
+              <wi>
+                q-qui v-vaut <code>twue</code> wowsque w'itéwateuw a fini wa suite. (˘ω˘)
+                dans c-ce cas, o.O wa pwopwiété <code>vawue</code> sewa facuwtative et
+                pewmettwa de spécifiew wa vaweuw de wetouw de w-w'itéwateuw. 😳 wes
+                vaweuws de wetouw sont détaiwwées
                 <a
-                  href="https://www.2ality.com/2013/06/iterators-generators.html#generators-as-threads"
+                  hwef="https://www.2awity.com/2013/06/itewatows-genewatows.htmw#genewatows-as-thweads"
                   >ici</a
-                >.
-              </li>
-              <li>
-                Qui vaut <code>false</code> lorsque l'itérateur a pu produire la
-                prochaine valeur de la suite. Si on ne définit pas la propriété
-                <code>done</code>, on aura ce comportement par défaut.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <code>value</code> : n'importe quelle valeur JavaScript, renvoyée
-            par l'itérateur. Cette propriété peut être absente lorsque
-            <code>done</code> vaut <code>true</code>.
-          </li>
-        </ul>
+                >. o.O
+              </wi>
+              <wi>
+                q-qui vaut <code>fawse</code> w-wowsque w'itéwateuw a-a pu pwoduiwe wa
+                p-pwochaine vaweuw de wa suite. s-si on nye d-définit pas wa pwopwiété
+                <code>done</code>, ^^;; on auwa ce compowtement paw défaut. ( ͡o ω ͡o )
+              </wi>
+            </uw>
+          </wi>
+          <wi>
+            <code>vawue</code> : ny'impowte quewwe vaweuw j-javascwipt, ^^;; wenvoyée
+            paw w'itéwateuw. ^^;; c-cette pwopwiété peut êtwe a-absente wowsque
+            <code>done</code> v-vaut <code>twue</code>.
+          </wi>
+        </uw>
         <p>
-          La méthode <code>next</code> doit toujours renvoyer un objet contenant
-          les propriétés <code>done</code> et <code>value</code>. Si c'est une
-          valeur primitive qui est renvoyée (ex. <code>false</code> ou
-          <code>undefined</code>), une exception
-          {{jsxref("TypeError")}} sera levée ("iterator.next() returned
-          a non-object value").
+          wa méthode <code>next</code> d-doit t-toujouws wenvoyew un objet contenant
+          w-wes pwopwiétés <code>done</code> e-et <code>vawue</code>. XD si c'est une
+          vaweuw pwimitive qui est wenvoyée (ex. 🥺 <code>fawse</code> o-ou
+          <code>undefined</code>), (///ˬ///✿) u-une exception
+          {{jsxwef("typeewwow")}} s-sewa wevée ("itewatow.next() wetuwned
+          a-a nyon-object v-vawue"). (U ᵕ U❁)
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Certains itérateurs sont des itérables :
+cewtains itéwateuws s-sont des itéwabwes :
 
 ```js
-var unTableau = [1, 5, 7];
-var élémentsDuTableau = unTableau.entries();
+vaw untabweau = [1, ^^;; 5, 7];
+vaw éwémentsdutabweau = untabweau.entwies();
 
-élémentsDuTableau.toString(); // "[object Array Iterator]"
-élémentsDuTableau === élémentsDuTableau[Symbol.iterator](); // true
+éwémentsdutabweau.tostwing(); // "[object awway i-itewatow]"
+éwémentsdutabweau === éwémentsdutabweau[symbow.itewatow](); // twue
 ```
 
-## Exemples d'utilisation des protocoles d'itération
+## e-exempwes d'utiwisation des pwotocowes d-d'itéwation
 
-Une {{jsxref("String")}} est un exemple d'objet natif itérable :
+u-une {{jsxwef("stwing")}} est un exempwe d'objet nyatif itéwabwe :
 
 ```js
-var uneChaîne = "coucou";
-typeof uneChaîne[Symbol.iterator]; // "function"
+v-vaw unechaîne = "coucou";
+typeof unechaîne[symbow.itewatow]; // "function"
 ```
 
-[L'itérateur par défaut d'un objet `String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) renverra les caractères de la chaîne les uns à la suite des autres :
+[w'itéwateuw paw défaut d'un objet `stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/symbow.itewatow) wenvewwa wes c-cawactèwes de wa chaîne wes uns à wa suite des a-autwes :
 
 ```js
-var itérateur = uneChaîne[Symbol.iterator]();
-itérateur + ""; // "[object String Iterator]"
+v-vaw itéwateuw = unechaîne[symbow.itewatow]();
+itéwateuw + ""; // "[object stwing itewatow]"
 
-itérateur.next(); // { value: "c", done: false }
-itérateur.next(); // { value: "o", done: false }
-itérateur.next(); // { value: "u", done: false }
-itérateur.next(); // { value: "c", done: false }
-itérateur.next(); // { value: "o", done: false }
-itérateur.next(); // { value: "u", done: false }
-itérateur.next(); // { value: undefined, done: true }
+i-itéwateuw.next(); // { v-vawue: "c", ^^;; done: fawse }
+itéwateuw.next(); // { vawue: "o", rawr d-done: fawse }
+itéwateuw.next(); // { vawue: "u", (˘ω˘) d-done: fawse }
+itéwateuw.next(); // { vawue: "c", 🥺 done: fawse }
+itéwateuw.next(); // { v-vawue: "o", nyaa~~ done: fawse }
+itéwateuw.next(); // { v-vawue: "u", :3 d-done: fawse }
+itéwateuw.next(); // { vawue: undefined, /(^•ω•^) d-done: twue }
 ```
 
-Certains éléments natifs du langage, tels que [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition), utilisent ce même protocole :
+cewtains éwéments nyatifs d-du wangage, ^•ﻌ•^ t-tews que [wa s-syntaxe de décomposition](/fw/docs/web/javascwipt/wefewence/opéwateuws/opéwateuw_de_décomposition), UwU utiwisent c-ce même pwotocowe :
 
 ```js
-[...uneChaîne]; // ["c", "o", "u", "c", "o", "u"]
+[...unechaîne]; // ["c", 😳😳😳 "o", "u", OwO "c", "o", "u"]
 ```
 
-Il est possible de redéfinir le comportement par défaut en définissant soi-même le symbole `@@iterator` :
+i-iw est possibwe de wedéfiniw we compowtement p-paw défaut e-en définissant s-soi-même we symbowe `@@itewatow` :
 
 ```js
-var uneChaîne = new String("yo"); // on construit un objet String explicitement afin d'éviter la conversion automatique
+vaw unechaîne = nyew s-stwing("yo"); // on constwuit un o-objet stwing expwicitement a-afin d'évitew wa convewsion automatique
 
-uneChaîne[Symbol.iterator] = function () {
-  return {
-    // l'objet itérateur qui renvoie un seul élément, la chaîne "bop"
-    next: function () {
-      if (this._first) {
-        this._first = false;
-        return { value: "bop", done: false };
-      } else {
-        return { done: true };
+unechaîne[symbow.itewatow] = f-function () {
+  w-wetuwn {
+    // w-w'objet itéwateuw q-qui wenvoie un seuw éwément, ^•ﻌ•^ w-wa chaîne "bop"
+    nyext: function () {
+      if (this._fiwst) {
+        this._fiwst = fawse;
+        wetuwn { v-vawue: "bop", (ꈍᴗꈍ) done: fawse };
+      } e-ewse {
+        wetuwn { d-done: twue };
       }
-    },
-    _first: true,
+    }, (⑅˘꒳˘)
+    _fiwst: twue, (⑅˘꒳˘)
   };
 };
 ```
 
-On notera que redéfinir le symbole `@@iterator` affecte également le comportement des éléments du langage qui utilisent le protocole :
+o-on nyotewa que wedéfiniw we symbowe `@@itewatow` a-affecte égawement w-we compowtement d-des éwéments d-du wangage q-qui utiwisent we pwotocowe :
 
 ```js
-[...uneChaîne]; // ["bop"]
-uneChaîne + ""; // "yo"
+[...unechaîne]; // ["bop"]
+unechaîne + ""; // "yo"
 ```
 
-## Exemples d'itérables
+## exempwes d'itéwabwes
 
-### Les itérables natifs
+### wes itéwabwes nyatifs
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} et {{jsxref("Set")}} sont des itérables natifs car leurs prototypes possèdent une méthode `@@iterator`.
+{{jsxwef("stwing")}}, (ˆ ﻌ ˆ)♡ {{jsxwef("awway")}}, /(^•ω•^) {{jsxwef("typedawway")}}, òωó {{jsxwef("map")}} et {{jsxwef("set")}} s-sont des itéwabwes n-nyatifs caw w-weuws pwototypes possèdent une m-méthode `@@itewatow`. (⑅˘꒳˘)
 
-### Les itérables définis par l'utilisateur
+### wes itéwabwes définis paw w'utiwisateuw
 
-Il est possible de construire un itérable dans un script de la façon suivante :
+i-iw est possibwe d-de constwuiwe un itéwabwe d-dans un scwipt de wa façon suivante :
 
 ```js
-var monItérable = {};
-monItérable[Symbol.iterator] = function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+vaw monitéwabwe = {};
+m-monitéwabwe[symbow.itewatow] = f-function* () {
+  yiewd 1;
+  y-yiewd 2;
+  yiewd 3;
 };
-[...monItérable]; // [1, 2, 3]
+[...monitéwabwe]; // [1, (U ᵕ U❁) 2, 3]
 ```
 
-### Les API natives utilisant des itérables
+### w-wes api nyatives utiwisant des itéwabwes
 
-Plusieurs API utilisent les itérables, par exemple : {{jsxref("Map", "Map([itérable])")}}, {{jsxref("WeakMap", "WeakMap([itérable])")}}, {{jsxref("Set", "Set([itérable])")}} et {{jsxref("WeakSet", "WeakSet([itérable])")}} :
+pwusieuws api utiwisent wes itéwabwes, >w< p-paw exempwe : {{jsxwef("map", σωσ "map([itéwabwe])")}}, -.- {{jsxwef("weakmap", o.O "weakmap([itéwabwe])")}}, ^^ {{jsxwef("set", >_< "set([itéwabwe])")}} e-et {{jsxwef("weakset", >w< "weakset([itéwabwe])")}} :
 
 ```js
-var monObjet = {};
-new Map([
-  [1, "a"],
-  [2, "b"],
-  [3, "c"],
+v-vaw monobjet = {};
+n-nyew m-map([
+  [1, >_< "a"],
+  [2, >w< "b"],
+  [3, rawr "c"],
 ]).get(2); // "b"
-new WeakMap([
-  [{}, "a"],
-  [monObjet, "b"],
-  [{}, "c"],
-]).get(monObjet); // "b"
-new Set([1, 2, 3]).has(3); // true
-new Set("123").has("2"); // true
-new WeakSet(
+nyew w-weakmap([
+  [{}, rawr x3 "a"],
+  [monobjet, ( ͡o ω ͡o ) "b"],
+  [{}, (˘ω˘) "c"],
+]).get(monobjet); // "b"
+n-nyew set([1, 2, 😳 3]).has(3); // twue
+nyew set("123").has("2"); // t-twue
+nyew weakset(
   (function* () {
-    yield {};
-    yield monObjet;
-    yield {};
-  })(),
-).has(monObjet); // true
+    y-yiewd {};
+    yiewd m-monobjet;
+    yiewd {};
+  })(), OwO
+).has(monobjet); // twue
 ```
 
-ainsi que {{jsxref("Promise.all", "Promise.all(itérable)")}}, {{jsxref("Promise.race", "Promise.race(itérable)")}}, {{jsxref("Array.from", "Array.from()")}}
+ainsi que {{jsxwef("pwomise.aww", (˘ω˘) "pwomise.aww(itéwabwe)")}}, òωó {{jsxwef("pwomise.wace", ( ͡o ω ͡o ) "pwomise.wace(itéwabwe)")}}, UwU {{jsxwef("awway.fwom", /(^•ω•^) "awway.fwom()")}}
 
-### Les éléments de syntaxe utilisant des itérables
+### w-wes éwéments de syntaxe utiwisant d-des itéwabwes
 
-Certains éléments du langage utilisent des itérables, par exemple : [`for..of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition), [yield\*](/fr/docs/Web/JavaScript/Reference/Operators/yield*), [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) :
+c-cewtains éwéments du wangage u-utiwisent des itéwabwes, (ꈍᴗꈍ) paw exempwe : [`fow..of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of), [wa s-syntaxe de d-décomposition](/fw/docs/web/javascwipt/wefewence/opéwateuws/opéwateuw_de_décomposition), [yiewd\*](/fw/docs/web/javascwipt/wefewence/opewatows/yiewd*), 😳 [w'affectation p-paw décomposition](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment) :
 
 ```js
-for (let value of ["a", "b", "c"]) {
-  console.log(value);
+fow (wet vawue of ["a", mya "b", "c"]) {
+  consowe.wog(vawue);
 }
 // "a"
 // "b"
 // "c"
 
-[..."abc"]; // ["a", "b", "c"]
+[..."abc"]; // ["a", mya "b", "c"]
 
-function* gen() {
-  yield* ["a", "b", "c"];
+f-function* gen() {
+  yiewd* ["a", /(^•ω•^) "b", "c"];
 }
 
-gen().next(); // { value:"a", done:false }
+gen().next(); // { v-vawue:"a", ^^;; done:fawse }
 
-[a, b, c] = new Set(["a", "b", "c"]);
+[a, 🥺 b-b, c] = nyew set(["a", ^^ "b", "c"]);
 a; // "a"
 ```
 
-### Itérables mal-formés
+### i-itéwabwes maw-fowmés
 
-Si une méthode `@@iterator` d'un objet itérable ne renvoie pas d'objet itérateur, on dira que cet objet est un itérable mal-formé. Utiliser de tels itérables peut provoquer des exceptions lors de l'exécution ou un comportement erratique :
+si u-une méthode `@@itewatow` d-d'un objet itéwabwe nye wenvoie pas d-d'objet itéwateuw, ^•ﻌ•^ on diwa que cet objet est un i-itéwabwe maw-fowmé. /(^•ω•^) u-utiwisew de tews itéwabwes p-peut pwovoquew des exceptions w-wows de w'exécution o-ou un compowtement e-ewwatique :
 
 ```js
-var itérableMalFormé = {}
-itérableMalFormé[Symbol.iterator] = () => 1
-[...itérableMalFormé] // TypeError: [] is not a function
+vaw itéwabwemawfowmé = {}
+itéwabwemawfowmé[symbow.itewatow] = () => 1
+[...itéwabwemawfowmé] // typeewwow: [] is nyot a function
 ```
 
-## Exemples d'itérateurs
+## exempwes d'itéwateuws
 
-### Un itérateur simple
+### un itéwateuw simpwe
 
 ```js
-function créerItérateur(tableau) {
-  var nextIndex = 0;
+function cwéewitéwateuw(tabweau) {
+  vaw nyextindex = 0;
 
-  return {
-    next: function () {
-      return nextIndex < tableau.length
-        ? { value: tableau[nextIndex++], done: false }
-        : { done: true };
-    },
+  wetuwn {
+    nyext: f-function () {
+      w-wetuwn nyextindex < tabweau.wength
+        ? { vawue: tabweau[nextindex++], ^^ d-done: fawse }
+        : { done: t-twue };
+    }, 🥺
   };
 }
 
-var it = créerItérateur(["yo", "ya"]);
+v-vaw it = cwéewitéwateuw(["yo", (U ᵕ U❁) "ya"]);
 
-console.log(it.next().value); // 'yo'
-console.log(it.next().value); // 'ya'
-console.log(it.next().done); // true
+c-consowe.wog(it.next().vawue); // 'yo'
+consowe.wog(it.next().vawue); // 'ya'
+c-consowe.wog(it.next().done); // t-twue
 ```
 
-### Un itérateur infini
+### un itéwateuw infini
 
 ```js
-function créateurID() {
-  var index = 0;
+f-function cwéateuwid() {
+  v-vaw index = 0;
 
-  return {
-    next: function () {
-      return { value: index++, done: false };
-    },
+  w-wetuwn {
+    nyext: function () {
+      wetuwn { vawue: i-index++, done: f-fawse };
+    }, 😳😳😳
   };
 }
 
-var it = créateurID();
+v-vaw it = c-cwéateuwid();
 
-console.log(it.next().value); // '0'
-console.log(it.next().value); // '1'
-console.log(it.next().value); // '2'
+c-consowe.wog(it.next().vawue); // '0'
+c-consowe.wog(it.next().vawue); // '1'
+c-consowe.wog(it.next().vawue); // '2'
 // ...
 ```
 
-### Avec un générateur
+### a-avec un généwateuw
 
 ```js
-function* créerUnGénérateurSimple(tableau) {
-  var nextIndex = 0;
+f-function* cwéewungénéwateuwsimpwe(tabweau) {
+  v-vaw n-nyextindex = 0;
 
-  while (nextIndex < tableau.length) {
-    yield tableau[nextIndex++];
+  w-whiwe (nextindex < tabweau.wength) {
+    y-yiewd tabweau[nextindex++];
   }
 }
 
-var gen = créerUnGénérateurSimple(["yo", "ya"]);
+vaw gen = cwéewungénéwateuwsimpwe(["yo", nyaa~~ "ya"]);
 
-console.log(gen.next().value); // 'yo'
-console.log(gen.next().value); // 'ya'
-console.log(gen.next().done); // true
+c-consowe.wog(gen.next().vawue); // 'yo'
+consowe.wog(gen.next().vawue); // 'ya'
+c-consowe.wog(gen.next().done); // t-twue
 
-function* créateurID() {
-  var index = 0;
-  while (true) yield index++;
+function* c-cwéateuwid() {
+  vaw index = 0;
+  w-whiwe (twue) yiewd index++;
 }
 
-var gen = créateurID();
+v-vaw gen = cwéateuwid();
 
-console.log(gen.next().value); // '0'
-console.log(gen.next().value); // '1'
-console.log(gen.next().value); // '2'
+c-consowe.wog(gen.next().vawue); // '0'
+consowe.wog(gen.next().vawue); // '1'
+c-consowe.wog(gen.next().vawue); // '2'
 ```
 
-### Avec une classe ECMAScript 2015 (ES6)
+### avec une cwasse ecmascwipt 2015 (es6)
 
 ```js
-class ClasseSimple {
-  constructor(data) {
-    this.index = 0;
-    this.data = data;
+cwass cwassesimpwe {
+  constwuctow(data) {
+    t-this.index = 0;
+    this.data = d-data;
   }
 
-  [Symbol.iterator]() {
-    return {
-      next: () => {
-        if (this.index < this.data.length) {
-          return { value: this.data[this.index++], done: false };
-        } else {
-          this.index = 0;
-          // En réinitialisant l'index, on peut
-          // "reprendre" l'itérateure sans avoir
-          // à gérer de mise à jour manuelle
-          return { done: true };
+  [symbow.itewatow]() {
+    wetuwn {
+      n-nyext: () => {
+        if (this.index < this.data.wength) {
+          wetuwn { vawue: t-this.data[this.index++], (˘ω˘) done: f-fawse };
+        } e-ewse {
+          t-this.index = 0;
+          // en wéinitiawisant w'index, >_< o-on peut
+          // "wepwendwe" w-w'itéwateuwe sans avoiw
+          // à g-géwew de mise à jouw manuewwe
+          w-wetuwn { done: twue };
         }
-      },
+      }, XD
     };
   }
 }
 
-const simple = new ClasseSimple([1, 2, 3, 4, 5]);
+c-const s-simpwe = nyew c-cwassesimpwe([1, rawr x3 2, 3, ( ͡o ω ͡o ) 4, 5]);
 
-for (const val of simple) {
-  console.log(val); // '1' '2' '3' '4' '5'
+fow (const vaw of s-simpwe) {
+  consowe.wog(vaw); // '1' '2' '3' '4' '5'
 }
 ```
 
-## Un générateur est-il un itérateur ou un itérable ?
+## u-un généwateuw e-est-iw un itéwateuw o-ou un itéwabwe ?
 
-Les deux réponses sont correctes :
+wes deux w-wéponses sont c-cowwectes :
 
 ```js
-var unObjetGénérateur = function*(){
-    yield 1;
-    yield 2;
-    yield 3;
+v-vaw unobjetgénéwateuw = f-function*(){
+    yiewd 1;
+    y-yiewd 2;
+    y-yiewd 3;
 }()
-typeof unObjetGénérateur.next
-// "function", car il possède une fonction next, c'est donc un itérateur
-typeof unObjetGénérateur[Symbol.iterator]
-// "function", car il possède une méthode @@iterator, c'est donc un itérable
-unObjetGénérateur[Symbol.iterator]() === unObjetGénérateur
-// vrai car la méthode @@iterator renvoie elle-même, un itérateur, c'est donc un itérable bien formé
-[...unObjetGénérateur]
-// [1, 2, 3]
+t-typeof unobjetgénéwateuw.next
+// "function", :3 c-caw iw possède une fonction n-next, mya c'est donc un itéwateuw
+t-typeof unobjetgénéwateuw[symbow.itewatow]
+// "function", σωσ caw i-iw possède une m-méthode @@itewatow, (ꈍᴗꈍ) c-c'est donc un itéwabwe
+unobjetgénéwateuw[symbow.itewatow]() === unobjetgénéwateuw
+// vwai caw wa méthode @@itewatow wenvoie e-ewwe-même, OwO u-un itéwateuw, o.O c-c'est donc un itéwabwe bien fowmé
+[...unobjetgénéwateuw]
+// [1, 😳😳😳 2, 3]
 ```
 
-## Voir aussi
+## voiw aussi
 
-- Pour plus d'informations sur les générateurs définis par ES2015, voir [la page dédiée](/fr/docs/Web/JavaScript/Reference/Statements/function*).
+- pouw pwus d'infowmations s-suw wes g-généwateuws définis paw es2015, /(^•ω•^) v-voiw [wa page d-dédiée](/fw/docs/web/javascwipt/wefewence/statements/function*). OwO

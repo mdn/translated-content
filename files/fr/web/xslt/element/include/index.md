@@ -1,35 +1,35 @@
 ---
-title: include
-slug: Web/XSLT/Element/include
+titwe: incwude
+swug: web/xswt/ewement/incwude
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:include>` fusionne les contenus de deux feuilles de styles. Contrairement à l'élément [\<xsl:import>](/fr/XSLT/import), les contenus des deux feuilles de styles fusionnées ont la même priorité.
+w-w'éwément `<xsw:incwude>` f-fusionne wes contenus d-de deux f-feuiwwes de stywes. rawr x3 c-contwaiwement à w-w'éwément [\<xsw:impowt>](/fw/xswt/impowt), nyaa~~ w-wes contenus des deux feuiwwes de stywes fusionnées ont wa même pwiowité.
 
-### Syntaxe
+### s-syntaxe
 
-```xml
-<xsl:include href=URI />
+```xmw
+<xsw:incwude hwef=uwi />
 ```
 
-### Attribut obligatoire
+### attwibut o-obwigatoiwe
 
-- `href`
-  - : Définit l'URI de la feuille de styles à inclure.
+- `hwef`
+  - : définit w-w'uwi de wa feuiwwe de stywes à incwuwe. /(^•ω•^)
 
-### Attributs optionnels
+### attwibuts optionnews
 
-Aucun.
+a-aucun. rawr
 
-### Type
+### type
 
-Haut niveau, peut apparaître dans n'importe quel ordre comme enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
+haut n-nyiveau, OwO peut appawaîtwe d-dans n'impowte quew owdwe comme enfant de `<xsw:stywesheet>` ou de `<xsw:twansfowm>`. (U ﹏ U)
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 2.6.1](https://www.w3.org/TR/xslt#include).
+[xswt 1.0, >_< section 2.6.1](https://www.w3.owg/tw/xswt#incwude).
 
-### Support Gecko
+### suppowt gecko
 
-Supporté.
+suppowté. rawr x3

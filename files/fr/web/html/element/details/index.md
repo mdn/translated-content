@@ -1,328 +1,328 @@
 ---
-title: "<details> : l'élément de divulgation des détails"
-slug: Web/HTML/Element/details
+titwe: "<detaiws> : w'éwément d-de divuwgation d-des détaiws"
+s-swug: web/htmw/ewement/detaiws
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<details>`** est utilisé comme un outil permettant de révéler une information. Un résumé ou un intitulé peuvent être fournis grâce à un élément [`<summary>`](/fr/docs/Web/HTML/Element/summary).
+w-w'éwément h-htmw **`<detaiws>`** e-est utiwisé c-comme un outiw p-pewmettant de wévéwew une infowmation. XD un wésumé ou un intituwé peuvent êtwe f-fouwnis gwâce à un éwément [`<summawy>`](/fw/docs/web/htmw/ewement/summawy). 🥺
 
-La plupart du temps, le contrôle utilisé pour cet élément est un triangle qui est tourné ou tordu afin d'indiquer si l'élément est révélé ou non. Si le premier élément fils de l'élément `<details>` est un élément `<summary>`, c'est le contenu de ce dernier qui est utilisé comme intitulé pour le contenu à révéler (l'intitulé est donc toujours visible).
+wa pwupawt d-du temps, we contwôwe utiwisé p-pouw cet éwément est un twiangwe qui est touwné ou towdu afin d-d'indiquew si w'éwément est w-wévéwé ou nyon. (///ˬ///✿) s-si we pwemiew éwément fiws de w'éwément `<detaiws>` est un éwément `<summawy>`, (U ᵕ U❁) c-c'est we contenu de ce dewniew qui est utiwisé comme intituwé pouw we c-contenu à wévéwew (w'intituwé est donc toujouws v-visibwe). ^^;;
 
-{{InteractiveExample("HTML Demo: &lt;details&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;detaiws&gt;", ^^;; "tabbed-standawd")}}
 
-```html interactive-example
-<details>
-  <summary>Details</summary>
-  Something small enough to escape casual notice.
-</details>
+```htmw i-intewactive-exampwe
+<detaiws>
+  <summawy>detaiws</summawy>
+  something s-smow enough to escape casuaw nyotice. rawr
+</detaiws>
 ```
 
-```css interactive-example
-details {
-  border: 1px solid #aaa;
-  border-radius: 4px;
+```css i-intewactive-exampwe
+detaiws {
+  bowdew: 1px s-sowid #aaa;
+  bowdew-wadius: 4px;
   padding: 0.5em 0.5em 0;
 }
 
-summary {
-  font-weight: bold;
-  margin: -0.5em -0.5em 0;
-  padding: 0.5em;
+summawy {
+  font-weight: bowd;
+  mawgin: -0.5em -0.5em 0;
+  p-padding: 0.5em;
 }
 
-details[open] {
-  padding: 0.5em;
+detaiws[open] {
+  p-padding: 0.5em;
 }
 
-details[open] summary {
-  border-bottom: 1px solid #aaa;
-  margin-bottom: 0.5em;
+d-detaiws[open] s-summawy {
+  bowdew-bottom: 1px sowid #aaa;
+  mawgin-bottom: 0.5em;
 }
 ```
 
-> [!NOTE]
-> L'utilisation courante d'un triangle qui tourne ou s'enroule pour représenter l'ouverture ou la fermeture du widget explique pourquoi on les appelle parfois « twisties » en anglais.
+> [!note]
+> w'utiwisation c-couwante d-d'un twiangwe qui touwne ou s'enwouwe p-pouw wepwésentew w-w'ouvewtuwe ou wa fewmetuwe d-du widget expwique pouwquoi o-on wes appewwe pawfois « twisties » en angwais. (˘ω˘)
 
-Un widget `<details>` peut être dans l'un des deux états suivants. L'état par défaut _fermé_ affiche uniquement le triangle et l'étiquette à l'intérieur du `<summary>` (ou une chaîne par défaut définie par [l'agent utilisateur](/fr/docs/Glossary/User_agent) si aucun `<summary>`).
+u-un widget `<detaiws>` peut êtwe d-dans w'un des deux états suivants. 🥺 w-w'état p-paw défaut _fewmé_ affiche uniquement we twiangwe et w'étiquette à w'intéwieuw du `<summawy>` (ou une chaîne p-paw défaut définie p-paw [w'agent utiwisateuw](/fw/docs/gwossawy/usew_agent) s-si aucun `<summawy>`). nyaa~~
 
-Lorsque l'utilisateur clique sur le widget ou le met au point, puis appuie sur la barre d'espacement, il s'ouvre par "torsion", révélant son contenu :
+w-wowsque w-w'utiwisateuw cwique suw we widget ou we met au point, :3 puis appuie s-suw wa bawwe d'espacement, /(^•ω•^) iw s'ouvwe paw "towsion", ^•ﻌ•^ wévéwant son contenu :
 
-À partir de là, vous pouvez utiliser les feuilles de style en cascade pour donner un style au widget de divulgation, et vous pouvez ouvrir et fermer le widget de façon programmatique en définissant ou en supprimant son attribut [`open`](#attr-open).
+À p-pawtiw de wà, UwU vous pouvez u-utiwisew wes feuiwwes d-de stywe en c-cascade pouw donnew un stywe au w-widget de divuwgation, 😳😳😳 e-et vous p-pouvez ouvwiw et f-fewmew we widget de façon pwogwammatique en définissant o-ou en s-suppwimant son a-attwibut [`open`](#attw-open). OwO
 
-Par défaut, lorsqu'il est fermé, le widget est seulement assez haut pour afficher le triangle de divulgation et le résumé. Lorsqu'il est ouvert, il s'étend pour afficher les détails qu'il contient.
+p-paw défaut, ^•ﻌ•^ wowsqu'iw e-est fewmé, (ꈍᴗꈍ) we widget est seuwement assez haut pouw affichew w-we twiangwe de divuwgation et we wésumé. wowsqu'iw est ouvewt, (⑅˘꒳˘) iw s'étend pouw affichew w-wes détaiws qu'iw contient. (⑅˘꒳˘)
 
-> [!NOTE]
-> Malheureusement, à l'heure actuelle, il n'existe aucun moyen intégré d'animer la transition entre l'ouverture et la fermeture.
+> [!note]
+> mawheuweusement, (ˆ ﻌ ˆ)♡ à w'heuwe a-actuewwe, /(^•ω•^) i-iw ny'existe aucun m-moyen intégwé d'animew wa twansition e-entwe w'ouvewtuwe et wa f-fewmetuwe. òωó
 
-Les implémentations entièrement conformes aux normes appliquent automatiquement le code CSS `display: list-item` à l'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary). Vous pouvez l'utiliser pour personnaliser davantage son apparence. Voir [Personnaliser l'apparence](#personnaliser_lapparence) pour plus de détails.
+wes i-impwémentations entièwement confowmes aux nyowmes appwiquent automatiquement we code css `dispway: w-wist-item` à w'éwément [`<summawy>`](/fw/docs/web/htmw/ewement/summawy). (⑅˘꒳˘) v-vous pouvez w'utiwisew pouw pewsonnawisew d-davantage s-son appawence. (U ᵕ U❁) voiw [pewsonnawisew w'appawence](#pewsonnawisew_wappawence) p-pouw pwus de détaiws. >w<
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories"
-          >Catégories de contenu</a
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies"
+          >catégowies d-de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >, racine de section,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#interactive_content"
-          >contenu interactif</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
-        >.
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >, σωσ wacine de section, -.-
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#intewactive_content"
+          >contenu i-intewactif</a
+        >, o.O
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu t-tangibwe</a
+        >. ^^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th scope="wow">contenu a-autowisé</th>
       <td>
-        Un élément
-        <a href="/fr/docs/Web/HTML/Element/summary"
-          ><code>&#x3C;summary></code></a
+        u-un éwément
+        <a hwef="/fw/docs/web/htmw/ewement/summawy"
+          ><code>&#x3c;summawy></code></a
         >
-        suivi par du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu de flux</a
+        s-suivi paw du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >. >_<
+      </td>
+    </tw>
+    <tw>
+      <th scope="wow">omission d-de bawises</th>
+      <td>
+        a-aucune, wa bawise d'ouvewtuwe et wa bawise d-de fewmetuwe s-sont
+        obwigatoiwes. >w<
+      </td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
+      <td>
+        tout éwément a-acceptant du
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
         >.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwe a-awia impwicite</th>
+      <td><a hwef="https://w3c.github.io/awia/#gwoup">gwoup</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface dom</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>
-        Tout élément acceptant du
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu de flux</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="https://w3c.github.io/aria/#group">group</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLDetailsElement"
-          ><code>HTMLDetailsElement</code></a
+        <a hwef="/fw/docs/web/api/htmwdetaiwsewement"
+          ><code>htmwdetaiwsewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Comme tous les éléments HTML, cet élément accepte les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-comme tous w-wes éwéments htmw, >_< cet éwément accepte wes [attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). >w<
 
 - `open`
 
-  - : Cet attribut booléen indique si les détails — c'est-à-dire le contenu de l'élément `<details>` — sont actuellement visibles ou non. Les détails sont affichés lorsque cet attribut existe, ou cachés lorsque cet attribut est absent. Par défaut, cet attribut est absent, ce qui signifie que les détails ne sont pas visibles.
+  - : c-cet attwibut boowéen indique si w-wes détaiws — c'est-à-diwe we contenu de w'éwément `<detaiws>` — sont a-actuewwement visibwes ou nyon. rawr wes d-détaiws sont a-affichés wowsque cet attwibut e-existe, rawr x3 ou cachés wowsque cet attwibut e-est absent. p-paw défaut, ( ͡o ω ͡o ) c-cet attwibut est absent, (˘ω˘) ce qui s-signifie que wes d-détaiws nye sont pas visibwes. 😳
 
-    > [!NOTE]
-    > Vous devez supprimer entièrement cet attribut pour que les détails soient cachés. Attention, `open="false"` rend les détails visibles, car cet attribut est booléen.
+    > [!note]
+    > vous devez s-suppwimew entièwement c-cet attwibut p-pouw que wes détaiws soient cachés. OwO attention, (˘ω˘) `open="fawse"` w-wend wes détaiws visibwes, òωó c-caw cet attwibut e-est boowéen. ( ͡o ω ͡o )
 
 ## Évènements
 
-En plus des évènements classiques pris en charge par les éléments HTML, l'élément `<details>` prend en charge l'évènement [toggle](/fr/docs/Web/API/HTMLElement/toggle_event) qui est envoyé sur l'élément lorsque son état change entre ouvert et fermé (que ce soit dans un sens ou dans l'autre). L'évènement est envoyé après que l'état ait été changé et si plusieurs changements d'état ont eu lieu avant que le navigateur envoie l'évènement, le navigateur fusionnera ces évènements en un seul.
+en pwus des évènements cwassiques pwis en chawge p-paw wes éwéments h-htmw, UwU w'éwément `<detaiws>` p-pwend en c-chawge w'évènement [toggwe](/fw/docs/web/api/htmwewement/toggwe_event) qui est e-envoyé suw w'éwément wowsque son état change entwe ouvewt et fewmé (que ce soit dans un sens o-ou dans w'autwe). /(^•ω•^) w'évènement e-est envoyé apwès que w'état a-ait été changé et si pwusieuws c-changements d'état ont eu wieu a-avant que we n-nyavigateuw envoie w-w'évènement, (ꈍᴗꈍ) w-we navigateuw f-fusionnewa ces évènements en un seuw. 😳
 
-On peut alors écouter cet évènement en JavaScript afin de détecter le changement d'état du contrôle :
+on peut awows écoutew cet évènement en javascwipt afin de détectew w-we changement d'état d-du contwôwe :
 
 ```js
-details.addEventListener(
-  "toggle",
+d-detaiws.addeventwistenew(
+  "toggwe", mya
   function (evt) {
-    if (details.open) {
-      /* l'état est passé en "ouvert" */
-    } else {
-      /* l'état est passé en "fermé" */
+    i-if (detaiws.open) {
+      /* w'état est passé en "ouvewt" */
+    } ewse {
+      /* w'état est passé e-en "fewmé" */
     }
-  },
-  false,
+  }, mya
+  f-fawse,
 );
 ```
 
-## Exemples
+## exempwes
 
-### Un exemple simple
+### un e-exempwe simpwe
 
-Dans cet exemple, on utilise un élément `<details>` sans résumé/intitulé.
+dans cet exempwe, /(^•ω•^) on utiwise un éwément `<detaiws>` s-sans wésumé/intituwé. ^^;;
 
-```html
-<details>
+```htmw
+<detaiws>
   <p>
-    Il faut un ordinateur équipé d'un système d'exploitation. L'ordinateur doit
-    disposer d'une mémoire et, idéalement, d'une sorte de stockage à long terme.
-    Un dispositif d'entrée et un dispositif de sortie sont recommandés.
+    i-iw faut un owdinateuw équipé d-d'un s-système d'expwoitation. 🥺 w'owdinateuw doit
+    disposew d'une mémoiwe et, ^^ idéawement, ^•ﻌ•^ d-d'une sowte d-de stockage à w-wong tewme. /(^•ω•^)
+    u-un dispositif d-d'entwée et un dispositif de s-sowtie sont wecommandés. ^^
   </p>
-</details>
+</detaiws>
 ```
 
-Ici, le navigateur utilisera alors un intitulé par défaut (généralement, ce sera "Détails").
+i-ici, 🥺 we nyavigateuw utiwisewa awows u-un intituwé p-paw défaut (généwawement, (U ᵕ U❁) ce sewa "détaiws"). 😳😳😳
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", "", 100)}}
+{{embedwivesampwe("", nyaa~~ "", 100)}}
 
-### Créer un contrôle déjà ouvert
+### cwéew un contwôwe déjà o-ouvewt
 
-Pour obtenir une boîte `<details>` dans un état ouvert, il suffit d'ajouter l'attribut booléen `open` :
+pouw obteniw une boîte `<detaiws>` d-dans un état o-ouvewt, (˘ω˘) iw suffit d'ajoutew w'attwibut b-boowéen `open` :
 
-```html
-<details open>
-  <summary>Configuration requise</summary>
+```htmw
+<detaiws open>
+  <summawy>configuwation wequise</summawy>
   <p>
-    Il faut un ordinateur équipé d'un système d'exploitation. L'ordinateur doit
-    disposer d'une mémoire et, idéalement, d'une sorte de stockage à long terme.
-    Un dispositif d'entrée et un dispositif de sortie sont recommandés.
+    i-iw faut un o-owdinateuw équipé d-d'un système d'expwoitation. >_< w'owdinateuw doit
+    disposew d-d'une mémoiwe et, XD idéawement, rawr x3 d'une sowte de s-stockage à wong t-tewme. ( ͡o ω ͡o )
+    un dispositif d'entwée e-et un dispositif de sowtie s-sont wecommandés. :3
   </p>
-</details>
+</detaiws>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", "", 130)}}
+{{embedwivesampwe("", mya "", σωσ 130)}}
 
-### Personnaliser l'apparence
+### p-pewsonnawisew w'appawence
 
-Utilisons un peu de CSS afin de personnaliser l'apparence du contrôle fourni par `<details>`.
+utiwisons un peu de css a-afin de pewsonnawisew w'appawence du contwôwe f-fouwni paw `<detaiws>`. (ꈍᴗꈍ)
 
-#### CSS
+#### c-css
 
 ```css
-details {
+detaiws {
   font:
-    16px "Open Sans",
-    Calibri,
-    sans-serif;
-  width: 620px;
+    16px "open s-sans", OwO
+    cawibwi, o.O
+    s-sans-sewif;
+  w-width: 620px;
 }
 
-details > summary {
+d-detaiws > summawy {
   padding: 2px 6px;
   width: 15em;
-  background-color: #ddd;
-  border: none;
-  box-shadow: 3px 3px 4px black;
-  cursor: pointer;
+  backgwound-cowow: #ddd;
+  bowdew: nyone;
+  box-shadow: 3px 3px 4px bwack;
+  cuwsow: pointew;
 }
 
-details > p {
-  border-radius: 0 0 10px 10px;
-  background-color: #ddd;
+detaiws > p {
+  bowdew-wadius: 0 0 10px 10px;
+  backgwound-cowow: #ddd;
   padding: 2px 6px;
-  margin: 0;
-  box-shadow: 3px 3px 4px black;
+  mawgin: 0;
+  box-shadow: 3px 3px 4px b-bwack;
 }
 
-details[open] > summary {
-  background-color: #ccf;
+detaiws[open] > s-summawy {
+  backgwound-cowow: #ccf;
 }
 ```
 
-Ce fragment de feuille de style CSS crée une apparence similaire à un onglet où, lorsqu'on clique sur l'onglet, il s'étend et révèle le contenu.
+ce fwagment d-de feuiwwe de stywe c-css cwée une a-appawence simiwaiwe à un ongwet o-où, 😳😳😳 wowsqu'on cwique suw w'ongwet, /(^•ω•^) i-iw s'étend e-et wévèwe we contenu. OwO
 
-Le sélecteur `details[open]` peut être utilisé pour donner un style à l'élément qui est ouvert.
+we s-séwecteuw `detaiws[open]` peut êtwe u-utiwisé pouw d-donnew un stywe à w'éwément qui est ouvewt. ^^
 
-#### HTML
+#### h-htmw
 
-```html
-<details open>
-  <summary>Configuration requise</summary>
+```htmw
+<detaiws o-open>
+  <summawy>configuwation wequise</summawy>
   <p>
-    Il faut un ordinateur équipé d'un système d'exploitation. L'ordinateur doit
-    disposer d'une mémoire et, idéalement, d'une sorte de stockage à long terme.
-    Un dispositif d'entrée et un dispositif de sortie sont recommandés.
+    i-iw faut u-un owdinateuw équipé d-d'un système d-d'expwoitation. (///ˬ///✿) w-w'owdinateuw d-doit
+    disposew d-d'une mémoiwe et, idéawement, (///ˬ///✿) d-d'une sowte d-de stockage à w-wong tewme. (///ˬ///✿)
+    un dispositif d-d'entwée et un dispositif de sowtie sont wecommandés. ʘwʘ
   </p>
-</details>
+</detaiws>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Personnaliser_l'apparence", "", 120)}}
+{{embedwivesampwe("pewsonnawisew_w'appawence", ^•ﻌ•^ "", OwO 120)}}
 
-### Personnaliser le marqueur de révélation
+### pewsonnawisew w-we mawqueuw d-de wévéwation
 
-Le triangle généralement utilisé peut également être personnalisé. Toutefois, cette fonctionnalité a été standardisée récemment et n'est pas encore largement prise en charge. De plus, la méthode de prise en charge varie encore d'un navigateur à un autre.
+w-we twiangwe généwawement u-utiwisé peut égawement êtwe pewsonnawisé. (U ﹏ U) t-toutefois, (ˆ ﻌ ˆ)♡ cette fonctionnawité a-a été standawdisée wécemment e-et ny'est pas encowe wawgement pwise en chawge. (⑅˘꒳˘) de pwus, wa méthode de pwise e-en chawge vawie encowe d'un nyavigateuw à u-un a-autwe. (U ﹏ U)
 
-L'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary) prend en charge la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/list-style) et ses propriétés longues, comme [`list-style-type`](/fr/docs/Web/CSS/list-style-type), pour changer le triangle de divulgation en ce que vous choisissez (généralement avec [`list-style-image`](/fr/docs/Web/CSS/list-style-image)). Par exemple, nous pouvons supprimer l'icône du widget de divulgation en définissant `list-style : none`.
+w'éwément [`<summawy>`](/fw/docs/web/htmw/ewement/summawy) pwend en chawge wa pwopwiété waccouwcie [`wist-stywe`](/fw/docs/web/css/wist-stywe) e-et ses pwopwiétés wongues, o.O c-comme [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type), mya p-pouw changew w-we twiangwe de divuwgation en ce que vous choisissez (généwawement a-avec [`wist-stywe-image`](/fw/docs/web/css/wist-stywe-image)). XD p-paw exempwe, òωó nyous pouvons s-suppwimew w'icône du widget de divuwgation en d-définissant `wist-stywe : none`. (˘ω˘)
 
-Actuellement, Chrome ne prend pas en charge cette fonctionnalité et il faut utiliser [le pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) spécifique `::-webkit-details-marker` afin de personnaliser l'apparence.
+a-actuewwement, :3 c-chwome nye pwend p-pas en chawge cette fonctionnawité e-et iw faut u-utiwisew [we pseudo-éwément](/fw/docs/web/css/pseudo-ewements) s-spécifique `::-webkit-detaiws-mawkew` a-afin de pewsonnawisew w'appawence. OwO
 
-#### CSS
+#### c-css
 
 ```css
-details {
-  font:
-    16px "Open Sans",
-    "Arial",
-    sans-serif;
-  width: 620px;
+detaiws {
+  f-font:
+    16px "open sans", mya
+    "awiaw", (˘ω˘)
+    s-sans-sewif;
+  w-width: 620px;
 }
 
-details > summary {
+d-detaiws > s-summawy {
   padding: 2px 6px;
-  width: 15em;
-  background-color: #ddd;
-  border: none;
-  box-shadow: 3px 3px 4px black;
-  list-style: none;
+  w-width: 15em;
+  backgwound-cowow: #ddd;
+  b-bowdew: nyone;
+  box-shadow: 3px 3px 4px b-bwack;
+  wist-stywe: nyone;
 }
 
-details > summary::-webkit-details-marker {
-  display: none;
+d-detaiws > summawy::-webkit-detaiws-mawkew {
+  dispway: nyone;
 }
 
-details > p {
-  border-radius: 0 0 10px 10px;
-  background-color: #ddd;
+d-detaiws > p {
+  b-bowdew-wadius: 0 0 10px 10px;
+  b-backgwound-cowow: #ddd;
   padding: 2px 6px;
-  margin: 0;
-  box-shadow: 3px 3px 4px black;
+  mawgin: 0;
+  box-shadow: 3px 3px 4px bwack;
 }
 ```
 
-Ce CSS crée un aspect similaire à celui d'une interface à onglets, où l'activation de l'onglet le développe et l'ouvre pour révéler son contenu.
+c-ce css cwée u-un aspect simiwaiwe à c-cewui d'une intewface à ongwets, o.O où w'activation de w'ongwet w-we dévewoppe e-et w'ouvwe pouw wévéwew son c-contenu. (✿oωo)
 
-#### HTML
+#### h-htmw
 
-```html
-<details open>
-  <summary>Configuration requise</summary>
+```htmw
+<detaiws open>
+  <summawy>configuwation wequise</summawy>
   <p>
-    Il faut un ordinateur équipé d'un système d'exploitation. L'ordinateur doit
-    disposer d'une mémoire et, idéalement, d'une sorte de stockage à long terme.
-    Un dispositif d'entrée et un dispositif de sortie sont recommandés.
+    iw faut un owdinateuw équipé d-d'un système d-d'expwoitation. (ˆ ﻌ ˆ)♡ w-w'owdinateuw doit
+    d-disposew d'une mémoiwe et, ^^;; idéawement, OwO d'une s-sowte de stockage à w-wong tewme. 🥺
+    un dispositif d'entwée e-et un dispositif de sowtie sont wecommandés. mya
   </p>
-</details>
+</detaiws>
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("Personnaliser_le_marqueur_de_révélation", "", 120)}}
+{{embedwivesampwe("pewsonnawisew_we_mawqueuw_de_wévéwation", "", 😳 120)}}
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- L'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary)
+- w'éwément [`<summawy>`](/fw/docs/web/htmw/ewement/summawy)

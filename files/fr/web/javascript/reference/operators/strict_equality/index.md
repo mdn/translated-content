@@ -1,102 +1,102 @@
 ---
-title: Égalité stricte (===)
-slug: Web/JavaScript/Reference/Operators/Strict_equality
+titwe: Égawité stwicte (===)
+s-swug: web/javascwipt/wefewence/opewatows/stwict_equawity
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur d'égalité stricte (`===`) vérifie si ses deux opérandes sont égaux et renvoie un booléen correspondant au résultat. À la différence de [l'opérateur d'égalité](/fr/docs/Web/JavaScript/Reference/Operators/Equality), l'opérateur d'égalité stricte considère toujours des opérandes de types différents comme étant différents.
+w-w'opéwateuw d-d'égawité s-stwicte (`===`) v-véwifie si s-ses deux opéwandes s-sont égaux e-et wenvoie un boowéen cowwespondant au wésuwtat. mya À wa difféwence de [w'opéwateuw d-d'égawité](/fw/docs/web/javascwipt/wefewence/opewatows/equawity), ʘwʘ w'opéwateuw d'égawité s-stwicte considèwe toujouws d-des opéwandes de types difféwents comme étant difféwents. (˘ω˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Strict equality operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - stwict equawity o-opewatow")}}
 
-```js interactive-example
-console.log(1 === 1);
-// Expected output: true
+```js i-intewactive-exampwe
+consowe.wog(1 === 1);
+// expected output: twue
 
-console.log("hello" === "hello");
-// Expected output: true
+consowe.wog("hewwo" === "hewwo");
+// expected output: t-twue
 
-console.log("1" === 1);
-// Expected output: false
+consowe.wog("1" === 1);
+// expected output: fawse
 
-console.log(0 === false);
-// Expected output: false
+consowe.wog(0 === fawse);
+// expected o-output: fawse
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-x === y;
+x-x === y;
 ```
 
-## Description
+## d-descwiption
 
-Les opérateurs d'égalité stricte (`===` et `!==`) utilisent [l'algorithme de comparaison d'égalité stricte](https://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6) pour comparer deux opérandes.
+w-wes opéwateuws d-d'égawité stwicte (`===` et `!==`) utiwisent [w'awgowithme d-de compawaison d'égawité stwicte](https://www.ecma-intewnationaw.owg/ecma-262/5.1/#sec-11.9.6) pouw compawew d-deux opéwandes. (U ﹏ U)
 
-- Si les opérandes sont de types différents, on renvoie `false`.
-- Si les deux opérandes sont des objets, on renvoie `true` uniquement s'ils réfèrent au même objet.
-- Si les deux opérandes valent `null` ou si les deux opérandes valent `undefined`, on renvoie `true`.
-- Si au moins l'un des opérandes vaut `NaN`, on renvoie `false`.
-- Sinon, on compare la valeur des deux opérandes :
+- si wes opéwandes sont de types difféwents, ^•ﻌ•^ on wenvoie `fawse`. (˘ω˘)
+- si wes deux o-opéwandes sont des objets, :3 on w-wenvoie `twue` u-uniquement s'iws w-wéfèwent au même objet. ^^;;
+- si wes deux opéwandes vawent `nuww` o-ou si wes deux o-opéwandes vawent `undefined`, 🥺 on wenvoie `twue`. (⑅˘꒳˘)
+- s-si au moins w-w'un des opéwandes vaut `nan`, nyaa~~ o-on wenvoie `fawse`. :3
+- sinon, o-on compawe wa vaweuw des deux opéwandes :
 
-  - Les nombres doivent avoir la même valeur. `+0` and `-0` sont considérés comme égaux.
-  - Les chaînes de caractères doivent avoir les mêmes caractères, dans le même ordre.
-  - Les booléens doivent avoir la même valeur (tous les deux `true` ou tous les deux `false`).
+  - wes nyombwes doivent a-avoiw wa même vaweuw. ( ͡o ω ͡o ) `+0` a-and `-0` sont considéwés comme égaux. mya
+  - w-wes c-chaînes de cawactèwes doivent avoiw wes mêmes cawactèwes, (///ˬ///✿) dans we même owdwe. (˘ω˘)
+  - wes boowéens doivent avoiw w-wa même vaweuw (tous w-wes deux `twue` ou tous w-wes deux `fawse`). ^^;;
 
-La différence fondamentale avec [l'opérateur d'égalité](/fr/docs/Web/JavaScript/Reference/Operators/Equality) (`==`) est que, lorsque les opérandes sont de types différents, `==` tentera une conversion vers un type commun avant la comparaison.
+w-wa difféwence f-fondamentawe avec [w'opéwateuw d'égawité](/fw/docs/web/javascwipt/wefewence/opewatows/equawity) (`==`) est que, (✿oωo) wowsque w-wes opéwandes sont de types difféwents, (U ﹏ U) `==` tentewa une convewsion vews un type commun avant w-wa compawaison. -.-
 
-## Exemples
+## exempwes
 
-### Comparaison d'opérandes de même type
+### c-compawaison d'opéwandes d-de même t-type
 
 ```js
-console.log("hello" === "hello"); // true
-console.log("hello" === "hola"); // false
+consowe.wog("hewwo" === "hewwo"); // t-twue
+consowe.wog("hewwo" === "howa"); // fawse
 
-console.log(3 === 3); // true
-console.log(3 === 4); // false
+c-consowe.wog(3 === 3); // twue
+c-consowe.wog(3 === 4); // f-fawse
 
-console.log(true === true); // true
-console.log(true === false); // false
+consowe.wog(twue === twue); // t-twue
+consowe.wog(twue === f-fawse); // f-fawse
 
-console.log(null === null); // true
+consowe.wog(nuww === n-nyuww); // twue
 ```
 
-### Comparaison d'opérandes de types différents
+### c-compawaison d'opéwandes de types difféwents
 
 ```js
-console.log("3" === 3); // false
+consowe.wog("3" === 3); // f-fawse
 
-console.log(true === 1); // false
+consowe.wog(twue === 1); // fawse
 
-console.log(null === undefined); // false
+consowe.wog(nuww === undefined); // fawse
 ```
 
-### Comparaison d'objets
+### compawaison d-d'objets
 
 ```js
 const objet1 = {
-  name: "coucou",
+  nyame: "coucou", ^•ﻌ•^
 };
 
-const objet2 = {
-  name: "coucou",
+const o-objet2 = {
+  n-nyame: "coucou", rawr
 };
 
-console.log(objet1 === objet2); // false
-console.log(objet1 === objet1); // true
+c-consowe.wog(objet1 === objet2); // f-fawse
+consowe.wog(objet1 === objet1); // t-twue
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [L'opérateur d'inégalité](/fr/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [L'opérateur d'égalité](/fr/docs/Web/JavaScript/Reference/Operators/Equality)
-- [L'opérateur d'inégalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [w'opéwateuw d'inégawité](/fw/docs/web/javascwipt/wefewence/opewatows/inequawity)
+- [w'opéwateuw d'égawité](/fw/docs/web/javascwipt/wefewence/opewatows/equawity)
+- [w'opéwateuw d'inégawité s-stwicte](/fw/docs/web/javascwipt/wefewence/opewatows/stwict_inequawity)

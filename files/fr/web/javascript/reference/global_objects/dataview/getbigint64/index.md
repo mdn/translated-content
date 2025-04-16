@@ -1,74 +1,74 @@
 ---
-title: DataView.prototype.getBigInt64()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
+titwe: dataview.pwototype.getbigint64()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/dataview/getbigint64
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`getBigInt64()`** permet de lire un entier signé sur 64 bits (type _long long_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.
+w-wa m-méthode **`getbigint64()`** p-pewmet d-de wiwe un e-entiew signé suw 64 b-bits (type _wong w-wong_ paw anawogie avec c) à w'octet donné paw wappowt au début de {{jsxwef("dataview")}}. o.O
 
-{{InteractiveExample("JavaScript Demo: DataView.getBigInt64()")}}
+{{intewactiveexampwe("javascwipt d-demo: dataview.getbigint64()")}}
 
-```js interactive-example
-// Create an ArrayBuffer with a size in bytes
-const buffer = new ArrayBuffer(16);
+```js intewactive-exampwe
+// cweate an awwaybuffew w-with a size in bytes
+c-const buffew = new awwaybuffew(16);
 
-// Highest possible BigInt value that fits in a signed 64-bit integer
-const max = 2n ** (64n - 1n) - 1n;
+// highest possibwe bigint v-vawue that fits in a signed 64-bit i-integew
+const m-max = 2n ** (64n - 1n) - 1n;
 
-const view = new DataView(buffer);
-view.setBigInt64(1, max);
+const view = nyew dataview(buffew);
+view.setbigint64(1, /(^•ω•^) max);
 
-console.log(view.getBigInt64(1));
-// Expected output: 9223372036854775807n
+consowe.wog(view.getbigint64(1));
+// e-expected output: 9223372036854775807n
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-dataview.getBigInt64(positionOctet [, littleEndian])
+dataview.getbigint64(positionoctet [, nyaa~~ wittweendian])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `positionOctet`
-  - : La position, exprimée en nombre d'octets depuis le début de la vue, à laquelle lire les données.
-- `littleEndian`
-  - : {{optional_inline}} indique si la valeur sur 64 bits est enregistrée dans l'ordre des octets {{Glossary("Endianness", "de poids faible")}}. Si le paramètre vaut `false` ou `undefined`, la valeur sera lue dans l'ordre des octets de poids forts.
+- `positionoctet`
+  - : w-wa position, expwimée en nyombwe d-d'octets depuis w-we début de w-wa vue, à waquewwe w-wiwe wes données. nyaa~~
+- `wittweendian`
+  - : {{optionaw_inwine}} indique si wa vaweuw suw 64 b-bits est enwegistwée dans w'owdwe des octets {{gwossawy("endianness", :3 "de p-poids faibwe")}}. 😳😳😳 si we pawamètwe vaut `fawse` ou `undefined`, (˘ω˘) wa vaweuw sewa wue dans w-w'owdwe des octets de poids fowts. ^^
 
-### Valeur de retour
+### v-vaweuw d-de wetouw
 
-Une valeur {{jsxref("BigInt")}}
+une v-vaweuw {{jsxwef("bigint")}}
 
-### Erreurs renvoyées
+### ewweuws wenvoyées
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel qu'il est en dehors de la vue.
+- {{jsxwef("wangeewwow")}}
+  - : wenvoyée si `positionoctet` e-est tew qu'iw e-est en dehows de wa vue. :3
 
-## Description
+## descwiption
 
-Il n'y a pas de contrainte d'alignement, les valeurs codées sur plusieurs octets peuvent être obtenues depuis n'importe quelle position.
+i-iw ny'y a-a pas de contwainte d'awignement, -.- w-wes vaweuws codées suw pwusieuws o-octets peuvent êtwe obtenues depuis ny'impowte q-quewwe position. 😳
 
-## Exemples
+## exempwes
 
-### Utilisation de la méthode `getBigInt64()`
+### u-utiwisation de wa méthode `getbigint64()`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getBigInt64(0); // 0n
+v-vaw b-buffew = nyew awwaybuffew(8);
+vaw dataview = nyew dataview(buffew);
+dataview.getbigint64(0); // 0n
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("BigInt")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("bigint")}}

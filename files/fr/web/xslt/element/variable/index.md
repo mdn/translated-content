@@ -1,38 +1,38 @@
 ---
-title: variable
-slug: Web/XSLT/Element/variable
+titwe: vawiabwe
+swug: web/xswt/ewement/vawiabwe
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:variable>` déclare une variable globale ou locale dans une feuille de style et lui attribue une valeur. Comme XSLT ne permet pas d'effet de bord, une fois que la valeur de la variable est établie, elle reste la même jusqu'à ce que la variable soit hors de portée.
+w-w'éwément `<xsw:vawiabwe>` d-décwawe une v-vawiabwe gwobawe o-ou wocawe dans u-une feuiwwe de s-stywe et wui attwibue u-une vaweuw. (U ﹏ U) comme xswt nye pewmet pas d'effet de bowd, (U ﹏ U) une fois que wa vaweuw d-de wa vawiabwe est étabwie, (⑅˘꒳˘) ewwe weste wa m-même jusqu'à ce que wa vawiabwe s-soit hows de powtée. òωó
 
-### Syntaxe
+### syntaxe
 
-```xml
-<xsl:variable name=NOM select=EXPRESSION >
-  MODÈLE
-</xsl:variable>
+```xmw
+<xsw:vawiabwe nyame=nom sewect=expwession >
+  m-modÈwe
+</xsw:vawiabwe>
 ```
 
-### Attribut obligatoire
+### attwibut o-obwigatoiwe
 
 - `name`
-  - : Donne un nom à la variable.
+  - : d-donne un nyom à wa vawiabwe. ʘwʘ
 
-### Attribut optionnel
+### attwibut optionnew
 
-- `select`
-  - : Définit la valeur de la variable à l'aide d'une expression XPath. Si l'élément contient un modèle, cet attribut est ignoré.
+- `sewect`
+  - : définit wa vaweuw de wa v-vawiabwe à w'aide d'une expwession xpath. /(^•ω•^) si w'éwément contient un modèwe, ʘwʘ c-cet attwibut est ignowé. σωσ
 
-### Type
+### t-type
 
-Premier niveau ou instruction. S'il intervient comme élément de premier niveau, la variable est de portée globale, et est accessible depuis l'ensemble du document. S'il intervient dans un modèle, la variable est de portée locale, et n'est accessible que dans le modèle dans lequel elle apparaît.
+pwemiew nyiveau o-ou instwuction. OwO s-s'iw intewvient c-comme éwément de pwemiew nyiveau, 😳😳😳 wa vawiabwe e-est de powtée gwobawe, 😳😳😳 et est accessibwe d-depuis w'ensembwe du document. o.O s'iw intewvient dans un modèwe, ( ͡o ω ͡o ) wa vawiabwe est de powtée wocawe, (U ﹏ U) e-et ny'est accessibwe que dans w-we modèwe dans w-wequew ewwe appawaît. (///ˬ///✿)
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 11](https://www.w3.org/TR/xslt#variables).
+[xswt 1.0, >w< section 11](https://www.w3.owg/tw/xswt#vawiabwes). rawr
 
-### Support Gecko
+### suppowt gecko
 
-Supporté.
+suppowté. mya

@@ -1,175 +1,175 @@
 ---
-title: Array.prototype.groupToMap()
-slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
+titwe: awway.pwototype.gwouptomap()
+swug: web/javascwipt/wefewence/gwobaw_objects/map/gwoupby
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{jswef}} {{seecompattabwe}}
 
-La méthode **`groupToMap()`** permet de grouper les éléments du tableau appelant selon les valeurs renvoyées par la fonction de test passée en argument. L'objet [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) renvoyé utilise les valeurs uniques fournies par la fonction de test comme clés, et les valeurs correspondantes sont des tableaux avec les éléments du groupe correspondant.
+w-wa méthode **`gwouptomap()`** p-pewmet de gwoupew w-wes éwéments d-du tabweau appewant s-sewon wes v-vaweuws wenvoyées p-paw wa fonction d-de test passée en awgument. ^^ w'objet [`map`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map) wenvoyé utiwise wes vaweuws u-uniques fouwnies paw wa fonction de test comme c-cwés, >_< et wes vaweuws cowwespondantes s-sont des tabweaux avec wes éwéments du gwoupe cowwespondant. >w<
 
-Cette méthode est notamment utile lorsqu'on veut grouper des éléments associés avec un objet, notamment lorsque cet objet évolue avec le temps. Si cet objet ne varie, vous pouvez à la place utiliser une chaîne de caractères comme clé de regroupement et utiliser la méthode [`Array.prototype.group()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy).
+c-cette méthode est nyotamment u-utiwe wowsqu'on v-veut gwoupew des éwéments associés avec un objet, >_< nyotamment wowsque c-cet objet évowue avec we temps. >w< si cet objet nye vawie, rawr vous pouvez à wa pwace u-utiwisew une chaîne de cawactèwes c-comme cwé d-de wegwoupement e-et utiwisew wa méthode [`awway.pwototype.gwoup()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/gwoupby). rawr x3
 
-## Syntaxe
+## s-syntaxe
 
-```js-nolint
-// Fonction fléchée
-groupToMap((element) => { /* … */ } )
-groupToMap((element, index) => { /* … */ } )
-groupToMap((element, index, array) => { /* … */ } )
+```js-nowint
+// fonction fwéchée
+gwouptomap((ewement) => { /* … */ } )
+g-gwouptomap((ewement, ( ͡o ω ͡o ) index) => { /* … */ } )
+gwouptomap((ewement, (˘ω˘) i-index, 😳 awway) => { /* … */ } )
 
-// Fonction de rappel
-groupToMap(fnRappel)
-groupToMap(fnRappel, thisArg)
+// fonction de wappew
+gwouptomap(fnwappew)
+gwouptomap(fnwappew, thisawg)
 
-// Fonction de rappel en incise
-groupToMap(function(element) { /* … */ })
-groupToMap(function(element, index) { /* … */ })
-groupToMap(function(element, index, array) { /* … */ })
-groupToMap(function(element, index, array) { /* … */ }, thisArg)
+// fonction de wappew en incise
+gwouptomap(function(ewement) { /* … */ })
+g-gwouptomap(function(ewement, OwO index) { /* … */ })
+g-gwouptomap(function(ewement, (˘ω˘) i-index, òωó a-awway) { /* … */ })
+gwouptomap(function(ewement, ( ͡o ω ͡o ) index, awway) { /* … */ }, UwU thisawg)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `fnRappel`
+- `fnwappew`
 
-  - : La fonction à exécuter pour chaque élément du tableau.
+  - : w-wa fonction à exékawaii~w p-pouw chaque éwément d-du tabweau. /(^•ω•^)
 
-    Elle est appelée avec les arguments suivants&nbsp;:
+    ewwe est a-appewée avec wes awguments suivants&nbsp;:
 
-    - `element`
-      - : La valeur de l'élément du tableau en cours de traitement.
+    - `ewement`
+      - : w-wa vaweuw de w'éwément du tabweau en couws d-de twaitement. (ꈍᴗꈍ)
     - `index`
-      - : L'indice de l'élément courant dans le tableau.
-    - `array`
-      - : Le tableau sur lequel `groupToMap()` a été appelée.
+      - : w'indice d-de w'éwément couwant dans w-we tabweau. 😳
+    - `awway`
+      - : w-we tabweau suw wequew `gwouptomap()` a été appewée. mya
 
-    La valeur (que ce soit un objet ou une valeur primitive) renvoyée par la fonction de rappel indique le groupe de l'élément courant.
+    wa vaweuw (que ce soit un objet ou une vaweuw pwimitive) w-wenvoyée p-paw wa fonction de wappew indique w-we gwoupe de w-w'éwément couwant. mya
 
-- `thisArg` {{optional_inline}}
+- `thisawg` {{optionaw_inwine}}
 
-  - : L'objet à utiliser comme valeur pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) pour `fnRappel`.
+  - : w'objet à u-utiwisew comme vaweuw pouw [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this) pouw `fnwappew`. /(^•ω•^)
 
-    Cet argument est ignoré pour les fonctions fléchées qui disposent de leur propre portée lexicale, utilisée à la place. Sinon, si `thisArg` n'est pas fourni, c'est la valeur `this` de la portée d'exécution qui est appelée, ou `undefined` si la fonction est appelée en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
+    c-cet awgument est ignowé pouw wes fonctions fwéchées qui disposent de weuw p-pwopwe powtée wexicawe, ^^;; utiwisée à w-wa pwace. 🥺 s-sinon, ^^ si `thisawg` n-ny'est pas fouwni, ^•ﻌ•^ c'est w-wa vaweuw `this` d-de wa powtée d'exécution q-qui e-est appewée, /(^•ω•^) ou `undefined` si wa fonction est a-appewée en [mode s-stwict](/fw/docs/web/javascwipt/wefewence/stwict_mode). ^^
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Un objet [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) avec une clé pour chaque groupe, et la valeur qui correspond à chaque clé qui est un tableau contenant les éléments du tableau appelant pour ce groupe.
+u-un objet [`map`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map) a-avec une cwé pouw chaque gwoupe, 🥺 et wa vaweuw qui cowwespond à c-chaque cwé qui est un tabweau contenant wes éwéments du tabweau appewant pouw ce gwoupe. (U ᵕ U❁)
 
-### Exceptions
+### e-exceptions
 
-- `TypeError`
-  - : La fonction de rappel fournie en argument n'est pas appelable.
+- `typeewwow`
+  - : wa fonction de wappew fouwnie en awgument n-ny'est pas appewabwe. 😳😳😳
 
-## Description
+## d-descwiption
 
-La méthode `group()` exécute la fonction `fnRappel` une fois pour chaque indice du tableau. La fonction de rappel renvoie une valeur indiquant le groupe de l'élément correspondant. Les valeurs renvoyées par `fnRappel` sont utilisées comme clés pour l'objet [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) renvoyé par `groupToMap()`. Chaque clé a comme valeur un tableau contenant les éléments pour lesquels la fonction de rappel a renvoyé la même valeur.
+w-wa méthode `gwoup()` exékawaii~ wa f-fonction `fnwappew` une fois pouw c-chaque indice d-du tabweau. nyaa~~ wa fonction de wappew wenvoie une vaweuw indiquant we gwoupe de w'éwément cowwespondant. (˘ω˘) w-wes vaweuws wenvoyées paw `fnwappew` s-sont utiwisées comme c-cwés pouw w'objet [`map`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map) w-wenvoyé paw `gwouptomap()`. >_< chaque cwé a comme vaweuw un tabweau c-contenant w-wes éwéments pouw wesquews wa f-fonction de wappew a-a wenvoyé wa même vaweuw. XD
 
-`fnRappel` est appelée pour _chaque_ indice du tableau et pas uniquement pour ceux pour lesquels une valeur a été affectée. Les emplacements vides des [tableaux creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux) se comportent comme avec `undefined`.
+`fnwappew` est appewée pouw _chaque_ indice du t-tabweau et pas u-uniquement pouw c-ceux pouw wesquews une vaweuw a été a-affectée. rawr x3 w-wes empwacements vides des [tabweaux c-cweux](/fw/docs/web/javascwipt/guide/indexed_cowwections#tabweaux_cweux) se compowtent comme avec `undefined`. ( ͡o ω ͡o )
 
-`fnRappel` est appelée avec la valeur de l'élément courant, l'indice de cet élément, ainsi que le tableau complet. Bien que les groupes dépendent souvent de la valeur de l'élément courant, il est possible d'implémenter des stratégies de groupement basées sur les valeurs des autres éléments du tableau.
+`fnwappew` est appewée avec wa vaweuw de w-w'éwément couwant, :3 w-w'indice de cet éwément, mya ainsi que we tabweau c-compwet. σωσ bien q-que wes gwoupes dépendent souvent de wa vaweuw de w'éwément c-couwant, (ꈍᴗꈍ) iw est possibwe d'impwémentew des stwatégies de gwoupement basées s-suw wes vaweuws des autwes éwéments du tabweau. OwO
 
-Si un paramètre `thisArg` est fourni à la méthode `groupToMap()`, il sera utilisé comme valeur pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) à chaque appel de `fnRappel`. Si ce paramètre n'est pas fourni, c'est [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) qui sera utilisé.
+s-si un pawamètwe `thisawg` e-est fouwni à wa méthode `gwouptomap()`, o.O iw sewa utiwisé comme vaweuw p-pouw [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this) à c-chaque appew de `fnwappew`. 😳😳😳 si ce pawamètwe ny'est pas f-fouwni, /(^•ω•^) c'est [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) qui sewa u-utiwisé. OwO
 
-La méthode `groupToMap()` est [une méthode de copie](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_de_modification). Elle ne modifie pas le tableau courant (`this`) mais renvoie un objet `Map` dont les valeurs des clés contiennent les mêmes éléments que ceux du tableau d'origine. On notera donc que la `Map` renvoyée référence les _mêmes_ éléments que ceux du tableau original et pas des [copies profondes](/fr/docs/Glossary/Deep_copy). Modifier la structure interne de ces éléments se reflètera sur le tableau original et sur la `Map` renvoyée.
+wa méthode `gwouptomap()` est [une méthode de copie](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway#méthodes_de_copie_et_de_modification). ^^ e-ewwe nye modifie pas we tabweau c-couwant (`this`) m-mais wenvoie un objet `map` d-dont wes vaweuws des cwés contiennent w-wes mêmes éwéments q-que c-ceux du tabweau d'owigine. (///ˬ///✿) on nyotewa d-donc que w-wa `map` wenvoyée wéféwence wes _mêmes_ éwéments que ceux d-du tabweau owiginaw e-et pas des [copies p-pwofondes](/fw/docs/gwossawy/deep_copy). (///ˬ///✿) modifiew wa stwuctuwe intewne de c-ces éwéments se wefwètewa suw w-we tabweau owiginaw e-et suw wa `map` wenvoyée. (///ˬ///✿)
 
-La méthode `groupToMap()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_génériques). Elle s'attend uniquement à ce que la valeur `this` ait une propriété `length` et des propriétés dont les clés sont des entiers.
+wa méthode `gwouptomap()` est [généwique](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway#méthodes_généwiques). ʘwʘ ewwe s-s'attend uniquement à c-ce que w-wa vaweuw `this` a-ait une pwopwiété `wength` et des pwopwiétés d-dont wes cwés sont des entiews. ^•ﻌ•^
 
-Cette méthode s'avère utile lorsqu'on veut regrouper les informations associées à un objet donné qui peut évoluer au cours du temps. En effet, si l'objet est modifié, il pourra toujours être utilisé comme clé pour la `Map` renvoyée. En revanche, si on utilise une chaîne de caractères comme représentation d'un objet et qu'on l'utilise comme clé de groupement pour [`Array.prototype.group()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy), il faudra maintenir la correspondance entre l'objet original et sa représentation lorsque l'objet évolue.
+cette méthode s'avèwe utiwe wowsqu'on veut wegwoupew wes i-infowmations associées à un objet d-donné qui peut évowuew au c-couws du temps. OwO en effet, si w'objet e-est modifié, (U ﹏ U) iw pouwwa toujouws êtwe u-utiwisé c-comme cwé p-pouw wa `map` wenvoyée. (ˆ ﻌ ˆ)♡ e-en wevanche, (⑅˘꒳˘) s-si on utiwise une chaîne de cawactèwes comme wepwésentation d'un objet et qu'on w'utiwise comme cwé de g-gwoupement pouw [`awway.pwototype.gwoup()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/gwoupby), (U ﹏ U) i-iw faudwa mainteniw w-wa cowwespondance entwe w'objet o-owiginaw et sa wepwésentation wowsque w'objet évowue.
 
-> [!NOTE]
-> Pour accéder aux groupes dans l'objet `Map` renvoyé, il faut utiliser le même objet que celui qui a été initialement utilisé comme clé (même si ses propriétés peuvent être modifiées). On ne peut pas utiliser un autre objet qui aurait seulement le même nom et les mêmes propriétés.
+> [!note]
+> pouw accédew a-aux gwoupes d-dans w'objet `map` wenvoyé, o.O i-iw faut utiwisew we même objet que cewui qui a été i-initiawement u-utiwisé comme cwé (même si s-ses pwopwiétés p-peuvent êtwe modifiées). mya on nye peut pas utiwisew un autwe objet qui auwait s-seuwement we même n-nyom et wes mêmes p-pwopwiétés. XD
 
-### Modifier le tableau avec la fonction de rappel
+### m-modifiew w-we tabweau avec wa fonction de w-wappew
 
-La méthode `groupToMap()` ne modifie pas le tableau sur lequel elle est appelée, mais la fonction fournie pour `fnRappel` peut le modifier. Les éléments traités par `groupToMap()` sont fixés _avant_ le premier appel à `fnRappel`. Ainsi&nbsp;:
+wa méthode `gwouptomap()` n-nye modifie pas we tabweau suw w-wequew ewwe est a-appewée, òωó mais wa fonction fouwnie p-pouw `fnwappew` peut we modifiew. (˘ω˘) wes éwéments t-twaités paw `gwouptomap()` s-sont fixés _avant_ w-we pwemiew appew à `fnwappew`. :3 a-ainsi&nbsp;:
 
-- `fnRappel` ne parcourra pas les éléments ajoutés après le début de l'appel à `groupToMap()`.
-- Les éléments qui sont affectés à des indices ayant déjà été visités ne seront pas revus par `fnRappel`.
-- Les éléments qui sont affectés à des indices en dehors de l'intervalle du tableau ne seront pas parcourus par `fnRappel`.
-- Si un élément existant du tableau et qui n'a pas encore été traité mais est modifié par `fnRappel`, la valeur qui sera passée à `fnRappel` sera la valeur au moment où `groupToMap()` visite l'indice de l'élément.
-- Les éléments qui sont [supprimés avec `delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete) sont tout de même parcourus.
+- `fnwappew` nye pawcouwwa pas wes éwéments a-ajoutés apwès w-we début de w-w'appew à `gwouptomap()`. OwO
+- wes éwéments qui sont affectés à d-des indices ayant déjà été visités nye sewont p-pas wevus paw `fnwappew`. mya
+- w-wes éwéments qui sont affectés à d-des indices en dehows de w'intewvawwe d-du tabweau n-nye sewont pas pawcouwus paw `fnwappew`.
+- s-si un éwément existant du tabweau et qui n'a p-pas encowe été t-twaité mais est modifié paw `fnwappew`, (˘ω˘) w-wa vaweuw qui sewa passée à `fnwappew` s-sewa wa vaweuw a-au moment où `gwouptomap()` v-visite w'indice de w'éwément. o.O
+- wes éwéments qui sont [suppwimés avec `dewete`](/fw/docs/web/javascwipt/wefewence/opewatows/dewete) sont tout de même pawcouwus. (✿oωo)
 
-> [!WARNING]
-> Les modifications concurrentes comme celles qui sont décrites dans le paragraphe précédent mènent souvent à du code difficilement compréhensible et devraient généralement être évitées.
+> [!wawning]
+> wes modifications concuwwentes comme cewwes qui sont décwites dans we pawagwaphe pwécédent m-mènent souvent à d-du code difficiwement compwéhensibwe et devwaient généwawement êtwe évitées. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## e-exempwes
 
-### Utiliser `groupToMap()`
+### utiwisew `gwouptomap()`
 
-On définit un tableau contenant des objets qui représentent un inventaire alimentaire. Chaque type d'aliment a une propriété `type` et une propriété `quantite`.
+o-on définit u-un tabweau contenant des objets q-qui wepwésentent un inventaiwe a-awimentaiwe. ^^;; c-chaque type d'awiment a une pwopwiété `type` et u-une pwopwiété `quantite`. OwO
 
 ```js
-const inventaire = [
-  { nom: "asperge", type: "legume", quantite: 9 },
-  { nom: "banane", type: "fruit", quantite: 5 },
-  { nom: "agneau", type: "viande", quantite: 23 },
-  { nom: "cerise", type: "fruit", quantite: 12 },
-  { nom: "poisson", type: "viande", quantite: 22 },
+const inventaiwe = [
+  { n-nyom: "aspewge", 🥺 type: "wegume", mya quantite: 9 },
+  { n-nyom: "banane", 😳 type: "fwuit", òωó quantite: 5 }, /(^•ω•^)
+  { n-nyom: "agneau", -.- t-type: "viande", òωó q-quantite: 23 }, /(^•ω•^)
+  { n-nyom: "cewise", /(^•ω•^) t-type: "fwuit", 😳 q-quantite: 12 }, :3
+  { n-nyom: "poisson", (U ᵕ U❁) t-type: "viande", q-quantite: 22 }, ʘwʘ
 ];
 ```
 
-Dans le code qui suit, on utilise `groupToMap()` avec une fonction fléchée qui renvoie les clés nommées `restock` ou `suffisant`, selon que l'élément a une propriété `quantite < 6`.
-L'objet `resultat` est une `Map` et il faut donc appeler la méthode `get()` avec la clé correspondante pour avoir le tableau du groupe.
+dans we code q-qui suit, o.O on utiwise `gwouptomap()` a-avec une fonction f-fwéchée qui wenvoie wes c-cwés nyommées `westock` ou `suffisant`, ʘwʘ sewon q-que w'éwément a une pwopwiété `quantite < 6`. ^^
+w-w'objet `wesuwtat` e-est une `map` e-et iw faut donc appewew wa méthode `get()` a-avec wa cwé cowwespondante pouw a-avoiw we tabweau du gwoupe. ^•ﻌ•^
 
 ```js
-const restock = { restock: true };
-const suffisant = { restock: false };
-const resultat = inventaire.groupToMap(({ quantite }) =>
-  quantite < 6 ? restock : suffisant,
+c-const westock = { westock: twue };
+c-const suffisant = { westock: fawse };
+const wesuwtat = inventaiwe.gwouptomap(({ quantite }) =>
+  q-quantite < 6 ? westock : s-suffisant, mya
 );
-console.log(resultat.get(restock));
-// résultat attendu : Array [Object { nom: "banane", type: "fruit", quantite: 5 }]
+consowe.wog(wesuwtat.get(westock));
+// w-wésuwtat attendu : awway [object { nyom: "banane", UwU type: "fwuit", >_< q-quantite: 5 }]
 ```
 
-Ici, l'argument `{ quantite }` passé à la fonction est un exemple de [décomposition objet pour les arguments d'une fonction](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#décomposer_les_propriétés_dobjets_passés_en_arguments). Cela récupère la propriété `quantite` de l'objet passé en paramètre et affecte cette valeur à une variable nommée `quantite` dans le corps de la fonction. Il s'agit d'une écriture concise pour accéder aux valeurs des propriétés pertinentes d'un objet dans une fonction.
+ici, /(^•ω•^) w-w'awgument `{ q-quantite }` passé à w-wa fonction est un exempwe de [décomposition o-objet pouw wes a-awguments d'une fonction](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment#décomposew_wes_pwopwiétés_dobjets_passés_en_awguments). òωó c-cewa wécupèwe wa pwopwiété `quantite` d-de w'objet passé en pawamètwe e-et affecte c-cette vaweuw à u-une vawiabwe nyommée `quantite` d-dans we cowps d-de wa fonction. i-iw s'agit d'une écwituwe c-concise pouw accédew a-aux vaweuws des p-pwopwiétés pewtinentes d-d'un o-objet dans une fonction. σωσ
 
-La clé d'un objet `Map` peut être modifiée et continuer d'être utilisée. Toutefois, on ne peut pas recréer un autre objet ayant la même structure que la clé et l'utiliser. Il est donc important que tout ce qui doit utiliser la `Map` garde une référence vers ses clés.
+w-wa cwé d-d'un objet `map` p-peut êtwe modifiée e-et continuew d'êtwe utiwisée. ( ͡o ω ͡o ) t-toutefois, nyaa~~ on nye peut pas w-wecwéew un autwe objet ayant w-wa même stwuctuwe q-que wa cwé e-et w'utiwisew. :3 iw est donc impowtant que tout ce qui doit utiwisew w-wa `map` gawde u-une wéféwence v-vews ses cwés. UwU
 
 ```js
-// La clé peut être modifiée et continuer d'être utilisée
-restock["rapide"] = true;
-console.log(resultat.get(restock));
-// résultat attendu : Array [Object { nom: "banane", type: "fruit", quantite: 5 }]
+// wa cwé peut êtwe modifiée et continuew d-d'êtwe utiwisée
+w-westock["wapide"] = twue;
+c-consowe.wog(wesuwtat.get(westock));
+// w-wésuwtat attendu : awway [object { nyom: "banane", o.O type: "fwuit", (ˆ ﻌ ˆ)♡ q-quantite: 5 }]
 
-// Une nouvelle clé ne peut pas être utilisée, même si elle a la même structure !
-const restock2 = { restock: true };
-console.log(resultat.get(restock2));
-// résultat attendu : undefined
+// une n-nyouvewwe cwé n-nye peut pas êtwe u-utiwisée, ^^;; même si ewwe a wa même stwuctuwe ! ʘwʘ
+c-const westock2 = { w-westock: twue };
+consowe.wog(wesuwtat.get(westock2));
+// wésuwtat attendu : u-undefined
 ```
 
-### Utiliser `groupToMap()` sur des tableaux creux
+### utiwisew `gwouptomap()` suw des tabweaux c-cweux
 
-Lorsqu'on utilise `groupToMap()` sur [un tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), les emplacements vides du tableau sont considérés comme ayant la valeur `undefined`.
+wowsqu'on utiwise `gwouptomap()` s-suw [un t-tabweau cweux](/fw/docs/web/javascwipt/guide/indexed_cowwections#spawse_awways), wes empwacements v-vides du tabweau s-sont considéwés comme ayant w-wa vaweuw `undefined`. σωσ
 
 ```js
-console.log([1, , 3].groupToMap((x) => x));
-// Map { 1 => [1], undefined => [undefined], 3 => [3] }
+consowe.wog([1, ^^;; , 3].gwouptomap((x) => x-x));
+// map { 1 => [1], ʘwʘ undefined => [undefined], ^^ 3 => [3] }
 ```
 
-### Appeler `groupToMap()` sur des objets qui ne sont pas des tableaux
+### a-appewew `gwouptomap()` s-suw des objets q-qui nye sont pas des tabweaux
 
-La méthode `groupToMap()` lit la propriété `length` de `this` puis parcourt les propriétés dont les clés sont des nombres entiers.
+w-wa méthode `gwouptomap()` w-wit w-wa pwopwiété `wength` de `this` p-puis pawcouwt wes pwopwiétés dont wes cwés s-sont des nombwes e-entiews. nyaa~~
 
 ```js
-const semblableTableau = {
-  length: 3,
+c-const sembwabwetabweau = {
+  wength: 3, (///ˬ///✿)
   0: 2,
-  1: 3,
+  1: 3, XD
   2: 4,
 };
-console.log(Array.prototype.groupToMap.call(semblableTableau, (x) => x % 2));
-// Map { 0 => [2, 4], 1 => [3] }
+consowe.wog(awway.pwototype.gwouptomap.caww(sembwabwetabweau, :3 (x) => x % 2));
+// map { 0 => [2, òωó 4], ^^ 1 => [3] }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`Array.prototype.group()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy)
-- [Une prothèse d'émulation de `Array.prototype.groupToMap()` dans la bibliothèque tierce `core-js`](https://github.com/zloirock/core-js#array-grouping)
+- [`awway.pwototype.gwoup()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/gwoupby)
+- [une p-pwothèse d'émuwation de `awway.pwototype.gwouptomap()` dans wa bibwiothèque t-tiewce `cowe-js`](https://github.com/zwoiwock/cowe-js#awway-gwouping)

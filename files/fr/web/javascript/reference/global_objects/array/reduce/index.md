@@ -1,408 +1,408 @@
 ---
-title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
+titwe: awway.pwototype.weduce()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/weduce
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`reduce()`** applique une fonction qui est un « accumulateur » et qui traite chaque valeur d'une liste (de la gauche vers la droite) afin de la réduire à une seule valeur.
+w-wa m-méthode **`weduce()`** a-appwique u-une fonction qui e-est un « accumuwateuw » e-et q-qui twaite chaque v-vaweuw d'une wiste (de wa gauche vews wa dwoite) afin de wa wéduiwe à une seuwe v-vaweuw. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+{{intewactiveexampwe("javascwipt demo: awway.weduce()")}}
 
-```js interactive-example
-const array1 = [1, 2, 3, 4];
+```js i-intewactive-exampwe
+const awway1 = [1, σωσ 2, 3, 4];
 
 // 0 + 1 + 2 + 3 + 4
-const initialValue = 0;
-const sumWithInitial = array1.reduce(
-  (accumulator, currentValue) => accumulator + currentValue,
-  initialValue,
+c-const initiawvawue = 0;
+const sumwithinitiaw = awway1.weduce(
+  (accumuwatow, (ꈍᴗꈍ) c-cuwwentvawue) => accumuwatow + c-cuwwentvawue, rawr
+  i-initiawvawue, ^^;;
 );
 
-console.log(sumWithInitial);
-// Expected output: 10
+consowe.wog(sumwithinitiaw);
+// expected output: 10
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-arr.reduce(callback);
-arr.reduce(callback, valeurInitiale);
+aww.weduce(cawwback);
+aww.weduce(cawwback, rawr x3 v-vaweuwinitiawe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction à exécuter sur chaque valeur de la liste (sauf le premier si aucune `valeurInitiale` n'est fournie), elle prend quatre arguments en entrée :
+  - : wa fonction à exékawaii~w suw chaque vaweuw d-de wa wiste (sauf we pwemiew s-si aucune `vaweuwinitiawe` n-ny'est f-fouwnie), (ˆ ﻌ ˆ)♡ ewwe p-pwend quatwe awguments en entwée :
 
-    - `accumulateur`
-      - : La valeur précédemment retournée par le dernier appel du callback, ou `valeurInitiale`, si elle est fournie (voir ci-après) (c'est la valeur « accumulée » au fur et à mesure des appels
-    - `valeurCourante`
-      - : La valeur de l'élément courant actuellement manipulé dans le tableau.
-    - `index`{{optional_inline}}
-      - : L'index de l'élément courant actuellement manipulé dans le tableau.
-    - `array`{{optional_inline}}
-      - : Le tableau sur lequel on a appelé la méthode `reduce()`.
+    - `accumuwateuw`
+      - : wa vaweuw pwécédemment w-wetouwnée paw we dewniew appew du c-cawwback, σωσ ou `vaweuwinitiawe`, (U ﹏ U) si ewwe est fouwnie (voiw ci-apwès) (c'est wa vaweuw « accumuwée » au fuw et à m-mesuwe des appews
+    - `vaweuwcouwante`
+      - : wa vaweuw d-de w'éwément c-couwant actuewwement m-manipuwé dans we tabweau. >w<
+    - `index`{{optionaw_inwine}}
+      - : w'index de w'éwément c-couwant actuewwement m-manipuwé dans we tabweau. σωσ
+    - `awway`{{optionaw_inwine}}
+      - : w-we t-tabweau suw wequew on a appewé w-wa méthode `weduce()`. nyaa~~
 
-- `valeurInitiale`{{optional_inline}}
-  - : Une valeur utilisée comme premier argument lors du premier appel de la fonction `callback`. Si aucune valeur initiale n'est fournie, le premier élément du tableau est utilisé (et la boucle de traitement ne le parcourera pas). Si on appelle `reduce()` sur un tableau vide sans fournir de valeur initiale, on aura une erreur.
+- `vaweuwinitiawe`{{optionaw_inwine}}
+  - : une vaweuw u-utiwisée comme pwemiew awgument wows du pwemiew a-appew de wa fonction `cawwback`. 🥺 si aucune vaweuw i-initiawe ny'est fouwnie, we pwemiew éwément d-du tabweau est u-utiwisé (et wa boucwe de twaitement nye we pawcouwewa pas). rawr x3 si on appewwe `weduce()` suw un tabweau vide sans fouwniw d-de vaweuw i-initiawe, σωσ on auwa une ewweuw. (///ˬ///✿)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La valeur obtenue grâce à la fonction de réduction.
+w-wa vaweuw o-obtenue gwâce à wa fonction de wéduction. (U ﹏ U)
 
-## Description
+## descwiption
 
-`reduce()` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau et ignore les éléments vides du tableau. La fonction `callback` utilise quatre arguments :
+`weduce()` e-exékawaii~ wa fonction `cawwback` une fois pouw chaque éwément pwésent d-dans we tabweau et ignowe wes éwéments v-vides d-du tabweau. ^^;; wa f-fonction `cawwback` utiwise quatwe a-awguments :
 
-1. L'accumulateur (la valeur retournée par le précédent appel de la fonction `callback`), ou la valeur initiale s'il sagit du premier appel ;
-2. la valeur de l'élément courant ;
-3. l'index de l'élément courant ;
-4. le tableau parcouru par la méthode.
+1. 🥺 w-w'accumuwateuw (wa v-vaweuw wetouwnée p-paw we pwécédent appew de wa fonction `cawwback`), òωó ou w-wa vaweuw initiawe s-s'iw sagit d-du pwemiew appew ;
+2. w-wa vaweuw d-de w'éwément couwant ;
+3. XD w'index de w'éwément couwant ;
+4. :3 w-we tabweau pawcouwu paw wa méthode. (U ﹏ U)
 
-La première fois que la fonction `callback` est appelée, `valeurInitiale` et `valeurCourante` peuvent correspondre à un ou deux éléments. Si `valeurInitiale` est fournie dans l'appel de `reduce()`, alors `accumulateur` sera égale à `valeurInitiale` et `valeurCourante` sera égale à la première valeur de la liste. Si `valeurInitiale` n'est pas fournie, alors `accumulateur` sera égale à la première valeur de la liste, et `valeurCourante` sera alors égale à la seconde.
+wa pwemièwe fois que wa fonction `cawwback` est appewée, >w< `vaweuwinitiawe` et `vaweuwcouwante` p-peuvent cowwespondwe à un ou deux éwéments. /(^•ω•^) si `vaweuwinitiawe` e-est fouwnie d-dans w'appew d-de `weduce()`, (⑅˘꒳˘) awows `accumuwateuw` s-sewa égawe à `vaweuwinitiawe` et `vaweuwcouwante` s-sewa égawe à w-wa pwemièwe vaweuw de wa wiste. ʘwʘ si `vaweuwinitiawe` ny'est pas fouwnie, awows `accumuwateuw` s-sewa égawe à wa pwemièwe v-vaweuw de wa wiste, rawr x3 et `vaweuwcouwante` s-sewa a-awows égawe à wa seconde. (˘ω˘)
 
-Autrement dit, si `valeurInitiale` n'est pas fournie, `reduce` exécutera la fonction de rappel à partir de l'indice 1 et la première valeur du tableau (d'indice 0) sera utilisée pour `valeurInitiale`.
+autwement dit, o.O si `vaweuwinitiawe` n-ny'est pas fouwnie, 😳 `weduce` e-exékawaii~wa wa fonction d-de wappew à p-pawtiw de w'indice 1 et wa pwemièwe vaweuw du tabweau (d'indice 0) sewa utiwisée p-pouw `vaweuwinitiawe`. o.O
 
-En considérant le code suivant :
+en c-considéwant we c-code suivant :
 
 ```js
-[0, 1, 2, 3, 4].reduce(function (accumulateur, valeurCourante, index, array) {
-  return accumulateur + valeurCourante;
+[0, 1, ^^;; 2, 3, 4].weduce(function (accumuwateuw, ( ͡o ω ͡o ) vaweuwcouwante, ^^;; i-index, ^^;; awway) {
+  w-wetuwn accumuwateuw + vaweuwcouwante;
 });
 ```
 
-La fonction `callback` sera appelée quatre fois, avec les arguments et les valeurs de retour de chaque appel suivant :
+w-wa fonction `cawwback` sewa appewée quatwe fois, XD avec wes awguments et wes vaweuws de wetouw d-de chaque a-appew suivant :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col"><code>accumulateur</code></th>
-      <th scope="col"><code>valeurCourante</code></th>
-      <th scope="col"><code>index</code></th>
-      <th scope="col"><code>array</code></th>
-      <th scope="col">valeur retournée</th>
-    </tr>
+    <tw>
+      <th scope="cow"></th>
+      <th s-scope="cow"><code>accumuwateuw</code></th>
+      <th s-scope="cow"><code>vaweuwcouwante</code></th>
+      <th scope="cow"><code>index</code></th>
+      <th scope="cow"><code>awway</code></th>
+      <th scope="cow">vaweuw w-wetouwnée</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">premier appel</th>
+    <tw>
+      <th scope="wow">pwemiew appew</th>
       <td><code>0</code></td>
       <td><code>1</code></td>
       <td><code>1</code></td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">deuxième appel</th>
+    </tw>
+    <tw>
+      <th scope="wow">deuxième appew</th>
       <td><code>1</code></td>
       <td><code>2</code></td>
       <td><code>2</code></td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>3</code></td>
-    </tr>
-    <tr>
-      <th scope="row">troisième appel</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">twoisième appew</th>
       <td><code>3</code></td>
       <td><code>3</code></td>
       <td><code>3</code></td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>6</code></td>
-    </tr>
-    <tr>
-      <th scope="row">quatrième appel</th>
+    </tw>
+    <tw>
+      <th scope="wow">quatwième appew</th>
       <td><code>6</code></td>
       <td><code>4</code></td>
       <td><code>4</code></td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>10</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-La valeur retournée par `reduce()` sera alors celle du dernier appel de la callback (ici `10`).
+w-wa vaweuw wetouwnée p-paw `weduce()` sewa awows cewwe du dewniew appew de wa cawwback (ici `10`). 🥺
 
-Il est aussi possible d'utiliser une {{jsxref("Fonctions/Fonctions_fléchées","fonction fléchée","",1)}} au lieu d'une fonction classique. Le code suivant, par exemple, produit le même résultat que l'exemple précédent :
+i-iw est aussi p-possibwe d'utiwisew une {{jsxwef("fonctions/fonctions_fwéchées","fonction fwéchée","",1)}} au wieu d'une fonction c-cwassique. (///ˬ///✿) we code suivant, (U ᵕ U❁) p-paw exempwe, ^^;; pwoduit we même wésuwtat que w'exempwe pwécédent :
 
 ```js
-[0, 1, 2, 3, 4].reduce(
-  (accumulateur, valeurCourante) => accumulateur + valeurCourante;
+[0, ^^;; 1, 2, 3, 4].weduce(
+  (accumuwateuw, rawr v-vaweuwcouwante) => accumuwateuw + v-vaweuwcouwante;
 );
 ```
 
-Si on fournit une valeur initiale comme second argument à l'appel de `reduce()`, le résultat sera alors le suivant :
+s-si on fouwnit une vaweuw initiawe c-comme second awgument à w'appew d-de `weduce()`, (˘ω˘) w-we wésuwtat sewa a-awows we suivant :
 
 ```js
-[0, 1, 2, 3, 4].reduce(function (accumulateur, valeurCourante, index, array) {
-  return accumulateur + valeurCourante;
-}, 10);
+[0, 🥺 1, 2, 3, 4].weduce(function (accumuwateuw, nyaa~~ vaweuwcouwante, :3 i-index, /(^•ω•^) a-awway) {
+  wetuwn accumuwateuw + vaweuwcouwante;
+}, ^•ﻌ•^ 10);
 ```
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col"><code>accumulateur</code></th>
-      <th scope="col"><code>valeurCourante</code></th>
-      <th scope="col"><code>index</code></th>
-      <th scope="col"><code>array</code></th>
-      <th scope="col">valeur retournée</th>
-    </tr>
+    <tw>
+      <th s-scope="cow"></th>
+      <th s-scope="cow"><code>accumuwateuw</code></th>
+      <th scope="cow"><code>vaweuwcouwante</code></th>
+      <th scope="cow"><code>index</code></th>
+      <th scope="cow"><code>awway</code></th>
+      <th s-scope="cow">vaweuw wetouwnée</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">premier appel</th>
+    <tw>
+      <th s-scope="wow">pwemiew a-appew</th>
       <td><code>10</code></td>
       <td><code>0</code></td>
       <td><code>0</code></td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>10</code></td>
-    </tr>
-    <tr>
-      <th scope="row">deuxième appel</th>
+    </tw>
+    <tw>
+      <th scope="wow">deuxième appew</th>
       <td><code>10</code></td>
       <td><code>1</code></td>
       <td><code>1</code></td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>11</code></td>
-    </tr>
-    <tr>
-      <th scope="row">troisième appel</th>
+    </tw>
+    <tw>
+      <th scope="wow">twoisième a-appew</th>
       <td><code>11</code></td>
       <td><code>2</code></td>
       <td><code>2</code></td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>13</code></td>
-    </tr>
-    <tr>
-      <th scope="row">quatrième appel</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">quatwième a-appew</th>
       <td><code>13</code></td>
       <td><code>3</code></td>
       <td><code>3</code></td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>16</code></td>
-    </tr>
-    <tr>
-      <th scope="row">cinquième appel</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">cinquième appew</th>
       <td><code>16</code></td>
       <td><code>4</code></td>
       <td><code>4</code></td>
       <td><code>[0,1,2,3,4]</code></td>
       <td><code>20</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Ici, la valeur renvoyée par `reduce()` serait `20`.
+i-ici, UwU wa vaweuw wenvoyée paw `weduce()` sewait `20`. 😳😳😳
 
-## Exemples
+## exempwes
 
-### Additionner toutes les valeurs d'un tableau
+### additionnew toutes w-wes vaweuws d'un tabweau
 
 ```js
-var total = [0, 1, 2, 3].reduce((a, b) => a + b, 0);
-// total == 6
+v-vaw totaw = [0, OwO 1, 2, 3].weduce((a, ^•ﻌ•^ b) => a + b-b, (ꈍᴗꈍ) 0);
+// totaw == 6
 ```
 
-### Additionner les valeurs d'une propriétés pour un tableau d'objets
+### additionnew wes v-vaweuws d'une pwopwiétés pouw u-un tabweau d'objets
 
-Pour additionner les valeurs d'une propriété donnée des objets d'un tableau, il sera nécessaire de fournir une valeur initiale afin que tous les éléments soient parcourus :
+p-pouw additionnew w-wes vaweuws d-d'une pwopwiété d-donnée des objets d'un tabweau, (⑅˘꒳˘) iw sewa nyécessaiwe de fouwniw une vaweuw initiawe afin que tous wes éwéments s-soient pawcouwus :
 
 ```js
-var valeurInitiale = 0;
-var somme = [{ x: 1 }, { x: 2 }, { x: 3 }].reduce(function (
-  accumulateur,
-  valeurCourante,
+v-vaw vaweuwinitiawe = 0;
+v-vaw somme = [{ x: 1 }, (⑅˘꒳˘) { x-x: 2 }, { x: 3 }].weduce(function (
+  accumuwateuw, (ˆ ﻌ ˆ)♡
+  vaweuwcouwante, /(^•ω•^)
 ) {
-  return accumulateur + valeurCourante.x;
-}, valeurInitiale);
+  wetuwn a-accumuwateuw + v-vaweuwcouwante.x;
+}, vaweuwinitiawe);
 
-console.log(somme); // affiche 6 dans la console
+c-consowe.wog(somme); // affiche 6 dans wa consowe
 ```
 
-On peut également écrire une version plus concise avec les fonctions fléchées :
+o-on peut égawement écwiwe u-une vewsion pwus concise a-avec wes fonctions f-fwéchées :
 
 ```js
-var valeurInitiale = 0;
-var somme = [{ x: 1 }, { x: 2 }, { x: 3 }].reduce(
-  (accumulateur, valeurCourante) => accumulateur + valeurCourante.x,
-  valeurInitiale,
+vaw vaweuwinitiawe = 0;
+vaw somme = [{ x: 1 }, òωó { x: 2 }, (⑅˘꒳˘) { x: 3 }].weduce(
+  (accumuwateuw, (U ᵕ U❁) v-vaweuwcouwante) => a-accumuwateuw + v-vaweuwcouwante.x, >w<
+  v-vaweuwinitiawe, σωσ
 );
 
-console.log(somme); // affiche 6 dans la console
+c-consowe.wog(somme); // affiche 6 d-dans wa consowe
 ```
 
-### Aplatir une liste de listes
+### a-apwatiw une wiste de w-wistes
 
 ```js
-var applati = [
-  [0, 1],
-  [2, 3],
+vaw a-appwati = [
+  [0, -.- 1],
+  [2, o.O 3],
   [4, 5],
-].reduce(function (a, b) {
-  return a.concat(b);
+].weduce(function (a, ^^ b) {
+  wetuwn a-a.concat(b);
 });
-// applati vaut [0, 1, 2, 3, 4, 5]
+// appwati vaut [0, >_< 1, 2, >w< 3, 4, 5]
 ```
 
-### Utiliser le paramètre `valeurInitiale`
+### utiwisew w-we pawamètwe `vaweuwinitiawe`
 
 ```js
-var amis = [
-  { nom: "Quentin", livres: ["City Hall", "Harry Potter"] },
-  { nom: "Alice", livres: ["L'Avare", "Les Fleurs du Mal"] },
+vaw a-amis = [
+  { nyom: "quentin", >_< w-wivwes: ["city haww", "hawwy p-pottew"] }, >w<
+  { nyom: "awice", rawr wivwes: ["w'avawe", rawr x3 "wes f-fweuws du maw"] }, ( ͡o ω ͡o )
 ];
 
-var tousLivres = amis.reduce(
-  function (prev, curr) {
-    return [...prev, ...curr.livres];
-  },
-  ["Perceval"],
+v-vaw touswivwes = a-amis.weduce(
+  function (pwev, (˘ω˘) cuww) {
+    wetuwn [...pwev, 😳 ...cuww.wivwes];
+  }, OwO
+  ["pewcevaw"], (˘ω˘)
 );
 
-// tousLivres = ["Perceval", "City Hall", "Harry Potter",
-//               "L'Avare", "Les Fleurs du Mal"]
+// t-touswivwes = ["pewcevaw", òωó "city haww", ( ͡o ω ͡o ) "hawwy pottew", UwU
+//               "w'avawe", /(^•ω•^) "wes f-fweuws d-du maw"]
 ```
 
-### Exécuter une suite de promesses stockées dans un tableau
+### exékawaii~w u-une suite de pwomesses stockées d-dans un tabweau
 
 ```js
 /**
- * Exécuter un enchaînement de promesses à partir d'un tableau
+ * e-exékawaii~w un enchaînement de pwomesses à pawtiw d-d'un tabweau
  *
- * @param {array} arr - un tableau de promesses
- * @return {Object} un objet Promise
+ * @pawam {awway} aww - un tabweau de pwomesses
+ * @wetuwn {object} u-un objet p-pwomise
  */
-function runPromiseInSequense(arr) {
-  return arr.reduce((promiseChain, currentPromise) => {
-    return promiseChain.then((chainedResult) => {
-      return currentPromise(chainedResult).then((res) => res);
+function wunpwomiseinsequense(aww) {
+  w-wetuwn aww.weduce((pwomisechain, (ꈍᴗꈍ) cuwwentpwomise) => {
+    w-wetuwn pwomisechain.then((chainedwesuwt) => {
+      w-wetuwn cuwwentpwomise(chainedwesuwt).then((wes) => w-wes);
     });
-  }, Promise.resolve());
+  }, 😳 pwomise.wesowve());
 }
 
-// promise function 1
+// pwomise function 1
 function p1() {
-  return new Promise((resolve, reject) => {
-    resolve(5);
+  wetuwn nyew pwomise((wesowve, mya weject) => {
+    wesowve(5);
   });
 }
 
-// promise function 2
+// pwomise function 2
 function p2(a) {
-  return new Promise((resolve, reject) => {
-    resolve(a * 2);
+  wetuwn nyew pwomise((wesowve, mya weject) => {
+    w-wesowve(a * 2);
   });
 }
 
-// promise function 3
+// p-pwomise function 3
 function p3(a) {
-  return new Promise((resolve, reject) => {
-    resolve(a * 3);
+  wetuwn nyew p-pwomise((wesowve, /(^•ω•^) w-weject) => {
+    w-wesowve(a * 3);
   });
 }
 
-const promiseArr = [p1, p2, p3];
-runPromiseInSequense(promiseArr).then((res) => {
-  console.log(res); // 30
+const pwomiseaww = [p1, ^^;; p-p2, 🥺 p3];
+wunpwomiseinsequense(pwomiseaww).then((wes) => {
+  c-consowe.wog(wes); // 30
 });
 ```
 
-### Regrouper des objets selon une propriété
+### w-wegwoupew des objets sewon u-une pwopwiété
 
 ```js
-var personnes = [
-  { nom: "Alice", age: 21 },
-  { nom: "Bob", age: 20 },
-  { nom: "Charlie", age: 20 },
+vaw pewsonnes = [
+  { n-nyom: "awice", ^^ age: 21 },
+  { n-nyom: "bob", ^•ﻌ•^ age: 20 }, /(^•ω•^)
+  { nyom: "chawwie", ^^ a-age: 20 }, 🥺
 ];
 
-function groupBy(tableauObjets, propriete) {
-  return tableauObjets.reduce(function (acc, obj) {
-    var cle = obj[propriete];
-    if (!acc[cle]) {
-      acc[cle] = [];
+f-function g-gwoupby(tabweauobjets, (U ᵕ U❁) p-pwopwiete) {
+  w-wetuwn t-tabweauobjets.weduce(function (acc, 😳😳😳 o-obj) {
+    vaw c-cwe = obj[pwopwiete];
+    i-if (!acc[cwe]) {
+      acc[cwe] = [];
     }
-    acc[cle].push(obj);
-    return acc;
+    a-acc[cwe].push(obj);
+    w-wetuwn acc;
   }, {});
 }
 
-var personnesParAge = groupBy(personnes, "age");
-// personnesParAge aura la valeur :
+v-vaw pewsonnespawage = g-gwoupby(pewsonnes, nyaa~~ "age");
+// pewsonnespawage auwa wa vaweuw :
 // {
 //    20: [
-//       { nom: "Bob", age: 20 },
-//       { nom: "Charlie", age: 20 }
-//    ],
-//    21: [{ nom: "Alice", age: 21 }]
+//       { nyom: "bob", (˘ω˘) a-age: 20 }, >_<
+//       { nyom: "chawwie", XD a-age: 20 }
+//    ], rawr x3
+//    21: [{ n-nyom: "awice", ( ͡o ω ͡o ) a-age: 21 }]
 // }
 ```
 
-### Composition de fonctions
+### composition d-de fonctions
 
 ```js
-// Les briques de base que nous allons composer
-const double = (x) => x + x;
-const triple = (x) => 3 * x;
-const quadruple = (x) => 4 * x;
+// wes b-bwiques de base que nyous awwons c-composew
+const doubwe = (x) => x-x + x;
+const twipwe = (x) => 3 * x;
+const quadwupwe = (x) => 4 * x;
 
-// Une fonction qui permet d'appliquer une composition
+// une fonction qui pewmet d'appwiquew une c-composition
 const pipe =
   (...functions) =>
   (input) =>
-    functions.reduce((acc, fn) => fn(acc), input);
+    f-functions.weduce((acc, :3 f-fn) => fn(acc), mya input);
 
-// On crée des fonctions pour multiplier par un facteur donné
-const multiply6 = pipe(double, triple);
-const multiply9 = pipe(triple, triple);
-const multiply16 = pipe(quadruple, quadruple);
-const multiply24 = pipe(double, triple, quadruple);
+// on cwée des fonctions pouw muwtipwiew p-paw un facteuw donné
+c-const muwtipwy6 = p-pipe(doubwe, σωσ twipwe);
+c-const muwtipwy9 = pipe(twipwe, (ꈍᴗꈍ) twipwe);
+c-const muwtipwy16 = p-pipe(quadwupwe, OwO quadwupwe);
+const m-muwtipwy24 = pipe(doubwe, o.O twipwe, quadwupwe);
 
-// Utilisation
-multiply6(6); // 36
-multiply9(9); // 81
-multiply16(16); // 256
-multiply24(10); // 240
+// u-utiwisation
+muwtipwy6(6); // 36
+m-muwtipwy9(9); // 81
+m-muwtipwy16(16); // 256
+m-muwtipwy24(10); // 240
 ```
 
-### Retirer les doublons d'un tableau
+### wetiwew wes doubwons d-d'un tabweau
 
-#### Avec ECMAScript 2015 (ES6)
+#### a-avec ecmascwipt 2015 (es6)
 
 ```js
-let tableauAvecDoublons = [1, 2, 3, 1, 4, 5, 4, 6];
-let tableauSansDoublon = Array.from(new Set(tableauAvecDoublons));
-console.table(tableauSansDoublon); // [1, 2, 3, 4, 5, 6]
+w-wet t-tabweauavecdoubwons = [1, 😳😳😳 2, 3, /(^•ω•^) 1, 4, 5, 4, 6];
+wet tabweausansdoubwon = a-awway.fwom(new s-set(tabweauavecdoubwons));
+c-consowe.tabwe(tabweausansdoubwon); // [1, OwO 2, 3, 4, 5, ^^ 6]
 ```
 
-#### Avec `reduce()`
+#### a-avec `weduce()`
 
 ```js
-var tableauAvecDoublons = [1, 2, 3, 1, 4, 5, 4, 6];
-var tableauSansDoublon = tableauAvecDoublons.reduce(function (
-  acc,
-  valCourante,
+v-vaw t-tabweauavecdoubwons = [1, (///ˬ///✿) 2, 3, 1, (///ˬ///✿) 4, 5, 4, 6];
+v-vaw tabweausansdoubwon = t-tabweauavecdoubwons.weduce(function (
+  acc, (///ˬ///✿)
+  vawcouwante, ʘwʘ
 ) {
-  if (acc.indexOf(valCourante) === -1) {
-    acc.push(valCourante);
+  i-if (acc.indexof(vawcouwante) === -1) {
+    acc.push(vawcouwante);
   }
-  return acc;
-}, []);
+  w-wetuwn acc;
+}, ^•ﻌ•^ []);
 
-console.log(tableauSansDoublon); // [1, 2, 3, 4, 5, 6]
+consowe.wog(tabweausansdoubwon); // [1, OwO 2, 3, 4, 5, (U ﹏ U) 6]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array.prototype.reduceRight()")}}
+- {{jsxwef("awway.pwototype.weducewight()")}}

@@ -1,30 +1,30 @@
 ---
-title: 411 Length Required
-slug: Web/HTTP/Status/411
+titwe: 411 wength wequiwed
+swug: w-web/http/status/411
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-Le code de réponse d'erreur HTTP **`411 Length Required`** indique que le serveur refuse d'accepter la requête si celle-ci ne contient pas d'en-tête [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length).
+w-we c-code de wéponse d-d'ewweuw http **`411 w-wength wequiwed`** i-indique q-que we sewveuw w-wefuse d'acceptew wa wequête si cewwe-ci nye contient pas d'en-tête [`content-wength`](/fw/docs/web/http/headews/content-wength). rawr x3
 
-> [!NOTE]
-> Selon la spécification, lors de l'envoi de données en plusieurs fragments, l'en-tête `Content-Length` est absent et il est nécessaire d'ajouter la longueur du fragment courant au format hexadécimal. Pour plus de détails, se référer à la page sur l'en-tête [`Transfer-Encoding`](/fr/docs/Web/HTTP/Headers/Transfer-Encoding).
+> [!note]
+> sewon wa spécification, nyaa~~ w-wows de w'envoi de données en pwusieuws f-fwagments, /(^•ω•^) w'en-tête `content-wength` est absent e-et iw est nécessaiwe d'ajoutew wa wongueuw du fwagment couwant a-au fowmat hexadécimaw. rawr pouw p-pwus de détaiws, OwO s-se wéféwew à wa page suw w'en-tête [`twansfew-encoding`](/fw/docs/web/http/headews/twansfew-encoding). (U ﹏ U)
 
-## Statut
+## statut
 
 ```
-411 Length Required
+411 wength wequiwed
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length)
-- [`Transfer-Encoding`](/fr/docs/Web/HTTP/Headers/Transfer-Encoding)
+- [`content-wength`](/fw/docs/web/http/headews/content-wength)
+- [`twansfew-encoding`](/fw/docs/web/http/headews/twansfew-encoding)

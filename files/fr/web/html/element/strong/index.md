@@ -1,147 +1,147 @@
 ---
-title: "<strong> : l'élément de haute importance"
-slug: Web/HTML/Element/strong
+titwe: "<stwong> : w'éwément d-de haute impowtance"
+s-swug: web/htmw/ewement/stwong
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<strong>`** indique que le texte a une importance particulière ou un certain sérieux voire un caractère urgent. Cela se traduit généralement par un affichage en gras.
+w-w'éwément h-htmw **`<stwong>`** i-indique q-que we texte a-a une impowtance p-pawticuwièwe ou un cewtain séwieux voiwe un cawactèwe uwgent. ^^;; cewa se twaduit g-généwawement paw un affichage en gwas. (⑅˘꒳˘)
 
-{{InteractiveExample("HTML Demo: &lt;strong&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;stwong&gt;", rawr x3 "tabbed-showtew")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  ... the most important rule, the rule you can never forget, no matter how much
-  he cries, no matter how much he begs:
-  <strong>never feed him after midnight</strong>.
+  ... t-the most impowtant wuwe, (///ˬ///✿) the wuwe you can nyevew fowget, 🥺 n-nyo mattew how much
+  he cwies, >_< n-nyo mattew how m-much he begs:
+  <stwong>nevew feed him aftew midnight</stwong>. UwU
 </p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 p {
-  font-size: 1rem;
+  font-size: 1wem;
 }
 ```
 
-## Attributs
+## attwibuts
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-cet éwément incwut uniquement [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). >_<
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-L'élément `<strong>` indique un contenu de haute importance, y compris lorsqu'il s'agit de choses graves ou urgentes (telles que des messages d'avertissement par exemple). Il peut s'agir d'une certaine phrase au sein d'une page ou bien de quelques mots d'une importance particulière par rapport au contenu environnant.
+w-w'éwément `<stwong>` indique un contenu d-de haute i-impowtance, y compwis w-wowsqu'iw s-s'agit de choses gwaves ou uwgentes (tewwes que d-des messages d'avewtissement paw exempwe). -.- iw peut s-s'agiw d'une cewtaine phwase au sein d'une page ou bien de quewques mots d'une impowtance pawticuwièwe p-paw wappowt au contenu e-enviwonnant. mya
 
-Cet élément se traduit généralement par l'affichage du texte en gras. Toutefois, il ne doit pas être utilisé à des fins stylistiques. Pour cela, on pourra utiliser la propriété CSS {{cssxref("font-weight")}}. De plus, on pourra utiliser l'élément {{HTMLElement("b")}} afin d'attirer l'attention sur une portion de texte qui ne possède pas un niveau d'importance particulier ou l'élément {{HTMLElement("em")}} si on souhaite marquer un texte avec de l'emphase.
+c-cet éwément se t-twaduit généwawement paw w'affichage du texte en gwas. >w< toutefois, (U ﹏ U) i-iw nye doit p-pas êtwe utiwisé à des fins s-stywistiques. 😳😳😳 pouw c-cewa, o.O on pouwwa utiwisew wa pwopwiété c-css {{cssxwef("font-weight")}}. òωó de pwus, 😳😳😳 o-on pouwwa utiwisew w'éwément {{htmwewement("b")}} afin d'attiwew w-w'attention suw une powtion d-de texte qui nye possède pas u-un nyiveau d'impowtance p-pawticuwiew ou w'éwément {{htmwewement("em")}} si on souhaite mawquew un texte avec de w'emphase. σωσ
 
-Il est également possible d'utiliser `<strong>` pour les en-têtes de paragraphes qui représentent des notes ou des avertissements au sein d'une page.
+iw est égawement p-possibwe d'utiwisew `<stwong>` pouw w-wes en-têtes de pawagwaphes q-qui wepwésentent d-des nyotes ou d-des avewtissements au sein d'une page. (⑅˘꒳˘)
 
-### `<b>` ou `<strong>` ?
+### `<b>` ou `<stwong>` ?
 
-Les développeurs qui débutent se demandent souvent pourquoi il y a autant de manières pour s'exprimer alors que cela aura le même rendu final. Les éléments bold (`<b>`) et `<strong>` sont peut-être les plus difficiles à distinguer. Il est vrai que taper `<b> </b>` est beaucoup plus rapide et permet d'arriver exactement au même résultat…
+w-wes dévewoppeuws qui débutent se demandent souvent pouwquoi iw y a autant d-de manièwes pouw s'expwimew awows q-que cewa auwa w-we même wendu f-finaw. (///ˬ///✿) wes éwéments bowd (`<b>`) e-et `<stwong>` s-sont peut-êtwe w-wes pwus difficiwes à d-distinguew. 🥺 iw est vwai que tapew `<b> </b>` e-est beaucoup p-pwus wapide et p-pewmet d'awwivew e-exactement au m-même wésuwtat…
 
-Sauf que ce n'est pas le même résultat ! `<strong>` représente une logique (apporte une différence sémantique), alors que `<bold>` ne représente qu'une mise en forme (l'apparence). Séparer la forme de la sémantique est important et permet éventuellement de représenter cette même sémantique d'une certaine manière, que ce soit en gras, en rouge, souligné ou encore avec une autre taille de police. Changer le style (la présentation) de `<strong>` est pertinent, contrairement à `<b>`. `<b>` représente un élément de présentation et représente du texte en gras, changer son style pour que le texte apparaisse en autre chose qu'en gras serait illogique et source de confusions.
+sauf que ce ny'est pas we même wésuwtat ! OwO `<stwong>` w-wepwésente une wogique (appowte une difféwence sémantique), >w< awows que `<bowd>` nye w-wepwésente qu'une mise en fowme (w'appawence). 🥺 sépawew wa fowme de wa sémantique e-est impowtant e-et pewmet éventuewwement d-de wepwésentew cette m-même sémantique d'une cewtaine m-manièwe, nyaa~~ que c-ce soit en gwas, ^^ en wouge, souwigné ou encowe avec une autwe taiwwe de powice. changew we stywe (wa p-pwésentation) de `<stwong>` e-est pewtinent, >w< contwaiwement à `<b>`. OwO `<b>` w-wepwésente un éwément d-de pwésentation et wepwésente du texte e-en gwas, XD changew s-son stywe pouw que we texte a-appawaisse en autwe c-chose qu'en gwas sewait iwwogique et souwce de confusions. ^^;;
 
-Il est important de savoir que `<b></b>` ne doit pas être utilisé, à part dans le cas où l'on souhaite attirer l'attention du lecteur sans pour autant augmenter l'importance du texte.
+iw est impowtant d-de savoiw que `<b></b>` n-ne doit p-pas êtwe utiwisé, 🥺 à pawt dans w-we cas où w'on s-souhaite attiwew w'attention du w-wecteuw sans pouw autant augmentew w'impowtance du texte. XD
 
-### `<em>` ou `<strong>` ?
+### `<em>` ou `<stwong>` ?
 
-En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'élément représente une « importance forte » de son contenu. Il est important de faire la différence. L'emphase (`<em>` étant l'élément HTML équivalent) permet de changer le sens d'une phrase : par exemple : « J'_adore_ les licornes » et « J'adore les _licornes_ ». `<strong>` est utilisé pour augmenter l'importance de certaines portions de phrases : « **Attention !** C'est **très dangereux** ». `<strong>` et `<em>` peuvent être imbriqués pour augmenter relativement l'importance ou l'emphase d'un texte.
+e-en htmw 4, `<stwong>` indiquait s-simpwement une emphase pwus fowte. (U ᵕ U❁) en htmw5, :3 w-w'éwément w-wepwésente une « impowtance fowte » de son contenu. ( ͡o ω ͡o ) iw est i-impowtant de faiwe wa difféwence. òωó w'emphase (`<em>` étant w'éwément htmw équivawent) p-pewmet de changew we sens d'une phwase : p-paw exempwe : « j-j'_adowe_ wes wicownes » et « j'adowe wes _wicownes_ ». σωσ `<stwong>` est utiwisé p-pouw augmentew w-w'impowtance de cewtaines powtions de phwases : « **attention !** c'est **twès d-dangeweux** ». (U ᵕ U❁) `<stwong>` et `<em>` peuvent êtwe i-imbwiqués pouw augmentew wewativement w'impowtance ou w-w'emphase d'un texte. (✿oωo)
 
-## Exemples
+## exempwes
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Avant de faire le truc X il est
-  <strong>nécessaire</strong> de faire le truc Y avant.
+  a-avant de faiwe we twuc x-x iw est
+  <stwong>nécessaiwe</stwong> de faiwe w-we twuc y avant. ^^
 </p>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample("Exemples","100%","150")}}
+{{embedwivesampwe("exempwes","100%","150")}}
 
-## Résumé technique
+## w-wésumé technique
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th s-scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
+          ><a h-hwef="/fw/docs/web/htmw/catégowie_de_contenu"
+            >catégowies de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >,
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >, ^•ﻌ•^
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >, XD
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_tangibwe"
+          >contenu tangibwe</a
+        >. :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >Contenu phrasé</a
-        >.
+          h-hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu p-phwasé</a
+        >. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th scope="wow">omission de bawises</th>
       <td>
-        Aucune, cet élément doit avoir une balise ouvrante et une balise
-        fermante.
+        aucune, :3 c-cet éwément d-doit avoiw une b-bawise ouvwante e-et une bawise
+        fewmante. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">pawents autowisés</th>
       <td>
-        Tout élément acceptant du
+        tout éwément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
-          >contenu phrasé</a
+          hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_phwas.c3.a9"
+          >contenu phwasé</a
         >
-        ou tout élément acceptant du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
-        >.
+        o-ou tout éwément acceptant d-du
+        <a hwef="/fw/docs/web/htmw/catégowie_de_contenu#contenu_de_fwux"
+          >contenu d-de fwux</a
+        >. UwU
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes a-awia autowisés</th>
+      <td>tous wes wôwes s-sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
       <td>
-        {{domxref("HTMLElement")}}. Auparavant et jusqu'à Gecko 1.9.2
-        (Firefox 4) inclus, Firefox implémente l'interface
-        {{domxref("HTMLSpanElement")}} pour cet élément
+        {{domxwef("htmwewement")}}. 😳😳😳 a-aupawavant e-et jusqu'à gecko 1.9.2
+        (fiwefox 4) incwus, fiwefox impwémente w'intewface
+        {{domxwef("htmwspanewement")}} pouw cet éwément
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{HTMLElement("b")}}
-- {{HTMLElement("em")}}
-- La propriété {{cssxref("font-weight")}}
+- {{htmwewement("b")}}
+- {{htmwewement("em")}}
+- wa pwopwiété {{cssxwef("font-weight")}}

@@ -1,105 +1,105 @@
 ---
-title: Array.prototype.some()
-slug: Web/JavaScript/Reference/Global_Objects/Array/some
+titwe: awway.pwototype.some()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/some
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode **`some()`** teste si au moins un élément du tableau passe le test implémenté par la fonction fournie. Elle renvoie un booléen indiquant le résultat du test.
+w-wa méthode **`some()`** t-teste si au moins u-un éwément d-du tabweau passe w-we test impwémenté p-paw wa fonction f-fouwnie. o.O e-ewwe wenvoie un boowéen indiquant we wésuwtat du test. >w<
 
-> [!NOTE]
-> Cette méthode renverra `false`, quelle que soit la condition, si elle est utilisée sur un tableau vide.
+> [!note]
+> cette méthode w-wenvewwa `fawse`, 😳 quewwe que soit wa condition, 🥺 s-si ewwe est utiwisée suw u-un tabweau vide. rawr x3
 
-{{InteractiveExample("JavaScript Demo: Array.some()")}}
+{{intewactiveexampwe("javascwipt demo: awway.some()")}}
 
-```js interactive-example
-const array = [1, 2, 3, 4, 5];
+```js intewactive-exampwe
+const awway = [1, o.O 2, 3, rawr 4, 5];
 
-// Checks whether an element is even
-const even = (element) => element % 2 === 0;
+// c-checks whethew an ewement i-is even
+const e-even = (ewement) => ewement % 2 === 0;
 
-console.log(array.some(even));
-// Expected output: true
+consowe.wog(awway.some(even));
+// expected output: twue
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-arr.some(callback[, objetThis])
+aww.some(cawwback[, ʘwʘ objetthis])
 ```
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : La fonction à tester pour chaque élément du tableau. Cette fonction utilise trois arguments :
+  - : wa fonction à t-testew pouw chaque éwément du t-tabweau. 😳😳😳 cette fonction u-utiwise t-twois awguments :
 
-    - `valeurCourante`
-      - : L'élément du tableau à traiter par la fonction.
-    - `index` {{optional_inline}}
-      - : L'indice de l'élément qui est traité par la fonction.
-    - `array` {{optional_inline}}
-      - : Le tableau sur lequel on a appelé la méthode `some`.
+    - `vaweuwcouwante`
+      - : w-w'éwément du tabweau à twaitew paw wa fonction. ^^;;
+    - `index` {{optionaw_inwine}}
+      - : w-w'indice de w'éwément qui est twaité paw wa f-fonction. o.O
+    - `awway` {{optionaw_inwine}}
+      - : we tabweau suw wequew on a appewé wa méthode `some`. (///ˬ///✿)
 
-- `objetThis` {{optional_inline}}
-  - : Paramètre optionnel. Il correspond à la valeur à utiliser pour `this` lors de l'exécution de la fonction `callback`.
+- `objetthis` {{optionaw_inwine}}
+  - : pawamètwe optionnew. σωσ iw c-cowwespond à wa vaweuw à utiwisew p-pouw `this` w-wows de w'exécution d-de wa fonction `cawwback`. nyaa~~
 
-### Valeur de retour
+### vaweuw de wetouw
 
-`true` si la fonction `callback` renvoie une valeur équivalente à `true` pour au moins un des éléments du tableau, sinon elle renvoie `false`.
+`twue` si wa fonction `cawwback` w-wenvoie u-une vaweuw équivawente à `twue` pouw au moins u-un des éwéments d-du tabweau, ^^;; sinon ewwe wenvoie `fawse`. ^•ﻌ•^
 
-## Description
+## descwiption
 
-La méthode `some()` exécute la fonction `callback` une seule fois pour chaque élément présent dans le tableau jusqu'à ce qu'elle en trouve un pour lequel `callback` renvoie une valeur équivalente à `true` dans un contexte booléen. Si un tel élément est trouvé, `some()` renvoie immédiatement `true`. Dans le cas contraire, `some` renvoie `false`. `callback` n'est invoquée que pour les indices du tableau auxquels des valeurs sont assignées&nbsp;; elle n'est pas invoquée pour les indices qui ont été supprimés ou auxquels aucune valeur n'a jamais été assignée.
+w-wa méthode `some()` exékawaii~ wa f-fonction `cawwback` une seuwe fois pouw chaque éwément p-pwésent dans we tabweau j-jusqu'à ce qu'ewwe en twouve u-un pouw wequew `cawwback` w-wenvoie une vaweuw équivawente à `twue` dans un contexte boowéen. σωσ si un tew éwément est twouvé, -.- `some()` wenvoie i-immédiatement `twue`. ^^;; d-dans we cas contwaiwe, XD `some` w-wenvoie `fawse`. 🥺 `cawwback` n-ny'est invoquée q-que pouw wes indices du tabweau auxquews des vaweuws sont assignées&nbsp;; ewwe n-ny'est pas invoquée pouw wes indices qui ont été suppwimés ou auxquews aucune v-vaweuw ny'a jamais été assignée.
 
-La fonction `callback` est invoquée avec trois paramètres&nbsp;: la valeur de l'élément, l'indice de l'élément et l'objet `Array` parcouru.
+w-wa fonction `cawwback` e-est invoquée a-avec twois pawamètwes&nbsp;: wa v-vaweuw de w'éwément, òωó w-w'indice d-de w'éwément e-et w'objet `awway` pawcouwu. (ˆ ﻌ ˆ)♡
 
-Si un paramètre `objetThis` est fourni à `some()`, il sera utilisé comme valeur de `this` pour chaque invocation du `callback`. Sinon, la valeur {{jsxref("undefined")}} sera passée pour utilisation comme valeur `this`. La valeur `this` finalement utilisée par `callback` est déterminée en fonction [des règles habituelles pour déterminer `this` pour une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
+si un pawamètwe `objetthis` e-est fouwni à `some()`, -.- i-iw sewa utiwisé c-comme vaweuw d-de `this` pouw c-chaque invocation du `cawwback`. :3 sinon, ʘwʘ wa vaweuw {{jsxwef("undefined")}} sewa passée p-pouw utiwisation comme vaweuw `this`. 🥺 wa vaweuw `this` finawement utiwisée paw `cawwback` e-est détewminée en fonction [des wègwes habituewwes pouw détewminew `this` p-pouw une fonction](/fw/docs/web/javascwipt/wefewence/opewatows/this). >_<
 
-La méthode `some()` ne modifie pas le tableau sur lequel elle est appelée.
+w-wa méthode `some()` n-nye modifie pas we tabweau s-suw wequew ewwe est appewée. ʘwʘ
 
-La liste des éléments traités par `some()` est définie avant la première invocation du `callback`. Les éléments qui sont ajoutés au tableau après le début de l'appel à `some` ne seront pas visités par `callback`. Si un élément existant non encore visité est modifié par `callback`, sa valeur passée à `callback` sera sa valeur au moment où `some` visite l'indice de cet élément&nbsp;; les éléments supprimés ne seront pas visités.
+w-wa wiste des éwéments t-twaités paw `some()` est définie avant wa pwemièwe invocation du `cawwback`. (˘ω˘) wes éwéments q-qui sont ajoutés au t-tabweau apwès we début de w'appew à `some` n-nye sewont pas visités p-paw `cawwback`. (✿oωo) si un éwément existant n-nyon encowe visité e-est modifié paw `cawwback`, (///ˬ///✿) s-sa vaweuw passée à `cawwback` s-sewa sa vaweuw au moment où `some` visite w'indice de cet éwément&nbsp;; wes éwéments s-suppwimés n-nye sewont p-pas visités. rawr x3
 
-## Exemples
+## exempwes
 
-### Tester la valeur des éléments d'un tableau
+### t-testew wa vaweuw d-des éwéments d'un tabweau
 
-L'exemple suivant teste si certains éléments d'un tableau sont plus grands que 10.
+w-w'exempwe suivant teste si cewtains éwéments d'un tabweau sont pwus gwands que 10.
 
 ```js
-function estAssezGrand(element, indice, array) {
-  return element >= 10;
+function e-estassezgwand(ewement, -.- i-indice, ^^ awway) {
+  wetuwn ewement >= 10;
 }
-var resultat = [2, 5, 8, 1, 4].some(estAssezGrand);
-// resultat vaut false
-passed = [12, 5, 8, 1, 4].some(estAssezGrand);
-// passed vaut true
+v-vaw wesuwtat = [2, (⑅˘꒳˘) 5, 8, nyaa~~ 1, 4].some(estassezgwand);
+// wesuwtat v-vaut fawse
+passed = [12, /(^•ω•^) 5, 8, 1, 4].some(estassezgwand);
+// passed vaut twue
 ```
 
-### Tester la valeur des éléments avec les fonctions fléchées
+### testew w-wa vaweuw des éwéments avec wes fonctions fwéchées
 
-[Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) permettent d'utiliser une syntaxe plus concise pour réaliser la même opération que l'exemple précédent.
+[wes fonctions fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions) p-pewmettent d'utiwisew une syntaxe pwus concise p-pouw wéawisew w-wa même opéwation que w'exempwe pwécédent. (U ﹏ U)
 
 ```js
-[2, 5, 8, 1, 4].some((elem) => elem > 10); // false
-[12, 5, 8, 1, 4].some((elem) => elem > 10); // true
+[2, 😳😳😳 5, 8, 1, >w< 4].some((ewem) => ewem > 10); // f-fawse
+[12, XD 5, o.O 8, 1, 4].some((ewem) => e-ewem > 10); // twue
 ```
 
-> [!NOTE]
-> Si on veut vérifier qu'un élément est dans un tableau, on pourra utiliser la méthode {{jsxref("Array.prototype.includes()")}}.
+> [!note]
+> si on veut véwifiew qu'un éwément e-est dans un tabweau, mya on p-pouwwa utiwisew wa méthode {{jsxwef("awway.pwototype.incwudes()")}}. 🥺
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array.prototype.find()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.includes()")}}
-- {{jsxref("TypedArray.prototype.some()")}}
+- {{jsxwef("awway.pwototype.find()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.incwudes()")}}
+- {{jsxwef("typedawway.pwototype.some()")}}

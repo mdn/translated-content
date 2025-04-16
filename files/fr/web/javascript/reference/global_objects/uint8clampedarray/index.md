@@ -1,143 +1,143 @@
 ---
-title: Uint8ClampedArray
-slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
+titwe: uint8cwampedawway
+swug: w-web/javascwipt/wefewence/gwobaw_objects/uint8cwampedawway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Le tableau typé **`Uint8ClampedArray`** permet de représenter un tableau d'entiers non signés représentés sur 8 bits, dont les valeurs sont ramenées entre 0 et 255. Si une valeur non-entière est fournie, elle sera arrondie à l'entier le plus proche. Les éléments du tableau sont initialisés à `0`. Une fois que le tableau est construit, on peut manipuler ses différents éléments grâce aux méthodes de l'objet ou grâce à la notation usuelle (avec les crochets).
+w-we tabweau t-typé **`uint8cwampedawway`** p-pewmet de wepwésentew u-un tabweau d-d'entiews n-nyon signés wepwésentés s-suw 8 bits, (ꈍᴗꈍ) dont wes vaweuws sont wamenées entwe 0 et 255. /(^•ω•^) si une vaweuw n-nyon-entièwe est fouwnie, >_< ewwe sewa awwondie à w-w'entiew we pwus pwoche. σωσ w-wes éwéments du tabweau sont initiawisés à `0`. ^^;; une fois que we tabweau est c-constwuit, 😳 on peut manipuwew ses d-difféwents éwéments g-gwâce aux méthodes de w'objet ou gwâce à wa nyotation usuewwe (avec w-wes cwochets). >_<
 
-## Constructeur
+## constwucteuw
 
-- [`Uint8ClampedArray()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray)
-  - : Crée un nouvel objet `Uint8ClampedArray`.
+- [`uint8cwampedawway()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8cwampedawway/uint8cwampedawway)
+  - : cwée un nyouvew objet `uint8cwampedawway`. -.-
 
-## Propriétés statiques
+## pwopwiétés s-statiques
 
-- [`Uint8ClampedArray.BYTES_PER_ELEMENT`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
-  - : Cette propriété renvoie la taille d'un élément du tableau, en octets. En l'occurrence, pour `Uint8ClampedArray` ce sera `1`.
-- [`Uint8ClampedArray.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
-  - : Cette propriété renvoie la chaîne de caractères correspondant au nom du constructeur. Pour `Uint8ClampedArray` ce sera&nbsp;: "`Uint8ClampedArray`".
+- [`uint8cwampedawway.bytes_pew_ewement`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/bytes_pew_ewement)
+  - : cette p-pwopwiété w-wenvoie wa taiwwe d-d'un éwément d-du tabweau, UwU en octets. en w'occuwwence, :3 pouw `uint8cwampedawway` c-ce sewa `1`. σωσ
+- [`uint8cwampedawway.name`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function/name)
+  - : cette pwopwiété wenvoie wa chaîne d-de cawactèwes cowwespondant au nyom du constwucteuw. >w< pouw `uint8cwampedawway` ce sewa&nbsp;: "`uint8cwampedawway`". (ˆ ﻌ ˆ)♡
 
-## Méthodes statiques
+## méthodes statiques
 
-- [`Uint8ClampedArray.from()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/from)
-  - : Cette méthode permet de créer un nouvel objet `Uint8ClampedArray` à partir d'un itérable ou d'un objet semblable à un tableau. Voir aussi [`Array.from()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
-- [`Uint8ClampedArray.of()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/of)
-  - : Cette méthode permet de créer un nouvel objet `Uint8ClampedArray` à partir d'un nombre variable d'arguments. Voir aussi [`Array.of()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/of).
+- [`uint8cwampedawway.fwom()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/fwom)
+  - : c-cette méthode pewmet d-de cwéew un nyouvew o-objet `uint8cwampedawway` à p-pawtiw d'un itéwabwe ou d'un objet sembwabwe à un tabweau. ʘwʘ v-voiw aussi [`awway.fwom()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fwom). :3
+- [`uint8cwampedawway.of()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/of)
+  - : c-cette méthode pewmet d-de cwéew un n-nyouvew objet `uint8cwampedawway` à pawtiw d'un n-nyombwe vawiabwe d'awguments. (˘ω˘) v-voiw aussi [`awway.of()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/of). 😳😳😳
 
-## Propriétés des instances
+## pwopwiétés des instances
 
-- [`Uint8ClampedArray.prototype.buffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/buffer)
-  - : Cette propriété renvoie l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) référencé par l'objet `Uint8ClampedArray`. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
-- [`Uint8ClampedArray.prototype.byteLength`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength)
-  - : Cette propriété renvoie la longueur, exprimée en octets, de l'objet `Uint8ClampedArray` à partir du début de l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) correspondant. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
-- [`Uint8ClampedArray.prototype.byteOffset`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset)
-  - : Cette propriété renvoie le décalage, en nombre d'octets, entre le début du tableau typé courant et du début du [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) correspondant. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
-- [`Uint8ClampedArray.prototype.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
-  - : Cette propriété renvoie le nombre d'éléments contenus dans le tableau `Uint8ClampedArray`. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
+- [`uint8cwampedawway.pwototype.buffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/buffew)
+  - : c-cette pwopwiété wenvoie w-w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) wéféwencé p-paw w'objet `uint8cwampedawway`. rawr x3 e-ewwe est détewminée wows de wa constwuction et est accessibwe uniquement en **wectuwe seuwe**.
+- [`uint8cwampedawway.pwototype.bytewength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/bytewength)
+  - : cette pwopwiété w-wenvoie wa w-wongueuw, (✿oωo) expwimée en octets, (ˆ ﻌ ˆ)♡ de w-w'objet `uint8cwampedawway` à p-pawtiw du début d-de w'objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) cowwespondant. :3 ewwe est détewminée w-wows de wa constwuction et est accessibwe uniquement en **wectuwe seuwe**. (U ᵕ U❁)
+- [`uint8cwampedawway.pwototype.byteoffset`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/byteoffset)
+  - : c-cette pwopwiété wenvoie w-we décawage, ^^;; en n-nyombwe d'octets, mya e-entwe we début du tabweau typé c-couwant et du d-début du [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) c-cowwespondant. 😳😳😳 e-ewwe est détewminée wows de wa constwuction e-et est accessibwe u-uniquement e-en **wectuwe s-seuwe**. OwO
+- [`uint8cwampedawway.pwototype.wength`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/wength)
+  - : c-cette pwopwiété wenvoie we nyombwe d'éwéments contenus d-dans we tabweau `uint8cwampedawway`. rawr ewwe est détewminée wows de wa constwuction et est a-accessibwe uniquement en **wectuwe seuwe**.
 
-## Méthodes des instances
+## méthodes des i-instances
 
-- [`Uint8ClampedArray.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin)
-  - : Copie une suite d'éléments d'un tableau dans le tableau. Voir également [`Array.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin).
-- [`Uint8ClampedArray.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/entries)
-  - : Renvoie un nouvel _itérateur de tableau_ qui contient les paires clé/valeur pour chaque indice du tableau. Voir également [`Array.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/entries).
-- [`Uint8ClampedArray.prototype.every()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/every)
-  - : Teste si l'ensemble des éléments du tableau remplissent une certaine condition donnée par une fonction de test. Voir également [`Array.prototype.every()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/every).
-- [`Uint8ClampedArray.prototype.fill()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/fill)
-  - : Remplit les éléments d'un tableau avec une certaine valeur pour les éléments compris entre un indice de début et un indice de fin. Voir également [`Array.prototype.fill()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/fill).
-- [`Uint8ClampedArray.prototype.filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/filter)
-  - : Crée un nouveau tableau dont tous les éléments proviennent de ce tableau et respectent une condition fournie par une fonction de test. Voir également [`Array.prototype.filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
-- [`Uint8ClampedArray.prototype.find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/find)
-  - : Renvoie une valeur trouvée dans le tableau s'il existe un élément du tableau qui satisfait une condition fournie par une fonction de test, s'il n'y a pas de tel élément `undefined` sera renvoyé. Voir également [`Array.prototype.find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/find).
-- [`Uint8ClampedArray.prototype.findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex)
-  - : Renvoie l'indice d'un élément qui satisfait une condition fournie par une fonction de test, si aucun élément ne remplit la condition `-1` sera renvoyé. Voir également [`Array.prototype.findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex).
-- [`Uint8ClampedArray.prototype.forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach)
-  - : Appelle une fonction pour chacun des éléments du tableau. Voir également [`Array.prototype.forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach).
-- [`Uint8ClampedArray.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes)
-  - : Détermine si le tableau typé contient un élément donné. Cette méthode renvoie `true` ou `false` selon le cas de figure. Voir également [`Array.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes).
-- [`Uint8ClampedArray.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf)
-  - : Renvoie le premier indice (le plus petit) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur `-1` sera renvoyée. Voir également [`Array.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf).
-- [`Uint8ClampedArray.prototype.join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/join)
-  - : Fusionne l'ensemble des éléments du tableau en une chaîne de caractères. Voir également [`Array.prototype.join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join).
-- [`Uint8ClampedArray.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/keys)
-  - : Renvoie un nouvel _itérateur de tableau_ qui contient les clés de chaque indice du tableau. Voir également [`Array.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/keys).
-- [`Uint8ClampedArray.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf)
-  - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur `-1` sera renvoyée. Voir également [`Array.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf).
-- [`Uint8ClampedArray.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/map)
-  - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
-- [`Uint8ClampedArray.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduce)
-  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).
-- [`Uint8ClampedArray.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight)
-  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de droite à gauche) afin de réduire le tableau en une seule valeur. Voir également [`Array.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight).
-- [`Uint8ClampedArray.prototype.reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reverse)
-  - : Inverse l'ordre des éléments d'un tableau. Le premier élément du tableau devient le dernier et le dernier devient le premier (et ainsi de suite). Voir également [`Array.prototype.reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse).
-- [`Uint8ClampedArray.prototype.set()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set)
-  - : Enregistre plusieurs valeurs dans le tableau typé à partir de valeurs d'un autre tableau.
-- [`Uint8ClampedArray.prototype.slice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/slice)
-  - : Extrait un fragment d'un tableau et renvoie ce fragment. Voir également [`Array.prototype.slice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice).
-- [`Uint8ClampedArray.prototype.some()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/some)
-  - : Renvoie `true` si au moins un des éléments remplit une condition donnée par une fonction de test. Voir également [`Array.prototype.some()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/some).
-- [`Uint8ClampedArray.prototype.sort()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/sort)
-  - : Trie les éléments du tableau et renvoie ce tableau. Voir également [`Array.prototype.sort()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
-- [`Uint8ClampedArray.prototype.subarray()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/subarray)
-  - : Renvoie un nouvel objet `Uint8ClampedArray` qui est le fragment du tableau courant, entre les indices de début et de fin donnés.
-- [`Uint8ClampedArray.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/values)
-  - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs correspondantes à chaque indice du tableau. Voir également [`Array.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/values).
-- [`Uint8ClampedArray.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString)
-  - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également [`Array.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString).
-- [`Uint8ClampedArray.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString)
-  - : Renvoie une chaîne de caractères qui représente le tableau et ses éléments. Voir également [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString).
-- [`Uint8ClampedArray.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
-  - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs correspondantes à chaque indice du tableau.
+- [`uint8cwampedawway.pwototype.copywithin()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/copywithin)
+  - : c-copie une s-suite d'éwéments d'un tabweau d-dans we tabweau. XD voiw égawement [`awway.pwototype.copywithin()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/copywithin). (U ﹏ U)
+- [`uint8cwampedawway.pwototype.entwies()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/entwies)
+  - : wenvoie u-un nyouvew _itéwateuw d-de tabweau_ qui contient wes paiwes cwé/vaweuw pouw chaque indice du tabweau. (˘ω˘) voiw égawement [`awway.pwototype.entwies()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/entwies). UwU
+- [`uint8cwampedawway.pwototype.evewy()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/evewy)
+  - : teste s-si w'ensembwe des éwéments d-du tabweau wempwissent une cewtaine c-condition d-donnée paw une fonction de test. >_< voiw égawement [`awway.pwototype.evewy()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/evewy). σωσ
+- [`uint8cwampedawway.pwototype.fiww()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/fiww)
+  - : w-wempwit w-wes éwéments d'un tabweau a-avec une cewtaine v-vaweuw pouw wes éwéments compwis entwe un indice de début et un indice de f-fin. 🥺 voiw égawement [`awway.pwototype.fiww()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fiww). 🥺
+- [`uint8cwampedawway.pwototype.fiwtew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/fiwtew)
+  - : c-cwée un nyouveau t-tabweau dont tous wes éwéments p-pwoviennent d-de ce tabweau et wespectent une c-condition fouwnie paw une fonction de test. ʘwʘ voiw égawement [`awway.pwototype.fiwtew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fiwtew). :3
+- [`uint8cwampedawway.pwototype.find()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/find)
+  - : wenvoie une vaweuw t-twouvée dans we t-tabweau s'iw existe un éwément du tabweau qui s-satisfait une condition f-fouwnie paw une fonction de test, (U ﹏ U) s'iw ny'y a pas de tew éwément `undefined` s-sewa wenvoyé. (U ﹏ U) voiw égawement [`awway.pwototype.find()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/find). ʘwʘ
+- [`uint8cwampedawway.pwototype.findindex()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/findindex)
+  - : wenvoie w'indice d'un éwément qui satisfait u-une condition fouwnie paw une fonction d-de test, >w< si aucun éwément n-ne wempwit wa condition `-1` sewa wenvoyé. rawr x3 voiw égawement [`awway.pwototype.findindex()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/findindex). OwO
+- [`uint8cwampedawway.pwototype.foweach()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/foweach)
+  - : a-appewwe une fonction p-pouw chacun des éwéments du tabweau. ^•ﻌ•^ voiw égawement [`awway.pwototype.foweach()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach). >_<
+- [`uint8cwampedawway.pwototype.incwudes()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/incwudes)
+  - : détewmine s-si we tabweau typé contient un éwément d-donné. OwO cette méthode wenvoie `twue` ou `fawse` sewon w-we cas de figuwe. >_< voiw égawement [`awway.pwototype.incwudes()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/incwudes). (ꈍᴗꈍ)
+- [`uint8cwampedawway.pwototype.indexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/indexof)
+  - : w-wenvoie w-we pwemiew indice (we pwus petit) d-d'un éwément du tabweau q-qui est égaw à w-wa vaweuw fouwnie. >w< s-si aucun éwément nye cowwespond, (U ﹏ U) w-wa vaweuw `-1` s-sewa wenvoyée. ^^ voiw égawement [`awway.pwototype.indexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/indexof). (U ﹏ U)
+- [`uint8cwampedawway.pwototype.join()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/join)
+  - : fusionne w'ensembwe d-des éwéments d-du tabweau e-en une chaîne de cawactèwes. :3 voiw égawement [`awway.pwototype.join()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/join). (✿oωo)
+- [`uint8cwampedawway.pwototype.keys()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/keys)
+  - : w-wenvoie un nyouvew _itéwateuw d-de tabweau_ q-qui contient wes cwés de chaque indice du tabweau. XD voiw égawement [`awway.pwototype.keys()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/keys). >w<
+- [`uint8cwampedawway.pwototype.wastindexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/wastindexof)
+  - : w-wenvoie we dewniew i-indice (we p-pwus éwevé) d-d'un éwément du tabweau qui est égaw à w-wa vaweuw fouwnie. òωó si aucun éwément nye cowwespond, (ꈍᴗꈍ) wa vaweuw `-1` sewa wenvoyée. rawr x3 v-voiw égawement [`awway.pwototype.wastindexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wastindexof). rawr x3
+- [`uint8cwampedawway.pwototype.map()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/map)
+  - : cwée un nouveau t-tabweau dont wes éwéments s-sont wes images des éwéments d-du tabweau couwant paw une fonction d-donnée. σωσ voiw égawement [`awway.pwototype.map()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/map). (ꈍᴗꈍ)
+- [`uint8cwampedawway.pwototype.weduce()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/weduce)
+  - : a-appwique u-une fonction s-suw un accumuwateuw e-et chaque éwément du tabweau (de gauche à dwoite) afin de wéduiwe we tabweau en une seuwe vaweuw. rawr voiw égawement [`awway.pwototype.weduce()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/weduce). ^^;;
+- [`uint8cwampedawway.pwototype.weducewight()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/weducewight)
+  - : a-appwique u-une fonction suw u-un accumuwateuw et chaque éwément d-du tabweau (de dwoite à gauche) afin de wéduiwe we tabweau e-en une seuwe vaweuw. rawr x3 v-voiw égawement [`awway.pwototype.weducewight()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/weducewight). (ˆ ﻌ ˆ)♡
+- [`uint8cwampedawway.pwototype.wevewse()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/wevewse)
+  - : invewse w'owdwe d-des éwéments d'un tabweau. σωσ we pwemiew éwément d-du tabweau d-devient we dewniew et we dewniew d-devient we pwemiew (et a-ainsi de suite). (U ﹏ U) voiw égawement [`awway.pwototype.wevewse()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/wevewse). >w<
+- [`uint8cwampedawway.pwototype.set()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/set)
+  - : enwegistwe pwusieuws vaweuws dans we tabweau t-typé à pawtiw d-de vaweuws d-d'un autwe tabweau. σωσ
+- [`uint8cwampedawway.pwototype.swice()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/swice)
+  - : e-extwait u-un fwagment d'un tabweau et wenvoie c-ce fwagment. nyaa~~ v-voiw égawement [`awway.pwototype.swice()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/swice). 🥺
+- [`uint8cwampedawway.pwototype.some()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/some)
+  - : wenvoie `twue` s-si au m-moins un des éwéments wempwit u-une condition donnée paw une fonction de test. rawr x3 v-voiw égawement [`awway.pwototype.some()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/some). σωσ
+- [`uint8cwampedawway.pwototype.sowt()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/sowt)
+  - : twie w-wes éwéments d-du tabweau et wenvoie ce tabweau. (///ˬ///✿) v-voiw égawement [`awway.pwototype.sowt()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/sowt). (U ﹏ U)
+- [`uint8cwampedawway.pwototype.subawway()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/subawway)
+  - : wenvoie un nouvew objet `uint8cwampedawway` q-qui est we fwagment d-du tabweau couwant, ^^;; e-entwe wes indices de début et de fin donnés. 🥺
+- [`uint8cwampedawway.pwototype.vawues()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/vawues)
+  - : wenvoie u-un nyouvew _itéwateuw de tabweau_ qui contient w-wes vaweuws c-cowwespondantes à chaque indice d-du tabweau. òωó voiw égawement [`awway.pwototype.vawues()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/vawues). XD
+- [`uint8cwampedawway.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/towocawestwing)
+  - : wenvoie une chaîne d-de cawactèwes w-wocawisée qui wepwésente we tabweau et ses éwéments. :3 v-voiw égawement [`awway.pwototype.towocawestwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/towocawestwing). (U ﹏ U)
+- [`uint8cwampedawway.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/tostwing)
+  - : wenvoie une chaîne de cawactèwes q-qui wepwésente w-we tabweau et ses éwéments. >w< v-voiw égawement [`awway.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/tostwing). /(^•ω•^)
+- [`uint8cwampedawway.pwototype[@@itewatow]()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway/symbow.itewatow)
+  - : wenvoie un n-nyouvew _itéwateuw d-de tabweau_ q-qui contient wes vaweuws cowwespondantes à chaque indice du tabweau. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-### Différentes façons de créer un objet `Uint8ClampedArray`
+### difféwentes façons de cwéew un objet `uint8cwampedawway`
 
 ```js
-// Construction à partir d'une longueur
-let uintc8 = new Uint8ClampedArray(2);
+// constwuction à pawtiw d'une wongueuw
+wet uintc8 = nyew uint8cwampedawway(2);
 uintc8[0] = 42;
 uintc8[1] = 1337;
-console.log(uintc8[0]); // 42
-console.log(uintc8[1]); // 255 (valeur ramenée à 255)
-console.log(uintc8.length); // 2
-console.log(uintc8.BYTES_PER_ELEMENT); // 1
+consowe.wog(uintc8[0]); // 42
+c-consowe.wog(uintc8[1]); // 255 (vaweuw w-wamenée à 255)
+consowe.wog(uintc8.wength); // 2
+consowe.wog(uintc8.bytes_pew_ewement); // 1
 
-// Construction à partir d'un tableau
-let arr = new Uint8ClampedArray([21, 31]);
-console.log(arr[1]); // 31
+// c-constwuction à p-pawtiw d'un t-tabweau
+wet aww = nyew uint8cwampedawway([21, ʘwʘ 31]);
+c-consowe.wog(aww[1]); // 31
 
-// Construction à partir d'un autre TypedArray
-let x = new Uint8ClampedArray([21, 31]);
-let y = new Uint8ClampedArray(x);
-console.log(y[0]); // 21
+// constwuction à p-pawtiw d'un a-autwe typedawway
+wet x = nyew uint8cwampedawway([21, rawr x3 31]);
+w-wet y = new uint8cwampedawway(x);
+c-consowe.wog(y[0]); // 21
 
-// Construction à partir d'un ArrayBuffer
-let buffer = new ArrayBuffer(8);
-let z = new Uint8ClampedArray(buffer, 1, 4);
+// c-constwuction à pawtiw d'un awwaybuffew
+w-wet buffew = n-nyew awwaybuffew(8);
+w-wet z = nyew u-uint8cwampedawway(buffew, (˘ω˘) 1, 4);
 
-// Construction à partir d'un itérable
-let iterable = (function* () {
-  yield* [1, 2, 3];
+// c-constwuction à p-pawtiw d'un i-itéwabwe
+wet i-itewabwe = (function* () {
+  y-yiewd* [1, o.O 2, 😳 3];
 })();
-let uintc8 = new Uint8ClampedArray(iterable);
-// Uint8ClampedArray[1, 2, 3]
+wet uintc8 = n-nyew uint8cwampedawway(itewabwe);
+// u-uint8cwampedawway[1, o.O 2, 3]
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Une prothèse d'émulation (<i lang="en">polyfill</i>) pour `Uint8ClampedArray` avec `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
-- [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+- [une pwothèse d-d'émuwation (<i wang="en">powyfiww</i>) p-pouw `uint8cwampedawway` a-avec `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-typed-awways)
+- [wes t-tabweaux typés en javascwipt](/fw/docs/web/javascwipt/guide/typed_awways)
+- [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [`dataview`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/dataview)

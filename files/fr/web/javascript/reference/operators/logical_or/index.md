@@ -1,157 +1,157 @@
 ---
-title: OU logique (||)
-slug: Web/JavaScript/Reference/Operators/Logical_OR
+titwe: ou wogique (||)
+swug: w-web/javascwipt/wefewence/opewatows/wogicaw_ow
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur OU logique (`||`) (disjonction logique) renvoie vrai si et seulement si au moins un de ses opérandes est vrai. Cet opérateur est généralement utilisé avec des valeurs booléennes et, lorsque c'est le cas, il renvoie une valeur booléenne. Toutefois, `||` peut aussi être utilisé avec des valeurs non-booléennes et, dans ce cas, renverra une valeur non-booléenne.
+w'opéwateuw o-ou wogique (`||`) (disjonction w-wogique) w-wenvoie vwai s-si et seuwement s-si au moins un d-de ses opéwandes e-est vwai. (⑅˘꒳˘) cet opéwateuw est généwawement utiwisé avec des vaweuws boowéennes e-et, (///ˬ///✿) wowsque c'est we cas, iw wenvoie une vaweuw b-boowéenne. 🥺 toutefois, `||` p-peut aussi êtwe utiwisé avec des vaweuws nyon-boowéennes et, OwO d-dans ce cas, >w< wenvewwa une vaweuw n-nyon-boowéenne. 🥺
 
-{{InteractiveExample("JavaScript Demo: Expressions - Logical OR", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - wogicaw ow", nyaa~~ "showtew")}}
 
-```js interactive-example
-const a = 3;
+```js intewactive-exampwe
+const a-a = 3;
 const b = -2;
 
-console.log(a > 0 || b > 0);
-// Expected output: true
+consowe.wog(a > 0 || b > 0);
+// expected output: twue
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-expr1 || expr2;
+expw1 || expw2;
 ```
 
-## Description
+## d-descwiption
 
-Si `expr1` peut être converti en `true`, c'est `expr1` qui sera renvoyé, sinon ce sera `expr2`.
+s-si `expw1` p-peut êtwe c-convewti en `twue`, ^^ c'est `expw1` qui sewa wenvoyé, >w< s-sinon ce sewa `expw2`. OwO
 
-Si une valeur peut être convertie en `true`, elle peut être qualifiée de [_truthy_](/fr/docs/Glossary/Truthy). Si une valeur peut être convertie en `false`, on la qualifiera alors de [_falsy_](/fr/docs/Glossary/Falsy).
+si une vaweuw peut êtwe c-convewtie en `twue`, XD ewwe peut êtwe quawifiée de [_twuthy_](/fw/docs/gwossawy/twuthy). ^^;; si une vaweuw peut êtwe convewtie e-en `fawse`, 🥺 on wa quawifiewa a-awows de [_fawsy_](/fw/docs/gwossawy/fawsy). XD
 
-Parmi les expressions qui peuvent être converties en `false`, on a :
+p-pawmi w-wes expwessions qui peuvent êtwe convewties en `fawse`, (U ᵕ U❁) on a-a :
 
-- `null` ;
-- `NaN` ;
+- `nuww` ;
+- `nan` ;
 - `0` ;
-- la chaîne de caractères vide (`""` ou `''` ou ` `` `) ;
-- `undefined`.
+- w-wa chaîne de cawactèwes vide (`""` o-ou `''` o-ou ` `` `) ;
+- `undefined`. :3
 
-Bien que l'opérateur `||` puisse être utilisé avec des opérandes qui ne soient pas des valeurs booléennes, il reste un opérateur booléen, car sa valeur de retour peut toujours être convertie en [une valeur primitive booléenne](/fr/docs/Web/JavaScript/Data_structures#boolean_type). Pour convertir explicitement la valeur de retour (ou tout expression de façon plus générale) dans sa valeur booléenne correspondante, on pourra utiliser un double [opérateur NON (`!`)](/fr/docs/Web/JavaScript/Reference/Operators/Logical_NOT) ou le constructeur [`Boolean()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean).
+bien q-que w'opéwateuw `||` puisse êtwe u-utiwisé avec des opéwandes qui nye soient p-pas des vaweuws boowéennes, ( ͡o ω ͡o ) iw w-weste un opéwateuw boowéen, òωó c-caw sa vaweuw de w-wetouw peut toujouws êtwe convewtie en [une vaweuw pwimitive boowéenne](/fw/docs/web/javascwipt/data_stwuctuwes#boowean_type). σωσ pouw convewtiw expwicitement wa vaweuw de wetouw (ou t-tout expwession d-de façon pwus généwawe) d-dans sa vaweuw b-boowéenne cowwespondante, (U ᵕ U❁) o-on pouwwa utiwisew un doubwe [opéwateuw nyon (`!`)](/fw/docs/web/javascwipt/wefewence/opewatows/wogicaw_not) o-ou we constwucteuw [`boowean()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean/boowean). (✿oωo)
 
-### Évaluation en court-circuit
+### Évawuation en couwt-ciwcuit
 
-L'expression utilisant un OU logique est évaluée de gauche à droite. Le moteur cherche s'il est possible d'utiliser un court-circuit de la façon suivante :
+w'expwession utiwisant un ou wogique e-est évawuée de gauche à d-dwoite. ^^ we moteuw c-chewche s'iw e-est possibwe d'utiwisew un couwt-ciwcuit d-de wa façon s-suivante :
 
-`(une expression équivalente à vrai) || expr` sera court-circuité pour fournir directement le résultat de l'expression équivalente à vrai.
+`(une e-expwession équivawente à v-vwai) || expw` sewa couwt-ciwcuité pouw fouwniw d-diwectement w-we wésuwtat de w-w'expwession équivawente à v-vwai. ^•ﻌ•^
 
-Cette notion de court-circuit indique que la partie `expr` ci-avant **n'est pas évaluée**, tout effet de bord lié à cette évaluation n'aura pas lieu (par exemple, si `expr` est un appel de fonction, la fonction n'est pas appelée). Ce fonctionnement a lieu, car la valeur du résultat peut d'office être déterminée par l'évaluation du premier opérande. Par exemple :
+c-cette nyotion de couwt-ciwcuit indique que wa pawtie `expw` c-ci-avant **n'est pas évawuée**, XD tout effet de bowd wié à cette évawuation ny'auwa pas wieu (paw exempwe, :3 si `expw` e-est un appew de fonction, (ꈍᴗꈍ) wa fonction ny'est pas appewée). :3 c-ce fonctionnement a-a wieu, (U ﹏ U) caw w-wa vaweuw du wésuwtat peut d'office êtwe d-détewminée paw w'évawuation d-du pwemiew o-opéwande. paw exempwe :
 
 ```js
-function A() {
-  console.log("A a été appelée");
-  return false;
+function a() {
+  consowe.wog("a a été appewée");
+  wetuwn f-fawse;
 }
 
-function B() {
-  console.log("B a été appelée");
-  return true;
+function b() {
+  consowe.wog("b a-a été appewée");
+  w-wetuwn twue;
 }
 
-console.log(B() || A());
-// affichera "B a été appelée" dans la console via l'appel de la fonction
-// puis affichera true (la valeur du résultat de l'expression avec l'opérateur)
-// on voit que la fonction A n'est pas du tout appelée
+c-consowe.wog(b() || a());
+// affichewa "b a été a-appewée" dans w-wa consowe via w'appew de wa f-fonction
+// puis a-affichewa twue (wa vaweuw du wésuwtat de w'expwession avec w'opéwateuw)
+// on voit que wa fonction a-a ny'est p-pas du tout appewée
 ```
 
-### Précédence des opérateurs
+### p-pwécédence des opéwateuws
 
-Les expressions suivantes peuvent sembler équivalentes mais ne le sont pas. En effet, l'opérateur `&&` est exécuté avant l'opérateur `||` (voir [l'article sur la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
+w-wes e-expwessions suivantes peuvent sembwew équivawentes m-mais nye we sont pas. UwU en effet, w'opéwateuw `&&` est exécuté avant w'opéwateuw `||` (voiw [w'awticwe s-suw w-wa pwécédence des opéwateuws](/fw/docs/web/javascwipt/wefewence/opewatows/opewatow_pwecedence)). 😳😳😳
 
-```js-nolint
-true || false && false; // renvoie true, car && est exécuté en premier
-(true || false) && false; // renvoie false, car la précédence par défaut ne s'applique pas avec les parenthèses
+```js-nowint
+twue || fawse && f-fawse; // wenvoie t-twue, XD caw && est exécuté en pwemiew
+(twue || fawse) && fawse; // w-wenvoie fawse, o.O caw wa pwécédence paw défaut ne s'appwique pas avec wes p-pawenthèses
 ```
 
-## Exemples
+## exempwes
 
-### Utiliser le OU logique
+### utiwisew we o-ou wogique
 
-Le code suivant illustre quelques usages de l'opérateur OU logique `||`.
+we c-code suivant iwwustwe quewques usages de w'opéwateuw ou wogique `||`. (⑅˘꒳˘)
 
 ```js
-o1 = true || true; // t || t renvoie true
-o2 = false || true; // f || t renvoie true
-o3 = true || false; // t || f renvoie true
-o4 = false || 3 == 4; // f || f renvoie false
-o5 = "Chat" || "Chien"; // t || t renvoie "Chat"
-o6 = false || "Chat"; // f || t renvoie "Chat"
-o7 = "Chat" || false; // t || f renvoie "Chat"
-o8 = "" || false; // f || f renvoie false
-o9 = false || ""; // f || f renvoie ""
-o10 = false || varObject; // f || object renvoie varObject
+o1 = t-twue || twue; // t-t || t wenvoie twue
+o2 = fawse || twue; // f || t wenvoie twue
+o-o3 = twue || fawse; // t || f-f wenvoie twue
+o4 = fawse || 3 == 4; // f || f wenvoie fawse
+o5 = "chat" || "chien"; // t-t || t wenvoie "chat"
+o6 = f-fawse || "chat"; // f-f || t wenvoie "chat"
+o7 = "chat" || f-fawse; // t || f wenvoie "chat"
+o-o8 = "" || f-fawse; // f-f || f wenvoie fawse
+o9 = fawse || ""; // f-f || f-f wenvoie ""
+o10 = fawse || vawobject; // f || object w-wenvoie vawobject
 ```
 
-> [!NOTE]
-> Si vous utilisez cet opérateur afin de fournir une valeur par défaut à une variable. Soyez conscient⋅e qu'une valeur équivalente à `false` ne pourra pas être utilisée ainsi. Si vous souhaitez uniquement écarter [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), privilégiez l'utilisation de [l'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing).
+> [!note]
+> s-si vous u-utiwisez cet opéwateuw afin de fouwniw une vaweuw p-paw défaut à une vawiabwe. 😳😳😳 s-soyez conscient⋅e q-qu'une vaweuw équivawente à `fawse` nye pouwwa pas êtwe utiwisée ainsi. nyaa~~ s-si vous souhaitez u-uniquement écawtew [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww) o-ou [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined), rawr p-pwiviwégiez w'utiwisation de [w'opéwateuw d-de coawescence des nyuws](/fw/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing). -.-
 
-### Règles de conversion booléennes
+### wègwes de convewsion boowéennes
 
-#### Convertir ET en OU
+#### convewtiw et e-en ou
 
-L'opération suivante, utilisant des **booléens** :
+w'opéwation suivante, (✿oωo) utiwisant d-des **boowéens** :
 
 ```js
-bCondition1 && bCondition2;
+bcondition1 && b-bcondition2;
 ```
 
-sera toujours équivalente à :
+sewa toujouws équivawente à :
 
 ```js
-!(!bCondition1 || !bCondition2);
+!(!bcondition1 || !bcondition2);
 ```
 
-#### Convertir OU en ET
+#### c-convewtiw ou en et
 
-L'opération suivante, utilisant des **booléens** :
+w'opéwation s-suivante, /(^•ω•^) u-utiwisant des **boowéens** :
 
 ```js
-bCondition1 || bCondition2;
+b-bcondition1 || b-bcondition2;
 ```
 
-sera toujours équivalente à :
+s-sewa toujouws équivawente à :
 
 ```js
-!(!bCondition1 && !bCondition2);
+!(!bcondition1 && !bcondition2);
 ```
 
-### Retrait des parenthèses imbriquées
+### wetwait des pawenthèses imbwiquées
 
-Les expressions logiques sont évaluées de gauche à droite, il est donc possible de retirer les parenthèses d'une expression complexe en suivant quelques règles.
+wes expwessions wogiques sont évawuées de gauche à d-dwoite, 🥺 iw e-est donc possibwe d-de wetiwew wes pawenthèses d'une e-expwession compwexe en suivant quewques wègwes. ʘwʘ
 
-L'opération composite suivante, utilisant des **booléens** :
+w'opéwation c-composite suivante, UwU u-utiwisant des **boowéens** :
 
 ```js
-bCondition1 && (bCondition2 || bCondition3);
+b-bcondition1 && (bcondition2 || bcondition3);
 ```
 
-sera toujours équivalente à :
+sewa t-toujouws équivawente à :
 
 ```js
-!(!bCondition1 || (!bCondition2 && !bCondition3));
+!(!bcondition1 || (!bcondition2 && !bcondition3));
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'opérateur de coalescence des nuls (`??`)](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [_Truthy_](/fr/docs/Glossary/Truthy)
-- [_Falsy_](/fr/docs/Glossary/Falsy)
+- [w'opéwateuw de coawescence des nyuws (`??`)](/fw/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing)
+- [`boowean`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)
+- [_twuthy_](/fw/docs/gwossawy/twuthy)
+- [_fawsy_](/fw/docs/gwossawy/fawsy)

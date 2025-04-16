@@ -1,80 +1,80 @@
 ---
-title: Math.tan()
-slug: Web/JavaScript/Reference/Global_Objects/Math/tan
+titwe: math.tan()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/tan
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.tan()`** renvoie la tangente d'un nombre exprimant un angle en radians.
+w-wa fonction **`math.tan()`** w-wenvoie w-wa tangente d'un n-nyombwe expwimant u-un angwe en w-wadians. ^^
 
-{{InteractiveExample("JavaScript Demo: Math.tan()")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.tan()")}}
 
-```js interactive-example
-function getTanFromDegrees(degrees) {
-  return Math.tan((degrees * Math.PI) / 180);
+```js intewactive-exampwe
+function gettanfwomdegwees(degwees) {
+  wetuwn math.tan((degwees * m-math.pi) / 180);
 }
 
-console.log(getTanFromDegrees(0));
-// Expected output: 0
+consowe.wog(gettanfwomdegwees(0));
+// expected o-output: 0
 
-console.log(getTanFromDegrees(45));
-// Expected output: 0.9999999999999999
+consowe.wog(gettanfwomdegwees(45));
+// expected output: 0.9999999999999999
 
-console.log(getTanFromDegrees(90));
-// Expected output: 16331239353195370
+c-consowe.wog(gettanfwomdegwees(90));
+// expected output: 16331239353195370
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.tan(x);
+math.tan(x);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : Un nombre qui représente un angle en radians.
+  - : u-un nyombwe qui wepwésente u-un angwe en wadians. 😳😳😳
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-La tangente de l'angle fourni en argument (exprimé en radians).
+wa tangente de w'angwe fouwni en awgument (expwimé e-en wadians). mya
 
-## Description
+## descwiption
 
-La méthode `Math.tan()` renvoie une valeur numérique qui représente la tangente d'un angle.
+wa méthode `math.tan()` wenvoie une vaweuw nyuméwique q-qui wepwésente wa tangente d-d'un angwe. 😳
 
-`tan()` est une méthode statique de `Math` et doit toujours être utilisée avec la syntaxe `Math.tan()`, elle ne doit pas être utilisée comme méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`tan()` e-est une m-méthode statique d-de `math` et doit toujouws êtwe utiwisée avec w-wa syntaxe `math.tan()`, -.- ewwe ne doit pas êtwe u-utiwisée comme méthode d'un autwe objet qui auwait été cwéé (`math` ny'est pas un constwucteuw). 🥺
 
-## Exemples
+## exempwes
 
-### Utiliser `Math.tan()`
+### u-utiwisew `math.tan()`
 
 ```js
-Math.tan(1); // 1.5574077246549023
+math.tan(1); // 1.5574077246549023
 ```
 
-`Math.tan()` considère un argument exprimé en radians. Cependant, on peut vouloir travailler avec des valeurs en degrés. Pour cela, on pourra utiliser la fonction suivante qui calcule la tangente après avoir converti l'argument en radians :
+`math.tan()` considèwe u-un awgument e-expwimé en w-wadians. o.O cependant, /(^•ω•^) on peut vouwoiw twavaiwwew avec des vaweuws e-en degwés. nyaa~~ pouw c-cewa, nyaa~~ on pouwwa utiwisew wa fonction s-suivante q-qui cawcuwe wa tangente apwès a-avoiw convewti w'awgument en wadians :
 
 ```js
-function getTanDeg(deg) {
-  var rad = (deg * Math.PI) / 180;
-  return Math.tan(rad);
+f-function gettandeg(deg) {
+  vaw wad = (deg * m-math.pi) / 180;
+  wetuwn m-math.tan(wad);
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
+- {{jsxwef("math.acos()")}}
+- {{jsxwef("math.asin()")}}
+- {{jsxwef("math.atan()")}}
+- {{jsxwef("math.atan2()")}}
+- {{jsxwef("math.cos()")}}
+- {{jsxwef("math.sin()")}}

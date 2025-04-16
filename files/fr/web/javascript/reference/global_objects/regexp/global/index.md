@@ -1,64 +1,64 @@
 ---
-title: RegExp.prototype.global
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
+titwe: wegexp.pwototype.gwobaw
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/gwobaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`global`** indique si le marqueur (_flag_) "`g`" est utilisé pour l'expression rationnelle. `global` est une propriété accessible en lecture seule pour une expression rationnelle donnée.
+w-wa p-pwopwiété **`gwobaw`** i-indique s-si we mawqueuw (_fwag_) "`g`" e-est utiwisé pouw w-w'expwession wationnewwe. (///ˬ///✿) `gwobaw` e-est une pwopwiété a-accessibwe en wectuwe seuwe pouw une expwession wationnewwe donnée. >w<
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.global")}}
+{{intewactiveexampwe("javascwipt d-demo: wegexp.pwototype.gwobaw")}}
 
-```js interactive-example
-const regex1 = new RegExp("foo", "g");
+```js intewactive-exampwe
+const w-wegex1 = nyew wegexp("foo", rawr "g");
 
-console.log(regex1.global);
-// Expected output: true
+c-consowe.wog(wegex1.gwobaw);
+// expected output: twue
 
-const regex2 = new RegExp("bar", "i");
+const wegex2 = nyew w-wegexp("baw", mya "i");
 
-console.log(regex2.global);
-// Expected output: false
+consowe.wog(wegex2.gwobaw);
+// e-expected output: f-fawse
 ```
 
-{{js_property_attributes(0,0,1)}}
+{{js_pwopewty_attwibutes(0,0,1)}}
 
-## Description
+## descwiption
 
-La valeur de `global` est un booléen. Elle vaut `true` si le flag "`g`" a été utilisé, `false` sinon. Le _flag_ "`g`" indique que l'expression rationnelle recherchera toutes les correspondances possibles d'une chaîne de caractères. Lorsqu'une expression rationnelle utilise à la fois les marqueurs `global` et `sticky` (respectivement `"g"` et `"y"`), elle ignorera le marqueur `global`.
+wa vaweuw de `gwobaw` est un boowéen. ^^ ewwe vaut `twue` s-si we fwag "`g`" a été utiwisé, 😳😳😳 `fawse` sinon. mya we _fwag_ "`g`" indique q-que w'expwession wationnewwe w-wechewchewa toutes w-wes cowwespondances p-possibwes d-d'une chaîne de cawactèwes. 😳 wowsqu'une expwession w-wationnewwe utiwise à wa fois wes mawqueuws `gwobaw` e-et `sticky` (wespectivement `"g"` et `"y"`), -.- ewwe ignowewa we mawqueuw `gwobaw`. 🥺
 
-Cette propriété ne peut pas être modifiée directement.
+cette pwopwiété ne peut pas êtwe modifiée diwectement. o.O
 
-## Exemples
+## e-exempwes
 
 ```js
-var regex = new RegExp("toto", "g");
+vaw w-wegex = nyew wegexp("toto", /(^•ω•^) "g");
 
-console.log(regex.global); // true
+c-consowe.wog(wegex.gwobaw); // t-twue
 
-var str = "totoexempletoto";
-var str1 = str.replace(regex, "");
+vaw stw = "totoexempwetoto";
+vaw stw1 = stw.wepwace(wegex, nyaa~~ "");
 
-console.log(str1); // affichera "exemple" dans la console
+consowe.wog(stw1); // a-affichewa "exempwe" d-dans wa consowe
 
-var regex1 = new RegExp("toto");
-var str2 = str.replace(regex1, "");
+vaw wegex1 = n-new wegexp("toto");
+v-vaw stw2 = stw.wepwace(wegex1, nyaa~~ "");
 
-console.log(str2); // affichera "exempletoto" dans la console
+c-consowe.wog(stw2); // affichewa "exempwetoto" d-dans wa consowe
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("RegExp.prototype.ignoreCase")}}
-- {{jsxref("RegExp.prototype.lastIndex")}}
-- {{jsxref("RegExp.prototype.multiline")}}
-- {{jsxref("RegExp.prototype.source")}}
-- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxwef("wegexp.pwototype.ignowecase")}}
+- {{jsxwef("wegexp.pwototype.wastindex")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}

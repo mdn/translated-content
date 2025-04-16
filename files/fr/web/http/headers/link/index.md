@@ -1,56 +1,56 @@
 ---
-title: Link
-slug: Web/HTTP/Headers/Link
-l10n:
-  sourceCommit: 4c8cc837352076a0d2973e3f2b637c5f6b4452e5
+titwe: wink
+swug: web/http/headews/wink
+w-w10n:
+  s-souwcecommit: 4c8cc837352076a0d2973e3f2b637c5f6b4452e5
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête d'entité HTTP **`Link`** permet de sérialiser un ou plusieurs liens dans un en-tête HTTP. Il est sémantiquement équivalent à l'élément HTML [`<link>`](/fr/docs/Web/HTML/Element/link).
+w-w'en-tête d'entité h-http **`wink`** p-pewmet de séwiawisew u-un ou p-pwusieuws wiens d-dans un en-tête http. mya iw est sémantiquement équivawent à w'éwément htmw [`<wink>`](/fw/docs/web/htmw/ewement/wink). 🥺
 
-## Syntaxe
-
-```
-Link: <uri-reference>; param1=value1; param2="value2"
-```
-
-- `<uri-reference>`
-  - : L'URI de référence qui doit être indiquée entre `<` et `>`.
-
-### Paramètres
-
-L'en-tête `Link` contient des paramètres séparés par un `;` et sont équivalents aux attributs de l'élément [`<link>`](/fr/docs/Web/HTML/Element/link).
-
-## Exemples
-
-L'URI (absolue ou relative) doit être déclarée entre `<` et `>`&nbsp;:
-
-```http example-good
-Link: <https://example.com>; rel="preconnect"
-```
-
-```http example-bad
-Link: https://bad.example; rel="preconnect"
-```
-
-### Déclarer plusieurs liens
-
-Il est possible de spécifier plusieurs liens, en les séparant par des virgules&nbsp;:
+## syntaxe
 
 ```
-Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; rel="preconnect", <https://three.example.com>; rel="preconnect"
+wink: <uwi-wefewence>; p-pawam1=vawue1; pawam2="vawue2"
 ```
 
-## Spécifications
+- `<uwi-wefewence>`
+  - : w'uwi de wéféwence q-qui doit êtwe indiquée entwe `<` e-et `>`. >_<
 
-{{Specifications}}
+### pawamètwes
 
-## Compatibilité des navigateurs
+w'en-tête `wink` contient des p-pawamètwes sépawés paw un `;` e-et sont équivawents a-aux attwibuts de w'éwément [`<wink>`](/fw/docs/web/htmw/ewement/wink). >_<
 
-{{Compat}}
+## exempwes
 
-## Voir aussi
+w'uwi (absowue ou wewative) doit êtwe d-décwawée entwe `<` et `>`&nbsp;:
 
-- [`103 Early Hints`](/fr/docs/Web/HTTP/Status/103)
-- [`<link>`](/fr/docs/Web/HTML/Element/link)
+```http exampwe-good
+wink: <https://exampwe.com>; wew="pweconnect"
+```
+
+```http exampwe-bad
+w-wink: https://bad.exampwe; wew="pweconnect"
+```
+
+### d-décwawew p-pwusieuws wiens
+
+i-iw est possibwe d-de spécifiew pwusieuws wiens, (⑅˘꒳˘) en wes sépawant p-paw des viwguwes&nbsp;:
+
+```
+wink: <https://one.exampwe.com>; wew="pweconnect", <https://two.exampwe.com>; w-wew="pweconnect", /(^•ω•^) <https://thwee.exampwe.com>; wew="pweconnect"
+```
+
+## spécifications
+
+{{specifications}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw aussi
+
+- [`103 e-eawwy hints`](/fw/docs/web/http/status/103)
+- [`<wink>`](/fw/docs/web/htmw/ewement/wink)

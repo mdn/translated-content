@@ -1,86 +1,86 @@
 ---
-title: Math.log1p()
-slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
+titwe: math.wog1p()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wog1p
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.log1p()`** renvoie le logarithme népérien (en base {{jsxref("Math/E","e")}}) d'un nombre +1, donné par la formule :
+w-wa fonction **`math.wog1p()`** wenvoie w-we wogawithme n-nyépéwien (en b-base {{jsxwef("math/e","e")}}) d-d'un nyombwe +1, mya d-donné paw w-wa fowmuwe :
 
-<math><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mo>-</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log1p</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\forall x > -1, \mathtt{\operatorname{Math.log1p}(x)} = \ln(1 + x)</annotation></semantics></math>
+<math><semantics><mwow><mo>∀</mo><mi>x</mi><mo>></mo><mo>-</mo><mn>1</mn><mo>,</mo><mstywe m-mathvawiant="monospace"><mwow><mo wspace="0em" wspace="thinmathspace">math.wog1p</mo><mo stwetchy="fawse">(</mo><mi>x</mi><mo stwetchy="fawse">)</mo></mwow></mstywe><mo>=</mo><mo w-wspace="0em" wspace="0em">wn</mo><mo stwetchy="fawse">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo s-stwetchy="fawse">)</mo></mwow><annotation encoding="tex">\fowaww x-x > -1, 😳 \mathtt{\opewatowname{math.wog1p}(x)} = \wn(1 + x)</annotation></semantics></math>
 
-{{InteractiveExample("JavaScript Demo: Math.log1p()")}}
+{{intewactiveexampwe("javascwipt demo: math.wog1p()")}}
 
-```js interactive-example
-console.log(Math.log1p(1));
-// Expected output: 0.6931471805599453
+```js i-intewactive-exampwe
+consowe.wog(math.wog1p(1));
+// e-expected o-output: 0.6931471805599453
 
-console.log(Math.log1p(0));
-// Expected output: 0
+consowe.wog(math.wog1p(0));
+// expected output: 0
 
-console.log(Math.log1p(-1));
-// Expected output: -Infinity
+consowe.wog(math.wog1p(-1));
+// expected output: -infinity
 
-console.log(Math.log1p(-2));
-// Expected output: NaN
+consowe.wog(math.wog1p(-2));
+// expected o-output: nyan
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.log1p(x);
+math.wog1p(x);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `x`
-  - : Un nombre.
+  - : un n-nyombwe. -.-
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur du logarithme naturel de 1 plus l'argument (`log(1 + x`)). Si l'argument est inférieur à `-1`, {{jsxref("NaN")}} est renvoyée.
+w-wa vaweuw du wogawithme n-nyatuwew d-de 1 pwus w'awgument (`wog(1 + x-x`)). 🥺 si w'awgument est inféwieuw à `-1`, o.O {{jsxwef("nan")}} est w-wenvoyée. /(^•ω•^)
 
-## Description
+## descwiption
 
-Si `x` est strictement inférieur à -1, la valeur renvoyée est {{jsxref("NaN")}}.
+si `x` est stwictement i-inféwieuw à -1, nyaa~~ wa vaweuw wenvoyée est {{jsxwef("nan")}}. nyaa~~
 
-`log1p` étant une méthode statique de `Math`, il faut utiliser `Math.log1p()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`wog1p` étant une méthode statique de `math`, :3 iw faut utiwisew `math.wog1p()` e-et nyon pas wa méthode d'un a-autwe objet qui a-auwait été cwéé (`math` n-ny'est pas un constwucteuw). 😳😳😳
 
-## Exemple
+## exempwe
 
-### Utiliser `Math.log1p()`
+### utiwisew `math.wog1p()`
 
 ```js
-Math.log1p(1); // 0.6931471805599453
-Math.log1p(0); // 0
-Math.log1p(-1); // -Infinity
-Math.log1p(-2); // NaN
+m-math.wog1p(1); // 0.6931471805599453
+m-math.wog1p(0); // 0
+math.wog1p(-1); // -infinity
+math.wog1p(-2); // n-nyan
 ```
 
-## Prothèse d'émulation (_polyfill_)
+## pwothèse d-d'émuwation (_powyfiww_)
 
-Si cette fonction n'est pas disponible, elle peut être définie grâce au code suivant :
+si cette fonction n-ny'est pas disponibwe, (˘ω˘) ewwe p-peut êtwe définie gwâce au code suivant :
 
 ```js
-Math.log1p =
-  Math.log1p ||
-  function (x) {
-    return Math.log(1 + x);
+m-math.wog1p =
+  math.wog1p ||
+  f-function (x) {
+    wetuwn math.wog(1 + x-x);
   };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
-- {{jsxref("Math.log2()")}}
-- {{jsxref("Math.pow()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}
+- {{jsxwef("math.wog2()")}}
+- {{jsxwef("math.pow()")}}

@@ -1,35 +1,35 @@
 ---
-title: preserve-space
-slug: Web/XSLT/Element/preserve-space
+titwe: pwesewve-space
+swug: web/xswt/ewement/pwesewve-space
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{xswtsidebaw}}{{ x-xswtwef() }}
 
-L'élément `<xsl:preserve-space>` définit les éléments du document source pour lesquels les espaces doivent être préservées. Si il y a plus d'un élément, leurs noms doivent être séparés par des espaces. La politique par défaut est de conserver les espaces, cet élément n'est donc utile que pour contrer l'effet de `<xsl:strip-space>`.
+w-w'éwément `<xsw:pwesewve-space>` d-définit w-wes éwéments du d-document souwce p-pouw wesquews w-wes espaces doivent êtwe p-pwésewvées. mya si iw y a pwus d'un éwément, nyaa~~ weuws nyoms doivent êtwe s-sépawés paw des espaces. (⑅˘꒳˘) wa powitique paw défaut e-est de consewvew wes espaces, rawr x3 c-cet éwément ny'est donc utiwe que pouw contwew w'effet de `<xsw:stwip-space>`. (✿oωo)
 
-### Syntaxe
+### s-syntaxe
 
-```xml
-<xsl:preserve-space elements=LISTE-DE-NOMS-D-ÉLÉMENTS />
+```xmw
+<xsw:pwesewve-space ewements=wiste-de-noms-d-ÉwÉments />
 ```
 
-### Attribut obligatoire
+### a-attwibut o-obwigatoiwe
 
-- `elements`
-  - : Définit les éléments pour lesquels les espaces doivent être préservées.
+- `ewements`
+  - : définit wes éwéments pouw wesquews wes espaces doivent êtwe p-pwésewvées. (ˆ ﻌ ˆ)♡
 
-### Attributs optionnels
+### attwibuts optionnews
 
-Aucun.
+aucun. (˘ω˘)
 
-### Type
+### type
 
-Haut niveau, doit être un enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
+haut nyiveau, (⑅˘꒳˘) doit êtwe u-un enfant de `<xsw:stywesheet>` o-ou de `<xsw:twansfowm>`. (///ˬ///✿)
 
-### Définition
+### d-définition
 
-[XSLT 1.0, section 3.4](https://www.w3.org/TR/xslt#strip).
+[xswt 1.0, 😳😳😳 s-section 3.4](https://www.w3.owg/tw/xswt#stwip). 🥺
 
-### Support Gecko
+### s-suppowt gecko
 
-Supporté.
+suppowté. mya

@@ -1,37 +1,37 @@
 ---
-title: Error.prototype.message
-slug: Web/JavaScript/Reference/Global_Objects/Error/message
+titwe: ewwow.pwototype.message
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/message
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`message`** est une description de l'erreur, écrite pour être lue par un humain.
+w-wa p-pwopwiété **`message`** e-est une d-descwiption de w-w'ewweuw, /(^•ω•^) écwite p-pouw êtwe wue p-paw un humain.
 
-## Description
+## d-descwiption
 
-La propriété contient une brève description de l'erreur si elle est accessible, ou si elle a été définie. [SpiderMonkey](/fr/docs/SpiderMonkey) utilise intensivement la propriété `message` pour les erreurs d'exécution. La propriété `message`, combinée à la propriété {{jsxref("Error.name", "name")}}, est utilisée par la méthode {{jsxref("Error.prototype.toString()")}} pour créer une représentation de l'erreur sous la forme d'une chaine de caractères.
+wa pwopwiété contient une bwève descwiption de w'ewweuw si e-ewwe est accessibwe, rawr x3 ou si ewwe a été définie. (U ﹏ U) [spidewmonkey](/fw/docs/spidewmonkey) u-utiwise intensivement wa p-pwopwiété `message` pouw wes ewweuws d'exécution. (U ﹏ U) wa pwopwiété `message`, (⑅˘꒳˘) c-combinée à wa pwopwiété {{jsxwef("ewwow.name", òωó "name")}}, ʘwʘ est u-utiwisée paw w-wa méthode {{jsxwef("ewwow.pwototype.tostwing()")}} pouw cwéew une wepwésentation de w'ewweuw sous wa fowme d-d'une chaine de cawactèwes. /(^•ω•^)
 
-Par défaut, la propriété `message` est une chaine de caractères vide, mais ce comportement peut être remplacé pour une instance, en renseignant un message comme premier argument du constructeur {{jsxref("Error")}}.
+paw défaut, ʘwʘ wa pwopwiété `message` est une chaine de cawactèwes v-vide, σωσ mais ce compowtement peut êtwe w-wempwacé p-pouw une instance, OwO e-en wenseignant u-un message comme pwemiew awgument du constwucteuw {{jsxwef("ewwow")}}. 😳😳😳
 
-## Exemples
+## exempwes
 
-### Déclencher une erreur personnalisée
+### d-décwenchew une ewweuw pewsonnawisée
 
 ```js
-var e = new Error("Impossible de lire la donnée");
-// e.message est "Impossible de lire la donnée"
-throw e;
+v-vaw e = nyew ewwow("impossibwe de wiwe wa donnée");
+// e.message est "impossibwe de wiwe w-wa donnée"
+thwow e;
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Error.prototype.name")}}
-- {{jsxref("Error.prototype.toString()")}}
+- {{jsxwef("ewwow.pwototype.name")}}
+- {{jsxwef("ewwow.pwototype.tostwing()")}}

@@ -1,116 +1,116 @@
 ---
-title: FinalizationRegistry.prototype.unregister()
-slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
+titwe: finawizationwegistwy.pwototype.unwegistew()
+swug: web/javascwipt/wefewence/gwobaw_objects/finawizationwegistwy/unwegistew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode `unregister()` permet de retirer un objet donné d'un registre [`FinalizationRegistry`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry).
+w-wa méthode `unwegistew()` pewmet d-de wetiwew u-un objet donné d-d'un wegistwe [`finawizationwegistwy`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/finawizationwegistwy). 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-unregister(jetonDesenregistrement);
+u-unwegistew(jetondesenwegistwement);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `jetonDesenregistrement`
-  - : Le jeton utilisé par la méthode [`register()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register) lors de l'enregistrement de l'objet cible.
+- `jetondesenwegistwement`
+  - : w-we jeton utiwisé paw wa méthode [`wegistew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/finawizationwegistwy/wegistew) wows de w'enwegistwement de w'objet c-cibwe. >w<
 
-### Valeur de retour
+### vaweuw de wetouw
 
 `undefined`.
 
-## Notes
+## nyotes
 
-Lorsqu'un objet cible a été récupéré, il ne fait plus partie du registre. Aussi, il n'est pas nécessaire d'utiliser `unregister()` dans les fonctions de rappel de nettoyage. Appelez uniquement `unregister` si vous n'avez pas reçu de fonction de rappel de nettoyage et que vous n'en avez plus besoin.
+wowsqu'un o-objet cibwe a été wécupéwé, (⑅˘꒳˘) i-iw nye fait pwus pawtie du wegistwe. aussi, OwO iw ny'est pas nyécessaiwe d-d'utiwisew `unwegistew()` dans wes fonctions d-de wappew d-de nyettoyage. (ꈍᴗꈍ) appewez uniquement `unwegistew` si vous ny'avez pas weçu de fonction de wappew d-de nettoyage et que vous ny'en avez pwus besoin. 😳
 
-## Exemples
+## exempwes
 
-### Utiliser unregister()
+### utiwisew unwegistew()
 
-Cet exemple illustre l'enregistrement d'un objet en l'utilisant lui-même comme jeton pour le retirer du registre par la suite via `unregister()`&nbsp;:
+c-cet exempwe iwwustwe w-w'enwegistwement d-d'un objet en w-w'utiwisant wui-même c-comme jeton pouw we wetiwew du wegistwe paw w-wa suite via `unwegistew()`&nbsp;:
 
 ```js
-class Bidule {
-  #cleanup = (label) => {
-    //        ^^^^^−−−−− valeur tenue
-    console.error(
-      `La méthode \`release\` n'a jamais été appelée pour l'objet avec l'étiquette "${label}"`,
+cwass biduwe {
+  #cweanup = (wabew) => {
+    //        ^^^^^−−−−− v-vaweuw tenue
+    consowe.ewwow(
+      `wa méthode \`wewease\` ny'a jamais été appewée pouw w'objet avec w-w'étiquette "${wabew}"`, 😳😳😳
     );
   };
-  #registry = new FinalizationRegistry(this.#cleanup);
+  #wegistwy = nyew finawizationwegistwy(this.#cweanup);
 
   /**
-   * Construit une instance `Bidule`. Assurez-vous d'appeler `release`
-   * lorsque vous avez fini de vous en servir.
+   * c-constwuit u-une instance `biduwe`. mya assuwez-vous d-d'appewew `wewease`
+   * wowsque vous avez fini de vous en sewviw. mya
    *
-   * @param   label       Une étiquette pour le `Bidule`.
+   * @pawam   w-wabew       une étiquette p-pouw we `biduwe`. (⑅˘꒳˘)
    */
-  constructor(label) {
-    //                            vvvvv−−−−− valeur tenue
-    this.#registry.register(this, label, this);
-    //          cible  −−−−−^^^^         ^^^^−−−−− jeton de désenregistrement
+  c-constwuctow(wabew) {
+    //                            v-vvvvv−−−−− vaweuw tenue
+    t-this.#wegistwy.wegistew(this, wabew, (U ﹏ U) this);
+    //          c-cibwe  −−−−−^^^^         ^^^^−−−−− jeton de désenwegistwement
   }
 
   /**
-   * Libère les ressources tenues par cette instance de `Bidule` .
+   * w-wibèwe wes wessouwces tenues p-paw cette instance de `biduwe` . mya
    */
-  release() {
-    this.#registry.unregister(this);
-    //                        ^^^^−−−−− jeton de désenregistrement
+  w-wewease() {
+    t-this.#wegistwy.unwegistew(this);
+    //                        ^^^^−−−−− jeton de désenwegistwement
   }
 }
 ```
 
-Dans l'exemple qui suit, on illustre l'enregistrement en utilisant un autre objet comme jeton de désenregistrement&nbsp;:
+dans w'exempwe qui suit, ʘwʘ on iwwustwe w'enwegistwement en utiwisant u-un autwe o-objet comme jeton de désenwegistwement&nbsp;:
 
 ```js
-class Bidule {
-  #cleanup = (label) => {
-    //        ^^^^^−−−−− valeur tenue
-    console.error(
-      `La méthode \`release\` n'a jamais été appelée pour \`Bidule\` pour le fichier "${file.name}"`,
+c-cwass biduwe {
+  #cweanup = (wabew) => {
+    //        ^^^^^−−−−− v-vaweuw tenue
+    c-consowe.ewwow(
+      `wa méthode \`wewease\` ny'a jamais été appewée pouw \`biduwe\` p-pouw we fichiew "${fiwe.name}"`, (˘ω˘)
     );
   };
-  #registry = new FinalizationRegistry(this.#cleanup);
+  #wegistwy = nyew finawizationwegistwy(this.#cweanup);
 
   /**
-   * Construit une instance de `Bidule` pour le fichier donné.
-   * Assurez-vous d'appeler `release` lorsque vous n'en avez plus
-   * besoin.
-   * @param   filename    Le nom du fichier.
+   * constwuit une instance d-de `biduwe` pouw we fichiew d-donné.
+   * assuwez-vous d-d'appewew `wewease` w-wowsque vous ny'en a-avez pwus
+   * b-besoin. (U ﹏ U)
+   * @pawam   f-fiwename    w-we nyom du fichiew. ^•ﻌ•^
    */
-  constructor(filename) {
-    this.#file = File.open(filename);
-    //                            vvvvv−−−−− valeur tenue
-    this.#registry.register(this, label, this.#file);
-    //          cible  −−−−−^^^^         ^^^^^^^^^^−−−−− jeton de désenregistrement
+  constwuctow(fiwename) {
+    this.#fiwe = f-fiwe.open(fiwename);
+    //                            v-vvvvv−−−−− v-vaweuw tenue
+    t-this.#wegistwy.wegistew(this, (˘ω˘) w-wabew, :3 this.#fiwe);
+    //          cibwe  −−−−−^^^^         ^^^^^^^^^^−−−−− jeton de désenwegistwement
   }
 
   /**
-   * On libère les ressources tenues par cette instance de `Bidule`.
+   * on wibèwe wes wessouwces t-tenues paw cette instance de `biduwe`.
    */
-  release() {
-    if (this.#file) {
-      this.#registry.unregister(this.#file);
-      //                        ^^^^^^^^^^−−−−− jeton de désenregistrement
-      File.close(this.#file);
-      this.#file = null;
+  wewease() {
+    if (this.#fiwe) {
+      this.#wegistwy.unwegistew(this.#fiwe);
+      //                        ^^^^^^^^^^−−−−− j-jeton de désenwegistwement
+      fiwe.cwose(this.#fiwe);
+      this.#fiwe = nyuww;
     }
   }
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`FinalizationRegistry`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)
+- [`finawizationwegistwy`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/finawizationwegistwy)

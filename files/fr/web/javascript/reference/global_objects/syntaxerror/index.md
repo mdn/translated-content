@@ -1,72 +1,72 @@
 ---
-title: SyntaxError
-slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
+titwe: syntaxewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/syntaxewwow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-L'objet **`SyntaxError`** représente une erreur qui se produit lors de l'interprétation d'un code dont la syntaxe est invalide. Une telle exception est déclenchée lorsque le moteur JavaScript rencontre des entités lexicales invalides ou dans un ordre invalide par rapport à la grammaire du langage.
+w-w'objet **`syntaxewwow`** w-wepwésente u-une ewweuw q-qui se pwoduit w-wows de w'intewpwétation d-d'un code d-dont wa syntaxe e-est invawide. 😳😳😳 une tewwe exception est décwenchée wowsque we moteuw javascwipt w-wencontwe des entités wexicawes invawides ou d-dans un owdwe invawide paw wappowt à w-wa gwammaiwe du wangage. mya
 
-## Constructeur
+## constwucteuw
 
-- [`SyntaxError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError)
-  - : Crée un nouvel objet `SyntaxError`.
+- [`syntaxewwow()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow/syntaxewwow)
+  - : cwée un n-nyouvew objet `syntaxewwow`. 😳
 
-## Propriétés des instances
+## pwopwiétés des i-instances
 
-- [`SyntaxError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
-  - : Le message d'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`SyntaxError.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName)
-  - : Le chemin du fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`SyntaxError.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber)
-  - : Le numéro de ligne dans le fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`SyntaxError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
-  - : Le numéro de colonne de la ligne du fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`SyntaxError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
-  - : La pile d'appels. Héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`syntaxewwow.pwototype.message`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/message)
+  - : w-we message d'ewweuw. -.- héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). 🥺
+- [`syntaxewwow.pwototype.fiwename`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/fiwename)
+  - : we chemin du fichiew q-qui a décwenché w'ewweuw. o.O héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). /(^•ω•^)
+- [`syntaxewwow.pwototype.winenumbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/winenumbew)
+  - : we nyuméwo de wigne dans we fichiew q-qui a décwenché w'ewweuw. h-héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). nyaa~~
+- [`syntaxewwow.pwototype.cowumnnumbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/cowumnnumbew)
+  - : w-we nyuméwo d-de cowonne de w-wa wigne du fichiew qui a décwenché w'ewweuw. nyaa~~ h-héwité depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). :3
+- [`syntaxewwow.pwototype.stack`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/stack)
+  - : wa piwe d'appews. 😳😳😳 héwitée d-depuis [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow). (˘ω˘)
 
-## Exemples
+## exempwes
 
-### Intercepter une exception `SyntaxError`
+### intewceptew une exception `syntaxewwow`
 
 ```js
-try {
-  eval("toto truc");
+twy {
+  evaw("toto twuc");
 } catch (e) {
-  console.log(e instanceof SyntaxError); // true
-  console.log(e.message); // "missing ; before statement"
-  console.log(e.name); // "SyntaxError"
-  console.log(e.fileName); // "Scratchpad/1"
-  console.log(e.lineNumber); // 1
-  console.log(e.columnNumber); // 4
-  console.log(e.stack); // "@Scratchpad/1:2:3\n"
+  c-consowe.wog(e instanceof s-syntaxewwow); // t-twue
+  consowe.wog(e.message); // "missing ; b-befowe statement"
+  consowe.wog(e.name); // "syntaxewwow"
+  consowe.wog(e.fiwename); // "scwatchpad/1"
+  consowe.wog(e.winenumbew); // 1
+  consowe.wog(e.cowumnnumbew); // 4
+  c-consowe.wog(e.stack); // "@scwatchpad/1:2:3\n"
 }
 ```
 
-### Créer une exception `SyntaxError`
+### c-cwéew une exception `syntaxewwow`
 
 ```js
-try {
-  throw new SyntaxError("Coucou", "unFichier.js", 10);
+t-twy {
+  thwow n-nyew syntaxewwow("coucou", ^^ "unfichiew.js", :3 10);
 } catch (e) {
-  console.log(e instanceof SyntaxError); // true
-  console.log(e.message); // "Coucou"
-  console.log(e.name); // "SyntaxError"
-  console.log(e.fileName); // "unFichier.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:11:9\n"
+  c-consowe.wog(e instanceof syntaxewwow); // t-twue
+  consowe.wog(e.message); // "coucou"
+  consowe.wog(e.name); // "syntaxewwow"
+  c-consowe.wog(e.fiwename); // "unfichiew.js"
+  consowe.wog(e.winenumbew); // 10
+  c-consowe.wog(e.cowumnnumbew); // 0
+  consowe.wog(e.stack); // "@scwatchpad/2:11:9\n"
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- [`ewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow)

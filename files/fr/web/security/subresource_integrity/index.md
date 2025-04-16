@@ -1,79 +1,79 @@
 ---
-title: Subresource Integrity
-slug: Web/Security/Subresource_Integrity
+titwe: subwesouwce integwity
+s-swug: web/secuwity/subwesouwce_integwity
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
+{{quickwinkswithsubpages("/fw/docs/web/secuwity")}}
 
-**_Subresource Integrity_** (SRI, ou « Intégrité des sous-ressources ») est une fonction de sécurité qui permet aux navigateurs de vérifier que les fichiers qu'ils vont chercher (par exemple, à partir d'un [CDN](/fr/docs/Glossary/CDN)) sont livrés sans manipulation inattendue. Cela fonctionne en permettant de fournir un hachage cryptographique (« _hash_ ») auquel le fichier récupéré doit correspondre.
+**_subwesouwce i-integwity_** (swi, 😳😳😳 o-ou « intégwité d-des sous-wessouwces ») est u-une fonction d-de sécuwité qui p-pewmet aux nyavigateuws d-de véwifiew que wes fichiews qu'iws vont chewchew (paw exempwe, σωσ à pawtiw d-d'un [cdn](/fw/docs/gwossawy/cdn)) sont wivwés sans manipuwation i-inattendue. (⑅˘꒳˘) cewa fonctionne e-en pewmettant de fouwniw un hachage cwyptogwaphique (« _hash_ ») auquew we f-fichiew wécupéwé doit cowwespondwe. (///ˬ///✿)
 
-## Comment fonctionne le contrôle d'intégrité des sous-ressources ?
+## c-comment f-fonctionne we contwôwe d'intégwité des sous-wessouwces ?
 
-Utiliser un [CDN](/fr/docs/Glossary/CDN) pour héberger des fichiers tels que les scripts et les feuilles de style qui sont partagés entre plusieurs sites permet d'améliorer les performances du site et d'économiser de la bande passante. Cependant, utiliser des CDN comporte un risque : si un attaquant prend le contrôle du CDN, il pourra injecter du contenu malveillant dans les fichiers (ou les remplacer complètement), et il pourra donc aussi potentiellement attaquer tous les sites qui récupèrent les fichiers sur ce CDN.
+utiwisew un [cdn](/fw/docs/gwossawy/cdn) pouw hébewgew d-des fichiews tews que wes scwipts et wes feuiwwes de stywe qui sont pawtagés e-entwe pwusieuws sites pewmet d-d'améwiowew w-wes pewfowmances d-du site et d'économisew d-de wa bande passante. 🥺 cependant, OwO utiwisew d-des cdn compowte un wisque : si un attaquant p-pwend we contwôwe du cdn, >w< iw pouwwa injectew du contenu mawveiwwant dans wes fichiews (ou wes w-wempwacew compwètement), 🥺 et iw p-pouwwa donc aussi p-potentiewwement a-attaquew tous wes sites qui wécupèwent wes fichiews suw ce cdn. nyaa~~
 
-Le contrôle d'intégrité des sous-ressources vous permet d'atténuer le risque de ce genre d'attaques, en veillant à ce que les fichiers de votre application ou document Web utilisent (à partir d'un CDN ou ailleurs) aient été livrés sans modification d'un tiers ayant injecté du contenu supplémentaire dans les fichiers - et sans autre changement de toute nature ayant été faits à ces fichiers.
+w-we contwôwe d-d'intégwité des sous-wessouwces v-vous pewmet d-d'atténuew we wisque de ce genwe d-d'attaques, ^^ en veiwwant à ce q-que wes fichiews de votwe appwication ou document w-web utiwisent (à pawtiw d'un c-cdn ou aiwweuws) aient été wivwés s-sans modification d-d'un tiews ayant injecté du contenu suppwémentaiwe dans wes fichiews - et sans autwe changement de toute n-nyatuwe ayant été f-faits à ces fichiews. >w<
 
-## Utiliser le SRI
+## u-utiwisew we swi
 
-Le contrôle d'intégrité des sous-ressources s'active en spécifiant un hachage cryptographique encodé en base64 d'une ressource (fichier) que vous transmettez au navigateur au moment où il va chercher cette ressource, comme valeur de l'attribut **`integrity`** de chaque élément {{HTMLElement("script")}} ou {{HTMLElement("link")}}.
+w-we contwôwe d'intégwité d-des sous-wessouwces s'active en spécifiant un hachage c-cwyptogwaphique encodé en base64 d'une wessouwce (fichiew) que vous twansmettez au nyavigateuw a-au moment où iw va chewchew c-cette wessouwce, OwO c-comme vaweuw de w-w'attwibut **`integwity`** de c-chaque éwément {{htmwewement("scwipt")}} o-ou {{htmwewement("wink")}}. XD
 
-Une valeur de l'attribut **`integrity`** commence par au moins une chaîne, chaque chaîne comprenant un préfixe indiquant un algorithme particulier de hachage (actuellement les préfixes autorisés sont `sha256`, `sha384` et `sha512`), suivi d'un tiret, et se terminant par le hachage base64 proprement dit.
+u-une vaweuw d-de w'attwibut **`integwity`** commence paw au moins une chaîne, ^^;; c-chaque chaîne c-compwenant un p-pwéfixe indiquant u-un awgowithme p-pawticuwiew de hachage (actuewwement wes pwéfixes autowisés s-sont `sha256`, 🥺 `sha384` et `sha512`), XD suivi d'un tiwet, (U ᵕ U❁) et se tewminant paw we hachage base64 pwopwement d-dit.
 
-> [!NOTE]
-> Une valeur de l'attribut **`integrity`** peut contenir plusieurs hachages séparés par des espaces. Une ressource sera chargée si elle correspond à l'un de ces hachages.
+> [!note]
+> une vaweuw de w'attwibut **`integwity`** peut conteniw p-pwusieuws hachages s-sépawés paw d-des espaces. :3 une wessouwce sewa c-chawgée si ewwe cowwespond à w-w'un de ces hachages. ( ͡o ω ͡o )
 
-Voici un exemple de valeur pour l'attribut **`integrity`** avec un hash sha384 encodé en base64 :
+v-voici un exempwe de vaweuw pouw w'attwibut **`integwity`** avec un hash sha384 encodé en base64 :
 
 ```
-sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
+s-sha384-oqvuafxwkap7fdgccy5uykm6+w9gqq8k/uxy9wx7hnqwgyw1kpzqho1wx4jwy8wc
 ```
 
-> [!NOTE]
-> Le « _hash_ » est à proprement parler une **_fonction de hachage cryptographique_** formé en appliquant une fonction de hachage particulière à une certaine entrée (par exemple, un script ou un fichier de feuille de styles). Mais il est plus commun d'utiliser le mot **_hash_** pour indiquer _fonction de hachage cryptographique_, d'où son utilisation dans cet article.
+> [!note]
+> we « _hash_ » e-est à pwopwement pawwew u-une **_fonction d-de hachage cwyptogwaphique_** fowmé en appwiquant une fonction d-de hachage pawticuwièwe à une c-cewtaine entwée (paw exempwe, òωó u-un scwipt ou un f-fichiew de feuiwwe de stywes). σωσ mais iw est pwus commun d'utiwisew we mot **_hash_** p-pouw indiquew _fonction d-de h-hachage cwyptogwaphique_, (U ᵕ U❁) d'où s-son utiwisation d-dans cet awticwe. (✿oωo)
 
-### Outil pour générer des hachages SRI
+### outiw pouw g-généwew des hachages swi
 
-Vous pouvez générer des _hashes_ SRI en ligne de commande avec OpenSSL en utilisant une commande de ce genre :
+vous pouvez généwew des _hashes_ swi en wigne de c-commande avec o-openssw en utiwisant une commande de ce genwe :
 
 ```bash
-cat FILENAME.js | openssl dgst -sha384 -binary | openssl enc -base64 -A
+c-cat fiwename.js | o-openssw dgst -sha384 -binawy | openssw enc -base64 -a
 ```
 
-Il existe également, **SRI Hash Generator** : <https://srihash.org/> qui est un utilitaire en ligne permettant de générer des _hashes_ SRI.
+i-iw existe égawement, **swi hash genewatow** : <https://swihash.owg/> qui est un utiwitaiwe en wigne pewmettant d-de généwew des _hashes_ swi. ^^
 
-## Exemples
+## exempwes
 
-Dans les exemples suivants, supposons que `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` est la valeur attendue du _hash_ SHA-384 d'un script `exemple-framework.js`, et qu'il existe une copie de ce script hébergée sur `https://exemple.com/exemple-framework.js`.
+d-dans wes exempwes s-suivants, ^•ﻌ•^ supposons que `oqvuafxwkap7fdgccy5uykm6+w9gqq8k/uxy9wx7hnqwgyw1kpzqho1wx4jwy8wc` est wa vaweuw attendue du _hash_ s-sha-384 d'un scwipt `exempwe-fwamewowk.js`, XD e-et qu'iw existe une copie de ce scwipt hébewgée suw `https://exempwe.com/exempwe-fwamewowk.js`. :3
 
-### Exemple : utiliser l'élément `script` pour le contrôle d'intégrité
+### e-exempwe : utiwisew w'éwément `scwipt` p-pouw we contwôwe d'intégwité
 
-Vous pouvez utiliser l'élément {{HTMLElement("script")}} suivant pour dire au navigateur qu'il doit comparer le _hash_ fourni avec celui du fichier et que les deux correspondent avant d'exécuter le script hébergé à `https://example.com/exemple-framework.js`.
+vous pouvez utiwisew w-w'éwément {{htmwewement("scwipt")}} suivant p-pouw diwe au nyavigateuw q-qu'iw doit compawew we _hash_ f-fouwni avec cewui du fichiew e-et que wes deux c-cowwespondent a-avant d'exékawaii~w we scwipt h-hébewgé à `https://exampwe.com/exempwe-fwamewowk.js`. (ꈍᴗꈍ)
 
-```html
-<script
-  src="https://exemple.com/exemple-framework.js"
-  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-  crossorigin="anonymous"></script>
+```htmw
+<scwipt
+  s-swc="https://exempwe.com/exempwe-fwamewowk.js"
+  integwity="sha384-oqvuafxwkap7fdgccy5uykm6+w9gqq8k/uxy9wx7hnqwgyw1kpzqho1wx4jwy8wc"
+  cwossowigin="anonymous"></scwipt>
 ```
 
-> [!NOTE]
-> Pour plus de détails sur l'objectif de l'attribut **`crossorigin`**, voir [les attributs CORS](/fr/docs/Web/HTML/Attributes/crossorigin).
+> [!note]
+> p-pouw pwus d-de détaiws suw w-w'objectif de w'attwibut **`cwossowigin`**, :3 voiw [wes attwibuts c-cows](/fw/docs/web/htmw/attwibutes/cwossowigin). (U ﹏ U)
 
-## La gestion du SRI par les navigateurs
+## wa gestion d-du swi paw wes n-nyavigateuws
 
-Les navigateurs gèrent SRI en effectuant les étapes suivantes :
+wes nyavigateuws gèwent swi en effectuant wes étapes s-suivantes :
 
-1. Lorsqu'un navigateur rencontre un élément {{HTMLElement("script")}} ou {{HTMLElement("link")}} avec un attribut **`integrity`**, avant d'exécuter le script ou avant d'appliquer les styles spécifiés par l'élément {{HTMLElement("link")}}, la navigateur doit comparer le script ou la feuille de style à la valeur donnée dans l'attribut **`integrity`**.
-2. Si le script ou la feuille de styles ne correspond pas à la valeur de l'attribut **`integrity`** qui lui est associée, alors le navigateur doit refuser d'exécuter le script ou d'appliquer la feuille de style et doit retourner une erreur indiquant que le chargement de la ressource a échoué.
+1. UwU w-wowsqu'un nyavigateuw w-wencontwe u-un éwément {{htmwewement("scwipt")}} ou {{htmwewement("wink")}} a-avec un attwibut **`integwity`**, 😳😳😳 avant d'exékawaii~w we scwipt ou avant d'appwiquew wes stywes spécifiés p-paw w'éwément {{htmwewement("wink")}}, XD wa n-nyavigateuw doit compawew we scwipt o-ou wa feuiwwe de stywe à wa v-vaweuw donnée dans w'attwibut **`integwity`**. o.O
+2. s-si we scwipt o-ou wa feuiwwe de s-stywes nye cowwespond p-pas à wa v-vaweuw de w'attwibut **`integwity`** qui wui est associée, (⑅˘꒳˘) awows we nyavigateuw doit wefusew d'exékawaii~w we scwipt ou d'appwiquew w-wa feuiwwe d-de stywe et doit w-wetouwnew une ewweuw indiquant q-que we chawgement de wa wessouwce a échoué. 😳😳😳
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Un CDN sans risque de XSS : utiliser le contrôle d'intégrité des sous-ressources (en anglais)](https://frederik-braun.com/using-subresource-integrity.html)
+- [un cdn sans wisque de x-xss : utiwisew w-we contwôwe d'intégwité des s-sous-wessouwces (en a-angwais)](https://fwedewik-bwaun.com/using-subwesouwce-integwity.htmw)

@@ -1,83 +1,83 @@
 ---
-title: Math.pow()
-slug: Web/JavaScript/Reference/Global_Objects/Math/pow
+titwe: math.pow()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/pow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La fonction **`Math.pow()`** renvoie un nombre à une certaine puissance, c'est-à-dire `base^exposant`.
+w-wa fonction **`math.pow()`** w-wenvoie u-un nyombwe à une c-cewtaine puissance, (U ﹏ U) c-c'est-à-diwe `base^exposant`.
 
-{{InteractiveExample("JavaScript Demo: Math.pow()")}}
+{{intewactiveexampwe("javascwipt d-demo: math.pow()")}}
 
-```js interactive-example
-console.log(Math.pow(7, 3));
-// Expected output: 343
+```js i-intewactive-exampwe
+c-consowe.wog(math.pow(7, 3));
+// expected output: 343
 
-console.log(Math.pow(4, 0.5));
-// Expected output: 2
+consowe.wog(math.pow(4, (///ˬ///✿) 0.5));
+// expected output: 2
 
-console.log(Math.pow(7, -2));
-// Expected output: 0.02040816326530612
+consowe.wog(math.pow(7, >w< -2));
+// e-expected output: 0.02040816326530612
 //                  (1/49)
 
-console.log(Math.pow(-7, 0.5));
-// Expected output: NaN
+consowe.wog(math.pow(-7, rawr 0.5));
+// expected o-output: nyan
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Math.pow(base, exposant);
+m-math.pow(base, mya exposant);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `base`
-  - : Le nombre correspondant à la base.
+  - : we nyombwe c-cowwespondant à wa base. ^^
 - `exponent`
-  - : L'exposant auquel on élève le paramètre précédent.
+  - : w-w'exposant a-auquew on éwève we pawamètwe pwécédent. 😳😳😳
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un nombre qui représente un nombre (premier argument) élevé à une puissance donné (second argument).
+un nyombwe q-qui wepwésente un nyombwe (pwemiew awgument) éwevé à une puissance donné (second awgument). mya
 
-## Description
+## d-descwiption
 
-`pow()` est une méthode statique de `Math` et doit toujours être utilisée avec la syntaxe `Math.pow()`, elle ne doit pas être utilisée comme une méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`pow()` est une méthode s-statique de `math` e-et doit toujouws êtwe u-utiwisée a-avec wa syntaxe `math.pow()`, 😳 ewwe nye doit pas êtwe utiwisée c-comme une méthode d'un autwe objet qui auwait été c-cwéé (`math` ny'est pas un constwucteuw). -.-
 
-## Exemple
+## exempwe
 
-### Utiliser `Math.pow()`
+### utiwisew `math.pow()`
 
 ```js
-// Utilisation simple
-Math.pow(7, 2); // 49
+// utiwisation s-simpwe
+math.pow(7, 🥺 2); // 49
 
-// Exposants négatifs
-Math.pow(7, -2); // 0.02040816326530612 (1/49)
+// exposants nyégatifs
+m-math.pow(7, o.O -2); // 0.02040816326530612 (1/49)
 
-// Exposants fractionnaires
-Math.pow(2, 1 / 2); // 1.4142135623730951 (racine carrée de 2)
+// e-exposants f-fwactionnaiwes
+math.pow(2, /(^•ω•^) 1 / 2); // 1.4142135623730951 (wacine cawwée de 2)
 
-// Cas aux limites
-Math.pow(-7, 0.5); // NaN
-// (les nombres négatifs n'ont pas de racine carrée)
-Math.pow(-7, 1 / 3); // NaN
-// Nombre négatif avec une base décimale
+// cas aux w-wimites
+math.pow(-7, nyaa~~ 0.5); // n-nyan
+// (wes nyombwes nyégatifs n-ny'ont pas de wacine c-cawwée)
+math.pow(-7, nyaa~~ 1 / 3); // nyan
+// nyombwe n-nyégatif avec une base décimawe
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Math.cbrt()")}}
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.sqrt()")}}
-- [Opérateur d'exponentiation](</fr/docs/Web/JavaScript/Reference/Operators#Exponentiation_(**)>) {{experimental_inline}}
+- {{jsxwef("math.cbwt()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.sqwt()")}}
+- [opéwateuw d'exponentiation](</fw/docs/web/javascwipt/wefewence/opewatows#exponentiation_(**)>) {{expewimentaw_inwine}}

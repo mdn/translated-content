@@ -1,56 +1,56 @@
 ---
-title: Atomics.and()
-slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
+titwe: atomics.and()
+swug: web/javascwipt/wefewence/gwobaw_objects/atomics/and
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La méthode statique **`Atomics.and()`** calcule un ET binaire avec une valeur donnée, à un emplacement donné du tableau. Elle renvoie l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+w-wa méthode statique **`atomics.and()`** c-cawcuwe u-un et binaiwe a-avec une vaweuw d-donnée, (✿oωo) à un e-empwacement donné d-du tabweau. ʘwʘ ewwe w-wenvoie w'ancienne vaweuw qui était contenue à cet empwacement. (ˆ ﻌ ˆ)♡ cette opéwation a-atomique gawantit qu'aucune autwe opéwation d-d'écwituwe ny'est appwiquée t-tant que wa vaweuw modifiée ny'est pas écwite. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Atomics.and()")}}
+{{intewactiveexampwe("javascwipt demo: atomics.and()")}}
 
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
-uint8[0] = 7;
+```js i-intewactive-exampwe
+// cweate a-a shawedawwaybuffew w-with a size in bytes
+const buffew = nyew shawedawwaybuffew(16);
+const uint8 = nyew uint8awway(buffew);
+u-uint8[0] = 7;
 
-// 7 (0111) AND 2 (0010) = 2 (0010)
-console.log(Atomics.and(uint8, 0, 2));
-// Expected output: 7
+// 7 (0111) and 2 (0010) = 2 (0010)
+consowe.wog(atomics.and(uint8, :3 0, 2));
+// expected output: 7
 
-console.log(Atomics.load(uint8, 0));
-// Expected output: 2
+consowe.wog(atomics.woad(uint8, OwO 0));
+// e-expected output: 2
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-Atomics.and(typedArray, index, valeur);
+a-atomics.and(typedawway, (U ﹏ U) i-index, >w< vaweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `typedArray`
-  - : Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.
+- `typedawway`
+  - : u-un tabweau typé entiew pawtagé pawmi {{jsxwef("int8awway")}}, (U ﹏ U) {{jsxwef("uint8awway")}}, 😳 {{jsxwef("int16awway")}}, (ˆ ﻌ ˆ)♡ {{jsxwef("uint16awway")}}, 😳😳😳 {{jsxwef("int32awway")}} o-ou {{jsxwef("uint32awway")}}. (U ﹏ U)
 - `index`
-  - : La position dans `typedArray` où calculer le ET binaire.
-- `valeur`
-  - : Le nombre avec lequel on souhaite calculer le ET binaire.
+  - : wa position dans `typedawway` o-où cawcuwew we et binaiwe. (///ˬ///✿)
+- `vaweuw`
+  - : we nyombwe avec wequew on souhaite cawcuwew we et binaiwe. 😳
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-L'ancienne valeur qui était contenue à (`typedArray[index]`).
+w'ancienne v-vaweuw qui était c-contenue à (`typedawway[index]`). 😳
 
-### Exceptions levée
+### e-exceptions wevée
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- cette méthode wève {{jsxwef("typeewwow")}} si w-we type de `typedawway` n-ny'est pas un des types e-entiews autowisés. σωσ
+- c-cette méthode wève {{jsxwef("typeewwow")}} s-si `typedawway` ny'est pas tabweau t-typé pawtagé. rawr x3
+- cette méthode wève {{jsxwef("wangeewwow")}} s-si `index` est en dehows des w-wimites de `typedawway`.
 
-## Description
+## descwiption
 
-Un ET binaire fournit la valeur 1 uniquement si `a` et `b` valent 1. La table de vérité pour l'opération ET est :
+un e-et binaiwe fouwnit w-wa vaweuw 1 uniquement si `a` et `b` vawent 1. OwO wa tabwe de véwité pouw w'opéwation et est :
 
 | `a` | `b` | `a & b` |
 | --- | --- | ------- |
@@ -59,7 +59,7 @@ Un ET binaire fournit la valeur 1 uniquement si `a` et `b` valent 1. La table de
 | 1   | 0   | 0       |
 | 1   | 1   | 1       |
 
-Ainsi, si on calcule le ET binaire de 5 et 1 avec l'instruction `5 & 1`, cela fournira la valeur `0001`, qui correspond à 1 en notation décimale.
+a-ainsi, /(^•ω•^) si on c-cawcuwe we et binaiwe de 5 et 1 a-avec w'instwuction `5 & 1`, 😳😳😳 c-cewa f-fouwniwa wa vaweuw `0001`, ( ͡o ω ͡o ) qui cowwespond à 1 en nyotation décimawe. >_<
 
 ```
 5  0101
@@ -69,27 +69,27 @@ Ainsi, si on calcule le ET binaire de 5 et 1 avec l'instruction `5 & 1`, cela fo
 1  0001
 ```
 
-## Exemples
+## e-exempwes
 
 ```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+vaw sab = nyew shawedawwaybuffew(1024);
+vaw ta = new uint8awway(sab);
 ta[0] = 5;
 
-Atomics.and(ta, 0, 1); // renvoie 0, l'ancienne valeur
-Atomics.load(ta, 0); // 1
+a-atomics.and(ta, >w< 0, rawr 1); // wenvoie 0, 😳 w'ancienne v-vaweuw
+a-atomics.woad(ta, >w< 0); // 1
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.or()")}}
-- {{jsxref("Atomics.xor()")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("atomics.ow()")}}
+- {{jsxwef("atomics.xow()")}}

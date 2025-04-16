@@ -1,192 +1,192 @@
 ---
-title: "<div> : l'élément de division du contenu"
-slug: Web/HTML/Element/div
+titwe: "<div> : w'éwément de d-division du contenu"
+s-swug: web/htmw/ewement/div
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-L'élément HTML **`<div>`** (ou division) est le conteneur générique du contenu du flux. Il n'a aucun effet sur le contenu ou la mise en page tant qu'il n'est pas mis en forme d'une manière quelconque à l'aide de [CSS](/fr/docs/Web/CSS).
+w-w'éwément h-htmw **`<div>`** (ou d-division) e-est we conteneuw g-généwique d-du contenu du fwux. ʘwʘ iw ny'a aucun effet suw we contenu ou wa mise en page tant qu'iw n-ny'est pas mis en fowme d'une manièwe quewconque à w-w'aide de [css](/fw/docs/web/css). 😳😳😳
 
-{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;div&gt;", ^^;; "tabbed-standawd")}}
 
-```html interactive-example
-<div class="warning">
+```htmw intewactive-exampwe
+<div cwass="wawning">
   <img
-    src="/shared-assets/images/examples/leopard.jpg"
-    alt="An intimidating leopard." />
-  <p>Beware of the leopard</p>
+    swc="/shawed-assets/images/exampwes/weopawd.jpg"
+    a-awt="an intimidating weopawd." />
+  <p>bewawe o-of the weopawd</p>
 </div>
 ```
 
-```css interactive-example
-.warning {
-  border: 10px ridge #f00;
-  background-color: #ff0;
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
+```css i-intewactive-exampwe
+.wawning {
+  bowdew: 10px widge #f00;
+  backgwound-cowow: #ff0;
+  padding: 0.5wem;
+  dispway: fwex;
+  f-fwex-diwection: cowumn;
 }
 
-.warning img {
+.wawning img {
   width: 100%;
 }
 
-.warning p {
-  font: small-caps bold 1.2rem sans-serif;
-  text-align: center;
+.wawning p {
+  font: smow-caps bowd 1.2wem s-sans-sewif;
+  text-awign: c-centew;
 }
 ```
 
-En tant que conteneur « pur », l'élément `<div>` ne représente rien en soi. Il est plutôt utilisé pour regrouper le contenu afin qu'il puisse être facilement stylé à l'aide des attributs [`class`](/fr/docs/Web/HTML/Global_attributes#attr-class) ou [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id), pour marquer une section d'un document comme étant écrite dans une langue différente (à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes#attr-lang)), etc.
+e-en tant que conteneuw « p-puw », o.O w-w'éwément `<div>` nye wepwésente wien en s-soi. (///ˬ///✿) iw est pwutôt utiwisé pouw wegwoupew we contenu a-afin qu'iw puisse êtwe faciwement stywé à w'aide des attwibuts [`cwass`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-cwass) ou [`id`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-id), σωσ pouw m-mawquew une section d'un document c-comme étant écwite d-dans une w-wangue difféwente (à w'aide de w'attwibut [`wang`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-wang)), nyaa~~ etc.
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
+    <tw>
+      <th s-scope="wow">
         <dfn
-          ><a href="/fr/docs/Web/Guide/HTML/Content_categories"
-            >Catégories de contenu</a
+          ><a hwef="/fw/docs/web/guide/htmw/content_categowies"
+            >catégowies d-de contenu</a
           ></dfn
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
-          >contenu tangible</a
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >, ^^;;
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#pawpabwe_content"
+          >contenu tangibwe</a
         >.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">contenu autowisé</th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >. Selon le WHATWG, si l'élément parent est un élément
-        <a href="/fr/docs/Web/HTML/Element/dl"><code>&#x3C;dl></code></a
-        >, un ou plusieurs éléments
-        <a href="/fr/docs/Web/HTML/Element/dt"><code>&#x3C;dt></code></a> suivis
-        par un ou plusieurs éléments
-        <a href="/fr/docs/Web/HTML/Element/dd"><code>&#x3C;dd></code></a>
-        éventuellement entrecoupés par des éléments
-        <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+        <a hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu de fwux</a
+        >. ^•ﻌ•^ s-sewon we nyaniwg, si w-w'éwément pawent est un éwément
+        <a h-hwef="/fw/docs/web/htmw/ewement/dw"><code>&#x3c;dw></code></a
+        >, σωσ u-un ou pwusieuws éwéments
+        <a hwef="/fw/docs/web/htmw/ewement/dt"><code>&#x3c;dt></code></a> suivis
+        paw un ou pwusieuws éwéments
+        <a hwef="/fw/docs/web/htmw/ewement/dd"><code>&#x3c;dd></code></a>
+        éventuewwement entwecoupés paw des éwéments
+        <a h-hwef="/fw/docs/web/htmw/ewement/scwipt"
+          ><code>&#x3c;scwipt></code></a
         >
-        ou
-        <a href="/fr/docs/Web/HTML/Element/template"
-          ><code>&#x3C;template></code></a
+        o-ou
+        <a hwef="/fw/docs/web/htmw/ewement/tempwate"
+          ><code>&#x3c;tempwate></code></a
+        >. -.-
+      </td>
+    </tw>
+    <tw>
+      <th s-scope="wow">omission d-de bawises</th>
+      <td>
+        a-aucune, ^^;; wa bawise d'ouvewtuwe et wa bawise de fewmetuwe s-sont
+        obwigatoiwes. XD
+      </td>
+    </tw>
+    <tw>
+      <th scope="wow">pawents autowisés</th>
+      <td>
+        tout éwément q-qui accepte un
+        <a h-hwef="/fw/docs/web/guide/htmw/content_categowies#fwow_content"
+          >contenu d-de fwux</a
+        >. 🥺 sewon w-we nyaniwg, òωó un éwément
+        <a h-hwef="/fw/docs/web/htmw/ewement/dw"><code>&#x3c;dw></code></a
         >.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">wôwe a-awia i-impwicite</th>
+      <td><a hwef="https://www.w3.owg/tw/wai-awia-1.2/#genewic">genewic</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">wôwes awia autowisés</th>
+      <td>tous w-wes wôwes s-sont autowisés.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface d-dom</th>
       <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>
-        Tout élément qui accepte un
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >contenu de flux</a
-        >. Selon le WHATWG, un élément
-        <a href="/fr/docs/Web/HTML/Element/dl"><code>&#x3C;dl></code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="https://www.w3.org/TR/wai-aria-1.2/#generic">generic</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Tous les rôles sont autorisés.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLDivElement"
-          ><code>HTMLDivElement</code></a
+        <a h-hwef="/fw/docs/web/api/htmwdivewement"
+          ><code>htmwdivewement</code></a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Attributs
+## attwibuts
 
-Comme tous les autres éléments HTML, cet élément accepte [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+comme tous wes autwes éwéments htmw, (ˆ ﻌ ˆ)♡ c-cet éwément accepte [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). -.-
 
-> [!NOTE]
-> L'attribut **`align`** est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégiera l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/CSS_grid_layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Glossary/Flexbox)) pour aligner et positionner des éléments `<div>`.
+> [!note]
+> w'attwibut **`awign`** est désowmais obsowète et nye doit p-pwus êtwe appwiqué pouw un `<div>`. :3 on pwiviwégiewa w'utiwisation d-des pwopwiétés e-et outiws c-css (tews que [wa gwiwwe css](/fw/docs/web/css/css_gwid_wayout) o-ou [wes boîtes fwexibwes (fwexbox)](/fw/docs/gwossawy/fwexbox)) p-pouw awignew e-et positionnew des éwéments `<div>`. ʘwʘ
 
-## Notes d'utilisation
+## nyotes d'utiwisation
 
-- L'élément `<div>` doit uniquement être utilisé lorsqu'il n'existe aucun autre élément dont la sémantique permet de représenter le contenu (par exemple [`<article>`](/fr/docs/Web/HTML/Element/article) ou [`<nav>`](/fr/docs/Web/HTML/Element/nav)).
+- w'éwément `<div>` doit uniquement êtwe utiwisé w-wowsqu'iw ny'existe aucun a-autwe éwément dont wa sémantique p-pewmet de w-wepwésentew we contenu (paw exempwe [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe) ou [`<nav>`](/fw/docs/web/htmw/ewement/nav)). 🥺
 
-## Exemples
+## e-exempwes
 
-### Un exemple simple
+### u-un exempwe simpwe
 
-```html
+```htmw
 <div>
   <p>
-    Tout type de contenu. Par exemple &lt;p&gt;, &lt;table&gt;. À vous de
-    voir&nbsp;!
+    t-tout type de contenu. >_< p-paw exempwe &wt;p&gt;, ʘwʘ &wt;tabwe&gt;. (˘ω˘) À vous de
+    voiw&nbsp;! (✿oωo)
   </p>
 </div>
 ```
 
-#### Résultat
+#### wésuwtat
 
-{{EmbedLiveSample("", "", 80)}}
+{{embedwivesampwe("", (///ˬ///✿) "", rawr x3 80)}}
 
-### Un exemple mis en forme
+### un exempwe mis en fowme
 
-Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via du CSS sur l'élément `<div>`. On notera l'utilisation de l'attribut [`class`](/fr/docs/Web/HTML/Global_attributes#attr-class) sur l'élément `<div>` afin d'appliquer la règle `"shadowbox"`.
+cet exempwe c-cwée une boîte a-avec une ombwe e-en appwiquant wa mise en fowme v-via du css suw w-w'éwément `<div>`. on nyotewa w-w'utiwisation de w'attwibut [`cwass`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-cwass) suw w'éwément `<div>` afin d'appwiquew wa wègwe `"shadowbox"`. -.-
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="shadowbox">
+```htmw
+<div c-cwass="shadowbox">
   <p>
-    Voici un paragraphe très intéressant inscrit dans une boîte avec une ombre.
+    voici un pawagwaphe twès intéwessant i-inscwit d-dans une boîte avec une ombwe. ^^
   </p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .shadowbox {
   width: 15em;
-  border: 1px solid #333;
+  b-bowdew: 1px sowid #333;
   box-shadow: 8px 8px 5px #444;
   padding: 8px 12px;
-  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+  backgwound-image: wineaw-gwadient(180deg, (⑅˘꒳˘) #fff, nyaa~~ #ddd 40%, #ccc);
 }
 ```
 
-#### Résultat
+#### w-wésuwtat
 
-{{EmbedLiveSample("", "", 150)}}
+{{embedwivesampwe("", /(^•ω•^) "", 150)}}
 
-## Accessibilité
+## accessibiwité
 
-L'élément `<div>` possède un rôle ARIA implicite [`generic`](https://www.w3.org/TR/wai-aria-1.2/#generic) (plutôt qu'aucun rôle). Cela peut avoir un impact sur certaines combinaisons de déclarations ARIA qui nécessitent un élément descendant direct avec un rôle donné pour fonctionner correctement.
+w'éwément `<div>` p-possède un wôwe a-awia impwicite [`genewic`](https://www.w3.owg/tw/wai-awia-1.2/#genewic) (pwutôt qu'aucun wôwe). cewa peut avoiw un impact s-suw cewtaines combinaisons d-de décwawations awia qui nyécessitent un éwément d-descendant diwect avec un wôwe d-donné pouw fonctionnew cowwectement. (U ﹏ U)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les éléments de sectionnement sémantique : [`<section>`](/fr/docs/Web/HTML/Element/section), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<footer>`](/fr/docs/Web/HTML/Element/footer)
-- L'élément [`<span>`](/fr/docs/Web/HTML/Element/span) pour la mise en forme du contenu du phrasé
+- w-wes éwéments de s-sectionnement sémantique : [`<section>`](/fw/docs/web/htmw/ewement/section), 😳😳😳 [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe), >w< [`<nav>`](/fw/docs/web/htmw/ewement/nav), XD [`<headew>`](/fw/docs/web/htmw/ewement/headew), o.O [`<footew>`](/fw/docs/web/htmw/ewement/footew)
+- w-w'éwément [`<span>`](/fw/docs/web/htmw/ewement/span) pouw wa mise e-en fowme du contenu d-du phwasé

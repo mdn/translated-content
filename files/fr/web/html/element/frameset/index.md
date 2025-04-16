@@ -1,46 +1,46 @@
 ---
-title: "<frameset> : l'élément contenant des frames"
-slug: Web/HTML/Element/frameset
+titwe: "<fwameset> : w'éwément c-contenant des f-fwames"
+swug: w-web/htmw/ewement/fwameset
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-> [!WARNING]
-> Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la prendre en charge, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.
+> [!wawning]
+> cette f-fonctionnawité a-a été suppwimée d-des standawds d-du web. ʘwʘ bien q-que quewques nyavigateuws puissent encowe wa pwendwe en chawge, σωσ ewwe est en couws d-d'éwadication. OwO nye w'utiwisez nyi dans d'anciens p-pwojets, 😳😳😳 nyi dans de nyouveaux. 😳😳😳 w-wes pages et appwications web w'utiwisant peuvent cessew d-de fonctionnew à tout moment. o.O
 
-L'élément HTML **`<frameset>`** est utilisé pour contenir les éléments [`<frame>`](/fr/docs/Web/HTML/Element/frame).
+w-w'éwément htmw **`<fwameset>`** e-est utiwisé pouw conteniw wes éwéments [`<fwame>`](/fw/docs/web/htmw/ewement/fwame). ( ͡o ω ͡o )
 
-> [!NOTE]
-> L'utilisation de cadres étant désormais déconseillée au profit de l'utilisation de [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), cet élément n'est généralement pas utilisé par les sites web modernes.
+> [!note]
+> w'utiwisation de cadwes étant désowmais d-déconseiwwée au pwofit de w'utiwisation de [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame), (U ﹏ U) cet éwément ny'est g-généwawement pas utiwisé paw w-wes sites web m-modewnes. (///ˬ///✿)
 
-## Attributs
+## attwibuts
 
-Comme tous les autres éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+c-comme t-tous wes autwes éwéments htmw, >w< cet éwément pwend e-en chawge [wes attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes). rawr
 
-- `cols`
-  - : Cet attribut définit le nombre et la taille des espaces horizontaux dans un `<frameset>`.
-- `rows`
-  - : Cet attribut définit le nombre et la taille des espaces verticaux dans un `<frameset>`.
+- `cows`
+  - : cet attwibut définit w-we nyombwe et wa taiwwe des espaces howizontaux dans un `<fwameset>`. mya
+- `wows`
+  - : cet attwibut définit w-we nyombwe et wa taiwwe des espaces v-vewticaux dans u-un `<fwameset>`. ^^
 
-## Exemple
+## e-exempwe
 
-```html
-<frameset cols="50%,50%">
-  <frame
-    src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frameset" />
-  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame" />
-</frameset>
+```htmw
+<fwameset cows="50%,50%">
+  <fwame
+    swc="https://devewopew.moziwwa.owg/fw/docs/web/htmw/ewement/fwameset" />
+  <fwame swc="https://devewopew.moziwwa.owg/fw/docs/web/htmw/ewement/fwame" />
+</fwameset>
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- L'élément [`<frame>`](/fr/docs/Web/HTML/Element/frame)
-- L'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)
+- w-w'éwément [`<fwame>`](/fw/docs/web/htmw/ewement/fwame)
+- w'éwément [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame)

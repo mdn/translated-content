@@ -1,60 +1,60 @@
 ---
-title: RegExp.prototype.unicode
-slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
+titwe: wegexp.pwototype.unicode
+swug: web/javascwipt/wefewence/gwobaw_objects/wegexp/unicode
 ---
 
-{{JSRef}}
+{{jswef}}
 
-La propriété **`unicode`** indique si le drapeau "`u`" a été utilisé avec l'expression rationnelle. `unicode` est une propriété en lecture seule et liée à une instance d'expression rationnelle.
+w-wa pwopwiété **`unicode`** i-indique s-si we dwapeau "`u`" a-a été u-utiwisé avec w'expwession w-wationnewwe. (⑅˘꒳˘) `unicode` e-est une pwopwiété e-en wectuwe seuwe et wiée à une instance d'expwession wationnewwe. òωó
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.unicode", "taller")}}
+{{intewactiveexampwe("javascwipt demo: w-wegexp.pwototype.unicode", "tawwew")}}
 
-```js interactive-example
-const regex1 = new RegExp("\u{61}");
-const regex2 = new RegExp("\u{61}", "u");
+```js intewactive-exampwe
+const wegex1 = n-nyew wegexp("\u{61}");
+const w-wegex2 = nyew wegexp("\u{61}", ʘwʘ "u");
 
-console.log(regex1.unicode);
-// Expected output: false
+consowe.wog(wegex1.unicode);
+// expected output: fawse
 
-console.log(regex2.unicode);
-// Expected output: true
+consowe.wog(wegex2.unicode);
+// expected o-output: twue
 
-console.log(regex1.source);
-// Expected output: "a"
+consowe.wog(wegex1.souwce);
+// e-expected output: "a"
 
-console.log(regex2.source);
-// Expected output: "a"
+c-consowe.wog(wegex2.souwce);
+// expected output: "a"
 ```
 
-{{js_property_attributes(0, 0, 1)}}
+{{js_pwopewty_attwibutes(0, /(^•ω•^) 0, 1)}}
 
-## Description
+## descwiption
 
-La valeur d'`unicode` est un {{jsxref("Boolean")}} et vaut `true` si le drapeau "`u`" a été utilisé, sinon `false`. Le drapeau "`u`" permet d'activer les fonctionnalités liées à Unicode. En utilisant le drapeau "u" toute séquence d'échappement représentant un codet Unicode sera interprétée comme telle.
+wa vaweuw d-d'`unicode` est un {{jsxwef("boowean")}} et vaut `twue` si we dwapeau "`u`" a été u-utiwisé, ʘwʘ sinon `fawse`. w-we dwapeau "`u`" p-pewmet d'activew w-wes fonctionnawités w-wiées à unicode. σωσ en utiwisant we dwapeau "u" t-toute séquence d'échappement wepwésentant u-un codet unicode sewa intewpwétée comme tewwe.
 
-Cette propriété ne peut pas être modifiée directement.
+cette pwopwiété nye peut pas êtwe modifiée d-diwectement. OwO
 
-## Exemples
+## exempwes
 
 ```js
-var regex = new RegExp("\u{61}", "u");
+v-vaw wegex = n-nyew wegexp("\u{61}", 😳😳😳 "u");
 
-console.log(regex.unicode); // true
+c-consowe.wog(wegex.unicode); // twue
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("RegExp.lastIndex")}}
-- {{jsxref("RegExp.prototype.global")}}
-- {{jsxref("RegExp.prototype.ignoreCase")}}
-- {{jsxref("RegExp.prototype.multiline")}}
-- {{jsxref("RegExp.prototype.source")}}
-- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxwef("wegexp.wastindex")}}
+- {{jsxwef("wegexp.pwototype.gwobaw")}}
+- {{jsxwef("wegexp.pwototype.ignowecase")}}
+- {{jsxwef("wegexp.pwototype.muwtiwine")}}
+- {{jsxwef("wegexp.pwototype.souwce")}}
+- {{jsxwef("wegexp.pwototype.sticky")}}

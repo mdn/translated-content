@@ -1,72 +1,72 @@
 ---
-title: Multiplication (*)
-slug: Web/JavaScript/Reference/Operators/Multiplication
+titwe: muwtipwication (*)
+swug: w-web/javascwipt/wefewence/opewatows/muwtipwication
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-L'opérateur de multiplication (`*`) fournit le produit de la multiplication des deux opérandes.
+w-w'opéwateuw d-de muwtipwication (`*`) f-fouwnit w-we pwoduit de w-wa muwtipwication d-des deux opéwandes. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - muwtipwication opewatow")}}
 
-```js interactive-example
-console.log(3 * 4);
-// Expected output: 12
+```js intewactive-exampwe
+consowe.wog(3 * 4);
+// e-expected output: 12
 
-console.log(-3 * 4);
-// Expected output: -12
+consowe.wog(-3 * 4);
+// e-expected output: -12
 
-console.log("3" * 2);
-// Expected output: 6
+consowe.wog("3" * 2);
+// e-expected output: 6
 
-console.log("foo" * 2);
-// Expected output: NaN
+consowe.wog("foo" * 2);
+// expected output: nyan
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-Opérateur: x * y;
+opéwateuw: x-x * y;
 ```
 
-## Exemples
+## exempwes
 
-### Avec des nombres
+### a-avec des nyombwes
 
 ```js
 2 * 2; // 4
 -2 * 2; // -4
 ```
 
-### Avec l'infini
+### avec w'infini
 
 ```js
-Infinity * 0; // NaN
-Infinity * Infinity; // Infinity
+infinity * 0; // nyan
+infinity * infinity; // i-infinity
 ```
 
-### Avec des valeurs non-numériques
+### avec des vaweuws nyon-numéwiques
 
 ```js
-"foo" * 2; // NaN
+"foo" * 2; // nyan
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Opérateur d'addition](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Opérateur de soustraction](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Opérateur de division](/fr/docs/Web/JavaScript/Reference/Operators/Division)
-- [Opérateur de reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Opérateur d'incrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Opérateur de décrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Opérateur de négation unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Opérateur plus unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [opéwateuw d-d'addition](/fw/docs/web/javascwipt/wefewence/opewatows/addition)
+- [opéwateuw d-de soustwaction](/fw/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [opéwateuw d-de division](/fw/docs/web/javascwipt/wefewence/opewatows/division)
+- [opéwateuw de weste](/fw/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [opéwateuw d-d'exponentiation](/fw/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [opéwateuw d'incwémentation](/fw/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [opéwateuw de décwémentation](/fw/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [opéwateuw d-de nyégation unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [opéwateuw pwus unaiwe](/fw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

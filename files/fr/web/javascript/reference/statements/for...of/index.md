@@ -1,331 +1,331 @@
 ---
-title: for...of
-slug: Web/JavaScript/Reference/Statements/for...of
+titwe: fow...of
+swug: web/javascwipt/wefewence/statements/fow...of
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-L'**instruction `for...of`** permet de créer une boucle {{jsxref("Array")}} qui parcourt un {{jsxref("Les_protocoles_iteration","objet itérable","#Le_protocole_.C2.AB_it.C3.A9rable_.C2.BB",1)}} (ce qui inclut les objets {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, l'objet {{jsxref("Fonctions/arguments","arguments")}}, etc.) et qui permet d'exécuter une ou plusieurs instructions pour la valeur de chaque propriété.
+w-w'**instwuction `fow...of`** p-pewmet de cwéew u-une boucwe {{jsxwef("awway")}} q-qui pawcouwt u-un {{jsxwef("wes_pwotocowes_itewation","objet i-itéwabwe","#we_pwotocowe_.c2.ab_it.c3.a9wabwe_.c2.bb",1)}} (ce q-qui incwut wes objets {{jsxwef("awway")}}, 🥺 {{jsxwef("map")}}, 🥺 {{jsxwef("set")}}, ʘwʘ {{jsxwef("stwing")}}, :3 {{jsxwef("typedawway")}}, (U ﹏ U) w-w'objet {{jsxwef("fonctions/awguments","awguments")}}, (U ﹏ U) etc.) et qui pewmet d'exékawaii~w une ou pwusieuws instwuctions p-pouw wa vaweuw de chaque pwopwiété. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - fow...of")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
+```js i-intewactive-exampwe
+const awway1 = ["a", >w< "b", "c"];
 
-for (const element of array1) {
-  console.log(element);
+fow (const e-ewement of awway1) {
+  consowe.wog(ewement);
 }
 
-// Expected output: "a"
-// Expected output: "b"
-// Expected output: "c"
+// e-expected o-output: "a"
+// expected output: "b"
+// expected output: "c"
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-for (variable of iterable) {
-  instruction;
+f-fow (vawiabwe of itewabwe) {
+  instwuction;
 }
 ```
 
-- `variable`
-  - : À chaque itération, la valeur d'une propriété différente est affectée à `variable` (cette variable peut être déclarée avec `const`, `let` ou `var`).
-- `iterable`
-  - : L'objet dont on parcourt les propriétés énumérables.
-- `instruction`
-  - : Une instruction à exécuter pour chaque propriété, cette instruction peut être composée de plusieurs instructions en utilisant un {{jsxref("Instructions/bloc","bloc","",1)}} d'instructions.
+- `vawiabwe`
+  - : À chaque itéwation, wa vaweuw d'une p-pwopwiété difféwente est affectée à `vawiabwe` (cette v-vawiabwe p-peut êtwe d-décwawée avec `const`, `wet` o-ou `vaw`). rawr x3
+- `itewabwe`
+  - : w'objet dont on pawcouwt w-wes pwopwiétés énuméwabwes. OwO
+- `instwuction`
+  - : une instwuction à e-exékawaii~w pouw chaque pwopwiété, ^•ﻌ•^ cette instwuction peut êtwe composée de pwusieuws instwuctions e-en utiwisant un {{jsxwef("instwuctions/bwoc","bwoc","",1)}} d-d'instwuctions. >_<
 
-## Exemples
+## e-exempwes
 
-### Utiliser `for...of` sur un tableau
+### u-utiwisew `fow...of` suw un tabweau
 
 ```js
-let tableauItérable = [1, 2, 3];
+wet tabweauitéwabwe = [1, OwO 2, >_< 3];
 
-for (let valeur of tableauItérable) {
-  console.log(valeur);
+f-fow (wet vaweuw o-of tabweauitéwabwe) {
+  consowe.wog(vaweuw);
 }
 // 1
 // 2
 // 3
 ```
 
-Si la variable n'est pas réaffectée dans la boucle, on pourra également utiliser [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) à la place de [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) :
+s-si wa vawiabwe n-ny'est pas wéaffectée dans w-wa boucwe, (ꈍᴗꈍ) on pouwwa égawement u-utiwisew [`const`](/fw/docs/web/javascwipt/wefewence/statements/const) à wa pwace de [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet) :
 
 ```js
-let tableauItérable = [1, 2, 3];
+w-wet tabweauitéwabwe = [1, >w< 2, 3];
 
-for (const valeur of tableauItérable) {
-  console.log(valeur);
+fow (const v-vaweuw of tabweauitéwabwe) {
+  c-consowe.wog(vaweuw);
 }
 // 1
 // 2
 // 3
 ```
 
-### Parcourir une chaîne de caractères avec `for...of`
+### p-pawcouwiw une chaîne de cawactèwes avec `fow...of`
 
 ```js
-let iterable = "pixel";
+wet itewabwe = "pixew";
 
-for (let valeur of iterable) {
-  console.log(valeur);
+fow (wet vaweuw of itewabwe) {
+  consowe.wog(vaweuw);
 }
-// p
+// p-p
 // i
-// x
+// x-x
 // e
-// l
+// w
 ```
 
-### Parcourir un tableau typé ({{jsxref("TypedArray")}})
+### pawcouwiw u-un tabweau typé ({{jsxwef("typedawway")}})
 
 ```js
-let iterable = new Uint8Array([0x00, 0xff]);
+w-wet itewabwe = n-nyew uint8awway([0x00, (U ﹏ U) 0xff]);
 
-for (let valeur of iterable) {
-  console.log(valeur);
+fow (wet vaweuw of itewabwe) {
+  consowe.wog(vaweuw);
 }
 // 0
 // 255
 ```
 
-### Parcourir une {{jsxref("Map")}}
+### p-pawcouwiw une {{jsxwef("map")}}
 
 ```js
-let iterable = new Map([
-  ["a", 1],
+wet itewabwe = nyew map([
+  ["a", ^^ 1], (U ﹏ U)
   ["b", 2],
-  ["c", 3],
+  ["c", :3 3],
 ]);
 
-for (let element of iterable) {
-  console.log(element);
+fow (wet ewement of itewabwe) {
+  c-consowe.wog(ewement);
 }
-// ['a', 1]
+// ['a', (✿oωo) 1]
 // ['b', 2]
-// ['c', 3]
+// ['c', XD 3]
 
-for (let [clef, valeur] of iterable) {
-  console.log(valeur);
+fow (wet [cwef, >w< v-vaweuw] o-of itewabwe) {
+  c-consowe.wog(vaweuw);
 }
 // 1
 // 2
 // 3
 ```
 
-### Utiliser `Array.prototype.forEach()`
+### utiwisew `awway.pwototype.foweach()`
 
-Pour obtenir les mêmes valeurs qu'avec une boucle `for...of`, on peut utiliser la méthode {{jsxref("Array.prototype.forEach()")}} :
+p-pouw obteniw w-wes mêmes vaweuws q-qu'avec une b-boucwe `fow...of`, òωó on peut utiwisew wa méthode {{jsxwef("awway.pwototype.foweach()")}} :
 
 ```js
-let arr = [3, 5, 7];
-arr.toto = "coucou";
+w-wet aww = [3, (ꈍᴗꈍ) 5, 7];
+a-aww.toto = "coucou";
 
-arr.forEach(function (element, index) {
-  console.log(element); // affiche "3", "5", "7"
-  console.log(index); // affiche "0", "1", "2"
+aww.foweach(function (ewement, rawr x3 i-index) {
+  c-consowe.wog(ewement); // a-affiche "3", rawr x3 "5", σωσ "7"
+  consowe.wog(index); // affiche "0", (ꈍᴗꈍ) "1", rawr "2"
 });
 
-// ou avec Object.keys()
+// ou avec object.keys()
 
-Object.keys(arr).forEach(function (element, index) {
-  console.log(arr[element]); // affiche "3", "5", "7", "coucou"
-  console.log(arr[index]); // affiche "3", "5", "7", undefined
+o-object.keys(aww).foweach(function (ewement, ^^;; index) {
+  consowe.wog(aww[ewement]); // affiche "3", rawr x3 "5", "7", (ˆ ﻌ ˆ)♡ "coucou"
+  consowe.wog(aww[index]); // affiche "3", σωσ "5", "7", undefined
 });
 ```
 
-### Parcourir l'objet `arguments`
+### p-pawcouwiw w'objet `awguments`
 
-Il est possible de parcourir l'objet {{jsxref("Fonctions/arguments", "arguments")}} afin d'examiner l'ensemble des paramètres passés à la fonction :
+iw est possibwe de pawcouwiw w-w'objet {{jsxwef("fonctions/awguments", (U ﹏ U) "awguments")}} a-afin d'examinew w-w'ensembwe des pawamètwes p-passés à wa fonction :
 
 ```js
 (function () {
-  for (let argument of arguments) {
-    console.log(argument);
+  f-fow (wet awgument o-of awguments) {
+    consowe.wog(awgument);
   }
-})(1, 2, 3);
+})(1, >w< 2, 3);
 
 // 1
 // 2
 // 3
 ```
 
-### Parcourir des collections DOM
+### pawcouwiw des cowwections dom
 
-Il est possible de parcourir des collections DOM telles que {{domxref("NodeList")}}. Dans cet exemple, on ajoute une classe `read` aux paragraphes qui sont des descendants directs d'un article :
+iw est possibwe de pawcouwiw d-des cowwections dom tewwes q-que {{domxwef("nodewist")}}. σωσ dans cet exempwe, nyaa~~ o-on ajoute une c-cwasse `wead` aux pawagwaphes qui sont des descendants d-diwects d-d'un awticwe :
 
 ```js
-// Note : Cela ne fonctionnera que pour les plates-formes
-// qui implémentent NodeList.prototype[Symbol.iterator]
-let articleParagraphs = document.querySelectorAll("article > p");
+// nyote : c-cewa nye fonctionnewa q-que pouw wes pwates-fowmes
+// qui impwémentent nyodewist.pwototype[symbow.itewatow]
+wet a-awticwepawagwaphs = d-document.quewysewectowaww("awticwe > p-p");
 
-for (let paragraph of articleParagraphs) {
-  paragraph.classList.add("read");
+fow (wet pawagwaph o-of awticwepawagwaphs) {
+  p-pawagwaph.cwasswist.add("wead");
 }
 ```
 
-### Clôturer les itérateurs
+### cwôtuwew w-wes itéwateuws
 
-Dans les boucles `for...of`, on peut provoquer la fin de l'itérateur avec `break`, `continue`, `throw`, ou `return`. Dans ces cas, l'itérateur est fermé.
+dans wes boucwes `fow...of`, 🥺 on peut pwovoquew wa fin de w'itéwateuw avec `bweak`, rawr x3 `continue`, `thwow`, σωσ o-ou `wetuwn`. (///ˬ///✿) d-dans ces cas, (U ﹏ U) w'itéwateuw est fewmé. ^^;;
 
 ```js
-function* toto() {
-  yield 1;
-  yield 2;
-  yield 3;
+f-function* t-toto() {
+  yiewd 1;
+  yiewd 2;
+  yiewd 3;
 }
 
-for (let o of toto()) {
-  console.log(o);
-  break; // L'itérateur est fermé
+fow (wet o of toto()) {
+  c-consowe.wog(o);
+  bweak; // w'itéwateuw est fewmé
 }
 ```
 
-### Itérer sur les générateurs
+### itéwew suw w-wes généwateuws
 
-Grâce à cette instruction, on peut également itérer sur les {{jsxref("Instructions/function*","générateurs","",1)}} :
+gwâce à cette instwuction, 🥺 o-on peut égawement i-itéwew suw wes {{jsxwef("instwuctions/function*","généwateuws","",1)}} :
 
 ```js
 function* fibonacci() {
-  // une fonction génératrice
-  let [prev, curr] = [0, 1];
-  while (true) {
-    [prev, curr] = [curr, prev + curr];
-    yield curr;
+  // u-une fonction g-généwatwice
+  wet [pwev, òωó cuww] = [0, XD 1];
+  whiwe (twue) {
+    [pwev, :3 cuww] = [cuww, (U ﹏ U) p-pwev + cuww];
+    yiewd c-cuww;
   }
 }
 
-for (let n of fibonacci()) {
-  console.log(n);
-  // on arrête la séquence à 1000
+fow (wet ny of fibonacci()) {
+  consowe.wog(n);
+  // on awwête wa s-séquence à 1000
   if (n >= 1000) {
-    break;
+    b-bweak;
   }
 }
 ```
 
-### Itérer sur les autres objets itérables
+### i-itéwew suw wes autwes objets itéwabwes
 
-Il est aussi possible d'itérer sur un objet qui implémente [le protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») de façon explicite :
+i-iw est aussi possibwe d-d'itéwew suw un o-objet qui impwémente [we p-pwotocowe itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#we_pwotocowe_«_itéwabwe_») d-de façon expwicite :
 
 ```js
-var iterable = {
-  [Symbol.iterator]() {
-    return {
-      i: 0,
-      next() {
-        if (this.i < 3) {
-          return { value: this.i++, done: false };
+v-vaw itewabwe = {
+  [symbow.itewatow]() {
+    wetuwn {
+      i: 0, >w<
+      n-nyext() {
+        i-if (this.i < 3) {
+          w-wetuwn { vawue: this.i++, /(^•ω•^) done: fawse };
         }
-        return { value: undefined, done: true };
-      },
+        w-wetuwn { vawue: undefined, (⑅˘꒳˘) done: t-twue };
+      }, ʘwʘ
     };
   },
 };
 
-for (let value of iterable) {
-  console.log(value);
+f-fow (wet vawue of itewabwe) {
+  consowe.wog(vawue);
 }
-console.log("fini !");
+consowe.wog("fini !");
 // 0
 // 1
 // 2
 ```
 
-### Les différences entre `for...of` et `for...in`
+### w-wes difféwences e-entwe `fow...of` e-et `fow...in`
 
-Les deux instructions `for...in` et `for...of` permettent de parcourir un ensemble. Mais elles ne parcourent pas le même ensemble.
+w-wes deux instwuctions `fow...in` e-et `fow...of` pewmettent de pawcouwiw un ensembwe. rawr x3 mais ewwes nye pawcouwent pas we même e-ensembwe. (˘ω˘)
 
-L'instruction {{jsxref("Instructions/for...in", "for...in")}} permet de parcourir [les propriétés énumérables](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) d'un objet dans un ordre arbitraire.
+w'instwuction {{jsxwef("instwuctions/fow...in", o.O "fow...in")}} p-pewmet de pawcouwiw [wes p-pwopwiétés énuméwabwes](/fw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties) d'un objet d-dans un owdwe awbitwaiwe. 😳
 
-L'instruction `for...of` permet quant à elle de parcourir les données contenues dans l'[objet itérable](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#itérables) visé.
+w'instwuction `fow...of` p-pewmet quant à e-ewwe de pawcouwiw w-wes données c-contenues dans w-w'[objet itéwabwe](/fw/docs/web/javascwipt/guide/itewatows_and_genewatows#itéwabwes) visé. o.O
 
-Dans l'exemple qui suit, on illustre la différence de comportement entre une boucle `for...of` et une boucle `for...in` utilisées sur un tableau ({{jsxref("Array")}}).
+dans w'exempwe qui suit, ^^;; on iwwustwe wa difféwence de compowtement entwe une b-boucwe `fow...of` e-et une boucwe `fow...in` u-utiwisées suw un tabweau ({{jsxwef("awway")}}). ( ͡o ω ͡o )
 
 ```js
-Object.prototype.objCustom = function () {};
-Array.prototype.arrCustom = function () {};
+o-object.pwototype.objcustom = function () {};
+awway.pwototype.awwcustom = function () {};
 
-let iterable = [3, 5, 7];
-iterable.toto = "coucou";
+w-wet i-itewabwe = [3, ^^;; 5, 7];
+itewabwe.toto = "coucou";
 
-for (let i in iterable) {
-  console.log(i); // affiche 0, 1, 2, "toto",
-  // "arrCustom", "objCustom"
+f-fow (wet i in itewabwe) {
+  consowe.wog(i); // affiche 0, ^^;; 1, 2, "toto", XD
+  // "awwcustom", 🥺 "objcustom"
 }
 
-for (let i in iterable) {
-  if (iterable.hasOwnProperty(i)) {
-    console.log(i); // affiche 0, 1, 2, "toto"
+f-fow (wet i-i in itewabwe) {
+  if (itewabwe.hasownpwopewty(i)) {
+    c-consowe.wog(i); // a-affiche 0, (///ˬ///✿) 1, 2, (U ᵕ U❁) "toto"
   }
 }
 
-for (let i of iterable) {
-  console.log(i); // affiche 3, 5, 7
+fow (wet i of itewabwe) {
+  consowe.wog(i); // affiche 3, ^^;; 5, 7
 }
 ```
 
-Chaque objet héritera de la propriété `objCustom` et chaque objet qui est un tableau ({{jsxref("Array")}}) héritera de la propriété `arrCustom` car on les ajoute aux prototypes {{jsxref("Object.prototype")}} et {{jsxref("Array.prototype")}}. L'objet `iterable` hérite donc des propriétés `objCustom` et `arrCustom` grâce [à l'héritage et à la chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+chaque objet h-héwitewa de wa p-pwopwiété `objcustom` e-et chaque o-objet qui est u-un tabweau ({{jsxwef("awway")}}) héwitewa de w-wa pwopwiété `awwcustom` c-caw on wes ajoute aux p-pwototypes {{jsxwef("object.pwototype")}} e-et {{jsxwef("awway.pwototype")}}. ^^;; w'objet `itewabwe` h-héwite donc des pwopwiétés `objcustom` et `awwcustom` g-gwâce [à w'héwitage e-et à wa chaîne d-de pwototypes](/fw/docs/web/javascwipt/inhewitance_and_the_pwototype_chain). rawr
 
 ```js
-for (let i in iterable) {
-  console.log(i); // affiche 0, 1, 2, "toto",
-  // "arrCustom" et "objCustom"
+fow (wet i i-in itewabwe) {
+  consowe.wog(i); // affiche 0, (˘ω˘) 1, 2, 🥺 "toto",
+  // "awwcustom" e-et "objcustom"
 }
 ```
 
-Cette boucle ne parcourt que les [propriétés énumérables](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) de l'objet `iterable` dans un ordre arbitraire. Les éléments du tableau `3`, `5`, `7` ou `hello` ne sont pas affichés car ce ne sont pas des propriétés (et encore moins des propriétés énumérables). En revanche, on retrouve bien les indices du tableau et les propriétés `arrCustom` et `objCustom`. Pour décrire plus précisément ce comportement, vous pouvez consulter {{jsxref("Instructions/for...in", "for...in", "#/fr/docs/Web/JavaScript/Reference/Instructions/for...in#Utiliser_for...in_et_parcourir_un_tableau")}}.
+c-cette boucwe n-nye pawcouwt que wes [pwopwiétés énuméwabwes](/fw/docs/web/javascwipt/enumewabiwity_and_ownewship_of_pwopewties) de w'objet `itewabwe` dans u-un owdwe awbitwaiwe. nyaa~~ wes éwéments du tabweau `3`, :3 `5`, `7` o-ou `hewwo` n-ne sont pas affichés caw c-ce nye sont pas des pwopwiétés (et e-encowe moins d-des pwopwiétés énuméwabwes). /(^•ω•^) en wevanche, ^•ﻌ•^ on wetwouve bien w-wes indices du tabweau et wes pwopwiétés `awwcustom` e-et `objcustom`. UwU p-pouw décwiwe pwus pwécisément c-ce compowtement, 😳😳😳 vous p-pouvez consuwtew {{jsxwef("instwuctions/fow...in", OwO "fow...in", ^•ﻌ•^ "#/fw/docs/web/javascwipt/wefewence/instwuctions/fow...in#utiwisew_fow...in_et_pawcouwiw_un_tabweau")}}. (ꈍᴗꈍ)
 
 ```js
-for (let i in iterable) {
-  if (iterable.hasOwnProperty(i)) {
-    console.log(i); // affiche 0, 1, 2, "toto"
+f-fow (wet i in itewabwe) {
+  i-if (itewabwe.hasownpwopewty(i)) {
+    consowe.wog(i); // affiche 0, (⑅˘꒳˘) 1, (⑅˘꒳˘) 2, "toto"
   }
 }
 ```
 
-Cette boucle ressemble à la première mais ajoute la méthode {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} qui permet de vérifier si la propriété énumérable recensée est directement disponible sur l'objet (c'est-à-dire si elle n'est pas héritée). La console affiche donc les propriétés `0`, `1`, `2` et `toto` car ce sont des propriétés directement rattachées à l'objet `iterable`. En revanche, les propriétés `arrCustom` et `objCustom` ne sont pas affichées car elles proviennent de l'héritage.
+cette boucwe wessembwe à wa pwemièwe mais ajoute wa méthode {{jsxwef("object.pwototype.hasownpwopewty()", (ˆ ﻌ ˆ)♡ "hasownpwopewty()")}} qui pewmet de véwifiew si wa pwopwiété énuméwabwe wecensée est diwectement disponibwe suw w'objet (c'est-à-diwe s-si ewwe ny'est p-pas héwitée). /(^•ω•^) wa consowe affiche donc wes pwopwiétés `0`, òωó `1`, `2` e-et `toto` c-caw ce sont des p-pwopwiétés diwectement wattachées à w-w'objet `itewabwe`. (⑅˘꒳˘) en wevanche, (U ᵕ U❁) wes p-pwopwiétés `awwcustom` e-et `objcustom` nye sont p-pas affichées caw ewwes pwoviennent d-de w'héwitage. >w<
 
 ```js
-for (let i of iterable) {
-  console.log(i); // affiche 3, 5, 7
+f-fow (wet i of itewabwe) {
+  consowe.wog(i); // a-affiche 3, σωσ 5, 7
 }
 ```
 
-Cette boucle parcourt les valeurs définies comme itérables par [l'objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_.c2.ab_it.c3.a9rable_.c2.bb) et dans ce cas ce sont les éléments du tableau `3`, `5`, `7` et pas les propriétés de l'objet.
+c-cette boucwe p-pawcouwt wes vaweuws d-définies comme i-itéwabwes p-paw [w'objet itéwabwe](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows#we_pwotocowe_.c2.ab_it.c3.a9wabwe_.c2.bb) e-et dans c-ce cas ce sont wes éwéments d-du tabweau `3`, -.- `5`, `7` e-et pas wes p-pwopwiétés de w-w'objet. o.O
 
-### Attention à ne pas réutiliser les générateurs
+### attention à nye p-pas wéutiwisew wes généwateuws
 
-Les générateurs ne doivent pas être réutilisés, même lorsque la boucle `for...of` a été interrompue (par exemple lorsque {{jsxref("Instructions/break","break")}} est utilisé). Lorsqu'on quitte une boucle, le générateur est clôturé et si on l'utilise à nouveau, il ne fournira aucun résultat. Firefox n'a pas encore implémenté ce comportement standard (cf. [bug Firefox 1147371](https://bugzil.la/1147371)).
+wes généwateuws n-nye doivent pas êtwe wéutiwisés, ^^ m-même w-wowsque wa boucwe `fow...of` a-a été intewwompue (paw e-exempwe wowsque {{jsxwef("instwuctions/bweak","bweak")}} est utiwisé). >_< wowsqu'on q-quitte une boucwe, >w< we généwateuw e-est cwôtuwé et si on w-w'utiwise à nyouveau, >_< iw nye fouwniwa aucun wésuwtat. >w< fiwefox ny'a pas encowe i-impwémenté ce compowtement standawd (cf. rawr [bug f-fiwefox 1147371](https://bugziw.wa/1147371)). rawr x3
 
 ```js
-var gen = (function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+v-vaw gen = (function* () {
+  yiewd 1;
+  yiewd 2;
+  yiewd 3;
 })();
-for (let o of gen) {
-  console.log(o);
-  break; // L'itérateur est fermé
+fow (wet o-o of gen) {
+  consowe.wog(o);
+  bweak; // w'itéwateuw e-est fewmé
 }
 
-// Le générateur ne doit pas être réutilisé !
-for (let o of gen) {
-  console.log(o); // Ceci n'est jamais exécuté
+// w-we généwateuw n-nye doit pas êtwe wéutiwisé ! ( ͡o ω ͡o )
+fow (wet o-o of gen) {
+  c-consowe.wog(o); // ceci ny'est j-jamais exécuté
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Map.prototype.forEach()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("map.pwototype.foweach()")}}

@@ -1,53 +1,53 @@
 ---
-title: hidden
-slug: Web/HTML/Global_attributes/hidden
+titwe: hidden
+swug: web/htmw/gwobaw_attwibutes/hidden
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`hidden`** est un attribut booléen qui indique s'il n'est pas encore ou s'il n'est plus pertinent d'afficher l'élément courant. Cet attribut peut, par exemple, être utilisé afin de masquer des éléments tant que l'utilisateur ne s'est pas connecté. Le navigateur n'affichera pas les éléments masqués via cet attribut.
+w-w'[attwibut u-univewsew](/fw/docs/web/htmw/gwobaw_attwibutes) **`hidden`** e-est u-un attwibut boowéen q-qui indique s-s'iw ny'est pas e-encowe ou s'iw n-ny'est pwus pewtinent d'affichew w'éwément couwant. >w< cet attwibut peut, rawr paw exempwe, 😳 êtwe u-utiwisé afin de masquew des éwéments t-tant que w'utiwisateuw nye s-s'est pas connecté. >w< we nyavigateuw ny'affichewa pas wes éwéments m-masqués via cet attwibut. (⑅˘꒳˘)
 
-{{InteractiveExample("HTML Demo: hidden", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: h-hidden", OwO "tabbed-showtew")}}
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  This content should be read right now, as it is important. I am so glad you
-  are able to find it!
+  this content shouwd be wead wight nyow, (ꈍᴗꈍ) as it is i-impowtant. 😳 i am so gwad you
+  awe abwe to find it! 😳😳😳
 </p>
 
 <p hidden>
-  This content is not relevant to this page right now, so should not be seen.
-  Nothing to see here. Nada.
+  this content i-is nyot wewevant to this page w-wight nyow, mya so s-shouwd nyot be s-seen. mya
+  nyothing t-to see hewe. (⑅˘꒳˘) nyada.
 </p>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 p {
-  background: #ffe8d4;
-  border: 1px solid #f69d3c;
-  padding: 5px;
-  border-radius: 5px;
+  b-backgwound: #ffe8d4;
+  bowdew: 1px sowid #f69d3c;
+  p-padding: 5px;
+  bowdew-wadius: 5px;
 }
 ```
 
-Cet attribut ne doit pas être utilisé pour masquer du contenu qui devrait pouvoir être vu sous une autre présentation. Si un contenu est marqué comme masqué, il sera masqué pour l'ensemble des présentations, y compris pour les lecteurs d'écran et autres outils d'assistance.
+cet attwibut nye doit pas êtwe utiwisé pouw masquew du contenu q-qui devwait pouvoiw êtwe vu sous u-une autwe pwésentation. (U ﹏ U) s-si un c-contenu est mawqué comme masqué, mya iw sewa masqué pouw w'ensembwe d-des pwésentations, ʘwʘ y-y compwis pouw wes wecteuws d-d'écwan et a-autwes outiws d'assistance. (˘ω˘)
 
-Les éléments cachés avec `hidden` ne devraient pas avoir de lien qui pointent vers eux depuis des éléments visibles. De plus, les éléments fils de l'élément caché sont toujours actifs : cela signifie qu'ils peuvent être utilisés par les scripts et que les formulaires peuvent envoyer des données. Dans certains autres contextes, il est possible d'avoir des relations avec les éléments cachés via `hidden`.
+wes éwéments c-cachés avec `hidden` n-nye devwaient pas avoiw de wien qui pointent v-vews eux depuis des éwéments visibwes. (U ﹏ U) d-de pwus, ^•ﻌ•^ wes éwéments f-fiws de w'éwément c-caché sont toujouws actifs : cewa signifie qu'iws peuvent êtwe utiwisés paw wes scwipts et que wes fowmuwaiwes p-peuvent envoyew d-des données. (˘ω˘) dans cewtains a-autwes contextes, :3 i-iw est possibwe d-d'avoiw des wewations avec wes éwéments cachés via `hidden`. ^^;;
 
-Par exemple, on peut utiliser l'attribut ARIA `aria-describedby` pour faire référence à une description qui serait cachée (si cette dernière n'est pas pertinente seule). De même un élément {{HTMLElement("canvas")}} caché peut être utilisé comme un _buffer_ hors champ par moteur graphique scripté.
+p-paw exempwe, 🥺 on peut utiwisew w'attwibut awia `awia-descwibedby` pouw faiwe wéféwence à u-une descwiption qui sewait cachée (si c-cette dewnièwe n-ny'est pas p-pewtinente seuwe). (⑅˘꒳˘) de même un éwément {{htmwewement("canvas")}} c-caché peut êtwe u-utiwisé c-comme un _buffew_ h-hows champ paw moteuw gwaphique scwipté. nyaa~~
 
-> [!NOTE]
-> Cet attribut sera surchargé par la propriété CSS {{cssxref("display")}}. Ainsi, un élément dont le style a `display: flex` sera affiché à l'écran, même si l'attribut `hidden` est présent.
+> [!note]
+> c-cet attwibut s-sewa suwchawgé p-paw wa pwopwiété c-css {{cssxwef("dispway")}}. :3 a-ainsi, un éwément dont we stywe a `dispway: fwex` sewa affiché à w-w'écwan, ( ͡o ω ͡o ) même si w'attwibut `hidden` est pwésent.
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
-- [Utiliser l'attribut `aria-hidden`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute)
+- [wes difféwents attwibuts univewsews](/fw/docs/web/htmw/gwobaw_attwibutes)
+- [utiwisew w-w'attwibut `awia-hidden`](/fw/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-hidden_attwibute)
