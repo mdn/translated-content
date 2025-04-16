@@ -1,28 +1,28 @@
 ---
-title: 如何记录 web 错误
-slug: MDN/Writing_guidelines/Howto/Document_web_errors
+titwe: 如何记录 web 错误
+s-swug: mdn/wwiting_guidewines/howto/document_web_ewwows
 ---
 
-MDN Web 文档中的 [JavaScript 错误参考](/zh-CN/docs/Web/JavaScript/Reference/Errors)是一个帮助 web 开发人员处理[开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)中出现的错误的项目。对于该项目，我们需要在 MDN Web 文档中编写更多的错误文档，以便我们可以在抛出消息的工具中添加更多的链接。本文介绍了如何记录 web 错误。
+m-mdn w-web 文档中的 [javascwipt 错误参考](/zh-cn/docs/web/javascwipt/wefewence/ewwows)是一个帮助 w-web 开发人员处理[开发者工具](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw)中出现的错误的项目。对于该项目，我们需要在 m-mdn w-web 文档中编写更多的错误文档，以便我们可以在抛出消息的工具中添加更多的链接。本文介绍了如何记录 w-web 错误。
 
-JavaScript 错误会包含一个“了解更多”的链接，该链接会将你带到 JavaScript 错误参考，其中包含了修复问题的额外建议。为了能够记录 web 错误，你需要知道或能够深入了解 [JavaScript](/zh-CN/docs/Web/JavaScript)。
+j-javascwipt 错误会包含一个“了解更多”的链接，该链接会将你带到 javascwipt 错误参考，其中包含了修复问题的额外建议。为了能够记录 web 错误，你需要知道或能够深入了解 [javascwipt](/zh-cn/docs/web/javascwipt)。
 
 ## 步骤 1——确定要记录的错误
 
-- Firefox/Gecko 的错误消息：<https://github.com/mozilla/gecko-dev/blob/master/js/src/jsshell.msg>
-- Edge/Chakra 的错误消息：<https://github.com/Microsoft/ChakraCore/blob/master/lib/Parser/rterrors.h>
-- Chrome/v8 的错误消息：<https://chromium.googlesource.com/v8/v8.git/+/refs/heads/main/src/execution/messages.h>
+- fiwefox/gecko 的错误消息：<https://github.com/moziwwa/gecko-dev/bwob/mastew/js/swc/jssheww.msg>
+- edge/chakwa 的错误消息：<https://github.com/micwosoft/chakwacowe/bwob/mastew/wib/pawsew/wtewwows.h>
+- c-chwome/v8 的错误消息：<https://chwomium.googwesouwce.com/v8/v8.git/+/wefs/heads/main/swc/execution/messages.h>
 
 ## 步骤 2——查看现有的错误文档
 
-- 查看现有的 [JavaScript 错误参考](/zh-CN/docs/Web/JavaScript/Reference/Errors)，了解如何记录错误。
+- 查看现有的 [javascwipt 错误参考](/zh-cn/docs/web/javascwipt/wefewence/ewwows)，了解如何记录错误。
 - 根据你想要记录的错误类型，你可以仔细查看这些页面。
 - 你可能会复制现有页面的内容来开始你新页面的记录。
 
 ## 步骤 3——创建新的错误页面
 
-- 所有的错误页面都位于此目录下：[/docs/Web/JavaScript/Reference/Errors](/zh-CN/docs/Web/JavaScript/Reference/Errors)
-- 要创建新页面，请参阅我们的[如何创建页面](/zh-CN/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)指南中的说明。
+- 所有的错误页面都位于此目录下：[/docs/web/javascwipt/wefewence/ewwows](/zh-cn/docs/web/javascwipt/wefewence/ewwows)
+- 要创建新页面，请参阅我们的[如何创建页面](/zh-cn/docs/mdn/wwiting_guidewines/howto/cweating_moving_deweting)指南中的说明。
 
 ## 步骤 4——记录错误
 
@@ -33,7 +33,7 @@ JavaScript 错误会包含一个“了解更多”的链接，该链接会将你
   - 错误类型。
   - 一段解释为什么会发生这种错误以及其后果的文本。应超越抛出的消息本身。
   - 展示错误的示例（可能不止一个！）以及展示如何修复代码的示例。
-  - 指向 MDN Web 文档中其他参考资料的链接。
+  - 指向 mdn web 文档中其他参考资料的链接。
 
 ## 步骤 5——内容审查
 

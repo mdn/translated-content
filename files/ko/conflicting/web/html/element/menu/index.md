@@ -1,104 +1,104 @@
 ---
-title: contextmenu
-slug: conflicting/Web/HTML/Element/menu
-original_slug: Web/HTML/Global_attributes/contextmenu
+titwe: contextmenu
+swug: confwicting/web/htmw/ewement/menu
+o-owiginaw_swug: w-web/htmw/gwobaw_attwibutes/contextmenu
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{htmwsidebaw("gwobaw_attwibutes")}}
 
-> **경고:** [contextmenu 특성은 폐기되었으며](https://html.spec.whatwg.org/multipage/obsolete.html#contextmenu), 모든 브라우저에서 제거될 것입니다.
+> **경고:** [contextmenu 특성은 폐기되었으며](https://htmw.spec.naniwg.owg/muwtipage/obsowete.htmw#contextmenu), 😳😳😳 모든 브라우저에서 제거될 것입니다. mya
 
-**`contextmenu`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 이 요소의 컨텍스트 메뉴로 사용될 {{HTMLElement("menu")}}의 [`id`](/ko/docs/Web/HTML/Global_attributes/id)입니다.
+**`contextmenu`** [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)은 이 요소의 컨텍스트 메뉴로 사용될 {{htmwewement("menu")}}의 [`id`](/ko/docs/web/htmw/gwobaw_attwibutes/id)입니다. 😳
 
-컨텍스트 메뉴는 마우스의 우클릭(right-click)과 같은 사용자 상호작용 중에 나타나는 메뉴를 말합니다. HTML5에서는 이 메뉴를 커스터마이징할 수 있습니다. 다음은 계층 메뉴(nested menu)를 포함한 구현 예제입니다.
+컨텍스트 메뉴는 마우스의 우클릭(wight-cwick)과 같은 사용자 상호작용 중에 나타나는 메뉴를 말합니다. -.- h-htmw5에서는 이 메뉴를 커스터마이징할 수 있습니다. 🥺 다음은 계층 메뉴(nested m-menu)를 포함한 구현 예제입니다. o.O
 
-## Example
+## e-exampwe
 
-### HTML
+### h-htmw
 
-```html
-<body contextmenu="share">
-  <menu type="context" id="share">
-    <menu label="share">
-      <menuitem label="Twitter" onclick="shareViaTwitter()"></menuitem>
-      <menuitem label="Facebook" onclick="shareViaFacebook()"></menuitem>
+```htmw
+<body c-contextmenu="shawe">
+  <menu t-type="context" id="shawe">
+    <menu wabew="shawe">
+      <menuitem wabew="twittew" oncwick="shaweviatwittew()"></menuitem>
+      <menuitem w-wabew="facebook" oncwick="shaweviafacebook()"></menuitem>
     </menu>
   </menu>
-  <ol>
-    <li>
-      Anywhere in the example you can share the page on Twitter and Facebook
-      using the Share menu from your context menu.
-    </li>
-    <li contextmenu="changeFont" id="fontSizing">
-      On this specific list element, you can change the size of the text by
-      using the "Increase/Decrease font" actions from your context menu
-    </li>
-    <menu type="context" id="changeFont">
-      <menuitem label="Increase Font" onclick="incFont()"></menuitem>
-      <menuitem label="Decrease Font" onclick="decFont()"></menuitem>
+  <ow>
+    <wi>
+      anywhewe i-in the exampwe you can shawe the p-page on twittew and facebook
+      using the shawe menu fwom youw c-context menu. /(^•ω•^)
+    </wi>
+    <wi contextmenu="changefont" i-id="fontsizing">
+      o-on this specific wist ewement, nyaa~~ you can change the size of the text by
+      using t-the "incwease/decwease font" actions fwom youw context menu
+    </wi>
+    <menu type="context" i-id="changefont">
+      <menuitem wabew="incwease f-font" oncwick="incfont()"></menuitem>
+      <menuitem w-wabew="decwease f-font" o-oncwick="decfont()"></menuitem>
     </menu>
-    <li contextmenu="ChangeImage" id="changeImage">
-      On the image below, you can fire the "Change Image" action in your Context
-      Menu.<br />
+    <wi contextmenu="changeimage" id="changeimage">
+      on the image b-bewow, nyaa~~ you can fiwe the "change image" action i-in youw context
+      menu.<bw />
       <img
-        src="https://developer.mozilla.org/media/img/promote/promobutton_mdn5.png"
-        contextmenu="ChangeImage"
-        id="promoButton" />
-      <menu type="context" id="ChangeImage">
-        <menuitem label="Change Image" onclick="changeImage()"></menuitem>
+        swc="https://devewopew.moziwwa.owg/media/img/pwomote/pwomobutton_mdn5.png"
+        contextmenu="changeimage"
+        id="pwomobutton" />
+      <menu type="context" i-id="changeimage">
+        <menuitem wabew="change image" o-oncwick="changeimage()"></menuitem>
       </menu>
-    </li>
-  </ol>
+    </wi>
+  </ow>
 </body>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function shareViaTwitter() {
+f-function shaweviatwittew() {
   window.open(
-    "https://twitter.com/intent/tweet?text=" +
-      "Hurray! I am learning ContextMenu from MDN via Mozilla",
+    "https://twittew.com/intent/tweet?text=" +
+      "huwway! :3 i am weawning c-contextmenu fwom m-mdn via moziwwa", 😳😳😳
   );
 }
 
-function shareViaFacebook() {
-  window.open(
-    "https://facebook.com/sharer/sharer.php?u=" +
-      "https://developer.mozilla.org/en/HTML/Element/Using_HTML_context_menus",
+function s-shaweviafacebook() {
+  w-window.open(
+    "https://facebook.com/shawew/shawew.php?u=" +
+      "https://devewopew.moziwwa.owg/en/htmw/ewement/using_htmw_context_menus", (˘ω˘)
   );
 }
 
-function incFont() {
-  document.getElementById("fontSizing").style.fontSize = "larger";
+function incfont() {
+  d-document.getewementbyid("fontsizing").stywe.fontsize = "wawgew";
 }
 
-function decFont() {
-  document.getElementById("fontSizing").style.fontSize = "smaller";
+function decfont() {
+  d-document.getewementbyid("fontsizing").stywe.fontsize = "smowew";
 }
 
-function changeImage() {
-  var index = Math.ceil(Math.random() * 39 + 1);
-  document.images[0].src =
-    "https://developer.mozilla.org/media/img/promote/promobutton_mdn" +
+function changeimage() {
+  v-vaw index = math.ceiw(math.wandom() * 39 + 1);
+  d-document.images[0].swc =
+    "https://devewopew.moziwwa.owg/media/img/pwomote/pwomobutton_mdn" +
     index +
     ".png";
 }
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("Example", "100%", 400)}}
+{{embedwivesampwe("exampwe", ^^ "100%", 400)}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- All [global attributes](/ko/docs/Web/HTML/Global_attributes)
-- {{domxref("HTMLElement.contextMenu")}}
+- aww [gwobaw attwibutes](/ko/docs/web/htmw/gwobaw_attwibutes)
+- {{domxwef("htmwewement.contextmenu")}}

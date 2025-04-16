@@ -1,11 +1,11 @@
 ---
-title: 延迟
-slug: Glossary/Latency
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: 延迟
+swug: gwossawy/watency
+w-w10n:
+  s-souwcecommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **延迟**是请求的资源到达其目的地所花费的网络时间。低延迟是好事，意味着几乎没有延迟。高延迟是不好的，意味着所请求的资源要花很长时间才能到达目的地。
 
@@ -13,4 +13,4 @@ l10n:
 
 ## 参见
 
-- [理解延迟](/zh-CN/docs/Web/Performance/Understanding_latency)
+- [理解延迟](/zh-cn/docs/web/pewfowmance/undewstanding_watency)

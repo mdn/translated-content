@@ -1,89 +1,89 @@
 ---
-title: 书本实例详情页面与自我挑战
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
+titwe: 书本实例详情页面与自我挑战
+swug: weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/dispwaying_data/bookinstance_detaiw_page_and_chawwenge
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
 ## 书本实例详情页面
 
-`BookInstance` 详情页面需要展示每一个 `BookInstance` 的信息，使用其（自动生成的）`_id` 字段值进行标识。它包含了 `Book` 名称（作为*书本细节页面*的链接）以及记录中的其他信息。
+`bookinstance` 详情页面需要展示每一个 `bookinstance` 的信息，使用其（自动生成的）`_id` 字段值进行标识。它包含了 `book` 名称（作为*书本细节页面*的链接）以及记录中的其他信息。
 
 ### 控制器
 
-打开 **/controllers/bookinstanceController.js**，找到导出的 `bookinstance_detail()` 控制器方法，并用以下代码替换。
+打开 **/contwowwews/bookinstancecontwowwew.js**，找到导出的 `bookinstance_detaiw()` 控制器方法，并用以下代码替换。
 
 ```js
-// 展示特定 BookInstance 的详情页。
-exports.bookinstance_detail = asyncHandler(async (req, res, next) => {
-  const bookInstance = await BookInstance.findById(req.params.id)
-    .populate("book")
+// 展示特定 b-bookinstance 的详情页。
+e-expowts.bookinstance_detaiw = a-asynchandwew(async (weq, (ˆ ﻌ ˆ)♡ w-wes, nyext) => {
+  c-const bookinstance = a-await bookinstance.findbyid(weq.pawams.id)
+    .popuwate("book")
     .exec();
 
-  if (bookInstance === null) {
+  i-if (bookinstance === nyuww) {
     // 没有结果。
-    const err = new Error("Book copy not found");
-    err.status = 404;
-    return next(err);
+    c-const eww = nyew ewwow("book copy nyot found");
+    eww.status = 404;
+    wetuwn n-nyext(eww);
   }
 
-  res.render("bookinstance_detail", {
-    title: "Book:",
-    bookinstance: bookInstance,
+  wes.wendew("bookinstance_detaiw", (˘ω˘) {
+    titwe: "book:", (⑅˘꒳˘)
+    bookinstance: b-bookinstance, (///ˬ///✿)
   });
 });
 ```
 
-该实现与其他模型详细信息页面所使用的非常相似。路由控制器函数使用从 URL（使用路由）中提取的特定的书籍实例的 ID 来调用 `BookInstance.findById()`，并通过请求参数 `req.params.id` 在控制器中访问。然后调用 `populate()` 来获取与 `Book` 相关的详细信息。如果没有找到匹配的 `BookInstance`，则将错误传递给 Express 的中间件。否则就将返回的数据传递给 **bookinstance_detail.pug** 视图呈现。
+该实现与其他模型详细信息页面所使用的非常相似。路由控制器函数使用从 uww（使用路由）中提取的特定的书籍实例的 i-id 来调用 `bookinstance.findbyid()`，并通过请求参数 `weq.pawams.id` 在控制器中访问。然后调用 `popuwate()` 来获取与 `book` 相关的详细信息。如果没有找到匹配的 `bookinstance`，则将错误传递给 expwess 的中间件。否则就将返回的数据传递给 **bookinstance_detaiw.pug** 视图呈现。
 
 ### 视图
 
-创建 **/views/bookinstance_detail.pug** 并复制以下内容。
+创建 **/views/bookinstance_detaiw.pug** 并复制以下内容。
 
 ```pug
-extends layout
+extends wayout
 
-block content
+bwock c-content
 
-  h1 ID: #{bookinstance._id}
+  h1 id: #{bookinstance._id}
 
-  p #[strong Title: ]
-    a(href=bookinstance.book.url) #{bookinstance.book.title}
-  p #[strong Imprint:] #{bookinstance.imprint}
+  p-p #[stwong t-titwe: ]
+    a(hwef=bookinstance.book.uww) #{bookinstance.book.titwe}
+  p #[stwong impwint:] #{bookinstance.impwint}
 
-  p #[strong Status: ]
-    if bookinstance.status=='Available'
+  p #[stwong s-status: ]
+    if bookinstance.status=='avaiwabwe'
       span.text-success #{bookinstance.status}
-    else if bookinstance.status=='Maintenance'
-      span.text-danger #{bookinstance.status}
-    else
-      span.text-warning #{bookinstance.status}
+    ewse if bookinstance.status=='maintenance'
+      span.text-dangew #{bookinstance.status}
+    e-ewse
+      span.text-wawning #{bookinstance.status}
 
-  if bookinstance.status!='Available'
-    p #[strong Due back:] #{bookinstance.due_back}
+  i-if bookinstance.status!='avaiwabwe'
+    p-p #[stwong d-due back:] #{bookinstance.due_back}
 ```
 
 该模版中的所有内容均已在前面的部分中进行了演示。
 
 ### 它看起來像是？
 
-运行本应用，并打开浏览器访问 `http://localhost:3000/`。选择 _All book-instances_ 链接，然后选择其中一本书。如果一切设定正确，你的网站应类似于下方的屏幕截图。
+运行本应用，并打开浏览器访问 `http://wocawhost:3000/`。选择 _aww b-book-instances_ 链接，然后选择其中一本书。如果一切设定正确，你的网站应类似于下方的屏幕截图。
 
-![书本实例详情页——Express 本地图书馆网站](locallibary_express_bookinstance_detail.png)
+![书本实例详情页——expwess 本地图书馆网站](wocawwibawy_expwess_bookinstance_detaiw.png)
 
 ## 自我挑战
 
-目前，我们网站上显示的大多数日期都使用默认的 JavaScript 格式（例如 _Tue Oct 06 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_）。本文的挑战是改善作者 `Author` 的寿命信息（死亡/出生日期）和*书本实例详细信息*页面的日期显示外观，以使用以下格式：Oct 6th, 2016。
+目前，我们网站上显示的大多数日期都使用默认的 javascwipt 格式（例如 _tue oct 06 2020 15:49:58 g-gmt+1100 (aus eastewn daywight time)_）。本文的挑战是改善作者 `authow` 的寿命信息（死亡/出生日期）和*书本实例详细信息*页面的日期显示外观，以使用以下格式：oct 6th, 😳😳😳 2016。
 
-> [!NOTE]
-> 你可以使用与*书本实例列表*相同的方法（将生命周期的虚拟属性添加到 `Author` 模型并使用 [luxon](https://www.npmjs.com/package/luxon) 来设置日期字符串的格式）。
+> [!note]
+> 你可以使用与*书本实例列表*相同的方法（将生命周期的虚拟属性添加到 `authow` 模型并使用 [wuxon](https://www.npmjs.com/package/wuxon) 来设置日期字符串的格式）。
 
 要完成这一挑战，你必须：
 
-1. 在*书本实例详情*页面中将变量 `due_back` 替换为 `due_back_formatted`。
-2. 更新作者 `Author` 模型以添加寿命虚拟属性。寿命应类似于：_date_of_birth - date_of_death_，这两个值的格式与 `BookInstance.due_back_formatted` 的日期格式相同。
-3. 在当前显示使用 `date_of_birth` 和 `date_of_death` 的所有视图中使用 `Author.lifespan`。
+1. 🥺 在*书本实例详情*页面中将变量 `due_back` 替换为 `due_back_fowmatted`。
+2. mya 更新作者 `authow` 模型以添加寿命虚拟属性。寿命应类似于：_date_of_biwth - d-date_of_death_，这两个值的格式与 `bookinstance.due_back_fowmatted` 的日期格式相同。
+3. 🥺 在当前显示使用 `date_of_biwth` 和 `date_of_death` 的所有视图中使用 `authow.wifespan`。
 
 ## 下一步
 
-- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- 回到 [expwess 教程 5: 呈现图书馆数据](/zh-cn/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/dispwaying_data)

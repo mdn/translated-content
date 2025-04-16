@@ -1,14 +1,14 @@
 ---
-title: WebP
-slug: Glossary/WebP
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: webp
+swug: gwossawy/webp
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebP** 是由 Google 开发的一种可提供有损和无损压缩的图片格式。
+**webp** 是由 g-googwe 开发的一种可提供有损和无损压缩的图片格式。
 
 ## 参见
 
-- 维基百科上的 [WebP](https://zh.wikipedia.org/wiki/WebP)
+- 维基百科上的 [webp](https://zh.wikipedia.owg/wiki/webp)

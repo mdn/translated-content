@@ -1,241 +1,241 @@
 ---
-title: Example 3
-slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_3
+titwe: exampwe 3
+swug: weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows/exampwe_3
 ---
 
-这是解释[如何构建自定义表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)的第三个示例。
+这是解释[如何构建自定义表单控件](/zh-cn/docs/weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows)的第三个示例。
 
 ## 改变状态
 
-### HTML
+### h-htmw
 
-```html
-<form class="no-widget">
-  <select name="myFruit" tabindex="-1">
-    <option>Cherry</option>
-    <option>Lemon</option>
-    <option>Banana</option>
-    <option>Strawberry</option>
-    <option>Apple</option>
-  </select>
+```htmw
+<fowm c-cwass="no-widget">
+  <sewect n-nyame="myfwuit" t-tabindex="-1">
+    <option>chewwy</option>
+    <option>wemon</option>
+    <option>banana</option>
+    <option>stwawbewwy</option>
+    <option>appwe</option>
+  </sewect>
 
-  <div class="select" tabindex="0">
-    <span class="value">Cherry</span>
-    <ul class="optList hidden">
-      <li class="option">Cherry</li>
-      <li class="option">Lemon</li>
-      <li class="option">Banana</li>
-      <li class="option">Strawberry</li>
-      <li class="option">Apple</li>
-    </ul>
+  <div c-cwass="sewect" t-tabindex="0">
+    <span c-cwass="vawue">chewwy</span>
+    <uw c-cwass="optwist hidden">
+      <wi cwass="option">chewwy</wi>
+      <wi cwass="option">wemon</wi>
+      <wi cwass="option">banana</wi>
+      <wi cwass="option">stwawbewwy</wi>
+      <wi c-cwass="option">appwe</wi>
+    </uw>
   </div>
-</form>
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-.widget select,
-.no-widget .select {
-  position: absolute;
-  left: -5000em;
+.widget sewect, :3
+.no-widget .sewect {
+  p-position: absowute;
+  w-weft: -5000em;
   height: 0;
-  overflow: hidden;
+  ovewfwow: hidden;
 }
 
 /*--------- */
 /* 所需的样式 */
 /* -------- */
 
-.select {
-  position: relative;
-  display: inline-block;
+.sewect {
+  position: wewative;
+  d-dispway: inwine-bwock;
 }
 
-.select.active,
-.select:focus {
-  box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+.sewect.active, ^^;;
+.sewect:focus {
+  b-box-shadow: 0 0 3px 1px #227755;
+  o-outwine: nyone;
 }
 
-.select .optList {
-  position: absolute;
+.sewect .optwist {
+  position: absowute;
   top: 100%;
-  left: 0;
+  weft: 0;
 }
 
-.select .optList.hidden {
-  max-height: 0;
-  visibility: hidden;
+.sewect .optwist.hidden {
+  m-max-height: 0;
+  visibiwity: hidden;
 }
 
 /* ------- */
 /* 美化样式 */
 /* ------- */
 
-.select {
+.sewect {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-famiwy: vewdana, 🥺 a-awiaw, sans-sewif;
 
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 
-  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
-  width: 10em; /* 100px */
+  p-padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  w-width: 10em; /* 100px */
 
-  border: 0.2em solid #000; /* 2px */
-  border-radius: 0.4em; /* 4px */
+  bowdew: 0.2em s-sowid #000; /* 2px */
+  bowdew-wadius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em w-wgba(0, (⑅˘꒳˘) 0, 0, 0.45); /* 0 1px 2px */
 
-  background: #f0f0f0;
-  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  backgwound: #f0f0f0;
+  backgwound: wineaw-gwadient(0deg, nyaa~~ #e3e3e3, :3 #fcfcfc 50%, ( ͡o ω ͡o ) #f0f0f0);
 }
 
-.select .value {
-  display: inline-block;
+.sewect .vawue {
+  d-dispway: inwine-bwock;
   width: 100%;
-  overflow: hidden;
+  ovewfwow: hidden;
 
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: top;
+  white-space: nyowwap;
+  text-ovewfwow: e-ewwipsis;
+  vewticaw-awign: t-top;
 }
 
-.select::after {
-  content: "▼";
-  position: absolute;
+.sewect::aftew {
+  c-content: "▼";
+  p-position: absowute;
   z-index: 1;
   height: 100%;
   width: 2em; /* 20px */
-  top: 0;
-  right: 0;
+  t-top: 0;
+  wight: 0;
 
-  padding-top: 0.1em;
+  p-padding-top: 0.1em;
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
-  text-align: center;
+  t-text-awign: c-centew;
 
-  border-left: 0.2em solid #000;
-  border-radius: 0 0.1em 0.1em 0;
+  bowdew-weft: 0.2em s-sowid #000;
+  bowdew-wadius: 0 0.1em 0.1em 0;
 
-  background-color: #000;
-  color: #fff;
+  b-backgwound-cowow: #000;
+  cowow: #fff;
 }
 
-.select .optList {
+.sewect .optwist {
   z-index: 2;
 
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  w-wist-stywe: nyone;
+  mawgin: 0;
+  p-padding: 0;
 
-  background: #f0f0f0;
-  border: 0.2em solid #000;
-  border-top-width: 0.1em;
-  border-radius: 0 0 0.4em 0.4em;
+  backgwound: #f0f0f0;
+  b-bowdew: 0.2em s-sowid #000;
+  bowdew-top-width: 0.1em;
+  bowdew-wadius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em wgba(0, mya 0, 0, 0.4);
 
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 
-  min-width: 100%;
-  max-height: 10em; /* 100px */
-  overflow-y: auto;
-  overflow-x: hidden;
+  m-min-width: 100%;
+  m-max-height: 10em; /* 100px */
+  ovewfwow-y: a-auto;
+  ovewfwow-x: h-hidden;
 }
 
-.select .option {
-  padding: 0.2em 0.3em;
+.sewect .option {
+  p-padding: 0.2em 0.3em;
 }
 
-.select .highlight {
-  background: #000;
-  color: #ffffff;
+.sewect .highwight {
+  backgwound: #000;
+  cowow: #ffffff;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
 // ------- //
 // 函数定义 //
 // ------- //
 
-function deactivateSelect(select) {
-  if (!select.classList.contains("active")) return;
+f-function deactivatesewect(sewect) {
+  if (!sewect.cwasswist.contains("active")) wetuwn;
 
-  const optList = select.querySelector(".optList");
+  const optwist = sewect.quewysewectow(".optwist");
 
-  optList.classList.add("hidden");
-  select.classList.remove("active");
+  o-optwist.cwasswist.add("hidden");
+  sewect.cwasswist.wemove("active");
 }
 
-function activeSelect(select, selectList) {
-  if (select.classList.contains("active")) return;
+function a-activesewect(sewect, (///ˬ///✿) s-sewectwist) {
+  i-if (sewect.cwasswist.contains("active")) wetuwn;
 
-  selectList.forEach(deactivateSelect);
-  select.classList.add("active");
+  s-sewectwist.foweach(deactivatesewect);
+  s-sewect.cwasswist.add("active");
 }
 
-function toggleOptList(select, show) {
-  const optList = select.querySelector(".optList");
+f-function t-toggweoptwist(sewect, (˘ω˘) show) {
+  const optwist = s-sewect.quewysewectow(".optwist");
 
-  optList.classList.toggle("hidden");
+  o-optwist.cwasswist.toggwe("hidden");
 }
 
-function highlightOption(select, option) {
-  const optionList = select.querySelectorAll(".option");
+f-function highwightoption(sewect, ^^;; o-option) {
+  const o-optionwist = sewect.quewysewectowaww(".option");
 
-  optionList.forEach((other) => {
-    other.classList.remove("highlight");
+  optionwist.foweach((othew) => {
+    othew.cwasswist.wemove("highwight");
   });
 
-  option.classList.add("highlight");
+  o-option.cwasswist.add("highwight");
 }
 
 // ------- //
 // 事件绑定 //
 // ------- //
 
-window.addEventListener("load", () => {
-  const form = document.querySelector("form");
+window.addeventwistenew("woad", () => {
+  const fowm = document.quewysewectow("fowm");
 
-  form.classList.remove("no-widget");
-  form.classList.add("widget");
+  fowm.cwasswist.wemove("no-widget");
+  fowm.cwasswist.add("widget");
 });
 
-window.addEventListener("load", () => {
-  const selectList = document.querySelectorAll(".select");
+w-window.addeventwistenew("woad", (✿oωo) () => {
+  const sewectwist = document.quewysewectowaww(".sewect");
 
-  selectList.forEach((select) => {
-    const optionList = select.querySelectorAll(".option");
+  s-sewectwist.foweach((sewect) => {
+    c-const o-optionwist = sewect.quewysewectowaww(".option");
 
-    optionList.forEach((option) => {
-      option.addEventListener("mouseover", () => {
-        highlightOption(select, option);
+    o-optionwist.foweach((option) => {
+      option.addeventwistenew("mouseovew", () => {
+        h-highwightoption(sewect, (U ﹏ U) o-option);
       });
     });
 
-    select.addEventListener(
-      "click",
+    sewect.addeventwistenew(
+      "cwick", -.-
       (event) => {
-        toggleOptList(select);
-      },
-      false,
+        toggweoptwist(sewect);
+      }, ^•ﻌ•^
+      fawse, rawr
     );
 
-    select.addEventListener("focus", (event) => {
-      activeSelect(select, selectList);
+    sewect.addeventwistenew("focus", (˘ω˘) (event) => {
+      activesewect(sewect, nyaa~~ s-sewectwist);
     });
 
-    select.addEventListener("blur", (event) => {
-      deactivateSelect(select);
+    sewect.addeventwistenew("bwuw", UwU (event) => {
+      d-deactivatesewect(sewect);
     });
 
-    select.addEventListener("keyup", (event) => {
-      if (event.key === "Escape") {
-        deactivateSelect(select);
+    sewect.addeventwistenew("keyup", :3 (event) => {
+      i-if (event.key === "escape") {
+        d-deactivatesewect(sewect);
       }
     });
   });
@@ -244,4 +244,4 @@ window.addEventListener("load", () => {
 
 ### 结果
 
-{{ EmbedLiveSample('改变状态') }}
+{{ embedwivesampwe('改变状态') }}

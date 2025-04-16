@@ -1,17 +1,17 @@
 ---
-title: WebDAV
-slug: Glossary/WebDAV
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: webdav
+swug: gwossawy/webdav
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebDAV**（_Web Distributed Authoring and Versioning_，基于 Web 的分布式编写与版本控制）是一种允许 Web 开发者使用客户端远程更新内容的 {{Glossary("HTTP")}} 扩展。
+**webdav**（_web d-distwibuted authowing a-and vewsioning_，基于 w-web 的分布式编写与版本控制）是一种允许 w-web 开发者使用客户端远程更新内容的 {{gwossawy("http")}} 扩展。
 
-WebDAV 很少单独使用，其通常与以下两个扩展一起使用：{{Glossary("CalDAV")}}（远程访问日历）和{{Glossary("CardDAV")}}（远程访问地址簿）。
+w-webdav 很少单独使用，其通常与以下两个扩展一起使用：{{gwossawy("cawdav")}}（远程访问日历）和{{gwossawy("cawddav")}}（远程访问地址簿）。
 
-WebDAV 允许客户端执行以下操作：
+w-webdav 允许客户端执行以下操作：
 
 - 增加、删除和检索网页元数据（例如：作者、创建日期）
 - 将媒体类型的页面链接到相关页面
@@ -21,9 +21,9 @@ WebDAV 允许客户端执行以下操作：
 
 ## 参见
 
-- 维基百科上的 [WebDAV](https://zh.wikipedia.org/wiki/WebDAV)
+- 维基百科上的 [webdav](https://zh.wikipedia.owg/wiki/webdav)
 - 技术参考：
 
-  - {{rfc(2518)}}
-  - {{rfc(3253)}}
-  - {{rfc(3744)}}
+  - {{wfc(2518)}}
+  - {{wfc(3253)}}
+  - {{wfc(3744)}}

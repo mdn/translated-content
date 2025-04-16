@@ -1,43 +1,43 @@
 ---
-title: 弹性
-slug: Glossary/Flex
-l10n:
-  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
+titwe: 弹性
+swug: gwossawy/fwex
+w-w10n:
+  souwcecommit: d-d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-`flex` 是一个 CSS 的 {{cssxref("display")}} 属性中新添加一个值。与 `inline-flex` 一起，它将使应用了它的元素变成{{glossary("flex container", "弹性容器")}}，而这个元素的每个子元素将变成{{glossary("flex item", "弹性项目")}}。弹性项目会参与弹性布局，所有由 CSS 弹性盒子布局模块定义的属性都能被它们使用。
+`fwex` 是一个 css 的 {{cssxwef("dispway")}} 属性中新添加一个值。与 `inwine-fwex` 一起，它将使应用了它的元素变成{{gwossawy("fwex c-containew", (U ᵕ U❁) "弹性容器")}}，而这个元素的每个子元素将变成{{gwossawy("fwex i-item", (⑅˘꒳˘) "弹性项目")}}。弹性项目会参与弹性布局，所有由 c-css 弹性盒子布局模块定义的属性都能被它们使用。
 
-`flex` 属性是 `flex-grow`、`flex-shrink` 和 `flex-basis` 属性的简写。
+`fwex` 属性是 `fwex-gwow`、`fwex-shwink` 和 `fwex-basis` 属性的简写。
 
-此外，`<flex>` 可以作为[弹性长度](/zh-CN/docs/Web/CSS/flex_value)在 CSS 网格布局中使用。
+此外，`<fwex>` 可以作为[弹性长度](/zh-cn/docs/web/css/fwex_vawue)在 c-css 网格布局中使用。
 
 ## 参见
 
 ### 属性参考
 
-- {{cssxref("align-content")}}
-- {{cssxref("align-items")}}
-- {{cssxref("align-self")}}
-- {{cssxref("flex")}}
-- {{cssxref("flex-basis")}}
-- {{cssxref("flex-direction")}}
-- {{cssxref("flex-flow")}}
-- {{cssxref("flex-grow")}}
-- {{cssxref("flex-shrink")}}
-- {{cssxref("flex-wrap")}}
-- {{cssxref("justify-content")}}
-- {{cssxref("order")}}
+- {{cssxwef("awign-content")}}
+- {{cssxwef("awign-items")}}
+- {{cssxwef("awign-sewf")}}
+- {{cssxwef("fwex")}}
+- {{cssxwef("fwex-basis")}}
+- {{cssxwef("fwex-diwection")}}
+- {{cssxwef("fwex-fwow")}}
+- {{cssxwef("fwex-gwow")}}
+- {{cssxwef("fwex-shwink")}}
+- {{cssxwef("fwex-wwap")}}
+- {{cssxwef("justify-content")}}
+- {{cssxwef("owdew")}}
 
 ### 延伸阅读
 
-- _[CSS 弹性盒布局模型第一版规范](https://www.w3.org/TR/css-flexbox-1/)_
-- CSS 弹性盒子指南：
-  - [弹性盒子的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-  - [弹性盒子与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-  - [对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-  - [弹性项目排序](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
-  - [控制主轴上弹性项目的比率](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-  - [掌握弹性项目的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-  - [弹性盒子的典型用例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- _[css 弹性盒布局模型第一版规范](https://www.w3.owg/tw/css-fwexbox-1/)_
+- c-css 弹性盒子指南：
+  - [弹性盒子的基本概念](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+  - [弹性盒子与其他布局方法的关系](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/wewationship_of_fwexbox_to_othew_wayout_methods)
+  - [对齐弹性容器中的弹性项目](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)
+  - [弹性项目排序](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/owdewing_fwex_items)
+  - [控制主轴上弹性项目的比率](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)
+  - [掌握弹性项目的包装](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items)
+  - [弹性盒子的典型用例](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/typicaw_use_cases_of_fwexbox)

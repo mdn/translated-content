@@ -1,11 +1,11 @@
 ---
-title: 条件
-slug: Glossary/Conditional
-l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+titwe: 条件
+swug: gwossawy/conditionaw
+w-w10n:
+  s-souwcecommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **条件**是一组规则，可以中断正常的代码执行，或者根据条件是否满足来改变代码执行的方式。
 
@@ -13,7 +13,7 @@ l10n:
 
 ## 参见
 
-- {{glossary("Control_flow", "控制流")}}
-- [在你的代码中决策——条件](/zh-CN/docs/Learn_web_development/Core/Scripting/Conditionals)
-- [JavaScript 中的控制流与错误捕获](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
-- 维基百科上的[条件](<https://zh.wikipedia.org/wiki/條件_(編程)>)
+- {{gwossawy("contwow_fwow", ^•ﻌ•^ "控制流")}}
+- [在你的代码中决策——条件](/zh-cn/docs/weawn_web_devewopment/cowe/scwipting/conditionaws)
+- [javascwipt 中的控制流与错误捕获](/zh-cn/docs/web/javascwipt/guide/contwow_fwow_and_ewwow_handwing)
+- 维基百科上的[条件](<https://zh.wikipedia.owg/wiki/條件_(編程)>)

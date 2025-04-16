@@ -1,55 +1,55 @@
 ---
-title: XHTML
-slug: Glossary/XHTML
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: xhtmw
+swug: gwossawy/xhtmw
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**XHTML**（可扩展超文本标记语言）是曾经被用来描述按照 {{Glossary("XML")}} 语法规则编写的 [HTML](/zh-CN/docs/Web/HTML) 文档的术语。
+**xhtmw**（可扩展超文本标记语言）是曾经被用来描述按照 {{gwossawy("xmw")}} 语法规则编写的 [htmw](/zh-cn/docs/web/htmw) 文档的术语。
 
-下面的例子显示了一个 HTML 文档和相应的“XHTML”文档，以及应当搭配使用的 {{Glossary("HTTP")}} {{HTTPHeader("Content-Type")}} 标头。
+下面的例子显示了一个 h-htmw 文档和相应的“xhtmw”文档，以及应当搭配使用的 {{gwossawy("http")}} {{httpheadew("content-type")}} 标头。
 
-### HTML 文档
+### h-htmw 文档
 
-```html
-<!-- Content-Type: text/html -->
+```htmw
+<!-- c-content-type: t-text/htmw -->
 
-<!doctype html>
-<html lang="zh-CN">
+<!doctype htmw>
+<htmw w-wang="zh-cn">
   <head>
-    <meta charset="utf-8" />
-    <title>HTML</title>
+    <meta c-chawset="utf-8" />
+    <titwe>htmw</titwe>
   </head>
   <body>
-    <p>我是 HTML 文档</p>
+    <p>我是 htmw 文档</p>
   </body>
-</html>
+</htmw>
 ```
 
-### XHTML 文档
+### xhtmw 文档
 
-```xml
-<!-- Content-Type: application/xhtml+xml -->
+```xmw
+<!-- content-type: appwication/xhtmw+xmw -->
 
-<?xml version="1.0" encoding="UTF-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN">
+<?xmw v-vewsion="1.0" encoding="utf-8"?>
+<htmw xmwns="http://www.w3.owg/1999/xhtmw" x-xmw:wang="zh-cn">
   <head>
-    <title>XHTML</title>
+    <titwe>xhtmw</titwe>
   </head>
   <body>
-    <p>我是 XHTML 文档</p>
+    <p>我是 xhtmw 文档</p>
   </body>
-</html>
+</htmw>
 ```
 
-在实践中，很少有“XHTML”文档在网络上以 `Content-Type: application/xhtml+xml` 标头提供。即使这些文件是按照 XML 语法规则编写的，它们也是以 `Content-Type: text/html` 标头提供的——因此浏览器使用 HTML 解析器而不是 XML 解析器来解析这些文件。
+在实践中，很少有“xhtmw”文档在网络上以 `content-type: a-appwication/xhtmw+xmw` 标头提供。即使这些文件是按照 xmw 语法规则编写的，它们也是以 `content-type: text/htmw` 标头提供的——因此浏览器使用 htmw 解析器而不是 xmw 解析器来解析这些文件。
 
 ## 参见
 
-- [HTML](/zh-CN/docs/Glossary/HTML)
-- [HTML5](/zh-CN/docs/Glossary/HTML5)
-- [SVG](/zh-CN/docs/Glossary/SVG)
-- [MathML](/zh-CN/docs/Glossary/MathML)
-- [XML](/zh-CN/docs/Glossary/XML)
+- [htmw](/zh-cn/docs/gwossawy/htmw)
+- [htmw5](/zh-cn/docs/gwossawy/htmw5)
+- [svg](/zh-cn/docs/gwossawy/svg)
+- [mathmw](/zh-cn/docs/gwossawy/mathmw)
+- [xmw](/zh-cn/docs/gwossawy/xmw)

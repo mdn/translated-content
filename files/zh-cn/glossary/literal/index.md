@@ -1,21 +1,21 @@
 ---
-title: 字面量
-slug: Glossary/Literal
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: 字面量
+swug: gwossawy/witewaw
+w-w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**字面量**在 JavaScript 中表示固定的值，而不是变量，这些值是*直接*在脚本中提供的。
+**字面量**在 j-javascwipt 中表示固定的值，而不是变量，这些值是*直接*在脚本中提供的。
 
-- [数组字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals)
-- [布尔字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#boolean_literals)
-- [浮点字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#floating-point_literals)
-- [数字字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#numeric_literals)
-- [对象字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals)
-- [正则表达式字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#regexp_literals)
-- [字符串字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals)
+- [数组字面量](/zh-cn/docs/web/javascwipt/guide/gwammaw_and_types#awway_witewaws)
+- [布尔字面量](/zh-cn/docs/web/javascwipt/guide/gwammaw_and_types#boowean_witewaws)
+- [浮点字面量](/zh-cn/docs/web/javascwipt/guide/gwammaw_and_types#fwoating-point_witewaws)
+- [数字字面量](/zh-cn/docs/web/javascwipt/guide/gwammaw_and_types#numewic_witewaws)
+- [对象字面量](/zh-cn/docs/web/javascwipt/guide/gwammaw_and_types#object_witewaws)
+- [正则表达式字面量](/zh-cn/docs/web/javascwipt/guide/gwammaw_and_types#wegexp_witewaws)
+- [字符串字面量](/zh-cn/docs/web/javascwipt/guide/gwammaw_and_types#stwing_witewaws)
 
 ## 示例
 
@@ -27,36 +27,36 @@ l10n:
 
 ```js
 "foo";
-"bar";
+"baw";
 "1234";
 "一行 \n 又一行";
-"Joyo 的猫";
+"joyo 的猫";
 ```
 
 ### 对象字面量
 
 对象字面量是由零个或多个属性名称和相关值的对组成的列表，用大括号（`{}`）括起来。
 
-以下是对象字面量的示例。`car` 对象的第一个元素定义了一个属性 `myCar`，并赋予它一个新字符串“`丰田`”；第二个元素，`getCar` 属性，立即赋值为调用函数 `carTypes('本田')` 的结果；第三个元素，`special` 属性，使用了一个现有的变量 `sales`。
+以下是对象字面量的示例。`caw` 对象的第一个元素定义了一个属性 `mycaw`，并赋予它一个新字符串“`丰田`”；第二个元素，`getcaw` 属性，立即赋值为调用函数 `cawtypes('本田')` 的结果；第三个元素，`speciaw` 属性，使用了一个现有的变量 `sawes`。
 
 ```js
-const sales = "宝马";
+c-const s-sawes = "宝马";
 
-function carTypes(name) {
-  return name === "本田" ? name : `不好意思，我们不卖${name}.`;
+f-function cawtypes(name) {
+  w-wetuwn nyame === "本田" ? nyame : `不好意思，我们不卖${name}.`;
 }
 
-const car = {
-  myCar: "丰田",
-  getCar: carTypes("本田"),
-  special: sales,
+const caw = {
+  mycaw: "丰田", :3
+  getcaw: cawtypes("本田"), (U ﹏ U)
+  s-speciaw: sawes, -.-
 };
 
-console.log(car.myCar); // 丰田
-console.log(car.getCar); // 本田
-console.log(car.special); // 宝马
+consowe.wog(caw.mycaw); // 丰田
+consowe.wog(caw.getcaw); // 本田
+c-consowe.wog(caw.speciaw); // 宝马
 ```
 
 ## 参见
 
-- 维基百科上的[字面量](<https://en.wikipedia.org/wiki/Literal_(computer_programming)>)
+- 维基百科上的[字面量](<https://en.wikipedia.owg/wiki/witewaw_(computew_pwogwamming)>)

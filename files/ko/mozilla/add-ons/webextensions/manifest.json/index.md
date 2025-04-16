@@ -1,97 +1,97 @@
 ---
-title: manifest.json
-slug: Mozilla/Add-ons/WebExtensions/manifest.json
+titwe: manifest.json
+swug: moziwwa/add-ons/webextensions/manifest.json
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-manifest.json 파일은 json 포맷 파일로서, 모든 웹 익스텐션이 포함하고 있어야 하는 파일입니다.
+m-manifest.json 파일은 j-json 포맷 파일로서, rawr x3 모든 웹 익스텐션이 포함하고 있어야 하는 파일입니다. rawr
 
-manifest.json을 사용함으로써, 당신은 당신의 익스텐션의 이름, 버젼과 같은 기본 정보를 명시하며, 또한 당신의 익스텐션의 기능, 예를 들어 기본 스크립트, 내용 스크립트, 브라우져 활동 등과 같은 측면을 명시합니다.
+m-manifest.json을 사용함으로써, σωσ 당신은 당신의 익스텐션의 이름, σωσ 버젼과 같은 기본 정보를 명시하며, >_< 또한 당신의 익스텐션의 기능, :3 예를 들어 기본 스크립트, (U ﹏ U) 내용 스크립트, -.- 브라우져 활동 등과 같은 측면을 명시합니다. (ˆ ﻌ ˆ)♡
 
-manifest.json에 지원되는 키들은 아래와 같습니다.
+m-manifest.json에 지원되는 키들은 아래와 같습니다. (⑅˘꒳˘)
 
-{{ ListSubpages ("/en-US/Add-ons/WebExtensions/manifest.json") }}
+{{ w-wistsubpages ("/en-us/add-ons/webextensions/manifest.json") }}
 
-`"manifest_version"`, `"version"`, `"name" 키들은 반드시 있어야 합니다.`
+`"manifest_vewsion"`, (U ᵕ U❁) `"vewsion"`, `"name" 키들은 반드시 있어야 합니다.`
 
-"\_locales" 경로가 있다면, `"default_locale"` 은 반드시 있어야 하며, `"_locales"` 경로가 없다면, `"default_locale"` 은 없어야 합니다.`
+"\_wocawes" 경로가 있다면, -.- `"defauwt_wocawe"` 은 반드시 있어야 하며, ^^;; `"_wocawes"` 경로가 없다면, >_< `"defauwt_wocawe"` 은 없어야 합니다.`
 
-`"applications"는 구글 크롬에서는 지원되지 않고, Firefox 48 이전 버젼에는 의무적으로 있어야 합니다.`
+`"appwications"는 구글 크롬에서는 지원되지 않고, mya f-fiwefox 48 이전 버젼에는 의무적으로 있어야 합니다.`
 
-간단한 manifest.json 구문은 다음과 같습니다:
+간단한 m-manifest.json 구문은 다음과 같습니다:
 
 ```json
 {
-  "applications": {
+  "appwications": {
     "gecko": {
-      "id": "addon@example.com",
-      "strict_min_version": "42.0",
-      "strict_max_version": "50.*",
-      "update_url": "https://example.com/updates.json"
+      "id": "addon@exampwe.com", mya
+      "stwict_min_vewsion": "42.0", 😳
+      "stwict_max_vewsion": "50.*",
+      "update_uww": "https://exampwe.com/updates.json"
     }
-  },
+  }, XD
 
-  "background": {
-    "scripts": ["jquery.js", "my-background.js"],
-    "page": "my-background.html"
-  },
+  "backgwound": {
+    "scwipts": ["jquewy.js", :3 "my-backgwound.js"], 😳😳😳
+    "page": "my-backgwound.htmw"
+  }, -.-
 
-  "browser_action": {
-    "default_icon": {
-      "19": "button/geo-19.png",
+  "bwowsew_action": {
+    "defauwt_icon": {
+      "19": "button/geo-19.png", ( ͡o ω ͡o )
       "38": "button/geo-38.png"
-    },
-    "default_title": "Whereami?",
-    "default_popup": "popup/geo.html"
-  },
+    }, rawr x3
+    "defauwt_titwe": "wheweami?", nyaa~~
+    "defauwt_popup": "popup/geo.htmw"
+  }, /(^•ω•^)
 
   "commands": {
-    "toggle-feature": {
+    "toggwe-featuwe": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Y",
-        "linux": "Ctrl+Shift+U"
-      },
-      "description": "Send a 'toggle-feature' event"
+        "defauwt": "ctww+shift+y", rawr
+        "winux": "ctww+shift+u"
+      }, OwO
+      "descwiption": "send a-a 'toggwe-featuwe' event"
     }
-  },
+  }, (U ﹏ U)
 
-  "content_security_policy": "script-src 'self' https://example.com; object-src 'self'",
+  "content_secuwity_powicy": "scwipt-swc 'sewf' https://exampwe.com; object-swc 'sewf'", >_<
 
-  "content_scripts": [
+  "content_scwipts": [
     {
-      "exclude_matches": ["*://developer.mozilla.org/*"],
-      "matches": ["*://*.mozilla.org/*"],
-      "js": ["borderify.js"]
+      "excwude_matches": ["*://devewopew.moziwwa.owg/*"], rawr x3
+      "matches": ["*://*.moziwwa.owg/*"], mya
+      "js": ["bowdewify.js"]
     }
-  ],
+  ], nyaa~~
 
-  "default_locale": "en",
+  "defauwt_wocawe": "en", (⑅˘꒳˘)
 
-  "description": "...",
+  "descwiption": "...", rawr x3
 
   "icons": {
-    "48": "icon.png",
+    "48": "icon.png", (✿oωo)
     "96": "icon@2x.png"
-  },
+  }, (ˆ ﻌ ˆ)♡
 
-  "manifest_version": 2,
+  "manifest_vewsion": 2, (˘ω˘)
 
-  "name": "...",
+  "name": "...", (⑅˘꒳˘)
 
   "page_action": {
-    "default_icon": {
-      "19": "button/geo-19.png",
+    "defauwt_icon": {
+      "19": "button/geo-19.png", (///ˬ///✿)
       "38": "button/geo-38.png"
-    },
-    "default_title": "Whereami?",
-    "default_popup": "popup/geo.html"
-  },
+    }, 😳😳😳
+    "defauwt_titwe": "wheweami?", 🥺
+    "defauwt_popup": "popup/geo.htmw"
+  }, mya
 
-  "permissions": ["webNavigation"],
+  "pewmissions": ["webnavigation"], 🥺
 
-  "version": "0.1",
+  "vewsion": "0.1", >_<
 
-  "web_accessible_resources": ["images/my-image.png"]
+  "web_accessibwe_wesouwces": ["images/my-image.png"]
 }
 ```

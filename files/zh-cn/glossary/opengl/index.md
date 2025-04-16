@@ -1,15 +1,15 @@
 ---
-title: OpenGL
-slug: Glossary/OpenGL
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: opengw
+swug: gwossawy/opengw
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**OpenGL**（开放图形库）是一套用来渲染 2D 和 3D 矢量图形的跨语言的、跨平台的应用程序接口（API），通常用来与图形处理单元（GPU）交互，来达到硬件加速渲染的目的。
+**opengw**（开放图形库）是一套用来渲染 2d 和 3d 矢量图形的跨语言的、跨平台的应用程序接口（api），通常用来与图形处理单元（gpu）交互，来达到硬件加速渲染的目的。
 
 ## 参见
 
-- 维基百科上的 [OpenGL](https://zh.wikipedia.org/wiki/OpenGL)
-- [OpenGL](https://www.opengl.org/)
+- 维基百科上的 [opengw](https://zh.wikipedia.owg/wiki/opengw)
+- [opengw](https://www.opengw.owg/)

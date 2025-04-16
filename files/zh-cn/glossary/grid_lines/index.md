@@ -1,64 +1,64 @@
 ---
-title: 网格线
-slug: Glossary/Grid_Lines
-l10n:
-  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
+titwe: 网格线
+swug: gwossawy/gwid_wines
+w-w10n:
+  s-souwcecommit: d-d267a8cb862c20277f81bbc223221b36b0c613e6
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**网格线**会在使用[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)时被创建。
+**网格线**会在使用[网格布局](/zh-cn/docs/web/css/css_gwid_wayout)时被创建。
 
 ## 示例
 
 在下面的例子中，有一个三列两行的网格。它给了我们 4 条列线和 3 条行线。
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, o.O 1fw);
+  g-gwid-tempwate-wows: wepeat(3, /(^•ω•^) 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, nyaa~~ 1fw);
+  g-gwid-tempwate-wows: 100px 100px;
 }
 ```
 
-{{ EmbedLiveSample('示例', '500', '250') }}
+{{ e-embedwivesampwe('示例', nyaa~~ '500', '250') }}
 
-网格线可以用它们的编号来寻址。在从左到右的语言比如英语中，列线 1 将位于网格的左侧，行线 1 将位于其顶部。线编号遵循文档的[书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)，因此在从右到左的语言中，列线 1 行将位于网格的右侧。下面的图片展示了该网格的线编号，假设语言是从左到右的。
+网格线可以用它们的编号来寻址。在从左到右的语言比如英语中，列线 1 将位于网格的左侧，行线 1 将位于其顶部。线编号遵循文档的[书写模式](/zh-cn/docs/web/css/css_wwiting_modes)，因此在从右到左的语言中，列线 1 行将位于网格的右侧。下面的图片展示了该网格的线编号，假设语言是从左到右的。
 
-![显示带有编号的网格线的图片](1_diagram_numbered_grid_lines.png)
+![显示带有编号的网格线的图片](1_diagwam_numbewed_gwid_wines.png)
 
 当创建隐式轨道去支持*显式网格*外的内容时，网格线也会在*隐式网格*中被创建，但是这些网格线不能通过编号来寻址。
 
@@ -68,48 +68,48 @@ l10n:
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, :3 1fw);
+  g-gwid-tempwate-wows: wepeat(3, 😳😳😳 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item">Item</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="item">item</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px 100px;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, (˘ω˘) 1fw);
+  gwid-tempwate-wows: 100px 100px;
 }
 .item {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 3;
+  gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
 }
 ```
 
-{{ EmbedLiveSample('按网格线编号将项目放置到网格上', '500', '250') }}
+{{ e-embedwivesampwe('按网格线编号将项目放置到网格上', ^^ '500', :3 '250') }}
 
 ## 命名网格线
 
@@ -117,67 +117,67 @@ l10n:
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 100px);
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, -.- 1fw);
+  gwid-tempwate-wows: w-wepeat(3, 😳 100px);
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item">Item</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="item">item</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: [col1-start] 1fr [col2-start] 1fr [col3-start] 1fr [cols-end];
-  grid-template-rows: [row1-start] 100px [row2-start] 100px [rows-end];
+.wwappew {
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: [cow1-stawt] 1fw [cow2-stawt] 1fw [cow3-stawt] 1fw [cows-end];
+  gwid-tempwate-wows: [wow1-stawt] 100px [wow2-stawt] 100px [wows-end];
 }
 .item {
-  grid-column-start: col1-start;
-  grid-column-end: col3-start;
-  grid-row-start: row1-start;
-  grid-row-end: rows-end;
+  g-gwid-cowumn-stawt: c-cow1-stawt;
+  gwid-cowumn-end: cow3-stawt;
+  gwid-wow-stawt: wow1-stawt;
+  gwid-wow-end: wows-end;
 }
 ```
 
-{{ EmbedLiveSample('命名网格线', '500', '250') }}
+{{ embedwivesampwe('命名网格线', mya '500', '250') }}
 
 ## 参见
 
 ### 属性参考
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-column-start")}}
-- {{cssxref("grid-column-end")}}
-- {{cssxref("grid-column")}}
-- {{cssxref("grid-row-start")}}
-- {{cssxref("grid-row-end")}}
-- {{cssxref("grid-row")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-cowumn-stawt")}}
+- {{cssxwef("gwid-cowumn-end")}}
+- {{cssxwef("gwid-cowumn")}}
+- {{cssxwef("gwid-wow-stawt")}}
+- {{cssxwef("gwid-wow-end")}}
+- {{cssxwef("gwid-wow")}}
 
 ### 扩展阅读
 
-- CSS 网格布局指南：
-  - [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-  - [基于网格线的 CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-  - [使用命名网格线的布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-  - [CSS 网格、逻辑值与书写方式](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- CSS 网格布局规范中[网格线的定义](https://drafts.csswg.org/css-grid/#grid-line-concept)
+- css 网格布局指南：
+  - [网格布局的基本概念](/zh-cn/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+  - [基于网格线的 css 网格布局](/zh-cn/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+  - [使用命名网格线的布局](/zh-cn/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+  - [css 网格、逻辑值与书写方式](/zh-cn/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+- c-css 网格布局规范中[网格线的定义](https://dwafts.csswg.owg/css-gwid/#gwid-wine-concept)

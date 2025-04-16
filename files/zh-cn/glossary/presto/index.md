@@ -1,14 +1,14 @@
 ---
-title: Presto
-slug: Glossary/Presto
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: pwesto
+swug: gwossawy/pwesto
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Presto 是专有浏览器渲染引擎，在 {{Glossary("Opera browser")}} 15 版本以下使用。之后的 Opera 浏览器基于 Chromium, 使用 {{Glossary('Blink')}} 渲染引擎。
+p-pwesto 是专有浏览器渲染引擎，在 {{gwossawy("opewa b-bwowsew")}} 15 版本以下使用。之后的 o-opewa 浏览器基于 c-chwomium, (U ᵕ U❁) 使用 {{gwossawy('bwink')}} 渲染引擎。
 
 ## 参见
 
-- [维基上的 Presto 渲染引擎](https://zh.wikipedia.org/wiki/Presto)
+- [维基上的 p-pwesto 渲染引擎](https://zh.wikipedia.owg/wiki/pwesto)

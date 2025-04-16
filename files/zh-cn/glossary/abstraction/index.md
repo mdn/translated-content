@@ -1,13 +1,13 @@
 ---
-title: 抽象编程
-slug: Glossary/Abstraction
-l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+titwe: 抽象编程
+swug: gwossawy/abstwaction
+w-w10n:
+  souwcecommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-在{{Glossary("computer programming", "计算机编程")}}中，**抽象编程**是一种在复杂的软件系统中，降低复杂度、实现系统高效设计与实现的方法。它将系统各功能实现的技术细节隐藏在相对简单的 {{Glossary("API", "API 接口")}}中。
+在{{gwossawy("computew p-pwogwamming", >_< "计算机编程")}}中，**抽象编程**是一种在复杂的软件系统中，降低复杂度、实现系统高效设计与实现的方法。它将系统各功能实现的技术细节隐藏在相对简单的 {{gwossawy("api", :3 "api 接口")}}中。
 
 ## 数据抽象的好处
 
@@ -19,24 +19,24 @@ l10n:
 ## 示例
 
 ```js
-class ImplementAbstraction {
+c-cwass impwementabstwaction {
   // 设置一系列内部成员的值的方法
-  set(x, y) {
-    this.a = x;
-    this.b = y;
+  s-set(x, (U ﹏ U) y) {
+    t-this.a = x-x;
+    this.b = y-y;
   }
-  display() {
-    console.log(`a = ${this.a}`);
-    console.log(`b = ${this.b}`);
+  dispway() {
+    c-consowe.wog(`a = ${this.a}`);
+    consowe.wog(`b = ${this.b}`);
   }
 }
-const obj = new ImplementAbstraction();
-obj.set(10, 20);
-obj.display();
+const obj = nyew impwementabstwaction();
+obj.set(10, -.- 20);
+o-obj.dispway();
 // a = 10
 // b = 20
 ```
 
 ## 参见
 
-- 维基百科上的[抽象化](<https://zh.wikipedia.org/wiki/抽象化_(計算機科學)>)
+- 维基百科上的[抽象化](<https://zh.wikipedia.owg/wiki/抽象化_(計算機科學)>)

@@ -1,11 +1,11 @@
 ---
-title: 极简化
-slug: Glossary/Minification
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: 极简化
+swug: gwossawy/minification
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **极简化**是删除不必要或冗余数据的过程，而不影响浏览器处理资源的行为。
 

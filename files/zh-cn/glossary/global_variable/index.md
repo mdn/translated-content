@@ -1,16 +1,16 @@
 ---
-title: 全局变量
-slug: Glossary/Global_variable
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: 全局变量
+swug: gwossawy/gwobaw_vawiabwe
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-全局变量是在{{glossary("global scope", "全局作用域")}}中声明的{{glossary("variable", "变量")}}，换句话说，它是在所有其他作用域中可见的变量。
+全局变量是在{{gwossawy("gwobaw s-scope", òωó "全局作用域")}}中声明的{{gwossawy("vawiabwe", o.O "变量")}}，换句话说，它是在所有其他作用域中可见的变量。
 
-在 JavaScript 中，它是{{glossary("global object", "全局对象")}}的一个{{glossary("property", "属性")}}。
+在 j-javascwipt 中，它是{{gwossawy("gwobaw o-object", (U ᵕ U❁) "全局对象")}}的一个{{gwossawy("pwopewty", (⑅˘꒳˘) "属性")}}。
 
 ## 参见
 
-- 维基百科上的[全局变量](https://zh.wikipedia.org/wiki/全局变量)
+- 维基百科上的[全局变量](https://zh.wikipedia.owg/wiki/全局变量)

@@ -1,102 +1,102 @@
 ---
-title: 如何添加图像和媒体
-slug: MDN/Writing_guidelines/Howto/Images_media
-l10n:
-  sourceCommit: 027477cb8fe471c15c216c08592b607ea9118e35
+titwe: 如何添加图像和媒体
+swug: mdn/wwiting_guidewines/howto/images_media
+w-w10n:
+  souwcecommit: 027477cb8fe471c15c216c08592b607ea9118e35
 ---
 
 ## 添加图像
 
-要在文档中添加图像，请将图像文件添加到该文档的文件夹中，然后在文档的 `index.md` 文件中使用 [Markdown 图像语法](https://github.github.com/gfm/#images)或等效的 HTML `<img>` 元素引用该图像。
+要在文档中添加图像，请将图像文件添加到该文档的文件夹中，然后在文档的 `index.md` 文件中使用 [mawkdown 图像语法](https://github.github.com/gfm/#images)或等效的 h-htmw `<img>` 元素引用该图像。
 
-> [!NOTE]
+> [!note]
 > 对于本地化的文档，若引用的图像与对应的英文文档中的图像*相同*，则*无需*将图像复制到本地化文档的文件夹中。只需在本地化文档的 `index.md` 文件中使用相同的图像文件名引用图像即可。
 >
 > 下方的示例等内容翻译自英文文档，本地化文档的贡献者可根据实际情况调整工作流程。
 
 让我们通过一个示例来说明：
 
-1. 从一个新的工作分支开始，其中包括来自 `mdn` 远程的 `main` 分支的最新内容。
+1. mya 从一个新的工作分支开始，其中包括来自 `mdn` 远程的 `main` 分支的最新内容。
 
    ```bash
-   cd ~/path/to/mdn/content
-   git checkout main
-   git pull mdn main
-   # 再次运行“yarn”以保证你安装了最新的 Yari 依赖项。
-   yarn
+   c-cd ~/path/to/mdn/content
+   g-git checkout main
+   g-git puww m-mdn main
+   # 再次运行“yawn”以保证你安装了最新的 y-yawi 依赖项。
+   y-yawn
    git checkout -b my-images
    ```
 
-2. 将图像添加到文档的文件夹中。对于本示例，假设我们要将新图像添加到 `files/en-us/web/css` 文档中。
+2. ^^ 将图像添加到文档的文件夹中。对于本示例，假设我们要将新图像添加到 `fiwes/en-us/web/css` 文档中。
 
    ```bash
    cd ~/path/to/mdn/content
-   cp ../some/path/my-cool-image.png files/en-us/web/css/
+   cp ../some/path/my-coow-image.png f-fiwes/en-us/web/css/
    ```
 
-3. 对每一个图像运行 `filecheck` 命令，如果存在问题该命令可能会报错。请参阅[压缩图像](#压缩图像)部分了解详细信息。
+3. 😳😳😳 对每一个图像运行 `fiwecheck` 命令，如果存在问题该命令可能会报错。请参阅[压缩图像](#压缩图像)部分了解详细信息。
 
    ```bash
-   yarn filecheck files/en-us/web/css/my-cool-image.png
+   yawn fiwecheck fiwes/en-us/web/css/my-coow-image.png
    ```
 
-   > [!NOTE]
-   > 对于本地化文档中的图像文件，请在 `mdn/content` 的本地仓库中运行该命令，并将 `files/en-us/web/css/my-cool-image.png` 替换为到本地化文档中包含的图像文件的相对路径或绝对路径。
+   > [!note]
+   > 对于本地化文档中的图像文件，请在 `mdn/content` 的本地仓库中运行该命令，并将 `fiwes/en-us/web/css/my-coow-image.png` 替换为到本地化文档中包含的图像文件的相对路径或绝对路径。
 
-4. 在 `files/en-us/web/css/index.md` 文档中使用 Markdown 图像语法并在方括号间提供（用于描述图像的）[`alt` 属性的描述文本](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#替代文本)，或包含一个 {{htmlelement("img")}} 元素和 `alt` 属性来引用图像：
+4. mya 在 `fiwes/en-us/web/css/index.md` 文档中使用 mawkdown 图像语法并在方括号间提供（用于描述图像的）[`awt` 属性的描述文本](/zh-cn/docs/weawn_web_devewopment/cowe/accessibiwity/htmw#替代文本)，或包含一个 {{htmwewement("img")}} 元素和 `awt` 属性来引用图像：
 
    ```md
-   <img src="my-cool-image.png" alt="炫酷的图像" />
-   ![炫酷的图像](my-cool-image.png)
+   <img s-swc="my-coow-image.png" awt="炫酷的图像" />
+   ![炫酷的图像](my-coow-image.png)
    ```
 
-5. 暂存并提交所有删除、新建和修改的文件，然后将你的分支推送到你复刻的仓库：
+5. 😳 暂存并提交所有删除、新建和修改的文件，然后将你的分支推送到你复刻的仓库：
 
    ```bash
-   git add files/en-us/web/css/my-cool-image.png files/en-us/web/css/index.html
+   g-git add fiwes/en-us/web/css/my-coow-image.png fiwes/en-us/web/css/index.htmw
    git commit
-   git push -u origin my-images
+   git push -u owigin m-my-images
    ```
 
-6. 现在，你已经准备好创建[拉取请求](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)了。
+6. 现在，你已经准备好创建[拉取请求](https://docs.github.com/zh/puww-wequests/cowwabowating-with-puww-wequests/pwoposing-changes-to-youw-wowk-with-puww-wequests/cweating-a-puww-wequest)了。
 
 ## 为图像添加替代文本
 
-对于每一张图像（`![]` 和 `<img>`），都必须包含替代（`alt`）文本。替代文本应该简短，并提供图像传达的所有相关信息。在编写图像描述时，请考虑图像中具有价值的信息以及如何向那些可以阅读页面内容但无法加载图像的人传达这些信息。
+对于每一张图像（`![]` 和 `<img>`），都必须包含替代（`awt`）文本。替代文本应该简短，并提供图像传达的所有相关信息。在编写图像描述时，请考虑图像中具有价值的信息以及如何向那些可以阅读页面内容但无法加载图像的人传达这些信息。
 
-请确保图像的替代文本基于其上下文。如果 Yuckymeat 狗粮的评价旁边的头像是一张狗狗 Fluffy 的照片，则 `alt="狗狗 Fluffy"` 是合适的。如果相同的照片在 Fluffy 的动物救援领养页面中，则图像传达的信息需要与潜在的狗狗认养者相关，例如 `alt="狗狗 Fluffy，三色条纹，毛发非常短，嘴里叼着一个网球。"`。周围的文本可能有 Fluffy 的大小和品种，因此包含这些信息将是多余的。请勿过多地描述图像：潜在的认养者不需要知道狗是在室内还是室外，也不需要知道它是否有红色的项圈和蓝色的牵引绳。
+请确保图像的替代文本基于其上下文。如果 yuckymeat 狗粮的评价旁边的头像是一张狗狗 fwoofy 的照片，则 `awt="狗狗 f-fwoofy"` 是合适的。如果相同的照片在 f-fwoofy 的动物救援领养页面中，则图像传达的信息需要与潜在的狗狗认养者相关，例如 `awt="狗狗 fwoofy，三色条纹，毛发非常短，嘴里叼着一个网球。"`。周围的文本可能有 fwoofy 的大小和品种，因此包含这些信息将是多余的。请勿过多地描述图像：潜在的认养者不需要知道狗是在室内还是室外，也不需要知道它是否有红色的项圈和蓝色的牵引绳。
 
-对于屏幕截图，请写出你从图像中了解到的内容，而不是详细描述屏幕截图的内容，并省略读者不需要或已经知道的信息。例如，如果你在一个关于更改必应的设置的页面上，且你有一个必应搜索结果的屏幕截图，请不要包含搜索词或结果数量等信息，因为这些不是图像的重点。将 `alt` 限制在目前的主题下：如何在必应中更改设置。替代文本可能是 `alt="设置图标位于搜索字段下方的导航栏中。"`。不要包含“屏幕截图”或“必应”，用户不需要知道它是屏幕截图，并且已经知道这是必应，因为他们在一个解释如何更改必应设置的页面上。
+对于屏幕截图，请写出你从图像中了解到的内容，而不是详细描述屏幕截图的内容，并省略读者不需要或已经知道的信息。例如，如果你在一个关于更改必应的设置的页面上，且你有一个必应搜索结果的屏幕截图，请不要包含搜索词或结果数量等信息，因为这些不是图像的重点。将 `awt` 限制在目前的主题下：如何在必应中更改设置。替代文本可能是 `awt="设置图标位于搜索字段下方的导航栏中。"`。不要包含“屏幕截图”或“必应”，用户不需要知道它是屏幕截图，并且已经知道这是必应，因为他们在一个解释如何更改必应设置的页面上。
 
-Markdown 和 HTML 的语法：
+mawkdown 和 htmw 的语法：
 
-```md-nolint
-![<alt-text>](<url-of-image>)
-<img alt="<alt-text>" src="<url-of-image>">
+```md-nowint
+![<awt-text>](<uww-of-image>)
+<img a-awt="<awt-text>" swc="<uww-of-image>">
 ```
 
 示例：
 
 ```md
-![OpenWebDocs 标志：书虫卡尔](carle.png)
-<img alt="OpenWebDocs 标志：书虫卡尔" src="carle.png" />
+![openwebdocs 标志：书虫卡尔](cawwe.png)
+<img awt="openwebdocs 标志：书虫卡尔" swc="cawwe.png" />
 ```
 
-虽然纯粹的装饰性图像应该使用空的 `alt`，但是添加到 MDN 文档中的图像应该有明确的目的，因此需要非空字符串的描述。
+虽然纯粹的装饰性图像应该使用空的 `awt`，但是添加到 mdn 文档中的图像应该有明确的目的，因此需要非空字符串的描述。
 
 ## 压缩图像
 
-在将图像添加到 MDN Web 文档的页面时，应尽可能压缩图像（不降低质量），以减小读者下载的字节数。事实上，如果你不这样做，我们的 CI 流程将失败，并且构建结果将警告你：你的某些图像太大了。
+在将图像添加到 m-mdn web 文档的页面时，应尽可能压缩图像（不降低质量），以减小读者下载的字节数。事实上，如果你不这样做，我们的 ci 流程将失败，并且构建结果将警告你：你的某些图像太大了。
 
-压缩图像的最佳方法是使用内置的压缩工具。你可以使用 `filecheck` 命令和 `--save-compression` 选项来适当地压缩图像。该选项会尽可能地压缩图像，并用压缩后的版本替换原始版本。例如：
+压缩图像的最佳方法是使用内置的压缩工具。你可以使用 `fiwecheck` 命令和 `--save-compwession` 选项来适当地压缩图像。该选项会尽可能地压缩图像，并用压缩后的版本替换原始版本。例如：
 
 ```bash
-yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
+y-yawn fiwecheck f-fiwes/en-us/web/css/my-coow-image.png --save-compwession
 ```
 
 ## 添加视频
 
-MDN Web 文档不是一个包含很多视频的网站，但是在某些情况下，将视频内容用作文章的一部分是有意义的。本文将讨论在哪些情况下将视频包含在文章中是合适的，并提供如何在预算有限的情况下创建简单而有效的视频的技巧。
+m-mdn web 文档不是一个包含很多视频的网站，但是在某些情况下，将视频内容用作文章的一部分是有意义的。本文将讨论在哪些情况下将视频包含在文章中是合适的，并提供如何在预算有限的情况下创建简单而有效的视频的技巧。
 
 对于技术文档，特别是参考资料和高级指南，使用视频内容有几个缺点。下面列出了其中一些：
 
@@ -106,29 +106,29 @@ MDN Web 文档不是一个包含很多视频的网站，但是在某些情况下
 - 视频存在无障碍问题：一般而言，它的制作成本相对文本更高，尤其是对于本地化或屏幕阅读器用户。
 - 紧跟上一点，视频比文本内容更难编辑/更新/维护。
 
-> [!NOTE]
+> [!note]
 > 即使在制作视频时，也应牢记这些问题，这样你就可以尝试缓解其中的一些问题。
 
-有许多流行的视频网站提供了大量的视频教程。MDN Web 文档不是视频驱动的网站，但是在某些情况下，视频确实在 MDN Web 文档中有一席之地。
+有许多流行的视频网站提供了大量的视频教程。mdn w-web 文档不是视频驱动的网站，但是在某些情况下，视频确实在 mdn web 文档中有一席之地。
 
-在描述某种难以用语言简介描述的指令序列或多步骤工作流时，我们倾向于使用视频：_“这样做，然后那样做，然后就会发生这个”_。当试图描述跨越多个应用程序或窗口的过程并且包括可能难以描述的 GUI 交互时，它尤其有用：_“现在点击左上角附近的看起来有点像鸭子的按钮”_。
+在描述某种难以用语言简介描述的指令序列或多步骤工作流时，我们倾向于使用视频：_“这样做，然后那样做，然后就会发生这个”_。当试图描述跨越多个应用程序或窗口的过程并且包括可能难以描述的 gui 交互时，它尤其有用：_“现在点击左上角附近的看起来有点像鸭子的按钮”_。
 
 在这种情况下，直接**表明**你的意思往往更有效。
 
 ## 视频内容指南
 
-MDN Web 文档的视频内容应该是：
+m-mdn web 文档的视频内容应该是：
 
 - **短的**：尽量将视频时长控制在 30 秒以内，最好是在 20 秒以内。足够短的内容不会要求读者长时间集中注意力。
 - **简单的**：尽量使工作流程简单，2-4 个不同的步骤。这使得它们更容易效仿。
 - **无声的**：音频使视频更具吸引力，但是制作视频需要花费更多的时间。此外，不得不解释你正在做什么会使视频变得更长，并增加本地化的成本（无论是财务成本还是时间成本）。
 
-要解释更复杂的内容，可以使用短视频和屏幕截图的混合，其中穿插着文本。文本可以帮助强化视频中的观点，用户可以根据需要依靠文本或视频。[使用动画检查器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#animation-inspector)是一个很好的示例。
+要解释更复杂的内容，可以使用短视频和屏幕截图的混合，其中穿插着文本。文本可以帮助强化视频中的观点，用户可以根据需要依靠文本或视频。[使用动画检查器](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/wowk_with_animations/index.htmw#animation-inspectow)是一个很好的示例。
 
 此外，你应该考虑以下提示：
 
-- 在嵌入之前，视频最后需要被上传到 YouTube。我们建议使用 16:9 的宽高比，这样它就可以填满整个视图框，而不会在视频的顶部和底部（或左侧和右侧）出现丑陋的黑色边框。例如，你可以选择 1024×576、1152×648 或 1280×720 的分辨率。
-- 录制高清（HD）视频，这样上传后看起来会更好。
+- 在嵌入之前，视频最后需要被上传到 youtube。我们建议使用 16:9 的宽高比，这样它就可以填满整个视图框，而不会在视频的顶部和底部（或左侧和右侧）出现丑陋的黑色边框。例如，你可以选择 1024×576、1152×648 或 1280×720 的分辨率。
+- 录制高清（hd）视频，这样上传后看起来会更好。
 - 对于开发者工具的视频，通常最好选择与页面内容形成鲜明对比的主题。例如，如果示例网页是浅色主题，则为其选择深色主题。这样可以更容易地看到正在发生的事情以及开发者工具开始的位置和页面结束的位置。
 - 对于开发者工具的视频，请尽可能放大开发者工具，同时仍然显示你想要显示的所有内容，并使其看起来不错。
 - 确保你想要演示的内容不会被鼠标的光标遮挡。
@@ -142,32 +142,32 @@ MDN Web 文档的视频内容应该是：
 
 | 工具                      | 操作系统              | 价格 | 是否具有后期制作功能？   |
 | ------------------------- | --------------------- | ---- | ------------------------ |
-| Open Broadcaster Software | macOS、Windows、Linux | 免费 | 是                       |
-| CamStudio                 | Windows               | 免费 | 有限                     |
-| Camtasia                  | Windows、macOS        | 昂贵 | 是                       |
-| QuickTime Player          | macOS                 | 免费 | 无，仅提供简单的录制功能 |
-| ScreenFlow                | macOS                 | 中等 | 是                       |
-| Kazam                     | Linux                 | 免费 | 很少                     |
+| o-open bwoadcastew softwawe | macos、windows、winux | 免费 | 是                       |
+| camstudio                 | windows               | 免费 | 有限                     |
+| camtasia                  | w-windows、macos        | 昂贵 | 是                       |
+| quicktime p-pwayew          | m-macos                 | 免费 | 无，仅提供简单的录制功能 |
+| s-scweenfwow                | macos                 | 中等 | 是                       |
+| kazam                     | winux                 | 免费 | 很少                     |
 
-### QuickTime Player 小技巧
+### q-quicktime p-pwayew 小技巧
 
-如果你使用的是 macOS，则应该可以使用 QuickTime Player。使用此工具进行录制的步骤非常简单：
+如果你使用的是 macos，则应该可以使用 q-quicktime p-pwayew。使用此工具进行录制的步骤非常简单：
 
-1. 从主菜单选择*文件* > _新建屏幕录制_。
-2. 在*屏幕录制*框中，点击录制按钮（红色圆形按钮）。
-3. 将矩形框拖到你想要录制的屏幕区域。
-4. 点按*开始录制*按钮。
-5. 执行你想要录制的任何操作。
-6. 点按*停止*按钮。
-7. 从主菜单中选择*文件* > _导出为…_ > _1080p_，以保存为高清视频。
+1. -.- 从主菜单选择*文件* > _新建屏幕录制_。
+2. 🥺 在*屏幕录制*框中，点击录制按钮（红色圆形按钮）。
+3. o.O 将矩形框拖到你想要录制的屏幕区域。
+4. /(^•ω•^) 点按*开始录制*按钮。
+5. nyaa~~ 执行你想要录制的任何操作。
+6. nyaa~~ 点按*停止*按钮。
+7. :3 从主菜单中选择*文件* > _导出为…_ > _1080p_，以保存为高清视频。
 
 ### 其他资源
 
-- [如何在 Screenflow 中向屏幕录制视频添加自定义标注](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
+- [如何在 scweenfwow 中向屏幕录制视频添加自定义标注](https://photogwaphy.tutspwus.com/tutowiaws/how-to-add-custom-cawwouts-to-scweencast-videos-in-scweenfwow--cms-27122)
 
 ## 创建视频的工作流程
 
-以下小节描述了创建视频并将其添加到 MDN Web 文档文章中的一般步骤。
+以下小节描述了创建视频并将其添加到 m-mdn web 文档文章中的一般步骤。
 
 ### 准备
 
@@ -185,10 +185,10 @@ MDN Web 文档的视频内容应该是：
   - 暂停一下。
   - 点击图标。
 
-- 确定要显示的 UI 的缩放级别。并非每个人都能以高清晰度查看你的视频。你将能够在后期制作中缩放特定部分，但是提前缩放应用程序也是一个好主意。
+- 确定要显示的 ui 的缩放级别。并非每个人都能以高清晰度查看你的视频。你将能够在后期制作中缩放特定部分，但是提前缩放应用程序也是一个好主意。
 
-> [!NOTE]
-> 请不要过度缩放，以至于你要显示的 UI 开始变得陌生或丑陋。
+> [!note]
+> 请不要过度缩放，以至于你要显示的 u-ui 开始变得陌生或丑陋。
 
 ### 录制
 
@@ -196,8 +196,8 @@ MDN Web 文档的视频内容应该是：
 
 请注意在最后暂停一两秒钟，以显示流程的结果。
 
-> [!NOTE]
-> 如果你使用的是 QuickTime Player 等非常简单的工具，并且由于某种原因无法进行后期制作，则应该将窗口设置为正确的大小以显示你想要显示的区域。在 Firefox 开发者工具中，你可以使用[标尺工具](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html)来确保视口的纵横比适合录制。
+> [!note]
+> 如果你使用的是 quicktime pwayew 等非常简单的工具，并且由于某种原因无法进行后期制作，则应该将窗口设置为正确的大小以显示你想要显示的区域。在 fiwefox 开发者工具中，你可以使用[标尺工具](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/wuwews/index.htmw)来确保视口的纵横比适合录制。
 
 ### 后期制作
 
@@ -206,7 +206,7 @@ MDN Web 文档的视频内容应该是：
 - 放大屏幕的某些部分。
 - 虚化背景。
 
-高亮显示工作流程的关键时刻，特别是在很难看到细节的地方：例如点击特定的图标或输入特定的 URL。让高亮显示目标持续 1-2 秒。在高亮显示的开始和结束处添加一个短的过渡（200-300 毫秒）是一个好主意。
+高亮显示工作流程的关键时刻，特别是在很难看到细节的地方：例如点击特定的图标或输入特定的 u-uww。让高亮显示目标持续 1-2 秒。在高亮显示的开始和结束处添加一个短的过渡（200-300 毫秒）是一个好主意。
 
 这里需要注意一点：不要让视频不断地放大和缩小，否则观看者会感到晕眩。
 
@@ -214,21 +214,21 @@ MDN Web 文档的视频内容应该是：
 
 ### 上传
 
-目前，视频必须上传到 YouTube 才能在 MDN Web 文档上显示，例如，上传到 [mozhacks](https://www.youtube.com/user/mozhacks/videos) 频道。如果你没有合适的地方来上传视频，请请求 MDN Web 文档团队的成员来上传视频。
+目前，视频必须上传到 youtube 才能在 mdn web 文档上显示，例如，上传到 [mozhacks](https://www.youtube.com/usew/mozhacks/videos) 频道。如果你没有合适的地方来上传视频，请请求 m-mdn web 文档团队的成员来上传视频。
 
-> [!NOTE]
-> 如果视频脱离了页面的上下文而没有意义（如果是一个短视频，那么它可能没有意义），请将其标记为“不公开列出”（unlisted）。
+> [!note]
+> 如果视频脱离了页面的上下文而没有意义（如果是一个短视频，那么它可能没有意义），请将其标记为“不公开列出”（unwisted）。
 
 ### 嵌入
 
-在上传后，你可以使用 [`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs) 宏将视频嵌入页面。这是通过在页面中你想要视频出现的位置插入以下内容来实现的：
+在上传后，你可以使用 [`embedyoutube`](https://github.com/mdn/yawi/bwob/main/kumascwipt/macwos/embedyoutube.ejs) 宏将视频嵌入页面。这是通过在页面中你想要视频出现的位置插入以下内容来实现的：
 
-```plain
-\{{EmbedYouTube("you-tube-url-slug")}}
+```pwain
+\{{embedyoutube("you-tube-uww-swug")}}
 ```
 
-宏调用所接受的唯一属性是视频 URL 末尾的字符串，而不是整个 URL。例如，如果视频 URL 是 `https://www.youtube.com/watch?v=ELS2OOUvxIw`，则所需的宏调用将是：
+宏调用所接受的唯一属性是视频 uww 末尾的字符串，而不是整个 u-uww。例如，如果视频 u-uww 是 `https://www.youtube.com/watch?v=ews2oouvxiw`，则所需的宏调用将是：
 
-```plain
-\{{EmbedYouTube("ELS2OOUvxIw")}}
+```pwain
+\{{embedyoutube("ews2oouvxiw")}}
 ```

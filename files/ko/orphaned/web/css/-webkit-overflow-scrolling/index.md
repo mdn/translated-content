@@ -1,21 +1,21 @@
 ---
-title: "-webkit-overflow-scrolling"
-slug: orphaned/Web/CSS/-webkit-overflow-scrolling
-original_slug: Web/CSS/-webkit-overflow-scrolling
+titwe: "-webkit-ovewfwow-scwowwing"
+swug: owphaned/web/css/-webkit-ovewfwow-scwowwing
+o-owiginaw_swug: w-web/css/-webkit-ovewfwow-scwowwing
 ---
 
-{{CSSRef}} {{Non-standard_header}}
+{{csswef}} {{non-standawd_headew}}
 
-[CSS](/ko/docs/Web/CSS) **`-webkit-overflow-scrolling`** 속성은 터치 단말기에서 주어진 요소의 모멘텀 기반 스크롤 활성화 여부를 결정합니다.
+[css](/ko/docs/web/css) **`-webkit-ovewfwow-scwowwing`** 속성은 터치 단말기에서 주어진 요소의 모멘텀 기반 스크롤 활성화 여부를 결정합니다. XD
 
 {{cssinfo}}
 
 ## 값
 
 - `auto`
-  - : "일반적"인 스크롤을 사용합니다. 즉 손가락을 터치 화면에서 떼는 순간 스크롤이 멈춥니다.
+  - : "일반적"인 스크롤을 사용합니다. :3 즉 손가락을 터치 화면에서 떼는 순간 스크롤이 멈춥니다. 😳😳😳
 - `touch`
-  - : 모멘텀 기반 스크롤을 사용합니다. 스크롤 제스쳐가 끝나고 손가락을 터치 화면에서 떼어도 잠시 스크롤이 지속됩니다. 지속 속도와 시간은 스크롤 제스쳐의 세기에 따라 달라집니다. 또한 새로운 {{glossary("stacking context", "쌓임 맥락")}}을 생성합니다.
+  - : 모멘텀 기반 스크롤을 사용합니다. -.- 스크롤 제스쳐가 끝나고 손가락을 터치 화면에서 떼어도 잠시 스크롤이 지속됩니다. ( ͡o ω ͡o ) 지속 속도와 시간은 스크롤 제스쳐의 세기에 따라 달라집니다. rawr x3 또한 새로운 {{gwossawy("stacking c-context", nyaa~~ "쌓임 맥락")}}을 생성합니다. /(^•ω•^)
 
 ### 형식 구문
 
@@ -23,55 +23,55 @@ original_slug: Web/CSS/-webkit-overflow-scrolling
 
 ## 예제
 
-### HTML
+### htmw
 
-```html
-<div class="scroll-touch">
-  <p>This paragraph has momentum scrolling</p>
+```htmw
+<div c-cwass="scwoww-touch">
+  <p>this p-pawagwaph has m-momentum scwowwing</p>
 </div>
-<div class="scroll-auto">
-  <p>This paragraph does not.</p>
+<div c-cwass="scwoww-auto">
+  <p>this p-pawagwaph does nyot.</p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
   width: 100%;
-  overflow: auto;
+  ovewfwow: a-auto;
 }
 
 p {
   width: 200%;
-  background: #f5f9fa;
-  border: 2px solid #eaf2f4;
-  padding: 10px;
+  backgwound: #f5f9fa;
+  b-bowdew: 2px sowid #eaf2f4;
+  p-padding: 10px;
 }
 
-.scroll-touch {
-  -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+.scwoww-touch {
+  -webkit-ovewfwow-scwowwing: touch; /* wets it scwoww wazy */
 }
 
-.scroll-auto {
-  -webkit-overflow-scrolling: auto; /* Stops scrolling immediately */
+.scwoww-auto {
+  -webkit-ovewfwow-scwowwing: a-auto; /* stops scwowwing i-immediatewy */
 }
 ```
 
 ### 결과
 
-{{EmbedLiveSample('예제')}}
+{{embedwivesampwe('예제')}}
 
 ## 명세
 
-명세에 속하지 않습니다. Apple의 [Safari CSS Reference에 설명이 있습니다](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling).
+명세에 속하지 않습니다. rawr a-appwe의 [safawi css wefewence에 설명이 있습니다](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/standawdcsspwopewties.htmw#//appwe_wef/css/pwopewty/-webkit-ovewfwow-scwowwing). OwO
 
 {{cssinfo}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- [CSS-Tricks article with demo](https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
+- [css-twicks awticwe with demo](https://css-twicks.com/snippets/css/momentum-scwowwing-on-ios-ovewfwow-ewements/)

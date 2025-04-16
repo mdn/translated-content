@@ -1,14 +1,14 @@
 ---
-title: CSS 对象模型（CSSOM）
-slug: Glossary/CSSOM
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: css 对象模型（cssom）
+swug: gwossawy/cssom
+w-w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-[**CSS 对象模型（CSSOM）**](/zh-CN/docs/Web/API/CSS_Object_Model)是一系列用于读取和修改文档样式相关的（CSS）信息的 API。换句话说，[DOM](/zh-CN/docs/Web/API/Document_Object_Model) 使得 JavaScript 可以读取和修改文档的结构和内容，CSSOM 则使得 JavaScript 可以读取和修改文档样式。
+[**css 对象模型（cssom）**](/zh-cn/docs/web/api/css_object_modew)是一系列用于读取和修改文档样式相关的（css）信息的 a-api。换句话说，[dom](/zh-cn/docs/web/api/document_object_modew) 使得 j-javascwipt 可以读取和修改文档的结构和内容，cssom 则使得 j-javascwipt 可以读取和修改文档样式。
 
 ## 参见
 
-- [渲染页面：浏览器的工作原理](/zh-CN/docs/Web/Performance/Guides/How_browsers_work)
+- [渲染页面：浏览器的工作原理](/zh-cn/docs/web/pewfowmance/guides/how_bwowsews_wowk)

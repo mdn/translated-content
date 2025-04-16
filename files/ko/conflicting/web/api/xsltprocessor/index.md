@@ -1,13 +1,13 @@
 ---
-title: The XSLT/JavaScript Interface in Gecko
-slug: conflicting/Web/API/XSLTProcessor
-original_slug: Web/XSLT/XSLT_JS_interface_in_Gecko
+titwe: the xswt/javascwipt intewface i-in gecko
+s-swug: confwicting/web/api/xswtpwocessow
+o-owiginaw_swug: w-web/xswt/xswt_js_intewface_in_gecko
 ---
 
-1. [개요](/ko/The_XSLT%2f%2fJavaScript_Interface_in_Gecko/Introduction)
-2. [The XSLT/JavaScript Interface in Gecko:JavaScript/XSLT Bindings](/ko/The_XSLT%2f%2fJavaScript_Interface_in_Gecko/JavaScript%2f%2fXSLT_Bindings)
-3. [The XSLT/JavaScript Interface in Gecko:Basic Example](/ko/The_XSLT%2f%2fJavaScript_Interface_in_Gecko/Basic_Example)
-4. [The XSLT/JavaScript Interface in Gecko:Setting Parameters](/ko/The_XSLT%2f%2fJavaScript_Interface_in_Gecko/Setting_Parameters)
-5. [The XSLT/JavaScript Interface in Gecko:Advanced Example](/ko/The_XSLT%2f%2fJavaScript_Interface_in_Gecko/Advanced_Example)
-6. [The XSLT/JavaScript Interface in Gecko:Interface List](/ko/The_XSLT%2f%2fJavaScript_Interface_in_Gecko/Interface_List)
-7. [The XSLT/JavaScript Interface in Gecko:Resources](/ko/The_XSLT%2f%2fJavaScript_Interface_in_Gecko/Resources)
+1. ^^;; [개요](/ko/the_xswt%2f%2fjavascwipt_intewface_in_gecko/intwoduction)
+2. >_< [the x-xswt/javascwipt i-intewface in g-gecko:javascwipt/xswt b-bindings](/ko/the_xswt%2f%2fjavascwipt_intewface_in_gecko/javascwipt%2f%2fxswt_bindings)
+3. mya [the xswt/javascwipt intewface in gecko:basic exampwe](/ko/the_xswt%2f%2fjavascwipt_intewface_in_gecko/basic_exampwe)
+4. mya [the x-xswt/javascwipt intewface in gecko:setting pawametews](/ko/the_xswt%2f%2fjavascwipt_intewface_in_gecko/setting_pawametews)
+5. [the x-xswt/javascwipt intewface in g-gecko:advanced exampwe](/ko/the_xswt%2f%2fjavascwipt_intewface_in_gecko/advanced_exampwe)
+6. 😳 [the xswt/javascwipt intewface in gecko:intewface wist](/ko/the_xswt%2f%2fjavascwipt_intewface_in_gecko/intewface_wist)
+7. XD [the xswt/javascwipt i-intewface in gecko:wesouwces](/ko/the_xswt%2f%2fjavascwipt_intewface_in_gecko/wesouwces)

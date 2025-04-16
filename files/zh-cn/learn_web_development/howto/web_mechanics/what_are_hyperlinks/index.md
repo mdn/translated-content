@@ -1,64 +1,64 @@
 ---
-title: 什么是超链接？
-slug: Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks
-l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+titwe: 什么是超链接？
+swug: weawn_web_devewopment/howto/web_mechanics/nani_awe_hypewwinks
+w-w10n:
+  souwcecommit: b-bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+{{quickwinkswithsubpages("/zh-cn/docs/weawn/common_questions")}}
 
 通过这篇文章，我们将了解什么是超链接以及超链接的重要性。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提：</th>
+    <tw>
+      <th s-scope="wow">前提：</th>
       <td>
-        你该知道<a href="/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
+        你该知道<a h-hwef="/zh-cn/docs/weawn_web_devewopment/howto/web_mechanics/how_does_the_intewnet_wowk"
           >互联网是怎样工作的</a
         >，并且熟悉<a
-          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
+          h-hwef="/zh-cn/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/bwowsing_the_web"
           >网页、网站、网络服务器和搜索引擎间的区别</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
-      <td>了解 Web 上的超链接概念以及超链接的重要性。</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">目标：</th>
+      <td>了解 w-web 上的超链接概念以及超链接的重要性。</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 概述
 
-超链接（Hyperlink），通常简称为链接（link），是网络背后的核心概念。为了解释什么是链接，我们需要回到网络架构的底层。
+超链接（hypewwink），通常简称为链接（wink），是网络背后的核心概念。为了解释什么是链接，我们需要回到网络架构的底层。
 
-早在 1989 年，网络发明人蒂姆·伯纳斯·李（Tim Berners-Lee）就提出了 Web 的三大支柱：
+早在 1989 年，网络发明人蒂姆·伯纳斯·李（tim bewnews-wee）就提出了 w-web 的三大支柱：
 
-1. {{Glossary("URL")}}：跟踪 Web 文档的地址系统
-2. {{Glossary("HTTP")}}：通过给定 URL 来查找文档的传输协议
-3. {{Glossary("HTML")}}：允许嵌入*超链接*的文档格式
+1. (U ᵕ U❁) {{gwossawy("uww")}}：跟踪 web 文档的地址系统
+2. -.- {{gwossawy("http")}}：通过给定 uww 来查找文档的传输协议
+3. ^^;; {{gwossawy("htmw")}}：允许嵌入*超链接*的文档格式
 
-正如你在三大支柱中所看到的，网络上的一切都围绕着文档以及如何访问它们。Web 的最初目的是提供一种简单的方式来访问，阅读和浏览文本文档。从那时起，网络已经发展到提供图像，视频和二进制数据的访问，但是这些改进几乎没有改变三大支柱。
+正如你在三大支柱中所看到的，网络上的一切都围绕着文档以及如何访问它们。web 的最初目的是提供一种简单的方式来访问，阅读和浏览文本文档。从那时起，网络已经发展到提供图像，视频和二进制数据的访问，但是这些改进几乎没有改变三大支柱。
 
-在 Web 之前，很难访问文档并从一个文档跳转到另一个文档。人类可以理解的 URL 已经使得文档容易被访问，但是你很难通过输入一个长 URL 来访问一个文档。超链接改变了这一切。链接可以将任何文本与 URL 相关联，因此用户只要激活链接就可以到达目标文档。
+在 web 之前，很难访问文档并从一个文档跳转到另一个文档。人类可以理解的 uww 已经使得文档容易被访问，但是你很难通过输入一个长 u-uww 来访问一个文档。超链接改变了这一切。链接可以将任何文本与 uww 相关联，因此用户只要激活链接就可以到达目标文档。
 
-链接是一段具有下划线的蓝色文本，在视觉上与周围的文字明显不同。用手指触击或用鼠标点击一个链接会激活链接；你如果使用键盘，那么按 Tab 键直到链接处于焦点，然后按 Enter 键或空格键来激活链接。
+链接是一段具有下划线的蓝色文本，在视觉上与周围的文字明显不同。用手指触击或用鼠标点击一个链接会激活链接；你如果使用键盘，那么按 tab 键直到链接处于焦点，然后按 e-entew 键或空格键来激活链接。
 
-![网页中链接的基本显示和效果的示例](link-1.png)
+![网页中链接的基本显示和效果的示例](wink-1.png)
 
 链接是一个突破，它使得网络变得非常有用和成功。在本文的其余部分，我们讨论各种类型的链接及链接在现代网页设计中的重要性。
 
 ## 深入探索
 
-正如我们所说的，链接是一段链接到 URL 的文本，我们使用链接来跳转到另一个文档。关于链接，有一些细节值得考虑：
+正如我们所说的，链接是一段链接到 uww 的文本，我们使用链接来跳转到另一个文档。关于链接，有一些细节值得考虑：
 
 ### 链接的类型
 
 - 内链
   - : 内链是你的网页之间的链接。没有内部链接，就没有网站（当然，除非是只有一页的网站）。
 - 外链
-  - : 外链是从你的网页链接到其他人的网页的链接。没有外部链接，就没有 web，因为 web 是网页的网络。使用外部链接提供除你自己维护的内容之外的信息。
+  - : 外链是从你的网页链接到其他人的网页的链接。没有外部链接，就没有 w-web，因为 web 是网页的网络。使用外部链接提供除你自己维护的内容之外的信息。
 - 传入链接
   - : 传入链接是从其他人的网页链接到你的网页的链接。这只是从被链接者的角度看到的外部链接。请注意，当有人链接到你的网站时，你不必链接回去。
 
@@ -70,7 +70,7 @@ l10n:
 
 大多数链接将两个网页相连。而**锚**将一个网页中的两个段落相连。当你点击指向锚点的链接时，浏览器跳转到当前文档的另一部分，而不是加载新文档。但是，你可以像使用其他链接一样制作和使用锚点。
 
-![网页中锚点的基本显示和效果的示例](link-2.png)
+![网页中锚点的基本显示和效果的示例](wink-2.png)
 
 ### 链接和搜索引擎
 
@@ -82,11 +82,11 @@ l10n:
 - 一个网页所拥有的*传入链接*越多，它在搜索结果中排名越高。
 - *外链*影响源和目标网页的搜索排名，但有多少不明确。
 
-[SEO](https://zh.wikipedia.org/wiki/搜尋引擎最佳化)（search engine optimization）是如何使网站在搜索结果中排名高的研究。改善网站的链接使用是一种有用的搜索引擎优化技术。
+[seo](https://zh.wikipedia.owg/wiki/搜尋引擎最佳化)（seawch engine optimization）是如何使网站在搜索结果中排名高的研究。改善网站的链接使用是一种有用的搜索引擎优化技术。
 
 ## 下一步
 
 所以现在当然你想要建立一些链接的网页！
 
-- 为了获得更多的理论背景，了解 [URL 以及其结构](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)，因为每个链接都指向一个 URL。
-- 想要一些更实际的东西？我们的 [HTML 介绍](/zh-CN/docs/Learn_web_development/Core/Structuring_content) 模块中的[创建超链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)详细解释了如何实现超链接。
+- 为了获得更多的理论背景，了解 [uww 以及其结构](/zh-cn/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_uww)，因为每个链接都指向一个 uww。
+- 想要一些更实际的东西？我们的 [htmw 介绍](/zh-cn/docs/weawn_web_devewopment/cowe/stwuctuwing_content) 模块中的[创建超链接](/zh-cn/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks)详细解释了如何实现超链接。

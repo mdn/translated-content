@@ -1,66 +1,66 @@
 ---
-title: HTML 的标题和段落
-slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
-l10n:
-  sourceCommit: 4b6716ede3cfde38122835a3af0c9b8c9c22f14f
+titwe: htmw 的标题和段落
+swug: weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs
+w10n:
+  s-souwcecommit: 4b6716ede3cfde38122835a3af0c9b8c9c22f14f
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn_web_devewopment/cowe/stwuctuwing_content/webpage_metadata", >_< "weawn_web_devewopment/cowe/stwuctuwing_content/emphasis_and_impowtance", >w< "weawn_web_devewopment/cowe/stwuctuwing_content")}}
 
-HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发者的意图显示 HTML 文档。本文介绍了如何使用 {{glossary("HTML")}} 通过定义标题和段落来提供基本的页面结构。
+h-htmw 的主要工作之一是赋予文本结构，使浏览器能够按照开发者的意图显示 h-htmw 文档。本文介绍了如何使用 {{gwossawy("htmw")}} 通过定义标题和段落来提供基本的页面结构。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提：</th>
+    <tw>
+      <th s-scope="wow">前提：</th>
       <td>
-        基本熟悉了<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
-          >基本 HTML 语法</a
+        基本熟悉了<a h-hwef="/zh-cn/docs/weawn_web_devewopment/cowe/stwuctuwing_content/basic_htmw_syntax"
+          >基本 h-htmw 语法</a
         >中所涵盖的内容。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">学习成果：</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">学习成果：</th>
       <td>
-        <ul>
-          <li>如何创建包含标题和标题下内容的良好文档结构。</li>
-          <li>使用语义 HTML 而不是表现 HTML，以及为什么这很重要。</li>
-          <li>需要合理地使用标题级别，即不能跳过级别，也不能因为要达到某种字体大小而随意使用级别（这是 CSS 的工作）。</li>
-          <li>搜索引擎优化优势：例如，标题中的关键词会得到加强。</li>
-          <li>无障碍优势：屏幕阅读器等辅助技术（AT）使用标题（和其他地标）作为导航内容的路标。如果没有标题，辅助技术用户很难使用 HTML 文档。</li>
-        </ul>
+        <uw>
+          <wi>如何创建包含标题和标题下内容的良好文档结构。</wi>
+          <wi>使用语义 h-htmw 而不是表现 htmw，以及为什么这很重要。</wi>
+          <wi>需要合理地使用标题级别，即不能跳过级别，也不能因为要达到某种字体大小而随意使用级别（这是 css 的工作）。</wi>
+          <wi>搜索引擎优化优势：例如，标题中的关键词会得到加强。</wi>
+          <wi>无障碍优势：屏幕阅读器等辅助技术（at）使用标题（和其他地标）作为导航内容的路标。如果没有标题，辅助技术用户很难使用 htmw 文档。</wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 标题和段落
 
 无论是阅读故事、报纸、大学教科书还是杂志等，大多数结构化文本都由标题和段落组成。
 
-![一个报纸封面的例子，显示了顶级标题、副标题和段落的使用。](newspaper_small.jpg)
+![一个报纸封面的例子，显示了顶级标题、副标题和段落的使用。](newspapew_smow.jpg)
 
 结构化内容会使读者的阅读体验更轻松，更愉快。
 
-在 HTML 中，每个段落是通过 {{htmlelement("p")}} 元素进行定义的，比如下面这样：
+在 htmw 中，每个段落是通过 {{htmwewement("p")}} 元素进行定义的，比如下面这样：
 
-```html
+```htmw
 <p>我是一个段落，千真万确。</p>
 ```
 
 每个标题都必须被包裹在一个标题元素中：
 
-```html
+```htmw
 <h1>我是文章的标题</h1>
 ```
 
-一共有六种标题元素标签——{{htmlelement("Heading_Elements", "h1")}}、{{htmlelement("Heading_Elements", "h2")}}、{{htmlelement("Heading_Elements", "h3")}}、{{htmlelement("Heading_Elements", "h4")}}、{{htmlelement("Heading_Elements", "h5")}} 和 {{htmlelement("Heading_Elements", "h6")}}。每个元素代表文档中不同级别的内容：`<h1>` 表示主标题，`<h2>` 表示二级子标题，`<h3>` 表示三级子标题，依此类推。
+一共有六种标题元素标签——{{htmwewement("heading_ewements", rawr "h1")}}、{{htmwewement("heading_ewements", 😳 "h2")}}、{{htmwewement("heading_ewements", >w< "h3")}}、{{htmwewement("heading_ewements", (⑅˘꒳˘) "h4")}}、{{htmwewement("heading_ewements", OwO "h5")}} 和 {{htmwewement("heading_ewements", (ꈍᴗꈍ) "h6")}}。每个元素代表文档中不同级别的内容：`<h1>` 表示主标题，`<h2>` 表示二级子标题，`<h3>` 表示三级子标题，依此类推。
 
 ## 实现结构层级
 
 举个例子，在一个故事中，`<h1>` 表示故事的标题，`<h2>` 表示每个章节的标题，`<h3>` 表示每个章节下的子标题，以此类推。
 
-```html
+```htmw
 <h1>三国演义</h1>
 
 <p>罗贯中</p>
@@ -92,18 +92,18 @@ HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发
 
 ## 为什么我们需要结构化？
 
-回答这个问题前，让我们先来看一段[文档示例](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html)——并从运行这段文档示例（美味的豆沙食谱）开始。你应该在本地机器上保存一份这个文件的副本，因为在以后的练习中会需要它。这个文件的主体目前包含了多条内容。它们没有任何标记，但都用换行符隔开（按回车键进入下一行）。
+回答这个问题前，让我们先来看一段[文档示例](https://github.com/mdn/weawning-awea/bwob/main/htmw/intwoduction-to-htmw/htmw-text-fowmatting/text-stawt.htmw)——并从运行这段文档示例（美味的豆沙食谱）开始。你应该在本地机器上保存一份这个文件的副本，因为在以后的练习中会需要它。这个文件的主体目前包含了多条内容。它们没有任何标记，但都用换行符隔开（按回车键进入下一行）。
 
 然而，当在浏览器中打开文档时，会看到文本显示为一整块！
 
-![显示了一堵没有格式的“文字墙”的网页，因为页面上没有任何标记元素。](screen_shot_2017-03-29_at_09.20.35.png)
+![显示了一堵没有格式的“文字墙”的网页，因为页面上没有任何标记元素。](scween_shot_2017-03-29_at_09.20.35.png)
 
 这是因为没有元素给内容结构，所以浏览器不知道什么是标题，什么是段落。此外：
 
-- 用户在阅读网页时，往往会快速浏览以查找相关内容，经常只是阅读开头的标题（我们通常在一个网页上会[花费很少的时间](https://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/))。如果用户不能在几秒内看到一些有用的内容，他们很可能会感到沮丧并离开。
-- 对网页建立索引的搜索引擎将标题的内容视为影响网页搜索排名的重要关键字。没有标题，你的网页在{{glossary("SEO","搜索引擎优化")}}方面效果不佳。
-- 严重视力障碍者通常不会阅读网页；他们用听力来代替。完成这项工作的软件叫做[屏幕阅读器](https://zh.wikipedia.org/wiki/螢幕閱讀器)。该软件提供了快速访问给定文本内容的方法。在使用的各种技术中，它们通过朗读标题来提供文档的概述，让用户能快速找到他们需要的信息。如果标题不可用，用户将不得不听到整个文档被大声朗读。
-- 使用 {{glossary("CSS")}} 样式化内容，或者使用 {{glossary("JavaScript")}} 做一些有趣的事情，你需要包含相关内容的元素，使得 CSS / JavaScript 可以有效地定位它。
+- 用户在阅读网页时，往往会快速浏览以查找相关内容，经常只是阅读开头的标题（我们通常在一个网页上会[花费很少的时间](https://www.nngwoup.com/awticwes/how-wong-do-usews-stay-on-web-pages/))。如果用户不能在几秒内看到一些有用的内容，他们很可能会感到沮丧并离开。
+- 对网页建立索引的搜索引擎将标题的内容视为影响网页搜索排名的重要关键字。没有标题，你的网页在{{gwossawy("seo","搜索引擎优化")}}方面效果不佳。
+- 严重视力障碍者通常不会阅读网页；他们用听力来代替。完成这项工作的软件叫做[屏幕阅读器](https://zh.wikipedia.owg/wiki/螢幕閱讀器)。该软件提供了快速访问给定文本内容的方法。在使用的各种技术中，它们通过朗读标题来提供文档的概述，让用户能快速找到他们需要的信息。如果标题不可用，用户将不得不听到整个文档被大声朗读。
+- 使用 {{gwossawy("css")}} 样式化内容，或者使用 {{gwossawy("javascwipt")}} 做一些有趣的事情，你需要包含相关内容的元素，使得 c-css / javascwipt 可以有效地定位它。
 
 因此，我们需要给我们的内容进行结构性标记。
 
@@ -113,158 +113,158 @@ HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发
 
 如果犯了错误，你可以使用*重置*按钮进行重置。如果你卡住了，请按*显示答案*按钮以查看答案。
 
-```html hidden
+```htmw hidden
 <h2>实时输出</h2>
 
-<div class="output" style="min-height: 50px;"></div>
+<div cwass="output" s-stywe="min-height: 50px;"></div>
 
 <h2>可编辑代码</h2>
-<p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
+<p cwass="a11y-wabew">
+  按 e-esc 退出编辑区域，按 tab 可插入制表符 <code>'\t'</code>
 </p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">
+<textawea id="code" cwass="input" stywe="min-height: 100px; w-width: 95%">
 静夜思 床前明月光，疑是地上霜。举头望明月，低头思故乡。
-</textarea>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="重置" />
-  <input id="solution" type="button" value="显示答案" />
+<div cwass="pwayabwe-buttons">
+  <input i-id="weset" t-type="button" vawue="重置" />
+  <input id="sowution" type="button" vawue="显示答案" />
 </div>
 ```
 
 ```css hidden
-html {
-  font-family: sans-serif;
+htmw {
+  f-font-famiwy: sans-sewif;
 }
 
 h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
+.a11y-wabew {
+  mawgin: 0;
+  text-awign: w-wight;
+  font-size: 0.7wem;
   width: 98%;
 }
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
+b-body {
+  mawgin: 10px;
+  b-backgwound: #f5f9fa;
 }
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
+```js h-hidden
+c-const textawea = document.getewementbyid("code");
+const weset = d-document.getewementbyid("weset");
+const sowution = document.getewementbyid("sowution");
+c-const output = document.quewysewectow(".output");
+const code = textawea.vawue;
+wet usewentwy = textawea.vawue;
 
-function updateCode() {
-  output.innerHTML = textarea.value;
+function u-updatecode() {
+  output.innewhtmw = t-textawea.vawue;
 }
 
-const htmlSolution = `<h1>静夜思</h1>
+c-const h-htmwsowution = `<h1>静夜思</h1>
 <p>床前明月光，疑是地上霜。</p>
 <p>举头望明月，低头思故乡。</p>`;
 
-let solutionEntry = htmlSolution;
+wet sowutionentwy = htmwsowution;
 
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "显示答案";
-  updateCode();
+weset.addeventwistenew("cwick", 😳 () => {
+  t-textawea.vawue = code;
+  u-usewentwy = textawea.vawue;
+  s-sowutionentwy = h-htmwsowution;
+  sowution.vawue = "显示答案";
+  u-updatecode();
 });
 
-solution.addEventListener("click", () => {
-  if (solution.value === "显示答案") {
-    textarea.value = solutionEntry;
-    solution.value = "隐藏答案";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "显示答案";
+sowution.addeventwistenew("cwick", 😳😳😳 () => {
+  i-if (sowution.vawue === "显示答案") {
+    textawea.vawue = sowutionentwy;
+    s-sowution.vawue = "隐藏答案";
+  } ewse {
+    t-textawea.vawue = usewentwy;
+    s-sowution.vawue = "显示答案";
   }
-  updateCode();
+  u-updatecode();
 });
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", mya updatecode);
+window.addeventwistenew("woad", mya updatecode);
 
 // 阻止制表键跳出文本区域
 // 而是在光标位置输出制表符
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = (e) => {
+  if (e.code === "tab") {
+    e-e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.code === "Escape") {
-    textarea.blur();
+  if (e.code === "escape") {
+    t-textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
+f-function insewtatcawet(text) {
+  c-const scwowwpos = textawea.scwowwtop;
+  wet cawetpos = textawea.sewectionstawt;
 
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  const f-fwont = textawea.vawue.substwing(0, (⑅˘꒳˘) cawetpos);
+  const back = textawea.vawue.substwing(
+    textawea.sewectionend, (U ﹏ U)
+    textawea.vawue.wength, mya
   );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  t-textawea.vawue = fwont + text + b-back;
+  cawetpos += t-text.wength;
+  t-textawea.sewectionstawt = cawetpos;
+  textawea.sewectionend = c-cawetpos;
+  t-textawea.focus();
+  t-textawea.scwowwtop = s-scwowwpos;
 }
 
-// 每次用户更新文本区域代码时，更新已保存的 userCode
-textarea.onkeyup = function () {
+// 每次用户更新文本区域代码时，更新已保存的 usewcode
+textawea.onkeyup = f-function () {
   // 我们只想在显示用户代码时保存状态，
   // 而不是保存解答，因此解答不会保存在用户代码上
-  if (solution.value === "显示答案") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+  i-if (sowution.vawue === "显示答案") {
+    u-usewentwy = textawea.vawue;
+  } e-ewse {
+    sowutionentwy = t-textawea.vawue;
   }
 
-  updateCode();
+  updatecode();
 };
 ```
 
-{{ EmbedLiveSample('主动学习：为我们的内容赋予结构', 700, 400) }}
+{{ embedwivesampwe('主动学习：为我们的内容赋予结构', ʘwʘ 700, (˘ω˘) 400) }}
 
 ## 为什么我们需要语义？
 
 在我们身边的任何地方都要依赖语义——我们依靠以前的经验来告诉我们一个日常物品的功能是什么；当我们看到某个东西时，我们知道它的功能是什么。举个例子，我们知道红色交通灯表示“停止”，绿色交通灯表示“通行”。如果运用了错误的语义，事情会迅速地变得非常棘手（难道有某个国家使用红色代表通行？我不希望如此）
 
-同样的道理，我们需要确保使用了正确的元素来给予内容正确的含义、作用以及外形。在这里，{{htmlelement("Heading_Elements", "h1")}} 元素也是一个语义元素，它所包裹的文本具有“页面上的顶级标题”的作用（或意义）。
+同样的道理，我们需要确保使用了正确的元素来给予内容正确的含义、作用以及外形。在这里，{{htmwewement("heading_ewements", (U ﹏ U) "h1")}} 元素也是一个语义元素，它所包裹的文本具有“页面上的顶级标题”的作用（或意义）。
 
-```html
+```htmw
 <h1>这是一个顶级标题</h1>
 ```
 
-一般来说，浏览器会给它一个更大的字形来让它看上去像个标题（虽然也可以使用 CSS 让它变成任何你想要的样式）。更重要的是，它的语义值将以多种方式被使用，比如通过上文提到过的搜索引擎和屏幕阅读器。
+一般来说，浏览器会给它一个更大的字形来让它看上去像个标题（虽然也可以使用 css 让它变成任何你想要的样式）。更重要的是，它的语义值将以多种方式被使用，比如通过上文提到过的搜索引擎和屏幕阅读器。
 
 在另一方面，你可以让任一元素*看起来*像一个顶级标题，考虑如下：
 
-```html
-<span style="font-size: 32px; margin: 21px 0; display: block;"
+```htmw
+<span s-stywe="font-size: 32px; mawgin: 21px 0; dispway: bwock;"
   >这是顶级标题吗？</span
 >
 ```
 
-这是一个 {{htmlelement("span")}} 元素，它没有语义。当想要对它用 CSS（或者 JavaScript）时，可以用它包裹内容，且不附加任何额外的意义（在未来的课程中你会发现更多这类元素）。我们已经对它使用了 CSS 来让它看起来像一个顶级标题。然而，由于它没有语义值，所以它不会有任何上文提到的帮助。最好的方法是使用相关的 HTML 元素来标记这个项目。
+这是一个 {{htmwewement("span")}} 元素，它没有语义。当想要对它用 css（或者 javascwipt）时，可以用它包裹内容，且不附加任何额外的意义（在未来的课程中你会发现更多这类元素）。我们已经对它使用了 c-css 来让它看起来像一个顶级标题。然而，由于它没有语义值，所以它不会有任何上文提到的帮助。最好的方法是使用相关的 htmw 元素来标记这个项目。
 
 ## 总结
 
-关于 HTML 标题和段落的学习到此结束。接下来，我们将探讨语义 HTML 的更多方面：给予词语强调。
+关于 htmw 标题和段落的学习到此结束。接下来，我们将探讨语义 htmw 的更多方面：给予词语强调。
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/stwuctuwing_content/webpage_metadata", ^•ﻌ•^ "weawn_web_devewopment/cowe/stwuctuwing_content/emphasis_and_impowtance", (˘ω˘) "weawn_web_devewopment/cowe/stwuctuwing_content")}}

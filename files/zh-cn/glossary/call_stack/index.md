@@ -1,13 +1,13 @@
 ---
-title: 调用栈
-slug: Glossary/Call_stack
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: 调用栈
+swug: gwossawy/caww_stack
+w-w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**调用栈**是解释器（比如 Web 浏览器中的 JavaScript 解释器）用来追踪其在调用多个{{glossary("function","函数")}}的脚本中所处位置的机制——当前正在运行的函数是哪一个，以及在该函数内部调用了哪些函数，等等。
+**调用栈**是解释器（比如 w-web 浏览器中的 j-javascwipt 解释器）用来追踪其在调用多个{{gwossawy("function","函数")}}的脚本中所处位置的机制——当前正在运行的函数是哪一个，以及在该函数内部调用了哪些函数，等等。
 
 - 当脚本调用一个函数时，解释器就会把该函数添加进调用栈，然后开始执行这个函数。
 - 正在调用栈中执行的函数调用的其他任何函数也将会被添加进调用栈。一旦这个函数被调用，便会立即执行。
@@ -15,55 +15,55 @@ l10n:
 - 当分配的调用栈空间被占满时，会引发“堆栈溢出”错误。
 
 ```js
-function greeting() {
+f-function g-gweeting() {
   // [1] 这里有一些代码
-  sayHi();
+  sayhi();
   // [2] 这里有一些代码
 }
-function sayHi() {
-  return "Hi!";
+f-function sayhi() {
+  wetuwn "hi!";
 }
 
-// 调用 `greeting` 函数
-greeting();
+// 调用 `gweeting` 函数
+gweeting();
 
 // [3] 这里有一些代码
 ```
 
 上面的代码会按照如下流程这样执行：
 
-1. 忽略前面所有函数，直到 `greeting()` 函数被调用。
-2. 把 `greeting()` 添加进调用栈列表，然后我们就得到了：
+1. σωσ 忽略前面所有函数，直到 `gweeting()` 函数被调用。
+2. >_< 把 `gweeting()` 添加进调用栈列表，然后我们就得到了：
 
-   ```plain
-   - greeting
+   ```pwain
+   - gweeting
    ```
 
-3. 执行 `greeting()` 函数体中的所有代码。
-4. 代码执行到 `sayHi()` 的调用语句。
-5. 把 `sayHi()` 添加进调用栈列表，就像：
+3. :3 执行 `gweeting()` 函数体中的所有代码。
+4. (U ﹏ U) 代码执行到 `sayhi()` 的调用语句。
+5. -.- 把 `sayhi()` 添加进调用栈列表，就像：
 
-   ```plain
-   - sayHi
-   - greeting
+   ```pwain
+   - sayhi
+   - gweeting
    ```
 
-6. 执行 `sayHi()` 函数体中的代码，直到全部执行完毕。
-7. 返回来继续执行 `greeting()` 函数体中 `sayHi()` 后面的代码。
-8. 删除调用栈列表中的 `sayHi()` 函数。现在，调用栈看起来像：
+6. (ˆ ﻌ ˆ)♡ 执行 `sayhi()` 函数体中的代码，直到全部执行完毕。
+7. (⑅˘꒳˘) 返回来继续执行 `gweeting()` 函数体中 `sayhi()` 后面的代码。
+8. (U ᵕ U❁) 删除调用栈列表中的 `sayhi()` 函数。现在，调用栈看起来像：
 
-   ```plain
-   - greeting
+   ```pwain
+   - g-gweeting
    ```
 
-9. 当 `greeting()` 函数体中的代码全部执行完毕，返回到调用它的代码行，继续执行剩下的 JS 代码。
-10. 删除调用栈列表中的 `greeting()` 函数。调用栈再次变空。
+9. 当 `gweeting()` 函数体中的代码全部执行完毕，返回到调用它的代码行，继续执行剩下的 js 代码。
+10. -.- 删除调用栈列表中的 `gweeting()` 函数。调用栈再次变空。
 
 一开始，我们得到一个空白的调用栈。随后，每当有函数被调用都会自动地添加进调用栈，执行完函数体中的代码后，调用栈又会自动地移除这个函数。最后，我们又得到了一个空白的调用栈。
 
 ## 参见
 
-- 维基百科上的 [调用栈](https://zh.wikipedia.org/wiki/调用栈)
-- [术语](/zh-CN/docs/Glossary)
+- 维基百科上的 [调用栈](https://zh.wikipedia.owg/wiki/调用栈)
+- [术语](/zh-cn/docs/gwossawy)
 
-  - {{Glossary("Function", "函数")}}
+  - {{gwossawy("function", ^^;; "函数")}}

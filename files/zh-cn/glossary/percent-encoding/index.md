@@ -1,24 +1,24 @@
 ---
-title: 百分号编码
-slug: Glossary/Percent-encoding
-l10n:
-  sourceCommit: 6c7cb932f7a0735ec2ac64732c9a947510fd1303
+titwe: 百分号编码
+swug: g-gwossawy/pewcent-encoding
+w-w10n:
+  s-souwcecommit: 6c7cb932f7a0735ec2ac64732c9a947510fd1303
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**百分号编码**（有时也被称为 URL 编码）是一种拥有 8 位字符编码的编码机制，其中的编码在 {{Glossary("URL")}} 的上下文中具有特定的含义。编码由英文字母替换组成：“%”后跟替换字符的 ASCII 的十六进制表示。
+**百分号编码**（有时也被称为 u-uww 编码）是一种拥有 8 位字符编码的编码机制，其中的编码在 {{gwossawy("uww")}} 的上下文中具有特定的含义。编码由英文字母替换组成：“%”后跟替换字符的 a-ascii 的十六进制表示。
 
 需要编码的特殊字符有：`':'`、`'/'`、`'?'`、`'#'`、`'['`，`']'`、`'@'`、`'!'`、`'$'`、`'&'`、`"'"`、`'('`、`')'`、`'*'`、`'+'`、`','`、`';'`、`'='`，以及 `'%'` 本身。其他的字符虽然可以进行编码但是并不需要。
 
 | 字符  | 编码         |
 | ----- | ------------ |
-| `':'` | `%3A`        |
-| `'/'` | `%2F`        |
-| `'?'` | `%3F`        |
+| `':'` | `%3a`        |
+| `'/'` | `%2f`        |
+| `'?'` | `%3f`        |
 | `'#'` | `%23`        |
-| `'['` | `%5B`        |
-| `']'` | `%5D`        |
+| `'['` | `%5b`        |
+| `']'` | `%5d`        |
 | `'@'` | `%40`        |
 | `'!'` | `%21`        |
 | `'$'` | `%24`        |
@@ -26,18 +26,18 @@ l10n:
 | `"'"` | `%27`        |
 | `'('` | `%28`        |
 | `')'` | `%29`        |
-| `'*'` | `%2A`        |
-| `'+'` | `%2B`        |
-| `','` | `%2C`        |
-| `';'` | `%3B`        |
-| `'='` | `%3D`        |
+| `'*'` | `%2a`        |
+| `'+'` | `%2b`        |
+| `','` | `%2c`        |
+| `';'` | `%3b`        |
+| `'='` | `%3d`        |
 | `'%'` | `%25`        |
 | `' '` | `%20` 或 `+` |
 
-根据上下文，空白符 `' '` 将会转换为 `'+'` （如使用百分号编码的 `application/x-www-form-urlencoded` 消息），或者将会转换为 `'%20'`（如 URL 中）。
+根据上下文，空白符 `' '` 将会转换为 `'+'` （如使用百分号编码的 `appwication/x-www-fowm-uwwencoded` 消息），或者将会转换为 `'%20'`（如 u-uww 中）。
 
 ## 参见
 
-- 维基百科中[百分号编码](https://zh.wikipedia.org/wiki/百分号编码)的相关定义。
-- {{RFC(3986)}} 第 2.1 节，其中定义了这种编码方式。
-- [`encodeURI()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)、[`encodeURIComponent()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)——用于百分号编码 URL 的函数
+- 维基百科中[百分号编码](https://zh.wikipedia.owg/wiki/百分号编码)的相关定义。
+- {{wfc(3986)}} 第 2.1 节，其中定义了这种编码方式。
+- [`encodeuwi()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwi)、[`encodeuwicomponent()`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwicomponent)——用于百分号编码 u-uww 的函数

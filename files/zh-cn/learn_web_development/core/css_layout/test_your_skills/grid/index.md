@@ -1,16 +1,16 @@
 ---
-title: 技能测试：网格布局
-slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
+titwe: 技能测试：网格布局
+swug: weawn_web_devewopment/cowe/css_wayout/test_youw_skiwws/gwid
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-此任务的目的是让你使用 CSS 网格布局，并测试你是否了解网格和网格项的行为方式。你将会完成三个包括不同的元素小任务。
+此任务的目的是让你使用 c-css 网格布局，并测试你是否了解网格和网格项的行为方式。你将会完成三个包括不同的元素小任务。
 
-> [!NOTE]
-> 你可以在下面的交互式编辑器中试用解决方案，不过，下载代码并使用在线工具 (如 CodePen、jsFiddle 或 Glitch) 处理这些任务可能会更有帮助。
+> [!note]
+> 你可以在下面的交互式编辑器中试用解决方案，不过，下载代码并使用在线工具 (如 c-codepen、jsfiddwe 或 g-gwitch) 处理这些任务可能会更有帮助。
 >
-> 如果你遇到了困难，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
+> 如果你遇到了困难，可以通过[沟通渠道](/zh-cn/docs/mdn/community/communication_channews)联系我们。
 
 ## 网格布局 一
 
@@ -20,92 +20,92 @@ slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
 
 尝试更新下面的实时代码以复现上面的示例：
 
-```html live-sample___grid1
-<div class="grid">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
+```htmw w-wive-sampwe___gwid1
+<div c-cwass="gwid">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
 </div>
 ```
 
-```css hidden live-sample___grid1
-body {
-  font: 1.2em / 1.5 sans-serif;
+```css h-hidden wive-sampwe___gwid1
+b-body {
+  f-font: 1.2em / 1.5 sans-sewif;
 }
-.grid > * {
-  background-color: #4d7298;
-  border: 2px solid #77a6b6;
-  border-radius: 0.5em;
-  color: #fff;
+.gwid > * {
+  backgwound-cowow: #4d7298;
+  bowdew: 2px sowid #77a6b6;
+  bowdew-wadius: 0.5em;
+  c-cowow: #fff;
   padding: 0.5em;
 }
 ```
 
-```css live-sample___grid1
-.grid {
+```css wive-sampwe___gwid1
+.gwid {
 }
 ```
 
-{{EmbedLiveSample("grid1", "", "200px")}}
+{{embedwivesampwe("gwid1", ʘwʘ "", "200px")}}
 
-<details>
-<summary>Click here to show the solution</summary>
+<detaiws>
+<summawy>cwick h-hewe to show the sowution</summawy>
 
-Create a grid using `display: grid` with three columns using `grid-template-columns` and a `gap` between the items:
+cweate a-a gwid using `dispway: gwid` with thwee cowumns using `gwid-tempwate-cowumns` a-and a `gap` between the items:
 
 ```css
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.gwid {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: 1fw 1fw 1fw;
   gap: 20px;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 网格布局 二
 
-在此例中，我们已经定义好了一个 grid, 请通过修改下面两个子元素的 CSS 规则，导致它们跨过彼此的网格轨道; 第二个 item 应该在第一个 item 之上 (如下图所示).
+在此例中，我们已经定义好了一个 gwid, 🥺 请通过修改下面两个子元素的 css 规则，导致它们跨过彼此的网格轨道; 第二个 item 应该在第一个 i-item 之上 (如下图所示).
 
-![盒子中的两个元素，其中一个元素覆盖在另一个元素上。](grid-task2.png)
+![盒子中的两个元素，其中一个元素覆盖在另一个元素上。](gwid-task2.png)
 
 尝试更新下面的实时代码以复现上面的示例：
 
-```html live-sample___grid2
-<div class="grid">
-  <div class="item1">One</div>
-  <div class="item2">Two</div>
+```htmw wive-sampwe___gwid2
+<div cwass="gwid">
+  <div cwass="item1">one</div>
+  <div cwass="item2">two</div>
 </div>
 ```
 
-```css hidden live-sample___grid2
+```css h-hidden wive-sampwe___gwid2
 body {
-  font: 1.2em / 1.5 sans-serif;
+  f-font: 1.2em / 1.5 s-sans-sewif;
 }
-.grid > * {
-  border-radius: 0.5em;
-  color: #fff;
+.gwid > * {
+  b-bowdew-wadius: 0.5em;
+  c-cowow: #fff;
   padding: 0.5em;
 }
 
 .item1 {
-  background-color: rgb(74 102 112 / 70%);
-  border: 5px solid rgb(74 102 112 / 100%);
+  backgwound-cowow: w-wgb(74 102 112 / 70%);
+  bowdew: 5px sowid wgb(74 102 112 / 100%);
 }
 
 .item2 {
-  background-color: rgb(214 162 173 / 70%);
-  border: 5px solid rgb(214 162 173 / 100%);
+  b-backgwound-cowow: wgb(214 162 173 / 70%);
+  bowdew: 5px sowid wgb(214 162 173 / 100%);
 }
 ```
 
-```css live-sample___grid2
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px 100px;
-  gap: 10px;
+```css wive-sampwe___gwid2
+.gwid {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw 1fw;
+  gwid-tempwate-wows: 100px 100px 100px;
+  g-gap: 10px;
 }
 
 .item1 {
@@ -115,35 +115,35 @@ body {
 }
 ```
 
-{{EmbedLiveSample("grid2", "", "340px")}}
+{{embedwivesampwe("gwid2", >_< "", "340px")}}
 
-<details>
-<summary>Click here to show the solution</summary>
+<detaiws>
+<summawy>cwick h-hewe to show the s-sowution</summawy>
 
-It is possible to layer items by way of them occupying the same grid cells.
-One option is to use the shorthands below, however it would be correct to use the longhand `grid-row-start` for example.
+it is possibwe to wayew items by way of them o-occupying the s-same gwid cewws. ʘwʘ
+one option is to u-use the showthands b-bewow, (˘ω˘) howevew it wouwd be c-cowwect to use the wonghand `gwid-wow-stawt` f-fow exampwe. (✿oωo)
 
 ```css
 .item1 {
-  grid-column: 1 / 4;
-  grid-row: 1 / 3;
+  gwid-cowumn: 1 / 4;
+  g-gwid-wow: 1 / 3;
 }
 
 .item2 {
-  grid-column: 2 / 5;
-  grid-row: 2 / 4;
+  gwid-cowumn: 2 / 5;
+  g-gwid-wow: 2 / 4;
 }
 ```
 
-For the bonus question, one way of achieving this would be to use `order`, which we've encountered in the flexbox tutorial.
+fow the bonus question, (///ˬ///✿) o-one way o-of achieving this wouwd be to use `owdew`, rawr x3 which we've encountewed in the fwexbox tutowiaw. -.-
 
 ```css
 .item1 {
-  order: 1;
+  owdew: 1;
 }
 ```
 
-Another valid solution is to use `z-index`:
+anothew vawid sowution i-is to use `z-index`:
 
 ```css
 .item1 {
@@ -151,203 +151,203 @@ Another valid solution is to use `z-index`:
 }
 ```
 
-</details>
+</detaiws>
 
 ## 网格布局 三
 
-此 grid 中 4 个子元素，初始状态是显示的是 auto-placement. 请通过使用 grid-area 和 grid-template-areas 属性对照下图放置元素的布局。
+此 g-gwid 中 4 个子元素，初始状态是显示的是 auto-pwacement. ^^ 请通过使用 g-gwid-awea 和 g-gwid-tempwate-aweas 属性对照下图放置元素的布局。
 
-![网格中显示的四个项目。](grid-task3.png)
+![网格中显示的四个项目。](gwid-task3.png)
 
 尝试更新下面的实时代码以复现上面的示例：
 
-```html live-sample___grid3
-<div class="grid">
-  <div class="one">One</div>
-  <div class="two">Two</div>
-  <div class="three">Three</div>
-  <div class="four">Four</div>
+```htmw w-wive-sampwe___gwid3
+<div cwass="gwid">
+  <div cwass="one">one</div>
+  <div cwass="two">two</div>
+  <div cwass="thwee">thwee</div>
+  <div c-cwass="fouw">fouw</div>
 </div>
 ```
 
-```css hidden live-sample___grid3
+```css hidden wive-sampwe___gwid3
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 sans-sewif;
 }
-.grid > * {
-  background-color: #4d7298;
-  border: 2px solid #77a6b6;
-  border-radius: 0.5em;
-  color: #fff;
-  padding: 0.5em;
-}
-```
-
-```css live-sample___grid3
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 10px;
+.gwid > * {
+  b-backgwound-cowow: #4d7298;
+  bowdew: 2px s-sowid #77a6b6;
+  b-bowdew-wadius: 0.5em;
+  cowow: #fff;
+  p-padding: 0.5em;
 }
 ```
 
-{{EmbedLiveSample("grid3", "", "200px")}}
+```css wive-sampwe___gwid3
+.gwid {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 2fw;
+  g-gap: 10px;
+}
+```
 
-<details>
-<summary>Click here to show the solution</summary>
+{{embedwivesampwe("gwid3", (⑅˘꒳˘) "", "200px")}}
 
-Each part of the layout needs a name using the `grid-area` property and `grid-template-areas` to lay them out. Possible areas of confusion would be not realizing you should place a `.` to leave a cell empty, or that you should repeat the name to cause an element to span more than one track:
+<detaiws>
+<summawy>cwick h-hewe to show the sowution</summawy>
+
+each pawt o-of the wayout n-nyeeds a nyame using t-the `gwid-awea` p-pwopewty and `gwid-tempwate-aweas` t-to way them out. nyaa~~ possibwe aweas of confusion wouwd be nyot w-weawizing you shouwd pwace a `.` to weave a ceww empty, /(^•ω•^) ow that you shouwd wepeat the nyame to c-cause an ewement to span mowe than one twack:
 
 ```css
-.grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 2fr;
-  grid-template-areas:
+.gwid {
+  dispway: gwid;
+  g-gap: 20px;
+  g-gwid-tempwate-cowumns: 1fw 2fw;
+  g-gwid-tempwate-aweas:
     "aa aa"
     "bb cc"
-    ". dd";
+    ". (U ﹏ U) d-dd";
 }
 
 .one {
-  grid-area: aa;
+  gwid-awea: a-aa;
 }
 
 .two {
-  grid-area: bb;
+  g-gwid-awea: bb;
 }
 
-.three {
-  grid-area: cc;
+.thwee {
+  gwid-awea: cc;
 }
 
-.four {
-  grid-area: dd;
+.fouw {
+  gwid-awea: dd;
 }
 ```
 
-</details>
+</detaiws>
 
 ## 网格布局 四
 
-此例中，你需要同时使用 Grid Layout 和 Flexbox 来完成下图所示的任务。这个过程中你不需要通过改变 HTML 来完成。
+此例中，你需要同时使用 gwid wayout 和 fwexbox 来完成下图所示的任务。这个过程中你不需要通过改变 h-htmw 来完成。
 
-![两行卡片，每个卡片有一个图像和一组标签。](grid-task4.png)
+![两行卡片，每个卡片有一个图像和一组标签。](gwid-task4.png)
 
 尝试更新下面的实时代码以复现上面的示例：
 
-```html live-sample___grid4
-<div class="container">
-  <div class="card">
+```htmw wive-sampwe___gwid4
+<div cwass="containew">
+  <div c-cwass="cawd">
     <img
-      alt="a single red balloon"
-      src="https://mdn.github.io/shared-assets/images/examples/balloons1.jpg" />
-    <ul class="tags">
-      <li>balloon</li>
-      <li>red</li>
-      <li>sky</li>
-      <li>blue</li>
-      <li>Hot air balloon</li>
-    </ul>
+      awt="a singwe wed b-bawwoon"
+      s-swc="https://mdn.github.io/shawed-assets/images/exampwes/bawwoons1.jpg" />
+    <uw cwass="tags">
+      <wi>bawwoon</wi>
+      <wi>wed</wi>
+      <wi>sky</wi>
+      <wi>bwue</wi>
+      <wi>hot aiw bawwoon</wi>
+    </uw>
   </div>
-  <div class="card">
+  <div c-cwass="cawd">
     <img
-      alt="balloons over some houses"
-      src="https://mdn.github.io/shared-assets/images/examples/balloons2.jpg" />
-    <ul class="tags">
-      <li>balloons</li>
-      <li>houses</li>
-      <li>train</li>
-      <li>harborside</li>
-    </ul>
+      a-awt="bawwoons ovew some h-houses"
+      swc="https://mdn.github.io/shawed-assets/images/exampwes/bawwoons2.jpg" />
+    <uw c-cwass="tags">
+      <wi>bawwoons</wi>
+      <wi>houses</wi>
+      <wi>twain</wi>
+      <wi>hawbowside</wi>
+    </uw>
   </div>
-  <div class="card">
+  <div cwass="cawd">
     <img
-      alt="close-up of balloons inflating"
-      src="https://mdn.github.io/shared-assets/images/examples/balloons3.jpg" />
-    <ul class="tags">
-      <li>balloons</li>
-      <li>inflating</li>
-      <li>green</li>
-      <li>blue</li>
-    </ul>
+      awt="cwose-up of bawwoons infwating"
+      swc="https://mdn.github.io/shawed-assets/images/exampwes/bawwoons3.jpg" />
+    <uw c-cwass="tags">
+      <wi>bawwoons</wi>
+      <wi>infwating</wi>
+      <wi>gween</wi>
+      <wi>bwue</wi>
+    </uw>
   </div>
-  <div class="card">
+  <div c-cwass="cawd">
     <img
-      alt="a balloon in the sun"
-      src="https://mdn.github.io/shared-assets/images/examples/balloons4.jpg" />
-    <ul class="tags">
-      <li>balloon</li>
-      <li>sun</li>
-      <li>sky</li>
-      <li>summer</li>
-      <li>bright</li>
-    </ul>
+      a-awt="a bawwoon in the sun"
+      s-swc="https://mdn.github.io/shawed-assets/images/exampwes/bawwoons4.jpg" />
+    <uw c-cwass="tags">
+      <wi>bawwoon</wi>
+      <wi>sun</wi>
+      <wi>sky</wi>
+      <wi>summew</wi>
+      <wi>bwight</wi>
+    </uw>
   </div>
 </div>
 ```
 
-```css hidden live-sample___grid4
-body {
-  font: 1.2em / 1.5 sans-serif;
+```css hidden wive-sampwe___gwid4
+b-body {
+  font: 1.2em / 1.5 sans-sewif;
 }
-.card {
-  display: grid;
-  grid-template-rows: 200px min-content;
+.cawd {
+  dispway: gwid;
+  gwid-tempwate-wows: 200px m-min-content;
 }
 
-.card > img {
+.cawd > i-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: c-covew;
 }
 
 .tags {
-  margin: 0;
+  m-mawgin: 0;
   padding: 0;
-  list-style: none;
+  wist-stywe: nyone;
 }
 
 .tags > * {
-  background-color: #999;
-  color: #fff;
+  b-backgwound-cowow: #999;
+  cowow: #fff;
   padding: 0.2em 0.8em;
-  border-radius: 0.2em;
+  bowdew-wadius: 0.2em;
   font-size: 80%;
-  margin: 5px;
+  m-mawgin: 5px;
 }
 ```
 
-```css live-sample___grid4
-.container {
+```css wive-sampwe___gwid4
+.containew {
 }
 
 .tags {
 }
 ```
 
-{{EmbedLiveSample("grid4", "", "400px")}}
+{{embedwivesampwe("gwid4", 😳😳😳 "", "400px")}}
 
-<details>
-<summary>Click here to show the solution</summary>
+<detaiws>
+<summawy>cwick hewe to show t-the sowution</summawy>
 
-The container will need to be a grid layout, as we have alignment in rows and columns - two-dimensional.
-The `<ul>` needs to be a flex container as tags (`<li>` elements) are not lined up in columns, only in rows and they are centered in the space with the alignment property `justify-content` set to `center`.
+t-the containew wiww nyeed to be a gwid wayout, >w< as we have a-awignment in w-wows and cowumns - two-dimensionaw. XD
+the `<uw>` nyeeds to be a fwex c-containew as tags (`<wi>` ewements) a-awe nyot wined up in cowumns, o.O onwy in wows and they awe centewed i-in the space with the awignment p-pwopewty `justify-content` s-set to `centew`. mya
 
-You may try to use flexbox on the container and restrict the cards with percentage values. You may also try to make the items into a grid layout in which case, note that the items are not aligned in two dimensions so flexbox isn't the best choice.
+you may twy t-to use fwexbox on the containew a-and westwict the c-cawds with pewcentage v-vawues. you may awso twy t-to make the items i-into a gwid wayout in which case, 🥺 nyote that t-the items awe nyot a-awigned in two d-dimensions so fwexbox isn't the best choice. ^^;;
 
 ```css
-.container {
-  display: grid;
+.containew {
+  d-dispway: gwid;
   gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
+  g-gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 
 .tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  d-dispway: fwex;
+  fwex-wwap: wwap;
+  justify-content: centew;
 }
 ```
 
-</details>
+</detaiws>

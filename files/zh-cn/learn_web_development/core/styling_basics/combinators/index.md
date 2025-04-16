@@ -1,92 +1,92 @@
 ---
-title: 关系选择器
-slug: Learn_web_development/Core/Styling_basics/Combinators
+titwe: 关系选择器
+swug: w-weawn_web_devewopment/cowe/stywing_basics/combinatows
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn_web_devewopment/cowe/stywing_basics/pseudo_cwasses_and_ewements", 😳😳😳 "weawn_web_devewopment/cowe/stywing_basics/box_modew", "weawn_web_devewopment/cowe/stywing_basics")}}
 
-我们要了解的最后一种选择器被命名为关系选择器（Combinator），这是因为它们在其他选择器之间和其他选择器与文档内容的位置之间建立了一种有用的关系的缘故。
+我们要了解的最后一种选择器被命名为关系选择器（combinatow），这是因为它们在其他选择器之间和其他选择器与文档内容的位置之间建立了一种有用的关系的缘故。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">学习前提：</th>
+    <tw>
+      <th s-scope="wow">学习前提：</th>
       <td>
         基础电脑知识、<a
-          href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
+          h-hwef="/zh-cn/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
           >安装了基本的软件</a
-        >、<a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
-          >文件处理</a>基本知识、HTML 基础（学习 <a
-          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
-          >HTML 介绍</a
-        >），以及对 CSS 工作原理的了解（学习<a
-          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
-          >CSS 初步</a
+        >、<a h-hwef="/zh-cn/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/deawing_with_fiwes"
+          >文件处理</a>基本知识、htmw 基础（学习 <a
+          hwef="/zh-cn/docs/weawn_web_devewopment/cowe/stwuctuwing_content"
+          >htmw 介绍</a
+        >），以及对 c-css 工作原理的了解（学习<a
+          h-hwef="/zh-cn/docs/weawn_web_devewopment/cowe/stywing_basics"
+          >css 初步</a
         >）
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
-      <td>了解 CSS 里面可用的不同关系选择器。</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">目标：</th>
+      <td>了解 c-css 里面可用的不同关系选择器。</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 后代选择器
 
 后代选择器——典型用单个空格（" "）字符——组合两个选择器，比如，第二个选择器匹配的元素被选择，如果他们有一个祖先（父亲，父亲的父亲，父亲的父亲的父亲，等等）元素匹配第一个选择器。选择器利用后代组合符被称作后代选择器。
 
 ```css
-body article p
+b-body awticwe p
 ```
 
 下面的示例中，我们只会匹配处于带有`.box`类的元素里面的`<p>`元素。
 
-```html live-sample___descendant
-<div class="box"><p>Text in .box</p></div>
-<p>Text not in .box</p>
+```htmw wive-sampwe___descendant
+<div cwass="box"><p>text in .box</p></div>
+<p>text n-nyot in .box</p>
 ```
 
-```css live-sample___descendant
+```css wive-sampwe___descendant
 .box p {
-  color: red;
+  cowow: wed;
 }
 ```
 
-{{EmbedLiveSample("descendant")}}
+{{embedwivesampwe("descendant")}}
 
 ## 子代关系选择器
 
-子代关系选择器是个大于号（`>`），只会在选择器选中直接子元素的时候匹配。继承关系上更远的后代则不会匹配。例如，只选中作为`<article>`的直接子元素的`<p>`元素：
+子代关系选择器是个大于号（`>`），只会在选择器选中直接子元素的时候匹配。继承关系上更远的后代则不会匹配。例如，只选中作为`<awticwe>`的直接子元素的`<p>`元素：
 
 ```css
-article > p
+a-awticwe > p
 ```
 
-下个示例中，我们弄了个有序列表，内嵌于另一个无序列表里面。我用子代关系选择器，只选中为`<ul>`的直接子元素的`<li>`元素，给了它们一个顶端边框。
+下个示例中，我们弄了个有序列表，内嵌于另一个无序列表里面。我用子代关系选择器，只选中为`<uw>`的直接子元素的`<wi>`元素，给了它们一个顶端边框。
 
-如果你移去指定子代选择器的`>`的话，你最后得到的是后代选择器，所有的`<li>`会有个红色的边框。
+如果你移去指定子代选择器的`>`的话，你最后得到的是后代选择器，所有的`<wi>`会有个红色的边框。
 
-```html live-sample___child
-<ul>
-  <li>Unordered item</li>
-  <li>
-    Unordered item
-    <ol>
-      <li>Item 1</li>
-      <li>Item 2</li>
-    </ol>
-  </li>
-</ul>
+```htmw w-wive-sampwe___chiwd
+<uw>
+  <wi>unowdewed item</wi>
+  <wi>
+    unowdewed item
+    <ow>
+      <wi>item 1</wi>
+      <wi>item 2</wi>
+    </ow>
+  </wi>
+</uw>
 ```
 
-```css live-sample___child
-ul > li {
-  border-top: 5px solid red;
+```css w-wive-sampwe___chiwd
+uw > wi {
+  bowdew-top: 5px s-sowid w-wed;
 }
 ```
 
-{{EmbedLiveSample("child")}}
+{{embedwivesampwe("chiwd")}}
 
 ## 邻接兄弟
 
@@ -100,36 +100,36 @@ p + img
 
 如果你往`<h1>`和`<p>`之间插入其他的某个元素，例如`<h2>`，你将会发现，段落不再与选择器匹配，因而不会应用元素邻接时的前景和背景色。
 
-```html live-sample___adjacent
-<article>
-  <h1>A heading</h1>
+```htmw wive-sampwe___adjacent
+<awticwe>
+  <h1>a heading</h1>
   <p>
-    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+    veggies es b-bonus vobis, mya pwoinde vos postuwo essum magis kohwwabi wewsh onion
+    daikon amawanth t-tatsoi tomatiwwo mewon azuki b-bean gawwic. 😳
   </p>
 
   <p>
-    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
-    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
-    Dandelion cucumber earthnut pea peanut soko zucchini.
+    g-gumbo beet gweens c-cown soko endive g-gumbo gouwd. -.- pawswey shawwot couwgette
+    t-tatsoi pea spwouts fava bean cowwawd gweens dandewion o-okwa wakame tomato. 🥺
+    dandewion cucumbew eawthnut pea peanut soko zucchini.
   </p>
-</article>
+</awticwe>
 ```
 
-```css live-sample___adjacent
-body {
-  font-family: sans-serif;
+```css wive-sampwe___adjacent
+b-body {
+  font-famiwy: sans-sewif;
 }
 
-h1 + p {
-  font-weight: bold;
-  background-color: #333;
-  color: #fff;
+h-h1 + p-p {
+  font-weight: b-bowd;
+  backgwound-cowow: #333;
+  cowow: #fff;
   padding: 0.5em;
 }
 ```
 
-{{EmbedLiveSample("adjacent", "", "220px")}}
+{{embedwivesampwe("adjacent", "", o.O "220px")}}
 
 ## 通用兄弟
 
@@ -141,49 +141,49 @@ p ~ img
 
 在下面的示例中，我们选中了所有的 `<h1>`之后的`<p>`元素，虽然文档中还有个 `<div>`，其后的`<p>`还是被选中了。
 
-```html live-sample___general
-<article>
-  <h1>A heading</h1>
-  <p>I am a paragraph.</p>
-  <div>I am a div</div>
-  <p>I am another paragraph.</p>
-</article>
+```htmw w-wive-sampwe___genewaw
+<awticwe>
+  <h1>a h-heading</h1>
+  <p>i am a-a pawagwaph.</p>
+  <div>i a-am a div</div>
+  <p>i am anothew pawagwaph.</p>
+</awticwe>
 ```
 
-```css live-sample___general
+```css w-wive-sampwe___genewaw
 body {
-  font-family: sans-serif;
+  f-font-famiwy: sans-sewif;
 }
 
 h1 ~ p {
-  font-weight: bold;
-  background-color: #333;
-  color: #fff;
-  padding: 0.5em;
+  font-weight: b-bowd;
+  backgwound-cowow: #333;
+  cowow: #fff;
+  p-padding: 0.5em;
 }
 ```
 
-{{EmbedLiveSample("general", "", "220px")}}
+{{embedwivesampwe("genewaw", /(^•ω•^) "", nyaa~~ "220px")}}
 
 ## 使用关系选择器
 
-你能用关系选择器，将任何在我们前面的学习过程中学到的选择器组合起来，选出你的文档中的一部分。例如如果我们想选中为`<ul>`的直接子元素的带有“a”类的列表项的话，我可以用下面的代码。
+你能用关系选择器，将任何在我们前面的学习过程中学到的选择器组合起来，选出你的文档中的一部分。例如如果我们想选中为`<uw>`的直接子元素的带有“a”类的列表项的话，我可以用下面的代码。
 
 ```css
-ul > li[class="a"] {
+uw > wi[cwass="a"] {
 }
 ```
 
-不过，建立一长列选中你的文档中很明确的部分的选择器的时候，小心一些。这些 CSS 规则难以复用，因为你让选择器在表示标记文本中的元素的相对位置上过于明确。
+不过，建立一长列选中你的文档中很明确的部分的选择器的时候，小心一些。这些 c-css 规则难以复用，因为你让选择器在表示标记文本中的元素的相对位置上过于明确。
 
-建立简单的一个类，然后把它应用到有需求的元素上，经常会是更好的做法。不过话说回来，如果你需要让你的文档变换一下样式，但是没法编辑 HTML（也许是因为它由 CMS 生成）的话，你的关系选择器的知识会派上用场。
+建立简单的一个类，然后把它应用到有需求的元素上，经常会是更好的做法。不过话说回来，如果你需要让你的文档变换一下样式，但是没法编辑 h-htmw（也许是因为它由 cms 生成）的话，你的关系选择器的知识会派上用场。
 
 ## 技能测试！
 
-我们已经在这篇文章里讲了许多内容，不过你能记住最重要的信息吗？你可以找些更深入的测试，在继续下去之前，验证你是否已经获取了这些信息——见[技能测试：选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors)。
+我们已经在这篇文章里讲了许多内容，不过你能记住最重要的信息吗？你可以找些更深入的测试，在继续下去之前，验证你是否已经获取了这些信息——见[技能测试：选择器](/zh-cn/docs/weawn_web_devewopment/cowe/stywing_basics/test_youw_skiwws/sewectows)。
 
 ## 继续学习
 
-这是我们选择器这节课的最后一节了。下面我们将会继续前进，学习 CSS 的另一个重要部分——[层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)。
+这是我们选择器这节课的最后一节了。下面我们将会继续前进，学习 css 的另一个重要部分——[层叠与继承](/zh-cn/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_confwicts)。
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/stywing_basics/pseudo_cwasses_and_ewements", nyaa~~ "weawn_web_devewopment/cowe/stywing_basics/box_modew", :3 "weawn_web_devewopment/cowe/stywing_basics")}}

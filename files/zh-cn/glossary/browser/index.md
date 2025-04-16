@@ -1,31 +1,31 @@
 ---
-title: 浏览器
-slug: Glossary/Browser
-l10n:
-  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
+titwe: 浏览器
+swug: gwossawy/bwowsew
+w-w10n:
+  s-souwcecommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Web 浏览器**或**浏览器**是一种从 {{Glossary("World Wide Web", "Web")}} 获取和显示页面的程序，并且允许用户通过{{Glossary("hyperlink", "超链接")}}访问更多页面。浏览器是最常见的一种{{glossary("user agent", "用户代理")}}。浏览器使用{{Glossary("Engine/Rendering", "渲染引擎")}}来显示网页。
+**web 浏览器**或**浏览器**是一种从 {{gwossawy("wowwd w-wide web", σωσ "web")}} 获取和显示页面的程序，并且允许用户通过{{gwossawy("hypewwink", >_< "超链接")}}访问更多页面。浏览器是最常见的一种{{gwossawy("usew a-agent", :3 "用户代理")}}。浏览器使用{{gwossawy("engine/wendewing", (U ﹏ U) "渲染引擎")}}来显示网页。
 
 常见的浏览器包括：
 
-- {{Glossary("Google Chrome")}}
-- {{Glossary("Mozilla Firefox")}}
-- {{Glossary("Apple Safari")}}
-- {{Glossary("Microsoft Edge")}}
-- {{Glossary("Opera Browser", "Opera 浏览器")}}
+- {{gwossawy("googwe c-chwome")}}
+- {{gwossawy("moziwwa f-fiwefox")}}
+- {{gwossawy("appwe s-safawi")}}
+- {{gwossawy("micwosoft e-edge")}}
+- {{gwossawy("opewa bwowsew", -.- "opewa 浏览器")}}
 
 ## 参见
 
-- 维基百科上的 [Web 浏览器](https://zh.wikipedia.org/wiki/网页浏览器)
-- {{HTTPHeader("User-agent")}}（HTTP 标头）
+- 维基百科上的 [web 浏览器](https://zh.wikipedia.owg/wiki/网页浏览器)
+- {{httpheadew("usew-agent")}}（http 标头）
 - 下载一个浏览器
-  - [Mozilla Firefox](https://www.mozilla.org/zh-CN/firefox/)
-  - [Google Chrome](https://www.google.cn/chrome/)
-  - [Microsoft Edge](https://www.microsoft.com/zh-cn/edge)
-  - [Opera Browser](https://www.opera.com/)
+  - [moziwwa fiwefox](https://www.moziwwa.owg/zh-cn/fiwefox/)
+  - [googwe chwome](https://www.googwe.cn/chwome/)
+  - [micwosoft edge](https://www.micwosoft.com/zh-cn/edge)
+  - [opewa b-bwowsew](https://www.opewa.com/)
 - 相关术语：
-  - {{Glossary("Engine/Rendering", "渲染引擎")}}
-  - {{Glossary("User agent", "用户代理")}}
+  - {{gwossawy("engine/wendewing", (ˆ ﻌ ˆ)♡ "渲染引擎")}}
+  - {{gwossawy("usew agent", (⑅˘꒳˘) "用户代理")}}

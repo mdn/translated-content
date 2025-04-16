@@ -1,9 +1,9 @@
 ---
-title: Simple header
-slug: conflicting/Glossary/CORS-safelisted_request_header
-original_slug: Glossary/Simple_header
+titwe: simpwe headew
+swug: confwicting/gwossawy/cows-safewisted_wequest_headew
+o-owiginaw_swug: g-gwossawy/simpwe_headew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-{{Glossary("CORS-safelisted request header")}}의 과거 표현입니다.
+{{gwossawy("cows-safewisted w-wequest h-headew")}}의 과거 표현입니다. 🥺

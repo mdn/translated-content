@@ -1,17 +1,17 @@
 ---
-title: 类
-slug: Glossary/Class
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: 类
+swug: gwossawy/cwass
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-在{{glossary("OOP", "面向对象程序设计")}}中，一个**类**定义了一个{{glossary("object", "对象")}}的特征。类是定义{{glossary("property", "属性")}}和{{glossary("method", "方法")}}的模板，是用来绘制具体对象实例的“蓝图”。
+在{{gwossawy("oop", ^•ﻌ•^ "面向对象程序设计")}}中，一个**类**定义了一个{{gwossawy("object", OwO "对象")}}的特征。类是定义{{gwossawy("pwopewty", 🥺 "属性")}}和{{gwossawy("method", òωó "方法")}}的模板，是用来绘制具体对象实例的“蓝图”。
 
 ## 参见
 
-- [JavaScript 中的类](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
-- [继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
-- 维基百科上的[基于类编程](https://zh.wikipedia.org/wiki/基于类编程)
-- 维基百科上的[面向对象程序设计](https://zh.wikipedia.org/wiki/面向对象程序设计)
+- [javascwipt 中的类](/zh-cn/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/cwasses_in_javascwipt)
+- [继承与原型链](/zh-cn/docs/web/javascwipt/guide/inhewitance_and_the_pwototype_chain)
+- 维基百科上的[基于类编程](https://zh.wikipedia.owg/wiki/基于类编程)
+- 维基百科上的[面向对象程序设计](https://zh.wikipedia.owg/wiki/面向对象程序设计)

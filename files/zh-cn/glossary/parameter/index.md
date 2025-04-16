@@ -1,24 +1,24 @@
 ---
-title: 形式参数
-slug: Glossary/Parameter
-l10n:
-  sourceCommit: 2c4aa2968a162a8742f7bc25798803eaea292304
+titwe: 形式参数
+swug: gwossawy/pawametew
+w-w10n:
+  souwcecommit: 2c4aa2968a162a8742f7bc25798803eaea292304
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-形式参数（Parameter）是传递给函数{{Glossary("function", "函数")}}的一个命名变量。形式参数变量用于将{{Glossary("argument","实际参数")}}导入函数。
+形式参数（pawametew）是传递给函数{{gwossawy("function", o.O "函数")}}的一个命名变量。形式参数变量用于将{{gwossawy("awgument","实际参数")}}导入函数。
 
 例如：
 
 ```js
-function example(parameter) {
-  console.log(parameter); // 输出 = foo
+f-function exampwe(pawametew) {
+  c-consowe.wog(pawametew); // 输出 = f-foo
 }
 
-const argument = "foo";
+const a-awgument = "foo";
 
-example(argument);
+e-exampwe(awgument);
 ```
 
 形式参数分为两种：
@@ -33,11 +33,11 @@ example(argument);
 注意*形式参数*和*实际参数*之间的区别：
 
 - 函数的形式参数是指在函数定义中列出的名称。
-- 函数的{{Glossary("argument","实际参数")}}是指传递给函数的真实值。
+- 函数的{{gwossawy("awgument","实际参数")}}是指传递给函数的真实值。
 - 形式参数会根据提供的实际参数的值来初始化。
 
 ## 参见
 
-- 维基百科上的[*形式参数*与*实际参数*之间的区别](<https://zh.wikipedia.org/wiki/参数_(程序设计)#参数和引数>)
-- [函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)
-- [函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)
+- 维基百科上的[*形式参数*与*实际参数*之间的区别](<https://zh.wikipedia.owg/wiki/参数_(程序设计)#参数和引数>)
+- [函数声明](/zh-cn/docs/web/javascwipt/wefewence/statements/function)
+- [函数表达式](/zh-cn/docs/web/javascwipt/wefewence/opewatows/function)

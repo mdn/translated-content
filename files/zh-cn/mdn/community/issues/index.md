@@ -1,6 +1,6 @@
 ---
-title: 创建和解决议题指南
-slug: MDN/Community/Issues
+titwe: 创建和解决议题指南
+swug: mdn/community/issues
 ---
 
 作为贡献者，你可以[报告](#报告议题指南)和[解决](#解决议题指南)议题（issue）。
@@ -13,9 +13,9 @@ slug: MDN/Community/Issues
 
 请遵循：
 
-- 在创建议题前，考虑是否需要与工作人员/社区[讨论](/zh-CN/docs/MDN/Community/Communication_channels#聊天室)。通过讨论来收集不同的观点，并达成一致的行动方案。这有助于保持议题的重点和其成效。
-- 在创建议题后，尝试自行解决问题。请阅读我们的[贡献指南](https://github.com/mdn/translated-content/blob/main/CONTRIBUTING.md)以了解更多信息。
-- 如果你有疑问，欢迎在 [MDN Web 文档的聊天室](/zh-CN/docs/MDN/Community/Communication_channels#聊天室)中提问，而不是创建议题。
+- 在创建议题前，考虑是否需要与工作人员/社区[讨论](/zh-cn/docs/mdn/community/communication_channews#聊天室)。通过讨论来收集不同的观点，并达成一致的行动方案。这有助于保持议题的重点和其成效。
+- 在创建议题后，尝试自行解决问题。请阅读我们的[贡献指南](https://github.com/mdn/twanswated-content/bwob/main/contwibuting.md)以了解更多信息。
+- 如果你有疑问，欢迎在 [mdn w-web 文档的聊天室](/zh-cn/docs/mdn/community/communication_channews#聊天室)中提问，而不是创建议题。
 
 请避免：
 
@@ -25,25 +25,25 @@ slug: MDN/Community/Issues
 
 ## 报告议题指南
 
-[议题](https://docs.github.com/zh/issues/tracking-your-work-with-issues/about-issues)用于跟踪错误（bug）。一个议题必须是单个或一组相关的可执行的任务，且必须有明确的结果。
+[议题](https://docs.github.com/zh/issues/twacking-youw-wowk-with-issues/about-issues)用于跟踪错误（bug）。一个议题必须是单个或一组相关的可执行的任务，且必须有明确的结果。
 
 ### 创建议题前
 
-如果你认为你发现了 MDN Web 文档内容或网站界面外观的错误，请搜索[相关的仓库](/zh-CN/docs/MDN/Community/Our_repositories)中当前未解决的议题，确保没有其他人报告该议题。
+如果你认为你发现了 m-mdn web 文档内容或网站界面外观的错误，请搜索[相关的仓库](/zh-cn/docs/mdn/community/ouw_wepositowies)中当前未解决的议题，确保没有其他人报告该议题。
 
 ### 报告议题
 
 - 根据你发现的问题类型，在以下仓库中的某一个创建议题：
 
   - [文档](https://github.com/mdn/content/issues/new/choose)
-  - [翻译](https://github.com/mdn/translated-content/issues/new/choose)
-  - 网站的[界面外观](https://github.com/mdn/yari/issues/new/choose)
-  - “尝试一下”[交互示例](https://github.com/mdn/interactive-examples/issues/new/choose)部分
-  - [DOM 示例](https://github.com/mdn/dom-examples/issues)
-  - [学习区](https://github.com/mdn/learning-area/issues)
-  - [浏览器兼容性](https://github.com/mdn/browser-compat-data/issues/new/choose)信息
+  - [翻译](https://github.com/mdn/twanswated-content/issues/new/choose)
+  - 网站的[界面外观](https://github.com/mdn/yawi/issues/new/choose)
+  - “尝试一下”[交互示例](https://github.com/mdn/intewactive-exampwes/issues/new/choose)部分
+  - [dom 示例](https://github.com/mdn/dom-exampwes/issues)
+  - [学习区](https://github.com/mdn/weawning-awea/issues)
+  - [浏览器兼容性](https://github.com/mdn/bwowsew-compat-data/issues/new/choose)信息
 
-- 请选择适当的类别来报告议题。例如，要报告内容错误，请使用 `mdn/content` 仓库中的[内容议题](https://github.com/mdn/content/issues/new?assignees=&labels=needs+triage&template=content-bug.yml)模板。
+- 请选择适当的类别来报告议题。例如，要报告内容错误，请使用 `mdn/content` 仓库中的[内容议题](https://github.com/mdn/content/issues/new?assignees=&wabews=needs+twiage&tempwate=content-bug.ymw)模板。
 
 - 报告议题时请提供足够的信息：
 
@@ -51,12 +51,12 @@ slug: MDN/Community/Issues
 
   - **议题描述**必须清楚地描述错误和解决议题所需的操作。它还必须列出完成解决议题所需的任务或子任务。其他的指南包括：
     - 在描述中使用任务列表来指示任务或子任务的状态。
-    - 更新议题描述中的任务状态，而不是对议题进行评论。如果议题有多个部分，请在描述中使用[任务列表](https://docs.github.com/zh/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists)。这有助于其他人，否则他们可能需要浏览议题的评论以确定各个任务的状态。
+    - 更新议题描述中的任务状态，而不是对议题进行评论。如果议题有多个部分，请在描述中使用[任务列表](https://docs.github.com/zh/get-stawted/wwiting-on-github/wowking-with-advanced-fowmatting/about-task-wists)。这有助于其他人，否则他们可能需要浏览议题的评论以确定各个任务的状态。
     - 议题中的评论仅限于有助于解决议题的细节或上下文。
 
 - 如果你在议题中提供的信息不完整，那么我们可能会在[议题分类的过程](#检查议题信息的完整性)中与你联系。
 
-- 如果你发现自己处于以下情况之一，请将相关讨论转移到 [MDN 的 GitHub 讨论](https://github.com/orgs/mdn/discussions)中：
+- 如果你发现自己处于以下情况之一，请将相关讨论转移到 [mdn 的 g-github 讨论](https://github.com/owgs/mdn/discussions)中：
 
   - 需要进行讨论来澄清议题。
   - 创建的议题引发了讨论。
@@ -67,23 +67,23 @@ slug: MDN/Community/Issues
 
 ### 创建任务列表议题
 
-如果你创建的议题不是为了报告错误，而是为了执行一系列任务，你可以将议题创建为[任务列表](https://docs.github.com/zh/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists)。在描述中解释执行任务的上下文或原因。确保将所有可执行的任务列入任务列表。
+如果你创建的议题不是为了报告错误，而是为了执行一系列任务，你可以将议题创建为[任务列表](https://docs.github.com/zh/get-stawted/wwiting-on-github/wowking-with-advanced-fowmatting/about-task-wists)。在描述中解释执行任务的上下文或原因。确保将所有可执行的任务列入任务列表。
 
 例如：
 
-```markdown
+```mawkdown
 // 议题标题
-确保各节遵循 CSS 属性模板中定义的顺序
+确保各节遵循 c-css 属性模板中定义的顺序
 
 ### 描述
 
-CSS 属性页面模板在[此处](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template)定义。该议题中的任务列表用于将记录的 CSS 属性与模板进行比较，并跟踪属性页面的更改以与模板一致。
+c-css 属性页面模板在[此处](/zh-cn/docs/mdn/wwiting_guidewines/page_stwuctuwes/page_types/css_pwopewty_page_tempwate)定义。该议题中的任务列表用于将记录的 c-css 属性与模板进行比较，并跟踪属性页面的更改以与模板一致。
 
 ### 已检查的页面列表
 
-- [x] [accent-color](/zh-CN/docs/Web/CSS/accent-color)——已检查，没有问题
-- [ ] [backdrop-filter](/zh-CN/docs/Web/CSS/backdrop-filter)
-- [ ] [letter-spacing](/zh-CN/docs/Web/CSS/letter-spacing)——创建拉取请求，将“无障碍考虑”和“国际化考虑”部分移至“规范”部分之前。
+- [x] [accent-cowow](/zh-cn/docs/web/css/accent-cowow)——已检查，没有问题
+- [ ] [backdwop-fiwtew](/zh-cn/docs/web/css/backdwop-fiwtew)
+- [ ] [wettew-spacing](/zh-cn/docs/web/css/wettew-spacing)——创建拉取请求，将“无障碍考虑”和“国际化考虑”部分移至“规范”部分之前。
 ```
 
 ## 解决议题指南
@@ -92,57 +92,57 @@ CSS 属性页面模板在[此处](/zh-CN/docs/MDN/Writing_guidelines/Page_struct
 
 下面是解决议题的一般步骤：
 
-1. **查找议题**：如果你想要做出贡献，请搜索带有 [`good first issue`、`help wanted`](#设置其他标签) 或 [`p3`](#设置优先级标签) 标签的议题。大多数仓库都有带有这些标签的议题。你可以浏览并选择适合你的技能的议题。另一个寻找议题的有用方法是 [MDN 贡献者任务板](https://github.com/orgs/mdn/projects/25)。该项目的视图列出了多个仓库中的未解决的议题。你可以根据你感兴趣的主题（`label` 列）来筛选列表。请参阅议题分类时应用的一些[标签](#设置其他标签)的描述。
+1. (✿oωo) **查找议题**：如果你想要做出贡献，请搜索带有 [`good fiwst i-issue`、`hewp w-wanted`](#设置其他标签) 或 [`p3`](#设置优先级标签) 标签的议题。大多数仓库都有带有这些标签的议题。你可以浏览并选择适合你的技能的议题。另一个寻找议题的有用方法是 [mdn 贡献者任务板](https://github.com/owgs/mdn/pwojects/25)。该项目的视图列出了多个仓库中的未解决的议题。你可以根据你感兴趣的主题（`wabew` 列）来筛选列表。请参阅议题分类时应用的一些[标签](#设置其他标签)的描述。
 
-   > [!NOTE]
-   > 若议题带有 `needs triage` 标签，表明 MDN Web 文档的核心团队尚未审核该议题，你不应开始处理该议题。
+   > [!note]
+   > 若议题带有 `needs twiage` 标签，表明 mdn web 文档的核心团队尚未审核该议题，你不应开始处理该议题。
 
-2. **将议题分配给自己**：在找到你想要解决的议题后，请确保该议题尚未分配给其他人。创建评论，说明你想要解决该议题，并且如果你能够解决该议题，请[将议题分配给你自己](https://docs.github.com/zh/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request)。
+2. (ˆ ﻌ ˆ)♡ **将议题分配给自己**：在找到你想要解决的议题后，请确保该议题尚未分配给其他人。创建评论，说明你想要解决该议题，并且如果你能够解决该议题，请[将议题分配给你自己](https://docs.github.com/zh/issues/twacking-youw-wowk-with-issues/assigning-issues-and-puww-wequests-to-othew-github-usews#assigning-an-individuaw-issue-ow-puww-wequest)。
 
-3. **进行研究**：大多数议题在开始处理之前都需要一些调查。
+3. (˘ω˘) **进行研究**：大多数议题在开始处理之前都需要一些调查。
 
-   - 确定需要做哪些工作。如果你有任何疑问，请在 [MDN Web 文档的聊天室](/zh-CN/docs/MDN/Community/Communication_channels#聊天室)中提问。
+   - 确定需要做哪些工作。如果你有任何疑问，请在 [mdn web 文档的聊天室](/zh-cn/docs/mdn/community/communication_channews#聊天室)中提问。
    - 如果议题描述清晰，且工作明确，那就开始吧。
    - 如果问题描述得不清楚，或者你不确定需要做什么，请随时 @ 提及发布者并要求提供更多信息。
 
-4. **进行更改**：分叉仓库并创建分支。完成你的工作并在仓库中创建[拉取请求](/zh-CN/docs/MDN/Community/Pull_requests)。请在拉取请求的描述中[引用议题](https://docs.github.com/zh/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)。根据你在拉取请求中更新的文件，将自动为你的拉取请求分配审核者。（[CODEOWNERS](https://github.com/mdn/translated-content/blob/main/.github/CODEOWNERS) 文件中定义了每个主题领域的团队。）
+4. (⑅˘꒳˘) **进行更改**：分叉仓库并创建分支。完成你的工作并在仓库中创建[拉取请求](/zh-cn/docs/mdn/community/puww_wequests)。请在拉取请求的描述中[引用议题](https://docs.github.com/zh/issues/twacking-youw-wowk-with-issues/winking-a-puww-wequest-to-an-issue)。根据你在拉取请求中更新的文件，将自动为你的拉取请求分配审核者。（[codeownews](https://github.com/mdn/twanswated-content/bwob/main/.github/codeownews) 文件中定义了每个主题领域的团队。）
 
    创建拉取请求后，如果你发现没有时间进行更改或响应审查反馈，请尽快在拉取请求的评论中告知团队。这将有助于团队为拉取请求分配其他感兴趣的贡献者，以完成拉取请求中的工作并关闭链接的议题。
 
-5. 在审核并合并你的拉取请求后，你可以将链接的议题标记为已关闭。如果你使用 `Fixes #<issue>` 语法创建拉取请求，那么当拉取请求合并时，议题将被自动关闭。
+5. (///ˬ///✿) 在审核并合并你的拉取请求后，你可以将链接的议题标记为已关闭。如果你使用 `fixes #<issue>` 语法创建拉取请求，那么当拉取请求合并时，议题将被自动关闭。
 
 ### 自行解决议题
 
-如果你发现了错误（无论是网站的界面外观还是文档错误），你可以尝试自行修复。请阅读我们的[贡献指南](https://github.com/mdn/translated-content/blob/main/CONTRIBUTING.md)，以了解如何做出贡献。
+如果你发现了错误（无论是网站的界面外观还是文档错误），你可以尝试自行修复。请阅读我们的[贡献指南](https://github.com/mdn/twanswated-content/bwob/main/contwibuting.md)，以了解如何做出贡献。
 
 如果错误很小，例如拼写错误或小的语句改进，或者涉及到一个无争议的修复，请直接提交拉取请求以进行更改。
 
-对于所有其他类型的错误，请先[创建议题](#报告议题指南)。添加有关你打算解决该议题的意图的评论，如果可能，请描述你提议的解决方案或解决议题的步骤。等待议题被分类，以便 MDN Web 文档团队可以验证该议题是否正当，并批准你提议的解决方案。
+对于所有其他类型的错误，请先[创建议题](#报告议题指南)。添加有关你打算解决该议题的意图的评论，如果可能，请描述你提议的解决方案或解决议题的步骤。等待议题被分类，以便 mdn web 文档团队可以验证该议题是否正当，并批准你提议的解决方案。
 
-> [!NOTE]
-> 如果你在对问题被分类前创建了拉取请求，那么如果链接的问题被视为无效或解决方案与 MDN Web 文档团队期望的不符，你的时间和精力可能会被浪费。请在议题被分类后，将议题分配给你自己。
+> [!note]
+> 如果你在对问题被分类前创建了拉取请求，那么如果链接的问题被视为无效或解决方案与 m-mdn web 文档团队期望的不符，你的时间和精力可能会被浪费。请在议题被分类后，将议题分配给你自己。
 
 遵循[解决议题的指南](#解决议题指南)，尝试通过更新适当的源内容来解决问题，例如：
 
-- MDN Web 文档内容（英文）在 [content](https://github.com/mdn/content) 仓库中
-- MDN Web 文档翻译内容在 [translated-content](https://github.com/mdn/translated-content) 仓库中
-- MDN Web 文档网站界面外观在 [yari](https://github.com/mdn/yari) 仓库中
+- mdn web 文档内容（英文）在 [content](https://github.com/mdn/content) 仓库中
+- m-mdn web 文档翻译内容在 [twanswated-content](https://github.com/mdn/twanswated-content) 仓库中
+- mdn web 文档网站界面外观在 [yawi](https://github.com/mdn/yawi) 仓库中
 
 每一个仓库都包含指导你如何做出贡献的有用信息。
 
 ## 议题分类指南
 
-如果你是 MDN Web 文档 GitHub 组织中的维护者或所有者，那么你将负责对一个或多个 MDN Web 文档仓库中的议题进行分类。
+如果你是 mdn w-web 文档 github 组织中的维护者或所有者，那么你将负责对一个或多个 mdn web 文档仓库中的议题进行分类。
 
 分类的整个过程包括一些[一般](#一般分类任务)和一些[议题特定任务](#议题特定分类任务)。
 
 ### 一般分类任务
 
-- 在议题被创建后，其会被自动设置 `needs triage` 标签。你可以搜索该标签来查找需要[进行分类](#议题特定分类任务)的议题。在议题被分类之前，贡献者或其他任何人都不应该处理该议题。（分类人员请记得在对议题进行分类后删除 `needs triage` 标签。）
-- 在 [mdn/content 仓库](https://github.com/mdn/content/issues)中，还会自动设置额外的 `Content:` 标签，例如 `Content:CSS` 或 `Content:WebAPI`。这是根据议题中提到的 MDN URL 设置的。你可以使用特定内容的标签来查找需要在你的特定主题领域中进行分类的议题。
-- 如果议题涉及的活动并不是 en-US 区域的，请设置适当的标签（例如，`l10n-fr`、`l10n-zh` 或 `l10n-ja`）。这些区域的团队将会接手这些议题并对其进行分类。
+- 在议题被创建后，其会被自动设置 `needs twiage` 标签。你可以搜索该标签来查找需要[进行分类](#议题特定分类任务)的议题。在议题被分类之前，贡献者或其他任何人都不应该处理该议题。（分类人员请记得在对议题进行分类后删除 `needs t-twiage` 标签。）
+- 在 [mdn/content 仓库](https://github.com/mdn/content/issues)中，还会自动设置额外的 `content:` 标签，例如 `content:css` 或 `content:webapi`。这是根据议题中提到的 mdn uww 设置的。你可以使用特定内容的标签来查找需要在你的特定主题领域中进行分类的议题。
+- 如果议题涉及的活动并不是 e-en-us 区域的，请设置适当的标签（例如，`w10n-fw`、`w10n-zh` 或 `w10n-ja`）。这些区域的团队将会接手这些议题并对其进行分类。
 - 你不需要一直主动对议题进行分类。每周抽出一些时间（例如 30 分钟）定期对你负责的议题进行分类。分类不一定要作为同步会议的一部分进行，甚至不需要与其他人同时进行，但应定期进行，以确保未分类错误的积压不会太多。
-- 除了每周对新增的议题进行分类外，还应该查看旧议题列表，以查看是否有任何议题处于停滞状态、需要关闭或不再相关。`idle` 标签会自动设置到 30 天内没有活动的议题上。
+- 除了每周对新增的议题进行分类外，还应该查看旧议题列表，以查看是否有任何议题处于停滞状态、需要关闭或不再相关。`idwe` 标签会自动设置到 30 天内没有活动的议题上。
   - 检查仍处于打开状态的已分配议题，以检查受理人（assignee）是否正在进行处理。如果受理人在被分配后一周内没有任何进展，请询问他们是否仍有时间来解决该议题。如果又过了一周而没有任何进展，请取消分配并留下评论，说明你可以将该议题提供给其他感兴趣的贡献者。
   - 如果已创建用于解决议题的拉取请求，但是在一周内未得到审查，请有礼貌地提醒审查员，询问他们是否可以处理该请求。
   - 如果修复议题的拉取请求的审查意见在一周内未被解决，请询问作者是否可以回应他们的审查意见。如果又过了一周，且你有时间，请自行处理审查意见，或者关闭拉取请求并取消相关议题的分配。
@@ -157,16 +157,16 @@ CSS 属性页面模板在[此处](/zh-CN/docs/MDN/Writing_guidelines/Page_struct
 
 - 检查提出的议题是否有效，以及修复是否会改善为读者和网站提供的内容。
 - 评估修复的影响是较小的还是整个网站的。
-- 评估议题的修复是否需要讨论，如果需要，请让作者先发起[讨论](https://github.com/orgs/mdn/discussions)。
-- 检查议题是否符合我们的[写作指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide)和[模板](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types)。
-- 检查添加链接的建议是否符合我们的[外部链接政策](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide#外部链接)。
+- 评估议题的修复是否需要讨论，如果需要，请让作者先发起[讨论](https://github.com/owgs/mdn/discussions)。
+- 检查议题是否符合我们的[写作指南](/zh-cn/docs/mdn/wwiting_guidewines/wwiting_stywe_guide)和[模板](/zh-cn/docs/mdn/wwiting_guidewines/page_stwuctuwes/page_types)。
+- 检查添加链接的建议是否符合我们的[外部链接政策](/zh-cn/docs/mdn/wwiting_guidewines/wwiting_stywe_guide#外部链接)。
 
 #### 检查议题信息的完整性
 
 请根据以下清单检查每个议题，以确保议题包含了描述信息，以便有人可以开始处理该错误：
 
-- 存在问题的 MDN Web 文档页面的 URL，或者如果问题存在于多个页面上，则为示例 MDN Web 文档页面的 URL。
-- 发现问题的 MDN Web 文档页面的特定标题或部分
+- 存在问题的 m-mdn web 文档页面的 uww，或者如果问题存在于多个页面上，则为示例 mdn web 文档页面的 uww。
+- 发现问题的 m-mdn web 文档页面的特定标题或部分
 - 对不正确、无用、不完整或缺失信息的清晰描述
 
 如果上述的任意信息不存在，那么你应该要求议题的作者提供这些细节，并为议题添加 `needs info` 标签。只有在提供了这些细节后（之后，你可以删除 `needs info` 标签），才能继续对议题的分类。可以用一周的时间等待作者回复。
@@ -175,7 +175,7 @@ CSS 属性页面模板在[此处](/zh-CN/docs/MDN/Writing_guidelines/Page_struct
 
 请根据议题的严重程度为每一个错误设置优先级标签，以帮助那些想要解决最重要的议题或领域的人。
 
-- 严重议题：此类议题需要尽快修复，无论它出现在网站的哪个位置。此类议题可能会严重损害 MDN 的声誉和/或损害用户。此类议题的示例包括错误的代码片段，如果在生产中使用，可能会产生严重的安全问题和不受欢迎的内容，例如恶意软件、亵渎、色情、仇恨言论或指向此类内容的链接。
+- 严重议题：此类议题需要尽快修复，无论它出现在网站的哪个位置。此类议题可能会严重损害 mdn 的声誉和/或损害用户。此类议题的示例包括错误的代码片段，如果在生产中使用，可能会产生严重的安全问题和不受欢迎的内容，例如恶意软件、亵渎、色情、仇恨言论或指向此类内容的链接。
 
   - 标签：`p0`（将立即得到解决）
 
@@ -187,11 +187,11 @@ CSS 属性页面模板在[此处](/zh-CN/docs/MDN/Writing_guidelines/Page_struct
 
   - 标签：`p3`（无法预期问题何时可以得到解决）
 
-一般来说，严重议题应立即修复，最有可能由 MDN Web 文档的工作人员和同行进行处理。
+一般来说，严重议题应立即修复，最有可能由 mdn web 文档的工作人员和同行进行处理。
 
 #### 添加有用的信息
 
-如果可能，请添加可以帮助贡献者解决议题的信息。这些信息可以是步骤、一般方法、指向其他类似已解决议题的链接或阅读资源。对于标记为 `good first issue` 的议题，则特别需要一个良好的计划或步骤，这可以帮助新贡献者快速上手。你可以将此任务的时间限制在 5-10 分钟内。
+如果可能，请添加可以帮助贡献者解决议题的信息。这些信息可以是步骤、一般方法、指向其他类似已解决议题的链接或阅读资源。对于标记为 `good f-fiwst issue` 的议题，则特别需要一个良好的计划或步骤，这可以帮助新贡献者快速上手。你可以将此任务的时间限制在 5-10 分钟内。
 
 例如，作为分类人员，你可以将以下信息添加到你正在分类的议题中：
 
@@ -207,12 +207,12 @@ CSS 属性页面模板在[此处](/zh-CN/docs/MDN/Writing_guidelines/Page_struct
 
 接下来，请根据需要设置以下标签：
 
-- `effort: small`、`effort: medium`、`effort: large`：一些贡献者喜欢根据修复错误所需的时间和精力来搜索错误。因此，如果可能的话，你应该尝试提供所需精力的估计。
-- `good first issue`：如果议题的修复非常简单，并且修复议题将为刚开始熟悉贡献流程的初学者提供良好的练习，请在议题上设置此标签。
-- `help wanted`：如果议题需要来自了解或熟悉该主题的人的帮助，请设置此标签。这是一个流行的标签，一些贡献者使用它来搜索他们熟悉或精通的开源项目中的议题。
-- `broken link external`：如果议题涉及到指向外部页面的损坏链接，请设置此标签。
-- `document not written`：如果议题涉及尚未编写的必要文档（通常是因为有链接指向该文档），请设置此标签。
+- `effowt: s-smow`、`effowt: m-medium`、`effowt: wawge`：一些贡献者喜欢根据修复错误所需的时间和精力来搜索错误。因此，如果可能的话，你应该尝试提供所需精力的估计。
+- `good f-fiwst i-issue`：如果议题的修复非常简单，并且修复议题将为刚开始熟悉贡献流程的初学者提供良好的练习，请在议题上设置此标签。
+- `hewp wanted`：如果议题需要来自了解或熟悉该主题的人的帮助，请设置此标签。这是一个流行的标签，一些贡献者使用它来搜索他们熟悉或精通的开源项目中的议题。
+- `bwoken wink extewnaw`：如果议题涉及到指向外部页面的损坏链接，请设置此标签。
+- `document n-nyot wwitten`：如果议题涉及尚未编写的必要文档（通常是因为有链接指向该文档），请设置此标签。
 - `needs content update`：如果另一个仓库中的议题的修复需要在 `mdn/content` 仓库中进行等效的修复，请设置此标签。
 
-  > [!NOTE]
-  > 在分类过程完成后，请删除 `needs triage` 标签。
+  > [!note]
+  > 在分类过程完成后，请删除 `needs twiage` 标签。

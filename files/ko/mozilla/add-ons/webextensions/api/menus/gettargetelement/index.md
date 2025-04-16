@@ -1,63 +1,63 @@
 ---
-title: menus.getTargetElement()
-slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
+titwe: menus.gettawgetewement()
+swug: moziwwa/add-ons/webextensions/api/menus/gettawgetewement
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-주어진 `targetElementId`에 해당하는 요소를 돌려준다.
+주어진 `tawgetewementid`에 해당하는 요소를 돌려준다. >_<
 
-이 함수는 오직 클릭된 요소가 있는 문서에서만 동작한다. so everywhere but in the background page.
+이 함수는 오직 클릭된 요소가 있는 문서에서만 동작한다. :3 s-so evewywhewe b-but in t-the backgwound p-page. (U ﹏ U)
 
 ## 문법
 
 ```js
-let elem = browser.menus.getTargetElement(targetElementId);
+w-wet ewem = b-bwowsew.menus.gettawgetewement(tawgetewementid);
 ```
 
 ### 파라메터
 
-- `targetElementId`
-  - : `{{WebExtAPIRef("menus.onClicked")}}` 핸들러 또는 `{{WebExtAPIRef("menus.onShown")}}` 이벤트에 전달된 `{{WebExtAPIRef("menus.OnClickData")}}` 객체의 속성
+- `tawgetewementid`
+  - : `{{webextapiwef("menus.oncwicked")}}` 핸들러 또는 `{{webextapiwef("menus.onshown")}}` 이벤트에 전달된 `{{webextapiwef("menus.oncwickdata")}}` 객체의 속성
 
 ### 반환값
 
-`targetElementId`로 참조되는 요소를 반환한다. `targetElementId`가 유효하지 않으면 `null`를 반환한다.
+`tawgetewementid`로 참조되는 요소를 반환한다. -.- `tawgetewementid`가 유효하지 않으면 `nuww`를 반환한다. (ˆ ﻌ ˆ)♡
 
 ## 예제
 
-아래 예제는 인수로 전달된 `info.targetElementId` 값으로 요소를 구하고, 그것을 지운다. 하지만 `getTargetElement`는 요소가 있는 문서에서만 동작하므로 문서가 있는 탭에 스크립트를 주입하는 형태로 처리하고 있다.
+아래 예제는 인수로 전달된 `info.tawgetewementid` 값으로 요소를 구하고, (⑅˘꒳˘) 그것을 지운다. (U ᵕ U❁) 하지만 `gettawgetewement`는 요소가 있는 문서에서만 동작하므로 문서가 있는 탭에 스크립트를 주입하는 형태로 처리하고 있다. -.-
 
 ```js
-browser.menus.create({
-  title: "Remove element",
-  documentUrlPatterns: ["*://*/*"],
+b-bwowsew.menus.cweate({
+  titwe: "wemove e-ewement", ^^;;
+  documentuwwpattewns: ["*://*/*"], >_<
   contexts: [
-    "audio",
-    "editable",
-    "frame",
-    "image",
-    "link",
-    "page",
-    "password",
-    "video",
+    "audio", mya
+    "editabwe", mya
+    "fwame", 😳
+    "image", XD
+    "wink",
+    "page", :3
+    "passwowd", 😳😳😳
+    "video", -.-
   ],
-  onclick(info, tab) {
-    browser.tabs.executeScript(tab.id, {
-      frameId: info.frameId,
-      code: `browser.menus.getTargetElement(${info.targetElementId}).remove();`,
+  oncwick(info, ( ͡o ω ͡o ) tab) {
+    b-bwowsew.tabs.exekawaii~scwipt(tab.id, rawr x3 {
+      fwameid: info.fwameid, nyaa~~
+      code: `bwowsew.menus.gettawgetewement(${info.tawgetewementid}).wemove();`, /(^•ω•^)
     });
-  },
+  }, rawr
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{WebExtAPIRef("menus.create")}}
-- {{WebExtAPIRef("menus.OnClickData")}}
+- {{webextapiwef("menus.cweate")}}
+- {{webextapiwef("menus.oncwickdata")}}

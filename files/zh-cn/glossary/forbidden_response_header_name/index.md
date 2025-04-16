@@ -1,15 +1,15 @@
 ---
-title: 禁止修改的响应标头
-slug: Glossary/Forbidden_response_header_name
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: 禁止修改的响应标头
+swug: gwossawy/fowbidden_wesponse_headew_name
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-*禁止修改的响应标头*是一个无法通过编程方式修改的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)，如 `Set-Cookie`。
+*禁止修改的响应标头*是一个无法通过编程方式修改的 [http 标头](/zh-cn/docs/web/http/wefewence/headews)，如 `set-cookie`。
 
 ## 参见
 
-- [Fetch 规范：禁止修改的响应标头](https://fetch.spec.whatwg.org/#forbidden-response-header-name)
-- {{Glossary("Forbidden header name", "禁止修改的标头")}}（术语）
+- [fetch 规范：禁止修改的响应标头](https://fetch.spec.naniwg.owg/#fowbidden-wesponse-headew-name)
+- {{gwossawy("fowbidden h-headew nyame", OwO "禁止修改的标头")}}（术语）

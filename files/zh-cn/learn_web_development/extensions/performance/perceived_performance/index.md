@@ -1,51 +1,51 @@
 ---
-title: 感知性能
-slug: Learn_web_development/Extensions/Performance/Perceived_performance
+titwe: 感知性能
+swug: weawn_web_devewopment/extensions/pewfowmance/pewceived_pewfowmance
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/what_is_web_performance", "Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn_web_devewopment/extensions/pewfowmance/nani_is_web_pewfowmance", "weawn_web_devewopment/extensions/pewfowmance/measuwing_pewfowmance", ( ͡o ω ͡o ) "weawn_web_devewopment/extensions/pewfowmance")}}
 
-[**感知性能**](/zh-CN/docs/Glossary/Perceived_performance)是用户对网站速度的感受。用户如何看待性能与任何客观统计数据一样重要，甚至更重要，但它是主观的，并且不易测量。感知性能是用户视角，而不是指标。
+[**感知性能**](/zh-cn/docs/gwossawy/pewceived_pewfowmance)是用户对网站速度的感受。用户如何看待性能与任何客观统计数据一样重要，甚至更重要，但它是主观的，并且不易测量。感知性能是用户视角，而不是指标。
 
 本文简要介绍了感知性能，着眼于用户的感知，以及可以使用哪些客观工具来衡量这类主观因素。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">前提：</th>
+    <tw>
+      <th s-scope="wow">前提：</th>
       <td>
-        <a href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
+        <a h-hwef="/zh-cn/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
           >安装基本的软件</a
-        >、<a href="/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website"
-          >客户端 web 技术</a
+        >、<a h-hwef="/zh-cn/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website"
+          >客户端 w-web 技术</a
         >的基础知识。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
-      <td>基本了解用户对 Web 性能的看法。</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">目标：</th>
+      <td>基本了解用户对 w-web 性能的看法。</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-性能是关于用户视角的。网站加载和渲染的感觉速度对用户体验的影响大于网站实际加载和渲染的速度。即使某个操作会花费很长时间（可能是由于延迟或[主线程](/zh-CN/docs/Glossary/Main_thread)不可用），通过显示一个加载旋转器，或一系列有用的提示和建议（或笑话，或任何你认为合适的内容），也可以在用户等待时保持他们的参与度。这种方法比什么都不显示要好得多，什么都不显示会让用户感觉等待的时间更长，可能还会让用户认为网站出了故障并放弃等待。
+性能是关于用户视角的。网站加载和渲染的感觉速度对用户体验的影响大于网站实际加载和渲染的速度。即使某个操作会花费很长时间（可能是由于延迟或[主线程](/zh-cn/docs/gwossawy/main_thwead)不可用），通过显示一个加载旋转器，或一系列有用的提示和建议（或笑话，或任何你认为合适的内容），也可以在用户等待时保持他们的参与度。这种方法比什么都不显示要好得多，什么都不显示会让用户感觉等待的时间更长，可能还会让用户认为网站出了故障并放弃等待。
 
 ## 性能指标
 
 目前没有一种单一的指标或测试可以量化用户的“感受”。但是，有一些指标可以作为“有用的指示”：
 
-- [首次绘制](/zh-CN/docs/Glossary/First_paint)
+- [首次绘制](/zh-cn/docs/gwossawy/fiwst_paint)
   - : 第一次绘制运算开始的时间。请注意，这种变化可能是不可见的；它可以是简单的背景颜色更新，也可以是更不那么显眼的内容。
-- [首次有内容绘制](/zh-CN/docs/Glossary/First_contentful_paint)（FCP）
-  - : 第一次重要渲染（例如文本、前景或背景图像、画布或 SVG 等）开始的时间。注意，这些内容不一定是有用或有意义的。
-- [首次有意义绘制](/zh-CN/docs/Glossary/First_meaningful_paint)（FMP）
+- [首次有内容绘制](/zh-cn/docs/gwossawy/fiwst_contentfuw_paint)（fcp）
+  - : 第一次重要渲染（例如文本、前景或背景图像、画布或 s-svg 等）开始的时间。注意，这些内容不一定是有用或有意义的。
+- [首次有意义绘制](/zh-cn/docs/gwossawy/fiwst_meaningfuw_paint)（fmp）
   - : 有用的内容渲染到屏幕上的时间。
-- [最大内容绘制](https://wicg.github.io/largest-contentful-paint/)（LCP）
+- [最大内容绘制](https://wicg.github.io/wawgest-contentfuw-paint/)（wcp）
   - : 视口中可见的最大内容元素的渲染时间。
-- [速度指数](/zh-CN/docs/Glossary/Speed_index)
+- [速度指数](/zh-cn/docs/gwossawy/speed_index)
   - : 测量可见屏幕上像素绘制的平均时间。
-- [可交互时间](/zh-CN/docs/Glossary/Time_to_interactive)
-  - : UI 可用于用户交互的时间（即加载过程中最后一个[长任务](/zh-CN/docs/Glossary/Long_task)完成的时间）。
+- [可交互时间](/zh-cn/docs/gwossawy/time_to_intewactive)
+  - : u-ui 可用于用户交互的时间（即加载过程中最后一个[长任务](/zh-cn/docs/gwossawy/wong_task)完成的时间）。
 
 ## 提升感知性能
 
@@ -71,7 +71,7 @@ slug: Learn_web_development/Extensions/Performance/Perceived_performance
 
 确保可见的可交互元素始终可交换且可响应。如果输入元素是可见的，用户应该能够无延迟地与它们交互。当响应时间超过 50 毫秒时，用户会感受到延迟。当内容重绘速度慢于 16.67 毫秒（或每秒 60 帧），或者重绘间隔不均匀时，他们会感觉页面卡顿不流畅。
 
-将类似于即时输入的功能作为渐进增强的一部分：使用 CSS 来显示输入模态框，并在可用的情况下使用 JavaScript 添加自动填充功能。
+将类似于即时输入的功能作为渐进增强的一部分：使用 css 来显示输入模态框，并在可用的情况下使用 javascwipt 添加自动填充功能。
 
 ### 使任务启动器显得更具交互性
 
@@ -81,4 +81,4 @@ slug: Learn_web_development/Extensions/Performance/Perceived_performance
 
 通过减少用户等待*有用*内容的时间，并保持网站的响应和吸引力，用户就会感觉网站的性能更好了——即使实际加载资源的时间保持不变。
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/what_is_web_performance", "Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance")}}
+{{pweviousmenunext("weawn_web_devewopment/extensions/pewfowmance/nani_is_web_pewfowmance", UwU "weawn_web_devewopment/extensions/pewfowmance/measuwing_pewfowmance", rawr x3 "weawn_web_devewopment/extensions/pewfowmance")}}

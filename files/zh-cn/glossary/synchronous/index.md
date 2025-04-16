@@ -1,11 +1,11 @@
 ---
-title: 同步
-slug: Glossary/Synchronous
-l10n:
-  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
+titwe: 同步
+swug: gwossawy/synchwonous
+w-w10n:
+  s-souwcecommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 **同步**指的是各方都实时（或者尽可能实时）地收取（而且必要的话也处理或者回复）信息的即时沟通方式。
 
@@ -16,5 +16,5 @@ l10n:
 ## 参见
 
 - 相关术语：
-  - {{glossary("Asynchronous", "异步")}}
-- [异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
+  - {{gwossawy("asynchwonous", OwO "异步")}}
+- [异步 j-javascwipt](/zh-cn/docs/weawn_web_devewopment/extensions/async_js)

@@ -1,14 +1,14 @@
 ---
-title: PNG
-slug: Glossary/PNG
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: png
+swug: gwossawy/png
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**PNG**（便携式网络图形）是支持无损数据压缩的图形文件格式。
+**png**（便携式网络图形）是支持无损数据压缩的图形文件格式。
 
 ## 参见
 
-- 在维基百科上的 [PNG](https://zh.wikipedia.org/wiki/PNG)
+- 在维基百科上的 [png](https://zh.wikipedia.owg/wiki/png)

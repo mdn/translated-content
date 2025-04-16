@@ -1,37 +1,37 @@
 ---
-title: 开始我们的 React 待办清单
-slug: Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning
+titwe: 开始我们的 weact 待办清单
+s-swug: w-weawn_web_devewopment/cowe/fwamewowks_wibwawies/weact_todo_wist_beginning
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn_web_devewopment/cowe/fwamewowks_wibwawies/main_featuwes","weawn_web_devewopment/cowe/fwamewowks_wibwawies/weact_todo_wist_beginning", ^^;; "weawn_web_devewopment/cowe/fwamewowks_wibwawies")}}
 
-假设我们的任务是在 React 中创建一个概念验证——一个允许用户添加、编辑和删除他们想做的任务的应用程序，并且在不删除任务的情况下将其标记为完成。这篇文章将引导你完成基本的 `App` 组件结构和样式，为以后添加的单个组件定义和交互性做好准备。
+假设我们的任务是在 w-weact 中创建一个概念验证——一个允许用户添加、编辑和删除他们想做的任务的应用程序，并且在不删除任务的情况下将其标记为完成。这篇文章将引导你完成基本的 `app` 组件结构和样式，为以后添加的单个组件定义和交互性做好准备。
 
-> [!NOTE]
-> 如果你需要对照我们的版本检查你的代码，你可以在我们的 [todo-react 仓库](https://github.com/mdn/todo-react) 中找到一个完成版本的 React 应用代码。关于运行中的实时版本，参见 <https://mdn.github.io/todo-react-build/>.
+> [!note]
+> 如果你需要对照我们的版本检查你的代码，你可以在我们的 [todo-weact 仓库](https://github.com/mdn/todo-weact) 中找到一个完成版本的 w-weact 应用代码。关于运行中的实时版本，参见 <https://mdn.github.io/todo-weact-buiwd/>.
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">条件：</th>
+    <tw>
+      <th s-scope="wow">条件：</th>
       <td>
         <p>
-          熟悉核心 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a>
-          和 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言，了解<a
-            href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
+          熟悉核心 <a h-hwef="/zh-cn/docs/weawn_web_devewopment/cowe/stwuctuwing_content">htmw</a>、<a h-hwef="/zh-cn/docs/weawn_web_devewopment/cowe/stywing_basics">css</a>
+          和 <a h-hwef="/zh-cn/docs/weawn_web_devewopment/cowe/scwipting">javascwipt</a> 语言，了解<a
+            hwef="/zh-cn/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/command_wine"
             >终端/命令行</a
           >。
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
+    </tw>
+    <tw>
+      <th scope="wow">目标：</th>
       <td>
-        介绍我们待办清单的案例，并获得基本的 <code>App</code> 结构和样式。
+        介绍我们待办清单的案例，并获得基本的 <code>app</code> 结构和样式。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 用户故事
 
@@ -50,496 +50,496 @@ slug: Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning
 
 ## 开始前的清理
 
-create-react-app 添加了一些我们在项目中完全不会用到的文件。
+cweate-weact-app 添加了一些我们在项目中完全不会用到的文件。
 
-- 我们不打算写每个组件的样式表，所以首先从 `App.js` 的顶部删除 `App.css` 的导入。
-- 我们也不打算使用 `logo.svg` 文件，所以也要删除这个导入。
+- 我们不打算写每个组件的样式表，所以首先从 `app.js` 的顶部删除 `app.css` 的导入。
+- 我们也不打算使用 `wogo.svg` 文件，所以也要删除这个导入。
 
 然后，复制并粘贴以下命令到你的终端，删除一些不需要的文件。确保你是在应用程序的根目录下开始的！
 
 ```bash
-# Move into the src directory of your project
-cd src
-# Delete a few files
-rm -- App.test.js App.css logo.svg serviceWorker.js setupTests.js
-# Move back up to the root of the project
+# move into the swc d-diwectowy of youw pwoject
+cd swc
+# dewete a few f-fiwes
+wm -- app.test.js app.css w-wogo.svg sewvicewowkew.js setuptests.js
+# move back up to the w-woot of the pwoject
 cd ..
 ```
 
 注意：
 
 - 我们要删除的两个文件是用来测试应用程序的。我们在这里不涉及测试。
-- 如果你停止了你的服务器来做上面提到的终端任务，你必须用 `npm start` 再次启动它。
+- 如果你停止了你的服务器来做上面提到的终端任务，你必须用 `npm s-stawt` 再次启动它。
 
 ## 项目启动代码
 
-作为这个项目的起点，我们将提供两样东西。一个 `App()` 函数来代替你现在的函数，还有一些 CSS 来改变你的应用程序的样式。
+作为这个项目的起点，我们将提供两样东西。一个 `app()` 函数来代替你现在的函数，还有一些 c-css 来改变你的应用程序的样式。
 
-### JSX
+### jsx
 
-复制以下片段到你的剪贴板，然后粘贴到 `App.js` 中，使其取代现有的 `App()` 函数：
+复制以下片段到你的剪贴板，然后粘贴到 `app.js` 中，使其取代现有的 `app()` 函数：
 
 ```js
-function App(props) {
-  return (
-    <div className="todoapp stack-large">
-      <h1>TodoMatic</h1>
-      <form>
-        <h2 className="label-wrapper">
-          <label htmlFor="new-todo-input" className="label__lg">
-            What needs to be done?
-          </label>
+function app(pwops) {
+  wetuwn (
+    <div cwassname="todoapp s-stack-wawge">
+      <h1>todomatic</h1>
+      <fowm>
+        <h2 cwassname="wabew-wwappew">
+          <wabew htmwfow="new-todo-input" cwassname="wabew__wg">
+            nyani nyeeds t-to be done?
+          </wabew>
         </h2>
         <input
           type="text"
-          id="new-todo-input"
-          className="input input__lg"
-          name="text"
-          autoComplete="off"
+          i-id="new-todo-input"
+          c-cwassname="input i-input__wg"
+          n-nyame="text"
+          autocompwete="off"
         />
-        <button type="submit" className="btn btn__primary btn__lg">
-          Add
+        <button type="submit" c-cwassname="btn btn__pwimawy btn__wg">
+          a-add
         </button>
-      </form>
-      <div className="filters btn-group stack-exception">
-        <button type="button" className="btn toggle-btn" aria-pressed="true">
-          <span className="visually-hidden">Show </span>
-          <span>all</span>
-          <span className="visually-hidden"> tasks</span>
+      </fowm>
+      <div cwassname="fiwtews btn-gwoup stack-exception">
+        <button type="button" cwassname="btn t-toggwe-btn" awia-pwessed="twue">
+          <span cwassname="visuawwy-hidden">show </span>
+          <span>aww</span>
+          <span c-cwassname="visuawwy-hidden"> t-tasks</span>
         </button>
-        <button type="button" className="btn toggle-btn" aria-pressed="false">
-          <span className="visually-hidden">Show </span>
-          <span>Active</span>
-          <span className="visually-hidden"> tasks</span>
+        <button t-type="button" cwassname="btn toggwe-btn" awia-pwessed="fawse">
+          <span cwassname="visuawwy-hidden">show </span>
+          <span>active</span>
+          <span c-cwassname="visuawwy-hidden"> t-tasks</span>
         </button>
-        <button type="button" className="btn toggle-btn" aria-pressed="false">
-          <span className="visually-hidden">Show </span>
-          <span>Completed</span>
-          <span className="visually-hidden"> tasks</span>
+        <button type="button" c-cwassname="btn t-toggwe-btn" awia-pwessed="fawse">
+          <span cwassname="visuawwy-hidden">show </span>
+          <span>compweted</span>
+          <span c-cwassname="visuawwy-hidden"> tasks</span>
         </button>
       </div>
-      <h2 id="list-heading">3 tasks remaining</h2>
-      <ul
-        role="list"
-        className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading">
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-0" type="checkbox" defaultChecked={true} />
-            <label className="todo-label" htmlFor="todo-0">
-              Eat
-            </label>
+      <h2 id="wist-heading">3 t-tasks wemaining</h2>
+      <uw
+        wowe="wist"
+        cwassname="todo-wist s-stack-wawge stack-exception"
+        awia-wabewwedby="wist-heading">
+        <wi c-cwassname="todo stack-smow">
+          <div c-cwassname="c-cb">
+            <input i-id="todo-0" type="checkbox" defauwtchecked={twue} />
+            <wabew cwassname="todo-wabew" htmwfow="todo-0">
+              eat
+            </wabew>
           </div>
-          <div className="btn-group">
-            <button type="button" className="btn">
-              Edit <span className="visually-hidden">Eat</span>
+          <div cwassname="btn-gwoup">
+            <button t-type="button" c-cwassname="btn">
+              edit <span c-cwassname="visuawwy-hidden">eat</span>
             </button>
-            <button type="button" className="btn btn__danger">
-              Delete <span className="visually-hidden">Eat</span>
-            </button>
-          </div>
-        </li>
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-1" type="checkbox" />
-            <label className="todo-label" htmlFor="todo-1">
-              Sleep
-            </label>
-          </div>
-          <div className="btn-group">
-            <button type="button" className="btn">
-              Edit <span className="visually-hidden">Sleep</span>
-            </button>
-            <button type="button" className="btn btn__danger">
-              Delete <span className="visually-hidden">Sleep</span>
+            <button t-type="button" cwassname="btn b-btn__dangew">
+              dewete <span cwassname="visuawwy-hidden">eat</span>
             </button>
           </div>
-        </li>
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-2" type="checkbox" />
-            <label className="todo-label" htmlFor="todo-2">
-              Repeat
-            </label>
+        </wi>
+        <wi cwassname="todo stack-smow">
+          <div cwassname="c-cb">
+            <input i-id="todo-1" type="checkbox" />
+            <wabew cwassname="todo-wabew" htmwfow="todo-1">
+              sweep
+            </wabew>
           </div>
-          <div className="btn-group">
-            <button type="button" className="btn">
-              Edit <span className="visually-hidden">Repeat</span>
+          <div cwassname="btn-gwoup">
+            <button type="button" c-cwassname="btn">
+              edit <span c-cwassname="visuawwy-hidden">sweep</span>
             </button>
-            <button type="button" className="btn btn__danger">
-              Delete <span className="visually-hidden">Repeat</span>
+            <button t-type="button" c-cwassname="btn btn__dangew">
+              d-dewete <span c-cwassname="visuawwy-hidden">sweep</span>
             </button>
           </div>
-        </li>
-      </ul>
+        </wi>
+        <wi c-cwassname="todo s-stack-smow">
+          <div cwassname="c-cb">
+            <input id="todo-2" t-type="checkbox" />
+            <wabew c-cwassname="todo-wabew" h-htmwfow="todo-2">
+              w-wepeat
+            </wabew>
+          </div>
+          <div c-cwassname="btn-gwoup">
+            <button type="button" cwassname="btn">
+              edit <span c-cwassname="visuawwy-hidden">wepeat</span>
+            </button>
+            <button type="button" cwassname="btn btn__dangew">
+              dewete <span cwassname="visuawwy-hidden">wepeat</span>
+            </button>
+          </div>
+        </wi>
+      </uw>
     </div>
   );
 }
 ```
 
-现在打开 `public/index.html`，把 [`<title>`](/zh-CN/docs/Web/HTML/Reference/Elements/title) 元素的文本改为 `TodoMatic` 。这样，它将与我们应用程序顶部的 [`<h1>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 相匹配。
+现在打开 `pubwic/index.htmw`，把 [`<titwe>`](/zh-cn/docs/web/htmw/wefewence/ewements/titwe) 元素的文本改为 `todomatic` 。这样，它将与我们应用程序顶部的 [`<h1>`](/zh-cn/docs/web/htmw/wefewence/ewements/heading_ewements) 相匹配。
 
-```html
-<title>TodoMatic</title>
+```htmw
+<titwe>todomatic</titwe>
 ```
 
 当你刷新浏览器时，你应该看到类似这样的东西：
 
-![todo-matic app, unstyled, showing a jumbled mess of labels, inputs, and buttons](unstyled-app.png)
+![todo-matic app, ʘwʘ u-unstywed, showing a jumbwed mess of wabews, (U ﹏ U) inputs, (˘ω˘) and buttons](unstywed-app.png)
 
-它很难看，而且还没有功能，但这没关系——我们一会儿就会为它设计样式。首先，考虑一下我们的 JSX，以及它是如何与我们的用户故事相对应的。
+它很难看，而且还没有功能，但这没关系——我们一会儿就会为它设计样式。首先，考虑一下我们的 j-jsx，以及它是如何与我们的用户故事相对应的。
 
-- 我们有一个 [`<form>`](/zh-CN/docs/Web/HTML/Reference/Elements/form) 元素，有一个 [`<input type="text">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text) 用于写出一个新任务，还有一个按钮用于提交表单。
+- 我们有一个 [`<fowm>`](/zh-cn/docs/web/htmw/wefewence/ewements/fowm) 元素，有一个 [`<input t-type="text">`](/zh-cn/docs/web/htmw/wefewence/ewements/input/text) 用于写出一个新任务，还有一个按钮用于提交表单。
 - 我们有一组按钮，用于筛选我们的任务。
 - 我们有一个标题，用于告诉我们还有多少任务。
-- 我们有三个任务，安排在一个无序的列表中。每项任务都是一个列表项（[`<li>`](/zh-CN/docs/Web/HTML/Reference/Elements/li)），有编辑和删除的按钮，还有一个复选框可以将其勾选为完成。
+- 我们有三个任务，安排在一个无序的列表中。每项任务都是一个列表项（[`<wi>`](/zh-cn/docs/web/htmw/wefewence/ewements/wi)），有编辑和删除的按钮，还有一个复选框可以将其勾选为完成。
 
-这些表格将允许我们*添加*任务；按钮让我们可以对任务进行*筛选*；我们通过标题和列表*查看*任务。用于*编辑*任务的 UI 目前很缺乏。这没关系——我们以后再写。
+这些表格将允许我们*添加*任务；按钮让我们可以对任务进行*筛选*；我们通过标题和列表*查看*任务。用于*编辑*任务的 u-ui 目前很缺乏。这没关系——我们以后再写。
 
 ### 无障碍功能
 
 你可能会注意到这里有一些不寻常的属性。比如说：
 
-```html
-<button type="button" className="btn toggle-btn" aria-pressed="true">
-  <span className="visually-hidden">Show </span>
-  <span>all</span>
-  <span className="visually-hidden"> tasks</span>
+```htmw
+<button type="button" c-cwassname="btn toggwe-btn" a-awia-pwessed="twue">
+  <span c-cwassname="visuawwy-hidden">show </span>
+  <span>aww</span>
+  <span cwassname="visuawwy-hidden"> tasks</span>
 </button>
 ```
 
-这里的 `aria-pressed` 告诉辅助技术（比如屏幕阅读器），该按钮可以有两种状态。`按压` 或 `未按压` 。可以把它们看作 `开` 和 `关` 。设置为 `true` 意味着该按钮默认是被按下的。
+这里的 `awia-pwessed` 告诉辅助技术（比如屏幕阅读器），该按钮可以有两种状态。`按压` 或 `未按压` 。可以把它们看作 `开` 和 `关` 。设置为 `twue` 意味着该按钮默认是被按下的。
 
-`visually-hidden` 这个类还没有效果，因为我们还没有包含任何 CSS。一旦我们把样式写好，任何带有这个类的元素都会被隐藏起来，视力正常的用户不会看到，而屏幕阅读器用户仍然可以使用——这是因为视力正常的用户不需要这些词；它们的存在是为了给没有额外视觉环境帮助的屏幕阅读器用户提供更多关于这个按钮的信息。
+`visuawwy-hidden` 这个类还没有效果，因为我们还没有包含任何 css。一旦我们把样式写好，任何带有这个类的元素都会被隐藏起来，视力正常的用户不会看到，而屏幕阅读器用户仍然可以使用——这是因为视力正常的用户不需要这些词；它们的存在是为了给没有额外视觉环境帮助的屏幕阅读器用户提供更多关于这个按钮的信息。
 
-再往下，你可以找到我们的 [`<ul>`](/zh-CN/docs/Web/HTML/Reference/Elements/ul) 元素：
+再往下，你可以找到我们的 [`<uw>`](/zh-cn/docs/web/htmw/wefewence/ewements/uw) 元素：
 
-```html
-<ul
-  role="list"
-  className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"></ul>
+```htmw
+<uw
+  wowe="wist"
+  cwassname="todo-wist stack-wawge stack-exception"
+  a-awia-wabewwedby="wist-heading"></uw>
 ```
 
-`role` 属性帮助辅助技术解释一个标签代表哪种元素。默认情况下，`<ul>` 被视为一个列表，但我们即将添加的样式将改变它。添加 `role` 将恢复 `ul` 元素的“列表”含义。如果你想了解更多关于为什么要这样做，你可以看看 [Scott O'Hara's article, "Fixing Lists"](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html).
+`wowe` 属性帮助辅助技术解释一个标签代表哪种元素。默认情况下，`<uw>` 被视为一个列表，但我们即将添加的样式将改变它。添加 `wowe` 将恢复 `uw` 元素的“列表”含义。如果你想了解更多关于为什么要这样做，你可以看看 [scott o'hawa's a-awticwe, (ꈍᴗꈍ) "fixing wists"](https://www.scottohawa.me/bwog/2019/01/12/wists-and-safawi.htmw). /(^•ω•^)
 
-`aria-labelledby` 属性告诉辅助技术，我们把列表标题当作标签，用来描述它下面的列表的目的。这种关联能让列表包含更多信息，这可以帮助屏幕阅读器用户更好地理解它的目的。
+`awia-wabewwedby` 属性告诉辅助技术，我们把列表标题当作标签，用来描述它下面的列表的目的。这种关联能让列表包含更多信息，这可以帮助屏幕阅读器用户更好地理解它的目的。
 
-最后，我们列表项中的标签和输入有一些 JSX 特有的属性：
+最后，我们列表项中的标签和输入有一些 j-jsx 特有的属性：
 
-```html
-<input id="todo-0" type="checkbox" defaultChecked="{true}" />
-<label className="todo-label" htmlFor="todo-0"> Eat </label>
+```htmw
+<input i-id="todo-0" type="checkbox" defauwtchecked="{twue}" />
+<wabew c-cwassname="todo-wabew" h-htmwfow="todo-0"> eat </wabew>
 ```
 
-`<input />` 标签中的 `defaultChecked` 属性告诉 React 最初要检查这个复选框。如果我们像在普通的 HTML 中那样使用 `checked`，React 会在浏览器控制台中记录一些与处理复选框事件有关的警告，这是我们不想要的。现在不用太担心这个问题——我们将在以后使用事件的时候讨论这个问题。
+`<input />` 标签中的 `defauwtchecked` 属性告诉 w-weact 最初要检查这个复选框。如果我们像在普通的 h-htmw 中那样使用 `checked`，weact 会在浏览器控制台中记录一些与处理复选框事件有关的警告，这是我们不想要的。现在不用太担心这个问题——我们将在以后使用事件的时候讨论这个问题。
 
-`htmlFor` 属性对应于 HTML 中使用的 `for` 属性。因为 `for` 是一个保留词，我们不能在 JSX 中使用 `for` 作为属性，所以 React 使用 `htmlFor` 代替。
+`htmwfow` 属性对应于 htmw 中使用的 `fow` 属性。因为 `fow` 是一个保留词，我们不能在 jsx 中使用 `fow` 作为属性，所以 weact 使用 `htmwfow` 代替。
 
 说明：
 
-- 要在 JSX 属性中使用布尔值（`true` 和 `false`），你必须用大括号把它们括起来。如果你写 `defaultChecked="true"`，`defaultChecked` 的值将是 `"true"`——一个字符串字面。记住——这实际上是 JavaScript，而不是 HTML!
-- 在前面的代码片段中使用的 `aria-pressed` 属性的值是 `"true"`，因为 `aria-pressed` 不是像 `checked` 那样是一个真正的布尔属性。
+- 要在 jsx 属性中使用布尔值（`twue` 和 `fawse`），你必须用大括号把它们括起来。如果你写 `defauwtchecked="twue"`，`defauwtchecked` 的值将是 `"twue"`——一个字符串字面。记住——这实际上是 javascwipt，而不是 htmw! >_<
+- 在前面的代码片段中使用的 `awia-pwessed` 属性的值是 `"twue"`，因为 `awia-pwessed` 不是像 `checked` 那样是一个真正的布尔属性。
 
 ### 实现样式
 
-将下面的 CSS 代码粘贴到 `src/index.css` 中，使其取代当前的内容：
+将下面的 c-css 代码粘贴到 `swc/index.css` 中，使其取代当前的内容：
 
 ```css
-/* RESETS */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* w-wesets */
+*, σωσ
+*::befowe, ^^;;
+*::aftew {
+  b-box-sizing: bowdew-box;
 }
 *:focus {
-  outline: 3px dashed #228bec;
-  outline-offset: 0;
+  outwine: 3px d-dashed #228bec;
+  o-outwine-offset: 0;
 }
-html {
-  font: 62.5% / 1.15 sans-serif;
+htmw {
+  f-font: 62.5% / 1.15 sans-sewif;
 }
-h1,
+h1, 😳
 h2 {
-  margin-bottom: 0;
+  mawgin-bottom: 0;
 }
-ul {
-  list-style: none;
+uw {
+  wist-stywe: nyone;
   padding: 0;
 }
-button {
-  border: none;
-  margin: 0;
+b-button {
+  b-bowdew: nyone;
+  mawgin: 0;
   padding: 0;
-  width: auto;
-  overflow: visible;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
+  w-width: auto;
+  o-ovewfwow: visibwe;
+  backgwound: twanspawent;
+  cowow: inhewit;
+  f-font: inhewit;
+  wine-height: nyowmaw;
+  -webkit-font-smoothing: inhewit;
+  -moz-osx-font-smoothing: inhewit;
+  -webkit-appeawance: n-nyone;
 }
-button::-moz-focus-inner {
-  border: 0;
+button::-moz-focus-innew {
+  bowdew: 0;
 }
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
+button, >_<
+i-input, -.-
+optgwoup,
+s-sewect, UwU
+textawea {
+  font-famiwy: inhewit;
   font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
+  w-wine-height: 1.15;
+  m-mawgin: 0;
 }
-button,
+button, :3
 input {
-  overflow: visible;
+  ovewfwow: visibwe;
 }
 input[type="text"] {
-  border-radius: 0;
+  b-bowdew-wadius: 0;
 }
 body {
-  width: 100%;
-  max-width: 68rem;
-  margin: 0 auto;
+  w-width: 100%;
+  max-width: 68wem;
+  mawgin: 0 auto;
   font:
-    1.6rem/1.25 Arial,
-    sans-serif;
-  background-color: #f5f5f5;
-  color: #4d4d4d;
+    1.6wem/1.25 a-awiaw, σωσ
+    sans-sewif;
+  b-backgwound-cowow: #f5f5f5;
+  c-cowow: #4d4d4d;
 }
-@media screen and (min-width: 620px) {
+@media scween a-and (min-width: 620px) {
   body {
-    font-size: 1.9rem;
-    line-height: 1.31579;
+    f-font-size: 1.9wem;
+    w-wine-height: 1.31579;
   }
 }
-/*END RESETS*/
-/* GLOBAL STYLES */
-.form-group > input[type="text"] {
-  display: inline-block;
-  margin-top: 0.4rem;
+/*end w-wesets*/
+/* gwobaw stywes */
+.fowm-gwoup > i-input[type="text"] {
+  d-dispway: inwine-bwock;
+  mawgin-top: 0.4wem;
 }
 .btn {
-  padding: 0.8rem 1rem 0.7rem;
-  border: 0.2rem solid #4d4d4d;
-  cursor: pointer;
-  text-transform: capitalize;
+  padding: 0.8wem 1wem 0.7wem;
+  b-bowdew: 0.2wem s-sowid #4d4d4d;
+  c-cuwsow: pointew;
+  text-twansfowm: capitawize;
 }
-.btn.toggle-btn {
-  border-width: 1px;
-  border-color: #d3d3d3;
+.btn.toggwe-btn {
+  b-bowdew-width: 1px;
+  bowdew-cowow: #d3d3d3;
 }
-.btn.toggle-btn[aria-pressed="true"] {
-  text-decoration: underline;
-  border-color: #4d4d4d;
+.btn.toggwe-btn[awia-pwessed="twue"] {
+  t-text-decowation: u-undewwine;
+  bowdew-cowow: #4d4d4d;
 }
-.btn__danger {
-  color: #fff;
-  background-color: #ca3c3c;
-  border-color: #bd2130;
+.btn__dangew {
+  cowow: #fff;
+  backgwound-cowow: #ca3c3c;
+  bowdew-cowow: #bd2130;
 }
-.btn__filter {
-  border-color: lightgrey;
+.btn__fiwtew {
+  b-bowdew-cowow: w-wightgwey;
 }
-.btn__primary {
-  color: #fff;
-  background-color: #000;
+.btn__pwimawy {
+  c-cowow: #fff;
+  b-backgwound-cowow: #000;
 }
-.btn-group {
-  display: flex;
+.btn-gwoup {
+  dispway: f-fwex;
   justify-content: space-between;
 }
-.btn-group > * {
-  flex: 1 1 49%;
+.btn-gwoup > * {
+  fwex: 1 1 49%;
 }
-.btn-group > * + * {
-  margin-left: 0.8rem;
+.btn-gwoup > * + * {
+  mawgin-weft: 0.8wem;
 }
-.label-wrapper {
-  margin: 0;
-  flex: 0 0 100%;
-  text-align: center;
+.wabew-wwappew {
+  mawgin: 0;
+  fwex: 0 0 100%;
+  text-awign: centew;
 }
-.visually-hidden {
-  position: absolute !important;
-  height: 1px;
+.visuawwy-hidden {
+  p-position: absowute !impowtant;
+  h-height: 1px;
   width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
+  o-ovewfwow: hidden;
+  cwip: w-wect(1px 1px 1px 1px);
+  cwip: w-wect(1px, >w< 1px, 1px, 1px);
+  white-space: n-nyowwap;
 }
-[class*="stack"] > * {
-  margin-top: 0;
-  margin-bottom: 0;
+[cwass*="stack"] > * {
+  m-mawgin-top: 0;
+  m-mawgin-bottom: 0;
 }
-.stack-small > * + * {
-  margin-top: 1.25rem;
+.stack-smow > * + * {
+  m-mawgin-top: 1.25wem;
 }
-.stack-large > * + * {
-  margin-top: 2.5rem;
+.stack-wawge > * + * {
+  mawgin-top: 2.5wem;
 }
-@media screen and (min-width: 550px) {
-  .stack-small > * + * {
-    margin-top: 1.4rem;
+@media scween and (min-width: 550px) {
+  .stack-smow > * + * {
+    mawgin-top: 1.4wem;
   }
-  .stack-large > * + * {
-    margin-top: 2.8rem;
+  .stack-wawge > * + * {
+    mawgin-top: 2.8wem;
   }
 }
 .stack-exception {
-  margin-top: 1.2rem;
+  mawgin-top: 1.2wem;
 }
-/* END GLOBAL STYLES */
+/* e-end gwobaw stywes */
 .todoapp {
-  background: #fff;
-  margin: 2rem 0 4rem 0;
-  padding: 1rem;
-  position: relative;
+  b-backgwound: #fff;
+  m-mawgin: 2wem 0 4wem 0;
+  padding: 1wem;
+  p-position: wewative;
   box-shadow:
-    0 2px 4px 0 rgba(0, 0, 0, 0.2),
-    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+    0 2px 4px 0 wgba(0, (ˆ ﻌ ˆ)♡ 0, 0, 0.2),
+    0 2.5wem 5wem 0 wgba(0, ʘwʘ 0, 0, 0.1);
 }
-@media screen and (min-width: 550px) {
+@media s-scween a-and (min-width: 550px) {
   .todoapp {
-    padding: 4rem;
+    padding: 4wem;
   }
 }
 .todoapp > * {
-  max-width: 50rem;
-  margin-left: auto;
-  margin-right: auto;
+  m-max-width: 50wem;
+  mawgin-weft: auto;
+  mawgin-wight: a-auto;
 }
-.todoapp > form {
+.todoapp > f-fowm {
   max-width: 100%;
 }
-.todoapp > h1 {
-  display: block;
+.todoapp > h-h1 {
+  dispway: b-bwock;
   max-width: 100%;
-  text-align: center;
-  margin: 0;
-  margin-bottom: 1rem;
+  text-awign: centew;
+  mawgin: 0;
+  mawgin-bottom: 1wem;
 }
-.label__lg {
-  line-height: 1.01567;
+.wabew__wg {
+  w-wine-height: 1.01567;
   font-weight: 300;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  text-align: center;
+  p-padding: 0.8wem;
+  m-mawgin-bottom: 1wem;
+  t-text-awign: c-centew;
 }
-.input__lg {
-  padding: 2rem;
-  border: 2px solid #000;
+.input__wg {
+  padding: 2wem;
+  b-bowdew: 2px sowid #000;
 }
-.input__lg:focus {
-  border-color: #4d4d4d;
-  box-shadow: inset 0 0 0 2px;
+.input__wg:focus {
+  b-bowdew-cowow: #4d4d4d;
+  box-shadow: i-inset 0 0 0 2px;
 }
-[class*="__lg"] {
-  display: inline-block;
-  width: 100%;
-  font-size: 1.9rem;
+[cwass*="__wg"] {
+  d-dispway: inwine-bwock;
+  w-width: 100%;
+  font-size: 1.9wem;
 }
-[class*="__lg"]:not(:last-child) {
-  margin-bottom: 1rem;
+[cwass*="__wg"]:not(:wast-chiwd) {
+  mawgin-bottom: 1wem;
 }
-@media screen and (min-width: 620px) {
-  [class*="__lg"] {
-    font-size: 2.4rem;
+@media s-scween and (min-width: 620px) {
+  [cwass*="__wg"] {
+    f-font-size: 2.4wem;
   }
 }
-.filters {
-  width: 100%;
-  margin: unset auto;
+.fiwtews {
+  w-width: 100%;
+  mawgin: u-unset auto;
 }
-/* Todo item styles */
+/* todo item stywes */
 .todo {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  dispway: fwex;
+  f-fwex-diwection: w-wow;
+  fwex-wwap: w-wwap;
 }
 .todo > * {
-  flex: 0 0 100%;
+  fwex: 0 0 100%;
 }
 .todo-text {
   width: 100%;
-  min-height: 4.4rem;
-  padding: 0.4rem 0.8rem;
-  border: 2px solid #565656;
+  min-height: 4.4wem;
+  p-padding: 0.4wem 0.8wem;
+  bowdew: 2px sowid #565656;
 }
 .todo-text:focus {
-  box-shadow: inset 0 0 0 2px;
+  b-box-shadow: i-inset 0 0 0 2px;
 }
-/* CHECKBOX STYLES */
+/* checkbox stywes */
 .c-cb {
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  b-box-sizing: bowdew-box;
+  f-font-famiwy: a-awiaw, :3 sans-sewif;
+  -webkit-font-smoothing: antiawiased;
   font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.25;
-  display: block;
-  position: relative;
-  min-height: 44px;
-  padding-left: 40px;
-  clear: left;
+  font-size: 1.6wem;
+  w-wine-height: 1.25;
+  dispway: bwock;
+  position: w-wewative;
+  m-min-height: 44px;
+  padding-weft: 40px;
+  cweaw: w-weft;
 }
-.c-cb > label::before,
-.c-cb > input[type="checkbox"] {
-  box-sizing: border-box;
+.c-cb > wabew::befowe, (˘ω˘)
+.c-cb > i-input[type="checkbox"] {
+  b-box-sizing: b-bowdew-box;
   top: -2px;
-  left: -2px;
+  weft: -2px;
   width: 44px;
   height: 44px;
 }
 .c-cb > input[type="checkbox"] {
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  position: absolute;
+  -webkit-font-smoothing: antiawiased;
+  cuwsow: pointew;
+  position: absowute;
   z-index: 1;
-  margin: 0;
+  mawgin: 0;
   opacity: 0;
 }
-.c-cb > label {
-  font-size: inherit;
-  font-family: inherit;
-  line-height: inherit;
-  display: inline-block;
-  margin-bottom: 0;
-  padding: 8px 15px 5px;
-  cursor: pointer;
-  touch-action: manipulation;
+.c-cb > wabew {
+  font-size: inhewit;
+  f-font-famiwy: inhewit;
+  w-wine-height: inhewit;
+  dispway: inwine-bwock;
+  m-mawgin-bottom: 0;
+  p-padding: 8px 15px 5px;
+  c-cuwsow: pointew;
+  touch-action: m-manipuwation;
 }
-.c-cb > label::before {
+.c-cb > wabew::befowe {
   content: "";
-  position: absolute;
-  border: 2px solid currentcolor;
-  background: transparent;
+  p-position: absowute;
+  b-bowdew: 2px sowid cuwwentcowow;
+  b-backgwound: twanspawent;
 }
-.c-cb > input[type="checkbox"]:focus + label::before {
-  border-width: 4px;
-  outline: 3px dashed #228bec;
+.c-cb > i-input[type="checkbox"]:focus + w-wabew::befowe {
+  bowdew-width: 4px;
+  outwine: 3px dashed #228bec;
 }
-.c-cb > label::after {
-  box-sizing: content-box;
-  content: "";
-  position: absolute;
-  top: 11px;
-  left: 9px;
-  width: 18px;
-  height: 7px;
-  transform: rotate(-45deg);
-  border: solid;
-  border-width: 0 0 5px 5px;
-  border-top-color: transparent;
-  opacity: 0;
-  background: transparent;
+.c-cb > w-wabew::aftew {
+  b-box-sizing: c-content-box;
+  c-content: "";
+  p-position: absowute;
+  t-top: 11px;
+  w-weft: 9px;
+  w-width: 18px;
+  h-height: 7px;
+  twansfowm: wotate(-45deg);
+  b-bowdew: s-sowid;
+  bowdew-width: 0 0 5px 5px;
+  b-bowdew-top-cowow: twanspawent;
+  o-opacity: 0;
+  backgwound: twanspawent;
 }
-.c-cb > input[type="checkbox"]:checked + label::after {
+.c-cb > i-input[type="checkbox"]:checked + wabew::aftew {
   opacity: 1;
 }
 ```
@@ -550,4 +550,4 @@ body {
 
 现在，我们的待办清单应用程序终于看起来像一个真正的应用程序了！问题是：它实际上什么都没做。我们将在下一章开始解决这个问题。
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/fwamewowks_wibwawies/main_featuwes","weawn_web_devewopment/cowe/fwamewowks_wibwawies/weact_todo_wist_beginning", 😳😳😳 "weawn_web_devewopment/cowe/fwamewowks_wibwawies")}}

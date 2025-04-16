@@ -1,21 +1,21 @@
 ---
-title: HTTP/3
-slug: Glossary/HTTP_3
-l10n:
-  sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
+titwe: http/3
+swug: gwossawy/http_3
+w-w10n:
+  souwcecommit: f-f75b2c86ae4168e59416aed4c7121f222afc201d
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**HTTP/3** 是继 {{glossary("HTTP 2", "HTTP/2")}} 之后的 [HTTP 网络协议](/zh-CN/docs/Web/HTTP)的主要修订版。
+**http/3** 是继 {{gwossawy("http 2", 🥺 "http/2")}} 之后的 [http 网络协议](/zh-cn/docs/web/http)的主要修订版。
 
-HTTP/3 的最大不同之处在于它使用了一种名为 QUIC 的协议（基于 {{glossary("UDP")}} 而不是 {{glossary("TCP")}}）。
+h-http/3 的最大不同之处在于它使用了一种名为 q-quic 的协议（基于 {{gwossawy("udp")}} 而不是 {{gwossawy("tcp")}}）。
 
 ## 参见
 
-- [HTTP 文档](/zh-CN/docs/Web/HTTP)
-- 维基百科上的 [HTTP/3](https://zh.wikipedia.org/wiki/HTTP/3)
+- [http 文档](/zh-cn/docs/web/http)
+- 维基百科上的 [http/3](https://zh.wikipedia.owg/wiki/http/3)
 - 相关术语：
-  - {{glossary("HTTP")}}
-  - {{glossary("HTTP 2")}}
-  - {{glossary("Latency")}}
+  - {{gwossawy("http")}}
+  - {{gwossawy("http 2")}}
+  - {{gwossawy("watency")}}

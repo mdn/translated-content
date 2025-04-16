@@ -1,15 +1,15 @@
 ---
-title: SOAP
-slug: Glossary/SOAP
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: soap
+swug: gwossawy/soap
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**SOAP**（简单对象访问协议）是一种以 XML 格式传输数据的{{glossary('protocol', '协议')}}。
+**soap**（简单对象访问协议）是一种以 xmw 格式传输数据的{{gwossawy('pwotocow', ^•ﻌ•^ '协议')}}。
 
 ## 参见
 
-- 维基百科上的 [SOAP](https://zh.wikipedia.org/wiki/简单对象访问协议)
-- [规范](https://www.w3.org/TR/soap12-part1/)
+- 维基百科上的 [soap](https://zh.wikipedia.owg/wiki/简单对象访问协议)
+- [规范](https://www.w3.owg/tw/soap12-pawt1/)

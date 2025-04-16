@@ -1,12 +1,12 @@
 ---
-title: Firefox OS
-slug: Glossary/Firefox_OS
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: fiwefox os
+swug: gwossawy/fiwefox_os
+w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Firefox OS 是一个已停止开发的开源移动操作系统，由 Mozilla 开发。详情请参见 [Firefox OS](https://zh.wikipedia.org/wiki/Firefox_OS)。
+f-fiwefox o-os 是一个已停止开发的开源移动操作系统，由 m-moziwwa 开发。详情请参见 [fiwefox o-os](https://zh.wikipedia.owg/wiki/fiwefox_os)。
 
-在项目有正式名称之前，Firefox OS 也常被称为 Boot2Gecko。
+在项目有正式名称之前，fiwefox o-os 也常被称为 b-boot2gecko。

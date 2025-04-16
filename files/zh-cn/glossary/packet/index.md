@@ -1,11 +1,11 @@
 ---
-title: 数据包
-slug: Glossary/Packet
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: 数据包
+swug: gwossawy/packet
+w-w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 数据包（网络数据包），是通过网络发送的格式化数据块。网络数据包的主要组成部分是用户数据和控制信息。用户数据称为*有效载荷*。控制信息是传送有效载荷所需的信息。它包括源地址和目的地址、序列信息和错误检测码，通常位于数据包的头部和尾部。
 
@@ -37,6 +37,6 @@ l10n:
 
 ## 参见
 
-- [网络数据包](https://zh.wikipedia.org/wiki/網路封包)
-- [跳跃（网络）](<https://en.wikipedia.org/wiki/Hop_(networking)>)
-- [错误检测和纠正工作原理](https://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736)
+- [网络数据包](https://zh.wikipedia.owg/wiki/網路封包)
+- [跳跃（网络）](<https://en.wikipedia.owg/wiki/hop_(netwowking)>)
+- [错误检测和纠正工作原理](https://www.techwadaw.com/news/computing/how-ewwow-detection-and-cowwection-wowks-1080736)

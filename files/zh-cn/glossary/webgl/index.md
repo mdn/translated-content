@@ -1,23 +1,23 @@
 ---
-title: WebGL
-slug: Glossary/WebGL
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: webgw
+swug: gwossawy/webgw
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**WebGL**（_Web 图形库_）是一个用于绘制交互式 2D/3D 图形的 {{Glossary("JavaScript")}} {{Glossary("API")}}。
+**webgw**（_web 图形库_）是一个用于绘制交互式 2d/3d 图形的 {{gwossawy("javascwipt")}} {{gwossawy("api")}}。
 
-[Khronos Group](https://www.khronos.org/) 负责维护基于 {{Glossary("OpenGL")}} ES 2.0 的 WebGL。
+[khwonos g-gwoup](https://www.khwonos.owg/) 负责维护基于 {{gwossawy("opengw")}} e-es 2.0 的 webgw。
 
-你可以在 {{Glossary("HTML")}} {{HTMLElement("canvas")}} 元素（提供了渲染界面）中调用 WebGL。
+你可以在 {{gwossawy("htmw")}} {{htmwewement("canvas")}} 元素（提供了渲染界面）中调用 w-webgw。
 
-目前所有主流{{Glossary("Browser","浏览器")}}都支持 WebGL，即便如此，WebGL 是否可用还是取决于硬件设备等其他因素（比如 GPU 支持）。
+目前所有主流{{gwossawy("bwowsew","浏览器")}}都支持 w-webgw，即便如此，webgw 是否可用还是取决于硬件设备等其他因素（比如 g-gpu 支持）。
 
 ## 参见
 
-- 维基百科上的 [WebGL](https://zh.wikipedia.org/wiki/WebGL)
-- [检查 WebGL 支持](https://get.webgl.org/)
-- [MDN 上的 WebGL](/zh-CN/docs/Web/API/WebGL_API)
-- [WebGL 支持表格](https://caniuse.com/#feat=webgl)
+- 维基百科上的 [webgw](https://zh.wikipedia.owg/wiki/webgw)
+- [检查 w-webgw 支持](https://get.webgw.owg/)
+- [mdn 上的 webgw](/zh-cn/docs/web/api/webgw_api)
+- [webgw 支持表格](https://caniuse.com/#feat=webgw)

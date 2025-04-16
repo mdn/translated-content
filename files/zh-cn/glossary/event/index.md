@@ -1,16 +1,16 @@
 ---
-title: 事件
-slug: Glossary/Event
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: 事件
+swug: gwossawy/event
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-事件是由 [DOM](/zh-CN/docs/Glossary/DOM) 元素产生的资源，可以由 JavaScript 代码操控。
+事件是由 [dom](/zh-cn/docs/gwossawy/dom) 元素产生的资源，可以由 j-javascwipt 代码操控。
 
 ## 参见
 
-- [MDN 上的事件文档](/zh-CN/docs/Web/API/Event)
-- [官方网站](https://www.w3.org/TR/DOM-Level-2-Events/events.html)
-- 维基百科上的 [DOM 事件](https://en.wikipedia.org/wiki/DOM_Events)
+- [mdn 上的事件文档](/zh-cn/docs/web/api/event)
+- [官方网站](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw)
+- 维基百科上的 [dom 事件](https://en.wikipedia.owg/wiki/dom_events)

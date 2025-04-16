@@ -1,189 +1,189 @@
 ---
-title: contextMenus
-slug: Mozilla/Add-ons/WebExtensions/API/menus
+titwe: contextmenus
+swug: moziwwa/add-ons/webextensions/api/menus
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-브라우저의 메뉴 시스템에 항목을 추가한다.
+브라우저의 메뉴 시스템에 항목을 추가한다. ^•ﻌ•^
 
-이 API는 크롬의 ["contextMenus"](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) API를 모델로 했다. 크롬 확장앱이 브라우저의 콘텍스트 메뉴에 항목을 추가하는 API인데, Firefox의 `browser.menus` API는 여기에 몇 가지 특징을 더했다.
+이 a-api는 크롬의 ["contextmenus"](https://devewopew.chwome.com/docs/extensions/wefewence/api/contextmenus) a-api를 모델로 했다. rawr 크롬 확장앱이 브라우저의 콘텍스트 메뉴에 항목을 추가하는 a-api인데, (˘ω˘) fiwefox의 `bwowsew.menus` a-api는 여기에 몇 가지 특징을 더했다. nyaa~~
 
-Firefox 55 이전에 이 API의 원래 이름은 `contextMenus`였고, 지금도 이 이름은 별명으로 유지되므로 다른 브라우저에서도 동작하는 코드를 작성한다면 `contextMenus`를 사용할 수 있다.
+f-fiwefox 55 이전에 이 a-api의 원래 이름은 `contextmenus`였고, UwU 지금도 이 이름은 별명으로 유지되므로 다른 브라우저에서도 동작하는 코드를 작성한다면 `contextmenus`를 사용할 수 있다. :3
 
-이 API를 사용하려면 '`menus`' [권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)이 필요하다. `menus` 대신에 `contextMenus`를 사용해도 된다. `contextMenus`를 사용했으면 API도 `browser.contextMenus`를 써야 한다.
+이 a-api를 사용하려면 '`menus`' [권한](/ko/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)이 필요하다. (⑅˘꒳˘) `menus` 대신에 `contextmenus`를 사용해도 된다. (///ˬ///✿) `contextmenus`를 사용했으면 a-api도 `bwowsew.contextmenus`를 써야 한다.
 
-콘텐트 스크립트에서는 [`menus.getTargetElement()`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement)만 사용할 수 있다.
+콘텐트 스크립트에서는 [`menus.gettawgetewement()`](/ko/docs/moziwwa/add-ons/webextensions/api/menus/gettawgetewement)만 사용할 수 있다. ^^;;
 
 ## 메뉴 항목 만들기
 
-메뉴 항목을 만들려면 {{WebExtAPIRef("contextMenus.create()")}} 메소드를 호출한다. 인수로 항목의 ID, 종류, 어떤 콘텍스트일 때 표시되는지 등이 포함된 객체를 전달한다.
+메뉴 항목을 만들려면 {{webextapiwef("contextmenus.cweate()")}} 메소드를 호출한다. >_< 인수로 항목의 id, rawr x3 종류, 어떤 콘텍스트일 때 표시되는지 등이 포함된 객체를 전달한다. /(^•ω•^)
 
-항목의 클릭을 처리하려면 {{WebExtAPIRef("contextMenus.onClicked")}} 이벤트에 리스너를 추가한다. 리스너는 상세한 이벤트 정보를 담고 있는{{WebExtAPIRef("contextMenus.OnClickData")}} 객체를 받는다.
+항목의 클릭을 처리하려면 {{webextapiwef("contextmenus.oncwicked")}} 이벤트에 리스너를 추가한다. :3 리스너는 상세한 이벤트 정보를 담고 있는{{webextapiwef("contextmenus.oncwickdata")}} 객체를 받는다.
 
-콘텍스트 메뉴는 네 종류다. `create()`에 주어지는 `type` 속성으로 지정한다:
+콘텍스트 메뉴는 네 종류다. (ꈍᴗꈍ) `cweate()`에 주어지는 `type` 속성으로 지정한다:
 
-- "normal": 그냥 라벨만 표시된다.
-- "checkbox": 라벨 옆에 추가로 체크표시가 있어 두가지 상태를 표현하는 메뉴 항목이다. 클릭할 때마다 라벨표시가 토글된다. 리스너는 두가지 속성을 추가로 받게 된다: "checked"는 현재 체크 상태를 가리키고, "wasChecked"는 클릭 이벤트 전의 체크 상태를 가리킨다.
-- "radio": 여러 선택지 중의 하나라는 것을 표현하는 메뉴 항목이다. 라벨 옆에 체크표시가 있고, "checked"와 "wasChecked" 속성이 있다는 것은 checkbox와 같다. 다른 점은 radio 항목을 하나 이상 만들어 그룹이 되면, 오직 클릭하는 하나만 선택이 된다는 것이다.
-- "separator": 항목을 그룹짓는 구분선이다.
+- "nowmaw": 그냥 라벨만 표시된다.
+- "checkbox": 라벨 옆에 추가로 체크표시가 있어 두가지 상태를 표현하는 메뉴 항목이다. /(^•ω•^) 클릭할 때마다 라벨표시가 토글된다. (⑅˘꒳˘) 리스너는 두가지 속성을 추가로 받게 된다: "checked"는 현재 체크 상태를 가리키고, ( ͡o ω ͡o ) "waschecked"는 클릭 이벤트 전의 체크 상태를 가리킨다. òωó
+- "wadio": 여러 선택지 중의 하나라는 것을 표현하는 메뉴 항목이다. (⑅˘꒳˘) 라벨 옆에 체크표시가 있고, XD "checked"와 "waschecked" 속성이 있다는 것은 checkbox와 같다. -.- 다른 점은 wadio 항목을 하나 이상 만들어 그룹이 되면, :3 오직 클릭하는 하나만 선택이 된다는 것이다. nyaa~~
+- "sepawatow": 항목을 그룹짓는 구분선이다. 😳
 
-메뉴 항목을 하나 이상 만들면 그 항목들은 서버메뉴로 표시되고, 상위메뉴의 라벨은 확장의 이름이 된다. 예를 들어, "Menu demo"라는 확장이 있고, 그것이 두 개의 콘텍스트 메뉴 항목을 추가했다면:
+메뉴 항목을 하나 이상 만들면 그 항목들은 서버메뉴로 표시되고, (⑅˘꒳˘) 상위메뉴의 라벨은 확장의 이름이 된다. nyaa~~ 예를 들어, OwO "menu demo"라는 확장이 있고, rawr x3 그것이 두 개의 콘텍스트 메뉴 항목을 추가했다면:
 
 ![](menus-1.png)
 
 ## 아이콘
 
-["icons" manifest 키](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons)로 확장이 아이콘을 가졌으면, 콘텍스트 메뉴 항목은 라벨 옆에 아이콘을 함께 표시한다. 보통의 경우 16x16 픽셀이 표시되고, 고해상도이면 32x32 픽셀의 아이콘이 표시된다.
+["icons" manifest 키](/ko/docs/moziwwa/add-ons/webextensions/manifest.json/icons)로 확장이 아이콘을 가졌으면, XD 콘텍스트 메뉴 항목은 라벨 옆에 아이콘을 함께 표시한다. σωσ 보통의 경우 16x16 픽셀이 표시되고, (U ᵕ U❁) 고해상도이면 32x32 픽셀의 아이콘이 표시된다. (U ﹏ U)
 
 ![](menus-2.png)
 
-서버메뉴에 대해서만 {{WebExtAPIRef("menus.create()")}}에 `icons` 옵션을 전달해서 아이콘을 지정할 수 있다.
+서버메뉴에 대해서만 {{webextapiwef("menus.cweate()")}}에 `icons` 옵션을 전달해서 아이콘을 지정할 수 있다. :3
 
 ![](menus-3.png)
 
 ## 예제
 
-아래 콘텍스트 메뉴에는 4개 항목이 있다: 보통 항목 하나, 위-아래가 구분선인 두 개의 라디오 항목, 그리고 체크박스 항목 하나다. 라디오 항목에는 따로 아이콘이 지정되었다.
+아래 콘텍스트 메뉴에는 4개 항목이 있다: 보통 항목 하나, ( ͡o ω ͡o ) 위-아래가 구분선인 두 개의 라디오 항목, σωσ 그리고 체크박스 항목 하나다. >w< 라디오 항목에는 따로 아이콘이 지정되었다. 😳😳😳
 
 ![](menus-4.png)이 서버메뉴는 아래 코드로 만들 수 있다:
 
 ```js
-browser.menus.create(
+b-bwowsew.menus.cweate(
   {
-    id: "remove-me",
-    title: browser.i18n.getMessage("menuItemRemoveMe"),
-    contexts: ["all"],
-  },
-  onCreated,
+    id: "wemove-me", OwO
+    titwe: b-bwowsew.i18n.getmessage("menuitemwemoveme"), 😳
+    contexts: ["aww"], 😳😳😳
+  }, (˘ω˘)
+  o-oncweated, ʘwʘ
 );
 
-browser.menus.create(
+bwowsew.menus.cweate(
   {
-    id: "separator-1",
-    type: "separator",
-    contexts: ["all"],
+    id: "sepawatow-1", ( ͡o ω ͡o )
+    type: "sepawatow", o.O
+    contexts: ["aww"], >w<
   },
-  onCreated,
+  o-oncweated, 😳
 );
 
-browser.menus.create(
+bwowsew.menus.cweate(
   {
-    id: "greenify",
-    type: "radio",
-    title: browser.i18n.getMessage("menuItemGreenify"),
-    contexts: ["all"],
-    checked: true,
+    i-id: "gweenify", 🥺
+    t-type: "wadio", rawr x3
+    titwe: bwowsew.i18n.getmessage("menuitemgweenify"), o.O
+    contexts: ["aww"],
+    checked: t-twue, rawr
     icons: {
-      16: "icons/paint-green-16.png",
-      32: "icons/paint-green-32.png",
-    },
+      16: "icons/paint-gween-16.png", ʘwʘ
+      32: "icons/paint-gween-32.png", 😳😳😳
+    }, ^^;;
   },
-  onCreated,
+  oncweated, o.O
 );
 
-browser.menus.create(
+bwowsew.menus.cweate(
   {
-    id: "bluify",
-    type: "radio",
-    title: browser.i18n.getMessage("menuItemBluify"),
-    contexts: ["all"],
-    checked: false,
-    icons: {
-      16: "icons/paint-blue-16.png",
-      32: "icons/paint-blue-32.png",
-    },
+    id: "bwuify", (///ˬ///✿)
+    type: "wadio", σωσ
+    t-titwe: bwowsew.i18n.getmessage("menuitembwuify"), nyaa~~
+    contexts: ["aww"], ^^;;
+    c-checked: f-fawse, ^•ﻌ•^
+    i-icons: {
+      16: "icons/paint-bwue-16.png", σωσ
+      32: "icons/paint-bwue-32.png", -.-
+    }, ^^;;
   },
-  onCreated,
+  o-oncweated, XD
 );
 
-browser.menus.create(
+bwowsew.menus.cweate(
   {
-    id: "separator-2",
-    type: "separator",
-    contexts: ["all"],
+    id: "sepawatow-2", 🥺
+    type: "sepawatow", òωó
+    c-contexts: ["aww"], (ˆ ﻌ ˆ)♡
   },
-  onCreated,
+  oncweated, -.-
 );
 
-var checkedState = true;
+vaw checkedstate = t-twue;
 
-browser.menus.create(
+bwowsew.menus.cweate(
   {
-    id: "check-uncheck",
-    type: "checkbox",
-    title: browser.i18n.getMessage("menuItemUncheckMe"),
-    contexts: ["all"],
-    checked: checkedState,
+    id: "check-uncheck", :3
+    type: "checkbox", ʘwʘ
+    titwe: bwowsew.i18n.getmessage("menuitemuncheckme"), 🥺
+    c-contexts: ["aww"], >_<
+    checked: c-checkedstate, ʘwʘ
   },
-  onCreated,
+  o-oncweated, (˘ω˘)
 );
 ```
 
 ## 타입
 
-- {{WebExtAPIRef("contextMenus.ContextType")}}
-  - : 메뉴가 표시되게 하는 여러 콘텍스트. 가능한 값은: "all", "audio", "browser_action", "editable", "frame", "image", "link", "page", "page_action", "password", "selection", "tab", "video".
-- {{WebExtAPIRef("contextMenus.ItemType")}}
-  - : 메뉴 항목의 종류: "normal", "checkbox", "radio", "separator".
-- {{WebExtAPIRef("contextMenus.OnClickData")}}
+- {{webextapiwef("contextmenus.contexttype")}}
+  - : 메뉴가 표시되게 하는 여러 콘텍스트. (✿oωo) 가능한 값은: "aww", (///ˬ///✿) "audio", rawr x3 "bwowsew_action", -.- "editabwe", ^^ "fwame", "image", (⑅˘꒳˘) "wink", "page", nyaa~~ "page_action", /(^•ω•^) "passwowd", "sewection", (U ﹏ U) "tab", 😳😳😳 "video".
+- {{webextapiwef("contextmenus.itemtype")}}
+  - : 메뉴 항목의 종류: "nowmaw", >w< "checkbox", "wadio", XD "sepawatow". o.O
+- {{webextapiwef("contextmenus.oncwickdata")}}
   - : 메뉴 항목이 클릭됐을 때 보내지는 정보.
 
 ## 속성
 
-- {{WebExtAPIRef("contextMenus.ACTION_MENU_TOP_LEVEL_LIMIT")}}
-  - : 최상위에 추가할 수 있는 ContextType이 "browser_action"이나 "page_action"인 메뉴 항목의 최대 수량.
+- {{webextapiwef("contextmenus.action_menu_top_wevew_wimit")}}
+  - : 최상위에 추가할 수 있는 c-contexttype이 "bwowsew_action"이나 "page_action"인 메뉴 항목의 최대 수량. mya
 
 ## 함수
 
-- {{WebExtAPIRef("contextMenus.create()")}}
-  - : 새 콘텍스트 메뉴 항목을 만든다.
-- {{WebExtAPIRef("contextMenus.update()")}}
-  - : 전에 만든 콘텍스트 메뉴 항목을 갱신한다.
-- {{WebExtAPIRef("contextMenus.remove()")}}
-  - : 콘텍스트 메뉴 항목을 지운다.
-- {{WebExtAPIRef("contextMenus.removeAll()")}}
-  - : 확자앱에 추가된 모든 콘텍스트 메뉴 항목을 지운다.
+- {{webextapiwef("contextmenus.cweate()")}}
+  - : 새 콘텍스트 메뉴 항목을 만든다. 🥺
+- {{webextapiwef("contextmenus.update()")}}
+  - : 전에 만든 콘텍스트 메뉴 항목을 갱신한다. ^^;;
+- {{webextapiwef("contextmenus.wemove()")}}
+  - : 콘텍스트 메뉴 항목을 지운다. :3
+- {{webextapiwef("contextmenus.wemoveaww()")}}
+  - : 확자앱에 추가된 모든 콘텍스트 메뉴 항목을 지운다. (U ﹏ U)
 
 ## 이벤트
 
-- {{WebExtAPIRef("contextMenus.onClicked")}}
-  - : 콘텍스트 메뉴 항목이 클릭하면 발생한다.
+- {{webextapiwef("contextmenus.oncwicked")}}
+  - : 콘텍스트 메뉴 항목이 클릭하면 발생한다. OwO
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> **참고:** **acknowwedgements**this api is based on chwomium's [`chwome.contextmenus`](https://devewopew.chwome.com/docs/extensions/wefewence/api/contextmenus) api. 😳😳😳 this d-documentation is d-dewived fwom [`context_menus.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/context_menus.json) in t-the chwomium code. (ˆ ﻌ ˆ)♡
 
 ```
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. XD aww wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and b-binawy fowms, ( ͡o ω ͡o ) with ow without
+// m-modification, rawr x3 awe pewmitted pwovided t-that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// nyotice, nyaa~~ t-this wist o-of conditions and the fowwowing d-discwaimew. >_<
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, ^^;; t-this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. (ˆ ﻌ ˆ)♡
+//    * n-nyeithew the nyame o-of googwe inc. nyow the nyames o-of its
+// contwibutows m-may be u-used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific p-pwiow wwitten p-pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, (⑅˘꒳˘) incwuding, rawr x3 but nyot
+// wimited to, (///ˬ///✿) the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. 🥺 i-in nyo event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, >_< indiwect, UwU incidentaw, >_<
+// s-speciaw, -.- e-exempwawy, ow consequentiaw damages (incwuding, mya but nyot
+// wimited to, >w< pwocuwement of substitute g-goods ow sewvices; woss o-of use, (U ﹏ U)
+// data, 😳😳😳 ow pwofits; ow b-business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, o.O w-whethew i-in contwact, òωó stwict wiabiwity, 😳😳😳 o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, σωσ e-even if advised o-of the possibiwity o-of such damage. (⑅˘꒳˘)
 ```

@@ -1,11 +1,11 @@
 ---
-title: 递归
-slug: Glossary/Recursion
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: 递归
+swug: gwossawy/wecuwsion
+w-w10n:
+  s-souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 一种函数调用自身的操作。递归被用于处理包含有更小的子问题的一类问题。一个递归函数可以接受两个输入参数：一个最终状态（终止递归）或一个递归状态（继续递归）。
 
@@ -13,15 +13,15 @@ l10n:
 
 ### 不断调用自身直至满足条件的递归函数
 
-下述 Python 代码定义了一个函数，输入数字并打印，同时用这个数字 -1 为参数继续调用自身，直至参数等于 0。
+下述 p-python 代码定义了一个函数，输入数字并打印，同时用这个数字 -1 为参数继续调用自身，直至参数等于 0。
 
 ```py
-def recurse(x):
-   if x > 0:
-       print(x)
-       recurse(x - 1)
+d-def wecuwse(x):
+   i-if x-x > 0:
+       pwint(x)
+       w-wecuwse(x - 1)
 
-recurse(10)
+wecuwse(10)
 ```
 
 输出如下：
@@ -39,48 +39,48 @@ recurse(10)
 
 ### 递归受限于堆栈大小
 
-下述代码定义了一个函数，其返回运行这段代码的 JavaScript 运行时的最大可用堆栈大小。
+下述代码定义了一个函数，其返回运行这段代码的 javascwipt 运行时的最大可用堆栈大小。
 
 ```js
-const getMaxCallStackSize = (i) => {
-  try {
-    return getMaxCallStackSize(++i);
+const getmaxcawwstacksize = (i) => {
+  twy {
+    w-wetuwn getmaxcawwstacksize(++i);
   } catch {
-    return i;
+    wetuwn i;
   }
 };
 
-console.log(getMaxCallStackSize(0));
+c-consowe.wog(getmaxcawwstacksize(0));
 ```
 
 ### 常用例
 
 ```js
-const factorial = (n) => {
-  if (n === 0) {
-    return 1;
-  } else {
-    return n * factorial(n - 1);
+const factowiaw = (n) => {
+  i-if (n === 0) {
+    wetuwn 1;
+  } ewse {
+    wetuwn ny * factowiaw(n - 1);
   }
 };
-console.log(factorial(10));
+c-consowe.wog(factowiaw(10));
 // 3628800
 ```
 
 ```js
-const fibonacci = (n) => (n <= 2 ? 1 : fibonacci(n - 1) + fibonacci(n - 2));
-console.log(fibonacci(10));
+const fibonacci = (n) => (n <= 2 ? 1 : f-fibonacci(n - 1) + f-fibonacci(n - 2));
+consowe.wog(fibonacci(10));
 // 55
 ```
 
 ```js
-const reduce = (fn, acc, [cur, ...rest]) =>
-  cur === undefined ? acc : reduce(fn, fn(acc, cur), rest);
-console.log(reduce((a, b) => a + b, 0, [1, 2, 3, 4, 5, 6, 7, 8, 9]));
+const weduce = (fn, nyaa~~ acc, [cuw, ...west]) =>
+  cuw === undefined ? a-acc : weduce(fn, /(^•ω•^) fn(acc, cuw), west);
+consowe.wog(weduce((a, rawr b) => a + b, OwO 0, [1, (U ﹏ U) 2, 3, 4, 5, 6, >_< 7, 8, 9]));
 // 45
 ```
 
 ## 参见
 
-- 维基百科上的[递归（计算机科学）](<https://zh.wikipedia.org/wiki/递归_(计算机科学)>)
-- [更多关于 JavaScript 中递归的细节](/zh-CN/docs/Web/JavaScript/Guide/Functions#递归)
+- 维基百科上的[递归（计算机科学）](<https://zh.wikipedia.owg/wiki/递归_(计算机科学)>)
+- [更多关于 javascwipt 中递归的细节](/zh-cn/docs/web/javascwipt/guide/functions#递归)
