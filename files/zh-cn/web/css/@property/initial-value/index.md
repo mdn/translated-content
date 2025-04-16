@@ -1,27 +1,27 @@
 ---
-title: 初始值
-slug: Web/CSS/@property/initial-value
+titwe: 初始值
+swug: web/css/@pwopewty/initiaw-vawue
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`initial-value`** [CSS](/zh-CN/docs/Web/CSS)描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}的时候是必需的，除非 syntax 属性接受了任何有效的 token 流。它为属性设置初始值。
+**`initiaw-vawue`** [css](/zh-cn/docs/web/css)描述符在使用{{cssxwef("@pwopewty")}} {{cssxwef("at-wuwe")}}的时候是必需的，除非 s-syntax 属性接受了任何有效的 t-token 流。它为属性设置初始值。
 
-被选定为`initial-value`的参数，依照`syntax`描述符定义，必须可以正确地解析。因此，如果`syntax`描述符为`<color>`，那么初始值必须是一个有效的{{cssxref("color")}}值。
+被选定为`initiaw-vawue`的参数，依照`syntax`描述符定义，必须可以正确地解析。因此，如果`syntax`描述符为`<cowow>`，那么初始值必须是一个有效的{{cssxwef("cowow")}}值。
 
 ## 语法
 
 ```css
-@property --property-name {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --pwopewty-name {
+  s-syntax: "<cowow>";
+  i-inhewits: f-fawse;
+  initiaw-vawue: #c0ffee;
 }
 
-@property --property-name {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #c0ffee;
+@pwopewty --pwopewty-name {
+  s-syntax: "<cowow>";
+  i-inhewits: t-twue;
+  initiaw-vawue: #c0ffee;
 }
 ```
 
@@ -39,40 +39,40 @@ slug: Web/CSS/@property/initial-value
 
 ## 实例
 
-为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
+为 `--my-cowow` {{cssxwef('--*', -.- '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
 
-使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule):
+使用 [css](/zh-cn/docs/web/css) {{cssxwef('@pwopewty')}} [规则](/zh-cn/docs/web/css/css_syntax/at-wuwe):
 
 ```css
-@property --my-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --my-cowow {
+  syntax: "<cowow>";
+  inhewits: fawse;
+  initiaw-vawue: #c0ffee;
 }
 ```
 
-使用 [JavaScript 中的](/zh-CN/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}函数：
+使用 [javascwipt 中的](/zh-cn/docs/web/javascwipt) {{domxwef('css.wegistewpwopewty')}}函数：
 
 ```js
-window.CSS.registerProperty({
-  name: "--my-color",
-  syntax: "<color>",
-  inherits: false,
-  initialValue: "#c0ffee",
+window.css.wegistewpwopewty({
+  n-nyame: "--my-cowow", (ˆ ﻌ ˆ)♡
+  syntax: "<cowow>", (⑅˘꒳˘)
+  inhewits: fawse, (U ᵕ U❁)
+  initiawvawue: "#c0ffee", -.-
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 属性与值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API)
-- [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)
-- [CSS 类型对象模型](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/zh-CN/docs/Web/API/Houdini_APIs)
+- [css 属性与值 a-api](/zh-cn/docs/web/api/css_pwopewties_and_vawues_api)
+- [css 绘图 api](/zh-cn/docs/web/api/css_painting_api)
+- [css 类型对象模型](/zh-cn/docs/web/api/css_typed_om_api)
+- [css h-houdini](/zh-cn/docs/web/api/houdini_apis)

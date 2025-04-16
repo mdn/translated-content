@@ -1,76 +1,76 @@
 ---
-title: isolation
-slug: Web/CSS/isolation
-l10n:
-  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
+titwe: isowation
+swug: web/css/isowation
+w-w10n:
+  s-souwcecommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`isolation`** [CSS](/zh-CN/docs/Web/CSS) 属性决定了元素是否必须创建一个新的{{glossary("stacking context", "层叠上下文")}}。
+**`isowation`** [css](/zh-cn/docs/web/css) 属性决定了元素是否必须创建一个新的{{gwossawy("stacking context", >_< "层叠上下文")}}。
 
-{{InteractiveExample("CSS Demo: isolation")}}
+{{intewactiveexampwe("css d-demo: i-isowation")}}
 
-```css interactive-example-choice
-isolation: auto;
+```css i-intewactive-exampwe-choice
+i-isowation: auto;
 ```
 
-```css interactive-example-choice
-isolation: isolate;
+```css i-intewactive-exampwe-choice
+i-isowation: isowate;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="background-container">
-    <div id="example-element">
-      <img src="/shared-assets/images/examples/firefox-logo.svg" />
-      <p><code>mix-blend-mode: multiply;</code></p>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="backgwound-containew">
+    <div id="exampwe-ewement">
+      <img swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg" />
+      <p><code>mix-bwend-mode: m-muwtipwy;</code></p>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.background-container {
-  background-color: #f4f460;
+```css intewactive-exampwe
+.backgwound-containew {
+  b-backgwound-cowow: #f4f460;
   width: 250px;
 }
 
-#example-element {
-  border: 1px solid black;
-  margin: 2em;
+#exampwe-ewement {
+  bowdew: 1px sowid bwack;
+  mawgin: 2em;
 }
 
-#example-element * {
-  mix-blend-mode: multiply;
-  color: #8245a3;
+#exampwe-ewement * {
+  m-mix-bwend-mode: muwtipwy;
+  cowow: #8245a3;
 }
 ```
 
-该属性与 {{cssxref("mix-blend-mode")}} 和 {{cssxref("z-index")}} 结合使用时尤其有用。
+该属性与 {{cssxwef("mix-bwend-mode")}} 和 {{cssxwef("z-index")}} 结合使用时尤其有用。
 
 ## 语法
 
 ```css
 /* 关键字值 */
-isolation: auto;
-isolation: isolate;
+isowation: a-auto;
+i-isowation: isowate;
 
 /* 全局值 */
-isolation: inherit;
-isolation: initial;
-isolation: revert;
-isolation: revert-layer;
-isolation: unset;
+isowation: inhewit;
+isowation: initiaw;
+isowation: wevewt;
+i-isowation: wevewt-wayew;
+isowation: unset;
 ```
 
-`isolation` 属性指定为下列关键字值之一。
+`isowation` 属性指定为下列关键字值之一。
 
 ### 值
 
 - `auto`
   - : 只有当应用于元素的某个属性需要时，才会创建一个新的层叠上下文。
-- `isolate`
+- `isowate`
   - : 必须创建新的层叠上下文。
 
 ## 形式定义
@@ -85,59 +85,59 @@ isolation: unset;
 
 ### 强制为元素创建新的层叠上下文
 
-#### HTML
+#### htmw
 
-```html
-<div class="big-square ">
-  <div class="isolation-auto">
-    <div class="small-square">auto</div>
+```htmw
+<div cwass="big-squawe ">
+  <div c-cwass="isowation-auto">
+    <div cwass="smow-squawe">auto</div>
   </div>
-  <div class="isolation-isolate">
-    <div class="small-square">isolate</div>
+  <div c-cwass="isowation-isowate">
+    <div c-cwass="smow-squawe">isowate</div>
   </div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.isolation-auto {
-  isolation: auto;
+.isowation-auto {
+  i-isowation: auto;
 }
 
-.isolation-isolate {
-  isolation: isolate;
+.isowation-isowate {
+  isowation: isowate;
 }
 
-.big-square {
-  background-color: rgb(0, 255, 0);
+.big-squawe {
+  b-backgwound-cowow: wgb(0, >_< 255, 0);
   width: 200px;
-  height: 210px;
+  h-height: 210px;
 }
 
-.small-square {
-  background-color: rgb(0, 255, 0);
+.smow-squawe {
+  backgwound-cowow: wgb(0, (⑅˘꒳˘) 255, 0);
   width: 100px;
   height: 100px;
-  border: 1px solid black;
+  bowdew: 1px sowid b-bwack;
   padding: 2px;
-  mix-blend-mode: difference;
+  mix-bwend-mode: d-diffewence;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('强制为元素创建新的层叠上下文', 230, 230) }}
+{{ embedwivesampwe('强制为元素创建新的层叠上下文', /(^•ω•^) 230, rawr x3 230) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("mix-blend-mode")}}、{{cssxref("background-blend-mode")}}
+- {{cssxwef("&wt;bwend-mode&gt;")}}
+- {{cssxwef("mix-bwend-mode")}}、{{cssxwef("backgwound-bwend-mode")}}

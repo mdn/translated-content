@@ -1,367 +1,367 @@
 ---
-title: 优先级
-slug: Web/CSS/CSS_cascade/Specificity
+titwe: 优先级
+swug: web/css/css_cascade/specificity
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-浏览器通过**优先级**来判断哪些属性值与一个元素最为相关，从而在该元素上应用这些属性值。优先级是基于不同种类[选择器](/zh-CN/docs/Web/CSS/Reference#选择器)组成的匹配规则。
+浏览器通过**优先级**来判断哪些属性值与一个元素最为相关，从而在该元素上应用这些属性值。优先级是基于不同种类[选择器](/zh-cn/docs/web/css/wefewence#选择器)组成的匹配规则。
 
 ## 优先级是如何计算的？
 
-优先级就是分配给指定的 CSS 声明的一个权重，它由 匹配的选择器中的 每一种选择器类型的 数值 决定。
+优先级就是分配给指定的 c-css 声明的一个权重，它由 匹配的选择器中的 每一种选择器类型的 数值 决定。
 
-而当优先级与多个 CSS 声明中任意一个声明的优先级相等的时候，CSS 中最后的那个声明将会被应用到元素上。
+而当优先级与多个 c-css 声明中任意一个声明的优先级相等的时候，css 中最后的那个声明将会被应用到元素上。
 
-当同一个元素有多个声明的时候，优先级才会有意义。因为每一个直接作用于元素的 CSS 规则总是会接管/覆盖（take over）该元素从祖先元素继承而来的规则。
+当同一个元素有多个声明的时候，优先级才会有意义。因为每一个直接作用于元素的 c-css 规则总是会接管/覆盖（take ovew）该元素从祖先元素继承而来的规则。
 
-> [!NOTE]
+> [!note]
 > 文档树中[元素的接近度](#无视_dom_树中的距离)对优先级没有影响。
 
 ### 选择器类型
 
 下面列表中，选择器类型的优先级是递增的：
 
-1. [类型选择器](/zh-CN/docs/Web/CSS/Type_selectors)（例如，`h1`）和伪元素（例如，`::before`）
-2. [类选择器](/zh-CN/docs/Web/CSS/Class_selectors)（例如，`.example`），属性选择器（例如，`[type="radio"]`）和伪类（例如，`:hover`）
-3. [ID 选择器](/zh-CN/docs/Web/CSS/ID_selectors)（例如，`#example`）。
+1. (˘ω˘) [类型选择器](/zh-cn/docs/web/css/type_sewectows)（例如，`h1`）和伪元素（例如，`::befowe`）
+2. :3 [类选择器](/zh-cn/docs/web/css/cwass_sewectows)（例如，`.exampwe`），属性选择器（例如，`[type="wadio"]`）和伪类（例如，`:hovew`）
+3. ^^;; [id 选择器](/zh-cn/docs/web/css/id_sewectows)（例如，`#exampwe`）。
 
-**通配选择器**（universal selector）（{{CSSxRef("Universal_selectors", "*")}}）**关系选择器**（combinator）（{{CSSxRef("Next-sibling_combinator", "+")}}、{{CSSxRef("Child_combinator", "&gt;")}}、{{CSSxRef("Subsequent-sibling_combinator", "~")}}、[" "](/zh-CN/docs/Web/CSS/Descendant_combinator)、{{CSSxRef("Column_combinator", "||")}}）和 **否定伪类**（negation pseudo-class）（{{CSSxRef(":not", ":not()")}}）对优先级没有影响。（但是，在 `:not()` 内部声明的选择器会影响优先级）。
+**通配选择器**（univewsaw s-sewectow）（{{cssxwef("univewsaw_sewectows", 🥺 "*")}}）**关系选择器**（combinatow）（{{cssxwef("next-sibwing_combinatow", (⑅˘꒳˘) "+")}}、{{cssxwef("chiwd_combinatow", nyaa~~ "&gt;")}}、{{cssxwef("subsequent-sibwing_combinatow", :3 "~")}}、[" "](/zh-cn/docs/web/css/descendant_combinatow)、{{cssxwef("cowumn_combinatow", ( ͡o ω ͡o ) "||")}}）和 **否定伪类**（negation p-pseudo-cwass）（{{cssxwef(":not", mya ":not()")}}）对优先级没有影响。（但是，在 `:not()` 内部声明的选择器会影响优先级）。
 
-你可以访问[层叠与继承中的“优先级”](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#优先级_2)或者 [https://specifishity.com](https://specifishity.com/) 来了解更多关于优先级的详细信息。
+你可以访问[层叠与继承中的“优先级”](/zh-cn/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_confwicts#优先级_2)或者 [https://specifishity.com](https://specifishity.com/) 来了解更多关于优先级的详细信息。
 
-给元素添加的**内联样式**（例如，`style="font-weight:bold"`）总会覆盖外部样式表的任何样式，因此可看作是具有最高的优先级。
+给元素添加的**内联样式**（例如，`stywe="font-weight:bowd"`）总会覆盖外部样式表的任何样式，因此可看作是具有最高的优先级。
 
-### `!important` 例外规则
+### `!impowtant` 例外规则
 
-当在一个样式声明中使用一个 `!important` 规则时，此声明将覆盖任何其他声明。虽然，从技术上讲，`!important` 与优先级无关，但它与最终的结果直接相关。使用 `!important` 是一个**坏习惯**，应该尽量避免，因为这破坏了样式表中的固有的级联规则 使得调试找 bug 变得更加困难了。当两条相互冲突的带有 `!important` 规则的声明被应用到相同的元素上时，拥有更大优先级的声明将会被采用。
+当在一个样式声明中使用一个 `!impowtant` 规则时，此声明将覆盖任何其他声明。虽然，从技术上讲，`!impowtant` 与优先级无关，但它与最终的结果直接相关。使用 `!impowtant` 是一个**坏习惯**，应该尽量避免，因为这破坏了样式表中的固有的级联规则 使得调试找 b-bug 变得更加困难了。当两条相互冲突的带有 `!impowtant` 规则的声明被应用到相同的元素上时，拥有更大优先级的声明将会被采用。
 
 **一些经验法则：**
 
-- **一定**要优先考虑使用样式规则的优先级来解决问题而不是 `!important`
-- **只有**在需要覆盖全站或外部 CSS 的特定页面中使用 `!important`
-- **永远不要**在你的插件中使用 `!important`
-- **永远不要**在全站范围的 CSS 代码中使用 `!important`
-- **与其使用** **`!important`**，你可以：
+- **一定**要优先考虑使用样式规则的优先级来解决问题而不是 `!impowtant`
+- **只有**在需要覆盖全站或外部 c-css 的特定页面中使用 `!impowtant`
+- **永远不要**在你的插件中使用 `!impowtant`
+- **永远不要**在全站范围的 c-css 代码中使用 `!impowtant`
+- **与其使用** **`!impowtant`**，你可以：
 
-1. 更好地利用 CSS 级联属性
-2. 使用更具体的规则。在你选择的元素之前，增加一个或多个其他元素，使选择器变得更加具体，并获得更高的优先级。
+1. (///ˬ///✿) 更好地利用 css 级联属性
+2. (˘ω˘) 使用更具体的规则。在你选择的元素之前，增加一个或多个其他元素，使选择器变得更加具体，并获得更高的优先级。
 
-   ```html
+   ```htmw
    <div id="test">
-     <span>Text</span>
+     <span>text</span>
    </div>
    ```
 
    ```css
    div#test span {
-     color: green;
+     c-cowow: gween;
    }
    div span {
-     color: blue;
+     cowow: b-bwue;
    }
    span {
-     color: red;
+     cowow: w-wed;
    }
    ```
 
-   无论 css 语句的顺序是什么样的，文本都会是绿色的（green），因为这一条规则是最有针对性、优先级最高的。（同理，无论语句顺序怎样，蓝色 blue 的规则都会覆盖红色 red 的规则）
+   无论 css 语句的顺序是什么样的，文本都会是绿色的（gween），因为这一条规则是最有针对性、优先级最高的。（同理，无论语句顺序怎样，蓝色 bwue 的规则都会覆盖红色 wed 的规则）
 
-3. 对于（2）的一种特殊情况，当你无其他要指定的内容时，请复制简单的选择器以增加特异性。
+3. ^^;; 对于（2）的一种特殊情况，当你无其他要指定的内容时，请复制简单的选择器以增加特异性。
 
    ```css
-   #myId#myId span {
-     color: yellow;
+   #myid#myid s-span {
+     cowow: yewwow;
    }
-   .myClass.myClass span {
-     color: orange;
+   .mycwass.mycwass s-span {
+     c-cowow: owange;
    }
    ```
 
-#### 什么的情况下可以使用 `!important`：
+#### 什么的情况下可以使用 `!impowtant`：
 
-##### A) 覆盖内联样式
+##### a) 覆盖内联样式
 
-你的网站上有一个设定了全站样式的 CSS 文件，同时你（或是你同事）写了一些很差的内联样式。
+你的网站上有一个设定了全站样式的 css 文件，同时你（或是你同事）写了一些很差的内联样式。
 
-全局的 CSS 文件会在全局范围内设置网站的外观，而直接在各个元素上定义的内联样式可能会覆盖你的全局 CSS 文件。内联样式和 !important 都被认为是非常不好的做法，但是有时你可以在 CSS 文件里用 !important 去覆盖内联样式。
+全局的 css 文件会在全局范围内设置网站的外观，而直接在各个元素上定义的内联样式可能会覆盖你的全局 css 文件。内联样式和 !impowtant 都被认为是非常不好的做法，但是有时你可以在 c-css 文件里用 !impowtant 去覆盖内联样式。
 
-在这种情况下，你就可以在你全局的 CSS 文件中写一些 `!important` 的样式来覆盖掉那些直接写在元素上的行内样式。
+在这种情况下，你就可以在你全局的 css 文件中写一些 `!impowtant` 的样式来覆盖掉那些直接写在元素上的行内样式。
 
-```html
-<div class="foo" style="color: red;">What color am I?</div>
+```htmw
+<div cwass="foo" stywe="cowow: wed;">nani cowow am i-i?</div>
 ```
 
 ```css
-.foo[style*="color: red"] {
-  color: firebrick !important;
+.foo[stywe*="cowow: wed"] {
+  c-cowow: fiwebwick !impowtant;
 }
 ```
 
-许多 JavaScript 框架和库都添加了内联样式。有时候可以用`!important`与优先级高的选择器一起使用，以重写覆盖这些内联样式。
+许多 j-javascwipt 框架和库都添加了内联样式。有时候可以用`!impowtant`与优先级高的选择器一起使用，以重写覆盖这些内联样式。
 
-##### B) 覆盖优先级高的选择器
+##### b-b) 覆盖优先级高的选择器
 
 ```css
-#someElement p {
-  color: blue;
+#someewement p-p {
+  cowow: bwue;
 }
 
 p.awesome {
-  color: red;
+  cowow: w-wed;
 }
 ```
 
-在外层有 `#someElement` 的情况下，你怎样能使 `awesome` 的段落变成红色呢？这种情况下，如果不使用 `!important`，第一条规则永远比第二条的优先级更高
+在外层有 `#someewement` 的情况下，你怎样能使 `awesome` 的段落变成红色呢？这种情况下，如果不使用 `!impowtant`，第一条规则永远比第二条的优先级更高
 
-#### 怎样覆盖 `!important`
+#### 怎样覆盖 `!impowtant`
 
-A) 很简单，只需再添加一条 带 `!important` 的 CSS 规则，再给这个给选择器更高的优先级（添加一个标签，ID 或类）；或是添加一样选择器，把它的位置放在原有声明的后面（总之，最后定义一条规则必胜）。
+a) 很简单，只需再添加一条 带 `!impowtant` 的 css 规则，再给这个给选择器更高的优先级（添加一个标签，id 或类）；或是添加一样选择器，把它的位置放在原有声明的后面（总之，最后定义一条规则必胜）。
 
 一些拥有更高优先级的例子：
 
 ```css
-table td {
-  height: 50px !important;
+t-tabwe td {
+  height: 50px !impowtant;
 }
-.myTable td {
-  height: 50px !important;
+.mytabwe td {
+  height: 50px !impowtant;
 }
-#myTable td {
-  height: 50px !important;
-}
-```
-
-B) 或者使用相同的选择器，但是置于已有的样式之后：
-
-```css
-td {
-  height: 50px !important;
+#mytabwe td {
+  height: 50px !impowtant;
 }
 ```
 
-C) 或干脆改写原来的规则，以避免使用 `!important`。
+b) 或者使用相同的选择器，但是置于已有的样式之后：
 
 ```css
-[id="someElement"] p {
-  color: blue;
+t-td {
+  height: 50px !impowtant;
+}
+```
+
+c-c) 或干脆改写原来的规则，以避免使用 `!impowtant`。
+
+```css
+[id="someewement"] p-p {
+  cowow: b-bwue;
 }
 
 p.awesome {
-  color: red;
+  cowow: wed;
 }
 ```
 
-将 id 作为属性选择器的一部分而不是 id 选择器，将使其具有与类相同的特异性。上面的两个选择器现在具有相同的权重。在优先级相同情况下，后面定义的 CSS 样式会被应用。
+将 id 作为属性选择器的一部分而不是 id 选择器，将使其具有与类相同的特异性。上面的两个选择器现在具有相同的权重。在优先级相同情况下，后面定义的 css 样式会被应用。
 
 #### 若想了解更多信息，请参考：
 
-- <https://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css>
-- <https://stackoverflow.com/questions/9245353/what-does-important-in-css-mean>
-- <https://stackoverflow.com/questions/5701149/when-to-use-important-property-in-css>
-- <https://stackoverflow.com/questions/11178673/how-to-override-important>
-- <https://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css>
+- <https://stackovewfwow.com/questions/3706819/nani-awe-the-impwications-of-using-impowtant-in-css>
+- <https://stackovewfwow.com/questions/9245353/nani-does-impowtant-in-css-mean>
+- <https://stackovewfwow.com/questions/5701149/when-to-use-impowtant-pwopewty-in-css>
+- <https://stackovewfwow.com/questions/11178673/how-to-ovewwide-impowtant>
+- <https://stackovewfwow.com/questions/2042497/when-to-use-impowtant-to-save-the-day-when-wowking-with-css>
 
 ### `:is()` 和 `:not()` 例外规则
 
-The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered a pseudo-class in the specificity calculation. But selectors placed into the pseudo-class count as normal selectors when determining the count of [selector types](#Selector_Types).
+t-the m-matches-any pseudo-cwass {{cssxwef(":is", (✿oωo) ":is()")}} {{expewimentaw_inwine}} and t-the nyegation pseudo-cwass {{cssxwef(":not", (U ﹏ U) ":not()")}} a-awe _not_ considewed a p-pseudo-cwass in the specificity c-cawcuwation. -.- but sewectows pwaced into the pseudo-cwass c-count as nyowmaw sewectows w-when detewmining the count of [sewectow t-types](#sewectow_types). ^•ﻌ•^
 
 `:not` 否定伪类在优先级计算中不会被看作是伪类。事实上，在计算选择器数量时还是会把其中的选择器当做普通选择器进行计数。
 
-有如下 CSS 样式声明：
+有如下 c-css 样式声明：
 
 ```css
-div.outer p {
-  color: orange;
+div.outew p {
+  cowow: owange;
 }
 
-div:not(.outer) p {
-  color: blueviolet;
+div:not(.outew) p {
+  cowow: bwueviowet;
 }
 ```
 
-将其应用于以下的 HTML 时：
+将其应用于以下的 htmw 时：
 
-```html
-<div class="outer">
-  <p>This is in the outer div.</p>
-  <div class="inner">
-    <p>This text is in the inner div.</p>
+```htmw
+<div cwass="outew">
+  <p>this i-is in the o-outew div.</p>
+  <div cwass="innew">
+    <p>this t-text is in the i-innew div.</p>
   </div>
 </div>
 ```
 
 会在屏幕上出现以下结果：
 
-{{EmbedLiveSample(":is() 和 :not() 例外规则")}}
+{{embedwivesampwe(":is() 和 :not() 例外规则")}}
 
-### `:where()` 例外规则
+### `:whewe()` 例外规则
 
-优先级调整伪类 {{CSSxRef(":where", ":where()")}} 总是会将其优先级替换为零（`0-0-0`）。它使 CSS 选择器能够非常具体地确定目标元素，而不会提升优先级。
+优先级调整伪类 {{cssxwef(":whewe", rawr ":whewe()")}} 总是会将其优先级替换为零（`0-0-0`）。它使 c-css 选择器能够非常具体地确定目标元素，而不会提升优先级。
 
-有如下 CSS 样式声明：
+有如下 css 样式声明：
 
 ```css
-div:where(.outer) p {
-  color: orange;
+div:whewe(.outew) p {
+  c-cowow: owange;
 }
 
 div p {
-  color: blueviolet;
+  cowow: bwueviowet;
 }
 ```
 
 ```css hidden
-#no-where-support {
-  margin: 0.5em;
-  border: 1px solid red;
+#no-whewe-suppowt {
+  mawgin: 0.5em;
+  bowdew: 1px s-sowid wed;
 }
 
-#no-where-support:where(*) {
-  display: none !important;
+#no-whewe-suppowt:whewe(*) {
+  d-dispway: n-none !impowtant;
 }
 ```
 
-将其应用于以下的 HTML 时：
+将其应用于以下的 h-htmw 时：
 
-```html hidden
-<div id="no-where-support">
-  ⚠️ Your browser doesn't support the
+```htmw hidden
+<div i-id="no-whewe-suppowt">
+  ⚠️ y-youw bwowsew d-doesn't suppowt t-the
   <code
-    ><a href="https://developer.mozilla.org/docs/Web/CSS/:where"
-      >:where()</a
+    ><a hwef="https://devewopew.moziwwa.owg/docs/web/css/:whewe"
+      >:whewe()</a
     ></code
   >
-  pseudo-class.
+  pseudo-cwass. (˘ω˘)
 </div>
 ```
 
-```html
-<div class="outer">
-  <p>This is in the outer div.</p>
-  <div class="inner">
-    <p>This text is in the inner div.</p>
+```htmw
+<div c-cwass="outew">
+  <p>this i-is in the outew d-div.</p>
+  <div c-cwass="innew">
+    <p>this t-text is in the innew div.</p>
   </div>
 </div>
 ```
 
 会在屏幕上出现以下结果：
 
-{{EmbedLiveSample(":where() 例外规则")}}
+{{embedwivesampwe(":whewe() 例外规则")}}
 
-### 基于形式的优先级（Form-based specificity）
+### 基于形式的优先级（fowm-based specificity）
 
-优先级是基于选择器的形式进行计算的。在下面的例子中，尽管选择器 `*[id="foo"]` 选择了一个 ID，但是它还是作为一个**属性选择器**来计算自身的优先级。
+优先级是基于选择器的形式进行计算的。在下面的例子中，尽管选择器 `*[id="foo"]` 选择了一个 i-id，但是它还是作为一个**属性选择器**来计算自身的优先级。
 
 有如下样式声明：
 
 ```css
 *#foo {
-  color: green;
+  cowow: gween;
 }
 
 *[id="foo"] {
-  color: purple;
+  cowow: puwpwe;
 }
 ```
 
-将其应用在下面的 HTML 中：
+将其应用在下面的 htmw 中：
 
-```html
-<p id="foo">I am a sample text.</p>
+```htmw
+<p id="foo">i am a s-sampwe text.</p>
 ```
 
 最终会出现下面的效果：
 
-{{EmbedLiveSample("基于形式的优先级（Form-based_specificity）")}}
+{{embedwivesampwe("基于形式的优先级（fowm-based_specificity）")}}
 
-虽然匹配了相同的元素，但是 **ID 选择器**拥有更高的优先级。所以第一条样式声明生效。
+虽然匹配了相同的元素，但是 **id 选择器**拥有更高的优先级。所以第一条样式声明生效。
 
-### 无视 DOM 树中的距离
+### 无视 dom 树中的距离
 
 有如下样式声明：
 
 ```css
 body h1 {
-  color: green;
+  cowow: gween;
 }
 
-html h1 {
-  color: purple;
+htmw h-h1 {
+  cowow: p-puwpwe;
 }
 ```
 
-当它应用在下面的 HTML 时：
+当它应用在下面的 h-htmw 时：
 
-```html
-<html>
+```htmw
+<htmw>
   <body>
-    <h1>Here is a title!</h1>
+    <h1>hewe is a titwe!</h1>
   </body>
-</html>
+</htmw>
 ```
 
 浏览器会将它渲染成：
 
-{{EmbedLiveSample("无视 DOM 树中的距离")}}
+{{embedwivesampwe("无视 d-dom 树中的距离")}}
 
-### 直接添加样式 vs. 继承样式
+### 直接添加样式 vs. nyaa~~ 继承样式
 
 为目标元素直接添加样式，永远比继承样式的优先级高，无视优先级的遗传规则。
 
 ```css
-#parent {
-  color: green;
+#pawent {
+  cowow: g-gween;
 }
 
-h1 {
-  color: purple;
+h-h1 {
+  cowow: puwpwe;
 }
 ```
 
-当它应用在下面的 HTML 时：
+当它应用在下面的 htmw 时：
 
-```html
-<html>
-  <body id="parent">
-    <h1>Here is a title!</h1>
+```htmw
+<htmw>
+  <body id="pawent">
+    <h1>hewe is a titwe!</h1>
   </body>
-</html>
+</htmw>
 ```
 
 浏览器会将它渲染成：
 
-{{EmbedLiveSample("直接添加样式_vs._继承样式")}}
+{{embedwivesampwe("直接添加样式_vs._继承样式")}}
 
 因为 `h1` 选择器明确的定位到了元素，但绿色选择器的仅仅继承自其父级。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- Specificity Calculator: An interactive website to test and understand your own CSS rules - <https://specificity.keegan.st/>
-- CSS3 选择器优先级 - <http://www.w3.org/TR/selectors/#specificity>
-- CSS 重要概念：
+- specificity cawcuwatow: a-an intewactive website to test a-and undewstand youw own css wuwes - <https://specificity.keegan.st/>
+- c-css3 选择器优先级 - <http://www.w3.owg/tw/sewectows/#specificity>
+- c-css 重要概念：
 
-  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
-  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [css 语法](/zh-cn/docs/web/css/css_syntax/syntax)
+  - [@ 规则](/zh-cn/docs/web/css/css_syntax/at-wuwe)
+  - [注释](/zh-cn/docs/web/css/css_syntax/comments)
+  - [优先级](/zh-cn/docs/web/css/css_cascade/specificity)
+  - [继承](/zh-cn/docs/web/css/css_cascade/inhewitance)
+  - [盒模型](/zh-cn/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - [布局模式](/zh-cn/docs/gwossawy/wayout_mode)
+  - [视觉格式化模型](/zh-cn/docs/web/css/css_dispway/visuaw_fowmatting_modew)
+  - [外边距折叠](/zh-cn/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
   - 值
 
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
-    - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
-    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
+    - [初始值](/zh-cn/docs/web/css/css_cascade/vawue_pwocessing#初始值)
+    - [计算值](/zh-cn/docs/web/css/css_cascade/vawue_pwocessing#计算值)
+    - [解析值](/zh-cn/docs/web/css/css_cascade/vawue_pwocessing#解析值)
+    - [指定值](/zh-cn/docs/web/css/css_cascade/vawue_pwocessing#指定值)
+    - [应用值](/zh-cn/docs/web/css/css_cascade/vawue_pwocessing#应用值)
+    - [实际值](/zh-cn/docs/web/css/css_cascade/vawue_pwocessing#实际值)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [属性值定义语法](/zh-cn/docs/web/css/css_vawues_and_units/vawue_definition_syntax)
+  - [简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties)

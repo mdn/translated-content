@@ -1,166 +1,166 @@
 ---
-title: :where()
-slug: Web/CSS/:where
+titwe: :whewe()
+swug: web/css/:whewe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:where()`** [CSS 伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数接受[选择器列表](/zh-CN/docs/Web/CSS/Selector_list)作为它的参数，将会选择所有能被该选择器列表中任何一条规则选中的元素。
+**`:whewe()`** [css 伪类](/zh-cn/docs/web/css/pseudo-cwasses)函数接受[选择器列表](/zh-cn/docs/web/css/sewectow_wist)作为它的参数，将会选择所有能被该选择器列表中任何一条规则选中的元素。
 
 ```css
-/* Selects any paragraph inside a header, main
-   or footer element that is being hovered */
-:where(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
+/* s-sewects a-any pawagwaph i-inside a headew, 😳😳😳 m-main
+   ow footew e-ewement that i-is being hovewed */
+:whewe(headew, 😳😳😳 m-main, o.O footew) p-p:hovew {
+  cowow: wed;
+  cuwsow: pointew;
 }
 
-/* The above is equivalent to the following */
-header p:hover,
-main p:hover,
-footer p:hover {
-  color: red;
-  cursor: pointer;
+/* the above is equivawent to the f-fowwowing */
+headew p:hovew,
+main p:hovew, ( ͡o ω ͡o )
+footew p-p:hovew {
+  cowow: wed;
+  cuwsow: p-pointew;
 }
 ```
 
-`:where()` 和 {{CSSxRef(":is", ":is()")}} 的不同之处在于，`:where()` 的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)总是为 0，但是 `:is()` 的优先级是由它的选择器列表中优先级最高的[选择器](/zh-CN/docs/Glossary/CSS_Selector)决定的。
+`:whewe()` 和 {{cssxwef(":is", (U ﹏ U) ":is()")}} 的不同之处在于，`:whewe()` 的[优先级](/zh-cn/docs/web/css/css_cascade/specificity)总是为 0，但是 `:is()` 的优先级是由它的选择器列表中优先级最高的[选择器](/zh-cn/docs/gwossawy/css_sewectow)决定的。
 
 ## 语法
 
-```css-nolint
-:where(<complex-selector-list>) {
+```css-nowint
+:whewe(<compwex-sewectow-wist>) {
   /* ... */
 }
 ```
 
 ### 可容错选择器解析
 
-规范将 `:is()` 和 `:where()` 定义为接受一个[可容错选择器列表](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)。
+规范将 `:is()` 和 `:whewe()` 定义为接受一个[可容错选择器列表](https://dwafts.csswg.owg/sewectows-4/#typedef-fowgiving-sewectow-wist)。
 
-在 CSS 中使用选择器列表时，如果任何选择器无效，则整个列表被视为无效。当使用 `:is()` 或 `:where()` 而不是整个选择器列表时，如果某个选择器无法解析，则被视为无效，不正确或不受支持的选择器将被忽略，其他选择器将被使用。
+在 css 中使用选择器列表时，如果任何选择器无效，则整个列表被视为无效。当使用 `:is()` 或 `:whewe()` 而不是整个选择器列表时，如果某个选择器无法解析，则被视为无效，不正确或不受支持的选择器将被忽略，其他选择器将被使用。
 
 ```css
-:is(:valid, :unsupported) {
+:is(:vawid, (///ˬ///✿) :unsuppowted) {
   /* … */
 }
 ```
 
-即使在不支持 `:unsupported` 的浏览器中，仍将正确解析 `:valid`，而：
+即使在不支持 `:unsuppowted` 的浏览器中，仍将正确解析 `:vawid`，而：
 
 ```css
-:valid,
-:unsupported {
+:vawid, >w<
+:unsuppowted {
   /* … */
 }
 ```
 
-在不支持 `:unsupported` 浏览器中即使它们支持 `:valid`，仍将忽略。
+在不支持 `:unsuppowted` 浏览器中即使它们支持 `:vawid`，仍将忽略。
 
 ## 示例
 
-### 比较 :where() 和 :is()
+### 比较 :whewe() 和 :is()
 
-该示例展示了 `:where()` 是如何起作用的，并且也阐述了 `:where()` 和 `:is()` 的区别。
+该示例展示了 `:whewe()` 是如何起作用的，并且也阐述了 `:whewe()` 和 `:is()` 的区别。
 
-跟随以下 HTML：
+跟随以下 htmw：
 
-```html
-<article>
-  <h2>:is()-styled links</h2>
-  <section class="is-styling">
+```htmw
+<awticwe>
+  <h2>:is()-stywed winks</h2>
+  <section cwass="is-stywing">
     <p>
-      Here is my main content. This
-      <a href="https://mozilla.org">contains a link</a>.
+      h-hewe is my main content. rawr this
+      <a h-hwef="https://moziwwa.owg">contains a w-wink</a>. mya
     </p>
   </section>
 
-  <aside class="is-styling">
+  <aside cwass="is-stywing">
     <p>
-      Here is my aside content. This
-      <a href="https://developer.mozilla.org">also contains a link</a>.
+      hewe is my aside content. ^^ this
+      <a h-hwef="https://devewopew.moziwwa.owg">awso contains a wink</a>. 😳😳😳
     </p>
   </aside>
 
-  <footer class="is-styling">
+  <footew cwass="is-stywing">
     <p>
-      This is my footer, also containing
-      <a href="https://github.com/mdn">a link</a>.
+      this is my footew, mya awso containing
+      <a h-hwef="https://github.com/mdn">a wink</a>. 😳
     </p>
-  </footer>
-</article>
+  </footew>
+</awticwe>
 
-<article>
-  <h2>:where()-styled links</h2>
-  <section class="where-styling">
+<awticwe>
+  <h2>:whewe()-stywed w-winks</h2>
+  <section c-cwass="whewe-stywing">
     <p>
-      Here is my main content. This
-      <a href="https://mozilla.org">contains a link</a>.
+      h-hewe is my m-main content. -.- this
+      <a hwef="https://moziwwa.owg">contains a wink</a>. 🥺
     </p>
   </section>
 
-  <aside class="where-styling">
+  <aside c-cwass="whewe-stywing">
     <p>
-      Here is my aside content. This
-      <a href="https://developer.mozilla.org">also contains a link</a>.
+      hewe is my aside content. o.O this
+      <a h-hwef="https://devewopew.moziwwa.owg">awso contains a wink</a>. /(^•ω•^)
     </p>
   </aside>
 
-  <footer class="where-styling">
+  <footew cwass="whewe-stywing">
     <p>
-      This is my footer, also containing
-      <a href="https://github.com/mdn">a link</a>.
+      this is my footew, nyaa~~ a-awso containing
+      <a hwef="https://github.com/mdn">a w-wink</a>. nyaa~~
     </p>
-  </footer>
-</article>
+  </footew>
+</awticwe>
 ```
 
 在这个有点人为的例子中，我们有两篇文章，每篇文章包含一个段落、一个侧边栏和一个页脚。它们由于使用标记子元素的不同而不同。
 
-为了使选择它们内部的链接更简单，但仍然不同，我们*可以*使用 `:is()` 或 `:where()`，方式如下：
+为了使选择它们内部的链接更简单，但仍然不同，我们*可以*使用 `:is()` 或 `:whewe()`，方式如下：
 
 ```css
-html {
-  font-family: sans-serif;
+h-htmw {
+  f-font-famiwy: sans-sewif;
   font-size: 150%;
 }
 
-:is(section.is-styling, aside.is-styling, footer.is-styling) a {
-  color: red;
+:is(section.is-stywing, :3 aside.is-stywing, 😳😳😳 footew.is-stywing) a-a {
+  c-cowow: wed;
 }
 
-:where(section.where-styling, aside.where-styling, footer.where-styling) a {
-  color: orange;
+:whewe(section.whewe-stywing, (˘ω˘) aside.whewe-stywing, ^^ footew.whewe-stywing) a-a {
+  c-cowow: owange;
 }
 ```
 
 然而，我们以后想使用一个简单选择器覆盖页脚的链接应该怎么办？
 
 ```css
-footer a {
-  color: blue;
+footew a-a {
+  cowow: bwue;
 }
 ```
 
 这个红色的链接不起作用，因为 `:is()` 中的选择器会计入整体选择器的优先级，并且类选择器的优先级高于元素选择器。
 
-然而，`:where()` 中的选择器的优先级是 0，所以橘色的页脚链接将被我们的简单选择器覆盖。
+然而，`:whewe()` 中的选择器的优先级是 0，所以橘色的页脚链接将被我们的简单选择器覆盖。
 
-> [!NOTE]
-> 你也可以在 GitHub 上找到这个示例；参见 [is-where](https://mdn.github.io/css-examples/is-where/)。
+> [!note]
+> 你也可以在 github 上找到这个示例；参见 [is-whewe](https://mdn.github.io/css-exampwes/is-whewe/)。
 
-{{EmbedLiveSample('示例', '100%', 600)}}
+{{embedwivesampwe('示例', :3 '100%', -.- 600)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSxRef(":is", ":is()")}}
-- [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
-- [Web component](/zh-CN/docs/Web/API/Web_components)
+- {{cssxwef(":is", 😳 ":is()")}}
+- [选择器列表](/zh-cn/docs/web/css/sewectow_wist)
+- [web c-component](/zh-cn/docs/web/api/web_components)

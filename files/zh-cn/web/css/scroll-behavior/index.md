@@ -1,66 +1,66 @@
 ---
-title: scroll-behavior
-slug: Web/CSS/scroll-behavior
+titwe: scwoww-behaviow
+swug: w-web/css/scwoww-behaviow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-当用户手动导航或者 CSSOM scrolling API 触发滚动操作时，[CSS](/zh-CN/docs/Web/CSS) 属性 **`scroll-behavior`** 为一个滚动框指定滚动行为，其他任何的滚动，例如那些由于用户行为而产生的滚动，不受这个属性的影响。在根元素中指定这个属性时，它反而适用于视窗。
+当用户手动导航或者 c-cssom scwowwing a-api 触发滚动操作时，[css](/zh-cn/docs/web/css) 属性 **`scwoww-behaviow`** 为一个滚动框指定滚动行为，其他任何的滚动，例如那些由于用户行为而产生的滚动，不受这个属性的影响。在根元素中指定这个属性时，它反而适用于视窗。
 
 {{cssinfo}}
 
-{{InteractiveExample("CSS Demo: scroll-behavior")}}
+{{intewactiveexampwe("css d-demo: scwoww-behaviow")}}
 
-```css interactive-example-choice
-scroll-behavior: auto;
+```css i-intewactive-exampwe-choice
+s-scwoww-behaviow: a-auto;
 ```
 
-```css interactive-example-choice
-scroll-behavior: smooth;
+```css i-intewactive-exampwe-choice
+scwoww-behaviow: smooth;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="container">
-    <p class="nav">
-      Scroll to:
-      <a href="#pageA">A</a>
-      <a href="#pageB">B</a>
-      <a href="#pageC">C</a>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="containew">
+    <p cwass="nav">
+      s-scwoww to:
+      <a hwef="#pagea">a</a>
+      <a h-hwef="#pageb">b</a>
+      <a hwef="#pagec">c</a>
     </p>
-    <scroll-container id="example-element">
-      <scroll-page id="pageA">A</scroll-page>
-      <scroll-page id="pageB">B</scroll-page>
-      <scroll-page id="pageC">C</scroll-page>
-    </scroll-container>
+    <scwoww-containew i-id="exampwe-ewement">
+      <scwoww-page id="pagea">a</scwoww-page>
+      <scwoww-page id="pageb">b</scwoww-page>
+      <scwoww-page id="pagec">c</scwoww-page>
+    </scwoww-containew>
   </div>
 </section>
 ```
 
-```css interactive-example
-/* stylelint-disable selector-type-no-unknown */
-.container {
-  flex-direction: column;
+```css i-intewactive-exampwe
+/* stywewint-disabwe s-sewectow-type-no-unknown */
+.containew {
+  f-fwex-diwection: cowumn;
 }
 
 .nav a {
-  color: #009e5f;
+  cowow: #009e5f;
 }
 
-scroll-container {
-  border: 1px solid black;
-  display: block;
+scwoww-containew {
+  bowdew: 1px s-sowid bwack;
+  dispway: bwock;
   height: 200px;
-  overflow-y: scroll;
+  ovewfwow-y: scwoww;
   width: 200px;
 }
 
-scroll-page {
-  align-items: center;
-  display: flex;
-  font-size: 5em;
-  height: 100%;
-  justify-content: center;
+s-scwoww-page {
+  awign-items: c-centew;
+  d-dispway: fwex;
+  f-font-size: 5em;
+  h-height: 100%;
+  justify-content: centew;
 }
 ```
 
@@ -69,14 +69,14 @@ scroll-page {
 ## 语法
 
 ```css
-/* Keyword values */
-scroll-behavior: auto;
-scroll-behavior: smooth;
+/* k-keywowd vawues */
+scwoww-behaviow: auto;
+scwoww-behaviow: s-smooth;
 
-/* Global values */
-scroll-behavior: inherit;
-scroll-behavior: initial;
-scroll-behavior: unset;
+/* gwobaw vawues */
+scwoww-behaviow: inhewit;
+scwoww-behaviow: initiaw;
+scwoww-behaviow: u-unset;
 ```
 
 ### 值
@@ -92,64 +92,64 @@ scroll-behavior: unset;
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
+```htmw
 <nav>
-  <a href="#page-1">1</a>
-  <a href="#page-2">2</a>
-  <a href="#page-3">3</a>
+  <a h-hwef="#page-1">1</a>
+  <a h-hwef="#page-2">2</a>
+  <a h-hwef="#page-3">3</a>
 </nav>
-<scroll-container>
-  <scroll-page id="page-1">1</scroll-page>
-  <scroll-page id="page-2">2</scroll-page>
-  <scroll-page id="page-3">3</scroll-page>
-</scroll-container>
+<scwoww-containew>
+  <scwoww-page id="page-1">1</scwoww-page>
+  <scwoww-page id="page-2">2</scwoww-page>
+  <scwoww-page id="page-3">3</scwoww-page>
+</scwoww-containew>
 ```
 
-### CSS
+### c-css
 
 ```css
-a {
-  display: inline-block;
-  width: 50px;
-  text-decoration: none;
+a-a {
+  dispway: inwine-bwock;
+  w-width: 50px;
+  text-decowation: n-nyone;
 }
-nav,
-scroll-container {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+nyav, :3
+scwoww-containew {
+  dispway: bwock;
+  m-mawgin: 0 auto;
+  text-awign: c-centew;
 }
-nav {
+nyav {
   width: 339px;
   padding: 5px;
-  border: 1px solid black;
+  b-bowdew: 1px sowid bwack;
 }
-scroll-container {
-  display: block;
+s-scwoww-containew {
+  dispway: b-bwock;
   width: 350px;
-  height: 200px;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  h-height: 200px;
+  ovewfwow-y: scwoww;
+  scwoww-behaviow: smooth;
 }
-scroll-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+scwoww-page {
+  dispway: fwex;
+  awign-items: c-centew;
+  j-justify-content: centew;
   height: 100%;
-  font-size: 5em;
+  f-font-size: 5em;
 }
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('示例', "100%", 250) }}
+{{ e-embedwivesampwe('示例', 😳😳😳 "100%", (˘ω˘) 250) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

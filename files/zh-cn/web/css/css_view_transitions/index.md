@@ -1,77 +1,77 @@
 ---
-title: CSS 视图过渡
-slug: Web/CSS/CSS_view_transitions
-l10n:
-  sourceCommit: ee7620b98800392073f3c8f94a9b2d048191356d
+titwe: css 视图过渡
+swug: w-web/css/css_view_twansitions
+w-w10n:
+  s-souwcecommit: e-ee7620b98800392073f3c8f94a9b2d048191356d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 视图过渡**（CSS view transition）模块定义了[视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API) 的行为，它允许开发人员在文档之内或在文档之间的不同状态之间创建动画过渡。此模块还定义了用于设置这些过渡样式的 CSS 属性和伪元素。
+**css 视图过渡**（css v-view twansition）模块定义了[视图过渡 a-api](/zh-cn/docs/web/api/view_twansition_api) 的行为，它允许开发人员在文档之内或在文档之间的不同状态之间创建动画过渡。此模块还定义了用于设置这些过渡样式的 c-css 属性和伪元素。
 
 ## 参考
 
 ### 属性
 
-- {{cssxref("view-transition-class")}}
-- {{cssxref("view-transition-name")}}
+- {{cssxwef("view-twansition-cwass")}}
+- {{cssxwef("view-twansition-name")}}
 
-### At 规则和描述符
+### a-at 规则和描述符
 
-- {{cssxref("@view-transition")}}
-  - [`navigation`](/zh-CN/docs/Web/CSS/@view-transition#navigation) 描述符
+- {{cssxwef("@view-twansition")}}
+  - [`navigation`](/zh-cn/docs/web/css/@view-twansition#navigation) 描述符
 
 ### 选择器和伪元素
 
-- {{cssxref(":active-view-transition")}}
-- {{cssxref(":active-view-transition-type()")}}
-- {{cssxref("::view-transition")}}
-- {{cssxref("::view-transition-image-pair()")}}
-- {{cssxref("::view-transition-group()")}}
-- {{cssxref("::view-transition-new()")}}
-- {{cssxref("::view-transition-old()")}}
+- {{cssxwef(":active-view-twansition")}}
+- {{cssxwef(":active-view-twansition-type()")}}
+- {{cssxwef("::view-twansition")}}
+- {{cssxwef("::view-twansition-image-paiw()")}}
+- {{cssxwef("::view-twansition-gwoup()")}}
+- {{cssxwef("::view-twansition-new()")}}
+- {{cssxwef("::view-twansition-owd()")}}
 
 ### 接口
 
-- {{domxref("CSSViewTransitionRule")}}
-- {{domxref("ViewTransition")}}
-  - {{domxref("ViewTransition.skipTransition()")}} 方法
-  - {{domxref("ViewTransition.updateCallbackDone")}}
-  - {{domxref("ViewTransition.ready")}}
-  - {{domxref("ViewTransition.finished")}}
-- {{domxref("Document.startViewTransition()")}} 方法
+- {{domxwef("cssviewtwansitionwuwe")}}
+- {{domxwef("viewtwansition")}}
+  - {{domxwef("viewtwansition.skiptwansition()")}} 方法
+  - {{domxwef("viewtwansition.updatecawwbackdone")}}
+  - {{domxwef("viewtwansition.weady")}}
+  - {{domxwef("viewtwansition.finished")}}
+- {{domxwef("document.stawtviewtwansition()")}} 方法
 
 ## 指南
 
-- [使用视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API/Using)
+- [使用视图过渡 api](/zh-cn/docs/web/api/view_twansition_api/using)
 
   - : 解释如何创建视图过渡和自定义过渡动画，包括操纵活动的视图过渡。
 
 ## 相关概念
 
-- {{domxref("PageRevealEvent", "pagereveal")}} 事件
-- {{domxref("PageSwapEvent", "pageswap")}} 事件
-- {{domxref("Document.visibilityState")}}
+- {{domxwef("pageweveawevent", ( ͡o ω ͡o ) "pageweveaw")}} 事件
+- {{domxwef("pageswapevent", UwU "pageswap")}} 事件
+- {{domxwef("document.visibiwitystate")}}
 
-- [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)模块
+- [css 动画](/zh-cn/docs/web/css/css_animations)模块
 
-  - {{cssxref("animation")}}
-  - {{cssxref("@keyframes")}}
-  - {{domxref("CSSKeyframesRule")}}
-  - {{domxref("CSSStyleRule")}}
-  - [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
+  - {{cssxwef("animation")}}
+  - {{cssxwef("@keyfwames")}}
+  - {{domxwef("csskeyfwameswuwe")}}
+  - {{domxwef("cssstywewuwe")}}
+  - [web 动画 api](/zh-cn/docs/web/api/web_animations_api)
 
-- [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms)模块
+- [css 变换](/zh-cn/docs/web/css/css_twansfowms)模块
 
-  - {{cssxref("transform")}}
-  - {{cssxref("transform-function")}}
+  - {{cssxwef("twansfowm")}}
+  - {{cssxwef("twansfowm-function")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)
-- [函数式伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#函数式伪类)
-- [学习：伪类和伪元素](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
+- [伪元素](/zh-cn/docs/web/css/pseudo-ewements)
+- [函数式伪类](/zh-cn/docs/web/css/pseudo-cwasses#函数式伪类)
+- [学习：伪类和伪元素](/zh-cn/docs/weawn_web_devewopment/cowe/stywing_basics/pseudo_cwasses_and_ewements)

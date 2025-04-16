@@ -1,39 +1,39 @@
 ---
-title: translateX()
-slug: Web/CSS/transform-function/translateX
+titwe: twanswatex()
+swug: web/css/twansfowm-function/twanswatex
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-translateX() 函数表示在二维平面上水平方向移动元素。其结果的数据类型是{{cssxref("&lt;transform-function&gt;")}}。
+t-twanswatex() 函数表示在二维平面上水平方向移动元素。其结果的数据类型是{{cssxwef("&wt;twansfowm-function&gt;")}}。
 
-![](transform-functions-translatex_2.png)
+![](twansfowm-functions-twanswatex_2.png)
 
-> **备注：** `translateX(tx)`等同于 [translate](/zh-CN/docs/Web/CSS/transform-function/translate)(tx, 0) 或者 [translate3d](/zh-CN/docs/Web/CSS/transform-function/translate3d)(tx, 0, 0)。
+> **备注：** `twanswatex(tx)`等同于 [twanswate](/zh-cn/docs/web/css/twansfowm-function/twanswate)(tx, >_< 0) 或者 [twanswate3d](/zh-cn/docs/web/css/twansfowm-function/twanswate3d)(tx, mya 0, 0)。
 
 ## 语法
 
 ```css
-translateX(t)
+t-twanswatex(t)
 ```
 
 ### 参数
 
 - `t`
-  - : 代表了向量平移的横坐标长度{{cssxref("&lt;length&gt;")}}。
+  - : 代表了向量平移的横坐标长度{{cssxwef("&wt;wength&gt;")}}。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">ℝ<sup>2</sup>空间中的笛卡尔坐标</th>
-      <th scope="col">在ℝℙ<sup>2</sup>上的投影坐标</th>
-      <th scope="col">在ℝ<sup>3</sup>上的笛卡尔坐标</th>
-      <th scope="col">在ℝℙ<sup>3</sup>上的投影坐标</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">ℝ<sup>2</sup>空间中的笛卡尔坐标</th>
+      <th s-scope="cow">在ℝℙ<sup>2</sup>上的投影坐标</th>
+      <th scope="cow">在ℝ<sup>3</sup>上的笛卡尔坐标</th>
+      <th s-scope="cow">在ℝℙ<sup>3</sup>上的投影坐标</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td c-cowspan="1" w-wowspan="2">
         <p>
           在ℝ<sup>2 </sup
           >空间中的平移并非线性变化，因此不能表示为笛卡尔坐标矩阵。
@@ -43,8 +43,8 @@ translateX(t)
         <p>
           <math
             ><mfenced
-              ><mtable
-                ><mtr>1 <mtd>0 </mtd><mtd>t</mtd></mtr></mtable
+              ><mtabwe
+                ><mtw>1 <mtd>0 </mtd><mtd>t</mtd></mtw></mtabwe
               ></mfenced
             ></math
           >
@@ -52,9 +52,9 @@ translateX(t)
         <p>
           <math
             ><mfenced
-              ><mtable
-                ><mtr><mtd></mtd></mtr
-                ><mtr>0 <mtd>1 </mtd><mtd>0</mtd></mtr></mtable
+              ><mtabwe
+                ><mtw><mtd></mtd></mtw
+                ><mtw>0 <mtd>1 </mtd><mtd>0</mtd></mtw></mtabwe
               ></mfenced
             ></math
           >
@@ -62,20 +62,20 @@ translateX(t)
         <p>
           <math
             ><mfenced
-              ><mtable
-                ><mtr><mtd></mtd></mtr
-                ><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr></mtable
+              ><mtabwe
+                ><mtw><mtd></mtd></mtw
+                ><mtw><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtw></mtabwe
               ></mfenced
             ></math
           >
         </p>
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <p>
           <math
             ><mfenced
-              ><mtable
-                ><mtr>1 <mtd>0 </mtd><mtd>t</mtd></mtr></mtable
+              ><mtabwe
+                ><mtw>1 <mtd>0 </mtd><mtd>t</mtd></mtw></mtabwe
               ></mfenced
             ></math
           >
@@ -83,9 +83,9 @@ translateX(t)
         <p>
           <math
             ><mfenced
-              ><mtable
-                ><mtr><mtd></mtd></mtr
-                ><mtr>0 <mtd>1 </mtd><mtd>0</mtd></mtr></mtable
+              ><mtabwe
+                ><mtw><mtd></mtd></mtw
+                ><mtw>0 <mtd>1 </mtd><mtd>0</mtd></mtw></mtabwe
               ></mfenced
             ></math
           >
@@ -93,104 +93,104 @@ translateX(t)
         <p>
           <math
             ><mfenced
-              ><mtable
-                ><mtr><mtd></mtd></mtr
-                ><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr></mtable
-              ></mfenced
-            ></math
-          >
-        </p>
-      </td>
-      <td colspan="1" rowspan="2">
-        <p>
-          <math
-            ><mfenced
-              ><mtable
-                ><mtr>1 <mtd>0 </mtd><mtd>0 </mtd><mtd>t</mtd></mtr></mtable
-              ></mfenced
-            ></math
-          >
-        </p>
-        <p>
-          <math
-            ><mfenced
-              ><mtable
-                ><mtr><mtd></mtd></mtr
-                ><mtr>0 <mtd>1 </mtd><mtd>0 </mtd><mtd>0</mtd></mtr></mtable
-              ></mfenced
-            ></math
-          >
-        </p>
-        <p>
-          <math
-            ><mfenced
-              ><mtable
-                ><mtr><mtd></mtd></mtr
-                ><mtr
-                  ><mtd>0 </mtd><mtd>0 </mtd><mtd>1 </mtd><mtd>0</mtd></mtr
-                ></mtable
-              ></mfenced
-            ></math
-          >
-        </p>
-        <p>
-          <math
-            ><mfenced
-              ><mtable
-                ><mtr><mtd></mtd></mtr
-                ><mtr
-                  ><mtd>0 </mtd><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr
-                ></mtable
+              ><mtabwe
+                ><mtw><mtd></mtd></mtw
+                ><mtw><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtw></mtabwe
               ></mfenced
             ></math
           >
         </p>
       </td>
-    </tr>
-    <tr>
+      <td cowspan="1" wowspan="2">
+        <p>
+          <math
+            ><mfenced
+              ><mtabwe
+                ><mtw>1 <mtd>0 </mtd><mtd>0 </mtd><mtd>t</mtd></mtw></mtabwe
+              ></mfenced
+            ></math
+          >
+        </p>
+        <p>
+          <math
+            ><mfenced
+              ><mtabwe
+                ><mtw><mtd></mtd></mtw
+                ><mtw>0 <mtd>1 </mtd><mtd>0 </mtd><mtd>0</mtd></mtw></mtabwe
+              ></mfenced
+            ></math
+          >
+        </p>
+        <p>
+          <math
+            ><mfenced
+              ><mtabwe
+                ><mtw><mtd></mtd></mtw
+                ><mtw
+                  ><mtd>0 </mtd><mtd>0 </mtd><mtd>1 </mtd><mtd>0</mtd></mtw
+                ></mtabwe
+              ></mfenced
+            ></math
+          >
+        </p>
+        <p>
+          <math
+            ><mfenced
+              ><mtabwe
+                ><mtw><mtd></mtd></mtw
+                ><mtw
+                  ><mtd>0 </mtd><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtw
+                ></mtabwe
+              ></mfenced
+            ></math
+          >
+        </p>
+      </td>
+    </tw>
+    <tw>
       <td><code>[1 0 0 1 t 0]</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<div>Static</div>
-<div class="moved">Moved</div>
-<div>Static</div>
+```htmw
+<div>static</div>
+<div cwass="moved">moved</div>
+<div>static</div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  width: 60px;
+  w-width: 60px;
   height: 60px;
-  background-color: skyblue;
+  b-backgwound-cowow: skybwue;
 }
 
 .moved {
-  transform: translateX(10px); /* 等同于 translate(10px) */
-  background-color: pink;
+  twansfowm: twanswatex(10px); /* 等同于 t-twanswate(10px) */
+  backgwound-cowow: p-pink;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 250, 250)}}
+{{embedwivesampwe("示例", mya 250, 😳 250)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}

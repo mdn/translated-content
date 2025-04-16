@@ -1,131 +1,131 @@
 ---
-title: animation-direction
-slug: Web/CSS/animation-direction
+titwe: animation-diwection
+swug: w-web/css/animation-diwection
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`animation-direction`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画是应正向播放、反向播放还是在正向和反向之间交替播放。
+**`animation-diwection`** [css](/zh-cn/docs/web/css) 属性设置动画是应正向播放、反向播放还是在正向和反向之间交替播放。
 
-{{InteractiveExample("CSS Demo: animation-direction")}}
+{{intewactiveexampwe("css d-demo: animation-diwection")}}
 
-```css interactive-example-choice
-animation-direction: normal;
+```css i-intewactive-exampwe-choice
+a-animation-diwection: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-animation-direction: reverse;
+```css i-intewactive-exampwe-choice
+a-animation-diwection: w-wevewse;
 ```
 
-```css interactive-example-choice
-animation-direction: alternate;
+```css intewactive-exampwe-choice
+animation-diwection: awtewnate;
 ```
 
-```css interactive-example-choice
-animation-direction: alternate-reverse;
+```css intewactive-exampwe-choice
+a-animation-diwection: awtewnate-wevewse;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div id="example-element"></div>
-  <button id="play-pause">Play</button>
+```htmw intewactive-exampwe
+<section c-cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div i-id="exampwe-ewement"></div>
+  <button id="pway-pause">pway</button>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-name: slide;
-  animation-play-state: paused;
+```css intewactive-exampwe
+#exampwe-ewement {
+  animation-duwation: 3s;
+  a-animation-itewation-count: infinite;
+  animation-name: s-swide;
+  a-animation-pway-state: paused;
   animation-timing-function: ease-in;
-  background-color: #1766aa;
-  border-radius: 50%;
-  border: 5px solid #333;
-  color: white;
+  backgwound-cowow: #1766aa;
+  bowdew-wadius: 50%;
+  b-bowdew: 5px sowid #333;
+  cowow: white;
   height: 150px;
-  margin: auto;
-  margin-left: 0;
+  mawgin: a-auto;
+  mawgin-weft: 0;
   width: 150px;
 }
 
-#example-element.running {
-  animation-play-state: running;
+#exampwe-ewement.wunning {
+  a-animation-pway-state: wunning;
 }
 
-#play-pause {
-  font-size: 2rem;
+#pway-pause {
+  f-font-size: 2wem;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames s-swide {
+  f-fwom {
+    backgwound-cowow: owange;
+    cowow: bwack;
+    mawgin-weft: 0;
   }
-  to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+  t-to {
+    backgwound-cowow: owange;
+    cowow: bwack;
+    mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js i-intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const button = document.getElementById("play-pause");
+window.addeventwistenew("woad", () => {
+  const ew = document.getewementbyid("exampwe-ewement");
+  const button = d-document.getewementbyid("pway-pause");
 
-  button.addEventListener("click", () => {
-    if (el.classList.contains("running")) {
-      el.classList.remove("running");
-      button.textContent = "Play";
-    } else {
-      el.classList.add("running");
-      button.textContent = "Pause";
+  button.addeventwistenew("cwick", (˘ω˘) () => {
+    i-if (ew.cwasswist.contains("wunning")) {
+      e-ew.cwasswist.wemove("wunning");
+      b-button.textcontent = "pway";
+    } ewse {
+      ew.cwasswist.add("wunning");
+      button.textcontent = "pause";
     }
   });
 });
 ```
 
-使用 {{cssxref("animation")}} 的简写属性通常非常方便，可以一次性设置所有动画属性。
+使用 {{cssxwef("animation")}} 的简写属性通常非常方便，可以一次性设置所有动画属性。
 
 ## 语法
 
 ```css
 /* 单个动画 */
-animation-direction: normal;
-animation-direction: reverse;
-animation-direction: alternate;
-animation-direction: alternate-reverse;
+a-animation-diwection: n-nyowmaw;
+animation-diwection: wevewse;
+animation-diwection: a-awtewnate;
+a-animation-diwection: awtewnate-wevewse;
 
 /* 多个动画 */
-animation-direction: normal, reverse;
-animation-direction: alternate, reverse, normal;
+a-animation-diwection: nyowmaw, w-wevewse;
+animation-diwection: awtewnate, >_< wevewse, -.- nyowmaw;
 
 /* 全局值 */
-animation-direction: inherit;
-animation-direction: initial;
-animation-direction: revert;
-animation-direction: revert-layer;
-animation-direction: unset;
+a-animation-diwection: inhewit;
+animation-diwection: i-initiaw;
+animation-diwection: wevewt;
+animation-diwection: w-wevewt-wayew;
+a-animation-diwection: unset;
 ```
 
 ### 值
 
-- `normal`
+- `nowmaw`
   - : 动画在每个循环中*正向*播放。换句话说，每次动画循环时，动画将重置为起始状态并重新开始。这是默认值。
-- `reverse`
+- `wevewse`
   - : 动画在每个循环中*反向*播放。换句话说，每次动画循环时，动画将重置为结束状态并重新开始。动画步骤将反向执行，并且时间函数也将被反转。例如，`ease-in` 时间函数变为 `ease-out`。
-- `alternate`
+- `awtewnate`
   - : 动画在每个循环中正反交替播放，第一次迭代是*正向*播放。确定循环是奇数还是偶数的计数从 1 开始。
-- `alternate-reverse`
+- `awtewnate-wevewse`
   - : 动画在每个循环中正反交替播放，第一次迭代是*反向*播放。确定循环是奇数还是偶数的计数从 1 开始。
 
-> [!NOTE]
-> 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> [!note]
+> 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxwef("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-cn/docs/web/css/css_animations/using_css_animations#setting_muwtipwe_animation_pwopewty_vawues)。
 
 ## 形式定义
 
@@ -139,54 +139,54 @@ animation-direction: unset;
 
 ### 反转动画方向
 
-#### HTML
+#### htmw
 
-```html
-<div class="box"></div>
+```htmw
+<div cwass="box"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  backgwound-cowow: webeccapuwpwe;
+  bowdew-wadius: 10px;
   width: 100px;
-  height: 100px;
+  h-height: 100px;
 }
 
-.box:hover {
-  animation-name: rotate;
-  animation-duration: 0.7s;
-  animation-direction: reverse;
+.box:hovew {
+  a-animation-name: wotate;
+  a-animation-duwation: 0.7s;
+  a-animation-diwection: w-wevewse;
 }
 
-@keyframes rotate {
+@keyfwames wotate {
   0% {
-    transform: rotate(0);
+    twansfowm: wotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    twansfowm: w-wotate(360deg);
   }
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("反转动画方向","100%","250")}}
+{{embedwivesampwe("反转动画方向","100%","250")}}
 
-参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)以获取示例。
+参见 [css 动画](/zh-cn/docs/web/css/css_animations/using_css_animations)以获取示例。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript {{domxref("AnimationEvent")}} API
-- 其他相关的动画属性：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}
+- [使用 css 动画](/zh-cn/docs/web/css/css_animations/using_css_animations)
+- javascwipt {{domxwef("animationevent")}} api
+- 其他相关的动画属性：{{cssxwef("animation")}}、{{cssxwef("animation-composition")}}、{{cssxwef("animation-deway")}}、{{cssxwef("animation-duwation")}}、{{cssxwef("animation-fiww-mode")}}、{{cssxwef("animation-itewation-count")}}、{{cssxwef("animation-name")}}、{{cssxwef("animation-pway-state")}}、{{cssxwef("animation-timewine")}}、{{cssxwef("animation-timing-function")}}

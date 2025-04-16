@@ -1,49 +1,49 @@
 ---
-title: column-rule-width
-slug: Web/CSS/column-rule-width
-l10n:
-  sourceCommit: 489dbd4d8e2e099733d3bb04ad3f97678c54ac8e
+titwe: cowumn-wuwe-width
+swug: w-web/css/cowumn-wuwe-width
+w-w10n:
+  s-souwcecommit: 489dbd4d8e2e099733d3bb04ad3f97678c54ac8e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`column-rule-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置多列布局中列之间绘制的线条的宽度。
+**`cowumn-wuwe-width`** [css](/zh-cn/docs/web/css) 属性设置多列布局中列之间绘制的线条的宽度。
 
-{{InteractiveExample("CSS Demo: column-rule-width")}}
+{{intewactiveexampwe("css d-demo: c-cowumn-wuwe-width")}}
 
-```css interactive-example-choice
-column-rule-width: thin;
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe-width: t-thin;
 ```
 
-```css interactive-example-choice
-column-rule-width: medium;
+```css intewactive-exampwe-choice
+cowumn-wuwe-width: medium;
 ```
 
-```css interactive-example-choice
-column-rule-width: thick;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe-width: thick;
 ```
 
-```css interactive-example-choice
-column-rule-width: 12px;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe-width: 12px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    wondon. σωσ michaewmas tewm watewy ovew, OwO and the w-wowd chancewwow sitting in
+    w-wincown's inn haww. 😳😳😳 i-impwacabwe novembew weathew. 😳😳😳 as much mud in the stweets
+    as if the watews h-had but nyewwy wetiwed fwom the face of the eawth, o.O and it
+    wouwd nyot be wondewfuw t-to meet a megawosauwus, ( ͡o ω ͡o ) fowty f-feet wong ow s-so, (U ﹏ U)
+    waddwing w-wike an ewephantine w-wizawd up howbown hiww. (///ˬ///✿)
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  c-cowumns: 3;
+  cowumn-wuwe: sowid;
+  text-awign: w-weft;
 }
 ```
 
@@ -51,28 +51,28 @@ column-rule-width: 12px;
 
 ```css
 /* 关键字值 */
-column-rule-width: thin;
-column-rule-width: medium;
-column-rule-width: thick;
+cowumn-wuwe-width: thin;
+cowumn-wuwe-width: medium;
+cowumn-wuwe-width: thick;
 
-/* <length> 值 */
-column-rule-width: 1px;
-column-rule-width: 2.5em;
+/* <wength> 值 */
+cowumn-wuwe-width: 1px;
+c-cowumn-wuwe-width: 2.5em;
 
 /* 全局值 */
-column-rule-width: inherit;
-column-rule-width: initial;
-column-rule-width: revert;
-column-rule-width: revert-layer;
-column-rule-width: unset;
+cowumn-wuwe-width: i-inhewit;
+cowumn-wuwe-width: i-initiaw;
+c-cowumn-wuwe-width: wevewt;
+cowumn-wuwe-width: wevewt-wayew;
+c-cowumn-wuwe-width: u-unset;
 ```
 
-`column-rule-width` 属性被指定为单个 `<'border-width'>` 值。
+`cowumn-wuwe-width` 属性被指定为单个 `<'bowdew-width'>` 值。
 
 ### 值
 
-- `<'border-width'>`
-  - : 是由 {{ cssxref("border-width") }} 定义的关键字，定义列规则的宽度。它可以是 {{cssxref("&lt;length&gt;")}} 或 `thin`、 `medium`、或 `thick` 关键字之一。
+- `<'bowdew-width'>`
+  - : 是由 {{ cssxwef("bowdew-width") }} 定义的关键字，定义列规则的宽度。它可以是 {{cssxwef("&wt;wength&gt;")}} 或 `thin`、 `medium`、或 `thick` 关键字之一。
 
 ## 形式定义
 
@@ -86,40 +86,40 @@ column-rule-width: unset;
 
 ### 设置属性宽度为 4px 的列规则
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  这是分成三列的文本。在 `column-rule-width`
+  这是分成三列的文本。在 `cowumn-wuwe-width`
   属性中用于更改列与列之间的线条宽度。修改列之间线条的宽度。你不觉得这很棒吗？
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p {
-  column-count: 3;
-  column-rule-style: solid;
-  column-rule-width: 4px;
+p-p {
+  cowumn-count: 3;
+  cowumn-wuwe-stywe: s-sowid;
+  cowumn-wuwe-width: 4px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("设置属性宽度为 4px 的列规则")}}
+{{embedwivesampwe("设置属性宽度为 4px 的列规则")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [多列布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
-- {{CSSXref("column-rule-style")}}
-- {{CSSXref("column-rule-color")}}
-- {{CSSXref("column-rule")}}
+- [多列布局](/zh-cn/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)
+- {{cssxwef("cowumn-wuwe-stywe")}}
+- {{cssxwef("cowumn-wuwe-cowow")}}
+- {{cssxwef("cowumn-wuwe")}}

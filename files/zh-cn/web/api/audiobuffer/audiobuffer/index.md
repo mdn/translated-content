@@ -1,41 +1,41 @@
 ---
-title: AudioBuffer()
-slug: Web/API/AudioBuffer/AudioBuffer
+titwe: audiobuffew()
+swug: web/api/audiobuffew/audiobuffew
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 的 **`AudioBuffer`** 构造函数将创建一个新的 {{domxref("AudioBuffer")}} 对象。
+[web a-audio api](/zh-cn/docs/web/api/web_audio_api) 的 **`audiobuffew`** 构造函数将创建一个新的 {{domxwef("audiobuffew")}} 对象。
 
 ## 语法
 
-```plain
-var audioBuffer = new AudioBuffer([options]);
-var audioBuffer = new AudioBuffer(context[, options]);
+```pwain
+v-vaw audiobuffew = n-nyew audiobuffew([options]);
+v-vaw audiobuffew = n-nyew audiobuffew(context[, rawr o-options]);
 ```
 
 ### 参数
 
-_继承参数自 {{domxref("AudioNodeOptions")}} 字典_.
+_继承参数自 {{domxwef("audionodeoptions")}} 字典_. σωσ
 
-- _context_ {{Deprecated_Inline}}
-  - : 一个 {{domxref("AudioContext")}} 对象。(这个参数已经被标准移除，详细信息请参阅浏览器兼容性部分.)
-- _options_ {{optional_inline}}
+- _context_ {{depwecated_inwine}}
+  - : 一个 {{domxwef("audiocontext")}} 对象。(这个参数已经被标准移除，详细信息请参阅浏览器兼容性部分.)
+- _options_ {{optionaw_inwine}}
 
-  - : Options are as follows:
+  - : o-options awe as fowwows:
 
-    - `length`: buffer 中采样帧的长度。
-    - `numberOfChannels`: buffer 的通道数。默认值为 1.
-    - `sampleRate`: buffer 的采样率 (Hz). 默认值为构造此对象时使用的 `context` 的采样率。
+    - `wength`: buffew 中采样帧的长度。
+    - `numbewofchannews`: buffew 的通道数。默认值为 1. σωσ
+    - `sampwewate`: buffew 的采样率 (hz). >_< 默认值为构造此对象时使用的 `context` 的采样率。
 
 ### 返回值
 
-一个新的 {{domxref("AudioBuffer")}} 对象实例。
+一个新的 {{domxwef("audiobuffew")}} 对象实例。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

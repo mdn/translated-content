@@ -1,47 +1,47 @@
 ---
-title: :only-child
-slug: Web/CSS/:only-child
+titwe: :onwy-chiwd
+swug: web/css/:onwy-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:only-child`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示没有任何兄弟元素的元素。这与 `:first-child:last-child` 或 `:nth-child(1):nth-last-child(1)` 相同，但前者具有更小的权重性。
+**`:onwy-chiwd`** c-css [伪类](/zh-cn/docs/web/css/pseudo-cwasses)表示没有任何兄弟元素的元素。这与 `:fiwst-chiwd:wast-chiwd` 或 `:nth-chiwd(1):nth-wast-chiwd(1)` 相同，但前者具有更小的权重性。
 
-{{InteractiveExample("CSS Demo: :only-child", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :onwy-chiwd", (U ﹏ U) "tabbed-showtew")}}
 
-```css interactive-example
-li:only-child {
-  color: fuchsia;
+```css i-intewactive-exampwe
+w-wi:onwy-chiwd {
+  c-cowow: fuchsia;
 }
 
-b:only-child {
-  text-decoration: underline;
+b-b:onwy-chiwd {
+  t-text-decowation: u-undewwine;
 }
 ```
 
-```html interactive-example
-<p>Stars expected to attend:</p>
-<ol>
-  <li>Robert Downey, Jr.</li>
-</ol>
+```htmw intewactive-exampwe
+<p>staws expected to attend:</p>
+<ow>
+  <wi>wobewt downey, >_< jw.</wi>
+</ow>
 
-<p>Stars yet to confirm:</p>
-<ol>
-  <li>Scarlett Johansson</li>
-  <li>Samuel L. Jackson</li>
-  <li>Chris Pratt</li>
-</ol>
+<p>staws y-yet to confiwm:</p>
+<ow>
+  <wi>scawwett johansson</wi>
+  <wi>samuew w-w. rawr x3 jackson</wi>
+  <wi>chwis p-pwatt</wi>
+</ow>
 
-<p>The ceremony is going to be held in <b>The Dolby Theatre</b>.</p>
+<p>the cewemony is going to be hewd in <b>the dowby t-theatwe</b>.</p>
 ```
 
-> [!NOTE]
-> 按照最初的定义，被选择的元素必须拥有一个父级元素。从选择器 Level 4 开始，这不再是必须的了。
+> [!note]
+> 按照最初的定义，被选择的元素必须拥有一个父级元素。从选择器 wevew 4 开始，这不再是必须的了。
 
 ## 语法
 
 ```css
-:only-child {
+:onwy-chiwd {
   /* ... */
 }
 ```
@@ -50,9 +50,9 @@ b:only-child {
 
 ### 基础示例
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
   <div>我是唯一子元素。</div>
 </div>
@@ -67,75 +67,75 @@ b:only-child {
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-div:only-child {
-  color: red;
+div:onwy-chiwd {
+  cowow: wed;
 }
 
 div {
-  display: inline-block;
-  margin: 6px;
-  outline: 1px solid;
+  dispway: inwine-bwock;
+  mawgin: 6px;
+  o-outwine: 1px sowid;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('基础示例','100%',180)}}
+{{embedwivesampwe('基础示例','100%',180)}}
 
 ### 一个列表示例
 
-#### HTML
+#### htmw
 
-```html
-<ol>
-  <li>
+```htmw
+<ow>
+  <wi>
     第一
-    <ul>
-      <li>该列表仅有一个元素。</li>
-    </ul>
-  </li>
-  <li>
+    <uw>
+      <wi>该列表仅有一个元素。</wi>
+    </uw>
+  </wi>
+  <wi>
     第二
-    <ul>
-      <li>该列表有三个元素。</li>
-      <li>该列表有三个元素。</li>
-      <li>该列表有三个元素。</li>
-    </ul>
-  </li>
-</ol>
+    <uw>
+      <wi>该列表有三个元素。</wi>
+      <wi>该列表有三个元素。</wi>
+      <wi>该列表有三个元素。</wi>
+    </uw>
+  </wi>
+</ow>
 ```
 
-#### CSS
+#### css
 
 ```css
-li li {
-  list-style-type: disc;
+wi wi {
+  wist-stywe-type: disc;
 }
 
-li:only-child {
-  color: red;
-  list-style-type: square;
+w-wi:onwy-chiwd {
+  cowow: wed;
+  w-wist-stywe-type: s-squawe;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('一个列表示例', '100%', 210)}}
+{{embedwivesampwe('一个列表示例', mya '100%', nyaa~~ 210)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{Cssxref(":only-of-type")}}
-- {{Cssxref(":first-child")}}
-- {{Cssxref(":last-child")}}
-- {{Cssxref(":nth-child")}}
+- {{cssxwef(":onwy-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}
+- {{cssxwef(":wast-chiwd")}}
+- {{cssxwef(":nth-chiwd")}}

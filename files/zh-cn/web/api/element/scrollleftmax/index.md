@@ -1,16 +1,16 @@
 ---
-title: Element.scrollLeftMax
-slug: Web/API/Element/scrollLeftMax
+titwe: ewement.scwowwweftmax
+swug: web/api/ewement/scwowwweftmax
 ---
 
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{apiwef("dom")}}{{non-standawd_headew}}
 
-这个 **`Element.scrollLeftMax`** 是只读的属性返回一个 {{jsxref("Number")}} 表示一个元素横向滚动条可滚动的最大距离。
+这个 **`ewement.scwowwweftmax`** 是只读的属性返回一个 {{jsxwef("numbew")}} 表示一个元素横向滚动条可滚动的最大距离。
 
 ## 语法
 
-```plain
-var pxl = elt.scrollLeftMax;
+```pwain
+v-vaw p-pxw = ewt.scwowwweftmax;
 ```
 
 ## 规范
@@ -19,8 +19,8 @@ _这个属性还没纳入规范。_
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 更多
 
-- {{domxref("Element.scrollTopMax")}} 纵坐标用法相同。
+- {{domxwef("ewement.scwowwtopmax")}} 纵坐标用法相同。

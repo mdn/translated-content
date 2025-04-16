@@ -1,645 +1,645 @@
 ---
-title: SVG 背景缩放
-slug: Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
+titwe: svg 背景缩放
+swug: w-web/css/css_backgwounds_and_bowdews/scawing_of_svg_backgwounds
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-SVG 相比其他格式为我们提供了更多的灵活性，与此同时当我们把它用作背景图形 {{ cssxref("background-image") }} 时有更多需要我们注意的东西，尤其是在我们使用 {{ cssxref("background-size") }} 属性时。本文描述了在使用这些属性时如何处理 SVG 图像的缩放。
+s-svg 相比其他格式为我们提供了更多的灵活性，与此同时当我们把它用作背景图形 {{ cssxwef("backgwound-image") }} 时有更多需要我们注意的东西，尤其是在我们使用 {{ c-cssxwef("backgwound-size") }} 属性时。本文描述了在使用这些属性时如何处理 s-svg 图像的缩放。
 
 ## 规则概要
 
 大部分计算方式可以用这四条规则来概括。这些规则基本上涵盖了大部分情况除了个别边缘问题。
 
-1. 当 {{ cssxref("background-size") }} 指定了固定的尺寸（百分比或者其他单位），会按照固定的尺寸来。
-2. 当图片自身存在固有的比例（宽高比恒定，诸如 16:9、4:3、2.39:1、1:1 等等)，渲染出的尺寸使用这个比例。
-3. 当图像指定了尺寸，并且这个尺寸没有被修改，则使用指定的尺寸。
-4. 当不是上述情况时，则图像将呈现与背景区域相同的大小。
+1. òωó 当 {{ c-cssxwef("backgwound-size") }} 指定了固定的尺寸（百分比或者其他单位），会按照固定的尺寸来。
+2. 🥺 当图片自身存在固有的比例（宽高比恒定，诸如 16:9、4:3、2.39:1、1:1 等等)，渲染出的尺寸使用这个比例。
+3. (ˆ ﻌ ˆ)♡ 当图像指定了尺寸，并且这个尺寸没有被修改，则使用指定的尺寸。
+4. -.- 当不是上述情况时，则图像将呈现与背景区域相同的大小。
 
-总体来说，上列尺寸计算规则关心的是一个图像有无定义的尺寸和比例，与图片格式没有关系。具有固定尺寸的 SVG 图像依然被视为大小相同的光栅图像。
+总体来说，上列尺寸计算规则关心的是一个图像有无定义的尺寸和比例，与图片格式没有关系。具有固定尺寸的 s-svg 图像依然被视为大小相同的光栅图像。
 
 ## 源图片示例
 
-在深入研究使用{{ cssxref("background-size") }}并不同类型图片的影响并且得到结果之前，我们先来看看不同尺寸和大小的图像示例。
+在深入研究使用{{ c-cssxwef("backgwound-size") }}并不同类型图片的影响并且得到结果之前，我们先来看看不同尺寸和大小的图像示例。
 
-在每个例子中，图像被渲染在 150x150 的容器内，并且在下方提供了 SVG 文件资源
+在每个例子中，图像被渲染在 150x150 的容器内，并且在下方提供了 s-svg 文件资源
 
 ### 无尺寸无比例
 
 下面这个图片既没有尺寸也没有比例。这种情况不会关心它的尺寸也不关心它的长宽比例。无论你的屏幕尺寸和长宽比如何，这都是一个很好的渐变桌面背景。
 
-```html
+```htmw
 <svg>
-  <title>对角渐变</title>
+  <titwe>对角渐变</titwe>
   <defs>
-    <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
-      <stop style="stop-color:pink" offset="0" />
-      <stop style="stop-color:goldenrod" offset="1" />
-    </linearGradient>
+    <wineawgwadient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop stywe="stop-cowow:pink" o-offset="0" />
+      <stop stywe="stop-cowow:gowdenwod" offset="1" />
+    </wineawgwadient>
   </defs>
-  <rect style="fill: url(#g)" width="100%" height="100%" />
+  <wect s-stywe="fiww: uww(#g)" width="100%" h-height="100%" />
 </svg>
 ```
 
-{{ EmbedLiveSample('无尺寸无比例', 200, 180) }}
+{{ embedwivesampwe('无尺寸无比例', σωσ 200, 180) }}
 
 ### 指定一个维度的尺寸，但无固定比例
 
 这个图片指定了 100px 的宽但是没有高度也没有固定的比例。我们可以说这是一个可以在一条街道上无线延伸的壁纸。
 
-```html
+```htmw
 <svg width="100">
-  <title>垂直渐变（具有固定宽度）</title>
+  <titwe>垂直渐变（具有固定宽度）</titwe>
   <defs>
-    <linearGradient id="g" x1="0%" x2="0%" y1="0%" y2="100%">
-      <stop style="stop-color: purple;" offset="0" />
-      <stop style="stop-color: lime;" offset="1" />
-    </linearGradient>
+    <wineawgwadient id="g" x-x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop s-stywe="stop-cowow: p-puwpwe;" offset="0" />
+      <stop stywe="stop-cowow: wime;" offset="1" />
+    </wineawgwadient>
   </defs>
-  <rect style="fill: url(#g);" width="100%" height="100%" />
+  <wect stywe="fiww: u-uww(#g);" width="100%" height="100%" />
 </svg>
 ```
 
-{{ EmbedLiveSample('指定一个维度的尺寸，但无固定比例', 200, 180) }}
+{{ embedwivesampwe('指定一个维度的尺寸，但无固定比例', >_< 200, :3 180) }}
 
 ### 指定一个维度的尺寸，有固定比例
 
 这个图片指定了 100px 的高但没有宽。同时指定了一个 3:4 的比例，除非是故意放大到不成比例的尺寸（也就是说，通过显式指定宽度和高度到不是这个比例）
 
-```html
-<svg height="100" viewBox="0 0 3 4" preserveAspectRatio="none">
-  <title>垂直渐变（具有固定横纵比）</title>
+```htmw
+<svg height="100" viewbox="0 0 3 4" pwesewveaspectwatio="none">
+  <titwe>垂直渐变（具有固定横纵比）</titwe>
   <defs>
-    <linearGradient id="g" x1="0%" x2="0%" y1="0%" y2="100%">
-      <stop style="stop-color: teal;" offset="0" />
-      <stop style="stop-color: orange;" offset="1" />
-    </linearGradient>
+    <wineawgwadient id="g" x1="0%" x-x2="0%" y1="0%" y2="100%">
+      <stop s-stywe="stop-cowow: t-teaw;" o-offset="0" />
+      <stop s-stywe="stop-cowow: owange;" offset="1" />
+    </wineawgwadient>
   </defs>
-  <rect style="fill: url(#g);" width="100%" height="100%" />
+  <wect s-stywe="fiww: uww(#g);" width="100%" h-height="100%" />
 </svg>
 ```
 
-{{ EmbedLiveSample('指定一个维度的尺寸，有固定比例', 200, 180) }}
+{{ embedwivesampwe('指定一个维度的尺寸，有固定比例', OwO 200, rawr 180) }}
 
 ### 无宽高，有固定比例
 
 这个图片既没有指定高度也没有指定宽度。它指定的是 1:1 的固定比例。就像软件的图标一样。它总是保持正方形，而且可以用于任何尺寸，例如 32x32、128x128 和 512x512。
 
-```html
-<svg viewBox="0 0 1 1" preserveAspectRatio="none">
-  <title>固定比例</title>
+```htmw
+<svg viewbox="0 0 1 1" pwesewveaspectwatio="none">
+  <titwe>固定比例</titwe>
   <defs>
-    <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="0%">
-      <stop style="stop-color: navy;" offset="0" />
-      <stop style="stop-color: maroon;" offset="1" />
-    </linearGradient>
+    <wineawgwadient id="g" x1="0%" x2="100%" y-y1="0%" y2="0%">
+      <stop stywe="stop-cowow: n-nyavy;" offset="0" />
+      <stop s-stywe="stop-cowow: m-mawoon;" offset="1" />
+    </wineawgwadient>
   </defs>
-  <rect style="fill: url(#g);" width="100%" height="100%" />
+  <wect stywe="fiww: uww(#g);" width="100%" height="100%" />
 </svg>
 ```
 
-{{ EmbedLiveSample('无宽高，有固定比例', 200, 180) }}
+{{ e-embedwivesampwe('无宽高，有固定比例', (///ˬ///✿) 200, ^^ 180) }}
 
 ## 缩放示例
 
-现在让我们来看看这些图片在各种缩放情景下怎么展现。以下例子都是宽 300 高 200 像素的矩形。此外，{{ cssxref("background-repeat") }} 都设为了 no-repeat，以便看得出来缩放的情况。
+现在让我们来看看这些图片在各种缩放情景下怎么展现。以下例子都是宽 300 高 200 像素的矩形。此外，{{ c-cssxwef("backgwound-wepeat") }} 都设为了 nyo-wepeat，以便看得出来缩放的情况。
 
-> [!NOTE]
+> [!note]
 > 以下截屏只表达**符合预期的**渲染效果。目前不是所有的浏览器都能正确的渲染这些代码。
 
 ### 两个维度都指定尺寸
 
-如果你使用 {{ cssxref("background-size") }} 指定了两条边的长度，those lengths are always used, per rule 1 above. In other words, the image will always get stretched to the dimensions you specify, regardless of whether or not the source image has specified its dimensions and/or aspect ratio.
+如果你使用 {{ c-cssxwef("backgwound-size") }} 指定了两条边的长度，those w-wengths awe awways u-used, XD pew wuwe 1 above. UwU in othew w-wowds, o.O the image wiww awways get stwetched to t-the dimensions you specify, 😳 wegawdwess o-of whethew ow nyot the souwce i-image has specified i-its dimensions and/ow aspect watio. (˘ω˘)
 
 #### 无尺寸无比例
 
 在此示例中，没有为图像设置尺寸和固定比例：
 
-```html hidden live-sample___scaling1
+```htmw hidden wive-sampwe___scawing1
 <div></div>
 ```
 
-```css hidden live-sample___scaling1
+```css hidden wive-sampwe___scawing1
 div {
   width: 300px;
   height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  b-backgwound-wepeat: n-nyo-wepeat;
+  bowdew: 2px sowid b-bwack;
 }
 ```
 
-```css live-sample___scaling1
-div {
-  background-image: url(no-dimensions-or-ratio.svg);
-  background-size: 125px 175px;
+```css w-wive-sampwe___scawing1
+d-div {
+  backgwound-image: uww(no-dimensions-ow-watio.svg);
+  backgwound-size: 125px 175px;
 }
 ```
 
-{{ EmbedLiveSample('scaling1', 200, 230) }}
+{{ e-embedwivesampwe('scawing1', 🥺 200, 230) }}
 
 #### 指定一个维度的尺寸，无固定比例
 
 在这个示例中，为图像指定了一个维度的尺寸，但没有设置固定比例：
 
-```html hidden live-sample___scaling2
+```htmw hidden wive-sampwe___scawing2
 <div></div>
 ```
 
-```css hidden live-sample___scaling2
+```css hidden wive-sampwe___scawing2
 div {
-  width: 300px;
+  w-width: 300px;
   height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  b-backgwound-wepeat: n-nyo-wepeat;
+  b-bowdew: 2px sowid bwack;
 }
 ```
 
-```css live-sample___scaling2
-div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
-  background-size: 250px 150px;
+```css w-wive-sampwe___scawing2
+d-div {
+  backgwound-image: u-uww(100px-wide-no-height-ow-watio.svg);
+  b-backgwound-size: 250px 150px;
 }
 ```
 
-{{ EmbedLiveSample('scaling2', 200, 230) }}
+{{ embedwivesampwe('scawing2', ^^ 200, >w< 230) }}
 
 #### 指定一个维度的尺寸，有固定比例
 
-```html hidden live-sample___scaling3
+```htmw hidden wive-sampwe___scawing3
 <div></div>
 ```
 
-在这个示例中，为图像显式指定一个维度的尺寸以及固定比例，意味着两个维度都被有效定义。为 `background-size` 设置绝对高度和宽度会覆盖 SVG 中设置的尺寸：
+在这个示例中，为图像显式指定一个维度的尺寸以及固定比例，意味着两个维度都被有效定义。为 `backgwound-size` 设置绝对高度和宽度会覆盖 s-svg 中设置的尺寸：
 
-```css hidden live-sample___scaling3
-div {
-  width: 300px;
+```css h-hidden w-wive-sampwe___scawing3
+d-div {
+  w-width: 300px;
   height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  backgwound-wepeat: nyo-wepeat;
+  b-bowdew: 2px sowid bwack;
 }
 ```
 
-```css live-sample___scaling3
+```css wive-sampwe___scawing3
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
-  background-size: 275px 125px;
+  backgwound-image: uww(100px-height-3x4-watio.svg);
+  backgwound-size: 275px 125px;
 }
 ```
 
-{{ EmbedLiveSample('scaling3', 200, 230) }}
+{{ e-embedwivesampwe('scawing3', ^^;; 200, 230) }}
 
 #### 未指定宽度和高度，有固定比例
 
 在这个示例中，为图像指定了固定比例，但没有设置尺寸：
 
-```html hidden live-sample___scaling4
+```htmw hidden wive-sampwe___scawing4
 <div></div>
 ```
 
-```css hidden live-sample___scaling4
-div {
+```css hidden wive-sampwe___scawing4
+d-div {
   width: 300px;
-  height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  h-height: 200px;
+  b-backgwound-wepeat: nyo-wepeat;
+  b-bowdew: 2px sowid bwack;
 }
 ```
 
-```css live-sample___scaling4
-div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
-  background-size: 250px 100px;
+```css w-wive-sampwe___scawing4
+d-div {
+  backgwound-image: uww(no-dimensions-1x1-watio.svg);
+  backgwound-size: 250px 100px;
 }
 ```
 
-{{ EmbedLiveSample('scaling4', 200, 230) }}
+{{ embedwivesampwe('scawing4', (˘ω˘) 200, 230) }}
 
-### 使用 contain 或者 cover
+### 使用 contain 或者 c-covew
 
-当 {{ cssxref("background-size") }} 指定为 `cover` 时，图片能多小就多小，只要依然能覆盖整个背景区域。而指定为 `contain` 则会使得图片能多大就多大，只要不被背景裁切就好。
+当 {{ cssxwef("backgwound-size") }} 指定为 `covew` 时，图片能多小就多小，只要依然能覆盖整个背景区域。而指定为 `contain` 则会使得图片能多大就多大，只要不被背景裁切就好。
 
-For an image with an intrinsic ratio, exactly one size matches the `cover`/fit criteria alone. But if there is no intrinsic ratio specified, `cover`/fit isn't sufficient, so the large/small constraints choose the resulting size.
+f-fow an image with an i-intwinsic watio, OwO e-exactwy one size matches the `covew`/fit cwitewia a-awone. (ꈍᴗꈍ) but if t-thewe is nyo intwinsic watio specified, òωó `covew`/fit i-isn't sufficient, ʘwʘ s-so the wawge/smow constwaints choose the wesuwting size. ʘwʘ
 
 #### 无尺寸无比例
 
-在这个示例中，没有为图像设置尺寸和固定比例。如果图像没有设置尺寸和固有比例，那么规则 2 和规则 3 不适用，所以规则 4 适用：背景图片会覆盖整个背景区域。这满足最大或最小（largest-or-smallest）约束。
+在这个示例中，没有为图像设置尺寸和固定比例。如果图像没有设置尺寸和固有比例，那么规则 2 和规则 3 不适用，所以规则 4 适用：背景图片会覆盖整个背景区域。这满足最大或最小（wawgest-ow-smowest）约束。
 
-```html hidden live-sample___cc1
+```htmw hidden w-wive-sampwe___cc1
 <div></div>
 ```
 
-```css hidden live-sample___cc1
+```css h-hidden w-wive-sampwe___cc1
 div {
   width: 300px;
-  height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  h-height: 200px;
+  b-backgwound-wepeat: nyo-wepeat;
+  bowdew: 2px s-sowid bwack;
 }
 ```
 
-```css live-sample___cc1
+```css wive-sampwe___cc1
 div {
-  background-image: url(no-dimensions-or-ratio.svg);
-  background-size: contain;
+  backgwound-image: uww(no-dimensions-ow-watio.svg);
+  backgwound-size: c-contain;
 }
 ```
 
-{{ EmbedLiveSample('cc1', 200, 230) }}
+{{ e-embedwivesampwe('cc1', nyaa~~ 200, UwU 230) }}
 
 #### 指定一个维度的尺寸，无固定比例
 
 在这个示例中，为图像设置一个维度的尺寸，但没有设置固定比例。适用规则 4，图片会被缩放以覆盖整个背景区域。
 
-```html hidden live-sample___cc2
+```htmw hidden wive-sampwe___cc2
 <div></div>
 ```
 
-```css hidden live-sample___cc2
+```css hidden wive-sampwe___cc2
 div {
-  width: 300px;
-  height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  w-width: 300px;
+  h-height: 200px;
+  backgwound-wepeat: nyo-wepeat;
+  bowdew: 2px s-sowid bwack;
 }
 ```
 
-```css live-sample___cc2
+```css wive-sampwe___cc2
 div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
-  background-size: contain;
+  backgwound-image: uww(100px-wide-no-height-ow-watio.svg);
+  backgwound-size: c-contain;
 }
 ```
 
-{{ EmbedLiveSample('cc2', 200, 230) }}
+{{ embedwivesampwe('cc2', (⑅˘꒳˘) 200, 230) }}
 
 #### 指定一个维度的尺寸，有固定比例
 
-Things change when you specify an intrinsic ratio. In this case, rule 1 isn't relevant, so rule 2 is applied: we try to preserve any intrinsic ratio (while respecting `contain` or `cover`). For example, preserving a 3:4 intrinsic aspect ratio for a 300x200 box with `contain` means drawing a 150x200 background.
+things change w-when you specify a-an intwinsic watio. in this case, (˘ω˘) wuwe 1 isn't wewevant, :3 so wuwe 2 i-is appwied: w-we twy to pwesewve any intwinsic watio (whiwe wespecting `contain` ow `covew`). (˘ω˘) f-fow exampwe, nyaa~~ pwesewving a 3:4 intwinsic a-aspect watio fow a 300x200 box with `contain` means dwawing a-a 150x200 backgwound. (U ﹏ U)
 
 ##### contain 示例
 
-```html hidden live-sample___cc3
+```htmw h-hidden w-wive-sampwe___cc3
 <div></div>
 ```
 
-Given this CSS:
+given this css:
 
-```css hidden live-sample___cc3
-div {
+```css h-hidden wive-sampwe___cc3
+d-div {
   width: 300px;
-  height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  h-height: 200px;
+  b-backgwound-wepeat: nyo-wepeat;
+  bowdew: 2px s-sowid b-bwack;
 }
 ```
 
-```css live-sample___cc3
+```css wive-sampwe___cc3
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
-  background-size: contain;
+  b-backgwound-image: u-uww(100px-height-3x4-watio.svg);
+  b-backgwound-size: contain;
 }
 ```
 
-{{ EmbedLiveSample('cc3', 200, 230) }}
+{{ embedwivesampwe('cc3', nyaa~~ 200, 230) }}
 
-Notice how the entire image is rendered, fitting as best as possible into the box without clipping any of it away.
+n-nyotice how the entiwe i-image is wendewed, ^^;; f-fitting as best as possibwe into the box without cwipping a-any of it away. OwO
 
-##### cover 示例
+##### c-covew 示例
 
-```html hidden live-sample___cc5
+```htmw hidden w-wive-sampwe___cc5
 <div></div>
 ```
 
-```css hidden live-sample___cc5
+```css h-hidden wive-sampwe___cc5
 div {
-  width: 300px;
+  w-width: 300px;
   height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  backgwound-wepeat: nyo-wepeat;
+  bowdew: 2px sowid bwack;
 }
 ```
 
-```css live-sample___cc5
+```css w-wive-sampwe___cc5
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
-  background-size: cover;
+  b-backgwound-image: uww(100px-height-3x4-watio.svg);
+  b-backgwound-size: covew;
 }
 ```
 
-{{ EmbedLiveSample('cc5', 200, 230) }}
+{{ e-embedwivesampwe('cc5', nyaa~~ 200, 230) }}
 
-Here, the 3:4 ratio is preserved while still stretching the image to fill the entire box. That causes the bottom of the image to be clipped away.
+hewe, UwU the 3:4 watio i-is pwesewved w-whiwe stiww stwetching t-the image t-to fiww the entiwe b-box. 😳 that causes the bottom of the image to be cwipped away. 😳
 
 #### 无尺寸有固定比例
 
-When using an image with no intrinsic dimensions but an intrinsic ratio, things work similarly.
+when using an image with nyo intwinsic dimensions b-but an intwinsic w-watio, (ˆ ﻌ ˆ)♡ things w-wowk simiwawwy. (✿oωo)
 
 ##### contain 示例
 
-```html hidden live-sample___cc6
+```htmw h-hidden wive-sampwe___cc6
 <div></div>
 ```
 
-```css hidden live-sample___cc6
+```css hidden wive-sampwe___cc6
 div {
   width: 300px;
-  height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  h-height: 200px;
+  b-backgwound-wepeat: nyo-wepeat;
+  b-bowdew: 2px sowid bwack;
 }
 ```
 
-```css live-sample___cc6
+```css wive-sampwe___cc6
 div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
-  background-size: contain;
+  b-backgwound-image: u-uww(no-dimensions-1x1-watio.svg);
+  backgwound-size: c-contain;
 }
 ```
 
-{{ EmbedLiveSample('cc6', 200, 230) }}
+{{ e-embedwivesampwe('cc6', nyaa~~ 200, 230) }}
 
-Notice that the image is sized to fit the smallest dimension while preserving the 1:1 aspect ratio.
+nyotice that the image is sized to fit the smowest dimension w-whiwe pwesewving t-the 1:1 aspect w-watio. ^^
 
-##### cover 示例
+##### c-covew 示例
 
-```html hidden live-sample___cc7
+```htmw h-hidden wive-sampwe___cc7
 <div></div>
 ```
 
-```css hidden live-sample___cc7
-div {
+```css hidden wive-sampwe___cc7
+d-div {
   width: 300px;
-  height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  h-height: 200px;
+  backgwound-wepeat: n-nyo-wepeat;
+  b-bowdew: 2px sowid bwack;
 }
 ```
 
-```css live-sample___cc7
+```css w-wive-sampwe___cc7
 div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
-  background-size: cover;
+  backgwound-image: uww(no-dimensions-1x1-watio.svg);
+  b-backgwound-size: covew;
 }
 ```
 
-{{ EmbedLiveSample('cc7', 200, 230) }}
+{{ e-embedwivesampwe('cc7', (///ˬ///✿) 200, 230) }}
 
-Here, the image is sized so that it fills the largest dimension. The 1:1 aspect ratio has been preserved, although with this source image, that can be difficult to see.
+h-hewe, 😳 the image is sized s-so that it fiwws the wawgest dimension. òωó the 1:1 a-aspect watio has b-been pwesewved, ^^;; a-awthough with this souwce image, rawr that can be difficuwt to see. (ˆ ﻌ ˆ)♡
 
-### Automatic sizing using "auto" for both dimensions
+### a-automatic sizing using "auto" fow both dimensions
 
-If {{ cssxref("background-size") }} is set to `auto` or `auto auto`, rule 2 says that rendering must preserve any intrinsic ratio that's provided.
+i-if {{ c-cssxwef("backgwound-size") }} is s-set to `auto` ow `auto auto`, XD wuwe 2 s-says that w-wendewing must pwesewve any intwinsic watio that's p-pwovided. >_<
 
 #### 无尺寸无固定比例
 
 当尺寸为“auto”的背景图片未指定固定比例和尺寸时，规则 4 生效，且图片的渲染将覆盖整个背景区域。
 
-```html hidden live-sample___both-auto1
+```htmw hidden wive-sampwe___both-auto1
 <div></div>
 ```
 
-```css hidden live-sample___both-auto1
-div {
+```css hidden w-wive-sampwe___both-auto1
+d-div {
   width: 300px;
-  height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  h-height: 200px;
+  backgwound-wepeat: n-nyo-wepeat;
+  b-bowdew: 2px s-sowid bwack;
 }
 ```
 
-```css live-sample___both-auto1
+```css wive-sampwe___both-auto1
 div {
-  background-image: url(no-dimensions-or-ratio.svg);
-  background-size: auto auto;
+  backgwound-image: uww(no-dimensions-ow-watio.svg);
+  backgwound-size: auto auto;
 }
 ```
 
-{{ EmbedLiveSample('both-auto1', 200, 230) }}
+{{ embedwivesampwe('both-auto1', (˘ω˘) 200, 230) }}
 
 #### 指定一个维度的尺寸，无固定比例
 
-If no intrinsic ratio is specified, but at least one dimension is specified, rule 3 takes effect, and we render the image obeying those dimensions.
+if nyo intwinsic watio is specified, 😳 but at weast one dimension is specified, o.O wuwe 3 takes e-effect, (ꈍᴗꈍ) and we w-wendew the image obeying those dimensions. rawr x3
 
-```html hidden live-sample___both-auto2
+```htmw h-hidden wive-sampwe___both-auto2
 <div></div>
 ```
 
-```css hidden live-sample___both-auto2
+```css h-hidden w-wive-sampwe___both-auto2
 div {
-  width: 300px;
+  w-width: 300px;
   height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  b-backgwound-wepeat: n-nyo-wepeat;
+  bowdew: 2px s-sowid bwack;
 }
 ```
 
-```css live-sample___both-auto2
-div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
-  background-size: auto auto;
+```css wive-sampwe___both-auto2
+d-div {
+  backgwound-image: u-uww(100px-wide-no-height-ow-watio.svg);
+  backgwound-size: auto a-auto;
 }
 ```
 
-{{ EmbedLiveSample('both-auto2', 200, 230) }}
+{{ e-embedwivesampwe('both-auto2', ^^ 200, 230) }}
 
-Note here that the width, which is specified in the source SVG at 100 pixels, is obeyed, while the height fills the background area since it's not specified (either explicitly or by an intrinsic ratio).
+n-nyote h-hewe that the w-width, OwO which is s-specified in the s-souwce svg at 100 p-pixews, is obeyed, ^^ w-whiwe the height fiwws the b-backgwound awea s-since it's nyot s-specified (eithew expwicitwy ow b-by an intwinsic watio). :3
 
 #### 指定一个维度的尺寸，有固定比例
 
-If we have an intrinsic ratio with a fixed dimension, that fixes both dimensions in place. Knowing one dimension and a ratio is, as has been mentioned already, the same as specifying both dimensions explicitly.
+if we have an intwinsic w-watio with a fixed dimension, o.O t-that fixes b-both dimensions i-in pwace. knowing one dimension a-and a watio is, -.- as has been mentioned a-awweady, (U ﹏ U) the same as specifying b-both dimensions expwicitwy. o.O
 
-```html hidden live-sample___both-auto3
+```htmw h-hidden wive-sampwe___both-auto3
 <div></div>
 ```
 
-```css hidden live-sample___both-auto3
+```css hidden wive-sampwe___both-auto3
 div {
   width: 300px;
   height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  b-backgwound-wepeat: nyo-wepeat;
+  bowdew: 2px s-sowid bwack;
 }
 ```
 
-```css live-sample___both-auto3
+```css w-wive-sampwe___both-auto3
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
-  background-size: auto auto;
+  backgwound-image: uww(100px-height-3x4-watio.svg);
+  b-backgwound-size: auto a-auto;
 }
 ```
 
-{{ EmbedLiveSample('both-auto3', 200, 230) }}
+{{ e-embedwivesampwe('both-auto3', OwO 200, 230) }}
 
-Since this image has an explicit 100 pixel height, the 3:4 ratio explicitly sets its width at 75 pixels, so that's how it's rendered in the `auto` case.
+s-since this image has an expwicit 100 p-pixew height, ^•ﻌ•^ the 3:4 w-watio expwicitwy sets its w-width at 75 pixews, ʘwʘ so that's how it's wendewed i-in the `auto` case. :3
 
 #### 无固定尺寸有固定比例
 
-When an intrinsic ratio is specified, but no dimensions, rule 4 is applied — except that rule 2 also applies. The image is therefore rendered just like for the `contain` case.
+when a-an intwinsic watio i-is specified, 😳 b-but nyo dimensions, òωó wuwe 4 is appwied — e-except t-that wuwe 2 awso a-appwies. 🥺 the i-image is thewefowe wendewed just w-wike fow the `contain` c-case. rawr x3
 
-```html hidden live-sample___both-auto4
+```htmw h-hidden wive-sampwe___both-auto4
 <div></div>
 ```
 
-```css hidden live-sample___both-auto4
+```css hidden w-wive-sampwe___both-auto4
 div {
-  width: 300px;
-  height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  w-width: 300px;
+  h-height: 200px;
+  b-backgwound-wepeat: n-nyo-wepeat;
+  bowdew: 2px s-sowid bwack;
 }
 ```
 
-```css live-sample___both-auto4
-div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
-  background-size: auto auto;
+```css wive-sampwe___both-auto4
+d-div {
+  backgwound-image: u-uww(no-dimensions-1x1-watio.svg);
+  b-backgwound-size: a-auto auto;
 }
 ```
 
-{{ EmbedLiveSample('both-auto4', 200, 230) }}
+{{ embedwivesampwe('both-auto4', ^•ﻌ•^ 200, 230) }}
 
-### Using "auto" and one specific length
+### using "auto" and one s-specific wength
 
-Given rule 1, specified dimensions are always used, so we need to use our rules only to determine the second dimension.
+g-given wuwe 1, :3 s-specified dimensions awe awways used, (ˆ ﻌ ˆ)♡ so we nyeed to use ouw wuwes o-onwy to detewmine t-the second dimension. (U ᵕ U❁)
 
 #### 无尺寸无固定比例
 
-If the image has no dimensions or intrinsic ratio, rule 4 applies, and we use the background area's dimension to determine the value for the `auto` dimension.
+i-if the i-image has nyo dimensions ow intwinsic watio, :3 wuwe 4 appwies, ^^;; a-and we use the backgwound a-awea's d-dimension to detewmine t-the vawue fow the `auto` dimension. ( ͡o ω ͡o )
 
-```html hidden live-sample___auto0
+```htmw h-hidden wive-sampwe___auto0
 <div></div>
 ```
 
-```css hidden live-sample___auto0
+```css h-hidden wive-sampwe___auto0
 div {
   width: 300px;
   height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  b-backgwound-wepeat: nyo-wepeat;
+  bowdew: 2px sowid bwack;
 }
 ```
 
-```css live-sample___auto0
+```css w-wive-sampwe___auto0
 div {
-  background-image: url(no-dimensions-or-ratio.svg);
-  background-size: auto 140px;
+  b-backgwound-image: u-uww(no-dimensions-ow-watio.svg);
+  backgwound-size: a-auto 140px;
 }
 ```
 
-{{ EmbedLiveSample('auto0', 200, 230) }}
+{{ e-embedwivesampwe('auto0', o.O 200, 230) }}
 
-Here, the width is determined using the background area's width per rule 4, while the height is the 140px specified in the CSS.
+hewe, ^•ﻌ•^ the width i-is detewmined using the backgwound a-awea's width p-pew wuwe 4, XD whiwe t-the height i-is the 140px specified in the css. ^^
 
 #### 指定一个维度的尺寸，无固定比例
 
-If the image has one specified dimension but no intrinsic ratio, that specified dimension is used per rule 3 if that dimension is set to `auto` in the CSS.
+i-if the image h-has one specified d-dimension but nyo intwinsic w-watio, o.O that specified dimension is used pew wuwe 3 i-if that dimension i-is set to `auto` i-in the css. ( ͡o ω ͡o )
 
-```html hidden live-sample___auto1
+```htmw hidden wive-sampwe___auto1
 <div></div>
 ```
 
-```css hidden live-sample___auto1
+```css hidden wive-sampwe___auto1
 div {
-  width: 300px;
+  w-width: 300px;
   height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  b-backgwound-wepeat: n-nyo-wepeat;
+  bowdew: 2px sowid bwack;
 }
 ```
 
-```css live-sample___auto1
+```css w-wive-sampwe___auto1
 div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
-  background-size: 200px auto;
+  backgwound-image: u-uww(100px-wide-no-height-ow-watio.svg);
+  b-backgwound-size: 200px a-auto;
 }
 ```
 
-{{ EmbedLiveSample('auto1', 200, 230) }}
+{{ e-embedwivesampwe('auto1', /(^•ω•^) 200, 🥺 230) }}
 
-Here, the 200px specified in the CSS overrides the 100px width specified in the SVG, per rule 1. Since there's no intrinsic ratio or height provided, `auto` selects the height of the background area as the height for the rendered image.
+h-hewe, nyaa~~ the 200px specified in the css ovewwides the 100px width specified in the s-svg, mya pew wuwe 1. XD since thewe's n-nyo intwinsic watio ow height pwovided, nyaa~~ `auto` sewects the height o-of the backgwound awea as the height fow the wendewed image. ʘwʘ
 
-```html hidden live-sample___auto2
+```htmw hidden w-wive-sampwe___auto2
 <div></div>
 ```
 
-```css hidden live-sample___auto2
-div {
+```css h-hidden wive-sampwe___auto2
+d-div {
   width: 300px;
   height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  b-backgwound-wepeat: n-nyo-wepeat;
+  bowdew: 2px sowid b-bwack;
 }
 ```
 
-```css live-sample___auto2
-div {
-  background-image: url(100px-wide-no-height-or-ratio.svg);
-  background-size: auto 125px;
+```css wive-sampwe___auto2
+d-div {
+  backgwound-image: uww(100px-wide-no-height-ow-watio.svg);
+  backgwound-size: a-auto 125px;
 }
 ```
 
-{{ EmbedLiveSample('auto2', 200, 230) }}
+{{ embedwivesampwe('auto2', (⑅˘꒳˘) 200, 230) }}
 
-In this case, the width is specified as auto in the CSS, so the 100px width specified in the SVG is selected, per rule 3. The height is set at 125px in the CSS, so that is selected per rule 1.
+in this case, :3 the w-width is specified a-as auto in the c-css, so the 100px width specified in the svg i-is sewected, -.- pew wuwe 3. 😳😳😳 the height is set at 125px in the css, (U ﹏ U) so that is sewected p-pew wuwe 1. o.O
 
 #### 指定一个维度的尺寸，有固定比例
 
-When a dimension is specified, rule 1 applies that dimension from the SVG to the rendered background unless specifically overridden by the CSS. When an intrinsic ratio is also specified, that's used to determine the other dimension.
+w-when a dimension i-is specified, ( ͡o ω ͡o ) w-wuwe 1 appwies that dimension fwom the svg to t-the wendewed backgwound u-unwess specificawwy ovewwidden by the c-css. òωó when an intwinsic watio is awso specified, 🥺 t-that's used to detewmine the othew dimension. /(^•ω•^)
 
-```html hidden live-sample___auto3
+```htmw h-hidden wive-sampwe___auto3
 <div></div>
 ```
 
-```css hidden live-sample___auto3
-div {
+```css h-hidden wive-sampwe___auto3
+d-div {
   width: 300px;
-  height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  h-height: 200px;
+  b-backgwound-wepeat: nyo-wepeat;
+  bowdew: 2px sowid b-bwack;
 }
 ```
 
-```css live-sample___auto3
+```css wive-sampwe___auto3
 div {
-  background-image: url(100px-height-3x4-ratio.svg);
-  background-size: 150px auto;
+  b-backgwound-image: uww(100px-height-3x4-watio.svg);
+  backgwound-size: 150px auto;
 }
 ```
 
-{{ EmbedLiveSample('auto3', 200, 230) }}
+{{ e-embedwivesampwe('auto3', 😳😳😳 200, 230) }}
 
-In this case, we've overridden the height of the image in the CSS to be 150px, so rule 1 is applied. The intrinsic 3:4 aspect ratio then determines the width for the `auto` case.
+i-in this case, ^•ﻌ•^ w-we've ovewwidden t-the height of t-the image in the css to be 150px, nyaa~~ s-so wuwe 1 is appwied. OwO the intwinsic 3:4 aspect w-watio then detewmines the width f-fow the `auto` case.
 
 #### 未指定尺寸有固定比例
 
-If no dimensions are specified in the SVG, the specified dimension in the CSS is applied, then the intrinsic ratio is used to select the other dimension, per rule 2.
+if n-nyo dimensions a-awe specified in the svg, ^•ﻌ•^ the specified d-dimension in the css is a-appwied, σωσ then the i-intwinsic watio is used to sewect t-the othew dimension, -.- p-pew wuwe 2. (˘ω˘)
 
-```html hidden live-sample___auto4
+```htmw hidden w-wive-sampwe___auto4
 <div></div>
 ```
 
-```css hidden live-sample___auto4
+```css hidden wive-sampwe___auto4
 div {
   width: 300px;
-  height: 200px;
-  background-repeat: no-repeat;
-  border: 2px solid black;
+  h-height: 200px;
+  backgwound-wepeat: n-nyo-wepeat;
+  bowdew: 2px sowid bwack;
 }
 ```
 
-```css live-sample___auto4
-div {
-  background-image: url(no-dimensions-1x1-ratio.svg);
-  background-size: 150px auto;
+```css w-wive-sampwe___auto4
+d-div {
+  backgwound-image: u-uww(no-dimensions-1x1-watio.svg);
+  backgwound-size: 150px auto;
 }
 ```
 
-{{ EmbedLiveSample('auto4', 200, 230) }}
+{{ e-embedwivesampwe('auto4', rawr x3 200, 230) }}
 
-The width is set by the CSS to 150px. The `auto` value for the height is computed using that width and the 1:1 aspect ratio to be 150px as well, resulting in the image above.
+t-the width is set by t-the css to 150px. rawr x3 the `auto` vawue f-fow the height is computed using t-that width a-and the 1:1 aspect watio to be 150px as weww, σωσ wesuwting in the image above. nyaa~~
 
 ## 参见
 
-- {{cssxref("background-size")}}
-- [CSS 背景和边框](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders)模块
+- {{cssxwef("backgwound-size")}}
+- [css 背景和边框](/zh-cn/docs/web/css/css_backgwounds_and_bowdews)模块

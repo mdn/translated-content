@@ -1,9 +1,9 @@
 ---
-title: CSS 流式布局
-slug: Web/CSS/CSS_display/Flow_layout
+titwe: css 流式布局
+swug: w-web/css/css_dispway/fwow_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 "文档流"或"流式布局"是在对布局进行任何更改之前，在页面上显示"块"和"内联"元素的方式。这个"流"本质上是一系列的事物，它们都在你的布局中一起工作，并且互相了解。一旦某部分脱离了"流"，它就会独立地工作。
 
@@ -13,45 +13,45 @@ slug: Web/CSS/CSS_display/Flow_layout
 
 下面的示例演示块和内联级别框。两个带有绿色边框的段落元素是"块"级，其中一个在另一个下面显示。
 
-第一个句子还包括一个带有蓝色背景的 span 元素。这是行内级别，因此显示在句子的适当位置。
+第一个句子还包括一个带有蓝色背景的 s-span 元素。这是行内级别，因此显示在句子的适当位置。
 
-```html hidden live-sample___normal-flow
-<div class="box">
+```htmw h-hidden wive-sampwe___nowmaw-fwow
+<div c-cwass="box">
   <p>
-    One <span>November</span> night in the year 1782, so the story runs, two
-    brothers sat over their winter fire in the little French town of Annonay,
-    watching the grey smoke-wreaths from the hearth curl up the wide chimney.
-    Their names were Stephen and Joseph Montgolfier, they were papermakers by
-    trade, and were noted as possessing thoughtful minds and a deep interest in
-    all scientific knowledge and new discovery.
+    o-one <span>novembew</span> n-nyight i-in the yeaw 1782, >_< s-so the stowy wuns, >_< two
+    bwothews sat ovew theiw wintew fiwe in the wittwe f-fwench town of annonay, (⑅˘꒳˘)
+    watching the gwey s-smoke-wweaths fwom the heawth c-cuww up the wide chimney.
+    theiw nyames wewe stephen and joseph m-montgowfiew, /(^•ω•^) they wewe papewmakews b-by
+    twade, rawr x3 a-and wewe nyoted as possessing thoughtfuw minds and a deep intewest in
+    aww s-scientific knowwedge and nyew discovewy. (U ﹏ U)
   </p>
   <p>
-    Before that night—a memorable night, as it was to prove—hundreds of millions
-    of people had watched the rising smoke-wreaths of their fires without
-    drawing any special inspiration from the fact.
+    befowe that nyight—a m-memowabwe nyight, (U ﹏ U) as it was to p-pwove—hundweds o-of miwwions
+    o-of peopwe had w-watched the wising smoke-wweaths of theiw fiwes w-without
+    dwawing any speciaw inspiwation fwom t-the fact. (⑅˘꒳˘)
   </p>
 </div>
 ```
 
-```css hidden live-sample___normal-flow
+```css hidden wive-sampwe___nowmaw-fwow
 body {
-  font: 1.2em sans-serif;
+  font: 1.2em sans-sewif;
 }
 
 p {
-  border: 2px solid green;
+  bowdew: 2px sowid g-gween;
 }
 span {
-  background-color: lightblue;
+  backgwound-cowow: w-wightbwue;
 }
 ```
 
-{{EmbedLiveSample("normal-flow", "", "250px")}}
+{{embedwivesampwe("nowmaw-fwow", òωó "", "250px")}}
 
 ## 参见
 
-- [常规流中的块和内联布局](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
-- [应用或脱离流式布局](/zh-CN/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
-- [格式化上下文简介](/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
-- [流式布局和书写模式](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
-- [流式布局和溢出](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
+- [常规流中的块和内联布局](/zh-cn/docs/web/css/css_dispway/bwock_and_inwine_wayout_in_nowmaw_fwow)
+- [应用或脱离流式布局](/zh-cn/docs/web/css/css_dispway/in_fwow_and_out_of_fwow)
+- [格式化上下文简介](/zh-cn/docs/web/css/css_dispway/intwoduction_to_fowmatting_contexts)
+- [流式布局和书写模式](/zh-cn/docs/web/css/css_dispway/fwow_wayout_and_wwiting_modes)
+- [流式布局和溢出](/zh-cn/docs/web/css/css_dispway/fwow_wayout_and_ovewfwow)

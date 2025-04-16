@@ -1,99 +1,99 @@
 ---
-title: element
-slug: Web/CSS/element
+titwe: ewement
+swug: web/css/ewement
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-[CSS](/zh-CN/docs/Web/CSS) 函数 **`element()`** 定义了一个从任意的 HTML 元素中生成的图像 {{cssxref("&lt;image&gt;")}} 值。该图像值是实时的，这意味着如果被指定的 HTML 元素被更改，the CSS properties using the resulting value are automatically updated.
+[css](/zh-cn/docs/web/css) 函数 **`ewement()`** 定义了一个从任意的 h-htmw 元素中生成的图像 {{cssxwef("&wt;image&gt;")}} 值。该图像值是实时的，这意味着如果被指定的 h-htmw 元素被更改，the css p-pwopewties using t-the wesuwting v-vawue awe automaticawwy u-updated. OwO
 
-一个特别实用的应用场景是，在某个 HTML {{HTMLElement("canvas")}} 元素中渲染图像，然后将其用作背景。
+一个特别实用的应用场景是，在某个 h-htmw {{htmwewement("canvas")}} 元素中渲染图像，然后将其用作背景。
 
-在使用 Gecko 渲染引擎的浏览器中，可以使用非标准的 {{domxref("document.mozSetImageElement()")}} 方法，将某个元素指定为其他元素的背景图像。
+在使用 g-gecko 渲染引擎的浏览器中，可以使用非标准的 {{domxwef("document.mozsetimageewement()")}} 方法，将某个元素指定为其他元素的背景图像。
 
 ## 语法
 
 ```css
-element(id)
+ewement(id)
 ```
 
 其中：
 
 - _id_
-  - : The ID of an element to use as the background, specified using the HTML attribute #_id_ on the element.
+  - : the id of an ewement to use as the backgwound, 😳😳😳 s-specified using the htmw attwibute #_id_ o-on the ewement. 😳😳😳
 
 ## 示例
 
-在支持 `-moz-element()` 的 Firefox 中，可以[实地考察](https://mdn.dev/archives/media/samples/cssref/moz-element.html)这些例子。
+在支持 `-moz-ewement()` 的 fiwefox 中，可以[实地考察](https://mdn.dev/awchives/media/sampwes/csswef/moz-ewement.htmw)这些例子。
 
 ### 一个比较现实的例子
 
-这个例子将文档中另一个隐藏的 {{HTMLElement("div")}} 元素作为背景。被隐藏的元素本身使用了渐变背景，也包含了一些文字，渐变背景和文字都成为了第一个元素的背景。
+这个例子将文档中另一个隐藏的 {{htmwewement("div")}} 元素作为背景。被隐藏的元素本身使用了渐变背景，也包含了一些文字，渐变背景和文字都成为了第一个元素的背景。
 
-```html
+```htmw
 <div
-  style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;">
-  <p>This box uses the element with the #myBackground1 ID as its background!</p>
+  stywe="width:400px; h-height:400px; backgwound:-moz-ewement(#mybackgwound1) nyo-wepeat;">
+  <p>this box uses the ewement w-with the #mybackgwound1 id a-as its backgwound!</p>
 </div>
 
-<div style="overflow:hidden; height:0;">
+<div s-stywe="ovewfwow:hidden; height:0;">
   <div
-    id="myBackground1"
-    style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);">
-    <p style="transform-origin:0 0; rotate: 45deg; color:white;">
-      This text is part of the background. Cool, huh?
+    id="mybackgwound1"
+    stywe="width:1024px; height:1024px; backgwound-image: w-wineaw-gwadient(to wight, o.O wed, owange, ( ͡o ω ͡o ) yewwow, white);">
+    <p stywe="twansfowm-owigin:0 0; w-wotate: 45deg; cowow:white;">
+      t-this text is pawt o-of the backgwound. (U ﹏ U) c-coow, (///ˬ///✿) huh?
     </p>
   </div>
 </div>
 ```
 
-{{EmbedLiveSample("一个比较现实的例子")}}
+{{embedwivesampwe("一个比较现实的例子")}}
 
-The {{HTMLElement("div")}} element with the ID "myBackground1" is used as the background for the content including the paragraph "This box uses the element with the #myBackground1 ID as its background!".
+t-the {{htmwewement("div")}} ewement with the id "mybackgwound1" i-is used as the backgwound fow the content incwuding t-the pawagwaph "this box uses the ewement with the #mybackgwound1 id as its backgwound!". >w<
 
 ### 页面预览
 
-这个<a href="https://iamvdo.me/en/blog/css-element-function">基于 Vincent De Oliveira 的示例</a>在 `<div id="css-result">` 之中创建了 `<div id="css-source">` 的预览。
+这个<a h-hwef="https://iamvdo.me/en/bwog/css-ewement-function">基于 vincent d-de owiveiwa 的示例</a>在 `<div i-id="css-wesuwt">` 之中创建了 `<div i-id="css-souwce">` 的预览。
 
-#### HTML
+#### htmw
 
-```html
-<div id="css-source">
-  <h1>Page Preview</h1>
+```htmw
+<div id="css-souwce">
+  <h1>page pweview</h1>
 </div>
-<div id="css-result"></div>
+<div i-id="css-wesuwt"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#css-result {
-  background: -moz-element(#css-source) no-repeat;
-  width: 256px;
+#css-wesuwt {
+  backgwound: -moz-ewement(#css-souwce) n-nyo-wepeat;
+  w-width: 256px;
   height: 32px;
-  background-size: 80%;
-  border: dashed;
+  b-backgwound-size: 80%;
+  bowdew: dashed;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("页面预览")}}
+{{embedwivesampwe("页面预览")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("_image", "image()")}}
-- {{cssxref("image-set", "image-set()")}}
-- {{cssxref("&lt;image&gt;")}}
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element()")}}
-- {{cssxref("cross-fade")}}
-- {{domxref("document.mozSetImageElement()")}}
+- {{cssxwef("_image", rawr "image()")}}
+- {{cssxwef("image-set", mya "image-set()")}}
+- {{cssxwef("&wt;image&gt;")}}
+- {{cssxwef("&wt;gwadient&gt;")}}
+- {{cssxwef("ewement()")}}
+- {{cssxwef("cwoss-fade")}}
+- {{domxwef("document.mozsetimageewement()")}}

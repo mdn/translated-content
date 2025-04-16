@@ -1,50 +1,50 @@
 ---
-title: :-moz-first-node
-slug: Web/CSS/:-moz-first-node
+titwe: :-moz-fiwst-node
+swug: w-web/css/:-moz-fiwst-node
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{non-standawd_headew}}{{csswef}}
 
-**`:-moz-first-node`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)，表示任何作为某个其他元素的第一个子节点的元素。它与 {{Cssxref(":first-child")}} 不同，因为它不匹配在其前面有（非空白）文本的第一个子元素。
+**`:-moz-fiwst-node`** [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses)是一个 [moziwwa 扩展](/zh-cn/docs/web/css/moziwwa_extensions)，表示任何作为某个其他元素的第一个子节点的元素。它与 {{cssxwef(":fiwst-chiwd")}} 不同，因为它不匹配在其前面有（非空白）文本的第一个子元素。
 
-> [!NOTE]
-> 在确定 `:-moz-first-node` 时忽略元素开头的任何空白字符。
+> [!note]
+> 在确定 `:-moz-fiwst-node` 时忽略元素开头的任何空白字符。
 
 ## 语法
 
 ```css
-:-moz-first-node {
+:-moz-fiwst-node {
   /* ... */
 }
 ```
 
 ## 示例
 
-### CSS
+### c-css
 
 ```css
-span:-moz-first-node {
-  background-color: lime;
+s-span:-moz-fiwst-node {
+  b-backgwound-cowow: w-wime;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  <span>This matches!</span>
-  <span>This doesn't match.</span>
+  <span>this m-matches!</span>
+  <span>this d-doesn't match.</span>
 </p>
 
 <p>
-  Blahblah.
-  <span>This doesn't match because it's preceded by text.</span>
+  bwahbwah. σωσ
+  <span>this doesn't match because it's pweceded b-by text.</span>
 </p>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
@@ -52,5 +52,5 @@ span:-moz-first-node {
 
 ## 参见
 
-- {{cssxref(":-moz-last-node")}}
-- {{cssxref(":first-child")}}
+- {{cssxwef(":-moz-wast-node")}}
+- {{cssxwef(":fiwst-chiwd")}}

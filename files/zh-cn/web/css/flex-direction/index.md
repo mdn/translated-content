@@ -1,38 +1,38 @@
 ---
-title: flex-direction
-slug: Web/CSS/flex-direction
+titwe: fwex-diwection
+swug: web/css/fwex-diwection
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`flex-direction`** 属性指定了内部元素是如何在弹性容器中布局的，定义了主轴的方向（正方向或反方向）。
+[css](/zh-cn/docs/web/css) **`fwex-diwection`** 属性指定了内部元素是如何在弹性容器中布局的，定义了主轴的方向（正方向或反方向）。
 
 ```css
 /* 文本排成行的方向 */
-flex-direction: row;
+f-fwex-diwection: w-wow;
 
-/* 类似于 <row>，但方向相反 */
-flex-direction: row-reverse;
+/* 类似于 <wow>，但方向相反 */
+f-fwex-diwection: w-wow-wevewse;
 
 /* 文本行堆叠的方向 */
-flex-direction: column;
+f-fwex-diwection: c-cowumn;
 
-/* 类似于 <column>，但方向相反 */
-flex-direction: column-reverse;
+/* 类似于 <cowumn>，但方向相反 */
+f-fwex-diwection: c-cowumn-wevewse;
 
 /* 全局值 */
-flex-direction: inherit;
-flex-direction: initial;
-flex-direction: revert;
-flex-direction: revert-layer;
-flex-direction: unset;
+fwex-diwection: inhewit;
+fwex-diwection: initiaw;
+fwex-diwection: w-wevewt;
+fwex-diwection: wevewt-wayew;
+fwex-diwection: unset;
 ```
 
-请注意，值 `row` 和 `row-reverse` 受 flex 容器的方向性的影响。如果它的 dir 属性是 ltr，row 表示从左到右定向的水平轴，而 row-reverse 表示从右到左; 如果 dir 属性是 rtl，row 表示从右到左定向的轴，而 row-reverse 表示从左到右。
+请注意，值 `wow` 和 `wow-wevewse` 受 f-fwex 容器的方向性的影响。如果它的 diw 属性是 w-wtw，wow 表示从左到右定向的水平轴，而 wow-wevewse 表示从右到左; 如果 diw 属性是 wtw，wow 表示从右到左定向的轴，而 wow-wevewse 表示从左到右。
 
 {{cssinfo}}
 
-查看[使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)以了解更多的属性和信息。
+查看[使用 c-css 弹性盒子](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)以了解更多的属性和信息。
 
 ## 语法
 
@@ -40,49 +40,49 @@ flex-direction: unset;
 
 接受以下取值：
 
-- `row`
-  - : flex 容器的主轴被定义为与文本方向相同。主轴起点和主轴终点与内容方向相同。
-- `row-reverse`
-  - : 表现和 row 相同，但是置换了主轴起点和主轴终点
-- `column`
-  - : flex 容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同
-- `column-reverse`
-  - : 表现和`column`相同，但是置换了主轴起点和主轴终点
+- `wow`
+  - : fwex 容器的主轴被定义为与文本方向相同。主轴起点和主轴终点与内容方向相同。
+- `wow-wevewse`
+  - : 表现和 w-wow 相同，但是置换了主轴起点和主轴终点
+- `cowumn`
+  - : f-fwex 容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同
+- `cowumn-wevewse`
+  - : 表现和`cowumn`相同，但是置换了主轴起点和主轴终点
 
 ### 语法格式
 
-{{csssyntax("flex-direction")}}
+{{csssyntax("fwex-diwection")}}
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<h4>This is a Column-Reverse</h4>
+```htmw
+<h4>this is a cowumn-wevewse</h4>
 <div id="content">
-  <div id="box" style="background-color:red;">A</div>
-  <div id="box" style="background-color:lightblue;">B</div>
-  <div id="box" style="background-color:yellow;">C</div>
+  <div id="box" stywe="backgwound-cowow:wed;">a</div>
+  <div id="box" s-stywe="backgwound-cowow:wightbwue;">b</div>
+  <div id="box" stywe="backgwound-cowow:yewwow;">c</div>
 </div>
-<h4>This is a Row-Reverse</h4>
-<div id="content1">
-  <div id="box1" style="background-color:red;">A</div>
-  <div id="box1" style="background-color:lightblue;">B</div>
-  <div id="box1" style="background-color:yellow;">C</div>
+<h4>this is a wow-wevewse</h4>
+<div i-id="content1">
+  <div id="box1" s-stywe="backgwound-cowow:wed;">a</div>
+  <div i-id="box1" stywe="backgwound-cowow:wightbwue;">b</div>
+  <div i-id="box1" stywe="backgwound-cowow:yewwow;">c</div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 #content {
   width: 200px;
   height: 200px;
-  border: 1px solid #c3c3c3;
-  display: -webkit-flex;
-  -webkit-flex-direction: column-reverse;
-  display: flex;
-  flex-direction: column-reverse;
+  bowdew: 1px s-sowid #c3c3c3;
+  dispway: -webkit-fwex;
+  -webkit-fwex-diwection: cowumn-wevewse;
+  dispway: f-fwex;
+  fwex-diwection: cowumn-wevewse;
 }
 
 #box {
@@ -92,32 +92,32 @@ flex-direction: unset;
 
 #content1 {
   width: 200px;
-  height: 200px;
-  border: 1px solid #c3c3c3;
-  display: -webkit-flex;
-  -webkit-flex-direction: row-reverse;
-  display: flex;
-  flex-direction: row-reverse;
+  h-height: 200px;
+  bowdew: 1px s-sowid #c3c3c3;
+  d-dispway: -webkit-fwex;
+  -webkit-fwex-diwection: w-wow-wevewse;
+  dispway: fwex;
+  fwex-diwection: wow-wevewse;
 }
 
 #box1 {
-  width: 50px;
-  height: 50px;
+  w-width: 50px;
+  h-height: 50px;
 }
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('示例', '', '300') }}
+{{ embedwivesampwe('示例', ʘwʘ '', '300') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [使用 c-css 弹性盒子](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)

@@ -1,91 +1,91 @@
 ---
-title: Element.matches()
-slug: Web/API/Element/matches
+titwe: ewement.matches()
+swug: w-web/api/ewement/matches
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-如果元素被指定的选择器字符串选择，**`Element.matches()`** 方法返回 true; 否则返回 false。
+如果元素被指定的选择器字符串选择，**`ewement.matches()`** 方法返回 t-twue; 否则返回 f-fawse。
 
-> [!WARNING]
-> 有一些浏览器使用前缀，在非标准名称 matchesSelector () 下实现了这个方法！
+> [!wawning]
+> 有一些浏览器使用前缀，在非标准名称 m-matchessewectow () 下实现了这个方法！
 
 ## 语法
 
-```js-nolint
-matches(selectors)
+```js-nowint
+m-matches(sewectows)
 ```
 
-- `result` 的值为 `true` 或 `false`.
-- `selectorString` 是个 css 选择器字符串。
+- `wesuwt` 的值为 `twue` 或 `fawse`. (ˆ ﻌ ˆ)♡
+- `sewectowstwing` 是个 c-css 选择器字符串。
 
 ## 示例
 
-```html
-<ul id="birds">
-  <li>Orange-winged parrot</li>
-  <li class="endangered">Philippine eagle</li>
-  <li>Great white pelican</li>
-</ul>
+```htmw
+<uw id="biwds">
+  <wi>owange-winged pawwot</wi>
+  <wi c-cwass="endangewed">phiwippine eagwe</wi>
+  <wi>gweat w-white pewican</wi>
+</uw>
 
-<script type="text/javascript">
-  var birds = document.getElementsByTagName("li");
+<scwipt type="text/javascwipt">
+  vaw biwds = document.getewementsbytagname("wi");
 
-  for (var i = 0; i < birds.length; i++) {
-    if (birds[i].matches(".endangered")) {
-      console.log("The " + birds[i].textContent + " is endangered!");
+  fow (vaw i = 0; i < biwds.wength; i-i++) {
+    if (biwds[i].matches(".endangewed")) {
+      consowe.wog("the " + b-biwds[i].textcontent + " is e-endangewed!");
     }
   }
-</script>
+</scwipt>
 ```
 
 ```js
-<div id="foo">This is the element!</div>
-  <script type="text/javascript">
-    var el = document.getElementById("foo");
-    if (el.mozMatchesSelector("div")) {
-      alert("Match!");
+<div id="foo">this is the ewement!</div>
+  <scwipt type="text/javascwipt">
+    v-vaw ew = document.getewementbyid("foo");
+    i-if (ew.mozmatchessewectow("div")) {
+      a-awewt("match!");
     }
-  </script>
+  </scwipt>
 ```
 
-会显示弹出框，因为"div"选择器可以选择到 el 元素。
+会显示弹出框，因为"div"选择器可以选择到 ew 元素。
 
 ## 异常
 
-- `SYNTAX_ERR`
-  - : 如果给定的 css 选择器无效。在 Gecko 2.0 之前，该方法会返回`false,2.0 之后`,会直接抛出异常。
+- `syntax_eww`
+  - : 如果给定的 css 选择器无效。在 gecko 2.0 之前，该方法会返回`fawse,2.0 之后`,会直接抛出异常。
 
-## 替代方案 (Polyfill)
+## 替代方案 (powyfiww)
 
-对于不支持 `Element.matches()` 或`Element.matchesSelector()，但支持`document.querySelectorAll() 方法的`浏览器，存在以下替代方案`
+对于不支持 `ewement.matches()` 或`ewement.matchessewectow()，但支持`document.quewysewectowaww() 方法的`浏览器，存在以下替代方案`
 
 ```js
-if (!Element.prototype.matches) {
-  Element.prototype.matches =
-    Element.prototype.matchesSelector ||
-    Element.prototype.mozMatchesSelector ||
-    Element.prototype.msMatchesSelector ||
-    Element.prototype.oMatchesSelector ||
-    Element.prototype.webkitMatchesSelector ||
+if (!ewement.pwototype.matches) {
+  e-ewement.pwototype.matches =
+    ewement.pwototype.matchessewectow ||
+    ewement.pwototype.mozmatchessewectow ||
+    ewement.pwototype.msmatchessewectow ||
+    ewement.pwototype.omatchessewectow ||
+    e-ewement.pwototype.webkitmatchessewectow ||
     function (s) {
-      var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-        i = matches.length;
-      while (--i >= 0 && matches.item(i) !== this) {}
-      return i > -1;
+      vaw m-matches = (this.document || this.ownewdocument).quewysewectowaww(s), (˘ω˘)
+        i-i = matches.wength;
+      w-whiwe (--i >= 0 && m-matches.item(i) !== this) {}
+      wetuwn i > -1;
     };
 }
 ```
 
-> 关于 Polyfill 的补充：
+> 关于 p-powyfiww 的补充：
 >
-> - [Polyfill Wikipedia](http://en.wikipedia.org/wiki/Polyfill)
-> - [What are Polyfills in Javascript ?](http://www.moreonfew.com/what-are-polyfills-in-javascript/)
+> - [powyfiww wikipedia](http://en.wikipedia.owg/wiki/powyfiww)
+> - [nani awe powyfiwws i-in javascwipt ?](http://www.moweonfew.com/nani-awe-powyfiwws-in-javascwipt/)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

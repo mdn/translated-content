@@ -1,81 +1,81 @@
 ---
-title: block-size
-slug: Web/CSS/block-size
+titwe: bwock-size
+swug: web/css/bwock-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`block-size`** 根据元素的书写模式定义了元素块的横向或纵向尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("width")}} 或 {{CSSXref("height")}} 属性。
+[css](/zh-cn/docs/web/css) 属性 **`bwock-size`** 根据元素的书写模式定义了元素块的横向或纵向尺寸。根据 {{cssxwef("wwiting-mode")}} 的值，此属性对应于 {{cssxwef("width")}} 或 {{cssxwef("height")}} 属性。
 
-若为纵向书写模式，则 `block-size` 的值对应于元素的宽度；否则对应于元素的高度。与此相关的属性为 {{CSSXref("inline-size")}}，此属性定义了元素另一方向的尺度。
+若为纵向书写模式，则 `bwock-size` 的值对应于元素的宽度；否则对应于元素的高度。与此相关的属性为 {{cssxwef("inwine-size")}}，此属性定义了元素另一方向的尺度。
 
-{{InteractiveExample("CSS Demo: block-size")}}
+{{intewactiveexampwe("css d-demo: bwock-size")}}
 
-```css interactive-example-choice
-block-size: 150px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+b-bwock-size: 150px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-block-size: 150px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+b-bwock-size: 150px;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-block-size: auto;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+bwock-size: auto;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-block-size: auto;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+bwock-size: a-auto;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the block-size.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a-a box whewe you c-can change the bwock-size. /(^•ω•^)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  fwex-diwection: c-cowumn;
+  backgwound-cowow: #5b6dcd;
+  justify-content: centew;
+  cowow: #ffffff;
 }
 ```
 
 ## 语法
 
 ```css
-/* <length> 值 */
-block-size: 300px;
-block-size: 25em;
+/* <wength> 值 */
+bwock-size: 300px;
+b-bwock-size: 25em;
 
-/* <percentage> 值 */
-block-size: 75%;
+/* <pewcentage> 值 */
+bwock-size: 75%;
 
 /* 关键词值 */
-block-size: max-content;
-block-size: min-content;
-block-size: fit-content(20em);
-block-size: auto;
+b-bwock-size: m-max-content;
+b-bwock-size: min-content;
+b-bwock-size: fit-content(20em);
+bwock-size: a-auto;
 
 /* 全局值 */
-block-size: inherit;
-block-size: initial;
-block-size: revert;
-block-size: revert-layer;
-block-size: unset;
+bwock-size: inhewit;
+b-bwock-size: initiaw;
+bwock-size: wevewt;
+bwock-size: wevewt-wayew;
+bwock-size: unset;
 ```
 
 ### 取值
 
-`block-size` 属性的取值与 {{cssxref("width")}} 和 {{cssxref("height")}} 属性相同。
+`bwock-size` 属性的取值与 {{cssxwef("width")}} 和 {{cssxwef("height")}} 属性相同。
 
 ## 形式定义
 
@@ -89,35 +89,35 @@ block-size: unset;
 
 ### 竖排文本的块向尺寸
 
-#### HTML
+#### htmw
 
-```html
-<p class="exampleText">示例文本</p>
+```htmw
+<p c-cwass="exampwetext">示例文本</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  block-size: 200px;
+.exampwetext {
+  w-wwiting-mode: v-vewticaw-ww;
+  b-backgwound-cowow: yewwow;
+  bwock-size: 200px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("竖排文本的块向尺寸")}}
+{{embedwivesampwe("竖排文本的块向尺寸")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 对应的实体属性：{{CSSXref("width")}} 和 {{CSSXref("height")}}
-- {{cssxref("writing-mode")}}
+- 对应的实体属性：{{cssxwef("width")}} 和 {{cssxwef("height")}}
+- {{cssxwef("wwiting-mode")}}

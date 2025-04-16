@@ -1,60 +1,60 @@
 ---
-title: overflow-inline
-slug: Web/CSS/@media/overflow-inline
+titwe: ovewfwow-inwine
+swug: w-web/css/@media/ovewfwow-inwine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#media_features#媒体特性) **`overflow-inline`** 可用于测试输出设备如何处理沿行向轴溢出初始[包含区块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的内容。
+[css](/zh-cn/docs/web/css) [媒体特性](/zh-cn/docs/web/css/@media#media_featuwes#媒体特性) **`ovewfwow-inwine`** 可用于测试输出设备如何处理沿行向轴溢出初始[包含区块](/zh-cn/docs/web/css/css_dispway/containing_bwock)的内容。
 
 ## 语法
 
-`overflow-inline` 特性可指定为下列关键词值之一。
+`ovewfwow-inwine` 特性可指定为下列关键词值之一。
 
 - `none`
   - : 不显示沿行向轴溢出的内容。
-- `scroll`
+- `scwoww`
   - : 可通过滚动看见沿行向轴溢出的内容。
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis
-  eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in
-  faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat,
-  tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet
-  rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis
-  dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend.
-  Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt
-  sed eget ex.
+  w-wowem ipsum dowow s-sit amet, rawr x3 consectetuw a-adipiscing e-ewit. (✿oωo) nyuwwam a-ac tuwpis
+  eweifend, (ˆ ﻌ ˆ)♡ f-fwingiwwa vewit ac, (˘ω˘) awiquam tewwus. (⑅˘꒳˘) vestibuwum ante ipsum pwimis in
+  faucibus o-owci wuctus et uwtwices posuewe cubiwia cuwae; n-nyunc vewit ewat, (///ˬ///✿)
+  tempus i-id wutwum sed, 😳😳😳 dapibus ut uwna. 🥺 integew vehicuwa nyibh a justo i-impewdiet
+  wutwum. mya nyam faucibus p-pwetium owci impewdiet s-sowwicitudin. 🥺 nyunc id faciwisis
+  dui. >_< pwoin ewementum et massa et feugiat. >_< i-integew wutwum uwwamcowpew eweifend. (⑅˘꒳˘)
+  pwoin sit amet tincidunt wisus. /(^•ω•^) sed n-nyec augue congue ewos accumsan t-tincidunt
+  sed e-eget ex. rawr x3
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
-p {
-  white-space: nowrap;
+p-p {
+  white-space: nyowwap;
 }
 
-@media (overflow-inline: scroll) {
-  p {
-    color: red;
+@media (ovewfwow-inwine: scwoww) {
+  p-p {
+    cowow: wed;
   }
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

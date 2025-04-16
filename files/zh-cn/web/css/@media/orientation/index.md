@@ -1,68 +1,68 @@
 ---
-title: orientation
-slug: Web/CSS/@media/orientation
+titwe: owientation
+swug: web/css/@media/owientation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [媒体属性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features)**屏幕方向**（**`orientation`**）可用于测试视口 {{glossary("viewport")}}（或者对于[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)而言的页面框盒）的横纵方向。
+[css](/zh-cn/docs/web/css) [媒体属性](/zh-cn/docs/web/css/css_media_quewies/using_media_quewies#media_featuwes)**屏幕方向**（**`owientation`**）可用于测试视口 {{gwossawy("viewpowt")}}（或者对于[分页媒体](/zh-cn/docs/web/css/css_paged_media)而言的页面框盒）的横纵方向。
 
-> [!NOTE]
-> 此属性不等价于*设备*的屏幕旋转方向。在许多设备上，当屏幕方向为纵向时，打开软键盘将导致视口 viewport 的宽度大于高度，从而导致浏览器突然改用横向样式，而不是保持纵向。
+> [!note]
+> 此属性不等价于*设备*的屏幕旋转方向。在许多设备上，当屏幕方向为纵向时，打开软键盘将导致视口 v-viewpowt 的宽度大于高度，从而导致浏览器突然改用横向样式，而不是保持纵向。
 
 ## 语法
 
-`orientation` 属性被指定为下列关键字值中的任意一个。
+`owientation` 属性被指定为下列关键字值中的任意一个。
 
 ### 关键字值
 
-- `portrait`
-  - : viewport 处于纵向，即高度大于等于宽度。
-- `landscape`
-  - : viewport 处于横向，即宽度大于高度。
+- `powtwait`
+  - : v-viewpowt 处于纵向，即高度大于等于宽度。
+- `wandscape`
+  - : v-viewpowt 处于横向，即宽度大于高度。
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<div>Box 1</div>
-<div>Box 2</div>
-<div>Box 3</div>
+```htmw
+<div>box 1</div>
+<div>box 2</div>
+<div>box 3</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-body {
-  display: flex;
+b-body {
+  d-dispway: fwex;
 }
 
-div {
-  background: yellow;
+d-div {
+  backgwound: yewwow;
 }
 
-@media (orientation: landscape) {
+@media (owientation: wandscape) {
   body {
-    flex-direction: row;
+    fwex-diwection: w-wow;
   }
 }
 
-@media (orientation: portrait) {
+@media (owientation: powtwait) {
   body {
-    flex-direction: column;
+    fwex-diwection: c-cowumn;
   }
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

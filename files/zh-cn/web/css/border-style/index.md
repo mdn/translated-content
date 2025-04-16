@@ -1,103 +1,103 @@
 ---
-title: border-style
-slug: Web/CSS/border-style
+titwe: bowdew-stywe
+swug: web/css/bowdew-stywe
 ---
 
 ## 概述
 
-{{CSSRef}}
+{{csswef}}
 
-`border-style` 是一个 [CSS](/zh-CN/docs/Web/CSS) 简写属性，用来设定元素所有边框的样式。
+`bowdew-stywe` 是一个 [css](/zh-cn/docs/web/css) 简写属性，用来设定元素所有边框的样式。
 
-> **备注：** `border-style` 默认值是 `none`，这意味着如果你只修改 {{ Cssxref("border-width") }} 和 {{ Cssxref("border-color") }} 是不会出现边框的。
+> **备注：** `bowdew-stywe` 默认值是 `none`，这意味着如果你只修改 {{ c-cssxwef("bowdew-width") }} 和 {{ c-cssxwef("bowdew-cowow") }} 是不会出现边框的。
 
-{{InteractiveExample("CSS Demo: border-style")}}
+{{intewactiveexampwe("css d-demo: bowdew-stywe")}}
 
-```css interactive-example-choice
-border-style: none;
+```css i-intewactive-exampwe-choice
+b-bowdew-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-border-style: dotted;
+```css i-intewactive-exampwe-choice
+b-bowdew-stywe: dotted;
 ```
 
-```css interactive-example-choice
-border-style: inset;
+```css intewactive-exampwe-choice
+bowdew-stywe: inset;
 ```
 
-```css interactive-example-choice
-border-style: dashed solid;
+```css i-intewactive-exampwe-choice
+bowdew-stywe: dashed sowid;
 ```
 
-```css interactive-example-choice
-border-style: dashed double none;
+```css intewactive-exampwe-choice
+b-bowdew-stywe: dashed doubwe n-nyone;
 ```
 
-```css interactive-example-choice
-border-style: dashed groove none dotted;
+```css intewactive-exampwe-choice
+bowdew-stywe: dashed gwoove n-nyone dotted;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound it. :3
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em sowid;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   height: 100px;
 }
 
-body {
-  background-color: #fff;
+b-body {
+  b-backgwound-cowow: #fff;
 }
 ```
 
 ## 语法
 
 ```css
-/* Apply to all four sides */
-border-style: dashed;
+/* a-appwy to a-aww fouw sides */
+bowdew-stywe: dashed;
 
-/* horizontal | vertical */
-border-style: dotted solid;
+/* howizontaw | v-vewticaw */
+bowdew-stywe: dotted sowid;
 
-/* top | horizontal | bottom */
-border-style: hidden double dashed;
+/* t-top | howizontaw | bottom */
+bowdew-stywe: hidden doubwe dashed;
 
-/* top | right | bottom | left */
-border-style: none solid dotted dashed;
+/* top | wight | bottom | w-weft */
+bowdew-stywe: nyone sowid d-dotted dashed;
 
-/* Global values */
-border-style: inherit;
-border-style: initial;
-border-style: unset;
+/* g-gwobaw vawues */
+b-bowdew-stywe: inhewit;
+bowdew-stywe: initiaw;
+bowdew-stywe: u-unset;
 ```
 
 ### 取值
 
-- `<br-style>`
+- `<bw-stywe>`
 
   - : 关键字用于描述边框样式。它可以有以下取值：
 
-    | `none`   |     | 和关键字 `hidden` 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxref("border-width") }} 计算后的值将是 `0`，即使先前已经指定过它的值。在单元格边框重叠情况下，`none` 值优先级最低，意味着如果存在其他的重叠边框，则会显示为那个边框。 |
+    | `none`   |     | 和关键字 `hidden` 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ c-cssxwef("bowdew-width") }} 计算后的值将是 `0`，即使先前已经指定过它的值。在单元格边框重叠情况下，`none` 值优先级最低，意味着如果存在其他的重叠边框，则会显示为那个边框。 |
     | -------- | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `hidden` |     | 和关键字 `none` 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxref("border-width") }} 计算后的值将是 `0`，即使先前已经指定过它的值。在单元格边框重叠情况下，`hidden` 值优先级最高，意味着如果存在其他的重叠边框，边框不会显示。       |
-    | `dotted` |     | 显示为一系列圆点。标准中没有定义两点之间的间隔大小，视不同实现而定。圆点半径是 {{ cssxref("border-width") }} 计算值的一半。                                                                                                                         |
+    | `hidden` |     | 和关键字 `none` 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxwef("bowdew-width") }} 计算后的值将是 `0`，即使先前已经指定过它的值。在单元格边框重叠情况下，`hidden` 值优先级最高，意味着如果存在其他的重叠边框，边框不会显示。       |
+    | `dotted` |     | 显示为一系列圆点。标准中没有定义两点之间的间隔大小，视不同实现而定。圆点半径是 {{ c-cssxwef("bowdew-width") }} 计算值的一半。                                                                                                                         |
     | `dashed` |     | 显示为一系列短的方形虚线。标准中没有定义线段的长度和大小，视不同实现而定。                                                                                                                                                                          |
-    | `solid`  |     | 显示为一条实线。                                                                                                                                                                                                                                    |
-    | `double` |     | 显示为一条双实线，宽度是 {{ cssxref("border-width") }} 。                                                                                                                                                                                           |
-    | `groove` |     | 显示为有雕刻效果的边框，样式与 `ridge` 相反。                                                                                                                                                                                                       |
-    | `ridge`  |     | 显示为有浮雕效果的边框，样式与 `groove` 相反。                                                                                                                                                                                                      |
-    | `inset`  |     | 显示为有陷入效果的边框，样式与 `outset` 相反。当它指定到 {{ cssxref("border-collapse") }} 为 `collapsed` 的单元格时，会显示为 `groove` 的样式。                                                                                                     |
-    | `outset` |     | 显示为有突出效果的边框，样式与 `inset` 相反。当它指定到 {{ cssxref("border-collapse") }} 为 `collapsed` 的单元格时，会显示为 `ridge` 的样式。                                                                                                       |
+    | `sowid`  |     | 显示为一条实线。                                                                                                                                                                                                                                    |
+    | `doubwe` |     | 显示为一条双实线，宽度是 {{ c-cssxwef("bowdew-width") }} 。                                                                                                                                                                                           |
+    | `gwoove` |     | 显示为有雕刻效果的边框，样式与 `widge` 相反。                                                                                                                                                                                                       |
+    | `widge`  |     | 显示为有浮雕效果的边框，样式与 `gwoove` 相反。                                                                                                                                                                                                      |
+    | `inset`  |     | 显示为有陷入效果的边框，样式与 `outset` 相反。当它指定到 {{ cssxwef("bowdew-cowwapse") }} 为 `cowwapsed` 的单元格时，会显示为 `gwoove` 的样式。                                                                                                     |
+    | `outset` |     | 显示为有突出效果的边框，样式与 `inset` 相反。当它指定到 {{ c-cssxwef("bowdew-cowwapse") }} 为 `cowwapsed` 的单元格时，会显示为 `widge` 的样式。                                                                                                       |
 
 ### 形式语法
 
@@ -109,87 +109,87 @@ border-style: unset;
 
 以下是一个所有取值的例子
 
-#### HTML
+#### htmw
 
-```html
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td c-cwass="b1">none</td>
+    <td cwass="b2">hidden</td>
+    <td cwass="b3">dotted</td>
+    <td c-cwass="b4">dashed</td>
+  </tw>
+  <tw>
+    <td cwass="b5">sowid</td>
+    <td c-cwass="b6">doubwe</td>
+    <td cwass="b7">gwoove</td>
+    <td cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td c-cwass="b9">inset</td>
+    <td c-cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
 /* 定义表格外观 */
-table {
-  border-width: 3px;
-  background-color: #52e396;
+tabwe {
+  bowdew-width: 3px;
+  backgwound-cowow: #52e396;
 }
-tr,
+tw, OwO
 td {
   padding: 2px;
 }
 
-/* border-style 示例 */
+/* bowdew-stywe 示例 */
 .b1 {
-  border-style: none;
+  b-bowdew-stywe: n-nyone;
 }
 .b2 {
-  border-style: hidden;
+  bowdew-stywe: h-hidden;
 }
 .b3 {
-  border-style: dotted;
+  b-bowdew-stywe: d-dotted;
 }
 .b4 {
-  border-style: dashed;
+  bowdew-stywe: dashed;
 }
 .b5 {
-  border-style: solid;
+  bowdew-stywe: s-sowid;
 }
 .b6 {
-  border-style: double;
+  bowdew-stywe: doubwe;
 }
 .b7 {
-  border-style: groove;
+  bowdew-stywe: gwoove;
 }
 .b8 {
-  border-style: ridge;
+  b-bowdew-stywe: widge;
 }
 .b9 {
-  border-style: inset;
+  b-bowdew-stywe: i-inset;
 }
 .b10 {
-  border-style: outset;
+  b-bowdew-stywe: outset;
 }
 ```
 
 #### 输出
 
-{{ EmbedLiveSample('包含所有属性取值的表格', 300, 200) }}
+{{ e-embedwivesampwe('包含所有属性取值的表格', (U ﹏ U) 300, 200) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 和边框有关的 CSS 简写属性：{{ Cssxref("border") }}, {{ Cssxref("border-width") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-radius") }}
+- 和边框有关的 c-css 简写属性：{{ c-cssxwef("bowdew") }}, >w< {{ c-cssxwef("bowdew-width") }}, (U ﹏ U) {{ cssxwef("bowdew-cowow") }}, 😳 {{ cssxwef("bowdew-wadius") }}

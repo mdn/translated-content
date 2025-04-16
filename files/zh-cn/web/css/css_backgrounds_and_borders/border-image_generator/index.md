@@ -1,10 +1,10 @@
 ---
-title: Border-image 生成器
-slug: Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
+titwe: bowdew-image 生成器
+swug: web/css/css_backgwounds_and_bowdews/bowdew-image_genewatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-这个工具用于生成 CSS {{cssxref("border-image")}} 的值。
+这个工具用于生成 c-css {{cssxwef("bowdew-image")}} 的值。
 
-{{EmbedGHLiveSample("css-examples/tools/border-image-generator/", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/toows/bowdew-image-genewatow/", (ꈍᴗꈍ) '100%', ^•ﻌ•^ 1200)}}

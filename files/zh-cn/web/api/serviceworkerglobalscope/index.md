@@ -1,114 +1,114 @@
 ---
-title: ServiceWorkerGlobalScope
-slug: Web/API/ServiceWorkerGlobalScope
+titwe: sewvicewowkewgwobawscope
+swug: web/api/sewvicewowkewgwobawscope
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-[ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API) 的`ServiceWorkerGlobalScope` 接口，代表一个 service worker 的全局执行上下文。
+[sewvicewowkew a-api](/zh-cn/docs/web/api/sewvice_wowkew_api) 的`sewvicewowkewgwobawscope` 接口，代表一个 s-sewvice wowkew 的全局执行上下文。
 
-开发者应该知道，ServiceWorker 的状态在结束/重启的循环中不是一直保持不变的，所以每个事件处理器应该设定一个默认的全局状态。
+开发者应该知道，sewvicewowkew 的状态在结束/重启的循环中不是一直保持不变的，所以每个事件处理器应该设定一个默认的全局状态。
 
-一旦成功地注册了 service worker，为了节省内存和处理器，它将在他的状态达到了空闲的时候被终止。一个在激活状态的 service worker 为了响应事件是可以自动重启的，就像这两个方法， {{domxref("ServiceWorkerGlobalScope.onfetch")}} 或者{{domxref("ServiceWorkerGlobalScope.onmessage")}}.
+一旦成功地注册了 s-sewvice wowkew，为了节省内存和处理器，它将在他的状态达到了空闲的时候被终止。一个在激活状态的 s-sewvice w-wowkew 为了响应事件是可以自动重启的，就像这两个方法， {{domxwef("sewvicewowkewgwobawscope.onfetch")}} 或者{{domxwef("sewvicewowkewgwobawscope.onmessage")}}. :3
 
-此外，在 service worker 中，同步请求是被禁止的 - 只有异步请求，如方法{{domxref("GlobalFetch.fetch", "fetch()")}} 才被允许。
+此外，在 s-sewvice wowkew 中，同步请求是被禁止的 - 只有异步请求，如方法{{domxwef("gwobawfetch.fetch", ( ͡o ω ͡o ) "fetch()")}} 才被允许。
 
-该接口继承自 {{domxref("WorkerGlobalScope")}} 接口，以及其父类 {{domxref("EventTarget")}}, 因此继承属性来自 {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}.
+该接口继承自 {{domxwef("wowkewgwobawscope")}} 接口，以及其父类 {{domxwef("eventtawget")}}, σωσ 因此继承属性来自 {{domxwef("windowtimews")}}, >w< {{domxwef("windowbase64")}}. 😳😳😳
 
-{{InheritanceDiagram(700, 85, 20)}}
+{{inhewitancediagwam(700, OwO 85, 20)}}
 
 ## 属性
 
-- {{domxref("ServiceWorkerGlobalScope.clients")}} {{readonlyinline}}
-  - : Contains the {{domxref("Clients")}} object associated with the service worker.
-- {{domxref("ServiceWorkerGlobalScope.registration")}} {{readonlyinline}}
-  - : Contains the {{domxref("ServiceWorkerRegistration")}} object that represents the service worker's registration.
-- {{domxref("ServiceWorkerGlobalScope.caches")}} {{readonlyinline}}
-  - : Contains the {{domxref("CacheStorage")}} object associated with the service worker.
+- {{domxwef("sewvicewowkewgwobawscope.cwients")}} {{weadonwyinwine}}
+  - : c-contains the {{domxwef("cwients")}} object associated with the sewvice wowkew. 😳
+- {{domxwef("sewvicewowkewgwobawscope.wegistwation")}} {{weadonwyinwine}}
+  - : c-contains the {{domxwef("sewvicewowkewwegistwation")}} object that wepwesents t-the sewvice wowkew's wegistwation.
+- {{domxwef("sewvicewowkewgwobawscope.caches")}} {{weadonwyinwine}}
+  - : c-contains the {{domxwef("cachestowage")}} object associated with the sewvice wowkew.
 
 ## 事件
 
-- {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}}
-  - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
-- {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
-  - : Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.
-- {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}}
-  - : Occurs when a {{domxref("fetch()")}} is called.
-- {{domxref("ServiceWorkerGlobalScope/install_event", "install")}}
-  - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.
-- {{domxref("ServiceWorkerGlobalScope/message_event", "message")}}
-  - : Occurs when incoming messages are received. Controlled pages can use the {{domxref("MessagePort.postMessage()")}} method to send messages to service workers. The service worker can optionally send a response back via the {{domxref("MessagePort")}} exposed in [`event.data.port`](https://html.spec.whatwg.org/multipage/comms.html#messageport), corresponding to the controlled page.
-- {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}}
-  - : Occurs when a user clicks on a displayed notification.
-- {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}}
-  - : Occurs when a user closes a displayed notification.
-- {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}}
-  - : Triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.
-- {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}} {{Experimental_Inline}}
-  - : Occurs at periodic intervals, which were specified when registering a {{domxref("PeriodicSyncManager")}}.
-- {{domxref("ServiceWorkerGlobalScope/push_event", "push")}}
-  - : Occurs when a server push notification is received.
-- {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}}
-  - : Occurs when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time).
+- {{domxwef("sewvicewowkewgwobawscope/activate_event", 😳😳😳 "activate")}}
+  - : o-occuws when a {{domxwef("sewvicewowkewwegistwation")}} acquiwes a-a nyew {{domxwef("sewvicewowkewwegistwation.active")}} w-wowkew. (˘ω˘)
+- {{domxwef("sewvicewowkewgwobawscope/contentdewete_event", ʘwʘ "contentdewete")}} {{expewimentaw_inwine}}
+  - : occuws when an item is wemoved fwom the {{domxwef("contentindex", ( ͡o ω ͡o ) "content i-index")}}. o.O
+- {{domxwef("sewvicewowkewgwobawscope/fetch_event", >w< "fetch")}}
+  - : occuws when a {{domxwef("fetch()")}} is cawwed. 😳
+- {{domxwef("sewvicewowkewgwobawscope/instaww_event", 🥺 "instaww")}}
+  - : o-occuws when a {{domxwef("sewvicewowkewwegistwation")}} acquiwes a-a nyew {{domxwef("sewvicewowkewwegistwation.instawwing")}} w-wowkew. rawr x3
+- {{domxwef("sewvicewowkewgwobawscope/message_event", o.O "message")}}
+  - : o-occuws w-when incoming messages awe weceived. rawr contwowwed p-pages can use the {{domxwef("messagepowt.postmessage()")}} method to send messages t-to sewvice wowkews. ʘwʘ the sewvice wowkew can optionawwy send a wesponse back via the {{domxwef("messagepowt")}} e-exposed in [`event.data.powt`](https://htmw.spec.naniwg.owg/muwtipage/comms.htmw#messagepowt), 😳😳😳 cowwesponding t-to the contwowwed p-page. ^^;;
+- {{domxwef("sewvicewowkewgwobawscope/notificationcwick_event", o.O "notificationcwick")}}
+  - : o-occuws when a usew cwicks on a dispwayed nyotification. (///ˬ///✿)
+- {{domxwef("sewvicewowkewgwobawscope/notificationcwose_event", σωσ "notificationcwose")}}
+  - : o-occuws w-when a usew cwoses a dispwayed n-notification. nyaa~~
+- {{domxwef("sewvicewowkewgwobawscope/sync_event", ^^;; "sync")}}
+  - : t-twiggewed when a caww to {{domxwef("syncmanagew.wegistew")}} i-is made fwom a sewvice wowkew cwient p-page. ^•ﻌ•^ the attempt to sync is made eithew immediatewy i-if the nyetwowk is avaiwabwe o-ow as soon as the nyetwowk b-becomes avaiwabwe. σωσ
+- {{domxwef("sewvicewowkewgwobawscope/pewiodicsync_event", -.- "pewiodicsync")}} {{expewimentaw_inwine}}
+  - : o-occuws at pewiodic intewvaws, ^^;; which wewe specified when wegistewing a {{domxwef("pewiodicsyncmanagew")}}. XD
+- {{domxwef("sewvicewowkewgwobawscope/push_event", 🥺 "push")}}
+  - : occuws when a sewvew p-push nyotification i-is weceived. òωó
+- {{domxwef("sewvicewowkewgwobawscope/pushsubscwiptionchange_event", (ˆ ﻌ ˆ)♡ "pushsubscwiptionchange")}}
+  - : occuws w-when a push subscwiption h-has been i-invawidated, -.- ow is about to be invawidated (e.g. :3 when a push sewvice s-sets an expiwation time). ʘwʘ
 
 ## 方法
 
-- {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}}
-  - : Allows the current service worker registration to progress from waiting to active state while service worker clients are using it.
+- {{domxwef("sewvicewowkewgwobawscope.skipwaiting()")}}
+  - : awwows the cuwwent sewvice wowkew wegistwation t-to pwogwess fwom waiting t-to active state w-whiwe sewvice w-wowkew cwients awe using it. 🥺
 
-`ServiceWorkerGlobalScope` implements {{domxref("WorkerGlobalScope")}} — which implements {{domxref("GlobalFetch")}}. Therefore it also has the following property available to it:
+`sewvicewowkewgwobawscope` i-impwements {{domxwef("wowkewgwobawscope")}} — w-which i-impwements {{domxwef("gwobawfetch")}}. >_< t-thewefowe it awso has the fowwowing pwopewty a-avaiwabwe to i-it:
 
-- {{domxref("GlobalFetch.fetch()")}}
-  - : Starts the process of fetching a resource. This returns a promise that resolves to the {{domxref("Response")}} object representing the response to your request. This algorithm is the entry point for the fetch handling handed to the service worker context.
+- {{domxwef("gwobawfetch.fetch()")}}
+  - : s-stawts the pwocess o-of fetching a-a wesouwce. ʘwʘ this wetuwns a pwomise that wesowves to the {{domxwef("wesponse")}} o-object wepwesenting the wesponse to youw wequest. (˘ω˘) this awgowithm is the entwy point fow the fetch h-handwing handed to the sewvice wowkew context. (✿oωo)
 
 ## 示例
 
-This code snippet is from the [service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (see [prefetch example live](https://googlechrome.github.io/samples/service-worker/prefetch/).) The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler listens for the `fetch` event. When fired, the code returns a promise that resolves to the first matching request in the {{domxref("Cache")}} object. If no match is found, the code fetches a response from the network.
+this c-code snippet is f-fwom the [sewvice w-wowkew pwefetch sampwe](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/pwefetch/sewvice-wowkew.js) (see [pwefetch e-exampwe wive](https://googwechwome.github.io/sampwes/sewvice-wowkew/pwefetch/).) t-the {{domxwef("sewvicewowkewgwobawscope.onfetch")}} e-event handwew wistens fow the `fetch` event. (///ˬ///✿) when fiwed, rawr x3 the code wetuwns a pwomise that wesowves t-to the fiwst matching wequest i-in the {{domxwef("cache")}} object. -.- i-if nyo match i-is found, ^^ the code fetches a wesponse fwom the n-nyetwowk. (⑅˘꒳˘)
 
-The code also handles exceptions thrown from the {{domxref("GlobalFetch.fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.
+the c-code awso handwes exceptions thwown f-fwom the {{domxwef("gwobawfetch.fetch", nyaa~~ "fetch()")}} o-opewation. /(^•ω•^) nyote that an http ewwow wesponse (e.g., 404) wiww nyot twiggew an exception. i-it wiww wetuwn a-a nyowmaw wesponse o-object that has the appwopwiate e-ewwow code set. (U ﹏ U)
 
 ```js
-self.addEventListener("fetch", function (event) {
-  console.log("Handling fetch event for", event.request.url);
+s-sewf.addeventwistenew("fetch", 😳😳😳 function (event) {
+  consowe.wog("handwing f-fetch event fow", >w< event.wequest.uww);
 
-  event.respondWith(
-    caches.match(event.request).then(function (response) {
-      if (response) {
-        console.log("Found response in cache:", response);
+  event.wespondwith(
+    caches.match(event.wequest).then(function (wesponse) {
+      if (wesponse) {
+        c-consowe.wog("found w-wesponse in cache:", wesponse);
 
-        return response;
+        w-wetuwn wesponse;
       }
-      console.log("No response found in cache. About to fetch from network...");
+      c-consowe.wog("no wesponse found in cache. about to fetch fwom n-nyetwowk...");
 
-      return fetch(event.request).then(
-        function (response) {
-          console.log("Response from network is:", response);
+      wetuwn fetch(event.wequest).then(
+        function (wesponse) {
+          consowe.wog("wesponse fwom nyetwowk i-is:", XD wesponse);
 
-          return response;
-        },
-        function (error) {
-          console.error("Fetching failed:", error);
+          wetuwn wesponse;
+        }, o.O
+        function (ewwow) {
+          c-consowe.ewwow("fetching f-faiwed:", mya ewwow);
 
-          throw error;
-        },
+          thwow ewwow;
+        }, 🥺
       );
-    }),
+    }), ^^;;
   );
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service worker 基本代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [是否支持 ServiceWorker](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [使用 sewvice wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice wowkew 基本代码示例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)
+- [是否支持 s-sewvicewowkew](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [使用 w-web wowkew](/zh-cn/docs/web/api/web_wowkews_api/using_web_wowkews)

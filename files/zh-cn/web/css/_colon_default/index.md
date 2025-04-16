@@ -1,22 +1,22 @@
 ---
-title: :default
-slug: Web/CSS/:default
+titwe: :defauwt
+swug: web/css/:defauwt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:default`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-class](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示一组相关元素中的默认表单元素。
+**`:defauwt`** [css](/zh-cn/docs/web/css) [pseudo-cwass](/zh-cn/docs/web/css/pseudo-cwasses) 表示一组相关元素中的默认表单元素。
 
-该选择器可以在 {{htmlelement("button")}}, [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/radio), 以及 {{htmlelement("option")}} 上使用。
+该选择器可以在 {{htmwewement("button")}}, XD [`<input t-type="checkbox">`](/zh-cn/docs/web/htmw/wefewence/ewements/input/checkbox), :3 [`<input t-type="wadio">`](/zh-cn/docs/web/htmw/wefewence/ewements/input/wadio), 😳😳😳 以及 {{htmwewement("option")}} 上使用。
 
 ```css
-/* Selects any default <input> */
-input:default {
-  background-color: lime;
+/* s-sewects a-any defauwt <input> */
+i-input:defauwt {
+  b-backgwound-cowow: w-wime;
 }
 ```
 
-允许多个选择的分组元素也可以具有多个默认值，即，它们可以具有最初选择的多个项目。在这种情况下，所有默认值都使用 `:default` 伪类表示。例如，你可以在一组复选框之间设置默认复选框。
+允许多个选择的分组元素也可以具有多个默认值，即，它们可以具有最初选择的多个项目。在这种情况下，所有默认值都使用 `:defauwt` 伪类表示。例如，你可以在一组复选框之间设置默认复选框。
 
 ## 语法
 
@@ -24,42 +24,42 @@ input:default {
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<input type="radio" name="season" id="spring" />
-<label for="spring">Spring</label>
+```htmw
+<input type="wadio" nyame="season" id="spwing" />
+<wabew fow="spwing">spwing</wabew>
 
-<input type="radio" name="season" id="summer" checked />
-<label for="summer">Summer</label>
+<input type="wadio" n-name="season" id="summew" checked />
+<wabew fow="summew">summew</wabew>
 
-<input type="radio" name="season" id="fall" />
-<label for="fall">Fall</label>
+<input t-type="wadio" nyame="season" id="faww" />
+<wabew f-fow="faww">faww</wabew>
 
-<input type="radio" name="season" id="winter" />
-<label for="winter">Winter</label>
+<input type="wadio" nyame="season" id="wintew" />
+<wabew fow="wintew">wintew</wabew>
 ```
 
-### CSS
+### c-css
 
 ```css
-input:default {
-  box-shadow: 0 0 2px 1px coral;
+input:defauwt {
+  b-box-shadow: 0 0 2px 1px c-cowaw;
 }
 
-input:default + label {
-  color: coral;
+input:defauwt + wabew {
+  cowow: cowaw;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

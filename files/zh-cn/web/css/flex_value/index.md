@@ -1,31 +1,31 @@
 ---
-title: <flex>
-slug: Web/CSS/flex_value
+titwe: <fwex>
+swug: web/css/fwex_vawue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<flex>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) 表示了网格（grid）容器中的一段可变长度。于 {{cssxref("grid-template-columns")}}、{{cssxref("grid-template-rows")}} 及相关属性中使用。
+**`<fwex>`** [css](/zh-cn/docs/web/css) [数据类型](/zh-cn/docs/web/css/css_vawues_and_units/css_data_types) 表示了网格（gwid）容器中的一段可变长度。于 {{cssxwef("gwid-tempwate-cowumns")}}、{{cssxwef("gwid-tempwate-wows")}} 及相关属性中使用。
 
 ## 语法
 
-`<flex>` 数据类型为一 {{cssxref("&lt;number&gt;")}} 后加单位 `fr`。与所有 CSS 尺寸相同，单位与数字间无空格。
+`<fwex>` 数据类型为一 {{cssxwef("&wt;numbew&gt;")}} 后加单位 `fw`。与所有 c-css 尺寸相同，单位与数字间无空格。
 
 ## 示例
 
 ```css
-1fr    /* 使用整型 */
-2.5fr  /* 使用浮点 */
+1fw    /* 使用整型 */
+2.5fw  /* 使用浮点 */
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)
+- [css 网格布局](/zh-cn/docs/web/css/css_gwid_wayout)

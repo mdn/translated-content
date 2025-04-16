@@ -1,42 +1,42 @@
 ---
-title: color-mix()
-slug: Web/CSS/color_value/color-mix
+titwe: cowow-mix()
+swug: web/css/cowow_vawue/cowow-mix
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`color-mix()`** 函数标记接收两个 {{cssxref("&lt;color&gt;")}} 值，并返回在指定颜色空间、指定数量混合后的颜色。
+**`cowow-mix()`** 函数标记接收两个 {{cssxwef("&wt;cowow&gt;")}} 值，并返回在指定颜色空间、指定数量混合后的颜色。
 
 ## 语法
 
 ```css
-color-mix(in lch, plum, pink);
-color-mix(in lch, plum 40%, pink);
-color-mix(in srgb, #34c9eb 20%, white);
-color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
+cowow-mix(in w-wch, 🥺 p-pwum, pink);
+cowow-mix(in w-wch, (U ﹏ U) p-pwum 40%, >w< pink);
+c-cowow-mix(in swgb, mya #34c9eb 20%, >w< w-white);
+cowow-mix(in h-hsw wongew h-hue, nyaa~~ hsw(120 100% 50%) 20%, (✿oωo) white);
 ```
 
 ### 值
 
-函数标记：`color-mix(method, color1[ p1], color2[ p2])`
+函数标记：`cowow-mix(method, ʘwʘ cowow1[ p1], (ˆ ﻌ ˆ)♡ cowow2[ p2])`
 
 - `method`
 
-  - : 指定插值颜色空间的 {{CSSXref("&lt;color-interpolation-method&gt;")}} 值。
+  - : 指定插值颜色空间的 {{cssxwef("&wt;cowow-intewpowation-method&gt;")}} 值。
 
-- `color1`、`color2`
+- `cowow1`、`cowow2`
 
-  - : 需要混合的 {{CSSXref("&lt;color&gt;")}} 值。
+  - : 需要混合的 {{cssxwef("&wt;cowow&gt;")}} 值。
 
-- `p1`、`p2` {{optional_inline}}
+- `p1`、`p2` {{optionaw_inwine}}
 
-  - : `0%` 到 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}} 值，指定每个颜色混合的数量。这两个值会按照以下的方式规范化：
+  - : `0%` 到 `100%` 之间的 {{cssxwef("&wt;pewcentage&gt;")}} 值，指定每个颜色混合的数量。这两个值会按照以下的方式规范化：
 
     - 如果 `p1` 和 `p2` 都省略了，那么 `p1 = p2 = 50%`。
     - 如果 `p1` 省略，那么 `p1 = 100% - p2`。
-    - 如果 `p2` 省略，那么 `p2 = 100% - p1`。
+    - 如果 `p2` 省略，那么 `p2 = 100% - p-p1`。
     - 如果 `p1 = p2 = 0%`，那么函数无效。
-    - 如果 `p1 + p2 ≠ 100%`，那么 `p1' = p1 / (p1 + p2)`，`p2' = p2 / (p1 + p2)`，其中 `p1'` 和 `p2'` 是规范化后的结果。
+    - 如果 `p1 + p2 ≠ 100%`，那么 `p1' = p1 / (p1 + p2)`，`p2' = p-p2 / (p1 + p2)`，其中 `p1'` 和 `p2'` 是规范化后的结果。
 
 ### 形式语法
 
@@ -48,139 +48,139 @@ color-mix(in hsl longer hue, hsl(120 100% 50%) 20%, white);
 
 在支持的浏览器中，这些项目会有更多蓝色、更少白色，因为混色了更高百分比的 `#34c9eb`。没有给出值时，百分比默认为 50%。
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>0%</li>
-  <li>25%</li>
-  <li>50%</li>
-  <li>75%</li>
-  <li>100%</li>
-  <li></li>
-</ul>
+```htmw
+<uw>
+  <wi>0%</wi>
+  <wi>25%</wi>
+  <wi>50%</wi>
+  <wi>75%</wi>
+  <wi>100%</wi>
+  <wi></wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css hidden
-ul {
-  display: flex;
-  list-style-type: none;
-  font-size: 150%;
-  gap: 10px;
-  border: 2px solid;
+uw {
+  dispway: fwex;
+  w-wist-stywe-type: nyone;
+  f-font-size: 150%;
+  g-gap: 10px;
+  bowdew: 2px sowid;
   padding: 10px;
 }
 
-li {
+wi {
   padding: 10px;
-  flex: 1;
-  box-sizing: border-box;
-  font-family: monospace;
-  outline: 1px solid #34c9eb;
-  text-align: center;
+  fwex: 1;
+  box-sizing: b-bowdew-box;
+  font-famiwy: monospace;
+  outwine: 1px sowid #34c9eb;
+  text-awign: c-centew;
 }
 ```
 
 ```css
-li:nth-child(1) {
-  background-color: color-mix(in srgb, #34c9eb 0%, white);
+wi:nth-chiwd(1) {
+  b-backgwound-cowow: c-cowow-mix(in s-swgb, 😳😳😳 #34c9eb 0%, :3 w-white);
 }
 
-li:nth-child(2) {
-  background-color: color-mix(in srgb, #34c9eb 25%, white);
+wi:nth-chiwd(2) {
+  backgwound-cowow: cowow-mix(in s-swgb, OwO #34c9eb 25%, white);
 }
 
-li:nth-child(3) {
-  background-color: color-mix(in srgb, #34c9eb 50%, white);
+wi:nth-chiwd(3) {
+  backgwound-cowow: c-cowow-mix(in swgb, (U ﹏ U) #34c9eb 50%, >w< white);
 }
 
-li:nth-child(4) {
-  background-color: color-mix(in srgb, #34c9eb 75%, white);
+wi:nth-chiwd(4) {
+  backgwound-cowow: cowow-mix(in s-swgb, (U ﹏ U) #34c9eb 75%, 😳 white);
 }
 
-li:nth-child(5) {
-  background-color: color-mix(in srgb, #34c9eb 100%, white);
+w-wi:nth-chiwd(5) {
+  b-backgwound-cowow: c-cowow-mix(in swgb, (ˆ ﻌ ˆ)♡ #34c9eb 100%, 😳😳😳 white);
 }
 
-li:nth-child(6) {
-  background-color: color-mix(in srgb, #34c9eb, white);
+wi:nth-chiwd(6) {
+  b-backgwound-cowow: c-cowow-mix(in swgb, (U ﹏ U) #34c9eb, w-white);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("混合两个颜色", "100%", 150)}}
+{{embedwivesampwe("混合两个颜色", (///ˬ///✿) "100%", 150)}}
 
-### 在 color-mix() 中使用色相插值
+### 在 c-cowow-mix() 中使用色相插值
 
-使用 shorter 色相插值时，产生的色相角度是在色轮上在输入色相之间采用最短路线时的中间值。
+使用 showtew 色相插值时，产生的色相角度是在色轮上在输入色相之间采用最短路线时的中间值。
 
-使用 longer 色相插值时，产生的色相角度是在色轮上走较长的路线时的中间值。
+使用 w-wongew 色相插值时，产生的色相角度是在色轮上走较长的路线时的中间值。
 
-更多信息请参考 {{cssxref("&lt;hue-interpolation-method&gt;")}}。
+更多信息请参考 {{cssxwef("&wt;hue-intewpowation-method&gt;")}}。
 
-```html
-<div class="color-one">颜色一</div>
-<div class="color-two">颜色二</div>
-<div class="shorter">shorter 混合</div>
-<div class="longer">longer 混合</div>
+```htmw
+<div cwass="cowow-one">颜色一</div>
+<div c-cwass="cowow-two">颜色二</div>
+<div cwass="showtew">showtew 混合</div>
+<div cwass="wongew">wongew 混合</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
 body {
-  display: flex;
-  flex-wrap: wrap;
+  d-dispway: fwex;
+  fwex-wwap: w-wwap;
 }
 div {
-  border: 1px solid;
-  font: bold 150% monospace;
+  b-bowdew: 1px sowid;
+  font: bowd 150% monospace;
   height: 100px;
-  margin: 10px 5%;
+  mawgin: 10px 5%;
   width: 30%;
 }
 ```
 
 ```css
-.color-one {
-  background-color: hsl(10 100% 50%);
+.cowow-one {
+  backgwound-cowow: h-hsw(10 100% 50%);
 }
-.color-two {
-  background-color: hsl(60 100% 50%);
+.cowow-two {
+  b-backgwound-cowow: hsw(60 100% 50%);
 }
-.shorter {
-  background-color: color-mix(
-    in hsl shorter hue,
-    hsl(10 100% 50%),
-    hsl(60 100% 50%)
+.showtew {
+  b-backgwound-cowow: c-cowow-mix(
+    i-in hsw showtew hue,
+    hsw(10 100% 50%), 😳
+    hsw(60 100% 50%)
   );
 }
-.longer {
-  background-color: color-mix(
-    in hsl longer hue,
-    hsl(10 100% 50%),
-    hsl(60 100% 50%)
+.wongew {
+  b-backgwound-cowow: cowow-mix(
+    in hsw wongew hue, 😳
+    hsw(10 100% 50%), σωσ
+    h-hsw(60 100% 50%)
   );
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("在 color-mix() 中使用色相插值", "100%", 250)}}
+{{embedwivesampwe("在 cowow-mix() 中使用色相插值", rawr x3 "100%", 250)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSXref("&lt;color&gt;")}}
-- {{CSSXref("&lt;color-interpolation-method&gt;")}}
-- {{cssxref("&lt;hue&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
+- {{cssxwef("&wt;cowow-intewpowation-method&gt;")}}
+- {{cssxwef("&wt;hue&gt;")}}

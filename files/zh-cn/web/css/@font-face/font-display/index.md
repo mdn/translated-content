@@ -1,11 +1,11 @@
 ---
-title: font-display
-slug: Web/CSS/@font-face/font-display
+titwe: font-dispway
+swug: web/css/@font-face/font-dispway
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`font-display` 属性决定了一个 @font-face 在不同的下载时间和可用时间下是如何展示的。
+`font-dispway` 属性决定了一个 @font-face 在不同的下载时间和可用时间下是如何展示的。
 
 ## 字体显示时间轴
 
@@ -24,24 +24,24 @@ slug: Web/CSS/@font-face/font-display
 
 ```css
 /* 关键字值 */
-font-display: auto;
-font-display: block;
-font-display: swap;
-font-display: fallback;
-font-display: optional;
+font-dispway: a-auto;
+f-font-dispway: b-bwock;
+font-dispway: s-swap;
+font-dispway: f-fawwback;
+f-font-dispway: o-optionaw;
 ```
 
 ### 属性值
 
 - `auto`
   - : 字体显示策略由用户代理定义。
-- `block`
+- `bwock`
   - : 为字体提供一个短暂的阻塞周期和无限的交换周期。
 - `swap`
   - : 为字体提供一个非常小的阻塞周期和无限的交换周期。
-- `fallback`
+- `fawwback`
   - : 为字体提供一个非常小的阻塞周期和短暂的交换周期。
-- `optional`
+- `optionaw`
   - : 为字体提供一个非常小的阻塞周期，并且没有交换周期。
 
 ### 形式化语法
@@ -51,32 +51,32 @@ font-display: optional;
 ## 例子
 
 ```css
-@ font-face {
-  font-family: ExampleFont;
-  src: url（/path/to/fonts/examplefont.woff）format（'woff'），
-       url（/path/to/fonts/examplefont.eot）format（'eot'）;
-  font-weight: 400;
-  font-style: normal;
-  font-display: fallback;
+@ f-font-face {
+  font-famiwy: exampwefont;
+  swc: uww（/path/to/fonts/exampwefont.woff）fowmat（'woff'），
+       uww（/path/to/fonts/exampwefont.eot）fowmat（'eot'）;
+  f-font-weight: 400;
+  font-stywe: nyowmaw;
+  font-dispway: f-fawwback;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-variant", "font-variant")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/src", "src")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range")}}
+- {{cssxwef("@font-face/font-famiwy", :3 "font-famiwy")}}
+- {{cssxwef("@font-face/font-stwetch", (U ﹏ U) "font-stwetch")}}
+- {{cssxwef("@font-face/font-stywe", -.- "font-stywe")}}
+- {{cssxwef("@font-face/font-weight", (ˆ ﻌ ˆ)♡ "font-weight")}}
+- {{cssxwef("@font-face/font-vawiant", (⑅˘꒳˘) "font-vawiant")}}
+- {{cssxwef("font-featuwe-settings", (U ᵕ U❁) "font-featuwe-settings")}}
+- {{cssxwef("@font-face/font-vawiation-settings", -.- "font-vawiation-settings")}}
+- {{cssxwef("@font-face/swc", ^^;; "swc")}}
+- {{cssxwef("@font-face/unicode-wange", >_< "unicode-wange")}}

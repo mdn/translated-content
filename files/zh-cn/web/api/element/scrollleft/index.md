@@ -1,77 +1,77 @@
 ---
-title: Element.scrollLeft
-slug: Web/API/Element/scrollLeft
+titwe: ewement.scwowwweft
+swug: w-web/api/ewement/scwowwweft
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Element.scrollLeft`** 属性可以读取或设置元素滚动条到元素左边的距离。
+**`ewement.scwowwweft`** 属性可以读取或设置元素滚动条到元素左边的距离。
 
-注意如果这个元素的内容排列方向（{{cssxref("direction")}}）是`rtl` (right-to-left) ，那么滚动条会位于最右侧（内容开始处），并且`scrollLeft`值为 0。此时，当你从右到左拖动滚动条时，scrollLeft 会从 0 变为负数。
+注意如果这个元素的内容排列方向（{{cssxwef("diwection")}}）是`wtw` (wight-to-weft) ，那么滚动条会位于最右侧（内容开始处），并且`scwowwweft`值为 0。此时，当你从右到左拖动滚动条时，scwowwweft 会从 0 变为负数。
 
-> [!WARNING]
-> 在使用显示比例缩放的系统上，`scrollLeft` 可能会是一个小数。
+> [!wawning]
+> 在使用显示比例缩放的系统上，`scwowwweft` 可能会是一个小数。
 
 ## 值
 
-`scrollLeft` 可以是任意整数，然而：
+`scwowwweft` 可以是任意整数，然而：
 
-- 如果元素不能滚动（比如：元素没有溢出），那么`scrollLeft` 的值是 0。
-- 如果给`scrollLeft` 设置的值小于 0，那么`scrollLeft` 的值将变为 0。
-- 如果给`scrollLeft` 设置的值大于元素内容最大宽度，那么`scrollLeft` 的值将被设为元素最大宽度。
+- 如果元素不能滚动（比如：元素没有溢出），那么`scwowwweft` 的值是 0。
+- 如果给`scwowwweft` 设置的值小于 0，那么`scwowwweft` 的值将变为 0。
+- 如果给`scwowwweft` 设置的值大于元素内容最大宽度，那么`scwowwweft` 的值将被设为元素最大宽度。
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<div id="container">
-  <div id="content">Click the button to slide right!</div>
+```htmw
+<div id="containew">
+  <div i-id="content">cwick t-the button t-to swide wight!</div>
 </div>
 
-<button id="slide" type="button">Slide right</button>
+<button i-id="swide" t-type="button">swide wight</button>
 ```
 
-### CSS
+### css
 
 ```css
-#container {
+#containew {
   width: 100px;
   height: 100px;
-  border: 1px solid #ccc;
-  overflow-x: scroll;
+  b-bowdew: 1px sowid #ccc;
+  ovewfwow-x: s-scwoww;
 }
 
 #content {
   width: 250px;
-  background-color: #ccc;
+  b-backgwound-cowow: #ccc;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const button = document.getElementById("slide");
+const button = document.getewementbyid("swide");
 
-button.onclick = function () {
-  document.getElementById("container").scrollLeft += 20;
+button.oncwick = f-function () {
+  document.getewementbyid("containew").scwowwweft += 20;
 };
 ```
 
 ### 结构
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx>)
-- {{domxref("Element.scrollTop")}}
-- {{domxref("Element.scrollTo()")}}
+- [msdn's m-measuwing ewement d-dimension and wocation](<https://msdn.micwosoft.com/en-us/wibwawy/hh781509(v=vs.85).aspx>)
+- {{domxwef("ewement.scwowwtop")}}
+- {{domxwef("ewement.scwowwto()")}}

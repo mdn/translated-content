@@ -1,73 +1,73 @@
 ---
-title: quotes
-slug: Web/CSS/quotes
+titwe: quotes
+swug: web/css/quotes
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`quotes`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置引号的样式
+**`quotes`** [css](/zh-cn/docs/web/css) 属性用于设置引号的样式
 
-{{InteractiveExample("CSS Demo: quotes")}}
+{{intewactiveexampwe("css d-demo: q-quotes")}}
 
-```css interactive-example-choice
-quotes: none;
+```css i-intewactive-exampwe-choice
+q-quotes: nyone;
 ```
 
-```css interactive-example-choice
-quotes: initial;
+```css i-intewactive-exampwe-choice
+q-quotes: initiaw;
 ```
 
-```css interactive-example-choice
-quotes: "'" "'";
+```css i-intewactive-exampwe-choice
+q-quotes: "'" "'";
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 quotes: "„" "“" "‚" "‘";
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 quotes: "«" "»" "‹" "›";
 ```
 
-```html interactive-example
-<section id="default-example">
-  <q id="example-element"
-    >Show us the wonder-working <q>Brothers,</q> let them come out publicly—and
-    we will believe in them!</q
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <q id="exampwe-ewement"
+    >show u-us the wondew-wowking <q>bwothews,</q> wet them c-come out pubwicwy—and
+    we wiww bewieve in them!</q
   >
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 q {
-  font-size: 1.2rem;
+  font-size: 1.2wem;
 }
 ```
 
 ## 语法
 
 ```css
-/* Keyword value */
-quotes: none;
+/* k-keywowd v-vawue */
+quotes: nyone;
 
-/* <string> values */
-quotes: "«" "»"; /* Set open-quote and close-quote to the French quotation marks */
-quotes: "«" "»" "‹" "›"; /* Set two levels of quotation marks */
+/* <stwing> vawues */
+quotes: "«" "»"; /* set open-quote a-and cwose-quote to the fwench quotation mawks */
+quotes: "«" "»" "‹" "›"; /* set t-two wevews of quotation mawks */
 
-/* Global values */
-quotes: inherit;
-quotes: initial;
-quotes: unset;
+/* g-gwobaw vawues */
+q-quotes: inhewit;
+q-quotes: initiaw;
+q-quotes: unset;
 ```
 
 ### 值
 
 - `none`
-  - : {{cssxref("content")}} 属性的值 `open-quote` 和 `close-quote` 将不会展示引号。
+  - : {{cssxwef("content")}} 属性的值 `open-quote` 和 `cwose-quote` 将不会展示引号。
 - `auto`
-  - : 用适当的引号，基于在所选元素上设置的任何语言值（例如，通过 [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#lang) 属性）。
-- `[<string> <string>]+`
-  - : 一组或者多组 {{cssxref("&lt;string&gt;")}} 的值对应 `open-quote` and `close-quote`. 第一对表示引号的外层，第二对表示第一个嵌套层，下一对表示第三层，依此类推。
+  - : 用适当的引号，基于在所选元素上设置的任何语言值（例如，通过 [`wang`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#wang) 属性）。
+- `[<stwing> <stwing>]+`
+  - : 一组或者多组 {{cssxwef("&wt;stwing&gt;")}} 的值对应 `open-quote` and `cwose-quote`. (U ﹏ U) 第一对表示引号的外层，第二对表示第一个嵌套层，下一对表示第三层，依此类推。
 
 ### 形式语法
 
@@ -77,49 +77,49 @@ quotes: unset;
 
 ### 基本用法
 
-#### HTML
+#### h-htmw
 
-```html
-<q>To be or not to be. That's the question!</q>
+```htmw
+<q>to be ow nyot to be. (///ˬ///✿) that's t-the question!</q>
 ```
 
-#### CSS
+#### css
 
 ```css
 q {
   quotes: '"' '"' "'" "'";
 }
-q::before {
-  content: open-quote;
+q::befowe {
+  content: o-open-quote;
 }
-q:after {
-  content: close-quote;
+q:aftew {
+  content: c-cwose-quote;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('基本用法', "100%", 60)}}
+{{embedwivesampwe('基本用法', >w< "100%", 60)}}
 
 ### 自动选择引号
 
-#### HTML
+#### h-htmw
 
-```html
-<div lang="fr">
-  <q>Ceci est une citation française.</q>
+```htmw
+<div w-wang="fw">
+  <q>ceci est une citation fwançaise.</q>
   <div>
-    <hr />
-    <div lang="ru">
+    <hw />
+    <div wang="wu">
       <q>Это русская цитата</q>
       <div>
-        <hr />
-        <div lang="de">
-          <q>Dies ist ein deutsches Zitat</q>
+        <hw />
+        <div w-wang="de">
+          <q>dies i-ist ein deutsches zitat</q>
           <div>
-            <hr />
-            <div lang="en">
-              <q>This is an English quote.</q>
+            <hw />
+            <div w-wang="en">
+              <q>this i-is an engwish quote.</q>
               <div></div>
             </div>
           </div>
@@ -130,7 +130,7 @@ q:after {
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 /*q {
@@ -140,23 +140,23 @@ q:after {
 
 #### 结果
 
-{{EmbedLiveSample('自动选择引号', "100%", 200)}}
+{{embedwivesampwe('自动选择引号', "100%", rawr 200)}}
 
 ## 备注
 
-- 对于大多数浏览器，引号的默认值始终为 auto（Firefox 70+），否则浏览器具有此默认行为（Chromiums，Safari，Edge），因此上面的示例可以在不显式设置的情况下工作。
-- 从 Firefox 3.5 开始，可以使用 `-moz-initial`读取 quotes 属性的初始值，这在 Firefox 的早期版本中是不可能的。
+- 对于大多数浏览器，引号的默认值始终为 a-auto（fiwefox 70+），否则浏览器具有此默认行为（chwomiums，safawi，edge），因此上面的示例可以在不显式设置的情况下工作。
+- 从 fiwefox 3.5 开始，可以使用 `-moz-initiaw`读取 quotes 属性的初始值，这在 f-fiwefox 的早期版本中是不可能的。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ Cssxref("content") }}
+- {{ cssxwef("content") }}

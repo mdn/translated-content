@@ -1,83 +1,83 @@
 ---
-title: outline-width
-slug: Web/CSS/outline-width
-l10n:
-  sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
+titwe: outwine-width
+swug: web/css/outwine-width
+w-w10n:
+  souwcecommit: a-aa714bb37625b21b0f40db1f1ea557e773456fa2
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`outline-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素轮廓的粗细。轮廓是绘制在元素周围的线，位于 {{cssxref("border")}} 之外。
+**`outwine-width`** [css](/zh-cn/docs/web/css) 属性设置元素轮廓的粗细。轮廓是绘制在元素周围的线，位于 {{cssxwef("bowdew")}} 之外。
 
-{{InteractiveExample("CSS Demo: outline-width")}}
+{{intewactiveexampwe("css d-demo: outwine-width")}}
 
-```css interactive-example-choice
-outline-width: 12px;
+```css i-intewactive-exampwe-choice
+o-outwine-width: 12px;
 ```
 
-```css interactive-example-choice
-outline-width: thin;
+```css i-intewactive-exampwe-choice
+o-outwine-width: t-thin;
 ```
 
-```css interactive-example-choice
-outline-width: medium;
+```css intewactive-exampwe-choice
+outwine-width: medium;
 ```
 
-```css interactive-example-choice
-outline-width: thick;
+```css intewactive-exampwe-choice
+o-outwine-width: thick;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with an outwine a-awound it. OwO
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  outline: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  o-outwine: 0.75em s-sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-在定义轮廓的外观时，通常使用简写属性 {{cssxref("outline")}} 更为方便。
+在定义轮廓的外观时，通常使用简写属性 {{cssxwef("outwine")}} 更为方便。
 
 ## 语法
 
 ```css
 /* 关键字值 */
-outline-width: thin;
-outline-width: medium;
-outline-width: thick;
+outwine-width: t-thin;
+outwine-width: medium;
+outwine-width: thick;
 
-/* <length> 值 */
-outline-width: 1px;
-outline-width: 0.1em;
+/* <wength> 值 */
+outwine-width: 1px;
+o-outwine-width: 0.1em;
 
 /* 全局值 */
-outline-width: inherit;
-outline-width: initial;
-outline-width: revert;
-outline-width: revert-layer;
-outline-width: unset;
+outwine-width: i-inhewit;
+o-outwine-width: i-initiaw;
+outwine-width: w-wevewt;
+outwine-width: wevewt-wayew;
+o-outwine-width: unset;
 ```
 
-`outline-width` 属性的值可以是以下列表的任意一项。
+`outwine-width` 属性的值可以是以下列表的任意一项。
 
 ### 值
 
-- {{cssxref("&lt;length&gt;")}}
-  - : 轮廓的宽度指定为 `<length>`。
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 轮廓的宽度指定为 `<wength>`。
 - `thin`
-  - : 取决于用户代理。通常等同于桌面浏览器的 `1px`（包括 Firefox）。
+  - : 取决于用户代理。通常等同于桌面浏览器的 `1px`（包括 fiwefox）。
 - `medium`
-  - : 取决于用户代理。通常等同于桌面浏览器的 `3px`（包括 Firefox）。
+  - : 取决于用户代理。通常等同于桌面浏览器的 `3px`（包括 f-fiwefox）。
 - `thick`
-  - : 取决于用户代理。通常等同于桌面浏览器的 `5px`（包括 Firefox）。
+  - : 取决于用户代理。通常等同于桌面浏览器的 `5px`（包括 fiwefox）。
 
 ## 形式定义
 
@@ -91,65 +91,65 @@ outline-width: unset;
 
 ### 设置元素的轮廓宽度
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <span id="thin">细</span>
 <span id="medium">中等</span>
 <span id="thick">粗</span>
-<span id="twopixels">2px</span>
-<span id="oneex">1ex</span>
+<span id="twopixews">2px</span>
+<span i-id="oneex">1ex</span>
 <span id="em">1.2em</span>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 span {
-  outline-style: solid;
-  display: inline-block;
-  margin: 20px;
+  o-outwine-stywe: s-sowid;
+  dispway: inwine-bwock;
+  mawgin: 20px;
 }
 
 #thin {
-  outline-width: thin;
+  outwine-width: t-thin;
 }
 
 #medium {
-  outline-width: medium;
+  o-outwine-width: medium;
 }
 
 #thick {
-  outline-width: thick;
+  o-outwine-width: t-thick;
 }
 
-#twopixels {
-  outline-width: 2px;
+#twopixews {
+  outwine-width: 2px;
 }
 
 #oneex {
-  outline-width: 1ex;
+  o-outwine-width: 1ex;
 }
 
 #em {
-  outline-width: 1.2em;
+  outwine-width: 1.2em;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('设置元素的轮廓宽度', '100%', '80')}}
+{{embedwivesampwe('设置元素的轮廓宽度', 😳😳😳 '100%', 😳😳😳 '80')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("outline")}}
-- {{cssxref("outline-style")}}
-- {{cssxref("outline-color")}}
+- {{cssxwef("outwine")}}
+- {{cssxwef("outwine-stywe")}}
+- {{cssxwef("outwine-cowow")}}

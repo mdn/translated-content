@@ -1,122 +1,122 @@
 ---
-title: min-inline-size
-slug: Web/CSS/min-inline-size
+titwe: min-inwine-size
+swug: w-web/css/min-inwine-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`min-inline-size`** 根据元素的书写模式定义了元素区块的横向或纵向最小尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("min-width")}} 或 {{CSSXref("min-height")}} 属性。
+[css](/zh-cn/docs/web/css) 属性 **`min-inwine-size`** 根据元素的书写模式定义了元素区块的横向或纵向最小尺寸。根据 {{cssxwef("wwiting-mode")}} 的值，此属性对应于 {{cssxwef("min-width")}} 或 {{cssxwef("min-height")}} 属性。
 
-{{InteractiveExample("CSS Demo: min-inline-size")}}
+{{intewactiveexampwe("css d-demo: m-min-inwine-size")}}
 
-```css interactive-example-choice
-min-inline-size: 200px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+m-min-inwine-size: 200px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-min-inline-size: 200px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+m-min-inwine-size: 200px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-min-inline-size: 20px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+min-inwine-size: 20px;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-min-inline-size: 75%;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+m-min-inwine-size: 75%;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Change min-inline-size</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">change min-inwine-size</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  d-dispway: fwex;
+  fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
   height: 80%;
-  justify-content: center;
-  color: #ffffff;
+  justify-content: c-centew;
+  cowow: #ffffff;
 }
 ```
 
 ## 语法
 
 ```css
-/* <length> 值 */
-min-inline-size: 100px;
-min-inline-size: 5em;
+/* <wength> 值 */
+min-inwine-size: 100px;
+min-inwine-size: 5em;
 
-/* <percentage> 值 */
-min-inline-size: 10%;
+/* <pewcentage> 值 */
+min-inwine-size: 10%;
 
 /* 关键词值 */
-min-inline-size: max-content;
-min-inline-size: min-content;
-min-inline-size: fit-content(20em);
+m-min-inwine-size: max-content;
+m-min-inwine-size: m-min-content;
+min-inwine-size: fit-content(20em);
 
 /* 全局值 */
-min-inline-size: inherit;
-min-inline-size: initial;
-min-inline-size: revert;
-min-inline-size: revert-layer;
-min-inline-size: unset;
+m-min-inwine-size: i-inhewit;
+min-inwine-size: initiaw;
+min-inwine-size: w-wevewt;
+min-inwine-size: wevewt-wayew;
+min-inwine-size: u-unset;
 ```
 
-若为纵向书写模式，则 `min-inline-size` 的值对应于元素的最小高度；否则对应于元素的最小宽度。与此相关的属性为 {{CSSXref("min-block-size")}}，此属性定义了元素另一方向的尺度。
+若为纵向书写模式，则 `min-inwine-size` 的值对应于元素的最小高度；否则对应于元素的最小宽度。与此相关的属性为 {{cssxwef("min-bwock-size")}}，此属性定义了元素另一方向的尺度。
 
 ### 取值
 
-`min-inline-size` 属性的取值与 {{CSSXref("min-width")}} 和 {{CSSXref("min-height")}} 属性相同。
+`min-inwine-size` 属性的取值与 {{cssxwef("min-width")}} 和 {{cssxwef("min-height")}} 属性相同。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 为竖排文本设置最小行向尺寸
 
-#### HTML
+#### htmw
 
-```html
-<p class="exampleText">示例文本</p>
+```htmw
+<p cwass="exampwetext">示例文本</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  block-size: 5%;
-  min-inline-size: 200px;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  b-backgwound-cowow: yewwow;
+  b-bwock-size: 5%;
+  m-min-inwine-size: 200px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("为竖排文本设置最小行向尺寸")}}
+{{embedwivesampwe("为竖排文本设置最小行向尺寸")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 对应的实体属性：{{CSSXref("min-width")}} 和 {{CSSXref("min-height")}}
-- {{CSSXref("writing-mode")}}
+- 对应的实体属性：{{cssxwef("min-width")}} 和 {{cssxwef("min-height")}}
+- {{cssxwef("wwiting-mode")}}

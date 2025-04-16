@@ -1,52 +1,52 @@
 ---
-title: animation
-slug: Web/CSS/animation
+titwe: animation
+swug: web/css/animation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **animation** 属性是 {{cssxref("animation-name")}}，{{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}，{{cssxref("animation-delay")}}，{{cssxref("animation-iteration-count")}}，{{cssxref("animation-direction")}}，{{cssxref("animation-fill-mode")}} 和 {{cssxref("animation-play-state")}} 属性的一个简写属性形式。
+[css](/zh-cn/docs/web/css) **animation** 属性是 {{cssxwef("animation-name")}}，{{cssxwef("animation-duwation")}}, 😳😳😳 {{cssxwef("animation-timing-function")}}，{{cssxwef("animation-deway")}}，{{cssxwef("animation-itewation-count")}}，{{cssxwef("animation-diwection")}}，{{cssxwef("animation-fiww-mode")}} 和 {{cssxwef("animation-pway-state")}} 属性的一个简写属性形式。
 
-{{InteractiveExample("CSS Demo: animation")}}
+{{intewactiveexampwe("css d-demo: a-animation")}}
 
-```css interactive-example-choice
-animation: 3s ease-in 1s infinite reverse both running slidein;
+```css i-intewactive-exampwe-choice
+a-animation: 3s ease-in 1s i-infinite w-wevewse both w-wunning swidein;
 ```
 
-```css interactive-example-choice
-animation: 3s linear 1s infinite running slidein;
+```css i-intewactive-exampwe-choice
+animation: 3s wineaw 1s infinite wunning swidein;
 ```
 
-```css interactive-example-choice
-animation: 3s linear 1s infinite alternate slidein;
+```css i-intewactive-exampwe-choice
+animation: 3s wineaw 1s infinite a-awtewnate swidein;
 ```
 
-```css interactive-example-choice
-animation: 0.5s linear 1s infinite alternate slidein;
+```css intewactive-exampwe-choice
+a-animation: 0.5s wineaw 1s infinite awtewnate swidein;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div id="example-element"></div>
+```htmw intewactive-exampwe
+<section c-cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  margin: 20px;
-  border: 5px solid #333;
-  width: 150px;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #1766aa;
+  mawgin: 20px;
+  bowdew: 5px sowid #333;
+  w-width: 150px;
   height: 150px;
-  border-radius: 50%;
+  bowdew-wadius: 50%;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: -20%;
+@keyfwames swidein {
+  fwom {
+    mawgin-weft: -20%;
   }
-  to {
-    margin-left: 100%;
+  t-to {
+    mawgin-weft: 100%;
   }
 }
 ```
@@ -54,17 +54,17 @@ animation: 0.5s linear 1s infinite alternate slidein;
 ## 语法
 
 ```css
-/* @keyframes duration | easing-function | delay |
-iteration-count | direction | fill-mode | play-state | name */
-animation: 3s ease-in 1s 2 reverse both paused slidein;
+/* @keyfwames duwation | e-easing-function | d-deway |
+itewation-count | d-diwection | fiww-mode | p-pway-state | nyame */
+animation: 3s ease-in 1s 2 w-wevewse both paused swidein;
 
-/* @keyframes duration | easing-function | delay | name */
-animation: 3s linear 1s slidein;
+/* @keyfwames duwation | e-easing-function | deway | nyame */
+animation: 3s wineaw 1s swidein;
 
 /* two animations */
 animation:
-  3s linear slidein,
-  3s ease-out 5s slideout;
+  3s w-wineaw swidein, (U ﹏ U)
+  3s e-ease-out 5s swideout;
 ```
 
 `animation` 属性用来指定一组或多组动画，每组之间用逗号相隔。
@@ -73,29 +73,29 @@ animation:
 
 - 以下属性出现 0 次或 1 次：
 
-  - {{cssxref("&lt;single-transition-timing-function&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#&lt;single-animation-iteration-count&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#&lt;single-animation-direction&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-fill-mode&gt;", "#&lt;single-animation-fill-mode&gt;")}}
-  - {{cssxref("animation", "&lt;single-animation-play-state&gt;", "#&lt;single-animation-play-state&gt;")}}
+  - {{cssxwef("&wt;singwe-twansition-timing-function&gt;")}}
+  - {{cssxwef("animation", (///ˬ///✿) "&wt;singwe-animation-itewation-count&gt;", 😳 "#&wt;singwe-animation-itewation-count&gt;")}}
+  - {{cssxwef("animation", 😳 "&wt;singwe-animation-diwection&gt;", σωσ "#&wt;singwe-animation-diwection&gt;")}}
+  - {{cssxwef("animation", rawr x3 "&wt;singwe-animation-fiww-mode&gt;", OwO "#&wt;singwe-animation-fiww-mode&gt;")}}
+  - {{cssxwef("animation", /(^•ω•^) "&wt;singwe-animation-pway-state&gt;", 😳😳😳 "#&wt;singwe-animation-pway-state&gt;")}}
 
-- animation 的 name 值可能是：none，{{cssxref("&lt;custom-ident&gt;")}}， {{cssxref("&lt;string&gt;")}}
-- {{cssxref("&lt;time&gt;")}} 可能会出现 0、1 或 2 次
+- a-animation 的 n-nyame 值可能是：none，{{cssxwef("&wt;custom-ident&gt;")}}， {{cssxwef("&wt;stwing&gt;")}}
+- {{cssxwef("&wt;time&gt;")}} 可能会出现 0、1 或 2 次
 
-每个动画定义中的属性值的顺序很重要：可以被解析为 {{cssxref("&lt;time&gt;")}} 的第一个值被分配给{{cssxref("animation-duration")}}，第二个分配给 {{cssxref("animation-delay")}}。
+每个动画定义中的属性值的顺序很重要：可以被解析为 {{cssxwef("&wt;time&gt;")}} 的第一个值被分配给{{cssxwef("animation-duwation")}}，第二个分配给 {{cssxwef("animation-deway")}}。
 
-每个动画定义中的值的顺序，对于区分 {{cssxref("animation-name")}} 值与其他关键字也很重要。解析时，对于除 {{cssxref("animation-name")}} 之外的有效的关键字，必须被前面的简写中没有找到值的属性所接受。此外，在序列化时，{{cssxref("animation-name")}} 与以及其他属性值做区分等情况下，必须输出其他属性的默认值。
+每个动画定义中的值的顺序，对于区分 {{cssxwef("animation-name")}} 值与其他关键字也很重要。解析时，对于除 {{cssxwef("animation-name")}} 之外的有效的关键字，必须被前面的简写中没有找到值的属性所接受。此外，在序列化时，{{cssxwef("animation-name")}} 与以及其他属性值做区分等情况下，必须输出其他属性的默认值。
 
-### Values
+### vawues
 
-- `<single-animation-iteration-count>`
-  - : 动画播放的次数。该值必须是{{cssxref("animation-iteration-count")}}可用的值之一。
-- `<single-animation-direction>`
-  - : 动画播放的方向。该值必须是{{cssxref("animation-direction")}}可用的值之一。
-- `<single-animation-fill-mode>`
-  - : 确定动画在执行之前和之后这两个阶段应用的样式。该值必须是{{cssxref("animation-fill-mode")}}可用的值之一。
-- `<single-animation-play-state>`
-  - : 确定动画是否正在播放。该值必须是{{cssxref("animation-play-state")}}中可用的值之一。
+- `<singwe-animation-itewation-count>`
+  - : 动画播放的次数。该值必须是{{cssxwef("animation-itewation-count")}}可用的值之一。
+- `<singwe-animation-diwection>`
+  - : 动画播放的方向。该值必须是{{cssxwef("animation-diwection")}}可用的值之一。
+- `<singwe-animation-fiww-mode>`
+  - : 确定动画在执行之前和之后这两个阶段应用的样式。该值必须是{{cssxwef("animation-fiww-mode")}}可用的值之一。
+- `<singwe-animation-pway-state>`
+  - : 确定动画是否正在播放。该值必须是{{cssxwef("animation-pway-state")}}中可用的值之一。
 
 ### 语法
 
@@ -105,86 +105,86 @@ animation:
 
 ### 赛隆人之眼
 
-```html
-<div class="view_port">
-  <div class="polling_message">Listening for dispatches</div>
-  <div class="cylon_eye"></div>
+```htmw
+<div cwass="view_powt">
+  <div cwass="powwing_message">wistening f-fow dispatches</div>
+  <div cwass="cywon_eye"></div>
 </div>
 ```
 
 ```css
-.polling_message {
-  color: white;
-  float: left;
-  margin-right: 2%;
+.powwing_message {
+  c-cowow: white;
+  fwoat: weft;
+  mawgin-wight: 2%;
 }
 
-.view_port {
-  background-color: black;
+.view_powt {
+  b-backgwound-cowow: b-bwack;
   height: 25px;
   width: 100%;
-  overflow: hidden;
+  o-ovewfwow: hidden;
 }
 
-.cylon_eye {
-  background-color: red;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.9) 25%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.9) 75%
+.cywon_eye {
+  b-backgwound-cowow: wed;
+  backgwound-image: wineaw-gwadient(
+    t-to wight, ( ͡o ω ͡o )
+    wgba(0, >_< 0, 0, 0.9) 25%, >w<
+    wgba(0, rawr 0, 0, 0.1) 50%, 😳
+    w-wgba(0, >w< 0, 0, 0.9) 75%
   );
-  color: white;
-  height: 100%;
-  width: 20%;
+  cowow: white;
+  h-height: 100%;
+  w-width: 20%;
 
-  -webkit-animation: 4s linear 0s infinite alternate move_eye;
-  animation: 4s linear 0s infinite alternate move_eye;
+  -webkit-animation: 4s wineaw 0s infinite awtewnate move_eye;
+  animation: 4s wineaw 0s infinite awtewnate move_eye;
 }
 
-@-webkit-keyframes move_eye {
-  from {
-    margin-left: -20%;
+@-webkit-keyfwames m-move_eye {
+  f-fwom {
+    mawgin-weft: -20%;
   }
   to {
-    margin-left: 100%;
+    m-mawgin-weft: 100%;
   }
 }
-@keyframes move_eye {
-  from {
-    margin-left: -20%;
+@keyfwames m-move_eye {
+  f-fwom {
+    mawgin-weft: -20%;
   }
   to {
-    margin-left: 100%;
+    mawgin-weft: 100%;
   }
 }
 ```
 
-{{EmbedLiveSample('赛隆人之眼')}}
+{{embedwivesampwe('赛隆人之眼')}}
 
-更多示例请参阅[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#examples)。
+更多示例请参阅[使用 c-css 动画](/zh-cn/docs/web/css/css_animations/using_css_animations#exampwes)。
 
 ## 潜在的问题
 
-眨眼和闪烁的动画对于有认知问题的人来说是有问题的，比如注意力缺陷多动障碍 (ADHD)。此外，某些动画效果可以触发前庭神经紊乱、癫痫、偏头痛和暗点敏感性。
+眨眼和闪烁的动画对于有认知问题的人来说是有问题的，比如注意力缺陷多动障碍 (adhd)。此外，某些动画效果可以触发前庭神经紊乱、癫痫、偏头痛和暗点敏感性。
 
-考虑提供一种暂停或禁用动画的机制，以及使用 [Reduced Motion Media Query](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion)（简约运动媒体查询），为那些表示不喜欢动画的用户创建一个良好的体验。
+考虑提供一种暂停或禁用动画的机制，以及使用 [weduced motion media quewy](/zh-cn/docs/web/css/@media/pwefews-weduced-motion)（简约运动媒体查询），为那些表示不喜欢动画的用户创建一个良好的体验。
 
-- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
-- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
-- [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [designing safew web animation f-fow motion sensitivity · an a w-wist apawt awticwe](https://awistapawt.com/awticwe/designing-safew-web-animation-fow-motion-sensitivity)
+- [an i-intwoduction to t-the weduced motion media quewy | c-css-twicks](https://css-twicks.com/intwoduction-weduced-motion-media-quewy/)
+- [wesponsive d-design f-fow motion | w-webkit](https://webkit.owg/bwog/7551/wesponsive-design-fow-motion/)
+- [mdn undewstanding wcag, (⑅˘꒳˘) guidewine 2.2 e-expwanations](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag/opewabwe#guidewine_2.2_%e2%80%94_enough_time_pwovide_usews_enough_time_to_wead_and_use_content)
+- [undewstanding s-success cwitewion 2.2.2 | w-w3c u-undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/time-wimits-pause.htmw)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using CSS animations](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript {{domxref("AnimationEvent")}} API
+- [using css animations](/zh-cn/docs/web/css/css_animations/using_css_animations)
+- javascwipt {{domxwef("animationevent")}} api

@@ -1,139 +1,139 @@
 ---
-title: accent-color
-slug: Web/CSS/accent-color
+titwe: accent-cowow
+swug: web/css/accent-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`accent-color`** 为某些元素所生成的用户界面控件设置了{{Glossary("accent", "强调色")}}。
+[css](/zh-cn/docs/web/css) 属性 **`accent-cowow`** 为某些元素所生成的用户界面控件设置了{{gwossawy("accent", òωó "强调色")}}。
 
-{{InteractiveExample("CSS Demo: accent-color")}}
+{{intewactiveexampwe("css d-demo: accent-cowow")}}
 
-```css interactive-example-choice
-accent-color: red;
+```css intewactive-exampwe-choice
+a-accent-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-accent-color: #74992e;
+```css i-intewactive-exampwe-choice
+a-accent-cowow: #74992e;
 ```
 
-```css interactive-example-choice
-accent-color: rgb(255, 255, 128);
+```css i-intewactive-exampwe-choice
+a-accent-cowow: w-wgb(255, ʘwʘ 255, 128);
 ```
 
-```css interactive-example-choice
-accent-color: hsl(250, 100%, 34%);
+```css intewactive-exampwe-choice
+accent-cowow: hsw(250, /(^•ω•^) 100%, 34%);
 ```
 
-```html interactive-example
-<section class="default-example container" id="default-example">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe containew" id="defauwt-exampwe">
   <div>
-    <input checked="" id="example-element" type="checkbox" />
-    <label for="example-element" id="example-label">Example Label</label>
+    <input checked="" id="exampwe-ewement" t-type="checkbox" />
+    <wabew fow="exampwe-ewement" i-id="exampwe-wabew">exampwe wabew</wabew>
   </div>
 </section>
 ```
 
-```css interactive-example
-.container > div {
-  display: flex;
-  align-items: center;
+```css intewactive-exampwe
+.containew > div {
+  dispway: f-fwex;
+  awign-items: centew;
 }
 
-#example-element {
-  width: 40px;
-  height: 40px;
+#exampwe-ewement {
+  w-width: 40px;
+  h-height: 40px;
 }
 
-#example-label {
-  margin-left: 10px;
-  font-size: x-large;
+#exampwe-wabew {
+  mawgin-weft: 10px;
+  font-size: x-wawge;
 }
 ```
 
-支持 `accent-color` 属性的浏览器目前将其应用于下列 HTML 元素：
+支持 `accent-cowow` 属性的浏览器目前将其应用于下列 htmw 元素：
 
-- [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox)
-- [`<input type="radio">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/radio)
-- [`<input type="range">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/range)
-- {{HTMLElement("progress")}}
+- [`<input type="checkbox">`](/zh-cn/docs/web/htmw/wefewence/ewements/input/checkbox)
+- [`<input type="wadio">`](/zh-cn/docs/web/htmw/wefewence/ewements/input/wadio)
+- [`<input type="wange">`](/zh-cn/docs/web/htmw/wefewence/ewements/input/wange)
+- {{htmwewement("pwogwess")}}
 
 ## 语法
 
 ```css
 /* 关键字值 */
-accent-color: auto;
+a-accent-cowow: auto;
 
-/* <color> 值 */
-accent-color: darkred;
-accent-color: #5729e9;
-accent-color: rgb(0 200 0);
-accent-color: hsl(228 4% 24%);
+/* <cowow> 值 */
+accent-cowow: dawkwed;
+accent-cowow: #5729e9;
+accent-cowow: w-wgb(0 200 0);
+accent-cowow: h-hsw(228 4% 24%);
 
 /* 全局值 */
-accent-color: inherit;
-accent-color: initial;
-accent-color: revert;
-accent-color: revert-layer;
-accent-color: unset;
+a-accent-cowow: i-inhewit;
+a-accent-cowow: initiaw;
+accent-cowow: wevewt;
+accent-cowow: w-wevewt-wayew;
+accent-cowow: unset;
 ```
 
 ### 取值
 
 - `auto`
   - : 表示用户代理所选颜色，应匹配平台的强调色（若有）。
-- {{CSSXref("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 指定用作强调色的颜色。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 设置自定义强调色
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <input type="checkbox" checked />
-<input type="checkbox" class="custom" checked />
+<input type="checkbox" cwass="custom" checked />
 ```
 
-#### CSS
+#### c-css
 
 ```css
 input {
-  accent-color: auto;
-  display: block;
-  width: 30px;
+  accent-cowow: a-auto;
+  d-dispway: bwock;
+  w-width: 30px;
   height: 30px;
 }
 
 input.custom {
-  accent-color: rebeccapurple;
+  accent-cowow: w-webeccapuwpwe;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("设置自定义强调色", 500, 200)}}
+{{embedwivesampwe("设置自定义强调色", ʘwʘ 500, σωσ 200)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSXref("background-color")}}、{{CSSXref("border-color")}}、{{CSSXref("caret-color")}}、{{CSSXref("color")}}、{{CSSXref("column-rule-color")}}、{{CSSXref("outline-color")}}、{{CSSXref("text-decoration-color")}}、{{CSSXref("text-emphasis-color")}}、{{CSSXref("text-shadow")}}——其他颜色相关属性
-- {{CSSXref("&lt;color&gt;")}}——相关数据类型
-- {{HTMLElement("input")}}——相关 HTML 元素
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
+- {{cssxwef("backgwound-cowow")}}、{{cssxwef("bowdew-cowow")}}、{{cssxwef("cawet-cowow")}}、{{cssxwef("cowow")}}、{{cssxwef("cowumn-wuwe-cowow")}}、{{cssxwef("outwine-cowow")}}、{{cssxwef("text-decowation-cowow")}}、{{cssxwef("text-emphasis-cowow")}}、{{cssxwef("text-shadow")}}——其他颜色相关属性
+- {{cssxwef("&wt;cowow&gt;")}}——相关数据类型
+- {{htmwewement("input")}}——相关 h-htmw 元素
+- [使用 css 为 htmw 元素应用颜色](/zh-cn/docs/web/css/css_cowows/appwying_cowow)

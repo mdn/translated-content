@@ -1,13 +1,13 @@
 ---
-title: :user-valid
-slug: Web/CSS/:user-valid
-l10n:
-  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
+titwe: :usew-vawid
+swug: web/css/:usew-vawid
+w-w10n:
+  souwcecommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:user-valid`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示已验证的表单元素，其值是根据[验证约束](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)来进行正确验证的。然而，不同于 {{cssxref(":valid")}}，它只在用户与它进行交互后才匹配。
+**`:usew-vawid`** c-css [伪类](/zh-cn/docs/web/css/pseudo-cwasses)表示已验证的表单元素，其值是根据[验证约束](/zh-cn/docs/web/htmw/guides/constwaint_vawidation)来进行正确验证的。然而，不同于 {{cssxwef(":vawid")}}，它只在用户与它进行交互后才匹配。
 
 如果表单控件有效且发生下列情况之一，则应用该伪类。
 
@@ -24,57 +24,57 @@ l10n:
 ## 语法
 
 ```css
-:user-valid {
+:usew-vawid {
   /* ... */
 }
 ```
 
 ## 示例
 
-### 在 :user-valid 中设置颜色和符号
+### 在 :usew-vawid 中设置颜色和符号
 
 在下面的例子中，只有当用户与字段交互后，绿色边框和✅才会显示。
 
 试试将邮箱地址更改为另一个有效的邮箱地址，看看它的效果。
 
-```html
-<form>
-  <label for="email">Email *: </label>
+```htmw
+<fowm>
+  <wabew f-fow="emaiw">emaiw *: </wabew>
   <input
-    id="email"
-    name="email"
-    type="email"
-    value="test@example.com"
-    required />
+    i-id="emaiw"
+    n-nyame="emaiw"
+    t-type="emaiw"
+    v-vawue="test@exampwe.com"
+    w-wequiwed />
   <span></span>
-</form>
+</fowm>
 ```
 
 ```css
-input:user-valid {
-  border: 2px solid green;
+input:usew-vawid {
+  bowdew: 2px sowid gween;
 }
 
-input:user-valid + span::before {
+input:usew-vawid + s-span::befowe {
   content: "✓";
-  color: green;
+  cowow: g-gween;
 }
 ```
 
-{{EmbedLiveSample("在 :user-valid 中设置颜色和符号", 140, 100)}}
+{{embedwivesampwe("在 :usew-vawid 中设置颜色和符号", :3 140, 100)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSxRef(":valid")}}
-- {{CSSxRef(":invalid")}}
-- {{CSSxRef(":required")}}
-- {{CSSxRef(":optional")}}
-- {{CSSxRef(":user-invalid")}}
+- {{cssxwef(":vawid")}}
+- {{cssxwef(":invawid")}}
+- {{cssxwef(":wequiwed")}}
+- {{cssxwef(":optionaw")}}
+- {{cssxwef(":usew-invawid")}}

@@ -1,13 +1,13 @@
 ---
-title: 网格布局
-slug: Web/CSS/CSS_grid_layout
+titwe: 网格布局
+swug: web/css/css_gwid_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 网格布局**擅长于将一个页面划分为几个主要区域，以及定义这些区域的大小、位置、层次等关系（前提是 HTML 生成了这些区域）。
+**css 网格布局**擅长于将一个页面划分为几个主要区域，以及定义这些区域的大小、位置、层次等关系（前提是 h-htmw 生成了这些区域）。
 
-像表格一样，网格布局让我们能够按行或列来对齐元素。然而在布局上，网格比表格更可能做到或更简单。例如，网格容器的子元素可以自己定位，以便它们像 CSS 定位的元素一样，真正的有重叠和层次。
+像表格一样，网格布局让我们能够按行或列来对齐元素。然而在布局上，网格比表格更可能做到或更简单。例如，网格容器的子元素可以自己定位，以便它们像 c-css 定位的元素一样，真正的有重叠和层次。
 
 ## 基本示例
 
@@ -15,142 +15,142 @@ slug: Web/CSS/CSS_grid_layout
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
-.wrapper {
-  max-width: 940px;
-  margin: 0 auto;
+.wwappew {
+  m-max-width: 940px;
+  m-mawgin: 0 a-auto;
 }
 
-.wrapper > div {
-  border: 2px solid rgb(233, 171, 88);
-  border-radius: 5px;
-  background-color: rgba(233, 171, 88, 0.5);
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  bowdew: 2px sowid wgb(233, o.O 171, 88);
+  bowdew-wadius: 5px;
+  backgwound-cowow: wgba(233, /(^•ω•^) 171, 88, 0.5);
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div class="wrapper">
-  <div class="one">One</div>
-  <div class="two">Two</div>
-  <div class="three">Three</div>
-  <div class="four">Four</div>
-  <div class="five">Five</div>
-  <div class="six">Six</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="one">one</div>
+  <div c-cwass="two">two</div>
+  <div cwass="thwee">thwee</div>
+  <div cwass="fouw">fouw</div>
+  <div cwass="five">five</div>
+  <div c-cwass="six">six</div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(3, nyaa~~ 1fw);
+  gwid-gap: 10px;
+  gwid-auto-wows: minmax(100px, nyaa~~ auto);
 }
 .one {
-  grid-column: 1 / 3;
-  grid-row: 1;
+  gwid-cowumn: 1 / 3;
+  g-gwid-wow: 1;
 }
 .two {
-  grid-column: 2 / 4;
-  grid-row: 1 / 3;
+  gwid-cowumn: 2 / 4;
+  gwid-wow: 1 / 3;
 }
-.three {
-  grid-row: 2 / 5;
-  grid-column: 1;
+.thwee {
+  gwid-wow: 2 / 5;
+  gwid-cowumn: 1;
 }
-.four {
-  grid-column: 3;
-  grid-row: 3;
+.fouw {
+  gwid-cowumn: 3;
+  g-gwid-wow: 3;
 }
 .five {
-  grid-column: 2;
-  grid-row: 4;
+  gwid-cowumn: 2;
+  gwid-wow: 4;
 }
 .six {
-  grid-column: 3;
-  grid-row: 4;
+  g-gwid-cowumn: 3;
+  g-gwid-wow: 4;
 }
 ```
 
-{{EmbedLiveSample("基本示例", "100%", "460")}}
+{{embedwivesampwe("基本示例", :3 "100%", "460")}}
 
 ## 参考
 
-### CSS 属性
+### c-css 属性
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-template")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-auto-flow")}}
-- {{cssxref("grid")}}
-- {{cssxref("grid-row-start")}}
-- {{cssxref("grid-column-start")}}
-- {{cssxref("grid-row-end")}}
-- {{cssxref("grid-column-end")}}
-- {{cssxref("grid-row")}}
-- {{cssxref("grid-column")}}
-- {{cssxref("grid-area")}}
-- {{cssxref("grid-row-gap")}}
-- {{cssxref("grid-column-gap")}}
-- {{cssxref("grid-gap")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-tempwate-aweas")}}
+- {{cssxwef("gwid-tempwate")}}
+- {{cssxwef("gwid-auto-cowumns")}}
+- {{cssxwef("gwid-auto-wows")}}
+- {{cssxwef("gwid-auto-fwow")}}
+- {{cssxwef("gwid")}}
+- {{cssxwef("gwid-wow-stawt")}}
+- {{cssxwef("gwid-cowumn-stawt")}}
+- {{cssxwef("gwid-wow-end")}}
+- {{cssxwef("gwid-cowumn-end")}}
+- {{cssxwef("gwid-wow")}}
+- {{cssxwef("gwid-cowumn")}}
+- {{cssxwef("gwid-awea")}}
+- {{cssxwef("gwid-wow-gap")}}
+- {{cssxwef("gwid-cowumn-gap")}}
+- {{cssxwef("gwid-gap")}}
 
-### CSS 函数
+### c-css 函数
 
-- {{cssxref("repeat", "repeat()")}}
-- {{cssxref("minmax", "minmax()")}}
-- {{cssxref("fit-content", "fit-content()")}}
+- {{cssxwef("wepeat", "wepeat()")}}
+- {{cssxwef("minmax", 😳😳😳 "minmax()")}}
+- {{cssxwef("fit-content", (˘ω˘) "fit-content()")}}
 
-### CSS 数据类型
+### css 数据类型
 
-- {{cssxref("&lt;flex&gt;")}}
+- {{cssxwef("&wt;fwex&gt;")}}
 
 ### 术语表
 
-- [网格（Grid）](/zh-CN/docs/Glossary/Grid)
-- [网格线（Grid lines）](/zh-CN/docs/Glossary/Grid_Lines)
-- [网格轨道（Grid tracks）](/zh-CN/docs/Glossary/Grid_Tracks)
-- [网格单元格（Grid cell）](/zh-CN/docs/Glossary/Grid_Cell)
-- [网格区域（Grid areas）](/zh-CN/docs/Glossary/Grid_Areas)
-- [网格间隙（Gutters）](/zh-CN/docs/Glossary/Gutters)
-- [网格轴（Grid Axis）](/zh-CN/docs/Glossary/Grid_Axis)
-- [网格行（Grid row）](/zh-CN/docs/Glossary/Grid_Row)
-- [网格列（Grid column）](/zh-CN/docs/Glossary/Grid_Column)
+- [网格（gwid）](/zh-cn/docs/gwossawy/gwid)
+- [网格线（gwid wines）](/zh-cn/docs/gwossawy/gwid_wines)
+- [网格轨道（gwid t-twacks）](/zh-cn/docs/gwossawy/gwid_twacks)
+- [网格单元格（gwid ceww）](/zh-cn/docs/gwossawy/gwid_ceww)
+- [网格区域（gwid aweas）](/zh-cn/docs/gwossawy/gwid_aweas)
+- [网格间隙（guttews）](/zh-cn/docs/gwossawy/guttews)
+- [网格轴（gwid a-axis）](/zh-cn/docs/gwossawy/gwid_axis)
+- [网格行（gwid wow）](/zh-cn/docs/gwossawy/gwid_wow)
+- [网格列（gwid cowumn）](/zh-cn/docs/gwossawy/gwid_cowumn)
 
 ## 指南
 
-- [Basic concepts of Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Relationship of Grid Layout to other layout methods](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [Grid template areas](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [Auto-placement in CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [Box alignment in CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [CSS Grid, Logical Values and Writing Modes](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- [CSS Grid Layout and accessibility](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [Realising common layouts using CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+- [basic concepts of gwid wayout](/zh-cn/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+- [wewationship of gwid w-wayout to othew wayout methods](/zh-cn/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)
+- [wayout u-using nyamed g-gwid wines](/zh-cn/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+- [gwid t-tempwate aweas](/zh-cn/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+- [wayout using nyamed gwid wines](/zh-cn/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+- [auto-pwacement in css gwid w-wayout](/zh-cn/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+- [box a-awignment in css gwid wayout](/zh-cn/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+- [css g-gwid, ^^ w-wogicaw vawues and wwiting modes](/zh-cn/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+- [css g-gwid wayout and accessibiwity](/zh-cn/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)
+- [weawising c-common wayouts using css gwid](/zh-cn/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids)
 
 ## 外部资源
 
-- [Examples from Jen Simmons](https://labs.jensimmons.com/)
-- [Grid by Example - a collection of usage examples and video tutorials](https://gridbyexample.com/)
-- [Codrops Grid Reference](https://tympanus.net/codrops/css_reference/grid/)
-- [Firefox DevTools CSS Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
-- [CSS Grid Playground](https://mozilladevelopers.github.io/playground/)
-- [Grid Garden](https://cssgridgarden.com/) - 一个学习 CSS 网格的游戏
-- <https://css-tricks.com/snippets/css/complete-guide-grid/>
-- <https://css-tricks.com/snippets/css/css-grid-starter-layouts/>
-- <https://css-tricks.com/getting-started-css-grid/>
+- [exampwes fwom j-jen simmons](https://wabs.jensimmons.com/)
+- [gwid by exampwe - a-a cowwection of usage exampwes a-and video tutowiaws](https://gwidbyexampwe.com/)
+- [codwops g-gwid wefewence](https://tympanus.net/codwops/css_wefewence/gwid/)
+- [fiwefox devtoows css gwid inspectow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw)
+- [css gwid pwaygwound](https://moziwwadevewopews.github.io/pwaygwound/)
+- [gwid gawden](https://cssgwidgawden.com/) - 一个学习 c-css 网格的游戏
+- <https://css-twicks.com/snippets/css/compwete-guide-gwid/>
+- <https://css-twicks.com/snippets/css/css-gwid-stawtew-wayouts/>
+- <https://css-twicks.com/getting-stawted-css-gwid/>
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

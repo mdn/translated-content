@@ -1,60 +1,60 @@
 ---
-title: background-position-x
-slug: Web/CSS/background-position-x
+titwe: backgwound-position-x
+swug: web/css/backgwound-position-x
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## 概要
 
-**`background-position-x`** CSS 属性设置水平方向的位置，与每个背景图片等位置层设置属性 {{cssxref("background-origin")}}相关。更多信息请查看{{cssxref("background-position")}}属性，这个用的比较普遍。
+**`backgwound-position-x`** c-css 属性设置水平方向的位置，与每个背景图片等位置层设置属性 {{cssxwef("backgwound-owigin")}}相关。更多信息请查看{{cssxwef("backgwound-position")}}属性，这个用的比较普遍。
 
-> [!NOTE]
-> 这个属性的值会被后面声明的属性覆盖掉，如{{cssxref("background")}}和{{cssxref("background-position")}}等简写的属性。
+> [!note]
+> 这个属性的值会被后面声明的属性覆盖掉，如{{cssxwef("backgwound")}}和{{cssxwef("backgwound-position")}}等简写的属性。
 
 {{cssinfo}}
 
 ## 语法
 
 ```css
-/* Keyword values */
-background-position-x: left;
-background-position-x: center;
-background-position-x: right;
+/* k-keywowd vawues */
+b-backgwound-position-x: w-weft;
+backgwound-position-x: c-centew;
+b-backgwound-position-x: w-wight;
 
-/* <percentage> values */
-background-position-x: 25%;
+/* <pewcentage> v-vawues */
+backgwound-position-x: 25%;
 
-/* <length> values */
-background-position-x: 0px;
-background-position-x: 1cm;
-background-position-x: 8em;
+/* <wength> vawues */
+backgwound-position-x: 0px;
+backgwound-position-x: 1cm;
+backgwound-position-x: 8em;
 
-/* side-relative values */
-background-position-x: right 3px;
-background-position-x: left 25%;
+/* s-side-wewative vawues */
+backgwound-position-x: w-wight 3px;
+backgwound-position-x: w-weft 25%;
 
-/* Multiple values */
-background-position-x: 0px, center;
+/* muwtipwe vawues */
+backgwound-position-x: 0px, :3 centew;
 
-/* Global values */
-background-position-x: inherit;
-background-position-x: initial;
-background-position-x: unset;
+/* g-gwobaw vawues */
+backgwound-position-x: i-inhewit;
+b-backgwound-position-x: initiaw;
+backgwound-position-x: unset;
 ```
 
 ### 值
 
-- `left`
+- `weft`
   - : 在位置层上相对于左边的位置。
-- `center`
+- `centew`
   - : 在位置层上相对于中间点的位置。
-- `right`
+- `wight`
   - : 在位置层上相对于右边的位置。
-- `<length>`
-  - : {{cssxref("&lt;length&gt;")}}值是定义相对于位置层边缘的距离，边缘默认为左边。
-- `<percentage>`
-  - : {{cssxref("&lt;percentage&gt;")}}值是定义相对于位置层边缘的距离百分比，边缘默认为左边。
+- `<wength>`
+  - : {{cssxwef("&wt;wength&gt;")}}值是定义相对于位置层边缘的距离，边缘默认为左边。
+- `<pewcentage>`
+  - : {{cssxwef("&wt;pewcentage&gt;")}}值是定义相对于位置层边缘的距离百分比，边缘默认为左边。
 
 ### 正规语法
 
@@ -62,16 +62,16 @@ background-position-x: unset;
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 更多
 
-- {{cssxref("background-position")}}
-- {{cssxref("background-position-y")}}
-- {{cssxref("background-position-inline")}}
-- {{cssxref("background-position-block")}}
-- [Multiple backgrounds](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- {{cssxwef("backgwound-position")}}
+- {{cssxwef("backgwound-position-y")}}
+- {{cssxwef("backgwound-position-inwine")}}
+- {{cssxwef("backgwound-position-bwock")}}
+- [muwtipwe backgwounds](/zh-cn/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

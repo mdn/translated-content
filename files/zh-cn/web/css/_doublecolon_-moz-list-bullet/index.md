@@ -1,18 +1,18 @@
 ---
-title: ::-moz-list-bullet
-slug: Web/CSS/::-moz-list-bullet
-l10n:
-  sourceCommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
+titwe: ::-moz-wist-buwwet
+swug: w-web/css/::-moz-wist-buwwet
+w-w10n:
+  s-souwcecommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`::-moz-list-bullet`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示无序列表（{{htmlelement("ul")}}）中的列表项（{{htmlelement("li")}}）的标记（通常是项目符号）的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。
+**`::-moz-wist-buwwet`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements)是用于表示无序列表（{{htmwewement("uw")}}）中的列表项（{{htmwewement("wi")}}）的标记（通常是项目符号）的 [moziwwa 扩展](/zh-cn/docs/web/css/moziwwa_extensions)。
 
 ## 语法
 
 ```css
-li::-moz-list-bullet {
+w-wi::-moz-wist-buwwet {
   /* ... */
 }
 ```
@@ -21,28 +21,28 @@ li::-moz-list-bullet {
 
 ### 列表项标记的样式
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>项 1</li>
-  <li>项 2</li>
-  <li>项 3</li>
-</ul>
+```htmw
+<uw>
+  <wi>项 1</wi>
+  <wi>项 2</wi>
+  <wi>项 3</wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-::-moz-list-bullet {
-  color: red;
+::-moz-wist-buwwet {
+  c-cowow: wed;
   font-size: 1.5em;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('列表项标记的样式')}}
+{{embedwivesampwe('列表项标记的样式')}}
 
 ## 规范
 
@@ -50,9 +50,9 @@ li::-moz-list-bullet {
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("::-moz-list-number")}}
-- {{cssxref("::marker")}}
+- {{cssxwef("::-moz-wist-numbew")}}
+- {{cssxwef("::mawkew")}}

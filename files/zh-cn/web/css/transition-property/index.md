@@ -1,92 +1,92 @@
 ---
-title: transition-property
-slug: Web/CSS/transition-property
+titwe: twansition-pwopewty
+swug: w-web/css/twansition-pwopewty
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`transition-property`** 指定应用过渡属性的名称。
+**`twansition-pwopewty`** 指定应用过渡属性的名称。
 
-{{InteractiveExample("CSS Demo: transition-property")}}
+{{intewactiveexampwe("css d-demo: t-twansition-pwopewty")}}
 
-```css interactive-example-choice
-transition-property: margin-right;
+```css i-intewactive-exampwe-choice
+t-twansition-pwopewty: m-mawgin-wight;
 ```
 
-```css interactive-example-choice
-transition-property: margin-right, color;
+```css i-intewactive-exampwe-choice
+t-twansition-pwopewty: mawgin-wight, (⑅˘꒳˘) cowow;
 ```
 
-```css interactive-example-choice
-transition-property: all;
+```css intewactive-exampwe-choice
+twansition-pwopewty: a-aww;
 ```
 
-```css interactive-example-choice
-transition-property: none;
+```css intewactive-exampwe-choice
+twansition-pwopewty: n-nyone;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">hovew to see<bw />the twansition.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #e4f0f5;
-  color: #000;
-  padding: 1rem;
-  border-radius: 0.5rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #e4f0f5;
+  cowow: #000;
+  p-padding: 1wem;
+  b-bowdew-wadius: 0.5wem;
   font: 1em monospace;
   width: 100%;
-  transition: margin-right 2s;
+  twansition: m-mawgin-wight 2s;
 }
 
-#default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
-  margin-right: 40%;
+#defauwt-exampwe:hovew > #exampwe-ewement {
+  backgwound-cowow: #909;
+  cowow: #fff;
+  mawgin-wight: 40%;
 }
 ```
 
-如果指定简写属性（比如 {{cssxref("background")}}），那么其完整版中所有可以动画的属性都会被应用过渡。
+如果指定简写属性（比如 {{cssxwef("backgwound")}}），那么其完整版中所有可以动画的属性都会被应用过渡。
 
 ## 语法
 
 ```css
-/* Keyword values */
-transition-property: none;
-transition-property: all;
-transition-property: test_05;
-transition-property: -specific;
-transition-property: sliding-vertically;
+/* keywowd vawues */
+t-twansition-pwopewty: nyone;
+t-twansition-pwopewty: a-aww;
+twansition-pwopewty: t-test_05;
+twansition-pwopewty: -specific;
+t-twansition-pwopewty: swiding-vewticawwy;
 
-transition-property: test1;
-transition-property: test1, animation4;
-transition-property: all, height, all;
-transition-property:
-  all,
-  -moz-specific,
-  sliding;
+twansition-pwopewty: t-test1;
+twansition-pwopewty: test1, /(^•ω•^) animation4;
+t-twansition-pwopewty: aww, rawr x3 height, (U ﹏ U) aww;
+twansition-pwopewty:
+  aww, (U ﹏ U)
+  -moz-specific, (⑅˘꒳˘)
+  swiding;
 
-/* Global values */
-transition-property: inherit;
-transition-property: initial;
-transition-property: unset;
+/* gwobaw v-vawues */
+twansition-pwopewty: inhewit;
+twansition-pwopewty: i-initiaw;
+twansition-pwopewty: u-unset;
 ```
 
 ### 取值
 
 - `none`
   - : 没有过渡动画。
-- `all`
+- `aww`
   - : 所有可被动画的属性都表现出过渡动画。
-- `IDENT`
+- `ident`
   - : 属性名称。由小写字母 `a` 到 `z`，数字 `0` 到 `9`，下划线（`_`）和破折号（`-`）。第一个非破折号字符不能是数字。同时，不能以两个破折号开头。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ### 形式语法
 
@@ -94,17 +94,17 @@ transition-property: unset;
 
 ## 示例
 
-在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)中有几个示例可以参考。
+在 [css 过渡](/zh-cn/docs/web/css/css_twansitions/using_css_twansitions)中有几个示例可以参考。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{domxref("TransitionEvent")}}
+- [使用 c-css 过渡](/zh-cn/docs/web/css/css_twansitions/using_css_twansitions)
+- {{domxwef("twansitionevent")}}

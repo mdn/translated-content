@@ -1,82 +1,82 @@
 ---
-title: column-span
-slug: Web/CSS/column-span
+titwe: cowumn-span
+swug: web/css/cowumn-span
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`column-span`** 的值被设置为 `all` 时，可以让一个元素跨越所有的列。
+[css](/zh-cn/docs/web/css) 属性 **`cowumn-span`** 的值被设置为 `aww` 时，可以让一个元素跨越所有的列。
 
-{{InteractiveExample("CSS Demo: column-span")}}
+{{intewactiveexampwe("css d-demo: c-cowumn-span")}}
 
-```css interactive-example-choice
-column-span: none;
+```css i-intewactive-exampwe-choice
+c-cowumn-span: n-nyone;
 ```
 
-```css interactive-example-choice
-column-span: all;
+```css i-intewactive-exampwe-choice
+c-cowumn-span: a-aww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="multicol-element">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="muwticow-ewement">
     <p>
-      London. Michaelmas term lately over, and the Lord Chancellor sitting in
-      Lincoln's Inn Hall.
+      wondon. /(^•ω•^) michaewmas t-tewm watewy ovew, ʘwʘ and the wowd chancewwow sitting i-in
+      wincown's inn haww. σωσ
     </p>
-    <div id="example-element">Spanner?</div>
+    <div i-id="exampwe-ewement">spannew?</div>
     <p>
-      Implacable November weather. As much mud in the streets as if the waters
-      had but newly retired from the face of the earth, and it would not be
-      wonderful to meet a Megalosaurus, forty feet long or so, waddling like an
-      elephantine lizard up Holborn Hill.
+      impwacabwe novembew weathew. OwO as much mud in t-the stweets as if the watews
+      h-had but nyewwy w-wetiwed fwom the face of the eawth, 😳😳😳 and it wouwd nyot be
+      wondewfuw to meet a-a megawosauwus, 😳😳😳 fowty feet wong ow so, o.O waddwing wike an
+      ewephantine wizawd u-up howbown hiww. ( ͡o ω ͡o )
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.multicol-element {
-  width: 100%;
-  text-align: left;
-  column-count: 3;
+```css intewactive-exampwe
+.muwticow-ewement {
+  w-width: 100%;
+  t-text-awign: w-weft;
+  cowumn-count: 3;
 }
 
-.multicol-element p {
-  margin: 0;
+.muwticow-ewement p-p {
+  mawgin: 0;
 }
 
-#example-element {
-  background-color: rebeccapurple;
-  padding: 10px;
-  color: #fff;
+#exampwe-ewement {
+  backgwound-cowow: webeccapuwpwe;
+  p-padding: 10px;
+  cowow: #fff;
 }
 ```
 
 ```css
 /* 关键字值 */
-column-span: none;
-column-span: all;
+cowumn-span: nyone;
+c-cowumn-span: aww;
 
 /* 全局值 */
-column-span: inherit;
-column-span: initial;
-column-span: revert;
-column-span: revert-layer;
-column-span: unset;
+cowumn-span: inhewit;
+cowumn-span: initiaw;
+cowumn-span: wevewt;
+cowumn-span: w-wevewt-wayew;
+cowumn-span: unset;
 ```
 
-一个跨越多列的元素被称为**跨越元素**（spanning element）。
+一个跨越多列的元素被称为**跨越元素**（spanning e-ewement）。
 
 ## 语法
 
-`column-span` 属性可以被指定为下面列出的关键字值之一。
+`cowumn-span` 属性可以被指定为下面列出的关键字值之一。
 
 ### 取值
 
 - `none`
   - : 元素不跨多个列。
-- `all`
+- `aww`
   - : 元素横跨所有列。元素出现之前，出现在元素之前的正常流中的内容在所有列之间自动平衡。该元素建立一个新的区块格式化上下文。
 
 ## 形式定义
@@ -93,44 +93,44 @@ column-span: unset;
 
 在该示例中，标题跨越了文章中的所有列。
 
-#### HTML
+#### h-htmw
 
-```html
-<article>
+```htmw
+<awticwe>
   <h2>这是一个跨越了所有的列的标题</h2>
   <p>h2 元素应该跨越所有列。文本的其余内容应该分布在各列中。</p>
-  <p>这是一些使用 CSS `columns` 属性分成三列的文本。文本在各列中均匀分布。</p>
-  <p>这是一些使用 CSS `columns` 属性分成三列的文本。文本在各列中均匀分布。</p>
-  <p>这是一些使用 CSS `columns` 属性分成三列的文本。文本在各列中均匀分布。</p>
-  <p>这是一些使用 CSS `columns` 属性分成三列的文本。文本在各列中均匀分布。</p>
-</article>
+  <p>这是一些使用 c-css `cowumns` 属性分成三列的文本。文本在各列中均匀分布。</p>
+  <p>这是一些使用 css `cowumns` 属性分成三列的文本。文本在各列中均匀分布。</p>
+  <p>这是一些使用 css `cowumns` 属性分成三列的文本。文本在各列中均匀分布。</p>
+  <p>这是一些使用 css `cowumns` 属性分成三列的文本。文本在各列中均匀分布。</p>
+</awticwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-article {
-  columns: 3;
+a-awticwe {
+  cowumns: 3;
 }
 
-h2 {
-  column-span: all;
+h-h2 {
+  cowumn-span: a-aww;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('使标题跨越列', 'auto', 260)}}
+{{embedwivesampwe('使标题跨越列', (U ﹏ U) 'auto', 260)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [行级元素](/zh-CN/docs/Glossary/Inline-level_content)
-- {{domxref("HTMLSpanElement")}}
+- [行级元素](/zh-cn/docs/gwossawy/inwine-wevew_content)
+- {{domxwef("htmwspanewement")}}

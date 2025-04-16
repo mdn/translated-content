@@ -1,95 +1,95 @@
 ---
-title: margin-top
-slug: Web/CSS/margin-top
+titwe: mawgin-top
+swug: web/css/mawgin-top
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`margin-top`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置元素的顶部外边距[外边距区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#外边距区域)。正值使它离相邻元素更远，而负值使它更靠近相邻元素。
+**`mawgin-top`** [css](/zh-cn/docs/web/css) 属性用于设置元素的顶部外边距[外边距区域](/zh-cn/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#外边距区域)。正值使它离相邻元素更远，而负值使它更靠近相邻元素。
 
-{{InteractiveExample("CSS Demo: margin-top")}}
+{{intewactiveexampwe("css d-demo: mawgin-top")}}
 
-```css interactive-example-choice
-margin-top: 1em;
+```css i-intewactive-exampwe-choice
+m-mawgin-top: 1em;
 ```
 
-```css interactive-example-choice
-margin-top: 10%;
+```css i-intewactive-exampwe-choice
+m-mawgin-top: 10%;
 ```
 
-```css interactive-example-choice
-margin-top: 10px;
+```css i-intewactive-exampwe-choice
+m-mawgin-top: 10px;
 ```
 
-```css interactive-example-choice
-margin-top: 0;
+```css i-intewactive-exampwe-choice
+mawgin-top: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row"></div>
-    <div class="row transition-all" id="example-element"></div>
-    <div class="row"></div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="containew">
+    <div cwass="wow"></div>
+    <div c-cwass="wow twansition-aww" id="exampwe-ewement"></div>
+    <div cwass="wow"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css i-intewactive-exampwe
+#containew {
   width: 300px;
-  height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+  h-height: 200px;
+  dispway: fwex;
+  awign-content: fwex-stawt;
+  f-fwex-diwection: cowumn;
+  j-justify-content: f-fwex-stawt;
 }
 
-.row {
+.wow {
   height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  flex-shrink: 0;
+  dispway: inwine-bwock;
+  bowdew: sowid #ce7777 10px;
+  b-backgwound-cowow: #2b3a55;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  bowdew: sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
 }
 ```
 
-此属性对于*不*[_可替换_](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)的内联元素没有效果，比如 {{HTMLElement("span")}} 或 {{HTMLElement("code")}}。
+此属性对于*不*[_可替换_](/zh-cn/docs/web/css/css_images/wepwaced_ewement_pwopewties)的内联元素没有效果，比如 {{htmwewement("span")}} 或 {{htmwewement("code")}}。
 
 ## 语法
 
 ```css
-/* <length> 值 */
-margin-top: 10px; /* 绝对长度 */
-margin-top: 1em; /* 相对与文本的大小 */
-margin-top: 5%; /* 相对于最近的块容器的宽度 */
+/* <wength> 值 */
+mawgin-top: 10px; /* 绝对长度 */
+mawgin-top: 1em; /* 相对与文本的大小 */
+m-mawgin-top: 5%; /* 相对于最近的块容器的宽度 */
 
 /* 关键字值 */
-margin-top: auto;
+mawgin-top: a-auto;
 
 /* 全局关键字值 */
-margin-top: inherit;
-margin-top: initial;
-margin-top: revert;
-margin-top: revert-layer;
-margin-top: unset;
+m-mawgin-top: i-inhewit;
+mawgin-top: i-initiaw;
+mawgin-top: wevewt;
+mawgin-top: w-wevewt-wayew;
+mawgin-top: unset;
 ```
 
-`margin-top` 属性可以用关键字 `auto`、`<length>` 或 `<percentage>` 来设置。其值可以是正值、负值或零。
+`mawgin-top` 属性可以用关键字 `auto`、`<wength>` 或 `<pewcentage>` 来设置。其值可以是正值、负值或零。
 
 ### 值
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 设置固定边距大小。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 相对于[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的内联尺寸（对于竖排语言则是*宽度*，这由 {{cssxref("writing-mode")}} 定义）的百分比边距大小。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 相对于[包含块](/zh-cn/docs/web/css/css_dispway/containing_bwock)的内联尺寸（对于竖排语言则是*宽度*，这由 {{cssxwef("wwiting-mode")}} 定义）的百分比边距大小。
 - `auto`
-  - : 浏览器选择一个合适的值来使用。参见 {{cssxref("margin")}}。
+  - : 浏览器选择一个合适的值来使用。参见 {{cssxwef("mawgin")}}。
 
 ### 形式语法
 
@@ -101,28 +101,28 @@ margin-top: unset;
 
 ```css
 .content {
-  margin-top: 5%;
+  mawgin-top: 5%;
 }
 .sidebox {
-  margin-top: 10px;
+  m-mawgin-top: 10px;
 }
-.logo {
-  margin-top: -5px;
+.wogo {
+  mawgin-top: -5px;
 }
-#footer {
-  margin-top: 1em;
+#footew {
+  mawgin-top: 1em;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("margin-right")}}、{{cssxref("margin-bottom")}}、{{cssxref("margin-left")}}，以及 {{cssxref("margin")}} 简写属性
-- 映射的逻辑属性：{{cssxref("margin-block-start")}}、{{cssxref("margin-block-end")}}、{{cssxref("margin-inline-start")}}、{{cssxref("margin-inline-end")}}，以及 {{cssxref("margin-block")}} 和 {{cssxref("margin-inline")}} 简写属性
+- {{cssxwef("mawgin-wight")}}、{{cssxwef("mawgin-bottom")}}、{{cssxwef("mawgin-weft")}}，以及 {{cssxwef("mawgin")}} 简写属性
+- 映射的逻辑属性：{{cssxwef("mawgin-bwock-stawt")}}、{{cssxwef("mawgin-bwock-end")}}、{{cssxwef("mawgin-inwine-stawt")}}、{{cssxwef("mawgin-inwine-end")}}，以及 {{cssxwef("mawgin-bwock")}} 和 {{cssxwef("mawgin-inwine")}} 简写属性

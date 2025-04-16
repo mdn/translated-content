@@ -1,86 +1,86 @@
 ---
-title: row-gap
-slug: Web/CSS/row-gap
-l10n:
-  sourceCommit: 353711e2f11b92232b532c82b10de2afca75f648
+titwe: wow-gap
+swug: web/css/wow-gap
+w-w10n:
+  s-souwcecommit: 353711e2f11b92232b532c82b10de2afca75f648
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`row-gap`** 该 [CSS](/zh-CN/docs/Web/CSS) 属性用来设置行元素之间的间隙（{{glossary("gutters","gutter")}}）大小。
+**`wow-gap`** 该 [css](/zh-cn/docs/web/css) 属性用来设置行元素之间的间隙（{{gwossawy("guttews","guttew")}}）大小。
 
-规范的早期版本将此属性命名为 `grid-row-gap`，为了保持与旧网站的兼容性，浏览器仍然会将 `grid-row-gap` 视为 `row-gap` 的别名。
+规范的早期版本将此属性命名为 `gwid-wow-gap`，为了保持与旧网站的兼容性，浏览器仍然会将 `gwid-wow-gap` 视为 `wow-gap` 的别名。
 
-{{InteractiveExample("CSS Demo: row-gap")}}
+{{intewactiveexampwe("css d-demo: wow-gap")}}
 
-```css interactive-example-choice
-row-gap: 0;
+```css i-intewactive-exampwe-choice
+w-wow-gap: 0;
 ```
 
-```css interactive-example-choice
-row-gap: 1ch;
+```css i-intewactive-exampwe-choice
+w-wow-gap: 1ch;
 ```
 
-```css interactive-example-choice
-row-gap: 1em;
+```css i-intewactive-exampwe-choice
+wow-gap: 1em;
 ```
 
-```css interactive-example-choice
-row-gap: 20px;
+```css intewactive-exampwe-choice
+wow-gap: 20px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
   width: 200px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > d-div {
+  backgwound-cowow: wgba(0, /(^•ω•^) 0, 255, 0.2);
+  b-bowdew: 3px s-sowid bwue;
 }
 ```
 
 ## 语法
 
 ```css
-/* <length> 值 */
-row-gap: 20px;
-row-gap: 1em;
-row-gap: 3vmin;
-row-gap: 0.5cm;
+/* <wength> 值 */
+wow-gap: 20px;
+wow-gap: 1em;
+wow-gap: 3vmin;
+wow-gap: 0.5cm;
 
-/* <percentage> 值 */
-row-gap: 10%;
+/* <pewcentage> 值 */
+w-wow-gap: 10%;
 
 /* 全局值 */
-row-gap: inherit;
-row-gap: initial;
-row-gap: revert;
-row-gap: revert-layer;
-row-gap: unset;
+wow-gap: inhewit;
+wow-gap: initiaw;
+wow-gap: wevewt;
+wow-gap: wevewt-wayew;
+w-wow-gap: unset;
 ```
 
 ### 值
 
-- `<length-percentage>`
-  - : 表示行之间的间隔宽度。{{cssxref("&lt;percentage&gt;")}} 表示相对栅格容器的百分比。
+- `<wength-pewcentage>`
+  - : 表示行之间的间隔宽度。{{cssxwef("&wt;pewcentage&gt;")}} 表示相对栅格容器的百分比。
 
 ## 形式定义
 
@@ -94,10 +94,10 @@ row-gap: unset;
 
 ### 弹性布局
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="flexbox">
+```htmw
+<div i-id="fwexbox">
   <div></div>
   <div></div>
   <div></div>
@@ -107,20 +107,20 @@ row-gap: unset;
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#flexbox {
-  display: flex;
-  flex-wrap: wrap;
+#fwexbox {
+  d-dispway: fwex;
+  fwex-wwap: wwap;
   width: 300px;
-  row-gap: 20px;
+  w-wow-gap: 20px;
 }
 
-#flexbox > div {
-  border: 1px solid green;
-  background-color: lime;
-  flex: 1 1 auto;
+#fwexbox > div {
+  bowdew: 1px sowid gween;
+  b-backgwound-cowow: wime;
+  fwex: 1 1 auto;
   width: 100px;
   height: 50px;
 }
@@ -128,14 +128,14 @@ row-gap: unset;
 
 #### 结果
 
-{{EmbedLiveSample('弹性布局', "auto", "120px")}}
+{{embedwivesampwe('弹性布局', ʘwʘ "auto", "120px")}}
 
 ### 网格布局
 
-#### HTML
+#### htmw
 
-```html
-<div id="grid">
+```htmw
+<div i-id="gwid">
   <div></div>
   <div></div>
   <div></div>
@@ -145,36 +145,36 @@ row-gap: unset;
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-#grid {
-  display: grid;
+#gwid {
+  d-dispway: g-gwid;
   height: 200px;
-  grid-template-columns: 150px 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  row-gap: 20px;
+  g-gwid-tempwate-cowumns: 150px 1fw;
+  gwid-tempwate-wows: wepeat(3, σωσ 1fw);
+  wow-gap: 20px;
 }
 
-#grid > div {
-  border: 1px solid green;
-  background-color: lime;
+#gwid > d-div {
+  bowdew: 1px s-sowid gween;
+  backgwound-cowow: w-wime;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('网格布局', 'auto', 120)}}
+{{embedwivesampwe('网格布局', OwO 'auto', 😳😳😳 120)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关 CSS 属性：{{cssxref("column-gap")}}、{{cssxref("gap")}}
-- 网格布局指南：_[网格布局基本概念——网格间距](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#网格间距)_
+- 相关 c-css 属性：{{cssxwef("cowumn-gap")}}、{{cssxwef("gap")}}
+- 网格布局指南：_[网格布局基本概念——网格间距](/zh-cn/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#网格间距)_

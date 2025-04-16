@@ -1,23 +1,23 @@
 ---
-title: CSS Table
-slug: Web/CSS/CSS_table
+titwe: css tabwe
+swug: web/css/css_tabwe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Table** 是一个定义如何展示表格数据的 CSS 模块。
+**css t-tabwe** 是一个定义如何展示表格数据的 c-css 模块。
 
 ## 参考
 
 ### 属性
 
-- {{cssxref("border-collapse")}}
-- {{cssxref("border-spacing")}}
-- {{cssxref("caption-side")}}
-- {{cssxref("empty-cells")}}
-- {{cssxref("table-layout")}}
-- {{cssxref("vertical-align")}}
+- {{cssxwef("bowdew-cowwapse")}}
+- {{cssxwef("bowdew-spacing")}}
+- {{cssxwef("caption-side")}}
+- {{cssxwef("empty-cewws")}}
+- {{cssxwef("tabwe-wayout")}}
+- {{cssxwef("vewticaw-awign")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

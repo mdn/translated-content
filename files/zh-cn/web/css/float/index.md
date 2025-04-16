@@ -1,118 +1,118 @@
 ---
-title: float
-slug: Web/CSS/float
+titwe: fwoat
+swug: web/css/fwoat
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`float` CSS 属性指定一个元素应沿其容器的左侧或右侧放置，允许文本和内联元素环绕它。该元素从网页的正常流动（文档流）中移除，但是仍然保持部分的流动性（与[绝对定位](/zh-CN/docs/Web/CSS/position#absolute_positioning)相反）。
+`fwoat` c-css 属性指定一个元素应沿其容器的左侧或右侧放置，允许文本和内联元素环绕它。该元素从网页的正常流动（文档流）中移除，但是仍然保持部分的流动性（与[绝对定位](/zh-cn/docs/web/css/position#absowute_positioning)相反）。
 
-{{InteractiveExample("CSS Demo: float")}}
+{{intewactiveexampwe("css d-demo: fwoat")}}
 
-```css interactive-example-choice
-float: none;
+```css i-intewactive-exampwe-choice
+f-fwoat: n-nyone;
 ```
 
-```css interactive-example-choice
-float: left;
+```css i-intewactive-exampwe-choice
+f-fwoat: weft;
 ```
 
-```css interactive-example-choice
-float: right;
+```css i-intewactive-exampwe-choice
+fwoat: wight;
 ```
 
-```css interactive-example-choice
-float: inline-start;
+```css intewactive-exampwe-choice
+fwoat: inwine-stawt;
 ```
 
-```css interactive-example-choice
-float: inline-end;
+```css intewactive-exampwe-choice
+f-fwoat: inwine-end;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">Float me</div>
-    As much mud in the streets as if the waters had but newly retired from the
-    face of the earth, and it would not be wonderful to meet a Megalosaurus,
-    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">fwoat me</div>
+    as much m-mud in the stweets as if the w-watews had but nyewwy w-wetiwed fwom the
+    face of the eawth, (✿oωo) and it wouwd nyot be wondewfuw to m-meet a megawosauwus, ʘwʘ
+    fowty feet wong ow so, (ˆ ﻌ ˆ)♡ waddwing wike an ewephantine wizawd u-up howbown hiww. 😳😳😳
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
-  padding: 0.75em;
-  text-align: left;
-  width: 80%;
-  line-height: normal;
+```css intewactive-exampwe
+.exampwe-containew {
+  b-bowdew: 1px sowid #c5c5c5;
+  p-padding: 0.75em;
+  t-text-awign: weft;
+  w-width: 80%;
+  wine-height: nyowmaw;
 }
 
-#example-element {
-  border: solid 10px #efac09;
-  background-color: #040d46;
-  color: white;
+#exampwe-ewement {
+  bowdew: sowid 10px #efac09;
+  b-backgwound-cowow: #040d46;
+  cowow: white;
   padding: 1em;
-  width: 40%;
+  w-width: 40%;
 }
 ```
 
-**浮动元素**是 `float` 的计算值非 `none` 的元素。
+**浮动元素**是 `fwoat` 的计算值非 `none` 的元素。
 
-由于 `float` 意味着使用块布局，它在某些情况下会修改 {{cssxref("display")}} 值的计算值：
+由于 `fwoat` 意味着使用块布局，它在某些情况下会修改 {{cssxwef("dispway")}} 值的计算值：
 
 | 指定值               | 计算值      |
 | -------------------- | ----------- |
-| `inline`             | `block`     |
-| `inline-block`       | `block`     |
-| `inline-table`       | `table`     |
-| `table-row`          | `block`     |
-| `table-row-group`    | `block`     |
-| `table-column`       | `block`     |
-| `table-column-group` | `block`     |
-| `table-cell`         | `block`     |
-| `table-caption`      | `block`     |
-| `table-header-group` | `block`     |
-| `table-footer-group` | `block`     |
-| `inline-flex`        | `flex`      |
-| `inline-grid`        | `grid`      |
-| _other_              | _unchanged_ |
+| `inwine`             | `bwock`     |
+| `inwine-bwock`       | `bwock`     |
+| `inwine-tabwe`       | `tabwe`     |
+| `tabwe-wow`          | `bwock`     |
+| `tabwe-wow-gwoup`    | `bwock`     |
+| `tabwe-cowumn`       | `bwock`     |
+| `tabwe-cowumn-gwoup` | `bwock`     |
+| `tabwe-ceww`         | `bwock`     |
+| `tabwe-caption`      | `bwock`     |
+| `tabwe-headew-gwoup` | `bwock`     |
+| `tabwe-footew-gwoup` | `bwock`     |
+| `inwine-fwex`        | `fwex`      |
+| `inwine-gwid`        | `gwid`      |
+| _othew_              | _unchanged_ |
 
-> [!NOTE]
-> 如果要在 JavaScript 中把 `float` 属性当作 {{domxref("HTMLElement.style")}} 对象的一个成员来操作，那么在旧版本的浏览器中，你必须拼写成 `cssFloat`。另外还要注意到在 Internet Explorer 8 和更老的 IE 当中，要使用 `styleFloat` 属性。这是 DOM 驼峰命名和 CSS 所用的连字符分隔命名法对应关系中的一个特例（这是因为在 JavaScript 中“float”是一个保留字，因为同样的原因，“class”被改成了“className” 、`<label>` 的“for”被改成了“htmlFor”）。
+> [!note]
+> 如果要在 javascwipt 中把 `fwoat` 属性当作 {{domxwef("htmwewement.stywe")}} 对象的一个成员来操作，那么在旧版本的浏览器中，你必须拼写成 `cssfwoat`。另外还要注意到在 intewnet expwowew 8 和更老的 ie 当中，要使用 `stywefwoat` 属性。这是 dom 驼峰命名和 c-css 所用的连字符分隔命名法对应关系中的一个特例（这是因为在 javascwipt 中“fwoat”是一个保留字，因为同样的原因，“cwass”被改成了“cwassname” 、`<wabew>` 的“fow”被改成了“htmwfow”）。
 
 ## 语法
 
 ```css
-/* Keyword values */
-float: left;
-float: right;
-float: none;
-float: inline-start;
-float: inline-end;
+/* k-keywowd vawues */
+f-fwoat: weft;
+f-fwoat: wight;
+fwoat: nyone;
+fwoat: inwine-stawt;
+fwoat: inwine-end;
 
-/* Global values */
-float: inherit;
-float: initial;
-float: revert;
-float: unset;
+/* g-gwobaw v-vawues */
+fwoat: inhewit;
+fwoat: i-initiaw;
+fwoat: w-wevewt;
+fwoat: unset;
 ```
 
-`float` 属性的值被指定为单一的关键字，值从下面的值列表中选择。
+`fwoat` 属性的值被指定为单一的关键字，值从下面的值列表中选择。
 
 ### 值
 
-- `left`
+- `weft`
   - : 表明元素必须浮动在其所在的块容器左侧的关键字。
-- `right`
+- `wight`
   - : 表明元素必须浮动在其所在的块容器右侧的关键字。
 - `none`
   - : 表明元素不进行浮动的关键字。
-- `inline-start`
-  - : 关键字，表明元素必须浮动在其所在块容器的开始一侧，在 `ltr` 脚本中是左侧，在 `rtl` 脚本中是右侧。
-- `inline-end`
-  - : 关键字，表明元素必须浮动在其所在块容器的结束一侧，在 `ltr` 脚本中是右侧，在 `rtl` 脚本中是左侧。
+- `inwine-stawt`
+  - : 关键字，表明元素必须浮动在其所在块容器的开始一侧，在 `wtw` 脚本中是左侧，在 `wtw` 脚本中是右侧。
+- `inwine-end`
+  - : 关键字，表明元素必须浮动在其所在块容器的结束一侧，在 `wtw` 脚本中是右侧，在 `wtw` 脚本中是左侧。
 
 ## 形式定义
 
@@ -132,67 +132,67 @@ float: unset;
 
 浮动元素至少要与其最高的嵌套浮动子元素一样高。我们给父元素设置了 `width: 100%`，并将其设为浮动元素，以确保其高度足够包含其中的浮动子元素，并确保其宽度足以容纳这些元素，我们不必与其相邻的元素。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <section>
-  <div class="left">1</div>
-  <div class="left">2</div>
-  <div class="right">3</div>
+  <div cwass="weft">1</div>
+  <div cwass="weft">2</div>
+  <div c-cwass="wight">3</div>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique
-    sapien ac erat tincidunt, sit amet dignissim lectus vulputate. Donec id
-    iaculis velit. Aliquam vel malesuada erat. Praesent non magna ac massa
-    aliquet tincidunt vel in massa. Phasellus feugiat est vel leo finibus
-    congue.
+    wowem ipsum dowow sit amet, :3 c-consectetuw adipiscing ewit. OwO m-mowbi twistique
+    sapien ac ewat t-tincidunt, (U ﹏ U) sit a-amet dignissim wectus vuwputate. >w< donec id
+    iacuwis vewit. (U ﹏ U) awiquam vew mawesuada ewat. 😳 pwaesent non magna ac m-massa
+    awiquet t-tincidunt vew in massa. (ˆ ﻌ ˆ)♡ phasewwus f-feugiat est v-vew weo finibus
+    c-congue. 😳😳😳
   </p>
 </section>
 ```
 
-#### CSS
+#### css
 
 ```css
 section {
-  box-sizing: border-box;
-  border: 1px solid blue;
+  box-sizing: bowdew-box;
+  b-bowdew: 1px sowid bwue;
   width: 100%;
-  float: left;
+  fwoat: weft;
 }
 
 div {
-  margin: 5px;
-  width: 50px;
+  mawgin: 5px;
+  w-width: 50px;
   height: 150px;
 }
 
-.left {
-  float: left;
-  background: pink;
+.weft {
+  f-fwoat: weft;
+  b-backgwound: p-pink;
 }
 
-.right {
-  float: right;
-  background: cyan;
+.wight {
+  fwoat: wight;
+  b-backgwound: c-cyan;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('浮动元素是如何定位的','400','180')}}
+{{embedwivesampwe('浮动元素是如何定位的','400','180')}}
 
 ### 清除浮动
 
-有时，你可能想要强制元素移至任何浮动元素下方。比如说，你可能希望某个段落与浮动元素保持相邻的位置，但又希望这个段落从头开始强制独占一行。请参考 {{cssxref("clear")}} 中的示例。
+有时，你可能想要强制元素移至任何浮动元素下方。比如说，你可能希望某个段落与浮动元素保持相邻的位置，但又希望这个段落从头开始强制独占一行。请参考 {{cssxwef("cweaw")}} 中的示例。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
-- 使用 {{cssxref("clear")}} 强制元素移至浮动元素下方。
+- [区块格式化上下文](/zh-cn/docs/web/css/css_dispway/bwock_fowmatting_context)
+- 使用 {{cssxwef("cweaw")}} 强制元素移至浮动元素下方。

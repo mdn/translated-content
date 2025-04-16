@@ -1,86 +1,86 @@
 ---
-title: border-right-style
-slug: Web/CSS/border-right-style
+titwe: bowdew-wight-stywe
+swug: w-web/css/bowdew-wight-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-right-style`** 是 border 中的一个 [CSS](/zh-CN/docs/Web/CSS) 子属性，描述的是右边框的样式 {{cssxref("border")}}.
+**`bowdew-wight-stywe`** 是 b-bowdew 中的一个 [css](/zh-cn/docs/web/css) 子属性，描述的是右边框的样式 {{cssxwef("bowdew")}}. 😳😳😳
 
-{{InteractiveExample("CSS Demo: border-right-style")}}
+{{intewactiveexampwe("css d-demo: bowdew-wight-stywe")}}
 
-```css interactive-example-choice
-border-right-style: none;
+```css i-intewactive-exampwe-choice
+b-bowdew-wight-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-border-right-style: dotted;
+```css intewactive-exampwe-choice
+b-bowdew-wight-stywe: d-dotted;
 ```
 
-```css interactive-example-choice
-border-right-style: dashed;
+```css intewactive-exampwe-choice
+bowdew-wight-stywe: dashed;
 ```
 
-```css interactive-example-choice
-border-right-style: solid;
+```css intewactive-exampwe-choice
+b-bowdew-wight-stywe: sowid;
 ```
 
-```css interactive-example-choice
-border-right-style: groove;
+```css intewactive-exampwe-choice
+b-bowdew-wight-stywe: gwoove;
 ```
 
-```css interactive-example-choice
-border-right-style: inset;
+```css i-intewactive-exampwe-choice
+bowdew-wight-stywe: inset;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    t-this is a box with a bowdew awound it. :3
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  b-bowdew: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 
 body {
-  background-color: #fff;
+  b-backgwound-cowow: #fff;
 }
 ```
 
-> [!NOTE]
+> [!note]
 > 这个 css 没有定义不同样式的边界之间如何拼接。
 
-## Syntax
+## s-syntax
 
 ```css
 /* 可用的值 */
-border-right-style: none;
-border-right-style: hidden;
-border-right-style: dotted;
-border-right-style: dashed;
-border-right-style: solid;
-border-right-style: double;
-border-right-style: groove;
-border-right-style: ridge;
-border-right-style: inset;
-border-right-style: outset;
+b-bowdew-wight-stywe: n-nyone;
+b-bowdew-wight-stywe: hidden;
+bowdew-wight-stywe: dotted;
+bowdew-wight-stywe: dashed;
+b-bowdew-wight-stywe: sowid;
+bowdew-wight-stywe: d-doubwe;
+bowdew-wight-stywe: gwoove;
+bowdew-wight-stywe: widge;
+bowdew-wight-stywe: inset;
+bowdew-wight-stywe: o-outset;
 
 /* 全局可用的值 */
-border-right-style: inherit;
-border-right-style: initial;
-border-right-style: unset;
+bowdew-wight-stywe: i-inhewit;
+b-bowdew-wight-stywe: i-initiaw;
+bowdew-wight-stywe: unset;
 ```
 
-The `border-right-style` property is specified as a single keyword chosen from those available for the {{cssxref("border-style")}} property.
+the `bowdew-wight-stywe` p-pwopewty i-is specified as a singwe keywowd c-chosen fwom those a-avaiwabwe fow the {{cssxwef("bowdew-stywe")}} p-pwopewty. OwO
 
 ### 语法格式
 
@@ -88,90 +88,90 @@ The `border-right-style` property is specified as a single keyword chosen from t
 
 ## 示例
 
-#### HTML
+#### htmw
 
-```html
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td cwass="b1">none</td>
+    <td c-cwass="b2">hidden</td>
+    <td cwass="b3">dotted</td>
+    <td cwass="b4">dashed</td>
+  </tw>
+  <tw>
+    <td cwass="b5">sowid</td>
+    <td c-cwass="b6">doubwe</td>
+    <td cwass="b7">gwoove</td>
+    <td c-cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td cwass="b9">inset</td>
+    <td c-cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-/* Define look of the table */
-table {
-  border-width: 2px;
-  background-color: #52e385;
+/* define wook of the tabwe */
+tabwe {
+  bowdew-width: 2px;
+  backgwound-cowow: #52e385;
 }
-tr,
+tw, (U ﹏ U)
 td {
   padding: 3px;
 }
 
-/* border-right-style example classes */
+/* b-bowdew-wight-stywe e-exampwe cwasses */
 .b1 {
-  border-right-style: none;
+  bowdew-wight-stywe: nyone;
 }
 .b2 {
-  border-right-style: hidden;
+  b-bowdew-wight-stywe: h-hidden;
 }
 .b3 {
-  border-right-style: dotted;
+  b-bowdew-wight-stywe: dotted;
 }
 .b4 {
-  border-right-style: dashed;
+  bowdew-wight-stywe: dashed;
 }
 .b5 {
-  border-right-style: solid;
+  b-bowdew-wight-stywe: sowid;
 }
 .b6 {
-  border-right-style: double;
+  bowdew-wight-stywe: doubwe;
 }
 .b7 {
-  border-right-style: groove;
+  bowdew-wight-stywe: g-gwoove;
 }
 .b8 {
-  border-right-style: ridge;
+  bowdew-wight-stywe: w-widge;
 }
 .b9 {
-  border-right-style: inset;
+  b-bowdew-wight-stywe: i-inset;
 }
 .b10 {
-  border-right-style: outset;
+  bowdew-wight-stywe: o-outset;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('示例') }}
+{{ e-embedwivesampwe('示例') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- 其他样式相关边框属性：{{Cssxref("border-bottom-style")}}, {{Cssxref("border-left-style")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-style")}}.
-- 其他 bottom-border-related 属性：{{Cssxref("border-right")}}, {{Cssxref("border-right-color")}}, and {{Cssxref("border-right-width")}}.
+- 其他样式相关边框属性：{{cssxwef("bowdew-bottom-stywe")}}, {{cssxwef("bowdew-weft-stywe")}}, >w< {{cssxwef("bowdew-top-stywe")}}, (U ﹏ U) a-and {{cssxwef("bowdew-stywe")}}. 😳
+- 其他 b-bottom-bowdew-wewated 属性：{{cssxwef("bowdew-wight")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("bowdew-wight-cowow")}}, and {{cssxwef("bowdew-wight-width")}}. 😳😳😳

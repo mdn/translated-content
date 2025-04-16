@@ -1,59 +1,59 @@
 ---
-title: ::-webkit-progress-bar
-slug: Web/CSS/::-webkit-progress-bar
+titwe: ::-webkit-pwogwess-baw
+swug: web/css/::-webkit-pwogwess-baw
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
 ## 概述
 
-**`::-webkit-progress-bar`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 选择 {{HTMLElement("progress")}} 元素的未完成部分。 {{ cssxref("::-webkit-progress-value") }} 选择完成的部分。**`::-webkit-progress-bar`** 是{{cssxref("::-webkit-progress-inner-element")}} 伪元素的子元素，同时是 {{cssxref("::-webkit-progress-value")}} 伪元素的父元素。
+**`::-webkit-pwogwess-baw`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements) 选择 {{htmwewement("pwogwess")}} 元素的未完成部分。 {{ c-cssxwef("::-webkit-pwogwess-vawue") }} 选择完成的部分。**`::-webkit-pwogwess-baw`** 是{{cssxwef("::-webkit-pwogwess-innew-ewement")}} 伪元素的子元素，同时是 {{cssxwef("::-webkit-pwogwess-vawue")}} 伪元素的父元素。
 
-> [!NOTE]
-> 为了能让`::-webkit-progress-value`起作用，需要添加 CSS {{cssxref("-webkit-appearance")}} 至 `<progress>` 元素。
+> [!note]
+> 为了能让`::-webkit-pwogwess-vawue`起作用，需要添加 c-css {{cssxwef("-webkit-appeawance")}} 至 `<pwogwess>` 元素。
 
 ## 示例
 
-### CSS
+### c-css
 
 ```css
-progress {
-  -webkit-appearance: none;
+pwogwess {
+  -webkit-appeawance: n-nyone;
 }
 
-::-webkit-progress-bar {
-  background-color: orange;
+::-webkit-pwogwess-baw {
+  b-backgwound-cowow: o-owange;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<progress value="10" max="50"></progress>
+```htmw
+<pwogwess v-vawue="10" max="50"></pwogwess>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 200, 50)}}
+{{embedwivesampwe("示例", -.- 200, (ˆ ﻌ ˆ)♡ 50)}}
 
 应用了上述样式的进度条样式如下：
 
-![](progress-bar.png)
+![](pwogwess-baw.png)
 
 ## 规范
 
-没有规范。这是一个 WebKit/Blink 独有的规范。
+没有规范。这是一个 webkit/bwink 独有的规范。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- The pseudo-elements used by WebKit/Blink to style other parts of a {{HTMLElement("progress")}} element:
+- the pseudo-ewements used by webkit/bwink t-to stywe othew pawts of a {{htmwewement("pwogwess")}} ewement:
 
-  - {{ cssxref("::-webkit-progress-value") }}
-  - {{ cssxref("::-webkit-progress-inner-element") }}
+  - {{ c-cssxwef("::-webkit-pwogwess-vawue") }}
+  - {{ cssxwef("::-webkit-pwogwess-innew-ewement") }}
 
-- {{ cssxref("::-moz-progress-bar") }}
-- {{ cssxref("::-ms-fill") }}
+- {{ cssxwef("::-moz-pwogwess-baw") }}
+- {{ c-cssxwef("::-ms-fiww") }}

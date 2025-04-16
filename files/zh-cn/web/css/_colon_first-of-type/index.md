@@ -1,46 +1,46 @@
 ---
-title: :first-of-type
-slug: Web/CSS/:first-of-type
+titwe: :fiwst-of-type
+swug: web/css/:fiwst-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:first-of-type`** 表示一组兄弟元素中其类型的第一个元素。
+[css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses) **`:fiwst-of-type`** 表示一组兄弟元素中其类型的第一个元素。
 
-{{InteractiveExample("CSS Demo: :first-of-type", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :fiwst-of-type", /(^•ω•^) "tabbed-showtew")}}
 
-```css interactive-example
-dt {
-  font-weight: bold;
+```css i-intewactive-exampwe
+d-dt {
+  font-weight: b-bowd;
 }
 
 dd {
-  margin: 3px;
+  m-mawgin: 3px;
 }
 
-dd:first-of-type {
-  border: 2px solid orange;
+d-dd:fiwst-of-type {
+  b-bowdew: 2px s-sowid owange;
 }
 ```
 
-```html interactive-example
-<dl>
-  <dt>Vegetables:</dt>
-  <dd>1. Tomatoes</dd>
-  <dd>2. Cucumbers</dd>
-  <dd>3. Mushrooms</dd>
-  <dt>Fruits:</dt>
-  <dd>4. Apples</dd>
-  <dd>5. Mangos</dd>
-  <dd>6. Pears</dd>
-  <dd>7. Oranges</dd>
-</dl>
+```htmw intewactive-exampwe
+<dw>
+  <dt>vegetabwes:</dt>
+  <dd>1. rawr tomatoes</dd>
+  <dd>2. OwO cucumbews</dd>
+  <dd>3. (U ﹏ U) mushwooms</dd>
+  <dt>fwuits:</dt>
+  <dd>4. >_< a-appwes</dd>
+  <dd>5. rawr x3 mangos</dd>
+  <dd>6. mya peaws</dd>
+  <dd>7. nyaa~~ owanges</dd>
+</dw>
 ```
 
 ## 语法
 
 ```css
-:first-of-type {
+:fiwst-of-type {
   /* ... */
 }
 ```
@@ -49,66 +49,66 @@ dd:first-of-type {
 
 ### 装饰第一个段落
 
-#### HTML
+#### h-htmw
 
-```html
-<h2>Heading</h2>
-<p>Paragraph 1</p>
-<p>Paragraph 1</p>
+```htmw
+<h2>heading</h2>
+<p>pawagwaph 1</p>
+<p>pawagwaph 1</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:first-of-type {
-  color: red;
-  font-style: italic;
+p-p:fiwst-of-type {
+  cowow: wed;
+  font-stywe: itawic;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('装饰第一个段落')}}
+{{embedwivesampwe('装饰第一个段落')}}
 
 ### 嵌套元素
 
-下面这个例子展示了如何选中多层嵌套元素。注意当不存在简单选择器时，[通配符](/zh-CN/docs/Web/CSS/Universal_selectors)（`*`）是默认应用的。
+下面这个例子展示了如何选中多层嵌套元素。注意当不存在简单选择器时，[通配符](/zh-cn/docs/web/css/univewsaw_sewectows)（`*`）是默认应用的。
 
-#### HTML
+#### h-htmw
 
-```html
-<article>
-  <div>This `div` is first!</div>
-  <div>This <span>nested `span` is first</span>!</div>
+```htmw
+<awticwe>
+  <div>this `div` is fiwst!</div>
+  <div>this <span>nested `span` i-is fiwst</span>!</div>
   <div>
-    This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!
+    t-this <em>nested `em` is fiwst</em>, (⑅˘꒳˘) but this <em>nested `em` is wast</em>! rawr x3
   </div>
-  <div>This <span>nested `span` gets styled</span>!</div>
-  <p>This `p` qualifies!</p>
-  <div>This is the final `div`.</div>
-</article>
+  <div>this <span>nested `span` gets s-stywed</span>!</div>
+  <p>this `p` quawifies!</p>
+  <div>this is the finaw `div`.</div>
+</awticwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-article :first-of-type {
-  background-color: pink;
+awticwe :fiwst-of-type {
+  backgwound-cowow: p-pink;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('嵌套元素', 500)}}
+{{embedwivesampwe('嵌套元素', (✿oωo) 500)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{Cssxref(":first-child")}}, {{Cssxref(":last-of-type")}}, {{Cssxref(":nth-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}, (ˆ ﻌ ˆ)♡ {{cssxwef(":wast-of-type")}}, (˘ω˘) {{cssxwef(":nth-of-type")}}

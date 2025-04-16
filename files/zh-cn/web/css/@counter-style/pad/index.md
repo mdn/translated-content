@@ -1,24 +1,24 @@
 ---
-title: pad
-slug: Web/CSS/@counter-style/pad
+titwe: pad
+swug: web/css/@countew-stywe/pad
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`pad`**属性和自定义记数样式一起使用时，可以用来限定记数样式的最小长度。如果某个记数样式小于 pad 所指定的长度，那么会用 pad 指定的填充字符串来填充至指定长度。如果比 pad 所指定的长度长，则会正常显示。Pad 属性的第一个参数是最小长度，第二个参数是填充字符串。一个常见的用处是序号编号需要填充两位的时候，即需要编号"01","02","03",……, 而不仅仅是 1, 2, 3...
+**`pad`**属性和自定义记数样式一起使用时，可以用来限定记数样式的最小长度。如果某个记数样式小于 p-pad 所指定的长度，那么会用 p-pad 指定的填充字符串来填充至指定长度。如果比 pad 所指定的长度长，则会正常显示。pad 属性的第一个参数是最小长度，第二个参数是填充字符串。一个常见的用处是序号编号需要填充两位的时候，即需要编号"01","02","03",……, σωσ 而不仅仅是 1, >_< 2, 3...
 
 {{cssinfo}}
 
 ## 参数
 
 ```css
-pad: 3 "0";
+p-pad: 3 "0";
 ```
 
 ### 参数值
 
-- `<integer> && <symbol>`
-  - : `<integer>` 表示所有计数样式必须达到的最小长度 (必须是非负整数). 如果指定的最小长度没有达到，将会用`<symbol>`来填充直到最小长度。
+- `<integew> && <symbow>`
+  - : `<integew>` 表示所有计数样式必须达到的最小长度 (必须是非负整数). :3 如果指定的最小长度没有达到，将会用`<symbow>`来填充直到最小长度。
 
 ### 形式语法
 
@@ -26,45 +26,45 @@ pad: 3 "0";
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<ul class="list">
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
-</ul>
+```htmw
+<uw c-cwass="wist">
+  <wi>one</wi>
+  <wi>two</wi>
+  <wi>thwee</wi>
+  <wi>fouw</wi>
+  <wi>five</wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
-@counter-style pad-example {
-  system: numeric;
-  symbols: "0" "1" "2" "3" "4" "5";
+@countew-stywe p-pad-exampwe {
+  s-system: nyumewic;
+  symbows: "0" "1" "2" "3" "4" "5";
   pad: 2 "0";
 }
 
-.list {
-  list-style: pad-example;
+.wist {
+  wist-stywe: pad-exampwe;
 }
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('示例') }}
+{{ e-embedwivesampwe('示例') }}
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, 该功能符号创建匿名计数器样式 .
+- {{cssxwef("wist-stywe")}}, (U ﹏ U) {{cssxwef("wist-stywe-image")}}, -.- {{cssxwef("wist-stywe-position")}}
+- {{cssxwef("symbows", (ˆ ﻌ ˆ)♡ "symbows()")}}, (⑅˘꒳˘) 该功能符号创建匿名计数器样式 . (U ᵕ U❁)

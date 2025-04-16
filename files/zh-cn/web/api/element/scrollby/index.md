@@ -1,49 +1,49 @@
 ---
-title: Element.scrollBy()
-slug: Web/API/Element/scrollBy
+titwe: ewement.scwowwby()
+swug: w-web/api/ewement/scwowwby
 ---
 
-{{ APIRef() }}
+{{ a-apiwef() }}
 
-**`scrollBy()`** 方法是使得元素滚动一段特定距离的 {{domxref("Element")}} 接口。
+**`scwowwby()`** 方法是使得元素滚动一段特定距离的 {{domxwef("ewement")}} 接口。
 
-## Syntax
+## s-syntax
 
-```plain
-element.scrollBy(x-coord, y-coord);
-element.scrollBy(options)
+```pwain
+e-ewement.scwowwby(x-coowd, rawr y-y-coowd);
+ewement.scwowwby(options)
 ```
 
-### Parameters
+### p-pawametews
 
-- `x-coord` 是元素要在横轴上滚动的距离。
-- `y-coord` 是元素要在纵轴上滚动的距离。
+- `x-coowd` 是元素要在横轴上滚动的距离。
+- `y-coowd` 是元素要在纵轴上滚动的距离。
 
-\- or -
+\- o-ow -
 
-- `options` 是一个 {{domxref("ScrollToOptions")}} 字典。
+- `options` 是一个 {{domxwef("scwowwtooptions")}} 字典。
 
 ## 例子
 
 ```js
 // 让元素滚动
-element.scrollBy(300, 300);
+e-ewement.scwowwby(300, σωσ 300);
 ```
 
 使用 `options`:
 
 ```js
-element.scrollBy({
-  top: 100,
-  left: 100,
-  behavior: "smooth",
+ewement.scwowwby({
+  top: 100, σωσ
+  weft: 100,
+  behaviow: "smooth", >_<
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

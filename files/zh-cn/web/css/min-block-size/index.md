@@ -1,124 +1,124 @@
 ---
-title: min-block-size
-slug: Web/CSS/min-block-size
+titwe: min-bwock-size
+swug: web/css/min-bwock-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`min-block-size`** 根据元素的书写模式定义了元素区块的横向或纵向最小尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("min-width")}} 或 {{CSSXref("min-height")}} 属性。
+[css](/zh-cn/docs/web/css) 属性 **`min-bwock-size`** 根据元素的书写模式定义了元素区块的横向或纵向最小尺寸。根据 {{cssxwef("wwiting-mode")}} 的值，此属性对应于 {{cssxwef("min-width")}} 或 {{cssxwef("min-height")}} 属性。
 
-若为纵向书写模式，则 `min-block-size` 的值对应于元素的最小宽度；否则对应于元素的最小高度。与此相关的属性为 {{CSSXref("min-inline-size")}}，此属性定义了元素另一方向的尺度。
+若为纵向书写模式，则 `min-bwock-size` 的值对应于元素的最小宽度；否则对应于元素的最小高度。与此相关的属性为 {{cssxwef("min-inwine-size")}}，此属性定义了元素另一方向的尺度。
 
-{{InteractiveExample("CSS Demo: min-block-size")}}
+{{intewactiveexampwe("css d-demo: min-bwock-size")}}
 
-```css interactive-example-choice
-min-block-size: 150px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+m-min-bwock-size: 150px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-min-block-size: 150px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+m-min-bwock-size: 150px;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-min-block-size: 20px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+min-bwock-size: 20px;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-min-block-size: 15em;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+min-bwock-size: 15em;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the minimum block size. <br />If there is
-    more content than the minimum the box will grow in the block dimension as
-    needed by the content.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box whewe y-you can change t-the minimum bwock size. σωσ <bw />if thewe is
+    mowe content than the minimum the b-box wiww gwow in the bwock dimension as
+    nyeeded by the content. OwO
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: f-fwex;
+  fwex-diwection: c-cowumn;
+  backgwound-cowow: #5b6dcd;
+  j-justify-content: c-centew;
+  c-cowow: #ffffff;
 }
 ```
 
 ## 语法
 
 ```css
-/* <length> 值 */
-min-block-size: 100px;
-min-block-size: 5em;
+/* <wength> 值 */
+min-bwock-size: 100px;
+min-bwock-size: 5em;
 
-/* <percentage> 值 */
-min-block-size: 10%;
+/* <pewcentage> 值 */
+m-min-bwock-size: 10%;
 
 /* 关键词值 */
-min-block-size: max-content;
-min-block-size: min-content;
-min-block-size: fit-content(20em);
+min-bwock-size: max-content;
+m-min-bwock-size: min-content;
+min-bwock-size: fit-content(20em);
 
 /* 全局值 */
-min-block-size: inherit;
-min-block-size: initial;
-min-block-size: revert;
-min-block-size: revert-layer;
-min-block-size: unset;
+min-bwock-size: inhewit;
+m-min-bwock-size: initiaw;
+min-bwock-size: w-wevewt;
+m-min-bwock-size: w-wevewt-wayew;
+min-bwock-size: unset;
 ```
 
 ### 取值
 
-`min-block-size` 属性的取值与 {{CSSXref("min-width")}} 和 {{CSSXref("min-height")}} 属性相同。
+`min-bwock-size` 属性的取值与 {{cssxwef("min-width")}} 和 {{cssxwef("min-height")}} 属性相同。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 为竖排文本设置最小块向尺寸
 
-#### HTML
+#### htmw
 
-```html
-<p class="exampleText">示例文本</p>
+```htmw
+<p c-cwass="exampwetext">示例文本</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  min-block-size: 200px;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
+  b-backgwound-cowow: yewwow;
+  m-min-bwock-size: 200px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("为竖排文本设置最小块向尺寸")}}
+{{embedwivesampwe("为竖排文本设置最小块向尺寸")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 对应的实体属性：{{CSSXref("min-width")}} 和 {{CSSXref("min-height")}}
-- {{CSSXref("writing-mode")}}
+- 对应的实体属性：{{cssxwef("min-width")}} 和 {{cssxwef("min-height")}}
+- {{cssxwef("wwiting-mode")}}

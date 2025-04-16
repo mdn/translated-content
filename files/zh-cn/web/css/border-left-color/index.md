@@ -1,36 +1,36 @@
 ---
-title: border-left-color
-slug: Web/CSS/border-left-color
+titwe: bowdew-weft-cowow
+swug: w-web/css/bowdew-weft-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-left-color`** 属性设置元素的左边框颜色。值得注意的是，在大数情况下使用 {{cssxref("border-color")}} 或 {{cssxref("border-left")}} 更加方便和普遍。
+**`bowdew-weft-cowow`** 属性设置元素的左边框颜色。值得注意的是，在大数情况下使用 {{cssxwef("bowdew-cowow")}} 或 {{cssxwef("bowdew-weft")}} 更加方便和普遍。
 
 ```css
-/* <color> values */
-border-left-color: red;
-border-left-color: #ffbb00;
-border-left-color: rgb(255, 0, 0);
-border-left-color: hsla(100%, 50%, 25%, 0.75);
-border-left-color: currentColor;
-border-left-color: transparent;
+/* <cowow> v-vawues */
+bowdew-weft-cowow: w-wed;
+b-bowdew-weft-cowow: #ffbb00;
+bowdew-weft-cowow: w-wgb(255, (⑅˘꒳˘) 0, 0);
+b-bowdew-weft-cowow: h-hswa(100%, (///ˬ///✿) 50%, 😳😳😳 25%, 0.75);
+b-bowdew-weft-cowow: cuwwentcowow;
+bowdew-weft-cowow: twanspawent;
 
-/* Global values */
-border-left-color: inherit;
-border-left-color: initial;
-border-left-color: unset;
+/* gwobaw vawues */
+b-bowdew-weft-cowow: inhewit;
+bowdew-weft-cowow: i-initiaw;
+bowdew-weft-cowow: unset;
 ```
 
 {{cssinfo}}
 
 ## 语法
 
-`border-left-color` 属性取值为单个颜色值。
+`bowdew-weft-cowow` 属性取值为单个颜色值。
 
 ### 取值
 
-- {{cssxref("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 左边框的颜色。
 
 ### 形式语法
@@ -39,46 +39,46 @@ border-left-color: unset;
 
 ## 示例
 
-### 一个带边框的简单 div
+### 一个带边框的简单 d-div
 
-#### HTML
+#### htmw
 
-```html
-<div class="mybox">
+```htmw
+<div cwass="mybox">
   <p>
-    This is a box with a border around it. Note which side of the box is
-    <span class="redtext">red</span>.
+    this is a box w-with a bowdew awound it. 🥺 nyote w-which side of the b-box is
+    <span cwass="wedtext">wed</span>. mya
   </p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .mybox {
-  border: solid 0.3em gold;
-  border-left-color: red;
+  bowdew: sowid 0.3em gowd;
+  bowdew-weft-cowow: w-wed;
   width: auto;
 }
-.redtext {
-  color: red;
+.wedtext {
+  cowow: wed;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('一个带边框的简单 div')}}
+{{embedwivesampwe('一个带边框的简单 div')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, and {{Cssxref("border-color")}}.
-- The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-top-color")}}.
-- The other border-related CSS properties applying to the same border: {{cssxref("border-left-style")}} and {{cssxref("border-left-width")}}.
+- the bowdew-wewated c-css showthand pwopewties: {{cssxwef("bowdew")}}, 🥺 {{cssxwef("bowdew-weft")}}, >_< a-and {{cssxwef("bowdew-cowow")}}. >_<
+- t-the cowow-wewated c-css pwopewties f-fow the othew bowdews: {{cssxwef("bowdew-wight-cowow")}}, (⑅˘꒳˘) {{cssxwef("bowdew-bottom-cowow")}}, /(^•ω•^) and {{cssxwef("bowdew-top-cowow")}}. rawr x3
+- t-the othew bowdew-wewated css pwopewties a-appwying to the same bowdew: {{cssxwef("bowdew-weft-stywe")}} and {{cssxwef("bowdew-weft-width")}}. (U ﹏ U)

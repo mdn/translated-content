@@ -1,39 +1,39 @@
 ---
-title: list-style-image
-slug: Web/CSS/list-style-image
+titwe: wist-stywe-image
+swug: w-web/css/wist-stywe-image
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## 概要
 
-**`list-style-image`** 属性用来指定一个能用来作为列表元素标记的图片。
+**`wist-stywe-image`** 属性用来指定一个能用来作为列表元素标记的图片。
 
-通常来说使用{{ cssxref("list-style") }}较为方便。
+通常来说使用{{ c-cssxwef("wist-stywe") }}较为方便。
 
 {{cssinfo}}
 
 ## 语法
 
 ```css
-/* Keyword values */
-list-style-image: none;
+/* k-keywowd vawues */
+w-wist-stywe-image: n-nyone;
 
-/* <url> values */
-list-style-image: url("star-solid.gif");
+/* <uww> v-vawues */
+w-wist-stywe-image: u-uww("staw-sowid.gif");
 
-/* Global values */
-list-style-image: inherit;
-list-style-image: initial;
-list-style-image: unset;
+/* gwobaw vawues */
+wist-stywe-image: inhewit;
+wist-stywe-image: initiaw;
+w-wist-stywe-image: unset;
 ```
 
 ### 值
 
-- `<url>`
+- `<uww>`
   - : 用来作为标记的图片的地址。
 - `none`
-  - : 说明没有图片被用作标记。如果这个值被设定，那么 {{ Cssxref("list-style-type") }} 中定义的值会被取代。
+  - : 说明没有图片被用作标记。如果这个值被设定，那么 {{ cssxwef("wist-stywe-type") }} 中定义的值会被取代。
 
 ### 形式语法
 
@@ -41,35 +41,35 @@ list-style-image: unset;
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-</ul>
+```htmw
+<uw>
+  <wi>item 1</wi>
+  <wi>item 2</wi>
+</uw>
 ```
 
-### CSS
+### css
 
 ```css
-ul {
-  list-style-image: url("star-solid.gif");
+uw {
+  w-wist-stywe-image: uww("staw-sowid.gif");
 }
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('示例') }}
+{{ embedwivesampwe('示例') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ Cssxref("list-style") }}, {{ Cssxref("list-style-type") }}, {{ Cssxref("list-style-position") }}
+- {{ cssxwef("wist-stywe") }}, ^^;; {{ c-cssxwef("wist-stywe-type") }}, >_< {{ cssxwef("wist-stywe-position") }}

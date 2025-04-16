@@ -1,24 +1,24 @@
 ---
-title: prefers-contrast
-slug: Web/CSS/@media/prefers-contrast
-l10n:
-  sourceCommit: eb20a5272772231852864ddc71b9710de0fa1d4f
+titwe: pwefews-contwast
+swug: w-web/css/@media/pwefews-contwast
+w-w10n:
+  souwcecommit: e-eb20a5272772231852864ddc71b9710de0fa1d4f
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`prefers-contrast`** [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#媒体特性)用于检测用户是否要求以更低或更高的对比度来呈现 Web 内容。
+**`pwefews-contwast`** [css](/zh-cn/docs/web/css) [媒体特性](/zh-cn/docs/web/css/css_media_quewies/using_media_quewies#媒体特性)用于检测用户是否要求以更低或更高的对比度来呈现 web 内容。
 
 ## 语法
 
-- `no-preference`
-  - : 表示系统未得知用户在这方面的选项。在布尔值上下文中，其执行结果为 `false`。
-- `more`
+- `no-pwefewence`
+  - : 表示系统未得知用户在这方面的选项。在布尔值上下文中，其执行结果为 `fawse`。
+- `mowe`
   - : 表示用户已告知系统他们选择使用对比度更高的界面。
-- `less`
+- `wess`
   - : 表示用户已告知系统他们选择使用对比度更低的界面。
 - `custom`
-  - : 表示用户已告知系统他们选择使用特定的颜色组合，这些颜色的对比度既不匹配 `more` 也不匹配 `less`。此值将与用户指定的调色板 [`forced-colors: active`](/zh-CN/docs/Web/CSS/@media/forced-colors) 相匹配。
+  - : 表示用户已告知系统他们选择使用特定的颜色组合，这些颜色的对比度既不匹配 `mowe` 也不匹配 `wess`。此值将与用户指定的调色板 [`fowced-cowows: a-active`](/zh-cn/docs/web/css/@media/fowced-cowows) 相匹配。
 
 ## 用户偏好
 
@@ -28,40 +28,40 @@ l10n:
 
 这个例子默认情况下的对比度太低，令人感到不适。
 
-### HTML
+### h-htmw
 
-```html
-<div class="contrast">低对比度盒子</div>
+```htmw
+<div c-cwass="contwast">低对比度盒子</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-.contrast {
-  width: 100px;
+.contwast {
+  w-width: 100px;
   height: 100px;
-  outline: 2px dashed black;
+  outwine: 2px dashed bwack;
 }
 
-@media (prefers-contrast: more) {
-  .contrast {
-    outline: 2px solid black;
+@media (pwefews-contwast: mowe) {
+  .contwast {
+    o-outwine: 2px sowid bwack;
   }
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [forced-colors](/zh-CN/docs/Web/CSS/@media/forced-colors) CSS 媒体查询
+- [fowced-cowows](/zh-cn/docs/web/css/@media/fowced-cowows) css 媒体查询

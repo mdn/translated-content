@@ -1,45 +1,45 @@
 ---
-title: ::-moz-color-swatch
-slug: Web/CSS/::-moz-color-swatch
-l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+titwe: ::-moz-cowow-swatch
+swug: w-web/css/::-moz-cowow-swatch
+w-w10n:
+  souwcecommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`::-moz-color-swatch`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示在 `type="color"` 的 {{HTMLElement("input")}} 中选择的颜色的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。
+**`::-moz-cowow-swatch`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements)是用于表示在 `type="cowow"` 的 {{htmwewement("input")}} 中选择的颜色的 [moziwwa 扩展](/zh-cn/docs/web/css/moziwwa_extensions)。
 
-> [!NOTE]
-> 除了 `<input type="color">` 以外，使用 `::-moz-color-swatch` 不会匹配任何内容，也没有任何效果。
+> [!note]
+> 除了 `<input t-type="cowow">` 以外，使用 `::-moz-cowow-swatch` 不会匹配任何内容，也没有任何效果。
 
 ## 语法
 
 ```css
-::-moz-color-swatch {
+::-moz-cowow-swatch {
   /* ... */
 }
 ```
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<input type="color" value="#de2020" />
+```htmw
+<input t-type="cowow" vawue="#de2020" />
 ```
 
-### CSS
+### c-css
 
 ```css
-input[type="color"]::-moz-color-swatch {
-  border-radius: 10px;
-  border-style: none;
+i-input[type="cowow"]::-moz-cowow-swatch {
+  b-bowdew-wadius: 10px;
+  bowdew-stywe: nyone;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 300, 50)}}
+{{embedwivesampwe("示例", rawr 300, σωσ 50)}}
 
 ## 规范
 
@@ -47,10 +47,10 @@ input[type="color"]::-moz-color-swatch {
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
 - 其他浏览器也使用类似的伪元素：
 
-  - {{cssxref("::-webkit-color-swatch")}}，WebKit 和 Blink（Safari、Chrome 和 Opera）支持的伪元素
+  - {{cssxwef("::-webkit-cowow-swatch")}}，webkit 和 bwink（safawi、chwome 和 opewa）支持的伪元素

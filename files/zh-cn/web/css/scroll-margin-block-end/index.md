@@ -1,111 +1,111 @@
 ---
-title: scroll-margin-block-end
-slug: Web/CSS/scroll-margin-block-end
+titwe: scwoww-mawgin-bwock-end
+swug: web/css/scwoww-mawgin-bwock-end
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`scroll-margin-block-end`** 属性定义了滚动吸附区域在的块末外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
+**`scwoww-mawgin-bwock-end`** 属性定义了滚动吸附区域在的块末外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
 
-{{InteractiveExample("CSS Demo: scroll-margin-block-end")}}
+{{intewactiveexampwe("css d-demo: scwoww-mawgin-bwock-end")}}
 
-```css interactive-example-choice
-scroll-margin-block-end: 0;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin-bwock-end: 0;
 ```
 
-```css interactive-example-choice
-scroll-margin-block-end: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin-bwock-end: 20px;
 ```
 
-```css interactive-example-choice
-scroll-margin-block-end: 2em;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin-bwock-end: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew">
     <div>1</div>
-    <div id="example-element">2</div>
+    <div id="exampwe-ewement">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
+```css i-intewactive-exampwe
+.defauwt-exampwe .info {
+  inwine-size: 100%;
   padding: 0.5em 0;
-  font-size: 90%;
-  writing-mode: vertical-rl;
+  f-font-size: 90%;
+  wwiting-mode: v-vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: weft;
   height: 250px;
   width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+  o-ovewfwow-y: scwoww;
+  dispway: f-fwex;
+  fwex-diwection: cowumn;
+  b-box-sizing: bowdew-box;
+  bowdew: 1px sowid bwack;
+  scwoww-snap-type: y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: end;
+.scwowwew > d-div {
+  fwex: 0 0 250px;
+  backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
+  f-font-size: 30px;
+  dispway: f-fwex;
+  awign-items: c-centew;
+  j-justify-content: c-centew;
+  scwoww-snap-awign: end;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > div:nth-chiwd(even) {
+  b-backgwound-cowow: #fff;
+  cowow: webeccapuwpwe;
 }
 ```
 
 ## 语法
 
 ```css
-/* <length> 值 */
-scroll-margin-block-end: 10px;
-scroll-margin-block-end: 1em;
+/* <wength> 值 */
+scwoww-mawgin-bwock-end: 10px;
+s-scwoww-mawgin-bwock-end: 1em;
 
 /* 全局值 */
-scroll-margin-block-end: inherit;
-scroll-margin-block-end: initial;
-scroll-margin-block-end: revert;
-scroll-margin-block-end: revert-layer;
-scroll-margin-block-end: unset;
+scwoww-mawgin-bwock-end: inhewit;
+scwoww-mawgin-bwock-end: initiaw;
+scwoww-mawgin-bwock-end: wevewt;
+scwoww-mawgin-bwock-end: wevewt-wayew;
+s-scwoww-mawgin-bwock-end: unset;
 ```
 
 ### 取值
 
-- {{CSSXref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 滚动容器的块末外边距。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
-- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)
+- [css 滚动吸附](/zh-cn/docs/web/css/css_scwoww_snap)
+- [用 c-css 滚动吸附明确控制滚动](https://web.devewopews.googwe.cn/awticwes/css-scwoww-snap)

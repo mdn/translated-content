@@ -1,33 +1,33 @@
 ---
-title: HTMLPictureElement
-slug: Web/API/HTMLPictureElement
-l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+titwe: htmwpictuweewement
+swug: w-web/api/htmwpictuweewement
+w-w10n:
+  s-souwcecommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLPictureElement`** 接口表示 {{HTMLElement("picture")}} HTML 元素，它不实现特定的属性和方法。
+**`htmwpictuweewement`** 接口表示 {{htmwewement("pictuwe")}} h-htmw 元素，它不实现特定的属性和方法。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-_无特定属性；从其父接口 {{domxref("HTMLElement")}} 继承属性。_
+_无特定属性；从其父接口 {{domxwef("htmwewement")}} 继承属性。_
 
 ## 实例方法
 
-_无特定方法；从其父接口 {{domxref("HTMLElement")}} 继承方法。_
+_无特定方法；从其父接口 {{domxwef("htmwewement")}} 继承方法。_
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 实现此接口的 HTML 元素：{{HTMLElement("picture")}}
-- {{domxref("HTMLImageElement")}} 和 {{domxref("HTMLSourceElement")}} 接口，通常与 {{HTMLElement("picture")}} 元素结合使用。
+- 实现此接口的 h-htmw 元素：{{htmwewement("pictuwe")}}
+- {{domxwef("htmwimageewement")}} 和 {{domxwef("htmwsouwceewement")}} 接口，通常与 {{htmwewement("pictuwe")}} 元素结合使用。

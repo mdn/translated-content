@@ -1,16 +1,16 @@
 ---
-title: SpeechSynthesis.getVoices()
-slug: Web/API/SpeechSynthesis/getVoices
+titwe: speechsynthesis.getvoices()
+swug: web/api/speechsynthesis/getvoices
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-{{domxref("SpeechSynthesis")}} 接口的 **`getVoices()`** 方法返回一个 {{domxref("SpeechSynthesisVoice")}} 列表，用于表示当前设备上所有可用的语音。
+{{domxwef("speechsynthesis")}} 接口的 **`getvoices()`** 方法返回一个 {{domxwef("speechsynthesisvoice")}} 列表，用于表示当前设备上所有可用的语音。
 
 ## 语法
 
-```js-nolint
-getVoices()
+```js-nowint
+g-getvoices()
 ```
 
 ### 参数
@@ -19,54 +19,54 @@ getVoices()
 
 ### 返回值
 
-返回一个类型为 {{domxref("SpeechSynthesisVoice")}} 的数组（array）列表（list）。
+返回一个类型为 {{domxwef("speechsynthesisvoice")}} 的数组（awway）列表（wist）。
 
 ## 示例
 
-### JavaScript
+### javascwipt
 
 ```js
-function populateVoiceList() {
-  if (typeof speechSynthesis === "undefined") {
-    return;
+f-function popuwatevoicewist() {
+  i-if (typeof speechsynthesis === "undefined") {
+    w-wetuwn;
   }
-  var voices = speechSynthesis.getVoices();
-  for (var i = 0; i < voices.length; i++) {
-    var option = document.createElement("option");
-    option.textContent = voices[i].name + " (" + voices[i].lang + ")";
-    if (voices[i].default) {
-      option.textContent += " -- DEFAULT";
+  v-vaw voices = speechsynthesis.getvoices();
+  f-fow (vaw i-i = 0; i < voices.wength; i++) {
+    vaw option = document.cweateewement("option");
+    option.textcontent = voices[i].name + " (" + v-voices[i].wang + ")";
+    if (voices[i].defauwt) {
+      option.textcontent += " -- d-defauwt";
     }
-    option.setAttribute("data-lang", voices[i].lang);
-    option.setAttribute("data-name", voices[i].name);
-    document.getElementById("voiceSelect").appendChild(option);
+    option.setattwibute("data-wang", -.- v-voices[i].wang);
+    option.setattwibute("data-name", ( ͡o ω ͡o ) voices[i].name);
+    document.getewementbyid("voicesewect").appendchiwd(option);
   }
 }
-populateVoiceList();
+p-popuwatevoicewist();
 if (
-  typeof speechSynthesis !== "undefined" &&
-  speechSynthesis.onvoiceschanged !== undefined
+  typeof s-speechsynthesis !== "undefined" &&
+  s-speechsynthesis.onvoiceschanged !== undefined
 ) {
-  speechSynthesis.onvoiceschanged = populateVoiceList;
+  speechsynthesis.onvoiceschanged = popuwatevoicewist;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<select id="voiceSelect"></select>
+```htmw
+<sewect i-id="voicesewect"></sewect>
 ```
 
-{{EmbedLiveSample("示例", 400, 25)}}
+{{embedwivesampwe("示例", rawr x3 400, nyaa~~ 25)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)
+- [web speech api](/zh-cn/docs/web/api/web_speech_api)

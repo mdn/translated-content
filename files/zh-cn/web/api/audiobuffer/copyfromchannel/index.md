@@ -1,43 +1,43 @@
 ---
-title: AudioBuffer.copyFromChannel()
-slug: Web/API/AudioBuffer/copyFromChannel
+titwe: audiobuffew.copyfwomchannew()
+swug: web/api/audiobuffew/copyfwomchannew
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{ domxref("AudioBuffer") }}接口的 copyFromChannel 方法将样本从 AudioBuffer 的指定通道复制到目标数组中
+{{ d-domxwef("audiobuffew") }}接口的 c-copyfwomchannew 方法将样本从 audiobuffew 的指定通道复制到目标数组中
 
 ## 语法
 
-```plain
-myArrayBuffer.copyFromChannel(destination,channelNumber,startInChannel);
+```pwain
+m-myawwaybuffew.copyfwomchannew(destination,channewnumbew,stawtinchannew);
 ```
 
 ### 参数
 
 - _destination_
-  - : 将通道数据复制到的{{domxref("Float32Array")}}
-- _channelNumber_
-  - : 当前 AudioBuffer 的通道号，用于复制通道数据。键入 channelNumber 大于或等于{{domxref("AudioBuffer.numberOfChannels")}}，将会抛出`INDEX_SIZE_ERR` 的错误
-- _startInChannel_ {{optional_inline}}
-  - : 用于复制数据的可选偏移量。假如*startInChannel 比*{{domxref("AudioBuffer.length")}}大，将会抛出`INDEX_SIZE_ERR` 的错误
+  - : 将通道数据复制到的{{domxwef("fwoat32awway")}}
+- _channewnumbew_
+  - : 当前 a-audiobuffew 的通道号，用于复制通道数据。键入 c-channewnumbew 大于或等于{{domxwef("audiobuffew.numbewofchannews")}}，将会抛出`index_size_eww` 的错误
+- _stawtinchannew_ {{optionaw_inwine}}
+  - : 用于复制数据的可选偏移量。假如*stawtinchannew 比*{{domxwef("audiobuffew.wength")}}大，将会抛出`index_size_eww` 的错误
 
 ## 例子
 
 ```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-var anotherArray = new Float32Array();
-myArrayBuffer.copyFromChannel(anotherArray, 1, 0);
+v-vaw myawwaybuffew = audioctx.cweatebuffew(2, (U ﹏ U) fwamecount, -.- audioctx.sampwewate);
+vaw anothewawway = nyew f-fwoat32awway();
+myawwaybuffew.copyfwomchannew(anothewawway, 1, (ˆ ﻌ ˆ)♡ 0);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using t-the web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

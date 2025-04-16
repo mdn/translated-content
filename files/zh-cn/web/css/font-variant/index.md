@@ -1,144 +1,144 @@
 ---
-title: font-variant
-slug: Web/CSS/font-variant
+titwe: font-vawiant
+swug: web/css/font-vawiant
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**font-variant** 属性是{{cssxref("font-variant-caps")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-east-asian")}}等属性的简写。你也可以使用简写 {{cssxref("font")}} 设定`font-variant`在 CSS Level 2 (Revision 1) 中的值（即`normal` 或 `small-caps`）。
+**font-vawiant** 属性是{{cssxwef("font-vawiant-caps")}}, ʘwʘ {{cssxwef("font-vawiant-numewic")}}, σωσ {{cssxwef("font-vawiant-awtewnates")}}, OwO {{cssxwef("font-vawiant-wigatuwes")}}, 😳😳😳 {{cssxwef("font-vawiant-east-asian")}}等属性的简写。你也可以使用简写 {{cssxwef("font")}} 设定`font-vawiant`在 c-css wevew 2 (wevision 1) 中的值（即`nowmaw` 或 `smow-caps`）。
 
-{{InteractiveExample("CSS Demo: font-variant")}}
+{{intewactiveexampwe("css d-demo: font-vawiant")}}
 
-```css interactive-example-choice
-font-variant: normal;
+```css i-intewactive-exampwe-choice
+font-vawiant: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-font-variant: no-common-ligatures proportional-nums;
+```css i-intewactive-exampwe-choice
+f-font-vawiant: n-nyo-common-wigatuwes p-pwopowtionaw-nums;
 ```
 
-```css interactive-example-choice
-font-variant: common-ligatures tabular-nums;
+```css intewactive-exampwe-choice
+font-vawiant: common-wigatuwes tabuwaw-nums;
 ```
 
-```css interactive-example-choice
-font-variant: small-caps slashed-zero;
+```css intewactive-exampwe-choice
+f-font-vawiant: smow-caps swashed-zewo;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
-    <p>Difficult waffles</p>
-    <table>
-      <tr>
-        <td><span class="tabular">0O</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3.14</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">2.71</span></td>
-      </tr>
-    </table>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">
+    <p>difficuwt waffwes</p>
+    <tabwe>
+      <tw>
+        <td><span cwass="tabuwaw">0o</span></td>
+      </tw>
+      <tw>
+        <td><span cwass="tabuwaw">3.14</span></td>
+      </tw>
+      <tw>
+        <td><span cwass="tabuwaw">2.71</span></td>
+      </tw>
+    </tabwe>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 @font-face {
-  font-family: "Fira Sans";
-  src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  font-famiwy: "fiwa s-sans";
+  s-swc:
+    wocaw("fiwasans-weguwaw"), 😳😳😳
+    uww("/shawed-assets/fonts/fiwasans-weguwaw.woff2") fowmat("woff2");
+  font-weight: nyowmaw;
+  font-stywe: n-nyowmaw;
 }
 
 section {
-  font-family: "Fira Sans", sans-serif;
-  margin-top: 10px;
+  font-famiwy: "fiwa sans", o.O sans-sewif;
+  mawgin-top: 10px;
   font-size: 1.5em;
 }
 
-#example-element table {
-  margin-left: auto;
-  margin-right: auto;
+#exampwe-ewement t-tabwe {
+  mawgin-weft: a-auto;
+  mawgin-wight: a-auto;
 }
 
-.tabular {
-  border: 1px solid;
+.tabuwaw {
+  b-bowdew: 1px sowid;
 }
 ```
 
 ## 语法
 
 ```css
-font-variant: small-caps;
-font-variant: common-ligatures small-caps;
+f-font-vawiant: smow-caps;
+font-vawiant: c-common-wigatuwes smow-caps;
 
-/* Global values */
-font-variant: inherit;
-font-variant: initial;
-font-variant: unset;
+/* gwobaw vawues */
+f-font-vawiant: inhewit;
+font-vawiant: initiaw;
+font-vawiant: unset;
 ```
 
 ### 值
 
-- `normal`
-  - : 规定一个常规（normal）字型；每个非简写的属性的初始值都是 normal。属于 `font-variant` 的非简写属性有：{{cssxref("font-variant-caps")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}} 和 {{cssxref("font-variant-east-asian")}}。
+- `nowmaw`
+  - : 规定一个常规（nowmaw）字型；每个非简写的属性的初始值都是 nyowmaw。属于 `font-vawiant` 的非简写属性有：{{cssxwef("font-vawiant-caps")}}, ( ͡o ω ͡o ) {{cssxwef("font-vawiant-numewic")}}, (U ﹏ U) {{cssxwef("font-vawiant-awtewnates")}}, (///ˬ///✿) {{cssxwef("font-vawiant-wigatuwes")}} 和 {{cssxwef("font-vawiant-east-asian")}}。
 - `none`
-  - : 将{{cssxref("font-variant-ligatures")}}设定为 `none` ，将其他非简写属性的值设定为初始值`normal`。
-- `<common-lig-values>`, `<discretionary-lig-values>`, `<historical-lig-values>`, `<contextual-alt-values>`
-  - : 规定与{{cssxref("font-variant-ligatures")}}属性相关的关键字，可能的值包括： `common-ligatures`, `no-common-ligatures`, `discretionary-ligatures`, `no-discretionary-ligatures`, `historical-ligatures`, `no-historical-ligatures`, `contextual` 和 `no-contextual`。
-- `stylistic()`, `historical-forms`, `styleset()`, `character-variant()`, `swash()`, `ornaments()`, `annotation()`
-  - : 规定与{{cssxref("font-variant-alternates")}}属性相关的关键字和函数。
-- `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`
-  - : 规定与{{cssxref("font-variant-caps")}} 属性相关的关键字和函数。
-- `<numeric-figure-values>`, `<numeric-spacing-values>`, `<numeric-fraction-values>`, `ordinal`, `slashed-zero`
-  - : 规定与{{cssxref("font-variant-alternates")}}属性相关的关键字，可能的值包括：`lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal` 和 `slashed-zero`。
-- `<east-asian-variant-values>`, `<east-asian-width-values>`, `ruby`
-  - : 规定与{{cssxref("font-variant-east-asian")}}属性相关的关键字，可能的值包括：`jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width`, `ruby`。
+  - : 将{{cssxwef("font-vawiant-wigatuwes")}}设定为 `none` ，将其他非简写属性的值设定为初始值`nowmaw`。
+- `<common-wig-vawues>`, `<discwetionawy-wig-vawues>`, >w< `<histowicaw-wig-vawues>`, rawr `<contextuaw-awt-vawues>`
+  - : 规定与{{cssxwef("font-vawiant-wigatuwes")}}属性相关的关键字，可能的值包括： `common-wigatuwes`, mya `no-common-wigatuwes`, ^^ `discwetionawy-wigatuwes`, 😳😳😳 `no-discwetionawy-wigatuwes`, mya `histowicaw-wigatuwes`, 😳 `no-histowicaw-wigatuwes`, -.- `contextuaw` 和 `no-contextuaw`。
+- `stywistic()`, 🥺 `histowicaw-fowms`, o.O `styweset()`, /(^•ω•^) `chawactew-vawiant()`, nyaa~~ `swash()`, nyaa~~ `ownaments()`, :3 `annotation()`
+  - : 规定与{{cssxwef("font-vawiant-awtewnates")}}属性相关的关键字和函数。
+- `smow-caps`, 😳😳😳 `aww-smow-caps`, `petite-caps`, (˘ω˘) `aww-petite-caps`, ^^ `unicase`, `titwing-caps`
+  - : 规定与{{cssxwef("font-vawiant-caps")}} 属性相关的关键字和函数。
+- `<numewic-figuwe-vawues>`, :3 `<numewic-spacing-vawues>`, -.- `<numewic-fwaction-vawues>`, 😳 `owdinaw`, mya `swashed-zewo`
+  - : 规定与{{cssxwef("font-vawiant-awtewnates")}}属性相关的关键字，可能的值包括：`wining-nums`, (˘ω˘) `owdstywe-nums`, >_< `pwopowtionaw-nums`, -.- `tabuwaw-nums`, 🥺 `diagonaw-fwactions`, (U ﹏ U) `stacked-fwactions`, >w< `owdinaw` 和 `swashed-zewo`。
+- `<east-asian-vawiant-vawues>`, mya `<east-asian-width-vawues>`, >w< `wuby`
+  - : 规定与{{cssxwef("font-vawiant-east-asian")}}属性相关的关键字，可能的值包括：`jis78`, nyaa~~ `jis83`, (✿oωo) `jis90`, `jis04`, ʘwʘ `simpwified`, (ˆ ﻌ ˆ)♡ `twaditionaw`, 😳😳😳 `fuww-width`, `pwopowtionaw-width`, :3 `wuby`。
 
 {{csssyntax}}
 
 ## 示例
 
-### Setting the small-caps font variant
+### s-setting the smow-caps font vawiant
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="normal">Firefox rocks!</p>
-<p class="small">Firefox rocks!</p>
+```htmw
+<p c-cwass="nowmaw">fiwefox w-wocks!</p>
+<p cwass="smow">fiwefox wocks!</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p.normal {
-  font-variant: normal;
+p-p.nowmaw {
+  f-font-vawiant: nyowmaw;
 }
-p.small {
-  font-variant: small-caps;
+p.smow {
+  f-font-vawiant: s-smow-caps;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('Setting_the_small-caps_font_variant') }}
+{{ embedwivesampwe('setting_the_smow-caps_font_vawiant') }}
 
 ## 规范
 
 {{cssinfo}}
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("text-transform")}}
-- {{cssxref("text-combine-upright")}}
-- {{cssxref("text-orientation")}}
+- {{cssxwef("text-twansfowm")}}
+- {{cssxwef("text-combine-upwight")}}
+- {{cssxwef("text-owientation")}}

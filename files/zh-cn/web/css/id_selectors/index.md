@@ -1,16 +1,16 @@
 ---
-title: ID 选择器
-slug: Web/CSS/ID_selectors
+titwe: id 选择器
+swug: web/css/id_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS **ID 选择器**会根据该元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性中的内容匹配元素。为了使该元素被选中，它的 `id` 属性必须与选择器中给出的值完全匹配。
+c-css **id 选择器**会根据该元素的 [`id`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/id) 属性中的内容匹配元素。为了使该元素被选中，它的 `id` 属性必须与选择器中给出的值完全匹配。
 
 ```css
-/* id 为 "demo" 的元素会被选中 */
+/* i-id 为 "demo" 的元素会被选中 */
 #demo {
-  border: red 2px solid;
+  b-bowdew: wed 2px s-sowid;
 }
 ```
 
@@ -20,7 +20,7 @@ CSS **ID 选择器**会根据该元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/
 #id 属性值 { 样式声明 }
 ```
 
-它与下面的{{Cssxref("Attribute_selectors", "属性选择器")}}语句语法上等价（但优先级并不等价）：
+它与下面的{{cssxwef("attwibute_sewectows", σωσ "属性选择器")}}语句语法上等价（但优先级并不等价）：
 
 ```css
 [id=id 属性值] { 样式声明 }
@@ -28,34 +28,34 @@ CSS **ID 选择器**会根据该元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/
 
 ## 示例
 
-### CSS
+### c-css
 
 ```css
 #identified {
-  background-color: skyblue;
+  b-backgwound-cowow: s-skybwue;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div id="identified">这个 div 有一个特别的 ID 属性！</div>
+```htmw
+<div id="identified">这个 div 有一个特别的 id 属性！</div>
 <div>这只是一个普通的 div。</div>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", '100%', 50)}}
+{{embedwivesampwe("示例", σωσ '100%', 50)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
-- [学习 CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+- [css 选择器](/zh-cn/docs/web/css/css_sewectows)
+- [学习 c-css 选择器](/zh-cn/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)

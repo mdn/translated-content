@@ -1,24 +1,24 @@
 ---
-title: <time-percentage>
-slug: Web/CSS/time-percentage
+titwe: <time-pewcentage>
+swug: w-web/css/time-pewcentage
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)`<time-percentage> 的值`可以表示为时间或百分比。
+[css 数据类型](/zh-cn/docs/web/css/css_vawues_and_units/css_data_types)`<time-pewcentage> 的值`可以表示为时间或百分比。
 
-## Syntax
+## s-syntax
 
-有关此类型允许的各个语法的详细信息，请参阅{{Cssxref("time")}}和{{Cssxref("percentage")}}的文档。
+有关此类型允许的各个语法的详细信息，请参阅{{cssxwef("time")}}和{{cssxwef("pewcentage")}}的文档。
 
-## Use in calc()
+## u-use in cawc()
 
-如果将`<time percentage>`指定为允许的类型，这意味着该百分比解析为时间，因此可以在{{Cssxref("calc()")}}表达式中使用。
+如果将`<time pewcentage>`指定为允许的类型，这意味着该百分比解析为时间，因此可以在{{cssxwef("cawc()")}}表达式中使用。
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

@@ -1,77 +1,77 @@
 ---
-title: text-decoration-color
-slug: Web/CSS/text-decoration-color
+titwe: text-decowation-cowow
+swug: web/css/text-decowation-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-decoration-color`** 用于设置文本修饰线的颜色，文本修饰线是通过 {{ cssxref("text-decoration-line") }} 属性指定的。
+[css](/zh-cn/docs/web/css) 属性 **`text-decowation-cowow`** 用于设置文本修饰线的颜色，文本修饰线是通过 {{ c-cssxwef("text-decowation-wine") }} 属性指定的。
 
 修饰线包括下划线、上划线、删除线和波浪线，波浪线的典型用途是标明内容拼写错误（仅举例）。被指定的颜色会作用到该属性值有效范围内的所有修饰线上。
 
-{{InteractiveExample("CSS Demo: text-decoration-color")}}
+{{intewactiveexampwe("css d-demo: t-text-decowation-cowow")}}
 
-```css interactive-example-choice
-text-decoration-color: red;
+```css i-intewactive-exampwe-choice
+t-text-decowation-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-text-decoration-color: #21ff21;
+```css i-intewactive-exampwe-choice
+t-text-decowation-cowow: #21ff21;
 ```
 
-```css interactive-example-choice
-text-decoration-color: rgb(255, 90, 255);
+```css intewactive-exampwe-choice
+text-decowation-cowow: wgb(255, ʘwʘ 90, 255);
 ```
 
-```css interactive-example-choice
-text-decoration-color: hsl(70, 100%, 40%);
+```css intewactive-exampwe-choice
+t-text-decowation-cowow: hsw(70, (ˆ ﻌ ˆ)♡ 100%, 😳😳😳 40%);
 ```
 
-```css interactive-example-choice
-text-decoration-color: currentColor;
+```css intewactive-exampwe-choice
+t-text-decowation-cowow: cuwwentcowow;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    i'd faw wathew be
+    <span c-cwass="twansition-aww" id="exampwe-ewement">happy t-than w-wight</span>
+    any day. :3
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 p {
-  font: 1.5em sans-serif;
+  font: 1.5em sans-sewif;
 }
 
-#example-element {
-  text-decoration-line: underline;
+#exampwe-ewement {
+  t-text-decowation-wine: undewwine;
 }
 ```
 
-CSS 没有直接的机制为每种线型指定唯一的颜色，不过可以通过嵌套元素的方法来实现这种效果：用 {{cssxref("text-decoration-line")}} 属性为每个元素应用一种线型，再用 `text-decoration-color` 指定线的颜色。
+css 没有直接的机制为每种线型指定唯一的颜色，不过可以通过嵌套元素的方法来实现这种效果：用 {{cssxwef("text-decowation-wine")}} 属性为每个元素应用一种线型，再用 `text-decowation-cowow` 指定线的颜色。
 
 ## 语法
 
 ```css
-/* <color> values */
-text-decoration-color: currentColor;
-text-decoration-color: red;
-text-decoration-color: #00ff00;
-text-decoration-color: rgba(255, 128, 128, 0.5);
-text-decoration-color: transparent;
+/* <cowow> vawues */
+text-decowation-cowow: cuwwentcowow;
+t-text-decowation-cowow: wed;
+text-decowation-cowow: #00ff00;
+t-text-decowation-cowow: w-wgba(255, OwO 128, (U ﹏ U) 128, 0.5);
+t-text-decowation-cowow: t-twanspawent;
 
-/* Global values */
-text-decoration-color: inherit;
-text-decoration-color: initial;
-text-decoration-color: unset;
+/* gwobaw vawues */
+text-decowation-cowow: i-inhewit;
+text-decowation-cowow: initiaw;
+t-text-decowation-cowow: unset;
 ```
 
 ### 值
 
-- {{cssxref("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 修饰文本的线的颜色。
 
 ### 形式语法
@@ -80,49 +80,49 @@ text-decoration-color: unset;
 
 ## 示例
 
-```html
+```htmw
 <p>
-  This paragraph has <s>some erroneous text</s> inside it that I want to call
-  attention to.
+  this pawagwaph has <s>some ewwoneous text</s> inside i-it that i want to caww
+  attention t-to. >w<
 </p>
 ```
 
 ```css
-p {
-  text-decoration-line: underline;
-  text-decoration-color: cyan;
+p-p {
+  t-text-decowation-wine: undewwine;
+  text-decowation-cowow: cyan;
 }
 
-s {
-  text-decoration-line: line-through;
-  text-decoration-color: red;
-  text-decoration-style: wavy;
+s-s {
+  text-decowation-wine: w-wine-thwough;
+  text-decowation-cowow: w-wed;
+  text-decowation-stywe: w-wavy;
 }
 ```
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
-## Accessibility concerns
+## accessibiwity c-concewns
 
-It is important to ensure that the contrast ratio between the color of the text, the background the text is placed over, and the text decoration line is high enough that people experiencing low vision conditions will be able to read the content of the page. Color contrast ratio is determined by comparing the luminosity of the text and background color values.
+it is impowtant to ensuwe t-that the contwast watio between the cowow o-of the text, (U ﹏ U) the backgwound the t-text is pwaced ovew, 😳 and the text d-decowation wine i-is high enough that peopwe expewiencing wow vision conditions wiww be abwe to wead the content of the page. (ˆ ﻌ ˆ)♡ cowow c-contwast watio i-is detewmined by compawing the w-wuminosity of t-the text and backgwound c-cowow vawues. 😳😳😳
 
-Color alone should not be used to convey meaning. For example, change of text and text-decoration-color alone is not enouch to indicate a link has focus.
+cowow awone shouwd nyot be used to convey m-meaning. (U ﹏ U) fow exampwe, (///ˬ///✿) change of text and text-decowation-cowow awone is nyot enouch to indicate a-a wink has focus. 😳
 
-- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [webaim: cowow contwast checkew](https://webaim.owg/wesouwces/contwastcheckew/)
+- [mdn u-undewstanding w-wcag, 😳 g-guidewine 1.4 expwanations](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success cwitewion 1.4.3 | w-w3c u-undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便。
-- {{cssxref("&lt;color&gt;")}} 数据类型
-- 其他与颜色相关的属性：{{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, 和 {{cssxref("column-rule-color")}}
-- [使用 CSS 为 HTML 设置颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
+- 当要设置多个线修饰属性时，用 {{cssxwef("text-decowation")}} 简写属性会比分别写多个属性更方便。
+- {{cssxwef("&wt;cowow&gt;")}} 数据类型
+- 其他与颜色相关的属性：{{cssxwef("backgwound-cowow")}}, σωσ {{cssxwef("bowdew-cowow")}}, rawr x3 {{cssxwef("outwine-cowow")}}, OwO {{cssxwef("text-decowation-cowow")}}, /(^•ω•^) {{cssxwef("text-emphasis-cowow")}}, 😳😳😳 {{cssxwef("text-shadow")}}, ( ͡o ω ͡o ) {{cssxwef("cawet-cowow")}}, >_< 和 {{cssxwef("cowumn-wuwe-cowow")}}
+- [使用 c-css 为 htmw 设置颜色](/zh-cn/docs/web/css/css_cowows/appwying_cowow)

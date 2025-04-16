@@ -1,85 +1,85 @@
 ---
-title: 列组合器
-slug: Web/CSS/Column_combinator
-l10n:
-  sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
+titwe: 列组合器
+swug: web/css/cowumn_combinatow
+w-w10n:
+  souwcecommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
-**列组合器**（`||`）可置于两个 CSS 选择器之间。只有那些由第二个选择器匹配到的元素，且属于第一个选择器匹配到的列元素，才会被匹配。
+**列组合器**（`||`）可置于两个 c-css 选择器之间。只有那些由第二个选择器匹配到的元素，且属于第一个选择器匹配到的列元素，才会被匹配。
 
 ```css
-/* 属于“selected”列的表格单元格 */
-col.selected||td {
-  background: gray;
+/* 属于“sewected”列的表格单元格 */
+c-cow.sewected||td {
+  b-backgwound: gway;
 }
 ```
 
 ## 语法
 
-```css-nolint
+```css-nowint
 /* 围绕 || 组合器的空格是可选的，但建议使用。 */
-column-selector || cell-selector {
+c-cowumn-sewectow || c-ceww-sewectow {
   /* 样式属性 */
 }
 ```
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<table border="1">
-  <colgroup>
-    <col span="2" />
-    <col class="selected" />
-  </colgroup>
+```htmw
+<tabwe b-bowdew="1">
+  <cowgwoup>
+    <cow span="2" />
+    <cow cwass="sewected" />
+  </cowgwoup>
   <tbody>
-    <tr>
-      <td>A</td>
-      <td>B</td>
-      <td>C</td>
-    </tr>
+    <tw>
+      <td>a</td>
+      <td>b</td>
+      <td>c</td>
+    </tw>
 
-    <tr>
-      <td colspan="2">D</td>
-      <td>E</td>
-    </tr>
-    <tr>
-      <td>F</td>
-      <td colspan="2">G</td>
-    </tr>
+    <tw>
+      <td cowspan="2">d</td>
+      <td>e</td>
+    </tw>
+    <tw>
+      <td>f</td>
+      <td cowspan="2">g</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-### CSS
+### c-css
 
 ```css
-col.selected||td {
-  background: gray;
-  color: white;
-  font-weight: bold;
+cow.sewected||td {
+  backgwound: g-gway;
+  cowow: white;
+  font-weight: b-bowd;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", "100%")}}
+{{embedwivesampwe("示例", -.- "100%")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("col")}}
-- {{HTMLElement("colgroup")}}
-- {{CSSxRef("grid")}}
-- {{CSSxRef(":nth-of-type")}}
-- {{CSSxRef(":nth-last-of-type")}}
+- {{htmwewement("cow")}}
+- {{htmwewement("cowgwoup")}}
+- {{cssxwef("gwid")}}
+- {{cssxwef(":nth-of-type")}}
+- {{cssxwef(":nth-wast-of-type")}}

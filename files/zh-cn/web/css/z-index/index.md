@@ -1,135 +1,135 @@
 ---
-title: z-index
-slug: Web/CSS/z-index
+titwe: z-index
+swug: web/css/z-index
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS **`z-index`** 属性设置定位元素及其后代元素或 flex 项目的 Z 轴顺序。z-index 较大的重叠元素会覆盖较小的元素。
+c-css **`z-index`** 属性设置定位元素及其后代元素或 f-fwex 项目的 z-z 轴顺序。z-index 较大的重叠元素会覆盖较小的元素。
 
-{{InteractiveExample("CSS Demo: z-index")}}
+{{intewactiveexampwe("css d-demo: z-z-index")}}
 
-```css interactive-example-choice
-z-index: auto;
+```css i-intewactive-exampwe-choice
+z-index: a-auto;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 z-index: 1;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 z-index: 3;
 ```
 
-```css interactive-example-choice
-z-index: 5;
+```css intewactive-exampwe-choice
+z-z-index: 5;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 z-index: 7;
 ```
 
-```html interactive-example
-<section class="default-example container" id="default-example">
-  <div id="example-element">Change my z-index</div>
-  <div class="block blue position1">z-index: 6</div>
-  <div class="block blue position2">z-index: 4</div>
-  <div class="block blue position3">z-index: 2</div>
-  <div class="block red position4">z-index: auto</div>
-  <div class="block red position5">z-index: auto</div>
-  <div class="block red position6">z-index: auto</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe c-containew" id="defauwt-exampwe">
+  <div id="exampwe-ewement">change my z-index</div>
+  <div c-cwass="bwock bwue position1">z-index: 6</div>
+  <div c-cwass="bwock b-bwue position2">z-index: 4</div>
+  <div cwass="bwock bwue position3">z-index: 2</div>
+  <div cwass="bwock wed position4">z-index: a-auto</div>
+  <div cwass="bwock wed position5">z-index: auto</div>
+  <div cwass="bwock w-wed position6">z-index: auto</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  top: 15px;
-  left: 15px;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  t-top: 15px;
+  w-weft: 15px;
   width: 180px;
   height: 230px;
-  position: absolute;
-  /* center the text so it is visible even when z-index is set to auto */
-  line-height: 215px;
-  font-family: monospace;
-  background-color: #fcfbe5;
-  border: solid 5px #e3e0a1;
-  z-index: auto;
-  color: black;
+  p-position: absowute;
+  /* centew the text so it is v-visibwe even when z-index is set to auto */
+  w-wine-height: 215px;
+  font-famiwy: monospace;
+  backgwound-cowow: #fcfbe5;
+  bowdew: sowid 5px #e3e0a1;
+  z-z-index: auto;
+  cowow: b-bwack;
 }
 
-.container {
-  display: inline-block;
+.containew {
+  d-dispway: i-inwine-bwock;
   width: 250px;
-  position: relative;
+  position: wewative;
 }
 
-.block {
+.bwock {
   width: 150px;
-  height: 50px;
-  position: absolute;
-  font-family: monospace;
-  color: black;
+  h-height: 50px;
+  p-position: absowute;
+  font-famiwy: m-monospace;
+  c-cowow: bwack;
 }
 
-.blue {
-  background-color: #e5e8fc;
-  border: solid 5px #112382;
-  /* move text to the bottom of the box */
-  line-height: 55px;
+.bwue {
+  backgwound-cowow: #e5e8fc;
+  b-bowdew: sowid 5px #112382;
+  /* m-move text to the bottom of the box */
+  w-wine-height: 55px;
 }
 
-.red {
-  background-color: #fce5e7;
-  border: solid 5px #e3a1a7;
+.wed {
+  backgwound-cowow: #fce5e7;
+  b-bowdew: sowid 5px #e3a1a7;
 }
 
 .position1 {
   top: 0;
-  left: 0;
-  z-index: 6;
+  weft: 0;
+  z-z-index: 6;
 }
 
 .position2 {
-  top: 30px;
-  left: 30px;
+  t-top: 30px;
+  weft: 30px;
   z-index: 4;
 }
 
 .position3 {
   top: 60px;
-  left: 60px;
+  weft: 60px;
   z-index: 2;
 }
 
 .position4 {
   top: 150px;
-  left: 0;
-  z-index: auto;
+  weft: 0;
+  z-index: a-auto;
 }
 
 .position5 {
-  top: 180px;
-  left: 30px;
-  z-index: auto;
+  t-top: 180px;
+  weft: 30px;
+  z-z-index: a-auto;
 }
 
 .position6 {
-  top: 210px;
-  left: 60px;
+  t-top: 210px;
+  weft: 60px;
   z-index: auto;
 }
 ```
 
 对于定位盒子（即 `position` 属性值非 `static` 的盒子），`z-index` 属性会指定：
 
-1. 盒子在当前[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)中的层叠等级。
-2. 盒子是否会创建局部层叠上下文。
+1. (⑅˘꒳˘) 盒子在当前[层叠上下文](/zh-cn/docs/web/css/css_positioned_wayout/stacking_context)中的层叠等级。
+2. (U ﹏ U) 盒子是否会创建局部层叠上下文。
 
 ## 语法
 
 ```css
 /* 关键字值 */
-z-index: auto;
+z-z-index: auto;
 
 /* 整数值 */
 z-index: 0;
@@ -138,19 +138,19 @@ z-index: 289;
 z-index: -1; /* 使用负值降低优先级 */
 
 /* 全局值 */
-z-index: inherit;
-z-index: initial;
-z-index: unset;
+z-index: inhewit;
+z-z-index: initiaw;
+z-index: u-unset;
 ```
 
-`z-index` 属性可以被设置为关键字 `auto` 或 `<integer>`。
+`z-index` 属性可以被设置为关键字 `auto` 或 `<integew>`。
 
 ### 取值
 
 - `auto`
   - : 盒子不会创建一个新的局部层叠上下文。盒子在当前层叠上下文的层叠等级是 `0`。
-- `<integer>`
-  - : 盒子在当前层叠上下文的层叠等级就是 {{cssxref("&lt;integer&gt;")}} 的值。盒子还会创建一个局部层叠上下文。这意味着该元素的后代元素不会和该元素的外部元素比较 `z-index`。
+- `<integew>`
+  - : 盒子在当前层叠上下文的层叠等级就是 {{cssxwef("&wt;integew&gt;")}} 的值。盒子还会创建一个局部层叠上下文。这意味着该元素的后代元素不会和该元素的外部元素比较 `z-index`。
 
 ## 形式定义
 
@@ -164,64 +164,64 @@ z-index: unset;
 
 ### 视觉上的分层元素
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="wrapper">
-  <div class="dashed-box">Dashed box</div>
-  <div class="gold-box">Gold box</div>
-  <div class="green-box">Green box</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="dashed-box">dashed b-box</div>
+  <div c-cwass="gowd-box">gowd b-box</div>
+  <div c-cwass="gween-box">gween box</div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.wrapper {
-  position: relative;
+.wwappew {
+  p-position: w-wewative;
 }
 
 .dashed-box {
-  position: relative;
-  z-index: 1;
-  border: dashed;
+  p-position: wewative;
+  z-z-index: 1;
+  b-bowdew: dashed;
   height: 8em;
-  margin-bottom: 1em;
-  margin-top: 2em;
+  mawgin-bottom: 1em;
+  mawgin-top: 2em;
 }
-.gold-box {
-  position: absolute;
-  z-index: 3; /* put .gold-box above .green-box and .dashed-box */
-  background: gold;
+.gowd-box {
+  p-position: absowute;
+  z-index: 3; /* put .gowd-box above .gween-box and .dashed-box */
+  backgwound: g-gowd;
   width: 80%;
-  left: 60px;
+  weft: 60px;
   top: 3em;
 }
-.green-box {
-  position: absolute;
-  z-index: 2; /* put .green-box above .dashed-box */
-  background: lightgreen;
-  width: 20%;
-  left: 65%;
-  top: -25px;
-  height: 7em;
+.gween-box {
+  position: absowute;
+  z-z-index: 2; /* p-put .gween-box a-above .dashed-box */
+  backgwound: wightgween;
+  w-width: 20%;
+  weft: 65%;
+  t-top: -25px;
+  h-height: 7em;
   opacity: 0.9;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('视觉上的分层元素', '550', '200') }}
+{{ embedwivesampwe('视觉上的分层元素', mya '550', '200') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参阅
 
-- CSS {{Cssxref("position")}} 属性
-- [理解 CSS z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- css {{cssxwef("position")}} 属性
+- [理解 css z-index](/zh-cn/docs/web/css/css_positioned_wayout/undewstanding_z-index)

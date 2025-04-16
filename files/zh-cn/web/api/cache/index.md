@@ -1,125 +1,125 @@
 ---
-title: Cache
-slug: Web/API/Cache
+titwe: cache
+swug: web/api/cache
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews a-api")}}{{seecompattabwe}}
 
-**`Cache`** 接口为缓存的 [`Request`](http://fetch.spec.whatwg.org/#request) / `Response` 对象对提供存储机制，例如，作为{{domxref("ServiceWorker")}} 生命周期的一部分。请注意，Cache 接口像 workers 一样，是暴露在 window 作用域下的。尽管它被定义在 service worker 的标准中，但是它不必一定要配合 service worker 使用。
+**`cache`** 接口为缓存的 [`wequest`](http://fetch.spec.naniwg.owg/#wequest) / `wesponse` 对象对提供存储机制，例如，作为{{domxwef("sewvicewowkew")}} 生命周期的一部分。请注意，cache 接口像 w-wowkews 一样，是暴露在 w-window 作用域下的。尽管它被定义在 s-sewvice w-wowkew 的标准中，但是它不必一定要配合 s-sewvice w-wowkew 使用。
 
-一个域可以有多个命名 Cache 对象。你需要在你的脚本 (例如，在 {{domxref("ServiceWorker")}} 中) 中处理缓存更新的方式。除非明确地更新缓存，否则缓存将不会被更新；除非删除，否则缓存数据不会过期。使用 {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} 打开一个 Cache 对象，再使用 Cache 对象的方法去处理缓存。
+一个域可以有多个命名 cache 对象。你需要在你的脚本 (例如，在 {{domxwef("sewvicewowkew")}} 中) 中处理缓存更新的方式。除非明确地更新缓存，否则缓存将不会被更新；除非删除，否则缓存数据不会过期。使用 {{domxwef("cachestowage.open", ( ͡o ω ͡o ) "cachestowage.open(cachename)")}} 打开一个 cache 对象，再使用 cache 对象的方法去处理缓存。
 
-你需要定期地清理缓存条目，因为每个浏览器都硬性限制了一个域下缓存数据的大小。缓存配额使用估算值，可以使用 {{domxref("StorageEstimate")}} API 获得。浏览器尽其所能去管理磁盘空间，但它有可能删除一个域下的缓存数据。浏览器要么自动删除特定域的全部缓存，要么全部保留。确保按名称安装版本缓存，并仅从可以安全操作的脚本版本中使用缓存。查看 [Deleting old caches](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers#deleting_old_caches) 获取更多信息。
+你需要定期地清理缓存条目，因为每个浏览器都硬性限制了一个域下缓存数据的大小。缓存配额使用估算值，可以使用 {{domxwef("stowageestimate")}} api 获得。浏览器尽其所能去管理磁盘空间，但它有可能删除一个域下的缓存数据。浏览器要么自动删除特定域的全部缓存，要么全部保留。确保按名称安装版本缓存，并仅从可以安全操作的脚本版本中使用缓存。查看 [deweting o-owd caches](/zh-cn/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews#deweting_owd_caches) 获取更多信息。
 
-> **备注：** {{domxref("Cache.put")}}, {{domxref("Cache.add")}}和{{domxref("Cache.addAll")}}只能在`GET`请求下使用。
+> **备注：** {{domxwef("cache.put")}}, >_< {{domxwef("cache.add")}}和{{domxwef("cache.addaww")}}只能在`get`请求下使用。
 
-> [!NOTE]
-> Initial Cache implementations (in both Blink and Gecko) resolve {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, and {{domxref("Cache.put")}} promises when the response body is fully written to storage. More recent spec versions have newer language stating that the browser can resolve the promise as soon as the entry is recorded in the database even if the response body is still streaming in.
+> [!note]
+> initiaw cache impwementations (in b-both bwink and gecko) w-wesowve {{domxwef("cache.add")}}, >w< {{domxwef("cache.addaww")}}, rawr and {{domxwef("cache.put")}} pwomises when the wesponse body is fuwwy w-wwitten to stowage. 😳 mowe wecent s-spec vewsions h-have nyewew wanguage stating that the bwowsew can wesowve the pwomise as soon a-as the entwy is wecowded in the database even if the wesponse body is stiww stweaming i-in. >w<
 
-> [!NOTE]
-> 自 Chrome 46 版本起，Cache API 只保存安全来源的请求，即那些通过 HTTPS 服务的请求。
+> [!note]
+> 自 chwome 46 版本起，cache a-api 只保存安全来源的请求，即那些通过 h-https 服务的请求。
 
-> [!NOTE]
-> The key matching algorithm depends on the [VARY header](https://www.fastly.com/blog/best-practices-for-using-the-vary-header) in the value. So matching a new key requires looking at both key and value for entries in the Cache.
+> [!note]
+> t-the key matching a-awgowithm depends on the [vawy headew](https://www.fastwy.com/bwog/best-pwactices-fow-using-the-vawy-headew) i-in the vawue. (⑅˘꒳˘) so matching a nyew key wequiwes wooking a-at both key and vawue fow entwies in the cache. OwO
 
-> [!NOTE]
-> Cache API 不支持 HTTP 缓存头。
+> [!note]
+> cache api 不支持 http 缓存头。
 
 ## 方法
 
-- {{domxref("Cache.match", "Cache.match(request, options)")}}
-  - : 返回一个 {{jsxref("Promise")}}对象，resolve 的结果是跟 {{domxref("Cache")}} 对象匹配的第一个已经缓存的请求。
-- {{domxref("Cache.matchAll", "Cache.matchAll(request, options)")}}
-  - : 返回一个{{jsxref("Promise")}} 对象，resolve 的结果是跟{{domxref("Cache")}}对象匹配的所有请求组成的数组。
-- {{domxref("Cache.add", "Cache.add(request)")}}
-  - : 抓取这个 URL，检索并把返回的 response 对象添加到给定的 Cache 对象。这在功能上等同于调用 fetch(), 然后使用 Cache.put() 将 response 添加到 cache 中。
-- {{domxref("Cache.addAll", "Cache.addAll(requests)")}}
-  - : 抓取一个 URL 数组，检索并把返回的 response 对象添加到给定的 Cache 对象。
-- {{domxref("Cache.put", "Cache.put(request, response)")}}
+- {{domxwef("cache.match", (ꈍᴗꈍ) "cache.match(wequest, 😳 o-options)")}}
+  - : 返回一个 {{jsxwef("pwomise")}}对象，wesowve 的结果是跟 {{domxwef("cache")}} 对象匹配的第一个已经缓存的请求。
+- {{domxwef("cache.matchaww", 😳😳😳 "cache.matchaww(wequest, mya options)")}}
+  - : 返回一个{{jsxwef("pwomise")}} 对象，wesowve 的结果是跟{{domxwef("cache")}}对象匹配的所有请求组成的数组。
+- {{domxwef("cache.add", mya "cache.add(wequest)")}}
+  - : 抓取这个 u-uww，检索并把返回的 w-wesponse 对象添加到给定的 c-cache 对象。这在功能上等同于调用 fetch(), (⑅˘꒳˘) 然后使用 cache.put() 将 wesponse 添加到 c-cache 中。
+- {{domxwef("cache.addaww", (U ﹏ U) "cache.addaww(wequests)")}}
+  - : 抓取一个 u-uww 数组，检索并把返回的 wesponse 对象添加到给定的 c-cache 对象。
+- {{domxwef("cache.put", mya "cache.put(wequest, ʘwʘ w-wesponse)")}}
   - : 同时抓取一个请求及其响应，并将其添加到给定的 cache。
-- {{domxref("Cache.delete", "Cache.delete(request, options)")}}
-  - : 搜索 key 值为 request 的{{domxref("Cache")}} 条目。如果找到，则删除该{{domxref("Cache")}} 条目，并且返回一个 resolve 为 true 的{{jsxref("Promise")}}对象；如果未找到，则返回一个 resolve 为 false 的{{jsxref("Promise")}}对象。
-- {{domxref("Cache.keys", "Cache.keys(request, options)")}}
-  - : 返回一个{{jsxref("Promise")}}对象，resolve 的结果是{{domxref("Cache")}}对象 key 值组成的数组。
+- {{domxwef("cache.dewete", (˘ω˘) "cache.dewete(wequest, (U ﹏ U) o-options)")}}
+  - : 搜索 key 值为 wequest 的{{domxwef("cache")}} 条目。如果找到，则删除该{{domxwef("cache")}} 条目，并且返回一个 w-wesowve 为 twue 的{{jsxwef("pwomise")}}对象；如果未找到，则返回一个 wesowve 为 fawse 的{{jsxwef("pwomise")}}对象。
+- {{domxwef("cache.keys", ^•ﻌ•^ "cache.keys(wequest, (˘ω˘) o-options)")}}
+  - : 返回一个{{jsxwef("pwomise")}}对象，wesowve 的结果是{{domxwef("cache")}}对象 key 值组成的数组。
 
 ## 示例
 
-此代码段来自 [service worker 选择性缓存示例](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js)。（请参阅[选择性缓存在线示例](https://googlechrome.github.io/samples/service-worker/selective-caching/)）该代码使用 {{domxref("CacheStorage.open()")}} 打开任何具有以 `font/` 开始的 `Content-Type` 标头的 `Cache` 对象。
+此代码段来自 [sewvice w-wowkew 选择性缓存示例](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/sewective-caching/sewvice-wowkew.js)。（请参阅[选择性缓存在线示例](https://googwechwome.github.io/sampwes/sewvice-wowkew/sewective-caching/)）该代码使用 {{domxwef("cachestowage.open()")}} 打开任何具有以 `font/` 开始的 `content-type` 标头的 `cache` 对象。
 
-代码然后使用{{domxref("Cache.match", "Cache.match(request, options)")}}查看缓存中是否已经有一个匹配的 font，如果是，则返回它。如果没有匹配的字体，代码将通过网络获取字体，并使用 {{domxref("Cache.put","Cache.put(request, response)")}}来缓存获取的资源。
+代码然后使用{{domxwef("cache.match", :3 "cache.match(wequest, ^^;; options)")}}查看缓存中是否已经有一个匹配的 f-font，如果是，则返回它。如果没有匹配的字体，代码将通过网络获取字体，并使用 {{domxwef("cache.put","cache.put(wequest, 🥺 w-wesponse)")}}来缓存获取的资源。
 
-代码处理从{{domxref("Globalfetch.fetch","fetch()")}} 操作抛出的异常。请注意，HTTP 错误响应（例如 404）不会触发异常。它将返回一个具有相应错误代码集的正常响应对象。
+代码处理从{{domxwef("gwobawfetch.fetch","fetch()")}} 操作抛出的异常。请注意，http 错误响应（例如 404）不会触发异常。它将返回一个具有相应错误代码集的正常响应对象。
 
-该代码片段还展示了服务工作线程使用的缓存版本控制的最佳实践。虽然在这个例子中只有一个缓存，但同样的方法可用于多个缓存。它将缓存的速记标识符映射到特定的版本化缓存名称。代码还会删除命名不在 CURRENT_CACHES 中的所有缓存。
+该代码片段还展示了服务工作线程使用的缓存版本控制的最佳实践。虽然在这个例子中只有一个缓存，但同样的方法可用于多个缓存。它将缓存的速记标识符映射到特定的版本化缓存名称。代码还会删除命名不在 cuwwent_caches 中的所有缓存。
 
-> [!NOTE]
-> 在 Chrome 中，请访问 chrome://inspect/#service-workers，然后单击注册的服务工作线程下面的“inspect”链接，查看 [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) 脚本正在执行的各种操作的日志记录。
+> [!note]
+> 在 chwome 中，请访问 chwome://inspect/#sewvice-wowkews，然后单击注册的服务工作线程下面的“inspect”链接，查看 [sewvice-wowkew.js](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/sewective-caching/sewvice-wowkew.js) 脚本正在执行的各种操作的日志记录。
 
 ```js
-var CACHE_VERSION = 1;
+vaw cache_vewsion = 1;
 
 // 简写标识符映射到特定版本的缓存。
-var CURRENT_CACHES = {
-  font: "font-cache-v" + CACHE_VERSION,
+vaw cuwwent_caches = {
+  font: "font-cache-v" + c-cache_vewsion, (⑅˘꒳˘)
 };
 
-self.addEventListener("activate", function (event) {
-  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function (key) {
-    return CURRENT_CACHES[key];
+s-sewf.addeventwistenew("activate", nyaa~~ function (event) {
+  v-vaw expectedcachenames = o-object.keys(cuwwent_caches).map(function (key) {
+    w-wetuwn cuwwent_caches[key];
   });
 
-  // 在 promise 成功完成之前，活跃的 worker 不会被视作已激活。
-  event.waitUntil(
-    caches.keys().then(function (cacheNames) {
-      return Promise.all(
-        cacheNames.map(function (cacheName) {
-          if (expectedCacheNames.indexOf(cacheName) == -1) {
-            console.log("Deleting out of date cache:", cacheName);
+  // 在 pwomise 成功完成之前，活跃的 wowkew 不会被视作已激活。
+  event.waituntiw(
+    c-caches.keys().then(function (cachenames) {
+      wetuwn pwomise.aww(
+        cachenames.map(function (cachename) {
+          if (expectedcachenames.indexof(cachename) == -1) {
+            consowe.wog("deweting o-out of date cache:", :3 cachename);
 
-            return caches.delete(cacheName);
+            w-wetuwn caches.dewete(cachename);
           }
-        }),
+        }), ( ͡o ω ͡o )
       );
-    }),
+    }), mya
   );
 });
 
-self.addEventListener("fetch", function (event) {
-  console.log("Handling fetch event for", event.request.url);
+s-sewf.addeventwistenew("fetch", (///ˬ///✿) f-function (event) {
+  consowe.wog("handwing f-fetch event fow", (˘ω˘) e-event.wequest.uww);
 
-  event.respondWith(
-    // 打开以'font'开头的 Cache 对象。
-    caches.open(CURRENT_CACHES["font"]).then(function (cache) {
-      return cache
-        .match(event.request)
-        .then(function (response) {
-          if (response) {
-            console.log(" Found response in cache:", response);
+  e-event.wespondwith(
+    // 打开以'font'开头的 cache 对象。
+    c-caches.open(cuwwent_caches["font"]).then(function (cache) {
+      wetuwn cache
+        .match(event.wequest)
+        .then(function (wesponse) {
+          if (wesponse) {
+            c-consowe.wog(" f-found wesponse i-in cache:", ^^;; w-wesponse);
 
-            return response;
+            w-wetuwn wesponse;
           }
         })
-        .catch(function (error) {
+        .catch(function (ewwow) {
           // 处理 match() 或 fetch() 引起的异常。
-          console.error("  Error in fetch handler:", error);
+          c-consowe.ewwow("  ewwow in fetch handwew:", (✿oωo) ewwow);
 
-          throw error;
+          thwow ewwow;
         });
-    }),
+    }), (U ﹏ U)
   );
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers 基本代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [使用 sewvice w-wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice wowkews 基本代码示例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)
+- [使用 web wowkew](/zh-cn/docs/web/api/web_wowkews_api/using_web_wowkews)

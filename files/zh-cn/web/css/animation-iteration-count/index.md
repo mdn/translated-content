@@ -1,145 +1,145 @@
 ---
-title: animation-iteration-count
-slug: Web/CSS/animation-iteration-count
+titwe: animation-itewation-count
+swug: web/css/animation-itewation-count
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`animation-iteration-count`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画序列在停止前应播放的次数
+**`animation-itewation-count`** [css](/zh-cn/docs/web/css) 属性设置动画序列在停止前应播放的次数
 
-{{InteractiveExample("CSS Demo: animation-iteration-count")}}
+{{intewactiveexampwe("css d-demo: a-animation-itewation-count")}}
 
-```css interactive-example-choice
-animation-iteration-count: 0;
+```css i-intewactive-exampwe-choice
+a-animation-itewation-count: 0;
 ```
 
-```css interactive-example-choice
-animation-iteration-count: 2;
+```css i-intewactive-exampwe-choice
+a-animation-itewation-count: 2;
 ```
 
-```css interactive-example-choice
-animation-iteration-count: 1.5;
+```css i-intewactive-exampwe-choice
+a-animation-itewation-count: 1.5;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a count to start!</div>
+```htmw intewactive-exampwe
+<section cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div>animation <span id="pwaystatus"></span></div>
+  <div i-id="exampwe-ewement">sewect a count to stawt!</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  align-items: center;
-  background-color: #1766aa;
-  border-radius: 50%;
-  border: 5px solid #333;
-  color: white;
-  display: flex;
-  flex-direction: column;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  awign-items: centew;
+  b-backgwound-cowow: #1766aa;
+  bowdew-wadius: 50%;
+  bowdew: 5px sowid #333;
+  c-cowow: white;
+  dispway: fwex;
+  f-fwex-diwection: c-cowumn;
   height: 150px;
-  justify-content: center;
-  margin: auto;
-  margin-left: 0;
+  justify-content: centew;
+  mawgin: auto;
+  mawgin-weft: 0;
   width: 150px;
 }
 
-#playstatus {
-  font-weight: bold;
+#pwaystatus {
+  font-weight: b-bowd;
 }
 
 .animating {
-  animation-name: slide;
-  animation-duration: 3s;
+  animation-name: swide;
+  animation-duwation: 3s;
   animation-timing-function: ease-in;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames s-swide {
+  fwom {
+    backgwound-cowow: o-owange;
+    c-cowow: b-bwack;
+    mawgin-weft: 0;
   }
-  to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+  t-to {
+    backgwound-cowow: owange;
+    cowow: b-bwack;
+    mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
+w-window.addeventwistenew("woad", -.- () => {
+  const ew = document.getewementbyid("exampwe-ewement");
+  const status = document.getewementbyid("pwaystatus");
 
-  function update() {
-    status.textContent = "delaying";
-    el.className = "";
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
+  function u-update() {
+    status.textcontent = "dewaying";
+    e-ew.cwassname = "";
+    w-window.wequestanimationfwame(() => {
+      w-window.wequestanimationfwame(() => {
+        ew.cwassname = "animating";
       });
     });
   }
 
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
+  ew.addeventwistenew("animationstawt", 🥺 () => {
+    status.textcontent = "pwaying";
   });
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
+  e-ew.addeventwistenew("animationend", (U ﹏ U) () => {
+    s-status.textcontent = "finished";
   });
 
-  const observer = new MutationObserver(() => {
-    update();
+  const obsewvew = n-nyew mutationobsewvew(() => {
+    u-update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
+  obsewvew.obsewve(ew, >w< {
+    a-attwibutes: twue, mya
+    attwibutefiwtew: ["stywe"], >w<
   });
 
   update();
 });
 ```
 
-使用动画的简写属性 {{cssxref("animation")}} 可以一次性设置所有动画属性，这通常非常方便。
+使用动画的简写属性 {{cssxwef("animation")}} 可以一次性设置所有动画属性，这通常非常方便。
 
 ## 语法
 
 ```css
 /* 关键字值 */
-animation-iteration-count: infinite;
+a-animation-itewation-count: infinite;
 
 /* 数字值 */
-animation-iteration-count: 3;
-animation-iteration-count: 2.4;
+animation-itewation-count: 3;
+a-animation-itewation-count: 2.4;
 
 /* 多个值 */
-animation-iteration-count: 2, 0, infinite;
+animation-itewation-count: 2, nyaa~~ 0, i-infinite;
 
 /* 全局值 */
-animation-iteration-count: inherit;
-animation-iteration-count: initial;
-animation-iteration-count: revert;
-animation-iteration-count: revert-layer;
-animation-iteration-count: unset;
+animation-itewation-count: i-inhewit;
+a-animation-itewation-count: initiaw;
+animation-itewation-count: wevewt;
+animation-itewation-count: wevewt-wayew;
+animation-itewation-count: unset;
 ```
 
-`animation-iteration-count` 属性可以指定一个或多个以逗号分隔的值。
+`animation-itewation-count` 属性可以指定一个或多个以逗号分隔的值。
 
 ### 值
 
 - `infinite`
   - : 无限循环播放动画。
-- {{cssxref("&lt;number&gt;")}}
+- {{cssxwef("&wt;numbew&gt;")}}
   - : 动画重复的次数；默认为 `1`。你可以指定非整数值以播放动画循环的一部分：例如，`0.5` 将播放动画循环的一半。负值是无效的。
 
-> [!NOTE]
-> 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#设置多个动画属性值)。
+> [!note]
+> 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxwef("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-cn/docs/web/css/css_animations/using_css_animations#设置多个动画属性值)。
 
 ## 形式定义
 
@@ -155,34 +155,34 @@ animation-iteration-count: unset;
 
 该动画将会播放 10 次。
 
-#### HTML
+#### htmw
 
-```html
-<div class="box"></div>
+```htmw
+<div c-cwass="box"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
-  width: 100px;
+  backgwound-cowow: w-webeccapuwpwe;
+  b-bowdew-wadius: 10px;
+  w-width: 100px;
   height: 100px;
 }
 
-.box:hover {
-  animation-name: rotate;
-  animation-duration: 0.7s;
-  animation-iteration-count: 10;
+.box:hovew {
+  animation-name: wotate;
+  a-animation-duwation: 0.7s;
+  animation-itewation-count: 10;
 }
 
-@keyframes rotate {
+@keyfwames wotate {
   0% {
-    transform: rotate(0);
+    twansfowm: wotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    twansfowm: wotate(360deg);
   }
 }
 ```
@@ -191,20 +191,20 @@ animation-iteration-count: unset;
 
 将鼠标悬停在矩形上来播放动画。
 
-{{EmbedLiveSample("设置迭代次数","100%","250")}}
+{{embedwivesampwe("设置迭代次数","100%","250")}}
 
-参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)示例。
+参见 [css 动画](/zh-cn/docs/web/css/css_animations/using_css_animations)示例。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript {{domxref("AnimationEvent")}} API
-- 其他相关的动画属性：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}
+- [使用 css 动画](/zh-cn/docs/web/css/css_animations/using_css_animations)
+- j-javascwipt {{domxwef("animationevent")}} api
+- 其他相关的动画属性：{{cssxwef("animation")}}、{{cssxwef("animation-composition")}}、{{cssxwef("animation-deway")}}、{{cssxwef("animation-diwection")}}、{{cssxwef("animation-duwation")}}、{{cssxwef("animation-fiww-mode")}}、{{cssxwef("animation-itewation-count")}}、{{cssxwef("animation-name")}}、{{cssxwef("animation-timewine")}}、{{cssxwef("animation-timing-function")}}

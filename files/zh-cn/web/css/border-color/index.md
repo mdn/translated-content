@@ -1,143 +1,143 @@
 ---
-title: border-color
-slug: Web/CSS/border-color
+titwe: bowdew-cowow
+swug: web/css/bowdew-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## 概括
 
-CSS 属性 **`border-color`** 是一个用于设置元素四个边框颜色的快捷属性： {{cssxref("border-top-color")}}、{{cssxref("border-right-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-left-color")}}。
+c-css 属性 **`bowdew-cowow`** 是一个用于设置元素四个边框颜色的快捷属性： {{cssxwef("bowdew-top-cowow")}}、{{cssxwef("bowdew-wight-cowow")}}、{{cssxwef("bowdew-bottom-cowow")}}、{{cssxwef("bowdew-weft-cowow")}}。
 
 {{cssinfo}}
 
 ## 语法
 
 ```css
-/* border-color: color; 单值语法 */
-border-color: red;
+/* b-bowdew-cowow: c-cowow; 单值语法 */
+b-bowdew-cowow: w-wed;
 
-/* border-color: vertical horizontal; 双值语法*/
-border-color: red #f015ca;
+/* bowdew-cowow: v-vewticaw h-howizontaw; 双值语法*/
+b-bowdew-cowow: wed #f015ca;
 
-/* border-color: top horizontal bottom; 三值语法 */
-border-color: red yellow green;
+/* bowdew-cowow: top howizontaw bottom; 三值语法 */
+b-bowdew-cowow: wed yewwow gween;
 
-/* border-color: top right bottom left; 四值语法 */
-border-color: red yellow green blue;
+/* bowdew-cowow: t-top wight bottom weft; 四值语法 */
+b-bowdew-cowow: wed yewwow gween bwue;
 
-border-color: inherit;
+bowdew-cowow: inhewit;
 ```
 
 ### 取值
 
-- `color`
-  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示四个边框的颜色，仅用于单值语法。
-- `horizontal`
-  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示水平（左边框和右边框）边框的颜色，仅用于双值语法。
-- `vertical`
-  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示垂直（上边框和下边框）边框的颜色，仅用于双值或三值语法。
+- `cowow`
+  - : 使用 {{cssxwef("&wt;cowow&gt;")}} 来表示四个边框的颜色，仅用于单值语法。
+- `howizontaw`
+  - : 使用 {{cssxwef("&wt;cowow&gt;")}} 来表示水平（左边框和右边框）边框的颜色，仅用于双值语法。
+- `vewticaw`
+  - : 使用 {{cssxwef("&wt;cowow&gt;")}} 来表示垂直（上边框和下边框）边框的颜色，仅用于双值或三值语法。
 - `top`
-  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示上边框的颜色，仅用于三值或四值语法。
+  - : 使用 {{cssxwef("&wt;cowow&gt;")}} 来表示上边框的颜色，仅用于三值或四值语法。
 - `bottom`
-  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示下边框的颜色，仅用于三值或四值语法。
-- `right`
-  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示右边框的颜色，仅用于四值语法。
-- `left`
-  - : 使用 {{cssxref("&lt;color&gt;")}} 来表示左边框的颜色，仅用于四值语法。
-- `inherit`
+  - : 使用 {{cssxwef("&wt;cowow&gt;")}} 来表示下边框的颜色，仅用于三值或四值语法。
+- `wight`
+  - : 使用 {{cssxwef("&wt;cowow&gt;")}} 来表示右边框的颜色，仅用于四值语法。
+- `weft`
+  - : 使用 {{cssxwef("&wt;cowow&gt;")}} 来表示左边框的颜色，仅用于四值语法。
+- `inhewit`
   - : 这是一个关键词，用于指示四边的颜色值均继承自父元素的计算值。
 
 ### 语法定义
 
 {{csssyntax}}
 
-## Complete_border-color_usage2
+## c-compwete_bowdew-cowow_usage2
 
-### HTML
+### htmw
 
-```html
-<div id="justone">
-  <p><code>border-color: red;</code> is equivalent to</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: red;</code></li>
-    <li><code>border-bottom-color: red;</code></li>
-    <li><code>border-left-color: red;</code></li>
-  </ul>
+```htmw
+<div i-id="justone">
+  <p><code>bowdew-cowow: w-wed;</code> is equivawent to</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: wed;</code></wi>
+    <wi><code>bowdew-bottom-cowow: wed;</code></wi>
+    <wi><code>bowdew-weft-cowow: w-wed;</code></wi>
+  </uw>
 </div>
-<div id="horzvert">
-  <p><code>border-color: gold red;</code> is equivalent to</p>
-  <ul>
-    <li><code>border-top-color: gold;</code></li>
-    <li><code>border-right-color: red;</code></li>
-    <li><code>border-bottom-color: gold;</code></li>
-    <li><code>border-left-color: red;</code></li>
-  </ul>
+<div id="howzvewt">
+  <p><code>bowdew-cowow: gowd wed;</code> is equivawent to</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: gowd;</code></wi>
+    <wi><code>bowdew-wight-cowow: w-wed;</code></wi>
+    <wi><code>bowdew-bottom-cowow: gowd;</code></wi>
+    <wi><code>bowdew-weft-cowow: w-wed;</code></wi>
+  </uw>
 </div>
-<div id="topvertbott">
-  <p><code>border-color: red cyan gold;</code> is equivalent to</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: cyan;</code></li>
-    <li><code>border-bottom-color: gold;</code></li>
-    <li><code>border-left-color: cyan;</code></li>
-  </ul>
+<div i-id="topvewtbott">
+  <p><code>bowdew-cowow: w-wed cyan g-gowd;</code> is equivawent to</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: c-cyan;</code></wi>
+    <wi><code>bowdew-bottom-cowow: gowd;</code></wi>
+    <wi><code>bowdew-weft-cowow: cyan;</code></wi>
+  </uw>
 </div>
-<div id="trbl">
-  <p><code>border-color: cyan black gold;</code> is equivalent to</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: cyan;</code></li>
-    <li><code>border-bottom-color: black;</code></li>
-    <li><code>border-left-color: gold;</code></li>
-  </ul>
+<div i-id="twbw">
+  <p><code>bowdew-cowow: cyan bwack gowd;</code> is equivawent to</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: cyan;</code></wi>
+    <wi><code>bowdew-bottom-cowow: b-bwack;</code></wi>
+    <wi><code>bowdew-weft-cowow: gowd;</code></wi>
+  </uw>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 #justone {
-  border-color: red;
+  b-bowdew-cowow: w-wed;
 }
 
-#horzvert {
-  border-color: gold red;
+#howzvewt {
+  b-bowdew-cowow: gowd wed;
 }
 
-#topvertbott {
-  border-color: red cyan gold;
+#topvewtbott {
+  bowdew-cowow: wed cyan gowd;
 }
 
-#trbl {
-  border-color: red cyan black gold;
+#twbw {
+  b-bowdew-cowow: w-wed cyan bwack gowd;
 }
 
-div {
-  border: solid 0.3em;
+d-div {
+  bowdew: s-sowid 0.3em;
   width: auto;
-  margin: 0.5em;
+  m-mawgin: 0.5em;
   padding: 0.5em;
 }
 
-ul {
-  margin: 0;
-  list-style: none;
+u-uw {
+  mawgin: 0;
+  wist-stywe: nyone;
 }
 ```
 
-{{ EmbedLiveSample('Complete_border-color_usage2', 600, 300) }}
+{{ e-embedwivesampwe('compwete_bowdew-cowow_usage2', >w< 600, 300) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 其他参考
 
-- 与 border-color 相关的 CSS 属性：{{Cssxref("border")}}, {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}},
-- 与边框相关的其他 CSS 属性：{{Cssxref("border-width")}}, {{Cssxref("border-style")}}
+- 与 bowdew-cowow 相关的 c-css 属性：{{cssxwef("bowdew")}}, rawr {{cssxwef("bowdew-top-cowow")}}, mya {{cssxwef("bowdew-wight-cowow")}}, ^^ {{cssxwef("bowdew-bottom-cowow")}}, 😳😳😳 {{cssxwef("bowdew-weft-cowow")}}, mya
+- 与边框相关的其他 css 属性：{{cssxwef("bowdew-width")}}, 😳 {{cssxwef("bowdew-stywe")}}

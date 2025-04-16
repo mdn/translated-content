@@ -1,41 +1,41 @@
 ---
-title: CSS Masking
-slug: Web/CSS/CSS_masking
+titwe: css masking
+swug: web/css/css_masking
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Masking** 是一个 [CSS](/zh-CN/docs/Web/CSS) 模块，它定义了部分或完全隐藏视觉元素部分的方法，包括遮罩和剪裁。
+**css m-masking** 是一个 [css](/zh-cn/docs/web/css) 模块，它定义了部分或完全隐藏视觉元素部分的方法，包括遮罩和剪裁。
 
-## Reference
+## w-wefewence
 
-### Properties
+### p-pwopewties
 
-- {{cssxref("clip")}} {{deprecated_inline}}
-- {{cssxref("clip-path")}}
-- {{cssxref("clip-rule")}}
-- {{cssxref("mask")}}
-- {{cssxref("mask-border")}}
-- {{cssxref("mask-border-mode")}}
-- {{cssxref("mask-border-outset")}}
-- {{cssxref("mask-border-repeat")}}
-- {{cssxref("mask-border-slice")}}
-- {{cssxref("mask-border-source")}}
-- {{cssxref("mask-border-width")}}
-- {{cssxref("mask-clip")}}
-- {{cssxref("mask-composite")}}
-- {{cssxref("mask-image")}}
-- {{cssxref("mask-mode")}}
-- {{cssxref("mask-origin")}}
-- {{cssxref("mask-position")}}
-- {{cssxref("mask-repeat")}}
-- {{cssxref("mask-size")}}
-- {{cssxref("mask-type")}}
+- {{cssxwef("cwip")}} {{depwecated_inwine}}
+- {{cssxwef("cwip-path")}}
+- {{cssxwef("cwip-wuwe")}}
+- {{cssxwef("mask")}}
+- {{cssxwef("mask-bowdew")}}
+- {{cssxwef("mask-bowdew-mode")}}
+- {{cssxwef("mask-bowdew-outset")}}
+- {{cssxwef("mask-bowdew-wepeat")}}
+- {{cssxwef("mask-bowdew-swice")}}
+- {{cssxwef("mask-bowdew-souwce")}}
+- {{cssxwef("mask-bowdew-width")}}
+- {{cssxwef("mask-cwip")}}
+- {{cssxwef("mask-composite")}}
+- {{cssxwef("mask-image")}}
+- {{cssxwef("mask-mode")}}
+- {{cssxwef("mask-owigin")}}
+- {{cssxwef("mask-position")}}
+- {{cssxwef("mask-wepeat")}}
+- {{cssxwef("mask-size")}}
+- {{cssxwef("mask-type")}}
 
-## Guides
+## g-guides
 
-_None._
+_none._
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}

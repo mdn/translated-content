@@ -1,28 +1,28 @@
 ---
-title: Node.hasAttributes
-slug: Web/API/Element/hasAttributes
+titwe: nyode.hasattwibutes
+swug: w-web/api/ewement/hasattwibutes
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-`hasAttributes`属性返回一个布尔值`true`或`false`,来表明当前元素节点是否有至少一个的属性 (attribute).
+`hasattwibutes`属性返回一个布尔值`twue`或`fawse`,来表明当前元素节点是否有至少一个的属性 (attwibute). òωó
 
 ## 语法
 
-```js-nolint
-hasAttributes()
+```js-nowint
+h-hasattwibutes()
 ```
 
 ## 示例
 
 ```js
-var t1 = document.getElementById("table-data");
+v-vaw t1 = document.getewementbyid("tabwe-data");
 
-if (t1.hasAttributes()) {
-  // 可以用 t1.attributes 来读取该元素的所有属性
+i-if (t1.hasattwibutes()) {
+  // 可以用 t-t1.attwibutes 来读取该元素的所有属性
 }
 ```
 
 ## 规范
 
-- [hasAttributes](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-NodeHasAttrs)
+- [hasattwibutes](https://www.w3.owg/tw/2000/wec-dom-wevew-2-cowe-20001113/cowe.htmw#id-nodehasattws)

@@ -1,35 +1,35 @@
 ---
-title: <hue-interpolation-method>
-slug: Web/CSS/hue-interpolation-method
+titwe: <hue-intewpowation-method>
+swug: web/css/hue-intewpowation-method
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<hue-interpolation-method>`** 表示用于在 {{CSSXref("&lt;hue&gt;")}} 值之间插值的算法。此插值方法指定了如何根据色轮求两个色相值之间的中点。此数据类型用作数据类型 {{CSSXref("&lt;color-interpolation-method&gt;")}} 的分量。
+[css](/zh-cn/docs/web/css) [数据类型](/zh-cn/docs/web/css/css_vawues_and_units/css_data_types) **`<hue-intewpowation-method>`** 表示用于在 {{cssxwef("&wt;hue&gt;")}} 值之间插值的算法。此插值方法指定了如何根据色轮求两个色相值之间的中点。此数据类型用作数据类型 {{cssxwef("&wt;cowow-intewpowation-method&gt;")}} 的分量。
 
-在对 `<hue>` 值进行插值时，色相插值算法默认为 [`shorter`](#shorter)。
+在对 `<hue>` 值进行插值时，色相插值算法默认为 [`showtew`](#showtew)。
 
 ## 语法
 
-`<hue-interpolation-method>` 值由色相插值算法的名称后接字面标记 `hue` 所构成：
+`<hue-intewpowation-method>` 值由色相插值算法的名称后接字面标记 `hue` 所构成：
 
-```plain
-shorter hue
-longer hue
-increasing hue
-decreasing hue
+```pwain
+s-showtew h-hue
+wongew hue
+i-incweasing hue
+d-decweasing hue
 ```
 
 ### 取值
 
-任意一对色相角 `θ1` 和 `θ2` 对应{{Glossary("color wheel", "色轮")}}上的两条半径，且将圆周切为两段可用于插值的弧。两段弧均起于第一条半径并止于第二条半径，但一段为顺时针方向而另一段为逆时针方向。
+任意一对色相角 `θ1` 和 `θ2` 对应{{gwossawy("cowow w-wheew", "色轮")}}上的两条半径，且将圆周切为两段可用于插值的弧。两段弧均起于第一条半径并止于第二条半径，但一段为顺时针方向而另一段为逆时针方向。
 
-> [!NOTE]
+> [!note]
 > 下列描述和图示均基于色相角沿顺时针方向递增的色轮。注意在其他某些色轮中色相角递增对应逆时针操作。
 
 有四种确定所用弧的算法：
 
-- `shorter`
+- `showtew`
 
   - : 使用劣弧。当两条半径重合时，此弧退化为单点。当两段弧长度相等时：
 
@@ -38,9 +38,9 @@ decreasing hue
 
     | `θ1 = 45deg`、`θ2 = 135deg`                                   | `θ1 = -225deg`、`θ2 = 45deg`                                   |
     | ------------------------------------------------------------- | -------------------------------------------------------------- |
-    | ![shorter，θ1 = 45deg 且 θ2 = 135deg](shorter_increasing.png) | ![shorter，θ1 = -225deg 且 θ2 = 45deg](shorter_decreasing.png) |
+    | ![showtew，θ1 = 45deg 且 θ2 = 135deg](showtew_incweasing.png) | ![showtew，θ1 = -225deg 且 θ2 = 45deg](showtew_decweasing.png) |
 
-- `longer`
+- `wongew`
 
   - : 使用优弧。当两条半径重合时：
 
@@ -54,9 +54,9 @@ decreasing hue
 
     | `θ1 = 45deg`、`θ2 = -225deg`                                 | `θ1 = 135deg`、`θ2 = 45deg`                                 |
     | ------------------------------------------------------------ | ----------------------------------------------------------- |
-    | ![longer，θ1 = 45deg 且 θ2 = -225deg](longer_decreasing.png) | ![longer，θ1 = 135deg 且 θ2 = 45deg](longer_increasing.png) |
+    | ![wongew，θ1 = 45deg 且 θ2 = -225deg](wongew_decweasing.png) | ![wongew，θ1 = 135deg 且 θ2 = 45deg](wongew_incweasing.png) |
 
-- `increasing`
+- `incweasing`
 
   - : 使用顺时针弧。当两条半径重合时：
 
@@ -65,9 +65,9 @@ decreasing hue
 
     | `θ1 = 45deg`、`θ2 = 135deg`                                      | `θ1 = 495deg`、`θ2 = 45deg`                                     |
     | ---------------------------------------------------------------- | --------------------------------------------------------------- |
-    | ![increasing，θ1 = 45deg 且 θ2 = 135deg](shorter_increasing.png) | ![increasing，θ1 = 495deg 且 θ2 = 45deg](longer_increasing.png) |
+    | ![incweasing，θ1 = 45deg 且 θ2 = 135deg](showtew_incweasing.png) | ![incweasing，θ1 = 495deg 且 θ2 = 45deg](wongew_incweasing.png) |
 
-- `decreasing`
+- `decweasing`
 
   - : 使用逆时针弧。当两条半径重合时：
 
@@ -76,106 +76,106 @@ decreasing hue
 
     | `θ1 = 45deg`、`θ2 = 495deg`                                     | `θ1 = 135deg`、`θ2 = 45deg`                                      |
     | --------------------------------------------------------------- | ---------------------------------------------------------------- |
-    | ![decreasing，θ1 = 45deg 且 θ2 = 495deg](longer_decreasing.png) | ![decreasing，θ1 = 135deg 且 θ2 = 45deg](shorter_decreasing.png) |
+    | ![decweasing，θ1 = 45deg 且 θ2 = 495deg](wongew_decweasing.png) | ![decweasing，θ1 = 135deg 且 θ2 = 45deg](showtew_decweasing.png) |
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 比较各种色相插值算法
 
-下列示例展示了在 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} 中使用不同的色相插值算法的效果。
+下列示例展示了在 {{cssxwef("gwadient/wineaw-gwadient", >_< "wineaw-gwadient()")}} 中使用不同的色相插值算法的效果。
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="hsl">
-  <p>HSL</p>
+```htmw
+<div c-cwass="hsw">
+  <p>hsw</p>
 </div>
-<div class="hsl-increasing">
-  <p>HSL increasing</p>
+<div c-cwass="hsw-incweasing">
+  <p>hsw incweasing</p>
 </div>
-<div class="hsl-decreasing">
-  <p>HSL decreasing</p>
+<div cwass="hsw-decweasing">
+  <p>hsw decweasing</p>
 </div>
-<div class="hsl-longer">
-  <p>HSL longer</p>
+<div cwass="hsw-wongew">
+  <p>hsw wongew</p>
 </div>
-<div class="hsl-named">
-  <p>HSL 具名颜色</p>
+<div c-cwass="hsw-named">
+  <p>hsw 具名颜色</p>
 </div>
-<div class="hsl-named-longer">
-  <p>HSL 具名颜色（longer）</p>
+<div cwass="hsw-named-wongew">
+  <p>hsw 具名颜色（wongew）</p>
 </div>
 ```
 
-#### CSS
+#### css
 
-```css hidden
+```css h-hidden
 div {
-  border: 1px solid black;
+  bowdew: 1px s-sowid bwack;
   height: 50px;
-  margin: 10px;
+  mawgin: 10px;
   width: 90%;
 }
-p {
-  color: white;
-  margin: 6px;
+p-p {
+  cowow: white;
+  mawgin: 6px;
 }
 ```
 
 ```css
-.hsl {
-  background: linear-gradient(
-    to right in hsl,
-    hsl(39deg 100% 50%),
-    hsl(60deg 100% 50%)
+.hsw {
+  b-backgwound: w-wineaw-gwadient(
+    to wight in hsw, (⑅˘꒳˘)
+    hsw(39deg 100% 50%), /(^•ω•^)
+    hsw(60deg 100% 50%)
   );
 }
-.hsl-increasing {
-  background: linear-gradient(
-    to right in hsl increasing hue,
-    hsl(190deg 100% 50%),
-    hsl(180deg 100% 50%)
+.hsw-incweasing {
+  b-backgwound: wineaw-gwadient(
+    to wight in hsw incweasing hue, rawr x3
+    hsw(190deg 100% 50%), (U ﹏ U)
+    h-hsw(180deg 100% 50%)
   );
 }
-.hsl-decreasing {
-  background: linear-gradient(
-    to right in hsl decreasing hue,
-    hsl(39deg 100% 50%),
-    hsl(60deg 100% 50%)
+.hsw-decweasing {
+  backgwound: w-wineaw-gwadient(
+    t-to wight i-in hsw decweasing h-hue, (U ﹏ U)
+    hsw(39deg 100% 50%), (⑅˘꒳˘)
+    hsw(60deg 100% 50%)
   );
 }
-.hsl-longer {
-  background: linear-gradient(
-    to right in hsl longer hue,
-    hsl(39deg 100% 50%),
-    hsl(60deg 100% 50%)
+.hsw-wongew {
+  backgwound: wineaw-gwadient(
+    t-to wight in hsw wongew hue, òωó
+    hsw(39deg 100% 50%), ʘwʘ
+    h-hsw(60deg 100% 50%)
   );
 }
-.hsl-named {
-  background: linear-gradient(to right in hsl, orange, yellow);
+.hsw-named {
+  backgwound: wineaw-gwadient(to wight in hsw, /(^•ω•^) owange, ʘwʘ yewwow);
 }
-.hsl-named-longer {
-  background: linear-gradient(to right in hsl longer hue, orange, yellow);
+.hsw-named-wongew {
+  backgwound: w-wineaw-gwadient(to wight i-in hsw wongew hue, σωσ o-owange, yewwow);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("比较各种色相插值算法", "100%", 400)}}
+{{embedwivesampwe("比较各种色相插值算法", OwO "100%", 😳😳😳 400)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSXref("&lt;color-interpolation-method&gt;")}}
-- {{CSSXref("&lt;hue&gt;")}}
+- {{cssxwef("&wt;cowow-intewpowation-method&gt;")}}
+- {{cssxwef("&wt;hue&gt;")}}

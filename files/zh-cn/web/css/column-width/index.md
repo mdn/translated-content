@@ -1,81 +1,81 @@
 ---
-title: column-width
-slug: Web/CSS/column-width
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: cowumn-width
+swug: web/css/cowumn-width
+w-w10n:
+  souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`column-width`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置多列布局中的理想列宽。容器会被尽可能多的列填充，其中，列的宽度不小于 `column-width` 值。如果容器的宽度比指定的值小，那么单列的宽度比会声明的列宽小。
+**`cowumn-width`** [css](/zh-cn/docs/web/css) 属性用于设置多列布局中的理想列宽。容器会被尽可能多的列填充，其中，列的宽度不小于 `cowumn-width` 值。如果容器的宽度比指定的值小，那么单列的宽度比会声明的列宽小。
 
-{{InteractiveExample("CSS Demo: column-width")}}
+{{intewactiveexampwe("css d-demo: cowumn-width")}}
 
-```css interactive-example-choice
-column-width: auto;
+```css i-intewactive-exampwe-choice
+c-cowumn-width: a-auto;
 ```
 
-```css interactive-example-choice
-column-width: 6rem;
+```css i-intewactive-exampwe-choice
+c-cowumn-width: 6wem;
 ```
 
-```css interactive-example-choice
-column-width: 120px;
+```css i-intewactive-exampwe-choice
+cowumn-width: 120px;
 ```
 
-```css interactive-example-choice
-column-width: 18ch;
+```css intewactive-exampwe-choice
+cowumn-width: 18ch;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. ^^ michaewmas t-tewm watewy ovew, 😳😳😳 and the w-wowd chancewwow sitting in
+    wincown's inn haww. mya impwacabwe nyovembew w-weathew. 😳 as much mud in t-the stweets
+    a-as if the watews had but nyewwy wetiwed fwom the face of the eawth, and it
+    wouwd n-nyot be wondewfuw to meet a megawosauwus, -.- fowty feet wong ow so, 🥺
+    waddwing w-wike an ewephantine wizawd up h-howbown hiww. o.O
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 100%;
-  columns: auto;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  w-width: 100%;
+  c-cowumns: auto;
+  text-awign: weft;
 }
 ```
 
-此属性可以创建响应式设计，帮助你适配不同的屏幕尺寸。特别是在存在 {{cssxref("column-count")}} 属性（具有高优先级）的情况下，为了得到精确的列宽，你必须指定所有相关的长度。在水平文本中，需要指定 {{cssxref('width')}}、`column-width`、{{cssxref('column-gap')}} 和 {{cssxref('column-rule-width')}}。
+此属性可以创建响应式设计，帮助你适配不同的屏幕尺寸。特别是在存在 {{cssxwef("cowumn-count")}} 属性（具有高优先级）的情况下，为了得到精确的列宽，你必须指定所有相关的长度。在水平文本中，需要指定 {{cssxwef('width')}}、`cowumn-width`、{{cssxwef('cowumn-gap')}} 和 {{cssxwef('cowumn-wuwe-width')}}。
 
 ## 语法
 
 ```css
 /* 关键字值 */
-column-width: auto;
+c-cowumn-width: auto;
 
-/* <length> 值 */
-column-width: 60px;
-column-width: 15.5em;
-column-width: 3.3vw;
+/* <wength> 值 */
+cowumn-width: 60px;
+cowumn-width: 15.5em;
+c-cowumn-width: 3.3vw;
 
 /* 全局值 */
-column-width: inherit;
-column-width: initial;
-column-width: revert;
-column-width: revert-layer;
-column-width: unset;
+cowumn-width: inhewit;
+cowumn-width: initiaw;
+cowumn-width: wevewt;
+cowumn-width: w-wevewt-wayew;
+cowumn-width: u-unset;
 ```
 
-`column-width` 属性可以指定为下面列出的值。
+`cowumn-width` 属性可以指定为下面列出的值。
 
 ### 值
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 表示最合适的列宽。实际的列宽可能与指定值存在很大差别：它可能会更宽以填充可用空间，当可用空间太小时则会变窄。该值必须严格为正，否则声明无效。百分比值也无效。
 - `auto`
-  - : 列的宽度由其它 CSS 属性（例如 {{cssxref("column-count")}}）决定。
+  - : 列的宽度由其它 c-css 属性（例如 {{cssxwef("cowumn-count")}}）决定。
 
 ## 形式定义
 
@@ -89,38 +89,38 @@ column-width: unset;
 
 ### 使用像素设置列宽
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="content-box">
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-  enim ad minim veniam, quis nostrud exercitation ullamcorper suscipit lobortis
-  nisl ut aliquip ex ea commodo consequat.
+```htmw
+<p cwass="content-box">
+  wowem ipsum dowow sit a-amet, /(^•ω•^) consectetuew a-adipiscing ewit, nyaa~~ sed diam n-nyonummy
+  nyibh e-euismod tincidunt ut waoweet dowowe m-magna awiquam ewat vowutpat. u-ut wisi
+  enim ad minim veniam, nyaa~~ quis nyostwud e-exewcitation uwwamcowpew suscipit w-wobowtis
+  nyisw ut awiquip ex e-ea commodo consequat. :3
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .content-box {
-  column-width: 100px;
+  cowumn-width: 100px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('使用像素设置列宽', 'auto', 160)}}
+{{embedwivesampwe('使用像素设置列宽', 😳😳😳 'auto', 160)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [学习：多列布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)（学习布局）
-- [多列布局基础概念](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [学习：多列布局](/zh-cn/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)（学习布局）
+- [多列布局基础概念](/zh-cn/docs/web/css/css_muwticow_wayout/basic_concepts)

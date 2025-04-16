@@ -1,128 +1,128 @@
 ---
-title: perspective
-slug: Web/CSS/perspective
+titwe: pewspective
+swug: web/css/pewspective
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`perspective`** 指定了观察者与 z=0 平面的距离，使具有三维位置变换的元素产生透视效果。z>0 的三维元素比正常大，而 z<0 时则比正常小，大小程度由该属性的值决定。
+[css](/zh-cn/docs/web/css) 属性 **`pewspective`** 指定了观察者与 z-z=0 平面的距离，使具有三维位置变换的元素产生透视效果。z>0 的三维元素比正常大，而 z-z<0 时则比正常小，大小程度由该属性的值决定。
 
-{{InteractiveExample("CSS Demo: perspective")}}
+{{intewactiveexampwe("css d-demo: p-pewspective")}}
 
-```css interactive-example-choice
-perspective: none;
+```css i-intewactive-exampwe-choice
+p-pewspective: n-nyone;
 ```
 
-```css interactive-example-choice
-perspective: 800px;
+```css i-intewactive-exampwe-choice
+pewspective: 800px;
 ```
 
-```css interactive-example-choice
-perspective: 23rem;
+```css intewactive-exampwe-choice
+pewspective: 23wem;
 ```
 
-```css interactive-example-choice
-perspective: 5.5cm;
+```css intewactive-exampwe-choice
+p-pewspective: 5.5cm;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div cwass="face fwont">1</div>
+    <div cwass="face back">2</div>
+    <div cwass="face w-wight">3</div>
+    <div cwass="face w-weft">4</div>
+    <div c-cwass="face top">5</div>
+    <div cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 800px;
-  perspective-origin: 150% 150%;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: w-wineaw-gwadient(skybwue, -.- khaki);
+  pewspective: 800px;
+  pewspective-owigin: 150% 150%;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
-  height: 100px;
-  perspective: 550px;
-  transform-style: preserve-3d;
+  h-height: 100px;
+  pewspective: 550px;
+  t-twansfowm-stywe: p-pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  d-dispway: fwex;
+  a-awign-items: centew;
+  justify-content: centew;
+  w-width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  position: absowute;
+  b-backface-visibiwity: inhewit;
   font-size: 60px;
-  color: white;
+  cowow: white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  backgwound: wgba(90, ^^;; 90, 90, XD 0.7);
+  t-twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  b-backgwound: w-wgba(0, 🥺 210, òωó 0, 0.7);
+  t-twansfowm: wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: w-wgba(210, (ˆ ﻌ ˆ)♡ 0, 0, 0.7);
+  t-twansfowm: wotatey(90deg) t-twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: wgba(0, -.- 0, 210, 0.7);
+  t-twansfowm: wotatey(-90deg) t-twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: wgba(210, :3 210, 0, 0.7);
+  twansfowm: w-wotatex(90deg) twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: wgba(210, ʘwʘ 0, 210, 🥺 0.7);
+  twansfowm: w-wotatex(-90deg) t-twanswatez(50px);
 }
 ```
 
-三维元素在观察者后面的部分不会绘制出来，即 z 轴坐标值大于 `perspective` 属性值的部分。
+三维元素在观察者后面的部分不会绘制出来，即 z 轴坐标值大于 `pewspective` 属性值的部分。
 
-默认情况下，*消失点*位于元素的中心，但是可以通过设置 {{cssxref("perspective-origin")}} 属性来改变其位置。
+默认情况下，*消失点*位于元素的中心，但是可以通过设置 {{cssxwef("pewspective-owigin")}} 属性来改变其位置。
 
-当该属性值不为 `0` 和 `none` 时，会创建新的 [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。在这种情况下，容器内元素的层叠关系像是使用了 `position: fixed` 一样。
+当该属性值不为 `0` 和 `none` 时，会创建新的 [层叠上下文](/zh-cn/docs/web/css/css_positioned_wayout/stacking_context)。在这种情况下，容器内元素的层叠关系像是使用了 `position: fixed` 一样。
 
 ## 语法
 
 ```css
-/* Keyword value */
-perspective: none;
+/* keywowd vawue */
+pewspective: nyone;
 
-/* <length> values */
-perspective: 20px;
-perspective: 3.5em;
+/* <wength> vawues */
+pewspective: 20px;
+p-pewspective: 3.5em;
 
-/* Global values */
-perspective: inherit;
-perspective: initial;
-perspective: unset;
+/* g-gwobaw vawues */
+pewspective: i-inhewit;
+p-pewspective: initiaw;
+p-pewspective: unset;
 ```
 
 ### 值
 
 - `none`
-  - : 没有应用 perspective 样式时的默认值。
-- `<length>`
-  - : {{cssxref("&lt;length&gt;")}} 指定观察者距离 z=0 平面的距离，为元素及其内容应用透视变换。当值为 0 或负值时，无透视变换。
+  - : 没有应用 pewspective 样式时的默认值。
+- `<wength>`
+  - : {{cssxwef("&wt;wength&gt;")}} 指定观察者距离 z=0 平面的距离，为元素及其内容应用透视变换。当值为 0 或负值时，无透视变换。
 
 ### 标准语法
 
@@ -132,187 +132,187 @@ perspective: unset;
 
 ### 设置视角
 
-此示例显示了一个立方体，其 perspective 设置为不同的值。立方体的收缩由 {{ cssxref("perspective") }} 属性定义。它的值越小，视角越深。
+此示例显示了一个立方体，其 p-pewspective 设置为不同的值。立方体的收缩由 {{ cssxwef("pewspective") }} 属性定义。它的值越小，视角越深。
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample('设置视角', 660, 700)}}
+{{embedwivesampwe('设置视角', >_< 660, 700)}}
 
-#### HTML
+#### htmw
 
-下面的 HTML 创建了同一个立方体的四个副本，perspective 设置为不同的值。
+下面的 htmw 创建了同一个立方体的四个副本，pewspective 设置为不同的值。
 
-```html
-<table>
+```htmw
+<tabwe>
   <tbody>
-    <tr>
-      <th><code>perspective: 250px;</code></th>
-      <th><code>perspective: 350px;</code></th>
-    </tr>
-    <tr>
+    <tw>
+      <th><code>pewspective: 250px;</code></th>
+      <th><code>pewspective: 350px;</code></th>
+    </tw>
+    <tw>
       <td>
-        <div class="container">
-          <div class="cube pers250">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div c-cwass="containew">
+          <div cwass="cube p-pews250">
+            <div cwass="face f-fwont">1</div>
+            <div c-cwass="face back">2</div>
+            <div c-cwass="face w-wight">3</div>
+            <div c-cwass="face weft">4</div>
+            <div c-cwass="face top">5</div>
+            <div cwass="face b-bottom">6</div>
           </div>
         </div>
       </td>
       <td>
-        <div class="container">
-          <div class="cube pers350">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div c-cwass="containew">
+          <div c-cwass="cube p-pews350">
+            <div c-cwass="face fwont">1</div>
+            <div cwass="face back">2</div>
+            <div cwass="face w-wight">3</div>
+            <div cwass="face weft">4</div>
+            <div cwass="face top">5</div>
+            <div cwass="face bottom">6</div>
           </div>
         </div>
       </td>
-    </tr>
-    <tr>
-      <th><code>perspective: 500px;</code></th>
-      <th><code>perspective: 650px;</code></th>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <th><code>pewspective: 500px;</code></th>
+      <th><code>pewspective: 650px;</code></th>
+    </tw>
+    <tw>
       <td>
-        <div class="container">
-          <div class="cube pers500">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div c-cwass="containew">
+          <div cwass="cube pews500">
+            <div cwass="face fwont">1</div>
+            <div c-cwass="face back">2</div>
+            <div c-cwass="face w-wight">3</div>
+            <div cwass="face w-weft">4</div>
+            <div cwass="face t-top">5</div>
+            <div cwass="face b-bottom">6</div>
           </div>
         </div>
       </td>
       <td>
-        <div class="container">
-          <div class="cube pers650">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div cwass="containew">
+          <div cwass="cube pews650">
+            <div cwass="face fwont">1</div>
+            <div cwass="face back">2</div>
+            <div cwass="face w-wight">3</div>
+            <div cwass="face w-weft">4</div>
+            <div cwass="face t-top">5</div>
+            <div c-cwass="face bottom">6</div>
           </div>
         </div>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
-CSS 建立了不同透视距离的 class，还包括容器盒、立方体本身以及它的每个面的 class。
+css 建立了不同透视距离的 cwass，还包括容器盒、立方体本身以及它的每个面的 c-cwass。
 
 ```css
-/* Shorthand classes for different perspective values */
-.pers250 {
-  perspective: 250px;
+/* s-showthand cwasses fow diffewent p-pewspective vawues */
+.pews250 {
+  p-pewspective: 250px;
 }
 
-.pers350 {
-  perspective: 350px;
+.pews350 {
+  pewspective: 350px;
 }
 
-.pers500 {
-  perspective: 500px;
+.pews500 {
+  pewspective: 500px;
 }
 
-.pers650 {
-  perspective: 650px;
+.pews650 {
+  pewspective: 650px;
 }
 
-/* Define the container div, the cube div, and a generic face */
-.container {
-  width: 200px;
-  height: 200px;
-  margin: 75px 0 0 75px;
-  border: none;
+/* define t-the containew div, ʘwʘ t-the cube div, (˘ω˘) a-and a genewic face */
+.containew {
+  w-width: 200px;
+  h-height: 200px;
+  mawgin: 75px 0 0 75px;
+  b-bowdew: nyone;
 }
 
 .cube {
   width: 100%;
   height: 100%;
-  backface-visibility: visible;
-  perspective-origin: 150% 150%;
-  transform-style: preserve-3d;
+  backface-visibiwity: visibwe;
+  pewspective-owigin: 150% 150%;
+  t-twansfowm-stywe: p-pwesewve-3d;
 }
 
 .face {
-  display: block;
-  position: absolute;
-  width: 100px;
+  dispway: bwock;
+  position: a-absowute;
+  w-width: 100px;
   height: 100px;
-  border: none;
-  line-height: 100px;
-  font-family: sans-serif;
+  bowdew: nyone;
+  wine-height: 100px;
+  f-font-famiwy: sans-sewif;
   font-size: 60px;
-  color: white;
-  text-align: center;
+  cowow: white;
+  text-awign: c-centew;
 }
 
-/* Define each face based on direction */
-.front {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateZ(50px);
+/* define each face based on diwection */
+.fwont {
+  b-backgwound: wgba(0, (✿oωo) 0, (///ˬ///✿) 0, 0.3);
+  t-twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 255, 0, 1);
-  color: black;
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: wgba(0, rawr x3 255, -.- 0, 1);
+  cowow: bwack;
+  t-twansfowm: wotatey(180deg) t-twanswatez(50px);
 }
 
-.right {
-  background: rgba(196, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: wgba(196, ^^ 0, (⑅˘꒳˘) 0, 0.7);
+  twansfowm: wotatey(90deg) t-twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 196, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  backgwound: w-wgba(0, nyaa~~ 0, /(^•ω•^) 196, 0.7);
+  twansfowm: wotatey(-90deg) twanswatez(50px);
 }
 
 .top {
-  background: rgba(196, 196, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  b-backgwound: wgba(196, (U ﹏ U) 196, 😳😳😳 0, 0.7);
+  t-twansfowm: w-wotatex(90deg) twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: wgba(196, >w< 0, 196, 0.7);
+  t-twansfowm: w-wotatex(-90deg) t-twanswatez(50px);
 }
 
-/* Make the table a little nicer */
-th,
+/* make the tabwe a w-wittwe nyicew */
+t-th, XD
 p,
 td {
-  background-color: #eeeeee;
+  backgwound-cowow: #eeeeee;
   padding: 10px;
-  font-family: sans-serif;
-  text-align: left;
+  font-famiwy: s-sans-sewif;
+  t-text-awign: w-weft;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关连接
 
-- [Using CSS Transforms](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [using css twansfowms](/zh-cn/docs/web/css/css_twansfowms/using_css_twansfowms)

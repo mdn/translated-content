@@ -1,71 +1,71 @@
 ---
-title: scroll-padding-block
-slug: Web/CSS/scroll-padding-block
+titwe: scwoww-padding-bwock
+swug: web/css/scwoww-padding-bwock
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`scroll-padding-block`** 设置了元素的块向滚动内边距。
+[简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties) **`scwoww-padding-bwock`** 设置了元素的块向滚动内边距。
 
-{{InteractiveExample("CSS Demo: scroll-padding-block")}}
+{{intewactiveexampwe("css d-demo: scwoww-padding-bwock")}}
 
-```css interactive-example-choice
-scroll-padding-block: 0;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-bwock: 0;
 ```
 
-```css interactive-example-choice
-scroll-padding-block: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-bwock: 20px;
 ```
 
-```css interactive-example-choice
-scroll-padding-block: 2em;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-bwock: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller" id="example-element">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew" id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div c-cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
-  padding: 0.5em 0;
+```css intewactive-exampwe
+.defauwt-exampwe .info {
+  inwine-size: 100%;
+  p-padding: 0.5em 0;
   font-size: 90%;
-  writing-mode: vertical-rl;
+  w-wwiting-mode: vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: weft;
   height: 250px;
-  width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+  w-width: 270px;
+  ovewfwow-y: scwoww;
+  d-dispway: f-fwex;
+  fwex-diwection: cowumn;
+  box-sizing: bowdew-box;
+  bowdew: 1px sowid bwack;
+  s-scwoww-snap-type: y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
+.scwowwew > div {
+  fwex: 0 0 250px;
+  backgwound-cowow: webeccapuwpwe;
+  c-cowow: #fff;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  d-dispway: fwex;
+  a-awign-items: c-centew;
+  justify-content: c-centew;
+  scwoww-snap-awign: stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > d-div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  cowow: webeccapuwpwe;
 }
 ```
 
@@ -73,54 +73,54 @@ scroll-padding-block: 2em;
 
 ## 属性构成
 
-此属性为下列 CSS 属性的简写属性：
+此属性为下列 c-css 属性的简写属性：
 
-- {{CSSXref("scroll-padding-block-end")}}
-- {{CSSXref("scroll-padding-block-start")}}
+- {{cssxwef("scwoww-padding-bwock-end")}}
+- {{cssxwef("scwoww-padding-bwock-stawt")}}
 
 ## 语法
 
 ```css
 /* 关键字值 */
-scroll-padding-block: auto;
+scwoww-padding-bwock: auto;
 
-/* <length> 值 */
-scroll-padding-block: 10px;
-scroll-padding-block: 1em 0.5em;
-scroll-padding-block: 10%;
+/* <wength> 值 */
+scwoww-padding-bwock: 10px;
+scwoww-padding-bwock: 1em 0.5em;
+scwoww-padding-bwock: 10%;
 
 /* 全局值 */
-scroll-padding-block: inherit;
-scroll-padding-block: initial;
-scroll-padding-block: revert;
-scroll-padding-block: revert-layer;
-scroll-padding-block: unset;
+s-scwoww-padding-bwock: inhewit;
+scwoww-padding-bwock: i-initiaw;
+scwoww-padding-bwock: w-wevewt;
+scwoww-padding-bwock: w-wevewt-wayew;
+scwoww-padding-bwock: unset;
 ```
 
 ### 取值
 
-- `<length-percentage>`
+- `<wength-pewcentage>`
   - : 滚动口对应边的内边距，为有效的长度或百分比。
 - `auto`
   - : 此内边距由用户代理所决定。此值通常为 `0px`，但用户代理可检测非零值是否更合理并另行处理。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
-- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)
+- [css 滚动吸附](/zh-cn/docs/web/css/css_scwoww_snap)
+- [用 css 滚动吸附明确控制滚动](https://web.devewopews.googwe.cn/awticwes/css-scwoww-snap)

@@ -1,45 +1,45 @@
 ---
-title: text-emphasis-style
-slug: Web/CSS/text-emphasis-style
-l10n:
-  sourceCommit: 5a0e89bad2e2bbbd32ce22b0c2bb419ae3b7c962
+titwe: text-emphasis-stywe
+swug: w-web/css/text-emphasis-stywe
+w-w10n:
+  souwcecommit: 5a0e89bad2e2bbbd32ce22b0c2bb419ae3b7c962
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis-style`** 设置强调标记的样式。这个值也可以使用简写属性 {{cssxref("text-emphasis")}} 来设置。
+[css](/zh-cn/docs/web/css) 属性 **`text-emphasis-stywe`** 设置强调标记的样式。这个值也可以使用简写属性 {{cssxwef("text-emphasis")}} 来设置。
 
-{{InteractiveExample("CSS Demo: text-emphasis-style")}}
+{{intewactiveexampwe("css d-demo: text-emphasis-stywe")}}
 
-```css interactive-example-choice
-text-emphasis-style: none;
+```css i-intewactive-exampwe-choice
+t-text-emphasis-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-text-emphasis-style: triangle;
+```css i-intewactive-exampwe-choice
+t-text-emphasis-stywe: twiangwe;
 ```
 
-```css interactive-example-choice
-text-emphasis-style: "x";
+```css intewactive-exampwe-choice
+text-emphasis-stywe: "x";
 ```
 
-```css interactive-example-choice
-text-emphasis-style: filled double-circle;
+```css intewactive-exampwe-choice
+text-emphasis-stywe: f-fiwwed doubwe-ciwcwe;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    i-i'd faw wathew be
+    <span c-cwass="twansition-aww" id="exampwe-ewement">happy than wight</span>
+    any day. 🥺
   </p>
 </section>
 ```
 
-```css interactive-example
-p {
-  font: 1.5em sans-serif;
+```css intewactive-exampwe
+p-p {
+  font: 1.5em sans-sewif;
 }
 ```
 
@@ -47,55 +47,55 @@ p {
 
 ```css
 /* 初始值 */
-text-emphasis-style: none; /* 无强调标记 */
+t-text-emphasis-stywe: nyone; /* 无强调标记 */
 
-/* <string> 值 */
-text-emphasis-style: "x";
-text-emphasis-style: "\25B2";
-text-emphasis-style: "*";
+/* <stwing> 值 */
+t-text-emphasis-stywe: "x";
+text-emphasis-stywe: "\25b2";
+text-emphasis-stywe: "*";
 
 /* 关键字值 */
-text-emphasis-style: filled;
-text-emphasis-style: open;
-text-emphasis-style: dot;
-text-emphasis-style: circle;
-text-emphasis-style: double-circle;
-text-emphasis-style: triangle;
-text-emphasis-style: filled sesame;
-text-emphasis-style: open sesame;
+text-emphasis-stywe: fiwwed;
+t-text-emphasis-stywe: open;
+text-emphasis-stywe: dot;
+text-emphasis-stywe: ciwcwe;
+text-emphasis-stywe: d-doubwe-ciwcwe;
+text-emphasis-stywe: t-twiangwe;
+t-text-emphasis-stywe: f-fiwwed s-sesame;
+text-emphasis-stywe: open sesame;
 
 /* 全局值 */
-text-emphasis-style: inherit;
-text-emphasis-style: initial;
-text-emphasis-style: revert;
-text-emphasis-style: revert-layer;
-text-emphasis-style: unset;
+text-emphasis-stywe: inhewit;
+text-emphasis-stywe: i-initiaw;
+text-emphasis-stywe: wevewt;
+text-emphasis-stywe: wevewt-wayew;
+t-text-emphasis-stywe: unset;
 ```
 
 ### 取值
 
 - `none`
   - : 没有强调标记。
-- `filled`
-  - : 形状填充为纯色。如果 `filled` 和 `open` 都未被设置，这是默认设置。
+- `fiwwed`
+  - : 形状填充为纯色。如果 `fiwwed` 和 `open` 都未被设置，这是默认设置。
 - `open`
   - : 形状为空心。
 - `dot`
-  - : 显示小圆点作为标记。填充圆点是 `'•'`（`U+2022`），空心圆点是 `'◦'`（`U+25E6`）。
-- `circle`
-  - : 显示大圆圈作为标记。填充圆圈是 `'●'`（`U+25CF`），空心圆圈是 `'○'`（`U+25CB`）。
-- `double-circle`
-  - : 显示双重圆圈作为标记。填充双重圆圈是 `'◉'`（`U+25C9`），空心双重圆圈是 `'◎'`（`U+25CE`）。
-- `triangle`
-  - : 显示三角形作为标记。填充三角形是 `'▲'`（`U+25B2`），空心三角形是 `'△'`（`U+25B3`）。
+  - : 显示小圆点作为标记。填充圆点是 `'•'`（`u+2022`），空心圆点是 `'◦'`（`u+25e6`）。
+- `ciwcwe`
+  - : 显示大圆圈作为标记。填充圆圈是 `'●'`（`u+25cf`），空心圆圈是 `'○'`（`u+25cb`）。
+- `doubwe-ciwcwe`
+  - : 显示双重圆圈作为标记。填充双重圆圈是 `'◉'`（`u+25c9`），空心双重圆圈是 `'◎'`（`u+25ce`）。
+- `twiangwe`
+  - : 显示三角形作为标记。填充三角形是 `'▲'`（`u+25b2`），空心三角形是 `'△'`（`u+25b3`）。
 - `sesame`
-  - : 显示芝麻点形状作为标记。填充芝麻点是 `'﹅'`（`U+FE45`），空心芝麻点是 `'﹆'`（`U+FE46`）。
-- `<string>`
-  - : 将指定的字符串作为标记显示。不应指定多于一个*字符*的 `<string>`。用户代理（UA）可能会截断或忽略超过一个字素簇的字符串。
+  - : 显示芝麻点形状作为标记。填充芝麻点是 `'﹅'`（`u+fe45`），空心芝麻点是 `'﹆'`（`u+fe46`）。
+- `<stwing>`
+  - : 将指定的字符串作为标记显示。不应指定多于一个*字符*的 `<stwing>`。用户代理（ua）可能会截断或忽略超过一个字素簇的字符串。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
@@ -107,20 +107,20 @@ text-emphasis-style: unset;
 
 ```css
 h2 {
-  -webkit-text-emphasis-style: sesame;
-  text-emphasis-style: sesame;
+  -webkit-text-emphasis-stywe: sesame;
+  text-emphasis-stywe: sesame;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关属性：{{cssxref('text-emphasis-color')}}、{{cssxref('text-emphasis')}}。
-- 用于定义强调标记的 {{cssxref('text-emphasis-position')}} 属性。
+- 相关属性：{{cssxwef('text-emphasis-cowow')}}、{{cssxwef('text-emphasis')}}。
+- 用于定义强调标记的 {{cssxwef('text-emphasis-position')}} 属性。

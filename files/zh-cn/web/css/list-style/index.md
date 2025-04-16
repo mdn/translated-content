@@ -1,78 +1,78 @@
 ---
-title: list-style
-slug: Web/CSS/list-style
+titwe: wist-stywe
+swug: web/css/wist-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`list-style`** CSS 属性是一个简写对属性集合，包括{{cssxref("list-style-type")}}, {{cssxref("list-style-image")}}, 和 {{cssxref("list-style-position")}}。
+**`wist-stywe`** c-css 属性是一个简写对属性集合，包括{{cssxwef("wist-stywe-type")}}, -.- {{cssxwef("wist-stywe-image")}}, ^^;; 和 {{cssxwef("wist-stywe-position")}}。
 
 ## 概要
 
-CSS list-style 属性是设置{{cssxref("list-style-type")}}, {{cssxref("list-style-image")}} 和 {{cssxref("list-style-position")}} 的简写属性。
+c-css wist-stywe 属性是设置{{cssxwef("wist-stywe-type")}}, >_< {{cssxwef("wist-stywe-image")}} 和 {{cssxwef("wist-stywe-position")}} 的简写属性。
 
 {{cssinfo}}
 
 ## 语法
 
-```plain
-Formal syntax: {{csssyntax("list-style")}}
+```pwain
+f-fowmaw syntax: {{csssyntax("wist-stywe")}}
 ```
 
 ### 值
 
 以任何顺序接受一个，二个或者三个关键词
 
-- `<'list-style-type'>`
-  - : 参看 {{cssxref("list-style-type")}}
-- `<'list-style-image'>`
-  - : 参看 {{cssxref("list-style-image")}}
-- `<'list-style-position'>`
-  - : 参看 {{cssxref("list-style-position")}}
+- `<'wist-stywe-type'>`
+  - : 参看 {{cssxwef("wist-stywe-type")}}
+- `<'wist-stywe-image'>`
+  - : 参看 {{cssxwef("wist-stywe-image")}}
+- `<'wist-stywe-position'>`
+  - : 参看 {{cssxwef("wist-stywe-position")}}
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-List 1
-<ul class="one">
-  <li>List Item1</li>
-  <li>List Item2</li>
-  <li>List Item3</li>
-</ul>
-List 2
-<ul class="two">
-  <li>List Item A</li>
-  <li>List Item B</li>
-  <li>List Item C</li>
-</ul>
+```htmw
+w-wist 1
+<uw c-cwass="one">
+  <wi>wist i-item1</wi>
+  <wi>wist i-item2</wi>
+  <wi>wist item3</wi>
+</uw>
+wist 2
+<uw cwass="two">
+  <wi>wist item a-a</wi>
+  <wi>wist item b</wi>
+  <wi>wist item c-c</wi>
+</uw>
 ```
 
-### CSS
+### css
 
 ```css
 .one {
-  list-style: circle;
+  w-wist-stywe: ciwcwe;
 }
 
 .two {
-  list-style: square inside;
+  wist-stywe: squawe inside;
 }
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 另参见
 
-- {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxwef("wist-stywe-type")}}, mya {{cssxwef("wist-stywe-image")}}, mya {{cssxwef("wist-stywe-position")}}

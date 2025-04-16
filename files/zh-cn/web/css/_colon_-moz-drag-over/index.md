@@ -1,43 +1,43 @@
 ---
-title: :-moz-drag-over
-slug: Web/CSS/:-moz-drag-over
+titwe: :-moz-dwag-ovew
+swug: w-web/css/:-moz-dwag-ovew
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`:-moz-drag-over`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)，用于在调用 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件时匹配一个元素。
+**`:-moz-dwag-ovew`** [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses)是一个 [moziwwa 扩展](/zh-cn/docs/web/css/moziwwa_extensions)，用于在调用 {{domxwef("htmwewement/dwagovew_event", UwU "dwagovew")}} 事件时匹配一个元素。
 
 ## 语法
 
 ```css
-:-moz-drag-over {
+:-moz-dwag-ovew {
   /* ... */
 }
 ```
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<table border="1">
-  <tr>
-    <td width="100px" height="100px">Drag Over</td>
-  </tr>
-</table>
+```htmw
+<tabwe b-bowdew="1">
+  <tw>
+    <td w-width="100px" h-height="100px">dwag o-ovew</td>
+  </tw>
+</tabwe>
 ```
 
-### CSS
+### c-css
 
 ```css
-td:-moz-drag-over {
-  color: red;
+t-td:-moz-dwag-ovew {
+  cowow: wed;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
@@ -45,9 +45,9 @@ td:-moz-drag-over {
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)
-- [HTML 拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [moziwwa css 扩展](/zh-cn/docs/web/css/moziwwa_extensions)
+- [htmw 拖放](/zh-cn/docs/web/api/htmw_dwag_and_dwop_api)

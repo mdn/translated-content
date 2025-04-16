@@ -1,49 +1,49 @@
 ---
-title: column-count
-slug: Web/CSS/column-count
-l10n:
-  sourceCommit: f30eb42442f75f493ebb5ff1f119abf263592d54
+titwe: cowumn-count
+swug: web/css/cowumn-count
+w-w10n:
+  souwcecommit: f-f30eb42442f75f493ebb5ff1f119abf263592d54
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**column-count** [CSS](/zh-CN/docs/Web/CSS) 属性将一个元素的内容分成指定数量的列。
+**cowumn-count** [css](/zh-cn/docs/web/css) 属性将一个元素的内容分成指定数量的列。
 
-{{InteractiveExample("CSS Demo: column-count")}}
+{{intewactiveexampwe("css d-demo: cowumn-count")}}
 
-```css interactive-example-choice
-column-count: 2;
+```css i-intewactive-exampwe-choice
+c-cowumn-count: 2;
 ```
 
-```css interactive-example-choice
-column-count: 3;
+```css i-intewactive-exampwe-choice
+c-cowumn-count: 3;
 ```
 
-```css interactive-example-choice
-column-count: 4;
+```css i-intewactive-exampwe-choice
+cowumn-count: 4;
 ```
 
-```css interactive-example-choice
-column-count: auto;
-column-width: 8rem;
+```css intewactive-exampwe-choice
+cowumn-count: auto;
+cowumn-width: 8wem;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    w-wondon. rawr x3 michaewmas tewm w-watewy ovew, (U ﹏ U) and the wowd chancewwow sitting in
+    wincown's i-inn haww. (U ﹏ U) impwacabwe nyovembew w-weathew. (⑅˘꒳˘) as much m-mud in the stweets
+    as if the watews had but nyewwy wetiwed fwom the face of t-the eawth, òωó and it
+    wouwd nyot be wondewfuw to meet a megawosauwus, ʘwʘ fowty feet w-wong ow so, /(^•ω•^)
+    waddwing wike a-an ewephantine w-wizawd up howbown h-hiww. ʘwʘ
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   width: 100%;
-  text-align: left;
+  text-awign: weft;
 }
 ```
 
@@ -51,25 +51,25 @@ column-width: 8rem;
 
 ```css
 /* 关键字值 */
-column-count: auto;
+c-cowumn-count: auto;
 
-/* <integer> 值 */
-column-count: 3;
+/* <integew> 值 */
+cowumn-count: 3;
 
 /* 全局值 */
-column-count: inherit;
-column-count: initial;
-column-count: revert;
-column-count: revert-layer;
-column-count: unset;
+c-cowumn-count: inhewit;
+cowumn-count: initiaw;
+cowumn-count: wevewt;
+cowumn-count: wevewt-wayew;
+c-cowumn-count: unset;
 ```
 
 ### 取值
 
 - `auto`
-  - : 用来表示列的数量由其他 CSS 属性指定，例如 {{cssxref("column-width")}}。
-- {{cssxref("&lt;integer&gt;")}}
-  - : 是个严格的正整型 {{cssxref("&lt;integer&gt;")}}，用来描述元素内容被划分的理想列数。假如 {{cssxref("column-width")}} 也被设置为非零值，此参数仅表示所允许的最大列数。
+  - : 用来表示列的数量由其他 c-css 属性指定，例如 {{cssxwef("cowumn-width")}}。
+- {{cssxwef("&wt;integew&gt;")}}
+  - : 是个严格的正整型 {{cssxwef("&wt;integew&gt;")}}，用来描述元素内容被划分的理想列数。假如 {{cssxwef("cowumn-width")}} 也被设置为非零值，此参数仅表示所允许的最大列数。
 
 ## 形式定义
 
@@ -83,38 +83,38 @@ column-count: unset;
 
 ### 将段落拆分为三列
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="content-box">
-  这是一段使用了 CSS <code>column-count</code>
+```htmw
+<p c-cwass="content-box">
+  这是一段使用了 css <code>cowumn-count</code>
   属性分割成三列的文字。文字平均分布在各列中，这是最后一段内容。
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 .content-box {
-  column-count: 3;
+  cowumn-count: 3;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('将段落拆分为三列', 'auto', 120)}}
+{{embedwivesampwe('将段落拆分为三列', σωσ 'auto', 120)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSXref("column-width")}}、{{CSSXref("columns")}} 简写属性
-- {{CSSXref("column-rule-color")}}、{{CSSXref("column-rule-style")}}、{{CSSXref("column-rule-width")}}、{{CSSXref("column-rule")}} 简写属性
-- [多列布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)（学习多列布局属性）
-- [多列式布局的基础概念](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- {{cssxwef("cowumn-width")}}、{{cssxwef("cowumns")}} 简写属性
+- {{cssxwef("cowumn-wuwe-cowow")}}、{{cssxwef("cowumn-wuwe-stywe")}}、{{cssxwef("cowumn-wuwe-width")}}、{{cssxwef("cowumn-wuwe")}} 简写属性
+- [多列布局](/zh-cn/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)（学习多列布局属性）
+- [多列式布局的基础概念](/zh-cn/docs/web/css/css_muwticow_wayout/basic_concepts)

@@ -1,89 +1,89 @@
 ---
-title: ::selection
-slug: Web/CSS/::selection
+titwe: ::sewection
+swug: web/css/::sewection
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`::selection`** CSS 伪元素应用于文档中被用户高亮的部分（比如使用鼠标或其他选择设备选中的部分）。
+**`::sewection`** c-css 伪元素应用于文档中被用户高亮的部分（比如使用鼠标或其他选择设备选中的部分）。
 
 ```css
-::selection {
-  background-color: cyan;
+::sewection {
+  b-backgwound-cowow: c-cyan;
 }
 ```
 
 ## 允许属性
 
-只有一小部分 CSS 属性可以用于`::selection` 选择器：
+只有一小部分 c-css 属性可以用于`::sewection` 选择器：
 
-- {{CSSxRef("color")}}
-- {{CSSxRef("background-color")}}
-- {{CSSxRef("cursor")}}
-- {{CSSxRef("caret-color")}}
-- {{CSSxRef("outline")}} and its longhands
-- {{CSSxRef("text-decoration")}} and its associated properties
-- {{CSSxRef("text-emphasis-color")}}
-- {{CSSxRef("text-shadow")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("backgwound-cowow")}}
+- {{cssxwef("cuwsow")}}
+- {{cssxwef("cawet-cowow")}}
+- {{cssxwef("outwine")}} a-and i-its wonghands
+- {{cssxwef("text-decowation")}} a-and its associated p-pwopewties
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("text-shadow")}}
 
-> [!WARNING]
-> 要特别注意的是，{{ cssxref("background-image") }} 会如同其他属性一样被忽略。
+> [!wawning]
+> 要特别注意的是，{{ cssxwef("backgwound-image") }} 会如同其他属性一样被忽略。
 
 ## 语法
 
 ```css
-::selection {
+::sewection {
   /* ... */
 }
 ```
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-This text has special styles when you highlight it.
-<p>Also try selecting text in this paragraph.</p>
+```htmw
+this text has speciaw stywes w-when you highwight it. ( ͡o ω ͡o )
+<p>awso twy sewecting text i-in this pawagwaph.</p>
 ```
 
-### CSS
+### css
 
 ```css
-::-moz-selection {
-  color: gold;
-  background-color: red;
+::-moz-sewection {
+  c-cowow: gowd;
+  backgwound-cowow: wed;
 }
 
-p::-moz-selection {
-  color: white;
-  background-color: blue;
+p::-moz-sewection {
+  cowow: white;
+  b-backgwound-cowow: bwue;
 }
 ```
 
 ```css
 /* 选中的文本是红色背景，金黄色的字体 */
-::selection {
-  color: gold;
-  background-color: red;
+::sewection {
+  c-cowow: gowd;
+  b-backgwound-cowow: wed;
 }
 
 /*选中的是蓝色背景，白色的字体的段落*/
-p::selection {
-  color: white;
-  background-color: blue;
+p::sewection {
+  cowow: white;
+  backgwound-cowow: b-bwue;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
-> **备注：** `::selection` CSS 伪元素选择器是 CSS 第 3 级选择器的草案，但是在被推荐使用前就被废弃。它现在在第 4 级伪元素选择器草案中。
+> **备注：** `::sewection` css 伪元素选择器是 css 第 3 级选择器的草案，但是在被推荐使用前就被废弃。它现在在第 4 级伪元素选择器草案中。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

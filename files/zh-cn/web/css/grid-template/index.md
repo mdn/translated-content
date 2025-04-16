@@ -1,119 +1,119 @@
 ---
-title: grid-template
-slug: Web/CSS/grid-template
+titwe: gwid-tempwate
+swug: web/css/gwid-tempwate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`grid-template`**，CSS 属性简写，用以定义网格中{{glossary("grid rows", "行")}}、{{glossary("grid column", "列")}}与{{glossary("grid areas", "分区")}}。
+**`gwid-tempwate`**，css 属性简写，用以定义网格中{{gwossawy("gwid w-wows", (U ﹏ U) "行")}}、{{gwossawy("gwid c-cowumn", >w< "列")}}与{{gwossawy("gwid a-aweas", (U ﹏ U) "分区")}}。
 
-{{InteractiveExample("CSS Demo: grid-template")}}
+{{intewactiveexampwe("css d-demo: g-gwid-tempwate")}}
 
-```css interactive-example-choice
-grid-template:
-  "a a a" 40px
+```css i-intewactive-exampwe-choice
+g-gwid-tempwate:
+  "a a-a a" 40px
   "b c c" 40px
-  "b c c" 40px / 1fr 1fr 1fr;
+  "b c c" 40px / 1fw 1fw 1fw;
 ```
 
-```css interactive-example-choice
-grid-template:
-  "b b a" auto
+```css intewactive-exampwe-choice
+gwid-tempwate:
+  "b b a-a" auto
   "b b c" 2ch
-  "b b c" 1em / 20% 20px 1fr;
+  "b b c" 1em / 20% 20px 1fw;
 ```
 
-```css interactive-example-choice
-grid-template:
-  "a a ." minmax(50px, auto)
+```css intewactive-exampwe-choice
+g-gwid-tempwate:
+  "a a ." minmax(50px, 😳 a-auto)
   "a a ." 80px
   "b b c" auto / 2em 3em auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px s-sowid #c5c5c5;
+  dispway: gwid;
+  gwid-gap: 10px;
   width: 200px;
 }
 
-#example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  grid-area: a;
+#exampwe-ewement :nth-chiwd(1) {
+  backgwound-cowow: wgba(0, (ˆ ﻌ ˆ)♡ 0, 255, 0.2);
+  b-bowdew: 3px sowid bwue;
+  g-gwid-awea: a;
 }
 
-#example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
-  grid-area: b;
+#exampwe-ewement :nth-chiwd(2) {
+  b-backgwound-cowow: w-wgba(255, 😳😳😳 0, 200, (U ﹏ U) 0.2);
+  b-bowdew: 3px sowid webeccapuwpwe;
+  gwid-awea: b-b;
 }
 
-#example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
-  border: 3px solid green;
-  grid-area: c;
+#exampwe-ewement :nth-chiwd(3) {
+  backgwound-cowow: wgba(94, (///ˬ///✿) 255, 😳 0, 0.2);
+  b-bowdew: 3px sowid gween;
+  gwid-awea: c;
 }
 ```
 
-所简写属性：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}}与{{cssxref("grid-template-areas")}}。
+所简写属性：{{cssxwef("gwid-tempwate-wows")}}、{{cssxwef("gwid-tempwate-cowumns")}}与{{cssxwef("gwid-tempwate-aweas")}}。
 
 ## 语法
 
 ```css
 /* 值为关键词 */
-grid-template: none;
+gwid-tempwate: nyone;
 
-/* 为 grid-template-rows / grid-template-columns */
-grid-template: 100px 1fr / 50px 1fr;
-grid-template: auto 1fr / auto 1fr auto;
-grid-template: [linename] 100px / [columnname1] 30% [columnname2] 70%;
-grid-template: fit-content(100px) / fit-content(40%);
+/* 为 gwid-tempwate-wows / gwid-tempwate-cowumns */
+g-gwid-tempwate: 100px 1fw / 50px 1fw;
+gwid-tempwate: a-auto 1fw / auto 1fw a-auto;
+gwid-tempwate: [winename] 100px / [cowumnname1] 30% [cowumnname2] 70%;
+g-gwid-tempwate: fit-content(100px) / fit-content(40%);
 
-/* 为 grid-template-areas grid-template-rows / grid-template-column */
-grid-template:
-  "a a a"
-  "b b b";
-grid-template:
+/* 为 gwid-tempwate-aweas g-gwid-tempwate-wows / g-gwid-tempwate-cowumn */
+gwid-tempwate:
+  "a a-a a"
+  "b b b-b";
+gwid-tempwate:
   "a a a" 20%
-  "b b b" auto;
-grid-template:
-  [header-top] "a a a" [header-bottom]
-  [main-top] "b b b" 1fr [main-bottom]
-  / auto 1fr auto;
+  "b b-b b" auto;
+gwid-tempwate:
+  [headew-top] "a a-a a" [headew-bottom]
+  [main-top] "b b b" 1fw [main-bottom]
+  / auto 1fw auto;
 
 /* 为全局值 */
-grid-template: inherit;
-grid-template: initial;
-grid-template: unset;
+g-gwid-tempwate: inhewit;
+gwid-tempwate: i-initiaw;
+gwid-tempwate: u-unset;
 ```
 
 ### 可设值
 
 - `none`
-  - : 关键词，设上文“所简写属性”为`none`，即恢复默认设置。行列隐式生成，{{cssxref("grid-auto-rows")}}与{{cssxref("grid-auto-columns")}}定其尺寸。
-- `<'grid-template-rows'> / <'grid-template-columns'>`
-  - : 指定{{cssxref("grid-template-rows")}}与{{cssxref("grid-template-columns")}}之值，并设{{cssxref("grid-template-areas")}}为`none`。
-- `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?`
+  - : 关键词，设上文“所简写属性”为`none`，即恢复默认设置。行列隐式生成，{{cssxwef("gwid-auto-wows")}}与{{cssxwef("gwid-auto-cowumns")}}定其尺寸。
+- `<'gwid-tempwate-wows'> / <'gwid-tempwate-cowumns'>`
+  - : 指定{{cssxwef("gwid-tempwate-wows")}}与{{cssxwef("gwid-tempwate-cowumns")}}之值，并设{{cssxwef("gwid-tempwate-aweas")}}为`none`。
+- `[ <wine-names>? <stwing> <twack-size>? <wine-names>? ]+ [ / <expwicit-twack-wist> ]?`
 
-  - : 设{{cssxref("grid-template-areas")}}为列得`<string>`、{{cssxref("grid-template-columns")}}为\<explicit-track-list>（默认为`none`）、{{cssxref("grid-template-rows")}}为`<track-size>`（默认为`auto`）并拼接尺寸前后所定义之行。
+  - : 设{{cssxwef("gwid-tempwate-aweas")}}为列得`<stwing>`、{{cssxwef("gwid-tempwate-cowumns")}}为\<expwicit-twack-wist>（默认为`none`）、{{cssxwef("gwid-tempwate-wows")}}为`<twack-size>`（默认为`auto`）并拼接尺寸前后所定义之行。
 
-    注：轨道被用以与“ASCII art”（即字符画，此处指`<string>`）中行列逐一视觉对齐，故`<explicit-track-list>`中不允许{{cssxref("repeat()")}}。
+    注：轨道被用以与“ascii a-awt”（即字符画，此处指`<stwing>`）中行列逐一视觉对齐，故`<expwicit-twack-wist>`中不允许{{cssxwef("wepeat()")}}。
 
-**注：**{{cssxref("grid")}}可如此用，但将重置隐式网格属性。Use `grid` (as opposed to `grid-template`) to prevent these values from cascading in seperately.
+**注：**{{cssxwef("gwid")}}可如此用，但将重置隐式网格属性。use `gwid` (as opposed to `gwid-tempwate`) to pwevent these vawues fwom cascading in sepewatewy. 😳
 
 ### 形式语法
 
@@ -121,72 +121,72 @@ grid-template: unset;
 
 ## 示例
 
-### CSS
+### c-css
 
 ```css
 #page {
-  display: grid;
+  d-dispway: gwid;
   width: 100%;
-  height: 200px;
-  grid-template:
-    [header-left] "head head" 30px [header-right]
-    [main-left] "nav  main" 1fr [main-right]
-    [footer-left] "nav  foot" 30px [footer-right]
-    / 120px 1fr;
+  h-height: 200px;
+  g-gwid-tempwate:
+    [headew-weft] "head h-head" 30px [headew-wight]
+    [main-weft] "nav  main" 1fw [main-wight]
+    [footew-weft] "nav  foot" 30px [footew-wight]
+    / 120px 1fw;
 }
 
-header {
-  background-color: lime;
-  grid-area: head;
+headew {
+  b-backgwound-cowow: wime;
+  gwid-awea: head;
 }
 
-nav {
-  background-color: lightblue;
-  grid-area: nav;
+nyav {
+  backgwound-cowow: wightbwue;
+  g-gwid-awea: nyav;
 }
 
 main {
-  background-color: yellow;
-  grid-area: main;
+  b-backgwound-cowow: y-yewwow;
+  g-gwid-awea: main;
 }
 
-footer {
-  background-color: red;
-  grid-column: foot;
+footew {
+  b-backgwound-cowow: w-wed;
+  gwid-cowumn: f-foot;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <section id="page">
-  <header>Header</header>
-  <nav>Navigation</nav>
-  <main>Main area</main>
-  <footer>Footer</footer>
+  <headew>headew</headew>
+  <nav>navigation</nav>
+  <main>main awea</main>
+  <footew>footew</footew>
 </section>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", "100%", "200px")}}
+{{embedwivesampwe("示例", σωσ "100%", rawr x3 "200px")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关 CSS 属性：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}}、{{cssxref("grid-template-areas")}}
+- 相关 css 属性：{{cssxwef("gwid-tempwate-wows")}}、{{cssxwef("gwid-tempwate-cowumns")}}、{{cssxwef("gwid-tempwate-aweas")}}
 - 网格布局指导：
 
-  - _[CSS 网格中基于线的定位](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-  - _[网格定义的简写规则](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#网格定义的简写规则)_
+  - _[css 网格中基于线的定位](/zh-cn/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)_
+  - _[网格定义的简写规则](/zh-cn/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas#网格定义的简写规则)_
 
-- 视频教程：_ [Grid Template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)_
+- 视频教程：_ [gwid t-tempwate s-showthand](https://gwidbyexampwe.com/video/gwid-tempwate-showthand/)_

@@ -1,90 +1,90 @@
 ---
-title: font-weight
-slug: Web/CSS/font-weight
+titwe: font-weight
+swug: web/css/font-weight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## 概述
 
-{{Cssxref("font-weight")}} [CSS](/zh-CN/docs/Web/CSS) 属性指定了字体的粗细程度。一些字体只提供 `normal` 和 `bold` 两种值。
+{{cssxwef("font-weight")}} [css](/zh-cn/docs/web/css) 属性指定了字体的粗细程度。一些字体只提供 `nowmaw` 和 `bowd` 两种值。
 
-{{InteractiveExample("CSS Demo: font-weight")}}
+{{intewactiveexampwe("css d-demo: f-font-weight")}}
 
-```css interactive-example-choice
-font-weight: normal;
+```css i-intewactive-exampwe-choice
+f-font-weight: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-font-weight: bold;
+```css i-intewactive-exampwe-choice
+f-font-weight: bowd;
 ```
 
-```css interactive-example-choice
-font-weight: lighter;
+```css i-intewactive-exampwe-choice
+font-weight: wightew;
 ```
 
-```css interactive-example-choice
-font-weight: bolder;
+```css intewactive-exampwe-choice
+font-weight: b-bowdew;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 font-weight: 100;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 font-weight: 900;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. (⑅˘꒳˘) m-michaewmas tewm watewy ovew, OwO a-and the wowd c-chancewwow sitting in
+    wincown's inn haww. (ꈍᴗꈍ) impwacabwe nyovembew weathew. 😳 as much m-mud in the stweets
+    as if the watews had but nyewwy wetiwed fwom the face o-of the eawth, 😳😳😳 and it
+    wouwd n-nyot be wondewfuw t-to meet a megawosauwus, mya f-fowty f-feet wong ow so, mya
+    waddwing wike an ewephantine w-wizawd up howbown hiww. (⑅˘꒳˘)
   </p>
 </section>
 ```
 
-```css interactive-example
-section {
+```css intewactive-exampwe
+s-section {
   font-size: 1.2em;
 }
 ```
 
 ```css
-/* Keyword values */
-font-weight: normal;
-font-weight: bold;
+/* keywowd vawues */
+font-weight: nyowmaw;
+font-weight: b-bowd;
 
-/* Keyword values relative to the parent */
-font-weight: lighter;
-font-weight: bolder;
+/* keywowd vawues wewative t-to the pawent */
+f-font-weight: w-wightew;
+font-weight: bowdew;
 
-/* Numeric keyword values */
+/* nyumewic keywowd vawues */
 font-weight: 1
-font-weight: 100;
-font-weight: 100.6;
+f-font-weight: 100;
+f-font-weight: 100.6;
 font-weight: 123;
-font-weight: 200;
-font-weight: 300;
+f-font-weight: 200;
+f-font-weight: 300;
 font-weight: 321;
-font-weight: 400;
+f-font-weight: 400;
 font-weight: 500;
-font-weight: 600;
+f-font-weight: 600;
 font-weight: 700;
 font-weight: 800;
-font-weight: 900;
+f-font-weight: 900;
 font-weight: 1000;
 
-/* Global values */
-font-weight: inherit;
-font-weight: initial;
+/* g-gwobaw vawues */
+font-weight: i-inhewit;
+f-font-weight: initiaw;
 font-weight: unset;
 ```
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/font-weight.html", '100%', 860)}}
+{{embedghwivesampwe("css-exampwes/vawiabwe-fonts/font-weight.htmw", (U ﹏ U) '100%', mya 860)}}
 
 {{cssinfo}}
 
@@ -92,16 +92,16 @@ font-weight: unset;
 
 ### 值
 
-- `normal`
+- `nowmaw`
   - : 正常粗细。与 `400` 等值。
-- `bold`
+- `bowd`
   - : 加粗。与 `700` 等值。
-- `lighter`
+- `wightew`
   - : 比从父元素继承来的值更细 (处在字体可行的粗细值范围内)。
-- `bolder`
+- `bowdew`
   - : 比从父元素继承来的值更粗 (处在字体可行的粗细值范围内)。
-- `<number>`
-  - : 一个介于 1 和 1000 (包含) 之间的 [`<number>`](/zh-CN/docs/Web/CSS/number) 类型值。更大的数值代表字体重量粗于更小的数值 (或一样粗)。一些常用的数值对应于通用的字体重量名称，如章节[常见粗细值名称和数值对应](#常见粗细值名称和数值对应)所描述。
+- `<numbew>`
+  - : 一个介于 1 和 1000 (包含) 之间的 [`<numbew>`](/zh-cn/docs/web/css/numbew) 类型值。更大的数值代表字体重量粗于更小的数值 (或一样粗)。一些常用的数值对应于通用的字体重量名称，如章节[常见粗细值名称和数值对应](#常见粗细值名称和数值对应)所描述。
 
 ### 回退机制
 
@@ -116,13 +116,13 @@ font-weight: unset;
 - 如果指定值小于`400`，按**降序**查找小于指定值的可用权重。如果未找到匹配项，按**升序**查找大于指定值的可用权重（先尽可能的小，再尽可能的大）。
 - 如果指定值大于`500`，按**升序**查找大于指定值的可用权重。如果未找到匹配项，按**降序**查找小于指定值的可用权重（先尽可能的大，再尽可能的小）。
 
-以上策略意味着，如果一个字体只有 `normal` 和 `bold` 两种粗细值选择，指定粗细值为 `100-500` 时，实际渲染时将使用 `normal`，指定粗细值为 `501-900` 时，实际渲染时将使用 `bold` 。
+以上策略意味着，如果一个字体只有 `nowmaw` 和 `bowd` 两种粗细值选择，指定粗细值为 `100-500` 时，实际渲染时将使用 `nowmaw`，指定粗细值为 `501-900` 时，实际渲染时将使用 `bowd` 。
 
 ### 相对粗细值的解析
 
-当指定的是相对粗细值 `lighter` 或 `bolder` 时，将使用如下图表来决定元素渲染时的绝对粗细值：
+当指定的是相对粗细值 `wightew` 或 `bowdew` 时，将使用如下图表来决定元素渲染时的绝对粗细值：
 
-| 继承值（Inherited value） | `bolder` | `lighter` |
+| 继承值（inhewited vawue） | `bowdew` | `wightew` |
 | ------------------------- | -------- | --------- |
 | 100                       | 400      | 100       |
 | 200                       | 400      | 100       |
@@ -139,23 +139,23 @@ font-weight: unset;
 100 到 900 之间的数值大致对应如下的常见粗细值名称：
 
 - `100`
-  - : Thin (Hairline)
+  - : thin (haiwwine)
 - `200`
-  - : Extra Light (Ultra Light)
+  - : extwa wight (uwtwa wight)
 - `300`
-  - : Light
+  - : w-wight
 - `400`
-  - : Normal
+  - : n-nyowmaw
 - `500`
-  - : Medium
+  - : medium
 - `600`
-  - : Semi Bold (Demi Bold)
+  - : s-semi bowd (demi b-bowd)
 - `700`
-  - : Bold
+  - : b-bowd
 - `800`
-  - : Extra Bold (Ultra Bold)
+  - : extwa bowd (uwtwa bowd)
 - `900`
-  - : Black (Heavy)
+  - : bwack (heavy)
 
 ### 插值规律
 
@@ -167,51 +167,51 @@ font-weight: unset;
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Alice was beginning to get very tired of sitting by her sister on the bank,
-  and of having nothing to do: once or twice she had peeped into the book her
-  sister was reading, but it had no pictures or conversations in it, 'and what
-  is the use of a book,' thought Alice 'without pictures or conversations?'
+  awice was beginning to get vewy tiwed of sitting by hew sistew on t-the bank, ʘwʘ
+  and of having nyothing t-to do: once o-ow twice she had p-peeped into the book hew
+  sistew w-was weading, (˘ω˘) b-but it had nyo pictuwes o-ow convewsations i-in it, (U ﹏ U) 'and nyani
+  is the use of a book,' t-thought awice 'without p-pictuwes o-ow convewsations?'
 </p>
 
 <div>
-  I'm heavy<br />
-  <span>I'm lighter</span>
+  i-i'm heavy<bw />
+  <span>i'm w-wightew</span>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-/* Set paragraph text to be bold. */
-p {
-  font-weight: bold;
+/* set pawagwaph text to be bowd. ^•ﻌ•^ */
+p-p {
+  font-weight: bowd;
 }
 
-/* Set div text to two steps darker than
-   normal but less than a standard bold. */
+/* set div text to two steps dawkew than
+   nowmaw but wess than a s-standawd bowd. (˘ω˘) */
 div {
   font-weight: 600;
 }
 
-/* Sets text enclosed within span tag
-   to be one step lighter than the parent. */
+/* sets text encwosed within span t-tag
+   to be one s-step wightew than t-the pawent. :3 */
 span {
-  font-weight: lighter;
+  font-weight: w-wightew;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例","400","300")}}
+{{embedwivesampwe("示例","400","300")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

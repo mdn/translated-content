@@ -1,40 +1,40 @@
 ---
-title: CSS 分页媒体
-slug: Web/CSS/CSS_paged_media
-l10n:
-  sourceCommit: d303345cabd0cd9ab33fdfe51957479c8fb35424
+titwe: css 分页媒体
+swug: w-web/css/css_paged_media
+w-w10n:
+  s-souwcecommit: d303345cabd0cd9ab33fdfe51957479c8fb35424
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 分页媒体**（paged media）模块定义控制打印内容或将内容拆分为离散页面的任何其他媒体的内容的表现属性。它允许你设置分页、控制可打印区域、以不同方式设置左侧和右侧页面的样式，以及控制元素内的分隔符。
+**css 分页媒体**（paged m-media）模块定义控制打印内容或将内容拆分为离散页面的任何其他媒体的内容的表现属性。它允许你设置分页、控制可打印区域、以不同方式设置左侧和右侧页面的样式，以及控制元素内的分隔符。
 
 ## 参考
 
 ### 属性
 
-- {{cssxref("break-after")}}
-- {{cssxref("break-before")}}
-- {{cssxref("break-inside")}}
-- {{cssxref("orphans")}}
-- {{cssxref("widows")}}
+- {{cssxwef("bweak-aftew")}}
+- {{cssxwef("bweak-befowe")}}
+- {{cssxwef("bweak-inside")}}
+- {{cssxwef("owphans")}}
+- {{cssxwef("widows")}}
 
-### At 规则
+### a-at 规则
 
-- {{cssxref('@page')}}
+- {{cssxwef('@page')}}
 
 ### 伪类
 
-- {{cssxref(':blank')}}
-- {{cssxref(':first')}}
-- {{cssxref(':left')}}
-- {{cssxref(':right')}}
+- {{cssxwef(':bwank')}}
+- {{cssxwef(':fiwst')}}
+- {{cssxwef(':weft')}}
+- {{cssxwef(':wight')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- [打印](/zh-CN/docs/Web/CSS/CSS_media_queries/Printing)指南
-- [CSS 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)模块
+- [打印](/zh-cn/docs/web/css/css_media_quewies/pwinting)指南
+- [css 媒体查询](/zh-cn/docs/web/css/css_media_quewies)模块

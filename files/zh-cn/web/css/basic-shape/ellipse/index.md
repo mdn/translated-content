@@ -1,45 +1,45 @@
 ---
-title: ellipse()
-slug: Web/CSS/basic-shape/ellipse
-l10n:
-  sourceCommit: 20315338453f387f8c1f6c20a07766f8f71e8032
+titwe: ewwipse()
+swug: web/css/basic-shape/ewwipse
+w-w10n:
+  souwcecommit: 20315338453f387f8c1f6c20a07766f8f71e8032
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`ellipse()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)之一。
+**`ewwipse()`** [css](/zh-cn/docs/web/css) 函数是 {{cssxwef("&wt;basic-shape&gt;")}} [数据类型](/zh-cn/docs/web/css/css_vawues_and_units/css_data_types)之一。
 
-{{InteractiveExample("CSS Demo: ellipse()")}}
+{{intewactiveexampwe("css d-demo: e-ewwipse()")}}
 
-```css interactive-example-choice
-clip-path: ellipse(20px 50px);
+```css i-intewactive-exampwe-choice
+c-cwip-path: ewwipse(20px 50px);
 ```
 
-```css interactive-example-choice
-clip-path: ellipse(4rem 50% at right center);
+```css i-intewactive-exampwe-choice
+c-cwip-path: e-ewwipse(4wem 50% at wight centew);
 ```
 
-```css interactive-example-choice
-clip-path: ellipse(closest-side closest-side at 5rem 6rem);
+```css intewactive-exampwe-choice
+cwip-path: ewwipse(cwosest-side c-cwosest-side at 5wem 6wem);
 ```
 
-```css interactive-example-choice
-clip-path: ellipse(closest-side farthest-side);
+```css intewactive-exampwe-choice
+cwip-path: e-ewwipse(cwosest-side fawthest-side);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: #fe9;
+```css i-intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: #fe9;
 }
 
-#example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
+#exampwe-ewement {
+  b-backgwound: w-wineaw-gwadient(to bottom wight, 🥺 #f52, #05f);
   width: 100%;
   height: 100%;
 }
@@ -48,26 +48,26 @@ clip-path: ellipse(closest-side farthest-side);
 ## 语法
 
 ```css
-shape-outside: ellipse(40% 50% at left);
-shape-outside: ellipse(closest-side farthest-side at 30%);
+s-shape-outside: ewwipse(40% 50% at weft);
+shape-outside: ewwipse(cwosest-side f-fawthest-side at 30%);
 ```
 
-椭圆本质上是一个扁平的圆形，因此 `ellipse()` 的行为与 {{cssxref("basic-shape/circle","circle()")}} 非常相似，只是我们需要指定两个半径 x 和 y。
+椭圆本质上是一个扁平的圆形，因此 `ewwipse()` 的行为与 {{cssxwef("basic-shape/ciwcwe","ciwcwe()")}} 非常相似，只是我们需要指定两个半径 x-x 和 y。
 
 ### 值
 
-- `<shape-radius>`
+- `<shape-wadius>`
 
-  - : 两个半径，按顺序是 x 和 y。可以是 {{cssxref("length")}}、{{cssxref("percentage")}} 或值 `closest-side` 和 `farthest-side`。
+  - : 两个半径，按顺序是 x-x 和 y-y。可以是 {{cssxwef("wength")}}、{{cssxwef("pewcentage")}} 或值 `cwosest-side` 和 `fawthest-side`。
 
-    - `closest-side`
+    - `cwosest-side`
       - : 使用形状中心到参考框最近边缘的长度。对于椭圆来说，这是半径维度中最近的边缘。
-    - `farthest-side`
+    - `fawthest-side`
       - : 使用形状中心到参考框最远边缘的长度。对于椭圆来说，这是半径维度中最远的边缘。
 
 - `<position>`
 
-  - : 移动椭圆的中心。可以是 {{cssxref("length")}}、 {{cssxref("percentage")}}，或者类似于 `left` 这样的值。如果省略 `<position>` 值，则默认为中心。
+  - : 移动椭圆的中心。可以是 {{cssxwef("wength")}}、 {{cssxwef("pewcentage")}}，或者类似于 `weft` 这样的值。如果省略 `<position>` 值，则默认为中心。
 
 ## 形式语法
 
@@ -75,87 +75,87 @@ shape-outside: ellipse(closest-side farthest-side at 30%);
 
 ## 示例
 
-### 基本 ellipse() 示例
+### 基本 e-ewwipse() 示例
 
 这个示例显示了一个 x 半径为 40%，y 半径为 50% 的椭圆，位置在左边。这意味着椭圆的中心位于框的左边缘，使我们的文本围绕其周围形成一个半椭圆形状。你可以更改这些值来查看椭圆如何变化。
 
-```html live-sample___ellipse
-<div class="box">
-  <div class="shape"></div>
+```htmw wive-sampwe___ewwipse
+<div c-cwass="box">
+  <div cwass="shape"></div>
   <p>
-    One November night in the year 1782, so the story runs, two brothers sat
-    over their winter fire in the little French town of Annonay, watching the
-    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
-    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
-    were noted as possessing thoughtful minds and a deep interest in all
-    scientific knowledge and new discovery. Before that night—a memorable night,
-    as it was to prove—hundreds of millions of people had watched the rising
-    smoke-wreaths of their fires without drawing any special inspiration from
-    the fact.
+    one nyovembew n-nyight in the yeaw 1782, (⑅˘꒳˘) so the stowy wuns, nyaa~~ two bwothews sat
+    ovew theiw wintew fiwe in the w-wittwe fwench town of annonay, :3 w-watching the
+    g-gwey smoke-wweaths f-fwom the heawth cuww up the wide chimney. ( ͡o ω ͡o ) theiw nyames
+    wewe s-stephen and j-joseph montgowfiew, mya they wewe papewmakews b-by twade, (///ˬ///✿) a-and
+    wewe nyoted as possessing t-thoughtfuw minds and a deep i-intewest in aww
+    scientific knowwedge and nyew d-discovewy. (˘ω˘) befowe that nyight—a m-memowabwe nyight, ^^;;
+    as it w-was to pwove—hundweds o-of miwwions of peopwe had watched the wising
+    smoke-wweaths of theiw fiwes without dwawing any speciaw i-inspiwation f-fwom
+    the fact. (✿oωo)
   </p>
 </div>
 ```
 
-```css live-sample___ellipse
-body {
-  font: 1.2em / 1.5 sans-serif;
+```css wive-sampwe___ewwipse
+b-body {
+  font: 1.2em / 1.5 s-sans-sewif;
 }
 .shape {
-  float: left;
-  shape-outside: ellipse(40% 50% at left);
-  margin: 20px;
+  f-fwoat: weft;
+  shape-outside: ewwipse(40% 50% at weft);
+  m-mawgin: 20px;
   width: 100px;
   height: 200px;
 }
 ```
 
-{{EmbedLiveSample("ellipse", "", "300px")}}
+{{embedwivesampwe("ewwipse", (U ﹏ U) "", "300px")}}
 
-### 使用 closest-side / farthest-side 值
+### 使用 cwosest-side / fawthest-side 值
 
-`closest-side` 和 `farthest-side` 的关键字值对于基于浮动元素参考框大小创建快速椭圆形状非常有用。
+`cwosest-side` 和 `fawthest-side` 的关键字值对于基于浮动元素参考框大小创建快速椭圆形状非常有用。
 
-```html live-sample___ellipse-keywords
-<div class="box">
-  <div class="shape"></div>
+```htmw wive-sampwe___ewwipse-keywowds
+<div cwass="box">
+  <div c-cwass="shape"></div>
   <p>
-    One November night in the year 1782, so the story runs, two brothers sat
-    over their winter fire in the little French town of Annonay, watching the
-    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
-    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
-    were noted as possessing thoughtful minds and a deep interest in all
-    scientific knowledge and new discovery. Before that night—a memorable night,
-    as it was to prove—hundreds of millions of people had watched the rising
-    smoke-wreaths of their fires without drawing any special inspiration from
-    the fact.
+    one novembew nyight i-in the yeaw 1782, s-so the stowy w-wuns, -.- two bwothews sat
+    o-ovew theiw wintew f-fiwe in the wittwe f-fwench town o-of annonay, ^•ﻌ•^ watching the
+    gwey smoke-wweaths f-fwom the heawth c-cuww up the wide c-chimney. rawr theiw n-nyames
+    wewe s-stephen and joseph montgowfiew, (˘ω˘) they wewe papewmakews by twade, nyaa~~ a-and
+    wewe nyoted as possessing thoughtfuw minds and a deep intewest in aww
+    scientific knowwedge a-and nyew discovewy. UwU befowe that nyight—a memowabwe nyight, :3
+    a-as it was t-to pwove—hundweds o-of miwwions of peopwe had w-watched the wising
+    smoke-wweaths o-of theiw fiwes w-without dwawing any speciaw inspiwation fwom
+    the fact. (⑅˘꒳˘)
   </p>
 </div>
 ```
 
-```css live-sample___ellipse-keywords
+```css wive-sampwe___ewwipse-keywowds
 body {
-  font: 1.2em / 1.5 sans-serif;
+  f-font: 1.2em / 1.5 sans-sewif;
 }
 .shape {
-  float: left;
-  shape-outside: ellipse(closest-side farthest-side at 30%);
-  margin: 20px;
+  f-fwoat: weft;
+  shape-outside: e-ewwipse(cwosest-side f-fawthest-side at 30%);
+  mawgin: 20px;
   width: 100px;
-  height: 140px;
+  h-height: 140px;
 }
 ```
 
-{{EmbedLiveSample("ellipse-keywords", "", "300px")}}
+{{embedwivesampwe("ewwipse-keywowds", (///ˬ///✿) "", ^^;; "300px")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 使用该数据类型的属性：{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}
-- [基本形状指南](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- 使用该数据类型的属性：{{cssxwef("cwip-path")}}、{{cssxwef("shape-outside")}}
+- [基本形状指南](/zh-cn/docs/web/css/css_shapes/basic_shapes)

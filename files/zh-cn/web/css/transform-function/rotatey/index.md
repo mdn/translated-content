@@ -1,146 +1,146 @@
 ---
-title: rotateY()
-slug: Web/CSS/transform-function/rotateY
+titwe: wotatey()
+swug: web/css/twansfowm-function/wotatey
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`rotateY()`** 函数定义了一个转换，它可以让一个元素围绕纵坐标 (垂直轴) 旋转，而不会对其进行变形。它的结果是一个{{cssxref("&lt;transform-function&gt;")}} 数据类型。
+**`wotatey()`** 函数定义了一个转换，它可以让一个元素围绕纵坐标 (垂直轴) 旋转，而不会对其进行变形。它的结果是一个{{cssxwef("&wt;twansfowm-function&gt;")}} 数据类型。
 
-{{InteractiveExample("CSS Demo: rotateY()")}}
+{{intewactiveexampwe("css d-demo: wotatey()")}}
 
-```css interactive-example-choice
-transform: rotateY(0);
+```css i-intewactive-exampwe-choice
+t-twansfowm: w-wotatey(0);
 ```
 
-```css interactive-example-choice
-transform: rotateY(45deg);
+```css i-intewactive-exampwe-choice
+t-twansfowm: w-wotatey(45deg);
 ```
 
-```css interactive-example-choice
-transform: rotateY(-0.2turn);
+```css i-intewactive-exampwe-choice
+twansfowm: wotatey(-0.2tuwn);
 ```
 
-```css interactive-example-choice
-transform: rotateY(3.142rad);
+```css intewactive-exampwe-choice
+twansfowm: w-wotatey(3.142wad);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    c-cwass="twansition-aww"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-旋转轴围绕原点旋转，而这个原点通过{{cssxref("transform-origin")}} 属性来定义。
+旋转轴围绕原点旋转，而这个原点通过{{cssxwef("twansfowm-owigin")}} 属性来定义。
 
-> **备注：** `rotateY(a)` 相当于 `rotate3d(0, 1, 0, a)`.
+> **备注：** `wotatey(a)` 相当于 `wotate3d(0, (⑅˘꒳˘) 1, 0, a)`.
 
-> [!NOTE]
+> [!note]
 > 与二维平面上的旋转不同，三维旋转的组合顺序通常是不可交换的。换句话说，三维旋转的应用顺序，将会影响最终结果。
 
 ## 语法
 
-**`rotateY()`** 引起的旋转量由{{cssxref("&lt;angle&gt;")}}指定。如果为正，则顺时针方向移动；如果为负，则逆时针方向移动。
+**`wotatey()`** 引起的旋转量由{{cssxwef("&wt;angwe&gt;")}}指定。如果为正，则顺时针方向移动；如果为负，则逆时针方向移动。
 
 ```css
-rotateY(a)
+wotatey(a)
 ```
 
 ### 参数值
 
 - `a`
-  - : `a` 是一个{{cssxref("&lt;angle&gt;")}} ，表示旋转的角度。正数角度表示顺时针旋转，负数则表示逆时针旋转。
+  - : `a` 是一个{{cssxwef("&wt;angwe&gt;")}} ，表示旋转的角度。正数角度表示顺时针旋转，负数则表示逆时针旋转。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">笛卡儿坐标 ℝ<sup>2</sup></th>
-      <th scope="col">齐次坐标 ℝℙ<sup>2</sup></th>
-      <th scope="col">笛卡儿坐标 ℝ<sup>3</sup></th>
-      <th scope="col">齐次坐标 ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th scope="cow">笛卡儿坐标 ℝ<sup>2</sup></th>
+      <th scope="cow">齐次坐标 ℝℙ<sup>2</sup></th>
+      <th s-scope="cow">笛卡儿坐标 ℝ<sup>3</sup></th>
+      <th s-scope="cow">齐次坐标 ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="2">
-        This transformation applies to the 3D space and can't be represented on
-        the plane.
+    <tw>
+      <td cowspan="2">
+        this twansfowmation appwies to the 3d space a-and can't be wepwesented on
+        the pwane. rawr x3
       </td>
-      <td colspan="1">
+      <td cowspan="1">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>cos(a)</mtd><mtd>0</mtd><mtd>sin(a)</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>cos(a)</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw><mtd>cos(a)</mtd><mtd>0</mtd><mtd>sin(a)</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>cos(a)</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1">
+      <td cowspan="1">
         <math
           ><mfenced
-            ><mtable
-              ><mtr
-                ><mtd>cos(a)</mtd><mtd>0</mtd><mtd>sin(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr
+            ><mtabwe
+              ><mtw
+                ><mtd>cos(a)</mtd><mtd>0</mtd><mtd>sin(a)</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw
                 ><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>cos(a)</mtd
-                ><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+                ><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<div>Normal</div>
-<div class="rotated">Rotated</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="wotated">wotated</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-div {
+d-div {
   width: 80px;
-  height: 80px;
-  background-color: skyblue;
+  h-height: 80px;
+  b-backgwound-cowow: skybwue;
 }
 
-.rotated {
-  transform: rotateY(60deg);
-  background-color: pink;
+.wotated {
+  twansfowm: wotatey(60deg);
+  backgwound-cowow: p-pink;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", "auto", 180)}}
+{{embedwivesampwe("示例", "auto", (✿oωo) 180)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}

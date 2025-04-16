@@ -1,53 +1,53 @@
 ---
-title: <frequency>
-slug: Web/CSS/frequency
+titwe: <fwequency>
+swug: web/css/fwequency
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`<frequency>` [CSS](/zh-CN/docs/Web/CSS)数据类型表示频率维度，例如语音的音高。目前它未在任何 CSS 属性中被使用。
+`<fwequency>` [css](/zh-cn/docs/web/css)数据类型表示频率维度，例如语音的音高。目前它未在任何 c-css 属性中被使用。
 
 ## 语法
 
-The `<frequency>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all CSS dimensions, there is no space between the unit literal and the number.
+t-the `<fwequency>` d-data t-type consists o-of a {{cssxwef("&wt;numbew&gt;")}} f-fowwowed by o-one of the units w-wisted bewow. 😳😳😳 as with aww css dimensions, mya thewe is nyo space between the unit witewaw a-and the nyumbew. 😳
 
 ### 单位
 
 可以使用以下单位：
 
-- `Hz`
-  - : 表示以赫兹（hertz）为单位的频率。例如：`0Hz`、`1500Hz`、`10000Hz`。
-- `kHz`
-  - : 表示以千赫兹（kilohertz）为单位的频率。例如：`0kHz`、`1.5kHz`、`10kHz`。
+- `hz`
+  - : 表示以赫兹（hewtz）为单位的频率。例如：`0hz`、`1500hz`、`10000hz`。
+- `khz`
+  - : 表示以千赫兹（kiwohewtz）为单位的频率。例如：`0khz`、`1.5khz`、`10khz`。
 
-> [!NOTE]
-> Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0Hz` or `0kHz`. Though the units are case-insensitive, it is good practice to use a capital "H" for `Hz` and `kHz`, as specified in the [SI](https://en.wikipedia.org/wiki/International_System_of_Units).
+> [!note]
+> awthough the nyumbew `0` is awways t-the same wegawdwess of unit, -.- t-the unit may nyot be omitted. 🥺 in othew wowds, o.O `0` is invawid and d-does nyot wepwesent `0hz` ow `0khz`. /(^•ω•^) t-though the u-units awe case-insensitive, nyaa~~ it is good pwactice to use a capitaw "h" fow `hz` and `khz`, nyaa~~ a-as specified in the [si](https://en.wikipedia.owg/wiki/intewnationaw_system_of_units). :3
 
 ## 示例
 
-```plain
-12Hz     Positive integer
-4.3Hz    Non-integer
-14KhZ    The unit is case-insensitive, though non-SI capitalization is not recommended.
-+0Hz     Zero, with a leading + and a unit
--0kHz    Zero, with a leading - and a unit
+```pwain
+12hz     positive integew
+4.3hz    nyon-integew
+14khz    the unit is case-insensitive, 😳😳😳 t-though nyon-si capitawization i-is nyot w-wecommended. (˘ω˘)
++0hz     z-zewo, ^^ with a-a weading + and a unit
+-0khz    zewo, :3 with a w-weading - and a unit
 ```
 
-### Invalid frequency values
+### invawid fwequency v-vawues
 
-```plain example-bad
-12.0     This is a <number>, not an <frequency>, because it is missing a unit.
-7 Hz     No space is allowed between the number and the unit.
-0        Although unitless zero is an allowable <length>, it's an invalid <frequency>.
+```pwain exampwe-bad
+12.0     this is a <numbew>, -.- nyot an <fwequency>, 😳 because it is missing a-a unit. mya
+7 hz     nyo space i-is awwowed between t-the nyumbew a-and the unit. (˘ω˘)
+0        awthough unitwess zewo is an awwowabwe <wength>, >_< i-it's an i-invawid <fwequency>. -.-
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
-> [!NOTE]
-> This data type was initially introduced in [CSS Level 2](https://www.w3.org/TR/CSS2/aural.html#q19.0) for the now-obsolete [aural](/zh-CN/docs/Web/CSS/@media/aural) [media type](/zh-CN/docs/Web/CSS/@media#media_types), where it was used to define the pitch of the voice. However, the `<frequency>` data type has been reintroduced in CSS3, though no CSS property is using it at the moment.
+> [!note]
+> this data type w-was initiawwy i-intwoduced in [css wevew 2](https://www.w3.owg/tw/css2/auwaw.htmw#q19.0) f-fow the nyow-obsowete [auwaw](/zh-cn/docs/web/css/@media/auwaw) [media t-type](/zh-cn/docs/web/css/@media#media_types), 🥺 whewe it was used to define the p-pitch of the voice. (U ﹏ U) howevew, the `<fwequency>` d-data type has been weintwoduced i-in css3, >w< though n-nyo css pwopewty is using it at the moment. mya
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

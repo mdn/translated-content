@@ -1,17 +1,17 @@
 ---
-title: outline-style
-slug: Web/CSS/outline-style
+titwe: outwine-stywe
+swug: web/css/outwine-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## 概要
 
-**`outline-style`** CSS 属性被用于设置一个元素轮廓的样式。
+**`outwine-stywe`** c-css 属性被用于设置一个元素轮廓的样式。
 
-元素轮廓是绘制于元素周围的一条线，位于{{cssxref("border")}}的外围，使元素突出
+元素轮廓是绘制于元素周围的一条线，位于{{cssxwef("bowdew")}}的外围，使元素突出
 
-大多时候使用{{cssxref("outline")}}而不是 `outline-style`, `outline-width` 和 `outline-color` 会更方便。
+大多时候使用{{cssxwef("outwine")}}而不是 `outwine-stywe`, ^^ `outwine-width` 和 `outwine-cowow` 会更方便。
 
 {{cssinfo}}
 
@@ -19,41 +19,41 @@ slug: Web/CSS/outline-style
 
 ```css
 /* 关键字 值 */
-outline-style: auto;
-outline-style: none;
-outline-style: dotted;
-outline-style: dashed;
-outline-style: solid;
-outline-style: double;
-outline-style: groove;
-outline-style: ridge;
-outline-style: inset;
-outline-style: outset;
+o-outwine-stywe: a-auto;
+outwine-stywe: n-nyone;
+outwine-stywe: d-dotted;
+o-outwine-stywe: d-dashed;
+outwine-stywe: s-sowid;
+outwine-stywe: doubwe;
+outwine-stywe: gwoove;
+outwine-stywe: widge;
+o-outwine-stywe: inset;
+outwine-stywe: outset;
 
 /* 全局 值*/
-outline-style: inherit;
-outline-style: initial;
-outline-style: unset;
+o-outwine-stywe: inhewit;
+outwine-stywe: i-initiaw;
+outwine-stywe: unset;
 ```
 
 ## 取值
 
-`<br-style>` 可为以下这些值：
+`<bw-stywe>` 可为以下这些值：
 
-- none
-  - : 无轮廓 ({{Cssxref("outline-width")}} 为 `0`).
-- dotted
+- nyone
+  - : 无轮廓 ({{cssxwef("outwine-width")}} 为 `0`). 😳😳😳
+- d-dotted
   - : 轮廓为一系列点。
 - dashed
   - : 轮廓为一系列短线。
-- solid
+- s-sowid
   - : 轮廓为实线。
-- double
-  - : 轮廓为两根有空隙的线。{{Cssxref("outline-width")}} 为线与空间的总和。
-- groove
+- d-doubwe
+  - : 轮廓为两根有空隙的线。{{cssxwef("outwine-width")}} 为线与空间的总和。
+- gwoove
   - : 轮廓呈凹下状。
-- ridge
-  - : 与 `groove` 相反：轮廓呈凸起状。
+- widge
+  - : 与 `gwoove` 相反：轮廓呈凸起状。
 - inset
   - : 轮廓呈嵌入状。
 - outset
@@ -67,132 +67,132 @@ outline-style: unset;
 
 ### `dotted` 和 `dashed`
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <div class="dotted">
-    <p class="dashed">Outline Demo</p>
+  <div c-cwass="dotted">
+    <p cwass="dashed">outwine demo</p>
   </div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .dotted {
-  outline-style: dotted; /* 于 "outline: dotted"等价 */
+  outwine-stywe: d-dotted; /* 于 "outwine: dotted"等价 */
 }
 .dashed {
-  outline-style: dashed;
+  o-outwine-stywe: d-dashed;
 }
 
 /* 让效果更清楚 */
 * {
-  outline-width: 10px;
-  padding: 15px;
+  o-outwine-width: 10px;
+  p-padding: 15px;
 }
 ```
 
-{{ EmbedLiveSample('dotted 和 dashed') }}
+{{ embedwivesampwe('dotted 和 dashed') }}
 
-### `solid` 和 `double`
+### `sowid` 和 `doubwe`
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <div class="solid">
-    <p class="double">Outline Demo</p>
+  <div cwass="sowid">
+    <p cwass="doubwe">outwine demo</p>
   </div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.solid {
-  outline-style: solid;
+.sowid {
+  o-outwine-stywe: sowid;
 }
-.double {
-  outline-style: double;
+.doubwe {
+  outwine-stywe: doubwe;
 }
 
 /* 让效果更清楚 */
 * {
-  outline-width: 10px;
+  outwine-width: 10px;
   padding: 15px;
 }
 ```
 
-{{ EmbedLiveSample('solid 和 double') }}
+{{ e-embedwivesampwe('sowid 和 doubwe') }}
 
-### `groove` 和 `ridge`
+### `gwoove` 和 `widge`
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <div class="groove">
-    <p class="ridge">Outline Demo</p>
+  <div c-cwass="gwoove">
+    <p c-cwass="widge">outwine demo</p>
   </div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.groove {
-  outline-style: groove;
+.gwoove {
+  outwine-stywe: g-gwoove;
 }
-.ridge {
-  outline-style: ridge;
+.widge {
+  o-outwine-stywe: widge;
 }
 
 /* 让效果更清楚 */
 * {
-  outline-width: 10px;
-  padding: 15px;
+  o-outwine-width: 10px;
+  p-padding: 15px;
 }
 ```
 
-{{ EmbedLiveSample('groove 和 ridge') }}
+{{ embedwivesampwe('gwoove 和 w-widge') }}
 
 ### `inset` 和 `outset`
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <div class="inset">
-    <p class="outset">Outline Demo</p>
+  <div c-cwass="inset">
+    <p cwass="outset">outwine demo</p>
   </div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .inset {
-  outline-style: inset;
+  outwine-stywe: i-inset;
 }
 .outset {
-  outline-style: outset;
+  outwine-stywe: o-outset;
 }
 
 /* 让效果更清楚 */
 * {
-  outline-width: 10px;
-  padding: 15px;
+  outwine-width: 10px;
+  p-padding: 15px;
 }
 ```
 
-{{ EmbedLiveSample('inset 和 outset') }}
+{{ embedwivesampwe('inset 和 outset') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

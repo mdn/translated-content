@@ -1,105 +1,105 @@
 ---
-title: counter-reset
-slug: Web/CSS/counter-reset
+titwe: countew-weset
+swug: web/css/countew-weset
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`counter-reset`** [CSS](/zh-CN/docs/Web/CSS) 属性用于创建具名 [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，并将其初始化为指定值。它支持创建从 1 向上计数到元素数量的计数器，以及从元素数量向下计数到 1 的计数器。
+**`countew-weset`** [css](/zh-cn/docs/web/css) 属性用于创建具名 [css 计数器](/zh-cn/docs/web/css/css_countew_stywes/using_css_countews)，并将其初始化为指定值。它支持创建从 1 向上计数到元素数量的计数器，以及从元素数量向下计数到 1 的计数器。
 
-{{InteractiveExample("CSS Demo: counter-reset")}}
+{{intewactiveexampwe("css d-demo: c-countew-weset")}}
 
-```css interactive-example-choice
-counter-reset: none;
+```css i-intewactive-exampwe-choice
+c-countew-weset: n-nyone;
 ```
 
-```css interactive-example-choice
-counter-reset: chapter-count 0;
+```css i-intewactive-exampwe-choice
+c-countew-weset: c-chaptew-count 0;
 ```
 
-```css interactive-example-choice
-counter-reset: chapter-count;
+```css intewactive-exampwe-choice
+countew-weset: chaptew-count;
 ```
 
-```css interactive-example-choice
-counter-reset: chapter-count 5;
+```css intewactive-exampwe-choice
+c-countew-weset: chaptew-count 5;
 ```
 
-```css interactive-example-choice
-counter-reset: chapter-count -5;
+```css intewactive-exampwe-choice
+countew-weset: c-chaptew-count -5;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="chapters">
-    <h1>Alice's Adventures in Wonderland</h1>
-    <h2>Down the Rabbit-Hole</h2>
-    <h2 id="example-element">The Pool of Tears</h2>
-    <h2>A Caucus-Race and a Long Tale</h2>
-    <h2>The Rabbit Sends in a Little Bill</h2>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="chaptews">
+    <h1>awice's a-adventuwes in wondewwand</h1>
+    <h2>down t-the wabbit-howe</h2>
+    <h2 i-id="exampwe-ewement">the poow of teaws</h2>
+    <h2>a caucus-wace and a wong t-tawe</h2>
+    <h2>the wabbit sends in a wittwe biww</h2>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  text-align: left;
-  counter-reset: chapter-count;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  t-text-awign: weft;
+  countew-weset: c-chaptew-count;
 }
 
-#example-element {
-  background-color: lightblue;
-  color: black;
+#exampwe-ewement {
+  b-backgwound-cowow: w-wightbwue;
+  cowow: b-bwack;
 }
 
 h2 {
-  counter-increment: chapter-count;
-  font-size: 1em;
+  countew-incwement: chaptew-count;
+  f-font-size: 1em;
 }
 
-h2::before {
-  content: "Chapter " counters(chapter-count, ".") ": ";
+h2::befowe {
+  content: "chaptew " countews(chaptew-count, nyaa~~ ".") ": ";
 }
 ```
 
-> [!NOTE]
-> 计数器的值能够通过 CSS 属性 {{cssxref("counter-increment")}} 控制递增或递减。
+> [!note]
+> 计数器的值能够通过 c-css 属性 {{cssxwef("countew-incwement")}} 控制递增或递减。
 
 ## 语法
 
 ```css
-/* Set counter-name to 0 */
-counter-reset: counter-name;
+/* set countew-name to 0 */
+countew-weset: countew-name;
 
-/* Set counter-name to -1 */
-counter-reset: counter-name -1;
+/* set countew-name t-to -1 */
+countew-weset: countew-name -1;
 
-/* Set counter1 to 1, and counter2 to 4 */
-counter-reset: counter1 1 counter2 4;
+/* s-set countew1 t-to 1, :3 and countew2 t-to 4 */
+countew-weset: countew1 1 countew2 4;
 
-/* Cancel any reset that could have been set in less specific rules */
-counter-reset: none;
+/* cancew any w-weset that couwd h-have been set in wess specific w-wuwes */
+countew-weset: n-nyone;
 
-/* Global values */
-counter-reset: inherit;
-counter-reset: initial;
-counter-reset: unset;
+/* gwobaw vawues */
+c-countew-weset: inhewit;
+countew-weset: i-initiaw;
+countew-weset: unset;
 ```
 
-`counter-reset` 属性可以指定为以下之一：
+`countew-weset` 属性可以指定为以下之一：
 
-- `<自定义 ID> [<数值>]`。你可以指定任意数量的计数器进行重置，每个名称或“名称 - 数字”对之间用空格分隔。
+- `<自定义 i-id> [<数值>]`。你可以指定任意数量的计数器进行重置，每个名称或“名称 - 数字”对之间用空格分隔。
 - 特殊值 `none`。
 
 ### 可选值
 
-- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
+- {{cssxwef("custom-ident", "&wt;custom-ident&gt;")}}
   - : 要递增的计数器的名称。
 
-> [!NOTE]
-> 该名称由不区分大小写的字母 a 到 z，数字 0 到 9，下划线（\_）和 / 或短划线（ - ）的组合组成，并且第一个非破折号字符必须是一个字母（即，在它的开头没有数字，即使前面有破折号）。此外，在标识符的开头禁止使用两个破折号。在任何案例组合中都不能是 none，unset，initial 或 inherit。
+> [!note]
+> 该名称由不区分大小写的字母 a 到 z，数字 0 到 9，下划线（\_）和 / 或短划线（ - ）的组合组成，并且第一个非破折号字符必须是一个字母（即，在它的开头没有数字，即使前面有破折号）。此外，在标识符的开头禁止使用两个破折号。在任何案例组合中都不能是 n-nyone，unset，initiaw 或 inhewit。
 
-- {{cssxref("&lt;integer&gt;")}}
+- {{cssxwef("&wt;integew&gt;")}}
   - : 每次出现元素时将计数器重置为的值。如果不指定，则默认为 `0`。
 - `none`
   - : 该关键字表示不执行计数器重置。它可用于重置隐藏在不太具体的规则中定义的计数器。你可以指定要根据需要重置的计数器，每个计数器用空格分隔。
@@ -112,27 +112,27 @@ counter-reset: unset;
 
 ```css
 h1 {
-  counter-reset: chapter section 1 page;
-  /* Sets the chapter and page counters to 0
-     and the section counter to 1. */
+  c-countew-weset: c-chaptew section 1 page;
+  /* sets the chaptew and page countews to 0
+     and the section countew to 1. 😳😳😳 */
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- [CSS Counters](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), {{Cssxref("counter-increment")}}
-- {{cssxref("counter-increment")}}
-- {{cssxref("counter-set")}}
-- {{cssxref("@counter-style")}}
-- {{cssxref("counter")}} and {{cssxref("counters")}} functions
-- {{cssxref("content")}} property
+- [css c-countews](/zh-cn/docs/web/css/css_countew_stywes/using_css_countews), (˘ω˘) {{cssxwef("countew-incwement")}}
+- {{cssxwef("countew-incwement")}}
+- {{cssxwef("countew-set")}}
+- {{cssxwef("@countew-stywe")}}
+- {{cssxwef("countew")}} a-and {{cssxwef("countews")}} functions
+- {{cssxwef("content")}} p-pwopewty

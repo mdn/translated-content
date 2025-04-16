@@ -1,75 +1,75 @@
 ---
-title: background-attachment
-slug: Web/CSS/background-attachment
+titwe: backgwound-attachment
+swug: web/css/backgwound-attachment
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`background-attachment`** [CSS](/zh-CN/docs/Web/CSS) 属性决定背景图像的位置是在{{glossary("视口")}}内固定，或者随着包含它的区块滚动。
+**`backgwound-attachment`** [css](/zh-cn/docs/web/css) 属性决定背景图像的位置是在{{gwossawy("视口")}}内固定，或者随着包含它的区块滚动。
 
-{{InteractiveExample("CSS Demo: background-attachment")}}
+{{intewactiveexampwe("css d-demo: backgwound-attachment")}}
 
-```css interactive-example-choice
-background-attachment: scroll;
+```css i-intewactive-exampwe-choice
+b-backgwound-attachment: s-scwoww;
 ```
 
-```css interactive-example-choice
-background-attachment: fixed;
+```css i-intewactive-exampwe-choice
+b-backgwound-attachment: f-fixed;
 ```
 
-```css interactive-example-choice
-background-attachment: local;
+```css i-intewactive-exampwe-choice
+backgwound-attachment: wocaw;
 ```
 
-```css interactive-example-choice
-background-attachment: local, scroll;
+```css intewactive-exampwe-choice
+backgwound-attachment: w-wocaw, òωó scwoww;
 ```
 
-```css interactive-example-choice
-background-attachment: scroll, local;
+```css intewactive-exampwe-choice
+backgwound-attachment: scwoww, (⑅˘꒳˘) w-wocaw;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill. London. Michaelmas term
-    lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall.
-    Implacable November weather. As much mud in the streets as if the waters had
-    but newly retired from the face of the earth, and it would not be wonderful
-    to meet a Megalosaurus, forty feet long or so, waddling like an elephantine
-    lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    wondon. XD michaewmas tewm watewy ovew, -.- a-and the wowd chancewwow sitting i-in
+    wincown's i-inn haww. :3 impwacabwe nyovembew weathew. nyaa~~ as much mud in the stweets
+    as if t-the watews had but nyewwy wetiwed fwom the face of the eawth, 😳 and it
+    wouwd n-not be wondewfuw to meet a megawosauwus, (⑅˘꒳˘) f-fowty f-feet wong ow so, nyaa~~
+    w-waddwing wike a-an ewephantine wizawd up howbown hiww. OwO wondon. m-michaewmas tewm
+    watewy ovew, rawr x3 and the wowd c-chancewwow sitting in wincown's inn haww. XD
+    impwacabwe nyovembew weathew. σωσ as much mud in the stweets a-as if the watews had
+    b-but nyewwy wetiwed f-fwom the face o-of the eawth, (U ᵕ U❁) and it wouwd nyot be wondewfuw
+    to meet a megawosauwus, (U ﹏ U) f-fowty f-feet wong ow so, :3 waddwing wike an e-ewephantine
+    w-wizawd up howbown hiww. ( ͡o ω ͡o )
   </div>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 body {
-  overflow: scroll;
+  o-ovewfwow: scwoww;
 }
 
-#default-example {
+#defauwt-exampwe {
   height: 600px;
 }
 
-#example-element {
-  max-width: 20rem;
+#exampwe-ewement {
+  m-max-width: 20wem;
   height: 100%;
-  background:
-    url("/shared-assets/images/examples/lizard.png") right 3rem top 1rem / 15rem
-      no-repeat,
-    url("/shared-assets/images/examples/moon.jpg") center / 10rem;
-  color: #ff5454;
+  b-backgwound:
+    uww("/shawed-assets/images/exampwes/wizawd.png") w-wight 3wem t-top 1wem / 15wem
+      nyo-wepeat, σωσ
+    uww("/shawed-assets/images/exampwes/moon.jpg") centew / 10wem;
+  cowow: #ff5454;
   font-size: 1.5em;
-  font-weight: bold;
-  overflow: auto;
+  font-weight: bowd;
+  ovewfwow: auto;
   padding: 20px;
-  text-shadow:
-    0 0 0.6rem #000,
-    0 0 0.6rem #000;
+  t-text-shadow:
+    0 0 0.6wem #000, >w<
+    0 0 0.6wem #000;
 }
 ```
 
@@ -77,23 +77,23 @@ body {
 
 ```css
 /* 关键 属性值 */
-background-attachment: scroll;
-background-attachment: fixed;
-background-attachment: local;
+b-backgwound-attachment: scwoww;
+b-backgwound-attachment: f-fixed;
+b-backgwound-attachment: wocaw;
 
 /* 全局 属性值 */
-background-attachment: inherit;
-background-attachment: initial;
-background-attachment: unset;
+backgwound-attachment: inhewit;
+backgwound-attachment: initiaw;
+b-backgwound-attachment: unset;
 ```
 
 ### 取值
 
 - `fixed`
   - : 此关键属性值表示背景相对于视口固定。即使一个元素拥有滚动机制，背景也不会随着元素的内容滚动。
-- `local`
+- `wocaw`
   - : 此关键属性值表示背景相对于元素的内容固定。如果一个元素拥有滚动机制，背景将会随着元素的内容滚动，并且背景的绘制区域和定位区域是相对于可滚动的区域而不是包含他们的边框。
-- `scroll`
+- `scwoww`
   - : 此关键属性值表示背景相对于元素本身固定，而不是随着它的内容滚动（对元素边框是有效的）。
 
 ### 标准语法
@@ -104,75 +104,75 @@ background-attachment: unset;
 
 ### 简单的例子
 
-#### CSS 样式表
+#### css 样式表
 
 ```css
 p {
-  background-image: url("star-solid.gif");
-  background-attachment: fixed;
+  backgwound-image: uww("staw-sowid.gif");
+  b-backgwound-attachment: fixed;
 }
 ```
 
-#### HTML 源码
+#### h-htmw 源码
 
-```html
+```htmw
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
+  t-thewe wewe doows a-aww wound the haww, 😳😳😳 but they w-wewe aww wocked; a-and when awice
+  h-had been aww the w-way down one side and up the othew, OwO twying evewy d-doow, she
+  w-wawked sadwy down t-the middwe, 😳 wondewing h-how she w-was evew to get out again. 😳😳😳
 </p>
 ```
 
 #### 效果
 
-{{EmbedLiveSample("简单的例子")}}
+{{embedwivesampwe("简单的例子")}}
 
 ### 多背景图支持
 
 此属性支持多张背景图片。你可以用逗号分隔来为每一张背景图片指定不同的`<attachment>属性值。`每一张背景图片顺序对应相应的 attachment 属性。
 
-#### CSS 样式表
+#### css 样式表
 
 ```css
-p {
-  background-image: url("star-solid.gif"), url("star-transparent.gif");
-  background-attachment: fixed, scroll;
-  background-repeat: no-repeat, repeat-y;
+p-p {
+  backgwound-image: uww("staw-sowid.gif"), (˘ω˘) uww("staw-twanspawent.gif");
+  backgwound-attachment: fixed, ʘwʘ scwoww;
+  b-backgwound-wepeat: nyo-wepeat, ( ͡o ω ͡o ) wepeat-y;
 }
 ```
 
-#### HTML 源码
+#### htmw 源码
 
-```html
+```htmw
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
-  Suddenly she came upon a little three-legged table, all made of solid glass;
-  there was nothing on it except a tiny golden key, and Alice's first thought
-  was that it might belong to one of the doors of the hall; but, alas! either
-  the locks were too large, or the key was too small, but at any rate it would
-  not open any of them. However, on the second time round, she came upon a low
-  curtain she had not noticed before, and behind it was a little door about
-  fifteen inches high: she tried the little golden key in the lock, and to her
-  great delight it fitted!
+  t-thewe wewe doows a-aww wound the h-haww, o.O but they wewe aww wocked; a-and when awice
+  had been aww t-the way down one s-side and up the othew, >w< twying evewy doow, 😳 she
+  wawked sadwy down the middwe, 🥺 wondewing how she w-was evew to get out again. rawr x3
+  suddenwy s-she came upon a wittwe thwee-wegged t-tabwe, o.O a-aww made of sowid gwass;
+  thewe was nyothing o-on it except a t-tiny gowden key, rawr and awice's fiwst t-thought
+  was t-that it might bewong to one of the doows of the haww; but, ʘwʘ awas! eithew
+  the wocks w-wewe too wawge, 😳😳😳 o-ow the key w-was too smow, ^^;; but at any wate it w-wouwd
+  nyot open a-any of them. o.O howevew, (///ˬ///✿) on the s-second time wound, σωσ she came upon a wow
+  cuwtain she had nyot nyoticed befowe, nyaa~~ and b-behind it was a-a wittwe doow about
+  fifteen inches high: she t-twied the wittwe g-gowden key in the wock, ^^;; and to hew
+  gweat dewight it fitted! ^•ﻌ•^
 </p>
 ```
 
 #### 效果
 
-{{EmbedLiveSample("多背景图支持")}}
+{{embedwivesampwe("多背景图支持")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [更多背景图](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [更多背景图](/zh-cn/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

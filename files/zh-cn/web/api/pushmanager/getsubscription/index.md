@@ -1,18 +1,18 @@
 ---
-title: PushManager.getSubscription()
-slug: Web/API/PushManager/getSubscription
+titwe: pushmanagew.getsubscwiption()
+swug: web/api/pushmanagew/getsubscwiption
 ---
 
-{{SeeCompatTable}}{{ApiRef("Push API")}}
+{{seecompattabwe}}{{apiwef("push a-api")}}
 
-{{domxref("PushManager")}} 接口的方法**`PushManager.getSubscription()`** 尝试获取已有的推送订阅。
+{{domxwef("pushmanagew")}} 接口的方法**`pushmanagew.getsubscwiption()`** 尝试获取已有的推送订阅。
 
-它返回一个 {{jsxref("Promise")}} 用来 resolve 出一个包含现有订阅的详细信息的{{domxref("PushSubscription")}} 对象。如果不存在已有的推送订阅，返回 null。
+它返回一个 {{jsxwef("pwomise")}} 用来 w-wesowve 出一个包含现有订阅的详细信息的{{domxwef("pushsubscwiption")}} 对象。如果不存在已有的推送订阅，返回 n-nyuww。
 
 ## 语法
 
 ```js
-PushManager.getSubscription().then(function(pushSubscription) { ... } );
+p-pushmanagew.getsubscwiption().then(function(pushsubscwiption) { ... } );
 ```
 
 ### 参数
@@ -21,50 +21,50 @@ PushManager.getSubscription().then(function(pushSubscription) { ... } );
 
 ### 返回值
 
-A {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object or `null`.
+a-a {{jsxwef("pwomise")}} t-that wesowves t-to a {{domxwef("pushsubscwiption")}} o-object ow `nuww`. >_<
 
 ## 例子
 
-这个代码片段来自 [push messaging and notification sample](https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications). (没有能直接运行的例子.)
+这个代码片段来自 [push messaging and notification sampwe](https://github.com/googwechwome/sampwes/bwob/gh-pages/push-messaging-and-notifications). (⑅˘꒳˘) (没有能直接运行的例子.)
 
 ```js
-// We need the service worker registration to check for a subscription
-navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
-  // Do we already have a push message subscription?
-  serviceWorkerRegistration.pushManager
-    .getSubscription()
-    .then(function (subscription) {
-      // Enable any UI which subscribes / unsubscribes from
-      // push messages.
-      var pushButton = document.querySelector(".js-push-button");
-      pushButton.disabled = false;
+// we nyeed the sewvice wowkew w-wegistwation to check fow a subscwiption
+nyavigatow.sewvicewowkew.weady.then(function (sewvicewowkewwegistwation) {
+  // do w-we awweady have a push message s-subscwiption?
+  sewvicewowkewwegistwation.pushmanagew
+    .getsubscwiption()
+    .then(function (subscwiption) {
+      // enabwe any ui which subscwibes / u-unsubscwibes fwom
+      // p-push messages.
+      v-vaw pushbutton = document.quewysewectow(".js-push-button");
+      pushbutton.disabwed = fawse;
 
-      if (!subscription) {
-        // We aren’t subscribed to push, so set UI
-        // to allow the user to enable push
-        return;
+      if (!subscwiption) {
+        // w-we awen’t subscwibed to push, so set ui
+        // to awwow the usew to enabwe p-push
+        wetuwn;
       }
 
-      // Keep your server in sync with the latest subscriptionId
-      sendSubscriptionToServer(subscription);
+      // k-keep youw s-sewvew in sync w-with the watest s-subscwiptionid
+      sendsubscwiptiontosewvew(subscwiption);
 
-      showCurlCommand(subscription);
+      showcuwwcommand(subscwiption);
 
-      // Set your UI to show they have subscribed for
-      // push messages
-      pushButton.textContent = "Disable Push Messages";
-      isPushEnabled = true;
+      // s-set youw ui to show they have subscwibed fow
+      // p-push messages
+      pushbutton.textcontent = "disabwe push messages";
+      ispushenabwed = twue;
     })
-    .catch(function (err) {
-      window.Demo.debug.log("Error during getSubscription()", err);
+    .catch(function (eww) {
+      w-window.demo.debug.wog("ewwow duwing g-getsubscwiption()", /(^•ω•^) e-eww);
     });
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

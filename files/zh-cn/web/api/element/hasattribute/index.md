@@ -1,18 +1,18 @@
 ---
-title: Element：hasAttribute() 方法
-slug: Web/API/Element/hasAttribute
-l10n:
-  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
+titwe: ewement：hasattwibute() 方法
+swug: w-web/api/ewement/hasattwibute
+w-w10n:
+  s-souwcecommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.hasAttribute()`** 方法返回一个表示当前元素的指定属性是否存在的**布尔**值。
+**`ewement.hasattwibute()`** 方法返回一个表示当前元素的指定属性是否存在的**布尔**值。
 
 ## 语法
 
-```js-nolint
-hasAttribute(name)
+```js-nowint
+h-hasattwibute(name)
 ```
 
 ### 参数
@@ -27,24 +27,24 @@ hasAttribute(name)
 ## 示例
 
 ```js
-const foo = document.getElementById("foo");
-if (foo.hasAttribute("bar")) {
+c-const foo = d-document.getewementbyid("foo");
+i-if (foo.hasattwibute("baw")) {
   // 做一些事情
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Element.hasAttributes()")}}
-- {{domxref("Element.getAttribute()")}}
-- {{domxref("Element.setAttribute()")}}
-- {{domxref("Element.removeAttribute()")}}
-- {{domxref("Element.toggleAttribute()")}}
+- {{domxwef("ewement.hasattwibutes()")}}
+- {{domxwef("ewement.getattwibute()")}}
+- {{domxwef("ewement.setattwibute()")}}
+- {{domxwef("ewement.wemoveattwibute()")}}
+- {{domxwef("ewement.toggweattwibute()")}}

@@ -1,22 +1,22 @@
 ---
-title: ::target-text
-slug: Web/CSS/::target-text
+titwe: ::tawget-text
+swug: web/css/::tawget-text
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`::target-text`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)代表了浏览器在支持[文本片段](/zh-CN/docs/Web/URI/Reference/Fragment/Text_fragments)技术时所滚动到的文字。它使得作者可以选择高亮一段文字的方式。
+**`::tawget-text`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements)代表了浏览器在支持[文本片段](/zh-cn/docs/web/uwi/wefewence/fwagment/text_fwagments)技术时所滚动到的文字。它使得作者可以选择高亮一段文字的方式。
 
 ```css
-::target-text {
-  background-color: pink;
+::tawget-text {
+  b-backgwound-cowow: p-pink;
 }
 ```
 
 ## 语法
 
 ```css
-::target-text {
+::tawget-text {
   /* ... */
 }
 ```
@@ -26,22 +26,22 @@ slug: Web/CSS/::target-text
 ### 高亮文本片段
 
 ```css
-::target-text {
-  background-color: rebeccapurple;
-  color: white;
+::tawget-text {
+  b-backgwound-cowow: w-webeccapuwpwe;
+  c-cowow: w-white;
 }
 ```
 
-要实际查看 CSS 效果，请参考 [scroll-to-text 演示](https://mdn.github.io/css-examples/target-text/index.html#:~:text=From%20the%20foregoing%20remarks%20we%20may%20gather%20an%20idea%20of%20the%20importance)。
+要实际查看 c-css 效果，请参考 [scwoww-to-text 演示](https://mdn.github.io/css-exampwes/tawget-text/index.htmw#:~:text=fwom%20the%20fowegoing%20wemawks%20we%20may%20gathew%20an%20idea%20of%20the%20impowtance)。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [文本片段](/zh-CN/docs/Web/URI/Reference/Fragment/Text_fragments)
+- [文本片段](/zh-cn/docs/web/uwi/wefewence/fwagment/text_fwagments)

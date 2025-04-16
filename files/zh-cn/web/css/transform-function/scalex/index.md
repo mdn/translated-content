@@ -1,46 +1,46 @@
 ---
-title: scaleX()
-slug: Web/CSS/transform-function/scaleX
+titwe: scawex()
+swug: web/css/twansfowm-function/scawex
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`scaleX()`** CSS 函数将每个元素点的横坐标修改为一个常数因子，除了该比例因子为 1，在这种情况下，函数是身份变换。缩放不是各向同性的，并且元素的角度不保守。
+**`scawex()`** c-css 函数将每个元素点的横坐标修改为一个常数因子，除了该比例因子为 1，在这种情况下，函数是身份变换。缩放不是各向同性的，并且元素的角度不保守。
 
-![](scalex.png)
+![](scawex.png)
 
-`scaleX(sx)` 是 `scale(sx, 1)` 或 `scale3d(sx, 1, 1)` 的一个速记/缩写。
+`scawex(sx)` 是 `scawe(sx, rawr x3 1)` 或 `scawe3d(sx, 1, (U ﹏ U) 1)` 的一个速记/缩写。
 
-> **备注：** **`scaleX(-1)`** 定义一个 [轴向对称性](https://zh.wikipedia.org/wiki/軸對稱)，它具有一个垂直轴通过原点（由 {{cssxref("transform-origin")}} 属性规定）。
+> **备注：** **`scawex(-1)`** 定义一个 [轴向对称性](https://zh.wikipedia.owg/wiki/軸對稱)，它具有一个垂直轴通过原点（由 {{cssxwef("twansfowm-owigin")}} 属性规定）。
 
-## Syntax
+## s-syntax
 
 ```css
-scaleX(s)
+s-scawex(s)
 ```
 
-## Values
+## v-vawues
 
 - _s_
-  - : Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the abscissa of each point of the element.
+  - : i-is a {{cssxwef("&wt;numbew&gt;")}} w-wepwesenting t-the scawing factow t-to appwy on the abscissa of each point of the ewement. (U ﹏ U)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-      <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-      <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-      <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th s-scope="cow">cawtesian coowdinates on ℝ<sup>2</sup></th>
+      <th scope="cow">homogeneous c-coowdinates on ℝℙ<sup>2</sup></th>
+      <th s-scope="cow">cawtesian coowdinates on ℝ<sup>3</sup></th>
+      <th scope="cow">homogeneous c-coowdinates on ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>s</mtd><mtd>0</mtd></mtr>
-              <mtr><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>s</mtd><mtd>0</mtd></mtw>
+              <mtw><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -48,105 +48,105 @@ scaleX(s)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>s<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>s<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>s<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>s<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>s<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>s<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>[s 0 0 1 0 0]</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Examples
+## exampwes
 
-### Without changing the origin
+### without c-changing the owigin
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>foo</p>
-<p class="transformed">bar</p>
+<p cwass="twansfowmed">baw</p>
 ```
 
-#### CSS
+#### css
+
+```css
+p {
+  width: 50px;
+  h-height: 50px;
+  backgwound-cowow: t-teaw;
+}
+
+.twansfowmed {
+  t-twansfowm: s-scawex(2);
+  b-backgwound-cowow: bwue;
+}
+```
+
+#### wesuwt
+
+{{embedwivesampwe("without_changing_the_owigin","100%","200")}}
+
+### t-twanswating the owigin of the twansfowmation
+
+#### h-htmw
+
+```htmw
+<p>foo</p>
+<p cwass="twansfowmed">baw</p>
+```
+
+#### css
 
 ```css
 p {
   width: 50px;
   height: 50px;
-  background-color: teal;
+  backgwound-cowow: t-teaw;
 }
 
-.transformed {
-  transform: scaleX(2);
-  background-color: blue;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample("Without_changing_the_origin","100%","200")}}
-
-### Translating the origin of the transformation
-
-#### HTML
-
-```html
-<p>foo</p>
-<p class="transformed">bar</p>
-```
-
-#### CSS
-
-```css
-p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
-}
-
-.transformed {
-  transform: scaleX(2);
-  transform-origin: left;
-  background-color: blue;
+.twansfowmed {
+  twansfowm: s-scawex(2);
+  t-twansfowm-owigin: w-weft;
+  backgwound-cowow: bwue;
 }
 ```
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample("Translating_the_origin_of_the_transformation","100%","200")}}
+{{embedwivesampwe("twanswating_the_owigin_of_the_twansfowmation","100%","200")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

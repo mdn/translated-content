@@ -1,89 +1,89 @@
 ---
-title: ::marker
-slug: Web/CSS/::marker
+titwe: ::mawkew
+swug: web/css/::mawkew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`::marker`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)匹配列表的标记框（通常为一个符号或数字）。它作用在任何设置了 [`display: list-item`](/zh-CN/docs/Web/CSS/display) 的元素或伪元素上，例如 {{HTMLElement("li")}} 和 {{HTMLElement("summary")}} 元素。
+**`::mawkew`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements)匹配列表的标记框（通常为一个符号或数字）。它作用在任何设置了 [`dispway: w-wist-item`](/zh-cn/docs/web/css/dispway) 的元素或伪元素上，例如 {{htmwewement("wi")}} 和 {{htmwewement("summawy")}} 元素。
 
-{{InteractiveExample("CSS Demo: ::marker", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: ::mawkew", XD "tabbed-showtew")}}
 
-```css interactive-example
-li::marker {
-  content: "✝ ";
-  font-size: 1.2em;
+```css i-intewactive-exampwe
+w-wi::mawkew {
+  c-content: "✝ ";
+  f-font-size: 1.2em;
 }
 ```
 
-```html interactive-example
-<p>Group known as Mercury Seven:</p>
-<ul>
-  <li>Malcolm Scott Carpenter</li>
-  <li>Leroy Gordon (Gordo) Cooper Jr.</li>
-  <li>John Herschel Glenn Jr.</li>
-  <li>Virgil Ivan (Gus) Grissom</li>
-  <li>Walter Marty (Wally) Schirra Jr.</li>
-  <li>Alan Bartlett Shepard Jr.</li>
-  <li>Donald Kent (Deke) Slayton</li>
-</ul>
+```htmw i-intewactive-exampwe
+<p>gwoup k-known as mewcuwy seven:</p>
+<uw>
+  <wi>mawcowm scott cawpentew</wi>
+  <wi>wewoy gowdon (gowdo) coopew jw.</wi>
+  <wi>john h-hewschew gwenn jw.</wi>
+  <wi>viwgiw ivan (gus) gwissom</wi>
+  <wi>wawtew m-mawty (wawwy) schiwwa jw.</wi>
+  <wi>awan bawtwett s-shepawd jw.</wi>
+  <wi>donawd kent (deke) swayton</wi>
+</uw>
 ```
 
 ## 允许的属性值
 
-在将 `::marker` 作为选择器的规则中，只能使用某些 CSS 属性：
+在将 `::mawkew` 作为选择器的规则中，只能使用某些 c-css 属性：
 
-- 所有的[字体属性](/zh-CN/docs/Web/CSS/CSS_fonts)
-- {{CSSxRef("white-space")}} 属性
-- {{CSSxRef("color")}} 属性
-- {{CSSxRef("text-combine-upright")}}、{{CSSxRef("unicode-bidi")}} 和 {{CSSxRef("direction")}} 属性
-- {{CSSxRef("content")}} 属性
-- 所有的 [animation](/zh-CN/docs/Web/CSS/CSS_animations#css_属性) 和 [transition](/zh-CN/docs/Web/CSS/CSS_transitions#css_属性) 属性
+- 所有的[字体属性](/zh-cn/docs/web/css/css_fonts)
+- {{cssxwef("white-space")}} 属性
+- {{cssxwef("cowow")}} 属性
+- {{cssxwef("text-combine-upwight")}}、{{cssxwef("unicode-bidi")}} 和 {{cssxwef("diwection")}} 属性
+- {{cssxwef("content")}} 属性
+- 所有的 [animation](/zh-cn/docs/web/css/css_animations#css_属性) 和 [twansition](/zh-cn/docs/web/css/css_twansitions#css_属性) 属性
 
-> [!NOTE]
-> 规范指出，将来可能会支持其他 CSS 属性。
+> [!note]
+> 规范指出，将来可能会支持其他 css 属性。
 
 ## 语法
 
 ```css
-::marker {
+::mawkew {
   /* ... */
 }
 ```
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<ul>
-  <li>Peaches</li>
-  <li>Apples</li>
-  <li>Plums</li>
-</ul>
+```htmw
+<uw>
+  <wi>peaches</wi>
+  <wi>appwes</wi>
+  <wi>pwums</wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
-ul li::marker {
-  color: red;
+uw wi::mawkew {
+  cowow: wed;
   font-size: 1.5em;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 默认拥有标记框的 HTML 元素：{{HTMLElement("ol")}}、{{HTMLElement("li")}}、{{HTMLElement("summary")}}
+- 默认拥有标记框的 htmw 元素：{{htmwewement("ow")}}、{{htmwewement("wi")}}、{{htmwewement("summawy")}}

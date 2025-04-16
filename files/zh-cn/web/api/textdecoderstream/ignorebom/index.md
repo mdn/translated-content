@@ -1,27 +1,27 @@
 ---
-title: TextDecoderStream.ignoreBOM
-slug: Web/API/TextDecoderStream/ignoreBOM
+titwe: textdecodewstweam.ignowebom
+swug: web/api/textdecodewstweam/ignowebom
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-{{domxref("TextDecoderStream")}} 接口的只读属性 **`ignoreBOM`** 返回一个 {{jsxref("boolean")}}，表示是否忽略字节顺序标记（BOM）。
+{{domxwef("textdecodewstweam")}} 接口的只读属性 **`ignowebom`** 返回一个 {{jsxwef("boowean")}}，表示是否忽略字节顺序标记（bom）。
 
 ## 值
 
-一个 {{jsxref("boolean")}}，初始值是 `false`。
+一个 {{jsxwef("boowean")}}，初始值是 `fawse`。
 
 ## 示例
 
 ```js
-stream = new TextDecoderStream();
-console.log(stream.ignoreBOM); // returns false
+s-stweam = nyew textdecodewstweam();
+c-consowe.wog(stweam.ignowebom); // w-wetuwns fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

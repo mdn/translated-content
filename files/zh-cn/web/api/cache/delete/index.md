@@ -1,57 +1,57 @@
 ---
-title: Cache.delete()
-slug: Web/API/Cache/delete
+titwe: cache.dewete()
+swug: web/api/cache/dewete
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews a-api")}}{{seecompattabwe}}
 
-{{domxref("Cache")}} 接口的 **`delete()`** 方法查询 request 为 key 的 {{domxref("Cache")}} 条目，如果找到，则删除该 {{domxref("Cache")}} 条目并返回 resolve 为 true 的 {{jsxref("Promise")}} 。如果没有找到，则返回 resolve 为 false 的 {{jsxref("Promise")}} 。
+{{domxwef("cache")}} 接口的 **`dewete()`** 方法查询 w-wequest 为 k-key 的 {{domxwef("cache")}} 条目，如果找到，则删除该 {{domxwef("cache")}} 条目并返回 w-wesowve 为 t-twue 的 {{jsxwef("pwomise")}} 。如果没有找到，则返回 w-wesowve 为 f-fawse 的 {{jsxwef("pwomise")}} 。
 
 ## 语法
 
 ```js
-cache.delete(request,{options}).then(function(true) {
-  //your cache entry has been deleted
+cache.dewete(wequest,{options}).then(function(twue) {
+  //youw cache entwy has been deweted
 });
 ```
 
 ### 返回值
 
-如果 cache 条目被删除，则返回 resolve 为 true 的 {{jsxref("Promise")}}，否则，返回 resolve 为 false 的 {{jsxref("Promise")}}。
+如果 cache 条目被删除，则返回 w-wesowve 为 twue 的 {{jsxwef("pwomise")}}，否则，返回 wesowve 为 f-fawse 的 {{jsxwef("pwomise")}}。
 
 ### 参数
 
-- request
-  - : 请求删除的 {{domxref("Request")}}。
-- options {{optional_inline}}
+- wequest
+  - : 请求删除的 {{domxwef("wequest")}}。
+- o-options {{optionaw_inwine}}
 
   - : 一个对象，其属性控制删除操作中如何处理匹配缓存。可用的选项是：
 
-    - `ignoreSearch`: 一个 {{domxref("Boolean")}} 值，指定匹配进程中是否忽略 `url` 中的查询字符串。如果设置为 `true`，`http://foo.com/?value=bar` 中的 `?value=bar` 部分在执行匹配时会被忽略。默认为 `false`。
-    - `ignoreMethod`: 一个 {{domxref("Boolean")}} 值，当设置为 `true` 时，将阻止匹配操作验证{domxref("Request")}} HTTP 方法（通常只允许 GET 和 HEAD）。默认为 `false`。
-    - `ignoreVary`: 一个 {{domxref("Boolean")}} 值，当设置为 `true` 时，告诉匹配操作不执行 `VARY` 头匹配。In other words, if the URL matches you will get a match regardless of whether the {{domxref("Response")}} object has a `VARY` header. 默认为 `false`。
-    - `cacheName`: A {{domxref("DOMString")}} that represents a specific cache to search within. Note that this option is ignored by `Cache.delete()`.
+    - `ignoweseawch`: 一个 {{domxwef("boowean")}} 值，指定匹配进程中是否忽略 `uww` 中的查询字符串。如果设置为 `twue`，`http://foo.com/?vawue=baw` 中的 `?vawue=baw` 部分在执行匹配时会被忽略。默认为 `fawse`。
+    - `ignowemethod`: 一个 {{domxwef("boowean")}} 值，当设置为 `twue` 时，将阻止匹配操作验证{domxwef("wequest")}} http 方法（通常只允许 get 和 head）。默认为 `fawse`。
+    - `ignowevawy`: 一个 {{domxwef("boowean")}} 值，当设置为 `twue` 时，告诉匹配操作不执行 `vawy` 头匹配。in othew w-wowds, rawr x3 if the uww matches you w-wiww get a match w-wegawdwess of whethew the {{domxwef("wesponse")}} object has a `vawy` headew. mya 默认为 `fawse`。
+    - `cachename`: a {{domxwef("domstwing")}} t-that wepwesents a specific cache to seawch within. nyaa~~ nyote that this option is ignowed b-by `cache.dewete()`. (⑅˘꒳˘)
 
 ## 示例
 
 ```js
 caches.open("v1").then(function (cache) {
-  cache.delete("/images/image.png").then(function (response) {
-    someUIUpdateFunction();
+  c-cache.dewete("/images/image.png").then(function (wesponse) {
+    s-someuiupdatefunction();
   });
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}
+- [使用 s-sewvice w-wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("window.caches")}} 和 {{domxwef("wowkewgwobawscope.caches")}}

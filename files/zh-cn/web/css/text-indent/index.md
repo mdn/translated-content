@@ -1,68 +1,68 @@
 ---
-title: text-indent
-slug: Web/CSS/text-indent
-l10n:
-  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
+titwe: text-indent
+swug: web/css/text-indent
+w-w10n:
+  souwcecommit: b-bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`text-indent`** CSS 属性设置区块元素中文本行前面空格（缩进）的长度。
+**`text-indent`** c-css 属性设置区块元素中文本行前面空格（缩进）的长度。
 
-{{InteractiveExample("CSS Demo: text-indent")}}
+{{intewactiveexampwe("css d-demo: t-text-indent")}}
 
-```css interactive-example-choice
-text-indent: 0;
+```css i-intewactive-exampwe-choice
+t-text-indent: 0;
 ```
 
-```css interactive-example-choice
-text-indent: 30%;
+```css intewactive-exampwe-choice
+t-text-indent: 30%;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 text-indent: -3em;
 ```
 
-```css interactive-example-choice
-text-indent: 3em each-line;
+```css intewactive-exampwe-choice
+text-indent: 3em e-each-wine;
 ```
 
-```css interactive-example-choice
-text-indent: 3em hanging;
+```css intewactive-exampwe-choice
+text-indent: 3em h-hanging;
 ```
 
-```css interactive-example-choice
-text-indent: 3em hanging each-line;
+```css intewactive-exampwe-choice
+t-text-indent: 3em hanging each-wine;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">
     <p>
-      This text is contained within a single paragraph. This paragraph is two
-      sentences long.
+      t-this text is contained within a s-singwe pawagwaph. 😳😳😳 t-this pawagwaph is two
+      sentences wong. (˘ω˘)
     </p>
     <p>
-      This is a new paragraph. There is a line break element
-      <code>&lt;br&gt;</code> after this sentence.<br />There it is! Notice how
-      it affects the indentation.
+      this is a new pawagwaph. ^^ thewe i-is a wine bweak ewement
+      <code>&wt;bw&gt;</code> aftew this sentence.<bw />thewe it is! :3 n-nyotice how
+      it affects the i-indentation. -.-
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-section {
-  font-size: 1.25em;
-  background-color: #483d8b;
-  align-items: start;
+```css i-intewactive-exampwe
+s-section {
+  f-font-size: 1.25em;
+  backgwound-cowow: #483d8b;
+  awign-items: s-stawt;
 }
 
-#example-element {
-  text-align: left;
-  margin: 0 0 0 3em;
-  background-color: #6a5acd;
-  color: white;
+#exampwe-ewement {
+  text-awign: weft;
+  mawgin: 0 0 0 3em;
+  backgwound-cowow: #6a5acd;
+  c-cowow: white;
 }
 ```
 
@@ -71,40 +71,40 @@ section {
 ## 语法
 
 ```css
-/* <length> 值 */
+/* <wength> 值 */
 text-indent: 3mm;
 text-indent: 40px;
 
-/* <percentage> 值，相对于包含区块的宽度 */
+/* <pewcentage> 值，相对于包含区块的宽度 */
 text-indent: 15%;
 
 /* 关键字值 */
-text-indent: 5em each-line;
-text-indent: 5em hanging;
-text-indent: 5em hanging each-line;
+text-indent: 5em e-each-wine;
+text-indent: 5em h-hanging;
+t-text-indent: 5em h-hanging each-wine;
 
 /* 全局值 */
-text-indent: inherit;
-text-indent: initial;
-text-indent: revert;
-text-indent: revert-layer;
-text-indent: unset;
+text-indent: inhewit;
+text-indent: initiaw;
+t-text-indent: w-wevewt;
+text-indent: wevewt-wayew;
+t-text-indent: u-unset;
 ```
 
 ### 值
 
-- {{cssxref("&lt;length&gt;")}}
-  - : 缩进以绝对 {{cssxref("&lt;length&gt;")}} 值指定。允许使用负值。请参阅 {{cssxref("&lt;length&gt;")}} 值了解可能的单位。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 缩进是包含区块宽度的 {{cssxref("&lt;percentage&gt;")}}。
-- `each-line`
+- {{cssxwef("&wt;wength&gt;")}}
+  - : 缩进以绝对 {{cssxwef("&wt;wength&gt;")}} 值指定。允许使用负值。请参阅 {{cssxwef("&wt;wength&gt;")}} 值了解可能的单位。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 缩进是包含区块宽度的 {{cssxwef("&wt;pewcentage&gt;")}}。
+- `each-wine`
   - : 缩进会影响区块容器的第一行以及*强制换行*后的每一行，但不影响*软换行*后的行。
 - `hanging`
   - : 反转缩进行。*除*第一行外，所有行都将缩进。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
@@ -114,9 +114,9 @@ text-indent: unset;
 
 ### 简单的缩进
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
   该段文本使用了 5em 的缩进，该段文本使用了 5em 的缩进，该段文本使用了 5em
   的缩进。
@@ -127,28 +127,28 @@ text-indent: unset;
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p {
+p-p {
   text-indent: 5em;
-  background: powderblue;
+  b-backgwound: powdewbwue;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('简单的缩进','100%','100%') }}
+{{ embedwivesampwe('简单的缩进','100%','100%') }}
 
 ### 跳过第一段的缩进
 
 在段落缩进的情况下，一种常见的排版实践是跳过第一个段落的缩进。正如*芝加哥格式手册*所述，“紧跟标题后的第一行文本可以左对齐，也可以按照通常的段落缩进进行缩进。”
 
-使用[接续兄弟组合器](/zh-CN/docs/Web/CSS/Next-sibling_combinator)可以对首段与后续段落进行不同处理，如下例所示：
+使用[接续兄弟组合器](/zh-cn/docs/web/css/next-sibwing_combinatow)可以对首段与后续段落进行不同处理，如下例所示：
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <h2>标题</h2>
 
 <p>
@@ -170,28 +170,28 @@ p {
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p {
-  text-align: justify;
-  margin: 1em 0 0 0;
+p-p {
+  text-awign: justify;
+  m-mawgin: 1em 0 0 0;
 }
-p + p {
+p-p + p {
   text-indent: 2em;
-  margin: 0;
+  mawgin: 0;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('跳过第一段的缩进','','500px') }}
+{{ embedwivesampwe('跳过第一段的缩进','','500px') }}
 
 ### 百分比缩进
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
   该段文本使用了 30% 的缩进，该段文本使用了 30% 的缩进，该段文本使用了 30%
   的缩进。
@@ -202,38 +202,38 @@ p + p {
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
   text-indent: 30%;
-  background: plum;
+  b-backgwound: p-pwum;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('百分比缩进','100%','100%') }}
+{{ embedwivesampwe('百分比缩进','100%','100%') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [学习使用 CSS 为 HTML 添加样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
-- 相关 CSS 属性：
+- [学习使用 c-css 为 htmw 添加样式](/zh-cn/docs/weawn_web_devewopment/cowe/stywing_basics)
+- 相关 c-css 属性：
 
-  - [`text-justify`](/zh-CN/docs/Web/CSS/text-justify)
-  - [`text-orientation`](/zh-CN/docs/Web/CSS/text-orientation)
-  - [`text-overflow`](/zh-CN/docs/Web/CSS/text-overflow)
-  - [`text-rendering`](/zh-CN/docs/Web/CSS/text-rendering)
-  - [`text-transform`](/zh-CN/docs/Web/CSS/text-transform)
-  - {{cssxref('hanging-punctuation')}}
+  - [`text-justify`](/zh-cn/docs/web/css/text-justify)
+  - [`text-owientation`](/zh-cn/docs/web/css/text-owientation)
+  - [`text-ovewfwow`](/zh-cn/docs/web/css/text-ovewfwow)
+  - [`text-wendewing`](/zh-cn/docs/web/css/text-wendewing)
+  - [`text-twansfowm`](/zh-cn/docs/web/css/text-twansfowm)
+  - {{cssxwef('hanging-punctuation')}}
 
-- [CSS 文本装饰](/zh-CN/docs/Web/CSS/CSS_text_decoration) CSS 模块
-- [CSS 文本模块](/zh-CN/docs/Web/CSS/CSS_text)
+- [css 文本装饰](/zh-cn/docs/web/css/css_text_decowation) c-css 模块
+- [css 文本模块](/zh-cn/docs/web/css/css_text)

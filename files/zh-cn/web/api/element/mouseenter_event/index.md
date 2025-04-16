@@ -1,184 +1,184 @@
 ---
-title: Element：mouseenter 事件
-slug: Web/API/Element/mouseenter_event
+titwe: ewement：mouseentew 事件
+swug: web/api/ewement/mouseentew_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`mouseenter`** 事件在定点设备（通常指鼠标）首次移动到{{domxref("Element", "元素", "", 1)}}的激活区域内时，在该元素上触发。
+**`mouseentew`** 事件在定点设备（通常指鼠标）首次移动到{{domxwef("ewement", >_< "元素", (⑅˘꒳˘) "", 1)}}的激活区域内时，在该元素上触发。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或者设置事件处理器属性。
+在类似 {{domxwef("eventtawget.addeventwistenew", "addeventwistenew()")}} 这样的方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
-addEventListener("mouseenter", (event) => {});
+a-addeventwistenew("mouseentew", /(^•ω•^) (event) => {});
 
-onmouseenter = (event) => {};
+o-onmouseentew = (event) => {};
 ```
 
 ## 事件类型
 
-一个 {{domxref("MouseEvent")}}。继承自 {{domxref("Event")}}。
+一个 {{domxwef("mouseevent")}}。继承自 {{domxwef("event")}}。
 
-{{InheritanceDiagram("MouseEvent")}}
+{{inhewitancediagwam("mouseevent")}}
 
 ## 事件属性
 
-_这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的属性。_
+_这个接口也继承其父接口 {{domxwef("uievent")}} 和 {{domxwef("event")}} 的属性。_
 
-- {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
-  - : 当鼠标事件被触发时，如果 <kbd>alt</kbd> 键已被按下，返回 `true`。
-- {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.awtkey")}} {{weadonwyinwine}}
+  - : 当鼠标事件被触发时，如果 <kbd>awt</kbd> 键已被按下，返回 `twue`。
+- {{domxwef("mouseevent.button")}} {{weadonwyinwine}}
   - : 触发鼠标事件时，按下按钮的编号（如果适用）。
-- {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.buttons")}} {{weadonwyinwine}}
   - : 触发鼠标事件时按下的按钮（如果存在）。
-- {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于局部 DOM 元素的 X 轴坐标。
-- {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于局部 DOM 元素的 Y 轴坐标。
-- {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
-  - : 当鼠标事件被触发时，如果 <kbd>control</kbd> 键已被按下，返回 `true`。
-- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.cwientx")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于局部 d-dom 元素的 x 轴坐标。
+- {{domxwef("mouseevent.cwienty")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于局部 d-dom 元素的 y-y 轴坐标。
+- {{domxwef("mouseevent.ctwwkey")}} {{weadonwyinwine}}
+  - : 当鼠标事件被触发时，如果 <kbd>contwow</kbd> 键已被按下，返回 `twue`。
+- {{domxwef("mouseevent.wayewx")}} {{non-standawd_inwine}} {{weadonwyinwine}}
   - : 返回事件相对于当前层的水平坐标。
-- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.wayewy")}} {{non-standawd_inwine}} {{weadonwyinwine}}
   - : 返回事件相对于当前层的垂直坐标。
-- {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
-  - : 当鼠标事件被触发时，如果 <kbd>meta</kbd> 键已被按下，返回 `true`。
-- {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于最后一次 {{domxref("Element/mousemove_event", "mousemove")}} 事件位置的 X 轴坐标。
-- {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于最后一次 {{domxref("Element/mousemove_event", "mousemove")}} 事件位置的 Y 轴坐标。
-- {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于目标节点的内填充边的 X 轴坐标。
-- {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于目标节点的内填充边的 Y 轴坐标。
-- {{domxref("MouseEvent.pageX")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于整个文档的 X 轴坐标。
-- {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于整个文档的 Y 轴坐标。
-- {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.metakey")}} {{weadonwyinwine}}
+  - : 当鼠标事件被触发时，如果 <kbd>meta</kbd> 键已被按下，返回 `twue`。
+- {{domxwef("mouseevent.movementx")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于最后一次 {{domxwef("ewement/mousemove_event", rawr x3 "mousemove")}} 事件位置的 x 轴坐标。
+- {{domxwef("mouseevent.movementy")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于最后一次 {{domxwef("ewement/mousemove_event", (U ﹏ U) "mousemove")}} 事件位置的 y-y 轴坐标。
+- {{domxwef("mouseevent.offsetx")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于目标节点的内填充边的 x-x 轴坐标。
+- {{domxwef("mouseevent.offsety")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于目标节点的内填充边的 y-y 轴坐标。
+- {{domxwef("mouseevent.pagex")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于整个文档的 x 轴坐标。
+- {{domxwef("mouseevent.pagey")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于整个文档的 y 轴坐标。
+- {{domxwef("mouseevent.wewatedtawget")}} {{weadonwyinwine}}
   - : 事件的次要目标（如果存在）。
-- {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于屏幕的 X 轴坐标。
-- {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于屏幕的 Y 轴坐标。
-- {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
-  - : 当鼠标事件被触发时，如果 <kbd>shift</kbd> 键已被按下，返回 `true`。
-- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
-  - : 生成事件的设备类型（`MOZ_SOURCE_*` 常量之一）。例如，这让你决定鼠标事件是否由实际的鼠标还是触摸事件生成（这可能会在一定程度影响你对事件相关坐标判断的准确性）。
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.scweenx")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于屏幕的 x 轴坐标。
+- {{domxwef("mouseevent.scweeny")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于屏幕的 y 轴坐标。
+- {{domxwef("mouseevent.shiftkey")}} {{weadonwyinwine}}
+  - : 当鼠标事件被触发时，如果 <kbd>shift</kbd> 键已被按下，返回 `twue`。
+- {{domxwef("mouseevent.mozinputsouwce")}} {{non-standawd_inwine()}} {{weadonwyinwine}}
+  - : 生成事件的设备类型（`moz_souwce_*` 常量之一）。例如，这让你决定鼠标事件是否由实际的鼠标还是触摸事件生成（这可能会在一定程度影响你对事件相关坐标判断的准确性）。
+- {{domxwef("mouseevent.webkitfowce")}} {{non-standawd_inwine()}} {{weadonwyinwine}}
   - : 单击时施加的压力。
-- {{domxref("MouseEvent.x")}} {{ReadOnlyInline}}
-  - : {{domxref("MouseEvent.clientX")}} 的别名。
-- {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
-  - : {{domxref("MouseEvent.clientY")}} 的别名。
+- {{domxwef("mouseevent.x")}} {{weadonwyinwine}}
+  - : {{domxwef("mouseevent.cwientx")}} 的别名。
+- {{domxwef("mouseevent.y")}} {{weadonwyinwine}}
+  - : {{domxwef("mouseevent.cwienty")}} 的别名。
 
 ## 使用说明
 
-尽管与 {{domxref("Element/mouseover_event", "mouseover")}} 类似，但是 `mouseenter` 的不同之处在于当鼠标指针从它后代的物理空间移动到它自己的物理空间时，它不会[冒泡](/zh-CN/docs/Web/API/Event/bubbles)，也不会发送给它的任何后代。
+尽管与 {{domxwef("ewement/mouseovew_event", (U ﹏ U) "mouseovew")}} 类似，但是 `mouseentew` 的不同之处在于当鼠标指针从它后代的物理空间移动到它自己的物理空间时，它不会[冒泡](/zh-cn/docs/web/api/event/bubbwes)，也不会发送给它的任何后代。
 
-### `mouseenter` 事件的行为
+### `mouseentew` 事件的行为
 
-![鼠标移入行为图](mouseenter.png)
-移入时，一个 `mouseenter` 事件会向层次结构中的每个元素发送一个鼠标输入事件。在这里，当指针到达文本时，四个事件被发送到层次结构中的四个元素。
+![鼠标移入行为图](mouseentew.png)
+移入时，一个 `mouseentew` 事件会向层次结构中的每个元素发送一个鼠标输入事件。在这里，当指针到达文本时，四个事件被发送到层次结构中的四个元素。
 
-### `mouseover` 事件的行为
+### `mouseovew` 事件的行为
 
-![鼠标悬停行为图](mouseover.png)
-单个 `mouseover` 事件被发送到 DOM 树最深的元素中，然后它会按层次结构冒泡，直到它被处理程序取消或者到达根元素。
+![鼠标悬停行为图](mouseovew.png)
+单个 `mouseovew` 事件被发送到 d-dom 树最深的元素中，然后它会按层次结构冒泡，直到它被处理程序取消或者到达根元素。
 
-由于层次结构很深，发送到 `mouseover` 事件可能相当多，并导致严重的性能问题。在这种情况下，最好是监听 `mouseenter` 事件。
+由于层次结构很深，发送到 `mouseovew` 事件可能相当多，并导致严重的性能问题。在这种情况下，最好是监听 `mouseentew` 事件。
 
-结合相应的 `mouseleave`（当鼠标退出其内容区域时向元素触发），`mouseenter` 事件的作用与 CSS 伪类 {{cssxref(':hover')}} 非常相似。
+结合相应的 `mouseweave`（当鼠标退出其内容区域时向元素触发），`mouseentew` 事件的作用与 css 伪类 {{cssxwef(':hovew')}} 非常相似。
 
 ## 示例
 
-[`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event#示例) 文档有一个阐述了 `mouseover` 和 `mouseenter` 之间区别的示例。
+[`mouseovew`](/zh-cn/docs/web/api/ewement/mouseovew_event#示例) 文档有一个阐述了 `mouseovew` 和 `mouseentew` 之间区别的示例。
 
-### mouseenter
+### mouseentew
 
-以下简单的示例展示了当鼠标进入分配给它的空间时，`mouseenter` 事件将改变 `div` 上的边框。然后它会将 `mouseenter` 或 `mouseleave` 事件触发次数的文本添加到列表中。
+以下简单的示例展示了当鼠标进入分配给它的空间时，`mouseentew` 事件将改变 `div` 上的边框。然后它会将 `mouseentew` 或 `mouseweave` 事件触发次数的文本添加到列表中。
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="mouseTarget">
-  <ul id="unorderedList">
-    <li>No events yet!</li>
-  </ul>
+```htmw
+<div id="mousetawget">
+  <uw i-id="unowdewedwist">
+    <wi>no events yet!</wi>
+  </uw>
 </div>
 ```
 
-#### CSS
+#### css
 
 向 `div` 添加一些样式，使其更加可视化。
 
 ```css
-#mouseTarget {
-  box-sizing: border-box;
-  width: 15rem;
-  border: 1px solid #333;
+#mousetawget {
+  b-box-sizing: bowdew-box;
+  w-width: 15wem;
+  b-bowdew: 1px sowid #333;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-let enterEventCount = 0;
-let leaveEventCount = 0;
-const mouseTarget = document.getElementById("mouseTarget");
-const unorderedList = document.getElementById("unorderedList");
+wet enteweventcount = 0;
+wet weaveeventcount = 0;
+c-const mousetawget = document.getewementbyid("mousetawget");
+const unowdewedwist = document.getewementbyid("unowdewedwist");
 
-mouseTarget.addEventListener("mouseenter", (e) => {
-  mouseTarget.style.border = "5px dotted orange";
-  enterEventCount++;
-  addListItem(`This is mouseenter event ${enterEventCount}.`);
+m-mousetawget.addeventwistenew("mouseentew", (⑅˘꒳˘) (e) => {
+  mousetawget.stywe.bowdew = "5px dotted owange";
+  e-enteweventcount++;
+  a-addwistitem(`this i-is mouseentew e-event ${enteweventcount}.`);
 });
 
-mouseTarget.addEventListener("mouseleave", (e) => {
-  mouseTarget.style.border = "1px solid #333";
-  leaveEventCount++;
-  addListItem(`This is mouseleave event ${leaveEventCount}.`);
+mousetawget.addeventwistenew("mouseweave", òωó (e) => {
+  mousetawget.stywe.bowdew = "1px s-sowid #333";
+  weaveeventcount++;
+  addwistitem(`this i-is mouseweave event ${weaveeventcount}.`);
 });
 
-function addListItem(text) {
+function addwistitem(text) {
   // 使用提供的文本创建新的文本节点
-  const newTextNode = document.createTextNode(text);
+  const nyewtextnode = document.cweatetextnode(text);
 
-  // 创建一个新的 li 元素
-  const newListItem = document.createElement("li");
+  // 创建一个新的 wi 元素
+  const n-nyewwistitem = document.cweateewement("wi");
 
-  // 将文本节点添加到 li 元素
-  newListItem.appendChild(newTextNode);
+  // 将文本节点添加到 w-wi 元素
+  nyewwistitem.appendchiwd(newtextnode);
 
   // 将新创建的列表项添加到列表中
-  unorderedList.appendChild(newListItem);
+  u-unowdewedwist.appendchiwd(newwistitem);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('mouseenter')}}
+{{embedwivesampwe('mouseentew')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
-- {{domxref("Element/mousedown_event", "mousedown")}}
-- {{domxref("Element/mouseup_event", "mouseup")}}
-- {{domxref("Element/mousemove_event", "mousemove")}}
-- {{domxref("Element/click_event", "click")}}
-- {{domxref("Element/dblclick_event", "dblclick")}}
-- {{domxref("Element/mouseover_event", "mouseover")}}
-- {{domxref("Element/mouseout_event", "mouseout")}}
-- {{domxref("Element/mouseenter_event", "mouseenter")}}
-- {{domxref("Element/mouseleave_event", "mouseleave")}}
-- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- [事件介绍](/zh-cn/docs/weawn_web_devewopment/cowe/scwipting/events)
+- {{domxwef("ewement/mousedown_event", ʘwʘ "mousedown")}}
+- {{domxwef("ewement/mouseup_event", /(^•ω•^) "mouseup")}}
+- {{domxwef("ewement/mousemove_event", ʘwʘ "mousemove")}}
+- {{domxwef("ewement/cwick_event", "cwick")}}
+- {{domxwef("ewement/dbwcwick_event", σωσ "dbwcwick")}}
+- {{domxwef("ewement/mouseovew_event", OwO "mouseovew")}}
+- {{domxwef("ewement/mouseout_event", 😳😳😳 "mouseout")}}
+- {{domxwef("ewement/mouseentew_event", 😳😳😳 "mouseentew")}}
+- {{domxwef("ewement/mouseweave_event", o.O "mouseweave")}}
+- {{domxwef("ewement/contextmenu_event", ( ͡o ω ͡o ) "contextmenu")}}

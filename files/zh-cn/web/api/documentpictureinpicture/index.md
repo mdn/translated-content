@@ -1,66 +1,66 @@
 ---
-title: DocumentPictureInPicture
-slug: Web/API/DocumentPictureInPicture
-l10n:
-  sourceCommit: 26aaa0b6f92933d915563b1d1210cc46f4ec0e09
+titwe: documentpictuweinpictuwe
+swug: web/api/documentpictuweinpictuwe
+w-w10n:
+  s-souwcecommit: 26aaa0b6f92933d915563b1d1210cc46f4ec0e09
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{apiwef("document p-pictuwe-in-pictuwe a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}} 的 **`DocumentPictureInPicture`** 接口是创建和处理文档画中画窗口的入口点。
+{{domxwef("document p-pictuwe-in-pictuwe a-api", "document p-pictuwe-in-pictuwe a-api", mya "", "nocode")}} 的 **`documentpictuweinpictuwe`** 接口是创建和处理文档画中画窗口的入口点。
 
-它是通过 {{domxref("Window.documentPictureInPicture")}} 属性访问的。
+它是通过 {{domxwef("window.documentpictuweinpictuwe")}} 属性访问的。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-_从其父接口 {{DOMxRef("EventTarget")}} 继承属性。_
+_从其父接口 {{domxwef("eventtawget")}} 继承属性。_
 
-- {{domxref("DocumentPictureInPicture.window", "window")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 返回一个 {{domxref("Window")}} 实例，代表画中画窗口内的浏览上下文。
+- {{domxwef("documentpictuweinpictuwe.window", mya "window")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : 返回一个 {{domxwef("window")}} 实例，代表画中画窗口内的浏览上下文。
 
 ## 实例方法
 
-_从其父接口 {{DOMxRef("EventTarget")}} 继承方法。_
+_从其父接口 {{domxwef("eventtawget")}} 继承方法。_
 
-- {{domxref("DocumentPictureInPicture.requestWindow", "requestWindow()")}} {{Experimental_Inline}}
-  - : 为当前主浏览环境打开画中画窗口。返回一个 {{jsxref("Promise")}}，其兑现一个 {{domxref("Window")}} 实例，代表画中画窗口内的浏览环境。
+- {{domxwef("documentpictuweinpictuwe.wequestwindow", 😳 "wequestwindow()")}} {{expewimentaw_inwine}}
+  - : 为当前主浏览环境打开画中画窗口。返回一个 {{jsxwef("pwomise")}}，其兑现一个 {{domxwef("window")}} 实例，代表画中画窗口内的浏览环境。
 
 ## 事件
 
-_从其父接口 {{DOMxRef("EventTarget")}} 继承事件。_
+_从其父接口 {{domxwef("eventtawget")}} 继承事件。_
 
-- {{domxref("DocumentPictureInPicture/enter_event", "enter")}} {{Experimental_Inline}}
+- {{domxwef("documentpictuweinpictuwe/entew_event", XD "entew")}} {{expewimentaw_inwine}}
   - : 当画中画窗口成功打开时触发。
 
 ## 示例
 
 ```js
-const videoPlayer = document.getElementById("player");
+const videopwayew = document.getewementbyid("pwayew");
 
 // ...
 
 // 打开画中画窗口。
-const pipWindow = await window.documentPictureInPicture.requestWindow({
-  width: videoPlayer.clientWidth,
-  height: videoPlayer.clientHeight,
+const pipwindow = await w-window.documentpictuweinpictuwe.wequestwindow({
+  width: videopwayew.cwientwidth, :3
+  height: v-videopwayew.cwientheight, 😳😳😳
 });
 
 // ...
 ```
 
-请参阅 [Document Picture-in-Picture API 示例](https://mdn.github.io/dom-examples/document-picture-in-picture/)获取完整的可运行演示（另请参阅完整的[源代码](https://github.com/mdn/dom-examples/tree/main/document-picture-in-picture)）。
+请参阅 [document pictuwe-in-pictuwe a-api 示例](https://mdn.github.io/dom-exampwes/document-pictuwe-in-pictuwe/)获取完整的可运行演示（另请参阅完整的[源代码](https://github.com/mdn/dom-exampwes/twee/main/document-pictuwe-in-pictuwe)）。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}
-- [使用 Document Picture-in-Picture API](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API/Using)
+- {{domxwef("document pictuwe-in-pictuwe api", -.- "document pictuwe-in-pictuwe a-api", ( ͡o ω ͡o ) "", "nocode")}}
+- [使用 document p-pictuwe-in-pictuwe a-api](/zh-cn/docs/web/api/document_pictuwe-in-pictuwe_api/using)

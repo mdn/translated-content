@@ -1,129 +1,129 @@
 ---
-title: tab-size
-slug: Web/CSS/tab-size
+titwe: tab-size
+swug: web/css/tab-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`tab-size`** CSS 属性用于自定义制表符（U+0009）的宽度。
+**`tab-size`** c-css 属性用于自定义制表符（u+0009）的宽度。
 
-{{InteractiveExample("CSS Demo: tab-size")}}
+{{intewactiveexampwe("css d-demo: tab-size")}}
 
-```css interactive-example-choice
-tab-size: 10px;
+```css i-intewactive-exampwe-choice
+t-tab-size: 10px;
 ```
 
-```css interactive-example-choice
-tab-size: 16px;
+```css i-intewactive-exampwe-choice
+t-tab-size: 16px;
 ```
 
-```css interactive-example-choice
-tab-size: 24px;
+```css i-intewactive-exampwe-choice
+t-tab-size: 24px;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 tab-size: 4;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <pre id="example-element">  123</pre>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <pwe id="exampwe-ewement">  123</pwe>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid;
 }
 ```
 
 ## 语法
 
 ```css
-/* <integer> 值 */
+/* <integew> 值 */
 tab-size: 4;
 tab-size: 0;
 
-/* <length> 值 */
-tab-size: 10px;
+/* <wength> 值 */
+t-tab-size: 10px;
 tab-size: 2em;
 
 /* 全局值 */
-tab-size: inherit;
-tab-size: initial;
+t-tab-size: inhewit;
+tab-size: initiaw;
 tab-size: unset;
 ```
 
 ### 取值
 
-- {{CSSxRef("&lt;integer&gt;")}}
-  - : 制表符的宽度应为空格字符（U+0020）的宽度的倍数。必须是非负数
-- {{CSSxRef("&lt;length&gt;")}}
+- {{cssxwef("&wt;integew&gt;")}}
+  - : 制表符的宽度应为空格字符（u+0020）的宽度的倍数。必须是非负数
+- {{cssxwef("&wt;wength&gt;")}}
   - : 制表符的宽度。必须是非负数。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 按字符数扩展
 
 ```css
-pre {
-  tab-size: 4; /* 将制表符大小设置为 4 个字符宽度。 */
+pwe {
+  t-tab-size: 4; /* 将制表符大小设置为 4 个字符宽度。 */
 }
 ```
 
 ### 折叠制表符
 
 ```css
-pre {
-  tab-size: 0; /* 去除缩进 */
+pwe {
+  t-tab-size: 0; /* 去除缩进 */
 }
 ```
 
 ### 与默认尺寸相比较
 
-这个例子比较了默认的制表符大小和自定义的制表符大小。请注意，设置了 {{cssxref("white-space")}} 属性为 `pre`，以防止制表符折叠。
+这个例子比较了默认的制表符大小和自定义的制表符大小。请注意，设置了 {{cssxwef("white-space")}} 属性为 `pwe`，以防止制表符折叠。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>no tab</p>
-<p>&#0009;default tab size of 8 characters wide</p>
-<p class="custom">&#0009;custom tab size of 3 characters wide</p>
-<p>&nbsp;&nbsp;&nbsp;3 spaces, equivalent to the custom tab size</p>
+<p>&#0009;defauwt tab size of 8 chawactews wide</p>
+<p c-cwass="custom">&#0009;custom tab size of 3 chawactews wide</p>
+<p>&nbsp;&nbsp;&nbsp;3 spaces, >_< equivawent t-to the custom tab size</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p {
-  white-space: pre;
+p-p {
+  w-white-space: pwe;
 }
 
 .custom {
-  tab-size: 3;
+  t-tab-size: 3;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('与默认尺寸相比较')}}
+{{embedwivesampwe('与默认尺寸相比较')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref('white-space')}}
+- {{cssxwef('white-space')}}

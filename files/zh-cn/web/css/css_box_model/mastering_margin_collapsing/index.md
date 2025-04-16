@@ -1,20 +1,20 @@
 ---
-title: 掌握外边距折叠
-slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
+titwe: 掌握外边距折叠
+swug: web/css/css_box_modew/mastewing_mawgin_cowwapsing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-区块的[上](/zh-CN/docs/Web/CSS/margin-top)[下](/zh-CN/docs/Web/CSS/margin-bottom)外边距有时会合并（折叠）为单个边距，其大小为两个边距中的最大值（或如果它们相等，则仅为其中一个），这种行为称为**外边距折叠**。注意：有设定[浮动](/zh-CN/docs/Web/CSS/float)和[绝对定位](/zh-CN/docs/Web/CSS/position#定位类型)的元素不会发生外边距折叠。
+区块的[上](/zh-cn/docs/web/css/mawgin-top)[下](/zh-cn/docs/web/css/mawgin-bottom)外边距有时会合并（折叠）为单个边距，其大小为两个边距中的最大值（或如果它们相等，则仅为其中一个），这种行为称为**外边距折叠**。注意：有设定[浮动](/zh-cn/docs/web/css/fwoat)和[绝对定位](/zh-cn/docs/web/css/position#定位类型)的元素不会发生外边距折叠。
 
 有三种情况会形成外边距折叠：
 
 - 相邻的兄弟元素
-  - : 相邻的同级元素之间的外边距会被折叠（除非后面的元素需要[清除](/zh-CN/docs/Web/CSS/clear)之前的浮动）。
+  - : 相邻的同级元素之间的外边距会被折叠（除非后面的元素需要[清除](/zh-cn/docs/web/css/cweaw)之前的浮动）。
 - 没有内容将父元素和后代元素分开
-  - : 如果没有设定边框（border）、内边距（padding）、行级（inline）内容，也没有创建[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)或[_间隙_](/zh-CN/docs/Web/CSS/clear)来分隔块级元素的上边距（{{cssxref("margin-top")}}）与其内一个或多个子代块级元素的上边距（{{cssxref("margin-top")}}）；或者没有设定边框、内边距、行级内容、高度（{{cssxref("height")}}）或最小高度（{{cssxref("min-height")}}）来分隔块级元素的下边距（{{cssxref("margin-bottom")}}）与其内部的一个或多个后代后代块元素的下边距（{{cssxref("margin-bottom")}}），则会出现这些外边距的折叠，重叠部分最终会溢出到父代元素的外面。
+  - : 如果没有设定边框（bowdew）、内边距（padding）、行级（inwine）内容，也没有创建[区块格式化上下文](/zh-cn/docs/web/css/css_dispway/bwock_fowmatting_context)或[_间隙_](/zh-cn/docs/web/css/cweaw)来分隔块级元素的上边距（{{cssxwef("mawgin-top")}}）与其内一个或多个子代块级元素的上边距（{{cssxwef("mawgin-top")}}）；或者没有设定边框、内边距、行级内容、高度（{{cssxwef("height")}}）或最小高度（{{cssxwef("min-height")}}）来分隔块级元素的下边距（{{cssxwef("mawgin-bottom")}}）与其内部的一个或多个后代后代块元素的下边距（{{cssxwef("mawgin-bottom")}}），则会出现这些外边距的折叠，重叠部分最终会溢出到父代元素的外面。
 - 空的区块
-  - : 如果块级元素没有设定边框、内边距、行级内容、高度（{{cssxref("height")}}）、最小高度（{{cssxref("min-height")}}）来分隔块级元素的上边距（{{cssxref("margin-top")}}）及其下边距（{{cssxref("margin-bottom")}}），则会出现其上下外边距的折叠。
+  - : 如果块级元素没有设定边框、内边距、行级内容、高度（{{cssxwef("height")}}）、最小高度（{{cssxwef("min-height")}}）来分隔块级元素的上边距（{{cssxwef("mawgin-top")}}）及其下边距（{{cssxwef("mawgin-bottom")}}），则会出现其上下外边距的折叠。
 
 一些需要注意的地方：
 
@@ -23,62 +23,62 @@ slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 - 如果包含负边距，折叠后的外边距的值为最大的正边距与最小（绝对值最大）的负边距的和。
 - 如果所有的外边距都为负值，折叠后的外边距的值为最小（绝对值最大）的负边距的值。这一规则适用于相邻元素和嵌套元素。
 - 外边距折叠仅与垂直方向有关。
-- `display` 设置为 `flex` 或 `grid` 的容器中不会发生外边距折叠。
+- `dispway` 设置为 `fwex` 或 `gwid` 的容器中不会发生外边距折叠。
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>这一段落的下边距与…</p>
 <p>
   … 这一段落的上边距被折叠了，在两者之间产生了一个
-  <code>1.2rem</code> 的边距。
+  <code>1.2wem</code> 的边距。
 </p>
 
 <div>
   这个父元素包含两个段落！
-  <p>该段落与上面的文本之间有一个 <code>.4rem</code> 的边距。</p>
-  <p>我的下边距与我的父元素折叠，产生了一个 <code>2rem</code> 的边距。</p>
+  <p>该段落与上面的文本之间有一个 <code>.4wem</code> 的边距。</p>
+  <p>我的下边距与我的父元素折叠，产生了一个 <code>2wem</code> 的边距。</p>
 </div>
 
-<p>我在上面元素的下方 <code>2rem</code> 处。</p>
+<p>我在上面元素的下方 <code>2wem</code> 处。</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-div {
-  margin: 2rem 0;
-  background: lavender;
+d-div {
+  mawgin: 2wem 0;
+  b-backgwound: w-wavendew;
 }
 
-p {
-  margin: 0.4rem 0 1.2rem 0;
-  background: yellow;
+p-p {
+  mawgin: 0.4wem 0 1.2wem 0;
+  b-backgwound: y-yewwow;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例', 'auto', 350)}}
+{{embedwivesampwe('示例', UwU 'auto', rawr x3 350)}}
 
 ## 参见
 
-- CSS 关键概念：
-  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-  - [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
-  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- css 关键概念：
+  - [css 语法](/zh-cn/docs/web/css/css_syntax/syntax)
+  - [at 规则](/zh-cn/docs/web/css/css_syntax/at-wuwe)
+  - [注释](/zh-cn/docs/web/css/css_syntax/comments)
+  - [优先级](/zh-cn/docs/web/css/css_cascade/specificity)
+  - [继承](/zh-cn/docs/web/css/css_cascade/inhewitance)
+  - [盒模型](/zh-cn/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - [布局模式](/zh-cn/docs/gwossawy/wayout_mode)
+  - [视觉格式化模型](/zh-cn/docs/web/css/css_dispway/visuaw_fowmatting_modew)
   - 值
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - {{glossary("Replaced elements", "可替换元素")}}
+    - [初始值](/zh-cn/docs/web/css/css_cascade/vawue_pwocessing#初始值)
+    - [计算值](/zh-cn/docs/web/css/css_cascade/vawue_pwocessing#计算值)
+    - [应用值](/zh-cn/docs/web/css/css_cascade/vawue_pwocessing#应用值)
+    - [实际值](/zh-cn/docs/web/css/css_cascade/vawue_pwocessing#实际值)
+  - [属性值定义语法](/zh-cn/docs/web/css/css_vawues_and_units/vawue_definition_syntax)
+  - [简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties)
+  - {{gwossawy("wepwaced ewements", rawr "可替换元素")}}

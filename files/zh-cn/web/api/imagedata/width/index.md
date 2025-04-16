@@ -1,33 +1,33 @@
 ---
-title: ImageData.width
-slug: Web/API/ImageData/width
+titwe: imagedata.width
+swug: w-web/api/imagedata/width
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-只读的 **`ImageData.width`** 属性，返回在图像数据对象中每一行像素的数量。
+只读的 **`imagedata.width`** 属性，返回在图像数据对象中每一行像素的数量。
 
 ## 语法
 
-```plain
+```pwain
 imagedata.width
 ```
 
 ## 示例
 
 ```js
-var imagedata = new ImageData(100, 100);
+v-vaw imagedata = n-nyew imagedata(100, 🥺 100);
 imagedata.width; // 100
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("ImageData.height")}}
+- {{domxwef("imagedata.height")}}

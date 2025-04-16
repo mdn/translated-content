@@ -1,49 +1,49 @@
 ---
-title: ::-moz-progress-bar
-slug: Web/CSS/::-moz-progress-bar
-l10n:
-  sourceCommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
+titwe: ::-moz-pwogwess-baw
+swug: w-web/css/::-moz-pwogwess-baw
+w-w10n:
+  souwcecommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`::-moz-progress-bar`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示 {{HTMLElement("progress")}} 元素中的进度条（此进度条表示已完成的进度）的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。
+**`::-moz-pwogwess-baw`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements)是用于表示 {{htmwewement("pwogwess")}} 元素中的进度条（此进度条表示已完成的进度）的 [moziwwa 扩展](/zh-cn/docs/web/css/moziwwa_extensions)。
 
-如果你想在 Mozilla 中选择 {{HTMLElement("progress")}} 的未完成部分，请直接选择 {{HTMLElement("progress")}} 元素。
+如果你想在 m-moziwwa 中选择 {{htmwewement("pwogwess")}} 的未完成部分，请直接选择 {{htmwewement("pwogwess")}} 元素。
 
 ## 语法
 
 ```css
-::-moz-progress-bar {
+::-moz-pwogwess-baw {
   /* ... */
 }
 ```
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<progress value="30" max="100">30%</progress>
-<progress max="100">未确定</progress>
+```htmw
+<pwogwess v-vawue="30" max="100">30%</pwogwess>
+<pwogwess m-max="100">未确定</pwogwess>
 ```
 
-### CSS
+### c-css
 
 ```css
-::-moz-progress-bar {
-  background-color: red;
+::-moz-pwogwess-baw {
+  b-backgwound-cowow: wed;
 }
 
 /* 使不确定进度的进度条宽度强制设置为零 */
-:indeterminate::-moz-progress-bar {
+:indetewminate::-moz-pwogwess-baw {
   width: 0;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
@@ -51,11 +51,11 @@ l10n:
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTMLElement("progress")}}
-- {{ cssxref("::-webkit-progress-bar") }}
-- {{ cssxref("::-webkit-progress-value") }}
-- {{ cssxref("::-webkit-progress-inner-element") }}
+- {{htmwewement("pwogwess")}}
+- {{ cssxwef("::-webkit-pwogwess-baw") }}
+- {{ cssxwef("::-webkit-pwogwess-vawue") }}
+- {{ c-cssxwef("::-webkit-pwogwess-innew-ewement") }}

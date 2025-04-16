@@ -1,66 +1,66 @@
 ---
-title: flex-flow
-slug: Web/CSS/flex-flow
+titwe: fwex-fwow
+swug: web/css/fwex-fwow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## 概述
 
-[CSS](/zh-CN/docs/Web/CSS) **`flex-flow`** 属性是 flex-direction 和 flex-wrap 的简写。
+[css](/zh-cn/docs/web/css) **`fwex-fwow`** 属性是 f-fwex-diwection 和 f-fwex-wwap 的简写。
 
 {{cssinfo}}
 
-更多信息参见 [使用 CSS 弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+更多信息参见 [使用 c-css 弹性盒](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
 
 ## 语法
 
 ```css
-/* flex-flow：<'flex-direction'> */
-flex-flow: row;
-flex-flow: row-reverse;
-flex-flow: column;
-flex-flow: column-reverse;
+/* f-fwex-fwow：<'fwex-diwection'> */
+f-fwex-fwow: w-wow;
+fwex-fwow: w-wow-wevewse;
+f-fwex-fwow: cowumn;
+fwex-fwow: cowumn-wevewse;
 
-/* flex-flow：<'flex-wrap'> */
-flex-flow: nowrap;
-flex-flow: wrap;
-flex-flow: wrap-reverse;
+/* fwex-fwow：<'fwex-wwap'> */
+fwex-fwow: n-nyowwap;
+fwex-fwow: wwap;
+fwex-fwow: wwap-wevewse;
 
-/* flex-flow：<'flex-direction'> 和 <'flex-wrap'> */
-flex-flow: row nowrap;
-flex-flow: column wrap;
-flex-flow: column-reverse wrap-reverse;
+/* f-fwex-fwow：<'fwex-diwection'> 和 <'fwex-wwap'> */
+fwex-fwow: w-wow nyowwap;
+fwex-fwow: cowumn wwap;
+fwex-fwow: cowumn-wevewse w-wwap-wevewse;
 
 /* 全局值 */
-flex-flow: inherit;
-flex-flow: initial;
-flex-flow: revert;
-flex-flow: revert-layer;
-flex-flow: unset;
+fwex-fwow: inhewit;
+f-fwex-fwow: i-initiaw;
+fwex-fwow: wevewt;
+fwex-fwow: wevewt-wayew;
+fwex-fwow: unset;
 ```
 
 ### 取值
 
-更多取值信息请查看 [`flex-direction`](/zh-CN/docs/Web/CSS/flex-direction) 和 [`flex-wrap`](/zh-CN/docs/Web/CSS/flex-wrap)
+更多取值信息请查看 [`fwex-diwection`](/zh-cn/docs/web/css/fwex-diwection) 和 [`fwex-wwap`](/zh-cn/docs/web/css/fwex-wwap)
 
 ## 示例
 
 ```css
-element {
-  /* Main-axis is the block direction with reversed main-start and main-end. Flex items are laid out in multiple lines */
-  flex-flow: column-reverse wrap;
+e-ewement {
+  /* main-axis is the bwock diwection with wevewsed main-stawt and main-end. mya f-fwex items awe waid out i-in muwtipwe wines */
+  f-fwex-fwow: c-cowumn-wevewse w-wwap;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [使用 css 弹性盒子](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)

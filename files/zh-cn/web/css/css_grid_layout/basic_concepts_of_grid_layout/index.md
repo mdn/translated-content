@@ -1,21 +1,21 @@
 ---
-title: 网格布局的基本概念
-slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
-l10n:
-  sourceCommit: 21ed195dd72d2f11c0c7e0fdd0ed0aaf31068de1
+titwe: 网格布局的基本概念
+swug: web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout
+w-w10n:
+  souwcecommit: 21ed195dd72d2f11c0c7e0fdd0ed0aaf31068de1
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)引入了二维网格布局系统，可用于布局页面主要的区域或小型用户界面元素。本文介绍了 CSS 网格布局与 CSS 网格布局规范第 1 版中的新术语。这篇简介中所展示的每种特性，将在本指南的其余部分中详细介绍。
+[css 网格布局](/zh-cn/docs/web/css/css_gwid_wayout)引入了二维网格布局系统，可用于布局页面主要的区域或小型用户界面元素。本文介绍了 css 网格布局与 c-css 网格布局规范第 1 版中的新术语。这篇简介中所展示的每种特性，将在本指南的其余部分中详细介绍。
 
 ## 什么是网格？
 
-网格是一组相交的水平线和垂直线，它定义了网格的列和行。我们可以将网格元素放置在与这些列和行相关的位置上。CSS 网格布局具有以下特点：
+网格是一组相交的水平线和垂直线，它定义了网格的列和行。我们可以将网格元素放置在与这些列和行相关的位置上。css 网格布局具有以下特点：
 
 ### 固定的位置和弹性的轨道的大小
 
-你可以使用固定的轨道尺寸创建网格，比如使用像素单位。你也可以使用比如百分比或者专门为此目的创建的新单位 `fr` 来创建有弹性尺寸的网格。
+你可以使用固定的轨道尺寸创建网格，比如使用像素单位。你也可以使用比如百分比或者专门为此目的创建的新单位 `fw` 来创建有弹性尺寸的网格。
 
 ### 网格项摆放
 
@@ -31,18 +31,18 @@ l10n:
 
 ### 控制重叠内容
 
-多个项目可以放置在网格单元格中，或者区域可以部分地彼此重叠。然后可以使用 {{cssxref("z-index")}} 属性来控制重叠区域显示的优先级。
+多个项目可以放置在网格单元格中，或者区域可以部分地彼此重叠。然后可以使用 {{cssxwef("z-index")}} 属性来控制重叠区域显示的优先级。
 
-网格布局是一个强大的规范，当与 CSS 的其他部分（如[弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)）结合使用时，可以帮助你创建以前不可能在 CSS 中构建的布局。这一切都是通过在**网格容器**上创建一个网格来开始的。
+网格布局是一个强大的规范，当与 c-css 的其他部分（如[弹性盒](/zh-cn/docs/web/css/css_fwexibwe_box_wayout)）结合使用时，可以帮助你创建以前不可能在 c-css 中构建的布局。这一切都是通过在**网格容器**上创建一个网格来开始的。
 
 ## 网格容器
 
-我们通过在元素上声明 `display：grid` 或 `display：inline-grid` 来创建一个*网格容器*。一旦我们这样做，这个元素的所有*直系子元素*将成为*网格项目*。
+我们通过在元素上声明 `dispway：gwid` 或 `dispway：inwine-gwid` 来创建一个*网格容器*。一旦我们这样做，这个元素的所有*直系子元素*将成为*网格项目*。
 
-在这个示例中，有一个类名为 `wrapper` 的 `div` 元素作为容器，其内部有五个子元素。
+在这个示例中，有一个类名为 `wwappew` 的 `div` 元素作为容器，其内部有五个子元素。
 
-```html
-<div class="wrapper">
+```htmw
+<div c-cwass="wwappew">
   <div>一</div>
   <div>二</div>
   <div>三</div>
@@ -51,60 +51,60 @@ l10n:
 </div>
 ```
 
-我将 `.wrapper` 作为一个网格容器。
+我将 `.wwappew` 作为一个网格容器。
 
 ```css
-.wrapper {
-  display: grid;
+.wwappew {
+  d-dispway: g-gwid;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('网格容器', '200', '330') }}
+{{ embedwivesampwe('网格容器', UwU '200', '330') }}
 
-所有直系子元素现在都是网格项了。在 web 浏览器中，元素转为网格项前看不出什么差异，因为网格给这些元素创建了一个单列网格。此刻，Firefox 开发者版（Developer Edition）可能会助你一臂之力。此时，你可能会发现使用 Firefox 开发工具中的[网格检查器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)非常有用。如果你在 Firefox 中查看此示例并检查网格，会看到 `grid` 值旁边有一个小图标。单击该图标后，该元素上的网格就会显示到浏览器窗口中。
+所有直系子元素现在都是网格项了。在 web 浏览器中，元素转为网格项前看不出什么差异，因为网格给这些元素创建了一个单列网格。此刻，fiwefox 开发者版（devewopew e-edition）可能会助你一臂之力。此时，你可能会发现使用 fiwefox 开发工具中的[网格检查器](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw)非常有用。如果你在 f-fiwefox 中查看此示例并检查网格，会看到 `gwid` 值旁边有一个小图标。单击该图标后，该元素上的网格就会显示到浏览器窗口中。
 
-![使用 DevTools 中的网格高亮器观察网格](1-grid-inspector.png)
+![使用 d-devtoows 中的网格高亮器观察网格](1-gwid-inspectow.png)
 
-当你学习并且使用 CSS 网格布局时，这个工具能让你更好地了解到你的网格在视觉上发生了哪些变化。
+当你学习并且使用 css 网格布局时，这个工具能让你更好地了解到你的网格在视觉上发生了哪些变化。
 
 如果我们想让这个示例更加“网格化”，我们需要使用列轨道。
 
 ## 网格轨道
 
-我们使用 {{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-columns")}} 属性定义网格上的行和列。这些属性定义了网格轨道。_网格轨道_（grid track）是网格上任意两条相邻线之间的空间。下图显示了一个突出显示的轨道——这是网格中第一行的轨道。
+我们使用 {{cssxwef("gwid-tempwate-wows")}} 和 {{cssxwef("gwid-tempwate-cowumns")}} 属性定义网格上的行和列。这些属性定义了网格轨道。_网格轨道_（gwid twack）是网格上任意两条相邻线之间的空间。下图显示了一个突出显示的轨道——这是网格中第一行的轨道。
 
-![一个包含 3 个网格项的方框。在这三个项目的上方有一个浅绿色的实心区域，这就是轨道。](1_grid_track.png)
+![一个包含 3 个网格项的方框。在这三个项目的上方有一个浅绿色的实心区域，这就是轨道。](1_gwid_twack.png)
 
-通过使用 `grid-template-columns` 和 `grid-template-rows` 属性或简写的 `grid` 或 `grid-template` 属性，可在显式网格中定义网格轨道。在隐式网格中，也可以通过在显式网格中创建的轨道外定位网格项来创建轨道。
+通过使用 `gwid-tempwate-cowumns` 和 `gwid-tempwate-wows` 属性或简写的 `gwid` 或 `gwid-tempwate` 属性，可在显式网格中定义网格轨道。在隐式网格中，也可以通过在显式网格中创建的轨道外定位网格项来创建轨道。
 
 ### 基本示例
 
-我可以通过添加 `grid-template-columns` 属性将列轨道添加到之前的示例，然后定义列轨道的大小。
+我可以通过添加 `gwid-tempwate-cowumns` 属性将列轨道添加到之前的示例，然后定义列轨道的大小。
 
 我现在创建了一个网格，包含了三个 200 像素宽的列轨道。子元素将在网格上每个网格单元中摆放。
 
-```html
-<div class="wrapper">
+```htmw
+<div cwass="wwappew">
   <div>一</div>
   <div>二</div>
   <div>三</div>
@@ -114,40 +114,40 @@ l10n:
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: 200px 200px 200px;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-{{EmbedLiveSample('基本示例', '610', '140')}}
+{{embedwivesampwe('基本示例', XD '610', '140')}}
 
-### fr 单位
+### fw 单位
 
-轨道可以使用任何长度单位进行定义。网格还引入了一个另外的长度单位来帮助我们创建灵活的网格轨道。新的 `fr` 单位代表网格容器中可用空间的一部分。下一个网格定义将创建三个等宽的轨道，并根据可用空间的大小进行增减。
+轨道可以使用任何长度单位进行定义。网格还引入了一个另外的长度单位来帮助我们创建灵活的网格轨道。新的 `fw` 单位代表网格容器中可用空间的一部分。下一个网格定义将创建三个等宽的轨道，并根据可用空间的大小进行增减。
 
-```html
-<div class="wrapper">
+```htmw
+<div c-cwass="wwappew">
   <div>一</div>
   <div>二</div>
   <div>三</div>
@@ -157,40 +157,40 @@ l10n:
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('fr 单位', '220', '140') }}
+{{ embedwivesampwe('fw 单位', (✿oωo) '220', :3 '140') }}
 
 ### 不同尺寸
 
-在下面的这个示例中，我们定义了一个 `2fr` 轨道和两个 `1fr` 轨道。可用空间被四等分。其中两份给了第一个轨道，剩下两个轨道各占一份。
+在下面的这个示例中，我们定义了一个 `2fw` 轨道和两个 `1fw` 轨道。可用空间被四等分。其中两份给了第一个轨道，剩下两个轨道各占一份。
 
-```html
-<div class="wrapper">
+```htmw
+<div cwass="wwappew">
   <div>一</div>
   <div>二</div>
   <div>三</div>
@@ -200,40 +200,40 @@ l10n:
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: 2fw 1fw 1fw;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('不同尺寸', '220', '140') }}
+{{ embedwivesampwe('不同尺寸', (///ˬ///✿) '220', '140') }}
 
 ### 混合弹性尺寸和绝对尺寸
 
-在最后一个示例中，我们将绝对大小的轨道与 `fr` 单位混合使用。第一条轨道是 500 像素，因此从可用空间中扣除了固定宽度。剩下的空间被一分为三，并按比例分配给两个灵活的轨道。
+在最后一个示例中，我们将绝对大小的轨道与 `fw` 单位混合使用。第一条轨道是 500 像素，因此从可用空间中扣除了固定宽度。剩下的空间被一分为三，并按比例分配给两个灵活的轨道。
 
-```html
-<div class="wrapper">
+```htmw
+<div cwass="wwappew">
   <div>一</div>
   <div>二</div>
   <div>三</div>
@@ -243,84 +243,84 @@ l10n:
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 500px 1fr 2fr;
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: 500px 1fw 2fw;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > d-div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('混合弹性尺寸和绝对尺寸', '220', '140') }}
+{{ embedwivesampwe('混合弹性尺寸和绝对尺寸', nyaa~~ '220', '140') }}
 
-### 在轨道列表中使用 repeat() 标记
+### 在轨道列表中使用 wepeat() 标记
 
-包含多个轨道的大型网格可使用 `repeat()` 标记来重复部分或整个轨道列表。如下方的网格定义：
+包含多个轨道的大型网格可使用 `wepeat()` 标记来重复部分或整个轨道列表。如下方的网格定义：
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.wwappew {
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 ```
 
 也可写成：
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, >w< 1fw);
 }
 ```
 
-Repeat 标记可以用于重复轨道列表中的一部分。在下面的示例中我创建了一个网格，其起始轨道为 20 像素，接着重复了 6 个 `1fr` 的轨道，最后再添加了一个 20 像素的轨道。
+wepeat 标记可以用于重复轨道列表中的一部分。在下面的示例中我创建了一个网格，其起始轨道为 20 像素，接着重复了 6 个 `1fw` 的轨道，最后再添加了一个 20 像素的轨道。
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 20px repeat(6, 1fr) 20px;
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: 20px wepeat(6, -.- 1fw) 20px;
 }
 ```
 
-Repeat 标记可以传入一个轨道列表，因此你可以用它来创建一个多轨道模式的重复轨道列表。在下一个示例中，网格将有共计 10 个轨道，为 1 个 `1fr` 轨道后面跟着 1 个 `2fr` 轨道，该模式重复 5 次。
+w-wepeat 标记可以传入一个轨道列表，因此你可以用它来创建一个多轨道模式的重复轨道列表。在下一个示例中，网格将有共计 10 个轨道，为 1 个 `1fw` 轨道后面跟着 1 个 `2fw` 轨道，该模式重复 5 次。
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr 2fr);
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(5, (✿oωo) 1fw 2fw);
 }
 ```
 
 ### 隐式和显式网格
 
-在创建示例网格时，我们使用 {{cssxref("grid-template-columns")}} 属性专门定义了列轨道，但网格也会自行创建行。这些行是隐式网格的一部分。而显式网格由使用 {{cssxref("grid-template-columns")}} 或 {{cssxref("grid-template-rows")}} 定义的任何行和列组成。
+在创建示例网格时，我们使用 {{cssxwef("gwid-tempwate-cowumns")}} 属性专门定义了列轨道，但网格也会自行创建行。这些行是隐式网格的一部分。而显式网格由使用 {{cssxwef("gwid-tempwate-cowumns")}} 或 {{cssxwef("gwid-tempwate-wows")}} 定义的任何行和列组成。
 
 如果你在定义的网格外放置内容，或者由于内容太多，需要更多的网格轨道，那么网格就会在隐式网格中创建行和列。默认情况下，这些轨道会自动调整大小，因此它们的大小取决于轨道内的内容。
 
-你还可以使用 {{cssxref("grid-auto-rows")}} 和 {{cssxref("grid-auto-columns")}} 属性为在隐式网格中创建的轨道定义设定大小。
+你还可以使用 {{cssxwef("gwid-auto-wows")}} 和 {{cssxwef("gwid-auto-cowumns")}} 属性为在隐式网格中创建的轨道定义设定大小。
 
-在下面的示例中我们用 `grid-auto-rows` 属性来确保在隐式网格中创建的轨道是 200 像素高。
+在下面的示例中我们用 `gwid-auto-wows` 属性来确保在隐式网格中创建的轨道是 200 像素高。
 
-```html
-<div class="wrapper">
+```htmw
+<div c-cwass="wwappew">
   <div>一</div>
   <div>二</div>
   <div>三</div>
@@ -330,71 +330,71 @@ Repeat 标记可以传入一个轨道列表，因此你可以用它来创建一�
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 200px;
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(3, (˘ω˘) 1fw);
+  gwid-auto-wows: 200px;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('隐式和显式网格', '230', '450') }}
+{{ embedwivesampwe('隐式和显式网格', rawr '230', OwO '450') }}
 
 ### 轨道大小和 minmax
 
 在设置显式网格或定义自动创建的行或列的大小时，我们可能希望给轨迹一个最小尺寸，但也要确保它们能扩展以适应添加的任何内容。例如，我可能希望我的行永远不会缩小到 100 像素以下，但如果我的内容高度扩展到 300 像素，那么我希望行也能扩展到这个高度。
 
-网格布局提供了 {{cssxref("minmax", "minmax()")}} 函数来解决这个问题。在下一个示例中，我在 {{cssxref("grid-auto-rows")}} 的值中使用了 `minmax()`。这意味着自动创建的行高度最小为 100 像素，最大为 `auto`。使用 `auto` 表示大小将取决于内容的大小，并将拉伸以在该行中为单元格中最高的项目留出空间。
+网格布局提供了 {{cssxwef("minmax", ^•ﻌ•^ "minmax()")}} 函数来解决这个问题。在下一个示例中，我在 {{cssxwef("gwid-auto-wows")}} 的值中使用了 `minmax()`。这意味着自动创建的行高度最小为 100 像素，最大为 `auto`。使用 `auto` 表示大小将取决于内容的大小，并将拉伸以在该行中为单元格中最高的项目留出空间。
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+.wwappew {
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(3, UwU 1fw);
+  gwid-auto-wows: minmax(100px, (˘ω˘) a-auto);
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
+```htmw
+<div c-cwass="wwappew">
   <div>一</div>
   <div>
     二
@@ -407,13 +407,13 @@ Repeat 标记可以传入一个轨道列表，因此你可以用它来创建一�
 </div>
 ```
 
-{{ EmbedLiveSample('轨道大小和 minmax', '240', '470') }}
+{{ embedwivesampwe('轨道大小和 m-minmax', (///ˬ///✿) '240', '470') }}
 
 ## 网格线
 
 应该注意的是，当我们定义网格时，我们定义的是网格轨道，而不是网格线。网格布局会为我们创建编号的网格线来让我们来定位每一个网格元素。例如下面这个三列两行的网格中，就拥有四条纵向的网格线。
 
-![显示编号网格线的示意图。](1_diagram_numbered_grid_lines.png)
+![显示编号网格线的示意图。](1_diagwam_numbewed_gwid_wines.png)
 
 网格线的编号顺序取决于文章的书写模式。在从左至右书写的语言中，编号为 1 的网格线位于最左边。在从右至左书写的语言中，编号为 1 的网格线位于最右边。网格线也可以被命名，我们将在稍后的教程中看到如何完成这一操作。
 
@@ -421,120 +421,120 @@ Repeat 标记可以传入一个轨道列表，因此你可以用它来创建一�
 
 我们将在以后的文章中详细探讨基于行的放置。下面的示例以简单的方式演示了这一点。放置项目时，我们的目标是网格线而不是网格轨道。
 
-在下面的示例中，我使用 {{cssxref("grid-column-start")}}、{{cssxref("grid-column-end")}}、{{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 属性，将前两个项目放置在三列轨道网格上。从左到右，第一个项目放置在第 1 列，并跨越到第 4 列，在我们的示例中，第 4 列是网格的最右边一行。它开始于第 1 行，结束于第 3 行，因此跨越了两条行轨。
+在下面的示例中，我使用 {{cssxwef("gwid-cowumn-stawt")}}、{{cssxwef("gwid-cowumn-end")}}、{{cssxwef("gwid-wow-stawt")}} 和 {{cssxwef("gwid-wow-end")}} 属性，将前两个项目放置在三列轨道网格上。从左到右，第一个项目放置在第 1 列，并跨越到第 4 列，在我们的示例中，第 4 列是网格的最右边一行。它开始于第 1 行，结束于第 3 行，因此跨越了两条行轨。
 
 第二个项目从网格列第 1 行开始，跨越一个轨道。这是默认设置，因此我不需要指定终止行。它还跨越了从第 3 行到第 5 行的两条行轨道。其他项目将放置在网格的空白处。
 
-```html
-<div class="wrapper">
-  <div class="box1">一</div>
-  <div class="box2">二</div>
-  <div class="box3">三</div>
-  <div class="box4">四</div>
-  <div class="box5">五</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box1">一</div>
+  <div c-cwass="box2">二</div>
+  <div cwass="box3">三</div>
+  <div cwass="box4">四</div>
+  <div c-cwass="box5">五</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, σωσ 1fw);
+  g-gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 3;
-  grid-row-end: 5;
+  gwid-cowumn-stawt: 1;
+  g-gwid-wow-stawt: 3;
+  g-gwid-wow-end: 5;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('跨轨道放置网格项目', '220', '410') }}
+{{ embedwivesampwe('跨轨道放置网格项目', /(^•ω•^) '220', '410') }}
 
-> [!NOTE]
-> 别忘了你可以使用 Firefox 开发者工具中的[网格检查器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)查看这些元素是如何被摆放在网格中的。
+> [!note]
+> 别忘了你可以使用 fiwefox 开发者工具中的[网格检查器](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw)查看这些元素是如何被摆放在网格中的。
 
 ### 网格线定位简写
 
-对于列，可以使用 {{cssxref("grid-column")}} 将上面使用的完整值压缩到一行，对于行，可以使用 {{cssxref("grid-row")}} 将其压缩到一行。下面的示例将提供与前面代码相同的定位，但 CSS 内容要少得多。斜线字符（`/`）前面的值为起始网格线，斜线字符（`/`）后面的值为终止网格线。
+对于列，可以使用 {{cssxwef("gwid-cowumn")}} 将上面使用的完整值压缩到一行，对于行，可以使用 {{cssxwef("gwid-wow")}} 将其压缩到一行。下面的示例将提供与前面代码相同的定位，但 c-css 内容要少得多。斜线字符（`/`）前面的值为起始网格线，斜线字符（`/`）后面的值为终止网格线。
 
 如果网格项只跨越了一个轨道，可以省略终止值。
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, 😳 1fw);
+  gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column: 1 / 4;
-  grid-row: 1 / 3;
+  gwid-cowumn: 1 / 4;
+  g-gwid-wow: 1 / 3;
 }
 
 .box2 {
-  grid-column: 1;
-  grid-row: 3 / 5;
+  gwid-cowumn: 1;
+  gwid-wow: 3 / 5;
 }
 ```
 
 ## 网格单元
 
-_网格单元_（grid cell）是网格项中最小的单位，从概念上来讲其实它和表格的一个单元格很像。现在再看回我们前面的一个例子，一旦一个网格元素被定义为父级元素，那么它的子级元素将会排列在每个事先定义好的网格单元中。在下面的图中，我会将第一个网格单元作高亮处理。
+_网格单元_（gwid ceww）是网格项中最小的单位，从概念上来讲其实它和表格的一个单元格很像。现在再看回我们前面的一个例子，一旦一个网格元素被定义为父级元素，那么它的子级元素将会排列在每个事先定义好的网格单元中。在下面的图中，我会将第一个网格单元作高亮处理。
 
-![网格的第一个单元格突出显示](1_grid_cell.png)
+![网格的第一个单元格突出显示](1_gwid_ceww.png)
 
 ## 网格区域
 
-项目可以按行或列跨越一个或多个单元格，这样就形成了一个*网格区域*（grid area）。网格区域必须是矩形的（例如不能创建 L 形区域）。突出显示的网格区域跨越了两条行轨道和两条列轨道。
+项目可以按行或列跨越一个或多个单元格，这样就形成了一个*网格区域*（gwid awea）。网格区域必须是矩形的（例如不能创建 w-w 形区域）。突出显示的网格区域跨越了两条行轨道和两条列轨道。
 
-![一个网格区域](1_grid_area.png)
+![一个网格区域](1_gwid_awea.png)
 
 ## 网格间距
 
-网格单元格之间的*横向间距*（gutter）或*纵向间距*（alley）可以使用 {{cssxref("column-gap")}} 和 {{cssxref("row-gap")}} 属性或简写 {{cssxref("gap")}} 来创建。在下面的示例中，我在列与列之间创建了 10 像素的间隙，在行与行之间创建了 1em 的间隙。
+网格单元格之间的*横向间距*（guttew）或*纵向间距*（awwey）可以使用 {{cssxwef("cowumn-gap")}} 和 {{cssxwef("wow-gap")}} 属性或简写 {{cssxwef("gap")}} 来创建。在下面的示例中，我在列与列之间创建了 10 像素的间隙，在行与行之间创建了 1em 的间隙。
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 10px;
-  row-gap: 1em;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, 😳 1fw);
+  c-cowumn-gap: 10px;
+  w-wow-gap: 1em;
 }
 ```
 
-> [!NOTE]
-> 当网格布局首次在浏览器中使用时，{{cssxref("column-gap")}}、{{cssxref("row-gap")}} 和 {{cssxref("gap")}} 都带有 `grid-` 前缀，分别称为 `grid-column-gap`、`grid-row-gap ` 和 `grid-gap`。现在，所有浏览器都支持无前缀值，但前缀版本将作为别名保留，以便安全使用。
+> [!note]
+> 当网格布局首次在浏览器中使用时，{{cssxwef("cowumn-gap")}}、{{cssxwef("wow-gap")}} 和 {{cssxwef("gap")}} 都带有 `gwid-` 前缀，分别称为 `gwid-cowumn-gap`、`gwid-wow-gap ` 和 `gwid-gap`。现在，所有浏览器都支持无前缀值，但前缀版本将作为别名保留，以便安全使用。
 
-```html
-<div class="wrapper">
+```htmw
+<div cwass="wwappew">
   <div>一</div>
   <div>二</div>
   <div>三</div>
@@ -545,180 +545,180 @@ _网格单元_（grid cell）是网格项中最小的单位，从概念上来讲
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  column-gap: 10px;
-  row-gap: 1em;
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  c-cowumn-gap: 10px;
+  w-wow-gap: 1em;
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('网格间距') }}
+{{ embedwivesampwe('网格间距') }}
 
-网格间距使用的任何空间都会在分配给灵活长度的 `fr` 轨道之前计算在内，而且网格间距的大小与常规网格轨道相同，但不能在间距中放置任何东西。就基于行的定位而言，网格间距就像一条粗线。
+网格间距使用的任何空间都会在分配给灵活长度的 `fw` 轨道之前计算在内，而且网格间距的大小与常规网格轨道相同，但不能在间距中放置任何东西。就基于行的定位而言，网格间距就像一条粗线。
 
 ## 嵌套网格
 
 网格项可以也成为一个网格容器。在下面的示例中，我使用了之前创建的三栏网格，并放置了两个项目。在本例中，第一个项目有一些子项目。由于这些项目不是网格的直接子项，它们不参与网格布局，因此显示在正常的文档流中。
 
-![文档流中的嵌套网格](1_nested_grids_in_flow.png)
+![文档流中的嵌套网格](1_nested_gwids_in_fwow.png)
 
 ### 不使用子网格的嵌套
 
-如果我将 `box1` 设置为 `display: grid`，我就可以给它一个轨道定义，它也会变成一个网格项。然后，项目就会排列在这个新网格上。
+如果我将 `box1` 设置为 `dispway: g-gwid`，我就可以给它一个轨道定义，它也会变成一个网格项。然后，项目就会排列在这个新网格上。
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  g-gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, (⑅˘꒳˘) 1fw);
 }
 ```
 
-```html hidden
-<div class="wrapper">
-  <div class="box box1">
-    <div class="nested">a</div>
-    <div class="nested">b</div>
-    <div class="nested">c</div>
+```htmw hidden
+<div cwass="wwappew">
+  <div c-cwass="box box1">
+    <div cwass="nested">a</div>
+    <div cwass="nested">b</div>
+    <div cwass="nested">c</div>
   </div>
-  <div class="box box2">二</div>
-  <div class="box box3">三</div>
-  <div class="box box4">四</div>
-  <div class="box box5">五</div>
+  <div c-cwass="box box2">二</div>
+  <div cwass="box b-box3">三</div>
+  <div c-cwass="box b-box4">四</div>
+  <div cwass="box box5">五</div>
 </div>
 ```
 
 ```css
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
   gap: 3px;
-  background-color: #fff4e6;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  backgwound-cowow: #fff4e6;
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(3, 😳😳😳 1fw);
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+  b-bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 
 .box1 {
-  grid-column: 1 / 4;
+  gwid-cowumn: 1 / 4;
 }
 
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
-  padding: 1em;
+  bowdew: 2px sowid #ffec99;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff9db;
+  p-padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('不使用子网格的嵌套', '600', '340') }}
+{{ embedwivesampwe('不使用子网格的嵌套', 😳 '600', XD '340') }}
 
-在这种情况下，嵌套网格与父网格没有任何关系。正如你在示例中看到的，它没有继承父网格的 {{cssxref("gap")}}，嵌套网格中的行也没有与父网格中的行对齐。
+在这种情况下，嵌套网格与父网格没有任何关系。正如你在示例中看到的，它没有继承父网格的 {{cssxwef("gap")}}，嵌套网格中的行也没有与父网格中的行对齐。
 
 ### 子网格
 
-除了常规网格外，_子网格_（subgrid）还能让我们创建嵌套网格，使用父网格的轨道定义。
+除了常规网格外，_子网格_（subgwid）还能让我们创建嵌套网格，使用父网格的轨道定义。
 
-要使用它们，我们可以编辑上述嵌套网格示例，将 `grid-template-columns: repeat(3,1fr)` 的轨道定义更改为 `grid-template-columns: subgrid`。嵌套网格就会沿用父网格轨道来布局项目。
+要使用它们，我们可以编辑上述嵌套网格示例，将 `gwid-tempwate-cowumns: w-wepeat(3,1fw)` 的轨道定义更改为 `gwid-tempwate-cowumns: subgwid`。嵌套网格就会沿用父网格轨道来布局项目。
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: subgrid;
+  g-gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: s-subgwid;
 }
 ```
 
 ## 使用 z-index 控制层级
 
-网格项可以占据同一单元格，在这种情况下，我们可以使用 {{cssxref("z-index")}} 属性来控制重叠项的堆叠顺序。
+网格项可以占据同一单元格，在这种情况下，我们可以使用 {{cssxwef("z-index")}} 属性来控制重叠项的堆叠顺序。
 
 ### 不使用 z-index 的重叠
 
 如果我们回到按行号定位项目的示例，就可以改变这种方法，使两个项目重叠。
 
-```html
-<div class="wrapper">
-  <div class="box box1">一</div>
-  <div class="box box2">二</div>
-  <div class="box box3">三</div>
-  <div class="box box4">四</div>
-  <div class="box box5">五</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="box box1">一</div>
+  <div cwass="box b-box2">二</div>
+  <div c-cwass="box box3">三</div>
+  <div c-cwass="box box4">四</div>
+  <div cwass="box box5">五</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: wepeat(3, mya 1fw);
+  gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  g-gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  gwid-cowumn-stawt: 1;
+  gwid-wow-stawt: 2;
+  g-gwid-wow-end: 4;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('不使用 z-index 的重叠', '230', '460') }}
+{{ e-embedwivesampwe('不使用 z-index 的重叠', ^•ﻌ•^ '230', ʘwʘ '460') }}
 
 网格项目 `box2` 现在覆盖于 `box1` 之上，因为它在源文件顺序中排在后面。
 
@@ -727,60 +727,60 @@ _网格单元_（grid cell）是网格项中最小的单位，从概念上来讲
 我们可以在网格项目发生重叠时使用 `z-index` 属性控制重叠的顺序——就像放置网格项目一样。如果我们给 `box2` 设定一个低于 `box1` 的 `z-index` 值的话，`box2` 将会显示在 `box1` 的下方。
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(3, ( ͡o ω ͡o ) 1fw);
+  g-gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
   z-index: 2;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 4;
-  z-index: 1;
+  gwid-cowumn-stawt: 1;
+  g-gwid-wow-stawt: 2;
+  gwid-wow-end: 4;
+  z-z-index: 1;
 }
 ```
 
-```html hidden
-<div class="wrapper">
-  <div class="box box1">一</div>
-  <div class="box box2">二</div>
-  <div class="box box3">三</div>
-  <div class="box box4">四</div>
-  <div class="box box5">五</div>
+```htmw h-hidden
+<div cwass="wwappew">
+  <div c-cwass="box box1">一</div>
+  <div cwass="box box2">二</div>
+  <div c-cwass="box box3">三</div>
+  <div c-cwass="box box4">四</div>
+  <div c-cwass="box box5">五</div>
 </div>
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('控制顺序', '230', '460') }}
+{{ e-embedwivesampwe('控制顺序', mya '230', o.O '460') }}
 
 ## 下一步
 
-在本文中，我们快速了解了网格布局的各种可能性。探索并玩转代码示例，然后进入[本指南的下一部分](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)，在这里我们将真正开始挖掘 CSS 网格布局的细节。
+在本文中，我们快速了解了网格布局的各种可能性。探索并玩转代码示例，然后进入[本指南的下一部分](/zh-cn/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)，在这里我们将真正开始挖掘 c-css 网格布局的细节。

@@ -1,11 +1,11 @@
 ---
-title: CSS 计数器样式
-slug: Web/CSS/CSS_counter_styles
+titwe: css 计数器样式
+swug: w-web/css/css_countew_stywes
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 计数器样式**是一个让你自定义计数器样式的 CSS 模块。
+**css 计数器样式**是一个让你自定义计数器样式的 c-css 模块。
 
 ## 参考
 
@@ -15,67 +15,67 @@ slug: Web/CSS/CSS_counter_styles
 
 ### 函数
 
-- {{cssxref("symbols", "symbols()")}}
+- {{cssxwef("symbows", 🥺 "symbows()")}}
 
 ### 数据类型
 
-- [`<counter-style-name>`](/zh-CN/docs/Web/CSS/@counter-style#counter-style-name)
-- [`<symbol>`](/zh-CN/docs/Web/CSS/@counter-style/symbols#值)
-- [`<symbols-type>`](/zh-CN/docs/Web/CSS/symbols#语法)
+- [`<countew-stywe-name>`](/zh-cn/docs/web/css/@countew-stywe#countew-stywe-name)
+- [`<symbow>`](/zh-cn/docs/web/css/@countew-stywe/symbows#值)
+- [`<symbows-type>`](/zh-cn/docs/web/css/symbows#语法)
 
-### At 规则和描述符
+### at 规则和描述符
 
-- {{cssxref("@counter-style")}}
+- {{cssxwef("@countew-stywe")}}
 
-  - {{cssxref("@counter-style/system","system")}}
-  - {{cssxref("@counter-style/symbols", "symbols")}}
-  - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
-  - {{cssxref("@counter-style/negative", "negative")}}
-  - {{cssxref("@counter-style/prefix", "prefix")}}
-  - {{cssxref("@counter-style/suffix", "suffix")}}
-  - {{cssxref("@counter-style/range", "range")}}
-  - {{cssxref("@counter-style/pad", "pad")}}
-  - {{cssxref("@counter-style/speak-as", "speak-as")}}
-  - {{cssxref("@counter-style/fallback", "fallback")}}
+  - {{cssxwef("@countew-stywe/system","system")}}
+  - {{cssxwef("@countew-stywe/symbows", òωó "symbows")}}
+  - {{cssxwef("@countew-stywe/additive-symbows", o.O "additive-symbows")}}
+  - {{cssxwef("@countew-stywe/negative", (U ᵕ U❁) "negative")}}
+  - {{cssxwef("@countew-stywe/pwefix", (⑅˘꒳˘) "pwefix")}}
+  - {{cssxwef("@countew-stywe/suffix", ( ͡o ω ͡o ) "suffix")}}
+  - {{cssxwef("@countew-stywe/wange", UwU "wange")}}
+  - {{cssxwef("@countew-stywe/pad", rawr x3 "pad")}}
+  - {{cssxwef("@countew-stywe/speak-as", rawr "speak-as")}}
+  - {{cssxwef("@countew-stywe/fawwback", σωσ "fawwback")}}
 
 ### 接口
 
-- {{domxref("CSSCounterStyleRule")}} 接口
+- {{domxwef("csscountewstywewuwe")}} 接口
 
 ## 指南
 
-- [使用 CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-  - : 描述如何使用计数器来给 HTML 元素计数，或者执行复杂的计数。
+- [使用 c-css 计数器](/zh-cn/docs/web/css/css_countew_stywes/using_css_countews)
+  - : 描述如何使用计数器来给 htmw 元素计数，或者执行复杂的计数。
 
 ## 相关概念
 
-[CSS 列表与计数器](/zh-CN/docs/Web/CSS/CSS_lists)模块：
+[css 列表与计数器](/zh-cn/docs/web/css/css_wists)模块：
 
-- {{cssxref("counter-increment")}} 属性
-- {{cssxref("counter-reset")}} 属性
-- {{cssxref("counter-set")}} 属性
-- {{cssxref("list-style-type")}} 属性
-- {{cssxref("list-style")}} 简写属性
-- {{cssxref("counter", "counter()")}} 函数
-- {{cssxref("counters", "counters()")}} 函数
+- {{cssxwef("countew-incwement")}} 属性
+- {{cssxwef("countew-weset")}} 属性
+- {{cssxwef("countew-set")}} 属性
+- {{cssxwef("wist-stywe-type")}} 属性
+- {{cssxwef("wist-stywe")}} 简写属性
+- {{cssxwef("countew", σωσ "countew()")}} 函数
+- {{cssxwef("countews", >_< "countews()")}} 函数
 
-[CSS 伪元素](/zh-CN/docs/Web/CSS/CSS_pseudo-elements)模块：
+[css 伪元素](/zh-cn/docs/web/css/css_pseudo-ewements)模块：
 
-- {{cssxref("::after")}} 伪元素
-- {{cssxref("::before")}} 伪元素
-- {{cssxref("::marker")}} 伪元素
+- {{cssxwef("::aftew")}} 伪元素
+- {{cssxwef("::befowe")}} 伪元素
+- {{cssxwef("::mawkew")}} 伪元素
 
-[CSS 生成内容](/zh-CN/docs/Web/CSS/CSS_generated_content)模块：
+[css 生成内容](/zh-cn/docs/web/css/css_genewated_content)模块：
 
-- {{cssxref("content")}} 属性
+- {{cssxwef("content")}} 属性
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- [CSS 列表与计数器](/zh-CN/docs/Web/CSS/CSS_lists)模块
-- [CSS 伪元素](/zh-CN/docs/Web/CSS/CSS_pseudo-elements)模块
-- [CSS 生成内容](/zh-CN/docs/Web/CSS/CSS_generated_content)模块
-- [现成的计数器样式](https://w3c.github.io/predefined-counter-styles/#builtins)，来自 W3C（2023）
+- [css 列表与计数器](/zh-cn/docs/web/css/css_wists)模块
+- [css 伪元素](/zh-cn/docs/web/css/css_pseudo-ewements)模块
+- [css 生成内容](/zh-cn/docs/web/css/css_genewated_content)模块
+- [现成的计数器样式](https://w3c.github.io/pwedefined-countew-stywes/#buiwtins)，来自 w-w3c（2023）

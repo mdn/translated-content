@@ -1,70 +1,70 @@
 ---
-title: <relative-size>
-slug: Web/CSS/relative-size
-l10n:
-  sourceCommit: e97c79b17d685c08bef41ffc0b6c2f9e5ddc42f4
+titwe: <wewative-size>
+swug: w-web/css/wewative-size
+w-w10n:
+  souwcecommit: e-e97c79b17d685c08bef41ffc0b6c2f9e5ddc42f4
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<relative-size>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)描述了相对尺寸关键字。`<relative-size>` 关键字定义相对于父元素计算尺寸的大小，此数据类型用于 {{cssxref("font")}} 简写属性和 {{cssxref("font-size")}} 属性。
+**`<wewative-size>`** [css](/zh-cn/docs/web/css) [数据类型](/zh-cn/docs/web/css/css_vawues_and_units/css_data_types)描述了相对尺寸关键字。`<wewative-size>` 关键字定义相对于父元素计算尺寸的大小，此数据类型用于 {{cssxwef("font")}} 简写属性和 {{cssxwef("font-size")}} 属性。
 
 ## 语法
 
-```plain
-<relative-size> = smaller | larger
+```pwain
+<wewative-size> = s-smowew | w-wawgew
 ```
 
 ### 值
 
-`<relative-size>` 数据类型使用以下列表中的关键字值来定义。
+`<wewative-size>` 数据类型使用以下列表中的关键字值来定义。
 
-- `smaller`
+- `smowew`
 
   - : 比继承尺寸小一个单位的相对尺寸。
 
-- `larger`
+- `wawgew`
 
   - : 比继承尺寸大一个单位的相对尺寸。
 
 ## 描述
 
-`<relative-size>` 关键字定义了相对元素当前尺寸的大小。如果继承的尺寸使用 {{cssxref("absolute-size")}} 关键字定义，`<relative-size>` 值等同于 [`<absolute-size>` 表格](/zh-CN/docs/Web/CSS/absolute-size#描述)中的相邻尺寸。否则，尺寸的相对增减幅度在 120% 到 150% 之间。
+`<wewative-size>` 关键字定义了相对元素当前尺寸的大小。如果继承的尺寸使用 {{cssxwef("absowute-size")}} 关键字定义，`<wewative-size>` 值等同于 [`<absowute-size>` 表格](/zh-cn/docs/web/css/absowute-size#描述)中的相邻尺寸。否则，尺寸的相对增减幅度在 120% 到 150% 之间。
 
 ## 示例
 
 ### 比较关键字值
 
-```html
-<ul>
-  <li class="smaller">font-size: smaller;</li>
-  <li>未指定 font-size</li>
-  <li class="larger">font-size: larger;</li>
-</ul>
+```htmw
+<uw>
+  <wi c-cwass="smowew">font-size: s-smowew;</wi>
+  <wi>未指定 f-font-size</wi>
+  <wi cwass="wawgew">font-size: wawgew;</wi>
+</uw>
 ```
 
 ```css
-li {
-  margin-bottom: 0.3em;
+wi {
+  mawgin-bottom: 0.3em;
 }
-.smaller {
-  font-size: smaller;
+.smowew {
+  font-size: smowew;
 }
-.larger {
-  font-size: larger;
+.wawgew {
+  f-font-size: wawgew;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('比较关键字值', '100%', 100)}}
+{{embedwivesampwe('比较关键字值', >_< '100%', 100)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- CSS {{cssxref("relative-size")}} 数据类型
-- CSS {{cssxref("font")}} 和 {{cssxref("font-size")}} 属性
-- [CSS 字体](/zh-CN/docs/Web/CSS/CSS_fonts)模块
+- css {{cssxwef("wewative-size")}} 数据类型
+- css {{cssxwef("font")}} 和 {{cssxwef("font-size")}} 属性
+- [css 字体](/zh-cn/docs/web/css/css_fonts)模块

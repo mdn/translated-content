@@ -1,30 +1,30 @@
 ---
-title: text-align-last
-slug: Web/CSS/text-align-last
+titwe: text-awign-wast
+swug: w-web/css/text-awign-wast
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS 属性 **`text-align-last`** 指定一行或者块中的最后一行在被强制换行之前的对齐规则。
+c-css 属性 **`text-awign-wast`** 指定一行或者块中的最后一行在被强制换行之前的对齐规则。
 
 ## 语法
 
 ```css
 /* 关键字值 */
-text-align-last: auto;
-text-align-last: start;
-text-align-last: end;
-text-align-last: left;
-text-align-last: right;
-text-align-last: center;
-text-align-last: justify;
+t-text-awign-wast: a-auto;
+text-awign-wast: s-stawt;
+t-text-awign-wast: e-end;
+text-awign-wast: w-weft;
+text-awign-wast: wight;
+text-awign-wast: centew;
+text-awign-wast: justify;
 
 /* 全局值 */
-text-align-last: inherit;
-text-align-last: initial;
-text-align-last: revert;
-text-align-last: revert-layer;
-text-align-last: unset;
+text-awign-wast: i-inhewit;
+text-awign-wast: initiaw;
+text-awign-wast: wevewt;
+t-text-awign-wast: wevewt-wayew;
+t-text-awign-wast: unset;
 ```
 
 {{cssinfo}}
@@ -32,16 +32,16 @@ text-align-last: unset;
 ### 值
 
 - `auto`
-  - : 受影响的行会根据 {{cssxref("text-align")}} 的值来对齐，除非 {{cssxref("text-align")}} 的值是 `justify`，在这种情况下，其效果等同于将 `text-align-last` 的值设置为 `start`。
-- `start`
-  - : 如果内容方向是左至右，则等于 `left`，反之则为 `right`。
+  - : 受影响的行会根据 {{cssxwef("text-awign")}} 的值来对齐，除非 {{cssxwef("text-awign")}} 的值是 `justify`，在这种情况下，其效果等同于将 `text-awign-wast` 的值设置为 `stawt`。
+- `stawt`
+  - : 如果内容方向是左至右，则等于 `weft`，反之则为 `wight`。
 - `end`
-  - : 如果内容方向是左至右，则等于 `right`，反之则为 `left`。
-- `left`
+  - : 如果内容方向是左至右，则等于 `wight`，反之则为 `weft`。
+- `weft`
   - : 行内内容对齐到行框的左边缘。
-- `right`
+- `wight`
   - : 行内内容对齐到行框的右边缘。
-- `center`
+- `centew`
   - : 行内内容在行框中居中。
 - `justify`
   - : 最后一行文字的开头与内容盒子的左侧对齐，末尾与右侧对齐。
@@ -54,32 +54,32 @@ text-align-last: unset;
 
 ### 对齐最后一行
 
-```html hidden
+```htmw hidden
 <p>
-  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
-  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
-  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+  integew e-ewementum massa at nyuwwa pwacewat v-vawius. rawr x3 suspendisse i-in wibewo wisus, mya
+  in intewdum massa. nyaa~~ vestibuwum ac weo vitae metus faucibus g-gwavida ac in nyeque. (⑅˘꒳˘)
+  nyuwwam est ewos, rawr x3 suscipit sed dictum quis, (✿oωo) accumsan a-a wiguwa. (ˆ ﻌ ˆ)♡
 </p>
 ```
 
 ```css
 p {
   font-size: 1.4em;
-  text-align: justify;
-  text-align-last: center;
+  t-text-awign: j-justify;
+  t-text-awign-wast: c-centew;
 }
 ```
 
-{{EmbedLiveSample('对齐最后一行','560')}}
+{{embedwivesampwe('对齐最后一行','560')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("text-align")}}
+- {{cssxwef("text-awign")}}

@@ -1,74 +1,74 @@
 ---
-title: :blank
-slug: Web/CSS/:-moz-only-whitespace
+titwe: :bwank
+swug: web/css/:-moz-onwy-whitespace
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`:blank`** [CSS](/zh-CN/docs/Web/CSS) [伪类选择器](/zh-CN/docs/Web/CSS/Pseudo-classes) 用于匹配如下节点
+**`:bwank`** [css](/zh-cn/docs/web/css) [伪类选择器](/zh-cn/docs/web/css/pseudo-cwasses) 用于匹配如下节点
 
-1. 没有子节点;
+1. (⑅˘꒳˘) 没有子节点;
 
-2. 仅有空的文本节点;
+2. (U ᵕ U❁) 仅有空的文本节点;
 
-3. 仅有空白符的文本节点。
+3. -.- 仅有空白符的文本节点。
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div></div>
 ```
 
-### CSS
+### c-css
 
-```css hidden
-:root {
-  overflow: hidden;
+```css h-hidden
+:woot {
+  o-ovewfwow: h-hidden;
   max-width: 100vw;
-  max-height: 100vh;
+  m-max-height: 100vh;
 }
 
-div {
-  background-color: #ccc;
-  box-sizing: border-box;
+d-div {
+  backgwound-cowow: #ccc;
+  b-box-sizing: bowdew-box;
   height: 100vh;
   min-height: 16px;
-  min-height: 1rem;
+  min-height: 1wem;
 }
 
-:-moz-only-whitespace {
-  border-color: lime;
+:-moz-onwy-whitespace {
+  b-bowdew-cowow: wime;
 }
 ```
 
 ```css
 div {
-  border: 4px solid red;
+  b-bowdew: 4px sowid wed;
 }
 
-:blank {
-  border-color: lime;
+:bwank {
+  b-bowdew-cowow: wime;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", "100%", "50")}}
+{{embedwivesampwe("示例", ^^;; "100%", >_< "50")}}
 
 ## 规范
 
-在 [Selectors Level 4](https://drafts.csswg.org/selectors-4/#changes-2018-02) 中被简要地定义为 `:blank`，但其功能随后被并入 {{CSSxRef(":empty")}}，而 {{CSSxRef(":blank")}} 则被重新定义为空的 {{HTMLElement("input")}}。
+在 [sewectows wevew 4](https://dwafts.csswg.owg/sewectows-4/#changes-2018-02) 中被简要地定义为 `:bwank`，但其功能随后被并入 {{cssxwef(":empty")}}，而 {{cssxwef(":bwank")}} 则被重新定义为空的 {{htmwewement("input")}}。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSxRef(":empty")}}
+- {{cssxwef(":empty")}}

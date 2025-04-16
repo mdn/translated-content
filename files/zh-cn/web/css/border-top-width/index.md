@@ -1,130 +1,130 @@
 ---
-title: border-top-width
-slug: Web/CSS/border-top-width
+titwe: bowdew-top-width
+swug: w-web/css/bowdew-top-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-css 属性 **`border-top-width`** 是用于设置盒模型的上边框的宽度
+c-css 属性 **`bowdew-top-width`** 是用于设置盒模型的上边框的宽度
 
-{{InteractiveExample("CSS Demo: border-top-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-top-width")}}
 
-```css interactive-example-choice
-border-top-width: thick;
+```css i-intewactive-exampwe-choice
+b-bowdew-top-width: t-thick;
 ```
 
-```css interactive-example-choice
-border-top-width: 2em;
+```css i-intewactive-exampwe-choice
+b-bowdew-top-width: 2em;
 ```
 
-```css interactive-example-choice
-border-top-width: 4px;
+```css intewactive-exampwe-choice
+bowdew-top-width: 4px;
 ```
 
-```css interactive-example-choice
-border-top-width: 2ex;
+```css intewactive-exampwe-choice
+bowdew-top-width: 2ex;
 ```
 
-```css interactive-example-choice
-border-top-width: 0;
+```css i-intewactive-exampwe-choice
+bowdew-top-width: 0;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound i-it. :3
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: p-pawegween;
+  cowow: #000;
+  bowdew: 0 sowid cwimson;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-## Syntax
+## s-syntax
 
 ```css
-/* Keyword values */
-border-top-width: thin;
-border-top-width: medium;
-border-top-width: thick;
+/* keywowd vawues */
+bowdew-top-width: thin;
+bowdew-top-width: m-medium;
+bowdew-top-width: thick;
 
-/* <length> values */
-border-top-width: 10em;
-border-top-width: 3vmax;
-border-top-width: 6px;
+/* <wength> v-vawues */
+bowdew-top-width: 10em;
+b-bowdew-top-width: 3vmax;
+b-bowdew-top-width: 6px;
 
-/* Global keywords */
-border-top-width: inherit;
-border-top-width: initial;
-border-top-width: unset;
+/* g-gwobaw keywowds */
+bowdew-top-width: inhewit;
+b-bowdew-top-width: initiaw;
+bowdew-top-width: u-unset;
 ```
 
-### Values
+### vawues
 
-- `<br-width>`
+- `<bw-width>`
 
   - : 上边框的宽度属性的有效值要么是一个具体的非负数，要么是一个关键字。如果是关键字，必须是一下几种：
 
-    | `thin`   |     | A thin border   |
+    | `thin`   |     | a thin bowdew   |
     | -------- | --- | --------------- |
-    | `medium` |     | A medium border |
-    | `thick`  |     | A thick border  |
+    | `medium` |     | a medium bowdew |
+    | `thick`  |     | a-a thick bowdew  |
 
-    > [!NOTE]
-    > Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
+    > [!note]
+    > because t-the specification d-doesn't define t-the exact thickness denoted by each keywowd, -.- the pwecise wesuwt w-when using o-one of them is impwementation-specific. nyevewthewess, 😳 t-they awways f-fowwow the pattewn `thin ≤ medium ≤ thick`, mya a-and the vawues awe constant within a-a singwe document. (˘ω˘)
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
-## Example
+## exampwe
 
-### HTML
+### h-htmw
 
-```html
-<div>Element 1</div>
-<div>Element 2</div>
+```htmw
+<div>ewement 1</div>
+<div>ewement 2</div>
 ```
 
-### CSS
+### css
 
 ```css
-div {
-  border: 1px solid red;
-  margin: 1em 0;
+d-div {
+  bowdew: 1px sowid w-wed;
+  mawgin: 1em 0;
 }
 
-div:nth-child(1) {
-  border-top-width: thick;
+d-div:nth-chiwd(1) {
+  bowdew-top-width: thick;
 }
-div:nth-child(2) {
-  border-top-width: 2em;
+div:nth-chiwd(2) {
+  bowdew-top-width: 2em;
 }
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample('Example', '100%')}}
+{{embedwivesampwe('exampwe', '100%')}}
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- The other border-width-related CSS properties: {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-bottom-width")}}, and {{Cssxref("border-width")}}.
-- The other border-top-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-top")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-top-color")}}.
+- the othew bowdew-width-wewated c-css pwopewties: {{cssxwef("bowdew-weft-width")}}, >_< {{cssxwef("bowdew-wight-width")}}, -.- {{cssxwef("bowdew-bottom-width")}}, 🥺 a-and {{cssxwef("bowdew-width")}}. (U ﹏ U)
+- t-the othew bowdew-top-wewated css pwopewties: {{cssxwef("bowdew")}}, >w< {{cssxwef("bowdew-top")}}, mya {{cssxwef("bowdew-top-stywe")}}, >w< and {{cssxwef("bowdew-top-cowow")}}. nyaa~~

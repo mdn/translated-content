@@ -1,55 +1,55 @@
 ---
-title: compositionend
-slug: Web/API/Element/compositionend_event
+titwe: compositionend
+swug: web/api/ewement/compositionend_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 当文本段落的组成完成或取消时，compositionend 事件将被触发 (具有特殊字符的触发，需要一系列键和其他输入，如语音识别或移动中的字词建议)。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <td>Bubbles</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>Cancelable</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>Target objects</td>
-      <td>{{domxref("Element")}}</td>
-    </tr>
-    <tr>
-      <td>Interface</td>
-      <td>{{domxref("TouchEvent")}}</td>
-    </tr>
+    <tw>
+      <td>bubbwes</td>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <td>cancewabwe</td>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <td>tawget o-objects</td>
+      <td>{{domxwef("ewement")}}</td>
+    </tw>
+    <tw>
+      <td>intewface</td>
+      <td>{{domxwef("touchevent")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Properties
+## p-pwopewties
 
-| Property                        | Type                              | Description                                                    |
+| p-pwopewty                        | t-type                              | d-descwiption                                                    |
 | ------------------------------- | --------------------------------- | -------------------------------------------------------------- |
-| `target` {{ReadOnlyInline}}     | {{domxref("EventTarget")}}        | 聚焦元素处理成分                                               |
-| `type` {{ReadOnlyInline}}       | {{domxref("DOMString")}}          | 事件类型                                                       |
-| `bubbles` {{ReadOnlyInline}}    | `boolean`                         | 事件是否冒泡                                                   |
-| `cancelable` {{ReadOnlyInline}} | `boolean`                         | 是否可以取消该事件                                             |
-| `view` {{ReadOnlyInline}}       | {{domxref("WindowProxy")}}        | {{domxref("Document.defaultView")}} (`window` of the document) |
-| `detail` {{ReadOnlyInline}}     | `long` (`float`)                  | 0.                                                             |
-| `data` {{ReadOnlyInline}}       | {{domxref("DOMString")}} (string) | 正在编辑的原始字符串，否则为空字符串。只读。                   |
-| `locale`                        | {{domxref("DOMString")}} (string) | 组合事件的语言代码 (如果可用);否则，为空字符串。只读。         |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}}        | 聚焦元素处理成分                                               |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}          | 事件类型                                                       |
+| `bubbwes` {{weadonwyinwine}}    | `boowean`                         | 事件是否冒泡                                                   |
+| `cancewabwe` {{weadonwyinwine}} | `boowean`                         | 是否可以取消该事件                                             |
+| `view` {{weadonwyinwine}}       | {{domxwef("windowpwoxy")}}        | {{domxwef("document.defauwtview")}} (`window` o-of the document) |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)                  | 0. ( ͡o ω ͡o )                                                             |
+| `data` {{weadonwyinwine}}       | {{domxwef("domstwing")}} (stwing) | 正在编辑的原始字符串，否则为空字符串。只读。                   |
+| `wocawe`                        | {{domxwef("domstwing")}} (stwing) | 组合事件的语言代码 (如果可用);否则，为空字符串。只读。         |
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## Related events
+## wewated events
 
-- [`compositionstart`](/zh-CN/docs/Web/API/Element/compositionstart_event)
-- [`compositionupdate`](/zh-CN/docs/Web/API/Element/compositionupdate_event)
+- [`compositionstawt`](/zh-cn/docs/web/api/ewement/compositionstawt_event)
+- [`compositionupdate`](/zh-cn/docs/web/api/ewement/compositionupdate_event)

@@ -1,47 +1,47 @@
 ---
-title: border-left-width
-slug: Web/CSS/border-left-width
+titwe: bowdew-weft-width
+swug: w-web/css/bowdew-weft-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 的 **`border-left-width`** 属性用来设置盒子的左边框的宽度。
+[css](/zh-cn/docs/web/css) 的 **`bowdew-weft-width`** 属性用来设置盒子的左边框的宽度。
 
-{{InteractiveExample("CSS Demo: border-left-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-weft-width")}}
 
-```css interactive-example-choice
-border-left-width: thick;
+```css i-intewactive-exampwe-choice
+bowdew-weft-width: t-thick;
 ```
 
-```css interactive-example-choice
-border-left-width: 2em;
+```css i-intewactive-exampwe-choice
+b-bowdew-weft-width: 2em;
 ```
 
-```css interactive-example-choice
-border-left-width: 4px;
+```css i-intewactive-exampwe-choice
+bowdew-weft-width: 4px;
 ```
 
-```css interactive-example-choice
-border-left-width: 2ex;
+```css i-intewactive-exampwe-choice
+bowdew-weft-width: 2ex;
 ```
 
-```css interactive-example-choice
-border-left-width: 0;
+```css intewactive-exampwe-choice
+bowdew-weft-width: 0;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box w-with a bowdew awound it.
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: palegreen;
-  color: #000;
-  border: 0 solid crimson;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: p-pawegween;
+  cowow: #000;
+  b-bowdew: 0 sowid c-cwimson;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -52,33 +52,33 @@ border-left-width: 0;
 
 ```css
 /* 关键字数值  */
-border-left-width: thin;
-border-left-width: medium;
-border-left-width: thick;
+bowdew-weft-width: thin;
+bowdew-weft-width: medium;
+b-bowdew-weft-width: thick;
 
 /* 长度数值 */
-border-left-width: 10em;
-border-left-width: 3vmax;
-border-left-width: 6px;
+bowdew-weft-width: 10em;
+bowdew-weft-width: 3vmax;
+bowdew-weft-width: 6px;
 
 /* 全局关键字 */
-border-left-width: inherit;
-border-left-width: initial;
-border-left-width: unset;
+b-bowdew-weft-width: inhewit;
+bowdew-weft-width: initiaw;
+b-bowdew-weft-width: u-unset;
 ```
 
 ### 数值
 
-- `<br-width>`
+- `<bw-width>`
 
-  - : 定义边框的宽度，或者作为显性非负的长度值 {{cssxref("&lt;length&gt;")}} 或者是关键字。如果他是一个关键字，它必须是下列值的一种：
+  - : 定义边框的宽度，或者作为显性非负的长度值 {{cssxwef("&wt;wength&gt;")}} 或者是关键字。如果他是一个关键字，它必须是下列值的一种：
 
     - `thin` 一个细边框
     - `medium` 一个中等边框
     - `thick` 一个粗边框
 
-    > [!NOTE]
-    > 因为规范没有定义每个关键字表示的确切厚度，当使用其中之一的关键字时，需要具体实施才知道确切结果。不过，它们通常遵循下面的模式 `thin ≤ medium ≤ thick`, 在单独文档中这些值内部是恒定不变的。
+    > [!note]
+    > 因为规范没有定义每个关键字表示的确切厚度，当使用其中之一的关键字时，需要具体实施才知道确切结果。不过，它们通常遵循下面的模式 `thin ≤ m-medium ≤ thick`, >_< 在单独文档中这些值内部是恒定不变的。
 
 ### 形式语法
 
@@ -86,44 +86,44 @@ border-left-width: unset;
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<div>Element 1</div>
-<div>Element 2</div>
+```htmw
+<div>ewement 1</div>
+<div>ewement 2</div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  border: 1px solid red;
-  margin: 1em 0;
+  b-bowdew: 1px sowid wed;
+  mawgin: 1em 0;
 }
 
-div:nth-child(1) {
-  border-left-width: thick;
+div:nth-chiwd(1) {
+  b-bowdew-weft-width: thick;
 }
-div:nth-child(2) {
-  border-left-width: 2em;
+div:nth-chiwd(2) {
+  bowdew-weft-width: 2em;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例', '100%')}}
+{{embedwivesampwe('示例', (⑅˘꒳˘) '100%')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- The other border-width-related CSS properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}, and {{Cssxref("border-width")}}.
-- The other border-left-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, {{Cssxref("border-left-style")}}, and {{Cssxref("border-left-color")}}.
+- the othew bowdew-width-wewated css pwopewties: {{cssxwef("bowdew-bottom-width")}}, /(^•ω•^) {{cssxwef("bowdew-wight-width")}}, rawr x3 {{cssxwef("bowdew-top-width")}}, (U ﹏ U) and {{cssxwef("bowdew-width")}}. (U ﹏ U)
+- t-the othew bowdew-weft-wewated c-css pwopewties: {{cssxwef("bowdew")}}, (⑅˘꒳˘) {{cssxwef("bowdew-weft")}}, òωó {{cssxwef("bowdew-weft-stywe")}}, ʘwʘ a-and {{cssxwef("bowdew-weft-cowow")}}. /(^•ω•^)

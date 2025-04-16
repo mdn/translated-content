@@ -1,60 +1,60 @@
 ---
-title: shape-margin
-slug: Web/CSS/shape-margin
+titwe: shape-mawgin
+swug: web/css/shape-mawgin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`shape-margin`** 用于设定由{{cssxref("shape-outside")}}创建的 CSS 形状的外边距。
+[css](/zh-cn/docs/web/css) 属性 **`shape-mawgin`** 用于设定由{{cssxwef("shape-outside")}}创建的 c-css 形状的外边距。
 
-{{InteractiveExample("CSS Demo: shape-margin")}}
+{{intewactiveexampwe("css d-demo: shape-mawgin")}}
 
-```css interactive-example-choice
-shape-margin: 0;
+```css i-intewactive-exampwe-choice
+s-shape-mawgin: 0;
 ```
 
-```css interactive-example-choice
-shape-margin: 20px;
+```css i-intewactive-exampwe-choice
+s-shape-mawgin: 20px;
 ```
 
-```css interactive-example-choice
-shape-margin: 1em;
+```css i-intewactive-exampwe-choice
+shape-mawgin: 1em;
 ```
 
-```css interactive-example-choice
-shape-margin: 5%;
+```css i-intewactive-exampwe-choice
+shape-mawgin: 5%;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element"></div>
-    We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
-    as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
-    kinds of daring feats, the nerve-racking excitement that they have ceased to
-    find on earth.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement"></div>
+    w-we had agweed, ( ͡o ω ͡o ) my companion a-and i, >_< that i shouwd caww fow him at his house, >w<
+    aftew dinnew, rawr n-nyot watew than eweven o’cwock. 😳 t-this athwetic y-young fwenchman
+    bewongs to a smow set of pawisian spowtsmen, who have taken u-up “bawwooning”
+    as a pastime. >w< aftew having exhausted aww the sensations t-that awe to be found
+    in owdinawy s-spowts, (⑅˘꒳˘) e-even those of “automobiwing” a-at a bweakneck s-speed, OwO the
+    membews of the “aéwo cwub” nyow s-seek in the aiw, (ꈍᴗꈍ) whewe they induwge in aww
+    k-kinds of dawing feats, 😳 the nyewve-wacking excitement that they have ceased to
+    find on eawth.
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  text-align: left;
-  padding: 20px;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  text-awign: weft;
+  p-padding: 20px;
 }
 
-#example-element {
-  float: left;
-  margin: 20px;
+#exampwe-ewement {
+  f-fwoat: w-weft;
+  mawgin: 20px;
   width: 180px;
   height: 180px;
-  border-radius: 50%;
-  background-color: rebeccapurple;
-  shape-outside: circle(50%);
+  bowdew-wadius: 50%;
+  b-backgwound-cowow: w-webeccapuwpwe;
+  shape-outside: c-ciwcwe(50%);
 }
 ```
 
@@ -63,23 +63,23 @@ shape-margin: 5%;
 ## 语法
 
 ```css
-/* <length> values */
-shape-margin: 10px;
-shape-margin: 20mm;
+/* <wength> v-vawues */
+shape-mawgin: 10px;
+s-shape-mawgin: 20mm;
 
-/* <percentage> value */
-shape-margin: 60%;
+/* <pewcentage> vawue */
+s-shape-mawgin: 60%;
 
-/* Global values */
-shape-margin: inherit;
-shape-margin: initial;
-shape-margin: unset;
+/* gwobaw vawues */
+shape-mawgin: i-inhewit;
+shape-mawgin: i-initiaw;
+shape-mawgin: unset;
 ```
 
 ### 值
 
-- `<length-percentage>`
-  - : 使用{{cssxref("&lt;length&gt;")}}值，或者相对于元素容纳块的{{cssxref("&lt;percentage&gt;")}}值来设定形状的外边距。
+- `<wength-pewcentage>`
+  - : 使用{{cssxwef("&wt;wength&gt;")}}值，或者相对于元素容纳块的{{cssxwef("&wt;pewcentage&gt;")}}值来设定形状的外边距。
 
 ### 正式语法
 
@@ -87,59 +87,59 @@ shape-margin: unset;
 
 ## 范例
 
-### Adding a margin to a polygon
+### a-adding a-a mawgin to a powygon
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <section>
-  <div class="shape"></div>
-  We are not quite sure of any one thing in biology; our knowledge of geology is
-  relatively very slight, and the economic laws of society are uncertain to
-  every one except some individual who attempts to set them forth; but before
-  the world was fashioned the square on the hypotenuse was equal to the sum of
-  the squares on the other two sides of a right triangle, and it will be so
-  after this world is dead; and the inhabitant of Mars, if one exists, probably
-  knows its truth as we know it.
+  <div cwass="shape"></div>
+  we awe nyot quite suwe of any one thing in biowogy; ouw knowwedge o-of geowogy i-is
+  wewativewy vewy swight, 😳😳😳 and t-the economic waws o-of society awe u-uncewtain to
+  evewy one except some individuaw who attempts to s-set them fowth; but befowe
+  the wowwd was fashioned the squawe on the hypotenuse w-was equaw to the sum of
+  the s-squawes on the o-othew two sides o-of a wight twiangwe, mya and it wiww b-be so
+  aftew t-this wowwd is dead; a-and the inhabitant o-of maws, mya if one exists, (⑅˘꒳˘) pwobabwy
+  knows i-its twuth as we k-know it. (U ﹏ U)
 </section>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-section {
-  max-width: 400px;
+s-section {
+  m-max-width: 400px;
 }
 
 .shape {
-  float: left;
+  fwoat: weft;
   width: 150px;
   height: 150px;
-  background-color: maroon;
-  clip-path: polygon(0 0, 150px 150px, 0 150px);
-  shape-outside: polygon(0 0, 150px 150px, 0 150px);
-  shape-margin: 20px;
+  b-backgwound-cowow: mawoon;
+  cwip-path: powygon(0 0, mya 150px 150px, ʘwʘ 0 150px);
+  shape-outside: powygon(0 0, (˘ω˘) 150px 150px, (U ﹏ U) 0 150px);
+  shape-mawgin: 20px;
 }
 ```
 
-#### Result
+#### w-wesuwt
 
-{{EmbedLiveSample("Adding_a_margin_to_a_polygon", 500, 250)}}
+{{embedwivesampwe("adding_a_mawgin_to_a_powygon", ^•ﻌ•^ 500, 250)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS Shapes](/zh-CN/docs/Web/CSS/CSS_shapes)
-- [Overview of CSS Shapes](/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- {{cssxref("shape-outside")}}
-- {{cssxref("shape-image-threshold")}}
-- {{cssxref("&lt;basic-shape&gt;")}}
+- [css shapes](/zh-cn/docs/web/css/css_shapes)
+- [ovewview of css shapes](/zh-cn/docs/web/css/css_shapes/ovewview_of_shapes)
+- {{cssxwef("shape-outside")}}
+- {{cssxwef("shape-image-thweshowd")}}
+- {{cssxwef("&wt;basic-shape&gt;")}}

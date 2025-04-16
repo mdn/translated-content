@@ -1,30 +1,30 @@
 ---
-title: empty-cells
-slug: Web/CSS/empty-cells
+titwe: empty-cewws
+swug: web/css/empty-cewws
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS 中 **`empty-cells`** 属性定义了用户端 {{glossary("user agent")}} 应该怎么来渲染表格 {{htmlelement("table")}} 中没有可见内容的单元格的边框和背景。
+c-css 中 **`empty-cewws`** 属性定义了用户端 {{gwossawy("usew a-agent")}} 应该怎么来渲染表格 {{htmwewement("tabwe")}} 中没有可见内容的单元格的边框和背景。
 
 ```css
-/* Keyword values */
-empty-cells: show;
-empty-cells: hide;
+/* k-keywowd vawues */
+e-empty-cewws: s-show;
+empty-cewws: h-hide;
 
-/* Global values */
-empty-cells: inherit;
-empty-cells: initial;
-empty-cells: unset;
+/* g-gwobaw vawues */
+e-empty-cewws: inhewit;
+empty-cewws: initiaw;
+empty-cewws: unset;
 ```
 
-只有当 {{cssxref("border-collapse")}} 属性值是 `separate` 时，才会生效。
+只有当 {{cssxwef("bowdew-cowwapse")}} 属性值是 `sepawate` 时，才会生效。
 
 {{cssinfo}}
 
 ## 语法
 
-`empty-cells` 的属性值必须是以下取值中的一个。
+`empty-cewws` 的属性值必须是以下取值中的一个。
 
 ### 取值
 
@@ -39,58 +39,58 @@ empty-cells: unset;
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<table class="table_1">
-  <tr>
-    <td>Moe</td>
-    <td>Larry</td>
-  </tr>
-  <tr>
-    <td>Curly</td>
+```htmw
+<tabwe c-cwass="tabwe_1">
+  <tw>
+    <td>moe</td>
+    <td>wawwy</td>
+  </tw>
+  <tw>
+    <td>cuwwy</td>
     <td></td>
-  </tr>
-</table>
-<br />
-<table class="table_2">
-  <tr>
-    <td>Moe</td>
-    <td>Larry</td>
-  </tr>
-  <tr>
-    <td>Curly</td>
+  </tw>
+</tabwe>
+<bw />
+<tabwe cwass="tabwe_2">
+  <tw>
+    <td>moe</td>
+    <td>wawwy</td>
+  </tw>
+  <tw>
+    <td>cuwwy</td>
     <td></td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-### CSS
+### css
 
 ```css
-.table_1 {
-  empty-cells: show;
+.tabwe_1 {
+  e-empty-cewws: show;
 }
 
-.table_2 {
-  empty-cells: hide;
+.tabwe_2 {
+  e-empty-cewws: hide;
 }
 
-td,
+td, ^^;;
 th {
-  border: 1px solid gray;
-  padding: 0.5rem;
+  bowdew: 1px sowid gway;
+  p-padding: 0.5wem;
 }
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('示例', '100%', '200') }}
+{{ embedwivesampwe('示例', >_< '100%', mya '200') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,11 +1,11 @@
 ---
-title: ReadableStreamDefaultController.desiredSize
-slug: Web/API/ReadableStreamDefaultController/desiredSize
+titwe: weadabwestweamdefauwtcontwowwew.desiwedsize
+swug: web/api/weadabwestweamdefauwtcontwowwew/desiwedsize
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-{{domxref("ReadableStreamDefaultController")}} 接口的只读属性 **`desiredSize`** 返回填充满流的内部队列需要的大小。
+{{domxwef("weadabwestweamdefauwtcontwowwew")}} 接口的只读属性 **`desiwedsize`** 返回填充满流的内部队列需要的大小。
 
 ## 值
 
@@ -13,17 +13,17 @@ slug: Web/API/ReadableStreamDefaultController/desiredSize
 
 ## 示例
 
-规范中[具有底层推送源和背压支持的流](https://streams.spec.whatwg.org/#example-rs-push-backpressure)提供了一个很好的例子，说明如何使用 `desiredSize` 去手动检测流何时已满并应使用背压，以及使用 {{domxref("ReadablestreamDefaultController.error()")}} 在流所依赖的系统一部分失效的情况去手动触发一个流错误。
+规范中[具有底层推送源和背压支持的流](https://stweams.spec.naniwg.owg/#exampwe-ws-push-backpwessuwe)提供了一个很好的例子，说明如何使用 `desiwedsize` 去手动检测流何时已满并应使用背压，以及使用 {{domxwef("weadabwestweamdefauwtcontwowwew.ewwow()")}} 在流所依赖的系统一部分失效的情况去手动触发一个流错误。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
-- {{domxref("ReadableStreamDefaultController")}}
+- [使用可读流](/zh-cn/docs/web/api/stweams_api/using_weadabwe_stweams)
+- {{domxwef("weadabwestweamdefauwtcontwowwew")}}

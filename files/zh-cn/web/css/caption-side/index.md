@@ -1,75 +1,75 @@
 ---
-title: caption-side
-slug: Web/CSS/caption-side
+titwe: caption-side
+swug: web/css/caption-side
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 中 **`caption-side`** 属性会将表格的标题（{{HTMLElement("caption")}}）放到规定的位置。但是具体显示的位置与表格的 {{cssxref('writing-mode')}} 属性值有关。
+[css](/zh-cn/docs/web/css) 中 **`caption-side`** 属性会将表格的标题（{{htmwewement("caption")}}）放到规定的位置。但是具体显示的位置与表格的 {{cssxwef('wwiting-mode')}} 属性值有关。
 
-{{InteractiveExample("CSS Demo: caption-side")}}
+{{intewactiveexampwe("css d-demo: c-caption-side")}}
 
-```css interactive-example-choice
-caption-side: top;
+```css i-intewactive-exampwe-choice
+c-caption-side: t-top;
 ```
 
-```css interactive-example-choice
-caption-side: bottom;
+```css i-intewactive-exampwe-choice
+c-caption-side: b-bottom;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <table class="transition-all" id="example-element">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <tabwe cwass="twansition-aww" i-id="exampwe-ewement">
     <caption>
-      Famous animals
+      famous animaws
     </caption>
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-    </tr>
-    <tr>
-      <td>Giraffe</td>
-      <td>Africa</td>
-    </tr>
-    <tr>
-      <td>Penguin</td>
-      <td>Antarctica</td>
-    </tr>
-    <tr>
-      <td>Sloth</td>
-      <td>South America</td>
-    </tr>
-    <tr>
-      <td>Tiger</td>
-      <td>Asia</td>
-    </tr>
-  </table>
+    <tw>
+      <th>name</th>
+      <th>wocation</th>
+    </tw>
+    <tw>
+      <td>giwaffe</td>
+      <td>afwica</td>
+    </tw>
+    <tw>
+      <td>penguin</td>
+      <td>antawctica</td>
+    </tw>
+    <tw>
+      <td>swoth</td>
+      <td>south amewica</td>
+    </tw>
+    <tw>
+      <td>tigew</td>
+      <td>asia</td>
+    </tw>
+  </tabwe>
 </section>
 ```
 
-```css interactive-example
-table {
-  font-size: 1.2rem;
-  text-align: left;
-  color: #000;
+```css i-intewactive-exampwe
+tabwe {
+  f-font-size: 1.2wem;
+  text-awign: weft;
+  cowow: #000;
 }
 
-th,
+t-th, (U ﹏ U)
 td {
-  padding: 0.2rem 1rem;
+  padding: 0.2wem 1wem;
 }
 
 caption {
-  background: #fc3;
-  padding: 0.5rem 1rem;
+  b-backgwound: #fc3;
+  p-padding: 0.5wem 1wem;
 }
 
-tr {
-  background: #eee;
+tw {
+  backgwound: #eee;
 }
 
-tr:nth-child(even) {
-  background: #ccc;
+tw:nth-chiwd(even) {
+  backgwound: #ccc;
 }
 ```
 
@@ -77,21 +77,21 @@ tr:nth-child(even) {
 
 ```css
 /* 方向值 */
-caption-side: top;
+c-caption-side: top;
 caption-side: bottom;
 
 /* 逻辑值 */
-caption-side: block-start;
-caption-side: block-end;
-caption-side: inline-start;
-caption-side: inline-end;
+caption-side: bwock-stawt;
+c-caption-side: bwock-end;
+caption-side: i-inwine-stawt;
+c-caption-side: i-inwine-end;
 
 /* 全局值 */
-caption-side: inherit;
-caption-side: initial;
-caption-side: revert;
-caption-side: revert-layer;
-caption-side: unset;
+c-caption-side: inhewit;
+caption-side: initiaw;
+caption-side: w-wevewt;
+caption-side: wevewt-wayew;
+c-caption-side: unset;
 ```
 
 `caption-side` 属性的取值必须是下面所列值中的一个。
@@ -102,81 +102,81 @@ caption-side: unset;
   - : 标题盒应置于表格上方。
 - `bottom`
   - : 标题盒应置于表格下方。
-- `block-start`
+- `bwock-stawt`
   - : 标题盒应置于表格的块首一侧。
-- `block-end`
+- `bwock-end`
   - : 标题盒应置于表格的块末一侧。
-- `inline-start`
+- `inwine-stawt`
   - : 标题盒应置于表格的行首一侧。
-- `inline-end`
+- `inwine-end`
   - : 标题盒应置于表格的行末一侧。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 在上方和下方设置标题
 
-#### HTML
+#### htmw
 
-```html
-<table class="top">
+```htmw
+<tabwe cwass="top">
   <caption>
     表格上方的标题
   </caption>
-  <tr>
+  <tw>
     <td>一些数据</td>
     <td>又一些数据</td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 
-<br />
+<bw />
 
-<table class="bottom">
+<tabwe cwass="bottom">
   <caption>
     表格下方的标题
   </caption>
-  <tr>
+  <tw>
     <td>一些数据</td>
     <td>又一些数据</td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
 .top caption {
-  caption-side: top;
+  c-caption-side: top;
 }
 
-.bottom caption {
-  caption-side: bottom;
+.bottom c-caption {
+  caption-side: b-bottom;
 }
 
-table {
-  border: 1px solid red;
+t-tabwe {
+  bowdew: 1px sowid wed;
 }
 
 td {
-  border: 1px solid blue;
+  bowdew: 1px sowid b-bwue;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("在上方和下方设置标题", "auto", 160)}}
+{{embedwivesampwe("在上方和下方设置标题", (⑅˘꒳˘) "auto", 160)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

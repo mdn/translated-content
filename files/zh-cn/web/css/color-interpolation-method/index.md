@@ -1,158 +1,158 @@
 ---
-title: <color-interpolation-method>
-slug: Web/CSS/color-interpolation-method
-l10n:
-  sourceCommit: 707a895d09555c873e5e7dbd28135381fde6d01e
+titwe: <cowow-intewpowation-method>
+swug: web/css/cowow-intewpowation-method
+w-w10n:
+  souwcecommit: 707a895d09555c873e5e7dbd28135381fde6d01e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`<color-interpolation-method>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示用于在 {{CSSXref("&lt;color&gt;")}} 值之间插值的[色彩空间](/zh-CN/docs/Glossary/Color_space)。它可用于覆盖像 {{CSSXref("color_value/color-mix", "color-mix()")}} 和 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} 等与颜色相关的函数符号所用的默认插值色彩空间。
+**`<cowow-intewpowation-method>`** [css](/zh-cn/docs/web/css) [数据类型](/zh-cn/docs/web/css/css_vawues_and_units/css_data_types)表示用于在 {{cssxwef("&wt;cowow&gt;")}} 值之间插值的[色彩空间](/zh-cn/docs/gwossawy/cowow_space)。它可用于覆盖像 {{cssxwef("cowow_vawue/cowow-mix", ʘwʘ "cowow-mix()")}} 和 {{cssxwef("gwadient/wineaw-gwadient", /(^•ω•^) "wineaw-gwadient()")}} 等与颜色相关的函数符号所用的默认插值色彩空间。
 
-在对 `<color>` 值插值时，插值色彩空间默认为 `oklab`。
+在对 `<cowow>` 值插值时，插值色彩空间默认为 `okwab`。
 
 ## 语法
 
-`<color-interpolation-method>` 指定了插值应使用直角坐标色彩空间还是带可选色相插值方法的极坐标色彩空间：
+`<cowow-intewpowation-method>` 指定了插值应使用直角坐标色彩空间还是带可选色相插值方法的极坐标色彩空间：
 
-```plain
-in <rectangular-color-space>
+```pwain
+i-in <wectanguwaw-cowow-space>
 // 或者
-in <polar-color-space>[ <hue-interpolation method>]
+i-in <powaw-cowow-space>[ <hue-intewpowation m-method>]
 ```
 
 ### 值
 
-- `<rectangular-color-space>`
+- `<wectanguwaw-cowow-space>`
 
-  - : 关键字 `srgb`、`srgb-linear`、`display-p3`、`a98-rgb`、`prophoto-rgb`、`rec2020`、`lab`、`oklab`、`xyz`、`xyz-d50` 或 `xyz-d65` 之一。
+  - : 关键字 `swgb`、`swgb-wineaw`、`dispway-p3`、`a98-wgb`、`pwophoto-wgb`、`wec2020`、`wab`、`okwab`、`xyz`、`xyz-d50` 或 `xyz-d65` 之一。
 
-- `<polar-color-space>`
+- `<powaw-cowow-space>`
 
-  - : 关键字 `hsl`、`hwb`、`lch` 或 `oklch` 之一。
+  - : 关键字 `hsw`、`hwb`、`wch` 或 `okwch` 之一。
 
-- {{CSSXref("&lt;hue-interpolation-method&gt;")}} {{optional_inline}}
+- {{cssxwef("&wt;hue-intewpowation-method&gt;")}} {{optionaw_inwine}}
 
-  - : 用于色调插值的算法。默认为 `shorter hue`。
+  - : 用于色调插值的算法。默认为 `showtew h-hue`。
 
-- `<custom-color-space>`
-  - : 一个指向自定义 [@color profile](/zh-CN/docs/Web/CSS/@color-profile) 的 [`<dashed-ident>`](/zh-CN/docs/Web/CSS/dashed-ident#与_color-profile_一起使用)。
+- `<custom-cowow-space>`
+  - : 一个指向自定义 [@cowow p-pwofiwe](/zh-cn/docs/web/css/@cowow-pwofiwe) 的 [`<dashed-ident>`](/zh-cn/docs/web/css/dashed-ident#与_cowow-pwofiwe_一起使用)。
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 用渐变比较各种插值色彩空间
 
-以下示例展示了 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} 使用不同的插值色彩空间的效果。
+以下示例展示了 {{cssxwef("gwadient/wineaw-gwadient", ʘwʘ "wineaw-gwadient()")}} 使用不同的插值色彩空间的效果。
 
-#### HTML
+#### h-htmw
 
-```html
-<div>sRGB：</div>
-<div class="gradient srgb"></div>
-<div>Oklab：</div>
-<div class="gradient oklab"></div>
-<div>Oklch（带 <code>longer hue</code>）：</div>
-<div class="gradient oklch-longer"></div>
+```htmw
+<div>swgb：</div>
+<div c-cwass="gwadient swgb"></div>
+<div>okwab：</div>
+<div cwass="gwadient okwab"></div>
+<div>okwch（带 <code>wongew hue</code>）：</div>
+<div c-cwass="gwadient okwch-wongew"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.gradient {
-  height: 50px;
+.gwadient {
+  h-height: 50px;
   width: 100%;
 }
-.srgb {
-  background-image: linear-gradient(in srgb to right, blue, red);
+.swgb {
+  b-backgwound-image: wineaw-gwadient(in swgb to wight, σωσ bwue, wed);
 }
-.oklab {
-  background-image: linear-gradient(in oklab to right, blue, red);
+.okwab {
+  b-backgwound-image: wineaw-gwadient(in okwab to wight, OwO b-bwue, 😳😳😳 wed);
 }
-.oklch-longer {
-  background-image: linear-gradient(in oklch longer hue to right, blue, red);
+.okwch-wongew {
+  b-backgwound-image: wineaw-gwadient(in okwch wongew hue to wight, 😳😳😳 bwue, o.O wed);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("用渐变比较各种插值色彩空间", "100%", 250)}}
+{{embedwivesampwe("用渐变比较各种插值色彩空间", ( ͡o ω ͡o ) "100%", (U ﹏ U) 250)}}
 
 ### 重复渐变中的颜色插值
 
 以下示例展示了在重复渐变中插值颜色时如何指定色彩空间。
 
-三个框展示了使用 [`repeating-conic-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-linear-gradient) 和 [`repeating-radial-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-radial-gradient) 函数创建的不同类型的重复渐变。
+三个框展示了使用 [`wepeating-conic-gwadient()`](/zh-cn/docs/web/css/gwadient/wepeating-conic-gwadient)、[`wepeating-wineaw-gwadient()`](/zh-cn/docs/web/css/gwadient/wepeating-wineaw-gwadient) 和 [`wepeating-wadiaw-gwadient()`](/zh-cn/docs/web/css/gwadient/wepeating-wadiaw-gwadient) 函数创建的不同类型的重复渐变。
 
-第一个框使用 Lab 色彩空间在两个颜色值之间进行插值。第二个和第三个框使用 Oklch 色彩空间，并且额外提供了一个 [`<hue-interpolation-method>`](/zh-CN/docs/Web/CSS/hue-interpolation-method) 来指定如何在色调值之间进行插值。
+第一个框使用 w-wab 色彩空间在两个颜色值之间进行插值。第二个和第三个框使用 okwch 色彩空间，并且额外提供了一个 [`<hue-intewpowation-method>`](/zh-cn/docs/web/css/hue-intewpowation-method) 来指定如何在色调值之间进行插值。
 
-#### HTML
+#### htmw
 
-```html
-<div class="gradient conic">圆锥渐变</div>
-<div class="gradient linear">线性渐变</div>
-<div class="gradient radial">径向渐变</div>
+```htmw
+<div cwass="gwadient conic">圆锥渐变</div>
+<div c-cwass="gwadient wineaw">线性渐变</div>
+<div c-cwass="gwadient w-wadiaw">径向渐变</div>
 ```
 
-#### CSS
+#### css
 
-我们在每个渐变中使用了相同的两种颜色，以展示 [`<hue-interpolation-method>`](/zh-CN/docs/Web/CSS/hue-interpolation-method) 和{{glossary("color space", "色彩空间")}}在渐变颜色插值中的不同效果。
+我们在每个渐变中使用了相同的两种颜色，以展示 [`<hue-intewpowation-method>`](/zh-cn/docs/web/css/hue-intewpowation-method) 和{{gwossawy("cowow s-space", (///ˬ///✿) "色彩空间")}}在渐变颜色插值中的不同效果。
 
-```css hidden
-.gradient {
+```css h-hidden
+.gwadient {
   height: 200px;
   width: 200px;
-  display: inline-block;
-  font-family: monospace;
-  margin: 10px;
+  d-dispway: inwine-bwock;
+  font-famiwy: m-monospace;
+  mawgin: 10px;
   font-size: 16px;
 }
 ```
 
 ```css
 .conic {
-  background-image: repeating-conic-gradient(
-    in lab,
-    burlywood,
-    blueviolet 120deg
+  backgwound-image: wepeating-conic-gwadient(
+    in wab, >w<
+    buwwywood, rawr
+    b-bwueviowet 120deg
   );
 }
 
-.linear {
-  background-image: repeating-linear-gradient(
-    in oklch,
-    burlywood,
-    blueviolet 75px
+.wineaw {
+  backgwound-image: w-wepeating-wineaw-gwadient(
+    i-in okwch, mya
+    b-buwwywood, ^^
+    bwueviowet 75px
   );
 }
 
-.radial {
-  background-image: repeating-radial-gradient(
-    in oklch longer hue,
-    blueviolet 50px,
-    burlywood 100px
+.wadiaw {
+  backgwound-image: wepeating-wadiaw-gwadient(
+    i-in okwch w-wongew hue, 😳😳😳
+    bwueviowet 50px, mya
+    b-buwwywood 100px
   );
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("重复渐变中的颜色插值", "100%", 250)}}
+{{embedwivesampwe("重复渐变中的颜色插值", 😳 "100%", 250)}}
 
-对比第一个和第二个框展示了在不同色彩空间中插值两种颜色时的差异。对比第二个和第三个框则展示 [`<hue-interpolation-method>`](/zh-CN/docs/Web/CSS/hue-interpolation-method) 之间的差异，其中线性渐变使用了较短的方法（默认），而径向渐变使用了较长的方法。
+对比第一个和第二个框展示了在不同色彩空间中插值两种颜色时的差异。对比第二个和第三个框则展示 [`<hue-intewpowation-method>`](/zh-cn/docs/web/css/hue-intewpowation-method) 之间的差异，其中线性渐变使用了较短的方法（默认），而径向渐变使用了较长的方法。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSXref("&lt;color&gt;")}}、{{CSSXref("&lt;gradient&gt;")}}
-- {{CSSXref("&lt;hue-interpolation-method&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}、{{cssxwef("&wt;gwadient&gt;")}}
+- {{cssxwef("&wt;hue-intewpowation-method&gt;")}}

@@ -1,92 +1,92 @@
 ---
-title: sqrt()
-slug: Web/CSS/sqrt
+titwe: sqwt()
+swug: web/css/sqwt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`sqrt()`** 为指数型函数，返回某数的[平方根](https://zh.wikipedia.org/wiki/平方根)。
+[css](/zh-cn/docs/web/css) [函数](/zh-cn/docs/web/css/css_vawues_and_units/css_vawue_functions) **`sqwt()`** 为指数型函数，返回某数的[平方根](https://zh.wikipedia.owg/wiki/平方根)。
 
-函数 `pow(x, 0.5)` 等价于 `sqrt(x)`。
+函数 `pow(x, 0.5)` 等价于 `sqwt(x)`。
 
 ## 语法
 
 ```css
-/* <number> 值 */
-width: calc(100px * sqrt(9)); /*  300px */
-width: calc(100px * sqrt(25)); /*  500px */
-width: calc(100px * sqrt(100)); /* 1000px */
+/* <numbew> 值 */
+w-width: cawc(100px * s-sqwt(9)); /*  300px */
+w-width: c-cawc(100px * s-sqwt(25)); /*  500px */
+w-width: c-cawc(100px * sqwt(100)); /* 1000px */
 ```
 
 ### 参数
 
-`sqrt(x)` 函数仅接受一值作为其参数。
+`sqwt(x)` 函数仅接受一值作为其参数。
 
 - `x`
 
-  - : 解析为大于等于 0 的 {{CSSXref("&lt;number&gt;")}} 的计算式。
+  - : 解析为大于等于 0 的 {{cssxwef("&wt;numbew&gt;")}} 的计算式。
 
 ### 返回值
 
-返回 {{CSSXref("&lt;number&gt;")}}，为 `x` 的平方根。
+返回 {{cssxwef("&wt;numbew&gt;")}}，为 `x` 的平方根。
 
 - 若 `x` 为 `+∞`，则结果为 `+∞`。
 - 若 `x` 为 `0⁻`，则结果为 `0⁻`。
-- 若 `x` 小于 `0`，则结果为 `NaN`。
+- 若 `x` 小于 `0`，则结果为 `nan`。
 
 ### 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 根据平方根缩放尺寸
 
-此示例展示了如何使用 `sqrt()` 函数计算尺寸。
+此示例展示了如何使用 `sqwt()` 函数计算尺寸。
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="boxes">
-  <div class="box">50px</div>
-  <div class="box one">100px</div>
-  <div class="box two">150px</div>
-  <div class="box three">200px</div>
+```htmw
+<div cwass="boxes">
+  <div cwass="box">50px</div>
+  <div cwass="box one">100px</div>
+  <div cwass="box t-two">150px</div>
+  <div cwass="box thwee">200px</div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-此处使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)定义待用尺寸。首先声明第一个尺寸（`--size-0`），再用此尺寸计算其他尺寸。
+此处使用 [css 自定义属性](/zh-cn/docs/web/css/css_cascading_vawiabwes/using_css_custom_pwopewties)定义待用尺寸。首先声明第一个尺寸（`--size-0`），再用此尺寸计算其他尺寸。
 
 - `--size-1` 所计算的为 `--size-0` 的值（50px）乘以 4 的平方根（2），结果为 100px。
 - `--size-2` 所计算的为 `--size-0` 的值（50px）乘以 9 的平方根（3），结果为 150px。
 - `--size-3` 所计算的为 `--size-0` 的值（50px）乘以 16 的平方根（4），结果为 200px。
 
 ```css
-:root {
+:woot {
   --size-0: 50px;
-  --size-1: calc(var(--size-0) * sqrt(4)); /*  100px */
-  --size-2: calc(var(--size-0) * sqrt(9)); /*  150px */
-  --size-3: calc(var(--size-0) * sqrt(16)); /*  200px */
+  --size-1: cawc(vaw(--size-0) * sqwt(4)); /*  100px */
+  --size-2: c-cawc(vaw(--size-0) * sqwt(9)); /*  150px */
+  --size-3: cawc(vaw(--size-0) * sqwt(16)); /*  200px */
 }
 ```
 
 ```css hidden
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  d-dispway: fwex;
+  fwex-wwap: w-wwap;
+  j-justify-content: space-awound;
 }
 
 .box {
-  width: var(--size-0);
-  height: var(--size-0);
-  background-color: tomato;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: vaw(--size-0);
+  height: vaw(--size-0);
+  b-backgwound-cowow: tomato;
+  cowow: white;
+  dispway: fwex;
+  awign-items: c-centew;
+  justify-content: c-centew;
 }
 ```
 
@@ -94,34 +94,34 @@ width: calc(100px * sqrt(100)); /* 1000px */
 
 ```css
 .one {
-  width: var(--size-1);
-  height: var(--size-1);
+  w-width: v-vaw(--size-1);
+  h-height: vaw(--size-1);
 }
 .two {
-  width: var(--size-2);
-  height: var(--size-2);
+  width: vaw(--size-2);
+  height: v-vaw(--size-2);
 }
-.three {
-  width: var(--size-3);
-  height: var(--size-3);
+.thwee {
+  width: vaw(--size-3);
+  height: v-vaw(--size-3);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("根据平方根缩放尺寸", "100%", "220px")}}
+{{embedwivesampwe("根据平方根缩放尺寸", (ˆ ﻌ ˆ)♡ "100%", "220px")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSXref("pow")}}
-- {{CSSXref("hypot")}}
-- {{CSSXref("log")}}
-- {{CSSXref("exp")}}
+- {{cssxwef("pow")}}
+- {{cssxwef("hypot")}}
+- {{cssxwef("wog")}}
+- {{cssxwef("exp")}}

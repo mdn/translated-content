@@ -1,100 +1,100 @@
 ---
-title: backface-visibility
-slug: Web/CSS/backface-visibility
+titwe: backface-visibiwity
+swug: w-web/css/backface-visibiwity
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`backface-visibility`** 指定当元素背面朝向观察者时是否可见。
+[css](/zh-cn/docs/web/css) 属性 **`backface-visibiwity`** 指定当元素背面朝向观察者时是否可见。
 
-{{InteractiveExample("CSS Demo: backface-visibility")}}
+{{intewactiveexampwe("css demo: b-backface-visibiwity")}}
 
-```css interactive-example-choice
-backface-visibility: visible;
+```css i-intewactive-exampwe-choice
+b-backface-visibiwity: v-visibwe;
 ```
 
-```css interactive-example-choice
-backface-visibility: hidden;
+```css i-intewactive-exampwe-choice
+b-backface-visibiwity: h-hidden;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face bottom">6</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    <div cwass="face fwont">1</div>
+    <div c-cwass="face back">2</div>
+    <div cwass="face w-wight">3</div>
+    <div cwass="face b-bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
+```css intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: wineaw-gwadient(skybwue, >_< khaki);
 }
 
-#example-element {
-  width: 100px;
+#exampwe-ewement {
+  w-width: 100px;
   height: 100px;
-  perspective: 550px;
-  perspective-origin: 220% 220%;
-  transform-style: preserve-3d;
+  p-pewspective: 550px;
+  p-pewspective-owigin: 220% 220%;
+  twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  dispway: fwex;
+  awign-items: c-centew;
+  justify-content: centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
-  background: rgba(0, 0, 0, 0.4);
-  font-size: 60px;
-  color: white;
+  position: a-absowute;
+  backface-visibiwity: i-inhewit;
+  b-backgwound: wgba(0, rawr x3 0, 0, 0.4);
+  f-font-size: 60px;
+  c-cowow: white;
 }
 
-.front {
-  transform: translateZ(50px);
+.fwont {
+  twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgb(230, 0, 0);
-  color: white;
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: w-wgb(230, /(^•ω•^) 0, 0);
+  cowow: white;
+  twansfowm: w-wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(0, 0, 0, 0.6);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: wgba(0, :3 0, 0, 0.6);
+  twansfowm: wotatey(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(0, 0, 0, 0.6);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: wgba(0, (ꈍᴗꈍ) 0, 0, 0.6);
+  t-twansfowm: wotatex(-90deg) t-twanswatez(50px);
 }
 ```
 
-元素的背面是其正面的镜像。虽然在 2D 中不可见，但是当变换导致元素在 3D 空间中旋转时，背面可以变得可见。 （此属性对 2D 变换没有影响，它没有透视。）
+元素的背面是其正面的镜像。虽然在 2d 中不可见，但是当变换导致元素在 3d 空间中旋转时，背面可以变得可见。 （此属性对 2d 变换没有影响，它没有透视。）
 
 ## 语法
 
 ```css
 /* 关键字值 */
-backface-visibility: visible;
-backface-visibility: hidden;
+b-backface-visibiwity: visibwe;
+backface-visibiwity: hidden;
 
 /* 全局值 */
-backface-visibility: inherit;
-backface-visibility: initial;
-backface-visibility: unset;
+backface-visibiwity: i-inhewit;
+backface-visibiwity: i-initiaw;
+backface-visibiwity: unset;
 ```
 
-`backface-visibility` 属性可以指定为下面列出的值
+`backface-visibiwity` 属性可以指定为下面列出的值
 
 ### 值
 
-- `visible`
+- `visibwe`
   - : 背面朝向用户时可见。
 - `hidden`
   - : 背面朝向用户时不可见。
@@ -113,24 +113,24 @@ backface-visibility: unset;
 
 这个例子展示了一个透明面的立方体和一个不透明面的立方体。
 
-#### HTML
+#### h-htmw
 
-```html
-<table>
-  <tr>
-    <th><code>backface-visibility: visible;</code></th>
-    <th><code>backface-visibility: hidden;</code></th>
-  </tr>
-  <tr>
+```htmw
+<tabwe>
+  <tw>
+    <th><code>backface-visibiwity: v-visibwe;</code></th>
+    <th><code>backface-visibiwity: hidden;</code></th>
+  </tw>
+  <tw>
     <td>
-      <div class="container">
-        <div class="cube showbf">
-          <div class="face front">1</div>
-          <div class="face back">2</div>
-          <div class="face right">3</div>
-          <div class="face left">4</div>
-          <div class="face top">5</div>
-          <div class="face bottom">6</div>
+      <div c-cwass="containew">
+        <div cwass="cube s-showbf">
+          <div cwass="face fwont">1</div>
+          <div c-cwass="face back">2</div>
+          <div c-cwass="face wight">3</div>
+          <div cwass="face w-weft">4</div>
+          <div c-cwass="face top">5</div>
+          <div cwass="face bottom">6</div>
         </div>
       </div>
       <p>
@@ -138,120 +138,120 @@ backface-visibility: unset;
       </p>
     </td>
     <td>
-      <div class="container">
-        <div class="cube hidebf">
-          <div class="face front">1</div>
-          <div class="face back">2</div>
-          <div class="face right">3</div>
-          <div class="face left">4</div>
-          <div class="face top">5</div>
-          <div class="face bottom">6</div>
+      <div cwass="containew">
+        <div cwass="cube hidebf">
+          <div cwass="face fwont">1</div>
+          <div c-cwass="face b-back">2</div>
+          <div cwass="face w-wight">3</div>
+          <div cwass="face w-weft">4</div>
+          <div c-cwass="face top">5</div>
+          <div cwass="face bottom">6</div>
         </div>
       </div>
       <p>后面的三个面（2、4、5）被隐藏了。</p>
     </td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-/* Classes that will show or hide the
-   three back faces of the "cube" */
-.showbf div {
-  backface-visibility: visible;
+/* c-cwasses that wiww show ow hide the
+   thwee back faces of the "cube" */
+.showbf d-div {
+  backface-visibiwity: v-visibwe;
 }
 
-.hidebf div {
-  backface-visibility: hidden;
+.hidebf d-div {
+  b-backface-visibiwity: hidden;
 }
 
-/* Define the container div, the cube div, and a generic face */
-.container {
+/* d-define the c-containew div, t-the cube div, and a-a genewic face */
+.containew {
   width: 150px;
   height: 150px;
-  margin: 75px 0 0 75px;
-  border: none;
+  m-mawgin: 75px 0 0 75px;
+  b-bowdew: n-nyone;
 }
 
 .cube {
-  width: 100%;
-  height: 100%;
-  perspective: 550px;
-  perspective-origin: 150% 150%;
-  transform-style: preserve-3d;
+  w-width: 100%;
+  h-height: 100%;
+  pewspective: 550px;
+  pewspective-owigin: 150% 150%;
+  twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: block;
-  position: absolute;
+  d-dispway: bwock;
+  position: absowute;
   width: 100px;
   height: 100px;
-  border: none;
-  line-height: 100px;
-  font-family: sans-serif;
+  bowdew: nyone;
+  w-wine-height: 100px;
+  font-famiwy: sans-sewif;
   font-size: 60px;
-  color: white;
-  text-align: center;
+  c-cowow: white;
+  t-text-awign: c-centew;
 }
 
-/* Define each face based on direction */
-.front {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateZ(50px);
+/* define each face b-based on diwection */
+.fwont {
+  backgwound: w-wgba(0, /(^•ω•^) 0, 0, 0.3);
+  t-twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 255, 0, 1);
-  color: black;
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: wgba(0, (⑅˘꒳˘) 255, 0, 1);
+  cowow: bwack;
+  twansfowm: wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(196, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: wgba(196, ( ͡o ω ͡o ) 0, 0, 0.7);
+  t-twansfowm: wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 196, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: w-wgba(0, òωó 0, 196, 0.7);
+  twansfowm: wotatey(-90deg) t-twanswatez(50px);
 }
 
 .top {
-  background: rgba(196, 196, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  b-backgwound: wgba(196, (⑅˘꒳˘) 196, 0, 0.7);
+  t-twansfowm: w-wotatex(90deg) twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: wgba(196, XD 0, 196, -.- 0.7);
+  twansfowm: w-wotatex(-90deg) t-twanswatez(50px);
 }
 
-/* Make the table a little nicer */
-th,
+/* m-make the tabwe a wittwe nyicew */
+t-th, :3
 p,
 td {
-  background-color: #eeeeee;
-  margin: 0px;
-  padding: 6px;
-  font-family: sans-serif;
-  text-align: left;
+  b-backgwound-cowow: #eeeeee;
+  mawgin: 0px;
+  p-padding: 6px;
+  font-famiwy: sans-sewif;
+  text-awign: weft;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('具有透明和不透明面的立方体', '100%', 360)}}
+{{embedwivesampwe('具有透明和不透明面的立方体', nyaa~~ '100%', 360)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [使用 c-css 变换](/zh-cn/docs/web/css/css_twansfowms/using_css_twansfowms)

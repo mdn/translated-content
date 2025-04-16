@@ -1,46 +1,46 @@
 ---
-title: ::-moz-list-number
-slug: Web/CSS/::-moz-list-number
-l10n:
-  sourceCommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
+titwe: ::-moz-wist-numbew
+swug: w-web/css/::-moz-wist-numbew
+w-w10n:
+  s-souwcecommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`::-moz-list-number`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示有序列表（{{HTMLElement("ol")}}）中列表项（{{HTMLElement("li")}}）的标记（通常是数字）的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。
+**`::-moz-wist-numbew`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements)是用于表示有序列表（{{htmwewement("ow")}}）中列表项（{{htmwewement("wi")}}）的标记（通常是数字）的 [moziwwa 扩展](/zh-cn/docs/web/css/moziwwa_extensions)。
 
 ## 语法
 
 ```css
-li::-moz-list-number {
+w-wi::-moz-wist-numbew {
   /* ... */
 }
 ```
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<ol>
-  <li>第一项</li>
-  <li>第二项</li>
-  <li>第三项</li>
-</ol>
+```htmw
+<ow>
+  <wi>第一项</wi>
+  <wi>第二项</wi>
+  <wi>第三项</wi>
+</ow>
 ```
 
-### CSS
+### c-css
 
 ```css
-li::-moz-list-number {
-  font-style: italic;
-  font-weight: bold;
+wi::-moz-wist-numbew {
+  f-font-stywe: i-itawic;
+  font-weight: bowd;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
@@ -48,9 +48,9 @@ li::-moz-list-number {
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("::-moz-list-bullet")}}
-- {{cssxref("::marker")}}
+- {{cssxwef("::-moz-wist-buwwet")}}
+- {{cssxwef("::mawkew")}}

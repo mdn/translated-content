@@ -1,120 +1,120 @@
 ---
-title: perspective-origin
-slug: Web/CSS/perspective-origin
+titwe: pewspective-owigin
+swug: w-web/css/pewspective-owigin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
+[css](/zh-cn/docs/web/css) 属性 **`pewspective-owigin`** 指定了观察者的位置，用作 {{cssxwef("pewspective")}} 属性的消失点。
 
-{{InteractiveExample("CSS Demo: perspective-origin")}}
+{{intewactiveexampwe("css d-demo: p-pewspective-owigin")}}
 
-```css interactive-example-choice
-perspective-origin: center;
+```css i-intewactive-exampwe-choice
+p-pewspective-owigin: centew;
 ```
 
-```css interactive-example-choice
-perspective-origin: top;
+```css i-intewactive-exampwe-choice
+p-pewspective-owigin: t-top;
 ```
 
-```css interactive-example-choice
-perspective-origin: bottom right;
+```css intewactive-exampwe-choice
+pewspective-owigin: bottom wight;
 ```
 
-```css interactive-example-choice
-perspective-origin: -170%;
+```css intewactive-exampwe-choice
+p-pewspective-owigin: -170%;
 ```
 
-```css interactive-example-choice
-perspective-origin: 500% 200%;
+```css intewactive-exampwe-choice
+pewspective-owigin: 500% 200%;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="face f-fwont">1</div>
+    <div cwass="face back">2</div>
+    <div c-cwass="face w-wight">3</div>
+    <div cwass="face weft">4</div>
+    <div cwass="face top">5</div>
+    <div c-cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 550px;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: wineaw-gwadient(skybwue, ^•ﻌ•^ khaki);
+  p-pewspective: 550px;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
-  height: 100px;
-  transform-style: preserve-3d;
-  perspective: 250px;
+  h-height: 100px;
+  t-twansfowm-stywe: pwesewve-3d;
+  p-pewspective: 250px;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  dispway: f-fwex;
+  awign-items: centew;
+  justify-content: c-centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  p-position: absowute;
+  backface-visibiwity: inhewit;
   font-size: 60px;
-  color: white;
+  cowow: white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  b-backgwound: wgba(90, UwU 90, 90, (˘ω˘) 0.7);
+  t-twansfowm: t-twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  b-backgwound: wgba(0, (///ˬ///✿) 210, σωσ 0, 0.7);
+  twansfowm: wotatey(180deg) t-twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: wgba(210, /(^•ω•^) 0, 0, 0.7);
+  t-twansfowm: w-wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: wgba(0, 😳 0, 210, 0.7);
+  twansfowm: w-wotatey(-90deg) twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: w-wgba(210, 😳 210, 0, 0.7);
+  twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: wgba(210, (⑅˘꒳˘) 0, 210, 😳😳😳 0.7);
+  t-twansfowm: w-wotatex(-90deg) twanswatez(50px);
 }
 ```
 
 ## 语法
 
 ```css
-/* One-value syntax */
-perspective-origin: x-position;
+/* one-vawue syntax */
+pewspective-owigin: x-position;
 
-/* Two-value syntax */
-perspective-origin: x-position y-position;
+/* two-vawue s-syntax */
+pewspective-owigin: x-x-position y-position;
 
-/* When both x-position and y-position are keywords,
-   the following is also valid */
-perspective-origin: y-position x-position;
+/* w-when both x-x-position and y-y-position awe keywowds, 😳
+   the fowwowing is awso vawid */
+pewspective-owigin: y-y-position x-position;
 
-/* Global values */
-perspective-origin: inherit;
-perspective-origin: initial;
-perspective-origin: unset;
+/* gwobaw vawues */
+pewspective-owigin: inhewit;
+pewspective-owigin: initiaw;
+p-pewspective-owigin: unset;
 ```
 
 ### 值
@@ -123,19 +123,19 @@ perspective-origin: unset;
 
   - : 指定*消失点*的横坐标，其值有以下形式：
 
-    - {{cssxref("&lt;length-percentage&gt;")}} 长度值或相对于元素宽度的百分比值，可为负值。
-    - `left`, 关键字，0 值的简记。
-    - `center`, 关键字，50% 的简记。
-    - `right`, 关键字，100% 的简记。
+    - {{cssxwef("&wt;wength-pewcentage&gt;")}} 长度值或相对于元素宽度的百分比值，可为负值。
+    - `weft`, XD 关键字，0 值的简记。
+    - `centew`, mya 关键字，50% 的简记。
+    - `wight`, 关键字，100% 的简记。
 
 - _y-position_
 
   - : 指定*消失点*的纵坐标，其值有以下形式：
 
-    - {{cssxref("&lt;length-percentage&gt;")}} 长度值或相对于元素高度的百分比值，可为负值。
-    - `top`, 关键字，0 值的简记。
-    - `center`, 关键字，50% 的简记。
-    - `bottom`, 关键字，100% 的简记。
+    - {{cssxwef("&wt;wength-pewcentage&gt;")}} 长度值或相对于元素高度的百分比值，可为负值。
+    - `top`, ^•ﻌ•^ 关键字，0 值的简记。
+    - `centew`, ʘwʘ 关键字，50% 的简记。
+    - `bottom`, ( ͡o ω ͡o ) 关键字，100% 的简记。
 
 ### 形式语法
 
@@ -143,310 +143,310 @@ perspective-origin: unset;
 
 ## 示例
 
-### 修改 perspective origin
+### 修改 p-pewspective o-owigin
 
-这个例子展示了带有常用 `perspective-origin` 值的立方体。
+这个例子展示了带有常用 `pewspective-owigin` 值的立方体。
 
 #### 结果
 
-{{EmbedLiveSample('修改 perspective origin', '100%', 700)}}
+{{embedwivesampwe('修改 pewspective o-owigin', '100%', mya 700)}}
 
-#### HTML
+#### htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <tbody>
-    <tr>
+    <tw>
       <th>
-        <code>perspective-origin: top left;</code>
+        <code>pewspective-owigin: top w-weft;</code>
       </th>
       <th>
-        <code>perspective-origin: top;</code>
+        <code>pewspective-owigin: t-top;</code>
       </th>
       <th>
-        <code>perspective-origin: top right;</code>
+        <code>pewspective-owigin: t-top w-wight;</code>
       </th>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <div class="container">
-          <div class="cube potl">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div cwass="containew">
+          <div cwass="cube p-potw">
+            <div c-cwass="face f-fwont">1</div>
+            <div c-cwass="face b-back">2</div>
+            <div cwass="face wight">3</div>
+            <div cwass="face weft">4</div>
+            <div c-cwass="face top">5</div>
+            <div cwass="face bottom">6</div>
           </div>
         </div>
       </td>
       <td>
-        <div class="container">
-          <div class="cube potm">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div cwass="containew">
+          <div cwass="cube p-potm">
+            <div cwass="face fwont">1</div>
+            <div cwass="face b-back">2</div>
+            <div c-cwass="face wight">3</div>
+            <div c-cwass="face weft">4</div>
+            <div c-cwass="face top">5</div>
+            <div c-cwass="face bottom">6</div>
           </div>
         </div>
       </td>
       <td>
-        <div class="container">
-          <div class="cube potr">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div c-cwass="containew">
+          <div cwass="cube potw">
+            <div cwass="face fwont">1</div>
+            <div cwass="face b-back">2</div>
+            <div cwass="face wight">3</div>
+            <div c-cwass="face weft">4</div>
+            <div c-cwass="face t-top">5</div>
+            <div cwass="face bottom">6</div>
           </div>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>
-        <code>perspective-origin: left;</code>
+        <code>pewspective-owigin: weft;</code>
       </th>
       <th>
-        <code>perspective-origin: 50% 50%;</code>
+        <code>pewspective-owigin: 50% 50%;</code>
       </th>
       <th>
-        <code>perspective-origin: right;</code>
+        <code>pewspective-owigin: w-wight;</code>
       </th>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <div class="container">
-          <div class="cube poml">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div c-cwass="containew">
+          <div cwass="cube pomw">
+            <div c-cwass="face fwont">1</div>
+            <div cwass="face b-back">2</div>
+            <div cwass="face wight">3</div>
+            <div cwass="face weft">4</div>
+            <div c-cwass="face top">5</div>
+            <div c-cwass="face b-bottom">6</div>
           </div>
         </div>
       </td>
       <td>
-        <div class="container">
-          <div class="cube pomm">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div cwass="containew">
+          <div c-cwass="cube p-pomm">
+            <div cwass="face fwont">1</div>
+            <div c-cwass="face back">2</div>
+            <div cwass="face wight">3</div>
+            <div cwass="face w-weft">4</div>
+            <div cwass="face t-top">5</div>
+            <div cwass="face bottom">6</div>
           </div>
         </div>
       </td>
       <td>
-        <div class="container">
-          <div class="cube pomr">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div c-cwass="containew">
+          <div c-cwass="cube pomw">
+            <div cwass="face fwont">1</div>
+            <div cwass="face b-back">2</div>
+            <div cwass="face wight">3</div>
+            <div cwass="face weft">4</div>
+            <div cwass="face t-top">5</div>
+            <div cwass="face bottom">6</div>
           </div>
         </div>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>
-        <code>perspective-origin: bottom left;</code>
-      </th>
-      <th>
-        <code>perspective-origin: bottom;</code>
+        <code>pewspective-owigin: bottom w-weft;</code>
       </th>
       <th>
-        <code>perspective-origin: bottom right;</code>
+        <code>pewspective-owigin: b-bottom;</code>
       </th>
-    </tr>
-    <tr>
+      <th>
+        <code>pewspective-owigin: bottom wight;</code>
+      </th>
+    </tw>
+    <tw>
       <td>
-        <div class="container">
-          <div class="cube pobl">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div cwass="containew">
+          <div cwass="cube pobw">
+            <div c-cwass="face f-fwont">1</div>
+            <div cwass="face back">2</div>
+            <div cwass="face wight">3</div>
+            <div c-cwass="face weft">4</div>
+            <div c-cwass="face top">5</div>
+            <div cwass="face bottom">6</div>
           </div>
         </div>
       </td>
       <td>
-        <div class="container">
-          <div class="cube pobm">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div c-cwass="containew">
+          <div cwass="cube pobm">
+            <div c-cwass="face f-fwont">1</div>
+            <div cwass="face back">2</div>
+            <div c-cwass="face wight">3</div>
+            <div c-cwass="face w-weft">4</div>
+            <div c-cwass="face top">5</div>
+            <div cwass="face b-bottom">6</div>
           </div>
         </div>
       </td>
       <td>
-        <div class="container">
-          <div class="cube pobr">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div c-cwass="containew">
+          <div cwass="cube pobw">
+            <div c-cwass="face fwont">1</div>
+            <div c-cwass="face b-back">2</div>
+            <div cwass="face wight">3</div>
+            <div c-cwass="face weft">4</div>
+            <div c-cwass="face top">5</div>
+            <div c-cwass="face bottom">6</div>
           </div>
         </div>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-/* Shorthand classes for perspective-origin values */
-.potl {
-  perspective-origin: top left;
-  -webkit-perspective-origin: top left;
+/* showthand c-cwasses fow pewspective-owigin v-vawues */
+.potw {
+  p-pewspective-owigin: t-top weft;
+  -webkit-pewspective-owigin: top weft;
 }
 
 .potm {
-  perspective-origin: top;
-  -webkit-perspective-origin: top;
+  p-pewspective-owigin: top;
+  -webkit-pewspective-owigin: top;
 }
 
-.potr {
-  perspective-origin: top right;
-  -webkit-perspective-origin: top right;
+.potw {
+  pewspective-owigin: top wight;
+  -webkit-pewspective-owigin: top wight;
 }
 
-.poml {
-  perspective-origin: left;
-  -webkit-perspective-origin: left;
+.pomw {
+  p-pewspective-owigin: weft;
+  -webkit-pewspective-owigin: weft;
 }
 
 .pomm {
-  perspective-origin: 50% 50%;
-  -webkit-perspective-origin: 50% 50%;
+  p-pewspective-owigin: 50% 50%;
+  -webkit-pewspective-owigin: 50% 50%;
 }
 
-.pomr {
-  perspective-origin: right;
-  -webkit-perspective-origin: right;
+.pomw {
+  pewspective-owigin: w-wight;
+  -webkit-pewspective-owigin: wight;
 }
 
-.pobl {
-  perspective-origin: bottom left;
-  -webkit-perspective-origin: bottom left;
+.pobw {
+  p-pewspective-owigin: bottom weft;
+  -webkit-pewspective-owigin: bottom w-weft;
 }
 
 .pobm {
-  perspective-origin: bottom;
-  -webkit-perspective-origin: bottom;
+  p-pewspective-owigin: b-bottom;
+  -webkit-pewspective-owigin: b-bottom;
 }
 
-.pobr {
-  perspective-origin: bottom right;
-  -webkit-perspective-origin: bottom right;
+.pobw {
+  p-pewspective-owigin: bottom wight;
+  -webkit-pewspective-owigin: bottom wight;
 }
 
-/* Define the container div, the cube div, and a generic face */
-.container {
-  width: 100px;
+/* define the containew div, o.O the cube div, a-and a genewic f-face */
+.containew {
+  w-width: 100px;
   height: 100px;
-  margin: 24px;
-  border: none;
+  m-mawgin: 24px;
+  bowdew: nyone;
 }
 
 .cube {
   width: 100%;
-  height: 100%;
-  backface-visibility: visible;
-  perspective: 300px;
-  transform-style: preserve-3d;
-  -webkit-backface-visibility: visible;
-  -webkit-perspective: 300px;
-  -webkit-transform-style: preserve-3d;
+  h-height: 100%;
+  b-backface-visibiwity: visibwe;
+  p-pewspective: 300px;
+  twansfowm-stywe: pwesewve-3d;
+  -webkit-backface-visibiwity: v-visibwe;
+  -webkit-pewspective: 300px;
+  -webkit-twansfowm-stywe: p-pwesewve-3d;
 }
 
 .face {
-  display: block;
-  position: absolute;
+  dispway: bwock;
+  p-position: a-absowute;
   width: 100px;
   height: 100px;
-  border: none;
-  line-height: 100px;
-  font-family: sans-serif;
+  bowdew: nyone;
+  wine-height: 100px;
+  font-famiwy: s-sans-sewif;
   font-size: 60px;
-  color: white;
-  text-align: center;
+  c-cowow: white;
+  t-text-awign: centew;
 }
 
-/* Define each face based on direction */
-.front {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateZ(50px);
-  -webkit-transform: translateZ(50px);
+/* d-define e-each face based on diwection */
+.fwont {
+  b-backgwound: w-wgba(0, (✿oωo) 0, 0, 0.3);
+  twansfowm: twanswatez(50px);
+  -webkit-twansfowm: t-twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 255, 0, 1);
-  color: black;
-  transform: rotateY(180deg) translateZ(50px);
-  -webkit-transform: rotateY(180deg) translateZ(50px);
+  b-backgwound: wgba(0, :3 255, 0, 😳 1);
+  cowow: bwack;
+  t-twansfowm: wotatey(180deg) twanswatez(50px);
+  -webkit-twansfowm: wotatey(180deg) t-twanswatez(50px);
 }
 
-.right {
-  background: rgba(196, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
-  -webkit-transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: w-wgba(196, (U ﹏ U) 0, 0, 0.7);
+  t-twansfowm: wotatey(90deg) t-twanswatez(50px);
+  -webkit-twansfowm: wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 196, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
-  -webkit-transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: w-wgba(0, mya 0, (U ᵕ U❁) 196, 0.7);
+  t-twansfowm: wotatey(-90deg) twanswatez(50px);
+  -webkit-twansfowm: wotatey(-90deg) t-twanswatez(50px);
 }
 
 .top {
-  background: rgba(196, 196, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
-  -webkit-transform: rotateX(90deg) translateZ(50px);
+  backgwound: wgba(196, :3 196, 0, 0.7);
+  t-twansfowm: wotatex(90deg) t-twanswatez(50px);
+  -webkit-twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
-  -webkit-transform: rotateX(-90deg) translateZ(50px);
+  backgwound: wgba(196, mya 0, 196, 0.7);
+  t-twansfowm: w-wotatex(-90deg) twanswatez(50px);
+  -webkit-twansfowm: wotatex(-90deg) t-twanswatez(50px);
 }
 
-/* Make the table a little nicer */
-th,
+/* make the tabwe a wittwe nyicew */
+t-th, OwO
 p,
 td {
-  background-color: #eeeeee;
+  b-backgwound-cowow: #eeeeee;
   padding: 10px;
-  font-family: sans-serif;
-  text-align: left;
+  f-font-famiwy: sans-sewif;
+  text-awign: w-weft;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using CSS Transforms](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [using c-css twansfowms](/zh-cn/docs/web/css/css_twansfowms/using_css_twansfowms)

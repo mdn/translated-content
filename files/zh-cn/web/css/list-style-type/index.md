@@ -1,300 +1,300 @@
 ---
-title: list-style-type
-slug: Web/CSS/list-style-type
+titwe: wist-stywe-type
+swug: w-web/css/wist-stywe-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 `list-style-type` 可以设置列表元素的 marker（比如圆点、符号、或者自定义计数器样式）。
+[css](/zh-cn/docs/web/css) 属性 `wist-stywe-type` 可以设置列表元素的 m-mawkew（比如圆点、符号、或者自定义计数器样式）。
 
-{{InteractiveExample("CSS Demo: list-style-type")}}
+{{intewactiveexampwe("css d-demo: w-wist-stywe-type")}}
 
-```css interactive-example-choice
-list-style-type: space-counter;
+```css i-intewactive-exampwe-choice
+w-wist-stywe-type: s-space-countew;
 ```
 
-```css interactive-example-choice
-list-style-type: disc;
+```css i-intewactive-exampwe-choice
+wist-stywe-type: disc;
 ```
 
-```css interactive-example-choice
-list-style-type: circle;
+```css intewactive-exampwe-choice
+wist-stywe-type: ciwcwe;
 ```
 
-```css interactive-example-choice
-list-style-type: "\1F44D";
+```css i-intewactive-exampwe-choice
+wist-stywe-type: "\1f44d";
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
   <div>
-    <p>NASA Notable Missions</p>
-    <ul class="transition-all unhighlighted" id="example-element">
-      <li>Apollo</li>
-      <li>Hubble</li>
-      <li>Chandra</li>
-      <li>Cassini-Huygens</li>
-    </ul>
+    <p>nasa n-nyotabwe missions</p>
+    <uw cwass="twansition-aww unhighwighted" id="exampwe-ewement">
+      <wi>apowwo</wi>
+      <wi>hubbwe</wi>
+      <wi>chandwa</wi>
+      <wi>cassini-huygens</wi>
+    </uw>
   </div>
-  <hr />
-  <div class="note">
+  <hw />
+  <div c-cwass="note">
     <p>
-      <code>space-counter</code> is defined with
+      <code>space-countew</code> is defined w-with
       <a
-        href="//developer.mozilla.org/docs/Web/CSS/@counter-style"
-        target="_parent"
-        ><code>@counter-style</code></a
+        h-hwef="//devewopew.moziwwa.owg/docs/web/css/@countew-stywe"
+        tawget="_pawent"
+        ><code>@countew-stywe</code></a
       >
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  font-size: 1.2rem;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  font-size: 1.2wem;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100%;
-  background: #be094b;
-  color: white;
+  backgwound: #be094b;
+  c-cowow: white;
 }
 
 section {
-  text-align: left;
-  flex-direction: column;
+  text-awign: weft;
+  fwex-diwection: cowumn;
 }
 
-hr {
-  width: 50%;
-  color: lightgray;
-  margin: 0.5em;
+hw {
+  w-width: 50%;
+  cowow: wightgway;
+  m-mawgin: 0.5em;
 }
 
 .note {
-  font-size: 0.8rem;
+  f-font-size: 0.8wem;
 }
 
-.note a {
-  color: #009e5f;
+.note a-a {
+  c-cowow: #009e5f;
 }
 
-@counter-style space-counter {
-  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
-  suffix: " ";
+@countew-stywe space-countew {
+  symbows: "\1f680" "\1f6f8" "\1f6f0" "\1f52d";
+  s-suffix: " ";
 }
 ```
 
-The [color](/zh-CN/docs/Web/CSS/color_value) of the marker will be the same as the computed color of the element it applies to.
+the [cowow](/zh-cn/docs/web/css/cowow_vawue) of the mawkew w-wiww be the same as the computed cowow of the ewement it appwies to. 😳😳😳
 
-只有几个元素 ({{HTMLElement("li")}} 和 {{HTMLElement("summary")}}) 的默认值为 `display: list-item`。但是， `list-style-type` 属性可以应用在任何 {{cssxref("display")}} 的值为 `list-item` 的元素上。此外，由于这个属性是可继承的，它可以设置在父元素上 (通常是 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}}) 以便应用于所有子元素 ({{HTMLElement("li")}})。
+只有几个元素 ({{htmwewement("wi")}} 和 {{htmwewement("summawy")}}) 的默认值为 `dispway: wist-item`。但是， `wist-stywe-type` 属性可以应用在任何 {{cssxwef("dispway")}} 的值为 `wist-item` 的元素上。此外，由于这个属性是可继承的，它可以设置在父元素上 (通常是 {{htmwewement("ow")}} 或 {{htmwewement("uw")}}) 以便应用于所有子元素 ({{htmwewement("wi")}})。
 
 ## 语法
 
 ```css
-/* Partial list of types */
-list-style-type: disc;
-list-style-type: circle;
-list-style-type: square;
-list-style-type: decimal;
-list-style-type: georgian;
-list-style-type: trad-chinese-informal;
-list-style-type: kannada;
+/* p-pawtiaw wist of types */
+w-wist-stywe-type: d-disc;
+wist-stywe-type: c-ciwcwe;
+wist-stywe-type: squawe;
+wist-stywe-type: decimaw;
+w-wist-stywe-type: g-geowgian;
+wist-stywe-type: t-twad-chinese-infowmaw;
+w-wist-stywe-type: kannada;
 
-/* <string> value */
-list-style-type: "-";
+/* <stwing> vawue */
+w-wist-stywe-type: "-";
 
-/* Identifier matching an @counter-style rule */
-list-style-type: custom-counter-style;
+/* identifiew matching a-an @countew-stywe wuwe */
+wist-stywe-type: c-custom-countew-stywe;
 
-/* Keyword value */
-list-style-type: none;
+/* keywowd v-vawue */
+wist-stywe-type: nyone;
 
-/* Global values */
-list-style-type: inherit;
-list-style-type: initial;
-list-style-type: unset;
+/* g-gwobaw vawues */
+w-wist-stywe-type: inhewit;
+wist-stywe-type: initiaw;
+wist-stywe-type: unset;
 ```
 
-list-style-type 的属性值可以是以下任意一项：
+wist-stywe-type 的属性值可以是以下任意一项：
 
-- a [`<custom-ident>`](/zh-CN/docs/Web/CSS/list-style-type#%3Ccustom-ident%3E) value
-- a [`symbols()`](</zh-CN/docs/Web/CSS/list-style-type#symbols()>) value
-- a [`<string>`](/zh-CN/docs/Web/CSS/list-style-type#%3Cstring%3E) value
-- the keyword [`none`](#none).
+- a [`<custom-ident>`](/zh-cn/docs/web/css/wist-stywe-type#%3ccustom-ident%3e) v-vawue
+- a [`symbows()`](</zh-cn/docs/web/css/wist-stywe-type#symbows()>) v-vawue
+- a [`<stwing>`](/zh-cn/docs/web/css/wist-stywe-type#%3cstwing%3e) v-vawue
+- the k-keywowd [`none`](#none). >w<
 
 ### 取值
 
-- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
-  - : A identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:
-- {{cssxref("symbols()")}}
-  - : Defines an anonymous style of the list.
-- {{cssxref("&lt;string&gt;")}}
-  - : The specified string will be used as the item's marker.
+- {{cssxwef("custom-ident", XD "&wt;custom-ident&gt;")}}
+  - : a-a identifiew matching the vawue of a {{cssxwef("@countew-stywe")}} ow one of t-the pwedefined stywes:
+- {{cssxwef("symbows()")}}
+  - : defines an anonymous stywe of the wist. o.O
+- {{cssxwef("&wt;stwing&gt;")}}
+  - : t-the specified stwing wiww b-be used as the i-item's mawkew. mya
 - `none`
   - : 不显示列表项的标记。
 - `disc`
   - : 实心圆点 (默认值)
-- `circle`
+- `ciwcwe`
   - : 空心圆点
-- `square`
+- `squawe`
   - : 实心方块
-- `decimal`
+- `decimaw`
   - : 十进制阿拉伯数字
-- `cjk-decimal` {{experimental_inline}}
+- `cjk-decimaw` {{expewimentaw_inwine}}
   - : 中日韩十进制数
-- `decimal-leading-zero`
-  - : Decimal numbers, padded by initial zeros.
-- `lower-roman`
-  - : Lowercase roman numerals
-- `upper-roman`
-  - : Uppercase roman numerals
-- `lower-greek`
-  - : Lowercase classical Greek
-    - alpha, beta, gamma…
-- `lower-alpha`, `lower-latin`
-  - : Lowercase ASCII letters
-- `upper-alpha`, `upper-latin`
-  - : Uppercase ASCII letters
-- `armenian`
-  - : Traditional Armenian numbering
-- `georgian`
-  - : Traditional Georgian numbering
-- `hebrew` {{experimental_inline}}
-  - : Traditional Hebrew numbering
-- `ethiopic-numeric` {{experimental_inline}}
-- `hiragana` {{experimental_inline}}
-  - : Dictionary-order hiragana lettering.
-- `katakana` {{experimental_inline}}
-  - : Dictionary-order katakana lettering
-- `hiragana-iroha` {{experimental_inline}}
-  - : [Iroha](https://zh.wikipedia.org/wiki/伊呂波歌) is the old japanese ordering of syllabs.
-- `katakana-iroha` {{experimental_inline}}
-  - : [Iroha](https://zh.wikipedia.org/wiki/伊呂波歌) is the old japanese ordering of syllabs.
-- `japanese-informal` {{experimental_inline}}
-  - : Japanese informal numbering
-- `japanese-formal` {{experimental_inline}}
-  - : Japanese formal numbering to be used in legal or financial document. The kanjis are designed so that they can't be modified to look like another correct one
-- `korean-hangul-formal` {{experimental_inline}}
-  - : Korean hangul numbering.
-- `korean-hanja-informal` {{experimental_inline}}
-  - : Korean hanja numbering.
-- `korean-hanja-formal` {{experimental_inline}}
-  - : Formal Korean Han numberging.
-- `simp-chinese-informal` {{experimental_inline}}
-  - : Simplified Chinese informal numberging.
-- `cjk-ideographic`{{experimental_inline}}
-  - : Identical to `simp-chinese-informal`
-- `simp-chinese-formal` {{experimental_inline}}
-  - : Simplified Chinese formal numberging.
-- `trad-chinese-informal` {{experimental_inline}}
-  - : Traditional Chinese informal numberging.
-- `trad-chinese-formal` {{experimental_inline}}
-  - : Traditional Chinese formal numberging.
+- `decimaw-weading-zewo`
+  - : d-decimaw nyumbews, 🥺 padded by initiaw z-zewos. ^^;;
+- `wowew-woman`
+  - : w-wowewcase woman n-nyumewaws
+- `uppew-woman`
+  - : u-uppewcase woman nyumewaws
+- `wowew-gweek`
+  - : wowewcase cwassicaw g-gweek
+    - a-awpha, beta, :3 gamma…
+- `wowew-awpha`, `wowew-watin`
+  - : w-wowewcase a-ascii wettews
+- `uppew-awpha`, (U ﹏ U) `uppew-watin`
+  - : u-uppewcase ascii wettews
+- `awmenian`
+  - : twaditionaw awmenian nyumbewing
+- `geowgian`
+  - : t-twaditionaw geowgian nyumbewing
+- `hebwew` {{expewimentaw_inwine}}
+  - : twaditionaw hebwew nyumbewing
+- `ethiopic-numewic` {{expewimentaw_inwine}}
+- `hiwagana` {{expewimentaw_inwine}}
+  - : dictionawy-owdew hiwagana w-wettewing. OwO
+- `katakana` {{expewimentaw_inwine}}
+  - : dictionawy-owdew katakana wettewing
+- `hiwagana-iwoha` {{expewimentaw_inwine}}
+  - : [iwoha](https://zh.wikipedia.owg/wiki/伊呂波歌) is t-the owd japanese o-owdewing of sywwabs. 😳😳😳
+- `katakana-iwoha` {{expewimentaw_inwine}}
+  - : [iwoha](https://zh.wikipedia.owg/wiki/伊呂波歌) i-is the owd japanese o-owdewing of sywwabs.
+- `japanese-infowmaw` {{expewimentaw_inwine}}
+  - : japanese i-infowmaw nyumbewing
+- `japanese-fowmaw` {{expewimentaw_inwine}}
+  - : j-japanese fowmaw nyumbewing to be used in wegaw ow financiaw document. (ˆ ﻌ ˆ)♡ the kanjis awe designed s-so that they can't be modified t-to wook wike anothew cowwect o-one
+- `kowean-hanguw-fowmaw` {{expewimentaw_inwine}}
+  - : k-kowean hanguw nyumbewing. XD
+- `kowean-hanja-infowmaw` {{expewimentaw_inwine}}
+  - : kowean hanja nyumbewing. (ˆ ﻌ ˆ)♡
+- `kowean-hanja-fowmaw` {{expewimentaw_inwine}}
+  - : fowmaw k-kowean han n-nyumbewging. ( ͡o ω ͡o )
+- `simp-chinese-infowmaw` {{expewimentaw_inwine}}
+  - : simpwified c-chinese infowmaw n-nyumbewging. rawr x3
+- `cjk-ideogwaphic`{{expewimentaw_inwine}}
+  - : identicaw to `simp-chinese-infowmaw`
+- `simp-chinese-fowmaw` {{expewimentaw_inwine}}
+  - : simpwified chinese fowmaw nyumbewging.
+- `twad-chinese-infowmaw` {{expewimentaw_inwine}}
+  - : t-twaditionaw c-chinese infowmaw n-nyumbewging. nyaa~~
+- `twad-chinese-fowmaw` {{expewimentaw_inwine}}
+  - : twaditionaw c-chinese fowmaw n-nyumbewging. >_<
 
 ### 非标准扩展
 
-Extended set of values provided by Mozilla (Firefox), Blink (Chrome and Opera) and WebKit (Safari) to support list types in other languages. See the compatibility table to check which browsers supports which extension.
+extended s-set of vawues pwovided by moziwwa (fiwefox), ^^;; bwink (chwome and opewa) and webkit (safawi) t-to suppowt w-wist types in othew wanguages. (ˆ ﻌ ˆ)♡ see the compatibiwity t-tabwe t-to check which bwowsews suppowts which extension. ^^;;
 
-- `arabic-indic`、`-moz-arabic-indic`
-- `bengali`、`-moz-bengali`
-- `cjk-earthly-branch`、`-moz-cjk-earthly-branch`
-- `cjk-heavenly-stem`、`-moz-cjk-heavenly-stem`
-- `devanagari`、`-moz-devanagari`
-- `-moz-ethiopic-halehame`
-- `-moz-ethiopic-halehame-am`
-- `ethiopic-halehame-ti-er`、`-moz-ethiopic-halehame-ti-er`
-- `ethiopic-halehame-ti-et`、`-moz-ethiopic-halehame-ti-et`
-- `gujarati`、`-moz-gujarati`
-- `gurmukhi`、`-moz-gurmukhi`
-- `hangul`、`-moz-hangul`
-- `hangul-consonant`、`-moz-hangul-consonant`
+- `awabic-indic`、`-moz-awabic-indic`
+- `bengawi`、`-moz-bengawi`
+- `cjk-eawthwy-bwanch`、`-moz-cjk-eawthwy-bwanch`
+- `cjk-heavenwy-stem`、`-moz-cjk-heavenwy-stem`
+- `devanagawi`、`-moz-devanagawi`
+- `-moz-ethiopic-hawehame`
+- `-moz-ethiopic-hawehame-am`
+- `ethiopic-hawehame-ti-ew`、`-moz-ethiopic-hawehame-ti-ew`
+- `ethiopic-hawehame-ti-et`、`-moz-ethiopic-hawehame-ti-et`
+- `gujawati`、`-moz-gujawati`
+- `guwmukhi`、`-moz-guwmukhi`
+- `hanguw`、`-moz-hanguw`
+- `hanguw-consonant`、`-moz-hanguw-consonant`
 - `kannada`、`-moz-kannada`
-- `khmer`、`-moz-khmer`
-- `lao`、`-moz-lao`
-- `malayalam`、`-moz-malayalam`
-- `myanmar`、`-moz-myanmar`
-- `oriya`、`-moz-oriya`
-- `persian`、`-moz-persian`
-- `-moz-tamil`
-- `telugu`、`-moz-telugu`
+- `khmew`、`-moz-khmew`
+- `wao`、`-moz-wao`
+- `mawayawam`、`-moz-mawayawam`
+- `myanmaw`、`-moz-myanmaw`
+- `owiya`、`-moz-owiya`
+- `pewsian`、`-moz-pewsian`
+- `-moz-tamiw`
+- `tewugu`、`-moz-tewugu`
 - `thai`、`-moz-thai`
-- `urdu`、`-moz-urdu`
+- `uwdu`、`-moz-uwdu`
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
 ## 例子
 
-### CSS
+### c-css
 
 ```css
-ol.normal {
-  list-style-type: upper-alpha;
+ow.nowmaw {
+  wist-stywe-type: uppew-awpha;
 }
 
-/* or use the shortcut "list-style": */
-ol.shortcut {
-  list-style: upper-alpha;
+/* ow use the showtcut "wist-stywe": */
+ow.showtcut {
+  w-wist-stywe: uppew-awpha;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<ol class="normal">
-  List 1
-  <li>Hello</li>
-  <li>World</li>
-  <li>What's up?</li>
-</ol>
+```htmw
+<ow c-cwass="nowmaw">
+  w-wist 1
+  <wi>hewwo</wi>
+  <wi>wowwd</wi>
+  <wi>nani's up?</wi>
+</ow>
 
-<ol class="shortcut">
-  List 2
-  <li>Looks</li>
-  <li>Like</li>
-  <li>The</li>
-  <li>Same</li>
-</ol>
+<ow cwass="showtcut">
+  wist 2
+  <wi>wooks</wi>
+  <wi>wike</wi>
+  <wi>the</wi>
+  <wi>same</wi>
+</ow>
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("例子","200","300")}}
+{{embedwivesampwe("例子","200","300")}}
 
-## Accessibility concerns
+## a-accessibiwity concewns
 
-The [VoiceOver](https://help.apple.com/voiceover/info/guide/) screen reader has an issue where unordered lists with a `list-style-type`value of `none` applied to them will not be announced as a list. To address this, add a [zero-width space](https://en.wikipedia.org/wiki/Zero-width_space) as [pseudo content](/zh-CN/docs/Web/CSS/content) before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.
+the [voiceovew](https://hewp.appwe.com/voiceovew/info/guide/) scween w-weadew has an issue whewe unowdewed w-wists with a `wist-stywe-type`vawue of `none` appwied to t-them wiww nyot be announced as a-a wist. (⑅˘꒳˘) to addwess t-this, rawr x3 add a [zewo-width space](https://en.wikipedia.owg/wiki/zewo-width_space) a-as [pseudo content](/zh-cn/docs/web/css/content) befowe each w-wist item to ensuwe t-the wist is a-announced pwopewwy. (///ˬ///✿) this ensuwes t-the design is unaffected b-by the bug fix and that wist items awe n-not impwopewwy d-descwibed. 🥺
 
 ```css
-ul {
-  list-style: none;
+u-uw {
+  wist-stywe: nyone;
 }
 
-ul li::before {
-  content: "\200B";
+uw wi::befowe {
+  c-content: "\200b";
 }
 ```
 
-- [VoiceOver and list-style-type: none – Unfettered Thoughts](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [voiceovew and wist-stywe-type: n-nyone – u-unfettewed thoughts](https://unfettewedthoughts.net/2017/09/26/voiceovew-and-wist-stywe-type-none/)
+- [mdn undewstanding wcag, >_< guidewine 1.3 e-expwanations](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.3_%e2%80%94_cweate_content_that_can_be_pwesented_in_diffewent_ways)
+- [undewstanding s-success cwitewion 1.3.1 | w-w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/content-stwuctuwe-sepawation-pwogwammatic.htmw)
 
 ## 注释
 
-- Some types require a suitable font installed to display as expected.
-- The `cjk-ideographic` is identical to `trad-chinese-informal`; it exists for legacy reasons.
+- some types w-wequiwe a suitabwe font instawwed to dispway as expected. UwU
+- the `cjk-ideogwaphic` is identicaw to `twad-chinese-infowmaw`; i-it exists fow wegacy w-weasons. >_<
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxwef("wist-stywe")}}, -.- {{cssxwef("wist-stywe-image")}}, mya {{cssxwef("wist-stywe-position")}}

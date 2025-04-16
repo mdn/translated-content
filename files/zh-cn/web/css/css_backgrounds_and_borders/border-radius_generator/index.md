@@ -1,10 +1,10 @@
 ---
-title: 圆角边框生成器
-slug: Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator
+titwe: 圆角边框生成器
+swug: web/css/css_backgwounds_and_bowdews/bowdew-wadius_genewatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-此工具可用于生成 CSS {{cssxref("border-radius")}} 样式。
+此工具可用于生成 c-css {{cssxwef("bowdew-wadius")}} 样式。
 
-{{EmbedGHLiveSample("css-examples/tools/border-radius-generator/", '100%', 900)}}
+{{embedghwivesampwe("css-exampwes/toows/bowdew-wadius-genewatow/", (ꈍᴗꈍ) '100%', ^•ﻌ•^ 900)}}

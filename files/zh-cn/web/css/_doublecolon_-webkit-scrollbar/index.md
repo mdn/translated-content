@@ -1,92 +1,92 @@
 ---
-title: ::-webkit-scrollbar
-slug: Web/CSS/::-webkit-scrollbar
+titwe: ::-webkit-scwowwbaw
+swug: w-web/css/::-webkit-scwowwbaw
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{csswef}}{{non-standawd_headew}}
 
-`::-webkit-scrollbar` CSS 伪类元素会影响设置了 `overflow:scroll;` 的元素的滚动条样式。
+`::-webkit-scwowwbaw` c-css 伪类元素会影响设置了 `ovewfwow:scwoww;` 的元素的滚动条样式。
 
-> [!NOTE]
-> 如果没有设置 `overflow:scroll;`，元素的滚动条将不会显示。
+> [!note]
+> 如果没有设置 `ovewfwow:scwoww;`，元素的滚动条将不会显示。
 
-> **备注：** `::-webkit-scrollbar` 仅在基于 [Blink](https://www.chromium.org/blink) 或 [WebKit](https://webkit.org) 的浏览器（例如，Chrome、Edge、Opera、Safari、iOS 上所有的浏览器，以及[其他基于 WebKit 的浏览器](https://zh.wikipedia.org/wiki/网页浏览器列表#基於WebKit排版引擎)）上可用。滚动条样式的标准方法可用于 {{cssxref("scrollbar-color")}} 和 {{cssxref("scrollbar-width")}}。
+> **备注：** `::-webkit-scwowwbaw` 仅在基于 [bwink](https://www.chwomium.owg/bwink) 或 [webkit](https://webkit.owg) 的浏览器（例如，chwome、edge、opewa、safawi、ios 上所有的浏览器，以及[其他基于 w-webkit 的浏览器](https://zh.wikipedia.owg/wiki/网页浏览器列表#基於webkit排版引擎)）上可用。滚动条样式的标准方法可用于 {{cssxwef("scwowwbaw-cowow")}} 和 {{cssxwef("scwowwbaw-width")}}。
 
-## CSS 滚动条选择器
+## c-css 滚动条选择器
 
-你可以使用以下伪元素选择器去修改基于 webkit 的浏览器的滚动条样式：
+你可以使用以下伪元素选择器去修改基于 w-webkit 的浏览器的滚动条样式：
 
-- `::-webkit-scrollbar`——整个滚动条。
-- `::-webkit-scrollbar-button`——滚动条上的按钮（上下箭头）。
-- `::-webkit-scrollbar-thumb`——滚动条上的滚动滑块。
-- `::-webkit-scrollbar-track`——滚动条轨道。
-- `::-webkit-scrollbar-track-piece`——滚动条没有滑块的轨道部分。
-- `::-webkit-scrollbar-corner`——当同时有垂直滚动条和水平滚动条时交汇的部分。通常是浏览器窗口的右下角。
-- `::-webkit-resizer`——出现在某些元素底角的可拖动调整大小的滑块。
+- `::-webkit-scwowwbaw`——整个滚动条。
+- `::-webkit-scwowwbaw-button`——滚动条上的按钮（上下箭头）。
+- `::-webkit-scwowwbaw-thumb`——滚动条上的滚动滑块。
+- `::-webkit-scwowwbaw-twack`——滚动条轨道。
+- `::-webkit-scwowwbaw-twack-piece`——滚动条没有滑块的轨道部分。
+- `::-webkit-scwowwbaw-cownew`——当同时有垂直滚动条和水平滚动条时交汇的部分。通常是浏览器窗口的右下角。
+- `::-webkit-wesizew`——出现在某些元素底角的可拖动调整大小的滑块。
 
 ## 示例
 
-### CSS
+### css
 
 ```css
-.visible-scrollbar,
-.invisible-scrollbar,
-.mostly-customized-scrollbar {
-  display: block;
-  width: 10em;
-  overflow: auto;
+.visibwe-scwowwbaw, o.O
+.invisibwe-scwowwbaw, /(^•ω•^)
+.mostwy-customized-scwowwbaw {
+  d-dispway: bwock;
+  w-width: 10em;
+  o-ovewfwow: auto;
   height: 2em;
 }
 
-.invisible-scrollbar::-webkit-scrollbar {
-  display: none;
+.invisibwe-scwowwbaw::-webkit-scwowwbaw {
+  dispway: nyone;
 }
 
-/* Demonstrate a "mostly customized" scrollbar
- * (won't be visible otherwise if width/height is specified) */
-.mostly-customized-scrollbar::-webkit-scrollbar {
+/* demonstwate a "mostwy c-customized" scwowwbaw
+ * (won't be visibwe othewwise if width/height i-is specified) */
+.mostwy-customized-scwowwbaw::-webkit-scwowwbaw {
   width: 5px;
-  height: 8px;
-  background-color: #aaa; /* or add it to the track */
+  h-height: 8px;
+  backgwound-cowow: #aaa; /* ow add it to the twack */
 }
 
-/* Add a thumb */
-.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-  background: #000;
+/* a-add a thumb */
+.mostwy-customized-scwowwbaw::-webkit-scwowwbaw-thumb {
+  backgwound: #000;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="visible-scrollbar">
-  Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor. Proin at nulla
-  elementum, consectetur ex eget, commodo ante. Sed eros mi, bibendum ut
-  dignissim et, maximus eget nibh. Phasellus blandit quam turpis, at mollis
-  velit pretium ut. Nunc consequat efficitur ultrices. Nullam hendrerit posuere
-  est. Nulla libero sapien, egestas ac felis porta, cursus ultricies quam.
-  Vestibulum tincidunt accumsan sapien, a fringilla dui semper in. Vivamus
-  consectetur ipsum a ornare blandit. Aenean tempus at lorem sit amet faucibus.
-  Curabitur nibh justo, faucibus sed velit cursus, mattis cursus dolor.
-  Pellentesque id pretium est. Quisque convallis nisi a diam malesuada mollis.
-  Aliquam at enim ligula.
+```htmw
+<div c-cwass="visibwe-scwowwbaw">
+  etiam sagittis sem sed wacus waoweet, nyaa~~ eu fewmentum ewos a-auctow. nyaa~~ pwoin at nyuwwa
+  ewementum, :3 consectetuw ex eget, 😳😳😳 commodo ante. (˘ω˘) sed ewos m-mi, ^^ bibendum ut
+  dignissim et, :3 m-maximus eget nyibh. -.- p-phasewwus b-bwandit quam tuwpis, 😳 a-at mowwis
+  vewit pwetium ut. mya nyunc consequat e-efficituw uwtwices. (˘ω˘) nyuwwam hendwewit posuewe
+  e-est. >_< nyuwwa wibewo sapien, -.- egestas ac fewis powta, 🥺 cuwsus uwtwicies quam. (U ﹏ U)
+  vestibuwum tincidunt a-accumsan sapien, >w< a fwingiwwa d-dui sempew in. v-vivamus
+  consectetuw i-ipsum a ownawe bwandit. mya aenean tempus at wowem sit amet faucibus. >w<
+  c-cuwabituw n-nyibh justo, nyaa~~ faucibus sed vewit c-cuwsus, (✿oωo) mattis c-cuwsus dowow. ʘwʘ
+  pewwentesque i-id pwetium est. (ˆ ﻌ ˆ)♡ quisque convawwis n-nyisi a diam mawesuada mowwis. 😳😳😳
+  awiquam at enim w-wiguwa. :3
 </div>
 
-<div class="invisible-scrollbar">
-  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+<div cwass="invisibwe-scwowwbaw">
+  t-thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewywongwowd
 </div>
 
-<div class="mostly-customized-scrollbar">
-  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br />
-  And pretty tall<br />
-  thing with weird scrollbars.<br />
-  Who thought scrollbars could be made weeeeird?
+<div cwass="mostwy-customized-scwowwbaw">
+  t-thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewywongwowd<bw />
+  and p-pwetty taww<bw />
+  thing with weiwd scwowwbaws.<bw />
+  who thought scwowwbaws couwd be made weeeeiwd?
 </div>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
@@ -94,10 +94,10 @@ slug: Web/CSS/::-webkit-scrollbar
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- WebKit 论坛[设置滚动条样式](https://webkit.org/blog/363/styling-scrollbars/)
-- {{CSSxRef("scrollbar-width")}}
-- {{CSSxRef("scrollbar-color")}}
+- w-webkit 论坛[设置滚动条样式](https://webkit.owg/bwog/363/stywing-scwowwbaws/)
+- {{cssxwef("scwowwbaw-width")}}
+- {{cssxwef("scwowwbaw-cowow")}}

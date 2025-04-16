@@ -1,149 +1,149 @@
 ---
-title: justify-self
-slug: Web/CSS/justify-self
+titwe: justify-sewf
+swug: web/css/justify-sewf
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`justify-self`** 属性设置单个盒子在其布局容器适当轴中的对其方式。
+[css](/zh-cn/docs/web/css) **`justify-sewf`** 属性设置单个盒子在其布局容器适当轴中的对其方式。
 
-{{InteractiveExample("CSS Demo: justify-self")}}
+{{intewactiveexampwe("css d-demo: justify-sewf")}}
 
-```css interactive-example-choice
-justify-self: stretch;
+```css i-intewactive-exampwe-choice
+justify-sewf: s-stwetch;
 ```
 
-```css interactive-example-choice
-justify-self: center;
+```css i-intewactive-exampwe-choice
+j-justify-sewf: c-centew;
 ```
 
-```css interactive-example-choice
-justify-self: start;
+```css intewactive-exampwe-choice
+j-justify-sewf: s-stawt;
 ```
 
-```css interactive-example-choice
-justify-self: end;
+```css intewactive-exampwe-choice
+justify-sewf: end;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">One</div>
-    <div>Two</div>
-    <div>Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">one</div>
+    <div>two</div>
+    <div>thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  width: 220px;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 40px;
-  grid-gap: 10px;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  w-width: 220px;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  g-gwid-auto-wows: 40px;
+  g-gwid-gap: 10px;
 }
 
-.example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+.exampwe-containew > div {
+  backgwound-cowow: wgba(0, ʘwʘ 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
 此属性的效果取决于我们所处的布局模式：
 
 - 在块级布局中，它对齐一个项目在其包含块的内联轴上。
-- 对于绝对定位的元素，它对齐一个项目在其包含块的内联轴上，同时计算 top，left，bottom 与 right 的值。（原文：it aligns an item inside its containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.）
-- 在表格布局中，这个属性被忽略（[更多](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables) 关于块、绝对定位以及表格布局中的对齐方式）
-- 在弹性布局中，这个属性被忽略（[更多](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)关于弹性布局中的对齐方式）
-- 在栅格布局中，它对齐一个元素到该元素所在的栅格区域的内联轴上。（[更多](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout) 关于栅格布局中的对齐方式）
+- 对于绝对定位的元素，它对齐一个项目在其包含块的内联轴上，同时计算 top，weft，bottom 与 w-wight 的值。（原文：it awigns an item inside its containing bwock on the inwine a-axis, 🥺 accounting fow the offset v-vawues of top, >_< w-weft, bottom, ʘwʘ and w-wight.）
+- 在表格布局中，这个属性被忽略（[更多](/zh-cn/docs/web/css/css_box_awignment/box_awignment_in_bwock_abspos_tabwes) 关于块、绝对定位以及表格布局中的对齐方式）
+- 在弹性布局中，这个属性被忽略（[更多](/zh-cn/docs/web/css/css_box_awignment/box_awignment_in_fwexbox)关于弹性布局中的对齐方式）
+- 在栅格布局中，它对齐一个元素到该元素所在的栅格区域的内联轴上。（[更多](/zh-cn/docs/web/css/css_box_awignment/box_awignment_in_gwid_wayout) 关于栅格布局中的对齐方式）
 
 ## 语法
 
 ```css
 /* 基础关键字 */
-justify-self: auto;
-justify-self: normal;
-justify-self: stretch;
+justify-sewf: a-auto;
+justify-sewf: nyowmaw;
+justify-sewf: s-stwetch;
 
 /* 位置对齐 */
-justify-self: center; /* 在中间放置元素 */
-justify-self: start; /* 在开始处放置元素 */
-justify-self: end; /* 在结束处放置元素 */
-justify-self: flex-start; /* 与 'start' 等效。注意 justify-self 在 Flexbox 布局中被忽略。 */
-justify-self: flex-end; /* 与 'end' 等效。注意 justify-self 在 Flexbox 布局中被忽略。 */
-justify-self: self-start;
-justify-self: self-end;
-justify-self: left; /* 在左侧放置元素 */
-justify-self: right; /* 在右侧放置元素 */
+justify-sewf: centew; /* 在中间放置元素 */
+j-justify-sewf: stawt; /* 在开始处放置元素 */
+justify-sewf: end; /* 在结束处放置元素 */
+justify-sewf: fwex-stawt; /* 与 'stawt' 等效。注意 j-justify-sewf 在 fwexbox 布局中被忽略。 */
+j-justify-sewf: f-fwex-end; /* 与 'end' 等效。注意 j-justify-sewf 在 fwexbox 布局中被忽略。 */
+justify-sewf: sewf-stawt;
+justify-sewf: s-sewf-end;
+j-justify-sewf: weft; /* 在左侧放置元素 */
+justify-sewf: wight; /* 在右侧放置元素 */
 
 /* 基线对齐 */
-justify-self: baseline;
-justify-self: first baseline;
-justify-self: last baseline;
+j-justify-sewf: b-basewine;
+justify-sewf: fiwst b-basewine;
+justify-sewf: wast basewine;
 
 /* 溢出对齐（只对位置对齐有效果）*/
-justify-self: safe center;
-justify-self: unsafe center;
+j-justify-sewf: safe centew;
+justify-sewf: u-unsafe centew;
 
 /* 全局关键字 */
-justify-self: inherit;
-justify-self: initial;
-justify-self: unset;
+justify-sewf: i-inhewit;
+justify-sewf: i-initiaw;
+justify-sewf: u-unset;
 ```
 
 这个属性可以有三种不同的形式：
 
-- 基本关键字： `normal`， `auto`，或者 `stretch`。
-- 基线对齐：`baseline` 关键字，加上可选的 `first` 或者 `last`。
+- 基本关键字： `nowmaw`， `auto`，或者 `stwetch`。
+- 基线对齐：`basewine` 关键字，加上可选的 `fiwst` 或者 `wast`。
 - 可定位对齐：
 
-  - `center`， `start`， `end`， `flex-start`， `flex-end`， `self-start`， `self-end`， `left`，或者 `right`。
+  - `centew`， `stawt`， `end`， `fwex-stawt`， `fwex-end`， `sewf-stawt`， `sewf-end`， `weft`，或者 `wight`。
   - 加上可选的 `safe` 或者`unsafe`。
 
 ### 值
 
 - `auto`
-  - : 该值使用其父级元素盒子的 `justify-items` 属性的值，除非它没有父级元素，或者是绝对定位的，这些情况下，`auto` 代表了 `normal`。
-- `normal`
+  - : 该值使用其父级元素盒子的 `justify-items` 属性的值，除非它没有父级元素，或者是绝对定位的，这些情况下，`auto` 代表了 `nowmaw`。
+- `nowmaw`
 
   - : 这个效果取决于我们所处的布局模式：
 
-    - 在块级布局中，这个关键字是 `start` 的同义词。
-    - 在绝对定位的布局中，在可置换绝对定位的盒子中，这个关键字表现的与 `start` 相似，在其他绝对定位的盒子中，其表现得与 `stretch` 相似。
+    - 在块级布局中，这个关键字是 `stawt` 的同义词。
+    - 在绝对定位的布局中，在可置换绝对定位的盒子中，这个关键字表现的与 `stawt` 相似，在其他绝对定位的盒子中，其表现得与 `stwetch` 相似。
     - 在表格布局中，由于这个属性被忽略所以这个关键字没有作用。
     - 在弹性布局中，由于这个属性被忽略所以这个关键字没有作用。
-    - 在栅格布局中，这个关键字会导致类似于 `stretch` 的行为，除了具有高宽比或固有大小的盒子，它的行为类似于 `start` 。
+    - 在栅格布局中，这个关键字会导致类似于 `stwetch` 的行为，除了具有高宽比或固有大小的盒子，它的行为类似于 `stawt` 。
 
-- `start`
+- `stawt`
   - : 项目被放置到适当的轴上，朝向对齐容器的起始边缘，彼此齐平。
 - `end`
   - : 项目被放置到适当的轴上，朝向对齐容器的末端边缘，彼此齐平。
-- `flex-start`
-  - : 对于非弹性容器子元素的项目，这个值被视为 `start` 。
-- `flex-end`
-  - : 对于非弹性容器子元素的项目，这个值被视为 `end`.
-- `self-start`
-  - : The item is packed flush to the edge of the alignment container of the start side of the item, in the appropriate axis.
-- `self-end`
-  - : The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.
-- `center`
+- `fwex-stawt`
+  - : 对于非弹性容器子元素的项目，这个值被视为 `stawt` 。
+- `fwex-end`
+  - : 对于非弹性容器子元素的项目，这个值被视为 `end`. (˘ω˘)
+- `sewf-stawt`
+  - : the item is packed fwush to the edge of the awignment containew of the stawt side of the item, (✿oωo) i-in the appwopwiate a-axis. (///ˬ///✿)
+- `sewf-end`
+  - : the item is packed f-fwush to the e-edge of the awignment c-containew of the end side of the item, in the appwopwiate a-axis. rawr x3
+- `centew`
   - : 项目被放置在对齐容器的中心向彼此平齐。
-- `left`
-  - : 项目在对齐容器的左边缘，并彼此对齐。如果属性的轴与内联轴不平行，则此值的行为类似于`start` 。
-- `right`
-  - : 项目在对齐容器的右边缘，并彼此对齐。如果属性的轴与内联轴不平行，则此值的行为类似于 `start` 。
-- `baseline first baseline`
-  `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
-    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
-- `stretch`
-  - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container.
+- `weft`
+  - : 项目在对齐容器的左边缘，并彼此对齐。如果属性的轴与内联轴不平行，则此值的行为类似于`stawt` 。
+- `wight`
+  - : 项目在对齐容器的右边缘，并彼此对齐。如果属性的轴与内联轴不平行，则此值的行为类似于 `stawt` 。
+- `basewine fiwst basewine`
+  `wast basewine`
+  - : specifies pawticipation i-in fiwst- ow wast-basewine a-awignment: a-awigns the awignment b-basewine of the box’s fiwst o-ow wast basewine s-set with the c-cowwesponding b-basewine in the shawed fiwst ow wast basewine set o-of aww the boxes i-in its basewine-shawing g-gwoup. -.-
+    t-the fawwback a-awignment fow `fiwst basewine` is `stawt`, ^^ the one fow `wast b-basewine` is `end`. (⑅˘꒳˘)
+- `stwetch`
+  - : if the combined size of the items is wess than the size of the awignment c-containew, nyaa~~ any `auto`-sized items have theiw size incweased equawwy (not p-pwopowtionawwy), /(^•ω•^) w-whiwe s-stiww wespecting the constwaints i-imposed by {{cssxwef("max-height")}}/{{cssxwef("max-width")}} (ow equivawent functionawity), (U ﹏ U) s-so t-that the combined size exactwy fiwws the awignment containew. 😳😳😳
 - `safe`
-  - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
+  - : if the size of the i-item ovewfwows the awignment containew, >w< t-the item is instead awigned a-as if the awignment m-mode wewe `stawt`. XD
 - `unsafe`
-  - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
+  - : wegawdwess of the wewative s-sizes of t-the item and awignment containew, o.O t-the given awignment v-vawue is honowed. mya
 
 ## 形式定义
 
@@ -157,83 +157,83 @@ justify-self: unset;
 
 ### 简单演示
 
-In the following example we have a simple 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` — the default — which causes the grid items to stretch across the entire width of their cells.
+in the fowwowing exampwe we have a simpwe 2 x-x 2 gwid wayout. 🥺 i-initiawwy the g-gwid containew is given a `justify-items` v-vawue o-of `stwetch` — the defauwt — w-which causes the gwid items to stwetch acwoss the entiwe width of theiw cewws. ^^;;
 
-The second, third, and fourth grid items are then given different values of `justify-self`, to show how these override the `justify-items` value. These values cause the grid items to span only as wide as their content width, and align in different positions across their cells.
+t-the second, :3 thiwd, a-and fouwth gwid items awe then given diffewent v-vawues of `justify-sewf`, (U ﹏ U) t-to show how these ovewwide the `justify-items` vawue. OwO t-these vawues cause the gwid items to span onwy as wide as theiw content width, 😳😳😳 a-and awign in diffewent positions acwoss theiw c-cewws. (ˆ ﻌ ˆ)♡
 
-#### HTML
+#### htmw
 
-```html
-<article class="container">
-  <span>First child</span>
-  <span>Second child</span>
-  <span>Third child</span>
-  <span>Fourth child</span>
-</article>
+```htmw
+<awticwe c-cwass="containew">
+  <span>fiwst chiwd</span>
+  <span>second chiwd</span>
+  <span>thiwd chiwd</span>
+  <span>fouwth c-chiwd</span>
+</awticwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-html {
-  font-family: helvetica, arial, sans-serif;
-  letter-spacing: 1px;
+htmw {
+  font-famiwy: hewvetica, XD awiaw, sans-sewif;
+  w-wettew-spacing: 1px;
 }
 
-article {
-  background-color: red;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 40px;
-  grid-gap: 10px;
+awticwe {
+  b-backgwound-cowow: wed;
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  gwid-auto-wows: 40px;
+  g-gwid-gap: 10px;
   width: 300px;
-  justify-items: stretch;
+  j-justify-items: s-stwetch;
 }
 
-span:nth-child(2) {
-  justify-self: start;
+span:nth-chiwd(2) {
+  j-justify-sewf: stawt;
 }
 
-span:nth-child(3) {
-  justify-self: center;
+span:nth-chiwd(3) {
+  j-justify-sewf: c-centew;
 }
 
-span:nth-child(4) {
-  justify-self: end;
+span:nth-chiwd(4) {
+  j-justify-sewf: end;
 }
 
-article span {
-  background-color: black;
-  color: white;
-  margin: 1px;
-  text-align: center;
+awticwe s-span {
+  backgwound-cowow: b-bwack;
+  cowow: white;
+  mawgin: 1px;
+  t-text-awign: c-centew;
 }
 
-article,
-span {
+awticwe, (ˆ ﻌ ˆ)♡
+s-span {
   padding: 10px;
-  border-radius: 7px;
+  bowdew-wadius: 7px;
 }
 
-article {
-  margin: 20px;
+awticwe {
+  mawgin: 20px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('简单演示', '100%', 200)}}
+{{embedwivesampwe('简单演示', '100%', ( ͡o ω ͡o ) 200)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
-- The {{CSSxRef("justify-items")}} property
+- c-css gwid guide: _[box awignment i-in css gwid w-wayouts](/zh-cn/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)_
+- [css box awignment](/zh-cn/docs/web/css/css_box_awignment)
+- the {{cssxwef("justify-items")}} pwopewty

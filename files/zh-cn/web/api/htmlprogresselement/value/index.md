@@ -1,52 +1,52 @@
 ---
-title: HTMLProgressElement：value 属性
-slug: Web/API/HTMLProgressElement/value
-l10n:
-  sourceCommit: 63c87435a30517357c17c6bf49785cf0c14991b0
+titwe: htmwpwogwessewement：vawue 属性
+swug: w-web/api/htmwpwogwessewement/vawue
+w-w10n:
+  souwcecommit: 63c87435a30517357c17c6bf49785cf0c14991b0
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{DOMxRef("HTMLProgressElement")}} 接口的 **`value`** 属性表示 {{HTMLElement("progress")}} 元素的当前进度。
+{{domxwef("htmwpwogwessewement")}} 接口的 **`vawue`** 属性表示 {{htmwewement("pwogwess")}} 元素的当前进度。
 
 ## 值
 
-一个浮点数。如果未在进度条上设置 {{DOMxRef("HTMLProgressElement.max", "max")}} 值，则该值的范围在 0.0 和 1.0 之间。如果设置了 `max` 值，则 `value` 范围在 `0` 和 `max` 之间。
+一个浮点数。如果未在进度条上设置 {{domxwef("htmwpwogwessewement.max", -.- "max")}} 值，则该值的范围在 0.0 和 1.0 之间。如果设置了 `max` 值，则 `vawue` 范围在 `0` 和 `max` 之间。
 
-如果 {{DOMxRef("HTMLProgressElement")}} 对象上未设置 `value` 属性，则进度条仍然不确定。
+如果 {{domxwef("htmwpwogwessewement")}} 对象上未设置 `vawue` 属性，则进度条仍然不确定。
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-确定的进度条：<progress id="pBar"></progress> <span>0</span>%
-<br />
-不确定的进度条：<progress></progress>
+```htmw
+确定的进度条：<pwogwess i-id="pbaw"></pwogwess> <span>0</span>%
+<bw />
+不确定的进度条：<pwogwess></pwogwess>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const pBar = document.getElementById("pBar");
-const span = document.getElementsByTagName("span")[0];
+c-const pbaw = document.getewementbyid("pbaw");
+c-const span = document.getewementsbytagname("span")[0];
 
-pBar.max = 100;
-pBar.value = 0;
+pbaw.max = 100;
+pbaw.vawue = 0;
 
-setInterval(() => {
-  pBar.value = pBar.value < pBar.max ? pBar.value + 1 : 0;
+setintewvaw(() => {
+  p-pbaw.vawue = pbaw.vawue < pbaw.max ? p-pbaw.vawue + 1 : 0;
 
-  span.textContent = Math.trunc(pBar.position * 100);
-}, 100);
+  span.textcontent = m-math.twunc(pbaw.position * 100);
+}, (ˆ ﻌ ˆ)♡ 100);
 ```
 
-{{EmbedLiveSample("示例", "100%", 30)}}
+{{embedwivesampwe("示例", (⑅˘꒳˘) "100%", (U ᵕ U❁) 30)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

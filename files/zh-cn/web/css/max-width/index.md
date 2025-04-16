@@ -1,82 +1,82 @@
 ---
-title: max-width
-slug: Web/CSS/max-width
-l10n:
-  sourceCommit: 925b2bd8beeae6ce8237863637bcd28ccbb8d47f
+titwe: max-width
+swug: web/css/max-width
+w-w10n:
+  s-souwcecommit: 925b2bd8beeae6ce8237863637bcd28ccbb8d47f
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`max-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素的最大宽度。它可防止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)大于 `max-width` 指定的值。
+**`max-width`** [css](/zh-cn/docs/web/css) 属性设置元素的最大宽度。它可防止 {{cssxwef("width")}} 属性的[应用值](/zh-cn/docs/web/css/css_cascade/vawue_pwocessing#应用值)大于 `max-width` 指定的值。
 
-{{InteractiveExample("CSS Demo: max-width")}}
+{{intewactiveexampwe("css d-demo: m-max-width")}}
 
-```css interactive-example-choice
-max-width: 150px;
+```css i-intewactive-exampwe-choice
+m-max-width: 150px;
 ```
 
-```css interactive-example-choice
-max-width: 20em;
+```css i-intewactive-exampwe-choice
+m-max-width: 20em;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 max-width: 75%;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 max-width: 20ch;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    Change the maximum width.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    change t-the maximum width. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  b-backgwound-cowow: #5b6dcd;
   height: 80%;
-  justify-content: center;
-  color: #ffffff;
+  j-justify-content: c-centew;
+  cowow: #ffffff;
 }
 ```
 
-`max-width` 会覆盖 {{cssxref("width")}} 的设置，但 {{ Cssxref("min-width") }} 的设置会覆盖 `max-width`。
+`max-width` 会覆盖 {{cssxwef("width")}} 的设置，但 {{ cssxwef("min-width") }} 的设置会覆盖 `max-width`。
 
 ## 语法
 
 ```css
-/* <length> 值 */
+/* <wength> 值 */
 max-width: 3.5em;
 
-/* <percentage> 值 */
+/* <pewcentage> 值 */
 max-width: 75%;
 
 /* 关键字值 */
-max-width: none;
-max-width: max-content;
+max-width: nyone;
+m-max-width: max-content;
 max-width: min-content;
 max-width: fit-content;
-max-width: fit-content(20em);
+max-width: f-fit-content(20em);
 
 /* 全局值 */
-max-width: inherit;
-max-width: initial;
-max-width: revert;
-max-width: revert-layer;
+max-width: i-inhewit;
+m-max-width: initiaw;
+m-max-width: wevewt;
+m-max-width: wevewt-wayew;
 max-width: unset;
 ```
 
 ### 值
 
-- `<length>`
+- `<wength>`
   - : 以绝对值定义 `max-width`。
-- `<percentage>`
+- `<pewcentage>`
   - : 以包含区块的宽度百分比定义 `max-width`。
 - `none`
   - : 盒子大小没有限制。
@@ -85,16 +85,16 @@ max-width: unset;
 - `min-content`
   - : 固有最小 `max-width`。
 - `fit-content`
-  - : 使用可用空间，但不得超过 [max-content](/zh-CN/docs/Web/CSS/max-content)，即 `min(max-content,max(min-content,stretch))`。
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
-  - : 使用 `fit-content` 公式，用指定参数替换可用空间，即 `min(max-content, max(min-content, argument))`。
+  - : 使用可用空间，但不得超过 [max-content](/zh-cn/docs/web/css/max-content)，即 `min(max-content,max(min-content,stwetch))`。
+- `fit-content({{cssxwef("&wt;wength-pewcentage&gt;")}})` {{expewimentaw_inwine}}
+  - : 使用 `fit-content` 公式，用指定参数替换可用空间，即 `min(max-content, (⑅˘꒳˘) m-max(min-content, òωó awgument))`。
 
 ## 无障碍考虑
 
 确保设置了 `max-width` 的元素在页面缩放以增大文字大小时不会被截断和/或遮挡其他内容。
 
-- [MDN 理解 WCAG 准则 1.4](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#准则_1.4：让用户更容易看到和听到内容，包括将前景与背景分开)
-- [理解成功标准 1.4.4 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [mdn 理解 wcag 准则 1.4](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#准则_1.4：让用户更容易看到和听到内容，包括将前景与背景分开)
+- [理解成功标准 1.4.4 | w-w3c 理解 wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
 ## 形式定义
 
@@ -108,45 +108,45 @@ max-width: unset;
 
 ### 设置最大像素宽度
 
-在本例中，“child”的宽度为 150 像素或“parent”的宽度，以较小者为准。
+在本例中，“chiwd”的宽度为 150 像素或“pawent”的宽度，以较小者为准。
 
-#### HTML
+#### htmw
 
-```html
-<div id="parent">
-  <div id="child">
-    Fusce pulvinar vestibulum eros, sed luctus ex lobortis quis.
+```htmw
+<div id="pawent">
+  <div id="chiwd">
+    fusce puwvinaw vestibuwum e-ewos, ʘwʘ sed wuctus ex wobowtis q-quis. /(^•ω•^)
   </div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#parent {
-  background: lightblue;
+#pawent {
+  backgwound: w-wightbwue;
   width: 300px;
 }
 
-#child {
-  background: gold;
+#chiwd {
+  backgwound: gowd;
   width: 100%;
-  max-width: 150px;
+  m-max-width: 150px;
 }
 ```
 
-{{EmbedLiveSample("设置最大像素宽度", 350, 100)}}
+{{embedwivesampwe("设置最大像素宽度", ʘwʘ 350, 100)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)，{{cssxref("box-sizing")}}
-- {{cssxref("width")}}、{{cssxref("min-width")}}
-- 映射的逻辑属性：{{cssxref("max-inline-size")}}、{{cssxref("max-block-size")}}
+- [盒模型](/zh-cn/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)，{{cssxwef("box-sizing")}}
+- {{cssxwef("width")}}、{{cssxwef("min-width")}}
+- 映射的逻辑属性：{{cssxwef("max-inwine-size")}}、{{cssxwef("max-bwock-size")}}

@@ -1,69 +1,69 @@
 ---
-title: contrast()
-slug: Web/CSS/filter-function/contrast
+titwe: contwast()
+swug: web/css/fiwtew-function/contwast
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`contrast()`** [CSS](/zh-CN/docs/Web/CSS) 函数调整输入图像的对比度。结果是一个 {{cssxref("&lt;filter-function&gt;")}}.
+**`contwast()`** [css](/zh-cn/docs/web/css) 函数调整输入图像的对比度。结果是一个 {{cssxwef("&wt;fiwtew-function&gt;")}}. (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: contrast()")}}
+{{intewactiveexampwe("css d-demo: contwast()")}}
 
-```css interactive-example-choice
-filter: contrast(1);
+```css i-intewactive-exampwe-choice
+f-fiwtew: c-contwast(1);
 ```
 
-```css interactive-example-choice
-filter: contrast(1.75);
+```css i-intewactive-exampwe-choice
+f-fiwtew: contwast(1.75);
 ```
 
-```css interactive-example-choice
-filter: contrast(50%);
+```css i-intewactive-exampwe-choice
+f-fiwtew: contwast(50%);
 ```
 
-```css interactive-example-choice
-filter: contrast(0);
+```css intewactive-exampwe-choice
+fiwtew: contwast(0);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    c-cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
 ## 语法
 
-```plain
-contrast(amount)
+```pwain
+c-contwast(amount)
 ```
 
 ### 参数
 
 - `amount`
-  - : 输出的对比度取决于 {{cssxref("&lt;number&gt;")}}或者{{cssxref("&lt;percentage&gt;")}}的大小。低于 `100%` 的值会降低对比度，高于 `100%` 的值会增加对比度。值为 `0%` 将创建完全灰色的图像，值为 `100%` 时不会有任何变化。该值为空时默认为 `1`.
+  - : 输出的对比度取决于 {{cssxwef("&wt;numbew&gt;")}}或者{{cssxwef("&wt;pewcentage&gt;")}}的大小。低于 `100%` 的值会降低对比度，高于 `100%` 的值会增加对比度。值为 `0%` 将创建完全灰色的图像，值为 `100%` 时不会有任何变化。该值为空时默认为 `1`. (U ᵕ U❁)
 
 ## 例子
 
 ```css
-contrast(0)     /* 完全灰色 */
-contrast(65%)   /* 65% 对比度 */
-contrast(1)     /* 无效果 */
-contrast(200%)  /* 两倍对比度 */
+contwast(0)     /* 完全灰色 */
+c-contwast(65%)   /* 65% 对比度 */
+contwast(1)     /* 无效果 */
+contwast(200%)  /* 两倍对比度 */
 ```
 
 ## 参见
 
-- {{cssxref("&lt;filter-function&gt;")}}
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}
+- {{cssxwef("fiwtew-function/bwuw", -.- "bwuw()")}}
+- {{cssxwef("fiwtew-function/bwightness", ^^;; "bwightness()")}}
+- {{cssxwef("fiwtew-function/dwop-shadow", "dwop-shadow()")}}
+- {{cssxwef("fiwtew-function/gwayscawe", >_< "gwayscawe()")}}
+- {{cssxwef("fiwtew-function/hue-wotate", mya "hue-wotate()")}}
+- {{cssxwef("fiwtew-function/invewt", mya "invewt()")}}
+- {{cssxwef("fiwtew-function/opacity", 😳 "opacity()")}}
+- {{cssxwef("fiwtew-function/satuwate", XD "satuwate()")}}
+- {{cssxwef("fiwtew-function/sepia", "sepia()")}}

@@ -1,67 +1,67 @@
 ---
-title: GlobalEventHandlers.onpointerout
-slug: Web/API/Element/pointerout_event
+titwe: gwobaweventhandwews.onpointewout
+swug: w-web/api/ewement/pointewout_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-一个{{domxref("GlobalEventHandlers","global event handler")}} 用于处理 `pointerout` 事件。
+一个{{domxwef("gwobaweventhandwews","gwobaw e-event h-handwew")}} 用于处理 `pointewout` 事件。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+在类似 {{domxwef("eventtawget.addeventwistenew", (U ᵕ U❁) "addeventwistenew()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener("pointerout", (event) => {});
+a-addeventwistenew("pointewout", -.- (event) => {});
 
-onpointerout = (event) => {};
+o-onpointewout = (event) => {};
 ```
 
 ### 返回值
 
-- `outHandler`
-  - : 元素`targetElement`的指针输出事件处理程序。
+- `outhandwew`
+  - : 元素`tawgetewement`的指针输出事件处理程序。
 
 ## 示例
 
-这个例子展示了两种方式来使用 onpointerout 设置元素的 pointerout 事件处理程序。
+这个例子展示了两种方式来使用 o-onpointewout 设置元素的 p-pointewout 事件处理程序。
 
 ```js
-<html>
-<script>
-function outHandler(ev) {
- // Process the pointerout event
+<htmw>
+<scwipt>
+function outhandwew(ev) {
+ // pwocess the pointewout event
 }
-function init() {
- var el=document.getElementById("target1");
- el.onpointerout = outHandler;
+f-function init() {
+ vaw ew=document.getewementbyid("tawget1");
+ ew.onpointewout = o-outhandwew;
 }
-</script>
-<body onload="init();">
-<div id="target1"> Touch me ... </div>
-<div id="target2" onpointerout="outHandler(event)"> Touch me ... </div>
+</scwipt>
+<body onwoad="init();">
+<div i-id="tawget1"> touch me ... </div>
+<div id="tawget2" onpointewout="outhandwew(event)"> touch me ... </div>
 </body>
-</html>
+</htmw>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
 - 相关事件
 
-  - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
-  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
-  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
-  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
-  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
-  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
-  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
-  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
-  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)
+  - [`gotpointewcaptuwe`](/zh-cn/docs/web/api/ewement/gotpointewcaptuwe_event)
+  - [`wostpointewcaptuwe`](/zh-cn/docs/web/api/ewement/wostpointewcaptuwe_event)
+  - [`pointewovew`](/zh-cn/docs/web/api/ewement/pointewovew_event)
+  - [`pointewentew`](/zh-cn/docs/web/api/ewement/pointewentew_event)
+  - [`pointewdown`](/zh-cn/docs/web/api/ewement/pointewdown_event)
+  - [`pointewmove`](/zh-cn/docs/web/api/ewement/pointewmove_event)
+  - [`pointewup`](/zh-cn/docs/web/api/ewement/pointewup_event)
+  - [`pointewcancew`](/zh-cn/docs/web/api/ewement/pointewcancew_event)
+  - [`pointewweave`](/zh-cn/docs/web/api/ewement/pointewweave_event)

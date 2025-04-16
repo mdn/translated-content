@@ -1,512 +1,512 @@
 ---
-title: 具有 Mozilla 厂商前缀的 CSS 扩展
-slug: Web/CSS/Mozilla_Extensions
-l10n:
-  sourceCommit: d36cd679498a75dccf51685d8e178994a0df585e
+titwe: 具有 moziwwa 厂商前缀的 c-css 扩展
+s-swug: web/css/moziwwa_extensions
+w-w10n:
+  souwcecommit: d-d36cd679498a75dccf51685d8e178994a0df585e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Firefox 支持一些 _[CSS](/zh-CN/docs/Web/CSS) 的 Mozilla 扩展_，包括属性、值、伪元素、伪类、at 规则和媒体查询。这些扩展具有 `-moz-` 前缀。
+f-fiwefox 支持一些 _[css](/zh-cn/docs/web/css) 的 m-moziwwa 扩展_，包括属性、值、伪元素、伪类、at 规则和媒体查询。这些扩展具有 `-moz-` 前缀。
 
-> [!NOTE]
+> [!note]
 > 这些扩展大多是实验性的或已弃用的，但出于向后兼容性而被保留。请勿在生产环境的网站中使用它们。
 
-## 仅 Mozilla 具有的属性
+## 仅 m-moziwwa 具有的属性
 
-- {{CSSxRef("box-align", "-moz-box-align")}} {{deprecated_inline}}
-- {{CSSxRef("box-direction", "-moz-box-direction")}} {{deprecated_inline}}
-- {{CSSxRef("box-flex", "-moz-box-flex")}} {{deprecated_inline}}
-- {{CSSxRef("box-ordinal-group" ,"-moz-box-ordinal-group")}} {{deprecated_inline}}
-- {{CSSxRef("box-orient", "-moz-box-orient")}} {{deprecated_inline}}
-- {{CSSxRef("box-pack", "-moz-box-pack")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-float-edge")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-force-broken-image-icon")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-image-region")}} {{deprecated_inline}}
-- {{CSSxRef("-moz-orient")}} {{non-standard_inline}}
-- {{CSSxRef("font-smooth", "-moz-osx-font-smoothing")}} {{non-standard_inline}}
-- {{CSSxRef("-moz-user-focus")}} {{non-standard_inline}}
-- {{CSSxRef("-moz-user-input")}} {{non-standard_inline}}
-- {{CSSxRef("user-modify", "-moz-user-modify")}} {{non-standard_inline}}
+- {{cssxwef("box-awign", (ˆ ﻌ ˆ)♡ "-moz-box-awign")}} {{depwecated_inwine}}
+- {{cssxwef("box-diwection", (˘ω˘) "-moz-box-diwection")}} {{depwecated_inwine}}
+- {{cssxwef("box-fwex", (⑅˘꒳˘) "-moz-box-fwex")}} {{depwecated_inwine}}
+- {{cssxwef("box-owdinaw-gwoup" ,"-moz-box-owdinaw-gwoup")}} {{depwecated_inwine}}
+- {{cssxwef("box-owient", (///ˬ///✿) "-moz-box-owient")}} {{depwecated_inwine}}
+- {{cssxwef("box-pack", 😳😳😳 "-moz-box-pack")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-fwoat-edge")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-fowce-bwoken-image-icon")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-image-wegion")}} {{depwecated_inwine}}
+- {{cssxwef("-moz-owient")}} {{non-standawd_inwine}}
+- {{cssxwef("font-smooth", 🥺 "-moz-osx-font-smoothing")}} {{non-standawd_inwine}}
+- {{cssxwef("-moz-usew-focus")}} {{non-standawd_inwine}}
+- {{cssxwef("-moz-usew-input")}} {{non-standawd_inwine}}
+- {{cssxwef("usew-modify", mya "-moz-usew-modify")}} {{non-standawd_inwine}}
 
 ## 以前为专有而现在已被标准化的属性
 
-> [!NOTE]
-> 为最大限度地提高 CSS 的兼容性，你应该使用下面列出的不带前缀的标准属性，而不是带有前缀的属性。一旦某个属性被标准化并且已在没有前缀的情况下实现，那么在一段时间后，带有前缀的版本通常会被删除。
+> [!note]
+> 为最大限度地提高 c-css 的兼容性，你应该使用下面列出的不带前缀的标准属性，而不是带有前缀的属性。一旦某个属性被标准化并且已在没有前缀的情况下实现，那么在一段时间后，带有前缀的版本通常会被删除。
 
-### A
+### a
 
-- {{CSSxRef("animation", "-moz-animation")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("animation-delay", "-moz-animation-delay")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("animation-direction", "-moz-animation-direction")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("animation-duration", "-moz-animation-duration")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("animation-fill-mode", "-moz-animation-fill-mode")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("animation-iteration-count", "-moz-animation-iteration-count")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("animation-name", "-moz-animation-name")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("animation-play-state", "-moz-animation-play-state")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("animation-timing-function","-moz-animation-timing-function")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("appearance","-moz-appearance")}} {{Experimental_Inline}}
+- {{cssxwef("animation", 🥺 "-moz-animation")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("animation-deway", >_< "-moz-animation-deway")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("animation-diwection", >_< "-moz-animation-diwection")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("animation-duwation", (⑅˘꒳˘) "-moz-animation-duwation")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("animation-fiww-mode", /(^•ω•^) "-moz-animation-fiww-mode")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("animation-itewation-count", rawr x3 "-moz-animation-itewation-count")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("animation-name", (U ﹏ U) "-moz-animation-name")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("animation-pway-state", (U ﹏ U) "-moz-animation-pway-state")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("animation-timing-function","-moz-animation-timing-function")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("appeawance","-moz-appeawance")}} {{expewimentaw_inwine}}
 
-### B
+### b
 
-- {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("background-clip", "-moz-background-clip")}} {{deprecated_inline}}
-- {{CSSxRef("background-origin", "-moz-background-origin")}} {{deprecated_inline}}
-- {{CSSxRef("box-decoration-break", "-moz-background-inline-policy")}} {{deprecated_inline}}（不再被支持；请使用标准的 {{CSSxRef("box-decoration-break")}}）
-- {{CSSxRef("background-size", "-moz-background-size")}} {{deprecated_inline}}
-- {{CSSxRef("border-inline-end", "-moz-border-end")}} {{Deprecated_Inline}}（不再被支持；请使用标准的 {{CSSxRef("border-inline-end")}}）
-- {{CSSxRef("border-inline-color", "-moz-border-end-color")}} {{Deprecated_Inline}}（不再被支持；请使用标准的 {{CSSxRef("border-inline-end-color")}}）
-- {{CSSxRef("border-inline-style", "-moz-border-end-style")}} {{Deprecated_Inline}}（不再被支持；请使用标准的 {{CSSxRef("border-inline-end-style")}}）
-- {{CSSxRef("border-inline-width", "-moz-border-end-width")}} {{Deprecated_Inline}}（不再被支持；请使用标准的 {{CSSxRef("border-inline-end-width")}}）
-- {{CSSxRef("border-image", "-moz-border-image")}} {{Deprecated_Inline}}
-- {{CSSxRef("border-inline-start", "-moz-border-start")}} {{Deprecated_Inline}}（不再被支持；请使用标准的 {{CSSxRef("border-inline-start")}}）
-- {{CSSxRef("border-inline-start-color", "-moz-border-start-color")}} {{Deprecated_Inline}}（不再被支持；请使用标准的 {{CSSxRef("border-inline-start-color")}}）
-- {{CSSxRef("border-inline-start-style", "-moz-border-start-style")}} {{Deprecated_Inline}}（不再被支持；请使用标准的 {{CSSxRef("border-inline-start-style")}}）
-- {{CSSxRef("border-inline-start-width", "-moz-border-start-width")}} {{Deprecated_Inline}}（不再被支持；请使用标准的 {{CSSxRef("border-inline-start-width")}}）
-- {{CSSxRef("box-sizing", "-moz-box-sizing")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
+- {{cssxwef("backface-visibiwity", (⑅˘꒳˘) "-moz-backface-visibiwity")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("backgwound-cwip", òωó "-moz-backgwound-cwip")}} {{depwecated_inwine}}
+- {{cssxwef("backgwound-owigin", ʘwʘ "-moz-backgwound-owigin")}} {{depwecated_inwine}}
+- {{cssxwef("box-decowation-bweak", /(^•ω•^) "-moz-backgwound-inwine-powicy")}} {{depwecated_inwine}}（不再被支持；请使用标准的 {{cssxwef("box-decowation-bweak")}}）
+- {{cssxwef("backgwound-size", ʘwʘ "-moz-backgwound-size")}} {{depwecated_inwine}}
+- {{cssxwef("bowdew-inwine-end", σωσ "-moz-bowdew-end")}} {{depwecated_inwine}}（不再被支持；请使用标准的 {{cssxwef("bowdew-inwine-end")}}）
+- {{cssxwef("bowdew-inwine-cowow", OwO "-moz-bowdew-end-cowow")}} {{depwecated_inwine}}（不再被支持；请使用标准的 {{cssxwef("bowdew-inwine-end-cowow")}}）
+- {{cssxwef("bowdew-inwine-stywe", 😳😳😳 "-moz-bowdew-end-stywe")}} {{depwecated_inwine}}（不再被支持；请使用标准的 {{cssxwef("bowdew-inwine-end-stywe")}}）
+- {{cssxwef("bowdew-inwine-width", 😳😳😳 "-moz-bowdew-end-width")}} {{depwecated_inwine}}（不再被支持；请使用标准的 {{cssxwef("bowdew-inwine-end-width")}}）
+- {{cssxwef("bowdew-image", o.O "-moz-bowdew-image")}} {{depwecated_inwine}}
+- {{cssxwef("bowdew-inwine-stawt", ( ͡o ω ͡o ) "-moz-bowdew-stawt")}} {{depwecated_inwine}}（不再被支持；请使用标准的 {{cssxwef("bowdew-inwine-stawt")}}）
+- {{cssxwef("bowdew-inwine-stawt-cowow", (U ﹏ U) "-moz-bowdew-stawt-cowow")}} {{depwecated_inwine}}（不再被支持；请使用标准的 {{cssxwef("bowdew-inwine-stawt-cowow")}}）
+- {{cssxwef("bowdew-inwine-stawt-stywe", (///ˬ///✿) "-moz-bowdew-stawt-stywe")}} {{depwecated_inwine}}（不再被支持；请使用标准的 {{cssxwef("bowdew-inwine-stawt-stywe")}}）
+- {{cssxwef("bowdew-inwine-stawt-width", >w< "-moz-bowdew-stawt-width")}} {{depwecated_inwine}}（不再被支持；请使用标准的 {{cssxwef("bowdew-inwine-stawt-width")}}）
+- {{cssxwef("box-sizing", rawr "-moz-box-sizing")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
 
-### C
+### c
 
-- {{CSSxRef("clip-path")}} {{Experimental_Inline}}（应用于 SVG 和其他地方）
-- {{CSSxRef("column-count", "-moz-column-count")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("column-fill", "-moz-column-fill")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("column-gap", "-moz-column-gap")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("column-width", "-moz-column-width")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("column-rule", "-moz-column-rule")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("column-rule-width", "-moz-column-rule-width")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("column-rule-style", "-moz-column-rule-style")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("column-rule-color", "-moz-column-rule-color")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
+- {{cssxwef("cwip-path")}} {{expewimentaw_inwine}}（应用于 svg 和其他地方）
+- {{cssxwef("cowumn-count", mya "-moz-cowumn-count")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("cowumn-fiww", ^^ "-moz-cowumn-fiww")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("cowumn-gap", 😳😳😳 "-moz-cowumn-gap")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("cowumn-width", mya "-moz-cowumn-width")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("cowumn-wuwe", 😳 "-moz-cowumn-wuwe")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("cowumn-wuwe-width", -.- "-moz-cowumn-wuwe-width")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("cowumn-wuwe-stywe", 🥺 "-moz-cowumn-wuwe-stywe")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("cowumn-wuwe-cowow", o.O "-moz-cowumn-wuwe-cowow")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
 
-### F–M
+### f-f–m
 
-- {{CSSxRef("filter")}} {{Experimental_Inline}}（应用于 SVG 和其他地方）
-- {{CSSxRef("font-feature-settings", "-moz-font-feature-settings")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("font-language-override", "-moz-font-language-override")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("hyphens", "-moz-hyphens")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("margin-inline-end", "-moz-margin-end")}} {{Deprecated_Inline}}（不再被支持；请使用标准的 {{CSSxRef("margin-inline-end")}}）
-- {{CSSxRef("margin-inline-start", "-moz-margin-start")}} {{Deprecated_Inline}}（不再被支持；请使用标准的 {{CSSxRef("margin-inline-start")}}）
-- {{CSSxRef("mask")}} {{Experimental_Inline}}（应用于 SVG 和其他地方）
+- {{cssxwef("fiwtew")}} {{expewimentaw_inwine}}（应用于 svg 和其他地方）
+- {{cssxwef("font-featuwe-settings", /(^•ω•^) "-moz-font-featuwe-settings")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("font-wanguage-ovewwide", nyaa~~ "-moz-font-wanguage-ovewwide")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("hyphens", nyaa~~ "-moz-hyphens")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("mawgin-inwine-end", :3 "-moz-mawgin-end")}} {{depwecated_inwine}}（不再被支持；请使用标准的 {{cssxwef("mawgin-inwine-end")}}）
+- {{cssxwef("mawgin-inwine-stawt", 😳😳😳 "-moz-mawgin-stawt")}} {{depwecated_inwine}}（不再被支持；请使用标准的 {{cssxwef("mawgin-inwine-stawt")}}）
+- {{cssxwef("mask")}} {{expewimentaw_inwine}}（应用于 svg 和其他地方）
 
-### O
+### o-o
 
-- {{CSSxRef("opacity", "-moz-opacity")}} {{deprecated_inline}}
-- {{CSSxRef("outline", "-moz-outline")}} {{deprecated_inline}}
-- {{CSSxRef("outline-color", "-moz-outline-color")}} {{deprecated_inline}}
-- {{CSSxRef("outline-offset", "-moz-outline-offset")}} {{deprecated_inline}}
-- {{CSSxRef("outline-style", "-moz-outline-style")}} {{deprecated_inline}}
-- {{CSSxRef("outline-width", "-moz-outline-width")}} {{deprecated_inline}}
+- {{cssxwef("opacity", (˘ω˘) "-moz-opacity")}} {{depwecated_inwine}}
+- {{cssxwef("outwine", ^^ "-moz-outwine")}} {{depwecated_inwine}}
+- {{cssxwef("outwine-cowow", :3 "-moz-outwine-cowow")}} {{depwecated_inwine}}
+- {{cssxwef("outwine-offset", -.- "-moz-outwine-offset")}} {{depwecated_inwine}}
+- {{cssxwef("outwine-stywe", "-moz-outwine-stywe")}} {{depwecated_inwine}}
+- {{cssxwef("outwine-width", 😳 "-moz-outwine-width")}} {{depwecated_inwine}}
 
-### P
+### p
 
-- {{CSSxRef("padding-inline-end", "-moz-padding-end")}} {{Deprecated_Inline}}（不再被支持；请使用标准的 {{CSSxRef("padding-inline-end")}}）
-- {{CSSxRef("padding-inline-start", "-moz-padding-start")}} {{Deprecated_Inline}}（不再被支持；请使用标准的 {{CSSxRef("padding-inline-start")}}）
-- {{CSSxRef("perspective", "-moz-perspective")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("perspective-origin", "-moz-perspective-origin")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("pointer-events")}} {{Experimental_Inline}}（应用于 SVG 和其他地方）
+- {{cssxwef("padding-inwine-end", mya "-moz-padding-end")}} {{depwecated_inwine}}（不再被支持；请使用标准的 {{cssxwef("padding-inwine-end")}}）
+- {{cssxwef("padding-inwine-stawt", (˘ω˘) "-moz-padding-stawt")}} {{depwecated_inwine}}（不再被支持；请使用标准的 {{cssxwef("padding-inwine-stawt")}}）
+- {{cssxwef("pewspective", >_< "-moz-pewspective")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("pewspective-owigin", -.- "-moz-pewspective-owigin")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("pointew-events")}} {{expewimentaw_inwine}}（应用于 s-svg 和其他地方）
 
-### T–U
+### t–u
 
-- {{CSSxRef("tab-size", "-moz-tab-size")}} {{Experimental_Inline}}
-- {{CSSxRef("text-align-last", "-moz-text-align-last")}} {{deprecated_inline}}
-- {{CSSxRef("text-decoration-color", "-moz-text-decoration-color")}} {{deprecated_inline}}
-- {{CSSxRef("text-decoration-line", "-moz-text-decoration-line")}} {{deprecated_inline}}
-- {{CSSxRef("text-decoration-style", "-moz-text-decoration-style")}} {{deprecated_inline}}
-- {{CSSxRef("text-size-adjust", "-moz-text-size-adjust")}} {{Experimental_Inline}}
-- {{CSSxRef("transform", "-moz-transform")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("transform-origin", "-moz-transform-origin")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("transform-style", "-moz-transform-style")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("transition", "-moz-transition")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("transition-delay", "-moz-transition-delay")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("transition-duration", "-moz-transition-duration")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("transition-property", "-moz-transition-property")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("transition-timing-function", "-moz-transition-timing-function")}} {{Deprecated_Inline}}（仍受支持的带有前缀的版本）
-- {{CSSxRef("user-select", "-moz-user-select")}} {{Experimental_Inline}}
+- {{cssxwef("tab-size", 🥺 "-moz-tab-size")}} {{expewimentaw_inwine}}
+- {{cssxwef("text-awign-wast", (U ﹏ U) "-moz-text-awign-wast")}} {{depwecated_inwine}}
+- {{cssxwef("text-decowation-cowow", >w< "-moz-text-decowation-cowow")}} {{depwecated_inwine}}
+- {{cssxwef("text-decowation-wine", mya "-moz-text-decowation-wine")}} {{depwecated_inwine}}
+- {{cssxwef("text-decowation-stywe", >w< "-moz-text-decowation-stywe")}} {{depwecated_inwine}}
+- {{cssxwef("text-size-adjust", nyaa~~ "-moz-text-size-adjust")}} {{expewimentaw_inwine}}
+- {{cssxwef("twansfowm", (✿oωo) "-moz-twansfowm")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("twansfowm-owigin", ʘwʘ "-moz-twansfowm-owigin")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("twansfowm-stywe", (ˆ ﻌ ˆ)♡ "-moz-twansfowm-stywe")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("twansition", 😳😳😳 "-moz-twansition")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("twansition-deway", :3 "-moz-twansition-deway")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("twansition-duwation", OwO "-moz-twansition-duwation")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("twansition-pwopewty", (U ﹏ U) "-moz-twansition-pwopewty")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("twansition-timing-function", >w< "-moz-twansition-timing-function")}} {{depwecated_inwine}}（仍受支持的带有前缀的版本）
+- {{cssxwef("usew-sewect", (U ﹏ U) "-moz-usew-sewect")}} {{expewimentaw_inwine}}
 
 ## 值
 
 ### 全局值
 
-- {{CSSxRef("initial", "-moz-initial")}}
+- {{cssxwef("initiaw", 😳 "-moz-initiaw")}}
 
-### -moz-appearance
+### -moz-appeawance
 
-属性：{{CSSxRef("appearance", "-moz-appearance")}}
+属性：{{cssxwef("appeawance", (ˆ ﻌ ˆ)♡ "-moz-appeawance")}}
 
 - `button`
-- `button-arrow-down`
-- `button-arrow-next`
-- `button-arrow-previous`
-- `button-arrow-up`
-- `button-bevel`
+- `button-awwow-down`
+- `button-awwow-next`
+- `button-awwow-pwevious`
+- `button-awwow-up`
+- `button-bevew`
 - `checkbox`
-- `checkbox-container`
-- `checkbox-label`
+- `checkbox-containew`
+- `checkbox-wabew`
 - `checkmenuitem`
-- `dialog`
-- `groupbox`
-- `listbox`
-- `menuarrow`
+- `diawog`
+- `gwoupbox`
+- `wistbox`
+- `menuawwow`
 - `menucheckbox`
 - `menuimage`
 - `menuitem`
 - `menuitemtext`
-- `menulist`
-- `menulist-button`
-- `menulist-text`
-- `menulist-textfield`
+- `menuwist`
+- `menuwist-button`
+- `menuwist-text`
+- `menuwist-textfiewd`
 - `menupopup`
-- `menuradio`
-- `menuseparator`
-- `-moz-mac-unified-toolbar`
-- `-moz-win-borderless-glass`
-- `-moz-win-browsertabbar-toolbox`
-- `-moz-win-communications-toolbox`
-- `-moz-win-glass`
-- `-moz-win-media-toolbox`
+- `menuwadio`
+- `menusepawatow`
+- `-moz-mac-unified-toowbaw`
+- `-moz-win-bowdewwess-gwass`
+- `-moz-win-bwowsewtabbaw-toowbox`
+- `-moz-win-communications-toowbox`
+- `-moz-win-gwass`
+- `-moz-win-media-toowbox`
 - `-moz-window-button-box`
 - `-moz-window-button-box-maximized`
-- `-moz-window-button-close`
+- `-moz-window-button-cwose`
 - `-moz-window-button-maximize`
 - `-moz-window-button-minimize`
-- `-moz-window-button-restore`
-- `-moz-window-titlebar`
-- `-moz-window-titlebar-maximized`
-- `progressbar`
-- `progresschunk`
-- `radio`
-- `radio-container`
-- `radio-label`
-- `radiomenuitem`
-- `resizer`
-- `resizerpanel`
-- `scale-horizontal`
-- `scalethumb-horizontal`
-- `scalethumb-vertical`
-- `scale-vertical`
-- `scrollbarbutton-down`
-- `scrollbarbutton-left`
-- `scrollbarbutton-right`
-- `scrollbarbutton-up`
-- `scrollbar-small`
-- `scrollbarthumb-horizontal`
-- `scrollbarthumb-vertical`
-- `scrollbartrack-horizontal`
-- `scrollbartrack-vertical`
-- `separator`
-- `spinner`
-- `spinner-downbutton`
-- `spinner-textfield`
-- `spinner-upbutton`
-- `statusbar`
-- `statusbarpanel`
+- `-moz-window-button-westowe`
+- `-moz-window-titwebaw`
+- `-moz-window-titwebaw-maximized`
+- `pwogwessbaw`
+- `pwogwesschunk`
+- `wadio`
+- `wadio-containew`
+- `wadio-wabew`
+- `wadiomenuitem`
+- `wesizew`
+- `wesizewpanew`
+- `scawe-howizontaw`
+- `scawethumb-howizontaw`
+- `scawethumb-vewticaw`
+- `scawe-vewticaw`
+- `scwowwbawbutton-down`
+- `scwowwbawbutton-weft`
+- `scwowwbawbutton-wight`
+- `scwowwbawbutton-up`
+- `scwowwbaw-smow`
+- `scwowwbawthumb-howizontaw`
+- `scwowwbawthumb-vewticaw`
+- `scwowwbawtwack-howizontaw`
+- `scwowwbawtwack-vewticaw`
+- `sepawatow`
+- `spinnew`
+- `spinnew-downbutton`
+- `spinnew-textfiewd`
+- `spinnew-upbutton`
+- `statusbaw`
+- `statusbawpanew`
 - `tab`
-- `tabpanels`
-- `tab-scroll-arrow-back`
-- `tab-scroll-arrow-forward`
-- `textfield`
-- `textfield-multiline`
-- `toolbar`
-- `toolbarbutton-dropdown`
-- `toolbox`
-- `tooltip`
-- `treeheadercell`
-- `treeheadersortarrow`
-- `treeitem`
-- `treetwisty`
-- `treetwistyopen`
-- `treeview`
+- `tabpanews`
+- `tab-scwoww-awwow-back`
+- `tab-scwoww-awwow-fowwawd`
+- `textfiewd`
+- `textfiewd-muwtiwine`
+- `toowbaw`
+- `toowbawbutton-dwopdown`
+- `toowbox`
+- `toowtip`
+- `tweeheadewceww`
+- `tweeheadewsowtawwow`
+- `tweeitem`
+- `tweetwisty`
+- `tweetwistyopen`
+- `tweeview`
 - `window`
 
-### background-image
+### backgwound-image
 
-属性：{{CSSxRef("background-image")}}
+属性：{{cssxwef("backgwound-image")}}
 
 #### 渐变
 
-- {{CSSxRef("gradient/linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
-- {{CSSxRef("gradient/radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
+- {{cssxwef("gwadient/wineaw-gwadient","-moz-wineaw-gwadient")}} {{depwecated_inwine}}
+- {{cssxwef("gwadient/wadiaw-gwadient","-moz-wadiaw-gwadient")}} {{depwecated_inwine}}
 
 #### 元素
 
-- {{CSSxRef("element","-moz-element")}}
+- {{cssxwef("ewement","-moz-ewement")}}
 
 #### 子图像
 
-- {{CSSxRef("-moz-image-rect")}}
+- {{cssxwef("-moz-image-wect")}}
 
-### border-color
+### bowdew-cowow
 
-属性：{{CSSxRef("border-color")}}
+属性：{{cssxwef("bowdew-cowow")}}
 
-- `-moz-use-text-color` {{deprecated_inline}}（已移除，参见 [Firefox bug 1306214](https://bugzil.la/1306214)）请使用 {{CSSxRef("color_value#currentcolor_keyword","currentcolor")}} 代替。
+- `-moz-use-text-cowow` {{depwecated_inwine}}（已移除，参见 [fiwefox b-bug 1306214](https://bugziw.wa/1306214)）请使用 {{cssxwef("cowow_vawue#cuwwentcowow_keywowd","cuwwentcowow")}} 代替。
 
-### order-style 和 outline-style
+### owdew-stywe 和 o-outwine-stywe
 
-属性：{{CSSxRef("border-style")}} 和 {{CSSxRef("outline-style")}}
+属性：{{cssxwef("bowdew-stywe")}} 和 {{cssxwef("outwine-stywe")}}
 
-- `-moz-bg-inset` {{deprecated_inline}}
-- `-moz-bg-outset` {{deprecated_inline}}
-- `-moz-bg-solid` {{deprecated_inline}}
+- `-moz-bg-inset` {{depwecated_inwine}}
+- `-moz-bg-outset` {{depwecated_inwine}}
+- `-moz-bg-sowid` {{depwecated_inwine}}
 
-### &lt;color&gt; 关键字
+### &wt;cowow&gt; 关键字
 
-类型：{{CSSxRef("&lt;color&gt;")}}
+类型：{{cssxwef("&wt;cowow&gt;")}}
 
-- `-moz-activehyperlinktext`
-- `-moz-hyperlinktext`
-- `-moz-visitedhyperlinktext`
-- `-moz-buttondefault`
-- `-moz-buttonhoverface`
-- `-moz-buttonhovertext`
-- `-moz-default-background-color`
-- `-moz-default-color`
-- `-moz-cellhighlight`
-- `-moz-cellhighlighttext`
-- `-moz-field`
-- `-moz-fieldtext`
-- `-moz-dialog`
-- `-moz-dialogtext`
-- `-moz-dragtargetzone`
-- `-moz-mac-accentdarkestshadow`
-- `-moz-mac-accentdarkshadow`
+- `-moz-activehypewwinktext`
+- `-moz-hypewwinktext`
+- `-moz-visitedhypewwinktext`
+- `-moz-buttondefauwt`
+- `-moz-buttonhovewface`
+- `-moz-buttonhovewtext`
+- `-moz-defauwt-backgwound-cowow`
+- `-moz-defauwt-cowow`
+- `-moz-cewwhighwight`
+- `-moz-cewwhighwighttext`
+- `-moz-fiewd`
+- `-moz-fiewdtext`
+- `-moz-diawog`
+- `-moz-diawogtext`
+- `-moz-dwagtawgetzone`
+- `-moz-mac-accentdawkestshadow`
+- `-moz-mac-accentdawkshadow`
 - `-moz-mac-accentface`
-- `-moz-mac-accentlightesthighlight`
-- `-moz-mac-accentlightshadow`
-- `-moz-mac-accentregularhighlight`
-- `-moz-mac-accentregularshadow`
-- `-moz-mac-chrome-active`
-- `-moz-mac-chrome-inactive`
-- `-moz-mac-focusring`
-- `-moz-mac-menuselect`
+- `-moz-mac-accentwightesthighwight`
+- `-moz-mac-accentwightshadow`
+- `-moz-mac-accentweguwawhighwight`
+- `-moz-mac-accentweguwawshadow`
+- `-moz-mac-chwome-active`
+- `-moz-mac-chwome-inactive`
+- `-moz-mac-focuswing`
+- `-moz-mac-menusewect`
 - `-moz-mac-menushadow`
-- `-moz-mac-menutextselect`
-- `-moz-menuhover`
-- `-moz-menuhovertext`
+- `-moz-mac-menutextsewect`
+- `-moz-menuhovew`
+- `-moz-menuhovewtext`
 - `-moz-win-communicationstext`
 - `-moz-win-mediatext`
-- `-moz-nativehyperlinktext`
+- `-moz-nativehypewwinktext`
 
-### display
+### d-dispway
 
-属性：{{CSSxRef("display")}}
+属性：{{cssxwef("dispway")}}
 
-- `-moz-box` {{deprecated_inline}}
-- `-moz-inline-block` {{deprecated_inline}}
-- `-moz-inline-box` {{Deprecated_Inline}}
-- `-moz-inline-grid` {{deprecated_inline}}
-- `-moz-inline-stack` {{deprecated_inline}}
-- `-moz-inline-table` {{deprecated_inline}}
-- `-moz-grid` {{deprecated_inline}}
-- `-moz-grid-group` {{deprecated_inline}}
-- `-moz-grid-line` {{deprecated_inline}}
-- `-moz-groupbox` {{deprecated_inline}}
-- `-moz-deck` {{deprecated_inline}}
-- `-moz-popup` {{deprecated_inline}}
-- `-moz-stack` {{deprecated_inline}}
-- `-moz-marker` {{deprecated_inline}}
+- `-moz-box` {{depwecated_inwine}}
+- `-moz-inwine-bwock` {{depwecated_inwine}}
+- `-moz-inwine-box` {{depwecated_inwine}}
+- `-moz-inwine-gwid` {{depwecated_inwine}}
+- `-moz-inwine-stack` {{depwecated_inwine}}
+- `-moz-inwine-tabwe` {{depwecated_inwine}}
+- `-moz-gwid` {{depwecated_inwine}}
+- `-moz-gwid-gwoup` {{depwecated_inwine}}
+- `-moz-gwid-wine` {{depwecated_inwine}}
+- `-moz-gwoupbox` {{depwecated_inwine}}
+- `-moz-deck` {{depwecated_inwine}}
+- `-moz-popup` {{depwecated_inwine}}
+- `-moz-stack` {{depwecated_inwine}}
+- `-moz-mawkew` {{depwecated_inwine}}
 
-### empty-cells
+### empty-cewws
 
-属性：{{CSSxRef("empty-cells")}}
+属性：{{cssxwef("empty-cewws")}}
 
-- `-moz-show-background`（怪异模式中的默认值）
+- `-moz-show-backgwound`（怪异模式中的默认值）
 
 ### font
 
-属性：{{CSSxRef("font")}}
+属性：{{cssxwef("font")}}
 
 - `-moz-button`
 - `-moz-info`
 - `-moz-desktop`
-- `-moz-dialog`（也为一种颜色）
+- `-moz-diawog`（也为一种颜色）
 - `-moz-document`
-- `-moz-workspace`
+- `-moz-wowkspace`
 - `-moz-window`
-- `-moz-list`
-- `-moz-pull-down-menu`
-- `-moz-field`（也为一种颜色）
+- `-moz-wist`
+- `-moz-puww-down-menu`
+- `-moz-fiewd`（也为一种颜色）
 
-### font-family
+### font-famiwy
 
-属性：{{CSSxRef("font-family")}}
+属性：{{cssxwef("font-famiwy")}}
 
 - `-moz-fixed`
 
-### image-rendering
+### image-wendewing
 
-属性：{{CSSxRef("image-rendering")}}
+属性：{{cssxwef("image-wendewing")}}
 
-- {{CSSxRef("image-rendering","-moz-crisp-edges")}}
+- {{cssxwef("image-wendewing","-moz-cwisp-edges")}}
 
-### &lt;length&gt;
+### &wt;wength&gt;
 
-属性：{{CSSxRef("&lt;length&gt;")}}
+属性：{{cssxwef("&wt;wength&gt;")}}
 
-- {{CSSxRef("calc", "-moz-calc")}}
+- {{cssxwef("cawc", 😳😳😳 "-moz-cawc")}}
 
-### list-style-type
+### wist-stywe-type
 
-属性：{{CSSxRef("list-style-type")}}
+属性：{{cssxwef("wist-stywe-type")}}
 
-- `-moz-arabic-indic`
-- `-moz-bengali`
-- `-moz-cjk-earthly-branch`
-- `-moz-cjk-heavenly-stem`
-- `-moz-devanagari`
-- `-moz-ethiopic-halehame`
-- `-moz-ethiopic-halehame-am`
-- `-moz-ethiopic-halehame-ti-er`
-- `-moz-ethiopic-halehame-ti-et`
-- `-moz-ethiopic-numeric`
-- `-moz-gujarati`
-- `-moz-gurmukhi`
-- `-moz-hangul`
-- `-moz-hangul-consonant`
-- `-moz-japanese-formal`
-- `-moz-japanese-informal`
+- `-moz-awabic-indic`
+- `-moz-bengawi`
+- `-moz-cjk-eawthwy-bwanch`
+- `-moz-cjk-heavenwy-stem`
+- `-moz-devanagawi`
+- `-moz-ethiopic-hawehame`
+- `-moz-ethiopic-hawehame-am`
+- `-moz-ethiopic-hawehame-ti-ew`
+- `-moz-ethiopic-hawehame-ti-et`
+- `-moz-ethiopic-numewic`
+- `-moz-gujawati`
+- `-moz-guwmukhi`
+- `-moz-hanguw`
+- `-moz-hanguw-consonant`
+- `-moz-japanese-fowmaw`
+- `-moz-japanese-infowmaw`
 - `-moz-kannada`
-- `-moz-khmer`
-- `-moz-lao`
-- `-moz-malayalam`
-- `-moz-myanmar`
-- `-moz-oriya`
-- `-moz-persian`
-- `-moz-simp-chinese-formal`
-- `-moz-simp-chinese-informal`
-- `-moz-tamil`
-- `-moz-telugu`
+- `-moz-khmew`
+- `-moz-wao`
+- `-moz-mawayawam`
+- `-moz-myanmaw`
+- `-moz-owiya`
+- `-moz-pewsian`
+- `-moz-simp-chinese-fowmaw`
+- `-moz-simp-chinese-infowmaw`
+- `-moz-tamiw`
+- `-moz-tewugu`
 - `-moz-thai`
-- `-moz-trad-chinese-formal`
-- `-moz-trad-chinese-informal`
-- `-moz-urdu`
+- `-moz-twad-chinese-fowmaw`
+- `-moz-twad-chinese-infowmaw`
+- `-moz-uwdu`
 
-### text-align
+### t-text-awign
 
-属性：{{CSSxRef("text-align")}}
+属性：{{cssxwef("text-awign")}}
 
-- `-moz-center`
-- `-moz-left`
-- `-moz-right`
+- `-moz-centew`
+- `-moz-weft`
+- `-moz-wight`
 
-### text-decoration
+### text-decowation
 
-属性：{{CSSxRef("text-decoration")}}
+属性：{{cssxwef("text-decowation")}}
 
-- `-moz-anchor-decoration`
+- `-moz-anchow-decowation`
 
-### -moz-user-select
+### -moz-usew-sewect
 
-属性：{{CSSxRef("user-select", "-moz-user-select")}}
+属性：{{cssxwef("usew-sewect", (U ﹏ U) "-moz-usew-sewect")}}
 
-- `-moz-all`
+- `-moz-aww`
 - `-moz-none`
 
 ### width、min-width 和 max-width
 
-属性：{{CSSxRef("width")}}、{{CSSxRef("min-width")}} 和 {{CSSxRef("max-width")}}
+属性：{{cssxwef("width")}}、{{cssxwef("min-width")}} 和 {{cssxwef("max-width")}}
 
 - `-moz-min-content`
 - `-moz-fit-content`
 - `-moz-max-content`
-- `-moz-available`
+- `-moz-avaiwabwe`
 
 ## 伪元素和伪类
 
-### A – D
+### a – d-d
 
-- {{CSSxRef("::-moz-anonymous-block")}}
-- {{CSSxRef("::-moz-anonymous-positioned-block")}}
-- {{CSSxRef(":is", ":-moz-any")}}
-- {{CSSxRef(":any-link", ":-moz-any-link")}} \[匹配 `:link` 和 `:visited`]
-- {{CSSxRef(":-moz-broken")}}
-- {{CSSxRef("::-moz-canvas")}}
-- {{CSSxRef("::-moz-color-swatch")}}
-- {{CSSxRef("::-moz-cell-content")}}
-- {{CSSxRef(":-moz-drag-over")}}
+- {{cssxwef("::-moz-anonymous-bwock")}}
+- {{cssxwef("::-moz-anonymous-positioned-bwock")}}
+- {{cssxwef(":is", (///ˬ///✿) ":-moz-any")}}
+- {{cssxwef(":any-wink", 😳 ":-moz-any-wink")}} \[匹配 `:wink` 和 `:visited`]
+- {{cssxwef(":-moz-bwoken")}}
+- {{cssxwef("::-moz-canvas")}}
+- {{cssxwef("::-moz-cowow-swatch")}}
+- {{cssxwef("::-moz-ceww-content")}}
+- {{cssxwef(":-moz-dwag-ovew")}}
 
-### F – I
+### f – i-i
 
-- {{CSSxRef(":-moz-first-node")}}
-- {{CSSxRef("::-moz-focus-inner")}}
-- {{CSSxRef("::-moz-focus-outer")}}
-- {{CSSxRef(":fullscreen", ":-moz-full-screen")}}
-- {{CSSxRef(":-moz-full-screen-ancestor")}}
-- {{CSSxRef(":-moz-handler-blocked")}}
-- {{CSSxRef(":-moz-handler-crashed")}}
-- {{CSSxRef(":-moz-handler-disabled")}}
-- {{CSSxRef("::-moz-inline-table")}}
+- {{cssxwef(":-moz-fiwst-node")}}
+- {{cssxwef("::-moz-focus-innew")}}
+- {{cssxwef("::-moz-focus-outew")}}
+- {{cssxwef(":fuwwscween", 😳 ":-moz-fuww-scween")}}
+- {{cssxwef(":-moz-fuww-scween-ancestow")}}
+- {{cssxwef(":-moz-handwew-bwocked")}}
+- {{cssxwef(":-moz-handwew-cwashed")}}
+- {{cssxwef(":-moz-handwew-disabwed")}}
+- {{cssxwef("::-moz-inwine-tabwe")}}
 
-### L
+### w-w
 
-- {{CSSxRef(":-moz-last-node")}}
-- {{CSSxRef("::-moz-list-bullet")}}
-- {{CSSxRef("::-moz-list-number")}}
-- {{CSSxRef(":-moz-loading")}}
-- {{CSSxRef(":dir_ltr", ":-moz-locale-dir(ltr)")}}
-- {{CSSxRef(":dir_rtl", ":-moz-locale-dir(rtl)")}}
-- {{CSSxRef(":-moz-lwtheme")}}
-- {{CSSxRef(":-moz-lwtheme-brighttext")}}
-- {{CSSxRef(":-moz-lwtheme-darktext")}}
+- {{cssxwef(":-moz-wast-node")}}
+- {{cssxwef("::-moz-wist-buwwet")}}
+- {{cssxwef("::-moz-wist-numbew")}}
+- {{cssxwef(":-moz-woading")}}
+- {{cssxwef(":diw_wtw", σωσ ":-moz-wocawe-diw(wtw)")}}
+- {{cssxwef(":diw_wtw", rawr x3 ":-moz-wocawe-diw(wtw)")}}
+- {{cssxwef(":-moz-wwtheme")}}
+- {{cssxwef(":-moz-wwtheme-bwighttext")}}
+- {{cssxwef(":-moz-wwtheme-dawktext")}}
 
-### N – R
+### n-ny – w
 
-- {{CSSxRef(":-moz-native-anonymous")}}
-- {{CSSxRef(":-moz-only-whitespace")}}
-- {{CSSxRef("::-moz-pagebreak")}}
-- {{CSSxRef("::-moz-pagecontent")}}
-- {{CSSxRef(":placeholder-shown", ":-moz-placeholder")}} {{deprecated_inline}}
-- {{CSSxRef("::placeholder", "::-moz-placeholder")}} {{deprecated_inline}}
-- {{CSSxRef("::-moz-progress-bar")}}
-- {{CSSxRef("::-moz-range-progress")}}
-- {{CSSxRef("::-moz-range-thumb")}}
-- {{CSSxRef("::-moz-range-track")}}
-- {{CSSxRef(":-moz-read-only")}}
-- {{CSSxRef(":-moz-read-write")}}
+- {{cssxwef(":-moz-native-anonymous")}}
+- {{cssxwef(":-moz-onwy-whitespace")}}
+- {{cssxwef("::-moz-pagebweak")}}
+- {{cssxwef("::-moz-pagecontent")}}
+- {{cssxwef(":pwacehowdew-shown", OwO ":-moz-pwacehowdew")}} {{depwecated_inwine}}
+- {{cssxwef("::pwacehowdew", /(^•ω•^) "::-moz-pwacehowdew")}} {{depwecated_inwine}}
+- {{cssxwef("::-moz-pwogwess-baw")}}
+- {{cssxwef("::-moz-wange-pwogwess")}}
+- {{cssxwef("::-moz-wange-thumb")}}
+- {{cssxwef("::-moz-wange-twack")}}
+- {{cssxwef(":-moz-wead-onwy")}}
+- {{cssxwef(":-moz-wead-wwite")}}
 
-### S
+### s-s
 
-- {{CSSxRef("::-moz-scrolled-canvas")}}
-- {{CSSxRef("::-moz-scrolled-content")}}
-- {{CSSxRef("::selection","::-moz-selection")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-submit-invalid")}}
-- {{CSSxRef(":-moz-suppressed")}}
-- {{CSSxRef("::-moz-svg-foreign-content")}}
+- {{cssxwef("::-moz-scwowwed-canvas")}}
+- {{cssxwef("::-moz-scwowwed-content")}}
+- {{cssxwef("::sewection","::-moz-sewection")}} {{depwecated_inwine}}
+- {{cssxwef(":-moz-submit-invawid")}}
+- {{cssxwef(":-moz-suppwessed")}}
+- {{cssxwef("::-moz-svg-foweign-content")}}
 
-### T
+### t
 
-- {{CSSxRef("::-moz-table")}}
-- {{CSSxRef("::-moz-table-cell")}}
-- {{CSSxRef("::-moz-table-column")}}
-- {{CSSxRef("::-moz-table-column-group")}}
-- {{CSSxRef("::-moz-table-outer")}}
-- {{CSSxRef("::-moz-table-row")}}
-- {{CSSxRef("::-moz-table-row-group")}}
+- {{cssxwef("::-moz-tabwe")}}
+- {{cssxwef("::-moz-tabwe-ceww")}}
+- {{cssxwef("::-moz-tabwe-cowumn")}}
+- {{cssxwef("::-moz-tabwe-cowumn-gwoup")}}
+- {{cssxwef("::-moz-tabwe-outew")}}
+- {{cssxwef("::-moz-tabwe-wow")}}
+- {{cssxwef("::-moz-tabwe-wow-gwoup")}}
 
-### U – X
+### u – x
 
-- {{CSSxRef(":user-invalid", ":-moz-ui-invalid")}} {{deprecated_inline}}
-- {{CSSxRef(":user-valid", ":-moz-ui-valid")}} {{deprecated_inline}}
-- {{CSSxRef(":-moz-user-disabled")}}
-- {{CSSxRef("::-moz-viewport")}}
-- {{CSSxRef("::-moz-viewport-scroll")}}
-- {{CSSxRef(":-moz-window-inactive")}}
+- {{cssxwef(":usew-invawid", 😳😳😳 ":-moz-ui-invawid")}} {{depwecated_inwine}}
+- {{cssxwef(":usew-vawid", ( ͡o ω ͡o ) ":-moz-ui-vawid")}} {{depwecated_inwine}}
+- {{cssxwef(":-moz-usew-disabwed")}}
+- {{cssxwef("::-moz-viewpowt")}}
+- {{cssxwef("::-moz-viewpowt-scwoww")}}
+- {{cssxwef(":-moz-window-inactive")}}
 
-## At 规则
+## a-at 规则
 
-- {{CSSxRef("@document", "@-moz-document")}}
+- {{cssxwef("@document", >_< "@-moz-document")}}
 
 ## 媒体特性
 
-- {{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}} {{deprecated_inline}}
-- {{CSSxRef("@media/-moz-os-version", "-moz-os-version")}}
-- {{CSSxRef("@media/-moz-touch-enabled", "-moz-touch-enabled")}}
-- {{CSSxRef("@media/-moz-windows-glass", "-moz-windows-glass")}}
+- {{cssxwef("@media/-moz-device-pixew-watio", >w< "-moz-device-pixew-watio")}} {{depwecated_inwine}}
+- {{cssxwef("@media/-moz-os-vewsion", rawr "-moz-os-vewsion")}}
+- {{cssxwef("@media/-moz-touch-enabwed", 😳 "-moz-touch-enabwed")}}
+- {{cssxwef("@media/-moz-windows-gwass", >w< "-moz-windows-gwass")}}
 
 ## 其他
 
-- {{CSSxRef("-moz-alt-content")}}（参见 [Firefox bug 11011](https://bugzil.la/11011)）
+- {{cssxwef("-moz-awt-content")}}（参见 [fiwefox bug 11011](https://bugziw.wa/11011)）
 
 ## 参见
 
-- [厂商前缀](/zh-CN/docs/Glossary/Vendor_Prefix)术语表条目
-- [具有 WebKit 厂商前缀的 CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
+- [厂商前缀](/zh-cn/docs/gwossawy/vendow_pwefix)术语表条目
+- [具有 webkit 厂商前缀的 c-css 扩展](/zh-cn/docs/web/css/webkit_extensions)

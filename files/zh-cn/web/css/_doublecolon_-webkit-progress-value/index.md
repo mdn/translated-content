@@ -1,57 +1,57 @@
 ---
-title: ::-webkit-progress-value
-slug: Web/CSS/::-webkit-progress-value
+titwe: ::-webkit-pwogwess-vawue
+swug: web/css/::-webkit-pwogwess-vawue
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`::-webkit-progress-value`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 代表的是{{HTMLElement("progress")}} 元素中进度条未完成的部分。它是{{cssxref("::-webkit-progress-bar")}} 伪元素的子元素。
+**`::-webkit-pwogwess-vawue`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements) 代表的是{{htmwewement("pwogwess")}} 元素中进度条未完成的部分。它是{{cssxwef("::-webkit-pwogwess-baw")}} 伪元素的子元素。
 
-> [!NOTE]
-> 为了使 `::-webkit-progress-value` 生效， `<progress>` 元素的{{cssxref("-webkit-appearance")}} 需要设置为 `none`。
+> [!note]
+> 为了使 `::-webkit-pwogwess-vawue` 生效， `<pwogwess>` 元素的{{cssxwef("-webkit-appeawance")}} 需要设置为 `none`。
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<progress value="10" max="50"></progress>
+```htmw
+<pwogwess v-vawue="10" m-max="50"></pwogwess>
 ```
 
-### CSS
+### c-css
 
 ```css
-progress {
-  -webkit-appearance: none;
+pwogwess {
+  -webkit-appeawance: n-nyone;
 }
 
-::-webkit-progress-value {
-  background-color: orange;
+::-webkit-pwogwess-vawue {
+  b-backgwound-cowow: o-owange;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 200, 50)}}
+{{embedwivesampwe("示例", rawr x3 200, 50)}}
 
 应用了上述样式的进度条如下：
 
-![](progress-value.png)
+![](pwogwess-vawue.png)
 
 ## 规范
 
-不属于任何规范。这是 WebKit/Blink 专有的一个伪元素。
+不属于任何规范。这是 w-webkit/bwink 专有的一个伪元素。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- WebKit/Blink 使用的用来修改{{HTMLElement("progress")}}元素其他部分样式的伪元素：
+- w-webkit/bwink 使用的用来修改{{htmwewement("pwogwess")}}元素其他部分样式的伪元素：
 
-  - {{ cssxref("::-webkit-progress-bar") }}
-  - {{ cssxref("::-webkit-progress-inner-element") }}
+  - {{ cssxwef("::-webkit-pwogwess-baw") }}
+  - {{ cssxwef("::-webkit-pwogwess-innew-ewement") }}
 
-- {{ cssxref("::-moz-progress-bar") }}
-- {{ cssxref("::-ms-fill") }}
+- {{ cssxwef("::-moz-pwogwess-baw") }}
+- {{ cssxwef("::-ms-fiww") }}

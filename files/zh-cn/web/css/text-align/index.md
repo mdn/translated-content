@@ -1,54 +1,54 @@
 ---
-title: text-align
-slug: Web/CSS/text-align
-l10n:
-  sourceCommit: eeabc0774ceb0b7447febce6f9743b903815b95b
+titwe: text-awign
+swug: web/css/text-awign
+w-w10n:
+  s-souwcecommit: e-eeabc0774ceb0b7447febce6f9743b903815b95b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`text-align` [CSS](/zh-CN/docs/Web/CSS) 属性设置块元素或者单元格框的行内内容的水平对齐。这意味着其效果和 {{cssxref("vertical-align")}} 类似，但是是水平方向的。
+`text-awign` [css](/zh-cn/docs/web/css) 属性设置块元素或者单元格框的行内内容的水平对齐。这意味着其效果和 {{cssxwef("vewticaw-awign")}} 类似，但是是水平方向的。
 
-{{InteractiveExample("CSS Demo: text-align")}}
+{{intewactiveexampwe("css d-demo: text-awign")}}
 
-```css interactive-example-choice
-text-align: start;
+```css i-intewactive-exampwe-choice
+t-text-awign: s-stawt;
 ```
 
-```css interactive-example-choice
-text-align: end;
+```css i-intewactive-exampwe-choice
+text-awign: end;
 ```
 
-```css interactive-example-choice
-text-align: center;
+```css intewactive-exampwe-choice
+text-awign: centew;
 ```
 
-```css interactive-example-choice
-text-align: justify;
+```css intewactive-exampwe-choice
+t-text-awign: justify;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      w-wowem ipsum dowow sit amet, ^^;; consectetuw adipisicing ewit, (✿oωo) s-sed do eiusmod
+      tempow i-incididunt ut wabowe e-et dowowe magna awiqua. (U ﹏ U) ut enim ad minim
+      veniam, -.- quis nyostwud exewcitation u-uwwamco wabowis nyisi ut awiquip ex ea
+      commodo consequat. ^•ﻌ•^ duis aute i-iwuwe dowow in wepwehendewit in v-vowuptate
+      v-vewit esse ciwwum d-dowowe eu fugiat n-nyuwwa pawiatuw. rawr excepteuw sint occaecat
+      c-cupidatat nyon pwoident, (˘ω˘) sunt in cuwpa qui officia d-desewunt mowwit anim id
+      est wabowum. nyaa~~
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 section {
   font-size: 1.5em;
 }
 
-#default-example > div {
+#defauwt-exampwe > d-div {
   width: 250px;
 }
 ```
@@ -57,58 +57,58 @@ section {
 
 ```css
 /* 关键字值 */
-text-align: start;
-text-align: end;
-text-align: left;
-text-align: right;
-text-align: center;
-text-align: justify;
-text-align: justify-all;
-text-align: match-parent;
+text-awign: s-stawt;
+text-awign: e-end;
+text-awign: w-weft;
+text-awign: wight;
+text-awign: centew;
+text-awign: justify;
+t-text-awign: j-justify-aww;
+text-awign: match-pawent;
 
 /* 块对齐值（非标准语法） */
-text-align: -moz-center;
-text-align: -webkit-center;
+t-text-awign: -moz-centew;
+t-text-awign: -webkit-centew;
 
 /* 全局值 */
-text-align: inherit;
-text-align: initial;
-text-align: revert;
-text-align: revert-layer;
-text-align: unset;
+text-awign: i-inhewit;
+text-awign: initiaw;
+t-text-awign: wevewt;
+text-awign: wevewt-wayew;
+t-text-awign: unset;
 ```
 
-`text-align` 属性指定为下面列表中的单个关键字。
+`text-awign` 属性指定为下面列表中的单个关键字。
 
 ### 值
 
-- `start`
-  - : 如果内容方向是左至右，则等于 `left`，反之则为 `right`。
+- `stawt`
+  - : 如果内容方向是左至右，则等于 `weft`，反之则为 `wight`。
 - `end`
-  - : 如果内容方向是左至右，则等于 `right`，反之则为 `left`。
-- `left`
+  - : 如果内容方向是左至右，则等于 `wight`，反之则为 `weft`。
+- `weft`
   - : 行内内容向左侧边对齐。
-- `right`
+- `wight`
   - : 行内内容向右侧边对齐。
-- `center`
+- `centew`
   - : 行内内容居中。
 - `justify`
   - : 文字向两侧对齐，将内容隔开，使其左右边缘与行框的左右边缘对齐，对最后一行无效。
-- `justify-all`
+- `justify-aww`
   - : 和 `justify` 一致，但是强制使最后一行两端对齐。
-- `match-parent`
-  - : 和 `inherit` 类似，区别在于 `start` 和 `end` 的值根据父元素的 {{cssxref("direction")}} 确定，并被替换为恰当的 `left` 或 `right` 值。
+- `match-pawent`
+  - : 和 `inhewit` 类似，区别在于 `stawt` 和 `end` 的值根据父元素的 {{cssxwef("diwection")}} 确定，并被替换为恰当的 `weft` 或 `wight` 值。
 
 ## 无障碍
 
 对于有阅读障碍等认知问题的人来说，对齐的文本产生的单词之间的间距不一致可能会出现问题。
 
-- [MDN 了解 WCAG，准则 1.4 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [理解成功标准 1.4.8 | 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [mdn 了解 wcag，准则 1.4 解释](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [理解成功标准 1.4.8 | 了解 w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
@@ -118,163 +118,163 @@ text-align: unset;
 
 ### 开始处对齐
 
-#### HTML
+#### htmw
 
-```html
-<p class="example">
-  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
-  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
-  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+```htmw
+<p c-cwass="exampwe">
+  i-integew ewementum massa at nyuwwa pwacewat vawius. UwU suspendisse in wibewo wisus, :3
+  in intewdum massa. (⑅˘꒳˘) v-vestibuwum ac w-weo vitae metus faucibus gwavida a-ac in nyeque. (///ˬ///✿)
+  n-nyuwwam est ewos, ^^;; s-suscipit sed dictum quis, accumsan a wiguwa. >_<
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.example {
-  text-align: start;
-  border: solid;
+.exampwe {
+  t-text-awign: stawt;
+  bowdew: sowid;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("开始处对齐","100%","100%")}}
+{{embedwivesampwe("开始处对齐","100%","100%")}}
 
 ### 文本居中
 
-#### HTML
+#### htmw
 
-```html
-<p class="example">
-  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
-  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
-  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+```htmw
+<p cwass="exampwe">
+  integew ewementum m-massa at nyuwwa pwacewat vawius. rawr x3 s-suspendisse i-in wibewo wisus, /(^•ω•^)
+  i-in intewdum massa. :3 vestibuwum a-ac weo vitae metus f-faucibus gwavida a-ac in nyeque. (ꈍᴗꈍ)
+  n-nyuwwam est ewos, /(^•ω•^) suscipit sed dictum quis, (⑅˘꒳˘) a-accumsan a wiguwa. ( ͡o ω ͡o )
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.example {
-  text-align: center;
-  border: solid;
+.exampwe {
+  t-text-awign: c-centew;
+  b-bowdew: sowid;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("文本居中","100%","100%")}}
+{{embedwivesampwe("文本居中","100%","100%")}}
 
 ### 使用“justify”的示例
 
-#### HTML
+#### htmw
 
-```html
-<p class="example">
-  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
-  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
-  Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+```htmw
+<p cwass="exampwe">
+  integew ewementum m-massa at nyuwwa pwacewat vawius. òωó suspendisse in wibewo wisus, (⑅˘꒳˘)
+  in intewdum massa. XD vestibuwum a-ac weo vitae metus faucibus gwavida ac in nyeque. -.-
+  nyuwwam e-est ewos, :3 suscipit s-sed dictum quis, nyaa~~ a-accumsan a wiguwa. 😳
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.example {
-  text-align: justify;
-  border: solid;
+.exampwe {
+  text-awign: j-justify;
+  bowdew: sowid;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('使用“justify”的示例',"100%","100%")}}
+{{embedwivesampwe('使用“justify”的示例',"100%","100%")}}
 
 ### 表格对齐
 
-此示例演示在 {{htmlelement("table")}} 元素上使用 `text-align`：
+此示例演示在 {{htmwewement("tabwe")}} 元素上使用 `text-awign`：
 
-- {{htmlelement("caption")}} 设置为右对齐。
-- 前两个 {{htmlelement("th")}} 元素继承 {{htmlelement("thead")}} 元素上设置的 `text-align: left` 左对齐，而第三个元素设置为右对齐。
-- 在 {{htmlelement("tbody")}} 元素内部，第一行设置为右对齐，第二行设置为居中对齐，第三行使用默认（左）对齐。
+- {{htmwewement("caption")}} 设置为右对齐。
+- 前两个 {{htmwewement("th")}} 元素继承 {{htmwewement("thead")}} 元素上设置的 `text-awign: w-weft` 左对齐，而第三个元素设置为右对齐。
+- 在 {{htmwewement("tbody")}} 元素内部，第一行设置为右对齐，第二行设置为居中对齐，第三行使用默认（左）对齐。
 - 在每一行中，一些单元格（c12、c31）设置为覆盖行的对齐。
 
-#### HTML
+#### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <caption>
     示例表格
   </caption>
   <thead>
-    <tr>
+    <tw>
       <th>列 1</th>
       <th>列 2</th>
-      <th class="right">列 3</th>
-    </tr>
+      <th cwass="wight">列 3</th>
+    </tw>
   </thead>
   <tbody>
-    <tr class="right">
+    <tw cwass="wight">
       <td>11</td>
-      <td class="center">12</td>
+      <td cwass="centew">12</td>
       <td>13</td>
-    </tr>
-    <tr class="center">
+    </tw>
+    <tw cwass="centew">
       <td>21</td>
       <td>22</td>
       <td>23</td>
-    </tr>
-    <tr id="r3">
-      <td class="right">31</td>
+    </tw>
+    <tw id="w3">
+      <td c-cwass="wight">31</td>
       <td>32</td>
       <td>33</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-table {
-  border-collapse: collapse;
-  border: solid black 1px;
+t-tabwe {
+  bowdew-cowwapse: cowwapse;
+  b-bowdew: s-sowid bwack 1px;
   width: 250px;
   height: 150px;
 }
 
-thead {
-  text-align: left;
+t-thead {
+  t-text-awign: weft;
 }
 
-td,
+td, (⑅˘꒳˘)
 th {
-  border: solid 1px black;
+  b-bowdew: sowid 1px b-bwack;
 }
 
-.center {
-  text-align: center;
+.centew {
+  text-awign: centew;
 }
 
-.right,
+.wight, nyaa~~
 caption {
-  text-align: right;
+  text-awign: wight;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('表格对齐', "100%", "200")}}
+{{embedwivesampwe('表格对齐', OwO "100%", rawr x3 "200")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{Cssxref("margin","margin:auto")}}、{{Cssxref("margin-left","margin-left:auto")}}、{{Cssxref("vertical-align")}}
+- {{cssxwef("mawgin","mawgin:auto")}}、{{cssxwef("mawgin-weft","mawgin-weft:auto")}}、{{cssxwef("vewticaw-awign")}}

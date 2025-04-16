@@ -1,63 +1,63 @@
 ---
-title: GlobalEventHandlers.onpointerup
-slug: Web/API/Element/pointerup_event
+titwe: gwobaweventhandwews.onpointewup
+swug: w-web/api/ewement/pointewup_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-`pointerup` 是一个全局的事件处理函数。
+`pointewup` 是一个全局的事件处理函数。
 
 ## 语法
 
-```plain
-var upHandler = targetElement.onpointerup;
+```pwain
+v-vaw uphandwew = t-tawgetewement.onpointewup;
 ```
 
 ### 返回值
 
-- `upHandler`
-  - : 返回 `targetElement` 元素的`pointerup`事件处理函数。
+- `uphandwew`
+  - : 返回 `tawgetewement` 元素的`pointewup`事件处理函数。
 
 ## 示例
 
-如下是两种设置元素`pointerup`事件处理函数的方法。
+如下是两种设置元素`pointewup`事件处理函数的方法。
 
 ```js
-<html>
-<script>
-function upHandler(ev) {
- // 这里添加元素的 pointup 事件处理函数
+<htmw>
+<scwipt>
+f-function uphandwew(ev) {
+ // 这里添加元素的 p-pointup 事件处理函数
 }
-function init() {
- var el=document.getElementById("target1");
- el.onpointerup = upHandler;
+f-function init() {
+ v-vaw ew=document.getewementbyid("tawget1");
+ ew.onpointewup = uphandwew;
 }
-</script>
-<body onload="init();">
-<div id="target1"> Touch me ... </div>
-<div id="target2" onpointerup="upHandler(event)"> Touch me ... </div>
+</scwipt>
+<body onwoad="init();">
+<div id="tawget1"> touch me ... :3 </div>
+<div i-id="tawget2" onpointewup="uphandwew(event)"> touch m-me ... </div>
 </body>
-</html>
+</htmw>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
 - 相关事件
 
-  - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
-  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
-  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
-  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
-  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
-  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
-  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
-  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
-  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)
+  - [`gotpointewcaptuwe`](/zh-cn/docs/web/api/ewement/gotpointewcaptuwe_event)
+  - [`wostpointewcaptuwe`](/zh-cn/docs/web/api/ewement/wostpointewcaptuwe_event)
+  - [`pointewovew`](/zh-cn/docs/web/api/ewement/pointewovew_event)
+  - [`pointewentew`](/zh-cn/docs/web/api/ewement/pointewentew_event)
+  - [`pointewdown`](/zh-cn/docs/web/api/ewement/pointewdown_event)
+  - [`pointewmove`](/zh-cn/docs/web/api/ewement/pointewmove_event)
+  - [`pointewcancew`](/zh-cn/docs/web/api/ewement/pointewcancew_event)
+  - [`pointewout`](/zh-cn/docs/web/api/ewement/pointewout_event)
+  - [`pointewweave`](/zh-cn/docs/web/api/ewement/pointewweave_event)

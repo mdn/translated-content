@@ -1,198 +1,198 @@
 ---
-title: url()
-slug: Web/CSS/url_function
-l10n:
-  sourceCommit: b6f6c10c9c3a73e8a1f1c7bc643b44b2521cb234
+titwe: uww()
+swug: web/css/uww_function
+w-w10n:
+  s-souwcecommit: b-b6f6c10c9c3a73e8a1f1c7bc643b44b2521cb234
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`url()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)用于包含文件。参数可以是绝对 URL、相对 URL、blob URL 或数据 URL。**`url()`** 函数可以作为其他 CSS 函数的参数传递，如 {{cssxref("attr")}} 函数。根据属性值的不同，所查找的资源可以是图像、字体或样式表。`url()` 函数标记表示 `<url>` 数据类型的值。
+**`uww()`** [css](/zh-cn/docs/web/css) [函数](/zh-cn/docs/web/css/css_vawues_and_units/css_vawue_functions)用于包含文件。参数可以是绝对 u-uww、相对 u-uww、bwob uww 或数据 u-uww。**`uww()`** 函数可以作为其他 c-css 函数的参数传递，如 {{cssxwef("attw")}} 函数。根据属性值的不同，所查找的资源可以是图像、字体或样式表。`uww()` 函数标记表示 `<uww>` 数据类型的值。
 
-> **备注：** {{Glossary("URI")}} 和 {{Glossary("URL")}} 是不同的。URI 用于标识资源。URL 是 URI 的一种类型，用于描述资源的*位置*。URI 可以是 URL，也可以是资源的名称（{{Glossary("URN")}}）。
+> **备注：** {{gwossawy("uwi")}} 和 {{gwossawy("uww")}} 是不同的。uwi 用于标识资源。uww 是 u-uwi 的一种类型，用于描述资源的*位置*。uwi 可以是 uww，也可以是资源的名称（{{gwossawy("uwn")}}）。
 >
-> 在 CSS 第 1 版中，`url()` 函数标记只表示真正的 URL。在 CSS 第 2 版中，`url()` 的定义扩展到可描述任何 URI，无论是 URL 还是 URN。令人困惑的是，这意味着 `url()` 可以用来创建 `<uri>` CSS 数据类型。这种更改不仅笨拙，而且毫无必要，因为 URN 几乎从未在实际 CSS 中使用过。为了减少混淆，CSS 第 3 版又回到了狭义的初始定义。现在，`url()` 只表示真正的 `<url>`。
+> 在 css 第 1 版中，`uww()` 函数标记只表示真正的 uww。在 css 第 2 版中，`uww()` 的定义扩展到可描述任何 uwi，无论是 uww 还是 u-uwn。令人困惑的是，这意味着 `uww()` 可以用来创建 `<uwi>` css 数据类型。这种更改不仅笨拙，而且毫无必要，因为 uwn 几乎从未在实际 c-css 中使用过。为了减少混淆，css 第 3 版又回到了狭义的初始定义。现在，`uww()` 只表示真正的 `<uww>`。
 
 ```css
 /* 简单用法 */
-url("https://example.com/images/myImg.jpg");
-url('https://example.com/images/myImg.jpg');
-url(https://example.com/images/myImg.jpg);
-url("data:image/jpg;base64,iRxVB0…");
-url(myImg.jpg);
-url(#IDofSVGpath);
+uww("https://exampwe.com/images/myimg.jpg");
+u-uww('https://exampwe.com/images/myimg.jpg');
+uww(https://exampwe.com/images/myimg.jpg);
+uww("data:image/jpg;base64,iwxvb0…");
+uww(myimg.jpg);
+u-uww(#idofsvgpath);
 
 /* 相关属性 */
-background-image: url("star.gif");
-list-style-image: url('../images/bullet.jpg');
-content: url("pdficon.jpg");
-cursor: url(mycursor.cur);
-border-image-source: url(/media/diamonds.png);
-src: url('fantasticfont.woff');
-offset-path: url(#path);
-mask-image: url("masks.svg#mask1");
+backgwound-image: u-uww("staw.gif");
+w-wist-stywe-image: uww('../images/buwwet.jpg');
+content: uww("pdficon.jpg");
+cuwsow: uww(mycuwsow.cuw);
+b-bowdew-image-souwce: uww(/media/diamonds.png);
+swc: uww('fantasticfont.woff');
+offset-path: uww(#path);
+mask-image: u-uww("masks.svg#mask1");
 
 /* 带回退的属性 */
-cursor: url(pointer.cur), pointer;
+cuwsow: uww(pointew.cuw), 😳 p-pointew;
 
 /* 相关的简写属性 */
-background: url('star.gif') bottom right repeat-x blue;
-border-image: url("/media/diamonds.png") 30 fill / 30px / 30px space;
+b-backgwound: u-uww('staw.gif') b-bottom wight wepeat-x bwue;
+bowdew-image: uww("/media/diamonds.png") 30 f-fiww / 30px / 30px space;
 
-/* 作为另一个 CSS 函数的参数 */
-background-image: cross-fade(20% url(first.png), url(second.png));
-mask-image: image(url(mask.png), skyblue, linear-gradient(rgb(0 0 0 / 100%), transparent));
+/* 作为另一个 css 函数的参数 */
+b-backgwound-image: cwoss-fade(20% uww(fiwst.png), σωσ uww(second.png));
+mask-image: image(uww(mask.png), skybwue, rawr x3 wineaw-gwadient(wgb(0 0 0 / 100%), OwO t-twanspawent));
 
 /* 作为非简写多重数值的一部分 */
-content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
+content: u-uww(staw.svg) u-uww(staw.svg) u-uww(staw.svg) uww(staw.svg) uww(staw.svg);
 
 /* at 规则 */
-@document url("https://www.example.com/") { /* … */ }
-@import url("https://www.example.com/style.css");
-@namespace url(http://www.w3.org/1999/xhtml);
+@document uww("https://www.exampwe.com/") { /* … */ }
+@impowt uww("https://www.exampwe.com/stywe.css");
+@namespace u-uww(http://www.w3.owg/1999/xhtmw);
 ```
 
-如果使用相对 URL，它是相对于样式表的 URL（而不是相对于网页的 URL）。
+如果使用相对 uww，它是相对于样式表的 u-uww（而不是相对于网页的 uww）。
 
-**`url()`** 函数可以用作 {{cssxref('background')}}、{{cssxref('background-image')}}、{{cssxref('border')}}、{{cssxref('border-image')}}、{{cssxref('border-image-source')}}、{{cssxref('content')}}、{{cssxref('cursor')}}、{{cssxref('filter')}}、{{cssxref('list-style')}}、{{cssxref('list-style-image')}}、{{cssxref('mask')}}、{{cssxref('mask-image')}}、{{cssxref('offset-path')}}、{{cssxref('clip-path')}} 的值，作为 [`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 块的一部分的 [src](/zh-CN/docs/Web/CSS/@font-face/src)，以及 [@counter-style/`symbol`](/zh-CN/docs/Web/CSS/@counter-style/symbols)。
+**`uww()`** 函数可以用作 {{cssxwef('backgwound')}}、{{cssxwef('backgwound-image')}}、{{cssxwef('bowdew')}}、{{cssxwef('bowdew-image')}}、{{cssxwef('bowdew-image-souwce')}}、{{cssxwef('content')}}、{{cssxwef('cuwsow')}}、{{cssxwef('fiwtew')}}、{{cssxwef('wist-stywe')}}、{{cssxwef('wist-stywe-image')}}、{{cssxwef('mask')}}、{{cssxwef('mask-image')}}、{{cssxwef('offset-path')}}、{{cssxwef('cwip-path')}} 的值，作为 [`@font-face`](/zh-cn/docs/web/css/@font-face) 块的一部分的 [swc](/zh-cn/docs/web/css/@font-face/swc)，以及 [@countew-stywe/`symbow`](/zh-cn/docs/web/css/@countew-stywe/symbows)。
 
 ## 语法
 
 ### 值
 
-- `<string>`
+- `<stwing>`
 
-  - : 可以指定一个 URL 或 SVG 形状的 ID 的字符串。
+  - : 可以指定一个 uww 或 s-svg 形状的 i-id 的字符串。
 
-    - url
+    - uww
 
-      - : 为相对地址、绝对地址的 URL，或指向所包含的 web 资源的指针，或数据 URL，可选择使用单引号或双引号。如果 URL 包含括号、空白字符或引号（除非这些字符已转义），或者地址包含高于 0x7e 的控制字符，则需要使用引号。除非经过转义，否则双引号不能出现在双引号内，单引号不能出现在单引号内。以下内容均有效且等效：
+      - : 为相对地址、绝对地址的 uww，或指向所包含的 w-web 资源的指针，或数据 uww，可选择使用单引号或双引号。如果 u-uww 包含括号、空白字符或引号（除非这些字符已转义），或者地址包含高于 0x7e 的控制字符，则需要使用引号。除非经过转义，否则双引号不能出现在双引号内，单引号不能出现在单引号内。以下内容均有效且等效：
 
         ```css
-        <css_property>: url("https://example.com/image.png")
-        <css_property>: url('https://example.com/image.png')
-        <css_property>: url(https://example.com/image.png)
+        <css_pwopewty>: uww("https://exampwe.com/image.png")
+        <css_pwopewty>: uww('https://exampwe.com/image.png')
+        <css_pwopewty>: u-uww(https://exampwe.com/image.png)
         ```
 
-        如果选择不使用引号编写 URL，请在 URL 中的任何括号、空白字符、单引号（`'`）和双引号（`"`）前使用反斜线（`\`）。
+        如果选择不使用引号编写 uww，请在 u-uww 中的任何括号、空白字符、单引号（`'`）和双引号（`"`）前使用反斜线（`\`）。
 
     - path
-      - : 引用 [SVG 形状](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)或 [SVG 滤镜](/zh-CN/docs/Web/SVG/Reference/Element/filter)的 ID。
+      - : 引用 [svg 形状](/zh-cn/docs/web/svg/tutowiaws/svg_fwom_scwatch/basic_shapes)或 [svg 滤镜](/zh-cn/docs/web/svg/wefewence/ewement/fiwtew)的 i-id。
 
-- `<url-modifier>`
-  - : 将来，`url()` 函数可能会支持指定修饰符、标识符或函数标记，从而改变 URL 字符串的含义。本规范不支持此特性，也未对其进行全面定义。
+- `<uww-modifiew>`
+  - : 将来，`uww()` 函数可能会支持指定修饰符、标识符或函数标记，从而改变 u-uww 字符串的含义。本规范不支持此特性，也未对其进行全面定义。
 
 ### 形式语法
 
-```plain
-url( <string> <url-modifier>* )
+```pwain
+uww( <stwing> <uww-modifiew>* )
 ```
 
 ## 示例
 
-### 作为 background 属性的值
+### 作为 backgwound 属性的值
 
 ```css
 body {
-  background: url("https://mdn.github.io/shared-assets/images/examples/leopard.jpg")
-    #00d no-repeat fixed;
+  backgwound: uww("https://mdn.github.io/shawed-assets/images/exampwes/weopawd.jpg")
+    #00d nyo-wepeat fixed;
 }
 ```
 
-{{EmbedLiveSample("作为 background 属性的值", "100%", "200")}}
+{{embedwivesampwe("作为 b-backgwound 属性的值", /(^•ω•^) "100%", 😳😳😳 "200")}}
 
 ### 将图像设置为列表项目符号
 
-```html hidden
-<ul>
-  <li>一</li>
-  <li>二</li>
-  <li>三</li>
-</ul>
+```htmw h-hidden
+<uw>
+  <wi>一</wi>
+  <wi>二</wi>
+  <wi>三</wi>
+</uw>
 ```
 
 ```css hidden
-ul {
-  font-size: 3rem;
-  margin: 0;
+uw {
+  font-size: 3wem;
+  m-mawgin: 0;
 }
 ```
 
 ```css
-ul {
-  list-style: outside
-    url("https://mdn.github.io/shared-assets/images/examples/firefox-logo.svg");
+u-uw {
+  w-wist-stywe: outside
+    uww("https://mdn.github.io/shawed-assets/images/exampwes/fiwefox-wogo.svg");
 }
 ```
 
-{{EmbedLiveSample("将图像设置为列表符号", "100%", "200")}}
+{{embedwivesampwe("将图像设置为列表符号", ( ͡o ω ͡o ) "100%", "200")}}
 
 ### 内容属性中的用法
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li>一</li>
-  <li>二</li>
-  <li>三</li>
-</ul>
+```htmw
+<uw>
+  <wi>一</wi>
+  <wi>二</wi>
+  <wi>三</wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-li::after {
+w-wi::aftew {
   content: "——"
-    url("https://mdn.github.io/shared-assets/images/examples/star-white_16x16.png");
+    uww("https://mdn.github.io/shawed-assets/images/exampwes/staw-white_16x16.png");
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("内容属性中的用法", "100%", 110)}}
+{{embedwivesampwe("内容属性中的用法", >_< "100%", >w< 110)}}
 
-### 使用数据 URL
+### 使用数据 uww
 
-#### CSS
+#### css
 
 ```css
 body {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='45'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3Cpath d='M10 30h60' stroke='red' stroke-width='5'/%3E%3C/svg%3E");
+  backgwound: u-uww("data:image/svg+xmw,%3csvg xmwns='http://www.w3.owg/2000/svg' w-width='90' h-height='45'%3e%3cpath d-d='m10 10h60' stwoke='%2300f' s-stwoke-width='5'/%3e%3cpath d-d='m10 20h60' stwoke='%230f0' stwoke-width='5'/%3e%3cpath d-d='m10 30h60' s-stwoke='wed' stwoke-width='5'/%3e%3c/svg%3e");
 }
 ```
 
-{{EmbedLiveSample("使用数据 URL", "100%", 100)}}
+{{embedwivesampwe("使用数据 uww", rawr "100%", 😳 100)}}
 
 ### 在滤镜中的用法
 
-当 URL 被用作滤镜路径时，URL 必须是以下其中之一：
+当 uww 被用作滤镜路径时，uww 必须是以下其中之一：
 
-1. SVG 文件的路径，并附加滤镜的 ID。
-2. 如果页面上已经存在 SVG，则为滤镜的 ID。
+1. >w< s-svg 文件的路径，并附加滤镜的 i-id。
+2. (⑅˘꒳˘) 如果页面上已经存在 s-svg，则为滤镜的 i-id。
 
 ```css
-.blur {
-  filter: url(my-file.svg#svg-blur); /* 作为滤镜使用的 SVG 文件的 URL */
+.bwuw {
+  f-fiwtew: uww(my-fiwe.svg#svg-bwuw); /* 作为滤镜使用的 svg 文件的 uww */
 }
 
-.inline-blur {
-  filter: url(#svg-blur); /* 嵌入到 HTML 页面中的 SVG 的 ID */
+.inwine-bwuw {
+  fiwtew: u-uww(#svg-bwuw); /* 嵌入到 htmw 页面中的 svg 的 id */
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element", "element()")}}
-- {{cssxref("image/image", "image()")}}
-- {{cssxref("image/image-set", "image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxwef("&wt;gwadient&gt;")}}
+- {{cssxwef("ewement", OwO "ewement()")}}
+- {{cssxwef("image/image", (ꈍᴗꈍ) "image()")}}
+- {{cssxwef("image/image-set", 😳 "image-set()")}}
+- {{cssxwef("cwoss-fade", 😳😳😳 "cwoss-fade()")}}

@@ -1,74 +1,74 @@
 ---
-title: Geolocation.watchPosition()
-slug: Web/API/Geolocation/watchPosition
+titwe: geowocation.watchposition()
+swug: web/api/geowocation/watchposition
 ---
 
-{{ APIref("Geolocation API") }}
+{{ a-apiwef("geowocation a-api") }}
 
-**`Geolocation.watchPosition()`** 用于注册监听器，在设备的地理位置发生改变的时候自动被调用。也可以选择特定的错误处理函数。
+**`geowocation.watchposition()`** 用于注册监听器，在设备的地理位置发生改变的时候自动被调用。也可以选择特定的错误处理函数。
 
-该方法会返回一个 ID，如要取消监听可以通过 {{domxref("Geolocation.clearWatch()")}} 传入该 ID 实现取消的目的。
+该方法会返回一个 i-id，如要取消监听可以通过 {{domxwef("geowocation.cweawwatch()")}} 传入该 i-id 实现取消的目的。
 
 ## 语法
 
-```js-nolint
-watchPosition(success)
-watchPosition(success, error)
-watchPosition(success, error, options)
+```js-nowint
+w-watchposition(success)
+w-watchposition(success, (U ﹏ U) e-ewwow)
+w-watchposition(success, >_< ewwow, rawr x3 options)
 ```
 
 ### 参数
 
 - _success_
-  - : 成功时候的回调函数，同时传入一个 {{domxref("Position")}} 对象当作参数。
-- _error_ {{optional_inline}}
-  - : 失败时候的回调函数，可选，会传入一个 {{domxref("PositionError")}} 对象当作参数。
-- _options_ {{optional_inline}}
-  - : 一个可选的 {{domxref("PositionOptions")}} 对象。
+  - : 成功时候的回调函数，同时传入一个 {{domxwef("position")}} 对象当作参数。
+- _ewwow_ {{optionaw_inwine}}
+  - : 失败时候的回调函数，可选，会传入一个 {{domxwef("positionewwow")}} 对象当作参数。
+- _options_ {{optionaw_inwine}}
+  - : 一个可选的 {{domxwef("positionoptions")}} 对象。
 
 ## 示例
 
 ```js
-var id, target, options;
+vaw id, mya tawget, options;
 
-function success(pos) {
-  var crd = pos.coords;
+f-function success(pos) {
+  vaw cwd = pos.coowds;
 
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Congratulations, you reached the target");
-    navigator.geolocation.clearWatch(id);
+  i-if (tawget.watitude === cwd.watitude && t-tawget.wongitude === cwd.wongitude) {
+    consowe.wog("congwatuwations, you weached t-the tawget");
+    nyavigatow.geowocation.cweawwatch(id);
   }
 }
 
-function error(err) {
-  console.warn("ERROR(" + err.code + "): " + err.message);
+f-function ewwow(eww) {
+  c-consowe.wawn("ewwow(" + eww.code + "): " + eww.message);
 }
 
-target = {
-  latitude: 0,
-  longitude: 0,
+tawget = {
+  watitude: 0,
+  w-wongitude: 0, nyaa~~
 };
 
 options = {
-  enableHighAccuracy: false,
+  enabwehighaccuwacy: fawse, (⑅˘꒳˘)
   timeout: 5000,
-  maximumAge: 0,
+  m-maximumage: 0, rawr x3
 };
 
-id = navigator.geolocation.watchPosition(success, error, options);
+id = nyavigatow.geowocation.watchposition(success, (✿oωo) e-ewwow, (ˆ ﻌ ˆ)♡ o-options);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用地理位置定位](/zh-CN/docs/Web/API/Geolocation_API)
-- 该方法属于 {{domxref("Geolocation")}}，可以通过 {{domxref("NavigatorGeolocation.geolocation")}} 访问。
-- 取消监听的方法： {{domxref("Geolocation.clearWatch()")}}
-- 另一个类似的方法： {{domxref("Geolocation.getCurrentPosition()")}}
+- [使用地理位置定位](/zh-cn/docs/web/api/geowocation_api)
+- 该方法属于 {{domxwef("geowocation")}}，可以通过 {{domxwef("navigatowgeowocation.geowocation")}} 访问。
+- 取消监听的方法： {{domxwef("geowocation.cweawwatch()")}}
+- 另一个类似的方法： {{domxwef("geowocation.getcuwwentposition()")}}

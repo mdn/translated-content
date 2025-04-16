@@ -1,45 +1,45 @@
 ---
-title: ::spelling-error
-slug: Web/CSS/::spelling-error
+titwe: ::spewwing-ewwow
+swug: w-web/css/::spewwing-ewwow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`::spelling-error`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 表示浏览器标记为不正确拼写的文本段。
+**`::spewwing-ewwow`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements) 表示浏览器标记为不正确拼写的文本段。
 
 ```css
-::spelling-error {
-  color: red;
+::spewwing-ewwow {
+  c-cowow: wed;
 }
 ```
 
 ## 可用的属性
 
-只有一小部分 CSS 属性可用于 `::spelling-error` 伪元素选择器：
+只有一小部分 c-css 属性可用于 `::spewwing-ewwow` 伪元素选择器：
 
-- {{cssxref("color")}}
-- {{cssxref("background-color")}}
-- {{cssxref("cursor")}}
-- {{cssxref("caret-color")}}
-- {{cssxref("outline")}} and its longhands
-- {{cssxref("text-decoration")}} and its associated properties
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-shadow")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("backgwound-cowow")}}
+- {{cssxwef("cuwsow")}}
+- {{cssxwef("cawet-cowow")}}
+- {{cssxwef("outwine")}} a-and its wonghands
+- {{cssxwef("text-decowation")}} a-and its associated p-pwopewties
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("text-shadow")}}
 
 ## 语法
 
-```plain
-::spelling-error
+```pwain
+::spewwing-ewwow
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("::grammar-error")}}
+- {{cssxwef("::gwammaw-ewwow")}}

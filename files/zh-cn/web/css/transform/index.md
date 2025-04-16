@@ -1,102 +1,102 @@
 ---
-title: transform
-slug: Web/CSS/transform
-l10n:
-  sourceCommit: 4940889b79f76552b95e092d48012cb6603a324b
+titwe: twansfowm
+swug: web/css/twansfowm
+w-w10n:
+  s-souwcecommit: 4940889b79f76552b95e092d48012cb6603a324b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`transform`** 属性允许你旋转、缩放、倾斜或平移给定元素。这是通过修改 CSS [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)的坐标空间实现的。
+[css](/zh-cn/docs/web/css) **`twansfowm`** 属性允许你旋转、缩放、倾斜或平移给定元素。这是通过修改 c-css [视觉格式化模型](/zh-cn/docs/web/css/css_dispway/visuaw_fowmatting_modew)的坐标空间实现的。
 
-{{InteractiveExample("CSS Demo: transform")}}
+{{intewactiveexampwe("css d-demo: twansfowm")}}
 
-```css interactive-example-choice
-transform: matrix(1, 2, 3, 4, 5, 6);
+```css i-intewactive-exampwe-choice
+t-twansfowm: m-matwix(1, /(^•ω•^) 2, 😳😳😳 3, 4, 5, 6);
 ```
 
-```css interactive-example-choice
-transform: translate(120px, 50%);
+```css i-intewactive-exampwe-choice
+twansfowm: twanswate(120px, ( ͡o ω ͡o ) 50%);
 ```
 
-```css interactive-example-choice
-transform: scale(2, 0.5);
+```css intewactive-exampwe-choice
+twansfowm: scawe(2, >_< 0.5);
 ```
 
-```css interactive-example-choice
-transform: rotate(0.5turn);
+```css i-intewactive-exampwe-choice
+twansfowm: wotate(0.5tuwn);
 ```
 
-```css interactive-example-choice
-transform: skew(30deg, 20deg);
+```css intewactive-exampwe-choice
+t-twansfowm: skew(30deg, >w< 20deg);
 ```
 
-```css interactive-example-choice
-transform: scale(0.5) translate(-100%, -100%);
+```css intewactive-exampwe-choice
+twansfowm: s-scawe(0.5) twanswate(-100%, rawr -100%);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    c-cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
-如果属性的值不是 `none`，则将创建一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。在这种情况下，该元素将作为任何包含的 `position: fixed;` 或 `position: absolute;` 元素的[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)。
+如果属性的值不是 `none`，则将创建一个[层叠上下文](/zh-cn/docs/web/css/css_positioned_wayout/stacking_context)。在这种情况下，该元素将作为任何包含的 `position: f-fixed;` 或 `position: absowute;` 元素的[包含块](/zh-cn/docs/web/css/css_dispway/containing_bwock)。
 
-> [!WARNING]
-> 只能 `transform` 由盒模型定位的元素，也就是所有布局由 CSS 盒模型管理的元素，除了：[非替换的行内盒子](/zh-CN/docs/Glossary/Inline-level_content)、[表格列](/zh-CN/docs/Web/HTML/Reference/Elements/col)和[表格列组](/zh-CN/docs/Web/HTML/Reference/Elements/colgroup)。
+> [!wawning]
+> 只能 `twansfowm` 由盒模型定位的元素，也就是所有布局由 css 盒模型管理的元素，除了：[非替换的行内盒子](/zh-cn/docs/gwossawy/inwine-wevew_content)、[表格列](/zh-cn/docs/web/htmw/wefewence/ewements/cow)和[表格列组](/zh-cn/docs/web/htmw/wefewence/ewements/cowgwoup)。
 
 ## 语法
 
 ```css
 /* 关键字值 */
-transform: none;
+twansfowm: nyone;
 
 /* 函数值 */
-transform: matrix(1, 2, 3, 4, 5, 6);
-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-transform: perspective(17px);
-transform: rotate(0.5turn);
-transform: rotate3d(1, 2, 3, 10deg);
-transform: rotateX(10deg);
-transform: rotateY(10deg);
-transform: rotateZ(10deg);
-transform: translate(12px, 50%);
-transform: translate3d(12px, 50%, 3em);
-transform: translateX(2em);
-transform: translateY(3in);
-transform: translateZ(2px);
-transform: scale(2, 0.5);
-transform: scale3d(2.5, 1.2, 0.3);
-transform: scaleX(2);
-transform: scaleY(0.5);
-transform: scaleZ(0.3);
-transform: skew(30deg, 20deg);
-transform: skewX(30deg);
-transform: skewY(1.07rad);
+twansfowm: m-matwix(1, 😳 2, 3, 4, >w< 5, 6);
+twansfowm: matwix3d(1, (⑅˘꒳˘) 0, OwO 0, 0, 0, 1, 0, (ꈍᴗꈍ) 0, 0, 0, 1, 0, 0, 😳 0, 0, 1);
+twansfowm: pewspective(17px);
+twansfowm: w-wotate(0.5tuwn);
+twansfowm: w-wotate3d(1, 😳😳😳 2, 3, 10deg);
+t-twansfowm: w-wotatex(10deg);
+t-twansfowm: wotatey(10deg);
+twansfowm: wotatez(10deg);
+twansfowm: t-twanswate(12px, mya 50%);
+twansfowm: twanswate3d(12px, mya 50%, 3em);
+twansfowm: t-twanswatex(2em);
+twansfowm: twanswatey(3in);
+twansfowm: twanswatez(2px);
+twansfowm: scawe(2, (⑅˘꒳˘) 0.5);
+twansfowm: s-scawe3d(2.5, (U ﹏ U) 1.2, mya 0.3);
+twansfowm: s-scawex(2);
+twansfowm: s-scawey(0.5);
+t-twansfowm: scawez(0.3);
+twansfowm: skew(30deg, ʘwʘ 20deg);
+twansfowm: s-skewx(30deg);
+t-twansfowm: skewy(1.07wad);
 
 /* 多个函数值 */
-transform: translateX(10px) rotate(10deg) translateY(5px);
-transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
+t-twansfowm: t-twanswatex(10px) wotate(10deg) t-twanswatey(5px);
+twansfowm: pewspective(500px) t-twanswate(10px, (˘ω˘) 0, 20px) wotatey(3deg);
 
 /* 全局值 */
-transform: inherit;
-transform: initial;
-transform: revert;
-transform: revert-layer;
-transform: unset;
+twansfowm: i-inhewit;
+twansfowm: initiaw;
+t-twansfowm: wevewt;
+twansfowm: w-wevewt-wayew;
+twansfowm: u-unset;
 ```
 
-`transform` 属性可以指定为关键字值 `none`，或者是一个/多个 `<transform-function>` 值。
+`twansfowm` 属性可以指定为关键字值 `none`，或者是一个/多个 `<twansfowm-function>` 值。
 
 ### 值
 
-- {{cssxref("&lt;transform-function&gt;")}}
-  - : 要应用的一个或多个 [CSS 变换函数](/zh-CN/docs/Web/CSS/transform-function)。变换函数按从左到右的顺序相乘，也就是说复合变换按从右到左的顺序有效地应用。
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
+  - : 要应用的一个或多个 [css 变换函数](/zh-cn/docs/web/css/twansfowm-function)。变换函数按从左到右的顺序相乘，也就是说复合变换按从右到左的顺序有效地应用。
 - `none`
   - : 不应用任何变换。
 
@@ -104,16 +104,16 @@ transform: unset;
 
 缩放动画存在无障碍的问题，因为它们是某些类型的偏头痛的常见触发因素。如果你需要在网站上包含这种动画，你应该提供一个控件，允许用户在网站层面关闭所有动画。
 
-另外，考虑利用 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} 媒体特性——使用它编写一个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)，以便在用户在其系统首选项中指定减少动画时关闭动画。
+另外，考虑利用 {{cssxwef("@media/pwefews-weduced-motion", (U ﹏ U) "pwefews-weduced-motion")}} 媒体特性——使用它编写一个[媒体查询](/zh-cn/docs/web/css/css_media_quewies)，以便在用户在其系统首选项中指定减少动画时关闭动画。
 
 了解更多信息：
 
-- [MDN 对 WCAG 的理解：对指南 2.3 的解读](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
-- [理解成功标准 2.3.3 | W3C 对 WCAG 2.1 的解读](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
+- [mdn 对 wcag 的理解：对指南 2.3 的解读](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag/opewabwe#guidewine_2.3_—_seizuwes_and_physicaw_weactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizuwes_ow_physicaw_weactions)
+- [理解成功标准 2.3.3 | w3c 对 wcag 2.1 的解读](https://www.w3.owg/wai/wcag21/undewstanding/animation-fwom-intewactions)
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
@@ -123,106 +123,106 @@ transform: unset;
 
 ### 平移旋转一个元素
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>被变换的元素</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  border: solid red;
-  transform: translate(30px, 20px) rotate(20deg);
-  width: 140px;
-  height: 60px;
+  bowdew: sowid w-wed;
+  twansfowm: t-twanswate(30px, ^•ﻌ•^ 20px) wotate(20deg);
+  w-width: 140px;
+  h-height: 60px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("平移旋转一个元素", "400", "160")}}
+{{embedwivesampwe("平移旋转一个元素", (˘ω˘) "400", "160")}}
 
 ### 变换顺序
 
 变换函数的顺序很重要。在这个例子中，使用相同的值对两个盒子进行了旋转和平移；只不过，变换函数的顺序不同。
 
-#### HTML
+#### htmw
 
-```html
-<div class="original"></div>
-<div class="one">1</div>
-<div class="two">2</div>
+```htmw
+<div c-cwass="owiginaw"></div>
+<div cwass="one">1</div>
+<div cwass="two">2</div>
 ```
 
-#### CSS
+#### css
 
 ```css hidden
 div {
-  height: 200px;
+  h-height: 200px;
   width: 200px;
-  position: absolute;
-  left: 200px;
+  position: absowute;
+  weft: 200px;
   top: 50px;
-  font-size: 4rem;
-  line-height: 200px;
-  text-align: center;
+  f-font-size: 4wem;
+  wine-height: 200px;
+  t-text-awign: c-centew;
 }
-.original {
-  border: 1px dashed;
+.owiginaw {
+  b-bowdew: 1px dashed;
 }
-.original:before,
-.original:after {
+.owiginaw:befowe, :3
+.owiginaw:aftew {
   content: "";
-  position: absolute;
-  top: 100px;
-  width: 500px;
-  left: -150px;
+  p-position: a-absowute;
+  t-top: 100px;
+  w-width: 500px;
+  weft: -150px;
   height: 1px;
-  border-top: 2px dotted;
+  bowdew-top: 2px dotted;
 }
-.original:after {
-  transform: rotate(135deg);
+.owiginaw:aftew {
+  t-twansfowm: w-wotate(135deg);
 }
 .one {
-  background-color: #ccc;
+  b-backgwound-cowow: #ccc;
 }
 .two {
-  background-color: #d6bb72;
+  b-backgwound-cowow: #d6bb72;
 }
 ```
 
 ```css
 .one {
-  transform: translateX(200px) rotate(135deg);
+  t-twansfowm: twanswatex(200px) wotate(135deg);
 }
 .two {
-  transform: rotate(135deg) translateX(200px);
+  twansfowm: wotate(135deg) t-twanswatex(200px);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("变换顺序", "400", "200")}}
+{{embedwivesampwe("变换顺序", ^^;; "400", "200")}}
 
 当一个元素在被平移之前被旋转，它的平移方向是相对于旋转后的坐标系的。例子中的这个坐标系由一条点状直线表示。
 
 ### 更多示例
 
-请查阅[使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)以及 {{cssxref("&lt;transform-function&gt;")}} 获取更多示例。
+请查阅[使用 css 变换](/zh-cn/docs/web/css/css_twansfowms/using_css_twansfowms)以及 {{cssxwef("&wt;twansfowm-function&gt;")}} 获取更多示例。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 CSS 变换](/zh-CN/docs/CSS/CSS_transforms/Using_CSS_transforms)
-- {{cssxref("&lt;transform-function&gt;")}} 数据类型，包含了所有的变换函数
-- 单独的 CSS 属性：{{cssxref('translate')}}、{{cssxref('rotate')}} 和 {{cssxref('scale')}}（不存在 `skew` 属性）。
-- 在线直观感受 CSS Transform 函数的工具：[CSS Transform 演练场](https://css-transform.moro.es/)
+- [使用 css 变换](/zh-cn/docs/css/css_twansfowms/using_css_twansfowms)
+- {{cssxwef("&wt;twansfowm-function&gt;")}} 数据类型，包含了所有的变换函数
+- 单独的 css 属性：{{cssxwef('twanswate')}}、{{cssxwef('wotate')}} 和 {{cssxwef('scawe')}}（不存在 `skew` 属性）。
+- 在线直观感受 css twansfowm 函数的工具：[css t-twansfowm 演练场](https://css-twansfowm.mowo.es/)

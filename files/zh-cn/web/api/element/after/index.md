@@ -1,84 +1,84 @@
 ---
-title: Element.after()
-slug: Web/API/Element/after
+titwe: ewement.aftew()
+swug: w-web/api/ewement/aftew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.after()`** 方法会在其父节点的子节点列表中插入一些 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。插入位置为该节点之后。{{domxref("DOMString")}} 对象会被以 {{domxref("Text")}} 的形式插入。
+**`ewement.aftew()`** 方法会在其父节点的子节点列表中插入一些 {{domxwef("node")}} 或 {{domxwef("domstwing")}} 对象。插入位置为该节点之后。{{domxwef("domstwing")}} 对象会被以 {{domxwef("text")}} 的形式插入。
 
 ## 语法
 
-```js-nolint
-after(node1)
-after(node1, node2)
-after(node1, node2, /* … ,*/ nodeN)
+```js-nowint
+a-aftew(node1)
+aftew(node1, n-nyode2)
+a-aftew(node1, 😳 n-nyode2, XD /* … ,*/ n-nyoden)
 ```
 
 ### 参数
 
-- `node1`, …, `nodeN`
-  - : 一组准备插入的 {{domxref("Node")}} 或字符串。
+- `node1`, :3 …, `noden`
+  - : 一组准备插入的 {{domxwef("node")}} 或字符串。
 
 ### 异常
 
-- {{domxref("HierarchyRequestError")}}: 在某些不正确的层级结构进行了插入操作。
+- {{domxwef("hiewawchywequestewwow")}}: 在某些不正确的层级结构进行了插入操作。
 
 ## 示例
 
 ### 插入元素
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
-container.appendChild(p);
-let span = document.createElement("span");
+w-wet containew = d-document.cweateewement("div");
+wet p = document.cweateewement("p");
+containew.appendchiwd(p);
+wet span = document.cweateewement("span");
 
-p.after(span);
+p-p.aftew(span);
 
-console.log(container.outerHTML);
+consowe.wog(containew.outewhtmw);
 // "<div><p></p><span></span></div>"
 ```
 
 ### 插入文本
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
-container.appendChild(p);
+wet containew = d-document.cweateewement("div");
+wet p = document.cweateewement("p");
+c-containew.appendchiwd(p);
 
-p.after("Text");
+p.aftew("text");
 
-console.log(container.outerHTML);
-// "<div><p></p>Text</div>"
+consowe.wog(containew.outewhtmw);
+// "<div><p></p>text</div>"
 ```
 
 ### 同时插入元素和文本
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
-container.appendChild(p);
-let span = document.createElement("span");
+wet containew = d-document.cweateewement("div");
+wet p = document.cweateewement("p");
+c-containew.appendchiwd(p);
+wet s-span = document.cweateewement("span");
 
-p.after(span, "Text");
+p.aftew(span, 😳😳😳 "text");
 
-console.log(container.outerHTML);
-// "<div><p></p><span></span>Text</div>"
+consowe.wog(containew.outewhtmw);
+// "<div><p></p><span></span>text</div>"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Element.before()")}}
-- {{domxref("Element.append()")}}
-- {{domxref("Node.appendChild()")}}
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("NodeList")}}
+- {{domxwef("ewement.befowe()")}}
+- {{domxwef("ewement.append()")}}
+- {{domxwef("node.appendchiwd()")}}
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("nodewist")}}

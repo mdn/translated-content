@@ -1,123 +1,123 @@
 ---
-title: :out-of-range
-slug: Web/CSS/:out-of-range
+titwe: :out-of-wange
+swug: web/css/:out-of-wange
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:out-of-range`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示一个 {{htmlelement("input")}} 元素，其当前值处于属性 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#attr-min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#attr-max) 限定的范围外。
+**`:out-of-wange`** [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses)表示一个 {{htmwewement("input")}} 元素，其当前值处于属性 [`min`](/zh-cn/docs/web/htmw/wefewence/ewements/input#attw-min) 和 [`max`](/zh-cn/docs/web/htmw/wefewence/ewements/input#attw-max) 限定的范围外。
 
-{{InteractiveExample("CSS Demo: :out-of-range", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :out-of-wange", ʘwʘ "tabbed-showtew")}}
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1em;
+```css intewactive-exampwe
+w-wabew {
+  dispway: b-bwock;
+  mawgin-top: 1em;
 }
 
-input:out-of-range {
-  background-color: orangered;
+i-input:out-of-wange {
+  b-backgwound-cowow: o-owangewed;
 }
 ```
 
-```html interactive-example
-<form>
-  <label for="amount">How many tickets? (You can buy 2-6 tickets)</label>
-  <input id="amount" name="amount" type="number" min="2" max="6" value="4" />
+```htmw i-intewactive-exampwe
+<fowm>
+  <wabew f-fow="amount">how many tickets? (you can buy 2-6 tickets)</wabew>
+  <input id="amount" n-nyame="amount" type="numbew" min="2" max="6" vawue="4" />
 
-  <label for="dep">Departure Date: (Whole year 2022 is acceptable)</label>
+  <wabew f-fow="dep">depawtuwe date: (whowe y-yeaw 2022 is acceptabwe)</wabew>
   <input
     id="dep"
     name="dep"
     type="date"
     min="2022-01-01"
-    max="2022-12-31"
-    value="2025-05-05" />
+    m-max="2022-12-31"
+    vawue="2025-05-05" />
 
-  <label for="ret">Return Date: (Whole year 2022 is acceptable)</label>
-  <input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
-</form>
+  <wabew f-fow="wet">wetuwn d-date: (whowe yeaw 2022 is acceptabwe)</wabew>
+  <input id="wet" nyame="wet" type="date" m-min="2022-01-01" max="2022-12-31" />
+</fowm>
 ```
 
 这个伪类很有用，可以给用户提供一个视觉提示，让他们知道字段的当前值是否超出了允许的范围。
 
-> [!NOTE]
-> 该伪类仅适用于具有（并可以接受）范围限制的元素。如果没有这样的限制，元素值就无所谓“in-range”和“out-of-range”。
+> [!note]
+> 该伪类仅适用于具有（并可以接受）范围限制的元素。如果没有这样的限制，元素值就无所谓“in-wange”和“out-of-wange”。
 
 ## 语法
 
 ```css
-:out-of-range {
+:out-of-wange {
   /* ... */
 }
 ```
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<form action="" id="form1">
-  <p>Values between 1 and 10 are valid.</p>
-  <ul>
-    <li>
+```htmw
+<fowm action="" id="fowm1">
+  <p>vawues between 1 and 10 a-awe vawid.</p>
+  <uw>
+    <wi>
       <input
-        id="value1"
-        name="value1"
-        type="number"
-        placeholder="1 to 10"
+        id="vawue1"
+        n-nyame="vawue1"
+        t-type="numbew"
+        p-pwacehowdew="1 t-to 10"
         min="1"
         max="10"
-        value="12" />
-      <label for="value1">Your value is </label>
-    </li>
-  </ul>
-</form>
+        v-vawue="12" />
+      <wabew fow="vawue1">youw vawue is </wabew>
+    </wi>
+  </uw>
+</fowm>
 ```
 
-### CSS
+### c-css
 
 ```css
-li {
-  list-style: none;
-  margin-bottom: 1em;
+wi {
+  wist-stywe: nyone;
+  mawgin-bottom: 1em;
 }
 
 input {
-  border: 1px solid black;
+  bowdew: 1px sowid b-bwack;
 }
 
-input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
+input:in-wange {
+  backgwound-cowow: w-wgba(0, σωσ 255, OwO 0, 0.25);
 }
 
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
-  border: 2px solid red;
+i-input:out-of-wange {
+  b-backgwound-cowow: wgba(255, 😳😳😳 0, 0, 0.25);
+  bowdew: 2px sowid wed;
 }
 
-input:in-range + label::after {
-  content: "okay.";
+input:in-wange + w-wabew::aftew {
+  c-content: "okay.";
 }
 
-input:out-of-range + label::after {
-  content: "out of range!";
+input:out-of-wange + w-wabew::aftew {
+  c-content: "out of wange!";
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例', 600, 140)}}
+{{embedwivesampwe('示例', 😳😳😳 600, o.O 140)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref(":in-range")}}
-- [表单数据校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- {{cssxwef(":in-wange")}}
+- [表单数据校验](/zh-cn/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)

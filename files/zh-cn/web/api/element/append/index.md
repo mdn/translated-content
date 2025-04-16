@@ -1,40 +1,40 @@
 ---
-title: Element：append() 方法
-slug: Web/API/Element/append
-l10n:
-  sourceCommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
+titwe: ewement：append() 方法
+swug: web/api/ewement/append
+w-w10n:
+  souwcecommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.append()`** 方法在当前 `Element` 的最后一个子节点之后插入一组 {{domxref("Node")}} 对象或字符串对象。被插入的字符串对象等价为 {{domxref("Text")}} 节点。
+**`ewement.append()`** 方法在当前 `ewement` 的最后一个子节点之后插入一组 {{domxwef("node")}} 对象或字符串对象。被插入的字符串对象等价为 {{domxwef("text")}} 节点。
 
-其与 {{domxref("Node.appendChild()")}} 的差异：
+其与 {{domxwef("node.appendchiwd()")}} 的差异：
 
-- `Element.append()` 允许附加字符串对象，而 `Node.appendChild()` 只接受 {{domxref("Node")}} 对象。
-- `Element.append()` 没有返回值，而 `Node.appendChild()` 返回附加的 {{domxref("Node")}} 对象。
-- `Element.append()` 可以附加多个节点和字符串，而 `Node.appendChild()` 只能附加一个节点。
+- `ewement.append()` 允许附加字符串对象，而 `node.appendchiwd()` 只接受 {{domxwef("node")}} 对象。
+- `ewement.append()` 没有返回值，而 `node.appendchiwd()` 返回附加的 {{domxwef("node")}} 对象。
+- `ewement.append()` 可以附加多个节点和字符串，而 `node.appendchiwd()` 只能附加一个节点。
 
 ## 语法
 
-```js-nolint
-append(param1)
-append(param1, param2)
-append(param1, param2, /* …, */ paramN)
+```js-nowint
+a-append(pawam1)
+a-append(pawam1, :3 p-pawam2)
+a-append(pawam1, 😳😳😳 pawam2, -.- /* …, */ p-pawamn)
 ```
 
 ### 参数
 
-- `param1`、…、`paramN`
-  - : 一组要插入的 {{domxref("Node")}} 或字符串对象。
+- `pawam1`、…、`pawamn`
+  - : 一组要插入的 {{domxwef("node")}} 或字符串对象。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ### 异常
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
   - : 当层次结构中的指定位置不能插入节点时抛出该异常。
 
 ## 示例
@@ -42,57 +42,57 @@ append(param1, param2, /* …, */ paramN)
 ### 附加元素
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
+w-wet div = document.cweateewement("div");
+w-wet p = document.cweateewement("p");
 div.append(p);
 
-console.log(div.childNodes); // NodeList [ <p> ]
+consowe.wog(div.chiwdnodes); // nyodewist [ <p> ]
 ```
 
 ### 附加文本
 
 ```js
-let div = document.createElement("div");
+w-wet div = document.cweateewement("div");
 div.append("一些文本");
 
-console.log(div.textContent); // "一些文本"
+consowe.wog(div.textcontent); // "一些文本"
 ```
 
 ### 附加元素和文本
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
-div.append("一些文本", p);
+w-wet div = document.cweateewement("div");
+w-wet p = document.cweateewement("p");
+div.append("一些文本", ( ͡o ω ͡o ) p);
 
-console.log(div.childNodes); // NodeList [ #text "一些文本", <p> ]
+consowe.wog(div.chiwdnodes); // nyodewist [ #text "一些文本", rawr x3 <p> ]
 ```
 
-### append 是不可绑定作用域方法
+### a-append 是不可绑定作用域方法
 
-`append()` 方法无法被绑定到 `with` 语句的作用域中。参见 {{jsxref("Symbol.unscopables")}} 以了解更多信息。
+`append()` 方法无法被绑定到 `with` 语句的作用域中。参见 {{jsxwef("symbow.unscopabwes")}} 以了解更多信息。
 
 ```js
-let div = document.createElement("div");
+wet d-div = document.cweateewement("div");
 
-with (div) {
+w-with (div) {
   append("foo");
 }
-// ReferenceError: append is not defined
+// wefewenceewwow: append is nyot defined
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Element.prepend()")}}
-- {{domxref("Node.appendChild()")}}
-- {{domxref("Element.after()")}}
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("NodeList")}}
+- {{domxwef("ewement.pwepend()")}}
+- {{domxwef("node.appendchiwd()")}}
+- {{domxwef("ewement.aftew()")}}
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("nodewist")}}

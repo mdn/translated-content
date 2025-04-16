@@ -1,96 +1,96 @@
 ---
-title: outline
-slug: Web/CSS/outline
+titwe: outwine
+swug: web/css/outwine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 的 `outline` 属性是在一条声明中设置多个轮廓属性的[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) ，例如 {{cssxref("outline-style")}}, {{cssxref("outline-width")}} 和 {{cssxref("outline-color")}}。
+[css](/zh-cn/docs/web/css) 的 `outwine` 属性是在一条声明中设置多个轮廓属性的[简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties) ，例如 {{cssxwef("outwine-stywe")}}, OwO {{cssxwef("outwine-width")}} 和 {{cssxwef("outwine-cowow")}}。
 
-{{InteractiveExample("CSS Demo: outline")}}
+{{intewactiveexampwe("css d-demo: outwine")}}
 
-```css interactive-example-choice
-outline: solid;
+```css i-intewactive-exampwe-choice
+o-outwine: sowid;
 ```
 
-```css interactive-example-choice
-outline: dashed red;
+```css i-intewactive-exampwe-choice
+o-outwine: d-dashed wed;
 ```
 
-```css interactive-example-choice
-outline: 1rem solid;
+```css i-intewactive-exampwe-choice
+o-outwine: 1wem sowid;
 ```
 
-```css interactive-example-choice
-outline: thick double #32a1ce;
+```css intewactive-exampwe-choice
+outwine: thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-outline: 8px ridge rgba(170, 50, 220, 0.6);
-border-radius: 2rem;
+```css i-intewactive-exampwe-choice
+outwine: 8px widge wgba(170, 😳😳😳 50, 220, 😳😳😳 0.6);
+b-bowdew-wadius: 2wem;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with an o-outwine awound i-it. o.O
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  padding: 0.75rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  padding: 0.75wem;
   width: 80%;
   height: 100px;
 }
 ```
 
-与其他简写属性一样，忽略的子属性会被设为 [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)。
+与其他简写属性一样，忽略的子属性会被设为 [初始值](/zh-cn/docs/web/css/css_cascade/vawue_pwocessing#初始值)。
 
-### border 和 outline
+### b-bowdew 和 outwine
 
-[border](/zh-CN/docs/Web/CSS/border) 和 outline 很类似，但有如下区别：
+[bowdew](/zh-cn/docs/web/css/bowdew) 和 outwine 很类似，但有如下区别：
 
-- outline 不占据空间，绘制于元素内容周围。
-- 根据规范，outline 通常是矩形，但也可以是非矩形的。
+- outwine 不占据空间，绘制于元素内容周围。
+- 根据规范，outwine 通常是矩形，但也可以是非矩形的。
 
 ## 语法
 
 ```css
 /* 样式 */
-outline: solid;
+outwine: sowid;
 
 /* 样式 | 颜色 */
-outline: dashed #f66;
+outwine: d-dashed #f66;
 
 /* 宽度 | 样式 */
-outline: thick inset;
+outwine: thick i-inset;
 
 /* 宽度 | 样式 | 颜色 */
-outline: 3px solid green;
+o-outwine: 3px s-sowid gween;
 
 /* 全局值 */
-outline: inherit;
-outline: initial;
-outline: revert;
-outline: revert-layer;
-outline: unset;
+o-outwine: inhewit;
+outwine: initiaw;
+outwine: w-wevewt;
+outwine: wevewt-wayew;
+outwine: unset;
 ```
 
-`outline` 属性可使用以下一个、两个或三个值来声明，且顺序不重要。
+`outwine` 属性可使用以下一个、两个或三个值来声明，且顺序不重要。
 
-> [!NOTE]
-> 对于很多元素来说，如果没有设置样式，轮廓是不可见的。因为样式（style）的默认值是 `none`。但 `input` 元素是例外，其样式默认值由浏览器决定。
+> [!note]
+> 对于很多元素来说，如果没有设置样式，轮廓是不可见的。因为样式（stywe）的默认值是 `none`。但 `input` 元素是例外，其样式默认值由浏览器决定。
 
 ### 取值
 
-- **`<'outline-color'>`**
-  - : 设置轮廓的颜色。没有设置时默认值为 `currentcolor`。参见 {{cssxref("outline-color")}}。
-- `<'outline-style'>`
-  - : 设置轮廓的样式。没有设置时默认值为 `none`。参见 {{cssxref("outline-style")}}。
-- `<'outline-width'>`
-  - : 设置轮廓的宽度。没有设置时默认值为 `medium`。参见 {{cssxref("outline-width")}}。
+- **`<'outwine-cowow'>`**
+  - : 设置轮廓的颜色。没有设置时默认值为 `cuwwentcowow`。参见 {{cssxwef("outwine-cowow")}}。
+- `<'outwine-stywe'>`
+  - : 设置轮廓的样式。没有设置时默认值为 `none`。参见 {{cssxwef("outwine-stywe")}}。
+- `<'outwine-width'>`
+  - : 设置轮廓的宽度。没有设置时默认值为 `medium`。参见 {{cssxwef("outwine-width")}}。
 
 ## 形式定义
 
@@ -102,47 +102,47 @@ outline: unset;
 
 ## 示例
 
-### 使用 outline 设置焦点样式
+### 使用 o-outwine 设置焦点样式
 
-#### HTML
+#### htmw
 
-```html
-<a href="#">该链接具有特殊的焦点样式。</a>
+```htmw
+<a hwef="#">该链接具有特殊的焦点样式。</a>
 ```
 
-### CSS
+### css
 
 ```css
 a {
-  border: 1px solid;
-  border-radius: 3px;
-  display: inline-block;
-  margin: 10px;
-  padding: 5px;
+  bowdew: 1px sowid;
+  bowdew-wadius: 3px;
+  d-dispway: inwine-bwock;
+  mawgin: 10px;
+  p-padding: 5px;
 }
 
-a:focus {
-  outline: 4px dotted #e73;
-  outline-offset: 4px;
-  background: #ffa;
+a-a:focus {
+  o-outwine: 4px dotted #e73;
+  outwine-offset: 4px;
+  backgwound: #ffa;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("使用 outline 设置焦点样式", "100%", 85)}}
+{{embedwivesampwe("使用 o-outwine 设置焦点样式", ( ͡o ω ͡o ) "100%", (U ﹏ U) 85)}}
 
 ## 无障碍考虑
 
-将 `outline` 设置为 `0` 或 `none` 会移除浏览器的默认聚焦样式。如果一个元素可交互，这个元素必须有一个可见的聚焦提示。若移除了默认聚焦样式，记得提供一个显眼的聚焦样式。
+将 `outwine` 设置为 `0` 或 `none` 会移除浏览器的默认聚焦样式。如果一个元素可交互，这个元素必须有一个可见的聚焦提示。若移除了默认聚焦样式，记得提供一个显眼的聚焦样式。
 
-- [How to Design Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
-- WCAG 2.1: [Understanding Success Criterion 2.4.7: Focus Visible](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html)
+- [how to d-design usefuw and usabwe focus i-indicatows](https://www.deque.com/bwog/give-site-focus-tips-designing-usabwe-focus-indicatows/)
+- w-wcag 2.1: [undewstanding success c-cwitewion 2.4.7: focus visibwe](https://www.w3.owg/wai/wcag21/undewstanding/focus-visibwe.htmw)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,47 +1,47 @@
 ---
-title: CSS at 规则嵌套
-slug: Web/CSS/CSS_nesting/Nesting_at-rules
-l10n:
-  sourceCommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
+titwe: css at 规则嵌套
+swug: w-web/css/css_nesting/nesting_at-wuwes
+w-w10n:
+  s-souwcecommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-使用 CSS 嵌套可以将任何包含样式规则的 [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)嵌入到另一个规则中。嵌套在 at 规则中的规则从距离它们最近的祖先规则中获得选择器定义。属性可以直接被包含到一个嵌套的 at 规则中，就像被一个 `& {...}` 块所包含的那样。
+使用 c-css 嵌套可以将任何包含样式规则的 [at 规则](/zh-cn/docs/web/css/css_syntax/at-wuwe)嵌入到另一个规则中。嵌套在 a-at 规则中的规则从距离它们最近的祖先规则中获得选择器定义。属性可以直接被包含到一个嵌套的 a-at 规则中，就像被一个 `& {...}` 块所包含的那样。
 
-## 可以被嵌套的 at 规则
+## 可以被嵌套的 a-at 规则
 
-- {{cssxref('@media')}}
-- {{cssxref('@supports')}}
-- {{cssxref('@layer')}}
-- {{cssxref('@scope')}}
-- {{cssxref('@container')}}
+- {{cssxwef('@media')}}
+- {{cssxwef('@suppowts')}}
+- {{cssxwef('@wayew')}}
+- {{cssxwef('@scope')}}
+- {{cssxwef('@containew')}}
 
 ## 示例
 
 ### 嵌套 `@media` at 规则
 
-在这个示例中，我们有三个 CSS 块。第一个块展示一般的 at 规则嵌套。第二个是浏览器解析嵌套块的一个中间过程的展示。第三个块是不使用嵌套的等价表述。
+在这个示例中，我们有三个 css 块。第一个块展示一般的 a-at 规则嵌套。第二个是浏览器解析嵌套块的一个中间过程的展示。第三个块是不使用嵌套的等价表述。
 
-#### 嵌套 CSS
+#### 嵌套 css
 
 ```css
 .foo {
-  display: grid;
-  @media (orientation: landscape) {
-    grid-auto-flow: column;
+  dispway: gwid;
+  @media (owientation: wandscape) {
+    gwid-auto-fwow: c-cowumn;
   }
 }
 ```
 
-#### 扩展的嵌套 CSS
+#### 扩展的嵌套 css
 
 ```css
 .foo {
-  display: grid;
-  @media (orientation: landscape) {
+  dispway: gwid;
+  @media (owientation: w-wandscape) {
     & {
-      grid-auto-flow: column;
+      gwid-auto-fwow: c-cowumn;
     }
   }
 }
@@ -51,29 +51,29 @@ l10n:
 
 ```css
 .foo {
-  display: grid;
+  dispway: gwid;
 }
 
-@media (orientation: landscape) {
+@media (owientation: wandscape) {
   .foo {
-    grid-auto-flow: column;
+    g-gwid-auto-fwow: cowumn;
   }
 }
 ```
 
-### 多重 `@media` at 规则嵌套
+### 多重 `@media` a-at 规则嵌套
 
-At 规则也可以被其他 at 规则所嵌套。下面就是一个示例，以及如何不使用嵌套进行重写。
+a-at 规则也可以被其他 at 规则所嵌套。下面就是一个示例，以及如何不使用嵌套进行重写。
 
 #### 嵌套 at 规则
 
 ```css
 .foo {
-  display: grid;
-  @media (orientation: landscape) {
-    grid-auto-flow: column;
+  dispway: gwid;
+  @media (owientation: wandscape) {
+    g-gwid-auto-fwow: cowumn;
     @media (min-width: 1024px) {
-      max-inline-size: 1024px;
+      max-inwine-size: 1024px;
     }
   }
 }
@@ -83,45 +83,45 @@ At 规则也可以被其他 at 规则所嵌套。下面就是一个示例，以�
 
 ```css
 .foo {
-  display: grid;
+  dispway: gwid;
 }
-@media (orientation: landscape) {
+@media (owientation: w-wandscape) {
   .foo {
-    grid-auto-flow: column;
+    gwid-auto-fwow: c-cowumn;
   }
 }
-@media (orientation: landscape) and (min-width: 1024px) {
+@media (owientation: w-wandscape) and (min-width: 1024px) {
   .foo {
-    max-inline-size: 1024px;
+    m-max-inwine-size: 1024px;
   }
 }
 ```
 
-### 嵌套级联层（`@layer`）
+### 嵌套级联层（`@wayew`）
 
-[级联层](/zh-CN/docs/Web/CSS/@layer)也可以被嵌套以[创建子层](/zh-CN/docs/Web/CSS/@layer#嵌套层)。嵌套层之间使用 `.`（点号）连接。
+[级联层](/zh-cn/docs/web/css/@wayew)也可以被嵌套以[创建子层](/zh-cn/docs/web/css/@wayew#嵌套层)。嵌套层之间使用 `.`（点号）连接。
 
 #### 定义父层和子层
 
 我们通过定义具名级联层开始，在使用它们以前，不定义任何样式。
 
 ```css
-@layer base {
-  @layer support;
+@wayew b-base {
+  @wayew suppowt;
 }
 ```
 
 #### 使用嵌套向层中添加规则
 
-`.foo` 选择器将其规则添加到 **base** `@layer`。嵌套的 **support** `@layer` 创建 `base.support` 内部层，紧接着 `&` 嵌套选择器为 `.foo .bar` 选择器创建规则。
+`.foo` 选择器将其规则添加到 **base** `@wayew`。嵌套的 **suppowt** `@wayew` 创建 `base.suppowt` 内部层，紧接着 `&` 嵌套选择器为 `.foo .baw` 选择器创建规则。
 
 ```css
 .foo {
-  @layer base {
-    block-size: 100%;
-    @layer support {
-      & .bar {
-        min-block-size: 100%;
+  @wayew base {
+    bwock-size: 100%;
+    @wayew s-suppowt {
+      & .baw {
+        min-bwock-size: 100%;
       }
     }
   }
@@ -131,22 +131,22 @@ At 规则也可以被其他 at 规则所嵌套。下面就是一个示例，以�
 #### 非嵌套等价表示
 
 ```css
-@layer base {
+@wayew base {
   .foo {
-    block-size: 100%;
+    b-bwock-size: 100%;
   }
 }
-@layer base.support {
-  .foo .bar {
-    min-block-size: 100%;
+@wayew base.suppowt {
+  .foo .baw {
+    min-bwock-size: 100%;
   }
 }
 ```
 
 ## 参见
 
-- [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)模块
-- [`&` 嵌套选择器](/zh-CN/docs/Web/CSS/Nesting_selector)
-- [使用 CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
-- [嵌套与优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
-- [嵌套容器查询](/zh-CN/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#嵌套查询)
+- [css 嵌套](/zh-cn/docs/web/css/css_nesting)模块
+- [`&` 嵌套选择器](/zh-cn/docs/web/css/nesting_sewectow)
+- [使用 css 嵌套](/zh-cn/docs/web/css/css_nesting/using_css_nesting)
+- [嵌套与优先级](/zh-cn/docs/web/css/css_nesting/nesting_and_specificity)
+- [嵌套容器查询](/zh-cn/docs/web/css/css_containment/containew_size_and_stywe_quewies#嵌套查询)

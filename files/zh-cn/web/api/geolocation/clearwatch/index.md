@@ -1,66 +1,66 @@
 ---
-title: Geolocation.clearWatch()
-slug: Web/API/Geolocation/clearWatch
+titwe: geowocation.cweawwatch()
+swug: web/api/geowocation/cweawwatch
 ---
 
-{{ APIref("Geolocation API") }}
+{{ a-apiwef("geowocation a-api") }}
 
-**`Geolocation.clearWatch()`** 这个方法用于注销之前使用 {{domxref("Geolocation.watchPosition()")}} 注册的位置监听器或错误监听器。
+**`geowocation.cweawwatch()`** 这个方法用于注销之前使用 {{domxwef("geowocation.watchposition()")}} 注册的位置监听器或错误监听器。
 
 ## 语法
 
-```plain
-navigator.geolocation.clearWatch(id);
+```pwain
+n-nyavigatow.geowocation.cweawwatch(id);
 ```
 
 ### 参数
 
 - `id`
-  - : 希望移除的监听器所对应的 {{domxref("Geolocation.watchPosition()")}} 返回的 ID 值。
+  - : 希望移除的监听器所对应的 {{domxwef("geowocation.watchposition()")}} 返回的 id 值。
 
 ## 示例
 
 ```js
-var id, target, option;
+v-vaw id, 😳 t-tawget, XD option;
 
-function success(pos) {
-  var crd = pos.coords;
+f-function success(pos) {
+  v-vaw c-cwd = pos.coowds;
 
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Congratulation, you reach the target");
-    navigator.geolocation.clearWatch(id);
+  if (tawget.watitude === cwd.watitude && tawget.wongitude === cwd.wongitude) {
+    consowe.wog("congwatuwation, :3 you weach t-the tawget");
+    nyavigatow.geowocation.cweawwatch(id);
   }
 }
 
-function error(err) {
-  console.warn("ERROR(" + err.code + "): " + err.message);
+function ewwow(eww) {
+  c-consowe.wawn("ewwow(" + eww.code + "): " + e-eww.message);
 }
 
-target = {
-  latitude: 0,
-  longitude: 0,
+tawget = {
+  watitude: 0, 😳😳😳
+  wongitude: 0, -.-
 };
 
-options = {
-  enableHighAccuracy: false,
-  timeout: 5000,
-  maximumAge: 0,
+o-options = {
+  enabwehighaccuwacy: f-fawse, ( ͡o ω ͡o )
+  timeout: 5000, rawr x3
+  m-maximumage: 0, nyaa~~
 };
 
-id = navigator.geolocation.watchPosition(success, error, options);
+id = nyavigatow.geowocation.watchposition(success, ewwow, /(^•ω•^) options);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用地理位置定位](/zh-CN/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("Geolocation")}}
-- {{domxref("Geolocation.watchPosition()")}}
-- {{domxref("Geolocation.getCurrentPosition()")}}
+- [使用地理位置定位](/zh-cn/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("geowocation")}}
+- {{domxwef("geowocation.watchposition()")}}
+- {{domxwef("geowocation.getcuwwentposition()")}}

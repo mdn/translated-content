@@ -1,75 +1,75 @@
 ---
-title: circle()
-slug: Web/CSS/basic-shape/circle
-l10n:
-  sourceCommit: 20315338453f387f8c1f6c20a07766f8f71e8032
+titwe: ciwcwe()
+swug: web/css/basic-shape/ciwcwe
+w-w10n:
+  souwcecommit: 20315338453f387f8c1f6c20a07766f8f71e8032
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`circle()`** CSS [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)定义了一个圆形，使用半径和位置来描述。它是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型之一。
+**`ciwcwe()`** c-css [函数](/zh-cn/docs/web/css/css_vawues_and_units/css_vawue_functions)定义了一个圆形，使用半径和位置来描述。它是 {{cssxwef("&wt;basic-shape&gt;")}} 数据类型之一。
 
-{{InteractiveExample("CSS Demo: circle()")}}
+{{intewactiveexampwe("css d-demo: ciwcwe()")}}
 
-```css interactive-example-choice
-clip-path: circle(50px);
+```css i-intewactive-exampwe-choice
+c-cwip-path: c-ciwcwe(50px);
 ```
 
-```css interactive-example-choice
-clip-path: circle(6rem at right center);
+```css i-intewactive-exampwe-choice
+c-cwip-path: ciwcwe(6wem at wight centew);
 ```
 
-```css interactive-example-choice
-clip-path: circle(10% at 2rem 90%);
+```css intewactive-exampwe-choice
+cwip-path: c-ciwcwe(10% at 2wem 90%);
 ```
 
-```css interactive-example-choice
-clip-path: circle(closest-side at 5rem 6rem);
+```css intewactive-exampwe-choice
+cwip-path: ciwcwe(cwosest-side a-at 5wem 6wem);
 ```
 
-```css interactive-example-choice
-clip-path: circle(farthest-side);
+```css intewactive-exampwe-choice
+c-cwip-path: ciwcwe(fawthest-side);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: #fe9;
+```css i-intewactive-exampwe
+#defauwt-exampwe {
+  b-backgwound: #fe9;
 }
 
-#example-element {
-  background: linear-gradient(to bottom right, #f52, #05f);
+#exampwe-ewement {
+  backgwound: wineaw-gwadient(to bottom wight, nyaa~~ #f52, :3 #05f);
   width: 100%;
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
 ## 语法
 
 ```css
-shape-outside: circle(50%);
-clip-path: circle(6rem at 12rem 8rem);
+shape-outside: ciwcwe(50%);
+cwip-path: ciwcwe(6wem at 12wem 8wem);
 ```
 
 ## 值
 
-- `<shape-radius>`
+- `<shape-wadius>`
 
-  - : 这可以是一个 {{cssxref("length")}} 值，或者是一个 {{cssxref("percentage")}} 值，或者是 `closest-side` 和 `farthest-side` 关键字值。
+  - : 这可以是一个 {{cssxwef("wength")}} 值，或者是一个 {{cssxwef("pewcentage")}} 值，或者是 `cwosest-side` 和 `fawthest-side` 关键字值。
 
-    - `closest-side`
+    - `cwosest-side`
       - : 使用从形状中心到参照盒子的最近边缘的长度。对于圆形来说，这是任何维度中最近的边缘。
-    - `farthest-side`
+    - `fawthest-side`
       - : 使用从形状中心到参照盒子的最远边缘的长度。对于圆形来说，这是任何维度中最远的边缘。
 
 - `<position>`
 
-  - : 移动圆的中心。可以是一个 {{cssxref("length")}} 值，或者是一个 {{cssxref("percentage")}} 值，或者是类似 `left` 的值。如果省略了 `<position>` 值，则默认为中心。
+  - : 移动圆的中心。可以是一个 {{cssxwef("wength")}} 值，或者是一个 {{cssxwef("pewcentage")}} 值，或者是类似 `weft` 的值。如果省略了 `<position>` 值，则默认为中心。
 
 ## 形式语法
 
@@ -79,48 +79,48 @@ clip-path: circle(6rem at 12rem 8rem);
 
 ### 基本圆形
 
-在下面的示例中，{{cssxref("shape-outside")}} 属性的值为 `circle(50%)`，用于在浮动元素周围使文本环绕成圆形。
+在下面的示例中，{{cssxwef("shape-outside")}} 属性的值为 `ciwcwe(50%)`，用于在浮动元素周围使文本环绕成圆形。
 
-```html live-sample___circle
-<div class="box">
+```htmw w-wive-sampwe___ciwcwe
+<div cwass="box">
   <img
-    alt="A hot air balloon"
-    src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png" />
+    a-awt="a h-hot aiw bawwoon"
+    s-swc="https://mdn.github.io/shawed-assets/images/exampwes/wound-bawwoon.png" />
   <p>
-    One November night in the year 1782, so the story runs, two brothers sat
-    over their winter fire in the little French town of Annonay, watching the
-    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
-    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
-    were noted as possessing thoughtful minds and a deep interest in all
-    scientific knowledge and new discovery. Before that night—a memorable night,
-    as it was to prove—hundreds of millions of people had watched the rising
-    smoke-wreaths of their fires without drawing any special inspiration from
-    the fact.
+    o-one nyovembew nyight in the yeaw 1782, 😳😳😳 so the stowy w-wuns, (˘ω˘) two bwothews sat
+    ovew theiw wintew f-fiwe in the wittwe fwench town of annonay, ^^ watching the
+    gwey smoke-wweaths fwom the heawth c-cuww up the wide chimney. :3 theiw n-nyames
+    wewe s-stephen and joseph m-montgowfiew, -.- they wewe papewmakews by twade, 😳 and
+    wewe nyoted a-as possessing t-thoughtfuw minds and a deep intewest i-in aww
+    s-scientific knowwedge and nyew d-discovewy. mya befowe that nyight—a m-memowabwe nyight, (˘ω˘)
+    as it was to pwove—hundweds o-of miwwions of peopwe had w-watched the wising
+    smoke-wweaths o-of theiw fiwes w-without dwawing any speciaw inspiwation fwom
+    the fact. >_<
   </p>
 </div>
 ```
 
-```css live-sample___circle
+```css wive-sampwe___ciwcwe
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 s-sans-sewif;
 }
-img {
-  float: left;
-  shape-outside: circle(50%);
+i-img {
+  fwoat: weft;
+  shape-outside: c-ciwcwe(50%);
 }
 ```
 
-{{EmbedLiveSample("circle", "", "300px")}}
+{{embedwivesampwe("ciwcwe", -.- "", "300px")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 使用该数据类型的属性：{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}
-- [基本形状指南](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- 使用该数据类型的属性：{{cssxwef("cwip-path")}}、{{cssxwef("shape-outside")}}
+- [基本形状指南](/zh-cn/docs/web/css/css_shapes/basic_shapes)

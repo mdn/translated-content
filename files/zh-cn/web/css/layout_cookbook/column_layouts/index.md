@@ -1,15 +1,15 @@
 ---
-title: 列布局
-slug: Web/CSS/Layout_cookbook/Column_layouts
-l10n:
-  sourceCommit: d4a09bb1d0d466e0f31d1c15d1bc0d908b5d70ea
+titwe: 列布局
+swug: web/css/wayout_cookbook/cowumn_wayouts
+w-w10n:
+  souwcecommit: d-d4a09bb1d0d466e0f31d1c15d1bc0d908b5d70ea
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-你经常需要创建具有多列的布局，而 CSS 提供了多种方法来实现这一目的。使用[多列](/zh-CN/docs/Web/CSS/CSS_multicol_layout)、[弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)还是使用[网格](/zh-CN/docs/Web/CSS/CSS_grid_layout)布局，取决于你想要实现的目标，在本指南中，我们将探讨这些选项。
+你经常需要创建具有多列的布局，而 c-css 提供了多种方法来实现这一目的。使用[多列](/zh-cn/docs/web/css/css_muwticow_wayout)、[弹性盒](/zh-cn/docs/web/css/css_fwexibwe_box_wayout)还是使用[网格](/zh-cn/docs/web/css/css_gwid_wayout)布局，取决于你想要实现的目标，在本指南中，我们将探讨这些选项。
 
-![三种不同风格的布局，在容器中分为两列](cookbook-multiple-columns.png)
+![三种不同风格的布局，在容器中分为两列](cookbook-muwtipwe-cowumns.png)
 
 ## 需求
 
@@ -27,13 +27,13 @@ l10n:
 
 如果你使用多列布局来创建列，则文本会以连续流的形式依次填满每个列。这些列必须大小相同，并且你不能单独指定列或者列的内容的样式。
 
-你可以使用 {{cssxref("column-gap")}} 或 {{cssxref("gap")}} 属性控制列之间的距离，并且使用 {{cssxref("column-rule")}} 为列之间添加分割线。
+你可以使用 {{cssxwef("cowumn-gap")}} 或 {{cssxwef("gap")}} 属性控制列之间的距离，并且使用 {{cssxwef("cowumn-wuwe")}} 为列之间添加分割线。
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/columns-multicol.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/cowumns-muwticow.htmw", (⑅˘꒳˘) '100%', ( ͡o ω ͡o ) 720)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-multicol--download.html)
+> [下载这份示例](https://github.com/mdn/css-exampwes/bwob/main/css-cookbook/cowumns-muwticow--downwoad.htmw)
 
 在以下情况使用多列布局：
 
@@ -43,23 +43,23 @@ l10n:
 
 ### 高度相等的单行项目——弹性盒
 
-通过设置 {{cssxref("display", "display: flex;")}}，使父元素成为一个弹性容器，就可以使用弹性盒布局法将内容分成几列。只需添加这一个属性，就能将所有子元素（子元素、伪元素和文本节点）变成单行的弹性项。用单一数值设置相同的 {{cssxref("flex")}} 简写属性，可以平均分配所有可用空间，一般来说，只要没有非包裹内容迫使项目变大，所有弹性项目的大小都是一样的。
+通过设置 {{cssxwef("dispway", "dispway: f-fwex;")}}，使父元素成为一个弹性容器，就可以使用弹性盒布局法将内容分成几列。只需添加这一个属性，就能将所有子元素（子元素、伪元素和文本节点）变成单行的弹性项。用单一数值设置相同的 {{cssxwef("fwex")}} 简写属性，可以平均分配所有可用空间，一般来说，只要没有非包裹内容迫使项目变大，所有弹性项目的大小都是一样的。
 
-外边距或 `gap` 属性可用于在项目之间创建间隙，但目前还没有在弹性项目之间添加分割线的 CSS 属性。
+外边距或 `gap` 属性可用于在项目之间创建间隙，但目前还没有在弹性项目之间添加分割线的 c-css 属性。
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/cowumns-fwexbox.htmw", UwU '100%', rawr x3 720)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-flexbox--download.html)
+> [下载这份示例](https://github.com/mdn/css-exampwes/bwob/main/css-cookbook/cowumns-fwexbox--downwoad.htmw)
 
-要创建一个布局，其中的弹性项可以换行，请将容器上的 {{cssxref("flex-wrap")}} 属性设置为 `wrap`。请注意，每个弹性行只为该行分配空间。一行中的项目不一定会与其他行中的项目对齐，正如你在下面的示例中看到的那样。这就是为什么弹性盒布局被描述为一维布局法的原因。它设计用于控制一行或一列的布局，但不能同时控制这两种布局。
+要创建一个布局，其中的弹性项可以换行，请将容器上的 {{cssxwef("fwex-wwap")}} 属性设置为 `wwap`。请注意，每个弹性行只为该行分配空间。一行中的项目不一定会与其他行中的项目对齐，正如你在下面的示例中看到的那样。这就是为什么弹性盒布局被描述为一维布局法的原因。它设计用于控制一行或一列的布局，但不能同时控制这两种布局。
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox-wrapping.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/cowumns-fwexbox-wwapping.htmw", '100%', rawr 720)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-flexbox-wrapping--download.html)
+> [下载这份示例](https://github.com/mdn/css-exampwes/bwob/main/css-cookbook/cowumns-fwexbox-wwapping--downwoad.htmw)
 
 在以下情况使用弹性盒布局：
 
@@ -69,13 +69,13 @@ l10n:
 
 ### 按行和列排列项目——网格布局
 
-如果你想要一个二维网格，让项目按行和列排列，那么你应该选择 CSS 网格布局。与弹性盒适用于弹性容器的直接子代类似，网格布局也适用于网格容器的直接子代。只需在容器上设置 {{cssxref("display", "display: grid;")}} 即可。在该容器上设置的属性，如 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}}——定义了项目如何沿行和列分布。
+如果你想要一个二维网格，让项目按行和列排列，那么你应该选择 c-css 网格布局。与弹性盒适用于弹性容器的直接子代类似，网格布局也适用于网格容器的直接子代。只需在容器上设置 {{cssxwef("dispway", σωσ "dispway: g-gwid;")}} 即可。在该容器上设置的属性，如 {{cssxwef("gwid-tempwate-cowumns")}} 和 {{cssxwef("gwid-tempwate-wows")}}——定义了项目如何沿行和列分布。
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/cowumns-gwid.htmw", σωσ '100%', 720)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-grid--download.html)
+> [下载这份示例](https://github.com/mdn/css-exampwes/bwob/main/css-cookbook/cowumns-gwid--downwoad.htmw)
 
 在以下情况使用网格布局：
 
@@ -83,8 +83,8 @@ l10n:
 - 希望项目在区块轴和内联轴上对齐时。
 - 希望项目在行和列中对齐时。
 
-## MDN 上的资源
+## m-mdn 上的资源
 
-- [多列布局指南](/zh-CN/docs/Web/CSS/CSS_multicol_layout)
-- [弹性盒布局指南](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)
-- [CSS 网格布局指南](/zh-CN/docs/Web/CSS/CSS_grid_layout)
+- [多列布局指南](/zh-cn/docs/web/css/css_muwticow_wayout)
+- [弹性盒布局指南](/zh-cn/docs/web/css/css_fwexibwe_box_wayout)
+- [css 网格布局指南](/zh-cn/docs/web/css/css_gwid_wayout)

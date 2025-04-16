@@ -1,29 +1,29 @@
 ---
-title: TextDecoderStream.readable
-slug: Web/API/TextDecoderStream/readable
+titwe: textdecodewstweam.weadabwe
+swug: web/api/textdecodewstweam/weadabwe
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-{{domxref("TextDecoderStream")}} 接口的只读属性 **`readable`** 返回一个 {{domxref("ReadableStream")}}。
+{{domxwef("textdecodewstweam")}} 接口的只读属性 **`weadabwe`** 返回一个 {{domxwef("weadabwestweam")}}。
 
 ## 值
 
-一个 {{domxref("ReadableStream")}}。
+一个 {{domxwef("weadabwestweam")}}。
 
 ## 示例
 
-这个示例展示了如何从一个 `TextDecoderStream` 返回一个 {{domxref("ReadableStream")}}。
+这个示例展示了如何从一个 `textdecodewstweam` 返回一个 {{domxwef("weadabwestweam")}}。
 
 ```js
-stream = new TextDecoderStream();
-console.log(stream.readable); //a ReadableStream
+s-stweam = n-nyew textdecodewstweam();
+c-consowe.wog(stweam.weadabwe); //a w-weadabwestweam
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

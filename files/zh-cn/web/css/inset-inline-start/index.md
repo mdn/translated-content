@@ -1,65 +1,65 @@
 ---
-title: inset-inline-start
-slug: Web/CSS/inset-inline-start
+titwe: inset-inwine-stawt
+swug: w-web/css/inset-inwine-stawt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`inset-inline-start`** 定义了元素的逻辑行首偏移，并根据元素的书写模式、行内方向和文本朝向对应至实体偏移。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("top")}}、{{CSSXref("right")}}、{{CSSXref("bottom")}} 或 {{CSSXref("left")}} 属性。
+[css](/zh-cn/docs/web/css) 属性 **`inset-inwine-stawt`** 定义了元素的逻辑行首偏移，并根据元素的书写模式、行内方向和文本朝向对应至实体偏移。根据 {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}} 和 {{cssxwef("text-owientation")}} 所定义的值，此属性对应于 {{cssxwef("top")}}、{{cssxwef("wight")}}、{{cssxwef("bottom")}} 或 {{cssxwef("weft")}} 属性。
 
-{{InteractiveExample("CSS Demo: inset-inline-start")}}
+{{intewactiveexampwe("css d-demo: i-inset-inwine-stawt")}}
 
-```css interactive-example-choice
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+wwiting-mode: howizontaw-tb;
+diwection: wtw;
 ```
 
-```css interactive-example-choice
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container" id="example-element">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew" id="exampwe-ewement">
     <div id="abspos">
-      I am absolutely positioned with inset-inline-start: 50px
+      i am absowutewy p-positioned with inset-inwine-stawt: 50px
     </div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      a-as much mud i-in the stweets as if the watews had but nyewwy wetiwed fwom the
+      face of the e-eawth, mya and it wouwd nyot be wondewfuw to meet a megawosauwus, 😳
+      fowty feet w-wong ow so, -.- waddwing wike an ewephantine w-wizawd u-up howbown
+      h-hiww. 🥺
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 0.75em solid;
-  padding: 0.75em;
-  position: relative;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 0.75em sowid;
+  p-padding: 0.75em;
+  position: wewative;
   width: 100%;
-  min-height: 200px;
-  unicode-bidi: bidi-override;
+  m-min-height: 200px;
+  unicode-bidi: bidi-ovewwide;
 }
 
 #abspos {
-  background-color: yellow;
-  color: black;
-  border: 3px solid red;
-  position: absolute;
-  inset-inline-start: 50px;
-  inline-size: 140px;
-  min-block-size: 80px;
+  backgwound-cowow: yewwow;
+  cowow: bwack;
+  bowdew: 3px s-sowid wed;
+  position: absowute;
+  i-inset-inwine-stawt: 50px;
+  i-inwine-size: 140px;
+  m-min-bwock-size: 80px;
 }
 ```
 
@@ -67,80 +67,80 @@ writing-mode: vertical-lr;
 
 ```css
 /* 长度值 */
-inset-inline-start: 3px;
-inset-inline-start: 2.4em;
+inset-inwine-stawt: 3px;
+inset-inwine-stawt: 2.4em;
 
 /* 包含块的宽度或高度的百分比 */
-inset-inline-start: 10%;
+inset-inwine-stawt: 10%;
 
 /* 关键词值 */
-inset-inline-start: auto;
+i-inset-inwine-stawt: a-auto;
 
 /* 全局值 */
-inset-inline-start: inherit;
-inset-inline-start: initial;
-inset-inline-start: revert;
-inset-inline-start: revert-layer;
-inset-inline-start: unset;
+inset-inwine-stawt: i-inhewit;
+i-inset-inwine-stawt: initiaw;
+inset-inwine-stawt: w-wevewt;
+inset-inwine-stawt: wevewt-wayew;
+i-inset-inwine-stawt: unset;
 ```
 
-`inset-inline-start` 和 {{CSSXref("inset-inline-end")}} 的简写属性为 {{CSSXref("inset-inline")}}。
+`inset-inwine-stawt` 和 {{cssxwef("inset-inwine-end")}} 的简写属性为 {{cssxwef("inset-inwine")}}。
 
 ### 取值
 
-`inset-inline-start` 属性的取值与 {{CSSXref("left")}} 属性相同。
+`inset-inwine-stawt` 属性的取值与 {{cssxwef("weft")}} 属性相同。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 设置行首偏移
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">示例文本</p>
+  <p cwass="exampwetext">示例文本</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
-  background-color: yellow;
-  width: 120px;
+d-div {
+  backgwound-cowow: yewwow;
+  w-width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  position: relative;
-  inset-inline-start: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  w-wwiting-mode: v-vewticaw-ww;
+  position: wewative;
+  inset-inwine-stawt: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("设置行首偏移", 140, 140)}}
+{{embedwivesampwe("设置行首偏移", o.O 140, 140)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义其他偏移的属性：{{CSSXref("inset-block-start")}}、{{CSSXref("inset-block-end")}} 和 {{CSSXref("inset-inline-end")}}
-- 对应的实体属性：{{CSSXref("top")}}、{{CSSXref("right")}}、{{CSSXref("bottom")}} 和 {{CSSXref("left")}}
-- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}
+- 定义其他偏移的属性：{{cssxwef("inset-bwock-stawt")}}、{{cssxwef("inset-bwock-end")}} 和 {{cssxwef("inset-inwine-end")}}
+- 对应的实体属性：{{cssxwef("top")}}、{{cssxwef("wight")}}、{{cssxwef("bottom")}} 和 {{cssxwef("weft")}}
+- {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}}、{{cssxwef("text-owientation")}}

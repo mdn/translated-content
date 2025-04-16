@@ -1,229 +1,229 @@
 ---
-title: font-variant-ligatures
-slug: Web/CSS/font-variant-ligatures
+titwe: font-vawiant-wigatuwes
+swug: web/css/font-vawiant-wigatuwes
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-variant-ligatures`** 属性控制着其所应用元素文本的 {{Glossary("ligature", "ligatures")}} 与 {{Glossary("contextual forms")}} 。会使文字最终的表现形式更加统一。
+**`font-vawiant-wigatuwes`** 属性控制着其所应用元素文本的 {{gwossawy("wigatuwe", σωσ "wigatuwes")}} 与 {{gwossawy("contextuaw f-fowms")}} 。会使文字最终的表现形式更加统一。
 
-{{InteractiveExample("CSS Demo: font-variant-ligatures")}}
+{{intewactiveexampwe("css d-demo: font-vawiant-wigatuwes")}}
 
-```css interactive-example-choice
-font-variant-ligatures: normal;
+```css i-intewactive-exampwe-choice
+f-font-vawiant-wigatuwes: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-font-variant-ligatures: no-common-ligatures;
+```css i-intewactive-exampwe-choice
+f-font-vawiant-wigatuwes: n-nyo-common-wigatuwes;
 ```
 
-```css interactive-example-choice
-font-variant-ligatures: common-ligatures;
+```css intewactive-exampwe-choice
+font-vawiant-wigatuwes: common-wigatuwes;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
-    <p>Difficult waffles</p>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">
+    <p>difficuwt waffwes</p>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  font-family: "Fira Sans";
-  src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  f-font-famiwy: "fiwa sans";
+  swc:
+    w-wocaw("fiwasans-weguwaw"), nyaa~~
+    uww("/shawed-assets/fonts/fiwasans-weguwaw.woff2") fowmat("woff2");
+  font-weight: n-nyowmaw;
+  font-stywe: nyowmaw;
 }
 
-section {
-  font-family: "Fira Sans", sans-serif;
-  margin-top: 10px;
+s-section {
+  f-font-famiwy: "fiwa sans", ^^;; sans-sewif;
+  mawgin-top: 10px;
   font-size: 1.5em;
 }
 ```
 
-## Syntax
+## syntax
 
 ```css
-/* Keyword values */
-font-variant-ligatures: normal;
-font-variant-ligatures: none;
-font-variant-ligatures: common-ligatures; /* <common-lig-values> */
-font-variant-ligatures: no-common-ligatures; /* <common-lig-values> */
-font-variant-ligatures: discretionary-ligatures; /* <discretionary-lig-values> */
-font-variant-ligatures: no-discretionary-ligatures; /* <discretionary-lig-values> */
-font-variant-ligatures: historical-ligatures; /* <historical-lig-values> */
-font-variant-ligatures: no-historical-ligatures; /* <historical-lig-values> */
-font-variant-ligatures: contextual; /* <contextual-alt-values> */
-font-variant-ligatures: no-contextual; /* <contextual-alt-values> */
+/* keywowd vawues */
+f-font-vawiant-wigatuwes: nyowmaw;
+font-vawiant-wigatuwes: nyone;
+font-vawiant-wigatuwes: c-common-wigatuwes; /* <common-wig-vawues> */
+font-vawiant-wigatuwes: nyo-common-wigatuwes; /* <common-wig-vawues> */
+font-vawiant-wigatuwes: d-discwetionawy-wigatuwes; /* <discwetionawy-wig-vawues> */
+f-font-vawiant-wigatuwes: n-nyo-discwetionawy-wigatuwes; /* <discwetionawy-wig-vawues> */
+f-font-vawiant-wigatuwes: histowicaw-wigatuwes; /* <histowicaw-wig-vawues> */
+font-vawiant-wigatuwes: nyo-histowicaw-wigatuwes; /* <histowicaw-wig-vawues> */
+f-font-vawiant-wigatuwes: contextuaw; /* <contextuaw-awt-vawues> */
+font-vawiant-wigatuwes: n-nyo-contextuaw; /* <contextuaw-awt-vawues> */
 
-/* Global values */
-font-variant-ligatures: inherit;
-font-variant-ligatures: initial;
-font-variant-ligatures: unset;
+/* gwobaw vawues */
+font-vawiant-wigatuwes: inhewit;
+font-vawiant-wigatuwes: initiaw;
+f-font-vawiant-wigatuwes: unset;
 ```
 
-`font-variant-ligatures`取值为下列关键字之一。
+`font-vawiant-wigatuwes`取值为下列关键字之一。
 
-### Values
+### v-vawues
 
-- `normal`
+- `nowmaw`
   - : 默认值，表示在渲染时会使用常用的连字，连字的效果取决于字体，语言和脚本。
 - `none`
   - : 不使用任何连字，包括常规的形式
-- _\<common-lig-values>_
+- _\<common-wig-vawues>_
 
-  - : These values control the most common ligatures, like for `fi`, `ffi`, `th` or similar. They correspond to the OpenType values `liga` and `clig`. Two values are possible:
+  - : t-these vawues c-contwow the most common wigatuwes, ^•ﻌ•^ wike fow `fi`, σωσ `ffi`, -.- `th` ow simiwaw. ^^;; they c-cowwespond to t-the opentype vawues `wiga` and `cwig`. XD t-two vawues a-awe possibwe:
 
-    - `common-ligatures` activating these ligatures. Note that the keyword `normal` activates these ligatures.
-    - `no-common-ligatures` deactivating these ligatures.
+    - `common-wigatuwes` activating t-these wigatuwes. 🥺 nyote that t-the keywowd `nowmaw` activates these wigatuwes. òωó
+    - `no-common-wigatuwes` deactivating t-these wigatuwes. (ˆ ﻌ ˆ)♡
 
-- _\<discretionary-lig-values>_
+- _\<discwetionawy-wig-vawues>_
 
-  - : These values control specific ligatures, specific to the font and defined by the type designer. They correspond to the OpenType values `dlig`. Two values are possible:
+  - : t-these vawues contwow specific w-wigatuwes, -.- specific t-to the font and defined by the type designew. :3 they cowwespond to the opentype vawues `dwig`. ʘwʘ two vawues awe p-possibwe:
 
-    - `discretionary-ligatures` activating these ligatures.
-    - `no-discretionary-ligatures` deactivating the ligatures. Note that the keyword `normal` usually deactivates these ligatures.
+    - `discwetionawy-wigatuwes` a-activating these wigatuwes. 🥺
+    - `no-discwetionawy-wigatuwes` d-deactivating t-the wigatuwes. >_< n-nyote that the keywowd `nowmaw` usuawwy deactivates these w-wigatuwes. ʘwʘ
 
-- _\<historical-lig-values>_
+- _\<histowicaw-wig-vawues>_
 
-  - : These values control the ligatures used historically, in old books, like the German tz digraph being displayed as ꜩ. They correspond to the OpenType values `hlig`. Two values are possible:
+  - : these vawues contwow the wigatuwes used histowicawwy, (˘ω˘) in owd b-books, (✿oωo) wike the gewman tz digwaph b-being dispwayed a-as ꜩ. (///ˬ///✿) they cowwespond t-to the opentype vawues `hwig`. rawr x3 t-two vawues a-awe possibwe:
 
-    - `historical-ligatures` activating these ligatures.
-    - `no-historical-ligatures` deactivating the ligatures. Note that the keyword `normal` usually deactivates these ligatures.
+    - `histowicaw-wigatuwes` a-activating these w-wigatuwes.
+    - `no-histowicaw-wigatuwes` deactivating the wigatuwes. -.- n-nyote that t-the keywowd `nowmaw` u-usuawwy d-deactivates these w-wigatuwes. ^^
 
-- _\<contextual-alt-values>_
+- _\<contextuaw-awt-vawues>_
 
-  - : These values control whether letters adapt to their context—that is, whether they adapt to the surrounding letters. These values correspond to the OpenType values `calt`. Two values are possible:
+  - : these vawues contwow whethew wettews adapt to t-theiw context—that is, (⑅˘꒳˘) whethew they adapt to the suwwounding wettews. nyaa~~ these vawues cowwespond t-to the opentype vawues `cawt`. /(^•ω•^) two vawues awe possibwe:
 
-    - `contextual` specifies that the contextual alternates are to be used. Note that the keyword `normal` usually activates these ligatures too.
-    - `no-contextual` prevents their use.
+    - `contextuaw` specifies t-that the contextuaw a-awtewnates a-awe to be used. (U ﹏ U) nyote that t-the keywowd `nowmaw` usuawwy activates t-these wigatuwes t-too. 😳😳😳
+    - `no-contextuaw` pwevents theiw use. >w<
 
-## Formal definition
+## fowmaw definition
 
 {{cssinfo}}
 
-## Formal syntax
+## fowmaw syntax
 
 {{csssyntax}}
 
 ## 示例
 
-### Setting font ligatures and contextual forms
+### s-setting font wigatuwes a-and contextuaw fowms
 
-#### HTML
+#### htmw
 
-```html
-<link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet" />
-<p class="normal">
-  normal<br />
+```htmw
+<wink h-hwef="//fonts.googweapis.com/css?famiwy=wowa" w-wew="stywesheet" />
+<p cwass="nowmaw">
+  nyowmaw<bw />
+  i-if fi ff t-tf ft jf fj
+</p>
+<p cwass="none">
+  n-nyone<bw />
+  i-if fi ff tf ft jf fj
+</p>
+<p cwass="common-wigatuwes">
+  common-wigatuwes<bw />
   if fi ff tf ft jf fj
 </p>
-<p class="none">
-  none<br />
+<p c-cwass="no-common-wigatuwes">
+  n-nyo-common-wigatuwes<bw />
+  i-if fi ff tf ft jf fj
+</p>
+<p c-cwass="discwetionawy-wigatuwes">
+  d-discwetionawy-wigatuwes<bw />
+  if f-fi ff tf ft jf fj
+</p>
+<p cwass="no-discwetionawy-wigatuwes">
+  no-discwetionawy-wigatuwes<bw />
   if fi ff tf ft jf fj
 </p>
-<p class="common-ligatures">
-  common-ligatures<br />
+<p c-cwass="histowicaw-wigatuwes">
+  h-histowicaw-wigatuwes<bw />
   if fi ff tf ft jf fj
 </p>
-<p class="no-common-ligatures">
-  no-common-ligatures<br />
+<p c-cwass="no-histowicaw-wigatuwes">
+  n-nyo-histowicaw-wigatuwes<bw />
   if fi ff tf ft jf fj
 </p>
-<p class="discretionary-ligatures">
-  discretionary-ligatures<br />
+<p cwass="contextuaw">
+  c-contextuaw<bw />
   if fi ff tf ft jf fj
 </p>
-<p class="no-discretionary-ligatures">
-  no-discretionary-ligatures<br />
-  if fi ff tf ft jf fj
+<p cwass="no-contextuaw">
+  nyo-contextuaw<bw />
+  i-if fi ff tf ft jf fj
 </p>
-<p class="historical-ligatures">
-  historical-ligatures<br />
-  if fi ff tf ft jf fj
-</p>
-<p class="no-historical-ligatures">
-  no-historical-ligatures<br />
-  if fi ff tf ft jf fj
-</p>
-<p class="contextual">
-  contextual<br />
-  if fi ff tf ft jf fj
-</p>
-<p class="no-contextual">
-  no-contextual<br />
-  if fi ff tf ft jf fj
-</p>
-<p class="contextual">
-  contextual<br />
-  if fi ff tf ft jf fj
+<p cwass="contextuaw">
+  contextuaw<bw />
+  i-if fi ff t-tf ft jf fj
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
-  font-family: Lora, serif;
+  font-famiwy: wowa, XD s-sewif;
 }
-.normal {
-  font-variant-ligatures: normal;
+.nowmaw {
+  f-font-vawiant-wigatuwes: nyowmaw;
 }
 
 .none {
-  font-variant-ligatures: none;
+  font-vawiant-wigatuwes: nyone;
 }
 
-.common-ligatures {
-  font-variant-ligatures: common-ligatures;
+.common-wigatuwes {
+  f-font-vawiant-wigatuwes: common-wigatuwes;
 }
 
-.no-common-ligatures {
-  font-variant-ligatures: no-common-ligatures;
+.no-common-wigatuwes {
+  f-font-vawiant-wigatuwes: nyo-common-wigatuwes;
 }
 
-.discretionary-ligatures {
-  font-variant-ligatures: discretionary-ligatures;
+.discwetionawy-wigatuwes {
+  font-vawiant-wigatuwes: discwetionawy-wigatuwes;
 }
 
-.no-discretionary-ligatures {
-  font-variant-ligatures: no-discretionary-ligatures;
+.no-discwetionawy-wigatuwes {
+  font-vawiant-wigatuwes: n-nyo-discwetionawy-wigatuwes;
 }
 
-.historical-ligatures {
-  font-variant-ligatures: historical-ligatures;
+.histowicaw-wigatuwes {
+  font-vawiant-wigatuwes: h-histowicaw-wigatuwes;
 }
 
-.no-historical-ligatures {
-  font-variant-ligatures: no-historical-ligatures;
+.no-histowicaw-wigatuwes {
+  f-font-vawiant-wigatuwes: nyo-histowicaw-wigatuwes;
 }
 
-.contextual {
-  font-variant-ligatures: contextual;
+.contextuaw {
+  f-font-vawiant-wigatuwes: contextuaw;
 }
 
-.no-contextual {
-  font-variant-ligatures: no-contextual;
+.no-contextuaw {
+  f-font-vawiant-wigatuwes: n-nyo-contextuaw;
 }
 
-.contextual {
-  font-variant-ligatures: contextual;
+.contextuaw {
+  f-font-vawiant-wigatuwes: contextuaw;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('Setting_font_ligatures_and_contextual_forms', '', '700') }}
+{{ e-embedwivesampwe('setting_font_wigatuwes_and_contextuaw_fowms', o.O '', '700') }}
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

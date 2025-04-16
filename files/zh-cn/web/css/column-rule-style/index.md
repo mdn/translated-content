@@ -1,86 +1,86 @@
 ---
-title: column-rule-style
-slug: Web/CSS/column-rule-style
-l10n:
-  sourceCommit: 489dbd4d8e2e099733d3bb04ad3f97678c54ac8e
+titwe: cowumn-wuwe-stywe
+swug: w-web/css/cowumn-wuwe-stywe
+w-w10n:
+  s-souwcecommit: 489dbd4d8e2e099733d3bb04ad3f97678c54ac8e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`column-rule-style`** [CSS](/zh-CN/docs/Web/CSS) 属性设置多列布局中列之间绘制的线条的样式。
+**`cowumn-wuwe-stywe`** [css](/zh-cn/docs/web/css) 属性设置多列布局中列之间绘制的线条的样式。
 
-{{InteractiveExample("CSS Demo: column-rule-style")}}
+{{intewactiveexampwe("css d-demo: c-cowumn-wuwe-stywe")}}
 
-```css interactive-example-choice
-column-rule-style: none;
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-column-rule-style: dotted;
+```css intewactive-exampwe-choice
+cowumn-wuwe-stywe: dotted;
 ```
 
-```css interactive-example-choice
-column-rule-style: solid;
+```css intewactive-exampwe-choice
+cowumn-wuwe-stywe: sowid;
 ```
 
-```css interactive-example-choice
-column-rule-style: double;
+```css i-intewactive-exampwe-choice
+cowumn-wuwe-stywe: doubwe;
 ```
 
-```css interactive-example-choice
-column-rule-style: ridge;
-column-rule-color: #88f;
+```css i-intewactive-exampwe-choice
+cowumn-wuwe-stywe: widge;
+cowumn-wuwe-cowow: #88f;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. mya michaewmas tewm watewy o-ovew, ^^ and the wowd chancewwow sitting i-in
+    wincown's i-inn haww. 😳😳😳 impwacabwe nyovembew weathew. mya as much mud in the stweets
+    as i-if the watews had but nyewwy wetiwed fwom the face of the eawth, and it
+    wouwd n-nyot be wondewfuw to meet a megawosauwus, 😳 f-fowty f-feet wong ow s-so, -.-
+    waddwing w-wike an ewephantine wizawd up howbown hiww. 🥺
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  cowumns: 3;
+  cowumn-wuwe: sowid;
+  t-text-awign: weft;
 }
 ```
 
 ## 语法
 
 ```css
-/* <'border-style'> 值 */
-column-rule-style: none;
-column-rule-style: hidden;
-column-rule-style: dotted;
-column-rule-style: dashed;
-column-rule-style: solid;
-column-rule-style: double;
-column-rule-style: groove;
-column-rule-style: ridge;
-column-rule-style: inset;
-column-rule-style: outset;
+/* <'bowdew-stywe'> 值 */
+cowumn-wuwe-stywe: nyone;
+cowumn-wuwe-stywe: hidden;
+cowumn-wuwe-stywe: d-dotted;
+cowumn-wuwe-stywe: dashed;
+cowumn-wuwe-stywe: s-sowid;
+c-cowumn-wuwe-stywe: d-doubwe;
+cowumn-wuwe-stywe: gwoove;
+cowumn-wuwe-stywe: widge;
+cowumn-wuwe-stywe: i-inset;
+cowumn-wuwe-stywe: o-outset;
 
 /* 全局值 */
-column-rule-style: inherit;
-column-rule-style: initial;
-column-rule-style: revert;
-column-rule-style: revert-layer;
-column-rule-style: unset;
+cowumn-wuwe-stywe: i-inhewit;
+c-cowumn-wuwe-stywe: initiaw;
+c-cowumn-wuwe-stywe: wevewt;
+cowumn-wuwe-stywe: wevewt-wayew;
+c-cowumn-wuwe-stywe: unset;
 ```
 
-`column-rule-style` 属性可以指定为单个 `<'border-style'>` 值。
+`cowumn-wuwe-stywe` 属性可以指定为单个 `<'bowdew-stywe'>` 值。
 
 ### 值
 
-- `<'border-style'>`
-  - : 是由 {{ cssxref("border-style") }} 定义的关键字，用于描述规则的样式，样式必须按照合并边框模型进行解释。
+- `<'bowdew-stywe'>`
+  - : 是由 {{ cssxwef("bowdew-stywe") }} 定义的关键字，用于描述规则的样式，样式必须按照合并边框模型进行解释。
 
 ## 形式定义
 
@@ -94,39 +94,39 @@ column-rule-style: unset;
 
 ### 设置虚线条列规则
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  这段文本由三列组成，使用 <code>column-rule-style</code>
+  这段文本由三列组成，使用 <code>cowumn-wuwe-stywe</code>
   属性来更改列之间线条的样式。这难道不奇妙吗？
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
-  column-count: 3;
-  column-rule-style: dashed;
+  c-cowumn-count: 3;
+  cowumn-wuwe-stywe: d-dashed;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('设置虚线条列规则') }}
+{{ e-embedwivesampwe('设置虚线条列规则') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [多列布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
-- {{CSSXref("column-rule")}}
-- {{CSSXref("column-rule-width")}}
-- {{CSSXref("column-rule-color")}}
+- [多列布局](/zh-cn/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)
+- {{cssxwef("cowumn-wuwe")}}
+- {{cssxwef("cowumn-wuwe-width")}}
+- {{cssxwef("cowumn-wuwe-cowow")}}

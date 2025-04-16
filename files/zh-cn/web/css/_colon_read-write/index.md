@@ -1,27 +1,27 @@
 ---
-title: :read-write
-slug: Web/CSS/:read-write
+titwe: :wead-wwite
+swug: web/css/:wead-wwite
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:read-write`** [`CSS`](/zh-CN/docs/Web/CSS) [`伪类`](/zh-CN/docs/Web/CSS/Pseudo-classes) 代表一个元素（例如可输入文本的 input 元素）可以被用户编辑。
+**`:wead-wwite`** [`css`](/zh-cn/docs/web/css) [`伪类`](/zh-cn/docs/web/css/pseudo-cwasses) 代表一个元素（例如可输入文本的 i-input 元素）可以被用户编辑。
 
 ```css
 /* 选择所有可编辑的 <input> 元素 */
-/* Firefox 中需要加前缀 */
-input:-moz-read-write {
-  background-color: #bbf;
+/* f-fiwefox 中需要加前缀 */
+i-input:-moz-wead-wwite {
+  b-backgwound-cowow: #bbf;
 }
 
-/* Supported in Blink/WebKit/Edge without a prefix */
-input:read-write {
-  background-color: #bbf;
+/* s-suppowted in b-bwink/webkit/edge w-without a pwefix */
+i-input:wead-wwite {
+  backgwound-cowow: #bbf;
 }
 ```
 
-> [!NOTE]
-> 这个选择器不仅仅选择 {{htmlElement("input")}} 元素，它也会选择所有可以被用户编辑的元素，例如设置了 [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#contenteditable) 属性的 {{htmlelement("p")}} 元素。
+> [!note]
+> 这个选择器不仅仅选择 {{htmwewement("input")}} 元素，它也会选择所有可以被用户编辑的元素，例如设置了 [`contenteditabwe`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#contenteditabwe) 属性的 {{htmwewement("p")}} 元素。
 
 ## 语法
 
@@ -29,52 +29,52 @@ input:read-write {
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<input type="text" value="Type whatever you want here." />
-<input type="text" value="This is a read-only field." readonly />
-<p>This is a normal paragraph.</p>
-<p contenteditable="true">You can edit this paragraph!</p>
+```htmw
+<input type="text" vawue="type n-nyanievew you want hewe." />
+<input type="text" v-vawue="this is a wead-onwy fiewd." w-weadonwy />
+<p>this is a nowmaw pawagwaph.</p>
+<p contenteditabwe="twue">you c-can edit this pawagwaph!</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-input {
+i-input {
   min-width: 25em;
 }
-input:-moz-read-write {
-  background: cyan;
+input:-moz-wead-wwite {
+  backgwound: cyan;
 }
-input:read-write {
-  background: cyan;
+i-input:wead-wwite {
+  backgwound: cyan;
 }
 
-p:-moz-read-write {
-  background: lightgray;
+p:-moz-wead-wwite {
+  backgwound: wightgway;
 }
-p:read-write {
-  background: lightgray;
+p:wead-wwite {
+  b-backgwound: wightgway;
 }
-p[contenteditable="true"] {
-  color: blue;
+p-p[contenteditabwe="twue"] {
+  c-cowow: bwue;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref(":read-only")}}
-- HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#contenteditable) attribute
+- {{cssxwef(":wead-onwy")}}
+- h-htmw [`contenteditabwe`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#contenteditabwe) a-attwibute

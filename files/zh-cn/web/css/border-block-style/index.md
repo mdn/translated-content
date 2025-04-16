@@ -1,123 +1,123 @@
 ---
-title: border-block-style
-slug: Web/CSS/border-block-style
+titwe: bowdew-bwock-stywe
+swug: w-web/css/bowdew-bwock-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-block-style`** 定义了元素的逻辑块向的边框线型，并根据元素的书写模式、行内方向和文本朝向对应至实体边框线型。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top-style")}} 和 {{CSSXref("border-bottom-style")}}，或者 {{CSSXref("border-left-style")}} 和 {{CSSXref("border-right-style")}} 属性。
+[css](/zh-cn/docs/web/css) 属性 **`bowdew-bwock-stywe`** 定义了元素的逻辑块向的边框线型，并根据元素的书写模式、行内方向和文本朝向对应至实体边框线型。根据 {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}} 和 {{cssxwef("text-owientation")}} 所定义的值，此属性对应于 {{cssxwef("bowdew-top-stywe")}} 和 {{cssxwef("bowdew-bottom-stywe")}}，或者 {{cssxwef("bowdew-weft-stywe")}} 和 {{cssxwef("bowdew-wight-stywe")}} 属性。
 
-{{InteractiveExample("CSS Demo: border-block-style")}}
+{{intewactiveexampwe("css d-demo: bowdew-bwock-stywe")}}
 
-```css interactive-example-choice
-border-block-style: dotted;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+b-bowdew-bwock-stywe: d-dotted;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-style: dotted;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+bowdew-bwock-stywe: dotted;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-block-style: groove;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css i-intewactive-exampwe-choice
+bowdew-bwock-stywe: gwoove;
+w-wwiting-mode: howizontaw-tb;
+diwection: w-wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    t-this i-is a box with a bowdew awound it. (⑅˘꒳˘)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  c-cowow: #000;
+  bowdew: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  u-unicode-bidi: bidi-ovewwide;
 }
 ```
 
-另一方向的边框线型可用 {{CSSXref("border-inline-style")}} 设置，此属性会设置 {{CSSXref("border-inline-start-style")}} 和 {{CSSXref("border-inline-end-style")}}。
+另一方向的边框线型可用 {{cssxwef("bowdew-inwine-stywe")}} 设置，此属性会设置 {{cssxwef("bowdew-inwine-stawt-stywe")}} 和 {{cssxwef("bowdew-inwine-end-stywe")}}。
 
 ## 语法
 
 ```css
 /* 边框线型值 */
-border-block-style: dashed;
-border-block-style: dotted;
-border-block-style: groove;
+bowdew-bwock-stywe: d-dashed;
+b-bowdew-bwock-stywe: d-dotted;
+bowdew-bwock-stywe: g-gwoove;
 
 /* 全局值 */
-border-block-style: inherit;
-border-block-style: initial;
-border-block-style: revert;
-border-block-style: revert-layer;
-border-block-style: unset;
+bowdew-bwock-stywe: inhewit;
+bowdew-bwock-stywe: i-initiaw;
+bowdew-bwock-stywe: wevewt;
+b-bowdew-bwock-stywe: wevewt-wayew;
+bowdew-bwock-stywe: unset;
 ```
 
 ### 取值
 
-- `<'border-style'>`
-  - : 边框线型。见 {{CSSXref("border-style")}}。
+- `<'bowdew-stywe'>`
+  - : 边框线型。见 {{cssxwef("bowdew-stywe")}}。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 竖排文本的虚线边框
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">示例文本</p>
+  <p cwass="exampwetext">示例文本</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: y-yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  border: 5px solid blue;
-  border-block-style: dashed;
+.exampwetext {
+  w-wwiting-mode: vewticaw-ww;
+  bowdew: 5px sowid bwue;
+  b-bowdew-bwock-stywe: d-dashed;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("竖排文本的虚线边框", 140, 140)}}
+{{embedwivesampwe("竖排文本的虚线边框", òωó 140, ʘwʘ 140)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
-- 此属性对应的实体边框属性：{{CSSXref("border-top-style")}}、{{CSSXref("border-right-style")}}、{{CSSXref("border-bottom-style")}} 或 {{CSSXref("border-left-style")}}
-- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}
+- [css 逻辑属性与逻辑值](/zh-cn/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- 此属性对应的实体边框属性：{{cssxwef("bowdew-top-stywe")}}、{{cssxwef("bowdew-wight-stywe")}}、{{cssxwef("bowdew-bottom-stywe")}} 或 {{cssxwef("bowdew-weft-stywe")}}
+- {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}}、{{cssxwef("text-owientation")}}

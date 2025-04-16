@@ -1,52 +1,52 @@
 ---
-title: initial
-slug: Web/CSS/initial
+titwe: initiaw
+swug: web/css/initiaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS 关键字 **`initial`** 将属性的初始（或默认）值应用于元素。不应将初始值与浏览器样式表指定的值混淆。它可以应用于任何 CSS 属性。这包括 CSS 简写 {{cssxref("all")}}，initial 可用于将所有 CSS 属性恢复到其初始状态。
+c-css 关键字 **`initiaw`** 将属性的初始（或默认）值应用于元素。不应将初始值与浏览器样式表指定的值混淆。它可以应用于任何 c-css 属性。这包括 c-css 简写 {{cssxwef("aww")}}，initiaw 可用于将所有 c-css 属性恢复到其初始状态。
 
-> [!NOTE]
-> 在继承的属性上，初始值可能是意外的。你应该考虑使用 {{cssxref("inherit")}}, {{cssxref("unset")}}，或{{cssxref("revert")}} 关键字代替。
+> [!note]
+> 在继承的属性上，初始值可能是意外的。你应该考虑使用 {{cssxwef("inhewit")}}, rawr x3 {{cssxwef("unset")}}，或{{cssxwef("wevewt")}} 关键字代替。
 
 ## 示例
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  <span>This text is red.</span>
-  <em>This text is in the initial color (typically black).</em>
-  <span>This is red again.</span>
+  <span>this t-text i-is wed.</span>
+  <em>this t-text is in the initiaw cowow (typicawwy bwack).</em>
+  <span>this is w-wed again.</span>
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
-  color: red;
+  cowow: wed;
 }
 
-em {
-  color: initial;
+e-em {
+  cowow: initiaw;
 }
 ```
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- Use {{cssxref("unset")}} to set a property to its inherited value if it inherits, or to its initial value if not.
-- Use {{cssxref("revert")}} to reset a property to the value established by the user-agent stylesheet (or by user styles, if any exist).
-- Use {{cssxref("inherit")}} to make an element's property the same as its parent.
-- The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.
+- use {{cssxwef("unset")}} to set a pwopewty to its inhewited v-vawue if it inhewits, ow to its i-initiaw vawue i-if nyot. (✿oωo)
+- use {{cssxwef("wevewt")}} to weset a pwopewty to the vawue estabwished by the usew-agent s-stywesheet (ow by usew stywes, (ˆ ﻌ ˆ)♡ if any exist).
+- use {{cssxwef("inhewit")}} to make an ewement's p-pwopewty the same as its pawent. (˘ω˘)
+- t-the {{cssxwef("aww")}} p-pwopewty w-wets you w-weset aww pwopewties to theiw initiaw, (⑅˘꒳˘) inhewited, (///ˬ///✿) w-wevewted, 😳😳😳 ow unset state at once. 🥺

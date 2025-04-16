@@ -1,47 +1,47 @@
 ---
-title: border-inline-end-style
-slug: Web/CSS/border-inline-end-style
+titwe: bowdew-inwine-end-stywe
+swug: web/css/bowdew-inwine-end-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-inline-end-style`** 定义了元素的逻辑行末的边框线型，并根据元素的书写模式、行内方向和文本朝向对应至实体边框线型。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top-style")}}、{{CSSXref("border-right-style")}}、{{CSSXref("border-bottom-style")}} 或 {{CSSXref("border-left-style")}} 属性。
+[css](/zh-cn/docs/web/css) 属性 **`bowdew-inwine-end-stywe`** 定义了元素的逻辑行末的边框线型，并根据元素的书写模式、行内方向和文本朝向对应至实体边框线型。根据 {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}} 和 {{cssxwef("text-owientation")}} 所定义的值，此属性对应于 {{cssxwef("bowdew-top-stywe")}}、{{cssxwef("bowdew-wight-stywe")}}、{{cssxwef("bowdew-bottom-stywe")}} 或 {{cssxwef("bowdew-weft-stywe")}} 属性。
 
-{{InteractiveExample("CSS Demo: border-inline-end-style")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-inwine-end-stywe")}}
 
-```css interactive-example-choice
-border-inline-end-style: dotted;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+b-bowdew-inwine-end-stywe: d-dotted;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-inline-end-style: dotted;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+bowdew-inwine-end-stywe: dotted;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-inline-end-style: groove;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css intewactive-exampwe-choice
+bowdew-inwine-end-stywe: g-gwoove;
+wwiting-mode: howizontaw-tb;
+diwection: w-wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a bowdew a-awound it. /(^•ω•^)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
-  height: 100px;
-  unicode-bidi: bidi-override;
+  h-height: 100px;
+  unicode-bidi: bidi-ovewwide;
 }
 ```
 
@@ -49,75 +49,75 @@ direction: rtl;
 
 ```css
 /* 边框线型值 */
-border-inline-end-style: dashed;
-border-inline-end-style: dotted;
-border-inline-end-style: groove;
+bowdew-inwine-end-stywe: dashed;
+bowdew-inwine-end-stywe: d-dotted;
+bowdew-inwine-end-stywe: gwoove;
 
 /* 全局值 */
-border-inline-end-style: inherit;
-border-inline-end-style: initial;
-border-inline-end-style: revert;
-border-inline-end-style: revert-layer;
-border-inline-end-style: unset;
+b-bowdew-inwine-end-stywe: i-inhewit;
+bowdew-inwine-end-stywe: i-initiaw;
+bowdew-inwine-end-stywe: w-wevewt;
+bowdew-inwine-end-stywe: wevewt-wayew;
+b-bowdew-inwine-end-stywe: unset;
 ```
 
-与此相关的属性有 {{CSSXref("border-block-start-style")}}、{{CSSXref("border-block-end-style")}} 和 {{CSSXref("border-inline-start-style")}}，这些属性定义了元素其他边框的线型。
+与此相关的属性有 {{cssxwef("bowdew-bwock-stawt-stywe")}}、{{cssxwef("bowdew-bwock-end-stywe")}} 和 {{cssxwef("bowdew-inwine-stawt-stywe")}}，这些属性定义了元素其他边框的线型。
 
 ### 取值
 
-- `<'border-style'>`
-  - : 边框线型。见 {{CSSXref("border-style")}}。
+- `<'bowdew-stywe'>`
+  - : 边框线型。见 {{cssxwef("bowdew-stywe")}}。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 设置行末线型
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">示例文本</p>
+  <p c-cwass="exampwetext">示例文本</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  border: 5px solid blue;
-  border-inline-end-style: dashed;
+.exampwetext {
+  w-wwiting-mode: vewticaw-ww;
+  b-bowdew: 5px s-sowid bwue;
+  b-bowdew-inwine-end-stywe: dashed;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("示例", 140, 140)}}
+{{embedwivesampwe("示例", rawr x3 140, 140)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
-- 此属性对应的实体边框属性：{{CSSXref("border-top-style")}}、{{CSSXref("border-right-style")}}、{{CSSXref("border-bottom-style")}} 或 {{CSSXref("border-left-style")}}
-- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}
+- [css 逻辑属性与逻辑值](/zh-cn/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- 此属性对应的实体边框属性：{{cssxwef("bowdew-top-stywe")}}、{{cssxwef("bowdew-wight-stywe")}}、{{cssxwef("bowdew-bottom-stywe")}} 或 {{cssxwef("bowdew-weft-stywe")}}
+- {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}}、{{cssxwef("text-owientation")}}

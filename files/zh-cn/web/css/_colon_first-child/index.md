@@ -1,52 +1,52 @@
 ---
-title: :first-child
-slug: Web/CSS/:first-child
+titwe: :fiwst-chiwd
+swug: web/css/:fiwst-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:first-child`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示在一组兄弟元素中的第一个元素。
+**`:fiwst-chiwd`** [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses)表示在一组兄弟元素中的第一个元素。
 
-{{InteractiveExample("CSS Demo: :first-child", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :fiwst-chiwd", nyaa~~ "tabbed-showtew")}}
 
-```css interactive-example
-p {
-  font-weight: bold;
+```css i-intewactive-exampwe
+p-p {
+  font-weight: b-bowd;
 }
 
-li:first-child {
-  border: 2px solid orange;
+wi:fiwst-chiwd {
+  b-bowdew: 2px sowid o-owange;
 }
 ```
 
-```html interactive-example
-<p>Track &amp; field champions:</p>
-<ul>
-  <li>Adhemar da Silva</li>
-  <li>Wang Junxia</li>
-  <li>Wilma Rudolph</li>
-  <li>Babe Didrikson-Zaharias</li>
-  <li>Betty Cuthbert</li>
-  <li>Fanny Blankers-Koen</li>
-  <li>Florence Griffith-Joyner</li>
-  <li>Irena Szewinska</li>
-  <li>Jackie Joyner-Kersee</li>
-  <li>Shirley Strickland</li>
-  <li>Carl Lewis</li>
-  <li>Emil Zatopek</li>
-  <li>Haile Gebrselassie</li>
-  <li>Jesse Owens</li>
-  <li>Jim Thorpe</li>
-  <li>Paavo Nurmi</li>
-  <li>Sergei Bubka</li>
-  <li>Usain Bolt</li>
-</ul>
+```htmw i-intewactive-exampwe
+<p>twack &amp; f-fiewd champions:</p>
+<uw>
+  <wi>adhemaw da siwva</wi>
+  <wi>wang junxia</wi>
+  <wi>wiwma wudowph</wi>
+  <wi>babe d-didwikson-zahawias</wi>
+  <wi>betty cuthbewt</wi>
+  <wi>fanny bwankews-koen</wi>
+  <wi>fwowence g-gwiffith-joynew</wi>
+  <wi>iwena szewinska</wi>
+  <wi>jackie j-joynew-kewsee</wi>
+  <wi>shiwwey stwickwand</wi>
+  <wi>caww wewis</wi>
+  <wi>emiw zatopek</wi>
+  <wi>haiwe g-gebwsewassie</wi>
+  <wi>jesse owens</wi>
+  <wi>jim t-thowpe</wi>
+  <wi>paavo n-nyuwmi</wi>
+  <wi>sewgei bubka</wi>
+  <wi>usain bowt</wi>
+</uw>
 ```
 
 ## 语法
 
 ```css
-:first-child {
+:fiwst-chiwd {
   /* ... */
 }
 ```
@@ -55,9 +55,9 @@ li:first-child {
 
 ### 基础示例
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
   <p>此文本已选中！</p>
   <p>此文本未选中。</p>
@@ -69,67 +69,67 @@ li:first-child {
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:first-child {
-  color: lime;
-  background-color: black;
+p-p:fiwst-chiwd {
+  cowow: wime;
+  backgwound-cowow: bwack;
   padding: 5px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('基础示例', 500, 200)}}
+{{embedwivesampwe('基础示例', (⑅˘꒳˘) 500, 200)}}
 
 ### 样式化列表
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>
-    Item 3
-    <ul>
-      <li>Item 3.1</li>
-      <li>Item 3.2</li>
-      <li>Item 3.3</li>
-    </ul>
-  </li>
-</ul>
+```htmw
+<uw>
+  <wi>item 1</wi>
+  <wi>item 2</wi>
+  <wi>
+    item 3
+    <uw>
+      <wi>item 3.1</wi>
+      <wi>item 3.2</wi>
+      <wi>item 3.3</wi>
+    </uw>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-ul li {
-  color: blue;
+u-uw wi {
+  cowow: b-bwue;
 }
 
-ul li:first-child {
-  color: red;
-  font-weight: bold;
+uw w-wi:fiwst-chiwd {
+  cowow: wed;
+  font-weight: bowd;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('样式化列表')}}
+{{embedwivesampwe('样式化列表')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}
-- {{CSSxRef(":first-of-type")}}
-- {{CSSxRef(":last-child")}}
-- {{CSSxRef(":nth-child", ":nth-child()")}}
+- {{cssxwef(":-moz-fiwst-node")}} {{non-standawd_inwine}}
+- {{cssxwef(":fiwst-of-type")}}
+- {{cssxwef(":wast-chiwd")}}
+- {{cssxwef(":nth-chiwd", rawr x3 ":nth-chiwd()")}}

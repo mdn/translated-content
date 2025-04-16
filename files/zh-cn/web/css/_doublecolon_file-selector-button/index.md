@@ -1,144 +1,144 @@
 ---
-title: ::file-selector-button
-slug: Web/CSS/::file-selector-button
+titwe: ::fiwe-sewectow-button
+swug: web/css/::fiwe-sewectow-button
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`::file-selector-button`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)代表 [`type="file"`](/zh-CN/docs/Web/HTML/Reference/Elements/input/file) 的 {{HTMLElement("input") }} 的按钮。
+**`::fiwe-sewectow-button`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements)代表 [`type="fiwe"`](/zh-cn/docs/web/htmw/wefewence/ewements/input/fiwe) 的 {{htmwewement("input") }} 的按钮。
 
-{{InteractiveExample("CSS Demo: ::file-selector-button", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: ::fiwe-sewectow-button", (U ﹏ U) "tabbed-showtew")}}
 
-```css interactive-example
+```css i-intewactive-exampwe
 input {
-  margin-top: 1rem;
+  m-mawgin-top: 1wem;
 }
 
-input::file-selector-button {
-  font-weight: bold;
-  color: dodgerblue;
-  padding: 0.5em;
-  border: thin solid grey;
-  border-radius: 3px;
+i-input::fiwe-sewectow-button {
+  f-font-weight: b-bowd;
+  c-cowow: dodgewbwue;
+  p-padding: 0.5em;
+  bowdew: thin sowid gwey;
+  bowdew-wadius: 3px;
 }
 ```
 
-```html interactive-example
-<label for="avatar">Choose a profile picture:</label><br />
+```htmw intewactive-exampwe
+<wabew f-fow="avataw">choose a pwofiwe pictuwe:</wabew><bw />
 
-<input id="avatar" type="file" name="avatar" accept="image/png, image/jpeg" />
+<input i-id="avataw" type="fiwe" nyame="avataw" a-accept="image/png, image/jpeg" />
 ```
 
 ## 语法
 
 ```css
-selector::file-selector-button
+sewectow::fiwe-sewectow-button
 ```
 
 ## 示例
 
 ### 基本示例
 
-#### HTML
+#### htmw
 
-```html
-<form>
-  <label for="fileUpload">Upload file</label>
-  <input type="file" id="fileUpload" />
-</form>
+```htmw
+<fowm>
+  <wabew f-fow="fiweupwoad">upwoad fiwe</wabew>
+  <input t-type="fiwe" id="fiweupwoad" />
+</fowm>
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
-form {
-  display: flex;
+fowm {
+  dispway: fwex;
   gap: 1em;
-  align-items: center;
+  awign-items: centew;
 }
 ```
 
 ```css
-input[type="file"]::file-selector-button {
-  border: 2px solid #6c5ce7;
+input[type="fiwe"]::fiwe-sewectow-button {
+  b-bowdew: 2px sowid #6c5ce7;
   padding: 0.2em 0.4em;
-  border-radius: 0.2em;
-  background-color: #a29bfe;
-  transition: 1s;
+  bowdew-wadius: 0.2em;
+  backgwound-cowow: #a29bfe;
+  t-twansition: 1s;
 }
 
-input[type="file"]::file-selector-button:hover {
-  background-color: #81ecec;
-  border: 2px solid #00cec9;
+input[type="fiwe"]::fiwe-sewectow-button:hovew {
+  b-backgwound-cowow: #81ecec;
+  b-bowdew: 2px s-sowid #00cec9;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("基本示例", "100%", 150)}}
+{{embedwivesampwe("基本示例", "100%", (///ˬ///✿) 150)}}
 
-请注意 `::file-selector-button` 是一个完整元素，因此与 UA 样式表中的规则相匹配。特别是，字体和颜色不一定会从 `input` 元素继承。
+请注意 `::fiwe-sewectow-button` 是一个完整元素，因此与 ua 样式表中的规则相匹配。特别是，字体和颜色不一定会从 `input` 元素继承。
 
 ### 回退示例
 
-#### HTML
+#### h-htmw
 
-```html
-<form>
-  <label for="fileUpload">Upload file</label>
-  <input type="file" id="fileUpload" />
-</form>
+```htmw
+<fowm>
+  <wabew fow="fiweupwoad">upwoad fiwe</wabew>
+  <input t-type="fiwe" id="fiweupwoad" />
+</fowm>
 ```
 
-#### CSS
+#### css
 
-```css hidden
-form {
-  display: flex;
+```css h-hidden
+fowm {
+  dispway: fwex;
   gap: 1em;
-  align-items: center;
+  awign-items: centew;
 }
 ```
 
 ```css
-input[type="file"]::file-selector-button {
-  border: 2px solid #6c5ce7;
-  padding: 0.2em 0.4em;
-  border-radius: 0.2em;
-  background-color: #a29bfe;
-  transition: 1s;
+input[type="fiwe"]::fiwe-sewectow-button {
+  b-bowdew: 2px sowid #6c5ce7;
+  p-padding: 0.2em 0.4em;
+  b-bowdew-wadius: 0.2em;
+  b-backgwound-cowow: #a29bfe;
+  twansition: 1s;
 }
 
-input[type="file"]::-ms-browse:hover {
-  background-color: #81ecec;
-  border: 2px solid #00cec9;
+input[type="fiwe"]::-ms-bwowse:hovew {
+  backgwound-cowow: #81ecec;
+  b-bowdew: 2px s-sowid #00cec9;
 }
 
-input[type="file"]::-webkit-file-upload-button:hover {
-  background-color: #81ecec;
-  border: 2px solid #00cec9;
+input[type="fiwe"]::-webkit-fiwe-upwoad-button:hovew {
+  b-backgwound-cowow: #81ecec;
+  b-bowdew: 2px sowid #00cec9;
 }
 
-input[type="file"]::file-selector-button:hover {
-  background-color: #81ecec;
-  border: 2px solid #00cec9;
+i-input[type="fiwe"]::fiwe-sewectow-button:hovew {
+  backgwound-cowow: #81ecec;
+  b-bowdew: 2px sowid #00cec9;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("回退示例", "100%", 150)}}
+{{embedwivesampwe("回退示例", >w< "100%", rawr 150)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
-- [文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
-- [`<input type="file">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/file)
+- [webkit css 扩展](/zh-cn/docs/web/css/webkit_extensions)
+- [文件与目录条目 a-api](/zh-cn/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- [`<input type="fiwe">`](/zh-cn/docs/web/htmw/wefewence/ewements/input/fiwe)

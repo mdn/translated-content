@@ -1,146 +1,146 @@
 ---
-title: margin-block-end
-slug: Web/CSS/margin-block-end
+titwe: mawgin-bwock-end
+swug: w-web/css/mawgin-bwock-end
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`margin-block-end`** 定义了元素的逻辑块末外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。
+[css](/zh-cn/docs/web/css) 属性 **`mawgin-bwock-end`** 定义了元素的逻辑块末外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。
 
-{{InteractiveExample("CSS Demo: margin-block-end")}}
+{{intewactiveexampwe("css d-demo: mawgin-bwock-end")}}
 
-```css interactive-example-choice
-margin-block-end: 20px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+mawgin-bwock-end: 20px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-block-end: 20px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+m-mawgin-bwock-end: 20px;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-margin-block-end: 20%;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+mawgin-bwock-end: 20%;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-block-end: auto;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+mawgin-bwock-end: a-auto;
+wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row">One</div>
-    <div class="row transition-all" id="example-element">Two</div>
-    <div class="row">Three</div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="containew">
+    <div cwass="wow">one</div>
+    <div c-cwass="wow twansition-aww" id="exampwe-ewement">two</div>
+    <div c-cwass="wow">thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
+```css i-intewactive-exampwe
+#containew {
   width: 300px;
   height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+  dispway: fwex;
+  awign-content: f-fwex-stawt;
+  fwex-diwection: cowumn;
+  justify-content: fwex-stawt;
 }
 
-.row {
+.wow {
   height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  color: #ffffff;
-  flex-shrink: 0;
+  dispway: inwine-bwock;
+  b-bowdew: sowid #ce7777 10px;
+  b-backgwound-cowow: #2b3a55;
+  c-cowow: #ffffff;
+  f-fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  b-bowdew: sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
 }
 ```
 
 ## 语法
 
 ```css
-/* <length> 值 */
-margin-block-end: 10px; /* 绝对长度 */
-margin-block-end: 1em; /* 相对于文本尺寸 */
-margin-block-end: 5%; /* 相对于最近区块容器的宽度 */
+/* <wength> 值 */
+mawgin-bwock-end: 10px; /* 绝对长度 */
+m-mawgin-bwock-end: 1em; /* 相对于文本尺寸 */
+mawgin-bwock-end: 5%; /* 相对于最近区块容器的宽度 */
 
 /* 关键词值 */
-margin-block-end: auto;
+mawgin-bwock-end: a-auto;
 
 /* 全局值 */
-margin-block-end: inherit;
-margin-block-end: initial;
-margin-block-end: revert;
-margin-block-end: revert-layer;
-margin-block-end: unset;
+mawgin-bwock-end: inhewit;
+mawgin-bwock-end: initiaw;
+mawgin-bwock-end: wevewt;
+mawgin-bwock-end: w-wevewt-wayew;
+mawgin-bwock-end: u-unset;
 ```
 
-根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("margin-top")}}、{{CSSXref("margin-right")}}、{{CSSXref("margin-bottom")}} 或 {{CSSXref("margin-left")}} 属性。
+根据 {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}} 和 {{cssxwef("text-owientation")}} 所定义的值，此属性对应于 {{cssxwef("mawgin-top")}}、{{cssxwef("mawgin-wight")}}、{{cssxwef("mawgin-bottom")}} 或 {{cssxwef("mawgin-weft")}} 属性。
 
-与此属性相关的有 {{CSSXref("margin-block-start")}}、{{CSSXref("margin-inline-start")}} 和 {{CSSXref("margin-inline-end")}} 等定义元素的其他外边距的属性。
+与此属性相关的有 {{cssxwef("mawgin-bwock-stawt")}}、{{cssxwef("mawgin-inwine-stawt")}} 和 {{cssxwef("mawgin-inwine-end")}} 等定义元素的其他外边距的属性。
 
 ### 取值
 
-`margin-block-end` 属性的取值与 {{CSSXref("margin-left")}} 属性相同。
+`mawgin-bwock-end` 属性的取值与 {{cssxwef("mawgin-weft")}} 属性相同。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 设置块末外边距
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">示例文本</p>
+  <p c-cwass="exampwetext">示例文本</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  background-color: yellow;
-  width: 120px;
-  height: 120px;
+  backgwound-cowow: yewwow;
+  w-width: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  margin-block-end: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
+  m-mawgin-bwock-end: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("设置块末外边距", 140, 140)}}
+{{embedwivesampwe("设置块末外边距", ʘwʘ 140, 140)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
-- 对应的实体属性：{{CSSXref("margin-top")}}、{{CSSXref("margin-right")}}、{{CSSXref("margin-bottom")}} 和 {{CSSXref("margin-left")}}
-- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}
+- [css 逻辑属性与逻辑值](/zh-cn/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- 对应的实体属性：{{cssxwef("mawgin-top")}}、{{cssxwef("mawgin-wight")}}、{{cssxwef("mawgin-bottom")}} 和 {{cssxwef("mawgin-weft")}}
+- {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}}、{{cssxwef("text-owientation")}}

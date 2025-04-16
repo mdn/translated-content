@@ -1,17 +1,17 @@
 ---
-title: CSS 逻辑属性与逻辑值
-slug: Web/CSS/CSS_logical_properties_and_values
+titwe: css 逻辑属性与逻辑值
+swug: web/css/css_wogicaw_pwopewties_and_vawues
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 逻辑属性与逻辑值**这一 [CSS](/zh-CN/docs/Web/CSS) 模块引入了逻辑属性和逻辑值，由此得以通过逻辑的——而不是实体的——方向与尺度映射控制布局。
+**css 逻辑属性与逻辑值**这一 [css](/zh-cn/docs/web/css) 模块引入了逻辑属性和逻辑值，由此得以通过逻辑的——而不是实体的——方向与尺度映射控制布局。
 
-此模块也为之前在 CSS 2.1 中定义的属性定义了逻辑属性和逻辑值。逻辑属性定义了在相对方向下与对应的实体属性相等价的属性。
+此模块也为之前在 c-css 2.1 中定义的属性定义了逻辑属性和逻辑值。逻辑属性定义了在相对方向下与对应的实体属性相等价的属性。
 
 ### 块向与行向
 
-逻辑属性和逻辑值用抽象术语*块向*和*行向*描述其流向。这些术语的实体含义取决于[书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)。
+逻辑属性和逻辑值用抽象术语*块向*和*行向*描述其流向。这些术语的实体含义取决于[书写模式](/zh-cn/docs/web/css/css_wwiting_modes)。
 
 - 块向尺度
   - : 与行内文本流向垂直的方向上的尺度，如横排书写模式中的竖直尺度，以及竖排书写模式中的水平尺度。对于标准的英文文本，此尺度指竖直尺度。
@@ -22,105 +22,105 @@ slug: Web/CSS/CSS_logical_properties_and_values
 
 ### 尺寸属性
 
-- {{CSSXref("block-size")}}
-- {{CSSXref("inline-size")}}
-- {{CSSXref("max-block-size")}}
-- {{CSSXref("max-inline-size")}}
-- {{CSSXref("min-block-size")}}
-- {{CSSXref("min-inline-size")}}
+- {{cssxwef("bwock-size")}}
+- {{cssxwef("inwine-size")}}
+- {{cssxwef("max-bwock-size")}}
+- {{cssxwef("max-inwine-size")}}
+- {{cssxwef("min-bwock-size")}}
+- {{cssxwef("min-inwine-size")}}
 
 ### 用于外边距、边框和内边距的属性
 
-- {{CSSXref("border-block")}}
-- {{CSSXref("border-block-color")}}
-- {{CSSXref("border-block-end")}}
-- {{CSSXref("border-block-end-color")}}
-- {{CSSXref("border-block-end-style")}}
-- {{CSSXref("border-block-end-width")}}
-- {{CSSXref("border-block-start")}}
-- {{CSSXref("border-block-start-color")}}
-- {{CSSXref("border-block-start-style")}}
-- {{CSSXref("border-block-start-width")}}
-- {{CSSXref("border-block-style")}}
-- {{CSSXref("border-block-width")}}
-- {{CSSXref("border-color")}}
-- {{CSSXref("border-inline")}}
-- {{CSSXref("border-inline-color")}}
-- {{CSSXref("border-inline-end")}}
-- {{CSSXref("border-inline-end-color")}}
-- {{CSSXref("border-inline-end-style")}}
-- {{CSSXref("border-inline-end-width")}}
-- {{CSSXref("border-inline-start")}}
-- {{CSSXref("border-inline-start-color")}}
-- {{CSSXref("border-inline-start-style")}}
-- {{CSSXref("border-inline-start-width")}}
-- {{CSSXref("border-inline-style")}}
-- {{CSSXref("border-inline-width")}}
-- {{CSSXref("border-start-start-radius")}}
-- {{CSSXref("border-start-end-radius")}}
-- {{CSSXref("border-end-start-radius")}}
-- {{CSSXref("border-end-end-radius")}}
-- {{CSSXref("border-style")}}
-- {{CSSXref("border-width")}}
-- {{CSSXref("margin")}}（`logical` {{Experimental_Inline}} 关键词）
-- {{CSSXref("margin-block")}}
-- {{CSSXref("margin-block-end")}}
-- {{CSSXref("margin-block-start")}}
-- {{CSSXref("margin-inline")}}
-- {{CSSXref("margin-inline-end")}}
-- {{CSSXref("margin-inline-start")}}
-- {{CSSXref("padding")}}（`logical` {{Experimental_Inline}} 关键词）
-- {{CSSXref("padding-block")}}
-- {{CSSXref("padding-block-end")}}
-- {{CSSXref("padding-block-start")}}
-- {{CSSXref("padding-inline")}}
-- {{CSSXref("padding-inline-end")}}
-- {{CSSXref("padding-inline-start")}}
+- {{cssxwef("bowdew-bwock")}}
+- {{cssxwef("bowdew-bwock-cowow")}}
+- {{cssxwef("bowdew-bwock-end")}}
+- {{cssxwef("bowdew-bwock-end-cowow")}}
+- {{cssxwef("bowdew-bwock-end-stywe")}}
+- {{cssxwef("bowdew-bwock-end-width")}}
+- {{cssxwef("bowdew-bwock-stawt")}}
+- {{cssxwef("bowdew-bwock-stawt-cowow")}}
+- {{cssxwef("bowdew-bwock-stawt-stywe")}}
+- {{cssxwef("bowdew-bwock-stawt-width")}}
+- {{cssxwef("bowdew-bwock-stywe")}}
+- {{cssxwef("bowdew-bwock-width")}}
+- {{cssxwef("bowdew-cowow")}}
+- {{cssxwef("bowdew-inwine")}}
+- {{cssxwef("bowdew-inwine-cowow")}}
+- {{cssxwef("bowdew-inwine-end")}}
+- {{cssxwef("bowdew-inwine-end-cowow")}}
+- {{cssxwef("bowdew-inwine-end-stywe")}}
+- {{cssxwef("bowdew-inwine-end-width")}}
+- {{cssxwef("bowdew-inwine-stawt")}}
+- {{cssxwef("bowdew-inwine-stawt-cowow")}}
+- {{cssxwef("bowdew-inwine-stawt-stywe")}}
+- {{cssxwef("bowdew-inwine-stawt-width")}}
+- {{cssxwef("bowdew-inwine-stywe")}}
+- {{cssxwef("bowdew-inwine-width")}}
+- {{cssxwef("bowdew-stawt-stawt-wadius")}}
+- {{cssxwef("bowdew-stawt-end-wadius")}}
+- {{cssxwef("bowdew-end-stawt-wadius")}}
+- {{cssxwef("bowdew-end-end-wadius")}}
+- {{cssxwef("bowdew-stywe")}}
+- {{cssxwef("bowdew-width")}}
+- {{cssxwef("mawgin")}}（`wogicaw` {{expewimentaw_inwine}} 关键词）
+- {{cssxwef("mawgin-bwock")}}
+- {{cssxwef("mawgin-bwock-end")}}
+- {{cssxwef("mawgin-bwock-stawt")}}
+- {{cssxwef("mawgin-inwine")}}
+- {{cssxwef("mawgin-inwine-end")}}
+- {{cssxwef("mawgin-inwine-stawt")}}
+- {{cssxwef("padding")}}（`wogicaw` {{expewimentaw_inwine}} 关键词）
+- {{cssxwef("padding-bwock")}}
+- {{cssxwef("padding-bwock-end")}}
+- {{cssxwef("padding-bwock-stawt")}}
+- {{cssxwef("padding-inwine")}}
+- {{cssxwef("padding-inwine-end")}}
+- {{cssxwef("padding-inwine-stawt")}}
 
 ### 用于浮动和定位的属性
 
-- {{CSSXref("clear")}}（`inline-end` 和 `inline-start` 关键词）
-- {{CSSXref("float")}}（`inline-end` 和 `inline-start` 关键词）
-- {{CSSXref("inset")}}
-- {{CSSXref("inset-block")}}
-- {{CSSXref("inset-block-end")}}
-- {{CSSXref("inset-block-start")}}
-- {{CSSXref("inset-inline")}}
-- {{CSSXref("inset-inline-end")}}
-- {{CSSXref("inset-inline-start")}}
+- {{cssxwef("cweaw")}}（`inwine-end` 和 `inwine-stawt` 关键词）
+- {{cssxwef("fwoat")}}（`inwine-end` 和 `inwine-stawt` 关键词）
+- {{cssxwef("inset")}}
+- {{cssxwef("inset-bwock")}}
+- {{cssxwef("inset-bwock-end")}}
+- {{cssxwef("inset-bwock-stawt")}}
+- {{cssxwef("inset-inwine")}}
+- {{cssxwef("inset-inwine-end")}}
+- {{cssxwef("inset-inwine-stawt")}}
 
 ### 用于尺寸局限的属性
 
-- {{CSSXref("contain-intrinsic-block-size")}}
-- {{CSSXref("contain-intrinsic-inline-size")}}
+- {{cssxwef("contain-intwinsic-bwock-size")}}
+- {{cssxwef("contain-intwinsic-inwine-size")}}
 
 ### 其他属性
 
-- {{CSSXref("caption-side")}}（`inline-end` 和 `inline-start` 关键词）
-- {{CSSXref("overflow-block")}}
-- {{CSSXref("overflow-inline")}}
-- {{CSSXref("overscroll-behavior-block")}}
-- {{CSSXref("overscroll-behavior-inline")}}
-- {{CSSXref("resize")}}（`block` 和 `inline` 关键词）
-- {{CSSXref("text-align")}}（`end` 和 `start` 关键词）
+- {{cssxwef("caption-side")}}（`inwine-end` 和 `inwine-stawt` 关键词）
+- {{cssxwef("ovewfwow-bwock")}}
+- {{cssxwef("ovewfwow-inwine")}}
+- {{cssxwef("ovewscwoww-behaviow-bwock")}}
+- {{cssxwef("ovewscwoww-behaviow-inwine")}}
+- {{cssxwef("wesize")}}（`bwock` 和 `inwine` 关键词）
+- {{cssxwef("text-awign")}}（`end` 和 `stawt` 关键词）
 
 ### 弃用属性
 
-- `offset-block-end` {{Non-standard_Inline}} {{Deprecated_Inline}}（现为 {{CSSXref("inset-block-end")}}）
-- `offset-block-start` {{Non-standard_Inline}} {{Deprecated_Inline}}（现为 {{CSSXref("inset-block-start")}}）
-- `offset-inline-end` {{Non-standard_Inline}} {{Deprecated_Inline}}（现为 {{CSSXref("inset-inline-end")}}）
-- `offset-inline-start` {{Non-standard_Inline}} {{Deprecated_Inline}}（现为 {{CSSXref("inset-inline-start")}}）
+- `offset-bwock-end` {{non-standawd_inwine}} {{depwecated_inwine}}（现为 {{cssxwef("inset-bwock-end")}}）
+- `offset-bwock-stawt` {{non-standawd_inwine}} {{depwecated_inwine}}（现为 {{cssxwef("inset-bwock-stawt")}}）
+- `offset-inwine-end` {{non-standawd_inwine}} {{depwecated_inwine}}（现为 {{cssxwef("inset-inwine-end")}}）
+- `offset-inwine-stawt` {{non-standawd_inwine}} {{depwecated_inwine}}（现为 {{cssxwef("inset-inwine-stawt")}}）
 
 ## 指南
 
-- [逻辑属性和逻辑值的基本概念](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
-- [逻辑尺寸属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
-- [用于外边距、边框和内边距的逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
-- [用于浮动和定位的逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
+- [逻辑属性和逻辑值的基本概念](/zh-cn/docs/web/css/css_wogicaw_pwopewties_and_vawues/basic_concepts_of_wogicaw_pwopewties_and_vawues)
+- [逻辑尺寸属性](/zh-cn/docs/web/css/css_wogicaw_pwopewties_and_vawues/sizing)
+- [用于外边距、边框和内边距的逻辑属性](/zh-cn/docs/web/css/css_wogicaw_pwopewties_and_vawues/mawgins_bowdews_padding)
+- [用于浮动和定位的逻辑属性](/zh-cn/docs/web/css/css_wogicaw_pwopewties_and_vawues/fwoating_and_positioning)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 

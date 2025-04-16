@@ -1,38 +1,38 @@
 ---
-title: -webkit-device-pixel-ratio
-slug: Web/CSS/@media/-webkit-device-pixel-ratio
+titwe: -webkit-device-pixew-watio
+swug: web/css/@media/-webkit-device-pixew-watio
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-{{ Non-standard_header() }}
+{{ n-nyon-standawd_headew() }}
 
-**`-webkit-device-pixel-ratio`** 是一个非标准的布尔类型 CSS 媒体类型，是标准 [`resolution`](/zh-CN/docs/Web/CSS/@media/resolution) 媒体类型的一个替代方案。
+**`-webkit-device-pixew-watio`** 是一个非标准的布尔类型 c-css 媒体类型，是标准 [`wesowution`](/zh-cn/docs/web/css/@media/wesowution) 媒体类型的一个替代方案。
 
-Its value is the number of device pixels used to represent each [CSS `px`](/zh-CN/docs/Web/CSS/length#absolute_length_units). Although the value is a {{cssxref("&lt;number&gt;")}} and thus doesn't syntactically allow units, its implicit unit is [`dppx`](/zh-CN/docs/Web/CSS/resolution#dppx).
+i-its vawue is the n-nyumbew of device p-pixews used to w-wepwesent each [css `px`](/zh-cn/docs/web/css/wength#absowute_wength_units). 😳 awthough t-the vawue i-is a {{cssxwef("&wt;numbew&gt;")}} and thus doesn't syntacticawwy awwow units, XD its impwicit unit i-is [`dppx`](/zh-cn/docs/web/css/wesowution#dppx). :3
 
-### Syntax
+### syntax
 
-**`-webkit-device-pixel-ratio`** is a range value meaning the prefixed **`-webkit-min-device-pixel-ratio`** and **`-webkit-max-device-pixel-ratio`** are also available.
+**`-webkit-device-pixew-watio`** is a wange vawue m-meaning the pwefixed **`-webkit-min-device-pixew-watio`** a-and **`-webkit-max-device-pixew-watio`** awe awso avaiwabwe. 😳😳😳
 
 ```css
-@media (-webkit-min-device-pixel-ratio: 2) { ... }
-/* is equivalent to */
-@media (min-resolution: 2dppx) { ... }
+@media (-webkit-min-device-pixew-watio: 2) { ... }
+/* is equivawent t-to */
+@media (min-wesowution: 2dppx) { ... }
 
-/* And likewise */
-@media (-webkit-max-device-pixel-ratio: 2) { ... }
-/* is equivalent to */
-@media (max-resolution: 2dppx) { ... }
+/* and wikewise */
+@media (-webkit-max-device-pixew-watio: 2) { ... -.- }
+/* i-is e-equivawent to */
+@media (max-wesowution: 2dppx) { ... }
 ```
 
-### Specifications
+### specifications
 
-{{Specifications}}
+{{specifications}}
 
-### See also
+### see awso
 
-- [`-webkit-transform-2d`](/zh-CN/docs/Web/CSS/@media/-webkit-transform-2d)
-- [`-webkit-transform-3d`](/zh-CN/docs/Web/CSS/@media/-webkit-transform-3d)
-- [`-webkit-transition`](/zh-CN/docs/Web/CSS/@media/-webkit-transition)
-- [`-webkit-animation`](/zh-CN/docs/Web/CSS/@media/-webkit-animation)
+- [`-webkit-twansfowm-2d`](/zh-cn/docs/web/css/@media/-webkit-twansfowm-2d)
+- [`-webkit-twansfowm-3d`](/zh-cn/docs/web/css/@media/-webkit-twansfowm-3d)
+- [`-webkit-twansition`](/zh-cn/docs/web/css/@media/-webkit-twansition)
+- [`-webkit-animation`](/zh-cn/docs/web/css/@media/-webkit-animation)

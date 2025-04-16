@@ -1,37 +1,37 @@
 ---
-title: writing-mode
-slug: Web/CSS/writing-mode
+titwe: wwiting-mode
+swug: web/css/wwiting-mode
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`writing-mode`** 属性定义了文本水平或垂直排布以及在块级元素中文本的行进方向。为整个文档设置该属性时，应在根元素上设置它（对于 HTML 文档，应该在 `html` 元素上设置）
+**`wwiting-mode`** 属性定义了文本水平或垂直排布以及在块级元素中文本的行进方向。为整个文档设置该属性时，应在根元素上设置它（对于 h-htmw 文档，应该在 `htmw` 元素上设置）
 
-{{InteractiveExample("CSS Demo: writing-mode")}}
+{{intewactiveexampwe("css d-demo: wwiting-mode")}}
 
-```css interactive-example-choice
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+w-wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-writing-mode: sideways-rl;
+```css intewactive-exampwe-choice
+wwiting-mode: s-sideways-ww;
 ```
 
-```css interactive-example-choice
-writing-mode: sideways-lr;
+```css intewactive-exampwe-choice
+wwiting-mode: sideways-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
@@ -40,20 +40,20 @@ writing-mode: sideways-lr;
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px s-sowid #c5c5c5;
   padding: 0.75em;
-  width: 80%;
-  max-height: 300px;
-  display: flex;
+  w-width: 80%;
+  m-max-height: 300px;
+  dispway: fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex: 1;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, 🥺 0, 255, 0.2);
+  bowdew: 3px s-sowid bwue;
+  mawgin: 10px;
+  fwex: 1;
 }
 ```
 
@@ -63,46 +63,46 @@ writing-mode: sideways-lr;
 
 ```css
 /* 关键字值 */
-writing-mode: horizontal-tb;
-writing-mode: vertical-rl;
-writing-mode: vertical-lr;
+wwiting-mode: howizontaw-tb;
+wwiting-mode: v-vewticaw-ww;
+wwiting-mode: v-vewticaw-ww;
 
 /* 全局值 */
-writing-mode: inherit;
-writing-mode: initial;
-writing-mode: revert;
-writing-mode: revert-layer;
-writing-mode: unset;
+w-wwiting-mode: i-inhewit;
+wwiting-mode: i-initiaw;
+wwiting-mode: wevewt;
+wwiting-mode: w-wevewt-wayew;
+wwiting-mode: unset;
 ```
 
-将 `writing-mode` 属性指定为下面列出的值之一。水平流动方向也受[文本的方向](https://www.w3.org/International/questions/qa-scripts.en)影响，从左到右（`ltr`，例如英语和大多数其他语言）或从右到左（`rtl`，例如希伯来语或阿拉伯语）。
+将 `wwiting-mode` 属性指定为下面列出的值之一。水平流动方向也受[文本的方向](https://www.w3.owg/intewnationaw/questions/qa-scwipts.en)影响，从左到右（`wtw`，例如英语和大多数其他语言）或从右到左（`wtw`，例如希伯来语或阿拉伯语）。
 
 ### 值
 
-- `horizontal-tb`
-  - : 对于左对齐（`ltr`）文本，内容从左到右水平流动。对于右对齐（`rtl`）文本，内容从右到左水平流动。下一水平行位于上一行下方。
-- `vertical-rl`
-  - : 对于左对齐（`ltr`）文本，内容从上到下垂直流动，下一垂直行位于上一行左侧。对于右对齐（`rtl`）文本，内容从下到上垂直流动，下一垂直行位于上一行右侧。
-- `vertical-lr`
-  - : 对于左对齐（`ltr`）文本，内容从上到下垂直流动，下一垂直行位于上一行右侧。对于右对齐（`rtl`）文本，内容从下到上垂直流动，下一垂直行位于上一行左侧。
-- `sideways-rl` {{experimental_inline}}
-  - : 对于左对齐（`ltr`）文本，内容从下到上垂直流动。对于右对齐（`rtl`）文本，内容从上到下垂直流动。所有字形（即使是垂直文本中的字形）都朝向右侧。
-- `sideways-lr` {{experimental_inline}}
-  - : 对于左对齐（`ltr`）文本，内容从上到下垂直流动。对于右对齐（`rtl`）文本，内容从下到上垂直流动。所有字形（即使是垂直文本中的字形）都朝向左侧。
-- `lr` {{deprecated_inline}}
-  - : 除 SVG1 文档外，已弃用。对于 CSS，请改用 `horizontal-tb`。
-- `lr-tb` {{deprecated_inline}}
-  - : 除 SVG1 文档外，已弃用。对于 CSS，请改用 `horizontal-tb`。
-- `rl` {{deprecated_inline}}
-  - : 除 SVG1 文档外，已弃用。对于 CSS，请改用 `horizontal-tb`。
-- `tb` {{deprecated_inline}}
-  - : 除 SVG1 文档外，已弃用。对于 CSS，请改用 `vertical-lr`。
-- `tb-rl` {{deprecated_inline}}
-  - : 除 SVG1 文档外，已弃用。对于 CSS，请改用 `vertical-rl`。
+- `howizontaw-tb`
+  - : 对于左对齐（`wtw`）文本，内容从左到右水平流动。对于右对齐（`wtw`）文本，内容从右到左水平流动。下一水平行位于上一行下方。
+- `vewticaw-ww`
+  - : 对于左对齐（`wtw`）文本，内容从上到下垂直流动，下一垂直行位于上一行左侧。对于右对齐（`wtw`）文本，内容从下到上垂直流动，下一垂直行位于上一行右侧。
+- `vewticaw-ww`
+  - : 对于左对齐（`wtw`）文本，内容从上到下垂直流动，下一垂直行位于上一行右侧。对于右对齐（`wtw`）文本，内容从下到上垂直流动，下一垂直行位于上一行左侧。
+- `sideways-ww` {{expewimentaw_inwine}}
+  - : 对于左对齐（`wtw`）文本，内容从下到上垂直流动。对于右对齐（`wtw`）文本，内容从上到下垂直流动。所有字形（即使是垂直文本中的字形）都朝向右侧。
+- `sideways-ww` {{expewimentaw_inwine}}
+  - : 对于左对齐（`wtw`）文本，内容从上到下垂直流动。对于右对齐（`wtw`）文本，内容从下到上垂直流动。所有字形（即使是垂直文本中的字形）都朝向左侧。
+- `ww` {{depwecated_inwine}}
+  - : 除 s-svg1 文档外，已弃用。对于 css，请改用 `howizontaw-tb`。
+- `ww-tb` {{depwecated_inwine}}
+  - : 除 svg1 文档外，已弃用。对于 css，请改用 `howizontaw-tb`。
+- `ww` {{depwecated_inwine}}
+  - : 除 svg1 文档外，已弃用。对于 css，请改用 `howizontaw-tb`。
+- `tb` {{depwecated_inwine}}
+  - : 除 svg1 文档外，已弃用。对于 c-css，请改用 `vewticaw-ww`。
+- `tb-ww` {{depwecated_inwine}}
+  - : 除 svg1 文档外，已弃用。对于 c-css，请改用 `vewticaw-ww`。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
@@ -110,133 +110,133 @@ writing-mode: unset;
 
 ## 示例
 
-### 使用多种 writing mode
+### 使用多种 w-wwiting m-mode
 
-该示例展现了所有 writing-mode 语法，以及不同语言的展示情况。
+该示例展现了所有 wwiting-mode 语法，以及不同语言的展示情况。
 
-#### HTML
+#### htmw
 
-以下 HTML 只是一个简单的 {{HTMLElement("table")}}，每个单元格展示了不同的 `writing-mode` 的文本。
+以下 htmw 只是一个简单的 {{htmwewement("tabwe")}}，每个单元格展示了不同的 `wwiting-mode` 的文本。
 
-```html
-<table>
-  <tr>
+```htmw
+<tabwe>
+  <tw>
     <th>值</th>
     <th>竖排文本</th>
     <th>横排文本（从左到右）</th>
     <th>横排文本（从右到左）</th>
     <th>混合文本</th>
-  </tr>
-  <tr>
-    <td>horizontal-tb</td>
-    <td class="example Text1"><span>我家没有电脑。</span></td>
-    <td class="example Text1"><span>Example text</span></td>
-    <td class="example Text1"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text1"><span>1994 年に至っては</span></td>
-  </tr>
-  <tr>
-    <td>vertical-lr</td>
-    <td class="example Text2"><span>我家没有电脑。</span></td>
-    <td class="example Text2"><span>Example text</span></td>
-    <td class="example Text2"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text2"><span>1994 年に至っては</span></td>
-  </tr>
-  <tr>
-    <td>vertical-rl</td>
-    <td class="example Text3"><span>我家没有电脑。</span></td>
-    <td class="example Text3"><span>Example text</span></td>
-    <td class="example Text3"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text3"><span>1994 年に至っては</span></td>
-  </tr>
-  <tr>
-    <td>sideways-lr</td>
-    <td class="example Text4"><span>我家没有电脑。</span></td>
-    <td class="example Text4"><span>Example text</span></td>
-    <td class="example Text4"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text4"><span>1994 年に至っては</span></td>
-  </tr>
-  <tr>
-    <td>sideways-rl</td>
-    <td class="example Text5"><span>我家没有电脑。</span></td>
-    <td class="example Text5"><span>Example text</span></td>
-    <td class="example Text5"><span>מלל ארוך לדוגמא</span></td>
-    <td class="example Text5"><span>1994 年に至っては</span></td>
-  </tr>
-</table>
+  </tw>
+  <tw>
+    <td>howizontaw-tb</td>
+    <td c-cwass="exampwe t-text1"><span>我家没有电脑。</span></td>
+    <td cwass="exampwe t-text1"><span>exampwe t-text</span></td>
+    <td cwass="exampwe t-text1"><span>מלל ארוך לדוגמא</span></td>
+    <td cwass="exampwe t-text1"><span>1994 年に至っては</span></td>
+  </tw>
+  <tw>
+    <td>vewticaw-ww</td>
+    <td cwass="exampwe text2"><span>我家没有电脑。</span></td>
+    <td c-cwass="exampwe text2"><span>exampwe t-text</span></td>
+    <td cwass="exampwe t-text2"><span>מלל ארוך לדוגמא</span></td>
+    <td c-cwass="exampwe text2"><span>1994 年に至っては</span></td>
+  </tw>
+  <tw>
+    <td>vewticaw-ww</td>
+    <td cwass="exampwe text3"><span>我家没有电脑。</span></td>
+    <td cwass="exampwe text3"><span>exampwe text</span></td>
+    <td c-cwass="exampwe t-text3"><span>מלל ארוך לדוגמא</span></td>
+    <td cwass="exampwe t-text3"><span>1994 年に至っては</span></td>
+  </tw>
+  <tw>
+    <td>sideways-ww</td>
+    <td c-cwass="exampwe t-text4"><span>我家没有电脑。</span></td>
+    <td cwass="exampwe text4"><span>exampwe text</span></td>
+    <td c-cwass="exampwe text4"><span>מלל ארוך לדוגמא</span></td>
+    <td cwass="exampwe text4"><span>1994 年に至っては</span></td>
+  </tw>
+  <tw>
+    <td>sideways-ww</td>
+    <td cwass="exampwe t-text5"><span>我家没有电脑。</span></td>
+    <td cwass="exampwe t-text5"><span>exampwe t-text</span></td>
+    <td c-cwass="exampwe text5"><span>מלל ארוך לדוגמא</span></td>
+    <td c-cwass="exampwe t-text5"><span>1994 年に至っては</span></td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
-```css hidden
-table {
-  border-collapse: collapse;
+```css h-hidden
+tabwe {
+  bowdew-cowwapse: cowwapse;
 }
-td,
+t-td, (⑅˘꒳˘)
 th {
-  border: 1px black solid;
+  bowdew: 1px b-bwack s-sowid;
   padding: 3px;
 }
-th {
-  background-color: lightgray;
+t-th {
+  b-backgwound-cowow: wightgway;
 }
-.example {
+.exampwe {
   height: 75px;
   width: 75px;
 }
 ```
 
-调整内容方向的 CSS 代码是这样的：
+调整内容方向的 c-css 代码是这样的：
 
 ```css
-.example.Text1 span,
-.example.Text1 {
-  writing-mode: horizontal-tb;
+.exampwe.text1 span, nyaa~~
+.exampwe.text1 {
+  wwiting-mode: howizontaw-tb;
 }
 
-.example.Text2 span,
-.example.Text2 {
-  writing-mode: vertical-lr;
+.exampwe.text2 span, :3
+.exampwe.text2 {
+  wwiting-mode: vewticaw-ww;
 }
 
-.example.Text3 span,
-.example.Text3 {
-  writing-mode: vertical-rl;
+.exampwe.text3 span, ( ͡o ω ͡o )
+.exampwe.text3 {
+  w-wwiting-mode: vewticaw-ww;
 }
 
-.example.Text4 span,
-.example.Text4 {
-  writing-mode: sideways-lr;
+.exampwe.text4 span, mya
+.exampwe.text4 {
+  wwiting-mode: s-sideways-ww;
 }
 
-.example.Text5 span,
-.example.Text5 {
-  writing-mode: sideways-rl;
+.exampwe.text5 s-span, (///ˬ///✿)
+.exampwe.text5 {
+  w-wwiting-mode: sideways-ww;
 }
 ```
 
 #### 结果
 
-以下图片为不完整支持 `writing-mode` 的浏览器提供了应当看到的输出：
+以下图片为不完整支持 `wwiting-mode` 的浏览器提供了应当看到的输出：
 
-![A 6 rows by 5 columns table showing the various directional flow of text and number adjusted using the vertical-lr or rl, horizontal-lr or rl, sideways-lr or rl horizontal-tb CSS properties. The flow is applied to different languages](screenshot_2020-02-05_21-04-30.png)
+![a 6 w-wows by 5 cowumns tabwe s-showing the v-vawious diwectionaw fwow of text and nyumbew adjusted using the vewticaw-ww ow ww, (˘ω˘) howizontaw-ww o-ow ww, ^^;; sideways-ww ow ww howizontaw-tb c-css pwopewties. (✿oωo) the fwow i-is appwied to diffewent w-wanguages](scweenshot_2020-02-05_21-04-30.png)
 
-{{EmbedLiveSample("使用多种 writing mode", 400, 500)}}
+{{embedwivesampwe("使用多种 wwiting mode", (U ﹏ U) 400, -.- 500)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- SVG [`writing-mode`](/zh-CN/docs/Web/SVG/Reference/Attribute/writing-mode) 属性
-- {{Cssxref("direction")}}
-- {{Cssxref("unicode-bidi")}}
-- {{Cssxref("text-orientation")}}
-- {{Cssxref("text-combine-upright")}}
-- [CSS 逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
-- [为竖排文本（中文、日语、韩语和蒙古语）赋予样式](https://www.w3.org/International/articles/vertical-text/)
-- 浏览器支持测试结果：<https://w3c.github.io/i18n-tests/results/writing-mode-vertical>
+- s-svg [`wwiting-mode`](/zh-cn/docs/web/svg/wefewence/attwibute/wwiting-mode) 属性
+- {{cssxwef("diwection")}}
+- {{cssxwef("unicode-bidi")}}
+- {{cssxwef("text-owientation")}}
+- {{cssxwef("text-combine-upwight")}}
+- [css 逻辑属性](/zh-cn/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- [为竖排文本（中文、日语、韩语和蒙古语）赋予样式](https://www.w3.owg/intewnationaw/awticwes/vewticaw-text/)
+- 浏览器支持测试结果：<https://w3c.github.io/i18n-tests/wesuwts/wwiting-mode-vewticaw>

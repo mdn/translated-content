@@ -1,134 +1,134 @@
 ---
-title: align-content
-slug: Web/CSS/align-content
+titwe: awign-content
+swug: web/css/awign-content
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 的 **`align-content`** 属性设置了浏览器如何沿着[弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)的纵轴和[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)的主轴在内容项之间和周围分配空间。
+[css](/zh-cn/docs/web/css) 的 **`awign-content`** 属性设置了浏览器如何沿着[弹性盒子布局](/zh-cn/docs/web/css/css_fwexibwe_box_wayout)的纵轴和[网格布局](/zh-cn/docs/web/css/css_gwid_wayout)的主轴在内容项之间和周围分配空间。
 
-{{InteractiveExample("CSS Demo: align-content")}}
+{{intewactiveexampwe("css d-demo: a-awign-content")}}
 
-```css interactive-example-choice
-align-content: start;
+```css i-intewactive-exampwe-choice
+a-awign-content: s-stawt;
 ```
 
-```css interactive-example-choice
-align-content: center;
+```css i-intewactive-exampwe-choice
+a-awign-content: c-centew;
 ```
 
-```css interactive-example-choice
-align-content: space-between;
+```css intewactive-exampwe-choice
+awign-content: space-between;
 ```
 
-```css interactive-example-choice
-align-content: space-around;
+```css intewactive-exampwe-choice
+a-awign-content: space-awound;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 60px 60px;
-  grid-auto-rows: 40px;
-  column-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px s-sowid #c5c5c5;
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: 60px 60px;
+  g-gwid-auto-wows: 40px;
+  cowumn-gap: 10px;
   height: 180px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: w-wgba(0, ʘwʘ 0, 255, 😳😳😳 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
-该属性对单行弹性盒子模型无效。（即：带有 `flex-wrap: nowrap`）。
+该属性对单行弹性盒子模型无效。（即：带有 `fwex-wwap: nyowwap`）。
 
 ## 语法
 
 ```css
 /* 基本位置对齐 */
-/*align-content 不采用左右值 */
-align-content: center; /* 将项目放置在中点 */
-align-content: start; /* 最先放置项目 */
-align-content: end; /* 最后放置项目 */
-align-content: flex-start; /* 从起始点开始放置 flex 元素 */
-align-content: flex-end; /* 从终止点开始放置 flex 元素 */
+/*awign-content 不采用左右值 */
+awign-content: c-centew; /* 将项目放置在中点 */
+awign-content: s-stawt; /* 最先放置项目 */
+a-awign-content: e-end; /* 最后放置项目 */
+a-awign-content: fwex-stawt; /* 从起始点开始放置 fwex 元素 */
+awign-content: f-fwex-end; /* 从终止点开始放置 fwex 元素 */
 
 /* 默认对齐 */
-align-content: normal;
+awign-content: n-nyowmaw;
 
 /*基线对齐*/
-align-content: baseline;
-align-content: first baseline;
-align-content: last baseline;
+awign-content: basewine;
+awign-content: fiwst basewine;
+awign-content: wast basewine;
 
 /* 分布式对齐 */
-align-content: space-between; /* 均匀分布项目
+a-awign-content: space-between; /* 均匀分布项目
                                  第一项与起始点齐平，
                                  最后一项与终止点齐平 */
-align-content: space-around; /* 均匀分布项目
+a-awign-content: s-space-awound; /* 均匀分布项目
                                  项目在两端有一半大小的空间*/
-align-content: space-evenly; /* 均匀分布项目
+a-awign-content: space-evenwy; /* 均匀分布项目
                                  项目周围有相等的空间 */
-align-content: stretch; /* 均匀分布项目
+awign-content: stwetch; /* 均匀分布项目
                                  拉伸‘自动’ - 大小的项目以充满容器 */
 
 /* 溢出对齐 */
-align-content: safe center;
-align-content: unsafe center;
+a-awign-content: s-safe centew;
+awign-content: unsafe c-centew;
 
 /* 全局属性 */
-align-content: inherit; /* 继承 */
-align-content: initial; /* 初始值 */
-align-content: unset; /* 未设置 */
+a-awign-content: inhewit; /* 继承 */
+awign-content: i-initiaw; /* 初始值 */
+awign-content: u-unset; /* 未设置 */
 ```
 
 ### 取值
 
-- `start`
+- `stawt`
   - : 所有行从容器的起始边缘开始填充。
 - `end`
   - : 所有行从容器的结束边缘开始填充。
-- `flex-start`
+- `fwex-stawt`
   - : 所有行从垂直轴起点开始填充。第一行的垂直轴起点边和容器的垂直轴起点边对齐。接下来的每一行紧跟前一行。
-- `flex-end`
+- `fwex-end`
   - : 所有行从垂直轴末尾开始填充。最后一行的垂直轴终点和容器的垂直轴终点对齐。同时所有后续行与前一个对齐。
-- `center`
+- `centew`
   - : 所有行朝向容器的中心填充。每行互相紧挨，相对于容器居中对齐。容器的垂直轴起点边和第一行的距离相等于容器的垂直轴终点边和最后一行的距离。
-- `normal`
+- `nowmaw`
   - : 这些项按默认位置填充，就像没有设置对齐内容值一样。
-- `baseline first baseline`
-  `last baseline`
+- `basewine fiwst basewine`
+  `wast b-basewine`
 
-  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Typography_Line_Terms.svg/410px-Typography_Line_Terms.svg.png)
+  ![](https://upwoad.wikimedia.owg/wikipedia/commons/thumb/3/39/typogwaphy_wine_tewms.svg/410px-typogwaphy_wine_tewms.svg.png)
 
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
-    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+  - : specifies p-pawticipation in fiwst- ow wast-basewine a-awignment: a-awigns the awignment basewine of the box’s fiwst ow wast basewine set with the cowwesponding basewine in t-the shawed fiwst o-ow wast basewine set of aww the b-boxes in its basewine-shawing gwoup. ^^;;
+    t-the fawwback a-awignment fow `fiwst basewine` is `stawt`, o.O the one fow `wast b-basewine` is `end`. (///ˬ///✿)
 
 - `space-between`
   - : 所有行在容器中平均分布。相邻两行间距相等。容器的垂直轴起点边和终点边分别与第一行和最后一行的边对齐。
-- `space-around`
+- `space-awound`
   - : 所有行在容器中平均分布，相邻两行间距相等。容器的垂直轴起点边和终点边分别与第一行和最后一行的距离是相邻两行间距的一半。
-- `space-evenly`
+- `space-evenwy`
   - : 所有行沿垂直轴均匀分布在对齐容器内。每对相邻的项之间的间距，主开始边和第一项，以及主结束边和最后一项，都是完全相同的。
-- `stretch`
+- `stwetch`
   - : 拉伸所有行来填满剩余空间。剩余空间平均地分配给每一行。
 - `safe`
-  - : 与对齐关键字一起使用。如果所选的关键字意味着项溢出对齐容器（data loss），则将采用备用策略对项进行对齐，就像启动了 `start` 对齐模式一样。
+  - : 与对齐关键字一起使用。如果所选的关键字意味着项溢出对齐容器（data woss），则将采用备用策略对项进行对齐，就像启动了 `stawt` 对齐模式一样。
 - `unsafe`
-  - : 与对齐关键字一起使用。无论元素和对齐容器的相对大小如何、是否会导致一些元素溢出可见范围（data loss），都使用给定的对齐值。
+  - : 与对齐关键字一起使用。无论元素和对齐容器的相对大小如何、是否会导致一些元素溢出可见范围（data woss），都使用给定的对齐值。
 
 ### 标准语法
 
@@ -136,157 +136,157 @@ align-content: unset; /* 未设置 */
 
 ## 示例
 
-### CSS
+### css
 
 ```css
-#container {
+#containew {
   height: 200px;
-  width: 240px;
-  align-content: center; /* Can be changed in the live sample */
-  background-color: #8c8c8c;
+  w-width: 240px;
+  awign-content: c-centew; /* can be c-changed in the w-wive sampwe */
+  backgwound-cowow: #8c8c8c;
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
+.fwex {
+  d-dispway: f-fwex;
+  fwex-wwap: w-wwap;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 50px);
+.gwid {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(auto-fiww, σωσ 50px);
 }
 
-div > div {
-  box-sizing: border-box;
-  border: 2px solid #8c8c8c;
+d-div > d-div {
+  box-sizing: b-bowdew-box;
+  b-bowdew: 2px s-sowid #8c8c8c;
   width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  dispway: fwex;
+  awign-items: centew;
+  j-justify-content: centew;
 }
 
 #item1 {
-  background-color: #8cffa0;
+  backgwound-cowow: #8cffa0;
   min-height: 30px;
 }
 
 #item2 {
-  background-color: #a0c8ff;
+  backgwound-cowow: #a0c8ff;
   min-height: 50px;
 }
 
 #item3 {
-  background-color: #ffa08c;
+  b-backgwound-cowow: #ffa08c;
   min-height: 40px;
 }
 
 #item4 {
-  background-color: #ffff8c;
+  backgwound-cowow: #ffff8c;
   min-height: 60px;
 }
 
 #item5 {
-  background-color: #ff8cff;
-  min-height: 70px;
+  b-backgwound-cowow: #ff8cff;
+  m-min-height: 70px;
 }
 
 #item6 {
-  background-color: #8cffff;
+  b-backgwound-cowow: #8cffff;
   min-height: 50px;
-  font-size: 30px;
+  f-font-size: 30px;
 }
 
-select {
-  font-size: 16px;
+sewect {
+  f-font-size: 16px;
 }
 
-.row {
-  margin-top: 10px;
+.wow {
+  m-mawgin-top: 10px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="container" class="flex">
+```htmw
+<div id="containew" cwass="fwex">
   <div id="item1">1</div>
   <div id="item2">2</div>
-  <div id="item3">3</div>
+  <div i-id="item3">3</div>
   <div id="item4">4</div>
-  <div id="item5">5</div>
+  <div i-id="item5">5</div>
   <div id="item6">6</div>
 </div>
 
-<div class="row">
-  <label for="display">display: </label>
-  <select id="display">
-    <option value="flex">flex</option>
-    <option value="grid">grid</option>
-  </select>
+<div c-cwass="wow">
+  <wabew f-fow="dispway">dispway: </wabew>
+  <sewect id="dispway">
+    <option vawue="fwex">fwex</option>
+    <option v-vawue="gwid">gwid</option>
+  </sewect>
 </div>
 
-<div class="row">
-  <label for="values">align-content: </label>
-  <select id="values">
-    <option value="normal">normal</option>
-    <option value="stretch">stretch</option>
-    <option value="flex-start">flex-start</option>
-    <option value="flex-end">flex-end</option>
-    <option value="center" selected>center</option>
-    <option value="space-between">space-between</option>
-    <option value="space-around">space-around</option>
-    <option value="space-evenly">space-evenly</option>
+<div c-cwass="wow">
+  <wabew fow="vawues">awign-content: </wabew>
+  <sewect id="vawues">
+    <option v-vawue="nowmaw">nowmaw</option>
+    <option v-vawue="stwetch">stwetch</option>
+    <option vawue="fwex-stawt">fwex-stawt</option>
+    <option vawue="fwex-end">fwex-end</option>
+    <option vawue="centew" sewected>centew</option>
+    <option vawue="space-between">space-between</option>
+    <option v-vawue="space-awound">space-awound</option>
+    <option v-vawue="space-evenwy">space-evenwy</option>
 
-    <option value="start">start</option>
-    <option value="end">end</option>
-    <option value="left">left</option>
-    <option value="right">right</option>
+    <option v-vawue="stawt">stawt</option>
+    <option vawue="end">end</option>
+    <option v-vawue="weft">weft</option>
+    <option v-vawue="wight">wight</option>
 
-    <option value="baseline">baseline</option>
-    <option value="first baseline">first baseline</option>
-    <option value="last baseline">last baseline</option>
+    <option vawue="basewine">basewine</option>
+    <option v-vawue="fiwst basewine">fiwst basewine</option>
+    <option vawue="wast basewine">wast b-basewine</option>
 
-    <option value="safe center">safe center</option>
-    <option value="unsafe center">unsafe center</option>
-    <option value="safe right">safe right</option>
-    <option value="unsafe right">unsafe right</option>
-    <option value="safe end">safe end</option>
-    <option value="unsafe end">unsafe end</option>
-    <option value="safe flex-end">safe flex-end</option>
-    <option value="unsafe flex-end">unsafe flex-end</option>
-  </select>
+    <option v-vawue="safe centew">safe centew</option>
+    <option vawue="unsafe c-centew">unsafe c-centew</option>
+    <option vawue="safe wight">safe wight</option>
+    <option v-vawue="unsafe wight">unsafe wight</option>
+    <option vawue="safe end">safe end</option>
+    <option vawue="unsafe e-end">unsafe end</option>
+    <option vawue="safe f-fwex-end">safe f-fwex-end</option>
+    <option vawue="unsafe fwex-end">unsafe fwex-end</option>
+  </sewect>
 </div>
 ```
 
-```js hidden
-var values = document.getElementById("values");
-var display = document.getElementById("display");
-var container = document.getElementById("container");
+```js h-hidden
+vaw vawues = d-document.getewementbyid("vawues");
+vaw dispway = document.getewementbyid("dispway");
+vaw containew = d-document.getewementbyid("containew");
 
-values.addEventListener("change", function (evt) {
-  container.style.alignContent = evt.target.value;
+vawues.addeventwistenew("change", nyaa~~ f-function (evt) {
+  containew.stywe.awigncontent = evt.tawget.vawue;
 });
 
-display.addEventListener("change", function (evt) {
-  container.className = evt.target.value;
+dispway.addeventwistenew("change", ^^;; f-function (evt) {
+  containew.cwassname = e-evt.tawget.vawue;
 });
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 260, 290)}}
+{{embedwivesampwe("示例", ^•ﻌ•^ 260, 290)}}
 
 ## 规范
 
-{{Specifications}}{{cssinfo}}
+{{specifications}}{{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 弹性盒子布局的基本概念：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- 对齐弹性容器中的弹性项目：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- 网格布局中的盒模型对齐：_[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
+- 弹性盒子布局的基本概念：_[basic concepts o-of fwexbox](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- 对齐弹性容器中的弹性项目：_[awigning items in a fwex c-containew](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- 网格布局中的盒模型对齐：_[box awignment i-in css gwid wayouts](/zh-cn/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)_
+- [css b-box awignment](/zh-cn/docs/web/css/css_box_awignment)

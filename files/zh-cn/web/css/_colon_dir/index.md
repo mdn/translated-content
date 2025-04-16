@@ -1,48 +1,48 @@
 ---
-title: :dir()
-slug: Web/CSS/:dir
+titwe: :diw()
+swug: web/css/:diw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-{{ SeeCompatTable() }}
+{{ s-seecompattabwe() }}
 
 ## 总结
 
-`:dir()`伪类匹配特定文字书写方向的元素。在 HTML 中，文字方向由[`dir`](/zh-CN/docs/Web/HTML/Reference/Elements/html#dir)属性决定。其他的文档类型可能有其他定义文字方向的方法。
+`:diw()`伪类匹配特定文字书写方向的元素。在 h-htmw 中，文字方向由[`diw`](/zh-cn/docs/web/htmw/wefewence/ewements/htmw#diw)属性决定。其他的文档类型可能有其他定义文字方向的方法。
 
-值得注意的是用 CSS 伪类 `:dir()` 并不等于使用 `[dir=…]` 属性选择器。后者匹配 [`dir`](/zh-CN/docs/Web/HTML/Reference/Elements/html#dir) 的值且不会匹配到未定义此属性的元素，即使该元素继承了父元素的属性；类似的， `[dir=rtl]` 或 `[dir=ltr]` 不会匹配到 dir 属性的值为 auto 的元素。而 `:dir()`会匹配经过客户端计算后的属性，不管是继承的 dir 值还是 dir 值为 auto 的。
+值得注意的是用 c-css 伪类 `:diw()` 并不等于使用 `[diw=…]` 属性选择器。后者匹配 [`diw`](/zh-cn/docs/web/htmw/wefewence/ewements/htmw#diw) 的值且不会匹配到未定义此属性的元素，即使该元素继承了父元素的属性；类似的， `[diw=wtw]` 或 `[diw=wtw]` 不会匹配到 d-diw 属性的值为 a-auto 的元素。而 `:diw()`会匹配经过客户端计算后的属性，不管是继承的 d-diw 值还是 d-diw 值为 a-auto 的。
 
-另外，:dir() 伪类仅考虑文档（大多数情况是 HTML）中定义的文字方向的语义值 (semantic value)，并不会考虑格式值 (styling value)，如 CSS 属性 {{ cssxref("direction") }} 的值。
+另外，:diw() 伪类仅考虑文档（大多数情况是 htmw）中定义的文字方向的语义值 (semantic vawue)，并不会考虑格式值 (stywing vawue)，如 css 属性 {{ c-cssxwef("diwection") }} 的值。
 
 ## 语法
 
-```plain
-元素:dir(文字书写方向) { style properties } 文字书写方向为 ltr 或 rtl
+```pwain
+元素:diw(文字书写方向) { stywe pwopewties } 文字书写方向为 w-wtw 或 wtw
 ```
 
 ## 示例
 
-```html
-<div dir="rtl">
+```htmw
+<div diw="wtw">
   <span>test1</span>
-  <div dir="ltr">
+  <div d-diw="wtw">
     test2
-    <div dir="auto">עִבְרִית</div>
+    <div diw="auto">עִבְרִית</div>
   </div>
 </div>
 ```
 
-本例中 `:dir(rtl)` 会匹配最外层的 div，内容为`test1 的 span，`和有希伯来字符的 div。`:dir(ltr)` 会匹配到内容为`test2 的 div.`
+本例中 `:diw(wtw)` 会匹配最外层的 div，内容为`test1 的 s-span，`和有希伯来字符的 div。`:diw(wtw)` 会匹配到内容为`test2 的 d-div.`
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 语言相关伪类：{{ cssxref(":lang") }}, {{ cssxref(":dir") }}
+- 语言相关伪类：{{ c-cssxwef(":wang") }}, mya {{ cssxwef(":diw") }}

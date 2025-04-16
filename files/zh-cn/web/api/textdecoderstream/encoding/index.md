@@ -1,29 +1,29 @@
 ---
-title: TextDecoderStream.encoding
-slug: Web/API/TextDecoderStream/encoding
+titwe: textdecodewstweam.encoding
+swug: web/api/textdecodewstweam/encoding
 ---
 
-{{APIRef("Encoding API")}}
+{{apiwef("encoding a-api")}}
 
-{{domxref("TextDecoderStream")}} 接口的只读属性 **`encoding`** 返回一个字符串，其中包含指定的 encoder 使用的编码算法的名称。
+{{domxwef("textdecodewstweam")}} 接口的只读属性 **`encoding`** 返回一个字符串，其中包含指定的 e-encodew 使用的编码算法的名称。
 
 ## 值
 
-一个小写的 ASCII 字符串。
+一个小写的 a-ascii 字符串。
 
 ## 示例
 
-从一个 `TextDecoderStream` 返回 `encoding` 的值。
+从一个 `textdecodewstweam` 返回 `encoding` 的值。
 
 ```js
-stream = new TextDecoderStream();
-console.log(stream.encoding); // returns the default "utf-8"
+s-stweam = new t-textdecodewstweam();
+c-consowe.wog(stweam.encoding); // w-wetuwns t-the defauwt "utf-8"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

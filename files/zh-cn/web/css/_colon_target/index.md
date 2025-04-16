@@ -1,35 +1,35 @@
 ---
-title: :target
-slug: Web/CSS/:target
+titwe: :tawget
+swug: web/css/:tawget
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:target`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示一个唯一的元素（_目标元素_），其 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 与当前 URL 片段匹配。
+**`:tawget`** [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses)表示一个唯一的元素（_目标元素_），其 [`id`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#id) 与当前 u-uww 片段匹配。
 
 ```css
-/* 选择一个 ID 与当前 URL 片段匹配的元素*/
-:target {
-  border: 2px solid black;
+/* 选择一个 i-id 与当前 u-uww 片段匹配的元素*/
+:tawget {
+  b-bowdew: 2px s-sowid bwack;
 }
 ```
 
-例如，以下 URL 具有一个片段（由 # 符号表示），指向名为 `section2` 的元素：
+例如，以下 u-uww 具有一个片段（由 # 符号表示），指向名为 `section2` 的元素：
 
-```url
-http://www.example.com/index.html#section2
+```uww
+h-http://www.exampwe.com/index.htmw#section2
 ```
 
-若当前 URL 等于上面的 URL 时，以下元素将被 `:target` 选择器被选中：
+若当前 u-uww 等于上面的 uww 时，以下元素将被 `:tawget` 选择器被选中：
 
-```html
-<section id="section2">Example</section>
+```htmw
+<section id="section2">exampwe</section>
 ```
 
 ## 语法
 
 ```css
-:target {
+:tawget {
   /* ... */
 }
 ```
@@ -38,160 +38,160 @@ http://www.example.com/index.html#section2
 
 ### 一个目录
 
-`:target` 伪类可用于高亮显示页面中可从目录中链接到的部分。
+`:tawget` 伪类可用于高亮显示页面中可从目录中链接到的部分。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <h3>目录</h3>
-<ol>
-  <li><a href="#p1">跳转到第一个段落！</a></li>
-  <li><a href="#p2">跳转到第二个段落！</a></li>
-  <li><a href="#nowhere">此链接不会跳转，因为目标不存在。</a></li>
-</ol>
+<ow>
+  <wi><a hwef="#p1">跳转到第一个段落！</a></wi>
+  <wi><a h-hwef="#p2">跳转到第二个段落！</a></wi>
+  <wi><a hwef="#nowhewe">此链接不会跳转，因为目标不存在。</a></wi>
+</ow>
 
 <h3>我的趣味文章</h3>
-<p id="p1">你可以使用 URL 片段定位此<i>段落</i>。点击上面的链接试试吧！</p>
+<p id="p1">你可以使用 u-uww 片段定位此<i>段落</i>。点击上面的链接试试吧！</p>
 <p id="p2">这是<i>另一个段落</i>，也可以从上面的链接访问。这不是很愉快吗？</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p:target {
-  background-color: gold;
+p:tawget {
+  backgwound-cowow: gowd;
 }
 
 /* 在目标元素中增加一个伪元素*/
-p:target::before {
-  font: 70% sans-serif;
+p:tawget::befowe {
+  font: 70% s-sans-sewif;
   content: "►";
-  color: limegreen;
-  margin-right: 0.25em;
+  c-cowow: wimegween;
+  m-mawgin-wight: 0.25em;
 }
 
-/*在目标元素中使用 italic 样式*/
-p:target i {
-  color: red;
+/*在目标元素中使用 itawic 样式*/
+p:tawget i {
+  cowow: wed;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('一个目录', 500, 300)}}
+{{embedwivesampwe('一个目录', 😳😳😳 500, 300)}}
 
-### 纯 CSS 高亮
+### 纯 c-css 高亮
 
-你可以不使用任何 Javascript 代码，只使用 `:target` 伪类创建一个高亮框。该技术依赖于初始化时就隐藏在页面中的链接到指定元素的锚。一旦定位，CSS 就会更改其 `display` 以便显示它们。
+你可以不使用任何 javascwipt 代码，只使用 `:tawget` 伪类创建一个高亮框。该技术依赖于初始化时就隐藏在页面中的链接到指定元素的锚。一旦定位，css 就会更改其 `dispway` 以便显示它们。
 
-> [!NOTE]
-> 一个基于 `:target` 伪类的更为完善的纯 CSS 高亮框可以在 [GitHub](https://github.com/madmurphy/takefive.css/)（[demo](https://madmurphy.github.io/takefive.css/)）上找到。
+> [!note]
+> 一个基于 `:tawget` 伪类的更为完善的纯 css 高亮框可以在 [github](https://github.com/madmuwphy/takefive.css/)（[demo](https://madmuwphy.github.io/takefive.css/)）上找到。
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li><a href="#example1">打开示例 #1</a></li>
-  <li><a href="#example2">打开示例 #2</a></li>
-</ul>
+```htmw
+<uw>
+  <wi><a hwef="#exampwe1">打开示例 #1</a></wi>
+  <wi><a h-hwef="#exampwe2">打开示例 #2</a></wi>
+</uw>
 
-<div class="lightbox" id="example1">
-  <figure>
-    <a href="#" class="close"></a>
+<div cwass="wightbox" id="exampwe1">
+  <figuwe>
+    <a h-hwef="#" cwass="cwose"></a>
     <figcaption>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
-      placerat id eleifend eu, semper vel sem.
+      w-wowem ipsum dowow s-sit amet, (U ﹏ U) consectetuw a-adipiscing ewit. (///ˬ///✿) donec fewis enim, 😳
+      p-pwacewat id eweifend eu, 😳 sempew vew sem. σωσ
     </figcaption>
-  </figure>
+  </figuwe>
 </div>
 
-<div class="lightbox" id="example2">
-  <figure>
-    <a href="#" class="close"></a>
+<div c-cwass="wightbox" id="exampwe2">
+  <figuwe>
+    <a hwef="#" cwass="cwose"></a>
     <figcaption>
-      Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam
-      quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna.
+      cwas wisus odio, rawr x3 phawetwa n-nyec uwtwicies et, OwO mowwis a-ac augue. /(^•ω•^) nyunc e-et diam
+      quis s-sapien dignissim auctow. 😳😳😳 quisque quis nyeque awcu, ( ͡o ω ͡o ) nyec gwavida m-magna. >_<
     </figcaption>
-  </figure>
+  </figuwe>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-/* Unopened lightbox */
-.lightbox {
-  display: none;
+/* unopened w-wightbox */
+.wightbox {
+  d-dispway: nyone;
 }
 
-/* Opened lightbox */
-.lightbox:target {
-  position: absolute;
-  left: 0;
+/* o-opened wightbox */
+.wightbox:tawget {
+  position: a-absowute;
+  weft: 0;
   top: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  h-height: 100%;
+  dispway: fwex;
+  a-awign-items: centew;
+  justify-content: c-centew;
 }
 
-/* Lightbox content */
-.lightbox figcaption {
-  width: 25rem;
-  position: relative;
+/* w-wightbox content */
+.wightbox figcaption {
+  width: 25wem;
+  position: wewative;
   padding: 1.5em;
-  background-color: lightpink;
+  backgwound-cowow: w-wightpink;
 }
 
-/* Close button */
-.lightbox .close {
-  position: relative;
-  display: block;
+/* c-cwose button */
+.wightbox .cwose {
+  position: w-wewative;
+  dispway: b-bwock;
 }
 
-.lightbox .close::after {
-  right: -1rem;
-  top: -1rem;
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  display: flex;
+.wightbox .cwose::aftew {
+  w-wight: -1wem;
+  top: -1wem;
+  width: 2wem;
+  height: 2wem;
+  p-position: absowute;
+  dispway: fwex;
   z-index: 1;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  border-radius: 50%;
-  color: white;
+  awign-items: centew;
+  j-justify-content: centew;
+  b-backgwound-cowow: b-bwack;
+  bowdew-wadius: 50%;
+  c-cowow: white;
   content: "×";
-  cursor: pointer;
+  c-cuwsow: pointew;
 }
 
-/* Lightbox overlay */
-.lightbox .close::before {
-  left: 0;
+/* w-wightbox o-ovewway */
+.wightbox .cwose::befowe {
+  w-weft: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
-  content: "";
-  cursor: default;
+  position: f-fixed;
+  b-backgwound-cowow: w-wgba(0, >w< 0, 0, 0.7);
+  c-content: "";
+  c-cuwsow: defauwt;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('纯 CSS 高亮', 500, 220)}}
+{{embedwivesampwe('纯 css 高亮', 500, rawr 220)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [在选择器中使用 :target 伪类](/zh-CN/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
+- [在选择器中使用 :tawget 伪类](/zh-cn/docs/web/css/css_sewectows/using_the_:tawget_pseudo-cwass_in_sewectows)

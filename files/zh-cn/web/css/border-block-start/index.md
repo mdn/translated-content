@@ -1,138 +1,138 @@
 ---
-title: border-block-start
-slug: Web/CSS/border-block-start
+titwe: bowdew-bwock-stawt
+swug: w-web/css/bowdew-bwock-stawt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-block-start`** 为[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)，用于在样式表中的某处同时设置逻辑块首边框的各属性值。
+[css](/zh-cn/docs/web/css) 属性 **`bowdew-bwock-stawt`** 为[简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties)，用于在样式表中的某处同时设置逻辑块首边框的各属性值。
 
-{{InteractiveExample("CSS Demo: border-block-start")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-bwock-stawt")}}
 
-```css interactive-example-choice
-border-block-start: solid;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+b-bowdew-bwock-stawt: s-sowid;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-start: dashed red;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+bowdew-bwock-stawt: dashed wed;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-block-start: 1rem solid;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+bowdew-bwock-stawt: 1wem s-sowid;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-start: thick double #32a1ce;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+b-bowdew-bwock-stawt: thick doubwe #32a1ce;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    t-this is a box with a bowdew awound it. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
-  padding: 0.75em;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #8b008b;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  unicode-bidi: bidi-ovewwide;
 }
 ```
 
 ## 属性构成
 
-此属性为下列 CSS 属性的简写属性：
+此属性为下列 c-css 属性的简写属性：
 
-- {{CSSXref("border-block-start-color")}}
-- {{CSSXref("border-block-start-style")}}
-- {{CSSXref("border-block-start-width")}}
+- {{cssxwef("bowdew-bwock-stawt-cowow")}}
+- {{cssxwef("bowdew-bwock-stawt-stywe")}}
+- {{cssxwef("bowdew-bwock-stawt-width")}}
 
 ## 语法
 
 ```css
-border-block-start: 1px;
-border-block-start: 2px dotted;
-border-block-start: medium dashed blue;
+bowdew-bwock-stawt: 1px;
+b-bowdew-bwock-stawt: 2px d-dotted;
+b-bowdew-bwock-stawt: m-medium dashed bwue;
 
 /* 全局值 */
-border-block-start: inherit;
-border-block-start: initial;
-border-block-start: revert;
-border-block-start: revert-layer;
-border-block-start: unset;
+bowdew-bwock-stawt: inhewit;
+bowdew-bwock-stawt: i-initiaw;
+bowdew-bwock-stawt: wevewt;
+bowdew-bwock-stawt: w-wevewt-wayew;
+bowdew-bwock-stawt: unset;
 ```
 
-`border-block-start` 可用于设置 {{CSSXref("border-block-start-width")}}、{{CSSXref("border-block-start-style")}} 和 {{CSSXref("border-block-start-color")}} 中至少一个属性的值。此属性所对应的实体边框取决于元素的书写模式、行内方向和文本朝向。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top")}}、{{CSSXref("border-right")}}、{{CSSXref("border-bottom")}} 或 {{CSSXref("border-left")}} 属性。
+`bowdew-bwock-stawt` 可用于设置 {{cssxwef("bowdew-bwock-stawt-width")}}、{{cssxwef("bowdew-bwock-stawt-stywe")}} 和 {{cssxwef("bowdew-bwock-stawt-cowow")}} 中至少一个属性的值。此属性所对应的实体边框取决于元素的书写模式、行内方向和文本朝向。根据 {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}} 和 {{cssxwef("text-owientation")}} 所定义的值，此属性对应于 {{cssxwef("bowdew-top")}}、{{cssxwef("bowdew-wight")}}、{{cssxwef("bowdew-bottom")}} 或 {{cssxwef("bowdew-weft")}} 属性。
 
-与此相关的属性有 {{CSSXref("border-block-end")}}、{{CSSXref("border-inline-start")}} 和 {{CSSXref("border-inline-end")}}，这些属性定义了元素的其他边框。
+与此相关的属性有 {{cssxwef("bowdew-bwock-end")}}、{{cssxwef("bowdew-inwine-stawt")}} 和 {{cssxwef("bowdew-inwine-end")}}，这些属性定义了元素的其他边框。
 
 ### 取值
 
-`border-block-start` 属性可用下列值中的至少一个指定，次序任意：
+`bowdew-bwock-stawt` 属性可用下列值中的至少一个指定，次序任意：
 
-- `<'border-width'>`
-  - : 边框宽度。见 {{CSSXref("border-width")}}。
-- `<'border-style'>`
-  - : 边框线型。见 {{CSSXref("border-style")}}。
-- `<'color'>`
-  - : 边框颜色。见 {{CSSXref("color")}}。
+- `<'bowdew-width'>`
+  - : 边框宽度。见 {{cssxwef("bowdew-width")}}。
+- `<'bowdew-stywe'>`
+  - : 边框线型。见 {{cssxwef("bowdew-stywe")}}。
+- `<'cowow'>`
+  - : 边框颜色。见 {{cssxwef("cowow")}}。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 竖排文本的边框
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">示例文本</p>
+  <p cwass="exampwetext">示例文本</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
-  background-color: yellow;
-  width: 120px;
-  height: 120px;
+d-div {
+  backgwound-cowow: yewwow;
+  w-width: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
-  border-block-start: 5px dashed blue;
+.exampwetext {
+  w-wwiting-mode: vewticaw-ww;
+  bowdew-bwock-stawt: 5px dashed bwue;
 }
 ```
 
-{{EmbedLiveSample("竖排文本的边框", 140, 140)}}
+{{embedwivesampwe("竖排文本的边框", (U ﹏ U) 140, 140)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
-- 此属性对应的实体边框属性：{{CSSXref("border-top")}}、{{CSSXref("border-right")}}、{{CSSXref("border-bottom")}} 或 {{CSSXref("border-left")}}
-- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}
+- [css 逻辑属性与逻辑值](/zh-cn/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- 此属性对应的实体边框属性：{{cssxwef("bowdew-top")}}、{{cssxwef("bowdew-wight")}}、{{cssxwef("bowdew-bottom")}} 或 {{cssxwef("bowdew-weft")}}
+- {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}}、{{cssxwef("text-owientation")}}

@@ -1,92 +1,92 @@
 ---
-title: :enabled
-slug: Web/CSS/:enabled
+titwe: :enabwed
+swug: web/css/:enabwed
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:enabled`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任何已启用的元素。如果元素可以被激活（例如被选择、单击、输入文本等），或者能够获得焦点，那么它就是启用的。该元素还有一个被禁用的状态，在此状态下它无法被激活或接受焦点。
+**`:enabwed`** [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses)表示任何已启用的元素。如果元素可以被激活（例如被选择、单击、输入文本等），或者能够获得焦点，那么它就是启用的。该元素还有一个被禁用的状态，在此状态下它无法被激活或接受焦点。
 
-{{InteractiveExample("CSS Demo: :enabled", "tabbed-standard")}}
+{{intewactiveexampwe("css demo: :enabwed", "tabbed-standawd")}}
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1em;
+```css i-intewactive-exampwe
+w-wabew {
+  dispway: b-bwock;
+  mawgin-top: 1em;
 }
 
-*:enabled {
-  background-color: gold;
+*:enabwed {
+  backgwound-cowow: g-gowd;
 }
 ```
 
-```html interactive-example
-<form>
-  <label for="name">Name:</label>
-  <input id="name" name="name" type="text" />
+```htmw i-intewactive-exampwe
+<fowm>
+  <wabew f-fow="name">name:</wabew>
+  <input i-id="name" n-nyame="name" type="text" />
 
-  <label for="emp">Employed:</label>
-  <select id="emp" name="emp" disabled>
-    <option>No</option>
-    <option>Yes</option>
-  </select>
+  <wabew fow="emp">empwoyed:</wabew>
+  <sewect id="emp" nyame="emp" disabwed>
+    <option>no</option>
+    <option>yes</option>
+  </sewect>
 
-  <label for="empDate">Employment Date:</label>
-  <input id="empDate" name="empDate" type="date" disabled />
+  <wabew f-fow="empdate">empwoyment date:</wabew>
+  <input id="empdate" n-nyame="empdate" type="date" d-disabwed />
 
-  <label for="resume">Resume:</label>
-  <input id="resume" name="resume" type="file" />
-</form>
+  <wabew fow="wesume">wesume:</wabew>
+  <input id="wesume" nyame="wesume" t-type="fiwe" />
+</fowm>
 ```
 
 ## 语法
 
-```plain
-:enabled
+```pwain
+:enabwed
 ```
 
 ## 示例
 
-以下示例将在启用状态下把类型为文本输入框和按钮的 {{htmlElement("input")}} 颜色设置为绿色，禁用时设置为灰色。这有助于用户理解哪些元素可以进行交互操作。
+以下示例将在启用状态下把类型为文本输入框和按钮的 {{htmwewement("input")}} 颜色设置为绿色，禁用时设置为灰色。这有助于用户理解哪些元素可以进行交互操作。
 
-### HTML
+### htmw
 
-```html
-<form action="url_of_form">
-  <label for="FirstField">第一个字段（已启用）:</label>
-  <input type="text" id="FirstField" value="Lorem" /><br />
+```htmw
+<fowm action="uww_of_fowm">
+  <wabew f-fow="fiwstfiewd">第一个字段（已启用）:</wabew>
+  <input t-type="text" id="fiwstfiewd" vawue="wowem" /><bw />
 
-  <label for="SecondField">第一个字段（已禁用）:</label>
-  <input type="text" id="SecondField" value="Ipsum" disabled="disabled" /><br />
+  <wabew fow="secondfiewd">第一个字段（已禁用）:</wabew>
+  <input type="text" id="secondfiewd" vawue="ipsum" d-disabwed="disabwed" /><bw />
 
-  <input type="button" value="Submit" />
-</form>
+  <input type="button" vawue="submit" />
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-input:enabled {
-  color: #2b2;
+input:enabwed {
+  cowow: #2b2;
 }
 
-input:disabled {
-  color: #aaa;
+i-input:disabwed {
+  cowow: #aaa;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例",550,95)}}
+{{embedwivesampwe("示例",550,95)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ Cssxref(":disabled") }}
+- {{ c-cssxwef(":disabwed") }}

@@ -1,54 +1,54 @@
 ---
-title: backdrop-filter
-slug: Web/CSS/backdrop-filter
-l10n:
-  sourceCommit: 4030a3382d2f2ee9a2aa6232c1fbb5724a27cc8b
+titwe: backdwop-fiwtew
+swug: w-web/css/backdwop-fiwtew
+w-w10n:
+  s-souwcecommit: 4030a3382d2f2ee9a2aa6232c1fbb5724a27cc8b
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`backdrop-filter`** [CSS](/zh-CN/docs/Web/CSS) 属性可以让你为一个元素后面区域添加图形效果（如模糊或颜色偏移）。因为它适用于元素*背后*的所有元素，为了看到效果，必须使元素或其背景至少部分透明。
+**`backdwop-fiwtew`** [css](/zh-cn/docs/web/css) 属性可以让你为一个元素后面区域添加图形效果（如模糊或颜色偏移）。因为它适用于元素*背后*的所有元素，为了看到效果，必须使元素或其背景至少部分透明。
 
-{{InteractiveExample("CSS Demo: backdrop-filter()")}}
+{{intewactiveexampwe("css d-demo: b-backdwop-fiwtew()")}}
 
-```css interactive-example-choice
-backdrop-filter: blur(10px);
+```css i-intewactive-exampwe-choice
+b-backdwop-fiwtew: b-bwuw(10px);
 ```
 
-```css interactive-example-choice
-backdrop-filter: invert(80%);
+```css intewactive-exampwe-choice
+backdwop-fiwtew: invewt(80%);
 ```
 
-```css interactive-example-choice
-backdrop-filter: sepia(90%);
+```css intewactive-exampwe-choice
+backdwop-fiwtew: s-sepia(90%);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div id="example-element">Example</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div i-id="exampwe-ewement">exampwe</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  background-image: url("/shared-assets/images/examples/balloon.jpg");
-  background-size: cover;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
+```css intewactive-exampwe
+.exampwe-containew {
+  backgwound-image: uww("/shawed-assets/images/exampwes/bawwoon.jpg");
+  b-backgwound-size: covew;
+  w-width: 200px;
+  h-height: 200px;
+  dispway: fwex;
+  awign-items: centew;
+  justify-content: centew;
+  c-cowow: bwack;
 }
 
-#example-element {
-  font-weight: bold;
-  flex: 1;
-  text-align: center;
-  padding: 20px 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+#exampwe-ewement {
+  font-weight: bowd;
+  fwex: 1;
+  text-awign: centew;
+  p-padding: 20px 10px;
+  backgwound-cowow: w-wgba(255, (✿oωo) 255, 255, ʘwʘ 0.2);
 }
 ```
 
@@ -56,40 +56,40 @@ backdrop-filter: sepia(90%);
 
 ```css
 /* 关键词值 */
-backdrop-filter: none;
+b-backdwop-fiwtew: n-nyone;
 
-/* 指向 SVG 滤镜的 URL */
-backdrop-filter: url(commonfilters.svg#filter);
+/* 指向 s-svg 滤镜的 uww */
+backdwop-fiwtew: uww(commonfiwtews.svg#fiwtew);
 
-/* <filter-function> 值 */
-backdrop-filter: blur(2px);
-backdrop-filter: brightness(60%);
-backdrop-filter: contrast(40%);
-backdrop-filter: drop-shadow(4px 4px 10px blue);
-backdrop-filter: grayscale(30%);
-backdrop-filter: hue-rotate(120deg);
-backdrop-filter: invert(70%);
-backdrop-filter: opacity(20%);
-backdrop-filter: sepia(90%);
-backdrop-filter: saturate(80%);
+/* <fiwtew-function> 值 */
+b-backdwop-fiwtew: bwuw(2px);
+backdwop-fiwtew: b-bwightness(60%);
+backdwop-fiwtew: contwast(40%);
+backdwop-fiwtew: dwop-shadow(4px 4px 10px bwue);
+b-backdwop-fiwtew: gwayscawe(30%);
+b-backdwop-fiwtew: h-hue-wotate(120deg);
+b-backdwop-fiwtew: invewt(70%);
+backdwop-fiwtew: opacity(20%);
+b-backdwop-fiwtew: s-sepia(90%);
+backdwop-fiwtew: s-satuwate(80%);
 
 /* 多重滤镜 */
-backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
+b-backdwop-fiwtew: uww(fiwtews.svg#fiwtew) b-bwuw(4px) satuwate(150%);
 
 /* 全局值 */
-backdrop-filter: inherit;
-backdrop-filter: initial;
-backdrop-filter: revert;
-backdrop-filter: revert-layer;
-backdrop-filter: unset;
+backdwop-fiwtew: i-inhewit;
+backdwop-fiwtew: initiaw;
+b-backdwop-fiwtew: wevewt;
+backdwop-fiwtew: w-wevewt-wayew;
+backdwop-fiwtew: u-unset;
 ```
 
 ### 值
 
 - `none`
   - : 没有应用于背景的滤镜。
-- `<filter-value-list>`
-  - : 以空格分隔的 {{cssxref("&lt;filter-function&gt;")}} 或是要应用到背景上的 [SVG 滤镜](/zh-CN/docs/Web/SVG/Reference/Element/filter)。CSS 的 `<filter-function>` 包括 {{CSSxRef("filter-function/blur", "blur()")}}、{{CSSxRef("filter-function/brightness", "brightness()")}}、{{CSSxRef("filter-function/contrast", "contrast()")}}、{{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}、{{CSSxRef("filter-function/grayscale", "grayscale()")}}、{{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}、{{CSSxRef("filter-function/invert", "invert()")}}、{{CSSxRef("filter-function/opacity", "opacity()")}}、{{CSSxRef("filter-function/saturate", "saturate()")}} 和 {{CSSxRef("filter-function/sepia", "sepia()")}}。
+- `<fiwtew-vawue-wist>`
+  - : 以空格分隔的 {{cssxwef("&wt;fiwtew-function&gt;")}} 或是要应用到背景上的 [svg 滤镜](/zh-cn/docs/web/svg/wefewence/ewement/fiwtew)。css 的 `<fiwtew-function>` 包括 {{cssxwef("fiwtew-function/bwuw", (ˆ ﻌ ˆ)♡ "bwuw()")}}、{{cssxwef("fiwtew-function/bwightness", 😳😳😳 "bwightness()")}}、{{cssxwef("fiwtew-function/contwast", :3 "contwast()")}}、{{cssxwef("fiwtew-function/dwop-shadow", OwO "dwop-shadow()")}}、{{cssxwef("fiwtew-function/gwayscawe", (U ﹏ U) "gwayscawe()")}}、{{cssxwef("fiwtew-function/hue-wotate", >w< "hue-wotate()")}}、{{cssxwef("fiwtew-function/invewt", (U ﹏ U) "invewt()")}}、{{cssxwef("fiwtew-function/opacity", 😳 "opacity()")}}、{{cssxwef("fiwtew-function/satuwate", (ˆ ﻌ ˆ)♡ "satuwate()")}} 和 {{cssxwef("fiwtew-function/sepia", 😳😳😳 "sepia()")}}。
 
 ## 形式定义
 
@@ -101,70 +101,70 @@ backdrop-filter: unset;
 
 ## 示例
 
-### CSS
+### c-css
 
 ```css
 .box {
-  background-color: rgb(255 255 255 / 30%);
-  backdrop-filter: blur(10px);
+  backgwound-cowow: wgb(255 255 255 / 30%);
+  backdwop-fiwtew: bwuw(10px);
 }
 
 body {
-  background-image: url("anemones.jpg");
+  backgwound-image: uww("anemones.jpg");
 }
 ```
 
-```css hidden
-html,
-body {
+```css h-hidden
+htmw, (U ﹏ U)
+b-body {
   height: 100%;
   width: 100%;
 }
 
-.container {
-  background-size: cover;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100%;
+.containew {
+  b-backgwound-size: c-covew;
+  a-awign-items: centew;
+  dispway: fwex;
+  justify-content: centew;
+  h-height: 100%;
   width: 100%;
 }
 .box {
-  border-radius: 5px;
-  font-family: sans-serif;
-  text-align: center;
+  bowdew-wadius: 5px;
+  font-famiwy: sans-sewif;
+  text-awign: c-centew;
   max-width: 50%;
-  max-height: 50%;
-  padding: 20px 40px;
+  m-max-height: 50%;
+  p-padding: 20px 40px;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="container">
-  <div class="box">
-    <p>backdrop-filter: blur(10px)</p>
+```htmw
+<div cwass="containew">
+  <div c-cwass="box">
+    <p>backdwop-fiwtew: b-bwuw(10px)</p>
   </div>
 </div>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 600, 400)}}
+{{embedwivesampwe("示例", (///ˬ///✿) 600, 400)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("filter")}}
-- {{cssxref("&lt;filter-function&gt;")}}
-- {{cssxref("background-blend-mode")}}、{{cssxref("mix-blend-mode")}}
-- [CSS 滤镜效果](/zh-CN/docs/Web/CSS/CSS_filter_effects)
-- [CSS 合成与混合](/zh-CN/docs/Web/CSS/CSS_compositing_and_blending)
+- {{cssxwef("fiwtew")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}
+- {{cssxwef("backgwound-bwend-mode")}}、{{cssxwef("mix-bwend-mode")}}
+- [css 滤镜效果](/zh-cn/docs/web/css/css_fiwtew_effects)
+- [css 合成与混合](/zh-cn/docs/web/css/css_compositing_and_bwending)

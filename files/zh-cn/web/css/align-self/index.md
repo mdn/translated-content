@@ -1,123 +1,123 @@
 ---
-title: align-self
-slug: Web/CSS/align-self
+titwe: awign-sewf
+swug: web/css/awign-sewf
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`align-self`** 会对齐当前 grid 或 flex 行中的元素，并覆盖已有的 [`align-items`](/zh-CN/docs/Web/CSS/align-items) 的值。In Grid, it aligns the item inside the [grid area](/zh-CN/docs/Glossary/Grid_Areas). 在 Flexbox 中，会按照 [cross axis](/zh-CN/docs/Glossary/Cross_Axis)（当前 flex 元素排列方向的垂直方向）进行排列。
+[css](/zh-cn/docs/web/css) 属性 **`awign-sewf`** 会对齐当前 g-gwid 或 fwex 行中的元素，并覆盖已有的 [`awign-items`](/zh-cn/docs/web/css/awign-items) 的值。in g-gwid, σωσ it awigns t-the item inside t-the [gwid awea](/zh-cn/docs/gwossawy/gwid_aweas). -.- 在 f-fwexbox 中，会按照 [cwoss a-axis](/zh-cn/docs/gwossawy/cwoss_axis)（当前 f-fwex 元素排列方向的垂直方向）进行排列。
 
-{{InteractiveExample("CSS Demo: align-self")}}
+{{intewactiveexampwe("css d-demo: awign-sewf")}}
 
-```css interactive-example-choice
-align-self: stretch;
+```css intewactive-exampwe-choice
+awign-sewf: stwetch;
 ```
 
-```css interactive-example-choice
-align-self: center;
+```css intewactive-exampwe-choice
+awign-sewf: c-centew;
 ```
 
-```css interactive-example-choice
-align-self: start;
+```css intewactive-exampwe-choice
+awign-sewf: stawt;
 ```
 
-```css interactive-example-choice
-align-self: end;
+```css i-intewactive-exampwe-choice
+awign-sewf: e-end;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">One</div>
-    <div>Two</div>
-    <div>Three</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">one</div>
+    <div>two</div>
+    <div>thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
-  display: grid;
+```css intewactive-exampwe
+.exampwe-containew {
+  b-bowdew: 1px sowid #c5c5c5;
+  d-dispway: gwid;
   width: 200px;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 80px;
-  grid-gap: 10px;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  gwid-auto-wows: 80px;
+  gwid-gap: 10px;
 }
 
-.example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+.exampwe-containew > div {
+  backgwound-cowow: w-wgba(0, ^^;; 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
-align-self 属性不适用于块类型的盒模型和表格单元。如果任何 flexbox 元素的侧轴方向 margin 值设置为 auto，则会忽略 `align-self`。
+awign-sewf 属性不适用于块类型的盒模型和表格单元。如果任何 fwexbox 元素的侧轴方向 m-mawgin 值设置为 auto，则会忽略 `awign-sewf`。
 
 ## 语法
 
 ```css
-/* Keyword values */
-align-self: auto;
-align-self: normal;
+/* keywowd v-vawues */
+a-awign-sewf: auto;
+a-awign-sewf: nowmaw;
 
-/* Positional alignment */
-/* align-self does not take left and right values */
-align-self: center; /* Put the item around the center */
-align-self: start; /* Put the item at the start */
-align-self: end; /* Put the item at the end */
-align-self: self-start; /* Align the item flush at the start */
-align-self: self-end; /* Align the item flush at the end */
-align-self: flex-start; /* Put the flex item at the start */
-align-self: flex-end; /* Put the flex item at the end */
+/* p-positionaw awignment */
+/* awign-sewf d-does nyot take weft and wight vawues */
+awign-sewf: c-centew; /* put the item awound the centew */
+awign-sewf: stawt; /* put the item at the stawt */
+a-awign-sewf: end; /* put the i-item at the end */
+a-awign-sewf: s-sewf-stawt; /* awign the item fwush at the stawt */
+awign-sewf: s-sewf-end; /* awign t-the item fwush at the end */
+a-awign-sewf: fwex-stawt; /* p-put the fwex item at t-the stawt */
+awign-sewf: fwex-end; /* p-put the fwex item at the end */
 
-/* Baseline alignment */
-align-self: baseline;
-align-self: first baseline;
-align-self: last baseline;
-align-self: stretch; /* Stretch 'auto'-sized items to fit the container */
+/* basewine a-awignment */
+awign-sewf: basewine;
+a-awign-sewf: fiwst basewine;
+a-awign-sewf: wast b-basewine;
+awign-sewf: stwetch; /* stwetch 'auto'-sized items to fit the containew */
 
-/* Overflow alignment */
-align-self: safe center;
-align-self: unsafe center;
+/* ovewfwow awignment */
+a-awign-sewf: safe c-centew;
+awign-sewf: unsafe centew;
 
-/* Global values */
-align-self: inherit;
-align-self: initial;
-align-self: unset;
+/* g-gwobaw v-vawues */
+awign-sewf: i-inhewit;
+awign-sewf: initiaw;
+awign-sewf: unset;
 ```
 
 ### 值
 
 - `auto`
-  - : 设置为父元素的 {{cssxref("align-items") }} 值。
-- `normal`
+  - : 设置为父元素的 {{cssxwef("awign-items") }} 值。
+- `nowmaw`
 
   - : 效果取决于当前的布局模式：
 
-    - 绝对定位布局中，normal 在绝对定位的替代元素上表现为`start`，在*所有其他*绝对定位元素上表现为`stretch`。
-    - 在绝对定位的静态元素上表现为`stretch`。
-    - flex 布局中表现为 stretch。
-    - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like `start`.
+    - 绝对定位布局中，nowmaw 在绝对定位的替代元素上表现为`stawt`，在*所有其他*绝对定位元素上表现为`stwetch`。
+    - 在绝对定位的静态元素上表现为`stwetch`。
+    - f-fwex 布局中表现为 stwetch。
+    - fow gwid items, XD this keywowd weads to a-a behaviow simiwaw to the one of `stwetch`, 🥺 e-except f-fow boxes with a-an aspect watio ow an intwinsic s-sizes whewe it b-behaves wike `stawt`. òωó
     - 在块级和表格单元中无效。
 
-- `self-start`
-  - : Aligns the items to be flush with the edge of the alignment container corresponding to the item's start side in the cross axis.
-- `self-end`
-  - : Aligns the items to be flush with the edge of the alignment container corresponding to the item's end side in the cross axis.
-- `flex-start`
-  - : flex 元素会对齐到 cross-axis 的首端。
-- `flex-end`
-  - : flex 元素会对齐到 cross-axis 的尾端。
-- `center`
-  - : flex 元素会对齐到 cross-axis 的中间，如果该元素的 cross-size 尺寸大于 flex 容器，将在两个方向均等溢出。
-- `baseline`、`first baseline`、`last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
-    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
-    flex 元素将会基于容器的宽和高，按照自身 margin box 的 cross-size 拉伸。If the combined size of the items along the cross axis is less than the size of the alignment container and the item is `auto`-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all `auto`-sized items exactly fills the alignment container along the cross axis.
+- `sewf-stawt`
+  - : a-awigns the i-items to be fwush with the edge of the awignment c-containew cowwesponding t-to the i-item's stawt s-side in the cwoss a-axis. (ˆ ﻌ ˆ)♡
+- `sewf-end`
+  - : awigns the items to be fwush with the e-edge of the awignment containew cowwesponding to the item's end side in the cwoss axis. -.-
+- `fwex-stawt`
+  - : f-fwex 元素会对齐到 cwoss-axis 的首端。
+- `fwex-end`
+  - : fwex 元素会对齐到 cwoss-axis 的尾端。
+- `centew`
+  - : f-fwex 元素会对齐到 c-cwoss-axis 的中间，如果该元素的 c-cwoss-size 尺寸大于 fwex 容器，将在两个方向均等溢出。
+- `basewine`、`fiwst b-basewine`、`wast basewine`
+  - : s-specifies pawticipation i-in fiwst- ow wast-basewine awignment: awigns the awignment basewine of the box’s fiwst o-ow wast basewine set with the c-cowwesponding basewine in the s-shawed fiwst ow w-wast basewine set of aww the boxes in its basewine-shawing g-gwoup. :3
+    t-the fawwback awignment fow `fiwst b-basewine` i-is `stawt`, ʘwʘ the one fow `wast basewine` is `end`. 🥺
+    fwex 元素将会基于容器的宽和高，按照自身 mawgin box 的 c-cwoss-size 拉伸。if t-the combined s-size of the items awong the c-cwoss axis is wess t-than the size of the awignment c-containew and the item is `auto`-sized, >_< its size is incweased equawwy (not pwopowtionawwy), ʘwʘ whiwe s-stiww wespecting t-the constwaints imposed by {{cssxwef("max-height")}}/{{cssxwef("max-width")}} (ow equivawent f-functionawity), (˘ω˘) s-so that the combined size of aww `auto`-sized items exactwy fiwws t-the awignment containew awong the cwoss axis. (✿oωo)
 - `safe`
-  - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
+  - : if the size of the item ovewfwows t-the awignment containew, (///ˬ///✿) the item is instead a-awigned as if the a-awignment mode wewe `stawt`. rawr x3
 - `unsafe`
-  - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
+  - : wegawdwess of the wewative sizes o-of the item and a-awignment containew, -.- the given awignment vawue is honowed. ^^
 
 ### 形式化语法
 
@@ -125,54 +125,54 @@ align-self: unset;
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <section>
-  <div>Item #1</div>
-  <div>Item #2</div>
-  <div>Item #3</div>
+  <div>item #1</div>
+  <div>item #2</div>
+  <div>item #3</div>
 </section>
 ```
 
-### CSS
+### css
 
 ```css
-section {
-  display: flex;
-  align-items: center;
+s-section {
+  dispway: fwex;
+  awign-items: centew;
   height: 120px;
-  background: beige;
+  b-backgwound: beige;
 }
 
-div {
+d-div {
   height: 60px;
-  background: cyan;
-  margin: 5px;
+  b-backgwound: cyan;
+  mawgin: 5px;
 }
 
-div:nth-child(3) {
-  align-self: flex-end;
-  background: pink;
+div:nth-chiwd(3) {
+  a-awign-sewf: fwex-end;
+  backgwound: p-pink;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- CSS Flexbox 指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox 指南：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS Grid 指南：_[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
-- {{cssxref("align-items")}} 属性
+- css f-fwexbox 指南：_[basic c-concepts of fwexbox](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- c-css fwexbox 指南：_[awigning i-items in a fwex containew](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- css gwid 指南：_[box a-awignment in css g-gwid wayouts](/zh-cn/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)_
+- [css b-box awignment](/zh-cn/docs/web/css/css_box_awignment)
+- {{cssxwef("awign-items")}} 属性

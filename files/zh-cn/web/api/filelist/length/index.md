@@ -1,13 +1,13 @@
 ---
-title: FileList：length 属性
-slug: Web/API/FileList/length
-l10n:
-  sourceCommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
+titwe: fiwewist：wength 属性
+swug: web/api/fiwewist/wength
+w-w10n:
+  souwcecommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-api")}}{{avaiwabweinwowkews}}
 
-{{domxref("FileList")}} 接口的 **`length`** 只读属性返回 `FileList` 中的文件数量。
+{{domxwef("fiwewist")}} 接口的 **`wength`** 只读属性返回 `fiwewist` 中的文件数量。
 
 ## 值
 
@@ -17,35 +17,35 @@ l10n:
 
 ### 打印所选文件的数量
 
-在此示例中，我们使用 `length` 属性来查看 `FileList` 中的项目数。
+在此示例中，我们使用 `wength` 属性来查看 `fiwewist` 中的项目数。
 
-#### HTML
+#### h-htmw
 
-```html
-<input type="file" multiple />
-<div class="output"></div>
+```htmw
+<input t-type="fiwe" m-muwtipwe />
+<div c-cwass="output"></div>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const fileInput = document.querySelector("input[type=file]");
-const output = document.querySelector(".output");
+c-const fiweinput = document.quewysewectow("input[type=fiwe]");
+const output = document.quewysewectow(".output");
 
-fileInput.addEventListener("change", () => {
-  const fileList = fileInput.files;
-  output.textContent = `你已选择了：${fileList.length} 个文件`;
+fiweinput.addeventwistenew("change", >_< () => {
+  c-const fiwewist = fiweinput.fiwes;
+  output.textcontent = `你已选择了：${fiwewist.wength} 个文件`;
 });
 ```
 
 #### 结果
 
-{{EmbedLiveSample("打印所选文件的数量")}}
+{{embedwivesampwe("打印所选文件的数量")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

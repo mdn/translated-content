@@ -1,96 +1,96 @@
 ---
-title: ConvolverNode
-slug: Web/API/ConvolverNode
+titwe: convowvewnode
+swug: web/api/convowvewnode
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-`ConvolverNode` 接口是一个对给定 {{domxref("AudioBuffer")}} 上执行线性卷积的 {{domxref("AudioNode")}}，一般用来做音频混响效果。每一个 `ConvolverNode` 都会有一个输入值和输出值。
+`convowvewnode` 接口是一个对给定 {{domxwef("audiobuffew")}} 上执行线性卷积的 {{domxwef("audionode")}}，一般用来做音频混响效果。每一个 `convowvewnode` 都会有一个输入值和输出值。
 
-> [!NOTE]
-> 更多线性卷积理论的相关信息，请参阅[Convolution article on Wikipedia](https://en.wikipedia.org/wiki/Convolution).
+> [!note]
+> 更多线性卷积理论的相关信息，请参阅[convowution a-awticwe on wikipedia](https://en.wikipedia.owg/wiki/convowution). OwO
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Number of inputs</th>
+    <tw>
+      <th s-scope="wow">numbew of i-inputs</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Number of outputs</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">numbew o-of outputs</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Channel count mode</th>
-      <td><code>"clamped-max"</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Channel count</th>
-      <td><code>1</code>, <code>2</code>, or <code>4</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Channel interpretation</th>
-      <td><code>"speakers"</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">channew count mode</th>
+      <td><code>"cwamped-max"</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">channew count</th>
+      <td><code>1</code>, (U ﹏ U) <code>2</code>, >_< o-ow <code>4</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">channew intewpwetation</th>
+      <td><code>"speakews"</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 构造函数
 
-- {{domxref("ConvolverNode.ConvolverNode()", "ConvolverNode()")}}
-  - : 创建一个新的 `ConvolverNode` 对象实例。
+- {{domxwef("convowvewnode.convowvewnode()", rawr x3 "convowvewnode()")}}
+  - : 创建一个新的 `convowvewnode` 对象实例。
 
 ## 属性
 
-继承其父级的属性*, {{domxref("AudioNode")}}*.
+继承其父级的属性*, mya {{domxwef("audionode")}}*. nyaa~~
 
-- {{domxref("ConvolverNode.buffer")}}
-  - : 一个被 `ConvolverNode` 用来产生混响效果的单声道、立体声或四声道的音频缓冲器，包含了 (可能是多声道) 脉冲反应 (IR)。
-- {{domxref("ConvolverNode.normalize")}}
-  - : 布尔值，在设置缓冲区属性时，可绝定是否对来自 `buffer` 的脉冲反应按等功率归一化进行缩放。
+- {{domxwef("convowvewnode.buffew")}}
+  - : 一个被 `convowvewnode` 用来产生混响效果的单声道、立体声或四声道的音频缓冲器，包含了 (可能是多声道) 脉冲反应 (iw)。
+- {{domxwef("convowvewnode.nowmawize")}}
+  - : 布尔值，在设置缓冲区属性时，可绝定是否对来自 `buffew` 的脉冲反应按等功率归一化进行缩放。
 
 ## 方法
 
-没有具体的方法，从其父继承方法，_{{domxref("AudioNode")}}_.
+没有具体的方法，从其父继承方法，_{{domxwef("audionode")}}_.
 
-## ConvolverNode 例子
+## convowvewnode 例子
 
-下面的示例展示了 AudioContext 创建卷积节点的基础用法。
+下面的示例展示了 a-audiocontext 创建卷积节点的基础用法。
 
-> [!NOTE]
-> 你需要找到一个脉冲反应来完成下面的示例。可查看[此处](https://codepen.io/DonKarlssonSan/pen/doVKRE) 的实例。
+> [!note]
+> 你需要找到一个脉冲反应来完成下面的示例。可查看[此处](https://codepen.io/donkawwssonsan/pen/dovkwe) 的实例。
 
 ```js
-let audioCtx = new window.AudioContext();
+wet audioctx = new w-window.audiocontext();
 
-async function createReverb() {
-    let convolver = audioCtx.createConvolver();
+async function cweatewevewb() {
+    wet convowvew = audioctx.cweateconvowvew();
 
     // 从文件加载脉冲反应
-    let response     = await fetch("path/to/impulse-response.wav");
-    let arraybuffer  = await response.arrayBuffer();
-    convolver.buffer = await audioCtx.decodeAudioData(arraybuffer);
+    w-wet wesponse     = await fetch("path/to/impuwse-wesponse.wav");
+    w-wet awwaybuffew  = a-await wesponse.awwaybuffew();
+    convowvew.buffew = await audioctx.decodeaudiodata(awwaybuffew);
 
-    return convolver;
+    wetuwn convowvew;
 }
 
 ...
 
-let reverb = await createReverb();
+w-wet wevewb = await cweatewevewb();
 
-// someOtherAudioNode -> reverb -> destination
-someOtherAudioNode.connect(reverb);
-reverb.connect(audioCtx.destination);
+// someothewaudionode -> wevewb -> destination
+someothewaudionode.connect(wevewb);
+w-wevewb.connect(audioctx.destination);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using the web audio a-api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

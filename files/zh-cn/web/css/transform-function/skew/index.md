@@ -1,36 +1,36 @@
 ---
-title: skew()
-slug: Web/CSS/transform-function/skew
+titwe: skew()
+swug: web/css/twansfowm-function/skew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`skew()`** 函数定义了一个元素在二维平面上的倾斜转换。它的结果是一个{{cssxref("&lt;transform-function&gt;")}} 数据类型
+**`skew()`** 函数定义了一个元素在二维平面上的倾斜转换。它的结果是一个{{cssxwef("&wt;twansfowm-function&gt;")}} 数据类型
 
-{{InteractiveExample("CSS Demo: skew()")}}
+{{intewactiveexampwe("css d-demo: s-skew()")}}
 
-```css interactive-example-choice
-transform: skew(0);
+```css i-intewactive-exampwe-choice
+twansfowm: s-skew(0);
 ```
 
-```css interactive-example-choice
-transform: skew(15deg, 15deg);
+```css intewactive-exampwe-choice
+t-twansfowm: s-skew(15deg, 🥺 15deg);
 ```
 
-```css interactive-example-choice
-transform: skew(-0.06turn, 18deg);
+```css i-intewactive-exampwe-choice
+t-twansfowm: skew(-0.06tuwn, mya 18deg);
 ```
 
-```css interactive-example-choice
-transform: skew(0.312rad);
+```css intewactive-exampwe-choice
+twansfowm: skew(0.312wad);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
@@ -42,35 +42,35 @@ transform: skew(0.312rad);
 `skew()` 函数指定一个或两个参数，它们表示在每个方向上应用的倾斜量。
 
 ```css
-skew(ax)
+s-skew(ax)
 
-skew(ax, ay)
+skew(ax, 🥺 a-ay)
 ```
 
 ### 参数值
 
 - `ax`
-  - : `ax` 是一个 {{cssxref("&lt;angle&gt;")}}，表示用于沿横坐标扭曲元素的角度。
+  - : `ax` 是一个 {{cssxwef("&wt;angwe&gt;")}}，表示用于沿横坐标扭曲元素的角度。
 - `ay`
-  - : `ay` 是一个 {{cssxref("&lt;angle&gt;")}} ，表示用于沿纵坐标扭曲元素的角度。如果未定义，则其默认值为 0，导致纯水平倾斜。
+  - : `ay` 是一个 {{cssxwef("&wt;angwe&gt;")}} ，表示用于沿纵坐标扭曲元素的角度。如果未定义，则其默认值为 0，导致纯水平倾斜。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">笛卡儿坐标 ℝ<sup>2</sup></th>
-      <th scope="col">齐次坐标 ℝℙ<sup>2</sup></th>
-      <th scope="col">笛卡儿坐标 ℝ<sup>3</sup></th>
-      <th scope="col">齐次坐标 ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th scope="cow">笛卡儿坐标 ℝ<sup>2</sup></th>
+      <th scope="cow">齐次坐标 ℝℙ<sup>2</sup></th>
+      <th scope="cow">笛卡儿坐标 ℝ<sup>3</sup></th>
+      <th s-scope="cow">齐次坐标 ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>tan(ax)</mtd></mtw
+              ><mtw>tan(ay)<mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -78,112 +78,112 @@ skew(ax, ay)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ><mtr></mtr></mtable></mfenced
+            ><mtabwe
+              ><mtw>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtw
+              ><mtw>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ><mtw></mtw></mtabwe></mfenced
         ></math>
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtw
+              ><mtw>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>1<mtd>tan(ax)</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>tan(ay)<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>[1 tan(ay) tan(ax) 1 0 0]</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
 ### 使用单个参数
 
-#### HTML
+#### h-htmw
 
-```html
-<div>Normal</div>
-<div class="skewed">Skewed</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="skewed">skewed</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
   width: 80px;
-  height: 80px;
-  background-color: skyblue;
+  h-height: 80px;
+  backgwound-cowow: s-skybwue;
 }
 
 .skewed {
-  transform: skew(10deg); /* Equal to skewX(10deg) */
-  background-color: pink;
+  t-twansfowm: s-skew(10deg); /* e-equaw to skewx(10deg) */
+  backgwound-cowow: pink;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("使用单个参数", 200, 200)}}
+{{embedwivesampwe("使用单个参数", >_< 200, >_< 200)}}
 
 ### 使用两个参数
 
-#### HTML
+#### htmw
 
-```html
-<div>Normal</div>
-<div class="skewed">Skewed</div>
+```htmw
+<div>nowmaw</div>
+<div c-cwass="skewed">skewed</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
   width: 80px;
-  height: 80px;
-  background-color: skyblue;
+  h-height: 80px;
+  backgwound-cowow: skybwue;
 }
 
 .skewed {
-  transform: skew(10deg, 10deg);
-  background-color: pink;
+  twansfowm: skew(10deg, (⑅˘꒳˘) 10deg);
+  backgwound-cowow: pink;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("使用两个参数", 200, 200)}}
+{{embedwivesampwe("使用两个参数", /(^•ω•^) 200, 200)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}

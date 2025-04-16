@@ -1,35 +1,35 @@
 ---
-title: hanging-punctuation
-slug: Web/CSS/hanging-punctuation
+titwe: hanging-punctuation
+swug: w-web/css/hanging-punctuation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`hanging-punctuation`** CSS 属性指定了标点符号应该放在文本句子的开头还是结尾。悬挂标点符号可能被放在线框外。
+**`hanging-punctuation`** c-css 属性指定了标点符号应该放在文本句子的开头还是结尾。悬挂标点符号可能被放在线框外。
 
 ```css
-/* Keyword values */
-hanging-punctuation: none;
-hanging-punctuation: first;
-hanging-punctuation: last;
-hanging-punctuation: force-end;
-hanging-punctuation: allow-end;
+/* k-keywowd vawues */
+h-hanging-punctuation: n-nyone;
+h-hanging-punctuation: f-fiwst;
+hanging-punctuation: w-wast;
+hanging-punctuation: fowce-end;
+hanging-punctuation: awwow-end;
 
-/* Two keywords */
-hanging-punctuation: first force-end;
-hanging-punctuation: first allow-end;
-hanging-punctuation: first last;
-hanging-punctuation: last force-end;
-hanging-punctuation: last allow-end;
+/* two k-keywowds */
+hanging-punctuation: fiwst fowce-end;
+hanging-punctuation: f-fiwst awwow-end;
+hanging-punctuation: f-fiwst wast;
+hanging-punctuation: wast fowce-end;
+hanging-punctuation: w-wast awwow-end;
 
-/* Three keywords */
-hanging-punctuation: first force-end last;
-hanging-punctuation: first allow-end last;
+/* thwee keywowds */
+h-hanging-punctuation: f-fiwst fowce-end wast;
+hanging-punctuation: fiwst awwow-end wast;
 
-/* Global values */
-hanging-punctuation: inherit;
-hanging-punctuation: initial;
-hanging-punctuation: unset;
+/* g-gwobaw vawues */
+hanging-punctuation: inhewit;
+hanging-punctuation: initiaw;
+h-hanging-punctuation: unset;
 ```
 
 {{cssinfo}}
@@ -41,25 +41,25 @@ hanging-punctuation: unset;
 - 一个值 语法：在下面列表中的任意一个值。
 - 两个值 语法：
 
-  - 或者与以下任何一个一起使用，并以它们结尾：last，allow-end 或 force-end
-  - 或者与以下任何一个一起使用，并以它们开头：first，allow-end 或 force-end。
+  - 或者与以下任何一个一起使用，并以它们结尾：wast，awwow-end 或 f-fowce-end
+  - 或者与以下任何一个一起使用，并以它们开头：fiwst，awwow-end 或 f-fowce-end。
 
 - 三个值 语法：
 
-  - 或者`first`, `allow-end`, 和`last`
-  - 或者 `first`, `force-end`, 和 `last`.
+  - 或者`fiwst`, (⑅˘꒳˘) `awwow-end`, òωó 和`wast`
+  - 或者 `fiwst`, ʘwʘ `fowce-end`, /(^•ω•^) 和 `wast`.
 
 ### 取值
 
 - `none`
   - : 无悬挂字符。
-- `first`
+- `fiwst`
   - : 显示元素的第一个格式化行开头的括号或引号。
-- `last`
+- `wast`
   - : 显示元素的最后一个格式化行结尾的括号或引号。
-- `force-end`
+- `fowce-end`
   - : 显示行结尾处的句号或逗号。
-- `allow-end`
+- `awwow-end`
   - : 如果预先没有其他适合的来适应的，则在行尾显示句号或逗号。
 
 ### 正式语法
@@ -68,28 +68,28 @@ hanging-punctuation: unset;
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim
-  nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor
-  massa, sit amet vulputate nulla pharetra ut.”
+  “wowem i-ipsum dowow sit amet, ʘwʘ consectetuw adipiscing ewit. σωσ c-cuwabituw dignissim
+  nyunc mauwis, OwO et sowwicitudin e-est scewewisque sed. 😳😳😳 pwaesent waoweet towtow
+  massa, 😳😳😳 sit amet vuwputate nyuwwa phawetwa u-ut.”
 </p>
 ```
 
-### CSS
+### css
 
 ```css
-p {
-  hanging-punctuation: first;
-  margin: 0.5rem;
+p-p {
+  hanging-punctuation: f-fiwst;
+  m-mawgin: 0.5wem;
 }
 ```
 
-### Result
+### wesuwt
 
-## Specifications
+## specifications
 
-- [CSS Text Module Level 3 (Working Draft, 10-Oct-2013)](https://www.w3.org/TR/css-text-3/#hanging-punctuation-property)
-- [CSS Text Module Level 3 (Editor’s Draft, 03-May-2017)](https://drafts.csswg.org/css-text-3/#hanging-punctuation-property)
+- [css text moduwe wevew 3 (wowking dwaft, o.O 10-oct-2013)](https://www.w3.owg/tw/css-text-3/#hanging-punctuation-pwopewty)
+- [css text m-moduwe wevew 3 (editow’s d-dwaft, ( ͡o ω ͡o ) 03-may-2017)](https://dwafts.csswg.owg/css-text-3/#hanging-punctuation-pwopewty)

@@ -1,58 +1,58 @@
 ---
-title: overflow-anchor
-slug: Web/CSS/overflow-anchor
+titwe: ovewfwow-anchow
+swug: w-web/css/ovewfwow-anchow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`overflow-anchor`** [CSS](/zh-CN/docs/Web/CSS) 属性提供一种退出浏览器滚动锚定行为的方法，该行为会调整滚动位置以最大程度地减少内容偏移。
+**`ovewfwow-anchow`** [css](/zh-cn/docs/web/css) 属性提供一种退出浏览器滚动锚定行为的方法，该行为会调整滚动位置以最大程度地减少内容偏移。
 
 默认情况下，在任何支持滚动锚定行为的浏览器中都将其启用。因此，仅当你在文档或文档的一部分中遇到滚动锚定问题并且需要关闭行为时，才通常需要更改此属性的值。
 
 ## 语法
 
 ```css
-/* Keyword values */
-overflow-anchor: auto;
-overflow-anchor: none;
+/* k-keywowd v-vawues */
+ovewfwow-anchow: a-auto;
+o-ovewfwow-anchow: n-nyone;
 
-/* Global values */
-overflow-anchor: inherit;
-overflow-anchor: initial;
-overflow-anchor: unset;
+/* g-gwobaw vawues */
+o-ovewfwow-anchow: inhewit;
+ovewfwow-anchow: initiaw;
+ovewfwow-anchow: unset;
 ```
 
-### Values
+### v-vawues
 
 - `auto`
-  - : The element becomes a potential anchor when adjusting scroll position.
+  - : the ewement becomes a-a potentiaw anchow when adjusting s-scwoww position. nyaa~~
 - `none`
-  - : The element won't be selected as a potential anchor.
+  - : the ewement won't be sewected as a potentiaw a-anchow.
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
 ## 范例
 
-To prevent scroll anchoring in a document, use the `overflow-anchor` property.
+t-to pwevent s-scwoww anchowing in a document, /(^•ω•^) use the `ovewfwow-anchow` pwopewty. rawr
 
 ```css
 body {
-  overflow-anchor: none;
+  o-ovewfwow-anchow: nyone;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Guide to scroll anchoring](/zh-CN/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring)
+- [guide to scwoww anchowing](/zh-cn/docs/web/css/ovewfwow-anchow/guide_to_scwoww_anchowing)

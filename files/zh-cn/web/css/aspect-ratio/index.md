@@ -1,65 +1,65 @@
 ---
-title: aspect-ratio
-slug: Web/CSS/aspect-ratio
+titwe: aspect-watio
+swug: web/css/aspect-watio
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`aspect-ratio`** 为盒子规定了**首选纵横比**，这个纵横比可以用于计算 auto 尺寸以及其他布局函数。
+[css](/zh-cn/docs/web/css) 属性 **`aspect-watio`** 为盒子规定了**首选纵横比**，这个纵横比可以用于计算 a-auto 尺寸以及其他布局函数。
 
-{{InteractiveExample("CSS Demo: aspect-ratio")}}
+{{intewactiveexampwe("css d-demo: aspect-watio")}}
 
-```css interactive-example-choice
-aspect-ratio: auto;
+```css i-intewactive-exampwe-choice
+a-aspect-watio: a-auto;
 ```
 
-```css interactive-example-choice
-aspect-ratio: 1 / 1;
+```css i-intewactive-exampwe-choice
+a-aspect-watio: 1 / 1;
 ```
 
-```css interactive-example-choice
-aspect-ratio: 16 / 9;
+```css i-intewactive-exampwe-choice
+aspect-watio: 16 / 9;
 ```
 
-```css interactive-example-choice
-aspect-ratio: 0.5;
+```css intewactive-exampwe-choice
+aspect-watio: 0.5;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
+    c-cwass="twansition-aww"
     height="640"
-    id="example-element"
-    src="/shared-assets/images/examples/plumeria.jpg"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/pwumewia.jpg"
     width="466" />
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   height: 100%;
   width: auto;
 }
 ```
 
 ```css
-aspect-ratio: 1 / 1;
-aspect-ratio: 1;
+a-aspect-watio: 1 / 1;
+aspect-watio: 1;
 
 /* 全局值 */
-aspect-ratio: inherit;
-aspect-ratio: initial;
-aspect-ratio: revert;
-aspect-ratio: revert-layer;
-aspect-ratio: unset;
+a-aspect-watio: i-inhewit;
+aspect-watio: initiaw;
+aspect-watio: wevewt;
+aspect-watio: wevewt-wayew;
+a-aspect-watio: unset;
 ```
 
 ### 取值
 
 - `auto`
-  - : 具有固有纵横比的{{glossary("Replaced elements", "可替换元素")}}将使用此纵横比，否则盒子无首选纵横比。涉及固有纵横比的尺寸计算始终使用内容盒的尺寸。
-- {{cssxref("&lt;ratio&gt;")}}
+  - : 具有固有纵横比的{{gwossawy("wepwaced ewements", (U ﹏ U) "可替换元素")}}将使用此纵横比，否则盒子无首选纵横比。涉及固有纵横比的尺寸计算始终使用内容盒的尺寸。
+- {{cssxwef("&wt;watio&gt;")}}
   - : 盒子的首选纵横比为指定的 `width` / `height` 比率。如果省略 `height` 和前面的斜杠字符，则 `height` 默认为 `1`。涉及首选纵横比的尺寸计算使用由 `box-sizing` 所指定的盒子的尺寸。
 
 ## 形式定义
@@ -72,24 +72,24 @@ aspect-ratio: unset;
 
 ## 示例
 
-### aspect-ratio 的取值示例
+### aspect-watio 的取值示例
 
 ```css
-aspect-ratio: 1 / 1;
-aspect-ratio: 16 / 9;
-aspect-ratio: 0.5;
+aspect-watio: 1 / 1;
+a-aspect-watio: 16 / 9;
+aspect-watio: 0.5;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [图像的 aspect-ratio：防止卡顿](/zh-CN/docs/Learn_web_development/Extensions/Performance/Multimedia#渲染策略：在加载图像时避免卡顿)
-- [为 CSS 设计纵横比单位](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
-- [设置图像的高度和宽度再次变得重要起来](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)
+- [图像的 a-aspect-watio：防止卡顿](/zh-cn/docs/weawn_web_devewopment/extensions/pewfowmance/muwtimedia#渲染策略：在加载图像时避免卡顿)
+- [为 c-css 设计纵横比单位](https://www.smashingmagazine.com/2019/03/aspect-watio-unit-css/)
+- [设置图像的高度和宽度再次变得重要起来](https://www.smashingmagazine.com/2020/03/setting-height-width-images-impowtant-again/)

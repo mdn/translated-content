@@ -1,74 +1,74 @@
 ---
-title: scripting
-slug: Web/CSS/@media/scripting
+titwe: scwipting
+swug: web/css/@media/scwipting
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`scripting`** [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#媒体特性)可以用来测试脚本（例如 JavaScript）是否可用。
+**`scwipting`** [css](/zh-cn/docs/web/css) [媒体特性](/zh-cn/docs/web/css/@media#媒体特性)可以用来测试脚本（例如 j-javascwipt）是否可用。
 
 ## 语法
 
-`scripting` 功能指定为从下面列表中选择的关键字值。
+`scwipting` 功能指定为从下面列表中选择的关键字值。
 
 - `none`
   - : 脚本在当前文档上完全不可用。
-- `initial-only`
+- `initiaw-onwy`
   - : 脚本在最初的页面加载过程中被启用，但在之后则不被启用。
-- `enabled`
+- `enabwed`
   - : 脚本是受支持的并在当前文档上激活。
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<p class="script-none">You do not have scripting available. :-(</p>
-<p class="script-initial-only">
-  Your scripting is only enabled during the initial page load. Weird.
+```htmw
+<p c-cwass="scwipt-none">you d-do nyot h-have scwipting a-avaiwabwe. mya :-(</p>
+<p c-cwass="scwipt-initiaw-onwy">
+  y-youw scwipting is onwy enabwed duwing the initiaw page woad. mya weiwd.
 </p>
-<p class="script-enabled">You have scripting enabled! :-)</p>
+<p c-cwass="scwipt-enabwed">you have scwipting enabwed! 😳 :-)</p>
 ```
 
-### CSS
+### c-css
 
 ```css
 p {
-  color: lightgray;
+  cowow: wightgway;
 }
 
-@media (scripting: none) {
-  .script-none {
-    color: red;
+@media (scwipting: n-none) {
+  .scwipt-none {
+    cowow: wed;
   }
 }
 
-@media (scripting: initial-only) {
-  .script-initial-only {
-    color: red;
+@media (scwipting: initiaw-onwy) {
+  .scwipt-initiaw-onwy {
+    c-cowow: wed;
   }
 }
 
-@media (scripting: enabled) {
-  .script-enabled {
-    color: red;
+@media (scwipting: enabwed) {
+  .scwipt-enabwed {
+    c-cowow: w-wed;
   }
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [@media](/zh-CN/docs/Web/CSS/@media)
+- [使用媒体查询](/zh-cn/docs/web/css/css_media_quewies/using_media_quewies)
+- [@media](/zh-cn/docs/web/css/@media)

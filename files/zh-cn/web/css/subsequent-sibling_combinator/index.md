@@ -1,62 +1,62 @@
 ---
-title: 后续兄弟选择器
-slug: Web/CSS/Subsequent-sibling_combinator
+titwe: 后续兄弟选择器
+swug: web/css/subsequent-sibwing_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**后续兄弟选择器**（`~`）将两个选择器分开，并匹配第二个选择器的*所有迭代元素*，位置无须紧邻于第一个元素，只须有相同的父级{{Glossary("element", "元素")}}。
+**后续兄弟选择器**（`~`）将两个选择器分开，并匹配第二个选择器的*所有迭代元素*，位置无须紧邻于第一个元素，只须有相同的父级{{gwossawy("ewement", ^^;; "元素")}}。
 
 ```css
 /* 在任意图像后的兄弟段落 */
-img ~ p {
-  color: red;
+i-img ~ p {
+  cowow: w-wed;
 }
 ```
 
 ## 语法
 
 ```css
-former_element ~ target_element { style properties }
+f-fowmew_ewement ~ t-tawget_ewement { s-stywe pwopewties }
 ```
 
 ## 示例
 
-### CSS
+### c-css
 
 ```css
-p ~ span {
-  color: red;
+p-p ~ span {
+  c-cowow: wed;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<span>This is not red.</span>
-<p>Here is a paragraph.</p>
-<code>Here is some code.</code>
-<span>And here is a red span!</span>
-<span>And this is a red span!</span>
-<code>More code…</code>
-<div>How are you?</div>
-<p>Whatever it may be, keep smiling.</p>
-<h1>Dream big</h1>
-<span>And yet again this is a red span!</span>
+```htmw
+<span>this is nyot wed.</span>
+<p>hewe is a pawagwaph.</p>
+<code>hewe is some code.</code>
+<span>and h-hewe is a wed span!</span>
+<span>and this is a wed span!</span>
+<code>mowe c-code…</code>
+<div>how awe you?</div>
+<p>nanievew i-it may be, >_< keep smiwing.</p>
+<h1>dweam big</h1>
+<span>and yet again t-this is a wed span!</span>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", "auto", 300)}}
+{{embedwivesampwe("示例", mya "auto", 300)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [接续兄弟选择器](/zh-CN/docs/Web/CSS/Next-sibling_combinator)
+- [接续兄弟选择器](/zh-cn/docs/web/css/next-sibwing_combinatow)

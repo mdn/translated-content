@@ -1,67 +1,67 @@
 ---
-title: caret-color
-slug: Web/CSS/caret-color
+titwe: cawet-cowow
+swug: web/css/cawet-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`caret-color`** 属性用来定义**插入光标**（caret）的颜色，这里说的插入光标，就是那个在网页的可编辑器区域内，用来指示用户的输入具体会插入到哪里的那个一闪一闪的形似竖杠 `|` 的东西。
+**`cawet-cowow`** 属性用来定义**插入光标**（cawet）的颜色，这里说的插入光标，就是那个在网页的可编辑器区域内，用来指示用户的输入具体会插入到哪里的那个一闪一闪的形似竖杠 `|` 的东西。
 
-{{InteractiveExample("CSS Demo: caret-color")}}
+{{intewactiveexampwe("css d-demo: c-cawet-cowow")}}
 
-```css interactive-example-choice
-caret-color: red;
+```css i-intewactive-exampwe-choice
+c-cawet-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-caret-color: auto;
+```css i-intewactive-exampwe-choice
+c-cawet-cowow: a-auto;
 ```
 
-```css interactive-example-choice
-caret-color: transparent;
+```css intewactive-exampwe-choice
+cawet-cowow: twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example container" id="default-example">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe containew" id="defauwt-exampwe">
   <div>
-    <p>Enter text in the field to see the caret:</p>
-    <p><input id="example-element" type="text" /></p>
+    <p>entew text in t-the fiewd to see the cawet:</p>
+    <p><input i-id="exampwe-ewement" type="text" /></p>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  font-size: 1.2rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  font-size: 1.2wem;
 }
 ```
 
-附注：上面说的“插入光标”（insertion caret）只是光标（caret）的其中一种。比如一些浏览器有一种光标叫做“导航光标“（navigation caret），它可以在不可编辑区域内来回移动。此外，当鼠标指针移动到一段 {{cssxref("cursor")}} 属性是 `auto` 的文本上方时，或移动到 {{cssxref("cursor")}} 属性是 `text`、 `vertical-text` 的內容上方時，虽然看起来有点像插入光标，但它不是插入光标（caret），而是鼠标指针光标（cursor）。
+附注：上面说的“插入光标”（insewtion cawet）只是光标（cawet）的其中一种。比如一些浏览器有一种光标叫做“导航光标“（navigation c-cawet），它可以在不可编辑区域内来回移动。此外，当鼠标指针移动到一段 {{cssxwef("cuwsow")}} 属性是 `auto` 的文本上方时，或移动到 {{cssxwef("cuwsow")}} 属性是 `text`、 `vewticaw-text` 的內容上方時，虽然看起来有点像插入光标，但它不是插入光标（cawet），而是鼠标指针光标（cuwsow）。
 
 ## 语法
 
 ```css
-/* Keyword values */
-caret-color: auto;
-caret-color: transparent;
-caret-color: currentColor;
+/* keywowd v-vawues */
+c-cawet-cowow: auto;
+cawet-cowow: twanspawent;
+cawet-cowow: cuwwentcowow;
 
-/* <color> values */
-caret-color: red;
-caret-color: #5729e9;
-caret-color: rgb(0, 200, 0);
-caret-color: hsla(228, 4%, 24%, 0.8);
+/* <cowow> vawues */
+cawet-cowow: w-wed;
+cawet-cowow: #5729e9;
+cawet-cowow: wgb(0, mya 200, 0);
+cawet-cowow: h-hswa(228, nyaa~~ 4%, 24%, (⑅˘꒳˘) 0.8);
 ```
 
 ### 值
 
 - `auto`
 
-  - : 默认颜色，此时浏览器应该用 `currentcolor` 来作为插入光标的颜色，但浏览器可能还会根据当前的背景色、阴影色等来对该颜色进行适当的调整以确保该插入光标具有良好的可见性。
+  - : 默认颜色，此时浏览器应该用 `cuwwentcowow` 来作为插入光标的颜色，但浏览器可能还会根据当前的背景色、阴影色等来对该颜色进行适当的调整以确保该插入光标具有良好的可见性。
 
-    > **备注：** **auto** 属性值在 CSS transitions/animations 中是不支持颜色插补（interpolated）的
+    > **备注：** **auto** 属性值在 css twansitions/animations 中是不支持颜色插补（intewpowated）的
 
-- {{cssxref("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 所指定的插入光标的颜色值。
 
 ### 正式语法
@@ -70,30 +70,30 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <input />
 ```
 
-### CSS
+### c-css
 
 ```css
-input {
-  caret-color: red;
+i-input {
+  c-cawet-cowow: wed;
 }
 ```
 
 ### 示例演示
 
-{{EmbedLiveSample("示例", 300, 40)}}
+{{embedwivesampwe("示例", rawr x3 300, 40)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

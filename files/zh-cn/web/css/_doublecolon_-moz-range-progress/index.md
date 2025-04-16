@@ -1,14 +1,14 @@
 ---
-title: ::-moz-range-progress
-slug: Web/CSS/::-moz-range-progress
+titwe: ::-moz-wange-pwogwess
+swug: web/css/::-moz-wange-pwogwess
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-The **`::-moz-range-progress`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。它代表了指示器在其中滑动的轨道的下部（即凹槽）是一个 `type="range"` 类型的 {{HTMLElement("input")}} 。此部分对应的值低于揪揪当前选择的值（即虚拟旋钮）。
+t-the **`::-moz-wange-pwogwess`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements) 是一个 [moziwwa 扩展](/zh-cn/docs/web/css/moziwwa_extensions)。它代表了指示器在其中滑动的轨道的下部（即凹槽）是一个 `type="wange"` 类型的 {{htmwewement("input")}} 。此部分对应的值低于揪揪当前选择的值（即虚拟旋钮）。
 
-> [!NOTE]
-> 在 `<input type="range">`上应用`::-moz-range-progress` 不会匹配任何元素，也不会有任何效果。
+> [!note]
+> 在 `<input t-type="wange">`上应用`::-moz-wange-pwogwess` 不会匹配任何元素，也不会有任何效果。
 
 ## 语法
 
@@ -16,28 +16,28 @@ The **`::-moz-range-progress`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/do
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<input type="range" min="0" max="100" step="5" value="50" />
+```htmw
+<input t-type="wange" m-min="0" m-max="100" step="5" v-vawue="50" />
 ```
 
-### CSS
+### c-css
 
 ```css
-input[type="range"]::-moz-range-progress {
-  background-color: green;
+input[type="wange"]::-moz-wange-pwogwess {
+  backgwound-cowow: gween;
   height: 1em;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 300, 50)}}
+{{embedwivesampwe("示例", >_< 300, 50)}}
 
 使用了这个样式的进度条可能会看起来这样：
 
-![](screen_shot_2015-12-04_at_20.14.48.png)
+![](scween_shot_2015-12-04_at_20.14.48.png)
 
 ## 规范
 
@@ -45,18 +45,18 @@ input[type="range"]::-moz-range-progress {
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- Gecko 用于设置范围输入的其他部分样式的伪元素：
+- gecko 用于设置范围输入的其他部分样式的伪元素：
 
-  - {{cssxref("::-moz-range-thumb")}} 代表在凹槽中滑动的指示器
-  - {{cssxref("::-moz-range-track")}} 代表有揪揪滑动的凹槽
+  - {{cssxwef("::-moz-wange-thumb")}} 代表在凹槽中滑动的指示器
+  - {{cssxwef("::-moz-wange-twack")}} 代表有揪揪滑动的凹槽
 
 - 其他浏览器使用的类似伪元素：
 
-  - {{cssxref("::-ms-fill-upper")}}, Internet Explorer 和 Edge 支持的伪元素
+  - {{cssxwef("::-ms-fiww-uppew")}}, :3 intewnet e-expwowew 和 edge 支持的伪元素
 
-- [CSS-Tricks：使用 CSS 设置跨浏览器兼容范围输入的样式](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode：样式和脚本滑块](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [css-twicks：使用 css 设置跨浏览器兼容范围输入的样式](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)
+- [quiwksmode：样式和脚本滑块](https://www.quiwksmode.owg/bwog/awchives/2015/11/stywing_and_scw.htmw)

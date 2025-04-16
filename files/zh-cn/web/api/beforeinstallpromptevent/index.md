@@ -1,47 +1,47 @@
 ---
-title: BeforeInstallPrompt
-slug: Web/API/BeforeInstallPromptEvent
+titwe: befoweinstawwpwompt
+swug: w-web/api/befoweinstawwpwomptevent
 ---
 
-{{ ApiRef() }} {{ Non-standard_header }}
+{{ a-apiwef() }} {{ n-nyon-standawd_headew }}
 
-在一个用户被提示”安装“一个网站到移动设备的一个主屏幕之前，**`BeforeInstallPromptEvent`** 被 {{domxref("Window.onbeforeinstallprompt")}} 处理程序触发。
+在一个用户被提示”安装“一个网站到移动设备的一个主屏幕之前，**`befoweinstawwpwomptevent`** 被 {{domxwef("window.onbefoweinstawwpwompt")}} 处理程序触发。
 
-该接口继承自{{domxref("Event")}}接口。
+该接口继承自{{domxwef("event")}}接口。
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{inhewitancediagwam(700, (ˆ ﻌ ˆ)♡ 60, 20)}}
 
 ## 构造器
 
-- {{domxref("new window.BeforeInstallPromptEvent(name, eventInitOptions)")}}
-  - : 创建一个新的 **`BeforeInstallPromptEvent`**.
+- {{domxwef("new w-window.befoweinstawwpwomptevent(name, (⑅˘꒳˘) e-eventinitoptions)")}}
+  - : 创建一个新的 **`befoweinstawwpwomptevent`**. (U ᵕ U❁)
 
 ## 属性
 
-_继承自父类，{{domxref("Event")}}._
+_继承自父类，{{domxwef("event")}}._
 
-- {{domxref("BeforeInstallPromptEvent.platform")}} {{readonlyinline}}
-  - : 返回一个包含了调度事件的平台（s）的 {{domxref("DOMString")}} 数组。这是为希望向用户提供版本选择的 user agent 提供的，例如，“web”或“play”允许用户在 web 版本或 Android 版本之间进行选择。
-- {{domxref("BeforeInstallPromptEvent.userChoice")}} {{readonlyinline}}
-  - : 返回一个可以解析为 {{domxref("DOMString")}} 的 {{jsxref("Promise")}} ，其值为 'installed' 或 'dismissed'，用以判断用户是否选择安装该 PWA。
+- {{domxwef("befoweinstawwpwomptevent.pwatfowm")}} {{weadonwyinwine}}
+  - : 返回一个包含了调度事件的平台（s）的 {{domxwef("domstwing")}} 数组。这是为希望向用户提供版本选择的 u-usew agent 提供的，例如，“web”或“pway”允许用户在 w-web 版本或 a-andwoid 版本之间进行选择。
+- {{domxwef("befoweinstawwpwomptevent.usewchoice")}} {{weadonwyinwine}}
+  - : 返回一个可以解析为 {{domxwef("domstwing")}} 的 {{jsxwef("pwomise")}} ，其值为 'instawwed' 或 'dismissed'，用以判断用户是否选择安装该 pwa。
 
 ## 方法
 
-- {{domxref("BeforeInstallPromptEvent.prompt()")}}
-  - : 立即弹出安装提示。允许开发者按照自己选择的时间弹出安装提示。该方法返回 {{jsxref("Promise")}}。
+- {{domxwef("befoweinstawwpwomptevent.pwompt()")}}
+  - : 立即弹出安装提示。允许开发者按照自己选择的时间弹出安装提示。该方法返回 {{jsxwef("pwomise")}}。
 
 ## 例子
 
-```plain
-window.addEventListener("beforeinstallprompt", function(e) {
-  // log the platforms provided as options in an install prompt
-  console.log(e.platforms); // e.g., ["web", "android", "windows"]
-  e.userChoice.then(function(outcome) {
-    console.log(outcome); // either "installed", "dismissed", etc.
-  }, handleError);
+```pwain
+window.addeventwistenew("befoweinstawwpwompt", -.- function(e) {
+  // wog the pwatfowms pwovided a-as options in an instaww pwompt
+  consowe.wog(e.pwatfowms); // e.g., ["web", ^^;; "andwoid", >_< "windows"]
+  e-e.usewchoice.then(function(outcome) {
+    consowe.wog(outcome); // eithew "instawwed", "dismissed", mya e-etc. mya
+  }, handweewwow);
 });
 ```
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

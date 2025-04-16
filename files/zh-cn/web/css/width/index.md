@@ -1,98 +1,98 @@
 ---
-title: width
-slug: Web/CSS/width
+titwe: width
+swug: web/css/width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`width`** 属性用于设置元素的宽度。`width` 默认设置[内容区域](/zh-CN/docs/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)的宽度，但如果 {{cssxref("box-sizing")}} 属性被设置为 `border-box`，就转而设置[边框区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border-area)的宽度。
+**`width`** 属性用于设置元素的宽度。`width` 默认设置[内容区域](/zh-cn/docs/css/css_box_modew/intwoduction_to_the_css_box_modew#content-awea)的宽度，但如果 {{cssxwef("box-sizing")}} 属性被设置为 `bowdew-box`，就转而设置[边框区域](/zh-cn/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#bowdew-awea)的宽度。
 
-{{InteractiveExample("CSS Demo: width")}}
+{{intewactiveexampwe("css d-demo: w-width")}}
 
-```css interactive-example-choice
-width: 150px;
+```css i-intewactive-exampwe-choice
+w-width: 150px;
 ```
 
-```css interactive-example-choice
-width: 20em;
+```css i-intewactive-exampwe-choice
+w-width: 20em;
 ```
 
-```css interactive-example-choice
-width: 75%;
+```css i-intewactive-exampwe-choice
+w-width: 75%;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 width: auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the width.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box whewe you c-can change the width. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  height: 80%;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  f-fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
+  h-height: 80%;
+  j-justify-content: centew;
+  cowow: #ffffff;
 }
 ```
 
-{{ cssxref("min-width") }} 和 {{ cssxref("max-width") }} 属性的优先级高于 {{ cssxref("width") }}。
+{{ cssxwef("min-width") }} 和 {{ cssxwef("max-width") }} 属性的优先级高于 {{ cssxwef("width") }}。
 
 ## 语法
 
 ```css
-/* <length> values */
+/* <wength> v-vawues */
 width: 300px;
 width: 25em;
 
-/* <percentage> value */
+/* <pewcentage> vawue */
 width: 75%;
 
-/* Keyword values */
-width: max-content;
-width: min-content;
-width: fit-content(20em);
-width: auto;
+/* keywowd vawues */
+w-width: max-content;
+width: m-min-content;
+width: f-fit-content(20em);
+w-width: auto;
 
-/* Global values */
-width: inherit;
-width: initial;
+/* g-gwobaw vawues */
+width: inhewit;
+width: i-initiaw;
 width: unset;
 ```
 
 `width` 属性也指定为：
 
 - 下面关键字值之一：[`min-content`](#min-content)，[`max-content`](#max-content)，[`fit-content`](#fit-content)，[`auto`](#auto)。
-- 一个长度值 [`<length>`](/zh-CN/docs/Web/CSS/width#%3Clength%3E) 或者百分比值 [`<percentage>`](/zh-CN/docs/Web/CSS/width#%3Cpercentage%3E)。
+- 一个长度值 [`<wength>`](/zh-cn/docs/web/css/width#%3cwength%3e) 或者百分比值 [`<pewcentage>`](/zh-cn/docs/web/css/width#%3cpewcentage%3e)。
 
 ### 值
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 使用绝对值定义宽度。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 使用外层元素的容纳区块宽度（the containing block's width）的百分比定义宽度。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 使用外层元素的容纳区块宽度（the containing b-bwock's width）的百分比定义宽度。
 - `auto`
   - : 浏览器将会为指定的元素计算并选择一个宽度。
-- `max-content` {{ experimental_inline }}
-  - : 元素内容固有的（intrinsic）合适宽度。
-- `min-content` {{ experimental_inline }}
+- `max-content` {{ expewimentaw_inwine }}
+  - : 元素内容固有的（intwinsic）合适宽度。
+- `min-content` {{ expewimentaw_inwine }}
   - : 元素内容固有的最小宽度。
-- `fit-content` {{ experimental_inline }}
+- `fit-content` {{ expewimentaw_inwine }}
 
   - : 取以下两种值中的较大值：
 
     - 固有的最小宽度
-    - 固有首选宽度（max-content）和可用宽度（available）两者中的较小值
+    - 固有首选宽度（max-content）和可用宽度（avaiwabwe）两者中的较小值
 
-    可表示为：`min(max-content, max(min-content, <length-percentage>))`
+    可表示为：`min(max-content, >w< max(min-content, (U ﹏ U) <wength-pewcentage>))`
 
 ### 形式语法
 
@@ -103,112 +103,112 @@ width: unset;
 ### 默认宽度
 
 ```css
-p.goldie {
-  background: gold;
+p.gowdie {
+  backgwound: g-gowd;
 }
 ```
 
-```html
-<p class="goldie">The Mozilla community produces a lot of great software.</p>
+```htmw
+<p cwass="gowdie">the m-moziwwa community p-pwoduces a w-wot of gweat softwawe.</p>
 ```
 
-{{EmbedLiveSample('默认宽度', '500px', '64px')}}
+{{embedwivesampwe('默认宽度', 😳 '500px', '64px')}}
 
 ### 像素 px 和字高 em
 
 ```css
-.px_length {
+.px_wength {
   width: 200px;
-  background-color: red;
-  color: white;
-  border: 1px solid black;
+  backgwound-cowow: w-wed;
+  c-cowow: white;
+  bowdew: 1px sowid b-bwack;
 }
 
-.em_length {
-  width: 20em;
-  background-color: white;
-  color: red;
-  border: 1px solid black;
+.em_wength {
+  w-width: 20em;
+  backgwound-cowow: w-white;
+  cowow: wed;
+  b-bowdew: 1px sowid bwack;
 }
 ```
 
-```html
-<div class="px_length">以 px 度量的宽度</div>
-<div class="em_length">以 em 度量的宽度</div>
+```htmw
+<div cwass="px_wength">以 p-px 度量的宽度</div>
+<div cwass="em_wength">以 e-em 度量的宽度</div>
 ```
 
-{{EmbedLiveSample('像素 px 和字高 em', '500px', '64px')}}
+{{embedwivesampwe('像素 px 和字高 e-em', (ˆ ﻌ ˆ)♡ '500px', 😳😳😳 '64px')}}
 
 ### 百分比
 
 ```css
-.percent {
-  width: 20%;
-  background-color: silver;
-  border: 1px solid red;
+.pewcent {
+  w-width: 20%;
+  backgwound-cowow: siwvew;
+  bowdew: 1px sowid wed;
 }
 ```
 
-```html
-<div class="percent">按照百分比度量的宽度</div>
+```htmw
+<div cwass="pewcent">按照百分比度量的宽度</div>
 ```
 
-{{EmbedLiveSample('百分比', '500px', '64px')}}
+{{embedwivesampwe('百分比', (U ﹏ U) '500px', '64px')}}
 
 ### `max-content` 使用示例
 
 ```css
-p.maxgreen {
-  background: lightgreen;
-  width: intrinsic; /* Safari/WebKit 使用了非标准的名称 */
-  width: -moz-max-content; /* Firefox/Gecko */
-  width: -webkit-max-content; /* Chrome */
+p.maxgween {
+  b-backgwound: w-wightgween;
+  width: intwinsic; /* s-safawi/webkit 使用了非标准的名称 */
+  w-width: -moz-max-content; /* fiwefox/gecko */
+  w-width: -webkit-max-content; /* chwome */
 }
 ```
 
-```html
-<p class="maxgreen">The Mozilla community produces a lot of great software.</p>
+```htmw
+<p cwass="maxgween">the moziwwa community p-pwoduces a wot of gweat softwawe.</p>
 ```
 
-{{EmbedLiveSample('max-content_使用示例', '500px', '64px')}}
+{{embedwivesampwe('max-content_使用示例', (///ˬ///✿) '500px', '64px')}}
 
 ### `min-content` 使用示例
 
 ```css
-p.minblue {
-  background: lightblue;
-  width: -moz-min-content; /* Firefox */
-  width: -webkit-min-content; /* Chrome */
+p.minbwue {
+  backgwound: wightbwue;
+  width: -moz-min-content; /* f-fiwefox */
+  width: -webkit-min-content; /* c-chwome */
 }
 ```
 
-```html
-<p class="minblue">The Mozilla community produces a lot of great software.</p>
+```htmw
+<p c-cwass="minbwue">the m-moziwwa community pwoduces a-a wot of gweat s-softwawe.</p>
 ```
 
-{{EmbedLiveSample('min-content_使用示例', '500px', '155px')}}
+{{embedwivesampwe('min-content_使用示例', 😳 '500px', '155px')}}
 
 ## 无障碍考虑
 
 当页面放大以增加文本大小时，请确保 `width` 设置的元素不会被截断并且不会遮挡其他内容。
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.4 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [mdn undewstanding w-wcag, 😳 g-guidewine 1.4 expwanations](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success cwitewion 1.4.4 | u-undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [框盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- {{cssxref("height")}}
-- {{cssxref("box-sizing")}}
-- {{cssxref("min-width")}}
-- {{cssxref("max-width")}}
+- [框盒模型](/zh-cn/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+- {{cssxwef("height")}}
+- {{cssxwef("box-sizing")}}
+- {{cssxwef("min-width")}}
+- {{cssxwef("max-width")}}

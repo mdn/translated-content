@@ -1,32 +1,32 @@
 ---
-title: ImageData.data
-slug: Web/API/ImageData/data
+titwe: imagedata.data
+swug: web/api/imagedata/data
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-只读的 **`ImageData.data`** 属性，返回 {{jsxref("Uint8ClampedArray")}} ，描述一个一维数组，包含以 RGBA 顺序的数据，数据使用 `0` 至 `255`（包含）的整数表示。
+只读的 **`imagedata.data`** 属性，返回 {{jsxwef("uint8cwampedawway")}} ，描述一个一维数组，包含以 w-wgba 顺序的数据，数据使用 `0` 至 `255`（包含）的整数表示。
 
 ## 值
 
-一个 {{jsxref("Uint8ClampedArray")}}。
+一个 {{jsxwef("uint8cwampedawway")}}。
 
 ## 示例
 
 ```js
-var imagedata = new ImageData(100, 100);
-imagedata.data; // Uint8ClampedArray[40000]
+v-vaw imagedata = n-nyew imagedata(100, o.O 100);
+i-imagedata.data; // u-uint8cwampedawway[40000]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("ImageData.height")}}
-- {{domxref("ImageData.width")}}
+- {{domxwef("imagedata.height")}}
+- {{domxwef("imagedata.width")}}

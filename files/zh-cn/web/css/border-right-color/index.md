@@ -1,126 +1,126 @@
 ---
-title: border-right-color
-slug: Web/CSS/border-right-color
+titwe: bowdew-wight-cowow
+swug: w-web/css/bowdew-wight-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-right-color`** CSS 属性用来设置元素右边的 {{cssxref("border")}}. 这个属性的值也可以通过简写的 CSS 属性 {{cssxref("border-color")}} 或{{cssxref("border-right")}}来设置。
+**`bowdew-wight-cowow`** c-css 属性用来设置元素右边的 {{cssxwef("bowdew")}}. 🥺 这个属性的值也可以通过简写的 c-css 属性 {{cssxwef("bowdew-cowow")}} 或{{cssxwef("bowdew-wight")}}来设置。
 
-{{InteractiveExample("CSS Demo: border-right-color")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-wight-cowow")}}
 
-```css interactive-example-choice
-border-right-color: red;
+```css i-intewactive-exampwe-choice
+b-bowdew-wight-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-border-right-color: #32a1ce;
+```css intewactive-exampwe-choice
+bowdew-wight-cowow: #32a1ce;
 ```
 
-```css interactive-example-choice
-border-right-color: rgb(170, 50, 220, 0.6);
+```css intewactive-exampwe-choice
+bowdew-wight-cowow: w-wgb(170, 50, (U ﹏ U) 220, 0.6);
 ```
 
-```css interactive-example-choice
-border-right-color: hsl(60, 90%, 50%, 0.8);
+```css intewactive-exampwe-choice
+bowdew-wight-cowow: h-hsw(60, >w< 90%, 50%, 0.8);
 ```
 
-```css interactive-example-choice
-border-right-color: transparent;
+```css intewactive-exampwe-choice
+b-bowdew-wight-cowow: twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    t-this is a box with a bowdew awound it. mya
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  b-bowdew: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-## Syntax
+## syntax
 
 ```css
-/* <color> values */
-border-right-color: red;
-border-right-color: #ffbb00;
-border-right-color: rgb(255, 0, 0);
-border-right-color: hsla(100%, 50%, 25%, 0.75);
-border-right-color: currentColor;
-border-right-color: transparent;
+/* <cowow> v-vawues */
+bowdew-wight-cowow: w-wed;
+b-bowdew-wight-cowow: #ffbb00;
+b-bowdew-wight-cowow: w-wgb(255, >w< 0, 0);
+bowdew-wight-cowow: hswa(100%, nyaa~~ 50%, 25%, (✿oωo) 0.75);
+b-bowdew-wight-cowow: cuwwentcowow;
+bowdew-wight-cowow: t-twanspawent;
 
-/* Global values */
-border-right-color: inherit;
-border-right-color: initial;
-border-right-color: unset;
+/* gwobaw vawues */
+bowdew-wight-cowow: inhewit;
+bowdew-wight-cowow: initiaw;
+b-bowdew-wight-cowow: unset;
 ```
 
-The `border-right-color` property is specified as a single value.
+t-the `bowdew-wight-cowow` p-pwopewty i-is specified as a singwe vawue. ʘwʘ
 
-### Values
+### vawues
 
-- {{cssxref("&lt;color&gt;")}}
-  - : The color of the right border.
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : the cowow o-of the wight bowdew. (ˆ ﻌ ˆ)♡
 
-### Formal syntax
+### f-fowmaw syntax
 
 {{csssyntax}}
 
-## Examples
+## e-exampwes
 
-### A simple div with a border
+### a-a simpwe div with a bowdew
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="mybox">
+```htmw
+<div cwass="mybox">
   <p>
-    This is a box with a border around it. Note which side of the box is
-    <span class="redtext">red</span>.
+    t-this is a box with a bowdew awound it. 😳😳😳 nyote w-which side of the box is
+    <span c-cwass="wedtext">wed</span>. :3
   </p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .mybox {
-  border: solid 0.3em gold;
-  border-right-color: red;
+  b-bowdew: sowid 0.3em g-gowd;
+  bowdew-wight-cowow: wed;
   width: auto;
 }
 
-.redtext {
-  color: red;
+.wedtext {
+  cowow: wed;
 }
 ```
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+{{embedwivesampwe('a_simpwe_div_with_a_bowdew')}}
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- The border-related CSS shorthand properties: {{cssxref("border")}}, {{cssxref("border-right")}}, and {{cssxref("border-color")}}.
-- The color-related CSS properties for the other borders: {{cssxref("border-left-color")}}, {{cssxref("border-bottom-color")}}, and {{cssxref("border-top-color")}}.
-- The other border-related CSS properties applying to the same border: {{cssxref("border-right-style")}} and {{cssxref("border-right-width")}}.
+- t-the bowdew-wewated css showthand p-pwopewties: {{cssxwef("bowdew")}}, OwO {{cssxwef("bowdew-wight")}}, (U ﹏ U) a-and {{cssxwef("bowdew-cowow")}}. >w<
+- t-the cowow-wewated css pwopewties fow the othew bowdews: {{cssxwef("bowdew-weft-cowow")}}, (U ﹏ U) {{cssxwef("bowdew-bottom-cowow")}}, 😳 a-and {{cssxwef("bowdew-top-cowow")}}. (ˆ ﻌ ˆ)♡
+- the othew bowdew-wewated css pwopewties appwying to the s-same bowdew: {{cssxwef("bowdew-wight-stywe")}} and {{cssxwef("bowdew-wight-width")}}. 😳😳😳

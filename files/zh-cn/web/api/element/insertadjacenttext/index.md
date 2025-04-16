@@ -1,80 +1,80 @@
 ---
-title: Element.insertAdjacentText()
-slug: Web/API/Element/insertAdjacentText
+titwe: ewement.insewtadjacenttext()
+swug: web/api/ewement/insewtadjacenttext
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`insertAdjacentText()`** 方法将一个给定的文本节点插入在相对于被调用的元素给定的位置。
+**`insewtadjacenttext()`** 方法将一个给定的文本节点插入在相对于被调用的元素给定的位置。
 
 ## 语法
 
-```js-nolint
-insertAdjacentText(where, data)
+```js-nowint
+i-insewtadjacenttext(whewe, 😳😳😳 d-data)
 ```
 
 ### 参数
 
-- position
+- p-position
 
-  - : A {{domxref("DOMString")}} representing the position relative to the `element`; must be one of the following strings:
+  - : a-a {{domxwef("domstwing")}} w-wepwesenting t-the position wewative t-to the `ewement`; m-must be one of the fowwowing stwings:
 
-    - `'beforebegin'`: Before the `element` itself.
-    - `'afterbegin'`: Just inside the `element`, before its first child.
-    - `'beforeend'`: Just inside the `element`, after its last child.
-    - `'afterend'`: After the `element` itself.
+    - `'befowebegin'`: befowe the `ewement` itsewf. o.O
+    - `'aftewbegin'`: j-just inside the `ewement`, ( ͡o ω ͡o ) befowe its f-fiwst chiwd. (U ﹏ U)
+    - `'befoweend'`: just inside the `ewement`, (///ˬ///✿) a-aftew its wast chiwd. >w<
+    - `'aftewend'`: aftew the `ewement` itsewf. rawr
 
-- element
-  - : A {{domxref("DOMString")}} representing the text to be inserted into the tree.
+- e-ewement
+  - : a {{domxwef("domstwing")}} w-wepwesenting the t-text to be insewted into the twee.
 
 ### 返回值
 
-Void.
+void. mya
 
 ### 例外
 
-| Exception     | Explanation                                         |
+| exception     | expwanation                                         |
 | ------------- | --------------------------------------------------- |
-| `SyntaxError` | The `position` specified is not a recognised value. |
+| `syntaxewwow` | t-the `position` specified is nyot a wecognised vawue. ^^ |
 
-### Visualization of position names
+### visuawization o-of position nyames
 
-```html
-<!-- beforebegin -->
+```htmw
+<!-- befowebegin -->
 <p>
-  <!-- afterbegin -->
-  foo
-  <!-- beforeend -->
+  <!-- aftewbegin -->
+  f-foo
+  <!-- befoweend -->
 </p>
-<!-- afterend -->
+<!-- a-aftewend -->
 ```
 
-> [!NOTE]
-> 只有当节点位于树中并具有元素父元素时，beforebegin 和 afterend 位置才能工作。
+> [!note]
+> 只有当节点位于树中并具有元素父元素时，befowebegin 和 a-aftewend 位置才能工作。
 
 ## 范例
 
 ```js
-beforeBtn.addEventListener("click", function () {
-  para.insertAdjacentText("afterbegin", textInput.value);
+b-befowebtn.addeventwistenew("cwick", 😳😳😳 function () {
+  pawa.insewtadjacenttext("aftewbegin", mya textinput.vawue);
 });
 
-afterBtn.addEventListener("click", function () {
-  para.insertAdjacentText("beforeend", textInput.value);
+aftewbtn.addeventwistenew("cwick", 😳 function () {
+  pawa.insewtadjacenttext("befoweend", -.- t-textinput.vawue);
 });
 ```
 
-Have a look at our [insertAdjacentText.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html) demo on GitHub (see the [source code](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html) too.) Here we have a simple paragraph. You can enter some text into the form element, then press the _Insert before_ and _Insert after_ buttons to insert it before or after the existing paragraph text using `insertAdjacentText()`. Note that the existing text node is not added to — further text nodes are created containing the new additions.
+have a wook at ouw [insewtadjacenttext.htmw](https://mdn.github.io/dom-exampwes/insewt-adjacent/insewtadjacenttext.htmw) demo on g-github (see the [souwce code](https://github.com/mdn/dom-exampwes/bwob/mastew/insewt-adjacent/insewtadjacenttext.htmw) too.) hewe we have a simpwe pawagwaph. 🥺 you can entew some t-text into the fowm ewement, o.O then p-pwess the _insewt b-befowe_ and _insewt a-aftew_ buttons to insewt it befowe ow aftew the existing p-pawagwaph text u-using `insewtadjacenttext()`. /(^•ω•^) nyote t-that the existing t-text nyode is nyot added to — f-fuwthew text nyodes awe cweated c-containing the new additions. nyaa~~
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("Element.insertAdjacentHTML()")}}
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("ewement.insewtadjacenthtmw()")}}

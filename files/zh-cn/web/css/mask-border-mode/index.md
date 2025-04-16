@@ -1,30 +1,30 @@
 ---
-title: mask-border-mode
-slug: Web/CSS/mask-border-mode
+titwe: mask-bowdew-mode
+swug: w-web/css/mask-bowdew-mode
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-该[CSS](/zh-CN/docs/Web/CSS)属性指定使用的混合模式[面具边界](/zh-CN/docs/Web/CSS/mask-border)。**`mask-border-mode`**
+该[css](/zh-cn/docs/web/css)属性指定使用的混合模式[面具边界](/zh-cn/docs/web/css/mask-bowdew)。**`mask-bowdew-mode`**
 
-## Syntax
+## s-syntax
 
 ```css
-/* Keyword values */
-mask-border-mode: luminance;
-mask-border-mode: alpha;
+/* k-keywowd v-vawues */
+mask-bowdew-mode: w-wuminance;
+m-mask-bowdew-mode: a-awpha;
 
-/* Global values */
-mask-border-mode: inherit;
-mask-border-mode: initial;
-mask-border-mode: unset;
+/* g-gwobaw vawues */
+mask-bowdew-mode: inhewit;
+mask-bowdew-mode: initiaw;
+mask-bowdew-mode: u-unset;
 ```
 
 ### 值
 
-- `luminance`
+- `wuminance`
   - : 掩模边界图像的亮度值用作掩模值。
-- `alpha`
+- `awpha`
   - : 掩模边界图像的亮度值用作掩模值。
 
 ## 形式定义
@@ -37,7 +37,7 @@ mask-border-mode: unset;
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 

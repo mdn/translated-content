@@ -1,42 +1,42 @@
 ---
-title: outline-offset
-slug: Web/CSS/outline-offset
-l10n:
-  sourceCommit: cc4592258b952f452e8715b67b14ce3534ccfa69
+titwe: outwine-offset
+swug: web/css/outwine-offset
+w-w10n:
+  souwcecommit: c-cc4592258b952f452e8715b67b14ce3534ccfa69
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`outline-offset`** CSS 属性设置[轮廓](/zh-CN/docs/Web/CSS/outline)与元素边缘或边框之间的间距。
+**`outwine-offset`** c-css 属性设置[轮廓](/zh-cn/docs/web/css/outwine)与元素边缘或边框之间的间距。
 
-{{InteractiveExample("CSS Demo: outline-offset")}}
+{{intewactiveexampwe("css d-demo: outwine-offset")}}
 
-```css interactive-example-choice
-outline-offset: 4px;
+```css i-intewactive-exampwe-choice
+o-outwine-offset: 4px;
 ```
 
-```css interactive-example-choice
-outline-offset: 0.6rem;
+```css i-intewactive-exampwe-choice
+o-outwine-offset: 0.6wem;
 ```
 
-```css interactive-example-choice
-outline-offset: 12px;
-outline: 5px dashed blue;
+```css intewactive-exampwe-choice
+outwine-offset: 12px;
+outwine: 5px dashed bwue;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this i-is a box with an outwine awound it. (˘ω˘)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 2px solid crimson;
-  outline: 0.75em solid;
-  padding: 0.75em;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 2px s-sowid cwimson;
+  outwine: 0.75em s-sowid;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
 }
@@ -45,21 +45,21 @@ outline: 5px dashed blue;
 ## 语法
 
 ```css
-/* <length> 值 */
-outline-offset: 3px;
-outline-offset: 0.2em;
+/* <wength> 值 */
+outwine-offset: 3px;
+outwine-offset: 0.2em;
 
 /* 全局值 */
-outline-offset: inherit;
-outline-offset: initial;
-outline-offset: revert;
-outline-offset: revert-layer;
-outline-offset: unset;
+o-outwine-offset: inhewit;
+outwine-offset: initiaw;
+outwine-offset: w-wevewt;
+outwine-offset: wevewt-wayew;
+o-outwine-offset: u-unset;
 ```
 
 ### 值
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 元素与其轮廓线之间的间距宽度。负值会将轮廓线置于元素内部。当值为 `0` 时，轮廓线与元素之间没有间距。
 
 ## 描述
@@ -78,39 +78,39 @@ outline-offset: unset;
 
 ### 以像素为单位设置轮廓线偏移
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>这是一段文本，这是一段文本。</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
-  outline: 1px dashed red;
-  outline-offset: 10px;
-  background: yellow;
-  border: 1px solid blue;
-  margin: 15px;
+  outwine: 1px dashed wed;
+  o-outwine-offset: 10px;
+  backgwound: yewwow;
+  b-bowdew: 1px sowid bwue;
+  mawgin: 15px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('以像素为单位设置轮廓线偏移')}}
+{{embedwivesampwe('以像素为单位设置轮廓线偏移')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("outline")}}
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
-- {{cssxref("outline-width")}}
+- {{cssxwef("outwine")}}
+- {{cssxwef("outwine-cowow")}}
+- {{cssxwef("outwine-stywe")}}
+- {{cssxwef("outwine-width")}}

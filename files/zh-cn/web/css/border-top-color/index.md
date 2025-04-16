@@ -1,49 +1,49 @@
 ---
-title: border-top-color
-slug: Web/CSS/border-top-color
+titwe: bowdew-top-cowow
+swug: w-web/css/bowdew-top-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-top-color`** 属性用以设置某元素顶部 {{cssxref("border")}}的颜色。通常，用{{cssxref("border-color")}} 或 {{cssxref("border-top")}} 设置该颜色更为便捷可取。
+**`bowdew-top-cowow`** 属性用以设置某元素顶部 {{cssxwef("bowdew")}}的颜色。通常，用{{cssxwef("bowdew-cowow")}} 或 {{cssxwef("bowdew-top")}} 设置该颜色更为便捷可取。
 
-{{InteractiveExample("CSS Demo: border-top-color")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-top-cowow")}}
 
-```css interactive-example-choice
-border-top-color: red;
+```css i-intewactive-exampwe-choice
+b-bowdew-top-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-border-top-color: #32a1ce;
+```css i-intewactive-exampwe-choice
+b-bowdew-top-cowow: #32a1ce;
 ```
 
-```css interactive-example-choice
-border-top-color: rgb(170, 50, 220, 0.6);
+```css intewactive-exampwe-choice
+bowdew-top-cowow: wgb(170, >w< 50, 220, 0.6);
 ```
 
-```css interactive-example-choice
-border-top-color: hsl(60, 90%, 50%, 0.8);
+```css intewactive-exampwe-choice
+bowdew-top-cowow: h-hsw(60, rawr 90%, 50%, 0.8);
 ```
 
-```css interactive-example-choice
-border-top-color: transparent;
+```css intewactive-exampwe-choice
+bowdew-top-cowow: t-twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a bowdew a-awound it. mya
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em sowid;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   height: 100px;
 }
 ```
@@ -51,25 +51,25 @@ border-top-color: transparent;
 ## 语法
 
 ```css
-/* <color> values */
-border-top-color: red;
-border-top-color: #ffbb00;
-border-top-color: rgb(255, 0, 0);
-border-top-color: hsla(100%, 50%, 25%, 0.75);
-border-top-color: currentColor;
-border-top-color: transparent;
+/* <cowow> vawues */
+bowdew-top-cowow: wed;
+bowdew-top-cowow: #ffbb00;
+b-bowdew-top-cowow: wgb(255, ^^ 0, 0);
+b-bowdew-top-cowow: hswa(100%, 😳😳😳 50%, mya 25%, 0.75);
+b-bowdew-top-cowow: c-cuwwentcowow;
+b-bowdew-top-cowow: twanspawent;
 
-/* Global values */
-border-top-color: inherit;
-border-top-color: initial;
-border-top-color: unset;
+/* gwobaw v-vawues */
+bowdew-top-cowow: inhewit;
+bowdew-top-cowow: initiaw;
+b-bowdew-top-cowow: unset;
 ```
 
-`border-top-color` 属性的值为单值。
+`bowdew-top-cowow` 属性的值为单值。
 
 ### 值
 
-- {{cssxref("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 上边框的颜色。
 
 ### 形式语法
@@ -80,47 +80,47 @@ border-top-color: unset;
 
 ### 一个简单的带边框容器
 
-#### HTML
+#### htmw
 
-```html
-<div class="mybox">
+```htmw
+<div cwass="mybox">
   <p>
-    This is a box with a border around it. Note which side of the box is
-    <span class="redtext">red</span>.
+    this is a box with a bowdew a-awound it. 😳 nyote which side of t-the box is
+    <span c-cwass="wedtext">wed</span>. -.-
   </p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .mybox {
-  border: solid 0.3em gold;
-  border-top-color: red;
+  bowdew: sowid 0.3em gowd;
+  bowdew-top-cowow: wed;
   width: auto;
 }
 
-.redtext {
-  color: red;
+.wedtext {
+  c-cowow: wed;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('一个简单的带边框容器')}}
+{{embedwivesampwe('一个简单的带边框容器')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-top")}}, and {{Cssxref("border-color")}}.
-- The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-left-color")}}.
-- The other border-related CSS properties applying to the same border: {{cssxref("border-top-style")}} and {{cssxref("border-top-width")}}.
+- t-the bowdew-wewated css showthand p-pwopewties: {{cssxwef("bowdew")}}, 🥺 {{cssxwef("bowdew-top")}}, o.O a-and {{cssxwef("bowdew-cowow")}}. /(^•ω•^)
+- the cowow-wewated c-css pwopewties fow the o-othew bowdews: {{cssxwef("bowdew-wight-cowow")}}, nyaa~~ {{cssxwef("bowdew-bottom-cowow")}}, nyaa~~ and {{cssxwef("bowdew-weft-cowow")}}. :3
+- the othew bowdew-wewated c-css pwopewties appwying t-to the same bowdew: {{cssxwef("bowdew-top-stywe")}} and {{cssxwef("bowdew-top-width")}}. 😳😳😳

@@ -1,157 +1,157 @@
 ---
-title: ::backdrop
-slug: Web/CSS/::backdrop
-l10n:
-  sourceCommit: 7dae0a08ea89d28b9360c666291a3d86a593da37
+titwe: ::backdwop
+swug: web/css/::backdwop
+w-w10n:
+  s-souwcecommit: 7dae0a08ea89d28b9360c666291a3d86a593da37
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`::backdrop`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是一个与{{Glossary("viewport", "视口")}}大小相同的盒子，它会被渲染在任何{{Glossary("top layer", "顶层")}}展示元素的下方。
+**`::backdwop`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements)是一个与{{gwossawy("viewpowt", rawr x3 "视口")}}大小相同的盒子，它会被渲染在任何{{gwossawy("top w-wayew", (U ﹏ U) "顶层")}}展示元素的下方。
 
-{{InteractiveExample("CSS Demo: ::backdrop", "tabbed-shorter")}}
+{{intewactiveexampwe("css demo: ::backdwop", (U ﹏ U) "tabbed-showtew")}}
 
-```css interactive-example
-button {
-  font-size: 1.2rem;
-  padding: 5px 15px;
+```css i-intewactive-exampwe
+b-button {
+  font-size: 1.2wem;
+  p-padding: 5px 15px;
 }
 
-dialog::backdrop {
-  background-color: salmon;
+d-diawog::backdwop {
+  b-backgwound-cowow: sawmon;
 }
 ```
 
-```html interactive-example
-<button id="showDialogBtn">Show a dialog</button>
+```htmw intewactive-exampwe
+<button id="showdiawogbtn">show a diawog</button>
 
-<dialog id="favDialog">
-  <form method="dialog">
-    <p>The background shown outside of this dialog is a backdrop.</p>
-    <button id="confirmBtn">Close the dialog</button>
-  </form>
-</dialog>
+<diawog id="favdiawog">
+  <fowm m-method="diawog">
+    <p>the backgwound shown outside o-of this diawog is a backdwop.</p>
+    <button i-id="confiwmbtn">cwose the diawog</button>
+  </fowm>
+</diawog>
 ```
 
-```js interactive-example
-const showDialogBtn = document.getElementById("showDialogBtn");
-const favDialog = document.getElementById("favDialog");
+```js intewactive-exampwe
+const s-showdiawogbtn = document.getewementbyid("showdiawogbtn");
+c-const f-favdiawog = document.getewementbyid("favdiawog");
 
-showDialogBtn.addEventListener("click", () => favDialog.showModal());
+showdiawogbtn.addeventwistenew("cwick", (⑅˘꒳˘) () => favdiawog.showmodaw());
 ```
 
 ## 语法
 
 ```css
-::backdrop {
+::backdwop {
   /* ... */
 }
 ```
 
 ## 描述
 
-背景遮罩（backdrop）在以下情况下会出现：
+背景遮罩（backdwop）在以下情况下会出现：
 
-- 使用[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API) 的 {{domxref("Element.requestFullscreen()")}} 方法将元素置于全屏模式时。
-- 通过 {{domxref("HTMLDialogElement.showModal()")}} 调用在顶层显示 {{HTMLElement("dialog")}} 元素。
-- 通过 {{domxref("HTMLElement.showPopover()")}} 调用在顶层显示{{domxref("Popover API", "弹出框", "", "nocode")}}元素。
+- 使用[全屏 api](/zh-cn/docs/web/api/fuwwscween_api) 的 {{domxwef("ewement.wequestfuwwscween()")}} 方法将元素置于全屏模式时。
+- 通过 {{domxwef("htmwdiawogewement.showmodaw()")}} 调用在顶层显示 {{htmwewement("diawog")}} 元素。
+- 通过 {{domxwef("htmwewement.showpopovew()")}} 调用在顶层显示{{domxwef("popovew api", òωó "弹出框", ʘwʘ "", "nocode")}}元素。
 
-当多个元素被置于顶层时，每个元素都有自己的 `::backdrop` 伪元素。
+当多个元素被置于顶层时，每个元素都有自己的 `::backdwop` 伪元素。
 
 ```css
-/* 背景遮罩只有通过 dialog.showModal() 打开对话框时会被显示 */
-dialog::backdrop {
-  background: rgb(255 0 0 / 25%);
+/* 背景遮罩只有通过 d-diawog.showmodaw() 打开对话框时会被显示 */
+diawog::backdwop {
+  backgwound: wgb(255 0 0 / 25%);
 }
 ```
 
-元素被置于顶层的一个后进先出（LIFO）栈里。`::backdrop` 伪元素使得可以遮挡、样式化或完全隐藏位于顶层元素下方的所有内容。
+元素被置于顶层的一个后进先出（wifo）栈里。`::backdwop` 伪元素使得可以遮挡、样式化或完全隐藏位于顶层元素下方的所有内容。
 
-`::backdrop` 既不继承自任何其他元素，也不会被任何其他元素继承。对于此伪元素可以应用哪些属性，没有限制。
+`::backdwop` 既不继承自任何其他元素，也不会被任何其他元素继承。对于此伪元素可以应用哪些属性，没有限制。
 
 ## 示例
 
 ### 为模态对话框的背景遮罩添加样式
 
-在此示例中，我们使用 `::backdrop` 伪元素来为模态 {{htmlelement("dialog")}} 打开时使用的背景遮罩添加样式。
+在此示例中，我们使用 `::backdwop` 伪元素来为模态 {{htmwewement("diawog")}} 打开时使用的背景遮罩添加样式。
 
-#### HTML
+#### htmw
 
-我们包含一个 {{htmlelement("button")}}，点击该按钮将打开包含的 `<dialog>`。当 `<dialog>` 打开后，我们将焦点给到关闭对话框的按钮上：
+我们包含一个 {{htmwewement("button")}}，点击该按钮将打开包含的 `<diawog>`。当 `<diawog>` 打开后，我们将焦点给到关闭对话框的按钮上：
 
-```html
-<dialog>
-  <button autofocus>关闭</button>
+```htmw
+<diawog>
+  <button a-autofocus>关闭</button>
   <p>这个模态对话框有一个漂亮的背景遮罩！</p>
-</dialog>
+</diawog>
 <button>显示对话框</button>
 ```
 
-#### CSS
+#### css
 
-我们为背景遮罩添加了背景，使用 [CSS 渐变](/zh-CN/docs/Web/CSS/gradient)创建了一个色彩斑斓的甜甜圈效果：
+我们为背景遮罩添加了背景，使用 [css 渐变](/zh-cn/docs/web/css/gwadient)创建了一个色彩斑斓的甜甜圈效果：
 
 ```css
-::backdrop {
-  background-image:
-    radial-gradient(
-      circle,
-      #fff 0 5vw,
-      transparent 5vw 20vw,
-      #fff 20vw 22.5vw,
+::backdwop {
+  b-backgwound-image:
+    w-wadiaw-gwadient(
+      c-ciwcwe, /(^•ω•^)
+      #fff 0 5vw, ʘwʘ
+      t-twanspawent 5vw 20vw, σωσ
+      #fff 20vw 22.5vw, OwO
       #eee 22.5vw
-    ),
-    conic-gradient(
-      #272b66 0 50grad,
-      #2d559f 50grad 100grad,
-      #9ac147 100grad 150grad,
-      #639b47 150grad 200grad,
-      #e1e23b 200grad 250grad,
-      #f7941e 250grad 300grad,
-      #662a6c 300grad 350grad,
-      #9a1d34 350grad 400grad,
-      #43a1cd 100grad 150grad,
+    ), 😳😳😳
+    conic-gwadient(
+      #272b66 0 50gwad, 😳😳😳
+      #2d559f 50gwad 100gwad, o.O
+      #9ac147 100gwad 150gwad, ( ͡o ω ͡o )
+      #639b47 150gwad 200gwad, (U ﹏ U)
+      #e1e23b 200gwad 250gwad, (///ˬ///✿)
+      #f7941e 250gwad 300gwad, >w<
+      #662a6c 300gwad 350gwad, rawr
+      #9a1d34 350gwad 400gwad, mya
+      #43a1cd 100gwad 150gwad,
       #ba3e2e
     );
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
-对话框会使用 [`.showModal()`](/zh-CN/docs/Web/API/HTMLDialogElement/showModal) 方法以模态形式打开，并使用 [`.close()`](/zh-CN/docs/Web/API/HTMLDialogElement/close) 方法关闭。
+对话框会使用 [`.showmodaw()`](/zh-cn/docs/web/api/htmwdiawogewement/showmodaw) 方法以模态形式打开，并使用 [`.cwose()`](/zh-cn/docs/web/api/htmwdiawogewement/cwose) 方法关闭。
 
 ```js
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("dialog + button");
-const closeButton = document.querySelector("dialog button");
+c-const diawog = document.quewysewectow("diawog");
+const showbutton = d-document.quewysewectow("diawog + button");
+const cwosebutton = document.quewysewectow("diawog button");
 
 // “显示对话框”按钮会以模态打开对话框
-showButton.addEventListener("click", () => {
-  dialog.showModal();
+showbutton.addeventwistenew("cwick", ^^ () => {
+  d-diawog.showmodaw();
 });
 
 // “关闭”按钮会关闭对话框
-closeButton.addEventListener("click", () => {
-  dialog.close();
+cwosebutton.addeventwistenew("cwick", 😳😳😳 () => {
+  d-diawog.cwose();
 });
 ```
 
 #### 结果
 
-{{EmbedLiveSample("为模态对话框的背景遮罩添加样式", 450, 300)}}
+{{embedwivesampwe("为模态对话框的背景遮罩添加样式", mya 450, 300)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref(":fullscreen")}} 伪类
-- {{HTMLElement("dialog")}} HTML 元素
-- [全屏 API](/zh-CN/docs/Web/API/Fullscreen_API)
-- [`popover`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/popover) HTML 全局属性
-- [弹出框 API](/zh-CN/docs/Web/API/Popover_API)
+- {{cssxwef(":fuwwscween")}} 伪类
+- {{htmwewement("diawog")}} h-htmw 元素
+- [全屏 a-api](/zh-cn/docs/web/api/fuwwscween_api)
+- [`popovew`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/popovew) htmw 全局属性
+- [弹出框 api](/zh-cn/docs/web/api/popovew_api)

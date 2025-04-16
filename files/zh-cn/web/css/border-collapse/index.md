@@ -1,79 +1,79 @@
 ---
-title: border-collapse
-slug: Web/CSS/border-collapse
+titwe: bowdew-cowwapse
+swug: w-web/css/bowdew-cowwapse
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-collapse`** [CSS](/zh-CN/docs/Web/CSS) 属性是用来决定表格的边框是分开的还是合并的。在分隔模式下，相邻的单元格都拥有独立的边框。在合并模式下，相邻单元格共享边框。
+**`bowdew-cowwapse`** [css](/zh-cn/docs/web/css) 属性是用来决定表格的边框是分开的还是合并的。在分隔模式下，相邻的单元格都拥有独立的边框。在合并模式下，相邻单元格共享边框。
 
-{{InteractiveExample("CSS Demo: border-collapse")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-cowwapse")}}
 
-```css interactive-example-choice
-border-collapse: collapse;
+```css intewactive-exampwe-choice
+b-bowdew-cowwapse: c-cowwapse;
 ```
 
-```css interactive-example-choice
-border-collapse: separate;
+```css i-intewactive-exampwe-choice
+b-bowdew-cowwapse: s-sepawate;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <table class="transition-all" id="example-element">
-    <tr>
-      <td>Cell 1.1</td>
-      <td>Cell 1.2</td>
-    </tr>
-    <tr>
-      <td>Cell 2.1</td>
-      <td>Cell 2.2</td>
-    </tr>
-    <tr>
-      <td>Cell 3.1</td>
-      <td>Cell 3.2</td>
-    </tr>
-  </table>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <tabwe cwass="twansition-aww" id="exampwe-ewement">
+    <tw>
+      <td>ceww 1.1</td>
+      <td>ceww 1.2</td>
+    </tw>
+    <tw>
+      <td>ceww 2.1</td>
+      <td>ceww 2.2</td>
+    </tw>
+    <tw>
+      <td>ceww 3.1</td>
+      <td>ceww 3.2</td>
+    </tw>
+  </tabwe>
 </section>
 ```
 
-```css interactive-example
-table {
-  width: 15rem;
-  table-layout: fixed;
+```css i-intewactive-exampwe
+tabwe {
+  width: 15wem;
+  tabwe-wayout: f-fixed;
 }
 
 td {
-  border: 5px solid;
-  border-color: crimson dodgerblue orange limegreen;
-  padding: 0.75rem;
+  bowdew: 5px s-sowid;
+  bowdew-cowow: cwimson dodgewbwue owange wimegween;
+  p-padding: 0.75wem;
 }
 ```
 
-合并（_collapsed_）模式下，表格中相邻单元格共享边框。在这种模式下，CSS 属性{{ Cssxref("border-style") }} 的值 inset 表现为槽，值 outset 表现为脊。
+合并（_cowwapsed_）模式下，表格中相邻单元格共享边框。在这种模式下，css 属性{{ cssxwef("bowdew-stywe") }} 的值 i-inset 表现为槽，值 o-outset 表现为脊。
 
-分隔（*separated）*模式是 HTML 表格的传统模式。相邻单元格都拥有不同的边框。边框之间的距离是通过 CSS 属性 {{cssxref("border-spacing")}} 来确定的。
+分隔（*sepawated）*模式是 htmw 表格的传统模式。相邻单元格都拥有不同的边框。边框之间的距离是通过 css 属性 {{cssxwef("bowdew-spacing")}} 来确定的。
 
 ## 语法
 
 ```css
-/* Keyword values */
-border-collapse: collapse;
-border-collapse: separate;
+/* keywowd vawues */
+bowdew-cowwapse: c-cowwapse;
+bowdew-cowwapse: sepawate;
 
-/* Global values */
-border-collapse: inherit;
-border-collapse: initial;
-border-collapse: unset;
+/* gwobaw vawues */
+bowdew-cowwapse: i-inhewit;
+bowdew-cowwapse: initiaw;
+b-bowdew-cowwapse: u-unset;
 ```
 
-`border-collapse` 的属性值被定义为一个单独的关键词，可为下面两个值中的一个。
+`bowdew-cowwapse` 的属性值被定义为一个单独的关键词，可为下面两个值中的一个。
 
 ### 值
 
-- `collapse`
-  - : 相邻的单元格共用同一条边框（采用 collapsed-border 表格渲染模型）。
-- `separate`
-  - : 默认值。每个单元格拥有独立的边框（采用 separated-border 表格渲染模型）。
+- `cowwapse`
+  - : 相邻的单元格共用同一条边框（采用 c-cowwapsed-bowdew 表格渲染模型）。
+- `sepawate`
+  - : 默认值。每个单元格拥有独立的边框（采用 s-sepawated-bowdew 表格渲染模型）。
 
 ### 正式语法
 
@@ -83,134 +83,134 @@ border-collapse: unset;
 
 ### 各个浏览器引擎的多彩表格
 
-#### HTML
+#### htmw
 
-```html
-<table class="separate">
+```htmw
+<tabwe cwass="sepawate">
   <caption>
-    <code>border-collapse: separate</code>
+    <code>bowdew-cowwapse: s-sepawate</code>
   </caption>
   <tbody>
-    <tr>
-      <th>Browser</th>
-      <th>Layout Engine</th>
-    </tr>
-    <tr>
-      <td class="fx">Firefox</td>
-      <td class="gk">Gecko</td>
-    </tr>
-    <tr>
-      <td class="ed">Edge</td>
-      <td class="tr">EdgeHTML</td>
-    </tr>
-    <tr>
-      <td class="sa">Safari</td>
-      <td class="wk">Webkit</td>
-    </tr>
-    <tr>
-      <td class="ch">Chrome</td>
-      <td class="bk">Blink</td>
-    </tr>
-    <tr>
-      <td class="op">Opera</td>
-      <td class="bk">Blink</td>
-    </tr>
+    <tw>
+      <th>bwowsew</th>
+      <th>wayout engine</th>
+    </tw>
+    <tw>
+      <td cwass="fx">fiwefox</td>
+      <td c-cwass="gk">gecko</td>
+    </tw>
+    <tw>
+      <td cwass="ed">edge</td>
+      <td cwass="tw">edgehtmw</td>
+    </tw>
+    <tw>
+      <td cwass="sa">safawi</td>
+      <td cwass="wk">webkit</td>
+    </tw>
+    <tw>
+      <td cwass="ch">chwome</td>
+      <td c-cwass="bk">bwink</td>
+    </tw>
+    <tw>
+      <td cwass="op">opewa</td>
+      <td c-cwass="bk">bwink</td>
+    </tw>
   </tbody>
-</table>
-<table class="collapse">
+</tabwe>
+<tabwe c-cwass="cowwapse">
   <caption>
-    <code>border-collapse: collapse</code>
+    <code>bowdew-cowwapse: c-cowwapse</code>
   </caption>
   <tbody>
-    <tr>
-      <th>Browser</th>
-      <th>Layout Engine</th>
-    </tr>
-    <tr>
-      <td class="fx">Firefox</td>
-      <td class="gk">Gecko</td>
-    </tr>
-    <tr>
-      <td class="ed">Edge</td>
-      <td class="tr">EdgeHTML</td>
-    </tr>
-    <tr>
-      <td class="sa">Safari</td>
-      <td class="wk">Webkit</td>
-    </tr>
-    <tr>
-      <td class="ch">Chrome</td>
-      <td class="bk">Blink</td>
-    </tr>
-    <tr>
-      <td class="op">Opera</td>
-      <td class="bk">Blink</td>
-    </tr>
+    <tw>
+      <th>bwowsew</th>
+      <th>wayout engine</th>
+    </tw>
+    <tw>
+      <td cwass="fx">fiwefox</td>
+      <td cwass="gk">gecko</td>
+    </tw>
+    <tw>
+      <td cwass="ed">edge</td>
+      <td c-cwass="tw">edgehtmw</td>
+    </tw>
+    <tw>
+      <td c-cwass="sa">safawi</td>
+      <td cwass="wk">webkit</td>
+    </tw>
+    <tw>
+      <td c-cwass="ch">chwome</td>
+      <td cwass="bk">bwink</td>
+    </tw>
+    <tw>
+      <td c-cwass="op">opewa</td>
+      <td cwass="bk">bwink</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.collapse {
-  border-collapse: collapse;
+.cowwapse {
+  bowdew-cowwapse: c-cowwapse;
 }
-.separate {
-  border-collapse: separate;
+.sepawate {
+  bowdew-cowwapse: sepawate;
 }
-table {
-  display: inline-table;
-  margin: 1em;
-  border: dashed 6px;
-  border-width: 6px;
+t-tabwe {
+  dispway: inwine-tabwe;
+  m-mawgin: 1em;
+  bowdew: dashed 6px;
+  b-bowdew-width: 6px;
 }
-table th,
-table td {
-  border: solid 3px;
+tabwe t-th, nyaa~~
+tabwe td {
+  bowdew: sowid 3px;
 }
 .fx {
-  border-color: orange blue;
+  bowdew-cowow: owange bwue;
 }
 .gk {
-  border-color: black red;
+  bowdew-cowow: bwack wed;
 }
 .ie {
-  border-color: blue gold;
+  bowdew-cowow: b-bwue gowd;
 }
-.tr {
-  border-color: aqua;
+.tw {
+  b-bowdew-cowow: aqua;
 }
 .sa {
-  border-color: silver blue;
+  b-bowdew-cowow: s-siwvew b-bwue;
 }
 .wk {
-  border-color: gold blue;
+  bowdew-cowow: gowd bwue;
 }
 .ch {
-  border-color: red yellow green blue;
+  bowdew-cowow: w-wed yewwow gween bwue;
 }
 .bk {
-  border-color: navy blue teal aqua;
+  bowdew-cowow: nyavy bwue teaw aqua;
 }
 .op {
-  border-color: red;
+  b-bowdew-cowow: wed;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('各个浏览器引擎的多彩表格', 400, 300) }}
+{{ embedwivesampwe('各个浏览器引擎的多彩表格', (✿oωo) 400, 300) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("border-spacing")}}、{{cssxref("border-style")}}
-- The `border-collapse` property alters the appearance of the {{htmlelement("table")}} HTML element.
+- {{cssxwef("bowdew-spacing")}}、{{cssxwef("bowdew-stywe")}}
+- t-the `bowdew-cowwapse` p-pwopewty awtews t-the appeawance of the {{htmwewement("tabwe")}} h-htmw ewement. ʘwʘ

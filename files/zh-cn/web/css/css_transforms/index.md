@@ -1,29 +1,29 @@
 ---
-title: CSS Transforms
-slug: Web/CSS/CSS_transforms
+titwe: css twansfowms
+swug: web/css/css_twansfowms
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Transforms** 是一个 CSS 模块，它定义了如何在二维或三维空间中转换元素的 CSS 样式。
+**css t-twansfowms** 是一个 c-css 模块，它定义了如何在二维或三维空间中转换元素的 c-css 样式。
 
 ## 引用参考
 
-### CSS 属性
+### c-css 属性
 
-- {{cssxref("backface-visibility")}}
-- {{cssxref("perspective")}}
-- {{cssxref("perspective-origin")}}
-- {{cssxref("transform")}}
-- {{cssxref("transform-box")}}
-- {{cssxref("transform-origin")}}
-- {{cssxref("transform-style")}}
+- {{cssxwef("backface-visibiwity")}}
+- {{cssxwef("pewspective")}}
+- {{cssxwef("pewspective-owigin")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("twansfowm-box")}}
+- {{cssxwef("twansfowm-owigin")}}
+- {{cssxwef("twansfowm-stywe")}}
 
 ## 使用指南
 
-- [CSS transforms 使用](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-  - : 循序渐进的教程，教你如何使用 CSS 对进行元素变形处理。
+- [css t-twansfowms 使用](/zh-cn/docs/web/css/css_twansfowms/using_css_twansfowms)
+  - : 循序渐进的教程，教你如何使用 c-css 对进行元素变形处理。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

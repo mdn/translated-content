@@ -1,75 +1,75 @@
 ---
-title: background-clip
-slug: Web/CSS/background-clip
+titwe: backgwound-cwip
+swug: w-web/css/backgwound-cwip
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`background-clip` 设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下面。
+`backgwound-cwip` 设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下面。
 
-{{InteractiveExample("CSS Demo: background-clip")}}
+{{intewactiveexampwe("css d-demo: backgwound-cwip")}}
 
-```css interactive-example-choice
-background-clip: border-box;
+```css i-intewactive-exampwe-choice
+b-backgwound-cwip: b-bowdew-box;
 ```
 
-```css interactive-example-choice
-background-clip: padding-box;
+```css i-intewactive-exampwe-choice
+b-backgwound-cwip: p-padding-box;
 ```
 
-```css interactive-example-choice
-background-clip: content-box;
+```css intewactive-exampwe-choice
+backgwound-cwip: content-box;
 ```
 
-```css interactive-example-choice
-background-clip: text;
-color: transparent;
+```css intewactive-exampwe-choice
+b-backgwound-cwip: text;
+cowow: twanspawent;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is the content of the element.</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">this i-is the content of the ewement.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-image: url("/shared-assets/images/examples/leopard.jpg");
-  color: #d73611;
-  text-shadow: 2px 2px black;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-image: uww("/shawed-assets/images/exampwes/weopawd.jpg");
+  c-cowow: #d73611;
+  t-text-shadow: 2px 2px bwack;
   padding: 20px;
-  border: 10px dashed #333;
+  bowdew: 10px dashed #333;
   font-size: 2em;
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 ```
 
-如果没有设置背景图片（{{cssxref("background-image")}}）或背景颜色（{{cssxref("background-color")}}），那么这个属性只有在边框（ {{cssxref("border")}}）被设置为非固实（soild）、透明或半透明时才能看到视觉效果（与 {{cssxref("border-style")}} 或 {{cssxref("border-image")}} 有关），否则，本属性产生的样式变化会被边框覆盖。
+如果没有设置背景图片（{{cssxwef("backgwound-image")}}）或背景颜色（{{cssxwef("backgwound-cowow")}}），那么这个属性只有在边框（ {{cssxwef("bowdew")}}）被设置为非固实（soiwd）、透明或半透明时才能看到视觉效果（与 {{cssxwef("bowdew-stywe")}} 或 {{cssxwef("bowdew-image")}} 有关），否则，本属性产生的样式变化会被边框覆盖。
 
 ## 语法
 
 ```css
-/* Keyword values */
-background-clip: border-box;
-background-clip: padding-box;
-background-clip: content-box;
-background-clip: text;
+/* keywowd vawues */
+backgwound-cwip: bowdew-box;
+b-backgwound-cwip: padding-box;
+b-backgwound-cwip: c-content-box;
+b-backgwound-cwip: t-text;
 
-/* Global values */
-background-clip: inherit;
-background-clip: initial;
-background-clip: unset;
+/* gwobaw vawues */
+backgwound-cwip: i-inhewit;
+backgwound-cwip: initiaw;
+backgwound-cwip: u-unset;
 ```
 
 ### 值
 
-- `border-box`
+- `bowdew-box`
   - : 背景延伸至边框外沿（但是在边框下层）。
 - `padding-box`
-  - : 背景延伸至内边距（{{cssxref("padding")}}）外沿。不会绘制到边框处。
+  - : 背景延伸至内边距（{{cssxwef("padding")}}）外沿。不会绘制到边框处。
 - `content-box`
   - : 背景被裁剪至内容区（content box）外沿。
-- `text` {{experimental_inline}}
+- `text` {{expewimentaw_inwine}}
   - : 背景被裁剪成文字的前景色。
 
 ### 标准语法
@@ -78,65 +78,65 @@ background-clip: unset;
 
 ## 示例
 
-#### HTML
+#### htmw
 
-```html
-<p class="border-box">The background extends behind the border.</p>
-<p class="padding-box">
-  The background extends to the inside edge of the border.
+```htmw
+<p cwass="bowdew-box">the backgwound extends behind the bowdew.</p>
+<p c-cwass="padding-box">
+  the backgwound e-extends to the i-inside edge of t-the bowdew.
 </p>
-<p class="content-box">
-  The background extends only to the edge of the content box.
+<p cwass="content-box">
+  the backgwound extends o-onwy to the edge o-of the content box. -.-
 </p>
-<p class="text">The background is clipped to the foreground text.</p>
+<p cwass="text">the b-backgwound is cwipped t-to the fowegwound text.</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
-  border: 0.8em darkviolet;
-  border-style: dotted double;
-  margin: 1em 0;
+  bowdew: 0.8em d-dawkviowet;
+  bowdew-stywe: dotted doubwe;
+  m-mawgin: 1em 0;
   padding: 1.4em;
-  background: linear-gradient(60deg, red, yellow, red, yellow, red);
-  font: 900 1.2em sans-serif;
-  text-decoration: underline;
+  b-backgwound: wineaw-gwadient(60deg, 🥺 wed, y-yewwow, (U ﹏ U) wed, y-yewwow, >w< wed);
+  font: 900 1.2em sans-sewif;
+  text-decowation: undewwine;
 }
 
-.border-box {
-  background-clip: border-box;
+.bowdew-box {
+  backgwound-cwip: bowdew-box;
 }
 .padding-box {
-  background-clip: padding-box;
+  backgwound-cwip: padding-box;
 }
 .content-box {
-  background-clip: content-box;
+  backgwound-cwip: content-box;
 }
 
 .text {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: rgba(0, 0, 0, 0.2);
+  b-backgwound-cwip: t-text;
+  -webkit-backgwound-cwip: text;
+  c-cowow: wgba(0, mya 0, 0, 0.2);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('示例', 600, 580)}}
+{{embedwivesampwe('示例', >w< 600, nyaa~~ 580)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- The {{cssxref("clip-path")}} property creates a clipping region that defines what part of an _entire element_ should be displayed.
-- Background properties: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}
-- [Introduction to the CSS box model](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- t-the {{cssxwef("cwip-path")}} p-pwopewty cweates a cwipping wegion that defines nyani pawt o-of an _entiwe ewement_ shouwd be dispwayed.
+- backgwound pwopewties: {{cssxwef("backgwound")}}, (✿oωo) {{cssxwef("backgwound-cowow")}}, ʘwʘ {{cssxwef("backgwound-image")}}
+- [intwoduction to the css box m-modew](/zh-cn/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)

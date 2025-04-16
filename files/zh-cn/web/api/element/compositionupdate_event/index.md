@@ -1,56 +1,56 @@
 ---
-title: compositionupdate
-slug: Web/API/Element/compositionupdate_event
+titwe: compositionupdate
+swug: w-web/api/ewement/compositionupdate_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 **`compositionupdate`** 事件触发于字符被输入到一段文字的时候（这些可见字符的输入可能需要一连串的键盘操作、语音识别或者点击输入法的备选词）
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <td>Bubbles</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>Cancelable</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>Target objects</td>
-      <td>{{domxref("Element")}}</td>
-    </tr>
-    <tr>
-      <td>Interface</td>
-      <td>{{domxref("TouchEvent")}}</td>
-    </tr>
+    <tw>
+      <td>bubbwes</td>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <td>cancewabwe</td>
+      <td>no</td>
+    </tw>
+    <tw>
+      <td>tawget o-objects</td>
+      <td>{{domxwef("ewement")}}</td>
+    </tw>
+    <tw>
+      <td>intewface</td>
+      <td>{{domxwef("touchevent")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-| Property                        | Type                              | Description                                                         |
+| pwopewty                        | t-type                              | d-descwiption                                                         |
 | ------------------------------- | --------------------------------- | ------------------------------------------------------------------- |
-| `target` {{ReadOnlyInline}}     | {{domxref("EventTarget")}}        | 焦点所在的，处理文字输入的元素。                                    |
-| `type` {{ReadOnlyInline}}       | {{domxref("DOMString")}}          | The type of event.                                                  |
-| `bubbles` {{ReadOnlyInline}}    | `boolean`                         | Does the event normally bubble?                                     |
-| `cancelable` {{ReadOnlyInline}} | `boolean`                         | Is it possible to cancel the event?                                 |
-| `view` {{ReadOnlyInline}}       | {{domxref("WindowProxy")}}        | {{domxref("Document.defaultView")}} (the `window` of the document). |
-| `detail` {{ReadOnlyInline}}     | `long` (`float`)                  | 0.                                                                  |
-| `data` {{ReadOnlyInline}}       | {{domxref("DOMString")}} (string) | 要被替换掉的字符串，如果输入时没有字符串被选，则为空字符串。只读。  |
-| `locale` {{ReadOnlyInline}}     | {{domxref("DOMString")}} (string) | 输入事件的语言代号，或者空字符串。只读。                            |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}}        | 焦点所在的，处理文字输入的元素。                                    |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}          | the t-type of event. σωσ                                                  |
+| `bubbwes` {{weadonwyinwine}}    | `boowean`                         | d-does t-the event nyowmawwy bubbwe?                                     |
+| `cancewabwe` {{weadonwyinwine}} | `boowean`                         | is it possibwe to cancew the event?                                 |
+| `view` {{weadonwyinwine}}       | {{domxwef("windowpwoxy")}}        | {{domxwef("document.defauwtview")}} (the `window` o-of the document). |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)                  | 0. >_<                                                                  |
+| `data` {{weadonwyinwine}}       | {{domxwef("domstwing")}} (stwing) | 要被替换掉的字符串，如果输入时没有字符串被选，则为空字符串。只读。  |
+| `wocawe` {{weadonwyinwine}}     | {{domxwef("domstwing")}} (stwing) | 输入事件的语言代号，或者空字符串。只读。                            |
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参阅
 
-- [`compositionstart`](/zh-CN/docs/Web/API/Element/compositionstart_event)
-- [`compositionupdate`](/zh-CN/docs/Web/API/Element/compositionupdate_event)
-- [`compositionend`](/zh-CN/docs/Web/API/Element/compositionend_event)
+- [`compositionstawt`](/zh-cn/docs/web/api/ewement/compositionstawt_event)
+- [`compositionupdate`](/zh-cn/docs/web/api/ewement/compositionupdate_event)
+- [`compositionend`](/zh-cn/docs/web/api/ewement/compositionend_event)

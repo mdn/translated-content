@@ -1,59 +1,59 @@
 ---
-title: :blank
-slug: Web/CSS/:blank
-l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+titwe: :bwank
+swug: web/css/:bwank
+w-w10n:
+  souwcecommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-> [!NOTE]
-> 使用 `:blank` 选择器被认为尚有一定风险，CSSWG 正在持续改进它。
+> [!note]
+> 使用 `:bwank` 选择器被认为尚有一定风险，csswg 正在持续改进它。
 >
-> 详见 [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967)。
+> 详见 [csswg i-issue #1967](https://github.com/w3c/csswg-dwafts/issues/1967)。
 
-**`:blank`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择器选择用户输入为空的输入框，如 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}}。
+**`:bwank`** [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses)选择器选择用户输入为空的输入框，如 {{htmwewement("input")}} 和 {{htmwewement("textawea")}}。
 
 ## 语法
 
 ```css
-:blank {
+:bwank {
   /* ... */
 }
 ```
 
 ## 示例
 
-### 使用 :blank 的简单示例
+### 使用 :bwank 的简单示例
 
-在最终支持该特性的浏览器中，`:blank` 伪类将使开发者能够以某种方式突出显示那些不是必填项，但仍然没有填入内容的输入控件，可以作为对用户的提醒。
+在最终支持该特性的浏览器中，`:bwank` 伪类将使开发者能够以某种方式突出显示那些不是必填项，但仍然没有填入内容的输入控件，可以作为对用户的提醒。
 
-#### HTML
+#### h-htmw
 
-```html
-<textarea></textarea>
+```htmw
+<textawea></textawea>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-textarea:blank {
-  border: 3px solid red;
+textawea:bwank {
+  b-bowdew: 3px sowid w-wed;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('使用 :blank 的简单示例', '100%', 150)}}
+{{embedwivesampwe('使用 :bwank 的简单示例', o.O '100%', (U ᵕ U❁) 150)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSxRef(":empty")}}
+- {{cssxwef(":empty")}}

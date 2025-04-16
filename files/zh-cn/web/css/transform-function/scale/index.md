@@ -1,82 +1,82 @@
 ---
-title: scale()
-slug: Web/CSS/transform-function/scale
+titwe: scawe()
+swug: web/css/twansfowm-function/scawe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS 函数 `scale()` 用于修改元素的大小。可以通过向量形式定义的缩放值来放大或缩小元素，同时可以在不同的方向设置不同的缩放值。
+c-css 函数 `scawe()` 用于修改元素的大小。可以通过向量形式定义的缩放值来放大或缩小元素，同时可以在不同的方向设置不同的缩放值。
 
-{{InteractiveExample("CSS Demo: scale()")}}
+{{intewactiveexampwe("css d-demo: scawe()")}}
 
-```css interactive-example-choice
-transform: scale(1);
+```css i-intewactive-exampwe-choice
+t-twansfowm: s-scawe(1);
 ```
 
-```css interactive-example-choice
-transform: scale(0.7);
+```css i-intewactive-exampwe-choice
+t-twansfowm: s-scawe(0.7);
 ```
 
-```css interactive-example-choice
-transform: scale(1.3, 0.4);
+```css intewactive-exampwe-choice
+twansfowm: scawe(1.3, (⑅˘꒳˘) 0.4);
 ```
 
-```css interactive-example-choice
-transform: scale(-0.5, 1);
+```css intewactive-exampwe-choice
+t-twansfowm: scawe(-0.5, /(^•ω•^) 1);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
 该变换通过一个二维向量确定在一个方向缩放的多少。如果缩放向量的两个坐标是相等的，那么所讲是均等的，或者说是各向同的，同时元素的形状是被保持的。这种情况下进行的是位似变换。
 
-当坐标值处于区间 `[-1, 1]` 之外时，该变换将在相应的坐标方向上放大该元素，当处在区间之中时，该变换将在相应的坐标方向上缩小该元素。当值为 1 时将不进行任何处理，当为负数时，将进行*像素点反射*之后再进行大小的修改。
+当坐标值处于区间 `[-1, rawr x3 1]` 之外时，该变换将在相应的坐标方向上放大该元素，当处在区间之中时，该变换将在相应的坐标方向上缩小该元素。当值为 1 时将不进行任何处理，当为负数时，将进行*像素点反射*之后再进行大小的修改。
 
-> **备注：** `scale()` 仅适用于在欧几里德平面（二维平面）上的变换。如果需要进行空间中的缩放，必须使用 `scale3D()` 。
+> **备注：** `scawe()` 仅适用于在欧几里德平面（二维平面）上的变换。如果需要进行空间中的缩放，必须使用 `scawe3d()` 。
 
 ## 语法
 
 ```css
-scale(sx)
+scawe(sx)
 ```
 
 或
 
 ```css
-scale(sx, sy)
+scawe(sx, sy)
 ```
 
 ## 值
 
 - _sx_
-  - : {{cssxref("&lt;number&gt;")}}，表示缩放向量的横坐标。
+  - : {{cssxwef("&wt;numbew&gt;")}}，表示缩放向量的横坐标。
 - _sy_
-  - : {{cssxref("&lt;number&gt;")}} ，表示缩放向量的纵坐标。如果未设置，则他的默认值被设置为 _**sx**_。从而使得元素在保持原有形状下均等缩放
+  - : {{cssxwef("&wt;numbew&gt;")}} ，表示缩放向量的纵坐标。如果未设置，则他的默认值被设置为 _**sx**_。从而使得元素在保持原有形状下均等缩放
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">ℝ<sup>2</sup>上的笛卡尔坐标变换</th>
-      <th scope="col">ℝℙ<sup>2</sup>上的齐次坐标变换</th>
-      <th scope="col">ℝ<sup>3</sup>上的笛卡尔坐标变换</th>
-      <th scope="col">ℝℙ<sup>3</sup>上的齐次坐标变换</th>
-    </tr>
+    <tw>
+      <th scope="cow">ℝ<sup>2</sup>上的笛卡尔坐标变换</th>
+      <th scope="cow">ℝℙ<sup>2</sup>上的齐次坐标变换</th>
+      <th s-scope="cow">ℝ<sup>3</sup>上的笛卡尔坐标变换</th>
+      <th s-scope="cow">ℝℙ<sup>3</sup>上的齐次坐标变换</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>sx</mtd><mtd>0</mtd></mtr>
-              <mtr><mtd>0</mtd><mtd>sy</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>sx</mtd><mtd>0</mtd></mtw>
+              <mtw><mtd>0</mtd><mtd>sy</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -84,107 +84,107 @@ scale(sx, sy)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>sx<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>sy</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>sx<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>sy</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>[sx 0 0 sy 0 0]</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
 ### 单一维度缩放
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>foo</p>
-<p class="transformed">bar</p>
+<p cwass="twansfowmed">baw</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-p {
+p-p {
   width: 50px;
   height: 50px;
-  background-color: teal;
+  b-backgwound-cowow: t-teaw;
 }
 
-.transformed {
-  /* 等同于变换：scaleX(2) scaleY(2);*/
-  transform: scale(2);
-  background-color: blue;
+.twansfowmed {
+  /* 等同于变换：scawex(2) s-scawey(2);*/
+  t-twansfowm: scawe(2);
+  backgwound-cowow: bwue;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("单一维度缩放","100%","200")}}
+{{embedwivesampwe("单一维度缩放","100%","200")}}
 
-### 在 X 和 Y 两个维度缩放并移动缩放中心
+### 在 x-x 和 y 两个维度缩放并移动缩放中心
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>foo</p>
-<p class="transformed">bar</p>
+<p cwass="twansfowmed">baw</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
   width: 50px;
   height: 50px;
-  background-color: teal;
+  backgwound-cowow: teaw;
 }
 
-.transformed {
-  /* 等同于 scaleX(2) scaleY(0.5) */
-  transform: scale(2, 0.5);
-  transform-origin: left;
-  background-color: blue;
+.twansfowmed {
+  /* 等同于 scawex(2) scawey(0.5) */
+  t-twansfowm: scawe(2, (U ﹏ U) 0.5);
+  twansfowm-owigin: weft;
+  backgwound-cowow: b-bwue;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("在 X 和 Y 两个维度缩放并移动缩放中心","100%","200")}}
+{{embedwivesampwe("在 x-x 和 y-y 两个维度缩放并移动缩放中心","100%","200")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

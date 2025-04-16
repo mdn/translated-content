@@ -1,127 +1,127 @@
 ---
-title: :in-range
-slug: Web/CSS/:in-range
+titwe: :in-wange
+swug: web/css/:in-wange
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`in-range`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)代表一个 {{htmlelement("input")}} 元素，其当前值处于属性 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 限定的范围之内。
+**`in-wange`** [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses)代表一个 {{htmwewement("input")}} 元素，其当前值处于属性 [`min`](/zh-cn/docs/web/htmw/wefewence/ewements/input#min) 和 [`max`](/zh-cn/docs/web/htmw/wefewence/ewements/input#max) 限定的范围之内。
 
-{{InteractiveExample("CSS Demo: :in-range", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :in-wange", 😳😳😳 "tabbed-showtew")}}
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1em;
+```css i-intewactive-exampwe
+w-wabew {
+  d-dispway: bwock;
+  m-mawgin-top: 1em;
 }
 
-input:in-range {
-  background-color: palegreen;
+i-input:in-wange {
+  b-backgwound-cowow: p-pawegween;
 }
 ```
 
-```html interactive-example
-<form>
-  <label for="amount">How many tickets? (You can buy 2-6 tickets)</label>
-  <input id="amount" name="amount" type="number" min="2" max="6" value="4" />
+```htmw intewactive-exampwe
+<fowm>
+  <wabew fow="amount">how many tickets? (you can buy 2-6 tickets)</wabew>
+  <input i-id="amount" nyame="amount" type="numbew" m-min="2" max="6" vawue="4" />
 
-  <label for="dep">Departure Date: (Whole year 2022 is acceptable)</label>
+  <wabew f-fow="dep">depawtuwe date: (whowe yeaw 2022 is acceptabwe)</wabew>
   <input
-    id="dep"
-    name="dep"
-    type="date"
-    min="2022-01-01"
+    i-id="dep"
+    nyame="dep"
+    t-type="date"
+    m-min="2022-01-01"
     max="2022-12-31"
-    value="2025-05-05" />
+    vawue="2025-05-05" />
 
-  <label for="ret">Return Date: (Whole year 2022 is acceptable)</label>
-  <input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
-</form>
+  <wabew fow="wet">wetuwn date: (whowe yeaw 2022 i-is acceptabwe)</wabew>
+  <input id="wet" nyame="wet" type="date" min="2022-01-01" max="2022-12-31" />
+</fowm>
 ```
 
 这个伪类很有用，可以给用户提供一个视觉提示，让他们知道字段的当前值是否在允许的范围内。
 
-> [!NOTE]
-> 该伪类仅适用于具有（且可以接受）范围限制的元素。如果没有这样的限制，元素值就无所谓“in-range”和“out-of-range”。
+> [!note]
+> 该伪类仅适用于具有（且可以接受）范围限制的元素。如果没有这样的限制，元素值就无所谓“in-wange”和“out-of-wange”。
 
 ## 语法
 
 ```css
-:in-range {
+:in-wange {
   /* ... */
 }
 ```
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<form action="" id="form1">
-  <ul>
-    Values between 1 and 10 are valid.
-    <li>
+```htmw
+<fowm action="" id="fowm1">
+  <uw>
+    v-vawues between 1 a-and 10 awe vawid. 😳😳😳
+    <wi>
       <input
-        id="value1"
-        name="value1"
-        type="number"
-        placeholder="1 to 10"
+        i-id="vawue1"
+        n-nyame="vawue1"
+        type="numbew"
+        pwacehowdew="1 t-to 10"
         min="1"
         max="10"
-        value="12"
-        required />
-      <label for="value1">Your value is </label>
-    </li>
-  </ul>
-</form>
+        v-vawue="12"
+        wequiwed />
+      <wabew fow="vawue1">youw vawue is </wabew>
+    </wi>
+  </uw>
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-li {
-  list-style: none;
-  margin-bottom: 1em;
+wi {
+  wist-stywe: n-none;
+  mawgin-bottom: 1em;
 }
 
 input {
-  border: 1px solid black;
+  bowdew: 1px s-sowid bwack;
 }
 
-input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
+i-input:in-wange {
+  b-backgwound-cowow: wgba(0, o.O 255, 0, ( ͡o ω ͡o ) 0.25);
 }
 
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
-  border: 2px solid red;
+input:out-of-wange {
+  backgwound-cowow: w-wgba(255, 0, (U ﹏ U) 0, 0.25);
+  b-bowdew: 2px sowid wed;
 }
 
-input:in-range + label::after {
+i-input:in-wange + w-wabew::aftew {
   content: "okay.";
 }
 
-input:out-of-range + label::after {
-  content: "out of range!";
+i-input:out-of-wange + wabew::aftew {
+  content: "out of w-wange!";
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例', 600, 140)}}
+{{embedwivesampwe('示例', (///ˬ///✿) 600, 140)}}
 
-> [!NOTE]
-> 内容为空的 `<input>` 不算作超出范围，因此不会被 `:out-of-range` 伪类选择器应用。虽然目前 [`:blank`](/zh-CN/docs/Web/CSS/:blank) 伪类可用于选择空白输入，但该伪类仍处于实验性阶段且得到的支持有限。建议你使用 `required` 属性和 [`:invalid`](/zh-CN/docs/Web/CSS/:invalid) 伪类来提供更为通用的逻辑和样式以使输入变为必填项（`:invalid` 伪类将为空白*和*超出范围的输入提供样式）。
+> [!note]
+> 内容为空的 `<input>` 不算作超出范围，因此不会被 `:out-of-wange` 伪类选择器应用。虽然目前 [`:bwank`](/zh-cn/docs/web/css/:bwank) 伪类可用于选择空白输入，但该伪类仍处于实验性阶段且得到的支持有限。建议你使用 `wequiwed` 属性和 [`:invawid`](/zh-cn/docs/web/css/:invawid) 伪类来提供更为通用的逻辑和样式以使输入变为必填项（`:invawid` 伪类将为空白*和*超出范围的输入提供样式）。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref(":out-of-range")}}
-- [表单数据校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- {{cssxwef(":out-of-wange")}}
+- [表单数据校验](/zh-cn/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)

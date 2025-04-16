@@ -1,84 +1,84 @@
 ---
-title: border-bottom
-slug: Web/CSS/border-bottom
+titwe: bowdew-bottom
+swug: web/css/bowdew-bottom
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-border-bottom 简写属性把下边框的所有属性：{{Cssxref("border-bottom-color")}}，{{Cssxref("border-bottom-style")}} 与 {{Cssxref("border-bottom-width")}} 设置到了一个声明中。这些属性描述了元素的下边框样式。
+b-bowdew-bottom 简写属性把下边框的所有属性：{{cssxwef("bowdew-bottom-cowow")}}，{{cssxwef("bowdew-bottom-stywe")}} 与 {{cssxwef("bowdew-bottom-width")}} 设置到了一个声明中。这些属性描述了元素的下边框样式。
 
-{{InteractiveExample("CSS Demo: border-bottom")}}
+{{intewactiveexampwe("css d-demo: bowdew-bottom")}}
 
-```css interactive-example-choice
-border-bottom: solid;
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom: s-sowid;
 ```
 
-```css interactive-example-choice
-border-bottom: dashed red;
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom: d-dashed wed;
 ```
 
-```css interactive-example-choice
-border-bottom: 1rem solid;
+```css intewactive-exampwe-choice
+bowdew-bottom: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border-bottom: thick double #32a1ce;
+```css i-intewactive-exampwe-choice
+bowdew-bottom: thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border-bottom: 4mm ridge rgba(211, 220, 50, 0.6);
+```css i-intewactive-exampwe-choice
+bowdew-bottom: 4mm w-widge wgba(211, >_< 220, 50, 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box with a-a bowdew awound i-it. (⑅˘꒳˘)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #8b008b;
   padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-与所有的简记属性相同， `border-bottom` 定义了它所有可以定义的属性，即使他们并没有被显式地定义。它把所有未被显式定义的参数都设置为了默认值，这意味着这些值将被定义为：
+与所有的简记属性相同， `bowdew-bottom` 定义了它所有可以定义的属性，即使他们并没有被显式地定义。它把所有未被显式定义的参数都设置为了默认值，这意味着这些值将被定义为：
 
 ```css
-border-bottom-style: dotted;
-border-bottom: thick green;
+bowdew-bottom-stywe: dotted;
+bowdew-bottom: thick gween;
 ```
 
 它和以下的代码是等价的：
 
 ```css
-border-bottom-style: dotted;
-border-bottom: none thick green;
+bowdew-bottom-stywe: d-dotted;
+bowdew-bottom: n-nyone thick gween;
 ```
 
-顺便一提，在 `border-bottom` 之前定义的 {{Cssxref("border-bottom-style")}} 的值因此被忽略了。由于 {{Cssxref("border-bottom-style")}} 并没有默认值，未被定义的 `border-style` 参数的值将被设置为 `none`，也就是无底边框。
+顺便一提，在 `bowdew-bottom` 之前定义的 {{cssxwef("bowdew-bottom-stywe")}} 的值因此被忽略了。由于 {{cssxwef("bowdew-bottom-stywe")}} 并没有默认值，未被定义的 `bowdew-stywe` 参数的值将被设置为 `none`，也就是无底边框。
 
 ## 语法
 
 ```css
-border-bottom: 1px;
-border-bottom: 2px dotted;
-border-bottom: medium dashed blue;
+b-bowdew-bottom: 1px;
+b-bowdew-bottom: 2px d-dotted;
+bowdew-bottom: medium dashed bwue;
 ```
 
 ### 值
 
-- `<br-width>`
-  - : 见 {{Cssxref("border-bottom-width")}}。
-- `<br-style>`
-  - : 见 {{Cssxref("border-bottom-style")}}。
-- {{cssxref("&lt;color&gt;")}}
-  - : 见 {{Cssxref("border-bottom-color")}}。
+- `<bw-width>`
+  - : 见 {{cssxwef("bowdew-bottom-width")}}。
+- `<bw-stywe>`
+  - : 见 {{cssxwef("bowdew-bottom-stywe")}}。
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : 见 {{cssxwef("bowdew-bottom-cowow")}}。
 
 ### 形式语法
 
@@ -86,27 +86,27 @@ border-bottom: medium dashed blue;
 
 ## 示例
 
-```html
-<div>This box has a border on the bottom side.</div>
+```htmw
+<div>this b-box has a bowdew on the bottom side.</div>
 ```
 
 ```css
-div {
-  border-bottom: 4px dashed blue;
-  background-color: gold;
+d-div {
+  bowdew-bottom: 4px dashed bwue;
+  backgwound-cowow: gowd;
   height: 100px;
-  width: 100px;
-  font-weight: bold;
-  text-align: center;
+  w-width: 100px;
+  font-weight: bowd;
+  t-text-awign: c-centew;
 }
 ```
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

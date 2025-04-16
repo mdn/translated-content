@@ -1,77 +1,77 @@
 ---
-title: DataTransferItem.getAsString()
-slug: Web/API/DataTransferItem/getAsString
+titwe: datatwansfewitem.getasstwing()
+swug: web/api/datatwansfewitem/getasstwing
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and d-dwop api")}}
 
-**`DataTransferItem.getAsString()`** 当 DataTransferItem 对象的 kind 属性是一个普通 Unicode 字符串时，该方法会用 DataTransferItem 对象的 kind 属性作为入参来执行传入的回调函数 (i.e. `kind` is `string`).
+**`datatwansfewitem.getasstwing()`** 当 d-datatwansfewitem 对象的 k-kind 属性是一个普通 u-unicode 字符串时，该方法会用 d-datatwansfewitem 对象的 k-kind 属性作为入参来执行传入的回调函数 (i.e. >w< `kind` i-is `stwing`). rawr
 
 ## 示例
 
-```plain
-dataTransferItem.getAsString(callback);
+```pwain
+datatwansfewitem.getasstwing(cawwback);
 ```
 
-### Parameters
+### pawametews
 
-- `callback`
-  - : A callback function that has access to the {{domxref("DataTransferItem","data transfer item's")}} string data. See [Callback](#callback) below for details.
+- `cawwback`
+  - : a cawwback function that has a-access to the {{domxwef("datatwansfewitem","data twansfew item's")}} stwing data. mya s-see [cawwback](#cawwback) bewow fow detaiws. ^^
 
-### Return value
+### w-wetuwn vawue
 
-{{jsxref("undefined")}}
+{{jsxwef("undefined")}}
 
-## Callback
+## cawwback
 
-The callback parameter is a callback function which accepts one parameter:
+the cawwback pawametew is a cawwback f-function which accepts one pawametew:
 
-- {{domxref("DOMString")}}
-  - : The drag data item's string data.
+- {{domxwef("domstwing")}}
+  - : t-the dwag d-data item's stwing data. 😳😳😳
 
-The callback return value is `undefined`.
+the cawwback wetuwn vawue is `undefined`. mya
 
-## Example
+## exampwe
 
-This example shows the use of the `getAsString()` method as an _inline function_ in a [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) event handler.
+t-this exampwe shows the use of the `getasstwing()` method as an _inwine function_ i-in a [`dwop`](/zh-cn/docs/web/api/htmwewement/dwop_event) event h-handwew. 😳
 
 ```js
-function drop_handler(ev) {
-  console.log("Drop");
-  ev.preventDefault();
-  var data = ev.dataTransfer.items;
-  for (var i = 0; i < data.length; i += 1) {
-    if (data[i].kind == "string" && data[i].type.match("^text/plain")) {
-      // This item is the target node
-      data[i].getAsString(function (s) {
-        ev.target.appendChild(document.getElementById(s));
+f-function dwop_handwew(ev) {
+  c-consowe.wog("dwop");
+  e-ev.pweventdefauwt();
+  vaw data = ev.datatwansfew.items;
+  fow (vaw i = 0; i-i < data.wength; i += 1) {
+    if (data[i].kind == "stwing" && d-data[i].type.match("^text/pwain")) {
+      // this item is the tawget nyode
+      data[i].getasstwing(function (s) {
+        ev.tawget.appendchiwd(document.getewementbyid(s));
       });
-    } else if (data[i].kind == "string" && data[i].type.match("^text/html")) {
-      // Drag data item is HTML
-      console.log("... Drop: HTML");
-    } else if (
-      data[i].kind == "string" &&
-      data[i].type.match("^text/uri-list")
+    } ewse if (data[i].kind == "stwing" && data[i].type.match("^text/htmw")) {
+      // d-dwag data item is htmw
+      c-consowe.wog("... d-dwop: htmw");
+    } e-ewse if (
+      data[i].kind == "stwing" &&
+      data[i].type.match("^text/uwi-wist")
     ) {
-      // Drag data item is URI
-      console.log("... Drop: URI");
-    } else if (data[i].kind == "file" && data[i].type.match("^image/")) {
-      // Drag data item is an image file
-      var f = data[i].getAsFile();
-      console.log("... Drop: File ");
+      // dwag d-data item is u-uwi
+      consowe.wog("... dwop: u-uwi");
+    } ewse i-if (data[i].kind == "fiwe" && data[i].type.match("^image/")) {
+      // d-dwag data item is an i-image fiwe
+      vaw f = data[i].getasfiwe();
+      consowe.wog("... d-dwop: fiwe ");
     }
   }
 }
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("DataTransfer.getData()")}}
+- {{domxwef("datatwansfew.getdata()")}}

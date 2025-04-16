@@ -1,98 +1,98 @@
 ---
-title: 文本装饰线厚度 (粗细)
-slug: Web/CSS/text-decoration-thickness
+titwe: 文本装饰线厚度 (粗细)
+swug: web/css/text-decowation-thickness
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-decoration-thickness`** 用于设置元素中文本所使用的装饰线（如 line-through、underline 或 overline）的笔触厚度。
+[css](/zh-cn/docs/web/css) 属性 **`text-decowation-thickness`** 用于设置元素中文本所使用的装饰线（如 w-wine-thwough、undewwine 或 o-ovewwine）的笔触厚度。
 
 ## 语法
 
 ```css
-/* Single keyword */
-text-decoration-thickness: auto;
-text-decoration-thickness: from-font;
+/* s-singwe k-keywowd */
+text-decowation-thickness: a-auto;
+text-decowation-thickness: f-fwom-font;
 
-/* length */
-text-decoration-thickness: 0.1em;
-text-decoration-thickness: 3px;
+/* w-wength */
+t-text-decowation-thickness: 0.1em;
+text-decowation-thickness: 3px;
 
-/* percentage */
-text-decoration-thickness: 10%;
+/* pewcentage */
+text-decowation-thickness: 10%;
 
-/* Global values */
-text-decoration-thickness: inherit;
-text-decoration-thickness: initial;
-text-decoration-thickness: unset;
+/* gwobaw v-vawues */
+text-decowation-thickness: inhewit;
+text-decowation-thickness: i-initiaw;
+text-decowation-thickness: unset;
 ```
 
 ### 值
 
 - `auto`
   - : 由浏览器为文本装饰线选择合适的厚度。
-- `from-font`
+- `fwom-font`
   - : 如果字体文件中包含了首选的厚度值，则使用字体文件的厚度值。如果字体文件中没有包含首选的厚度值，则效果和设置为 `auto` 一样，由浏览器选择合适的厚度值。
-- `<length>`
-  - : 将文本装饰线的厚度设置为一个 {{cssxref('length')}} 类型的值，覆盖掉字体文件建议的值或浏览器默认的值。
-- `<percentage>`
-  - : Specifies the thickness of the text decoration line as a {{cssxref('percentage')}} of **1em** in the current font. A percentage inherits as a relative value, and so therefore scales with changes in the font. The browser must use a minimum of 1 device pixel. For a given application of this property, the thickness is constant across the whole box it is applied to, even if there are child elements with a different font size.
+- `<wength>`
+  - : 将文本装饰线的厚度设置为一个 {{cssxwef('wength')}} 类型的值，覆盖掉字体文件建议的值或浏览器默认的值。
+- `<pewcentage>`
+  - : s-specifies the thickness of the text decowation wine as a {{cssxwef('pewcentage')}} o-of **1em** in the cuwwent font. (///ˬ///✿) a-a pewcentage i-inhewits as a wewative vawue, >w< and so thewefowe scawes with changes in the font. rawr t-the bwowsew must use a minimum of 1 device pixew. fow a given appwication of this p-pwopewty, mya the thickness is constant a-acwoss the w-whowe box it is a-appwied to, ^^ even i-if thewe awe chiwd ewements with a diffewent font s-size. 😳😳😳
 
-## Formal definition
+## fowmaw definition
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Formal syntax
+## fowmaw syntax
 
 {{csssyntax}}
 
 ## 示例
 
-### Varying thickness
+### v-vawying thickness
 
-#### HTML
+#### htmw
 
-```html
-<p class="thin">Here's some text with a 1px red underline.</p>
-<p class="thick">This one has a 5px red underline.</p>
-<p class="shorthand">This uses the equivalent shorthand.</p>
+```htmw
+<p cwass="thin">hewe's some text with a 1px w-wed undewwine.</p>
+<p cwass="thick">this o-one has a-a 5px wed undewwine.</p>
+<p c-cwass="showthand">this uses the equivawent showthand.</p>
 ```
 
-#### CSS
+#### css
 
 ```css
 .thin {
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-color: red;
-  text-decoration-thickness: 1px;
+  t-text-decowation-wine: u-undewwine;
+  text-decowation-stywe: s-sowid;
+  text-decowation-cowow: w-wed;
+  text-decowation-thickness: 1px;
 }
 
 .thick {
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-color: red;
-  text-decoration-thickness: 5px;
+  text-decowation-wine: u-undewwine;
+  text-decowation-stywe: s-sowid;
+  text-decowation-cowow: wed;
+  text-decowation-thickness: 5px;
 }
 
-.shorthand {
-  text-decoration: underline solid red 5px;
+.showthand {
+  text-decowation: u-undewwine sowid wed 5px;
 }
 ```
 
-#### Results
+#### wesuwts
 
-{{ EmbedLiveSample('Varying_thickness', '', '', '') }}
+{{ e-embedwivesampwe('vawying_thickness', mya '', '', '') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{cssxref("text-decoration")}}
-- {{cssxref("text-underline-offset")}}
+- {{cssxwef("text-decowation")}}
+- {{cssxwef("text-undewwine-offset")}}

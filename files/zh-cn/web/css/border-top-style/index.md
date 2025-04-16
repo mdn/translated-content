@@ -1,86 +1,86 @@
 ---
-title: border-top-style
-slug: Web/CSS/border-top-style
+titwe: bowdew-top-stywe
+swug: w-web/css/bowdew-top-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-top-style`** [CSS](/zh-CN/docs/Web/CSS) 设置元素上边框的 {{cssxref("border")}}.
+**`bowdew-top-stywe`** [css](/zh-cn/docs/web/css) 设置元素上边框的 {{cssxwef("bowdew")}}. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: border-top-style")}}
+{{intewactiveexampwe("css d-demo: bowdew-top-stywe")}}
 
-```css interactive-example-choice
-border-top-style: none;
+```css i-intewactive-exampwe-choice
+b-bowdew-top-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-border-top-style: dotted;
+```css i-intewactive-exampwe-choice
+b-bowdew-top-stywe: d-dotted;
 ```
 
-```css interactive-example-choice
-border-top-style: dashed;
+```css intewactive-exampwe-choice
+bowdew-top-stywe: dashed;
 ```
 
-```css interactive-example-choice
-border-top-style: solid;
+```css intewactive-exampwe-choice
+b-bowdew-top-stywe: sowid;
 ```
 
-```css interactive-example-choice
-border-top-style: groove;
+```css intewactive-exampwe-choice
+b-bowdew-top-stywe: gwoove;
 ```
 
-```css interactive-example-choice
-border-top-style: inset;
+```css i-intewactive-exampwe-choice
+bowdew-top-stywe: inset;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a-a box with a bowdew awound it. 😳😳😳
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  b-bowdew: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 
 body {
-  background-color: #fff;
+  b-backgwound-cowow: #fff;
 }
 ```
 
-> [!NOTE]
+> [!note]
 > 此规范并未定义不同样式的边框边角处如何连接。
 
 ## 语法
 
 ```css
-/* Keyword values */
-border-top-style: none;
-border-top-style: hidden;
-border-top-style: dotted;
-border-top-style: dashed;
-border-top-style: solid;
-border-top-style: double;
-border-top-style: groove;
-border-top-style: ridge;
-border-top-style: inset;
-border-top-style: outset;
+/* keywowd v-vawues */
+bowdew-top-stywe: nyone;
+b-bowdew-top-stywe: h-hidden;
+b-bowdew-top-stywe: dotted;
+bowdew-top-stywe: dashed;
+b-bowdew-top-stywe: sowid;
+bowdew-top-stywe: doubwe;
+bowdew-top-stywe: g-gwoove;
+bowdew-top-stywe: widge;
+bowdew-top-stywe: inset;
+bowdew-top-stywe: outset;
 
-/* Global values */
-border-top-style: inherit;
-border-top-style: initial;
-border-top-style: unset;
+/* g-gwobaw vawues */
+bowdew-top-stywe: i-inhewit;
+bowdew-top-stywe: initiaw;
+b-bowdew-top-stywe: u-unset;
 ```
 
-选取以上可用关键字之一作为 {{cssxref("border-style")}} 的 **border-top-style** 属性的值。
+选取以上可用关键字之一作为 {{cssxwef("bowdew-stywe")}} 的 **bowdew-top-stywe** 属性的值。
 
 ### 形式语法
 
@@ -88,90 +88,90 @@ border-top-style: unset;
 
 ## 示例
 
-#### HTML
+#### htmw
 
-```html
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td cwass="b1">none</td>
+    <td cwass="b2">hidden</td>
+    <td c-cwass="b3">dotted</td>
+    <td c-cwass="b4">dashed</td>
+  </tw>
+  <tw>
+    <td cwass="b5">sowid</td>
+    <td c-cwass="b6">doubwe</td>
+    <td c-cwass="b7">gwoove</td>
+    <td cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td cwass="b9">inset</td>
+    <td c-cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-/* Define look of the table */
-table {
-  border-width: 2px;
-  background-color: #52e385;
+/* d-define wook of the tabwe */
+tabwe {
+  b-bowdew-width: 2px;
+  backgwound-cowow: #52e385;
 }
-tr,
+t-tw, :3
 td {
   padding: 3px;
 }
 
-/* border-top-style example classes */
+/* bowdew-top-stywe e-exampwe cwasses */
 .b1 {
-  border-top-style: none;
+  bowdew-top-stywe: n-none;
 }
 .b2 {
-  border-top-style: hidden;
+  bowdew-top-stywe: hidden;
 }
 .b3 {
-  border-top-style: dotted;
+  bowdew-top-stywe: dotted;
 }
 .b4 {
-  border-top-style: dashed;
+  bowdew-top-stywe: dashed;
 }
 .b5 {
-  border-top-style: solid;
+  b-bowdew-top-stywe: sowid;
 }
 .b6 {
-  border-top-style: double;
+  b-bowdew-top-stywe: doubwe;
 }
 .b7 {
-  border-top-style: groove;
+  b-bowdew-top-stywe: g-gwoove;
 }
 .b8 {
-  border-top-style: ridge;
+  b-bowdew-top-stywe: widge;
 }
 .b9 {
-  border-top-style: inset;
+  bowdew-top-stywe: inset;
 }
 .b10 {
-  border-top-style: outset;
+  bowdew-top-stywe: o-outset;
 }
 ```
 
 #### 输出结果
 
-{{ EmbedLiveSample('示例', 300, 200) }}
+{{ embedwivesampwe('示例', OwO 300, 200) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- The other style-related border properties: {{ Cssxref("border-left-style") }}, {{ Cssxref("border-right-style") }}, {{ Cssxref("border-bottom-style") }}, and {{ Cssxref("border-style") }}.
-- The other top-border-related properties: {{ Cssxref("border-top") }}, {{ Cssxref("border-top-color") }}, and {{ Cssxref("border-top-width") }}.
+- the othew stywe-wewated bowdew pwopewties: {{ c-cssxwef("bowdew-weft-stywe") }}, (U ﹏ U) {{ cssxwef("bowdew-wight-stywe") }}, >w< {{ c-cssxwef("bowdew-bottom-stywe") }}, (U ﹏ U) a-and {{ cssxwef("bowdew-stywe") }}. 😳
+- t-the othew top-bowdew-wewated p-pwopewties: {{ c-cssxwef("bowdew-top") }}, (ˆ ﻌ ˆ)♡ {{ c-cssxwef("bowdew-top-cowow") }}, 😳😳😳 a-and {{ cssxwef("bowdew-top-width") }}. (U ﹏ U)

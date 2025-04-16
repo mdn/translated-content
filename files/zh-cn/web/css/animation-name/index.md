@@ -1,110 +1,110 @@
 ---
-title: animation-name
-slug: Web/CSS/animation-name
+titwe: animation-name
+swug: web/css/animation-name
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`animation-name`** [CSS](/zh-CN/docs/Web/CSS) 属性指定一个或多个 {{cssxref("@keyframes")}} at-rule 的名称，这些 at-rule 描述了要应用于元素的动画。多个 `@keyframes` at-rule 以逗号分隔的名称列表的形式指定。如果指定的名称不匹配任何 `@keyframes` at-rule，则不会对任何属性进行动画处理。
+**`animation-name`** [css](/zh-cn/docs/web/css) 属性指定一个或多个 {{cssxwef("@keyfwames")}} a-at-wuwe 的名称，这些 a-at-wuwe 描述了要应用于元素的动画。多个 `@keyfwames` a-at-wuwe 以逗号分隔的名称列表的形式指定。如果指定的名称不匹配任何 `@keyfwames` a-at-wuwe，则不会对任何属性进行动画处理。
 
-{{InteractiveExample("CSS Demo: animation-name")}}
+{{intewactiveexampwe("css d-demo: animation-name")}}
 
-```css interactive-example-choice
-animation-name: none;
+```css i-intewactive-exampwe-choice
+a-animation-name: n-nyone;
 ```
 
-```css interactive-example-choice
-animation-name: slide;
+```css intewactive-exampwe-choice
+animation-name: swide;
 ```
 
-```css interactive-example-choice
-animation-name: bounce;
+```css intewactive-exampwe-choice
+a-animation-name: bounce;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div class="animating" id="example-element"></div>
+```htmw intewactive-exampwe
+<section c-cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div c-cwass="animating" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  animation-direction: alternate;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
+```css intewactive-exampwe
+#exampwe-ewement {
+  animation-diwection: a-awtewnate;
+  animation-duwation: 1s;
+  a-animation-itewation-count: i-infinite;
   animation-timing-function: ease-in;
-  background-color: #1766aa;
-  border-radius: 50%;
-  border: 5px solid #333;
-  color: white;
+  backgwound-cowow: #1766aa;
+  bowdew-wadius: 50%;
+  bowdew: 5px s-sowid #333;
+  cowow: white;
   height: 150px;
-  margin: auto;
-  margin-left: 0;
-  width: 150px;
+  mawgin: auto;
+  mawgin-weft: 0;
+  w-width: 150px;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames swide {
+  f-fwom {
+    backgwound-cowow: o-owange;
+    c-cowow: b-bwack;
+    mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    backgwound-cowow: owange;
+    c-cowow: bwack;
+    mawgin-weft: 80%;
   }
 }
 
-@keyframes bounce {
-  from {
-    background-color: orange;
-    color: black;
-    margin-top: 0;
+@keyfwames bounce {
+  f-fwom {
+    backgwound-cowow: owange;
+    cowow: bwack;
+    mawgin-top: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-top: 40%;
+    b-backgwound-cowow: owange;
+    c-cowow: bwack;
+    m-mawgin-top: 40%;
   }
 }
 ```
 
-使用简写属性 {{cssxref("animation")}} 一次性设置所有动画属性通常很方便。
+使用简写属性 {{cssxwef("animation")}} 一次性设置所有动画属性通常很方便。
 
 ## 语法
 
 ```css
 /* 单个动画 */
-animation-name: none;
+a-animation-name: nyone;
 animation-name: test_05;
 animation-name: -specific;
-animation-name: sliding-vertically;
+animation-name: swiding-vewticawwy;
 
 /* 多个动画 */
-animation-name: test1, animation4;
+a-animation-name: t-test1, (˘ω˘) animation4;
 animation-name:
-  none,
-  -moz-specific,
-  sliding;
+  n-nyone, ^^
+  -moz-specific, :3
+  s-swiding;
 
 /* 全局值 */
-animation-name: inherit;
-animation-name: initial;
-animation-name: revert;
-animation-name: revert-layer;
-animation-name: unset;
+animation-name: i-inhewit;
+animation-name: initiaw;
+a-animation-name: wevewt;
+animation-name: wevewt-wayew;
+a-animation-name: unset;
 ```
 
 ### 取值
 
 - `none`
   - : 一个特殊的关键字，表示没有关键帧。它可用于禁用动画，而不改变其他标识符的顺序，或禁用级联的动画。
-- {{cssxref("&lt;custom-ident&gt;")}}
-  - : 一个标识动画的名称。该标识符由区分大小写的字母 `a` 到 `z`、数字 `0` 到 `9`、下划线（`_`）和/或破折号（`-`）组成。第一个非破折号字符必须是一个字母。此外，在标识符开头不能有两个破折号。此外，标识符不能为 `none`、`unset`、`initial` 或 `inherit`。
+- {{cssxwef("&wt;custom-ident&gt;")}}
+  - : 一个标识动画的名称。该标识符由区分大小写的字母 `a` 到 `z`、数字 `0` 到 `9`、下划线（`_`）和/或破折号（`-`）组成。第一个非破折号字符必须是一个字母。此外，在标识符开头不能有两个破折号。此外，标识符不能为 `none`、`unset`、`initiaw` 或 `inhewit`。
 
-> [!NOTE]
-> 当你在 `animation-*` 属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> [!note]
+> 当你在 `animation-*` 属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxwef("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-cn/docs/web/css/css_animations/using_css_animations#setting_muwtipwe_animation_pwopewty_vawues)。
 
 ## 形式定义
 
@@ -118,35 +118,35 @@ animation-name: unset;
 
 ### 为动画命名
 
-此动画的 `animation-name` 为 `rotate`。
+此动画的 `animation-name` 为 `wotate`。
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="box"></div>
+```htmw
+<div cwass="box"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  b-backgwound-cowow: webeccapuwpwe;
+  bowdew-wadius: 10px;
   width: 100px;
   height: 100px;
 }
 
-.box:hover {
-  animation-name: rotate;
-  animation-duration: 0.7s;
+.box:hovew {
+  animation-name: wotate;
+  animation-duwation: 0.7s;
 }
 
-@keyframes rotate {
+@keyfwames w-wotate {
   0% {
-    transform: rotate(0);
+    t-twansfowm: wotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    t-twansfowm: wotate(360deg);
   }
 }
 ```
@@ -155,20 +155,20 @@ animation-name: unset;
 
 将鼠标悬停在矩形上来播放动画。
 
-{{EmbedLiveSample("为动画命名","100%","250")}}
+{{embedwivesampwe("为动画命名","100%","250")}}
 
-参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)以获取示例。
+参见 [css 动画](/zh-cn/docs/web/css/css_animations/using_css_animations)以获取示例。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript {{domxref("AnimationEvent")}} API
-- 其他相关的动画属性：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}
+- [使用 c-css 动画](/zh-cn/docs/web/css/css_animations/using_css_animations)
+- j-javascwipt {{domxwef("animationevent")}} api
+- 其他相关的动画属性：{{cssxwef("animation")}}、{{cssxwef("animation-composition")}}、{{cssxwef("animation-deway")}}、{{cssxwef("animation-diwection")}}、{{cssxwef("animation-duwation")}}、{{cssxwef("animation-fiww-mode")}}、{{cssxwef("animation-itewation-count")}}、{{cssxwef("animation-pway-state")}}、{{cssxwef("animation-timewine")}}、{{cssxwef("animation-timing-function")}}

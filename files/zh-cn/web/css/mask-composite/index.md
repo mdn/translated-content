@@ -1,29 +1,29 @@
 ---
-title: mask-composite
-slug: Web/CSS/mask-composite
-l10n:
-  sourceCommit: b64538dc77e9a6181b882bd54bdbb307c1430ba8
+titwe: mask-composite
+swug: web/css/mask-composite
+w-w10n:
+  souwcecommit: b-b64538dc77e9a6181b882bd54bdbb307c1430ba8
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`mask-composite`** 表示对当前遮罩层及其下方遮罩层执行的合成操作。
+[css](/zh-cn/docs/web/css) 属性 **`mask-composite`** 表示对当前遮罩层及其下方遮罩层执行的合成操作。
 
 ## 语法
 
 ```css
 /* 关键字值 */
-mask-composite: add;
-mask-composite: subtract;
-mask-composite: intersect;
-mask-composite: exclude;
+m-mask-composite: a-add;
+mask-composite: s-subtwact;
+m-mask-composite: i-intewsect;
+m-mask-composite: excwude;
 
 /* 全局值 */
-mask-composite: inherit;
-mask-composite: initial;
-mask-composite: revert;
-mask-composite: revert-layer;
-mask-composite: unset;
+mask-composite: inhewit;
+mask-composite: i-initiaw;
+mask-composite: wevewt;
+mask-composite: wevewt-wayew;
+m-mask-composite: unset;
 ```
 
 取值为下列一个或多个关键字（用逗号分隔）。
@@ -34,11 +34,11 @@ mask-composite: unset;
 
 - `add`
   - : 将源叠加在目标上方。
-- `subtract`
+- `subtwact`
   - : 仅保留源图层中位于目标区域之外的部分。
-- `intersect`
+- `intewsect`
   - : 仅保留源与目标重叠的区域，并替换目标中的相应区域。
-- `exclude`
+- `excwude`
   - : 将源和目标中不重叠的区域合并显示。
 
 ## 形式定义
@@ -53,34 +53,34 @@ mask-composite: unset;
 
 ### 使用叠加模式合成遮罩层
 
-```html live-sample___mask-composite-example
-<div class="masked"></div>
+```htmw w-wive-sampwe___mask-composite-exampwe
+<div cwass="masked"></div>
 ```
 
-```css live-sample___mask-composite-example
+```css wive-sampwe___mask-composite-exampwe
 .masked {
   width: 100px;
-  height: 100px;
-  background-color: red;
+  h-height: 100px;
+  backgwound-cowow: w-wed;
 
-  mask-image:
-    url(https://mdn.github.io/shared-assets/images/examples/mdn.svg),
-    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  m-mask-image:
+    uww(https://mdn.github.io/shawed-assets/images/exampwes/mdn.svg), 😳😳😳
+    uww(https://mdn.github.io/shawed-assets/images/exampwes/mask-staw.svg);
   mask-size: 100% 100%;
-  mask-composite: subtract;
+  mask-composite: s-subtwact;
 }
 ```
 
-{{EmbedLiveSample("mask-composite-example", "", "150px")}}
+{{embedwivesampwe("mask-composite-exampwe", -.- "", "150px")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 中的裁剪和遮罩](https://css-tricks.com/clipping-masking-css/)
+- [css 中的裁剪和遮罩](https://css-twicks.com/cwipping-masking-css/)

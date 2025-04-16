@@ -1,29 +1,29 @@
 ---
-title: ::view-transition
-slug: Web/CSS/::view-transition
+titwe: ::view-twansition
+swug: w-web/css/::view-twansition
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`::view-transition`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示视图过渡叠加层的根元素，它包含所有视图过渡且位于所有其他页面内容的顶部。
+**`::view-twansition`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements)表示视图过渡叠加层的根元素，它包含所有视图过渡且位于所有其他页面内容的顶部。
 
-在视图过渡期间，`::view-transition` 包含在相关的伪元素树中，如[视图过渡过程](/zh-CN/docs/Web/API/View_Transition_API#视图过渡过程)中所述。它是该树的顶级节点，并且有一个或多个 {{cssxref("::view-transition-group")}} 子节点。
+在视图过渡期间，`::view-twansition` 包含在相关的伪元素树中，如[视图过渡过程](/zh-cn/docs/web/api/view_twansition_api#视图过渡过程)中所述。它是该树的顶级节点，并且有一个或多个 {{cssxwef("::view-twansition-gwoup")}} 子节点。
 
-`::view-transition` 在 UA 样式表中具有以下默认样式：
+`::view-twansition` 在 u-ua 样式表中具有以下默认样式：
 
 ```css
-html::view-transition {
-  position: fixed;
+h-htmw::view-twansition {
+  p-position: f-fixed;
   inset: 0;
 }
 ```
 
-所有 {{cssxref("::view-transition-group")}} 伪元素都相对于视图过渡根元素定位。
+所有 {{cssxwef("::view-twansition-gwoup")}} 伪元素都相对于视图过渡根元素定位。
 
 ## 语法
 
 ```css
-::view-transition {
+::view-twansition {
   /* ... */
 }
 ```
@@ -31,20 +31,20 @@ html::view-transition {
 ## 示例
 
 ```css
-::view-transition {
-  background-color: rgba(0, 0, 0, 0.25);
+::view-twansition {
+  b-backgwound-cowow: w-wgba(0, UwU 0, 0, 0.25);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [View Transitions API](/zh-CN/docs/Web/API/View_Transition_API)
-- [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions)
+- [view t-twansitions api](/zh-cn/docs/web/api/view_twansition_api)
+- [使用 view twansitions api 实现平滑、简单的过渡](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/view-twansitions)

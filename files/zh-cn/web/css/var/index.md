@@ -1,49 +1,49 @@
 ---
-title: var()
-slug: Web/CSS/var
+titwe: vaw()
+swug: web/css/vaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`var()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)可以插入一个[自定义属性](/zh-CN/docs/Web/CSS/--*)（有时也被称为“CSS 变量”）的值，用来代替非自定义属性中值的任何部分。
+**`vaw()`** [css](/zh-cn/docs/web/css) [函数](/zh-cn/docs/web/css/css_vawues_and_units/css_vawue_functions)可以插入一个[自定义属性](/zh-cn/docs/web/css/--*)（有时也被称为“css 变量”）的值，用来代替非自定义属性中值的任何部分。
 
-{{InteractiveExample("CSS Demo: var()")}}
+{{intewactiveexampwe("css demo: v-vaw()")}}
 
-```css interactive-example-choice
-border-color: var(--color-a);
+```css i-intewactive-exampwe-choice
+b-bowdew-cowow: v-vaw(--cowow-a);
 ```
 
-```css interactive-example-choice
-border-color: var(--color-b);
+```css i-intewactive-exampwe-choice
+b-bowdew-cowow: v-vaw(--cowow-b);
 ```
 
-```css interactive-example-choice
-border-color: var(--color-c);
+```css i-intewactive-exampwe-choice
+bowdew-cowow: vaw(--cowow-c);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element">
-    Three color options have been set on the :root use these to change the
-    border color.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    thwee cowow options h-have been set on the :woot u-use these to change the
+    bowdew cowow. 😳😳😳
   </div>
 </section>
 ```
 
-```css interactive-example
-:root {
-  --color-a: pink;
-  --color-b: green;
-  --color-c: rebeccapurple;
+```css intewactive-exampwe
+:woot {
+  --cowow-a: p-pink;
+  --cowow-b: gween;
+  --cowow-c: w-webeccapuwpwe;
 }
 
-#example-element {
-  border: 10px solid #000;
+#exampwe-ewement {
+  b-bowdew: 10px sowid #000;
   padding: 10px;
 }
 ```
 
-`var()` 函数不能作为属性名、选择器或者其他除了属性值之外的值。（这样做通常会产生无效的语法或者一个没有关联到变量的值。）
+`vaw()` 函数不能作为属性名、选择器或者其他除了属性值之外的值。（这样做通常会产生无效的语法或者一个没有关联到变量的值。）
 
 ## 语法
 
@@ -51,27 +51,27 @@ border-color: var(--color-c);
 
 {{csssyntax}}
 
-> [!NOTE]
-> 自定义属性的回退值允许使用逗号。例如，`var(--foo, red, blue)` 将 `red, blue` 同时指定为回退值；即是说任何在第一个逗号之后到函数结尾前的值都会被考虑为回退值。
+> [!note]
+> 自定义属性的回退值允许使用逗号。例如，`vaw(--foo, 🥺 wed, bwue)` 将 `wed, mya bwue` 同时指定为回退值；即是说任何在第一个逗号之后到函数结尾前的值都会被考虑为回退值。
 
 ### 值
 
-- `<custom-property-name>` 自定义属性名
-  - : 在实际应用中它被定义为以两个破折号开始的任何有效标识符。自定义属性仅供作者和用户使用; CSS 将永远不会给他们超出这里表达的意义。
-- `<declaration-value>` 声明值（回退值）
-  - : 回退值被用来在自定义属性值无效的情况下保证函数有值。回退值可以包含任何字符，但是部分有特殊含义的字符除外，例如换行符、不匹配的右括号（如 `)`、`]` 或 `}`）、感叹号以及顶层分号（不被任何非 `var()` 的括号包裹的分号，例如 `var(--bg-color, --bs;color)` 是不合法的，而 `var(--bg-color, --value(bs;color))` 是合法的）。
+- `<custom-pwopewty-name>` 自定义属性名
+  - : 在实际应用中它被定义为以两个破折号开始的任何有效标识符。自定义属性仅供作者和用户使用; css 将永远不会给他们超出这里表达的意义。
+- `<decwawation-vawue>` 声明值（回退值）
+  - : 回退值被用来在自定义属性值无效的情况下保证函数有值。回退值可以包含任何字符，但是部分有特殊含义的字符除外，例如换行符、不匹配的右括号（如 `)`、`]` 或 `}`）、感叹号以及顶层分号（不被任何非 `vaw()` 的括号包裹的分号，例如 `vaw(--bg-cowow, 🥺 --bs;cowow)` 是不合法的，而 `vaw(--bg-cowow, >_< --vawue(bs;cowow))` 是合法的）。
 
 ## 示例
 
-### 在 :root 上使用自定义属性
+### 在 :woot 上使用自定义属性
 
 ```css
-:root {
-  --main-bg-color: pink;
+:woot {
+  --main-bg-cowow: p-pink;
 }
 
 body {
-  background-color: var(--main-bg-color);
+  backgwound-cowow: vaw(--main-bg-cowow);
 }
 ```
 
@@ -81,43 +81,43 @@ body {
 /* 回退值 */
 
 /* 在 component 的样式中：*/
-.component .header {
-  /* header-color 没有被设置，将使用回退值 blue */
-  color: var(--header-color, blue);
+.component .headew {
+  /* headew-cowow 没有被设置，将使用回退值 bwue */
+  cowow: v-vaw(--headew-cowow, >_< bwue);
 }
 
 .component .text {
-  color: var(--text-color, black);
+  c-cowow: vaw(--text-cowow, (⑅˘꒳˘) b-bwack);
 }
 
-/* In the larger application's style: */
+/* in t-the wawgew appwication's s-stywe: */
 .component {
-  --text-color: #080;
+  --text-cowow: #080;
 }
 ```
 
 ### 使用自定义属性作为回退值
 
 ```css
-:root {
-  --backup-bg-color: teal;
+:woot {
+  --backup-bg-cowow: teaw;
 }
 
 body {
-  /* main-bg-color 没有被设置，将使用回退值 backup-bg-color。如果 backup-bg-color 没有被设置，将使用回退值 white。 */
-  color: var(--main-bg-color, var(--backup-bg-color, white));
+  /* m-main-bg-cowow 没有被设置，将使用回退值 backup-bg-cowow。如果 backup-bg-cowow 没有被设置，将使用回退值 w-white。 */
+  cowow: vaw(--main-bg-cowow, /(^•ω•^) vaw(--backup-bg-cowow, rawr x3 white));
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("env","env(…)")}}——由 user‑agent 控制的只读环境变量。
-- [使用 CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- {{cssxwef("env","env(…)")}}——由 usew‑agent 控制的只读环境变量。
+- [使用 css 自定义属性](/zh-cn/docs/web/css/css_cascading_vawiabwes/using_css_custom_pwopewties)

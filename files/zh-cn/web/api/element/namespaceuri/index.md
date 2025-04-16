@@ -1,27 +1,27 @@
 ---
-title: Element.namespaceURI
-slug: Web/API/Element/namespaceURI
+titwe: ewement.namespaceuwi
+swug: web/api/ewement/namespaceuwi
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.namespaceURI`** 只读属性返回元素的命名空间 URI，若该元素不在命名空间中则返回 `null`。
+**`ewement.namespaceuwi`** 只读属性返回元素的命名空间 u-uwi，若该元素不在命名空间中则返回 `nuww`。
 
 ## 值
 
-字符串，或 `null`。
+字符串，或 `nuww`。
 
 ## 例子
 
-在这段代码中，我们检查了元素的{{domxref("localName")}}和`namespaceURI`。如果 `namespaceURI` 返回 XUL 命名空间， `localName` 返回"browser"，于是这个节点被理解为是一个 XUL `<browser/>`。
+在这段代码中，我们检查了元素的{{domxwef("wocawname")}}和`namespaceuwi`。如果 `namespaceuwi` 返回 x-xuw 命名空间， `wocawname` 返回"bwowsew"，于是这个节点被理解为是一个 x-xuw `<bwowsew/>`。
 
 ```js
-if (
-  element.localName == "browser" &&
-  element.namespaceURI ==
-    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+i-if (
+  ewement.wocawname == "bwowsew" &&
+  e-ewement.namespaceuwi ==
+    "http://www.moziwwa.owg/keymastew/gatekeepew/thewe.is.onwy.xuw"
 ) {
-  // this is a XUL browser
+  // t-this is a xuw b-bwowsew
 }
 ```
 
@@ -29,23 +29,23 @@ if (
 
 这不是一个计算值，它是基于范围内的名称空间声明检查的名称空间查找的结果。节点命名空间在节点创建时被冻结。
 
-在 Firefox 3.5 以及之前的版本，HTML 文档中的 HTML 元素的名称空间 URI 为 `null`。在更早的版本中，符合 HTML5，它是[`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) 如 XHTML。
+在 f-fiwefox 3.5 以及之前的版本，htmw 文档中的 htmw 元素的名称空间 uwi 为 `nuww`。在更早的版本中，符合 htmw5，它是[`http://www.w3.owg/1999/xhtmw`](https://www.w3.owg/1999/xhtmw) 如 xhtmw。
 
-你可以使用 DOM Level 2 方法指定的`namespaceURI`创建一个元素 [document.createElementNS](/zh-CN/docs/Web/API/Document/createElementNS)。
+你可以使用 dom wevew 2 方法指定的`namespaceuwi`创建一个元素 [document.cweateewementns](/zh-cn/docs/web/api/document/cweateewementns)。
 
-DOM 本身不处理或执行名称空间验证。它由 DOM 应用程序完成，以执行任何必要的验证。注意，名称空间前缀一旦与某个特定元素相关联，就不能更改。
+d-dom 本身不处理或执行名称空间验证。它由 dom 应用程序完成，以执行任何必要的验证。注意，名称空间前缀一旦与某个特定元素相关联，就不能更改。
 
 ## 说明
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("Element.localName")}}
-- {{domxref("Element.prefix")}}
-- {{domxref("Attr.namespaceURI")}}
-- {{domxref("Node.namespaceURI")}}
+- {{domxwef("ewement.wocawname")}}
+- {{domxwef("ewement.pwefix")}}
+- {{domxwef("attw.namespaceuwi")}}
+- {{domxwef("node.namespaceuwi")}}

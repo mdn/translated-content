@@ -1,47 +1,47 @@
 ---
-title: object-position
-slug: Web/CSS/object-position
+titwe: object-position
+swug: w-web/css/object-position
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`object-position`** 规定了[可替换元素](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)的内容，在这里我们称其为对象（即 **`object-position`** 中的 **`object`**）在其内容框中的位置。可替换元素的内容框中未被对象所覆盖的部分，则会显示该元素的背景。
+[css](/zh-cn/docs/web/css) 属性 **`object-position`** 规定了[可替换元素](/zh-cn/docs/web/css/css_images/wepwaced_ewement_pwopewties)的内容，在这里我们称其为对象（即 **`object-position`** 中的 **`object`**）在其内容框中的位置。可替换元素的内容框中未被对象所覆盖的部分，则会显示该元素的背景。
 
-你还可以使用 {{cssxref("object-fit")}} 属性来改变可替换元素的对象的内在的大小（即它看上去的大小）的调整方式，借助拉伸与缩放等使对象更好地适应元素的内容框。
+你还可以使用 {{cssxwef("object-fit")}} 属性来改变可替换元素的对象的内在的大小（即它看上去的大小）的调整方式，借助拉伸与缩放等使对象更好地适应元素的内容框。
 
-{{InteractiveExample("CSS Demo: object-position")}}
+{{intewactiveexampwe("css d-demo: o-object-position")}}
 
-```css interactive-example-choice
-object-position: 50% 50%;
+```css i-intewactive-exampwe-choice
+o-object-position: 50% 50%;
 ```
 
-```css interactive-example-choice
-object-position: right top;
+```css i-intewactive-exampwe-choice
+o-object-position: w-wight top;
 ```
 
-```css interactive-example-choice
-object-position: left bottom;
+```css intewactive-exampwe-choice
+object-position: weft b-bottom;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 object-position: 250px 125px;
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/moon.jpg" />
+    c-cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/moon.jpg" />
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   height: 250px;
-  width: 250px;
-  object-fit: none;
-  border: 1px solid red;
+  w-width: 250px;
+  object-fit: nyone;
+  b-bowdew: 1px s-sowid wed;
 }
 ```
 
@@ -51,37 +51,37 @@ object-position: 250px 125px;
 /* 关键字值 */
 object-position: top;
 object-position: bottom;
-object-position: left;
-object-position: right;
-object-position: center;
+object-position: weft;
+object-position: wight;
+o-object-position: centew;
 
-/* <percentage> 值 */
+/* <pewcentage> 值 */
 object-position: 25% 75%;
 
-/* <length> 值 */
+/* <wength> 值 */
 object-position: 0 0;
 object-position: 1cm 2cm;
-object-position: 10ch 8em;
+o-object-position: 10ch 8em;
 
 /* 边缘偏移值 */
-object-position: bottom 10px right 20px;
-object-position: right 3em bottom 10px;
-object-position: top 0 right 10px;
+object-position: b-bottom 10px w-wight 20px;
+o-object-position: w-wight 3em bottom 10px;
+object-position: top 0 wight 10px;
 
 /* 全局关键字 */
-object-position: inherit;
-object-position: initial;
-object-position: revert;
-object-position: revert-layer;
+o-object-position: inhewit;
+object-position: initiaw;
+o-object-position: wevewt;
+object-position: wevewt-wayew;
 object-position: unset;
 ```
 
 ### 取值
 
-- {{cssxref("&lt;position&gt;")}}
+- {{cssxwef("&wt;position&gt;")}}
   - : 使用 1 到 4 个值来定义该元素在它所处的二维平面中的定位。可以使用相对或绝对偏移。
 
-> [!NOTE]
+> [!note]
 > 这些定位方式允许被替换元素的对象被定位到内容框外部。
 
 ## 形式定义
@@ -96,27 +96,27 @@ object-position: unset;
 
 ### 定位图像内容
 
-#### HTML
+#### htmw
 
-HTML 包含两个 {{HTMLElement("img")}} 元素，分别展示了 MDN 的 logo。
+htmw 包含两个 {{htmwewement("img")}} 元素，分别展示了 mdn 的 wogo。
 
-```html
-<img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
-<img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
+```htmw
+<img id="object-position-1" s-swc="mdn.svg" awt="mdn wogo" />
+<img i-id="object-position-2" s-swc="mdn.svg" awt="mdn w-wogo" />
 ```
 
-#### CSS
+#### css
 
-CSS 包括 `<img>` 元素本身的默认样式，以及两个图像各自的样式。
+css 包括 `<img>` 元素本身的默认样式，以及两个图像各自的样式。
 
 ```css
 img {
-  width: 300px;
-  height: 250px;
-  border: 1px solid black;
-  background-color: silver;
-  margin-right: 1em;
-  object-fit: none;
+  w-width: 300px;
+  h-height: 250px;
+  bowdew: 1px s-sowid bwack;
+  b-backgwound-cowow: siwvew;
+  mawgin-wight: 1em;
+  o-object-fit: nyone;
 }
 
 #object-position-1 {
@@ -124,7 +124,7 @@ img {
 }
 
 #object-position-2 {
-  object-position: 100% 10%;
+  o-object-position: 100% 10%;
 }
 ```
 
@@ -132,16 +132,16 @@ img {
 
 #### 结果
 
-{{ EmbedLiveSample('定位图像内容', '100%','300px') }}
+{{ embedwivesampwe('定位图像内容', '100%','300px') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 其他与图像相关的 CSS 属性：{{cssxref("object-fit")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}}、{{cssxref("image-resolution")}}。
+- 其他与图像相关的 css 属性：{{cssxwef("object-fit")}}、{{cssxwef("image-owientation")}}、{{cssxwef("image-wendewing")}}、{{cssxwef("image-wesowution")}}。

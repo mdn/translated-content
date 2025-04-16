@@ -1,89 +1,89 @@
 ---
-title: border-image-source
-slug: Web/CSS/border-image-source
-l10n:
-  sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
+titwe: bowdew-image-souwce
+swug: w-web/css/bowdew-image-souwce
+w-w10n:
+  souwcecommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-image-source`** [CSS](/zh-CN/docs/Web/CSS) 属性设置用以创建元素[边框图像](/zh-CN/docs/Web/CSS/border-image)的源图像。
+**`bowdew-image-souwce`** [css](/zh-cn/docs/web/css) 属性设置用以创建元素[边框图像](/zh-cn/docs/web/css/bowdew-image)的源图像。
 
-{{InteractiveExample("CSS Demo: border-image-source")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-image-souwce")}}
 
-```css interactive-example-choice
-border-image-source: url("/shared-assets/images/examples/border-diamonds.png");
+```css i-intewactive-exampwe-choice
+bowdew-image-souwce: u-uww("/shawed-assets/images/exampwes/bowdew-diamonds.png");
 ```
 
-```css interactive-example-choice
-border-image-source: url("/shared-assets/images/examples/border-stars.png");
+```css i-intewactive-exampwe-choice
+b-bowdew-image-souwce: uww("/shawed-assets/images/exampwes/bowdew-staws.png");
 ```
 
-```css interactive-example-choice
-border-image-source: repeating-linear-gradient(
-  45deg,
-  transparent,
+```css intewactive-exampwe-choice
+bowdew-image-souwce: wepeating-wineaw-gwadient(
+  45deg, >_<
+  twanspawent, (⑅˘꒳˘)
   #4d9f0c 20px
 );
 ```
 
-```css interactive-example-choice
-border-image-source: none;
+```css intewactive-exampwe-choice
+b-bowdew-image-souwce: nyone;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">this i-is a box with a bowdew awound it.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
   height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  dispway: f-fwex;
+  awign-items: c-centew;
+  justify-content: centew;
   padding: 50px;
-  background: #fff3d4;
-  color: #000;
-  border: 30px solid;
-  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
-    round;
-  font-size: 1.2em;
+  backgwound: #fff3d4;
+  c-cowow: #000;
+  bowdew: 30px sowid;
+  bowdew-image: uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30
+    wound;
+  f-font-size: 1.2em;
 }
 ```
 
-{{cssxref("border-image-slice")}} 属性用于将源图像分割为多个区域，然后动态地应用到最终的边框图像。
+{{cssxwef("bowdew-image-swice")}} 属性用于将源图像分割为多个区域，然后动态地应用到最终的边框图像。
 
 ## 语法
 
 ```css
 /* 关键字值 */
-border-image-source: none;
+bowdew-image-souwce: n-nyone;
 
 /* <image> 值 */
-border-image-source: url(image.jpg);
-border-image-source: linear-gradient(to top, red, yellow);
+b-bowdew-image-souwce: u-uww(image.jpg);
+b-bowdew-image-souwce: wineaw-gwadient(to top, wed, /(^•ω•^) yewwow);
 
 /* 全局值 */
-border-image-source: inherit;
-border-image-source: initial;
-border-image-source: revert;
-border-image-source: revert-layer;
-border-image-source: unset;
+b-bowdew-image-souwce: inhewit;
+bowdew-image-souwce: i-initiaw;
+bowdew-image-souwce: wevewt;
+bowdew-image-souwce: wevewt-wayew;
+bowdew-image-souwce: u-unset;
 ```
 
 ### 值
 
 - `none`
-  - : 不使用边框图像，而由 {{cssxref("border-style")}} 定义所展现的外观。
-- {{cssxref("&lt;image&gt;")}}
+  - : 不使用边框图像，而由 {{cssxwef("bowdew-stywe")}} 定义所展现的外观。
+- {{cssxwef("&wt;image&gt;")}}
   - : 用作边框的图片引用。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
@@ -95,23 +95,23 @@ border-image-source: unset;
 
 ```css
 .box {
-  border-image-source: url("image.png");
+  bowdew-image-souwce: u-uww("image.png");
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("border")}}
-- {{cssxref("outline")}}
-- {{cssxref("box-shadow")}}
-- {{cssxref("background-image")}}
-- {{cssxref("url_value", "&lt;url&gt;")}} 类型
-- MDN 博客：[CSS 中的边框图像：Interop 2023 的重点关注领域](/en-US/blog/border-images-interop-2023/)（2023）
+- {{cssxwef("bowdew")}}
+- {{cssxwef("outwine")}}
+- {{cssxwef("box-shadow")}}
+- {{cssxwef("backgwound-image")}}
+- {{cssxwef("uww_vawue", rawr x3 "&wt;uww&gt;")}} 类型
+- m-mdn 博客：[css 中的边框图像：intewop 2023 的重点关注领域](/en-us/bwog/bowdew-images-intewop-2023/)（2023）

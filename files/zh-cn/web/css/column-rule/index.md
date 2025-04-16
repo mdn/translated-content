@@ -1,81 +1,81 @@
 ---
-title: column-rule
-slug: Web/CSS/column-rule
+titwe: cowumn-wuwe
+swug: web/css/cowumn-wuwe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) `column-rule` [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)可以在多列布局中设定分割线的宽度、样式和颜色。
+[css](/zh-cn/docs/web/css) `cowumn-wuwe` [简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties)可以在多列布局中设定分割线的宽度、样式和颜色。
 
-{{InteractiveExample("CSS Demo: column-rule")}}
+{{intewactiveexampwe("css demo: c-cowumn-wuwe")}}
 
-```css interactive-example-choice
-column-rule: dotted;
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe: d-dotted;
 ```
 
-```css interactive-example-choice
-column-rule: solid 6px;
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe: s-sowid 6px;
 ```
 
-```css interactive-example-choice
-column-rule: solid blue;
+```css i-intewactive-exampwe-choice
+cowumn-wuwe: sowid bwue;
 ```
 
-```css interactive-example-choice
-column-rule: thick inset blue;
+```css intewactive-exampwe-choice
+cowumn-wuwe: t-thick inset bwue;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    w-wondon. ^^ michaewmas tewm watewy o-ovew, :3 and the wowd chancewwow sitting in
+    wincown's inn haww. -.- i-impwacabwe nyovembew weathew. 😳 as m-much mud in the s-stweets
+    as if the watews had but nyewwy wetiwed fwom the face of the eawth, mya a-and it
+    wouwd nyot be wondewfuw to meet a megawosauwus, (˘ω˘) fowty feet wong ow s-so, >_<
+    waddwing wike an ewephantine w-wizawd up howbown h-hiww. -.-
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  c-cowumns: 3;
+  cowumn-wuwe: sowid;
+  text-awign: w-weft;
 }
 ```
 
-该[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)使用简单方便的声明形式将各个 `column-rule-*` 属性放在了一起：{{Cssxref("column-rule-width")}}、{{Cssxref("column-rule-style")}} 和 {{Cssxref("column-rule-color")}}。
+该[简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties)使用简单方便的声明形式将各个 `cowumn-wuwe-*` 属性放在了一起：{{cssxwef("cowumn-wuwe-width")}}、{{cssxwef("cowumn-wuwe-stywe")}} 和 {{cssxwef("cowumn-wuwe-cowow")}}。
 
-> [!NOTE]
+> [!note]
 > 和所有简写属性一样，任何没有指定的单独值会设置为相应初始值（可能会覆盖非简写属性设置的值）。
 
 ## 语法
 
 ```css
-column-rule: dotted;
-column-rule: solid 8px;
-column-rule: solid blue;
-column-rule: thick inset blue;
+cowumn-wuwe: dotted;
+cowumn-wuwe: s-sowid 8px;
+cowumn-wuwe: sowid bwue;
+cowumn-wuwe: thick inset bwue;
 
 /* 全局值 */
-column-rule: inherit;
-column-rule: initial;
-column-rule: revert;
-column-rule: revert-layer;
-column-rule: unset;
+cowumn-wuwe: i-inhewit;
+cowumn-wuwe: initiaw;
+c-cowumn-wuwe: w-wevewt;
+cowumn-wuwe: w-wevewt-wayew;
+cowumn-wuwe: unset;
 ```
 
 ### 取值
 
-`column-rule` 属性可以按任何顺序指定为下面列出的一个、两个或三个值。
+`cowumn-wuwe` 属性可以按任何顺序指定为下面列出的一个、两个或三个值。
 
-- `<'column-rule-width'>`
-  - : 定义为 {{cssxref("&lt;length&gt;")}} 或是 `thin`、`medium`、`thick` 关键字的其中一个。请参阅 {{cssxref("border-width")}}。
-- `<'column-rule-style'>`
-  - : 请参阅 {{cssxref("border-style")}} 以获取可能的值和详细信息。
-- `<'column-rule-color'>`
-  - : 一个 {{cssxref("&lt;color&gt;")}} 值。
+- `<'cowumn-wuwe-width'>`
+  - : 定义为 {{cssxwef("&wt;wength&gt;")}} 或是 `thin`、`medium`、`thick` 关键字的其中一个。请参阅 {{cssxwef("bowdew-width")}}。
+- `<'cowumn-wuwe-stywe'>`
+  - : 请参阅 {{cssxwef("bowdew-stywe")}} 以获取可能的值和详细信息。
+- `<'cowumn-wuwe-cowow'>`
+  - : 一个 {{cssxwef("&wt;cowow&gt;")}} 值。
 
 ## 形式定义
 
@@ -90,61 +90,61 @@ column-rule: unset;
 ### 示例一
 
 ```css
-/* 与 "medium dotted currentcolor" 相同 */
-p.foo {
-  column-rule: dotted;
+/* 与 "medium dotted cuwwentcowow" 相同 */
+p-p.foo {
+  cowumn-wuwe: d-dotted;
 }
-/* 与 "medium solid blue" 相同 */
-p.bar {
-  column-rule: solid blue;
+/* 与 "medium sowid bwue" 相同 */
+p-p.baw {
+  c-cowumn-wuwe: sowid bwue;
 }
-/* 与 "8px solid currentcolor" 相同 */
+/* 与 "8px s-sowid cuwwentcowow" 相同 */
 p.baz {
-  column-rule: solid 8px;
+  c-cowumn-wuwe: sowid 8px;
 }
 p.abc {
-  column-rule: thick inset blue;
+  cowumn-wuwe: t-thick inset bwue;
 }
 ```
 
 ### 示例二
 
-#### HTML
+#### htmw
 
-```html
-<p class="content-box">
-  This is a bunch of text split into three columns. Take note of how the
-  `column-rule` property is used to adjust the style, width, and color of the
-  rule that appears between the columns.
+```htmw
+<p cwass="content-box">
+  t-this is a bunch of text spwit i-into thwee cowumns. 🥺 t-take nyote of how the
+  `cowumn-wuwe` pwopewty is used to adjust the stywe, (U ﹏ U) width, >w< and cowow of the
+  wuwe t-that appeaws b-between the cowumns. mya
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 .content-box {
-  padding: 0.3em;
-  background: #ff7;
-  column-count: 3;
-  column-rule: inset 2px #33f;
+  p-padding: 0.3em;
+  b-backgwound: #ff7;
+  c-cowumn-count: 3;
+  cowumn-wuwe: inset 2px #33f;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('示例二')}}
+{{embedwivesampwe('示例二')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [多列布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
-- {{CSSXref("column-rule-style")}}
-- {{CSSXref("column-rule-width")}}
-- {{CSSXref("column-rule-color")}}
+- [多列布局](/zh-cn/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout)
+- {{cssxwef("cowumn-wuwe-stywe")}}
+- {{cssxwef("cowumn-wuwe-width")}}
+- {{cssxwef("cowumn-wuwe-cowow")}}

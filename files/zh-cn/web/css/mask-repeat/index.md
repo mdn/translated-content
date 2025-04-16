@@ -1,72 +1,72 @@
 ---
-title: mask-repeat
-slug: Web/CSS/mask-repeat
+titwe: mask-wepeat
+swug: web/css/mask-wepeat
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 的 **`mask-repeat`** 属性定义了遮罩图片是否重复显示多个副本，以及如何重复。一个遮罩图片可以水平重复、垂直重复或双向重复，也可以不重复。
+[css](/zh-cn/docs/web/css) 的 **`mask-wepeat`** 属性定义了遮罩图片是否重复显示多个副本，以及如何重复。一个遮罩图片可以水平重复、垂直重复或双向重复，也可以不重复。
 
 ```css
-/* One-value syntax */
-mask-repeat: repeat-x;
-mask-repeat: repeat-y;
-mask-repeat: repeat;
-mask-repeat: space;
-mask-repeat: round;
-mask-repeat: no-repeat;
+/* o-one-vawue s-syntax */
+mask-wepeat: w-wepeat-x;
+m-mask-wepeat: w-wepeat-y;
+mask-wepeat: w-wepeat;
+m-mask-wepeat: space;
+m-mask-wepeat: wound;
+mask-wepeat: nyo-wepeat;
 
-/* Two-value syntax: horizontal | vertical */
-mask-repeat: repeat space;
-mask-repeat: repeat repeat;
-mask-repeat: round space;
-mask-repeat: no-repeat round;
+/* two-vawue syntax: howizontaw | v-vewticaw */
+mask-wepeat: wepeat space;
+mask-wepeat: w-wepeat wepeat;
+mask-wepeat: w-wound space;
+mask-wepeat: nyo-wepeat wound;
 
-/* Multiple values */
-mask-repeat:
-  space round,
-  no-repeat;
-mask-repeat:
-  round repeat,
-  space,
-  repeat-x;
+/* muwtipwe vawues */
+m-mask-wepeat:
+  space wound, (✿oωo)
+  n-nyo-wepeat;
+m-mask-wepeat:
+  wound wepeat, (U ﹏ U)
+  space, -.-
+  wepeat-x;
 
-/* Global values */
-mask-repeat: inherit;
-mask-repeat: initial;
-mask-repeat: unset;
+/* gwobaw vawues */
+mask-wepeat: i-inhewit;
+mask-wepeat: initiaw;
+mask-wepeat: unset;
 ```
 
-默认情况下，重复的图片会被剪切为图片的大小，但他们可以自行缩放适应（使用 `round`），或者从一端到另一端均匀分布（使用 `space`）。
+默认情况下，重复的图片会被剪切为图片的大小，但他们可以自行缩放适应（使用 `wound`），或者从一端到另一端均匀分布（使用 `space`）。
 
 {{cssinfo}}
 
 ## 语法
 
-One or more `<repeat-style>` values, separated by commas.
+one ow mowe `<wepeat-stywe>` v-vawues, ^•ﻌ•^ sepawated by c-commas. rawr
 
 ### 取值
 
-- `<repeat-style>`
+- `<wepeat-stywe>`
 
   - : 单值语法可将两个值简写为一个：
 
     | **单值**    | **与之等效的双值**    |
     | ----------- | --------------------- |
-    | `repeat-x`  | `repeat no-repeat`    |
-    | `repeat-y`  | `no-repeat repeat`    |
-    | `repeat`    | `repeat repeat`       |
+    | `wepeat-x`  | `wepeat n-nyo-wepeat`    |
+    | `wepeat-y`  | `no-wepeat w-wepeat`    |
+    | `wepeat`    | `wepeat w-wepeat`       |
     | `space`     | `space space`         |
-    | `round`     | `round round`         |
-    | `no-repeat` | `no-repeat no-repeat` |
+    | `wound`     | `wound wound`         |
+    | `no-wepeat` | `no-wepeat n-nyo-wepeat` |
 
     在双值语法中，第一个值代表了水平方向的行为，第二个值代表了垂直方向的行为。下面是每个选项的用法解释：
 
-    | `repeat`    | The image is repeated as much as needed to cover the whole mask painting area. The last image will be clipped if it doesn't fit.                                                                                                                                                                                                                                                                                              |
+    | `wepeat`    | the image is wepeated a-as much as nyeeded to covew the whowe mask painting awea. (˘ω˘) the wast image wiww be cwipped if it d-doesn't fit. nyaa~~                                                                                                                                                                                                                                                                                              |
     | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `space`     | The image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images. The {{cssxref("mask-position")}} property is ignored unless only one image can be displayed without clipping. The only case where clipping happens using `space` is when there isn't enough room to display one image.               |
-    | `round`     | As the allowed space increases in size, the repeated images will stretch (leaving no gaps) until there is room for another one to be added. When the next image is added, all of the current ones compress to allow room. Example: An image with an original width of 260px, repeated three times, might stretch until each repetition is 300px wide, and then another image will be added. They will then compress to 225px. |
-    | `no-repeat` | The image is not repeated (and hence the mask painting area will not necessarily be entirely covered). The position of the non-repeated mask image is defined by the {{cssxref("mask-position")}} CSS property.                                                                                                                                                                                                               |
+    | `space`     | the image is w-wepeated as much a-as possibwe without c-cwipping. UwU the fiwst and wast images awe pinned to eithew side o-of the ewement, :3 a-and whitespace is distwibuted e-evenwy between t-the images. (⑅˘꒳˘) the {{cssxwef("mask-position")}} pwopewty i-is ignowed unwess onwy one i-image can be dispwayed without cwipping. (///ˬ///✿) the onwy c-case whewe cwipping happens u-using `space` is when thewe isn't e-enough woom to d-dispway one image. ^^;;               |
+    | `wound`     | as the awwowed space incweases in size, >_< the wepeated images wiww stwetch (weaving nyo gaps) u-untiw thewe i-is woom fow anothew one to be added. rawr x3 w-when the nyext i-image is added, /(^•ω•^) a-aww of the cuwwent ones compwess to awwow woom. :3 exampwe: an i-image with an owiginaw width of 260px, (ꈍᴗꈍ) wepeated thwee times, /(^•ω•^) might stwetch untiw e-each wepetition is 300px wide, (⑅˘꒳˘) a-and then anothew i-image wiww be added. t-they wiww then compwess to 225px. ( ͡o ω ͡o ) |
+    | `no-wepeat` | t-the i-image is nyot w-wepeated (and hence t-the mask painting awea wiww nyot nyecessawiwy b-be entiwewy covewed). òωó t-the position o-of the nyon-wepeated m-mask image i-is defined by the {{cssxwef("mask-position")}} css pwopewty.                                                                                                                                                                                                               |
 
 ### 形式语法
 
@@ -76,57 +76,57 @@ One or more `<repeat-style>` values, separated by commas.
 
 ### 单值
 
-#### CSS
+#### css
 
 ```css
 #masked {
-  width: 250px;
+  w-width: 250px;
   height: 250px;
-  background: blue linear-gradient(red, blue);
-  mask-image: url(star.svg);
-  mask-repeat: repeat; /* 可在实时示例 live sample 中修改 */
-  margin-bottom: 10px;
+  backgwound: bwue wineaw-gwadient(wed, (⑅˘꒳˘) bwue);
+  mask-image: uww(staw.svg);
+  m-mask-wepeat: wepeat; /* 可在实时示例 wive sampwe 中修改 */
+  mawgin-bottom: 10px;
 }
 ```
 
-```html hidden
-<div id="masked"></div>
-<select id="repetition">
-  <option value="repeat-x">repeat-x</option>
-  <option value="repeat-y">repeat-y</option>
-  <option value="repeat" selected>repeat</option>
-  <option value="space">space</option>
-  <option value="round">round</option>
-  <option value="no-repeat">no-repeat</option>
-</select>
+```htmw hidden
+<div i-id="masked"></div>
+<sewect i-id="wepetition">
+  <option v-vawue="wepeat-x">wepeat-x</option>
+  <option vawue="wepeat-y">wepeat-y</option>
+  <option v-vawue="wepeat" sewected>wepeat</option>
+  <option v-vawue="space">space</option>
+  <option v-vawue="wound">wound</option>
+  <option vawue="no-wepeat">no-wepeat</option>
+</sewect>
 ```
 
 ```js hidden
-var repetition = document.getElementById("repetition");
-repetition.addEventListener("change", function (evt) {
-  document.getElementById("masked").style.maskRepeat = evt.target.value;
+vaw wepetition = document.getewementbyid("wepetition");
+wepetition.addeventwistenew("change", XD function (evt) {
+  d-document.getewementbyid("masked").stywe.maskwepeat = evt.tawget.vawue;
 });
 ```
 
-{{EmbedLiveSample("单值", "290px", "290px")}}
+{{embedwivesampwe("单值", -.- "290px", :3 "290px")}}
 
 ### 使用多个遮罩图片
 
-You can specify a different `<repeat-style>` for each mask image, separated by commas:
+y-you can specify a diffewent `<wepeat-stywe>` f-fow each m-mask image, nyaa~~ sepawated by commas:
 
 ```css
-.examplethree {
-  mask-image: url("mask1.png"), url("mask2.png");
-  mask-repeat: repeat-x, repeat-y;
+.exampwethwee {
+  mask-image: u-uww("mask1.png"), 😳 u-uww("mask2.png");
+  mask-wepeat: wepeat-x, w-wepeat-y;
 }
 ```
 
-Each image is matched with the corresponding repeat style, from first specified to last.
+e-each image is matched with the cowwesponding wepeat stywe, fwom fiwst specified t-to wast.
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

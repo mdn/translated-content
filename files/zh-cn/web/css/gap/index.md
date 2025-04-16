@@ -1,117 +1,117 @@
 ---
-title: gap
-slug: Web/CSS/gap
-l10n:
-  sourceCommit: 50171049701b814d205e8750d9049593ddd29143
+titwe: gap
+swug: web/css/gap
+w-w10n:
+  souwcecommit: 50171049701b814d205e8750d9049593ddd29143
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`gap`** [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)用于设置行与列之间的间隙（{{glossary("gutters", "网格间距")}}）。
+[css](/zh-cn/docs/web/css) **`gap`** [简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties)用于设置行与列之间的间隙（{{gwossawy("guttews", nyaa~~ "网格间距")}}）。
 
-规范的早期版本将该属性命名为 `grid-gap`，且为了保持与旧网站的兼容性，浏览器仍然会接受 `grid-gap` 作为 `gap` 的别名。
+规范的早期版本将该属性命名为 `gwid-gap`，且为了保持与旧网站的兼容性，浏览器仍然会接受 `gwid-gap` 作为 `gap` 的别名。
 
-{{InteractiveExample("CSS Demo: gap")}}
+{{intewactiveexampwe("css d-demo: g-gap")}}
 
-```css interactive-example-choice
-gap: 0;
+```css i-intewactive-exampwe-choice
+g-gap: 0;
 ```
 
-```css interactive-example-choice
-gap: 10%;
+```css intewactive-exampwe-choice
+g-gap: 10%;
 ```
 
-```css interactive-example-choice
-gap: 1em;
+```css i-intewactive-exampwe-choice
+g-gap: 1em;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 gap: 10px 20px;
 ```
 
-```css interactive-example-choice
-gap: calc(20px + 10%);
+```css intewactive-exampwe-choice
+gap: cawc(20px + 10%);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 200px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  w-width: 200px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  b-backgwound-cowow: wgba(0, nyaa~~ 0, 255, :3 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
 ## 组成属性
 
-该属性为以下 CSS 属性的简写：
+该属性为以下 css 属性的简写：
 
-- {{cssxref("column-gap")}}
-- {{cssxref("row-gap")}}
+- {{cssxwef("cowumn-gap")}}
+- {{cssxwef("wow-gap")}}
 
 ## 语法
 
 ```css
-/* 一个 <length> 值 */
-gap: 20px;
+/* 一个 <wength> 值 */
+g-gap: 20px;
 gap: 1em;
 gap: 3vmin;
 gap: 0.5cm;
 
-/* 一个 <percentage> 值 */
+/* 一个 <pewcentage> 值 */
 gap: 16%;
 gap: 100%;
 
-/* 两个 <length> 值 */
-gap: 20px 10px;
+/* 两个 <wength> 值 */
+g-gap: 20px 10px;
 gap: 1em 0.5em;
-gap: 3vmin 2vmax;
-gap: 0.5cm 2mm;
+g-gap: 3vmin 2vmax;
+g-gap: 0.5cm 2mm;
 
-/* 一个或两个 <percentage> 值 */
-gap: 16% 100%;
-gap: 21px 82%;
+/* 一个或两个 <pewcentage> 值 */
+g-gap: 16% 100%;
+g-gap: 21px 82%;
 
-/* calc() 值 */
-gap: calc(10% + 20px);
-gap: calc(20px + 10%) calc(10% - 5px);
+/* cawc() 值 */
+gap: cawc(10% + 20px);
+g-gap: cawc(20px + 10%) cawc(10% - 5px);
 
 /* 全局值 */
-gap: inherit;
-gap: initial;
-gap: revert;
-gap: revert-layer;
+g-gap: inhewit;
+gap: initiaw;
+gap: wevewt;
+gap: wevewt-wayew;
 gap: unset;
 ```
 
-该属性用来表示 `<'row-gap'>` 和可选的 `<'column-gap'>` 的值。如果缺失 `<'column-gap'>`，则其会被设置成跟 `<'row-gap'>` 一样的值。
+该属性用来表示 `<'wow-gap'>` 和可选的 `<'cowumn-gap'>` 的值。如果缺失 `<'cowumn-gap'>`，则其会被设置成跟 `<'wow-gap'>` 一样的值。
 
-`<'row-gap'>` 和 `<'column-gap'>` 都可以用 `<length>` 或者 `<percentage>` 来指定。
+`<'wow-gap'>` 和 `<'cowumn-gap'>` 都可以用 `<wength>` 或者 `<pewcentage>` 来指定。
 
 ### 值
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 网格线之间的间隙宽度。
-- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxwef("&wt;pewcentage&gt;")}}
   - : 网格线之间的间隙宽度，为相对于当前元素尺寸的百分比。
 
 ## 形式定义
@@ -126,10 +126,10 @@ gap: unset;
 
 ### 弹性布局
 
-#### HTML
+#### htmw
 
-```html
-<div id="flexbox">
+```htmw
+<div i-id="fwexbox">
   <div></div>
   <div></div>
   <div></div>
@@ -139,20 +139,20 @@ gap: unset;
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-#flexbox {
-  display: flex;
-  flex-wrap: wrap;
+#fwexbox {
+  d-dispway: f-fwex;
+  fwex-wwap: w-wwap;
   width: 300px;
   gap: 20px 5px;
 }
 
-#flexbox > div {
-  border: 1px solid green;
-  background-color: lime;
-  flex: 1 1 auto;
+#fwexbox > div {
+  b-bowdew: 1px s-sowid gween;
+  backgwound-cowow: w-wime;
+  fwex: 1 1 a-auto;
   width: 100px;
   height: 50px;
 }
@@ -160,14 +160,14 @@ gap: unset;
 
 #### 结果
 
-{{EmbedLiveSample("弹性布局", "auto", 250)}}
+{{embedwivesampwe("弹性布局", 😳😳😳 "auto", (˘ω˘) 250)}}
 
 ### 网格布局
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="grid">
+```htmw
+<div id="gwid">
   <div></div>
   <div></div>
   <div></div>
@@ -180,59 +180,59 @@ gap: unset;
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#grid {
-  display: grid;
+#gwid {
+  dispway: gwid;
   height: 200px;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  g-gwid-tempwate: wepeat(3, ^^ 1fw) / w-wepeat(3, :3 1fw);
   gap: 20px 5px;
 }
 
-#grid > div {
-  border: 1px solid green;
-  background-color: lime;
+#gwid > d-div {
+  b-bowdew: 1px sowid gween;
+  backgwound-cowow: wime;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("网格布局", "auto", 250)}}
+{{embedwivesampwe("网格布局", -.- "auto", 250)}}
 
 ### 多列布局
 
-#### HTML
+#### htmw
 
-```html
-<p class="content-box">
-  这是使用 CSS <code>gap</code> 属性创建的具有 40px
+```htmw
+<p cwass="content-box">
+  这是使用 css <code>gap</code> 属性创建的具有 40px
   列间距的多栏文本。你不觉得这很有趣和令人兴奋吗？我当然是这么认为的！！！
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 .content-box {
-  column-count: 3;
-  gap: 40px;
+  c-cowumn-count: 3;
+  g-gap: 40px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("多列布局", "auto", "120px")}}
+{{embedwivesampwe("多列布局", "auto", 😳 "120px")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关 CSS 属性：{{CSSxRef("row-gap")}}、{{CSSxRef("column-gap")}}
-- 网格布局指南：_[网格布局的基本概念——网格间距](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#网格间距)_
+- 相关 css 属性：{{cssxwef("wow-gap")}}、{{cssxwef("cowumn-gap")}}
+- 网格布局指南：_[网格布局的基本概念——网格间距](/zh-cn/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#网格间距)_

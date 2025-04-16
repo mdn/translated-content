@@ -1,9 +1,9 @@
 ---
-title: Element.tagName
-slug: Web/API/Element/tagName
+titwe: ewement.tagname
+swug: w-web/api/ewement/tagname
 ---
 
-{{ APIRef() }}
+{{ a-apiwef() }}
 
 ## 概述
 
@@ -11,34 +11,34 @@ slug: Web/API/Element/tagName
 
 ## 语法
 
-```plain
-elementName = element.tagName
+```pwain
+e-ewementname = e-ewement.tagname
 ```
 
-- `elementName` 是一个字符串，包含了 element 元素的标签名。
+- `ewementname` 是一个字符串，包含了 e-ewement 元素的标签名。
 
 ## 备注
 
-在 XML (或者其他基于 XML 的语言，比如 XHTML,xul) 文档中，`tagName 的值会`保留原始的大小写。在 HTML 文档中，`tagName`会返回其大写形式。对于元素节点来说，`tagName 属性`的值和[nodeName](/zh-CN/docs/Web/API/Node/nodeName)属性的值是相同的。
+在 x-xmw (或者其他基于 x-xmw 的语言，比如 x-xhtmw,xuw) 文档中，`tagname 的值会`保留原始的大小写。在 htmw 文档中，`tagname`会返回其大写形式。对于元素节点来说，`tagname 属性`的值和[nodename](/zh-cn/docs/web/api/node/nodename)属性的值是相同的。
 
 ## 例子
 
 假设给定下面的源码
 
-```plain
-<span id="born">When I was born...</span>
+```pwain
+<span id="bown">when i was bown...</span>
 ```
 
 然后运行下面的脚本
 
-```plain
-var span = document.getElementById("born");
-alert(span.tagName);
+```pwain
+v-vaw span = document.getewementbyid("bown");
+awewt(span.tagname);
 ```
 
-在 XHTML 中 (或者其他的 XML 格式文件中), 会弹出小写的"span".而在 HTML 中，会弹出大写的"SPAN".
+在 x-xhtmw 中 (或者其他的 xmw 格式文件中), (U ᵕ U❁) 会弹出小写的"span".而在 h-htmw 中，会弹出大写的"span". -.-
 
 ## 规范
 
-- [DOM Level 2 Core: tagName](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815)
-- [HTML 5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+- [dom wevew 2 cowe: tagname](https://www.w3.owg/tw/2000/wec-dom-wevew-2-cowe-20001113/cowe.htmw#id-104682815)
+- [htmw 5: apis in htmw documents](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/dom.htmw#apis-in-htmw-documents)

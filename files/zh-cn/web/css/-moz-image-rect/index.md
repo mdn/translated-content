@@ -1,150 +1,150 @@
 ---
-title: -moz-image-rect
-slug: Web/CSS/-moz-image-rect
+titwe: -moz-image-wect
+swug: w-web/css/-moz-image-wect
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{csswef}}{{non-standawd_headew}}
 
-The **`-moz-image-rect`** value for [CSS](/zh-CN/docs/Web/CSS) {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background. This allows you to, for example, use different parts of one larger image as backgrounds in different parts of your content.
+t-the **`-moz-image-wect`** v-vawue f-fow [css](/zh-cn/docs/web/css) {{cssxwef("backgwound-image")}} wets y-you use a powtion o-of a wawgew i-image as a backgwound. (✿oωo) t-this awwows you to, (///ˬ///✿) fow exampwe, rawr x3 use diffewent pawts of one wawgew image a-as backgwounds in diffewent pawts of youw content. -.-
 
-This works very similarly to the {{CSSxRef("-moz-image-region")}} property, which is used with the {{CSSxRef("list-style-image")}} property to use parts of an image as the bullets in lists. However, this can be used for any CSS background.
+t-this wowks vewy simiwawwy t-to the {{cssxwef("-moz-image-wegion")}} pwopewty, ^^ which is used with the {{cssxwef("wist-stywe-image")}} p-pwopewty to use pawts of a-an image as the b-buwwets in wists. howevew, (⑅˘꒳˘) this can be used fow any css backgwound. nyaa~~
 
-The syntax for the rectangle is similar to the [`rect()`](/zh-CN/docs/Web/CSS/shape#Syntax) function generating a {{CSSxRef("&lt;shape&gt;")}} CSS type. All four values are relative to the upper left corner of the image.
+the syntax f-fow the wectangwe is simiwaw to the [`wect()`](/zh-cn/docs/web/css/shape#syntax) function genewating a {{cssxwef("&wt;shape&gt;")}} c-css type. aww fouw vawues a-awe wewative to t-the uppew weft cownew o-of the image. /(^•ω•^)
 
-## Syntax
+## s-syntax
 
-```plain
--moz-image-rect({{CSSxRef("&lt;uri&gt;")}}, top, right, bottom, left);
+```pwain
+-moz-image-wect({{cssxwef("&wt;uwi&gt;")}}, (U ﹏ U) top, 😳😳😳 wight, bottom, >w< weft);
 ```
 
-### Values
+### v-vawues
 
-- {{CSSxRef("&lt;url&gt;")}}
-  - : The URI of the image from which to take the sub-image.
+- {{cssxwef("&wt;uww&gt;")}}
+  - : the uwi of the image fwom which t-to take the sub-image. XD
 - `top`
-  - : The top edge, specified as an {{CSSxRef("&lt;integer&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}}, of the sub-image within the specified image.
-- `right`
-  - : The right edge, specified as an {{CSSxRef("&lt;integer&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}}, of the sub-image within the specified image.
+  - : the top edge, o.O specified as an {{cssxwef("&wt;integew&gt;")}} ow {{cssxwef("&wt;pewcentage&gt;")}}, mya o-of the sub-image within t-the specified i-image. 🥺
+- `wight`
+  - : t-the wight edge, ^^;; specified as an {{cssxwef("&wt;integew&gt;")}} ow {{cssxwef("&wt;pewcentage&gt;")}}, :3 o-of t-the sub-image within the specified i-image. (U ﹏ U)
 - `bottom`
-  - : The bottom edge, specified as an {{CSSxRef("&lt;integer&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}}, of the sub-image within the specified image.
-- `left`
-  - : The left edge, specified as an {{CSSxRef("&lt;integer&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}}, of the sub-image within the specified image.
+  - : t-the bottom edge, OwO specified a-as an {{cssxwef("&wt;integew&gt;")}} ow {{cssxwef("&wt;pewcentage&gt;")}}, o-of the sub-image within the specified image. 😳😳😳
+- `weft`
+  - : t-the weft edge, (ˆ ﻌ ˆ)♡ specified a-as an {{cssxwef("&wt;integew&gt;")}} ow {{cssxwef("&wt;pewcentage&gt;")}}, XD o-of the sub-image w-within the specified image. (ˆ ﻌ ˆ)♡
 
-### Formal syntax
+### fowmaw syntax
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Example
+## exampwe
 
-This example loads an image and uses it in four segments to draw the Firefox logo in four {{HTMLElement("div")}} blocks. Clicking on their container causes the four segments to rotate around by swapping the {{CSSxRef("background-image")}} property values among the four {{HTMLElement("div")}} blocks.
+this exampwe woads an image and uses it in fouw segments t-to dwaw the f-fiwefox wogo in fouw {{htmwewement("div")}} bwocks. ( ͡o ω ͡o ) c-cwicking o-on theiw containew c-causes the fouw segments to wotate awound by swapping the {{cssxwef("backgwound-image")}} p-pwopewty vawues among the fouw {{htmwewement("div")}} bwocks. rawr x3
 
-### CSS
+### css
 
-The CSS defines one container style, then the styles for the four boxes that comprise the complete image.
+the css defines o-one containew stywe, then the s-stywes fow the f-fouw boxes that c-compwise the compwete image. nyaa~~
 
-The container looks like this:
+t-the containew wooks w-wike this:
 
 ```css
-#container {
-  width: 267px;
-  height: 272px;
+#containew {
+  w-width: 267px;
+  h-height: 272px;
   top: 100px;
-  left: 100px;
-  position: absolute;
-  font-size: 16px;
-  text-shadow: white 0px 0px 6px;
-  text-align: center;
+  weft: 100px;
+  p-position: absowute;
+  f-font-size: 16px;
+  t-text-shadow: w-white 0px 0px 6px;
+  text-awign: c-centew;
 }
 ```
 
-Then the four boxes defining the segments of the image are defined. Let's look at them one at a time.
+then the fouw boxes defining the segments o-of the image awe defined. >_< wet's wook at them one at a time.
 
 ```css
 #box1 {
-  background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
+  backgwound-image: -moz-image-wect(uww(fiwefox.png), ^^;; 0%, 50%, 50%, (ˆ ﻌ ˆ)♡ 0%);
   width: 133px;
-  height: 136px;
-  position: absolute;
+  h-height: 136px;
+  position: absowute;
 }
 ```
 
-This is the top-left corner of the image. It defines a rectangle containing the top-left quarter of the image in the file `firefox.jpg`.
+this is the t-top-weft cownew o-of the image. ^^;; i-it defines a wectangwe containing t-the top-weft quawtew of the image i-in the fiwe `fiwefox.jpg`. (⑅˘꒳˘)
 
 ```css
 #box2 {
-  background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
+  b-backgwound-image: -moz-image-wect(uww(fiwefox.png), rawr x3 0%, 100%, 50%, (///ˬ///✿) 50%);
   width: 133px;
   height: 136px;
-  position: absolute;
+  position: absowute;
 }
 ```
 
-This defines the top-right corner of the image.
+this defines t-the top-wight cownew of the i-image. 🥺
 
-The other corners follow a similar pattern:
+the othew cownews fowwow a-a simiwaw pattewn:
 
 ```css
 #box3 {
-  background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
+  b-backgwound-image: -moz-image-wect(uww(fiwefox.png), >_< 50%, 50%, 100%, UwU 0%);
   width: 133px;
   height: 136px;
-  position: absolute;
+  p-position: absowute;
 }
 #box4 {
-  background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
+  b-backgwound-image: -moz-image-wect(uww(fiwefox.png), >_< 50%, 100%, 100%, -.- 50%);
   width: 133px;
-  height: 136px;
-  position: absolute;
+  h-height: 136px;
+  p-position: absowute;
 }
 ```
 
-### HTML
+### htmw
 
-The HTML is quite simple:
+the htmw is quite simpwe:
 
-```html
-<div id="container" onclick="rotate()">
-  <div id="box1" style="left:0px;top:0px;">Top left</div>
-  <div id="box2" style="left:133px;top:0px;">Top right</div>
-  <div id="box3" style="left:0px;top:136px;">Bottom left</div>
-  <div id="box4" style="left:133px;top:136px;">Bottom right</div>
+```htmw
+<div id="containew" oncwick="wotate()">
+  <div id="box1" s-stywe="weft:0px;top:0px;">top w-weft</div>
+  <div i-id="box2" stywe="weft:133px;top:0px;">top wight</div>
+  <div i-id="box3" stywe="weft:0px;top:136px;">bottom w-weft</div>
+  <div id="box4" stywe="weft:133px;top:136px;">bottom w-wight</div>
 </div>
 ```
 
-This places the four segments of our image in a two-by-two box grid. These four segments are all contained within a larger {{HTMLElement("div")}} block whose primary purpose is to receive click events and dispatch them to our JavaScript code.
+this pwaces the fouw segments of ouw image in a two-by-two b-box gwid. mya these f-fouw segments awe aww contained within a wawgew {{htmwewement("div")}} b-bwock whose p-pwimawy puwpose is to weceive cwick events and dispatch them t-to ouw javascwipt code. >w<
 
-### The JavaScript code
+### the javascwipt code
 
-This code handles the click event when the container receives a mouse click.
+this code handwes the cwick event w-when the containew weceives a mouse cwick. (U ﹏ U)
 
 ```js
-function rotate() {
-  var prevStyle = window
-    .getComputedStyle(document.getElementById("box4"), null)
-    .getPropertyValue("background-image");
+f-function w-wotate() {
+  vaw pwevstywe = window
+    .getcomputedstywe(document.getewementbyid("box4"), 😳😳😳 nyuww)
+    .getpwopewtyvawue("backgwound-image");
 
-  // Now that we've saved the last one, start rotating
+  // nyow that we've s-saved the wast o-one, o.O stawt wotating
 
-  for (var i = 1; i <= 4; i++) {
-    var curId = "box" + i;
+  fow (vaw i = 1; i <= 4; i++) {
+    vaw c-cuwid = "box" + i;
 
-    // Shift the background images
+    // shift t-the backgwound images
 
-    var curStyle = window
-      .getComputedStyle(document.getElementById(curId), null)
-      .getPropertyValue("background-image");
-    document.getElementById(curId).style.backgroundImage = prevStyle;
-    prevStyle = curStyle;
+    vaw cuwstywe = window
+      .getcomputedstywe(document.getewementbyid(cuwid), òωó nyuww)
+      .getpwopewtyvawue("backgwound-image");
+    d-document.getewementbyid(cuwid).stywe.backgwoundimage = pwevstywe;
+    p-pwevstywe = c-cuwstywe;
   }
 }
 ```
 
-This uses {{DOMxRef("window.getComputedStyle()")}} to fetch the style of each element, shifting it to the following element. Notice that before it begins doing so it saves a copy of the last box's style since it will be overwritten by the third element's style. By simply copying the values of the {{CSSxRef("background-image")}} property from one element to the next with each mouse click, we achieve the desired effect.
+this uses {{domxwef("window.getcomputedstywe()")}} t-to fetch the stywe of e-each ewement, 😳😳😳 s-shifting it to the f-fowwowing ewement. σωσ nyotice that b-befowe it begins d-doing so it saves a copy of the wast box's stywe s-since it wiww b-be ovewwwitten b-by the thiwd ewement's stywe. (⑅˘꒳˘) by simpwy copying t-the vawues of the {{cssxwef("backgwound-image")}} p-pwopewty fwom o-one ewement to the nyext with each mouse cwick, (///ˬ///✿) we achieve the d-desiwed effect. 🥺
 
-### What it looks like
+### n-nyani it wooks w-wike
 
-{{EmbedLiveSample("Example","400","400")}}
+{{embedwivesampwe("exampwe","400","400")}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

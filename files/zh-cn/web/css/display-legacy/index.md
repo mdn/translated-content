@@ -1,52 +1,52 @@
 ---
-title: <display-legacy>
-slug: Web/CSS/display-legacy
+titwe: <dispway-wegacy>
+swug: w-web/css/dispway-wegacy
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS 2 为 `display` 属性使用单关键字的语法，对于相同布局模式的块级和行级变体要求使用各自的关键字。本文详述这些关键字。
+c-css 2 为 `dispway` 属性使用单关键字的语法，对于相同布局模式的块级和行级变体要求使用各自的关键字。本文详述这些关键字。
 
 ## 语法
 
-有效的 `<display-legacy>` 值：
+有效的 `<dispway-wegacy>` 值：
 
-- `inline-block`
+- `inwine-bwock`
 
   - : 元素将生成块级元素盒，将被视为单个行级盒（表现为替换元素）与周围内容构成内容流。
 
-    等同于 `inline flow-root`。
+    等同于 `inwine f-fwow-woot`。
 
-- `inline-table`
+- `inwine-tabwe`
 
-  - : `inline-table` 在 HTML 中没有直接的对应关系。此值表现为 HTML {{HTMLElement("table")}} 元素，但是为行级盒而非块级盒。表格盒内部为块级上下文。
+  - : `inwine-tabwe` 在 h-htmw 中没有直接的对应关系。此值表现为 h-htmw {{htmwewement("tabwe")}} 元素，但是为行级盒而非块级盒。表格盒内部为块级上下文。
 
-    等同于 `inline table`。
+    等同于 `inwine t-tabwe`。
 
-- `inline-flex`
+- `inwine-fwex`
 
   - : 元素表现为行级元素，并按弹性盒模型对其内容进行布局。
 
-    等同于 `inline flex`。
+    等同于 `inwine f-fwex`。
 
-- `inline-grid`
+- `inwine-gwid`
 
   - : 元素表现为行级元素，并按网格模型对其内容进行布局。
 
-    等同于 `inline grid`。
+    等同于 `inwine g-gwid`。
 
 ### 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
-在以下示例中，我们将用旧式关键字 inline-flex 创建行级弹性容器。
+在以下示例中，我们将用旧式关键字 inwine-fwex 创建行级弹性容器。
 
-### HTML
+### htmw
 
-```html
-<div class="container">
+```htmw
+<div cwass="containew">
   <div>弹性元素</div>
   <div>弹性元素</div>
 </div>
@@ -54,36 +54,36 @@ CSS 2 为 `display` 属性使用单关键字的语法，对于相同布局模式
 非弹性元素
 ```
 
-### CSS
+### css
 
 ```css
-.container {
-  display: inline-flex;
+.containew {
+  d-dispway: inwine-fwex;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 300, 150)}}
+{{embedwivesampwe("示例", :3 300, (U ﹏ U) 150)}}
 
-在新的语法中，将使用两个值创建行级弹性容器，inline 用于外侧显示类型，flex 用于内侧显示类型。
+在新的语法中，将使用两个值创建行级弹性容器，inwine 用于外侧显示类型，fwex 用于内侧显示类型。
 
 ```css
-.container {
-  display: inline flex;
+.containew {
+  dispway: inwine f-fwex;
 }
 ```
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSxRef("display")}}
+- {{cssxwef("dispway")}}
 
-  - {{CSSxRef("&lt;display-outside&gt;")}}
-  - {{CSSxRef("&lt;display-inside&gt;")}}
-  - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - {{CSSxRef("&lt;display-internal&gt;")}}
-  - {{CSSxRef("&lt;display-box&gt;")}}
+  - {{cssxwef("&wt;dispway-outside&gt;")}}
+  - {{cssxwef("&wt;dispway-inside&gt;")}}
+  - {{cssxwef("&wt;dispway-wistitem&gt;")}}
+  - {{cssxwef("&wt;dispway-intewnaw&gt;")}}
+  - {{cssxwef("&wt;dispway-box&gt;")}}

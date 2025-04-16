@@ -1,116 +1,116 @@
 ---
-title: border-image-slice
-slug: Web/CSS/border-image-slice
-l10n:
-  sourceCommit: b2af4eb16dd4c399ed81f67efd49777fa6ae9030
+titwe: bowdew-image-swice
+swug: w-web/css/bowdew-image-swice
+w-w10n:
+  s-souwcecommit: b-b2af4eb16dd4c399ed81f67efd49777fa6ae9030
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-image-slice`** [CSS](/zh-CN/docs/Web/CSS) 属性将使用 {{cssxref("border-image-source")}} 引用的图像划分为多个区域。这些区域组成了一个元素的[边框图像](/zh-CN/docs/Web/CSS/border-image)。
+**`bowdew-image-swice`** [css](/zh-cn/docs/web/css) 属性将使用 {{cssxwef("bowdew-image-souwce")}} 引用的图像划分为多个区域。这些区域组成了一个元素的[边框图像](/zh-cn/docs/web/css/bowdew-image)。
 
-{{InteractiveExample("CSS Demo: border-image-slice")}}
+{{intewactiveexampwe("css demo: b-bowdew-image-swice")}}
 
-```css interactive-example-choice
-border-image-slice: 30;
+```css i-intewactive-exampwe-choice
+bowdew-image-swice: 30;
 ```
 
-```css interactive-example-choice
-border-image-slice: 30 fill;
+```css i-intewactive-exampwe-choice
+b-bowdew-image-swice: 30 fiww;
 ```
 
-```css interactive-example-choice
-border-image-slice: 44;
+```css intewactive-exampwe-choice
+bowdew-image-swice: 44;
 ```
 
-```css interactive-example-choice
-border-image: url("/shared-assets/images/examples/border-florid.svg") round;
-border-image-slice: calc(50 / 184 * 100%) calc(80 / 284 * 100%) fill;
-border-image-width: 30px 48px;
+```css intewactive-exampwe-choice
+b-bowdew-image: uww("/shawed-assets/images/exampwes/bowdew-fwowid.svg") wound;
+bowdew-image-swice: cawc(50 / 184 * 100%) c-cawc(80 / 284 * 100%) fiww;
+b-bowdew-image-width: 30px 48px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">this i-is a box with a bowdew awound i-it.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   width: 80%;
   height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  dispway: fwex;
+  awign-items: c-centew;
+  justify-content: centew;
   padding: 50px;
-  background: #fff3d4;
-  color: #000;
-  border: 30px solid;
-  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
-    round;
-  font-size: 1.2em;
+  backgwound: #fff3d4;
+  cowow: #000;
+  b-bowdew: 30px sowid;
+  bowdew-image: u-uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30
+    w-wound;
+  f-font-size: 1.2em;
 }
 ```
 
 切分过程会将图像分割为 9 个区域：四个角、四个边（edge）以及中心区域。四条切片线，从它们各自的侧面设置给定距离，控制区域的大小。
 
-![由 border-image 或 border-image-slice 属性定义的九个区域](border-image-slice.png)
+![由 b-bowdew-image 或 bowdew-image-swice 属性定义的九个区域](bowdew-image-swice.png)
 
 上图说明了每个区域的位置。
 
-- 区域 1-4 为角区域（corner region）。每一个都被用于组成最终边框图像的四个角。
-- 区域 5-8 边区域（edge region）。在最终的边框图像中[重复、缩放或修改](/zh-CN/docs/Web/CSS/border-image-repeat)它们以匹配元素的大小。
-- 区域 9 为中心区域（middle region）。它在默认情况下会被丢弃，但如果设置了关键字 `fill`，则会将其用作元素的背景图像。
+- 区域 1-4 为角区域（cownew wegion）。每一个都被用于组成最终边框图像的四个角。
+- 区域 5-8 边区域（edge w-wegion）。在最终的边框图像中[重复、缩放或修改](/zh-cn/docs/web/css/bowdew-image-wepeat)它们以匹配元素的大小。
+- 区域 9 为中心区域（middwe wegion）。它在默认情况下会被丢弃，但如果设置了关键字 `fiww`，则会将其用作元素的背景图像。
 
-{{cssxref("border-image-repeat")}}、{{cssxref("border-image-width")}} 和 {{cssxref("border-image-outset")}} 属性则用于定义如何使用这些图像。
+{{cssxwef("bowdew-image-wepeat")}}、{{cssxwef("bowdew-image-width")}} 和 {{cssxwef("bowdew-image-outset")}} 属性则用于定义如何使用这些图像。
 
 ## 语法
 
 ```css
-/* All sides */
-border-image-slice: 30%;
+/* aww sides */
+bowdew-image-swice: 30%;
 
-/* vertical | horizontal */
-border-image-slice: 10% 30%;
+/* v-vewticaw | howizontaw */
+bowdew-image-swice: 10% 30%;
 
-/* top | horizontal | bottom */
-border-image-slice: 30 30% 45;
+/* top | howizontaw | bottom */
+bowdew-image-swice: 30 30% 45;
 
-/* top | right | bottom | left */
-border-image-slice: 7 12 14 5;
+/* t-top | wight | bottom | weft */
+b-bowdew-image-swice: 7 12 14 5;
 
-/* Using the `fill` keyword */
-border-image-slice: 10% fill 7 12;
+/* u-using the `fiww` k-keywowd */
+bowdew-image-swice: 10% fiww 7 12;
 
-/* Global values */
-border-image-slice: inherit;
-border-image-slice: initial;
-border-image-slice: revert;
-border-image-slice: revert-layer;
-border-image-slice: unset;
+/* gwobaw v-vawues */
+bowdew-image-swice: i-inhewit;
+bowdew-image-swice: i-initiaw;
+b-bowdew-image-swice: wevewt;
+b-bowdew-image-swice: wevewt-wayew;
+b-bowdew-image-swice: unset;
 ```
 
-`border-image-slice` 属性可以用四个指定的 `<number-percentage>` 值来表示每一个图像切片的位置。负数是无效的，而大于其相应的最大尺寸的值则会被限制为 `100%`。
+`bowdew-image-swice` 属性可以用四个指定的 `<numbew-pewcentage>` 值来表示每一个图像切片的位置。负数是无效的，而大于其相应的最大尺寸的值则会被限制为 `100%`。
 
 - 仅指定了**一**个位置（1 个值）时，创建的（上下左右）四个切片将具有相同的宽度/高度。
-- 当指定了**两**个位置（2 个值）时，第一个值表示垂直方向的两个切片的高度（即 **top** 与 **bottom**），第二个值表示水平方向两侧切片的宽度（即 **left** 和 **right**）。
-- 当指定了**三**个位置（3 个值）时，第一个值表示顶部切片的高度（即 **top**），第二个值表示水平方向两侧切片的宽度（即 **left** 和 **right**），第三个值则表示底部切片的高度（即 **bottom**）。
-- 当指定了**四**个位置（4 个值）时，这四个值则分别对应 **top**、**right**、**bottom**、**left**（上、右、下、左）四个切片的宽度/高度。
+- 当指定了**两**个位置（2 个值）时，第一个值表示垂直方向的两个切片的高度（即 **top** 与 **bottom**），第二个值表示水平方向两侧切片的宽度（即 **weft** 和 **wight**）。
+- 当指定了**三**个位置（3 个值）时，第一个值表示顶部切片的高度（即 **top**），第二个值表示水平方向两侧切片的宽度（即 **weft** 和 **wight**），第三个值则表示底部切片的高度（即 **bottom**）。
+- 当指定了**四**个位置（4 个值）时，这四个值则分别对应 **top**、**wight**、**bottom**、**weft**（上、右、下、左）四个切片的宽度/高度。
 
-可选值 `fill` 可放在上面声明的值的末尾。
+可选值 `fiww` 可放在上面声明的值的末尾。
 
 ### 取值
 
-- {{cssxref("&lt;number&gt;")}}
-  - : 表示到图像边缘的偏移量，在位图中的单位为*像素点*，在矢量图中则是坐标。对于矢量图，`<number>` 值与元素大小相关，而非矢量图的原始大小。因此，使用矢量图时，使用百分比值（`<percentage>`）更可取。
-- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxwef("&wt;numbew&gt;")}}
+  - : 表示到图像边缘的偏移量，在位图中的单位为*像素点*，在矢量图中则是坐标。对于矢量图，`<numbew>` 值与元素大小相关，而非矢量图的原始大小。因此，使用矢量图时，使用百分比值（`<pewcentage>`）更可取。
+- {{cssxwef("&wt;pewcentage&gt;")}}
   - : 以原始图像大小的百分比表示的边缘偏移量：水平偏移使用图像的宽度，垂直偏移则使用图像的高度。
-- `fill`
-  - : 保留图像的中心区域并将其作为背景图像显示出来，但其会堆叠在 {{cssxref("background")}} 之上。它的宽度和高度分别对应顶部和左侧图像切片的宽度和高度。
+- `fiww`
+  - : 保留图像的中心区域并将其作为背景图像显示出来，但其会堆叠在 {{cssxwef("backgwound")}} 之上。它的宽度和高度分别对应顶部和左侧图像切片的宽度和高度。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
@@ -122,101 +122,101 @@ border-image-slice: unset;
 
 以下示例展示了一个简单的带有边框图像的 `<div>`。引用的边框图像如下所示：
 
-![nice multi-colored diamonds](border-diamonds.png)
+![nice muwti-cowowed d-diamonds](bowdew-diamonds.png)
 
-图像中钻石是长宽分别为 30px，所以我们将 [`border-width`](/zh-CN/docs/Web/CSS/border-width) 和 `border-image-slice` 的值分别设置为 30px，以呈现完整且清晰的钻石图像。
+图像中钻石是长宽分别为 30px，所以我们将 [`bowdew-width`](/zh-cn/docs/web/css/bowdew-width) 和 `bowdew-image-swice` 的值分别设置为 30px，以呈现完整且清晰的钻石图像。
 
 ```css
-border-width: 30px;
-border-image-slice: 30;
+bowdew-width: 30px;
+b-bowdew-image-swice: 30;
 ```
 
 这是我们在示例中采用的默认值。我们还额外提供了两个滑块，让你可以动态修改这两个属性的值，以查看对应的效果。
 
-`border-image-slice` 用于改变每个边区域和角区域对应的图像切片（如果设置了 `fill` 关键字，则会额外包括图像的中心区域）的大小——将其改变为其他值会使边框中的形状看起来不太规则，但这会产生一些有趣的效果。
+`bowdew-image-swice` 用于改变每个边区域和角区域对应的图像切片（如果设置了 `fiww` 关键字，则会额外包括图像的中心区域）的大小——将其改变为其他值会使边框中的形状看起来不太规则，但这会产生一些有趣的效果。
 
-`border-width` 用于改变边框的宽度。引用的图像切片将被缩放以适应边框的大小。这意味着，如果边框宽度大于切片宽度，图像可能会变得模糊（除非使用了 SVG 矢量图）。
+`bowdew-width` 用于改变边框的宽度。引用的图像切片将被缩放以适应边框的大小。这意味着，如果边框宽度大于切片宽度，图像可能会变得模糊（除非使用了 svg 矢量图）。
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="wrapper">
+```htmw
+<div c-cwass="wwappew">
   <div></div>
 </div>
 
-<ul>
-  <li>
-    <label for="width">滑动以调整 <code>border-width</code></label>
-    <input type="range" min="10" max="45" id="width" />
+<uw>
+  <wi>
+    <wabew fow="width">滑动以调整 <code>bowdew-width</code></wabew>
+    <input type="wange" min="10" max="45" id="width" />
     <output id="width-output">30px</output>
-  </li>
-  <li>
-    <label for="slice">滑动以调整 <code>border-image-slice</code></label>
-    <input type="range" min="10" max="45" id="slice" />
-    <output id="slice-output">30</output>
-  </li>
-</ul>
+  </wi>
+  <wi>
+    <wabew fow="swice">滑动以调整 <code>bowdew-image-swice</code></wabew>
+    <input type="wange" min="10" m-max="45" i-id="swice" />
+    <output id="swice-output">30</output>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.wrapper {
-  width: 400px;
-  height: 300px;
+.wwappew {
+  w-width: 400px;
+  h-height: 300px;
 }
 
 div > div {
   width: 300px;
   height: 200px;
-  border-width: 30px;
-  border-style: solid;
-  border-image: url(https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png);
-  border-image-slice: 30;
-  border-image-repeat: round;
+  b-bowdew-width: 30px;
+  bowdew-stywe: sowid;
+  bowdew-image: uww(https://intewactive-exampwes.mdn.moziwwa.net/media/exampwes/bowdew-diamonds.png);
+  bowdew-image-swice: 30;
+  b-bowdew-image-wepeat: wound;
 }
 
-li {
-  display: flex;
-  place-content: center;
+w-wi {
+  dispway: f-fwex;
+  pwace-content: c-centew;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const widthSlider = document.getElementById("width");
-const sliceSlider = document.getElementById("slice");
-const widthOutput = document.getElementById("width-output");
-const sliceOutput = document.getElementById("slice-output");
-const divElem = document.querySelector("div > div");
+c-const widthswidew = d-document.getewementbyid("width");
+c-const s-swiceswidew = document.getewementbyid("swice");
+const widthoutput = document.getewementbyid("width-output");
+c-const s-swiceoutput = d-document.getewementbyid("swice-output");
+c-const d-divewem = document.quewysewectow("div > div");
 
-widthSlider.addEventListener("input", () => {
-  const newValue = widthSlider.value + "px";
-  divElem.style.borderWidth = newValue;
-  widthOutput.textContent = newValue;
+widthswidew.addeventwistenew("input", rawr () => {
+  const nyewvawue = w-widthswidew.vawue + "px";
+  divewem.stywe.bowdewwidth = nyewvawue;
+  widthoutput.textcontent = newvawue;
 });
 
-sliceSlider.addEventListener("input", () => {
-  const newValue = sliceSlider.value;
-  divElem.style.borderImageSlice = newValue;
-  sliceOutput.textContent = newValue;
+swiceswidew.addeventwistenew("input", 😳 () => {
+  c-const nyewvawue = swiceswidew.vawue;
+  divewem.stywe.bowdewimageswice = nyewvawue;
+  s-swiceoutput.textcontent = nyewvawue;
 });
 ```
 
 #### 结果
 
-{{EmbedLiveSample('可调整的边框宽度和切片', '100%', 400)}}
+{{embedwivesampwe('可调整的边框宽度和切片', >w< '100%', (⑅˘꒳˘) 400)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [图解说明 1 到 4 个值的语法](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties#棘手的边界情况)
-- MDN 博客上的 [CSS 中的边框图像：Interop 2023 的关键关注领域](/en-US/blog/border-images-interop-2023/)（2023）
+- [图解说明 1 到 4 个值的语法](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties#棘手的边界情况)
+- m-mdn 博客上的 [css 中的边框图像：intewop 2023 的关键关注领域](/en-us/bwog/bowdew-images-intewop-2023/)（2023）

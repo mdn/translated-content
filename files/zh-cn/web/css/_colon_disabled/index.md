@@ -1,125 +1,125 @@
 ---
-title: :disabled
-slug: Web/CSS/:disabled
+titwe: :disabwed
+swug: web/css/:disabwed
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`:disabled` [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任何被禁用的元素。如果一个元素不能被激活（如选择、点击或接受文本输入）或获取焦点，则该元素处于被禁用状态。元素还有一个启用状态，在启用状态下，元素可以被激活或获取焦点。
+`:disabwed` [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses)表示任何被禁用的元素。如果一个元素不能被激活（如选择、点击或接受文本输入）或获取焦点，则该元素处于被禁用状态。元素还有一个启用状态，在启用状态下，元素可以被激活或获取焦点。
 
-{{InteractiveExample("CSS Demo: :disabled", "tabbed-standard")}}
+{{intewactiveexampwe("css d-demo: :disabwed", òωó "tabbed-standawd")}}
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1em;
+```css i-intewactive-exampwe
+w-wabew {
+  dispway: b-bwock;
+  mawgin-top: 1em;
 }
 
-*:disabled {
-  background-color: dimgrey;
-  color: linen;
+*:disabwed {
+  b-backgwound-cowow: d-dimgwey;
+  cowow: w-winen;
   opacity: 1;
 }
 ```
 
-```html interactive-example
-<form>
-  <label for="name">Name:</label>
-  <input id="name" name="name" type="text" />
+```htmw i-intewactive-exampwe
+<fowm>
+  <wabew fow="name">name:</wabew>
+  <input id="name" nyame="name" type="text" />
 
-  <label for="emp">Employed:</label>
-  <select id="emp" name="emp" disabled>
-    <option>No</option>
-    <option>Yes</option>
-  </select>
+  <wabew f-fow="emp">empwoyed:</wabew>
+  <sewect id="emp" nyame="emp" disabwed>
+    <option>no</option>
+    <option>yes</option>
+  </sewect>
 
-  <label for="empDate">Employment Date:</label>
-  <input id="empDate" name="empDate" type="date" disabled />
+  <wabew f-fow="empdate">empwoyment date:</wabew>
+  <input i-id="empdate" nyame="empdate" type="date" disabwed />
 
-  <label for="resume">Resume:</label>
-  <input id="resume" name="resume" type="file" />
-</form>
+  <wabew f-fow="wesume">wesume:</wabew>
+  <input id="wesume" nyame="wesume" t-type="fiwe" />
+</fowm>
 ```
 
 ## 语法
 
 ```css
-:disabled {
+:disabwed {
   /* ... */
 }
 ```
 
 ## 示例
 
-这个例子展示了一个基本的发货表单。通过使用 [JavaScript](/zh-CN/docs/Web/JavaScript) {{domxref("HTMLElement/change_event", "change")}} 事件让用户启用/禁用账单字段。
+这个例子展示了一个基本的发货表单。通过使用 [javascwipt](/zh-cn/docs/web/javascwipt) {{domxwef("htmwewement/change_event", ʘwʘ "change")}} 事件让用户启用/禁用账单字段。
 
-### HTML
+### h-htmw
 
-```html
-<form action="#">
-  <fieldset id="shipping">
-    <legend>发货地址</legend>
-    <input type="text" placeholder="姓名" />
-    <input type="text" placeholder="地址" />
-    <input type="text" placeholder="邮政编码" />
-  </fieldset>
-  <br />
-  <fieldset id="billing">
-    <legend>账单地址</legend>
-    <label for="billing-checkbox">跟发货地址一样：</label>
-    <input type="checkbox" id="billing-checkbox" checked />
-    <br />
-    <input type="text" placeholder="姓名" disabled />
-    <input type="text" placeholder="地址" disabled />
-    <input type="text" placeholder="邮政编码" disabled />
-  </fieldset>
-</form>
+```htmw
+<fowm action="#">
+  <fiewdset id="shipping">
+    <wegend>发货地址</wegend>
+    <input type="text" pwacehowdew="姓名" />
+    <input t-type="text" pwacehowdew="地址" />
+    <input type="text" pwacehowdew="邮政编码" />
+  </fiewdset>
+  <bw />
+  <fiewdset id="biwwing">
+    <wegend>账单地址</wegend>
+    <wabew f-fow="biwwing-checkbox">跟发货地址一样：</wabew>
+    <input type="checkbox" id="biwwing-checkbox" checked />
+    <bw />
+    <input t-type="text" p-pwacehowdew="姓名" d-disabwed />
+    <input t-type="text" pwacehowdew="地址" disabwed />
+    <input type="text" p-pwacehowdew="邮政编码" disabwed />
+  </fiewdset>
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-input[type="text"]:disabled {
-  background: #ccc;
+i-input[type="text"]:disabwed {
+  backgwound: #ccc;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
 // 等待页面加载完毕
-document.addEventListener(
-  "DOMContentLoaded",
+document.addeventwistenew(
+  "domcontentwoaded", /(^•ω•^)
   function () {
     // 将“change”事件监听器附加到复选框
-    document.getElementById("billing-checkbox").onchange = toggleBilling;
-  },
-  false,
+    document.getewementbyid("biwwing-checkbox").onchange = toggwebiwwing;
+  }, ʘwʘ
+  f-fawse,
 );
 
-function toggleBilling() {
-  // 选择 billing 文本字段
-  var billingItems = document.querySelectorAll('#billing input[type="text"]');
+function toggwebiwwing() {
+  // 选择 b-biwwing 文本字段
+  v-vaw biwwingitems = d-document.quewysewectowaww('#biwwing input[type="text"]');
 
-  // 切换 billing 文本字段
-  for (var i = 0; i < billingItems.length; i++) {
-    billingItems[i].disabled = !billingItems[i].disabled;
+  // 切换 biwwing 文本字段
+  fow (vaw i = 0; i-i < biwwingitems.wength; i-i++) {
+    biwwingitems[i].disabwed = !biwwingitems[i].disabwed;
   }
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例', 300, 250)}}
+{{embedwivesampwe('示例', σωσ 300, 250)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ Cssxref(":enabled") }}
+- {{ cssxwef(":enabwed") }}

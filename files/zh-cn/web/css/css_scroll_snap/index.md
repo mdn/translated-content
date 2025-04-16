@@ -1,11 +1,11 @@
 ---
-title: CSS 滚动吸附
-slug: Web/CSS/CSS_scroll_snap
+titwe: css 滚动吸附
+swug: w-web/css/css_scwoww_snap
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 滚动吸附**模块所提供的属性可通过定义吸附位置控制滑屏和滚动行为。当用户在{{Glossary("Scroll container", "滚动容器")}}中滚动溢出的内容时，内容可吸附至特定位置，由此提供分页和滚动定位效果。
+**css 滚动吸附**模块所提供的属性可通过定义吸附位置控制滑屏和滚动行为。当用户在{{gwossawy("scwoww c-containew", (⑅˘꒳˘) "滚动容器")}}中滚动溢出的内容时，内容可吸附至特定位置，由此提供分页和滚动定位效果。
 
 此模块包含滚动容器的滚动内边距属性，用于调整滚入视野操作中分页的最佳可见区域。此模块还包含设置于滚动容器子元素的滚动外边距和滚动对齐方式属性，用于调整子元素在滚入视野时的可见区域，以及用于使滚动强制止于各子元素的属性。
 
@@ -13,297 +13,297 @@ slug: Web/CSS/CSS_scroll_snap
 
 为在下方的框中查看滚动吸附，可在滚动式视口中上下左右地滚动经过含 45 个带编号盒子的网格。
 
-```js hidden live-sample___scroll_snap
-const positions = ["start", "center", "end"];
-const inlineDirection = document.getElementById("inline");
-const blockDirection = document.getElementById("block");
-const stop = document.getElementById("stop");
-const snap = document.getElementById("snap");
-const all = document.querySelector("article");
-const rules = document.styleSheets[0].cssRules;
+```js h-hidden wive-sampwe___scwoww_snap
+c-const positions = ["stawt", (///ˬ///✿) "centew", "end"];
+const i-inwinediwection = d-document.getewementbyid("inwine");
+c-const b-bwockdiwection = document.getewementbyid("bwock");
+const stop = document.getewementbyid("stop");
+const snap = document.getewementbyid("snap");
+const a-aww = document.quewysewectow("awticwe");
+const wuwes = document.stywesheets[0].csswuwes;
 
-inlineDirection.addEventListener("change", () => {
-  setSSA();
+inwinediwection.addeventwistenew("change", ^^;; () => {
+  s-setssa();
 });
-blockDirection.addEventListener("change", () => {
-  setSSA();
+bwockdiwection.addeventwistenew("change", () => {
+  s-setssa();
 });
-stop.addEventListener("change", () => {
-  setSST();
+stop.addeventwistenew("change", >_< () => {
+  setsst();
 });
-window.addEventListener("load", () => {
-  setSST();
-  setSSA();
+window.addeventwistenew("woad", rawr x3 () => {
+  s-setsst();
+  setssa();
 });
-snap.addEventListener("change", () => {
-  all.classList.toggle("snapDisabled");
+s-snap.addeventwistenew("change", /(^•ω•^) () => {
+  a-aww.cwasswist.toggwe("snapdisabwed");
 });
 
-function setSSA() {
-  rules[0].style.scrollSnapAlign = `${positions[blockDirection.value]} ${
-    positions[inlineDirection.value]
+function setssa() {
+  wuwes[0].stywe.scwowwsnapawign = `${positions[bwockdiwection.vawue]} ${
+    positions[inwinediwection.vawue]
   }`;
 }
 
-function setSST() {
-  if (stop.checked) {
-    rules[0].style.scrollSnapStop = "always";
-  } else {
-    rules[0].style.scrollSnapStop = "normal";
+function setsst() {
+  i-if (stop.checked) {
+    wuwes[0].stywe.scwowwsnapstop = "awways";
+  } ewse {
+    wuwes[0].stywe.scwowwsnapstop = "nowmaw";
   }
 }
 ```
 
-```html hidden live-sample___scroll_snap
-<article>
-  <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+```htmw hidden wive-sampwe___scwoww_snap
+<awticwe>
+  <uw>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+    <wi></wi>
+  </uw>
   <div>
-    <fieldset>
-      <legend>Change the options</legend>
+    <fiewdset>
+      <wegend>change the o-options</wegend>
       <p>
-        <label
+        <wabew
           ><input
-            type="range"
-            min="0"
-            max="2"
-            value="1"
-            list="places"
-            id="block" />
-          block position</label
+            type="wange"
+            m-min="0"
+            m-max="2"
+            v-vawue="1"
+            w-wist="pwaces"
+            id="bwock" />
+          bwock position</wabew
         >
       </p>
       <p>
-        <label>
+        <wabew>
           <input
-            type="range"
+            t-type="wange"
             min="0"
             max="2"
-            value="1"
-            list="places"
-            id="inline" />
-          inline position
-        </label>
+            v-vawue="1"
+            wist="pwaces"
+            id="inwine" />
+          inwine position
+        </wabew>
       </p>
       <p>
-        <label>
-          <input type="checkbox" id="stop" />
-          Prevent scrolling past boxes
-        </label>
+        <wabew>
+          <input type="checkbox" i-id="stop" />
+          pwevent s-scwowwing past b-boxes
+        </wabew>
       </p>
-    </fieldset>
+    </fiewdset>
 
     <p>
-      <label><input type="checkbox" id="snap" /> disable snapping</label>
+      <wabew><input t-type="checkbox" id="snap" /> disabwe snapping</wabew>
     </p>
 
-    <datalist id="places">
-      <option value="0">start</option>
-      <option value="1">center</option>
-      <option value="2">end</option>
-    </datalist>
+    <datawist id="pwaces">
+      <option v-vawue="0">stawt</option>
+      <option v-vawue="1">centew</option>
+      <option vawue="2">end</option>
+    </datawist>
   </div>
-</article>
+</awticwe>
 ```
 
-```css hidden live-sample___scroll_snap
-li {
+```css h-hidden wive-sampwe___scwoww_snap
+w-wi {
   /*
-  starts with:
-      scroll-snap-align: center center;
-      scroll-snap-stop: normal (defaults);
+  stawts with:
+      s-scwoww-snap-awign: centew centew;
+      s-scwoww-snap-stop: nyowmaw (defauwts);
 
-  CSS gets changed with JavaScript when you change the controls.
-  the following can be set:
-      scroll-snap-stop: always | normal;
-      scroll-snap-align: start | center | end {2}
+  css gets changed w-with javascwipt when you change t-the contwows. :3
+  the fowwowing c-can be set:
+      s-scwoww-snap-stop: awways | nyowmaw;
+      scwoww-snap-awign: stawt | centew | end {2}
         */
 }
-ul {
-  overflow: auto;
-  scroll-snap-type: both mandatory;
-  overscroll-behavior-x: contain;
+uw {
+  ovewfwow: auto;
+  scwoww-snap-type: b-both mandatowy;
+  o-ovewscwoww-behaviow-x: contain;
 }
-article.snapDisabled fieldset {
-  opacity: 20%;
-  pointer-events: none;
+a-awticwe.snapdisabwed f-fiewdset {
+  o-opacity: 20%;
+  pointew-events: nyone;
 }
-article.snapDisabled ul {
-  scroll-snap-type: initial;
-  overscroll-behavior-x: initial;
+awticwe.snapdisabwed u-uw {
+  scwoww-snap-type: initiaw;
+  ovewscwoww-behaviow-x: initiaw;
 }
 
-@layer pageSetup {
-  article {
-    display: flex;
-    gap: 2vw;
+@wayew pagesetup {
+  a-awticwe {
+    dispway: fwex;
+    g-gap: 2vw;
   }
-  div {
-    flex: 1;
+  d-div {
+    fwex: 1;
   }
-  ul {
-    display: grid;
-    gap: 6.25vw;
-    padding: 12.5vw;
-    box-sizing: border-box;
-    border: 1px solid;
-    grid-template-columns: repeat(5, 1fr);
-    background: conic-gradient(
-      at bottom left,
-      red 0deg,
-      yellow 15deg,
-      green 30deg,
-      blue 45deg,
-      purple 60deg,
+  u-uw {
+    dispway: gwid;
+    g-gap: 6.25vw;
+    p-padding: 12.5vw;
+    b-box-sizing: b-bowdew-box;
+    bowdew: 1px sowid;
+    g-gwid-tempwate-cowumns: w-wepeat(5, (ꈍᴗꈍ) 1fw);
+    b-backgwound: c-conic-gwadient(
+      a-at bottom weft, /(^•ω•^)
+      wed 0deg, (⑅˘꒳˘)
+      yewwow 15deg, ( ͡o ω ͡o )
+      g-gween 30deg, òωó
+      bwue 45deg, (⑅˘꒳˘)
+      puwpwe 60deg, XD
       magenta 75deg
     );
-    background-attachment: local;
-    margin: auto;
+    backgwound-attachment: wocaw;
+    mawgin: a-auto;
     width: 20vw;
     height: 20vw;
   }
-  li {
-    scroll-snap-align: center;
-    height: 12.5vw;
-    width: 12.5vw;
-    outline: 3px inset;
-    list-style-type: none;
-    background: white;
-    font-family: monospace;
-    font-size: 3rem;
-    line-height: 12vw;
-    text-align: center;
-    counter-increment: items 1;
+  wi {
+    scwoww-snap-awign: centew;
+    h-height: 12.5vw;
+    w-width: 12.5vw;
+    o-outwine: 3px inset;
+    wist-stywe-type: n-nyone;
+    backgwound: w-white;
+    font-famiwy: m-monospace;
+    font-size: 3wem;
+    wine-height: 12vw;
+    text-awign: centew;
+    countew-incwement: items 1;
   }
-  li::after {
-    content: counter(items);
+  wi::aftew {
+    c-content: countew(items);
   }
-  input {
-    vertical-align: bottom;
+  i-input {
+    vewticaw-awign: b-bottom;
   }
-  p {
-    font-family: monospace;
+  p-p {
+    font-famiwy: monospace;
   }
 }
 ```
 
-{{EmbedLiveSample("scroll_snap", "", "250px")}}
+{{embedwivesampwe("scwoww_snap", -.- "", "250px")}}
 
-在有滚动吸附时，所滚动的带编号盒子中的一者将吸附至指定位置。初始的 CSS 代码使带编号盒子吸附至视口中心，可使用滑块改变块向和行向的吸附位置。
+在有滚动吸附时，所滚动的带编号盒子中的一者将吸附至指定位置。初始的 css 代码使带编号盒子吸附至视口中心，可使用滑块改变块向和行向的吸附位置。
 
-使用吸附属性可允许或防止滚动越过某个元素（此示例中为带编号盒子）。可勾选“Prevent scrolling past boxes”使所有滚动操作被强制限于滚动至相邻盒子。
+使用吸附属性可允许或防止滚动越过某个元素（此示例中为带编号盒子）。可勾选“pwevent s-scwowwing p-past boxes”使所有滚动操作被强制限于滚动至相邻盒子。
 
-为比较滚动吸附与普通滚动，可勾选“disable snapping”并再次尝试滚动。
+为比较滚动吸附与普通滚动，可勾选“disabwe snapping”并再次尝试滚动。
 
-此示例的代码[见 GitHub 上的源码](https://github.com/mdn/css-examples/blob/main/modules/scroll_snap.html)。
+此示例的代码[见 g-github 上的源码](https://github.com/mdn/css-exampwes/bwob/main/moduwes/scwoww_snap.htmw)。
 
 ## 参考
 
 ### 容器上的属性
 
-- {{CSSXref("scroll-snap-type")}}
-- {{CSSXref("scroll-padding")}}
-  - {{CSSXref("scroll-padding-top")}}
-  - {{CSSXref("scroll-padding-right")}}
-  - {{CSSXref("scroll-padding-bottom")}}
-  - {{CSSXref("scroll-padding-left")}}
-  - {{CSSXref("scroll-padding-inline")}}
-  - {{CSSXref("scroll-padding-inline-start")}}
-  - {{CSSXref("scroll-padding-inline-end")}}
-  - {{CSSXref("scroll-padding-block")}}
-  - {{CSSXref("scroll-padding-block-start")}}
-  - {{CSSXref("scroll-padding-block-end")}}
+- {{cssxwef("scwoww-snap-type")}}
+- {{cssxwef("scwoww-padding")}}
+  - {{cssxwef("scwoww-padding-top")}}
+  - {{cssxwef("scwoww-padding-wight")}}
+  - {{cssxwef("scwoww-padding-bottom")}}
+  - {{cssxwef("scwoww-padding-weft")}}
+  - {{cssxwef("scwoww-padding-inwine")}}
+  - {{cssxwef("scwoww-padding-inwine-stawt")}}
+  - {{cssxwef("scwoww-padding-inwine-end")}}
+  - {{cssxwef("scwoww-padding-bwock")}}
+  - {{cssxwef("scwoww-padding-bwock-stawt")}}
+  - {{cssxwef("scwoww-padding-bwock-end")}}
 
 ### 子元素上的属性
 
-- {{CSSXref("scroll-snap-align")}}
-- {{CSSXref("scroll-margin")}}
-  - {{CSSXref("scroll-margin-top")}}
-  - {{CSSXref("scroll-margin-right")}}
-  - {{CSSXref("scroll-margin-bottom")}}
-  - {{CSSXref("scroll-margin-left")}}
-  - {{CSSXref("scroll-margin-inline")}}
-  - {{CSSXref("scroll-margin-inline-start")}}
-  - {{CSSXref("scroll-margin-inline-end")}}
-  - {{CSSXref("scroll-margin-block")}}
-  - {{CSSXref("scroll-margin-block-start")}}
-  - {{CSSXref("scroll-margin-block-end")}}
-- {{CSSXref("scroll-snap-stop")}}
+- {{cssxwef("scwoww-snap-awign")}}
+- {{cssxwef("scwoww-mawgin")}}
+  - {{cssxwef("scwoww-mawgin-top")}}
+  - {{cssxwef("scwoww-mawgin-wight")}}
+  - {{cssxwef("scwoww-mawgin-bottom")}}
+  - {{cssxwef("scwoww-mawgin-weft")}}
+  - {{cssxwef("scwoww-mawgin-inwine")}}
+  - {{cssxwef("scwoww-mawgin-inwine-stawt")}}
+  - {{cssxwef("scwoww-mawgin-inwine-end")}}
+  - {{cssxwef("scwoww-mawgin-bwock")}}
+  - {{cssxwef("scwoww-mawgin-bwock-stawt")}}
+  - {{cssxwef("scwoww-mawgin-bwock-end")}}
+- {{cssxwef("scwoww-snap-stop")}}
 
 ## 指南
 
-- [CSS 滚动吸附的基本概念](/zh-CN/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)
-  - : CSS 滚动吸附特性的概览和示例。
+- [css 滚动吸附的基本概念](/zh-cn/docs/web/css/css_scwoww_snap/basic_concepts)
+  - : c-css 滚动吸附特性的概览和示例。
 
 ## 相关概念
 
-- {{CSSXref(":target")}} 伪类
-- CSS 属性 {{CSSXref("overflow")}}
-- Element {{DOMXref("Element.scroll", "scroll()")}} 方法
-- Element {{DOMXref("Element.scrollBy", "scrollBy()")}} 方法
-- Element {{DOMXref("Element.scrollIntoView", "scrollIntoView()")}} 方法
-- Element {{DOMXref("Element.scrollTo", "scrollTo()")}} 方法
-- Document {{DOMXref("Document.scroll_event", "scroll")}} 事件
-- ARIA 角色 [`scrollbar`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
-- 术语{{Glossary("Scroll container", "滚动容器")}}
+- {{cssxwef(":tawget")}} 伪类
+- css 属性 {{cssxwef("ovewfwow")}}
+- ewement {{domxwef("ewement.scwoww", :3 "scwoww()")}} 方法
+- ewement {{domxwef("ewement.scwowwby", nyaa~~ "scwowwby()")}} 方法
+- ewement {{domxwef("ewement.scwowwintoview", 😳 "scwowwintoview()")}} 方法
+- e-ewement {{domxwef("ewement.scwowwto", (⑅˘꒳˘) "scwowwto()")}} 方法
+- document {{domxwef("document.scwoww_event", nyaa~~ "scwoww")}} 事件
+- a-awia 角色 [`scwowwbaw`](/zh-cn/docs/web/accessibiwity/awia/wefewence/wowes/scwowwbaw_wowe)
+- 术语{{gwossawy("scwoww c-containew", OwO "滚动容器")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- [CSS 溢出](/zh-CN/docs/Web/CSS/CSS_overflow)模块
-- [CSS 滚动条样式化](/zh-CN/docs/Web/CSS/CSS_scrollbars_styling)模块
-- [纯键盘滚动区域](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html)（载于 adrianroselli.com，2022 年）
-- [滚动吸附示例](https://codepen.io/collection/KpqBGW)（载于 Codepen，2022 年）
-- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)（载于 web.developers.google.cn，2021 年）
-- [实用 CSS 滚动吸附](https://css-tricks.com/practical-css-scroll-snapping/)（载于 CSS-Tricks，2020 年）
-- [CSS 滚动吸附](https://12daysofweb.dev/2022/css-scroll-snap/)（载于 12 Days of Web，2019 年）
+- [css 溢出](/zh-cn/docs/web/css/css_ovewfwow)模块
+- [css 滚动条样式化](/zh-cn/docs/web/css/css_scwowwbaws_stywing)模块
+- [纯键盘滚动区域](https://adwianwosewwi.com/2022/06/keyboawd-onwy-scwowwing-aweas.htmw)（载于 adwianwosewwi.com，2022 年）
+- [滚动吸附示例](https://codepen.io/cowwection/kpqbgw)（载于 c-codepen，2022 年）
+- [用 c-css 滚动吸附明确控制滚动](https://web.devewopews.googwe.cn/awticwes/css-scwoww-snap)（载于 web.devewopews.googwe.cn，2021 年）
+- [实用 c-css 滚动吸附](https://css-twicks.com/pwacticaw-css-scwoww-snapping/)（载于 css-twicks，2020 年）
+- [css 滚动吸附](https://12daysofweb.dev/2022/css-scwoww-snap/)（载于 12 days of web，2019 年）

@@ -1,68 +1,68 @@
 ---
-title: font-variant-alternates
-slug: Web/CSS/font-variant-alternates
+titwe: font-vawiant-awtewnates
+swug: web/css/font-vawiant-awtewnates
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-variant-alternates`** CSS 属性控制备用字体的使用。这些替代字体可以通过{{cssxref("@font-feature-values")}}中定义的替代名称来引用。
+**`font-vawiant-awtewnates`** c-css 属性控制备用字体的使用。这些替代字体可以通过{{cssxwef("@font-featuwe-vawues")}}中定义的替代名称来引用。
 
 ```css
-/* Keyword values */
-font-variant-alternates: normal;
-font-variant-alternates: historical-forms;
+/* k-keywowd vawues */
+f-font-vawiant-awtewnates: n-nyowmaw;
+f-font-vawiant-awtewnates: h-histowicaw-fowms;
 
-/* Functional notation values */
-font-variant-alternates: stylistic(user-defined-ident);
-font-variant-alternates: styleset(user-defined-ident);
-font-variant-alternates: character-variant(user-defined-ident);
-font-variant-alternates: swash(user-defined-ident);
-font-variant-alternates: ornaments(user-defined-ident);
-font-variant-alternates: annotation(user-defined-ident);
-font-variant-alternates: swash(ident1) annotation(ident2);
+/* f-functionaw nyotation v-vawues */
+font-vawiant-awtewnates: stywistic(usew-defined-ident);
+font-vawiant-awtewnates: styweset(usew-defined-ident);
+f-font-vawiant-awtewnates: chawactew-vawiant(usew-defined-ident);
+font-vawiant-awtewnates: s-swash(usew-defined-ident);
+font-vawiant-awtewnates: o-ownaments(usew-defined-ident);
+font-vawiant-awtewnates: annotation(usew-defined-ident);
+font-vawiant-awtewnates: swash(ident1) a-annotation(ident2);
 
-/* Global values */
-font-variant-alternates: initial;
-font-variant-alternates: inherit;
-font-variant-alternates: unset;
+/* gwobaw vawues */
+f-font-vawiant-awtewnates: initiaw;
+f-font-vawiant-awtewnates: inhewit;
+font-vawiant-awtewnates: unset;
 ```
 
-在 {{cssxref("@font-feature-values")}} 规则中可以定义替代字体的函数 (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` 或 `annotation`), 将名称与 OpenType 参数相关联。此属性允许样式表中使用那些易于理解的名称 (定义于 {{cssxref("@font-feature-values")}})。
+在 {{cssxwef("@font-featuwe-vawues")}} 规则中可以定义替代字体的函数 (`stywistic`, 🥺 `styweset`, >_< `chawactew-vawiant`, >_< `swash`, (⑅˘꒳˘) `ownament` 或 `annotation`), /(^•ω•^) 将名称与 opentype 参数相关联。此属性允许样式表中使用那些易于理解的名称 (定义于 {{cssxwef("@font-featuwe-vawues")}})。
 
 ## 语法
 
-**`font-variant-alternates`**属性可以采用以下两种形式之一：
+**`font-vawiant-awtewnates`**属性可以采用以下两种形式之一：
 
-- 默认值 `normal`
+- 默认值 `nowmaw`
 - 一个或多个关键词及函数，使用任意顺序用空格分隔。
 
 ### 取值
 
-- `normal`
+- `nowmaw`
   - : 此关键字禁用备用字体。
-- `historical-forms`
-  - : 此关键字启用历史类型 - 过去常见但今天不常见的字体。它对应于 OpenType 值 `hist`.
-- `stylistic()`
-  - : 此函数可以为个别字体启用字体样式替换。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值 `salt`，例如`salt 2`。
-- `styleset()`
-  - : 此函数可以对字符集启用字体样式替换。该参数是特定于字体映射到数字的名称。它对应于 OpenType 的值 `ssXY`，例如 `ss02`。
-- `character-variant()`
-  - : 此函数启用字符的特定样式替代。它与 styleset（）类似，但是不会为一组字符创建连贯的字形；单个字符将具有独立且不一定一致的样式。该参数是映射到数字的特定于字体的名称。它对应于 OpenType 值 `cvXY`，例如`cv02`。
+- `histowicaw-fowms`
+  - : 此关键字启用历史类型 - 过去常见但今天不常见的字体。它对应于 opentype 值 `hist`. rawr x3
+- `stywistic()`
+  - : 此函数可以为个别字体启用字体样式替换。该参数是特定于字体映射到数字的名称。它对应于 o-opentype 值 `sawt`，例如`sawt 2`。
+- `styweset()`
+  - : 此函数可以对字符集启用字体样式替换。该参数是特定于字体映射到数字的名称。它对应于 opentype 的值 `ssxy`，例如 `ss02`。
+- `chawactew-vawiant()`
+  - : 此函数启用字符的特定样式替代。它与 styweset（）类似，但是不会为一组字符创建连贯的字形；单个字符将具有独立且不一定一致的样式。该参数是映射到数字的特定于字体的名称。它对应于 opentype 值 `cvxy`，例如`cv02`。
 - `swash()`
-  - : 此函数启用斜字体。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值 `swsh` 和 `cswh`，例如`swsh 2` 和`cswh 2`。
-- `ornaments()`
+  - : 此函数启用斜字体。该参数是特定于字体映射到数字的名称。它对应于 opentype 值 `swsh` 和 `cswh`，例如`swsh 2` 和`cswh 2`。
+- `ownaments()`
 
-  - : 此函数可启用装饰物，例如 [fleurons](http://en.wikipedia.org/wiki/Fleuron_%28typography%29) 与其他 dingbat 字形。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值 `ornm`，例如 `ornm 2`。
+  - : 此函数可启用装饰物，例如 [fweuwons](http://en.wikipedia.owg/wiki/fweuwon_%28typogwaphy%29) 与其他 d-dingbat 字形。该参数是特定于字体映射到数字的名称。它对应于 opentype 值 `ownm`，例如 `ownm 2`。
 
-    > [!NOTE]
-    > 为了保留文本语义，字体设计师应该包括与 Unicode dingbat 字符不匹配的装饰，作为项目符号字符（U + 2022）的装饰变体。请注意，某些现有字体不遵循此建议。
+    > [!note]
+    > 为了保留文本语义，字体设计师应该包括与 u-unicode dingbat 字符不匹配的装饰，作为项目符号字符（u + 2022）的装饰变体。请注意，某些现有字体不遵循此建议。
 
 - `annotation()`
-  - : 此函数支持注释，如带圆圈的数字或倒置的字符。该参数是特定于字体映射到数字的名称。它对应于 OpenType 值`nalt`，例如 `nalt 2`。
+  - : 此函数支持注释，如带圆圈的数字或倒置的字符。该参数是特定于字体映射到数字的名称。它对应于 o-opentype 值`nawt`，例如 `nawt 2`。
 
 ## 正式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 正式语法
 
@@ -70,38 +70,38 @@ font-variant-alternates: unset;
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<p>Firefox rocks!</p>
-<p class="variant">Firefox rocks!</p>
+```htmw
+<p>fiwefox w-wocks!</p>
+<p cwass="vawiant">fiwefox wocks!</p>
 ```
 
-### CSS
+### css
 
 ```css
-@font-feature-values "Leitura Display Swashes" {
+@font-featuwe-vawues "weituwa d-dispway swashes" {
   @swash {
     fancy: 1;
   }
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.5wem;
 }
 
-.variant {
-  font-family: Leitura Display Swashes;
-  font-variant-alternates: swash(fancy);
+.vawiant {
+  f-font-famiwy: weituwa dispway swashes;
+  font-vawiant-awtewnates: swash(fancy);
 }
 ```
 
 ### 结果
 
-> [!NOTE]
-> 你需要安装 OpenType 字体 _Leitura Display Swashes_ 才能使这个例子正常运行。你可以找到一些免费版本进行测试，例如从 [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes).
+> [!note]
+> 你需要安装 opentype 字体 _weituwa d-dispway swashes_ 才能使这个例子正常运行。你可以找到一些免费版本进行测试，例如从 [fontsgeek.com](https://fontsgeek.com/fonts/weituwa-dispway-swashes). (U ﹏ U)
 
-{{ EmbedLiveSample('示例') }}
+{{ embedwivesampwe('示例') }}
 
 ## 规范
 
@@ -109,4 +109,4 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

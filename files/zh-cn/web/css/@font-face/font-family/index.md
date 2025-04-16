@@ -1,33 +1,33 @@
 ---
-title: font-family
-slug: Web/CSS/@font-face/font-family
+titwe: font-famiwy
+swug: web/css/@font-face/font-famiwy
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-family`** 属性允许我们为页面上的字体指定一个由 {{cssxref("@font-face")}} 规则定义的字体族
+**`font-famiwy`** 属性允许我们为页面上的字体指定一个由 {{cssxwef("@font-face")}} 规则定义的字体族
 
-The **`font-family`** CSS descriptor allows authors to specify the font family for the font specified in an {{cssxref("@font-face")}} rule.
+t-the **`font-famiwy`** css d-descwiptow awwows a-authows to s-specify the font f-famiwy fow the f-font specified in a-an {{cssxwef("@font-face")}} wuwe. (ˆ ﻌ ˆ)♡
 
 {{cssinfo}}
 
 ## 语法
 
 ```css
-/* <string> values */
-font-family: "font family";
-font-family: "another font family";
+/* <stwing> v-vawues */
+font-famiwy: "font famiwy";
+font-famiwy: "anothew font famiwy";
 
-/* <IDENT> value */
-font-family: examplefont;
+/* <ident> v-vawue */
+font-famiwy: exampwefont;
 ```
 
 ### 取值
 
-- `<family-name>`
+- `<famiwy-name>`
   - : 指定字体族名称
 
-### Formal syntax
+### fowmaw s-syntax
 
 {{csssyntax}}
 
@@ -35,15 +35,15 @@ font-family: examplefont;
 
 ```css
 @font-face {
-  font-family: examplefont;
-  src: url("examplefont.ttf");
+  font-famiwy: e-exampwefont;
+  swc: uww("exampwefont.ttf");
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

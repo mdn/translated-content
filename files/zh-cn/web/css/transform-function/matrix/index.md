@@ -1,67 +1,67 @@
 ---
-title: matrix()
-slug: Web/CSS/transform-function/matrix
+titwe: matwix()
+swug: web/css/twansfowm-function/matwix
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS 函数 `matrix()` 指定了一个由指定的 6 个值组成的 2D 变换矩阵。这种矩阵的常量值是隐含的，而不是由参数传递的；其他的参数是以列优先的顺序描述的。
+c-css 函数 `matwix()` 指定了一个由指定的 6 个值组成的 2d 变换矩阵。这种矩阵的常量值是隐含的，而不是由参数传递的；其他的参数是以列优先的顺序描述的。
 
-`matrix(a, b, c, d, tx, ty)` 是 `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` 的简写。
+`matwix(a, (⑅˘꒳˘) b-b, c, rawr x3 d, t-tx, ty)` 是 `matwix3d(a, b-b, (✿oωo) 0, 0, c-c, d, (ˆ ﻌ ˆ)♡ 0, 0, 0, 0, 1, (˘ω˘) 0, t-tx, ty, 0, (⑅˘꒳˘) 1)` 的简写。
 
-> [!NOTE]
-> 直到 Firefox 16, Gecko 才接受对于 **tx** 和 **ty** 的 {{cssxref("&lt;length&gt;")}} 值。
+> [!note]
+> 直到 f-fiwefox 16, (///ˬ///✿) g-gecko 才接受对于 **tx** 和 **ty** 的 {{cssxwef("&wt;wength&gt;")}} 值。
 
 ## 语法
 
 ```css
-matrix(a, b, c, d, tx, ty)
+matwix(a, 😳😳😳 b, c, d, tx, 🥺 ty)
 ```
 
 ## 参数值
 
 - _a_ _b_ _c_ _d_
-  - : 描述线性变换的 {{cssxref("&lt;number&gt;")}} 。
+  - : 描述线性变换的 {{cssxwef("&wt;numbew&gt;")}} 。
 - _tx_ _ty_
-  - : 描述如何应用这个变换的 {{cssxref("&lt;number&gt;")}} 。
+  - : 描述如何应用这个变换的 {{cssxwef("&wt;numbew&gt;")}} 。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">
+    <tw>
+      <th s-scope="cow">
         ℝ<sup>2 </sup>下的<a
-          href="https://zh.wikipedia.org/wiki/%E7%AC%9B%E5%8D%A1%E5%B0%94%E5%9D%90%E6%A0%87%E7%B3%BB"
+          hwef="https://zh.wikipedia.owg/wiki/%e7%ac%9b%e5%8d%a1%e5%b0%94%e5%9d%90%e6%a0%87%e7%b3%bb"
           >笛卡尔坐标</a
         >
       </th>
-      <th scope="col">
+      <th scope="cow">
         ℝℙ<sup>2 </sup>下<a
-          href="https://zh.wikipedia.org/wiki/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87"
+          h-hwef="https://zh.wikipedia.owg/wiki/%e9%bd%90%e6%ac%a1%e5%9d%90%e6%a0%87"
           >齐次坐标</a
         >
       </th>
-      <th scope="col">
+      <th scope="cow">
         ℝ<sup>3</sup>下的<a
-          href="https://zh.wikipedia.org/wiki/%E7%AC%9B%E5%8D%A1%E5%B0%94%E5%9D%90%E6%A0%87%E7%B3%BB"
+          h-hwef="https://zh.wikipedia.owg/wiki/%e7%ac%9b%e5%8d%a1%e5%b0%94%e5%9d%90%e6%a0%87%e7%b3%bb"
           >笛卡尔坐标</a
         >
       </th>
-      <th scope="col">
+      <th scope="cow">
         ℝℙ<sup>3</sup>下的<a
-          href="https://zh.wikipedia.org/wiki/%E9%BD%90%E6%AC%A1%E5%9D%90%E6%A0%87"
+          hwef="https://zh.wikipedia.owg/wiki/%e9%bd%90%e6%ac%a1%e5%9d%90%e6%a0%87"
           >齐次坐标</a
         >
       </th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>a</mtd><mtd>c</mtd></mtr>
-              <mtr><mtd>b</mtd><mtd>d</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>a</mtd><mtd>c</mtd></mtw>
+              <mtw><mtd>b</mtd><mtd>d</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -70,71 +70,71 @@ matrix(a, b, c, d, tx, ty)
         <p>
           <math
             ><mfenced
-              ><mtable
-                ><mtr><mtd></mtd></mtr></mtable></mfenced></math
-          ><br />a c tx<br />b d ty<br />0 0 1
+              ><mtabwe
+                ><mtw><mtd></mtd></mtw></mtabwe></mfenced></math
+          ><bw />a c-c tx<bw />b d ty<bw />0 0 1
         </p>
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd></mtd></mtr>a c tx</mtable
+            ><mtabwe
+              ><mtw><mtd></mtd></mtw>a c tx</mtabwe
             ></mfenced
           ></math
-        ><br />b d ty<br />0 0 1<mtr><mtd></mtd></mtr>
+        ><bw />b d ty<bw />0 0 1<mtw><mtd></mtd></mtw>
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>a</mtd><mtd>c</mtd><mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr><mtd>b</mtd><mtd>d</mtd><mtd>0</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw><mtd>a</mtd><mtd>c</mtd><mtd>0</mtd><mtd>tx</mtd></mtw
+              ><mtw><mtd>b</mtd><mtd>d</mtd><mtd>0</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[a b c d tx ty]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[a b c d tx t-ty]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-这些值表示以下函数：`matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())`
+这些值表示以下函数：`matwix(scawex(), mya skewy(), 🥺 skewx(), scawey(), >_< twanswatex(), >_< twanswatey())`
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>正常</div>
-<div class="changed">改变后</div>
+<div c-cwass="changed">改变后</div>
 ```
 
-### CSS
+### css
 
 ```css
-div {
+d-div {
   width: 80px;
-  height: 80px;
-  background-color: skyblue;
+  h-height: 80px;
+  b-backgwound-cowow: s-skybwue;
 }
 
 .changed {
-  transform: matrix(1, 2, -1, 1, 80, 80);
-  background-color: pink;
+  twansfowm: matwix(1, (⑅˘꒳˘) 2, -1, 1, 80, 80);
+  backgwound-cowow: p-pink;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 350, 350)}}
+{{embedwivesampwe("示例", 350, /(^•ω•^) 350)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

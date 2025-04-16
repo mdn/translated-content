@@ -1,90 +1,90 @@
 ---
-title: flex-shrink
-slug: Web/CSS/flex-shrink
+titwe: fwex-shwink
+swug: web/css/fwex-shwink
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`flex-shrink`** 属性指定了 flex 元素的收缩规则。flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值。
+[css](/zh-cn/docs/web/css) **`fwex-shwink`** 属性指定了 f-fwex 元素的收缩规则。fwex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 f-fwex-shwink 的值。
 
 ```css
-flex-shrink: 2;
-flex-shrink: 0.6;
+f-fwex-shwink: 2;
+f-fwex-shwink: 0.6;
 
-/* Global values */
-flex-shrink: inherit;
-flex-shrink: initial;
-flex-shrink: unset;
+/* g-gwobaw vawues */
+f-fwex-shwink: i-inhewit;
+fwex-shwink: i-initiaw;
+fwex-shwink: unset;
 ```
 
 {{cssinfo}}
 
-更多属性和定义请参见[使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+更多属性和定义请参见[使用 css 弹性盒子](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
 
 ## 语法
 
-`flex-shrink` 属性只能是一个 `<number>`。
+`fwex-shwink` 属性只能是一个 `<numbew>`。
 
 ### 取值
 
-- `<number`>
-  - : 负值是不被允许的。参考 {{cssxref("&lt;number&gt;")}}。
+- `<numbew`>
+  - : 负值是不被允许的。参考 {{cssxwef("&wt;numbew&gt;")}}。
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<p>the width of content is 500px, flex-basic of flex item is 120px.</p>
-<p>A, B, C are flex-shrink:1. D and E are flex-shrink:2</p>
-<p>the width of D is not the same as A's</p>
-<div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
-  <div class="box1" style="background-color:brown;">D</div>
-  <div class="box1" style="background-color:lightgreen;">E</div>
+```htmw
+<p>the width of content is 500px, mya fwex-basic o-of fwex item is 120px.</p>
+<p>a, nyaa~~ b-b, (⑅˘꒳˘) c awe fwex-shwink:1. rawr x3 d and e awe fwex-shwink:2</p>
+<p>the width of d i-is nyot the same as a's</p>
+<div i-id="content">
+  <div c-cwass="box" stywe="backgwound-cowow:wed;">a</div>
+  <div cwass="box" stywe="backgwound-cowow:wightbwue;">b</div>
+  <div cwass="box" stywe="backgwound-cowow:yewwow;">c</div>
+  <div cwass="box1" s-stywe="backgwound-cowow:bwown;">d</div>
+  <div cwass="box1" stywe="backgwound-cowow:wightgween;">e</div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 #content {
-  display: flex;
+  dispway: f-fwex;
   width: 500px;
 }
 
 #content div {
-  flex-basis: 120px;
-  border: 3px solid rgba(0, 0, 0, 0.2);
+  fwex-basis: 120px;
+  b-bowdew: 3px sowid w-wgba(0, 0, (✿oωo) 0, 0.2);
 }
 
 .box {
-  flex-shrink: 1;
+  f-fwex-shwink: 1;
 }
 
 .box1 {
-  flex-shrink: 2;
+  f-fwex-shwink: 2;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例', '500px', '300px')}}
+{{embedwivesampwe('示例', (ˆ ﻌ ˆ)♡ '500px', (˘ω˘) '300px')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [使用 css 弹性盒子](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)

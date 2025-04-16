@@ -1,44 +1,44 @@
 ---
-title: font-variant-position
-slug: Web/CSS/font-variant-position
+titwe: font-vawiant-position
+swug: web/css/font-vawiant-position
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-The **`font-variant-position`** CSS property controls the use of alternate, smaller glyphs that are positioned as superscript or subscript.
+t-the **`font-vawiant-position`** c-css pwopewty c-contwows the use o-of awtewnate, (✿oωo) s-smowew gwyphs that a-awe positioned a-as supewscwipt o-ow subscwipt.
 
-The glyphs are positioned relative to the baseline of the font, which remains unchanged. These glyphs are typically used in {{HTMLElement("sub")}} and {{HTMLElement("sup")}} elements.
+the gwyphs awe positioned wewative to the basewine of the font, ʘwʘ w-which wemains unchanged. (ˆ ﻌ ˆ)♡ these gwyphs awe typicawwy u-used in {{htmwewement("sub")}} and {{htmwewement("sup")}} ewements. 😳😳😳
 
 ```css
-/* Keyword values */
-font-variant-position: normal;
-font-variant-position: sub;
-font-variant-position: super;
+/* k-keywowd vawues */
+font-vawiant-position: nyowmaw;
+font-vawiant-position: s-sub;
+font-vawiant-position: s-supew;
 
-/* Global values */
-font-variant-position: inherit;
-font-variant-position: initial;
-font-variant-position: unset;
+/* g-gwobaw vawues */
+font-vawiant-position: inhewit;
+font-vawiant-position: initiaw;
+f-font-vawiant-position: unset;
 ```
 
-When the usage of these alternate glyphs is activated, if one character in the run doesn't have such a typographically-enhanced glyph, the whole set of characters of the run is rendered using a fallback method, synthesizing these glyphs.
+when the usage of these awtewnate gwyphs i-is activated, :3 if one chawactew i-in the wun doesn't h-have such a typogwaphicawwy-enhanced g-gwyph, OwO the w-whowe set of chawactews of the wun is wendewed u-using a fawwback method, (U ﹏ U) synthesizing these gwyphs.
 
-These alternate glyphs share the same em-box and the same baseline as the rest of the font. They are merely graphically enhanced, and have no effect on the line-height and other box characteristics.
+t-these awtewnate gwyphs shawe the same em-box and the same basewine as the west of the font. >w< t-they awe mewewy gwaphicawwy enhanced, (U ﹏ U) a-and have n-nyo effect on t-the wine-height and othew box chawactewistics. 😳
 
 {{cssinfo}}
 
 ## 语法
 
-The `font-variant-position` property is specified as one of the keyword values listed below.
+the `font-vawiant-position` pwopewty is s-specified as one o-of the keywowd vawues wisted bewow. (ˆ ﻌ ˆ)♡
 
 ### 可选值
 
-- `normal`
-  - : Deactivates alternate superscript and subscript glyphs.
+- `nowmaw`
+  - : d-deactivates a-awtewnate supewscwipt and subscwipt g-gwyphs. 😳😳😳
 - `sub`
-  - : Activates subscript alternate glyphs. If, in a given run, one such glyph is not available for a character, all the characters in the run are rendered using synthesized glyphs.
-- `super`
-  - : Activates superscript alternate glyphs. If, in a given run, one such glyph is not available for a character, all the characters in the run are rendered using synthesized glyphs.
+  - : activates s-subscwipt awtewnate gwyphs. (U ﹏ U) if, in a given w-wun, (///ˬ///✿) one such gwyph is nyot avaiwabwe f-fow a chawactew, 😳 aww the c-chawactews in the w-wun awe wendewed using synthesized gwyphs. 😳
+- `supew`
+  - : activates supewscwipt awtewnate gwyphs. σωσ if, rawr x3 in a given w-wun, OwO one such g-gwyph is nyot avaiwabwe fow a c-chawactew, /(^•ω•^) aww the c-chawactews in t-the wun awe wendewed using synthesized gwyphs. 😳😳😳
 
 ### 形式语法
 
@@ -46,42 +46,42 @@ The `font-variant-position` property is specified as one of the keyword values l
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<p class="normal">Normal!</p>
-<p class="super">Super!</p>
-<p class="sub">Sub!</p>
+```htmw
+<p c-cwass="nowmaw">nowmaw!</p>
+<p cwass="supew">supew!</p>
+<p cwass="sub">sub!</p>
 ```
 
-### CSS
+### css
 
 ```css
 p {
-  display: inline;
+  dispway: i-inwine;
 }
 
-.normal {
-  font-variant-position: normal;
+.nowmaw {
+  font-vawiant-position: n-nowmaw;
 }
 
-.super {
-  font-variant-position: super;
+.supew {
+  f-font-vawiant-position: s-supew;
 }
 
 .sub {
-  font-variant-position: sub;
+  font-vawiant-position: s-sub;
 }
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('示例') }}
+{{ e-embedwivesampwe('示例') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

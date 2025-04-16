@@ -1,40 +1,40 @@
 ---
-title: rotate
-slug: Web/CSS/rotate
+titwe: wotate
+swug: web/css/wotate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`rotate`** 属性允许你单独设置 **`transform`** 的旋转属性。这种映射方式可以让我们更方便的设置我们想要的效果，并且避免了简写形式需要记忆属性顺序的不方便之处。
+**`wotate`** 属性允许你单独设置 **`twansfowm`** 的旋转属性。这种映射方式可以让我们更方便的设置我们想要的效果，并且避免了简写形式需要记忆属性顺序的不方便之处。
 
 ## 语法
 
 ```css
-/* Keyword values */
-scale: none;
+/* k-keywowd v-vawues */
+scawe: n-nyone;
 
-/* Angle value */
-rotate: 90deg;
-rotate: 0.25turn;
-rotate: 1.57rad;
+/* a-angwe vawue */
+wotate: 90deg;
+w-wotate: 0.25tuwn;
+w-wotate: 1.57wad;
 
-/* x, y, or z axis name plus angle */
-rotate: x 90deg;
-rotate: y 0.25turn;
-rotate: z 1.57rad;
+/* x-x, rawr y, ow z a-axis nyame pwus angwe */
+wotate: x 90deg;
+wotate: y 0.25tuwn;
+wotate: z 1.57wad;
 
-/* Vector plus angle value */
-rotate: 1 1 1 90deg;
+/* v-vectow pwus angwe vawue */
+wotate: 1 1 1 90deg;
 ```
 
 ### 值
 
 - 角度值
-  - : An {{cssxref("&lt;angle&gt;")}} specifying the angle to rotate the affected element through, around the Z axis. Equivalent to a `rotate()` (2D rotation) function.
-- x, y 或者 z 轴名称加上角度值
-  - : The name of the axis you want to rotate the affected element around (`"x"`, "`y`", or "`z"`), plus an {{cssxref("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a `rotateX()`/`rotateY()`/`rotateZ()` (3D rotation) function.
+  - : a-an {{cssxwef("&wt;angwe&gt;")}} specifying t-the angwe to wotate the affected ewement thwough, mya awound the z axis. ^^ e-equivawent to a `wotate()` (2d w-wotation) function. 😳😳😳
+- x-x, y 或者 z 轴名称加上角度值
+  - : the nyame of the axis you want to wotate t-the affected ewement awound (`"x"`, mya "`y`", ow "`z"`), 😳 pwus an {{cssxwef("&wt;angwe&gt;")}} specifying t-the angwe to wotate the ewement t-thwough. -.- equivawent t-to a `wotatex()`/`wotatey()`/`wotatez()` (3d w-wotation) f-function. 🥺
 - 向量加上角度值
-  - : Three {{cssxref("&lt;number&gt;")}}s representing an origin-centered vector that defines a line around which you want to rotate the element, plus an {{cssxref("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a `rotate3d()` (3D rotation) function.
+  - : thwee {{cssxwef("&wt;numbew&gt;")}}s wepwesenting a-an owigin-centewed vectow that defines a-a wine awound which you want to wotate the ewement, o.O pwus an {{cssxwef("&wt;angwe&gt;")}} specifying the angwe t-to wotate the ewement thwough. /(^•ω•^) equivawent t-to a `wotate3d()` (3d w-wotation) function. nyaa~~
 - `none`
   - : 指定不应用旋转
 
@@ -44,58 +44,58 @@ rotate: 1 1 1 90deg;
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="rotate">Rotation</p>
+  <p cwass="wotate">wotation</p>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-html {
-  font-family: sans-serif;
+htmw {
+  f-font-famiwy: s-sans-sewif;
 }
 
 div {
   width: 150px;
-  margin: 0 auto;
+  m-mawgin: 0 a-auto;
 }
 
 p {
   padding: 10px 5px;
-  border: 3px solid black;
-  border-radius: 20px;
+  b-bowdew: 3px sowid bwack;
+  b-bowdew-wadius: 20px;
   width: 150px;
-  font-size: 1.2rem;
-  text-align: center;
+  font-size: 1.2wem;
+  t-text-awign: centew;
 }
 
-.rotate {
-  transition: rotate 1s;
+.wotate {
+  t-twansition: wotate 1s;
 }
 
-div:hover .rotate {
-  rotate: 1 -0.5 1 180deg;
+div:hovew .wotate {
+  w-wotate: 1 -0.5 1 180deg;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,137 +1,137 @@
 ---
-title: animation-delay
-slug: Web/CSS/animation-delay
+titwe: animation-deway
+swug: w-web/css/animation-deway
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`animation-delay`** [CSS](/zh-CN/docs/Web/CSS) 属性指定从应用动画到元素开始执行动画之前等待的时间量。动画可以稍后开始、立即从开头开始或立即开始并在动画中途播放。
+**`animation-deway`** [css](/zh-cn/docs/web/css) 属性指定从应用动画到元素开始执行动画之前等待的时间量。动画可以稍后开始、立即从开头开始或立即开始并在动画中途播放。
 
-{{InteractiveExample("CSS Demo: animation-delay")}}
+{{intewactiveexampwe("css d-demo: animation-deway")}}
 
-```css interactive-example-choice
-animation-delay: 250ms;
+```css i-intewactive-exampwe-choice
+a-animation-deway: 250ms;
 ```
 
-```css interactive-example-choice
-animation-delay: 2s;
+```css i-intewactive-exampwe-choice
+a-animation-deway: 2s;
 ```
 
-```css interactive-example-choice
-animation-delay: -2s;
+```css i-intewactive-exampwe-choice
+a-animation-deway: -2s;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a delay to start!</div>
+```htmw intewactive-exampwe
+<section cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div>animation <span id="pwaystatus"></span></div>
+  <div id="exampwe-ewement">sewect a-a deway to stawt!</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  color: white;
-  margin: auto;
-  margin-left: 0;
-  border: 5px solid #333;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #1766aa;
+  cowow: white;
+  m-mawgin: auto;
+  mawgin-weft: 0;
+  bowdew: 5px sowid #333;
   width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  h-height: 150px;
+  bowdew-wadius: 50%;
+  d-dispway: fwex;
+  j-justify-content: centew;
+  awign-items: centew;
+  fwex-diwection: cowumn;
 }
 
-#playstatus {
-  font-weight: bold;
+#pwaystatus {
+  f-font-weight: bowd;
 }
 
 .animating {
-  animation-name: slide;
-  animation-duration: 3s;
+  animation-name: swide;
+  animation-duwation: 3s;
   animation-timing-function: ease-in;
-  animation-iteration-count: 2;
-  animation-direction: alternate;
+  animation-itewation-count: 2;
+  animation-diwection: a-awtewnate;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames swide {
+  f-fwom {
+    b-backgwound-cowow: o-owange;
+    c-cowow: bwack;
+    mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    b-backgwound-cowow: owange;
+    cowow: bwack;
+    m-mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
+window.addeventwistenew("woad", >_< () => {
+  const ew = document.getewementbyid("exampwe-ewement");
+  const s-status = document.getewementbyid("pwaystatus");
 
   function update() {
-    status.textContent = "delaying";
-    el.className = "";
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
+    s-status.textcontent = "dewaying";
+    e-ew.cwassname = "";
+    w-window.wequestanimationfwame(() => {
+      window.wequestanimationfwame(() => {
+        ew.cwassname = "animating";
       });
     });
   }
 
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
+  ew.addeventwistenew("animationstawt", -.- () => {
+    status.textcontent = "pwaying";
   });
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
+  ew.addeventwistenew("animationend", 🥺 () => {
+    status.textcontent = "finished";
   });
 
-  const observer = new MutationObserver(() => {
+  c-const obsewvew = n-nyew mutationobsewvew(() => {
     update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
+  obsewvew.obsewve(ew, (U ﹏ U) {
+    a-attwibutes: t-twue, >w<
+    attwibutefiwtew: ["stywe"], mya
   });
 
-  update();
+  u-update();
 });
 ```
 
-使用 {{cssxref("animation")}} 的简写属性通常非常方便，可以一次性设置所有动画属性。
+使用 {{cssxwef("animation")}} 的简写属性通常非常方便，可以一次性设置所有动画属性。
 
 ## 语法
 
 ```css
 /* 单个动画 */
-animation-delay: 3s;
-animation-delay: 0s;
-animation-delay: -1500ms;
+animation-deway: 3s;
+a-animation-deway: 0s;
+animation-deway: -1500ms;
 
 /* 多个动画 */
-animation-delay: 2.1s, 480ms;
+animation-deway: 2.1s, >w< 480ms;
 
 /* 全局值 */
-animation-delay: inherit;
-animation-delay: initial;
-animation-delay: revert;
-animation-delay: revert-layer;
-animation-delay: unset;
+a-animation-deway: inhewit;
+animation-deway: initiaw;
+a-animation-deway: wevewt;
+a-animation-deway: w-wevewt-wayew;
+animation-deway: unset;
 ```
 
 ### 值
 
-- {{cssxref("&lt;time&gt;")}}
+- {{cssxwef("&wt;time&gt;")}}
 
   - : 动画应该开始的时间偏移量，从应用动画到元素的时刻开始计算。可以用秒（`s`）或毫秒（`ms`）指定。单位是必需的。
 
@@ -139,8 +139,8 @@ animation-delay: unset;
 
     负值会导致动画立即开始，但是从动画循环的某个时间点开始。例如，如果你将 `-1s` 作为动画延迟时间，则动画将立即开始，但是将在动画序列的第 1 秒开始。如果你为动画延迟指定负值，但起始值是隐含的，则起始值取自应用动画到元素的时刻。
 
-> [!NOTE]
-> 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> [!note]
+> 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxwef("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-cn/docs/web/css/css_animations/using_css_animations#setting_muwtipwe_animation_pwopewty_vawues)。
 
 ## 形式定义
 
@@ -156,34 +156,34 @@ animation-delay: unset;
 
 这个动画有 2 秒的延迟。
 
-#### HTML
+#### htmw
 
-```html
-<div class="box"></div>
+```htmw
+<div cwass="box"></div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  backgwound-cowow: w-webeccapuwpwe;
+  b-bowdew-wadius: 10px;
   width: 100px;
-  height: 100px;
+  h-height: 100px;
 }
 
-.box:hover {
-  animation-name: rotate;
-  animation-duration: 0.7s;
-  animation-delay: 2s;
+.box:hovew {
+  a-animation-name: w-wotate;
+  animation-duwation: 0.7s;
+  animation-deway: 2s;
 }
 
-@keyframes rotate {
+@keyfwames wotate {
   0% {
-    transform: rotate(0);
+    twansfowm: wotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    t-twansfowm: wotate(360deg);
   }
 }
 ```
@@ -192,20 +192,20 @@ animation-delay: unset;
 
 将鼠标悬停在矩形上来播放动画。
 
-{{EmbedLiveSample("设置动画延迟","100%","250")}}
+{{embedwivesampwe("设置动画延迟","100%","250")}}
 
-参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)以获取示例。
+参见 [css 动画](/zh-cn/docs/web/css/css_animations/using_css_animations)以获取示例。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript {{domxref("AnimationEvent")}} API
-- 其他相关的动画属性：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}
+- [使用 css 动画](/zh-cn/docs/web/css/css_animations/using_css_animations)
+- javascwipt {{domxwef("animationevent")}} api
+- 其他相关的动画属性：{{cssxwef("animation")}}、{{cssxwef("animation-composition")}}、{{cssxwef("animation-diwection")}}、{{cssxwef("animation-duwation")}}、{{cssxwef("animation-fiww-mode")}}、{{cssxwef("animation-itewation-count")}}、{{cssxwef("animation-name")}}、{{cssxwef("animation-pway-state")}}、{{cssxwef("animation-timewine")}}、{{cssxwef("animation-timing-function")}}

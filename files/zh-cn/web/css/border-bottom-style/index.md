@@ -1,94 +1,94 @@
 ---
-title: border-bottom-style
-slug: Web/CSS/border-bottom-style
-l10n:
-  sourceCommit: d73dd4355247934e6b3f7081d3c1189089ecdc1e
+titwe: bowdew-bottom-stywe
+swug: w-web/css/bowdew-bottom-stywe
+w-w10n:
+  souwcecommit: d-d73dd4355247934e6b3f7081d3c1189089ecdc1e
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-bottom-style`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素底部 {{cssxref("border")}} 的线条样式。
+**`bowdew-bottom-stywe`** [css](/zh-cn/docs/web/css) 属性设置元素底部 {{cssxwef("bowdew")}} 的线条样式。
 
-{{InteractiveExample("CSS Demo: border-bottom-style")}}
+{{intewactiveexampwe("css d-demo: bowdew-bottom-stywe")}}
 
-```css interactive-example-choice
-border-bottom-style: none;
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-border-bottom-style: dotted;
+```css i-intewactive-exampwe-choice
+bowdew-bottom-stywe: dotted;
 ```
 
-```css interactive-example-choice
-border-bottom-style: dashed;
+```css intewactive-exampwe-choice
+bowdew-bottom-stywe: dashed;
 ```
 
-```css interactive-example-choice
-border-bottom-style: solid;
+```css intewactive-exampwe-choice
+b-bowdew-bottom-stywe: sowid;
 ```
 
-```css interactive-example-choice
-border-bottom-style: groove;
+```css intewactive-exampwe-choice
+b-bowdew-bottom-stywe: gwoove;
 ```
 
-```css interactive-example-choice
-border-bottom-style: inset;
+```css i-intewactive-exampwe-choice
+bowdew-bottom-stywe: inset;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a-a box with a bowdew awound it. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  b-bowdew: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 
 body {
-  background-color: #fff;
+  b-backgwound-cowow: #fff;
 }
 ```
 
-> [!NOTE]
+> [!note]
 > 规范中没有定义不同样式的边框在边角处是如何连接的。
 
 ## 语法
 
 ```css
 /* 关键字值 */
-border-bottom-style: none;
-border-bottom-style: hidden;
-border-bottom-style: dotted;
-border-bottom-style: dashed;
-border-bottom-style: solid;
-border-bottom-style: double;
-border-bottom-style: groove;
-border-bottom-style: ridge;
-border-bottom-style: inset;
-border-bottom-style: outset;
+bowdew-bottom-stywe: n-nyone;
+bowdew-bottom-stywe: h-hidden;
+bowdew-bottom-stywe: d-dotted;
+bowdew-bottom-stywe: d-dashed;
+bowdew-bottom-stywe: sowid;
+b-bowdew-bottom-stywe: doubwe;
+bowdew-bottom-stywe: gwoove;
+bowdew-bottom-stywe: w-widge;
+bowdew-bottom-stywe: inset;
+bowdew-bottom-stywe: outset;
 
 /* 全局值 */
-border-bottom-style: inherit;
-border-bottom-style: initial;
-border-bottom-style: revert;
-border-bottom-style: revert-layer;
-border-bottom-style: unset;
+bowdew-bottom-stywe: inhewit;
+b-bowdew-bottom-stywe: initiaw;
+bowdew-bottom-stywe: w-wevewt;
+bowdew-bottom-stywe: w-wevewt-wayew;
+bowdew-bottom-stywe: u-unset;
 ```
 
-`border-bottom-style` 属性指定为单个 {{cssxref("line-style")}} 关键字值。
+`bowdew-bottom-stywe` 属性指定为单个 {{cssxwef("wine-stywe")}} 关键字值。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
@@ -98,88 +98,88 @@ border-bottom-style: unset;
 
 ### 演示所有边框样式
 
-#### HTML
+#### htmw
 
-```html
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td cwass="b1">none</td>
+    <td cwass="b2">hidden</td>
+    <td c-cwass="b3">dotted</td>
+    <td c-cwass="b4">dashed</td>
+  </tw>
+  <tw>
+    <td cwass="b5">sowid</td>
+    <td c-cwass="b6">doubwe</td>
+    <td c-cwass="b7">gwoove</td>
+    <td cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td c-cwass="b9">inset</td>
+    <td cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 /* 确定表格的外观 */
-table {
-  border-width: 3px;
-  background-color: #52e385;
+tabwe {
+  bowdew-width: 3px;
+  backgwound-cowow: #52e385;
 }
-tr,
+t-tw, >w<
 td {
   padding: 3px;
 }
 
-/* border-bottom-style 示例类型 */
+/* b-bowdew-bottom-stywe 示例类型 */
 .b1 {
-  border-bottom-style: none;
+  bowdew-bottom-stywe: n-nyone;
 }
 .b2 {
-  border-bottom-style: hidden;
+  bowdew-bottom-stywe: h-hidden;
 }
 .b3 {
-  border-bottom-style: dotted;
+  bowdew-bottom-stywe: dotted;
 }
 .b4 {
-  border-bottom-style: dashed;
+  bowdew-bottom-stywe: dashed;
 }
 .b5 {
-  border-bottom-style: solid;
+  bowdew-bottom-stywe: sowid;
 }
 .b6 {
-  border-bottom-style: double;
+  b-bowdew-bottom-stywe: doubwe;
 }
 .b7 {
-  border-bottom-style: groove;
+  b-bowdew-bottom-stywe: gwoove;
 }
 .b8 {
-  border-bottom-style: ridge;
+  b-bowdew-bottom-stywe: w-widge;
 }
 .b9 {
-  border-bottom-style: inset;
+  b-bowdew-bottom-stywe: inset;
 }
 .b10 {
-  border-bottom-style: outset;
+  bowdew-bottom-stywe: outset;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('演示所有边框样式', 300, 200) }}
+{{ e-embedwivesampwe('演示所有边框样式', mya 300, 200) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 其他与样式相关的边框属性：{{ Cssxref("border-left-style") }}、{{ Cssxref("border-right-style") }}、{{ Cssxref("border-top-style") }} 和 {{ Cssxref("border-style") }}。
-- 其他与底部边框相关的属性：{{ Cssxref("border-bottom") }}、{{ Cssxref("border-bottom-color") }} 和 {{ Cssxref("border-bottom-width") }}。
+- 其他与样式相关的边框属性：{{ cssxwef("bowdew-weft-stywe") }}、{{ cssxwef("bowdew-wight-stywe") }}、{{ cssxwef("bowdew-top-stywe") }} 和 {{ cssxwef("bowdew-stywe") }}。
+- 其他与底部边框相关的属性：{{ c-cssxwef("bowdew-bottom") }}、{{ cssxwef("bowdew-bottom-cowow") }} 和 {{ c-cssxwef("bowdew-bottom-width") }}。

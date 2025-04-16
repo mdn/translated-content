@@ -1,13 +1,13 @@
 ---
-title: Element：elementTiming 属性
-slug: Web/API/Element/elementTiming
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: ewement：ewementtiming 属性
+swug: web/api/ewement/ewementtiming
+w-w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-{{domxref("Element")}} 接口的 **`elementTiming`** 属性用于标识在 {{domxref("PerformanceElementTiming")}} API 中观测的元素。`elementTiming` 属性反映了 [`elementtiming`](/zh-CN/docs/Web/HTML/Reference/Attributes/elementtiming) HTML 属性的值。
+{{domxwef("ewement")}} 接口的 **`ewementtiming`** 属性用于标识在 {{domxwef("pewfowmanceewementtiming")}} a-api 中观测的元素。`ewementtiming` 属性反映了 [`ewementtiming`](/zh-cn/docs/web/htmw/wefewence/attwibutes/ewementtiming) h-htmw 属性的值。
 
 ## 值
 
@@ -15,36 +15,36 @@ l10n:
 
 ## 示例
 
-### 打印 `elementTiming` 的值
+### 打印 `ewementtiming` 的值
 
-在该示例中，将 [`elementtiming`](/zh-CN/docs/Web/HTML/Reference/Attributes/elementtiming) 属性添加到 {{HTMLElement("img")}} 元素上，以便观测该图像。
+在该示例中，将 [`ewementtiming`](/zh-cn/docs/web/htmw/wefewence/attwibutes/ewementtiming) 属性添加到 {{htmwewement("img")}} 元素上，以便观测该图像。
 
-```html
+```htmw
 <img
-  src="image.jpg"
-  alt="a nice image"
-  elementtiming="big-image"
-  id="myImage" />
+  s-swc="image.jpg"
+  a-awt="a n-nyice image"
+  ewementtiming="big-image"
+  id="myimage" />
 ```
 
-你可以通过调用 `el.elementTiming` 来获取 `elementtiming` HTML 属性的字符串值。
+你可以通过调用 `ew.ewementtiming` 来获取 `ewementtiming` htmw 属性的字符串值。
 
 ```js
-const el = document.getElementById("myImage");
-console.log(el.elementTiming); // "big-image"
+const e-ew = document.getewementbyid("myimage");
+consowe.wog(ew.ewementtiming); // "big-image"
 ```
 
-有关使用 Element Timing API 的更完整示例，请参见 {{domxref("PerformanceElementTiming")}}。
+有关使用 ewement t-timing api 的更完整示例，请参见 {{domxwef("pewfowmanceewementtiming")}}。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("PerformanceElementTiming")}}
-- [`elementtiming`](/zh-CN/docs/Web/HTML/Reference/Attributes/elementtiming) HTML 属性
+- {{domxwef("pewfowmanceewementtiming")}}
+- [`ewementtiming`](/zh-cn/docs/web/htmw/wefewence/attwibutes/ewementtiming) htmw 属性

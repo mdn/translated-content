@@ -1,13 +1,13 @@
 ---
-title: 滚动容器
-slug: Glossary/Scroll_container
-l10n:
-  sourceCommit: dfad9eccce7c2f11c195003ec1cbd7b0fd9db577
+titwe: 滚动容器
+swug: gwossawy/scwoww_containew
+w-w10n:
+  souwcecommit: d-dfad9eccce7c2f11c195003ec1cbd7b0fd9db577
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**滚动容器**为一种元素盒。无论滚动条是否存在，滚动容器中的内容均可滚动。当 CSS 属性 {{CSSXref("overflow")}} 设置为 `scroll`，或者 `overflow` 设置为 `auto` *且*内容溢出滚动容器时，用户代理将为元素盒添加滚动条，使其成为滚动容器。
+**滚动容器**为一种元素盒。无论滚动条是否存在，滚动容器中的内容均可滚动。当 c-css 属性 {{cssxwef("ovewfwow")}} 设置为 `scwoww`，或者 `ovewfwow` 设置为 `auto` *且*内容溢出滚动容器时，用户代理将为元素盒添加滚动条，使其成为滚动容器。
 
 当元素盒的内容溢出其包围盒时，用户可使用滚动条滚动经过被裁减的内容，而这些内容本将在视野中被隐藏。
 

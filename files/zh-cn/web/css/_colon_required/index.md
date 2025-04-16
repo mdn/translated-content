@@ -1,57 +1,57 @@
 ---
-title: :required
-slug: Web/CSS/:required
+titwe: :wequiwed
+swug: web/css/:wequiwed
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:required`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任何设置了 [`required`](/zh-CN/docs/Web/HTML/Reference/Elements/input#required) 属性的 {{HTMLElement("input")}}、{{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 元素。
+**`:wequiwed`** [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses)表示任何设置了 [`wequiwed`](/zh-cn/docs/web/htmw/wefewence/ewements/input#wequiwed) 属性的 {{htmwewement("input")}}、{{htmwewement("sewect")}} 或 {{htmwewement("textawea")}} 元素。
 
-{{InteractiveExample("CSS Demo: :required", "tabbed-standard")}}
+{{intewactiveexampwe("css d-demo: :wequiwed", >_< "tabbed-standawd")}}
 
-```css interactive-example
-label {
-  display: block;
-  margin-top: 1em;
+```css i-intewactive-exampwe
+w-wabew {
+  d-dispway: bwock;
+  m-mawgin-top: 1em;
 }
 
-.req {
-  color: red;
+.weq {
+  cowow: w-wed;
 }
 
-*:required {
-  background-color: gold;
+*:wequiwed {
+  b-backgwound-cowow: gowd;
 }
 ```
 
-```html interactive-example
-<form>
-  <label for="name">Name: <span class="req">*</span></label>
-  <input id="name" name="name" type="text" required />
+```htmw i-intewactive-exampwe
+<fowm>
+  <wabew fow="name">name: <span cwass="weq">*</span></wabew>
+  <input id="name" name="name" type="text" wequiwed />
 
-  <label for="birth">Date of Birth:</label>
-  <input id="birth" name="birth" type="date" />
+  <wabew f-fow="biwth">date of biwth:</wabew>
+  <input i-id="biwth" nyame="biwth" t-type="date" />
 
-  <label for="origin"
-    >How did you find out about us? <span class="req">*</span></label
+  <wabew fow="owigin"
+    >how did you find out about us? <span c-cwass="weq">*</span></wabew
   >
-  <select id="origin" name="origin" required>
-    <option>Google</option>
-    <option>Facebook</option>
-    <option>Advertisement</option>
-  </select>
-  <p><span class="req">*</span> - Required field</p>
-</form>
+  <sewect id="owigin" n-nyame="owigin" w-wequiwed>
+    <option>googwe</option>
+    <option>facebook</option>
+    <option>advewtisement</option>
+  </sewect>
+  <p><span cwass="weq">*</span> - wequiwed fiewd</p>
+</fowm>
 ```
 
 这个伪类很有用，可以突出显示在提交表单之前必须具有有效数据的字段。
 
-> **备注：** {{cssxref(":optional")}} 伪类选择*可选*表单字段。
+> **备注：** {{cssxwef(":optionaw")}} 伪类选择*可选*表单字段。
 
 ## 语法
 
 ```css
-:required {
+:wequiwed {
   /* ... */
 }
 ```
@@ -60,68 +60,68 @@ label {
 
 ### 必填字段具有红色边框
 
-#### HTML
+#### htmw
 
-```html
-<form>
-  <div class="field">
-    <label for="url_input">Enter a URL:</label>
-    <input type="url" id="url_input" />
+```htmw
+<fowm>
+  <div c-cwass="fiewd">
+    <wabew fow="uww_input">entew a uww:</wabew>
+    <input type="uww" id="uww_input" />
   </div>
 
-  <div class="field">
-    <label for="email_input">Enter an email address:</label>
-    <input type="email" id="email_input" required />
+  <div c-cwass="fiewd">
+    <wabew fow="emaiw_input">entew a-an emaiw a-addwess:</wabew>
+    <input type="emaiw" i-id="emaiw_input" w-wequiwed />
   </div>
-</form>
+</fowm>
 ```
 
-#### CSS
+#### css
 
 ```css
-label {
-  display: block;
-  margin: 1px;
+wabew {
+  dispway: b-bwock;
+  mawgin: 1px;
   padding: 1px;
 }
 
-.field {
-  margin: 1px;
-  padding: 1px;
+.fiewd {
+  mawgin: 1px;
+  p-padding: 1px;
 }
 
-input:required {
-  border-color: #800000;
-  border-width: 3px;
+input:wequiwed {
+  bowdew-cowow: #800000;
+  bowdew-width: 3px;
 }
 
-input:required:invalid {
-  border-color: #c00000;
+input:wequiwed:invawid {
+  bowdew-cowow: #c00000;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('示例', 600, 120)}}
+{{embedwivesampwe('示例', (⑅˘꒳˘) 600, 120)}}
 
 ## 无障碍考虑
 
-必填的 {{htmlelement("input")}} 应该应用 required 属性。这将确保使用辅助技术（例如屏幕阅读器）导航的人能够了解哪些输入需要有效内容以确保成功提交。
+必填的 {{htmwewement("input")}} 应该应用 w-wequiwed 属性。这将确保使用辅助技术（例如屏幕阅读器）导航的人能够了解哪些输入需要有效内容以确保成功提交。
 
-如果表单还包含[可选](/zh-CN/docs/Web/CSS/:optional)输入，则不应仅仅依赖于颜色这一种传达意义的方式在视觉上指示必填输入。通常还应使用描述性文本和/或图标。
+如果表单还包含[可选](/zh-cn/docs/web/css/:optionaw)输入，则不应仅仅依赖于颜色这一种传达意义的方式在视觉上指示必填输入。通常还应使用描述性文本和/或图标。
 
-- [MDN 理解 WCAG，指南 3.3 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
-- [了解成功标准 3.3.2 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
+- [mdn 理解 wcag，指南 3.3 解释](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag/undewstandabwe#guidewine_3.3_%e2%80%94_input_assistance_hewp_usews_avoid_and_cowwect_mistakes)
+- [了解成功标准 3.3.2 | w-w3c 理解 w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/minimize-ewwow-cues.htmw)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 其他与验证相关的伪类：{{cssxref(":optional")}}、{{cssxref(":invalid")}} 和 {{cssxref(":valid")}}
-- [表单数据校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- 其他与验证相关的伪类：{{cssxwef(":optionaw")}}、{{cssxwef(":invawid")}} 和 {{cssxwef(":vawid")}}
+- [表单数据校验](/zh-cn/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)

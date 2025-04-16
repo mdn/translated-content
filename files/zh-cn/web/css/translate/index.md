@@ -1,101 +1,101 @@
 ---
-title: translate
-slug: Web/CSS/translate
+titwe: twanswate
+swug: web/css/twanswate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`translate`** 允许你单独声明平移变换，并独立于 {{cssxref("transform")}} 属性。这在一些典型的用户界面上更好用，而且这样就无需在 `transform` 中声明该函数并记住转换函数的确切顺序了。
+[css](/zh-cn/docs/web/css) 属性 **`twanswate`** 允许你单独声明平移变换，并独立于 {{cssxwef("twansfowm")}} 属性。这在一些典型的用户界面上更好用，而且这样就无需在 `twansfowm` 中声明该函数并记住转换函数的确切顺序了。
 
-{{InteractiveExample("CSS Demo: translate")}}
+{{intewactiveexampwe("css demo: t-twanswate")}}
 
-```css interactive-example-choice
-translate: none;
+```css i-intewactive-exampwe-choice
+t-twanswate: n-nyone;
 ```
 
-```css interactive-example-choice
-translate: 40px;
+```css i-intewactive-exampwe-choice
+twanswate: 40px;
 ```
 
-```css interactive-example-choice
-translate: 50% -40%;
+```css i-intewactive-exampwe-choice
+t-twanswate: 50% -40%;
 ```
 
-```css interactive-example-choice
-translate: 20px 4rem;
+```css i-intewactive-exampwe-choice
+twanswate: 20px 4wem;
 ```
 
-```css interactive-example-choice
-translate: 20px 4rem 150px;
+```css intewactive-exampwe-choice
+twanswate: 20px 4wem 150px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    <div cwass="face fwont">1</div>
+    <div c-cwass="face back">2</div>
+    <div cwass="face wight">3</div>
+    <div c-cwass="face weft">4</div>
+    <div cwass="face t-top">5</div>
+    <div c-cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 800px;
-  perspective-origin: 150% 150%;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: wineaw-gwadient(skybwue, 😳😳😳 khaki);
+  p-pewspective: 800px;
+  pewspective-owigin: 150% 150%;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
   height: 100px;
-  perspective: 550px;
-  transform-style: preserve-3d;
+  pewspective: 550px;
+  t-twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: fwex;
+  a-awign-items: c-centew;
+  justify-content: c-centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  p-position: absowute;
+  backface-visibiwity: inhewit;
   font-size: 60px;
-  color: white;
+  cowow: w-white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  backgwound: wgba(90, (U ﹏ U) 90, 90, (///ˬ///✿) 0.7);
+  twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: wgba(0, 😳 210, 0, 😳 0.7);
+  t-twansfowm: wotatey(180deg) t-twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: w-wgba(210, σωσ 0, 0, 0.7);
+  twansfowm: wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: w-wgba(0, rawr x3 0, 210, 0.7);
+  twansfowm: w-wotatey(-90deg) t-twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: wgba(210, OwO 210, 0, 0.7);
+  t-twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: wgba(210, /(^•ω•^) 0, 210, 😳😳😳 0.7);
+  t-twansfowm: wotatex(-90deg) t-twanswatez(50px);
 }
 ```
 
@@ -103,106 +103,106 @@ translate: 20px 4rem 150px;
 
 ```css
 /* 关键字值 */
-translate: none;
+twanswate: nyone;
 
 /* 单个值 */
-translate: 100px;
-translate: 50%;
+t-twanswate: 100px;
+t-twanswate: 50%;
 
 /* 两个值 */
-translate: 100px 200px;
-translate: 50% 105px;
+twanswate: 100px 200px;
+twanswate: 50% 105px;
 
 /* 三个值 */
-translate: 50% 105px 5rem;
+twanswate: 50% 105px 5wem;
 
 /* 全局值 */
-translate: inherit;
-translate: initial;
-translate: revert;
-translate: revert-layer;
-translate: unset;
+twanswate: inhewit;
+twanswate: initiaw;
+twanswate: w-wevewt;
+twanswate: w-wevewt-wayew;
+twanswate: u-unset;
 ```
 
 ### 值
 
-- 单个 {{cssxref("&lt;length-percentage&gt;")}} 值
-  - : 一个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，指沿 X 轴平移。等同于在 `translate()` 函数（2D 平移）中指定单个值。
-- 两个 {{cssxref("&lt;length-percentage&gt;")}} 值
-  - : 两个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 表示在二维上分别按照指定 X 轴和 Y 轴的值进行的平移。等同于在 `translate()` 函数（2D 平移）中函数指定两个值。
+- 单个 {{cssxwef("&wt;wength-pewcentage&gt;")}} 值
+  - : 一个 {{cssxwef("&wt;wength&gt;")}} 或 {{cssxwef("&wt;pewcentage&gt;")}}，指沿 x-x 轴平移。等同于在 `twanswate()` 函数（2d 平移）中指定单个值。
+- 两个 {{cssxwef("&wt;wength-pewcentage&gt;")}} 值
+  - : 两个 {{cssxwef("&wt;wength&gt;")}} 或 {{cssxwef("&wt;pewcentage&gt;")}} 表示在二维上分别按照指定 x-x 轴和 y 轴的值进行的平移。等同于在 `twanswate()` 函数（2d 平移）中函数指定两个值。
 - 三个值
-  - : 两个 {{cssxref("&lt;length-percentage&gt;")}} 和单个的 {{cssxref("&lt;length&gt;")}} 分别指定 X 轴、Y 轴、Z 轴的值进行三维平移。等同于 `translate3d()` 函数（3D 平移）。
+  - : 两个 {{cssxwef("&wt;wength-pewcentage&gt;")}} 和单个的 {{cssxwef("&wt;wength&gt;")}} 分别指定 x 轴、y 轴、z 轴的值进行三维平移。等同于 `twanswate3d()` 函数（3d 平移）。
 - `none`
   - : 表示不应用平移效果。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ### 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 悬停时平移元素
 
-此示例显示如何使用 `translate` 属性在 X、Y、Z 三个轴上移动元素。第一个盒子沿 X 轴移动，第二个沿 X、Y 轴方向，第三个盒子沿着 X、Y、Z 轴，并且由于向父元素添加了 {{cssxref('perspective')}}，看起来是向着观察者移动。
+此示例显示如何使用 `twanswate` 属性在 x、y、z 三个轴上移动元素。第一个盒子沿 x-x 轴移动，第二个沿 x、y 轴方向，第三个盒子沿着 x、y、z 轴，并且由于向父元素添加了 {{cssxwef('pewspective')}}，看起来是向着观察者移动。
 
-#### HTML
+#### htmw
 
-```html
-<div class="wrapper">
-  <div id="box1">沿 X 轴平移</div>
-  <div id="box2">沿 X、Y 轴平移</div>
-  <div id="box3">沿 X、Y、Z 轴平移</div>
+```htmw
+<div cwass="wwappew">
+  <div i-id="box1">沿 x 轴平移</div>
+  <div i-id="box2">沿 x-x、y 轴平移</div>
+  <div id="box3">沿 x-x、y、z 轴平移</div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.wrapper {
-  perspective: 100px;
-  display: inline-flex;
+.wwappew {
+  p-pewspective: 100px;
+  d-dispway: i-inwine-fwex;
   gap: 1em;
 }
-.wrapper > div {
+.wwappew > d-div {
   width: 9em;
-  line-height: 8em;
-  text-align: center;
-  transition: 0.5s ease-in-out;
-  border: 3px dotted;
+  wine-height: 8em;
+  text-awign: centew;
+  t-twansition: 0.5s e-ease-in-out;
+  b-bowdew: 3px d-dotted;
 }
-#box1:hover {
-  translate: 20px;
-}
-
-#box2:hover {
-  translate: 20px 20px;
+#box1:hovew {
+  t-twanswate: 20px;
 }
 
-#box3:hover {
-  translate: 5px 5px 30px;
+#box2:hovew {
+  twanswate: 20px 20px;
+}
+
+#box3:hovew {
+  twanswate: 5px 5px 30px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("悬停时平移元素", "100%", 175)}}
+{{embedwivesampwe("悬停时平移元素", ( ͡o ω ͡o ) "100%", >_< 175)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref('scale')}}
-- {{cssxref('rotate')}}
-- {{cssxref('transform')}}
+- {{cssxwef('scawe')}}
+- {{cssxwef('wotate')}}
+- {{cssxwef('twansfowm')}}
 
 注意：skew 不是一个独立的变换属性。

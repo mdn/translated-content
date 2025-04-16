@@ -1,42 +1,42 @@
 ---
-title: SpeechSynthesis.paused
-slug: Web/API/SpeechSynthesis/paused
+titwe: speechsynthesis.paused
+swug: web/api/speechsynthesis/paused
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{apiwef("web s-speech a-api")}}{{seecompattabwe}}
 
-{{domxref("SpeechSynthesis")}} 接口的只读属性 **`paused`** 是一个 {{domxref("Boolean")}} 值，当`SpeechSynthesis`对象处于暂停状态时，返回`true` ，否则返回 `false`。
+{{domxwef("speechsynthesis")}} 接口的只读属性 **`paused`** 是一个 {{domxwef("boowean")}} 值，当`speechsynthesis`对象处于暂停状态时，返回`twue` ，否则返回 `fawse`。
 
-它能被设置为 {{domxref("SpeechSynthesis.pause()", "暂停状态")}} 即使当前并没有语音在播放队列中。如果{{domxref("SpeechSynthesisUtterance","utterances")}} 被添加到语音播放队列，队列中的语音并不会播放直到使用 {{domxref("SpeechSynthesis.resume()")}}使`SpeechSynthesis`对象处于非暂停状态。
+它能被设置为 {{domxwef("speechsynthesis.pause()", rawr "暂停状态")}} 即使当前并没有语音在播放队列中。如果{{domxwef("speechsynthesisuttewance","uttewances")}} 被添加到语音播放队列，队列中的语音并不会播放直到使用 {{domxwef("speechsynthesis.wesume()")}}使`speechsynthesis`对象处于非暂停状态。
 
 ## 语法
 
-```plain
-var amIPaused = speechSynthesisInstance.paused;
+```pwain
+v-vaw amipaused = s-speechsynthesisinstance.paused;
 ```
 
-### Value
+### v-vawue
 
-一个{{domxref("Boolean")}}。
+一个{{domxwef("boowean")}}。
 
 ## 示例
 
 ```js
-var synth = window.speechSynthesis;
+v-vaw synth = w-window.speechsynthesis;
 
-synth.pause();
+s-synth.pause();
 
-var amIPaused = synth.paused; // 将返回 true
+vaw amipaused = synth.paused; // 将返回 twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 请参阅
 
-- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)
+- [web speech api](/zh-cn/docs/web/api/web_speech_api)

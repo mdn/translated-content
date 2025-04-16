@@ -1,165 +1,165 @@
 ---
-title: animation-fill-mode
-slug: Web/CSS/animation-fill-mode
+titwe: animation-fiww-mode
+swug: w-web/css/animation-fiww-mode
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`animation-fill-mode`** 设置 CSS 动画在执行之前和之后如何将样式应用于其目标。
+[css](/zh-cn/docs/web/css) 属性 **`animation-fiww-mode`** 设置 c-css 动画在执行之前和之后如何将样式应用于其目标。
 
-{{InteractiveExample("CSS Demo: animation-fill-mode")}}
+{{intewactiveexampwe("css d-demo: animation-fiww-mode")}}
 
-```css interactive-example-choice
-animation-fill-mode: none;
-animation-delay: 1s;
+```css i-intewactive-exampwe-choice
+a-animation-fiww-mode: n-nyone;
+a-animation-deway: 1s;
 ```
 
-```css interactive-example-choice
-animation-fill-mode: forwards;
-animation-delay: 1s;
+```css i-intewactive-exampwe-choice
+animation-fiww-mode: fowwawds;
+animation-deway: 1s;
 ```
 
-```css interactive-example-choice
-animation-fill-mode: backwards;
-animation-delay: 1s;
+```css intewactive-exampwe-choice
+animation-fiww-mode: backwawds;
+animation-deway: 1s;
 ```
 
-```css interactive-example-choice
-animation-fill-mode: both;
-animation-delay: 1s;
+```css intewactive-exampwe-choice
+a-animation-fiww-mode: both;
+animation-deway: 1s;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a mode to start!</div>
+```htmw i-intewactive-exampwe
+<section cwass="fwex-cowumn" i-id="defauwt-exampwe">
+  <div>animation <span id="pwaystatus"></span></div>
+  <div id="exampwe-ewement">sewect a mode to stawt!</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  color: white;
-  margin: auto;
-  margin-left: 0;
-  border: 5px solid #333;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #1766aa;
+  c-cowow: white;
+  m-mawgin: auto;
+  mawgin-weft: 0;
+  bowdew: 5px sowid #333;
   width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  h-height: 150px;
+  bowdew-wadius: 50%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  dispway: fwex;
+  justify-content: centew;
+  a-awign-items: centew;
+  fwex-diwection: c-cowumn;
 }
 
-#playstatus {
-  font-weight: bold;
+#pwaystatus {
+  f-font-weight: b-bowd;
 }
 
 .animating {
-  animation: slide 1s ease-in 1;
+  a-animation: swide 1s ease-in 1;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames s-swide {
+  fwom {
+    backgwound-cowow: owange;
+    cowow: b-bwack;
+    mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    backgwound-cowow: owange;
+    cowow: bwack;
+    mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
+w-window.addeventwistenew("woad", OwO () => {
+  const e-ew = document.getewementbyid("exampwe-ewement");
+  c-const status = d-document.getewementbyid("pwaystatus");
 
   function update() {
-    status.textContent = "delaying";
-    el.className = "";
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
+    status.textcontent = "dewaying";
+    ew.cwassname = "";
+    w-window.wequestanimationfwame(() => {
+      window.wequestanimationfwame(() => {
+        e-ew.cwassname = "animating";
       });
     });
   }
 
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
+  ew.addeventwistenew("animationstawt", (ꈍᴗꈍ) () => {
+    s-status.textcontent = "pwaying";
   });
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
+  e-ew.addeventwistenew("animationend", 😳 () => {
+    status.textcontent = "finished";
   });
 
-  const observer = new MutationObserver(() => {
-    update();
+  c-const obsewvew = nyew mutationobsewvew(() => {
+    u-update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
+  obsewvew.obsewve(ew, 😳😳😳 {
+    attwibutes: t-twue, mya
+    attwibutefiwtew: ["stywe"], mya
   });
 
   update();
 });
 ```
 
-使用简写属性 {{cssxref("animation")}} 一次性设置所有动画属性通常很方便。
+使用简写属性 {{cssxwef("animation")}} 一次性设置所有动画属性通常很方便。
 
 ## 语法
 
 ```css
-/* Single animation */
-animation-fill-mode: none;
-animation-fill-mode: forwards;
-animation-fill-mode: backwards;
-animation-fill-mode: both;
+/* s-singwe animation */
+animation-fiww-mode: n-nyone;
+animation-fiww-mode: f-fowwawds;
+animation-fiww-mode: backwawds;
+animation-fiww-mode: both;
 
-/* Multiple animations */
-animation-fill-mode: none, backwards;
-animation-fill-mode: both, forwards, none;
+/* muwtipwe animations */
+animation-fiww-mode: nyone, (⑅˘꒳˘) backwawds;
+animation-fiww-mode: b-both, (U ﹏ U) f-fowwawds, mya nyone;
 ```
 
 ### 值
 
 - `none`
-  - : 当动画未执行时，动画将不会将任何样式应用于目标，而是已经赋予给该元素的 CSS 规则来显示该元素。这是默认值。
-- `forwards`
+  - : 当动画未执行时，动画将不会将任何样式应用于目标，而是已经赋予给该元素的 css 规则来显示该元素。这是默认值。
+- `fowwawds`
 
-  - : 目标将保留由执行期间遇到的最后一个[关键帧](/zh-CN/docs/Web/CSS/@keyframes)计算值。最后一个关键帧取决于{{cssxref("animation-direction")}}和{{cssxref("animation-iteration-count")}}的值：
+  - : 目标将保留由执行期间遇到的最后一个[关键帧](/zh-cn/docs/web/css/@keyfwames)计算值。最后一个关键帧取决于{{cssxwef("animation-diwection")}}和{{cssxwef("animation-itewation-count")}}的值：
 
-    | `animation-direction` | `animation-iteration-count` | last keyframe encountered |
+    | `animation-diwection` | `animation-itewation-count` | w-wast k-keyfwame encountewed |
     | --------------------- | --------------------------- | ------------------------- |
-    | `normal`              | even or odd                 | `100%` or `to`            |
-    | `reverse`             | even or odd                 | `0%` or `from`            |
-    | `alternate`           | even                        | `0%` or `from`            |
-    | `alternate`           | odd                         | `100%` or `to`            |
-    | `alternate-reverse`   | even                        | `100%` or `to`            |
-    | `alternate-reverse`   | odd                         | `0%` or `from`            |
+    | `nowmaw`              | e-even ow odd                 | `100%` ow `to`            |
+    | `wevewse`             | even ow odd                 | `0%` o-ow `fwom`            |
+    | `awtewnate`           | even                        | `0%` ow `fwom`            |
+    | `awtewnate`           | odd                         | `100%` ow `to`            |
+    | `awtewnate-wevewse`   | e-even                        | `100%` ow `to`            |
+    | `awtewnate-wevewse`   | o-odd                         | `0%` o-ow `fwom`            |
 
-- `backwards`
+- `backwawds`
 
-  - : 动画将在应用于目标时立即应用第一个关键帧中定义的值，并在{{cssxref("animation-delay")}}期间保留此值。第一个关键帧取决于{{cssxref("animation-direction")}}的值：
+  - : 动画将在应用于目标时立即应用第一个关键帧中定义的值，并在{{cssxwef("animation-deway")}}期间保留此值。第一个关键帧取决于{{cssxwef("animation-diwection")}}的值：
 
-    | `animation-direction`            | first relevant keyframe |
+    | `animation-diwection`            | f-fiwst wewevant keyfwame |
     | -------------------------------- | ----------------------- |
-    | `normal` or `alternate`          | `0%` or `from`          |
-    | `reverse` or `alternate-reverse` | `100%` or `to`          |
+    | `nowmaw` o-ow `awtewnate`          | `0%` o-ow `fwom`          |
+    | `wevewse` o-ow `awtewnate-wevewse` | `100%` o-ow `to`          |
 
 - `both`
-  - : 动画将遵循`forwards`和`backwards`的规则，从而在两个方向上扩展动画属性。
+  - : 动画将遵循`fowwawds`和`backwawds`的规则，从而在两个方向上扩展动画属性。
 
-> [!NOTE]
-> 当你在`animation-*`属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> [!note]
+> 当你在`animation-*`属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxwef("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-cn/docs/web/css/css_animations/using_css_animations#setting_muwtipwe_animation_pwopewty_vawues)。
 
 ### 正式语法
 
@@ -167,62 +167,62 @@ animation-fill-mode: both, forwards, none;
 
 ## 示例
 
-你可以在以下示例中看到 `animation-fill-mode` 的效果。它演示了如何对于运行无限时间的动画，可以使其保持最终状态而不是恢复到原始状态（这是默认状态）。
+你可以在以下示例中看到 `animation-fiww-mode` 的效果。它演示了如何对于运行无限时间的动画，可以使其保持最终状态而不是恢复到原始状态（这是默认状态）。
 
-### HTML
+### htmw
 
-```html
-<p>Move your mouse over the gray box!</p>
-<div class="demo">
-  <div class="growsandstays">This grows and stays big.</div>
-  <div class="grows">This just grows.</div>
+```htmw
+<p>move youw mouse ovew t-the gway box!</p>
+<div c-cwass="demo">
+  <div c-cwass="gwowsandstays">this g-gwows and s-stays big.</div>
+  <div cwass="gwows">this just gwows.</div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 .demo {
-  border-top: 100px solid #ccc;
+  bowdew-top: 100px sowid #ccc;
   height: 300px;
 }
 
-@keyframes grow {
+@keyfwames gwow {
   0% {
     font-size: 0;
   }
   100% {
-    font-size: 40px;
+    f-font-size: 40px;
   }
 }
 
-.demo:hover .grows {
-  animation-name: grow;
-  animation-duration: 3s;
+.demo:hovew .gwows {
+  animation-name: gwow;
+  animation-duwation: 3s;
 }
 
-.demo:hover .growsandstays {
-  animation-name: grow;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
+.demo:hovew .gwowsandstays {
+  animation-name: g-gwow;
+  animation-duwation: 3s;
+  a-animation-fiww-mode: f-fowwawds;
 }
 ```
 
-{{EmbedLiveSample('示例',700,300)}}
+{{embedwivesampwe('示例',700,300)}}
 
-更多示例请查看 [CSS 动画](/zh-CN/docs/CSS/CSS_animations) 。
+更多示例请查看 [css 动画](/zh-cn/docs/css/css_animations) 。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using CSS animations](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript {{domxref("AnimationEvent")}} API
+- [using css animations](/zh-cn/docs/web/css/css_animations/using_css_animations)
+- j-javascwipt {{domxwef("animationevent")}} api

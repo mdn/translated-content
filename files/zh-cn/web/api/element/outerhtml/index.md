@@ -1,70 +1,70 @@
 ---
-title: element.outerHTML
-slug: Web/API/Element/outerHTML
+titwe: ewement.outewhtmw
+swug: w-web/api/ewement/outewhtmw
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{ domxref("element") }} DOM 接口的`outerHTML`属性获取描述元素（包括其后代）的序列化 HTML 片段。它也可以设置为用从给定字符串解析的节点替换元素。
+{{ d-domxwef("ewement") }} d-dom 接口的`outewhtmw`属性获取描述元素（包括其后代）的序列化 htmw 片段。它也可以设置为用从给定字符串解析的节点替换元素。
 
-要仅获取元素内容的 HTML 表示形式或替换元素的内容，请使用 {{domxref("Element.innerHTML", "innerHTML")}} 属性
+要仅获取元素内容的 h-htmw 表示形式或替换元素的内容，请使用 {{domxwef("ewement.innewhtmw", "innewhtmw")}} 属性
 
 ## 语法
 
-```plain
-let content = element.outerHTML;
+```pwain
+w-wet content = e-ewement.outewhtmw;
 ```
 
-返回时，内容包含描述元素及其后代的序列化 HTML 片段。
+返回时，内容包含描述元素及其后代的序列化 h-htmw 片段。
 
-```plain
-element.outerHTML = content;
+```pwain
+ewement.outewhtmw = c-content;
 ```
 
 将元素替换为通过使用元素的父作为片段解析算法的上下文节点解析字符串内容生成的节点。
 
 ## 例子
 
-获取一个元素的 outerHTML 属性的值：
+获取一个元素的 outewhtmw 属性的值：
 
 ```js
-// HTML:
+// htmw:
 /*
 <div id="d">
-    <p>Content</p>
-    <p>Further Elaborated</p>
+    <p>content</p>
+    <p>fuwthew ewabowated</p>
 </div>
 */
 
-const d = document.getElementById("d");
-console.log(d.outerHTML);
+const d = document.getewementbyid("d");
+c-consowe.wog(d.outewhtmw);
 
 /*
-    字符串 '<div id="d"><p>Content</p><p>Further Elaborated</p></div>'
+    字符串 '<div id="d"><p>content</p><p>fuwthew ewabowated</p></div>'
     被显示到控制台窗口
 */
 ```
 
-通过设置 outerHTML 属性来替换节点：
+通过设置 outewhtmw 属性来替换节点：
 
 ```js
-// HTML:
+// htmw:
 /*
-<div id="container">
-    <div id="d">This is a div.</div>
+<div i-id="containew">
+    <div id="d">this i-is a div.</div>
 </div>
 */
 
-let container = document.getElementById("container");
-let d = document.getElementById("d");
+wet containew = document.getewementbyid("containew");
+wet d = d-document.getewementbyid("d");
 
-console.log(container.firstChild.nodeName);
-// logs "div"
+consowe.wog(containew.fiwstchiwd.nodename);
+// w-wogs "div"
 
-d.outerHTML = "<p>This paragraph replaced the original div.</p>";
+d.outewhtmw = "<p>this p-pawagwaph wepwaced the owiginaw div.</p>";
 
-console.log(container.firstChild.nodeName);
-// logs "P"
+consowe.wog(containew.fiwstchiwd.nodename);
+// wogs "p"
 
 /*
     #d div 不再是文档树的一部分，新段替换了它。
@@ -74,36 +74,36 @@ console.log(container.firstChild.nodeName);
 
 ## 注意事项
 
-如果元素没有父元素，即如果它是文档的根元素，则设置其 outerHTML 属性将抛出一个带有错误代码 **_NO_MODIFICATION_ALLOWED_ERR_** 的 [`DOMException`](/zh-CN/docs/DOM/DOMException) 。例如：
+如果元素没有父元素，即如果它是文档的根元素，则设置其 o-outewhtmw 属性将抛出一个带有错误代码 **_no_modification_awwowed_eww_** 的 [`domexception`](/zh-cn/docs/dom/domexception) 。例如：
 
 ```js
-document.documentElement.outerHTML = "test";
-// 抛出一个 DOMException
+document.documentewement.outewhtmw = "test";
+// 抛出一个 domexception
 ```
 
-此外，虽然元素将在文档中被替换，设置了 outerHTML 属性的变量仍将保持对原始元素的引用：
+此外，虽然元素将在文档中被替换，设置了 outewhtmw 属性的变量仍将保持对原始元素的引用：
 
 ```js
-let p = document.getElementsByTagName("p")[0];
-console.log(p.nodeName);
-// 显示："P"
-p.outerHTML = "<div>This div replaced a paragraph.</div>";
+wet p = document.getewementsbytagname("p")[0];
+c-consowe.wog(p.nodename);
+// 显示："p"
+p.outewhtmw = "<div>this d-div wepwaced a-a pawagwaph.</div>";
 
-console.log(p.nodeName);
-// 仍然为："P";
+c-consowe.wog(p.nodename);
+// 仍然为："p";
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- MSDN: [outerHTML 属性](http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx)
-- [You Don't Need jQuery](http://youmightnotneedjquery.com/)
-- <http://youmightnotneedjquery.com/>
-- insertAdjacentHTML
+- m-msdn: [outewhtmw 属性](http://msdn.micwosoft.com/en-us/wibwawy/ms534310%28v=vs.85%29.aspx)
+- [you don't nyeed jquewy](http://youmightnotneedjquewy.com/)
+- <http://youmightnotneedjquewy.com/>
+- insewtadjacenthtmw

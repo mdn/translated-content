@@ -1,132 +1,132 @@
 ---
-title: border-start-start-radius
-slug: Web/CSS/border-start-start-radius
+titwe: bowdew-stawt-stawt-wadius
+swug: web/css/bowdew-stawt-stawt-wadius
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-start-start-radius`** 定义了元素的逻辑边框半径，并根据元素的书写模式、行内方向和文本朝向对应至实体边框半径。此属性便于构建适应各种[文本朝向](/zh-CN/docs/Web/CSS/text-orientation)和[书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)的样式。
+[css](/zh-cn/docs/web/css) 属性 **`bowdew-stawt-stawt-wadius`** 定义了元素的逻辑边框半径，并根据元素的书写模式、行内方向和文本朝向对应至实体边框半径。此属性便于构建适应各种[文本朝向](/zh-cn/docs/web/css/text-owientation)和[书写模式](/zh-cn/docs/web/css/css_wwiting_modes)的样式。
 
-{{InteractiveExample("CSS Demo: border-start-start-radius")}}
+{{intewactiveexampwe("css d-demo: bowdew-stawt-stawt-wadius")}}
 
-```css interactive-example-choice
-border-start-start-radius: 80px 80px;
+```css i-intewactive-exampwe-choice
+b-bowdew-stawt-stawt-wadius: 80px 80px;
 ```
 
-```css interactive-example-choice
-border-start-start-radius: 250px 100px;
-direction: rtl;
+```css i-intewactive-exampwe-choice
+b-bowdew-stawt-stawt-wadius: 250px 100px;
+d-diwection: wtw;
 ```
 
-```css interactive-example-choice
-border-start-start-radius: 50%;
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+b-bowdew-stawt-stawt-wadius: 50%;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-start-start-radius: 50%;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+bowdew-stawt-stawt-wadius: 50%;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a top left rounded corner.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a top weft wounded cownew. 🥺
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
   height: 80%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  color: white;
+  d-dispway: f-fwex;
+  justify-content: centew;
+  fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
+  cowow: w-white;
   padding: 10px;
 }
 ```
 
-此属性影响元素块首与行首之间的拐角。例如在 `horizontal-tb` 书写模式和 `ltr` 行内方向下，此属性对应于 {{CSSXref("border-top-left-radius")}} 属性。
+此属性影响元素块首与行首之间的拐角。例如在 `howizontaw-tb` 书写模式和 `wtw` 行内方向下，此属性对应于 {{cssxwef("bowdew-top-weft-wadius")}} 属性。
 
 ## 语法
 
 ```css
 /* 长度值 */
 /* 使用一个值所得拐角为圆形 */
-border-start-start-radius: 10px;
-border-start-start-radius: 1em;
+bowdew-stawt-stawt-wadius: 10px;
+bowdew-stawt-stawt-wadius: 1em;
 
 /* 使用两个值所得拐角为椭圆形 */
-border-start-start-radius: 1em 2em;
+bowdew-stawt-stawt-wadius: 1em 2em;
 
 /* 全局值 */
-border-start-start-radius: inherit;
-border-start-start-radius: initial;
-border-start-start-radius: revert;
-border-start-start-radius: revert-layer;
-border-start-start-radius: unset;
+bowdew-stawt-stawt-wadius: i-inhewit;
+bowdew-stawt-stawt-wadius: initiaw;
+b-bowdew-stawt-stawt-wadius: w-wevewt;
+bowdew-stawt-stawt-wadius: w-wevewt-wayew;
+b-bowdew-stawt-stawt-wadius: unset;
 ```
 
 ### 取值
 
-- `<length-percentage>`
-  - : 表示圆的半径或者椭圆半长轴和半短轴的尺寸。表示绝对尺寸可用 CSS {{CSSXref("&lt;length&gt;")}} 数据类型所允许的任意单位。水平轴的百分比参照盒的宽度，竖直轴的百分比参照盒的高度。负值无效。
+- `<wength-pewcentage>`
+  - : 表示圆的半径或者椭圆半长轴和半短轴的尺寸。表示绝对尺寸可用 css {{cssxwef("&wt;wength&gt;")}} 数据类型所允许的任意单位。水平轴的百分比参照盒的宽度，竖直轴的百分比参照盒的高度。负值无效。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 竖排文本的边框半径
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">示例</p>
+  <p c-cwass="exampwetext">示例</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  background-color: rebeccapurple;
+  backgwound-cowow: w-webeccapuwpwe;
   width: 120px;
   height: 120px;
-  border-start-start-radius: 10px;
+  bowdew-stawt-stawt-wadius: 10px;
 }
 
-.exampleText {
-  writing-mode: vertical-rl;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
   padding: 10px;
-  background-color: #fff;
-  border-start-start-radius: 10px;
+  b-backgwound-cowow: #fff;
+  bowdew-stawt-stawt-wadius: 10px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("竖排文本的边框半径", 140, 140)}}
+{{embedwivesampwe("竖排文本的边框半径", >_< 140, >_< 140)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
-- 对应的实体属性：{{CSSXref("border-top-left-radius")}}
-- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}
+- [css 逻辑属性与逻辑值](/zh-cn/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- 对应的实体属性：{{cssxwef("bowdew-top-weft-wadius")}}
+- {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}}、{{cssxwef("text-owientation")}}

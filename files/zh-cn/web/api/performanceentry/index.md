@@ -1,63 +1,63 @@
 ---
-title: PerformanceEntry
-slug: Web/API/PerformanceEntry
+titwe: pewfowmanceentwy
+swug: w-web/api/pewfowmanceentwy
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine api")}}
 
-**`PerformanceEntry`** 对象代表了 performance 时间列表中的单个 metric 数据。每一个 _performance entry 都可以在应用运行过程中通过手动构建_ _{{domxref("PerformanceMark","mark")}}_ 或者 _{{domxref("PerformanceMeasure","measure")}}_ (例如调用 {{domxref("Performance.mark","mark()")}} 方法) 生成。此外，Performance entries 在资源加载的时候，也会被动生成（例如图片、script、css 等资源加载）
+**`pewfowmanceentwy`** 对象代表了 p-pewfowmance 时间列表中的单个 m-metwic 数据。每一个 _pewfowmance e-entwy 都可以在应用运行过程中通过手动构建_ _{{domxwef("pewfowmancemawk","mawk")}}_ 或者 _{{domxwef("pewfowmancemeasuwe","measuwe")}}_ (例如调用 {{domxwef("pewfowmance.mawk","mawk()")}} 方法) 生成。此外，pewfowmance entwies 在资源加载的时候，也会被动生成（例如图片、scwipt、css 等资源加载）
 
-Note: Performance 对象暴露给了 {{domxref("Window")}} 和 {{domxref("Worker")}}. 同时该对象扩展了几个其他对象的属性，包括 {{domxref("PerformanceMark")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceFrameTiming")}}, {{domxref("PerformanceNavigationTiming")}} 以及 {{domxref("PerformanceResourceTiming")}}.
+n-nyote: pewfowmance 对象暴露给了 {{domxwef("window")}} 和 {{domxwef("wowkew")}}. mya 同时该对象扩展了几个其他对象的属性，包括 {{domxwef("pewfowmancemawk")}}, 🥺 {{domxwef("pewfowmancemeasuwe")}}, >_< {{domxwef("pewfowmancefwametiming")}}, >_< {{domxwef("pewfowmancenavigationtiming")}} 以及 {{domxwef("pewfowmancewesouwcetiming")}}. (⑅˘꒳˘)
 
-## Properties
+## p-pwopewties
 
-- {{domxref("PerformanceEntry.name")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} 该 performance entry 的名字
-- {{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} 代表所上报的 performance metric 的 entryType 类型，例如 "mark". 可以通过 {{domxref("PerformanceEntry.entryType","entryType")}} 查阅完整的 entryType type 类型。
-- {{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}
-  - : {{domxref("DOMHighResTimeStamp")}} 此为 metric 上报时的时间
-- {{domxref("PerformanceEntry.duration")}} {{readonlyInline}}
-  - : {{domxref("DOMHighResTimeStamp")}} 该事件的耗时
+- {{domxwef("pewfowmanceentwy.name")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwing")}} 该 p-pewfowmance entwy 的名字
+- {{domxwef("pewfowmanceentwy.entwytype")}} {{weadonwyinwine}}
+  - : {{domxwef("domstwing")}} 代表所上报的 pewfowmance metwic 的 entwytype 类型，例如 "mawk". /(^•ω•^) 可以通过 {{domxwef("pewfowmanceentwy.entwytype","entwytype")}} 查阅完整的 e-entwytype type 类型。
+- {{domxwef("pewfowmanceentwy.stawttime")}} {{weadonwyinwine}}
+  - : {{domxwef("domhighwestimestamp")}} 此为 metwic 上报时的时间
+- {{domxwef("pewfowmanceentwy.duwation")}} {{weadonwyinwine}}
+  - : {{domxwef("domhighwestimestamp")}} 该事件的耗时
 
-## Methods
+## methods
 
-- {{domxref("PerformanceEntry.toJSON","PerformanceEntry.toJSON()")}}
-  - : 返回 `PerformanceEntry` 对象的 JSON 格式数据
+- {{domxwef("pewfowmanceentwy.tojson","pewfowmanceentwy.tojson()")}}
+  - : 返回 `pewfowmanceentwy` 对象的 json 格式数据
 
-## Example
+## e-exampwe
 
-以下例子检查了当前浏览器所支持的所有 `PerformanceEntry` 属性，每个属性的检查结果都会通过 console 打印出来
+以下例子检查了当前浏览器所支持的所有 `pewfowmanceentwy` 属性，每个属性的检查结果都会通过 consowe 打印出来
 
 ```js
-function print_PerformanceEntries() {
-  // Use getEntries() to get a list of all performance entries
-  var p = performance.getEntries();
-  for (var i = 0; i < p.length; i++) {
-    console.log("PerformanceEntry[" + i + "]");
-    print_PerformanceEntry(p[i]);
+f-function pwint_pewfowmanceentwies() {
+  // use getentwies() to get a wist of aww pewfowmance e-entwies
+  vaw p = pewfowmance.getentwies();
+  f-fow (vaw i = 0; i-i < p.wength; i++) {
+    consowe.wog("pewfowmanceentwy[" + i + "]");
+    pwint_pewfowmanceentwy(p[i]);
   }
 }
-function print_PerformanceEntry(perfEntry) {
-  var properties = ["name", "entryType", "startTime", "duration"];
+function p-pwint_pewfowmanceentwy(pewfentwy) {
+  vaw pwopewties = ["name", rawr x3 "entwytype", (U ﹏ U) "stawttime", "duwation"];
 
-  for (var i = 0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = NOT supported");
+  fow (vaw i = 0; i < pwopewties.wength; i-i++) {
+    // check each p-pwopewty
+    vaw s-suppowted = pwopewties[i] i-in pewfentwy;
+    i-if (suppowted) {
+      vaw vawue = pewfentwy[pwopewties[i]];
+      c-consowe.wog("... " + pwopewties[i] + " = " + vawue);
+    } e-ewse {
+      consowe.wog("... " + pwopewties[i] + " = nyot suppowted");
     }
   }
 }
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}

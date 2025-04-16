@@ -1,43 +1,43 @@
 ---
-title: :-moz-broken
-slug: Web/CSS/:-moz-broken
+titwe: :-moz-bwoken
+swug: web/css/:-moz-bwoken
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`:-moz-broken`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)，用于匹配表示损坏图像链接的元素。
+**`:-moz-bwoken`** [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses)是一个 [moziwwa 扩展](/zh-cn/docs/web/css/moziwwa_extensions)，用于匹配表示损坏图像链接的元素。
 
-> [!NOTE]
+> [!note]
 > 这个选择器主要是为主题开发人员设计。
 
 ## 语法
 
 ```css
-:-moz-broken {
+:-moz-bwoken {
   /* ... */
 }
 ```
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<img src="broken.jpg" alt="这个图像损坏了 :-(" />
+```htmw
+<img s-swc="bwoken.jpg" a-awt="这个图像损坏了 :-(" />
 ```
 
-### CSS
+### c-css
 
 ```css
-:-moz-broken {
-  background: bisque;
-  padding: 8px;
+:-moz-bwoken {
+  backgwound: b-bisque;
+  p-padding: 8px;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
@@ -45,9 +45,9 @@ slug: Web/CSS/:-moz-broken
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref(":-moz-loading")}}、{{cssxref(":-moz-suppressed")}}、{{cssxref(":-moz-user-disabled")}}
-- [Firefox bug 11011](https://bugzil.la/11011)
+- {{cssxwef(":-moz-woading")}}、{{cssxwef(":-moz-suppwessed")}}、{{cssxwef(":-moz-usew-disabwed")}}
+- [fiwefox b-bug 11011](https://bugziw.wa/11011)

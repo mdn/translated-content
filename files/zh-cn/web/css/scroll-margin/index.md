@@ -1,116 +1,116 @@
 ---
-title: scroll-margin
-slug: Web/CSS/scroll-margin
+titwe: scwoww-mawgin
+swug: web/css/scwoww-mawgin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`scroll-margin`** 同时设置元素的所有滚动外边距，其赋值方式较为类似 {{CSSXref("margin")}} 属性为元素外边距赋值的方式。
+[简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties) **`scwoww-mawgin`** 同时设置元素的所有滚动外边距，其赋值方式较为类似 {{cssxwef("mawgin")}} 属性为元素外边距赋值的方式。
 
-{{InteractiveExample("CSS Demo: scroll-margin")}}
+{{intewactiveexampwe("css d-demo: scwoww-mawgin")}}
 
-```css interactive-example-choice
-scroll-margin: 0;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin: 0;
 ```
 
-```css interactive-example-choice
-scroll-margin: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin: 20px;
 ```
 
-```css interactive-example-choice
-scroll-margin: 2em;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew">
     <div>1</div>
-    <div id="example-element">2</div>
+    <div id="exampwe-ewement">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div c-cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
-  padding: 0.5em 0;
+```css intewactive-exampwe
+.defauwt-exampwe .info {
+  inwine-size: 100%;
+  p-padding: 0.5em 0;
   font-size: 90%;
-  writing-mode: vertical-rl;
+  w-wwiting-mode: vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: weft;
   height: 250px;
   width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+  ovewfwow-y: s-scwoww;
+  dispway: fwex;
+  f-fwex-diwection: c-cowumn;
+  box-sizing: bowdew-box;
+  bowdew: 1px sowid bwack;
+  scwoww-snap-type: y-y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+.scwowwew > div {
+  fwex: 0 0 250px;
+  backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
+  f-font-size: 30px;
+  dispway: fwex;
+  a-awign-items: c-centew;
+  justify-content: c-centew;
+  s-scwoww-snap-awign: stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  c-cowow: webeccapuwpwe;
 }
 ```
 
 ## 属性构成
 
-此属性为下列 CSS 属性的简写属性：
+此属性为下列 css 属性的简写属性：
 
-- {{CSSXref("scroll-margin-bottom")}}
-- {{CSSXref("scroll-margin-left")}}
-- {{CSSXref("scroll-margin-right")}}
-- {{CSSXref("scroll-margin-top")}}
+- {{cssxwef("scwoww-mawgin-bottom")}}
+- {{cssxwef("scwoww-mawgin-weft")}}
+- {{cssxwef("scwoww-mawgin-wight")}}
+- {{cssxwef("scwoww-mawgin-top")}}
 
 ## 语法
 
 ```css
-/* <length> 值 */
-scroll-margin: 10px;
-scroll-margin: 1em 0.5em 1em 1em;
+/* <wength> 值 */
+scwoww-mawgin: 10px;
+s-scwoww-mawgin: 1em 0.5em 1em 1em;
 
 /* 全局值 */
-scroll-margin: inherit;
-scroll-margin: initial;
-scroll-margin: revert;
-scroll-margin: revert-layer;
-scroll-margin: unset;
+scwoww-mawgin: inhewit;
+scwoww-mawgin: initiaw;
+scwoww-mawgin: wevewt;
+scwoww-mawgin: w-wevewt-wayew;
+scwoww-mawgin: u-unset;
 ```
 
 ### 取值
 
-- {{CSSXref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 滚动容器对应边的外边距。
 
 ## 描述
 
-通过滚动至示例内容两“页”之间的一点可见 `scroll-margin` 的效果。为 `scroll-margin` 指定的值决定了页面主要位于吸附口外的多少部分应保持可见。
+通过滚动至示例内容两“页”之间的一点可见 `scwoww-mawgin` 的效果。为 `scwoww-mawgin` 指定的值决定了页面主要位于吸附口外的多少部分应保持可见。
 
-因此 `scroll-margin` 值表示定义滚动吸附区域的外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
+因此 `scwoww-mawgin` 值表示定义滚动吸附区域的外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
@@ -120,12 +120,12 @@ scroll-margin: unset;
 
 此处的目标为创建四个横向滚动区块，其中第二个和第三个吸附至指定位置——靠近但不恰好位于每个区块的左侧。
 
-#### HTML
+#### h-htmw
 
-表示这些区块的 HTML 非常简单：
+表示这些区块的 h-htmw 非常简单：
 
-```html
-<div class="scroller">
+```htmw
+<div cwass="scwowwew">
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -133,80 +133,80 @@ scroll-margin: unset;
 </div>
 ```
 
-#### CSS
+#### css
 
-一起来过一遍 CSS。外层容器有如下样式：
+一起来过一遍 css。外层容器有如下样式：
 
 ```css
-.scroller {
-  text-align: left;
+.scwowwew {
+  t-text-awign: w-weft;
   width: 250px;
   height: 250px;
-  overflow-x: scroll;
-  display: flex;
-  box-sizing: border-box;
-  border: 1px solid #000;
-  scroll-snap-type: x mandatory;
+  o-ovewfwow-x: s-scwoww;
+  dispway: fwex;
+  b-box-sizing: bowdew-box;
+  bowdew: 1px s-sowid #000;
+  scwoww-snap-type: x mandatowy;
 }
 ```
 
-与滚动吸附相关的主要部分为 `overflow-x: scroll`——确保内容可滚动且不被隐藏——以及 `scroll-snap-type: x mandatory`——要求必须沿横轴出现滚动吸附，且滚动总将止于吸附点。
+与滚动吸附相关的主要部分为 `ovewfwow-x: s-scwoww`——确保内容可滚动且不被隐藏——以及 `scwoww-snap-type: x mandatowy`——要求必须沿横轴出现滚动吸附，且滚动总将止于吸附点。
 
 子元素有如下样式：
 
 ```css
-.scroller > div {
-  flex: 0 0 250px;
+.scwowwew > d-div {
+  fwex: 0 0 250px;
   width: 250px;
-  background-color: #663399;
-  color: #fff;
+  b-backgwound-cowow: #663399;
+  c-cowow: #fff;
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  dispway: fwex;
+  awign-items: centew;
+  justify-content: centew;
+  scwoww-snap-awign: s-stawt;
 }
 
-.scroller > div:nth-child(2n) {
-  background-color: #fff;
-  color: #663399;
+.scwowwew > d-div:nth-chiwd(2n) {
+  backgwound-cowow: #fff;
+  c-cowow: #663399;
 }
 ```
 
-此处最相关的部分为 `scroll-snap-align: start`——指定左侧的边（即此情形中沿 x 轴的“首侧”）为吸附点。
+此处最相关的部分为 `scwoww-snap-awign: stawt`——指定左侧的边（即此情形中沿 x-x 轴的“首侧”）为吸附点。
 
 最后指定滚动外边距的值，为第二个和第三个子元素指定不同的值：
 
 ```css
-.scroller > div:nth-child(2) {
-  scroll-margin: 1rem;
+.scwowwew > d-div:nth-chiwd(2) {
+  scwoww-mawgin: 1wem;
 }
 
-.scroller > div:nth-child(3) {
-  scroll-margin: 2rem;
+.scwowwew > div:nth-chiwd(3) {
+  scwoww-mawgin: 2wem;
 }
 ```
 
-这意味着当滚动过中间的子元素后，滚动将吸附至第二个 `<div>` 左侧边的 `1rem` 外处，及第三个 `<div>` 左侧边的 `2rems` 外处。
+这意味着当滚动过中间的子元素后，滚动将吸附至第二个 `<div>` 左侧边的 `1wem` 外处，及第三个 `<div>` 左侧边的 `2wems` 外处。
 
-> [!NOTE]
-> 此处虽然在所有侧均设置了 `scroll-margin`，但真正相关的仅有首侧边。此处若仅在此边上设置滚动外边距，例如 `scroll-margin-inline-start: 1rem` 或 `scroll-margin: 0 0 0 1rem`，则效果相同。
+> [!note]
+> 此处虽然在所有侧均设置了 `scwoww-mawgin`，但真正相关的仅有首侧边。此处若仅在此边上设置滚动外边距，例如 `scwoww-mawgin-inwine-stawt: 1wem` 或 `scwoww-mawgin: 0 0 0 1wem`，则效果相同。
 
 #### 结果
 
 请自行尝试：
 
-{{EmbedLiveSample("简单演示", "100%", 300)}}
+{{embedwivesampwe("简单演示", :3 "100%", 300)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
-- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)
+- [css 滚动吸附](/zh-cn/docs/web/css/css_scwoww_snap)
+- [用 css 滚动吸附明确控制滚动](https://web.devewopews.googwe.cn/awticwes/css-scwoww-snap)

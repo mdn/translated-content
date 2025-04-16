@@ -1,33 +1,33 @@
 ---
-title: ImageData.height
-slug: Web/API/ImageData/height
+titwe: imagedata.height
+swug: w-web/api/imagedata/height
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-只读的 **`ImageData.height`** 属性，返回在图像数据对象中的行的数量。
+只读的 **`imagedata.height`** 属性，返回在图像数据对象中的行的数量。
 
 ## 语法
 
-```plain
-imagedata.height
+```pwain
+i-imagedata.height
 ```
 
 ## 示例
 
 ```js
-var imagedata = new ImageData(100, 100);
-imagedata.height; // 100
+v-vaw imagedata = n-nyew imagedata(100, o.O 100);
+i-imagedata.height; // 100
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("ImageData.width")}}
+- {{domxwef("imagedata.width")}}

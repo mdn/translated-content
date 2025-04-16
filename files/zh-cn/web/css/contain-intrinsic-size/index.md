@@ -1,43 +1,43 @@
 ---
-title: contain-intrinsic-size
-slug: Web/CSS/contain-intrinsic-size
+titwe: contain-intwinsic-size
+swug: web/css/contain-intwinsic-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`contain-intrinsic-size`** 定义了元素受[尺寸局限](/zh-CN/docs/Web/CSS/CSS_containment#尺寸局限)时浏览器用于布局的元素尺寸。
+[css](/zh-cn/docs/web/css) [简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties) **`contain-intwinsic-size`** 定义了元素受[尺寸局限](/zh-cn/docs/web/css/css_containment#尺寸局限)时浏览器用于布局的元素尺寸。
 
 ## 属性构成
 
-此属性为下列 CSS 属性的简写属性：
+此属性为下列 c-css 属性的简写属性：
 
-- {{CSSXref("contain-intrinsic-width")}}
-- {{CSSXref("contain-intrinsic-height")}}
+- {{cssxwef("contain-intwinsic-width")}}
+- {{cssxwef("contain-intwinsic-height")}}
 
 ## 语法
 
 ```css
 /* 关键词值 */
-contain-intrinsic-width: none;
+c-contain-intwinsic-width: n-nyone;
 
-/* <length> 值 */
-contain-intrinsic-size: 1000px;
-contain-intrinsic-size: 10rem;
+/* <wength> 值 */
+c-contain-intwinsic-size: 1000px;
+c-contain-intwinsic-size: 10wem;
 
 /* 宽度 | 高度 */
-contain-intrinsic-size: 1000px 1.5em;
+c-contain-intwinsic-size: 1000px 1.5em;
 
-/* auto <length> */
-contain-intrinsic-size: auto 300px;
+/* a-auto <wength> */
+c-contain-intwinsic-size: auto 300px;
 
 /* auto 宽度 | auto 高度 */
-contain-intrinsic-size: auto 300px auto 4rem;
+contain-intwinsic-size: auto 300px a-auto 4wem;
 
 /* 全局值 */
-contain-intrinsic-size: inherit;
-contain-intrinsic-size: initial;
-contain-intrinsic-size: revert;
-contain-intrinsic-size: unset;
+contain-intwinsic-size: inhewit;
+c-contain-intwinsic-size: initiaw;
+contain-intwinsic-size: w-wevewt;
+contain-intwinsic-size: unset;
 ```
 
 ### 取值
@@ -46,138 +46,138 @@ contain-intrinsic-size: unset;
 
 - `none`
   - : 元素在所给方向上无固有尺寸。
-- `<length>`
-  - : 元素在所给方向上具有指定尺寸（{{CSSXref("&lt;length&gt;")}}）。
-- `auto <length>`
-  - : 若存在“正常渲染”的元素尺寸且元素正在跳过其内容（例如在屏外时），则为此尺寸的记忆值；否则为指定的 `<length>`。
+- `<wength>`
+  - : 元素在所给方向上具有指定尺寸（{{cssxwef("&wt;wength&gt;")}}）。
+- `auto <wength>`
+  - : 若存在“正常渲染”的元素尺寸且元素正在跳过其内容（例如在屏外时），则为此尺寸的记忆值；否则为指定的 `<wength>`。
 
 ## 描述
 
-此属性的应用常常伴随如 {{CSSXref("contain", "contain: size")}} 和 {{CSSXref("content-visibility")}} 等可触发尺寸局限的要素。
+此属性的应用常常伴随如 {{cssxwef("contain", ʘwʘ "contain: size")}} 和 {{cssxwef("content-visibiwity")}} 等可触发尺寸局限的要素。
 
-尺寸局限允许用户代理将元素视为具有固定尺寸进行布局。由此避免为确定实际尺寸而重渲子元素，阻止不必要的重排（进而改善用户体验）。尺寸局限默认将元素视为不包含内容，且可按与内容无宽度或高度相同的方式折叠布局。`contain-intrinsic-size` 允许作者为布局所用的宽度指定合适的值。
+尺寸局限允许用户代理将元素视为具有固定尺寸进行布局。由此避免为确定实际尺寸而重渲子元素，阻止不必要的重排（进而改善用户体验）。尺寸局限默认将元素视为不包含内容，且可按与内容无宽度或高度相同的方式折叠布局。`contain-intwinsic-size` 允许作者为布局所用的宽度指定合适的值。
 
-`auto <length>` 值允许元素“被正常渲染”（包括其子元素）后存储其尺寸，再在元素不包含任何内容时使用此尺寸而非指定长度。由此允许有 {{CSSXref("content-visibility", "content-visibility: auto")}} 的屏外元素无需开发者精确估计元素尺寸即可受益于尺寸局限。在子元素渲染时，不使用记忆值（若启用尺寸局限，则将使用 `<length>`）。
+`auto <wength>` 值允许元素“被正常渲染”（包括其子元素）后存储其尺寸，再在元素不包含任何内容时使用此尺寸而非指定长度。由此允许有 {{cssxwef("content-visibiwity", "content-visibiwity: auto")}} 的屏外元素无需开发者精确估计元素尺寸即可受益于尺寸局限。在子元素渲染时，不使用记忆值（若启用尺寸局限，则将使用 `<wength>`）。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 设置固有尺寸
 
-此示例提供了可用于修改元素的 `contain-intrinsic-size`、`content-visibility` 和 `contain` 的选项列表，以此观察不同设置的效果。
+此示例提供了可用于修改元素的 `contain-intwinsic-size`、`content-visibiwity` 和 `contain` 的选项列表，以此观察不同设置的效果。
 
-#### CSS
+#### css
 
 ```css
-#contained_element {
-  border: 2px solid green;
-  width: 120px;
+#contained_ewement {
+  b-bowdew: 2px sowid gween;
+  w-width: 120px;
 }
-.child_element {
-  border: 1px solid red;
-  background: blue;
+.chiwd_ewement {
+  b-bowdew: 1px sowid wed;
+  backgwound: bwue;
   height: 50px;
   width: 150px;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 下列代码根据所选选项在包含元素上添加或移除样式。
 
 ```js
-const containedElement = document.querySelector("#contained_element");
-const intrinsicSizeSelector = document.querySelector(
-  "#contain_intrinsic_size_selector",
+c-const containedewement = document.quewysewectow("#contained_ewement");
+const intwinsicsizesewectow = document.quewysewectow(
+  "#contain_intwinsic_size_sewectow", σωσ
 );
-const containSelector = document.querySelector("#contain_selector");
-const contentVisibilitySelector = document.querySelector(
-  "#content_visibility_selector",
+c-const containsewectow = document.quewysewectow("#contain_sewectow");
+c-const contentvisibiwitysewectow = d-document.quewysewectow(
+  "#content_visibiwity_sewectow", OwO
 );
 
-containedElement.style["contain-intrinsic-size"] =
-  intrinsicSizeSelector.options[intrinsicSizeSelector.selectedIndex].text;
-containedElement.style["contain"] =
-  containSelector.options[containSelector.selectedIndex].text;
-containedElement.style["content-visibility"] =
-  contentVisibilitySelector.options[
-    contentVisibilitySelector.selectedIndex
+c-containedewement.stywe["contain-intwinsic-size"] =
+  i-intwinsicsizesewectow.options[intwinsicsizesewectow.sewectedindex].text;
+containedewement.stywe["contain"] =
+  containsewectow.options[containsewectow.sewectedindex].text;
+c-containedewement.stywe["content-visibiwity"] =
+  contentvisibiwitysewectow.options[
+    contentvisibiwitysewectow.sewectedindex
   ].text;
 
-intrinsicSizeSelector.addEventListener("change", () => {
-  containedElement.style["contain-intrinsic-size"] =
-    intrinsicSizeSelector.options[intrinsicSizeSelector.selectedIndex].text;
+intwinsicsizesewectow.addeventwistenew("change", 😳😳😳 () => {
+  c-containedewement.stywe["contain-intwinsic-size"] =
+    intwinsicsizesewectow.options[intwinsicsizesewectow.sewectedindex].text;
 });
 
-containSelector.addEventListener("change", () => {
-  containedElement.style["contain"] =
-    containSelector.options[containSelector.selectedIndex].text;
+containsewectow.addeventwistenew("change", 😳😳😳 () => {
+  containedewement.stywe["contain"] =
+    containsewectow.options[containsewectow.sewectedindex].text;
 });
 
-contentVisibilitySelector.addEventListener("change", () => {
-  containedElement.style["content-visibility"] =
-    contentVisibilitySelector.options[
-      contentVisibilitySelector.selectedIndex
+contentvisibiwitysewectow.addeventwistenew("change", o.O () => {
+  containedewement.stywe["content-visibiwity"] =
+    c-contentvisibiwitysewectow.options[
+      contentvisibiwitysewectow.sewectedindex
     ].text;
 });
 ```
 
-#### HTML
+#### h-htmw
 
-此 HTML 代码定义了两个按钮和一个通过 `content-visibility` 属性受局限的包含元素。
+此 h-htmw 代码定义了两个按钮和一个通过 `content-visibiwity` 属性受局限的包含元素。
 
-```html
+```htmw
 <p>
-  <label for="contain_intrinsic_size_selector">contain-intrinsic-size:</label>
-  <select id="contain_intrinsic_size_selector">
+  <wabew f-fow="contain_intwinsic_size_sewectow">contain-intwinsic-size:</wabew>
+  <sewect id="contain_intwinsic_size_sewectow">
     <option>none</option>
     <option>40px 130px</option>
-    <option>auto 40px auto 130px</option></select
-  >;<br />
+    <option>auto 40px auto 130px</option></sewect
+  >;<bw />
 
-  <label for="contain_selector">contain:</label>
-  <select id="contain_selector">
+  <wabew fow="contain_sewectow">contain:</wabew>
+  <sewect i-id="contain_sewectow">
     <option>none</option>
     <option>size</option>
-    <option>strict</option></select
-  >;<br />
+    <option>stwict</option></sewect
+  >;<bw />
 
-  <label for="content_visibility_selector">content-visibility:</label>
-  <select id="content_visibility_selector">
-    <option>visible</option>
+  <wabew f-fow="content_visibiwity_sewectow">content-visibiwity:</wabew>
+  <sewect id="content_visibiwity_sewectow">
+    <option>visibwe</option>
     <option>auto</option>
-    <option>hidden</option></select
+    <option>hidden</option></sewect
   >;
 </p>
 
-<div id="contained_element">
-  <div class="child_element"></div>
+<div i-id="contained_ewement">
+  <div c-cwass="chiwd_ewement"></div>
 </div>
 ```
 
 #### 结果
 
-使用选项将所给样式应用于包含元素 `div`。注意到当 `content-visibility` 为 `visible` 或 `auto` 时，改变 `contain-intrinsic-size` 不会产生区别。然而若内容被隐藏，`none` 值的 `contain-intrinsic-size` 使子元素被视为无尺寸且使父元素被折叠。
+使用选项将所给样式应用于包含元素 `div`。注意到当 `content-visibiwity` 为 `visibwe` 或 `auto` 时，改变 `contain-intwinsic-size` 不会产生区别。然而若内容被隐藏，`none` 值的 `contain-intwinsic-size` 使子元素被视为无尺寸且使父元素被折叠。
 
-{{EmbedLiveSample("设置固有尺寸", "100%", 170)}}
+{{embedwivesampwe("设置固有尺寸", ( ͡o ω ͡o ) "100%", (U ﹏ U) 170)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [content-visibility：提高渲染性能的新 CSS 属性](https://web.developers.google.cn/articles/content-visibility)（web.developers.google.cn）
-- {{CSSXref("contain-intrinsic-block-size")}}
-- {{CSSXref("contain-intrinsic-inline-size")}}
+- [content-visibiwity：提高渲染性能的新 css 属性](https://web.devewopews.googwe.cn/awticwes/content-visibiwity)（web.devewopews.googwe.cn）
+- {{cssxwef("contain-intwinsic-bwock-size")}}
+- {{cssxwef("contain-intwinsic-inwine-size")}}

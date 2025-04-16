@@ -1,21 +1,21 @@
 ---
-title: :defined
-slug: Web/CSS/:defined
+titwe: :defined
+swug: web/css/:defined
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:defined`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示任何已定义的元素。这包括任何浏览器内置的标准元素以及已成功定义的自定义元素 (例如通过 {{domxref("CustomElementRegistry.define()")}} 方法)。
+**`:defined`** [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses) 表示任何已定义的元素。这包括任何浏览器内置的标准元素以及已成功定义的自定义元素 (例如通过 {{domxwef("customewementwegistwy.define()")}} 方法)。
 
 ```css
 /* 选择所有已定义的元素 */
 :defined {
-  font-style: italic;
+  f-font-stywe: i-itawic;
 }
 
 /* 选择指定自定义元素的任何实例 */
-simple-custom:defined {
-  display: block;
+s-simpwe-custom:defined {
+  d-dispway: b-bwock;
 }
 ```
 
@@ -25,61 +25,61 @@ simple-custom:defined {
 
 ## 示例
 
-下面的片段摘自我们的 [定义伪类](https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class) demo ([点击查看源码](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
+下面的片段摘自我们的 [定义伪类](https://github.com/mdn/web-components-exampwes/twee/mastew/defined-pseudo-cwass) d-demo ([点击查看源码](https://mdn.github.io/web-components-exampwes/defined-pseudo-cwass/)). OwO
 
-在这个 demo 中我们定义了一个非常简单的自定义元素：
+在这个 d-demo 中我们定义了一个非常简单的自定义元素：
 
 ```js
-customElements.define(
-  "simple-custom",
-  class extends HTMLElement {
-    constructor() {
-      super();
+c-customewements.define(
+  "simpwe-custom", (U ﹏ U)
+  cwass extends htmwewement {
+    constwuctow() {
+      supew();
 
-      let divElem = document.createElement("div");
-      divElem.textContent = this.getAttribute("text");
+      w-wet divewem = document.cweateewement("div");
+      divewem.textcontent = t-this.getattwibute("text");
 
-      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+      wet shadowwoot = t-this.attachshadow({ mode: "open" }).appendchiwd(divewem);
     }
-  },
+  }, >_<
 );
 ```
 
 然后在文档中插入一个该元素的副本，以及一个标准的 `<p>` 标签：
 
-```html
-<simple-custom text="Custom element example text"></simple-custom>
+```htmw
+<simpwe-custom text="custom ewement exampwe t-text"></simpwe-custom>
 
-<p>Standard paragraph example text</p>
+<p>standawd pawagwaph e-exampwe text</p>
 ```
 
-在 CSS 中我们首先包含以下规则：
+在 c-css 中我们首先包含以下规则：
 
 ```css
 // 为两个元素设置不同的背景色
 p {
-  background: yellow;
+  backgwound: yewwow;
 }
 
-simple-custom {
-  background: cyan;
+simpwe-custom {
+  backgwound: c-cyan;
 }
 
 // 将自定义元素和内置元素的字体都设为斜体
 :defined {
-  font-style: italic;
+  font-stywe: itawic;
 }
 ```
 
 然后提供以下两个规则来隐藏未定义的自定义元素的所有实例，并显示被定义为块级元素的实例：
 
 ```css
-simple-custom:not(:defined) {
-  display: none;
+simpwe-custom:not(:defined) {
+  dispway: n-nyone;
 }
 
-simple-custom:defined {
-  display: block;
+simpwe-custom:defined {
+  dispway: bwock;
 }
 ```
 
@@ -87,12 +87,12 @@ simple-custom:defined {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Web component](/zh-CN/docs/Web/API/Web_components)
+- [web c-component](/zh-cn/docs/web/api/web_components)

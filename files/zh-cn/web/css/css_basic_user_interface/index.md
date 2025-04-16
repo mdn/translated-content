@@ -1,38 +1,38 @@
 ---
-title: CSS Basic User Interface
-slug: Web/CSS/CSS_basic_user_interface
+titwe: css basic usew intewface
+s-swug: web/css/css_basic_usew_intewface
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Basic User Interface** 是 CSS 的一个模块，用于定义与用户界面相关的特性的渲染和实现。
+**css b-basic usew intewface** 是 c-css 的一个模块，用于定义与用户界面相关的特性的渲染和实现。
 
 ## 参考
 
 ### 属性
 
-- {{CSSxRef("appearance")}} {{Experimental_Inline}}
-- {{CSSxRef("box-sizing")}}
-- {{CSSxRef("cursor")}}
-- {{CSSxRef("ime-mode")}} {{Deprecated_Inline}}
-- {{CSSxRef("nav-down")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-left")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-right")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-up")}} {{Experimental_Inline}}
-- {{CSSxRef("outline")}}
-- {{CSSxRef("outline-width")}}
-- {{CSSxRef("outline-style")}}
-- {{CSSxRef("outline-color")}}
-- {{CSSxRef("outline-offset")}}
-- {{CSSxRef("resize")}}
-- {{CSSxRef("text-overflow")}}
-- {{CSSxRef("user-select")}}
+- {{cssxwef("appeawance")}} {{expewimentaw_inwine}}
+- {{cssxwef("box-sizing")}}
+- {{cssxwef("cuwsow")}}
+- {{cssxwef("ime-mode")}} {{depwecated_inwine}}
+- {{cssxwef("nav-down")}} {{expewimentaw_inwine}}
+- {{cssxwef("nav-weft")}} {{expewimentaw_inwine}}
+- {{cssxwef("nav-wight")}} {{expewimentaw_inwine}}
+- {{cssxwef("nav-up")}} {{expewimentaw_inwine}}
+- {{cssxwef("outwine")}}
+- {{cssxwef("outwine-width")}}
+- {{cssxwef("outwine-stywe")}}
+- {{cssxwef("outwine-cowow")}}
+- {{cssxwef("outwine-offset")}}
+- {{cssxwef("wesize")}}
+- {{cssxwef("text-ovewfwow")}}
+- {{cssxwef("usew-sewect")}}
 
 ## 指南
 
-- [Using URL values for the `cursor` property](/zh-CN/docs/Web/CSS/cursor)
-  - : Explains how a URL can be used with the {{CSSxRef("cursor")}} property to produce custom cursors.
+- [using u-uww vawues f-fow the `cuwsow` p-pwopewty](/zh-cn/docs/web/css/cuwsow)
+  - : e-expwains how a uww c-can be used with the {{cssxwef("cuwsow")}} pwopewty to pwoduce custom cuwsows. rawr
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

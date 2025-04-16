@@ -1,74 +1,74 @@
 ---
-title: scroll-padding-right
-slug: Web/CSS/scroll-padding-right
+titwe: scwoww-padding-wight
+swug: web/css/scwoww-padding-wight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`scroll-padding-right`** 属性定义了滚动口的*最优视区*——用于在用户视野中放置内容的目标区域——的右内边距。作者由此得以排除滚动口被其他内容（如固定定位的工具栏或侧边栏）所遮挡的区域，或在目标元素与滚动口的边之间留出更多余地。
+**`scwoww-padding-wight`** 属性定义了滚动口的*最优视区*——用于在用户视野中放置内容的目标区域——的右内边距。作者由此得以排除滚动口被其他内容（如固定定位的工具栏或侧边栏）所遮挡的区域，或在目标元素与滚动口的边之间留出更多余地。
 
-{{InteractiveExample("CSS Demo: scroll-padding-right")}}
+{{intewactiveexampwe("css d-demo: scwoww-padding-wight")}}
 
-```css interactive-example-choice
-scroll-padding-right: 0;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-wight: 0;
 ```
 
-```css interactive-example-choice
-scroll-padding-right: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding-wight: 20px;
 ```
 
-```css interactive-example-choice
-scroll-padding-right: 2em;
+```css intewactive-exampwe-choice
+s-scwoww-padding-wight: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller" id="example-element">
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="scwowwew" id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  flex-wrap: wrap;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  f-fwex-wwap: wwap;
 }
 
-.default-example .info {
+.defauwt-exampwe .info {
   width: 100%;
-  padding: 0.5em 0;
+  p-padding: 0.5em 0;
   font-size: 90%;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  t-text-awign: weft;
   width: 250px;
   height: 250px;
-  overflow-x: scroll;
-  display: flex;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: x mandatory;
+  o-ovewfwow-x: scwoww;
+  dispway: f-fwex;
+  box-sizing: b-bowdew-box;
+  bowdew: 1px sowid bwack;
+  scwoww-snap-type: x mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
+.scwowwew > div {
+  f-fwex: 0 0 250px;
   width: 250px;
-  background-color: rebeccapurple;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: end;
+  backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
+  f-font-size: 30px;
+  dispway: f-fwex;
+  awign-items: c-centew;
+  j-justify-content: c-centew;
+  scwoww-snap-awign: end;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > d-div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  cowow: webeccapuwpwe;
 }
 ```
 
@@ -76,45 +76,45 @@ scroll-padding-right: 2em;
 
 ```css
 /* 关键字值 */
-scroll-padding-right: auto;
+s-scwoww-padding-wight: auto;
 
-/* <length> 值 */
-scroll-padding-right: 10px;
-scroll-padding-right: 1em;
-scroll-padding-right: 10%;
+/* <wength> 值 */
+scwoww-padding-wight: 10px;
+scwoww-padding-wight: 1em;
+scwoww-padding-wight: 10%;
 
 /* 全局值 */
-scroll-padding-right: inherit;
-scroll-padding-right: initial;
-scroll-padding-right: revert;
-scroll-padding-right: revert-layer;
-scroll-padding-right: unset;
+scwoww-padding-wight: i-inhewit;
+scwoww-padding-wight: initiaw;
+scwoww-padding-wight: w-wevewt;
+scwoww-padding-wight: w-wevewt-wayew;
+scwoww-padding-wight: u-unset;
 ```
 
 ### 取值
 
-- `<length-percentage>`
+- `<wength-pewcentage>`
   - : 滚动口的右内边距，为有效的长度或百分比。
 - `auto`
   - : 此内边距由用户代理所决定。此值通常为 `0px`，但用户代理可检测非零值是否更合理并另行处理。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
-- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)
+- [css 滚动吸附](/zh-cn/docs/web/css/css_scwoww_snap)
+- [用 css 滚动吸附明确控制滚动](https://web.devewopews.googwe.cn/awticwes/css-scwoww-snap)

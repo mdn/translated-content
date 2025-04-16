@@ -1,53 +1,53 @@
 ---
-title: any-hover
-slug: Web/CSS/@media/any-hover
+titwe: any-hovew
+swug: web/css/@media/any-hovew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`any-hover`** [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) 可以用来测试是否有*任意*可用的输入机制可以在元素上 hover。
+**`any-hovew`** [css](/zh-cn/docs/web/css) [媒体特性](/zh-cn/docs/web/css/css_media_quewies/using_media_quewies#media_featuwes) 可以用来测试是否有*任意*可用的输入机制可以在元素上 h-hovew。
 
 ## 语法
 
-`any-hover` 使用下面列表的值作为关键字。
+`any-hovew` 使用下面列表的值作为关键字。
 
 - `none`
-  - : 可用的输入机制里没有机制可以方便地 hover，或者不存在定点输入机制。
-- `hover`
-  - : 一个或多个可用的输入机制可以方便地在元素上 hover。
+  - : 可用的输入机制里没有机制可以方便地 h-hovew，或者不存在定点输入机制。
+- `hovew`
+  - : 一个或多个可用的输入机制可以方便地在元素上 h-hovew。
 
 ## 示例
 
-### 测试是否有输入机制可以 hover
+### 测试是否有输入机制可以 h-hovew
 
-#### HTML
+#### h-htmw
 
-```html
-<a href="#">Try hovering over me!</a>
+```htmw
+<a h-hwef="#">twy h-hovewing ovew m-me!</a>
 ```
 
-#### CSS
+#### css
 
 ```css
-@media (any-hover: hover) {
-  a:hover {
-    background: yellow;
+@media (any-hovew: hovew) {
+  a:hovew {
+    backgwound: yewwow;
   }
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("测试是否有输入机制可以 hover")}}
+{{embedwivesampwe("测试是否有输入机制可以 h-hovew")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 更多资料
 
-- [the `hover` media feature](/zh-CN/docs/Web/CSS/@media/hover)
+- [the `hovew` media featuwe](/zh-cn/docs/web/css/@media/hovew)

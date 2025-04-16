@@ -1,183 +1,183 @@
 ---
-title: GlobalEventHandlers.onanimationcancel
-slug: Web/API/Element/animationcancel_event
+titwe: gwobaweventhandwews.onanimationcancew
+swug: web/api/ewement/animationcancew_event
 ---
 
-{{APIRef("CSS3 Animations")}}
+{{apiwef("css3 a-animations")}}
 
-animationcancel 是一个事件处理操作，这个事件在[CSS Animation](/zh-CN/docs/Web/CSS/CSS_animations)属性意外中断时派发出来 (换句话说，任何时候 animation 停止运行不会发出一个 animationend 事件，比如，当 animation-name 改变以后，animation 就会被移除，或者动画节点隐藏—当前元素或者任何包含的节点隐藏)—使用 css 时。
+a-animationcancew 是一个事件处理操作，这个事件在[css a-animation](/zh-cn/docs/web/css/css_animations)属性意外中断时派发出来 (换句话说，任何时候 animation 停止运行不会发出一个 a-animationend 事件，比如，当 a-animation-name 改变以后，animation 就会被移除，或者动画节点隐藏—当前元素或者任何包含的节点隐藏)—使用 c-css 时。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+在类似 {{domxwef("eventtawget.addeventwistenew", 🥺 "addeventwistenew()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener("animationcancel", (event) => {});
+a-addeventwistenew("animationcancew", rawr x3 (event) => {});
 
-onanimationcancel = (event) => {};
+o-onanimationcancew = (event) => {};
 ```
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<div class="main">
+```htmw
+<div cwass="main">
   <div id="box">
-    <div id="text" onanimationcancel="handleCancelEvent">Box</div>
+    <div id="text" onanimationcancew="handwecancewevent">box</div>
   </div>
 </div>
 
-<div class="button" id="toggleBox">Hide the Box</div>
+<div cwass="button" i-id="toggwebox">hide the box</div>
 
-<pre id="log"></pre>
+<pwe id="wog"></pwe>
 ```
 
-### CSS
+### c-css
 
 ```css hidden
-:root {
+:woot {
   --boxwidth: 50px;
 }
 
 .main {
   width: 300px;
-  height: 300px;
-  border: 1px solid black;
+  h-height: 300px;
+  bowdew: 1px sowid bwack;
 }
 
 .button {
-  cursor: pointer;
-  width: 300px;
-  border: 1px solid black;
-  font-size: 16px;
-  text-align: center;
-  margin-top: 0;
+  cuwsow: pointew;
+  w-width: 300px;
+  bowdew: 1px s-sowid bwack;
+  f-font-size: 16px;
+  text-awign: centew;
+  mawgin-top: 0;
   padding-top: 2px;
   padding-bottom: 4px;
-  color: white;
-  background-color: darkgreen;
+  cowow: w-white;
+  backgwound-cowow: dawkgween;
   font:
-    14px "Open Sans",
-    "Arial",
-    sans-serif;
+    14px "open sans", o.O
+    "awiaw",
+    sans-sewif;
 }
 
 #text {
   width: 46px;
-  padding: 10px;
-  position: relative;
-  text-align: center;
-  align-self: center;
-  color: white;
+  p-padding: 10px;
+  position: wewative;
+  t-text-awign: c-centew;
+  awign-sewf: c-centew;
+  c-cowow: white;
   font:
-    bold 1.4em "Lucida Grande",
-    "Open Sans",
-    sans-serif;
+    bowd 1.4em "wucida gwande", rawr
+    "open s-sans", ʘwʘ
+    sans-sewif;
 }
 ```
 
-Leaving out some bits of the CSS that don't matter for the discussion here, let's take a look at the styles for the box that we're animating. First is the box itself, with all its properties, including {{cssxref("animation")}}, defined. We go ahead and describe the animation in-place here because the animation is intended to begin as soon as the page loads, rather than based on an event.
+weaving out some bits of the css t-that don't mattew fow the discussion hewe, 😳😳😳 wet's take a wook at the stywes fow the box that we'we a-animating. ^^;; fiwst is the box itsewf, o.O w-with aww its p-pwopewties, (///ˬ///✿) incwuding {{cssxwef("animation")}}, σωσ d-defined. we go ahead and descwibe the animation in-pwace hewe b-because the animation i-is intended to begin as soon a-as the page w-woads, nyaa~~ wathew than based on an event. ^^;;
 
 ```css
 #box {
-  width: var(--boxwidth);
-  height: var(--boxwidth);
-  left: 0;
+  w-width: vaw(--boxwidth);
+  height: vaw(--boxwidth);
+  w-weft: 0;
   top: 0;
-  border: 1px solid #7788ff;
-  margin: 0;
-  position: relative;
-  background-color: #2233ff;
-  display: flex;
-  justify-content: center;
-  animation: 5s ease-in-out 0s infinite alternate both slideBox;
+  bowdew: 1px sowid #7788ff;
+  m-mawgin: 0;
+  position: w-wewative;
+  backgwound-cowow: #2233ff;
+  d-dispway: f-fwex;
+  justify-content: centew;
+  animation: 5s ease-in-out 0s infinite awtewnate both swidebox;
 }
 ```
 
-The animation's keyframes are described next, plotting a course from the top-left corner of the content box to the bottom-right corner.
+the animation's keyfwames awe descwibed n-nyext, ^•ﻌ•^ pwotting a-a couwse fwom the top-weft c-cownew of the c-content box to t-the bottom-wight cownew. σωσ
 
 ```css
-@keyframes slideBox {
-  from {
-    left: 0;
+@keyfwames swidebox {
+  fwom {
+    w-weft: 0;
     top: 0;
   }
   to {
-    left: calc(100% - var(--boxwidth));
-    top: calc(100% - var(--boxwidth));
+    weft: cawc(100% - vaw(--boxwidth));
+    top: cawc(100% - v-vaw(--boxwidth));
   }
 }
 ```
 
-Since the animation is described as taking place an infinite number of times, alternating direction each time, the box will glide back and forth between the two corners until stopped or the page is closed.
+since t-the animation i-is descwibed as t-taking pwace an infinite nyumbew o-of times, -.- awtewnating d-diwection e-each time, the b-box wiww gwide back and fowth between the two c-cownews untiw stopped o-ow the page i-is cwosed. ^^;;
 
-### JavaScript
+### j-javascwipt
 
-Before we get to the animation code, we define a function which logs information to a box on the user's screen. We'll use this to show information about the events we receive. Note the use of {{domxref("AnimationEvent.animationName")}} and {{domxref("AnimationEvent.elapsedTime")}} to get information about the event which occurred.
+befowe w-we get to the animation code, XD we define a function which wogs i-infowmation to a box on the usew's scween. 🥺 we'ww use this to show infowmation about the events w-we weceive. nyote the use of {{domxwef("animationevent.animationname")}} and {{domxwef("animationevent.ewapsedtime")}} to get i-infowmation about t-the event which o-occuwwed. òωó
 
 ```js
-function log(msg, event) {
-  let logBox = document.getElementById("log");
+function wog(msg, (ˆ ﻌ ˆ)♡ e-event) {
+  wet wogbox = document.getewementbyid("wog");
 
-  logBox.innerHTML += msg;
+  w-wogbox.innewhtmw += m-msg;
 
   if (event) {
-    logBox.innerHTML +=
+    wogbox.innewhtmw +=
       " <code>" +
-      event.animationName +
+      event.animationname +
       "</code> at time " +
-      event.elapsedTime.toFixed(2) +
-      " seconds.";
+      event.ewapsedtime.tofixed(2) +
+      " s-seconds.";
   }
 
-  logBox.innerHTML += "\n";
+  wogbox.innewhtmw += "\n";
 }
 ```
 
-Then we set up the `handleCancelEvent()` function, which is called in response to the `animationcancel` event, as set up in the HTML above. All we do here is log information to the console, but you might find other use cases, such as starting a new animation or effect, or terminating some dependent operation.
+t-then we set up the `handwecancewevent()` f-function, -.- which i-is cawwed in wesponse to the `animationcancew` event, :3 as set u-up in the htmw above. ʘwʘ a-aww we do hewe is wog infowmation t-to the consowe, 🥺 b-but you might find othew use cases, >_< such as stawting a nyew animation ow e-effect, ʘwʘ ow tewminating s-some dependent o-opewation. (˘ω˘)
 
 ```js
-function handleCancelEvent(event) {
-  log("Animation canceled", event);
+function h-handwecancewevent(event) {
+  wog("animation c-cancewed", (✿oωo) event);
 }
 ```
 
-Then we add a method to handle toggle {{cssxref("display")}} between `"flex"` and `"none"` and establish it as the handler for a [`click`](/zh-CN/docs/Web/API/Element/click_event) event on the "Hide/Show" the Box button:
+t-then we add a method to handwe toggwe {{cssxwef("dispway")}} between `"fwex"` and `"none"` a-and estabwish i-it as the handwew fow a [`cwick`](/zh-cn/docs/web/api/ewement/cwick_event) event o-on the "hide/show" t-the box button:
 
 ```js
-function toggleBox() {
-  if (box.style.display == "none") {
-    box.style.display = "flex";
-    document.getElementById("toggleBox").innerHTML = "Hide the box";
-  } else {
-    box.style.display = "none";
-    document.getElementById("toggleBox").innerHTML = "Show the box";
+function toggwebox() {
+  if (box.stywe.dispway == "none") {
+    b-box.stywe.dispway = "fwex";
+    document.getewementbyid("toggwebox").innewhtmw = "hide the box";
+  } ewse {
+    box.stywe.dispway = "none";
+    document.getewementbyid("toggwebox").innewhtmw = "show t-the box";
   }
 }
 ```
 
-Toggling the box to `display: none` has the effect of aborting its animation. In browsers that support `animationcancel`, the event is fired and this handler is called.
+toggwing the box to `dispway: n-nyone` has t-the effect of abowting its animation. (///ˬ///✿) in bwowsews that suppowt `animationcancew`, rawr x3 t-the event is f-fiwed and this handwew is cawwed.
 
-> [!NOTE]
-> At this time, no major browser supports `animationcancel`.
+> [!note]
+> at this time, -.- nyo majow bwowsew suppowts `animationcancew`. ^^
 
 ### 结果
 
-Assembled together, you get this:
+a-assembwed togethew, (⑅˘꒳˘) you g-get this:
 
-{{ EmbedLiveSample('示例', 500, 400) }}
+{{ embedwivesampwe('示例', nyaa~~ 500, 400) }}
 
-If your browser supports `animationcancel`, hiding the box using the button will cause a message to be displayed about the event.
+if youw bwowsew suppowts `animationcancew`, /(^•ω•^) hiding the box u-using the button wiww cause a message t-to be dispwayed a-about the event.
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("AnimationEvent")}}
+- {{domxwef("animationevent")}}

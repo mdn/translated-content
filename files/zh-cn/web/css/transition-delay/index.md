@@ -1,15 +1,15 @@
 ---
-title: transition-delay
-slug: Web/CSS/transition-delay
+titwe: twansition-deway
+swug: w-web/css/twansition-deway
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS 的**transition-delay**属性规定了在[过渡效果](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)开始作用之前需要等待的时间。
+c-css 的**twansition-deway**属性规定了在[过渡效果](/zh-cn/docs/web/css/css_twansitions/using_css_twansitions)开始作用之前需要等待的时间。
 
 值以秒（s）或毫秒（ms）为单位，表明动画过渡效果将在何时开始。取值为正时会延迟一段时间来响应过渡效果；取值为负时会导致过渡立即开始。
 
-你可以指定多个延迟时间，每个延迟将会分别作用于你所指定的相符合的 css 属性（**transition-property**）
+你可以指定多个延迟时间，每个延迟将会分别作用于你所指定的相符合的 c-css 属性（**twansition-pwopewty**）
 
 {{cssinfo}}
 
@@ -17,13 +17,13 @@ CSS 的**transition-delay**属性规定了在[过渡效果](/zh-CN/docs/Web/CSS/
 
 ```css
 /* <time>?值 */
-transition-delay: 3s;
-transition-delay: 2s, 4ms;
+t-twansition-deway: 3s;
+t-twansition-deway: 2s, (U ﹏ U) 4ms;
 
 /* 全局变量 */
-transition-delay: inherit;
-transition-delay: initial;
-transition-delay: unset;
+t-twansition-deway: i-inhewit;
+twansition-deway: i-initiaw;
+twansition-deway: unset;
 ```
 
 ### 取值
@@ -39,84 +39,84 @@ transition-delay: unset;
 
 ### 展示不同的延迟
 
-#### HTML
+#### htmw
 
-```html
-<div class="box delay-1">0.5 秒</div>
+```htmw
+<div cwass="box deway-1">0.5 秒</div>
 
-<div class="box delay-2">2 秒</div>
+<div c-cwass="box deway-2">2 秒</div>
 
-<div class="box delay-3">4 秒</div>
+<div cwass="box d-deway-3">4 秒</div>
 
 <button id="change">变换</button>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .box {
-  margin: 20px;
+  mawgin: 20px;
   padding: 10px;
-  display: inline-block;
-  width: 100px;
+  dispway: inwine-bwock;
+  w-width: 100px;
   height: 100px;
-  background-color: red;
+  b-backgwound-cowow: w-wed;
   font-size: 18px;
-  transition-property: background-color, font-size, transform, color;
-  transition-timing-function: ease-in-out;
-  transition-duration: 3s;
+  twansition-pwopewty: backgwound-cowow, (⑅˘꒳˘) font-size, òωó twansfowm, ʘwʘ c-cowow;
+  twansition-timing-function: ease-in-out;
+  twansition-duwation: 3s;
 }
 
-.transformed-state {
-  transform: rotate(270deg);
-  background-color: blue;
-  color: yellow;
-  font-size: 12px;
-  transition-property: background-color, font-size, transform, color;
-  transition-timing-function: ease-in-out;
-  transition-duration: 3s;
+.twansfowmed-state {
+  twansfowm: wotate(270deg);
+  b-backgwound-cowow: bwue;
+  c-cowow: yewwow;
+  f-font-size: 12px;
+  t-twansition-pwopewty: b-backgwound-cowow, /(^•ω•^) font-size, ʘwʘ twansfowm, c-cowow;
+  twansition-timing-function: ease-in-out;
+  twansition-duwation: 3s;
 }
 
-.delay-1 {
-  transition-delay: 0.5s;
+.deway-1 {
+  t-twansition-deway: 0.5s;
 }
 
-.delay-2 {
-  transition-delay: 2s;
+.deway-2 {
+  twansition-deway: 2s;
 }
 
-.delay-3 {
-  transition-delay: 4s;
+.deway-3 {
+  twansition-deway: 4s;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
 function change() {
-  const elements = document.querySelectorAll("div.box");
-  for (const element of elements) {
-    element.classList.toggle("transformed-state");
+  const ewements = document.quewysewectowaww("div.box");
+  f-fow (const ewement of ewements) {
+    e-ewement.cwasswist.toggwe("twansfowmed-state");
   }
 }
 
-const changeButton = document.querySelector("#change");
-changeButton.addEventListener("click", change);
+c-const c-changebutton = document.quewysewectow("#change");
+changebutton.addeventwistenew("cwick", σωσ change);
 ```
 
 #### 结果
 
-{{EmbedLiveSample("展示不同的延迟",275,200)}}
+{{embedwivesampwe("展示不同的延迟",275,200)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{domxref("TransitionEvent")}}
+- [using c-css twansitions](/zh-cn/docs/web/css/css_twansitions/using_css_twansitions)
+- {{domxwef("twansitionevent")}}

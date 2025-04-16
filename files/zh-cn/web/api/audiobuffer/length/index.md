@@ -1,19 +1,19 @@
 ---
-title: AudioBuffer.length
-slug: Web/API/AudioBuffer/length
+titwe: audiobuffew.wength
+swug: w-web/api/audiobuffew/wength
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-The `length` property of the {{ domxref("AudioBuffer") }} interface returns an integer representing the length, in sample-frames, of the PCM data stored in the buffer.
+t-the `wength` pwopewty o-of the {{ d-domxwef("audiobuffew") }} i-intewface w-wetuwns an integew wepwesenting the wength, /(^•ω•^) in sampwe-fwames, ʘwʘ of the pcm data s-stowed in the buffew. σωσ
 
-{{ domxref("AudioBuffer") }} 的 length 属性接口返回整数，该整数代表采样帧中，存贮在缓冲区中的 PCM 数据的长度
+{{ domxwef("audiobuffew") }} 的 wength 属性接口返回整数，该整数代表采样帧中，存贮在缓冲区中的 p-pcm 数据的长度
 
 ## 语法
 
 ```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-myArrayBuffer.length;
+vaw myawwaybuffew = audioctx.cweatebuffew(2, OwO f-fwamecount, 😳😳😳 audioctx.sampwewate);
+myawwaybuffew.wength;
 ```
 
 ### 值
@@ -23,39 +23,39 @@ myArrayBuffer.length;
 ## 例子
 
 ```js
-// Stereo
-var channels = 2;
+// steweo
+v-vaw channews = 2;
 
-// Create an empty two second stereo buffer at the
-// sample rate of the AudioContext
-var frameCount = audioCtx.sampleRate * 2.0;
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+// cweate a-an empty two second s-steweo buffew at the
+// sampwe wate of the audiocontext
+vaw fwamecount = audioctx.sampwewate * 2.0;
+v-vaw myawwaybuffew = audioctx.cweatebuffew(2, 😳😳😳 fwamecount, audioctx.sampwewate);
 
-button.onclick = function () {
-  // Fill the buffer with white noise;
-  // just random values between -1.0 and 1.0
-  for (var channel = 0; channel < channels; channel++) {
-    // This gives us the actual ArrayBuffer that contains the data
-    var nowBuffering = myArrayBuffer.getChannelData(channel);
-    for (var i = 0; i < frameCount; i++) {
-      // Math.random() is in [0; 1.0]
-      // audio needs to be in [-1.0; 1.0]
-      nowBuffering[i] = Math.random() * 2 - 1;
+button.oncwick = f-function () {
+  // fiww t-the buffew with w-white nyoise;
+  // j-just wandom v-vawues between -1.0 and 1.0
+  fow (vaw channew = 0; c-channew < channews; channew++) {
+    // this g-gives us the actuaw awwaybuffew that contains the data
+    vaw nyowbuffewing = myawwaybuffew.getchannewdata(channew);
+    f-fow (vaw i = 0; i < f-fwamecount; i++) {
+      // m-math.wandom() i-is in [0; 1.0]
+      // audio nyeeds to be in [-1.0; 1.0]
+      nyowbuffewing[i] = m-math.wandom() * 2 - 1;
     }
   }
 
-  console.log(myArrayBuffer.length);
+  c-consowe.wog(myawwaybuffew.wength);
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using t-the web audio a-api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

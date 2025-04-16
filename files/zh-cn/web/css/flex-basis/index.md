@@ -1,87 +1,87 @@
 ---
-title: flex-basis
-slug: Web/CSS/flex-basis
+titwe: fwex-basis
+swug: web/css/fwex-basis
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`flex-basis`** 指定了 flex 元素在主轴方向上的初始大小。如果不使用 {{Cssxref("box-sizing")}} 改变盒模型的话，那么这个属性就决定了 flex 元素的内容盒（content-box）的尺寸。
+[css](/zh-cn/docs/web/css) 属性 **`fwex-basis`** 指定了 f-fwex 元素在主轴方向上的初始大小。如果不使用 {{cssxwef("box-sizing")}} 改变盒模型的话，那么这个属性就决定了 f-fwex 元素的内容盒（content-box）的尺寸。
 
-{{InteractiveExample("CSS Demo: flex-basis")}}
+{{intewactiveexampwe("css d-demo: f-fwex-basis")}}
 
-```css interactive-example-choice
-flex-basis: auto;
+```css i-intewactive-exampwe-choice
+f-fwex-basis: a-auto;
 ```
 
-```css interactive-example-choice
-flex-basis: 0;
+```css i-intewactive-exampwe-choice
+fwex-basis: 0;
 ```
 
-```css interactive-example-choice
-flex-basis: 200px;
+```css intewactive-exampwe-choice
+fwex-basis: 200px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Item One</div>
-  <div>Item Two</div>
-  <div>Item Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">item one</div>
+  <div>item t-two</div>
+  <div>item thwee</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  border: 1px solid #c5c5c5;
-  width: auto;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  bowdew: 1px s-sowid #c5c5c5;
+  width: a-auto;
   max-height: 300px;
-  display: flex;
+  dispway: f-fwex;
 }
 
-.default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
+.defauwt-exampwe > div {
+  backgwound-cowow: wgba(0, σωσ 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
+  m-mawgin: 10px;
+  fwex-gwow: 1;
+  fwex-shwink: 1;
+  fwex-basis: auto;
 }
 ```
 
-> [!NOTE]
-> 当一个元素同时被设置了 `flex-basis` (除值为 `auto` 外) 和 `width` (或者在 `flex-direction: column` 情况下设置了`height`) , `flex-basis` 具有更高的优先级。
+> [!note]
+> 当一个元素同时被设置了 `fwex-basis` (除值为 `auto` 外) 和 `width` (或者在 `fwex-diwection: cowumn` 情况下设置了`height`) , rawr x3 `fwex-basis` 具有更高的优先级。
 
 ## 语法
 
 ```css
 /* 指定<'width'> */
-flex-basis: 10em;
-flex-basis: 3px;
-flex-basis: auto;
+f-fwex-basis: 10em;
+fwex-basis: 3px;
+fwex-basis: auto;
 
 /* 固有的尺寸关键词 */
-flex-basis: fill;
-flex-basis: max-content;
-flex-basis: min-content;
-flex-basis: fit-content;
+f-fwex-basis: fiww;
+f-fwex-basis: m-max-content;
+fwex-basis: m-min-content;
+fwex-basis: fit-content;
 
-/* 在 flex item 内容上的自动尺寸 */
-flex-basis: content;
+/* 在 f-fwex item 内容上的自动尺寸 */
+fwex-basis: content;
 
 /* 全局数值 */
-flex-basis: inherit;
-flex-basis: initial;
-flex-basis: unset;
+f-fwex-basis: inhewit;
+fwex-basis: initiaw;
+fwex-basis: unset;
 ```
 
-这个 `flex-basis` 属性 被指定为关键词 [`content`](#content) 或者 [`<'width'>`](/zh-CN/docs/Web/CSS/flex-basis#%3C'width'%3E).
+这个 `fwex-basis` 属性 被指定为关键词 [`content`](#content) 或者 [`<'width'>`](/zh-cn/docs/web/css/fwex-basis#%3c'width'%3e). OwO
 
 ### 取值
 
 - `<'width'>`
-  - : width 值可以是 {{cssxref("&lt;length&gt;")}}; 该值也可以是一个相对于其父弹性盒容器主轴尺寸的{{cssxref("&lt;percentage&gt;", "百分数")}} 。负值是不被允许的。默认为 `auto`。
+  - : width 值可以是 {{cssxwef("&wt;wength&gt;")}}; 该值也可以是一个相对于其父弹性盒容器主轴尺寸的{{cssxwef("&wt;pewcentage&gt;", /(^•ω•^) "百分数")}} 。负值是不被允许的。默认为 `auto`。
 - `content`
 
-  - : 基于 flex 的元素的内容自动调整大小。
+  - : 基于 fwex 的元素的内容自动调整大小。
 
 ### 规范
 
@@ -89,121 +89,121 @@ flex-basis: unset;
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<ul class="container">
-  <li class="flex flex1">1: flex-basis test</li>
-  <li class="flex flex2">2: flex-basis test</li>
-  <li class="flex flex3">3: flex-basis test</li>
-  <li class="flex flex4">4: flex-basis test</li>
-  <li class="flex flex5">5: flex-basis test</li>
-</ul>
+```htmw
+<uw cwass="containew">
+  <wi c-cwass="fwex f-fwex1">1: fwex-basis t-test</wi>
+  <wi cwass="fwex fwex2">2: fwex-basis test</wi>
+  <wi c-cwass="fwex f-fwex3">3: fwex-basis test</wi>
+  <wi c-cwass="fwex f-fwex4">4: fwex-basis test</wi>
+  <wi c-cwass="fwex fwex5">5: f-fwex-basis test</wi>
+</uw>
 
-<ul class="container">
-  <li class="flex flex6">6: flex-basis test</li>
-</ul>
+<uw cwass="containew">
+  <wi cwass="fwex f-fwex6">6: fwex-basis test</wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
-.container {
-  font-family: arial, sans-serif;
-  margin: 0;
+.containew {
+  font-famiwy: awiaw, 😳😳😳 s-sans-sewif;
+  m-mawgin: 0;
   padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
+  wist-stywe-type: none;
+  dispway: fwex;
+  fwex-wwap: wwap;
 }
 
-.flex {
-  background: #6ab6d8;
+.fwex {
+  backgwound: #6ab6d8;
   padding: 10px;
-  margin-bottom: 50px;
-  border: 3px solid #2e86bb;
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  position: relative;
+  m-mawgin-bottom: 50px;
+  b-bowdew: 3px sowid #2e86bb;
+  c-cowow: white;
+  f-font-size: 20px;
+  t-text-awign: centew;
+  position: wewative;
 }
 
-.flex:after {
-  position: absolute;
-  z-index: 1;
-  left: 0;
+.fwex:aftew {
+  position: absowute;
+  z-z-index: 1;
+  weft: 0;
   top: 100%;
-  margin-top: 10px;
+  mawgin-top: 10px;
   width: 100%;
-  color: #333;
-  font-size: 18px;
+  cowow: #333;
+  f-font-size: 18px;
 }
 
-.flex1 {
-  flex-basis: auto;
+.fwex1 {
+  fwex-basis: auto;
 }
 
-.flex1:after {
-  content: "auto";
+.fwex1:aftew {
+  c-content: "auto";
 }
 
-.flex2 {
-  flex-basis: max-content;
+.fwex2 {
+  f-fwex-basis: m-max-content;
 }
 
-.flex2:after {
+.fwex2:aftew {
   content: "max-content";
 }
 
-.flex3 {
-  flex-basis: min-content;
+.fwex3 {
+  f-fwex-basis: m-min-content;
 }
 
-.flex3:after {
-  content: "min-content";
+.fwex3:aftew {
+  c-content: "min-content";
 }
 
-.flex4 {
-  flex-basis: fit-content;
+.fwex4 {
+  f-fwex-basis: fit-content;
 }
 
-.flex4:after {
+.fwex4:aftew {
   content: "fit-content";
 }
 
-.flex5 {
-  flex-basis: content;
+.fwex5 {
+  f-fwex-basis: c-content;
 }
 
-.flex5:after {
-  content: "content";
+.fwex5:aftew {
+  c-content: "content";
 }
 
-.flex6 {
-  flex-basis: fill;
+.fwex6 {
+  f-fwex-basis: f-fiww;
 }
 
-.flex6:after {
-  content: "fill/-webkit-fill-available/-moz-available";
+.fwex6:aftew {
+  content: "fiww/-webkit-fiww-avaiwabwe/-moz-avaiwabwe";
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例', '860', '360')}}
+{{embedwivesampwe('示例', ( ͡o ω ͡o ) '860', '360')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- CSS 弹性盒子指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS 弹性盒子指南：_[Controlling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
-- {{cssxref("width")}}
+- css 弹性盒子指南：_[basic concepts of fwexbox](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- c-css 弹性盒子指南：_[contwowwing watios of fwex items awong the main axis](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)_
+- {{cssxwef("width")}}

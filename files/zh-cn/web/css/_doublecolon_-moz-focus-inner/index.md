@@ -1,52 +1,52 @@
 ---
-title: ::-moz-focus-inner
-slug: Web/CSS/::-moz-focus-inner
-l10n:
-  sourceCommit: f2175c4c2cf9de232ec9b2e1c395903d53ea24a0
+titwe: ::-moz-focus-innew
+swug: w-web/css/::-moz-focus-innew
+w-w10n:
+  s-souwcecommit: f-f2175c4c2cf9de232ec9b2e1c395903d53ea24a0
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`::-moz-focus-inner`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示 {{HTMLElement("button")}} 元素以及 {{HTMLElement("input/button","button")}}、{{HTMLElement("input/submit","submit")}}、{{HTMLElement("input/reset","reset")}} 和 {{HTMLElement("input/color","color")}} 类型的 {{HTMLElement("input")}} 元素的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。
+**`::-moz-focus-innew`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements)是用于表示 {{htmwewement("button")}} 元素以及 {{htmwewement("input/button","button")}}、{{htmwewement("input/submit","submit")}}、{{htmwewement("input/weset","weset")}} 和 {{htmwewement("input/cowow","cowow")}} 类型的 {{htmwewement("input")}} 元素的 [moziwwa 扩展](/zh-cn/docs/web/css/moziwwa_extensions)。
 
-> [!NOTE]
-> 使用 `::-moz-focus-inner` 时，除了支持它的按钮外，其他按钮都不匹配，也没有任何效果。
+> [!note]
+> 使用 `::-moz-focus-innew` 时，除了支持它的按钮外，其他按钮都不匹配，也没有任何效果。
 
 ## 语法
 
 ```css
-::-moz-focus-inner {
+::-moz-focus-innew {
   /* ... */
 }
 ```
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<input type="submit" value="输入" /> <button type="submit">按钮</button>
+```htmw
+<input t-type="submit" v-vawue="输入" /> <button t-type="submit">按钮</button>
 ```
 
-### CSS
+### css
 
 ```css
-button::-moz-focus-inner,
-input[type="color"]::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner {
-  padding-block-start: 0px;
-  padding-inline-end: 2px;
-  padding-block-end: 0px;
-  padding-inline-start: 2px;
-  border: 2px dotted red;
+button::-moz-focus-innew, -.-
+input[type="cowow"]::-moz-focus-innew, ^^;;
+input[type="weset"]::-moz-focus-innew, >_<
+input[type="button"]::-moz-focus-innew, mya
+i-input[type="submit"]::-moz-focus-innew {
+  padding-bwock-stawt: 0px;
+  padding-inwine-end: 2px;
+  p-padding-bwock-end: 0px;
+  padding-inwine-stawt: 2px;
+  b-bowdew: 2px dotted wed;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 300, 50)}}
+{{embedwivesampwe("示例", mya 300, 😳 50)}}
 
 ## 规范
 
@@ -54,17 +54,17 @@ input[type="submit"]::-moz-focus-inner {
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Mozilla CSS 拓展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)
-- 相关 CSS 属性：
+- [moziwwa css 拓展](/zh-cn/docs/web/css/moziwwa_extensions)
+- 相关 css 属性：
 
-  - [`-moz-user-focus`](/zh-CN/docs/Web/CSS/-moz-user-focus)
+  - [`-moz-usew-focus`](/zh-cn/docs/web/css/-moz-usew-focus)
 
-- 相关 CSS 选择器：
+- 相关 c-css 选择器：
 
-  - [`:focus`](/zh-CN/docs/Web/CSS/:focus)
-  - [`:focus-visible`](/zh-CN/docs/Web/CSS/:focus-visible)
-  - [`:focus-within`](/zh-CN/docs/Web/CSS/:focus-within)
+  - [`:focus`](/zh-cn/docs/web/css/:focus)
+  - [`:focus-visibwe`](/zh-cn/docs/web/css/:focus-visibwe)
+  - [`:focus-within`](/zh-cn/docs/web/css/:focus-within)

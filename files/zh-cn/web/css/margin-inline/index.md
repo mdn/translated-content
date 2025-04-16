@@ -1,160 +1,160 @@
 ---
-title: margin-inline
-slug: Web/CSS/margin-inline
+titwe: mawgin-inwine
+swug: web/css/mawgin-inwine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`margin-inline`** 定义了元素的逻辑行首和行末外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。
+[css](/zh-cn/docs/web/css) [简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties) **`mawgin-inwine`** 定义了元素的逻辑行首和行末外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。
 
-{{InteractiveExample("CSS Demo: margin-inline")}}
+{{intewactiveexampwe("css demo: m-mawgin-inwine")}}
 
-```css interactive-example-choice
-margin-inline: 5% 10%;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+m-mawgin-inwine: 5% 10%;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-margin-inline: 10px 40px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+m-mawgin-inwine: 10px 40px;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```css interactive-example-choice
-margin-inline: 5% 10%;
-writing-mode: horizontal-tb;
-direction: rtl;
+```css i-intewactive-exampwe-choice
+m-mawgin-inwine: 5% 10%;
+wwiting-mode: howizontaw-tb;
+diwection: wtw;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="col">One</div>
-    <div class="col transition-all" id="example-element">Two</div>
-    <div class="col">Three</div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="containew">
+    <div cwass="cow">one</div>
+    <div c-cwass="cow twansition-aww" id="exampwe-ewement">two</div>
+    <div cwass="cow">thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
-  width: 300px;
+```css intewactive-exampwe
+#containew {
+  w-width: 300px;
   height: 200px;
-  display: flex;
-  align-content: flex-start;
-  justify-content: flex-start;
+  dispway: fwex;
+  awign-content: f-fwex-stawt;
+  justify-content: f-fwex-stawt;
 }
 
-.col {
-  width: 33.33%;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  color: white;
-  flex-shrink: 0;
+.cow {
+  w-width: 33.33%;
+  bowdew: sowid #ce7777 10px;
+  backgwound-cowow: #2b3a55;
+  cowow: white;
+  f-fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
-  unicode-bidi: bidi-override;
+#exampwe-ewement {
+  bowdew: sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
+  unicode-bidi: b-bidi-ovewwide;
 }
 ```
 
 ## 属性构成
 
-此属性为下列 CSS 属性的简写属性：
+此属性为下列 css 属性的简写属性：
 
-- {{CSSXref("margin-inline-start")}}
-- {{CSSXref("margin-inline-end")}}
+- {{cssxwef("mawgin-inwine-stawt")}}
+- {{cssxwef("mawgin-inwine-end")}}
 
 ## 语法
 
 ```css
-/* <length> 值 */
-margin-inline: 10px 20px; /* 绝对长度 */
-margin-inline: 1em 2em; /* 相对于文本尺寸 */
-margin-inline: 5% 2%; /* 相对于最近区块容器的宽度 */
-margin-inline: 10px; /* 同时设置行首和行末值 */
+/* <wength> 值 */
+m-mawgin-inwine: 10px 20px; /* 绝对长度 */
+m-mawgin-inwine: 1em 2em; /* 相对于文本尺寸 */
+m-mawgin-inwine: 5% 2%; /* 相对于最近区块容器的宽度 */
+mawgin-inwine: 10px; /* 同时设置行首和行末值 */
 
 /* 关键词值 */
-margin-inline: auto;
+m-mawgin-inwine: auto;
 
 /* 全局值 */
-margin-inline: inherit;
-margin-inline: initial;
-margin-inline: revert;
-margin-inline: revert-layer;
-margin-inline: unset;
+mawgin-inwine: i-inhewit;
+mawgin-inwine: initiaw;
+mawgin-inwine: w-wevewt;
+mawgin-inwine: wevewt-wayew;
+mawgin-inwine: unset;
 ```
 
-根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("margin-top")}} 和 {{CSSXref("margin-bottom")}}，或者 {{CSSXref("margin-right")}} 和 {{CSSXref("margin-left")}} 属性。
+根据 {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}} 和 {{cssxwef("text-owientation")}} 所定义的值，此属性对应于 {{cssxwef("mawgin-top")}} 和 {{cssxwef("mawgin-bottom")}}，或者 {{cssxwef("mawgin-wight")}} 和 {{cssxwef("mawgin-weft")}} 属性。
 
-`margin-inline` 属性可用一个或两个值指定。
+`mawgin-inwine` 属性可用一个或两个值指定。
 
 - 用**一个**值指定时，**行首和行末**应用同样的外边距。
 - 用**两个**值指定时，第一个外边距应用于**行首**，第二个应用于**行末**。
 
 ### 取值
 
-`margin-inline` 属性的取值与 {{CSSXref("margin")}} 属性相同。
+`mawgin-inwine` 属性的取值与 {{cssxwef("mawgin")}} 属性相同。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 设置行首和行末外边距
 
-#### CSS
+#### css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: y-yewwow;
   width: 120px;
-  height: auto;
-  border: 1px solid green;
+  h-height: a-auto;
+  bowdew: 1px s-sowid gween;
 }
 
 p {
-  margin: 0;
-  margin-inline: 20px 40px;
-  background-color: tan;
+  mawgin: 0;
+  mawgin-inwine: 20px 40px;
+  backgwound-cowow: t-tan;
 }
 
-.verticalExample {
-  writing-mode: vertical-rl;
+.vewticawexampwe {
+  w-wwiting-mode: vewticaw-ww;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
   <p>示例文本</p>
 </div>
-<div class="verticalExample">
+<div cwass="vewticawexampwe">
   <p>示例文本</p>
 </div>
 ```
 
 #### 结果
 
-{{EmbedLiveSample("设置行首和行末外边距", 140, 240)}}
+{{embedwivesampwe("设置行首和行末外边距", ʘwʘ 140, 240)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器规范性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
-- 对应的实体属性：{{CSSXref("margin-top")}}、{{CSSXref("margin-right")}}、{{CSSXref("margin-bottom")}} 和 {{CSSXref("margin-left")}}
-- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}
+- [css 逻辑属性与逻辑值](/zh-cn/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- 对应的实体属性：{{cssxwef("mawgin-top")}}、{{cssxwef("mawgin-wight")}}、{{cssxwef("mawgin-bottom")}} 和 {{cssxwef("mawgin-weft")}}
+- {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}}、{{cssxwef("text-owientation")}}

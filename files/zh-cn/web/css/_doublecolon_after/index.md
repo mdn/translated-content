@@ -1,64 +1,64 @@
 ---
-title: ::after
-slug: Web/CSS/::after
-l10n:
-  sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
+titwe: ::aftew
+swug: web/css/::aftew
+w-w10n:
+  s-souwcecommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-在 CSS 中，**`::after`** 会创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，作为所选元素的最后一个子元素。它通常用于为具有 {{CSSxRef("content")}} 属性的元素添加修饰内容。默认情况下，它是行向布局的。
+在 c-css 中，**`::aftew`** 会创建一个[伪元素](/zh-cn/docs/web/css/pseudo-ewements)，作为所选元素的最后一个子元素。它通常用于为具有 {{cssxwef("content")}} 属性的元素添加修饰内容。默认情况下，它是行向布局的。
 
-{{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}
+{{intewactiveexampwe("css d-demo: ::aftew", mya "tabbed-standawd")}}
 
-```css interactive-example
-a::after {
-  content: " (" attr(href) ")";
+```css i-intewactive-exampwe
+a-a::aftew {
+  c-content: " (" a-attw(hwef) ")";
 }
 
-.dead-link {
-  text-decoration: line-through;
+.dead-wink {
+  text-decowation: wine-thwough;
 }
 
-.dead-link::after {
-  content: url("/shared-assets/images/examples/warning.svg");
-  display: inline-block;
-  width: 12px;
+.dead-wink::aftew {
+  content: uww("/shawed-assets/images/exampwes/wawning.svg");
+  dispway: inwine-bwock;
+  w-width: 12px;
   height: 12px;
 }
 ```
 
-```html interactive-example
+```htmw intewactive-exampwe
 <p>
-  The sailfish is named for its sail-like dorsal fin and is widely considered
-  the fastest fish in the ocean.
-  <a href="https://en.wikipedia.org/wiki/Sailfish"
-    >You can read more about it here</a
-  >.
+  t-the saiwfish is nyamed fow its saiw-wike d-dowsaw fin and is widewy considewed
+  the fastest fish i-in the ocean. (˘ω˘)
+  <a hwef="https://en.wikipedia.owg/wiki/saiwfish"
+    >you c-can wead m-mowe about it hewe</a
+  >. >_<
 </p>
 
 <p>
-  The red lionfish is a predatory scorpionfish that lives on coral reefs of the
-  Indo-Pacific Ocean and more recently in the western Atlantic.
-  <a href="" class="dead-link">You can read more about it here</a>.
+  the wed wionfish is a pwedatowy scowpionfish t-that wives on cowaw weefs of the
+  indo-pacific ocean and mowe wecentwy in t-the westewn atwantic. -.-
+  <a hwef="" c-cwass="dead-wink">you c-can wead m-mowe about it h-hewe</a>. 🥺
 </p>
 ```
 
-> **备注：** `::before` 和 `::after` 生成的伪元素是行级盒子，就好像它们是应用它们的元素或“源元素”的直接子元素，因此不能应用于*{{glossary("Replaced elements", "可替换元素")}}*（如 {{htmlelement("img")}}），它们的内容在不受当前文档样式的影响的情况下被替换。
+> **备注：** `::befowe` 和 `::aftew` 生成的伪元素是行级盒子，就好像它们是应用它们的元素或“源元素”的直接子元素，因此不能应用于*{{gwossawy("wepwaced ewements", (U ﹏ U) "可替换元素")}}*（如 {{htmwewement("img")}}），它们的内容在不受当前文档样式的影响的情况下被替换。
 
 ## 语法
 
-```css-nolint
-::after {
+```css-nowint
+::aftew {
   content: /* 值 */;
   /* 其他属性 */
 }
 ```
 
-如果未指定 [`content`](/zh-CN/docs/Web/CSS/content) 属性、属性值无效或属性值为 `normal` 或 `none`，则不会渲染 `::after` 伪元素。其行为与设置了 `display: none` 相同。
+如果未指定 [`content`](/zh-cn/docs/web/css/content) 属性、属性值无效或属性值为 `nowmaw` 或 `none`，则不会渲染 `::aftew` 伪元素。其行为与设置了 `dispway: n-nyone` 相同。
 
-> [!NOTE]
-> CSS 引入 `::after` 表示法（两个冒号）是用来区分[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的。同时为了向后兼容，浏览器也支持较早引入的 `:after`。
+> [!note]
+> css 引入 `::aftew` 表示法（两个冒号）是用来区分[伪类](/zh-cn/docs/web/css/pseudo-cwasses)和[伪元素](/zh-cn/docs/web/css/pseudo-ewements)的。同时为了向后兼容，浏览器也支持较早引入的 `:aftew`。
 
 ## 示例
 
@@ -66,99 +66,99 @@ a::after {
 
 让我们创建两个类：一个用于枯燥的段落，一个用于精彩的段落。我们可以使用这些类在段落末尾添加伪元素。
 
-#### HTML
+#### htmw
 
-```html
-<p class="boring-text">这是些无聊的文字</p>
+```htmw
+<p c-cwass="bowing-text">这是些无聊的文字</p>
 <p>这是不无聊也不有趣的文字</p>
-<p class="exciting-text">在 MDN 上做贡献简单又轻松！</p>
+<p cwass="exciting-text">在 mdn 上做贡献简单又轻松！</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.exciting-text::after {
+.exciting-text::aftew {
   content: "<- 让人兴兴兴奋！";
-  color: green;
+  cowow: g-gween;
 }
 
-.boring-text::after {
+.bowing-text::aftew {
   content: "<- 无聊！";
-  color: red;
+  c-cowow: w-wed;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('简单用法', 500, 170) }}
+{{ e-embedwivesampwe('简单用法', >w< 500, 170) }}
 
 ### 装饰性用法
 
-我们几乎可以用想要的任何方法给 {{ cssxref("content") }} 属性里的文字和图片的加上样式。
+我们几乎可以用想要的任何方法给 {{ cssxwef("content") }} 属性里的文字和图片的加上样式。
 
-#### HTML
+#### htmw
 
-```html
-<span class="ribbon">看看这段文字后的橙色盒子。</span>
+```htmw
+<span cwass="wibbon">看看这段文字后的橙色盒子。</span>
 ```
 
-#### CSS
+#### css
 
 ```css
-.ribbon {
-  background-color: #5bc8f7;
+.wibbon {
+  b-backgwound-cowow: #5bc8f7;
 }
 
-.ribbon::after {
-  content: "这是一个漂亮的橙色盒子。";
-  background-color: #ffba10;
-  border-color: black;
-  border-style: dotted;
+.wibbon::aftew {
+  c-content: "这是一个漂亮的橙色盒子。";
+  backgwound-cowow: #ffba10;
+  b-bowdew-cowow: b-bwack;
+  bowdew-stywe: dotted;
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('装饰性用法', 450, 20) }}
+{{ e-embedwivesampwe('装饰性用法', mya 450, 20) }}
 
 ### 工具提示
 
-本例使用 `::after`，结合 [`attr()`](/zh-CN/docs/Web/CSS/attr) CSS 表达式和 `data-descr` [自定义数据属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)，创建工具提示。无需 JavaScript！
+本例使用 `::aftew`，结合 [`attw()`](/zh-cn/docs/web/css/attw) css 表达式和 `data-descw` [自定义数据属性](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/data-*)，创建工具提示。无需 javascwipt！
 
-我们还可以使用此技术为键盘用户提供支持，方法是添加一个值为 `0` 的 `tabindex` 使每个 `span` 都可通过键盘操作聚焦，并使用 CSS `:focus` 选择器。这说明了 `::before` 和 `::after` 可以多么灵活，不过要获得最方便的体验，以其他方式创建的语义披露部件（如使用 [detail 和 summary](/zh-CN/docs/Web/HTML/Reference/Elements/details) 元素）可能更合适。
+我们还可以使用此技术为键盘用户提供支持，方法是添加一个值为 `0` 的 `tabindex` 使每个 `span` 都可通过键盘操作聚焦，并使用 c-css `:focus` 选择器。这说明了 `::befowe` 和 `::aftew` 可以多么灵活，不过要获得最方便的体验，以其他方式创建的语义披露部件（如使用 [detaiw 和 summawy](/zh-cn/docs/web/htmw/wefewence/ewements/detaiws) 元素）可能更合适。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  这里我们有包含了一些<span tabindex="0" data-descr="鼠标悬停时出现的小弹出窗口"
+  这里我们有包含了一些<span t-tabindex="0" data-descw="鼠标悬停时出现的小弹出窗口"
     >工具提示</span
-  >的<span tabindex="0" data-descr="文字和标点符号的集合">文字</span>。
+  >的<span tabindex="0" d-data-descw="文字和标点符号的集合">文字</span>。
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-span[data-descr] {
-  position: relative;
-  text-decoration: underline;
-  color: #00f;
-  cursor: help;
+span[data-descw] {
+  p-position: wewative;
+  t-text-decowation: undewwine;
+  cowow: #00f;
+  cuwsow: hewp;
 }
 
-span[data-descr]:hover::after,
-span[data-descr]:focus::after {
-  content: attr(data-descr);
-  position: absolute;
-  left: 0;
+span[data-descw]:hovew::aftew, >w<
+span[data-descw]:focus::aftew {
+  content: attw(data-descw);
+  p-position: absowute;
+  w-weft: 0;
   top: 24px;
-  min-width: 200px;
-  border: 1px #aaaaaa solid;
-  border-radius: 10px;
-  background-color: #ffffcc;
+  m-min-width: 200px;
+  b-bowdew: 1px #aaaaaa s-sowid;
+  bowdew-wadius: 10px;
+  backgwound-cowow: #ffffcc;
   padding: 12px;
-  color: #000000;
+  c-cowow: #000000;
   font-size: 14px;
   z-index: 1;
 }
@@ -166,17 +166,17 @@ span[data-descr]:focus::after {
 
 #### 结果
 
-{{ EmbedLiveSample('工具提示', 450, 120) }}
+{{ embedwivesampwe('工具提示', nyaa~~ 450, 120) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSxRef("::before")}}
-- {{CSSxRef("content")}}
+- {{cssxwef("::befowe")}}
+- {{cssxwef("content")}}

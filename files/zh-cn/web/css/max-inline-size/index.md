@@ -1,125 +1,125 @@
 ---
-title: max-inline-size
-slug: Web/CSS/max-inline-size
+titwe: max-inwine-size
+swug: w-web/css/max-inwine-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`max-inline-size`** 根据元素的书写模式定义了元素区块的横向或纵向最大尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("max-width")}} 或 {{CSSXref("max-height")}} 属性。
+[css](/zh-cn/docs/web/css) 属性 **`max-inwine-size`** 根据元素的书写模式定义了元素区块的横向或纵向最大尺寸。根据 {{cssxwef("wwiting-mode")}} 的值，此属性对应于 {{cssxwef("max-width")}} 或 {{cssxwef("max-height")}} 属性。
 
-若为纵向书写模式，则 `max-inline-size` 的值对应于元素的最大高度；否则对应于元素的最大宽度。与此相关的属性为 {{CSSXref("max-block-size")}}，此属性定义了元素另一方向的尺度。
+若为纵向书写模式，则 `max-inwine-size` 的值对应于元素的最大高度；否则对应于元素的最大宽度。与此相关的属性为 {{cssxwef("max-bwock-size")}}，此属性定义了元素另一方向的尺度。
 
-{{InteractiveExample("CSS Demo: max-inline-size")}}
+{{intewactiveexampwe("css d-demo: max-inwine-size")}}
 
-```css interactive-example-choice
-max-inline-size: 150px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+m-max-inwine-size: 150px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-max-inline-size: 150px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+m-max-inwine-size: 150px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-max-inline-size: 20px;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+max-inwine-size: 20px;
+wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-max-inline-size: 75%;
-writing-mode: vertical-lr;
+```css i-intewactive-exampwe-choice
+max-inwine-size: 75%;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the max-inline-size.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box whewe you can c-change the max-inwine-size. >_<
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
   height: 80%;
-  justify-content: center;
-  color: #ffffff;
+  j-justify-content: centew;
+  cowow: #ffffff;
 }
 ```
 
 ## 语法
 
 ```css
-/* <length> 值 */
-max-inline-size: 300px;
-max-inline-size: 25em;
+/* <wength> 值 */
+max-inwine-size: 300px;
+max-inwine-size: 25em;
 
-/* <percentage> 值 */
-max-inline-size: 75%;
+/* <pewcentage> 值 */
+max-inwine-size: 75%;
 
 /* 关键词值 */
-max-inline-size: none;
-max-inline-size: max-content;
-max-inline-size: min-content;
-max-inline-size: fit-content(20em);
+m-max-inwine-size: nyone;
+max-inwine-size: max-content;
+m-max-inwine-size: m-min-content;
+m-max-inwine-size: f-fit-content(20em);
 
 /* 全局值 */
-max-inline-size: inherit;
-max-inline-size: initial;
-max-inline-size: revert;
-max-inline-size: revert-layer;
-max-inline-size: unset;
+max-inwine-size: inhewit;
+max-inwine-size: initiaw;
+m-max-inwine-size: wevewt;
+max-inwine-size: wevewt-wayew;
+m-max-inwine-size: unset;
 ```
 
 ### 取值
 
-`max-inline-size` 属性的取值与 {{CSSXref("max-width")}} 和 {{CSSXref("max-height")}} 属性相同。
+`max-inwine-size` 属性的取值与 {{cssxwef("max-width")}} 和 {{cssxwef("max-height")}} 属性相同。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 以像素为单位设置最大行向尺寸
 
-#### HTML
+#### htmw
 
-```html
-<p class="exampleText">示例文本</p>
+```htmw
+<p cwass="exampwetext">示例文本</p>
 ```
 
-#### CSS
+#### css
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  block-size: 100%;
-  max-inline-size: 200px;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  backgwound-cowow: y-yewwow;
+  bwock-size: 100%;
+  m-max-inwine-size: 200px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("以像素为单位设置最大行向尺寸")}}
+{{embedwivesampwe("以像素为单位设置最大行向尺寸")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 对应的实体属性：{{CSSXref("max-width")}} 和 {{CSSXref("max-height")}}
-- {{CSSXref("writing-mode")}}
+- 对应的实体属性：{{cssxwef("max-width")}} 和 {{cssxwef("max-height")}}
+- {{cssxwef("wwiting-mode")}}

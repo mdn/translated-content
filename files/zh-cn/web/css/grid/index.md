@@ -1,113 +1,113 @@
 ---
-title: grid
-slug: Web/CSS/grid
+titwe: gwid
+swug: web/css/gwid
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`grid`** 是一个 CSS 简写属性，可以用来设置以下属性：
-显式网格属性 {{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-areas")}}，
-隐式网格属性 {{cssxref("grid-auto-rows")}}、{{cssxref("grid-auto-columns")}} 和 {{cssxref("grid-auto-flow")}}，
-间距属性 {{cssxref("grid-column-gap")}} 和 {{cssxref("grid-row-gap")}}。
+**`gwid`** 是一个 c-css 简写属性，可以用来设置以下属性：
+显式网格属性 {{cssxwef("gwid-tempwate-wows")}}、{{cssxwef("gwid-tempwate-cowumns")}} 和 {{cssxwef("gwid-tempwate-aweas")}}，
+隐式网格属性 {{cssxwef("gwid-auto-wows")}}、{{cssxwef("gwid-auto-cowumns")}} 和 {{cssxwef("gwid-auto-fwow")}}，
+间距属性 {{cssxwef("gwid-cowumn-gap")}} 和 {{cssxwef("gwid-wow-gap")}}。
 
-{{InteractiveExample("CSS Demo: grid")}}
+{{intewactiveexampwe("css d-demo: gwid")}}
 
-```css interactive-example-choice
-grid: auto-flow / 1fr 1fr 1fr;
+```css i-intewactive-exampwe-choice
+g-gwid: auto-fwow / 1fw 1fw 1fw;
 ```
 
-```css interactive-example-choice
-grid: auto-flow dense / 40px 40px 1fr;
+```css i-intewactive-exampwe-choice
+g-gwid: a-auto-fwow dense / 40px 40px 1fw;
 ```
 
-```css interactive-example-choice
-grid: repeat(3, 80px) / auto-flow;
+```css i-intewactive-exampwe-choice
+gwid: wepeat(3, nyaa~~ 80px) / auto-fwow;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-gap: 10px;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  g-gwid-gap: 10px;
   width: 200px;
 }
 
-#example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement :nth-chiwd(1) {
+  b-backgwound-cowow: w-wgba(0, (✿oωo) 0, ʘwʘ 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 
-#example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
-  grid-column: auto / span 3;
-  grid-row: auto / span 2;
+#exampwe-ewement :nth-chiwd(2) {
+  backgwound-cowow: wgba(255, (ˆ ﻌ ˆ)♡ 0, 200, 0.2);
+  b-bowdew: 3px sowid webeccapuwpwe;
+  gwid-cowumn: auto / span 3;
+  gwid-wow: auto / span 2;
 }
 
-#example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
-  border: 3px solid green;
-  grid-column: auto / span 2;
+#exampwe-ewement :nth-chiwd(3) {
+  b-backgwound-cowow: wgba(94, 😳😳😳 255, 0, 0.2);
+  b-bowdew: 3px s-sowid gween;
+  g-gwid-cowumn: auto / s-span 2;
 }
 ```
 
-> [!NOTE]
-> 你仅可在一个 `grid` 属性中声明显式或隐式网格。与其他简写属性同样，若有次级属性未被声明，其将使用初始值。另外，尽管此简写声明无法设置网格的槽（gutter），槽会被该声明重置。
+> [!note]
+> 你仅可在一个 `gwid` 属性中声明显式或隐式网格。与其他简写属性同样，若有次级属性未被声明，其将使用初始值。另外，尽管此简写声明无法设置网格的槽（guttew），槽会被该声明重置。
 
 ## 语法
 
 ```css
-/* <'grid-template'> values */
-grid: none;
-grid: "a" 100px "b" 1fr;
-grid: [linename1] "a" 100px [linename2];
-grid: "a" 200px "b" min-content;
-grid: "a" minmax(100px, max-content) "b" 20%;
-grid: 100px / 200px;
-grid: minmax(400px, min-content) / repeat(auto-fill, 50px);
+/* <'gwid-tempwate'> vawues */
+gwid: nyone;
+gwid: "a" 100px "b" 1fw;
+g-gwid: [winename1] "a" 100px [winename2];
+gwid: "a" 200px "b" min-content;
+gwid: "a" m-minmax(100px, max-content) "b" 20%;
+gwid: 100px / 200px;
+gwid: minmax(400px, :3 min-content) / wepeat(auto-fiww, 50px);
 
-/* <'grid-template-rows'> /
-   [ auto-flow && dense? ] <'grid-auto-columns'>? values */
-grid: 200px / auto-flow;
-grid: 30% / auto-flow dense;
-grid: repeat(3, [line1 line2 line3] 200px) / auto-flow 300px;
-grid: [line1] minmax(20em, max-content) / auto-flow dense 40%;
+/* <'gwid-tempwate-wows'> /
+   [ a-auto-fwow && dense? ] <'gwid-auto-cowumns'>? v-vawues */
+g-gwid: 200px / a-auto-fwow;
+gwid: 30% / auto-fwow dense;
+gwid: wepeat(3, OwO [wine1 w-wine2 wine3] 200px) / a-auto-fwow 300px;
+gwid: [wine1] m-minmax(20em, (U ﹏ U) m-max-content) / auto-fwow dense 40%;
 
-/* [ auto-flow && dense? ] <'grid-auto-rows'>? /
-   <'grid-template-columns'> values */
-grid: auto-flow / 200px;
-grid: auto-flow dense / 30%;
-grid: auto-flow 300px / repeat(3, [line1 line2 line3] 200px);
-grid: auto-flow dense 40% / [line1] minmax(20em, max-content);
+/* [ a-auto-fwow && dense? ] <'gwid-auto-wows'>? /
+   <'gwid-tempwate-cowumns'> v-vawues */
+gwid: auto-fwow / 200px;
+gwid: auto-fwow d-dense / 30%;
+gwid: auto-fwow 300px / w-wepeat(3, >w< [wine1 wine2 wine3] 200px);
+g-gwid: auto-fwow d-dense 40% / [wine1] minmax(20em, (U ﹏ U) max-content);
 
-/* Global values */
-grid: inherit;
-grid: initial;
-grid: unset;
+/* gwobaw vawues */
+gwid: inhewit;
+gwid: initiaw;
+gwid: unset;
 ```
 
 ### 值
 
-- `<'grid-template'>`
-  - : 定义了 {{cssxref("grid-template")}}，其包含 {{cssxref("grid-template-columns")}}，{{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-areas")}}。
-- `<'grid-template-rows'> / [ auto-flow && dense? ] <'grid-auto-columns'>?`
-  通过 {{cssxref("grid-template-rows")}} 属性显式设置行轨道来设置自动流（{{cssxref("grid-template-columns")}} 属性设为 `none`），并通过 {{cssxref("grid-auto-columns")}} 明确该如何自动重复列轨道（同时{{cssxref("grid-auto-rows")}}属性设为 auto）。{{cssxref("grid-auto-flow")}} 属性也被相应的设置为 `column`，并可附有 dense。
-  - : 所有其余 `grid` 次级属性被重置为初始值。
-- `[ auto-flow && dense? ] <'grid-auto-rows'>? / <'grid-template-columns'>`
-  - : 通过 {{cssxref("grid-template-columns")}} 属性显式设置列轨道来设置自动流（{{cssxref("grid-template-rows")}} 属性设为 `none`），并通过 {{cssxref("grid-auto-rows")}} 明确该如何自动重复行轨道（同时{{cssxref("grid-auto-columns")}}属性设为 `auto`）。{{cssxref("grid-auto-flow")}} 属性也被相应的设置为 `row`，并可附有 dense。
-    所有其余 `grid` 次级属性被重置为初始值。
+- `<'gwid-tempwate'>`
+  - : 定义了 {{cssxwef("gwid-tempwate")}}，其包含 {{cssxwef("gwid-tempwate-cowumns")}}，{{cssxwef("gwid-tempwate-wows")}} 和 {{cssxwef("gwid-tempwate-aweas")}}。
+- `<'gwid-tempwate-wows'> / [ a-auto-fwow && dense? ] <'gwid-auto-cowumns'>?`
+  通过 {{cssxwef("gwid-tempwate-wows")}} 属性显式设置行轨道来设置自动流（{{cssxwef("gwid-tempwate-cowumns")}} 属性设为 `none`），并通过 {{cssxwef("gwid-auto-cowumns")}} 明确该如何自动重复列轨道（同时{{cssxwef("gwid-auto-wows")}}属性设为 a-auto）。{{cssxwef("gwid-auto-fwow")}} 属性也被相应的设置为 `cowumn`，并可附有 dense。
+  - : 所有其余 `gwid` 次级属性被重置为初始值。
+- `[ a-auto-fwow && d-dense? ] <'gwid-auto-wows'>? / <'gwid-tempwate-cowumns'>`
+  - : 通过 {{cssxwef("gwid-tempwate-cowumns")}} 属性显式设置列轨道来设置自动流（{{cssxwef("gwid-tempwate-wows")}} 属性设为 `none`），并通过 {{cssxwef("gwid-auto-wows")}} 明确该如何自动重复行轨道（同时{{cssxwef("gwid-auto-cowumns")}}属性设为 `auto`）。{{cssxwef("gwid-auto-fwow")}} 属性也被相应的设置为 `wow`，并可附有 d-dense。
+    所有其余 `gwid` 次级属性被重置为初始值。
 
 ### 标准语法
 
@@ -115,10 +115,10 @@ grid: unset;
 
 ## 实例
 
-### HTML
+### htmw
 
-```html
-<div id="container">
+```htmw
+<div id="containew">
   <div></div>
   <div></div>
   <div></div>
@@ -130,35 +130,35 @@ grid: unset;
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-#container {
-  display: grid;
-  grid: repeat(2, 60px) / auto-flow 80px;
+#containew {
+  dispway: g-gwid;
+  gwid: wepeat(2, 😳 60px) / auto-fwow 80px;
 }
 
-#container > div {
-  background-color: #8ca0ff;
-  width: 50px;
+#containew > div {
+  backgwound-cowow: #8ca0ff;
+  w-width: 50px;
   height: 50px;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("实例", "100%", 150)}}
+{{embedwivesampwe("实例", (ˆ ﻌ ˆ)♡ "100%", 😳😳😳 150)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关 CSS 属性：{{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- _网格布局指南：[Line-based placement with CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- _网格布局指南：[Grid template areas - Grid definition shorthands](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)_
+- 相关 css 属性：{{cssxwef("gwid-tempwate")}}, {{cssxwef("gwid-tempwate-wows")}}, (U ﹏ U) {{cssxwef("gwid-tempwate-cowumns")}}, (///ˬ///✿) {{cssxwef("gwid-tempwate-aweas")}}, 😳 {{cssxwef("gwid-auto-cowumns")}}, 😳 {{cssxwef("gwid-auto-wows")}}, σωσ {{cssxwef("gwid-auto-fwow")}}
+- _网格布局指南：[wine-based p-pwacement w-with css gwid](/zh-cn/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)_
+- _网格布局指南：[gwid t-tempwate aweas - gwid d-definition showthands](/zh-cn/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas#gwid_definition_showthands)_

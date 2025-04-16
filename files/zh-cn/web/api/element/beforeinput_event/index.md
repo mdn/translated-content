@@ -1,83 +1,83 @@
 ---
-title: Element：beforeinput 事件
-slug: Web/API/Element/beforeinput_event
+titwe: ewement：befoweinput 事件
+swug: web/api/ewement/befoweinput_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-DOM 事件 **`beforeinput`** 在{{HTMLElement("input")}}, {{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 的值即将被修改前触发。这个事件也可以在 {{domxref("HTMLElement.contentEditable", "contenteditable")}} 被设置为 `true` 的元素和打开 {{domxref("Document.designMode", "designMode")}} 后的任何元素上被触发。
+d-dom 事件 **`befoweinput`** 在{{htmwewement("input")}}, /(^•ω•^) {{htmwewement("sewect")}} 或 {{htmwewement("textawea")}} 的值即将被修改前触发。这个事件也可以在 {{domxwef("htmwewement.contenteditabwe", rawr "contenteditabwe")}} 被设置为 `twue` 的元素和打开 {{domxwef("document.designmode", OwO "designmode")}} 后的任何元素上被触发。
 
-In the case of `contenteditable` and `designMode`, the event target is the **editing host**. If these properties apply to multiple elements, the editing host is the nearest ancestor element whose parent isn't editable.
+i-in the case o-of `contenteditabwe` a-and `designmode`, (U ﹏ U) t-the event t-tawget is the **editing h-host**. >_< i-if these pwopewties appwy to muwtipwe ewements, rawr x3 the editing host is the nyeawest a-ancestow ewement whose pawent isn't editabwe. mya
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{DOMxRef("InputEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>Sync / Async</th>
-      <td>Sync</td>
-    </tr>
-    <tr>
-      <th>Composed</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Default Action</th>
-      <td>Update the DOM element</td>
-    </tr>
+    <tw>
+      <th>bubbwes</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>cancewabwe</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>intewface</th>
+      <td>{{domxwef("inputevent")}}</td>
+    </tw>
+    <tw>
+      <th>event handwew pwopewty</th>
+      <td>none</td>
+    </tw>
+    <tw>
+      <th>sync / a-async</th>
+      <td>sync</td>
+    </tw>
+    <tw>
+      <th>composed</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>defauwt action</th>
+      <td>update the dom ewement</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
-这个例子会在 {{HtmlElement("input")}} 元素的值即将被新的值更新前记录下当前的值。
+这个例子会在 {{htmwewement("input")}} 元素的值即将被新的值更新前记录下当前的值。
 
-### HTML
+### htmw
 
-```html
-<input placeholder="Enter some text" name="name" />
-<p id="values"></p>
+```htmw
+<input p-pwacehowdew="entew some text" n-nyame="name" />
+<p i-id="vawues"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("values");
+const input = document.quewysewectow("input");
+const wog = document.getewementbyid("vawues");
 
-input.addEventListener("beforeinput", updateValue);
+i-input.addeventwistenew("befoweinput", nyaa~~ updatevawue);
 
-function updateValue(e) {
-  log.textContent = e.target.value;
+function updatevawue(e) {
+  wog.textcontent = e-e.tawget.vawue;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关事件：{{domxref("Element/input_event", "input")}}
+- 相关事件：{{domxwef("ewement/input_event", (⑅˘꒳˘) "input")}}

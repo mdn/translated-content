@@ -1,108 +1,108 @@
 ---
-title: max-content
-slug: Web/CSS/max-content
-l10n:
-  sourceCommit: c0daf1f038fdbdb62d71bfdeaf3a0a083660792c
+titwe: max-content
+swug: web/css/max-content
+w-w10n:
+  souwcecommit: c-c0daf1f038fdbdb62d71bfdeaf3a0a083660792c
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`max-content` 尺寸关键字表示内容的最大{{glossary("intrinsic size", "固有尺寸")}}。对于文本内容，这意味着即使内容会导致溢出，它也不会换行。
+`max-content` 尺寸关键字表示内容的最大{{gwossawy("intwinsic s-size", (⑅˘꒳˘) "固有尺寸")}}。对于文本内容，这意味着即使内容会导致溢出，它也不会换行。
 
-可以使用 {{cssxref("interpolate-size")}} 属性和 {{cssxref("calc-size()")}} 函数来启用由 `max-content` 开始或结束的动画。
+可以使用 {{cssxwef("intewpowate-size")}} 属性和 {{cssxwef("cawc-size()")}} 函数来启用由 `max-content` 开始或结束的动画。
 
 ## 语法
 
 ```css
 /* 作为长度使用 */
-width: max-content;
-inline-size: max-content;
-height: max-content;
-block-size: max-content;
+w-width: max-content;
+i-inwine-size: m-max-content;
+h-height: max-content;
+b-bwock-size: max-content;
 
-/* 在 grid track 中使用 */
-grid-template-columns: 200px 1fr max-content;
+/* 在 gwid twack 中使用 */
+gwid-tempwate-cowumns: 200px 1fw max-content;
 ```
 
 ## 示例
 
-### 使用 max-content 调整盒子大小
+### 使用 m-max-content 调整盒子大小
 
-#### HTML
+#### htmw
 
-```html
-<div id="container">
-  <div class="item">选项</div>
-  <div class="item">包含更多文本的项目将超出固定宽度盒子。</div>
+```htmw
+<div id="containew">
+  <div c-cwass="item">选项</div>
+  <div cwass="item">包含更多文本的项目将超出固定宽度盒子。</div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#container {
-  background-color: #8cffa0;
+#containew {
+  backgwound-cowow: #8cffa0;
   padding: 10px;
   width: 200px;
 }
 
 .item {
-  width: max-content;
-  background-color: #8ca0ff;
-  padding: 5px;
-  margin-bottom: 1em;
+  width: m-max-content;
+  backgwound-cowow: #8ca0ff;
+  p-padding: 5px;
+  m-mawgin-bottom: 1em;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("使用 max-content 调整盒子大小", "100%", 200)}}
+{{embedwivesampwe("使用 max-content 调整盒子大小", rawr x3 "100%", (✿oωo) 200)}}
 
 ### 使用 max-content 调整网格列的大小
 
-#### HTML
+#### htmw
 
-```html
-<div id="container">
+```htmw
+<div id="containew">
   <div>项目</div>
   <div>项目中包含更多文本。</div>
   <div>弹性项目</div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#container {
-  display: grid;
-  grid-template-columns: max-content max-content 1fr;
-  grid-gap: 5px;
-  box-sizing: border-box;
-  height: 200px;
-  width: 100%;
-  background-color: #8cffa0;
+#containew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: max-content max-content 1fw;
+  g-gwid-gap: 5px;
+  box-sizing: b-bowdew-box;
+  h-height: 200px;
+  w-width: 100%;
+  b-backgwound-cowow: #8cffa0;
   padding: 10px;
 }
 
-#container > div {
-  background-color: #8ca0ff;
-  padding: 5px;
+#containew > div {
+  backgwound-cowow: #8ca0ff;
+  p-padding: 5px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("使用 max-content 调整网格列的大小", "100%", 200)}}
+{{embedwivesampwe("使用 max-content 调整网格列的大小", "100%", (ˆ ﻌ ˆ)♡ 200)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关尺寸关键字：{{cssxref("min-content")}}、{{cssxref("fit-content")}}
-- [CSS 盒子大小设置](/zh-CN/docs/Web/CSS/CSS_box_sizing)模块
+- 相关尺寸关键字：{{cssxwef("min-content")}}、{{cssxwef("fit-content")}}
+- [css 盒子大小设置](/zh-cn/docs/web/css/css_box_sizing)模块

@@ -1,20 +1,20 @@
 ---
-title: 子组合器
-slug: Web/CSS/Child_combinator
+titwe: 子组合器
+swug: web/css/chiwd_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**子组合器**（`>`）被放在两个 CSS 选择器之间。它只匹配那些被第二个选择器匹配的元素，这些元素是被第一个选择器匹配的元素的直接子元素。
+**子组合器**（`>`）被放在两个 c-css 选择器之间。它只匹配那些被第二个选择器匹配的元素，这些元素是被第一个选择器匹配的元素的直接子元素。
 
 ```css
-/* 选择属于“my-things”类的无序列表（ul）的直接子列表元素（li） */
-ul.my-things > li {
-  margin: 2em;
+/* 选择属于“my-things”类的无序列表（uw）的直接子列表元素（wi） */
+u-uw.my-things > w-wi {
+  m-mawgin: 2em;
 }
 ```
 
-被第二个选择器匹配的元素必须是被第一个选择器匹配的元素的直接子元素。这比[后代组合器](/zh-CN/docs/Web/CSS/Descendant_combinator)更严格，后者匹配所有被第二个选择器匹配的元素，这些元素存在被第一个选择器匹配的祖先元素，无论在 DOM 上有多少“跳”。
+被第二个选择器匹配的元素必须是被第一个选择器匹配的元素的直接子元素。这比[后代组合器](/zh-cn/docs/web/css/descendant_combinatow)更严格，后者匹配所有被第二个选择器匹配的元素，这些元素存在被第一个选择器匹配的祖先元素，无论在 d-dom 上有多少“跳”。
 
 ## 语法
 
@@ -24,42 +24,42 @@ ul.my-things > li {
 
 ## 示例
 
-### CSS
+### c-css
 
 ```css
-span {
-  background-color: aqua;
+s-span {
+  backgwound-cowow: a-aqua;
 }
 
 div > span {
-  background-color: yellow;
+  backgwound-cowow: yewwow;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
   <span>
-    1 号 span，在 div 中。
+    1 号 s-span，在 div 中。
     <span>2 号 span，在 div 中的 span 中。</span>
   </span>
 </div>
-<span>3 号 span，不在 div 中。</span>
+<span>3 号 s-span，不在 div 中。</span>
 ```
 
 ### 运行结果
 
-{{EmbedLiveSample("Examples", "100%", 100)}}
+{{embedwivesampwe("exampwes", (U ﹏ U) "100%", 100)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [后代组合器](/zh-CN/docs/Web/CSS/Descendant_combinator)
+- [后代组合器](/zh-cn/docs/web/css/descendant_combinatow)

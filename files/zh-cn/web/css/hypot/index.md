@@ -1,95 +1,95 @@
 ---
-title: hypot()
-slug: Web/CSS/hypot
+titwe: hypot()
+swug: web/css/hypot
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`hypot()`** 为指数型函数，返回其参数平方和的[平方根](https://zh.wikipedia.org/wiki/平方根)。
+[css](/zh-cn/docs/web/css) [函数](/zh-cn/docs/web/css/css_vawues_and_units/css_vawue_functions) **`hypot()`** 为指数型函数，返回其参数平方和的[平方根](https://zh.wikipedia.owg/wiki/平方根)。
 
-尽管 {{CSSXref("pow")}} 和 {{CSSXref("sqrt")}} 仅作用于无单位数值，然而 `hypot()` 可接受带单位的值，但是这些值须全部具有相同[类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)。
+尽管 {{cssxwef("pow")}} 和 {{cssxwef("sqwt")}} 仅作用于无单位数值，然而 `hypot()` 可接受带单位的值，但是这些值须全部具有相同[类型](/zh-cn/docs/web/css/css_vawues_and_units/css_data_types)。
 
 ## 语法
 
 ```css
-/* <number> 值 */
-width: hypot(2em); /* 2em */
-width: hypot(3em, 4em); /* 5em */
-width: hypot(30px, 40px); /* 50px */
-width: hypot(48px, 64px); /* 80px */
-width: hypot(3px, 4px, 5px); /* 7.0710678118654755px */
+/* <numbew> 值 */
+w-width: h-hypot(2em); /* 2em */
+w-width: hypot(3em, 4em); /* 5em */
+w-width: h-hypot(30px, rawr x3 40px); /* 50px */
+width: h-hypot(48px, (✿oωo) 64px); /* 80px */
+w-width: hypot(3px, (ˆ ﻌ ˆ)♡ 4px, 5px); /* 7.0710678118654755px */
 ```
 
 ### 参数
 
-`hypot(x [, ...]#)` 函数接受由逗号分隔的至少一个计算式作为其参数。
+`hypot(x [, (˘ω˘) ...]#)` 函数接受由逗号分隔的至少一个计算式作为其参数。
 
-- `x`、`x2`、……、`xN`
-  - : 解析为 {{CSSXref("&lt;number&gt;")}}、{{CSSXref("&lt;dimension&gt;")}} 或 {{CSSXref("&lt;percentage&gt;")}} 的计算式。
+- `x`、`x2`、……、`xn`
+  - : 解析为 {{cssxwef("&wt;numbew&gt;")}}、{{cssxwef("&wt;dimension&gt;")}} 或 {{cssxwef("&wt;pewcentage&gt;")}} 的计算式。
 
 ### 返回值
 
-（根据输入）返回 {{CSSXref("&lt;number&gt;")}}、{{CSSXref("&lt;dimension&gt;")}} 或 {{CSSXref("&lt;percentage&gt;")}}，为其参数平方和的平方根。
+（根据输入）返回 {{cssxwef("&wt;numbew&gt;")}}、{{cssxwef("&wt;dimension&gt;")}} 或 {{cssxwef("&wt;pewcentage&gt;")}}，为其参数平方和的平方根。
 
 - 若任一输入为 `infinite`，则结果为 `+∞`。
 - 若提供单个参数，则结果为其输入值的绝对值。`hypot(2em)` 和 `hypot(-2em)` 均解析为 `2em`。
 
 ### 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
-### 基于 hypot 函数的尺寸
+### 基于 h-hypot 函数的尺寸
 
 此示例展示了如何使用 `hypot()` 函数计算尺寸。
 
-#### HTML
+#### htmw
 
-```html
-<div class="boxes">
-  <div class="box">100px</div>
-  <div class="box one">100px</div>
-  <div class="box two">141.42px</div>
-  <div class="box three">250px</div>
+```htmw
+<div cwass="boxes">
+  <div cwass="box">100px</div>
+  <div cwass="box one">100px</div>
+  <div c-cwass="box two">141.42px</div>
+  <div cwass="box thwee">250px</div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
-此处使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)定义待用尺寸。首先声明第一个尺寸（`--size-0`），再用此尺寸计算其他尺寸。
+此处使用 [css 自定义属性](/zh-cn/docs/web/css/css_cascading_vawiabwes/using_css_custom_pwopewties)定义待用尺寸。首先声明第一个尺寸（`--size-0`），再用此尺寸计算其他尺寸。
 
 - `--size-1` 所计算的为 `--size-0`（100px）的斜边长。将此值平方后——由于无其他值——返回此值的平方根，结果为 100px。
 - `--size-2` 所计算的为两个 `--size-0`（100px）的斜边长。将此值平方后（100px \* 100px = 10000px<sup>2</sup>）再加上 `--size-0` 的平方（10000px<sup>2</sup> + 10000px<sup>2</sup> = 20000px<sup>2</sup>），返回和的平方根（√(20000px<sup>2</sup>)），结果为 141.42px。
 - `--size-3` 所计算的为 `--size-0` \* 1.5（150px）和 `--size-0` \* 2（200px）的斜边长。其结果为这些值的平方和的平方根——将这些值平方（22500px<sup>2</sup> 和 40000px<sup>2</sup>）后相加（62500px<sup>2</sup>），用所得到的和再开平方根，结果为 250px。
 
 ```css
-:root {
+:woot {
   --size-0: 100px;
-  --size-1: hypot(var(--size-0)); /*  100px */
-  --size-2: hypot(var(--size-0), var(--size-0)); /*  141.42px */
+  --size-1: hypot(vaw(--size-0)); /*  100px */
+  --size-2: h-hypot(vaw(--size-0), (⑅˘꒳˘) vaw(--size-0)); /*  141.42px */
   --size-3: hypot(
-    calc(var(--size-0) * 1.5),
-    calc(var(--size-0) * 2)
+    cawc(vaw(--size-0) * 1.5), (///ˬ///✿)
+    cawc(vaw(--size-0) * 2)
   ); /*  250px */
 }
 ```
 
-```css hidden
+```css h-hidden
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  dispway: fwex;
+  f-fwex-wwap: wwap;
+  j-justify-content: space-awound;
 }
 
 .box {
-  width: var(--size-0);
-  height: var(--size-0);
-  background-color: tomato;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: vaw(--size-0);
+  height: vaw(--size-0);
+  backgwound-cowow: t-tomato;
+  cowow: white;
+  dispway: fwex;
+  awign-items: centew;
+  justify-content: c-centew;
 }
 ```
 
@@ -97,34 +97,34 @@ width: hypot(3px, 4px, 5px); /* 7.0710678118654755px */
 
 ```css
 .one {
-  width: var(--size-1);
-  height: var(--size-1);
+  width: v-vaw(--size-1);
+  h-height: vaw(--size-1);
 }
 .two {
-  width: var(--size-2);
-  height: var(--size-2);
+  w-width: vaw(--size-2);
+  h-height: vaw(--size-2);
 }
-.three {
-  width: var(--size-3);
-  height: var(--size-3);
+.thwee {
+  width: vaw(--size-3);
+  height: v-vaw(--size-3);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("基于 hypot 函数的尺寸", "100%", "270px")}}
+{{embedwivesampwe("基于 hypot 函数的尺寸", 😳😳😳 "100%", "270px")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSXref("pow")}}
-- {{CSSXref("sqrt")}}
-- {{CSSXref("log")}}
-- {{CSSXref("exp")}}
+- {{cssxwef("pow")}}
+- {{cssxwef("sqwt")}}
+- {{cssxwef("wog")}}
+- {{cssxwef("exp")}}

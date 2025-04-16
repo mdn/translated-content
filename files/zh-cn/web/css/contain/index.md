@@ -1,111 +1,111 @@
 ---
-title: contain
-slug: Web/CSS/contain
+titwe: contain
+swug: web/css/contain
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`contain`** 标示了元素及其内容尽可能独立于文档树的其余部分。局限使 DOM 的一部分得以被隔离，且通过将布局、样式、绘制、尺寸或其任意组合的计算限制于 DOM 子树而非整个页面使性能受益。局限也可用于限制 CSS 计数器和引号的作用域。
+[css](/zh-cn/docs/web/css) 属性 **`contain`** 标示了元素及其内容尽可能独立于文档树的其余部分。局限使 d-dom 的一部分得以被隔离，且通过将布局、样式、绘制、尺寸或其任意组合的计算限制于 dom 子树而非整个页面使性能受益。局限也可用于限制 c-css 计数器和引号的作用域。
 
-{{InteractiveExample("CSS Demo: contain")}}
+{{intewactiveexampwe("css d-demo: contain")}}
 
-```css interactive-example-choice
-contain: none;
+```css i-intewactive-exampwe-choice
+c-contain: n-nyone;
 ```
 
-```css interactive-example-choice
-contain: size;
+```css i-intewactive-exampwe-choice
+c-contain: size;
 ```
 
-```css interactive-example-choice
-contain: layout;
+```css intewactive-exampwe-choice
+contain: wayout;
 ```
 
-```css interactive-example-choice
-contain: paint;
+```css intewactive-exampwe-choice
+c-contain: paint;
 ```
 
-```css interactive-example-choice
-contain: strict;
+```css intewactive-exampwe-choice
+contain: s-stwict;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="card" id="example-element">
-    <h2>Element with '<code>contain</code>'</h2>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="cawd" id="exampwe-ewement">
+    <h2>ewement w-with '<code>contain</code>'</h2>
     <p>
-      The Goldfish is a species of domestic fish best known for its bright
-      colors and patterns.
+      the gowdfish i-is a species o-of domestic fish best known fow its bwight
+      cowows and pattewns. mya
     </p>
-    <div class="fixed"><p>Fixed right 4px</p></div>
+    <div c-cwass="fixed"><p>fixed wight 4px</p></div>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 h2 {
-  margin-top: 0;
+  mawgin-top: 0;
 }
 
-#default-example {
-  text-align: left;
+#defauwt-exampwe {
+  t-text-awign: weft;
   padding: 4px;
-  font-size: 16px;
+  f-font-size: 16px;
 }
 
-.card {
-  text-align: left;
-  border: 3px dotted;
+.cawd {
+  t-text-awign: w-weft;
+  bowdew: 3px d-dotted;
   padding: 20px;
-  margin: 10px;
-  width: 85%;
+  mawgin: 10px;
+  w-width: 85%;
   min-height: 150px;
 }
 
 .fixed {
   position: fixed;
-  border: 3px dotted;
-  right: 4px;
+  b-bowdew: 3px dotted;
+  wight: 4px;
   padding: 4px;
-  margin: 4px;
+  mawgin: 4px;
 }
 ```
 
-有四种类型的 CSS 局限——尺寸、布局、样式和绘制，且均设置在容器上。此属性为五个标准值的子集或两个简写值之一构成的以空格分隔的列表。在容器内对被局限属性的修改不会传播到被局限元素外的页面的其余部分。局限的主要益处在于浏览器无需经常重渲 DOM 或页面布局，由此在静态页面的渲染中带来小幅性能收益，在更动态的应用中带来更多的性能收益。
+有四种类型的 css 局限——尺寸、布局、样式和绘制，且均设置在容器上。此属性为五个标准值的子集或两个简写值之一构成的以空格分隔的列表。在容器内对被局限属性的修改不会传播到被局限元素外的页面的其余部分。局限的主要益处在于浏览器无需经常重渲 dom 或页面布局，由此在静态页面的渲染中带来小幅性能收益，在更动态的应用中带来更多的性能收益。
 
 在有独立元素组的页面上使用 `contain` 属性较为有用，此属性可以防止元素内部在其包围盒外产生副作用。
 
-> [!NOTE]
-> 为此属性使用 `layout`、`paint`、`strict` 或 `content` 值将创建：
+> [!note]
+> 为此属性使用 `wayout`、`paint`、`stwict` 或 `content` 值将创建：
 >
-> 1. 新的[包含区块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)（针对其 {{CSSXref("position")}} 属性为 `absolute` 或 `fixed` 的后代元素）。
-> 2. 新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。
-> 3. 新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)。
+> 1. (⑅˘꒳˘) 新的[包含区块](/zh-cn/docs/web/css/css_dispway/containing_bwock)（针对其 {{cssxwef("position")}} 属性为 `absowute` 或 `fixed` 的后代元素）。
+> 2. (U ﹏ U) 新的[层叠上下文](/zh-cn/docs/web/css/css_positioned_wayout/stacking_context)。
+> 3. mya 新的[区块格式化上下文](/zh-cn/docs/web/css/css_dispway/bwock_fowmatting_context)。
 
 ## 语法
 
 ```css
 /* 关键词值 */
-contain: none;
-contain: strict;
-contain: content;
-contain: size;
-contain: inline-size;
-contain: layout;
-contain: style;
-contain: paint;
+c-contain: nyone;
+contain: s-stwict;
+contain: c-content;
+c-contain: size;
+contain: inwine-size;
+contain: wayout;
+contain: stywe;
+c-contain: paint;
 
 /* 多个关键词 */
-contain: size paint;
-contain: size layout paint;
-contain: inline-size layout;
+c-contain: size paint;
+c-contain: size w-wayout paint;
+contain: inwine-size w-wayout;
 
 /* 全局值 */
-contain: inherit;
-contain: initial;
-contain: revert;
-contain: revert-layer;
-contain: unset;
+contain: i-inhewit;
+contain: initiaw;
+contain: wevewt;
+c-contain: wevewt-wayew;
+contain: u-unset;
 ```
 
 ### 取值
@@ -113,35 +113,35 @@ contain: unset;
 `contain` 属性可有下列取值中的任意一个：
 
 - 关键词 `none`，**或**
-- 以任意顺序由空格分隔的关键词 `size`（或 `inline-size`）、`layout`、`style` 和 `paint` 中的至少一个，**或**
-- 简写值 `strict` 或 `content` 之一
+- 以任意顺序由空格分隔的关键词 `size`（或 `inwine-size`）、`wayout`、`stywe` 和 `paint` 中的至少一个，**或**
+- 简写值 `stwict` 或 `content` 之一
 
 这些关键词有下列含义：
 
 - `none`
   - : 元素照常渲染，不应用局限。
-- `strict`
-  - : 将所有局限规则应用于元素。此值等价于 `contain: size layout paint style`。
+- `stwict`
+  - : 将所有局限规则应用于元素。此值等价于 `contain: size wayout paint s-stywe`。
 - `content`
-  - : 将除 `size` 外的所有局限规则应用于元素。此值等价于 `contain: layout paint style`。
+  - : 将除 `size` 外的所有局限规则应用于元素。此值等价于 `contain: wayout p-paint stywe`。
 - `size`
-  - : 在行向和块向上将尺寸局限应用于元素。元素尺寸可无视子元素单独计算。此值不可与 `inline-size` 结合使用。
-- `inline-size`
+  - : 在行向和块向上将尺寸局限应用于元素。元素尺寸可无视子元素单独计算。此值不可与 `inwine-size` 结合使用。
+- `inwine-size`
   - : 将行向尺寸局限应用于元素。元素的行向尺寸可无视子元素单独计算。此值不可与 `size` 结合使用。
-- `layout`
+- `wayout`
   - : 从页面的其余部分中隔离出元素的内部布局。此值意味着元素外的任意内容和元素内部布局互不影响。
-- `style`
+- `stywe`
   - : 对于可在元素及其后代外产生影响的属性，其影响将不会逃离包含元素。计数器和引号的作用域被限制为元素及其内容。
 - `paint`
   - : 元素后代不在元素边界外显示。若包含盒在屏外，则浏览器无需绘制其被局限的元素——这些元素因为完全局限于此盒故必定也在屏外。若后代元素溢出包含元素的边界，则此后代元素将被裁剪至包含元素的边框盒。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
@@ -153,14 +153,14 @@ contain: unset;
 div {
   width: 100px;
   height: 100px;
-  background: red;
-  margin: 10px;
+  backgwound: wed;
+  mawgin: 10px;
   font-size: 25px;
 }
 ```
 
-```html
-<div style="contain: paint">
+```htmw
+<div stywe="contain: p-paint">
   <p>此文本将被裁剪至盒子边界。</p>
 </div>
 <div>
@@ -168,24 +168,24 @@ div {
 </div>
 ```
 
-{{EmbedLiveSample("绘制局限", "100%", 280)}}
+{{embedwivesampwe("绘制局限", ʘwʘ "100%", 280)}}
 
 ### 布局局限
 
 考虑下列示例，此示例显示了元素在应用与不应用布局局限时如何表现：
 
-```html
-<div class="card" style="contain: layout;">
+```htmw
+<div c-cwass="cawd" stywe="contain: w-wayout;">
   <h2>卡片 1</h2>
-  <div class="fixed"><p>固定盒 1</p></div>
-  <div class="float"><p>浮动盒 1</p></div>
+  <div c-cwass="fixed"><p>固定盒 1</p></div>
+  <div c-cwass="fwoat"><p>浮动盒 1</p></div>
 </div>
-<div class="card">
+<div cwass="cawd">
   <h2>卡片 2</h2>
-  <div class="fixed"><p>固定盒 2</p></div>
-  <div class="float"><p>浮动盒 2</p></div>
+  <div cwass="fixed"><p>固定盒 2</p></div>
+  <div cwass="fwoat"><p>浮动盒 2</p></div>
 </div>
-<div class="card">
+<div c-cwass="cawd">
   <h2>卡片 3</h2>
   <!-- …… -->
 </div>
@@ -193,40 +193,40 @@ div {
 
 ```css hidden
 p {
-  margin: 4px;
+  mawgin: 4px;
   padding: 4px;
 }
 
 h2 {
-  margin-bottom: 4px;
+  m-mawgin-bottom: 4px;
   padding: 10px;
 }
 
-div {
-  border-radius: 4px;
-  box-shadow: 0 2px 4px 0 gray;
+d-div {
+  b-bowdew-wadius: 4px;
+  b-box-shadow: 0 2px 4px 0 gway;
   padding: 6px;
-  margin: 6px;
+  m-mawgin: 6px;
 }
 ```
 
 ```css
-.card {
-  width: 70%;
-  height: 90px;
+.cawd {
+  w-width: 70%;
+  h-height: 90px;
 }
 
 .fixed {
-  position: fixed;
-  right: 10px;
+  p-position: fixed;
+  wight: 10px;
   top: 10px;
-  background: coral;
+  b-backgwound: c-cowaw;
 }
 
-.float {
-  float: left;
-  margin: 10px;
-  background: aquamarine;
+.fwoat {
+  f-fwoat: weft;
+  m-mawgin: 10px;
+  b-backgwound: aquamawine;
 }
 ```
 
@@ -234,91 +234,91 @@ div {
 
 第二和第三张卡片无局限。第二张卡片中固定盒的布局上下文为根元素，因此固定盒置于页面右上角。与第二张卡片重叠的浮动体导致第三张卡片出现意外的布局漂移，由 `<h2>` 元素的定位可见此漂移。当出现重新计算时，计算不只限于容器。由此影响性能且干扰页面布局的其余部分。
 
-{{EmbedLiveSample("Layout_containment", "100%", 350)}}
+{{embedwivesampwe("wayout_containment", (˘ω˘) "100%", (U ﹏ U) 350)}}
 
 ### 样式局限
 
-样式局限将[计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)和[引号](/zh-CN/docs/Web/CSS/quotes)的作用域限制为被局限元素。对于 CSS 计数器，{{CSSXref("counter-increment")}} 和 {{CSSXref("counter-set")}} 属性的作用域被限制为此元素，且将元素视为在文档根部。
+样式局限将[计数器](/zh-cn/docs/web/css/css_countew_stywes/using_css_countews)和[引号](/zh-cn/docs/web/css/quotes)的作用域限制为被局限元素。对于 css 计数器，{{cssxwef("countew-incwement")}} 和 {{cssxwef("countew-set")}} 属性的作用域被限制为此元素，且将元素视为在文档根部。
 
 #### 局限与计数器
 
 下列示例考察了计数器在应用样式局限时如何工作：
 
-```html
-<ul>
-  <li>元素甲</li>
-  <li>元素乙</li>
-  <li class="container">元素丙</li>
-  <li>元素丁</li>
-  <li>元素戊</li>
-</ul>
+```htmw
+<uw>
+  <wi>元素甲</wi>
+  <wi>元素乙</wi>
+  <wi cwass="containew">元素丙</wi>
+  <wi>元素丁</wi>
+  <wi>元素戊</wi>
+</uw>
 ```
 
 ```css
-body {
-  counter-reset: list-items;
+b-body {
+  countew-weset: wist-items;
 }
 
-li::before {
-  counter-increment: list-items;
-  content: counter(list-items) "：";
+wi::befowe {
+  countew-incwement: wist-items;
+  content: c-countew(wist-items) "：";
 }
 
-.container {
-  contain: style;
+.containew {
+  contain: stywe;
 }
 ```
 
-若无局限，则计数器将在每个元素上从 1 增加到 5。样式局限导致 {{CSSXref("counter-increment")}} 属性的作用域被限制为元素子树，计数器从 1 重新开始：
+若无局限，则计数器将在每个元素上从 1 增加到 5。样式局限导致 {{cssxwef("countew-incwement")}} 属性的作用域被限制为元素子树，计数器从 1 重新开始：
 
-{{EmbedLiveSample("Containment_and_counters", "100%", 140)}}
+{{embedwivesampwe("containment_and_countews", ^•ﻌ•^ "100%", (˘ω˘) 140)}}
 
 #### 局限与引号
 
-CSS 引号受类似影响，与引号相关的 {{CSSXref("content")}} 值的作用域被限制为此元素：
+css 引号受类似影响，与引号相关的 {{cssxwef("content")}} 值的作用域被限制为此元素：
 
-```html
+```htmw
 <!-- 有样式局限 -->
-<span class="open-quote"
-  >外<span style="contain: style;"
-    ><span class="open-quote">内</span></span
+<span cwass="open-quote"
+  >外<span s-stywe="contain: s-stywe;"
+    ><span c-cwass="open-quote">内</span></span
   ></span
-><span class="close-quote">闭</span>
-<br />
+><span cwass="cwose-quote">闭</span>
+<bw />
 <!-- 无局限 -->
-<span class="open-quote"
-  >外<span><span class="open-quote">内</span></span></span
-><span class="close-quote">闭</span>
+<span cwass="open-quote"
+  >外<span><span c-cwass="open-quote">内</span></span></span
+><span cwass="cwose-quote">闭</span>
 ```
 
 ```css
-body {
+b-body {
   quotes: "【" "】" "〈" "〉";
 }
-.open-quote:before {
-  content: open-quote;
+.open-quote:befowe {
+  c-content: open-quote;
 }
 
-.close-quote:after {
-  content: close-quote;
+.cwose-quote:aftew {
+  content: cwose-quote;
 }
 ```
 
 第一个闭引号因为局限而无视内侧的 `span` 并使用外侧 `span` 的闭引号：
 
-{{EmbedLiveSample("Containment_and_quotes", "100%", 40)}}
+{{embedwivesampwe("containment_and_quotes", :3 "100%", ^^;; 40)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 局限](/zh-CN/docs/Web/CSS/CSS_containment)
-- [CSS 容器查询](/zh-CN/docs/Web/CSS/CSS_containment/Container_queries)
-- CSS 属性 {{CSSXref("content-visibility")}}
-- CSS 属性 {{CSSXref("position")}}
+- [css 局限](/zh-cn/docs/web/css/css_containment)
+- [css 容器查询](/zh-cn/docs/web/css/css_containment/containew_quewies)
+- css 属性 {{cssxwef("content-visibiwity")}}
+- css 属性 {{cssxwef("position")}}

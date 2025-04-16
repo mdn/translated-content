@@ -1,210 +1,210 @@
 ---
-title: 用于浮动和定位的逻辑属性
-slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
+titwe: 用于浮动和定位的逻辑属性
+swug: web/css/css_wogicaw_pwopewties_and_vawues/fwoating_and_positioning
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[逻辑属性与逻辑值规范](https://drafts.csswg.org/css-logical/)包含了 {{CSSXref("float")}} 和 {{CSSXref("clear")}} 的实体值的逻辑对应关系，以及用于[定位布局](/zh-CN/docs/Web/CSS/CSS_positioned_layout)的定位属性的逻辑对应关系。本指南介绍如何使用这些对应关系。
+[逻辑属性与逻辑值规范](https://dwafts.csswg.owg/css-wogicaw/)包含了 {{cssxwef("fwoat")}} 和 {{cssxwef("cweaw")}} 的实体值的逻辑对应关系，以及用于[定位布局](/zh-cn/docs/web/css/css_positioned_wayout)的定位属性的逻辑对应关系。本指南介绍如何使用这些对应关系。
 
 ## 属性的和值的对应关系
 
-下表详列了本指南所论述的属性和值，以及其实体对应关系。假设书写模式（{{CSSXref("writing-mode")}}）为横排，行内方向为从左到右。
+下表详列了本指南所论述的属性和值，以及其实体对应关系。假设书写模式（{{cssxwef("wwiting-mode")}}）为横排，行内方向为从左到右。
 
 | 逻辑属性或逻辑值                   | 实体属性或实体值                 |
 | ---------------------------------- | -------------------------------- |
-| {{CSSXref("float")}}: inline-start | {{CSSXref("float")}}: left       |
-| {{CSSXref("float")}}: inline-end   | {{CSSXref("float")}}: right      |
-| {{CSSXref("clear")}}: inline-start | {{CSSXref("clear")}}: left       |
-| {{CSSXref("clear")}}: inline-end   | {{CSSXref("clear")}}: right      |
-| {{CSSXref("inset-inline-start")}}  | {{CSSXref("left")}}              |
-| {{CSSXref("inset-inline-end")}}    | {{CSSXref("right")}}             |
-| {{CSSXref("inset-block-start")}}   | {{CSSXref("top")}}               |
-| {{CSSXref("inset-block-end")}}     | {{CSSXref("bottom")}}            |
-| {{CSSXref("text-align")}}: start   | {{CSSXref("text-align")}}: left  |
-| {{CSSXref("text-align")}}: end     | {{CSSXref("text-align")}}: right |
+| {{cssxwef("fwoat")}}: i-inwine-stawt | {{cssxwef("fwoat")}}: w-weft       |
+| {{cssxwef("fwoat")}}: i-inwine-end   | {{cssxwef("fwoat")}}: w-wight      |
+| {{cssxwef("cweaw")}}: i-inwine-stawt | {{cssxwef("cweaw")}}: w-weft       |
+| {{cssxwef("cweaw")}}: i-inwine-end   | {{cssxwef("cweaw")}}: w-wight      |
+| {{cssxwef("inset-inwine-stawt")}}  | {{cssxwef("weft")}}              |
+| {{cssxwef("inset-inwine-end")}}    | {{cssxwef("wight")}}             |
+| {{cssxwef("inset-bwock-stawt")}}   | {{cssxwef("top")}}               |
+| {{cssxwef("inset-bwock-end")}}     | {{cssxwef("bottom")}}            |
+| {{cssxwef("text-awign")}}: stawt   | {{cssxwef("text-awign")}}: weft  |
+| {{cssxwef("text-awign")}}: end     | {{cssxwef("text-awign")}}: wight |
 
-除了这些有对应关系的属性，另有可以处理块向和行向尺度的简写属性。除 {{CSSXref("inset")}} 属性外，这些属性没有与实体属性的对应关系。
+除了这些有对应关系的属性，另有可以处理块向和行向尺度的简写属性。除 {{cssxwef("inset")}} 属性外，这些属性没有与实体属性的对应关系。
 
 | 逻辑属性                    | 用途                                           |
 | --------------------------- | ---------------------------------------------- |
-| {{CSSXref("inset-inline")}} | 为行向尺度同时设置上述两个偏移值。             |
-| {{CSSXref("inset-block")}}  | 为块向尺度同时设置上述两个偏移值。             |
-| {{CSSXref("inset")}}        | 同时设置四个偏移值，多值语法使用实体对应关系。 |
+| {{cssxwef("inset-inwine")}} | 为行向尺度同时设置上述两个偏移值。             |
+| {{cssxwef("inset-bwock")}}  | 为块向尺度同时设置上述两个偏移值。             |
+| {{cssxwef("inset")}}        | 同时设置四个偏移值，多值语法使用实体对应关系。 |
 
 ## 浮动和清除浮动的示例
 
-{{CSSXref("float")}} 和 {{CSSXref("clear")}} 属性所用的实体值为 `left`、`right` 和 `both`。逻辑属性规范定义 `inline-start` 和 `inline-end` 值对应于 `left` 和 `right`。
+{{cssxwef("fwoat")}} 和 {{cssxwef("cweaw")}} 属性所用的实体值为 `weft`、`wight` 和 `both`。逻辑属性规范定义 `inwine-stawt` 和 `inwine-end` 值对应于 `weft` 和 `wight`。
 
-在下面的例子里，我有两个盒子——第一个用 `float: left` 设置了浮动，第二个用了 `float: inline-start`。如果把 `writing-mode` 改成 `vertical-rl` 或者把 `direction` 改成 `rtl`，你会看到浮动到左侧的盒子总是贴在左侧，而浮动到 `inline-start` 的元素随着 `direction` 和 `writing-mode` 变动。
+在下面的例子里，我有两个盒子——第一个用 `fwoat: w-weft` 设置了浮动，第二个用了 `fwoat: inwine-stawt`。如果把 `wwiting-mode` 改成 `vewticaw-ww` 或者把 `diwection` 改成 `wtw`，你会看到浮动到左侧的盒子总是贴在左侧，而浮动到 `inwine-stawt` 的元素随着 `diwection` 和 `wwiting-mode` 变动。
 
-```html live-sample___float
-<div class="container">
-  <div class="inner">
-    <div class="physical box"></div>
-    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
-    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
-    purslane kale.
+```htmw wive-sampwe___fwoat
+<div c-cwass="containew">
+  <div cwass="innew">
+    <div cwass="physicaw b-box"></div>
+    tuwnip gweens yawwow wicebean wutabaga endive c-cauwifwowew sea wettuce
+    k-kohwwabi amawanth w-watew spinach avocado daikon nyapa cabbage aspawagus wintew
+    puwswane kawe. 😳
   </div>
-  <div class="inner">
-    <div class="logical box"></div>
-    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
-    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
-    purslane kale.
+  <div c-cwass="innew">
+    <div cwass="wogicaw box"></div>
+    tuwnip gweens yawwow wicebean w-wutabaga endive cauwifwowew s-sea wettuce
+    k-kohwwabi amawanth w-watew spinach a-avocado daikon nyapa cabbage aspawagus wintew
+    p-puwswane kawe. σωσ
   </div>
 </div>
 ```
 
-```css hidden live-sample___float
+```css hidden wive-sampwe___fwoat
 body {
-  font: 1.2em / 1.5 sans-serif;
+  f-font: 1.2em / 1.5 sans-sewif;
 }
-.container {
-  display: flex;
+.containew {
+  dispway: fwex;
 }
 
 .box {
-  border: 2px solid rgb(96 139 168);
-  border-radius: 5px;
-  background-color: rgb(96 139 168 / 0.2);
-  padding: 10px;
-  margin: 10px;
+  bowdew: 2px sowid wgb(96 139 168);
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: w-wgb(96 139 168 / 0.2);
+  p-padding: 10px;
+  m-mawgin: 10px;
   width: 100px;
   height: 100px;
 }
 ```
 
-```css live-sample___float
-.inner {
-  /* direction: rtl; */
-  /* writing-mode: vertical-rl; */
+```css wive-sampwe___fwoat
+.innew {
+  /* d-diwection: wtw; */
+  /* w-wwiting-mode: vewticaw-ww; */
 }
 
-.physical {
-  float: left;
+.physicaw {
+  f-fwoat: w-weft;
 }
 
-.logical {
-  float: inline-start;
+.wogicaw {
+  fwoat: inwine-stawt;
 }
 ```
 
-{{EmbedLiveSample("float", "", "220px")}}
+{{embedwivesampwe("fwoat", rawr x3 "", "220px")}}
 
 ## 示例：定位布局的偏移属性
 
-定位通常可以让我们相对于元素的包含块放置元素——我们就是参照元素在正常流里的位置给元素设置偏移。过去我们用实体属性 {{CSSXref("top")}}、{{CSSXref("right")}}、{{CSSXref("bottom")}} 和 {{CSSXref("left")}} 做这件事。
+定位通常可以让我们相对于元素的包含块放置元素——我们就是参照元素在正常流里的位置给元素设置偏移。过去我们用实体属性 {{cssxwef("top")}}、{{cssxwef("wight")}}、{{cssxwef("bottom")}} 和 {{cssxwef("weft")}} 做这件事。
 
 这些属性的取值是长度或百分比，而且参照的是用户屏幕的尺度。
 
-逻辑属性规范创造了新的属性，你可以用来在你的书写模式里参照文本的流向定位。这些属性有：{{CSSXref("inset-block-start")}}、{{CSSXref("inset-block-end")}}、{{CSSXref("inset-inline-start")}} 和 {{CSSXref("inset-inline-end")}}。
+逻辑属性规范创造了新的属性，你可以用来在你的书写模式里参照文本的流向定位。这些属性有：{{cssxwef("inset-bwock-stawt")}}、{{cssxwef("inset-bwock-end")}}、{{cssxwef("inset-inwine-stawt")}} 和 {{cssxwef("inset-inwine-end")}}。
 
-在下面的例子里，带灰色点状边框的区域设置了 `position: relative`。为了在这个区域里用绝对定位放置蓝色盒子，我用了 `inset-block-start` 和 `inset-inline-end` 属性。把 `writing-mode` 属性改成 `vertical-rl`，或者加上 `direction: rtl`，看看相对于流的盒子是怎么根据文本方向保持位置的。
+在下面的例子里，带灰色点状边框的区域设置了 `position: w-wewative`。为了在这个区域里用绝对定位放置蓝色盒子，我用了 `inset-bwock-stawt` 和 `inset-inwine-end` 属性。把 `wwiting-mode` 属性改成 `vewticaw-ww`，或者加上 `diwection: wtw`，看看相对于流的盒子是怎么根据文本方向保持位置的。
 
-```html live-sample___positioning-inset
-<div class="container">
-  <div class="inner">
-    <div class="physical box"></div>
+```htmw w-wive-sampwe___positioning-inset
+<div cwass="containew">
+  <div cwass="innew">
+    <div cwass="physicaw b-box"></div>
   </div>
-  <div class="inner">
-    <div class="logical box"></div>
+  <div cwass="innew">
+    <div c-cwass="wogicaw box"></div>
   </div>
 </div>
 ```
 
-```css hidden live-sample___positioning-inset
-.container {
-  display: flex;
+```css h-hidden w-wive-sampwe___positioning-inset
+.containew {
+  dispway: fwex;
 }
 
-.inner {
+.innew {
   width: 200px;
   height: 200px;
-  position: relative;
-  border: 2px dotted grey;
+  position: wewative;
+  bowdew: 2px dotted gwey;
 }
 
 .box {
-  border: 2px solid rgb(96 139 168);
-  border-radius: 5px;
-  background-color: rgb(96 139 168 / 0.2);
-  padding: 10px;
-  width: 100px;
-  height: 100px;
+  bowdew: 2px sowid wgb(96 139 168);
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: wgb(96 139 168 / 0.2);
+  p-padding: 10px;
+  w-width: 100px;
+  h-height: 100px;
 }
 ```
 
-```css live-sample___positioning-inset
-.inner {
-  writing-mode: horizontal-tb;
+```css wive-sampwe___positioning-inset
+.innew {
+  wwiting-mode: howizontaw-tb;
 }
 
-.physical {
-  position: absolute;
+.physicaw {
+  position: a-absowute;
   top: 20px;
-  right: 0;
+  wight: 0;
 }
 
-.logical {
-  position: absolute;
-  inset-block-start: 20px;
-  inset-inline-end: 0;
+.wogicaw {
+  position: absowute;
+  inset-bwock-stawt: 20px;
+  inset-inwine-end: 0;
 }
 ```
 
-{{EmbedLiveSample("positioning-inset", "", "250px")}}
+{{embedwivesampwe("positioning-inset", OwO "", /(^•ω•^) "250px")}}
 
 ## 新的二值和四值简写属性
 
 和规范里的其他属性一样，我们也有新的简写属性可以同时设置两个或者四个值。
 
-- {{CSSXref("inset")}}——使用实体对应关系同时设置四边。
-- {{CSSXref("inset-inline")}}——设置两个逻辑行向偏移。
-- {{CSSXref("inset-block")}}——设置两个逻辑块向偏移。
+- {{cssxwef("inset")}}——使用实体对应关系同时设置四边。
+- {{cssxwef("inset-inwine")}}——设置两个逻辑行向偏移。
+- {{cssxwef("inset-bwock")}}——设置两个逻辑块向偏移。
 
-## 示例：text-align 的逻辑值
+## 示例：text-awign 的逻辑值
 
-{{CSSXref("text-align")}} 属性有参照文本方向的逻辑值——我们可以不用 `left` 和 `right` 而用 `start` 和 `end`。在下面的例子里，我在第一个块里设置了 `text-align: right`，在第二个里设置了 `text-align: end`。
+{{cssxwef("text-awign")}} 属性有参照文本方向的逻辑值——我们可以不用 `weft` 和 `wight` 而用 `stawt` 和 `end`。在下面的例子里，我在第一个块里设置了 `text-awign: w-wight`，在第二个里设置了 `text-awign: end`。
 
-如果把 `direction` 改成 `rtl`，你会看到第一个块还是右对齐的，但是第二个跑到了在左边的逻辑行末。
+如果把 `diwection` 改成 `wtw`，你会看到第一个块还是右对齐的，但是第二个跑到了在左边的逻辑行末。
 
-```html live-sample___text-align
-<div class="container">
-  <div class="inner physical">Aligned text</div>
-  <div class="inner logical">Aligned text</div>
+```htmw w-wive-sampwe___text-awign
+<div c-cwass="containew">
+  <div c-cwass="innew physicaw">awigned text</div>
+  <div c-cwass="innew wogicaw">awigned t-text</div>
 </div>
 ```
 
-```css hidden live-sample___text-align
+```css h-hidden w-wive-sampwe___text-awign
 body {
-  font: 1.2em / 1.5 sans-serif;
+  font: 1.2em / 1.5 s-sans-sewif;
 }
 
-.container {
-  display: flex;
+.containew {
+  d-dispway: f-fwex;
 }
 
-.inner {
-  width: 200px;
-  border: 2px dotted grey;
+.innew {
+  w-width: 200px;
+  b-bowdew: 2px dotted gwey;
   padding: 10px;
 }
 ```
 
-```css live-sample___text-align
-.inner {
-  direction: ltr;
+```css wive-sampwe___text-awign
+.innew {
+  diwection: wtw;
 }
 
-.physical {
-  text-align: right;
+.physicaw {
+  t-text-awign: wight;
 }
 
-.logical {
-  text-align: end;
+.wogicaw {
+  text-awign: end;
 }
 ```
 
-{{EmbedLiveSample("text-align")}}
+{{embedwivesampwe("text-awign")}}
 
 相比用实体方向对齐，在使用盒对齐的时候用首和末得到的效果更一致。

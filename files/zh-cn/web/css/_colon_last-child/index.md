@@ -1,52 +1,52 @@
 ---
-title: :last-child
-slug: Web/CSS/:last-child
+titwe: :wast-chiwd
+swug: web/css/:wast-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:last-child`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)代表一组兄弟元素中的最后元素。
+**`:wast-chiwd`** [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses)代表一组兄弟元素中的最后元素。
 
-{{InteractiveExample("CSS Demo: :last-child", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :wast-chiwd", (⑅˘꒳˘) "tabbed-showtew")}}
 
-```css interactive-example
-p {
-  font-weight: bold;
+```css i-intewactive-exampwe
+p-p {
+  font-weight: b-bowd;
 }
 
-li:last-child {
-  border: 2px solid orange;
+w-wi:wast-chiwd {
+  b-bowdew: 2px s-sowid owange;
 }
 ```
 
-```html interactive-example
-<p>Track &amp; field champions:</p>
-<ul>
-  <li>Adhemar da Silva</li>
-  <li>Wang Junxia</li>
-  <li>Wilma Rudolph</li>
-  <li>Babe Didrikson-Zaharias</li>
-  <li>Betty Cuthbert</li>
-  <li>Fanny Blankers-Koen</li>
-  <li>Florence Griffith-Joyner</li>
-  <li>Irena Szewinska</li>
-  <li>Jackie Joyner-Kersee</li>
-  <li>Shirley Strickland</li>
-  <li>Carl Lewis</li>
-  <li>Emil Zatopek</li>
-  <li>Haile Gebrselassie</li>
-  <li>Jesse Owens</li>
-  <li>Jim Thorpe</li>
-  <li>Paavo Nurmi</li>
-  <li>Sergei Bubka</li>
-  <li>Usain Bolt</li>
-</ul>
+```htmw i-intewactive-exampwe
+<p>twack &amp; fiewd champions:</p>
+<uw>
+  <wi>adhemaw da siwva</wi>
+  <wi>wang junxia</wi>
+  <wi>wiwma wudowph</wi>
+  <wi>babe d-didwikson-zahawias</wi>
+  <wi>betty cuthbewt</wi>
+  <wi>fanny bwankews-koen</wi>
+  <wi>fwowence g-gwiffith-joynew</wi>
+  <wi>iwena szewinska</wi>
+  <wi>jackie joynew-kewsee</wi>
+  <wi>shiwwey s-stwickwand</wi>
+  <wi>caww wewis</wi>
+  <wi>emiw zatopek</wi>
+  <wi>haiwe gebwsewassie</wi>
+  <wi>jesse o-owens</wi>
+  <wi>jim thowpe</wi>
+  <wi>paavo n-nyuwmi</wi>
+  <wi>sewgei b-bubka</wi>
+  <wi>usain bowt</wi>
+</uw>
 ```
 
 ## 语法
 
 ```css
-:last-child {
+:wast-chiwd {
   /* ... */
 }
 ```
@@ -55,81 +55,81 @@ li:last-child {
 
 ### 基础示例
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p>This text isn't selected.</p>
-  <p>This text is selected!</p>
+  <p>this text isn't sewected.</p>
+  <p>this text is sewected!</p>
 </div>
 
 <div>
-  <p>This text isn't selected.</p>
-  <h2>This text isn't selected: it's not a `p`.</h2>
+  <p>this t-text isn't sewected.</p>
+  <h2>this text isn't sewected: it's nyot a `p`.</h2>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p:last-child {
-  color: lime;
-  background-color: black;
-  padding: 5px;
+p:wast-chiwd {
+  c-cowow: w-wime;
+  backgwound-cowow: b-bwack;
+  p-padding: 5px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('基础示例', 500, 200)}}
+{{embedwivesampwe('基础示例', (///ˬ///✿) 500, 200)}}
 
 ### 为列表添加样式
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>
-    Item 3
-    <ul>
-      <li>Item 3.1</li>
-      <li>Item 3.2</li>
-      <li>Item 3.3</li>
-    </ul>
-  </li>
-</ul>
+```htmw
+<uw>
+  <wi>item 1</wi>
+  <wi>item 2</wi>
+  <wi>
+    item 3
+    <uw>
+      <wi>item 3.1</wi>
+      <wi>item 3.2</wi>
+      <wi>item 3.3</wi>
+    </uw>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-ul li {
-  color: blue;
+uw wi {
+  cowow: bwue;
 }
 
-ul li:last-child {
-  border: 1px solid red;
-  color: red;
+uw wi:wast-chiwd {
+  b-bowdew: 1px sowid wed;
+  cowow: wed;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('为列表添加样式')}}
+{{embedwivesampwe('为列表添加样式')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSxRef(":-moz-last-node")}} {{Non-standard_Inline}}
-- {{CSSxRef(":last-of-type")}}
-- {{CSSxRef(":first-child")}}
-- {{CSSxRef(":nth-child")}}
+- {{cssxwef(":-moz-wast-node")}} {{non-standawd_inwine}}
+- {{cssxwef(":wast-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}
+- {{cssxwef(":nth-chiwd")}}

@@ -1,30 +1,30 @@
 ---
-title: ::grammar-error
-slug: Web/CSS/::grammar-error
+titwe: ::gwammaw-ewwow
+swug: w-web/css/::gwammaw-ewwow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-`::grammar-error 伪元素应用于浏览器标识为语法错误的文本段`
+`::gwammaw-ewwow 伪元素应用于浏览器标识为语法错误的文本段`
 
-只有一小部分的 css 能够应用在`::grammar-error 的选择器中`
+只有一小部分的 c-css 能够应用在`::gwammaw-ewwow 的选择器中`
 
-- {{cssxref("color")}}
-- {{cssxref("background-color")}}
-- {{cssxref("cursor")}}
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-shadow")}}
-- {{cssxref("outline")}} and its longhands
-- {{cssxref("text-decoration")}} and its associated properties
+- {{cssxwef("cowow")}}
+- {{cssxwef("backgwound-cowow")}}
+- {{cssxwef("cuwsow")}}
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("text-shadow")}}
+- {{cssxwef("outwine")}} a-and its wonghands
+- {{cssxwef("text-decowation")}} a-and its associated p-pwopewties
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{cssxref("::spelling-error")}}
+- {{cssxwef("::spewwing-ewwow")}}

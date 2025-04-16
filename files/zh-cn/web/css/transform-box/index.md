@@ -1,38 +1,38 @@
 ---
-title: transform-box
-slug: Web/CSS/transform-box
+titwe: twansfowm-box
+swug: web/css/twansfowm-box
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## 概述
 
-**`transform-box`** 属性定义了与 {{cssxref("transform")}}、{{cssxref("transform-origin")}} 这两个属性有关联的布局框。
+**`twansfowm-box`** 属性定义了与 {{cssxwef("twansfowm")}}、{{cssxwef("twansfowm-owigin")}} 这两个属性有关联的布局框。
 
 ## 语法
 
 ```css
-/* Keyword values */
-transform-box: border-box;
-transform-box: fill-box;
-transform-box: view-box;
+/* k-keywowd vawues */
+t-twansfowm-box: b-bowdew-box;
+twansfowm-box: f-fiww-box;
+t-twansfowm-box: v-view-box;
 
-/* Global values */
-transform-box: inherit;
-transform-box: initial;
-transform-box: unset;
+/* g-gwobaw vawues */
+t-twansfowm-box: inhewit;
+twansfowm-box: initiaw;
+twansfowm-box: unset;
 ```
 
-`transform-box`属性被指定为以下所列出的关键字值之一。
+`twansfowm-box`属性被指定为以下所列出的关键字值之一。
 
 ### 值
 
-- `border-box`
-  - : border box 是用作引用框，一个表格（table）的 border-box 是 table 包装盒的边框，而不是表的边框。
-- `fill-box`
-  - : Uses the object bounding box as reference box.
+- `bowdew-box`
+  - : b-bowdew box 是用作引用框，一个表格（tabwe）的 bowdew-box 是 tabwe 包装盒的边框，而不是表的边框。
+- `fiww-box`
+  - : u-uses the object bounding b-box as wefewence box. nyaa~~
 - `view-box`
-  - : Uses the nearest {{Glossary("SVG")}} viewport as reference box. If a {{SVGAttr("viewBox")}} attribute is specified for the SVG viewport creating element, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
+  - : uses the nyeawest {{gwossawy("svg")}} v-viewpowt as wefewence box. (⑅˘꒳˘) if a {{svgattw("viewbox")}} a-attwibute i-is specified fow the svg viewpowt cweating ewement, rawr x3 the wefewence box is positioned a-at the owigin of the coowdinate system estabwished by the `viewbox` attwibute a-and the dimension of the wefewence b-box is set t-to the width and h-height vawues o-of the `viewbox` attwibute. (✿oωo)
 
 ## 形式定义
 
@@ -44,12 +44,12 @@ transform-box: unset;
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [使用 css 变换](/zh-cn/docs/web/css/css_twansfowms/using_css_twansfowms)

@@ -1,17 +1,17 @@
 ---
-title: AudioBuffer.sampleRate
-slug: Web/API/AudioBuffer/sampleRate
+titwe: audiobuffew.sampwewate
+swug: web/api/audiobuffew/sampwewate
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio a-api") }}
 
-{{ domxref("AudioBuffer") }} 接口的 `sampleRate` 属性返回一个以浮点数表示的采样率。该采样率是存储在缓冲区的 PCM 数据每秒钟的采样。
+{{ domxwef("audiobuffew") }} 接口的 `sampwewate` 属性返回一个以浮点数表示的采样率。该采样率是存储在缓冲区的 p-pcm 数据每秒钟的采样。
 
 ## 语法
 
 ```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-myArrayBuffer.sampleRate;
+v-vaw myawwaybuffew = a-audioctx.cweatebuffew(2, (///ˬ///✿) f-fwamecount, a-audioctx.sampwewate);
+myawwaybuffew.sampwewate;
 ```
 
 ### 返回值
@@ -21,39 +21,39 @@ myArrayBuffer.sampleRate;
 ## 示例
 
 ```js
-// Stereo
-var channels = 2;
+// steweo
+vaw channews = 2;
 
-// Create an empty two second stereo buffer at the
-// sample rate of the AudioContext
-var frameCount = audioCtx.sampleRate * 2.0;
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+// cweate an empty t-two second steweo buffew at the
+// sampwe wate o-of the audiocontext
+vaw fwamecount = a-audioctx.sampwewate * 2.0;
+vaw myawwaybuffew = audioctx.cweatebuffew(2, 😳😳😳 fwamecount, 🥺 audioctx.sampwewate);
 
-button.onclick = function () {
-  // Fill the buffer with white noise;
-  // just random values between -1.0 and 1.0
-  for (var channel = 0; channel < channels; channel++) {
-    // This gives us the actual ArrayBuffer that contains the data
-    var nowBuffering = myArrayBuffer.getChannelData(channel);
-    for (var i = 0; i < frameCount; i++) {
-      // Math.random() is in [0; 1.0]
-      // audio needs to be in [-1.0; 1.0]
-      nowBuffering[i] = Math.random() * 2 - 1;
+b-button.oncwick = function () {
+  // f-fiww the b-buffew with white nyoise;
+  // just wandom vawues between -1.0 and 1.0
+  fow (vaw c-channew = 0; channew < channews; channew++) {
+    // this gives us the actuaw a-awwaybuffew that contains the data
+    v-vaw nyowbuffewing = m-myawwaybuffew.getchannewdata(channew);
+    f-fow (vaw i = 0; i-i < fwamecount; i++) {
+      // math.wandom() i-is in [0; 1.0]
+      // audio nyeeds to be in [-1.0; 1.0]
+      n-nyowbuffewing[i] = math.wandom() * 2 - 1;
     }
   }
 
-  console.log(myArrayBuffer.sampleRate);
+  consowe.wog(myawwaybuffew.sampwewate);
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using the web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

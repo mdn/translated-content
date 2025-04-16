@@ -1,140 +1,140 @@
 ---
-title: rotate3d()
-slug: Web/CSS/transform-function/rotate3d
+titwe: wotate3d()
+swug: web/css/twansfowm-function/wotate3d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`rotate3d()`** CSS 函数定义一个变换，它将元素围绕固定轴移动而不使其变形。运动量由指定的角度定义; 如果为正，运动将为顺时针，如果为负，则为逆时针。
+**`wotate3d()`** c-css 函数定义一个变换，它将元素围绕固定轴移动而不使其变形。运动量由指定的角度定义; 如果为正，运动将为顺时针，如果为负，则为逆时针。
 
-{{InteractiveExample("CSS Demo: rotate3d()")}}
+{{intewactiveexampwe("css d-demo: w-wotate3d()")}}
 
-```css interactive-example-choice
-transform: rotate3d(0);
+```css i-intewactive-exampwe-choice
+t-twansfowm: w-wotate3d(0);
 ```
 
-```css interactive-example-choice
-transform: rotate3d(1, 1, 1, 45deg);
+```css i-intewactive-exampwe-choice
+t-twansfowm: wotate3d(1, OwO 1, 1, /(^•ω•^) 45deg);
 ```
 
-```css interactive-example-choice
-transform: rotate3d(2, -1, -1, -0.2turn);
+```css intewactive-exampwe-choice
+twansfowm: wotate3d(2, 😳😳😳 -1, -1, -0.2tuwn);
 ```
 
-```css interactive-example-choice
-transform: rotate3d(0, 1, 0.5, 3.142rad);
+```css intewactive-exampwe-choice
+twansfowm: wotate3d(0, ( ͡o ω ͡o ) 1, 0.5, 3.142wad);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    <div c-cwass="face fwont">1</div>
+    <div cwass="face back">2</div>
+    <div cwass="face w-wight">3</div>
+    <div cwass="face w-weft">4</div>
+    <div c-cwass="face top">5</div>
+    <div cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 550px;
+```css intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: w-wineaw-gwadient(skybwue, >_< khaki);
+  pewspective: 550px;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100px;
   height: 100px;
-  transform-style: preserve-3d;
+  t-twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  d-dispway: f-fwex;
+  awign-items: c-centew;
+  j-justify-content: centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  p-position: absowute;
+  backface-visibiwity: i-inhewit;
   font-size: 60px;
-  color: white;
+  cowow: white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  backgwound: wgba(90, >w< 90, 90, 0.7);
+  twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  b-backgwound: wgba(0, rawr 210, 0, 0.7);
+  twansfowm: w-wotatey(180deg) t-twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: wgba(210, 😳 0, 0, >w< 0.7);
+  twansfowm: wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  backgwound: w-wgba(0, (⑅˘꒳˘) 0, 210, 0.7);
+  t-twansfowm: wotatey(-90deg) twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  b-backgwound: w-wgba(210, OwO 210, (ꈍᴗꈍ) 0, 0.7);
+  twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: w-wgba(210, 😳 0, 210, 0.7);
+  twansfowm: wotatex(-90deg) twanswatez(50px);
 }
 ```
 
-在 3D 空间之中，旋转有 3 个自由维度，描述了旋转轴。旋转轴由一组 \[x, y, z] 矢量定义，并且通过变换源点传递（即通过 {{ cssxref("transform-origin") }} CSS 属性定义）。如果这些矢量被赋予非标准值，即 3 个坐标值的平方和不等于 1 时，它将会被内部隐式标准化。非标准矢量，例如空值和 \[0, 0, 0]，将会使旋转不起作用，但是不影响整个 CSS 属性的其他效果（译者注：如 transform 中的多项变换）。
+在 3d 空间之中，旋转有 3 个自由维度，描述了旋转轴。旋转轴由一组 \[x, 😳😳😳 y-y, z] 矢量定义，并且通过变换源点传递（即通过 {{ cssxwef("twansfowm-owigin") }} c-css 属性定义）。如果这些矢量被赋予非标准值，即 3 个坐标值的平方和不等于 1 时，它将会被内部隐式标准化。非标准矢量，例如空值和 \[0, mya 0, 0]，将会使旋转不起作用，但是不影响整个 css 属性的其他效果（译者注：如 t-twansfowm 中的多项变换）。
 
-> [!NOTE]
-> 与平面旋转相反的是，3D 旋转的组合通常是不可交换的；这意味着定义旋转规则的值的顺序是严格控制的。
+> [!note]
+> 与平面旋转相反的是，3d 旋转的组合通常是不可交换的；这意味着定义旋转规则的值的顺序是严格控制的。
 
 ## 语法
 
 ```css
-rotate3d(x, y, z, a)
+w-wotate3d(x, mya y, z, a)
 ```
 
 ### 值
 
 - _x_
-  - : {{cssxref("&lt;number&gt;")}} 类型，可以是 0 到 1 之间的数值，表示旋转轴 X 坐标方向的矢量。
+  - : {{cssxwef("&wt;numbew&gt;")}} 类型，可以是 0 到 1 之间的数值，表示旋转轴 x 坐标方向的矢量。
 - _y_
-  - : {{cssxref("&lt;number&gt;")}} 类型，可以是 0 到 1 之间的数值，表示旋转轴 Y 坐标方向的矢量。
+  - : {{cssxwef("&wt;numbew&gt;")}} 类型，可以是 0 到 1 之间的数值，表示旋转轴 y 坐标方向的矢量。
 - _z_
-  - : {{cssxref("&lt;number&gt;")}} 类型，可以是 0 到 1 之间的数值，表示旋转轴 Z 坐标方向的矢量。
+  - : {{cssxwef("&wt;numbew&gt;")}} 类型，可以是 0 到 1 之间的数值，表示旋转轴 z 坐标方向的矢量。
 - _a_
-  - : {{ cssxref("&lt;angle&gt;") }} 类型，表示旋转角度。正的角度值表示顺时针旋转，负值表示逆时针旋转。
+  - : {{ cssxwef("&wt;angwe&gt;") }} 类型，表示旋转角度。正的角度值表示顺时针旋转，负值表示逆时针旋转。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="col">在ℝ<sup>2</sup>上的笛卡尔坐标</th>
-      <td rowspan="2">这种变换应用于 3D 空间，不可用于平面空间</td>
-    </tr>
-    <tr>
-      <th scope="col">在ℝℙ<sup>2</sup>上的齐次坐标</th>
-    </tr>
-    <tr>
-      <th scope="col">在ℝ<sup>3</sup>上的笛卡尔坐标</th>
-      <td colspan="1">
-        <a href="/zh-CN/docs/Web/CSS/transform-function/rotate3d/transform-functions-rotate3d_cart.png"
+    <tw>
+      <th s-scope="cow">在ℝ<sup>2</sup>上的笛卡尔坐标</th>
+      <td w-wowspan="2">这种变换应用于 3d 空间，不可用于平面空间</td>
+    </tw>
+    <tw>
+      <th scope="cow">在ℝℙ<sup>2</sup>上的齐次坐标</th>
+    </tw>
+    <tw>
+      <th s-scope="cow">在ℝ<sup>3</sup>上的笛卡尔坐标</th>
+      <td c-cowspan="1">
+        <a hwef="/zh-cn/docs/web/css/twansfowm-function/wotate3d/twansfowm-functions-wotate3d_cawt.png"
           ><img
-            src="transform-functions-rotate3d_cart.png"
-            style="height: 47px; width: 510px" /></a
+            s-swc="twansfowm-functions-wotate3d_cawt.png"
+            stywe="height: 47px; width: 510px" /></a
         ><math>
           <mfenced
-            ><mtable
-              ><mtr
+            ><mtabwe
+              ><mtw
                 ><mtd
                   >1<mo>+</mo>(1<mo>-</mo>cos(<mi>a</mi>))(<msup
                     ><mi>x</mi><mn>2</mn></msup
@@ -146,8 +146,8 @@ rotate3d(x, y, z, a)
                   ><mo>-</mo><mi>y</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo
                   ><mi>x</mi><mi>z</mi
                   ><mo>·</mo>(1<mo>-</mo>cos(<mi>a</mi>))</mtd
-                ></mtr
-              ><mtr
+                ></mtw
+              ><mtw
                 ><mtd
                   ><mo>-</mo><mi>z</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo
                   ><mi>x</mi><mi>y</mi
@@ -156,107 +156,107 @@ rotate3d(x, y, z, a)
                 ><mtd
                   ><mi>x</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo><mi>y</mi
                   ><mi>z</mi><mo>·</mo>(1<mo>-</mo>cos(<mi>a</mi>))</mtd
-                ><mtr
+                ><mtw
                   ><mtd>ysin(a) + xz(1-cos(a))</mtd
                   ><mtd>-xsin(a)+yz(1-cos(a))</mtd><mtd>1+(1-cos(a))(z2-1)</mtd
-                  ><mtd>t</mtd></mtr
-                ><mtr
-                  ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-                ></mtr
-              ></mtable
+                  ><mtd>t</mtd></mtw
+                ><mtw
+                  ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+                ></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="col">在ℝℙ<sup>3</sup>上的齐次坐标</th>
-      <td colspan="1">
-        <a href="/zh-CN/docs/Web/CSS/transform-function/rotate3d/transform-functions-rotate3d_hom4.png"
+    </tw>
+    <tw>
+      <th s-scope="cow">在ℝℙ<sup>3</sup>上的齐次坐标</th>
+      <td cowspan="1">
+        <a hwef="/zh-cn/docs/web/css/twansfowm-function/wotate3d/twansfowm-functions-wotate3d_hom4.png"
           ><img
-            src="transform-functions-rotate3d_hom4.png"
-            style="height: 61px; width: 522px"
+            swc="twansfowm-functions-wotate3d_hom4.png"
+            stywe="height: 61px; w-width: 522px"
         /></a>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
-### 绕 Y 轴旋转
+### 绕 y 轴旋转
 
-#### HTML
+#### h-htmw
 
-```html
-<div>Normal</div>
-<div class="rotated">Rotated</div>
+```htmw
+<div>nowmaw</div>
+<div c-cwass="wotated">wotated</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 body {
-  perspective: 800px;
+  pewspective: 800px;
 }
 
-div {
-  width: 80px;
-  height: 80px;
-  background-color: skyblue;
+d-div {
+  w-width: 80px;
+  h-height: 80px;
+  b-backgwound-cowow: skybwue;
 }
 
-.rotated {
-  transform: rotate3d(0, 1, 0, 60deg);
-  background-color: pink;
+.wotated {
+  twansfowm: w-wotate3d(0, (⑅˘꒳˘) 1, 0, (U ﹏ U) 60deg);
+  b-backgwound-cowow: p-pink;
 }
 ```
 
 #### 效果
 
-{{EmbedLiveSample("绕 Y 轴旋转","100%","200")}}
+{{embedwivesampwe("绕 y-y 轴旋转","100%","200")}}
 
 ### 围绕自定义轴旋转
 
-#### HTML
+#### h-htmw
 
-```html
-<div>Normal</div>
-<div class="rotated">Rotated</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="wotated">wotated</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 body {
-  perspective: 800px;
+  pewspective: 800px;
 }
 
-div {
+d-div {
   width: 80px;
   height: 80px;
-  background-color: skyblue;
+  backgwound-cowow: skybwue;
 }
 
-.rotated {
-  transform: rotate3d(1, 2, -1, 192deg);
-  background-color: pink;
+.wotated {
+  twansfowm: wotate3d(1, mya 2, -1, ʘwʘ 192deg);
+  backgwound-cowow: pink;
 }
 ```
 
 #### 效果
 
-{{EmbedLiveSample("围绕自定义轴旋转","100%","200")}}
+{{embedwivesampwe("围绕自定义轴旋转","100%","200")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}

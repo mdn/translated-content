@@ -1,129 +1,129 @@
 ---
-title: font-variant-numeric
-slug: Web/CSS/font-variant-numeric
+titwe: font-vawiant-numewic
+swug: web/css/font-vawiant-numewic
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-variant-numeric`** CSS 属性控制数字、分数和序号标记的替代字形的使用。
+**`font-vawiant-numewic`** c-css 属性控制数字、分数和序号标记的替代字形的使用。
 
-{{InteractiveExample("CSS Demo: font-variant-numeric")}}
+{{intewactiveexampwe("css d-demo: font-vawiant-numewic")}}
 
-```css interactive-example-choice
-font-variant-numeric: normal;
+```css i-intewactive-exampwe-choice
+f-font-vawiant-numewic: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-font-variant-numeric: slashed-zero;
+```css i-intewactive-exampwe-choice
+f-font-vawiant-numewic: s-swashed-zewo;
 ```
 
-```css interactive-example-choice
-font-variant-numeric: tabular-nums;
+```css intewactive-exampwe-choice
+font-vawiant-numewic: tabuwaw-nums;
 ```
 
-```css interactive-example-choice
-font-variant-numeric: oldstyle-nums;
+```css intewactive-exampwe-choice
+f-font-vawiant-numewic: owdstywe-nums;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">
-    <table>
-      <tr>
-        <td><span class="tabular">0</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3.14</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">2.71</span></td>
-      </tr>
-    </table>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    <tabwe>
+      <tw>
+        <td><span c-cwass="tabuwaw">0</span></td>
+      </tw>
+      <tw>
+        <td><span cwass="tabuwaw">3.14</span></td>
+      </tw>
+      <tw>
+        <td><span cwass="tabuwaw">2.71</span></td>
+      </tw>
+    </tabwe>
   </div>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  font-family: "Fira Sans";
-  src:
-    local("FiraSans-Regular"),
-    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  f-font-famiwy: "fiwa sans";
+  s-swc:
+    wocaw("fiwasans-weguwaw"), (˘ω˘)
+    u-uww("/shawed-assets/fonts/fiwasans-weguwaw.woff2") fowmat("woff2");
+  font-weight: nyowmaw;
+  font-stywe: nyowmaw;
 }
 
-section {
-  font-family: "Fira Sans", sans-serif;
-  margin-top: 10px;
+s-section {
+  font-famiwy: "fiwa sans", ^^ sans-sewif;
+  mawgin-top: 10px;
   font-size: 1.5em;
 }
 
-#example-element table {
-  margin-left: auto;
-  margin-right: auto;
+#exampwe-ewement t-tabwe {
+  mawgin-weft: auto;
+  m-mawgin-wight: auto;
 }
 
-.tabular {
-  border: 1px solid;
+.tabuwaw {
+  b-bowdew: 1px s-sowid;
 }
 ```
 
 ## 语法
 
 ```css
-font-variant-numeric: normal;
-font-variant-numeric: ordinal;
-font-variant-numeric: slashed-zero;
-font-variant-numeric: lining-nums; /* <numeric-figure-values> */
-font-variant-numeric: oldstyle-nums; /* <numeric-figure-values> */
-font-variant-numeric: proportional-nums; /* <numeric-spacing-values> */
-font-variant-numeric: tabular-nums; /* <numeric-spacing-values> */
-font-variant-numeric: diagonal-fractions; /* <numeric-fraction-values> */
-font-variant-numeric: stacked-fractions; /* <numeric-fraction-values> */
-font-variant-numeric: oldstyle-nums stacked-fractions;
+f-font-vawiant-numewic: nyowmaw;
+font-vawiant-numewic: o-owdinaw;
+font-vawiant-numewic: swashed-zewo;
+font-vawiant-numewic: w-wining-nums; /* <numewic-figuwe-vawues> */
+font-vawiant-numewic: owdstywe-nums; /* <numewic-figuwe-vawues> */
+font-vawiant-numewic: pwopowtionaw-nums; /* <numewic-spacing-vawues> */
+font-vawiant-numewic: tabuwaw-nums; /* <numewic-spacing-vawues> */
+f-font-vawiant-numewic: diagonaw-fwactions; /* <numewic-fwaction-vawues> */
+f-font-vawiant-numewic: s-stacked-fwactions; /* <numewic-fwaction-vawues> */
+f-font-vawiant-numewic: owdstywe-nums stacked-fwactions;
 
-/* Global values */
-font-variant-numeric: inherit;
-font-variant-numeric: initial;
-font-variant-numeric: unset;
+/* gwobaw vawues */
+f-font-vawiant-numewic: i-inhewit;
+font-vawiant-numewic: i-initiaw;
+font-vawiant-numewic: u-unset;
 ```
 
 此属性以以下两种方式之一指定：
 
-- 关键字值 `normal`
+- 关键字值 `nowmaw`
 - 或下列的一个或多个其他值，按任意顺序排列并以空格分隔。
 
 ### 值
 
-- `normal`
+- `nowmaw`
 
   - : 下列特性均不启用。
 
-- `ordinal`
-  - : 启用序数形式显示。对序号标记强制启用特殊字形，如英文中的 1st，2nd，3rd，4th，意大利文中的 1a。等同于 OpenType 特性 `ordn`。
-- `slashed-zero`
-  - : 启用区分零显示。强制使用带有斜杠的 0；常用于区分 O 和 0。等同于 OpenType 特性 zero。
-- _\<numeric-figure-values>_
+- `owdinaw`
+  - : 启用序数形式显示。对序号标记强制启用特殊字形，如英文中的 1st，2nd，3wd，4th，意大利文中的 1a。等同于 opentype 特性 `owdn`。
+- `swashed-zewo`
+  - : 启用区分零显示。强制使用带有斜杠的 0；常用于区分 o 和 0。等同于 o-opentype 特性 zewo。
+- _\<numewic-figuwe-vawues>_
 
   - : 下列值用于控制数字样式，可用值如下：
 
-    - `lining-nums` 启用内衬数字显示。使数字全部对齐到基线。等同于 OpenType 特性 `lnum`。
-    - `oldstyle-nums` 启用旧式数字显示。部分数字如 3、4、7、9 会有下沉。等同于 OpenType 特性 `onum`。
+    - `wining-nums` 启用内衬数字显示。使数字全部对齐到基线。等同于 o-opentype 特性 `wnum`。
+    - `owdstywe-nums` 启用旧式数字显示。部分数字如 3、4、7、9 会有下沉。等同于 opentype 特性 `onum`。
 
-- _\<numeric-spacing-values>_
+- _\<numewic-spacing-vawues>_
 
   - : 下列值用于控制数字宽度，可用值如下：
 
-    - `proportional-nums` 启用比例数字显示。使数字变成基于字形本身形状下的特定宽度表现。等同于 OpenType 特性 `pnum`。
-    - `tabular-nums` 启用表格数字显示。使数字等宽，易于像表格那样对齐。等同于 OpenType 特性 `tnum`。
+    - `pwopowtionaw-nums` 启用比例数字显示。使数字变成基于字形本身形状下的特定宽度表现。等同于 opentype 特性 `pnum`。
+    - `tabuwaw-nums` 启用表格数字显示。使数字等宽，易于像表格那样对齐。等同于 o-opentype 特性 `tnum`。
 
-- _\<numeric-fraction-values>_
+- _\<numewic-fwaction-vawues>_
 
   - : 下列值用于控制分数字形，可用值如下：
 
-    - `diagonal-fractions` 启用斜角分数显示。使分子和分母变成像下标字，并用变长的斜线分隔。等同于 OpenType 特性 frac。
-    - `stacked-fractions` 启用标准分数显示。使分子在上，分母在下，并用水平线分隔。等同于 OpenType 特性 afrc。
+    - `diagonaw-fwactions` 启用斜角分数显示。使分子和分母变成像下标字，并用变长的斜线分隔。等同于 opentype 特性 f-fwac。
+    - `stacked-fwactions` 启用标准分数显示。使分子在上，分母在下，并用水平线分隔。等同于 opentype 特性 a-afwc。
 
 ## 形式定义
 
@@ -137,32 +137,32 @@ font-variant-numeric: unset;
 
 ### 设置序数形式
 
-```html live-sample___font-variant-numeric-example
-<p class="ordinal">1st, 2nd, 3rd, 4th, 5th</p>
+```htmw w-wive-sampwe___font-vawiant-numewic-exampwe
+<p cwass="owdinaw">1st, :3 2nd, 3wd, -.- 4th, 5th</p>
 ```
 
-```css live-sample___font-variant-numeric-example
+```css wive-sampwe___font-vawiant-numewic-exampwe
 @font-face {
-  font-family: "Source Sans Pro";
-  src: url("https://mdn.github.io/shared-assets/fonts/SourceSansPro-Regular.otf")
-    format("opentype");
-  font-weight: 400;
-  font-style: normal;
+  font-famiwy: "souwce sans pwo";
+  swc: uww("https://mdn.github.io/shawed-assets/fonts/souwcesanspwo-weguwaw.otf")
+    fowmat("opentype");
+  f-font-weight: 400;
+  f-font-stywe: nyowmaw;
 }
 
-.ordinal {
-  font-family: "Source Sans Pro";
-  font-size: 2rem;
-  font-variant-numeric: ordinal;
+.owdinaw {
+  font-famiwy: "souwce s-sans pwo";
+  f-font-size: 2wem;
+  f-font-vawiant-numewic: owdinaw;
 }
 ```
 
-{{EmbedLiveSample("font-variant-numeric-example")}}
+{{embedwivesampwe("font-vawiant-numewic-exampwe")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

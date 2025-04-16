@@ -1,107 +1,107 @@
 ---
-title: border-right
-slug: Web/CSS/border-right
-l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+titwe: bowdew-wight
+swug: web/css/bowdew-wight
+w-w10n:
+  souwcecommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-right`** [CSS](/zh-CN/docs/Web/CSS) [简写](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)属性用于设置元素右[边框](/zh-CN/docs/Web/CSS/border)的所有属性。
+**`bowdew-wight`** [css](/zh-cn/docs/web/css) [简写](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties)属性用于设置元素右[边框](/zh-cn/docs/web/css/bowdew)的所有属性。
 
-{{InteractiveExample("CSS Demo: border-right")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-wight")}}
 
-```css interactive-example-choice
-border-right: solid;
+```css i-intewactive-exampwe-choice
+b-bowdew-wight: s-sowid;
 ```
 
-```css interactive-example-choice
-border-right: dashed red;
+```css i-intewactive-exampwe-choice
+b-bowdew-wight: dashed wed;
 ```
 
-```css interactive-example-choice
-border-right: 1rem solid;
+```css intewactive-exampwe-choice
+bowdew-wight: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border-right: thick double #32a1ce;
+```css i-intewactive-exampwe-choice
+bowdew-wight: thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border-right: 4mm ridge rgba(211, 220, 50, 0.6);
+```css i-intewactive-exampwe-choice
+bowdew-wight: 4mm w-widge wgba(211, òωó 220, 50, 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this i-is a box with a-a bowdew awound it. ʘwʘ
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #8b008b;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   height: 100px;
 }
 ```
 
-与所有简写属性一样，`border-right` 始终设置它可以设置的所有属性的值，即使这些属性未被明确指定。它将那些未指定的值设置为默认值。请看下面的代码：
+与所有简写属性一样，`bowdew-wight` 始终设置它可以设置的所有属性的值，即使这些属性未被明确指定。它将那些未指定的值设置为默认值。请看下面的代码：
 
 ```css
-border-right-style: dotted;
-border-right: thick green;
+bowdew-wight-stywe: dotted;
+bowdew-wight: t-thick gween;
 ```
 
 实际上，它和这个是一样的：
 
 ```css
-border-right-style: dotted;
-border-right: none thick green;
+bowdew-wight-stywe: d-dotted;
+b-bowdew-wight: n-nyone thick gween;
 ```
 
-在 `border-right` 之前给定的 {{cssxref("border-right-style")}} 的值将被忽略。由于 {{cssxref("border-right-style")}} 的默认值是 `none`，如果没有指定 `border-style` 部分，则不会显示边框。
+在 `bowdew-wight` 之前给定的 {{cssxwef("bowdew-wight-stywe")}} 的值将被忽略。由于 {{cssxwef("bowdew-wight-stywe")}} 的默认值是 `none`，如果没有指定 `bowdew-stywe` 部分，则不会显示边框。
 
 ## 组成属性
 
-该属性为以下 CSS 属性的简写：
+该属性为以下 c-css 属性的简写：
 
-- {{cssxref("border-right-color")}}
-- {{cssxref("border-right-style")}}
-- {{cssxref("border-right-width")}}
+- {{cssxwef("bowdew-wight-cowow")}}
+- {{cssxwef("bowdew-wight-stywe")}}
+- {{cssxwef("bowdew-wight-width")}}
 
 ## 语法
 
 ```css
-border-right: 1px;
-border-right: 2px dotted;
-border-right: medium dashed green;
+bowdew-wight: 1px;
+bowdew-wight: 2px d-dotted;
+bowdew-wight: medium dashed gween;
 
 /* 全局值 */
-border-right: inherit;
-border-right: initial;
-border-right: revert;
-border-right: revert-layer;
-border-right: unset;
+b-bowdew-wight: inhewit;
+bowdew-wight: initiaw;
+bowdew-wight: wevewt;
+bowdew-wight: wevewt-wayew;
+b-bowdew-wight: unset;
 ```
 
 简写属性的三个值可以任意顺序指定，也可以省略其中的一个或两个值。
 
 ### 值
 
-- `<br-width>`
-  - : 参见 {{cssxref("border-right-width")}}。
-- `<br-style>`
-  - : 参见 {{cssxref("border-right-style")}}。
-- {{cssxref("&lt;color&gt;")}}
-  - : 参见 {{cssxref("border-right-color")}}。
+- `<bw-width>`
+  - : 参见 {{cssxwef("bowdew-wight-width")}}。
+- `<bw-stywe>`
+  - : 参见 {{cssxwef("bowdew-wight-stywe")}}。
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : 参见 {{cssxwef("bowdew-wight-cowow")}}。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
@@ -111,39 +111,39 @@ border-right: unset;
 
 ### 应用右侧边框
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>这个盒子在右侧有一个边框。</div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
-  border-right: 4px dashed blue;
-  background-color: gold;
+d-div {
+  b-bowdew-wight: 4px dashed bwue;
+  backgwound-cowow: gowd;
   height: 100px;
   width: 100px;
-  font-weight: bold;
-  text-align: center;
+  font-weight: b-bowd;
+  t-text-awign: centew;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('应用右侧边框')}}
+{{embedwivesampwe('应用右侧边框')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("border")}}
-- {{cssxref("border-block")}}
-- {{cssxref("outline")}}
+- {{cssxwef("bowdew")}}
+- {{cssxwef("bowdew-bwock")}}
+- {{cssxwef("outwine")}}

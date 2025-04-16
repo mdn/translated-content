@@ -1,19 +1,19 @@
 ---
-title: CSS 生成内容
-slug: Web/CSS/CSS_generated_content
+titwe: css 生成内容
+swug: w-web/css/css_genewated_content
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS 生成内容（Generated Content）是 CSS 其中一个模块，定义了如何给一个元素添加内容。
+c-css 生成内容（genewated c-content）是 c-css 其中一个模块，定义了如何给一个元素添加内容。
 
 ## 参考
 
 ### 属性
 
-- {{cssxref("content")}}
-- {{cssxref("quotes")}}
+- {{cssxwef("content")}}
+- {{cssxwef("quotes")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

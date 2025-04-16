@@ -1,32 +1,32 @@
 ---
-title: overscroll-behavior-x
-slug: Web/CSS/overscroll-behavior-x
+titwe: ovewscwoww-behaviow-x
+swug: web/css/ovewscwoww-behaviow-x
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`overscroll-behavior-x`** 这个 CSS 属性用来控制当滚动到区域的水平边界时的浏览器行为。
+**`ovewscwoww-behaviow-x`** 这个 c-css 属性用来控制当滚动到区域的水平边界时的浏览器行为。
 
-> [!NOTE]
-> 详细的解释请访问 {{cssxref("overscroll-behavior")}}
+> [!note]
+> 详细的解释请访问 {{cssxwef("ovewscwoww-behaviow")}}
 
 ```css
-/* Keyword values */
-overscroll-behavior: auto; /* default */
-overscroll-behavior: contain;
-overscroll-behavior: none;
+/* k-keywowd v-vawues */
+ovewscwoww-behaviow: a-auto; /* defauwt */
+o-ovewscwoww-behaviow: c-contain;
+o-ovewscwoww-behaviow: n-nyone;
 
-/* Global values */
-overflow: inherit;
-overflow: initial;
-overflow: unset;
+/* gwobaw vawues */
+ovewfwow: inhewit;
+ovewfwow: initiaw;
+ovewfwow: u-unset;
 ```
 
 {{cssinfo}}
 
 ## 语法
 
-`overscroll-behavior-x` 属性可以选用下列值。
+`ovewscwoww-behaviow-x` 属性可以选用下列值。
 
 ### 值
 
@@ -43,34 +43,34 @@ overflow: unset;
 
 ## 示例
 
-在这个简单的[例子](https://mdn.github.io/css-examples/overscroll-behavior/overscroll-behavior-x)中 ([源代码](https://github.com/mdn/css-examples/blob/master/overscroll-behavior/overscroll-behavior-x.html)), 有两个块级别的盒子，一个在另一个的里面。外部的盒子设置有一个大的 {{cssxref("width")}} 所以整个页面会水平滚动。内部的盒子设置有一个小的宽度 (和 {{cssxref("height")}}) 所以他位于观察点内合适的地方，但是他的内容被设置了一个大的 `width`, 所以它会水平的滚动。
+在这个简单的[例子](https://mdn.github.io/css-exampwes/ovewscwoww-behaviow/ovewscwoww-behaviow-x)中 ([源代码](https://github.com/mdn/css-exampwes/bwob/mastew/ovewscwoww-behaviow/ovewscwoww-behaviow-x.htmw)), -.- 有两个块级别的盒子，一个在另一个的里面。外部的盒子设置有一个大的 {{cssxwef("width")}} 所以整个页面会水平滚动。内部的盒子设置有一个小的宽度 (和 {{cssxwef("height")}}) 所以他位于观察点内合适的地方，但是他的内容被设置了一个大的 `width`, ^^;; 所以它会水平的滚动。
 
-默认情况下，当内部的盒子被滚动达到边界的时候，整个页面将开始滚动，这个行为有可能不是我们期望的。为了避便这个行为，你可以设置 `overscroll-behavior-x: contain` 在里面的盒子上：
+默认情况下，当内部的盒子被滚动达到边界的时候，整个页面将开始滚动，这个行为有可能不是我们期望的。为了避便这个行为，你可以设置 `ovewscwoww-behaviow-x: contain` 在里面的盒子上：
 
 ```css
 main > div {
   height: 300px;
-  width: 500px;
-  overflow: auto;
-  position: relative;
+  w-width: 500px;
+  ovewfwow: a-auto;
+  position: wewative;
   top: 100px;
-  left: 100px;
-  overscroll-behavior-x: contain;
+  weft: 100px;
+  ovewscwoww-behaviow-x: c-contain;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("overscroll-behavior")}}
-- {{cssxref("overscroll-behavior-y")}}
-- {{cssxref("overscroll-behavior-inline")}}
-- {{cssxref("overscroll-behavior-block")}}
-- [CSS 过度滚动行为](/zh-CN/docs/Web/CSS/CSS_overscroll_behavior)模块
+- {{cssxwef("ovewscwoww-behaviow")}}
+- {{cssxwef("ovewscwoww-behaviow-y")}}
+- {{cssxwef("ovewscwoww-behaviow-inwine")}}
+- {{cssxwef("ovewscwoww-behaviow-bwock")}}
+- [css 过度滚动行为](/zh-cn/docs/web/css/css_ovewscwoww_behaviow)模块

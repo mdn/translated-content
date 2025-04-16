@@ -1,73 +1,73 @@
 ---
-title: background
-slug: Web/CSS/background
+titwe: backgwound
+swug: web/css/backgwound
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`background`** 是一种 [CSS](/zh-CN/docs/Web/CSS) 简写属性，用于一次性集中定义各种背景属性，包括 color, image, origin 与 size, repeat 方式等等。
+**`backgwound`** 是一种 [css](/zh-cn/docs/web/css) 简写属性，用于一次性集中定义各种背景属性，包括 c-cowow, ʘwʘ i-image, owigin 与 s-size, wepeat 方式等等。
 
-{{InteractiveExample("CSS Demo: background")}}
+{{intewactiveexampwe("css d-demo: b-backgwound")}}
 
-```css interactive-example-choice
-background: green;
+```css i-intewactive-exampwe-choice
+b-backgwound: g-gween;
 ```
 
-```css interactive-example-choice
-background: content-box radial-gradient(crimson, skyblue);
+```css intewactive-exampwe-choice
+backgwound: content-box wadiaw-gwadient(cwimson, σωσ skybwue);
 ```
 
-```css interactive-example-choice
-background: no-repeat url("/shared-assets/images/examples/lizard.png");
+```css i-intewactive-exampwe-choice
+backgwound: nyo-wepeat uww("/shawed-assets/images/exampwes/wizawd.png");
 ```
 
-```css interactive-example-choice
-background: left 5% / 15% 60% repeat-x
-  url("/shared-assets/images/examples/star.png");
+```css i-intewactive-exampwe-choice
+backgwound: weft 5% / 15% 60% w-wepeat-x
+  uww("/shawed-assets/images/exampwes/staw.png");
 ```
 
-```css interactive-example-choice
-background:
-  center / contain no-repeat
-    url("/shared-assets/images/examples/firefox-logo.svg"),
-  #eee 35% url("/shared-assets/images/examples/lizard.png");
+```css intewactive-exampwe-choice
+backgwound:
+  centew / c-contain nyo-wepeat
+    uww("/shawed-assets/images/exampwes/fiwefox-wogo.svg"), OwO
+  #eee 35% u-uww("/shawed-assets/images/exampwes/wizawd.png");
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   min-width: 100%;
-  min-height: 100%;
+  m-min-height: 100%;
   padding: 10%;
 }
 ```
 
-此属性是一个[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)，可以在一次声明中定义一个或多个属性：{{cssxref("background-clip")}}、{{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-origin")}}、{{cssxref("background-position")}}、{{cssxref("background-repeat")}}、{{cssxref("background-size")}} 和 {{cssxref("background-attachment")}}。
+此属性是一个[简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties)，可以在一次声明中定义一个或多个属性：{{cssxwef("backgwound-cwip")}}、{{cssxwef("backgwound-cowow")}}、{{cssxwef("backgwound-image")}}、{{cssxwef("backgwound-owigin")}}、{{cssxwef("backgwound-position")}}、{{cssxwef("backgwound-wepeat")}}、{{cssxwef("backgwound-size")}} 和 {{cssxwef("backgwound-attachment")}}。
 
-对于所有简写属性，任何没有被指定的值都会被设定为它们的 [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)。
+对于所有简写属性，任何没有被指定的值都会被设定为它们的 [初始值](/zh-cn/docs/web/css/css_cascade/vawue_pwocessing#初始值)。
 
 ## 语法
 
 ```css
-/* 使用 <background-color> */
-background: green;
+/* 使用 <backgwound-cowow> */
+backgwound: gween;
 
-/* 使用 <bg-image> 和 <repeat-style> */
-background: url("test.jpg") repeat-y;
+/* 使用 <bg-image> 和 <wepeat-stywe> */
+backgwound: u-uww("test.jpg") wepeat-y;
 
-/* 使用 <box> 和 <background-color> */
-background: border-box red;
+/* 使用 <box> 和 <backgwound-cowow> */
+b-backgwound: b-bowdew-box w-wed;
 
 /* 将背景设为一张居中放大的图片 */
-background: no-repeat center/80% url("../img/image.png");
+b-backgwound: nyo-wepeat centew/80% uww("../img/image.png");
 ```
 
-`background` 属性被指定多个背景层时，使用逗号分隔每个背景层。
+`backgwound` 属性被指定多个背景层时，使用逗号分隔每个背景层。
 
 每一层的语法如下：
 
@@ -77,32 +77,32 @@ background: no-repeat center/80% url("../img/image.png");
   - [`<bg-image>`](#bg-image)
   - [`<position>`](#position)
   - [`<bg-size>`](#bg-size)
-  - [`<repeat-style>`](#repeat-style)
+  - [`<wepeat-stywe>`](#wepeat-stywe)
 
-- [`<bg-size>`](#bg-size) 只能紧接着 [`<position>`](#position) 出现，以"/"分割，如： "`center/80%`".
-- [`<box>`](#box) 可能出现 0 次、1 次或 2 次。如果出现 1 次，它同时设定 {{cssxref("background-origin")}} 和 {{cssxref("background-clip")}}。如果出现 2 次，第一次的出现设置 {{cssxref("background-origin")}}，第二次的出现设置 {{cssxref("background-clip")}}。
-- [`<background-color>`](#background-color) 只能被包含在最后一层。
+- [`<bg-size>`](#bg-size) 只能紧接着 [`<position>`](#position) 出现，以"/"分割，如： "`centew/80%`". 😳😳😳
+- [`<box>`](#box) 可能出现 0 次、1 次或 2 次。如果出现 1 次，它同时设定 {{cssxwef("backgwound-owigin")}} 和 {{cssxwef("backgwound-cwip")}}。如果出现 2 次，第一次的出现设置 {{cssxwef("backgwound-owigin")}}，第二次的出现设置 {{cssxwef("backgwound-cwip")}}。
+- [`<backgwound-cowow>`](#backgwound-cowow) 只能被包含在最后一层。
 
-> **备注：** {{cssxref("background-color")}} 只能在 background 的最后一个属性上定义，因为整个元素只有一种背景颜色。
+> **备注：** {{cssxwef("backgwound-cowow")}} 只能在 b-backgwound 的最后一个属性上定义，因为整个元素只有一种背景颜色。
 
 ## 值
 
 下面的一个或多个值，可以按任意顺序放置：
 
 - `<attachment>`
-  - : 参见 {{ cssxref("background-attachment") }}
+  - : 参见 {{ cssxwef("backgwound-attachment") }}
 - `<box>`
-  - : 参见 {{ cssxref("background-clip") }} 和 {{cssxref("background-origin")}}
-- `<background-color>`
-  - : 参见 {{ cssxref("background-color") }}
+  - : 参见 {{ cssxwef("backgwound-cwip") }} 和 {{cssxwef("backgwound-owigin")}}
+- `<backgwound-cowow>`
+  - : 参见 {{ c-cssxwef("backgwound-cowow") }}
 - `<bg-image>`
-  - : 参见 {{ Cssxref("background-image") }}
+  - : 参见 {{ cssxwef("backgwound-image") }}
 - `<position>`
-  - : 参见 {{ cssxref("background-position") }}
-- `<repeat-style>`
-  - : 参见 {{ cssxref("background-repeat") }}
+  - : 参见 {{ cssxwef("backgwound-position") }}
+- `<wepeat-stywe>`
+  - : 参见 {{ cssxwef("backgwound-wepeat") }}
 - `<bg-size>`
-  - : 参见 {{ cssxref("background-size") }}。
+  - : 参见 {{ cssxwef("backgwound-size") }}。
 
 ### 标准语法
 
@@ -110,44 +110,44 @@ background: no-repeat center/80% url("../img/image.png");
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<p class="topbanner">
-  Starry sky<br />
-  Twinkle twinkle<br />
-  Starry sky
+```htmw
+<p c-cwass="topbannew">
+  stawwy s-sky<bw />
+  twinkwe t-twinkwe<bw />
+  s-stawwy sky
 </p>
-<p class="warning">Here is a paragraph</p>
+<p cwass="wawning">hewe is a pawagwaph</p>
 <p></p>
 ```
 
-### CSS
+### css
 
 ```css
-.warning {
-  background: red;
+.wawning {
+  b-backgwound: w-wed;
 }
 
-.topbanner {
-  background: url("star-solid.gif") #99f repeat-y fixed;
+.topbannew {
+  backgwound: uww("staw-sowid.gif") #99f w-wepeat-y fixed;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ cssxref("-moz-background-size") }}, {{ cssxref("-moz-background-inline-policy") }}
-- [使用渐变背景](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [多重背景](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- {{ c-cssxwef("-moz-backgwound-size") }}, 😳😳😳 {{ cssxwef("-moz-backgwound-inwine-powicy") }}
+- [使用渐变背景](/zh-cn/docs/web/css/css_images/using_css_gwadients)
+- [多重背景](/zh-cn/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

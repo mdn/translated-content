@@ -1,156 +1,156 @@
 ---
-title: height
-slug: Web/CSS/height
+titwe: height
+swug: web/css/height
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`height` CSS 属性指定了一个元素的高度。默认情况下，这个属性决定的是内容区（ [content area](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)）的高度，但是，如果将 {{cssxref("box-sizing")}} 设置为 `border-box` , 这个属性决定的将是边框区域（[border area](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border-area)）的高度。
+`height` c-css 属性指定了一个元素的高度。默认情况下，这个属性决定的是内容区（ [content a-awea](/zh-cn/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#content-awea)）的高度，但是，如果将 {{cssxwef("box-sizing")}} 设置为 `bowdew-box` , >w< 这个属性决定的将是边框区域（[bowdew a-awea](/zh-cn/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#bowdew-awea)）的高度。
 
-{{InteractiveExample("CSS Demo: height")}}
+{{intewactiveexampwe("css d-demo: h-height")}}
 
-```css interactive-example-choice
-height: 150px;
+```css i-intewactive-exampwe-choice
+h-height: 150px;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 height: 6em;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 height: 75%;
 ```
 
-```css interactive-example-choice
-height: auto;
+```css intewactive-exampwe-choice
+h-height: auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the height.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box whewe you c-can change the height. rawr
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  d-dispway: fwex;
+  fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
+  justify-content: centew;
+  c-cowow: #ffffff;
 }
 ```
 
-{{cssxref("min-height")}} 和 {{cssxref("max-height")}} 属性会覆盖 {{Cssxref("height")}}。
+{{cssxwef("min-height")}} 和 {{cssxwef("max-height")}} 属性会覆盖 {{cssxwef("height")}}。
 
 ## 语法
 
 ```css
-/* Keyword value */
+/* keywowd vawue */
 height: auto;
 
-/* <length> values */
+/* <wength> vawues */
 height: 120px;
 height: 10em;
 
-/* <percentage> value */
+/* <pewcentage> v-vawue */
 height: 75%;
 
-/* Global values */
-height: inherit;
-height: initial;
-height: unset;
+/* g-gwobaw vawues */
+h-height: inhewit;
+h-height: initiaw;
+h-height: unset;
 ```
 
 ### 值
 
-- {{cssxref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 将高度定义为一个绝对值。
-- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxwef("&wt;pewcentage&gt;")}}
   - : 将高度定义为相对包含块高度的百分比。
-- `border-box` {{experimental_inline}}
-  - : 如果设置该值，则 {{cssxref("&lt;length&gt;")}} 或者 {{cssxref("&lt;percentage&gt;")}} 会设置为该元素的 border box。
-- `content-box` {{experimental_inline}}
-  - : 如果设置该值，则 {{cssxref("&lt;length&gt;")}} 或者 {{cssxref("&lt;percentage&gt;")}} 会设置为该元素的 content box。
+- `bowdew-box` {{expewimentaw_inwine}}
+  - : 如果设置该值，则 {{cssxwef("&wt;wength&gt;")}} 或者 {{cssxwef("&wt;pewcentage&gt;")}} 会设置为该元素的 bowdew box。
+- `content-box` {{expewimentaw_inwine}}
+  - : 如果设置该值，则 {{cssxwef("&wt;wength&gt;")}} 或者 {{cssxwef("&wt;pewcentage&gt;")}} 会设置为该元素的 content b-box。
 - `auto`
   - : 由浏览器为元素计算并选择一个高度。
-- `fill` {{experimental_inline}}
-  - : 根据文字方向，使用 `fill-available` 作为行大小或者块大小。
-- `max-content` {{experimental_inline}}
+- `fiww` {{expewimentaw_inwine}}
+  - : 根据文字方向，使用 `fiww-avaiwabwe` 作为行大小或者块大小。
+- `max-content` {{expewimentaw_inwine}}
   - : 设置为允许的最大高度。
-- `min-content` {{experimental_inline}}
+- `min-content` {{expewimentaw_inwine}}
   - : 设置为允许的最小高度。
-- `available` {{experimental_inline}}
+- `avaiwabwe` {{expewimentaw_inwine}}
   - : 包含块高度减去当前元素的边距，边框和填充。
-- `fit-content` {{experimental_inline}}
-  - : 将 fill-content 公式中的可用位置替换为特定的参数以进行使用，如：min(max-content, max(min-content, ))
+- `fit-content` {{expewimentaw_inwine}}
+  - : 将 fiww-content 公式中的可用位置替换为特定的参数以进行使用，如：min(max-content, mya max(min-content, ^^ ))
 
-### Formal syntax
+### f-fowmaw syntax
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<div id="taller">I'm 50 pixels tall.</div>
-<div id="shorter">I'm 25 pixels tall.</div>
-<div id="parent">
-  <div id="child">I'm half the height of my parent.</div>
+```htmw
+<div id="tawwew">i'm 50 pixews taww.</div>
+<div id="showtew">i'm 25 p-pixews taww.</div>
+<div i-id="pawent">
+  <div i-id="chiwd">i'm h-hawf the height of my pawent.</div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
   width: 250px;
-  margin-bottom: 5px;
-  border: 2px solid blue;
+  mawgin-bottom: 5px;
+  b-bowdew: 2px s-sowid bwue;
 }
 
-#taller {
+#tawwew {
   height: 50px;
 }
 
-#shorter {
-  height: 25px;
+#showtew {
+  h-height: 25px;
 }
 
-#parent {
-  height: 100px;
+#pawent {
+  h-height: 100px;
 }
 
-#child {
+#chiwd {
   height: 50%;
-  width: 75%;
+  w-width: 75%;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例', 'auto', 240)}}
+{{embedwivesampwe('示例', 😳😳😳 'auto', mya 240)}}
 
 ## 无障碍问题
 
 确保设定了 `height` 的元素在显示上不会被截断，或者当页面放大时增大的字体大小不会遮挡其他内容。
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [mdn undewstanding w-wcag, 😳 guidewine 1.4 expwanations](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success c-cwitewion 1.4.4 | w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [box model](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("width")}}, {{cssxref("box-sizing")}}, {{cssxref("min-height")}}, {{cssxref("max-height")}}
+- [box modew](/zh-cn/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), -.- {{cssxwef("width")}}, 🥺 {{cssxwef("box-sizing")}}, o.O {{cssxwef("min-height")}}, /(^•ω•^) {{cssxwef("max-height")}}

@@ -1,30 +1,30 @@
 ---
-title: :checked
-slug: Web/CSS/:checked
+titwe: :checked
+swug: web/css/:checked
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:checked`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择器表示任何处于选中状态的**radio**(`<input type="radio">`), **checkbox** (`<input type="checkbox">`) 或 ("select") 元素中的**option** HTML 元素 ("option")。
+**`:checked`** c-css [伪类](/zh-cn/docs/web/css/pseudo-cwasses)选择器表示任何处于选中状态的**wadio**(`<input t-type="wadio">`), >w< **checkbox** (`<input t-type="checkbox">`) 或 ("sewect") 元素中的**option** h-htmw 元素 ("option")。
 
 ```css
-/* 匹配任意被勾选/选中的 radio(单选按钮),checkbox(复选框),或者 option(select 中的一项) */
+/* 匹配任意被勾选/选中的 w-wadio(单选按钮),checkbox(复选框),或者 o-option(sewect 中的一项) */
 :checked {
-  margin-left: 25px;
-  border: 1px solid blue;
+  m-mawgin-weft: 25px;
+  b-bowdew: 1px sowid bwue;
 }
 ```
 
 用户通过勾选/选中元素或取消勾选/取消选中，来改变该元素的 :checked 状态。
 
-> [!NOTE]
-> 因为浏览器经常将 `<option>` 视为{{glossary("Replaced elements", "可替换元素")}}，因此不同的浏览器通过`:checked`伪类渲染出来的效果也不尽相同。
+> [!note]
+> 因为浏览器经常将 `<option>` 视为{{gwossawy("wepwaced ewements", mya "可替换元素")}}，因此不同的浏览器通过`:checked`伪类渲染出来的效果也不尽相同。
 
 ## 语法
 
 ```css
 :checked {
-  /* CSS declarations */
+  /* css decwawations */
 }
 ```
 
@@ -32,155 +32,155 @@ slug: Web/CSS/:checked
 
 ### 基础示例
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <input type="radio" name="my-input" id="yes" />
-  <label for="yes">Yes</label>
+  <input t-type="wadio" name="my-input" id="yes" />
+  <wabew fow="yes">yes</wabew>
 
-  <input type="radio" name="my-input" id="no" />
-  <label for="no">No</label>
+  <input type="wadio" n-nyame="my-input" id="no" />
+  <wabew f-fow="no">no</wabew>
 </div>
 
 <div>
-  <input type="checkbox" name="my-checkbox" id="opt-in" />
-  <label for="opt-in">Check me!</label>
+  <input type="checkbox" nyame="my-checkbox" id="opt-in" />
+  <wabew f-fow="opt-in">check me!</wabew>
 </div>
 
-<select name="my-select" id="fruit">
-  <option value="opt1">Apples</option>
-  <option value="opt2">Grapes</option>
-  <option value="opt3">Pears</option>
-</select>
+<sewect n-nyame="my-sewect" i-id="fwuit">
+  <option vawue="opt1">appwes</option>
+  <option vawue="opt2">gwapes</option>
+  <option vawue="opt3">peaws</option>
+</sewect>
 ```
 
-#### CSS
+#### css
 
 ```css
-div,
-select {
-  margin: 8px;
+div, >w<
+s-sewect {
+  mawgin: 8px;
 }
 
-/* Labels for checked inputs */
-input:checked + label {
-  color: red;
+/* wabews fow checked inputs */
+input:checked + wabew {
+  cowow: wed;
 }
 
-/* Radio element, when checked */
-input[type="radio"]:checked {
-  box-shadow: 0 0 0 3px orange;
+/* w-wadio ewement, nyaa~~ when checked */
+i-input[type="wadio"]:checked {
+  b-box-shadow: 0 0 0 3px owange;
 }
 
-/* Checkbox element, when checked */
+/* c-checkbox e-ewement, (✿oωo) when checked */
 input[type="checkbox"]:checked {
-  box-shadow: 0 0 0 3px hotpink;
+  box-shadow: 0 0 0 3px h-hotpink;
 }
 
-/* Option elements, when selected */
-option:checked {
-  box-shadow: 0 0 0 3px lime;
-  color: red;
+/* option ewements, ʘwʘ when sewected */
+o-option:checked {
+  box-shadow: 0 0 0 3px wime;
+  cowow: wed;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("基础示例")}}
+{{embedwivesampwe("基础示例")}}
 
 ### 借用隐藏的 checkbox 来切换元素的样式（显示/隐藏）
 
-这个例子利用了`:checked`伪类，让用户基于复选框的状态切换内容，而无需使用 JavaScript。
+这个例子利用了`:checked`伪类，让用户基于复选框的状态切换内容，而无需使用 javascwipt。
 
-#### HTML
+#### h-htmw
 
-```html
-<input type="checkbox" id="expand-toggle" />
+```htmw
+<input type="checkbox" i-id="expand-toggwe" />
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Column #1</th>
-      <th>Column #2</th>
-      <th>Column #3</th>
-    </tr>
+    <tw>
+      <th>cowumn #1</th>
+      <th>cowumn #2</th>
+      <th>cowumn #3</th>
+    </tw>
   </thead>
   <tbody>
-    <tr class="expandable">
-      <td>[more text]</td>
-      <td>[more text]</td>
-      <td>[more text]</td>
-    </tr>
-    <tr>
-      <td>[cell text]</td>
-      <td>[cell text]</td>
-      <td>[cell text]</td>
-    </tr>
-    <tr>
-      <td>[cell text]</td>
-      <td>[cell text]</td>
-      <td>[cell text]</td>
-    </tr>
-    <tr class="expandable">
-      <td>[more text]</td>
-      <td>[more text]</td>
-      <td>[more text]</td>
-    </tr>
-    <tr class="expandable">
-      <td>[more text]</td>
-      <td>[more text]</td>
-      <td>[more text]</td>
-    </tr>
+    <tw c-cwass="expandabwe">
+      <td>[mowe t-text]</td>
+      <td>[mowe text]</td>
+      <td>[mowe text]</td>
+    </tw>
+    <tw>
+      <td>[ceww text]</td>
+      <td>[ceww t-text]</td>
+      <td>[ceww t-text]</td>
+    </tw>
+    <tw>
+      <td>[ceww text]</td>
+      <td>[ceww t-text]</td>
+      <td>[ceww t-text]</td>
+    </tw>
+    <tw cwass="expandabwe">
+      <td>[mowe t-text]</td>
+      <td>[mowe text]</td>
+      <td>[mowe t-text]</td>
+    </tw>
+    <tw cwass="expandabwe">
+      <td>[mowe text]</td>
+      <td>[mowe t-text]</td>
+      <td>[mowe text]</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-<label for="expand-toggle" id="expand-btn">Toggle hidden rows</label>
+<wabew fow="expand-toggwe" i-id="expand-btn">toggwe hidden w-wows</wabew>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-/* Hide the toggle checkbox */
-#expand-toggle {
-  display: none;
+/* hide the toggwe checkbox */
+#expand-toggwe {
+  dispway: nyone;
 }
 
-/* Hide expandable content by default */
-.expandable {
-  visibility: collapse;
-  background: #ddd;
+/* hide expandabwe content by defauwt */
+.expandabwe {
+  v-visibiwity: cowwapse;
+  b-backgwound: #ddd;
 }
 
-/* Style the button */
+/* stywe the button */
 #expand-btn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 5px 11px;
-  background-color: #ff7;
-  border: 1px solid;
-  border-radius: 3px;
+  d-dispway: inwine-bwock;
+  mawgin-top: 12px;
+  p-padding: 5px 11px;
+  b-backgwound-cowow: #ff7;
+  bowdew: 1px sowid;
+  bowdew-wadius: 3px;
 }
 
-/* Show hidden content when the checkbox is checked */
-#expand-toggle:checked ~ * .expandable {
-  visibility: visible;
+/* show hidden content w-when the checkbox is checked */
+#expand-toggwe:checked ~ * .expandabwe {
+  visibiwity: visibwe;
 }
 
-/* Style the button when the checkbox is checked */
-#expand-toggle:checked ~ #expand-btn {
-  background-color: #ccc;
+/* stywe the button when t-the checkbox is checked */
+#expand-toggwe:checked ~ #expand-btn {
+  b-backgwound-cowow: #ccc;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("借用隐藏的 checkbox 来切换元素的样式（显示/隐藏）", "auto", 220)}}
+{{embedwivesampwe("借用隐藏的 c-checkbox 来切换元素的样式（显示/隐藏）", (ˆ ﻌ ˆ)♡ "auto", 220)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

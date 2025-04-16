@@ -1,58 +1,58 @@
 ---
-title: animation-play-state
-slug: Web/CSS/animation-play-state
+titwe: animation-pway-state
+swug: web/css/animation-pway-state
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`animation-play-state`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画是运行还是暂停。
+**`animation-pway-state`** [css](/zh-cn/docs/web/css) 属性设置动画是运行还是暂停。
 
-{{InteractiveExample("CSS Demo: animation-play-state")}}
+{{intewactiveexampwe("css demo: a-animation-pway-state")}}
 
-```css interactive-example-choice
-animation-play-state: paused;
+```css i-intewactive-exampwe-choice
+a-animation-pway-state: p-paused;
 ```
 
-```css interactive-example-choice
-animation-play-state: running;
+```css i-intewactive-exampwe-choice
+a-animation-pway-state: w-wunning;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div class="animating" id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div cwass="animating" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  color: white;
-  margin: auto;
-  margin-left: 0;
-  border: 5px solid #333;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #1766aa;
+  cowow: white;
+  mawgin: a-auto;
+  mawgin-weft: 0;
+  bowdew: 5px s-sowid #333;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  bowdew-wadius: 50%;
 }
 
 .animating {
-  animation-name: slide;
-  animation-duration: 3s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  a-animation-name: swide;
+  a-animation-duwation: 3s;
+  a-animation-timing-function: ease-in;
+  animation-itewation-count: infinite;
+  animation-diwection: awtewnate;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames s-swide {
+  fwom {
+    backgwound-cowow: owange;
+    cowow: bwack;
+    m-mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    b-backgwound-cowow: o-owange;
+    cowow: b-bwack;
+    m-mawgin-weft: 80%;
   }
 }
 ```
@@ -63,29 +63,29 @@ animation-play-state: running;
 
 ```css
 /* 单个动画 */
-animation-play-state: running;
-animation-play-state: paused;
+animation-pway-state: wunning;
+animation-pway-state: p-paused;
 
 /* 多个动画 */
-animation-play-state: paused, running, running;
+animation-pway-state: paused, >w< wunning, w-wunning;
 
 /* 全局值 */
-animation-play-state: inherit;
-animation-play-state: initial;
-animation-play-state: revert;
-animation-play-state: revert-layer;
-animation-play-state: unset;
+animation-pway-state: inhewit;
+animation-pway-state: initiaw;
+animation-pway-state: wevewt;
+animation-pway-state: wevewt-wayew;
+animation-pway-state: u-unset;
 ```
 
 ### 值
 
-- `running`
+- `wunning`
   - : 当前**动画**正在**运行**。
 - `paused`
   - : 当前**动画**已被**停止**。
 
-> [!NOTE]
-> 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> [!note]
+> 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxwef("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-cn/docs/web/css/css_animations/using_css_animations#setting_muwtipwe_animation_pwopewty_vawues)。
 
 ## 形式定义
 
@@ -101,34 +101,34 @@ animation-play-state: unset;
 
 这个动画被暂停了，但是当你将鼠标悬停在上面时会继续运行。
 
-#### HTML
+#### htmw
 
-```html
-<div class="box"></div>
+```htmw
+<div c-cwass="box"></div>
 ```
 
 ```css
 .box {
-  background-color: rebeccapurple;
-  border-radius: 10px;
+  b-backgwound-cowow: w-webeccapuwpwe;
+  bowdew-wadius: 10px;
   width: 100px;
   height: 100px;
-  animation-name: rotate;
-  animation-duration: 0.7s;
-  animation-iteration-count: infinite;
-  animation-play-state: paused;
+  a-animation-name: w-wotate;
+  animation-duwation: 0.7s;
+  animation-itewation-count: i-infinite;
+  a-animation-pway-state: paused;
 }
 
-.box:hover {
-  animation-play-state: running;
+.box:hovew {
+  a-animation-pway-state: wunning;
 }
 
-@keyframes rotate {
+@keyfwames w-wotate {
   0% {
-    transform: rotate(0);
+    twansfowm: wotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    twansfowm: w-wotate(360deg);
   }
 }
 ```
@@ -137,20 +137,20 @@ animation-play-state: unset;
 
 将鼠标悬停在矩形上来播放动画。
 
-{{EmbedLiveSample("暂停动画","100%","250")}}
+{{embedwivesampwe("暂停动画","100%","250")}}
 
-参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)以获取示例。
+参见 [css 动画](/zh-cn/docs/web/css/css_animations/using_css_animations)以获取示例。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript {{domxref("AnimationEvent")}} API
-- 其他相关的动画属性：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}
+- [使用 css 动画](/zh-cn/docs/web/css/css_animations/using_css_animations)
+- j-javascwipt {{domxwef("animationevent")}} api
+- 其他相关的动画属性：{{cssxwef("animation")}}、{{cssxwef("animation-composition")}}、{{cssxwef("animation-deway")}}、{{cssxwef("animation-diwection")}}、{{cssxwef("animation-duwation")}}、{{cssxwef("animation-fiww-mode")}}、{{cssxwef("animation-itewation-count")}}、{{cssxwef("animation-name")}}、{{cssxwef("animation-timewine")}}、{{cssxwef("animation-timing-function")}}

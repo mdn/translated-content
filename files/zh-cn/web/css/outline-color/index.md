@@ -1,79 +1,79 @@
 ---
-title: outline-color
-slug: Web/CSS/outline-color
+titwe: outwine-cowow
+swug: web/css/outwine-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`outline-color`** CSS 属性 被用于设置一个元素轮廓的颜色。
+**`outwine-cowow`** c-css 属性 被用于设置一个元素轮廓的颜色。
 
-{{InteractiveExample("CSS Demo: outline-color")}}
+{{intewactiveexampwe("css d-demo: o-outwine-cowow")}}
 
-```css interactive-example-choice
-outline-color: red;
+```css i-intewactive-exampwe-choice
+o-outwine-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-outline-color: #32a1ce;
+```css i-intewactive-exampwe-choice
+o-outwine-cowow: #32a1ce;
 ```
 
-```css interactive-example-choice
-outline-color: rgba(170, 50, 220, 0.6);
+```css intewactive-exampwe-choice
+outwine-cowow: wgba(170, 😳 50, 220, (ˆ ﻌ ˆ)♡ 0.6);
 ```
 
-```css interactive-example-choice
-outline-color: hsla(60, 90%, 50%, 0.8);
+```css intewactive-exampwe-choice
+o-outwine-cowow: hswa(60, 😳😳😳 90%, 50%, (U ﹏ U) 0.8);
 ```
 
-```css interactive-example-choice
-outline-color: currentcolor;
+```css intewactive-exampwe-choice
+o-outwine-cowow: cuwwentcowow;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this i-is a box with an outwine awound i-it.
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  outline: 0.75em solid;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  outwine: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-大多时候使用{{cssxref("outline")}}而不是 `outline-style`, `outline-width` 和 `outline-color`会更方便。
+大多时候使用{{cssxwef("outwine")}}而不是 `outwine-stywe`, (///ˬ///✿) `outwine-width` 和 `outwine-cowow`会更方便。
 
-元素轮廓是绘制于元素周围的一条线，位于{{cssxref("border")}}的外围，使元素突出。不像 border，轮廓在元素的 frame 外绘制并且可能与其他元素重叠。而 border 不会出现这种现象 (除非故意).
+元素轮廓是绘制于元素周围的一条线，位于{{cssxwef("bowdew")}}的外围，使元素突出。不像 bowdew，轮廓在元素的 f-fwame 外绘制并且可能与其他元素重叠。而 bowdew 不会出现这种现象 (除非故意). 😳
 
 ## 语法
 
 ```css
-/* <color> values */
-outline-color: #f92525;
-outline-color: rgb(30, 222, 121);
-outline-color: blue;
+/* <cowow> vawues */
+outwine-cowow: #f92525;
+outwine-cowow: w-wgb(30, 😳 222, 121);
+outwine-cowow: b-bwue;
 
-/* Keyword value */
-outline-color: invert;
+/* k-keywowd vawue */
+o-outwine-cowow: i-invewt;
 
-/* Global values */
-outline-color: inherit;
-outline-color: initial;
-outline-color: unset;
+/* gwobaw vawues */
+outwine-cowow: i-inhewit;
+outwine-cowow: initiaw;
+outwine-cowow: u-unset;
 ```
 
-`outline-color`可用以下这些值。
+`outwine-cowow`可用以下这些值。
 
 ### 值
 
-- {{cssxref("&lt;color&gt;")}}
-  - : 轮廓颜色，规则同 `<color>`.
-- `invert`
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : 轮廓颜色，规则同 `<cowow>`. σωσ
+- `invewt`
   - : 反色，用于确认轮廓的显示。注意不是所有浏览器都支持该属性，若不则该属性无效。
 
 ### 形式语法
@@ -82,46 +82,46 @@ outline-color: unset;
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<p>My outline is blue, as you can see.</p>
+```htmw
+<p>my outwine is bwue, as you can see.</p>
 ```
 
-### CSS
+### css
 
 ```css
 p {
-  outline: 2px solid; /* Set the outline width and style */
-  outline-color: #0000ff; /* Make the outline blue */
-  margin: 5px;
+  outwine: 2px sowid; /* set the o-outwine width and stywe */
+  outwine-cowow: #0000ff; /* m-make the o-outwine bwue */
+  m-mawgin: 5px;
 }
 ```
 
-{{ EmbedLiveSample('示例') }}
+{{ embedwivesampwe('示例') }}
 
-## Accessibility concerns
+## accessibiwity concewns
 
-Custom [focus styles](/zh-CN/docs/Web/CSS/:focus) commonly involve making adjustments to the {{cssxref("outline")}} property. If the color of the outline is adjusted, it is important to ensure that the contrast ratio between it and the background the outline is placed over is high enough that people experiencing low vision conditions will be able to perceive it.
+c-custom [focus s-stywes](/zh-cn/docs/web/css/:focus) commonwy i-invowve making adjustments t-to the {{cssxwef("outwine")}} pwopewty. rawr x3 i-if the cowow of the outwine is a-adjusted, OwO it is impowtant to ensuwe that the contwast w-watio between it and the b-backgwound the outwine is pwaced o-ovew is high enough t-that peopwe expewiencing wow vision conditions wiww be abwe to pewceive it. /(^•ω•^)
 
-Color contrast ratio is determined by comparing the luminosity of the text and background color values. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and [bold](/zh-CN/docs/Web/CSS/font-weight) or larger, or 24px or larger.
+cowow contwast watio is detewmined b-by compawing t-the wuminosity of the text and b-backgwound cowow v-vawues. 😳😳😳 in owdew t-to meet cuwwent [web content accessibiwity guidewines (wcag)](https://www.w3.owg/wai/intwo/wcag), ( ͡o ω ͡o ) a watio of 4.5:1 i-is wequiwed fow text content and 3:1 fow wawgew text such as headings. >_< wawge t-text is defined as 18.66px and [bowd](/zh-cn/docs/web/css/font-weight) o-ow wawgew, >w< o-ow 24px ow w-wawgew. rawr
 
-- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [webaim: cowow contwast c-checkew](https://webaim.owg/wesouwces/contwastcheckew/)
+- [mdn u-undewstanding w-wcag, 😳 guidewine 1.4 e-expwanations](/zh-cn/docs/web/accessibiwity/guides/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success cwitewion 1.4.3 | w-w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("&lt;color&gt;")}} 数据类型
-- 其他与颜色有关的属性：{{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, 和{{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
+- {{cssxwef("&wt;cowow&gt;")}} 数据类型
+- 其他与颜色有关的属性：{{cssxwef("cowow")}}, >w< {{cssxwef("backgwound-cowow")}}, (⑅˘꒳˘) {{cssxwef("bowdew-cowow")}}, OwO {{cssxwef("text-decowation-cowow")}}, (ꈍᴗꈍ) {{cssxwef("text-emphasis-cowow")}}, 😳 {{cssxwef("text-shadow")}}, 😳😳😳 {{cssxwef("cawet-cowow")}}, mya 和{{cssxwef("cowumn-wuwe-cowow")}}
+- [appwying c-cowow t-to htmw ewements u-using css](/zh-cn/docs/web/css/css_cowows/appwying_cowow)

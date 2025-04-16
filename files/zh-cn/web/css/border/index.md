@@ -1,62 +1,62 @@
 ---
-title: border
-slug: Web/CSS/border
+titwe: bowdew
+swug: web/css/bowdew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## 概览
 
-[CSS](/zh-CN/docs/Web/CSS) 的 **`border`** 属性是一个用于设置各种单独的边界属性的[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)。`border` 可以用于设置一个或多个以下属性的值：{{Cssxref("border-width")}}、{{Cssxref("border-style")}}、{{Cssxref("border-color")}}。
+[css](/zh-cn/docs/web/css) 的 **`bowdew`** 属性是一个用于设置各种单独的边界属性的[简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties)。`bowdew` 可以用于设置一个或多个以下属性的值：{{cssxwef("bowdew-width")}}、{{cssxwef("bowdew-stywe")}}、{{cssxwef("bowdew-cowow")}}。
 
-{{InteractiveExample("CSS Demo: border")}}
+{{intewactiveexampwe("css d-demo: bowdew")}}
 
-```css interactive-example-choice
-border: solid;
+```css i-intewactive-exampwe-choice
+b-bowdew: sowid;
 ```
 
-```css interactive-example-choice
-border: dashed red;
+```css i-intewactive-exampwe-choice
+b-bowdew: d-dashed wed;
 ```
 
-```css interactive-example-choice
-border: 1rem solid;
+```css i-intewactive-exampwe-choice
+b-bowdew: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border: thick double #32a1ce;
+```css intewactive-exampwe-choice
+bowdew: thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border: 4mm ridge rgba(211, 220, 50, 0.6);
+```css i-intewactive-exampwe-choice
+bowdew: 4mm widge wgba(211, mya 220, 50, 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    this is a box w-with a bowdew awound it. ^^
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #8b008b;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-和所有的简写属性一样，如果有缺省值会被设置成对应属性的初始值。同时需要注意设置 border 对{{cssxref("border-image")}}属性的影响，虽然 border 属性不能设置这个属性，但会把该属性重置为初始值 none。这使得我们可以用 border 属性去重置整个样式表中的 border 设置。因为 W3C 计划在未来的标准中保留该属性，因此建议使用该属性重置边框设定。
+和所有的简写属性一样，如果有缺省值会被设置成对应属性的初始值。同时需要注意设置 bowdew 对{{cssxwef("bowdew-image")}}属性的影响，虽然 b-bowdew 属性不能设置这个属性，但会把该属性重置为初始值 nyone。这使得我们可以用 bowdew 属性去重置整个样式表中的 bowdew 设置。因为 w3c 计划在未来的标准中保留该属性，因此建议使用该属性重置边框设定。
 
-> [!NOTE]
-> 虽然{{Cssxref("border-width")}}、{{Cssxref("border-style")}}和 {{Cssxref("border-color")}} 简写属性接受最多 4 个参数来为不同的边设置宽度、风格和颜色，但 border 属性只接受三个参数，分别是宽度、风格和颜色，所以这样会使得四条边的边框相同。
+> [!note]
+> 虽然{{cssxwef("bowdew-width")}}、{{cssxwef("bowdew-stywe")}}和 {{cssxwef("bowdew-cowow")}} 简写属性接受最多 4 个参数来为不同的边设置宽度、风格和颜色，但 b-bowdew 属性只接受三个参数，分别是宽度、风格和颜色，所以这样会使得四条边的边框相同。
 
-### Borders vs. outlines
+### bowdews vs. 😳😳😳 outwines
 
-边界（`border`）和轮廓（`outline`）很相似。然而轮廓在以下方面与边界不同：
+边界（`bowdew`）和轮廓（`outwine`）很相似。然而轮廓在以下方面与边界不同：
 
 - 轮廓不占据空间，他们在元素内容之外绘制。
 - 根据规范，轮廓不必为矩形，尽管通常是矩形。
@@ -64,37 +64,37 @@ border: 4mm ridge rgba(211, 220, 50, 0.6);
 ## 语法
 
 ```css
-/* style */
-border: solid;
+/* s-stywe */
+b-bowdew: sowid;
 
-/* width | style */
-border: 2px dotted;
+/* w-width | stywe */
+b-bowdew: 2px dotted;
 
-/* style | color */
-border: outset #f33;
+/* stywe | cowow */
+bowdew: o-outset #f33;
 
-/* width | style | color */
-border: medium dashed green;
+/* width | stywe | cowow */
+bowdew: m-medium dashed gween;
 
-/* Global values */
-border: inherit;
-border: initial;
-border: unset;
+/* gwobaw vawues */
+bowdew: inhewit;
+bowdew: initiaw;
+bowdew: unset;
 ```
 
-可以使用下面列出的一个，两个或三个值来指定 `border` 属性。值的顺序无关紧要。
+可以使用下面列出的一个，两个或三个值来指定 `bowdew` 属性。值的顺序无关紧要。
 
-> [!NOTE]
-> 如果边框的样式未定义，它将不可见。这是因为样式默认为 none。
+> [!note]
+> 如果边框的样式未定义，它将不可见。这是因为样式默认为 n-nyone。
 
 ### 取值
 
-- border-width
-  - : 请看 {{ Cssxref("border-width") }}.
-- border-style
-  - : 请看 {{ Cssxref("border-style") }}.
-- border-color
-  - : {{cssxref("&lt;color&gt;")}} 可以确定 border 的颜色。如果这个值没有设置，它的默认值是元素的 {{cssxref("color")}} 属性值（是文字颜色而非背景色）。请看 {{ Cssxref("border-color") }}。
+- bowdew-width
+  - : 请看 {{ c-cssxwef("bowdew-width") }}. mya
+- b-bowdew-stywe
+  - : 请看 {{ c-cssxwef("bowdew-stywe") }}. 😳
+- bowdew-cowow
+  - : {{cssxwef("&wt;cowow&gt;")}} 可以确定 bowdew 的颜色。如果这个值没有设置，它的默认值是元素的 {{cssxwef("cowow")}} 属性值（是文字颜色而非背景色）。请看 {{ cssxwef("bowdew-cowow") }}。
 
 ### 形式语法
 
@@ -104,35 +104,35 @@ border: unset;
 
 ### 设置粉色外边界
 
-#### HTML
+#### htmw
 
-```html
-<div>I have a border, an outline, AND a box shadow! Amazing, isn't it?</div>
+```htmw
+<div>i h-have a bowdew, -.- a-an outwine, 🥺 and a box shadow! o.O a-amazing, /(^•ω•^) isn't i-it?</div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
-  border: 0.5rem outset pink;
-  outline: 0.5rem solid khaki;
-  box-shadow: 0 0 0 2rem skyblue;
-  border-radius: 12px;
-  font: bold 1rem sans-serif;
-  margin: 2rem;
-  padding: 1rem;
-  outline-offset: 0.5rem;
+d-div {
+  bowdew: 0.5wem outset p-pink;
+  outwine: 0.5wem sowid khaki;
+  box-shadow: 0 0 0 2wem s-skybwue;
+  bowdew-wadius: 12px;
+  font: bowd 1wem s-sans-sewif;
+  mawgin: 2wem;
+  p-padding: 1wem;
+  o-outwine-offset: 0.5wem;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('设置粉色外边界')}}
+{{embedwivesampwe('设置粉色外边界')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

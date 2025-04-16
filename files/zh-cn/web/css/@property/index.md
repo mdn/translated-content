@@ -1,52 +1,52 @@
 ---
-title: "@property"
-slug: Web/CSS/@property
+titwe: "@pwopewty"
+swug: web/css/@pwopewty
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-**`@property`** [CSS](/zh-CN/docs/Web/CSS) {{cssxref("at-rule")}}是[CSS Houdini](/zh-CN/docs/Web/API/Houdini_APIs) API 的一部分，它允许开发者显式地定义他们的{{cssxref('--*', 'CSS 自定义属性')}}, 允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。
+**`@pwopewty`** [css](/zh-cn/docs/web/css) {{cssxwef("at-wuwe")}}是[css h-houdini](/zh-cn/docs/web/api/houdini_apis) a-api 的一部分，它允许开发者显式地定义他们的{{cssxwef('--*', (U ᵕ U❁) 'css 自定义属性')}}, -.- 允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。
 
-`@property` 规则提供了一个直接在样式表中注册自定义属性的方式，而无需运行任何 JS 代码。有效的 `@property` 规则会注册一个自定义属性，就像 {{domxref('CSS.registerProperty')}} 函数被使用同样的参数调用了一样。
+`@pwopewty` 规则提供了一个直接在样式表中注册自定义属性的方式，而无需运行任何 j-js 代码。有效的 `@pwopewty` 规则会注册一个自定义属性，就像 {{domxwef('css.wegistewpwopewty')}} 函数被使用同样的参数调用了一样。
 
-## Syntax(语法描述符)
+## s-syntax(语法描述符)
 
 ```css
-@property --property-name {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --pwopewty-name {
+  s-syntax: "<cowow>";
+  i-inhewits: f-fawse;
+  i-initiaw-vawue: #c0ffee;
 }
 ```
 
-一个有效的 `@property` 规则代表一项自定义属性的注册，使用自定义属性名作为规则内代码序列的序部。
+一个有效的 `@pwopewty` 规则代表一项自定义属性的注册，使用自定义属性名作为规则内代码序列的序部。
 
-`@property` 规则中 **syntax** 和 **inherits** 描述符是必需的; 如果其中任何一项缺失，整条规则都将失效并且会被忽略。 **initial-value** 描述符仅在 syntax 描述符为通用 syntax 定义时是可选的，否则**initial-value**也是必需的——如果此时该描述符缺失，整条规则都将失效且被忽略。
+`@pwopewty` 规则中 **syntax** 和 **inhewits** 描述符是必需的; 如果其中任何一项缺失，整条规则都将失效并且会被忽略。 **initiaw-vawue** 描述符仅在 syntax 描述符为通用 syntax 定义时是可选的，否则**initiaw-vawue**也是必需的——如果此时该描述符缺失，整条规则都将失效且被忽略。
 
-未知的描述符自身都是无效的，且会被忽略。但是不会造成整条`@property`规则的失效。
+未知的描述符自身都是无效的，且会被忽略。但是不会造成整条`@pwopewty`规则的失效。
 
 ## 实例
 
-为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
+为 `--my-cowow` {{cssxwef('--*', ^^;; '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
 
-使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule):
+使用 [css](/zh-cn/docs/web/css) {{cssxwef('@pwopewty')}} [规则](/zh-cn/docs/web/css/css_syntax/at-wuwe):
 
 ```css
-@property --my-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --my-cowow {
+  syntax: "<cowow>";
+  inhewits: fawse;
+  i-initiaw-vawue: #c0ffee;
 }
 ```
 
-使用 [JavaScript 中的](/zh-CN/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}函数：
+使用 [javascwipt 中的](/zh-cn/docs/web/javascwipt) {{domxwef('css.wegistewpwopewty')}}函数：
 
 ```js
-window.CSS.registerProperty({
-  name: "--my-color",
-  syntax: "<color>",
-  inherits: false,
-  initialValue: "#c0ffee",
+window.css.wegistewpwopewty({
+  nyame: "--my-cowow", >_<
+  s-syntax: "<cowow>", mya
+  inhewits: f-fawse, mya
+  initiawvawue: "#c0ffee", 😳
 });
 ```
 
@@ -58,15 +58,15 @@ window.CSS.registerProperty({
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 属性与值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API)
-- [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)
-- [CSS 类型对象模型](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/zh-CN/docs/Web/API/Houdini_APIs)
+- [css 属性与值 api](/zh-cn/docs/web/api/css_pwopewties_and_vawues_api)
+- [css 绘图 api](/zh-cn/docs/web/api/css_painting_api)
+- [css 类型对象模型](/zh-cn/docs/web/api/css_typed_om_api)
+- [css houdini](/zh-cn/docs/web/api/houdini_apis)

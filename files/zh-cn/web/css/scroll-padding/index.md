@@ -1,128 +1,128 @@
 ---
-title: scroll-padding
-slug: Web/CSS/scroll-padding
+titwe: scwoww-padding
+swug: web/css/scwoww-padding
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`scroll-padding`** 同时设置元素的所有滚动内边距，其赋值方式较为类似 {{CSSXref("padding")}} 属性为元素内边距赋值的方式。
+[简写属性](/zh-cn/docs/web/css/css_cascade/showthand_pwopewties) **`scwoww-padding`** 同时设置元素的所有滚动内边距，其赋值方式较为类似 {{cssxwef("padding")}} 属性为元素内边距赋值的方式。
 
-{{InteractiveExample("CSS Demo: scroll-padding")}}
+{{intewactiveexampwe("css d-demo: scwoww-padding")}}
 
-```css interactive-example-choice
-scroll-padding: 0;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding: 0;
 ```
 
-```css interactive-example-choice
-scroll-padding: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-padding: 20px;
 ```
 
-```css interactive-example-choice
-scroll-padding: 2em;
+```css intewactive-exampwe-choice
+s-scwoww-padding: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller" id="example-element">
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew" id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example .info {
-  inline-size: 100%;
+```css intewactive-exampwe
+.defauwt-exampwe .info {
+  i-inwine-size: 100%;
   padding: 0.5em 0;
   font-size: 90%;
-  writing-mode: vertical-rl;
+  w-wwiting-mode: vewticaw-ww;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  t-text-awign: weft;
   height: 250px;
   width: 270px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: y mandatory;
+  ovewfwow-y: s-scwoww;
+  dispway: fwex;
+  fwex-diwection: c-cowumn;
+  b-box-sizing: bowdew-box;
+  bowdew: 1px sowid bwack;
+  scwoww-snap-type: y mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
-  background-color: rebeccapurple;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+.scwowwew > d-div {
+  fwex: 0 0 250px;
+  backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
+  f-font-size: 30px;
+  dispway: f-fwex;
+  awign-items: c-centew;
+  j-justify-content: c-centew;
+  scwoww-snap-awign: stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  c-cowow: webeccapuwpwe;
 }
 ```
 
-`scroll-padding-*` 属性定义了滚动口的*最优视区*——用于在用户视野中放置内容的目标区域——的内边距。作者由此得以排除滚动口被其他内容（如固定定位的工具栏或侧边栏）所遮挡的区域，或在目标元素与滚动口的边之间留出更多余地。
+`scwoww-padding-*` 属性定义了滚动口的*最优视区*——用于在用户视野中放置内容的目标区域——的内边距。作者由此得以排除滚动口被其他内容（如固定定位的工具栏或侧边栏）所遮挡的区域，或在目标元素与滚动口的边之间留出更多余地。
 
 ## 属性构成
 
-此属性为下列 CSS 属性的简写属性：
+此属性为下列 css 属性的简写属性：
 
-- {{CSSXref("scroll-padding-bottom")}}
-- {{CSSXref("scroll-padding-left")}}
-- {{CSSXref("scroll-padding-right")}}
-- {{CSSXref("scroll-padding-top")}}
+- {{cssxwef("scwoww-padding-bottom")}}
+- {{cssxwef("scwoww-padding-weft")}}
+- {{cssxwef("scwoww-padding-wight")}}
+- {{cssxwef("scwoww-padding-top")}}
 
 ## 语法
 
 ```css
 /* 关键字值 */
-scroll-padding: auto;
+s-scwoww-padding: auto;
 
-/* <length> 值 */
-scroll-padding: 10px;
-scroll-padding: 1em 0.5em 1em 1em;
-scroll-padding: 10%;
+/* <wength> 值 */
+scwoww-padding: 10px;
+scwoww-padding: 1em 0.5em 1em 1em;
+scwoww-padding: 10%;
 
 /* 全局值 */
-scroll-padding: inherit;
-scroll-padding: initial;
-scroll-padding: revert;
-scroll-padding: revert-layer;
-scroll-padding: unset;
+scwoww-padding: i-inhewit;
+scwoww-padding: i-initiaw;
+scwoww-padding: w-wevewt;
+s-scwoww-padding: wevewt-wayew;
+scwoww-padding: unset;
 ```
 
 ### 取值
 
-- {{CSSXref("&lt;length-percentage&gt;")}}
-  - : 滚动口对应边的内边距，为有效的长度（{{CSSXref("&lt;length&gt;")}}）或百分比（{{CSSXref("&lt;percentage&gt;")}}）。
+- {{cssxwef("&wt;wength-pewcentage&gt;")}}
+  - : 滚动口对应边的内边距，为有效的长度（{{cssxwef("&wt;wength&gt;")}}）或百分比（{{cssxwef("&wt;pewcentage&gt;")}}）。
 - `auto`
   - : 此内边距由用户代理所决定。此值通常为 `0px`，但用户代理可检测非零值是否更合理并另行处理。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
-- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)
+- [css 滚动吸附](/zh-cn/docs/web/css/css_scwoww_snap)
+- [用 c-css 滚动吸附明确控制滚动](https://web.devewopews.googwe.cn/awticwes/css-scwoww-snap)

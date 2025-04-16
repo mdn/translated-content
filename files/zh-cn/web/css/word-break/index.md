@@ -1,46 +1,46 @@
 ---
-title: word-break
-slug: Web/CSS/word-break
+titwe: wowd-bweak
+swug: web/css/wowd-bweak
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS 属性 `word-break` 指定了怎样在单词内断行。
+css 属性 `wowd-bweak` 指定了怎样在单词内断行。
 
-{{InteractiveExample("CSS Demo: word-break")}}
+{{intewactiveexampwe("css d-demo: wowd-bweak")}}
 
-```css interactive-example-choice
-word-break: normal;
+```css i-intewactive-exampwe-choice
+wowd-bweak: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-word-break: break-all;
+```css i-intewactive-exampwe-choice
+w-wowd-bweak: b-bweak-aww;
 ```
 
-```css interactive-example-choice
-word-break: keep-all;
+```css i-intewactive-exampwe-choice
+w-wowd-bweak: keep-aww;
 ```
 
-```css interactive-example-choice
-word-break: break-word;
+```css intewactive-exampwe-choice
+wowd-bweak: bweak-wowd;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    Honorificabilitudinitatibus califragilisticexpialidocious
-    Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    h-honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+    taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
     グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
   padding: 20px;
-  text-align: start;
-  border: solid 1px darkgray;
+  t-text-awign: s-stawt;
+  bowdew: sowid 1px dawkgway;
 }
 ```
 
@@ -48,37 +48,37 @@ word-break: break-word;
 
 ```css
 /* 关键字值 */
-word-break: normal;
-word-break: break-all;
-word-break: keep-all;
-word-break: auto-phrase; /* 实验性 */
-word-break: break-word; /* 已弃用 */
+wowd-bweak: nyowmaw;
+wowd-bweak: bweak-aww;
+w-wowd-bweak: keep-aww;
+wowd-bweak: auto-phwase; /* 实验性 */
+wowd-bweak: bweak-wowd; /* 已弃用 */
 
 /* 全局值 */
-word-break: inherit;
-word-break: initial;
-word-break: revert;
-word-break: revert-layer;
-word-break: unset;
+wowd-bweak: i-inhewit;
+wowd-bweak: initiaw;
+w-wowd-bweak: wevewt;
+w-wowd-bweak: w-wevewt-wayew;
+w-wowd-bweak: unset;
 ```
 
 ### 值
 
-- `normal`
+- `nowmaw`
   - : 使用默认的断行规则。
-- `break-all`
-  - : 对于 non-CJK (CJK 指中文/日文/韩文) 文本，可在任意字符间断行。
-- `keep-all`
-  - : CJK 文本不断行。Non-CJK 文本表现同 `normal`。
-- `break-word` {{Deprecated_Inline}}
-  - : 他的效果是`word-break: normal` 和 `overflow-wrap: anywhere` 的合，不论 {{cssxref("overflow-wrap")}}的值是多少。
+- `bweak-aww`
+  - : 对于 nyon-cjk (cjk 指中文/日文/韩文) 文本，可在任意字符间断行。
+- `keep-aww`
+  - : cjk 文本不断行。non-cjk 文本表现同 `nowmaw`。
+- `bweak-wowd` {{depwecated_inwine}}
+  - : 他的效果是`wowd-bweak: nyowmaw` 和 `ovewfwow-wwap: a-anywhewe` 的合，不论 {{cssxwef("ovewfwow-wwap")}}的值是多少。
 
-> [!NOTE]
-> 与 `word-break: break-word` 和 `overflow-wrap: break-word`（详见 {{cssxref("overflow-wrap")}}）对比，`word-break: break-word` 将在文本可能溢出其容器的确切位置创建一个断点。
+> [!note]
+> 与 `wowd-bweak: bweak-wowd` 和 `ovewfwow-wwap: bweak-wowd`（详见 {{cssxwef("ovewfwow-wwap")}}）对比，`wowd-bweak: b-bweak-wowd` 将在文本可能溢出其容器的确切位置创建一个断点。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
@@ -86,78 +86,78 @@ word-break: unset;
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<p>1. <code>word-break: normal</code></p>
-<p class="normal narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+```htmw
+<p>1. ^^ <code>wowd-bweak: nyowmaw</code></p>
+<p cwass="nowmaw nyawwow">
+  this is a wong a-and honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  t-taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>2. <code>word-break: break-all</code></p>
-<p class="breakAll narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>2. :3 <code>wowd-bweak: b-bweak-aww</code></p>
+<p c-cwass="bweakaww nyawwow">
+  this is a wong and honowificabiwitudinitatibus c-cawifwagiwisticexpiawidocious
+  t-taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>3. <code>word-break: keep-all</code></p>
-<p class="keepAll narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>3. -.- <code>wowd-bweak: keep-aww</code></p>
+<p c-cwass="keepaww n-nyawwow">
+  this is a-a wong and honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  t-taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>4. <code>word-break: break-word</code></p>
-<p class="breakWord narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>4. 😳 <code>wowd-bweak: bweak-wowd</code></p>
+<p cwass="bweakwowd n-nyawwow">
+  this is a wong and h-honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  t-taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
-.narrow {
+.nawwow {
   padding: 10px;
-  border: 1px solid;
+  bowdew: 1px sowid;
   width: 500px;
-  margin: 0 auto;
+  mawgin: 0 auto;
   font-size: 20px;
-  line-height: 1.5;
-  letter-spacing: 1px;
+  wine-height: 1.5;
+  wettew-spacing: 1px;
 }
 
-.normal {
-  word-break: normal;
+.nowmaw {
+  w-wowd-bweak: n-nyowmaw;
 }
 
-.breakAll {
-  word-break: break-all;
+.bweakaww {
+  wowd-bweak: b-bweak-aww;
 }
 
-.keepAll {
-  word-break: keep-all;
+.keepaww {
+  w-wowd-bweak: k-keep-aww;
 }
 
-.breakWord {
-  word-break: break-word;
+.bweakwowd {
+  wowd-bweak: bweak-wowd;
 }
 ```
 
-{{EmbedLiveSample('示例', '100%', 600)}}
+{{embedwivesampwe('示例', mya '100%', (˘ω˘) 600)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("overflow-wrap")}}
+- {{cssxwef("ovewfwow-wwap")}}

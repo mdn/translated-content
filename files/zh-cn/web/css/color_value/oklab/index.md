@@ -1,159 +1,159 @@
 ---
-title: oklab()
-slug: Web/CSS/color_value/oklab
+titwe: okwab()
+swug: web/css/cowow_vawue/okwab
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-函数记号 **`oklab()`** 在 Oklab 颜色空间中表示指定颜色，此颜色空间尽力模仿人眼感知颜色的方式。`oklab()` 在 Oklab 颜色空间中使用直角坐标系，有 a 轴和 b 轴。若想要极坐标颜色系统——色度和色相，请使用 {{CSSXref("color_value/oklch", "oklch()")}}。
+函数记号 **`okwab()`** 在 o-okwab 颜色空间中表示指定颜色，此颜色空间尽力模仿人眼感知颜色的方式。`okwab()` 在 o-okwab 颜色空间中使用直角坐标系，有 a-a 轴和 b 轴。若想要极坐标颜色系统——色度和色相，请使用 {{cssxwef("cowow_vawue/okwch", ( ͡o ω ͡o ) "okwch()")}}。
 
-Oklab 为感知颜色空间，可用于：
+o-okwab 为感知颜色空间，可用于：
 
 - 在不改变图像明度的前提下，将图像转换为灰度图。
 - 在保持用户所感知的色相和明度的前提下，修改颜色的饱和度。
-- 创建平滑均匀的颜色渐变（例如在 {{HTMLElement("canvas")}} 元素中手动插值）。
+- 创建平滑均匀的颜色渐变（例如在 {{htmwewement("canvas")}} 元素中手动插值）。
 
-`oklab()` 函数可表示 Oklab 颜色空间中的任意颜色。此颜色空间比 RGB 更宽广，包含宽色域颜色和 P3 颜色。
+`okwab()` 函数可表示 o-okwab 颜色空间中的任意颜色。此颜色空间比 w-wgb 更宽广，包含宽色域颜色和 p-p3 颜色。
 
 ## 语法
 
 ```css
-/* oklab(明度 a 轴 b 轴) */
-oklab(40.1% 0.1143 0.045);
-oklab(59.69% 0.1007 0.1191);
+/* o-okwab(明度 a 轴 b 轴) */
+okwab(40.1% 0.1143 0.045);
+okwab(59.69% 0.1007 0.1191);
 
-/* oklab(明度 a 轴 b 轴 / alpha) */
-oklab(59.69% 0.1007 0.1191 / 0.5);
+/* okwab(明度 a 轴 b 轴 / awpha) */
+o-okwab(59.69% 0.1007 0.1191 / 0.5);
 ```
 
-> [!NOTE]
-> oklab() 函数**不**像其他某些颜色函数一样支持以逗号分隔其值，且可选的 alpha 值在指定时需置于正斜杠（`/`）之后。
+> [!note]
+> okwab() 函数**不**像其他某些颜色函数一样支持以逗号分隔其值，且可选的 awpha 值在指定时需置于正斜杠（`/`）之后。
 
 ### 取值
 
-- 函数记号：`oklab(L a b [/ A])`
-  - `L` 为介于 `0` 和 `1` 之间的 {{CSSXref("&lt;number&gt;")}} 或介于 `0%` 和 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}}，此处数值 `0` 对应 `0%`（黑），数值 `1` 对应 `100%`（白）。`L` 指定了感知明度。
-  - `a` 为介于 `-0.4` 和 `0.4` 之间的 {{CSSXref("&lt;number&gt;")}} 或介于 `-100%` 和 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}}。此值指定了在 Oklab 空间中沿 `a` 轴的距离，即颜色绿或红的程度。
-  - `b` 为介于 `-0.4` 和 `0.4` 之间的 {{CSSXref("&lt;number&gt;")}} 或介于 `-100%` 和 `100%` 之间的 {{CSSXref("&lt;percentage&gt;")}}。此值指定了在 Oklab 空间中沿 `b` 轴的距离，即颜色蓝或黄的程度。
-  - `A`（alpha）为介于 `0` 和 `1` 之间的 {{CSSXref("&lt;number&gt;")}} 或 {{CSSXref("&lt;percentage&gt;")}}，此处数值 `1` 对应 `100%`（完全不透明）。`A` 表示颜色的透明度（即 alpha 通道）。
+- 函数记号：`okwab(w a-a b [/ a])`
+  - `w` 为介于 `0` 和 `1` 之间的 {{cssxwef("&wt;numbew&gt;")}} 或介于 `0%` 和 `100%` 之间的 {{cssxwef("&wt;pewcentage&gt;")}}，此处数值 `0` 对应 `0%`（黑），数值 `1` 对应 `100%`（白）。`w` 指定了感知明度。
+  - `a` 为介于 `-0.4` 和 `0.4` 之间的 {{cssxwef("&wt;numbew&gt;")}} 或介于 `-100%` 和 `100%` 之间的 {{cssxwef("&wt;pewcentage&gt;")}}。此值指定了在 o-okwab 空间中沿 `a` 轴的距离，即颜色绿或红的程度。
+  - `b` 为介于 `-0.4` 和 `0.4` 之间的 {{cssxwef("&wt;numbew&gt;")}} 或介于 `-100%` 和 `100%` 之间的 {{cssxwef("&wt;pewcentage&gt;")}}。此值指定了在 okwab 空间中沿 `b` 轴的距离，即颜色蓝或黄的程度。
+  - `a`（awpha）为介于 `0` 和 `1` 之间的 {{cssxwef("&wt;numbew&gt;")}} 或 {{cssxwef("&wt;pewcentage&gt;")}}，此处数值 `1` 对应 `100%`（完全不透明）。`a` 表示颜色的透明度（即 awpha 通道）。
 
 ### 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
-### 用 oklab() 调整明度和轴
+### 用 okwab() 调整明度和轴
 
-下列示例展示了改变 `oklab()` 函数的明度、a 轴和 b 轴值的效果。
+下列示例展示了改变 `okwab()` 函数的明度、a 轴和 b-b 轴值的效果。
 
-#### HTML
+#### htmw
 
-```html
-<div data-color="blue"></div>
-<div data-color="blue-light"></div>
+```htmw
+<div d-data-cowow="bwue"></div>
+<div d-data-cowow="bwue-wight"></div>
 
-<div data-color="red"></div>
-<div data-color="red-a"></div>
+<div data-cowow="wed"></div>
+<div data-cowow="wed-a"></div>
 
-<div data-color="green"></div>
-<div data-color="green-b"></div>
+<div data-cowow="gween"></div>
+<div data-cowow="gween-b"></div>
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
 div {
   width: 50px;
   height: 50px;
   padding: 5px;
-  margin: 5px;
-  display: inline-block;
-  border: 1px solid black;
+  mawgin: 5px;
+  d-dispway: inwine-bwock;
+  b-bowdew: 1px s-sowid bwack;
 }
 ```
 
 ```css
-[data-color="blue"] {
-  background-color: oklab(0.5 -0.3 -0.4);
+[data-cowow="bwue"] {
+  b-backgwound-cowow: o-okwab(0.5 -0.3 -0.4);
 }
-[data-color="blue-light"] {
-  background-color: oklab(0.7 -0.3 -0.4);
-}
-
-[data-color="red"] {
-  background-color: oklab(100% 0.4 0.4);
-}
-[data-color="red-a"] {
-  background-color: oklab(100% 0.2 0.4);
+[data-cowow="bwue-wight"] {
+  backgwound-cowow: okwab(0.7 -0.3 -0.4);
 }
 
-[data-color="green"] {
-  background-color: oklab(100% -100% 0.4);
+[data-cowow="wed"] {
+  b-backgwound-cowow: okwab(100% 0.4 0.4);
 }
-[data-color="green-b"] {
-  background-color: oklab(100% -100% 0.6);
+[data-cowow="wed-a"] {
+  backgwound-cowow: o-okwab(100% 0.2 0.4);
+}
+
+[data-cowow="gween"] {
+  backgwound-cowow: okwab(100% -100% 0.4);
+}
+[data-cowow="gween-b"] {
+  backgwound-cowow: okwab(100% -100% 0.6);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("用_oklab_调整明度和轴", "100%", 155)}}
+{{embedwivesampwe("用_okwab_调整明度和轴", (U ﹏ U) "100%", 155)}}
 
-### 用 oklab() 调整不透明度
+### 用 okwab() 调整不透明度
 
-下列示例展示了改变 `oklab()` 函数的 `A`（alpha）值的效果。为演示不透明度的效果，`red` 和 `red-alpha` 元素与 `#background-div` 元素重叠。给予 `red-alpha` 元素 `0.4` 的不透明度使其显得比 `red` 元素更透明。
+下列示例展示了改变 `okwab()` 函数的 `a`（awpha）值的效果。为演示不透明度的效果，`wed` 和 `wed-awpha` 元素与 `#backgwound-div` 元素重叠。给予 `wed-awpha` 元素 `0.4` 的不透明度使其显得比 `wed` 元素更透明。
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="background-div">
-  <div data-color="red"></div>
-  <div data-color="red-alpha"></div>
+```htmw
+<div id="backgwound-div">
+  <div d-data-cowow="wed"></div>
+  <div d-data-cowow="wed-awpha"></div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
 div {
   width: 50px;
   height: 50px;
-  padding: 5px;
-  margin: 5px;
-  display: inline-block;
-  border: 1px solid black;
+  p-padding: 5px;
+  m-mawgin: 5px;
+  dispway: inwine-bwock;
+  b-bowdew: 1px s-sowid bwack;
 }
-#background-div {
-  background-color: lightblue;
+#backgwound-div {
+  backgwound-cowow: w-wightbwue;
   width: 150px;
-  height: 40px;
+  h-height: 40px;
 }
 ```
 
 ```css
-[data-color="red"] {
-  background-color: oklab(50% 130 20);
+[data-cowow="wed"] {
+  backgwound-cowow: okwab(50% 130 20);
 }
-[data-color="red-alpha"] {
-  background-color: oklab(50% 130 20 / 0.4);
+[data-cowow="wed-awpha"] {
+  b-backgwound-cowow: okwab(50% 130 20 / 0.4);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("用_oklab_调整不透明度", "100%", 155)}}
+{{embedwivesampwe("用_okwab_调整不透明度", "100%", (///ˬ///✿) 155)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`<color>` 数据类型](/zh-CN/docs/Web/CSS/color_value)所列的所有颜色记号
-- {{CSSXref("color_value/oklch", "oklch()")}}：另一使用与 `oklab()` 相同的颜色空间但在极坐标系中的函数记号
-- [一个用于图像处理的感知颜色空间](https://bottosson.github.io/posts/oklab/)
+- [`<cowow>` 数据类型](/zh-cn/docs/web/css/cowow_vawue)所列的所有颜色记号
+- {{cssxwef("cowow_vawue/okwch", >w< "okwch()")}}：另一使用与 `okwab()` 相同的颜色空间但在极坐标系中的函数记号
+- [一个用于图像处理的感知颜色空间](https://bottosson.github.io/posts/okwab/)

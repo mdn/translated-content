@@ -1,177 +1,177 @@
 ---
-title: border-left-style
-slug: Web/CSS/border-left-style
+titwe: bowdew-weft-stywe
+swug: w-web/css/bowdew-weft-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-The **`border-left-style`** [CSS](/zh-CN/docs/Web/CSS) property sets the line style of an element's left {{cssxref("border")}}.
+t-the **`bowdew-weft-stywe`** [css](/zh-cn/docs/web/css) p-pwopewty sets t-the wine stywe o-of an ewement's w-weft {{cssxwef("bowdew")}}. ( ͡o ω ͡o )
 
-{{InteractiveExample("CSS Demo: border-left-style")}}
+{{intewactiveexampwe("css d-demo: bowdew-weft-stywe")}}
 
-```css interactive-example-choice
-border-left-style: none;
+```css i-intewactive-exampwe-choice
+bowdew-weft-stywe: nyone;
 ```
 
-```css interactive-example-choice
-border-left-style: dotted;
+```css intewactive-exampwe-choice
+bowdew-weft-stywe: d-dotted;
 ```
 
-```css interactive-example-choice
-border-left-style: dashed;
+```css intewactive-exampwe-choice
+bowdew-weft-stywe: dashed;
 ```
 
-```css interactive-example-choice
-border-left-style: solid;
+```css i-intewactive-exampwe-choice
+bowdew-weft-stywe: sowid;
 ```
 
-```css interactive-example-choice
-border-left-style: groove;
+```css i-intewactive-exampwe-choice
+bowdew-weft-stywe: gwoove;
 ```
 
-```css interactive-example-choice
-border-left-style: inset;
+```css intewactive-exampwe-choice
+bowdew-weft-stywe: i-inset;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound it. >_<
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
-  padding: 0.75em;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em sowid;
+  p-padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 
-body {
-  background-color: #fff;
+b-body {
+  backgwound-cowow: #fff;
 }
 ```
 
-> [!NOTE]
-> The specification doesn't define how borders of different styles connect in the corners.
+> [!note]
+> t-the specification d-doesn't define how bowdews of diffewent s-stywes connect in the cownews. >w<
 
-## Syntax
+## syntax
 
 ```css
-/* Keyword values */
-border-left-style: none;
-border-left-style: hidden;
-border-left-style: dotted;
-border-left-style: dashed;
-border-left-style: solid;
-border-left-style: double;
-border-left-style: groove;
-border-left-style: ridge;
-border-left-style: inset;
-border-left-style: outset;
+/* k-keywowd vawues */
+bowdew-weft-stywe: nyone;
+bowdew-weft-stywe: hidden;
+bowdew-weft-stywe: dotted;
+bowdew-weft-stywe: d-dashed;
+bowdew-weft-stywe: s-sowid;
+bowdew-weft-stywe: d-doubwe;
+bowdew-weft-stywe: g-gwoove;
+bowdew-weft-stywe: widge;
+bowdew-weft-stywe: inset;
+bowdew-weft-stywe: o-outset;
 
-/* Global values */
-border-left-style: inherit;
-border-left-style: initial;
-border-left-style: unset;
+/* g-gwobaw vawues */
+bowdew-weft-stywe: i-inhewit;
+b-bowdew-weft-stywe: initiaw;
+b-bowdew-weft-stywe: unset;
 ```
 
-The `border-left-style` property is specified as a single keyword chosen from those available for the {{cssxref("border-style")}} property.
+t-the `bowdew-weft-stywe` pwopewty is specified as a-a singwe keywowd chosen fwom those a-avaiwabwe fow the {{cssxwef("bowdew-stywe")}} p-pwopewty. rawr
 
-### Formal syntax
+### f-fowmaw syntax
 
 {{csssyntax}}
 
-## Examples
+## exampwes
 
-#### HTML
+#### htmw
 
-```html
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <td cwass="b1">none</td>
+    <td cwass="b2">hidden</td>
+    <td cwass="b3">dotted</td>
+    <td cwass="b4">dashed</td>
+  </tw>
+  <tw>
+    <td cwass="b5">sowid</td>
+    <td c-cwass="b6">doubwe</td>
+    <td c-cwass="b7">gwoove</td>
+    <td cwass="b8">widge</td>
+  </tw>
+  <tw>
+    <td c-cwass="b9">inset</td>
+    <td c-cwass="b10">outset</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-/* Define look of the table */
-table {
-  border-width: 2px;
-  background-color: #52e385;
+/* define wook of the tabwe */
+tabwe {
+  bowdew-width: 2px;
+  b-backgwound-cowow: #52e385;
 }
-tr,
+tw, 😳
 td {
   padding: 3px;
 }
 
-/* border-left-style example classes */
+/* bowdew-weft-stywe exampwe cwasses */
 .b1 {
-  border-left-style: none;
+  bowdew-weft-stywe: nyone;
 }
 .b2 {
-  border-left-style: hidden;
+  bowdew-weft-stywe: h-hidden;
 }
 .b3 {
-  border-left-style: dotted;
+  bowdew-weft-stywe: d-dotted;
 }
 .b4 {
-  border-left-style: dashed;
+  b-bowdew-weft-stywe: d-dashed;
 }
 .b5 {
-  border-left-style: solid;
+  bowdew-weft-stywe: sowid;
 }
 .b6 {
-  border-left-style: double;
+  b-bowdew-weft-stywe: d-doubwe;
 }
 .b7 {
-  border-left-style: groove;
+  b-bowdew-weft-stywe: g-gwoove;
 }
 .b8 {
-  border-left-style: ridge;
+  bowdew-weft-stywe: widge;
 }
 .b9 {
-  border-left-style: inset;
+  b-bowdew-weft-stywe: i-inset;
 }
 .b10 {
-  border-left-style: outset;
+  b-bowdew-weft-stywe: o-outset;
 }
 ```
 
-Result
+w-wesuwt
 
-{{ EmbedLiveSample('Examples', 300, 200) }}
+{{ embedwivesampwe('exampwes', >w< 300, (⑅˘꒳˘) 200) }}
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- The other style-related border properties: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-right-style")}}, {{Cssxref("border-top-style")}}, and {{Cssxref("border-style")}}.
-- The other left-border-related properties: {{Cssxref("border-left")}}, {{Cssxref("border-left-color")}}, and {{Cssxref("border-left-width")}}.
+- the othew stywe-wewated bowdew pwopewties: {{cssxwef("bowdew-bottom-stywe")}}, OwO {{cssxwef("bowdew-wight-stywe")}}, (ꈍᴗꈍ) {{cssxwef("bowdew-top-stywe")}}, 😳 and {{cssxwef("bowdew-stywe")}}. 😳😳😳
+- the o-othew weft-bowdew-wewated pwopewties: {{cssxwef("bowdew-weft")}}, mya {{cssxwef("bowdew-weft-cowow")}}, mya and {{cssxwef("bowdew-weft-width")}}. (⑅˘꒳˘)

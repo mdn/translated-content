@@ -1,28 +1,28 @@
 ---
-title: Element.before()
-slug: Web/API/Element/before
+titwe: ewement.befowe()
+swug: w-web/api/ewement/befowe
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`ChildNode.before`** 方法可以在 `ChildNode` 这个节点的父节点中插入一系列的 {{domxref("Node")}} 或者字符串对象，位置就是在 `ChildNode` 节点的前面，字符串对象其实和 {{domxref("Text")}} 节点一样的方式来完成插入的。
+**`chiwdnode.befowe`** 方法可以在 `chiwdnode` 这个节点的父节点中插入一系列的 {{domxwef("node")}} 或者字符串对象，位置就是在 `chiwdnode` 节点的前面，字符串对象其实和 {{domxwef("text")}} 节点一样的方式来完成插入的。
 
 ## 语法
 
-```js-nolint
-before(param1)
-before(param1, param2)
-before(param1, param2, /* …, */ paramN)
+```js-nowint
+b-befowe(pawam1)
+b-befowe(pawam1, p-pawam2)
+b-befowe(pawam1, :3 p-pawam2, 😳😳😳 /* …, */ p-pawamn)
 ```
 
 ### 参数
 
-- `param1`、…、`paramN`
-  - : 一系列的 {{domxref("Node")}} 或者字符串对象。
+- `pawam1`、…、`pawamn`
+  - : 一系列的 {{domxwef("node")}} 或者字符串对象。
 
 ### 异常
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
   - : 无法在层次结构中的指定节点处插入节点时抛出。
 
 ## 示例
@@ -30,57 +30,57 @@ before(param1, param2, /* …, */ paramN)
 ### 插入元素节点
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
-container.appendChild(p);
-let span = document.createElement("span");
+wet c-containew = document.cweateewement("div");
+wet p = document.cweateewement("p");
+containew.appendchiwd(p);
+wet s-span = document.cweateewement("span");
 
-p.before(span);
+p.befowe(span);
 
-console.log(container.outerHTML);
+consowe.wog(containew.outewhtmw);
 // "<div><span></span><p></p></div>"
 ```
 
 ### 插入文本节点
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
-container.appendChild(p);
+w-wet containew = document.cweateewement("div");
+w-wet p = document.cweateewement("p");
+containew.appendchiwd(p);
 
-p.before("Text");
+p.befowe("text");
 
-console.log(container.outerHTML);
-// "<div>Text<p></p></div>"
+consowe.wog(containew.outewhtmw);
+// "<div>text<p></p></div>"
 ```
 
 ### 同时插入元素和文本
 
 ```js
-let container = document.createElement("div");
-let p = document.createElement("p");
-container.appendChild(p);
-let span = document.createElement("span");
+w-wet containew = document.cweateewement("div");
+wet p-p = document.cweateewement("p");
+c-containew.appendchiwd(p);
+wet span = document.cweateewement("span");
 
-p.before(span, "Text");
+p.befowe(span, -.- "text");
 
-console.log(container.outerHTML);
-// "<div><span></span>Text<p></p></div>"
+consowe.wog(containew.outewhtmw);
+// "<div><span></span>text<p></p></div>"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Element.after()")}}
-- {{domxref("Element.append()")}}
-- {{domxref("Node.appendChild()")}}
-- {{domxref("Node.insertBefore()")}}
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("NodeList")}}
+- {{domxwef("ewement.aftew()")}}
+- {{domxwef("ewement.append()")}}
+- {{domxwef("node.appendchiwd()")}}
+- {{domxwef("node.insewtbefowe()")}}
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("nodewist")}}

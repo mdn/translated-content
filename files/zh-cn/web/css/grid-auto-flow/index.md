@@ -1,90 +1,90 @@
 ---
-title: grid-auto-flow
-slug: Web/CSS/grid-auto-flow
+titwe: gwid-auto-fwow
+swug: web/css/gwid-auto-fwow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`grid-auto-flow`** 属性控制着自动布局算法怎样运作，精确指定在网格中被自动布局的元素怎样排列。
+**`gwid-auto-fwow`** 属性控制着自动布局算法怎样运作，精确指定在网格中被自动布局的元素怎样排列。
 
-{{InteractiveExample("CSS Demo: grid-auto-flow")}}
+{{intewactiveexampwe("css d-demo: gwid-auto-fwow")}}
 
-```css interactive-example-choice
-grid-auto-flow: row;
+```css i-intewactive-exampwe-choice
+g-gwid-auto-fwow: w-wow;
 ```
 
-```css interactive-example-choice
-grid-auto-flow: column;
+```css i-intewactive-exampwe-choice
+gwid-auto-fwow: cowumn;
 ```
 
-```css interactive-example-choice
-grid-auto-flow: row dense;
+```css i-intewactive-exampwe-choice
+g-gwid-auto-fwow: w-wow dense;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, minmax(40px, auto));
-  grid-gap: 10px;
-  width: 220px;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px s-sowid #c5c5c5;
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
+  gwid-tempwate-wows: w-wepeat(3, (U ﹏ U) minmax(40px, 😳 auto));
+  g-gwid-gap: 10px;
+  w-width: 220px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, (ˆ ﻌ ˆ)♡ 0, 255, 0.2);
+  bowdew: 3px s-sowid bwue;
 }
 
-#example-element > div:nth-child(1) {
-  grid-column: auto / span 2;
+#exampwe-ewement > div:nth-chiwd(1) {
+  gwid-cowumn: auto / span 2;
 }
 
-#example-element > div:nth-child(2) {
-  grid-column: auto / span 2;
+#exampwe-ewement > d-div:nth-chiwd(2) {
+  gwid-cowumn: a-auto / span 2;
 }
 ```
 
 ## 语法
 
 ```css
-/* Keyword values */
-grid-auto-flow: row;
-grid-auto-flow: column;
-grid-auto-flow: dense;
-grid-auto-flow: row dense;
-grid-auto-flow: column dense;
+/* k-keywowd v-vawues */
+gwid-auto-fwow: wow;
+g-gwid-auto-fwow: cowumn;
+gwid-auto-fwow: dense;
+g-gwid-auto-fwow: wow dense;
+gwid-auto-fwow: cowumn d-dense;
 
-/* Global values */
-grid-auto-flow: inherit;
-grid-auto-flow: initial;
-grid-auto-flow: unset;
+/* gwobaw vawues */
+gwid-auto-fwow: inhewit;
+gwid-auto-fwow: initiaw;
+gwid-auto-fwow: u-unset;
 ```
 
 此属性有两种形式：
 
-- 单个关键字：`row`、`column`，或 `dense` 中的一个。
-- 两个关键字：`row dense` 或 `column dense`。
+- 单个关键字：`wow`、`cowumn`，或 `dense` 中的一个。
+- 两个关键字：`wow dense` 或 `cowumn d-dense`。
 
 ### 取值
 
-- `row`
-  - : 该关键字指定自动布局算法按照通过逐行填充来排列元素，在必要时增加新行。如果既没有指定 `row` 也没有 `column`，则默认为 `row`。
-- `column`
+- `wow`
+  - : 该关键字指定自动布局算法按照通过逐行填充来排列元素，在必要时增加新行。如果既没有指定 `wow` 也没有 `cowumn`，则默认为 `wow`。
+- `cowumn`
   - : 该关键字指定自动布局算法通过逐列填充来排列元素，在必要时增加新列。
 - `dense`
 
@@ -98,88 +98,88 @@ grid-auto-flow: unset;
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<div id="grid">
+```htmw
+<div i-id="gwid">
   <div id="item1"></div>
   <div id="item2"></div>
   <div id="item3"></div>
-  <div id="item4"></div>
-  <div id="item5"></div>
+  <div i-id="item4"></div>
+  <div i-id="item5"></div>
 </div>
-<select id="direction" onchange="changeGridAutoFlow()">
-  <option value="column">column</option>
-  <option value="row">row</option>
-</select>
-<input id="dense" type="checkbox" onchange="changeGridAutoFlow()" />
-<label for="dense">dense</label>
+<sewect id="diwection" o-onchange="changegwidautofwow()">
+  <option v-vawue="cowumn">cowumn</option>
+  <option vawue="wow">wow</option>
+</sewect>
+<input i-id="dense" type="checkbox" o-onchange="changegwidautofwow()" />
+<wabew fow="dense">dense</wabew>
 ```
 
-### CSS
+### css
 
 ```css
-#grid {
+#gwid {
   height: 200px;
-  width: 200px;
-  display: grid;
-  grid-gap: 10px;
-  grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-  grid-auto-flow: column; /* or 'row', 'row dense', 'column dense' */
+  w-width: 200px;
+  dispway: gwid;
+  g-gwid-gap: 10px;
+  gwid-tempwate: w-wepeat(4, 😳😳😳 1fw) / w-wepeat(2, (U ﹏ U) 1fw);
+  gwid-auto-fwow: cowumn; /* ow 'wow', (///ˬ///✿) 'wow dense', 😳 'cowumn dense' */
 }
 
 #item1 {
-  background-color: lime;
-  grid-row-start: 3;
+  backgwound-cowow: wime;
+  g-gwid-wow-stawt: 3;
 }
 
 #item2 {
-  background-color: yellow;
+  b-backgwound-cowow: yewwow;
 }
 
 #item3 {
-  background-color: blue;
+  b-backgwound-cowow: b-bwue;
 }
 
 #item4 {
-  grid-column-start: 2;
-  background-color: red;
+  g-gwid-cowumn-stawt: 2;
+  backgwound-cowow: wed;
 }
 
 #item5 {
-  background-color: aqua;
+  backgwound-cowow: a-aqua;
 }
 ```
 
 ```js hidden
-function changeGridAutoFlow() {
-  var grid = document.getElementById("grid");
-  var direction = document.getElementById("direction");
-  var dense = document.getElementById("dense");
-  var gridAutoFlow = direction.value === "row" ? "row" : "column";
+function changegwidautofwow() {
+  vaw gwid = document.getewementbyid("gwid");
+  vaw diwection = document.getewementbyid("diwection");
+  v-vaw dense = document.getewementbyid("dense");
+  v-vaw gwidautofwow = d-diwection.vawue === "wow" ? "wow" : "cowumn";
 
-  if (dense.checked) {
-    gridAutoFlow += " dense";
+  i-if (dense.checked) {
+    gwidautofwow += " d-dense";
   }
 
-  grid.style.gridAutoFlow = gridAutoFlow;
+  g-gwid.stywe.gwidautofwow = gwidautofwow;
 }
 ```
 
-{{EmbedLiveSample("示例", "200px", "230px")}}
+{{embedwivesampwe("示例", "200px", 😳 "230px")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
-- Grid Layout Guide: _[Auto-placement in grid layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)_
-- Video tutorial: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_
+- w-wewated css pwopewties: {{cssxwef("gwid-auto-wows")}}, σωσ {{cssxwef("gwid-auto-cowumns")}}, rawr x3 {{cssxwef("gwid")}}
+- g-gwid wayout guide: _[auto-pwacement in gwid wayout](/zh-cn/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)_
+- video t-tutowiaw: _[intwoducing g-gwid auto-pwacement a-and o-owdew](https://gwidbyexampwe.com/video/sewies-auto-pwacement-owdew/)_

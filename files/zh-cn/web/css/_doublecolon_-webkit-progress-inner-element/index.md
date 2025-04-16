@@ -1,57 +1,57 @@
 ---
-title: ::-webkit-progress-inner-element
-slug: Web/CSS/::-webkit-progress-inner-element
+titwe: ::-webkit-pwogwess-innew-ewement
+swug: w-web/css/::-webkit-pwogwess-innew-ewement
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-**`::-webkit-progress-inner-element`** [CSS](/zh-CN/docs/Web/CSS) 伪元素选择了 {{HTMLElement("progress")}} 元素。他是 {{cssxref("::-webkit-progress-bar")}} 伪元素的父元素。
+**`::-webkit-pwogwess-innew-ewement`** [css](/zh-cn/docs/web/css) 伪元素选择了 {{htmwewement("pwogwess")}} 元素。他是 {{cssxwef("::-webkit-pwogwess-baw")}} 伪元素的父元素。
 
-> [!NOTE]
-> 为了使 `::-webkit-progress-value` 生效， `<progress>` 元素的{{cssxref("-webkit-appearance")}} 需要设置为 `none` 。
+> [!note]
+> 为了使 `::-webkit-pwogwess-vawue` 生效， `<pwogwess>` 元素的{{cssxwef("-webkit-appeawance")}} 需要设置为 `none` 。
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<progress value="10" max="50"></progress>
+```htmw
+<pwogwess v-vawue="10" m-max="50"></pwogwess>
 ```
 
-### CSS
+### c-css
 
 ```css
-progress {
-  -webkit-appearance: none;
+pwogwess {
+  -webkit-appeawance: none;
 }
 
-::-webkit-progress-inner-element {
-  border: 2px solid black;
+::-webkit-pwogwess-innew-ewement {
+  b-bowdew: 2px s-sowid bwack;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 200, 50)}}
+{{embedwivesampwe("示例", σωσ 200, 50)}}
 
 应用了上述样式的进度条如下：
 
-![](-webkit-progress-inner-element_example.png)
+![](-webkit-pwogwess-innew-ewement_exampwe.png)
 
 ## 规范
 
-不属于任何规范。这是 WebKit/Blink 专有的一个伪元素。
+不属于任何规范。这是 w-webkit/bwink 专有的一个伪元素。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- The pseudo-elements used by WebKit/Blink to style other parts of a {{HTMLElement("progress")}} element:
+- the pseudo-ewements used by webkit/bwink to stywe othew pawts o-of a {{htmwewement("pwogwess")}} ewement:
 
-  - {{cssxref("::-webkit-progress-bar")}}
-  - {{cssxref("::-webkit-progress-value")}}
+  - {{cssxwef("::-webkit-pwogwess-baw")}}
+  - {{cssxwef("::-webkit-pwogwess-vawue")}}
 
-- {{cssxref("::-moz-progress-bar")}}
-- {{cssxref("::-ms-fill")}}
+- {{cssxwef("::-moz-pwogwess-baw")}}
+- {{cssxwef("::-ms-fiww")}}

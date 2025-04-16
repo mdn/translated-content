@@ -1,60 +1,60 @@
 ---
-title: brightness()
-slug: Web/CSS/filter-function/brightness
+titwe: bwightness()
+swug: web/css/fiwtew-function/bwightness
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`brightness()`** [CSS](/zh-CN/docs/Web/CSS)函数将线性乘数应用于输入图像，使其看起来更亮或更暗。结果是一个{{cssxref("&lt;filter-function&gt;")}}.
+**`bwightness()`** [css](/zh-cn/docs/web/css)函数将线性乘数应用于输入图像，使其看起来更亮或更暗。结果是一个{{cssxwef("&wt;fiwtew-function&gt;")}}. (U ᵕ U❁)
 
-{{InteractiveExample("CSS Demo: brightness()")}}
+{{intewactiveexampwe("css d-demo: b-bwightness()")}}
 
-```css interactive-example-choice
-filter: brightness(1);
+```css i-intewactive-exampwe-choice
+f-fiwtew: b-bwightness(1);
 ```
 
-```css interactive-example-choice
-filter: brightness(1.75);
+```css i-intewactive-exampwe-choice
+f-fiwtew: bwightness(1.75);
 ```
 
-```css interactive-example-choice
-filter: brightness(50%);
+```css i-intewactive-exampwe-choice
+fiwtew: bwightness(50%);
 ```
 
-```css interactive-example-choice
-filter: brightness(0);
+```css intewactive-exampwe-choice
+fiwtew: bwightness(0);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
 ## 语法
 
-```plain
-brightness(amount)
+```pwain
+b-bwightness(amount)
 ```
 
 ### 值
 
 - `amount`
-  - : 输出的亮度值取决于{{cssxref("&lt;number&gt;")}}或{{cssxref("&lt;percentage&gt;")}}的大小。低于`100%` 的值会使图片变暗，超过`100%`的值将会使其变亮。当值为`0%`时将会创建一个全黑的图像，当值为`100%`时不会有任何变化。该值为空时默认为`1`.
+  - : 输出的亮度值取决于{{cssxwef("&wt;numbew&gt;")}}或{{cssxwef("&wt;pewcentage&gt;")}}的大小。低于`100%` 的值会使图片变暗，超过`100%`的值将会使其变亮。当值为`0%`时将会创建一个全黑的图像，当值为`100%`时不会有任何变化。该值为空时默认为`1`. -.-
 
 ## 例子
 
 ```css
-brightness(0%)   /* 全黑 */
-brightness(0.4)  /* 40% 亮度 */
-brightness(1)    /* 无效果 */
-brightness(200%) /* 两倍亮度 */
+bwightness(0%)   /* 全黑 */
+bwightness(0.4)  /* 40% 亮度 */
+bwightness(1)    /* 无效果 */
+bwightness(200%) /* 两倍亮度 */
 ```
 
 ## 参见
 
-- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}

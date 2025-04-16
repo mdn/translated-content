@@ -1,86 +1,86 @@
 ---
-title: border-image-width
-slug: Web/CSS/border-image-width
+titwe: bowdew-image-width
+swug: w-web/css/bowdew-image-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS)属性 **`border-image-width`** 指定了 [边界图像 (border image](/zh-CN/docs/Web/CSS/border-image)) 的宽度
+[css](/zh-cn/docs/web/css)属性 **`bowdew-image-width`** 指定了 [边界图像 (bowdew i-image](/zh-cn/docs/web/css/bowdew-image)) 的宽度
 
-{{InteractiveExample("CSS Demo: border-image-width")}}
+{{intewactiveexampwe("css d-demo: bowdew-image-width")}}
 
-```css interactive-example-choice
-border-image-width: 30px;
+```css i-intewactive-exampwe-choice
+b-bowdew-image-width: 30px;
 ```
 
-```css interactive-example-choice
-border-image-width: 15px 40px;
+```css i-intewactive-exampwe-choice
+b-bowdew-image-width: 15px 40px;
 ```
 
-```css interactive-example-choice
-border-image-width: 2.6rem;
+```css i-intewactive-exampwe-choice
+bowdew-image-width: 2.6wem;
 ```
 
-```css interactive-example-choice
-border-image-width: 20% 8%;
+```css intewactive-exampwe-choice
+bowdew-image-width: 20% 8%;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="exampwe-ewement">this is a box with a bowdew awound it.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   width: 80%;
-  height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  h-height: 80%;
+  dispway: fwex;
+  awign-items: centew;
+  justify-content: c-centew;
   padding: 50px;
-  background: #fff3d4;
-  color: #000;
-  border: 30px solid;
-  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
-    round;
+  b-backgwound: #fff3d4;
+  cowow: #000;
+  b-bowdew: 30px sowid;
+  bowdew-image: uww("/shawed-assets/images/exampwes/bowdew-diamonds.png") 30
+    wound;
   font-size: 1.2em;
 }
 ```
 
-如果本属性值大于元素的 {{cssxref("border-width")}}，边界图像将会向 padding 边缘延展
+如果本属性值大于元素的 {{cssxwef("bowdew-width")}}，边界图像将会向 p-padding 边缘延展
 
 ## 语法
 
 ```css
 /* 关键字 */
-border-image-width: auto;
+bowdew-image-width: auto;
 
 /* 长度 */
-border-image-width: 1rem;
+bowdew-image-width: 1wem;
 
 /* 百分比 */
-border-image-width: 25%;
+bowdew-image-width: 25%;
 
 /* 数值 */
-border-image-width: 3;
+b-bowdew-image-width: 3;
 
 /* 垂直 | 水平 */
-border-image-width: 2em 3em;
+bowdew-image-width: 2em 3em;
 
 /* 上 | 横向 | 下 */
-border-image-width: 5% 15% 10%;
+b-bowdew-image-width: 5% 15% 10%;
 
 /* 上 | 右 | 下 | 左 */
-border-image-width: 5% 2em 10% auto;
+bowdew-image-width: 5% 2em 10% a-auto;
 
 /* 全局值 */
-border-image-width: inherit;
-border-image-width: initial;
-border-image-width: unset;
+b-bowdew-image-width: i-inhewit;
+bowdew-image-width: initiaw;
+bowdew-image-width: u-unset;
 ```
 
-`border-image-width` 属性的值可用以下方式进行设定：
+`bowdew-image-width` 属性的值可用以下方式进行设定：
 
 - 当指定 **一个** 值时，它将作用到 **四个方向** ；
 - 当指定 **两个** 值时，它将分别作用到 **垂直方向** 和 **水平方向** ；
@@ -90,15 +90,15 @@ border-image-width: unset;
 ### 取值
 
 - `<长度 - 百分比>`
-  - : 边界的宽度，可按 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 指定。百分比是相较于水平（垂直）方向上的边框图像区域宽度（高度）的偏移量，不能为负。
+  - : 边界的宽度，可按 {{cssxwef("&wt;wength&gt;")}} 或 {{cssxwef("&wt;pewcentage&gt;")}} 指定。百分比是相较于水平（垂直）方向上的边框图像区域宽度（高度）的偏移量，不能为负。
 - `<数值>`
-  - : 边框宽度，指定为 {{cssxref("border-width")}} 的相应倍数，不能为负。
+  - : 边框宽度，指定为 {{cssxwef("bowdew-width")}} 的相应倍数，不能为负。
 - `auto`
-  - : 将等同于内部对应的 {{cssxref("border-image-slice")}} 的宽或高（可用的话）。如果图像没有需要的相应的属性，将相对于 `border-width` 进行指定。
+  - : 将等同于内部对应的 {{cssxwef("bowdew-image-swice")}} 的宽或高（可用的话）。如果图像没有需要的相应的属性，将相对于 `bowdew-width` 进行指定。
 
 ## 正式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 正式语法
 
@@ -106,44 +106,44 @@ border-image-width: unset;
 
 ## 示例
 
-### Tiling a border image
+### tiwing a bowdew image
 
 示例使用了下方 90\*90 像素的 ".png" 图像。
 
-![](border.png)
+![](bowdew.png)
 
 因此，每个圆圈为 30\*30 像素。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  wowem ipsum dowow sit amet, (U ﹏ U) consetetuw sadipscing ewitw, (///ˬ///✿) sed diam nyonumy
+  eiwmod t-tempow invidunt ut wabowe et d-dowowe magna awiquyam e-ewat, sed d-diam
+  vowuptua. >w< at vewo eos et accusam et justo duo dowowes et e-ea webum. rawr stet c-cwita
+  kasd gubewgwen, mya nyo sea t-takimata sanctus e-est wowem ipsum dowow sit amet. ^^
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
-  border: 20px solid;
-  border-image: url("border.png") 30 round;
-  border-image-width: 16px;
+  bowdew: 20px s-sowid;
+  bowdew-image: uww("bowdew.png") 30 wound;
+  b-bowdew-image-width: 16px;
   padding: 40px;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('Tiling_a_border_image', 200, 240)}}
+{{embedwivesampwe('tiwing_a_bowdew_image', 😳😳😳 200, 240)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

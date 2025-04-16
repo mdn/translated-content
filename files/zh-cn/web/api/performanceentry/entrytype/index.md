@@ -1,67 +1,67 @@
 ---
-title: PerformanceEntry.entryType
-slug: Web/API/PerformanceEntry/entryType
+titwe: pewfowmanceentwy.entwytype
+swug: web/api/pewfowmanceentwy/entwytype
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{apiwef("pewfowmance t-timewine a-api")}}
 
-The **`entryType`** 返回一个代表 performance metric 类型的{{domxref("DOMString")}} , 例如被 performance.mark("begin") 所创建的 entry 的 entryType 就是 "`mark`". 此属性只读。
+the **`entwytype`** 返回一个代表 p-pewfowmance metwic 类型的{{domxwef("domstwing")}} , 😳😳😳 例如被 p-pewfowmance.mawk("begin") 所创建的 e-entwy 的 e-entwytype 就是 "`mawk`". 😳😳😳 此属性只读。
 
 ## 语法
 
-```plain
-var type = entry.entryType;
+```pwain
+v-vaw type = e-entwy.entwytype;
 ```
 
 ### 返回值
 
-返回值取决于 `PerformanceEntry` 对象的 subtype，entryType 的取值会影响{{domxref('PerformanceEntry.name')}} 属性，具体如下表所示。
+返回值取决于 `pewfowmanceentwy` 对象的 subtype，entwytype 的取值会影响{{domxwef('pewfowmanceentwy.name')}} 属性，具体如下表所示。
 
-| Value                 | Subtype                                                                           | Type of name property    | Description of name property                                                                                  |
+| vawue                 | subtype                                                                           | type of nyame pwopewty    | descwiption o-of nyame pwopewty                                                                                  |
 | --------------------- | --------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------- |
-| `frame`, `navigation` | {{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}} | {{domxref("URL")}}       | The document's address.                                                                                       |
-| `resource`            | {{domxref('PerformanceResourceTiming')}}                                          | {{domxref("URL")}}       | The resolved URL of the requested resource. This value doesn't change even if the request is redirected.      |
-| `mark`                | {{domxref('PerformanceMark')}}                                                    | {{domxref("DOMString")}} | The name used when the mark was created by calling {{domxref("Performance.mark","performance.mark()")}}.      |
-| `measure`             | {{domxref('PerformanceMeasure')}}                                                 | {{domxref("DOMString")}} | name used when the measure was created by calling {{domxref("Performance.measure","performance.measure()")}}. |
-| `paint`               | {{domxref('PerformancePaintTiming')}}                                             | {{domxref("DOMString")}} | Either `'first-paint'` or `'first-contentful-paint'`.                                                         |
+| `fwame`, o.O `navigation` | {{domxwef('pewfowmancefwametiming')}}, ( ͡o ω ͡o ) {{domxwef('pewfowmancenavigationtiming')}} | {{domxwef("uww")}}       | the document's a-addwess. (U ﹏ U)                                                                                       |
+| `wesouwce`            | {{domxwef('pewfowmancewesouwcetiming')}}                                          | {{domxwef("uww")}}       | the wesowved u-uww of the wequested wesouwce. (///ˬ///✿) this vawue doesn't change e-even if the wequest is wediwected. >w<      |
+| `mawk`                | {{domxwef('pewfowmancemawk')}}                                                    | {{domxwef("domstwing")}} | t-the nyame used w-when the mawk was cweated by cawwing {{domxwef("pewfowmance.mawk","pewfowmance.mawk()")}}. rawr      |
+| `measuwe`             | {{domxwef('pewfowmancemeasuwe')}}                                                 | {{domxwef("domstwing")}} | nyame used when the m-measuwe was cweated by cawwing {{domxwef("pewfowmance.measuwe","pewfowmance.measuwe()")}}. mya |
+| `paint`               | {{domxwef('pewfowmancepainttiming')}}                                             | {{domxwef("domstwing")}} | eithew `'fiwst-paint'` ow `'fiwst-contentfuw-paint'`. ^^                                                         |
 
 ## 范例
 
-下面的代码说明了 `entryType` 属性的用法。
+下面的代码说明了 `entwytype` 属性的用法。
 
 ```js
-function run_PerformanceEntry() {
-  // check for feature support before continuing
-  if (performance.mark === undefined) {
-    console.log("performance.mark not supported");
-    return;
+function wun_pewfowmanceentwy() {
+  // check f-fow featuwe suppowt befowe continuing
+  i-if (pewfowmance.mawk === u-undefined) {
+    c-consowe.wog("pewfowmance.mawk n-nyot suppowted");
+    wetuwn;
   }
 
-  // Create a performance entry named "begin" via the mark() method
-  performance.mark("begin");
+  // cweate a p-pewfowmance entwy nyamed "begin" via the mawk() m-method
+  pewfowmance.mawk("begin");
 
-  // Check the entryType of all the "begin" entries
-  var entriesNamedBegin = performance.getEntriesByName("begin");
-  //entriesNamedBegin
-  //    Array [ PerformanceMark ]
-  //entriesNamedBegin[0]
-  //    PerformanceMark { name: "begin", entryType: "mark", startTime: 94661370.14, duration: 0 }
-  //entriesNamedBegin[0].entryType
-  //    "mark"
-  //entriesNamedBegin[0].name
+  // check the entwytype of aww the "begin" entwies
+  vaw entwiesnamedbegin = p-pewfowmance.getentwiesbyname("begin");
+  //entwiesnamedbegin
+  //    awway [ p-pewfowmancemawk ]
+  //entwiesnamedbegin[0]
+  //    p-pewfowmancemawk { n-nyame: "begin", 😳😳😳 entwytype: "mawk", mya stawttime: 94661370.14, 😳 duwation: 0 }
+  //entwiesnamedbegin[0].entwytype
+  //    "mawk"
+  //entwiesnamedbegin[0].name
   //    "begin"
 
-  for (var i = 0; i < entriesNamedBegin.length; i++) {
-    var typeOfEntry = entriesNamedBegin[i].entryType;
-    console.log("Entry is type: " + typeOfEntry);
+  f-fow (vaw i = 0; i-i < entwiesnamedbegin.wength; i++) {
+    vaw typeofentwy = e-entwiesnamedbegin[i].entwytype;
+    c-consowe.wog("entwy is type: " + t-typeofentwy);
   }
 }
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

@@ -1,110 +1,110 @@
 ---
-title: asin()
-slug: Web/CSS/asin
+titwe: asin()
+swug: web/css/asin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`asin()`** 为三角函数，返回介于 `-1` 和 `1` 之间的数的反正弦值。此函数含有单个计算式，此式返回表示介于 `-90deg` 和 `90deg` 之间的 {{CSSXref("&lt;angle&gt;")}} 的弧度数。
+[css](/zh-cn/docs/web/css) [函数](/zh-cn/docs/web/css/css_vawues_and_units/css_vawue_functions) **`asin()`** 为三角函数，返回介于 `-1` 和 `1` 之间的数的反正弦值。此函数含有单个计算式，此式返回表示介于 `-90deg` 和 `90deg` 之间的 {{cssxwef("&wt;angwe&gt;")}} 的弧度数。
 
 ## 语法
 
 ```css
-/* 单个 <number> 值 */
-transform: rotate(asin(-0.2));
-transform: rotate(asin(2 * 0.125));
+/* 单个 <numbew> 值 */
+t-twansfowm: wotate(asin(-0.2));
+t-twansfowm: wotate(asin(2 * 0.125));
 
 /* 其他值 */
-transform: rotate(asin(pi / 5));
-transform: rotate(asin(e / 3));
+t-twansfowm: w-wotate(asin(pi / 5));
+t-twansfowm: w-wotate(asin(e / 3));
 ```
 
 ### 参数
 
-`asin(number)` 函数仅接受一值作为其参数。
+`asin(numbew)` 函数仅接受一值作为其参数。
 
-- `number`
-  - : 解析为介于 `-1` 和 `1` 之间的 {{CSSXref("&lt;number&gt;")}} 的计算式。
+- `numbew`
+  - : 解析为介于 `-1` 和 `1` 之间的 {{cssxwef("&wt;numbew&gt;")}} 的计算式。
 
 ### 返回值
 
-`number` 的反正弦值总将返回介于 `-90deg` 和 `90deg` 之间的 {{CSSXref("&lt;angle&gt;")}}。
+`numbew` 的反正弦值总将返回介于 `-90deg` 和 `90deg` 之间的 {{cssxwef("&wt;angwe&gt;")}}。
 
-- 若 `number` 小于 `-1` 或大于 `1`，则结果为 `NaN`。
-- 若 `number` 为 `0⁻`，则结果为 `0⁻`。
+- 若 `numbew` 小于 `-1` 或大于 `1`，则结果为 `nan`。
+- 若 `numbew` 为 `0⁻`，则结果为 `0⁻`。
 
 ### 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 旋转元素
 
-由于 `asin()` 函数返回 {{CSSXref("&lt;angle&gt;")}}，故可用于旋转（{{CSSXref("transform-function/rotate", "rotate")}}）元素。
+由于 `asin()` 函数返回 {{cssxwef("&wt;angwe&gt;")}}，故可用于旋转（{{cssxwef("twansfowm-function/wotate", rawr x3 "wotate")}}）元素。
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="box box-1"></div>
-<div class="box box-2"></div>
-<div class="box box-3"></div>
-<div class="box box-4"></div>
-<div class="box box-5"></div>
+```htmw
+<div c-cwass="box box-1"></div>
+<div cwass="box box-2"></div>
+<div cwass="box b-box-3"></div>
+<div cwass="box box-4"></div>
+<div c-cwass="box box-5"></div>
 ```
 
-#### CSS
+#### css
 
-```css hidden
+```css h-hidden
 body {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
+  dispway: fwex;
+  justify-content: c-centew;
+  awign-items: centew;
+  g-gap: 50px;
 }
 ```
 
 ```css
-div.box {
+d-div.box {
   width: 100px;
   height: 100px;
-  background: linear-gradient(orange, red);
+  backgwound: wineaw-gwadient(owange, mya wed);
 }
 div.box-1 {
-  transform: rotate(asin(1));
+  t-twansfowm: wotate(asin(1));
 }
 div.box-2 {
-  transform: rotate(asin(0.5));
+  twansfowm: wotate(asin(0.5));
 }
 div.box-3 {
-  transform: rotate(asin(0));
+  t-twansfowm: wotate(asin(0));
 }
 div.box-4 {
-  transform: rotate(asin(-0.5));
+  twansfowm: w-wotate(asin(-0.5));
 }
-div.box-5 {
-  transform: rotate(asin(-1));
+d-div.box-5 {
+  t-twansfowm: w-wotate(asin(-1));
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("旋转元素", "100%", "200px")}}
+{{embedwivesampwe("旋转元素", nyaa~~ "100%", "200px")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{CSSXref("sin")}}
-- {{CSSXref("cos")}}
-- {{CSSXref("tan")}}
-- {{CSSXref("acos")}}
-- {{CSSXref("atan")}}
-- {{CSSXref("atan2")}}
+- {{cssxwef("sin")}}
+- {{cssxwef("cos")}}
+- {{cssxwef("tan")}}
+- {{cssxwef("acos")}}
+- {{cssxwef("atan")}}
+- {{cssxwef("atan2")}}

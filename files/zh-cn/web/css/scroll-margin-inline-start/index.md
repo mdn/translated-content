@@ -1,104 +1,104 @@
 ---
-title: scroll-margin-inline-start
-slug: Web/CSS/scroll-margin-inline-start
+titwe: scwoww-mawgin-inwine-stawt
+swug: web/css/scwoww-mawgin-inwine-stawt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`scroll-margin-inline-start`** 属性定义了滚动吸附区域的行首外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
+**`scwoww-mawgin-inwine-stawt`** 属性定义了滚动吸附区域的行首外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
 
-{{InteractiveExample("CSS Demo: scroll-margin-inline-start")}}
+{{intewactiveexampwe("css d-demo: s-scwoww-mawgin-inwine-stawt")}}
 
-```css interactive-example-choice
-scroll-margin-inline-start: 0;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin-inwine-stawt: 0;
 ```
 
-```css interactive-example-choice
-scroll-margin-inline-start: 20px;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin-inwine-stawt: 20px;
 ```
 
-```css interactive-example-choice
-scroll-margin-inline-start: 2em;
+```css i-intewactive-exampwe-choice
+s-scwoww-mawgin-inwine-stawt: 2em;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="scroller">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="scwowwew">
     <div>1</div>
-    <div id="example-element">2</div>
+    <div id="exampwe-ewement">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div c-cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  flex-wrap: wrap;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  fwex-wwap: wwap;
 }
 
-.default-example .info {
-  width: 100%;
+.defauwt-exampwe .info {
+  w-width: 100%;
   padding: 0.5em 0;
-  font-size: 90%;
+  f-font-size: 90%;
 }
 
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: weft;
   width: 250px;
   height: 250px;
-  overflow-x: scroll;
-  display: flex;
-  box-sizing: border-box;
-  border: 1px solid black;
-  scroll-snap-type: x mandatory;
+  ovewfwow-x: scwoww;
+  d-dispway: fwex;
+  box-sizing: b-bowdew-box;
+  b-bowdew: 1px sowid bwack;
+  scwoww-snap-type: x mandatowy;
 }
 
-.scroller > div {
-  flex: 0 0 250px;
+.scwowwew > div {
+  f-fwex: 0 0 250px;
   width: 250px;
-  background-color: rebeccapurple;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  backgwound-cowow: webeccapuwpwe;
+  cowow: #fff;
+  f-font-size: 30px;
+  dispway: f-fwex;
+  awign-items: c-centew;
+  j-justify-content: c-centew;
+  scwoww-snap-awign: stawt;
 }
 
-.scroller > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+.scwowwew > div:nth-chiwd(even) {
+  b-backgwound-cowow: #fff;
+  cowow: webeccapuwpwe;
 }
 ```
 
 ## 语法
 
 ```css
-/* <length> 值 */
-scroll-margin-inline-start: 10px;
-scroll-margin-inline-start: 1em;
+/* <wength> 值 */
+scwoww-mawgin-inwine-stawt: 10px;
+s-scwoww-mawgin-inwine-stawt: 1em;
 
 /* 全局值 */
-scroll-margin-inline-start: inherit;
-scroll-margin-inline-start: initial;
-scroll-margin-inline-start: revert;
-scroll-margin-inline-start: revert-layer;
-scroll-margin-inline-start: unset;
+scwoww-mawgin-inwine-stawt: inhewit;
+scwoww-mawgin-inwine-stawt: initiaw;
+scwoww-mawgin-inwine-stawt: wevewt;
+scwoww-mawgin-inwine-stawt: w-wevewt-wayew;
+scwoww-mawgin-inwine-stawt: u-unset;
 ```
 
 ### 取值
 
-- {{CSSXref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 滚动容器的行首外边距。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
@@ -108,12 +108,12 @@ scroll-margin-inline-start: unset;
 
 此处的目标为创建四个横向滚动区块，其中第二个和第三个吸附至指定位置——靠近但不恰好位于每个区块的左侧。
 
-#### HTML
+#### h-htmw
 
-表示这些区块的 HTML 非常简单：
+表示这些区块的 htmw 非常简单：
 
-```html
-<div class="scroller">
+```htmw
+<div c-cwass="scwowwew">
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -121,77 +121,77 @@ scroll-margin-inline-start: unset;
 </div>
 ```
 
-#### CSS
+#### css
 
-一起来过一遍 CSS。外层容器有如下样式：
+一起来过一遍 css。外层容器有如下样式：
 
 ```css
-.scroller {
-  text-align: left;
+.scwowwew {
+  text-awign: w-weft;
   width: 250px;
-  height: 250px;
-  overflow-x: scroll;
-  display: flex;
-  box-sizing: border-box;
-  border: 1px solid #000;
-  scroll-snap-type: x mandatory;
+  h-height: 250px;
+  ovewfwow-x: s-scwoww;
+  dispway: f-fwex;
+  box-sizing: bowdew-box;
+  b-bowdew: 1px sowid #000;
+  s-scwoww-snap-type: x mandatowy;
 }
 ```
 
-与滚动吸附相关的主要部分为 `overflow-x: scroll`——确保内容可滚动且不被隐藏——以及 `scroll-snap-type: x mandatory`——要求必须沿横轴出现滚动吸附，且滚动总将止于吸附点。
+与滚动吸附相关的主要部分为 `ovewfwow-x: scwoww`——确保内容可滚动且不被隐藏——以及 `scwoww-snap-type: x mandatowy`——要求必须沿横轴出现滚动吸附，且滚动总将止于吸附点。
 
 子元素有如下样式：
 
 ```css
-.scroller > div {
-  flex: 0 0 250px;
+.scwowwew > div {
+  f-fwex: 0 0 250px;
   width: 250px;
-  background-color: #663399;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  b-backgwound-cowow: #663399;
+  cowow: #fff;
+  f-font-size: 30px;
+  d-dispway: fwex;
+  awign-items: centew;
+  justify-content: centew;
+  scwoww-snap-awign: stawt;
 }
 
-.scroller > div:nth-child(2n) {
-  background-color: #fff;
-  color: #663399;
+.scwowwew > div:nth-chiwd(2n) {
+  backgwound-cowow: #fff;
+  c-cowow: #663399;
 }
 ```
 
-此处最相关的部分为 `scroll-snap-align: start`——指定左侧的边（即此情形中沿 x 轴的“首侧”）为吸附点。
+此处最相关的部分为 `scwoww-snap-awign: s-stawt`——指定左侧的边（即此情形中沿 x 轴的“首侧”）为吸附点。
 
 最后指定滚动外边距的值，为第二个和第三个子元素指定不同的值：
 
 ```css
-.scroller > div:nth-child(2) {
-  scroll-margin-inline-start: 1rem;
+.scwowwew > d-div:nth-chiwd(2) {
+  s-scwoww-mawgin-inwine-stawt: 1wem;
 }
 
-.scroller > div:nth-child(3) {
-  scroll-margin-inline-start: 2rem;
+.scwowwew > d-div:nth-chiwd(3) {
+  scwoww-mawgin-inwine-stawt: 2wem;
 }
 ```
 
-这意味着当滚动过中间的子元素后，滚动将吸附至第二个 `<div>` 行首边的 `1rem` 外处，及第三个 `<div>` 行首边的 `2rems` 外处。
+这意味着当滚动过中间的子元素后，滚动将吸附至第二个 `<div>` 行首边的 `1wem` 外处，及第三个 `<div>` 行首边的 `2wems` 外处。
 
 #### 结果
 
 请自行尝试：
 
-{{EmbedLiveSample("简单演示", "100%", 300)}}
+{{embedwivesampwe("简单演示", ^^ "100%", 300)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 滚动吸附](/zh-CN/docs/Web/CSS/CSS_scroll_snap)
-- [用 CSS 滚动吸附明确控制滚动](https://web.developers.google.cn/articles/css-scroll-snap)
+- [css 滚动吸附](/zh-cn/docs/web/css/css_scwoww_snap)
+- [用 css 滚动吸附明确控制滚动](https://web.devewopews.googwe.cn/awticwes/css-scwoww-snap)

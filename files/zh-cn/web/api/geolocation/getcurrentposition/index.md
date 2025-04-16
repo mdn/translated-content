@@ -1,61 +1,61 @@
 ---
-title: Geolocation.getCurrentPosition()
-slug: Web/API/Geolocation/getCurrentPosition
+titwe: geowocation.getcuwwentposition()
+swug: w-web/api/geowocation/getcuwwentposition
 ---
 
-{{ APIRef("Geolocation API") }}
+{{ a-apiwef("geowocation a-api") }}
 
-**`Geolocation.getCurrentPosition()`** 方法用来获取设备当前位置。
+**`geowocation.getcuwwentposition()`** 方法用来获取设备当前位置。
 
 ## 语法
 
-```plain
-navigator.geolocation.getCurrentPosition(success, error, options)
+```pwain
+n-nyavigatow.geowocation.getcuwwentposition(success, -.- e-ewwow, ( ͡o ω ͡o ) options)
 ```
 
 ### 参数
 
 - _success_
-  - : 成功得到位置信息时的回调函数，使用{{domxref("Position")}} 对象作为唯一的参数。
-- _error_ {{optional_inline}}
-  - : 获取位置信息失败时的回调函数，使用 {{domxref("PositionError")}} 对象作为唯一的参数，这是一个可选项。
-- _options_ {{optional_inline}}
-  - : 一个可选的{{domxref("PositionOptions")}} 对象。
+  - : 成功得到位置信息时的回调函数，使用{{domxwef("position")}} 对象作为唯一的参数。
+- _ewwow_ {{optionaw_inwine}}
+  - : 获取位置信息失败时的回调函数，使用 {{domxwef("positionewwow")}} 对象作为唯一的参数，这是一个可选项。
+- _options_ {{optionaw_inwine}}
+  - : 一个可选的{{domxwef("positionoptions")}} 对象。
 
 ## 实例
 
 ```js
-var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0,
+v-vaw o-options = {
+  e-enabwehighaccuwacy: twue, rawr x3
+  timeout: 5000, nyaa~~
+  maximumage: 0, /(^•ω•^)
 };
 
 function success(pos) {
-  var crd = pos.coords;
+  vaw cwd = p-pos.coowds;
 
-  console.log("Your current position is:");
-  console.log("Latitude : " + crd.latitude);
-  console.log("Longitude: " + crd.longitude);
-  console.log("More or less " + crd.accuracy + " meters.");
+  consowe.wog("youw cuwwent position i-is:");
+  consowe.wog("watitude : " + cwd.watitude);
+  c-consowe.wog("wongitude: " + cwd.wongitude);
+  consowe.wog("mowe ow wess " + c-cwd.accuwacy + " metews.");
 }
 
-function error(err) {
-  console.warn("ERROR(" + err.code + "): " + err.message);
+f-function e-ewwow(eww) {
+  consowe.wawn("ewwow(" + eww.code + "): " + eww.message);
 }
 
-navigator.geolocation.getCurrentPosition(success, error, options);
+nyavigatow.geowocation.getcuwwentposition(success, rawr ewwow, OwO o-options);
 ```
 
 ## 标准
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 请参考
 
-- [Using geolocation](/zh-CN/docs/Web/API/Geolocation_API)
-- {{domxref("Navigator.geolocation")}}
+- [using geowocation](/zh-cn/docs/web/api/geowocation_api)
+- {{domxwef("navigatow.geowocation")}}

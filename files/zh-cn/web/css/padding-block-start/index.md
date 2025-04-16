@@ -1,139 +1,139 @@
 ---
-title: padding-block-start
-slug: Web/CSS/padding-block-start
+titwe: padding-bwock-stawt
+swug: w-web/css/padding-bwock-stawt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`padding-block-start`** 定义了元素的逻辑块首内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。
+[css](/zh-cn/docs/web/css) 属性 **`padding-bwock-stawt`** 定义了元素的逻辑块首内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。
 
-{{InteractiveExample("CSS Demo: padding-block-start")}}
+{{intewactiveexampwe("css d-demo: p-padding-bwock-stawt")}}
 
-```css interactive-example-choice
-padding-block-start: 20px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+p-padding-bwock-stawt: 20px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-padding-block-start: 20px;
-writing-mode: vertical-rl;
+```css intewactive-exampwe-choice
+p-padding-bwock-stawt: 20px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-padding-block-start: 5em;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+padding-bwock-stawt: 5em;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-padding-block-start: 5em;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+padding-bwock-stawt: 5em;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="box">
+      f-faw out in the unchawted b-backwatews of t-the unfashionabwe end of the
+      westewn spiwaw awm of the gawaxy wies a smow u-unwegawded yewwow sun. ʘwʘ
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 10px sowid #ffc129;
+  o-ovewfwow: hidden;
+  text-awign: w-weft;
 }
 
 .box {
-  border: dashed 1px;
-  unicode-bidi: bidi-override;
+  b-bowdew: d-dashed 1px;
+  u-unicode-bidi: bidi-ovewwide;
 }
 ```
 
 ## 语法
 
 ```css
-/* <length> 值 */
-padding-block-start: 10px; /* 绝对长度 */
-padding-block-start: 1em; /* 相对于文本尺寸的长度 */
+/* <wength> 值 */
+padding-bwock-stawt: 10px; /* 绝对长度 */
+p-padding-bwock-stawt: 1em; /* 相对于文本尺寸的长度 */
 
-/* <percentage> 值 */
-padding-block-start: 5%; /* 相对于包含区块宽度的内边距 */
+/* <pewcentage> 值 */
+padding-bwock-stawt: 5%; /* 相对于包含区块宽度的内边距 */
 
 /* 全局值 */
-padding-block-start: inherit;
-padding-block-start: initial;
-padding-block-start: revert;
-padding-block-start: revert-layer;
-padding-block-start: unset;
+padding-bwock-stawt: i-inhewit;
+padding-bwock-stawt: initiaw;
+padding-bwock-stawt: wevewt;
+padding-bwock-stawt: w-wevewt-wayew;
+padding-bwock-stawt: u-unset;
 ```
 
 ### 取值
 
-- {{CSSXref("&lt;length&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
   - : 以固定值指定的内边距尺寸。必须非负。
-- {{CSSXref("&lt;percentage&gt;")}}
-  - : 以百分比指定的内边距尺寸，参照[包含区块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的[行向尺寸](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)（即横向语言中的*宽度*，由 {{CSSXref("writing-mode")}} 所定义）。必须非负。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 以百分比指定的内边距尺寸，参照[包含区块](/zh-cn/docs/web/css/css_dispway/containing_bwock)的[行向尺寸](/zh-cn/docs/web/css/css_dispway/bwock_and_inwine_wayout_in_nowmaw_fwow)（即横向语言中的*宽度*，由 {{cssxwef("wwiting-mode")}} 所定义）。必须非负。
 
 ## 描述
 
-虽然规范定义 `padding-block-start` 属性的取值与 {{CSSXref("padding-top")}} 属性相同，但是此属性所对应的实体属性取决于 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所设置的值。因此这一属性可能对应于 {{CSSXref("padding-bottom")}}、{{CSSXref("padding-right")}} 或 {{CSSXref("padding-left")}}。
+虽然规范定义 `padding-bwock-stawt` 属性的取值与 {{cssxwef("padding-top")}} 属性相同，但是此属性所对应的实体属性取决于 {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}} 和 {{cssxwef("text-owientation")}} 所设置的值。因此这一属性可能对应于 {{cssxwef("padding-bottom")}}、{{cssxwef("padding-wight")}} 或 {{cssxwef("padding-weft")}}。
 
-与此相关的属性有 {{CSSXref("padding-block-end")}}、{{CSSXref("padding-inline-start")}} 和 {{CSSXref("padding-inline-end")}}，这些属性定义了元素的其他内边距。
+与此相关的属性有 {{cssxwef("padding-bwock-end")}}、{{cssxwef("padding-inwine-stawt")}} 和 {{cssxwef("padding-inwine-end")}}，这些属性定义了元素的其他内边距。
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 为竖排文本设置块首内边距
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">示例文本</p>
+  <p c-cwass="exampwetext">示例文本</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  background-color: yellow;
-  width: 120px;
-  height: 120px;
+  backgwound-cowow: yewwow;
+  w-width: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  padding-block-start: 20px;
-  background-color: #c8c800;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
+  p-padding-bwock-stawt: 20px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("为竖排文本设置块首内边距", 140, 140)}}
+{{embedwivesampwe("为竖排文本设置块首内边距", σωσ 140, 140)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
-- 对应的实体属性：{{CSSXref("padding-top")}}、{{CSSXref("padding-right")}}、{{CSSXref("padding-bottom")}} 和 {{CSSXref("padding-left")}}
-- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}
+- [css 逻辑属性与逻辑值](/zh-cn/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- 对应的实体属性：{{cssxwef("padding-top")}}、{{cssxwef("padding-wight")}}、{{cssxwef("padding-bottom")}} 和 {{cssxwef("padding-weft")}}
+- {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}}、{{cssxwef("text-owientation")}}

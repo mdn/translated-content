@@ -1,53 +1,53 @@
 ---
-title: translate()
-slug: Web/CSS/transform-function/translate
+titwe: twanswate()
+swug: web/css/twansfowm-function/twanswate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`translate()`** 这个 [CSS](/zh-CN/docs/Web/CSS) 函数在水平和/或垂直方向上重新定位元素。其结果是 {{cssxref("&lt;transform-function&gt;")}} 类型。
+**`twanswate()`** 这个 [css](/zh-cn/docs/web/css) 函数在水平和/或垂直方向上重新定位元素。其结果是 {{cssxwef("&wt;twansfowm-function&gt;")}} 类型。
 
-{{InteractiveExample("CSS Demo: translate()")}}
+{{intewactiveexampwe("css d-demo: t-twanswate()")}}
 
-```css interactive-example-choice
-transform: translate(0);
+```css i-intewactive-exampwe-choice
+t-twansfowm: t-twanswate(0);
 ```
 
-```css interactive-example-choice
-transform: translate(42px, 18px);
+```css i-intewactive-exampwe-choice
+t-twansfowm: t-twanswate(42px, 18px);
 ```
 
-```css interactive-example-choice
-transform: translate(-2.1rem, -2ex);
+```css intewactive-exampwe-choice
+twansfowm: twanswate(-2.1wem, o.O -2ex);
 ```
 
-```css interactive-example-choice
-transform: translate(3ch, 3mm);
+```css intewactive-exampwe-choice
+twansfowm: t-twanswate(3ch, /(^•ω•^) 3mm);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="static-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    c-cwass="twansition-aww"
+    id="static-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-```css interactive-example
-#static-element {
-  opacity: 0.4;
-  position: absolute;
+```css i-intewactive-exampwe
+#static-ewement {
+  o-opacity: 0.4;
+  position: absowute;
 }
 
-#example-element {
-  position: absolute;
+#exampwe-ewement {
+  position: absowute;
 }
 ```
 
@@ -56,158 +56,158 @@ transform: translate(3ch, 3mm);
 ## 语法
 
 ```css
-/* Single <length-percentage> values */
-transform: translate(200px);
-transform: translate(50%);
+/* singwe <wength-pewcentage> v-vawues */
+twansfowm: twanswate(200px);
+twansfowm: twanswate(50%);
 
-/* Double <length-percentage> values */
-transform: translate(100px, 200px);
-transform: translate(100px, 50%);
-transform: translate(30%, 200px);
-transform: translate(30%, 50%);
+/* doubwe <wength-pewcentage> v-vawues */
+twansfowm: twanswate(100px, nyaa~~ 200px);
+t-twansfowm: twanswate(100px, nyaa~~ 50%);
+t-twansfowm: twanswate(30%, 200px);
+t-twansfowm: twanswate(30%, :3 50%);
 ```
 
 ### 值
 
-- 单个 `<length-percentage>` 作为参数
-  - : 该值是 {{cssxref("&lt;length&gt;")}} 或者 {{cssxref("&lt;percentage&gt;")}} 代表翻译向量的横坐标 (horizontal, x-coordinate) . 而向量的纵坐标 (vertical, y-coordinate) 会被默认为 `0`. 例如，`translate(2)` 等价于 `translate(2, 0)` 。里面还可以填百分比值，百分比值是指 {{cssxref("transform-box")}} 属性定义的参考框的宽度。
-- 参数是两个 `<length-percentage>` 构成
-  - : 此值描述两个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 值，分别代表翻译的横坐标 (x-coordinate) 和纵坐标 (y-coordinate) 向量。百分比作为第一个值表示宽度，第二个部分表示由 {{cssxref("transform-box")}} 属性定义的参考框的高度。
+- 单个 `<wength-pewcentage>` 作为参数
+  - : 该值是 {{cssxwef("&wt;wength&gt;")}} 或者 {{cssxwef("&wt;pewcentage&gt;")}} 代表翻译向量的横坐标 (howizontaw, 😳😳😳 x-x-coowdinate) . (˘ω˘) 而向量的纵坐标 (vewticaw, ^^ y-coowdinate) 会被默认为 `0`. :3 例如，`twanswate(2)` 等价于 `twanswate(2, -.- 0)` 。里面还可以填百分比值，百分比值是指 {{cssxwef("twansfowm-box")}} 属性定义的参考框的宽度。
+- 参数是两个 `<wength-pewcentage>` 构成
+  - : 此值描述两个 {{cssxwef("&wt;wength&gt;")}} 或 {{cssxwef("&wt;pewcentage&gt;")}} 值，分别代表翻译的横坐标 (x-coowdinate) 和纵坐标 (y-coowdinate) 向量。百分比作为第一个值表示宽度，第二个部分表示由 {{cssxwef("twansfowm-box")}} 属性定义的参考框的高度。
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-      <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-      <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-      <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th s-scope="cow">cawtesian coowdinates on ℝ<sup>2</sup></th>
+      <th scope="cow">homogeneous c-coowdinates on ℝℙ<sup>2</sup></th>
+      <th scope="cow">cawtesian coowdinates on ℝ<sup>3</sup></th>
+      <th scope="cow">homogeneous c-coowdinates on ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" w-wowspan="2">
         <p>平移不是 ℝ<sup>2</sup> 中的线性变换，因此不能使用矩阵来表示。</p>
       </td>
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>tx</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>tx</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>[1 0 0 1 tx ty]</code></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### 形式语法
 
 ```css
-translate({{cssxref("&lt;length-percentage&gt;")}}, {{cssxref("&lt;length-percentage&gt;")}}?)
+twanswate({{cssxwef("&wt;wength-pewcentage&gt;")}}, 😳 {{cssxwef("&wt;wength-pewcentage&gt;")}}?)
 ```
 
 ## 示例
 
 ### 使用单个轴平移
 
-#### HTML
+#### h-htmw
 
-```html
-<div>Static</div>
-<div class="moved">Moved</div>
-<div>Static</div>
+```htmw
+<div>static</div>
+<div cwass="moved">moved</div>
+<div>static</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
   width: 60px;
-  height: 60px;
-  background-color: skyblue;
+  h-height: 60px;
+  b-backgwound-cowow: skybwue;
 }
 
 .moved {
-  transform: translate(
+  t-twansfowm: twanswate(
     10px
-  ); /* Equal to: translateX(10px) or translate(10px, 0) */
-  background-color: pink;
+  ); /* equaw to: t-twanswatex(10px) ow twanswate(10px, mya 0) */
+  backgwound-cowow: p-pink;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("使用单个轴平移", 250, 250)}}
+{{embedwivesampwe("使用单个轴平移", (˘ω˘) 250, 250)}}
 
 ### y 轴和 x 轴都平移
 
-#### HTML
+#### h-htmw
 
-```html
-<div>Static</div>
-<div class="moved">Moved</div>
-<div>Static</div>
+```htmw
+<div>static</div>
+<div cwass="moved">moved</div>
+<div>static</div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
-  width: 60px;
+d-div {
+  w-width: 60px;
   height: 60px;
-  background-color: skyblue;
+  backgwound-cowow: skybwue;
 }
 
 .moved {
-  transform: translate(10px, 10px);
-  background-color: pink;
+  twansfowm: twanswate(10px, >_< 10px);
+  backgwound-cowow: pink;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("y 轴和 x 轴都平移", 250, 250)}}
+{{embedwivesampwe("y 轴和 x-x 轴都平移", -.- 250, 250)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}

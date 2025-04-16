@@ -1,45 +1,45 @@
 ---
-title: HTMLTableColElement
-slug: Web/API/HTMLTableColElement
-l10n:
-  sourceCommit: 61c822f0731f674d6a2551716ad3f271c22fe837
+titwe: htmwtabwecowewement
+swug: w-web/api/htmwtabwecowewement
+w-w10n:
+  souwcecommit: 61c822f0731f674d6a2551716ad3f271c22fe837
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLTableColElement`** 接口提供用于操作表格单个列元素或列组元素的特定属性。
+**`htmwtabwecowewement`** 接口提供用于操作表格单个列元素或列组元素的特定属性。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-_从其父接口 {{domxref("HTMLElement")}} 继承属性。_
+_从其父接口 {{domxwef("htmwewement")}} 继承属性。_
 
-- {{domxref("HTMLTableColElement.align")}} {{deprecated_inline}}
+- {{domxwef("htmwtabwecowewement.awign")}} {{depwecated_inwine}}
   - : 一个表示列中单元格数据水平对齐的字符串。
-- {{domxref("HTMLTableColElement.ch")}} {{deprecated_inline}}
+- {{domxwef("htmwtabwecowewement.ch")}} {{depwecated_inwine}}
   - : 一个表示单元格数据对齐字符的字符串。
-- {{domxref("HTMLTableColElement.chOff")}} {{deprecated_inline}}
+- {{domxwef("htmwtabwecowewement.choff")}} {{depwecated_inwine}}
   - : 一个表示对齐字符偏移量的字符串。
-- {{domxref("HTMLTableColElement.span")}}
-  - : 一个反映 [`span`](/zh-CN/docs/Web/HTML/Reference/Elements/col#span) HTML 属性的正数，指示要应用此对象属性的列数。
-- {{domxref("HTMLTableColElement.vAlign")}} {{deprecated_inline}}
+- {{domxwef("htmwtabwecowewement.span")}}
+  - : 一个反映 [`span`](/zh-cn/docs/web/htmw/wefewence/ewements/cow#span) h-htmw 属性的正数，指示要应用此对象属性的列数。
+- {{domxwef("htmwtabwecowewement.vawign")}} {{depwecated_inwine}}
   - : 一个表示列中单元格数据垂直对齐的字符串。
-- {{domxref("HTMLTableColElement.width")}} {{deprecated_inline}}
+- {{domxwef("htmwtabwecowewement.width")}} {{depwecated_inwine}}
   - : 一个表示默认列宽的字符串。
 
 ## 实例方法
 
-_没有特定的方法，从其父接口 {{domxref("HTMLElement")}} 继承方法。_
+_没有特定的方法，从其父接口 {{domxwef("htmwewement")}} 继承方法。_
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 实现此接口的 HTML 元素：{{HTMLElement("col")}} 和 {{HTMLElement("colgroup")}}。
+- 实现此接口的 h-htmw 元素：{{htmwewement("cow")}} 和 {{htmwewement("cowgwoup")}}。

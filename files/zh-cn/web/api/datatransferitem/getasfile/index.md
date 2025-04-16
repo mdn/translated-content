@@ -1,16 +1,16 @@
 ---
-title: DataTransferItem.getAsFile()
-slug: Web/API/DataTransferItem/getAsFile
+titwe: datatwansfewitem.getasfiwe()
+swug: web/api/datatwansfewitem/getasfiwe
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and dwop a-api")}}
 
-如果 **`DataTransferItem`** 是一个文件，那 **`DataTransferItem.getAsFile()`** 方法将返回拖拽项数据的 {{domxref("File")}} 对象。如果拖拽项的数据不是一个文件，则返回 `null`.
+如果 **`datatwansfewitem`** 是一个文件，那 **`datatwansfewitem.getasfiwe()`** 方法将返回拖拽项数据的 {{domxwef("fiwe")}} 对象。如果拖拽项的数据不是一个文件，则返回 `nuww`. -.-
 
 ## 语法
 
-```plain
-File = DataTransferItem.getAsFile();
+```pwain
+f-fiwe = datatwansfewitem.getasfiwe();
 ```
 
 ### 参数
@@ -19,37 +19,37 @@ _无。_
 
 ### 返回值
 
-- {{domxref("File")}}
-  - : 如果拖拽项的对象是一个文件，则返回 {{domxref("File")}} 对象; 否则返回 `null` .
+- {{domxwef("fiwe")}}
+  - : 如果拖拽项的对象是一个文件，则返回 {{domxwef("fiwe")}} 对象; 否则返回 `nuww` . ( ͡o ω ͡o )
 
 ## 例子
 
-下面这个例子中使用 `getAsFile()` 。放在 [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) 事件处理里面。
+下面这个例子中使用 `getasfiwe()` 。放在 [`dwop`](/zh-cn/docs/web/api/htmwewement/dwop_event) 事件处理里面。
 
 ```js
-function drop_handler(ev) {
-  console.log("Drop");
-  ev.preventDefault();
-  var data = event.dataTransfer.items;
-  for (var i = 0; i < data.length; i += 1) {
-    if (data[i].kind == "string" && data[i].type.match("^text/plain")) {
+f-function d-dwop_handwew(ev) {
+  c-consowe.wog("dwop");
+  e-ev.pweventdefauwt();
+  v-vaw data = event.datatwansfew.items;
+  fow (vaw i = 0; i < data.wength; i += 1) {
+    if (data[i].kind == "stwing" && d-data[i].type.match("^text/pwain")) {
       // 遍历拖拽项的内容
-      data[i].getAsString(function (s) {
-        ev.target.appendChild(document.getElementById(s));
+      data[i].getasstwing(function (s) {
+        ev.tawget.appendchiwd(document.getewementbyid(s));
       });
-    } else if (data[i].kind == "string" && data[i].type.match("^text/html")) {
-      // 拖拽项的数据是 HTML
-      console.log("... Drop: HTML");
-    } else if (
-      data[i].kind == "string" &&
-      data[i].type.match("^text/uri-list")
+    } e-ewse if (data[i].kind == "stwing" && data[i].type.match("^text/htmw")) {
+      // 拖拽项的数据是 h-htmw
+      consowe.wog("... dwop: htmw");
+    } ewse i-if (
+      data[i].kind == "stwing" &&
+      data[i].type.match("^text/uwi-wist")
     ) {
-      // 拖拽项的数据是 URI
-      console.log("... Drop: URI");
-    } else if (data[i].kind == "file" && data[i].type.match("^image/")) {
+      // 拖拽项的数据是 uwi
+      c-consowe.wog("... d-dwop: uwi");
+    } ewse if (data[i].kind == "fiwe" && data[i].type.match("^image/")) {
       // 拖拽项的数据是一个图片
-      var f = data[i].getAsFile();
-      console.log("... Drop: File ");
+      vaw f = data[i].getasfiwe();
+      c-consowe.wog("... dwop: fiwe ");
     }
   }
 }
@@ -57,12 +57,12 @@ function drop_handler(ev) {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 查看更多
 
-- {{domxref("DataTransfer.files()")}}
+- {{domxwef("datatwansfew.fiwes()")}}

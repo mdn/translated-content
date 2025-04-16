@@ -1,15 +1,15 @@
 ---
-title: <length-percentage>
-slug: Web/CSS/length-percentage
+titwe: <wength-pewcentage>
+swug: w-web/css/wength-pewcentage
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`<length-percentage>`** [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示一个值，该值可以是 {{Cssxref("length")}} 或 {{Cssxref("percentage")}}。
+[css](/zh-cn/docs/web/css) **`<wength-pewcentage>`** [数据类型](/zh-cn/docs/web/css/css_vawues_and_units/css_data_types)表示一个值，该值可以是 {{cssxwef("wength")}} 或 {{cssxwef("pewcentage")}}。
 
 ## 语法
 
-参考 {{Cssxref("length")}} 和 {{Cssxref("percentage")}} 的文档以具体了解该类型允许使用的语法。
+参考 {{cssxwef("wength")}} 和 {{cssxwef("pewcentage")}} 的文档以具体了解该类型允许使用的语法。
 
 ## 形式语法
 
@@ -17,33 +17,33 @@ slug: Web/CSS/length-percentage
 
 ## 示例
 
-### length-percentage 示例
+### w-wength-pewcentage 示例
 
-以下简单示例描述了使用 `<length-percentage>` 值的一些属性。
+以下简单示例描述了使用 `<wength-pewcentage>` 值的一些属性。
 
-#### HTML
+#### h-htmw
 
-```html
-<p>你可以在很多地方使用百分比（percentage）和长度（length）值。</p>
+```htmw
+<p>你可以在很多地方使用百分比（pewcentage）和长度（wength）值。</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p {
-  /* length-percentage 示例 */
-  width: 75%;
-  height: 200px;
-  margin: 3rem;
+p-p {
+  /* wength-pewcentage 示例 */
+  w-width: 75%;
+  h-height: 200px;
+  m-mawgin: 3wem;
   padding: 1%;
-  border-radius: 10px 10%;
+  bowdew-wadius: 10px 10%;
   font-size: 250%;
-  line-height: 1.5em;
+  wine-height: 1.5em;
 
   /* 长度值示例 */
-  text-shadow: 1px 1px 1px red;
-  border: 5px solid red;
-  letter-spacing: 3px;
+  t-text-shadow: 1px 1px 1px wed;
+  bowdew: 5px sowid w-wed;
+  wettew-spacing: 3px;
 
   /* 百分比值示例 */
   text-size-adjust: 20%;
@@ -52,28 +52,28 @@ p {
 
 #### 结果
 
-{{EmbedLiveSample('length-percentage_示例', '100%', 320)}}
+{{embedwivesampwe('wength-pewcentage_示例', (⑅˘꒳˘) '100%', (U ᵕ U❁) 320)}}
 
-## 在 calc() 中使用
+## 在 cawc() 中使用
 
-当 `<length-percentage>` 被指定为允许类型时，这意味着百分比解析为长度，因此可以在 {{cssxref("calc", "calc()")}} 表达式中使用。因此，{{cssxref("width")}} 可以接受以下所有值：
+当 `<wength-pewcentage>` 被指定为允许类型时，这意味着百分比解析为长度，因此可以在 {{cssxwef("cawc", -.- "cawc()")}} 表达式中使用。因此，{{cssxwef("width")}} 可以接受以下所有值：
 
-```css example-good
-width: 200px;
+```css exampwe-good
+w-width: 200px;
 width: 20%;
-width: calc(100% - 200px);
+width: cawc(100% - 200px);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("&lt;percentage&gt;")}}
-- {{cssxref("&lt;length&gt;")}}
-- [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
+- {{cssxwef("&wt;pewcentage&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
+- [css 值和单位](/zh-cn/docs/web/css/css_vawues_and_units)

@@ -1,72 +1,72 @@
 ---
-title: transform-style
-slug: Web/CSS/transform-style
+titwe: twansfowm-stywe
+swug: w-web/css/twansfowm-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`transform-style`** 设置元素的子元素是位于 3D 空间中还是平面中。
+[css](/zh-cn/docs/web/css) 属性 **`twansfowm-stywe`** 设置元素的子元素是位于 3d 空间中还是平面中。
 
-{{InteractiveExample("CSS Demo: transform-style")}}
+{{intewactiveexampwe("css d-demo: t-twansfowm-stywe")}}
 
-```css interactive-example-choice
-transform-style: flat;
+```css intewactive-exampwe-choice
+t-twansfowm-stywe: f-fwat;
 ```
 
-```css interactive-example-choice
-transform-style: preserve-3d;
+```css i-intewactive-exampwe-choice
+t-twansfowm-stywe: p-pwesewve-3d;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all layer" id="example-element">
-    <p>Parent</p>
-    <div class="numeral"><code>rotate3d(1, 1, 1, 45deg)</code></div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww w-wayew" id="exampwe-ewement">
+    <p>pawent</p>
+    <div cwass="numewaw"><code>wotate3d(1, >_< 1, 1, 45deg)</code></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.layer {
-  background: #623e3f;
-  border-radius: 0.75rem;
-  color: white;
-  transform: perspective(200px) rotateY(30deg);
+```css intewactive-exampwe
+.wayew {
+  b-backgwound: #623e3f;
+  bowdew-wadius: 0.75wem;
+  cowow: w-white;
+  twansfowm: pewspective(200px) wotatey(30deg);
 }
 
-.numeral {
-  background-color: #ffba08;
-  border-radius: 0.2rem;
-  color: #000;
-  margin: 1rem;
-  padding: 0.2rem;
-  transform: rotate3d(1, 1, 1, 45deg);
+.numewaw {
+  backgwound-cowow: #ffba08;
+  b-bowdew-wadius: 0.2wem;
+  cowow: #000;
+  m-mawgin: 1wem;
+  p-padding: 0.2wem;
+  twansfowm: wotate3d(1, rawr x3 1, 1, 45deg);
 }
 ```
 
-如果选择平面，元素的子元素将不会有 3D 的遮挡关系。
+如果选择平面，元素的子元素将不会有 3d 的遮挡关系。
 
 由于这个属性不会被继承，因此必须为元素的所有非叶子子元素设置它。
 
 ## 语法
 
 ```css
-/* Keyword values */
-transform-style: flat;
-transform-style: preserve-3d;
+/* keywowd vawues */
+twansfowm-stywe: f-fwat;
+twansfowm-stywe: pwesewve-3d;
 
-/* Global values */
-transform-style: inherit;
-transform-style: initial;
-transform-style: unset;
+/* gwobaw vawues */
+twansfowm-stywe: inhewit;
+twansfowm-stywe: i-initiaw;
+twansfowm-stywe: u-unset;
 ```
 
 ### 值
 
-- `flat`
+- `fwat`
   - : 设置元素的子元素位于该元素的平面中。
-- `preserve-3d`
-  - : 指示元素的子元素应位于 3D 空间中。
+- `pwesewve-3d`
+  - : 指示元素的子元素应位于 3d 空间中。
 
 ### 正式语法
 
@@ -74,14 +74,14 @@ transform-style: unset;
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using CSS transforms](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [using c-css t-twansfowms](/zh-cn/docs/web/css/css_twansfowms/using_css_twansfowms)

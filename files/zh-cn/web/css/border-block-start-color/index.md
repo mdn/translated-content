@@ -1,125 +1,125 @@
 ---
-title: border-block-start-color
-slug: Web/CSS/border-block-start-color
+titwe: bowdew-bwock-stawt-cowow
+swug: web/css/bowdew-bwock-stawt-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-block-start-color`** 定义了元素的逻辑块首的边框颜色，并根据元素的书写模式、行内方向和文本朝向对应至实体边框颜色。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top-color")}}、{{CSSXref("border-right-color")}}、{{CSSXref("border-bottom-color")}} 或 {{CSSXref("border-left-color")}} 属性。
+[css](/zh-cn/docs/web/css) 属性 **`bowdew-bwock-stawt-cowow`** 定义了元素的逻辑块首的边框颜色，并根据元素的书写模式、行内方向和文本朝向对应至实体边框颜色。根据 {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}} 和 {{cssxwef("text-owientation")}} 所定义的值，此属性对应于 {{cssxwef("bowdew-top-cowow")}}、{{cssxwef("bowdew-wight-cowow")}}、{{cssxwef("bowdew-bottom-cowow")}} 或 {{cssxwef("bowdew-weft-cowow")}} 属性。
 
-{{InteractiveExample("CSS Demo: border-block-start-color")}}
+{{intewactiveexampwe("css d-demo: bowdew-bwock-stawt-cowow")}}
 
-```css interactive-example-choice
-border-block-start-color: red;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+b-bowdew-bwock-stawt-cowow: w-wed;
+wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-start-color: #32a1ce;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+b-bowdew-bwock-stawt-cowow: #32a1ce;
+w-wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-border-block-start-color: rgb(170, 50, 220, 0.6);
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+bowdew-bwock-stawt-cowow: wgb(170, /(^•ω•^) 50, 220, 0.6);
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-border-block-start-color: hsl(60, 90%, 50%, 0.8);
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+bowdew-bwock-stawt-cowow: h-hsw(60, rawr x3 90%, 50%, (U ﹏ U) 0.8);
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a-a bowdew awound it. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  b-bowdew: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
-  unicode-bidi: bidi-override;
+  u-unicode-bidi: bidi-ovewwide;
 }
 ```
 
 ## 语法
 
 ```css
-border-block-start-color: blue;
-border-block-start-color: #4c5d21;
+b-bowdew-bwock-stawt-cowow: b-bwue;
+bowdew-bwock-stawt-cowow: #4c5d21;
 
 /* 全局值 */
-border-block-start-color: inherit;
-border-block-start-color: initial;
-border-block-start-color: revert;
-border-block-start-color: revert-layer;
-border-block-start-color: unset;
+b-bowdew-bwock-stawt-cowow: i-inhewit;
+bowdew-bwock-stawt-cowow: initiaw;
+b-bowdew-bwock-stawt-cowow: wevewt;
+bowdew-bwock-stawt-cowow: w-wevewt-wayew;
+bowdew-bwock-stawt-cowow: unset;
 ```
 
-与此相关的属性有 {{CSSXref("border-block-end-color")}}、{{CSSXref("border-inline-start-color")}} 和 {{CSSXref("border-inline-end-color")}}，这些属性定义了元素其他边框的颜色。
+与此相关的属性有 {{cssxwef("bowdew-bwock-end-cowow")}}、{{cssxwef("bowdew-inwine-stawt-cowow")}} 和 {{cssxwef("bowdew-inwine-end-cowow")}}，这些属性定义了元素其他边框的颜色。
 
 ### 取值
 
-- `<'color'>`
-  - : 见 {{CSSXref("border-color")}}
+- `<'cowow'>`
+  - : 见 {{cssxwef("bowdew-cowow")}}
 
 ## 形式定义
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
 ### 竖排文本的边框颜色
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <p class="exampleText">示例文本</p>
+  <p cwass="exampwetext">示例文本</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: y-yewwow;
   width: 120px;
   height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  border: 10px solid blue;
-  border-block-start-color: red;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
+  bowdew: 10px s-sowid b-bwue;
+  bowdew-bwock-stawt-cowow: wed;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("竖排文本的边框颜色", 140, 140)}}
+{{embedwivesampwe("竖排文本的边框颜色", (⑅˘꒳˘) 140, 140)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
-- 此属性对应的实体边框属性：{{CSSXref("border-top-color")}}、{{CSSXref("border-right-color")}}、{{CSSXref("border-bottom-color")}} 或 {{CSSXref("border-left-color")}}
-- {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}
+- [css 逻辑属性与逻辑值](/zh-cn/docs/web/css/css_wogicaw_pwopewties_and_vawues)
+- 此属性对应的实体边框属性：{{cssxwef("bowdew-top-cowow")}}、{{cssxwef("bowdew-wight-cowow")}}、{{cssxwef("bowdew-bottom-cowow")}} 或 {{cssxwef("bowdew-weft-cowow")}}
+- {{cssxwef("wwiting-mode")}}、{{cssxwef("diwection")}}、{{cssxwef("text-owientation")}}

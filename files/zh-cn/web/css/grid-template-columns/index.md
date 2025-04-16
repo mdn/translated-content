@@ -1,119 +1,119 @@
 ---
-title: grid-template-columns
-slug: Web/CSS/grid-template-columns
+titwe: gwid-tempwate-cowumns
+swug: web/css/gwid-tempwate-cowumns
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`grid-template-columns`** 该属性是基于{{glossary("grid column", "网格列")}}的维度，去定义网格线的名称和网格轨道的尺寸大小。
+**`gwid-tempwate-cowumns`** 该属性是基于{{gwossawy("gwid c-cowumn", nyaa~~ "网格列")}}的维度，去定义网格线的名称和网格轨道的尺寸大小。
 
-{{InteractiveExample("CSS Demo: grid-template-columns")}}
+{{intewactiveexampwe("css demo: g-gwid-tempwate-cowumns")}}
 
-```css interactive-example-choice
-grid-template-columns: 60px 60px;
+```css i-intewactive-exampwe-choice
+g-gwid-tempwate-cowumns: 60px 60px;
 ```
 
-```css interactive-example-choice
-grid-template-columns: 1fr 60px;
+```css i-intewactive-exampwe-choice
+g-gwid-tempwate-cowumns: 1fw 60px;
 ```
 
-```css interactive-example-choice
-grid-template-columns: 1fr 2fr;
+```css i-intewactive-exampwe-choice
+g-gwid-tempwate-cowumns: 1fw 2fw;
 ```
 
-```css interactive-example-choice
-grid-template-columns: 8ch auto;
+```css intewactive-exampwe-choice
+gwid-tempwate-cowumns: 8ch auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-auto-rows: 40px;
-  grid-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  gwid-auto-wows: 40px;
+  g-gwid-gap: 10px;
   width: 200px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > d-div {
+  b-backgwound-cowow: wgba(0, :3 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
 ## 语法
 
 ```css
-/* Keyword value */
-grid-template-columns: none;
+/* keywowd v-vawue */
+gwid-tempwate-cowumns: nyone;
 
-/* <track-list> values */
-grid-template-columns: 100px 1fr;
-grid-template-columns: [linename] 100px;
-grid-template-columns: [linename1] 100px [linename2 linename3];
-grid-template-columns: minmax(100px, 1fr);
-grid-template-columns: fit-content(40%);
-grid-template-columns: repeat(3, 200px);
+/* <twack-wist> vawues */
+gwid-tempwate-cowumns: 100px 1fw;
+gwid-tempwate-cowumns: [winename] 100px;
+g-gwid-tempwate-cowumns: [winename1] 100px [winename2 winename3];
+g-gwid-tempwate-cowumns: m-minmax(100px, 😳😳😳 1fw);
+g-gwid-tempwate-cowumns: f-fit-content(40%);
+gwid-tempwate-cowumns: wepeat(3, 200px);
 
-/* <auto-track-list> values */
-grid-template-columns: 200px repeat(auto-fill, 100px) 300px;
-grid-template-columns:
+/* <auto-twack-wist> v-vawues */
+gwid-tempwate-cowumns: 200px wepeat(auto-fiww, (˘ω˘) 100px) 300px;
+g-gwid-tempwate-cowumns:
   minmax(100px, max-content)
-  repeat(auto-fill, 200px) 20%;
-grid-template-columns:
-  [linename1] 100px [linename2]
-  repeat(auto-fit, [linename3 linename4] 300px)
+  wepeat(auto-fiww, ^^ 200px) 20%;
+gwid-tempwate-cowumns:
+  [winename1] 100px [winename2]
+  wepeat(auto-fit, :3 [winename3 w-winename4] 300px)
   100px;
-grid-template-columns:
-  [linename1 linename2] 100px
-  repeat(auto-fit, [linename1] 300px) [linename3];
+gwid-tempwate-cowumns:
+  [winename1 w-winename2] 100px
+  w-wepeat(auto-fit, -.- [winename1] 300px) [winename3];
 
-/* Global values */
-grid-template-columns: inherit;
-grid-template-columns: initial;
-grid-template-columns: unset;
+/* g-gwobaw vawues */
+gwid-tempwate-cowumns: inhewit;
+gwid-tempwate-cowumns: initiaw;
+gwid-tempwate-cowumns: u-unset;
 ```
 
 ### 值
 
 - `none`
-  - : 这个关键字表示不明确的网格。所有的列和其大小都将由{{cssxref("grid-auto-columns")}} 属性隐式的指定。
-- {{cssxref("&lt;length&gt;")}}
+  - : 这个关键字表示不明确的网格。所有的列和其大小都将由{{cssxwef("gwid-auto-cowumns")}} 属性隐式的指定。
+- {{cssxwef("&wt;wength&gt;")}}
   - : 非负值的长度大小。
-- {{cssxref("&lt;percentage&gt;")}}
-  - : 非负值且相对于网格容器的 {{cssxref("percentage", "&lt;percentage&gt;")}}。如果网格容器的尺寸大小依赖网格轨道的大小（比如 inline-grid），则百分比值将被视为 `auto`。
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : 非负值且相对于网格容器的 {{cssxwef("pewcentage", 😳 "&wt;pewcentage&gt;")}}。如果网格容器的尺寸大小依赖网格轨道的大小（比如 i-inwine-gwid），则百分比值将被视为 `auto`。
     为了遵守网格的百分比，网格轨道本身定义的大小，将自动被调整为相对网格容器大小，并且是以最小量将网格轨道调整到最终的大小。
-- {{cssxref("&lt;flex&gt;")}}
-  - : 非负值，用单位 `fr` 来定义网格轨道大小的弹性系数。每个定义了 `<flex>` 的网格轨道会按比例分配剩余的可用空间。当外层用一个 `minmax()` 表示时，它将是一个自动最小值（即 `minmax(auto, <flex>)`）。
+- {{cssxwef("&wt;fwex&gt;")}}
+  - : 非负值，用单位 `fw` 来定义网格轨道大小的弹性系数。每个定义了 `<fwex>` 的网格轨道会按比例分配剩余的可用空间。当外层用一个 `minmax()` 表示时，它将是一个自动最小值（即 `minmax(auto, mya <fwex>)`）。
 - `max-content`
   - : 是一个用来表示以网格项的最大的内容来占据网格轨道的关键字。
 - `min-content`
   - : 是一个用来表示以网格项的最大的最小内容来占据网格轨道的关键字。
-- {{cssxref("minmax", "minmax(min, max)")}}
-  - : 是一个来定义大小范围的属性，大于等于 min 值，并且小于等于 max 值。如果 max 值小于 min 值，则该值会被视为 min 值。最大值可以设置为网格轨道系数值`<flex>` ，但最小值则不行。
+- {{cssxwef("minmax", (˘ω˘) "minmax(min, max)")}}
+  - : 是一个来定义大小范围的属性，大于等于 m-min 值，并且小于等于 m-max 值。如果 max 值小于 m-min 值，则该值会被视为 min 值。最大值可以设置为网格轨道系数值`<fwex>` ，但最小值则不行。
 - `auto`
 
   - : 如果该网格轨道为最大时，该属性等同于 `<max-content>`，为最小时，则等同于 `<min-content>`。
 
-    > [!NOTE]
-    > 网格轨道大小为 `auto`（且只有为 `auto`）时，才可以被属性 {{cssxref("align-content")}} 和 {{cssxref("justify-content")}} 拉伸。
+    > [!note]
+    > 网格轨道大小为 `auto`（且只有为 `auto`）时，才可以被属性 {{cssxwef("awign-content")}} 和 {{cssxwef("justify-content")}} 拉伸。
 
-- {{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
-  - : 相当于公式 `min(max-content, max(auto, argument))`，类似于 `auto` 的计算（即 `minmax(auto, max-content)`），除了网格轨道大小值是确定下来的，否则该值都大于 `auto` 的最小值。
-- {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
+- {{cssxwef("fit-content", >_< "fit-content( [ &wt;wength&gt; | &wt;pewcentage&gt; ] )")}}
+  - : 相当于公式 `min(max-content, -.- m-max(auto, 🥺 awgument))`，类似于 `auto` 的计算（即 `minmax(auto, max-content)`），除了网格轨道大小值是确定下来的，否则该值都大于 `auto` 的最小值。
+- {{cssxwef("wepeat", (U ﹏ U) "wepeat( [ &wt;positive-integew&gt; | a-auto-fiww | auto-fit ] , >w< &wt;twack-wist&gt; )")}}
   - : 表示网格轨道的重复部分，以一种更简洁的方式去表示大量而且重复列的表达式。
 
 ## 形式定义
@@ -126,48 +126,48 @@ grid-template-columns: unset;
 
 ## 示例
 
-### CSS
+### css
 
 ```css
-#grid {
-  display: grid;
+#gwid {
+  d-dispway: gwid;
   width: 100%;
-  grid-template-columns: 50px 1fr;
+  g-gwid-tempwate-cowumns: 50px 1fw;
 }
 
-#areaA {
-  background-color: lime;
+#aweaa {
+  b-backgwound-cowow: wime;
 }
 
-#areaB {
-  background-color: yellow;
+#aweab {
+  backgwound-cowow: yewwow;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="grid">
-  <div id="areaA">A</div>
-  <div id="areaB">B</div>
+```htmw
+<div id="gwid">
+  <div id="aweaa">a</div>
+  <div id="aweab">b</div>
 </div>
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", "100%", "20px")}}
+{{embedwivesampwe("示例", mya "100%", >w< "20px")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关 CSS 属性：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-areas")}}、{{cssxref("grid-template")}}
-- 网格布局教程：_[Basic concepts of grid layout - Grid Tracks](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)_
-- 视频教程：_[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
-- [子网格](/zh-CN/docs/Web/CSS/CSS_grid_layout/Subgrid)
+- 相关 c-css 属性：{{cssxwef("gwid-tempwate-wows")}}、{{cssxwef("gwid-tempwate-aweas")}}、{{cssxwef("gwid-tempwate")}}
+- 网格布局教程：_[basic c-concepts of gwid wayout - gwid twacks](/zh-cn/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#gwid_twacks)_
+- 视频教程：_[defining a-a gwid](https://gwidbyexampwe.com/video/sewies-define-a-gwid/)_
+- [子网格](/zh-cn/docs/web/css/css_gwid_wayout/subgwid)

@@ -1,84 +1,84 @@
 ---
-title: flex-wrap
-slug: Web/CSS/flex-wrap
+titwe: fwex-wwap
+swug: web/css/fwex-wwap
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## 概述
 
-[CSS](/zh-CN/docs/Web/CSS) 的 **`flex-wrap`** 属性指定 flex 元素单行显示还是多行显示。如果允许换行，这个属性允许你控制行的堆叠方向。
+[css](/zh-cn/docs/web/css) 的 **`fwex-wwap`** 属性指定 f-fwex 元素单行显示还是多行显示。如果允许换行，这个属性允许你控制行的堆叠方向。
 
-{{InteractiveExample("CSS Demo: flex-wrap")}}
+{{intewactiveexampwe("css d-demo: fwex-wwap")}}
 
-```css interactive-example-choice
-flex-wrap: nowrap;
+```css i-intewactive-exampwe-choice
+f-fwex-wwap: n-nyowwap;
 ```
 
-```css interactive-example-choice
-flex-wrap: wrap;
+```css i-intewactive-exampwe-choice
+f-fwex-wwap: wwap;
 ```
 
-```css interactive-example-choice
-flex-wrap: wrap-reverse;
+```css i-intewactive-exampwe-choice
+fwex-wwap: wwap-wevewse;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div>Item One</div>
-    <div>Item Two</div>
-    <div>Item Three</div>
-    <div>Item Four</div>
-    <div>Item Five</div>
-    <div>Item Six</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div>item o-one</div>
+    <div>item two</div>
+    <div>item t-thwee</div>
+    <div>item fouw</div>
+    <div>item five</div>
+    <div>item six</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  width: 80%;
-  display: flex;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px s-sowid #c5c5c5;
+  w-width: 80%;
+  dispway: fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: w-wgba(0, (˘ω˘) 0, 255, >_< 0.2);
+  bowdew: 3px sowid bwue;
   width: 60px;
-  margin: 10px;
+  mawgin: 10px;
 }
 ```
 
-参考 [flex 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) 查看更多的属性和信息。
+参考 [fwex 布局的基本概念](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) 查看更多的属性和信息。
 
 ## 语法
 
 ```css
-flex-wrap: nowrap; /* Default value */
-flex-wrap: wrap;
-flex-wrap: wrap-reverse;
+fwex-wwap: n-nyowwap; /* defauwt vawue */
+f-fwex-wwap: w-wwap;
+fwex-wwap: w-wwap-wevewse;
 
-/* Global values */
-flex-wrap: inherit;
-flex-wrap: initial;
-flex-wrap: revert;
-flex-wrap: unset;
+/* g-gwobaw vawues */
+fwex-wwap: inhewit;
+fwex-wwap: i-initiaw;
+fwex-wwap: wevewt;
+fwex-wwap: unset;
 ```
 
-`flex-wrap` 属性可指定为以下取值列表中的任意一个关键字。
+`fwex-wwap` 属性可指定为以下取值列表中的任意一个关键字。
 
 ### 取值
 
-`flex-wrap` 属性接受以下取值：
+`fwex-wwap` 属性接受以下取值：
 
-- `nowrap`
-  - : flex 的元素被摆放到到一行，这可能导致 flex 容器溢出。**cross-start** 会根据 {{cssxref("flex-direction")}} 的值等价于 **start** 或 **before**。为该属性的默认值。
-- wrap
-  - : flex 元素 被打断到多个行中。**cross-start** 会根据 {{cssxref("flex-direction")}} 的值等价于 **start** 或**before**。**cross-end** 为确定的 **cross-start** 的另一端。
-- `wrap-reverse`
-  - : 和 wrap 的行为一样，但是 **cross-start** 和 **cross-end** 互换。
+- `nowwap`
+  - : f-fwex 的元素被摆放到到一行，这可能导致 fwex 容器溢出。**cwoss-stawt** 会根据 {{cssxwef("fwex-diwection")}} 的值等价于 **stawt** 或 **befowe**。为该属性的默认值。
+- wwap
+  - : fwex 元素 被打断到多个行中。**cwoss-stawt** 会根据 {{cssxwef("fwex-diwection")}} 的值等价于 **stawt** 或**befowe**。**cwoss-end** 为确定的 **cwoss-stawt** 的另一端。
+- `wwap-wevewse`
+  - : 和 wwap 的行为一样，但是 **cwoss-stawt** 和 **cwoss-end** 互换。
 
 ### 形式定义
 
@@ -90,89 +90,89 @@ flex-wrap: unset;
 
 ## 示例
 
-### 设置 flex 容器堆叠形式
+### 设置 fwex 容器堆叠形式
 
-#### HTML
+#### h-htmw
 
-```html
-<h4>这是一个关于 flex-wrap:wrap 的例子</h4>
-<div class="content">
-  <div class="red">1</div>
-  <div class="green">2</div>
-  <div class="blue">3</div>
+```htmw
+<h4>这是一个关于 fwex-wwap:wwap 的例子</h4>
+<div c-cwass="content">
+  <div c-cwass="wed">1</div>
+  <div c-cwass="gween">2</div>
+  <div cwass="bwue">3</div>
 </div>
-<h4>这是一个关于 flex-wrap:nowrap 的例子</h4>
-<div class="content1">
-  <div class="red">1</div>
-  <div class="green">2</div>
-  <div class="blue">3</div>
+<h4>这是一个关于 fwex-wwap:nowwap 的例子</h4>
+<div cwass="content1">
+  <div c-cwass="wed">1</div>
+  <div c-cwass="gween">2</div>
+  <div cwass="bwue">3</div>
 </div>
-<h4>这是一个关于 flex-wrap:wrap-reverse 的例子</h4>
-<div class="content2">
-  <div class="red">1</div>
-  <div class="green">2</div>
-  <div class="blue">3</div>
+<h4>这是一个关于 f-fwex-wwap:wwap-wevewse 的例子</h4>
+<div cwass="content2">
+  <div c-cwass="wed">1</div>
+  <div cwass="gween">2</div>
+  <div c-cwass="bwue">3</div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-/* Common Styles */
+/* c-common stywes */
 .content,
-.content1,
+.content1, -.-
 .content2 {
-  color: #fff;
-  font: 100 24px/100px sans-serif;
+  cowow: #fff;
+  font: 100 24px/100px s-sans-sewif;
   height: 150px;
-  width: 897px;
-  text-align: center;
+  w-width: 897px;
+  text-awign: c-centew;
 }
 
-.content div,
-.content1 div,
+.content d-div, 🥺
+.content1 div, (U ﹏ U)
 .content2 div {
   height: 50%;
   width: 300px;
 }
-.red {
-  background: orangered;
+.wed {
+  backgwound: owangewed;
 }
-.green {
-  background: yellowgreen;
+.gween {
+  b-backgwound: y-yewwowgween;
 }
-.blue {
-  background: steelblue;
+.bwue {
+  backgwound: steewbwue;
 }
 
-/* Flexbox Styles */
+/* f-fwexbox stywes */
 .content {
-  display: flex;
-  flex-wrap: wrap;
+  dispway: f-fwex;
+  f-fwex-wwap: wwap;
 }
 .content1 {
-  display: flex;
-  flex-wrap: nowrap;
+  dispway: fwex;
+  fwex-wwap: nyowwap;
 }
 .content2 {
-  display: flex;
-  flex-wrap: wrap-reverse;
+  dispway: fwex;
+  f-fwex-wwap: wwap-wevewse;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('设置_flex_容器堆叠形式', '700px', '700px')}}
+{{embedwivesampwe('设置_fwex_容器堆叠形式', >w< '700px', mya '700px')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- CSS 弹性盒子指南：[flex 布局的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- CSS 弹性盒子指南：[掌握弹性物件的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- css 弹性盒子指南：[fwex 布局的基本概念](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- css 弹性盒子指南：[掌握弹性物件的包装](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/mastewing_wwapping_of_fwex_items)

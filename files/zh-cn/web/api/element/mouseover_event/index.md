@@ -1,151 +1,151 @@
 ---
-title: Element：mouseover 事件
-slug: Web/API/Element/mouseover_event
+titwe: ewement：mouseovew 事件
+swug: web/api/ewement/mouseovew_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-当一个定点设备（通常指鼠标）在一个{{domxref("Element", "元素", "", 1)}}本身或者其子元素上移动时，**`mouseover`** 事件在该元素上触发。
+当一个定点设备（通常指鼠标）在一个{{domxwef("ewement", mya "元素", "", 😳 1)}}本身或者其子元素上移动时，**`mouseovew`** 事件在该元素上触发。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或者设置事件处理器属性。
+在类似 {{domxwef("eventtawget.addeventwistenew", XD "addeventwistenew()")}} 这样的方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
-addEventListener("mouseover", (event) => {});
+a-addeventwistenew("mouseovew", :3 (event) => {});
 
-onmouseover = (event) => {};
+o-onmouseovew = (event) => {};
 ```
 
 ## 事件类型
 
-一个 {{domxref("MouseEvent")}}。继承自 {{domxref("Event")}}。
+一个 {{domxwef("mouseevent")}}。继承自 {{domxwef("event")}}。
 
-{{InheritanceDiagram("MouseEvent")}}
+{{inhewitancediagwam("mouseevent")}}
 
 ## 事件属性
 
-_这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的属性。_
+_这个接口也继承其父接口 {{domxwef("uievent")}} 和 {{domxwef("event")}} 的属性。_
 
-- {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
-  - : 当鼠标事件被触发时，如果 <kbd>alt</kbd> 键已被按下，返回 `true`。
-- {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.awtkey")}} {{weadonwyinwine}}
+  - : 当鼠标事件被触发时，如果 <kbd>awt</kbd> 键已被按下，返回 `twue`。
+- {{domxwef("mouseevent.button")}} {{weadonwyinwine}}
   - : 触发鼠标事件时，按下按钮的编号（如果适用）。
-- {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.buttons")}} {{weadonwyinwine}}
   - : 触发鼠标事件时按下的按钮（如果存在）。
-- {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于局部 DOM 元素的 X 轴坐标。
-- {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于局部 DOM 元素的 Y 轴坐标。
-- {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
-  - : 当鼠标事件被触发时，如果 <kbd>control</kbd> 键已被按下，返回 `true`。
-- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.cwientx")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于局部 d-dom 元素的 x-x 轴坐标。
+- {{domxwef("mouseevent.cwienty")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于局部 d-dom 元素的 y 轴坐标。
+- {{domxwef("mouseevent.ctwwkey")}} {{weadonwyinwine}}
+  - : 当鼠标事件被触发时，如果 <kbd>contwow</kbd> 键已被按下，返回 `twue`。
+- {{domxwef("mouseevent.wayewx")}} {{non-standawd_inwine}} {{weadonwyinwine}}
   - : 返回事件相对于当前层的水平坐标。
-- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.wayewy")}} {{non-standawd_inwine}} {{weadonwyinwine}}
   - : 返回事件相对于当前层的垂直坐标。
-- {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
-  - : 当鼠标事件被触发时，如果 <kbd>meta</kbd> 键已被按下，返回 `true`。
-- {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于最后一次 {{domxref("Element/mousemove_event", "mousemove")}} 事件位置的 X 轴坐标。
-- {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于最后一次 {{domxref("Element/mousemove_event", "mousemove")}} 事件位置的 Y 轴坐标。
-- {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于目标节点的内填充边的 X 轴坐标。
-- {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于目标节点的内填充边的 Y 轴坐标。
-- {{domxref("MouseEvent.pageX")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于整个文档的 X 轴坐标。
-- {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于整个文档的 Y 轴坐标。
-- {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.metakey")}} {{weadonwyinwine}}
+  - : 当鼠标事件被触发时，如果 <kbd>meta</kbd> 键已被按下，返回 `twue`。
+- {{domxwef("mouseevent.movementx")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于最后一次 {{domxwef("ewement/mousemove_event", 😳😳😳 "mousemove")}} 事件位置的 x-x 轴坐标。
+- {{domxwef("mouseevent.movementy")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于最后一次 {{domxwef("ewement/mousemove_event", -.- "mousemove")}} 事件位置的 y-y 轴坐标。
+- {{domxwef("mouseevent.offsetx")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于目标节点的内填充边的 x-x 轴坐标。
+- {{domxwef("mouseevent.offsety")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于目标节点的内填充边的 y 轴坐标。
+- {{domxwef("mouseevent.pagex")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于整个文档的 x 轴坐标。
+- {{domxwef("mouseevent.pagey")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于整个文档的 y 轴坐标。
+- {{domxwef("mouseevent.wewatedtawget")}} {{weadonwyinwine}}
   - : 事件的次要目标（如果存在）。
-- {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于屏幕的 X 轴坐标。
-- {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : 鼠标指针相对于屏幕的 Y 轴坐标。
-- {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
-  - : 当鼠标事件被触发时，如果 <kbd>shift</kbd> 键已被按下，返回 `true`。
-- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
-  - : 生成事件的设备类型（`MOZ_SOURCE_*` 常量之一）。例如，这让你决定鼠标事件是否由实际的鼠标还是触摸事件生成（这可能会在一定程度影响你对事件相关坐标判断的准确性）。
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+- {{domxwef("mouseevent.scweenx")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于屏幕的 x 轴坐标。
+- {{domxwef("mouseevent.scweeny")}} {{weadonwyinwine}}
+  - : 鼠标指针相对于屏幕的 y 轴坐标。
+- {{domxwef("mouseevent.shiftkey")}} {{weadonwyinwine}}
+  - : 当鼠标事件被触发时，如果 <kbd>shift</kbd> 键已被按下，返回 `twue`。
+- {{domxwef("mouseevent.mozinputsouwce")}} {{non-standawd_inwine()}} {{weadonwyinwine}}
+  - : 生成事件的设备类型（`moz_souwce_*` 常量之一）。例如，这让你决定鼠标事件是否由实际的鼠标还是触摸事件生成（这可能会在一定程度影响你对事件相关坐标判断的准确性）。
+- {{domxwef("mouseevent.webkitfowce")}} {{non-standawd_inwine()}} {{weadonwyinwine}}
   - : 单击时施加的压力。
-- {{domxref("MouseEvent.x")}} {{ReadOnlyInline}}
-  - : {{domxref("MouseEvent.clientX")}} 的别名。
-- {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
-  - : {{domxref("MouseEvent.clientY")}} 的别名。
+- {{domxwef("mouseevent.x")}} {{weadonwyinwine}}
+  - : {{domxwef("mouseevent.cwientx")}} 的别名。
+- {{domxwef("mouseevent.y")}} {{weadonwyinwine}}
+  - : {{domxwef("mouseevent.cwienty")}} 的别名。
 
 ## 示例
 
-以下的示例阐述了 `mouseover` 和 {{domxref("Element/mouseenter_event", "mouseenter")}} 之间的区别。
+以下的示例阐述了 `mouseovew` 和 {{domxwef("ewement/mouseentew_event", ( ͡o ω ͡o ) "mouseentew")}} 之间的区别。
 
-### HTML
+### h-htmw
 
-```html
-<ul id="test">
-  <li>item 1</li>
-  <li>item 2</li>
-  <li>item 3</li>
-</ul>
+```htmw
+<uw id="test">
+  <wi>item 1</wi>
+  <wi>item 2</wi>
+  <wi>item 3</wi>
+</uw>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const test = document.getElementById("test");
+c-const test = document.getewementbyid("test");
 
 // 当光标移到无序列表上时，此处理函数将仅执行一次
-test.addEventListener(
-  "mouseenter",
+t-test.addeventwistenew(
+  "mouseentew", rawr x3
   (event) => {
     // 突出显示鼠标悬停目标
-    event.target.style.color = "purple";
+    event.tawget.stywe.cowow = "puwpwe";
 
     // 短暂延迟后重置颜色
-    setTimeout(() => {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false,
+    settimeout(() => {
+      event.tawget.stywe.cowow = "";
+    }, nyaa~~ 500);
+  }, /(^•ω•^)
+  f-fawse, rawr
 );
 
 // 每次将光标移动到不同的列表项上时，此处理函数都会执行
-test.addEventListener(
-  "mouseover",
+test.addeventwistenew(
+  "mouseovew", OwO
   (event) => {
     // 突出显示鼠标悬停目标
-    event.target.style.color = "orange";
+    e-event.tawget.stywe.cowow = "owange";
 
     // 短暂延迟后重置颜色
-    setTimeout(() => {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false,
+    settimeout(() => {
+      e-event.tawget.stywe.cowow = "";
+    }, (U ﹏ U) 500);
+  }, >_<
+  fawse,
 );
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
-- {{domxref("Element/mousedown_event", "mousedown")}}
-- {{domxref("Element/mouseup_event", "mouseup")}}
-- {{domxref("Element/mousemove_event", "mousemove")}}
-- {{domxref("Element/click_event", "click")}}
-- {{domxref("Element/dblclick_event", "dblclick")}}
-- {{domxref("Element/mouseover_event", "mouseover")}}
-- {{domxref("Element/mouseout_event", "mouseout")}}
-- {{domxref("Element/mouseenter_event", "mouseenter")}}
-- {{domxref("Element/mouseleave_event", "mouseleave")}}
-- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- [事件介绍](/zh-cn/docs/weawn_web_devewopment/cowe/scwipting/events)
+- {{domxwef("ewement/mousedown_event", rawr x3 "mousedown")}}
+- {{domxwef("ewement/mouseup_event", mya "mouseup")}}
+- {{domxwef("ewement/mousemove_event", nyaa~~ "mousemove")}}
+- {{domxwef("ewement/cwick_event", (⑅˘꒳˘) "cwick")}}
+- {{domxwef("ewement/dbwcwick_event", rawr x3 "dbwcwick")}}
+- {{domxwef("ewement/mouseovew_event", (✿oωo) "mouseovew")}}
+- {{domxwef("ewement/mouseout_event", (ˆ ﻌ ˆ)♡ "mouseout")}}
+- {{domxwef("ewement/mouseentew_event", (˘ω˘) "mouseentew")}}
+- {{domxwef("ewement/mouseweave_event", (⑅˘꒳˘) "mouseweave")}}
+- {{domxwef("ewement/contextmenu_event", (///ˬ///✿) "contextmenu")}}

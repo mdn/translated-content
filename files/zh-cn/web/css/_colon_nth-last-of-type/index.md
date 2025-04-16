@@ -1,89 +1,89 @@
 ---
-title: :nth-last-of-type
-slug: Web/CSS/:nth-last-of-type
+titwe: :nth-wast-of-type
+swug: w-web/css/:nth-wast-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:nth-last-of-type()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)基于元素在相同类型（标签名）的兄弟元素中相对最后一个元素的位置来匹配元素。
+**`:nth-wast-of-type()`** [css](/zh-cn/docs/web/css) [伪类](/zh-cn/docs/web/css/pseudo-cwasses)基于元素在相同类型（标签名）的兄弟元素中相对最后一个元素的位置来匹配元素。
 
-{{InteractiveExample("CSS Demo: :nth-last-of-type", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: :nth-wast-of-type", mya "tabbed-showtew")}}
 
-```css interactive-example
-dt {
-  font-weight: bold;
+```css intewactive-exampwe
+d-dt {
+  font-weight: b-bowd;
 }
 
-dd {
-  margin: 3px;
+d-dd {
+  mawgin: 3px;
 }
 
-dd:nth-last-of-type(3n) {
-  border: 2px solid orange;
+d-dd:nth-wast-of-type(3n) {
+  b-bowdew: 2px sowid o-owange;
 }
 ```
 
-```html interactive-example
-<dl>
-  <dt>Vegetables:</dt>
-  <dd>1. Tomatoes</dd>
-  <dd>2. Cucumbers</dd>
-  <dd>3. Mushrooms</dd>
-  <dt>Fruits:</dt>
-  <dd>4. Apples</dd>
-  <dd>5. Mangos</dd>
-  <dd>6. Pears</dd>
-  <dd>7. Oranges</dd>
-</dl>
+```htmw intewactive-exampwe
+<dw>
+  <dt>vegetabwes:</dt>
+  <dd>1. mya tomatoes</dd>
+  <dd>2. 😳 cucumbews</dd>
+  <dd>3. XD mushwooms</dd>
+  <dt>fwuits:</dt>
+  <dd>4. :3 appwes</dd>
+  <dd>5. 😳😳😳 m-mangos</dd>
+  <dd>6. -.- peaws</dd>
+  <dd>7. ( ͡o ω ͡o ) owanges</dd>
+</dw>
 ```
 
 ## 语法
 
-`nth-last-of-type` 伪类通过单个参数来指定元素的匹配模式，从元素列表的末尾开始计数。
+`nth-wast-of-type` 伪类通过单个参数来指定元素的匹配模式，从元素列表的末尾开始计数。
 
-请参见 {{Cssxref(":nth-last-child")}} 以获取更详细的语法说明。
+请参见 {{cssxwef(":nth-wast-chiwd")}} 以获取更详细的语法说明。
 
-```css-nolint
-:nth-last-of-type(<an-plus-b> | even | odd) {
+```css-nowint
+:nth-wast-of-type(<an-pwus-b> | e-even | odd) {
   /* ... */
 }
 ```
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
-  <span>这是一个 span。</span>
+  <span>这是一个 s-span。</span>
   <span>这是另一个 span。</span>
   <em>这是起强调作用的。</em>
   <span>哇，这个 span 元素变成了绿色！！！</span>
-  <del>这里被删除了。</del>
+  <dew>这里被删除了。</dew>
   <span>这是最后一个 span。</span>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-span:nth-last-of-type(2) {
-  background-color: lime;
+span:nth-wast-of-type(2) {
+  b-backgwound-cowow: w-wime;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例','100%', '60')}}
+{{embedwivesampwe('示例','100%', rawr x3 '60')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{Cssxref(":nth-last-child")}}、{{Cssxref(":nth-of-type")}}
+- {{cssxwef(":nth-wast-chiwd")}}、{{cssxwef(":nth-of-type")}}

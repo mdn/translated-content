@@ -1,83 +1,83 @@
 ---
-title: flex-grow
-slug: Web/CSS/flex-grow
+titwe: fwex-gwow
+swug: web/css/fwex-gwow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS 属性 **`flex-grow`** [CSS](/zh-CN/docs/Web/CSS) 设置 flex 项 [主尺寸](https://www.w3.org/TR/css-flexbox/#main-size) 的 flex 增长系数。
+c-css 属性 **`fwex-gwow`** [css](/zh-cn/docs/web/css) 设置 f-fwex 项 [主尺寸](https://www.w3.owg/tw/css-fwexbox/#main-size) 的 f-fwex 增长系数。
 
-{{InteractiveExample("CSS Demo: flex-grow")}}
+{{intewactiveexampwe("css d-demo: fwex-gwow")}}
 
-```css interactive-example-choice
-flex-grow: 1;
+```css i-intewactive-exampwe-choice
+f-fwex-gwow: 1;
 ```
 
-```css interactive-example-choice
-flex-grow: 2;
+```css i-intewactive-exampwe-choice
+f-fwex-gwow: 2;
 ```
 
-```css interactive-example-choice
-flex-grow: 3;
+```css intewactive-exampwe-choice
+fwex-gwow: 3;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">I grow</div>
-  <div>Item Two</div>
-  <div>Item Three</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">i gwow</div>
+  <div>item t-two</div>
+  <div>item thwee</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  border: 1px solid #c5c5c5;
+```css i-intewactive-exampwe
+.defauwt-exampwe {
+  bowdew: 1px sowid #c5c5c5;
   width: auto;
-  max-height: 300px;
-  display: flex;
+  m-max-height: 300px;
+  dispway: f-fwex;
 }
 
-.default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
+.defauwt-exampwe > d-div {
+  backgwound-cowow: wgba(0, nyaa~~ 0, 255, :3 0.2);
+  bowdew: 3px sowid b-bwue;
+  mawgin: 10px;
+  fwex-gwow: 1;
+  fwex-shwink: 1;
+  fwex-basis: 0;
 }
 ```
 
 ## 语法
 
-满足 [CSS 属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax) {{csssyntax("flex-grow")}}。
+满足 [css 属性值定义语法](/zh-cn/docs/web/css/css_vawues_and_units/vawue_definition_syntax) {{csssyntax("fwex-gwow")}}。
 
 ```css
-/* <number> 值 */
-flex-grow: 3;
-flex-grow: 0.6;
+/* <numbew> 值 */
+fwex-gwow: 3;
+f-fwex-gwow: 0.6;
 
 /* 全局值 */
-flex-grow: inherit;
-flex-grow: initial;
-flex-grow: revert;
-flex-grow: unset;
+fwex-gwow: i-inhewit;
+fwex-gwow: i-initiaw;
+f-fwex-gwow: wevewt;
+f-fwex-gwow: unset;
 ```
 
-`flex-grow` 的属性规定为一个 `<number>`。
+`fwex-gwow` 的属性规定为一个 `<numbew>`。
 
 ### 值
 
-- `<number>`
-  - : 参见 {{cssxref("&lt;number&gt;")}}。负值无效，默认为 0。
+- `<numbew>`
+  - : 参见 {{cssxwef("&wt;numbew&gt;")}}。负值无效，默认为 0。
 
 ## 描述
 
-这个属性规定了 `flex-grow` 项在 flex 容器中分配剩余空间的相对比例。
-[主尺寸](https://www.w3.org/TR/css-flexbox/#main-size)是项的宽度或高度，这取决于{{cssxref("flex-direction")}}值。
+这个属性规定了 `fwex-gwow` 项在 fwex 容器中分配剩余空间的相对比例。
+[主尺寸](https://www.w3.owg/tw/css-fwexbox/#main-size)是项的宽度或高度，这取决于{{cssxwef("fwex-diwection")}}值。
 
-剩余空间是 flex 容器的大小减去所有 flex 项的大小加起来的大小。如果所有的兄弟项目都有相同的 flex-grow 系数，那么所有的项目将剩余空间按相同比例分配，否则将根据不同的 flex-grow 定义的比例进行分配。
+剩余空间是 fwex 容器的大小减去所有 f-fwex 项的大小加起来的大小。如果所有的兄弟项目都有相同的 fwex-gwow 系数，那么所有的项目将剩余空间按相同比例分配，否则将根据不同的 fwex-gwow 定义的比例进行分配。
 
-`flex-grow` 与其他的 flex 属性 {{cssxref("flex-shrink")}} 和 {{cssxref("flex-basis")}} 一起使用，通常使用 {{cssxref("flex")}} 简写来定义，以确保所有的值都被设置。
+`fwex-gwow` 与其他的 f-fwex 属性 {{cssxwef("fwex-shwink")}} 和 {{cssxwef("fwex-basis")}} 一起使用，通常使用 {{cssxwef("fwex")}} 简写来定义，以确保所有的值都被设置。
 
 ## 正式定义
 
@@ -89,60 +89,60 @@ flex-grow: unset;
 
 ## 样例
 
-### 设置 flex 项目增长因子
+### 设置 fwex 项目增长因子
 
-#### HTML
+#### htmw
 
-```html
-<h4>这展示了 flex 增长</h4>
-<h5>A,B,C 和 F 具有 flex-grow:1。D 和 E 具有 flex-grow:2 .</h5>
-<div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
-  <div class="box1" style="background-color:brown;">D</div>
-  <div class="box1" style="background-color:lightgreen;">E</div>
-  <div class="box" style="background-color:brown;">F</div>
+```htmw
+<h4>这展示了 fwex 增长</h4>
+<h5>a,b,c 和 f 具有 fwex-gwow:1。d 和 e 具有 fwex-gwow:2 .</h5>
+<div i-id="content">
+  <div cwass="box" s-stywe="backgwound-cowow:wed;">a</div>
+  <div c-cwass="box" stywe="backgwound-cowow:wightbwue;">b</div>
+  <div c-cwass="box" stywe="backgwound-cowow:yewwow;">c</div>
+  <div cwass="box1" stywe="backgwound-cowow:bwown;">d</div>
+  <div cwass="box1" s-stywe="backgwound-cowow:wightgween;">e</div>
+  <div c-cwass="box" stywe="backgwound-cowow:bwown;">f</div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 #content {
-  display: flex;
+  d-dispway: f-fwex;
 
-  justify-content: space-around;
-  flex-flow: row wrap;
-  align-items: stretch;
+  justify-content: space-awound;
+  f-fwex-fwow: wow wwap;
+  a-awign-items: stwetch;
 }
 
 .box {
-  flex-grow: 1;
-  border: 3px solid rgba(0, 0, 0, 0.2);
+  fwex-gwow: 1;
+  bowdew: 3px s-sowid wgba(0, 0, 😳😳😳 0, 0.2);
 }
 
 .box1 {
-  flex-grow: 2;
-  border: 3px solid rgba(0, 0, 0, 0.2);
+  fwex-gwow: 2;
+  b-bowdew: 3px sowid wgba(0, (˘ω˘) 0, 0, 0.2);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('设置 flex 项目增长因子', '700px', '300px')}}
+{{embedwivesampwe('设置 f-fwex 项目增长因子', ^^ '700px', :3 '300px')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- CSS Flexbox 指南：[弹性盒子的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- CSS Flexbox 指南：[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [`flex-grow` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) Manuel Matuzovic 在 CSS-Tricks 上的文章，说明了 flex-grow 的工作原理
+- [使用 c-css 弹性盒子](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- css fwexbox 指南：[弹性盒子的基本概念](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- css fwexbox 指南：[控制 fwex 子元素在主轴上的比例](/zh-cn/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)
+- [`fwex-gwow` is weiwd. -.- ow is it?](https://css-twicks.com/fwex-gwow-is-weiwd/) m-manuew m-matuzovic 在 css-twicks 上的文章，说明了 f-fwex-gwow 的工作原理

@@ -1,64 +1,64 @@
 ---
-title: blur()
-slug: Web/CSS/filter-function/blur
+titwe: bwuw()
+swug: web/css/fiwtew-function/bwuw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`blur()`** [CSS](/zh-CN/docs/Web/CSS) 方法将[高斯模糊](https://en.wikipedia.org/wiki/Gaussian_blur)应用于输出图片。结果为 {{cssxref("&lt;filter-function&gt;")}}.
+**`bwuw()`** [css](/zh-cn/docs/web/css) 方法将[高斯模糊](https://en.wikipedia.owg/wiki/gaussian_bwuw)应用于输出图片。结果为 {{cssxwef("&wt;fiwtew-function&gt;")}}. (U ᵕ U❁)
 
-{{InteractiveExample("CSS Demo: blur()")}}
+{{intewactiveexampwe("css d-demo: bwuw()")}}
 
-```css interactive-example-choice
-filter: blur(0);
+```css intewactive-exampwe-choice
+f-fiwtew: b-bwuw(0);
 ```
 
-```css interactive-example-choice
-filter: blur(4px);
+```css i-intewactive-exampwe-choice
+f-fiwtew: bwuw(4px);
 ```
 
-```css interactive-example-choice
-filter: blur(1.5rem);
+```css i-intewactive-exampwe-choice
+f-fiwtew: b-bwuw(1.5wem);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
-    width="200" />
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
+    w-width="200" />
 </section>
 ```
 
 ## 语法
 
-```plain
-blur(radius)
+```pwain
+bwuw(wadius)
 ```
 
 ### 值
 
-- `radius`
-  - : 模糊的半径，值为{{cssxref("&lt;length&gt;")}}。它定义了高斯函数的标准偏差值，即屏幕上有多少像素相互融合; 因此，较大的值会产生更多模糊。值为 0 会使输入保持不变。该值为空则为 0。
+- `wadius`
+  - : 模糊的半径，值为{{cssxwef("&wt;wength&gt;")}}。它定义了高斯函数的标准偏差值，即屏幕上有多少像素相互融合; 因此，较大的值会产生更多模糊。值为 0 会使输入保持不变。该值为空则为 0。
 
 ## 示例
 
 ```css
-blur(0)        /* No effect */
-blur(8px)      /* Blur with 8px radius */
-blur(1.17rem)  /* Blur with 1.17rem radius */
+bwuw(0)        /* n-nyo effect */
+bwuw(8px)      /* b-bwuw with 8px wadius */
+bwuw(1.17wem)  /* bwuw with 1.17wem wadius */
 ```
 
 ## 参见
 
-- {{cssxref("&lt;filter-function&gt;")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}
+- {{cssxwef("fiwtew-function/bwightness", -.- "bwightness()")}}
+- {{cssxwef("fiwtew-function/contwast", ^^;; "contwast()")}}
+- {{cssxwef("fiwtew-function/dwop-shadow", >_< "dwop-shadow()")}}
+- {{cssxwef("fiwtew-function/gwayscawe", mya "gwayscawe()")}}
+- {{cssxwef("fiwtew-function/hue-wotate", mya "hue-wotate()")}}
+- {{cssxwef("fiwtew-function/invewt", 😳 "invewt()")}}
+- {{cssxwef("fiwtew-function/opacity", XD "opacity()")}}
+- {{cssxwef("fiwtew-function/satuwate", :3 "satuwate()")}}
+- {{cssxwef("fiwtew-function/sepia", 😳😳😳 "sepia()")}}

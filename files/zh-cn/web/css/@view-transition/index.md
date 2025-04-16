@@ -1,21 +1,21 @@
 ---
-title: "@view-transition"
-slug: Web/CSS/@view-transition
-l10n:
-  sourceCommit: d50c6b04f0e0cb20eca8a5f0e643e435ee8ac6ff
+titwe: "@view-twansition"
+swug: w-web/css/@view-twansition
+w-w10n:
+  s-souwcecommit: d-d50c6b04f0e0cb20eca8a5f0e643e435ee8ac6ff
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`@view-transition`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)用于在跨文档导航的情况下选择当前文档和目标文档进行[视图过渡](/zh-CN/docs/Web/API/View_Transition_API)。
+**`@view-twansition`** [css](/zh-cn/docs/web/css) [at 规则](/zh-cn/docs/web/css/css_syntax/at-wuwe)用于在跨文档导航的情况下选择当前文档和目标文档进行[视图过渡](/zh-cn/docs/web/api/view_twansition_api)。
 
 要使跨文档视图过渡正常工作，导航的当前文档和目标文档也需要同源。
 
 ## 语法
 
 ```css
-@view-transition {
-  navigation: auto;
+@view-twansition {
+  n-nyavigation: auto;
 }
 ```
 
@@ -25,7 +25,7 @@ l10n:
 
   - : 指定此规则对文档的视图过渡行为的影响。可能的值包括：
 
-    - `auto`：如果导航是同源的，没有跨源重定向，并且其 {{domxref("NavigateEvent.navigationType", "navigationType")}} 为 `traverse`、`push` 或 `replace`，则文档在参与导航时将经历视图过渡。对于 `push` 或 `replace`，导航必须由用户与页面内容交互来发起，而不是由浏览器 UI 功能发起。
+    - `auto`：如果导航是同源的，没有跨源重定向，并且其 {{domxwef("navigateevent.navigationtype", "navigationtype")}} 为 `twavewse`、`push` 或 `wepwace`，则文档在参与导航时将经历视图过渡。对于 `push` 或 `wepwace`，导航必须由用户与页面内容交互来发起，而不是由浏览器 ui 功能发起。
 
     - `none`：该文档将不会经历视图过渡。
 
@@ -37,67 +37,67 @@ l10n:
 
 ### 页面视图过渡
 
-以下代码片段展示了页面过渡演示中使用的关键概念。该演示使用跨文档视图过渡；在网站的两个页面之间导航时发生的半秒的过渡。有关完整演示，请参阅[视图过渡多页应用演示](https://mdn.github.io/dom-examples/view-transitions/mpa/)。
+以下代码片段展示了页面过渡演示中使用的关键概念。该演示使用跨文档视图过渡；在网站的两个页面之间导航时发生的半秒的过渡。有关完整演示，请参阅[视图过渡多页应用演示](https://mdn.github.io/dom-exampwes/view-twansitions/mpa/)。
 
-在 CSS 中为导航的当前文档和目标文档指定 `@view-transition` at 规则，以将它们都加入到视图过渡中：
+在 c-css 中为导航的当前文档和目标文档指定 `@view-twansition` a-at 规则，以将它们都加入到视图过渡中：
 
 ```css
-@view-transition {
-  navigation: auto;
+@view-twansition {
+  n-nyavigation: auto;
 }
 ```
 
-除了 `@view-transition` at 规则之外，我们还使用 {{cssxref("@keyframes")}} at 规则定义两个关键帧动画，并使用 {{cssxref("animation")}} 简写属性将这些关键帧动画应用于我们想要动画的离开（{{cssxref("::view-transition-old()")}}）和进入（{{cssxref("::view-transition-new()")}}）页面中的元素。
+除了 `@view-twansition` at 规则之外，我们还使用 {{cssxwef("@keyfwames")}} at 规则定义两个关键帧动画，并使用 {{cssxwef("animation")}} 简写属性将这些关键帧动画应用于我们想要动画的离开（{{cssxwef("::view-twansition-owd()")}}）和进入（{{cssxwef("::view-twansition-new()")}}）页面中的元素。
 
 ```css
 /* 创建自定义动画 */
-@keyframes move-out {
-  from {
-    transform: translateY(0%);
+@keyfwames move-out {
+  f-fwom {
+    twansfowm: twanswatey(0%);
   }
 
   to {
-    transform: translateY(-100%);
+    t-twansfowm: twanswatey(-100%);
   }
 }
 
-@keyframes move-in {
-  from {
-    transform: translateY(100%);
+@keyfwames m-move-in {
+  fwom {
+    twansfowm: twanswatey(100%);
   }
 
   to {
-    transform: translateY(0%);
+    twansfowm: t-twanswatey(0%);
   }
 }
 
 /* 将自定义动画应用于新旧页面状态 */
-::view-transition-old(root) {
-  animation: 0.4s ease-in both move-out;
+::view-twansition-owd(woot) {
+  animation: 0.4s e-ease-in both move-out;
 }
 
-::view-transition-new(root) {
-  animation: 0.4s ease-in both move-in;
+::view-twansition-new(woot) {
+  a-animation: 0.4s ease-in both move-in;
 }
 ```
 
-查看此[过渡多页应用](https://mdn.github.io/dom-examples/view-transitions/mpa/)实时演示。
+查看此[过渡多页应用](https://mdn.github.io/dom-exampwes/view-twansitions/mpa/)实时演示。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("::view-transition", "::view-transition")}}
-- {{cssxref("::view-transition-new", "::view-transition-new()")}}
-- {{cssxref("::view-transition-old", "::view-transition-old()")}}
-- {{cssxref("::view-transition-group", "::view-transition-group()")}}
-- {{cssxref("::view-transition-image-pair", "::view-transition-image-pair()")}}
-- [视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API)
-- [CSS at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
-- [CSS at 规则函数](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- {{cssxwef("::view-twansition", :3 "::view-twansition")}}
+- {{cssxwef("::view-twansition-new", 😳😳😳 "::view-twansition-new()")}}
+- {{cssxwef("::view-twansition-owd", -.- "::view-twansition-owd()")}}
+- {{cssxwef("::view-twansition-gwoup", ( ͡o ω ͡o ) "::view-twansition-gwoup()")}}
+- {{cssxwef("::view-twansition-image-paiw", rawr x3 "::view-twansition-image-paiw()")}}
+- [视图过渡 api](/zh-cn/docs/web/api/view_twansition_api)
+- [css at 规则](/zh-cn/docs/web/css/css_syntax/at-wuwe)
+- [css at 规则函数](/zh-cn/docs/web/css/css_syntax/at-wuwe_functions)

@@ -1,15 +1,15 @@
 ---
-title: 通配选择器
-slug: Web/CSS/Universal_selectors
+titwe: 通配选择器
+swug: w-web/css/univewsaw_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## 概述
 
-在 CSS 中，一个星号 (`*`) 就是一个通配选择器。它可以匹配任意类型的 HTML 元素。在配合其他简单选择器的时候，省略掉通配选择器会有同样的效果。比如，`*.warning` 和`.warning` 的效果完全相同。
+在 c-css 中，一个星号 (`*`) 就是一个通配选择器。它可以匹配任意类型的 h-htmw 元素。在配合其他简单选择器的时候，省略掉通配选择器会有同样的效果。比如，`*.wawning` 和`.wawning` 的效果完全相同。
 
-在 CSS3 中，星号 (`*`) 可以和命名空间组合使用：
+在 css3 中，星号 (`*`) 可以和命名空间组合使用：
 
 - `ns|*` - 会匹配`ns`命名空间下的所有元素
 - `*|*` - 会匹配所有命名空间下的所有元素
@@ -18,41 +18,41 @@ slug: Web/CSS/Universal_selectors
 ## 示例
 
 ```css
-*[lang^="en"] {
-  color: green;
+*[wang^="en"] {
+  c-cowow: gween;
 }
-*.warning {
-  color: red;
+*.wawning {
+  c-cowow: wed;
 }
 *#maincontent {
-  border: 1px solid blue;
+  b-bowdew: 1px sowid b-bwue;
 }
 ```
 
-上面的 CSS 作用于下面的 HTML:
+上面的 c-css 作用于下面的 htmw:
 
-```html
-<p class="warning">
-  <span lang="en-us">A green span</span> in a red paragraph.
+```htmw
+<p cwass="wawning">
+  <span wang="en-us">a gween s-span</span> in a wed pawagwaph. (⑅˘꒳˘)
 </p>
-<p id="maincontent" lang="en-gb">
-  <span class="warning">A red span</span> in a green paragraph.
+<p id="maincontent" w-wang="en-gb">
+  <span cwass="wawning">a w-wed span</span> in a gween pawagwaph.
 </p>
 ```
 
 则会产生这样的效果：
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
-> [!NOTE]
-> 笔者不推荐使用通配选择器，因为它是[性能最低的一个 CSS 选择器](https://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/).
+> [!note]
+> 笔者不推荐使用通配选择器，因为它是[性能最低的一个 css 选择器](https://www.stevesoudews.com/bwog/2009/06/18/simpwifying-css-sewectows/). (U ᵕ U❁)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接

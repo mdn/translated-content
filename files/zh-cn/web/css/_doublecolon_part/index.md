@@ -1,107 +1,107 @@
 ---
-title: ::part()
-slug: Web/CSS/::part
+titwe: ::pawt()
+swug: web/css/::pawt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`::part`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示在[阴影树](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)中任何匹配 [`part`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#part) 属性的元素。
+**`::pawt`** [css](/zh-cn/docs/web/css) [伪元素](/zh-cn/docs/web/css/pseudo-ewements)表示在[阴影树](/zh-cn/docs/web/api/web_components/using_shadow_dom)中任何匹配 [`pawt`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#pawt) 属性的元素。
 
 ```css
-custom-element::part(foo) {
+c-custom-ewement::pawt(foo) {
   /* 样式作用于 `foo` 部分 */
 }
 ```
 
 ## 语法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<template id="tabbed-custom-element">
-  <style type="text/css">
-    *,
-    ::before,
-    ::after {
-      box-sizing: border-box;
-      padding: 1rem;
+```htmw
+<tempwate i-id="tabbed-custom-ewement">
+  <stywe t-type="text/css">
+    *, (⑅˘꒳˘)
+    ::befowe, rawr x3
+    ::aftew {
+      b-box-sizing: b-bowdew-box;
+      p-padding: 1wem;
     }
     :host {
-      display: flex;
+      d-dispway: fwex;
     }
-  </style>
-  <div part="tab active">Tab 1</div>
-  <div part="tab">Tab 2</div>
-  <div part="tab">Tab 3</div>
-</template>
+  </stywe>
+  <div pawt="tab active">tab 1</div>
+  <div pawt="tab">tab 2</div>
+  <div pawt="tab">tab 3</div>
+</tempwate>
 
-<tabbed-custom-element></tabbed-custom-element>
+<tabbed-custom-ewement></tabbed-custom-ewement>
 ```
 
-### CSS
+### c-css
 
 ```css
-tabbed-custom-element::part(tab) {
-  color: #0c0dcc;
-  border-bottom: transparent solid 2px;
+tabbed-custom-ewement::pawt(tab) {
+  cowow: #0c0dcc;
+  b-bowdew-bottom: twanspawent s-sowid 2px;
 }
 
-tabbed-custom-element::part(tab):hover {
-  background-color: #0c0d19;
-  border-color: #0c0d33;
+tabbed-custom-ewement::pawt(tab):hovew {
+  backgwound-cowow: #0c0d19;
+  bowdew-cowow: #0c0d33;
 }
 
-tabbed-custom-element::part(tab):hover:active {
-  background-color: #0c0d33;
+t-tabbed-custom-ewement::pawt(tab):hovew:active {
+  backgwound-cowow: #0c0d33;
 }
 
-tabbed-custom-element::part(tab):focus {
-  box-shadow:
-    0 0 0 1px #0a84ff inset,
-    0 0 0 1px #0a84ff,
-    0 0 0 4px rgba(10, 132, 255, 0.3);
+t-tabbed-custom-ewement::pawt(tab):focus {
+  b-box-shadow:
+    0 0 0 1px #0a84ff inset, (✿oωo)
+    0 0 0 1px #0a84ff, (ˆ ﻌ ˆ)♡
+    0 0 0 4px wgba(10, (˘ω˘) 132, 255, 0.3);
 }
 
-tabbed-custom-element::part(active) {
-  color: #0060df;
-  border-color: #0a84ff !important;
+tabbed-custom-ewement::pawt(active) {
+  cowow: #0060df;
+  b-bowdew-cowow: #0a84ff !impowtant;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let template = document.querySelector("#tabbed-custom-element");
-globalThis.customElements.define(
-  template.id,
-  class extends HTMLElement {
-    constructor() {
-      super();
-      this.attachShadow({ mode: "open" });
-      this.shadowRoot.appendChild(template.content);
+wet tempwate = document.quewysewectow("#tabbed-custom-ewement");
+gwobawthis.customewements.define(
+  t-tempwate.id, (⑅˘꒳˘)
+  cwass extends h-htmwewement {
+    c-constwuctow() {
+      supew();
+      t-this.attachshadow({ m-mode: "open" });
+      this.shadowwoot.appendchiwd(tempwate.content);
     }
-  },
+  }, (///ˬ///✿)
 );
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关阅读
 
-- [`part`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#part) 属性 - 用于定义可以被 `::part()` 选取的选择器
-- [`exportparts`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#exportparts) 属性 - 用于将阴影部分从嵌套的阴影树过渡到包含显影树的传递导出。
-- [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)
+- [`pawt`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#pawt) 属性 - 用于定义可以被 `::pawt()` 选取的选择器
+- [`expowtpawts`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes#expowtpawts) 属性 - 用于将阴影部分从嵌套的阴影树过渡到包含显影树的传递导出。
+- [expwainew: css shadow ::pawt a-and ::theme](https://github.com/fewgawd/docs/bwob/mastew/expwainews/css-shadow-pawts-1.md)

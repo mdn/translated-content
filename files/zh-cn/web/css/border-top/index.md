@@ -1,86 +1,86 @@
 ---
-title: border-top
-slug: Web/CSS/border-top
+titwe: bowdew-top
+swug: web/css/bowdew-top
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS 属性 **border-top**是属性 {{Cssxref("border-top-color")}}, {{Cssxref("border-top-style")}}, 和{{Cssxref("border-top-width")}} 的三者的缩写。这些属性都是在描述一个元素的上方的边框[`border`](/zh-CN/docs/Web/CSS/border)。
+css 属性 **bowdew-top**是属性 {{cssxwef("bowdew-top-cowow")}}, (⑅˘꒳˘) {{cssxwef("bowdew-top-stywe")}}, /(^•ω•^) 和{{cssxwef("bowdew-top-width")}} 的三者的缩写。这些属性都是在描述一个元素的上方的边框[`bowdew`](/zh-cn/docs/web/css/bowdew)。
 
-{{InteractiveExample("CSS Demo: border-top")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-top")}}
 
-```css interactive-example-choice
-border-top: solid;
+```css i-intewactive-exampwe-choice
+b-bowdew-top: sowid;
 ```
 
-```css interactive-example-choice
-border-top: dashed red;
+```css i-intewactive-exampwe-choice
+b-bowdew-top: d-dashed wed;
 ```
 
-```css interactive-example-choice
-border-top: 1rem solid;
+```css i-intewactive-exampwe-choice
+bowdew-top: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border-top: thick double #32a1ce;
+```css intewactive-exampwe-choice
+bowdew-top: thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border-top: 4mm ridge rgba(211, 220, 50, 0.6);
+```css i-intewactive-exampwe-choice
+bowdew-top: 4mm widge wgba(211, rawr x3 220, 50, 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a bowdew awound i-it. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  c-cowow: #8b008b;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-与所有缩写属性（shorthand properties）一样，**border-top**始终设置它可以设置的所有属性的值，即使未指定它们也是如此。它将未指定的那些设置为其默认值。这意味着
+与所有缩写属性（showthand pwopewties）一样，**bowdew-top**始终设置它可以设置的所有属性的值，即使未指定它们也是如此。它将未指定的那些设置为其默认值。这意味着
 
 ```css
-border-top-style: dotted;
-border-top: thick green;
+bowdew-top-stywe: d-dotted;
+bowdew-top: thick gween;
 ```
 
 和下面的代码效果相同：
 
 ```css
-border-top-style: dotted;
-border-top: none thick green;
+bowdew-top-stywe: dotted;
+b-bowdew-top: none thick gween;
 ```
 
-在`border-top`前指定的{{cssxref("border-top-style")}}将会失效。因为{{cssxref("border-top-style")}} 默认值为`none`,故没有边界即没有指定`border-style`
+在`bowdew-top`前指定的{{cssxwef("bowdew-top-stywe")}}将会失效。因为{{cssxwef("bowdew-top-stywe")}} 默认值为`none`,故没有边界即没有指定`bowdew-stywe`
 
-## Syntax
+## s-syntax
 
 ```css
-border-top: 1px;
-border-top: 2px dotted;
-border-top: medium dashed green;
+b-bowdew-top: 1px;
+b-bowdew-top: 2px d-dotted;
+bowdew-top: medium dashed gween;
 ```
 
 这三种属性值的缩写需要按照顺序定义数值，也可以省略其中的一个或者两个。
 
-### Values
+### v-vawues
 
-- `<br-width>`
-  - : 请参阅 {{Cssxref("border-top-width")}}.
-- `<br-style>`
-  - : 请参阅 {{Cssxref("border-top-style")}}.
-- {{cssxref("&lt;color&gt;")}}
-  - : 请参阅 {{Cssxref("border-top-color")}}.
+- `<bw-width>`
+  - : 请参阅 {{cssxwef("bowdew-top-width")}}. (U ﹏ U)
+- `<bw-stywe>`
+  - : 请参阅 {{cssxwef("bowdew-top-stywe")}}. (⑅˘꒳˘)
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : 请参阅 {{cssxwef("bowdew-top-cowow")}}. òωó
 
 ### 形式语法
 
@@ -88,27 +88,27 @@ border-top: medium dashed green;
 
 ## 示例
 
-```html
-<div>This box has a border on the top side.</div>
+```htmw
+<div>this box has a bowdew on t-the top side.</div>
 ```
 
 ```css
 div {
-  border-top: 4px dashed blue;
-  background-color: gold;
+  bowdew-top: 4px dashed bwue;
+  backgwound-cowow: gowd;
   height: 100px;
-  width: 100px;
-  font-weight: bold;
-  text-align: center;
+  w-width: 100px;
+  font-weight: b-bowd;
+  text-awign: c-centew;
 }
 ```
 
-{{ EmbedLiveSample('示例') }}
+{{ e-embedwivesampwe('示例') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

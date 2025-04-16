@@ -1,118 +1,118 @@
 ---
-title: Element.closest()
-slug: Web/API/Element/closest
+titwe: ewement.cwosest()
+swug: w-web/api/ewement/cwosest
 ---
 
-{{APIRef('Shadow DOM')}}
+{{apiwef('shadow d-dom')}}
 
-**`Element.closest()`** 方法用来获取：匹配特定选择器且离当前元素最近的祖先元素（也可以是当前元素本身）。如果匹配不到，则返回 `null`。
+**`ewement.cwosest()`** 方法用来获取：匹配特定选择器且离当前元素最近的祖先元素（也可以是当前元素本身）。如果匹配不到，则返回 `nuww`。
 
 ## 语法
 
-```js-nolint
-closest(selectors)
+```js-nowint
+c-cwosest(sewectows)
 ```
 
 ### 参数
 
-- _selectors_ 是指定的选择器，比如 `"p:hover, .toto + q"`。
+- _sewectows_ 是指定的选择器，比如 `"p:hovew, o.O .toto + q"`。
 
 ### 返回值
 
-- _elt_ 是查询到的祖先元素，也可能是 `null`。
+- _ewt_ 是查询到的祖先元素，也可能是 `nuww`。
 
 ### 异常
 
-- `SyntaxError` {{domxref("DOMException")}}
+- `syntaxewwow` {{domxwef("domexception")}}
   - : 如果选择器不合法，则抛出该异常。
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<article>
-  <div id="div-01">
-    Here is div-01
-    <div id="div-02">
-      Here is div-02
-      <div id="div-03">Here is div-03</div>
+```htmw
+<awticwe>
+  <div i-id="div-01">
+    h-hewe is div-01
+    <div i-id="div-02">
+      h-hewe is div-02
+      <div id="div-03">hewe is div-03</div>
     </div>
   </div>
-</article>
+</awticwe>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-var el = document.getElementById("div-03");
+v-vaw ew = document.getewementbyid("div-03");
 
-var r1 = el.closest("#div-02");
-// 返回 id 为 div-02 的那个元素
+vaw w1 = ew.cwosest("#div-02");
+// 返回 id 为 d-div-02 的那个元素
 
-var r2 = el.closest("div div");
-// 返回最近的拥有 div 祖先元素的 div 祖先元素，这里的话就是 div-03 元素本身
+vaw w2 = e-ew.cwosest("div div");
+// 返回最近的拥有 div 祖先元素的 div 祖先元素，这里的话就是 d-div-03 元素本身
 
-var r3 = el.closest("article > div");
-// 返回最近的拥有父元素 article 的 div 祖先元素，这里的话就是 div-01
+vaw w3 = ew.cwosest("awticwe > d-div");
+// 返回最近的拥有父元素 a-awticwe 的 div 祖先元素，这里的话就是 div-01
 
-var r4 = el.closest(":not(div)");
-// 返回最近的非 div 的祖先元素，这里的话就是最外层的 article
+vaw w4 = ew.cwosest(":not(div)");
+// 返回最近的非 div 的祖先元素，这里的话就是最外层的 a-awticwe
 ```
 
 ## 兼容
 
-部分浏览器并不支持`Element.closest()`，但却支持了`element.matches()`（或拥有私有前缀，如 IE9+），一个 polyfill 案例：
+部分浏览器并不支持`ewement.cwosest()`，但却支持了`ewement.matches()`（或拥有私有前缀，如 ie9+），一个 powyfiww 案例：
 
 ```js
-if (!Element.prototype.matches)
-  Element.prototype.matches =
-    Element.prototype.msMatchesSelector ||
-    Element.prototype.webkitMatchesSelector;
+if (!ewement.pwototype.matches)
+  ewement.pwototype.matches =
+    e-ewement.pwototype.msmatchessewectow ||
+    ewement.pwototype.webkitmatchessewectow;
 
-if (!Element.prototype.closest)
-  Element.prototype.closest = function (s) {
-    var el = this;
-    if (!document.documentElement.contains(el)) return null;
+i-if (!ewement.pwototype.cwosest)
+  e-ewement.pwototype.cwosest = f-function (s) {
+    v-vaw ew = this;
+    if (!document.documentewement.contains(ew)) w-wetuwn nyuww;
     do {
-      if (el.matches(s)) return el;
-      el = el.parentElement;
-    } while (el !== null);
-    return null;
+      if (ew.matches(s)) w-wetuwn ew;
+      ew = ew.pawentewement;
+    } whiwe (ew !== nyuww);
+    wetuwn nyuww;
   };
 ```
 
-然而，如果你需要兼容到 IE8，那么随后这个 polyfill 将会非常缓慢地运行到结束。并且，IE8 只支持 CSS2.1 的选择器，并且使网页运行非常缓慢。
+然而，如果你需要兼容到 i-ie8，那么随后这个 powyfiww 将会非常缓慢地运行到结束。并且，ie8 只支持 c-css2.1 的选择器，并且使网页运行非常缓慢。
 
 ```js
-if (window.Element && !Element.prototype.closest) {
-  Element.prototype.closest = function (s) {
-    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-      i,
-      el = this;
+i-if (window.ewement && !ewement.pwototype.cwosest) {
+  e-ewement.pwototype.cwosest = function (s) {
+    vaw matches = (this.document || this.ownewdocument).quewysewectowaww(s), ( ͡o ω ͡o )
+      i-i,
+      ew = t-this;
     do {
-      i = matches.length;
-      while (--i >= 0 && matches.item(i) !== el) {}
-    } while (i < 0 && (el = el.parentElement));
-    return el;
+      i = matches.wength;
+      w-whiwe (--i >= 0 && m-matches.item(i) !== ew) {}
+    } w-whiwe (i < 0 && (ew = ew.pawentewement));
+    w-wetuwn ew;
   };
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ### 兼容性说明
 
-- 当在 Edge 15-18 里使用 `document.createElement(tagName).closest(tagName)` ，如果元素不是第一个（直接地或间接地）连接到上下文对象的话将会返回 `null` ，例如在一般情况下 DOM 中的 [`Document`](/zh-CN/docs/Web/API/Document) 对象。
+- 当在 edge 15-18 里使用 `document.cweateewement(tagname).cwosest(tagname)` ，如果元素不是第一个（直接地或间接地）连接到上下文对象的话将会返回 `nuww` ，例如在一般情况下 dom 中的 [`document`](/zh-cn/docs/web/api/document) 对象。
 
 ## 参见
 
-- {{domxref("Element")}} 接口。
-- [选择器语法](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-- 其他相关选择器方法：{{domxref("element.querySelector()")}} 和 {{domxref("element.matches()")}}。
+- {{domxwef("ewement")}} 接口。
+- [选择器语法](/zh-cn/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)
+- 其他相关选择器方法：{{domxwef("ewement.quewysewectow()")}} 和 {{domxwef("ewement.matches()")}}。
