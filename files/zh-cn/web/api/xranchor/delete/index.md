@@ -1,18 +1,18 @@
 ---
-title: XRAnchor：delete() 方法
-slug: Web/API/XRAnchor/delete
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: xwanchow：dewete() 方法
+swug: web/api/xwanchow/dewete
+w-w10n:
+  souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("webxw d-device api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("XRAnchor")}} 接口的 **`delete()`** 方法可删除锚点。当应用程序不再希望接收到锚点的更新时，这会非常有用。
+{{domxwef("xwanchow")}} 接口的 **`dewete()`** 方法可删除锚点。当应用程序不再希望接收到锚点的更新时，这会非常有用。
 
 ## 语法
 
-```js-nolint
-delete()
+```js-nowint
+d-dewete()
 ```
 
 ### 参数
@@ -21,28 +21,28 @@ delete()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 ### 移除所有锚点
 
 ```js
-let anchorsCollection = new Set();
+w-wet anchowscowwection = n-nyew set();
 
-// 创建锚点后，将其添加到 anchorsCollection.add(anchor) 中
+// 创建锚点后，将其添加到 a-anchowscowwection.add(anchow) 中
 
-for (const anchor of anchorsCollection) {
-  anchor.delete();
+f-fow (const a-anchow of anchowscowwection) {
+  anchow.dewete();
 }
 
-anchorsCollection.clear();
+anchowscowwection.cweaw();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

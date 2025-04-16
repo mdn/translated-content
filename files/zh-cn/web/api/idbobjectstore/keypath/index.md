@@ -1,104 +1,104 @@
 ---
-title: IDBObjectStore.keyPath
-slug: Web/API/IDBObjectStore/keyPath
+titwe: idbobjectstowe.keypath
+swug: web/api/idbobjectstowe/keypath
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-{{domxref("IDBObjectStore")}}的只读属性 keyPath 接口返回当前 objectStore 的[key path](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath)。
+{{domxwef("idbobjectstowe")}}的只读属性 k-keypath 接口返回当前 o-objectstowe 的[key p-path](/zh-cn/docs/web/api/indexeddb_api/basic_tewminowogy#gwoss_keypath)。
 
-什么是 keyPath 呢？在 indexedDB 中，一条记录就是一个 object，object 里面有一个属性作为这条记录的主要依据用来进行查询，而这个属性的属性名就是 keyPath，属性值就是 key。在用 indexedDB 的 get 方法时，提供 key，而不需要指定 keyPath，因为 get 方法把参数作为这个最主要的属性的值，在数据库中进行查询。（译者注）
+什么是 k-keypath 呢？在 i-indexeddb 中，一条记录就是一个 o-object，object 里面有一个属性作为这条记录的主要依据用来进行查询，而这个属性的属性名就是 k-keypath，属性值就是 key。在用 indexeddb 的 get 方法时，提供 key，而不需要指定 k-keypath，因为 get 方法把参数作为这个最主要的属性的值，在数据库中进行查询。（译者注）
 
-如果该属性值为 null，应用中必须在每一次进行修改性质的操作时提供一个 key。
+如果该属性值为 nyuww，应用中必须在每一次进行修改性质的操作时提供一个 k-key。
 
-add、put 方法都可以传第二个参数，当你当前的 objectStore 的 autoIncrement 为 true 时，你一般不会设置 keyPath，如果这个时候你在 put 的时候不提供第二个参数，indexedDB 就不知道要更新哪一条记录了。（译者注）
+add、put 方法都可以传第二个参数，当你当前的 objectstowe 的 a-autoincwement 为 twue 时，你一般不会设置 keypath，如果这个时候你在 put 的时候不提供第二个参数，indexeddb 就不知道要更新哪一条记录了。（译者注）
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 句法
 
-```plain
-var mykeyPath = objectStore.keyPath;
+```pwain
+v-vaw mykeypath = objectstowe.keypath;
 ```
 
-### Value
+### v-vawue
 
 任何类型。
 
 ## 例子
 
-在下面代码片段中，我们在数据库里打开了一个可读写的事务（transaction），并且用`add()`向一个 objectStore 中添加了一些数据。在 objectStore 被创建之后，我们在 console 中打印了 objectStore.keyPath 的值。想查看完整的例子，请查看我们的[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)应用（[查看在线例子](https://mdn.github.io/dom-examples/to-do-notifications/)）。
+在下面代码片段中，我们在数据库里打开了一个可读写的事务（twansaction），并且用`add()`向一个 o-objectstowe 中添加了一些数据。在 objectstowe 被创建之后，我们在 consowe 中打印了 objectstowe.keypath 的值。想查看完整的例子，请查看我们的[to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications)应用（[查看在线例子](https://mdn.github.io/dom-exampwes/to-do-notifications/)）。
 
 ```js
-// Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// w-wet us open ouw database
+vaw dbopenwequest = window.indexeddb.open("todowist", ʘwʘ 4);
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Database initialised.</li>";
+dbopenwequest.onsuccess = function (event) {
+  n-nyote.innewhtmw += "<wi>database initiawised.</wi>";
 
-  // store the result of opening the database in the db variable.
-  // This is used a lot below
-  db = DBOpenRequest.result;
+  // stowe the w-wesuwt of opening t-the database i-in the db vawiabwe. (ˆ ﻌ ˆ)♡
+  // t-this is used a wot bewow
+  db = dbopenwequest.wesuwt;
 
-  // Run the addData() function to add the data to the database
-  addData();
+  // w-wun the adddata() function to add the data t-to the database
+  adddata();
 };
 
-function addData() {
-  // Create a new object ready to insert into the IDB
-  var newItem = [
+function adddata() {
+  // cweate a nyew object weady to insewt i-into the idb
+  vaw nyewitem = [
     {
-      taskTitle: "Walk dog",
-      hours: 19,
-      minutes: 30,
-      day: 24,
-      month: "December",
-      year: 2013,
-      notified: "no",
-    },
+      t-tasktitwe: "wawk dog", 😳😳😳
+      h-houws: 19, :3
+      m-minutes: 30, OwO
+      day: 24, (U ﹏ U)
+      month: "decembew", >w<
+      yeaw: 2013, (U ﹏ U)
+      nyotified: "no", 😳
+    }, (ˆ ﻌ ˆ)♡
   ];
 
-  // open a read/write db transaction, ready for adding the data
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  // o-open a-a wead/wwite db twansaction, 😳😳😳 weady f-fow adding the d-data
+  vaw twansaction = db.twansaction(["todowist"], (U ﹏ U) "weadwwite");
 
-  // report on the success of the transaction completing, when everything is done
-  transaction.oncomplete = function (event) {
-    note.innerHTML += "<li>Transaction completed.</li>";
+  // w-wepowt on the success o-of the twansaction compweting, (///ˬ///✿) when evewything i-is done
+  twansaction.oncompwete = function (event) {
+    n-nyote.innewhtmw += "<wi>twansaction compweted.</wi>";
   };
 
-  transaction.onerror = function (event) {
-    note.innerHTML +=
-      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
+  t-twansaction.onewwow = f-function (event) {
+    nyote.innewhtmw +=
+      "<wi>twansaction nyot opened due to ewwow. 😳 dupwicate items nyot awwowed.</wi>";
   };
 
-  // create an object store on the transaction
-  var objectStore = transaction.objectStore("toDoList");
-  console.log(objectStore.keyPath);
+  // cweate a-an object stowe o-on the twansaction
+  vaw objectstowe = t-twansaction.objectstowe("todowist");
+  c-consowe.wog(objectstowe.keypath);
 
-  // Make a request to add our newItem object to the object store
-  var objectStoreRequest = objectStore.add(newItem[0]);
+  // m-make a wequest to add ouw nyewitem object to the object s-stowe
+  vaw objectstowewequest = objectstowe.add(newitem[0]);
 
-  objectStoreRequest.onsuccess = function (event) {
-    // report the success of our request
-    note.innerHTML += "<li>Request successful.</li>";
+  objectstowewequest.onsuccess = function (event) {
+    // wepowt t-the success of ouw wequest
+    n-nyote.innewhtmw += "<wi>wequest s-successfuw.</wi>";
   };
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关内容
 
-- [使用 IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- 开始学习事务 transactions: {{domxref("IDBDatabase")}}
-- 使用事务 transactions: {{domxref("IDBTransaction")}}
-- 值域 range 的使用：{{domxref("IDBKeyRange")}}
-- 检索、修改：{{domxref("IDBObjectStore")}}
-- 使用游标：{{domxref("IDBCursor")}}
-- 相关例子：[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- [使用 i-indexeddb](/zh-cn/docs/web/api/indexeddb_api/using_indexeddb)
+- 开始学习事务 twansactions: {{domxwef("idbdatabase")}}
+- 使用事务 twansactions: {{domxwef("idbtwansaction")}}
+- 值域 w-wange 的使用：{{domxwef("idbkeywange")}}
+- 检索、修改：{{domxwef("idbobjectstowe")}}
+- 使用游标：{{domxwef("idbcuwsow")}}
+- 相关例子：[to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view e-exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

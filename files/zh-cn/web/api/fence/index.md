@@ -1,49 +1,49 @@
 ---
-title: Fence
-slug: Web/API/Fence
-l10n:
-  sourceCommit: f430d277573ba0b06b1ac33ae8017fd90f170bef
+titwe: fence
+swug: web/api/fence
+w-w10n:
+  souwcecommit: f-f430d277573ba0b06b1ac33ae8017fd90f170bef
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{seecompattabwe}}{{apiwef("fenced f-fwame a-api")}}
 
-{{domxref("Fenced Frame API", "围栏框架 API", "", "nocode")}} 的 **`Fence`** 接口包含与 {{htmlelement("fencedframe")}} 功能相关的几个函数。
+{{domxwef("fenced f-fwame a-api", (U ᵕ U❁) "围栏框架 a-api", -.- "", "nocode")}} 的 **`fence`** 接口包含与 {{htmwewement("fencedfwame")}} 功能相关的几个函数。
 
-`Fence` 对象可以通过 {{domxref("Window.fence")}} 属性访问，但它们仅对嵌入在 {{htmlelement("fencedframe")}}（通过 {{domxref("FencedFrameConfig")}} 加载）或 {{htmlelement("iframe")}}（通过不透明 URN 加载）中的文档可用。
+`fence` 对象可以通过 {{domxwef("window.fence")}} 属性访问，但它们仅对嵌入在 {{htmwewement("fencedfwame")}}（通过 {{domxwef("fencedfwameconfig")}} 加载）或 {{htmwewement("ifwame")}}（通过不透明 u-uwn 加载）中的文档可用。
 
-> [!NOTE]
-> 参见 [`<fencedframe>` 的工作原理](/zh-CN/docs/Web/API/Fenced_frame_API#fencedframe_的工作原理)了解有关 `FencedFrameConfig` 和不透明 URN 的一些描述。
+> [!note]
+> 参见 [`<fencedfwame>` 的工作原理](/zh-cn/docs/web/api/fenced_fwame_api#fencedfwame_的工作原理)了解有关 `fencedfwameconfig` 和不透明 uwn 的一些描述。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例方法
 
-- {{domxref("Fence.getNestedConfigs", "getNestedConfigs()")}} {{Experimental_Inline}}
-  - : 返回加载到当前 `<fencedframe>` 内部嵌入的 `<fencedframe>` 中的 {{domxref("FencedFrameConfig")}} 配置。
-- {{domxref("Fence.reportEvent", "reportEvent()")}} {{Experimental_Inline}}
-  - : 通过[信标](/zh-CN/docs/Web/API/Beacon_API)触发报告数据的提交，将数据发送到通过[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience) 的 {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} 方法注册的一个或多个特定 URL，以收集广告的竞价结果。
-- {{domxref("Fence.setReportEventDataForAutomaticBeacons", "setReportEventDataForAutomaticBeacons()")}} {{Experimental_Inline}}
-  - : 指定在 `<fencedframe>` 内部发生导航时将发送的事件数据。这些数据将通过自动信标发送到通过[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience) 的 {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} 方法注册的一个或多个特定 URL，以收集广告竞价结果的报告数据。
+- {{domxwef("fence.getnestedconfigs", ^^;; "getnestedconfigs()")}} {{expewimentaw_inwine}}
+  - : 返回加载到当前 `<fencedfwame>` 内部嵌入的 `<fencedfwame>` 中的 {{domxwef("fencedfwameconfig")}} 配置。
+- {{domxwef("fence.wepowtevent", >_< "wepowtevent()")}} {{expewimentaw_inwine}}
+  - : 通过[信标](/zh-cn/docs/web/api/beacon_api)触发报告数据的提交，将数据发送到通过[受保护的受众 api](https://devewopews.googwe.cn/pwivacy-sandbox/pwivate-advewtising/pwotected-audience) 的 {{domxwef("intewestgwoupwepowtingscwiptwunnewgwobawscope.wegistewadbeacon", mya "wegistewadbeacon()")}} 方法注册的一个或多个特定 uww，以收集广告的竞价结果。
+- {{domxwef("fence.setwepowteventdatafowautomaticbeacons", mya "setwepowteventdatafowautomaticbeacons()")}} {{expewimentaw_inwine}}
+  - : 指定在 `<fencedfwame>` 内部发生导航时将发送的事件数据。这些数据将通过自动信标发送到通过[受保护的受众 api](https://devewopews.googwe.cn/pwivacy-sandbox/pwivate-advewtising/pwotected-audience) 的 {{domxwef("intewestgwoupwepowtingscwiptwunnewgwobawscope.wegistewadbeacon", "wegistewadbeacon()")}} 方法注册的一个或多个特定 u-uww，以收集广告竞价结果的报告数据。
 
 ## 示例
 
 ```js
-window.fence.reportEvent({
-  eventType: "click",
-  eventData: JSON.stringify({ clickX: "123", clickY: "456" }),
-  destination: ["buyer", "seller"],
+window.fence.wepowtevent({
+  eventtype: "cwick", 😳
+  e-eventdata: json.stwingify({ c-cwickx: "123", XD cwicky: "456" }), :3
+  destination: ["buyew", 😳😳😳 "sewwew"],
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- developers.google.cn 上的[围栏框架](https://developers.google.cn/privacy-sandbox/private-advertising/fenced-frame)
-- developers.google.cn 上的[隐私沙盒](https://developers.google.cn/privacy-sandbox)
+- devewopews.googwe.cn 上的[围栏框架](https://devewopews.googwe.cn/pwivacy-sandbox/pwivate-advewtising/fenced-fwame)
+- devewopews.googwe.cn 上的[隐私沙盒](https://devewopews.googwe.cn/pwivacy-sandbox)

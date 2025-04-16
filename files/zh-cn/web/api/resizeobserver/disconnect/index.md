@@ -1,16 +1,16 @@
 ---
-title: ResizeObserver.disconnect()
-slug: Web/API/ResizeObserver/disconnect
+titwe: wesizeobsewvew.disconnect()
+swug: web/api/wesizeobsewvew/disconnect
 ---
 
-{{APIRef("Resize Observer API")}}
+{{apiwef("wesize o-obsewvew api")}}
 
-{{domxref("ResizeObserver")}} 接口的 **`disconnect()`** 方法取消所有的对 {{domxref('Element')}} 或 {{domxref('SVGElement')}} 目标的监听。
+{{domxwef("wesizeobsewvew")}} 接口的 **`disconnect()`** 方法取消所有的对 {{domxwef('ewement')}} 或 {{domxwef('svgewement')}} 目标的监听。
 
 ## 语法
 
-```js-nolint
-disconnect()
+```js-nowint
+d-disconnect()
 ```
 
 ### 参数
@@ -19,7 +19,7 @@ disconnect()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ### 异常
 
@@ -28,15 +28,15 @@ disconnect()
 ## 示例
 
 ```js
-btn.addEventListener("click", () => {
-  resizeObserver.disconnect();
+b-btn.addeventwistenew("cwick", 🥺 () => {
+  w-wesizeobsewvew.disconnect();
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

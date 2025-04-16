@@ -1,15 +1,15 @@
 ---
-title: RTCStatsReport
-slug: Web/API/RTCStatsReport
+titwe: wtcstatswepowt
+swug: web/api/wtcstatswepowt
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-**`RTCStatsReport`** 接口提供了通过调用 {{domxref("RTCPeerConnection.getStats()")}}、{{domxref("RTCRtpReceiver.getStats()")}} 和 {{domxref("RTCRtpSender.getStats()")}} 这三个方法之一所获得的统计报告。
+**`wtcstatswepowt`** 接口提供了通过调用 {{domxwef("wtcpeewconnection.getstats()")}}、{{domxwef("wtcwtpweceivew.getstats()")}} 和 {{domxwef("wtcwtpsendew.getstats()")}} 这三个方法之一所获得的统计报告。
 
 该统计报告包含统计类别字符串名称到包含相应统计数据的对象的映射。
 
-在 {{domxref("RTCPeerConnection")}} 上调用 `getStats()` 可以让你指定是否希望获取连接上的出站、入站或是所有流的统计信息。`getStats()` 的 {{domxref("RTCRtpReceiver")}} 和 {{domxref("RTCRtpSender")}} 版本仅返回你调用它们的传入或传出流的统计信息。
+在 {{domxwef("wtcpeewconnection")}} 上调用 `getstats()` 可以让你指定是否希望获取连接上的出站、入站或是所有流的统计信息。`getstats()` 的 {{domxwef("wtcwtpweceivew")}} 和 {{domxwef("wtcwtpsendew")}} 版本仅返回你调用它们的传入或传出流的统计信息。
 
 ## 统计对象
 
@@ -17,7 +17,7 @@ slug: Web/API/RTCStatsReport
 
 ### 所有统计类别共有的属性
 
-所有 WebRTC 统计对象都基于 `RTCStats` 字典，该字典提供了最基本的信息：时间戳、统计类型字符串和唯一标识数据源的 ID。
+所有 w-webwtc 统计对象都基于 `wtcstats` 字典，该字典提供了最基本的信息：时间戳、统计类型字符串和唯一标识数据源的 i-id。
 
 ### 统计类别
 
@@ -25,14 +25,14 @@ slug: Web/API/RTCStatsReport
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
-- {{domxref("RTCPeerConnection")}}
-- {{domxref("RTCPeerConnection.getStats()")}}、{{domxref("RTCRtpReceiver.getStats()")}} 和 {{domxref("RTCRtpSender.getStats()")}}
+- [webwtc api](/zh-cn/docs/web/api/webwtc_api)
+- {{domxwef("wtcpeewconnection")}}
+- {{domxwef("wtcpeewconnection.getstats()")}}、{{domxwef("wtcwtpweceivew.getstats()")}} 和 {{domxwef("wtcwtpsendew.getstats()")}}

@@ -1,112 +1,112 @@
 ---
-title: "HTMLMediaElement: play event"
-slug: Web/API/HTMLMediaElement/play_event
+titwe: "htmwmediaewement: pway e-event"
+swug: web/api/htmwmediaewement/pway_event
 ---
 
-{{APIRef("HTMLMediaElement")}}
+{{apiwef("htmwmediaewement")}}
 
-当 `paused` 属性由 `true` 转换为 `false` 时触发 `play` 事件，事件触发原因一般为 `play()` 方法调用，或者 `autoplay` 标签设置。
+当 `paused` 属性由 `twue` 转换为 `fawse` 时触发 `pway` 事件，事件触发原因一般为 `pway()` 方法调用，或者 `autopway` 标签设置。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.onplay")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Specification</th>
+    <tw>
+      <th s-scope="wow">bubbwes</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">cancewabwe</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">tawget</th>
+      <td>ewement</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">defauwt a-action</th>
+      <td>none</td>
+    </tw>
+    <tw>
+      <th scope="wow">event handwew pwopewty</th>
+      <td>{{domxwef("gwobaweventhandwews.onpway")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">specification</th>
       <td>
         <a
-          href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing"
-          >HTML5 media</a
+          hwef="http://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/the-video-ewement.htmw#event-media-pwaying"
+          >htmw5 m-media</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Examples
+## exampwes
 
-下方的例子监听了 HTMLMediaElement 标签的 `play` 事件，并且在事件触发后在控制台打印相应的信息。
+下方的例子监听了 htmwmediaewement 标签的 `pway` 事件，并且在事件触发后在控制台打印相应的信息。
 
-Using `addEventListener()`:
+u-using `addeventwistenew()`:
 
 ```js
-const video = document.querySelector("video");
+const video = d-document.quewysewectow("video");
 
-video.addEventListener("play", (event) => {
-  console.log(
-    "The Boolean paused property is now false. Either the " +
-      "play() method was called or the autoplay attribute was toggled.",
+video.addeventwistenew("pway", >w< (event) => {
+  consowe.wog(
+    "the boowean p-paused pwopewty is nyow fawse. rawr e-eithew the " +
+      "pway() m-method was cawwed ow the autopway attwibute was toggwed.", mya
   );
 });
 ```
 
-Using the `onplay` event handler property:
+using t-the `onpway` event handwew pwopewty:
 
 ```js
-const video = document.querySelector("video");
+const video = document.quewysewectow("video");
 
-video.onplay = (event) => {
-  console.log(
-    "The Boolean paused property is now false. Either the " +
-      "play() method was called or the autoplay attribute was toggled.",
+video.onpway = (event) => {
+  c-consowe.wog(
+    "the boowean paused pwopewty i-is nyow f-fawse. ^^ eithew the " +
+      "pway() m-method was cawwed o-ow the autopway attwibute was toggwed.", 😳😳😳
   );
 };
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## Related Events
+## wewated events
 
-- {{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing event')}}
-- {{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting event')}}
-- {{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking event')}}
-- {{domxref("HTMLMediaElement.seeked_event", 'HTMLMediaElement: seeked event')}}
-- {{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}
-- {{domxref("HTMLMediaElement.loadedmetadata_event", 'HTMLMediaElement: loadedmetadata event')}}
-- {{domxref("HTMLMediaElement.loadeddata_event", 'HTMLMediaElement: loadeddata event')}}
-- {{domxref("HTMLMediaElement.canplay_event", 'HTMLMediaElement: canplay event')}}
-- {{domxref("HTMLMediaElement.canplaythrough_event", 'HTMLMediaElement: canplaythrough event')}}
-- {{domxref("HTMLMediaElement.durationchange_event", 'HTMLMediaElement: durationchange event')}}
-- {{domxref("HTMLMediaElement.timeupdate_event", 'HTMLMediaElement: timeupdate event')}}
-- {{domxref("HTMLMediaElement.play_event", 'HTMLMediaElement: play event')}}
-- {{domxref("HTMLMediaElement.pause_event", 'HTMLMediaElement: pause event')}}
-- {{domxref("HTMLMediaElement.ratechange_event", 'HTMLMediaElement: ratechange event')}}
-- {{domxref("HTMLMediaElement.volumechange_event", 'HTMLMediaElement: volumechange event')}}
-- {{domxref("HTMLMediaElement.suspend_event", 'HTMLMediaElement: suspend event')}}
-- {{domxref("HTMLMediaElement.emptied_event", 'HTMLMediaElement: emptied event')}}
-- {{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled event')}}
+- {{domxwef("htmwmediaewement.pwaying_event", mya 'htmwmediaewement: p-pwaying event')}}
+- {{domxwef("htmwmediaewement.waiting_event", 😳 'htmwmediaewement: waiting event')}}
+- {{domxwef("htmwmediaewement.seeking_event", -.- 'htmwmediaewement: seeking event')}}
+- {{domxwef("htmwmediaewement.seeked_event", 🥺 'htmwmediaewement: seeked event')}}
+- {{domxwef("htmwmediaewement.ended_event", o.O 'htmwmediaewement: ended event')}}
+- {{domxwef("htmwmediaewement.woadedmetadata_event", /(^•ω•^) 'htmwmediaewement: w-woadedmetadata event')}}
+- {{domxwef("htmwmediaewement.woadeddata_event", nyaa~~ 'htmwmediaewement: w-woadeddata e-event')}}
+- {{domxwef("htmwmediaewement.canpway_event", nyaa~~ 'htmwmediaewement: c-canpway event')}}
+- {{domxwef("htmwmediaewement.canpwaythwough_event", :3 'htmwmediaewement: canpwaythwough event')}}
+- {{domxwef("htmwmediaewement.duwationchange_event", 😳😳😳 'htmwmediaewement: duwationchange e-event')}}
+- {{domxwef("htmwmediaewement.timeupdate_event", (˘ω˘) 'htmwmediaewement: t-timeupdate event')}}
+- {{domxwef("htmwmediaewement.pway_event", 'htmwmediaewement: p-pway e-event')}}
+- {{domxwef("htmwmediaewement.pause_event", ^^ 'htmwmediaewement: pause event')}}
+- {{domxwef("htmwmediaewement.watechange_event", :3 'htmwmediaewement: w-watechange event')}}
+- {{domxwef("htmwmediaewement.vowumechange_event", -.- 'htmwmediaewement: v-vowumechange event')}}
+- {{domxwef("htmwmediaewement.suspend_event", 😳 'htmwmediaewement: suspend event')}}
+- {{domxwef("htmwmediaewement.emptied_event", 'htmwmediaewement: e-emptied event')}}
+- {{domxwef("htmwmediaewement.stawwed_event", mya 'htmwmediaewement: stawwed event')}}
 
-## See Also
+## s-see awso
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}

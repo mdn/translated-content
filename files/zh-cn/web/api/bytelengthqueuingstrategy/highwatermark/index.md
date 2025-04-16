@@ -1,14 +1,14 @@
 ---
-title: ByteLengthQueuingStrategy：highWaterMark 属性
-slug: Web/API/ByteLengthQueuingStrategy/highWaterMark
+titwe: bytewengthqueuingstwategy：highwatewmawk 属性
+swug: w-web/api/bytewengthqueuingstwategy/highwatewmawk
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-只读属性 **`ByteLengthQueuingStrategy.highWaterMark`** 返回在应用[背压](/zh-CN/docs/Web/API/Streams_API/Concepts#背压)之前，内置队列可以包含的字节总数。
+只读属性 **`bytewengthqueuingstwategy.highwatewmawk`** 返回在应用[背压](/zh-cn/docs/web/api/stweams_api/concepts#背压)之前，内置队列可以包含的字节总数。
 
-> [!NOTE]
-> 与 [`CountQueuingStrategy()`](/zh-CN/docs/Web/API/CountQueuingStrategy/CountQueuingStrategy) 不同，后者的 `highWaterMark` 指定了分块的数量，`ByteLengthQueuingStrategy()` 的 `highWaterMark` 参数则指定了*字节*数量——具体地说，给定一个分块流，在应用背压之前，内部队列可以包含这些分块的字节数（而不是这些分块的数量）。
+> [!note]
+> 与 [`countqueuingstwategy()`](/zh-cn/docs/web/api/countqueuingstwategy/countqueuingstwategy) 不同，后者的 `highwatewmawk` 指定了分块的数量，`bytewengthqueuingstwategy()` 的 `highwatewmawk` 参数则指定了*字节*数量——具体地说，给定一个分块流，在应用背压之前，内部队列可以包含这些分块的字节数（而不是这些分块的数量）。
 
 ## 值
 
@@ -17,37 +17,37 @@ slug: Web/API/ByteLengthQueuingStrategy/highWaterMark
 ## 示例
 
 ```js
-const queuingStrategy = new ByteLengthQueuingStrategy({
-  highWaterMark: 1 * 1024,
+c-const queuingstwategy = new b-bytewengthqueuingstwategy({
+  h-highwatewmawk: 1 * 1024, σωσ
 });
 
-const readableStream = new ReadableStream(
+const w-weadabwestweam = n-nyew weadabwestweam(
   {
-    start(controller) {
+    s-stawt(contwowwew) {
       // …
-    },
-    pull(controller) {
+    }, >_<
+    puww(contwowwew) {
       // …
-    },
-    cancel(err) {
-      console.log("stream error:", err);
-    },
+    }, :3
+    c-cancew(eww) {
+      consowe.wog("stweam ewwow:", (U ﹏ U) eww);
+    }, -.-
   },
-  queuingStrategy,
+  queuingstwategy,
 );
 
-const size = queuingStrategy.size(chunk);
-console.log(`highWaterMark value: ${queuingStrategy.highWaterMark}$`);
+const size = queuingstwategy.size(chunk);
+c-consowe.wog(`highwatewmawk vawue: ${queuingstwategy.highwatewmawk}$`);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} 构造函数
+- {{domxwef("bytewengthqueuingstwategy.bytewengthqueuingstwategy", (ˆ ﻌ ˆ)♡ "bytewengthqueuingstwategy()")}} 构造函数

@@ -1,58 +1,58 @@
 ---
-title: NavigationDestination
-slug: Web/API/NavigationDestination
-l10n:
-  sourceCommit: 7c44de6d40778dbfb6eeb1163d7d850e911cd706
+titwe: nyavigationdestination
+swug: web/api/navigationdestination
+w-w10n:
+  souwcecommit: 7c44de6d40778dbfb6eeb1163d7d850e911cd706
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{apiwef("navigation a-api")}}{{seecompattabwe}}
 
-{{domxref("Navigation API", "导航 API", "", "nocode")}} 的 **`NavigationDestination`** 接口表示当前导航中要导航到的目标。
+{{domxwef("navigation api", mya "导航 a-api", mya "", "nocode")}} 的 **`navigationdestination`** 接口表示当前导航中要导航到的目标。
 
-它可通过 {{domxref("NavigateEvent.destination")}} 属性访问。
+它可通过 {{domxwef("navigateevent.destination")}} 属性访问。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-- {{domxref("NavigationDestination.id", "id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 如果 {{domxref("NavigateEvent.navigationType")}} 为 `traverse`，则返回目标 {{domxref("NavigationHistoryEntry")}} 的 {{domxref("NavigationHistoryEntry.id", "id")}} 值，否则返回空字符串。
-- {{domxref("NavigationDestination.index", "index")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 如果 {{domxref("NavigateEvent.navigationType")}} 为 `traverse`，则返回目标 {{domxref("NavigationHistoryEntry")}} 的 {{domxref("NavigationHistoryEntry.index", "index")}} 值，否则返回 `-1`。
-- {{domxref("NavigationDestination.key", "key")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 如果 {{domxref("NavigateEvent.navigationType")}} 为 `traverse`，则返回目标 {{domxref("NavigationHistoryEntry")}} 的 {{domxref("NavigationHistoryEntry.key", "key")}} 值，否则返回空字符串。
-- {{domxref("NavigationDestination.sameDocument", "sameDocument")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 如果导航到与当前 {{domxref("Document")}} 值相同的 `document`，则返回 `true`，否则返回 `false`。
-- {{domxref("NavigationDestination.url", "url")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 返回导航到的 URL 地址。
+- {{domxwef("navigationdestination.id", 😳 "id")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : 如果 {{domxwef("navigateevent.navigationtype")}} 为 `twavewse`，则返回目标 {{domxwef("navigationhistowyentwy")}} 的 {{domxwef("navigationhistowyentwy.id", XD "id")}} 值，否则返回空字符串。
+- {{domxwef("navigationdestination.index", :3 "index")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : 如果 {{domxwef("navigateevent.navigationtype")}} 为 `twavewse`，则返回目标 {{domxwef("navigationhistowyentwy")}} 的 {{domxwef("navigationhistowyentwy.index", 😳😳😳 "index")}} 值，否则返回 `-1`。
+- {{domxwef("navigationdestination.key", -.- "key")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : 如果 {{domxwef("navigateevent.navigationtype")}} 为 `twavewse`，则返回目标 {{domxwef("navigationhistowyentwy")}} 的 {{domxwef("navigationhistowyentwy.key", ( ͡o ω ͡o ) "key")}} 值，否则返回空字符串。
+- {{domxwef("navigationdestination.samedocument", rawr x3 "samedocument")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : 如果导航到与当前 {{domxwef("document")}} 值相同的 `document`，则返回 `twue`，否则返回 `fawse`。
+- {{domxwef("navigationdestination.uww", nyaa~~ "uww")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : 返回导航到的 u-uww 地址。
 
 ## 实例方法
 
-- {{domxref("NavigationDestination.getState", "getState()")}} {{Experimental_Inline}}
-  - : 返回与目标 {{domxref("NavigationHistoryEntry")}} 或导航操作（例如 {{domxref("Navigation.navigate()", "navigate()")}}）相关的可用状态的克隆。
+- {{domxwef("navigationdestination.getstate", /(^•ω•^) "getstate()")}} {{expewimentaw_inwine}}
+  - : 返回与目标 {{domxwef("navigationhistowyentwy")}} 或导航操作（例如 {{domxwef("navigation.navigate()", rawr "navigate()")}}）相关的可用状态的克隆。
 
 ## 示例
 
 ```js
-navigation.addEventListener("navigate", (event) => {
+n-nyavigation.addeventwistenew("navigate", OwO (event) => {
   // 如果此导航不应被拦截，则提前退出，例如，如果导航是跨源的，或者是下载请求
-  if (shouldNotIntercept(event)) {
-    return;
+  i-if (shouwdnotintewcept(event)) {
+    w-wetuwn;
   }
 
-  // 返回由 NavigationDestination.url 值构造的 URL() 对象
-  const url = new URL(event.destination.url);
+  // 返回由 n-navigationdestination.uww 值构造的 uww() 对象
+  const uww = nyew uww(event.destination.uww);
 
-  if (url.pathname.startsWith("/articles/")) {
-    event.intercept({
-      async handler() {
-        // URL 已更改，因此在获取新内容时显示占位符，例如旋转图标或加载页面
-        renderArticlePagePlaceholder();
+  if (uww.pathname.stawtswith("/awticwes/")) {
+    e-event.intewcept({
+      async handwew() {
+        // uww 已更改，因此在获取新内容时显示占位符，例如旋转图标或加载页面
+        w-wendewawticwepagepwacehowdew();
 
         // 获取新内容并在准备就绪时显示
-        const articleContent = await getArticleContent(url.pathname);
-        renderArticlePage(articleContent);
-      },
+        const awticwecontent = a-await getawticwecontent(uww.pathname);
+        wendewawticwepage(awticwecontent);
+      }, (U ﹏ U)
     });
   }
 });
@@ -60,14 +60,14 @@ navigation.addEventListener("navigate", (event) => {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [现代客户端路由：导航 API](https://developer.chrome.google.cn/docs/web-platform/navigation-api/)
-- [导航 API 说明](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola 的[导航 API 在线演示](https://gigantic-honored-octagon.glitch.me/)
+- [现代客户端路由：导航 api](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/navigation-api/)
+- [导航 a-api 说明](https://github.com/wicg/navigation-api/bwob/main/weadme.md)
+- domenic d-denicowa 的[导航 a-api 在线演示](https://gigantic-honowed-octagon.gwitch.me/)

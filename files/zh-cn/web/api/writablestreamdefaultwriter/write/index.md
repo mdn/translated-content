@@ -1,112 +1,112 @@
 ---
-title: WritableStreamDefaultWriter.write()
-slug: Web/API/WritableStreamDefaultWriter/write
+titwe: wwitabwestweamdefauwtwwitew.wwite()
+swug: w-web/api/wwitabwestweamdefauwtwwitew/wwite
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-{{domxref("WritableStreamDefaultWriter")}} 接口的 **`write()`** 方法将传递的数据块写入 {{domxref("WritableStream")}} 和它的底层接收器，然后返回一个 {{jsxref("Promise")}}，promise 的状态由写入操作是否成功来决定。
+{{domxwef("wwitabwestweamdefauwtwwitew")}} 接口的 **`wwite()`** 方法将传递的数据块写入 {{domxwef("wwitabwestweam")}} 和它的底层接收器，然后返回一个 {{jsxwef("pwomise")}}，pwomise 的状态由写入操作是否成功来决定。
 
 请注意，“成功”的含义取决于底层接收器；它可能表示该分块已被接收，但不一定安全地保存到它最终的目的地。
 
 ## 语法
 
-```js-nolint
-write(chunk)
+```js-nowint
+w-wwite(chunk)
 ```
 
 ### 参数
 
 - `chunk`
-  - : 要传递给 `WritableStream` 的二进制数据块。
+  - : 要传递给 `wwitabwestweam` 的二进制数据块。
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，成功写入后使用 `undefined` 兑现，如果在写入过程开始之前写入失败或者流出错，则拒绝。
+一个 {{jsxwef("pwomise")}}，成功写入后使用 `undefined` 兑现，如果在写入过程开始之前写入失败或者流出错，则拒绝。
 
 ### 异常
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : 目标流不是一个可写流，或者它没有所有者。
 
 ## 示例
 
-下面的例子说明了这个接口的几个功能。它展示了使用自定义接收器和由 API 提供的队列策略创建的 `WritableStream`。然后它调用一个 `sendMessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getWriter()` 方法，该方法返回一个 {{domxref("WritableStreamDefaultWriter")}} 实例。`forEach()` 用于将字符串的每个分块写入流。最后，`write()` 和 `close()` 方法都会返回 promise，promise 的状态由对应的操作是否成功来决定。
+下面的例子说明了这个接口的几个功能。它展示了使用自定义接收器和由 a-api 提供的队列策略创建的 `wwitabwestweam`。然后它调用一个 `sendmessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getwwitew()` 方法，该方法返回一个 {{domxwef("wwitabwestweamdefauwtwwitew")}} 实例。`foweach()` 用于将字符串的每个分块写入流。最后，`wwite()` 和 `cwose()` 方法都会返回 p-pwomise，pwomise 的状态由对应的操作是否成功来决定。
 
 ```js
-const list = document.querySelector("ul");
+c-const wist = d-document.quewysewectow("uw");
 
-function sendMessage(message, writableStream) {
-  // defaultWriter is of type WritableStreamDefaultWriter
-  const defaultWriter = writableStream.getWriter();
-  const encoder = new TextEncoder();
-  const encoded = encoder.encode(message, { stream: true });
-  encoded.forEach((chunk) => {
-    defaultWriter.ready
+f-function sendmessage(message, >w< w-wwitabwestweam) {
+  // defauwtwwitew is of type wwitabwestweamdefauwtwwitew
+  const defauwtwwitew = w-wwitabwestweam.getwwitew();
+  const encodew = nyew textencodew();
+  c-const encoded = encodew.encode(message, rawr { s-stweam: twue });
+  encoded.foweach((chunk) => {
+    defauwtwwitew.weady
       .then(() => {
-        return defaultWriter.write(chunk);
+        wetuwn defauwtwwitew.wwite(chunk);
       })
       .then(() => {
-        console.log("Chunk written to sink.");
+        consowe.wog("chunk w-wwitten to sink.");
       })
-      .catch((err) => {
-        console.log("Chunk error:", err);
+      .catch((eww) => {
+        consowe.wog("chunk ewwow:", mya eww);
       });
   });
-  // Call ready again to ensure that all chunks are written
-  //   before closing the writer.
-  defaultWriter.ready
+  // c-caww weady a-again to ensuwe that aww chunks awe wwitten
+  //   befowe cwosing the wwitew. ^^
+  d-defauwtwwitew.weady
     .then(() => {
-      defaultWriter.close();
+      defauwtwwitew.cwose();
     })
     .then(() => {
-      console.log("All chunks written");
+      consowe.wog("aww chunks wwitten");
     })
-    .catch((err) => {
-      console.log("Stream error:", err);
+    .catch((eww) => {
+      consowe.wog("stweam e-ewwow:", 😳😳😳 eww);
     });
 }
 
-const decoder = new TextDecoder("utf-8");
-const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
-let result = "";
-const writableStream = new WritableStream(
+c-const decodew = n-nyew textdecodew("utf-8");
+c-const queuingstwategy = n-nyew countqueuingstwategy({ highwatewmawk: 1 });
+wet wesuwt = "";
+c-const wwitabwestweam = nyew wwitabwestweam(
   {
-    // Implement the sink
-    write(chunk) {
-      return new Promise((resolve, reject) => {
-        var buffer = new ArrayBuffer(1);
-        var view = new Uint8Array(buffer);
-        view[0] = chunk;
-        var decoded = decoder.decode(view, { stream: true });
-        var listItem = document.createElement("li");
-        listItem.textContent = "Chunk decoded: " + decoded;
-        list.appendChild(listItem);
-        result += decoded;
-        resolve();
+    // i-impwement the sink
+    wwite(chunk) {
+      wetuwn nyew pwomise((wesowve, mya weject) => {
+        vaw buffew = nyew awwaybuffew(1);
+        v-vaw view = nyew uint8awway(buffew);
+        v-view[0] = c-chunk;
+        v-vaw decoded = decodew.decode(view, 😳 { stweam: twue });
+        vaw wistitem = document.cweateewement("wi");
+        wistitem.textcontent = "chunk d-decoded: " + decoded;
+        w-wist.appendchiwd(wistitem);
+        wesuwt += decoded;
+        wesowve();
       });
+    }, -.-
+    cwose() {
+      vaw w-wistitem = document.cweateewement("wi");
+      w-wistitem.textcontent = "[message weceived] " + w-wesuwt;
+      wist.appendchiwd(wistitem);
     },
-    close() {
-      var listItem = document.createElement("li");
-      listItem.textContent = "[MESSAGE RECEIVED] " + result;
-      list.appendChild(listItem);
-    },
-    abort(err) {
-      console.log("Sink error:", err);
-    },
+    abowt(eww) {
+      c-consowe.wog("sink ewwow:", 🥺 eww);
+    }, o.O
   },
-  queuingStrategy,
+  q-queuingstwategy, /(^•ω•^)
 );
 
-sendMessage("Hello, world.", writableStream);
+sendmessage("hewwo, nyaa~~ w-wowwd.", wwitabwestweam);
 ```
 
-你可以在我们的[简单的 writer 示例](https://mdn.github.io/dom-examples/streams/simple-writer/)找到完整代码。
+你可以在我们的[简单的 wwitew 示例](https://mdn.github.io/dom-exampwes/stweams/simpwe-wwitew/)找到完整代码。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

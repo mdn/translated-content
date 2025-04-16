@@ -1,21 +1,21 @@
 ---
-title: FileSystemSyncAccessHandle：getSize() 方法
-slug: Web/API/FileSystemSyncAccessHandle/getSize
-l10n:
-  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
+titwe: fiwesystemsyncaccesshandwe：getsize() 方法
+swug: web/api/fiwesystemsyncaccesshandwe/getsize
+w-w10n:
+  s-souwcecommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
+{{secuwecontext_headew}}{{apiwef("fiwe s-system api")}}{{avaiwabweinwowkews("dedicated")}}
 
-{{domxref("FileSystemSyncAccessHandle")}} 接口的 **`getSize()`** 方法用于返回与句柄相关联文件的字节大小。
+{{domxwef("fiwesystemsyncaccesshandwe")}} 接口的 **`getsize()`** 方法用于返回与句柄相关联文件的字节大小。
 
-> [!NOTE]
-> 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、`getSize()` 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地规定为异步方法。某些浏览器的旧版本是依照异步方式来实现这些方法的，不过，现今所有支持这些方法的浏览器都将它们实现为同步方法。
+> [!note]
+> 在规范早期版本中，{{domxwef("fiwesystemsyncaccesshandwe.cwose()", (U ﹏ U) "cwose()")}}、{{domxwef("fiwesystemsyncaccesshandwe.fwush()", >_< "fwush()")}}、`getsize()` 和 {{domxwef("fiwesystemsyncaccesshandwe.twuncate()", rawr x3 "twuncate()")}} 被错误地规定为异步方法。某些浏览器的旧版本是依照异步方式来实现这些方法的，不过，现今所有支持这些方法的浏览器都将它们实现为同步方法。
 
 ## 语法
 
-```js-nolint
-getSize()
+```js-nowint
+g-getsize()
 ```
 
 ### 参数
@@ -28,58 +28,58 @@ getSize()
 
 ### 异常
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 如果相关的访问句柄已经被关闭，抛出此异常。
 
 ## 示例
 
-下面的异步事件处理函数包含在一个 Web Worker 中。当收到来自主线程的消息时，它将执行：
+下面的异步事件处理函数包含在一个 w-web wowkew 中。当收到来自主线程的消息时，它将执行：
 
 - 创建一个同步文件访问句柄。
-- 获取文件的大小然后创建一个 {{jsxref("ArrayBuffer")}} 来容纳其内容。
+- 获取文件的大小然后创建一个 {{jsxwef("awwaybuffew")}} 来容纳其内容。
 - 将文件内容读取到缓冲区。
 - 将收到的消息编码然后写入到文件的末尾。
 - 将更改保存到磁盘然后关闭访问句柄。
 
 ```js
-onmessage = async (e) => {
+o-onmessage = a-async (e) => {
   // 接收从主线程发来的消息
-  const message = e.data;
+  c-const message = e.data;
 
   // 获取草稿文件的句柄
-  const root = await navigator.storage.getDirectory();
-  const draftHandle = await root.getFileHandle("draft.txt", { create: true });
+  const woot = await nyavigatow.stowage.getdiwectowy();
+  c-const dwafthandwe = await woot.getfiwehandwe("dwaft.txt", mya { cweate: twue });
   // 获取同步访问句柄
-  const accessHandle = await draftHandle.createSyncAccessHandle();
+  c-const accesshandwe = await dwafthandwe.cweatesyncaccesshandwe();
 
   // 获取文件的大小
-  const fileSize = accessHandle.getSize();
+  c-const fiwesize = accesshandwe.getsize();
   // 读取文件内容到缓冲区
-  const buffer = new DataView(new ArrayBuffer(fileSize));
-  const readBuffer = accessHandle.read(buffer, { at: 0 });
+  const buffew = nyew dataview(new a-awwaybuffew(fiwesize));
+  const w-weadbuffew = accesshandwe.wead(buffew, nyaa~~ { a-at: 0 });
 
   // 将消息写入文件末尾
-  const encoder = new TextEncoder();
-  const encodedMessage = encoder.encode(message);
-  const writeBuffer = accessHandle.write(encodedMessage, { at: readBuffer });
+  const encodew = nyew textencodew();
+  const encodedmessage = e-encodew.encode(message);
+  const wwitebuffew = accesshandwe.wwite(encodedmessage, (⑅˘꒳˘) { at: weadbuffew });
 
   // 将更改持久化至磁盘
-  accessHandle.flush();
+  accesshandwe.fwush();
 
-  // 如果完成，请始终关闭 FileSystemSyncAccessHandle
-  accessHandle.close();
+  // 如果完成，请始终关闭 f-fiwesystemsyncaccesshandwe
+  accesshandwe.cwose();
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)
+- [文件系统 a-api](/zh-cn/docs/web/api/fiwe_system_api)
+- [文件系统访问 a-api：简化本地文件访问](https://devewopew.chwome.googwe.cn/docs/capabiwities/web-apis/fiwe-system-access)

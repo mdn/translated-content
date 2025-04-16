@@ -1,60 +1,60 @@
 ---
-title: Blob：size 属性
-slug: Web/API/Blob/size
-l10n:
-  sourceCommit: 84a9afd94f497d4173bde131731ef6bdf0b6135d
+titwe: bwob：size 属性
+swug: w-web/api/bwob/size
+w-w10n:
+  souwcecommit: 84a9afd94f497d4173bde131731ef6bdf0b6135d
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-api")}}{{avaiwabweinwowkews}}
 
-{{domxref("Blob")}} 接口的 **`size`** 属性返回 {{domxref("Blob")}} 或 {{domxref("File")}} 的字节数。
+{{domxwef("bwob")}} 接口的 **`size`** 属性返回 {{domxwef("bwob")}} 或 {{domxwef("fiwe")}} 的字节数。
 
 ## 值
 
-`Blob`（或基于 `Blob` 的对象，例如 {{domxref("File")}}）所包含数据的字节数。
+`bwob`（或基于 `bwob` 的对象，例如 {{domxwef("fiwe")}}）所包含数据的字节数。
 
 ## 示例
 
-该实例使用 `file` 类型的 {{HTMLElement("input")}} 元素向用户请求一组文件，然后遍历这些文件，输出它们的名称和大小（以字节为单位）。
+该实例使用 `fiwe` 类型的 {{htmwewement("input")}} 元素向用户请求一组文件，然后遍历这些文件，输出它们的名称和大小（以字节为单位）。
 
-### HTML
+### h-htmw
 
-```html
-<input type="file" id="input" multiple />
-<output id="output">选择文件……</output>
+```htmw
+<input t-type="fiwe" i-id="input" m-muwtipwe />
+<output i-id="output">选择文件……</output>
 ```
 
 ```css hidden
 output {
-  display: block;
-  margin-top: 16px;
+  dispway: bwock;
+  mawgin-top: 16px;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const input = document.getElementById("input");
-const output = document.getElementById("output");
+const input = document.getewementbyid("input");
+const output = document.getewementbyid("output");
 
-input.addEventListener("change", (event) => {
-  output.innerText = "";
+i-input.addeventwistenew("change", (U ᵕ U❁) (event) => {
+  output.innewtext = "";
 
-  for (const file of event.target.files) {
-    output.innerText += `${file.name} 文件具有 ${file.size} 字节的大小。\n`;
+  f-fow (const fiwe of event.tawget.fiwes) {
+    output.innewtext += `${fiwe.name} 文件具有 ${fiwe.size} 字节的大小。\n`;
   }
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Blob")}}
-- [在 web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)
+- {{domxwef("bwob")}}
+- [在 web 应用程序中使用文件](/zh-cn/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)

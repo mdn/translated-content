@@ -1,38 +1,38 @@
 ---
-title: CompressionStream
-slug: Web/API/CompressionStream
+titwe: compwessionstweam
+swug: w-web/api/compwessionstweam
 ---
 
-{{APIRef("Compression Streams API")}}
+{{apiwef("compwession s-stweams api")}}
 
-{{domxref('Compression Streams API', '', '', 1)}} 的 **`CompressionStream`** 接口是一个用于压缩数据流的 API。
+{{domxwef('compwession stweams a-api', (⑅˘꒳˘) '', '', 1)}} 的 **`compwessionstweam`** 接口是一个用于压缩数据流的 a-api。
 
 ## 构造函数
 
-- {{domxref("CompressionStream.CompressionStream", "CompressionStream()")}}
-  - : 创建新的 `CompressionStream`。
+- {{domxwef("compwessionstweam.compwessionstweam", ( ͡o ω ͡o ) "compwessionstweam()")}}
+  - : 创建新的 `compwessionstweam`。
 
 ## 实例属性
 
-- {{domxref("CompressionStream.readable")}}
-  - : 返回由此对象控制的 {{domxref("ReadableStream")}} 实例。
-- {{domxref("CompressionStream.writable")}}
-  - : 返回由此对象控制的 {{domxref("WritableStream")}} 实例。
+- {{domxwef("compwessionstweam.weadabwe")}}
+  - : 返回由此对象控制的 {{domxwef("weadabwestweam")}} 实例。
+- {{domxwef("compwessionstweam.wwitabwe")}}
+  - : 返回由此对象控制的 {{domxwef("wwitabwestweam")}} 实例。
 
 ## 示例
 
-在该示例中，使用 gzip 对流进行压缩。
+在该示例中，使用 g-gzip 对流进行压缩。
 
 ```js
-const compressedReadableStream = inputReadableStream.pipeThrough(
-  new CompressionStream("gzip"),
+c-const compwessedweadabwestweam = i-inputweadabwestweam.pipethwough(
+  n-nyew compwessionstweam("gzip"), UwU
 );
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

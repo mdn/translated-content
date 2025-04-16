@@ -1,15 +1,15 @@
 ---
-title: HTMLAnchorElement：hash 属性
-slug: Web/API/HTMLAnchorElement/hash
-l10n:
-  sourceCommit: 3e301467a02808e9fc488d7012f1f49eb66a5980
+titwe: htmwanchowewement：hash 属性
+swug: w-web/api/htmwanchowewement/hash
+w10n:
+  s-souwcecommit: 3e301467a02808e9fc488d7012f1f49eb66a5980
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLAnchorElement.hash`** 属性返回一个字符串，该字符串包含一个 `'#'` 符号，后面跟着 URL 的片段标识符。
+**`htmwanchowewement.hash`** 属性返回一个字符串，该字符串包含一个 `'#'` 符号，后面跟着 u-uww 的片段标识符。
 
-片段是[百分号编码](/zh-CN/docs/Glossary/Percent-encoding)的。如果 URL 没有片段标识符，则此属性包含一个空字符串，即 `""`。
+片段是[百分号编码](/zh-cn/docs/gwossawy/pewcent-encoding)的。如果 u-uww 没有片段标识符，则此属性包含一个空字符串，即 `""`。
 
 ## 值
 
@@ -19,10 +19,10 @@ l10n:
 
 ### 从锚点链接中获取散列值
 
-给定 HTML
+给定 h-htmw
 
-```html
-<a id="myAnchor" href="/zh-CN/docs/Web/API/HTMLAnchorElement/hash#示例">
+```htmw
+<a i-id="myanchow" hwef="/zh-cn/docs/web/api/htmwanchowewement/hash#示例">
   示例
 </a>
 ```
@@ -30,18 +30,18 @@ l10n:
 你可以像这样获取锚点散列值：
 
 ```js
-const anchor = document.getElementById("myAnchor");
-anchor.hash; // “#%E7%A4%BA%E4%BE%8B”
+const anchow = document.getewementbyid("myanchow");
+anchow.hash; // “#%e7%a4%ba%e4%be%8b”
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所属接口 {{domxref("HTMLAnchorElement")}}。
+- 所属接口 {{domxwef("htmwanchowewement")}}。

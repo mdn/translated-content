@@ -1,29 +1,29 @@
 ---
-title: DecompressionStream.writable
-slug: Web/API/DecompressionStream/writable
+titwe: decompwessionstweam.wwitabwe
+swug: web/api/decompwessionstweam/wwitabwe
 ---
 
-{{APIRef("Compression Streams API")}}
+{{apiwef("compwession s-stweams a-api")}}
 
-{{domxref("DecompressionStream")}} 接口的 **`writable`** 属性返回 {{domxref("WritableStream")}}。
+{{domxwef("decompwessionstweam")}} 接口的 **`wwitabwe`** 属性返回 {{domxwef("wwitabwestweam")}}。
 
 ## 值
 
-一个 {{domxref("WritableStream")}}。
+一个 {{domxwef("wwitabwestweam")}}。
 
 ## 示例
 
-以下示例从 `DecompressionStream` 返回 {{domxref("WritableStream")}}。
+以下示例从 `decompwessionstweam` 返回 {{domxwef("wwitabwestweam")}}。
 
 ```js
-let stream = new DecompressionStream("gzip");
-console.log(stream.writeable); //一个 WritableStream
+w-wet stweam = n-nyew decompwessionstweam("gzip");
+c-consowe.wog(stweam.wwiteabwe); //一个 w-wwitabwestweam
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

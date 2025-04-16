@@ -1,16 +1,16 @@
 ---
-title: StorageManager.persisted()
-slug: Web/API/StorageManager/persisted
+titwe: stowagemanagew.pewsisted()
+swug: web/api/stowagemanagew/pewsisted
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("stowage")}}{{seecompattabwe}}
 
-**`persisted()`**方法是{{domxref("StorageManager")}}的一个接口，如果盒存储模式（**box mode**）的值为“**persistent**”则返回一个 resolved 状态值为`true`的{{jsxref('Promise')}}。
+**`pewsisted()`**方法是{{domxwef("stowagemanagew")}}的一个接口，如果盒存储模式（**box m-mode**）的值为“**pewsistent**”则返回一个 wesowved 状态值为`twue`的{{jsxwef('pwomise')}}。
 
 ## 语法
 
-```plain
-navigator.storage.persisted().then(function(persistent) { ... })
+```pwain
+n-nyavigatow.stowage.pewsisted().then(function(pewsistent) { ... })
 ```
 
 ### 参数
@@ -19,24 +19,24 @@ navigator.storage.persisted().then(function(persistent) { ... })
 
 ### 返回值
 
-一个状态为 resolved，值为{{jsxref('Boolean')}}类型的{{jsxref('Promise')}}。
+一个状态为 w-wesowved，值为{{jsxwef('boowean')}}类型的{{jsxwef('pwomise')}}。
 
 ## 示例
 
 ```js
-if (navigator.storage && navigator.storage.persist)
-  navigator.storage.persisted().then(function (persistent) {
-    if (persistent)
-      console.log("Storage will not be cleared except by explicit user action");
-    else
-      console.log("Storage may be cleared by the UA under storage pressure.");
+i-if (navigatow.stowage && n-nyavigatow.stowage.pewsist)
+  n-nyavigatow.stowage.pewsisted().then(function (pewsistent) {
+    i-if (pewsistent)
+      c-consowe.wog("stowage wiww nyot be cweawed except by expwicit usew action");
+    e-ewse
+      consowe.wog("stowage may be c-cweawed by the ua undew stowage p-pwessuwe.");
   });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

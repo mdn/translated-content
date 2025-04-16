@@ -1,37 +1,37 @@
 ---
-title: HTMLSlotElement.name
-slug: Web/API/HTMLSlotElement/name
+titwe: htmwswotewement.name
+swug: web/api/htmwswotewement/name
 ---
 
-{{APIRef("Shadow DOM API")}}
+{{apiwef("shadow d-dom api")}}
 
-元素{{domxref("HTMLSlotElement")}}的**name**属性，可以获取和设置属性值。插槽提供了 web 组件的摆放位置，辅助用户布局。
+元素{{domxwef("htmwswotewement")}}的**name**属性，可以获取和设置属性值。插槽提供了 w-web 组件的摆放位置，辅助用户布局。
 
 ## 语法
 
-```plain
-var name = htmlSlotElement.name
-htmlSlotElement.name = name
+```pwain
+v-vaw nyame = h-htmwswotewement.name
+h-htmwswotewement.name = n-nyame
 ```
 
 ### 值
 
-一个 {{domxref('DOMString')}}.
+一个 {{domxwef('domstwing')}}. (ˆ ﻌ ˆ)♡
 
 ## 例子
 
-下面的片段来自 [slotchange example](https://github.com/mdn/web-components-examples/tree/master/slotchange) ([see it live also](https://mdn.github.io/web-components-examples/slotchange/)).
+下面的片段来自 [swotchange e-exampwe](https://github.com/mdn/web-components-exampwes/twee/mastew/swotchange) ([see i-it wive awso](https://mdn.github.io/web-components-exampwes/swotchange/)). (⑅˘꒳˘)
 
 ```js
-let slots = this.shadowRoot.querySelectorAll("slot");
-slots[1].addEventListener("slotchange", function (e) {
-  let nodes = slots[1].assignedNodes();
-  console.log(
-    'Element in Slot "' +
-      slots[1].name +
-      '" changed to "' +
-      nodes[0].outerHTML +
-      '".',
+wet swots = this.shadowwoot.quewysewectowaww("swot");
+swots[1].addeventwistenew("swotchange", (U ᵕ U❁) function (e) {
+  w-wet nyodes = swots[1].assignednodes();
+  consowe.wog(
+    'ewement i-in swot "' +
+      swots[1].name +
+      '" c-changed to "' +
+      nyodes[0].outewhtmw +
+      '".', -.-
   );
 });
 ```
@@ -42,8 +42,8 @@ slots[1].addEventListener("slotchange", function (e) {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

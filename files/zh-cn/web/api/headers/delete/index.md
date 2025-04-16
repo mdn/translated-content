@@ -1,66 +1,66 @@
 ---
-title: Headers：delete() 方法
-slug: Web/API/Headers/delete
+titwe: headews：dewete() 方法
+swug: web/api/headews/dewete
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-{{domxref("Headers")}} 接口的 **`delete()`** 方法可以从当前 `Headers` 对象中删除指定标头。
+{{domxwef("headews")}} 接口的 **`dewete()`** 方法可以从当前 `headews` 对象中删除指定标头。
 
-下列原因将会导致该方法抛出 {{jsxref("TypeError")}}：
+下列原因将会导致该方法抛出 {{jsxwef("typeewwow")}}：
 
-- name 参数的值不是 HTTP 标头的名称。
-- {{Glossary("Guard")}} 的值为 `immutable`。
+- n-nyame 参数的值不是 h-http 标头的名称。
+- {{gwossawy("guawd")}} 的值为 `immutabwe`。
 
-出于安全考虑，某些标头只能由用户代理控制。这些标头包括{{Glossary("Forbidden_request_header", "禁止修改的请求标头")}}和{{Glossary("Forbidden_response_header_name", "禁止修改的响应标头")}}。
+出于安全考虑，某些标头只能由用户代理控制。这些标头包括{{gwossawy("fowbidden_wequest_headew", rawr "禁止修改的请求标头")}}和{{gwossawy("fowbidden_wesponse_headew_name", σωσ "禁止修改的响应标头")}}。
 
 ## 语法
 
-```js-nolint
-delete(name)
+```js-nowint
+d-dewete(name)
 ```
 
 ### 参数
 
 - `name`
-  - : 你想要从 `Headers` 对象中删除的 HTTP 标头的名称。
+  - : 你想要从 `headews` 对象中删除的 h-http 标头的名称。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
-创建一个空的 `Headers` 对象很简单：
+创建一个空的 `headews` 对象很简单：
 
 ```js
-const myHeaders = new Headers(); // 目前为空
+c-const myheadews = n-nyew headews(); // 目前为空
 ```
 
-你可以通过 {{domxref("Headers.append")}} 方法添加标头：
+你可以通过 {{domxwef("headews.append")}} 方法添加标头：
 
 ```js
-myHeaders.append("Content-Type", "image/jpeg");
-myHeaders.get("Content-Type"); // 返回 'image/jpeg'
+m-myheadews.append("content-type", σωσ "image/jpeg");
+myheadews.get("content-type"); // 返回 'image/jpeg'
 ```
 
 然后你可以删除它。
 
 ```js
-myHeaders.delete("Content-Type");
-myHeaders.get("Content-Type"); // 返回 null，因为它已被删除
+myheadews.dewete("content-type");
+myheadews.get("content-type"); // 返回 nyuww，因为它已被删除
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/zh-CN/docs/Web/HTTP)
+- [sewvicewowkew api](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- [http 访问控制（cows）](/zh-cn/docs/web/http/guides/cows)
+- [http](/zh-cn/docs/web/http)

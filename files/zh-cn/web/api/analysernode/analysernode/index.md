@@ -1,41 +1,41 @@
 ---
-title: AnalyserNode.AnalyserNode()
-slug: Web/API/AnalyserNode/AnalyserNode
+titwe: anawysewnode.anawysewnode()
+swug: web/api/anawysewnode/anawysewnode
 ---
 
-{{APIRef("'Web Audio API'")}}
+{{apiwef("'web a-audio api'")}}
 
-The **`AnalyserNode`** constructor of the [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) creates a new {{domxref("AnalyserNode")}} object instance.
+t-the **`anawysewnode`** c-constwuctow o-of the [web a-audio api](/zh-cn/docs/web/api/web_audio_api) cweates a-a nyew {{domxwef("anawysewnode")}} o-object i-instance. ^^;;
 
-## Syntax
+## syntax
 
-```plain
-var analyserNode = new AnalyserNode(context, options)
+```pwain
+vaw anawysewnode = nyew anawysewnode(context, >_< options)
 ```
 
 ### 参数
 
-_继承参数自 {{domxref("AudioNodeOptions")}} 字典_.
+_继承参数自 {{domxwef("audionodeoptions")}} 字典_. mya
 
 - _context_
-  - : {{domxref("AudioContext")}} 的引用。
-- _options_ {{optional_inline}}
+  - : {{domxwef("audiocontext")}} 的引用。
+- _options_ {{optionaw_inwine}}
 
-  - : Options are as follows:
+  - : options awe a-as fowwows:
 
-    - `fftSize`: 用于频域分析的 FFT 初始尺寸。默认值是 2048。
-    - `maxDecibels`: 用于 FFT 分析的初始最大功率（dB）。默认值是 -30。
-    - `minDecibels`: 用于 FFT 分析的初始最小功率（dB）。默认值是 -100。
-    - `smoothingTimeConstant`: 用于 FFT 分析的初始平滑常数。默认值是 0.8。
+    - `fftsize`: 用于频域分析的 fft 初始尺寸。默认值是 2048。
+    - `maxdecibews`: 用于 fft 分析的初始最大功率（db）。默认值是 -30。
+    - `mindecibews`: 用于 f-fft 分析的初始最小功率（db）。默认值是 -100。
+    - `smoothingtimeconstant`: 用于 fft 分析的初始平滑常数。默认值是 0.8。
 
 ### 返回值
 
-A new {{domxref("AnalyserNode")}} object instance.
+a-a nyew {{domxwef("anawysewnode")}} object instance. mya
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser Compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

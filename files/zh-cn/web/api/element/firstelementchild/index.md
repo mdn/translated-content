@@ -1,45 +1,45 @@
 ---
-title: Element：firstElementChild 属性
-slug: Web/API/Element/firstElementChild
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: ewement：fiwstewementchiwd 属性
+swug: w-web/api/ewement/fiwstewementchiwd
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Element.firstElementChild`** 只读属性返回元素的第一个子{{domxref("Element", "元素", "", 1)}}，如果没有子元素，则为 `null`。
+**`ewement.fiwstewementchiwd`** 只读属性返回元素的第一个子{{domxwef("ewement", (⑅˘꒳˘) "元素", "", 1)}}，如果没有子元素，则为 `nuww`。
 
-`Element.firstElementChild` 仅包含元素节点。要获取所有子节点（包括文本和注释节点等非元素节点），请使用 {{domxref("Node.firstChild")}}。
+`ewement.fiwstewementchiwd` 仅包含元素节点。要获取所有子节点（包括文本和注释节点等非元素节点），请使用 {{domxwef("node.fiwstchiwd")}}。
 
 ## 值
 
-一个 {{domxref("Element")}} 对象，或 `null`。
+一个 {{domxwef("ewement")}} 对象，或 `nuww`。
 
 ## 示例
 
-```html
-<ul id="list">
-  <li>First (1)</li>
-  <li>Second (2)</li>
-  <li>Third (3)</li>
-</ul>
+```htmw
+<uw i-id="wist">
+  <wi>fiwst (1)</wi>
+  <wi>second (2)</wi>
+  <wi>thiwd (3)</wi>
+</uw>
 
-<script>
-  const list = document.getElementById("list");
-  console.log(list.firstElementChild.textContent);
-  // 输出“First (1)”
-</script>
+<scwipt>
+  c-const w-wist = document.getewementbyid("wist");
+  c-consowe.wog(wist.fiwstewementchiwd.textcontent);
+  // 输出“fiwst (1)”
+</scwipt>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Element.nextElementSibling")}}
-- {{domxref("Element.lastElementChild")}}
+- {{domxwef("ewement.nextewementsibwing")}}
+- {{domxwef("ewement.wastewementchiwd")}}

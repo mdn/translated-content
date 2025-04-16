@@ -1,28 +1,28 @@
 ---
-title: HTMLUnknownElement
-slug: Web/API/HTMLUnknownElement
+titwe: htmwunknownewement
+swug: w-web/api/htmwunknownewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLUnknownElement`** 代表着一个无效的 HTML 元素，派生自 {{domxref("HTMLElement")}} 接口，但它没有任何可用的附加属性或方法。
+**`htmwunknownewement`** 代表着一个无效的 htmw 元素，派生自 {{domxwef("htmwewement")}} 接口，但它没有任何可用的附加属性或方法。
 
 ## 属性
 
-_没有特效属性，继承自父级 {{domxref("HTMLElement")}}._
+_没有特效属性，继承自父级 {{domxwef("htmwewement")}}._
 
 ## 方法
 
-_没有指定方法;继承来自父级的属性，{{domxref("HTMLElement")}}._
+_没有指定方法;继承来自父级的属性，{{domxwef("htmwewement")}}._
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关内容
 
-- Obsolete or non-standard HTML elements implementing this interface: {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}
+- obsowete o-ow nyon-standawd h-htmw ewements i-impwementing t-this intewface: {{htmwewement("isindex")}}, (U ᵕ U❁) {{htmwewement("muwticow")}}, (⑅˘꒳˘) {{htmwewement("nextid")}}, ( ͡o ω ͡o ) {{htmwewement("wb")}}

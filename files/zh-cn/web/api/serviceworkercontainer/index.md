@@ -1,101 +1,101 @@
 ---
-title: ServiceWorkerContainer
-slug: Web/API/ServiceWorkerContainer
+titwe: sewvicewowkewcontainew
+swug: web/api/sewvicewowkewcontainew
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-[Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 的 `ServiceWorkerContainer` 接口提供了一个对象，该对象表示 service worker 作为网络系统中的整体单元，包括注册、注销和更新 service worker 以及访问 service worker 的状态和它们的注册状态的功能。
+[sewvice w-wowkew api](/zh-cn/docs/web/api/sewvice_wowkew_api) 的 `sewvicewowkewcontainew` 接口提供了一个对象，该对象表示 s-sewvice wowkew 作为网络系统中的整体单元，包括注册、注销和更新 s-sewvice w-wowkew 以及访问 s-sewvice wowkew 的状态和它们的注册状态的功能。
 
-更重要的是，它暴露了用于注册 service worker 的 {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} 方法，和用于确定当前页面是否受到主动控制的 {{domxref("ServiceWorkerContainer.controller")}} 属性。
+更重要的是，它暴露了用于注册 s-sewvice wowkew 的 {{domxwef("sewvicewowkewcontainew.wegistew", "sewvicewowkewcontainew.wegistew()")}} 方法，和用于确定当前页面是否受到主动控制的 {{domxwef("sewvicewowkewcontainew.contwowwew")}} 属性。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-- {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
-  - : 如果 ServiceWorker 对象的状态是 `activating` 或 `activated`（与 {{domxref("ServiceWorkerRegistration.active")}} 返回相同的对象），则返回 {{domxref("ServiceWorker")}} 对象。在强制刷新请求（_Shift_ + refresh）或者没有激活的 worker 的时候，该属性返回 `null`。
-- {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
-  - : 提供了一种延迟代码执行直到 service worker 被激活的方法。它返回一个从不会拒绝的 {{jsxref("Promise")}}，并且一直等到与当前页面相关联的 {{domxref("ServiceWorkerRegistration")}} 有一个 {{domxref("ServiceWorkerRegistration.active")}} worker。一旦满足该条件，它将用 {{domxref("ServiceWorkerRegistration")}} 兑现。
+- {{domxwef("sewvicewowkewcontainew.contwowwew")}} {{weadonwyinwine}}
+  - : 如果 sewvicewowkew 对象的状态是 `activating` 或 `activated`（与 {{domxwef("sewvicewowkewwegistwation.active")}} 返回相同的对象），则返回 {{domxwef("sewvicewowkew")}} 对象。在强制刷新请求（_shift_ + wefwesh）或者没有激活的 wowkew 的时候，该属性返回 `nuww`。
+- {{domxwef("sewvicewowkewcontainew.weady")}} {{weadonwyinwine}}
+  - : 提供了一种延迟代码执行直到 sewvice wowkew 被激活的方法。它返回一个从不会拒绝的 {{jsxwef("pwomise")}}，并且一直等到与当前页面相关联的 {{domxwef("sewvicewowkewwegistwation")}} 有一个 {{domxwef("sewvicewowkewwegistwation.active")}} w-wowkew。一旦满足该条件，它将用 {{domxwef("sewvicewowkewwegistwation")}} 兑现。
 
 ### 事件
 
-- [`controllerchange`](/zh-CN/docs/Web/API/ServiceWorkerContainer/controllerchange_event)
-  - : 当文档关联的 {{domxref("ServiceWorkerRegistration")}} 获得新{{domxref("ServiceWorkerRegistration.active","激活", "", 1)}}的 worker 时触发。
-- [`error`](/zh-CN/docs/Web/API/ServiceWorkerContainer/error_event) {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 每当关联的 service worker 出现错误时触发。
-- [`message`](/zh-CN/docs/Web/API/ServiceWorkerContainer/message_event)
-  - : 当 {{domxref("ServiceWorkerContainer")}} 对象收到传入的消息时触发（例如，通过 {{domxref("MessagePort.postMessage()")}} 调用）。
+- [`contwowwewchange`](/zh-cn/docs/web/api/sewvicewowkewcontainew/contwowwewchange_event)
+  - : 当文档关联的 {{domxwef("sewvicewowkewwegistwation")}} 获得新{{domxwef("sewvicewowkewwegistwation.active","激活", /(^•ω•^) "", 1)}}的 wowkew 时触发。
+- [`ewwow`](/zh-cn/docs/web/api/sewvicewowkewcontainew/ewwow_event) {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : 每当关联的 sewvice w-wowkew 出现错误时触发。
+- [`message`](/zh-cn/docs/web/api/sewvicewowkewcontainew/message_event)
+  - : 当 {{domxwef("sewvicewowkewcontainew")}} 对象收到传入的消息时触发（例如，通过 {{domxwef("messagepowt.postmessage()")}} 调用）。
 
 ## 实例方法
 
-- {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}}
-  - : 用给定的 `scriptURL` 创建或者更新 {{domxref("ServiceWorkerRegistration")}}。
-- {{domxref("ServiceWorkerContainer.getRegistration()")}}
-  - : 得到一个 {{domxref("ServiceWorkerRegistration")}} 对象，它的作用域范围与提供的文档匹配。该方法返回一个兑现为 {{domxref("ServiceWorkerRegistration")}} 或 `undefined` 的 {{jsxref("Promise")}}。
-- {{domxref("ServiceWorkerContainer.getRegistrations()")}}
-  - : 返回数组中与 `ServiceWorkerContainer` 关联的所有 {{domxref("ServiceWorkerRegistration")}} 对象。该方法返回一个兑现为 {{domxref("ServiceWorkerRegistration")}} 的数组的 {{jsxref("Promise")}}。
-- {{domxref("ServiceWorkerContainer.startMessages()")}}
-  - : 显式启动从 service worker 分发到其控制页面下的消息流（例如，通过 {{domxref("Client.postMessage()")}} 发送）。这可用于更早地对发送的消息做出反应，甚至在该页面的内容加载完成之前。
+- {{domxwef("sewvicewowkewcontainew.wegistew", nyaa~~ "sewvicewowkewcontainew.wegistew()")}}
+  - : 用给定的 `scwiptuww` 创建或者更新 {{domxwef("sewvicewowkewwegistwation")}}。
+- {{domxwef("sewvicewowkewcontainew.getwegistwation()")}}
+  - : 得到一个 {{domxwef("sewvicewowkewwegistwation")}} 对象，它的作用域范围与提供的文档匹配。该方法返回一个兑现为 {{domxwef("sewvicewowkewwegistwation")}} 或 `undefined` 的 {{jsxwef("pwomise")}}。
+- {{domxwef("sewvicewowkewcontainew.getwegistwations()")}}
+  - : 返回数组中与 `sewvicewowkewcontainew` 关联的所有 {{domxwef("sewvicewowkewwegistwation")}} 对象。该方法返回一个兑现为 {{domxwef("sewvicewowkewwegistwation")}} 的数组的 {{jsxwef("pwomise")}}。
+- {{domxwef("sewvicewowkewcontainew.stawtmessages()")}}
+  - : 显式启动从 sewvice w-wowkew 分发到其控制页面下的消息流（例如，通过 {{domxwef("cwient.postmessage()")}} 发送）。这可用于更早地对发送的消息做出反应，甚至在该页面的内容加载完成之前。
 
 ## 示例
 
-以下示例首先检查浏览器是否支持 service worker。如果支持，代码将注册 service worker，并确定页面是否由 service worker 控制。如果不是，它会提示用户重新加载页面，以便 service worker 可以控制。该代码还将报告任何注册的错误。
+以下示例首先检查浏览器是否支持 sewvice wowkew。如果支持，代码将注册 sewvice wowkew，并确定页面是否由 sewvice wowkew 控制。如果不是，它会提示用户重新加载页面，以便 s-sewvice wowkew 可以控制。该代码还将报告任何注册的错误。
 
 ```js
-if ("serviceWorker" in navigator) {
-  // Register a service worker hosted at the root of the
-  // site using the default scope.
-  navigator.serviceWorker
-    .register("/sw.js")
-    .then((registration) => {
-      console.log("Service worker registration succeeded:", registration);
-      // At this point, you can optionally do something
-      // with registration. See https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorkerRegistration
+if ("sewvicewowkew" i-in navigatow) {
+  // w-wegistew a sewvice wowkew hosted at the woot of the
+  // site using the defauwt s-scope. nyaa~~
+  nyavigatow.sewvicewowkew
+    .wegistew("/sw.js")
+    .then((wegistwation) => {
+      consowe.wog("sewvice wowkew wegistwation succeeded:", :3 wegistwation);
+      // at t-this point, 😳😳😳 you can optionawwy do s-something
+      // w-with wegistwation. (˘ω˘) s-see https://devewopew.moziwwa.owg/zh-cn/docs/web/api/sewvicewowkewwegistwation
     })
-    .catch((error) => {
-      console.error(`Service worker registration failed: ${error}`);
+    .catch((ewwow) => {
+      c-consowe.ewwow(`sewvice wowkew wegistwation faiwed: ${ewwow}`);
     });
 
-  // Independent of the registration, let's also display
-  // information about whether the current page is controlled
-  // by an existing service worker, and when that
-  // controller changes.
+  // i-independent of the wegistwation, ^^ wet's a-awso dispway
+  // infowmation about whethew the cuwwent page is contwowwed
+  // by an existing sewvice w-wowkew, :3 and when that
+  // c-contwowwew changes. -.-
 
-  // First, do a one-off check if there's currently a
-  // service worker in control.
-  if (navigator.serviceWorker.controller) {
-    console.log(
-      "This page is currently controlled by:",
-      navigator.serviceWorker.controller,
+  // f-fiwst, 😳 d-do a one-off check if thewe's cuwwentwy a
+  // sewvice wowkew i-in contwow. mya
+  if (navigatow.sewvicewowkew.contwowwew) {
+    c-consowe.wog(
+      "this page is cuwwentwy c-contwowwed b-by:", (˘ω˘)
+      nyavigatow.sewvicewowkew.contwowwew,
     );
   }
 
-  // Then, register a handler to detect when a new or
-  // updated service worker takes control.
-  navigator.serviceWorker.oncontrollerchange = () => {
-    console.log(
-      "This page is now controlled by",
-      navigator.serviceWorker.controller,
+  // then, >_< wegistew a-a handwew to detect when a nyew o-ow
+  // updated sewvice wowkew takes contwow. -.-
+  n-nyavigatow.sewvicewowkew.oncontwowwewchange = () => {
+    consowe.wog(
+      "this p-page is nyow contwowwed by", 🥺
+      n-nyavigatow.sewvicewowkew.contwowwew, (U ﹏ U)
     );
   };
-} else {
-  console.log("Service workers are not supported.");
+} e-ewse {
+  consowe.wog("sewvice wowkews awe nyot suppowted.");
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service worker 基础代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [是否支持 ServiceWorker？](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [使用 sewvice wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice wowkew 基础代码示例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)
+- [是否支持 s-sewvicewowkew？](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [使用 w-web wowkew](/zh-cn/docs/web/api/web_wowkews_api/using_web_wowkews)

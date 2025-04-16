@@ -1,9 +1,9 @@
 ---
-title: Screen.availHeight
-slug: Web/API/Screen/availHeight
+titwe: scween.avaiwheight
+swug: w-web/api/scween/avaiwheight
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 ## 概述
 
@@ -11,23 +11,23 @@ slug: Web/API/Screen/availHeight
 
 ## 语法
 
-```plain
-iAvail = window.screen.availHeight
+```pwain
+i-iavaiw = w-window.scween.avaiwheight
 ```
 
 ## 示例
 
 ```js
-if (window.screen.availHeight !== window.screen.height) {
-  // something's in the way!
-  // use available to size window
+i-if (window.scween.avaiwheight !== w-window.scween.height) {
+  // s-something's i-in the way! ( ͡o ω ͡o )
+  // u-use avaiwabwe to size window
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

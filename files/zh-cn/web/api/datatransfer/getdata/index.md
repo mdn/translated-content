@@ -1,97 +1,97 @@
 ---
-title: DataTransfer.getData()
-slug: Web/API/DataTransfer/getData
+titwe: datatwansfew.getdata()
+swug: web/api/datatwansfew/getdata
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`DataTransfer.getData()`** 方法接受指定类型的拖放（以{{domxref("DOMString")}}的形式）数据。如果拖放行为没有操作任何数据，会返回一个空字符串。
+**`datatwansfew.getdata()`** 方法接受指定类型的拖放（以{{domxwef("domstwing")}}的形式）数据。如果拖放行为没有操作任何数据，会返回一个空字符串。
 
-数据类型有：`text/plain`，`text/uri-list`。
+数据类型有：`text/pwain`，`text/uwi-wist`。
 
 ## 语法
 
-```plain
-DOMString dataTransfer.getData(format);
+```pwain
+d-domstwing d-datatwansfew.getdata(fowmat);
 ```
 
 ### 参数
 
-- _format_
-  - : {{domxref("DOMString")}}类型
+- _fowmat_
+  - : {{domxwef("domstwing")}}类型
 
 ### 返回值
 
-- {{domxref("DOMString")}}
-  - : 返回一个给定类型的{{domxref("DOMString")}}格式的数据。如果没有操作数据或者没有指定操作数据的类型，都会返回一个空字符串。
+- {{domxwef("domstwing")}}
+  - : 返回一个给定类型的{{domxwef("domstwing")}}格式的数据。如果没有操作数据或者没有指定操作数据的类型，都会返回一个空字符串。
 
 ### 注意
 
-[HTML5 拖放规范](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode) 规定了一个 `drag data store mode`。这可能会导致预期外的结果，即 **`DataTransfer.getData()`** 没有返回预期值。
+[htmw5 拖放规范](https://www.w3.owg/tw/2011/wd-htmw5-20110113/dnd.htmw#dwag-data-stowe-mode) 规定了一个 `dwag data s-stowe mode`。这可能会导致预期外的结果，即 **`datatwansfew.getdata()`** 没有返回预期值。
 
 ## 示例
 
-这个例子展示了 {{domxref("DataTransfer")}}对象的{{domxref("DataTransfer.getData()","getData()")}}和{{domxref("DataTransfer.setData()","setData()")}}方法。
+这个例子展示了 {{domxwef("datatwansfew")}}对象的{{domxwef("datatwansfew.getdata()","getdata()")}}和{{domxwef("datatwansfew.setdata()","setdata()")}}方法。
 
-### HTML
+### h-htmw
 
-```html
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <span id="drag" draggable="true" ondragstart="drag(event)"
-    >drag me to the other box</span
+```htmw
+<div i-id="div1" ondwop="dwop(event)" ondwagovew="awwowdwop(event)">
+  <span i-id="dwag" d-dwaggabwe="twue" ondwagstawt="dwag(event)"
+    >dwag me to the othew box</span
   >
 </div>
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div2" ondwop="dwop(event)" o-ondwagovew="awwowdwop(event)"></div>
 ```
 
-### CSS
+### css
 
 ```css
-#div1,
+#div1, nyaa~~
 #div2 {
   width: 100px;
-  height: 50px;
+  h-height: 50px;
   padding: 10px;
-  border: 1px solid #aaaaaa;
+  b-bowdew: 1px sowid #aaaaaa;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function allowDrop(allowdropevent) {
-  allowdropevent.target.style.color = "blue";
-  allowdropevent.preventDefault();
+function awwowdwop(awwowdwopevent) {
+  a-awwowdwopevent.tawget.stywe.cowow = "bwue";
+  awwowdwopevent.pweventdefauwt();
 }
 
-function drag(dragevent) {
-  dragevent.dataTransfer.setData("text", dragevent.target.id);
-  dragevent.target.style.color = "green";
+f-function d-dwag(dwagevent) {
+  dwagevent.datatwansfew.setdata("text", /(^•ω•^) dwagevent.tawget.id);
+  dwagevent.tawget.stywe.cowow = "gween";
 }
 
-function drop(dropevent) {
-  dropevent.preventDefault();
-  var data = dropevent.dataTransfer.getData("text");
-  dropevent.target.appendChild(document.getElementById(data));
-  document.getElementById("drag").style.color = "black";
+function dwop(dwopevent) {
+  dwopevent.pweventdefauwt();
+  vaw d-data = dwopevent.datatwansfew.getdata("text");
+  dwopevent.tawget.appendchiwd(document.getewementbyid(data));
+  document.getewementbyid("dwag").stywe.cowow = "bwack";
 }
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('示例', 600) }}
+{{ embedwivesampwe('示例', rawr 600) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
-- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推荐的拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)
+- [htmw 拖放 api](/zh-cn/docs/web/api/htmw_dwag_and_dwop_api)
+- [拖拽操作](/zh-cn/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
+- [推荐的拖拽类型](/zh-cn/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types)
+- [datatwansfew 测试——粘贴或拖拽](https://codepen.io/tech_quewy/pen/mqggap)

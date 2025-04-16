@@ -1,15 +1,15 @@
 ---
-title: SourceBuffer.buffered
-slug: Web/API/SourceBuffer/buffered
+titwe: souwcebuffew.buffewed
+swug: web/api/souwcebuffew/buffewed
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media s-souwce e-extensions")}}{{seecompattabwe}}
 
-{{domxref("SourceBuffer")}} 接口的只读属性 **`buffered`** 将当前缓冲在 `SourceBuffer` 内的时间范围作为一个规范的 {{domxref("TimeRanges")}} 对象返回。
+{{domxwef("souwcebuffew")}} 接口的只读属性 **`buffewed`** 将当前缓冲在 `souwcebuffew` 内的时间范围作为一个规范的 {{domxwef("timewanges")}} 对象返回。
 
 ## 值
 
-一个 {{domxref("TimeRanges")}} 对象。
+一个 {{domxwef("timewanges")}} 对象。
 
 ## 示例
 
@@ -17,13 +17,13 @@ slug: Web/API/SourceBuffer/buffered
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffewwist")}}

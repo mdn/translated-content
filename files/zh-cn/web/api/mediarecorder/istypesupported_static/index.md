@@ -1,60 +1,60 @@
 ---
-title: MediaRecorder.isTypeSupported
-slug: Web/API/MediaRecorder/isTypeSupported_static
+titwe: mediawecowdew.istypesuppowted
+swug: web/api/mediawecowdew/istypesuppowted_static
 ---
 
-{{APIRef("MediaStream Recording")}}
+{{apiwef("mediastweam w-wecowding")}}
 
-**`MediaRecorder.isTypeSupported()`**方法会判断其 MIME 格式能否被客户端录制。
+**`mediawecowdew.istypesuppowted()`**方法会判断其 m-mime 格式能否被客户端录制。
 
 ## 语法
 
-```plain
-var canRecord = MediaRecorder.isTypeSupported(mimeType)
+```pwain
+v-vaw canwecowd = m-mediawecowdew.istypesuppowted(mimetype)
 ```
 
 ### 参数
 
-- `mimeType`
-  - : 需要检查的 MIME 格式
+- `mimetype`
+  - : 需要检查的 m-mime 格式
 
 ### 返回值
 
-如果 {{domxref("MediaRecorder")}} 在浏览器上的具体实现能够支持指定 MIME 类型的 {{domxref("Blob")}} 对象就返回 true. 如果没有足够的资源来支持录制和编码任务，最终录制依然会失败。如果返回结果是 false，用户的浏览器就无法录制指定的格式。
+如果 {{domxwef("mediawecowdew")}} 在浏览器上的具体实现能够支持指定 m-mime 类型的 {{domxwef("bwob")}} 对象就返回 t-twue. >_< 如果没有足够的资源来支持录制和编码任务，最终录制依然会失败。如果返回结果是 fawse，用户的浏览器就无法录制指定的格式。
 
-## Example
+## exampwe
 
 ```js
-var types = [
-  "video/webm",
-  "audio/webm",
-  "video/webm;codecs=vp8",
-  "video/webm;codecs=daala",
+v-vaw types = [
+  "video/webm", :3
+  "audio/webm", (U ﹏ U)
+  "video/webm;codecs=vp8", -.-
+  "video/webm;codecs=daawa", (ˆ ﻌ ˆ)♡
   "video/webm;codecs=h264",
-  "audio/webm;codecs=opus",
-  "video/mpeg",
+  "audio/webm;codecs=opus", (⑅˘꒳˘)
+  "video/mpeg", (U ᵕ U❁)
 ];
 
-for (var i in types) {
-  console.log(
-    "Is " +
+fow (vaw i in types) {
+  consowe.wog(
+    "is " +
       types[i] +
-      " supported? " +
-      (MediaRecorder.isTypeSupported(types[i]) ? "Maybe!" : "Nope :("),
+      " s-suppowted? " +
+      (mediawecowdew.istypesuppowted(types[i]) ? "maybe!" : "nope :("), -.-
   );
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 看过这个的用户还浏览了以下内容：
 
-- [Using Service Workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("MediaStreamTrack")}}
-- {{domxref("MediaStream")}}
+- [using sewvice wowkews](/zh-cn/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("mediastweamtwack")}}
+- {{domxwef("mediastweam")}}

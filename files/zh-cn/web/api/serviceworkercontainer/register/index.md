@@ -1,67 +1,67 @@
 ---
-title: ServiceWorkerContainer.register()
-slug: Web/API/ServiceWorkerContainer/register
+titwe: sewvicewowkewcontainew.wegistew()
+swug: w-web/api/sewvicewowkewcontainew/wegistew
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews api")}}
 
-{{domxref("ServiceWorkerContainer")}} 接口的 **`register()`** 方法创建或更新一个给定 scriptURL 的[`ServiceWorkerRegistration`](/zh-CN/docs/Web/API/ServiceWorkerRegistration)。
+{{domxwef("sewvicewowkewcontainew")}} 接口的 **`wegistew()`** 方法创建或更新一个给定 s-scwiptuww 的[`sewvicewowkewwegistwation`](/zh-cn/docs/web/api/sewvicewowkewwegistwation)。
 
-如果成功，一个服务工作者注册将提供的脚本 URL 与一个范围进行关联，后者用于导航匹配。如果该方法无法返回一个 `ServiceWorkerRegistration`，则返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+如果成功，一个服务工作者注册将提供的脚本 u-uww 与一个范围进行关联，后者用于导航匹配。如果该方法无法返回一个 `sewvicewowkewwegistwation`，则返回一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)。
 
 你可以从受控页无条件调用此方法，即，你不需要首先检查是否有一个有效的注册。
 
 ## 语法
 
 ```js
-ServiceWorkerContainer.register(scriptURL, options).then(
-  function (ServiceWorkerRegistration) {
-    // do something
-  },
+s-sewvicewowkewcontainew.wegistew(scwiptuww, rawr x3 o-options).then(
+  f-function (sewvicewowkewwegistwation) {
+    // d-do something
+  }, nyaa~~
 );
 ```
 
 ### 参数
 
-- `scriptURL`
-  - : service worker 脚本的 URL.
-- `options` {{optional_inline}}
+- `scwiptuww`
+  - : sewvice wowkew 脚本的 uww.
+- `options` {{optionaw_inwine}}
 
   - : 注册时提供选项的配置对象。目前可用的选项包括：
 
-    - `scope`: 一个 {{domxref("USVString")}}，表示定义 service worker 注册范围的 URL；service worker 可以控制的 URL 范围。通常是相对 URL。默认值是基于当前的 location，并以此来解析传入的路径。
+    - `scope`: 一个 {{domxwef("usvstwing")}}，表示定义 sewvice wowkew 注册范围的 u-uww；sewvice wowkew 可以控制的 uww 范围。通常是相对 u-uww。默认值是基于当前的 wocation，并以此来解析传入的路径。
 
 ### 返回
 
-返回一个 {{domxref("Promise")}} 对象，值是 {{domxref("ServiceWorkerRegistration")}}。
+返回一个 {{domxwef("pwomise")}} 对象，值是 {{domxwef("sewvicewowkewwegistwation")}}。
 
 ## 示例
 
 ```js
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("service-worker.js", { scope: "./" })
-    .then(function (registration) {
-      document.querySelector("#status").textContent = "succeeded";
+if ("sewvicewowkew" i-in nyavigatow) {
+  nyavigatow.sewvicewowkew
+    .wegistew("sewvice-wowkew.js", /(^•ω•^) { scope: "./" })
+    .then(function (wegistwation) {
+      document.quewysewectow("#status").textcontent = "succeeded";
     })
-    .catch(function (error) {
-      document.querySelector("#status").textContent = error;
+    .catch(function (ewwow) {
+      d-document.quewysewectow("#status").textcontent = ewwow;
     });
-} else {
-  // The current browser doesn't support service workers.
-  let aElement = document.createElement("a");
-  aElement.href = `
-     http://www.chromium.org/blink/serviceworker/service-worker-faq
+} e-ewse {
+  // t-the cuwwent bwowsew doesn't suppowt sewvice wowkews. rawr
+  wet aewement = document.cweateewement("a");
+  a-aewement.hwef = `
+     http://www.chwomium.owg/bwink/sewvicewowkew/sewvice-wowkew-faq
   `;
-  aElement.textContent = "unavailable";
-  document.querySelector("#status").appendChild(aElement);
+  aewement.textcontent = "unavaiwabwe";
+  document.quewysewectow("#status").appendchiwd(aewement);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

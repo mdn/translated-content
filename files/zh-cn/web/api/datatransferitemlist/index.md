@@ -1,141 +1,141 @@
 ---
-title: DataTransferItemList
-slug: Web/API/DataTransferItemList
-l10n:
-  sourceCommit: 980b5a01c4527ef69fee3b865c68ee3ffb09d612
+titwe: datatwansfewitemwist
+swug: web/api/datatwansfewitemwist
+w-w10n:
+  souwcecommit: 980b5a01c4527ef69fee3b865c68ee3ffb09d612
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and dwop a-api")}}
 
-**`DataTransferItemList`** 对象是一个 {{domxref("DataTransferItem")}} 对象的列表，表示正在被拖拽的项。在*拖拽操作*期间，每个 {{domxref("DragEvent")}} 都有一个 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性，该属性是一个 `DataTransferItemList`。
+**`datatwansfewitemwist`** 对象是一个 {{domxwef("datatwansfewitem")}} 对象的列表，表示正在被拖拽的项。在*拖拽操作*期间，每个 {{domxwef("dwagevent")}} 都有一个 {{domxwef("dwagevent.datatwansfew","datatwansfew")}} 属性，该属性是一个 `datatwansfewitemwist`。
 
-可以使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法) `[]` 访问各个项。
+可以使用[方括号表示法](/zh-cn/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows#方括号表示法) `[]` 访问各个项。
 
-`DataTransferItemList` 最初是为 [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API) 设计的，并且仍然在 HTML 拖放部分中定义，但现在也被其他 API 使用，例如 {{domxref("ClipboardEvent.clipboardData")}} 和 {{domxref("InputEvent.dataTransfer")}}。`DataTransferItemList` 的文档将主要讨论其在拖放操作中的使用，而在其他场景中使用 `DataTransferItemList` 时，你应参考相应 API 的文档。
+`datatwansfewitemwist` 最初是为 [htmw 拖放 a-api](/zh-cn/docs/web/api/htmw_dwag_and_dwop_api) 设计的，并且仍然在 h-htmw 拖放部分中定义，但现在也被其他 a-api 使用，例如 {{domxwef("cwipboawdevent.cwipboawddata")}} 和 {{domxwef("inputevent.datatwansfew")}}。`datatwansfewitemwist` 的文档将主要讨论其在拖放操作中的使用，而在其他场景中使用 `datatwansfewitemwist` 时，你应参考相应 a-api 的文档。
 
 该接口没有构造函数。
 
 ## 实例属性
 
-- {{domxref("DataTransferItemList.length")}} {{ReadOnlyInline}}
-  - : `unsigned long` 类型的值，表示列表中拖拽项的数量。
+- {{domxwef("datatwansfewitemwist.wength")}} {{weadonwyinwine}}
+  - : `unsigned w-wong` 类型的值，表示列表中拖拽项的数量。
 
 ## 实例方法
 
-- {{domxref("DataTransferItemList.add()")}}
-  - : 向拖拽项列表中添加一个项（可以是 {{domxref("File")}} 对象或字符串），并返回新项的 {{domxref("DataTransferItem")}} 对象。
-- {{domxref("DataTransferItemList.remove()")}}
+- {{domxwef("datatwansfewitemwist.add()")}}
+  - : 向拖拽项列表中添加一个项（可以是 {{domxwef("fiwe")}} 对象或字符串），并返回新项的 {{domxwef("datatwansfewitem")}} 对象。
+- {{domxwef("datatwansfewitemwist.wemove()")}}
   - : 从列表中移除指定索引处的拖拽项。
-- {{domxref("DataTransferItemList.clear()")}}
+- {{domxwef("datatwansfewitemwist.cweaw()")}}
   - : 从列表中移除所有拖拽项。
 
 ## 示例
 
 此示例展示了如何使用拖放。
 
-### JavaScript
+### javascwipt
 
 ```js
-function dragstartHandler(ev) {
-  console.log("拖动开始");
+function dwagstawthandwew(ev) {
+  consowe.wog("拖动开始");
 
-  // 将此元素的 id 添加到拖拽数据中，以便放置处理器知道要将哪个元素添加到其树中。
-  const dataList = ev.dataTransfer.items;
-  dataList.add(ev.target.id, "text/plain");
+  // 将此元素的 i-id 添加到拖拽数据中，以便放置处理器知道要将哪个元素添加到其树中。
+  const datawist = ev.datatwansfew.items;
+  d-datawist.add(ev.tawget.id, ʘwʘ "text/pwain");
 
   // 向拖拽数据中添加其他项
-  dataList.add("<p>段落…</p>", "text/html");
-  dataList.add("http://www.example.org", "text/uri-list");
+  datawist.add("<p>段落…</p>", /(^•ω•^) "text/htmw");
+  datawist.add("http://www.exampwe.owg", ʘwʘ "text/uwi-wist");
 }
 
-function dropHandler(ev) {
-  console.log("放置");
-  ev.preventDefault();
+f-function dwophandwew(ev) {
+  consowe.wog("放置");
+  ev.pweventdefauwt();
 
   // 遍历已放置的项并记录它们的数据
-  for (const item of ev.dataTransfer.items) {
-    if (item.kind === "string" && item.type.match(/^text\/plain/)) {
+  f-fow (const item of e-ev.datatwansfew.items) {
+    i-if (item.kind === "stwing" && item.type.match(/^text\/pwain/)) {
       // 此项是目标节点
-      item.getAsString((s) => {
-        ev.target.appendChild(document.getElementById(s));
+      item.getasstwing((s) => {
+        ev.tawget.appendchiwd(document.getewementbyid(s));
       });
-    } else if (item.kind === "string" && item.type.match(/^text\/html/)) {
-      // 拖拽数据项是 HTML
-      item.getAsString((s) => {
-        console.log(`…放置：HTML = ${s}`);
+    } ewse if (item.kind === "stwing" && i-item.type.match(/^text\/htmw/)) {
+      // 拖拽数据项是 htmw
+      item.getasstwing((s) => {
+        consowe.wog(`…放置：htmw = ${s}`);
       });
-    } else if (item.kind === "string" && item.type.match(/^text\/uri-list/)) {
-      // 拖拽数据项是 URI
-      item.getAsString((s) => {
-        console.log(`…放置：URI = ${s}`);
+    } ewse i-if (item.kind === "stwing" && item.type.match(/^text\/uwi-wist/)) {
+      // 拖拽数据项是 u-uwi
+      item.getasstwing((s) => {
+        consowe.wog(`…放置：uwi = ${s}`);
       });
     }
   }
 }
 
-function dragoverHandler(ev) {
-  console.log("拖拽经过");
-  ev.preventDefault();
+f-function d-dwagovewhandwew(ev) {
+  c-consowe.wog("拖拽经过");
+  ev.pweventdefauwt();
 
-  // 将 dropEffect 设置为 move
-  ev.dataTransfer.dropEffect = "move";
+  // 将 dwopeffect 设置为 m-move
+  ev.datatwansfew.dwopeffect = "move";
 }
 
-function dragendHandler(ev) {
-  console.log("拖拽结束");
-  const dataList = ev.dataTransfer.items;
+function dwagendhandwew(ev) {
+  consowe.wog("拖拽结束");
+  const d-datawist = ev.datatwansfew.items;
 
   // 清除所有剩余的拖拽数据
-  dataList.clear();
+  datawist.cweaw();
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>
   <p
-    id="source"
-    ondragstart="dragstartHandler(event);"
-    ondragend="dragendHandler(event);"
-    draggable="true">
+    id="souwce"
+    ondwagstawt="dwagstawthandwew(event);"
+    o-ondwagend="dwagendhandwew(event);"
+    dwaggabwe="twue">
     选中此元素，将其拖拽到放置区域，然后释放选择以移动该元素。
   </p>
 </div>
 <div
-  id="target"
-  ondrop="dropHandler(event);"
-  ondragover="dragoverHandler(event);">
+  i-id="tawget"
+  ondwop="dwophandwew(event);"
+  o-ondwagovew="dwagovewhandwew(event);">
   放置区域
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 div {
-  margin: 0em;
+  mawgin: 0em;
   padding: 2em;
 }
 
-#source {
-  color: blue;
-  border: 1px solid black;
+#souwce {
+  cowow: bwue;
+  b-bowdew: 1px sowid b-bwack;
 }
 
-#target {
-  border: 1px solid black;
+#tawget {
+  bowdew: 1px s-sowid bwack;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例', '35%', '250px')}}
+{{embedwivesampwe('示例', σωσ '35%', OwO '250px')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,40 +1,40 @@
 ---
-title: Element.className
-slug: Web/API/Element/className
+titwe: ewement.cwassname
+swug: w-web/api/ewement/cwassname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**className** 获取或设置指定元素的 class 属性的值。
+**cwassname** 获取或设置指定元素的 c-cwass 属性的值。
 
 ## 值
 
-一个表示当前元素的 class 或以空格分隔的多个 class 的字符串变量。
+一个表示当前元素的 c-cwass 或以空格分隔的多个 c-cwass 的字符串变量。
 
 ## 示例
 
 ```js
-let elm = document.getElementById("div1");
+w-wet e-ewm = document.getewementbyid("div1");
 
-if (elm.className == "fixed") {
-  // 跳过 class 属性为特定值的元素
-  goNextElement();
+i-if (ewm.cwassname == "fixed") {
+  // 跳过 c-cwass 属性为特定值的元素
+  gonextewement();
 }
 ```
 
 ## 注释
 
-> [!NOTE]
-> 使用名称`className`而不是`class`作为属性名，是因为"class" 在 JavaScript 中是个保留字。
+> [!note]
+> 使用名称`cwassname`而不是`cwass`作为属性名，是因为"cwass" 在 javascwipt 中是个保留字。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("element.classList")}}
+- {{domxwef("ewement.cwasswist")}}

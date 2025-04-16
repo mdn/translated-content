@@ -1,36 +1,36 @@
 ---
-title: MediaStream.addTrack()
-slug: Web/API/MediaStream/addTrack
+titwe: mediastweam.addtwack()
+swug: web/api/mediastweam/addtwack
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe a-and stweams")}}
 
-**`MediaStream.addTrack()`** 方法会给流添加一个新轨道。指定一个{{domxref("MediaStreamTrack")}}对象作为参数。
+**`mediastweam.addtwack()`** 方法会给流添加一个新轨道。指定一个{{domxwef("mediastweamtwack")}}对象作为参数。
 
-> [!NOTE]
-> 如果指定的 track 已经存在于流的 track set 里的话，该方法不会产生作用。
+> [!note]
+> 如果指定的 t-twack 已经存在于流的 t-twack set 里的话，该方法不会产生作用。
 
 ## 语法
 
 ```js
-stream.addTrack(track);
+s-stweam.addtwack(twack);
 ```
 
-### Parameters
+### p-pawametews
 
-- `track`
-  - : A {{domxref("MediaStreamTrack")}} to add to the stream.
+- `twack`
+  - : a-a {{domxwef("mediastweamtwack")}} t-to add to the stweam. σωσ
 
-## Example
+## exampwe
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref("MediaStream")}}, the interface it belongs to.
+- {{domxwef("mediastweam")}}, >_< t-the intewface it bewongs to.

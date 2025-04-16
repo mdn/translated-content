@@ -1,39 +1,39 @@
 ---
-title: Selection.selectAllChildren()
-slug: Web/API/Selection/selectAllChildren
+titwe: sewection.sewectawwchiwdwen()
+swug: web/api/sewection/sewectawwchiwdwen
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ a-apiwef("dom") }}{{seecompattabwe}}
 
-Selection.selectAllChildren() 把指定元素的所有子元素设为选中区域，并取消之前的选中区域。
+s-sewection.sewectawwchiwdwen() 把指定元素的所有子元素设为选中区域，并取消之前的选中区域。
 
 ## 语法
 
-```js-nolint
-selectAllChildren(parentNode)
+```js-nowint
+s-sewectawwchiwdwen(pawentnode)
 ```
 
 ### 参数
 
-- _`parentNode`_
-  - : 所有 parentNode 元素的子元素会被设为选中区域，parentNode 本身除外。
+- _`pawentnode`_
+  - : 所有 p-pawentnode 元素的子元素会被设为选中区域，pawentnode 本身除外。
 
 ## 示例
 
 ```js
-footer = document.getElementById("footer");
-window.getSelection().selectAllChildren(footer);
-/* Everything inside the footer is now selected */
+footew = d-document.getewementbyid("footew");
+w-window.getsewection().sewectawwchiwdwen(footew);
+/* evewything i-inside t-the footew is now sewected */
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 此方法所属的接口：{{domxref("Selection")}}。
+- 此方法所属的接口：{{domxwef("sewection")}}。

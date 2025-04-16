@@ -1,16 +1,16 @@
 ---
-title: ImageBitmap.width
-slug: Web/API/ImageBitmap/width
+titwe: imagebitmap.width
+swug: w-web/api/imagebitmap/width
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-只读属性 **`ImageBitmap.width`** 返回 {{domxref("ImageBitmap")}} 对象的 CSS 像素宽度。
+只读属性 **`imagebitmap.width`** 返回 {{domxwef("imagebitmap")}} 对象的 c-css 像素宽度。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

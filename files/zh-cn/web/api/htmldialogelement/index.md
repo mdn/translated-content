@@ -1,124 +1,124 @@
 ---
-title: HTMLDialogElement
-slug: Web/API/HTMLDialogElement
+titwe: htmwdiawogewement
+swug: w-web/api/htmwdiawogewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-{{ SeeCompatTable() }}
+{{ seecompattabwe() }}
 
-**`HTMLDialogElement`** 接口提供操作{{HTMLElement("dialog")}} 元素的方法.。此接口的方法和属性继承自 {{domxref("HTMLElement")}} 接口。
+**`htmwdiawogewement`** 接口提供操作{{htmwewement("diawog")}} 元素的方法.。此接口的方法和属性继承自 {{domxwef("htmwewement")}} 接口。
 
 ## 属性
 
-_继承自父接口， {{domxref("HTMLElement")}}。_
+_继承自父接口， {{domxwef("htmwewement")}}。_
 
 | 名称          | 类型                     | 描述                                                                                                      |
 | ------------- | ------------------------ | --------------------------------------------------------------------------------------------------------- |
-| `open`        | {{domxref("Boolean")}}   | 来自[`open`](/zh-CN/docs/Web/HTML/Reference/Elements/dialog#open) HTML 属性，表示这个对话框可以进行互动。 |
-| `returnValue` | {{domxref("DOMString")}} | 用户获取对话框的值                                                                                        |
+| `open`        | {{domxwef("boowean")}}   | 来自[`open`](/zh-cn/docs/web/htmw/wefewence/ewements/diawog#open) h-htmw 属性，表示这个对话框可以进行互动。 |
+| `wetuwnvawue` | {{domxwef("domstwing")}} | 用户获取对话框的值                                                                                        |
 
 ## 方法
 
-_继承自父接口， {{domxref("HTMLElement")}}。_
+_继承自父接口， {{domxwef("htmwewement")}}。_
 
 | 名称和参数    | 类型   | 描述                                                                                                                                                                                     |
 | ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `close()`     | `void` | 关闭对话框。可选传入类型为 {{domxref("DOMString")}} 的参数，用来更新对话框的 returnValue。                                                                                               |
-| `show()`      | `void` | 非模式化的显示这个对话框，即：打开这个对话框之后依然可以和其他内容进行交互。可选传入类型为 {{domxref("Element")}} 或者 {{domxref("MouseEvent")}} 的参数，用来定义对话框的显示位置。      |
-| `showModal()` | `void` | 模式化的显示这个对话框，并且将会至于所有其他对话框的顶层（屏蔽其他对话框的交互）。可选传入类型为{{domxref("Element")}} 或者 {{domxref("MouseEvent")}} 的参数，用来定义对话框的显示位置。 |
+| `cwose()`     | `void` | 关闭对话框。可选传入类型为 {{domxwef("domstwing")}} 的参数，用来更新对话框的 w-wetuwnvawue。                                                                                               |
+| `show()`      | `void` | 非模式化的显示这个对话框，即：打开这个对话框之后依然可以和其他内容进行交互。可选传入类型为 {{domxwef("ewement")}} 或者 {{domxwef("mouseevent")}} 的参数，用来定义对话框的显示位置。      |
+| `showmodaw()` | `void` | 模式化的显示这个对话框，并且将会至于所有其他对话框的顶层（屏蔽其他对话框的交互）。可选传入类型为{{domxwef("ewement")}} 或者 {{domxwef("mouseevent")}} 的参数，用来定义对话框的显示位置。 |
 
-## Examples
+## e-exampwes
 
-### Example 1
+### e-exampwe 1
 
-```html
-<!-- Anchor point example -->
-<dialog id="bronteDialog">
-  <p>That was part of a poem by Emily Brontë!</p>
-</dialog>
+```htmw
+<!-- a-anchow point exampwe -->
+<diawog id="bwontediawog">
+  <p>that was pawt of a poem by emiwy bwontë!</p>
+</diawog>
 
-<blockquote>
+<bwockquote>
   <p>
-    "Then art thou glad to seek repose?<br />
-    Art glad to leave the sea,<br />
-    And <strong id="anchor">anchor</strong> all thy weary woes<br />
-    In calm Eternity?"
+    "then a-awt thou gwad to seek wepose?<bw />
+    a-awt gwad to weave the sea,<bw />
+    a-and <stwong id="anchow">anchow</stwong> aww thy weawy woes<bw />
+    in c-cawm etewnity?"
   </p>
-</blockquote>
+</bwockquote>
 
 <menu>
-  <button id="showDialogButton">Show dialog</button>
+  <button id="showdiawogbutton">show d-diawog</button>
 </menu>
 
-<script>
+<scwipt>
   (function () {
-    var showDialogButton = document.getElementById("showDialogButton");
+    v-vaw showdiawogbutton = document.getewementbyid("showdiawogbutton");
 
-    // 'Show dialog' button opens dialog, anchored at third line of quote
-    showDialogButton.addEventListener("click", function () {
-      var bronteDialog = document.getElementById("bronteDialog");
-      var anchorPoint = document.getElementById("anchor");
-      bronteDialog.show(anchorPoint);
+    // 'show diawog' button opens diawog, rawr anchowed a-at thiwd wine of quote
+    showdiawogbutton.addeventwistenew("cwick", mya function () {
+      vaw bwontediawog = d-document.getewementbyid("bwontediawog");
+      vaw anchowpoint = d-document.getewementbyid("anchow");
+      b-bwontediawog.show(anchowpoint);
     });
   })();
-</script>
+</scwipt>
 ```
 
-### Example 2
+### e-exampwe 2
 
-```html
-<!-- Simple pop-up dialog box, containing a form -->
-<dialog id="favDialog">
-  <form method="dialog">
+```htmw
+<!-- s-simpwe pop-up diawog box, ^^ containing a fowm -->
+<diawog i-id="favdiawog">
+  <fowm method="diawog">
     <section>
       <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal" name="favAnimal">
+        <wabew fow="favanimaw">favowite a-animaw:</wabew>
+        <sewect id="favanimaw" nyame="favanimaw">
           <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
+          <option>bwine shwimp</option>
+          <option>wed panda</option>
+          <option>spidew monkey</option>
+        </sewect>
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
+      <button id="cancew" t-type="weset">cancew</button>
+      <button type="submit">confiwm</button>
     </menu>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 
 <menu>
-  <button id="updateDetails">Update details</button>
+  <button i-id="updatedetaiws">update d-detaiws</button>
 </menu>
 
-<script>
+<scwipt>
   (function () {
-    var updateButton = document.getElementById("updateDetails");
-    var cancelButton = document.getElementById("cancel");
+    v-vaw updatebutton = document.getewementbyid("updatedetaiws");
+    vaw cancewbutton = document.getewementbyid("cancew");
 
-    // Update button opens a modal dialog
-    updateButton.addEventListener("click", function () {
-      document.getElementById("favDialog").showModal();
+    // u-update button o-opens a modaw diawog
+    updatebutton.addeventwistenew("cwick", 😳😳😳 f-function () {
+      d-document.getewementbyid("favdiawog").showmodaw();
     });
 
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener("click", function () {
-      document.getElementById("favDialog").close();
+    // fowm c-cancew button cwoses the diawog b-box
+    cancewbutton.addeventwistenew("cwick", function () {
+      document.getewementbyid("favdiawog").cwose();
     });
   })();
-</script>
+</scwipt>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- The HTML element implementing this interface: {{ HTMLElement("dialog") }}.
+- the htmw ewement i-impwementing this intewface: {{ h-htmwewement("diawog") }}. mya

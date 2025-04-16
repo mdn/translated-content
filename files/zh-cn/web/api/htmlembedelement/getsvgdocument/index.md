@@ -1,33 +1,33 @@
 ---
-title: HTMLEmbedElement：getSVGDocument() 方法
-slug: Web/API/HTMLEmbedElement/getSVGDocument
-l10n:
-  sourceCommit: 64088e3a95e2cc9c8cf44d1338d0be21f1fadfed
+titwe: htmwembedewement：getsvgdocument() 方法
+swug: web/api/htmwembedewement/getsvgdocument
+w-w10n:
+  souwcecommit: 64088e3a95e2cc9c8cf44d1338d0be21f1fadfed
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLEmbedElement")}} 接口的 **`getSVGDocument()`** 方法返回嵌入的 SVG 的 {{domxref("Document")}} 对象。
+{{domxwef("htmwembedewement")}} 接口的 **`getsvgdocument()`** 方法返回嵌入的 s-svg 的 {{domxwef("document")}} 对象。
 
 ## 值
 
-{{domxref("Document")}}。
+{{domxwef("document")}}。
 
 ## 示例
 
 ```js
-const svg = document.getElementById("el").getSVGDocument();
+c-const svg = d-document.getewementbyid("ew").getsvgdocument();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLIFrameElement.getSVGDocument")}}
-- {{domxref("HTMLObjectElement.getSVGDocument")}}
+- {{domxwef("htmwifwameewement.getsvgdocument")}}
+- {{domxwef("htmwobjectewement.getsvgdocument")}}

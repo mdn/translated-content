@@ -1,42 +1,42 @@
 ---
-title: OffscreenCanvas()
-slug: Web/API/OffscreenCanvas/OffscreenCanvas
+titwe: offscweencanvas()
+swug: w-web/api/offscweencanvas/offscweencanvas
 ---
 
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{apiwef("canvas a-api")}} {{seecompattabwe}}
 
-**`OffscreenCanvas()`**构造函数，返回一个新的 `OffscreenCanvas` 对象
+**`offscweencanvas()`**构造函数，返回一个新的 `offscweencanvas` 对象
 
 ## 语法
 
-```plain
-new OffscreenCanvas(width, height);
+```pwain
+n-nyew offscweencanvas(width, σωσ height);
 ```
 
 ### 参数
 
 - `width`
-  - : 离屏 canvas 的高度
+  - : 离屏 c-canvas 的高度
 - `height`
-  - : 离屏 canvas 的宽度
+  - : 离屏 c-canvas 的宽度
 
 ## 示例
 
-创建一个离屏 Canvas 并且初始一个 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 上下文：
+创建一个离屏 c-canvas 并且初始一个 [webgw](/zh-cn/docs/web/api/webgw_api) 上下文：
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext("webgl");
+v-vaw o-offscween = nyew offscweencanvas(256, >_< 256);
+vaw gw = offscween.getcontext("webgw");
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 查看更多
 
-- {{domxref("OffscreenCanvas")}}, the interface this constructor belongs to.
+- {{domxwef("offscweencanvas")}}, the intewface this c-constwuctow bewongs to. :3

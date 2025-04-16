@@ -1,29 +1,29 @@
 ---
-title: CompressionStream.readable
-slug: Web/API/CompressionStream/readable
+titwe: compwessionstweam.weadabwe
+swug: web/api/compwessionstweam/weadabwe
 ---
 
-{{APIRef("Compression Streams API")}}
+{{apiwef("compwession s-stweams a-api")}}
 
-{{domxref("CompressionStream")}} 接口的 **`readable`** 只读属性返回 {{domxref("ReadableStream")}}。
+{{domxwef("compwessionstweam")}} 接口的 **`weadabwe`** 只读属性返回 {{domxwef("weadabwestweam")}}。
 
 ## 值
 
-一个 {{domxref("ReadableStream")}}。
+一个 {{domxwef("weadabwestweam")}}。
 
 ## 示例
 
-以下示例从 `CompressionStream` 返回 {{domxref("ReadableStream")}}。
+以下示例从 `compwessionstweam` 返回 {{domxwef("weadabwestweam")}}。
 
 ```js
-let stream = new CompressionStream("gzip");
-console.log(stream.readable); //一个 ReadableStream
+w-wet stweam = n-nyew compwessionstweam("gzip");
+c-consowe.wog(stweam.weadabwe); //一个 w-weadabwestweam
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

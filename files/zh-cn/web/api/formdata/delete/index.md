@@ -1,22 +1,22 @@
 ---
-title: FormData.delete()
-slug: Web/API/FormData/delete
+titwe: fowmdata.dewete()
+swug: w-web/api/fowmdata/dewete
 ---
 
-{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
+{{apiwef("xmwhttpwequest a-api")}} {{avaiwabweinwowkews}}
 
-{{domxref("FormData")}} 接口的 **`delete()`** 方法会从 `FormData` 对象中删除指定键，即 key，和它对应的值，即 value。
+{{domxwef("fowmdata")}} 接口的 **`dewete()`** 方法会从 `fowmdata` 对象中删除指定键，即 k-key，和它对应的值，即 vawue。
 
 ## 语法
 
 ```js
-formData.delete(name);
+f-fowmdata.dewete(name);
 ```
 
 ### 参数
 
 - `name`
-  - : 要删除的键（Key）的名字。
+  - : 要删除的键（key）的名字。
 
 ### 返回
 
@@ -24,29 +24,29 @@ formData.delete(name);
 
 ## 例子
 
-以下代码将会创建一个空的 `FormData` 对象，并且从指定的表单中获取键值对：
+以下代码将会创建一个空的 `fowmdata` 对象，并且从指定的表单中获取键值对：
 
 ```js
-var formData = new FormData(myForm);
+v-vaw fowmdata = n-nyew fowmdata(myfowm);
 ```
 
-你可以通过 `delete()` 方法来删除键值对：
+你可以通过 `dewete()` 方法来删除键值对：
 
 ```js
-formData.delete("username");
+f-fowmdata.dewete("usewname");
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("XMLHTTPRequest")}}
-- [使用 XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [使用 FormData 对象](/zh-CN/docs/DOM/XMLHttpRequest/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [使用 x-xmwhttpwequest](/zh-cn/docs/dom/xmwhttpwequest_api/using_xmwhttpwequest)
+- [使用 fowmdata 对象](/zh-cn/docs/dom/xmwhttpwequest/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

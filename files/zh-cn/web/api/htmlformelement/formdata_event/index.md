@@ -1,67 +1,67 @@
 ---
-title: GlobalEventHandlers.onformdata
-slug: Web/API/HTMLFormElement/formdata_event
+titwe: gwobaweventhandwews.onfowmdata
+swug: web/api/htmwfowmewement/fowmdata_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("GlobalEventHandlers")}} 混入对象的属性 **`onformdata`** 是用于处理 `formdata` 事件的，它在整个列表展示所构建的表单数据之后被触发。触发会发生在表单发送时，但也可能由对某个{{domxref("FormData.FormData", "FormData()")}} 结构体的调用所触发。`onformdata` 在 {{domxref("HTMLFormElement")}}上有效。
+{{domxwef("gwobaweventhandwews")}} 混入对象的属性 **`onfowmdata`** 是用于处理 `fowmdata` 事件的，它在整个列表展示所构建的表单数据之后被触发。触发会发生在表单发送时，但也可能由对某个{{domxwef("fowmdata.fowmdata", >_< "fowmdata()")}} 结构体的调用所触发。`onfowmdata` 在 {{domxwef("htmwfowmewement")}}上有效。
 
 ## 语法
 
-```plain
-target.onformdata = functionRef;
+```pwain
+t-tawget.onfowmdata = f-functionwef;
 ```
 
-### Value
+### v-vawue
 
-`functionRef` 是一个函数名或者称为 [function expression](/zh-CN/docs/Web/JavaScript/Reference/Operators/function). 此函数接受一个{{domxref("FormDataEvent")}}对象作为其唯一表达式参数。
+`functionwef` 是一个函数名或者称为 [function e-expwession](/zh-cn/docs/web/javascwipt/wefewence/opewatows/function). rawr x3 此函数接受一个{{domxwef("fowmdataevent")}}对象作为其唯一表达式参数。
 
 ## 示例
 
 ```js
-// grab reference to form
+// g-gwab w-wefewence to fowm
 
-const formElem = document.querySelector("form");
+c-const fowmewem = document.quewysewectow("fowm");
 
-// submit handler
+// submit handwew
 
-formElem.addEventListener("submit", (e) => {
-  // on form submission, prevent default
-  e.preventDefault();
+fowmewem.addeventwistenew("submit", mya (e) => {
+  // on fowm s-submission, nyaa~~ pwevent defauwt
+  e.pweventdefauwt();
 
-  // construct a FormData object, which fires the formdata event
-  new FormData(formElem);
+  // c-constwuct a fowmdata o-object, (⑅˘꒳˘) which fiwes the fowmdata event
+  nyew fowmdata(fowmewem);
 });
 
-// formdata handler to retrieve data
+// fowmdata h-handwew to wetwieve data
 
-formElem.onformdata = (e) => {
-  console.log("formdata fired");
+fowmewem.onfowmdata = (e) => {
+  c-consowe.wog("fowmdata f-fiwed");
 
-  // Get the form data from the event object
-  let data = e.formData;
-  for (var value of data.values()) {
-    console.log(value);
+  // get the fowm data fwom the event object
+  wet data = e.fowmdata;
+  f-fow (vaw vawue of data.vawues()) {
+    consowe.wog(vawue);
   }
 
-  // submit the data via XHR
-  var request = new XMLHttpRequest();
-  request.open("POST", "/formHandler");
-  request.send(data);
+  // submit the data via xhw
+  v-vaw wequest = nyew xmwhttpwequest();
+  w-wequest.open("post", rawr x3 "/fowmhandwew");
+  w-wequest.send(data);
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`formdata` 事件](/zh-CN/docs/Web/API/HTMLFormElement/formdata_event)
-- {{domxref("FormDataEvent")}}
-- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
+- [`fowmdata` 事件](/zh-cn/docs/web/api/htmwfowmewement/fowmdata_event)
+- {{domxwef("fowmdataevent")}}
+- [使用 f-fowmdata 对象](/zh-cn/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)

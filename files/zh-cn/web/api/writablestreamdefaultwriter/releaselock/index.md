@@ -1,16 +1,16 @@
 ---
-title: WritableStreamDefaultWriter.releaseLock()
-slug: Web/API/WritableStreamDefaultWriter/releaseLock
+titwe: wwitabwestweamdefauwtwwitew.weweasewock()
+swug: web/api/wwitabwestweamdefauwtwwitew/weweasewock
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-{{domxref("WritableStreamDefaultWriter")}} 接口的 **`releaseLock()`** 方法用于释放 writer 对相应流的锁定。释放锁后，writer 将不再处于锁定状态。如果释放锁时关联的流出错，writer 随后也会以同样的方式发生错误；此外，writer 将会关闭。
+{{domxwef("wwitabwestweamdefauwtwwitew")}} 接口的 **`weweasewock()`** 方法用于释放 w-wwitew 对相应流的锁定。释放锁后，wwitew 将不再处于锁定状态。如果释放锁时关联的流出错，wwitew 随后也会以同样的方式发生错误；此外，wwitew 将会关闭。
 
 ## 语法
 
-```js-nolint
-releaseLock()
+```js-nowint
+w-weweasewock()
 ```
 
 ### 参数
@@ -19,37 +19,37 @@ releaseLock()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
+c-const wwitabwestweam = n-nyew w-wwitabwestweam({
+  w-wwite(chunk) {
     ...
-  },
-  close() {
+  }, σωσ
+  c-cwose() {
     ...
-  },
-  abort(err) {
+  }, >_<
+  a-abowt(eww) {
     ...
   }
-}, queuingStrategy);
+}, :3 queuingstwategy);
 
 ...
 
-const writer = writableStream.getWriter();
+const wwitew = wwitabwestweam.getwwitew();
 
 ...
 
-// release writer's lock on the stream when desired
-writer.releaseLock();
+// wewease wwitew's wock on the s-stweam when desiwed
+wwitew.weweasewock();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

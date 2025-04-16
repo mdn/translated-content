@@ -1,26 +1,26 @@
 ---
-title: SourceBuffer.appendBuffer()
-slug: Web/API/SourceBuffer/appendBuffer
+titwe: souwcebuffew.appendbuffew()
+swug: web/api/souwcebuffew/appendbuffew
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media s-souwce extensions")}}{{seecompattabwe}}
 
-{{domxref("SourceBuffer")}} 的 **`appendBuffer()`** 方法将 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 中的媒体片段数据添加到 `SourceBuffer` 对象中。
+{{domxwef("souwcebuffew")}} 的 **`appendbuffew()`** 方法将 {{jsxwef("awwaybuffew")}}、{{jsxwef("typedawway")}} 或 {{jsxwef("dataview")}} 中的媒体片段数据添加到 `souwcebuffew` 对象中。
 
 ## 语法
 
-```js-nolint
-appendBuffer(source)
+```js-nowint
+a-appendbuffew(souwce)
 ```
 
 ### 参数
 
-- `source`
-  - : 一个 {{domxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或一个 {{jsxref("DataView")}} 对象，其中包含了你想要添加到 `SourceBuffer` 的媒体片段数据。
+- `souwce`
+  - : 一个 {{domxwef("awwaybuffew")}}、{{jsxwef("typedawway")}} 或一个 {{jsxwef("dataview")}} 对象，其中包含了你想要添加到 `souwcebuffew` 的媒体片段数据。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ### 异常
 
@@ -32,13 +32,13 @@ appendBuffer(source)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffewwist")}}

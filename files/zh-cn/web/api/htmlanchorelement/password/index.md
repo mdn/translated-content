@@ -1,15 +1,15 @@
 ---
-title: HTMLAnchorElement：password 属性
-slug: Web/API/HTMLAnchorElement/password
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: htmwanchowewement：passwowd 属性
+swug: w-web/api/htmwanchowewement/passwowd
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAnchorElement.password`** 属性是一个字符串，包含域名之前指定的密码。
+**`htmwanchowewement.passwowd`** 属性是一个字符串，包含域名之前指定的密码。
 
-如果未先设置 [`username`](/zh-CN/docs/Web/API/HTMLAnchorElement/username) 属性就尝试设置此属性，则会静默失败。
+如果未先设置 [`usewname`](/zh-cn/docs/web/api/htmwanchowewement/usewname) 属性就尝试设置此属性，则会静默失败。
 
 ## 值
 
@@ -18,19 +18,19 @@ l10n:
 ## 示例
 
 ```js
-// 文档中有一个 <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/zh-CN/docs/HTMLAnchorElement"> 元素
-const anchor = document.getElementByID("myAnchor");
-anchor.password; // 返回“flabada”
+// 文档中有一个 <a i-id="myanchow" h-hwef="https://anonymous:fwabada@devewopew.moziwwa.owg/zh-cn/docs/htmwanchowewement"> 元素
+c-const a-anchow = document.getewementbyid("myanchow");
+anchow.passwowd; // 返回“fwabada”
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所属接口 {{domxref("HTMLAnchorElement")}}。
+- 所属接口 {{domxwef("htmwanchowewement")}}。

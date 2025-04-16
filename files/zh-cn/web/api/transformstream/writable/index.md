@@ -1,29 +1,29 @@
 ---
-title: TransformStream.writable
-slug: Web/API/TransformStream/writable
+titwe: twansfowmstweam.wwitabwe
+swug: web/api/twansfowmstweam/wwitabwe
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-{{domxref("TransformStream")}} 接口的只读属性 **`writable`** 返回由这个 `TransformStream` 控制的 {{domxref("WritableStream")}} 实例。
+{{domxwef("twansfowmstweam")}} 接口的只读属性 **`wwitabwe`** 返回由这个 `twansfowmstweam` 控制的 {{domxwef("wwitabwestweam")}} 实例。
 
 ## 值
 
-一个 {{domxref("WritableStream")}}。
+一个 {{domxwef("wwitabwestweam")}}。
 
 ## 示例
 
-以下示例创建了一个新的 {{domxref("TransformStream")}} 并将其赋值给 `textEncoderStream`，然后将 `writable` 的值打印到控制台上。
+以下示例创建了一个新的 {{domxwef("twansfowmstweam")}} 并将其赋值给 `textencodewstweam`，然后将 `wwitabwe` 的值打印到控制台上。
 
 ```js
-const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.writable); // a WritableStream
+c-const textencodewstweam = n-nyew twansfowmstweam();
+c-consowe.wog(textencodewstweam.wwitabwe); // a-a w-wwitabwestweam
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

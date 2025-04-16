@@ -1,38 +1,38 @@
 ---
-title: HTMLMediaElement.loop
-slug: Web/API/HTMLMediaElement/loop
+titwe: htmwmediaewement.woop
+swug: web/api/htmwmediaewement/woop
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLMediaElement.loop`** 属性是 HTML 标签 [`loop`](/zh-CN/docs/Web/HTML/Reference/Elements/video#loop) 属性的映射，它决定了媒体元素播放结束时是否重新开始。
+**`htmwmediaewement.woop`** 属性是 h-htmw 标签 [`woop`](/zh-cn/docs/web/htmw/wefewence/ewements/video#woop) 属性的映射，它决定了媒体元素播放结束时是否重新开始。
 
 ## 语法
 
 ```js
-var loop = video.loop;
-audio.loop = true;
+v-vaw woop = video.woop;
+a-audio.woop = t-twue;
 ```
 
 ### 返回值
 
-一个布尔值 {{domxref("Boolean")}}.
+一个布尔值 {{domxwef("boowean")}}. rawr x3
 
 ## 示例
 
 ```js
-var obj = document.createElement("video");
-obj.loop = true; // true
+v-vaw obj = d-document.cweateewement("video");
+o-obj.woop = twue; // twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- the intewface defining it, rawr {{domxwef("htmwmediaewement")}}. σωσ

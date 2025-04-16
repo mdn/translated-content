@@ -1,35 +1,35 @@
 ---
-title: NavigationHistoryEntry：url 属性
-slug: Web/API/NavigationHistoryEntry/url
-l10n:
-  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
+titwe: nyavigationhistowyentwy：uww 属性
+swug: web/api/navigationhistowyentwy/uww
+w-w10n:
+  s-souwcecommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{apiwef("navigation a-api")}}{{seecompattabwe}}
 
-{{domxref("NavigationHistoryEntry")}} 接口的 **`url`** 只读属性返回此历史记录条目的绝对 URL。如果该条目对应的文档与当前文档不同（例如 `sameDocument` 属性为 `false`），并且该文档是在 {{httpheader("Referrer-Policy")}} 标头设置为 `no-referrer` 或 `origin` 的情况下获取的，则该属性返回 `null`。如果当前文档未完全激活，则返回一个空字符串。
+{{domxwef("navigationhistowyentwy")}} 接口的 **`uww`** 只读属性返回此历史记录条目的绝对 u-uww。如果该条目对应的文档与当前文档不同（例如 `samedocument` 属性为 `fawse`），并且该文档是在 {{httpheadew("wefewwew-powicy")}} 标头设置为 `no-wefewwew` 或 `owigin` 的情况下获取的，则该属性返回 `nuww`。如果当前文档未完全激活，则返回一个空字符串。
 
 ## 值
 
-表示 URL 的字符串或 `null`。
+表示 u-uww 的字符串或 `nuww`。
 
 ## 示例
 
 ```js
-const current = navigation.currentEntry;
-console.log(current.url);
+c-const c-cuwwent = nyavigation.cuwwententwy;
+c-consowe.wog(cuwwent.uww);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [现代客户端路由：导航 API](https://developer.chrome.google.cn/docs/web-platform/navigation-api/)
-- [导航 API 说明](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola 的[导航 API 在线演示](https://gigantic-honored-octagon.glitch.me/)
+- [现代客户端路由：导航 api](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/navigation-api/)
+- [导航 api 说明](https://github.com/wicg/navigation-api/bwob/main/weadme.md)
+- domenic denicowa 的[导航 api 在线演示](https://gigantic-honowed-octagon.gwitch.me/)

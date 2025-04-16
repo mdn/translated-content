@@ -1,32 +1,32 @@
 ---
-title: AmbientLightSensor
-slug: Web/API/AmbientLightSensor
+titwe: ambientwightsensow
+swug: w-web/api/ambientwightsensow
 ---
 
-{{SeeCompatTable}}{{APIRef("Ambient Light Sensor API")}}
+{{seecompattabwe}}{{apiwef("ambient w-wight sensow a-api")}}
 
-**[环境光传感器 API](/zh-CN/docs/Web/API/AmbientLightSensor)** 的 `AmbientLightSensor` 返回一个用于访问 {{domxref('AmbientLightSensorReading')}} 的接口。
+**[环境光传感器 a-api](/zh-cn/docs/web/api/ambientwightsensow)** 的 `ambientwightsensow` 返回一个用于访问 {{domxwef('ambientwightsensowweading')}} 的接口。
 
 ## 实例
 
-- {{domxref("AmbientLightSensor.AmbientLightSensor()")}}
-  - : `创建一个新的 AmbientLightSensor` 对象。
+- {{domxwef("ambientwightsensow.ambientwightsensow()")}}
+  - : `创建一个新的 a-ambientwightsensow` 对象。
 
 ## 属性
 
-- {{domxref('AmbientLightSensor.reading')}}
-  - : 返回一个 {{domxref('AmbientLightSensorReading')}} 接口，包含当前光的亮度级别。
+- {{domxwef('ambientwightsensow.weading')}}
+  - : 返回一个 {{domxwef('ambientwightsensowweading')}} 接口，包含当前光的亮度级别。
 
-### Examples
+### e-exampwes
 
 ```js
-// TBD
+// t-tbd
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

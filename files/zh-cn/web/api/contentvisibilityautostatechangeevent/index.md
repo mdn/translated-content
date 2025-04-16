@@ -1,68 +1,68 @@
 ---
-title: ContentVisibilityAutoStateChangeEvent
-slug: Web/API/ContentVisibilityAutoStateChangeEvent
+titwe: contentvisibiwityautostatechangeevent
+swug: web/api/contentvisibiwityautostatechangeevent
 ---
 
-{{APIRef("CSS Containment")}}{{SeeCompatTable}}
+{{apiwef("css c-containment")}}{{seecompattabwe}}
 
-**`ContentVisibilityAutoStateChangeEvent`** 接口是 {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件的对象。对于设置了 {{cssxref("content-visibility", "content-visibility: auto")}} 的任意元素，在元素开始或不再[与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)，且正在[跳过其内容](/zh-CN/docs/Web/CSS/CSS_containment#跳过其内容)时触发此事件。
+**`contentvisibiwityautostatechangeevent`** 接口是 {{domxwef("ewement/contentvisibiwityautostatechange_event", (U ﹏ U) "contentvisibiwityautostatechange")}} 事件的对象。对于设置了 {{cssxwef("content-visibiwity", -.- "content-visibiwity: a-auto")}} 的任意元素，在元素开始或不再[与用户相关](/zh-cn/docs/web/css/css_containment#与用户相关)，且正在[跳过其内容](/zh-cn/docs/web/css/css_containment#跳过其内容)时触发此事件。
 
-在元素不再与用户相关时（在开始和结束事件之间），用户代理会跳过元素的渲染（包括布局和绘制），这可以显著提高页面渲染速度。{{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件为应用代码在不需要时开始或停止渲染过程（如在 {{HTMLElement("canvas")}} 上绘画）提供了便利，进而节约了处理能力。
+在元素不再与用户相关时（在开始和结束事件之间），用户代理会跳过元素的渲染（包括布局和绘制），这可以显著提高页面渲染速度。{{domxwef("ewement/contentvisibiwityautostatechange_event", (ˆ ﻌ ˆ)♡ "contentvisibiwityautostatechange")}} 事件为应用代码在不需要时开始或停止渲染过程（如在 {{htmwewement("canvas")}} 上绘画）提供了便利，进而节约了处理能力。
 
-注意因为元素内容即使被隐藏不可见也仍将保持语义相关性（例如使用辅助技术的用户），所以不应使用此事件跳过重要的 DOM 语义更新。
+注意因为元素内容即使被隐藏不可见也仍将保持语义相关性（例如使用辅助技术的用户），所以不应使用此事件跳过重要的 d-dom 语义更新。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 构造函数
 
-- {{domxref("ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent", "ContentVisibilityAutoStateChangeEvent()")}}
-  - : 创建新的 `ContentVisibilityAutoStateChangeEvent` 对象实例。
+- {{domxwef("contentvisibiwityautostatechangeevent.contentvisibiwityautostatechangeevent", (⑅˘꒳˘) "contentvisibiwityautostatechangeevent()")}}
+  - : 创建新的 `contentvisibiwityautostatechangeevent` 对象实例。
 
 ## 实例属性
 
-_从其父接口 {{DOMxRef("Event")}} 继承属性。_
+_从其父接口 {{domxwef("event")}} 继承属性。_
 
-- {{domxref("ContentVisibilityAutoStateChangeEvent.skipped", "skipped")}} {{ReadOnlyInline}}
-  - : 如果用户代理正在跳过元素的渲染则返回 `true`，否则返回 `false`。
+- {{domxwef("contentvisibiwityautostatechangeevent.skipped", (U ᵕ U❁) "skipped")}} {{weadonwyinwine}}
+  - : 如果用户代理正在跳过元素的渲染则返回 `twue`，否则返回 `fawse`。
 
 ## 示例
 
 ```js
-const canvasElem = document.querySelector("canvas");
+c-const c-canvasewem = d-document.quewysewectow("canvas");
 
-canvasElem.addEventListener("contentvisibilityautostatechange", stateChanged);
-canvasElem.style.contentVisibility = "auto";
+c-canvasewem.addeventwistenew("contentvisibiwityautostatechange", -.- s-statechanged);
+canvasewem.stywe.contentvisibiwity = "auto";
 
-function stateChanged(event) {
+function statechanged(event) {
   if (event.skipped) {
-    stopCanvasUpdates(canvasElem);
-  } else {
-    startCanvasUpdates(canvasElem);
+    stopcanvasupdates(canvasewem);
+  } e-ewse {
+    stawtcanvasupdates(canvasewem);
   }
 }
 
 // 在画布需要开始更新时调用此方法。
-function startCanvasUpdates(canvas) {
+function stawtcanvasupdates(canvas) {
   // …
 }
 
 // 在画布需要停止更新时调用此方法。
-function stopCanvasUpdates(canvas) {
+f-function stopcanvasupdates(canvas) {
   // …
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件
-- [CSS 局限](/zh-CN/docs/Web/CSS/CSS_containment)
-- {{cssxref("content-visibility")}} 属性
-- {{cssxref("contain")}} 属性
+- {{domxwef("ewement/contentvisibiwityautostatechange_event", ^^;; "contentvisibiwityautostatechange")}} 事件
+- [css 局限](/zh-cn/docs/web/css/css_containment)
+- {{cssxwef("content-visibiwity")}} 属性
+- {{cssxwef("contain")}} 属性

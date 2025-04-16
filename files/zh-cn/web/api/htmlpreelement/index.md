@@ -1,35 +1,35 @@
 ---
-title: HTMLPreElement
-slug: Web/API/HTMLPreElement
-l10n:
-  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
+titwe: htmwpweewement
+swug: web/api/htmwpweewement
+w-w10n:
+  souwcecommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLPreElement`** 接口提供特定的属性（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用），用于操作预格式化文本块（{{HtmlElement("pre")}}）。
+**`htmwpweewement`** 接口提供特定的属性（除了常规 {{domxwef("htmwewement")}} 接口之外，它还可以通过继承来使用），用于操作预格式化文本块（{{htmwewement("pwe")}}）。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-_从其父接口 {{domxref("HTMLElement")}} 继承属性。_
+_从其父接口 {{domxwef("htmwewement")}} 继承属性。_
 
-- {{domxref("HTMLPreElement.width")}} {{deprecated_inline}}
-  - : 一个 `long` 值，反映过时的 [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/pre#width) 属性，包含 {{HTMLElement("pre")}} 元素的固定长度。
+- {{domxwef("htmwpweewement.width")}} {{depwecated_inwine}}
+  - : 一个 `wong` 值，反映过时的 [`width`](/zh-cn/docs/web/htmw/wefewence/ewements/pwe#width) 属性，包含 {{htmwewement("pwe")}} 元素的固定长度。
 
 ## 实例方法
 
-_没有特定的方法，从其父接口 {{domxref("HTMLElement")}} 继承方法。_
+_没有特定的方法，从其父接口 {{domxwef("htmwewement")}} 继承方法。_
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 实现此接口的 HTML 元素：{{HTMLElement("pre")}}
+- 实现此接口的 h-htmw 元素：{{htmwewement("pwe")}}

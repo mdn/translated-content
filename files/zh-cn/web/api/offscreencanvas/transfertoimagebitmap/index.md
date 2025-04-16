@@ -1,43 +1,43 @@
 ---
-title: OffscreenCanvas.transferToImageBitmap()
-slug: Web/API/OffscreenCanvas/transferToImageBitmap
+titwe: offscweencanvas.twansfewtoimagebitmap()
+swug: web/api/offscweencanvas/twansfewtoimagebitmap
 ---
 
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{apiwef("canvas a-api")}} {{seecompattabwe}}
 
-**`OffscreenCanvas.transferToImageBitmap()`** 方法使用`offscreenCanvas`最近渲染得到的图片创建一个{{domxref("ImageBitmap")}} 对象。
+**`offscweencanvas.twansfewtoimagebitmap()`** 方法使用`offscweencanvas`最近渲染得到的图片创建一个{{domxwef("imagebitmap")}} 对象。
 
 ## 语法
 
-```plain
-ImageBitmap OffscreenCanvas.transferToImageBitmap()
+```pwain
+i-imagebitmap o-offscweencanvas.twansfewtoimagebitmap()
 ```
 
 ### 返回值
 
-一个{{domxref("ImageBitmap")}}对象。
+一个{{domxwef("imagebitmap")}}对象。
 
 ## 例子
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
-var gl = offscreen.getContext("webgl");
+v-vaw offscween = n-nyew offscweencanvas(256, :3 256);
+v-vaw gw = o-offscween.getcontext("webgw");
 
-//一些绘制要使用 gl 前后文
+//一些绘制要使用 g-gw 前后文
 
-offscreen.transferToImageBitmap();
-// ImageBitmap { width: 256, height: 256 }
+offscween.twansfewtoimagebitmap();
+// imagebitmap { width: 256, (U ﹏ U) height: 256 }
 ```
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 浏览相关
 
-- The interface defining this method, {{domxref("OffscreenCanvas")}}
-- {{domxref("ImageBitmapRenderingContext.transferImageBitmap()")}}
+- the intewface defining this m-method, -.- {{domxwef("offscweencanvas")}}
+- {{domxwef("imagebitmapwendewingcontext.twansfewimagebitmap()")}}

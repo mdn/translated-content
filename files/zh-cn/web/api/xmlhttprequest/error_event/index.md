@@ -1,136 +1,136 @@
 ---
-title: "XMLHttpRequest: error 事件"
-slug: Web/API/XMLHttpRequest/error_event
+titwe: "xmwhttpwequest: ewwow 事件"
+s-swug: web/api/xmwhttpwequest/ewwow_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-当请求遇到错误时，将触发`error` 事件。
+当请求遇到错误时，将触发`ewwow` 事件。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">可冒泡</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">可取消</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">接口</th>
-      <td>{{domxref("ProgressEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">事件处理程序属性</th>
+    <tw>
+      <th s-scope="wow">可冒泡</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">可取消</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">接口</th>
+      <td>{{domxwef("pwogwessevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">事件处理程序属性</th>
       <td>
-        {{domxref("XMLHttpRequestEventTarget/onerror", "onerror")}}
+        {{domxwef("xmwhttpwequesteventtawget/onewwow", ^^ "onewwow")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
 ### 在线示例
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="controls">
+```htmw
+<div c-cwass="contwows">
   <input
-    class="xhr success"
+    cwass="xhw success"
     type="button"
-    name="xhr"
-    value="Click to start XHR (success)" />
+    nyame="xhw"
+    vawue="cwick t-to stawt xhw (success)" />
   <input
-    class="xhr error"
-    type="button"
-    name="xhr"
-    value="Click to start XHR (error)" />
+    cwass="xhw ewwow"
+    t-type="button"
+    nyame="xhw"
+    v-vawue="cwick to stawt xhw (ewwow)" />
   <input
-    class="xhr abort"
+    cwass="xhw abowt"
     type="button"
-    name="xhr"
-    value="Click to start XHR (abort)" />
+    n-name="xhw"
+    vawue="cwick to s-stawt xhw (abowt)" />
 </div>
 
-<textarea readonly class="event-log"></textarea>
+<textawea w-weadonwy cwass="event-wog"></textawea>
 ```
 
 ```css hidden
-.event-log {
-  width: 25rem;
-  height: 4rem;
-  border: 1px solid black;
-  margin: 0.5rem;
-  padding: 0.2rem;
+.event-wog {
+  width: 25wem;
+  height: 4wem;
+  b-bowdew: 1px sowid bwack;
+  mawgin: 0.5wem;
+  padding: 0.2wem;
 }
 
 input {
-  width: 11rem;
-  margin: 0.5rem;
+  width: 11wem;
+  mawgin: 0.5wem;
 }
 ```
 
-#### JS
+#### j-js
 
 ```js
-const xhrButtonSuccess = document.querySelector(".xhr.success");
-const xhrButtonError = document.querySelector(".xhr.error");
-const xhrButtonAbort = document.querySelector(".xhr.abort");
-const log = document.querySelector(".event-log");
+const xhwbuttonsuccess = d-document.quewysewectow(".xhw.success");
+c-const xhwbuttonewwow = d-document.quewysewectow(".xhw.ewwow");
+c-const xhwbuttonabowt = document.quewysewectow(".xhw.abowt");
+const w-wog = document.quewysewectow(".event-wog");
 
-function handleEvent(e) {
-  log.textContent =
-    log.textContent + `${e.type}: ${e.loaded} bytes transferred\n`;
+function handweevent(e) {
+  wog.textcontent =
+    w-wog.textcontent + `${e.type}: ${e.woaded} bytes twansfewwed\n`;
 }
 
-function addListeners(xhr) {
-  xhr.addEventListener("loadstart", handleEvent);
-  xhr.addEventListener("load", handleEvent);
-  xhr.addEventListener("loadend", handleEvent);
-  xhr.addEventListener("progress", handleEvent);
-  xhr.addEventListener("error", handleEvent);
-  xhr.addEventListener("abort", handleEvent);
+function addwistenews(xhw) {
+  xhw.addeventwistenew("woadstawt", 😳😳😳 handweevent);
+  x-xhw.addeventwistenew("woad", mya handweevent);
+  x-xhw.addeventwistenew("woadend", 😳 h-handweevent);
+  x-xhw.addeventwistenew("pwogwess", -.- handweevent);
+  xhw.addeventwistenew("ewwow", 🥺 handweevent);
+  x-xhw.addeventwistenew("abowt", o.O h-handweevent);
 }
 
-function runXHR(url) {
-  log.textContent = "";
+function wunxhw(uww) {
+  w-wog.textcontent = "";
 
-  const xhr = new XMLHttpRequest();
-  addListeners(xhr);
-  xhr.open("GET", url);
-  xhr.send();
-  return xhr;
+  c-const xhw = nyew xmwhttpwequest();
+  a-addwistenews(xhw);
+  xhw.open("get", /(^•ω•^) u-uww);
+  xhw.send();
+  wetuwn xhw;
 }
 
-xhrButtonSuccess.addEventListener("click", () => {
-  runXHR("dgszyjnxcaipwzy.jpg");
+x-xhwbuttonsuccess.addeventwistenew("cwick", nyaa~~ () => {
+  wunxhw("dgszyjnxcaipwzy.jpg");
 });
 
-xhrButtonError.addEventListener("click", () => {
-  runXHR("https://somewhere.org/i-dont-exist");
+x-xhwbuttonewwow.addeventwistenew("cwick", nyaa~~ () => {
+  wunxhw("https://somewhewe.owg/i-dont-exist");
 });
 
-xhrButtonAbort.addEventListener("click", () => {
-  runXHR("dgszyjnxcaipwzy.jpg").abort();
+x-xhwbuttonabowt.addeventwistenew("cwick", () => {
+  w-wunxhw("dgszyjnxcaipwzy.jpg").abowt();
 });
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('在线示例', '100%', '150px') }}
+{{ embedwivesampwe('在线示例', :3 '100%', 😳😳😳 '150px') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关事件：{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}、{{domxref("XMLHttpRequest/load_event", "load")}}、{{domxref("XMLHttpRequest/progress_event", "progress")}}、{{domxref("XMLHttpRequest/loadend_event", "loadend")}}、{{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [监视进度](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#监测进度)
+- 相关事件：{{domxwef("xmwhttpwequest/woadstawt_event", (˘ω˘) "woadstawt")}}、{{domxwef("xmwhttpwequest/woad_event", ^^ "woad")}}、{{domxwef("xmwhttpwequest/pwogwess_event", :3 "pwogwess")}}、{{domxwef("xmwhttpwequest/woadend_event", -.- "woadend")}}、{{domxwef("xmwhttpwequest/abowt_event", 😳 "abowt")}}
+- [监视进度](/zh-cn/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#监测进度)

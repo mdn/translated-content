@@ -1,66 +1,66 @@
 ---
-title: Element.replaceWith()
-slug: Web/API/Element/replaceWith
+titwe: ewement.wepwacewith()
+swug: web/api/ewement/wepwacewith
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`ChildNode.replaceWith()`** 的方法用一套 {{domxref("Node")}} 对象或者字符串对象，替换了该节点父节点下的子节点。字符串对象被当做等效的 {{domxref("Text")}} 节点插入。
+**`chiwdnode.wepwacewith()`** 的方法用一套 {{domxwef("node")}} 对象或者字符串对象，替换了该节点父节点下的子节点。字符串对象被当做等效的 {{domxwef("text")}} 节点插入。
 
 ## 语法
 
-```js-nolint
-replaceWith(param1)
-replaceWith(param1, param2)
-replaceWith(param1, param2, /* …, */ paramN)
+```js-nowint
+w-wepwacewith(pawam1)
+w-wepwacewith(pawam1, (ˆ ﻌ ˆ)♡ p-pawam2)
+wepwacewith(pawam1, (⑅˘꒳˘) p-pawam2, /* …, (U ᵕ U❁) */ p-pawamn)
 ```
 
 ### 参数
 
-- `param1`、…、`paramN`
-  - : 一系列用来替换的 {{domxref("Node")}} 对象或者字符串对象。
+- `pawam1`、…、`pawamn`
+  - : 一系列用来替换的 {{domxwef("node")}} 对象或者字符串对象。
 
 ### 异常
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
   - : 无法在层次结构中的指定节点处插入节点时抛出。
 
 ## 示例
 
-### 使用 `replaceWith()`
+### 使用 `wepwacewith()`
 
 ```js
-const div = document.createElement("div");
-const p = document.createElement("p");
-div.appendChild(p);
-const span = document.createElement("span");
+c-const div = document.cweateewement("div");
+c-const p-p = document.cweateewement("p");
+div.appendchiwd(p);
+const span = document.cweateewement("span");
 
-p.replaceWith(span);
+p.wepwacewith(span);
 
-console.log(div.outerHTML);
+c-consowe.wog(div.outewhtmw);
 // "<div><span></span></div>"
 ```
 
-### `replaceWith()` 是不可绑定作用域方法
+### `wepwacewith()` 是不可绑定作用域方法
 
-`replaceWith()` 方法不能作用于 with 语句。参考 {{jsxref("Symbol.unscopables")}} 获取更多信息。
+`wepwacewith()` 方法不能作用于 with 语句。参考 {{jsxwef("symbow.unscopabwes")}} 获取更多信息。
 
 ```js
 with (node) {
-  replaceWith("foo");
+  w-wepwacewith("foo");
 }
-// ReferenceError: replaceWith is not defined
+// wefewenceewwow: w-wepwacewith is not defined
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Node.replaceChild()")}}
-- {{domxref("NodeList")}}
+- {{domxwef("node.wepwacechiwd()")}}
+- {{domxwef("nodewist")}}

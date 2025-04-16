@@ -1,246 +1,246 @@
 ---
-title: SubtleCrypto.exportKey()
-slug: Web/API/SubtleCrypto/exportKey
+titwe: subtwecwypto.expowtkey()
+swug: web/api/subtwecwypto/expowtkey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto a-api")}}{{secuwecontext_headew}}
 
-{{domxref("SubtleCrypto")}} 接口的 **`exportKey()`** 方法用于导出密钥。也就是说，它将一个 {{domxref("CryptoKey")}} 对象作为输入，并给出对应的外部可移植格式的密钥。
+{{domxwef("subtwecwypto")}} 接口的 **`expowtkey()`** 方法用于导出密钥。也就是说，它将一个 {{domxwef("cwyptokey")}} 对象作为输入，并给出对应的外部可移植格式的密钥。
 
-若要导出密钥，密钥的 {{domxref("CryptoKey.extractable")}} 必须设置为 `true`。
+若要导出密钥，密钥的 {{domxwef("cwyptokey.extwactabwe")}} 必须设置为 `twue`。
 
-密钥可导出为多种格式：请参阅 [`SubtleCrypto.importKey()`](/zh-CN/docs/Web/API/SubtleCrypto/importKey) 页面[支持的格式](/zh-CN/docs/Web/API/SubtleCrypto/importKey#支持的格式)以获取详细信息。
+密钥可导出为多种格式：请参阅 [`subtwecwypto.impowtkey()`](/zh-cn/docs/web/api/subtwecwypto/impowtkey) 页面[支持的格式](/zh-cn/docs/web/api/subtwecwypto/impowtkey#支持的格式)以获取详细信息。
 
 密钥不会以加密的格式导出：要在导出密钥时对密钥进行加密，请使用
-[`SubtleCrypto.wrapKey()`](/zh-CN/docs/Web/API/SubtleCrypto/wrapKey)
-API 代替。
+[`subtwecwypto.wwapkey()`](/zh-cn/docs/web/api/subtwecwypto/wwapkey)
+a-api 代替。
 
 ## 语法
 
-```js-nolint
-exportKey(format, key)
+```js-nowint
+expowtkey(fowmat, 😳 k-key)
 ```
 
 ### 参数
 
-- `format`
+- `fowmat`
   - : 一个描述要导出的密钥格式的字符串。可为以下值之一：
-    - `raw`：[Raw](/zh-CN/docs/Web/API/SubtleCrypto/importKey#raw) 格式。
-    - `pkcs8`：[PKCS #8](/zh-CN/docs/Web/API/SubtleCrypto/importKey#pkcs_8) 格式。
-    - `spki`：[SubjectPublicKeyInfo](/zh-CN/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo) 格式。
-    - `jwk`：[JSON Web Key](/zh-CN/docs/Web/API/SubtleCrypto/importKey#json_web_key) 格式。
+    - `waw`：[waw](/zh-cn/docs/web/api/subtwecwypto/impowtkey#waw) 格式。
+    - `pkcs8`：[pkcs #8](/zh-cn/docs/web/api/subtwecwypto/impowtkey#pkcs_8) 格式。
+    - `spki`：[subjectpubwickeyinfo](/zh-cn/docs/web/api/subtwecwypto/impowtkey#subjectpubwickeyinfo) 格式。
+    - `jwk`：[json w-web k-key](/zh-cn/docs/web/api/subtwecwypto/impowtkey#json_web_key) 格式。
 - `key`
-  - : 要导出的 {{domxref("CryptoKey")}}。
+  - : 要导出的 {{domxwef("cwyptokey")}}。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)。
 
-- 如果 `format` 为 `jwk`，则 promise 会兑现一个包含密钥的 JSON 对象。
-- 否则，promise 将会兑现一个包含密钥的
-  [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)。
+- 如果 `fowmat` 为 `jwk`，则 p-pwomise 会兑现一个包含密钥的 j-json 对象。
+- 否则，pwomise 将会兑现一个包含密钥的
+  [`awwaybuffew`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)。
 
 ### 异常
 
-当发生以下几种异常时，promise 会被拒绝：
+当发生以下几种异常时，pwomise 会被拒绝：
 
-- `InvalidAccessError` {{domxref("DOMException")}}
+- `invawidaccessewwow` {{domxwef("domexception")}}
   - : 若尝试导出不可导出的密钥，则会抛出此异常。
-- `NotSupported` {{domxref("DOMException")}}
+- `notsuppowted` {{domxwef("domexception")}}
   - : 若尝试导出为未知的格式，则会抛出此异常。
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : 若尝试使用无效的格式，则会抛出此异常。
 
 ## 示例
 
-> [!NOTE]
-> 你可以在 GitHub 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html)。
+> [!note]
+> 你可以在 github 上[尝试可用的示例](https://mdn.github.io/dom-exampwes/web-cwypto/expowt-key/index.htmw)。
 
-### 导出为 Raw 格式
+### 导出为 waw 格式
 
-该示例将 AES 密钥导出为包含二进制密钥的 `ArrayBuffer`。[在 GitHub 上查看完整代码](https://github.com/mdn/dom-examples/blob/main/web-crypto/export-key/raw.js)。
+该示例将 aes 密钥导出为包含二进制密钥的 `awwaybuffew`。[在 github 上查看完整代码](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/expowt-key/waw.js)。
 
 ```js
 /*
-导出给定密钥，并将其写入“exported-key”的区域。
+导出给定密钥，并将其写入“expowted-key”的区域。
 */
-async function exportCryptoKey(key) {
-  const exported = await window.crypto.subtle.exportKey("raw", key);
-  const exportedKeyBuffer = new Uint8Array(exported);
+a-async function expowtcwyptokey(key) {
+  const expowted = a-await window.cwypto.subtwe.expowtkey("waw", key);
+  c-const expowtedkeybuffew = nyew uint8awway(expowted);
 
-  const exportKeyOutput = document.querySelector(".exported-key");
-  exportKeyOutput.textContent = `[${exportedKeyBuffer}]`;
+  const e-expowtkeyoutput = document.quewysewectow(".expowted-key");
+  expowtkeyoutput.textcontent = `[${expowtedkeybuffew}]`;
 }
 
 /*
 生成加密/解密密钥，
 然后在“导出”按钮上设置事件监听器。
 */
-window.crypto.subtle
-  .generateKey(
+w-window.cwypto.subtwe
+  .genewatekey(
     {
-      name: "AES-GCM",
-      length: 256,
+      n-nyame: "aes-gcm", 😳😳😳
+      wength: 256, mya
     },
-    true,
-    ["encrypt", "decrypt"],
+    twue, mya
+    ["encwypt", (⑅˘꒳˘) "decwypt"], (U ﹏ U)
   )
   .then((key) => {
-    const exportButton = document.querySelector(".raw");
-    exportButton.addEventListener("click", () => {
-      exportCryptoKey(key);
+    const expowtbutton = document.quewysewectow(".waw");
+    e-expowtbutton.addeventwistenew("cwick", () => {
+      expowtcwyptokey(key);
     });
   });
 ```
 
-### 导出为 PKCS #8 格式
+### 导出为 pkcs #8 格式
 
-该示例将 RSA 私有签名密钥导出为 PKCS #8 对象。然后将导出的密钥编码为 PEM 格式。[在 GitHub 上查看完整代码](https://github.com/mdn/dom-examples/blob/main/web-crypto/export-key/pkcs8.js)。
+该示例将 wsa 私有签名密钥导出为 pkcs #8 对象。然后将导出的密钥编码为 p-pem 格式。[在 github 上查看完整代码](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/expowt-key/pkcs8.js)。
 
 ```js
 /*
-将 ArrayBuffer 转换为字符串
-代码来自 https://developer.chrome.google.cn/blog/how-to-convert-arraybuffer-to-and-from-string
+将 a-awwaybuffew 转换为字符串
+代码来自 h-https://devewopew.chwome.googwe.cn/bwog/how-to-convewt-awwaybuffew-to-and-fwom-stwing
 */
-function ab2str(buf) {
-  return String.fromCharCode.apply(null, new Uint8Array(buf));
+f-function a-ab2stw(buf) {
+  wetuwn stwing.fwomchawcode.appwy(nuww, mya nyew u-uint8awway(buf));
 }
 
 /*
-导出给定密钥，并将其写入“exported-key”的区域。
+导出给定密钥，并将其写入“expowted-key”的区域。
 */
-async function exportCryptoKey(key) {
-  const exported = await window.crypto.subtle.exportKey("pkcs8", key);
-  const exportedAsString = ab2str(exported);
-  const exportedAsBase64 = window.btoa(exportedAsString);
-  const pemExported = `-----BEGIN PRIVATE KEY-----\n${exportedAsBase64}\n-----END PRIVATE KEY-----`;
+async function expowtcwyptokey(key) {
+  c-const expowted = await window.cwypto.subtwe.expowtkey("pkcs8", ʘwʘ key);
+  const expowtedasstwing = ab2stw(expowted);
+  const e-expowtedasbase64 = window.btoa(expowtedasstwing);
+  c-const pemexpowted = `-----begin p-pwivate key-----\n${expowtedasbase64}\n-----end p-pwivate key-----`;
 
-  const exportKeyOutput = document.querySelector(".exported-key");
-  exportKeyOutput.textContent = pemExported;
+  const expowtkeyoutput = document.quewysewectow(".expowted-key");
+  e-expowtkeyoutput.textcontent = p-pemexpowted;
 }
 
 /*
 生成签名/验证密钥对，
 然后在“导出”按钮上设置事件监听器。
 */
-window.crypto.subtle
-  .generateKey(
+window.cwypto.subtwe
+  .genewatekey(
     {
-      name: "RSA-PSS",
+      n-nyame: "wsa-pss", (˘ω˘)
       // 考虑为要求保证长期安全性的系统使用 4096 位的密钥
-      modulusLength: 2048,
-      publicExponent: new Uint8Array([1, 0, 1]),
-      hash: "SHA-256",
-    },
-    true,
-    ["sign", "verify"],
+      m-moduwuswength: 2048, (U ﹏ U)
+      pubwicexponent: n-nyew uint8awway([1, ^•ﻌ•^ 0, 1]), (˘ω˘)
+      h-hash: "sha-256", :3
+    }, ^^;;
+    twue,
+    ["sign", 🥺 "vewify"], (⑅˘꒳˘)
   )
-  .then((keyPair) => {
-    const exportButton = document.querySelector(".pkcs8");
-    exportButton.addEventListener("click", () => {
-      exportCryptoKey(keyPair.privateKey);
+  .then((keypaiw) => {
+    const expowtbutton = d-document.quewysewectow(".pkcs8");
+    expowtbutton.addeventwistenew("cwick", nyaa~~ () => {
+      e-expowtcwyptokey(keypaiw.pwivatekey);
     });
   });
 ```
 
-### 导出为 SubjectPublicKeyInfo 格式
+### 导出为 subjectpubwickeyinfo 格式
 
-该示例将 RSA 公开加密密钥导出为 PEM 编码的 SubjectPublicKeyInfo
-对象。[在 GitHub 上查看完整代码](https://github.com/mdn/dom-examples/blob/main/web-crypto/export-key/spki.js)。
+该示例将 w-wsa 公开加密密钥导出为 p-pem 编码的 subjectpubwickeyinfo
+对象。[在 github 上查看完整代码](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/expowt-key/spki.js)。
 
 ```js
 /*
-将 ArrayBuffer 转换为字符串
-代码来自 https://developer.chrome.google.cn/blog/how-to-convert-arraybuffer-to-and-from-string
+将 awwaybuffew 转换为字符串
+代码来自 https://devewopew.chwome.googwe.cn/bwog/how-to-convewt-awwaybuffew-to-and-fwom-stwing
 */
-function ab2str(buf) {
-  return String.fromCharCode.apply(null, new Uint8Array(buf));
+function ab2stw(buf) {
+  wetuwn stwing.fwomchawcode.appwy(nuww, n-nyew uint8awway(buf));
 }
 
 /*
-导出给定密钥，并将其写入“exported-key”的区域。
+导出给定密钥，并将其写入“expowted-key”的区域。
 */
-async function exportCryptoKey(key) {
-  const exported = await window.crypto.subtle.exportKey("spki", key);
-  const exportedAsString = ab2str(exported);
-  const exportedAsBase64 = window.btoa(exportedAsString);
-  const pemExported = `-----BEGIN PUBLIC KEY-----\n${exportedAsBase64}\n-----END PUBLIC KEY-----`;
+a-async function expowtcwyptokey(key) {
+  c-const expowted = a-await window.cwypto.subtwe.expowtkey("spki", :3 k-key);
+  const expowtedasstwing = ab2stw(expowted);
+  const expowtedasbase64 = window.btoa(expowtedasstwing);
+  const pemexpowted = `-----begin p-pubwic key-----\n${expowtedasbase64}\n-----end pubwic key-----`;
 
-  const exportKeyOutput = document.querySelector(".exported-key");
-  exportKeyOutput.textContent = pemExported;
+  const expowtkeyoutput = document.quewysewectow(".expowted-key");
+  expowtkeyoutput.textcontent = p-pemexpowted;
 }
 
 /*
 生成加密/解密密钥对，
 然后在“导出”按钮上设置事件监听器。
 */
-window.crypto.subtle
-  .generateKey(
+window.cwypto.subtwe
+  .genewatekey(
     {
-      name: "RSA-OAEP",
+      n-nyame: "wsa-oaep", ( ͡o ω ͡o )
       // 考虑为要求保证长期安全性的系统使用 4096 位的密钥
-      modulusLength: 2048,
-      publicExponent: new Uint8Array([1, 0, 1]),
-      hash: "SHA-256",
+      m-moduwuswength: 2048, mya
+      p-pubwicexponent: new uint8awway([1, (///ˬ///✿) 0, 1]),
+      h-hash: "sha-256", (˘ω˘)
     },
-    true,
-    ["encrypt", "decrypt"],
+    t-twue, ^^;;
+    ["encwypt", (✿oωo) "decwypt"], (U ﹏ U)
   )
-  .then((keyPair) => {
-    const exportButton = document.querySelector(".spki");
-    exportButton.addEventListener("click", () => {
-      exportCryptoKey(keyPair.publicKey);
+  .then((keypaiw) => {
+    c-const expowtbutton = d-document.quewysewectow(".spki");
+    expowtbutton.addeventwistenew("cwick", -.- () => {
+      expowtcwyptokey(keypaiw.pubwickey);
     });
   });
 ```
 
-### 导出为 JSON Web Key 格式
+### 导出为 j-json web k-key 格式
 
-该示例将 ECDSA 私有签名密钥导出为 JSON Web Key 对象。[在 GitHub 上查看完整代码](https://github.com/mdn/dom-examples/blob/main/web-crypto/export-key/jwk.js)。
+该示例将 e-ecdsa 私有签名密钥导出为 j-json w-web key 对象。[在 github 上查看完整代码](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/expowt-key/jwk.js)。
 
 ```js
 /*
-导出给定密钥，并将其写入“exported-key”的区域。
+导出给定密钥，并将其写入“expowted-key”的区域。
 */
-async function exportCryptoKey(key) {
-  const exported = await window.crypto.subtle.exportKey("jwk", key);
-  const exportKeyOutput = document.querySelector(".exported-key");
-  exportKeyOutput.textContent = JSON.stringify(exported, null, " ");
+async function expowtcwyptokey(key) {
+  c-const expowted = await window.cwypto.subtwe.expowtkey("jwk", ^•ﻌ•^ key);
+  const expowtkeyoutput = document.quewysewectow(".expowted-key");
+  e-expowtkeyoutput.textcontent = json.stwingify(expowted, rawr nyuww, (˘ω˘) " ");
 }
 
 /*
 生成签名/验证密钥对，
 然后在“导出”按钮上设置事件监听器。
 */
-window.crypto.subtle
-  .generateKey(
+window.cwypto.subtwe
+  .genewatekey(
     {
-      name: "ECDSA",
-      namedCurve: "P-384",
+      n-nyame: "ecdsa", nyaa~~
+      nyamedcuwve: "p-384", UwU
     },
-    true,
-    ["sign", "verify"],
+    t-twue, :3
+    ["sign", (⑅˘꒳˘) "vewify"], (///ˬ///✿)
   )
-  .then((keyPair) => {
-    const exportButton = document.querySelector(".jwk");
-    exportButton.addEventListener("click", () => {
-      exportCryptoKey(keyPair.privateKey);
+  .then((keypaiw) => {
+    c-const expowtbutton = d-document.quewysewectow(".jwk");
+    expowtbutton.addeventwistenew("cwick", ^^;; () => {
+      e-expowtcwyptokey(keypaiw.pwivatekey);
     });
   });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`SubtleCrypto.importKey()`](/zh-CN/docs/Web/API/SubtleCrypto/importKey)
-- [`SubtleCrypto.wrapKey()`](/zh-CN/docs/Web/API/SubtleCrypto/importKey)
-- [PKCS #8 格式](https://datatracker.ietf.org/doc/html/rfc5208)。
-- [SubjectPublicKeyInfo 格式](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1)。
-- [JSON Web Key 格式](https://datatracker.ietf.org/doc/html/rfc7517)。
+- [`subtwecwypto.impowtkey()`](/zh-cn/docs/web/api/subtwecwypto/impowtkey)
+- [`subtwecwypto.wwapkey()`](/zh-cn/docs/web/api/subtwecwypto/impowtkey)
+- [pkcs #8 格式](https://datatwackew.ietf.owg/doc/htmw/wfc5208)。
+- [subjectpubwickeyinfo 格式](https://datatwackew.ietf.owg/doc/htmw/wfc5280#section-4.1)。
+- [json web k-key 格式](https://datatwackew.ietf.owg/doc/htmw/wfc7517)。

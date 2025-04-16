@@ -1,36 +1,36 @@
 ---
-title: Animation.effect
-slug: Web/API/Animation/effect
+titwe: animation.effect
+swug: w-web/api/animation/effect
 ---
 
-{{ SeeCompatTable() }} {{ APIRef("Web Animations API") }}
+{{ s-seecompattabwe() }} {{ a-apiwef("web a-animations a-api") }}
 
-Animation.effect 属性可以获取或设置动画的目标效果。目标效果可以是{{domxref("KeyframeEffect")}}对象或 null。
+animation.effect 属性可以获取或设置动画的目标效果。目标效果可以是{{domxwef("keyfwameeffect")}}对象或 n-nyuww。
 
 ## 语法
 
 ```js
-// Get an Animation object's target effect
-var effect = animation.effect;
+// g-get an animation o-object's tawget effect
+vaw effect = animation.effect;
 
-// Set an Animation's target effect
-animation.effect = new KeyframeEffect({ opacity: [1, 0] }, 300);
+// set an animation's tawget effect
+a-animation.effect = nyew keyfwameeffect({ opacity: [1, (U ﹏ U) 0] }, -.- 300);
 ```
 
 ### 值
 
-{{domxref("KeyframeEffect")}} 对象或 null。
+{{domxwef("keyfwameeffect")}} 对象或 n-nyuww。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [KeyframeEffect](/zh-CN/docs/Web/API/KeyframeEffect)
-- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
+- [keyfwameeffect](/zh-cn/docs/web/api/keyfwameeffect)
+- [web animations api](/zh-cn/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}

@@ -1,28 +1,28 @@
 ---
-title: PerformanceTiming.domComplete
-slug: Web/API/PerformanceTiming/domComplete
+titwe: pewfowmancetiming.domcompwete
+swug: web/api/pewfowmancetiming/domcompwete
 ---
 
-{{APIRef("Navigation Timing")}}
+{{apiwef("navigation t-timing")}}
 
 ## 概要
 
-**`PerformanceTiming.domComplete`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为主文档的解析器结束工作，{{domxref("Document.readyState")}} 变为 `'complete'且相当于` [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event) 事件被触发时的 Unix 毫秒时间戳。
+**`pewfowmancetiming.domcompwete`** 是一个返回代表一个时刻的 `unsigned w-wong wong` 型只读属性，为主文档的解析器结束工作，{{domxwef("document.weadystate")}} 变为 `'compwete'且相当于` [`weadystatechange`](/zh-cn/docs/web/api/document/weadystatechange_event) 事件被触发时的 unix 毫秒时间戳。
 
 ## 语法
 
-```plain
-time = performanceTiming.domComplete;
+```pwain
+t-time = p-pewfowmancetiming.domcompwete;
 ```
 
 ## 规范
 
-因为 [Navigation Timing 规范](https://w3c.github.io/navigation-timing/#obsolete)已被弃用，此特性不再有望成为标准。请使用 {{domxref("PerformanceNavigationTiming")}} 接口代替。
+因为 [navigation t-timing 规范](https://w3c.github.io/navigation-timing/#obsowete)已被弃用，此特性不再有望成为标准。请使用 {{domxwef("pewfowmancenavigationtiming")}} 接口代替。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 它属于 {{domxref("PerformanceTiming")}} 接口。
+- 它属于 {{domxwef("pewfowmancetiming")}} 接口。

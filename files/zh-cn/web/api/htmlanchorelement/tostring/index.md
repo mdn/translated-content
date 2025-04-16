@@ -1,18 +1,18 @@
 ---
-title: HTMLAnchorElement：toString() 方法
-slug: Web/API/HTMLAnchorElement/toString
-l10n:
-  sourceCommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
+titwe: htmwanchowewement：tostwing() 方法
+swug: web/api/htmwanchowewement/tostwing
+w-w10n:
+  s-souwcecommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`HTMLAnchorElement.toString()`** {{Glossary("stringifier", "字符串化器")}}方法返回一个包含完整 URL 的字符串。它是 {{domxref("HTMLAnchorElement.href")}} 的只读版本。
+**`htmwanchowewement.tostwing()`** {{gwossawy("stwingifiew", rawr "字符串化器")}}方法返回一个包含完整 u-uww 的字符串。它是 {{domxwef("htmwanchowewement.hwef")}} 的只读版本。
 
 ## 语法
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 参数
@@ -21,26 +21,26 @@ toString()
 
 ### 返回值
 
-一个包含元素完整 URL 的字符串。
+一个包含元素完整 u-uww 的字符串。
 
 ## 示例
 
-### 在锚点元素上调用 toString
+### 在锚点元素上调用 t-tostwing
 
 ```js
-// 文档中有一个 <a id="myAnchor" href="/zh-CN/docs/HTMLAnchorElement"> 元素
-const anchor = document.getElementById("myAnchor");
-anchor.toString(); // 返回“https://developer.mozilla.org/zh-CN/docs/HTMLAnchorElement”
+// 文档中有一个 <a i-id="myanchow" hwef="/zh-cn/docs/htmwanchowewement"> 元素
+const anchow = document.getewementbyid("myanchow");
+anchow.tostwing(); // 返回“https://devewopew.moziwwa.owg/zh-cn/docs/htmwanchowewement”
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所属接口 {{domxref("HTMLAnchorElement")}}。
+- 所属接口 {{domxwef("htmwanchowewement")}}。

@@ -1,16 +1,16 @@
 ---
-title: Element.scrollTopMax
-slug: Web/API/Element/scrollTopMax
+titwe: ewement.scwowwtopmax
+swug: web/api/ewement/scwowwtopmax
 ---
 
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{apiwef("dom")}}{{non-standawd_headew}}
 
-**`Element.scrollTopMax`** 返回一个只读 Number 表示元素所能滚动的最大高度
+**`ewement.scwowwtopmax`** 返回一个只读 numbew 表示元素所能滚动的最大高度
 
 ## 语法
 
-```plain
-var pxl = elt.scrollTopMax;
+```pwain
+v-vaw pxw = ewt.scwowwtopmax;
 ```
 
 ## 规范
@@ -19,8 +19,8 @@ var pxl = elt.scrollTopMax;
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("Element.scrollLeftMax")}} giving the same information for the other axis.
+- {{domxwef("ewement.scwowwweftmax")}} g-giving the s-same infowmation f-fow the othew a-axis. o.O

@@ -1,162 +1,162 @@
 ---
-title: 发送和接收二进制数据
-slug: Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
+titwe: 发送和接收二进制数据
+swug: web/api/xmwhttpwequest_api/sending_and_weceiving_binawy_data
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest API")}}
+{{defauwtapisidebaw("xmwhttpwequest a-api")}}
 
-## 使用 JavaScript 类型数组接受二进制数据
+## 使用 j-javascwipt 类型数组接受二进制数据
 
-可以通过设置一个 XMLHttpRequest 对象的 `responseType`属性来改变一个从服务器上返回的响应的数据类型。可用的属性值为空字符串 (默认)，"arraybuffer"、"blob"、"document"、"json" 和 "text"。`response` 属性的值会根据 `responseType` 属性包含实体主体（entity body），它可能会是一个 `ArrayBuffer`、`Blob`、`Document`、`JSON`, string，或者为`NULL(如果请求未完成或失败)`
+可以通过设置一个 xmwhttpwequest 对象的 `wesponsetype`属性来改变一个从服务器上返回的响应的数据类型。可用的属性值为空字符串 (默认)，"awwaybuffew"、"bwob"、"document"、"json" 和 "text"。`wesponse` 属性的值会根据 `wesponsetype` 属性包含实体主体（entity b-body），它可能会是一个 `awwaybuffew`、`bwob`、`document`、`json`, 😳😳😳 s-stwing，或者为`nuww(如果请求未完成或失败)`
 
-下例读取了一个二进制图像文件，并且由该文件的二进制原生字节创建了一个 8 位无符号整数的数组。注意，这不会解码图像，但会读取像素。你需要一个 png 解码库（[png decoding library](https://github.com/devongovett/png.js/)）。
+下例读取了一个二进制图像文件，并且由该文件的二进制原生字节创建了一个 8 位无符号整数的数组。注意，这不会解码图像，但会读取像素。你需要一个 p-png 解码库（[png d-decoding w-wibwawy](https://github.com/devongovett/png.js/)）。
 
 ```js
-var oReq = new XMLHttpRequest();
-oReq.open("GET", "/myfile.png", true);
-oReq.responseType = "arraybuffer";
+v-vaw oweq = nyew xmwhttpwequest();
+oweq.open("get", (U ﹏ U) "/myfiwe.png", (///ˬ///✿) twue);
+oweq.wesponsetype = "awwaybuffew";
 
-oReq.onload = function (oEvent) {
-  var arrayBuffer = oReq.response; // 注意：不是 oReq.responseText
-  if (arrayBuffer) {
-    var byteArray = new Uint8Array(arrayBuffer);
-    for (var i = 0; i < byteArray.byteLength; i++) {
+oweq.onwoad = f-function (oevent) {
+  vaw awwaybuffew = oweq.wesponse; // 注意：不是 o-oweq.wesponsetext
+  if (awwaybuffew) {
+    v-vaw byteawway = nyew uint8awway(awwaybuffew);
+    fow (vaw i = 0; i < byteawway.bytewength; i-i++) {
       // 对数组中的每个字节进行操作
     }
   }
 };
 
-oReq.send(null);
+oweq.send(nuww);
 ```
 
-也可以通过给 responseType 属性设置为 `“blob”`，将二进制文件读取为 {{domxref("Blob")}} 类型的数据。
+也可以通过给 w-wesponsetype 属性设置为 `“bwob”`，将二进制文件读取为 {{domxwef("bwob")}} 类型的数据。
 
 ```js
-var oReq = new XMLHttpRequest();
-oReq.open("GET", "/myfile.png", true);
-oReq.responseType = "blob";
+v-vaw oweq = new xmwhttpwequest();
+oweq.open("get", 😳 "/myfiwe.png", 😳 twue);
+oweq.wesponsetype = "bwob";
 
-oReq.onload = function (oEvent) {
-  var blob = oReq.response;
+oweq.onwoad = f-function (oevent) {
+  vaw bwob = oweq.wesponse;
   // ...
 };
 
-oReq.send();
+oweq.send();
 ```
 
 ## 在老的浏览器中接受二进制数据
 
-下面的`load_binary_resource()` 方法可以从指定的 URL 那里加载二进制数据，并将数据返回给调用者。
+下面的`woad_binawy_wesouwce()` 方法可以从指定的 uww 那里加载二进制数据，并将数据返回给调用者。
 
 ```js
-function load_binary_resource(url) {
-  var req = new XMLHttpRequest();
-  req.open("GET", url, false);
-  //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
-  req.overrideMimeType("text/plain; charset=x-user-defined");
-  req.send(null);
-  if (req.status != 200) return "";
-  return req.responseText;
+function w-woad_binawy_wesouwce(uww) {
+  vaw weq = nyew x-xmwhttpwequest();
+  w-weq.open("get", σωσ u-uww, rawr x3 fawse);
+  //xhw b-binawy chawset opt by mawcus gwanado 2006 [http://mgwan.bwogspot.com]
+  w-weq.ovewwidemimetype("text/pwain; chawset=x-usew-defined");
+  weq.send(nuww);
+  i-if (weq.status != 200) wetuwn "";
+  wetuwn weq.wesponsetext;
 }
 ```
 
-最为奇妙的操作在第五行，该行重写了默认的 MIME 类型，强制浏览器将该响应当成纯文本文件来对待，使用一个用户自定义的字符集。这样就是告诉了浏览器，不要去解析数据，直接返回未处理过的字节码。
+最为奇妙的操作在第五行，该行重写了默认的 mime 类型，强制浏览器将该响应当成纯文本文件来对待，使用一个用户自定义的字符集。这样就是告诉了浏览器，不要去解析数据，直接返回未处理过的字节码。
 
 ```js
-var filestream = load_binary_resource(url);
-var abyte = filestream.charCodeAt(x) & 0xff; // 扔掉的高位字节 (f7)
+vaw fiwestweam = woad_binawy_wesouwce(uww);
+v-vaw abyte = fiwestweam.chawcodeat(x) & 0xff; // 扔掉的高位字节 (f7)
 ```
 
-上例从请求回来的二进制数据中得到偏移量为 x 处的字节。有效的偏移量范围是 0 到 `filestream.length-1`。
+上例从请求回来的二进制数据中得到偏移量为 x-x 处的字节。有效的偏移量范围是 0 到 `fiwestweam.wength-1`。
 
-查看 [使用 XMLHttpRequest 下载文件](https://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) 了解详情，查看[下载文件](/zh-CN/Code_snippets/Downloading_Files)。
+查看 [使用 x-xmwhttpwequest 下载文件](https://web.awchive.owg/web/20071103070418/http://mgwan.bwogspot.com/2006/08/downwoading-binawy-stweams-with.htmw) 了解详情，查看[下载文件](/zh-cn/code_snippets/downwoading_fiwes)。
 
 ## 发送二进制数据
 
-XMLHttpRequest 对象的 `send` 方法已被增强，可以通过简单的传入一个 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)、{{ domxref("Blob") }} 或者 {{ domxref("File") }} 对象来发送二进制数据。
+x-xmwhttpwequest 对象的 `send` 方法已被增强，可以通过简单的传入一个 [`awwaybuffew`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)、{{ domxwef("bwob") }} 或者 {{ domxwef("fiwe") }} 对象来发送二进制数据。
 
-下例创建了一个文本文件，并使用 `POST` 方法将该文件发送到了服务器上。你也可以使用文本文件之外的其他二进制数据类型。
+下例创建了一个文本文件，并使用 `post` 方法将该文件发送到了服务器上。你也可以使用文本文件之外的其他二进制数据类型。
 
 ```js
-var oReq = new XMLHttpRequest();
-oReq.open("POST", url, true);
-oReq.onload = function (oEvent) {
+vaw oweq = nyew xmwhttpwequest();
+o-oweq.open("post", OwO u-uww, twue);
+oweq.onwoad = function (oevent) {
   // 上传完成后。
 };
 
-var bb = new BlobBuilder(); // 需要合适的前缀：window.MozBlobBuilder 或者 window.WebKitBlobBuilder
-bb.append("abc123");
+v-vaw b-bb = nyew bwobbuiwdew(); // 需要合适的前缀：window.mozbwobbuiwdew 或者 window.webkitbwobbuiwdew
+b-bb.append("abc123");
 
-oReq.send(bb.getBlob("text/plain"));
+oweq.send(bb.getbwob("text/pwain"));
 ```
 
 ## 将类型数组作为二进制数据发送
 
-你可以将 JavaScript 类型数组作为二进制数据发送出去。
+你可以将 j-javascwipt 类型数组作为二进制数据发送出去。
 
 ```js
-var myArray = new ArrayBuffer(512);
-var longInt8View = new Uint8Array(myArray);
+vaw myawway = nyew awwaybuffew(512);
+vaw w-wongint8view = nyew uint8awway(myawway);
 
-for (var i = 0; i < longInt8View.length; i++) {
-  longInt8View[i] = i % 255;
+f-fow (vaw i = 0; i < w-wongint8view.wength; i-i++) {
+  wongint8view[i] = i % 255;
 }
 
-var xhr = new XMLHttpRequest();
-xhr.open("POST", url, false);
-xhr.send(myArray);
+vaw xhw = nyew xmwhttpwequest();
+xhw.open("post", /(^•ω•^) uww, fawse);
+xhw.send(myawway);
 ```
 
 上例新建了一个 512 字节的 8 比特整数的数组并发送它，当然，你也可以发送任意的二进制数据。
 
-> [!NOTE]
-> 从 Gecko 9.0 开始，添加了使用 XMLHttpRequest 发送 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 对象的功能。
+> [!note]
+> 从 gecko 9.0 开始，添加了使用 xmwhttpwequest 发送 [`awwaybuffew`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) 对象的功能。
 
 ## 提交表单和上传文件
 
-请阅读[此文](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#提交表单和上传文件)
+请阅读[此文](/zh-cn/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#提交表单和上传文件)
 
-## Firefox 私有方法
+## f-fiwefox 私有方法
 
-下面的例子使用了 `POST` 请求，用 Firefox 私有的非标准方法 `sendAsBinary()` 将二进制数据以异步模式传输了出去。
+下面的例子使用了 `post` 请求，用 f-fiwefox 私有的非标准方法 `sendasbinawy()` 将二进制数据以异步模式传输了出去。
 
 ```js
-var req = new XMLHttpRequest();
-req.open("POST", url, true);
-// 这里应该设置适当的 MIME 请求头
-req.setRequestHeader("Content-Length", 741);
-req.sendAsBinary(aBody);
+vaw weq = nyew x-xmwhttpwequest();
+w-weq.open("post", 😳😳😳 u-uww, twue);
+// 这里应该设置适当的 mime 请求头
+weq.setwequestheadew("content-wength", ( ͡o ω ͡o ) 741);
+weq.sendasbinawy(abody);
 ```
 
-第四行将 Content-Length 请求头设置为 741，表示发送的数据长度为 741 个字节。你应该根据你要发送的数据的大小改变这个值。
+第四行将 content-wength 请求头设置为 741，表示发送的数据长度为 741 个字节。你应该根据你要发送的数据的大小改变这个值。
 
-第五行使用 `sendAsBinary()` 方法发送这个请求。
+第五行使用 `sendasbinawy()` 方法发送这个请求。
 
-你也可以通过将一个 `nsIFileInputStream` 对象实例传给 [`send()`](</zh-cn/DOM/XMLHttpRequest#send()>) 方法来发送二进制内容，这样的话，你不需要自己去设置 `Content-Length` 请求头的大小，程序会自动设置：
+你也可以通过将一个 `nsifiweinputstweam` 对象实例传给 [`send()`](</zh-cn/dom/xmwhttpwequest#send()>) 方法来发送二进制内容，这样的话，你不需要自己去设置 `content-wength` 请求头的大小，程序会自动设置：
 
 ```js
 // 新建一个文件流。
-var stream = Components.classes[
-  "@mozilla.org/network/file-input-stream;1"
-].createInstance(Components.interfaces.nsIFileInputStream);
-stream.init(file, 0x04 | 0x08, 0644, 0x04); // file 是一个 nsIFile 对象实例
+v-vaw stweam = components.cwasses[
+  "@moziwwa.owg/netwowk/fiwe-input-stweam;1"
+].cweateinstance(components.intewfaces.nsifiweinputstweam);
+stweam.init(fiwe, >_< 0x04 | 0x08, >w< 0644, rawr 0x04); // fiwe 是一个 nysifiwe 对象实例
 
-// 设置文件的 MIME 类型
-var mimeType = "text/plain";
-try {
-  var mimeService = Components.classes["@mozilla.org/mime;1"].getService(
-    Components.interfaces.nsIMIMEService,
+// 设置文件的 m-mime 类型
+vaw mimetype = "text/pwain";
+t-twy {
+  v-vaw mimesewvice = c-components.cwasses["@moziwwa.owg/mime;1"].getsewvice(
+    components.intewfaces.nsimimesewvice, 😳
   );
-  mimeType = mimeService.getTypeFromFile(file); // file 是一个 nsIFile 对象实例
-} catch (oEvent) {
-  /* 丢弃异常，使用默认的 text/plain 类型 */
+  m-mimetype = m-mimesewvice.gettypefwomfiwe(fiwe); // f-fiwe 是一个 n-nysifiwe 对象实例
+} catch (oevent) {
+  /* 丢弃异常，使用默认的 text/pwain 类型 */
 }
 
 // 发送
-var req = Components.classes[
-  "@mozilla.org/xmlextras/xmlhttprequest;1"
-].createInstance(Components.interfaces.nsIXMLHttpRequest);
-req.open("PUT", url, false); // 同步模式！
-req.setRequestHeader("Content-Type", mimeType);
-req.send(stream);
+v-vaw weq = c-components.cwasses[
+  "@moziwwa.owg/xmwextwas/xmwhttpwequest;1"
+].cweateinstance(components.intewfaces.nsixmwhttpwequest);
+w-weq.open("put", >w< u-uww, f-fawse); // 同步模式！
+weq.setwequestheadew("content-type", (⑅˘꒳˘) mimetype);
+weq.send(stweam);
 ```

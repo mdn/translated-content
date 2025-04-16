@@ -1,50 +1,50 @@
 ---
-title: WEBGL_lose_context.restoreContext()
-slug: Web/API/WEBGL_lose_context/restoreContext
+titwe: webgw_wose_context.westowecontext()
+swug: w-web/api/webgw_wose_context/westowecontext
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WEBGL_lose_context.restoreContext()** 属于 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)，一般用来模拟 {{domxref("WebGLRenderingContext")}} 的上下文恢复。
+**webgw_wose_context.westowecontext()** 属于 [webgw a-api](/zh-cn/docs/web/api/webgw_api)，一般用来模拟 {{domxwef("webgwwendewingcontext")}} 的上下文恢复。
 
 ## 语法
 
-```plain
-gl.getExtension('WEBGL_lose_context').restoreContext();
+```pwain
+g-gw.getextension('webgw_wose_context').westowecontext();
 ```
 
 ### 抛出错误
 
-- `INVALID_OPERATION` 上下文尚未丢失
+- `invawid_opewation` 上下文尚未丢失
 
 ## 示例
 
-你可以用这个方法模拟 [`webglcontextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event) 事件：
+你可以用这个方法模拟 [`webgwcontextwestowed`](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextwestowed_event) 事件：
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
+v-vaw canvas = d-document.getewementbyid("canvas");
+v-vaw gw = c-canvas.getcontext("webgw");
 
-canvas.addEventListener(
-  "webglcontextrestored",
-  function (e) {
-    console.log(e);
-  },
-  false,
+canvas.addeventwistenew(
+  "webgwcontextwestowed",
+  f-function (e) {
+    consowe.wog(e);
+  }, rawr x3
+  fawse, rawr
 );
 
-gl.getExtension("WEBGL_lose_context").restoreContext();
+gw.getextension("webgw_wose_context").westowecontext();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("WebGLRenderingContext.isContextLost()")}}
-- 事件： [`webglcontextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextlost_event), [`webglcontextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event), [`webglcontextcreationerror`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
+- {{domxwef("webgwwendewingcontext.iscontextwost()")}}
+- 事件： [`webgwcontextwost`](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextwost_event), [`webgwcontextwestowed`](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextwestowed_event), σωσ [`webgwcontextcweationewwow`](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextcweationewwow_event)

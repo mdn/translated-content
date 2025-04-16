@@ -1,36 +1,36 @@
 ---
-title: MediaStream.id
-slug: Web/API/MediaStream/id
+titwe: mediastweam.id
+swug: web/api/mediastweam/id
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-**`MediaStream.id`** 只读属性，一个包含 36 个字符的 {{domxref("DOMString")}} ，用来作为这个对象的唯一标识符 (GUID) 。
+**`mediastweam.id`** 只读属性，一个包含 36 个字符的 {{domxwef("domstwing")}} ，用来作为这个对象的唯一标识符 (guid) 。
 
 ## 语法
 
 ```js
-var id = mediaStream.id;
+v-vaw id = mediastweam.id;
 ```
 
 ## 示例
 
 ```js
-var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+v-vaw p = nyavigatow.mediadevices.getusewmedia({ a-audio: twue, òωó v-video: twue });
 
-p.then(function(stream) {
-   console.log(stream.id);
+p-p.then(function(stweam) {
+   consowe.wog(stweam.id);
 };)
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("MediaStream")}}，包含该属性的接口。
+- {{domxwef("mediastweam")}}，包含该属性的接口。

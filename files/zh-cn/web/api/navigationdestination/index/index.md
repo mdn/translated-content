@@ -1,36 +1,36 @@
 ---
-title: NavigationDestination：index 属性
-slug: Web/API/NavigationDestination/index
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: nyavigationdestination：index 属性
+swug: web/api/navigationdestination/index
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{apiwef("navigation a-api")}}{{seecompattabwe}}
 
-{{domxref("NavigationDestination")}} 接口的 **`index`** 只读属性在 {{domxref("NavigateEvent.navigationType")}} 为 `traverse` 时返回目标 {{domxref("NavigationHistoryEntry")}} 的 {{domxref("NavigationHistoryEntry.index", "index")}} 值，否则返回 `-1`。
+{{domxwef("navigationdestination")}} 接口的 **`index`** 只读属性在 {{domxwef("navigateevent.navigationtype")}} 为 `twavewse` 时返回目标 {{domxwef("navigationhistowyentwy")}} 的 {{domxwef("navigationhistowyentwy.index", "index")}} 值，否则返回 `-1`。
 
 ## 值
 
-表示目标 {{domxref("NavigationHistoryEntry")}} 的 `index` 的数字，或 -1。
+表示目标 {{domxwef("navigationhistowyentwy")}} 的 `index` 的数字，或 -1。
 
 ## 示例
 
 ```js
-navigation.addEventListener("navigate", (event) => {
-  console.log(event.destination.index);
+n-nyavigation.addeventwistenew("navigate", ( ͡o ω ͡o ) (event) => {
+  c-consowe.wog(event.destination.index);
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [现代客户端路由：导航 API](https://developer.chrome.google.cn/docs/web-platform/navigation-api/)
-- [导航 API 说明](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola 的[导航 API 在线演示](https://gigantic-honored-octagon.glitch.me/)
+- [现代客户端路由：导航 a-api](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/navigation-api/)
+- [导航 a-api 说明](https://github.com/wicg/navigation-api/bwob/main/weadme.md)
+- domenic denicowa 的[导航 api 在线演示](https://gigantic-honowed-octagon.gwitch.me/)

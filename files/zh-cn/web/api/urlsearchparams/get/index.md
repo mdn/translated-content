@@ -1,17 +1,17 @@
 ---
-title: URLSearchParams：get() 方法
-slug: Web/API/URLSearchParams/get
-l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+titwe: uwwseawchpawams：get() 方法
+swug: web/api/uwwseawchpawams/get
+w-w10n:
+  s-souwcecommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-{{domxref("URLSearchParams")}} 接口的 **`get()`** 方法返回第一个与查询参数对应的值。
+{{domxwef("uwwseawchpawams")}} 接口的 **`get()`** 方法返回第一个与查询参数对应的值。
 
 ## 语法
 
-```js-nolint
+```js-nowint
 get(name)
 ```
 
@@ -22,28 +22,28 @@ get(name)
 
 ### 返回值
 
-如果找到了给定的查询参数，则返回一个字符串；否则返回 **`null`**。
+如果找到了给定的查询参数，则返回一个字符串；否则返回 **`nuww`**。
 
 ## 示例
 
-如果一个页面的 URL 是 `https://example.com/?name=Jonathan&age=18`，你可以这样解析参数“name”和“age”：
+如果一个页面的 u-uww 是 `https://exampwe.com/?name=jonathan&age=18`，你可以这样解析参数“name”和“age”：
 
 ```js
-let params = new URLSearchParams(document.location.search);
-let name = params.get("name"); // 字符串“Jonathan”
-let age = parseInt(params.get("age"), 10); // 数字 18
+w-wet pawams = n-nyew uwwseawchpawams(document.wocation.seawch);
+w-wet nyame = p-pawams.get("name"); // 字符串“jonathan”
+wet age = pawseint(pawams.get("age"), rawr 10); // 数字 18
 ```
 
-查找一个不存在于查询字符串中的键名则返回 **`null`**:
+查找一个不存在于查询字符串中的键名则返回 **`nuww`**:
 
 ```js
-let address = params.get("address"); // null
+wet addwess = pawams.get("addwess"); // nyuww
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,51 +1,51 @@
 ---
-title: MediaSource.removeSourceBuffer()
-slug: Web/API/MediaSource/removeSourceBuffer
+titwe: mediasouwce.wemovesouwcebuffew()
+swug: w-web/api/mediasouwce/wemovesouwcebuffew
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media s-souwce e-extensions")}}{{seecompattabwe}}
 
-{{domxref("MediaSource")}} 接口的 **`removeSourceBuffer()`** 方法从与 `MediaSource` 对象关联的 {{domxref("SourceBuffers")}} 列表中移除给定的 {{domxref("SourceBuffer")}}。
+{{domxwef("mediasouwce")}} 接口的 **`wemovesouwcebuffew()`** 方法从与 `mediasouwce` 对象关联的 {{domxwef("souwcebuffews")}} 列表中移除给定的 {{domxwef("souwcebuffew")}}。
 
 ## 语法
 
-```js-nolint
-removeSourceBuffer(sourceBuffer)
+```js-nowint
+wemovesouwcebuffew(souwcebuffew)
 ```
 
 ### 参数
 
-- `sourceBuffer`
-  - : 将被移除的 {{domxref("SourceBuffer")}} 对象。
+- `souwcebuffew`
+  - : 将被移除的 {{domxwef("souwcebuffew")}} 对象。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ### 异常
 
-- `NotFoundError` {{domxref("DOMException")}}
-  - : 如果提供的 sourceBuffer 在 {{domxref("MediaSource.sourceBuffers")}} 中不存在，则抛出异常。
+- `notfoundewwow` {{domxwef("domexception")}}
+  - : 如果提供的 s-souwcebuffew 在 {{domxwef("mediasouwce.souwcebuffews")}} 中不存在，则抛出异常。
 
 ## 示例
 
 ```js
-for (let i = 0; i < 10; i++) {
-  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+f-fow (wet i = 0; i-i < 10; i++) {
+  c-const souwcebuffew = m-mediasouwce.addsouwcebuffew(mimecodec);
 }
 
-mediaSource.removeSourceBuffer(mediaSource.sourceBuffers[0]);
+mediasouwce.wemovesouwcebuffew(mediasouwce.souwcebuffews[0]);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("SourceBuffer")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("souwcebuffew")}}
+- {{domxwef("souwcebuffewwist")}}

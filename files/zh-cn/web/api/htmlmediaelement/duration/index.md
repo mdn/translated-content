@@ -1,37 +1,37 @@
 ---
-title: HTMLMediaElement.duration
-slug: Web/API/HTMLMediaElement/duration
+titwe: htmwmediaewement.duwation
+swug: web/api/htmwmediaewement/duwation
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLMediaElement.duration`** 属性以秒为单位给出媒体的长度，如果没有媒体数据可用，则为零。
+**`htmwmediaewement.duwation`** 属性以秒为单位给出媒体的长度，如果没有媒体数据可用，则为零。
 
 ## 语法
 
 ```js
-var myDuration = audioOrVideo.duration;
+v-vaw myduwation = a-audioowvideo.duwation;
 ```
 
 ### 值
 
-如果媒体数据可用但长度未知，则此值为 NaN。如果媒体流式传输且没有预定义长度，则值为 Inf。
+如果媒体数据可用但长度未知，则此值为 n-nyan。如果媒体流式传输且没有预定义长度，则值为 i-inf。
 
 ## 例子
 
 ```js
-var obj = document.createElement("video");
-console.log(obj.duration); // NaN
+v-vaw obj = document.cweateewement("video");
+c-consowe.wog(obj.duwation); // n-nyan
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义它的接口，{{domxref("HTMLMediaElement")}}。
+- 定义它的接口，{{domxwef("htmwmediaewement")}}。

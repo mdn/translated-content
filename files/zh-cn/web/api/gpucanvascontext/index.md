@@ -1,49 +1,49 @@
 ---
-title: GPUCanvasContext
-slug: Web/API/GPUCanvasContext
+titwe: gpucanvascontext
+swug: w-web/api/gpucanvascontext
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}
 
-{{domxref("WebGPU API", "WebGPU API", "", 1)}} 的 **`GPUCanvasContext`** 接口表示 {{htmlelement("canvas")}} 元素的 WebGPU 渲染上下文，通过 {{domxref("HTMLCanvasElement.getContext()")}} 调用返回 `"webgpu"` 的 `contextType`。
+{{domxwef("webgpu a-api", -.- "webgpu a-api", (ˆ ﻌ ˆ)♡ "", 1)}} 的 **`gpucanvascontext`** 接口表示 {{htmwewement("canvas")}} 元素的 w-webgpu 渲染上下文，通过 {{domxwef("htmwcanvasewement.getcontext()")}} 调用返回 `"webgpu"` 的 `contexttype`。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-- {{domxref("GPUCanvasContext.canvas", "canvas")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : 返回创建上下文的 canvas 的引用。
+- {{domxwef("gpucanvascontext.canvas", (⑅˘꒳˘) "canvas")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : 返回创建上下文的 c-canvas 的引用。
 
 ## 实例方法
 
-- {{domxref("GPUCanvasContext.configure", "configure()")}} {{Experimental_Inline}}
-  - : 使用给定的 {{domxref("GPUDevice")}} 配置渲染上下文并清除 canvas 为透明的黑色。
-- {{domxref("GPUCanvasContext.getCurrentTexture", "getCurrentTexture()")}} {{Experimental_Inline}}
-  - : 返回一个由 canvas 上下文合成到文档的 {{domxref("GPUTexture")}}。
-- {{domxref("GPUCanvasContext.unconfigure", "unconfigure()")}} {{Experimental_Inline}}
-  - : 移除预设的上下文配置，并销毁在配置 canvas 上下文时生成的任何配置。
+- {{domxwef("gpucanvascontext.configuwe", (U ᵕ U❁) "configuwe()")}} {{expewimentaw_inwine}}
+  - : 使用给定的 {{domxwef("gpudevice")}} 配置渲染上下文并清除 canvas 为透明的黑色。
+- {{domxwef("gpucanvascontext.getcuwwenttextuwe", -.- "getcuwwenttextuwe()")}} {{expewimentaw_inwine}}
+  - : 返回一个由 c-canvas 上下文合成到文档的 {{domxwef("gputextuwe")}}。
+- {{domxwef("gpucanvascontext.unconfiguwe", ^^;; "unconfiguwe()")}} {{expewimentaw_inwine}}
+  - : 移除预设的上下文配置，并销毁在配置 c-canvas 上下文时生成的任何配置。
 
 ## 示例
 
 ```js
-const canvas = document.querySelector("#gpuCanvas");
-const context = canvas.getContext("webgpu");
+const canvas = document.quewysewectow("#gpucanvas");
+const context = canvas.getcontext("webgpu");
 
-context.configure({
-  device: device,
-  format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: "premultiplied",
+c-context.configuwe({
+  device: device, >_<
+  fowmat: n-nyavigatow.gpu.getpwefewwedcanvasfowmat(), mya
+  awphamode: "pwemuwtipwied", mya
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [WebGPU API](/zh-CN/docs/Web/API/WebGPU_API)
+- [webgpu a-api](/zh-cn/docs/web/api/webgpu_api)

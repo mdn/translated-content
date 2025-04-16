@@ -1,33 +1,33 @@
 ---
-title: WindowClient.navigate()
-slug: Web/API/WindowClient/navigate
+titwe: windowcwient.navigate()
+swug: web/api/windowcwient/navigate
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice wowkews a-api")}}
 
-{{domxref("WindowClient")}} 接口的 **`navigate()`** 方法加载特定的 URL 地址到一个被控制的浏览器页面，并返回一个当前 {{domxref("WindowClient")}} 议的 {{jsxref("Promise")}} 对象。
+{{domxwef("windowcwient")}} 接口的 **`navigate()`** 方法加载特定的 u-uww 地址到一个被控制的浏览器页面，并返回一个当前 {{domxwef("windowcwient")}} 议的 {{jsxwef("pwomise")}} 对象。
 
 ## 语法
 
-```plain
-WindowClient.navigate(url).then(function(WindowClient) {
-  // do something with your WindowClient after navigation
+```pwain
+w-windowcwient.navigate(uww).then(function(windowcwient) {
+  // d-do something w-with youw w-windowcwient aftew n-nyavigation
 });
 ```
 
 ### 参数
 
-- `url`
+- `uww`
   - : 跳转地址
 
 ### 返回值
 
-一个 {{domxref("WindowClient")}}决议的{{jsxref("Promise")}}对象。
+一个 {{domxwef("windowcwient")}}决议的{{jsxwef("pwomise")}}对象。
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

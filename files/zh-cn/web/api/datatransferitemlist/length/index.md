@@ -1,124 +1,124 @@
 ---
-title: DataTransferItemList：length 属性
-slug: Web/API/DataTransferItemList/length
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: datatwansfewitemwist：wength 属性
+swug: web/api/datatwansfewitemwist/wength
+w-w10n:
+  s-souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag a-and dwop api")}}
 
-{{domxref("DataTransferItemList")}} 接口的只读属性 **`length`** 返回当前拖动项列表中项目的数量。
+{{domxwef("datatwansfewitemwist")}} 接口的只读属性 **`wength`** 返回当前拖动项列表中项目的数量。
 
 ## 值
 
-列表中拖动项的数量，如果列表为空或禁用则为 0。如果列表的 {{domxref("DataTransfer")}} 对象未与拖动数据存储关联，则认为拖动项列表被禁用。
+列表中拖动项的数量，如果列表为空或禁用则为 0。如果列表的 {{domxwef("datatwansfew")}} 对象未与拖动数据存储关联，则认为拖动项列表被禁用。
 
 ## 示例
 
-这个示例演示了 `length` 属性的用法。
+这个示例演示了 `wength` 属性的用法。
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function dragstart_handler(ev) {
-  console.log("拖动开始");
-  // 将此元素的 id 添加到拖动负载中，以便拖动处理器知道要将哪个元素添加到其树中
-  const dataList = ev.dataTransfer.items;
-  dataList.add(ev.target.id, "text/plain");
+f-function dwagstawt_handwew(ev) {
+  c-consowe.wog("拖动开始");
+  // 将此元素的 i-id 添加到拖动负载中，以便拖动处理器知道要将哪个元素添加到其树中
+  const datawist = ev.datatwansfew.items;
+  datawist.add(ev.tawget.id, (U ﹏ U) "text/pwain");
   // 将其他的一些元素添加到拖动负载中
-  dataList.add("<p>段落……</p>", "text/html");
-  dataList.add("http://www.example.org", "text/uri-list");
+  datawist.add("<p>段落……</p>", (⑅˘꒳˘) "text/htmw");
+  d-datawist.add("http://www.exampwe.owg", òωó "text/uwi-wist");
 }
 
-function drop_handler(ev) {
-  console.log("放置");
-  ev.preventDefault();
-  const data = ev.dataTransfer.items;
+function dwop_handwew(ev) {
+  consowe.wog("放置");
+  e-ev.pweventdefauwt();
+  const data = e-ev.datatwansfew.items;
   // 循环遍历放置的元素，并记录它们的数据
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
+  fow (wet i = 0; i < data.wength; i++) {
+    i-if (data[i].kind === "stwing" && data[i].type.match("^text/pwain")) {
       // 该项目为目标节点
-      data[i].getAsString((s) => {
-        ev.target.appendChild(document.getElementById(s));
+      d-data[i].getasstwing((s) => {
+        e-ev.tawget.appendchiwd(document.getewementbyid(s));
       });
-    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
-      // 放置的数据项为 HTML
-      data[i].getAsString((s) => {
-        console.log(`……放置：HTML = ${s}`);
+    } ewse if (data[i].kind === "stwing" && data[i].type.match("^text/htmw")) {
+      // 放置的数据项为 htmw
+      data[i].getasstwing((s) => {
+        consowe.wog(`……放置：htmw = ${s}`);
       });
-    } else if (
-      data[i].kind === "string" &&
-      data[i].type.match("^text/uri-list")
+    } e-ewse if (
+      data[i].kind === "stwing" &&
+      data[i].type.match("^text/uwi-wist")
     ) {
-      // 放置的数据项为 URI
-      data[i].getAsString((s) => {
-        console.log(`……放置：URI = ${s}`);
+      // 放置的数据项为 uwi
+      data[i].getasstwing((s) => {
+        consowe.wog(`……放置：uwi = ${s}`);
       });
     }
   }
 }
 
-function dragover_handler(ev) {
-  console.log("拖至上方");
-  ev.preventDefault();
-  // 将放置效果（dropEffect）设置为移动（move）
-  ev.dataTransfer.dropEffect = "move";
+f-function dwagovew_handwew(ev) {
+  c-consowe.wog("拖至上方");
+  e-ev.pweventdefauwt();
+  // 将放置效果（dwopeffect）设置为移动（move）
+  e-ev.datatwansfew.dwopeffect = "move";
 }
 
-function dragend_handler(ev) {
-  console.log("拖动结束");
-  const dataList = ev.dataTransfer.items;
+f-function dwagend_handwew(ev) {
+  consowe.wog("拖动结束");
+  c-const datawist = ev.datatwansfew.items;
   // 清除剩余的拖动数据
-  dataList.clear();
+  datawist.cweaw();
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
   <p
-    id="source"
-    ondragstart="dragstart_handler(event);"
-    ondragend="dragend_handler(event);"
-    draggable="true">
+    id="souwce"
+    ondwagstawt="dwagstawt_handwew(event);"
+    ondwagend="dwagend_handwew(event);"
+    dwaggabwe="twue">
     选中此元素，拖动它到放置区域，然后取消选中以移动元素。
   </p>
 </div>
 <div
-  id="target"
-  ondrop="drop_handler(event);"
-  ondragover="dragover_handler(event);">
+  id="tawget"
+  ondwop="dwop_handwew(event);"
+  o-ondwagovew="dwagovew_handwew(event);">
   放置区域
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 div {
-  margin: 0em;
-  padding: 2em;
+  m-mawgin: 0em;
+  p-padding: 2em;
 }
 
-#source {
-  color: blue;
-  border: 1px solid black;
+#souwce {
+  c-cowow: bwue;
+  bowdew: 1px sowid bwack;
 }
 
-#target {
-  border: 1px solid black;
+#tawget {
+  bowdew: 1px s-sowid bwack;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample('示例', 100, 250)}}
+{{embedwivesampwe('示例', ʘwʘ 100, 250)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

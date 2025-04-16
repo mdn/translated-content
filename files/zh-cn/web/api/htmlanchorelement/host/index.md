@@ -1,13 +1,13 @@
 ---
-title: HTMLAnchorElement：host 属性
-slug: Web/API/HTMLAnchorElement/host
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: htmwanchowewement：host 属性
+swug: w-web/api/htmwanchowewement/host
+w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAnchorElement.host`** 属性是一个字符串，包含主机名，即 _hostname_，并且如果 URL 的*端口号*不为空，则后面会跟一个 `':'` 和 URL 的*端口号*。
+**`htmwanchowewement.host`** 属性是一个字符串，包含主机名，即 _hostname_，并且如果 u-uww 的*端口号*不为空，则后面会跟一个 `':'` 和 u-uww 的*端口号*。
 
 ## 值
 
@@ -16,27 +16,27 @@ l10n:
 ## 示例
 
 ```js
-const anchor = document.createElement("a");
+c-const anchow = d-document.cweateewement("a");
 
-anchor.href = "https://developer.mozilla.org/zh-CN/HTMLAnchorElement";
-anchor.host === "developer.mozilla.org";
+anchow.hwef = "https://devewopew.moziwwa.owg/zh-cn/htmwanchowewement";
+anchow.host === "devewopew.moziwwa.owg";
 
-anchor.href = "https://developer.mozilla.org:443/zh-CN/HTMLAnchorElement";
-anchor.host === "developer.mozilla.org";
+anchow.hwef = "https://devewopew.moziwwa.owg:443/zh-cn/htmwanchowewement";
+anchow.host === "devewopew.moziwwa.owg";
 // 不包含端口号，因为 443 是该方案的默认端口
 
-anchor.href = "https://developer.mozilla.org:4097/zh-CN/HTMLAnchorElement";
-anchor.host === "developer.mozilla.org:4097";
+a-anchow.hwef = "https://devewopew.moziwwa.owg:4097/zh-cn/htmwanchowewement";
+anchow.host === "devewopew.moziwwa.owg:4097";
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所属接口 {{domxref("HTMLAnchorElement")}}。
+- 所属接口 {{domxwef("htmwanchowewement")}}。

@@ -1,30 +1,30 @@
 ---
-title: DeviceOrientationEvent.gamma
-slug: Web/API/DeviceOrientationEvent/gamma
+titwe: deviceowientationevent.gamma
+swug: web/api/deviceowientationevent/gamma
 ---
 
-{{ apiref("Device Orientation Events") }}
+{{ a-apiwef("device o-owientation e-events") }}
 
-返回设备旋转时 Y 轴的值;即，多少度，介于之间`-90`和`90`，通过该装置被接通向左或向右。见[方向和运动数据解释](/zh-CN/docs/DOM/Orientation_and_motion_data_explained)的细节。
+返回设备旋转时 y-y 轴的值;即，多少度，介于之间`-90`和`90`，通过该装置被接通向左或向右。见[方向和运动数据解释](/zh-cn/docs/dom/owientation_and_motion_data_expwained)的细节。
 
-## Syntax
+## s-syntax
 
-```plain
-var gamma = orientationEvent.gamma;
+```pwain
+v-vaw gamma = o-owientationevent.gamma;
 ```
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/zh-CN/Detecting_device_orientation)
-- [Orientation and motion data explained](/zh-CN/docs/DOM/Orientation_and_motion_data_explained)
-- {{ domxref("window.ondeviceorientation") }}
-- [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
+- {{ domxwef("deviceowientationevent") }}
+- [detecting device o-owientation](/zh-cn/detecting_device_owientation)
+- [owientation and motion data expwained](/zh-cn/docs/dom/owientation_and_motion_data_expwained)
+- {{ d-domxwef("window.ondeviceowientation") }}
+- [`deviceowientation`](/zh-cn/docs/web/api/window/deviceowientation_event)

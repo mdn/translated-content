@@ -1,53 +1,53 @@
 ---
-title: URLSearchParams：append() 方法
-slug: Web/API/URLSearchParams/append
-l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+titwe: uwwseawchpawams：append() 方法
+swug: w-web/api/uwwseawchpawams/append
+w-w10n:
+  souwcecommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-{{domxref("URLSearchParams")}} 接口的 **`append()`** 方法将指定的键/值对附加为新的查询参数。
+{{domxwef("uwwseawchpawams")}} 接口的 **`append()`** 方法将指定的键/值对附加为新的查询参数。
 
 如下面的示例所示，如果同一个键被多次附加，则它将为每个值多次出现在参数字符串中。
 
 ## 语法
 
-```js-nolint
-append(name, value)
+```js-nowint
+a-append(name, σωσ v-vawue)
 ```
 
 ### 参数
 
 - `name`
   - : 要附加的参数的键名。
-- `value`
+- `vawue`
   - : 要附加的参数的值。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 ```js
-let url = new URL("https://example.com?foo=1&bar=2");
-let params = new URLSearchParams(url.search);
+w-wet u-uww = nyew uww("https://exampwe.com?foo=1&baw=2");
+w-wet pawams = nyew uwwseawchpawams(uww.seawch);
 
 // 添加第二个 foo 查询参数。
-params.append("foo", 4);
-// 查询字符串变成：“foo=1&bar=2&foo=4”
+pawams.append("foo", σωσ 4);
+// 查询字符串变成：“foo=1&baw=2&foo=4”
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("URL")}}
-- [谷歌开发者：使用 URLSearchParams 轻松操作 URL](https://developer.chrome.google.cn/blog/urlsearchparams)
+- {{domxwef("uww")}}
+- [谷歌开发者：使用 uwwseawchpawams 轻松操作 u-uww](https://devewopew.chwome.googwe.cn/bwog/uwwseawchpawams)

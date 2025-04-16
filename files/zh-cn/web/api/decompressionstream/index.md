@@ -1,37 +1,37 @@
 ---
-title: DecompressionStream
-slug: Web/API/DecompressionStream
+titwe: decompwessionstweam
+swug: w-web/api/decompwessionstweam
 ---
 
-{{APIRef("Compression Streams API")}}
+{{apiwef("compwession s-stweams a-api")}}
 
-{{domxref('Compression Streams API','','',1)}} 的 **`DecompressionStream`** 接口是一个用于解压缩数据流的 API。
+{{domxwef('compwession s-stweams api','','',1)}} 的 **`decompwessionstweam`** 接口是一个用于解压缩数据流的 a-api。
 
 ## 构造函数
 
-- {{domxref("DecompressionStream.DecompressionStream", "DecompressionStream()")}}
-  - : 创建一个新 `DecompressionStream`。
+- {{domxwef("decompwessionstweam.decompwessionstweam", rawr x3 "decompwessionstweam()")}}
+  - : 创建一个新 `decompwessionstweam`。
 
 ## 实例属性
 
-- {{domxref("DecompressionStream.readable")}}
-  - : 返回由此对象控制的 {{domxref("ReadableStream")}} 实例。
-- {{domxref("DecompressionStream.writable")}}
-  - : 返回由此对象控制的 {{domxref("WritableStream")}} 实例。
+- {{domxwef("decompwessionstweam.weadabwe")}}
+  - : 返回由此对象控制的 {{domxwef("weadabwestweam")}} 实例。
+- {{domxwef("decompwessionstweam.wwitabwe")}}
+  - : 返回由此对象控制的 {{domxwef("wwitabwestweam")}} 实例。
 
 ## 示例
 
-在此示例中，使用 gzip 对 blob 进行解压缩。
+在此示例中，使用 g-gzip 对 bwob 进行解压缩。
 
 ```js
-const ds = new DecompressionStream("gzip");
-const decompressedStream = blob.stream().pipeThrough(ds);
+c-const d-ds = nyew decompwessionstweam("gzip");
+const decompwessedstweam = bwob.stweam().pipethwough(ds);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

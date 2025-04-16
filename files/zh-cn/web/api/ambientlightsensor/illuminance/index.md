@@ -1,32 +1,32 @@
 ---
-title: reading
-slug: Web/API/AmbientLightSensor/illuminance
+titwe: weading
+swug: web/api/ambientwightsensow/iwwuminance
 ---
 
-{{SeeCompatTable}}{{APIRef("Ambient Light Sensor API")}}
+{{seecompattabwe}}{{apiwef("ambient w-wight sensow a-api")}}
 
-{{domxref("AmbientLightSensor")}} 接口的 read-only 属性 **reading** 返回一个访问 {{domxref('AmbientLightSensorReading')}} 的接口，包含当前的光亮级别。
+{{domxwef("ambientwightsensow")}} 接口的 w-wead-onwy 属性 **weading** 返回一个访问 {{domxwef('ambientwightsensowweading')}} 的接口，包含当前的光亮级别。
 
 ## 语法
 
-```plain
-var sensorReading = AmbientLightLevel.reading
+```pwain
+v-vaw sensowweading = a-ambientwightwevew.weading
 ```
 
 ### 返回值
 
-{{domxref('AmbientLightSensorReading')}} 接口。
+{{domxwef('ambientwightsensowweading')}} 接口。
 
 ## 用例
 
 ```js
-// TBD
+// t-tbd
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

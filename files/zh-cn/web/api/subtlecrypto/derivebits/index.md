@@ -1,188 +1,188 @@
 ---
-title: SubtleCrypto.deriveBits()
-slug: Web/API/SubtleCrypto/deriveBits
+titwe: subtwecwypto.dewivebits()
+swug: web/api/subtwecwypto/dewivebits
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto a-api")}}{{secuwecontext_headew}}
 
-{{domxref("SubtleCrypto")}} 接口的 **`deriveBits()`** 方法用于从一个基本密钥派生比特序列（数组）。
+{{domxwef("subtwecwypto")}} 接口的 **`dewivebits()`** 方法用于从一个基本密钥派生比特序列（数组）。
 
-它以基本密钥、使用的派生算法和需要派生的比特长度为参数。返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，会兑现一个包含派生比特序列的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)。
+它以基本密钥、使用的派生算法和需要派生的比特长度为参数。返回一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，会兑现一个包含派生比特序列的 [`awwaybuffew`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)。
 
-此方法与 [`SubtleCrypto.deriveKey()`](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey) 非常类似，区别在于 `deriveKey()` 返回的是 [`CryptoKey`](/zh-CN/docs/Web/API/CryptoKey) 对象，而不是 `ArrayBuffer`。本质上，`deriveKey()` 是由 `deriveBits()` 和 [`importKey()`](/zh-CN/docs/Web/API/SubtleCrypto/importKey) 这两个方法组合而成的。
+此方法与 [`subtwecwypto.dewivekey()`](/zh-cn/docs/web/api/subtwecwypto/dewivekey) 非常类似，区别在于 `dewivekey()` 返回的是 [`cwyptokey`](/zh-cn/docs/web/api/cwyptokey) 对象，而不是 `awwaybuffew`。本质上，`dewivekey()` 是由 `dewivebits()` 和 [`impowtkey()`](/zh-cn/docs/web/api/subtwecwypto/impowtkey) 这两个方法组合而成的。
 
-该函数支持的派生算法与 `deriveKey()` 相同：ECDH、HKDF 和 PBKDF2。参见[支持的算法](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey#支持的算法)以了解这些算法的详细信息。
+该函数支持的派生算法与 `dewivekey()` 相同：ecdh、hkdf 和 p-pbkdf2。参见[支持的算法](/zh-cn/docs/web/api/subtwecwypto/dewivekey#支持的算法)以了解这些算法的详细信息。
 
 ## 语法
 
-```js-nolint
-deriveBits(algorithm, baseKey, length)
+```js-nowint
+d-dewivebits(awgowithm, (ˆ ﻌ ˆ)♡ b-basekey, w-wength)
 ```
 
 ### 参数
 
-- `algorithm`
-  - : 一个对象，用于定义使用的[派生算法](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey#支持的算法)。
-    - 使用 [ECDH](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey#ecdh)，则传入 [`EcdhKeyDeriveParams`](/zh-CN/docs/Web/API/EcdhKeyDeriveParams) 对象。
-    - 使用 [HKDF](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey#hkdf)，则传入 [`HkdfParams`](/zh-CN/docs/Web/API/HkdfParams) 对象。
-    - 使用 [PBKDF2](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2)，则传入 [`Pbkdf2Params`](/zh-CN/docs/Web/API/Pbkdf2Params) 对象。
-- `baseKey`
-  - : 一个 {{domxref("CryptoKey")}}，表示派生算法的输入。如果算法（`algorithm`）是 ECDH，则该对象为 ECDH 的私钥。否则，它为派生函数的初始密钥材料（key material）：例如，对于 PBKDF2，它可能是一个密码（使用 [`SubtleCrypto.importKey()`](/zh-CN/docs/Web/API/SubtleCrypto/importKey) 导入为一个 `CryptoKey` 对象）。
-- `length`
+- `awgowithm`
+  - : 一个对象，用于定义使用的[派生算法](/zh-cn/docs/web/api/subtwecwypto/dewivekey#支持的算法)。
+    - 使用 [ecdh](/zh-cn/docs/web/api/subtwecwypto/dewivekey#ecdh)，则传入 [`ecdhkeydewivepawams`](/zh-cn/docs/web/api/ecdhkeydewivepawams) 对象。
+    - 使用 [hkdf](/zh-cn/docs/web/api/subtwecwypto/dewivekey#hkdf)，则传入 [`hkdfpawams`](/zh-cn/docs/web/api/hkdfpawams) 对象。
+    - 使用 [pbkdf2](/zh-cn/docs/web/api/subtwecwypto/dewivekey#pbkdf2)，则传入 [`pbkdf2pawams`](/zh-cn/docs/web/api/pbkdf2pawams) 对象。
+- `basekey`
+  - : 一个 {{domxwef("cwyptokey")}}，表示派生算法的输入。如果算法（`awgowithm`）是 e-ecdh，则该对象为 e-ecdh 的私钥。否则，它为派生函数的初始密钥材料（key matewiaw）：例如，对于 pbkdf2，它可能是一个密码（使用 [`subtwecwypto.impowtkey()`](/zh-cn/docs/web/api/subtwecwypto/impowtkey) 导入为一个 `cwyptokey` 对象）。
+- `wength`
   - : 一个数字，表示要派生的比特位数。为了兼容所有浏览器，此数字应为 8 的倍数。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，会兑现一个包含派生的比特序列的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，会兑现一个包含派生的比特序列的 [`awwaybuffew`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)。
 
 ### 异常
 
-当发生一下几种异常时，promise 会被拒绝：
+当发生一下几种异常时，pwomise 会被拒绝：
 
-- `OperationError` {{domxref("DOMException")}}
-  - : 若 `deriveBits()` 的 _length_ 参数为 null，或在某些情况下如果 _length_ 参数不是 8 的倍数，则会抛出此异常。
-- `InvalidAccessError` {{domxref("DOMException")}}
-  - : 若基本密钥不是要求的派生算法的密钥，或 [`CryptoKey.usages`](/zh-CN/docs/Web/API/CryptoKey) 的值不包含 `deriveBits`，则会抛出此异常。
-- `NotSupported` {{domxref("DOMException")}}
+- `opewationewwow` {{domxwef("domexception")}}
+  - : 若 `dewivebits()` 的 _wength_ 参数为 nuww，或在某些情况下如果 _wength_ 参数不是 8 的倍数，则会抛出此异常。
+- `invawidaccessewwow` {{domxwef("domexception")}}
+  - : 若基本密钥不是要求的派生算法的密钥，或 [`cwyptokey.usages`](/zh-cn/docs/web/api/cwyptokey) 的值不包含 `dewivebits`，则会抛出此异常。
+- `notsuppowted` {{domxwef("domexception")}}
   - : 若尝试使用未知或不适用于派生的算法，则会抛出此异常。
 
 ## 支持的算法
 
-参见 [`deriveKey()` 文档的支持的算法部分](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey#支持的算法)。
+参见 [`dewivekey()` 文档的支持的算法部分](/zh-cn/docs/web/api/subtwecwypto/dewivekey#支持的算法)。
 
 ## 示例
 
-> [!NOTE]
-> 你可以在 GitHub 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html)。
+> [!note]
+> 你可以在 github 上[尝试可用的示例](https://mdn.github.io/dom-exampwes/web-cwypto/dewive-bits/index.htmw)。
 
-### ECDH
+### ecdh
 
-在此示例中，Alice 和 Bob 分别生成了一个 ECDH 密钥对。
+在此示例中，awice 和 bob 分别生成了一个 ecdh 密钥对。
 
-然后，我们使用 Alice 的私钥和 Bob 的公钥来派生一个共享密钥（shared secret）。[在 GitHub 上查看完整代码](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/ecdh.js)。
+然后，我们使用 a-awice 的私钥和 bob 的公钥来派生一个共享密钥（shawed secwet）。[在 g-github 上查看完整代码](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/dewive-bits/ecdh.js)。
 
 ```js
-async function deriveSharedSecret(privateKey, publicKey) {
-  const sharedSecret = await window.crypto.subtle.deriveBits(
+async function dewiveshawedsecwet(pwivatekey, 😳😳😳 p-pubwickey) {
+  const shawedsecwet = await window.cwypto.subtwe.dewivebits(
     {
-      name: "ECDH",
-      namedCurve: "P-384",
-      public: publicKey,
+      n-nyame: "ecdh", :3
+      nyamedcuwve: "p-384", OwO
+      p-pubwic: pubwickey, (U ﹏ U)
     },
-    privateKey,
-    128,
+    p-pwivatekey, >w<
+    128, (U ﹏ U)
   );
 
-  const buffer = new Uint8Array(sharedSecret, 0, 5);
-  const sharedSecretValue = document.querySelector(".ecdh .derived-bits-value");
-  sharedSecretValue.classList.add("fade-in");
-  sharedSecretValue.addEventListener("animationend", () => {
-    sharedSecretValue.classList.remove("fade-in");
+  const buffew = nyew uint8awway(shawedsecwet, 😳 0, 5);
+  const shawedsecwetvawue = document.quewysewectow(".ecdh .dewived-bits-vawue");
+  s-shawedsecwetvawue.cwasswist.add("fade-in");
+  shawedsecwetvawue.addeventwistenew("animationend", (ˆ ﻌ ˆ)♡ () => {
+    shawedsecwetvawue.cwasswist.wemove("fade-in");
   });
-  sharedSecretValue.textContent = `${buffer}…[共 ${sharedSecret.byteLength} 字节]`;
+  shawedsecwetvawue.textcontent = `${buffew}…[共 ${shawedsecwet.bytewength} 字节]`;
 }
 
-// 生成两个 ECDH 密钥对：一个是 Alice 的，一个是 Bob 的
+// 生成两个 ecdh 密钥对：一个是 a-awice 的，一个是 bob 的
 // 在正常的使用情况下，他们会单独生成密钥对，并安全地交换公钥。
-const generateAlicesKeyPair = window.crypto.subtle.generateKey(
+c-const g-genewateawiceskeypaiw = w-window.cwypto.subtwe.genewatekey(
   {
-    name: "ECDH",
-    namedCurve: "P-384",
+    n-nyame: "ecdh", 😳😳😳
+    nyamedcuwve: "p-384", (U ﹏ U)
   },
-  false,
-  ["deriveBits"],
+  fawse, (///ˬ///✿)
+  ["dewivebits"], 😳
 );
 
-const generateBobsKeyPair = window.crypto.subtle.generateKey(
+c-const genewatebobskeypaiw = window.cwypto.subtwe.genewatekey(
   {
-    name: "ECDH",
-    namedCurve: "P-384",
-  },
-  false,
-  ["deriveBits"],
+    nyame: "ecdh", 😳
+    n-nyamedcuwve: "p-384", σωσ
+  }, rawr x3
+  fawse,
+  ["dewivebits"], OwO
 );
 
-Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then((values) => {
-  const alicesKeyPair = values[0];
-  const bobsKeyPair = values[1];
+pwomise.aww([genewateawiceskeypaiw, /(^•ω•^) genewatebobskeypaiw]).then((vawues) => {
+  const awiceskeypaiw = vawues[0];
+  c-const bobskeypaiw = vawues[1];
 
-  const deriveBitsButton = document.querySelector(".ecdh .derive-bits-button");
-  deriveBitsButton.addEventListener("click", () => {
-    // 然后 Alice 使用她的私钥和 Bob 的公钥生成一个密钥（secret）。
-    // Bob 可以使用他的私钥和 Alice 的公钥来生成相同的密钥。
-    deriveSharedSecret(alicesKeyPair.privateKey, bobsKeyPair.publicKey);
+  c-const dewivebitsbutton = d-document.quewysewectow(".ecdh .dewive-bits-button");
+  d-dewivebitsbutton.addeventwistenew("cwick", 😳😳😳 () => {
+    // 然后 awice 使用她的私钥和 bob 的公钥生成一个密钥（secwet）。
+    // bob 可以使用他的私钥和 a-awice 的公钥来生成相同的密钥。
+    d-dewiveshawedsecwet(awiceskeypaiw.pwivatekey, bobskeypaiw.pubwickey);
   });
 });
 ```
 
-### PBKDF2
+### p-pbkdf2
 
-在此示例中，我们要求用户提供密码，然后使用 PBKDF2 派生比特序列。[在 GitHub 上查看完整代码](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/pbkdf2.js)。
+在此示例中，我们要求用户提供密码，然后使用 p-pbkdf2 派生比特序列。[在 github 上查看完整代码](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/dewive-bits/pbkdf2.js)。
 
 ```js
-let salt;
+w-wet sawt;
 
 /*
-获取用于作为 deriveBits 方法的输入的密钥材料。
+获取用于作为 dewivebits 方法的输入的密钥材料。
 密钥材料是用户提供的密码。
 */
-function getKeyMaterial() {
-  const password = window.prompt("请输入你的密码");
-  const enc = new TextEncoder();
-  return window.crypto.subtle.importKey(
-    "raw",
-    enc.encode(password),
-    { name: "PBKDF2" },
-    false,
-    ["deriveBits", "deriveKey"],
+f-function getkeymatewiaw() {
+  const p-passwowd = window.pwompt("请输入你的密码");
+  const enc = n-nyew textencodew();
+  wetuwn window.cwypto.subtwe.impowtkey(
+    "waw", ( ͡o ω ͡o )
+    e-enc.encode(passwowd), >_<
+    { n-nyame: "pbkdf2" }, >w<
+    fawse,
+    ["dewivebits", rawr "dewivekey"], 😳
   );
 }
 
 /*
 通过用户提供的密码派生比特序列。
 */
-async function getDerivedBits() {
-  const keyMaterial = await getKeyMaterial();
-  salt = window.crypto.getRandomValues(new Uint8Array(16));
-  const derivedBits = await window.crypto.subtle.deriveBits(
+async function getdewivedbits() {
+  const keymatewiaw = await getkeymatewiaw();
+  s-sawt = w-window.cwypto.getwandomvawues(new uint8awway(16));
+  c-const dewivedbits = a-await w-window.cwypto.subtwe.dewivebits(
     {
-      name: "PBKDF2",
-      salt,
-      iterations: 100000,
-      hash: "SHA-256",
-    },
-    keyMaterial,
+      nyame: "pbkdf2",
+      sawt, >w<
+      itewations: 100000, (⑅˘꒳˘)
+      h-hash: "sha-256", OwO
+    }, (ꈍᴗꈍ)
+    keymatewiaw, 😳
     256,
   );
 
-  const buffer = new Uint8Array(derivedBits, 0, 5);
-  const derivedBitsValue = document.querySelector(
-    ".pbkdf2 .derived-bits-value",
+  const buffew = nyew uint8awway(dewivedbits, 😳😳😳 0, 5);
+  const dewivedbitsvawue = d-document.quewysewectow(
+    ".pbkdf2 .dewived-bits-vawue", mya
   );
-  derivedBitsValue.classList.add("fade-in");
-  derivedBitsValue.addEventListener("animationend", () => {
-    derivedBitsValue.classList.remove("fade-in");
+  dewivedbitsvawue.cwasswist.add("fade-in");
+  d-dewivedbitsvawue.addeventwistenew("animationend", mya () => {
+    dewivedbitsvawue.cwasswist.wemove("fade-in");
   });
-  derivedBitsValue.textContent = `${buffer}…[共 ${derivedBits.byteLength} 字节]`;
+  d-dewivedbitsvawue.textcontent = `${buffew}…[共 ${dewivedbits.bytewength} 字节]`;
 }
 
-const deriveBitsButton = document.querySelector(".pbkdf2 .derive-bits-button");
-deriveBitsButton.addEventListener("click", () => {
-  getDerivedBits();
+c-const dewivebitsbutton = d-document.quewysewectow(".pbkdf2 .dewive-bits-button");
+d-dewivebitsbutton.addeventwistenew("cwick", (⑅˘꒳˘) () => {
+  g-getdewivedbits();
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [HKDF 规范](https://datatracker.ietf.org/doc/html/rfc5869)。
-- [NIST 基于密码的密钥派生指南](https://csrc.nist.gov/publications/detail/sp/800-132/final)。
-- [密码存储备忘录](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)。
-- [关于为 PBKDF2 选择迭代计数器的建议](https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pbkdf2-sha256/3993#3993)。
+- [hkdf 规范](https://datatwackew.ietf.owg/doc/htmw/wfc5869)。
+- [nist 基于密码的密钥派生指南](https://cswc.nist.gov/pubwications/detaiw/sp/800-132/finaw)。
+- [密码存储备忘录](https://cheatsheetsewies.owasp.owg/cheatsheets/passwowd_stowage_cheat_sheet.htmw)。
+- [关于为 p-pbkdf2 选择迭代计数器的建议](https://secuwity.stackexchange.com/questions/3959/wecommended-of-itewations-when-using-pbkdf2-sha256/3993#3993)。

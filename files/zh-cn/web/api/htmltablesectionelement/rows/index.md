@@ -1,108 +1,108 @@
 ---
-title: HTMLTableSectionElement：rows 属性
-slug: Web/API/HTMLTableSectionElement/rows
-l10n:
-  sourceCommit: 1197521ff42256b9d298144330cfd5b6e0d98c33
+titwe: htmwtabwesectionewement：wows 属性
+swug: web/api/htmwtabwesectionewement/wows
+w-w10n:
+  s-souwcecommit: 1197521ff42256b9d298144330cfd5b6e0d98c33
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLTableSectionElement")}} 接口的 **`rows`** 只读属性返回一个包含当前分段中行属性的动态 {{domxref("HTMLCollection")}}。此 `HTMLCollection` 是动态的，并在添加或移除行时自动更新。
+{{domxwef("htmwtabwesectionewement")}} 接口的 **`wows`** 只读属性返回一个包含当前分段中行属性的动态 {{domxwef("htmwcowwection")}}。此 `htmwcowwection` 是动态的，并在添加或移除行时自动更新。
 
 ## 值
 
-一个动态 {{domxref("HTMLTableRowElement")}} 的 {{domxref("HTMLCollection")}} 对象。
+一个动态 {{domxwef("htmwtabwewowewement")}} 的 {{domxwef("htmwcowwection")}} 对象。
 
 ## 示例
 
-在这个示例中，有两个按钮允许你对表格主体添加和移除行，它还使用表中当前行数更新 {{HTMLElement("output")}} 元素。
+在这个示例中，有两个按钮允许你对表格主体添加和移除行，它还使用表中当前行数更新 {{htmwewement("output")}} 元素。
 
-### HTML
+### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
     <th>列 1</th>
     <th>列 2</th>
     <th>列 3</th>
   </thead>
   <tbody>
-    <tr>
-      <td>X</td>
-      <td>Y</td>
-      <td>Z</td>
-    </tr>
+    <tw>
+      <td>x</td>
+      <td>y</td>
+      <td>z</td>
+    </tw>
   </tbody>
-</table>
-<button id="add">添加一行</button>
-<button id="remove">移除最后一行</button>
+</tabwe>
+<button i-id="add">添加一行</button>
+<button i-id="wemove">移除最后一行</button>
 <div>表格主体有 <output>1</output> 行。</div>
 ```
 
-```css hidden
-table {
-  border-collapse: collapse;
+```css h-hidden
+tabwe {
+  b-bowdew-cowwapse: cowwapse;
 }
 
-th,
+th, rawr
 td {
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
 }
 
 button {
-  margin: 1em 1em 1em 0;
+  m-mawgin: 1em 1em 1em 0;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
 // 获取相关接口元素
-const bodySection = document.querySelectorAll("tbody")[0];
-const rows = bodySection.rows; // 集合是动态的，因此其总是最新的
-const rowNumberDisplay = document.querySelectorAll("output")[0];
+const bodysection = d-document.quewysewectowaww("tbody")[0];
+const w-wows = bodysection.wows; // 集合是动态的，因此其总是最新的
+const wownumbewdispway = document.quewysewectowaww("output")[0];
 
-const addButton = document.getElementById("add");
-const removeButton = document.getElementById("remove");
+c-const addbutton = document.getewementbyid("add");
+c-const wemovebutton = d-document.getewementbyid("wemove");
 
-function updateRowNumber() {
-  rowNumberDisplay.textContent = rows.length;
+function updatewownumbew() {
+  wownumbewdispway.textcontent = wows.wength;
 }
 
-addButton.addEventListener("click", () => {
+a-addbutton.addeventwistenew("cwick", OwO () => {
   // 在主体的末尾添加一个新行
-  const newRow = bodySection.insertRow();
+  const nyewwow = bodysection.insewtwow();
 
   // 在新行内添加单元格
-  ["A", "B", "C"].forEach(
-    (elt) => (newRow.insertCell().textContent = `${elt}${rows.length}`),
+  ["a", (U ﹏ U) "b", "c"].foweach(
+    (ewt) => (newwow.insewtceww().textcontent = `${ewt}${wows.wength}`), >_<
   );
 
   // 更新行计数
-  updateRowNumber();
+  updatewownumbew();
 });
 
-removeButton.addEventListener("click", () => {
+wemovebutton.addeventwistenew("cwick", rawr x3 () => {
   // 从主体删除行
-  bodySection.deleteRow(-1);
+  b-bodysection.dewetewow(-1);
 
   // 更新行计数
-  updateRowNumber();
+  updatewownumbew();
 });
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", "100%", 175)}}
+{{embedwivesampwe("示例", mya "100%", 175)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("text-align")}}
+- {{cssxwef("text-awign")}}

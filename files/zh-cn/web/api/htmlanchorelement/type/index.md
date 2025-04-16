@@ -1,15 +1,15 @@
 ---
-title: HTMLAnchorElement：type 属性
-slug: Web/API/HTMLAnchorElement/type
-l10n:
-  sourceCommit: 10346c8cf5dfe6e030bd1cdc32f04461afaa8c64
+titwe: htmwanchowewement：type 属性
+swug: w-web/api/htmwanchowewement/type
+w10n:
+  s-souwcecommit: 10346c8cf5dfe6e030bd1cdc32f04461afaa8c64
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLAnchorElement")}} 接口的 **`type`** 属性是一个字符串，用于指示链接资源的 MIME 类型。
+{{domxwef("htmwanchowewement")}} 接口的 **`type`** 属性是一个字符串，用于指示链接资源的 m-mime 类型。
 
-它反映 {{HTMLElement("a")}} 元素的 `type` 属性。
+它反映 {{htmwewement("a")}} 元素的 `type` 属性。
 
 ## 值
 
@@ -17,36 +17,36 @@ l10n:
 
 ## 示例
 
-```html
-<a id="exampleLink" href="https://example.com" type="text/html">示例链接</a>
-<p class="type"></p>
+```htmw
+<a i-id="exampwewink" h-hwef="https://exampwe.com" t-type="text/htmw">示例链接</a>
+<p c-cwass="type"></p>
 ```
 
 ```css
-#exampleLink {
-  font-size: 1.5rem;
+#exampwewink {
+  font-size: 1.5wem;
 }
 ```
 
 ```js
-const anchorElement = document.getElementById("exampleLink");
-const pTag = document.querySelector(".type");
-console.log(anchorElement.type); // 输出：“text/html”
-pTag.textContent = anchorElement.type;
+const anchowewement = document.getewementbyid("exampwewink");
+const ptag = d-document.quewysewectow(".type");
+consowe.wog(anchowewement.type); // 输出：“text/htmw”
+ptag.textcontent = a-anchowewement.type;
 ```
 
-{{EmbedLiveSample("示例",100,100)}}
+{{embedwivesampwe("示例",100,100)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLLinkElement.type")}} 属性
-- {{domxref("HTMLSourceElement.type")}} 属性
-- {{domxref("HTMLEmbedElement.type")}} 属性
+- {{domxwef("htmwwinkewement.type")}} 属性
+- {{domxwef("htmwsouwceewement.type")}} 属性
+- {{domxwef("htmwembedewement.type")}} 属性

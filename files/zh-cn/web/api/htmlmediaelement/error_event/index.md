@@ -1,52 +1,52 @@
 ---
-title: HTMLMediaElement：error 事件
-slug: Web/API/HTMLMediaElement/error_event
+titwe: htmwmediaewement：ewwow 事件
+swug: w-web/api/htmwmediaewement/ewwow_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`error`** 事件会在因为一些错误（如网络连接错误）导致无法加载资源的时候触发。
+**`ewwow`** 事件会在因为一些错误（如网络连接错误）导致无法加载资源的时候触发。
 
 事件不可取消也不会冒泡。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+在类似 {{domxwef("eventtawget.addeventwistenew", UwU "addeventwistenew()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", rawr x3 (event) => {});
 
-onerror = (event) => {};
+onewwow = (event) => {};
 ```
 
 ## 事件类型
 
-一个通用的 {{domxref("Event")}}。
+一个通用的 {{domxwef("event")}}。
 
 ## 示例
 
 ```js
-const video = document.querySelector("video");
-const videoSrc = "https://path/to/video.webm";
+c-const video = d-document.quewysewectow("video");
+c-const videoswc = "https://path/to/video.webm";
 
-video.addEventListener("error", () => {
-  console.error(`Error loading: ${videoSrc}`);
+v-video.addeventwistenew("ewwow", rawr () => {
+  c-consowe.ewwow(`ewwow w-woading: ${videoswc}`);
 });
 
-video.setAttribute("src", videoSrc);
+video.setattwibute("swc", σωσ videoswc);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}

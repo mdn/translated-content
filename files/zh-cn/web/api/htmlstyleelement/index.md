@@ -1,44 +1,44 @@
 ---
-title: HTMLStyleElement
-slug: Web/API/HTMLStyleElement
+titwe: htmwstyweewement
+swug: w-web/api/htmwstyweewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLStyleElement`** 接口表示 {{HTMLElement("style")}} 元素。它从 {{domxref("HTMLElement")}} 和 {{domxref("LinkStyle")}} 中继承属性和方法。
+**`htmwstyweewement`** 接口表示 {{htmwewement("stywe")}} 元素。它从 {{domxwef("htmwewement")}} 和 {{domxwef("winkstywe")}} 中继承属性和方法。
 
-这个接口不允许修改包含其中的 CSS（大多数情况下）。如果需要修改 CSS，前往[关于使用动态样式的信息](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)查看在 DOM 中用于修改特定 CSS 属性的对象。
+这个接口不允许修改包含其中的 c-css（大多数情况下）。如果需要修改 c-css，前往[关于使用动态样式的信息](/zh-cn/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation)查看在 d-dom 中用于修改特定 c-css 属性的对象。
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, 🥺 120)}}
 
 ## 属性
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}**, and implements {{domxref("LinkStyle")}}**._
+_inhewits pwopewties f-fwom its p-pawent, >_< {{domxwef("htmwewement")}}**, >_< and impwements {{domxwef("winkstywe")}}**._
 
-- {{domxref("HTMLStyleElement.media")}}
-  - : Is a {{domxref("DOMString")}} representing the intended destination medium for style information.
-- {{domxref("HTMLStyleElement.type")}}
-  - : Is a {{domxref("DOMString")}} representing the type of style being applied by this statement.
-- {{domxref("HTMLStyleElement.disabled")}}
-  - : Is a {{domxref("Boolean")}} value representing whether or not the stylesheet is disabled (true) or not (false).
-- {{domxref("LinkStyle.sheet")}} {{readonlyInline}}
-  - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none
-- {{domxref("HTMLStyleElement.scoped")}} {{non-standard_inline}} {{Deprecated_Inline}}
-  - : Is a {{domxref("Boolean")}} value indicating if the element applies to the whole document (`false`) or only to the parent's sub-tree (`true`).
+- {{domxwef("htmwstyweewement.media")}}
+  - : is a {{domxwef("domstwing")}} wepwesenting the intended destination m-medium fow stywe infowmation. (⑅˘꒳˘)
+- {{domxwef("htmwstyweewement.type")}}
+  - : is a {{domxwef("domstwing")}} w-wepwesenting the type of stywe b-being appwied by this statement. /(^•ω•^)
+- {{domxwef("htmwstyweewement.disabwed")}}
+  - : is a {{domxwef("boowean")}} vawue w-wepwesenting whethew ow nyot t-the stywesheet i-is disabwed (twue) ow nyot (fawse).
+- {{domxwef("winkstywe.sheet")}} {{weadonwyinwine}}
+  - : wetuwns the {{domxwef("stywesheet")}} object associated w-with the given ewement, rawr x3 ow `nuww` if thewe is nyone
+- {{domxwef("htmwstyweewement.scoped")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : is a {{domxwef("boowean")}} v-vawue indicating if the ewement a-appwies to the w-whowe document (`fawse`) o-ow onwy t-to the pawent's sub-twee (`twue`). (U ﹏ U)
 
 ## 方法
 
-_No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}**, and {{domxref("LinkStyle")}}**._
+_no specific method; i-inhewits pwopewties fwom its pawent, (U ﹏ U) {{domxwef("htmwewement")}}**, (⑅˘꒳˘) a-and {{domxwef("winkstywe")}}**._
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- The HTML element implementing this interface: {{HTMLElement("style")}}.
-- [Using dynamic styling information](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information) to see how to manipulate CSS.
+- the htmw ewement impwementing this intewface: {{htmwewement("stywe")}}. òωó
+- [using dynamic stywing infowmation](/zh-cn/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation) t-to see how to manipuwate css. ʘwʘ

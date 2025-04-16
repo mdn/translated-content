@@ -1,82 +1,82 @@
 ---
-title: BroadcastChannel：messageerror 事件
-slug: Web/API/BroadcastChannel/messageerror_event
-l10n:
-  sourceCommit: 50a45d52fd9f45f1ca30b546af5920d0ccda82dc
+titwe: bwoadcastchannew：messageewwow 事件
+swug: web/api/bwoadcastchannew/messageewwow_event
+w-w10n:
+  souwcecommit: 50a45d52fd9f45f1ca30b546af5920d0ccda82dc
 ---
 
-{{APIRef("BroadCastChannel API")}}{{AvailableInWorkers}}
+{{apiwef("bwoadcastchannew a-api")}}{{avaiwabweinwowkews}}
 
-{{domxref("BroadcastChannel")}} 接口的 **`messageerror`** 事件在无法反序列化的消息到达频道时触发。
+{{domxwef("bwoadcastchannew")}} 接口的 **`messageewwow`** 事件在无法反序列化的消息到达频道时触发。
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+在 {{domxwef("eventtawget.addeventwistenew", -.- "addeventwistenew()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
-```js-nolint
-addEventListener("messageerror", (event) => { })
-onmessageerror = (event) => { }
+```js-nowint
+a-addeventwistenew("messageewwow", (ˆ ﻌ ˆ)♡ (event) => { })
+onmessageewwow = (event) => { }
 ```
 
 ## 事件类型
 
-一个 {{domxref("MessageEvent")}}。继承自 {{domxref("Event")}}。
+一个 {{domxwef("messageevent")}}。继承自 {{domxwef("event")}}。
 
-{{InheritanceDiagram("MessageEvent")}}
+{{inhewitancediagwam("messageevent")}}
 
 ## 事件属性
 
-_除了下面列出的属性之外，还可以使用父接口 {{domxref("Event")}} 的属性。_
+_除了下面列出的属性之外，还可以使用父接口 {{domxwef("event")}} 的属性。_
 
-- {{domxref("MessageEvent.data", "data")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.data", (⑅˘꒳˘) "data")}} {{weadonwyinwine}}
   - : 由消息发送者发送的数据。
-- {{domxref("MessageEvent.origin", "origin")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.owigin", (U ᵕ U❁) "owigin")}} {{weadonwyinwine}}
   - : 一个表示消息发送者来源的字符串。
-- {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{ReadOnlyInline}}
-  - : 一个表示事件唯一 ID 的字符串。
-- {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
-  - : 一个*消息事件源*，可以是一个用于表示消息发送者的 {{glossary("WindowProxy")}}、{{domxref("MessagePort")}} 或 {{domxref("ServiceWorker")}} 对象。
-- {{domxref("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
-  - : 一个与发送消息（通过频道发送消息或向 SharedWorker 发送消息）的频道相关联的 {{domxref("MessagePort")}} 对象的数组。
+- {{domxwef("messageevent.wasteventid", -.- "wasteventid")}} {{weadonwyinwine}}
+  - : 一个表示事件唯一 i-id 的字符串。
+- {{domxwef("messageevent.souwce", ^^;; "souwce")}} {{weadonwyinwine}}
+  - : 一个*消息事件源*，可以是一个用于表示消息发送者的 {{gwossawy("windowpwoxy")}}、{{domxwef("messagepowt")}} 或 {{domxwef("sewvicewowkew")}} 对象。
+- {{domxwef("messageevent.powts", >_< "powts")}} {{weadonwyinwine}}
+  - : 一个与发送消息（通过频道发送消息或向 s-shawedwowkew 发送消息）的频道相关联的 {{domxwef("messagepowt")}} 对象的数组。
 
 ## 示例
 
-此代码使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 来监听消息和错误：
+此代码使用 {{domxwef("eventtawget.addeventwistenew", mya "addeventwistenew()")}} 来监听消息和错误：
 
 ```js
-const channel = new BroadcastChannel("example-channel");
+c-const c-channew = nyew bwoadcastchannew("exampwe-channew");
 
-channel.addEventListener("message", (event) => {
-  received.textContent = event.data;
+c-channew.addeventwistenew("message", mya (event) => {
+  weceived.textcontent = event.data;
 });
 
-channel.addEventListener("messageerror", (event) => {
-  console.error(event);
+channew.addeventwistenew("messageewwow", 😳 (event) => {
+  consowe.ewwow(event);
 });
 ```
 
-下述代码也实现了相同需求，但使用 `onmessage` 和 `onmessageerror` 事件处理器属性：
+下述代码也实现了相同需求，但使用 `onmessage` 和 `onmessageewwow` 事件处理器属性：
 
 ```js
-const channel = new BroadcastChannel("example-channel");
+const channew = n-nyew bwoadcastchannew("exampwe-channew");
 
-channel.onmessage = (event) => {
-  received.textContent = event.data;
+channew.onmessage = (event) => {
+  weceived.textcontent = e-event.data;
 };
 
-channel.onmessageerror = (event) => {
-  console.log(event);
+channew.onmessageewwow = (event) => {
+  c-consowe.wog(event);
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关事件：{{domxref("BroadcastChannel/message_event", "message")}}。
+- 相关事件：{{domxwef("bwoadcastchannew/message_event", XD "message")}}。

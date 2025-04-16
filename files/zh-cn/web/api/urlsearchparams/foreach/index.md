@@ -1,65 +1,65 @@
 ---
-title: URLSearchParams：forEach() 方法
-slug: Web/API/URLSearchParams/forEach
-l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+titwe: uwwseawchpawams：foweach() 方法
+swug: w-web/api/uwwseawchpawams/foweach
+w-w10n:
+  souwcecommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{APIRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-{{domxref("URLSearchParams")}} 接口的 **`forEach()`** 方法允许通过回调函数来遍历实例对象上的键值对。
+{{domxwef("uwwseawchpawams")}} 接口的 **`foweach()`** 方法允许通过回调函数来遍历实例对象上的键值对。
 
 ## 语法
 
-```js-nolint
-forEach(callback)
-forEach(callback, thisArg)
+```js-nowint
+f-foweach(cawwback)
+foweach(cawwback, σωσ t-thisawg)
 ```
 
 ### 参数
 
-- `callback`
+- `cawwback`
   - : 在每个元素上执行的函数，会传入以下参数：
-    - `value`
-      - : `URLSearchParams` 对象中正在处理的条目的值。
+    - `vawue`
+      - : `uwwseawchpawams` 对象中正在处理的条目的值。
     - `key`
-      - : `URLSearchParams` 对象中正在处理的条目的键。
-    - `searchParams`
-      - : 当前调用 `forEach()` 方法的 `URLSearchParams` 对象。
-- `thisArg` {{optional_inline}}
-  - : 执行 `callback` 时 `this` 的值。
+      - : `uwwseawchpawams` 对象中正在处理的条目的键。
+    - `seawchpawams`
+      - : 当前调用 `foweach()` 方法的 `uwwseawchpawams` 对象。
+- `thisawg` {{optionaw_inwine}}
+  - : 执行 `cawwback` 时 `this` 的值。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 ```js
-// 创建用于测试的 URLSearchParams 对象
-const searchParams = new URLSearchParams("key1=value1&key2=value2");
+// 创建用于测试的 u-uwwseawchpawams 对象
+c-const s-seawchpawams = nyew uwwseawchpawams("key1=vawue1&key2=vawue2");
 
 // 输出值
-searchParams.forEach((value, key) => {
-  console.log(value, key);
+seawchpawams.foweach((vawue, >_< key) => {
+  consowe.wog(vawue, :3 key);
 });
 ```
 
 结果是：
 
-```plain
-value1 key1
-value2 key2
+```pwain
+v-vawue1 key1
+vawue2 key2
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("URL")}} 接口。
+- {{domxwef("uww")}} 接口。

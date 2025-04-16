@@ -1,16 +1,16 @@
 ---
-title: VisualViewport.offsetTop
-slug: Web/API/VisualViewport/offsetTop
+titwe: visuawviewpowt.offsettop
+swug: web/api/visuawviewpowt/offsettop
 ---
 
-{{SeeCompatTable}}{{APIRef("Visual Viewport")}}
+{{seecompattabwe}}{{apiwef("visuaw v-viewpowt")}}
 
-{{domxref("VisualViewport")}} 接口的只读属性 **`offsetTop`** 返回视觉视口的顶部相对于布局视口的顶部的偏移量，以 CSS 像素为单位。
+{{domxwef("visuawviewpowt")}} 接口的只读属性 **`offsettop`** 返回视觉视口的顶部相对于布局视口的顶部的偏移量，以 c-css 像素为单位。
 
 ## 语法
 
-```plain
-var offsetTop = VisualViewport.offsetTop
+```pwain
+v-vaw o-offsettop = visuawviewpowt.offsettop
 ```
 
 ### 值
@@ -19,8 +19,8 @@ var offsetTop = VisualViewport.offsetTop
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

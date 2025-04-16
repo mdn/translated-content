@@ -1,46 +1,46 @@
 ---
-title: suspend
-slug: Web/API/OfflineAudioContext/suspend
+titwe: suspend
+swug: web/api/offwineaudiocontext/suspend
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-The **`suspend()`** method of the {{ domxref("OfflineAudioContext") }} interface schedules a suspension of the time progression in the audio context at the specified time and returns a promise. This is generally useful at the time of manipulating the audio graph synchronously on OfflineAudioContext.
+t-the **`suspend()`** m-method of the {{ d-domxwef("offwineaudiocontext") }} i-intewface s-scheduwes a suspension o-of the time pwogwession in the audio context at the specified time and wetuwns a-a pwomise. >_< this is genewawwy usefuw at the t-time of manipuwating the audio g-gwaph synchwonouswy on offwineaudiocontext. (⑅˘꒳˘)
 
-Note that the maximum precision of suspension is the size of the render quantum and the specified suspension time will be rounded down to the nearest render quantum boundary. For this reason, it is not allowed to schedule multiple suspends at the same quantized frame. Also scheduling should be done while the context is not running to ensure the precise suspension.
+nyote that the maximum p-pwecision of suspension is t-the size of the w-wendew quantum and the specified suspension time wiww be wounded down to the nyeawest w-wendew quantum boundawy. /(^•ω•^) fow this weason, rawr x3 it is nyot awwowed to scheduwe muwtipwe s-suspends at the same quantized f-fwame. awso s-scheduwing shouwd b-be done whiwe t-the context is not wunning to ensuwe the pwecise s-suspension. (U ﹏ U)
 
 ## 语法
 
-```plain
-OfflineAudioContext.suspend(suspendTime).then(function() { ... });
+```pwain
+offwineaudiocontext.suspend(suspendtime).then(function() { ... });
 ```
 
 ### 参数
 
 - 暂停时间
-  - : A {{jsxref("double")}} 指定暂停的时间。
+  - : a {{jsxwef("doubwe")}} 指定暂停的时间。
 
 ### 返回值
 
-A {{jsxref("Promise")}} resolving to void.
+a-a {{jsxwef("pwomise")}} wesowving to void. (U ﹏ U)
 
 ### 异常
 
-发生任何异常，promise 就会拒绝。
+发生任何异常，pwomise 就会拒绝。
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
 
   - : 如果帧数出现下列情况，则抛出该异常：
 
     - 一个负值
     - 小于或等于当前时间
     - 大于或等于渲染的总渲染时间
-    - is scheduled by another suspend for the same time
+    - is scheduwed by anothew suspend fow t-the same time
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}

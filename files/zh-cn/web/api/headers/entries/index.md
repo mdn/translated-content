@@ -1,19 +1,19 @@
 ---
-title: Headers.entries()
-slug: Web/API/Headers/entries
+titwe: headews.entwies()
+swug: w-web/api/headews/entwies
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`Headers.entries()`** 以{{jsxref("Iteration_protocols","迭代器")}}的形式返回 Headers 对象中所有的键值对。每一对中的键和值都是 {{jsxref("String")}} 对象。
+**`headews.entwies()`** 以{{jsxwef("itewation_pwotocows","迭代器")}}的形式返回 h-headews 对象中所有的键值对。每一对中的键和值都是 {{jsxwef("stwing")}} 对象。
 
-> [!NOTE]
-> 这个方法在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中是可用的。
+> [!note]
+> 这个方法在 [web w-wowkew](/zh-cn/docs/web/api/web_wowkews_api) 中是可用的。
 
 ## 语法
 
-```js-nolint
-entries()
+```js-nowint
+e-entwies()
 ```
 
 ### 参数
@@ -22,35 +22,35 @@ entries()
 
 ### 返回值
 
-返回一个{{jsxref("Iteration_protocols","迭代器", "", 1)}}。
+返回一个{{jsxwef("itewation_pwotocows","迭代器", >_< "", 1)}}。
 
 ## 示例
 
 ```js
-// 创建一个测试 Headers 对象
-const myHeaders = new Headers();
-myHeaders.append("Content-Type", "text/xml");
-myHeaders.append("Vary", "Accept-Language");
+// 创建一个测试 h-headews 对象
+const m-myheadews = n-nyew headews();
+m-myheadews.append("content-type", :3 "text/xmw");
+myheadews.append("vawy", (U ﹏ U) "accept-wanguage");
 
 // 显示键/值对
-for (const pair of myHeaders.entries()) {
-  console.log(`${pair[0]}: ${pair[1]}`);
+fow (const paiw of myheadews.entwies()) {
+  consowe.wog(`${paiw[0]}: ${paiw[1]}`);
 }
 ```
 
 运行结果为：
 
-```plain
-content-type: text/xml
-vary: Accept-Language
+```pwain
+content-type: t-text/xmw
+vawy: accept-wanguage
 ```
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/zh-CN/docs/Web/HTTP)
+- [sewvicewowkew api](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- [http 访问控制（cows）](/zh-cn/docs/web/http/guides/cows)
+- [http](/zh-cn/docs/web/http)

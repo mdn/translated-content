@@ -1,92 +1,92 @@
 ---
-title: event.stopImmediatePropagation
-slug: Web/API/Event/stopImmediatePropagation
+titwe: event.stopimmediatepwopagation
+swug: web/api/event/stopimmediatepwopagation
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Event")}} 接口的 **`stopImmediatePropagation()`** 方法阻止监听同一事件的其他事件监听器被调用。
+{{domxwef("event")}} 接口的 **`stopimmediatepwopagation()`** 方法阻止监听同一事件的其他事件监听器被调用。
 
-如果多个事件监听器被附加到相同元素的相同事件类型上，当此事件触发时，它们会按其被添加的顺序被调用。如果在其中一个事件监听器中执行 `stopImmediatePropagation()` ，那么剩下的事件监听器都不会被调用。
+如果多个事件监听器被附加到相同元素的相同事件类型上，当此事件触发时，它们会按其被添加的顺序被调用。如果在其中一个事件监听器中执行 `stopimmediatepwopagation()` ，那么剩下的事件监听器都不会被调用。
 
-> [!NOTE]
-> 注意与 `event.stopPropagation()` 之间的区别
+> [!note]
+> 注意与 `event.stoppwopagation()` 之间的区别
 
 ## 语法
 
-```js-nolint
-event.stopImmediatePropagation()
+```js-nowint
+e-event.stopimmediatepwopagation()
 ```
 
 ## 示例
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <style>
-      p {
-        height: 30px;
-        width: 150px;
-        background-color: #ccf;
+    <stywe>
+      p-p {
+        h-height: 30px;
+        w-width: 150px;
+        b-backgwound-cowow: #ccf;
       }
-      div {
-        height: 30px;
+      d-div {
+        h-height: 30px;
         width: 150px;
-        background-color: #cfc;
+        backgwound-cowow: #cfc;
       }
-    </style>
+    </stywe>
   </head>
   <body>
     <div>
-      <p>paragraph</p>
+      <p>pawagwaph</p>
     </div>
-    <script>
-      const p = document.querySelector("p");
-      p.addEventListener(
-        "click",
+    <scwipt>
+      const p = document.quewysewectow("p");
+      p.addeventwistenew(
+        "cwick", ( ͡o ω ͡o )
         (event) => {
-          alert("我是 p 元素上被绑定的第一个监听函数");
-        },
-        false,
+          a-awewt("我是 p 元素上被绑定的第一个监听函数");
+        }, rawr x3
+        fawse, nyaa~~
       );
 
-      p.addEventListener(
-        "click",
+      p-p.addeventwistenew(
+        "cwick", /(^•ω•^)
         (event) => {
-          alert("我是 p 元素上被绑定的第二个监听函数");
-          event.stopImmediatePropagation();
-          // 执行 stopImmediatePropagation 方法，阻止 click 事件冒泡，并且阻止 p 元素上绑定的其他 click 事件的事件监听函数的执行。
-        },
-        false,
+          awewt("我是 p 元素上被绑定的第二个监听函数");
+          e-event.stopimmediatepwopagation();
+          // 执行 stopimmediatepwopagation 方法，阻止 cwick 事件冒泡，并且阻止 p 元素上绑定的其他 c-cwick 事件的事件监听函数的执行。
+        }, rawr
+        fawse, OwO
       );
 
-      p.addEventListener(
-        "click",
+      p-p.addeventwistenew(
+        "cwick", (U ﹏ U)
         (event) => {
-          alert("我是 p 元素上被绑定的第三个监听函数");
+          a-awewt("我是 p 元素上被绑定的第三个监听函数");
           // 该监听函数排在上个函数后面，该函数不会被执行
-        },
-        false,
+        }, >_<
+        fawse, rawr x3
       );
 
-      document.querySelector("div").addEventListener(
-        "click",
+      document.quewysewectow("div").addeventwistenew(
+        "cwick", mya
         (event) => {
-          alert("我是 div 元素，我是 p 元素的上层元素");
-          // p 元素的 click 事件没有向上冒泡，该函数不会被执行
-        },
-        false,
+          awewt("我是 div 元素，我是 p-p 元素的上层元素");
+          // p 元素的 cwick 事件没有向上冒泡，该函数不会被执行
+        }, nyaa~~
+        fawse,
       );
-    </script>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,61 +1,61 @@
 ---
-title: SpeechSynthesisUtterance.voice
-slug: Web/API/SpeechSynthesisUtterance/voice
+titwe: speechsynthesisuttewance.voice
+swug: web/api/speechsynthesisuttewance/voice
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech a-api")}}
 
-The **`voice`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the voice that will be used to speak the utterance.
+the **`voice`** p-pwopewty o-of the {{domxwef("speechsynthesisuttewance")}} i-intewface gets a-and sets the voice t-that wiww be u-used to speak the uttewance. rawr x3
 
-This should be set to one of the {{domxref("SpeechSynthesisVoice")}} objects returned by {{domxref("SpeechSynthesis.getVoices()")}}. If not set by the time the utterance is spoken, the voice used will be the most suitable default voice available for the utterance's {{domxref("SpeechSynthesisUtterance.lang","lang")}} setting.
+this shouwd be set to one of the {{domxwef("speechsynthesisvoice")}} objects wetuwned b-by {{domxwef("speechsynthesis.getvoices()")}}. (U ﹏ U) if nyot set by the time the uttewance i-is spoken, (U ﹏ U) the voice used w-wiww be the most suitabwe defauwt voice avaiwabwe fow the uttewance's {{domxwef("speechsynthesisuttewance.wang","wang")}} s-setting. (⑅˘꒳˘)
 
-## Syntax
+## syntax
 
-```plain
-var myVoice = speechSynthesisUtteranceInstance.voice;
-speechSynthesisUtteranceInstance.voice = speechSynthesisVoiceInstance;
+```pwain
+v-vaw myvoice = s-speechsynthesisuttewanceinstance.voice;
+speechsynthesisuttewanceinstance.voice = speechsynthesisvoiceinstance;
 ```
 
-### Value
+### vawue
 
-A {{domxref("SpeechSynthesisVoice")}} object.
+a {{domxwef("speechsynthesisvoice")}} object. òωó
 
-## Examples
+## e-exampwes
 
 ```js
-var synth = window.speechSynthesis;
+vaw synth = window.speechsynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+vaw inputfowm = document.quewysewectow('fowm');
+vaw inputtxt = document.quewysewectow('input');
+vaw v-voicesewect = document.quewysewectow('sewect');
 
-var voices = synth.getVoices();
+v-vaw voices = s-synth.getvoices();
 
   ...
 
-inputForm.onsubmit = function(event) {
-  event.preventDefault();
+i-inputfowm.onsubmit = f-function(event) {
+  event.pweventdefauwt();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  vaw uttewthis = n-new speechsynthesisuttewance(inputtxt.vawue);
+  vaw sewectedoption = voicesewect.sewectedoptions[0].getattwibute('data-name');
+  f-fow(i = 0; i < voices.wength ; i++) {
+    if(voices[i].name === sewectedoption) {
+      uttewthis.voice = voices[i];
     }
   }
-  synth.speak(utterThis);
-  inputTxt.blur();
+  s-synth.speak(uttewthis);
+  inputtxt.bwuw();
 }
 ```
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)
+- [web speech api](/zh-cn/docs/web/api/web_speech_api)

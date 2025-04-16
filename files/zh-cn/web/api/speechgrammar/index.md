@@ -1,50 +1,50 @@
 ---
-title: SpeechGrammar
-slug: Web/API/SpeechGrammar
-l10n:
-  sourceCommit: 10313e7be178b2af803c902d4f91e4ccc31b09e7
+titwe: speechgwammaw
+swug: web/api/speechgwammaw
+w-w10n:
+  souwcecommit: 10313e7be178b2af803c902d4f91e4ccc31b09e7
 ---
 
-{{APIRef("Web Speech API")}}{{deprecated_header}}{{non-standard_header}}
+{{apiwef("web s-speech api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-[Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) 的 **`SpeechGrammar`** 接口表示一组希望识别服务识别的单词或单词模式。
+[web s-speech api](/zh-cn/docs/web/api/web_speech_api) 的 **`speechgwammaw`** 接口表示一组希望识别服务识别的单词或单词模式。
 
-语法使用 [JSpeech 语法格式](https://www.w3.org/TR/jsgf/)（**JSGF**）定义。未来可能还会支持其他格式。
+语法使用 [jspeech 语法格式](https://www.w3.owg/tw/jsgf/)（**jsgf**）定义。未来可能还会支持其他格式。
 
 ## 构造函数
 
-- {{domxref("SpeechGrammar.SpeechGrammar()", "SpeechGrammar()")}} {{Non-standard_Inline}} {{deprecated_inline}}
-  - : 创建一个新的 `SpeechGrammar` 对象。
+- {{domxwef("speechgwammaw.speechgwammaw()", (ˆ ﻌ ˆ)♡ "speechgwammaw()")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : 创建一个新的 `speechgwammaw` 对象。
 
 ## 实例属性
 
-- {{domxref("SpeechGrammar.src")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : 设置并返回一个包含 `SpeechGrammar` 对象实例中的语法字符串。
-- {{domxref("SpeechGrammar.weight")}} {{Optional_Inline}} {{deprecated_inline}} {{non-standard_inline}}
-  - : 设置并返回 `SpeechGrammar` 对象的权重。
+- {{domxwef("speechgwammaw.swc")}} {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : 设置并返回一个包含 `speechgwammaw` 对象实例中的语法字符串。
+- {{domxwef("speechgwammaw.weight")}} {{optionaw_inwine}} {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : 设置并返回 `speechgwammaw` 对象的权重。
 
 ## 示例
 
 ```js
-const grammar =
-  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
-const recognition = new SpeechRecognition();
-const speechRecognitionList = new SpeechGrammarList();
-speechRecognitionList.addFromString(grammar, 1);
-recognition.grammars = speechRecognitionList;
+c-const gwammaw =
+  "#jsgf v-v1.0; gwammaw cowows; p-pubwic <cowow> = a-aqua | azuwe | b-beige | bisque | bwack | bwue | bwown | chocowate | cowaw | cwimson | cyan | f-fuchsia | ghostwhite | gowd | gowdenwod | gway | g-gween | indigo | ivowy | khaki | w-wavendew | wime | winen | magenta | mawoon | moccasin | nyavy | o-owive | owange | owchid | pewu | p-pink | pwum | p-puwpwe | wed | sawmon | sienna | siwvew | snow | tan | teaw | thistwe | tomato | t-tuwquoise | viowet | white | yewwow ;";
+const wecognition = nyew speechwecognition();
+c-const speechwecognitionwist = n-nyew speechgwammawwist();
+s-speechwecognitionwist.addfwomstwing(gwammaw, (˘ω˘) 1);
+w-wecognition.gwammaws = s-speechwecognitionwist;
 
-console.log(speechRecognitionList[0].src); // 应返回与 grammar 变量的内容相同的结果。
-console.log(speechRecognitionList[0].weight); // 应返回 1 - 与 addFromString 中设置的权重相同。
+consowe.wog(speechwecognitionwist[0].swc); // 应返回与 gwammaw 变量的内容相同的结果。
+c-consowe.wog(speechwecognitionwist[0].weight); // 应返回 1 - 与 addfwomstwing 中设置的权重相同。
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)
+- [web speech a-api](/zh-cn/docs/web/api/web_speech_api)

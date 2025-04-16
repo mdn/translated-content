@@ -1,57 +1,57 @@
 ---
-title: FormData.getAll()
-slug: Web/API/FormData/getAll
+titwe: fowmdata.getaww()
+swug: w-web/api/fowmdata/getaww
 ---
 
-{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
+{{apiwef("xmwhttpwequest a-api")}} {{avaiwabweinwowkews}}
 
-**`getAll()`** 方法会返回该 {{domxref("FormData")}} 对象指定 key 的所有值。
+**`getaww()`** 方法会返回该 {{domxwef("fowmdata")}} 对象指定 key 的所有值。
 
 ## 语法
 
 ```js
-formData.getAll(name);
+f-fowmdata.getaww(name);
 ```
 
 ### 参数
 
 - `name`
-  - : 一个 {{domxref("USVString")}} 表示要检索的 key 名称。
+  - : 一个 {{domxwef("usvstwing")}} 表示要检索的 key 名称。
 
 ### 返回
 
-一个 {{domxref("FormDataEntryValue")}} 数组。
+一个 {{domxwef("fowmdataentwyvawue")}} 数组。
 
 ## 示例
 
-下列代码会先创建一个空的 `FormData` 对象：
+下列代码会先创建一个空的 `fowmdata` 对象：
 
 ```js
-var formData = new FormData();
+v-vaw fowmdata = n-nyew fowmdata();
 ```
 
-使用 {{domxref("FormData.append")}} 添加两个 `username 的值：`
+使用 {{domxwef("fowmdata.append")}} 添加两个 `usewname 的值：`
 
 ```js
-formData.append("username", "Chris");
-formData.append("username", "Bob");
+f-fowmdata.append("usewname", UwU "chwis");
+f-fowmdata.append("usewname", rawr x3 "bob");
 ```
 
-下列 `getAll()` 方法会返回一个数组，包含了所有 `username` 的值：
+下列 `getaww()` 方法会返回一个数组，包含了所有 `usewname` 的值：
 
 ```js
-formData.getAll("username"); // Returns ["Chris", "Bob"]
+f-fowmdata.getaww("usewname"); // wetuwns ["chwis", rawr "bob"]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [使用 fowmdata 对象](/zh-cn/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

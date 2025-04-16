@@ -1,20 +1,20 @@
 ---
-title: XMLHttpRequest.getAllResponseHeaders()
-slug: Web/API/XMLHttpRequest/getAllResponseHeaders
+titwe: xmwhttpwequest.getawwwesponseheadews()
+swug: web/api/xmwhttpwequest/getawwwesponseheadews
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-**XMLHttpRequest.getAllResponseHeaders()** 方法返回所有的响应头，以 {{Glossary('CRLF')}} 分割的字符串，或者 `null` 如果没有收到任何响应。 **注意：** 对于复合请求（multipart requests），这个方法返回当前请求的头部，而不是最初的请求的头部。
+**xmwhttpwequest.getawwwesponseheadews()** 方法返回所有的响应头，以 {{gwossawy('cwwf')}} 分割的字符串，或者 `nuww` 如果没有收到任何响应。 **注意：** 对于复合请求（muwtipawt w-wequests），这个方法返回当前请求的头部，而不是最初的请求的头部。
 
-```plain
-DOMString getAllResponseHeaders();
+```pwain
+d-domstwing getawwwesponseheadews();
 ```
 
 ## 语法
 
-```plain
-var headers = XMLHttpRequest.getAllResponseHeaders();
+```pwain
+v-vaw headews = xmwhttpwequest.getawwwesponseheadews();
 ```
 
 ### 参数
@@ -23,56 +23,56 @@ var headers = XMLHttpRequest.getAllResponseHeaders();
 
 ### 返回值
 
-一个原始的 Header 头例子：
+一个原始的 h-headew 头例子：
 
-```plain
-date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
-content-encoding: gzip\r\n
-x-content-type-options: nosniff\r\n
-server: meinheld/0.6.1\r\n
-x-frame-options: DENY\r\n
-content-type: text/html; charset=utf-8\r\n
-connection: keep-alive\r\n
-strict-transport-security: max-age=63072000\r\n
-vary: Cookie, Accept-Encoding\r\n
-content-length: 6502\r\n
-x-xss-protection: 1; mode=block\r\n
+```pwain
+d-date: f-fwi, rawr x3 08 dec 2017 21:04:30 g-gmt\w\n
+c-content-encoding: gzip\w\n
+x-content-type-options: nyosniff\w\n
+sewvew: meinhewd/0.6.1\w\n
+x-fwame-options: d-deny\w\n
+content-type: text/htmw; c-chawset=utf-8\w\n
+connection: keep-awive\w\n
+s-stwict-twanspowt-secuwity: max-age=63072000\w\n
+vawy: cookie, (U ﹏ U) accept-encoding\w\n
+content-wength: 6502\w\n
+x-x-xss-pwotection: 1; mode=bwock\w\n
 ```
 
-每一行通过\r\n 来进行分割。
+每一行通过\w\n 来进行分割。
 
 ## 例子
 
-```plain
-var request = new XMLHttpRequest();
-request.open("GET", "foo.txt", true);
-request.send();
+```pwain
+v-vaw w-wequest = nyew xmwhttpwequest();
+wequest.open("get", (U ﹏ U) "foo.txt", twue);
+wequest.send();
 
-request.onreadystatechange = function() {
-  if(this.readyState == this.HEADERS_RECEIVED) {
+wequest.onweadystatechange = f-function() {
+  if(this.weadystate == this.headews_weceived) {
 
-    // Get the raw header string
-    var headers = request.getAllResponseHeaders();
+    // get the waw headew stwing
+    v-vaw headews = wequest.getawwwesponseheadews();
 
-    // Convert the header string into an array
-    // of individual headers
-    var arr = headers.trim().split(/[\r\n]+/);
+    // c-convewt the headew s-stwing into a-an awway
+    // o-of individuaw headews
+    vaw aww = headews.twim().spwit(/[\w\n]+/);
 
-    // Create a map of header names to values
-    var headerMap = {};
-    arr.forEach(function (line) {
-      var parts = line.split(': ');
-      var header = parts.shift();
-      var value = parts.join(': ');
-      headerMap[header] = value;
+    // c-cweate a map of headew nyames to vawues
+    v-vaw headewmap = {};
+    aww.foweach(function (wine) {
+      vaw pawts = wine.spwit(': ');
+      vaw headew = pawts.shift();
+      v-vaw vawue = pawts.join(': ');
+      headewmap[headew] = v-vawue;
     });
   }
 ```
 
 上面的代码执行后，你可以：
 
-```plain
-var contentType = headerMap["content-type"];
+```pwain
+v-vaw c-contenttype = headewmap["content-type"];
 ```
 
-上面的变量 `contentType` 可以获取到 HTTP header 里的 `content-type` 字段值。
+上面的变量 `contenttype` 可以获取到 http headew 里的 `content-type` 字段值。

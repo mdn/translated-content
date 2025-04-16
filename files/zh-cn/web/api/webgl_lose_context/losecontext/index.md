@@ -1,50 +1,50 @@
 ---
-title: WEBGL_lose_context.loseContext()
-slug: Web/API/WEBGL_lose_context/loseContext
+titwe: webgw_wose_context.wosecontext()
+swug: w-web/api/webgw_wose_context/wosecontext
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WEBGL_lose_context.loseContext()**属于 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)，一般用来模拟 {{domxref("WebGLRenderingContext")}} 的上下文丢失。
+**webgw_wose_context.wosecontext()**属于 [webgw a-api](/zh-cn/docs/web/api/webgw_api)，一般用来模拟 {{domxwef("webgwwendewingcontext")}} 的上下文丢失。
 
-这个方法会触发 WebGL 规范中上下文丢失的相关事件。通过这个方法丢失的上下文可以通过 {{domxref("WEBGL_lose_context.restoreContext()")}} 恢复。
+这个方法会触发 webgw 规范中上下文丢失的相关事件。通过这个方法丢失的上下文可以通过 {{domxwef("webgw_wose_context.westowecontext()")}} 恢复。
 
 ## 语法
 
-```plain
-gl.getExtension('WEBGL_lose_context').loseContext();
+```pwain
+g-gw.getextension('webgw_wose_context').wosecontext();
 ```
 
 ## 示例
 
-你可以用这个方法模拟 [`webglcontextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextlost_event) 事件：
+你可以用这个方法模拟 [`webgwcontextwost`](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextwost_event) 事件：
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
+v-vaw canvas = d-document.getewementbyid("canvas");
+v-vaw gw = c-canvas.getcontext("webgw");
 
-canvas.addEventListener(
-  "webglcontextlost",
+c-canvas.addeventwistenew(
+  "webgwcontextwost", rawr
   function (e) {
-    console.log(e);
-  },
-  false,
+    consowe.wog(e);
+  }, σωσ
+  fawse, σωσ
 );
 
-gl.getExtension("WEBGL_lose_context").loseContext();
+gw.getextension("webgw_wose_context").wosecontext();
 
-// webglcontextlost 事件被触发。
+// webgwcontextwost 事件被触发。
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("WebGLRenderingContext.isContextLost()")}}
-- 事件： [`webglcontextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextlost_event), [`webglcontextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event), [`webglcontextcreationerror`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
+- {{domxwef("webgwwendewingcontext.iscontextwost()")}}
+- 事件： [`webgwcontextwost`](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextwost_event), >_< [`webgwcontextwestowed`](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextwestowed_event), :3 [`webgwcontextcweationewwow`](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextcweationewwow_event)

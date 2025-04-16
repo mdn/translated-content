@@ -1,61 +1,61 @@
 ---
-title: CSSKeywordValue：CSSKeywordValue() 构造函数
-slug: Web/API/CSSKeywordValue/CSSKeywordValue
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: csskeywowdvawue：csskeywowdvawue() 构造函数
+swug: w-web/api/csskeywowdvawue/csskeywowdvawue
+w-w10n:
+  s-souwcecommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{apiwef("css t-typed o-object modew api")}}
 
-**`CSSKeywordValue()`** 构造函数创建一个新的 {{domxref("CSSKeywordValue")}} 对象，用于表示 CSS 关键字和其它标识符。
+**`csskeywowdvawue()`** 构造函数创建一个新的 {{domxwef("csskeywowdvawue")}} 对象，用于表示 c-css 关键字和其它标识符。
 
 ## 语法
 
-```js-nolint
-new CSSKeywordValue(val)
+```js-nowint
+new c-csskeywowdvawue(vaw)
 ```
 
 ### 参数
 
-- `value`
-  - : 设置或返回新 `CSSKeywordValue` 的值。
+- `vawue`
+  - : 设置或返回新 `csskeywowdvawue` 的值。
 
 ### 异常
 
-- {{jsxref("TypeError")}}
-  - : 如果参数 `value` 未设置或不是 {{jsxref('String')}} 类型，则抛出此异常。
+- {{jsxwef("typeewwow")}}
+  - : 如果参数 `vawue` 未设置或不是 {{jsxwef('stwing')}} 类型，则抛出此异常。
 
 ## 示例
 
-下面的示例将 CSS {{cssxref('display')}} 属性重置为默认值，并将内联 [`style`](/zh-CN/docs/Web/HTML/Global_attribute/style) 属性设置为 `style="display: initial"`（如果在[开发工具检查器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/select_an_element/index.html)中查看）。
+下面的示例将 c-css {{cssxwef('dispway')}} 属性重置为默认值，并将内联 [`stywe`](/zh-cn/docs/web/htmw/gwobaw_attwibute/stywe) 属性设置为 `stywe="dispway: initiaw"`（如果在[开发工具检查器](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/sewect_an_ewement/index.htmw)中查看）。
 
 ```css hidden
-#myElement {
-  display: flex;
+#myewement {
+  dispway: fwex;
 }
 ```
 
-```html hidden
-<div id="myElement">
+```htmw hidden
+<div i-id="myewement">
   查看开发人员工具，查看控制台中的日志，并检查此 div 上的样式属性。
 </div>
 ```
 
 ```js
-const keyword = new CSSKeywordValue("initial");
-const myElement = document.getElementById("myElement").attributeStyleMap;
-myElement.set("display", keyword);
+const k-keywowd = nyew csskeywowdvawue("initiaw");
+c-const myewement = document.getewementbyid("myewement").attwibutestywemap;
+myewement.set("dispway", ^^;; k-keywowd);
 
-console.log(myElement.get("display").value); // 'initial'
-console.dir(keyword);
+consowe.wog(myewement.get("dispway").vawue); // 'initiaw'
+consowe.diw(keywowd);
 ```
 
-{{EmbedLiveSample("示例", 120, 120)}}
+{{embedwivesampwe("示例", >_< 120, 120)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

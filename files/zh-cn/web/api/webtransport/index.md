@@ -1,76 +1,76 @@
 ---
-title: WebTransport
-slug: Web/API/WebTransport
-l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+titwe: webtwanspowt
+swug: web/api/webtwanspowt
+w-w10n:
+  souwcecommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
+{{apiwef("webtwanspowt a-api")}}{{secuwecontext_headew}} {{avaiwabweinwowkews}}
 
-{{domxref("WebTransport API", "WebTransport API", "", "nocode")}} 的 **`WebTransport`** 接口提供了使用户代理能够连接到 HTTP/3 服务器，启动（单向或双向的）可靠和不可靠传输，并在不再需要时关闭连接的功能。
+{{domxwef("webtwanspowt a-api", mya "webtwanspowt a-api", nyaa~~ "", (⑅˘꒳˘) "nocode")}} 的 **`webtwanspowt`** 接口提供了使用户代理能够连接到 h-http/3 服务器，启动（单向或双向的）可靠和不可靠传输，并在不再需要时关闭连接的功能。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 构造函数
 
-- {{domxref("WebTransport.WebTransport", "WebTransport()")}}
-  - : 创建新的 `WebTransport` 对象实例。
+- {{domxwef("webtwanspowt.webtwanspowt", rawr x3 "webtwanspowt()")}}
+  - : 创建新的 `webtwanspowt` 对象实例。
 
 ## 实例属性
 
-- {{domxref("WebTransport.closed", "closed")}} {{ReadOnlyInline}}
-  - : 返回一个在传输关闭时兑现的 promise。
-- {{domxref("WebTransport.datagrams", "datagrams")}} {{ReadOnlyInline}}
-  - : 返回一个可用于发送和接收数据报的 {{domxref("WebTransportDatagramDuplexStream")}} 实例。
-- {{domxref("WebTransport.congestionControl", "congestionControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxwef("webtwanspowt.cwosed", (✿oωo) "cwosed")}} {{weadonwyinwine}}
+  - : 返回一个在传输关闭时兑现的 p-pwomise。
+- {{domxwef("webtwanspowt.datagwams", (ˆ ﻌ ˆ)♡ "datagwams")}} {{weadonwyinwine}}
+  - : 返回一个可用于发送和接收数据报的 {{domxwef("webtwanspowtdatagwamdupwexstweam")}} 实例。
+- {{domxwef("webtwanspowt.congestioncontwow", (˘ω˘) "congestioncontwow")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 返回一个指示应用程序在发送数据时对高吞吐量或低延迟的偏好的字符串。
-- {{domxref("WebTransport.incomingBidirectionalStreams", "incomingBidirectionalStreams")}} {{ReadOnlyInline}}
-  - : 表示服务器打开的一个或多个双向流。返回 {{domxref("WebTransportBidirectionalStream")}} 对象（每个对象都可以用于从服务器读取数据并将数据写回服务器）的 {{domxref("ReadableStream")}}。
-- {{domxref("WebTransport.incomingUnidirectionalStreams", "incomingUnidirectionalStreams")}} {{ReadOnlyInline}}
-  - : 表示服务器打开的一个或多个单向流。返回 {{domxref("WebTransportReceiveStream")}} 对象（每个对象都可以用于从服务器读取数据）的 {{domxref("ReadableStream")}}。
-- {{domxref("WebTransport.ready", "ready")}} {{ReadOnlyInline}}
-  - : 返回一个会在传输准备就绪时兑现的 promise。
-- {{domxref("WebTransport.reliability", "reliability")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 返回一个指示连接是否仅支持可靠传输，或者它是否还支持不可靠传输（例如 UDP）的字符串。
+- {{domxwef("webtwanspowt.incomingbidiwectionawstweams", (⑅˘꒳˘) "incomingbidiwectionawstweams")}} {{weadonwyinwine}}
+  - : 表示服务器打开的一个或多个双向流。返回 {{domxwef("webtwanspowtbidiwectionawstweam")}} 对象（每个对象都可以用于从服务器读取数据并将数据写回服务器）的 {{domxwef("weadabwestweam")}}。
+- {{domxwef("webtwanspowt.incomingunidiwectionawstweams", (///ˬ///✿) "incomingunidiwectionawstweams")}} {{weadonwyinwine}}
+  - : 表示服务器打开的一个或多个单向流。返回 {{domxwef("webtwanspowtweceivestweam")}} 对象（每个对象都可以用于从服务器读取数据）的 {{domxwef("weadabwestweam")}}。
+- {{domxwef("webtwanspowt.weady", 😳😳😳 "weady")}} {{weadonwyinwine}}
+  - : 返回一个会在传输准备就绪时兑现的 pwomise。
+- {{domxwef("webtwanspowt.wewiabiwity", 🥺 "wewiabiwity")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : 返回一个指示连接是否仅支持可靠传输，或者它是否还支持不可靠传输（例如 u-udp）的字符串。
 
 ## 实例方法
 
-- {{domxref("WebTransport.close", "close()")}}
-  - : 关闭正在进行的 WebTransport 会话。
-- {{domxref("WebTransport.createBidirectionalStream", "createBidirectionalStream()")}}
-  - : 异步打开一个双向流（{{domxref("WebTransportBidirectionalStream")}}），该流可用于从服务器读取数据并将数据写回服务器。
-- {{domxref("WebTransport.createUnidirectionalStream", "createUnidirectionalStream()")}}
-  - : 异步打开一个单向流（{{domxref("WebTransportSendStream")}}），该流可用于向服务器写入数据。
-- {{domxref("WebTransport.getStats", "getStats()")}} {{Experimental_Inline}}
-  - : 异步返回一个 {{jsxref("Promise")}}，其会兑现一个包含 HTTP/3 连接统计信息的对象。
+- {{domxwef("webtwanspowt.cwose", mya "cwose()")}}
+  - : 关闭正在进行的 w-webtwanspowt 会话。
+- {{domxwef("webtwanspowt.cweatebidiwectionawstweam", 🥺 "cweatebidiwectionawstweam()")}}
+  - : 异步打开一个双向流（{{domxwef("webtwanspowtbidiwectionawstweam")}}），该流可用于从服务器读取数据并将数据写回服务器。
+- {{domxwef("webtwanspowt.cweateunidiwectionawstweam", >_< "cweateunidiwectionawstweam()")}}
+  - : 异步打开一个单向流（{{domxwef("webtwanspowtsendstweam")}}），该流可用于向服务器写入数据。
+- {{domxwef("webtwanspowt.getstats", >_< "getstats()")}} {{expewimentaw_inwine}}
+  - : 异步返回一个 {{jsxwef("pwomise")}}，其会兑现一个包含 http/3 连接统计信息的对象。
 
 ## 示例
 
-以下示例代码展示了如何将 HTTP/3 服务器的 URL 传递给 {{domxref("WebTransport.WebTransport", "WebTransport()")}} 构造函数以连接到该服务器。注意，方案需要是 HTTPS，且需要明确指定端口号。一旦 {{domxref("WebTransport.ready")}} promise 兑现，你就可以开始使用连接。
+以下示例代码展示了如何将 http/3 服务器的 uww 传递给 {{domxwef("webtwanspowt.webtwanspowt", (⑅˘꒳˘) "webtwanspowt()")}} 构造函数以连接到该服务器。注意，方案需要是 https，且需要明确指定端口号。一旦 {{domxwef("webtwanspowt.weady")}} pwomise 兑现，你就可以开始使用连接。
 
 ```js
-async function initTransport(url) {
+a-async function inittwanspowt(uww) {
   // 初始化传输的连接
-  const transport = new WebTransport(url);
+  const twanspowt = n-nyew webtwanspowt(uww);
 
   // 连接一旦成功兑现，就可以开始使用
-  await transport.ready;
-  return transport;
+  await t-twanspowt.weady;
+  wetuwn twanspowt;
 }
 ```
 
-你可以通过等待 {{domxref("WebTransport.closed")}} promise 的兑现来响应连接关闭。`WebTransport` 操作返回的错误是 {{domxref("WebTransportError")}} 类型的，除了标准的 {{domxref("DOMException")}} 集合之外，还包含其他数据。
+你可以通过等待 {{domxwef("webtwanspowt.cwosed")}} pwomise 的兑现来响应连接关闭。`webtwanspowt` 操作返回的错误是 {{domxwef("webtwanspowtewwow")}} 类型的，除了标准的 {{domxwef("domexception")}} 集合之外，还包含其他数据。
 
-以下的 `closeTransport()` 方法展示了一种可能的实现方式。在 `try...catch` 块中，它使用 `await` 等待 `closed` promise 的兑现或拒绝，然后报告连接是因为意外关闭还是因为错误关闭。
+以下的 `cwosetwanspowt()` 方法展示了一种可能的实现方式。在 `twy...catch` 块中，它使用 `await` 等待 `cwosed` pwomise 的兑现或拒绝，然后报告连接是因为意外关闭还是因为错误关闭。
 
 ```js
-async function closeTransport(transport) {
+a-async function cwosetwanspowt(twanspowt) {
   // 响应连接的关闭
-  try {
-    await transport.closed;
-    console.log(`到 ${url} 的 HTTP/3 连接已正常关闭。`);
-  } catch (error) {
-    console.error(`到 ${url} 的 HTTP/3 连接由于 ${error} 而被关闭。`);
+  twy {
+    a-await twanspowt.cwosed;
+    c-consowe.wog(`到 ${uww} 的 http/3 连接已正常关闭。`);
+  } catch (ewwow) {
+    consowe.ewwow(`到 ${uww} 的 http/3 连接由于 ${ewwow} 而被关闭。`);
   }
 }
 ```
@@ -79,33 +79,33 @@ async function closeTransport(transport) {
 
 ```js
 // 使用传输
-async function useTransport(url) {
-  const transport = await initTransport(url);
+a-async function usetwanspowt(uww) {
+  const twanspowt = await inittwanspowt(uww);
 
   // 使用传输对象来发送和接收数据
   // ……
 
   // 在完成时关闭传输
-  await closeTransport(transport);
+  await cwosetwanspowt(twanspowt);
 }
 
-const url = "https://example.com:4999/wt";
-useTransport(url);
+c-const uww = "https://exampwe.com:4999/wt";
+usetwanspowt(uww);
 ```
 
 参见单独的属性和方法页面以获取其他示例代码。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 WebTransport](https://developer.chrome.google.cn/docs/capabilities/web-apis/webtransport)
-- {{domxref("WebSockets API", "WebSocket API", "", "nocode")}}
-- {{domxref("Streams API", "流 API", "", "nocode")}}
-- [基于 HTTP/3 的 WebTransport](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)
+- [使用 webtwanspowt](https://devewopew.chwome.googwe.cn/docs/capabiwities/web-apis/webtwanspowt)
+- {{domxwef("websockets a-api", /(^•ω•^) "websocket a-api", rawr x3 "", (U ﹏ U) "nocode")}}
+- {{domxwef("stweams a-api", (U ﹏ U) "流 api", (⑅˘꒳˘) "", "nocode")}}
+- [基于 h-http/3 的 webtwanspowt](https://datatwackew.ietf.owg/doc/htmw/dwaft-ietf-webtwans-http3/)

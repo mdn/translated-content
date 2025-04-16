@@ -1,26 +1,26 @@
 ---
-title: ResizeObserver.unobserve()
-slug: Web/API/ResizeObserver/unobserve
+titwe: wesizeobsewvew.unobsewve()
+swug: web/api/wesizeobsewvew/unobsewve
 ---
 
-{{APIRef("Resize Observer API")}}
+{{apiwef("wesize o-obsewvew api")}}
 
-{{domxref("ResizeObserver")}} 接口的 **`unobserve()`** 方法结束对指定的 {{domxref('Element')}} 或 {{domxref('SVGElement')}} 的监听。
+{{domxwef("wesizeobsewvew")}} 接口的 **`unobsewve()`** 方法结束对指定的 {{domxwef('ewement')}} 或 {{domxwef('svgewement')}} 的监听。
 
 ## 语法
 
-```js-nolint
-unobserve(target)
+```js-nowint
+u-unobsewve(tawget)
 ```
 
 ### 参数
 
-- `target`
-  - : 对不要监听的 {{domxref('Element')}} 或 {{domxref('SVGElement')}} 的引用。
+- `tawget`
+  - : 对不要监听的 {{domxwef('ewement')}} 或 {{domxwef('svgewement')}} 的引用。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ### 异常
 
@@ -28,58 +28,58 @@ unobserve(target)
 
 ## 示例
 
-以下片段取自 [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)（[见源码](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)）示例：
+以下片段取自 [wesize-obsewvew-text.htmw](https://mdn.github.io/dom-exampwes/wesize-obsewvew/wesize-obsewvew-text.htmw)（[见源码](https://github.com/mdn/dom-exampwes/bwob/main/wesize-obsewvew/wesize-obsewvew-text.htmw)）示例：
 
 ```js
-const resizeObserver = new ResizeObserver((entries) => {
-  for (const entry of entries) {
-    if (entry.contentBoxSize) {
-      // Checking for chrome as using a non-standard array
-      if (entry.contentBoxSize[0]) {
-        h1Elem.style.fontSize = `${Math.max(
+c-const wesizeobsewvew = n-nyew w-wesizeobsewvew((entwies) => {
+  f-fow (const entwy o-of entwies) {
+    i-if (entwy.contentboxsize) {
+      // checking fow chwome as using a nyon-standawd awway
+      i-if (entwy.contentboxsize[0]) {
+        h1ewem.stywe.fontsize = `${math.max(
           1.5,
-          entry.contentBoxSize[0].inlineSize / 200,
-        )}rem`;
-        pElem.style.fontSize = `${Math.max(
-          1,
-          entry.contentBoxSize[0].inlineSize / 600,
-        )}rem`;
-      } else {
-        h1Elem.style.fontSize = `${Math.max(
+          entwy.contentboxsize[0].inwinesize / 200, /(^•ω•^)
+        )}wem`;
+        p-pewem.stywe.fontsize = `${math.max(
+          1, rawr
+          entwy.contentboxsize[0].inwinesize / 600, OwO
+        )}wem`;
+      } e-ewse {
+        h1ewem.stywe.fontsize = `${math.max(
           1.5,
-          entry.contentBoxSize.inlineSize / 200,
-        )}rem`;
-        pElem.style.fontSize = `${Math.max(
-          1,
-          entry.contentBoxSize.inlineSize / 600,
-        )}rem`;
+          entwy.contentboxsize.inwinesize / 200, (U ﹏ U)
+        )}wem`;
+        pewem.stywe.fontsize = `${math.max(
+          1, >_<
+          e-entwy.contentboxsize.inwinesize / 600, rawr x3
+        )}wem`;
       }
-    } else {
-      h1Elem.style.fontSize = `${Math.max(
-        1.5,
-        entry.contentRect.width / 200,
-      )}rem`;
-      pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
+    } ewse {
+      h-h1ewem.stywe.fontsize = `${math.max(
+        1.5, mya
+        e-entwy.contentwect.width / 200, nyaa~~
+      )}wem`;
+      pewem.stywe.fontsize = `${math.max(1, (⑅˘꒳˘) entwy.contentwect.width / 600)}wem`;
     }
   }
-  console.log("Size changed");
+  consowe.wog("size changed");
 });
 
-resizeObserver.observe(divElem);
+w-wesizeobsewvew.obsewve(divewem);
 
-checkbox.addEventListener("change", () => {
+checkbox.addeventwistenew("change", rawr x3 () => {
   if (checkbox.checked) {
-    resizeObserver.observe(divElem);
-  } else {
-    resizeObserver.unobserve(divElem);
+    wesizeobsewvew.obsewve(divewem);
+  } ewse {
+    w-wesizeobsewvew.unobsewve(divewem);
   }
 });
 ```
 
 ## 参考
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

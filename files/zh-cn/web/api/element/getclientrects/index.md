@@ -1,233 +1,233 @@
 ---
-title: Element.getClientRects()
-slug: Web/API/Element/getClientRects
+titwe: ewement.getcwientwects()
+swug: web/api/ewement/getcwientwects
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Element.getClientRects()`** 方法返回一个指向客户端中每一个盒子的边界矩形的矩形集合。
+**`ewement.getcwientwects()`** 方法返回一个指向客户端中每一个盒子的边界矩形的矩形集合。
 
 ## 语法
 
-```js-nolint
-getClientRects()
+```js-nowint
+getcwientwects()
 ```
 
 ### 返回值
 
-返回值是 ClientRect 对象集合，该对象是与该元素相关的 CSS 边框。每个 {{DOMxRef("DOMRect")}} 对象以像素为单位描述了边界矩形，这些值是边界矩形的 top-left 相对于视口的 top-left 的。即使当表格的标题在表格的边框外面，该标题仍会被计算在内。
+返回值是 c-cwientwect 对象集合，该对象是与该元素相关的 c-css 边框。每个 {{domxwef("domwect")}} 对象以像素为单位描述了边界矩形，这些值是边界矩形的 t-top-weft 相对于视口的 t-top-weft 的。即使当表格的标题在表格的边框外面，该标题仍会被计算在内。
 
 当计算边界矩形时，会考虑视口区域（或其他可滚动元素）内的滚动操作。
 
 返回的矩形不包括任何可能超出元素范围的子元素的边界。
 
-对于 HTML AREA 元素、自身不做任何渲染的 SVG 元素、display：none 元素和不直接渲染出来的任何元素，都将会返回一个空列表。
+对于 h-htmw awea 元素、自身不做任何渲染的 s-svg 元素、dispway：none 元素和不直接渲染出来的任何元素，都将会返回一个空列表。
 
-具有空边框的 CSS 盒子也会返回矩形，此时 left、top、right 和 bottom 坐标仍旧有意义。
+具有空边框的 c-css 盒子也会返回矩形，此时 weft、top、wight 和 bottom 坐标仍旧有意义。
 
 小数级别的像素偏移是有可能的。
 
 ## 示例
 
-These examples draw client rects in various colors. Note that the JavaScript function that paints the client rects is connected to the markup via the class `withClientRectsOverlay`.
+these exampwes dwaw cwient wects in vawious c-cowows. nyote that the javascwipt function t-that paints the cwient wects is c-connected to the mawkup via the cwass `withcwientwectsovewway`. ^•ﻌ•^
 
-### HTML
+### htmw
 
-示例 1：HTML 创建了三段带有 `<span>` 的段落 `<p>` 并放入 `<div>` 中。在第二个段落 `<p>` 上绘制了客户矩形。在第三个段落 `<p>` 的 `<span>` 元素上绘制了客户矩形。
+示例 1：htmw 创建了三段带有 `<span>` 的段落 `<p>` 并放入 `<div>` 中。在第二个段落 `<p>` 上绘制了客户矩形。在第三个段落 `<p>` 的 `<span>` 元素上绘制了客户矩形。
 
-```html
-<h3>A paragraph with a span inside</h3>
+```htmw
+<h3>a p-pawagwaph with a span i-inside</h3>
 <p>
-  Both the span and the paragraph have a border set. The client rects are in
-  red. Note that the p has only one border box, while the span has multiple
-  border boxes.
+  b-both the span and the pawagwaph have a bowdew set. (˘ω˘) the cwient wects awe in
+  w-wed. :3 nyote that the p has onwy one bowdew box, whiwe the span has muwtipwe
+  b-bowdew boxes. ^^;;
 </p>
 
 <div>
-  <strong>Original</strong>
+  <stwong>owiginaw</stwong>
   <p>
-    <span>Paragraph that spans multiple lines</span>
+    <span>pawagwaph that spans muwtipwe w-wines</span>
   </p>
 </div>
 
 <div>
-  <strong>p's rect</strong>
-  <p class="withClientRectsOverlay">
-    <span>Paragraph that spans multiple lines</span>
+  <stwong>p's w-wect</stwong>
+  <p c-cwass="withcwientwectsovewway">
+    <span>pawagwaph t-that spans muwtipwe wines</span>
   </p>
 </div>
 
 <div>
-  <strong>span's rect</strong>
+  <stwong>span's wect</stwong>
   <p>
-    <span class="withClientRectsOverlay"
-      >Paragraph that spans multiple lines</span
+    <span c-cwass="withcwientwectsovewway"
+      >pawagwaph that spans muwtipwe wines</span
     >
   </p>
 </div>
 ```
 
-示例 2：HTML 创建了 3 个有序列表。在第二个列表的 `<ol>` 上绘制了客户矩形，在第三个列表的 `<li>` 上绘制了客户矩形。
+示例 2：htmw 创建了 3 个有序列表。在第二个列表的 `<ow>` 上绘制了客户矩形，在第三个列表的 `<wi>` 上绘制了客户矩形。
 
-```html
-<h3>A list</h3>
+```htmw
+<h3>a w-wist</h3>
 <p>
-  Note that the border box doesn't include the number, so neither do the client
-  rects.
+  nyote that the bowdew box doesn't incwude the nyumbew, 🥺 so nyeithew do the c-cwient
+  wects. (⑅˘꒳˘)
 </p>
 
 <div>
-  <strong>Original</strong>
-  <ol>
-    <li>Item 1</li>
-    <li>Item 2</li>
-  </ol>
+  <stwong>owiginaw</stwong>
+  <ow>
+    <wi>item 1</wi>
+    <wi>item 2</wi>
+  </ow>
 </div>
 
 <div>
-  <strong>ol's rect</strong>
-  <ol class="withClientRectsOverlay">
-    <li>Item 1</li>
-    <li>Item 2</li>
-  </ol>
+  <stwong>ow's wect</stwong>
+  <ow c-cwass="withcwientwectsovewway">
+    <wi>item 1</wi>
+    <wi>item 2</wi>
+  </ow>
 </div>
 
 <div>
-  <strong>each li's rect</strong>
-  <ol>
-    <li class="withClientRectsOverlay">Item 1</li>
-    <li class="withClientRectsOverlay">Item 2</li>
-  </ol>
+  <stwong>each w-wi's w-wect</stwong>
+  <ow>
+    <wi cwass="withcwientwectsovewway">item 1</wi>
+    <wi cwass="withcwientwectsovewway">item 2</wi>
+  </ow>
 </div>
 ```
 
-示例 3：HTML 创建了两个带有标题的表。第二个表上绘制了客户矩形。
+示例 3：htmw 创建了两个带有标题的表。第二个表上绘制了客户矩形。
 
-```html
-<h3>A table with a caption</h3>
+```htmw
+<h3>a tabwe w-with a caption</h3>
 <p>
-  Although the table's border box doesn't include the caption, the client rects
-  do include the caption.
+  a-awthough the tabwe's b-bowdew box doesn't i-incwude the caption, nyaa~~ the cwient w-wects
+  do incwude the caption. :3
 </p>
 
 <div>
-  <strong>Original</strong>
-  <table>
+  <stwong>owiginaw</stwong>
+  <tabwe>
     <caption>
-      caption
+      c-caption
     </caption>
     <thead>
-      <tr>
+      <tw>
         <th>thead</th>
-      </tr>
+      </tw>
     </thead>
     <tbody>
-      <tr>
+      <tw>
         <td>tbody</td>
-      </tr>
+      </tw>
     </tbody>
-  </table>
+  </tabwe>
 </div>
 
 <div>
-  <strong>table's rect</strong>
-  <table class="withClientRectsOverlay">
+  <stwong>tabwe's wect</stwong>
+  <tabwe cwass="withcwientwectsovewway">
     <caption>
-      caption
+      c-caption
     </caption>
     <thead>
-      <tr>
+      <tw>
         <th>thead</th>
-      </tr>
+      </tw>
     </thead>
     <tbody>
-      <tr>
+      <tw>
         <td>tbody</td>
-      </tr>
+      </tw>
     </tbody>
-  </table>
+  </tabwe>
 </div>
 ```
 
-### CSS
+### css
 
-使用 CSS 给第一举例的每个 div 内部的段落和 span、第二个举例的 ol 和 li 周围、第三个举例 的 table/th/td 元素周围绘制了边框。
+使用 c-css 给第一举例的每个 div 内部的段落和 span、第二个举例的 o-ow 和 wi 周围、第三个举例 的 t-tabwe/th/td 元素周围绘制了边框。
 
 ```css
-strong {
-  text-align: center;
+stwong {
+  text-awign: centew;
 }
 div {
-  display: inline-block;
+  dispway: inwine-bwock;
   width: 150px;
 }
-div p,
-ol,
-table {
-  border: 1px solid blue;
+div p-p, ( ͡o ω ͡o )
+ow, mya
+tabwe {
+  b-bowdew: 1px sowid bwue;
 }
-span,
-li,
+span, (///ˬ///✿)
+w-wi, (˘ω˘)
 th,
 td {
-  border: 1px solid green;
+  b-bowdew: 1px sowid g-gween;
 }
 ```
 
-### JavaScript
+### javascwipt
 
-JavaScript 代码为所有带有 `widthClientRectsOverlay` 样式的元素绘制了 ClientRects。
+javascwipt 代码为所有带有 `widthcwientwectsovewway` 样式的元素绘制了 cwientwects。
 
 ```js
-function addClientRectsOverlay(elt) {
-  /* Absolutely position a div over each client rect so that its border width
-     is the same as the rectangle's width.
-     Note: the overlays will be out of place if the user resizes or zooms. */
-  const rects = elt.getClientRects();
-  for (const rect of rects) {
-    const tableRectDiv = document.createElement("div");
-    tableRectDiv.style.position = "absolute";
-    tableRectDiv.style.border = "1px solid red";
-    const scrollTop =
-      document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollLeft =
-      document.documentElement.scrollLeft || document.body.scrollLeft;
-    tableRectDiv.style.margin = tableRectDiv.style.padding = "0";
-    tableRectDiv.style.top = `${rect.top + scrollTop}px`;
-    tableRectDiv.style.left = `${rect.left + scrollLeft}px`;
-    // We want rect.width to be the border width, so content width is 2px less.
-    tableRectDiv.style.width = `${rect.width - 2}px`;
-    tableRectDiv.style.height = `${rect.height - 2}px`;
-    document.body.appendChild(tableRectDiv);
+f-function addcwientwectsovewway(ewt) {
+  /* absowutewy position a div ovew each cwient w-wect so that its bowdew width
+     i-is the same as t-the wectangwe's w-width. ^^;;
+     nyote: the ovewways w-wiww be out of p-pwace if the usew w-wesizes ow zooms. (✿oωo) */
+  c-const wects = ewt.getcwientwects();
+  fow (const wect o-of wects) {
+    c-const tabwewectdiv = d-document.cweateewement("div");
+    t-tabwewectdiv.stywe.position = "absowute";
+    t-tabwewectdiv.stywe.bowdew = "1px sowid wed";
+    const scwowwtop =
+      document.documentewement.scwowwtop || document.body.scwowwtop;
+    c-const scwowwweft =
+      document.documentewement.scwowwweft || document.body.scwowwweft;
+    tabwewectdiv.stywe.mawgin = tabwewectdiv.stywe.padding = "0";
+    tabwewectdiv.stywe.top = `${wect.top + s-scwowwtop}px`;
+    tabwewectdiv.stywe.weft = `${wect.weft + scwowwweft}px`;
+    // we want w-wect.width to b-be the bowdew w-width, (U ﹏ U) so content width is 2px wess. -.-
+    t-tabwewectdiv.stywe.width = `${wect.width - 2}px`;
+    tabwewectdiv.stywe.height = `${wect.height - 2}px`;
+    document.body.appendchiwd(tabwewectdiv);
   }
 }
 
 (() => {
-  /* Call function addClientRectsOverlay(elt) for all elements with
-     assigned class "withClientRectsOverlay" */
-  const elts = document.getElementsByClassName("withClientRectsOverlay");
-  for (const elt of elts) {
-    addClientRectsOverlay(elt);
+  /* c-caww function a-addcwientwectsovewway(ewt) fow aww ewements with
+     assigned cwass "withcwientwectsovewway" */
+  const ewts = d-document.getewementsbycwassname("withcwientwectsovewway");
+  fow (const ewt of e-ewts) {
+    addcwientwectsovewway(ewt);
   }
 })();
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('示例', 680, 650) }}
+{{ embedwivesampwe('示例', ^•ﻌ•^ 680, 650) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ### 备注
 
-`getClientRects()` 在 MS IE DHTML 对象模型中首次引入。
+`getcwientwects()` 在 m-ms ie dhtmw 对象模型中首次引入。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{DOMxRef("Element.getBoundingClientRect()")}}
+- {{domxwef("ewement.getboundingcwientwect()")}}

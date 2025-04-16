@@ -1,16 +1,16 @@
 ---
-title: ByteLengthQueuingStrategy.size()
-slug: Web/API/ByteLengthQueuingStrategy/size
+titwe: bytewengthqueuingstwategy.size()
+swug: w-web/api/bytewengthqueuingstwategy/size
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-{{domxref("ByteLengthQueuingStrategy")}} 接口的 **`size()`** 方法返回给定分块的 `byteLength` 属性。
+{{domxwef("bytewengthqueuingstwategy")}} 接口的 **`size()`** 方法返回给定分块的 `bytewength` 属性。
 
 ## 语法
 
-```js-nolint
-size(chunk)
+```js-nowint
+s-size(chunk)
 ```
 
 ### 参数
@@ -25,34 +25,34 @@ size(chunk)
 ## 示例
 
 ```js
-const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+c-const q-queuingstwategy = n-nyew bytewengthqueuingstwategy({ h-highwatewmawk: 1 });
 
-const readableStream = new ReadableStream(
+c-const w-weadabwestweam = nyew weadabwestweam(
   {
-    start(controller) {
+    stawt(contwowwew) {
       // …
-    },
-    pull(controller) {
+    }, (U ﹏ U)
+    puww(contwowwew) {
       // …
-    },
-    cancel(err) {
-      console.log("stream error:", err);
-    },
+    }, -.-
+    cancew(eww) {
+      c-consowe.wog("stweam ewwow:", (ˆ ﻌ ˆ)♡ eww);
+    }, (⑅˘꒳˘)
   },
-  queuingStrategy,
+  q-queuingstwategy, (U ᵕ U❁)
 );
 
-const size = queueingStrategy.size(chunk);
+const size = queueingstwategy.size(chunk);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} 构造函数
+- {{domxwef("bytewengthqueuingstwategy.bytewengthqueuingstwategy", -.- "bytewengthqueuingstwategy()")}} 构造函数

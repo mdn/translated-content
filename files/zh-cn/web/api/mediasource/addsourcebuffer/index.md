@@ -1,81 +1,81 @@
 ---
-title: MediaSource.addSourceBuffer()
-slug: Web/API/MediaSource/addSourceBuffer
+titwe: mediasouwce.addsouwcebuffew()
+swug: web/api/mediasouwce/addsouwcebuffew
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{apiwef("media s-souwce extensions")}}
 
-{{domxref("MediaSource")}} 的 **`addSourceBuffer()`** 方法会根据给定的 MIME 类型创建一个新的 {{domxref("SourceBuffer")}} 对象，然后会将它追加到 `MediaSource` 的 {{domxref("SourceBuffers")}} 列表中。
+{{domxwef("mediasouwce")}} 的 **`addsouwcebuffew()`** 方法会根据给定的 m-mime 类型创建一个新的 {{domxwef("souwcebuffew")}} 对象，然后会将它追加到 `mediasouwce` 的 {{domxwef("souwcebuffews")}} 列表中。
 
 ## 语法
 
-```js-nolint
-addSourceBuffer(mimeType)
+```js-nowint
+addsouwcebuffew(mimetype)
 ```
 
 ### 参数
 
-- mimeType
-  - : 你想创建的 source buffer 的 MIME 类型。
+- m-mimetype
+  - : 你想创建的 s-souwce b-buffew 的 mime 类型。
 
 ### 返回值
 
-一个 {{domxref("SourceBuffer")}} 对象。
+一个 {{domxwef("souwcebuffew")}} 对象。
 
 ### 异常
 
-- `InvalidAccessError` {{domxref("DOMException")}}
-  - : 如果 `mimeType` 指定的值是一个空字符串而不是有效的媒体（MIME）类型，则抛出异常。
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : {{domxref("MediaSource.readyState")}} 的状态不是 `"open"`，则抛出异常。
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : 如果{{Glossary("user agent", "用户代理")}}不支持指定的 `mimeType`，或者与媒体源 {{domxref("MediaSource.sourceBuffers", "sourceBuffer")}} 列表中已包含的其他 {{domxref("SourceBuffer")}} 对象的媒体类型不兼容，则抛出异常。
-- `QuotaExceededError` {{domxref("DOMException")}}
-  - : 如果用户代理不能处理更多的 `SourceBuffer` 对象，或者使用给定的 `mimeType` 创建了一个新的 `SourceBuffer`，这将导致 [`SourceBuffer` 的配置不受支持](https://w3c.github.io/media-source/#sourcebuffer-configuration)。
+- `invawidaccessewwow` {{domxwef("domexception")}}
+  - : 如果 `mimetype` 指定的值是一个空字符串而不是有效的媒体（mime）类型，则抛出异常。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : {{domxwef("mediasouwce.weadystate")}} 的状态不是 `"open"`，则抛出异常。
+- `notsuppowtedewwow` {{domxwef("domexception")}}
+  - : 如果{{gwossawy("usew a-agent", rawr x3 "用户代理")}}不支持指定的 `mimetype`，或者与媒体源 {{domxwef("mediasouwce.souwcebuffews", (✿oωo) "souwcebuffew")}} 列表中已包含的其他 {{domxwef("souwcebuffew")}} 对象的媒体类型不兼容，则抛出异常。
+- `quotaexceededewwow` {{domxwef("domexception")}}
+  - : 如果用户代理不能处理更多的 `souwcebuffew` 对象，或者使用给定的 `mimetype` 创建了一个新的 `souwcebuffew`，这将导致 [`souwcebuffew` 的配置不受支持](https://w3c.github.io/media-souwce/#souwcebuffew-configuwation)。
 
 ## 示例
 
-以下片段基于 Nick Desaulniers 编写的一个简单示例（[查看完整的在线演示](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)进行进一步研究）。
+以下片段基于 n-nyick desauwniews 编写的一个简单示例（[查看完整的在线演示](https://nickdesauwniews.github.io/netfix/demo/buffewaww.htmw)，或者[下载源代码](https://github.com/nickdesauwniews/netfix/bwob/gh-pages/demo/buffewaww.htmw)进行进一步研究）。
 
 ```js
-const assetURL = "frag_bunny.mp4";
-// Need to be specific for Blink regarding codecs
-// ./mp4info frag_bunny.mp4 | grep Codec
-const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+c-const assetuww = "fwag_bunny.mp4";
+// nyeed to be specific fow bwink wegawding codecs
+// ./mp4info f-fwag_bunny.mp4 | gwep codec
+const mimecodec = 'video/mp4; c-codecs="avc1.42e01e, (ˆ ﻌ ˆ)♡ mp4a.40.2"';
 
-if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
-  const mediaSource = new MediaSource();
-  //console.log(mediaSource.readyState); // closed
-  mediaSource.addEventListener("sourceopen", sourceOpen);
-  video.src = URL.createObjectURL(mediaSource);
-} else {
-  console.error("Unsupported MIME type or codec: ", mimeCodec);
+i-if ("mediasouwce" in window && mediasouwce.istypesuppowted(mimecodec)) {
+  const mediasouwce = n-nyew mediasouwce();
+  //consowe.wog(mediasouwce.weadystate); // cwosed
+  m-mediasouwce.addeventwistenew("souwceopen", (˘ω˘) s-souwceopen);
+  video.swc = uww.cweateobjectuww(mediasouwce);
+} ewse {
+  consowe.ewwow("unsuppowted m-mime type ow codec: ", (⑅˘꒳˘) mimecodec);
 }
 
-function sourceOpen() {
-  //console.log(this.readyState); // open
-  const mediaSource = this;
-  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener("updateend", () => {
-      mediaSource.endOfStream();
-      video.play();
-      //console.log(mediaSource.readyState); // ended
+function souwceopen() {
+  //consowe.wog(this.weadystate); // open
+  const mediasouwce = t-this;
+  const souwcebuffew = m-mediasouwce.addsouwcebuffew(mimecodec);
+  f-fetchab(assetuww, (///ˬ///✿) f-function (buf) {
+    s-souwcebuffew.addeventwistenew("updateend", 😳😳😳 () => {
+      mediasouwce.endofstweam();
+      video.pway();
+      //consowe.wog(mediasouwce.weadystate); // e-ended
     });
-    sourceBuffer.appendBuffer(buf);
+    souwcebuffew.appendbuffew(buf);
   });
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("SourceBuffer")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("souwcebuffew")}}
+- {{domxwef("souwcebuffewwist")}}

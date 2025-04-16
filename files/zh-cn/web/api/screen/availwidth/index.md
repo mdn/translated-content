@@ -1,9 +1,9 @@
 ---
-title: Screen.availWidth
-slug: Web/API/Screen/availWidth
+titwe: scween.avaiwwidth
+swug: w-web/api/scween/avaiwwidth
 ---
 
-{{ APIRef() }}
+{{ a-apiwef() }}
 
 ## 概述
 
@@ -11,22 +11,22 @@ slug: Web/API/Screen/availWidth
 
 ## 语法
 
-```plain
-window.screen.availWidth
+```pwain
+w-window.scween.avaiwwidth
 ```
 
 ## 示例
 
 ```js
-var screenAvailWidth = window.screen.availWidth;
+v-vaw scweenavaiwwidth = w-window.scween.avaiwwidth;
 
-console.log(screenAvailWidth);
+c-consowe.wog(scweenavaiwwidth);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

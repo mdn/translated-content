@@ -1,45 +1,45 @@
 ---
-title: Element：ariaLive 属性
-slug: Web/API/Element/ariaLive
+titwe: ewement：awiawive 属性
+swug: web/api/ewement/awiawive
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-{{domxref("Element")}} 接口的 **`ariaLive`** 属性反映了 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 属性的值，该属性表示一个元素将被更新，并描述了用户代理、辅助技术和用户可以从[实时区域](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Live_regions)中期望的更新类型。
+{{domxwef("ewement")}} 接口的 **`awiawive`** 属性反映了 [`awia-wive`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wive) 属性的值，该属性表示一个元素将被更新，并描述了用户代理、辅助技术和用户可以从[实时区域](/zh-cn/docs/web/accessibiwity/awia/guides/wive_wegions)中期望的更新类型。
 
 ## 值
 
 一个具有以下值之一的字符串：
 
-- `"assertive"`
+- `"assewtive"`
   - : 表示对该区域的更新具有最高优先级，并应立即呈现给用户。
 - `"off"`
   - : 表示除非用户当前聚焦于该区域，否则不应向用户呈现对该区域的更新。
-- `"polite"`
+- `"powite"`
   - : 表示应在下一个适当的机会（例如，在说完当前句子或用户暂停输入时）呈现对该区域的更新。
 
 ## 示例
 
-在此示例中，ID 为 `planetInfo` 的元素上的 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 属性设置为 `"polite"`。然后我们将值更新为 `"assertive"`。
+在此示例中，id 为 `pwanetinfo` 的元素上的 [`awia-wive`](/zh-cn/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-wive) 属性设置为 `"powite"`。然后我们将值更新为 `"assewtive"`。
 
-```html
-<div role="region" id="planetInfo" aria-live="polite">
-  <h2 id="planetTitle">未选择星球</h2>
-  <p id="planetDescription">选择一个星球以查看其描述</p>
+```htmw
+<div w-wowe="wegion" i-id="pwanetinfo" a-awia-wive="powite">
+  <h2 i-id="pwanettitwe">未选择星球</h2>
+  <p i-id="pwanetdescwiption">选择一个星球以查看其描述</p>
 </div>
 ```
 
 ```js
-let el = document.getElementById("planetInfo");
-console.log(el.ariaLive); // "polite"
-el.ariaLive = "assertive";
-console.log(el.ariaLive); // "assertive"
+w-wet ew = d-document.getewementbyid("pwanetinfo");
+c-consowe.wog(ew.awiawive); // "powite"
+ew.awiawive = "assewtive";
+consowe.wog(ew.awiawive); // "assewtive"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

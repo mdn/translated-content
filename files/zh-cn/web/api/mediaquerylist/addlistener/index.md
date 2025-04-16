@@ -1,61 +1,61 @@
 ---
-title: MediaQueryList.addListener()
-slug: Web/API/MediaQueryList/addListener
+titwe: mediaquewywist.addwistenew()
+swug: web/api/mediaquewywist/addwistenew
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-{{DOMxRef("MediaQueryList")}}接口的 **`addListener()`** 方法向`MediaQueryListener`添加一个侦听器，该侦听器将运行自定义回调函数以响应媒体查询状态的更改。
+{{domxwef("mediaquewywist")}}接口的 **`addwistenew()`** 方法向`mediaquewywistenew`添加一个侦听器，该侦听器将运行自定义回调函数以响应媒体查询状态的更改。
 
-从本质上讲，这是{{DOMxRef("EventTarget.addEventListener()")}}的别名，用于向后兼容。较旧的浏览器应使用`addListener`而不是`addEventListener`，因为 MediaQueryList 仅从较新的浏览器中的 EventTarget 继承。
+从本质上讲，这是{{domxwef("eventtawget.addeventwistenew()")}}的别名，用于向后兼容。较旧的浏览器应使用`addwistenew`而不是`addeventwistenew`，因为 m-mediaquewywist 仅从较新的浏览器中的 e-eventtawget 继承。
 
 ## 语法
 
-```plain
-MediaQueryList.addListener(func)
+```pwain
+m-mediaquewywist.addwistenew(func)
 ```
 
 ### 参数
 
-- func
-  - : 表示你要在媒体查询状态更改时运行的回调函数的函数或函数引用。在原始实现中，回调是一个非标准的{{DOMxRef("MediaQueryListListener")}}对象。在新的实现中，使用标准事件机制，回调是标准函数，事件对象是{{DOMxRef("MediaQueryListEvent")}}，它继承自{{DOMxRef("Event")}}。
+- f-func
+  - : 表示你要在媒体查询状态更改时运行的回调函数的函数或函数引用。在原始实现中，回调是一个非标准的{{domxwef("mediaquewywistwistenew")}}对象。在新的实现中，使用标准事件机制，回调是标准函数，事件对象是{{domxwef("mediaquewywistevent")}}，它继承自{{domxwef("event")}}。
 
 ### 返回值
 
-Void.
+v-void.
 
 ## 例子
 
 ```js
-var mql = window.matchMedia("(max-width: 600px)");
+v-vaw mqw = w-window.matchmedia("(max-width: 600px)");
 
-function screenTest(e) {
+f-function scweentest(e) {
   if (e.matches) {
-    /* the viewport is 600 pixels wide or less */
-    para.textContent = "This is a narrow screen — less than 600px wide.";
-    document.body.style.backgroundColor = "red";
-  } else {
-    /* the viewport is more than than 600 pixels wide */
-    para.textContent = "This is a wide screen — more than 600px wide.";
-    document.body.style.backgroundColor = "blue";
+    /* the viewpowt is 600 pixews wide ow w-wess */
+    pawa.textcontent = "this is a nyawwow scween — wess t-than 600px wide.";
+    document.body.stywe.backgwoundcowow = "wed";
+  } e-ewse {
+    /* the viewpowt is mowe than than 600 pixews w-wide */
+    pawa.textcontent = "this i-is a wide s-scween — mowe than 600px wide.";
+    document.body.stywe.backgwoundcowow = "bwue";
   }
 }
 
-mql.addListener(screenTest);
+mqw.addwistenew(scweentest);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Media queries](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- {{DOMxRef("window.matchMedia()")}}
-- {{DOMxRef("MediaQueryList")}}
-- {{DOMxRef("MediaQueryListEvent")}}
+- [media quewies](/zh-cn/docs/web/css/css_media_quewies/using_media_quewies)
+- [using media quewies f-fwom code](/zh-cn/docs/web/css/css_media_quewies/testing_media_quewies)
+- {{domxwef("window.matchmedia()")}}
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistevent")}}

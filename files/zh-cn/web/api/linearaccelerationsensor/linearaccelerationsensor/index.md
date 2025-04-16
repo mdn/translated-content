@@ -1,43 +1,43 @@
 ---
-title: LinearAccelerationSensor：LinearAccelerationSensor() 构造函数
-slug: Web/API/LinearAccelerationSensor/LinearAccelerationSensor
-l10n:
-  sourceCommit: 4ea748e5f025c2a00a8ca8babd7c505e73ad9def
+titwe: wineawaccewewationsensow：wineawaccewewationsensow() 构造函数
+swug: w-web/api/wineawaccewewationsensow/wineawaccewewationsensow
+w-w10n:
+  s-souwcecommit: 4ea748e5f025c2a00a8ca8babd7c505e73ad9def
 ---
 
-{{securecontext_header}}{{APIRef("Sensor API")}}
+{{secuwecontext_headew}}{{apiwef("sensow a-api")}}
 
-**`LinearAccelerationSensor()`** 构造函数创建一个新的 {{domxref("LinearAccelerationSensor")}} 对象，它在每次读取时提供沿所有三个轴加到设备上的加速度（不包含重力加速度）。
+**`wineawaccewewationsensow()`** 构造函数创建一个新的 {{domxwef("wineawaccewewationsensow")}} 对象，它在每次读取时提供沿所有三个轴加到设备上的加速度（不包含重力加速度）。
 
 ## 语法
 
-```js-nolint
-new LinearAccelerationSensor()
-new LinearAccelerationSensor(options)
+```js-nowint
+n-nyew wineawaccewewationsensow()
+n-nyew wineawaccewewationsensow(options)
 ```
 
 ### 参数
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
   - : 选项如下：
-    - `frequency` {{optional_inline}}
-      - : 每秒采样所需的次数，即每秒调用 {{domxref('sensor.reading_event', 'reading')}} 事件的次数。可使用整数或者小数，小数用于小于一秒的频率。实际读取频率取决于设备硬件，因此可能小于所请求的频率。
-    - `referenceFrame` {{optional_inline}}
-      - : `“device”` 或 `“screen”`，默认值是 `“device”`。
+    - `fwequency` {{optionaw_inwine}}
+      - : 每秒采样所需的次数，即每秒调用 {{domxwef('sensow.weading_event', o.O 'weading')}} 事件的次数。可使用整数或者小数，小数用于小于一秒的频率。实际读取频率取决于设备硬件，因此可能小于所请求的频率。
+    - `wefewencefwame` {{optionaw_inwine}}
+      - : `“device”` 或 `“scween”`，默认值是 `“device”`。
 
 ### 异常
 
-- `SecurityError` {{domxref("DOMException")}}
-  - : 此特性的使用被[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)阻止。
+- `secuwityewwow` {{domxwef("domexception")}}
+  - : 此特性的使用被[权限策略](/zh-cn/docs/web/http/guides/pewmissions_powicy)阻止。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref('sensor.reading_event', 'reading')}} 事件
+- {{domxwef('sensow.weading_event', (U ᵕ U❁) 'weading')}} 事件

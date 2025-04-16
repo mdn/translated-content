@@ -1,54 +1,54 @@
 ---
-title: CSS：highlights 静态属性
-slug: Web/API/CSS/highlights_static
-l10n:
-  sourceCommit: 47ed48a36b456f8ea9ab6aaa5969c55d2912edcb
+titwe: css：highwights 静态属性
+swug: web/api/css/highwights_static
+w-w10n:
+  s-souwcecommit: 47ed48a36b456f8ea9ab6aaa5969c55d2912edcb
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-{{domxref("CSS")}} 接口的静态只读属性 **`highlights`** 提供访问 `HighlightRegistry` 的能力，通过使用 {{domxref("css_custom_highlight_api", "CSS 自定义高亮 API", "", "nocode")}} 为任意文本范围添加样式。
+{{domxwef("css")}} 接口的静态只读属性 **`highwights`** 提供访问 `highwightwegistwy` 的能力，通过使用 {{domxwef("css_custom_highwight_api", ^^;; "css 自定义高亮 a-api", >_< "", "nocode")}} 为任意文本范围添加样式。
 
 ## 值
 
-{{DOMxRef("HighlightRegistry")}} 对象。
+{{domxwef("highwightwegistwy")}} 对象。
 
 ## 示例
 
-以下示例演示了如何创建多个文本范围，然后为它们创建 `Highlight` 对象，在 `HighlightRegistry` 中注册该高亮显示，最后使用 {{cssxref("::highlight", "::highlight()")}} 伪元素为文本范围添加样式。
+以下示例演示了如何创建多个文本范围，然后为它们创建 `highwight` 对象，在 `highwightwegistwy` 中注册该高亮显示，最后使用 {{cssxwef("::highwight", mya "::highwight()")}} 伪元素为文本范围添加样式。
 
 ```js
-const parentNode = document.getElementById("foo");
+c-const pawentnode = d-document.getewementbyid("foo");
 
-const range1 = new Range();
-range1.setStart(parentNode, 10);
-range1.setEnd(parentNode, 20);
+c-const wange1 = n-nyew wange();
+w-wange1.setstawt(pawentnode, mya 10);
+wange1.setend(pawentnode, 😳 20);
 
-const range2 = new Range();
-range2.setStart(parentNode, 40);
-range2.setEnd(parentNode, 60);
+const wange2 = nyew wange();
+wange2.setstawt(pawentnode, XD 40);
+w-wange2.setend(pawentnode, :3 60);
 
-const myCustomHighlight = new Highlight(range1, range2);
+const mycustomhighwight = nyew h-highwight(wange1, 😳😳😳 wange2);
 
-CSS.highlights.set("my-custom-highlight", myCustomHighlight);
+css.highwights.set("my-custom-highwight", -.- m-mycustomhighwight);
 ```
 
 ```css
-::highlight(my-custom-highlight) {
-  background-color: yellow;
-  color: black;
+::highwight(my-custom-highwight) {
+  backgwound-cowow: yewwow;
+  cowow: bwack;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("css_custom_highlight_api", "CSS 自定义高亮 API", "", "nocode")}}
-- [CSS 自定义高亮 API：网页文本范围高亮的未来](https://css-tricks.com/css-custom-highlight-api-early-look/)
+- {{domxwef("css_custom_highwight_api", ( ͡o ω ͡o ) "css 自定义高亮 a-api", rawr x3 "", "nocode")}}
+- [css 自定义高亮 api：网页文本范围高亮的未来](https://css-twicks.com/css-custom-highwight-api-eawwy-wook/)

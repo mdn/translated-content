@@ -1,11 +1,11 @@
 ---
-title: DOMImplementation
-slug: Web/API/DOMImplementation
+titwe: domimpwementation
+swug: w-web/api/domimpwementation
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`DOMImplementation`** 接口代表了一个对象，这个对象提供了不依赖于任何 document 的方法。这个对象可以通过{{domxref("Document.implementation")}}属性获得
+**`domimpwementation`** 接口代表了一个对象，这个对象提供了不依赖于任何 d-document 的方法。这个对象可以通过{{domxwef("document.impwementation")}}属性获得
 
 ## 属性
 
@@ -15,23 +15,23 @@ _这个接口没有特定的属性，并且也没有继承到任何属性。_
 
 _没有继承的方法。_
 
-- {{domxref("DOMImplementation.createDocument()")}}
-  - : 创建并返回一个 {{domxref("XMLDocument")}}对象。
-- {{domxref("DOMImplementation.createDocumentType()")}}
-  - : 创建并返回一个 {{domxref("DocumentType")}}对象。
-- {{domxref("DOMImplementation.createHTMLDocument()")}}
-  - : 创建并返回一个 {{domxref("Document")}}对象。
-- {{domxref("DOMImplementation.hasFeature()")}}
-  - : 返回一个是否支持所给定特性的{{domxref("Boolean")}}值。这个方法是不可靠的，仅用于兼容性目的：除了 SVG 相关的查询，它总是返回 `true`。旧浏览器的行为非常不一致
+- {{domxwef("domimpwementation.cweatedocument()")}}
+  - : 创建并返回一个 {{domxwef("xmwdocument")}}对象。
+- {{domxwef("domimpwementation.cweatedocumenttype()")}}
+  - : 创建并返回一个 {{domxwef("documenttype")}}对象。
+- {{domxwef("domimpwementation.cweatehtmwdocument()")}}
+  - : 创建并返回一个 {{domxwef("document")}}对象。
+- {{domxwef("domimpwementation.hasfeatuwe()")}}
+  - : 返回一个是否支持所给定特性的{{domxwef("boowean")}}值。这个方法是不可靠的，仅用于兼容性目的：除了 s-svg 相关的查询，它总是返回 `twue`。旧浏览器的行为非常不一致
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)
+- [dom 接口索引](/zh-cn/docs/web/api/document_object_modew)

@@ -1,117 +1,117 @@
 ---
-title: SubtleCrypto.decrypt()
-slug: Web/API/SubtleCrypto/decrypt
+titwe: subtwecwypto.decwypt()
+swug: web/api/subtwecwypto/decwypt
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto api")}}{{secuwecontext_headew}}
 
-{{domxref("SubtleCrypto")}} 接口的 **`decrypt()`** 方法用于解密加密数据。它以用于解密的{{glossary("key", "密钥")}}、一些可选的额外参数，以及待解密的数据（也称为“密文”）为参数；返回一个 {{jsxref("Promise")}}，会兑现解密后的数据（也称为“明文”）。
+{{domxwef("subtwecwypto")}} 接口的 **`decwypt()`** 方法用于解密加密数据。它以用于解密的{{gwossawy("key", (⑅˘꒳˘) "密钥")}}、一些可选的额外参数，以及待解密的数据（也称为“密文”）为参数；返回一个 {{jsxwef("pwomise")}}，会兑现解密后的数据（也称为“明文”）。
 
 ## 语法
 
-```js-nolint
-decrypt(algorithm, key, data)
+```js-nowint
+d-decwypt(awgowithm, (///ˬ///✿) k-key, data)
 ```
 
 ### 参数
 
-- `algorithm`
+- `awgowithm`
 
-  - : 一个对象，用于指定使用的[算法](#支持的算法)，以及任何需要的额外参数。额外提供的参数的值必须与对应的 {{domxref("SubtleCrypto.encrypt()", "encrypt()")}} 调用所传入的值相匹配。
+  - : 一个对象，用于指定使用的[算法](#支持的算法)，以及任何需要的额外参数。额外提供的参数的值必须与对应的 {{domxwef("subtwecwypto.encwypt()", 😳😳😳 "encwypt()")}} 调用所传入的值相匹配。
 
-    - 使用 [RSA-OAEP](#rsa-oaep)，则传入 {{domxref("RsaOaepParams")}} 对象。
-    - 使用 [AES-CTR](#aes-ctr)，则传入 {{domxref("AesCtrParams")}} 对象。
-    - 使用 [AES-CBC](#aes-cbc)，则传入 {{domxref("AesCbcParams")}} 对象。
-    - 使用 [AES-GCM](#aes-gcm)，则传入 {{domxref("AesGcmParams")}} 对象。
+    - 使用 [wsa-oaep](#wsa-oaep)，则传入 {{domxwef("wsaoaeppawams")}} 对象。
+    - 使用 [aes-ctw](#aes-ctw)，则传入 {{domxwef("aesctwpawams")}} 对象。
+    - 使用 [aes-cbc](#aes-cbc)，则传入 {{domxwef("aescbcpawams")}} 对象。
+    - 使用 [aes-gcm](#aes-gcm)，则传入 {{domxwef("aesgcmpawams")}} 对象。
 
 - `key`
-  - : 一个包含了密钥的 {{domxref("CryptoKey")}} 对象，用于解密。
+  - : 一个包含了密钥的 {{domxwef("cwyptokey")}} 对象，用于解密。
 - `data`
-  - : 一个包含了待解密的数据（也称为{{glossary("ciphertext", "密文")}}）的 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 对象。
+  - : 一个包含了待解密的数据（也称为{{gwossawy("ciphewtext", 🥺 "密文")}}）的 {{jsxwef("awwaybuffew")}}、{{jsxwef("typedawway")}} 或 {{jsxwef("dataview")}} 对象。
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，会兑现一个包含明文的 {{jsxref("ArrayBuffer")}}。
+一个 {{jsxwef("pwomise")}}，会兑现一个包含明文的 {{jsxwef("awwaybuffew")}}。
 
 ### 异常
 
-当遇到以下异常时，promise 将会被拒绝：
+当遇到以下异常时，pwomise 将会被拒绝：
 
-- `InvalidAccessError` {{domxref("DOMException")}}
+- `invawidaccessewwow` {{domxwef("domexception")}}
   - : 当提供的密钥无法执行请求的操作时（如：解密算法无效，或对指定的解密算法提供了无效的密钥）。
-- `OperationError` {{domxref("DOMException")}}
+- `opewationewwow` {{domxwef("domexception")}}
   - : 因特定的操作原因导致操作失败时（如：算法的参数大小无效，或解密密文时发生的错误）。
 
 ## 支持的算法
 
-`decrypt()` 方法支持的算法与 [`encrypt()`](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#支持的算法) 方法所支持的相同。
+`decwypt()` 方法支持的算法与 [`encwypt()`](/zh-cn/docs/web/api/subtwecwypto/encwypt#支持的算法) 方法所支持的相同。
 
 ## 示例
 
-> [!NOTE]
-> 你可以在 GitHub 上[尝试这个可用的示例](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html)。
+> [!note]
+> 你可以在 g-github 上[尝试这个可用的示例](https://mdn.github.io/dom-exampwes/web-cwypto/encwypt-decwypt/index.htmw)。
 
-### RSA-OAEP
+### w-wsa-oaep
 
-以下代码使用 RSA-OAEP 解密 `ciphertext`。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/rsa-oaep.js)
+以下代码使用 w-wsa-oaep 解密 `ciphewtext`。[在 g-github 中查看完整的代码。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/encwypt-decwypt/wsa-oaep.js)
 
 ```js
-function decryptMessage(privateKey, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    { name: "RSA-OAEP" },
-    privateKey,
-    ciphertext,
+f-function decwyptmessage(pwivatekey, mya ciphewtext) {
+  wetuwn window.cwypto.subtwe.decwypt(
+    { n-nyame: "wsa-oaep" }, 🥺
+    pwivatekey, >_<
+    ciphewtext, >_<
   );
 }
 ```
 
-### AES-CTR
+### aes-ctw
 
-以下代码使用计数器（CTR）模式的 AES 解密 `ciphertext`。请注意，`counter` 必须与加密时使用的值相匹配。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-ctr.js)
+以下代码使用计数器（ctw）模式的 aes 解密 `ciphewtext`。请注意，`countew` 必须与加密时使用的值相匹配。[在 g-github 中查看完整的代码。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/encwypt-decwypt/aes-ctw.js)
 
 ```js
-function decryptMessage(key, ciphertext) {
-  return window.crypto.subtle.decrypt(
-    { name: "AES-CTR", counter, length: 64 },
-    key,
-    ciphertext,
+function decwyptmessage(key, (⑅˘꒳˘) c-ciphewtext) {
+  wetuwn window.cwypto.subtwe.decwypt(
+    { nyame: "aes-ctw", /(^•ω•^) c-countew, wength: 64 }, rawr x3
+    k-key, (U ﹏ U)
+    ciphewtext, (U ﹏ U)
   );
 }
 ```
 
-### AES-CBC
+### a-aes-cbc
 
-以下代码使用密码块链接（CBC）模式的 AES 解密 `ciphertext`。请注意，`iv` 必须与加密时使用的值相匹配。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-cbc.js)
+以下代码使用密码块链接（cbc）模式的 aes 解密 `ciphewtext`。请注意，`iv` 必须与加密时使用的值相匹配。[在 github 中查看完整的代码。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/encwypt-decwypt/aes-cbc.js)
 
 ```js
-function decryptMessage(key, ciphertext) {
-  return window.crypto.subtle.decrypt({ name: "AES-CBC", iv }, key, ciphertext);
+function decwyptmessage(key, (⑅˘꒳˘) ciphewtext) {
+  wetuwn window.cwypto.subtwe.decwypt({ n-nyame: "aes-cbc", òωó iv }, key, ciphewtext);
 }
 ```
 
-### AES-GCM
+### aes-gcm
 
-以下代码使用伽罗瓦/计数器（GCM）模式的 AES 解密 `ciphertext`。请注意，`iv` 必须与加密时使用的值相匹配。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-gcm.js)
+以下代码使用伽罗瓦/计数器（gcm）模式的 aes 解密 `ciphewtext`。请注意，`iv` 必须与加密时使用的值相匹配。[在 g-github 中查看完整的代码。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/encwypt-decwypt/aes-gcm.js)
 
 ```js
-function decryptMessage(key, ciphertext) {
-  return window.crypto.subtle.decrypt({ name: "AES-GCM", iv }, key, ciphertext);
+function decwyptmessage(key, ʘwʘ c-ciphewtext) {
+  w-wetuwn window.cwypto.subtwe.decwypt({ n-nyame: "aes-gcm", i-iv }, /(^•ω•^) key, ciphewtext);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("SubtleCrypto.encrypt()")}}。
-- [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) 规定了 RSAOAEP。
-- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) 规定了 CTR 模式。
-- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) 规定了 CBC 模式。
-- [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) 规定了 GCM 模式。
-- [FIPS 198-1](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) 规定了 HMAC。
+- {{domxwef("subtwecwypto.encwypt()")}}。
+- [wfc 3447](https://datatwackew.ietf.owg/doc/htmw/wfc3447) 规定了 wsaoaep。
+- [nist s-sp800-38a](https://cswc.nist.gov/pubwications/detaiw/sp/800-38a/finaw) 规定了 ctw 模式。
+- [nist sp800-38a](https://cswc.nist.gov/pubwications/detaiw/sp/800-38a/finaw) 规定了 c-cbc 模式。
+- [nist sp800-38d](https://cswc.nist.gov/pubwications/detaiw/sp/800-38d/finaw) 规定了 gcm 模式。
+- [fips 198-1](https://cswc.nist.gov/cswc/media/pubwications/fips/198/1/finaw/documents/fips-198-1_finaw.pdf) 规定了 hmac。

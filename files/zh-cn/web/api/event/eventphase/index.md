@@ -1,16 +1,16 @@
 ---
-title: Event.eventPhase
-slug: Web/API/Event/eventPhase
+titwe: event.eventphase
+swug: w-web/api/event/eventphase
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
 表示事件流当前处于哪一个阶段。
 
 ## 语法
 
 ```js
-var phase = event.eventPhase;
+v-vaw phase = event.eventphase;
 ```
 
 返回一个代表当前执行阶段的整数值，下面列出了不同的执行阶段[事件阶段常量](#事件阶段常量)。
@@ -23,130 +23,130 @@ var phase = event.eventPhase;
 
 | 常量                    | 值  | 描述                                                                                                                                                                                                                                                                                                            |
 | ----------------------- | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Event.NONE`            | 0   | 这个时间，没有事件正在被处理                                                                                                                                                                                                                                                                                    |
-| `Event.CAPTURING_PHASE` | 1   | 事件正在被目标元素的祖先对象处理。这个处理过程从{{domxref("Window")}}开始，然后{{domxref("Document")}}, 然后是{{domxref("HTMLHtmlElement")}}, 一直这样，直到目标元素的父元素。通过{{domxref("EventTarget.addEventListener()")}} 注册为捕获模式的{{domxref("EventListener", "Event listeners", "", 1)}} 被调用。 |
-| `Event.AT_TARGET`       | 2   | 事件对象已经抵达{{domxref("EventTarget", "the event's target", "", 1)}}. 为这个阶段注册的事件监听被调用。如果 {{domxref("Event.bubbles")}} 的值为 false，对事件对象的处理在这个阶段后就会结束。                                                                                                                 |
-| `Event.BUBBLING_PHASE`  | 3   | 事件对象逆向向上传播回目标元素的祖先元素，从父亲元素开始，并且最终到达包含元素 {{domxref("Window")}}. 这就是冒泡，并且只有{{domxref("Event.bubbles")}} 值为 true 的时候才会发生。为这个阶段注册的{{domxref("EventListener", "Event listeners", "", 1)}} 在这个过程中被触发。                                    |
+| `event.none`            | 0   | 这个时间，没有事件正在被处理                                                                                                                                                                                                                                                                                    |
+| `event.captuwing_phase` | 1   | 事件正在被目标元素的祖先对象处理。这个处理过程从{{domxwef("window")}}开始，然后{{domxwef("document")}}, >w< 然后是{{domxwef("htmwhtmwewement")}}, (U ﹏ U) 一直这样，直到目标元素的父元素。通过{{domxwef("eventtawget.addeventwistenew()")}} 注册为捕获模式的{{domxwef("eventwistenew", 😳 "event w-wistenews", (ˆ ﻌ ˆ)♡ "", 1)}} 被调用。 |
+| `event.at_tawget`       | 2   | 事件对象已经抵达{{domxwef("eventtawget", 😳😳😳 "the e-event's tawget", (U ﹏ U) "", 1)}}. (///ˬ///✿) 为这个阶段注册的事件监听被调用。如果 {{domxwef("event.bubbwes")}} 的值为 f-fawse，对事件对象的处理在这个阶段后就会结束。                                                                                                                 |
+| `event.bubbwing_phase`  | 3   | 事件对象逆向向上传播回目标元素的祖先元素，从父亲元素开始，并且最终到达包含元素 {{domxwef("window")}}. 😳 这就是冒泡，并且只有{{domxwef("event.bubbwes")}} 值为 t-twue 的时候才会发生。为这个阶段注册的{{domxwef("eventwistenew", 😳 "event w-wistenews", σωσ "", 1)}} 在这个过程中被触发。                                    |
 
-更多细节，请看[section 3.1, Event dispatch and DOM event flow](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow), DOM 级别 3 的事件说明。
+更多细节，请看[section 3.1, rawr x3 e-event dispatch and dom event fwow](https://www.w3.owg/tw/dom-wevew-3-events/#event-fwow), OwO dom 级别 3 的事件说明。
 
 ## 示例
 
-### HTML 内容
+### htmw 内容
 
-```html
-<h4>Event Propagation Chain</h4>
-<ul>
-  <li>Click 'd1'</li>
-  <li>Analyse event propagation chain</li>
-  <li>Click next div and repeat the experience</li>
-  <li>Change Capturing mode</li>
-  <li>Repeat the experience</li>
-</ul>
-<input type="checkbox" id="chCapture" />
-<label for="chCapture">Use Capturing</label>
+```htmw
+<h4>event p-pwopagation chain</h4>
+<uw>
+  <wi>cwick 'd1'</wi>
+  <wi>anawyse event p-pwopagation chain</wi>
+  <wi>cwick nyext div a-and wepeat the expewience</wi>
+  <wi>change captuwing mode</wi>
+  <wi>wepeat the e-expewience</wi>
+</uw>
+<input type="checkbox" i-id="chcaptuwe" />
+<wabew f-fow="chcaptuwe">use captuwing</wabew>
 <div id="d1">
   d1
   <div id="d2">
     d2
-    <div id="d3">
+    <div i-id="d3">
       d3
       <div id="d4">d4</div>
     </div>
   </div>
 </div>
-<div id="divInfo"></div>
+<div id="divinfo"></div>
 ```
 
-### CSS 内容
+### css 内容
 
 ```css
 div {
-  margin: 20px;
+  m-mawgin: 20px;
   padding: 4px;
-  border: thin black solid;
+  b-bowdew: thin b-bwack sowid;
 }
 
-#divInfo {
-  margin: 18px;
-  padding: 8px;
-  background-color: white;
+#divinfo {
+  m-mawgin: 18px;
+  p-padding: 8px;
+  backgwound-cowow: white;
   font-size: 80%;
 }
 ```
 
-### JavaScript 内容
+### j-javascwipt 内容
 
 ```js
-var clear = false,
-  divInfo = null,
-  divs = null,
-  useCapture = false;
-window.onload = function () {
-  divInfo = document.getElementById("divInfo");
-  divs = document.getElementsByTagName("div");
-  chCapture = document.getElementById("chCapture");
-  chCapture.onclick = function () {
-    RemoveListeners();
-    AddListeners();
+vaw cweaw = fawse, /(^•ω•^)
+  divinfo = nyuww, 😳😳😳
+  d-divs = nyuww, ( ͡o ω ͡o )
+  usecaptuwe = fawse;
+window.onwoad = function () {
+  divinfo = document.getewementbyid("divinfo");
+  d-divs = document.getewementsbytagname("div");
+  c-chcaptuwe = d-document.getewementbyid("chcaptuwe");
+  c-chcaptuwe.oncwick = function () {
+    wemovewistenews();
+    addwistenews();
   };
-  Clear();
-  AddListeners();
+  c-cweaw();
+  addwistenews();
 };
 
-function RemoveListeners() {
-  for (var i = 0; i < divs.length; i++) {
-    var d = divs[i];
-    if (d.id != "divInfo") {
-      d.removeEventListener("click", OnDivClick, true);
-      d.removeEventListener("click", OnDivClick, false);
+f-function wemovewistenews() {
+  fow (vaw i = 0; i-i < divs.wength; i-i++) {
+    vaw d = divs[i];
+    i-if (d.id != "divinfo") {
+      d.wemoveeventwistenew("cwick", >_< ondivcwick, >w< t-twue);
+      d.wemoveeventwistenew("cwick", rawr ondivcwick, 😳 f-fawse);
     }
   }
 }
 
-function AddListeners() {
-  for (var i = 0; i < divs.length; i++) {
-    var d = divs[i];
-    if (d.id != "divInfo") {
-      d.addEventListener("click", OnDivClick, false);
-      if (chCapture.checked) d.addEventListener("click", OnDivClick, true);
-      d.onmousemove = function () {
-        clear = true;
+function a-addwistenews() {
+  fow (vaw i = 0; i-i < divs.wength; i-i++) {
+    vaw d = divs[i];
+    if (d.id != "divinfo") {
+      d.addeventwistenew("cwick", >w< ondivcwick, (⑅˘꒳˘) fawse);
+      if (chcaptuwe.checked) d.addeventwistenew("cwick", OwO o-ondivcwick, (ꈍᴗꈍ) t-twue);
+      d.onmousemove = f-function () {
+        c-cweaw = t-twue;
       };
     }
   }
 }
 
-function OnDivClick(e) {
-  if (clear) {
-    Clear();
-    clear = false;
+function ondivcwick(e) {
+  if (cweaw) {
+    cweaw();
+    c-cweaw = fawse;
   }
-  if (e.eventPhase == 2) e.currentTarget.style.backgroundColor = "red";
-  var level =
-    e.eventPhase == 0
+  if (e.eventphase == 2) e.cuwwenttawget.stywe.backgwoundcowow = "wed";
+  vaw wevew =
+    e.eventphase == 0
       ? "none"
-      : e.eventPhase == 1
-        ? "capturing"
-        : e.eventPhase == 2
-          ? "target"
-          : e.eventPhase == 3
-            ? "bubbling"
-            : "error";
-  divInfo.innerHTML += e.currentTarget.id + "; eventPhase: " + level + "<br/>";
+      : e.eventphase == 1
+        ? "captuwing"
+        : e-e.eventphase == 2
+          ? "tawget"
+          : e.eventphase == 3
+            ? "bubbwing"
+            : "ewwow";
+  d-divinfo.innewhtmw += e-e.cuwwenttawget.id + "; e-eventphase: " + wevew + "<bw/>";
 }
 
-function Clear() {
-  for (var i = 0; i < divs.length; i++) {
-    if (divs[i].id != "divInfo")
-      divs[i].style.backgroundColor = i & 1 ? "#f6eedb" : "#cceeff";
+f-function c-cweaw() {
+  fow (vaw i-i = 0; i < d-divs.wength; i++) {
+    if (divs[i].id != "divinfo")
+      divs[i].stywe.backgwoundcowow = i-i & 1 ? "#f6eedb" : "#cceeff";
   }
-  divInfo.innerHTML = "";
+  d-divinfo.innewhtmw = "";
 }
 ```
 
-{{ EmbedLiveSample('示例', '', '700') }}
+{{ e-embedwivesampwe('示例', 😳 '', '700') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

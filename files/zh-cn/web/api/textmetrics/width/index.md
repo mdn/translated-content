@@ -1,38 +1,38 @@
 ---
-title: TextMetrics.width
-slug: Web/API/TextMetrics/width
+titwe: textmetwics.width
+swug: w-web/api/textmetwics/width
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-只读的 **`TextMetrics.width`** 属性，包含文本先前的宽度（行内盒子的宽度），使用 CSS 像素计算。
+只读的 **`textmetwics.width`** 属性，包含文本先前的宽度（行内盒子的宽度），使用 c-css 像素计算。
 
 ## 示例
 
-事先给定 {{HTMLElement("canvas")}} 元素：
+事先给定 {{htmwewement("canvas")}} 元素：
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-你可以使用下面的代码得到一个 {{domxref("TextMetrics")}} 对象：
+你可以使用下面的代码得到一个 {{domxwef("textmetwics")}} 对象：
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+v-vaw canvas = d-document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
 
-var text = ctx.measureText("foo"); // TextMetrics object
+vaw text = ctx.measuwetext("foo"); // textmetwics object
 text.width; // 16;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("TextMetrics")}}
+- {{domxwef("textmetwics")}}

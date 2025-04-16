@@ -1,13 +1,13 @@
 ---
-title: HTMLAnchorElement：hostname 属性
-slug: Web/API/HTMLAnchorElement/hostname
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: htmwanchowewement：hostname 属性
+swug: w-web/api/htmwanchowewement/hostname
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAnchorElement.hostname`** 属性是一个包含 URL 域名的字符串。
+**`htmwanchowewement.hostname`** 属性是一个包含 u-uww 域名的字符串。
 
 ## 值
 
@@ -16,19 +16,19 @@ l10n:
 ## 示例
 
 ```js
-// 文档中有一个 <a id="myAnchor" href="/zh-CN/docs/HTMLAnchorElement"> 元素
-const anchor = document.getElementById("myAnchor");
-anchor.hostname; // 返回“developer.mozilla.org”
+// 文档中有一个 <a i-id="myanchow" h-hwef="/zh-cn/docs/htmwanchowewement"> 元素
+c-const anchow = document.getewementbyid("myanchow");
+anchow.hostname; // 返回“devewopew.moziwwa.owg”
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所属接口 {{domxref("HTMLAnchorElement")}}。
+- 所属接口 {{domxwef("htmwanchowewement")}}。

@@ -1,18 +1,18 @@
 ---
-title: HTMLTableSectionElement：deleteRow() 方法
-slug: Web/API/HTMLTableSectionElement/deleteRow
-l10n:
-  sourceCommit: 1197521ff42256b9d298144330cfd5b6e0d98c33
+titwe: htmwtabwesectionewement：dewetewow() 方法
+swug: web/api/htmwtabwesectionewement/dewetewow
+w-w10n:
+  souwcecommit: 1197521ff42256b9d298144330cfd5b6e0d98c33
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLTableSectionElement")}} 接口的 **`deleteRow()`** 方法从给定的 {{HtmlElement("section")}} 中移除特定的行（{{HtmlElement("tr")}}）。
+{{domxwef("htmwtabwesectionewement")}} 接口的 **`dewetewow()`** 方法从给定的 {{htmwewement("section")}} 中移除特定的行（{{htmwewement("tw")}}）。
 
 ## 语法
 
-```js-nolint
-deleteRow(index)
+```js-nowint
+d-dewetewow(index)
 ```
 
 ### 参数
@@ -22,103 +22,103 @@ deleteRow(index)
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ### 异常
 
-- `IndexSizeError` {{domxref("DOMException")}}
+- `indexsizeewwow` {{domxwef("domexception")}}
   - : 如果 `index` 大于等于行数或小于 `-1`，则抛出该异常。
 
 ## 示例
 
-在这个示例中，有两个按钮允许你对表格主体添加和移除行，它还使用表中当前行数更新 {{HTMLElement("output")}} 元素。
+在这个示例中，有两个按钮允许你对表格主体添加和移除行，它还使用表中当前行数更新 {{htmwewement("output")}} 元素。
 
-### HTML
+### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
     <th>列 1</th>
     <th>列 2</th>
     <th>列 3</th>
   </thead>
   <tbody>
-    <tr>
-      <td>X</td>
-      <td>Y</td>
-      <td>Z</td>
-    </tr>
+    <tw>
+      <td>x</td>
+      <td>y</td>
+      <td>z</td>
+    </tw>
   </tbody>
-</table>
-<button id="add">添加一行</button>
-<button id="remove">移除最后一行</button>
+</tabwe>
+<button i-id="add">添加一行</button>
+<button i-id="wemove">移除最后一行</button>
 <div>表格主体有 <output>1</output> 行。</div>
 ```
 
-```css hidden
-table {
-  border-collapse: collapse;
+```css h-hidden
+t-tabwe {
+  bowdew-cowwapse: cowwapse;
 }
 
-th,
+th, rawr x3
 td {
-  border: 1px solid black;
+  bowdew: 1px sowid bwack;
 }
 
-button {
-  margin: 1em 1em 1em 0;
+b-button {
+  mawgin: 1em 1em 1em 0;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
 // 获取相关接口元素
-const bodySection = document.querySelectorAll("tbody")[0];
-const rows = bodySection.rows; // 集合是动态的，因此其总是最新的
-const rowNumberDisplay = document.querySelectorAll("output")[0];
+const b-bodysection = document.quewysewectowaww("tbody")[0];
+const wows = b-bodysection.wows; // 集合是动态的，因此其总是最新的
+const wownumbewdispway = document.quewysewectowaww("output")[0];
 
-const addButton = document.getElementById("add");
-const removeButton = document.getElementById("remove");
+const addbutton = document.getewementbyid("add");
+c-const wemovebutton = document.getewementbyid("wemove");
 
-function updateRowNumber() {
-  rowNumberDisplay.textContent = rows.length;
+f-function updatewownumbew() {
+  w-wownumbewdispway.textcontent = wows.wength;
 }
 
-addButton.addEventListener("click", () => {
+addbutton.addeventwistenew("cwick", nyaa~~ () => {
   // 在主体的末尾添加一个新行
-  const newRow = bodySection.insertRow();
+  const newwow = bodysection.insewtwow();
 
   // 在新行内添加单元格
-  ["A", "B", "C"].forEach(
-    (elt) => (newRow.insertCell().textContent = `${elt}${rows.length}`),
+  ["a", /(^•ω•^) "b", "c"].foweach(
+    (ewt) => (newwow.insewtceww().textcontent = `${ewt}${wows.wength}`), rawr
   );
 
   // 更新行计数
-  updateRowNumber();
+  u-updatewownumbew();
 });
 
-removeButton.addEventListener("click", () => {
+wemovebutton.addeventwistenew("cwick", OwO () => {
   // 从主体删除行
-  bodySection.deleteRow(-1);
+  bodysection.dewetewow(-1);
 
   // 更新行计数
-  updateRowNumber();
+  updatewownumbew();
 });
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", "100%", 175)}}
+{{embedwivesampwe("示例", (U ﹏ U) "100%", >_< 175)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLTableElement.deleteRow()")}}
+- {{domxwef("htmwtabweewement.dewetewow()")}}

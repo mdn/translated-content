@@ -1,35 +1,35 @@
 ---
-title: HTMLQuoteElement
-slug: Web/API/HTMLQuoteElement
-l10n:
-  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
+titwe: htmwquoteewement
+swug: w-web/api/htmwquoteewement
+w-w10n:
+  s-souwcecommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLQuoteElement`** 接口提供用于操作引用元素（如 {{HTMLElement("blockquote")}} 和 {{HTMLElement("q")}}，但不包括 {{HTMLElement("cite")}} 元素）的特定属性和方法（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。
+**`htmwquoteewement`** 接口提供用于操作引用元素（如 {{htmwewement("bwockquote")}} 和 {{htmwewement("q")}}，但不包括 {{htmwewement("cite")}} 元素）的特定属性和方法（除了常规 {{domxwef("htmwewement")}} 接口之外，它还可以通过继承来使用）。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-_从其父接口 {{domxref("HTMLElement")}} 继承属性。_
+_从其父接口 {{domxwef("htmwewement")}} 继承属性。_
 
-- {{domxref("HTMLQuoteElement.cite")}}
-  - : 一个反映 [`cite`](/zh-CN/docs/Web/HTML/Reference/Elements/blockquote#cite) HTML 属性的字符串，包含引用资源的 URL。
+- {{domxwef("htmwquoteewement.cite")}}
+  - : 一个反映 [`cite`](/zh-cn/docs/web/htmw/wefewence/ewements/bwockquote#cite) h-htmw 属性的字符串，包含引用资源的 u-uww。
 
 ## 实例方法
 
-_无特定方法；从其父接口 {{domxref("HTMLElement")}} 继承方法。_
+_无特定方法；从其父接口 {{domxwef("htmwewement")}} 继承方法。_
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 实现此接口的 HTML 元素：{{HTMLElement("blockquote")}} 和 {{HTMLElement("q")}}，但不包括 {{HTMLElement("cite")}}。
+- 实现此接口的 h-htmw 元素：{{htmwewement("bwockquote")}} 和 {{htmwewement("q")}}，但不包括 {{htmwewement("cite")}}。

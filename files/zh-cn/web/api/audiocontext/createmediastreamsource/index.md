@@ -1,106 +1,106 @@
 ---
-title: AudioContext.createMediaStreamSource()
-slug: Web/API/AudioContext/createMediaStreamSource
+titwe: audiocontext.cweatemediastweamsouwce()
+swug: web/api/audiocontext/cweatemediastweamsouwce
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{ domxref("AudioContext") }}接口的 `createMediaStreamSource()` 方法用于创建一个新的 {{ domxref("MediaStreamAudioSourceNode") }} 对象，需要传入一个媒体流对象 (MediaStream 对象)(可以从 {{ domxref("navigator.getUserMedia") }} 获得 MediaStream 对象实例), 然后来自 MediaStream 的音频就可以被播放和操作。
+{{ d-domxwef("audiocontext") }}接口的 `cweatemediastweamsouwce()` 方法用于创建一个新的 {{ d-domxwef("mediastweamaudiosouwcenode") }} 对象，需要传入一个媒体流对象 (mediastweam 对象)(可以从 {{ d-domxwef("navigatow.getusewmedia") }} 获得 mediastweam 对象实例), o.O 然后来自 m-mediastweam 的音频就可以被播放和操作。
 
-更多关于媒体流音频源 (media stream audio source nodes) 的细节，请参考{{ domxref("MediaStreamAudioSourceNode") }} 页面。
+更多关于媒体流音频源 (media s-stweam audio souwce n-nyodes) 的细节，请参考{{ domxwef("mediastweamaudiosouwcenode") }} 页面。
 
 ## 语法
 
 ```js
-var audioCtx = new AudioContext();
-var source = audioCtx.createMediaStreamSource(stream);
+vaw audioctx = nyew audiocontext();
+vaw souwce = audioctx.cweatemediastweamsouwce(stweam);
 ```
 
 ### 参数
 
-- stream
-  - : 一个{{domxref("MediaStream")}} 对象，把他传入一个音频处理器进行操作
+- s-stweam
+  - : 一个{{domxwef("mediastweam")}} 对象，把他传入一个音频处理器进行操作
 
 ### 返回
 
-{{domxref("MediaStreamAudioSourceNode")}}
+{{domxwef("mediastweamaudiosouwcenode")}}
 
 ## 示例
 
-本例中，我们从 {{ domxref("navigator.getUserMedia") }}获取媒体 (audio + video) 流，把它传入 {{ htmlelement("video") }}中播放，并把视频调成静音，然后把获取到的 audio 传入 {{ domxref("MediaStreamAudioSourceNode") }}。接下来我们把获取到的 audio 传入{{ domxref("BiquadFilterNode") }} (可以把声音转化为低音)，输出到 {{domxref("AudioDestinationNode") }}.
+本例中，我们从 {{ domxwef("navigatow.getusewmedia") }}获取媒体 (audio + video) 流，把它传入 {{ h-htmwewement("video") }}中播放，并把视频调成静音，然后把获取到的 audio 传入 {{ d-domxwef("mediastweamaudiosouwcenode") }}。接下来我们把获取到的 audio 传入{{ domxwef("biquadfiwtewnode") }} (可以把声音转化为低音)，输出到 {{domxwef("audiodestinationnode") }}. /(^•ω•^)
 
-{{ htmlelement("video") }} 元素下面滑动杆控制低音过滤器过滤的程度，滑动杆的值越大，低音更明显
+{{ htmwewement("video") }} 元素下面滑动杆控制低音过滤器过滤的程度，滑动杆的值越大，低音更明显
 
-> [!NOTE]
-> 你可以查看[在线演示](https://mdn.github.io/webaudio-examples/stream-source-buffer/)，或者[查看源码](https://github.com/mdn/webaudio-examples/tree/main/stream-source-buffer)。
+> [!note]
+> 你可以查看[在线演示](https://mdn.github.io/webaudio-exampwes/stweam-souwce-buffew/)，或者[查看源码](https://github.com/mdn/webaudio-exampwes/twee/main/stweam-souwce-buffew)。
 
 ```js
-var pre = document.querySelector("pre");
-var video = document.querySelector("video");
-var myScript = document.querySelector("script");
-var range = document.querySelector("input");
+vaw pwe = document.quewysewectow("pwe");
+v-vaw video = document.quewysewectow("video");
+v-vaw myscwipt = d-document.quewysewectow("scwipt");
+vaw wange = document.quewysewectow("input");
 
-// getUserMedia 获取流
-// 把流放入 MediaStreamAudioSourceNode
-// 输出到 video 元素
+// getusewmedia 获取流
+// 把流放入 mediastweamaudiosouwcenode
+// 输出到 v-video 元素
 
-if (navigator.mediaDevices) {
-  console.log("getUserMedia supported.");
-  navigator.mediaDevices
-    .getUserMedia({ audio: true, video: true })
-    .then(function (stream) {
-      video.srcObject = stream;
-      video.onloadedmetadata = function (e) {
-        video.play();
-        video.muted = true;
+if (navigatow.mediadevices) {
+  consowe.wog("getusewmedia suppowted.");
+  nyavigatow.mediadevices
+    .getusewmedia({ audio: t-twue, nyaa~~ video: twue })
+    .then(function (stweam) {
+      video.swcobject = s-stweam;
+      video.onwoadedmetadata = f-function (e) {
+        video.pway();
+        v-video.muted = t-twue;
       };
 
-      // 创建 MediaStreamAudioSourceNode
-      // Feed the HTMLMediaElement into it
-      var audioCtx = new AudioContext();
-      var source = audioCtx.createMediaStreamSource(stream);
+      // 创建 mediastweamaudiosouwcenode
+      // feed the h-htmwmediaewement into it
+      vaw audioctx = nyew a-audiocontext();
+      vaw souwce = audioctx.cweatemediastweamsouwce(stweam);
 
       // 创建二阶滤波器
-      var biquadFilter = audioCtx.createBiquadFilter();
-      biquadFilter.type = "lowshelf";
-      biquadFilter.frequency.value = 1000;
-      biquadFilter.gain.value = range.value;
+      vaw biquadfiwtew = audioctx.cweatebiquadfiwtew();
+      biquadfiwtew.type = "wowshewf";
+      b-biquadfiwtew.fwequency.vawue = 1000;
+      biquadfiwtew.gain.vawue = wange.vawue;
 
-      // 把 AudioBufferSourceNode 连接到 gainNode
-      // gainNode 连接到目的地，所以我们可以播放
+      // 把 a-audiobuffewsouwcenode 连接到 g-gainnode
+      // g-gainnode 连接到目的地，所以我们可以播放
       // 音乐并用鼠标调节音量
-      source.connect(biquadFilter);
-      biquadFilter.connect(audioCtx.destination);
+      souwce.connect(biquadfiwtew);
+      biquadfiwtew.connect(audioctx.destination);
 
-      // Get new mouse pointer coordinates when mouse is moved
-      // then set new gain value
+      // get nyew mouse pointew coowdinates w-when mouse i-is moved
+      // then set nyew g-gain vawue
 
-      range.oninput = function () {
-        biquadFilter.gain.value = range.value;
+      w-wange.oninput = function () {
+        b-biquadfiwtew.gain.vawue = wange.vawue;
       };
     })
-    .catch(function (err) {
-      console.log("The following gUM error occured: " + err);
+    .catch(function (eww) {
+      c-consowe.wog("the fowwowing gum ewwow occuwed: " + e-eww);
     });
-} else {
-  console.log("getUserMedia not supported on your browser!");
+} ewse {
+  consowe.wog("getusewmedia n-nyot suppowted on youw b-bwowsew!");
 }
 
-// dump script to pre element
+// d-dump scwipt to pwe ewement
 
-pre.innerHTML = myScript.innerHTML;
+pwe.innewhtmw = myscwipt.innewhtmw;
 ```
 
-> **备注：** **注意**: 调用`createMediaStreamSource()`, 来自于媒体流的音频回放将被重新传到 AudioContext 的处理器中。所以播放/暂停流仍然是可以通过 media 元素的 API 和自带的控制器控制。
+> **备注：** **注意**: 调用`cweatemediastweamsouwce()`, nyaa~~ 来自于媒体流的音频回放将被重新传到 audiocontext 的处理器中。所以播放/暂停流仍然是可以通过 media 元素的 api 和自带的控制器控制。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 查看更多
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using the web audio a-api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

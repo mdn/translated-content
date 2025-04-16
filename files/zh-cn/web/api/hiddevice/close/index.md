@@ -1,18 +1,18 @@
 ---
-title: HIDDevice：close() 方法
-slug: Web/API/HIDDevice/close
-l10n:
-  sourceCommit: 534e2c61fee576355e8a9b7036d9fa36056edb03
+titwe: hiddevice：cwose() 方法
+swug: web/api/hiddevice/cwose
+w-w10n:
+  souwcecommit: 534e2c61fee576355e8a9b7036d9fa36056edb03
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
+{{secuwecontext_headew}}{{apiwef("webhid a-api")}}{{seecompattabwe}}{{avaiwabweinwowkews("window_and_wowkew_except_shawed")}}
 
-{{domxref("HIDDevice")}} 接口的 **`close()`** 方法用于关闭 HID 设备的连接。
+{{domxwef("hiddevice")}} 接口的 **`cwose()`** 方法用于关闭 h-hid 设备的连接。
 
 ## 语法
 
-```js-nolint
-close()
+```js-nowint
+c-cwose()
 ```
 
 ### 参数
@@ -21,20 +21,20 @@ close()
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，会在连接关闭时兑现为 `undefined`。
+一个 {{jsxwef("pwomise")}}，会在连接关闭时兑现为 `undefined`。
 
 ## 示例
 
-在以下示例中，一旦所有数据已发送和接收，我们就关闭 HID 设备。
+在以下示例中，一旦所有数据已发送和接收，我们就关闭 h-hid 设备。
 
 ```js
-await device.close();
+a-await device.cwose();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

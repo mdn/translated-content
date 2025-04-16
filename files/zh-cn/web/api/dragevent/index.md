@@ -1,59 +1,59 @@
 ---
-title: DragEvent
-slug: Web/API/DragEvent
+titwe: dwagevent
+swug: web/api/dwagevent
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and dwop api")}}
 
-**`DragEvent`** 是一个表示拖、放交互的一个{{domxref("Event","DOM event")}} 接口。用户通过将指针设备（例如鼠标）放置在触摸表面上并且然后将指针拖动到新位置（诸如另一个 DOM 元素）来发起拖动。应用程序可以按应用程序特定的方式自由解释拖放交互。
+**`dwagevent`** 是一个表示拖、放交互的一个{{domxwef("event","dom e-event")}} 接口。用户通过将指针设备（例如鼠标）放置在触摸表面上并且然后将指针拖动到新位置（诸如另一个 d-dom 元素）来发起拖动。应用程序可以按应用程序特定的方式自由解释拖放交互。
 
-这个接口继承 {{domxref("MouseEvent")}} 和{{domxref("Event")}}属性
+这个接口继承 {{domxwef("mouseevent")}} 和{{domxwef("event")}}属性
 
 ## 属性
 
-- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
+- {{domxwef('dwagevent.datatwansfew')}} {{weadonwyinwine}}
   - : 在拖放交互期间传输的数据。
 
 ## 构造函数
 
-虽然这个接口有一个构造函数，但不可能从脚本创建一个有用的 DataTransfer 对象，因为在拖放期间，有一个由浏览器分配的一个处理中和安全模式的{{domxref("DataTransfer")}}对象。
+虽然这个接口有一个构造函数，但不可能从脚本创建一个有用的 d-datatwansfew 对象，因为在拖放期间，有一个由浏览器分配的一个处理中和安全模式的{{domxwef("datatwansfew")}}对象。
 
-- {{domxref("DragEvent.DragEvent", "DragEvent()")}}
-  - : 创建合成和不可信的 DragEvent.
+- {{domxwef("dwagevent.dwagevent", òωó "dwagevent()")}}
+  - : 创建合成和不可信的 d-dwagevent. o.O
 
 ## 事件类型
 
-- [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event)
+- [`dwag`](/zh-cn/docs/web/api/htmwewement/dwag_event)
   - : 拖动元素或选择文本时触发此事件。
-- [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event)
+- [`dwagend`](/zh-cn/docs/web/api/htmwewement/dwagend_event)
   - : 当拖动操作结束时（释放鼠标按钮或按下退出键），会触发此事件。
-- [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)
+- [`dwagentew`](/zh-cn/docs/web/api/htmwewement/dwagentew_event)
   - : 当拖动的元素或选择文本输入有效的放置目标时，会触发此事件。
-- [`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event)
+- [`dwagweave`](/zh-cn/docs/web/api/htmwewement/dwagweave_event)
   - : 当拖动的元素或文本选择离开有效的放置目标时，会触发此事件。
-- [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)
+- [`dwagovew`](/zh-cn/docs/web/api/htmwewement/dwagovew_event)
   - : 当将元素或文本选择拖动到有效放置目标（每几百毫秒）上时，会触发此事件。
-- [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)
+- [`dwagstawt`](/zh-cn/docs/web/api/htmwewement/dwagstawt_event)
   - : 当用户开始拖动元素或选择文本时触发此事件。
-- [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)
+- [`dwop`](/zh-cn/docs/web/api/htmwewement/dwop_event)
   - : 当在有效放置目标上放置元素或选择文本时触发此事件。
 
 ## 全局事件处理
 
-- {{domxref('GlobalEventHandlers.ondrag')}}
-  - : [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
-- {{domxref('GlobalEventHandlers.ondragend')}}
-  - : [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
-- {{domxref('GlobalEventHandlers.ondragenter')}}
-  - : [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
-- {{domxref('GlobalEventHandlers.ondragexit')}}
-  - : [`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
-- {{domxref('GlobalEventHandlers.ondragover')}}
-  - : [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
-- {{domxref('GlobalEventHandlers.ondragstart')}}
-  - : [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
-- {{domxref('GlobalEventHandlers.ondrop')}}
-  - : [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) 事件的{{domxref('GlobalEventHandlers','全局事件处理')}}。
+- {{domxwef('gwobaweventhandwews.ondwag')}}
+  - : [`dwag`](/zh-cn/docs/web/api/htmwewement/dwag_event) 事件的{{domxwef('gwobaweventhandwews','全局事件处理')}}。
+- {{domxwef('gwobaweventhandwews.ondwagend')}}
+  - : [`dwagend`](/zh-cn/docs/web/api/htmwewement/dwagend_event) 事件的{{domxwef('gwobaweventhandwews','全局事件处理')}}。
+- {{domxwef('gwobaweventhandwews.ondwagentew')}}
+  - : [`dwagentew`](/zh-cn/docs/web/api/htmwewement/dwagentew_event) 事件的{{domxwef('gwobaweventhandwews','全局事件处理')}}。
+- {{domxwef('gwobaweventhandwews.ondwagexit')}}
+  - : [`dwagweave`](/zh-cn/docs/web/api/htmwewement/dwagweave_event) 事件的{{domxwef('gwobaweventhandwews','全局事件处理')}}。
+- {{domxwef('gwobaweventhandwews.ondwagovew')}}
+  - : [`dwagovew`](/zh-cn/docs/web/api/htmwewement/dwagovew_event) 事件的{{domxwef('gwobaweventhandwews','全局事件处理')}}。
+- {{domxwef('gwobaweventhandwews.ondwagstawt')}}
+  - : [`dwagstawt`](/zh-cn/docs/web/api/htmwewement/dwagstawt_event) 事件的{{domxwef('gwobaweventhandwews','全局事件处理')}}。
+- {{domxwef('gwobaweventhandwews.ondwop')}}
+  - : [`dwop`](/zh-cn/docs/web/api/htmwewement/dwop_event) 事件的{{domxwef('gwobaweventhandwews','全局事件处理')}}。
 
 ## 示例
 
@@ -61,8 +61,8 @@ slug: Web/API/DragEvent
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

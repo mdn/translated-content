@@ -1,26 +1,26 @@
 ---
-title: HTMLMediaElement：controlsList 属性
-slug: Web/API/HTMLMediaElement/controlsList
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: htmwmediaewement：contwowswist 属性
+swug: web/api/htmwmediaewement/contwowswist
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLMediaElement")}} 接口的 **`controlsList`** 属性返回一个 DOMTokenList，其用于帮助用户代理在显示自有的一组控件时，决定应在媒体元素上显示哪些控件。DOMTokenList 接受三个可能的值中的一个或多个：`nodownload`、`nofullscreen` 和 `noremoteplayback`。
+{{domxwef("htmwmediaewement")}} 接口的 **`contwowswist`** 属性返回一个 d-domtokenwist，其用于帮助用户代理在显示自有的一组控件时，决定应在媒体元素上显示哪些控件。domtokenwist 接受三个可能的值中的一个或多个：`nodownwoad`、`nofuwwscween` 和 `nowemotepwayback`。
 
 ## 值
 
-{{domxref("DOMTokenList")}}。
+{{domxwef("domtokenwist")}}。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Chrome HTMLMediaElement controlsList 示例](https://googlechrome.github.io/samples/media/controlslist.html)
+- [chwome h-htmwmediaewement c-contwowswist 示例](https://googwechwome.github.io/sampwes/media/contwowswist.htmw)

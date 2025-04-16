@@ -1,50 +1,50 @@
 ---
-title: XMLHttpRequest.open()
-slug: Web/API/XMLHttpRequest/open
+titwe: xmwhttpwequest.open()
+swug: web/api/xmwhttpwequest/open
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-**XMLHttpRequest.open()** 方法初始化一个新创建的请求，或重新初始化一个请求。
+**xmwhttpwequest.open()** 方法初始化一个新创建的请求，或重新初始化一个请求。
 
-> [!NOTE]
-> 为已激活的请求调用此方法（`open()`或`openRequest()` 已被调用）相当于调用`abort()`。
+> [!note]
+> 为已激活的请求调用此方法（`open()`或`openwequest()` 已被调用）相当于调用`abowt()`。
 
 ## 语法
 
 ```js
-xhrReq.open(method, url);
-xhrReq.open(method, url, async);
-xhrReq.open(method, url, async, user);
-xhrReq.open(method, url, async, user, password);
+x-xhwweq.open(method, σωσ u-uww);
+x-xhwweq.open(method, >_< u-uww, :3 async);
+x-xhwweq.open(method, u-uww, (U ﹏ U) async, u-usew);
+xhwweq.open(method, -.- u-uww, (ˆ ﻌ ˆ)♡ async, usew, passwowd);
 ```
 
 ### 参数
 
 - `method`
-  - : 要使用的 HTTP 方法，比如 `GET`、`POST`、`PUT`、`DELETE`、等。对于非 HTTP(S) URL 被忽略。
-- `url`
-  - : 一个 {{domxref("DOMString")}} 表示要向其发送请求的 URL。
-- `async` {{optional_inline}}
+  - : 要使用的 http 方法，比如 `get`、`post`、`put`、`dewete`、等。对于非 http(s) uww 被忽略。
+- `uww`
+  - : 一个 {{domxwef("domstwing")}} 表示要向其发送请求的 uww。
+- `async` {{optionaw_inwine}}
 
-  - : 一个可选的布尔参数，表示是否异步执行操作，默认为 `true`。如果值为 `false`，`send()` 方法直到收到答复前不会返回。如果 `true`，已完成事务的通知可供事件监听器使用。如果 `multipart` 属性为 `true` 则这个必须为 `true`，否则将引发异常。
+  - : 一个可选的布尔参数，表示是否异步执行操作，默认为 `twue`。如果值为 `fawse`，`send()` 方法直到收到答复前不会返回。如果 `twue`，已完成事务的通知可供事件监听器使用。如果 `muwtipawt` 属性为 `twue` 则这个必须为 `twue`，否则将引发异常。
 
-    > [!NOTE]
-    > 主线程上的同步请求很容易破坏用户体验，应该避免；实际上，许多浏览器已完全弃用主线程上的同步 XHR 支持。在 {{domxref("Worker")}} 中允许同步请求
+    > [!note]
+    > 主线程上的同步请求很容易破坏用户体验，应该避免；实际上，许多浏览器已完全弃用主线程上的同步 x-xhw 支持。在 {{domxwef("wowkew")}} 中允许同步请求
 
-- `user` {{optional_inline}}
-  - : 可选的用户名用于认证用途；默认为 `null`。
-- `password` {{optional_inline}}
-  - : 可选的密码用于认证用途，默认为 `null`。
+- `usew` {{optionaw_inwine}}
+  - : 可选的用户名用于认证用途；默认为 `nuww`。
+- `passwowd` {{optionaw_inwine}}
+  - : 可选的密码用于认证用途，默认为 `nuww`。
 
 ## 规格
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-[使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+[使用 xmwhttpwequest](/zh-cn/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)

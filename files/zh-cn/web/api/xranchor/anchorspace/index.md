@@ -1,32 +1,32 @@
 ---
-title: XRAnchor：anchorSpace 属性
-slug: Web/API/XRAnchor/anchorSpace
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: xwanchow：anchowspace 属性
+swug: web/api/xwanchow/anchowspace
+w-w10n:
+  s-souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("webxw device a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("XRAnchor")}} 接口的 **`anchorSpace`** 只读属性返回将锚点相对于其他 `XRSpace` 对象进行定位的 {{domxref("XRSpace")}} 对象。它可以随后传递给 {{domxref("XRFrame.getPose()")}}。
+{{domxwef("xwanchow")}} 接口的 **`anchowspace`** 只读属性返回将锚点相对于其他 `xwspace` 对象进行定位的 {{domxwef("xwspace")}} 对象。它可以随后传递给 {{domxwef("xwfwame.getpose()")}}。
 
 ## 值
 
-{{domxref("XRSpace")}} 对象。
+{{domxwef("xwspace")}} 对象。
 
 ## 示例
 
 ### 更新锚点
 
 ```js
-for (const anchor of frame.trackedAnchors) {
-  const pose = frame.getPose(anchor.anchorSpace, referenceSpace);
+f-fow (const anchow o-of fwame.twackedanchows) {
+  c-const pose = fwame.getpose(anchow.anchowspace, (U ᵕ U❁) w-wefewencespace);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

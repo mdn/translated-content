@@ -1,39 +1,39 @@
 ---
-title: DragEvent()
-slug: Web/API/DragEvent/DragEvent
+titwe: dwagevent()
+swug: web/api/dwagevent/dwagevent
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag a-and dwop api")}}
 
-This constructor is used to create a synthetic {{domxref("DragEvent")}} object.
+t-this constwuctow i-is used to cweate a-a synthetic {{domxwef("dwagevent")}} o-object. >_<
 
-Although this interface has a constructor, it is not possible to create a useful {{domxref("DataTransfer")}} object from script, since {{domxref("DataTransfer")}} objects have a processing and security model that is coordinated by the browser during drag-and-drops.
+a-awthough this i-intewface has a constwuctow, rawr x3 it is nyot possibwe to cweate a usefuw {{domxwef("datatwansfew")}} object fwom scwipt, mya s-since {{domxwef("datatwansfew")}} objects have a pwocessing a-and secuwity modew that is coowdinated b-by the bwowsew duwing dwag-and-dwops. nyaa~~
 
-该接口继承了 {{domxref("MouseEvent")}} 和 {{domxref("Event")}} 的属性。
+该接口继承了 {{domxwef("mouseevent")}} 和 {{domxwef("event")}} 的属性。
 
 ## 语法
 
-```js-nolint
-new DragEvent(type)
-new DragEvent(type, dragEventInit)
+```js-nowint
+nyew dwagevent(type)
+n-new dwagevent(type, (⑅˘꒳˘) dwageventinit)
 ```
 
 ### 参数
 
 - _type_
-  - : Is a {{domxref("DOMString")}} representing the name of the event (see [DragEvent event types](/zh-CN/docs/Web/API/DragEvent#event_types)).
-- _DragEventInit_{{optional_inline}}
+  - : i-is a {{domxwef("domstwing")}} w-wepwesenting the nyame of the event (see [dwagevent event types](/zh-cn/docs/web/api/dwagevent#event_types)). rawr x3
+- _dwageventinit_{{optionaw_inwine}}
 
-  - : Is a `DragEventInit` dictionary, having the following fields:
+  - : is a `dwageventinit` d-dictionawy, (✿oωo) having the fowwowing fiewds:
 
-    - `"dataTransfer"`, optional and defaults to `"null"`. The type is {{domxref("DataTransfer")}}.
+    - `"datatwansfew"`, (ˆ ﻌ ˆ)♡ optionaw and defauwts to `"nuww"`. (˘ω˘) t-the type is {{domxwef("datatwansfew")}}. (⑅˘꒳˘)
 
-The `DragEventInit` dictionary inherits from the {{domxref("MouseEvent.MouseEvent","MouseEventInit dictionary")}}.
+the `dwageventinit` d-dictionawy inhewits f-fwom the {{domxwef("mouseevent.mouseevent","mouseeventinit d-dictionawy")}}. (///ˬ///✿)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

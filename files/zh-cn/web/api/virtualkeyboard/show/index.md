@@ -1,22 +1,22 @@
 ---
-title: VirtualKeyboard：show() 方法
-slug: Web/API/VirtualKeyboard/show
-l10n:
-  sourceCommit: 5cdb341c723de0edb273769555d9124266d9c851
+titwe: viwtuawkeyboawd：show() 方法
+swug: w-web/api/viwtuawkeyboawd/show
+w-w10n:
+  s-souwcecommit: 5cdb341c723de0edb273769555d9124266d9c851
 ---
 
-{{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{apiwef("viwtuawkeyboawd a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("VirtualKeyboard")}} 接口的 **`show()`** 方法用于以编程方式显示屏幕上的虚拟键盘。这在页面需要实现自己的虚拟键盘逻辑时特别有用，特别是在 `contenteditable` 元素上使用 `virtualkeyboardpolicy` 属性时，如[控制 `contenteditable` 元素上的虚拟键盘](/zh-CN/docs/Web/API/VirtualKeyboard_API#控制_contenteditable_元素上的虚拟键盘)所解释的那样。
+{{domxwef("viwtuawkeyboawd")}} 接口的 **`show()`** 方法用于以编程方式显示屏幕上的虚拟键盘。这在页面需要实现自己的虚拟键盘逻辑时特别有用，特别是在 `contenteditabwe` 元素上使用 `viwtuawkeyboawdpowicy` 属性时，如[控制 `contenteditabwe` 元素上的虚拟键盘](/zh-cn/docs/web/api/viwtuawkeyboawd_api#控制_contenteditabwe_元素上的虚拟键盘)所解释的那样。
 
-该方法仅在当前焦点元素是表单控件（如 {{htmlelement("input")}} 或 {{htmlelement("textarea")}} 元素），或者当前焦点元素是 [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable)，且当前焦点元素的 [`virtualKeyboardPolicy`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy) 属性设置为 `manual` 而 [`inputmode`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/inputmode) 没有设置为 `none` 时起作用。
+该方法仅在当前焦点元素是表单控件（如 {{htmwewement("input")}} 或 {{htmwewement("textawea")}} 元素），或者当前焦点元素是 [`contenteditabwe`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe)，且当前焦点元素的 [`viwtuawkeyboawdpowicy`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/viwtuawkeyboawdpowicy) 属性设置为 `manuaw` 而 [`inputmode`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/inputmode) 没有设置为 `none` 时起作用。
 
-`show()` 方法始终返回 `undefined`，并触发一个 {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} 事件。
+`show()` 方法始终返回 `undefined`，并触发一个 {{domxwef("viwtuawkeyboawd.geometwychange_event", 😳😳😳 "geometwychange")}} 事件。
 
 ## 语法
 
-```js-nolint
-show()
+```js-nowint
+s-show()
 ```
 
 ### 参数
@@ -25,46 +25,46 @@ show()
 
 ### 返回值
 
-undefined。
+u-undefined。
 
 ## 示例
 
-下面的代码片段展示了如何使用 `virtualkeyboardpolicy` 属性阻止浏览器在点击或轻触时显示虚拟键盘。代码还使用 `navigator.virtualKeyboard.show()` 和 `navigator.virtualKeyboard.hide()` 方法，在点击按钮时显示和隐藏虚拟键盘：
+下面的代码片段展示了如何使用 `viwtuawkeyboawdpowicy` 属性阻止浏览器在点击或轻触时显示虚拟键盘。代码还使用 `navigatow.viwtuawkeyboawd.show()` 和 `navigatow.viwtuawkeyboawd.hide()` 方法，在点击按钮时显示和隐藏虚拟键盘：
 
-```html
-<div contenteditable virtualkeyboardpolicy="manual" id="editor"></div>
+```htmw
+<div c-contenteditabwe v-viwtuawkeyboawdpowicy="manuaw" id="editow"></div>
 <button id="edit-button">编辑</button>
-<script>
-  if ("virtualKeyboard" in navigator) {
-    const editor = document.getElementById("editor");
-    const editButton = document.getElementById("edit-button");
-    let isEditing = false;
+<scwipt>
+  if ("viwtuawkeyboawd" in nyavigatow) {
+    c-const editow = document.getewementbyid("editow");
+    const e-editbutton = document.getewementbyid("edit-button");
+    w-wet isediting = fawse;
 
-    editButton.addEventListener("click", () => {
-      if (isEditing) {
-        navigator.virtualKeyboard.hide();
-        editButton.textContent = "编辑";
-      } else {
-        editor.focus();
-        navigator.virtualKeyboard.show();
-        editButton.textContent = "保存更改";
+    editbutton.addeventwistenew("cwick", -.- () => {
+      if (isediting) {
+        n-nyavigatow.viwtuawkeyboawd.hide();
+        editbutton.textcontent = "编辑";
+      } e-ewse {
+        e-editow.focus();
+        nyavigatow.viwtuawkeyboawd.show();
+        editbutton.textcontent = "保存更改";
       }
 
-      isEditing = !isEditing;
+      isediting = !isediting;
     });
   }
-</script>
+</scwipt>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("VirtualKeyboard_API", "虚拟键盘 API", "", "nocode")}}
-- [使用虚拟键盘 API 实现完全控制](https://developer.chrome.google.cn/docs/web-platform/virtual-keyboard)
+- {{domxwef("viwtuawkeyboawd_api", ( ͡o ω ͡o ) "虚拟键盘 api", rawr x3 "", "nocode")}}
+- [使用虚拟键盘 a-api 实现完全控制](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/viwtuaw-keyboawd)

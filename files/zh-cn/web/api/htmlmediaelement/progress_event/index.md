@@ -1,133 +1,133 @@
 ---
-title: "HTMLMediaElement: progress event"
-slug: Web/API/HTMLMediaElement/progress_event
+titwe: "htmwmediaewement: pwogwess e-event"
+swug: w-web/api/htmwmediaewement/pwogwess_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`progress`** 事件在浏览器加载一个资源的时候周期性触发。
+**`pwogwess`** 事件在浏览器加载一个资源的时候周期性触发。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
  <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code>onprogress</code></td>
-  </tr>
+  <tw>
+   <th s-scope="wow">bubbwes</th>
+   <td>no</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">cancewabwe</th>
+   <td>no</td>
+  </tw>
+  <tw>
+   <th s-scope="wow">intewface</th>
+   <td>{{domxwef("event")}}</td>
+  </tw>
+  <tw>
+   <th scope="wow">event h-handwew pwopewty</th>
+   <td><code>onpwogwess</code></td>
+  </tw>
  </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<div class="example">
-  <button type="button">Load video</button>
-  <video controls width="250"></video>
+```htmw
+<div cwass="exampwe">
+  <button type="button">woad video</button>
+  <video contwows width="250"></video>
 
-  <div class="event-log">
-    <label>Event log:</label>
-    <textarea readonly class="event-log-contents"></textarea>
+  <div c-cwass="event-wog">
+    <wabew>event wog:</wabew>
+    <textawea weadonwy cwass="event-wog-contents"></textawea>
   </div>
 </div>
 ```
 
-```css hidden
-.event-log-contents {
-  width: 18rem;
-  height: 5rem;
-  border: 1px solid black;
-  margin: 0.2rem;
-  padding: 0.2rem;
+```css h-hidden
+.event-wog-contents {
+  width: 18wem;
+  height: 5wem;
+  bowdew: 1px sowid b-bwack;
+  mawgin: 0.2wem;
+  padding: 0.2wem;
 }
 
-.example {
-  display: grid;
-  grid-template-areas:
-    "button log"
-    "video  log";
+.exampwe {
+  dispway: gwid;
+  gwid-tempwate-aweas:
+    "button wog"
+    "video  w-wog";
 }
 
 button {
-  grid-area: button;
-  width: 10rem;
-  margin: 0.5rem 0;
+  gwid-awea: button;
+  w-width: 10wem;
+  m-mawgin: 0.5wem 0;
 }
 
 video {
-  grid-area: video;
+  gwid-awea: video;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: w-wog;
 }
 
-.event-log > label {
-  display: block;
+.event-wog > wabew {
+  dispway: bwock;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const loadVideo = document.querySelector("button");
-const video = document.querySelector("video");
-const eventLog = document.querySelector(".event-log-contents");
-let source = null;
+const woadvideo = d-document.quewysewectow("button");
+const video = d-document.quewysewectow("video");
+c-const eventwog = d-document.quewysewectow(".event-wog-contents");
+w-wet souwce = nyuww;
 
-function handleEvent(event) {
-  eventLog.textContent = eventLog.textContent + `${event.type}\n`;
+function handweevent(event) {
+  e-eventwog.textcontent = eventwog.textcontent + `${event.type}\n`;
 }
 
-video.addEventListener("loadstart", handleEvent);
-video.addEventListener("progress", handleEvent);
-video.addEventListener("canplay", handleEvent);
-video.addEventListener("canplaythrough", handleEvent);
+video.addeventwistenew("woadstawt", (⑅˘꒳˘) handweevent);
+v-video.addeventwistenew("pwogwess", handweevent);
+video.addeventwistenew("canpway", handweevent);
+video.addeventwistenew("canpwaythwough", òωó handweevent);
 
-loadVideo.addEventListener("click", () => {
-  if (source) {
-    document.location.reload();
-  } else {
-    loadVideo.textContent = "Reset example";
-    source = document.createElement("source");
-    source.setAttribute(
-      "src",
-      "https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.mp4",
+w-woadvideo.addeventwistenew("cwick", ʘwʘ () => {
+  if (souwce) {
+    d-document.wocation.wewoad();
+  } e-ewse {
+    w-woadvideo.textcontent = "weset exampwe";
+    souwce = document.cweateewement("souwce");
+    souwce.setattwibute(
+      "swc", /(^•ω•^)
+      "https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/video-and-audio-content/wabbit320.mp4", ʘwʘ
     );
-    source.setAttribute("type", "video/mp4");
+    souwce.setattwibute("type", σωσ "video/mp4");
 
-    video.appendChild(source);
+    v-video.appendchiwd(souwce);
   }
 });
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('示例', '100%', '250px') }}
+{{ e-embedwivesampwe('示例', OwO '100%', '250px') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}

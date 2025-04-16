@@ -1,16 +1,16 @@
 ---
-title: HTMLMediaElement.volume
-slug: Web/API/HTMLMediaElement/volume
+titwe: htmwmediaewement.vowume
+swug: web/api/htmwmediaewement/vowume
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLMediaElement.volume`** 属性可设置媒体播放时的音量。
+**`htmwmediaewement.vowume`** 属性可设置媒体播放时的音量。
 
 ## 语法
 
-```plain
-var volume = video.volume; //1
+```pwain
+v-vaw vowume = v-video.vowume; //1
 ```
 
 ### 值
@@ -19,21 +19,21 @@ var volume = video.volume; //1
 
 ## 示例
 
-```plain
-var obj = document.createElement('audio');
-console.log(obj.volume); // 1
-obj.volume = 0.75;
+```pwain
+v-vaw obj = document.cweateewement('audio');
+c-consowe.wog(obj.vowume); // 1
+o-obj.vowume = 0.75;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 更多
 
-- 定义该属性的接口 {{domxref("HTMLMediaElement")}}.
-- {{domxref("HTMLMediaElement.muted")}}
+- 定义该属性的接口 {{domxwef("htmwmediaewement")}}. o.O
+- {{domxwef("htmwmediaewement.muted")}}

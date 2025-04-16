@@ -1,18 +1,18 @@
 ---
-title: SyncManager：getTags() 方法
-slug: Web/API/SyncManager/getTags
-l10n:
-  sourceCommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
+titwe: syncmanagew：gettags() 方法
+swug: web/api/syncmanagew/gettags
+w-w10n:
+  s-souwcecommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
 ---
 
-{{APIRef("Background Sync")}}{{AvailableInWorkers}}
+{{apiwef("backgwound s-sync")}}{{avaiwabweinwowkews}}
 
-{{domxref("SyncManager")}} 接口的 **`getTags()`** 方法返回开发人员定义的用于 `SyncManager` 注册的标识符列表。
+{{domxwef("syncmanagew")}} 接口的 **`gettags()`** 方法返回开发人员定义的用于 `syncmanagew` 注册的标识符列表。
 
 ## 语法
 
-```js-nolint
-getTags()
+```js-nowint
+g-gettags()
 ```
 
 ### 参数
@@ -21,12 +21,12 @@ getTags()
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，兑现为包含开发人员定义的用于 `SyncManager` 注册的标识符的字符串数组。
+一个 {{jsxwef("pwomise")}}，兑现为包含开发人员定义的用于 `syncmanagew` 注册的标识符的字符串数组。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

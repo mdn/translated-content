@@ -1,59 +1,59 @@
 ---
-title: "HTMLMediaElement: ended 事件"
-slug: Web/API/HTMLMediaElement/ended_event
+titwe: "htmwmediaewement: ended 事件"
+s-swug: w-web/api/htmwmediaewement/ended_event
 ---
 
-{{APIRef("HTMLMediaElement")}}
+{{apiwef("htmwmediaewement")}}
 
 `ended` 事件会在媒体回放或者媒体流因达到了媒体的未尾或者没有更多可用的数据而停止时被触发。
 
-该事件会在回放或媒体文件播放结束时，在{{domxref("HTMLMediaElement", "媒体元素")}}（{{HTMLElement("audio")}} 和 {{HTMLElement("video")}}）上触发。
+该事件会在回放或媒体文件播放结束时，在{{domxwef("htmwmediaewement", -.- "媒体元素")}}（{{htmwewement("audio")}} 和 {{htmwewement("video")}}）上触发。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">是否冒泡</th>
+    <tw>
+      <th s-scope="wow">是否冒泡</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">是否可取消</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">是否可取消</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">接口</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">目标</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">接口</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">目标</th>
       <td>元素</td>
-    </tr>
-    <tr>
-      <th scope="row">默认行为</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">默认行为</th>
       <td>无</td>
-    </tr>
-    <tr>
-      <th scope="row">事件处理器属性</th>
-      <td>{{domxref("GlobalEventHandlers.onended")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">事件处理器属性</th>
+      <td>{{domxwef("gwobaweventhandwews.onended")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> 该事件也在[媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)和 [Web Audio](/zh-CN/docs/Web/API/Web_Audio_API) 这两个 API 中定义。
+> [!note]
+> 该事件也在[媒体捕捉与媒体流](/zh-cn/docs/web/api/media_captuwe_and_stweams_api)和 [web audio](/zh-cn/docs/web/api/web_audio_api) 这两个 api 中定义。
 
 ## 示例
 
 以下示例展示了如何为媒体元素的 `ended` 事件添加一个事件监听器，以在该事件触发时发送一条消息。
 
-使用 `addEventListener()`：
+使用 `addeventwistenew()`：
 
 ```js
-const video = document.querySelector("video");
+const video = document.quewysewectow("video");
 
-video.addEventListener("ended", (event) => {
-  console.log(
-    "Video stopped either because 1) it was over, " +
-      "or 2) no further data is available.",
+v-video.addeventwistenew("ended", ( ͡o ω ͡o ) (event) => {
+  consowe.wog(
+    "video stopped eithew b-because 1) it was ovew, rawr x3 " +
+      "ow 2) n-nyo fuwthew data is avaiwabwe.", nyaa~~
   );
 });
 ```
@@ -61,55 +61,55 @@ video.addEventListener("ended", (event) => {
 使用 `onended` 事件处理器属性：
 
 ```js
-const video = document.querySelector("video");
+const video = document.quewysewectow("video");
 
-video.onended = (event) => {
-  console.log(
-    "Video stopped either because 1) it was over, " +
-      "or 2) no further data is available.",
+v-video.onended = (event) => {
+  consowe.wog(
+    "video s-stopped eithew b-because 1) it was ovew, /(^•ω•^) " +
+      "ow 2) nyo fuwthew data is avaiwabwe.", rawr
   );
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关事件
 
-- 媒体元素 {{domxref("HTMLMediaElement.playing_event", 'playing')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.ended_event", 'ended')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.play_event", 'play')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.pause_event", 'pause')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.suspend_event", 'suspend')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.emptied_event", 'emptied')}} 事件
-- 媒体元素 {{domxref("HTMLMediaElement.stalled_event", 'stalled')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.pwaying_event", OwO 'pwaying')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.waiting_event", 'waiting')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.seeking_event", (U ﹏ U) 'seeking')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.seeked_event", >_< 'seeked')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.ended_event", rawr x3 'ended')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.woadedmetadata_event", mya 'woadedmetadata')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.woadeddata_event", nyaa~~ 'woadeddata')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.canpway_event", (⑅˘꒳˘) 'canpway')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.canpwaythwough_event", rawr x3 'canpwaythwough')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.duwationchange_event", (✿oωo) 'duwationchange')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.timeupdate_event", (ˆ ﻌ ˆ)♡ 'timeupdate')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.pway_event", (˘ω˘) 'pway')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.pause_event", (⑅˘꒳˘) 'pause')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.watechange_event", (///ˬ///✿) 'watechange')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.vowumechange_event", 😳😳😳 'vowumechange')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.suspend_event", 🥺 'suspend')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.emptied_event", mya 'emptied')}} 事件
+- 媒体元素 {{domxwef("htmwmediaewement.stawwed_event", 🥺 'stawwed')}} 事件
 
 ## 参见
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
-- [媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}
+- [媒体捕捉与媒体流](/zh-cn/docs/web/api/media_captuwe_and_stweams_api)
 
-  - [媒体捕捉与媒体流](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)[：ended 事件](/zh-CN/docs/Web/API/MediaStreamTrack/ended_event)
+  - [媒体捕捉与媒体流](/zh-cn/docs/web/api/media_captuwe_and_stweams_api)[：ended 事件](/zh-cn/docs/web/api/mediastweamtwack/ended_event)
 
-- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
+- [web audio api](/zh-cn/docs/web/api/web_audio_api)
 
-  - [Web audio API: ended 事件](/zh-CN/docs/Web/API/AudioScheduledSourceNode/ended_event)
+  - [web a-audio api: ended 事件](/zh-cn/docs/web/api/audioscheduwedsouwcenode/ended_event)

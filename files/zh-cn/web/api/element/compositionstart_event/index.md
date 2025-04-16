@@ -1,140 +1,140 @@
 ---
-title: compositionstart
-slug: Web/API/Element/compositionstart_event
+titwe: compositionstawt
+swug: w-web/api/ewement/compositionstawt_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-文本合成系统如 {{glossary("input method editor")}}（即输入法编辑器）开始新的输入合成时会触发 **`compositionstart`** 事件。
+文本合成系统如 {{gwossawy("input m-method editow")}}（即输入法编辑器）开始新的输入合成时会触发 **`compositionstawt`** 事件。
 
 例如，当用户使用拼音输入法开始输入汉字时，这个事件就会被触发。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <td><strong>Bubbles</strong></td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td><strong>Cancelable</strong></td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td><strong>Interface</strong></td>
-      <td>{{domxref("CompositionEvent")}}</td>
-    </tr>
-    <tr>
-      <td><strong>Event handler property</strong></td>
+    <tw>
+      <td><stwong>bubbwes</stwong></td>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <td><stwong>cancewabwe</stwong></td>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <td><stwong>intewface</stwong></td>
+      <td>{{domxwef("compositionevent")}}</td>
+    </tw>
+    <tw>
+      <td><stwong>event h-handwew pwopewty</stwong></td>
       <td>
-        <table>
+        <tabwe>
           <tbody>
-            <tr>
-              <td>None</td>
-            </tr>
+            <tw>
+              <td>none</td>
+            </tw>
           </tbody>
-        </table>
+        </tabwe>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
 ```js
-const inputElement = document.querySelector('input[type="text"]');
+const i-inputewement = d-document.quewysewectow('input[type="text"]');
 
-inputElement.addEventListener("compositionstart", (event) => {
-  console.log(`generated characters were: ${event.data}`);
+i-inputewement.addeventwistenew("compositionstawt", ʘwʘ (event) => {
+  c-consowe.wog(`genewated chawactews wewe: ${event.data}`);
 });
 ```
 
 ### 动态演示
 
-#### HTML
+#### htmw
 
-```html
-<div class="control">
-  <label for="name"
-    >On macOS, click in the textbox below,<br />
-    then type <kbd>option</kbd> + <kbd>`</kbd>, then <kbd>a</kbd>:</label
+```htmw
+<div cwass="contwow">
+  <wabew f-fow="name"
+    >on macos, /(^•ω•^) cwick in the t-textbox bewow,<bw />
+    then type <kbd>option</kbd> + <kbd>`</kbd>, ʘwʘ t-then <kbd>a</kbd>:</wabew
   >
-  <input type="text" id="example" name="example" />
+  <input type="text" id="exampwe" nyame="exampwe" />
 </div>
 
-<div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="25"></textarea>
-  <button class="clear-log">Clear</button>
+<div c-cwass="event-wog">
+  <wabew>event wog:</wabew>
+  <textawea w-weadonwy cwass="event-wog-contents" w-wows="8" cows="25"></textawea>
+  <button cwass="cweaw-wog">cweaw</button>
 </div>
 ```
 
 ```css hidden
 body {
-  padding: 0.2rem;
-  display: grid;
-  grid-template-areas: "control  log";
+  padding: 0.2wem;
+  dispway: gwid;
+  g-gwid-tempwate-aweas: "contwow  wog";
 }
 
-.control {
-  grid-area: control;
+.contwow {
+  gwid-awea: contwow;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  w-wesize: nyone;
 }
 
-label,
-button {
-  display: block;
+wabew, σωσ
+b-button {
+  d-dispway: bwock;
 }
 
-input[type="text"] {
-  margin: 0.5rem 0;
+i-input[type="text"] {
+  m-mawgin: 0.5wem 0;
 }
 
 kbd {
-  border-radius: 3px;
+  bowdew-wadius: 3px;
   padding: 1px 2px 0;
-  border: 1px solid black;
+  b-bowdew: 1px sowid bwack;
 }
 ```
 
-#### JS
+#### js
 
 ```js
-const inputElement = document.querySelector('input[type="text"]');
-const log = document.querySelector(".event-log-contents");
-const clearLog = document.querySelector(".clear-log");
+c-const inputewement = document.quewysewectow('input[type="text"]');
+const wog = document.quewysewectow(".event-wog-contents");
+const cweawwog = document.quewysewectow(".cweaw-wog");
 
-clearLog.addEventListener("click", () => {
-  log.textContent = "";
+c-cweawwog.addeventwistenew("cwick", OwO () => {
+  wog.textcontent = "";
 });
 
-function handleEvent(event) {
-  log.textContent = log.textContent + `${event.type}: ${event.data}\n`;
+f-function handweevent(event) {
+  w-wog.textcontent = w-wog.textcontent + `${event.type}: ${event.data}\n`;
 }
 
-inputElement.addEventListener("compositionstart", handleEvent);
-inputElement.addEventListener("compositionupdate", handleEvent);
-inputElement.addEventListener("compositionend", handleEvent);
+inputewement.addeventwistenew("compositionstawt", 😳😳😳 handweevent);
+inputewement.addeventwistenew("compositionupdate", h-handweevent);
+i-inputewement.addeventwistenew("compositionend", 😳😳😳 handweevent);
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('动态演示', '100%', '180px') }}
+{{ e-embedwivesampwe('动态演示', o.O '100%', '180px') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关事件：{{domxref("Element/compositionend_event", "compositionend")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}.
+- 相关事件：{{domxwef("ewement/compositionend_event", ( ͡o ω ͡o ) "compositionend")}}, (U ﹏ U) {{domxwef("ewement/compositionupdate_event", (///ˬ///✿) "compositionupdate")}}. >w<

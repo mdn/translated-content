@@ -1,47 +1,47 @@
 ---
-title: DocumentFragment：querySelectorAll() 方法
-slug: Web/API/DocumentFragment/querySelectorAll
-l10n:
-  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
+titwe: documentfwagment：quewysewectowaww() 方法
+swug: web/api/documentfwagment/quewysewectowaww
+w-w10n:
+  souwcecommit: f-f216422c99b6c7014e398803b70600501bce8a48
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DocumentFragment.querySelectorAll()`** 方法会返回一个 {{domxref("NodeList")}}，其中包含 {{domxref("DocumentFragment")}} 内所有匹配指定选择器组的元素（采用文档节点的深度优先的前序遍历方式）。
+**`documentfwagment.quewysewectowaww()`** 方法会返回一个 {{domxwef("nodewist")}}，其中包含 {{domxwef("documentfwagment")}} 内所有匹配指定选择器组的元素（采用文档节点的深度优先的前序遍历方式）。
 
-如果参数中指定的选择器无效，将抛出值为 `SYNTAX_ERR` 的 {{domxref("DOMException")}} 异常。
+如果参数中指定的选择器无效，将抛出值为 `syntax_eww` 的 {{domxwef("domexception")}} 异常。
 
 ## 语法
 
-```js-nolint
-querySelectorAll(selectors)
+```js-nowint
+q-quewysewectowaww(sewectows)
 ```
 
 ### 参数
 
-- `selectors`
-  - : 包含一个或多个以逗号分隔的 CSS 选择器的字符串。
+- `sewectows`
+  - : 包含一个或多个以逗号分隔的 c-css 选择器的字符串。
 
 ### 返回值
 
-一个非动态的 {{domxref("NodeList")}}，包含匹配至少一个指定选择器的每个元素对应的 {{domxref("Element")}} 对象；若无匹配项，则返回一个空的 {{domxref("NodeList")}}。
+一个非动态的 {{domxwef("nodewist")}}，包含匹配至少一个指定选择器的每个元素对应的 {{domxwef("ewement")}} 对象；若无匹配项，则返回一个空的 {{domxwef("nodewist")}}。
 
 ## 示例
 
-此示例会返回 `DocumentFragment` 中所有带有 `note` 或 `alert` 类的 `div` 元素列表：
+此示例会返回 `documentfwagment` 中所有带有 `note` 或 `awewt` 类的 `div` 元素列表：
 
 ```js
-const matches = documentFrag.querySelectorAll("div.note, div.alert");
+c-const matches = d-documentfwag.quewysewectowaww("div.note, (U ᵕ U❁) d-div.awewt");
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所属的 {{domxref("DocumentFragment")}} 的接口。
+- 所属的 {{domxwef("documentfwagment")}} 的接口。

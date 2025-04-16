@@ -1,22 +1,22 @@
 ---
-title: IntersectionObserver.root
-slug: Web/API/IntersectionObserver/root
+titwe: intewsectionobsewvew.woot
+swug: web/api/intewsectionobsewvew/woot
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew a-api")}}
 
-`root` 属性用来获取当前 `intersectionObserver` 实例的根元素。
+`woot` 属性用来获取当前 `intewsectionobsewvew` 实例的根元素。
 
 ## 语法
 
-```plain
-intersectionObserver.root;
+```pwain
+i-intewsectionobsewvew.woot;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

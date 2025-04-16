@@ -1,154 +1,154 @@
 ---
-title: AnalyserNode
-slug: Web/API/AnalyserNode
+titwe: anawysewnode
+swug: web/api/anawysewnode
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-**`AnalyserNode`** 接口表示了一个可以提供实时频域和时域分析信息的节点。它是一个不对音频流作任何改动的 {{domxref("AudioNode")}}，同时允许你获取和处理它生成的数据，从而创建音频可视化。
+**`anawysewnode`** 接口表示了一个可以提供实时频域和时域分析信息的节点。它是一个不对音频流作任何改动的 {{domxwef("audionode")}}，同时允许你获取和处理它生成的数据，从而创建音频可视化。
 
-`AnalyzerNode` 只有一个输入和输出，即使未连接到输出它也能正常工作。
+`anawyzewnode` 只有一个输入和输出，即使未连接到输出它也能正常工作。
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](webaudiofft.png)
+![without m-modifying t-the audio stweam, o.O t-the nyode a-awwows to get the f-fwequency and t-time-domain data a-associated to it, ( ͡o ω ͡o ) using a fft.](webaudiofft.png)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">输入数</th>
+    <tw>
+      <th scope="wow">输入数</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">输出数</th>
+    </tw>
+    <tw>
+      <th scope="wow">输出数</th>
       <td><code>1</code> (但可能是未连接的)</td>
-    </tr>
-    <tr>
-      <th scope="row">通道计数模式</th>
-      <td><code>"explicit"</code></td>
-    </tr>
-    <tr>
-      <th scope="row">通道数</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">通道计数模式</th>
+      <td><code>"expwicit"</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">通道数</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">通道解释</th>
-      <td><code>"speakers"</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">通道解释</th>
+      <td><code>"speakews"</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 继承
 
 继承自以下父接口：
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 构造函数
 
-- {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}}
-  - : 创建一个新的 `AnalyserNode` 对象实例。
+- {{domxwef("anawysewnode.anawysewnode", "anawysewnode()")}}
+  - : 创建一个新的 `anawysewnode` 对象实例。
 
 ## 属性
 
-_继承属性自_ _{{domxref("AudioNode")}}。_
+_继承属性自_ _{{domxwef("audionode")}}。_
 
-- {{domxref("AnalyserNode.fftSize")}}
-  - : 一个无符号长整形 (unsigned long) 的值，代表了用于计算频域信号时使用的 FFT ([快速傅里叶变换](https://zh.wikipedia.org/zh-cn/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2)) 的窗口大小。
-- {{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}
-  - : 一个无符号长整形 (unsigned long) 的值，值为 fftSize 的一半。这通常等于将要用于可视化的数据值的数量。
-- {{domxref("AnalyserNode.minDecibels")}}
-  - : 是一个双精度值，表示 FFT 分析频域数据并转换为无符号字节值时，对输入的功率数据的最小阈值 - 基本上，它限定了调用`getByteFrequencyData()`时结果范围的最小值
-- {{domxref("AnalyserNode.maxDecibels")}}
+- {{domxwef("anawysewnode.fftsize")}}
+  - : 一个无符号长整形 (unsigned w-wong) 的值，代表了用于计算频域信号时使用的 fft ([快速傅里叶变换](https://zh.wikipedia.owg/zh-cn/%e5%bf%ab%e9%80%9f%e5%82%85%e9%87%8c%e5%8f%b6%e5%8f%98%e6%8d%a2)) 的窗口大小。
+- {{domxwef("anawysewnode.fwequencybincount")}} {{weadonwyinwine}}
+  - : 一个无符号长整形 (unsigned w-wong) 的值，值为 fftsize 的一半。这通常等于将要用于可视化的数据值的数量。
+- {{domxwef("anawysewnode.mindecibews")}}
+  - : 是一个双精度值，表示 fft 分析频域数据并转换为无符号字节值时，对输入的功率数据的最小阈值 - 基本上，它限定了调用`getbytefwequencydata()`时结果范围的最小值
+- {{domxwef("anawysewnode.maxdecibews")}}
 
-  - : 是一个双精度值，表示 FFT 分析频域数据并转换为无符号字节值时，对输入的功率数据的最大阈值 - 基本上，它限定了调用`getByteFrequencyData()`时结果范围的最大值
+  - : 是一个双精度值，表示 fft 分析频域数据并转换为无符号字节值时，对输入的功率数据的最大阈值 - 基本上，它限定了调用`getbytefwequencydata()`时结果范围的最大值
 
-- {{domxref("AnalyserNode.smoothingTimeConstant")}}
-  - : 是一个双精度浮点型 (double) 的值，表示最后一个分析帧的平均常数 — 基本上，它随时间使值之间的过渡更平滑。
+- {{domxwef("anawysewnode.smoothingtimeconstant")}}
+  - : 是一个双精度浮点型 (doubwe) 的值，表示最后一个分析帧的平均常数 — 基本上，它随时间使值之间的过渡更平滑。
 
 ## 方法
 
-_继承方法自_ _{{domxref("AudioNode")}}_.
+_继承方法自_ _{{domxwef("audionode")}}_. (U ﹏ U)
 
-- {{domxref("AnalyserNode.getFloatFrequencyData()")}}
-  - : 将当前频域数据拷贝进{{domxref("Float32Array")}}数组。
-- {{domxref("AnalyserNode.getByteFrequencyData()")}}
-  - : 将当前频域数据拷贝进{{domxref("Uint8Array")}}数组（无符号字节数组）。
-- {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
-  - : 将当前波形，或者时域数据拷贝进{{domxref("Float32Array")}}数组。
-- {{domxref("AnalyserNode.getByteTimeDomainData()")}}
-  - : 将当前波形，或者时域数据拷贝进 {{domxref("Uint8Array")}}数组（无符号字节数组）。
+- {{domxwef("anawysewnode.getfwoatfwequencydata()")}}
+  - : 将当前频域数据拷贝进{{domxwef("fwoat32awway")}}数组。
+- {{domxwef("anawysewnode.getbytefwequencydata()")}}
+  - : 将当前频域数据拷贝进{{domxwef("uint8awway")}}数组（无符号字节数组）。
+- {{domxwef("anawysewnode.getfwoattimedomaindata()")}}
+  - : 将当前波形，或者时域数据拷贝进{{domxwef("fwoat32awway")}}数组。
+- {{domxwef("anawysewnode.getbytetimedomaindata()")}}
+  - : 将当前波形，或者时域数据拷贝进 {{domxwef("uint8awway")}}数组（无符号字节数组）。
 
 ## 例子
 
-> [!NOTE]
-> 查看 [Visualizations with Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) 指南以获得更多关于创建音频可视化效果的信息。
+> [!note]
+> 查看 [visuawizations w-with web audio api](/zh-cn/docs/web/api/web_audio_api/visuawizations_with_web_audio_api) 指南以获得更多关于创建音频可视化效果的信息。
 
 ### 基础用法
 
-下面的例子展示了 {{domxref("AudioContext")}} 创建一个 `AnalyserNode`, 然后用 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 去反复收集当前音频的时域数据，并绘制为一个示波器风格的输出 (频谱).
+下面的例子展示了 {{domxwef("audiocontext")}} 创建一个 `anawysewnode`, (///ˬ///✿) 然后用 {{domxwef("window.wequestanimationfwame()","wequestanimationfwame")}} 和 {{htmwewement("canvas")}} 去反复收集当前音频的时域数据，并绘制为一个示波器风格的输出 (频谱). >w<
 
-更多的例子/信息，查看 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 的 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+更多的例子/信息，查看 [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 的 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205)). rawr
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+v-vaw audioctx = n-nyew (window.audiocontext || window.webkitaudiocontext)();
+vaw anawysew = audioctx.cweateanawysew();
 
 // ...
 
-analyser.fftSize = 2048;
-var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);
-analyser.getByteTimeDomainData(dataArray);
+anawysew.fftsize = 2048;
+v-vaw buffewwength = anawysew.fwequencybincount;
+vaw dataawway = nyew uint8awway(buffewwength);
+anawysew.getbytetimedomaindata(dataawway);
 
-// 获取 ID 为 "oscilloscope" 的画布
-var canvas = document.getElementById("oscilloscope");
-var canvasCtx = canvas.getContext("2d");
+// 获取 i-id 为 "osciwwoscope" 的画布
+vaw c-canvas = document.getewementbyid("osciwwoscope");
+v-vaw canvasctx = c-canvas.getcontext("2d");
 
 // 绘制一个当前音频源的示波器
 
-function draw() {
-  drawVisual = requestAnimationFrame(draw);
+f-function dwaw() {
+  dwawvisuaw = wequestanimationfwame(dwaw);
 
-  analyser.getByteTimeDomainData(dataArray);
+  a-anawysew.getbytetimedomaindata(dataawway);
 
-  canvasCtx.fillStyle = "rgb(200, 200, 200)";
-  canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+  canvasctx.fiwwstywe = "wgb(200, mya 200, 200)";
+  canvasctx.fiwwwect(0, ^^ 0, c-canvas.width, 😳😳😳 canvas.height);
 
-  canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+  canvasctx.winewidth = 2;
+  canvasctx.stwokestywe = "wgb(0, mya 0, 0)";
 
-  canvasCtx.beginPath();
+  canvasctx.beginpath();
 
-  var sliceWidth = (canvas.width * 1.0) / bufferLength;
-  var x = 0;
+  vaw swicewidth = (canvas.width * 1.0) / buffewwength;
+  v-vaw x = 0;
 
-  for (var i = 0; i < bufferLength; i++) {
-    var v = dataArray[i] / 128.0;
-    var y = (v * canvas.height) / 2;
+  fow (vaw i-i = 0; i < buffewwength; i-i++) {
+    v-vaw v = dataawway[i] / 128.0;
+    vaw y = (v * canvas.height) / 2;
 
     if (i === 0) {
-      canvasCtx.moveTo(x, y);
-    } else {
-      canvasCtx.lineTo(x, y);
+      c-canvasctx.moveto(x, 😳 y-y);
+    } ewse {
+      canvasctx.wineto(x, -.- y-y);
     }
 
-    x += sliceWidth;
+    x += s-swicewidth;
   }
 
-  canvasCtx.lineTo(canvas.width, canvas.height / 2);
-  canvasCtx.stroke();
+  canvasctx.wineto(canvas.width, 🥺 c-canvas.height / 2);
+  canvasctx.stwoke();
 }
 
-draw();
+d-dwaw();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关内容
 
-- [Web Audio API 的运用](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [web audio api 的运用](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

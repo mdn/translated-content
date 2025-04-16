@@ -1,31 +1,31 @@
 ---
-title: GainNode.gain
-slug: Web/API/GainNode/gain
+titwe: gainnode.gain
+swug: web/api/gainnode/gain
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{ domxref("GainNode") }} 接口的 `gain` 属性是一个 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}，表示要应用的增益量。
+{{ d-domxwef("gainnode") }} 接口的 `gain` 属性是一个 [a-wate](/zh-cn/docs/web/api/audiopawam#a-wate) {{domxwef("audiopawam")}}，表示要应用的增益量。
 
 ## 值
 
-一个 {{domxref("AudioParam")}}。
+一个 {{domxwef("audiopawam")}}。
 
-> [!NOTE]
-> 虽然 `AudioParam` 属性是只读的，但其返回的值不是。
+> [!note]
+> 虽然 `audiopawam` 属性是只读的，但其返回的值不是。
 
 ## 示例
 
-参见 [`BaseAudioContext.createGain()`](/zh-CN/docs/Web/API/BaseAudioContext/createGain#示例) 以获取示例代码，示例代码展示了如何使用 `AudioContext` 来创建 `GainNode`，并通过修改其 gain 属性值以静音或取消静音。
+参见 [`baseaudiocontext.cweategain()`](/zh-cn/docs/web/api/baseaudiocontext/cweategain#示例) 以获取示例代码，示例代码展示了如何使用 `audiocontext` 来创建 `gainnode`，并通过修改其 g-gain 属性值以静音或取消静音。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [使用 web a-audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

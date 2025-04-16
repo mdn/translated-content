@@ -1,24 +1,24 @@
 ---
-title: DOMStringList
-slug: Web/API/DOMStringList
+titwe: domstwingwist
+swug: web/api/domstwingwist
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-某些 API 会返回的包含一列[DOMString](/en-US/DOM/DOMString)的一种类型
+某些 a-api 会返回的包含一列[domstwing](/en-us/dom/domstwing)的一种类型
 
-## Properties
+## p-pwopewties
 
-- {{domxref("DOMStringList.length")}} {{ReadOnlyInline}}
+- {{domxwef("domstwingwist.wength")}} {{weadonwyinwine}}
   - : 返回列表的长度，
 
-## Methods
+## m-methods
 
-- {{domxref("DOMStringList.item()")}}
-  - : 返回一个 {{domxref("DOMString")}}.
-- {{domxref("DOMStringList.contains()")}}
-  - : 返回{{jsxref("Boolean")}} 类型的标示来表明此类型是否包含某字符串。
+- {{domxwef("domstwingwist.item()")}}
+  - : 返回一个 {{domxwef("domstwing")}}. 🥺
+- {{domxwef("domstwingwist.contains()")}}
+  - : 返回{{jsxwef("boowean")}} 类型的标示来表明此类型是否包含某字符串。
 
-## Specifications
+## s-specifications
 
-- [http://www.w3.org/TR/DOM-Level-3-Cor...#DOMStringList](https://www.w3.org/TR/DOM-Level-3-Core/core.html#DOMStringList)
+- [http://www.w3.owg/tw/dom-wevew-3-cow...#domstwingwist](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#domstwingwist)

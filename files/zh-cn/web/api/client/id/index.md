@@ -1,11 +1,11 @@
 ---
-title: Client.id
-slug: Web/API/Client/id
+titwe: cwient.id
+swug: web/api/cwient/id
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-{{domxref("Client")}} 接口的 **`id`** 只读属性，返回 {{domxref("Client")}} 对象的通用唯一标识。
+{{domxwef("cwient")}} 接口的 **`id`** 只读属性，返回 {{domxwef("cwient")}} 对象的通用唯一标识。
 
 ## 值
 
@@ -13,8 +13,8 @@ slug: Web/API/Client/id
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

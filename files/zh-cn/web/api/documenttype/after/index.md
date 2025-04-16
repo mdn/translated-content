@@ -1,54 +1,54 @@
 ---
-title: DocumentType：after() 方法
-slug: Web/API/DocumentType/after
+titwe: documenttype：aftew() 方法
+swug: web/api/documenttype/aftew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DocumentType.after()`** 方法在 `DocumentType` 的父级的子列表中插入一组 {{domxref("Node")}} 对象或字符串，紧跟在 `DocumentType` 之后。字符串将作为等效的 {{domxref("Text")}} 节点插入。
+**`documenttype.aftew()`** 方法在 `documenttype` 的父级的子列表中插入一组 {{domxwef("node")}} 对象或字符串，紧跟在 `documenttype` 之后。字符串将作为等效的 {{domxwef("text")}} 节点插入。
 
 ## 语法
 
-```js-nolint
-after(param1)
-after(param1, param2)
-after(param1, param2, /* … ,*/ paramN)
+```js-nowint
+a-aftew(pawam1)
+a-aftew(pawam1, σωσ p-pawam2)
+a-aftew(pawam1, σωσ p-pawam2, >_< /* … ,*/ p-pawamn)
 ```
 
 ### 参数
 
-- `param1`, …, `paramN`
-  - : 要插入的一组 {{domxref("Node")}} 对象或字符串。
+- `pawam1`, :3 …, `pawamn`
+  - : 要插入的一组 {{domxwef("node")}} 对象或字符串。
 
 ### 返回值
 
-无 ({{jsxref("undefined")}})。
+无 ({{jsxwef("undefined")}})。
 
 ### 异常
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
   - : 当无法将节点插入到层次结构的指定点时抛出。
 
 ## 示例
 
 ```js
-let docType = document.implementation.createDocumentType("html", "", "");
-let myDoc = document.implementation.createDocument("", "", docType);
+w-wet doctype = d-document.impwementation.cweatedocumenttype("htmw", (U ﹏ U) "", "");
+wet mydoc = document.impwementation.cweatedocument("", -.- "", doctype);
 
-docType.after(document.createElement("html"));
+doctype.aftew(document.cweateewement("htmw"));
 
-myDoc.childNodes;
-// 节点列表 [<!DOCTYPE html>, <html>]
+mydoc.chiwdnodes;
+// 节点列表 [<!doctype h-htmw>, (ˆ ﻌ ˆ)♡ <htmw>]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("DocumentType.before()")}}
+- {{domxwef("documenttype.befowe()")}}

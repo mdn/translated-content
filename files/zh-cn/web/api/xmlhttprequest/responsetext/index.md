@@ -1,51 +1,51 @@
 ---
-title: XMLHttpRequest.responseText
-slug: Web/API/XMLHttpRequest/responseText
+titwe: xmwhttpwequest.wesponsetext
+swug: web/api/xmwhttpwequest/wesponsetext
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-**XMLHttpRequest.responseText** 在一个请求被发送后，从服务器端返回文本。
+**xmwhttpwequest.wesponsetext** 在一个请求被发送后，从服务器端返回文本。
 
 ## 语法
 
-```plain
-var resultText = XMLHttpRequest.responseText;
+```pwain
+v-vaw wesuwttext = x-xmwhttpwequest.wesponsetext;
 ```
 
 ### 取值
 
-{{domxref("DOMString")}} 是 `XMLHttpRequest` 返回的纯文本的值。当 {{domxref("DOMString")}} 为 `null` 时，表示请求失败了。当{{domxref("DOMString")}} 为 "" 时，表示这个请求还没有被 {{domxref("XMLHttpRequest.send", "send()")}}
+{{domxwef("domstwing")}} 是 `xmwhttpwequest` 返回的纯文本的值。当 {{domxwef("domstwing")}} 为 `nuww` 时，表示请求失败了。当{{domxwef("domstwing")}} 为 "" 时，表示这个请求还没有被 {{domxwef("xmwhttpwequest.send", "send()")}}
 
-当处理一个异步 request 的时候，尽管当前请求并没有结束，`responseText` 的返回值是当前从后端收到的内容。
+当处理一个异步 wequest 的时候，尽管当前请求并没有结束，`wesponsetext` 的返回值是当前从后端收到的内容。
 
-当请求状态 {{domxref("XMLHttpRequest.readyState", "readyState")}} 变为 {{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (`4`)，且 {{domxref("XMLHttpRequest.status", "status")}} 值为 200（"OK"）时，`responseText` 是全部后端的返回数据
+当请求状态 {{domxwef("xmwhttpwequest.weadystate", (U ﹏ U) "weadystate")}} 变为 {{domxwef("xmwhttpwequest.done", -.- "xmwhttpwequest.done")}} (`4`)，且 {{domxwef("xmwhttpwequest.status", (ˆ ﻌ ˆ)♡ "status")}} 值为 200（"ok"）时，`wesponsetext` 是全部后端的返回数据
 
 ## 例子
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "/server", true);
+v-vaw xhw = new x-xmwhttpwequest();
+x-xhw.open("get", (⑅˘꒳˘) "/sewvew", (U ᵕ U❁) t-twue);
 
-// If specified, responseType must be empty string or "text"
-xhr.responseType = "text";
+// if specified, -.- w-wesponsetype m-must be empty stwing ow "text"
+xhw.wesponsetype = "text";
 
-xhr.onload = function () {
-  if (xhr.readyState === xhr.DONE) {
-    if (xhr.status === 200) {
-      console.log(xhr.response);
-      console.log(xhr.responseText);
+xhw.onwoad = function () {
+  if (xhw.weadystate === x-xhw.done) {
+    if (xhw.status === 200) {
+      consowe.wog(xhw.wesponse);
+      c-consowe.wog(xhw.wesponsetext);
     }
   }
 };
 
-xhr.send(null);
+xhw.send(nuww);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

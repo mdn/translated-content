@@ -1,26 +1,26 @@
 ---
-title: ByteLengthQueuingStrategy()
-slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
+titwe: bytewengthqueuingstwategy()
+swug: web/api/bytewengthqueuingstwategy/bytewengthqueuingstwategy
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`ByteLengthQueuingStrategy()`** 构造函数创建并返回一个 `ByteLengthQueuingStrategy` 对象实例。
+**`bytewengthqueuingstwategy()`** 构造函数创建并返回一个 `bytewengthqueuingstwategy` 对象实例。
 
 ## 语法
 
-```js-nolint
-new ByteLengthQueuingStrategy(highWaterMark)
+```js-nowint
+n-nyew b-bytewengthqueuingstwategy(highwatewmawk)
 ```
 
 ### 参数
 
-- `highWaterMark`
-  - : 一个包含 `highWaterMark` 属性的对象。这个属性是一个非负整数，定义了在应用背压之前内部队列可以包含的分块的总数。
+- `highwatewmawk`
+  - : 一个包含 `highwatewmawk` 属性的对象。这个属性是一个非负整数，定义了在应用背压之前内部队列可以包含的分块的总数。
 
 ### 返回值
 
-一个 {{domxref("ByteLengthQueuingStrategy")}} 对象实例。
+一个 {{domxwef("bytewengthqueuingstwategy")}} 对象实例。
 
 ### 异常
 
@@ -29,34 +29,34 @@ new ByteLengthQueuingStrategy(highWaterMark)
 ## 示例
 
 ```js
-const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+c-const queuingstwategy = n-nyew bytewengthqueuingstwategy({ h-highwatewmawk: 1 });
 
-const readableStream = new ReadableStream(
+c-const weadabwestweam = nyew w-weadabwestweam(
   {
-    start(controller) {
+    s-stawt(contwowwew) {
       // …
-    },
-    pull(controller) {
+    }, :3
+    puww(contwowwew) {
       // …
-    },
-    cancel(err) {
-      console.log("stream error:", err);
-    },
+    }, (U ﹏ U)
+    cancew(eww) {
+      consowe.wog("stweam ewwow:", -.- e-eww);
+    }, (ˆ ﻌ ˆ)♡
   },
-  queuingStrategy,
+  queuingstwategy, (⑅˘꒳˘)
 );
 
-const size = queuingStrategy.size(chunk);
+const s-size = queuingstwategy.size(chunk);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("ByteLengthQueuingStrategy")}} 接口
+- {{domxwef("bytewengthqueuingstwategy")}} 接口

@@ -1,34 +1,34 @@
 ---
-title: CSSMathSum
-slug: Web/API/CSSMathSum
+titwe: cssmathsum
+swug: web/api/cssmathsum
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{apiwef("css t-typed object modew a-api")}}{{seecompattabwe}}
 
-{{domxref('CSS Typed Object Model API','','',' ')}} 的 **`CSSMathSum`** 接口通过调用{{domxref('CSSNumericValue')}} 的 {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, 或 {{domxref('CSSNumericValue.toSum','toSum()')}} 方法获得结果。
+{{domxwef('css t-typed o-object modew a-api','','',' ')}} 的 **`cssmathsum`** 接口通过调用{{domxwef('cssnumewicvawue')}} 的 {{domxwef('cssnumewicvawue.add','add()')}}, o.O {{domxwef('cssnumewicvawue.sub','sub()')}}, (U ᵕ U❁) 或 {{domxwef('cssnumewicvawue.tosum','tosum()')}} 方法获得结果。
 
 ## 创建
 
-- {{domxref("CSSMathSum.CSSMathSum()")}}
-  - : 创建一个新的 `CSSMathSum` 对象。
+- {{domxwef("cssmathsum.cssmathsum()")}}
+  - : 创建一个新的 `cssmathsum` 对象。
 
 ## 属性
 
-- {{domxref('CSSMathSum.values')}}
-  - : 返回一个包含一个或多个 {{domxref('CSSNumericValue')}} 对象的 {{domxref('CSSNumericArray')}} 对象。
+- {{domxwef('cssmathsum.vawues')}}
+  - : 返回一个包含一个或多个 {{domxwef('cssnumewicvawue')}} 对象的 {{domxwef('cssnumewicawway')}} 对象。
 
 ### 事件处理
 
-No
+no
 
 ## 方法
 
-None.
+n-nyone. (⑅˘꒳˘)
 
 ## 说明
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

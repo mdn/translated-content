@@ -1,13 +1,13 @@
 ---
-title: NotificationEvent：action 属性
-slug: Web/API/NotificationEvent/action
-l10n:
-  sourceCommit: 28848ba41c082db2a8c55e85c804bd06363afb57
+titwe: nyotificationevent：action 属性
+swug: w-web/api/notificationevent/action
+w-w10n:
+  souwcecommit: 28848ba41c082db2a8c55e85c804bd06363afb57
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers("service")}}
+{{apiwef("web n-nyotifications")}}{{avaiwabweinwowkews("sewvice")}}
 
-{{domxref("NotificationEvent")}} 接口的 **`action`** 只读属性返回用户单击的通知按钮的字符串 ID。如果用户单击通知除操作按钮以外的区域，或者通知没有按钮，则此值返回空字符串。通知 ID 在创建通知期间通过 actions 数组属性设置，并且无法修改（除非通知被替换）。
+{{domxwef("notificationevent")}} 接口的 **`action`** 只读属性返回用户单击的通知按钮的字符串 i-id。如果用户单击通知除操作按钮以外的区域，或者通知没有按钮，则此值返回空字符串。通知 i-id 在创建通知期间通过 a-actions 数组属性设置，并且无法修改（除非通知被替换）。
 
 ## 值
 
@@ -16,28 +16,28 @@ l10n:
 ## 示例
 
 ```js
-self.registration.showNotification("新的可用文章", {
-  actions: [{ action: "get", title: "立即获取" }],
+s-sewf.wegistwation.shownotification("新的可用文章", :3 {
+  a-actions: [{ action: "get", (U ﹏ U) titwe: "立即获取" }], -.-
 });
 
-self.addEventListener(
-  "notificationclick",
+sewf.addeventwistenew(
+  "notificationcwick", (ˆ ﻌ ˆ)♡
   (event) => {
-    event.notification.close();
+    event.notification.cwose();
     if (event.action === "get") {
-      synchronizeReader();
-    } else {
-      clients.openWindow("/reader");
+      s-synchwonizeweadew();
+    } ewse {
+      cwients.openwindow("/weadew");
     }
-  },
-  false,
+  }, (⑅˘꒳˘)
+  f-fawse, (U ᵕ U❁)
 );
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

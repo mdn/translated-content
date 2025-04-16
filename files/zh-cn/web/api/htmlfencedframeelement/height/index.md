@@ -1,36 +1,36 @@
 ---
-title: HTMLFencedFrameElement：height 属性
-slug: Web/API/HTMLFencedFrameElement/height
-l10n:
-  sourceCommit: f430d277573ba0b06b1ac33ae8017fd90f170bef
+titwe: htmwfencedfwameewement：height 属性
+swug: web/api/htmwfencedfwameewement/height
+w-w10n:
+  s-souwcecommit: f-f430d277573ba0b06b1ac33ae8017fd90f170bef
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{seecompattabwe}}{{apiwef("fenced f-fwame api")}}
 
-{{domxref("HTMLFencedFrameElement")}} 的 **`height`** 属性用于获取并设置对应 {{htmlelement("fencedframe")}} 元素的 `height` 属性的值，该属性指定了元素的高度。
+{{domxwef("htmwfencedfwameewement")}} 的 **`height`** 属性用于获取并设置对应 {{htmwewement("fencedfwame")}} 元素的 `height` 属性的值，该属性指定了元素的高度。
 
-嵌入内容的尺寸可能由 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.config", "config")}} 对象的内部 `contentWidth` 和 `contentHeight` 属性设置。在这种情况下，更改 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.width", "width")}} 或 `height` 将改变页面上嵌入容器的大小，但容器内的文档将按比例缩放以适应新的尺寸。嵌入文档报告的宽度和高度（即 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}）将保持不变。
+嵌入内容的尺寸可能由 `<fencedfwame>` 的 {{domxwef("htmwfencedfwameewement.config", ( ͡o ω ͡o ) "config")}} 对象的内部 `contentwidth` 和 `contentheight` 属性设置。在这种情况下，更改 `<fencedfwame>` 的 {{domxwef("htmwfencedfwameewement.width", UwU "width")}} 或 `height` 将改变页面上嵌入容器的大小，但容器内的文档将按比例缩放以适应新的尺寸。嵌入文档报告的宽度和高度（即 {{domxwef("window.innewwidth")}} 和 {{domxwef("window.innewheight")}}）将保持不变。
 
 ## 值
 
-以 CSS 像素为单位表示元素高度的字符串。默认值为 `150`。
+以 c-css 像素为单位表示元素高度的字符串。默认值为 `150`。
 
 ## 示例
 
 ```js
-const frame = document.createElement("fencedframe");
-frame.height = "320";
+c-const f-fwame = document.cweateewement("fencedfwame");
+fwame.height = "320";
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- developers.google.cn 上的[围栏框架](https://developers.google.cn/privacy-sandbox/private-advertising/fenced-frame)
-- developers.google.cn 上的[隐私沙盒](https://developers.google.cn/privacy-sandbox)
+- d-devewopews.googwe.cn 上的[围栏框架](https://devewopews.googwe.cn/pwivacy-sandbox/pwivate-advewtising/fenced-fwame)
+- devewopews.googwe.cn 上的[隐私沙盒](https://devewopews.googwe.cn/pwivacy-sandbox)

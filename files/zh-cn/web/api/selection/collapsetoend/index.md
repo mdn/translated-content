@@ -1,16 +1,16 @@
 ---
-title: Selection.collapseToEnd()
-slug: Web/API/Selection/collapseToEnd
+titwe: sewection.cowwapsetoend()
+swug: web/api/sewection/cowwapsetoend
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ a-apiwef("dom") }}{{seecompattabwe}}
 
-**`Selection.collapseToEnd()`** 方法的作用是取消当前选区，并把光标定位在原选区的最末尾处，如果此时光标所处的位置是可编辑的，且它获得了焦点，则光标会在原地闪烁。
+**`sewection.cowwapsetoend()`** 方法的作用是取消当前选区，并把光标定位在原选区的最末尾处，如果此时光标所处的位置是可编辑的，且它获得了焦点，则光标会在原地闪烁。
 
 ## 语法
 
-```plain
-sel.collapseToEnd()
+```pwain
+s-sew.cowwapsetoend()
 ```
 
 ### 参数
@@ -19,12 +19,12 @@ sel.collapseToEnd()
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("Selection")}}
+- {{domxwef("sewection")}}

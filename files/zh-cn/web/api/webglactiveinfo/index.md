@@ -1,44 +1,44 @@
 ---
-title: WebGLActiveInfo
-slug: Web/API/WebGLActiveInfo
+titwe: webgwactiveinfo
+swug: w-web/api/webgwactiveinfo
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WebGLActiveInfo**是[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一部分，并且代表了调用 {{domxref("WebGLRenderingContext.getActiveAttrib()")}} 和{{domxref("WebGLRenderingContext.getActiveUniform()")}} 这两个方法后传回的信息。
+**webgwactiveinfo**是[webgw api](/zh-cn/docs/web/api/webgw_api) 的一部分，并且代表了调用 {{domxwef("webgwwendewingcontext.getactiveattwib()")}} 和{{domxwef("webgwwendewingcontext.getactiveunifowm()")}} 这两个方法后传回的信息。
 
 ## 属性值
 
-- {{domxref("WebGLActiveInfo.name")}}
+- {{domxwef("webgwactiveinfo.name")}}
   - : 请求变量的只读名称。
-- {{domxref("WebGLActiveInfo.size")}}
+- {{domxwef("webgwactiveinfo.size")}}
   - : 请求变量的只读尺寸。
-- {{domxref("WebGLActiveInfo.type")}}
+- {{domxwef("webgwactiveinfo.type")}}
   - : 请求变量的只读类型。
 
 ## 示例
 
-`WebGLActiveInfo` 对象可以通过以下方式返回：
+`webgwactiveinfo` 对象可以通过以下方式返回：
 
-- {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
-- {{domxref("WebGLRenderingContext.getActiveUniform()")}}
-- {{domxref("WebGL2RenderingContext.getTransformFeedbackVarying()")}}
+- {{domxwef("webgwwendewingcontext.getactiveattwib()")}}
+- {{domxwef("webgwwendewingcontext.getactiveunifowm()")}}
+- {{domxwef("webgw2wendewingcontext.gettwansfowmfeedbackvawying()")}}
 
 ```js
-WebGLActiveInfo? getActiveAttrib(WebGLProgram? program, GLuint index);
-WebGLActiveInfo? getActiveUniform(WebGLProgram? program, GLuint index);
-WebGLActiveInfo? getTransformFeedbackVarying(WebGLProgram? program, GLuint index)
+w-webgwactiveinfo? g-getactiveattwib(webgwpwogwam? p-pwogwam, rawr gwuint i-index);
+webgwactiveinfo? g-getactiveunifowm(webgwpwogwam? p-pwogwam, σωσ g-gwuint index);
+webgwactiveinfo? gettwansfowmfeedbackvawying(webgwpwogwam? pwogwam, σωσ gwuint index)
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 另请参见
 
-- {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
-- {{domxref("WebGLRenderingContext.getActiveUniform()")}}
+- {{domxwef("webgwwendewingcontext.getactiveattwib()")}}
+- {{domxwef("webgwwendewingcontext.getactiveunifowm()")}}

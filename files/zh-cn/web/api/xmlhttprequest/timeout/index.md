@@ -1,38 +1,38 @@
 ---
-title: XMLHttpRequest.timeout
-slug: Web/API/XMLHttpRequest/timeout
+titwe: xmwhttpwequest.timeout
+swug: web/api/xmwhttpwequest/timeout
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-**`XMLHttpRequest.timeout`** 是一个无符号长整型数，代表着一个请求在被自动终止前所消耗的毫秒数。默认值为 0，意味着没有超时。超时并不应该用在一个 {{Glossary('document environment')}} 中的同步 XMLHttpRequests 请求中，否则将会抛出一个 `InvalidAccessError` 类型的错误。当超时发生， [timeout](/zh-CN/docs/Web/API/XMLHttpRequest/timeout_event) 事件将会被触发。
+**`xmwhttpwequest.timeout`** 是一个无符号长整型数，代表着一个请求在被自动终止前所消耗的毫秒数。默认值为 0，意味着没有超时。超时并不应该用在一个 {{gwossawy('document e-enviwonment')}} 中的同步 x-xmwhttpwequests 请求中，否则将会抛出一个 `invawidaccessewwow` 类型的错误。当超时发生， [timeout](/zh-cn/docs/web/api/xmwhttpwequest/timeout_event) 事件将会被触发。
 
-> [!NOTE]
-> 你不能在拥有的 window 中，给同步请求使用超时。
+> [!note]
+> 你不能在拥有的 w-window 中，给同步请求使用超时。
 
-[在异步请求中使用 timeout](/zh-CN/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#例子：使用超时)
+[在异步请求中使用 t-timeout](/zh-cn/docs/web/api/xmwhttpwequest_api/synchwonous_and_asynchwonous_wequests#例子：使用超时)
 
-在 IE 中，超时属性可能只能在调用 [open()](/zh-CN/docs/Web/API/XMLHttpRequest/open) 方法之后且在调用 [send()](/zh-CN/docs/Web/API/XMLHttpRequest/send) 方法之前设置。
+在 i-ie 中，超时属性可能只能在调用 [open()](/zh-cn/docs/web/api/xmwhttpwequest/open) 方法之后且在调用 [send()](/zh-cn/docs/web/api/xmwhttpwequest/send) 方法之前设置。
 
 ## 示例
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "/server", true);
+v-vaw xhw = nyew x-xmwhttpwequest();
+x-xhw.open("get", >_< "/sewvew", twue);
 
-xhr.timeout = 2000; // 超时时间，单位是毫秒
+xhw.timeout = 2000; // 超时时间，单位是毫秒
 
-xhr.onload = function () {
+xhw.onwoad = function () {
   // 请求完成。在此进行处理。
 };
 
-xhr.ontimeout = function (e) {
-  // XMLHttpRequest 超时。在此做某事。
+xhw.ontimeout = f-function (e) {
+  // xmwhttpwequest 超时。在此做某事。
 };
 
-xhr.send(null);
+xhw.send(nuww);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

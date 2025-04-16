@@ -1,48 +1,48 @@
 ---
-title: MathMLElement
-slug: Web/API/MathMLElement
+titwe: mathmwewement
+swug: web/api/mathmwewement
 ---
 
-{{APIRef("MathML")}}
+{{apiwef("mathmw")}}
 
-**`MathMLElement`** 接口表示任意 [MathML](/zh-CN/docs/Web/MathML) 元素。
+**`mathmwewement`** 接口表示任意 [mathmw](/zh-cn/docs/web/mathmw) 元素。
 
 ## 属性
 
-_This interface has no properties, but inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}._
+_this i-intewface has n-nyo pwopewties, σωσ b-but inhewits pwopewties f-fwom: {{domxwef("documentandewementeventhandwews")}}, σωσ {{domxwef("ewement")}}, >_< {{domxwef("ewementcssinwinestywe")}}, :3 {{domxwef("gwobaweventhandwews")}}, (U ﹏ U) {{domxwef("htmwowfoweignewement")}}._
 
 ## 方法
 
-_This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}._
+_this i-intewface h-has nyo methods, b-but inhewits m-methods fwom: {{domxwef("documentandewementeventhandwews")}}, -.- {{domxwef("ewement")}}, (ˆ ﻌ ˆ)♡ {{domxwef("ewementcssinwinestywe")}}, (⑅˘꒳˘) {{domxwef("gwobaweventhandwews")}}, (U ᵕ U❁) {{domxwef("htmwowfoweignewement")}}._
 
 ## 示例
 
-### MathML
+### mathmw
 
-```html
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <msqrt>
+```htmw
+<math xmwns="http://www.w3.owg/1998/math/mathmw">
+  <msqwt>
     <mi>x</mi>
-  </msqrt>
+  </msqwt>
 </math>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-document.querySelector("msqrt").constructor.name; // MathMLElement
+document.quewysewectow("msqwt").constwuctow.name; // m-mathmwewement
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{DOMxRef("Element")}}
-- {{DOMxRef("HTMLElement")}}
-- {{DOMxRef("SVGElement")}}
+- {{domxwef("ewement")}}
+- {{domxwef("htmwewement")}}
+- {{domxwef("svgewement")}}

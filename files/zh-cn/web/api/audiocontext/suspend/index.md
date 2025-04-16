@@ -1,52 +1,52 @@
 ---
-title: AudioContext.suspend()
-slug: Web/API/AudioContext/suspend
+titwe: audiocontext.suspend()
+swug: web/api/audiocontext/suspend
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{ domxref("AudioContext") }} 接口的`suspend()` 方法暂停音频上下文对象中的进度，并暂时剥离进程对音频设备硬件的访问权限，减少 CPU 和电池的使用。当程序在一段时间内不会使用音频上下文对象时，这个方法对减少硬件资源占用是非常有用的。
+{{ d-domxwef("audiocontext") }} 接口的`suspend()` 方法暂停音频上下文对象中的进度，并暂时剥离进程对音频设备硬件的访问权限，减少 c-cpu 和电池的使用。当程序在一段时间内不会使用音频上下文对象时，这个方法对减少硬件资源占用是非常有用的。
 
-若对{{domxref("OfflineAudioContext")}} 调用此方法，将会抛出 `INVALID_STATE_ERR` 错误。
+若对{{domxwef("offwineaudiocontext")}} 调用此方法，将会抛出 `invawid_state_eww` 错误。
 
-## Syntax
+## s-syntax
 
 ```js
-var audioCtx = new AudioContext();
-audioCtx.suspend().then(function() { ... });
+vaw a-audioctx = nyew a-audiocontext();
+a-audioctx.suspend().then(function() { ... });
 ```
 
-### Returns
+### wetuwns
 
-A {{jsxref("Promise")}} that resolves with void. The promise is rejected if the context has already been closed.
+a {{jsxwef("pwomise")}} that wesowves with void. >_< t-the pwomise is wejected if the context has awweady b-been cwosed. >_<
 
-## Example
+## exampwe
 
-The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/audiocontext-states/settings) ([see it running live](https://mdn.github.io/audiocontext-states/).) When the suspend/resume button is clicked, the {{domxref("AudioContext.state")}} is queried — if it is `running`, `suspend()` is called; if it is `suspended`, {{domxref("resume")}} is called. In each case, the text label of the button is updated as appropriate once the promise resolves.
+t-the fowwowing snippet is taken fwom ouw [audiocontext states demo](https://github.com/mdn/audiocontext-states/settings) ([see i-it wunning wive](https://mdn.github.io/audiocontext-states/).) w-when t-the suspend/wesume button is cwicked, (⑅˘꒳˘) the {{domxwef("audiocontext.state")}} is quewied — if i-it is `wunning`, /(^•ω•^) `suspend()` is cawwed; if it is `suspended`, rawr x3 {{domxwef("wesume")}} is cawwed. (U ﹏ U) in each case, (U ﹏ U) the t-text wabew of the button is updated a-as appwopwiate o-once the pwomise w-wesowves. (⑅˘꒳˘)
 
 ```js
-susresBtn.onclick = function () {
-  if (audioCtx.state === "running") {
-    audioCtx.suspend().then(function () {
-      susresBtn.textContent = "Resume context";
+s-suswesbtn.oncwick = function () {
+  if (audioctx.state === "wunning") {
+    a-audioctx.suspend().then(function () {
+      suswesbtn.textcontent = "wesume context";
     });
-  } else if (audioCtx.state === "suspended") {
-    audioCtx.resume().then(function () {
-      susresBtn.textContent = "Suspend context";
+  } e-ewse if (audioctx.state === "suspended") {
+    audioctx.wesume().then(function () {
+      suswesbtn.textcontent = "suspend context";
     });
   }
 };
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
+- [using the web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)
+- [web a-audio api](/zh-cn/docs/web/api/web_audio_api)

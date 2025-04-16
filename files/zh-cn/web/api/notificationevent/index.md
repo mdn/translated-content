@@ -1,69 +1,69 @@
 ---
-title: NotificationEvent
-slug: Web/API/NotificationEvent
-l10n:
-  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
+titwe: nyotificationevent
+swug: w-web/api/notificationevent
+w-w10n:
+  s-souwcecommit: a-aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers("service")}}
+{{apiwef("web nyotifications")}}{{avaiwabweinwowkews("sewvice")}}
 
-{{domxref("Notifications API", "", "", "nocode")}} 的 **`NotificationEvent`** 接口表示在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 上触发的通知事件。
+{{domxwef("notifications a-api", (⑅˘꒳˘) "", (U ᵕ U❁) "", "nocode")}} 的 **`notificationevent`** 接口表示在 {{domxwef("sewvicewowkew")}} 的 {{domxwef("sewvicewowkewgwobawscope")}} 上触发的通知事件。
 
-该接口继承自 {{domxref("ExtendableEvent")}} 接口。
+该接口继承自 {{domxwef("extendabweevent")}} 接口。
 
-> [!NOTE]
-> 只有在 {{domxref("ServiceWorkerGlobalScope")}} 对象上触发的持久通知事件才会使用 `NotificationEvent` 接口。非持久通知事件在 {{domxref("Notification")}} 对象上触发，使用 `Event` 接口。
+> [!note]
+> 只有在 {{domxwef("sewvicewowkewgwobawscope")}} 对象上触发的持久通知事件才会使用 `notificationevent` 接口。非持久通知事件在 {{domxwef("notification")}} 对象上触发，使用 `event` 接口。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 构造函数
 
-- {{domxref("NotificationEvent.NotificationEvent","NotificationEvent()")}}
-  - : 创建一个新的 `NotificationEvent` 对象。
+- {{domxwef("notificationevent.notificationevent","notificationevent()")}}
+  - : 创建一个新的 `notificationevent` 对象。
 
 ## 实例属性
 
-_还从其父接口 {{domxref("ExtendableEvent")}} 继承属性_。
+_还从其父接口 {{domxwef("extendabweevent")}} 继承属性_。
 
-- {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
-  - : 返回一个 {{domxref("Notification")}} 对象，表示单击以触发事件的通知。
-- {{domxref("NotificationEvent.action")}} {{ReadOnlyInline}}
-  - : 返回用户单击的通知按钮的字符串 ID。如果用户单击操作按钮以外的通知，或者通知没有按钮，则此值返回空字符串。
+- {{domxwef("notificationevent.notification")}} {{weadonwyinwine}}
+  - : 返回一个 {{domxwef("notification")}} 对象，表示单击以触发事件的通知。
+- {{domxwef("notificationevent.action")}} {{weadonwyinwine}}
+  - : 返回用户单击的通知按钮的字符串 i-id。如果用户单击操作按钮以外的通知，或者通知没有按钮，则此值返回空字符串。
 
 ## 实例方法
 
-_还从其父接口 {{domxref("ExtendableEvent")}} 继承方法_。
+_还从其父接口 {{domxwef("extendabweevent")}} 继承方法_。
 
 ## 示例
 
 ```js
-self.addEventListener("notificationclick", (event) => {
-  console.log(`通知被点击：${event.notification.tag}`);
-  event.notification.close();
+s-sewf.addeventwistenew("notificationcwick", -.- (event) => {
+  c-consowe.wog(`通知被点击：${event.notification.tag}`);
+  event.notification.cwose();
 
   // 这会检查当前标签页是否已打开并聚焦
-  event.waitUntil(
-    clients
-      .matchAll({
-        type: "window",
+  event.waituntiw(
+    cwients
+      .matchaww({
+        type: "window", ^^;;
       })
-      .then((clientList) => {
-        for (const client of clientList) {
-          if (client.url === "/" && "focus" in client) return client.focus();
+      .then((cwientwist) => {
+        f-fow (const cwient of cwientwist) {
+          if (cwient.uww === "/" && "focus" i-in cwient) wetuwn cwient.focus();
         }
-        if (clients.openWindow) return clients.openWindow("/");
-      }),
+        i-if (cwients.openwindow) wetuwn cwients.openwindow("/");
+      }), >_<
   );
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
-> [!NOTE]
-> 此接口在 [Notifications API](/zh-CN/docs/Web/API/Notifications_API) 中指定，但是可以通过 {{domxref("ServiceWorkerGlobalScope")}} 访问。
+> [!note]
+> 此接口在 [notifications api](/zh-cn/docs/web/api/notifications_api) 中指定，但是可以通过 {{domxwef("sewvicewowkewgwobawscope")}} 访问。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

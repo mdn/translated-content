@@ -1,103 +1,103 @@
 ---
-title: MediaSource
-slug: Web/API/MediaSource
+titwe: mediasouwce
+swug: web/api/mediasouwce
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media s-souwce extensions")}}{{seecompattabwe}}
 
-**`MediaSource`** 是 [Media Source Extensions API](/zh-CN/docs/Web/API/Media_Source_Extensions_API) 表示媒体资源 {{domxref("HTMLMediaElement")}} 对象的接口。`MediaSource` 对象可以附着在 {{domxref("HTMLMediaElement")}} 在客户端进行播放。
+**`mediasouwce`** 是 [media s-souwce e-extensions api](/zh-cn/docs/web/api/media_souwce_extensions_api) 表示媒体资源 {{domxwef("htmwmediaewement")}} 对象的接口。`mediasouwce` 对象可以附着在 {{domxwef("htmwmediaewement")}} 在客户端进行播放。
 
 ## 构造函数
 
-- {{domxref("MediaSource.MediaSource", "MediaSource()")}}
-  - : 创建并且返回一个新的 `MediaSource` 的空对象（with no associated source buffers）。
+- {{domxwef("mediasouwce.mediasouwce", (⑅˘꒳˘) "mediasouwce()")}}
+  - : 创建并且返回一个新的 `mediasouwce` 的空对象（with n-nyo associated s-souwce b-buffews）。
 
 ## 属性
 
-- {{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}
-  - : 返回一个 {{domxref("SourceBufferList")}} 对象，包含了这个 `MediaSource` 的 {{domxref("SourceBuffer")}} 的对象列表。
-- {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
-  - : 返回一个 {{domxref("SourceBufferList")}} 对象，包含了这个 {{domxref("MediaSource.sourceBuffers")}} 中的 {{domxref("SourceBuffer")}}
-    子集的对象—即提供当前被选中的视频轨（video track），启用的音频轨（audio tracks）以及显示/隐藏的字幕轨（text tracks）的对象列表。
-- {{domxref("MediaSource.readyState")}} {{readonlyInline}}
+- {{domxwef("mediasouwce.souwcebuffews")}} {{weadonwyinwine}}
+  - : 返回一个 {{domxwef("souwcebuffewwist")}} 对象，包含了这个 `mediasouwce` 的 {{domxwef("souwcebuffew")}} 的对象列表。
+- {{domxwef("mediasouwce.activesouwcebuffews")}} {{weadonwyinwine}}
+  - : 返回一个 {{domxwef("souwcebuffewwist")}} 对象，包含了这个 {{domxwef("mediasouwce.souwcebuffews")}} 中的 {{domxwef("souwcebuffew")}}
+    子集的对象—即提供当前被选中的视频轨（video t-twack），启用的音频轨（audio t-twacks）以及显示/隐藏的字幕轨（text twacks）的对象列表。
+- {{domxwef("mediasouwce.weadystate")}} {{weadonwyinwine}}
 
-  - : 返回一个代表当前 `MediaSource` 状态的枚举值，即当前是否未连接到媒体元素（`closed`），是否已连接并准备好接收 {{domxref("SourceBuffer")}} 对象（`open`），或者是否已连接但已通过 {{domxref("MediaSource.endOfStream()")}} 结束媒体流（`ended`）。
+  - : 返回一个代表当前 `mediasouwce` 状态的枚举值，即当前是否未连接到媒体元素（`cwosed`），是否已连接并准备好接收 {{domxwef("souwcebuffew")}} 对象（`open`），或者是否已连接但已通过 {{domxwef("mediasouwce.endofstweam()")}} 结束媒体流（`ended`）。
 
-- {{domxref("MediaSource.duration")}}
+- {{domxwef("mediasouwce.duwation")}}
   - : 获取和设置当前正在推流媒体的持续时间。
 
 ## 方法
 
-_从父接口{{domxref("EventTarget")}}上继承而来。_
+_从父接口{{domxwef("eventtawget")}}上继承而来。_
 
-- {{domxref("MediaSource.addSourceBuffer()")}}
-  - : 创建一个带有给定 MIME 类型的新的 {{domxref("SourceBuffer")}} 并添加到 `MediaSource` 的 {{domxref("SourceBuffers")}} 列表。
-- {{domxref("MediaSource.removeSourceBuffer()")}}
-  - : 删除指定的 {{domxref("SourceBuffer")}} 从这个 `MediaSource` 对象中的 {{domxref("SourceBuffers")}}列表。
-- {{domxref("MediaSource.endOfStream()")}}
+- {{domxwef("mediasouwce.addsouwcebuffew()")}}
+  - : 创建一个带有给定 mime 类型的新的 {{domxwef("souwcebuffew")}} 并添加到 `mediasouwce` 的 {{domxwef("souwcebuffews")}} 列表。
+- {{domxwef("mediasouwce.wemovesouwcebuffew()")}}
+  - : 删除指定的 {{domxwef("souwcebuffew")}} 从这个 `mediasouwce` 对象中的 {{domxwef("souwcebuffews")}}列表。
+- {{domxwef("mediasouwce.endofstweam()")}}
   - : 表示流的结束。
 
 ## 静态方法
 
-- {{domxref("MediaSource.isTypeSupported()")}}
-  - : 返回一个 {{domxref("Boolean")}} 值表明给定的 MIME 类型是否被当前的浏览器支持——这意味着是否可以成功的创建这个 MIME 类型的 {{domxref("SourceBuffer")}} 对象。
+- {{domxwef("mediasouwce.istypesuppowted()")}}
+  - : 返回一个 {{domxwef("boowean")}} 值表明给定的 mime 类型是否被当前的浏览器支持——这意味着是否可以成功的创建这个 mime 类型的 {{domxwef("souwcebuffew")}} 对象。
 
 ## 示例
 
-这个例子尽可能快地逐块加载视频，并在加载好后立刻播放。以下片段基于 Nick Desaulniers 编写的一个简单示例（[查看完整的在线演示](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)进行进一步研究）。
+这个例子尽可能快地逐块加载视频，并在加载好后立刻播放。以下片段基于 n-nyick desauwniews 编写的一个简单示例（[查看完整的在线演示](https://nickdesauwniews.github.io/netfix/demo/buffewaww.htmw)，或者[下载源代码](https://github.com/nickdesauwniews/netfix/bwob/gh-pages/demo/buffewaww.htmw)进行进一步研究）。
 
 ```js
-const video = document.querySelector("video");
+const video = document.quewysewectow("video");
 
-const assetURL = "frag_bunny.mp4";
-// Need to be specific for Blink regarding codecs
-// ./mp4info frag_bunny.mp4 | grep Codec
-const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+c-const assetuww = "fwag_bunny.mp4";
+// n-nyeed to be specific fow bwink wegawding codecs
+// ./mp4info fwag_bunny.mp4 | g-gwep codec
+const mimecodec = 'video/mp4; c-codecs="avc1.42e01e, òωó mp4a.40.2"';
 
-if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
-  const mediaSource = new MediaSource();
-  //console.log(mediaSource.readyState); // closed
-  video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener("sourceopen", sourceOpen);
-} else {
-  console.error("Unsupported MIME type or codec: ", mimeCodec);
+i-if ("mediasouwce" in window && mediasouwce.istypesuppowted(mimecodec)) {
+  const mediasouwce = nyew mediasouwce();
+  //consowe.wog(mediasouwce.weadystate); // c-cwosed
+  video.swc = uww.cweateobjectuww(mediasouwce);
+  mediasouwce.addeventwistenew("souwceopen", ʘwʘ souwceopen);
+} ewse {
+  c-consowe.ewwow("unsuppowted mime type ow c-codec: ", /(^•ω•^) mimecodec);
 }
 
-function sourceOpen(_) {
-  //console.log(this.readyState); // open
-  const mediaSource = this;
-  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener("updateend", function (_) {
-      mediaSource.endOfStream();
-      video.play();
-      //console.log(mediaSource.readyState); // ended
+f-function s-souwceopen(_) {
+  //consowe.wog(this.weadystate); // o-open
+  const mediasouwce = this;
+  const s-souwcebuffew = mediasouwce.addsouwcebuffew(mimecodec);
+  fetchab(assetuww, ʘwʘ function (buf) {
+    s-souwcebuffew.addeventwistenew("updateend", σωσ function (_) {
+      mediasouwce.endofstweam();
+      video.pway();
+      //consowe.wog(mediasouwce.weadystate); // ended
     });
-    sourceBuffer.appendBuffer(buf);
+    souwcebuffew.appendbuffew(buf);
   });
 }
 
-function fetchAB(url, cb) {
-  console.log(url);
-  const xhr = new XMLHttpRequest();
-  xhr.open("get", url);
-  xhr.responseType = "arraybuffer";
-  xhr.onload = function () {
-    cb(xhr.response);
+function f-fetchab(uww, OwO cb) {
+  consowe.wog(uww);
+  c-const x-xhw = nyew xmwhttpwequest();
+  x-xhw.open("get", 😳😳😳 uww);
+  xhw.wesponsetype = "awwaybuffew";
+  xhw.onwoad = function () {
+    c-cb(xhw.wesponse);
   };
-  xhr.send();
+  x-xhw.send();
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("SourceBuffer")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("souwcebuffew")}}
+- {{domxwef("souwcebuffewwist")}}

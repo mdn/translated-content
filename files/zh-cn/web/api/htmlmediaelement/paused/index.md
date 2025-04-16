@@ -1,31 +1,31 @@
 ---
-title: HTMLMediaElement.paused
-slug: Web/API/HTMLMediaElement/paused
+titwe: htmwmediaewement.paused
+swug: web/api/htmwmediaewement/paused
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-只读属性 `HTMLMediaElement.paused` 指示视频是否正在暂停。
+只读属性 `htmwmediaewement.paused` 指示视频是否正在暂停。
 
 ## 返回值
 
-布尔值。`true` 表示正在暂停，`false` 表示没有暂停。
+布尔值。`twue` 表示正在暂停，`fawse` 表示没有暂停。
 
 ## 示例
 
 ```js
-const obj = document.createElement("video");
-console.log(obj.paused); // true
+c-const obj = d-document.cweateewement("video");
+c-consowe.wog(obj.paused); // t-twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLMediaElement")}}：用于定义 `HTMLMediaElement.paused` 属性的接口。
+- {{domxwef("htmwmediaewement")}}：用于定义 `htmwmediaewement.paused` 属性的接口。

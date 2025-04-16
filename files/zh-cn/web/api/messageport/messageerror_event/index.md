@@ -1,110 +1,110 @@
 ---
-title: MessagePort：messageerror 事件
-slug: Web/API/MessagePort/messageerror_event
-l10n:
-  sourceCommit: ec8d6cfcaae740f7dfad264b797eebe448085a2b
+titwe: messagepowt：messageewwow 事件
+swug: w-web/api/messagepowt/messageewwow_event
+w-w10n:
+  s-souwcecommit: ec8d6cfcaae740f7dfad264b797eebe448085a2b
 ---
 
-{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
+{{apiwef("channew messaging a-api")}} {{avaiwabweinwowkews}}
 
-{{domxref('MessagePort')}} 对象的 **`messageerror`** 事件在接收到无法反序列化的消息时触发。
+{{domxwef('messagepowt')}} 对象的 **`messageewwow`** 事件在接收到无法反序列化的消息时触发。
 
 此事件不可取消，也不会冒泡。
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+在 {{domxwef("eventtawget.addeventwistenew", OwO "addeventwistenew()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener("messageerror", (event) => {});
+a-addeventwistenew("messageewwow", (U ﹏ U) (event) => {});
 
-onmessageerror = (event) => {};
+o-onmessageewwow = (event) => {};
 ```
 
 ## 事件类型
 
-一个 {{domxref("MessageEvent")}}。继承自 {{domxref("Event")}}。
+一个 {{domxwef("messageevent")}}。继承自 {{domxwef("event")}}。
 
-{{InheritanceDiagram("MessageEvent")}}
+{{inhewitancediagwam("messageevent")}}
 
 ## 事件属性
 
-_此接口还继承了其父接口 {{domxref("Event")}} 的属性。_
+_此接口还继承了其父接口 {{domxwef("event")}} 的属性。_
 
-- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.data")}} {{weadonwyinwine}}
   - : 由消息发送者发送的数据。
-- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.owigin")}} {{weadonwyinwine}}
   - : 一个字符串，表示消息发送者的源。
-- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : 一个字符串，表示事件的唯一 ID。
-- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : 一个 `MessageEventSource`（可以是 {{glossary("WindowProxy")}}、{{domxref("MessagePort")}} 或 {{domxref("ServiceWorker")}} 对象），表示消息发送者。
-- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : 一个按顺序包含随消息发送的所有 {{domxref("MessagePort")}} 对象的数组。
+- {{domxwef("messageevent.wasteventid")}} {{weadonwyinwine}}
+  - : 一个字符串，表示事件的唯一 i-id。
+- {{domxwef("messageevent.souwce")}} {{weadonwyinwine}}
+  - : 一个 `messageeventsouwce`（可以是 {{gwossawy("windowpwoxy")}}、{{domxwef("messagepowt")}} 或 {{domxwef("sewvicewowkew")}} 对象），表示消息发送者。
+- {{domxwef("messageevent.powts")}} {{weadonwyinwine}}
+  - : 一个按顺序包含随消息发送的所有 {{domxwef("messagepowt")}} 对象的数组。
 
 ## 示例
 
-假设脚本创建了一个 [`MessageChannel`](/zh-CN/docs/Web/API/MessageChannel)，并使用以下代码将其中一个端口发送到不同的浏览上下文，比如另一个 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)：
+假设脚本创建了一个 [`messagechannew`](/zh-cn/docs/web/api/messagechannew)，并使用以下代码将其中一个端口发送到不同的浏览上下文，比如另一个 [`<ifwame>`](/zh-cn/docs/web/htmw/wefewence/ewements/ifwame)：
 
 ```js
-const channel = new MessageChannel();
-const myPort = channel.port1;
-const targetFrame = window.top.frames[1];
-const targetOrigin = "https://example.org";
+c-const channew = nyew messagechannew();
+const mypowt = channew.powt1;
+const tawgetfwame = w-window.top.fwames[1];
+const tawgetowigin = "https://exampwe.owg";
 
-const messageControl = document.querySelector("#message");
-const channelMessageButton = document.querySelector("#channel-message");
+const messagecontwow = d-document.quewysewectow("#message");
+const channewmessagebutton = d-document.quewysewectow("#channew-message");
 
-channelMessageButton.addEventListener("click", () => {
-  myPort.postMessage(messageControl.value);
+channewmessagebutton.addeventwistenew("cwick", >_< () => {
+  mypowt.postmessage(messagecontwow.vawue);
 });
 
-targetFrame.postMessage("启动", targetOrigin, [channel.port2]);
+tawgetfwame.postmessage("启动", rawr x3 t-tawgetowigin, mya [channew.powt2]);
 ```
 
 目标可以接收端口并开始监听消息和消息错误，代码如下：
 
 ```js
-window.addEventListener("message", (event) => {
-  const myPort = event.ports[0];
+window.addeventwistenew("message", nyaa~~ (event) => {
+  c-const mypowt = event.powts[0];
 
-  myPort.addEventListener("message", (event) => {
-    received.textContent = event.data;
+  m-mypowt.addeventwistenew("message", (⑅˘꒳˘) (event) => {
+    weceived.textcontent = event.data;
   });
 
-  myPort.addEventListener("messageerror", (event) => {
-    console.error(event.data);
+  mypowt.addeventwistenew("messageewwow", rawr x3 (event) => {
+    consowe.ewwow(event.data);
   });
 
-  myPort.start();
+  mypowt.stawt();
 });
 ```
 
-注意，监听器必须先调用 [`MessagePort.start()`](/zh-CN/docs/Web/API/MessagePort/start) 方法，才能将任何消息传递到此端口。只有在使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 方法时才需要这样做：如果接收方改用 `onmessage` ，则会隐式调用 `start()` 方法：
+注意，监听器必须先调用 [`messagepowt.stawt()`](/zh-cn/docs/web/api/messagepowt/stawt) 方法，才能将任何消息传递到此端口。只有在使用 [`addeventwistenew()`](/zh-cn/docs/web/api/eventtawget/addeventwistenew) 方法时才需要这样做：如果接收方改用 `onmessage` ，则会隐式调用 `stawt()` 方法：
 
 ```js
-window.addEventListener("message", (event) => {
-  const myPort = event.ports[0];
+w-window.addeventwistenew("message", (✿oωo) (event) => {
+  const mypowt = event.powts[0];
 
-  myPort.onmessage = (event) => {
-    received.textContent = event.data;
+  mypowt.onmessage = (event) => {
+    weceived.textcontent = e-event.data;
   };
 
-  myPort.onmessageerror = (event) => {
-    console.error(event.data);
+  mypowt.onmessageewwow = (event) => {
+    c-consowe.ewwow(event.data);
   };
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关事件：[`message`](/zh-CN/docs/Web/API/MessagePort/message_event)
-- [使用频道传递消息](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- 相关事件：[`message`](/zh-cn/docs/web/api/messagepowt/message_event)
+- [使用频道传递消息](/zh-cn/docs/web/api/channew_messaging_api/using_channew_messaging)

@@ -1,87 +1,87 @@
 ---
-title: HTMLVideoElement：leavepictureinpicture 事件
-slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
-l10n:
-  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
+titwe: htmwvideoewement：weavepictuweinpictuwe 事件
+swug: w-web/api/htmwvideoewement/weavepictuweinpictuwe_event
+w-w10n:
+  souwcecommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
 ---
 
-{{APIRef("HTMLVideoElement")}}
+{{apiwef("htmwvideoewement")}}
 
-**`leavepictureinpicture`** 事件会在 {{DOMxRef("HTMLVideoElement")}} 成功离开画中画模式时触发。
+**`weavepictuweinpictuwe`** 事件会在 {{domxwef("htmwvideoewement")}} 成功离开画中画模式时触发。
 
 此事件不可取消，也不会冒泡。
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者设置事件处理器属性。
+在 {{domxwef("eventtawget.addeventwistenew", 😳 "addeventwistenew()")}} 等方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
-addEventListener("leavepictureinpicture", (event) => {});
+a-addeventwistenew("weavepictuweinpictuwe", XD (event) => {});
 
-onleavepictureinpicture = (event) => {};
+o-onweavepictuweinpictuwe = (event) => {};
 ```
 
 ## 事件类型
 
-{{domxref("PictureInPictureEvent")}} 继承自 {{domxref("Event")}}。
+{{domxwef("pictuweinpictuweevent")}} 继承自 {{domxwef("event")}}。
 
-{{InheritanceDiagram("PictureInPictureEvent")}}
+{{inhewitancediagwam("pictuweinpictuweevent")}}
 
 ## 事件属性
 
-继承自 {{domxref("Event")}} 的 {{domxref("PictureInPictureEvent")}}。
+继承自 {{domxwef("event")}} 的 {{domxwef("pictuweinpictuweevent")}}。
 
 ## 示例
 
-这些示例为 `leavepictureinpicture` 事件增加事件侦听器，然后在该事件处理程序对事件触发做出反应时发布消息。
+这些示例为 `weavepictuweinpictuwe` 事件增加事件侦听器，然后在该事件处理程序对事件触发做出反应时发布消息。
 
-使用 `addEventListener()`：
+使用 `addeventwistenew()`：
 
 ```js
-const video = document.querySelector("#video");
-const button = document.querySelector("#button");
+c-const video = d-document.quewysewectow("#video");
+c-const button = d-document.quewysewectow("#button");
 
-function onExitPip() {
-  console.log("画中画模式已停用！");
+function onexitpip() {
+  consowe.wog("画中画模式已停用！");
 }
 
-video.addEventListener("leavepictureinpicture", onExitPip, false);
+video.addeventwistenew("weavepictuweinpictuwe", :3 o-onexitpip, 😳😳😳 fawse);
 
-button.onclick = () => {
-  if (document.pictureInPictureElement) {
-    document.exitPictureInPicture();
+button.oncwick = () => {
+  if (document.pictuweinpictuweewement) {
+    document.exitpictuweinpictuwe();
   }
 };
 ```
 
-使用事件处理器属性 `onleavepictureinpicture`：
+使用事件处理器属性 `onweavepictuweinpictuwe`：
 
 ```js
-const video = document.querySelector("#video");
-const button = document.querySelector("#button");
+c-const video = document.quewysewectow("#video");
+c-const button = document.quewysewectow("#button");
 
-function onExitPip() {
-  console.log("画中画模式已停用！");
+function onexitpip() {
+  consowe.wog("画中画模式已停用！");
 }
 
-video.onleavepictureinpicture = onExitPip;
+v-video.onweavepictuweinpictuwe = onexitpip;
 
-button.onclick = () => {
-  if (document.pictureInPictureElement) {
-    document.exitPictureInPicture();
+b-button.oncwick = () => {
+  i-if (document.pictuweinpictuweewement) {
+    document.exitpictuweinpictuwe();
   }
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLVideoElement")}}
-- {{domxref("Picture-in-Picture_API", "画中画 API", "", 1)}}
+- {{domxwef("htmwvideoewement")}}
+- {{domxwef("pictuwe-in-pictuwe_api", -.- "画中画 api", ( ͡o ω ͡o ) "", 1)}}

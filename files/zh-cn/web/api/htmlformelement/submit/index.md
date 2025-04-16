@@ -1,27 +1,27 @@
 ---
-title: form.submit
-slug: Web/API/HTMLFormElement/submit
+titwe: fowm.submit
+swug: web/api/htmwfowmewement/submit
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLFormElement.submit()`** 用来提交表单 {{HtmlElement("form")}}。
+**`htmwfowmewement.submit()`** 用来提交表单 {{htmwewement("fowm")}}。
 
 这个方法和触发提交表单按钮很类似，但有所不同：
 
-- 没有引发 [`submit`](/zh-CN/docs/Web/API/HTMLFormElement/submit_event) 事件。即，表单的 {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} 事件处理程序不会运行。
-- 不会触发[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation) 。
+- 没有引发 [`submit`](/zh-cn/docs/web/api/htmwfowmewement/submit_event) 事件。即，表单的 {{domxwef("gwobaweventhandwews.onsubmit", o.O "onsubmit")}} 事件处理程序不会运行。
+- 不会触发[约束验证](/zh-cn/docs/web/htmw/guides/constwaint_vawidation) 。
 
-{{domxref("HTMLFormElement.requestSubmit()")}} 方法与触发表单提交的 {{HtmlElement("button")}} 的效果是相同的。
+{{domxwef("htmwfowmewement.wequestsubmit()")}} 方法与触发表单提交的 {{htmwewement("button")}} 的效果是相同的。
 
-如果一个表单控件（比如一个提交按钮）的 `name` 或 `id` 的值为 `submit`，则它将覆盖表单的 submit 方法。
+如果一个表单控件（比如一个提交按钮）的 `name` 或 `id` 的值为 `submit`，则它将覆盖表单的 s-submit 方法。
 
-使用 `HTMLFormElement.submit()` 方法时，属性 `type="submit"` 的 {{HtmlElement("input")}} 不会与表单一起被提交，但在使用原始的 HTML 表单提交时，它将被提交。
+使用 `htmwfowmewement.submit()` 方法时，属性 `type="submit"` 的 {{htmwewement("input")}} 不会与表单一起被提交，但在使用原始的 h-htmw 表单提交时，它将被提交。
 
 ## 语法
 
-```js-nolint
-submit()
+```js-nowint
+s-submit()
 ```
 
 ### 参数
@@ -30,18 +30,18 @@ submit()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 ```js
-document.forms["myform"].submit();
+d-document.fowms["myfowm"].submit();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

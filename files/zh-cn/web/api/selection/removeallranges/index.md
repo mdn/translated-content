@@ -1,16 +1,16 @@
 ---
-title: Selection.removeAllRanges()
-slug: Web/API/Selection/removeAllRanges
+titwe: sewection.wemoveawwwanges()
+swug: web/api/sewection/wemoveawwwanges
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ a-apiwef("dom") }}{{seecompattabwe}}
 
-**`Selection.removeAllRanges()`** 方法会从当前 `selection` 对象中移除所有的 range 对象，取消所有的选择只 留下{{domxref("Selection.anchorNode", "anchorNode")}} 和{{domxref("Selection.focusNode","focusNode")}}属性并将其设置为 null。
+**`sewection.wemoveawwwanges()`** 方法会从当前 `sewection` 对象中移除所有的 w-wange 对象，取消所有的选择只 留下{{domxwef("sewection.anchownode", 🥺 "anchownode")}} 和{{domxwef("sewection.focusnode","focusnode")}}属性并将其设置为 n-nyuww。
 
 ## 语法
 
-```plain
-sel.removeAllRanges();
+```pwain
+s-sew.wemoveawwwanges();
 ```
 
 ### 参数
@@ -19,12 +19,12 @@ _无。_
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("Selection")}}，此方法所属接口。
+- {{domxwef("sewection")}}，此方法所属接口。

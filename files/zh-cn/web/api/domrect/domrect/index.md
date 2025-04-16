@@ -1,48 +1,48 @@
 ---
-title: DOMRect.DOMRect()
-slug: Web/API/DOMRect/DOMRect
+titwe: domwect.domwect()
+swug: w-web/api/domwect/domwect
 ---
 
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+{{apiwef("dom")}}{{ s-seecompattabwe() }}
 
-**`DOMRect()`** 构造函数生成一个新的 {{domxref("DOMRect")}} 对象。
+**`domwect()`** 构造函数生成一个新的 {{domxwef("domwect")}} 对象。
 
 ## 语法
 
 ```js
-var myDOMRect = new DOMRect(x, y, width, height);
+v-vaw mydomwect = n-nyew domwect(x, -.- y-y, width, h-height);
 ```
 
 ### 参数
 
-- x
-  - : `DOMRect` 原点的 `x` 坐标。
-- y
-  - : `DOMRect` 原点的 y 坐标。
+- x-x
+  - : `domwect` 原点的 `x` 坐标。
+- y-y
+  - : `domwect` 原点的 y 坐标。
 - width
-  - : `DOMRect` 的宽度。
+  - : `domwect` 的宽度。
 - height
-  - : `DOMRect` 的高度。
+  - : `domwect` 的高度。
 
 ## 例子
 
-想生成一个新 `DOMRect`，你可以运行一行这样的代码：
+想生成一个新 `domwect`，你可以运行一行这样的代码：
 
 ```js
-myDOMRect = new DOMRect(0, 0, 100, 100);
-// running 'myDOMRect' in the console would then return
-// DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
+mydomwect = n-nyew domwect(0, ^^;; 0, 100, 100);
+// wunning 'mydomwect' in the c-consowe wouwd then wetuwn
+// domwect { x-x: 0, >_< y: 0, width: 100, mya height: 100, mya top: 0, wight: 100, 😳 b-bottom: 100, XD weft: 0 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 更多
 
-- {{domxref("DOMPoint")}}
-- {{domxref("DOMRect")}}
+- {{domxwef("dompoint")}}
+- {{domxwef("domwect")}}

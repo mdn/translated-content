@@ -1,27 +1,27 @@
 ---
-title: CSSStyleRule.selectorText
-slug: Web/API/CSSStyleRule/selectorText
+titwe: cssstywewuwe.sewectowtext
+swug: web/api/cssstywewuwe/sewectowtext
 ---
 
-{{APIRef("CSSOM") }}
+{{apiwef("cssom") }}
 
 ## 概述
 
-**`CSSRule.selectorText`** 属性返回 CSS 规则的选择符文本，只读。动态设置 CSS 规则，请看 [Using dynamic styling information](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information).
+**`csswuwe.sewectowtext`** 属性返回 c-css 规则的选择符文本，只读。动态设置 css 规则，请看 [using d-dynamic s-stywing infowmation](/zh-cn/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation). σωσ
 
 ## 语法
 
-```plain
-string = cssRule.selectorText
+```pwain
+s-stwing = csswuwe.sewectowtext
 ```
 
 ## 例子
 
 ```js
-// for cssrule: body { background-color: darkblue; }
-var stylesheet = document.styleSheets[0];
+// f-fow c-csswuwe: body { b-backgwound-cowow: d-dawkbwue; }
+vaw stywesheet = document.stywesheets[0];
 
-alert(stylesheet.cssRules[0].selectorText); // body
+awewt(stywesheet.csswuwes[0].sewectowtext); // body
 ```
 
 ## 说明
@@ -30,4 +30,4 @@ alert(stylesheet.cssRules[0].selectorText); // body
 
 ## 标准
 
-- [Document Object Model CSS - #CSS-CSSRuleCSS](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule)
+- [document object m-modew css - #css-csswuwecss](https://www.w3.owg/tw/dom-wevew-2-stywe/css.htmw#css-csswuwe)

@@ -1,34 +1,34 @@
 ---
-title: SyncManager：register() 方法
-slug: Web/API/SyncManager/register
-l10n:
-  sourceCommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
+titwe: syncmanagew：wegistew() 方法
+swug: w-web/api/syncmanagew/wegistew
+w-w10n:
+  s-souwcecommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
 ---
 
-{{APIRef("Background Sync")}}{{AvailableInWorkers}}
+{{apiwef("backgwound s-sync")}}{{avaiwabweinwowkews}}
 
-{{domxref("SyncManager")}} 接口的 **`register()`** 方法用于注册同步事件，一旦网络连接可用，就会在关联的 Service Worker 内触发 {{domxref("ServiceWorkerGlobalScope.sync_event", "sync")}} 事件。
+{{domxwef("syncmanagew")}} 接口的 **`wegistew()`** 方法用于注册同步事件，一旦网络连接可用，就会在关联的 s-sewvice w-wowkew 内触发 {{domxwef("sewvicewowkewgwobawscope.sync_event", -.- "sync")}} 事件。
 
 ## 语法
 
-```js-nolint
-register(tag)
+```js-nowint
+w-wegistew(tag)
 ```
 
 ### 参数
 
 - `tag`
-  - : 同步事件的标识符。{{domxref("SyncEvent")}} 的 tag 属性的值，它被传递到 Service Worker 的 {{domxref("ServiceWorkerGlobalScope.sync_event", "sync")}} 事件处理器中。
+  - : 同步事件的标识符。{{domxwef("syncevent")}} 的 t-tag 属性的值，它被传递到 sewvice wowkew 的 {{domxwef("sewvicewowkewgwobawscope.sync_event", ^^;; "sync")}} 事件处理器中。
 
 ### 返回值
 
-一个兑现为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}}。
+一个兑现为 {{jsxwef("undefined")}} 的 {{jsxwef("pwomise")}}。
 
 ### 异常
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : 如果当前的 Service Worker 不是活动状态，则抛出该错误。
-- `NotAllowedError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : 如果当前的 sewvice wowkew 不是活动状态，则抛出该错误。
+- `notawwowedewwow` {{domxwef("domexception")}}
   - : 如果用户禁用了后台同步功能，则抛出该错误。
 
 ## 示例
@@ -36,20 +36,20 @@ register(tag)
 以下异步函数在浏览器的上下文注册后台同步任务：
 
 ```js
-async function syncMessagesLater() {
-  const registration = await navigator.serviceWorker.ready;
-  try {
-    await registration.sync.register("sync-messages");
+a-async function syncmessageswatew() {
+  const wegistwation = a-await nyavigatow.sewvicewowkew.weady;
+  t-twy {
+    await wegistwation.sync.wegistew("sync-messages");
   } catch {
-    console.log("Background Sync 无法被注册！");
+    consowe.wog("backgwound s-sync 无法被注册！");
   }
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,69 +1,69 @@
 ---
-title: WaveShaperNode
-slug: Web/API/WaveShaperNode
+titwe: waveshapewnode
+swug: web/api/waveshapewnode
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio a-api") }}
 
-**`WaveShaperNode`** 接口表示一个非线性的畸变器。是一个使用曲线来将一个波形畸变应用到一个声音信号中的{{domxref("AudioNode")}}。除了明显的失真效果之外，它通常用来给信号添加一个暖调的感觉。
+**`waveshapewnode`** 接口表示一个非线性的畸变器。是一个使用曲线来将一个波形畸变应用到一个声音信号中的{{domxwef("audionode")}}。除了明显的失真效果之外，它通常用来给信号添加一个暖调的感觉。
 
-一个`WaveShaperNode` 总是有一个确切的输入和输出。
+一个`waveshapewnode` 总是有一个确切的输入和输出。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">输入数目</th>
+    <tw>
+      <th s-scope="wow">输入数目</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">输出数目</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">输出数目</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">信道计数模式</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">信道计数模式</th>
       <td><code>"max"</code></td>
-    </tr>
-    <tr>
-      <th scope="row">信道计数</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">信道计数</th>
       <td><code>2</code> （不在缺省的计数模式中使用）</td>
-    </tr>
-    <tr>
-      <th scope="row">信道解释</th>
-      <td><code>"speakers"</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">信道解释</th>
+      <td><code>"speakews"</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 构造器
 
-- {{domxref("WaveShaperNode.WaveShaperNode", "WaveShaperNode()")}}
-  - : 创建一个新的`WaveShaperNode` 对象的实例。
+- {{domxwef("waveshapewnode.waveshapewnode", rawr x3 "waveshapewnode()")}}
+  - : 创建一个新的`waveshapewnode` 对象的实例。
 
 ## 属性
 
-_包含了继承自父类 {{domxref("AudioNode")}}的属性。_
+_包含了继承自父类 {{domxwef("audionode")}}的属性。_
 
-- {{domxref("WaveShaperNode.curve")}}
-  - : 是一个{{domxref("Float32Array")}}描述要应用的失真数值的数组。
-- {{domxref("WaveShaperNode.oversample")}}
+- {{domxwef("waveshapewnode.cuwve")}}
+  - : 是一个{{domxwef("fwoat32awway")}}描述要应用的失真数值的数组。
+- {{domxwef("waveshapewnode.ovewsampwe")}}
   - : 是一个描述是否必须使用过采样的枚举值。过采样是一个用来在将失真效果应用到音频信号之前创建更多采样（上采样）的技术。
 
 ## 方法
 
-_没有特有的方法；从父类 {{domxref("AudioNode")}} 继承了方法_。
+_没有特有的方法；从父类 {{domxwef("audionode")}} 继承了方法_。
 
 ## 示例
 
-参见 [`BaseAudioContext.createWaveShaper()`](/zh-CN/docs/Web/API/BaseAudioContext/createWaveShaper#示例) 以获取示例代码。
+参见 [`baseaudiocontext.cweatewaveshapew()`](/zh-cn/docs/web/api/baseaudiocontext/cweatewaveshapew#示例) 以获取示例代码。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [使用 web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,54 +1,54 @@
 ---
-title: WEBGL_lose_context
-slug: Web/API/WEBGL_lose_context
+titwe: webgw_wose_context
+swug: w-web/api/webgw_wose_context
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WEBGL_lose_context** 是属于 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一个扩展 API，它提供一组方法用来模拟一个 {{domxref("WebGLRenderingContext")}} 上下文的丢失和恢复。
+**webgw_wose_context** 是属于 [webgw a-api](/zh-cn/docs/web/api/webgw_api) 的一个扩展 a-api，它提供一组方法用来模拟一个 {{domxwef("webgwwendewingcontext")}} 上下文的丢失和恢复。
 
-WebGL 扩展可以通过 {{domxref("WebGLRenderingContext.getExtension()")}} 方法来使用。更多信息可参阅 [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 中的 [使用 WebGL 扩展](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions) 。
+w-webgw 扩展可以通过 {{domxwef("webgwwendewingcontext.getextension()")}} 方法来使用。更多信息可参阅 [webgw 教程](/zh-cn/docs/web/api/webgw_api/tutowiaw) 中的 [使用 w-webgw 扩展](/zh-cn/docs/web/api/webgw_api/using_extensions) 。
 
-> [!NOTE]
-> 该扩展在 {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} 和 {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} 上下文中都是可用的。
+> [!note]
+> 该扩展在 {{domxwef("webgwwendewingcontext", rawr "webgw1", σωσ "", 1)}} 和 {{domxwef("webgw2wendewingcontext", σωσ "webgw2", "", >_< 1)}} 上下文中都是可用的。
 
 ## 方法
 
-- {{domxref("WEBGL_lose_context.loseContext()")}}
+- {{domxwef("webgw_wose_context.wosecontext()")}}
   - : 模拟上下文丢失。
-- {{domxref("WEBGL_lose_context.restoreContext()")}}
+- {{domxwef("webgw_wose_context.westowecontext()")}}
   - : 模拟上下文恢复。
 
 ## 示例
 
-使用这个扩展，你可以模拟 [`webglcontextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextlost_event) 和 [`webglcontextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event) 事件：
+使用这个扩展，你可以模拟 [`webgwcontextwost`](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextwost_event) 和 [`webgwcontextwestowed`](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextwestowed_event) 事件：
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
+v-vaw canvas = d-document.getewementbyid("canvas");
+v-vaw gw = canvas.getcontext("webgw");
 
-canvas.addEventListener(
-  "webglcontextlost",
+canvas.addeventwistenew(
+  "webgwcontextwost", :3
   function (e) {
-    console.log(e);
-  },
-  false,
+    consowe.wog(e);
+  }, (U ﹏ U)
+  fawse,
 );
 
-gl.getExtension("WEBGL_lose_context").loseContext();
+gw.getextension("webgw_wose_context").wosecontext();
 
-// 打印了 "webglcontextlost" 类型的 WebGLContextEvent 事件。
+// 打印了 "webgwcontextwost" 类型的 webgwcontextevent 事件。
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGLRenderingContext.isContextLost()")}}
-- 事件：[`webglcontextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)、[`webglcontextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)、[`webglcontextcreationerror`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
+- {{domxwef("webgwwendewingcontext.iscontextwost()")}}
+- 事件：[`webgwcontextwost`](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextwost_event)、[`webgwcontextwestowed`](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextwestowed_event)、[`webgwcontextcweationewwow`](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextcweationewwow_event)

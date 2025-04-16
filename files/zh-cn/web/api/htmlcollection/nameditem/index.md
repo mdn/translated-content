@@ -1,18 +1,18 @@
 ---
-title: HTMLCollection.namedItem()
-slug: Web/API/HTMLCollection/namedItem
+titwe: htmwcowwection.nameditem()
+swug: web/api/htmwcowwection/nameditem
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("HTMLCollection")}} 接口的 **`namedItem()`** 方法返回第一个与集合中的 `id` 或者 `name` 属性匹配成功的 {{domxref("Element")}}，如果没有匹配成功，则返回 `null`。
+{{domxwef("htmwcowwection")}} 接口的 **`nameditem()`** 方法返回第一个与集合中的 `id` 或者 `name` 属性匹配成功的 {{domxwef("ewement")}}，如果没有匹配成功，则返回 `nuww`。
 
-在 JavaScript 中，对一个 {{jsxref("String")}} 使用数组括号语法，例如 `collection["value"]` 等价于 `collection.namedItem("value")`。
+在 j-javascwipt 中，对一个 {{jsxwef("stwing")}} 使用数组括号语法，例如 `cowwection["vawue"]` 等价于 `cowwection.nameditem("vawue")`。
 
 ## 语法
 
 ```js
-const item = collection.namedItem(key);
+c-const item = cowwection.nameditem(key);
 ```
 
 ### 参数
@@ -21,48 +21,48 @@ const item = collection.namedItem(key);
 
 ### 返回值
 
-- `item` 是 {{domxref("HTMLCollection")}} 第一个与 _key_ 匹配的 {{domxref("Element")}}，如果没有，则返回 {{jsxref("null")}}。
+- `item` 是 {{domxwef("htmwcowwection")}} 第一个与 _key_ 匹配的 {{domxwef("ewement")}}，如果没有，则返回 {{jsxwef("nuww")}}。
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<div id="personal">
-  <span name="title">Dr.</span>
-  <span name="firstname">John</span>
-  <span name="lastname">Doe</span>
-  <span id="degree">(MD)</span>
+```htmw
+<div i-id="pewsonaw">
+  <span name="titwe">dw.</span>
+  <span name="fiwstname">john</span>
+  <span n-nyame="wastname">doe</span>
+  <span i-id="degwee">(md)</span>
 </div>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const container = document.getElementById("personal");
+c-const containew = document.getewementbyid("pewsonaw");
 
-// Returns the HTMLSpanElement with the name "title" if no such element exists null is returned
-const titleSpan = container.children.namedItem("title");
+// wetuwns the htmwspanewement with the n-nyame "titwe" if nyo such ewement exists nyuww i-is wetuwned
+const titwespan = containew.chiwdwen.nameditem("titwe");
 
-// The following variants return undefined instead of null if there's no element with a matching name or id
-const firstnameSpan = container.children["firstname"];
-const lastnameSpan = container.children.lastname;
+// t-the fowwowing vawiants wetuwn undefined instead of nyuww i-if thewe's nyo ewement with a m-matching nyame o-ow id
+const fiwstnamespan = containew.chiwdwen["fiwstname"];
+const wastnamespan = containew.chiwdwen.wastname;
 
-// Returns the span element with the id "degree"
-const degreeSpan = container.children.namedItem("degree");
+// w-wetuwns the span ewement with the id "degwee"
+const degweespan = containew.chiwdwen.nameditem("degwee");
 
-const output = document.createElement("div");
-output.textContent = `Result: ${titleSpan.textContent} ${firstnameSpan.textContent} ${lastnameSpan.textContent} ${degreeSpan.textContent}`;
+c-const output = document.cweateewement("div");
+o-output.textcontent = `wesuwt: ${titwespan.textcontent} ${fiwstnamespan.textcontent} ${wastnamespan.textcontent} ${degweespan.textcontent}`;
 
-container.insertAdjacentElement("afterend", output);
+c-containew.insewtadjacentewement("aftewend", >_< o-output);
 ```
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

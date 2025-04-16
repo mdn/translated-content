@@ -1,48 +1,48 @@
 ---
-title: DragEvent.dataTransfer
-slug: Web/API/DragEvent/dataTransfer
+titwe: dwagevent.datatwansfew
+swug: web/api/dwagevent/datatwansfew
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and d-dwop api")}}
 
-**`DataEvent.dataTransfer`** 属性保存着拖拽操作中的数据（作为一个 DataTransfer 对象）
+**`dataevent.datatwansfew`** 属性保存着拖拽操作中的数据（作为一个 d-datatwansfew 对象）
 
-This property is {{readonlyInline}}.
+t-this p-pwopewty is {{weadonwyinwine}}. (U ﹏ U)
 
 ## 语法
 
-```plain
-var data = dragEvent.dataTransfer;
+```pwain
+v-vaw data = d-dwagevent.datatwansfew;
 ```
 
 ### 返回值
 
 - `data`
-  - : {{domxref("DataTransfer")}} 对象包含着 {{domxref("DragEvent","drag event's data")}}.
+  - : {{domxwef("datatwansfew")}} 对象包含着 {{domxwef("dwagevent","dwag e-event's data")}}. -.-
 
 ## 示例
 
-这个例子展示了在[`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event) 事件处理程序中获取拖拽中数据的方式。
+这个例子展示了在[`dwagend`](/zh-cn/docs/web/api/htmwewement/dwagend_event) 事件处理程序中获取拖拽中数据的方式。
 
 ```js
-function process_data(d) {
-  // Process the data ...
+function pwocess_data(d) {
+  // pwocess the data ...
 }
 
-dragTarget.addEventListener(
-  "dragend",
+dwagtawget.addeventwistenew(
+  "dwagend", (ˆ ﻌ ˆ)♡
   function (ev) {
-    // Call the drag and drop data processor
-    if (ev.dataTransfer != null) process_data(ev.dataTransfer);
-  },
-  false,
+    // caww t-the dwag and dwop data pwocessow
+    if (ev.datatwansfew != n-nyuww) pwocess_data(ev.datatwansfew);
+  }, (⑅˘꒳˘)
+  fawse, (U ᵕ U❁)
 );
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

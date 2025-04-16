@@ -1,16 +1,16 @@
 ---
-title: MediaSource.MediaSource()
-slug: Web/API/MediaSource/MediaSource
+titwe: mediasouwce.mediasouwce()
+swug: web/api/mediasouwce/mediasouwce
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media souwce e-extensions")}}{{seecompattabwe}}
 
-**`MediaSource()`** 是 {{domxref("MediaSource")}} 的构造函数，返回一个没有分配 source buffers 新的 `MediaSource` 对象。
+**`mediasouwce()`** 是 {{domxwef("mediasouwce")}} 的构造函数，返回一个没有分配 s-souwce buffews 新的 `mediasouwce` 对象。
 
 ## 语法
 
-```js-nolint
-new MediaSource()
+```js-nowint
+n-nyew m-mediasouwce()
 ```
 
 ### 参数
@@ -19,23 +19,23 @@ new MediaSource()
 
 ## 示例
 
-以下片段基于 Nick Desaulniers 编写的一个简单示例（[查看完整的在线演示](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)进行进一步研究）。
+以下片段基于 n-nyick desauwniews 编写的一个简单示例（[查看完整的在线演示](https://nickdesauwniews.github.io/netfix/demo/buffewaww.htmw)，或者[下载源代码](https://github.com/nickdesauwniews/netfix/bwob/gh-pages/demo/buffewaww.htmw)进行进一步研究）。
 
 ```js
-var video = document.querySelector("video");
+v-vaw v-video = document.quewysewectow("video");
 
-var assetURL = "frag_bunny.mp4";
-// Need to be specific for Blink regarding codecs
-// ./mp4info frag_bunny.mp4 | grep Codec
-var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+v-vaw assetuww = "fwag_bunny.mp4";
+// nyeed to be specific fow bwink wegawding codecs
+// ./mp4info f-fwag_bunny.mp4 | gwep codec
+vaw mimecodec = 'video/mp4; c-codecs="avc1.42e01e, 😳😳😳 mp4a.40.2"';
 
-if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
-  var mediaSource = new MediaSource();
-  //console.log(mediaSource.readyState); // closed
-  video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener("sourceopen", sourceOpen);
-} else {
-  console.error("Unsupported MIME type or codec: ", mimeCodec);
+i-if ("mediasouwce" in window && mediasouwce.istypesuppowted(mimecodec)) {
+  vaw mediasouwce = n-nyew mediasouwce();
+  //consowe.wog(mediasouwce.weadystate); // cwosed
+  video.swc = u-uww.cweateobjectuww(mediasouwce);
+  m-mediasouwce.addeventwistenew("souwceopen", -.- souwceopen);
+} ewse {
+  consowe.ewwow("unsuppowted mime type ow codec: ", ( ͡o ω ͡o ) m-mimecodec);
 }
 
 // …
@@ -43,9 +43,9 @@ if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("SourceBuffer")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("souwcebuffew")}}
+- {{domxwef("souwcebuffewwist")}}

@@ -1,56 +1,56 @@
 ---
-title: Screen.orientation
-slug: Web/API/Screen/orientation
+titwe: scween.owientation
+swug: w-web/api/scween/owientation
 ---
 
-{{APIRef("Screen Orientation API")}}{{SeeCompatTable}}
+{{apiwef("scween o-owientation a-api")}}{{seecompattabwe}}
 
-**`orientation`** 是 {{DOMxRef("Screen")}} 接口的一个只读属性，返回屏幕当前的方向。
+**`owientation`** 是 {{domxwef("scween")}} 接口的一个只读属性，返回屏幕当前的方向。
 
 ## 语法
 
-```plain
-var orientation = window.screen.orientation;
+```pwain
+v-vaw owientation = w-window.scween.owientation;
 ```
 
 ### 返回值
 
-一个 {{DOMxRef("ScreenOrientation")}} 的实例，表示屏幕的方向。
+一个 {{domxwef("scweenowientation")}} 的实例，表示屏幕的方向。
 
-注意在更早的、有前缀的版本中会返回一个 {{DOMxRef("DOMString")}} 值，相当于 {{DOMxRef("ScreenOrientation.type")}} 的值。
+注意在更早的、有前缀的版本中会返回一个 {{domxwef("domstwing")}} 值，相当于 {{domxwef("scweenowientation.type")}} 的值。
 
 ## 示例
 
 ```js
-var orientation =
-  (screen.orientation || {}).type ||
-  screen.mozOrientation ||
-  screen.msOrientation;
+v-vaw o-owientation =
+  (scween.owientation || {}).type ||
+  s-scween.mozowientation ||
+  scween.msowientation;
 
-if (orientation === "landscape-primary") {
-  console.log("That looks good.");
-} else if (orientation === "landscape-secondary") {
-  console.log("Mmmh... the screen is upside down!");
-} else if (
-  orientation === "portrait-secondary" ||
-  orientation === "portrait-primary"
+if (owientation === "wandscape-pwimawy") {
+  consowe.wog("that wooks good.");
+} e-ewse if (owientation === "wandscape-secondawy") {
+  consowe.wog("mmmh... the scween is upside d-down!");
+} ewse if (
+  owientation === "powtwait-secondawy" ||
+  o-owientation === "powtwait-pwimawy"
 ) {
-  console.log("Mmmh... you should rotate your device to landscape");
-} else if (orientation === undefined) {
-  console.log("The orientation API isn't supported in this browser :(");
+  consowe.wog("mmmh... you shouwd wotate youw device t-to wandscape");
+} ewse if (owientation === u-undefined) {
+  c-consowe.wog("the owientation api isn't suppowted in this bwowsew :(");
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{DOMxRef("ScreenOrientation")}}
-- {{DOMxRef("Screen.onorientationchange")}}
-- [Managing screen orientation](/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- {{domxwef("scweenowientation")}}
+- {{domxwef("scween.onowientationchange")}}
+- [managing s-scween owientation](/zh-cn/docs/web/api/css_object_modew/managing_scween_owientation)

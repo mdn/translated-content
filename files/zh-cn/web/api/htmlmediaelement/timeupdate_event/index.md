@@ -1,110 +1,110 @@
 ---
-title: "HTMLMediaElement: timeupdate"
-slug: Web/API/HTMLMediaElement/timeupdate_event
+titwe: "htmwmediaewement: timeupdate"
+s-swug: web/api/htmwmediaewement/timeupdate_event
 ---
 
-{{APIRef("HTMLMediaElement")}}
+{{apiwef("htmwmediaewement")}}
 
-当`currentTime`更新时会触发`timeupdate`事件。
+当`cuwwenttime`更新时会触发`timeupdate`事件。
 
-这个事件的触发频率由系统决定，但是会保证每秒触发 4-66 次（前提是每次事件处理不会超过 250ms）。鼓励用户代理根据系统的负载和处理事件的平均成本来改变事件的频率，保证 UI 更新不会影响视频的解码。
+这个事件的触发频率由系统决定，但是会保证每秒触发 4-66 次（前提是每次事件处理不会超过 250ms）。鼓励用户代理根据系统的负载和处理事件的平均成本来改变事件的频率，保证 u-ui 更新不会影响视频的解码。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Target</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">Default Action</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("GlobalEventHandlers.ontimeupdate")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Specification</th>
+    <tw>
+      <th s-scope="wow">bubbwes</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">cancewabwe</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">tawget</th>
+      <td>ewement</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">defauwt action</th>
+      <td>none</td>
+    </tw>
+    <tw>
+      <th scope="wow">event handwew pwopewty</th>
+      <td>{{domxwef("gwobaweventhandwews.ontimeupdate")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">specification</th>
       <td>
         <p>
           <a
-            href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing"
-            >HTML5 media</a
+            h-hwef="http://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/the-video-ewement.htmw#event-media-pwaying"
+            >htmw5 media</a
           >
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
-These examples add an event listener for the HTMLMediaElement's `timeupdate` event, then post a message when that event handler has reacted to the event firing. Remember, the event frequency is dependant on the system load.
+these e-exampwes add an event wistenew f-fow the htmwmediaewement's `timeupdate` event, (U ﹏ U) then post a message when that e-event handwew has weacted to the e-event fiwing. (///ˬ///✿) wemembew, >w< t-the event fwequency is dependant on the system woad. rawr
 
-Using `addEventListener()`:
+using `addeventwistenew()`:
 
 ```js
-const video = document.querySelector("video");
+const video = d-document.quewysewectow("video");
 
-video.addEventListener("timeupdate", (event) => {
-  console.log("The currentTime attribute has been updated. Again.");
+video.addeventwistenew("timeupdate", mya (event) => {
+  consowe.wog("the cuwwenttime attwibute has b-been updated. ^^ again.");
 });
 ```
 
-Using the `ontimeupdate` event handler property:
+using the `ontimeupdate` e-event h-handwew pwopewty:
 
 ```js
-const video = document.querySelector("video");
+c-const v-video = document.quewysewectow("video");
 
 video.ontimeupdate = (event) => {
-  console.log("The currentTime attribute has been updated. Again.");
+  consowe.wog("the cuwwenttime a-attwibute has been updated. 😳😳😳 again.");
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关事件
 
-- {{domxref("HTMLMediaElement.playing_event", 'HTMLMediaElement: playing event')}}
-- {{domxref("HTMLMediaElement.waiting_event", 'HTMLMediaElement: waiting event')}}
-- {{domxref("HTMLMediaElement.seeking_event", 'HTMLMediaElement: seeking event')}}
-- {{domxref("HTMLMediaElement.seeked_event", 'HTMLMediaElement: seeked event')}}
-- {{domxref("HTMLMediaElement.ended_event", 'HTMLMediaElement: ended event')}}
-- {{domxref("HTMLMediaElement.loadedmetadata_event", 'HTMLMediaElement: loadedmetadata event')}}
-- {{domxref("HTMLMediaElement.loadeddata_event", 'HTMLMediaElement: loadeddata event')}}
-- {{domxref("HTMLMediaElement.canplay_event", 'HTMLMediaElement: canplay event')}}
-- {{domxref("HTMLMediaElement.canplaythrough_event", 'HTMLMediaElement: canplaythrough event')}}
-- {{domxref("HTMLMediaElement.durationchange_event", 'HTMLMediaElement: durationchange event')}}
-- {{domxref("HTMLMediaElement.timeupdate_event", 'HTMLMediaElement: timeupdate event')}}
-- {{domxref("HTMLMediaElement.play_event", 'HTMLMediaElement: play event')}}
-- {{domxref("HTMLMediaElement.pause_event", 'HTMLMediaElement: pause event')}}
-- {{domxref("HTMLMediaElement.ratechange_event", 'HTMLMediaElement: ratechange event')}}
-- {{domxref("HTMLMediaElement.volumechange_event", 'HTMLMediaElement: volumechange event')}}
-- {{domxref("HTMLMediaElement.suspend_event", 'HTMLMediaElement: suspend event')}}
-- {{domxref("HTMLMediaElement.emptied_event", 'HTMLMediaElement: emptied event')}}
-- {{domxref("HTMLMediaElement.stalled_event", 'HTMLMediaElement: stalled event')}}
+- {{domxwef("htmwmediaewement.pwaying_event", mya 'htmwmediaewement: p-pwaying event')}}
+- {{domxwef("htmwmediaewement.waiting_event", 😳 'htmwmediaewement: waiting event')}}
+- {{domxwef("htmwmediaewement.seeking_event", -.- 'htmwmediaewement: seeking event')}}
+- {{domxwef("htmwmediaewement.seeked_event", 🥺 'htmwmediaewement: seeked event')}}
+- {{domxwef("htmwmediaewement.ended_event", o.O 'htmwmediaewement: ended event')}}
+- {{domxwef("htmwmediaewement.woadedmetadata_event", /(^•ω•^) 'htmwmediaewement: w-woadedmetadata event')}}
+- {{domxwef("htmwmediaewement.woadeddata_event", nyaa~~ 'htmwmediaewement: w-woadeddata e-event')}}
+- {{domxwef("htmwmediaewement.canpway_event", nyaa~~ 'htmwmediaewement: c-canpway event')}}
+- {{domxwef("htmwmediaewement.canpwaythwough_event", :3 'htmwmediaewement: canpwaythwough event')}}
+- {{domxwef("htmwmediaewement.duwationchange_event", 😳😳😳 'htmwmediaewement: duwationchange e-event')}}
+- {{domxwef("htmwmediaewement.timeupdate_event", (˘ω˘) 'htmwmediaewement: t-timeupdate event')}}
+- {{domxwef("htmwmediaewement.pway_event", 'htmwmediaewement: p-pway e-event')}}
+- {{domxwef("htmwmediaewement.pause_event", ^^ 'htmwmediaewement: pause event')}}
+- {{domxwef("htmwmediaewement.watechange_event", :3 'htmwmediaewement: w-watechange event')}}
+- {{domxwef("htmwmediaewement.vowumechange_event", -.- 'htmwmediaewement: v-vowumechange event')}}
+- {{domxwef("htmwmediaewement.suspend_event", 😳 'htmwmediaewement: suspend event')}}
+- {{domxwef("htmwmediaewement.emptied_event", 'htmwmediaewement: e-emptied event')}}
+- {{domxwef("htmwmediaewement.stawwed_event", mya 'htmwmediaewement: stawwed event')}}
 
 ## 更多
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}

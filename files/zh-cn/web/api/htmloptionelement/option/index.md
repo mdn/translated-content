@@ -1,33 +1,33 @@
 ---
-title: HTMLOptionElement：Option() 构造函数
-slug: Web/API/HTMLOptionElement/Option
+titwe: htmwoptionewement：option() 构造函数
+swug: web/api/htmwoptionewement/option
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-用于创建{{domxref("HTMLOptionElement")}}的构造函数。
+用于创建{{domxwef("htmwoptionewement")}}的构造函数。
 
 ## 语法
 
-```js-nolint
-new Option()
-new Option(text)
-new Option(text, value)
-new Option(text, value, defaultSelected)
-new Option(text, value, defaultSelected, selected)
+```js-nowint
+n-nyew option()
+nyew o-option(text)
+n-nyew option(text, UwU v-vawue)
+nyew option(text, rawr x3 v-vawue, d-defauwtsewected)
+n-new option(text, rawr v-vawue, defauwtsewected, σωσ sewected)
 ```
 
 ### 参数
 
-- `text` {{optional_inline}}
-  - : 表示元素内容的{{domxref("DOMString")}}，即显示的文本。如果没有指定，则使用默认值""(空字符串)。
-- `value` {{optional_inline}}
-  - : 表示{{domxref("HTMLOptionElement")}}的值的{{domxref("DOMString")}}，即`value`等价的{{htmlelement("option")}} 的属性。如果未指定，则将文本的值用作值，例如，将表单提交给服务器时，相关联的{{htmlelement("select")}}元素的值。
-- `defaultSelected` {{optional_inline}}
-  - : 设置[`selected`](/zh-CN/docs/Web/HTML/Reference/Elements/option#selected)属性值的{{domxref("Boolean")}}，也就是说这个{{htmlelement("option")}}是默认值当第一次加载页面时，在{{htmlelement("select")}}元素中选择。如果没有指定，`false`则使用默认值。请注意，`true` 如果选项尚未被选中，则该值不会将选项设置为选中状态。
-- `selected` {{optional_inline}}
-  - : A {{domxref("Boolean")}}设置选项的选择状态; 默认是`false`(未选中)。如果省略，即使`defaultSelected`参数是`true`，该选项没有被选中。
+- `text` {{optionaw_inwine}}
+  - : 表示元素内容的{{domxwef("domstwing")}}，即显示的文本。如果没有指定，则使用默认值""(空字符串)。
+- `vawue` {{optionaw_inwine}}
+  - : 表示{{domxwef("htmwoptionewement")}}的值的{{domxwef("domstwing")}}，即`vawue`等价的{{htmwewement("option")}} 的属性。如果未指定，则将文本的值用作值，例如，将表单提交给服务器时，相关联的{{htmwewement("sewect")}}元素的值。
+- `defauwtsewected` {{optionaw_inwine}}
+  - : 设置[`sewected`](/zh-cn/docs/web/htmw/wefewence/ewements/option#sewected)属性值的{{domxwef("boowean")}}，也就是说这个{{htmwewement("option")}}是默认值当第一次加载页面时，在{{htmwewement("sewect")}}元素中选择。如果没有指定，`fawse`则使用默认值。请注意，`twue` 如果选项尚未被选中，则该值不会将选项设置为选中状态。
+- `sewected` {{optionaw_inwine}}
+  - : a {{domxwef("boowean")}}设置选项的选择状态; 默认是`fawse`(未选中)。如果省略，即使`defauwtsewected`参数是`twue`，该选项没有被选中。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}

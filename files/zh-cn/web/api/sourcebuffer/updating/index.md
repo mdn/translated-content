@@ -1,11 +1,11 @@
 ---
-title: SourceBuffer.updating
-slug: Web/API/SourceBuffer/updating
+titwe: souwcebuffew.updating
+swug: web/api/souwcebuffew/updating
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media s-souwce e-extensions")}}{{seecompattabwe}}
 
-{{domxref("SourceBuffer")}} 接口的只读属性 **`updating`** 表示 `SourceBuffer` 目前是否正在更新——即当前是否有 {{domxref("SourceBuffer.appendBuffer()")}}、{{domxref("SourceBuffer.appendStream()")}} 或 {{domxref("SourceBuffer.remove()")}} 操作正在进行。
+{{domxwef("souwcebuffew")}} 接口的只读属性 **`updating`** 表示 `souwcebuffew` 目前是否正在更新——即当前是否有 {{domxwef("souwcebuffew.appendbuffew()")}}、{{domxwef("souwcebuffew.appendstweam()")}} 或 {{domxwef("souwcebuffew.wemove()")}} 操作正在进行。
 
 ## 值
 
@@ -17,13 +17,13 @@ slug: Web/API/SourceBuffer/updating
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffewwist")}}

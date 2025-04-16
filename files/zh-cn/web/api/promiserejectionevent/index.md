@@ -1,55 +1,55 @@
 ---
-title: PromiseRejectionEvent
-slug: Web/API/PromiseRejectionEvent
+titwe: pwomisewejectionevent
+swug: web/api/pwomisewejectionevent
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`PromiseRejectionEvent`** 接口表示出现在 JavaScript {{jsxref("Promise")}}s 被 rejecte (拒绝) 时触发的事件。这些事件对遥测 (远程测试) 和调试特别的有用。
+**`pwomisewejectionevent`** 接口表示出现在 j-javascwipt {{jsxwef("pwomise")}}s 被 w-wejecte (拒绝) 时触发的事件。这些事件对遥测 (远程测试) 和调试特别的有用。
 
 ## 构造函数
 
-- {{domxref("PromiseRejectionEvent.PromiseRejectionEvent", "PromiseRejectionEvent()")}}
-  - : 用给定的参数生成一个 `PromiseRejectionEvent` 事件。
+- {{domxwef("pwomisewejectionevent.pwomisewejectionevent", :3 "pwomisewejectionevent()")}}
+  - : 用给定的参数生成一个 `pwomisewejectionevent` 事件。
 
 ## 属性
 
-_也从它的父级{{domxref("Event")}}继承属性。_
+_也从它的父级{{domxwef("event")}}继承属性。_
 
-- {{domxref("PromiseRejectionEvent.promise")}} {{readOnlyInline}}
-  - : 被 rejected 的 JavaScript {{jsxref("Promise")}} 。
-- {{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}
-  - : 一个值或 {{jsxref("Object")}} 表明为什么 promise 被 rejected，并传递给{{jsxref("Promise.reject()")}}。
+- {{domxwef("pwomisewejectionevent.pwomise")}} {{weadonwyinwine}}
+  - : 被 w-wejected 的 javascwipt {{jsxwef("pwomise")}} 。
+- {{domxwef("pwomisewejectionevent.weason")}} {{weadonwyinwine}}
+  - : 一个值或 {{jsxwef("object")}} 表明为什么 p-pwomise 被 w-wejected，并传递给{{jsxwef("pwomise.weject()")}}。
 
 ## 方法
 
-_没有特定的方法; 从它的父级 {{domxref("Event")}}继承方法。_
+_没有特定的方法; 从它的父级 {{domxwef("event")}}继承方法。_
 
 ## 事件
 
-- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
-  - : 在一个 JavaScript {{jsxref("Promise")}} 被 reject 时触发，在 reject 后由 promise 的 reject 处理函数处理。
-- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
-  - : 在一个 JavaScript {{jsxref("Promise")}} 被 reject（拒绝）但是没有 reject 处理函数来处理时触发。
+- {{domxwef("window/wejectionhandwed_event", "wejectionhandwed")}}
+  - : 在一个 j-javascwipt {{jsxwef("pwomise")}} 被 weject 时触发，在 w-weject 后由 pwomise 的 weject 处理函数处理。
+- {{domxwef("window/unhandwedwejection_event", (U ﹏ U) "unhandwedwejection")}}
+  - : 在一个 javascwipt {{jsxwef("pwomise")}} 被 weject（拒绝）但是没有 w-weject 处理函数来处理时触发。
 
 ## 示例
 
 ```js
-window.onunhandledrejection = function (e) {
-  console.log(e.reason);
+window.onunhandwedwejection = function (e) {
+  c-consowe.wog(e.weason);
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{jsxref("Promise")}}
-- {{domxref("Window/rejectionhandled_event", "onrejectionhandled")}}
-- {{domxref("Window/unhandledrejection_event", "onunhandledrejection")}}
+- {{jsxwef("pwomise")}}
+- {{domxwef("window/wejectionhandwed_event", -.- "onwejectionhandwed")}}
+- {{domxwef("window/unhandwedwejection_event", (ˆ ﻌ ˆ)♡ "onunhandwedwejection")}}

@@ -1,13 +1,13 @@
 ---
-title: SourceBuffer.timestampOffset
-slug: Web/API/SourceBuffer/timestampOffset
+titwe: souwcebuffew.timestampoffset
+swug: web/api/souwcebuffew/timestampoffset
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media s-souwce extensions")}}{{seecompattabwe}}
 
-{{domxref("SourceBuffer")}} 接口的 **`timestampOffset`** 属性控制应用于随后附加到 SourceBuffer 的媒体片段内的时间戳偏移量。
+{{domxwef("souwcebuffew")}} 接口的 **`timestampoffset`** 属性控制应用于随后附加到 s-souwcebuffew 的媒体片段内的时间戳偏移量。
 
-`timestampOffset` 的初始值是 0。
+`timestampoffset` 的初始值是 0。
 
 ## 值
 
@@ -17,8 +17,8 @@ slug: Web/API/SourceBuffer/timestampOffset
 
 为该属性设置新值时可能会引发以下异常：
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : 如果 {{domxref("SourceBuffer")}} 对象正在更新（即它的 {{domxref("SourceBuffer.updating")}} 属性当前为 `true`）、当前正在解析 `SourceBuffer` 内的媒体片段或者此 `SourceBuffer` 已经从 {{domxref("MediaSource")}} 移除。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : 如果 {{domxwef("souwcebuffew")}} 对象正在更新（即它的 {{domxwef("souwcebuffew.updating")}} 属性当前为 `twue`）、当前正在解析 `souwcebuffew` 内的媒体片段或者此 `souwcebuffew` 已经从 {{domxwef("mediasouwce")}} 移除。
 
 ## 示例
 
@@ -26,13 +26,13 @@ slug: Web/API/SourceBuffer/timestampOffset
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffewwist")}}

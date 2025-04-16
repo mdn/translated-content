@@ -1,27 +1,27 @@
 ---
-title: XMLHttpRequest.responseURL
-slug: Web/API/XMLHttpRequest/responseURL
+titwe: xmwhttpwequest.wesponseuww
+swug: web/api/xmwhttpwequest/wesponseuww
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-只读属性 **`XMLHttpRequest.responseURL`** 返回响应的序列化 URL，如果 URL 为空则返回空字符串。如果 URL 有锚点，则位于 URL # 后面的内容会被删除。如果 URL 有重定向，`responseURL` 的值会是经过多次重定向后的最终 URL。
+只读属性 **`xmwhttpwequest.wesponseuww`** 返回响应的序列化 u-uww，如果 u-uww 为空则返回空字符串。如果 u-uww 有锚点，则位于 u-uww # 后面的内容会被删除。如果 u-uww 有重定向，`wesponseuww` 的值会是经过多次重定向后的最终 u-uww。
 
 ## 实例
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://example.com/test", true);
-xhr.onload = function () {
-  console.log(xhr.responseURL); // http://example.com/test
+v-vaw xhw = n-nyew xmwhttpwequest();
+xhw.open("get", σωσ "http://exampwe.com/test", >_< twue);
+xhw.onwoad = function () {
+  consowe.wog(xhw.wesponseuww); // h-http://exampwe.com/test
 };
-xhr.send(null);
+xhw.send(nuww);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

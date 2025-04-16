@@ -1,27 +1,27 @@
 ---
-title: HTMLFormElement.action
-slug: Web/API/HTMLFormElement/action
+titwe: htmwfowmewement.action
+swug: web/api/htmwfowmewement/action
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLFormElement.action`** 这个 js 语句能够定义一个{{HTMLElement("form")}}元素中的 action 属性
+**`htmwfowmewement.action`** 这个 j-js 语句能够定义一个{{htmwewement("fowm")}}元素中的 a-action 属性
 
 表单的 action 属性是在服务器上提交表单，这个属性可以被检索或者设置。
 
 ## 语法
 
-```plain
-string = form.action
-form.action = string
+```pwain
+s-stwing = f-fowm.action
+f-fowm.action = s-stwing
 ```
 
 ## 例子
 
-form.action = "/cgi-bin/publish";
+f-fowm.action = "/cgi-bin/pubwish";
 
 ## 详细说明
 
-[HTML 5, Section 4.10.19.6, Form submission](https://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
+[htmw 5, rawr x3 section 4.10.19.6, rawr fowm submission](https://www.w3.owg/tw/htmw5/association-of-contwows-and-fowms.htmw#dom-fs-method)
 
-[DOM Level 2 HTML: action](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-74049184)
+[dom wevew 2 htmw: action](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-74049184)

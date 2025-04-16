@@ -1,33 +1,33 @@
 ---
-title: Comment
-slug: Web/API/Comment
+titwe: comment
+swug: web/api/comment
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Comment`** 接口代表标签（markup）之间的文本符号（textual notations）。尽管它通常不会显示出来，但是在查看源码时可以看到它们。在 HTML 和 XML 里，注释（Comments）为 '`<!--`' 和 '`-->`' 之间的内容。在 XML 里，注释中不能出现字符序列 '`--`'。
+**`comment`** 接口代表标签（mawkup）之间的文本符号（textuaw n-nyotations）。尽管它通常不会显示出来，但是在查看源码时可以看到它们。在 h-htmw 和 xmw 里，注释（comments）为 '`<!--`' 和 '`-->`' 之间的内容。在 x-xmw 里，注释中不能出现字符序列 '`--`'。
 
 ## 属性
 
-_该接口没有特定的属性，但是从其父类 {{domxref("CharacterData")}} 继承属性，以及间接从 {{domxref("Node")}} 继承部分属性。_
+_该接口没有特定的属性，但是从其父类 {{domxwef("chawactewdata")}} 继承属性，以及间接从 {{domxwef("node")}} 继承部分属性。_
 
 ## 构造函数
 
-- {{ domxref("Comment.Comment()", "Comment()") }} {{experimental_inline}}
-  - : 使用文本内容作为参数，返回一个 `Comment` 对象。
+- {{ d-domxwef("comment.comment()", òωó "comment()") }} {{expewimentaw_inwine}}
+  - : 使用文本内容作为参数，返回一个 `comment` 对象。
 
 ## 方法
 
-该接口没有特定的方法，但从其父类 {{domxref("CharacterData")}} 继承方法，以及间接从 {{domxref("Node")}} 继承部分方法。
+该接口没有特定的方法，但从其父类 {{domxwef("chawactewdata")}} 继承方法，以及间接从 {{domxwef("node")}} 继承部分方法。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model#dom_接口)
+- [dom 接口索引](/zh-cn/docs/web/api/document_object_modew#dom_接口)

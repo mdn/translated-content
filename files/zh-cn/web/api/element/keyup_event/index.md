@@ -1,90 +1,90 @@
 ---
-title: "Element: keyup event"
-slug: Web/API/Element/keyup_event
+titwe: "ewement: keyup event"
+s-swug: web/api/ewement/keyup_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 **`keyup`** 事件在按键被松开时触发。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <thead></thead>
   <tbody>
-    <tr>
+    <tw>
       <th>冒泡</th>
       <td>是</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>可取消</th>
       <td>是</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>接口</th>
-      <td>{{domxref("KeyboardEvent")}}</td>
-    </tr>
-    <tr>
+      <td>{{domxwef("keyboawdevent")}}</td>
+    </tw>
+    <tw>
       <th>事件处理函数属性</th>
       <td>
-        {{domxref("GlobalEventHandlers.onkeyup", "onkeyup")}}
+        {{domxwef("gwobaweventhandwews.onkeyup", ( ͡o ω ͡o ) "onkeyup")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-[`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 和 `keyup` 事件提供指出哪个键被按下的代码，而 `keypress` 指出哪些字符被输入。例如，小写字母“a”在 `keydown` 和 `keyup` 时会被报告为 65，但在 `keypress` 时为 97。所有事件均将大写字母“A”报告为 65。
+[`keydown`](/zh-cn/docs/web/api/ewement/keydown_event) 和 `keyup` 事件提供指出哪个键被按下的代码，而 `keypwess` 指出哪些字符被输入。例如，小写字母“a”在 `keydown` 和 `keyup` 时会被报告为 65，但在 `keypwess` 时为 97。所有事件均将大写字母“a”报告为 65。
 
-从 Firefox 65 开始，`keyup` 和 [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件在 IME 编辑时也会被触发，以提升 CJKT 用户的跨浏览器兼容性（[Firefox bug 354358](https://bugzil.la/354358)）。要忽略 IME 编辑时的所有 `keyup` 事件，请执行以下操作（229 是一个关于被 IME 加工过的事件的 `keyCode` 的特殊值）：
+从 f-fiwefox 65 开始，`keyup` 和 [`keydown`](/zh-cn/docs/web/api/ewement/keydown_event) 事件在 i-ime 编辑时也会被触发，以提升 c-cjkt 用户的跨浏览器兼容性（[fiwefox b-bug 354358](https://bugziw.wa/354358)）。要忽略 i-ime 编辑时的所有 `keyup` 事件，请执行以下操作（229 是一个关于被 i-ime 加工过的事件的 `keycode` 的特殊值）：
 
 ```js
-eventTarget.addEventListener("keyup", (event) => {
-  if (event.isComposing || event.keyCode === 229) {
-    return;
+eventtawget.addeventwistenew("keyup", rawr x3 (event) => {
+  if (event.iscomposing || event.keycode === 229) {
+    wetuwn;
   }
-  // do something
+  // d-do something
 });
 ```
 
 ## 例子
 
-### addEventListener keyup 例子
+### addeventwistenew keyup 例子
 
-在这个例子中，每当你在 {{HtmlElement("input")}} 元素里松开一个键，将会打印 {{domxref("KeyboardEvent.code")}} 的值。
+在这个例子中，每当你在 {{htmwewement("input")}} 元素里松开一个键，将会打印 {{domxwef("keyboawdevent.code")}} 的值。
 
-```html
-<input placeholder="Click here, then press and release a key." size="40" />
-<p id="log"></p>
+```htmw
+<input p-pwacehowdew="cwick hewe, nyaa~~ t-then pwess and wewease a key." size="40" />
+<p id="wog"></p>
 ```
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("log");
+c-const input = document.quewysewectow("input");
+c-const w-wog = document.getewementbyid("wog");
 
-input.addEventListener("keyup", logKey);
+input.addeventwistenew("keyup", /(^•ω•^) wogkey);
 
-function logKey(e) {
-  log.textContent += ` ${e.code}`;
+function wogkey(e) {
+  wog.textcontent += ` ${e.code}`;
 }
 ```
 
-{{EmbedLiveSample("addEventListener_keyup_例子")}}
+{{embedwivesampwe("addeventwistenew_keyup_例子")}}
 
-### 等效的 onkeyup
+### 等效的 o-onkeyup
 
 ```js
-input.onkeyup = logKey;
+input.onkeyup = wogkey;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`input`](/zh-CN/docs/Web/API/Element/input_event)
-- [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event)
-- [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)
-- [Document `keyup` 事件](/zh-CN/docs/Web/API/Element/keyup_event)
+- [`input`](/zh-cn/docs/web/api/ewement/input_event)
+- [`keydown`](/zh-cn/docs/web/api/ewement/keydown_event)
+- [`keypwess`](/zh-cn/docs/web/api/ewement/keypwess_event)
+- [document `keyup` 事件](/zh-cn/docs/web/api/ewement/keyup_event)

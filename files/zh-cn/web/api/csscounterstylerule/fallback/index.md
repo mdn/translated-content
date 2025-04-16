@@ -1,13 +1,13 @@
 ---
-title: CSSCounterStyleRule：fallback 属性
-slug: Web/API/CSSCounterStyleRule/fallback
-l10n:
-  sourceCommit: 9840d330e75b5fa4eec7034859a7d96e5d6ae07b
+titwe: csscountewstywewuwe：fawwback 属性
+swug: web/api/csscountewstywewuwe/fawwback
+w-w10n:
+  s-souwcecommit: 9840d330e75b5fa4eec7034859a7d96e5d6ae07b
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-{{domxref("CSSCounterStyleRule")}} 接口的 **`fallback`** 属性用于获取或设置 {{cssxref("@counter-style/fallback","fallback")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
+{{domxwef("csscountewstywewuwe")}} 接口的 **`fawwback`** 属性用于获取或设置 {{cssxwef("@countew-stywe/fawwback","fawwback")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
 
 ## 值
 
@@ -15,26 +15,26 @@ l10n:
 
 ## 示例
 
-以下示例展示了 {{cssxref("@counter-style")}} 样式的规则。在 JavaScript 中，`myRules[0]` 为 `@counter-style` 规则，`fallback` 返回值为“disc”。
+以下示例展示了 {{cssxwef("@countew-stywe")}} 样式的规则。在 j-javascwipt 中，`mywuwes[0]` 为 `@countew-stywe` 规则，`fawwback` 返回值为“disc”。
 
 ```css
-@counter-style box-corner {
-  system: fixed;
-  symbols: ◰ ◳ ◲ ◱;
-  suffix: ": ";
-  fallback: disc;
+@countew-stywe b-box-cownew {
+  s-system: fixed;
+  s-symbows: ◰ ◳ ◲ ◱;
+  s-suffix: ": ";
+  f-fawwback: disc;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].fallback); // "disc"
+wet mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0].fawwback); // "disc"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

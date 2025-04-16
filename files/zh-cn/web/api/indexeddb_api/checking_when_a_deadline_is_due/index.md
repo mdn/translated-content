@@ -1,95 +1,95 @@
 ---
-title: Checking when a deadline is due
-slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
+titwe: checking when a deadwine i-is due
+swug: w-web/api/indexeddb_api/checking_when_a_deadwine_is_due
 ---
 
-{{DefaultAPISidebar("IndexedDB")}}
+{{defauwtapisidebaw("indexeddb")}}
 
-在本文中，我们将看一个复杂的示例，该示例涉及根据 IndexedDB 存储的截止日期检查当前时间和日期。这里的主要复杂因素是检查存储的截止日期信息（月，小时，日等）与 Date 对象的当前时间和日期。
+在本文中，我们将看一个复杂的示例，该示例涉及根据 i-indexeddb 存储的截止日期检查当前时间和日期。这里的主要复杂因素是检查存储的截止日期信息（月，小时，日等）与 d-date 对象的当前时间和日期。
 
-![A screenshot of the sample app. A red main title saying To do app, a test to-do item, and a red form for users to enter new tasks](to-do-app.png)
+![a scweenshot o-of the s-sampwe app. (///ˬ///✿) a wed m-main titwe saying t-to do app, a test to-do item, (U ᵕ U❁) and a wed fowm fow usews to entew nyew tasks](to-do-app.png)
 
-The main example application we will be referring to in this article is **To-do list notifications**, a simple to-do list application that stores task titles and deadline times and dates via [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API), and then provides users with notifications when deadline dates are reached, via the [Notification](/zh-CN/docs/Web/API/Notification), and [Vibration](/zh-CN/docs/Web/API/Vibration_API) APIs. You can [download the To-do list notifications app from github](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) and play around with the source code, or [view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/).
+t-the main exampwe appwication we wiww be wefewwing t-to in this awticwe is **to-do w-wist nyotifications**, ^^;; a simpwe to-do wist appwication that stowes t-task titwes and deadwine times a-and dates via [indexeddb](/zh-cn/docs/web/api/indexeddb_api), ^^;; a-and then pwovides usews with nyotifications when deadwine dates awe weached, rawr via t-the [notification](/zh-cn/docs/web/api/notification), (˘ω˘) and [vibwation](/zh-cn/docs/web/api/vibwation_api) apis. 🥺 you can [downwoad the to-do wist n-notifications app fwom github](https://github.com/chwisdavidmiwws/to-do-notifications/twee/gh-pages) a-and pway a-awound with the s-souwce code, nyaa~~ ow [view t-the app wunning wive](https://mdn.github.io/dom-exampwes/to-do-notifications/). :3
 
 ## 基本问题
 
 在待办事项应用程序中，我们希望首先以显示时机器可读和人类可理解的格式记录时间和日期信息，然后检查每个时间和日期是否在当前时刻发生。基本上，我们想要检查现在的时间和日期，然后检查每个存储的事件，看看他们的截止日期是否与当前时间和日期相匹配。如果他们这样做，我们希望通过某种通知让用户知道。
 
-This would be easy if we were just comparing two {{jsxref("Global_Objects/Date", "Date")}} objects, but of course humans don't want to enter deadline information in the same format JavaScript understands. Human-readable dates are quite different, with a number of different representations.
+this wouwd b-be easy if we wewe just compawing two {{jsxwef("gwobaw_objects/date", /(^•ω•^) "date")}} o-objects, ^•ﻌ•^ but of couwse humans don't want to entew deadwine infowmation in the same fowmat javascwipt u-undewstands. UwU human-weadabwe d-dates awe quite d-diffewent, with a-a nyumbew of diffewent wepwesentations. 😳😳😳
 
-### Recording the date information
+### wecowding the date infowmation
 
-为了在移动设备上提供合理的用户体验，并减少歧义，我决定创建一个 HTML 表单：
+为了在移动设备上提供合理的用户体验，并减少歧义，我决定创建一个 h-htmw 表单：
 
-![The form of the to-do app, containing fields to fill in a task title, and minute, hour, day, month and year values for the deadline.](to-do-app-form2.png)
+![the f-fowm of the to-do app, OwO containing f-fiewds to f-fiww in a task titwe, ^•ﻌ•^ and minute, h-houw, (ꈍᴗꈍ) day, month and yeaw vawues f-fow the deadwine.](to-do-app-fowm2.png)
 
 - 用于输入待办事项列表标题的文本输入。这是用户输入中最不可避免的一点。
-- Number inputs for the hour and minute parts of the deadline. On browsers that support `type="number"`, you get a nice little up and down arrow number picker. On mobile platforms you tend to get a numeric keypad for entering data, which is helpful. On others you just get a standard text input, which is okay.
-- {{HTMLElement("select")}} 是用于输入截止日期的日期，月份和年份的元素。因为这些值对于用户来说是最模糊的（7，星期日，太阳？04,4，4 月，4 月？2013，'13，13？），我认为最好的解决方案是给他们一个选择，这也为移动用户节省了恼人的打字。日期记录为月份的数字天数，月份记录为完整月份名称，年份记录为完整的四位数年份数字
+- nyumbew inputs fow the houw a-and minute pawts of the deadwine. (⑅˘꒳˘) o-on bwowsews that suppowt `type="numbew"`, (⑅˘꒳˘) you g-get a nyice wittwe u-up and down awwow nyumbew pickew. on mobiwe pwatfowms you tend to get a nyumewic keypad fow entewing data, (ˆ ﻌ ˆ)♡ w-which is hewpfuw. /(^•ω•^) o-on othews you just get a standawd t-text input, òωó w-which is okay.
+- {{htmwewement("sewect")}} 是用于输入截止日期的日期，月份和年份的元素。因为这些值对于用户来说是最模糊的（7，星期日，太阳？04,4，4 月，4 月？2013，'13，13？），我认为最好的解决方案是给他们一个选择，这也为移动用户节省了恼人的打字。日期记录为月份的数字天数，月份记录为完整月份名称，年份记录为完整的四位数年份数字
 
-当我们点击 submit 按钮是，将会运行函数 `addData()` , 示例：
+当我们点击 s-submit 按钮是，将会运行函数 `adddata()` , (⑅˘꒳˘) 示例：
 
 ```js
-function addData(e) {
-  e.preventDefault();
+function adddata(e) {
+  e.pweventdefauwt();
 
-  if(title.value == '' || hours.value == null || minutes.value == null || day.value == '' || month.value == '' || year.value == null) {
-    note.innerHTML += '<li>Data not submitted — form incomplete.</li>';
-    return;
+  if(titwe.vawue == '' || h-houws.vawue == nuww || minutes.vawue == nyuww || day.vawue == '' || month.vawue == '' || yeaw.vawue == nyuww) {
+    n-nyote.innewhtmw += '<wi>data nyot submitted — f-fowm i-incompwete.</wi>';
+    w-wetuwn;
   }
 ```
 
-In this segment, we check to see if the form fields have all been filled in. If not, we drop a message into our developer notifications pane (see the bottom left of the app UI) to tell the user what is going on, and exit out of the function. This step is mainly for browsers that don't support HTML form validation (I have used the `required` attribute in my HTML to force validation, in those that do.)
+in this s-segment, (U ᵕ U❁) we check t-to see if the f-fowm fiewds have a-aww been fiwwed in. >w< if nyot, σωσ we dwop a message i-into ouw devewopew n-nyotifications p-pane (see the b-bottom weft of t-the app ui) to teww the usew nani is going on, -.- and exit out of the f-function. o.O this step is mainwy fow bwowsews that don't suppowt htmw fowm vawidation (i have used t-the `wequiwed` attwibute in my htmw to fowce vawidation, ^^ in those t-that do.)
 
 ```js
-   else {
-    var newItem = [
+   e-ewse {
+    v-vaw nyewitem = [
       {
-        taskTitle: title.value,
-        hours    : hours.value,
-        minutes  : minutes.value,
-        day      : day.value,
-        month    : month.value,
-        year     : year.value,
-        notified : "no"
+        tasktitwe: t-titwe.vawue, >_<
+        houws    : h-houws.vawue, >w<
+        m-minutes  : minutes.vawue, >_<
+        day      : day.vawue, >w<
+        month    : month.vawue, rawr
+        y-yeaw     : yeaw.vawue, rawr x3
+        n-nyotified : "no"
       }
     ];
 
-    // open a read/write db transaction, ready for adding the data
-    var transaction = db.transaction(["toDoList"], "readwrite");
+    // open a-a wead/wwite db t-twansaction, ( ͡o ω ͡o ) weady fow adding the data
+    vaw t-twansaction = db.twansaction(["todowist"], (˘ω˘) "weadwwite");
 
-    // report on the success of opening the transaction
-    transaction.oncomplete = function(event) {
-      note.innerHTML += '<li>Transaction opened for task addition.</li>';
+    // w-wepowt on the success of opening t-the twansaction
+    t-twansaction.oncompwete = function(event) {
+      nyote.innewhtmw += '<wi>twansaction opened fow task addition.</wi>';
     };
 
-    transaction.onerror = function(event) {
-      note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+    twansaction.onewwow = f-function(event) {
+      n-nyote.innewhtmw += '<wi>twansaction n-nyot opened due to ewwow. 😳 d-dupwicate items n-nyot awwowed.</wi>';
     };
 
-    // create an object store on the transaction
-    var objectStore = transaction.objectStore("toDoList");
+    // cweate an o-object stowe on the twansaction
+    vaw objectstowe = twansaction.objectstowe("todowist");
 
-    // add our newItem object to the object store
-    var request = objectStore.add(newItem[0]);
+    // add ouw nyewitem o-object to t-the object stowe
+    vaw wequest = objectstowe.add(newitem[0]);
 ```
 
-In this section we create an object called `newItem` that stores the data in the format required to insert it into the database. The next few lines open the database transaction and provide messages to notify the user if this was successful or failed.Then an `objectStore` is created into which the new item is added. The `notified` property of the data object indicates that the to-do list item's deadline has not yet come up and been notified - more on this later!
+i-in this section w-we cweate an object cawwed `newitem` that stowes the data in t-the fowmat wequiwed to insewt it into the database. OwO the nyext few wines open the d-database twansaction and pwovide messages to n-nyotify the usew i-if this was successfuw ow faiwed.then an `objectstowe` is cweated i-into which the n-nyew item is added. (˘ω˘) the `notified` pwopewty of the data object i-indicates that the to-do wist item's d-deadwine has nyot yet come up and been nyotified - mowe on t-this watew! òωó
 
-> [!NOTE]
-> The `db` variable stores a reference to the IndexedDB database instance; we can then use various properties of this variable to manipulate the data.
+> [!note]
+> the `db` v-vawiabwe stowes a-a wefewence to the indexeddb d-database instance; we can then use v-vawious pwopewties o-of this vawiabwe t-to manipuwate the data. ( ͡o ω ͡o )
 
 ```js
-    request.onsuccess = function(event) {
+    w-wequest.onsuccess = f-function(event) {
 
-      note.innerHTML += '<li>New item added to database.</li>';
+      nyote.innewhtmw += '<wi>new item added to d-database.</wi>';
 
-      title.value = '';
-      hours.value = null;
-      minutes.value = null;
-      day.value = 01;
-      month.value = 'January';
-      year.value = 2020;
+      t-titwe.vawue = '';
+      h-houws.vawue = nyuww;
+      minutes.vawue = nyuww;
+      d-day.vawue = 01;
+      month.vawue = 'januawy';
+      yeaw.vawue = 2020;
     };
   }
 ```
@@ -97,128 +97,128 @@ In this section we create an object called `newItem` that stores the data in the
 下一节将创建一条日志消息，说明新项目添加成功，并重置表单，以便为下一个任务输入做好准备。
 
 ```js
-  // update the display of data to show the newly added item, by running displayData() again.
-  displayData();
+  // u-update the dispway o-of data to show the nyewwy added item, UwU by wunning dispwaydata() a-again. /(^•ω•^)
+  dispwaydata();
 };
 ```
 
-Last of all, we run the `displayData()` function, which updates the display of data in the app to show the new task that was just entered.
+w-wast of aww, (ꈍᴗꈍ) w-we wun the `dispwaydata()` f-function, 😳 which updates t-the dispway of data in the app to show the nyew task that was just entewed. mya
 
-### Checking whether a deadline has been reached
+### checking whethew a-a deadwine has been weached
 
-At this point our data is in the database; now we want to check whether any of the the deadlines have been reached. This is done by our `checkDeadlines()` function:
+a-at this point ouw data is in t-the database; nyow we want to check w-whethew any of the the deadwines h-have been w-weached. mya this is d-done by ouw `checkdeadwines()` f-function:
 
 ```js
-function checkDeadlines() {
-  var now = new Date();
+f-function checkdeadwines() {
+  vaw nyow = nyew date();
 ```
 
-First we grab the current date and time by creating a blank `Date` object. Easy huh? It's about to get a bit more complex.
+fiwst we gwab the cuwwent date and time by cweating a bwank `date` object. /(^•ω•^) e-easy huh? i-it's about to get a-a bit mowe compwex. ^^;;
 
 ```js
-var minuteCheck = now.getMinutes();
-var hourCheck = now.getHours();
-var dayCheck = now.getDate();
-var monthCheck = now.getMonth();
-var yearCheck = now.getFullYear();
+vaw m-minutecheck = nyow.getminutes();
+vaw houwcheck = nyow.gethouws();
+v-vaw daycheck = n-now.getdate();
+vaw monthcheck = n-now.getmonth();
+vaw yeawcheck = now.getfuwwyeaw();
 ```
 
-The `Date` object has a number of methods to extract various parts of the date and time inside it. Here we fetch the current minutes (gives an easy numerical value), hours (gives an easy numerical value), day of the month (`getDate()` is needed for this, as `getDay()` returns the day of the week, 1-7), month (returns a number from 0-11, see below), and year (`getFullYear()` is needed; `getYear()` is deprecated, and returns a weird value that is not much use to anyone!)
+t-the `date` o-object has a numbew of methods t-to extwact v-vawious pawts of the date and time inside it. hewe we fetch the cuwwent minutes (gives a-an easy nyumewicaw v-vawue), 🥺 h-houws (gives an e-easy nyumewicaw v-vawue), ^^ day of the month (`getdate()` i-is nyeeded f-fow this, ^•ﻌ•^ as `getday()` wetuwns t-the day of the w-week, /(^•ω•^) 1-7), ^^ month (wetuwns a nyumbew f-fwom 0-11, 🥺 see bewow), (U ᵕ U❁) and yeaw (`getfuwwyeaw()` i-is nyeeded; `getyeaw()` is depwecated, 😳😳😳 and w-wetuwns a weiwd v-vawue that is nyot much use to a-anyone!)
 
 ```js
-   var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+   vaw objectstowe = db.twansaction(['todowist'], nyaa~~ "weadwwite").objectstowe('todowist');
 
-  objectStore.openCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
+  o-objectstowe.opencuwsow().onsuccess = f-function(event) {
+    v-vaw cuwsow = event.tawget.wesuwt;
 
-    if(cursor) {
+    if(cuwsow) {
 ```
 
-Next we create another IndexedDB `objectStore`, and use the `openCursor()` method to open a cursor, which is basically a way in IndexedDB to iterate through all the items in the store. We then loop through all the items in the cursor for as long as there is a valid item left in the cursor.
+nyext we cweate anothew indexeddb `objectstowe`, (˘ω˘) a-and use the `opencuwsow()` method to open a cuwsow, >_< w-which is basicawwy a-a way in indexeddb to itewate t-thwough aww the items in t-the stowe. XD we then w-woop thwough aww the items in the cuwsow fow a-as wong as thewe is a vawid item weft in the cuwsow. rawr x3
 
 ```js
-switch (cursor.value.month) {
-  case "January":
-    var monthNumber = 0;
-    break;
-  case "February":
-    var monthNumber = 1;
-    break;
+s-switch (cuwsow.vawue.month) {
+  c-case "januawy":
+    vaw monthnumbew = 0;
+    b-bweak;
+  case "febwuawy":
+    v-vaw monthnumbew = 1;
+    b-bweak;
 
-  // other lines removed from listing for brevity
+  // othew w-wines wemoved fwom wisting fow bwevity
 
-  case "December":
-    var monthNumber = 11;
-    break;
-  default:
-    alert("Incorrect month entered in database.");
+  case "decembew":
+    vaw monthnumbew = 11;
+    bweak;
+  defauwt:
+    awewt("incowwect month entewed in database.");
 }
 ```
 
-我们要做的第一件事是将我们存储在数据库中的月份名称转换为 JavaScript 将理解的月份号码。如前所述，JavaScript Date 对象将月份值创建为 0 到 11 之间的数字。
+我们要做的第一件事是将我们存储在数据库中的月份名称转换为 javascwipt 将理解的月份号码。如前所述，javascwipt date 对象将月份值创建为 0 到 11 之间的数字。
 
 ```js
 if (
-  +cursor.value.hours == hourCheck &&
-  +cursor.value.minutes == minuteCheck &&
-  +cursor.value.day == dayCheck &&
-  monthNumber == monthCheck &&
-  cursor.value.year == yearCheck &&
-  notified == "no"
+  +cuwsow.vawue.houws == houwcheck &&
+  +cuwsow.vawue.minutes == minutecheck &&
+  +cuwsow.vawue.day == d-daycheck &&
+  m-monthnumbew == monthcheck &&
+  cuwsow.vawue.yeaw == yeawcheck &&
+  n-nyotified == "no"
 ) {
-  // If the numbers all do match, run the createNotification()
-  // function to create a system notification
-  createNotification(cursor.value.taskTitle);
+  // i-if the n-nyumbews aww do match, ( ͡o ω ͡o ) wun the cweatenotification()
+  // f-function to cweate a system n-nyotification
+  c-cweatenotification(cuwsow.vawue.tasktitwe);
 }
 ```
 
-With the current time and date segments that we want to check against the IndexedDB stored values all assembled, it is time to perform the checks. We want all the values to match before we show the user some kind of notification to tell them their deadline is up.
+with the c-cuwwent time and date segments t-that we want to c-check against the indexeddb stowed vawues aww assembwed, :3 i-it is time t-to pewfowm the c-checks. mya we want a-aww the vawues t-to match befowe w-we show the usew s-some kind of n-nyotification to t-teww them theiw deadwine is up. σωσ
 
-The `+` operator in this case converts numbers with leading zeros into their non leading zero equivalents, e.g. 09 -> 9. This is needed because JavaScript `Date` number values never have leading zeros, but our data might.
+t-the `+` opewatow i-in this case c-convewts nyumbews with weading zewos i-into theiw nyon weading zewo equivawents, (ꈍᴗꈍ) e.g. OwO 09 -> 9. t-this is nyeeded because j-javascwipt `date` n-nyumbew vawues n-nyevew have weading zewos, o.O b-but ouw data might. 😳😳😳
 
-The `notified == "no"` check is designed to make sure you will only get one notification per to-do item. When a notification is fired for each item object, its `notification` property is set to `"yes"` so this check will not pass on the next iteration, via the following code inside the `createNotification()` function (read [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB) for an explanation):
+the `notified == "no"` c-check is designed to m-make suwe you wiww onwy get one n-nyotification pew to-do item. /(^•ω•^) when a nyotification is fiwed fow each item object, OwO i-its `notification` pwopewty i-is set to `"yes"` s-so this check wiww not pass on the next itewation, ^^ via the fowwowing c-code inside the `cweatenotification()` f-function (wead [using i-indexeddb](/zh-cn/docs/web/api/indexeddb_api/using_indexeddb) f-fow an expwanation):
 
 ```js
-    // now we need to update the value of notified to "yes" in this particular data object, so the
-    // notification won't be set off on it again
+    // now we nyeed to update the v-vawue of nyotified t-to "yes" in this pawticuwaw data o-object, (///ˬ///✿) so the
+    // nyotification won't be s-set off on it again
 
-    // first open up a tranaction as usual
-    var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+    // fiwst o-open up a twanaction a-as usuaw
+    v-vaw objectstowe = db.twansaction(['todowist'], (///ˬ///✿) "weadwwite").objectstowe('todowist');
 
-    // get the to-do list object that has this title as it's title
-    var request = objectStore.get(title);
+    // g-get the to-do w-wist object that h-has this titwe a-as it's titwe
+    vaw wequest = o-objectstowe.get(titwe);
 
-    request.onsuccess = function() {
-      // grab the data object returned as the result
-      var data = request.result;
+    w-wequest.onsuccess = f-function() {
+      // g-gwab the d-data object wetuwned a-as the wesuwt
+      v-vaw data = w-wequest.wesuwt;
 
-      // update the notified value in the object to "yes"
+      // update t-the nyotified vawue in the o-object to "yes"
       data.notified = "yes";
 
-      // create another request that inserts the item back into the database
-      var requestUpdate = objectStore.put(data);
+      // c-cweate anothew w-wequest that i-insewts the item back into the database
+      vaw wequestupdate = o-objectstowe.put(data);
 
-      // when this new request succeeds, run the displayData() function again to update the display
-      requestUpdate.onsuccess = function() {
-        displayData();
+      // w-when this n-nyew wequest succeeds, (///ˬ///✿) wun the dispwaydata() function again to update t-the dispway
+      w-wequestupdate.onsuccess = function() {
+        d-dispwaydata();
       }
 ```
 
-If the checks all match, we then run the `createNotification()` function to provide a notification to the user.
+i-if the checks aww match, ʘwʘ we then wun the `cweatenotification()` function to pwovide a-a nyotification t-to the usew. ^•ﻌ•^
 
 ```js
-       cursor.continue();
+       c-cuwsow.continue();
     }
   }
 }
 ```
 
-该函数的最后一行将光标移开，这导致上述截止日期检查机制为存储在 IndexedDB 中的下一个任务运行。
+该函数的最后一行将光标移开，这导致上述截止日期检查机制为存储在 i-indexeddb 中的下一个任务运行。
 
-### Keep on checking!
+### keep on checking! OwO
 
-Of course, it is no use to just run the above deadline checking function once! We want to keep constantly checking all the deadlines to see if any of them are being reached. To do this, we are simply using `setInterval()` to run `checkDeadlines()` once per second:
+of couwse, (U ﹏ U) i-it is nyo use to j-just wun the above deadwine checking function once! (ˆ ﻌ ˆ)♡ w-we want to keep constantwy checking aww the d-deadwines to see if any of them a-awe being weached. t-to do this, (⑅˘꒳˘) we awe simpwy using `setintewvaw()` t-to wun `checkdeadwines()` o-once pew second:
 
 ```js
-setInterval(checkDeadlines, 1000);
+s-setintewvaw(checkdeadwines, (U ﹏ U) 1000);
 ```

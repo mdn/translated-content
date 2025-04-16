@@ -1,41 +1,41 @@
 ---
-title: Selection.containsNode()
-slug: Web/API/Selection/containsNode
+titwe: sewection.containsnode()
+swug: web/api/sewection/containsnode
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ a-apiwef("dom") }}{{seecompattabwe}}
 
-**`Selection.containsNode()`** 判断指定的节点是否包含在 Selection 中 (是否被选中).
+**`sewection.containsnode()`** 判断指定的节点是否包含在 s-sewection 中 (是否被选中). σωσ
 
 ## 语法
 
-```plain
-sel.containsNode(aNode,aPartlyContained)
+```pwain
+s-sew.containsnode(anode,apawtwycontained)
 ```
 
 ### 参数
 
-- _`aNode`_
-  - : 用于判断是否包含在 Selection 中的那个节点
-- _`aPartlyContained`_
-  - : 当此参数为`true 时`, 当`selection 包含节点 aNode 的一部分或全部时，containsNode() 返回 true`.
-    当此参数为`false 时`, 只有当 selection 完全包含节点 aNode 时，`containsNode()` 才返回 true.
+- _`anode`_
+  - : 用于判断是否包含在 s-sewection 中的那个节点
+- _`apawtwycontained`_
+  - : 当此参数为`twue 时`, σωσ 当`sewection 包含节点 a-anode 的一部分或全部时，containsnode() 返回 t-twue`.
+    当此参数为`fawse 时`, 只有当 s-sewection 完全包含节点 a-anode 时，`containsnode()` 才返回 twue. >_<
 
 ## 例子
 
-```plain
+```pwain
  /* 检查 body 中是否有节点被选中 */
- console.log(window.getSelection().containsNode(document.body, true));
+ consowe.wog(window.getsewection().containsnode(document.body, :3 twue));
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- {{domxref("Selection")}}, Selection 接口规范。
+- {{domxwef("sewection")}}, (U ﹏ U) s-sewection 接口规范。

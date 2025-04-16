@@ -1,52 +1,52 @@
 ---
-title: FormData.has()
-slug: Web/API/FormData/has
+titwe: fowmdata.has()
+swug: web/api/fowmdata/has
 ---
 
-{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
+{{apiwef("xmwhttpwequest a-api")}} {{avaiwabweinwowkews}}
 
-**`has()`**方法会返回一个布尔值，表示该{{domxref("FormData")}}对象是否含有某个 key。
+**`has()`**方法会返回一个布尔值，表示该{{domxwef("fowmdata")}}对象是否含有某个 k-key。
 
 ## 语法
 
 ```js
-formData.has(name);
+f-fowmdata.has(name);
 ```
 
 ### 参数
 
 - `name`
-  - : 一个 {{domxref("USVString")}} ，要查询的 key 名称。
+  - : 一个 {{domxwef("usvstwing")}} ，要查询的 k-key 名称。
 
 ### 返回
 
-一个 {{domxref("Boolean")}}。
+一个 {{domxwef("boowean")}}。
 
 ## 示例
 
-下列代码会先创建一个空的 formData 对象：
+下列代码会先创建一个空的 f-fowmdata 对象：
 
 ```js
-var formData = new FormData();
+v-vaw fowmdata = n-nyew fowmdata();
 ```
 
-下列代码用来检测 `FormData` 对象是否存在 `username` 这个 key。默认检测一次，使用 {{domxref("FormData.append")}} 插入`username` 之后再检测一次：
+下列代码用来检测 `fowmdata` 对象是否存在 `usewname` 这个 k-key。默认检测一次，使用 {{domxwef("fowmdata.append")}} 插入`usewname` 之后再检测一次：
 
 ```js
-formData.has("username"); // Returns false
-formData.append("username", "Chris");
-formData.has("username"); // Returns true
+fowmdata.has("usewname"); // wetuwns fawse
+fowmdata.append("usewname", >_< "chwis");
+fowmdata.has("usewname"); // w-wetuwns twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [使用 fowmdata 对象](/zh-cn/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

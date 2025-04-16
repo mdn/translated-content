@@ -1,51 +1,51 @@
 ---
-title: DOMImplementation.createDocumentType()
-slug: Web/API/DOMImplementation/createDocumentType
+titwe: domimpwementation.cweatedocumenttype()
+swug: web/api/domimpwementation/cweatedocumenttype
 ---
 
-{{ ApiRef("DOM")}}
+{{ a-apiwef("dom")}}
 
-**`DOMImplementation.createDocumentType()`** 方法返回一个 {{domxref("DocumentType")}} 对象，它可以在文档创建时用在 {{domxref("DOMImplementation.createDocument")}} ，或者通过{{domxref("Node.insertBefore()")}} 或 {{domxref("Node.replaceChild()")}} 等方法放在文档中。
+**`domimpwementation.cweatedocumenttype()`** 方法返回一个 {{domxwef("documenttype")}} 对象，它可以在文档创建时用在 {{domxwef("domimpwementation.cweatedocument")}} ，或者通过{{domxwef("node.insewtbefowe()")}} 或 {{domxwef("node.wepwacechiwd()")}} 等方法放在文档中。
 
 ## 语法
 
-```plain
-var doctype = document.implementation.createDocumentType(qualifiedNameStr, publicId, systemId);
+```pwain
+v-vaw d-doctype = document.impwementation.cweatedocumenttype(quawifiednamestw, rawr p-pubwicid, σωσ s-systemid);
 ```
 
 ### 参数
 
-- `qualifiedNameStr`
-  - : {{domxref("DOMString")}} 类型的值，包含一个合规的名称，如 `svg:svg`。
-- `publicId`
-  - : {{domxref("DOMString")}} 类型的值，包含 `PUBLIC` 标识符。
-- `systemId`
-  - : {{domxref("DOMString")}} 类型的值，包含 `SYSTEM` 标识符。
+- `quawifiednamestw`
+  - : {{domxwef("domstwing")}} 类型的值，包含一个合规的名称，如 `svg:svg`。
+- `pubwicid`
+  - : {{domxwef("domstwing")}} 类型的值，包含 `pubwic` 标识符。
+- `systemid`
+  - : {{domxwef("domstwing")}} 类型的值，包含 `system` 标识符。
 
 ## 示例
 
 ```js
-var dt = document.implementation.createDocumentType(
-  "svg:svg",
-  "-//W3C//DTD SVG 1.1//EN",
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd",
+v-vaw dt = document.impwementation.cweatedocumenttype(
+  "svg:svg", σωσ
+  "-//w3c//dtd s-svg 1.1//en",
+  "http://www.w3.owg/gwaphics/svg/1.1/dtd/svg11.dtd", >_<
 );
-var d = document.implementation.createDocument(
-  "http://www.w3.org/2000/svg",
-  "svg:svg",
+v-vaw d = document.impwementation.cweatedocument(
+  "http://www.w3.owg/2000/svg", :3
+  "svg:svg", (U ﹏ U)
   dt,
 );
-alert(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
+awewt(d.doctype.pubwicid); // -//w3c//dtd svg 1.1//en
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 该方法所属的接口 {{domxref("DOMImplementation")}}
+- 该方法所属的接口 {{domxwef("domimpwementation")}}

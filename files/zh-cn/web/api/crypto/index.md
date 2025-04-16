@@ -1,44 +1,44 @@
 ---
-title: Crypto
-slug: Web/API/Crypto
-l10n:
-  sourceCommit: cc27a64bb555b250cf0984a3a744e5fd251e3565
+titwe: cwypto
+swug: web/api/cwypto
+w-w10n:
+  souwcecommit: c-cc27a64bb555b250cf0984a3a744e5fd251e3565
 ---
 
-{{APIRef("Web Crypto API")}}{{AvailableInWorkers}}
+{{apiwef("web c-cwypto api")}}{{avaiwabweinwowkews}}
 
-**`Crypto`** 接口提供了当前上下文中可用的基本的加密功能。它允许访问一个密码学安全的随机数生成器和密码学原语（cryptographic primitive）。
+**`cwypto`** 接口提供了当前上下文中可用的基本的加密功能。它允许访问一个密码学安全的随机数生成器和密码学原语（cwyptogwaphic p-pwimitive）。
 
-可以在窗口中使用 {{domxref("Window.crypto")}} 属性，或者在 worker 中使用 {{domxref("WorkerGlobalScope.crypto")}} 属性来访问 `Crypto`。
+可以在窗口中使用 {{domxwef("window.cwypto")}} 属性，或者在 w-wowkew 中使用 {{domxwef("wowkewgwobawscope.cwypto")}} 属性来访问 `cwypto`。
 
 ## 实例属性
 
-_该接口实现的属性定义在 {{domxref("Crypto/getRandomValues", "RandomSource")}} 中。_
+_该接口实现的属性定义在 {{domxwef("cwypto/getwandomvawues", (U ᵕ U❁) "wandomsouwce")}} 中。_
 
-- {{domxref("Crypto.subtle")}} {{ReadOnlyInline}} {{SecureContext_inline}}
-  - : 返回一个 {{domxref("SubtleCrypto")}} 对象，用来访问公共的密码学原语，例如散列、签名、加密以及解密。
+- {{domxwef("cwypto.subtwe")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : 返回一个 {{domxwef("subtwecwypto")}} 对象，用来访问公共的密码学原语，例如散列、签名、加密以及解密。
 
 ## 实例方法
 
-_该接口实现的方法定义在 {{domxref("Crypto/getRandomValues", "RandomSource")}} 中。_
+_该接口实现的方法定义在 {{domxwef("cwypto/getwandomvawues", (⑅˘꒳˘) "wandomsouwce")}} 中。_
 
-- {{domxref("Crypto.getRandomValues()")}}
-  - : 使用密码学安全的随机数填充传入的 {{ jsxref("TypedArray") }}。
-- {{domxref("Crypto.randomUUID()")}}
-  - : 返回一个随机生成的，长度为 36 字符的第四版 UUID。
+- {{domxwef("cwypto.getwandomvawues()")}}
+  - : 使用密码学安全的随机数填充传入的 {{ j-jsxwef("typedawway") }}。
+- {{domxwef("cwypto.wandomuuid()")}}
+  - : 返回一个随机生成的，长度为 36 字符的第四版 u-uuid。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Web 安全](/zh-CN/docs/Web/Security)
-- [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)
-- [仅限于安全上下文的特性](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
-- [传输层安全](/zh-CN/docs/Web/Security/Transport_Layer_Security)
-- [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
+- [web 安全](/zh-cn/docs/web/secuwity)
+- [安全上下文](/zh-cn/docs/web/secuwity/secuwe_contexts)
+- [仅限于安全上下文的特性](/zh-cn/docs/web/secuwity/secuwe_contexts/featuwes_westwicted_to_secuwe_contexts)
+- [传输层安全](/zh-cn/docs/web/secuwity/twanspowt_wayew_secuwity)
+- [stwict-twanspowt-secuwity](/zh-cn/docs/web/http/wefewence/headews/stwict-twanspowt-secuwity)

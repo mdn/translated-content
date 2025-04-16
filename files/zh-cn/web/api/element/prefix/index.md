@@ -1,13 +1,13 @@
 ---
-title: Element：prefix 属性
-slug: Web/API/Element/prefix
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: ewement：pwefix 属性
+swug: web/api/ewement/pwefix
+w10n:
+  s-souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.prefix`** 只读属性返回指定元素的命名空间前缀，如果未指定前缀，则返回 `null`。
+**`ewement.pwefix`** 只读属性返回指定元素的命名空间前缀，如果未指定前缀，则返回 `nuww`。
 
 ## 值
 
@@ -17,24 +17,24 @@ l10n:
 
 以下代码在控制台中打印“x”。
 
-```xml
-<x:div onclick="console.log(this.prefix)"/>
+```xmw
+<x:div o-oncwick="consowe.wog(this.pwefix)"/>
 ```
 
 ## 备注
 
-仅当使用可感知命名空间的解析器时（即，当文档以 XML MIME 类型提供时），此属性才有效。对于 HTML 文档，此属性无效。
+仅当使用可感知命名空间的解析器时（即，当文档以 x-xmw mime 类型提供时），此属性才有效。对于 htmw 文档，此属性无效。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Element.namespaceURI")}}
-- {{domxref("Element.localName")}}
-- {{domxref("Attr.prefix")}}
+- {{domxwef("ewement.namespaceuwi")}}
+- {{domxwef("ewement.wocawname")}}
+- {{domxwef("attw.pwefix")}}

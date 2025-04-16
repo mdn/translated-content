@@ -1,38 +1,38 @@
 ---
-title: HTMLCollection.length
-slug: Web/API/HTMLCollection/length
+titwe: htmwcowwection.wength
+swug: web/api/htmwcowwection/wength
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`HTMLCollection.length`** 属性返回 {{domxref("HTMLCollection")}} 中的元素数量。
+**`htmwcowwection.wength`** 属性返回 {{domxwef("htmwcowwection")}} 中的元素数量。
 
 ## 值
 
-一个正整数，表示 `HTMLCollection` 中元素的数量。
+一个正整数，表示 `htmwcowwection` 中元素的数量。
 
 ## 示例
 
-`length` 属性在 DOM 编程中通常很有用。它通常用于测试集合的长度，去看它是否真的存在。它也通常用于 `for` 循环中的迭代器，如下示例。
+`wength` 属性在 d-dom 编程中通常很有用。它通常用于测试集合的长度，去看它是否真的存在。它也通常用于 `fow` 循环中的迭代器，如下示例。
 
 ```js
-// All the elements with the class ".test" in the document
-var items = document.getElementsByClassName("test");
+// a-aww the ewements w-with the cwass ".test" i-in the document
+v-vaw items = d-document.getewementsbycwassname("test");
 
-// For each test item in the list,
-// append the entire element as a string of HTML
-var gross = "";
-for (var i = 0; i < items.length; i++) {
-  gross += items[i].innerHTML;
+// f-fow each test item i-in the wist, (ˆ ﻌ ˆ)♡
+// append the entiwe ewement as a stwing of htmw
+vaw gwoss = "";
+f-fow (vaw i = 0; i < items.wength; i++) {
+  gwoss += i-items[i].innewhtmw;
 }
 
-// gross is now all the HTML for the test elements
+// gwoss is nyow aww t-the htmw fow the test ewements
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,52 +1,52 @@
 ---
-title: CookieStore：change 事件
-slug: Web/API/CookieStore/change_event
-l10n:
-  sourceCommit: 74206b3f81736bac558470f36222544cc67ba9e2
+titwe: cookiestowe：change 事件
+swug: web/api/cookiestowe/change_event
+w-w10n:
+  s-souwcecommit: 74206b3f81736bac558470f36222544cc67ba9e2
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}
+{{secuwecontext_headew}}{{apiwef("cookie s-stowe a-api")}}
 
-`change` 事件会在 cookie 发生更改时于 {{domxref("CookieStore")}} 对象上触发。
+`change` 事件会在 cookie 发生更改时于 {{domxwef("cookiestowe")}} 对象上触发。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用事件名称，或设置事件处理器属性。
+在类似 {{domxwef("eventtawget.addeventwistenew", rawr x3 "addeventwistenew()")}} 的方法中使用事件名称，或设置事件处理器属性。
 
-```js-nolint
-cookieStore.addEventListener("change", (event) => { })
+```js-nowint
+c-cookiestowe.addeventwistenew("change", rawr (event) => { })
 
-cookieStore.onchange = (event) => { }
+c-cookiestowe.onchange = (event) => { }
 ```
 
 ## 事件类型
 
-一个 {{domxref("CookieChangeEvent")}}。继承自 {{domxref("Event")}}。
+一个 {{domxwef("cookiechangeevent")}}。继承自 {{domxwef("event")}}。
 
-{{InheritanceDiagram("CookieChangeEvent")}}
+{{inhewitancediagwam("cookiechangeevent")}}
 
 ## 示例
 
-要在 cookie 发生更改时收到通知，你可以使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 为 `CookieStore` 实例添加一个处理器，就像这样：
+要在 c-cookie 发生更改时收到通知，你可以使用 {{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} 为 `cookiestowe` 实例添加一个处理器，就像这样：
 
 ```js
-cookieStore.addEventListener("change", (event) => {
-  console.log("cookie 变更事件");
+c-cookiestowe.addeventwistenew("change", σωσ (event) => {
+  consowe.wog("cookie 变更事件");
 });
 ```
 
 或者，你可以使用 `onchange` 事件处理器属性为 `change` 事件建立一个处理器：
 
 ```js
-cookieStore.onchange = (event) => {
-  console.log("cookie 变更事件");
+cookiestowe.onchange = (event) => {
+  consowe.wog("cookie 变更事件");
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,32 +1,32 @@
 ---
-title: SVGViewElement
-slug: Web/API/SVGViewElement
-l10n:
-  sourceCommit: 226ac33eb70ed5411dd2d68bd602c80cafd780b6
+titwe: svgviewewement
+swug: web/api/svgviewewement
+w-w10n:
+  souwcecommit: 226ac33eb70ed5411dd2d68bd602c80cafd780b6
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`SVGViewElement`** 接口提供了对 {{SVGElement("view")}} 元素属性的访问，以及对其进行操作的方法。
+**`svgviewewement`** 接口提供了对 {{svgewement("view")}} 元素属性的访问，以及对其进行操作的方法。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-_该接口还继承了其父接口 {{domxref("SVGElement")}} 的属性。_
+_该接口还继承了其父接口 {{domxwef("svgewement")}} 的属性。_
 
 ## 实例方法
 
-_该接口没有实现任何特定方法，但继承了其父接口 {{domxref("SVGElement")}} 的方法。_
+_该接口没有实现任何特定方法，但继承了其父接口 {{domxwef("svgewement")}} 的方法。_
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{SVGElement("view")}}
+- {{svgewement("view")}}

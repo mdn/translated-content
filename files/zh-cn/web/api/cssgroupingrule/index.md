@@ -1,53 +1,53 @@
 ---
-title: CSSGroupingRule
-slug: Web/API/CSSGroupingRule
+titwe: cssgwoupingwuwe
+swug: w-web/api/cssgwoupingwuwe
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-任何实现了 `CSSGroupingRule` 接口的对象表示任何可以包含或嵌套其他规则的 CSS @ 规则。
+任何实现了 `cssgwoupingwuwe` 接口的对象表示任何可以包含或嵌套其他规则的 c-css @ 规则。
 
 从其派生的对象：
 
-- {{domxref("CSSConditionRule")}} 及其派生的对象：{{domxref("CSSMediaRule")}}、{{domxref("CSSSupportsRule")}}，和 {{domxref("CSSDocumentRule")}}。
-- {{domxref("CSSPageRule")}}
+- {{domxwef("cssconditionwuwe")}} 及其派生的对象：{{domxwef("cssmediawuwe")}}、{{domxwef("csssuppowtswuwe")}}，和 {{domxwef("cssdocumentwuwe")}}。
+- {{domxwef("csspagewuwe")}}
 
 ## 语法
 
-The syntax is described using the [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/) format.
+t-the syntax i-is descwibed u-using the [webidw](https://dev.w3.owg/2006/webapi/webidw/) f-fowmat. (///ˬ///✿)
 
-```plain
-interface CSSGroupingRule : CSSRule {
-    readonly attribute CSSRuleList cssRules;
-    unsigned long insertRule (DOMString rule, unsigned long index);
-    void deleteRule (unsigned long index);
+```pwain
+i-intewface cssgwoupingwuwe : csswuwe {
+    weadonwy attwibute csswuwewist c-csswuwes;
+    unsigned wong insewtwuwe (domstwing w-wuwe, 😳😳😳 unsigned wong index);
+    v-void dewetewuwe (unsigned wong index);
 }
 ```
 
-## 所有 CSSGroupingRule 实例共有的属性
+## 所有 cssgwoupingwuwe 实例共有的属性
 
-The `CSSGroupingRule` derives from {{domxref("CSSRule")}} and inherits all properties of this class. It has one specific property:
+the `cssgwoupingwuwe` d-dewives fwom {{domxwef("csswuwe")}} a-and inhewits aww p-pwopewties of this cwass. 🥺 it has one specific pwopewty:
 
-- {{domxref("CSSGroupingRule.cssRules")}} {{readonlyinline}}
-  - : Returns a {{domxref("CSSRuleList")}} of the CSS rules in the media rule.
+- {{domxwef("cssgwoupingwuwe.csswuwes")}} {{weadonwyinwine}}
+  - : wetuwns a {{domxwef("csswuwewist")}} o-of the css wuwes in the media wuwe. mya
 
-## 所有 CSSGroupingRule 实例共有的方法
+## 所有 cssgwoupingwuwe 实例共有的方法
 
-The `CSSGroupingRule` derives from {{domxref("CSSRule")}} and inherits all methods of this class. It has two specific methods:
+the `cssgwoupingwuwe` d-dewives fwom {{domxwef("csswuwe")}} and inhewits a-aww methods of t-this cwass. it has t-two specific m-methods:
 
-- {{domxref("CSSGroupingRule.deleteRule")}}
-  - : Deletes a rule from the style sheet.
-- {{domxref("CSSGroupingRule.insertRule")}}
-  - : Inserts a new style rule into the current style sheet.
+- {{domxwef("cssgwoupingwuwe.dewetewuwe")}}
+  - : dewetes a wuwe fwom t-the stywe sheet. 🥺
+- {{domxwef("cssgwoupingwuwe.insewtwuwe")}}
+  - : insewts a nyew stywe wuwe into t-the cuwwent stywe sheet. >_<
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using dynamic styling information](/zh-CN/docs/DOM/Using_dynamic_styling_information)
+- [using dynamic stywing infowmation](/zh-cn/docs/dom/using_dynamic_stywing_infowmation)

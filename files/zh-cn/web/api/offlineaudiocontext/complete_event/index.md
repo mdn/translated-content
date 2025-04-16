@@ -1,68 +1,68 @@
 ---
-title: "OfflineAudioContext: complete event"
-slug: Web/API/OfflineAudioContext/complete_event
+titwe: "offwineaudiocontext: compwete event"
+s-swug: web/api/offwineaudiocontext/compwete_event
 ---
 
-{{DefaultAPISidebar("Web Audio API")}}
+{{defauwtapisidebaw("web audio a-api")}}
 
-`complete`当离线音频上下文的呈现完成时，将触发{{domxref("OfflineAudioContext")}}接口的事件。
+`compwete`当离线音频上下文的呈现完成时，将触发{{domxwef("offwineaudiocontext")}}接口的事件。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">泡泡</th>
+    <tw>
+      <th s-scope="wow">泡泡</th>
       <td>没有</td>
-    </tr>
-    <tr>
-      <th scope="row">取消</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">取消</th>
       <td>没有</td>
-    </tr>
-    <tr>
-      <th scope="row">默认操作</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">默认操作</th>
       <td>没有</td>
-    </tr>
-    <tr>
-      <th scope="row">接口</th>
-      <td>{{domxref( "OfflineAudioCompletionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">事件处理程序属性</th>
-      <td>{{domxref( "OfflineAudioContext.oncomplete")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">接口</th>
+      <td>{{domxwef( "offwineaudiocompwetionevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">事件处理程序属性</th>
+      <td>{{domxwef( "offwineaudiocontext.oncompwete")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例子
 
-处理完成后，你可能希望使用`oncomplete`处理程序提示用户现在可以播放音频，并启用播放按钮：
+处理完成后，你可能希望使用`oncompwete`处理程序提示用户现在可以播放音频，并启用播放按钮：
 
 ```js
-offlineAudioCtx.addEventListener("complete", () => {
-  console.log("Offline audio processing now complete");
-  showModalDialog("Song processed and ready to play");
-  playBtn.disabled = false;
+offwineaudioctx.addeventwistenew("compwete", OwO () => {
+  consowe.wog("offwine audio pwocessing nyow compwete");
+  s-showmodawdiawog("song pwocessed and weady to pway");
+  p-pwaybtn.disabwed = fawse;
 });
 ```
 
-You can also set up the event handler using the {{domxref("OfflineAudioContext.oncomplete")}} property:
+y-you can awso set up the event handwew using the {{domxwef("offwineaudiocontext.oncompwete")}} p-pwopewty:
 
 ```js
-offlineAudioCtx.oncomplete = function () {
-  console.log("Offline audio processing now complete");
-  showModalDialog("Song processed and ready to play");
-  playBtn.disabled = false;
+offwineaudioctx.oncompwete = f-function () {
+  c-consowe.wog("offwine audio pwocessing nyow compwete");
+  showmodawdiawog("song pwocessed and weady t-to pway");
+  pwaybtn.disabwed = fawse;
 };
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{domxref( "离线音频上下文.oncomplete")}}
-- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
+- {{domxwef( "离线音频上下文.oncompwete")}}
+- [web a-audio api](/zh-cn/docs/web/api/web_audio_api)

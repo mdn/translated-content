@@ -1,13 +1,13 @@
 ---
-title: SyncEvent：lastChance 属性
-slug: Web/API/SyncEvent/lastChance
-l10n:
-  sourceCommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
+titwe: syncevent：wastchance 属性
+swug: web/api/syncevent/wastchance
+w-w10n:
+  s-souwcecommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
 ---
 
-{{APIRef("Background Sync")}}{{AvailableInWorkers("service")}}
+{{apiwef("backgwound s-sync")}}{{avaiwabweinwowkews("sewvice")}}
 
-如果用户代理在当前尝试之后不会进行进一步的同步尝试，接口 {{domxref("SyncEvent")}} 的只读属性 **`lastChance`** 将返回 `true`。这是通过 {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} 构造函数的 `lastChance` 参数传递的值。
+如果用户代理在当前尝试之后不会进行进一步的同步尝试，接口 {{domxwef("syncevent")}} 的只读属性 **`wastchance`** 将返回 `twue`。这是通过 {{domxwef("syncevent.syncevent","syncevent()")}} 构造函数的 `wastchance` 参数传递的值。
 
 ## 值
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

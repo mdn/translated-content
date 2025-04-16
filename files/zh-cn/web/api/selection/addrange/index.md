@@ -1,50 +1,50 @@
 ---
-title: Selection.addRange()
-slug: Web/API/Selection/addRange
+titwe: sewection.addwange()
+swug: web/api/sewection/addwange
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
 ## 概述
 
-向选区（{{domxref("Selection")}}）中添加一个区域（{{domxref("Range")}}）。
+向选区（{{domxwef("sewection")}}）中添加一个区域（{{domxwef("wange")}}）。
 
 ## 语法
 
-```plain
-sel.addRange(range)
+```pwain
+s-sew.addwange(wange)
 ```
 
 ### 参数
 
-- _`range`_
-  - : 一个区域（{{ domxref("Range") }}）对象将被增加到选区（{{ domxref("Selection") }}）当中。
+- _`wange`_
+  - : 一个区域（{{ d-domxwef("wange") }}）对象将被增加到选区（{{ d-domxwef("sewection") }}）当中。
 
 ## 例子
 
 ```js
-/* 在一个 HTML 文档中选中所有加粗的文本。 */
+/* 在一个 h-htmw 文档中选中所有加粗的文本。 */
 
-var strongs = document.getElementsByTagName("strong");
-var s = window.getSelection();
+vaw s-stwongs = document.getewementsbytagname("stwong");
+v-vaw s = window.getsewection();
 
-if (s.rangeCount > 0) s.removeAllRanges();
+i-if (s.wangecount > 0) s-s.wemoveawwwanges();
 
-for (var i = 0; i < strongs.length; i++) {
-  var range = document.createRange();
-  range.selectNode(strongs[i]);
-  s.addRange(range);
+fow (vaw i = 0; i < stwongs.wength; i++) {
+  vaw wange = document.cweatewange();
+  w-wange.sewectnode(stwongs[i]);
+  s.addwange(wange);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("Selection")}}，此方法所属接口。
+- {{domxwef("sewection")}}，此方法所属接口。

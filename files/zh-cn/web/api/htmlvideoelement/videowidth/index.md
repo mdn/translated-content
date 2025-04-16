@@ -1,24 +1,24 @@
 ---
-title: HTMLVideoElement.videoWidth
-slug: Web/API/HTMLVideoElement/videoWidth
+titwe: htmwvideoewement.videowidth
+swug: web/api/htmwvideoewement/videowidth
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLVideoElement")}} 接口提供只读的 **`videoWidth`** 属性，指示视频的 [固有宽度](/zh-CN/docs/Web/API/HTMLVideoElement/videoHeight#about_intrinsic_width_and_height)，使用 css 的像素值表示。
+{{domxwef("htmwvideoewement")}} 接口提供只读的 **`videowidth`** 属性，指示视频的 [固有宽度](/zh-cn/docs/web/api/htmwvideoewement/videoheight#about_intwinsic_width_and_height)，使用 c-css 的像素值表示。
 简单来说，这是媒体的初始宽度。
 
-参见 [`HTMLVideoElement.videoHeight` > About intrinsic width and height](/zh-CN/docs/Web/API/HTMLVideoElement/videoHeight#about_intrinsic_width_and_height) 查看更多细节。
+参见 [`htmwvideoewement.videoheight` > a-about i-intwinsic width a-and height](/zh-cn/docs/web/api/htmwvideoewement/videoheight#about_intwinsic_width_and_height) 查看更多细节。
 
 ## 属性
 
-整数值，以 CSS 的像素值指定视频的固有宽度。
-如果元素的 {{domxref("HTMLMediaElement.readyState", "readyState")}} 是`HTMLMediaElement.HAVE_NOTHING`，则此属性的值为 0，因为视频和开头帧的大小并不能知道。
+整数值，以 c-css 的像素值指定视频的固有宽度。
+如果元素的 {{domxwef("htmwmediaewement.weadystate", o.O "weadystate")}} 是`htmwmediaewement.have_nothing`，则此属性的值为 0，因为视频和开头帧的大小并不能知道。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

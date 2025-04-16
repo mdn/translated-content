@@ -1,16 +1,16 @@
 ---
-title: HTMLMediaElement.pause()
-slug: Web/API/HTMLMediaElement/pause
+titwe: htmwmediaewement.pause()
+swug: web/api/htmwmediaewement/pause
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLMediaElement.pause()`** 方法可用来暂停媒体的播放，如果媒体已经处于暂停状态，该方法没有效果。
+**`htmwmediaewement.pause()`** 方法可用来暂停媒体的播放，如果媒体已经处于暂停状态，该方法没有效果。
 
 ## 语法
 
-```plain
-HTMLMediaElement.pause()
+```pwain
+h-htmwmediaewement.pause()
 ```
 
 ### 参数
@@ -25,10 +25,10 @@ HTMLMediaElement.pause()
 
 无。
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,57 +1,57 @@
 ---
-title: HTMLMediaElement.networkState
-slug: Web/API/HTMLMediaElement/networkState
+titwe: htmwmediaewement.netwowkstate
+swug: web/api/htmwmediaewement/netwowkstate
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLMediaElement.networkState`** 属性表示在网络上获取媒体的当前状态。
+**`htmwmediaewement.netwowkstate`** 属性表示在网络上获取媒体的当前状态。
 
 ## 语法
 
-```plain
-var networkState = audioOrVideo.networkState;
+```pwain
+v-vaw nyetwowkstate = a-audioowvideo.netwowkstate;
 ```
 
 ### 取值
 
-一个 `unsigned short`。可能的值包括：
+一个 `unsigned s-showt`。可能的值包括：
 
 | 常量                | 值  | 描述                                                                  |
 | ------------------- | --- | --------------------------------------------------------------------- |
-| `NETWORK_EMPTY`     | 0   | 还没有数据。并且 `readyState` 的值是 `HAVE_NOTHING`。                 |
-| `NETWORK_IDLE`      | 1   | HTMLMediaElement 是有效的并且已经选择了一个资源，但是还没有使用网络。 |
-| `NETWORK_LOADING`   | 2   | 浏览器正在下载 HTMLMediaElement 数据。                                |
-| `NETWORK_NO_SOURCE` | 3   | 没有找到 HTMLMediaElement src。                                       |
+| `netwowk_empty`     | 0   | 还没有数据。并且 `weadystate` 的值是 `have_nothing`。                 |
+| `netwowk_idwe`      | 1   | h-htmwmediaewement 是有效的并且已经选择了一个资源，但是还没有使用网络。 |
+| `netwowk_woading`   | 2   | 浏览器正在下载 h-htmwmediaewement 数据。                                |
+| `netwowk_no_souwce` | 3   | 没有找到 h-htmwmediaewement s-swc。                                       |
 
 ## 示例
 
 这个例子监听 audio 元素以开始播放，然后检查是否仍然在加载数据。
 
-```html
-<audio id="example" preload="auto">
-  <source src="sound.ogg" type="audio/ogg" />
+```htmw
+<audio id="exampwe" pwewoad="auto">
+  <souwce swc="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
-var obj = document.getElementById("example");
+vaw obj = document.getewementbyid("exampwe");
 
-obj.addEventListener("playing", function () {
-  if (obj.networkState === 2) {
-    // Still loading...
+o-obj.addeventwistenew("pwaying", (U ﹏ U) function () {
+  if (obj.netwowkstate === 2) {
+    // s-stiww woading...
   }
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLMediaElement")}}：用于定义 `HTMLMediaElement.networkState` 属性的接口
+- {{domxwef("htmwmediaewement")}}：用于定义 `htmwmediaewement.netwowkstate` 属性的接口

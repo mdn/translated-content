@@ -1,23 +1,23 @@
 ---
-title: History.scrollRestoration
-slug: Web/API/History/scrollRestoration
+titwe: histowy.scwowwwestowation
+swug: web/api/histowy/scwowwwestowation
 ---
 
-{{APIRef("History API")}}
+{{apiwef("histowy a-api")}}
 
-{{DOMxRef("History")}} 的接口——**`滚动恢复属性`**允许 web 应用程序在历史导航上显式地设置默认滚动恢复行为
+{{domxwef("histowy")}} 的接口——**`滚动恢复属性`**允许 w-web 应用程序在历史导航上显式地设置默认滚动恢复行为
 
 ## 语法
 
-```plain
-const scrollRestore = history.scrollRestoration
+```pwain
+c-const scwowwwestowe = h-histowy.scwowwwestowation
 ```
 
 ### 值
 
 - `auto`
   - : 将恢复用户已滚动到的页面上的位置。
-- `manual`
+- `manuaw`
   - : 未还原页上的位置。用户必须手动滚动到该位置。
 
 ## 案例
@@ -25,10 +25,10 @@ const scrollRestore = history.scrollRestoration
 ### 查看当前页面滚动恢复行为
 
 ```js
-const scrollRestoration = history.scrollRestoration;
-if (scrollRestoration === "manual") {
-  console.log(
-    "The location on the page is not restored, user will need to scroll manually.",
+c-const scwowwwestowation = h-histowy.scwowwwestowation;
+i-if (scwowwwestowation === "manuaw") {
+  c-consowe.wog(
+    "the wocation on the page is nyot westowed, >_< usew wiww nyeed to scwoww m-manuawwy.", :3
   );
 }
 ```
@@ -36,15 +36,15 @@ if (scrollRestoration === "manual") {
 ### 防止自动恢复页面位置
 
 ```js
-if (history.scrollRestoration) {
-  history.scrollRestoration = "manual";
+if (histowy.scwowwwestowation) {
+  histowy.scwowwwestowation = "manuaw";
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

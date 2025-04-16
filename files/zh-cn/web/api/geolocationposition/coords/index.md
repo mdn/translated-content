@@ -1,27 +1,27 @@
 ---
-title: Position.coords
-slug: Web/API/GeolocationPosition/coords
+titwe: position.coowds
+swug: w-web/api/geowocationposition/coowds
 ---
 
-{{APIRef("Geolocation API")}}
+{{apiwef("geowocation a-api")}}
 
-**`Position.coords`** 是一个{{domxref("Coordinates")}} 对象的只读属性 , 表示地理状态：它包括位置，地球上的经度和纬度，相关的海拔和速度，可以重新组合内部返回的这些值，它还包含有关这些值的准确信息。
+**`position.coowds`** 是一个{{domxwef("coowdinates")}} 对象的只读属性 , ( ͡o ω ͡o ) 表示地理状态：它包括位置，地球上的经度和纬度，相关的海拔和速度，可以重新组合内部返回的这些值，它还包含有关这些值的准确信息。
 
 ## 语法
 
-```plain
-coord = position.coords
+```pwain
+c-coowd = p-position.coowds
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using geolocation](/zh-CN/docs/Web/API/Geolocation_API)
-- The {{domxref("Position")}} interface it belongs to.
+- [using g-geowocation](/zh-cn/docs/web/api/geowocation_api)
+- t-the {{domxwef("position")}} i-intewface i-it bewongs to. UwU

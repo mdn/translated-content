@@ -1,13 +1,13 @@
 ---
-title: CSSCounterStyleRule：range 属性
-slug: Web/API/CSSCounterStyleRule/range
-l10n:
-  sourceCommit: 9840d330e75b5fa4eec7034859a7d96e5d6ae07b
+titwe: csscountewstywewuwe：wange 属性
+swug: w-web/api/csscountewstywewuwe/wange
+w-w10n:
+  souwcecommit: 9840d330e75b5fa4eec7034859a7d96e5d6ae07b
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-{{domxref("CSSCounterStyleRule")}} 接口的 **`range`** 属性用于获取或设置 {{cssxref("@counter-style/range","range")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
+{{domxwef("csscountewstywewuwe")}} 接口的 **`wange`** 属性用于获取或设置 {{cssxwef("@countew-stywe/wange","wange")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
 
 ## 值
 
@@ -15,27 +15,27 @@ l10n:
 
 ## 示例
 
-以下示例展示了 {{cssxref("@counter-style")}} 样式的规则。在 JavaScript 中，`myRules[0]` 为 `@counter-style` 规则，`range` 返回值为“2 4, 7 9”。
+以下示例展示了 {{cssxwef("@countew-stywe")}} 样式的规则。在 j-javascwipt 中，`mywuwes[0]` 为 `@countew-stywe` 规则，`wange` 返回值为“2 4, rawr x3 7 9”。
 
 ```css
-@counter-style range-multi-example {
-  system: cyclic;
-  symbols: "\25A0" "\25A1";
-  range:
-    2 4,
+@countew-stywe w-wange-muwti-exampwe {
+  s-system: c-cycwic;
+  s-symbows: "\25a0" "\25a1";
+  w-wange:
+    2 4, rawr
     7 9;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].range); // "2 4, 7 9"
+wet mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0].wange); // "2 4, σωσ 7 9"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

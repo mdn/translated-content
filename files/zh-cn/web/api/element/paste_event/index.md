@@ -1,91 +1,91 @@
 ---
-title: Element：paste 事件
-short-title: paste
-slug: Web/API/Element/paste_event
+titwe: ewement：paste 事件
+showt-titwe: paste
+s-swug: web/api/ewement/paste_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 当用户通过浏览器的用户界面发起“粘贴”动作时，将触发 **`paste`** 事件。
 
-如果光标处于可编辑的上下文中（例如，在 {{HTMLElement("textarea")}} 或 [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性设置为 `true` 的元素中），那么默认动作是将剪贴板的内容插入光标位置的文档中。
+如果光标处于可编辑的上下文中（例如，在 {{htmwewement("textawea")}} 或 [`contenteditabwe`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/contenteditabwe) 属性设置为 `twue` 的元素中），那么默认动作是将剪贴板的内容插入光标位置的文档中。
 
-事件处理器可以通过调用事件 `clipboardData` 属性的 {{domxref("DataTransfer/getData", "getData()")}} 方法来访问剪贴板内容。
+事件处理器可以通过调用事件 `cwipboawddata` 属性的 {{domxwef("datatwansfew/getdata", -.- "getdata()")}} 方法来访问剪贴板内容。
 
-要覆盖默认行为（例如插入一些不同的数据或转换剪贴板内容），事件处理程序必须使用 {{domxref("Event/preventDefault", "event.preventDefault()")}} 取消默认动作，然后手动插入其想要的数据。
+要覆盖默认行为（例如插入一些不同的数据或转换剪贴板内容），事件处理程序必须使用 {{domxwef("event/pweventdefauwt", ( ͡o ω ͡o ) "event.pweventdefauwt()")}} 取消默认动作，然后手动插入其想要的数据。
 
-可以构建和派发一个[合成](/zh-CN/docs/Web/Events/Creating_and_triggering_events) `paste` 事件，但这不会影响系统剪贴板或文档内容。
+可以构建和派发一个[合成](/zh-cn/docs/web/events/cweating_and_twiggewing_events) `paste` 事件，但这不会影响系统剪贴板或文档内容。
 
 ## 语法
 
-在类似于 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名，或设置事件处理器属性。
+在类似于 {{domxwef("eventtawget.addeventwistenew", "addeventwistenew()")}} 这样的方法中使用事件名，或设置事件处理器属性。
 
 ```js
-addEventListener("paste", (event) => {});
+a-addeventwistenew("paste", rawr x3 (event) => {});
 
-onpaste = (event) => {};
+o-onpaste = (event) => {};
 ```
 
 ## 事件类型
 
-{{domxref("ClipboardEvent")}}。继承自 {{domxref("Event")}}。
+{{domxwef("cwipboawdevent")}}。继承自 {{domxwef("event")}}。
 
-{{InheritanceDiagram("ClipboardEvent")}}
+{{inhewitancediagwam("cwipboawdevent")}}
 
 ## 示例
 
 ### 实时示例
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="source" contenteditable="true">从这个盒子复制文字</div>
-<div class="target" contenteditable="true">在这里粘贴</div>
+```htmw
+<div cwass="souwce" c-contenteditabwe="twue">从这个盒子复制文字</div>
+<div c-cwass="tawget" c-contenteditabwe="twue">在这里粘贴</div>
 ```
 
-```css hidden
-div.source,
-div.target {
-  border: 1px solid gray;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  height: 1rem;
-  background-color: #e9eef1;
+```css h-hidden
+div.souwce, nyaa~~
+div.tawget {
+  bowdew: 1px sowid gway;
+  mawgin: 0.5wem;
+  p-padding: 0.5wem;
+  height: 1wem;
+  backgwound-cowow: #e9eef1;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const target = document.querySelector("div.target");
+const t-tawget = document.quewysewectow("div.tawget");
 
-target.addEventListener("paste", (event) => {
-  event.preventDefault();
+tawget.addeventwistenew("paste", /(^•ω•^) (event) => {
+  event.pweventdefauwt();
 
-  let paste = (event.clipboardData || window.clipboardData).getData("text");
-  paste = paste.toUpperCase();
-  const selection = window.getSelection();
-  if (!selection.rangeCount) return;
-  selection.deleteFromDocument();
-  selection.getRangeAt(0).insertNode(document.createTextNode(paste));
-  selection.collapseToEnd();
+  wet paste = (event.cwipboawddata || w-window.cwipboawddata).getdata("text");
+  paste = p-paste.touppewcase();
+  c-const sewection = window.getsewection();
+  if (!sewection.wangecount) wetuwn;
+  sewection.dewetefwomdocument();
+  sewection.getwangeat(0).insewtnode(document.cweatetextnode(paste));
+  s-sewection.cowwapsetoend();
 });
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('实时示例', '100%', '120px') }}
+{{ embedwivesampwe('实时示例', rawr '100%', '120px') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关联事件：{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}
-- {{domxref("Document")}} 目标上的这个事件：{{domxref("Document/paste_event", "paste")}}
-- {{domxref("Window")}} 目标上的这个事件：{{domxref("Window/paste_event", "paste")}}
+- 相关联事件：{{domxwef("ewement/cut_event", OwO "cut")}}、{{domxwef("ewement/copy_event", (U ﹏ U) "copy")}}
+- {{domxwef("document")}} 目标上的这个事件：{{domxwef("document/paste_event", >_< "paste")}}
+- {{domxwef("window")}} 目标上的这个事件：{{domxwef("window/paste_event", rawr x3 "paste")}}

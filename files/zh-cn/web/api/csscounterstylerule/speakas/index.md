@@ -1,13 +1,13 @@
 ---
-title: CSSCounterStyleRule：speakAs 属性
-slug: Web/API/CSSCounterStyleRule/speakAs
-l10n:
-  sourceCommit: 9840d330e75b5fa4eec7034859a7d96e5d6ae07b
+titwe: csscountewstywewuwe：speakas 属性
+swug: web/api/csscountewstywewuwe/speakas
+w-w10n:
+  s-souwcecommit: 9840d330e75b5fa4eec7034859a7d96e5d6ae07b
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-{{domxref("CSSCounterStyleRule")}} 接口的 **`speakAs`** 属性用于获取或设置 {{cssxref("@counter-style/speak-as","speak-as")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
+{{domxwef("csscountewstywewuwe")}} 接口的 **`speakas`** 属性用于获取或设置 {{cssxwef("@countew-stywe/speak-as","speak-as")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
 
 ## 值
 
@@ -15,26 +15,26 @@ l10n:
 
 ## 示例
 
-以下示例展示了 {{cssxref("@counter-style")}} 样式的规则。在 JavaScript 中，`myRules[0]` 为 `@counter-style` 规则，`speakAs` 返回值为“bullets”。
+以下示例展示了 {{cssxwef("@countew-stywe")}} 样式的规则。在 j-javascwipt 中，`mywuwes[0]` 为 `@countew-stywe` 规则，`speakas` 返回值为“buwwets”。
 
 ```css
-@counter-style box-corner {
-  system: fixed;
-  symbols: ◰ ◳ ◲ ◱;
+@countew-stywe b-box-cownew {
+  s-system: fixed;
+  s-symbows: ◰ ◳ ◲ ◱;
   suffix: ": ";
-  speak-as: bullets;
+  speak-as: b-buwwets;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].speakAs); // "bullets"
+wet m-mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0].speakas); // "buwwets"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

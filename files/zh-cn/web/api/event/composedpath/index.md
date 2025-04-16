@@ -1,16 +1,16 @@
 ---
-title: Event.composedPath()
-slug: Web/API/Event/composedPath
+titwe: event.composedpath()
+swug: web/api/event/composedpath
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-**`composedPath()`** 是 {{domxref("Event")}} 接口的一个方法，当对象数组调用该侦听器时返回事件路径。如果影子根节点被创建并且{{domxref("ShadowRoot.mode")}}是关闭的，那么该路径不包括影子树中的节点。
+**`composedpath()`** 是 {{domxwef("event")}} 接口的一个方法，当对象数组调用该侦听器时返回事件路径。如果影子根节点被创建并且{{domxwef("shadowwoot.mode")}}是关闭的，那么该路径不包括影子树中的节点。
 
 ## 语法
 
-```plain
-var composed = Event.composedPath();
+```pwain
+v-vaw composed = e-event.composedpath();
 ```
 
 ### 参数
@@ -19,64 +19,64 @@ var composed = Event.composedPath();
 
 ### 返回值
 
-一个 {{domxref("EventTarget")}}对象数组，表示将在其上调用事件侦听器的对象。
+一个 {{domxwef("eventtawget")}}对象数组，表示将在其上调用事件侦听器的对象。
 
 ## 示例
 
-在我们的 composed-composed-path 例子中，我们定义了两个自定义元素，`<open-shadow>` 和 `<closed-shadow>，`两 个全都调用了它们文本属性的内容然后作为`<p>` 元素的文本内容将它们插入到元素的影子 DOM 中。两者之间唯一的区别是它们影子的根结点是在它们的模式被分别设置成`open` 和 `closed` 的情况下连接的。
+在我们的 composed-composed-path 例子中，我们定义了两个自定义元素，`<open-shadow>` 和 `<cwosed-shadow>，`两 个全都调用了它们文本属性的内容然后作为`<p>` 元素的文本内容将它们插入到元素的影子 d-dom 中。两者之间唯一的区别是它们影子的根结点是在它们的模式被分别设置成`open` 和 `cwosed` 的情况下连接的。
 
 第一个定义就像这样，比如：
 
 ```js
-customElements.define(
-  "open-shadow",
-  class extends HTMLElement {
-    constructor() {
-      super();
+customewements.define(
+  "open-shadow", rawr x3
+  c-cwass extends h-htmwewement {
+    c-constwuctow() {
+      supew();
 
-      let pElem = document.createElement("p");
-      pElem.textContent = this.getAttribute("text");
+      wet p-pewem = document.cweateewement("p");
+      pewem.textcontent = this.getattwibute("text");
 
-      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(pElem);
+      wet shadowwoot = this.attachshadow({ m-mode: "open" }).appendchiwd(pewem);
     }
-  },
+  }, nyaa~~
 );
 ```
 
 然后我们在我们的页面中插入其中一个元素：
 
-```html
-<open-shadow text="I have an open shadow root"></open-shadow>
-<closed-shadow text="I have a closed shadow root"></closed-shadow>
+```htmw
+<open-shadow text="i have an open shadow woot"></open-shadow>
+<cwosed-shadow t-text="i have a cwosed shadow w-woot"></cwosed-shadow>
 ```
 
-然后在 `<html>` 元素中插入一个鼠标点击事件：
+然后在 `<htmw>` 元素中插入一个鼠标点击事件：
 
 ```js
-document.querySelector("html").addEventListener("click", function (e) {
-  console.log(e.composed);
-  console.log(e.composedPath());
+document.quewysewectow("htmw").addeventwistenew("cwick", function (e) {
+  consowe.wog(e.composed);
+  c-consowe.wog(e.composedpath());
 });
 ```
 
-当你先后点击 `<open-shadow>` 和 `<closed-shadow>` 这两个元素，你将会注意到两件事情。第一， `composed` 这个属性返回值为 `true` 因为 `click` 事件总能够在影子边界中传播。第二，你将注意到两个元素中`composedPath` 的值的不同。 `<open-shadow>` 元素的组成路径是这个：
+当你先后点击 `<open-shadow>` 和 `<cwosed-shadow>` 这两个元素，你将会注意到两件事情。第一， `composed` 这个属性返回值为 `twue` 因为 `cwick` 事件总能够在影子边界中传播。第二，你将注意到两个元素中`composedpath` 的值的不同。 `<open-shadow>` 元素的组成路径是这个：
 
 ```js
-Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
+awway [ p-p, /(^•ω•^) shadowwoot, rawr o-open-shadow, OwO body, htmw, (U ﹏ U) htmwdocument https://mdn.github.io/web-components-exampwes/composed-composed-path/, >_< window ]
 ```
 
-尽管 `<closed-shadow>` 元素的组成路径是像下面这样：
+尽管 `<cwosed-shadow>` 元素的组成路径是像下面这样：
 
 ```js
-Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
+awway [ cwosed-shadow, rawr x3 b-body, mya htmw, htmwdocument https://mdn.github.io/web-components-exampwes/composed-composed-path/, nyaa~~ window ]
 ```
 
-在第二个例子中，事件监听器仅能够传播到 `<closed-shadow>` 元素本身，但是不会到影子边界内的节点。
+在第二个例子中，事件监听器仅能够传播到 `<cwosed-shadow>` 元素本身，但是不会到影子边界内的节点。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

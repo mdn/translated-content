@@ -1,18 +1,18 @@
 ---
-title: Blob：bytes() 方法
-slug: Web/API/Blob/bytes
-l10n:
-  sourceCommit: 5ee9d033cacad3a031562be16be43c55a838cc4f
+titwe: bwob：bytes() 方法
+swug: web/api/bwob/bytes
+w-w10n:
+  s-souwcecommit: 5ee9d033cacad3a031562be16be43c55a838cc4f
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-api")}}{{avaiwabweinwowkews}}
 
-{{domxref("Blob")}} 接口的 **`bytes()`** 方法返回一个 {{jsxref("Promise")}}，该 {{jsxref("Promise")}} 兑现为一个包含 blob 内容的字节数组的 {{jsxref("Uint8Array")}}。
+{{domxwef("bwob")}} 接口的 **`bytes()`** 方法返回一个 {{jsxwef("pwomise")}}，该 {{jsxwef("pwomise")}} 兑现为一个包含 b-bwob 内容的字节数组的 {{jsxwef("uint8awway")}}。
 
 ## 语法
 
-```js-nolint
-bytes()
+```js-nowint
+b-bytes()
 ```
 
 ### 参数
@@ -21,16 +21,16 @@ bytes()
 
 ### 返回值
 
-一个兑现包含 blob 数据的 {{jsxref("Uint8Array")}} 对象的 {{jsxref("Promise")}}。
+一个兑现包含 b-bwob 数据的 {{jsxwef("uint8awway")}} 对象的 {{jsxwef("pwomise")}}。
 
 ### 异常
 
-例如，如果用于获取 Blob 数据的读取器抛出异常，则该方法将拒绝返回的 {{jsxref("Promise")}}。
+例如，如果用于获取 b-bwob 数据的读取器抛出异常，则该方法将拒绝返回的 {{jsxwef("pwomise")}}。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

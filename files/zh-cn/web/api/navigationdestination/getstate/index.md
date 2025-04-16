@@ -1,18 +1,18 @@
 ---
-title: NavigationDestination：getState() 方法
-slug: Web/API/NavigationDestination/getState
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: nyavigationdestination：getstate() 方法
+swug: web/api/navigationdestination/getstate
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{apiwef("navigation a-api")}}{{seecompattabwe}}
 
-{{domxref("NavigationDestination")}} 接口的 **`getState()`** 方法根据需要返回由开发人员提供且与目标 {{domxref("NavigationHistoryEntry")}} 或导航操作（例如 {{domxref("Navigation.navigate()", "navigate()")}}）相关联的状态的克隆。
+{{domxwef("navigationdestination")}} 接口的 **`getstate()`** 方法根据需要返回由开发人员提供且与目标 {{domxwef("navigationhistowyentwy")}} 或导航操作（例如 {{domxwef("navigation.navigate()", UwU "navigate()")}}）相关联的状态的克隆。
 
 ## 语法
 
-```js-nolint
-getState()
+```js-nowint
+g-getstate()
 ```
 
 ### 参数
@@ -32,22 +32,22 @@ getState()
 ## 示例
 
 ```js
-navigation.addEventListener("navigate", (event) => {
-  console.log(event.destination.getState());
+n-nyavigation.addeventwistenew("navigate", rawr x3 (event) => {
+  c-consowe.wog(event.destination.getstate());
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [现代客户端路由：导航 API](https://developer.chrome.google.cn/docs/web-platform/navigation-api/)
-- [导航 API 说明](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola 的[导航 API 在线演示](https://gigantic-honored-octagon.glitch.me/)
-- 允许更新状态的方法——{{domxref("Navigation.navigate()")}}、{{domxref("Navigation.reload()")}} 和 {{domxref("Navigation.updateCurrentEntry()")}}
+- [现代客户端路由：导航 a-api](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/navigation-api/)
+- [导航 a-api 说明](https://github.com/wicg/navigation-api/bwob/main/weadme.md)
+- domenic denicowa 的[导航 api 在线演示](https://gigantic-honowed-octagon.gwitch.me/)
+- 允许更新状态的方法——{{domxwef("navigation.navigate()")}}、{{domxwef("navigation.wewoad()")}} 和 {{domxwef("navigation.updatecuwwententwy()")}}

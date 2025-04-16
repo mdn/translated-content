@@ -1,50 +1,50 @@
 ---
-title: IntersectionObserver.unobserve()
-slug: Web/API/IntersectionObserver/unobserve
+titwe: intewsectionobsewvew.unobsewve()
+swug: w-web/api/intewsectionobsewvew/unobsewve
 ---
 
-{{APIRef("Intersection Observer API")}}
+{{apiwef("intewsection o-obsewvew api")}}
 
-{{domxref("IntersectionObserver")}}的`unobserve()`
-方法命令`IntersectionObserver`停止对一个元素的观察。
+{{domxwef("intewsectionobsewvew")}}的`unobsewve()`
+方法命令`intewsectionobsewvew`停止对一个元素的观察。
 
 ## 语法
 
 ```js
-IntersectionObserver.unobserve(target);
+i-intewsectionobsewvew.unobsewve(tawget);
 ```
 
 ### 参数
 
-- `target`
+- `tawget`
   - : 要取消观察的目标，如果没有提供，方法不做任何事情，也不会抛出异常。
 
 ### 返回值
 
-`undefined`.
+`undefined`. ( ͡o ω ͡o )
 
 ## 例子
 
 下面代码段展示了一个观察器被创建，一个元素被观察，以及取消观察的过程。
 
 ```js
-var observer = new IntersectionObserver(callback);
-observer.observe(document.getElementById("elementToObserve"));
+v-vaw obsewvew = n-nyew intewsectionobsewvew(cawwback);
+o-obsewvew.obsewve(document.getewementbyid("ewementtoobsewve"));
 
 /* ... */
 
-observer.unobserve(document.getElementById("elementToObserve"));
+o-obsewvew.unobsewve(document.getewementbyid("ewementtoobsewve"));
 ```
 
 ## 说明
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API)
-- {{domxref("IntersectionObserver.observe()")}}
+- [intewsection o-obsewvew api](/zh-cn/docs/web/api/intewsection_obsewvew_api)
+- {{domxwef("intewsectionobsewvew.obsewve()")}}

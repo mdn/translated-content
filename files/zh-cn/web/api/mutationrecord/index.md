@@ -1,111 +1,111 @@
 ---
-title: MutationRecord
-slug: Web/API/MutationRecord
+titwe: mutationwecowd
+swug: web/api/mutationwecowd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-每个 **`MutationRecord`** 都代表一个独立的 DOM 变化，在每次随 DOM 变化调用 {{domxref("MutationObserver")}} 的回调函数时，一个相应的 `MutationRecord` 会被作为参数，传递给回调函数。
+每个 **`mutationwecowd`** 都代表一个独立的 d-dom 变化，在每次随 d-dom 变化调用 {{domxwef("mutationobsewvew")}} 的回调函数时，一个相应的 `mutationwecowd` 会被作为参数，传递给回调函数。
 
 ## 属性
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td class="header">属性</td>
-      <td class="header">类型</td>
-      <td class="header">描述</td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.type")}}</td>
-      <td><code>String</code></td>
+    <tw>
+      <td c-cwass="headew">属性</td>
+      <td cwass="headew">类型</td>
+      <td c-cwass="headew">描述</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.type")}}</td>
+      <td><code>stwing</code></td>
       <td>
-        如果是属性变化，则返回 <code>"attributes"</code>；<br />如果是
-        <code>characterData</code> 节点变化，则返回
-        <code>"characterData"</code>；<br />如果是子节点树
-        <code>childList</code> 变化，则返回 <code>"childList"</code>。
+        如果是属性变化，则返回 <code>"attwibutes"</code>；<bw />如果是
+        <code>chawactewdata</code> 节点变化，则返回
+        <code>"chawactewdata"</code>；<bw />如果是子节点树
+        <code>chiwdwist</code> 变化，则返回 <code>"chiwdwist"</code>。
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.target")}}</td>
-      <td>{{domxref("Node")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.tawget")}}</td>
+      <td>{{domxwef("node")}}</td>
       <td>
         根据
-        {{domxref("MutationRecord.type")}}，返回变化所影响的节点。<br />对于属性
-        <code>attributes</code> 变化，返回属性变化的节点。<br />对于
-        <code>characterData</code> 变化，返回
-        <code>characterData</code> 节点。<br />对于子节点树
-        <code>childList</code> 变化，返回子节点变化的节点。
+        {{domxwef("mutationwecowd.type")}}，返回变化所影响的节点。<bw />对于属性
+        <code>attwibutes</code> 变化，返回属性变化的节点。<bw />对于
+        <code>chawactewdata</code> 变化，返回
+        <code>chawactewdata</code> 节点。<bw />对于子节点树
+        <code>chiwdwist</code> 变化，返回子节点变化的节点。
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.addedNodes")}}</td>
-      <td>{{domxref("NodeList")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.addednodes")}}</td>
+      <td>{{domxwef("nodewist")}}</td>
       <td>
-        返回被添加的节点。<br />如果没有节点被添加，则该属性将是一个空的
-        {{domxref("NodeList")}}。
+        返回被添加的节点。<bw />如果没有节点被添加，则该属性将是一个空的
+        {{domxwef("nodewist")}}。
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.removedNodes")}}</td>
-      <td>{{domxref("NodeList")}}</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.wemovednodes")}}</td>
+      <td>{{domxwef("nodewist")}}</td>
       <td>
-        返回被移除的节点。<br />如果没有节点被移除，则该属性将是一个空的
-        {{domxref("NodeList")}}。
+        返回被移除的节点。<bw />如果没有节点被移除，则该属性将是一个空的
+        {{domxwef("nodewist")}}。
       </td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.previousSibling")}}</td>
-      <td>{{domxref("Node")}}</td>
-      <td>返回被添加或移除的节点之前的兄弟节点，或者 <code>null</code>。</td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.nextSibling")}}</td>
-      <td>{{domxref("Node")}}</td>
-      <td>返回被添加或移除的节点之后的兄弟节点，或者 <code>null</code>。</td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.attributeName")}}</td>
-      <td><code>String</code></td>
-      <td>返回被修改的属性的属性名，或者 <code>null</code>。</td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.attributeNamespace")}}</td>
-      <td><code>String</code></td>
-      <td>返回被修改属性的命名空间，或者 <code>null</code>。</td>
-    </tr>
-    <tr>
-      <td>{{domxref("MutationRecord.oldValue")}}</td>
-      <td><code>String</code></td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.pwevioussibwing")}}</td>
+      <td>{{domxwef("node")}}</td>
+      <td>返回被添加或移除的节点之前的兄弟节点，或者 <code>nuww</code>。</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.nextsibwing")}}</td>
+      <td>{{domxwef("node")}}</td>
+      <td>返回被添加或移除的节点之后的兄弟节点，或者 <code>nuww</code>。</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.attwibutename")}}</td>
+      <td><code>stwing</code></td>
+      <td>返回被修改的属性的属性名，或者 <code>nuww</code>。</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.attwibutenamespace")}}</td>
+      <td><code>stwing</code></td>
+      <td>返回被修改属性的命名空间，或者 <code>nuww</code>。</td>
+    </tw>
+    <tw>
+      <td>{{domxwef("mutationwecowd.owdvawue")}}</td>
+      <td><code>stwing</code></td>
       <td>
         <p>
-          返回值取决于 {{domxref("MutationRecord.type")}}。<br />对于属性
-          <code>attributes</code> 变化，返回变化之前的属性值。<br />对于
-          <code>characterData</code>
-          变化，返回变化之前的数据。<br />对于子节点树
-          <code>childList</code> 变化，返回 <code>null</code>。
+          返回值取决于 {{domxwef("mutationwecowd.type")}}。<bw />对于属性
+          <code>attwibutes</code> 变化，返回变化之前的属性值。<bw />对于
+          <code>chawactewdata</code>
+          变化，返回变化之前的数据。<bw />对于子节点树
+          <code>chiwdwist</code> 变化，返回 <code>nuww</code>。
         </p>
-        <div class="note">
+        <div c-cwass="note">
           <p>
             注意，如果要让这个属性起作用，在相应的
-            <a href="/zh-CN/docs/Web/API/MutationObserverInit"
-              >MutationObserverInit</a
+            <a h-hwef="/zh-cn/docs/web/api/mutationobsewvewinit"
+              >mutationobsewvewinit</a
             >
-            参数的 <code>MutationObserver</code>
-            <a href="/zh-CN/docs/Web/API/MutationObserver/observe">observe</a>
-            方法中，<code>attributeOldValue</code> 或者
-            <code>characterDataOldValue</code> 必须设置为 <code>true</code>。
+            参数的 <code>mutationobsewvew</code>
+            <a h-hwef="/zh-cn/docs/web/api/mutationobsewvew/obsewve">obsewve</a>
+            方法中，<code>attwibuteowdvawue</code> 或者
+            <code>chawactewdataowdvawue</code> 必须设置为 <code>twue</code>。
           </p>
         </div>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,18 +1,18 @@
 ---
-title: HTMLTableSectionElement：chOff 属性
-slug: Web/API/HTMLTableSectionElement/chOff
-l10n:
-  sourceCommit: d16706e4e930c57161d473287374a9286c663147
+titwe: htmwtabwesectionewement：choff 属性
+swug: web/api/htmwtabwesectionewement/choff
+w-w10n:
+  s-souwcecommit: d-d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{apiwef("htmw d-dom")}}{{depwecated_headew}}
 
-{{domxref("HTMLTableSectionElement")}} 接口的 **`chOff`** 属性什么都不做，它反映 section 元素的 `charoff` 属性。
+{{domxwef("htmwtabwesectionewement")}} 接口的 **`choff`** 属性什么都不做，它反映 s-section 元素的 `chawoff` 属性。
 
-> [!NOTE]
+> [!note]
 > 此属性旨在支持将表格单元格内容对齐到特定字符（通常是小数点），但浏览器从未实现过。
 >
-> 要实现这种对齐，请注意 {{cssxref("text-align")}} CSS 属性对字符串值的支持。
+> 要实现这种对齐，请注意 {{cssxwef("text-awign")}} c-css 属性对字符串值的支持。
 
 ## 值
 
@@ -20,12 +20,12 @@ l10n:
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{cssxref("text-align")}}
+- {{cssxwef("text-awign")}}

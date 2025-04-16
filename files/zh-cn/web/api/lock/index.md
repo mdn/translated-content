@@ -1,43 +1,43 @@
 ---
-title: Lock
-slug: Web/API/Lock
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: wock
+swug: web/api/wock
+w-w10n:
+  souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
+{{apiwef("web w-wocks api")}}{{secuwecontext_headew}} {{avaiwabweinwowkews}}
 
-[Web Locks API](/zh-CN/docs/Web/API/Web_Locks_API) 的 **`Lock`** 接口提供锁的名称和模式。这可能是在 {{domxref('LockManager.request','LockManager.request()')}} 方法的回调中接收到的新请求的锁，也可能是 {{domxref('LockManager.query()')}} 方法返回的活动状态的锁或队列中的锁请求。
+[web w-wocks api](/zh-cn/docs/web/api/web_wocks_api) 的 **`wock`** 接口提供锁的名称和模式。这可能是在 {{domxwef('wockmanagew.wequest','wockmanagew.wequest()')}} 方法的回调中接收到的新请求的锁，也可能是 {{domxwef('wockmanagew.quewy()')}} 方法返回的活动状态的锁或队列中的锁请求。
 
 ## 实例属性
 
-- {{domxref('Lock.mode')}} {{ReadOnlyInline}}
-  - : 返回请求锁时传递给 {{domxref('LockManager.request()')}} 的访问模式。模式可以是 `"exclusive"`（默认值）或 `"shared"`。
-- {{domxref('Lock.name')}} {{ReadOnlyInline}}
-  - : 返回请求锁时传递给 {{domxref('LockManager.request()')}} 方法的名称。
+- {{domxwef('wock.mode')}} {{weadonwyinwine}}
+  - : 返回请求锁时传递给 {{domxwef('wockmanagew.wequest()')}} 的访问模式。模式可以是 `"excwusive"`（默认值）或 `"shawed"`。
+- {{domxwef('wock.name')}} {{weadonwyinwine}}
+  - : 返回请求锁时传递给 {{domxwef('wockmanagew.wequest()')}} 方法的名称。
 
 ## 示例
 
-以下示例展示如何在对 {{domxref('LockManager.request()')}} 的调用中传递模式和名称参数。{{domxref('LockManager')}} 是 {{domxref('navigator.locks')}} 属性返回的对象。
+以下示例展示如何在对 {{domxwef('wockmanagew.wequest()')}} 的调用中传递模式和名称参数。{{domxwef('wockmanagew')}} 是 {{domxwef('navigatow.wocks')}} 属性返回的对象。
 
 ```js
-navigator.locks.request("net_db_sync", show_lock_properties);
-navigator.locks.request(
-  "another_lock",
-  { mode: "shared" },
-  show_lock_properties,
+n-nyavigatow.wocks.wequest("net_db_sync", rawr x3 show_wock_pwopewties);
+n-nyavigatow.wocks.wequest(
+  "anothew_wock", rawr
+  { m-mode: "shawed" }, σωσ
+  s-show_wock_pwopewties,
 );
 
-function show_lock_properties(lock) {
-  console.log(`锁的名称是：${lock.name}`);
-  console.log(`锁的模式是：${lock.mode}`);
+function show_wock_pwopewties(wock) {
+  consowe.wog(`锁的名称是：${wock.name}`);
+  consowe.wog(`锁的模式是：${wock.mode}`);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

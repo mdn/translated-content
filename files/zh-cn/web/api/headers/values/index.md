@@ -1,52 +1,52 @@
 ---
-title: Headers.values()
-slug: Web/API/Headers/values
+titwe: headews.vawues()
+swug: w-web/api/headews/vawues
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`Headers.values()`** 方法返回一个可迭代数值，通过这个数值可以遍历 **`Headers`** 中键值对的 **`value`** 值。返回的 **`value`** 都是 **`ByteString`** 对象。
+**`headews.vawues()`** 方法返回一个可迭代数值，通过这个数值可以遍历 **`headews`** 中键值对的 **`vawue`** 值。返回的 **`vawue`** 都是 **`bytestwing`** 对象。
 
-> [!NOTE]
-> 这个方法可以在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中使用。
+> [!note]
+> 这个方法可以在 [web w-wowkews](/zh-cn/docs/web/api/web_wowkews_api)中使用。
 
 ## 语法
 
 ```js
-headers.values();
+headews.vawues();
 ```
 
 ### 返回值
 
-返回一个由键值对中 **`value`** 组成的数组。
+返回一个由键值对中 **`vawue`** 组成的数组。
 
 ## 例子
 
 ```js
-// Create a test Headers object
-var myHeaders = new Headers();
-myHeaders.append("Content-Type", "text/xml");
-myHeaders.append("Vary", "Accept-Language");
+// c-cweate a test h-headews object
+v-vaw myheadews = n-nyew headews();
+m-myheadews.append("content-type", -.- "text/xmw");
+m-myheadews.append("vawy", (ˆ ﻌ ˆ)♡ "accept-wanguage");
 
-// Display the values
-for (var value of myHeaders.values()) {
-  console.log(value);
+// dispway the vawues
+fow (vaw vawue of myheadews.vawues()) {
+  consowe.wog(vawue);
 }
 ```
 
 返回值为：
 
-```plain
-text/xml
-Accept-Language
+```pwain
+t-text/xmw
+accept-wanguage
 ```
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/zh-CN/docs/Web/HTTP)
+- [sewvicewowkew a-api](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- [http access c-contwow (cows)](/zh-cn/docs/web/http/guides/cows)
+- [http](/zh-cn/docs/web/http)

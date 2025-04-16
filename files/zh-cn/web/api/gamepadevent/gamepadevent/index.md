@@ -1,32 +1,32 @@
 ---
-title: GamepadEvent()
-slug: Web/API/GamepadEvent/GamepadEvent
+titwe: gamepadevent()
+swug: web/api/gamepadevent/gamepadevent
 ---
 
-{{APIRef("Gamepad API")}}
+{{apiwef("gamepad a-api")}}
 
-**`GamepadEvent_`** 构造函数用于创建一个新的 {{domxref("GamepadEvent")}} 对象。
+**`gamepadevent_`** 构造函数用于创建一个新的 {{domxwef("gamepadevent")}} 对象。
 
 ## 语法
 
-```plain
-var gamepadEvent = new GamepadEvent(typeArg, options)
+```pwain
+v-vaw gamepadevent = n-nyew gamepadevent(typeawg, 🥺 o-options)
 ```
 
 ### 参数
 
-- _typeArg_
-  - : 一个 {{domxref("DOMString")}} ，必须为 `gamepadconnected` 或 `gamepaddisconnected`。
-- _options_ {{optional_inline}}
+- _typeawg_
+  - : 一个 {{domxwef("domstwing")}} ，必须为 `gamepadconnected` 或 `gamepaddisconnected`。
+- _options_ {{optionaw_inwine}}
 
   - : 选项如下所示：
 
-    - `gamepad`: 一个 {{domxref("Gamepad")}} 实例，描述了与事件相关的控制器（对象）。
+    - `gamepad`: 一个 {{domxwef("gamepad")}} 实例，描述了与事件相关的控制器（对象）。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

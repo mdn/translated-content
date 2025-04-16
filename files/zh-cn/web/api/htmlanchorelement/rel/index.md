@@ -1,13 +1,13 @@
 ---
-title: HTMLAnchorElement：rel 属性
-slug: Web/API/HTMLAnchorElement/rel
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: htmwanchowewement：wew 属性
+swug: web/api/htmwanchowewement/wew
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLAnchorElement.rel`** 属性反映 [`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel) 属性。它是一个字符串，包含由空格分隔的链接类型列表，这些类型指示由 {{HTMLElement("a")}} 元素表示的资源与当前文档之间的关系。
+**`htmwanchowewement.wew`** 属性反映 [`wew`](/zh-cn/docs/web/htmw/wefewence/attwibutes/wew) 属性。它是一个字符串，包含由空格分隔的链接类型列表，这些类型指示由 {{htmwewement("a")}} 元素表示的资源与当前文档之间的关系。
 
 ## 值
 
@@ -16,21 +16,21 @@ l10n:
 ## 示例
 
 ```js
-const anchors = document.getElementsByTagName("a");
-for (const anchor of anchors) {
-  alert(`关系：${anchor.rel}`);
+c-const anchows = d-document.getewementsbytagname("a");
+f-fow (const a-anchow of anchows) {
+  awewt(`关系：${anchow.wew}`);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 在 {{HTMLElement("area")}} 和 {{HTMLElement("link")}} 元素上对应的属性是 {{domxref("HTMLAreaElement.rel")}} 和 {{domxref("HTMLLinkElement.rel")}}。
-- 相同的列表，但以标记形式表示：{{domxref("HTMLAnchorElement.relList")}}
+- 在 {{htmwewement("awea")}} 和 {{htmwewement("wink")}} 元素上对应的属性是 {{domxwef("htmwaweaewement.wew")}} 和 {{domxwef("htmwwinkewement.wew")}}。
+- 相同的列表，但以标记形式表示：{{domxwef("htmwanchowewement.wewwist")}}

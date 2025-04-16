@@ -1,37 +1,37 @@
 ---
-title: OffscreenCanvas.height
-slug: Web/API/OffscreenCanvas/height
+titwe: offscweencanvas.height
+swug: web/api/offscweencanvas/height
 ---
 
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{apiwef("canvas a-api")}} {{seecompattabwe}}
 
-设置或者获取{{domxref("OffscreenCanvas")}} 对象的高度。
+设置或者获取{{domxwef("offscweencanvas")}} 对象的高度。
 
 ## 语法
 
-```plain
-var pxl = offscreen.height;
-offscreen.height = pxl;
+```pwain
+v-vaw pxw = offscween.height;
+o-offscween.height = p-pxw;
 ```
 
 ## 例子
 
-创建一个新的离屏 canvas，获取或者设置离屏 canvas 的高度：
+创建一个新的离屏 c-canvas，获取或者设置离屏 c-canvas 的高度：
 
 ```js
-var offscreen = new OffscreenCanvas(256, 256);
-offscreen.height; // 256
-offscreen.height = 512;
+v-vaw offscween = n-nyew offscweencanvas(256, rawr x3 256);
+offscween.height; // 256
+offscween.height = 512;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 另外参阅
 
-- {{domxref("OffscreenCanvas")}}, 此属性所属的接口。
+- {{domxwef("offscweencanvas")}}, rawr 此属性所属的接口。

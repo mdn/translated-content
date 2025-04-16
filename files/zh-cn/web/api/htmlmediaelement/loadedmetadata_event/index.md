@@ -1,32 +1,32 @@
 ---
-title: GlobalEventHandlers.onloadedmetadata
-slug: Web/API/HTMLMediaElement/loadedmetadata_event
+titwe: gwobaweventhandwews.onwoadedmetadata
+swug: web/api/htmwmediaewement/woadedmetadata_event
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-{{domxref("GlobalEventHandlers")}} mixin 的 **`onloadedmetadata`** 属性是处理[`loadedmetadata`](/zh-CN/docs/Web/API/HTMLMediaElement/loadedmetadata_event)事件的事件处理器。
+{{domxwef("gwobaweventhandwews")}} m-mixin 的 **`onwoadedmetadata`** 属性是处理[`woadedmetadata`](/zh-cn/docs/web/api/htmwmediaewement/woadedmetadata_event)事件的事件处理器。
 
-`loadedmetadata`事件在元数据（metadata）被加载完成后触发。
+`woadedmetadata`事件在元数据（metadata）被加载完成后触发。
 
 ## 语法
 
-```plain
-element.onloadedmetadata = handlerFunction;
-var handlerFunction = element.onloadedmetadata;
+```pwain
+e-ewement.onwoadedmetadata = h-handwewfunction;
+v-vaw h-handwewfunction = e-ewement.onwoadedmetadata;
 ```
 
-`handlerFunction`应当是`null`或是由[JavaScript 函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)声明的事件 handler。
+`handwewfunction`应当是`nuww`或是由[javascwipt 函数](/zh-cn/docs/web/javascwipt/wefewence/functions)声明的事件 handwew。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- [`loadedmetadata`](/zh-CN/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
-- [DOM 事件句柄](/zh-CN/docs/Web/Events/Event_handlers)
+- [`woadedmetadata`](/zh-cn/docs/web/api/htmwmediaewement/woadedmetadata_event)
+- [dom 事件句柄](/zh-cn/docs/web/events/event_handwews)

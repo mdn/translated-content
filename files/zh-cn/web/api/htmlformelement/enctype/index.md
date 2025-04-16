@@ -1,33 +1,33 @@
 ---
-title: HTMLFormElement.enctype
-slug: Web/API/HTMLFormElement/enctype
+titwe: htmwfowmewement.enctype
+swug: web/api/htmwfowmewement/enctype
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLFormElement.enctype`** 属性常用来指明提交表单的内容类型，可选的值如下：
+**`htmwfowmewement.enctype`** 属性常用来指明提交表单的内容类型，可选的值如下：
 
-- `application/x-www-form-urlencoded`: 初始的默认值
-- `multipart/form-data`: 适用于使用{{HTMLElement("input")}} 标签上传文件
-- `text/plain`: HTML5 引入的类型
+- `appwication/x-www-fowm-uwwencoded`: 初始的默认值
+- `muwtipawt/fowm-data`: 适用于使用{{htmwewement("input")}} 标签上传文件
+- `text/pwain`: h-htmw5 引入的类型
 
-这些值可以通过元素 {{HTMLElement("button")}} or {{HTMLElement("input")}} 的属性 form.enctype 来改写
+这些值可以通过元素 {{htmwewement("button")}} o-ow {{htmwewement("input")}} 的属性 f-fowm.enctype 来改写
 
 ## 语法
 
-```plain
-string = form.enctype
-form.enctype = string
+```pwain
+s-stwing = f-fowm.enctype
+f-fowm.enctype = stwing
 ```
 
 ## 例子
 
-```plain
-form.enctype = "application/x-www-form-urlencoded";
+```pwain
+fowm.enctype = "appwication/x-www-fowm-uwwencoded";
 ```
 
 ## 参考
 
-[HTML 5, Section 4.10.19.6, Form submission](https://www.w3.org/TR/html5/forms.html#attr-fs-enctype)
+[htmw 5, rawr x3 s-section 4.10.19.6, rawr fowm submission](https://www.w3.owg/tw/htmw5/fowms.htmw#attw-fs-enctype)
 
-[DOM Level 2 HTML: enctype](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-84227810)
+[dom wevew 2 htmw: enctype](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-84227810)

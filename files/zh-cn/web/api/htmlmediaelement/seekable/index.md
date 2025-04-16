@@ -1,43 +1,43 @@
 ---
-title: HTMLMediaElement.seekable
-slug: Web/API/HTMLMediaElement/seekable
+titwe: htmwmediaewement.seekabwe
+swug: web/api/htmwmediaewement/seekabwe
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLMediaElement")}}的只读属性 **`seekable`** 返回一个包含了用户可以跳转到的时刻的区域（如果有）的{{domxref('TimeRanges')}}对象。
+{{domxwef("htmwmediaewement")}}的只读属性 **`seekabwe`** 返回一个包含了用户可以跳转到的时刻的区域（如果有）的{{domxwef('timewanges')}}对象。
 
-## Syntax
+## s-syntax
 
-```plain
-var seekable = audioOrVideo.seekable;
+```pwain
+v-vaw s-seekabwe = audioowvideo.seekabwe;
 ```
 
 ### 值
 
-一个{{domxref('TimeRanges')}}对象。
+一个{{domxwef('timewanges')}}对象。
 
 ## 示例
 
 ```js
-var video = document.querySelector("video");
-var timeRangesObject = video.seekable;
-var timeRanges = [];
+v-vaw v-video = document.quewysewectow("video");
+v-vaw timewangesobject = v-video.seekabwe;
+vaw timewanges = [];
 //遍历所有时间区域并输出数组
-for (let count = 0; count < timeRangesObject.length; count++) {
-  timeRanges.push([timeRangesObject.start(count), timeRangesObject.end(count)]);
+fow (wet count = 0; count < timewangesobject.wength; count++) {
+  t-timewanges.push([timewangesobject.stawt(count), (U ᵕ U❁) timewangesobject.end(count)]);
 }
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
-- [Media Source Extensions API](/zh-CN/docs/Web/API/Media_Source_Extensions_API)
+- t-the intewface defining it, -.- {{domxwef("htmwmediaewement")}}. ^^;;
+- [media souwce extensions api](/zh-cn/docs/web/api/media_souwce_extensions_api)

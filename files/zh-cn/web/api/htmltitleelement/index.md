@@ -1,43 +1,43 @@
 ---
-title: HTMLTitleElement
-slug: Web/API/HTMLTitleElement
-l10n:
-  sourceCommit: 32305cc3cf274fbfdcc73a296bbd400a26f38296
+titwe: htmwtitweewement
+swug: w-web/api/htmwtitweewement
+w-w10n:
+  s-souwcecommit: 32305cc3cf274fbfdcc73a296bbd400a26f38296
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLTitleElement`** 接口由文档的 {{HTMLElement("title")}} 实现。此元素继承 {{domxref("HTMLElement")}} 接口的所有属性和方法。
+**`htmwtitweewement`** 接口由文档的 {{htmwewement("titwe")}} 实现。此元素继承 {{domxwef("htmwewement")}} 接口的所有属性和方法。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-_从其父接口 {{domxref("HTMLElement")}} 继承属性。_
+_从其父接口 {{domxwef("htmwewement")}} 继承属性。_
 
-- {{domxref("HTMLTitleElement.text")}}
+- {{domxwef("htmwtitweewement.text")}}
   - : 表示文档标题文本的字符串。
 
 ## 实例方法
 
-_无特定方法；从其父接口 {{domxref("HTMLElement")}} 继承方法。_
+_无特定方法；从其父接口 {{domxwef("htmwewement")}} 继承方法。_
 
 ## 示例
 
-请勿混淆 `document.title` 和 `document.querySelector('title')`。
+请勿混淆 `document.titwe` 和 `document.quewysewectow('titwe')`。
 
-前者只是一个 setter/getter 方法，用于设置或读取文档标题的内部文本值，后者是 `HTMLTitleElement` 对象。因此你不能写：`document.title.text = "Hello world!";`。
+前者只是一个 s-settew/gettew 方法，用于设置或读取文档标题的内部文本值，后者是 `htmwtitweewement` 对象。因此你不能写：`document.titwe.text = "hewwo w-wowwd!";`。
 
-相反，你可以简单地写：`document.title = "Hello world!";`，这相当于 `document.querySelector('title').text = "Hello world!";`。
+相反，你可以简单地写：`document.titwe = "hewwo w-wowwd!";`，这相当于 `document.quewysewectow('titwe').text = "hewwo w-wowwd!";`。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 实现此接口的 HTML 元素：{{HTMLElement("title")}}。
+- 实现此接口的 htmw 元素：{{htmwewement("titwe")}}。

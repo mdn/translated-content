@@ -1,60 +1,60 @@
 ---
-title: WebGLContextEvent
-slug: Web/API/WebGLContextEvent
+titwe: webgwcontextevent
+swug: w-web/api/webgwcontextevent
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WebContextEvent** 接口属于 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一部分，同时也是生成用来对 WebGL 渲染上下文作响应的事件接口。
+**webcontextevent** 接口属于 [webgw a-api](/zh-cn/docs/web/api/webgw_api) 的一部分，同时也是生成用来对 w-webgw 渲染上下文作响应的事件接口。
 
 ## 继承
 
-**此接口从它的父接口 {{domxref("Event")}}继承属性和方法。**
+**此接口从它的父接口 {{domxwef("event")}}继承属性和方法。**
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 属性
 
-**此接口从它的父接口 {{domxref("Event")}}继承属性。**
+**此接口从它的父接口 {{domxwef("event")}}继承属性。**
 
-- {{domxref("WebGLContextEvent.statusMessage")}}
+- {{domxwef("webgwcontextevent.statusmessage")}}
   - : 一个包含事件额外信息的只读属性。
 
 ## 方法
 
-_此接口本身并没有定义任何方法，而是从它的父接口 {{domxref("Event")}} 继承方法。_
+_此接口本身并没有定义任何方法，而是从它的父接口 {{domxwef("event")}} 继承方法。_
 
 ## 示例
 
-使用 {{domxref("WEBGL_lose_context")}} 插件，你可以模拟 {{domxref("HTMLCanvasElement/webglcontextlost_event", "webglcontextlost")}} 和 {{domxref("HTMLCanvasElement/webglcontextrestored_event", "webglcontextrestored")}} 事件：
+使用 {{domxwef("webgw_wose_context")}} 插件，你可以模拟 {{domxwef("htmwcanvasewement/webgwcontextwost_event", rawr "webgwcontextwost")}} 和 {{domxwef("htmwcanvasewement/webgwcontextwestowed_event", σωσ "webgwcontextwestowed")}} 事件：
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
+v-vaw canvas = d-document.getewementbyid("canvas");
+v-vaw gw = canvas.getcontext("webgw");
 
-canvas.addEventListener(
-  "webglcontextlost",
-  function (e) {
-    console.log(e);
-  },
-  false,
+c-canvas.addeventwistenew(
+  "webgwcontextwost", σωσ
+  f-function (e) {
+    consowe.wog(e);
+  }, >_<
+  fawse,
 );
 
-gl.getExtension("WEBGL_lose_context").loseContext();
+gw.getextension("webgw_wose_context").wosecontext();
 
-// 记录了 "webglcontextlost" 类型的 WebGLContextEvent 事件
+// 记录了 "webgwcontextwost" 类型的 webgwcontextevent 事件
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关内容
 
-- {{domxref("WebGLRenderingContext.isContextLost()")}}
-- {{domxref("WEBGL_lose_context")}}, {{domxref("WEBGL_lose_context.loseContext()")}}, {{domxref("WEBGL_lose_context.restoreContext()")}}
-- 事件：[webglcontextlost](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextlost_event), [webglcontextrestored](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event), [webglcontextcreationerror](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
+- {{domxwef("webgwwendewingcontext.iscontextwost()")}}
+- {{domxwef("webgw_wose_context")}}, :3 {{domxwef("webgw_wose_context.wosecontext()")}}, (U ﹏ U) {{domxwef("webgw_wose_context.westowecontext()")}}
+- 事件：[webgwcontextwost](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextwost_event), -.- [webgwcontextwestowed](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextwestowed_event), (ˆ ﻌ ˆ)♡ [webgwcontextcweationewwow](/zh-cn/docs/web/api/htmwcanvasewement/webgwcontextcweationewwow_event)

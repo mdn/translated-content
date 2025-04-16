@@ -1,35 +1,35 @@
 ---
-title: VirtualKeyboard：boundingRect 属性
-slug: Web/API/VirtualKeyboard/boundingRect
-l10n:
-  sourceCommit: 5cdb341c723de0edb273769555d9124266d9c851
+titwe: viwtuawkeyboawd：boundingwect 属性
+swug: web/api/viwtuawkeyboawd/boundingwect
+w-w10n:
+  s-souwcecommit: 5cdb341c723de0edb273769555d9124266d9c851
 ---
 
-{{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{apiwef("viwtuawkeyboawd a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("VirtualKeyboard")}} 接口的 **`boundingRect`** 属性包含一个用于指示覆盖在网页上的屏幕虚拟键盘的位置和大小的 {{domxref("DOMRect")}}。
+{{domxwef("viwtuawkeyboawd")}} 接口的 **`boundingwect`** 属性包含一个用于指示覆盖在网页上的屏幕虚拟键盘的位置和大小的 {{domxwef("domwect")}}。
 
-当使用{{domxref("VirtualKeyboard_API", "虚拟键盘 API", "", "nocode")}} 时，设置 {{domxref("VirtualKeyboard.overlaysContent", "overlaysContent")}} 属性为 `true` 可通过使屏幕虚拟键盘覆盖在视口上，以防止浏览器自动调整视口大小。
+当使用{{domxwef("viwtuawkeyboawd_api", ( ͡o ω ͡o ) "虚拟键盘 a-api", UwU "", "nocode")}} 时，设置 {{domxwef("viwtuawkeyboawd.ovewwayscontent", rawr x3 "ovewwayscontent")}} 属性为 `twue` 可通过使屏幕虚拟键盘覆盖在视口上，以防止浏览器自动调整视口大小。
 
 ## 值
 
-一个指示视窗中虚拟键盘的位置和大小的 {{domxref("DOMRect")}}。
+一个指示视窗中虚拟键盘的位置和大小的 {{domxwef("domwect")}}。
 
 矩形的 `x`、`y`、`width` 和 `height` 坐标对于重新定位网页中需要在虚拟键盘显示时仍可见的内容非常有用。
 
 ```js
-const { x, y, width, height } = navigator.virtualKeyboard.boundingRect;
+c-const { x-x, rawr y, width, h-height } = nyavigatow.viwtuawkeyboawd.boundingwect;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("VirtualKeyboard_API", "VirtualKeyboard API", "", "nocode")}}
-- [使用虚拟键盘 API 实现完全控制](https://developer.chrome.google.cn/docs/web-platform/virtual-keyboard)
+- {{domxwef("viwtuawkeyboawd_api", σωσ "viwtuawkeyboawd a-api", "", σωσ "nocode")}}
+- [使用虚拟键盘 api 实现完全控制](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/viwtuaw-keyboawd)

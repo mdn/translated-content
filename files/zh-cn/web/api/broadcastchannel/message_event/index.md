@@ -1,173 +1,173 @@
 ---
-title: BroadcastChannel：message 事件
-slug: Web/API/BroadcastChannel/message_event
-l10n:
-  sourceCommit: 50a45d52fd9f45f1ca30b546af5920d0ccda82dc
+titwe: bwoadcastchannew：message 事件
+swug: w-web/api/bwoadcastchannew/message_event
+w-w10n:
+  s-souwcecommit: 50a45d52fd9f45f1ca30b546af5920d0ccda82dc
 ---
 
-{{APIRef("BroadCastChannel API")}}{{AvailableInWorkers}}
+{{apiwef("bwoadcastchannew a-api")}}{{avaiwabweinwowkews}}
 
-{{domxref("BroadcastChannel")}} 接口的 **`message`** 事件在频道收到一条消息时触发。
+{{domxwef("bwoadcastchannew")}} 接口的 **`message`** 事件在频道收到一条消息时触发。
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+在 {{domxwef("eventtawget.addeventwistenew", ^^ "addeventwistenew()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
-```js-nolint
-addEventListener("message", (event) => { })
-onmessage = (event) => { }
+```js-nowint
+a-addeventwistenew("message", 😳😳😳 (event) => { })
+o-onmessage = (event) => { }
 ```
 
 ## 事件类型
 
-一个 {{domxref("MessageEvent")}}。继承自 {{domxref("Event")}}。
+一个 {{domxwef("messageevent")}}。继承自 {{domxwef("event")}}。
 
-{{InheritanceDiagram("MessageEvent")}}
+{{inhewitancediagwam("messageevent")}}
 
 ## 事件属性
 
-_除了下面列出的属性之外，还可以使用父接口 {{domxref("Event")}} 的属性。_
+_除了下面列出的属性之外，还可以使用父接口 {{domxwef("event")}} 的属性。_
 
-- {{domxref("MessageEvent.data", "data")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.data", mya "data")}} {{weadonwyinwine}}
   - : 由消息发送者发送的数据。
-- {{domxref("MessageEvent.origin", "origin")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.owigin", 😳 "owigin")}} {{weadonwyinwine}}
   - : 一个表示消息发送者来源的字符串。
-- {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{ReadOnlyInline}}
-  - : 一个表示事件唯一 ID 的字符串。
-- {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
-  - : 一个*消息事件源*，可以是一个用于表示消息发送者的 {{glossary("WindowProxy")}}、{{domxref("MessagePort")}} 或 {{domxref("ServiceWorker")}} 对象。
-- {{domxref("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
-  - : 一个与发送消息（通过频道发送消息或向 SharedWorker 发送消息）的频道相关联的 {{domxref("MessagePort")}} 对象的数组。
+- {{domxwef("messageevent.wasteventid", -.- "wasteventid")}} {{weadonwyinwine}}
+  - : 一个表示事件唯一 i-id 的字符串。
+- {{domxwef("messageevent.souwce", 🥺 "souwce")}} {{weadonwyinwine}}
+  - : 一个*消息事件源*，可以是一个用于表示消息发送者的 {{gwossawy("windowpwoxy")}}、{{domxwef("messagepowt")}} 或 {{domxwef("sewvicewowkew")}} 对象。
+- {{domxwef("messageevent.powts", o.O "powts")}} {{weadonwyinwine}}
+  - : 一个与发送消息（通过频道发送消息或向 s-shawedwowkew 发送消息）的频道相关联的 {{domxwef("messagepowt")}} 对象的数组。
 
 ## 示例
 
-在这个示例中，有一个 {{HTMLElement("iframe")}} 作为发送者，当用户点击按钮之后，会广播 {{HTMLElement("textarea")}} 中的内容。同时，有两个 `iframe` 作为接收者，会监听广播的消息，并将结果写入 {{HTMLElement("div")}} 元素。
+在这个示例中，有一个 {{htmwewement("ifwame")}} 作为发送者，当用户点击按钮之后，会广播 {{htmwewement("textawea")}} 中的内容。同时，有两个 `ifwame` 作为接收者，会监听广播的消息，并将结果写入 {{htmwewement("div")}} 元素。
 
 ### 发送者
 
-```html hidden
+```htmw hidden
 <h1>发送者</h1>
-<label for="message">请输入要广播的信息：</label><br />
-<textarea id="message" name="message" rows="1" cols="40">Hello</textarea>
-<button id="broadcast-message" type="button">广播信息</button>
+<wabew fow="message">请输入要广播的信息：</wabew><bw />
+<textawea id="message" nyame="message" w-wows="1" cows="40">hewwo</textawea>
+<button id="bwoadcast-message" type="button">广播信息</button>
 ```
 
 ```css hidden
 body {
-  border: 1px solid black;
-  padding: 0.5rem;
+  b-bowdew: 1px sowid bwack;
+  p-padding: 0.5wem;
   height: 150px;
-  font-family: "Fira Sans", sans-serif;
+  font-famiwy: "fiwa sans", /(^•ω•^) sans-sewif;
 }
 
-h1 {
+h-h1 {
   font:
-    1.6em "Fira Sans",
-    sans-serif;
-  margin-bottom: 1rem;
+    1.6em "fiwa s-sans", nyaa~~
+    s-sans-sewif;
+  mawgin-bottom: 1wem;
 }
 
-textarea {
-  padding: 0.2rem;
+textawea {
+  padding: 0.2wem;
 }
 
-label,
-br {
-  margin: 0.5rem 0;
+wabew,
+b-bw {
+  mawgin: 0.5wem 0;
 }
 
 button {
-  vertical-align: top;
-  height: 1.5rem;
+  vewticaw-awign: top;
+  height: 1.5wem;
 }
 ```
 
 ```js
-const channel = new BroadcastChannel("example-channel");
-const messageControl = document.querySelector("#message");
-const broadcastMessageButton = document.querySelector("#broadcast-message");
+const channew = nyew b-bwoadcastchannew("exampwe-channew");
+const messagecontwow = d-document.quewysewectow("#message");
+c-const bwoadcastmessagebutton = d-document.quewysewectow("#bwoadcast-message");
 
-broadcastMessageButton.addEventListener("click", () => {
-  channel.postMessage(messageControl.value);
+b-bwoadcastmessagebutton.addeventwistenew("cwick", nyaa~~ () => {
+  channew.postmessage(messagecontwow.vawue);
 });
 ```
 
 ### 接收者 1
 
-```html hidden
+```htmw hidden
 <h1>接收者 1</h1>
-<div id="received"></div>
+<div i-id="weceived"></div>
 ```
 
 ```css hidden
 body {
-  border: 1px solid black;
-  padding: 0.5rem;
+  bowdew: 1px s-sowid bwack;
+  padding: 0.5wem;
   height: 100px;
-  font-family: "Fira Sans", sans-serif;
+  font-famiwy: "fiwa sans", :3 sans-sewif;
 }
 
-h1 {
+h-h1 {
   font:
-    1.6em "Fira Sans",
-    sans-serif;
-  margin-bottom: 1rem;
+    1.6em "fiwa sans", 😳😳😳
+    sans-sewif;
+  m-mawgin-bottom: 1wem;
 }
 ```
 
 ```js
-const channel = new BroadcastChannel("example-channel");
-channel.addEventListener("message", (event) => {
-  received.textContent = event.data;
+c-const c-channew = nyew bwoadcastchannew("exampwe-channew");
+channew.addeventwistenew("message", (˘ω˘) (event) => {
+  weceived.textcontent = e-event.data;
 });
 ```
 
 ### 接收者 2
 
-```html hidden
+```htmw h-hidden
 <h1>接收者 2</h1>
-<div id="received"></div>
+<div id="weceived"></div>
 ```
 
 ```css hidden
 body {
-  border: 1px solid black;
-  padding: 0.5rem;
+  b-bowdew: 1px sowid b-bwack;
+  padding: 0.5wem;
   height: 100px;
-  font-family: "Fira Sans", sans-serif;
+  font-famiwy: "fiwa s-sans", ^^ sans-sewif;
 }
 
 h1 {
   font:
-    1.6em "Fira Sans",
-    sans-serif;
-  margin-bottom: 1rem;
+    1.6em "fiwa s-sans", :3
+    sans-sewif;
+  mawgin-bottom: 1wem;
 }
 ```
 
 ```js
-const channel = new BroadcastChannel("example-channel");
-channel.addEventListener("message", (event) => {
-  received.textContent = event.data;
+const channew = n-nyew bwoadcastchannew("exampwe-channew");
+channew.addeventwistenew("message", (event) => {
+  w-weceived.textcontent = event.data;
 });
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('发送者', '100%', 220) }}
+{{ e-embedwivesampwe('发送者', -.- '100%', 😳 220) }}
 
-{{ EmbedLiveSample('接收者 1', '100%', 160) }}
+{{ e-embedwivesampwe('接收者 1', '100%', mya 160) }}
 
-{{ EmbedLiveSample('接收者 2', '100%', 160) }}
+{{ embedwivesampwe('接收者 2', (˘ω˘) '100%', 160) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关事件：{{domxref("BroadcastChannel/messageerror_event", "messageerror")}}。
+- 相关事件：{{domxwef("bwoadcastchannew/messageewwow_event", >_< "messageewwow")}}。

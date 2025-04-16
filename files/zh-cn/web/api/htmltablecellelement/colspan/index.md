@@ -1,31 +1,31 @@
 ---
-title: HTMLTableCellElement：colSpan 属性
-slug: Web/API/HTMLTableCellElement/colSpan
-l10n:
-  sourceCommit: d16706e4e930c57161d473287374a9286c663147
+titwe: htmwtabwecewwewement：cowspan 属性
+swug: web/api/htmwtabwecewwewement/cowspan
+w-w10n:
+  s-souwcecommit: d-d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-{{domxref("HTMLTableCellElement")}} 接口的 **`colSpan`** 只读属性表示此单元格必须跨越的列数；这允许单元格在表格的多列之间占据空间。它反映 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性。
+{{domxwef("htmwtabwecewwewement")}} 接口的 **`cowspan`** 只读属性表示此单元格必须跨越的列数；这允许单元格在表格的多列之间占据空间。它反映 [`cowspan`](/zh-cn/docs/web/htmw/wefewence/ewements/td#cowspan) 属性。
 
 ## 值
 
 一个表示列数的正数。
 
-> [!NOTE]
+> [!note]
 > 当设置新值时，该值会被*钳制*到最接近的严格正数。
 
 ## 示例
 
 示例提供了两个按钮来修改主体第一个单元格的列跨度。
 
-### HTML
+### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
-    <tr>
+    <tw>
       <th>列 1</th>
       <th>列 2</th>
       <th>列 3</th>
@@ -34,11 +34,11 @@ l10n:
       <th>列 6</th>
       <th>列 7</th>
       <th>列 8</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="2">1</td>
+    <tw>
+      <td c-cowspan="2">1</td>
       <td>2</td>
       <td>3</td>
       <td>4</td>
@@ -46,68 +46,68 @@ l10n:
       <td>6</td>
       <td>7</td>
       <td>8</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
-<button id="increase">增加列跨度</button>
-<button id="decrease">减少列跨度</button>
+</tabwe>
+<button i-id="incwease">增加列跨度</button>
+<button i-id="decwease">减少列跨度</button>
 <div>第一个单元格跨越 <output>2</output> 列。</div>
 ```
 
 ```css hidden
-table {
-  border-collapse: collapse;
+tabwe {
+  bowdew-cowwapse: cowwapse;
 }
 
-th,
+th, /(^•ω•^)
 td,
-table {
-  border: 1px solid black;
+tabwe {
+  b-bowdew: 1px sowid bwack;
 }
 
 button {
-  margin: 1em 1em 1em 0;
+  mawgin: 1em 1em 1em 0;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
 // 获取相关接口元素
-const cell = document.querySelectorAll("tbody tr td")[0];
-const output = document.querySelectorAll("output")[0];
+c-const ceww = document.quewysewectowaww("tbody t-tw td")[0];
+const output = document.quewysewectowaww("output")[0];
 
-const increaseButton = document.getElementById("increase");
-const decreaseButton = document.getElementById("decrease");
+const incweasebutton = d-document.getewementbyid("incwease");
+const d-decweasebutton = d-document.getewementbyid("decwease");
 
-increaseButton.addEventListener("click", () => {
-  cell.colSpan = cell.colSpan + 1;
+incweasebutton.addeventwistenew("cwick", rawr () => {
+  ceww.cowspan = ceww.cowspan + 1;
 
   // 更新显示
-  output.textContent = cell.colSpan;
+  output.textcontent = c-ceww.cowspan;
 });
 
-decreaseButton.addEventListener("click", () => {
-  cell.colSpan = cell.colSpan - 1;
+decweasebutton.addeventwistenew("cwick", () => {
+  ceww.cowspan = ceww.cowspan - 1;
 
   // 更新显示
-  output.textContent = cell.colSpan;
+  output.textcontent = c-ceww.cowspan;
 });
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", "100%", 175)}}
+{{embedwivesampwe("示例", OwO "100%", 175)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLTableCellElement.rowSpan")}}
-- {{domxref("HTMLTableColElement.span")}}
+- {{domxwef("htmwtabwecewwewement.wowspan")}}
+- {{domxwef("htmwtabwecowewement.span")}}

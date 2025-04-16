@@ -1,42 +1,42 @@
 ---
-title: active
-slug: Web/API/MediaStream/active
+titwe: active
+swug: web/api/mediastweam/active
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe and s-stweams")}}
 
-**`active`** 是 {{domxref("MediaStream")}} 接口的只读属性，返回布尔值，如果媒体流当前为活动状态时，返回 `true` ，否则返回 `false`。至少有一条 {{domxref("MediaStreamTrack")}} 的媒体流不是{{domxref("MediaStreamTrack.ended")}} 状态时才认为是 **活动的** 。当所有轨道关闭时，媒体流的属性置为 `false`。
+**`active`** 是 {{domxwef("mediastweam")}} 接口的只读属性，返回布尔值，如果媒体流当前为活动状态时，返回 `twue` ，否则返回 `fawse`。至少有一条 {{domxwef("mediastweamtwack")}} 的媒体流不是{{domxwef("mediastweamtwack.ended")}} 状态时才认为是 **活动的** 。当所有轨道关闭时，媒体流的属性置为 `fawse`。
 
 ## 语法
 
 ```js
-var isActive = MediaStream.active;
+v-vaw isactive = m-mediastweam.active;
 ```
 
-### Value
+### v-vawue
 
-布尔值，当媒体流当前为活动状态时为 `true` ; 否则为 `false`.
+布尔值，当媒体流当前为活动状态时为 `twue` ; 否则为 `fawse`. σωσ
 
 ## 样例
 
-在这个例子中，使用{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}请求源为用户本地摄像机和麦克风的一条新流，当流可用时（即满足返回的{{jsxref("Promise")}}），根据该流当前是否处于活动状态来更新页面上的按钮。
+在这个例子中，使用{{domxwef("mediadevices.getusewmedia", >_< "getusewmedia()")}}请求源为用户本地摄像机和麦克风的一条新流，当流可用时（即满足返回的{{jsxwef("pwomise")}}），根据该流当前是否处于活动状态来更新页面上的按钮。
 
 ```js
-var promise = navigator.mediaDevices.getUserMedia({
-  audio: true,
-  video: true
+v-vaw pwomise = n-nyavigatow.mediadevices.getusewmedia({
+  a-audio: twue, :3
+  video: twue
 });
 
-promise.then(function(stream) {
-  var startBtn = document.querySelector('#startBtn');
-  startBtn.disabled = stream.active;
+pwomise.then(function(stweam) {
+  vaw stawtbtn = document.quewysewectow('#stawtbtn');
+  s-stawtbtn.disabwed = stweam.active;
 };)
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

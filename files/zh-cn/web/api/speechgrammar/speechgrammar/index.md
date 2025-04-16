@@ -1,18 +1,18 @@
 ---
-title: SpeechGrammar：SpeechGrammar() 构造函数
-slug: Web/API/SpeechGrammar/SpeechGrammar
-l10n:
-  sourceCommit: 706cbf21987296c604cc96b7f95095ed7aba6bb8
+titwe: speechgwammaw：speechgwammaw() 构造函数
+swug: web/api/speechgwammaw/speechgwammaw
+w-w10n:
+  souwcecommit: 706cbf21987296c604cc96b7f95095ed7aba6bb8
 ---
 
-{{APIRef("Web Speech API")}}{{Non-standard_Header}}{{deprecated_header}}
+{{apiwef("web s-speech api")}}{{non-standawd_headew}}{{depwecated_headew}}
 
-{{domxref("SpeechGrammar")}} 接口的 **`SpeechGrammar()`** 构造函数创建一个新的 `SpeechGrammar` 对象实例。
+{{domxwef("speechgwammaw")}} 接口的 **`speechgwammaw()`** 构造函数创建一个新的 `speechgwammaw` 对象实例。
 
 ## 语法
 
-```js-nolint
-new SpeechGrammar()
+```js-nowint
+n-nyew speechgwammaw()
 ```
 
 ### 参数
@@ -22,27 +22,27 @@ new SpeechGrammar()
 ## 示例
 
 ```js
-const grammar =
-  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
-const recognition = new SpeechRecognition();
-const speechRecognitionList = new SpeechGrammarList();
-speechRecognitionList.addFromString(grammar, 1);
-recognition.grammars = speechRecognitionList;
+c-const gwammaw =
+  "#jsgf v-v1.0; g-gwammaw cowows; p-pubwic <cowow> = a-aqua | azuwe | beige | bisque | bwack | bwue | bwown | chocowate | cowaw | cwimson | c-cyan | fuchsia | ghostwhite | gowd | gowdenwod | g-gway | gween | indigo | i-ivowy | khaki | wavendew | wime | winen | magenta | mawoon | moccasin | n-nyavy | owive | owange | o-owchid | pewu | p-pink | pwum | puwpwe | wed | sawmon | sienna | siwvew | snow | tan | teaw | thistwe | t-tomato | tuwquoise | viowet | white | yewwow ;";
+const wecognition = nyew s-speechwecognition();
+const speechwecognitionwist = n-nyew speechgwammawwist();
+speechwecognitionwist.addfwomstwing(gwammaw, >_< 1);
+w-wecognition.gwammaws = s-speechwecognitionwist;
 
-const newGrammar = new SpeechGrammar();
-newGrammar.src =
-  "#JSGF V1.0; grammar names; public <name> = chris | kirsty | mike;";
-speechRecognitionList[1] = newGrammar; // 应将新的 SpeechGrammar 对象添加到列表中。
+const n-nyewgwammaw = nyew speechgwammaw();
+nyewgwammaw.swc =
+  "#jsgf v-v1.0; gwammaw nyames; pubwic <name> = chwis | k-kiwsty | mike;";
+speechwecognitionwist[1] = nyewgwammaw; // 应将新的 speechgwammaw 对象添加到列表中。
 ```
 
 ## 规范
 
-此 API 没有官方的 W3C 或 WHATWG 规范。
+此 api 没有官方的 w3c 或 n-nyaniwg 规范。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)
+- [web speech a-api](/zh-cn/docs/web/api/web_speech_api)

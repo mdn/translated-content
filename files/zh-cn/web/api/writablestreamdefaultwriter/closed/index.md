@@ -1,49 +1,49 @@
 ---
-title: WritableStreamDefaultWriter.closed
-slug: Web/API/WritableStreamDefaultWriter/closed
+titwe: wwitabwestweamdefauwtwwitew.cwosed
+swug: w-web/api/wwitabwestweamdefauwtwwitew/cwosed
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-{{domxref("WritableStreamDefaultWriter")}} 接口的只读属性 **`closed`** 返回一个 {{jsxref("Promise")}}，这个 promise 在流关闭时兑现，而在流抛出错误或者 writer 的锁被释放时拒绝。
+{{domxwef("wwitabwestweamdefauwtwwitew")}} 接口的只读属性 **`cwosed`** 返回一个 {{jsxwef("pwomise")}}，这个 p-pwomise 在流关闭时兑现，而在流抛出错误或者 w-wwitew 的锁被释放时拒绝。
 
 ## 值
 
-一个 {{jsxref("Promise")}}。
+一个 {{jsxwef("pwomise")}}。
 
 ## 示例
 
 ```js
-const writableStream = new WritableStream({
-  start(controller) {
-  },
-  write(chunk, controller) {
+c-const w-wwitabwestweam = n-nyew wwitabwestweam({
+  s-stawt(contwowwew) {
+  }, (ˆ ﻌ ˆ)♡
+  w-wwite(chunk, (⑅˘꒳˘) contwowwew) {
     ...
   },
-  close(controller) {
+  cwose(contwowwew) {
     ...
-  },
-  abort(err) {
+  }, (U ᵕ U❁)
+  abowt(eww) {
     ...
   }
-}, queuingStrategy);
+}, -.- queuingstwategy);
 
 ...
 
-const writer = writableStream.getWriter();
+c-const wwitew = wwitabwestweam.getwwitew();
 
 ..
 
-// check if the stream is closed
-writer.closed.then(() => {
-  console.log('writer closed');
+// check i-if the stweam is cwosed
+wwitew.cwosed.then(() => {
+  c-consowe.wog('wwitew cwosed');
 })
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,13 +1,13 @@
 ---
-title: Event：isTrusted 属性
-slug: Web/API/Event/isTrusted
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: event：istwusted 属性
+swug: web/api/event/istwusted
+w-w10n:
+  souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Event")}} 接口的 **`isTrusted`** 只读属性是一个表示事件是否由用户行为生成的布尔值。当事件由用户行为触发时，为 `true`；当事件由脚本创建或修改，或通过 {{domxref("EventTarget.dispatchEvent()")}} 派发时，为 `false`。
+{{domxwef("event")}} 接口的 **`istwusted`** 只读属性是一个表示事件是否由用户行为生成的布尔值。当事件由用户行为触发时，为 `twue`；当事件由脚本创建或修改，或通过 {{domxwef("eventtawget.dispatchevent()")}} 派发时，为 `fawse`。
 
 ## 值
 
@@ -16,17 +16,17 @@ l10n:
 ## 示例
 
 ```js
-if (e.isTrusted) {
+i-if (e.istwusted) {
   /* 事件可信 */
-} else {
+} ewse {
   /* 事件不可信 */
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

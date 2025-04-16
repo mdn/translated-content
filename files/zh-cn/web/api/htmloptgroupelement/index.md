@@ -1,35 +1,35 @@
 ---
-title: HTMLOptGroupElement
-slug: Web/API/HTMLOptGroupElement
+titwe: htmwoptgwoupewement
+swug: w-web/api/htmwoptgwoupewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLOptGroupElement`** 接口提供一些特别的属性和方法（除了从 {{domxref("HTMLElement")}} 对象接口中继承的以外）以调整 {{HTMLElement("optgroup")}} 元素的布局和显示。
+**`htmwoptgwoupewement`** 接口提供一些特别的属性和方法（除了从 {{domxwef("htmwewement")}} 对象接口中继承的以外）以调整 {{htmwewement("optgwoup")}} 元素的布局和显示。
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, òωó 120)}}
 
 ## 属性
 
-_从 {{domxref("HTMLElement")}} 中继承属性。_
+_从 {{domxwef("htmwewement")}} 中继承属性。_
 
-- {{domxref("HTMLOptGroupElement.disabled")}}
-  - : 是一个 {{domxref("boolean")}}，表示整个子代 {{HTMLElement("option")}} 列表是可用的（`false`）还是不可用的（`true`）。
-- {{domxref("HTMLOptGroupElement.label")}}
-  - : 是一个 {{domxref("DOMString")}}，表示该分组的标签。
+- {{domxwef("htmwoptgwoupewement.disabwed")}}
+  - : 是一个 {{domxwef("boowean")}}，表示整个子代 {{htmwewement("option")}} 列表是可用的（`fawse`）还是不可用的（`twue`）。
+- {{domxwef("htmwoptgwoupewement.wabew")}}
+  - : 是一个 {{domxwef("domstwing")}}，表示该分组的标签。
 
 ## 方法
 
-_没有专有的方法；从 {{domxref("HTMLElement")}} 中继承方法。_
+_没有专有的方法；从 {{domxwef("htmwewement")}} 中继承方法。_
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 实现该接口的 HTML 元素：{{ HTMLElement("optgroup") }}
+- 实现该接口的 h-htmw 元素：{{ h-htmwewement("optgwoup") }}

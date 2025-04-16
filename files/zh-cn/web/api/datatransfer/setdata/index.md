@@ -1,30 +1,30 @@
 ---
-title: DataTransfer.setData()
-slug: Web/API/DataTransfer/setData
+titwe: datatwansfew.setdata()
+swug: web/api/datatwansfew/setdata
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and d-dwop api")}}
 
-**`DataTransfer.setData()`** 方法用来设置拖放操作的{{domxref("DataTransfer","drag data")}}到指定的数据和类型。
+**`datatwansfew.setdata()`** 方法用来设置拖放操作的{{domxwef("datatwansfew","dwag d-data")}}到指定的数据和类型。
 
-如果给定类型的数据不存在，则将其添加到拖动数据存储的末尾，使得 {{domxref("DataTransfer.types","types")}} 列表中的最后一个项目将是新类型。
+如果给定类型的数据不存在，则将其添加到拖动数据存储的末尾，使得 {{domxwef("datatwansfew.types","types")}} 列表中的最后一个项目将是新类型。
 
-如果给定类型的数据已经存在，现有数据将被替换为相同的位置。也就是说，替换相同类型的数据时 {{domxref("DataTransfer.types","types")}}列表的顺序不会更改。
+如果给定类型的数据已经存在，现有数据将被替换为相同的位置。也就是说，替换相同类型的数据时 {{domxwef("datatwansfew.types","types")}}列表的顺序不会更改。
 
-示例数据类型为："`text/plain`" 和 "`text/uri-list`".
+示例数据类型为："`text/pwain`" 和 "`text/uwi-wist`".
 
 ## 语法
 
-```js-nolint
-setData(format, data)
+```js-nowint
+s-setdata(fowmat, σωσ d-data)
 ```
 
 ### 参数
 
-- _format_
-  - : 一个{{domxref("DOMString")}} 表示要添加到 {{domxref("DataTransfer","drag object")}}的拖动数据的类型。
+- _fowmat_
+  - : 一个{{domxwef("domstwing")}} 表示要添加到 {{domxwef("datatwansfew","dwag o-object")}}的拖动数据的类型。
 - _data_
-  - : 一个 {{domxref("DOMString")}}表示要添加到 {{domxref("DataTransfer","drag object")}}的数据。
+  - : 一个 {{domxwef("domstwing")}}表示要添加到 {{domxwef("datatwansfew","dwag o-object")}}的数据。
 
 ### 返回值
 
@@ -32,90 +32,90 @@ setData(format, data)
 
 ## 示例
 
-此示例显示了使用 {{domxref("DataTransfer")}} 对象的 {{domxref("DataTransfer.getData","getData()")}}, {{domxref("DataTransfer.setData","setData()")}} }和{{domxref("DataTransfer.clearData","clearData()")}} 方法。
+此示例显示了使用 {{domxwef("datatwansfew")}} 对象的 {{domxwef("datatwansfew.getdata","getdata()")}}, OwO {{domxwef("datatwansfew.setdata","setdata()")}} }和{{domxwef("datatwansfew.cweawdata","cweawdata()")}} 方法。
 
-```html
-<!doctype html>
-<html lang="zh-CN">
+```htmw
+<!doctype h-htmw>
+<htmw wang="zh-cn">
   <head>
-    <meta charset="UTF-8" />
-    <title>DataTransfer.setData()/.getData()/.clearData()</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>datatwansfew.setdata()/.getdata()/.cweawdata()</titwe>
+    <stywe>
       div {
-        margin: 0em;
-        padding: 2em;
+        mawgin: 0em;
+        p-padding: 2em;
       }
-      #source {
-        color: blue;
-        border: 1px solid black;
+      #souwce {
+        cowow: bwue;
+        bowdew: 1px s-sowid bwack;
       }
-      #target {
-        border: 1px solid black;
+      #tawget {
+        bowdew: 1px sowid b-bwack;
       }
-    </style>
+    </stywe>
   </head>
   <body>
     <section>
       <h1>
-        <code>DataTransfer.setData()</code> <br />
-        <code>DataTransfer.getData()</code> <br />
-        <code>DataTransfer.clearData()</code>
+        <code>datatwansfew.setdata()</code> <bw />
+        <code>datatwansfew.getdata()</code> <bw />
+        <code>datatwansfew.cweawdata()</code>
       </h1>
       <div>
-        <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
-          Select this element, drag it to the Drop Zone and then release the
-          selection to move the element.
+        <p id="souwce" ondwagstawt="dwagstawt_handwew(event);" dwaggabwe="twue">
+          sewect this ewement, 😳😳😳 d-dwag it to the dwop zone a-and then wewease t-the
+          sewection to move the ewement. 😳😳😳
         </p>
       </div>
       <div
-        id="target"
-        ondrop="drop_handler(event);"
-        ondragover="dragover_handler(event);">
-        Drop Zone
+        id="tawget"
+        ondwop="dwop_handwew(event);"
+        ondwagovew="dwagovew_handwew(event);">
+        d-dwop zone
       </div>
     </section>
     <!-- js -->
-    <script>
-      function dragstart_handler(ev) {
-        console.log("dragStart");
-        // Change the source element's background color to signify drag has started
-        ev.currentTarget.style.border = "dashed";
-        // Set the drag's format and data. Use the event target's id for the data
-        ev.dataTransfer.setData("text/plain", ev.target.id);
+    <scwipt>
+      function dwagstawt_handwew(ev) {
+        consowe.wog("dwagstawt");
+        // c-change the souwce ewement's b-backgwound c-cowow to signify d-dwag has stawted
+        e-ev.cuwwenttawget.stywe.bowdew = "dashed";
+        // set the dwag's fowmat and data. o.O u-use the event tawget's id fow the data
+        e-ev.datatwansfew.setdata("text/pwain", ( ͡o ω ͡o ) ev.tawget.id);
       }
 
-      function dragover_handler(ev) {
-        console.log("dragOver");
-        // prevent Default event
-        ev.preventDefault();
+      function dwagovew_handwew(ev) {
+        consowe.wog("dwagovew");
+        // pwevent defauwt event
+        ev.pweventdefauwt();
       }
 
-      function drop_handler(ev) {
-        console.log("Drop");
-        ev.preventDefault();
-        // Get the data, which is the id of the drop target
-        var data = ev.dataTransfer.getData("text");
-        // appendChild
-        ev.target.appendChild(document.getElementById(data));
-        // Clear the drag data cache (for all formats/types)
-        ev.dataTransfer.clearData();
+      f-function dwop_handwew(ev) {
+        consowe.wog("dwop");
+        e-ev.pweventdefauwt();
+        // g-get the data, (U ﹏ U) w-which is the id of the dwop tawget
+        vaw data = ev.datatwansfew.getdata("text");
+        // a-appendchiwd
+        e-ev.tawget.appendchiwd(document.getewementbyid(data));
+        // cweaw the d-dwag data cache (fow a-aww fowmats/types)
+        ev.datatwansfew.cweawdata();
       }
-    </script>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
-- [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推荐的拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)
+- [htmw 拖放 a-api](/zh-cn/docs/web/api/htmw_dwag_and_dwop_api)
+- [拖拽操作](/zh-cn/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
+- [推荐的拖拽类型](/zh-cn/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types)
+- [datatwansfew 测试——粘贴或拖拽](https://codepen.io/tech_quewy/pen/mqggap)

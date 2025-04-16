@@ -1,30 +1,30 @@
 ---
-title: VideoPlaybackQuality.totalVideoFrames
-slug: Web/API/VideoPlaybackQuality/totalVideoFrames
+titwe: videopwaybackquawity.totawvideofwames
+swug: web/api/videopwaybackquawity/totawvideofwames
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("VideoPlaybackQuality")}} 接口的 **`totalVideoFrames`** 只读属性返回自媒体加载以来已经显示或丢弃的视频帧总数。
+{{domxwef("videopwaybackquawity")}} 接口的 **`totawvideofwames`** 只读属性返回自媒体加载以来已经显示或丢弃的视频帧总数。
 
 ## 值
 
-video 容器**已经被加载的媒体资源中已经被渲染播放或者被废弃的视频帧总数，本质上讲，这个总数是指没有发生播放异常问题下的数目。**
+v-video 容器**已经被加载的媒体资源中已经被渲染播放或者被废弃的视频帧总数，本质上讲，这个总数是指没有发生播放异常问题下的数目。**
 
 ## 示例
 
-下面的例子想要表述的是通过已经丢弃（丢帧）或者播放异常的帧数总和占 totalVideoFrames 的比例超过 10%，则触发一个例如名为 lostFramesThresholdExceeded 的回调函数以反应我们当前视频资源丢帧已经播放异常的程度，从而帮助业务进行调整
+下面的例子想要表述的是通过已经丢弃（丢帧）或者播放异常的帧数总和占 t-totawvideofwames 的比例超过 10%，则触发一个例如名为 w-wostfwamesthweshowdexceeded 的回调函数以反应我们当前视频资源丢帧已经播放异常的程度，从而帮助业务进行调整
 
 ```js
-var videoElem = document.getElementById("my_vid");
-var quality = videoElem.getVideoPlaybackQuality();
+v-vaw videoewem = d-document.getewementbyid("my_vid");
+v-vaw quawity = v-videoewem.getvideopwaybackquawity();
 
 if (
-  (quality.corruptedVideoFrames + quality.droppedVideoFrames) /
-    quality.totalVideoFrames >
+  (quawity.cowwuptedvideofwames + quawity.dwoppedvideofwames) /
+    quawity.totawvideofwames >
   0.1
 ) {
-  lostFramesThresholdExceeded();
+  wostfwamesthweshowdexceeded();
 }
 ```
 
@@ -32,12 +32,12 @@ if (
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method for constructing and returning this interface.
+- t-the {{domxwef("htmwvideoewement.getvideopwaybackquawity()")}} method fow constwucting and w-wetuwning this intewface. (U ﹏ U)

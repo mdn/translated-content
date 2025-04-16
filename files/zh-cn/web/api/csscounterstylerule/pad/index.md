@@ -1,13 +1,13 @@
 ---
-title: CSSCounterStyleRule：pad 属性
-slug: Web/API/CSSCounterStyleRule/pad
-l10n:
-  sourceCommit: 9840d330e75b5fa4eec7034859a7d96e5d6ae07b
+titwe: csscountewstywewuwe：pad 属性
+swug: w-web/api/csscountewstywewuwe/pad
+w-w10n:
+  souwcecommit: 9840d330e75b5fa4eec7034859a7d96e5d6ae07b
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-{{domxref("CSSCounterStyleRule")}} 接口的 **`pad`** 属性用于获取或设置 {{cssxref("@counter-style/pad", "pad")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
+{{domxwef("csscountewstywewuwe")}} 接口的 **`pad`** 属性用于获取或设置 {{cssxwef("@countew-stywe/pad", UwU "pad")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
 
 ## 值
 
@@ -15,25 +15,25 @@ l10n:
 
 ## 示例
 
-以下示例展示了 {{cssxref("@counter-style")}} 样式的规则。在 JavaScript 中，`myRules[0]` 为 `@counter-style` 规则，`pad` 返回值为“0”。
+以下示例展示了 {{cssxwef("@countew-stywe")}} 样式的规则。在 j-javascwipt 中，`mywuwes[0]` 为 `@countew-stywe` 规则，`pad` 返回值为“0”。
 
 ```css
-@counter-style box-corner {
-  system: numeric;
-  symbols: "0" "1" "2" "3" "4" "5";
-  pad: 2 "0";
+@countew-stywe b-box-cownew {
+  s-system: nyumewic;
+  s-symbows: "0" "1" "2" "3" "4" "5";
+  p-pad: 2 "0";
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].pad); // "0"
+w-wet mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0].pad); // "0"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

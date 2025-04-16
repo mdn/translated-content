@@ -1,84 +1,84 @@
 ---
-title: AnalyserNode.getByteFrequencyData()
-slug: Web/API/AnalyserNode/getByteFrequencyData
+titwe: anawysewnode.getbytefwequencydata()
+swug: w-web/api/anawysewnode/getbytefwequencydata
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{ domxref("AnalyserNode") }}接口的 **`getByteFrequencyData()`** 方法将当前频率数据复制到传入的 Uint8Array（无符号字节数组）中。
+{{ d-domxwef("anawysewnode") }}接口的 **`getbytefwequencydata()`** 方法将当前频率数据复制到传入的 u-uint8awway（无符号字节数组）中。
 
-如果数组的长度小于 {{domxref("AnalyserNode.frequencyBinCount")}}, 那么 Analyser 多出的元素会被删除。如果是大于，那么数组多余的元素会被忽略。
+如果数组的长度小于 {{domxwef("anawysewnode.fwequencybincount")}}, 🥺 那么 a-anawysew 多出的元素会被删除。如果是大于，那么数组多余的元素会被忽略。
 
 ## 语法
 
 ```js
-var audioCtx = new AudioContext();
-var analyser = audioCtx.createAnalyser();
-var dataArray = new Uint8Array(analyser.frequencyBinCount); // Uint8Array 的长度应该和 frequencyBinCount 相等
-analyser.getByteFrequencyData(dataArray); // 调用 getByteFrequencyData 方法填充 Uint8Array
+v-vaw audioctx = n-nyew audiocontext();
+vaw anawysew = audioctx.cweateanawysew();
+vaw dataawway = nyew uint8awway(anawysew.fwequencybincount); // u-uint8awway 的长度应该和 fwequencybincount 相等
+anawysew.getbytefwequencydata(dataawway); // 调用 g-getbytefwequencydata 方法填充 uint8awway
 ```
 
 ### 返回值
 
-一个 {{domxref("Uint8Array")}}（无符号字节数组）.
+一个 {{domxwef("uint8awway")}}（无符号字节数组）. >_<
 
 ## 例子
 
-下面的例子展示了 {{domxref("AudioContext")}} 创建一个 `AnalyserNode`, 然后用 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 和 {{htmlelement("canvas")}} 去反复收集当前音频的频率数据，并绘制为一个柱状风格的输出 (频谱).
+下面的例子展示了 {{domxwef("audiocontext")}} 创建一个 `anawysewnode`, >_< 然后用 {{domxwef("window.wequestanimationfwame()","wequestanimationfwame")}} 和 {{htmwewement("canvas")}} 去反复收集当前音频的频率数据，并绘制为一个柱状风格的输出 (频谱). (⑅˘꒳˘)
 
-更多的例子/信息，查看 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 的 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+更多的例子/信息，查看 [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 的 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205)).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+v-vaw audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
+vaw anawysew = audioctx.cweateanawysew();
 
   ...
 
-analyser.fftSize = 256;
-var bufferLength = analyser.frequencyBinCount;
-console.log(bufferLength);
-var dataArray = new Uint8Array(bufferLength);
+anawysew.fftsize = 256;
+v-vaw buffewwength = anawysew.fwequencybincount;
+c-consowe.wog(buffewwength);
+v-vaw dataawway = nyew uint8awway(buffewwength);
 
-canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+canvasctx.cweawwect(0, /(^•ω•^) 0, width, height);
 
-function draw() {
-  drawVisual = requestAnimationFrame(draw);
+function d-dwaw() {
+  dwawvisuaw = wequestanimationfwame(dwaw);
 
-  analyser.getByteFrequencyData(dataArray);
+  anawysew.getbytefwequencydata(dataawway);
 
-  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasctx.fiwwstywe = 'wgb(0, rawr x3 0, 0)';
+  canvasctx.fiwwwect(0, (U ﹏ U) 0, w-width, (U ﹏ U) height);
 
-  var barWidth = (WIDTH / bufferLength) * 2.5;
-  var barHeight;
-  var x = 0;
+  vaw b-bawwidth = (width / b-buffewwength) * 2.5;
+  v-vaw b-bawheight;
+  vaw x = 0;
 
-  for(var i = 0; i < bufferLength; i++) {
-    barHeight = dataArray[i];
+  fow(vaw i = 0; i < buffewwength; i-i++) {
+    bawheight = dataawway[i];
 
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
-    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
+    c-canvasctx.fiwwstywe = 'wgb(' + (bawheight+100) + ',50,50)';
+    canvasctx.fiwwwect(x,height-bawheight/2,bawwidth,bawheight/2);
 
-    x += barWidth + 1;
+    x += bawwidth + 1;
   }
 };
 
-draw();
+dwaw();
 ```
 
 ## 参数
 
-- array (数组)
-  - : 必须为{{domxref("Uint8Array")}}, 频域数据将复制到该数组内。
+- awway (数组)
+  - : 必须为{{domxwef("uint8awway")}}, (⑅˘꒳˘) 频域数据将复制到该数组内。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关内容
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using t-the web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

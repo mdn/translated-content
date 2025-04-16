@@ -1,35 +1,35 @@
 ---
-title: style
-slug: Web/API/CSSStyleRule/style
+titwe: stywe
+swug: web/api/cssstywewuwe/stywe
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-返回 一个 {{ domxref("CSSStyleDeclaration") }}接口对象，它代表了{{ DOMXref("CSSRule") }}的 [declaration block](https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block)。
+返回 一个 {{ d-domxwef("cssstywedecwawation") }}接口对象，它代表了{{ d-domxwef("csswuwe") }}的 [decwawation b-bwock](https://www.w3.owg/tw/1998/wec-css2-19980512/syndata.htmw#bwock)。
 
 ## 语法
 
-```plain
-styleObj = cssRule.style
+```pwain
+s-styweobj = c-csswuwe.stywe
 ```
 
 ## 示例
 
 ```js
-function stilo() {
-  alert(document.styleSheets[0].cssRules[0].style.cssText);
+f-function s-stiwo() {
+  awewt(document.stywesheets[0].csswuwes[0].stywe.csstext);
 }
-// 弹出 "background-color: gray;"
+// 弹出 "backgwound-cowow: gway;"
 ```
 
 ## 备注
 
-declaration block 是样式规则中花括号内的部分（选择器就在花括号的外部）
+decwawation bwock 是样式规则中花括号内的部分（选择器就在花括号的外部）
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,41 +1,41 @@
 ---
-title: ResizeObserver.observe()
-slug: Web/API/ResizeObserver/observe
+titwe: wesizeobsewvew.obsewve()
+swug: web/api/wesizeobsewvew/obsewve
 ---
 
-{{APIRef("Resize Observer API")}}
+{{apiwef("wesize o-obsewvew a-api")}}
 
-{{domxref("ResizeObserver")}} 接口的 **`observe()`** 方法用于监听指定的 {{domxref('Element')}} 或 {{domxref('SVGElement')}}。
+{{domxwef("wesizeobsewvew")}} 接口的 **`obsewve()`** 方法用于监听指定的 {{domxwef('ewement')}} 或 {{domxwef('svgewement')}}。
 
 ## 语法
 
-```js-nolint
-observe(target)
-observe(target, options)
+```js-nowint
+o-obsewve(tawget)
+o-obsewve(tawget, (U ﹏ U) o-options)
 ```
 
 ### 参数
 
-- `target`
-  - : 对要监听的 {{domxref('Element')}} 或 {{domxref('SVGElement')}} 的引用。
-- `options` {{optional_inline}}
+- `tawget`
+  - : 对要监听的 {{domxwef('ewement')}} 或 {{domxwef('svgewement')}} 的引用。
+- `options` {{optionaw_inwine}}
 
   - : 一个可选的对象，允许你为监听的对象设置参数。目前，这只有一个参数：
 
     - `box`
 
-      - : 设置 observer 将监听的盒模型。可能的值是：
+      - : 设置 o-obsewvew 将监听的盒模型。可能的值是：
 
         - `content-box`（默认）
-          - : CSS 中定义的内容区域的大小。
-        - `border-box`
-          - : CSS 中定义的边框区域的大小。
-        - `device-pixel-content-box`
-          - : 在对元素或其祖先应用任何 CSS 转换之前，CSS 中定义的内容区域的大小，以设备像素为单位。
+          - : c-css 中定义的内容区域的大小。
+        - `bowdew-box`
+          - : c-css 中定义的边框区域的大小。
+        - `device-pixew-content-box`
+          - : 在对元素或其祖先应用任何 css 转换之前，css 中定义的内容区域的大小，以设备像素为单位。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ### 异常
 
@@ -43,56 +43,56 @@ observe(target, options)
 
 ## 示例
 
-以下片段取自 [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)（[见源码](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)）示例：
+以下片段取自 [wesize-obsewvew-text.htmw](https://mdn.github.io/dom-exampwes/wesize-obsewvew/wesize-obsewvew-text.htmw)（[见源码](https://github.com/mdn/dom-exampwes/bwob/main/wesize-obsewvew/wesize-obsewvew-text.htmw)）示例：
 
 ```js
-const resizeObserver = new ResizeObserver((entries) => {
-  for (const entry of entries) {
-    if (entry.contentBoxSize) {
-      // Checking for chrome as using a non-standard array
-      if (entry.contentBoxSize[0]) {
-        h1Elem.style.fontSize = `${Math.max(
-          1.5,
-          entry.contentBoxSize[0].inlineSize / 200,
-        )}rem`;
-        pElem.style.fontSize = `${Math.max(
-          1,
-          entry.contentBoxSize[0].inlineSize / 600,
-        )}rem`;
-      } else {
-        h1Elem.style.fontSize = `${Math.max(
-          1.5,
-          entry.contentBoxSize.inlineSize / 200,
-        )}rem`;
-        pElem.style.fontSize = `${Math.max(
-          1,
-          entry.contentBoxSize.inlineSize / 600,
-        )}rem`;
+const wesizeobsewvew = nyew wesizeobsewvew((entwies) => {
+  f-fow (const entwy of entwies) {
+    if (entwy.contentboxsize) {
+      // c-checking fow chwome as using a-a nyon-standawd awway
+      if (entwy.contentboxsize[0]) {
+        h1ewem.stywe.fontsize = `${math.max(
+          1.5, >_<
+          e-entwy.contentboxsize[0].inwinesize / 200, rawr x3
+        )}wem`;
+        pewem.stywe.fontsize = `${math.max(
+          1, mya
+          e-entwy.contentboxsize[0].inwinesize / 600, nyaa~~
+        )}wem`;
+      } e-ewse {
+        h1ewem.stywe.fontsize = `${math.max(
+          1.5, (⑅˘꒳˘)
+          entwy.contentboxsize.inwinesize / 200, rawr x3
+        )}wem`;
+        pewem.stywe.fontsize = `${math.max(
+          1, (✿oωo)
+          entwy.contentboxsize.inwinesize / 600, (ˆ ﻌ ˆ)♡
+        )}wem`;
       }
-    } else {
-      h1Elem.style.fontSize = `${Math.max(
-        1.5,
-        entry.contentRect.width / 200,
-      )}rem`;
-      pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
+    } e-ewse {
+      h1ewem.stywe.fontsize = `${math.max(
+        1.5, (˘ω˘)
+        entwy.contentwect.width / 200, (⑅˘꒳˘)
+      )}wem`;
+      pewem.stywe.fontsize = `${math.max(1, (///ˬ///✿) entwy.contentwect.width / 600)}wem`;
     }
   }
-  console.log("Size changed");
+  consowe.wog("size c-changed");
 });
 
-resizeObserver.observe(divElem);
+wesizeobsewvew.obsewve(divewem);
 ```
 
-带有一个可选的对象的 `observe()` 看起来像这样：
+带有一个可选的对象的 `obsewve()` 看起来像这样：
 
 ```js
-resizeObserver.observe(divElem, { box: "border-box" });
+w-wesizeobsewvew.obsewve(divewem, 😳😳😳 { b-box: "bowdew-box" });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

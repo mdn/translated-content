@@ -1,30 +1,30 @@
 ---
-title: DeviceOrientationEvent.alpha
-slug: Web/API/DeviceOrientationEvent/alpha
+titwe: deviceowientationevent.awpha
+swug: web/api/deviceowientationevent/awpha
 ---
 
-{{ ApiRef("Device Orientation Events") }}
+{{ a-apiwef("device o-owientation e-events") }}
 
-返回设备旋转时 Z 轴的值；即：设备围绕屏幕中心扭转的角度。详细信息请查看[方向和运动数据](/zh-CN/docs/DOM/Orientation_and_motion_data_explained)。
+返回设备旋转时 z-z 轴的值；即：设备围绕屏幕中心扭转的角度。详细信息请查看[方向和运动数据](/zh-cn/docs/dom/owientation_and_motion_data_expwained)。
 
-## Syntax
+## s-syntax
 
-```plain
-var alpha = instanceOfDeviceOrientationEvent.alpha;
+```pwain
+v-vaw awpha = instanceofdeviceowientationevent.awpha;
 ```
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/zh-CN/Detecting_device_orientation)
-- [Orientation and motion data explained](/zh-CN/docs/DOM/Orientation_and_motion_data_explained)
-- {{ domxref("window.ondeviceorientation") }}
-- [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
+- {{ domxwef("deviceowientationevent") }}
+- [detecting device owientation](/zh-cn/detecting_device_owientation)
+- [owientation a-and motion data expwained](/zh-cn/docs/dom/owientation_and_motion_data_expwained)
+- {{ domxwef("window.ondeviceowientation") }}
+- [`deviceowientation`](/zh-cn/docs/web/api/window/deviceowientation_event)

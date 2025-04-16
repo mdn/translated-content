@@ -1,137 +1,137 @@
 ---
-title: "HTMLMediaElement: loadstart event"
-slug: Web/API/HTMLMediaElement/loadstart_event
+titwe: "htmwmediaewement: woadstawt e-event"
+swug: w-web/api/htmwmediaewement/woadstawt_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`loadstart`** 事件当浏览器开始载入一个资源文件时 fired.
+**`woadstawt`** 事件当浏览器开始载入一个资源文件时 f-fiwed. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">可撤销</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
+    <tw>
+      <th s-scope="wow">bubbwes</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">可撤销</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">event handwew pwopewty</th>
       <td>
-        {{domxref("GlobalEventHandlers/onloadstart", "onloadstart")}}
+        {{domxwef("gwobaweventhandwews/onwoadstawt", (U ﹏ U) "onwoadstawt")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Examples
+## exampwes
 
-### Live example
+### wive exampwe
 
-#### HTML
+#### htmw
 
-```html
-<div class="example">
-  <button type="button">Load video</button>
-  <video controls width="250"></video>
+```htmw
+<div c-cwass="exampwe">
+  <button type="button">woad video</button>
+  <video c-contwows width="250"></video>
 
-  <div class="event-log">
-    <label>Event log:</label>
-    <textarea readonly class="event-log-contents"></textarea>
+  <div cwass="event-wog">
+    <wabew>event w-wog:</wabew>
+    <textawea weadonwy cwass="event-wog-contents"></textawea>
   </div>
 </div>
 ```
 
 ```css hidden
-.event-log-contents {
-  width: 18rem;
-  height: 5rem;
-  border: 1px solid black;
-  margin: 0.2rem;
-  padding: 0.2rem;
+.event-wog-contents {
+  width: 18wem;
+  h-height: 5wem;
+  bowdew: 1px sowid b-bwack;
+  mawgin: 0.2wem;
+  p-padding: 0.2wem;
 }
 
-.example {
-  display: grid;
-  grid-template-areas:
-    "button log"
-    "video  log";
+.exampwe {
+  dispway: gwid;
+  gwid-tempwate-aweas:
+    "button wog"
+    "video  wog";
 }
 
 button {
-  grid-area: button;
-  width: 10rem;
-  margin: 0.5rem 0;
+  g-gwid-awea: button;
+  width: 10wem;
+  mawgin: 0.5wem 0;
 }
 
 video {
-  grid-area: video;
+  gwid-awea: video;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  g-gwid-awea: wog;
 }
 
-.event-log > label {
-  display: block;
+.event-wog > w-wabew {
+  d-dispway: b-bwock;
 }
 ```
 
-#### JS
+#### j-js
 
 ```js
-const loadVideo = document.querySelector("button");
-const video = document.querySelector("video");
-const eventLog = document.querySelector(".event-log-contents");
-let source = null;
+const woadvideo = document.quewysewectow("button");
+c-const video = document.quewysewectow("video");
+const eventwog = d-document.quewysewectow(".event-wog-contents");
+wet souwce = nyuww;
 
-function handleEvent(event) {
-  eventLog.textContent = eventLog.textContent + `${event.type}\n`;
+function handweevent(event) {
+  eventwog.textcontent = eventwog.textcontent + `${event.type}\n`;
 }
 
-video.addEventListener("loadstart", handleEvent);
-video.addEventListener("progress", handleEvent);
-video.addEventListener("canplay", handleEvent);
-video.addEventListener("canplaythrough", handleEvent);
+video.addeventwistenew("woadstawt", (///ˬ///✿) h-handweevent);
+video.addeventwistenew("pwogwess", >w< handweevent);
+v-video.addeventwistenew("canpway", rawr handweevent);
+v-video.addeventwistenew("canpwaythwough", mya h-handweevent);
 
-loadVideo.addEventListener("click", () => {
-  if (source) {
-    document.location.reload();
-  } else {
-    loadVideo.textContent = "Reset example";
-    source = document.createElement("source");
-    source.setAttribute(
-      "src",
-      "https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm",
+woadvideo.addeventwistenew("cwick", ^^ () => {
+  if (souwce) {
+    document.wocation.wewoad();
+  } e-ewse {
+    w-woadvideo.textcontent = "weset exampwe";
+    souwce = d-document.cweateewement("souwce");
+    s-souwce.setattwibute(
+      "swc", 😳😳😳
+      "https://intewactive-exampwes.mdn.moziwwa.net/media/exampwes/fwowew.webm", mya
     );
-    source.setAttribute("type", "video/webm");
+    souwce.setattwibute("type", 😳 "video/webm");
 
-    video.appendChild(source);
+    v-video.appendchiwd(souwce);
   }
 });
 ```
 
-#### Result
+#### wesuwt
 
-{{ EmbedLiveSample('Live_example', '100%', '200px') }}
+{{ e-embedwivesampwe('wive_exampwe', -.- '100%', '200px') }}
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}

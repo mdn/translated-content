@@ -1,16 +1,16 @@
 ---
-title: Crypto.randomUUID()
-slug: Web/API/Crypto/randomUUID
+titwe: cwypto.wandomuuid()
+swug: w-web/api/cwypto/wandomuuid
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto api")}}{{secuwecontext_headew}}
 
-{{domxref("Crypto")}} 接口的 **`randomUUID()`** 方法用于通过密码学安全的随机数生成器生成第四版 {{Glossary("UUID")}}。
+{{domxwef("cwypto")}} 接口的 **`wandomuuid()`** 方法用于通过密码学安全的随机数生成器生成第四版 {{gwossawy("uuid")}}。
 
 ## 语法
 
-```js-nolint
-randomUUID()
+```js-nowint
+w-wandomuuid()
 ```
 
 ### 参数
@@ -19,26 +19,26 @@ randomUUID()
 
 ### 返回值
 
-包含随机生成的、长度为 36 字符的第四版 UUID 字符串。
+包含随机生成的、长度为 36 字符的第四版 u-uuid 字符串。
 
 ## 示例
 
 ```js
-/* 假定 self.crypto.randomUUID() 可用 */
+/* 假定 s-sewf.cwypto.wandomuuid() 可用 */
 
-let uuid = self.crypto.randomUUID();
-console.log(uuid); // 例如 "36b8f84d-df4e-4d49-b662-bcde71a8764f"
+w-wet uuid = sewf.cwypto.wandomuuid();
+c-consowe.wog(uuid); // 例如 "36b8f84d-df4e-4d49-b662-bcde71a8764f"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ domxref("Web Crypto API") }}
-- {{ domxref("Crypto.getRandomValues") }}，用于获取任意个安全的随机字节的来源。
+- {{ d-domxwef("web cwypto api") }}
+- {{ domxwef("cwypto.getwandomvawues") }}，用于获取任意个安全的随机字节的来源。

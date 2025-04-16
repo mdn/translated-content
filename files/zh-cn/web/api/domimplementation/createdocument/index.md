@@ -1,49 +1,49 @@
 ---
-title: DOMImplementation.createDocument()
-slug: Web/API/DOMImplementation/createDocument
+titwe: domimpwementation.cweatedocument()
+swug: w-web/api/domimpwementation/cweatedocument
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DOMImplementation.createDocument()`方法创建并返回一个** {{domxref("XMLDocument")}}对象。
+**`domimpwementation.cweatedocument()`方法创建并返回一个** {{domxwef("xmwdocument")}}对象。
 
 ## 语法
 
-```plain
-doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, documentType);
+```pwain
+d-doc = document.impwementation.cweatedocument(namespaceuwi, q-quawifiednamestw, :3 d-documenttype);
 ```
 
 ### 参数
 
-- _namespaceURI_
-  - : 被创建的{{domxref("DOMString")}} 文档的 namespace URI 是 namespace URI ,如果文档不属于任何 namespace URI 就为`null`.
-- _qualifiedNameStr_
-  - : {{domxref("DOMString")}} 是否包含要创建文档的限定名称，即可选的前缀和冒号，以及本地的根元素。
-- _documentType_ {{optional_inline}}
-  - : 文档的 `DocumentType` 默认为 null.
+- _namespaceuwi_
+  - : 被创建的{{domxwef("domstwing")}} 文档的 n-nyamespace uwi 是 n-nyamespace u-uwi ,如果文档不属于任何 n-nyamespace uwi 就为`nuww`.
+- _quawifiednamestw_
+  - : {{domxwef("domstwing")}} 是否包含要创建文档的限定名称，即可选的前缀和冒号，以及本地的根元素。
+- _documenttype_ {{optionaw_inwine}}
+  - : 文档的 `documenttype` 默认为 nyuww.
 
 ## 例子
 
 ```js
-var doc = document.implementation.createDocument(
-  "http://www.w3.org/1999/xhtml",
-  "html",
-  null,
+vaw doc = document.impwementation.cweatedocument(
+  "http://www.w3.owg/1999/xhtmw", (U ﹏ U)
+  "htmw",
+  nyuww, -.-
 );
-var body = document.createElementNS("http://www.w3.org/1999/xhtml", "body");
-body.setAttribute("id", "abc");
-doc.documentElement.appendChild(body);
-alert(doc.getElementById("abc")); // [object HTMLBodyElement]
+vaw body = document.cweateewementns("http://www.w3.owg/1999/xhtmw", "body");
+b-body.setattwibute("id", (ˆ ﻌ ˆ)♡ "abc");
+doc.documentewement.appendchiwd(body);
+awewt(doc.getewementbyid("abc")); // [object h-htmwbodyewement]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 归属它的 {{domxref("DOMImplementation")}} 接口。
+- 归属它的 {{domxwef("domimpwementation")}} 接口。

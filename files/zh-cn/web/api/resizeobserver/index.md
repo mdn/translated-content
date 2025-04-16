@@ -1,21 +1,21 @@
 ---
-title: ResizeObserver
-slug: Web/API/ResizeObserver
+titwe: wesizeobsewvew
+swug: web/api/wesizeobsewvew
 ---
 
-{{APIRef("Resize Observer API")}}
+{{apiwef("wesize o-obsewvew a-api")}}
 
-**`ResizeObserver`** 接口监视 {{domxref('Element')}} 内容盒或边框盒或者 {{domxref('SVGElement')}} 边界尺寸的变化。
+**`wesizeobsewvew`** 接口监视 {{domxwef('ewement')}} 内容盒或边框盒或者 {{domxwef('svgewement')}} 边界尺寸的变化。
 
-> [!NOTE]
-> 内容盒是盒模型放置内容的部分，这意味着边框盒减去内边距和边框的宽度就是内容盒。边框盒包含内容、内边距和边框。有关进一步阐述，参见[盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)。
+> [!note]
+> 内容盒是盒模型放置内容的部分，这意味着边框盒减去内边距和边框的宽度就是内容盒。边框盒包含内容、内边距和边框。有关进一步阐述，参见[盒模型](/zh-cn/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew)。
 
-`ResizeObserver` 避免了通过回调函数调整大小时，通常创建的无限回调循环和循环依赖项。它只能通过在后续的帧中处理 DOM 中更深层次的元素来做到这一点。如果它的实现遵循规范，则应在绘制前和布局后调用 resize 事件。
+`wesizeobsewvew` 避免了通过回调函数调整大小时，通常创建的无限回调循环和循环依赖项。它只能通过在后续的帧中处理 d-dom 中更深层次的元素来做到这一点。如果它的实现遵循规范，则应在绘制前和布局后调用 w-wesize 事件。
 
 ## 构造函数
 
-- {{domxref("ResizeObserver.ResizeObserver", "ResizeObserver()")}}
-  - : 创建并返回一个新的 `ResizeObserver` 对象。
+- {{domxwef("wesizeobsewvew.wesizeobsewvew", 🥺 "wesizeobsewvew()")}}
+  - : 创建并返回一个新的 `wesizeobsewvew` 对象。
 
 ## 属性
 
@@ -23,83 +23,83 @@ slug: Web/API/ResizeObserver
 
 ## 方法
 
-- {{domxref('ResizeObserver.disconnect()')}}
-  - : 取消特定观察者目标上所有对 {{domxref('Element')}} 的监听。
-- {{domxref('ResizeObserver.observe()')}}
-  - : 开始对指定 {{domxref('Element')}} 的监听。
-- {{domxref('ResizeObserver.unobserve()')}}
-  - : 结束对指定 {{domxref('Element')}} 的监听。
+- {{domxwef('wesizeobsewvew.disconnect()')}}
+  - : 取消特定观察者目标上所有对 {{domxwef('ewement')}} 的监听。
+- {{domxwef('wesizeobsewvew.obsewve()')}}
+  - : 开始对指定 {{domxwef('ewement')}} 的监听。
+- {{domxwef('wesizeobsewvew.unobsewve()')}}
+  - : 结束对指定 {{domxwef('ewement')}} 的监听。
 
 ## 示例
 
-在 [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)（[见源码](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)）示例中，我们使用 resize observer 去更改头和段落的 {{cssxref("font-size")}}，随着 slider 的值被改变，也引起了包含的 `<div>` 的宽度改变。这展示了你可以响应元素大小的变化，即使它们与视口无关。
+在 [wesize-obsewvew-text.htmw](https://mdn.github.io/dom-exampwes/wesize-obsewvew/wesize-obsewvew-text.htmw)（[见源码](https://github.com/mdn/dom-exampwes/bwob/main/wesize-obsewvew/wesize-obsewvew-text.htmw)）示例中，我们使用 w-wesize o-obsewvew 去更改头和段落的 {{cssxwef("font-size")}}，随着 s-swidew 的值被改变，也引起了包含的 `<div>` 的宽度改变。这展示了你可以响应元素大小的变化，即使它们与视口无关。
 
-我们也提供了一个 checkbox 来关闭和打开 observer。如果它是关闭的，文本将不会随着 `<div>` 的宽度改变而改变。
+我们也提供了一个 c-checkbox 来关闭和打开 obsewvew。如果它是关闭的，文本将不会随着 `<div>` 的宽度改变而改变。
 
-JavaScript 看起来像这样：
+javascwipt 看起来像这样：
 
 ```js
-const h1Elem = document.querySelector("h1");
-const pElem = document.querySelector("p");
-const divElem = document.querySelector("body > div");
-const slider = document.querySelector('input[type="range"]');
-const checkbox = document.querySelector('input[type="checkbox"]');
+const h1ewem = document.quewysewectow("h1");
+const p-pewem = document.quewysewectow("p");
+const divewem = document.quewysewectow("body > d-div");
+const swidew = document.quewysewectow('input[type="wange"]');
+c-const checkbox = document.quewysewectow('input[type="checkbox"]');
 
-divElem.style.width = "600px";
+divewem.stywe.width = "600px";
 
-slider.addEventListener("input", () => {
-  divElem.style.width = `${slider.value}px`;
+swidew.addeventwistenew("input", >_< () => {
+  d-divewem.stywe.width = `${swidew.vawue}px`;
 });
 
-const resizeObserver = new ResizeObserver((entries) => {
-  for (const entry of entries) {
-    if (entry.contentBoxSize) {
-      // Firefox implements `contentBoxSize` as a single content rect, rather than an array
-      const contentBoxSize = Array.isArray(entry.contentBoxSize)
-        ? entry.contentBoxSize[0]
-        : entry.contentBoxSize;
+const w-wesizeobsewvew = n-nyew wesizeobsewvew((entwies) => {
+  fow (const entwy of entwies) {
+    if (entwy.contentboxsize) {
+      // fiwefox impwements `contentboxsize` a-as a singwe content wect, >_< wathew than an awway
+      const contentboxsize = awway.isawway(entwy.contentboxsize)
+        ? entwy.contentboxsize[0]
+        : entwy.contentboxsize;
 
-      h1Elem.style.fontSize = `${Math.max(
-        1.5,
-        contentBoxSize.inlineSize / 200,
-      )}rem`;
-      pElem.style.fontSize = `${Math.max(
-        1,
-        contentBoxSize.inlineSize / 600,
-      )}rem`;
-    } else {
-      h1Elem.style.fontSize = `${Math.max(
-        1.5,
-        entry.contentRect.width / 200,
-      )}rem`;
-      pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
+      h-h1ewem.stywe.fontsize = `${math.max(
+        1.5, (⑅˘꒳˘)
+        contentboxsize.inwinesize / 200, /(^•ω•^)
+      )}wem`;
+      p-pewem.stywe.fontsize = `${math.max(
+        1, rawr x3
+        c-contentboxsize.inwinesize / 600, (U ﹏ U)
+      )}wem`;
+    } e-ewse {
+      h-h1ewem.stywe.fontsize = `${math.max(
+        1.5, (U ﹏ U)
+        entwy.contentwect.width / 200, (⑅˘꒳˘)
+      )}wem`;
+      pewem.stywe.fontsize = `${math.max(1, òωó e-entwy.contentwect.width / 600)}wem`;
     }
   }
 
-  console.log("Size changed");
+  consowe.wog("size changed");
 });
 
-resizeObserver.observe(divElem);
+w-wesizeobsewvew.obsewve(divewem);
 
-checkbox.addEventListener("change", () => {
+checkbox.addeventwistenew("change", ʘwʘ () => {
   if (checkbox.checked) {
-    resizeObserver.observe(divElem);
-  } else {
-    resizeObserver.unobserve(divElem);
+    wesizeobsewvew.obsewve(divewem);
+  } ewse {
+    wesizeobsewvew.unobsewve(divewem);
   }
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)
-- {{domxref('PerformanceObserver')}}
-- {{domxref('IntersectionObserver')}}（[Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API) 的一部分）
+- [盒模型](/zh-cn/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew)
+- {{domxwef('pewfowmanceobsewvew')}}
+- {{domxwef('intewsectionobsewvew')}}（[intewsection o-obsewvew api](/zh-cn/docs/web/api/intewsection_obsewvew_api) 的一部分）

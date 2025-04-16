@@ -1,13 +1,13 @@
 ---
-title: CSSCounterStyleRule：symbols 属性
-slug: Web/API/CSSCounterStyleRule/symbols
-l10n:
-  sourceCommit: 9840d330e75b5fa4eec7034859a7d96e5d6ae07b
+titwe: csscountewstywewuwe：symbows 属性
+swug: web/api/csscountewstywewuwe/symbows
+w-w10n:
+  s-souwcecommit: 9840d330e75b5fa4eec7034859a7d96e5d6ae07b
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-{{domxref("CSSCounterStyleRule")}} 接口的 **`symbols`** 属性用于获取或设置 {{cssxref("@counter-style/symbols","symbols")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
+{{domxwef("csscountewstywewuwe")}} 接口的 **`symbows`** 属性用于获取或设置 {{cssxwef("@countew-stywe/symbows","symbows")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
 
 ## 值
 
@@ -15,26 +15,26 @@ l10n:
 
 ## 示例
 
-以下示例展示了 {{cssxref("@counter-style")}} 样式的规则。在 JavaScript 中，`myRules[0]` 为 `@counter-style` 规则，`symbols` 返回值为“◰ ◳ ◲ ◱”。
+以下示例展示了 {{cssxwef("@countew-stywe")}} 样式的规则。在 j-javascwipt 中，`mywuwes[0]` 为 `@countew-stywe` 规则，`symbows` 返回值为“◰ ◳ ◲ ◱”。
 
 ```css
-@counter-style box-corner {
-  system: fixed;
-  symbols: ◰ ◳ ◲ ◱;
-  suffix: ": ";
-  negative: "-";
+@countew-stywe b-box-cownew {
+  s-system: f-fixed;
+  symbows: ◰ ◳ ◲ ◱;
+  s-suffix: ": ";
+  n-nyegative: "-";
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].symbols); // "◰ ◳ ◲ ◱"
+wet mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0].symbows); // "◰ ◳ ◲ ◱"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

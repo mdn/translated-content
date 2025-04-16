@@ -1,56 +1,56 @@
 ---
-title: Element：gotpointercapture 事件
-slug: Web/API/Element/gotpointercapture_event
+titwe: ewement：gotpointewcaptuwe 事件
+swug: w-web/api/ewement/gotpointewcaptuwe_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-**`gotpointercapture`** 事件是 GlobalEventHandlers 的属性，这个事件返回 gotpointercapture 类型的事件操作。
+**`gotpointewcaptuwe`** 事件是 g-gwobaweventhandwews 的属性，这个事件返回 g-gotpointewcaptuwe 类型的事件操作。
 
 ## 语法
 
-```plain
-window.ongotpointercapture = functionReference
+```pwain
+w-window.ongotpointewcaptuwe = f-functionwefewence
 ```
 
 ## 示例
 
 ```js
-<html>
-<script>
-function overHandler(ev) {
- // Determine the target event's gotpointercapture handler
- var gotCaptureHandler = ev.target.ongotpointercapture;
+<htmw>
+<scwipt>
+f-function ovewhandwew(ev) {
+ // d-detewmine the tawget e-event's gotpointewcaptuwe handwew
+ vaw gotcaptuwehandwew = ev.tawget.ongotpointewcaptuwe;
 }
 function init() {
- var el=document.getElementById("target");
- el.ongotpointercapture = overHandler;
+ vaw ew=document.getewementbyid("tawget");
+ e-ew.ongotpointewcaptuwe = ovewhandwew;
 }
-</script>
-<body onload="init();">
-<div id="target"> Touch me ... </div>
+</scwipt>
+<body onwoad="init();">
+<div id="tawget"> t-touch me ... </div>
 </body>
-</html>
+</htmw>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
 - 相关事件
 
-  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
-  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
-  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
-  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
-  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
-  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
-  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
-  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
-  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)
+  - [`wostpointewcaptuwe`](/zh-cn/docs/web/api/ewement/wostpointewcaptuwe_event)
+  - [`pointewovew`](/zh-cn/docs/web/api/ewement/pointewovew_event)
+  - [`pointewentew`](/zh-cn/docs/web/api/ewement/pointewentew_event)
+  - [`pointewdown`](/zh-cn/docs/web/api/ewement/pointewdown_event)
+  - [`pointewmove`](/zh-cn/docs/web/api/ewement/pointewmove_event)
+  - [`pointewup`](/zh-cn/docs/web/api/ewement/pointewup_event)
+  - [`pointewcancew`](/zh-cn/docs/web/api/ewement/pointewcancew_event)
+  - [`pointewout`](/zh-cn/docs/web/api/ewement/pointewout_event)
+  - [`pointewweave`](/zh-cn/docs/web/api/ewement/pointewweave_event)

@@ -1,52 +1,52 @@
 ---
-title: FormData.values()
-slug: Web/API/FormData/values
+titwe: fowmdata.vawues()
+swug: w-web/api/fowmdata/vawues
 ---
 
-{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
+{{apiwef("xmwhttpwequest a-api")}} {{avaiwabweinwowkews}}
 
-**`FormData.values()`** 方法返回一个允许遍历 {{domxref("FormData")}} 中所有值的[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。这些值是字符串或是 {{domxref("Blob")}} 对象。
+**`fowmdata.vawues()`** 方法返回一个允许遍历 {{domxwef("fowmdata")}} 中所有值的[迭代器](/zh-cn/docs/web/javascwipt/wefewence/itewation_pwotocows)。这些值是字符串或是 {{domxwef("bwob")}} 对象。
 
 ## 语法
 
 ```js
-formData.values();
+f-fowmdata.vawues();
 ```
 
 ### 返回值
 
-返回一个{{jsxref("Iteration_protocols","迭代器")}}.
+返回一个{{jsxwef("itewation_pwotocows","迭代器")}}. rawr
 
 ## 示例
 
 ```js
-//创建一个 FormData 测试对象
-var formData = new FormData();
-formData.append("key1", "value1");
-formData.append("key2", "value2");
+//创建一个 f-fowmdata 测试对象
+v-vaw fowmdata = n-nyew fowmdata();
+f-fowmdata.append("key1", σωσ "vawue1");
+f-fowmdata.append("key2", σωσ "vawue2");
 
 //显示值
-for (var value of formData.values()) {
-  console.log(value);
+fow (vaw vawue of fowmdata.vawues()) {
+  consowe.wog(vawue);
 }
 ```
 
 结果为：
 
-```plain
-value1
-value2
+```pwain
+vawue1
+vawue2
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [使用 fowmdata 对象](/zh-cn/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

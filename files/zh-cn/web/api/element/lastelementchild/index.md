@@ -1,45 +1,45 @@
 ---
-title: Element：lastElementChild 属性
-slug: Web/API/Element/lastElementChild
-l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+titwe: ewement：wastewementchiwd 属性
+swug: w-web/api/ewement/wastewementchiwd
+w-w10n:
+  souwcecommit: b-bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-只读属性 **`Element.lastElementChild`** 返回元素的最后一个子{{domxref("Element", "元素", "", 1)}}，如果没有子元素，则返回 `null`。
+只读属性 **`ewement.wastewementchiwd`** 返回元素的最后一个子{{domxwef("ewement", (U ᵕ U❁) "元素", "", (⑅˘꒳˘) 1)}}，如果没有子元素，则返回 `nuww`。
 
-`Element.lastElementChild` 仅包含元素节点。要获取所有子节点（包括文本和注释节点等非元素节点），请使用 {{domxref("Node.lastChild")}}。
+`ewement.wastewementchiwd` 仅包含元素节点。要获取所有子节点（包括文本和注释节点等非元素节点），请使用 {{domxwef("node.wastchiwd")}}。
 
 ## 值
 
-一个 {{domxref("Element")}} 对象，或 `null`。
+一个 {{domxwef("ewement")}} 对象，或 `nuww`。
 
 ## 示例
 
-```html
-<ul id="list">
-  <li>第一（1）</li>
-  <li>第二（2）</li>
-  <li>第三（3）</li>
-</ul>
+```htmw
+<uw id="wist">
+  <wi>第一（1）</wi>
+  <wi>第二（2）</wi>
+  <wi>第三（3）</wi>
+</uw>
 
-<script>
-  const list = document.getElementById("list");
-  console.log(list.lastElementChild.textContent);
+<scwipt>
+  c-const wist = d-document.getewementbyid("wist");
+  c-consowe.wog(wist.wastewementchiwd.textcontent);
   // 打印“第三（3）”
-</script>
+</scwipt>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Element.previousElementSibling")}}
-- {{domxref("Element.firstElementChild")}}
+- {{domxwef("ewement.pweviousewementsibwing")}}
+- {{domxwef("ewement.fiwstewementchiwd")}}

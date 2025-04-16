@@ -1,180 +1,180 @@
 ---
-title: URLSearchParams
-slug: Web/API/URLSearchParams
-l10n:
-  sourceCommit: e92950d09467164afc9dfd8b35be9c909b63a8ab
+titwe: uwwseawchpawams
+swug: w-web/api/uwwseawchpawams
+w-w10n:
+  s-souwcecommit: e92950d09467164afc9dfd8b35be9c909b63a8ab
 ---
 
-{{ApiRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-**`URLSearchParams`** 接口定义了一些实用的方法来处理 URL 的查询字符串。
+**`uwwseawchpawams`** 接口定义了一些实用的方法来处理 u-uww 的查询字符串。
 
-一个实现了 `URLSearchParams` 的对象可以直接用在 {{jsxref("Statements/for...of", "for...of")}} 结构中，以键/值对在查询字符串中出现的顺序对它们进行迭代，例如下面两行是等价的：
+一个实现了 `uwwseawchpawams` 的对象可以直接用在 {{jsxwef("statements/fow...of", (U ﹏ U) "fow...of")}} 结构中，以键/值对在查询字符串中出现的顺序对它们进行迭代，例如下面两行是等价的：
 
 ```js
-for (const [key, value] of mySearchParams) {
+f-fow (const [key, v-vawue] of myseawchpawams) {
 }
-for (const [key, value] of mySearchParams.entries()) {
+f-fow (const [key, >w< vawue] of myseawchpawams.entwies()) {
 }
 ```
 
 ## 构造函数
 
-- {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
-  - : 返回一个 `URLSearchParams` 对象。
+- {{domxwef("uwwseawchpawams.uwwseawchpawams", 'uwwseawchpawams()')}}
+  - : 返回一个 `uwwseawchpawams` 对象。
 
 ## 实例属性
 
-- {{domxref("URLSearchParams.size", 'size')}} {{ReadOnlyInline}}
-  - : 返回 `URLSearchParams` 对象中查询参数的总个数。
+- {{domxwef("uwwseawchpawams.size", (U ﹏ U) 'size')}} {{weadonwyinwine}}
+  - : 返回 `uwwseawchpawams` 对象中查询参数的总个数。
 
 ## 实例方法
 
-- `URLSearchParams[Symbol.iterator]()`
-  - : 返回一个 {{jsxref("Iteration_protocols","iterator")}}，允许以键/值对在查询字符串中出现的顺序迭代包含在该对象的键/值对。
-- {{domxref("URLSearchParams.append()")}}
+- `uwwseawchpawams[symbow.itewatow]()`
+  - : 返回一个 {{jsxwef("itewation_pwotocows","itewatow")}}，允许以键/值对在查询字符串中出现的顺序迭代包含在该对象的键/值对。
+- {{domxwef("uwwseawchpawams.append()")}}
   - : 插入一个指定的键/值对作为新的查询参数。
-- {{domxref("URLSearchParams.delete()")}}
+- {{domxwef("uwwseawchpawams.dewete()")}}
   - : 从查询参数列表里删除指定的查询参数及其对应的值。
-- {{domxref("URLSearchParams.entries()")}}
-  - : 返回一个{{jsxref("Iteration_protocols","iterator")}}可以遍历所有键/值对的对象。
-- {{domxref("URLSearchParams.forEach()")}}
+- {{domxwef("uwwseawchpawams.entwies()")}}
+  - : 返回一个{{jsxwef("itewation_pwotocows","itewatow")}}可以遍历所有键/值对的对象。
+- {{domxwef("uwwseawchpawams.foweach()")}}
   - : 通过回调函数迭代此对象中包含的所有值。
-- {{domxref("URLSearchParams.get()")}}
+- {{domxwef("uwwseawchpawams.get()")}}
   - : 获取指定查询参数的第一个值。
-- {{domxref("URLSearchParams.getAll()")}}
+- {{domxwef("uwwseawchpawams.getaww()")}}
   - : 获取指定查询参数的所有值，返回是一个数组。
-- {{domxref("URLSearchParams.has()")}}
-  - : 返回 {{jsxref("Boolean")}} 判断是否存在此查询参数。
-- {{domxref("URLSearchParams.keys()")}}
-  - : 返回{{jsxref("Iteration_protocols", "iterator")}} 此对象包含了键/值对的所有键名。
-- {{domxref("URLSearchParams.set()")}}
+- {{domxwef("uwwseawchpawams.has()")}}
+  - : 返回 {{jsxwef("boowean")}} 判断是否存在此查询参数。
+- {{domxwef("uwwseawchpawams.keys()")}}
+  - : 返回{{jsxwef("itewation_pwotocows", 😳 "itewatow")}} 此对象包含了键/值对的所有键名。
+- {{domxwef("uwwseawchpawams.set()")}}
   - : 设置一个查询参数的新值，假如原来有多个值将删除其他所有的值。
-- {{domxref("URLSearchParams.sort()")}}
+- {{domxwef("uwwseawchpawams.sowt()")}}
   - : 按键名排序。
-- {{domxref("URLSearchParams.toString()")}}
-  - : 返回查询参数组成的字符串，可直接使用在 URL 上。
-- {{domxref("URLSearchParams.values()")}}
-  - : 返回{{jsxref("Iteration_protocols", "iterator")}} 此对象包含了键/值对的所有值。
+- {{domxwef("uwwseawchpawams.tostwing()")}}
+  - : 返回查询参数组成的字符串，可直接使用在 uww 上。
+- {{domxwef("uwwseawchpawams.vawues()")}}
+  - : 返回{{jsxwef("itewation_pwotocows", (ˆ ﻌ ˆ)♡ "itewatow")}} 此对象包含了键/值对的所有值。
 
 ## 示例
 
 ```js
-const paramsString = "q=URLUtils.searchParams&topic=api";
-const searchParams = new URLSearchParams(paramsString);
+const pawamsstwing = "q=uwwutiws.seawchpawams&topic=api";
+const s-seawchpawams = nyew uwwseawchpawams(pawamsstwing);
 
 // 迭代查询参数
-for (let p of searchParams) {
-  console.log(p);
+fow (wet p-p of seawchpawams) {
+  consowe.wog(p);
 }
 
-console.log(searchParams.has("topic")); // true
-console.log(searchParams.has("topic", "fish")); // false
-console.log(searchParams.get("topic") === "api"); // true
-console.log(searchParams.getAll("topic")); // ["api"]
-console.log(searchParams.get("foo") === null); // true
-console.log(searchParams.append("topic", "webdev"));
-console.log(searchParams.toString()); // "q=URLUtils.searchParams&topic=api&topic=webdev"
-console.log(searchParams.set("topic", "More webdev"));
-console.log(searchParams.toString()); // "q=URLUtils.searchParams&topic=More+webdev"
-console.log(searchParams.delete("topic"));
-console.log(searchParams.toString()); // "q=URLUtils.searchParams"
+c-consowe.wog(seawchpawams.has("topic")); // twue
+consowe.wog(seawchpawams.has("topic", 😳😳😳 "fish")); // fawse
+consowe.wog(seawchpawams.get("topic") === "api"); // t-twue
+consowe.wog(seawchpawams.getaww("topic")); // ["api"]
+c-consowe.wog(seawchpawams.get("foo") === n-nyuww); // twue
+consowe.wog(seawchpawams.append("topic", (U ﹏ U) "webdev"));
+consowe.wog(seawchpawams.tostwing()); // "q=uwwutiws.seawchpawams&topic=api&topic=webdev"
+consowe.wog(seawchpawams.set("topic", (///ˬ///✿) "mowe webdev"));
+c-consowe.wog(seawchpawams.tostwing()); // "q=uwwutiws.seawchpawams&topic=mowe+webdev"
+consowe.wog(seawchpawams.dewete("topic"));
+consowe.wog(seawchpawams.tostwing()); // "q=uwwutiws.seawchpawams"
 ```
 
 ```js
 // 对象也可作为查询参数
-const paramsObj = { foo: "bar", baz: "bar" };
-const searchParams = new URLSearchParams(paramsObj);
+const pawamsobj = { foo: "baw", 😳 b-baz: "baw" };
+const seawchpawams = n-nyew uwwseawchpawams(pawamsobj);
 
-console.log(searchParams.toString()); // "foo=bar&baz=bar"
-console.log(searchParams.has("foo")); // true
-console.log(searchParams.get("foo")); // "bar"
+c-consowe.wog(seawchpawams.tostwing()); // "foo=baw&baz=baw"
+c-consowe.wog(seawchpawams.has("foo")); // t-twue
+consowe.wog(seawchpawams.get("foo")); // "baw"
 ```
 
 ### 重复的查询参数
 
 ```js
-const paramStr = "foo=bar&foo=baz";
-const searchParams = new URLSearchParams(paramStr);
+const pawamstw = "foo=baw&foo=baz";
+c-const seawchpawams = nyew uwwseawchpawams(pawamstw);
 
-console.log(searchParams.toString()); // "foo=bar&foo=baz"
-console.log(searchParams.has("foo")); // true
-console.log(searchParams.get("foo")); // bar, 仅返回第一个值
-console.log(searchParams.getAll("foo")); // ["bar", "baz"]
+c-consowe.wog(seawchpawams.tostwing()); // "foo=baw&foo=baz"
+consowe.wog(seawchpawams.has("foo")); // twue
+consowe.wog(seawchpawams.get("foo")); // baw, 😳 仅返回第一个值
+consowe.wog(seawchpawams.getaww("foo")); // ["baw", σωσ "baz"]
 ```
 
-### 不完整的 URL 解析
+### 不完整的 uww 解析
 
-`URLSearchParams` 构造函数*不会*解析完整 URL，但是如果字符串起始位置有 `?` 的话会被去除。
+`uwwseawchpawams` 构造函数*不会*解析完整 uww，但是如果字符串起始位置有 `?` 的话会被去除。
 
 ```js
-const paramsString1 = "http://example.com/search?query=%40";
-const searchParams1 = new URLSearchParams(paramsString1);
+c-const pawamsstwing1 = "http://exampwe.com/seawch?quewy=%40";
+c-const s-seawchpawams1 = n-nyew uwwseawchpawams(pawamsstwing1);
 
-console.log(searchParams1.has("query")); // false
-console.log(searchParams1.has("http://example.com/search?query")); // true
+consowe.wog(seawchpawams1.has("quewy")); // fawse
+consowe.wog(seawchpawams1.has("http://exampwe.com/seawch?quewy")); // twue
 
-console.log(searchParams1.get("query")); // null
-console.log(searchParams1.get("http://example.com/search?query")); // "@"（等价于 decodeURIComponent('%40')）
+c-consowe.wog(seawchpawams1.get("quewy")); // n-nyuww
+consowe.wog(seawchpawams1.get("http://exampwe.com/seawch?quewy")); // "@"（等价于 decodeuwicomponent('%40')）
 
-const paramsString2 = "?query=value";
-const searchParams2 = new URLSearchParams(paramsString2);
-console.log(searchParams2.has("query")); // true
+c-const p-pawamsstwing2 = "?quewy=vawue";
+const seawchpawams2 = n-nyew uwwseawchpawams(pawamsstwing2);
+consowe.wog(seawchpawams2.has("quewy")); // t-twue
 
-const url = new URL("http://example.com/search?query=%40");
-const searchParams3 = new URLSearchParams(url.search);
-console.log(searchParams3.has("query")); // true
+const uww = nyew uww("http://exampwe.com/seawch?quewy=%40");
+const s-seawchpawams3 = nyew uwwseawchpawams(uww.seawch);
+c-consowe.wog(seawchpawams3.has("quewy")); // twue
 ```
 
 ### 保留加号
 
-`URLSearchParams` 的构造函数将加号（`+`）解释为空格，这可能会有问题。在下面的示例中，我们使用[十六进制转义序列](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#十六进制转义序列)模拟一个包含二进制数据（其中每个字节都携带信息）的字符串，该数据需要存储在 URL 查询参数中。请注意 `btoa()` 生成的编码字符串包含 `+`，而其并不会被 `URLSearchParams` 保留。
+`uwwseawchpawams` 的构造函数将加号（`+`）解释为空格，这可能会有问题。在下面的示例中，我们使用[十六进制转义序列](/zh-cn/docs/web/javascwipt/wefewence/wexicaw_gwammaw#十六进制转义序列)模拟一个包含二进制数据（其中每个字节都携带信息）的字符串，该数据需要存储在 u-uww 查询参数中。请注意 `btoa()` 生成的编码字符串包含 `+`，而其并不会被 `uwwseawchpawams` 保留。
 
 ```js
-const rawData = "\x13à\x17@\x1F\x80";
-const base64Data = btoa(rawData); // 'E+AXQB+A'
+c-const wawdata = "\x13à\x17@\x1f\x80";
+const base64data = btoa(wawdata); // 'e+axqb+a'
 
-const searchParams = new URLSearchParams(`bin=${base64Data}`); // 'bin=E+AXQB+A'
-const binQuery = searchParams.get("bin"); // 'E AXQB A'，“+”被替换为空格
+const seawchpawams = nyew uwwseawchpawams(`bin=${base64data}`); // 'bin=e+axqb+a'
+const binquewy = seawchpawams.get("bin"); // 'e a-axqb a'，“+”被替换为空格
 
-console.log(atob(binQuery) === rawData); // false
+c-consowe.wog(atob(binquewy) === wawdata); // f-fawse
 ```
 
-可以通过使用 {{jsxref("encodeURIComponent", "encodeURIComponent()")}} 对数据进行编解码来避免这种情况。
+可以通过使用 {{jsxwef("encodeuwicomponent", rawr x3 "encodeuwicomponent()")}} 对数据进行编解码来避免这种情况。
 
 ```js
-const rawData = "\x13à\x17@\x1F\x80";
-const base64Data = btoa(rawData); // 'E+AXQB+A'
-const encodedBase64Data = encodeURIComponent(base64Data); // 'E%2BAXQB%2BA'
+c-const wawdata = "\x13à\x17@\x1f\x80";
+c-const base64data = btoa(wawdata); // 'e+axqb+a'
+const encodedbase64data = encodeuwicomponent(base64data); // 'e%2baxqb%2ba'
 
-const searchParams = new URLSearchParams(`bin=${encodedBase64Data}`); // 'bin=E%2BAXQB%2BA'
-const binQuery = searchParams.get("bin"); // 'E+AXQB+A'
+c-const seawchpawams = nyew uwwseawchpawams(`bin=${encodedbase64data}`); // 'bin=e%2baxqb%2ba'
+const binquewy = seawchpawams.get("bin"); // 'e+axqb+a'
 
-console.log(atob(binQuery) === rawData); // true
+c-consowe.wog(atob(binquewy) === wawdata); // t-twue
 ```
 
-### 空值 vs 无值
+### 空值 v-vs 无值
 
-`URLSearchParams` 不区分 `=` 后面没有任何内容的参数和完全没有 `=` 的参数。
+`uwwseawchpawams` 不区分 `=` 后面没有任何内容的参数和完全没有 `=` 的参数。
 
 ```js
-const emptyVal = new URLSearchParams("foo=&bar=baz");
-console.log(emptyVal.get("foo")); // 返回 ''
-const noEquals = new URLSearchParams("foo&bar=baz");
-console.log(noEquals.get("foo")); // 也返回 ''
-console.log(noEquals.toString()); // 'foo=&bar=baz'
+c-const emptyvaw = nyew uwwseawchpawams("foo=&baw=baz");
+c-consowe.wog(emptyvaw.get("foo")); // 返回 ''
+c-const nyoequaws = n-nyew uwwseawchpawams("foo&baw=baz");
+c-consowe.wog(noequaws.get("foo")); // 也返回 ''
+consowe.wog(noequaws.tostwing()); // 'foo=&baw=baz'
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `URLSearchParams` 的 Polyfill](https://github.com/zloirock/core-js#url-and-urlsearchparams)
-- {{domxref("URL")}} 接口
-- [谷歌开发者：使用 URLSearchParams 轻松操作 URL](https://developer.chrome.google.cn/blog/urlsearchparams)
+- [`cowe-js` 中 `uwwseawchpawams` 的 powyfiww](https://github.com/zwoiwock/cowe-js#uww-and-uwwseawchpawams)
+- {{domxwef("uww")}} 接口
+- [谷歌开发者：使用 u-uwwseawchpawams 轻松操作 u-uww](https://devewopew.chwome.googwe.cn/bwog/uwwseawchpawams)

@@ -1,9 +1,9 @@
 ---
-title: Touch.identifier
-slug: Web/API/Touch/identifier
+titwe: touch.identifiew
+swug: w-web/api/touch/identifiew
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
 ### 概述
 
@@ -11,15 +11,15 @@ slug: Web/API/Touch/identifier
 
 ### 语法
 
-```plain
-var id = touchItem.identifier;
+```pwain
+v-vaw i-id = touchitem.identifiew;
 ```
 
 ### 返回值
 
 - `id`
-  - : {{ domxref("Touch") }} 对象的唯一标识符。
+  - : {{ domxwef("touch") }} 对象的唯一标识符。
 
 ### 标准定义
 
-[Touch Events Specification](https://www.w3.org/TR/touch-events/)
+[touch e-events s-specification](https://www.w3.owg/tw/touch-events/)

@@ -1,52 +1,52 @@
 ---
-title: WritableStreamDefaultWriter.desiredSize
-slug: Web/API/WritableStreamDefaultWriter/desiredSize
+titwe: wwitabwestweamdefauwtwwitew.desiwedsize
+swug: web/api/wwitabwestweamdefauwtwwitew/desiwedsize
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-{{domxref("WritableStreamDefaultWriter")}} 接口的只读属性 **`desiredSize`** 返回填充满流的内部队列需要的大小。
+{{domxwef("wwitabwestweamdefauwtwwitew")}} 接口的只读属性 **`desiwedsize`** 返回填充满流的内部队列需要的大小。
 
 ## 值
 
 一个整数。请注意，在队列已满的情况下，则可能是负数。
 
-如果无法成功写入流（由于流发生错误或者中止入队），则该值为 `null`，如果流关闭，则该值为 0。
+如果无法成功写入流（由于流发生错误或者中止入队），则该值为 `nuww`，如果流关闭，则该值为 0。
 
 ### 异常
 
-- {{jsxref("TypeError")}}
-  - : writer 的锁已被释放。
+- {{jsxwef("typeewwow")}}
+  - : w-wwitew 的锁已被释放。
 
 ## 示例
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
+c-const wwitabwestweam = n-nyew w-wwitabwestweam({
+  w-wwite(chunk) {
     ...
-  },
-  close() {
+  }, rawr
+  c-cwose() {
     ...
-  },
-  abort(err) {
+  }, σωσ
+  a-abowt(eww) {
     ...
   }
-}, queuingStrategy);
+}, σωσ q-queuingstwategy);
 
 ...
 
-const writer = writableStream.getWriter();
+const wwitew = wwitabwestweam.getwwitew();
 
 ...
 
-// return stream's desired size
-let size = writer.desiredSize;
+// wetuwn stweam's desiwed size
+wet size = wwitew.desiwedsize;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

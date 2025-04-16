@@ -1,52 +1,52 @@
 ---
-title: FormData.entries()
-slug: Web/API/FormData/entries
+titwe: fowmdata.entwies()
+swug: w-web/api/fowmdata/entwies
 ---
 
-{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
+{{apiwef("xmwhttpwequest a-api")}} {{avaiwabweinwowkews}}
 
-**`FormData.entries()`** 方法返回一个 {{jsxref("Iteration_protocols",'iterator')}}对象，此对象可以遍历访问 {{domxref("FormData")}} 中的键值对。其中键值对的键是一个字符串对象；值是一个字符串或者 {{domxref("Blob")}} 对象。
+**`fowmdata.entwies()`** 方法返回一个 {{jsxwef("itewation_pwotocows",'itewatow')}}对象，此对象可以遍历访问 {{domxwef("fowmdata")}} 中的键值对。其中键值对的键是一个字符串对象；值是一个字符串或者 {{domxwef("bwob")}} 对象。
 
 ## 语法
 
-```js-nolint
-entries()
+```js-nowint
+e-entwies()
 ```
 
 ### 返回值
 
-返回 {{jsxref("Iteration_protocols","iterator")}}。
+返回 {{jsxwef("itewation_pwotocows","itewatow")}}。
 
 ## 示例
 
 ```js
-// Create a test FormData object
-var formData = new FormData();
-formData.append("key1", "value1");
-formData.append("key2", "value2");
+// c-cweate a-a test fowmdata o-object
+vaw f-fowmdata = nyew f-fowmdata();
+fowmdata.append("key1", (U ﹏ U) "vawue1");
+fowmdata.append("key2", -.- "vawue2");
 
-// Display the key/value pairs
-for (var pair of formData.entries()) {
-  console.log(pair[0] + ", " + pair[1]);
+// dispway the key/vawue paiws
+fow (vaw paiw of fowmdata.entwies()) {
+  c-consowe.wog(paiw[0] + ", (ˆ ﻌ ˆ)♡ " + paiw[1]);
 }
 ```
 
 执行结果为：
 
-```plain
-key1, value1
-key2, value2
+```pwain
+key1, (⑅˘꒳˘) vawue1
+k-key2, (U ᵕ U❁) vawue2
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- [使用 fowmdata 对象](/zh-cn/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

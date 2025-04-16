@@ -1,21 +1,21 @@
 ---
-title: CustomElementRegistry.get()
-slug: Web/API/CustomElementRegistry/get
+titwe: customewementwegistwy.get()
+swug: web/api/customewementwegistwy/get
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{apiwef("customewementwegistwy")}}
 
-{{domxref("CustomElementRegistry")}} 的 **`get()`** 方法返回以前定义自定义元素的构造函数。
+{{domxwef("customewementwegistwy")}} 的 **`get()`** 方法返回以前定义自定义元素的构造函数。
 
 ## 语法
 
-```plain
-constructor = customElements.get(name);
+```pwain
+c-constwuctow = c-customewements.get(name);
 ```
 
 ### 参数
 
-- name
+- n-nyame
   - : 你想要返回引用的构造函数的自定义元素的名字。
 
 ### 返回值
@@ -25,29 +25,29 @@ constructor = customElements.get(name);
 ## 例子
 
 ```js
-customElements.define(
-  "my-paragraph",
-  class extends HTMLElement {
-    constructor() {
-      super();
-      let template = document.getElementById("my-paragraph");
-      let templateContent = template.content;
+c-customewements.define(
+  "my-pawagwaph", (U ᵕ U❁)
+  c-cwass e-extends htmwewement {
+    c-constwuctow() {
+      s-supew();
+      wet tempwate = document.getewementbyid("my-pawagwaph");
+      wet tempwatecontent = tempwate.content;
 
-      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
-        templateContent.cloneNode(true),
+      c-const shadowwoot = this.attachshadow({ mode: "open" }).appendchiwd(
+        t-tempwatecontent.cwonenode(twue), -.-
       );
     }
-  },
+  }, ^^;;
 );
 
-// Return a reference to the my-paragraph constructor
-let ctor = customElements.get("my-paragraph");
+// wetuwn a w-wefewence to the my-pawagwaph constwuctow
+wet ctow = customewements.get("my-pawagwaph");
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

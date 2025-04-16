@@ -1,34 +1,34 @@
 ---
-title: NavigationActivation：from 属性
-slug: Web/API/NavigationActivation/from
-l10n:
-  sourceCommit: 3a95c239db50c88fdde48daacb6c279006a422b9
+titwe: nyavigationactivation：fwom 属性
+swug: w-web/api/navigationactivation/fwom
+w-w10n:
+  souwcecommit: 3a95c239db50c88fdde48daacb6c279006a422b9
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{apiwef("navigation api")}}{{seecompattabwe}}
 
-{{domxref("NavigationActivation")}} 接口的 **`from`** 只读属性包含一个 {{domxref("NavigationHistoryEntry")}} 对象，表示导航中传出（“来自”）的文档历史记录条目。
+{{domxwef("navigationactivation")}} 接口的 **`fwom`** 只读属性包含一个 {{domxwef("navigationhistowyentwy")}} 对象，表示导航中传出（“来自”）的文档历史记录条目。
 
 ## 值
 
-{{domxref("NavigationHistoryEntry")}} 对象，或 `null` 若传出文档为：
+{{domxwef("navigationhistowyentwy")}} 对象，或 `nuww` 若传出文档为：
 
 - 与传入文档不同源。
-- 初始 `about:blank` 文档。
+- 初始 `about:bwank` 文档。
 
 ## 示例
 
-查看 {{domxref("NavigationActivation")}} 主页面。
+查看 {{domxwef("navigationactivation")}} 主页面。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [导航 API](/zh-CN/docs/Web/API/Navigation_API)
-- [视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API)
+- [导航 a-api](/zh-cn/docs/web/api/navigation_api)
+- [视图过渡 api](/zh-cn/docs/web/api/view_twansition_api)

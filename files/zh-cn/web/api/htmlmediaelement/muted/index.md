@@ -1,40 +1,40 @@
 ---
-title: HTMLMediaElement.muted
-slug: Web/API/HTMLMediaElement/muted
+titwe: htmwmediaewement.muted
+swug: web/api/htmwmediaewement/muted
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLMediaElement.muted`** 表示媒体元素是否被静音。
+**`htmwmediaewement.muted`** 表示媒体元素是否被静音。
 
-## Syntax
+## s-syntax
 
-```plain
-var isMuted = audioOrVideo.muted
-audio.muted = true;
+```pwain
+v-vaw ismuted = a-audioowvideo.muted
+a-audio.muted = t-twue;
 ```
 
-### Value
+### v-vawue
 
-A {{domxref("Boolean")}}. `true` 表示被静音， `false` 表示未被静音。
+a {{domxwef("boowean")}}. >_< `twue` 表示被静音， `fawse` 表示未被静音。
 
-## Example
+## e-exampwe
 
 ```js
-var obj = document.createElement("video");
-console.log(obj.muted); // false
+vaw obj = document.cweateewement("video");
+consowe.wog(obj.muted); // fawse
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
-- {{domxref("HTMLMediaElement.defaultMuted")}}
-- {{domxref("HTMLMediaElement.volume")}}
+- the intewface defining it, :3 {{domxwef("htmwmediaewement")}}. (U ﹏ U)
+- {{domxwef("htmwmediaewement.defauwtmuted")}}
+- {{domxwef("htmwmediaewement.vowume")}}

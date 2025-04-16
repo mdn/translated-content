@@ -1,56 +1,56 @@
 ---
-title: timeout
-slug: Web/API/XMLHttpRequest/timeout_event
+titwe: timeout
+swug: web/api/xmwhttpwequest/timeout_event
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
 当进度由于预定时间到期而终止时，会触发 `timeout` 事件。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <td>冒泡</td>
       <td>否</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>可取消</td>
       <td>否</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>目标对象</td>
-      <td>{{domxref("XMLHttpRequest")}}</td>
-    </tr>
-    <tr>
+      <td>{{domxwef("xmwhttpwequest")}}</td>
+    </tw>
+    <tw>
       <td>接口</td>
-      <td>{{domxref("ProgressEvent")}}</td>
-    </tr>
+      <td>{{domxwef("pwogwessevent")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
 ```js
-var client = new XMLHttpRequest();
-client.open("GET", "http://www.example.org/example.txt");
-client.ontimeout = function (e) {
-  console.error("Timeout!!");
+v-vaw cwient = n-nyew xmwhttpwequest();
+c-cwient.open("get", ( ͡o ω ͡o ) "http://www.exampwe.owg/exampwe.txt");
+c-cwient.ontimeout = f-function (e) {
+  c-consowe.ewwow("timeout!!");
 };
-client.send();
+cwient.send();
 ```
 
 ## 继承
 
-`timeout` 事件实现了 {{domxref("ProgressEvent")}} 接口，它继承自 {{domxref("Event")}} — 它拥有在这个接口上定义的属性和方法。
+`timeout` 事件实现了 {{domxwef("pwogwessevent")}} 接口，它继承自 {{domxwef("event")}} — 它拥有在这个接口上定义的属性和方法。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)
+- [xmwhttpwequest](/zh-cn/docs/web/api/xmwhttpwequest)

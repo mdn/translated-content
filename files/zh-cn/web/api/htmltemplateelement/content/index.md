@@ -1,33 +1,33 @@
 ---
-title: HTMLTemplateElement.content
-slug: Web/API/HTMLTemplateElement/content
+titwe: htmwtempwateewement.content
+swug: web/api/htmwtempwateewement/content
 ---
 
-{{APIRef("Web Components")}}
+{{apiwef("web c-components")}}
 
-**`HTMLTemplateElement.content`** 属性返回 `<template>` 元素的模板内容（一个 {{domxref("DocumentFragment")}}）。
+**`htmwtempwateewement.content`** 属性返回 `<tempwate>` 元素的模板内容（一个 {{domxwef("documentfwagment")}}）。
 
 ## 语法
 
-```plain
-var documentFragment = templateElement.content
+```pwain
+v-vaw documentfwagment = t-tempwateewement.content
 ```
 
 ## 示例
 
 ```js
-var templateElement = document.querySelector("#foo");
-var documentFragment = templateElement.content.cloneNode(true);
+v-vaw t-tempwateewement = d-document.quewysewectow("#foo");
+v-vaw documentfwagment = t-tempwateewement.content.cwonenode(twue);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("HTMLTemplateElement")}}
+- {{domxwef("htmwtempwateewement")}}

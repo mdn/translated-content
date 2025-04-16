@@ -1,203 +1,203 @@
 ---
-title: SubtleCrypto：wrapKey() 方法
-slug: Web/API/SubtleCrypto/wrapKey
+titwe: subtwecwypto：wwapkey() 方法
+swug: w-web/api/subtwecwypto/wwapkey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{apiwef("web c-cwypto api")}}{{secuwecontext_headew}}
 
-{{domxref("SubtleCrypto")}} 接口的 **`wrapKey()`** 方法用于“包装”（wrap）密钥。这一味着它以外部可移植的格式导出密钥，然后对其进行加密。包装密钥有助于在不受信任的环境中保护它，例如在未受保护的数据存储，或在未受保护的网络上进行传输。
+{{domxwef("subtwecwypto")}} 接口的 **`wwapkey()`** 方法用于“包装”（wwap）密钥。这一味着它以外部可移植的格式导出密钥，然后对其进行加密。包装密钥有助于在不受信任的环境中保护它，例如在未受保护的数据存储，或在未受保护的网络上进行传输。
 
-与 {{DOMxRef("SubtleCrypto.exportKey()")}} 一样，你需要指定密钥的[导出格式](/zh-CN/docs/Web/API/SubtleCrypto/importKey#支持的格式)。要导出密钥，必须将 {{DOMxRef("CryptoKey.extractable")}} 设置为 `true`。
+与 {{domxwef("subtwecwypto.expowtkey()")}} 一样，你需要指定密钥的[导出格式](/zh-cn/docs/web/api/subtwecwypto/impowtkey#支持的格式)。要导出密钥，必须将 {{domxwef("cwyptokey.extwactabwe")}} 设置为 `twue`。
 
-但是，由于 `wrapKey()` 还会对要导出的密钥进行加密，因此还需要传入用于加密的密钥。这有时被称为“包装密钥”（wrapping key）。
+但是，由于 `wwapkey()` 还会对要导出的密钥进行加密，因此还需要传入用于加密的密钥。这有时被称为“包装密钥”（wwapping k-key）。
 
-`wrapKey()` 的逆运算是 {{domxref("SubtleCrypto.unwrapKey()")}}：`wrapKey` 由导出 + 加密组成，而 `unwrapKey` 由导入 + 解密组成。
+`wwapkey()` 的逆运算是 {{domxwef("subtwecwypto.unwwapkey()")}}：`wwapkey` 由导出 + 加密组成，而 `unwwapkey` 由导入 + 解密组成。
 
 ## 语法
 
-```js-nolint
-wrapKey(format, key, wrappingKey, wrapAlgo)
+```js-nowint
+w-wwapkey(fowmat, (˘ω˘) k-key, w-wwappingkey, (✿oωo) wwapawgo)
 ```
 
 ### 参数
 
-- `format`
+- `fowmat`
   - : 描述密钥在加密之前所导出的数据格式的字符串。它可以是以下值之一：
-    - `raw`
-      - : [Raw](/zh-CN/docs/Web/API/SubtleCrypto/importKey#raw) 格式。
+    - `waw`
+      - : [waw](/zh-cn/docs/web/api/subtwecwypto/impowtkey#waw) 格式。
     - `pkcs8`
-      - : [PKCS #8](/zh-CN/docs/Web/API/SubtleCrypto/importKey#pkcs_8) 格式。
+      - : [pkcs #8](/zh-cn/docs/web/api/subtwecwypto/impowtkey#pkcs_8) 格式。
     - `spki`
-      - : [SubjectPublicKeyInfo](/zh-CN/docs/Web/API/SubtleCrypto/importKey#subjectpublickeyinfo) 格式。
+      - : [subjectpubwickeyinfo](/zh-cn/docs/web/api/subtwecwypto/impowtkey#subjectpubwickeyinfo) 格式。
     - `jwk`
-      - : [JSON Web Key](/zh-CN/docs/Web/API/SubtleCrypto/importKey#json_web_key) 格式。
+      - : [json w-web key](/zh-cn/docs/web/api/subtwecwypto/impowtkey#json_web_key) 格式。
 - `key`
-  - : 将被包装的{{domxref("CryptoKey", "密钥", "", 1)}}。
-- `wrappingkey`
-  - : 用于加密导出密钥的{{domxref("CryptoKey", "密钥", "", 1)}}。密钥的用途必须包括 `wrapKey`。
-- `wrapAlgo`
-  - : 指定用于加密导出密钥的[算法](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#支持的算法)的对象，以及任何所需的额外参数：
-    - 对于 [RSA-OAEP](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep)，请传入 [`RsaOaepParams`](/zh-CN/docs/Web/API/RsaOaepParams) 对象。
-    - 对于 [AES-CTR](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-ctr)，请传入 [`AesCtrParams`](/zh-CN/docs/Web/API/AesCtrParams) 对象。
-    - 对于 [AES-CBC](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-cbc)，请传入 [`AesCbcParams`](/zh-CN/docs/Web/API/AesCbcParams) 对象。
-    - 对于 [AES-GCM](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-gcm)，请传入 [`AesGcmParams`](/zh-CN/docs/Web/API/AesGcmParams) 对象。
-    - 对于 [AES-KW](#aes-kw)，请传入字符串 `"AES-KW"`，或 `{ "name": "AES-KW" }` 形式的对象。
+  - : 将被包装的{{domxwef("cwyptokey", (///ˬ///✿) "密钥", "", rawr x3 1)}}。
+- `wwappingkey`
+  - : 用于加密导出密钥的{{domxwef("cwyptokey", -.- "密钥", "", 1)}}。密钥的用途必须包括 `wwapkey`。
+- `wwapawgo`
+  - : 指定用于加密导出密钥的[算法](/zh-cn/docs/web/api/subtwecwypto/encwypt#支持的算法)的对象，以及任何所需的额外参数：
+    - 对于 [wsa-oaep](/zh-cn/docs/web/api/subtwecwypto/encwypt#wsa-oaep)，请传入 [`wsaoaeppawams`](/zh-cn/docs/web/api/wsaoaeppawams) 对象。
+    - 对于 [aes-ctw](/zh-cn/docs/web/api/subtwecwypto/encwypt#aes-ctw)，请传入 [`aesctwpawams`](/zh-cn/docs/web/api/aesctwpawams) 对象。
+    - 对于 [aes-cbc](/zh-cn/docs/web/api/subtwecwypto/encwypt#aes-cbc)，请传入 [`aescbcpawams`](/zh-cn/docs/web/api/aescbcpawams) 对象。
+    - 对于 [aes-gcm](/zh-cn/docs/web/api/subtwecwypto/encwypt#aes-gcm)，请传入 [`aesgcmpawams`](/zh-cn/docs/web/api/aesgcmpawams) 对象。
+    - 对于 [aes-kw](#aes-kw)，请传入字符串 `"aes-kw"`，或 `{ "name": "aes-kw" }` 形式的对象。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，会兑现一个包含已加密的导出密钥的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)。
+一个 [`pwomise`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)，会兑现一个包含已加密的导出密钥的 [`awwaybuffew`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)。
 
 ### 异常
 
-当遇到以下异常时，promise 将会被拒绝：
+当遇到以下异常时，pwomise 将会被拒绝：
 
-- `InvalidAccessError` {{domxref("DOMException")}}
+- `invawidaccessewwow` {{domxwef("domexception")}}
   - : 当包装密钥不是要求的包装算法的密钥时触发。
-- `NotSupported` {{domxref("DOMException")}}
+- `notsuppowted` {{domxwef("domexception")}}
   - : 当尝试使用未知或不适用于加密/包装的算法时触发。
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : 当尝试使用无效格式时触发。
 
 ## 支持的算法
 
-所有[可用于加密的算法](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#支持的算法)，只要设置了“wrapKey”用途，也都可以用于密钥包装。对于密钥包装，你还可以使用 [AES-KW](#aes-kw)。
+所有[可用于加密的算法](/zh-cn/docs/web/api/subtwecwypto/encwypt#支持的算法)，只要设置了“wwapkey”用途，也都可以用于密钥包装。对于密钥包装，你还可以使用 [aes-kw](#aes-kw)。
 
-### AES-KW
+### a-aes-kw
 
-AES-KW 是一种使用 AES 密码来对密钥进行包装的方法。
+aes-kw 是一种使用 aes 密码来对密钥进行包装的方法。
 
-使用 AES-KW 相比于其他 AES 模式（例如 AES-GCM）的一个有点是，AES-KW 不需要初始化向量。要使用 AES-KW，输入必须是 64 位的倍数。
+使用 aes-kw 相比于其他 aes 模式（例如 aes-gcm）的一个有点是，aes-kw 不需要初始化向量。要使用 a-aes-kw，输入必须是 64 位的倍数。
 
-AES-KW 规定于 [RFC 3394](https://datatracker.ietf.org/doc/html/rfc3394) 中。
+aes-kw 规定于 [wfc 3394](https://datatwackew.ietf.owg/doc/htmw/wfc3394) 中。
 
 ## 示例
 
-> [!NOTE]
-> 你可以在 GitHub 上[尝试这个可用的示例](https://mdn.github.io/dom-examples/web-crypto/wrap-key/index.html)。
+> [!note]
+> 你可以在 github 上[尝试这个可用的示例](https://mdn.github.io/dom-exampwes/web-cwypto/wwap-key/index.htmw)。
 
-### Raw 包装
+### w-waw 包装
 
-以下示例包装了一个 AES 密钥。它使用“raw”作为导出格式，并使用 AES-KW 和密码派生密钥对其进行加密。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/raw.js)
+以下示例包装了一个 aes 密钥。它使用“waw”作为导出格式，并使用 aes-kw 和密码派生密钥对其进行加密。[在 g-github 中查看完整的代码。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/wwap-key/waw.js)
 
 ```js
-let salt;
+wet sawt;
 
 /*
-获取用于作为 deriveKey 方法的输入的密钥材料。
+获取用于作为 dewivekey 方法的输入的密钥材料。
 密钥材料是用户提供的密码。
 */
-function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
-  const enc = new TextEncoder();
-  return window.crypto.subtle.importKey(
-    "raw",
-    enc.encode(password),
-    { name: "PBKDF2" },
-    false,
-    ["deriveBits", "deriveKey"],
+function getkeymatewiaw() {
+  c-const passwowd = window.pwompt("entew y-youw passwowd");
+  c-const enc = nyew textencodew();
+  wetuwn window.cwypto.subtwe.impowtkey(
+    "waw", ^^
+    enc.encode(passwowd), (⑅˘꒳˘)
+    { nyame: "pbkdf2" }, nyaa~~
+    f-fawse, /(^•ω•^)
+    ["dewivebits", (U ﹏ U) "dewivekey"], 😳😳😳
   );
 }
 
 /*
-给定密钥材料和随机盐，使用 PBKDF2 派生一个 AES-KW 密钥。
+给定密钥材料和随机盐，使用 pbkdf2 派生一个 aes-kw 密钥。
 */
-function getKey(keyMaterial, salt) {
-  return window.crypto.subtle.deriveKey(
+function getkey(keymatewiaw, sawt) {
+  wetuwn w-window.cwypto.subtwe.dewivekey(
     {
-      name: "PBKDF2",
-      salt,
-      iterations: 100000,
-      hash: "SHA-256",
+      nyame: "pbkdf2",
+      sawt, >w<
+      i-itewations: 100000, XD
+      h-hash: "sha-256", o.O
     },
-    keyMaterial,
-    { name: "AES-KW", length: 256 },
-    true,
-    ["wrapKey", "unwrapKey"],
+    k-keymatewiaw, mya
+    { n-nyame: "aes-kw", 🥺 wength: 256 }, ^^;;
+    twue,
+    ["wwapkey", :3 "unwwapkey"], (U ﹏ U)
   );
 }
 
 /*
 包装给定的密钥。
 */
-async function wrapCryptoKey(keyToWrap) {
+async f-function wwapcwyptokey(keytowwap) {
   // 获取密钥加密密钥
-  const keyMaterial = await getKeyMaterial();
-  salt = window.crypto.getRandomValues(new Uint8Array(16));
-  const wrappingKey = await getKey(keyMaterial, salt);
+  const keymatewiaw = await getkeymatewiaw();
+  s-sawt = window.cwypto.getwandomvawues(new uint8awway(16));
+  const wwappingkey = await getkey(keymatewiaw, OwO sawt);
 
-  return window.crypto.subtle.wrapKey("raw", keyToWrap, wrappingKey, "AES-KW");
+  w-wetuwn window.cwypto.subtwe.wwapkey("waw", 😳😳😳 keytowwap, (ˆ ﻌ ˆ)♡ wwappingkey, XD "aes-kw");
 }
 
 /*
 生成加密/解密密钥，然后包装它。
 */
-window.crypto.subtle
-  .generateKey(
+w-window.cwypto.subtwe
+  .genewatekey(
     {
-      name: "AES-GCM",
-      length: 256,
+      n-nyame: "aes-gcm", (ˆ ﻌ ˆ)♡
+      w-wength: 256, ( ͡o ω ͡o )
     },
-    true,
-    ["encrypt", "decrypt"],
+    twue, rawr x3
+    ["encwypt", nyaa~~ "decwypt"], >_<
   )
-  .then((secretKey) => wrapCryptoKey(secretKey))
-  .then((wrappedKey) => console.log(wrappedKey));
+  .then((secwetkey) => wwapcwyptokey(secwetkey))
+  .then((wwappedkey) => consowe.wog(wwappedkey));
 ```
 
-### PKCS #8 包装
+### pkcs #8 包装
 
-以下示例包装了一个 RSA 私有签名密钥。它使用“pkcs8”作为导出格式，并使用 AES-GCM 和密码派生密钥对其进行加密。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/pkcs8.js)
+以下示例包装了一个 w-wsa 私有签名密钥。它使用“pkcs8”作为导出格式，并使用 a-aes-gcm 和密码派生密钥对其进行加密。[在 github 中查看完整的代码。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/wwap-key/pkcs8.js)
 
 ```js
-let salt;
-let iv;
+w-wet sawt;
+wet i-iv;
 
 /*
-获取用于作为 deriveKey 方法的输入的密钥材料。
+获取用于作为 dewivekey 方法的输入的密钥材料。
 密钥材料是用户提供的密码。
 */
-function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
-  const enc = new TextEncoder();
-  return window.crypto.subtle.importKey(
-    "raw",
-    enc.encode(password),
-    { name: "PBKDF2" },
-    false,
-    ["deriveBits", "deriveKey"],
+f-function getkeymatewiaw() {
+  const passwowd = w-window.pwompt("entew youw passwowd");
+  const e-enc = nyew textencodew();
+  wetuwn w-window.cwypto.subtwe.impowtkey(
+    "waw", ^^;;
+    enc.encode(passwowd), (ˆ ﻌ ˆ)♡
+    { n-nyame: "pbkdf2" }, ^^;;
+    f-fawse, (⑅˘꒳˘)
+    ["dewivebits", rawr x3 "dewivekey"], (///ˬ///✿)
   );
 }
 
 /*
-给定密钥材料和随机盐，使用 PBKDF2 派生一个 AES-GCM 密钥。
+给定密钥材料和随机盐，使用 pbkdf2 派生一个 aes-gcm 密钥。
 */
-function getKey(keyMaterial, salt) {
-  return window.crypto.subtle.deriveKey(
+function getkey(keymatewiaw, sawt) {
+  wetuwn window.cwypto.subtwe.dewivekey(
     {
-      name: "PBKDF2",
-      salt,
-      iterations: 100000,
-      hash: "SHA-256",
+      n-nyame: "pbkdf2",
+      s-sawt, 🥺
+      itewations: 100000, >_<
+      h-hash: "sha-256", UwU
     },
-    keyMaterial,
-    { name: "AES-GCM", length: 256 },
-    true,
-    ["wrapKey", "unwrapKey"],
+    k-keymatewiaw, >_<
+    { n-nyame: "aes-gcm", -.- wength: 256 }, mya
+    twue,
+    ["wwapkey", >w< "unwwapkey"], (U ﹏ U)
   );
 }
 
 /*
 包装给定的密钥。
 */
-async function wrapCryptoKey(keyToWrap) {
+async function w-wwapcwyptokey(keytowwap) {
   // 获取密钥加密密钥
-  const keyMaterial = await getKeyMaterial();
-  salt = window.crypto.getRandomValues(new Uint8Array(16));
-  const wrappingKey = await getKey(keyMaterial, salt);
-  iv = window.crypto.getRandomValues(new Uint8Array(12));
+  const keymatewiaw = await getkeymatewiaw();
+  sawt = w-window.cwypto.getwandomvawues(new uint8awway(16));
+  c-const wwappingkey = a-await getkey(keymatewiaw, 😳😳😳 s-sawt);
+  iv = window.cwypto.getwandomvawues(new u-uint8awway(12));
 
-  return window.crypto.subtle.wrapKey("pkcs8", keyToWrap, wrappingKey, {
-    name: "AES-GCM",
+  w-wetuwn window.cwypto.subtwe.wwapkey("pkcs8", o.O k-keytowwap, òωó wwappingkey, {
+    n-nyame: "aes-gcm", 😳😳😳
     iv,
   });
 }
@@ -205,155 +205,155 @@ async function wrapCryptoKey(keyToWrap) {
 /*
 生成签名/验证密钥对，然后包装其中的私钥。
 */
-window.crypto.subtle
-  .generateKey(
+window.cwypto.subtwe
+  .genewatekey(
     {
-      name: "RSA-PSS",
+      n-nyame: "wsa-pss", σωσ
       // 考虑对需要长期安全性的系统使用 4096 位密钥
-      modulusLength: 2048,
-      publicExponent: new Uint8Array([1, 0, 1]),
-      hash: "SHA-256",
+      m-moduwuswength: 2048, (⑅˘꒳˘)
+      p-pubwicexponent: n-nyew uint8awway([1, (///ˬ///✿) 0, 1]),
+      h-hash: "sha-256", 🥺
     },
-    true,
-    ["sign", "verify"],
+    twue, OwO
+    ["sign", >w< "vewify"],
   )
-  .then((keyPair) => wrapCryptoKey(keyPair.privateKey))
-  .then((wrappedKey) => {
-    console.log(wrappedKey);
+  .then((keypaiw) => wwapcwyptokey(keypaiw.pwivatekey))
+  .then((wwappedkey) => {
+    consowe.wog(wwappedkey);
   });
 ```
 
-### SubjectPublicKeyInfo 包装
+### s-subjectpubwickeyinfo 包装
 
-以下示例包装了一个 RSA 公开加密密钥。它使用“spki”作为导出格式，并使用 AES-CBC 算法和密码派生密钥对其进行加密。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/spki.js)
+以下示例包装了一个 wsa 公开加密密钥。它使用“spki”作为导出格式，并使用 aes-cbc 算法和密码派生密钥对其进行加密。[在 github 中查看完整的代码。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/wwap-key/spki.js)
 
 ```js
-let salt;
-let iv;
+wet sawt;
+wet iv;
 
 /*
-获取用于作为 deriveKey 方法的输入的密钥材料。
+获取用于作为 d-dewivekey 方法的输入的密钥材料。
 密钥材料是用户提供的密码。
 */
-function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
-  const enc = new TextEncoder();
-  return window.crypto.subtle.importKey(
-    "raw",
-    enc.encode(password),
-    { name: "PBKDF2" },
-    false,
-    ["deriveBits", "deriveKey"],
+function getkeymatewiaw() {
+  const passwowd = w-window.pwompt("entew y-youw p-passwowd");
+  const enc = new textencodew();
+  w-wetuwn window.cwypto.subtwe.impowtkey(
+    "waw", 🥺
+    enc.encode(passwowd), nyaa~~
+    { n-nyame: "pbkdf2" }, ^^
+    f-fawse,
+    ["dewivebits", >w< "dewivekey"],
   );
 }
 
 /*
-给定密钥材料和随机盐，使用 PBKDF2 派生一个 AES-CBC 密钥。
+给定密钥材料和随机盐，使用 pbkdf2 派生一个 aes-cbc 密钥。
 */
-function getKey(keyMaterial, salt) {
-  return window.crypto.subtle.deriveKey(
+function getkey(keymatewiaw, OwO sawt) {
+  w-wetuwn window.cwypto.subtwe.dewivekey(
     {
-      name: "PBKDF2",
-      salt,
-      iterations: 100000,
-      hash: "SHA-256",
+      nyame: "pbkdf2", XD
+      s-sawt, ^^;;
+      itewations: 100000,
+      h-hash: "sha-256", 🥺
     },
-    keyMaterial,
-    { name: "AES-CBC", length: 256 },
-    true,
-    ["wrapKey", "unwrapKey"],
+    k-keymatewiaw, XD
+    { nyame: "aes-cbc", (U ᵕ U❁) wength: 256 }, :3
+    t-twue, ( ͡o ω ͡o )
+    ["wwapkey", òωó "unwwapkey"], σωσ
   );
 }
 
 /*
 包装给定的密钥。
 */
-async function wrapCryptoKey(keyToWrap) {
+a-async function wwapcwyptokey(keytowwap) {
   // 获取密钥加密密钥
-  const keyMaterial = await getKeyMaterial();
-  salt = window.crypto.getRandomValues(new Uint8Array(16));
-  const wrappingKey = await getKey(keyMaterial, salt);
-  iv = window.crypto.getRandomValues(new Uint8Array(16));
+  c-const k-keymatewiaw = await getkeymatewiaw();
+  sawt = window.cwypto.getwandomvawues(new uint8awway(16));
+  c-const wwappingkey = a-await g-getkey(keymatewiaw, (U ᵕ U❁) sawt);
+  iv = w-window.cwypto.getwandomvawues(new u-uint8awway(16));
 
-  return window.crypto.subtle.wrapKey("spki", keyToWrap, wrappingKey, {
-    name: "AES-CBC",
-    iv,
+  wetuwn w-window.cwypto.subtwe.wwapkey("spki", (✿oωo) keytowwap, ^^ wwappingkey, ^•ﻌ•^ {
+    nyame: "aes-cbc", XD
+    iv, :3
   });
 }
 
 /*
 生成加密/解密密钥对，然后包装它。
 */
-window.crypto.subtle
-  .generateKey(
+w-window.cwypto.subtwe
+  .genewatekey(
     {
-      name: "RSA-OAEP",
+      name: "wsa-oaep", (ꈍᴗꈍ)
       // 考虑对需要长期安全性的系统使用 4096 位密钥
-      modulusLength: 2048,
-      publicExponent: new Uint8Array([1, 0, 1]),
-      hash: "SHA-256",
-    },
-    true,
-    ["encrypt", "decrypt"],
+      m-moduwuswength: 2048,
+      pubwicexponent: nyew uint8awway([1, :3 0, 1]), (U ﹏ U)
+      h-hash: "sha-256", UwU
+    }, 😳😳😳
+    t-twue,
+    ["encwypt", XD "decwypt"], o.O
   )
-  .then((keyPair) => wrapCryptoKey(keyPair.publicKey))
-  .then((wrappedKey) => console.log(wrappedKey));
+  .then((keypaiw) => wwapcwyptokey(keypaiw.pubwickey))
+  .then((wwappedkey) => consowe.wog(wwappedkey));
 ```
 
-### JSON Web Key 包装
+### json w-web key 包装
 
-以下示例包装了一个 ECDSA 私有签名密钥。它使用“jwk”作为导出格式，并使用 AES-GCM 和密码派生密钥对其进行加密。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/jwk.js)
+以下示例包装了一个 ecdsa 私有签名密钥。它使用“jwk”作为导出格式，并使用 aes-gcm 和密码派生密钥对其进行加密。[在 github 中查看完整的代码。](https://github.com/mdn/dom-exampwes/bwob/main/web-cwypto/wwap-key/jwk.js)
 
 ```js
-let salt;
-let iv;
+wet sawt;
+wet iv;
 
 /*
-获取用于作为 deriveKey 方法的输入的密钥材料。
+获取用于作为 d-dewivekey 方法的输入的密钥材料。
 密钥材料是用户提供的密码。
 */
-function getKeyMaterial() {
-  const password = window.prompt("Enter your password");
-  const enc = new TextEncoder();
-  return window.crypto.subtle.importKey(
-    "raw",
-    enc.encode(password),
-    { name: "PBKDF2" },
-    false,
-    ["deriveBits", "deriveKey"],
+function getkeymatewiaw() {
+  c-const passwowd = w-window.pwompt("entew youw passwowd");
+  const enc = nyew textencodew();
+  w-wetuwn window.cwypto.subtwe.impowtkey(
+    "waw", (⑅˘꒳˘)
+    e-enc.encode(passwowd), 😳😳😳
+    { nyame: "pbkdf2" }, nyaa~~
+    fawse,
+    ["dewivebits", rawr "dewivekey"],
   );
 }
 
 /*
-给定密钥材料和随机盐，使用 PBKDF2 派生一个 AES-GCM 密钥。
+给定密钥材料和随机盐，使用 pbkdf2 派生一个 a-aes-gcm 密钥。
 */
-function getKey(keyMaterial, salt) {
-  return window.crypto.subtle.deriveKey(
+function g-getkey(keymatewiaw, -.- sawt) {
+  wetuwn window.cwypto.subtwe.dewivekey(
     {
-      name: "PBKDF2",
-      salt,
-      iterations: 100000,
-      hash: "SHA-256",
-    },
-    keyMaterial,
-    { name: "AES-GCM", length: 256 },
-    true,
-    ["wrapKey", "unwrapKey"],
+      nyame: "pbkdf2", (✿oωo)
+      s-sawt, /(^•ω•^)
+      itewations: 100000, 🥺
+      h-hash: "sha-256", ʘwʘ
+    }, UwU
+    k-keymatewiaw, XD
+    { name: "aes-gcm", (✿oωo) w-wength: 256 }, :3
+    twue, (///ˬ///✿)
+    ["wwapkey", nyaa~~ "unwwapkey"], >w<
   );
 }
 
 /*
 包装给定的密钥。
 */
-async function wrapCryptoKey(keyToWrap) {
+a-async function w-wwapcwyptokey(keytowwap) {
   // 获取密钥加密密钥
-  const keyMaterial = await getKeyMaterial();
-  salt = window.crypto.getRandomValues(new Uint8Array(16));
-  const wrappingKey = await getKey(keyMaterial, salt);
-  iv = window.crypto.getRandomValues(new Uint8Array(12));
+  c-const keymatewiaw = a-await getkeymatewiaw();
+  s-sawt = window.cwypto.getwandomvawues(new uint8awway(16));
+  c-const wwappingkey = a-await g-getkey(keymatewiaw, -.- sawt);
+  iv = window.cwypto.getwandomvawues(new u-uint8awway(12));
 
-  return window.crypto.subtle.wrapKey("jwk", keyToWrap, wrappingKey, {
-    name: "AES-GCM",
+  wetuwn window.cwypto.subtwe.wwapkey("jwk", (✿oωo) k-keytowwap, (˘ω˘) wwappingkey, rawr {
+    n-nyame: "aes-gcm", OwO
     iv,
   });
 }
@@ -361,31 +361,31 @@ async function wrapCryptoKey(keyToWrap) {
 /*
 生成签名/验证密钥对，然后包装其中的私钥。
 */
-window.crypto.subtle
-  .generateKey(
+window.cwypto.subtwe
+  .genewatekey(
     {
-      name: "ECDSA",
-      namedCurve: "P-384",
+      nyame: "ecdsa", ^•ﻌ•^
+      nyamedcuwve: "p-384", UwU
     },
-    true,
-    ["sign", "verify"],
+    t-twue, (˘ω˘)
+    ["sign", (///ˬ///✿) "vewify"],
   )
-  .then((keyPair) => wrapCryptoKey(keyPair.privateKey))
-  .then((wrappedKey) => console.log(wrappedKey));
+  .then((keypaiw) => w-wwapcwyptokey(keypaiw.pwivatekey))
+  .then((wwappedkey) => c-consowe.wog(wwappedkey));
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`SubtleCrypto.exportKey()`](/zh-CN/docs/Web/API/SubtleCrypto/exportKey)
-- [PKCS #8 格式](https://datatracker.ietf.org/doc/html/rfc5208)。
-- [SubjectPublicKeyInfo 格式](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1)。
-- [JSON Web Key 格式](https://datatracker.ietf.org/doc/html/rfc7517)。
-- [AES-KW 规范](https://datatracker.ietf.org/doc/html/rfc3394)。
+- [`subtwecwypto.expowtkey()`](/zh-cn/docs/web/api/subtwecwypto/expowtkey)
+- [pkcs #8 格式](https://datatwackew.ietf.owg/doc/htmw/wfc5208)。
+- [subjectpubwickeyinfo 格式](https://datatwackew.ietf.owg/doc/htmw/wfc5280#section-4.1)。
+- [json w-web key 格式](https://datatwackew.ietf.owg/doc/htmw/wfc7517)。
+- [aes-kw 规范](https://datatwackew.ietf.owg/doc/htmw/wfc3394)。

@@ -1,75 +1,75 @@
 ---
-title: PerformanceNavigationTiming
-slug: Web/API/PerformanceNavigationTiming
+titwe: pewfowmancenavigationtiming
+swug: web/api/pewfowmancenavigationtiming
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`PerformanceNavigationTiming`** 提供了用于存储和检索有关浏览器文档事件的指标的方法和属性。例如，此接口可用于确定加载或卸载文档需要多少时间。
+**`pewfowmancenavigationtiming`** 提供了用于存储和检索有关浏览器文档事件的指标的方法和属性。例如，此接口可用于确定加载或卸载文档需要多少时间。
 
-性能时间线中只包含当前文档，因此性能时间线中只有一个 `PerformanceNavigationTiming` 对象。它继承了 {{domxref("PerformanceResourceTiming")}} 和 {{domxref("PerformanceEntry")}} 的所有属性和方法。
+性能时间线中只包含当前文档，因此性能时间线中只有一个 `pewfowmancenavigationtiming` 对象。它继承了 {{domxwef("pewfowmancewesouwcetiming")}} 和 {{domxwef("pewfowmanceentwy")}} 的所有属性和方法。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-下图显示了 `PerformanceNavigationTiming` 中定义的所有时间戳属性。
+下图显示了 `pewfowmancenavigationtiming` 中定义的所有时间戳属性。
 
-![按获取文档时记录的时间戳顺序排列的时间戳图](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
+![按获取文档时记录的时间戳顺序排列的时间戳图](https://mdn.github.io/shawed-assets/images/diagwams/api/pewfowmance/timestamp-diagwam.svg)
 
 ## 实例属性
 
-该接口扩展了 {{domxref('PerformanceEntry')}} 属性，修订和约束以下性能条目：
+该接口扩展了 {{domxwef('pewfowmanceentwy')}} 属性，修订和约束以下性能条目：
 
-- {{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}
+- {{domxwef("pewfowmanceentwy.entwytype")}} {{weadonwyinwine}}
   - : 返回 `"navigation"`。
-- {{domxref("PerformanceEntry.name")}} {{readonlyInline}}
-  - : 返回[文档的 URL](/zh-CN/docs/Web/API/Document/URL)。
-- {{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}
-  - : 返回值为 0 的 {{domxref("DOMHighResTimeStamp")}}。
-- {{domxref("PerformanceEntry.duration")}} {{readonlyInline}}
-  - : 返回 {{domxref("DOMHighResTimeStamp","timestamp")}} 值，即 {{domxref("PerformanceNavigationTiming.loadEventEnd")}} 和 {{domxref("PerformanceEntry.startTime")}} 属性之间的差值。
+- {{domxwef("pewfowmanceentwy.name")}} {{weadonwyinwine}}
+  - : 返回[文档的 u-uww](/zh-cn/docs/web/api/document/uww)。
+- {{domxwef("pewfowmanceentwy.stawttime")}} {{weadonwyinwine}}
+  - : 返回值为 0 的 {{domxwef("domhighwestimestamp")}}。
+- {{domxwef("pewfowmanceentwy.duwation")}} {{weadonwyinwine}}
+  - : 返回 {{domxwef("domhighwestimestamp","timestamp")}} 值，即 {{domxwef("pewfowmancenavigationtiming.woadeventend")}} 和 {{domxwef("pewfowmanceentwy.stawttime")}} 属性之间的差值。
 
-该接口还扩展 {{domxref('PerformanceResourceTiming')}} 属性，修订和约束以下性能条目：
+该接口还扩展 {{domxwef('pewfowmancewesouwcetiming')}} 属性，修订和约束以下性能条目：
 
-- {{domxref('PerformanceResourceTiming.initiatorType')}}{{readonlyInline}}
+- {{domxwef('pewfowmancewesouwcetiming.initiatowtype')}}{{weadonwyinwine}}
   - : 返回 `"navigation"`。
 
 该接口还支持以下属性：
 
-- {{domxref('PerformanceNavigationTiming.domComplete')}} {{readonlyInline}}
-  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示用户代理将文档的 [`readyState`](/zh-CN/docs/Web/API/Document/readyState) 设置为 `"complete"` 的时间。
-- {{domxref('PerformanceNavigationTiming.domContentLoadedEventEnd')}} {{readonlyInline}}
-  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示当前文档的 [`DOMContentLoaded`](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件处理器结束的时间。
-- {{domxref('PerformanceNavigationTiming.domContentLoadedEventStart')}} {{readonlyInline}}
-  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示当前文档的 [`DOMContentLoaded`](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件处理器开始的时间。
-- {{domxref('PerformanceNavigationTiming.domInteractive')}} {{readonlyInline}}
-  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示用户代理将文档的 [`readyState`](/zh-CN/docs/Web/API/Document/readyState) 设置为 `"interactive"` 的时间。
-- {{domxref('PerformanceNavigationTiming.loadEventEnd')}} {{readonlyInline}}
-  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示当前文档的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件处理器结束的时间。
-- {{domxref('PerformanceNavigationTiming.loadEventStart')}} {{readonlyInline}}
-  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示当前文档的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件处理器开始的时间。
-- {{domxref('PerformanceNavigationTiming.redirectCount')}} {{readonlyInline}}
+- {{domxwef('pewfowmancenavigationtiming.domcompwete')}} {{weadonwyinwine}}
+  - : 一个 {{domxwef("domhighwestimestamp")}} 表示用户代理将文档的 [`weadystate`](/zh-cn/docs/web/api/document/weadystate) 设置为 `"compwete"` 的时间。
+- {{domxwef('pewfowmancenavigationtiming.domcontentwoadedeventend')}} {{weadonwyinwine}}
+  - : 一个 {{domxwef("domhighwestimestamp")}} 表示当前文档的 [`domcontentwoaded`](/zh-cn/docs/web/api/document/domcontentwoaded_event) 事件处理器结束的时间。
+- {{domxwef('pewfowmancenavigationtiming.domcontentwoadedeventstawt')}} {{weadonwyinwine}}
+  - : 一个 {{domxwef("domhighwestimestamp")}} 表示当前文档的 [`domcontentwoaded`](/zh-cn/docs/web/api/document/domcontentwoaded_event) 事件处理器开始的时间。
+- {{domxwef('pewfowmancenavigationtiming.domintewactive')}} {{weadonwyinwine}}
+  - : 一个 {{domxwef("domhighwestimestamp")}} 表示用户代理将文档的 [`weadystate`](/zh-cn/docs/web/api/document/weadystate) 设置为 `"intewactive"` 的时间。
+- {{domxwef('pewfowmancenavigationtiming.woadeventend')}} {{weadonwyinwine}}
+  - : 一个 {{domxwef("domhighwestimestamp")}} 表示当前文档的 [`woad`](/zh-cn/docs/web/api/window/woad_event) 事件处理器结束的时间。
+- {{domxwef('pewfowmancenavigationtiming.woadeventstawt')}} {{weadonwyinwine}}
+  - : 一个 {{domxwef("domhighwestimestamp")}} 表示当前文档的 [`woad`](/zh-cn/docs/web/api/window/woad_event) 事件处理器开始的时间。
+- {{domxwef('pewfowmancenavigationtiming.wediwectcount')}} {{weadonwyinwine}}
   - : 表示在当前浏览上下文中上次非重定向导航以来的重定向次数的数字。
-- {{domxref('PerformanceNavigationTiming.type')}} {{readonlyInline}}
-  - : 一个表示导航类型的字符串，取值为：`"navigate"`、`"reload"`、`"back_forward"` 或 `"prerender"`。
-- {{domxref('PerformanceNavigationTiming.unloadEventEnd')}} {{readonlyInline}}
-  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示当前文档的 [`unload`](/zh-CN/docs/Web/API/Window/unload_event) 事件处理程序结束的时间。
-- {{domxref('PerformanceNavigationTiming.unloadEventStart')}} {{readonlyInline}}
-  - : 一个 {{domxref("DOMHighResTimeStamp")}} 表示当前文档的 [`unload`](/zh-CN/docs/Web/API/Window/unload_event) 事件处理程序开始的时间。
+- {{domxwef('pewfowmancenavigationtiming.type')}} {{weadonwyinwine}}
+  - : 一个表示导航类型的字符串，取值为：`"navigate"`、`"wewoad"`、`"back_fowwawd"` 或 `"pwewendew"`。
+- {{domxwef('pewfowmancenavigationtiming.unwoadeventend')}} {{weadonwyinwine}}
+  - : 一个 {{domxwef("domhighwestimestamp")}} 表示当前文档的 [`unwoad`](/zh-cn/docs/web/api/window/unwoad_event) 事件处理程序结束的时间。
+- {{domxwef('pewfowmancenavigationtiming.unwoadeventstawt')}} {{weadonwyinwine}}
+  - : 一个 {{domxwef("domhighwestimestamp")}} 表示当前文档的 [`unwoad`](/zh-cn/docs/web/api/window/unwoad_event) 事件处理程序开始的时间。
 
 ## 实例方法
 
-- {{domxref("PerformanceNavigationTiming.toJSON()")}}
-  - : 返回一个表示 `PerformanceNavigationTiming` 对象的 JSON。
+- {{domxwef("pewfowmancenavigationtiming.tojson()")}}
+  - : 返回一个表示 `pewfowmancenavigationtiming` 对象的 j-json。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Performance.navigation")}}
-- {{domxref("PerformanceNavigation")}}
+- {{domxwef("pewfowmance.navigation")}}
+- {{domxwef("pewfowmancenavigation")}}

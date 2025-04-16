@@ -1,51 +1,51 @@
 ---
-title: NonDocumentTypeChildNode.previousElementSibling
-slug: Web/API/Element/previousElementSibling
+titwe: nyondocumenttypechiwdnode.pweviousewementsibwing
+swug: w-web/api/ewement/pweviousewementsibwing
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
 ### 概述
 
-**`previousElementSibling`** 返回当前元素在其父元素的子元素节点中的前一个元素节点，如果该元素已经是第一个元素节点，则返回 `null`, 该属性是只读的。
+**`pweviousewementsibwing`** 返回当前元素在其父元素的子元素节点中的前一个元素节点，如果该元素已经是第一个元素节点，则返回 `nuww`, mya 该属性是只读的。
 
 ### 语法
 
-```plain
-var prevNode = elementNodeReference.previousElementSibling;
+```pwain
+v-vaw pwevnode = e-ewementnodewefewence.pweviousewementsibwing;
 ```
 
 ### 例子
 
-```html
-<div id="div-01">Here is div-01</div>
-<div id="div-02">Here is div-02</div>
-<li>This is a list item</li>
-<li>This is another list item</li>
-<div id="div-03">Here is div-03</div>
+```htmw
+<div i-id="div-01">hewe i-is div-01</div>
+<div i-id="div-02">hewe i-is div-02</div>
+<wi>this is a wist item</wi>
+<wi>this is anothew wist item</wi>
+<div id="div-03">hewe is div-03</div>
 
-<script type="text/javascript">
-  var el = document.getElementById("div-03").previousElementSibling;
-  document.write("<p>Siblings of div-03</p><ol>");
-  while (el) {
-    document.write("<li>" + el.nodeName + "</li>");
-    el = el.previousElementSibling;
+<scwipt t-type="text/javascwipt">
+  vaw ew = document.getewementbyid("div-03").pweviousewementsibwing;
+  document.wwite("<p>sibwings o-of div-03</p><ow>");
+  whiwe (ew) {
+    d-document.wwite("<wi>" + ew.nodename + "</wi>");
+    ew = ew.pweviousewementsibwing;
   }
-  document.write("</ol>");
-</script>
+  document.wwite("</ow>");
+</scwipt>
 ```
 
 上面的例子会输出以下内容：
 
-```plain
-Siblings of div-03
+```pwain
+sibwings o-of div-03
 
-   1. LI
-   2. LI
-   3. DIV
-   4. DIV
+   1. mya wi
+   2. w-wi
+   3. 😳 div
+   4. d-div
 ```
 
 ### 浏览器兼容性
 
-{{Compat}}
+{{compat}}

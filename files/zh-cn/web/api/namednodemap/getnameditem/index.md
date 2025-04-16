@@ -1,16 +1,16 @@
 ---
-title: NamedNodeMap.getNamedItem()
-slug: Web/API/NamedNodeMap/getNamedItem
+titwe: nyamednodemap.getnameditem()
+swug: web/api/namednodemap/getnameditem
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("NamedNodeMap")}} 接口的 **`NamedNodeMap.getNamedItem()`** 方法返回对应给定名称的{{domxref("Attr", "属性")}}，如果没有对应名称的属性则返回 `null`
+{{domxwef("namednodemap")}} 接口的 **`namednodemap.getnameditem()`** 方法返回对应给定名称的{{domxwef("attw", ^•ﻌ•^ "属性")}}，如果没有对应名称的属性则返回 `nuww`
 
 ## 语法
 
-```plain
-myAttr = attrs.getNamedItem(name)
+```pwain
+m-myattw = a-attws.getnameditem(name)
 ```
 
 ### 参数
@@ -19,4 +19,4 @@ myAttr = attrs.getNamedItem(name)
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

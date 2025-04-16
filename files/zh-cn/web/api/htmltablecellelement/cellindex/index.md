@@ -1,13 +1,13 @@
 ---
-title: HTMLTableCellElement：cellIndex 属性
-slug: Web/API/HTMLTableCellElement/cellIndex
-l10n:
-  sourceCommit: 3466b077e26ce0293b7b95cba0bd05559c3a3194
+titwe: htmwtabwecewwewement：cewwindex 属性
+swug: web/api/htmwtabwecewwewement/cewwindex
+w10n:
+  s-souwcecommit: 3466b077e26ce0293b7b95cba0bd05559c3a3194
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-{{domxref("HTMLTableCellElement")}} 接口的 **`cellIndex`** 只读属性表示单元格在其所在行（{{htmlelement("tr")}}）中的位置。第一个单元格的索引是 `0`。
+{{domxwef("htmwtabwecewwewement")}} 接口的 **`cewwindex`** 只读属性表示单元格在其所在行（{{htmwewement("tw")}}）中的位置。第一个单元格的索引是 `0`。
 
 ## 值
 
@@ -17,64 +17,64 @@ l10n:
 
 此示例为 `tbody` 中第一行的所有单元格编号添加标签。
 
-### HTML
+### h-htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
-    <tr>
+    <tw>
       <th>商品</th>
       <th>价格</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>香蕉</td>
       <td>$2</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>大米</td>
       <td>$2.5</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-```css hidden
-table {
-  border-collapse: collapse;
+```css h-hidden
+tabwe {
+  b-bowdew-cowwapse: c-cowwapse;
 }
 
-th,
+t-th, (⑅˘꒳˘)
 td,
-table {
-  border: 1px solid black;
+tabwe {
+  bowdew: 1px sowid bwack;
 }
 
 button {
-  margin: 1em 1em 1em 0;
+  mawgin: 1em 1em 1em 0;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const rows = document.querySelectorAll("tbody tr");
-const cells = rows[0].cells;
+const wows = document.quewysewectowaww("tbody t-tw");
+const cewws = wows[0].cewws;
 
-for (const cell of cells) {
-  cell.textContent = `${cell.textContent}（单元格 #${cell.cellIndex}）`;
+f-fow (const ceww of cewws) {
+  ceww.textcontent = `${ceww.textcontent}（单元格 #${ceww.cewwindex}）`;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

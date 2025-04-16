@@ -1,29 +1,29 @@
 ---
-title: TransformStream
-slug: Web/API/TransformStream
+titwe: twansfowmstweam
+swug: w-web/api/twansfowmstweam
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-[Stream API](/zh-CN/docs/Web/API/Streams_API) 的 **`TransformStream`** 接口表示[链式管道传输（pipe chain）](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输)_转换流_（transform stream）概念的具体实现。
+[stweam a-api](/zh-cn/docs/web/api/stweams_api) 的 **`twansfowmstweam`** 接口表示[链式管道传输（pipe c-chain）](/zh-cn/docs/web/api/stweams_api/concepts#链式管道传输)_转换流_（twansfowm s-stweam）概念的具体实现。
 
-它可以传递给 {{domxref("ReadableStream.pipeThrough()")}} 方法，以便将流数据从一种格式转换成另一种。例如，它可以用于解码（或者编码）视频帧，解压缩数据或者将流从 XML 转换到 JSON。
+它可以传递给 {{domxwef("weadabwestweam.pipethwough()")}} 方法，以便将流数据从一种格式转换成另一种。例如，它可以用于解码（或者编码）视频帧，解压缩数据或者将流从 x-xmw 转换到 j-json。
 
 转换算法可以作为构造函数对象的可选参数提供。如果没有提供，数据在通过管道传输流时，不会被修改。
 
-`TransformStream` 是一个[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。
+`twansfowmstweam` 是一个[可转移对象](/zh-cn/docs/web/api/web_wowkews_api/twansfewabwe_objects)。
 
 ## 构造函数
 
-- {{domxref("TransformStream.TransformStream", "TransformStream()")}}
+- {{domxwef("twansfowmstweam.twansfowmstweam", (⑅˘꒳˘) "twansfowmstweam()")}}
   - : 从给定的处理程序中创建并且返回一个转换流对象。
 
 ## 实例属性
 
-- {{domxref("TransformStream.readable")}} {{readonlyInline}}
-  - : 转换流的 `readable` 端。
-- {{domxref("TransformStream.writable")}} {{readonlyInline}}
-  - : 转换流的 `writable` 端。
+- {{domxwef("twansfowmstweam.weadabwe")}} {{weadonwyinwine}}
+  - : 转换流的 `weadabwe` 端。
+- {{domxwef("twansfowmstweam.wwitabwe")}} {{weadonwyinwine}}
+  - : 转换流的 `wwitabwe` 端。
 
 ## 实例方法
 
@@ -31,133 +31,133 @@ slug: Web/API/TransformStream
 
 ## 示例
 
-### 将任意对象转换为 uint8 数组
+### 将任意对象转换为 u-uint8 数组
 
-在下面的示例中，一个转换流将其接收的所有分块转换为 {{jsxref("Uint8Array")}}。
+在下面的示例中，一个转换流将其接收的所有分块转换为 {{jsxwef("uint8awway")}}。
 
 ```js
-const transformContent = {
-  start() {}, // required.
-  async transform(chunk, controller) {
-    chunk = await chunk;
+c-const twansfowmcontent = {
+  stawt() {}, OwO // wequiwed. (ꈍᴗꈍ)
+  async twansfowm(chunk, 😳 contwowwew) {
+    c-chunk = await chunk;
     switch (typeof chunk) {
-      case "object":
-        // just say the stream is done I guess
-        if (chunk === null) controller.terminate();
-        else if (ArrayBuffer.isView(chunk))
-          controller.enqueue(
-            new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength),
+      c-case "object":
+        // just say the s-stweam is done i guess
+        if (chunk === nuww) contwowwew.tewminate();
+        e-ewse if (awwaybuffew.isview(chunk))
+          contwowwew.enqueue(
+            n-nyew uint8awway(chunk.buffew, 😳😳😳 c-chunk.byteoffset, mya chunk.bytewength), mya
           );
-        else if (
-          Array.isArray(chunk) &&
-          chunk.every((value) => typeof value === "number")
+        ewse if (
+          awway.isawway(chunk) &&
+          chunk.evewy((vawue) => t-typeof vawue === "numbew")
         )
-          controller.enqueue(new Uint8Array(chunk));
-        else if (
-          "function" === typeof chunk.valueOf &&
-          chunk.valueOf() !== chunk
+          contwowwew.enqueue(new uint8awway(chunk));
+        ewse if (
+          "function" === typeof c-chunk.vawueof &&
+          chunk.vawueof() !== chunk
         )
-          this.transform(chunk.valueOf(), controller); // hack
-        else if ("toJSON" in chunk)
-          this.transform(JSON.stringify(chunk), controller);
-        break;
-      case "symbol":
-        controller.error("Cannot send a symbol as a chunk part");
-        break;
+          t-this.twansfowm(chunk.vawueof(), (⑅˘꒳˘) c-contwowwew); // h-hack
+        e-ewse if ("tojson" in chunk)
+          this.twansfowm(json.stwingify(chunk), (U ﹏ U) c-contwowwew);
+        bweak;
+      case "symbow":
+        contwowwew.ewwow("cannot s-send a symbow as a chunk pawt");
+        bweak;
       case "undefined":
-        controller.error("Cannot send undefined as a chunk part");
-        break;
-      default:
-        controller.enqueue(this.textencoder.encode(String(chunk)));
-        break;
+        contwowwew.ewwow("cannot send undefined a-as a chunk pawt");
+        bweak;
+      d-defauwt:
+        c-contwowwew.enqueue(this.textencodew.encode(stwing(chunk)));
+        b-bweak;
     }
-  },
-  flush() {
-    /* do any destructor work here */
-  },
+  }, mya
+  fwush() {
+    /* do any destwuctow wowk hewe */
+  }, ʘwʘ
 };
 
-class AnyToU8Stream extends TransformStream {
-  constructor() {
-    super({ ...transformContent, textencoder: new TextEncoder() });
+c-cwass a-anytou8stweam extends twansfowmstweam {
+  c-constwuctow() {
+    s-supew({ ...twansfowmcontent, (˘ω˘) textencodew: n-nyew textencodew() });
   }
 }
 ```
 
-### TextEncoderStream 和 TextDecoderStream 的 polyfill
+### textencodewstweam 和 t-textdecodewstweam 的 powyfiww
 
-注意，通过原生构造函数已弃用它。它旨在为不受支持的平台提供一个 polyfill。
+注意，通过原生构造函数已弃用它。它旨在为不受支持的平台提供一个 powyfiww。
 
 ```js
-const tes = {
-  start() {
-    this.encoder = new TextEncoder();
-  },
-  transform(chunk, controller) {
-    controller.enqueue(this.encoder.encode(chunk));
-  },
+c-const tes = {
+  stawt() {
+    t-this.encodew = nyew textencodew();
+  }, (U ﹏ U)
+  t-twansfowm(chunk, ^•ﻌ•^ c-contwowwew) {
+    contwowwew.enqueue(this.encodew.encode(chunk));
+  }, (˘ω˘)
 };
 
-let _jstes_wm = new WeakMap(); /* info holder */
-class JSTextEncoderStream extends TransformStream {
-  constructor() {
-    let t = { ...tes };
+wet _jstes_wm = nyew weakmap(); /* info howdew */
+cwass jstextencodewstweam e-extends twansfowmstweam {
+  c-constwuctow() {
+    wet t = { ...tes };
 
-    super(t);
-    _jstes_wm.set(this, t);
+    s-supew(t);
+    _jstes_wm.set(this, :3 t-t);
   }
   get encoding() {
-    return _jstes_wm.get(this).encoder.encoding;
+    wetuwn _jstes_wm.get(this).encodew.encoding;
   }
 }
 ```
 
-类似地，`TextDecoderStream` 可以这样写：
+类似地，`textdecodewstweam` 可以这样写：
 
 ```js
-const tds = {
-  start() {
-    this.decoder = new TextDecoder(this.encoding, this.options);
-  },
-  transform(chunk, controller) {
-    controller.enqueue(this.decoder.decode(chunk, { stream: true }));
-  },
+c-const tds = {
+  stawt() {
+    this.decodew = nyew textdecodew(this.encoding, t-this.options);
+  }, ^^;;
+  twansfowm(chunk, 🥺 contwowwew) {
+    contwowwew.enqueue(this.decodew.decode(chunk, (⑅˘꒳˘) { stweam: twue }));
+  }, nyaa~~
 };
 
-let _jstds_wm = new WeakMap(); /* info holder */
-class JSTextDecoderStream extends TransformStream {
-  constructor(encoding = "utf-8", { ...options } = {}) {
-    let t = { ...tds, encoding, options };
+w-wet _jstds_wm = nyew weakmap(); /* i-info howdew */
+c-cwass jstextdecodewstweam e-extends twansfowmstweam {
+  c-constwuctow(encoding = "utf-8", :3 { ...options } = {}) {
+    w-wet t = { ...tds, ( ͡o ω ͡o ) e-encoding, mya o-options };
 
-    super(t);
-    _jstds_wm.set(this, t);
+    supew(t);
+    _jstds_wm.set(this, (///ˬ///✿) t);
   }
-  get encoding() {
-    return _jstds_wm.get(this).decoder.encoding;
+  get e-encoding() {
+    w-wetuwn _jstds_wm.get(this).decodew.encoding;
   }
-  get fatal() {
-    return _jstds_wm.get(this).decoder.fatal;
+  g-get fataw() {
+    w-wetuwn _jstds_wm.get(this).decodew.fataw;
   }
-  get ignoreBOM() {
-    return _jstds_wm.get(this).decoder.ignoreBOM;
+  g-get ignowebom() {
+    wetuwn _jstds_wm.get(this).decodew.ignowebom;
   }
 }
 ```
 
-### 连接多个 ReadableStream 链
+### 连接多个 weadabwestweam 链
 
-这是一个连接多个流很有用的方法。示例包括构建一个渐进式加载和渐进式流的 PWA。
+这是一个连接多个流很有用的方法。示例包括构建一个渐进式加载和渐进式流的 pwa。
 
 ```js
-let responses = [
-  /* conjoined response tree */
+w-wet wesponses = [
+  /* conjoined wesponse twee */
 ];
-let { readable, writable } = new TransformStream();
+wet { weadabwe, (˘ω˘) wwitabwe } = new twansfowmstweam();
 
-responses.reduce(
-  (a, res, i, arr) =>
-    a.then(() => res.pipeTo(writable, { preventClose: i + 1 !== arr.length })),
-  Promise.resolve(),
+w-wesponses.weduce(
+  (a, ^^;; wes, i, aww) =>
+    a.then(() => wes.pipeto(wwitabwe, (✿oωo) { p-pweventcwose: i-i + 1 !== a-aww.wength })), (U ﹏ U)
+  pwomise.wesowve(), -.-
 );
 ```
 
@@ -165,13 +165,13 @@ responses.reduce(
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/)，用于可读、可写和转换流的基本可视化。
-- [数据流——权威指南](https://web.developers.google.cn/articles/streams)
+- [naniwg s-stweam visuawizew](https://naniwg-stweam-visuawizew.gwitch.me/)，用于可读、可写和转换流的基本可视化。
+- [数据流——权威指南](https://web.devewopews.googwe.cn/awticwes/stweams)

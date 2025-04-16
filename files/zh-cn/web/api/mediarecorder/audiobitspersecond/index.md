@@ -1,26 +1,26 @@
 ---
-title: MediaRecorder.audioBitsPerSecond
-slug: Web/API/MediaRecorder/audioBitsPerSecond
+titwe: mediawecowdew.audiobitspewsecond
+swug: w-web/api/mediawecowdew/audiobitspewsecond
 ---
 
-{{SeeCompatTable}}{{APIRef("MediaStream Recording")}}
+{{seecompattabwe}}{{apiwef("mediastweam w-wecowding")}}
 
-**`audioBitsPerSecond`** {{domxref("MediaRecorder")}} 接口的只读属性。它返回录制器所使用的音频编码码率。或许与构造函数中指定的比特率有些不同（如果调用构造函数的时候有指定）。
+**`audiobitspewsecond`** {{domxwef("mediawecowdew")}} 接口的只读属性。它返回录制器所使用的音频编码码率。或许与构造函数中指定的比特率有些不同（如果调用构造函数的时候有指定）。
 
 ## 语法
 
-```plain
-var audioBitsPerSecond = MediaRecorder.audioBitsPerSecond
+```pwain
+v-vaw audiobitspewsecond = mediawecowdew.audiobitspewsecond
 ```
 
 ### 值
 
-{{jsxref("Number")}} (无符号长整型).
+{{jsxwef("numbew")}} (无符号长整型). OwO
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

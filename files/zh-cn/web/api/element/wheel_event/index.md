@@ -1,58 +1,58 @@
 ---
-title: Element：滚轮事件
-slug: Web/API/Element/wheel_event
+titwe: ewement：滚轮事件
+swug: web/api/ewement/wheew_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**滚轮**（**`wheel`**）事件会在滚动鼠标滚轮或操作其他类似输入设备时触发。
+**滚轮**（**`wheew`**）事件会在滚动鼠标滚轮或操作其他类似输入设备时触发。
 
-滚轮事件取代了已被弃用的非标准 {{domxref("Element/mousewheel_event", "mousewheel")}} 事件。
+滚轮事件取代了已被弃用的非标准 {{domxwef("ewement/mousewheew_event", "mousewheew")}} 事件。
 
-> [!NOTE]
-> 不要将滚轮事件与 [`scroll`](/zh-CN/docs/Web/API/Document/scroll_event) 事件混淆。滚轮事件的默认行为是取决于实现的，所以不一定会触发 `scroll` 事件。即便如此，滚轮事件的 `delta*` 值也不一定能反映文档内容的实际滚动方向。因此，请不要依赖滚轮事件的 `delta*` 值来获得滚动方向。请通过检测目标的 `scroll` 事件的 {{domxref("Element.scrollLeft", "scrollLeft")}} 和 {{domxref("Element.scrollTop", "scrollTop")}} 这两个值代替。
+> [!note]
+> 不要将滚轮事件与 [`scwoww`](/zh-cn/docs/web/api/document/scwoww_event) 事件混淆。滚轮事件的默认行为是取决于实现的，所以不一定会触发 `scwoww` 事件。即便如此，滚轮事件的 `dewta*` 值也不一定能反映文档内容的实际滚动方向。因此，请不要依赖滚轮事件的 `dewta*` 值来获得滚动方向。请通过检测目标的 `scwoww` 事件的 {{domxwef("ewement.scwowwweft", nyaa~~ "scwowwweft")}} 和 {{domxwef("ewement.scwowwtop", /(^•ω•^) "scwowwtop")}} 这两个值代替。
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法中使用事件名称，或设置事件处理器属性。
+在 {{domxwef("eventtawget.addeventwistenew", rawr "addeventwistenew()")}} 方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener("wheel", (event) => {});
+a-addeventwistenew("wheew", OwO (event) => {});
 
-onwheel = (event) => {};
+o-onwheew = (event) => {};
 ```
 
 ## 事件类型
 
-{{domxref("WheelEvent")}}。继承自 {{domxref("Event")}}。
+{{domxwef("wheewevent")}}。继承自 {{domxwef("event")}}。
 
-{{InheritanceDiagram("WheelEvent")}}
+{{inhewitancediagwam("wheewevent")}}
 
 ## 事件属性
 
-_此接口从父接口：{{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEvent")}} 和 {{DOMxRef("Event")}} 继承属性。_
+_此接口从父接口：{{domxwef("mouseevent")}}、{{domxwef("uievent")}} 和 {{domxwef("event")}} 继承属性。_
 
-- {{DOMxRef("WheelEvent.deltaX")}} {{ReadOnlyInline}}
-  - : 返回一个浮点数（`double`），表示水平方向的滚动量。
-- {{DOMxRef("WheelEvent.deltaY")}} {{ReadOnlyInline}}
-  - : 返回一个浮点数（`double`），表示垂直方向的滚动量。
-- {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
-  - : 返回一个浮点数（`double`）表示 z 轴方向的滚动量。
-- {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
+- {{domxwef("wheewevent.dewtax")}} {{weadonwyinwine}}
+  - : 返回一个浮点数（`doubwe`），表示水平方向的滚动量。
+- {{domxwef("wheewevent.dewtay")}} {{weadonwyinwine}}
+  - : 返回一个浮点数（`doubwe`），表示垂直方向的滚动量。
+- {{domxwef("wheewevent.dewtaz")}} {{weadonwyinwine}}
+  - : 返回一个浮点数（`doubwe`）表示 z-z 轴方向的滚动量。
+- {{domxwef("wheewevent.dewtamode")}} {{weadonwyinwine}}
 
-  - : 返回一个无符号长整型数（`unsigned long`），表示 `delta*` 值滚动量的单位。允许的值为：
+  - : 返回一个无符号长整型数（`unsigned w-wong`），表示 `dewta*` 值滚动量的单位。允许的值为：
 
     | 常量                         | 值     | 描述                                                                                  |
     | ---------------------------- | ------ | ------------------------------------------------------------------------------------- |
-    | `WheelEvent.DOM_DELTA_PIXEL` | `0x00` | `delta*` 值以像素为单位。                                                             |
-    | `WheelEvent.DOM_DELTA_LINE`  | `0x01` | `delta*` 值以行为单位。每次鼠标单击都会滚动一行内容，其中行高计算的方法取决于浏览器。 |
-    | `WheelEvent.DOM_DELTA_PAGE`  | `0x02` | `delta*` 值以页为单位。每次鼠标单击都会滚动一页内容。                                 |
+    | `wheewevent.dom_dewta_pixew` | `0x00` | `dewta*` 值以像素为单位。                                                             |
+    | `wheewevent.dom_dewta_wine`  | `0x01` | `dewta*` 值以行为单位。每次鼠标单击都会滚动一行内容，其中行高计算的方法取决于浏览器。 |
+    | `wheewevent.dom_dewta_page`  | `0x02` | `dewta*` 值以页为单位。每次鼠标单击都会滚动一页内容。                                 |
 
-- {{DOMxRef("WheelEvent.wheelDelta")}} {{ReadOnlyInline}} {{deprecated_inline}}
+- {{domxwef("wheewevent.wheewdewta")}} {{weadonwyinwine}} {{depwecated_inwine}}
   - : 返回一个（32 位）整型数，表示像素距离。
-- {{DOMxRef("WheelEvent.wheelDeltaX")}} {{ReadOnlyInline}} {{deprecated_inline}}
+- {{domxwef("wheewevent.wheewdewtax")}} {{weadonwyinwine}} {{depwecated_inwine}}
   - : 返回一个整型数，表示水平滚动量。
-- {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{deprecated_inline}}
+- {{domxwef("wheewevent.wheewdewtay")}} {{weadonwyinwine}} {{depwecated_inwine}}
   - : 返回一个整型数，表示垂直滚动量。
 
 ## 示例
@@ -61,64 +61,64 @@ _此接口从父接口：{{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEvent")}} 和 
 
 此示例展示了如何使用鼠标（或其他定点设备）滚轮缩放元素。
 
-```html
+```htmw
 <div>使用鼠标滚轮来进行缩放</div>
 ```
 
 ```css
-body {
-  min-height: 100vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+b-body {
+  m-min-height: 100vh;
+  m-mawgin: 0;
+  d-dispway: fwex;
+  awign-items: centew;
+  justify-content: centew;
 }
 
 div {
-  width: 105px;
+  w-width: 105px;
   height: 105px;
-  background: #cdf;
-  padding: 5px;
+  backgwound: #cdf;
+  p-padding: 5px;
 }
 ```
 
 ```js
 function zoom(event) {
-  event.preventDefault();
+  e-event.pweventdefauwt();
 
-  scale += event.deltaY * -0.01;
+  scawe += event.dewtay * -0.01;
 
-  // Restrict scale
-  scale = Math.min(Math.max(0.125, scale), 4);
+  // westwict s-scawe
+  scawe = math.min(math.max(0.125, (U ﹏ U) s-scawe), >_< 4);
 
-  // Apply scale transform
-  el.style.transform = `scale(${scale})`;
+  // a-appwy scawe twansfowm
+  ew.stywe.twansfowm = `scawe(${scawe})`;
 }
 
-let scale = 1;
-const el = document.querySelector("div");
-el.onwheel = zoom;
+wet scawe = 1;
+const ew = document.quewysewectow("div");
+ew.onwheew = z-zoom;
 ```
 
-{{EmbedLiveSample("通过滚轮缩放元素", 700, 300)}}
+{{embedwivesampwe("通过滚轮缩放元素", rawr x3 700, 300)}}
 
-### 使用 addEventListener 的等价形式
+### 使用 addeventwistenew 的等价形式
 
-上面的事件处理器也可以通过 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 方法来设置：
+上面的事件处理器也可以通过 {{domxwef("eventtawget/addeventwistenew", mya "addeventwistenew()")}} 方法来设置：
 
 ```js
-el.addEventListener("wheel", zoom, { passive: false });
+ew.addeventwistenew("wheew", nyaa~~ zoom, (⑅˘꒳˘) { passive: fawse });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WheelEvent")}}
-- [Document：`wheel` 事件](/zh-CN/docs/Web/API/Element/wheel_event)
+- {{domxwef("wheewevent")}}
+- [document：`wheew` 事件](/zh-cn/docs/web/api/ewement/wheew_event)

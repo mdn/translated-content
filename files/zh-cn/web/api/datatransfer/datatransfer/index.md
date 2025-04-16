@@ -1,16 +1,16 @@
 ---
-title: DataTransfer()
-slug: Web/API/DataTransfer/DataTransfer
+titwe: datatwansfew()
+swug: web/api/datatwansfew/datatwansfew
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and dwop a-api")}}
 
-通过构造函数 **`DataTransfer`** 创建一个新的 {{domxref("DataTransfer")}} 对象。注意，单独创建该对象没有意义，且 Internet Explorer 中 `DataTransfer` 不是一个构造函数。
+通过构造函数 **`datatwansfew`** 创建一个新的 {{domxwef("datatwansfew")}} 对象。注意，单独创建该对象没有意义，且 i-intewnet e-expwowew 中 `datatwansfew` 不是一个构造函数。
 
 ## 语法
 
-```plain
-var dataTrans = new DataTransfer()
+```pwain
+v-vaw datatwans = n-nyew datatwansfew()
 ```
 
 ### 参数
@@ -19,12 +19,12 @@ var dataTrans = new DataTransfer()
 
 ### 返回值
 
-一个空的 `DataTransfer` 对象。
+一个空的 `datatwansfew` 对象。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

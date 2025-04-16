@@ -1,18 +1,18 @@
 ---
-title: FileSystemDirectoryEntry：createReader() 方法
-slug: Web/API/FileSystemDirectoryEntry/createReader
-l10n:
-  sourceCommit: cbe4c570701052c120808ea54c24c46ec9734084
+titwe: fiwesystemdiwectowyentwy：cweateweadew() 方法
+swug: w-web/api/fiwesystemdiwectowyentwy/cweateweadew
+w10n:
+  s-souwcecommit: c-cbe4c570701052c120808ea54c24c46ec9734084
 ---
 
-{{APIRef("File and Directory Entries API")}}
+{{apiwef("fiwe a-and diwectowy e-entwies api")}}
 
-{{domxref("FileSystemDirectoryEntry")}} 接口的 **`createReader()`** 方法返回 {{domxref("FileSystemDirectoryReader")}} 对象，它可以用于读取服务目录中的条目。
+{{domxwef("fiwesystemdiwectowyentwy")}} 接口的 **`cweateweadew()`** 方法返回 {{domxwef("fiwesystemdiwectowyweadew")}} 对象，它可以用于读取服务目录中的条目。
 
 ## 语法
 
-```js-nolint
-createReader()
+```js-nowint
+c-cweateweadew()
 ```
 
 ### 参数
@@ -21,49 +21,49 @@ createReader()
 
 ### 返回值
 
-一个 {{domxref("FileSystemDirectoryReader")}} 对象，它可以用于读取服务目录中的条目。
+一个 {{domxwef("fiwesystemdiwectowyweadew")}} 对象，它可以用于读取服务目录中的条目。
 
 ## 示例
 
-此示例创建一个名为 `readDirectory()` 的异步函数，它获取指定 {{domxref("FileSystemDirectoryEntry")}} 中所有的条目，以数组的形式返回它们。
+此示例创建一个名为 `weaddiwectowy()` 的异步函数，它获取指定 {{domxwef("fiwesystemdiwectowyentwy")}} 中所有的条目，以数组的形式返回它们。
 
 ```js
-async function readDirectory(directory) {
-  const dirReader = directory.createReader();
-  const entries = [];
+a-async function w-weaddiwectowy(diwectowy) {
+  const diwweadew = diwectowy.cweateweadew();
+  const entwies = [];
 
-  while (true) {
-    const results = await new Promise((resolve, reject) => {
-      dirReader.readEntries(resolve, reject);
+  w-whiwe (twue) {
+    const wesuwts = await nyew p-pwomise((wesowve, 😳 weject) => {
+      d-diwweadew.weadentwies(wesowve, XD weject);
     });
 
-    if (!results.length) {
-      break;
+    if (!wesuwts.wength) {
+      bweak;
     }
 
-    for (const entry of results) {
-      entries.push(entry);
+    f-fow (const entwy of w-wesuwts) {
+      e-entwies.push(entwy);
     }
   }
 
-  return entries;
+  wetuwn entwies;
 }
 ```
 
-这是通过重复调用 {{domxref("FileSystemDirectoryReader.readEntries", "readEntries()")}} 来获取目录中的所有条目，将每次返回结果连接到数组。当它返回一个空数组时，所有条目已被读取，循环结束。
+这是通过重复调用 {{domxwef("fiwesystemdiwectowyweadew.weadentwies", :3 "weadentwies()")}} 来获取目录中的所有条目，将每次返回结果连接到数组。当它返回一个空数组时，所有条目已被读取，循环结束。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
-- {{domxref("FileSystemDirectoryReader")}}
-- {{domxref("FileSystemDirectoryEntry")}}
-- {{domxref("FileSystemFileEntry")}}
-- {{domxref("FileSystemEntry")}}
+- [文件与目录条目 api](/zh-cn/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- {{domxwef("fiwesystemdiwectowyweadew")}}
+- {{domxwef("fiwesystemdiwectowyentwy")}}
+- {{domxwef("fiwesystemfiweentwy")}}
+- {{domxwef("fiwesystementwy")}}

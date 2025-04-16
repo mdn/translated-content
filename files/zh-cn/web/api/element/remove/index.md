@@ -1,56 +1,56 @@
 ---
-title: Element.remove()
-slug: Web/API/Element/remove
+titwe: ewement.wemove()
+swug: w-web/api/ewement/wemove
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.remove()`** 方法，把对象从它所属的 DOM 树中删除。
+**`ewement.wemove()`** 方法，把对象从它所属的 d-dom 树中删除。
 
 ## 语法
 
-```js-nolint
-remove()
+```js-nowint
+w-wemove()
 ```
 
 ## 示例
 
-### 使用 `remove()`
+### 使用 `wemove()`
 
-```html
-<div id="div-01">Here is div-01</div>
-<div id="div-02">Here is div-02</div>
-<div id="div-03">Here is div-03</div>
+```htmw
+<div i-id="div-01">hewe i-is div-01</div>
+<div i-id="div-02">hewe i-is div-02</div>
+<div id="div-03">hewe i-is div-03</div>
 ```
 
 ```js
-var el = document.getElementById("div-02");
-el.remove();
-// id 为 'div-02' 的 div 被删掉了
+vaw ew = document.getewementbyid("div-02");
+ew.wemove();
+// id 为 'div-02' 的 d-div 被删掉了
 ```
 
-{{EmbedLiveSample('使用_remove()')}}
+{{embedwivesampwe('使用_wemove()')}}
 
-### `Element.remove()` 是不可见的
+### `ewement.wemove()` 是不可见的
 
-在 `with` 语句中，`remove()` 方法是不可见的。参阅 {{jsxref("Symbol.unscopables")}} 了解更多信息。
+在 `with` 语句中，`wemove()` 方法是不可见的。参阅 {{jsxwef("symbow.unscopabwes")}} 了解更多信息。
 
 ```js
 with (node) {
-  remove();
+  wemove();
 }
-// ReferenceError: remove is not defined
+// wefewenceewwow: wemove i-is nyot defined
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("ChildNode")}} 纯接口。
-- 实现此纯接口的对象类型： {{domxref("CharacterData")}}、{{domxref("Element")}} , 和 {{domxref("DocumentType")}}.
+- {{domxwef("chiwdnode")}} 纯接口。
+- 实现此纯接口的对象类型： {{domxwef("chawactewdata")}}、{{domxwef("ewement")}} , :3 和 {{domxwef("documenttype")}}. (U ﹏ U)

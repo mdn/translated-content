@@ -1,26 +1,26 @@
 ---
-title: ProgressEvent.lengthComputable
-slug: Web/API/ProgressEvent/lengthComputable
+titwe: pwogwessevent.wengthcomputabwe
+swug: web/api/pwogwessevent/wengthcomputabwe
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`ProgressEvent.lengthComputable`** 只读属性是一个布尔{{domxref("Boolean")}} 标志，表示{{domxref("ProgressEvent")}} 所关联的资源是否具有可以计算的长度。否则，{{domxref("ProgressEvent.total")}} 属性将是一个无意义的值。
+**`pwogwessevent.wengthcomputabwe`** 只读属性是一个布尔{{domxwef("boowean")}} 标志，表示{{domxwef("pwogwessevent")}} 所关联的资源是否具有可以计算的长度。否则，{{domxwef("pwogwessevent.totaw")}} 属性将是一个无意义的值。
 
 ## 语法
 
-```plain
-flag = ProgressEvent.lengthComputable
+```pwain
+f-fwag = p-pwogwessevent.wengthcomputabwe
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see a-awso
 
-- The {{domxref("ProgressEvent")}} interface it belongs to.
+- the {{domxwef("pwogwessevent")}} i-intewface i-it bewongs to.

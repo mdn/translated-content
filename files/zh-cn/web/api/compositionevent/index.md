@@ -1,47 +1,47 @@
 ---
-title: CompositionEvent
-slug: Web/API/CompositionEvent
+titwe: compositionevent
+swug: w-web/api/compositionevent
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-DOM 接口 **`CompositionEvent`** 表示用户间接输入文本（如使用输入法）时发生的事件。此接口的常用事件有{{domxref("Element/compositionstart_event", "compositionstart")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}} 和 {{domxref("Element/compositionend_event", "compositionend")}}
+d-dom 接口 **`compositionevent`** 表示用户间接输入文本（如使用输入法）时发生的事件。此接口的常用事件有{{domxwef("ewement/compositionstawt_event", OwO "compositionstawt")}}, 🥺 {{domxwef("ewement/compositionupdate_event", òωó "compositionupdate")}} 和 {{domxwef("ewement/compositionend_event", o.O "compositionend")}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 构造函数
 
-- {{domxref("CompositionEvent.CompositionEvent()", "CompositionEvent()")}}
-  - : 创建一个新的 `CompositionEvent` 对象实例。
+- {{domxwef("compositionevent.compositionevent()", (U ᵕ U❁) "compositionevent()")}}
+  - : 创建一个新的 `compositionevent` 对象实例。
 
 ## 属性
 
-_这个接口也从{{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承属性。_
+_这个接口也从{{domxwef("uievent")}} 和 {{domxwef("event")}} 继承属性。_
 
-- {{domxref("CompositionEvent.data")}} {{readonlyinline}}
-  - : 返回触发事件的输入方法所产生的字符；取决于生成 `CompositionEvent` 对象的事件类型，结果会有所不同。
-- {{domxref("CompositionEvent.locale")}} {{readonlyinline}} {{deprecated_inline}}
+- {{domxwef("compositionevent.data")}} {{weadonwyinwine}}
+  - : 返回触发事件的输入方法所产生的字符；取决于生成 `compositionevent` 对象的事件类型，结果会有所不同。
+- {{domxwef("compositionevent.wocawe")}} {{weadonwyinwine}} {{depwecated_inwine}}
   - : 返回当前输入方法的场景（例如，使用输入法编辑器进行输入合成时，场景就是键盘布局）。
 
 ## 方法
 
-_这个接口也从 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承方法。_
+_这个接口也从 {{domxwef("uievent")}} 和 {{domxwef("event")}} 继承方法。_
 
-- {{domxref("CompositionEvent.initCompositionEvent()")}} {{deprecated_inline}}
-  - : 初始化 `CompositionEvent` 对象的所有属性。
+- {{domxwef("compositionevent.initcompositionevent()")}} {{depwecated_inwine}}
+  - : 初始化 `compositionevent` 对象的所有属性。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [compositionstart](/zh-CN/docs/Web/API/Element/compositionstart_event)
-- [compositionend](/zh-CN/docs/Web/API/Element/compositionend_event)
-- [compositionupdate](/zh-CN/docs/Web/API/Element/compositionupdate_event)
-- [UIEvent](/zh-CN/docs/Web/API/UIEvent)
-- [Event](/zh-CN/docs/Web/API/Event)
+- [compositionstawt](/zh-cn/docs/web/api/ewement/compositionstawt_event)
+- [compositionend](/zh-cn/docs/web/api/ewement/compositionend_event)
+- [compositionupdate](/zh-cn/docs/web/api/ewement/compositionupdate_event)
+- [uievent](/zh-cn/docs/web/api/uievent)
+- [event](/zh-cn/docs/web/api/event)

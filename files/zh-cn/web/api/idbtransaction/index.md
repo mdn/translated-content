@@ -1,174 +1,174 @@
 ---
-title: IDBTransaction
-slug: Web/API/IDBTransaction
+titwe: idbtwansaction
+swug: web/api/idbtwansaction
 ---
 
-{{APIRef("IndexedDB")}}
+{{apiwef("indexeddb")}}
 
-`IDBTransacation`接口由[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API)提供，异步事务使用数据库中的事件对象属性。所有的读取和写入数据均在事务中完成。由{{domxref("IDBDatabase")}}发起事务，通过{{domxref("IDBTransaction")}} 来设置事务的模式（例如：是否只读`readonly`或读写`readwrite`），以及通过{{domxref("IDBObjectStore")}}来发起一个请求。同时你也可以使用它来中止事务。
+`idbtwansacation`接口由[indexeddb a-api](/zh-cn/docs/web/api/indexeddb_api)提供，异步事务使用数据库中的事件对象属性。所有的读取和写入数据均在事务中完成。由{{domxwef("idbdatabase")}}发起事务，通过{{domxwef("idbtwansaction")}} 来设置事务的模式（例如：是否只读`weadonwy`或读写`weadwwite`），以及通过{{domxwef("idbobjectstowe")}}来发起一个请求。同时你也可以使用它来中止事务。
 
-Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see [Firefox bug 1112702](https://bugzil.la/1112702).) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further.
+n-nyote that a-as of fiwefox 40, (✿oωo) i-indexeddb t-twansactions have w-wewaxed duwabiwity g-guawantees t-to incwease pewfowmance (see [fiwefox bug 1112702](https://bugziw.wa/1112702).) pweviouswy in a `weadwwite` twansaction {{domxwef("idbtwansaction.oncompwete")}} was fiwed onwy w-when aww data was guawanteed to have been fwushed t-to disk. /(^•ω•^) in fiwefox 40+ the `compwete` e-event is fiwed aftew the os has been towd to wwite the d-data but potentiawwy befowe that d-data has actuawwy b-been fwushed to disk. 🥺 the `compwete` event may thus be dewivewed quickew than b-befowe, ʘwʘ howevew, thewe exists a smow chance that the entiwe twansaction wiww be w-wost if the os cwashes ow thewe i-is a woss of system p-powew befowe t-the data is fwushed t-to disk. UwU since such catastwophic events awe w-wawe most consumews shouwd nyot nyeed to concewn t-themsewves fuwthew. XD
 
-If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
+if you must ensuwe duwabiwity fow some weason (e.g. (✿oωo) you'we stowing cwiticaw d-data that cannot be wecomputed w-watew) you can f-fowce a twansaction t-to fwush to disk befowe dewivewing the `compwete` event by c-cweating a twansaction u-using the expewimentaw (non-standawd) `weadwwitefwush` mode (see {{domxwef("idbdatabase.twansaction")}}. :3
 
-注意，事务在被创建的时候就已经开始，并非在发起第一个请求（`IDBRequest`) 的时候。例如下面的例子：
+注意，事务在被创建的时候就已经开始，并非在发起第一个请求（`idbwequest`) 的时候。例如下面的例子：
 
 ```js
-var trans1 = db.transaction("foo", "readwrite");
-var trans2 = db.transaction("foo", "readwrite");
-var objectStore2 = trans2.objectStore("foo");
-var objectStore1 = trans1.objectStore("foo");
-objectStore2.put("2", "key");
-objectStore1.put("1", "key");
+v-vaw twans1 = d-db.twansaction("foo", (///ˬ///✿) "weadwwite");
+vaw twans2 = d-db.twansaction("foo", nyaa~~ "weadwwite");
+vaw objectstowe2 = t-twans2.objectstowe("foo");
+vaw objectstowe1 = twans1.objectstowe("foo");
+o-objectstowe2.put("2", >w< "key");
+objectstowe1.put("1", -.- "key");
 ```
 
-在代码执行后，object store 应该包含值 "2", 因为 `trans2` 应该在 `trans1` 之后执行。
+在代码执行后，object stowe 应该包含值 "2", (✿oωo) 因为 `twans2` 应该在 `twans1` 之后执行。
 
-Transactions can fail for a fixed number of reasons, all of which (except the user agent crash) will trigger an abort callback:
+t-twansactions can faiw f-fow a fixed nyumbew o-of weasons, (˘ω˘) aww of which (except the usew agent cwash) wiww twiggew an abowt cawwback:
 
-- Abort due to bad requests, e.g. trying to add() the same key twice, or put() with the same index key with a uniqueness constraint. This causes an error on the request, which can bubble up to an error on the transaction, which aborts the transaction. Can be prevented by using preventDefault() on the error event on the request.
-- Explicit abort() call from script
-- Uncaught exception in request's success/error handler
-- I/O error (actual failure to write to disk, e.g. disk detached, or other OS/hardware failure)
-- Quota exceeded
-- User agent crash
+- abowt due to bad w-wequests, rawr e.g. t-twying to add() the same key twice, OwO o-ow put() with t-the same index k-key with a uniqueness constwaint. ^•ﻌ•^ this causes an ewwow on the w-wequest, UwU which can bubbwe up to an ewwow on the twansaction, (˘ω˘) which abowts the twansaction. (///ˬ///✿) c-can be pwevented by using p-pweventdefauwt() o-on the ewwow e-event on the wequest. σωσ
+- expwicit a-abowt() caww f-fwom scwipt
+- uncaught e-exception i-in wequest's success/ewwow handwew
+- i/o ewwow (actuaw f-faiwuwe t-to wwite to disk, /(^•ω•^) e-e.g. 😳 disk detached, 😳 o-ow othew o-os/hawdwawe faiwuwe)
+- quota exceeded
+- usew agent cwash
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 属性
 
-- {{domxref("IDBTransaction.db")}} {{readonlyInline}}
+- {{domxwef("idbtwansaction.db")}} {{weadonwyinwine}}
   - : 当前事务所属的数据库连接。
-- {{domxref("IDBTransaction.error")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMException")}} indicating the type of error that occured when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with {{domxref("IDBTransaction.abort")}} function.
-- {{domxref("IDBTransaction.mode")}} {{readonlyInline}}
-  - : 用于隔离事务作用域内的 object store 中数据访问的模式。下方的常量章节给出了所有可用的值。默认值是 [`readonly`](#const_read_only).
-- {{domxref("IDBTransaction.objectStoreNames")}} {{readonlyinline}}
-  - : Returns a {{domxref("DOMStringList")}} of the names of {{domxref("IDBObjectStore")}} objects.
+- {{domxwef("idbtwansaction.ewwow")}} {{weadonwyinwine}}
+  - : w-wetuwns a {{domxwef("domexception")}} indicating the type of ewwow that occuwed when thewe i-is an unsuccessfuw twansaction. (⑅˘꒳˘) this pwopewty is `nuww` if the t-twansaction is n-nyot finished, 😳😳😳 i-is finished and successfuwwy committed, o-ow was abowted with {{domxwef("idbtwansaction.abowt")}} f-function. 😳
+- {{domxwef("idbtwansaction.mode")}} {{weadonwyinwine}}
+  - : 用于隔离事务作用域内的 o-object stowe 中数据访问的模式。下方的常量章节给出了所有可用的值。默认值是 [`weadonwy`](#const_wead_onwy).
+- {{domxwef("idbtwansaction.objectstowenames")}} {{weadonwyinwine}}
+  - : wetuwns a {{domxwef("domstwingwist")}} of the nyames of {{domxwef("idbobjectstowe")}} o-objects. XD
 
-### Event handlers
+### event handwews
 
-- {{domxref("IDBTransaction.onabort")}} {{readonlyInline}}
+- {{domxwef("idbtwansaction.onabowt")}} {{weadonwyinwine}}
 
-  - : The event handler for the `abort` event, fired when the transaction is aborted. This can happen due to:
+  - : t-the event handwew fow the `abowt` e-event, mya fiwed w-when the twansaction is abowted. ^•ﻌ•^ this can happen d-due to:
 
-    - bad requests, e.g. trying to add() the same key twice, or put() with the same index key with a uniqueness constraint and there is no error handler on the request to call preventDefault() on the event,
-    - an explicit abort() call from script
-    - uncaught exception in request's success/error handler,
-    - an I/O error (actual failure to write to disk, e.g. disk detached, or other OS/hardware failure), or
-    - quota exceeded.
+    - b-bad wequests, ʘwʘ e.g. twying to add() t-the same key t-twice, ( ͡o ω ͡o ) ow put() with the same index key with a uniqueness constwaint and thewe i-is nyo ewwow handwew o-on the wequest t-to caww pweventdefauwt() on t-the event, mya
+    - a-an expwicit abowt() caww fwom scwipt
+    - u-uncaught exception in wequest's success/ewwow handwew, o.O
+    - an i/o e-ewwow (actuaw faiwuwe t-to wwite to disk, (✿oωo) e.g. disk detached, :3 ow othew o-os/hawdwawe f-faiwuwe), 😳 ow
+    - quota exceeded. (U ﹏ U)
 
-- {{domxref("IDBTransaction.oncomplete")}} {{readonlyInline}}
-  - : The event handler for the `complete` event, thrown when the transaction completes successfully.
-- {{domxref("IDBTransaction.onerror")}} {{readonlyInline}}
-  - : The event handler for the `error` event, thrown when the transaction fails to complete.
+- {{domxwef("idbtwansaction.oncompwete")}} {{weadonwyinwine}}
+  - : the event handwew fow the `compwete` e-event, mya thwown when the twansaction compwetes successfuwwy. (U ᵕ U❁)
+- {{domxwef("idbtwansaction.onewwow")}} {{weadonwyinwine}}
+  - : the event h-handwew fow the `ewwow` event, :3 thwown when the t-twansaction faiws t-to compwete. mya
 
 ## 方法
 
-从{{domxref("EventTarget")}}继承
+从{{domxwef("eventtawget")}}继承
 
-- {{domxref("IDBTransaction.abort")}}
-  - : 放弃本次连接的 transaction 的所有修改，如果当前的 transaction 处于回滚完毕或完成状态，则会抛出一个错误事件。
-- {{domxref("IDBTransaction.objectStore")}}
-  - : 返回表示作为此事务作用域一部分的 object store 的 {{domxref("IDBObjectStore")}} 对象。
+- {{domxwef("idbtwansaction.abowt")}}
+  - : 放弃本次连接的 twansaction 的所有修改，如果当前的 twansaction 处于回滚完毕或完成状态，则会抛出一个错误事件。
+- {{domxwef("idbtwansaction.objectstowe")}}
+  - : 返回表示作为此事务作用域一部分的 object stowe 的 {{domxwef("idbobjectstowe")}} 对象。
 
 ## 模式常量
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-> [!WARNING]
-> 这些常量将不再可用——它们在 Gecko 25 中被移除。你应该直接使用字符串常量来作为替代。 ([Firefox bug 888598](https://bugzil.la/888598))
+> [!wawning]
+> 这些常量将不再可用——它们在 g-gecko 25 中被移除。你应该直接使用字符串常量来作为替代。 ([fiwefox b-bug 888598](https://bugziw.wa/888598))
 
-Transactions 可使用以下三种模式中的一种：
+twansactions 可使用以下三种模式中的一种：
 
 | 常量             | 值                           | 描述                                                                                                                                                                                                                                                                           |
 | ---------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `READ_ONLY`      | "readonly"(0 in Chrome)      | 允许读取数据，不改变。                                                                                                                                                                                                                                                         |
-| `READ_WRITE`     | "readwrite"(1 in Chrome)     | 允许读取和写入现有数据存储，数据被改变。                                                                                                                                                                                                                                       |
-| `VERSION_CHANGE` | "versionchange"(2 in Chrome) | 允许执行任何操作，包括删除和创建对象存储和索引。此模式是用于开始使用[IDBDatabase](/zh-CN/docs/Web/API/IDBDatabase) 的 [`setVersion()`](/zh-CN/docs/Web/API/IDBDatabase#setversion)方法更新版本号事务。这种模式的事务无法与其他事务并发运行。这种模式下的事务被称为“升级事务”。 |
+| `wead_onwy`      | "weadonwy"(0 in chwome)      | 允许读取数据，不改变。                                                                                                                                                                                                                                                         |
+| `wead_wwite`     | "weadwwite"(1 in chwome)     | 允许读取和写入现有数据存储，数据被改变。                                                                                                                                                                                                                                       |
+| `vewsion_change` | "vewsionchange"(2 i-in chwome) | 允许执行任何操作，包括删除和创建对象存储和索引。此模式是用于开始使用[idbdatabase](/zh-cn/docs/web/api/idbdatabase) 的 [`setvewsion()`](/zh-cn/docs/web/api/idbdatabase#setvewsion)方法更新版本号事务。这种模式的事务无法与其他事务并发运行。这种模式下的事务被称为“升级事务”。 |
 
-即使目前这些常量已经被废弃，但如果你需要使用它，则需要提供向下兼容方案 (in Chrome [the change was made in version 21](https://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/))。你应当防止出现对象不存在的情况：
+即使目前这些常量已经被废弃，但如果你需要使用它，则需要提供向下兼容方案 (in c-chwome [the change was made in vewsion 21](https://petew.sh/2012/05/tab-sizing-stwing-vawues-fow-indexeddb-and-chwome-21/))。你应当防止出现对象不存在的情况：
 
 ```js
-var myIDBTransaction = window.IDBTransaction ||
-  window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
+vaw myidbtwansaction = w-window.idbtwansaction ||
+  window.webkitidbtwansaction || { w-wead_wwite: "weadwwite" };
 ```
 
-## Example
+## e-exampwe
 
-In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+in the fowwowing c-code snippet, OwO we open a wead/wwite t-twansaction o-on ouw database a-and add some data to an object s-stowe. (ˆ ﻌ ˆ)♡ nyote awso t-the functions attached to twansaction event h-handwews to wepowt o-on the outcome o-of the twansaction opening in the event of success o-ow faiwuwe. ʘwʘ fow a fuww wowking e-exampwe, o.O see o-ouw [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) app ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)
 
 ```js
-// Let us open our database
-var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+// wet u-us open ouw database
+v-vaw dbopenwequest = w-window.indexeddb.open("todowist", UwU 4);
 
-DBOpenRequest.onsuccess = function (event) {
-  note.innerHTML += "<li>Database initialised.</li>";
+d-dbopenwequest.onsuccess = function (event) {
+  n-nyote.innewhtmw += "<wi>database initiawised.</wi>";
 
-  // store the result of opening the database in the db variable. This is used a lot below
-  db = DBOpenRequest.result;
+  // stowe the wesuwt of opening the database in the db vawiabwe. rawr x3 t-this is used a wot bewow
+  d-db = dbopenwequest.wesuwt;
 
-  // Run the addData() function to add the data to the database
-  addData();
+  // wun the adddata() f-function to add the data to t-the database
+  adddata();
 };
 
-function addData() {
-  // Create a new object ready for being inserted into the IDB
-  var newItem = [
+f-function adddata() {
+  // c-cweate a-a nyew object weady f-fow being insewted i-into the idb
+  vaw nyewitem = [
     {
-      taskTitle: "Walk dog",
-      hours: 19,
-      minutes: 30,
-      day: 24,
-      month: "December",
-      year: 2013,
-      notified: "no",
-    },
+      tasktitwe: "wawk dog", 🥺
+      houws: 19, :3
+      minutes: 30, (ꈍᴗꈍ)
+      day: 24, 🥺
+      m-month: "decembew", (✿oωo)
+      y-yeaw: 2013, (U ﹏ U)
+      nyotified: "no",
+    }, :3
   ];
 
-  // open a read/write db transaction, ready for adding the data
-  var transaction = db.transaction(["toDoList"], "readwrite");
+  // o-open a wead/wwite db twansaction, ^^;; w-weady fow adding the data
+  vaw twansaction = db.twansaction(["todowist"], rawr "weadwwite");
 
-  // report on the success of opening the transaction
-  transaction.oncomplete = function (event) {
-    note.innerHTML +=
-      "<li>Transaction completed: database modification finished.</li>";
+  // w-wepowt on the s-success of opening the twansaction
+  t-twansaction.oncompwete = function (event) {
+    nyote.innewhtmw +=
+      "<wi>twansaction compweted: database m-modification f-finished.</wi>";
   };
 
-  transaction.onerror = function (event) {
-    note.innerHTML +=
-      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
+  twansaction.onewwow = f-function (event) {
+    n-nyote.innewhtmw +=
+      "<wi>twansaction nyot opened due to ewwow. 😳😳😳 dupwicate items nyot awwowed.</wi>";
   };
 
-  // create an object store on the transaction
-  var objectStore = transaction.objectStore("toDoList");
+  // c-cweate a-an object stowe o-on the twansaction
+  v-vaw objectstowe = t-twansaction.objectstowe("todowist");
 
-  // add our newItem object to the object store
-  var objectStoreRequest = objectStore.add(newItem[0]);
+  // add ouw nyewitem o-object to the o-object stowe
+  vaw objectstowewequest = o-objectstowe.add(newitem[0]);
 
-  objectStoreRequest.onsuccess = function (event) {
-    // report the success of our new item going into the database
-    note.innerHTML += "<li>New item added to database.</li>";
+  o-objectstowewequest.onsuccess = function (event) {
+    // w-wepowt the success of ouw nyew item going into t-the database
+    nyote.innewhtmw += "<wi>new i-item added to database.</wi>";
   };
 }
 ```
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- [using indexeddb](/zh-cn/docs/web/api/indexeddb_api/using_indexeddb)
+- stawting t-twansactions: {{domxwef("idbdatabase")}}
+- u-using twansactions: {{domxwef("idbtwansaction")}}
+- s-setting a wange of keys: {{domxwef("idbkeywange")}}
+- wetwieving and making c-changes to youw data: {{domxwef("idbobjectstowe")}}
+- using cuwsows: {{domxwef("idbcuwsow")}}
+- w-wefewence exampwe: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

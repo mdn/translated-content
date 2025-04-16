@@ -1,13 +1,13 @@
 ---
-title: WheelEvent：deltaX 属性
-slug: Web/API/WheelEvent/deltaX
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: wheewevent：dewtax 属性
+swug: web/api/wheewevent/dewtax
+w-w10n:
+  souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`WheelEvent.deltaX`** 只读属性是一个表示以 {{domxref("WheelEvent.deltaMode")}} 为单位的水平滚动量的 `double` 值。
+**`wheewevent.dewtax`** 只读属性是一个表示以 {{domxwef("wheewevent.dewtamode")}} 为单位的水平滚动量的 `doubwe` 值。
 
 ## 值
 
@@ -16,23 +16,23 @@ l10n:
 ## 示例
 
 ```js
-const syntheticEvent = new WheelEvent("syntheticWheel", {
-  deltaX: 4,
-  deltaMode: 0,
+c-const syntheticevent = n-nyew wheewevent("syntheticwheew", (⑅˘꒳˘) {
+  d-dewtax: 4, ( ͡o ω ͡o )
+  d-dewtamode: 0, UwU
 });
 
-console.log(syntheticEvent.deltaX);
+c-consowe.wog(syntheticevent.dewtax);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Element/wheel_event","wheel")}}
-- {{domxref("WheelEvent")}}
+- {{domxwef("ewement/wheew_event","wheew")}}
+- {{domxwef("wheewevent")}}
